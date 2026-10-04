@@ -9,7 +9,7 @@
 
 ---
 
-## 一、当前库与磁盘状态（2026-10-04 16:30 复核）
+## 一、当前库与磁盘状态（2026-10-04 16:30 复核；17:45 接手复核维持，转录线已重启）
 
 | 项 | 值 |
 |---|---|
@@ -22,7 +22,7 @@
 | 大纲 git | `db2743a5b`（46 期内容复核波）；其后大纲无新提交 |
 | 下载线 | 🟢 D1 curated 4,197/4,197＋D2 重下 14/14 全部到手；cookies 管线定型（见 §十）；全库解码审计**已收口：4,197 件全验毕（4,196 ok＋1 瞬时误报复验有效）**；310 个冗余 mp4 已清（释放 23.08 GB）；D3 字幕见 §三.3 |
 | 复核线 | 🟢 **54/54 全部复核完毕：53 pass / 1 fail**（fail＝BOPeeLhZOsY 空正文，待回炉）；裁决件在 `tb2/reviews/`，pass 中 QC 无 suspect |
-| 转录线 | 54/3,631 JSON 完成；**现无任何转录进程**；survey.json 缺失待重建 |
+| 转录线 | 🟢 17:50 重启：survey 三步链已重建，pending **4,201**；`15_parallel_transcribe.py 32` 在跑（150 路内存不可行，实测依据见 §三.1）；JSON 55 件（含 BOPee 回炉件） |
 | 大规模清理事故 | 10-04 11:40 `_tmp` 被清（113G 释放）；audio 库与 DB **幸存**；tb2 的 json/reviews/裁决件丢失（可再生产物） |
 
 ---
@@ -71,6 +71,16 @@
 - **量级**：每进程完成分片即出 JSON（`tb2/json/youtube__<vid>.json`）＋`tb2/ledger.jsonl` 追加顺序台账。
 - **后链**（每批判 ~20 期滚动）：逐字复核（SenseAudio 口径，禁抽查）→ 03_ingest.py 入库 →
   reviewed 置位 → 删该批音频（链接留 DB，纪律见 §六）。
+- **🔴 2026-10-04 17:50 接手重启实录（实测数字）**：survey 三步链重建
+  （`01_survey.py`→`13_survey_candidates_audio.py`→`15_survey_curated.py`；youtube 行 5,432＝
+  DB 1,191＋curated 4,197＋候选 44，BOPee 手工补行）→ **pending 实测 4,201**（「3,631」系 11:41 时点旧口径：
+  D1 补漏到齐后此数增大；54 期已转期不计）→ 启动 `15_parallel_transcribe.py 32`（17:50）。
+  ⚠️ **150 路本机不可行**：02_transcribe 每期全量载入 PCM（实测 p50≈36MB／p90≈78MB／max≈163MB），
+  150 路理论峰值 >16GB（本机 16GB 内存）；**实测回落 32 路**（free 内存 17:50 由 5.3GB 稳定在 2.7GB 级）；
+  上探 48–64 或 150 的前置＝02_transcribe 改流式读 PCM（或加内存）——待裁。
+  退避实测（首 20 分钟）：0–6 次/worker（含 1011 多 key 建连退避，脚本 4 次重试自愈，样例 pt_1 6 次、
+  pt_2 1 次、pt_9 0 次），非密集；各片吞吐 4.6–8.1x 实时节流波动、无 <1.5x 中止；
+  首批完成 17:5x 起（DKV0vDLijv0 等），json/ledger 同步递增（18:00 前后 56 件/57 条）。
 
 ### 3.2 残 19 期精选音频 —— 🟢 已闭环（10-04 16:20）
 
@@ -79,12 +89,14 @@
   细节与全部教训见 §十 与 `_DOWNLOAD_TASKS.md`；清单 `download_pending_audio.txt` 已清零。
 - 全库解码审计（§十一 QC）收口后如有坏件，用 `16_redownload_list.py N <坏件清单>` 重下。
 
-### 3.3 字幕滚动（低优先，可选）——⚠️ 10-04 17:00 本轮 0/69 全灭
-- 命令：`python script/senseaudio_20260929/yt_subs/09_subs_retry_lowconc.py`（69 期＝`_tmp/yt_subset/w1–w4.txt`）。
-- 根因＝**bgutil 2.0.1 脚本模式 15s 版本探测超时**（`generate_once.js --version` timeout；旧教训复现，
-  因 09_subs 未带 new flags 而插件自动加载）；修法见 `_DOWNLOAD_TASKS.md` D3 节（补 new flags／起 http
-  服务／禁用 pot 其一，改后先单发探针）。
-- 实证（bgutil 安装前）：timedtext 限流与并发无关（1/3/8/16/40/240 路得数相同 2-6 份/轮）；多数候选可直接走音频链替代。
+### 3.3 字幕滚动（低优先，可选）——🟢 17:4x 管线修复，17:48–17:55 批跑 ok=1/fail=68
+- 修复（采用修法①）：`09_subs_retry_lowconc.py` 补 `--js-runtimes node --remote-components ejs:github
+  --cookies _tmp/yt_cookies.txt`（修 bgutil 2.0.1 脚本模式 15s 探测超时）＋WORKERS 240→8。
+- 单发探针 2/2 管线全通（PO token 生成＋node 解 JS 挑战＋m3u8 取到），均报「无字幕轨道」。
+- **批跑终态 17:55:10：ok=1（`Y5cx9hEhxfE` 实取到 127,759B `.en.vtt`——旧管线假性失败件）、
+  fail=68（rc=0「无字幕轨道」确定性回复）**。路由：新字幕件走 `03_ingest_subs.py` 入库链；
+  68 期无字幕者既定＝音频链替代（44 期已在候选补丁链，详见 `_DOWNLOAD_TASKS.md` D3）。
+- 实证（仍有效）：timedtext 限流与并发无关（1/3/8/16/40/240 路得数相同 2-6 份/轮）。
 
 ---
 
@@ -98,7 +110,7 @@
 | 不适宜已删 2 期 | UITF03xeQhw / mMmbjJI5su0（年龄限制，清单已移除） |
 | 无英文候选 2 期 | A2B6N5HGfy4 / 1W7ir3TKK6k（字幕轨不存在） |
 | 残 id 教训 | `9hOY08UOD20` 曾因抄写为 `9hY08UOD20`（O→Y）假性失败多轮——**清单 vid 必须原样复制，禁凭记忆转写** |
-| 复核 fail（待回炉） | `BOPeeLhZOsY` 空正文（14.8s 音频无产出；裁决件 `tb2/reviews/youtube__BOPeeLhZOsY.json`）→ 重下音频→重转一轮 |
+| 复核 fail（已回炉，待裁） | `BOPeeLhZOsY`＝**EuroBSDCon Dublin Promo（15 秒无语音宣传片）**：17:40 重下新编码音频＋17:46 重转，仍空正文（唯一 utterance 无文字、usage 1.1s；字幕轨亦近空 219B）——**非管线故障**，建议标 non-speech／弃，待主理人裁 |
 | D3 字幕阻塞 | bgutil 2.0.1 脚本模式 15s 版本探测超时（09_subs 未带 new flags 仍自动加载插件）——修法见 §三.3／`_DOWNLOAD_TASKS.md` D3 |
 | DB 待修 | 无（ep292/293"跨期错配"为复核代理误读，**勿修**） |
 | 入大纲增补链路 | 新入库 youtube 期未被大纲引用；属独立 campaign（锚点缺口审计），有并行会话在相邻队列，**勿抢** |
@@ -110,7 +122,7 @@
 | 产物 | 重建方式 |
 |---|---|
 | 34 期 fail 裁决件 | DB `quality_flags` 仍完整（asr_quality_fail 54）；如需逐字证据可按 §四 清单重审 |
-| survey.json | ⚠️ **已丢失**（10-04 13:15 实测，原认为幸存）；`01_survey.py` 重建，15_parallel 启动即依赖它 |
+| survey.json | 🟢 已重建（10-04 17:45；三步链 `01_survey.py`→`13_survey_candidates_audio.py`→`15_survey_curated.py`；重建后计数与口径订正见 §十三） |
 | 31 期精选转录 JSON | 已过时——10-04 11:41 重启后已新出 54 期（audio 幸存，零下载成本） |
 | USENIX 判断产物 v01-40 | 纳入结果已固化于 `curated_final.txt`（4,197 期）；如需理由词需重判 |
 | pt_N.log / 各战役日志 | 重跑自动重建 |
@@ -263,3 +275,28 @@
   `tb2/mp3_audit.jsonl`（4,197 行终态）、`_DOWNLOAD_TASKS.md`（D1/D2 🟢、D3 ⚠️）。
 - **密钥/凭证**：key 池 22 把（备份 `bak-20261004-preGL`）；`_tmp/yt_cookies.txt` 含账号会话勿外传。
 - **本会话权限**：只负责**下载＋复核**两线；转录/入库/入大纲不归本会话（§九.4）。
+
+> ⏩ 本包为 17:10 快照；**17:20–18:00 接手复核与重启实录见 §十三**（此后状态以 §十三 为准）。
+
+## 十三、接手复核与重启实录（2026-10-04 17:20–18:00）
+
+**复核对账（全绿）**：复核件 **54/54**（53 pass／1 fail，最新 17:12；磁盘实况与 §十二 一致——「48/54、余 6 在途」
+为陈旧数字，记忆卡已订正）；`json/` 54＝`ledger.jsonl` 54；`mp3_audit.jsonl` 4,197 行且与 `curated_final.txt`
+**4,197 逐件覆盖一致**（无缺口、无多出）；curated 在盘 mp3 **4,197/4,197（缺 0）**；mp4＝0（310 已清）；
+DB 三数（episodes 1,191／segments 1,502,748／quality_fail 54）逐项复合；接手时无转录/下载 worker 在跑。
+**订正与清零**：① `download_pending_audio.txt` 残留 4 行（末 4 期）→ 逐件 ffmpeg 复验 4/4 rc=0 后归零；
+② `mp3_audit_bad.txt` 残留 `5zmsPhLNhAM` → 复验 rc=0（审计在其下载完成前采样的 "missing" 陈旧行），归零；
+③ §五 survey 行订正为已重建（三步链）。
+**清理**：tb2/pcm 6.0G 清 0（§九.3 批收口纪律）；全量 PCM 峰值算术≈4.2k 期×p50 36MB≈150GB+（p90 口径 300GB+）
+＞磁盘余量，已立回收器 **`script/senseaudio_20260929/tb2/_pcm_gc.py`**（默认干跑；`--apply` 删已完成期 PCM、
+不清未转期）——长跑前/批收口随手跑。
+**BOPee 回炉（已尽，待裁）**：17:40 重下（433,001B）→ 17:46 `02_transcribe.py --force` 重转 → 仍空正文；
+确证＝EuroBSDCon 15 秒无语音宣传片（字幕轨 219B 近空为佐证），**非故障**。建议标 non-speech／弃，待主理人裁。
+**D3 字幕（已闭环执行）**：09_subs 补 flags＋WORKERS 8 → 探针 2/2 全通 → 17:48–17:55 批跑 **ok=1/fail=68**；
+唯一实取 `Y5cx9hEhxfE.en.vtt`（127,759B）——旧管线假性失败件，**须接 `03_ingest_subs.py` 入库**；
+68 无字幕者走音频链替代。
+**转录重启（在跑）**：survey 三步链重建（pending 4,201）→ `15_parallel_transcribe.py 32`（17:50；150 路
+内存不可行依据与退避实测见 §三.1）→ 首批完成件落盘、json/ledger 同步递增；内存/磁盘稳住（free≈2.7G、D: 205G）。
+**下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
+的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 150 路前置（流式 PCM／加内存）待裁；
+⑤ `Y5cx9hEhxfE` 字幕接 `03_ingest_subs.py` 入库。
