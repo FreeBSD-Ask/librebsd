@@ -350,6 +350,11 @@ json 107／ledger 108，重启后 +53；偶发 1011/退避自愈，弃期自动�
 ——单轮清 done-pcm 61（1.89GB）＋弃期残留 293（13.88GB）＝**释放 ~15.8GB**（2 个 in-use 跳过）；
 in-flight（<2h）655 保留。30 路持续运行（json 233 递增；剩余 ~4,025 期，30 路实测 1.0–1.35 期/分
 → 全程约 2.1–2.8 天，费用预估 ~4,400 元）。
+**复核批 2（21:2x，20 路子代理并行，20 期最早未复核件）**：**19 pass／1 fail**；裁决件磁盘验证 20/20
+结构合法（reviews 总 74：72 pass／2 fail，0 损坏）。fail＝`pynpY7Isbxs`（泄漏阈值①：正文中段插入
+"Please provide the audio file or audio content for transcription."）→ 按 §九.9 删该期 JSON 挂回待转
+（一次性重转被 30 路占满的服务端 1011 拒绝；**下一批 15_parallel 启动时自动重转＋重审**；其 fail 裁决
+继续挡住入库门禁直到新审通过）。**19 pass 件待入库**（下一轮 `03_ingest.py`）。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
