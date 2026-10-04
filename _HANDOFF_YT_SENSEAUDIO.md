@@ -377,6 +377,10 @@ wpm＋BOPee）；**复核波1＝8 路×6 期 48 期：47 pass／1 fail**（`luPV
 挂账）；**入库批3＝+66 transcripts/+6,742 segments**（对账逐件一致；累计 senseaudio 行 164 全 reviewed）；
 入大纲 66 期全 0 既有条目；删音频 66 件 1.47GB（manifest b3）；`05_audit.py` 首跑 5 FAIL 全为已知 artifacts
 （复核门设计＋redo 重复台账 3＋BOPee）；清理删音频＋PCM 再回收 ~16GB（磁盘 195G）。提交见 git。
+**第二轮循环（22:4x–22:5x，按 §十四 手册滚动）**：复核波2＝8 路×6 期 48 期：**48/48 全 pass**（0 fail）；
+**入库批4＝+48/+4,538**（对账一致；累计 senseaudio 行 **212** 全 reviewed、DB transcripts 1,387）；入大纲
+48 期全 0 既有条目；删音频 48 件 964MB（manifest b4；curated 4,031/4,197）；05_audit 5 FAIL 同为已知
+artifacts；PCM 回收 ~9GB（磁盘 203G）。转录持续（json 31x 递增）。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
