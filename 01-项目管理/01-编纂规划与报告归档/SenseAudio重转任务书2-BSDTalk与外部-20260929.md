@@ -53,7 +53,8 @@
 - 复核波3＝48 期（8 路×6 期）：**48/48 全 pass**。
 - 复核波4＝48 期（8 路×6 期）：**47 pass／1 fail**（`yzv9lcjxhAg` 臆造拒绝话术泄漏，一次性重转被 30 路占满的 1011 拒→挂回待转下批重转重审）。挂账累计 4：BOPee／pynpY7Isbxs／luPViknmoXc／yzv9lcjxhAg。
 - 复核波5＝48 期（8 路×6 期）：**47 pass／1 fail**（`e5g9blIkp0g` 泄漏 "Please provide the audio input"，一次性重转被 1011 拒→挂回待转）。**挂账累计 5**：BOPee／pynpY7Isbxs／luPViknmoXc／yzv9lcjxhAg／e5g9blIkp0g（均 fail 裁决挡门禁，下批 15_parallel 启动时自动重转重审）。
-- 入库累计 **+309 transcripts**（53＋66＋48＋48＋47＋47，每批对账 segments==utterances 逐件一致）；senseaudio 行 **354 全 `'reviewed'`**；删已入库音频累计 309 件 ~5.5GB（manifest×7）。
+- 复核波6＝15 期（3 路×5 期小批）：**15/15 全 pass**。
+- 入库累计 **+324 transcripts**（53＋66＋48＋48＋47＋47＋15，每批对账 segments==utterances 逐件一致）；senseaudio 行 **369 全 `'reviewed'`**；删已入库音频累计 324 件 ~5.8GB（manifest×8）。
 - 入大纲：119 期 pass 件派发＝**全部 0 既有条目**（本战役为新增未引用期；入纲=独立增补 campaign）。
 - 清理：删已入库期音频 119 件（manifest×2 留痕）；`_pcm_gc.py` 多轮回收（含「无JSON且mtime>2h」规则，主理人已批）。
 - `05_audit.py` 门禁 5 FAIL 全为已知 artifacts（复核门设计致 DB⊂JSON、redo 重复台账 3、BOPee 挂账件空正文），非新问题。
