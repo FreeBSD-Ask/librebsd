@@ -381,6 +381,14 @@ wpm＋BOPee）；**复核波1＝8 路×6 期 48 期：47 pass／1 fail**（`luPV
 **入库批4＝+48/+4,538**（对账一致；累计 senseaudio 行 **212** 全 reviewed、DB transcripts 1,387）；入大纲
 48 期全 0 既有条目；删音频 48 件 964MB（manifest b4；curated 4,031/4,197）；05_audit 5 FAIL 同为已知
 artifacts；PCM 回收 ~9GB（磁盘 203G）。转录持续（json 31x 递增）。
+**第三～九轮循环（23:0x–00:24，主理人令「不需我发继续，你自己持续运行」）**：复核波3–9（48+48+47+47+15+12+4 期，
+8/8/8/8/3/2/1 路子代理）＝**210 期复核：206 pass／4 fail**（yzv9lcjxhAg、e5g9blIkp0g、nyNCSM4vGF4 泄漏类挂回
+待转下批重转重审；XT7soOM_YuM 乱码→--force 重转→再审 pass→入库全链闭环）；入库批 5–11＝**+215 transcripts**
+（48+48+47+47+15+11+4＋XT7soOM_YuM 1，每批对账 segments==utterances 逐件一致；**累计 senseaudio 行 401 全
+reviewed**）；入大纲逐批全 0 既有条目；删已入库音频累计 356 件 ~6.5GB（manifest×11）；挂账 5：BOPee／
+pynpY7Isbxs／luPViknmoXc／yzv9lcjxhAg／e5g9blIkp0g／nyNCSM4vGF4（6 项——fail 裁决挡门禁，下批 15_parallel
+启动时自动重转重审）。复核管道已追平转录（00:24 时未复核≈0），循环进入「等转录积压→小批复核」节奏；
+30 路 worker 持续（json 36x 递增）。每轮 commit 见 git（d390c1bb4…b11）。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
