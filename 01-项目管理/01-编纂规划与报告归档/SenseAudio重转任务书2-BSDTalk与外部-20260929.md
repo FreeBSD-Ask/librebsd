@@ -49,7 +49,8 @@
 **执行进度（2026-10-04 22:2x，随批更新——跨会话续接权威位）**：
 - 转录：30 路 python 直跑滚动（`15_parallel_transcribe.py 30`；json 29x/待转 ~3,9xx，30 路实测 1.0–1.35 期/分，全程约 2.1–2.8 天）。§五.4「8 路子代理转录」已被 handoff §九.7 主理人令**取代＝python 直跑**；§五.5「带术语热词」已被 §二.17 撤销条款取代；§三 单把 key 已被主理人池扩展（49 把轮替）取代。
 - 复核波1＝48 期（8 路×6 期子代理）：**47 pass／1 fail**（`luPViknmoXc` 泄漏重转一轮仍复现→挂账；另有 BOPee、pynpY7Isbxs 挂账）。裁决件已对齐本任务书命名 `<epnum>.json`（原 `youtube__<vid>.json` 74 份已改名）。
-- 入库累计 **+119 transcripts**（批1 53＋批3 66，对账 segments==utterances 逐件一致）；senseaudio 行 164 全 `'reviewed'`。
+- 复核波2＝48 期（8 路×6 期）：**48/48 全 pass**（0 fail；ASR 专名漂移 issues 留档）；机械预筛 307 期 13 标记（12 临界 wpm＋BOPee）。
+- 入库累计 **+167 transcripts**（批1 53＋批3 66＋批4 48，对账 segments==utterances 逐件一致）；senseaudio 行 **212 全 `'reviewed'`**（DB transcripts 1,387）。
 - 入大纲：119 期 pass 件派发＝**全部 0 既有条目**（本战役为新增未引用期；入纲=独立增补 campaign）。
 - 清理：删已入库期音频 119 件（manifest×2 留痕）；`_pcm_gc.py` 多轮回收（含「无JSON且mtime>2h」规则，主理人已批）。
 - `05_audit.py` 门禁 5 FAIL 全为已知 artifacts（复核门设计致 DB⊂JSON、redo 重复台账 3、BOPee 挂账件空正文），非新问题。
