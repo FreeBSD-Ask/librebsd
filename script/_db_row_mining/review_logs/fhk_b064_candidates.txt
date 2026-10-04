@@ -1,0 +1,874 @@
+2584357|L4|Jordan Hubbard 建议写 MIDI 实时定时的提问者先用 rtprio(1) 以暴力方式满足实时类线程需求
+2584358|L4|Jordan Hubbard 确认 Justin 正在修复 2.2.1-RELEASE 的循环缺陷，已解决多数病态情形
+2584361|L4|Louis Mamakos 指出 gettimeofday(2) 分辨率优于 128Hz 时钟节拍，实现见 microtime.s 的 microtime 例程
+2584362|L3|Robert Withrow 报告 FreeBSD 上 PostgreSQL 性能比 Linux 慢一个数量级并附 ktrace 追踪
+2584365|L3|Frank Seltzer 判断 aha2940 问题可能与时钟相关，询问对方用的是 dump 还是 tar
+2584367|L4|Jordan Hubbard 认为需要更多能把大规模改动合入而不破坏代码树的 committer 与 reviewer
+2584369|L4|J Wunsch 以 ft(4) 与 aic(4) 驱动为例指出二者均缺乏维护者，无人有意接手维护
+2584373|L4|J Wunsch 指出 sendmail 启动时只会规范自身主机名，不会解析其他主机的 DNS
+2584376|L4|David Greenman 判定 FreeBSD 与 Linux 的 PostgreSQL 性能差距源于 Nagle 拥塞避免算法
+2584377|L3|Renaud Waldura 报告 Apache 1.2b7 代理模块大量 lingering_close 报错，加 SO_LINGER 编译项后消失
+2584382|L4|Terry Lambert 表示 FreeBSD 已具备设计良好的设备接口 devfs，只是尚未成为默认机制
+2584384|L3|Alex Fenyo 报告 libc_r 中 & 运算符优先级低于 ==，同一笔误重复出现四处
+2584385|L3|Jaye Mathisen 报告 de 双口网卡在重 NFS 负载下每秒钟产生三十到四十次 CRC 对齐错误
+2584390|L4|David Greenman 确认 FreeBSD 现版 de 驱动不支持全双工，ifconfig 的 Simplex 标志非此含义
+2584391|L4|Peter Chen 区分带电池与不带电池的机器：VM 写保护是软件，电池缺失者需落盘
+2584393|L4|Jordan Hubbard 说 devfs 设计完善但未完成，无持久性且 USENIX 会后遭公开批评
+2584394|L3|Donald Maddox 报告 find 的 -nogroup 与 -noowner 选项不生效，附 ghostscript 字体目录清单
+2584396|L4|Marc Slemko 判断 find 的 -nogroup 失效是 libc 中 group_from_gid 例程的缺陷
+2584397|L4|John Birrell 称已修复 libc_r 的运算符优先级错误并顺手修正其他几处问题
+2584398|L3|Jaye Mathisen 给出 FreeBSD NFS 客户端对 Network Appliance F540 的 iozone 实测数值
+2584399|L4|Mike Pritchard 判定 find 的 -nogroup 问题属 libc，user_from_{uid,gid} 例程取值所致
+2584400|L4|Brian Somers 反驳称 nodns 与 nocanonify 在配置 SMART_HOST 时极有帮助
+2584402|L4|J Wunsch 说 devfs 仍缺 Terry 的修复，DEVFS_ROOT 已具备，整体仅完成前九成
+2584403|L4|J Wunsch 说 ft(4) 与 aic(4) 从未工作良好，首次导入后无人修，且硬件形态已剧变
+2584404|L4|J Wunsch 说明库中多数系统调用桩自动生成，2.2 的 select 实际支持任意规模的文件描述符
+2584408|L4|keith waters 反映大型 /etc/passwd 下每次改密码都要等逾十分钟重建全部数据库条目，要求增量更新
+2584411|L4|Andrew Stesin 报告 Intel XXpress 双 PCI 总线两枚板载 AIC7870 均不被识别，疑与 PCI-PCI 桥探测有关
+2584414|L4|John Birrell 说明 2.2 标签后 uthread 文件改动过多，libc_r 优先权修复无法以补丁方式回合 2.2 树
+2584415|L4|J Wunsch 澄清系统时钟以微秒刻度不代表每秒产生千次中断，建议读者细读 clocks 手册
+2584416|L3|mika 对比 p166 与 p166mmx 编译 world，用户时间少约两成，推测与 L1 缓存由十六增至三十二 KB 有关
+2584418|L4|Jordan Hubbard 提议承认现行 devfs 只是权宜之计，把默认权限与设备号迁入 sysctl 并新增 S_IFLNKDEV 类型
+2584420|L4|Bruce Evans 指出引导装载器按 BIOS 参数表初始化磁盘几何，而 wdattach 改取 CMOS 与非 BIOS 查询值致几何不一致
+2584421|L4|Terry Lambert 解释 FreeBSD 取得 INT 13 几何值后又弃之取可能错误的 CMOS 值，故磁盘几何偶有误判
+2584422|L4|Justin Gibbs 指出 XXpress 主板含两条 PCI 到主机总线，David 曾令 PCI 代码多探测一条主总线解决同类问题
+2584424|L4|proff 质疑 devfs 方案，认为伪符号链接名解析时回查 sysctl 取 inode 的设计过于复杂
+2584426|L4|Terry Lambert 说明 BIOS 沿用用户设定的虚化几何而 FreeBSD 驱动掌握真值，故无必要沿用虚化几何
+2584428|L4|Brian Tao 应和密码库重建耗时讨论，给出临时对策即增大 pwd_mkdb 默认哈希表尺寸
+2584429|L3|Steve Sims 报告 current 树连续数日 make world 在 lib/csu/i386 安装阶段中断，仅贴 install 报错片段
+2584434|L4|Terry Lambert 列举 devfs 未设为默认机制的理由，称缺持久性会招致公开论坛猛烈抨击，要求持久性完全工作
+2584436|L4|Terry Lambert 就 Rio 与 Ganger Patt 论文所述软更新机制的交互发问，主张实现不依赖文件系统的通用方案
+2584437|L4|Terry Lambert 反驳称 devfs 在 DEVFS_ROOT 下早已可用，未被集成源于顾虑 Lite2 与改动范围而非缺少补丁
+2584438|L4|开发者讨论代码维护困境，指内核接口变化只是问题一小部分，ft 驱动随硬件演化几近报废
+2584442|L4|Terry Lambert 追问持久化方案两个缺口，含可插拔设备不在场时记录归属，并指普通文件系统仍需保留 specfs
+2584443|L4|Peter Chen 回应 Rio 对 BIO 层侵入性，指无后备内存的使用者须能关闭 Rio 并仍保有软更新收益
+2584445|L4|J Wunsch 详解调度时钟实际频率约一百且不对应用程序开放，统计与性能时钟另设，纠正对方理解
+2584447|L3|Renaud Waldura 就 Apache lingering_close 报错与 Marc Slemko 往复，对方称 FreeBSD 无须禁用该选项
+2584449|L4|J Wunsch 指出 devfs 在 Lite2 合并后出现严重别名问题，甚至使系统找不到根文件系统条目而无法启动
+2584450|L4|J Wunsch 说明 aic 与 ft 在内核接口未变时仍大致可用，但 ft 设计欠佳且随硬件演进日渐无用
+2584451|L3|Jaye Mathisen 自述无力贡献代码但重度使用 FreeBSD，赞同以 rc 脚本维持持久性而非并入 devfs
+2584453|L4|J Wunsch 说明增量更新密码数据库的方案已由 Guido 实现，仅单个用户条目变更即触发，无需再等补丁
+2584454|L4|J Wunsch 解释 SMC 驱动未进 2.2 是因 Matt 在截稿后才发布，且其中部分内容已流入 NetBSD
+2584458|L3|拒绝 Pyramid universe 式条件符号链接，认为预设宇宙数太僵化，要更通用的变体链接
+2584460|L3|维护政策之争：无人愿维护的代码不如不入树，ft(4) 与 aic(4) 为前车之鉴
+2584461|L3|ppp 与 pppd 差异排查：怀疑 pmdemand 示例与手册教程配置问题所致
+2584462|L3|make world 由 7595s 降至 5982s（约 21%），归因 p166mmx 的 32K L1 缓存
+2584463|L3|PPP 无主从关系、两端为对等，接口启动时应发 n 次配置请求后静默
+2584464|L4|devfs 方案：默认权限与设备号移入 sysctl 层级，并新增 S_IFLNKDEV 伪符号链接类型
+2584465|L3|两机直连无 magic number 冲突之虞，GenerateMagic 非严格随机但极难撞车
+2584467|L3|引用 RFC1663：同一主机内每条链路必须用不同 magic number
+2584468|L3|以「环境移入内核」实现变体链接，Terry 认为经 sysctl 间接更省力
+2584469|L3|devfs 持久化之争：JKH 认为默认权限足够，其余不必持久化，被指双标
+2584470|L3|ft(4) 与 aic(4) 无人维护，有人愿认领磁带驱动，条件是先捐两台设备
+2584472|L3|变体链接走 sysctl 更简单，反对为等价现状重构整个环境处理机制
+2584475|L3|大 passwd 文件重建慢：pwd_mkdb 增量更新早已并入 2.2，-u 选项却未写手册
+2584476|L3|若真要重做环境处理，应做进程/组/全局三级命名空间，只为现状不值得
+2584477|L3|追问 VOP_PUTPAGES 最终调用点，顺宏展开疑似落到错误函数，请人确认
+2584480|L4|答：文件系统无 putpages 时用 pager 默认实现，可支撑层叠文件系统或高性能换页
+2584481|L3|继续推导 VOFFSET(vop_putpages) 取值，澄清宏展开链条
+2584482|L4|批评 vput/vrele 合并为 vputrele：两者锁语义差异大，易错的抽象比缓存收益更糟
+2584483|L3|nn 6.5.0 在同机 NNTP 服务器上无法本地取信，给出可开关该行为的补丁
+2584486|L3|devfs 持久化退路：若无人做 union 影子层，则改用启停脚本方案，日后可替换
+2584487|L3|libc_r 修复无法回移 2.2，uthread 变动过大，只能留待 3.0
+2584490|L3|devfs 持久化设想：在挂载点目录放类似 quota 的稀疏数据文件，按 major*minor 寻址
+2584491|L3|pwd_mkdb(8) 的 -u 选项无人写进手册，建议补文档
+2584495|L3|Adaptec 2940 超时之谜：末端电阻损坏所致，换新后运行十余小时无故障
+2584496|L4|FreeBSD 时钟说明：调度时钟 100Hz、统计时钟 128Hz，均不可直接给应用程序
+2584498|L3|想不经 mkisofs 直接用分区数据刻 CD，读回时按 FFS 而非 cd9660 挂载
+2584499|L3|IP Filter 3.2alpha4 已入 -current，仅支持 LKM，不支持编进内核
+2584500|L4|提议 securelevel 提高到 3 时禁止改动 IP Filter 规则，并就 3 还是 10 征询意见
+2584502|L3|分析 Apache 式 accept 惊群：全体进程被唤醒、仅一个胜出，造成高 load average
+2584504|L4|用 lseek 造空洞生成稀疏文件，询问 n 字节序列与空洞的磁盘空间临界长度
+2584505|L3|从 DOS 启动内核安装：fbsdboot.exe 可传任意内核，需内建 MFS 根才能独立运行
+2584506|L3|声称两台 FreeBSD 直连若 magic number 相同则 LCP 不再续谈，重试也无效
+2584508|L4|上述 accept 惊群已修：现在只唤醒一个进程，避免全体被唤醒
+2584510|L3|Dudorov 在 2.2-RELEASE 构建 ELF-Kit，elf-cc、elf-g++ 跑通 hello，file 报 ELF 32 位，追问为何加不加
+2584511|L3|Greg Rowe 报告稳定运行逾一年的服务器在 2.1.7-RELEASE 上死机，sd1(ahc0:1:0) 空闲超时，LASTPHASE 0x1、SEQA
+2584512|L3|accept() 唤醒逻辑改动讨论：请求到达只唤醒一个进程，apache 类预派生应用的高负载均值问题随之消失
+2584514|L3|dennis 报告 21041 以太卡在 2.2.1R 下 NFS 载入必然挂死，同一硬件在 2.1.5、6、7 均正常
+2584515|L3|Shawn Carey 佐证 2.2.1 亦有 NFS 问题，56k 远端挂载偶发 cp、rm 卡死，但未整机挂死
+2584516|L3|Ollivier Robert 质疑 Dudorov 的 ELF 库命名是否正确，指出加不加 -static 结果相同即未真正动态链接
+2584517|L3|John Polstra 指出 de 驱动补丁对应 src/sys/pci/if_de.c 第 1.60 版（1997-02-23），反问补丁究竟在哪
+2584519|L3|Luigi Rizzo 认为 NE2000 克隆卡数量远超 21x4x，指等 de 驱动稳定再发 2.2 只可能在分支切出前做到
+2584521|L3|Chris Coleman 称校园 500 台机器几乎全为 NE2000，含部分 FreeBSD 服务器，自己另用 fxp 驱动
+2584524|L3|Jaye Mathisen 表示 Bill Fenner 声称已修的 routed 丢网关 RTM_LOSING 告警仍在刷屏，自己同样收到
+2584525|L3|Jaye Mathisen 将 SCSI 链上全部终结器换成两端主动终结后，2940 超时问题不再出现
+2584526|L3|Jaye Mathisen 已将 de 驱动移植到 2.2.1，卡在 IF_MEDIA 部分，愿打包寄出已有文件
+2584527|L3|Spohn 用 ipfw 时想在过滤前后取时间，但过滤过程中无法调用 gettimeofday，求可行办法
+2584528|L3|dennis 确认故障在 NFS 而非 de 驱动：ne2000 机器症状相同，2.1.6R 服务器经 NFS 装 2.2.1R 卡死在 bin 且卡点不定
+2584529|L3|Bill Fenner 解释 RTM_LOSING without gateway 只是直连主机重传，可安全忽略，至多是其他问题的症状
+2584532|L3|J Wunsch 指出 Matt 能否继续维护 de 存疑，并交付一台配双通道 SMC 卡、运行 FreeBSD 2.2 的客户机
+2584533|L3|J Wunsch 提醒 UFS 在非 512 字节块设备上的支持仍不成熟，CD 备份用字符还是块设备须分情况
+2584535|L3|J Wunsch 认为锁定 ipfw 规则用 securelevel 2 已足够，并主张各 BSD 含 BSD/OS 保持一致
+2584537|L3|Terry Lambert 建议 CD 备份分区取 16k 块大小并配相应 frag，以绕开 UFS 小块设备的限制
+2584538|L3|Mark Hannon 报告 Xinside CDE 在 2.2-RELEASE（加 sgid 补丁跑 dtmail）上的 locale 问题，2.1.7 无此
+2584539|L3|Arjan de Vet 建议由单一接收进程把新 socket 分发给工作进程，并提到这是 NCSA 最早的预派生 HTTP 方案
+2584544|L3|proff 报告 IP Filter 3.2alpha4 的 LKM 在 -current 下无法编译，模块与用户态代码已自行移植，主因是头文件组织
+2584546|L4|Thomas David Rivers 复现 kern/3184 的 dup alloc 与 free vnode panic，按 Tor 思路把 VOP_IN
+2584551|L3|Jaye Mathisen 求一份旧 MUSBUS 基准，欲据此造出可指定时长、专攻压垮 FreeBSD 的整机压测套件
+2584554|L3|Robert Eckardt 求按方向与协议策略矩阵生成 ipfw 规则的配置工具，若无则打算以 Tcl/Tk 自写
+2584556|L3|knarf 在 6GB 新闻池的中载 news 服务器上复现 kern/2923 的 vm_fault nofault panic（f6e21000），轻量系统
+2584559|L3|Borja Marcos 读 Poul-Henning Kamp 的新 malloc 一文，自述做的定长缓冲池思路相近，并比较所用技术
+2584561|L4|Greenman 得出租出最近用块可减换入页的结论，主张 malloc 按 LIFO 组织内存块并施加 MRU 策略
+2584563|L3|Rivers 在中载 news 服务器上复现 vm_fault nofault panic，地址不同，2.1.5 升 2.2.1 后约 48 小时初现
+2584565|L3|Rivers 建议取 sendmail 8.8.5 并装 check_* 规则，check_relay 是所需项，并附上可用以自建 freebsd.mc
+2584566|L3|Withrow 建议改 rc 令 amd 全从 nis 取信息，使 amdflags 可在 /etc/sysconfig 中用 eval 展开
+2584569|L3|dennis 用网监视器见服务器发出未被确认的窗口帧，因用启动软盘无法诊断，Luigi 建议试 ping
+2584571|L3|Greenman 答：阻塞在 accept 上的进程按轮转处理，最老者先，回应无人被饿死之问
+2584573|L3|Mansion 反问除了美观为何需多进程 accept 公平性，认为无规范规定此行为
+2584574|L3|Mansion 问 apache 式应用高负载均值成因，并追问为何全体进程都会被唤醒
+2584576|L4|Rabson 审 Tor 的补丁：VOP_INACTIVE 需 usecount 为零的 vnode，该改法内核多处失败，须重想
+2584577|L3|Carey 述同一可执行文件在 GDB 下运行约十秒即被杀并报文本文件被修改，静态链接则不受影响
+2584578|L3|Dudorov 查明自 2.2 源码装 elf-libc 未建 libc.so 到 libc.so.3.0 链接，补齐后测试程序方可动态构建
+2584579|L4|Rivers 测得 0xdeadb 令 vget 数分钟即出错，Lite/2 提交已移除该显式检查，实为 vget 竞争而非 nfs_inactive
+2584590|L4|Lambert 问 usecount 为零且在空闲表上的 vnode，getnewvnode 何以判定不可复用，指 VOP_ISLOCKED 未用、代码欠统一
+2584591|L4|NetBSD 的 de 驱动修了 21140A 收溢出挂死而 FreeBSD 缺失：attach 清 TULIP_HAVE_RXBUGGY，中断依该标志判溢出
+2584592|L3|Santee 问 2.2 新增 ipdivert 套接字除地址转换外能做什么，可否整条连接重定向
+2584594|L4|Lemon 用 libc.so.4 为例说明版本号库链接优于符号链接，旧程序用已记录的版本名，新程序用新版
+2584595|L3|Thomas 写出网页说明如何升级 FreeBSD 以运行最新 de 驱动，称 NetBSD 驱动远胜当前 FreeBSD 驱动
+2584596|L3|Wunsch 答 FTP 安装目录相对于非匿名用户的家目录，sysinstall 还会找与发行版名相同的子目录
+2584597|L3|Somers 认为给该 rc 改动加一句说明该行经 /etc/sysconfig 求值即可接受
+2584598|L3|Egge 分析涉事 vnode 由 VT_NFS 回收至 VT_UFS，getnewvnode 从空闲表选节点并调 vgone 取出
+2584599|L4|proff 列 IPF 3.2alpha4 移植 FreeBSD 的缺陷：fil.c ICMP_ERROR 参数与释放语义在 Solaris 与 BSD 不一致
+2584602|L4|dennis 查明 2.2.1R 的 FTP 与 NFS 装载在 8MB 内存机上挂死，加至 16MB 后问题消失
+2584603|L3|Juul 指出 rc 中 amdflags 用单引号不会求值反引号命令，应改用双引号
+2584604|L3|Rivers 请 Tor 说明 UFS 若因故阻塞将何处何因生他问题，并强调自己的问题不涉及 NFS
+2584605|L3|knarf 在 6GB 新闻池的中载 news 服务器上复现 vm_fault nofault panic，机器崩溃数分钟后重启
+2584606|L3|Rivers 请 knarf 提供 kgdb 回溯与内核 nm 及系统细节，认为其问题或不如自己的棘手而更易修
+2584607|L3|Fraleigh 指出 aic(4) 与 ft(4) 大体可用，但 ft(4) 设计不佳且久无人维护，无法支持较新驱动器而日趋无用
+2584608|L3|Cummins 自 2.1.0 升 2.2.1-RELEASE 后，在 8MB RAM 的 Dell 486sx-20 上用 NFS 安装无问题
+2584609|L3|Rivers 确认 dup alloc 问题亦存在于 2.2.1-RELEASE
+2584616|L4|Rivers：学会用 ddb 后发现查错位置，newfs 走 raw device 应看 physio()，并追问 Xresume11 与 splbio 中断路
+2584619|L4|Rivers：发现不改内核配置时一切正常，光标键失效与内核配置相关
+2584622|L4|Rivers：实测旧版 boot.flp 在同一 386 机器上工作正常，判定故障由新版 boot.flp 引入
+2584623|L4|Rabson：给出经串口用 kgdb 调试 LKM 的完整流程——COPTS=-g 重编、gdb -k、modstat 查模块加载地址
+2584624|L4|Withrow：指出加 eval 会让 ypcat 在 source /etc/sysconf 时提前求值，而彼时 yp 尚未启动
+2584631|L3|Smith：建议在 malloc 块头加调用者地址字段以定位分配点，但认为每块完整回溯代价过大
+2584632|L4|Egge：解释根因——空闲链表首个 vnode 若为 NFS vnode 且 VOP_INACTIVE 因服务端下线阻塞，则长期无法复用
+2584635|L4|Egge：称唯一修法是各文件系统建私有 vnode 池；另建议 getnewvnode 调 VOP_ISLOCKED 跳过已锁定节点
+2584637|L3|Mayo：反驳 8MB 内存不足之猜想，称两台完全不同机器、两个不同网段均能复现
+2584638|L4|Assange：ipfilter 构建与模块加载系统已完成，约 30k 补丁见 GNATS kern/3207，请 wollman/DG/avalon 评审
+2584639|L4|Lambert：指出死锁链路——ffs_vget 已持 ffs_inode_hash_lock 再调 getnewvnode，后者在 vclean 等锁不返回
+2584643|L4|Jennejohn：审阅 kern/3207 时指出引入 osreldate.h 在把 ipfilter 编进内核的情形下无法工作
+2584644|L3|Egge：反驳 VOP_ISLOCKED 方案——该 vnode 无持有者故并未加锁，若真加锁则不会触发 vclean
+2584650|L3|Rivers：被 Bruce 纠正——内核并无 _Xresume11，Xresume11 只是汇编里的私有标签
+2584651|L4|Rivers：指认 UUCP_RELAY 中的 ucbvax.Berkeley.EDU 出自随 sendmail 发布的 freebsd.mc，属上游默认缺陷
+2584653|L3|Cobbs：询问 divert 套接字除地址转换外，能否把 25 端口入站连接整体重定向到另一端口 MTA
+2584658|L4|2.2.1 secure tty root 登录被锁（rootok 仍提示口令），已知缺陷，修复已入树
+2584659|L3|2.2.1 升级后 NFS/FTP 加载问题反馈帖，仅转述他人报告
+2584660|L3|kern/2923 vm_fault panic，指向 nfs_readdir，建议远程 kgdb 调试
+2584661|L3|sendmail.cf 示例仍引用已失效的 ucbvax.Berkely.edu 作 UUCP_RELAY
+2584665|L3|qmail 移植已在 incoming 提供，讨论 UUCP 支持情况
+2584668|L3|Doug Rabson：IBSC2 的 getdents 在 non-UFS 上有严重 bug，索要静态 ls 做测试
+2584669|L3|qmail 不支持 bang path，可另指定 MTA 投递 UUCP 域
+2584670|L3|Thomas Rivers：sendmail DNS 问题，NO_CANONIFY 旧写法失效
+2584671|L3|驱动变量类型讨论：仅硬件规定尺寸才用窄类型
+2584672|L3|sendmail 主机名解析仍走 gethostby*，需将 /etc/hosts 置于 DNS 之前
+2584673|L3|ipfilter 编译失败根因：config(8) 生成 sys/compile 下的单一 Makefile
+2584674|L4|aic7xxx 近期提交致系统挂死（SCB timed out，仅 ping 可通），严重回归
+2584676|L3|aic7xxx 挂死后续，质疑与 kernel memio 选项是否相关
+2584677|L4|DST 跳过的 2-3 点致 /etc/daily 未运行，提议改 1am
+2584678|L3|qmail 是否作为可选 MTA 进入 FreeBSD 的争论
+2584679|L3|ipfilter 打包讨论：引用 contrib 使 ssys 重建变难
+2584683|L3|ipfilter 目录之争：src/sys/contrib 下混入非 BSD 版权包
+2584687|L3|qmail 经 uux 走 UUCP 时列表邮件按订阅者数成倍发送
+2584692|L4|内存 dup alloc 疑似 aha1542 专有；printf 曾掩盖问题，二分搜索内核定位
+2584693|L3|ipfilter src/sys/contrib 版权混合是否可接受（与既有 contrib 同类）
+2584694|L3|IPv6 实现违反 style(9)，不应并入 -current 内核
+2584696|L3|ipfilter 目录与打包影响再讨论，倾向保留 contrib 外部引用
+2584697|L3|qmail 保留列表批量发送特性，UUCP 场景代价高昂
+2584698|L3|驱动变量尺寸讨论收尾：图形代码是否全用 int 由使用者自行判断
+2584699|L3|FreeBSD 2.1.7 安装求助：双硬盘加 ATAPI CD 分区布局
+2584700|L3|aic7xxx 挂死后行为进一步恶化：无法执行其他操作、键盘失效
+2584701|L3|qmail 移植已存在却未纳入发行版，应作为可选 MTA 由用户选择
+2584702|L3|变量类型速度对比：int 更快，68k 编译器历史差异讨论
+2584703|L3|kern/2923 后续：索取 kgdb 回溯、内核 nm 与系统细节以判重
+2584704|L3|提议建立 -RELEASE 分支政策：每两周自动打版并生成 diff 列表
+2584705|L3|DST 时 cron 跳过时段影响，讨论各国换时小时差异
+2584706|L3|争议 -RELEASE 是否仍具不变性，建议改为 SNAPSHOT 加增量包
+2584708|L4|ahc panic(i386/3195)在 4/4/97 新版 aic7xxx 微码下仍复现，疑 2.1.7 后回归，求只回退微码的办法
+2584709|L3|每次开 xterm 或 su 即报 Message Catalog System: corrupt file，疑 locale 消息目录回归
+2584714|L3|bt848 视频：线性帧缓冲未设 WC 时 mpeg 播放仅 23.8fps，wrmsr 写入后明显提升
+2584720|L3|ahc panic 二次确认：微码与驱动更新到 4/4/97 后报错依旧，怀疑 2.1.7 之后被破坏
+2584724|L3|syslogd 互设主机时消息来回转发成级联风暴，非本地消息被再次转发，讨论禁止多跳
+2584726|L3|i386-sco-gcc 移植测试中 configure 的 getgrent 测试触发内核 panic，卸 ibcs2 后编译失败
+2584729|L3|ipfilter 编入 src/sys/contrib 的版权顾虑：sys 树内混入非 BSD 版权源码
+2584732|L3|反驳源差异升级方案：/etc 数据与实现耦合，无法可靠升级配置文件
+2584737|L3|cron 不处理夏令时跳时：跳过的小时任务不执行、重复小时重复执行，OpenBSD 已调整
+2584740|L3|Warner Losh 称可能是自己的改动破坏了 Message Catalog，疑漏掉边界情形
+2584745|L3|2.2.1R 经 NFS 安装到低内存老 486/8MB 机出现内存问题，需提供诊断启动盘排查
+2584746|L3|Message Catalog 报错复现路径：2.2-GAMMA 装 X/ports 后出现，升 2.2.1-RELEASE 仍存在
+2584747|L3|2.2.1 无法识别双 PCI 总线(AIC 双芯片)，大机箱主机几乎无法使用 FreeBSD
+2584751|L3|询 clist 队列是否无字符上限：各 line discipline 未限流，担心内存无限占用
+2584754|L3|2.2.x NFS 客户端 mount_nfs -o userquota 被拒，3.0-current 可用，配额挂载缺失
+2584756|L3|exim 被称优于本机 sendmail；各 MTA 争装 /usr/sbin/sendmail 兼容层是最大阻碍
+2584757|L3|Bob Withrow 确认该方案下 /etc 升级须手工完成约耗一小时，并主张分开两套改动
+2584759|L3|升级争议：AMD/NIS 改动波及 /etc/sysconfig 与 rc，通用发行无法直升生产机
+2584760|L3|dup alloc 线程续帖：转述 Egge 将问题收窄至 aha_scsi_cmd 附近约 8 行代码
+2584761|L3|syslog 代理用例存续：若不取消委托转发，则 n 台机需配 n 个守护进程
+2584763|L3|升级工具之争：有人提议按周产出 release 至 stable 的 diff 集与二进制升级套件
+2584765|L3|wbinvd 释义：回写并失效缓存，仅 486 及以后 CPU 有该指令，与此场景无关
+2584766|L3|pci_map_mem 在 PCI 内存空间低于 1MB 时屏幕报失败，却返回 OK 并给出映射
+2584768|L4|Darren 近期以 sysinstall 的升级选项把 FreeBSD 2.1.6 升到 2.2.1，运行正常
+2584769|L3|Darren 与 Michael 附同意见，主张趁升级动力仍在时把二进制升级流程自动化
+2584771|L3|releng22 服务器放的是完整发行版而非补丁集，故非 Darren 所寻之物
+2584773|L3|Jordan 答补丁不必求发行版分发，直接查本地 CVS 仓库副本即可
+2584775|L3|Jordan 释 FreeBSD 不能经 DOS 接口装包，须复制单包为 8.3 名后 pkg_add
+2584776|L3|引 HP-UX cron 手册的 DST 语义：歧义时刻与不存在时刻均按换时规则调整
+2584777|L4|BIOS 几何数据错误致 bootblock 除零崩溃，已收窄至中断 0x13 子函数 0x8
+2584778|L3|Giles 主张照改，代理转发宜降为命令行选项，破坏回环更优先
+2584779|L3|netatalk 缺 userland 管理程序，ports 中亦找不到，只能自行编译内核
+2584781|L4|aha1542.c 调试插桩：新增 in_region 全局量并散布检查，置于 splbio 之后
+2584782|L3|proff 称 ipfilter 构建与模块加载系统完成约 30k 补丁挂 GNATS kern/3207 请评审
+2584784|L3|CVS 体积之争：Michael 以 du 数据反驳整库十倍源码之说，实际远小于此
+2584786|L3|David Greenman 指该传闻最早 4 月 1 日发布，暗示即愚人节内容
+2584789|L3|Timmons 指出处为 Kolstad 4 月 1 日刊载于 USENIX Journal 的评论
+2584791|L3|Stox 断言 Unix 巨头赴微软纯属愚人节玩笑，且真有人上当
+2584792|L3|Tancsa 忆微软购天主教会旧玩笑更荒唐亦多人都信，自承初读以为真
+2584795|L3|多多端口卡探测单位分配：首卡恒占 unit 0，声明 device de4 亦被忽略
+2584796|L3|Polstra 译 pci.c 德语注释：PCI-PCI 桥场景正确性未验证，涉 Compaq Prolinea
+2584799|L3|Leisner 称在 ;login 读到后回神才觉是愚人节稿件，并忆购天主教会旧玩笑
+2584800|L4|Rob Kolstad 本人确认 Unix 巨头赴微软系愚人节稿件并现身澄清
+2584801|L4|Intel XXpress S82374SB 大机箱上 FreeBSD 2.2.1 无法识别 2 条 PCI 总线
+2584802|L4|proff 交 ipfilter 修订称已完备但未测 2.2，contrib/ipfilter 应移除且仅收 bug 修复
+2584803|L3|Darren 称 IP Filter 入树方式悬而未决，须授权者定夺后方可动布局
+2584804|L3|Matt 已写 de 驱动升级指引并称 NetBSD 版远优于 FreeBSD 当前版；Smith 问谁跟进
+2584805|L3|Smith 自纠先前论断：cain 上 ncvs/src/sys 仅 45039，CVS 未比源码大十倍
+2584806|L3|Smith 称 FreeBSD 应能识别 2 条 PCI 总线，并指向 Stefan Esser 求证
+2584808|L3|Josef Grosch 指 fxp 为 PCI Intel EtherExpress Pro/100 驱动，单位在用状况良好
+2584809|L3|Robin Cutshaw 提交 de 驱动更新受阻：无 freefall incoming 上传权限且邮件未送达，询合入途径
+2584810|L3|Hermit Hacker 报告 FreeBSD 上运行 SATAN，目标选择菜单保存 .pl 后返回主菜单，疑步骤有遗漏
+2584811|L3|Dedy 报告 2.1.5 缺少 libdes.so.2.1，导致 Stronghold 安全服务器无法安装
+2584812|L3|Josh Gilliam 提议 ping 新增 -A 选项，在丢包时响铃，语义与现有 -a 相反
+2584813|L3|Thomas Rivers 跟进 dup alloc：aha_intr 未在检查清单内，建议 getnewvnode 建立锁
+2584814|L3|Thomas Rivers 比较新旧 boot.flp，以界定 2.2.1 引导与安装故障出现的时间范围
+2584815|L3|Rivers 报告 freefall 修正 sendmail 后 ucbvax 注入消失，改注入 uu.uunet.net，疑 uucp 解析有误
+2584816|L4|Jordan Hubbard 认为 ping 该方向设计不当，主张对单次成功或失败返回状态，由调用方自行决定提示方式
+2584817|L3|Jordan Hubbard 指 2.2.1 安装故障系用户误按 Scroll Lock 而非 Pause，致设备探测时键值出错
+2584819|L3|Jordan Hubbard 称滚动锁区间内键盘输入历来未定义，并指 Rivers 邮件头损坏需自行修复
+2584820|L3|Jordan Hubbard 公告收到 Kingston 网卡与 NCR 53C875 PCI SCSI 卡捐赠，因缺联系方式公开征集捐赠者信息
+2584821|L3|Stefan Esser 解释多端口 PCI 探测：首块适配器总挂为 unit 0，其后依次递增，多卡多口编号易混淆
+2584822|L3|Stefan Esser 就两块 AIC7870 不被识别列出排查方向，询问机型、总线类型及是否已挂设备
+2584823|L4|Frank van der Linden 发长文重提 NFSv3 cookie jar 缺陷，NetBSD 与 FreeBSD 均遇此问题，同投两列表以免重复
+2584824|L3|Khetan Gajjar 答复 SATAN 问题：须用 ports 中的 Chimera 浏览器，Netscape 不可行
+2584826|L3|Peter Wemm 引 Matt Thomas 的 de 驱动升级说明页，指 NetBSD 的 de 驱动明显优于 FreeBSD 现状
+2584829|L3|Rivers 报告 2.2.1 挂载 HP/UX 9.0.5 文件系统后执行 ls 即挂起，2.1.5 无此问题
+2584830|L3|Peter Wemm 提及 Julian 的 qmail 全功能移植件长期置于 incoming，认为 qmail 宜作可选项引入
+2584831|L3|Jordan Hubbard 指 fping 已能完成单次探测并返回状态，给出以 fping 包壳的 bping shell 函数
+2584833|L3|Rivers 补充 NFS 挂起细节：ls -l 挂起，ps -xal 显示进程停在 sbwait
+2584834|L4|Rick 转述 Sun 结论：目录偏移 cookie 无法正确实现系设计失误，服务器应恒发 0，偏移宜存入 buf 结构
+2584836|L3|Michael Bielicki 已完成 Apache-SSL 至 2.1b7 与 2.1b8 的移植，询问该 diff 的去处
+2584841|L3|Brian Tao 称 vx 驱动亦支持 100Mbps，其 3com 3C900 10/100 网卡接在 10M 网段未试
+2584842|L4|Terry Lambert 反驳 dup alloc 存在互斥锁之说，指该处不可睡眠，仅高于 splbio 的 hardclock 等中断可打断
+2584844|L3|Terry Lambert 答 libdes 缺失：须自行安装 DES，且因出口管制只能从非美国站点获取
+2584847|L3|Mikhail Sokolov 报告 ipfilter 3.2a4 于 2.2.1 下 ipf -f 报设备未配置，SIOCADDFR 反复报坏文件描述符
+2584850|L3|Mikhail Sokolov 确认注释 DDEVFS 后 ipfilter 可用，另指 ip_input.c 294 行 goto next 的目标未定义
+2584852|L4|David Greenman 附上在 Intel Alder 机型使用的修复补丁，提示可能无法干净套用需手工处理
+2584853|L3|Rivers 汇总 NFS 挂起复现条件：HP/UX 9.05 与 Sunos 4.1.3 均可复现，读文件挂起后其他进程一并挂起
+2584854|L3|Rivers 报告 2.2.1 安装后出现 calcru: negative time -330 usec 内核消息，与操作无明显关联
+2584855|L4|David Greenman 指 getnewvnode 调用方 UFS 有互斥锁使调用串行，该锁系其 1995-07-21 所提交的 rev 1.24
+2584856|L3|Terry Lambert 追问 getnewvnode 互斥锁的具体位置，要求指出 2.1.7 源文件中的对应代码
+2584857|L3|Giles Lean 建议寻找或编写理解 qmail 的 rmail，以剥离信封中 uucp 寻址的 ! 前缀
+2584858|L3|Malcolm Newton 报告 cuaa1 连接时出现 tty-level buffer overflows，询问 sio1 缓冲区上限与调大方法
+2584859|L3|netatalk 用户态管理程序 ports 缺失，指向 umich.netatalk 主页
+2584860|L3|2.2.1R NFS/FTP 安装 8M/12M RAM 均挂死，仅 kernel-developer 集受影响
+2584862|L3|strptime() 与 strftime() 辨析，FreeBSD 未实现 strptime 需自行补齐
+2584863|L3|installer 集合显示改为列出全部 qualifying sets，kernel-developer 连带 user
+2584867|L4|ipfilter 默认不启用 devfs：模块编译缺 #DEVFS，建议 devfs 非可选或修正
+2584871|L3|sio1 raw 模式 tty-level buffer overflow，询问缓冲上限与增大方式
+2584872|L3|proff 提议 FreeBSD 采用安装后可整体只读 root+/usr 的目录组织
+2584876|L3|Informix on MIPS：A 机 semsys 2.14万 vs B 机 send/recv 半之且原生 socket
+2584877|L3|双 PCI 总线双 AIC7870 且 EISA 存在，P5/166 配置咨询
+2584881|L3|SiS 430TX 芯片组识别支持询问
+2584883|L3|ipfilter 注释 DDEVFS 后生效；ip_input.c 疑 goto next 分支未定义
+2584884|L4|ipfilter-proff diff 移植至 FreeBSD 2.2.1，完整补丁含 conf/files 变更
+2584885|L3|Ruslan 追问 strptime 语义，讨论 #define 替代方案的可行性
+2584887|L4|ipfilter.shar.gz 上传 ftp.incoming 支持 2.2.1，修 manpage Makefile 两小 bug
+2584891|L3|Andrew 提交完整 boot -v 日志供诊断 AIC7870/EISA 总线
+2584892|L3|mishania 反馈：2.2.1 无 net/if_var.h，建议 __FreeBSD_version 条件包含
+2584893|L4|kern/3244：ipfw flush 关闭现有连接，Adrian cvsup 取源待查证
+2584894|L4|内核编译无法 include /usr/include，建议新增 sys/sysreldate.h 暴露 __FreeBSD_version
+2584896|L3|de0 未报 drop 但 xperfmon 显示 700 冲突/秒，质疑驱动丢包计数
+2584897|L3|S3 Trio64V+ rev.541 上 XFree86 3.2 color map 读取失败，newmmio 驱动
+2584899|L4|#ifdef 选项与 LKM 本质不兼容；IPFILTER_LKM 影响 ip_input.o 是更大问题
+2584901|L3|64k ISDN 模拟侧 57600 引发 tty overflow，问 115200 是否有效速率
+2584902|L3|Brian 问 sio 驱动 carrier 丢失后 HUPCL 复位端口机制如何实现
+2584905|L3|Jason 阐明 strptime 语义并自述正在实现，等待社区反馈
+2584908|L3|Stefan 分析 EISA 无设备、Pentium P5/166 pcibus_setup mode1res 异常
+2584911|L3|ipfilter 版交接公告，列未完成项与 CVS 维护安排
+2584912|L3|反驳 2.2.1R NFS/FTP 负载问题归咎 bad ram 的论述
+2584913|L3|讨论 __FreeBSD_sysversion 与内核版本编译期探测需求
+2584918|L3|S3 Trio64V+ rev541 配 XFree86 3.2/3.2.A 报 Cannot read colourmap from VGA
+2584925|L4|2.1.7 Defender 1000 回调后 DTE 速仅 9600，getty 配 38400 无效
+2584927|L3|提议 /etc/devices 映射标准设备到真实设备，rc 首步做软链
+2584929|L3|ISDN 口调制解调器低速，sio silo overflow 诊断，非 8550 UART
+2584932|L3|确认 Iomega Zip 并口 SCSI 转换驱动存在但慢，建议换真 SCSI
+2584934|L3|osreldate.h 与 sys/osreldate.h 头布局兼容争议细节
+2584937|L3|提议 includes.h 与 POSIX 一致性以改善跨系统可移植性
+2584938|L4|2.2.1 NFSv2(HP-UX/SunOS)目录访问锁死，2.1.5 正常；疑 ep0/3c509 驱动回归
+2584940|L3|de0 高速 ping 丢包但 netstat -d/kgdb 均无计数，计数盲区讨论
+2584941|L3|2.2.1R NFS/FTP 高负载崩溃，多款 RAM 测试仪均检不出故障内存
+2584944|L3|澄清本地 socket >30 限制实为每进程 fd 上限，非 SOMAXCONN
+2584946|L4|kern/3244 ipfw flush 断连接根因：漏 -q 致输出报错破坏后续 TCP 发送
+2584947|L3|ports tcsh-6.07.02 消息目录系统异常，附 ktrace；换 csh 消失
+2584950|L3|davem 提 socket 复用改进：TCP 动态哈希增长等内核设计提案
+2584953|L3|提议建商业厂商/第三方开发者注册表，征求社区意见
+2584958|L4|DELL XP90 2.2.1 跑 X11 后键盘锁死，须 telnet 重启；换 pcvt 消失，疑 sco 控制台缺陷
+2584965|L3|Mark Mayo 公告 DES 分布式破解行动已启动，frii 上提供 FreeBSD 486/Pentium/PPro 优化客户端
+2584970|L3|Tatiana Kichkaylo 报告 Mach64 显卡占用 com3/com4 地址致 sio 探测时显示器变绿，已自行解决
+2584971|L3|Jason Thorpe 答复 FreeBSD 不用 de0:0 命名，用 ifconfig de0 alias 即可在同一接口绑定多 IP
+2584974|L3|Jordan Hubbard 提议在 sysconfig 内用 HERE 文档每次启动重建 /etc 文件，配 -w 判断以支持只读根
+2584976|L3|William Somsky 质疑把关键 /etc 配置移入 /var，认为 /var 本是半 scratch 空间，损坏不应毁系统
+2584982|L3|Terry Lambert 解释 Mach32/Mach64 芯片接口标准要求占用 com3/com4 地址，回应显卡占用串口问题
+2584983|L3|Anne Hutton 指 FreeBSD 已有 Adaptec/Efficient ATM 驱动，bsdatm1.4 在 dworkin.wustl.edu
+2584987|L3|Michael Ryan 给出 alias 具体命令，同网段用 netmask 255.255.255.255，跨网段用 255.255.255.0
+2584997|L3|Warner Losh 排查 Message Catalog 报错，定位到 tcsh 6.07.02 在 xterm 启动时 NAMI 失败，csh 无此问题
+2584998|L4|Brian Somers 报告 Dell XP90 上 XFree86 3.2 启动后键盘锁死需 telnet 重启，改用 pcvt 控制台即恢复
+2585002|L3|Julian Elischer 答复多链路 PPP 可用 mpd 守护进程，源码在 ftp.freebsd.org/pub/FreeBSD/incoming
+2585005|L4|Thomas Rivers 报告 2.2.1 NFS 挂起，换 3c900 仍现，仅 ls -l 触发，cat 大文件正常，readdirsize 降到 102
+2585006|L4|Ian Kallen 提供 psm0 键盘锁死修复补丁，附 yokota 的调试补丁，要求先确认 psm0 已启用
+2585009|L3|Benn Horton 报告 2.1.7 启动到控制台登录时键盘间歇锁死，需重启才能使用，询问原因
+2585010|L3|Chris Coleman 报告 McAfee 反病毒扫描报多个文件感染 SYSLOCK 病毒，询问是否真实威胁值得购买
+2585012|L4|Trio64V+ PCI base地址对齐错误诊断，疑BIOS或硬件缺陷
+2585013|L3|DES分布式破解挑战活动进展与协作信息
+2585018|L3|Alpha 4M/16M缓存与主流1-2M规模对比讨论
+2585019|L3|FreeBSD虚拟接口/IP别名配置方法答复
+2585020|L4|ipfw flush缺-q选项致telnet/rlogin断连原因分析
+2585021|L3|编译期检测内核版本方案讨论
+2585024|L3|建议FreeBSD默认启用smrsh强化sendmail安全
+2585026|L4|ping -f manpage文档与实际发包行为不一致的缺陷
+2585028|L4|NFS挂起可复现，readdir触发，换3c900网卡仍存在
+2585032|L3|哈佛架构vs融合缓存性能对比讨论
+2585033|L3|建议将/etc配置文件符号链接至/var/etc
+2585046|L3|Mitsumi FX120 CD-ROM探测异常排查
+2585049|L3|ipfw flush EPERM与EHOSTUNREACH影响对比
+2585050|L4|Linux内核移除栈执行权限补丁，防御缓冲区溢出
+2585051|L4|tun驱动BPF地址族字节序错误，0x02.00.00.00异常
+2585052|L4|PPP未为接口安装直连路由，本地端流量无法路由
+2585055|L3|SRAM密度瓶颈与DRAM仅密度优势对比
+2585056|L3|__FreeBSD_sysversion与__FreeBSD_version统一讨论
+2585057|L3|建议3.0版本默认启用smrsh
+2585058|L4|/usr膨胀450M根因：/usr/obj/usr/src源码树被复制
+2585064|L3|Jim Bryant 询 BSD X.25 驱动可用性，拟增 AX.25 内核驱动
+2585070|L4|Jordan：BSD X.25 驱动已腐坏不可用；AX.25 内核驱动欢迎接手
+2585078|L4|键盘启动锁死：疑 scprobe reset FAILED，PS/2 鼠标与键盘共用控制器干扰
+2585080|L3|建议统一 __FreeBSD_version 与 __FreeBSD_sysversion；装 RELEASE 最易支持
+2585081|L3|Warner Losh：新规则下 33cm 可达 115.2k，C-Band 10Mbps 将至，AX.25 有价值
+2585084|L3|Jordan：X.25 腐坏因无人维护；有意长期维护者可复活
+2585085|L4|Multilink PPP：mpd-1.0b 可用，单一进程多串口，无多路由限制
+2585086|L4|ftpd_popen argc>100 漏洞，可致 shadow 口令泄露；2.2/3.0 仍未修，附 3.0 补丁
+2585088|L4|kern/3244：ipfw flush 未加 -q 时报错致连接重置，rc.firewall 后续不执行
+2585090|L3|Hellmuth：KA9Q 站点有较多 FreeBSD AX.25 包，多为旧版本
+2585098|L4|POSIX4 补丁提交至 freefall，含插件基础设施，已 build world 求反馈
+2585102|L3|Brian Somers 自荐集成 Multilink PPP 进 FreeBSD，询有无异议
+2585107|L3|Adrian：Linux 128MB 内存限制存疑，FreeBSD/Linux 均有 >128MB 实例
+2585114|L4|proff修复ipfilter状态代码mbuf泄漏问题并发布ipfilter-proff-final2快照
+2585118|L3|J"org Wunsch提议将strptime()集成到libc，已有BSD风格版权
+2585120|L3|Warner Losh回应ftpd漏洞讨论：内核不会在这些情况下生成core dump
+2585123|L3|Warner Losh讨论4MB SRAM SIMM，称现有PC/PowerPC/Alpha芯片组无法利用
+2585126|L3|Guido van Rooij指出2.2中ftpd不会coredump是有意为之，2.1则不同
+2585129|L4|Brian Tao询问最大化NFS服务器性能方法，60万文件12GB迁移场景
+2585131|L4|Mark Taylor报告vnode文件系统创建几百文件后系统挂死甚至重启
+2585132|L3|Thomas Rivers报告amd自动挂载的家目录在ls时无法显示，大目录失败
+2585136|L3|J"org提示NFS async选项现为sysctl，建议反向逻辑在客户端发起copy
+2585140|L3|J"org讨论shell HERE documents在/etc/rc中使用MFS的不可靠性
+2585141|L4|Jonathan Lemon报告MFS的/tmp挂载导致swap暴涨至66M并系统崩溃
+2585144|L4|Michael Searle询问curses/ncurses库自2.1.0以来变更导致程序无法运行
+2585147|L3|Brian Somers讨论syslogd日志主机不应允许委派，建议改为命令行选项
+2585148|L4|Kenjiro Cho指出ATM适配器驱动不支持组播，提供Adaptec/Efficient驱动信息
+2585153|L4|Andrew Gierth报告xcdplayer第二次播放CD导致系统死锁，涉及ahc/SiS7012
+2585155|L3|Amancio Hasty讨论DEC 64位插槽主板及SMP Pentium Pro服务器内存总线
+2585157|L4|David S. Miller质疑Jim Bryant对Linux VM/网络的批评，要求事实依据
+2585159|L4|Michael Smith讨论linux_lib升级后应用无法读取当前目录，影响Wingz和Netscape
+2585164|L3|tun/lo 等 DLT_NULL 驱动传给 bpf 的地址族为 0x02.00.00.00（字节序错），疑缺 HTONL，各 BSD 通病
+2585165|L3|ftpd bug 在 2.2 存在、2.1 已无；线程提及可由 core dump 提取口令，需回原帖确认
+2585166|L3|2.2-BETA_A 起 AHA-2940W/2940UW SCSI 严重故障：sd 在 dataout 阶段超时，SEQADDR 异常
+2585169|L3|2.2.1 用户时间停止累加，time 输出 0.000u；作者早先报过 bug 但无人复现
+2585174|L4|2.2.1-RELEASE 做 level 0 dump 时可靠冻结，dump 到第三块 slice 处必卡死，疑与 2940 SCSI 相关
+2585176|L3|Bruce Evans 给出 clock.c diff，指用户时间停止问题在 -current 已修复
+2585182|L4|2.2.1R 每2-6天因 out of mbuf clusters 重启；已分配 mbuf 只增不减（泄漏），maxusers/NMBCLUSTERS 调大均
+2585189|L4|以 vnode 当文件系统：vnconfig/newfs 正常，建数百个文件后系统挂死甚至自动重启
+2585204|L3|route.c 参数 bug：route change default -mtu 不填值即段错误 core dump，2.1.7.1/2.2.1 均在
+2585207|L3|软盘缓存 bug：换盘后 DIR 仍列旧盘内容，须拔盘等驱动器超时重插才刷新
+2585212|L3|2.1.0 上 ping -l 在 socketbuffer 填满时丢失大部分包（de0 相关讨论）
+2585216|L4|2.2.1R三网卡全双工场景mbuf集群耗尽，报"Out of mbuf clusters"后无故重启，无NFS
+2585219|L3|LINT中ahc同时列出ahc0与ahc1，疑27XX与29XX适配器拆分，文档注记存疑
+2585224|L3|软驱diskchange信号为pin34，位于电缆最末远离红边处易断，pin1为冗余地
+2585225|L4|NFS readdir卡死调试，printf追踪链路：readdirrpc→nfs_send→nfs_reply→soreceive
+2585226|L3|2.2.1启动后即刷calcru negative time消息，数值不大，疑usec字段溢出为负
+2585232|L3|编译时检测内核版本争议：不用__FreeBSD__与osreldate.h如何跨2.1.6到current
+2585233|L4|批量创建7500文件触发fs崩溃，将kern.update从30改5可绕过，疑vm/fs cache缺陷
+2585234|L4|NFS readdir卡死根因定位：sowakeup()未对原socket的sb执行wakeup，ls -l永久挂起
+2585239|L3|双ppp串口路由配置，第二端口ioctl TIOCSETD报Device not configured
+2585244|L4|ahc驱动xcdplayer第二次play致机器死锁，拉RELENG_2_2后不崩但cdplayer仍不可用
+2585254|L4|FreeBSD ftruncate()间接块非零时自伤崩溃，NetBSD已修；缺vnode_pager_setsize调用
+2585259|L3|ppp多设备需增加pseudo-device ppp 1数量以解决TIOCSETD报错
+2585263|L3|ftruncate超最大文件长应返EFBIG而非EINVAL，建议长度检查延后到函数更深处
+2585265|L4|NetBSD vnode 崩溃：setsize() 在长度检查前调用
+2585277|L4|询问 CVS 能否只取所需文件，尽量贴近 2.2.1R
+2585281|L3|Jim Durham 谈 AX.25 内核接口做 TCP/IP 封装
+2585282|L4|xcdplayer 第二次播放导致机器死锁，ahc 相关
+2585284|L4|软盘换盘不被检测，需拔出重插才刷新 DIR
+2585288|L4|磁带机 st.c 超时调试，"tieing itself in knots" 症状
+2585297|L4|两个 ppp 需两个 ppp 接口，GENERIC 默认仅给一个
+2585298|L4|VMEbus 0xd0000 经 /dev/mem mmap 访问的特殊内存问题
+2585299|L4|向驱动传文件句柄写视频帧，ktrace 有类似做法
+2585304|L4|tcsh 在 2.2.1-RELEASE 损坏，2.1.5 正常
+2585305|L4|inline asm 生成代码的 gcc 问题
+2585306|L3|论 X.25 罕用 vs more 维护频率
+2585309|L3|RSA P6-200 约 80% 时间 connection refused
+2585310|L4|RSA rc5-56-client 反复 connection refused 通知失败
+2585313|L3|RSA Challenge 战况：机器数与排名稳步上升
+2585317|L3|询问高负载 inn 新闻服务器经验：PPro200+128M+3*4G 跑 Linux 2.0.x 最终挂死，征询 FreeBSD+inn 版本组合与稳定性。
+2585319|L3|2.2.1R mbuf clusters 告警：崩溃前 netstat -m 显示 -74% 负值，怀疑 netstat 源码类型错误，征集复现与结论。
+2585320|L4|NFS 自 2.2-GAMMA 起异常，设 vfs.nfs.nfs_privport=0 即恢复正常；解释参数语义与默认值应为 1 的原因。
+2585322|L3|ppp 双链路配置确认：内核加 pseudo-device ppp 2 后两条 PPP 连接均正常，简短可复用的配置答复。
+2585324|L3|反驳"大企业不用 FreeBSD"：GE Industrial Systems 用 FreeBSD 做印表分派、远程 DNS、SMTP 主件等企业级服务。
+2585325|L3|高负载 inn 讨论续：征询较大内存与 CCD 组盘对 inn 稳定性的实际经验及版本组合建议。
+2585326|L4|netstat -m 负百分比根因定位：乘 100 溢出（int<=INT_MAX/100、ulong<=ULONG_MAX/100），建议改用浮点计算。
+2585327|L3|提出 mmap 页面换入遇磁盘坏块时内核应如何处置的问题，引出后续 SIGBUS 与 segv 结论之争。
+2585328|L4|光驱任何访问即整数除零 panic；定位 sys/i386/isa/diskslice_machdep.c 的 check_part() 未判扇区数为 0 即做
+2585336|L3|以 vnode 直接当文件系统用导致崩溃：指出 NetBSD 在该情形下先调 setsize() 再检查长度的顺序 bug。
+2585337|L4|权威回答 mmap 遇磁盘坏块：内核返回 vnode pager error，应用进程收到 SIGBUS（FreeBSD 核心团队成员）。
+2585344|L3|de0/de1 启动崩溃复现：netstart 进行到 add net default 后触发 NMI trap type 19，停在 tulip_delay_
+2585345|L3|新闻服务器硬件建议：无需 PPro 200（多数时间闲置），加大内存收益远大于升 CPU，且现有磁盘数量不足。
+2585346|L3|另一种 mmap 坏块解释：内核无法供页只能让访问缺页，进程收到 segv，与 SIGBUS 说法定分歧。
+2585347|L3|请求协助移植 IBM EtherJet 网卡（PC320）驱动，已有可用 Linux 驱动源码包可参考。
+2585348|L3|inline asm 写法求助：想让内联函数生成指定指令序列，附 Van Jacobson 邮件片段，求 gcc 内联汇编指导。
+2585350|L3|商业发行商注册讨论：质疑 FreeBSD 海量源码本身就是"暴露的内部实现"，ABI 稳定性边界如何界定。
+2585351|L3|新闻服务器实测数据：PPro200/256M/21 块 ST31055N 排全球第 17；486DX4-100 小机排 104，较 2 月 139 名提升。
+2585352|L3|X.25 驱动维护争议：有人承诺至少把某个变体跑通，涉及无板卡难测试与"没人维护就淘汰"的分歧。
+2585360|L3|crontab 需求：想在每月第一个或最后一个周日跑任务，现有 0 14 * * 0/4 无法确定命中哪一天，求正确写法。
+2585362|L3|RSA Challenge 技术纠偏：RC5 与 DES 并非同一算法，RC5 更耗 CPU 且无对称性，不宜直接套用性能结论。
+2585377|L3|VMEbus 64KB 窗口通过 page fault 动态重映射的特殊内存设备可行性讨论
+2585378|L3|2.2 RELENG NFS rm 批量触发 bounce memory panic 首例报告
+2585382|L4|2.2 RELENG fastrm 删除触发 vm_fault nofault entry panic，附 GDB vmcore 跟踪栈
+2585385|L3|重负载 inn 新闻服务器系统拖慢挂死，innd 为 VM hog，讨论实例数
+2585388|L3|Adaptec 2940 光学盘任意访问触发整除零 panic，建议 DDB 定位
+2585390|L3|bcopy 是否自动处理 quad 对齐，PCI 共享内存非对齐传输异象
+2585391|L4|光学盘 Adaptec 2940 整除零 panic，定位到 diskslice_machdep.c 的 check_part() 未检查 sect/cyl==
+2585392|L4|128MB 大内存 bounce memory out of range，根因 BOUNCE_BUFFERS 尺寸计算，移除即可解
+2585394|L4|de0 2.2.1 启用 100baseTX 时 NMI Trap19，怀疑 BIOS PCI Parity 设置
+2585396|L3|ccd 仍 alpha 品质，Rodney Grimes 曾实现磁头同步 spindle sync 但未入主线
+2585398|L3|传闻 Oracle 将支持 FreeBSD 与 Linux 以对抗 NT，商业生态动向
+2585400|L3|Linux HFS 驱动移植 FreeBSD 可行性讨论，模型是否完全兼容
+2585401|L4|2.2.1 UFS blkfree: freeing free blk panic，附 GDB 栈与 IdlePTD 上下文
+2585403|L4|afterstep+2.2.1 swap 缓慢耗尽直至不可用，疑似内存泄漏报告
+2585406|L3|cron 星期域与日域只匹配其一即触发，首周日表达式陷阱与备份风险
+2585407|L3|bounce buffer 作者自述当初设计不佳，承认先前"不碍事"说法错误
+2585409|L3|DG 澄清 bounce buffer 只影响 DMA 无需它的控制器的性能，启动时池仍分配
+2585411|L4|McAfee uvscan FreeBSD 报 SYSLOCK 大量误报，验证是否为真实威胁
+2585412|L3|3.0 RELEASE 改 procmail 链接到 /usr/libexec/sm.bin，覆盖 90% 报错
+2585423|L3|P150/40MB FPM+afterstep 下 swap 逐渐被占满致系统不可用，疑内存泄漏
+2585428|L3|-g 调试符号占用物理内存引发 bounce buffer panic，建议 strip -g 而非整核 -g
+2585430|L3|2.2.1 引导盘安装后选装 packages 菜单无法退出，必须装至少一个包
+2585432|L3|tcsh 脚本中 cd 触发内核调试器 vnode_pager panic，附最小复现脚本
+2585435|L4|2.1.0 起新闻机每日 dup alloc panic，复现：块标 free 后写入，疑 UFS 分配器 bug
+2585438|L3|ALTQ/CBQ 首个 alpha，rsvpd 无法创建，RSVP stub 有 bug
+2585442|L3|反驳 NFS 权限说：复现内核 panic 仍成立，疑内核无法换入交换区
+2585443|L3|站点 40%+ 丢包致 FreeBSD 列表大量消息投递失败，需排查 mail exploder
+2585445|L4|2.2.1-R 最小核(8MB/486sx33) 上循环 serial getty 空接线互连即崩溃
+2585446|L3|提议 3.0 改用 smrsh，讨论 /etc/sysconfig 与传统 /etc 文件一致性
+2585448|L3|Zappa P90 NFS 服务器反复 UNIT ATTENTION 且规律性出现，疑硬件或 aic7xxx 驱动
+2585449|L3|bcopy 是否自动处理 quad 对齐？PCI 共享内存非对齐传输见异常
+2585456|L3|10/14 2.2 SNAPSHOT ppp/tcp 问题，双网络经 ppp 链路互通后异常
+2585459|L3|UNIT ATTENTION 为 ahc 超时后总线复位之症状，非问题本身
+2585461|L3|2.2.1 calcru negative time 消息，与 CLK_USE_I586_CALIBRATI 选项相关
+2585464|L3|X 服务器内存过高时可关 BACKING_STORE 大幅降内存，提议支持按客户端关闭
+2585468|L3|请求把 Linux 的 smbfs/smbmount 及 SGI EFS 支持移植到 FreeBSD 2.2.1
+2585470|L3|struct timespec 位置不符 POSIX.4：建议新增 sys/timespec.h 并条件包含于 time.h
+2585471|L3|2.2 -current 下 make release 卡在 cvs 步骤，CVSROOT 未设置致路径为空
+2585472|L3|Zappa P90/2.1.5 NFS 机 AHA2940+3 盘+HP 磁带库 UNIT ATTENTION 渐多，疑五盘总线
+2585482|L3|afterstep 1.0pre2 缓慢耗尽 64MB RAM+192MB swap，换 fvwm2.0.45 后恢复正常
+2585489|L3|请求 FreeBSD XFS 驱动；并指出 xfsdump 缺 Solaris ufsdump 的 -v 选项
+2585490|L3|procmail 多经 .forward 调用而非本地投递器，须经 smrsh 可达，否则破坏兼容
+2585501|L3|doconfig 建议支持 -c/-e(ed 脚本)，未指定 -cFILE 时 -e 应默认开启
+2585503|L3|转发 3COM 3C589D PCMCIA 网卡问题解决方案，源自 freebsd-questions
+2585510|L3|传闻有人在做 config 的 tk/tcl 前端，求证是否真的在进行中
+2585515|L3|Linux FS 移植可行性讨论，HFS/smbfs/EFS，非优先级
+2585519|L4|mrouted 无法启动，pid 未生成即退出，附 tunnel 配置
+2585521|L4|2.2.1 ppp+alias 下 rsh 失败，stderr 副连接未被 NAT 映射
+2585522|L4|alias 将保留端口映射到非保留端口，破坏 rsh 等服务
+2585523|L4|转发 Adaptec 2940 驱动缺口求助，征人接手开发
+2585524|L4|/dev/spkr 驱动竞态或内存分配问题，疑破坏内核内存
+2585525|L3|对比各 UNIX vfs/vnode 接口，讨论 Linux FS 移植障碍
+2585527|L3|rsh+ppp 讨论重复，NAT/alias 无 rsh 仿真
+2585534|L3|sendmail 邮件展开表与 mail-relay 单份投递澄清
+2585535|L4|ping -S 后主机重启（75 个 lo0 alias），疑内核崩溃
+2585538|L4|NCR 53c875 SCSI 支持在 2.2.1 中损坏，问 3.0 是否相同
+2585542|L4|/dev/spkr bug 追问，涉及内核并发与内存分配，缺文档
+2585547|L4|剖析 ufs/ufs/dir.h 兼容 pre-4.4 目录项的 hack，真实磁盘迁移
+2585549|L3|Afterstep 与 swap 内存占用问题，用户空间
+2585552|L3|XFS 移植需完全逆向工程，SGI 律师风险
+2585554|L3|XFS 移植可行性续议，愿提供 IRIX 测试机
+2585556|L3|mrouted 跟进建议用 -d3 调试选项
+2585557|L4|报告 vx 驱动在 10/100 NIC 上性能极差
+2585559|L4|3C589D 用 ep 驱动报错，EEPROM 慢于 589C，DELAY(1000) 不足
+2585563|L3|光驱开机已挂载介质，od_get_parms() 可取几何建 disklabel，却因 check_part() 按 DOS 分区校验而取到扇区数 0。
+2585565|L4|Hans 报告 /dev/spkr 驱动故障，怀疑竞态条件或内核内存分配问题，BSD 内核无相关文档，现象可复现但无法自行定位。
+2585569|L3|freefall 队列延迟统计：约 49100 条延迟 0 分钟，长尾单条达 1241/1281/1321/1352 分钟(超 22 小时)。
+2585575|L4|实测 3com 3C905(10/100) 上 vx 驱动吞吐仅 50k/sec，远低于 100Mb 预期；作者手持卡可复测，但不愿自行改驱动。
+2585578|L4|Bruce 定位光驱几何读取错误根因：check_part() 未按 secpercyl==0 跳过 DOS 分区校验，致扇区数取 0；并指出应在技术列表讨论。
+2585580|L4|INN 1.5.1 新闻机(200MHz/128M/4x2G/256M swap)运行数周后周期性杀死 innd；此前 2.2-ALPHA 稳定 3 个月。
+2585583|L4|486sx33/8MB 机装 dual 16550A 串口卡，两路 getty 经 null-modem 连接触发 2.2.1-R 崩溃。
+2585584|L4|同时配置 device dev0 与 device dev0 at isa? port 0x300 时，即使已找到 PCI 设备，仍会探测 ISA dev0。
+2585610|L3|P150/40MB/2.2.1 上 afterstep 使 swap 缓慢填满至耗尽致系统不可用，并问如何关闭 XFree86 backing store。
+2585611|L3|光驱常按 SCSI type 7 应答，type 0 多由 jumper/DIP 兼容开关产生(可伪装为固定磁盘供笨系统使用)，旧 SONY SMO 除外。
+2585612|L3|澄清 MO 盘为单磁头多柱面(1 head/17934 cyl)故几何值"很高"属正常，回应 Bruce 的疑问。
+2585613|L4|od_open→dsopen→dsinit→check_part；光驱无DOS分区致sectors/cyl=0，几何校验失败
+2585614|L3|ed探测编号：ISA已附加后追加ed0探测，混合PCI/ISA同驱动
+2585616|L3|并行口Zip驱动ppa3可用但很慢，线程起点
+2585619|L3|邮件exploder按连通性/在线率/可靠性/寿命筛选志愿者
+2585621|L4|rsh经ppp+alias失败：RPC要求固定源端口，alias改端口破坏协议
+2585622|L3|utok移植计划：自定义ktou、传输层(NFS/Ficus)、内核API仿真
+2585623|L3|光驱SCSI type0 vs type7，jumper/DIP可切换，type7为规范
+2585626|L3|并行口驱动架构已很笨拙，PLIP都难加，加ZIP更成问题
+2585628|L3|sigcontext缺fs/gs：wine注释称*BSD不支持，询问原因
+2585638|L3|视频抓取帧经PCI到PCI置内存，欲免拷贝地把缓冲交文件系统写
+2585641|L4|指kern/kern_ktrace.c：用户态传fd、多iov写非连续缓冲，作驱动写盘范式
+2585643|L3|fs/gs寄存器除异常外处理器不上栈保存，故sigcontext无
+2585645|L3|SyJet(1.5G) vs Jazz(1G)同价，求bonnie/iozone在ahc上对比
+2585646|L3|作者做过零拷贝写盘但数据整形过多而放弃
+2585653|L4|Jazz MO介质损坏：dump 0f /dev/rst0 /jaz; scsiformat; fdisk；ARRE/AWRE与缺陷映射
+2585654|L4|O_EXCL符号链接处理缺陷：open的NDINIT已置FOLLOW，vn_open判断逻辑反了
+2585657|L3|希望Zip并入lpt驱动；现用Zip时无法打印，需两套内核
+2585662|L3|视频写盘需求清单：触发条件、起始延迟、块间延迟、块大小、吞吐、最长记录
+2585665|L4|视频抓取格式yuv9/yuv12/rgb16/24/32，尺寸160x140至640x480；yuv12=x*y+2*(x/2*y/2)，可daisy chai
+2585667|L4|write()未对齐FS/设备块则隐含read修碎片或报EIO；目标是绕开经缓冲区的拷贝
+2585668|L3|ZIP与打印机可同内核，其一默认禁用，boot -c选择；但两者仲裁是难题
+2585669|L4|320x240@30fps yuv12需3456000 B/s(约3.5MB/s)，实测文件系统落盘1974857 B/s
+2585670|L3|部分块写非大块开销：上一部分块仍驻缓存时代价不大
+2585671|L4|npx0加flags 0x1关Pentium优化bcopy；但致RELENG_2_2的config拒收内核描述文件
+2585675|L3|config的`vector ...'语法晦涩；flags加在非语法位置致内核描述不被接受
+2585680|L4|Bruce Evans：vector关键字为灵活性而设，故显式给出中断向量；但将废除
+2585681|L4|JKH：`vector xxxintr'放最后即有效；LINT中npx0 flags位置正确，RELENG_2_2的GENERIC错误，已改
+2585684|L3|DEC 21140-Ax：de0探测后链路灯熄灭并切至10Base-T，问3月中后是否已修复
+2585695|L4|做FreeBSD内核外fs层须枚举fs代码所需内核API并仿真；曾在Win95商业产品实现，不难
+2585698|L3|FreeBSD-SMP非秘密，松散瞄准3.0；特性先进-current再入发行版，留规划期
+2585699|L4|PCI卡从ed3起编号；把ed0/ed1/ed2显式绑at isa即固定编号，PCI从3起，可扩展
+2585701|L3|PCI先探测故宜占ed0/ed1、ISA放末尾；先固定不可移动者(PCI)再配可命名者
+2585707|L3|同网段ping笔记本250-1500ms而邻机0ms，疑sysinstall网络段附加ifconfig up所致
+2585711|L3|PCI已附xyz0时ISA仍重复探测同接口：ISA探测代码不同故不认PCI卡，会二次附同名接口
+2585716|L4|NFS 基准：P6-200/32MB HX6000 客户端 + NAS F540(100GB,128MB cache) 100Mbit 服务器实测数字
+2585717|L4|显卡推荐 Matrox Millenium 4MB/$250 可升 8MB，xf86 3.1.2 起有驱动
+2585718|L4|3com 卡在 6030X 故障，改 /etc/pccard.conf 仅用 irq 11 解决，附 conf 片段
+2585721|L3|询问 WhistleJets 路由器能否做 ether-ether 路由、T1 型号 Beta、拿不到货求销售线索
+2585723|L4|dd 实测 ST15150W SCSI 2940w 卡 sd0 写入 2873600 字节/秒，附时间统计
+2585725|L3|_BSD_OFF_T_ 是否改 long long 的 API 讨论，转发 Todd Miller 邮件征求意见
+2585726|L3|视频采集建议预分配文件/块、mmap 供驱动写入，且 write() 对齐文件系统块
+2585729|L4|IDE(Caviar) 实测 3MB/s 持续、P133 同时跑 tv；FS 框架剖析最大开销约 80%
+2585730|L3|IDE CD-ROM 启动：FreeBSD 不支持，但 BIOS 可能支持，附 Jordan 可引导 CD 提示
+2585732|L3|讨论为新 fs 技术开独立分支，避免反复重合并，同时吸收他人贡献
+2585735|L4|报告 O_EXCL 失效：open syscall 中 NDINIT 已带 FOLLOW 标志，vn_open 判断逻辑破损
+2585736|L4|恢复磁盘流程：dump 0f /dev/rst0 /jaz; scsiformat; fdisk; disklabel; newfs; restore
+2585739|L4|DEC 21140-Ax de0 驱动问题：链路灯亮后内核探测即灭，询问是否已修复
+2585745|L3|回应 21140-Ax 问题，提示 NetBSD 驱动近期已移植到 -current，建议查该列表
+2585747|L3|因 de0/21140 问题五台新机无法用 FreeBSD，不想转 Linux，求解决
+2585748|L4|afdisk 重建 DOS 分区后 Unix fdisk/disklabel/newfs 使 od0 可用；建议坏 MBR 报警优于 panic
+2585751|L3|讨论分离分支能否满足需求，指出瓶颈在主仓库同步
+2585753|L3|用 ASCII 图示分析分离分支能否跟上主流开发，质疑 all/none 取舍
+2585756|L3|确认芯片为 21140-AC（不新、或有溢出需软件规避），问除 if_de.c 外还需哪些文件
+2585758|L4|询问专用内存设备仅 mmap 访问、用缺页机制动态重映射 VMEbus 窗口是否可行
+2585762|L4|CVS vendor branch 做法：main 当 vendor 分支+cvs import，代价是丢历史且合并只导入 tip
+2585764|L3|附 cvs log 输出示例，展示分支与 RELENG_2_2_0/2_2_1_RELEASE 标签结构
+2585765|L4|Matrox Millennium 4MB $250 可升 8MB，XFree86 3.1.2 起有驱动，Xi 更佳，询 S3/Mach64 对比
+2585766|L3|Price 之争开篇：Dennis 称自由 OS 无保密必要，反对数月一次的重新工程
+2585769|L4|S3 968 4MB 在 24/16 位深比 Matrox Millennium 快；XFree86 未完全支持 Millennium 加速
+2585770|L3|John Dyson 反对跨版本必须共享代码，主张仅接口点保持稳定
+2585771|L4|DE520-AA + DEC 21140-AB 内核不编译，NetBSD 驱动亦失败，疑文件缺失或与 -current 失同步
+2585773|L3|Video Card Q 原帖：新 P6 系统要 24 位色，倾向 XiG server，请荐卡
+2585775|L3|WhistleJet：客户需 ether-ether 路由；T1 型号 Beta 未售通；销售信息不透明
+2585776|L4|2.2.1 PAO boot.flp sysinstall 菜单可改 PC-card IRQ 分配（10→11、5→11、11-only）
+2585777|L4|澄清 DE520-AA 是 PCM 卡非 PCI；同环境下 DE500-XA 网卡工作正常
+2585778|L4|IRQ 仅设为 11 后 ping 延迟降至亚毫秒且稳定在线，问题解决
+2585779|L3|Jordan 反对投票踢人，预言将引发 4 亿封后续邮件与不良先例
+2585785|L3|Sean 建议客户与其共建设备驱动接口 DDI，而非抱怨 -current 不受支持
+2585786|L3|FreeBSD 零售现状：Berkeley Cody's 书店有零售盒装，但多为 Linux 品
+2585787|L3|大学市场策略：DEC 用同样方式在高校培养了一整代 VAX 程序员
+2585788|L3|ISP IPv4 告急：BSDi 2.0.1 加第二类 C IP alias 后 NIC 丢失路由器 MAC
+2585793|L3|Josef Grosch 追问 BSDi IP alias 故障，man/route/arp 无果
+2585795|L3|Video Card Q 续：询 Millennium 是否可用 XFree，或 S3/Mach64 更稳妥
+2585796|L4|Millennium 加速支持在 XFree86 3.2 有缺陷，下一版已修复
+2585797|L3|Michael Hancock 质疑独立分支难以跟上主流，恐致全有全无
+2585798|L4|特殊内存设备驱动：mmap 触发缺页时重编程接口卡；旧窗口页需主动失效以再生缺页
+2585799|L4|i386/swtch.s 实时队列在 264 与 329 行重复检查，可省时钟周期
+2585800|L3|Adrian 提及 Perth 大 ISP 推 Phoenix 服务器，Linux 替代 WhistleJet
+2585801|L4|Mystique 尚无驱动支持；Bt848 驱动在研；线性帧缓冲 RGB 卡可直做 PCI-to-PCI 传输
+2585804|L4|X 无 CP866 俄文字体；Cyrillic 邮件/新闻应转 KOI-8，俄文编码有多种标准
+2585807|L3|Brian Somers 解释 Terry 之争：不满者自可换 OS，此处人多因认同大方向
+2585809|L4|Mystique 支持仍在开发，本次发布或仅 Beta 级，取决于此后数周进展
+2585810|L4|视频采集接口：dd 到 /spare/test 测得 2873600 B/s（ST15150W + 2940w），排除文件系统直传
+2585811|L4|特殊内存设备续：mmap 通知与旧窗口页失效路径
+2585812|L3|Peter Dufault 更正：先用文件系统分区预分配文件，后续再考虑裸 I/O
+2585813|L3|Nate 辩 FreeBSD 重装频率与场景，与 Windows 每三月重装不同
+2585814|L4|把主开发当 CVS vendor branch 会丢 FreeBSD 历史；合并时仅 tip 被导入
+2585815|L3|讨论统一 sound API：参考 NetBSD 代码以摆脱版权，保持 Linux 兼容
+2585816|L3|JKH：OSS 已有 SCO/Linux 支持，头文件可自由复制，统一声音标准
+2585819|L3|Pedro：FreeBSD 沿用旧 Voxware，Hannu 说 OSS/Free 版或 12 月出
+2585821|L3|FreeBSD 2.1.5 P5-133 经 Samba 挂 15 台 Win95 跑 McAfee 杀毒扫描
+2585825|L4|DEC 21140-Ax 网络问题：kernel 默认不切换到 100MB，用 3am-software ifmedia 解决
+2585829|L3|JKH 澄清当前讨论是 sound driver 的 API 目标而非重写驱动
+2585831|L3|Pedro 建议基于 Linux OSS/Free 建立类似 API
+2585835|L3|David Langford 请求按树划分的 cvs-digest，如 RELENG2_2 或 ports
+2585838|L3|Peter Hawkins 附议 cvs-digests 按分类拆分列表
+2585843|L3|Vinay 询问 FreeBSD/Linux/Solaris/SunOS 共享 passwd 的方案，不用 NIS
+2585844|L4|Warner Losh 询问 disklabel 归属，提议重写 fdisk/disklabel 为易用脚本
+2585845|L3|Alex Belits 建议用 ftp/scp 分发 passwd，而非 rdist
+2585846|L3|回应 disklabel 重写提议：安装与配置流程急需改进
+2585848|L3|Alex Belits：NIS 认证走服务端不合理，应分发信息本地认证
+2585849|L3|Kevin Neal 与 Alex 就 NIS vs 本地认证继续讨论
+2585850|L3|Michael VanLoon 参与 passwd 共享与认证方案讨论
+2585851|L3|Wolfgang：Macintosh 用过的 SCSI 盘装 FreeBSD 2.1.7
+2585852|L3|Hellmuth Michaelis 认同 disklabel 挫败感，freefall 有相关产物
+2585853|L3|Dave Andersen：.net 邮件分发节点升级，旧机延迟统计
+2585854|L3|ppp-2.3.0b3 在 FreeBSD 2.2.1 编译失败，报 ppp_tty.c 警告与错误
+2585855|L3|James Mansion：FreeBSD SMP 内核开发中，Linux 亦然，均未完工
+2585857|L3|讨论 FreeBSD SMP 内核进度与健壮性
+2585858|L4|David S. Miller 澄清 FreeBSD 2.0.x/2.1.x SMP 已支持 Sparc/Intel，Alpha 将至
+2585862|L3|Bakul：重写 disklabel 需处理底层细节，不能只做外观
+2585863|L3|讨论是否值得为 Java、系统调用等牺牲内核性能
+2585865|L3|Dyson: FreeBSD 文件系统语义将改动以支持层叠式FS，新增文件系统较易，与*BSD保持近似兼容。
+2585866|L3|Helbig: 安装写分区表panic"cannot go anywhere without init"，LiLo装MBR后FreeBSD/SCSI盘读写正常但
+2585867|L3|Brian Somers: 用户报告ppp-2.3.0bs在FreeBSD-2.2.1编译失败，询问bs后缀版本来源。
+2585871|L3|Dillon: 批评NIS需连服务器认证，主张认证信息应下发到本地始终本地认证，不依赖主机可达性。
+2585874|L3|Jim Bryant: 提议重写fdisk/disklabel为易用脚本，引入描述磁盘属性的磁盘数据库类似termcap/MIB。
+2585875|L3|Losh: BIOS禁/启IDE盘导致内核或BIOS几何混淆，sysinstall与引导所用几何不一致触发panic。
+2585876|L3|Thorpe: machine/endian.h非POSIX头却在_POSIX_SOURCE下被隐藏，导致几乎全部不可访问。
+2585879|L3|Lambert: 跨FreeBSD/Linux/Solaris共享passwd不选NIS，建议YP或LDAP/X.500，注意shadow passwd差异。
+2585882|L3|Lambert: 认为disktab未坏，多数字段如latency根本未被使用，提议新磁盘数据库意义有限。
+2585883|L3|Lambert: NCSU用Hesiod+Kerberos，客户端不存密码、口令不明文上线，作为NIS替代方案。
+2585889|L3|Bannai: 放弃统一认证，只要求各机uid/gid一致，因cvs导出后各机用户名/组不一致导致文件属主混乱。
+2585890|L3|Losh: 装机不宜假设用户分区方案，真实硬盘常需独立/ /tmp /var /home /usr /usr/local且大小各异。
+2585892|L3|Duane Ellison: 求libwrap.so.7.4用法文档，想在自有程序中集成tcp_wrappers，shsd用法为参考。
+2585893|L3|Smith: RADIUS用于终端服务器认证并有备份服务器，ISP可用其统一管理认证，但Livingston新版限制过严。
+2585894|L3|Coleman: 建议表驱动分区规则，root 20-32M约2%、/usr约20%、/var 20%加inode、/home吃剩余。
+2585895|L3|Smith: tk/tcl内核config前端并未实际推进，仅有一半想法，相关聊天线程已迁至-config。
+2585897|L3|Smith: 视频采集不宜在内核做文件I/O掩盖上下文切换，uiomove时间实为最差项判断有误。
+2585898|L3|Dillon: Livingston新版RADIUS服务器代码限制过严，已有无此限制的可用服务器与radlogin客户端代码。
+2585899|L3|Smith/spkr: 驱动中uiomove后直接用cp调playstring，uiomove可能睡眠导致悬挂指针与数据损坏。
+2585900|L3|Eliuk: 笔记本IDE盘spin up后中断超时随机磁盘读写错误，疑splx(9)使用或驱动层问题。
+2585901|L3|Evans: 保护endian.h命名空间有充分理由，展示hp300等NetBSD机型仍include machine/endian.h。
+2585903|L3|Shapiro: 求助CDDI/fpa驱动接线，需RJ-45针脚与线缆定义，并建议维护者提交小补丁。
+2585905|L4|Rizzo: /sys/i386/isa多设备驱动只记open标志却不防并发调用，属系统性设计缺陷需修复。
+2585907|L3|Rizzo: linux_libraries-2.4装完/compat占13.5MB且根分区有限，建议迁至/usr下。
+2585909|L4|Greenman: X11下Fatal trap 12内核页错误，回溯至bash->_vm_open->_spec_open+，定位vnode/规格设备路径缺陷
+2585910|L3|Dufault: 视频采集走physio直DMA到用户缓冲区做raw transfer，用户态性能与内核态接近。
+2585911|L3|Thomas: UTP FDDI用Digital BN25H线缆，3/4与5/6直连、1/7与2/8交叉。
+2585913|L3|Povolotsky: 用vnode当文件系统无法工作，询问如何初始化意图作FS的文件即崩溃。
+2585914|L4|指出 /sys/i386/isa 多个驱动仅置"已打开"标志却不防并发调用，属系统性并发缺陷
+2585915|L3|建议 FreeBSD 用 pwd_mkdb 由 passwd 生成密码库，对应 Solaris 的 pwconv
+2585919|L3|答 vnode 作文件系统初始化方法，指向 /usr/src/release/doFS.sh
+2585920|L3|澄清 2.2 分支与 2.2.1 静态发布之别，提示 ahc 驱动 4/18 才提交须更新
+2585921|L3|说明 Bt848 可 DMA 直写显卡 framebuffer 看 TV，无需 CPU 介入
+2585923|L3|指出 CVS log 无历史修订仅见 tip，不能当作最终源基线
+2585925|L3|反驳单核只是 SMP 特例：单核内核代码不同且默认构建未编入 SMP
+2585929|L3|建议关机主机启动时向服务器同步认证信息，类比二级 DNS 启动流程
+2585933|L3|提及 8 分区上限（NetBSD/OpenBSD 升至 16），批评 c/d 分区设备编号组织
+2585936|L3|主张坏块处理应作为 devfs 内逻辑-物理地址翻译的独立层堆叠
+2585939|L3|计划以 FreeBSD 写 socket 级 NAT/伪装程序，求既有实现以免重造
+2585941|L3|报告 ypcat 输出行数少于 yp_mkdb，怀疑 ypcat/yp_getnext 残留缺陷
+2585945|L3|指出 disklabel TYPE 误设致装入 IDE 引导块，SCSI 盘挂载时 panic
+2585946|L3|指出 OpenBSD 升 16 分区破坏兼容、用 fdisk ID 0xa6，不宜照搬
+2585948|L3|讨论 FreeBSD 声音驱动路线，认为 OSS 已成统一标准且可自由集成
+2585952|L4|报告 FreeBSD m4 与 Solaris m4 行为差异：迭代宏引号剥离致 $@ 透传异常，附读码分析
+2585953|L3|补充 d 分区魔法随 2.0.5R slice 代码取消；c 分区解决无标签盘鸡生蛋问题
+2585960|L3|询问如何让依赖 lex 怪癖（改写 input()）的老程序适配 flex
+2585962|L3|Bill Paul 直接纠正：不存在 yp_getnext 函数，且本机无法复现该行数差异
+2585964|L4|询问 C 可用的 64 位类型；指 GNU tar 以 int 计 tot_written，写超 4GB 时溢出
+2585966|L4|建议用long long或off_t处理64位偏移，off_t更匹配lseek
+2585967|L4|指出GNU tar的tot_written用int型32k处溢出，建议报PR
+2585968|L4|贴出C程序用sizeof(int)/long/quad_t实测各类型大小
+2585970|L4|附可运行C程序证明i386上int=4,long=4,quad_t=8字节
+2585971|L4|指出/sys/i386/isa多驱动单打开者标志设计错误：fd跨fork复制使其无效
+2585973|L4|指明查machine/limits.h的INT_MAX/LONG_MAX/QUAD_MAX，排除对齐误解
+2585975|L4|off_t非u_quad_t因lseek需支持向后seek
+2585977|L3|flex迁移建议取gatekeeper上的lex，避免GNU copyleft
+2585979|L3|确认各类型尺寸为真实值非对齐所致，指引用sys/types.h验证
+2585980|L4|指出_fddi_input未定义因CONFIG漏写pseudo-device fddi，给出修法
+2585982|L3|反驳minor number方案，主张直接扇出DOS分区表无需minor号
+2585984|L3|讨论1.0版不稳与线程相关bug隐患
+2585986|L3|flex不兼容旧lex写法，用ifdef FLEX_SCANNER规避
+2585987|L3|要求澄清DLL类需求
+2585989|L3|驳斥跨FreeBSD/Linux/Solaris共享同一passwd文件不可行，建议NIS
+2585992|L3|报告Current系统每日随机重启，附kernel CONFIG请诊断
+2585994|L3|sendmail规则转发：本地域来信允许转发否则拒绝
+2585995|L4|指出.dll即shared lib，类DLL可用dlopen加载并调用符号
+2585996|L3|询问2.1-STABLE是否回移植2940驱动及FTP镜像如何取
+2585997|L4|指出CONFIG中sio与tty irq5冲突，可能致重启
+2585999|L4|make release失败因CVSROOT未设，需镜像CVS树并编译含vn支持的kernel
+2586000|L3|确认uucico经PPP的TCP连接可运行，ISP已有十余FreeBSD站点
+2586001|L3|观察到运行-current一月机器亦随机重启，疑系统级问题
+2586003|L4|详述.dll与.so语义差异：每次启动新建libb.so副本、静态变量各副本独立
+2586004|L4|报告MAXMEM=523264致kmem_suballoc: bad status return of 3
+2586006|L3|以dlopen实现DLL式加载调用
+2586007|L4|确定MAXMEM>262144即触发panic，RELENG_2_2可复现
+2586008|L3|问gdb -k定位ufs_baddir panic对应磁盘的方法
+2586010|L4|建议sendmail定义null mailer使邮件被接受后丢弃
+2586011|L4|m4 bug已在-current修复
+2586012|L4|纠正并发锁法：splfoo()无用，需obtain_mp_lock/release_mp_lock包住sc_busy等待
+2586013|L4|澄清flex源自LBL持Berkeley版权，Bison已不强制GPL
+2586015|L4|flex迁移用-l选项，查man lexdoc及O'Reilly手册转换章节
+2586016|L3|澄清_fddi_input未定义的CONFIG修法
+2586017|L4|off_t需带符号位作lseek错误指示，故非u_quad_t
+2586019|L3|disklabel 讨论无分区表设备的 chicken-and-egg 问题，minor number 用于此类无分区设备
+2586021|L3|解释 BSD 已有 shared libs，可用 dlopen 加载，纠正"一份拷贝不能被多程序共享"的错误说法
+2586022|L4|详解 .dll 与 .so 模型差异：MS 把库数据段放入 DLL，BSD 静态链接到程序，共享变量行为不同
+2586023|L3|请求 IPFILTER 把 10.0.0.0/8 按楼宇分 5 段映射到不同 IP，末规则兜底其余连接
+2586032|L4|提议在 config(8) 增加单级依赖规则，如 device-driver requires ether/fddi，示例含 if_ed/if_fea/if_e
+2586033|L4|512MB 触发 kmem_suballoc panic 诊断为内核虚拟内存耗尽，建议调 maxusers/NMBCLUSTERS 或扩 KVM
+2586034|L4|附 pmap.c 补丁缓解 512MB KVM 不足，不确定能否干净应用到 2.2
+2586035|L4|报告 libc_r fd 锁 bug：一线程 read 阻塞、另一线程 write 死锁，fd 上仅允许一个阻塞操作挂起
+2586036|L3|提议内核启动路径/回退机制，/kernel 失败自动尝试 /kernel.bak，无侵入即可
+2586037|L3|解释 libc_r 采用读写锁而非仅写锁，因 fd 上只允许一个阻塞操作挂起
+2586040|L3|澄清 OpenBSD 已把 disklabel 升到 16 且可读 FreeBSD 旧标签，NetBSD 未跟进
+2586042|L3|追问 libc_r 为何允许 select 可写与同 fd read 并发，指出 select 只增加调度延迟
+2586043|L4|深入 libc_r 调度算法，线程 read 后 select 同 fd 可写触发异常，文末附解决方案建议
+2586044|L3|否定 sendmail R 规则静默丢信方案，重写地址会被丢弃，规则只能返回 error
+2586045|L3|指出 Livingston RADIUS 不符 RFC2138（端口 1646），Merit radius.23c.basic 接近合规且免费
+2586048|L3|解释 MAXMEM 存在原因：访问不存在内存行为无标准，部分按模镜像，部分直接重启
+2586049|L4|P133/128MB/双 2940/SMC 21040 机器在 RELENG_2_2 反复 kernel panic，附详细硬件与 innd 配置
+2586050|L3|指出 Unix UID/GID 模型在 20k 用户处失效，其 200k 用户邮件系统已改用 CDB 存凭据
+2586051|L3|讨论设备驱动并发调用的 splfoo 作用，speaker 驱动异步化需求与首调用者取数据设想
+2586052|L3|澄清 DLL 把库数据段放入 DLL 而非静态链接到程序，与 BSD shared lib 模型差异
+2586057|L3|补充不存在内存访问行为：64M 板卡地址按 mod-64M 镜像，部分机器访问即重启
+2586059|L3|回复 aha2940 新驱动已 backport 到 2.1.7.1-RELEASE，询问如何提取源码升级现有系统
+2586060|L3|指出 MAXMEM 大值在小内存机无害，仅"Physical memory hole(s)"输出属无害 bug
+2586061|L4|给出 uucico over ppp 具体配置：/etc/uucp/port 加 TCP type tcp，/etc/uucp/sys 用 alternate 
+2586063|L3|进一步解释 sendmail R 规则无法静默丢弃，地址重写全部丢弃，只能返回 error
+2586064|L3|讨论 speaker 驱动异步化时的锁需求与 SMP 内核重入能力，示例原语尚缺
+2586065|L3|强调 UUCP 是 Unix 唯一可用的批处理文件传输协议，Taylor i 协议支持双向传输
+2586067|L3|询问用户登录/注销最佳挂钩点，当前挂钩 libc wtmp 更新，logout 难以捕捉
+2586068|L3|指出 wtmp 挂钩对 xterm 完全失效，建议按需求选 /etc/profile 或 wrapper 脚本
+2586069|L3|Adrian Chadd 问钩入用户登录/登出的最佳途径，初拟改 libc 的 wtmp 更新，登出场景尤难
+2586070|L3|Gary Clark II：UUCP 是 Unix 界唯一真正可用的批量文件传输协议，Taylor 'i' 协议支持双向，开销不大
+2586072|L3|讨论登录/登出钩子：机器混有真实 shell、slip、ppp、远程登录，倾向集中一处改而非多处维护
+2586073|L3|Andrew Stesin 建议让 getty 向 syslog（AUTH facility）写 "ttyXX ready"，实现登录记录
+2586075|L3|Daniel O'Callaghan 提议轮询 wtmp：read(wtmp) 循环，0 则 sleep、-1 报错，避免 libc 钩子破坏 xterm
+2586077|L3|Darren Reed 问 IPFILTER/IPNAT 如何按楼区分段映射到不同外网 IP，当前单条 map 致 DNS 同源
+2586085|L3|Thomas Rivers 报 RELENG_2_2 内核 panic：p133 ASUS p55t2p4、128MB、双 2940UW、news feeder
+2586087|L4|kern/3304：NFS V2 readdir 挂起；指出 mount_nfs -I 未设置 readdirsize，建议补挂载选项
+2586088|L4|质疑 libc_r：select 仅取写锁却与 read 并发，读阻塞时无人能写，怀疑非 POSIX 合规
+2586090|L3|Patrick Soisson 问 DARTNET FreeBSD 2.2 不识别 Efficient ENI-155p ATM 卡，需否回厂查询
+2586091|L3|讨论 libc_r 调度：同 fd 上低优先级线程先 read 阻塞、高优先级后 read，唤醒次序存疑
+2586092|L3|对比 MS 与 BSD 动态链接：MS 把库私有数据段放进 DLL，BSD 静态链入程序，讨论 nm 替代方案
+2586093|L3|Anne Hutton 答 ATM 驱动问题：卡支持但需另装 Efficient 软件，附 ftp://dworkin.wustl.edu 驱动包
+2586094|L3|Jordan Hubbard 批 /etc/netstart 变量约定："x$gateway != xNO" 式判断深层有害，需重设约定
+2586095|L4|J Wunsch 详解 uucico over PPP：TCP port 无需 port 条目，type tcp+address 即可，附 alternate 
+2586096|L3|Terry Lambert：BSDI 用标准 BIOS 调用取内存大小，FreeBSD 却以 CMOS 值覆盖；MAXMEM 设过高风险视机型
+2586097|L3|Chris Coleman 贴出所需 IPNAT 规则集：五个子网各映射到独立外网 IP，tcp/udp 10000:65000 portmap
+2586098|L3|Paul Traina 问能否经串口看 BIOS 启动信息与进 setup，无头机不便接键鼠显卡
+2586100|L3|John Hay 建议先看 /etc/rc，同样充斥着 NO 占位变量写法，问题不只 netstart
+2586101|L3|Nanbor Wang：ACE 移植 FreeBSD，非线程版已通，遇 g++ 疑似异常行为，C++ 支持有疑点
+2586105|L3|Kenneth Stox 提到 Mr. BIOS 产品提供串口改 BIOS 功能，仅适用 Triton 芯片组主板
+2586106|L4|J Wunsch 用 nm 输出解释共享库 .data 段来源，_sys_errlist 属 libc 数据被映射进进程，非静态链接
+2586107|L3|J Wunsch 建议为无头机写 INT 0x10 虚拟 VGA 引擎转发请求，使 BIOS 信息经串口可见
+2586108|L3|David Langford 报 sendmail check_rcpt 过滤后对端 471 拒绝，地址形如 <[smtp:User@host]> 括号异常
+2586109|L4|Nanbor Wang 报 libc_r 疑似 bug：客户端 recv() 无阻塞调用却表现为非阻塞，附最小复现程序，非线程库下正常
+2586110|L4|Alex Fenyo 指出 g++ 异常机制与线程不兼容，依赖隐藏全局变量，g++ 与线程混用须极度谨慎
+2586111|L4|Eivind Eklund 批 2.2.1 网络代码三误：慢除法、分片处理、深谙 drop-tail 队列策略；RED 实现未入主线
+2586112|L3|David Greenman 追问 512MB 内存不被识别及 MAXMEM 设大值的后果，与 2586096 同题续
+2586113|L3|Nanbor Wang 更正：g++ 问题在移除全部线程相关代码后依然存在，与 _POSIX_THREADS 无关
+2586114|L4|Dan Busarow：对端 smtp: 前缀应被其侧剥离，方括号仅保留给 @ 右侧 IP 字面量，属其侧配置错误
+2586115|L3|Marty Leisner 谈 flex vs lex：旧程序依赖 lex 怪异行为（如改写 input()）如何迁移，提及 CSCOPE 同类问题
+2586116|L3|Jaye Mathisen 提议改用 rc2.d/init.d 机制，避免每次发版都要合并 rc、netstart、sysconfig
+2586119|L3|Daniel O'Callaghan：netstart 应改名 rc.net，可能随本次整顿一并改动，除非被阻止
+2586121|L3|用 nm 输出说明：_sys_errlist 是 libc 数据段被映射进进程，故静态错误信息随代码一并加载
+2586122|L3|报 libc_r 缺陷：本地 socket 测试程序非线程版正常，改用 libc_r 编译后 recv() 失效
+2586125|L4|netstart 中 `if [ "x$gateway" != "xNO" ]` 判定：变量未设（旧 sysconfig）也会开启转发等功能，属默认开启缺陷
+2586127|L4|给出 man/catpages 修复：/usr/share/man/cat* 归 man.bin 模式 755，/usr/bin/man 归 man.bin 模
+2586138|L3|诊断 manpage 损坏：file xxx.1.gz 返回 data 而非 gzip compressed data，指向 gzip 命令异常
+2586141|L3|jkh：现行 sysconfig 方案脑残；提议把 netstart 各块改写为 sh 函数，随后提交 diff
+2586149|L4|Warner Losh：ACE 的 GOT relocation 告警无害；内联虚函数被当局部处理是编译器缺陷，应修
+2586150|L3|提出 netstart 改名 rc.net（本人准备动手），并主张引入 init.d 风格启动机制
+2586154|L4|答 VM 问题：聚簇页换入在 vm_fault.c:vm_fault_additional_pages()，换出在 vm_pageout.c:vm_pageou
+2586158|L4|定位 2.2 构建坏：pcireg.h 缺 PCI_SUBID_REG2 而 pci.c:1758 引用；附 cvs update -D 检出 13-Feb-9
+2586159|L3|内核 gdb 远程调试：Bruce 建议改 sio.c，作者放弃该法改为直接禁用串口控制台
+2586160|L3|解释 man 为何 setuid：需向 man 用户所有的 cat? 目录写缓存；对无需 setuid 也能用给出两种解释
+2586161|L3|启动机制设计：run level 与 S01*/S10* 软链只是绕过缺少依赖处理的 hack，讨论 make 等方案
+2586164|L3|用 sh -vx 跟过程，man * 仍只报 zcat not in gzip format，问题复现最小化
+2586165|L3|切片数上限 16：OpenBSD 已改且可读 FreeBSD 旧式 disklabel，NetBSD 尚未跟进
+2586167|L3|给登录两种核算定义：按拨入线路(modem/vty/terminal) 与按进程(system accounting)
+2586168|L3|报系统级故障：shutdown modem 或 kill pppd 后进程处于 DEs 状态，整机重启，可随时复现
+2586169|L3|Stefan Esser 承认 PCI 提交未完成导致 pcireg.h 缺宏，确认构建坏根因
+2586176|L4|kern/3375 十分钟启动延迟补丁已应用并验证，附 -v 引导时钟校准日志
+2586183|L3|msdosfs 读取坏软盘后键盘锁死、可切虚控制台但不能操作，多机器复现
+2586184|L3|P90+双 DEC PCI 网卡作 ipfw 路由器统计，netstat 收发包与误差计数
+2586187|L3|引导机制讨论，run level 与 S01/S10 shell 脚本链接是绕过缺少依赖系统的 hack
+2586189|L4|master.passwd 丢失应对：查看 /var/backups 备份副本
+2586194|L4|master.passwd 恢复方案：pw(8) usershow -a 导出用户表，附 src/usr.sbin/pw/pw_user.c 补丁
+2586197|L4|disklabel 分区数：MAXMAXPARTITIONS=22，多数平台 MAXPARTITIONS=8；改数会破坏 minor 号兼容性
+2586198|L3|boothowto RB_MUTE 位仅评估一次，须写 cn_mute 而非 boothowto，含 ddb 操作示例
+2586199|L3|man 页报 "not in gzip format"：file(1) 判为 data 即已损坏，删 cat 缓存可重建
+2586203|L3|/etc/netstart 变量空值语义讨论，NetBSD 约定 set-but-empty 用默认值，Jordan 方案存分歧
+2586205|L3|Jordan 提交 rc.conf/rc.network 新增、sysconfig/netstart 删除的替代方案与安装步骤
+2586209|L3|psm0 默认关闭原因：会卡住无 PS/2 鼠标口的主控芯片，kbd 子驱动后或可常开
+2586211|L3|psm0 默认开启是否安全存疑，建议放到下一版 2.2.x-ALPHA 再评估
+2586212|L4|libc_r 疑似 bug：recv() 异常，非线程库正常、libc_r 下失效，本地 socket 复现
+2586213|L4|libc_r 设计说明：fd 创建后被改为非阻塞，库记录原状态并在阻塞调用时补偿
+2586214|L4|libc_r 调度：不同优先级线程阻塞读同一 fd 时调度无效，需修 _thread_fd_lock()
+2586215|L4|libc_r fd 锁问题：线程一可写线程二阻塞读时行为异常，含 Alex Fenyo 分析
+2586218|L4|i386-gdbstub.c 实现 detach 命令，引用 CVS 1.4 修订 8 行提交日志
+2586219|L4|路由器压测：Intel Pro/100B 平均 3500 pps、峰 5000、20-25Mbps，fxp 远优于 de 驱动
+2586222|L3|128MB 内存 FreeBSD 识别不到而 Win95 正常，质疑内核内存上限问题
+2586225|L3|杀 pppd 即触发重启，pppd 处 DEs 状态；曾以 root 执行 pppd -detach 后 kill 复现
+2586228|L3|3.0-CURRENT 配 tcsh 异常：host -l localhost 本地无输出而远程正常，怀疑命名服务
+2586230|L3|登录/登出挂钩点：正确入口是 login 或 login -f，xdm 不走 login，out 门另有考量
+2586233|L3|psm0 默认关闭讨论：主张关掉安装非必需项，SCO 因此让磁带走安装流程变繁琐
+2586235|L4|kern/3375 根因：机载 RTC 芯片损坏致启动十分钟延迟；clock.c 超时值被改小，作者称"超时本不会发生"
+2586236|L3|g++ GOT relocation 警告判为无害：内联虚函数试图本地化，多数编译器不处理此合法 C++ 构造
+2586237|L4|libc_r 疑似 bug：localhost socket 下 recv() 失效，非线程库正常，表现如开启了非阻塞
+2586244|L3|man cat 页必要性：非人人 Alpha/600MHz，大 man 页在 386sx16 笔记本上几乎无限慢
+2586245|L3|namei 缓存设计反诘：词法作用域符号表条目有限故无所谓复用策略，而 /usr/include 常有百余条目
+2586246|L4|128MB 内存识别根因：Win95 调用 BIOS 询问内存量而 FreeBSD 不调用，仅需数十字节新代码
+2586251|L3|提议内核初始化仿 APM 暂回实模式调 BIOS 取内存量，以便读取根目录可选配置文件
+2586253|L4|namei 缓存哈希 off-by-one：掩码替代素数取模的边界错误，vfs_cache.c nchash 索引修正
+2586254|L4|BOOT_PROBE_KEYBOARD 选项无法判定键盘存在并挂起系统，替代 probe_keyboard.c 在报告者机器验证可用
+2586255|L4|MAXMEM 变量必要性：访问不存在内存无标准行为，部分主板镜像内存（64M 板按模寻址）故不能直接探测上限
+2586263|L3|man cat 目录被包反复重建，抱怨包用自带 mtree 库而非系统库
+2586264|L4|时钟校准诊断：未设 CLK_USE_I8254_CALIBRATION 走旧校准法，i8254 1202460 Hz 偏离标称 1193180
+2586266|L4|ping bug：ifconfig 改地址后发出包仍带旧 IP，目标回包送旧地址不被 ping 收到，附复现步骤
+2586268|L3|替代 probe_keyboard.c 落地路径：合入并设默认，靠 3.0-SNAP 隐式验证，需留无探测的隐藏镜像
+2586269|L4|ucd-snmp-3.1.3 补丁：extensible.c 缺 #include vm/vm_param.h，kernel.h 已不再自动包含
+2586270|L3|询问 msdosfs 是否有 VFAT32 支持，无则愿自行实现，附称 Win95 已不再随附支持 VFAT 机型
+2586272|L4|最小内核配置：报未定义符号 netisr_set（i386/machdep.c），加 INET 后仍缺其他设备与伪设备符号
+2586276|L3|提议 login 由 exec 改 fork 常驻为会话管理器（非进程组首）；Terry 谓将大破兼容
+2586278|L3|建议键盘探测设为默认并配 /boot.config -S 强制串行控制台，借 3.0-SNAP 默认启用
+2586281|L3|最小内核选项中 INET 难移（历史尝试问题多）；逐项点评 COMPAT_43、BOUNCE_BUFFERS 等
+2586282|L3|ACE 编译出大量 GOT warning 后 g++ internal error 崩溃，疑属 g++ 而非 FreeBSD
+2586292|L3|sysctl -A 显 kern.securelevel=-1（2.2.1-REL），与 init(8) 称多用户下为 1 不符
+2586294|L3|正开发 msdosfs 替代，含 VFAT12/16 暂不含 VFAT32，称将随 RSN 发布
+2586295|L3|路由机基准：均 3500 pps、峰值约 5000、20-25Mbps、CPU 约 50% idle（Intel Pro/100B）
+2586298|L4|主机路由删除时 FreeBSD 反复重启；1.0.2 至 2.2.1-REL 均现；无 hang 无 panic 直接 reboot
+2586303|L3|vfs_lookup.c namei 哈希提议 hash=hash*33+*cp，并置 cn_hash 为零
+2586305|L3|请求实现 getpgid(pid_t)；glibc-2.0 已有，担心与 libc_r 混用
+2586307|L3|fork 后子进程借父 socket 做 setsockopt 加离多播组：组数超限与 socket 共享行为待厘清
+2586309|L3|GCC 可将常量乘法 a*33 编译为移位加法，故 namei 哈希优化非必需（附 SPARC 汇编）
+2586310|L4|RELENG_2_2 制作 fixit 软盘失败，文件系统写满；FIXITINODE=4000 可续；jkh 确认取值有误并上调
+2586314|L3|主张在 kernel init 用 APM 式回实模式调 BIOS 以读扩展内存；请作者提供 diff
+2586320|L3|Jordan 拟以 rc.conf/rc.network 取代 sysconfig/netstart，数日内提交，DEFAULT 语义存争议
+2586322|L4|80386DX-33/4MB 装 2.2.1 进主菜单即冻死；硬件详列；作纯 DOS 机正常
+2586326|L3|ACE 移植 FreeBSD 遇 GOT relocation burst 警告（ACE_Local_Mutex），维护者索要最小复现代码
+2586328|L3|讨论 netstart 中 NO 标记语义，主张避免变量双重用途，仅在无更合理表示时用作特例
+2586330|L4|David Miller 提交 vfs_lookup.c 哈希改动 diff，改用 hash*33 递推替换 cn_hash 累积
+2586331|L3|讨论 hash+=hash<<5 与 hash*33 取舍，认为 GCC 可识别常量乘法且乘法可能更快
+2586332|L4|报告 syslogd 时间戳 CDT/GMT 混用及 sendmail gethostbyaddr 对 IP 别名反复失败两个异常
+2586335|L4|给出可去 INET 的最小内核配置 BARE（MFS_ROOT、maxusers 8），并提出 machdep.c 条件编译补丁
+2586336|L3|回应 512MB 内存不识别问题，提示检查内核配置 MAXMEM 选项设置是否正确
+2586341|L3|说明包重建的是 cat* 目录而非 man 目录，mtree 每次运行都会重新生成
+2586342|L3|纠正 Curt 说法：sh 中 "" 与 unset 并不等价，反对据此简化 netstart 变量处理
+2586343|L3|质疑 Win95 双文件系统，称 NTFS 无 owner/权限，加 Unicode 与安全即成 WinNT
+2586344|L3|澄清 securelevel -1 为永久不安全（恒 level 0），其他 BSD 用 INSECURE 选项表示
+2586345|L3|讨论 fixit.flp 制作失败，FIXITINODE=4000 可过但参数非最优，怀疑 newfs -i 计算差异
+2586346|L4|对比掩码版与素数版哈希表尺寸，maxvnodes 4824 时掩码版 hashsize 结果差异
+2586347|L3|80386 装 2.2.1 进主菜单即冻结，建议切第二屏幕 Alt-F2 排查
+2586348|L3|回复 syslog 时间戳问题无头绪需查源码；IP 别名致 gethostbyaddr 失败疑与别名有关
+2586349|L3|讨论 ft/lft 维护者与 QIC-117 驱动器互操作性，索要标准文档以判断能否写通用驱动
+2586350|L3|追问 init(8) man 未说明 -1 与 0 差异，J Wunsch 答 -1 不会自动递增
+2586351|L4|实测改 kern_mib.c 默认 securelevel=0，init 升 1 后 X 报 KDENABIO 操作不允许
+2586352|L4|提供最小复现 got.cc，gcc -fpic -c 可复现 ACE 移植的 GOT relocation burst 警告
+2586353|L3|路由器压测数据：wcarchive 均值 3500 pps、峰值 5000 pps、20-25Mbps，CPU 闲置 50%
+2586354|L3|回答 securelevel -1 与 0 的区别：-1 不被自动递增
+2586355|L4|解释 securelevel>0 与 X11 互斥：X 做了本属内核层的控制台 I/O 切换
+2586356|L4|枚举五种 nchash 方案（原版/掩码/双倍/x33 组合），指出掩码版为 4.4Lite 原版、素数版为 FreeBSD 增强
+2586357|L3|指出 pre-Lite2 的 newfs -i 计算是坏的，其魔法数在 -current 下必错
+2586358|L3|主张 securelevel -1 应作默认，以便在 /etc/rc 中决定安全级别

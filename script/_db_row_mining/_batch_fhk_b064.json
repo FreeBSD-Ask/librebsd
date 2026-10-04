@@ -1,0 +1,33 @@
+{
+ "tag": "fhk_b064",
+ "lib": "freebsd-hackers",
+ "offset": 126000,
+ "n": 2000,
+ "pk_lo": 2584357,
+ "pk_hi": 2586358,
+ "pk_range": "2584357-2586358",
+ "rn_lo": 2584357,
+ "rn_hi": 2586358,
+ "parts": 40,
+ "hosts": [
+  88.5
+ ],
+ "hosts_note": "单宿主 88.5",
+ "anchor": "fhk_b064",
+ "src_db": "D:\\librebsd\\03-原始史料库\\11-邮件列表史料\\01-freebsd\\db\\freebsd-hackers.duckdb",
+ "month_dist": {
+  "1997-04": 2000
+ },
+ "body_gt20": 1996,
+ "body_max": 28253,
+ "empty_body": 0,
+ "empty_subject": 3,
+ "missing_pks": [
+  2585904,
+  2586340
+ ],
+ "ordinal_note": "库内序 126001-128000",
+ "note": "pk span 2002 缺 2",
+ "changelog_msg": "fhk_b064 offset 126000",
+ "line_date": "2026-10-04"
+}
