@@ -56,7 +56,8 @@
 - 复核波6＝15 期（3 路×5 期小批）：**15/15 全 pass**。
 - 复核波7＝12 期（2 路×6 期）：**11 pass／1 fail**（`XT7soOM_YuM` 大段乱码→--force 重转成功→再审 **pass**→入库，全链闭环）。
 - 复核波8＝17 期（3 路 6+6+5）：**16 pass／1 fail**（`nyNCSM4vGF4` 泄漏 "What every good ASR engine does, back off and jitter"，一次性重转被 1011 拒→挂回待转）。**挂账累计 6**：BOPee／pynpY7Isbxs／luPViknmoXc／yzv9lcjxhAg／e5g9blIkp0g／nyNCSM4vGF4（fail 裁决挡门禁，下批 15_parallel 启动时自动重转重审）。
-- 入库累计 **+352 transcripts**（53＋66＋48＋48＋47＋47＋15＋11＋1＋16，每批对账 segments==utterances 逐件一致）；senseaudio 行 **397 全 `'reviewed'`**；删已入库音频累计 352 件 ~6.5GB（manifest×10）。
+- 复核波9＝4 期（1 路）：**4/4 全 pass**；复核波10＝6 期（1 路）：**6/6 全 pass**。
+- 入库累计 **+366 transcripts**（53＋66＋48＋48＋47＋47＋15＋11＋1＋16＋4＋6，每批对账 segments==utterances 逐件一致）；senseaudio 行 **407 全 `'reviewed'`**；删已入库音频累计 366 件 ~6.7GB（manifest×12）。
 - 入大纲：119 期 pass 件派发＝**全部 0 既有条目**（本战役为新增未引用期；入纲=独立增补 campaign）。
 - 清理：删已入库期音频 119 件（manifest×2 留痕）；`_pcm_gc.py` 多轮回收（含「无JSON且mtime>2h」规则，主理人已批）。
 - `05_audit.py` 门禁 5 FAIL 全为已知 artifacts（复核门设计致 DB⊂JSON、redo 重复台账 3、BOPee 挂账件空正文），非新问题。
