@@ -1,0 +1,3679 @@
+{
+ "updated": "2026-10-06T02:13",
+ "note": "records 为**已判读**区间（行序、左闭右开），合并自现存批次 spec（下界）；带 \"queued\": true 且尚无 claim_map 的预建 spec 不计入 records，另记 queued_records。read_effective 对 catalog completed 库取全库封数（权威），其余取 read_judged；read_spec（旧口径）仍为全部 spec 覆盖之和，保留供对照。｜本次追加：fpo_b181 / fn_b177 双批各 +3000，freebsd-ports read_spec/read_judged/read_effective 90000→93000（tags 30→31），freebsd-net 63000→66000（tags 21→22）。1723 条候选入纲 1711 块，12 条因正文只有引用块或本人段无实质论述判 rejected 不入大纲。｜tk_b154：tech-kern 75000→80000（tags 16→17），pk 361291-2320242，4380 条候选入纲 4380 块入 14 个宿主文件（白名单 40→48 键，1783/1784 归 178.1、1792/1793 归 179.1），CL-RM-309557-313936，覆盖 98.37%，余 1326 封留 tk_b155 收口。｜本次追加：freebsd-hackers fhk_b043（offset 84000，pk 2542056–2544082，255 块入 1 宿主 88.5=255，claim CL-RM-313937~314191，L4=178／L3=77），84000→86000，tags 42→43 条。｜本次追加：freebsd-hackers fhk_b044（offset 86000，pk 2544083–2546092，364 块入 1 宿主 88.5=364，claim CL-RM-319115~319478，L4=291／L3=73，17 条摘要外科落库），86000→88000，tags 43→44 条。｜本次追加：fpo_b182 / fn_b178 双批各 +3000，freebsd-ports 93000→96000（tags 31→32），freebsd-net 66000→69000（tags 22→23）。fpo_b182 1150 条候选入纲 1150 块入 5 宿主（89.2=1066／89.4=29／90.6=36／90.7=16／90.9=3），claim CL-RM-316662~317811；fn_b178 1114 条候选入纲 1114 块入 2 宿主（36.4=1100／18.7=14），claim CL-RM-317812~318925。两批各 0 剔除、numstat +11320/0 = 2264×5，幂等二跑均 +0。｜本次追加：freebsd-hackers fhk_b045（offset 88000，pk 2546105–2548091，273 块入 1 宿主 88.5=273，claim CL-RM-320420~320692，L4=199／L3=74，11 条摘要外科落库），88000→90000，tags 44→45 条。｜tk_b155：tech-kern 80000→81326（tags 17→18，全库 100% 收口），pk 2320243-2342102，段内 1326 封剔除 58 封得 1268 条候选入纲 1268 块入 19 个宿主文件（白名单 48→53 键，第179-190章全节，无归并），CL-RM-320693-321960，0 剔除入库。｜本次追加：freebsd-hackers fhk_b046（offset 90000，pk 2548100–2550108，216 块入 1 宿主 88.5=216，claim CL-RM-322564~322779，L4=197／L3=19，23 条摘要外科落库），90000→92000，tags 45→46 条。｜本次追加：freebsd-hackers fhk_b047（offset 92000，pk 2550109–2552111，234 块入 1 宿主 88.5=234，claim CL-RM-328198~328431，L4=195／L3=39，36 条摘要外科落库），92000→94000，tags 46→47 条。｜本次追加：fpo_b183 / fn_b179 双批，freebsd-ports 96000→99000（tags 32→33），freebsd-net 69000→73645（tags 23→24，**本库收尾 100%**）。fpo_b183 1226 条候选入纲 1226 块入 5 宿主，claim 322780–325622；fn_b179 1666 条候选入纲 1666 块入 2 宿主，claim 323977–325687。｜本次追加：freebsd-hackers fhk_b048（offset 94000，pk 2552115–2554114，261 块入 1 宿主 88.5=261，claim CL-RM-328632~328892，L4=224／L3=37，45 条摘要外科落库），94000→96000，tags 47→48 条。｜本次追加：fpo_b184 单批，freebsd-ports 99000→102000（tags 33→34）。1183 条候选，入纲 1183 块入 5 宿主，剔除 0 条（纯转发／本人段落无可见内容：），claim 328893–330075。窗口 2015-03→2016-08（源档案有整月缺口，非抽取错误）。｜本次追加：freebsd-hackers fhk_b049（offset 96000，pk 2554116–2556118，1148 块入 1 宿主 88.5=1148，claim CL-RM-333041~334188，L4=461／L3=687），96000→98000，tags 48→49 条。｜本次追加：freebsd-hackers fhk_b050（offset 98000，pk 2556119–2558128，244 块入 1 宿主 88.5=244，claim CL-RM-338482~338725，L4=199／L3=45），98000→100000，tags 49→50 条。｜本次追加：fpo_b185 单批，freebsd-ports 102000→105000（tags 34→35）。1636 条候选，入纲 1636 块入 5 宿主（892=1499,894=57,906=41,907=36,909=3），剔除 0 条（无），claim 334979–336614。窗口 2016-01-01 → 2016-12-31。两处读手误剔已回读整封正文纠正（1655255/1656702）；12 条候选摘要逐字照抄为叙述者违纪，已按正文重写并外科回写宿主块与 claim_text。｜本次追加：fpo_b186 单批，freebsd-ports 105000→108000（tags 35→36）。1407 条候选，入纲 1403 块入 5 宿主（892=1220,894=63,906=86,907=34,909=0），剔除 4 条（1658912,1660318,1660319,1660464），claim 340657–342063。窗口 2016-01-01 → 2017-12-31。候选层门禁外科修正 17 条（摘要越硬上限/含通配写法/带尾标点）；叙述层 40 路滚动、909 兜底 0；4 条剔除项已判 rejected（1658912 系西班牙语营销邮件且候选摘要凭空杜撰技术事件，其余 3 条存盘窗口内全部为引用块、发件人本人文字落在窗口之外），留档 excluded_fullbody。遗留发现：digest 对 1675/3000 行按 420 字符静默截断且无 [正文已截断] 标记，待核口径需按此修正。｜台账归属留痕（2026-10-01）：commit c268db2df 落库 fpo_b186 台账补丁时，磁盘快照已含 freebsd-hackers 线在途未提交的 fhk_b051＋fhk_b052（read_spec/read_judged/read_effective 100000→104000、record.hi 同步、tags 50→52），与本批同文件同快照一并入库；该两批的记录数据完整保留，未删未改，归属属该线自有推进，此段仅补其未入 note 的留痕缺口。本批 freebsd-ports 的 105000→108000 部分为本线 fpo_b186 实测写入。｜本次追加：freebsd-hackers fhk_b053（offset 104000，pk 2562150–2564194，302 块入 1 宿主 88.5=302，claim CL-RM-347559~347860 连续，L4=235／L3=67），104000→106000，tags 52→53 条。｜本次追加：freebsd-hackers fhk_b054（offset 106000，pk 2564195–2566288，249 块入 1 宿主 88.5=249，claim CL-RM-350872~351120 连续，L4=206／L3=43），106000→108000，tags 53→54 条。｜｜本次追加：fpo_b188 单批，freebsd-ports 111000→113999（tags 37→38，59.49%）。1997 条候选，入纲 1996 块入 5 宿主（892=1768,894=67,906=85,907=75,909=1），剔除 1 条（1666076：库内正文 894 字符无截断标记，全部为转发头 On Tue, Feb 27, 2018 at 11:48:31PM +0000, Janky Jay, III wrote: 后接他人引用块，发件人本人无实质内容；已判 rejected，非截断窗判断），claim 353074–355070 连续。候选密度 66.6%；叙述段 40 路滚动 40/40 落盘，p3 首派 27/50 行超 140 硬限整体作废、二次重派通过；SHIFT 回源核验 1 条（1665960，漂移源自候选摘要层）已按正文外科修正。本次追加：freebsd-hackers fhk_b055（offset 108000，pk 2566289–2568290，391 块入 1 宿主 88.5=391，claim CL-RM-352683~353073 连续，L4=293／L3=98），108000→110000，tags 54→55 条。｜本次追加：freebsd-hackers fhk_b056（offset 110000，pk 2568291–2570295，185 块入 1 宿主 88.5=185，claim CL-RM-356760~356944 连续，L4=152／L3=33），110000→112000，tags 55→56 条。｜｜本次追加：freebsd-ports fpo_b189（offset 114000，pk 1667079–1670081，2222 条候选入 4 宿主 892=1966,894=72,906=92,907=84，剔除 8 条判 rejected，claim CL-RM-356945~359166 连续，L4=1940／L3=282，候选密度 74.1%），113999→116999，tags 38→39 条。本次追加：freebsd-hackers fhk_b057（offset 112000，pk 2570296–2572300，208 块入 1 宿主 88.5=208，claim CL-RM-359995~360202 连续，L4=183／L3=25），112000→114000，tags 56→57 条。｜｜更正（2026-10-03）：上一条追加中「剔除 8 条判 rejected」与宿主分布892=1966,906=92 有误。这 8 条（pk 1667442/1667443/1668112/1668428/1668460/1668471/1668690/1669886）候选摘要带「待核 窗口内未见本人段」标记，该标记是交主会话回源裁定的队列而非剔除依据，实际处置时未回源即剔除，违反「截断窗内只见引用块不得判非候选」与「不得静默剔除」。逐封回读源库freebsd-ports.duckdb.messages 全文后，8 条全部有当事人本人实质内容（抽稿窗把本人段切在窗外所致），已全部补回：叙述分件 p51、合并总表 2222、SHIFT 0、大纲 +8 块（89.2 +7／90.6 +1）、claim 层 8 条由 rejected 复原supported 并回填 claim_text、verify 7/7 PASS 全库 Δ0。终态＝0 剔除，2222 条候选全入纲，宿主分布 892=1973,894=72,906=93,907=84。候选条数与 pk 区间未变，故闭区间 hi=116999 与 tags 不变。本次追加：freebsd-hackers fhk_b058（offset 114000，pk 2572301–2574305，303 块入 1 宿主 88.5=303，claim CL-RM-361043~361345 连续，L4=237／L3=66），114000→116000，tags 57→58 条。｜本次追加：freebsd-hackers fhk_b059（offset 116000，pk 2574306–2576307，314 块入 1 宿主 88.5=314，claim CL-RM-365306~365619 连续，L4=273／L3=41），116000→118000，tags 58→59 条。｜本次追加：freebsd-hackers fhk_b060（offset 118000，pk 2576308–2578322，289 块入 1 宿主 88.5=289，claim CL-RM-366530~366818 连续，L4=218／L3=71），118000→120000，tags 59→60 条。｜｜台账归属留痕（2026-10-03）：本次落库 fhk_b060 台账补丁时，磁盘快照已含 freebsd-porters 线在途未提交的 fpo_b190（read_spec/read_judged/read_effective 116999→119999、records[0].hi 同步、tags 39→40），与本批同文件同快照一并入库；该批记录数据完整保留，未删未改，归属属该线自有推进，其 note 记账句尚未追加，此段仅补其未入 note 的留痕缺口。本批 freebsd-hackers 的 118000→120000 部分为本线 fhk_b060 实测写入。｜本次追加：freebsd-scsi h5sc_b516_3（offset 12000，pk 2494157–2500161，1991 块入 3 宿主 1213=1803／912=184／1226=4，claim CL-RM-369690~371680 连续，L4=1923／L3=68，候选密度 33.2%），12000→18000，tags 2→3 条，90.67%。本次追加：freebsd-hackers fhk_b061（offset 120000，pk 2578323–2580329，289 块入 1 宿主 88.5=289，claim CL-RM-372338~372626 连续，L4=216／L3=73），120000→122000，tags 60→61 条。｜｜本次追加：openbsd_mail 开线 ob_b001（offset 79000，n 2000，pk 183124-185142），79000→81000，tags 0→1 条。2000 封读手判出 657 条候选，全链零剔除全入纲：register CL-RM-371681~372337（连续 657）、claim_text 合并叙述补遗 657/657（17 列其余 16 列逐字未动）、13 个宿主入大纲 657 块（191.1=510/191.2=71/191.3=16/191.6=15/192.5=12/192.2=6/210.3=6/192.1=5/192.3=5/192.6=5/191.4=3/210.1=2/191.5=1）、bookkeep 缺块 0 重复 0 格式违规 0、幂等二跑 +0。台账口径：read_spec 2000、read_judged 657、read_effective 657（库未完成，取 read_judged）；81000/154119=52.56%。｜本次追加：freebsd-scsi h5sc_b516_4（offset 18000，pk 2500176–2502045，618 块入 2 宿主 1213=546／912=72，claim CL-RM-373632~374253 连续，L4=587／L3=31，候选密度 33.4%），18000→19851，tags 3→4 条，19851/19851=100%（本库收口）。｜本次追加：freebsd-hardware h5hw_b518_3（offset 12000，pk 1341871–1352559，1618 块入 5 宿主 1235=1515／1225=51／1014=40／912=8／1614=4，claim CL-RM-374254~375871 连续，L4=1430／L3=188，候选密度 15.2%），12000→22679，tags 2→3 条，22679/22679=100%（本库收口）。本次追加：freebsd-hackers fhk_b062（offset 122000，pk 2580330–2582340，295 块入 1 宿主 88.5=295，claim CL-RM-375872~376166 连续，L4=246／L3=49），122000→124000，tags 61→62 条。｜本次追加：freebsd-python h5py_b519_3（offset 12000，pk 2160168–2170784，146 块入 1 宿主 168=146，claim CL-RM-376167~376312 连续，L4=112／L3=34，候选密度 1.4%），12000→22701，tags 2→3 条，22701/22701=100%（本库收口）。｜本次追加：freebsd-ports fpo_b191（offset 120000，n 3000，双年代批：库内段1994-11→1995-09 共 1697 封＋2021-01→2021-05 共 826 封，中间 26 个整月缺失系档案抽取边界非读手漏读），2523 条候选 0 剔除全入纲 2523 块，开 6 宿主实收 5（891=1562,892=896,894=25,906=22,907=18,909=0），claim CL-RM-367167~369689 连续，119999→122999，tags 40→41 条，122999/191637=64.18%。｜本次追加：openbsd_mail ob_b002（offset 81000，n 2000，pk 185145-187153），81000→83000，tags 1→2 条。2000 封读手判出 541 条候选，全链零剔除全入纲：register CL-RM-376313~376853（连续 541）、claim_text 订正为合并终态叙述（update_log 留痕 op=claim_fix）、13 宿主实收 13（1911=413,1912=56,1913=12,1914=3,1915=1,1916=20,1921=3,1922=10,1923=10,1925=3,1926=1,2101=1,2103=8），L4=48／L3=493，候选密度 27.05%，read_effective 4000/154119=2.60%本次追加：freebsd-hackers fhk_b063（offset 124000，pk 2582341–2584356，171 块入 1 宿主 88.5=171，claim CL-RM-376854~377024 连续，L4=53／L3=118），124000→126000，tags 62→63 条。｜本次追加：openbsd_mail ob_b003（offset 83000，n 2000，pk 187160-189171，2007-12 尾 33 封＋2008-01→2008-06 共 1967 封，跨 4.3 发布 2008-05-01，与前两批零重叠），83000→85000，tags 2→3 条。2000 封读手判出 635 条候选，全链零剔除全入纲：register CL-RM-377918~378552（连续 635）、claim_text 订正为合并终态叙述 635/635（长度 61/140/106.9，与 ob_b001 63/140/111.1、ob_b002 60/140/109.4 同口径）、13 宿主实收 13（1911=250,1921=125,1912=97,1914=44,1913=38,1916=21,2101=18,1925=17,1922=10,2103=8,1923=3,1926=3,1915=1）、L4=14／L3=621、候选密度 31.75%、bookkeep 缺块 0 重复 0 格式违规 0、幂等二跑 +0、numstat +3175/0 = 635×5。叙述署名审计：全库扫「引用块>200字 且 FROM 正文<40字 且 无转引标记」命中 0，L4 14 条逐条回源核对关键词均忠实。read_effective 6000/154119=3.89%。｜fpo_b192（库内序 123000-125999）全链闭环：2508 候选全入纲、register 四表 2508 条 CL-RM-378553-381060 连续（quote 2508/2508 命中源库原文且长度 <=300、档位 L4=2244/L3=264 与候选一致、无重复 source_id、核验 19 项 FAIL 0）；40 路叙述 2508 行 60/140/100.3，外科修 45 条（over 25/under 15/forb 6，含 5 条回源订正：1676741 与 1677002 主体错人、1676086 归属归位、1676712 去越断、1678011 恢复复数主语）；主体归属审计「叙述首名+主体动词」1896 例全部对上 FROM、高置信错人 0、FROM 无显示名 160 组残留可疑 0。claim_text 订正为合并终态叙述 2508/2508（长度 60/140/100.3，与 b191 同口径）、0 剔除 0 rejected、11 项可判断言全过（断言 6「本批未改行」因 2508 行全数改动而空集不适用、显式标注未计绿，以 6b「全库行数守恒 372138->372138 Δ0」承接）、claim 库行数 Δ0。5 宿主实收 5（892=1596,891=833,894=28,907=27,906=24；909 本批未涉）、total_refs 89.1=3011／89.2=27904／89.4=4013／90.6=1347／90.7=1250、2508 锚点逐条存在且幂等（各恰 1 次）、无 BOM 无 CR、块头等级与 claim_id 2508/2508 对上、supplement_log +2508、核验 22 项 FAIL 0。候选密度 2508/3000=83.6%。read_effective 125999/191637=65.75%。｜本次追加：freebsd-emulation h5em_b520_3（offset 12000，pk 1163830–1177633，1500 块入 2 宿主 1018=1329／1497=171，claim CL-RM-381935~383434 连续，L4=1334／L3=166，候选密度 10.9%），12000→25791，tags 2→3 条，25791/25791=100%（本库收口）。本次追加：freebsd-hackers fhk_b064（offset 126000，pk 2584357–2586358，874 块入 1 宿主 88.5=874，claim CL-RM-381061~381934 连续，L4=289／L3=585），126000→128000，tags 63→64 条。｜本次追加：H5 战线台账四方对账回填（台账⇄_h5_state.json⇄claims 库⇄大纲宿主，2026-10-05 08:4x）。真因＝批次早已判读入库，queued_records 从未并进 records。组1 全量回填 5 库（判据：批次覆盖上界恰等于 messages，且 claims 总数＝各批 cands 之和、大纲块数＝supported claim 数）：freebsd-security 0→37939（7 批 h5sec_b526_1~7，claims 14529＝大纲 14529，0 rejected）、freebsd-amd64 6000→19709（4 批，cands/claims 均 3506）、freebsd-fs 6000→38710（7 批，claims 10157＝supported 8979＋rejected 1178）、freebsd-arm 24113→30113（6 批，claims 6265＝6171＋94）、pkgsrc-users 26475→32475（6 批，claims 6850＝6803＋47）；五库 records 合并为单段 [0,hi] 并清空 queued_records。组2 状态修正 13 库（read_judged 早已等于 messages 但 status 仍 in_progress，queued 均为 0 段）：cu｜freebsd-acpi｜freebsd-advocacy｜freebsd-alpha｜freebsd-gecko｜freebsd-i386｜freebsd-ipfw｜freebsd-perl｜freebsd-ppc｜freebsd-smp｜freebsd-sparc64｜freebsd-x11｜tech-pkg，status→completed。本次仅改上述 18 条 H5 线节点，其余 239 条逐键未动；未回填者＝freebsd-java（仅 b517_1 已判读，余 15280 行无批）、freebsd-arch／freebsd-mobile／freebsd-multimedia（0 批未开线），非闭环不得填。｜本次追加：freebsd-hackers fhk_b065（offset 128000，pk 2586359–2588367，1226 块入 1 宿主 88.5=1226，claim CL-RM-383996~385221 连续，L4=686／L3=540），128000→130000，tags 64→65 条。｜本次口径修订（2026-10-05，主理人令；全库 257 库不变量审计，仅 3 处缺陷）：①openbsd_mail read_judged/read_effective 1833→6000——原值系误写「候选条数」进「已判读封数」字段，records 3 段 ob_b001/002/003 之和=6000 封、read_spec 已 6000，claim 2041 条（＝657+541+635＋开线前既有 208，与大纲锚点 2041 逐条相等）系入纲候选数属另一口径；ob_b004 spec 已建未入 records 不计。②freebsd-bugs records 2 段（16500）→单段 [0,153970] tags 合并——批次 spec 清理后未随指针重建，read_judged/read_spec=153970 与 records 之和矛盾；claim 9710/153970=6.31%密度合理（对照 net 21.56%/ports 28.36%），故封数为准只重建 records，参照 10-05 08:4x H5 回填同款做法。③freebsd-net status in_progress→completed、status_source spec-only→judged-complete-20261005——read_effective==messages==73645 已读满（records 单段 [0,73645]，24 批 fn_b156..b179），claim 15875 条；全库仅此 1 库（此前 14 库，H5 回填已消 13 库）。其余 254 库逐字节未动。｜订正（同日）：上段「③freebsd-net」的批次数误记为「29 批 fn_b156..b179」，实测该段 records tags 共 24 个（fn_b156 至 fn_b179 含首尾＝24），已就地订正为「24 批」；此误源自凭区间端点估算而未数实际 tag，其余数字（claim 15875 条、73645 封、3 段合并、254 库未动）经后验逐条复核无误。3 库字段值本次未改。｜【口径定义（2026-10-05 补遗，主理人批准；全 257 库不变量审计后固化为规范条款）】新批次落账前三项自查，台账外科补丁脚本须在写前逐条断言现值： ①read_judged == sum(records[hi-lo])——已判读封数＝批次区间之和；一个批次窗口（n 封）内的封全部被读手读过即 read_judged += n，**不得填「候选条数／入纲块数」**，候选数对应 claim 库条数与大纲 ROW_MINE 块数，是另一口径；追加 records 段后须按区间之和重算 read_judged，不得把本批候选数累加进旧值。 ②read_spec == read_judged（旧口径 spec 覆盖之和，保留供对照）。 ③read_effective == messages 时必须 status==\"completed\"，status_source 用 \"judged-complete-YYYYMMDD\"（catalog 侧完成则 \"catalog-completed\"）。 审计口径：单进程读台账 → 逐库算 records 区间之和 → 比三项不变量；交叉验证用大纲 ROW_MINE 锚点数与 claim 库 raw_source 计数三口径对照。｜｜2026-10-05 fpo_b193 全链闭环（offset 126000，n 3000，pk 1679105–1682110，2569 候选入纲＝408/1954/80/74/47/6 落 89.1/89.2/89.4/90.6/90.7/90.9 六宿主，claim CL-RM-385237~CL-RM-387805 连续无空洞，L4 2126／L3 443），125999→128999（128999/191637＝67.31%），tags 42→43 条；431 判非候选（＝3000−2569），叙述阶段 0 剔除。claim_text 补遗 2565 条（4 条已合规跳过）、12 项断言全 PASS、本批行集合守恒 2569；主体归属审计 HIGH 0（LOW 12 全为 Marc G Fournier 句柄 scrappy 系同人别名，非错人）、内容错位审计 B 0。｜本次追加：ob_b004 +2000（openbsd_mail 行序 85000-87000，pk 189172-191179），候选 716 条全入纲（L4 14 / L3 702），claim CL-RM 区间见 review_logs/ob_b004_claim_map.json，13 宿主 5 行块幂等落地。本次追加：freebsd-hackers fhk_b066（offset 130000，pk 2588368–2590383，1108 块入 1 宿主 88.5=1108，claim CL-RM-388972~390079 连续，L4=590／L3=518），130000→132000，tags 65→66 条。｜｜2026-10-05 fpo_b194 全链闭环（offset 129000，n 3000，pk 1682111–1685117，2041 候选入纲＝1612/219/75/61/44/30 落 89.2/89.1/90.7/89.4/90.6/90.9 宿主，claim CL-RM-394114~CL-RM-396154 连续无空洞，L4 2028／L3 13），128999→131999（131999/191637＝68.88%），tags 43→44 条；959 判非候选（＝3000−2041）、0 剔除。｜本次追加：ob_b005 +2000（openbsd_mail 行序 87000-89000，pk 191180-193189），候选 539 条全入纲（L4 2 / L3 537），claim CL-RM 区间见 review_logs/ob_b005_claim_map.json，13 宿主 5 行块幂等落地。",
+ "items": {
+  "dev-reviews": {
+   "messages": 12,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 12,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-accessibility": {
+   "messages": 58,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 58,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-ocaml": {
+   "messages": 4,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-reproducibility": {
+   "messages": 5,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-evbsh5": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-hpcarm": {
+   "messages": 1,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-pc532": {
+   "messages": 1,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-ch": {
+   "messages": 1,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-embed": {
+   "messages": 3,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "archbsd-hackers": {
+   "messages": 8,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 8,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-errata-notifications": {
+   "messages": 25,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 25,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-ops-announce": {
+   "messages": 40,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 40,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-teaching": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-amigappc": {
+   "messages": 70,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 70,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-arc": {
+   "messages": 9,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 9,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-mipsco": {
+   "messages": 11,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 11,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sun2": {
+   "messages": 67,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 67,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-helsinki": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-smp": {
+   "messages": 38,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 38,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-lfs": {
+   "messages": 24,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 24,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-policy": {
+   "messages": 6,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 6,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-tinderbox": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "ietf-ssh": {
+   "messages": 10,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 10,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-desktop": {
+   "messages": 136,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 136,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-users": {
+   "messages": 21,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 21,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-avr32": {
+   "messages": 1,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-hpcsh": {
+   "messages": 7,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 7,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-iyonix": {
+   "messages": 1,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-mvme68k": {
+   "messages": 132,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 132,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-mvmeppc": {
+   "messages": 3,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-ofppc": {
+   "messages": 13,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 13,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-playstation2": {
+   "messages": 3,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-riscv": {
+   "messages": 4,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-x68k": {
+   "messages": 15,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 15,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-boston": {
+   "messages": 22,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 22,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-ca": {
+   "messages": 26,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 26,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-cs": {
+   "messages": 6,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 6,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-de": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "security-announce": {
+   "messages": 1,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-cluster": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-perform": {
+   "messages": 78,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 78,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-ports": {
+   "messages": 56,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 56,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-enterprisewg": {
+   "messages": 157,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 157,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-eol": {
+   "messages": 46,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 46,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-fcp-editors": {
+   "messages": 16,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 16,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-hpc": {
+   "messages": 52,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 52,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-ia32": {
+   "messages": 119,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 119,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-lite": {
+   "messages": 121,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 121,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-realtime": {
+   "messages": 100,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 100,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-riscv": {
+   "messages": 122,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 122,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-user-groups": {
+   "messages": 97,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 97,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-vendors": {
+   "messages": 30,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 30,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-women": {
+   "messages": 21,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 21,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "oi-users": {
+   "messages": 66,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 66,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-pdp10": {
+   "messages": 61,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 61,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sun3": {
+   "messages": 202,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 202,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-multimedia": {
+   "messages": 226,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 226,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-ports-announce": {
+   "messages": 139,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 139,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-translators": {
+   "messages": 226,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 226,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-advocacy": {
+   "messages": 316,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 316,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-jobs": {
+   "messages": 47,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 47,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-news": {
+   "messages": 36,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 36,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "p4-releng": {
+   "messages": 130,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 130,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-algor": {
+   "messages": 10,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 10,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-atari": {
+   "messages": 18,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 18,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-ews4800mips": {
+   "messages": 7,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 7,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-hp300": {
+   "messages": 96,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 96,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-hp700": {
+   "messages": 93,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 93,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-hppa": {
+   "messages": 107,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 107,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-ibmnws": {
+   "messages": 5,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-luna68k": {
+   "messages": 23,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 23,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-news68k": {
+   "messages": 55,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 55,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-newsmips": {
+   "messages": 35,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 35,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-next68k": {
+   "messages": 40,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 40,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sbmips": {
+   "messages": 22,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 22,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sh5": {
+   "messages": 11,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 11,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-zaurus": {
+   "messages": 33,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 33,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-au": {
+   "messages": 2,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-nordic": {
+   "messages": 16,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 16,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-threads": {
+   "messages": 477,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 477,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-transport": {
+   "messages": 194,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 194,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-acorn26": {
+   "messages": 72,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 72,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-ia64": {
+   "messages": 76,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 76,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-pmax": {
+   "messages": 161,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 161,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-it": {
+   "messages": 100,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 100,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-jp": {
+   "messages": 118,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 118,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-pt": {
+   "messages": 123,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 123,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-misc": {
+   "messages": 444,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 444,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "ctm-announce": {
+   "messages": 178,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 178,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-install": {
+   "messages": 217,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 217,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-new-bus": {
+   "messages": 332,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 332,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-stats": {
+   "messages": 1118,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1118,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-tokenring": {
+   "messages": 416,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 416,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-hpcmips": {
+   "messages": 223,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 223,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-prep": {
+   "messages": 210,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 210,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-s390": {
+   "messages": 141,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 141,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sandpoint": {
+   "messages": 168,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 168,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-xen": {
+   "messages": 191,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 191,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-cloud": {
+   "messages": 358,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 358,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-fcp": {
+   "messages": 153,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 153,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-sysinstall": {
+   "messages": 863,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 863,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-tex": {
+   "messages": 653,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 653,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-java": {
+   "messages": 96,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 96,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-binup": {
+   "messages": 271,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 271,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-games": {
+   "messages": 315,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 315,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-bebox": {
+   "messages": 192,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 192,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-sfba": {
+   "messages": 221,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 221,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "atf-devel": {
+   "messages": 327,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 327,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-ada": {
+   "messages": 102,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 102,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-infiniband": {
+   "messages": 502,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 502,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-repository": {
+   "messages": 873,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 873,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-pkgbase": {
+   "messages": 584,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 584,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-proliant": {
+   "messages": 761,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 761,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-xen": {
+   "messages": 261,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 261,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-cats": {
+   "messages": 211,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 211,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-m88k": {
+   "messages": 322,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 322,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-london": {
+   "messages": 465,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 465,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-afs": {
+   "messages": 525,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 525,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-platforms": {
+   "messages": 528,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 528,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-acorn32": {
+   "messages": 388,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 388,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-amiga": {
+   "messages": 1210,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1210,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "ctm-users": {
+   "messages": 697,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 697,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-testing": {
+   "messages": 1083,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1083,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-security": {
+   "messages": 1163,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1163,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "pkgsrc-wip-review": {
+   "messages": 1095,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1095,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-fr": {
+   "messages": 432,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 432,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-crypto": {
+   "messages": 708,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 708,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-dtrace": {
+   "messages": 870,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 870,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-tcltk": {
+   "messages": 502,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 502,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-test": {
+   "messages": 2000,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2000,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-pl": {
+   "messages": 550,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 550,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-mozilla": {
+   "messages": 932,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 932,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-mips": {
+   "messages": 1661,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1661,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-xfce": {
+   "messages": 939,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 939,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-bugbusters": {
+   "messages": 889,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 889,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-fortran": {
+   "messages": 925,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 925,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-git": {
+   "messages": 1228,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1228,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-numerics": {
+   "messages": 942,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 942,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-config": {
+   "messages": 625,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 625,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "regional-nyc": {
+   "messages": 1149,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1149,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-i18n": {
+   "messages": 1253,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1253,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-cluster": {
+   "messages": 1086,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1086,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-evbmips": {
+   "messages": 671,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 671,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-atm": {
+   "messages": 1172,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1172,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-uboot": {
+   "messages": 713,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 713,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-announce": {
+   "messages": 1223,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1223,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sh3": {
+   "messages": 750,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 750,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-macppc": {
+   "messages": 3099,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3099,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sparc64": {
+   "messages": 3325,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3325,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-go": {
+   "messages": 1108,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1108,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-users-jp": {
+   "messages": 925,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 925,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-i386": {
+   "messages": 1372,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1372,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-security-notifications": {
+   "messages": 765,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 765,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-amd64": {
+   "messages": 2818,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2818,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-powerpc": {
+   "messages": 1962,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1962,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-database": {
+   "messages": 1760,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1760,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "p4-projects": {
+   "messages": 321,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 321,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-jobs": {
+   "messages": 1922,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1922,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "pkgsrc-wip-discuss": {
+   "messages": 965,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 965,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-vax": {
+   "messages": 5331,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5331,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-eclipse": {
+   "messages": 2311,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2311,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-x11": {
+   "messages": 2053,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2053,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-ports": {
+   "messages": 1380,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1380,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-m68k": {
+   "messages": 1232,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1232,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-firewire": {
+   "messages": 1883,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1883,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-bluetooth": {
+   "messages": 2423,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2423,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-libh": {
+   "messages": 2457,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2457,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-qa": {
+   "messages": 2130,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2130,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-drivers": {
+   "messages": 2461,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2461,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-toolchain": {
+   "messages": 4604,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4604,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-standards": {
+   "messages": 2437,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2437,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-usb": {
+   "messages": 2881,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2881,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-wireless": {
+   "messages": 1880,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1880,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-embedded": {
+   "messages": 2927,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2927,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-mac68k": {
+   "messages": 1613,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1613,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "current-users": {
+   "messages": 2796,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2796,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-audit": {
+   "messages": 2575,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2575,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-small": {
+   "messages": 4614,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4614,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "aic7xxx": {
+   "messages": 4398,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4398,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-rc": {
+   "messages": 4280,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4280,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sgimips": {
+   "messages": 2013,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2013,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-jail": {
+   "messages": 4146,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4146,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-toolchain": {
+   "messages": 3188,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3188,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "netbsd-docs": {
+   "messages": 1974,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1974,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-install": {
+   "messages": 2347,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2347,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-performance": {
+   "messages": 4975,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4975,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-virtualization": {
+   "messages": 4169,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 4169,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-net": {
+   "messages": 9040,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 9040,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-arm": {
+   "messages": 8543,
+   "status": "completed",
+   "read_spec": 7543,
+   "read_judged": 7543,
+   "queued_spec": 0,
+   "read_effective": 8543,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 1000,
+     "hi": 8543,
+     "tags": [
+      "pa_b083"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "port-dreamcast": {
+   "messages": 3023,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3023,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-sparc": {
+   "messages": 3591,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3591,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-pkg": {
+   "messages": 3952,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3952,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-desktop": {
+   "messages": 9545,
+   "status": "in_progress",
+   "read_spec": 8545,
+   "read_judged": 8545,
+   "queued_spec": 0,
+   "read_effective": 8545,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 1000,
+     "hi": 9545,
+     "tags": [
+      "h5dk_b506_1",
+      "h5dk_b506_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-isdn": {
+   "messages": 6785,
+   "status": "completed",
+   "read_spec": 5285,
+   "read_judged": 5285,
+   "queued_spec": 0,
+   "read_effective": 6785,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 1500,
+     "hi": 6785,
+     "tags": [
+      "fis_b077",
+      "fis_b078",
+      "fis_b079"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-enlightenment": {
+   "messages": 1606,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 1606,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-hubs": {
+   "messages": 6212,
+   "status": "completed",
+   "read_spec": 5212,
+   "read_judged": 5212,
+   "queued_spec": 0,
+   "read_effective": 6212,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 1000,
+     "hi": 6212,
+     "tags": [
+      "fh_b081"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-openoffice": {
+   "messages": 5595,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5595,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-ia64": {
+   "messages": 5279,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5279,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-www": {
+   "messages": 5790,
+   "status": "completed",
+   "read_spec": 4790,
+   "read_judged": 4790,
+   "queued_spec": 0,
+   "read_effective": 5790,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 1000,
+     "hi": 5790,
+     "tags": [
+      "fw_b076",
+      "fw_b080"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-announce": {
+   "messages": 2854,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2854,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-geom": {
+   "messages": 7664,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 7664,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-cobalt": {
+   "messages": 3651,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3651,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-mips": {
+   "messages": 5464,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5464,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "tech-userlevel": {
+   "messages": 14566,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 14566,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-pf": {
+   "messages": 9580,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 9580,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-snapshots": {
+   "messages": 975,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 975,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-office": {
+   "messages": 6314,
+   "status": "completed",
+   "read_spec": 5814,
+   "read_judged": 5814,
+   "queued_spec": 0,
+   "read_effective": 6314,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 500,
+     "hi": 6314,
+     "tags": [
+      "fo_b082"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-ipfw": {
+   "messages": 9388,
+   "status": "completed",
+   "read_spec": 9388,
+   "read_judged": 9388,
+   "queued_spec": 0,
+   "read_effective": 9388,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 9388,
+     "tags": [
+      "fi_b066",
+      "h5ip_b503_1",
+      "h5ip_b503_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "cu": {
+   "messages": 10064,
+   "status": "completed",
+   "read_spec": 10064,
+   "read_judged": 10064,
+   "queued_spec": 0,
+   "read_effective": 10064,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 10064,
+     "tags": [
+      "cu_b067",
+      "h5cu_b504_1",
+      "h5cu_b504_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "other-bsd_mail": {
+   "messages": 5315,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 5315,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "port-alpha": {
+   "messages": 6922,
+   "status": "completed",
+   "read_spec": 6922,
+   "read_judged": 6922,
+   "queued_spec": 0,
+   "read_effective": 6922,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 6922,
+     "tags": [
+      "fpa_b065",
+      "fpa_b127"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "tech-pkg": {
+   "messages": 13931,
+   "status": "completed",
+   "read_spec": 13931,
+   "read_judged": 13931,
+   "queued_spec": 0,
+   "read_effective": 13931,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 13931,
+     "tags": [
+      "h5tp_b528_0",
+      "h5tp_b528_1",
+      "h5tp_b528_2",
+      "h5tp_b528_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-smp": {
+   "messages": 10013,
+   "status": "completed",
+   "read_spec": 10013,
+   "read_judged": 10013,
+   "queued_spec": 0,
+   "read_effective": 10013,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 10013,
+     "tags": [
+      "h5smp_b507_1",
+      "h5smp_b507_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-x11": {
+   "messages": 8152,
+   "status": "completed",
+   "read_spec": 8152,
+   "read_judged": 8152,
+   "queued_spec": 0,
+   "read_effective": 8152,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 8152,
+     "tags": [
+      "fx_b064",
+      "h5x_b502_1",
+      "h5x_b502_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-acpi": {
+   "messages": 10203,
+   "status": "completed",
+   "read_spec": 10203,
+   "read_judged": 10203,
+   "queued_spec": 0,
+   "read_effective": 10203,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 10203,
+     "tags": [
+      "fac_b068",
+      "h5acp_b505_1",
+      "h5acp_b505_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-sparc64": {
+   "messages": 12560,
+   "status": "completed",
+   "read_spec": 12560,
+   "read_judged": 12560,
+   "queued_spec": 0,
+   "read_effective": 12560,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 12560,
+     "tags": [
+      "fsp_b070",
+      "h5sp_b509_1",
+      "h5sp_b509_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-apache": {
+   "messages": 6833,
+   "status": "completed",
+   "read_spec": 6333,
+   "read_judged": 6333,
+   "queued_spec": 0,
+   "read_effective": 6833,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 500,
+     "hi": 6833,
+     "tags": [
+      "fap_b135"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-mono": {
+   "messages": 3613,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 3613,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-newbies": {
+   "messages": 15391,
+   "status": "completed",
+   "read_spec": 15391,
+   "read_judged": 15391,
+   "queued_spec": 0,
+   "read_effective": 15391,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 15391,
+     "tags": [
+      "fnb_b128"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-ppc": {
+   "messages": 13291,
+   "status": "completed",
+   "read_spec": 13291,
+   "read_judged": 13291,
+   "queued_spec": 0,
+   "read_effective": 13291,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 13291,
+     "tags": [
+      "fppc_b071",
+      "h5ppc_b510_1",
+      "h5ppc_b510_2",
+      "h5ppc_b510_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-advocacy": {
+   "messages": 15097,
+   "status": "completed",
+   "read_spec": 15097,
+   "read_judged": 15097,
+   "queued_spec": 0,
+   "read_effective": 15097,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 15097,
+     "tags": [
+      "fadv_b074",
+      "h5adv_b513_1",
+      "h5adv_b513_2",
+      "h5adv_b513_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "netbsd-syzbot": {
+   "messages": 2002,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 2002,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-alpha": {
+   "messages": 16943,
+   "status": "completed",
+   "read_spec": 16943,
+   "read_judged": 16943,
+   "queued_spec": 0,
+   "read_effective": 16943,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 16943,
+     "tags": [
+      "h5al_b511_1",
+      "h5alp_b514_1",
+      "h5alp_b514_2",
+      "h5alp_b514_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-amd64": {
+   "messages": 19709,
+   "status": "completed",
+   "read_spec": 19709,
+   "read_judged": 19709,
+   "queued_spec": 0,
+   "read_effective": 19709,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 19709,
+     "tags": [
+      "h5a64_b515_1",
+      "h5a64_b515_2",
+      "h5a64_b515_3",
+      "h5a64_b515_4"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-perl": {
+   "messages": 14437,
+   "status": "completed",
+   "read_spec": 14437,
+   "read_judged": 14437,
+   "queued_spec": 0,
+   "read_effective": 14437,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 14437,
+     "tags": [
+      "fperl_b072",
+      "h5pl_b511_1",
+      "h5pl_b511_2",
+      "h5pl_b511_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-i386": {
+   "messages": 12231,
+   "status": "completed",
+   "read_spec": 12231,
+   "read_judged": 12231,
+   "queued_spec": 0,
+   "read_effective": 12231,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 12231,
+     "tags": [
+      "f386_b069",
+      "h5i3_b508_1",
+      "h5i3_b508_2"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "pkgsrc-users": {
+   "messages": 32475,
+   "status": "completed",
+   "read_spec": 32475,
+   "read_judged": 32475,
+   "queued_spec": 0,
+   "read_effective": 32475,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 32475,
+     "tags": [
+      "h5pu_b522_1",
+      "h5pu_b522_2",
+      "h5pu_b522_3",
+      "h5pu_b522_4",
+      "h5pu_b522_5",
+      "h5pu_b522_6"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-scsi": {
+   "messages": 19851,
+   "status": "completed",
+   "read_spec": 19851,
+   "read_judged": 19851,
+   "queued_spec": 0,
+   "read_effective": 19851,
+   "status_source": "judged-complete-20261004",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 19851,
+     "tags": [
+      "h5sc_b516_1",
+      "h5sc_b516_2",
+      "h5sc_b516_3",
+      "h5sc_b516_4"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-elastic": {
+   "messages": 5315,
+   "status": "completed",
+   "read_spec": 5315,
+   "read_judged": 5315,
+   "queued_spec": 0,
+   "read_effective": 5315,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 5315,
+     "tags": [
+      "fe_b075",
+      "h5e_b501"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-python": {
+   "messages": 22701,
+   "status": "completed",
+   "read_spec": 22701,
+   "read_judged": 22701,
+   "queued_spec": 0,
+   "read_effective": 22701,
+   "status_source": "judged-complete-20261004",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 22701,
+     "tags": [
+      "h5py_b519_1",
+      "h5py_b519_2",
+      "h5py_b519_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-java": {
+   "messages": 21280,
+   "status": "in_progress",
+   "read_spec": 6000,
+   "read_judged": 6000,
+   "queued_spec": 0,
+   "read_effective": 6000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 6000,
+     "tags": [
+      "h5jv_b517_1"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-hardware": {
+   "messages": 22679,
+   "status": "completed",
+   "read_spec": 22679,
+   "read_judged": 22679,
+   "queued_spec": 0,
+   "read_effective": 22679,
+   "status_source": "judged-complete-20261004",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 22679,
+     "tags": [
+      "h5hw_b518_1",
+      "h5hw_b518_2",
+      "h5hw_b518_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-mobile": {
+   "messages": 33435,
+   "status": "pending",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 0,
+   "status_source": "spec-only",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-security": {
+   "messages": 37939,
+   "status": "completed",
+   "read_spec": 37939,
+   "read_judged": 37939,
+   "queued_spec": 0,
+   "read_effective": 37939,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 37939,
+     "tags": [
+      "h5sec_b526_1",
+      "h5sec_b526_2",
+      "h5sec_b526_3",
+      "h5sec_b526_4",
+      "h5sec_b526_5",
+      "h5sec_b526_6",
+      "h5sec_b526_7"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-isp": {
+   "messages": 31347,
+   "status": "completed",
+   "read_spec": 31347,
+   "read_judged": 31347,
+   "queued_spec": 0,
+   "read_effective": 31347,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 31347,
+     "tags": [
+      "fisp_b129",
+      "fisp_b130",
+      "fisp_b131",
+      "fisp_b132",
+      "fisp_b133",
+      "fisp_b134"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-emulation": {
+   "messages": 25791,
+   "status": "completed",
+   "read_spec": 25791,
+   "read_judged": 25791,
+   "queued_spec": 0,
+   "read_effective": 25791,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 25791,
+     "tags": [
+      "h5em_b520_1",
+      "h5em_b520_2",
+      "h5em_b520_3"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-chromium": {
+   "messages": 7776,
+   "status": "completed",
+   "read_spec": 7776,
+   "read_judged": 7776,
+   "queued_spec": 0,
+   "read_effective": 7776,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 7776,
+     "tags": [
+      "fc_b063",
+      "fc_b136"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "pkgsrc-bugs": {
+   "messages": 58998,
+   "status": "pending",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 0,
+   "status_source": "spec-only",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-arm": {
+   "messages": 30113,
+   "status": "completed",
+   "read_spec": 30113,
+   "read_judged": 30113,
+   "queued_spec": 0,
+   "read_effective": 30113,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 30113,
+     "tags": [
+      "h5arm_b521_1",
+      "h5arm_b521_2",
+      "h5arm_b521_3",
+      "h5arm_b521_4",
+      "h5arm_b521_5",
+      "h5arm_b521_6"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-arch": {
+   "messages": 35166,
+   "status": "pending",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 0,
+   "status_source": "spec-only",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-fs": {
+   "messages": 38710,
+   "status": "completed",
+   "read_spec": 38710,
+   "read_judged": 38710,
+   "queued_spec": 0,
+   "read_effective": 38710,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 38710,
+     "tags": [
+      "h5fs_b527_1",
+      "h5fs_b527_2",
+      "h5fs_b527_3",
+      "h5fs_b527_4",
+      "h5fs_b527_5",
+      "h5fs_b527_6",
+      "h5fs_b527_7"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "tech-kern": {
+   "messages": 81326,
+   "status": "completed",
+   "read_spec": 81326,
+   "read_judged": 81326,
+   "queued_spec": 0,
+   "read_effective": 81326,
+   "status_source": "judged-complete-20261003",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 81326,
+     "tags": [
+      "tk_b138",
+      "tk_b139",
+      "tk_b140",
+      "tk_b141",
+      "tk_b142",
+      "tk_b143",
+      "tk_b144",
+      "tk_b145",
+      "tk_b146",
+      "tk_b147",
+      "tk_b148",
+      "tk_b149",
+      "tk_b150",
+      "tk_b151",
+      "tk_b152",
+      "tk_b153",
+      "tk_b154",
+      "tk_b155"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "dragonfly_mail": {
+   "messages": 72062,
+   "status": "completed",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 72062,
+   "status_source": "catalog-completed",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-gecko": {
+   "messages": 14991,
+   "status": "completed",
+   "read_spec": 14991,
+   "read_judged": 14991,
+   "queued_spec": 0,
+   "read_effective": 14991,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 14991,
+     "tags": [
+      "fgecko_b073",
+      "h5gk_b512_1",
+      "h5gk_b512_2",
+      "h5gk_b512_3",
+      "h5gk_b512_4",
+      "h5gk_b512_5",
+      "h5gk_b512_6",
+      "h5gk_b512_7"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-chat": {
+   "messages": 43869,
+   "status": "completed",
+   "read_spec": 43869,
+   "read_judged": 43869,
+   "queued_spec": 0,
+   "read_effective": 43869,
+   "status_source": "catalog-completed",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 43869,
+     "tags": [
+      "fch_b137",
+      "fch_b138",
+      "fch_b139",
+      "fch_b140",
+      "fch_b141",
+      "fch_b142",
+      "fch_b143",
+      "fch_b144",
+      "fch_b145",
+      "fch_b146",
+      "fch_b147",
+      "fch_b148",
+      "fch_b149",
+      "fch_b150"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-multimedia": {
+   "messages": 36779,
+   "status": "pending",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 0,
+   "status_source": "spec-only",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-stable": {
+   "messages": 72164,
+   "status": "in_progress",
+   "read_spec": 32000,
+   "read_judged": 32000,
+   "queued_spec": 0,
+   "read_effective": 32000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 32000,
+     "tags": [
+      "fstb_b001",
+      "fstb_b002",
+      "fstb_b003",
+      "fstb_b004",
+      "fstb_b005",
+      "fstb_b006",
+      "fstb_b007",
+      "fstb_b008",
+      "fstb_b009",
+      "fstb_b010",
+      "fstb_b011",
+      "fstb_b012",
+      "fstb_b013",
+      "fstb_b014",
+      "fstb_b015",
+      "fstb_b016"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "netbsd-bugs": {
+   "messages": 98119,
+   "status": "pending",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 0,
+   "status_source": "spec-only",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-net": {
+   "messages": 73645,
+   "status": "completed",
+   "read_spec": 73645,
+   "read_judged": 73645,
+   "queued_spec": 0,
+   "read_effective": 73645,
+   "status_source": "judged-complete-20261005",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 73645,
+     "tags": [
+      "fn_b156",
+      "fn_b157",
+      "fn_b158",
+      "fn_b159",
+      "fn_b160",
+      "fn_b161",
+      "fn_b162",
+      "fn_b163",
+      "fn_b164",
+      "fn_b165",
+      "fn_b166",
+      "fn_b167",
+      "fn_b168",
+      "fn_b169",
+      "fn_b170",
+      "fn_b171",
+      "fn_b172",
+      "fn_b173",
+      "fn_b174",
+      "fn_b175",
+      "fn_b176",
+      "fn_b177",
+      "fn_b178",
+      "fn_b179"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": [],
+   "updated": "2026-10-05T11:32"
+  },
+  "freebsd-doc": {
+   "messages": 72663,
+   "status": "in_progress",
+   "read_spec": 32000,
+   "read_judged": 32000,
+   "queued_spec": 0,
+   "read_effective": 32000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 32000,
+     "tags": [
+      "fdoc_b001",
+      "fdoc_b002",
+      "fdoc_b003",
+      "fdoc_b004",
+      "fdoc_b005",
+      "fdoc_b006",
+      "fdoc_b007",
+      "fdoc_b008",
+      "fdoc_b009",
+      "fdoc_b010",
+      "fdoc_b011",
+      "fdoc_b012",
+      "fdoc_b013",
+      "fdoc_b014",
+      "fdoc_b015",
+      "fdoc_b016"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "openbsd_mail": {
+   "messages": 154119,
+   "status": "in_progress",
+   "read_spec": 10000,
+   "read_judged": 10000,
+   "queued_spec": 0,
+   "read_effective": 10000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 79000,
+     "hi": 81000,
+     "tags": [
+      "ob_b001"
+     ],
+     "source": "spec"
+    },
+    {
+     "lo": 81000,
+     "hi": 83000,
+     "tags": [
+      "ob_b002"
+     ],
+     "source": "spec"
+    },
+    {
+     "lo": 83000,
+     "hi": 85000,
+     "tags": [
+      "ob_b003"
+     ],
+     "source": "spec"
+    },
+    {
+     "lo": 85000,
+     "hi": 87000,
+     "tags": [
+      "ob_b004"
+     ],
+     "source": "spec"
+    },
+    {
+     "lo": 87000,
+     "hi": 89000,
+     "tags": [
+      "ob_b005"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": [],
+   "updated": "2026-10-06T02:13"
+  },
+  "freebsd-ports": {
+   "messages": 191637,
+   "status": "in_progress",
+   "read_spec": 131999,
+   "read_judged": 131999,
+   "queued_spec": 0,
+   "read_effective": 131999,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 131999,
+     "tags": [
+      "fpo_b151",
+      "fpo_b152",
+      "fpo_b153",
+      "fpo_b154",
+      "fpo_b155",
+      "fpo_b156",
+      "fpo_b157",
+      "fpo_b158",
+      "fpo_b159",
+      "fpo_b160",
+      "fpo_b161",
+      "fpo_b162",
+      "fpo_b163",
+      "fpo_b164",
+      "fpo_b165",
+      "fpo_b166",
+      "fpo_b167",
+      "fpo_b168",
+      "fpo_b169",
+      "fpo_b170",
+      "fpo_b171",
+      "fpo_b172",
+      "fpo_b173",
+      "fpo_b174",
+      "fpo_b175",
+      "fpo_b176",
+      "fpo_b177",
+      "fpo_b178",
+      "fpo_b179",
+      "fpo_b180",
+      "fpo_b181",
+      "fpo_b182",
+      "fpo_b183",
+      "fpo_b184",
+      "fpo_b185",
+      "fpo_b186",
+      "fpo_b187",
+      "fpo_b188",
+      "fpo_b189",
+      "fpo_b190",
+      "fpo_b191",
+      "fpo_b192",
+      "fpo_b193",
+      "fpo_b194"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-gnome": {
+   "messages": 66573,
+   "status": "pending",
+   "read_spec": 0,
+   "read_judged": 0,
+   "queued_spec": 0,
+   "read_effective": 0,
+   "status_source": "spec-only",
+   "records": [],
+   "queued_records": []
+  },
+  "freebsd-hackers": {
+   "messages": 201463,
+   "status": "in_progress",
+   "read_spec": 132000,
+   "read_judged": 132000,
+   "queued_spec": 0,
+   "read_effective": 132000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 132000,
+     "tags": [
+      "fhk_b001",
+      "fhk_b002",
+      "fhk_b003",
+      "fhk_b004",
+      "fhk_b005",
+      "fhk_b006",
+      "fhk_b007",
+      "fhk_b008",
+      "fhk_b009",
+      "fhk_b010",
+      "fhk_b011",
+      "fhk_b012",
+      "fhk_b013",
+      "fhk_b014",
+      "fhk_b015",
+      "fhk_b016",
+      "fhk_b017",
+      "fhk_b018",
+      "fhk_b019",
+      "fhk_b020",
+      "fhk_b021",
+      "fhk_b022",
+      "fhk_b023",
+      "fhk_b024",
+      "fhk_b025",
+      "fhk_b026",
+      "fhk_b027",
+      "fhk_b028",
+      "fhk_b029",
+      "fhk_b030",
+      "fhk_b031",
+      "fhk_b032",
+      "fhk_b033",
+      "fhk_b034",
+      "fhk_b035",
+      "fhk_b036",
+      "fhk_b037",
+      "fhk_b038",
+      "fhk_b039",
+      "fhk_b040",
+      "fhk_b041",
+      "fhk_b042",
+      "fhk_b043",
+      "fhk_b044",
+      "fhk_b045",
+      "fhk_b046",
+      "fhk_b047",
+      "fhk_b048",
+      "fhk_b049",
+      "fhk_b050",
+      "fhk_b051",
+      "fhk_b052",
+      "fhk_b053",
+      "fhk_b054",
+      "fhk_b055",
+      "fhk_b056",
+      "fhk_b057",
+      "fhk_b058",
+      "fhk_b059",
+      "fhk_b060",
+      "fhk_b061",
+      "fhk_b062",
+      "fhk_b063",
+      "fhk_b064",
+      "fhk_b065",
+      "fhk_b066"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-bugs": {
+   "messages": 192683,
+   "status": "in_progress",
+   "read_spec": 153970,
+   "read_judged": 153970,
+   "queued_spec": 0,
+   "read_effective": 153970,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 153970,
+     "tags": [
+      "fbug_b171",
+      "fbug_b172",
+      "fbug_b173",
+      "fbug_b174",
+      "fbug_b174e",
+      "fbug_b175",
+      "fbug_b176",
+      "fbug_b177",
+      "fbug_b178",
+      "fbug_b179",
+      "fbug_b180",
+      "fbug_b181",
+      "fbug_b182",
+      "fbug_b183",
+      "fbug_b184",
+      "fbug_b185",
+      "fbug_b186",
+      "fbug_b187",
+      "fbug_b188",
+      "fbug_b189",
+      "fbug_b190",
+      "fbug_b191",
+      "fbug_b192",
+      "fbug_b193"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": [],
+   "updated": "2026-10-05T11:32"
+  },
+  "freebsd-current": {
+   "messages": 205027,
+   "status": "in_progress",
+   "read_spec": 32000,
+   "read_judged": 32000,
+   "queued_spec": 0,
+   "read_effective": 32000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 32000,
+     "tags": [
+      "fcu_b001",
+      "fcu_b002",
+      "fcu_b003",
+      "fcu_b004",
+      "fcu_b005",
+      "fcu_b006",
+      "fcu_b007",
+      "fcu_b008",
+      "fcu_b009",
+      "fcu_b010",
+      "fcu_b011",
+      "fcu_b012",
+      "fcu_b013",
+      "fcu_b014",
+      "fcu_b015",
+      "fcu_b016"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  },
+  "freebsd-questions": {
+   "messages": 472235,
+   "status": "in_progress",
+   "read_spec": 176000,
+   "read_judged": 176000,
+   "queued_spec": 0,
+   "read_effective": 176000,
+   "status_source": "spec-only",
+   "records": [
+    {
+     "lo": 0,
+     "hi": 176000,
+     "tags": [
+      "fq_b001",
+      "fq_b002",
+      "fq_b003",
+      "fq_b004",
+      "fq_b005",
+      "fq_b006",
+      "fq_b007",
+      "fq_b008",
+      "fq_b009",
+      "fq_b010",
+      "fq_b011",
+      "fq_b012",
+      "fq_b013",
+      "fq_b014",
+      "fq_b015",
+      "fq_b016",
+      "fq_b017",
+      "fq_b018",
+      "fq_b019",
+      "fq_b020",
+      "fq_b021",
+      "fq_b022",
+      "fq_b023",
+      "fq_b024",
+      "fq_b025",
+      "fq_b026",
+      "fq_b027",
+      "fq_b028",
+      "fq_b029",
+      "fq_b030",
+      "fq_b031",
+      "fq_b032",
+      "fq_b033",
+      "fq_b034",
+      "fq_b035",
+      "fq_b036",
+      "fq_b037",
+      "fq_b038",
+      "fq_b039",
+      "fq_b040",
+      "fq_b041",
+      "fq_b042",
+      "fq_b043",
+      "fq_b044",
+      "fq_b045",
+      "fq_b046",
+      "fq_b047",
+      "fq_b048",
+      "fq_b049",
+      "fq_b050",
+      "fq_b051",
+      "fq_b052",
+      "fq_b053",
+      "fq_b054",
+      "fq_b055",
+      "fq_b056",
+      "fq_b057",
+      "fq_b058",
+      "fq_b059",
+      "fq_b060",
+      "fq_b061",
+      "fq_b062",
+      "fq_b063",
+      "fq_b064",
+      "fq_b065",
+      "fq_b066",
+      "fq_b067",
+      "fq_b068",
+      "fq_b069",
+      "fq_b070",
+      "fq_b071",
+      "fq_b072",
+      "fq_b073",
+      "fq_b074",
+      "fq_b075",
+      "fq_b076",
+      "fq_b077",
+      "fq_b078",
+      "fq_b079",
+      "fq_b080",
+      "fq_b081",
+      "fq_b082",
+      "fq_b083",
+      "fq_b084",
+      "fq_b085",
+      "fq_b086",
+      "fq_b087",
+      "fq_b088"
+     ],
+     "source": "spec"
+    }
+   ],
+   "queued_records": []
+  }
+ }
+}
