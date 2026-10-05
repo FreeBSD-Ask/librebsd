@@ -32,7 +32,7 @@ import time
 
 import duckdb
 
-sys.stdout.reconfigure(encoding="utf-8")
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 HERE = os.path.dirname(os.path.abspath(__file__))
 RL = os.path.join(HERE, "review_logs")
 HC = os.path.join(os.path.abspath(os.path.join(HERE, "..", "..")),
@@ -46,7 +46,7 @@ NOTE = ("候选层摘要误植（内容取自引用块内被引者），claim_te
         "（fhk_b065_mount_narr.tsv，2026-10-05 主会话逐封回源裁定）")
 
 
-def connect(db, ro, tries=96, sleep=15):
+def connect(db, ro, tries=384, sleep=15):
     """他会话持续持锁是常态：只在 connect 阶段退避重试，连上后一次性事务写完。"""
     last = None
     for i in range(1, tries + 1):
