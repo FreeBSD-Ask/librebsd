@@ -96,7 +96,8 @@
 - **有引用＝主代理串行原地改写**：只改内容与 `[起-止]`、不增删条目、`[订正]` 留痕。
 - **0 引用＝当批记录在案**：本战役为新增未引用期，不新建条目；其「增补入纲」属独立 campaign。
 - **坑 ⑦（10-06 主理人订正）**：曾把早期批次「派发 0 既有条目」的结论当后续所有批次的免跑依据，跳过扫描动作——条件性跳过（若 0 则记录）被误读成无条件跳过。**「0」只能是当批扫描的输出。**
-- **已知素材缺口（2026-10-06 全量扫描）**：大纲共 **1,459 处 `YouTube EP<vid>` 引用／46 个 vid**，**全部不在本战役 survey 且 youtube.duckdb 无任何 transcript**（`PODCAST_REVIEW` 语义复核块正等待转写素材改写）——完整链路＝下载音频→转录→复核→入库→**原地改写该批引用条目**；是否扩入本战役范围待主理人裁定（挂账 `senseaudio_out/tb2/_outline_yt_cites.json` 索引在案）。
+- **已知素材缺口→已扩入（2026-10-06 全量扫描＋主理人当日批准执行）**：大纲共 **1,459 处 `YouTube EP<vid>` 引用／46 个 vid**，全部不在原 survey 且无 transcript——**已批准扩入本战役**：46 期音频已全量下载（cookies 管线＋ffmpeg 探针，**46/46 全过 fail=0**，合计 3.21 GB；下载格式教训见坑⑧），survey 46 行已填 `audio_files/upload_source`，随 30 路重启并入转录池；后续＝转录→复核→入库→**按引用索引逐期原地改写 PODCAST_REVIEW 块**（主代理串行）。索引在案 `senseaudio_out/tb2/_outline_yt_cites.json`。
+- **坑 ⑧（下载格式，10-06 主理人订正）**：沿用精选批的 `-f b[height<=360]`（≤360p 视频流＋音轨）传输量是纯音频的 4–6 倍（FreeBSD Fridays 系列单件 200–400MB vs m4a ~15–60MB）；**web_safari（HLS-only）无纯音频格式**（`ba` 空匹配→静默回退 360p），须**默认 client**（无 `--extractor-args` 限定）才有 DASH 纯音频 itag 140（m4a 129k）／251（opus 115k）；定案 `-f "140/251/ba/b[height<=360][protocol~=m3u8]/b[height<=360]/b"`（`46_outline_cited_audio.py`）。杀进程改格式重启时，旧格式 .part 成为孤儿件须清理（ZGmuZz5ETHs 405MB 实例）。
 
 ## 八、对账门禁（05_audit.py，全绿才收口）
 
