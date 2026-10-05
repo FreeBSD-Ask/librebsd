@@ -61,8 +61,9 @@
 - 复核波14＝17 期（3 路 6+6+5）：**17/17 全 pass**；复核波15＝34 期（6 路分段 4+1+2 重派规避并发上限）：**34/34 全 pass**。⚠️ 并发上限坑两度出现（5 路并行即可能触发 user concurrency limit exceeded），处置＝降路数重派（已两次实证）。
 - 复核波16＝18 期（3 路×6 期）：**18/18 全 pass**。
 - 复核波17＝4 期（1 路）：**4/4 全 pass**。
-- 复核波18＝9 期（2 路 6+3）：**9/9 全 pass**。**挂账累计 7**：BOPee／pynpY7Isbxs／luPViknmoXc／yzv9lcjxhAg／e5g9blIkp0g／nyNCSM4vGF4／X2rx9H5Aw20（fail 裁决挡门禁，下批 15_parallel 启动时自动重转重审）。⚠️ 新坑：并行子代理派发撞账号并发上限（user concurrency limit exceeded），处置＝降低并行路数重派。
-- 入库累计 **+495 transcripts**（…＋波18 9，每批对账 segments==utterances 逐件一致）；senseaudio 行 **540 全 `'reviewed'`**；删已入库音频累计 495 件 ~9.1GB（manifest×21）。
+- 复核波18＝9 期（2 路 6+3）：**9/9 全 pass**。⚠️ 新坑：并行子代理派发撞账号并发上限（user concurrency limit exceeded），处置＝降低并行路数重派。
+- 复核波19＝48 期（8 路×6 期派发，3 路撞并发上限降级重派）：**47 pass／1 fail**（`Qc0QRdxVv3g` 空转录 full_text=0 字符→**挂账累计 8**：前 7 项＋Qc0QRdxVv3g；fail 裁决挡门禁，下批 15_parallel 启动时自动重转重审）。⚠️ 新坑：`-qd-Xjkdb2k`（vid 带前导横杠）裁决文件 key 被写成 `youtube:qd-Xjkdb2k`（丢横杠）→门禁按 key 匹配漏入库；修正 key 后补入库对账一致——**裁决文件 key 必须逐字符含 vid 前导连字符**。
+- 入库累计 **+542 transcripts**（批1 53＋批3 66＋批4 48＋批5 48＋批6 47＋批7 47＋批8 15＋批9 11＋批10 16＋批11 4＋批12 6＋批13 9＋批14 12＋批15 30＋批16 17＋批17 4＋批18 9＋波19 47，每批对账 segments==utterances 逐件一致；DB↔跟踪清单差集审计＝零真实缺口，587＝45 旧战役＋542 本战役）；senseaudio 行 **587 全 `'reviewed'`**；删已入库音频累计 ~10.3GB（manifest×24）。
 - 入大纲：119 期 pass 件派发＝**全部 0 既有条目**（本战役为新增未引用期；入纲=独立增补 campaign）。
 - 清理：删已入库期音频 119 件（manifest×2 留痕）；`_pcm_gc.py` 多轮回收（含「无JSON且mtime>2h」规则，主理人已批）。
 - `05_audit.py` 门禁 5 FAIL 全为已知 artifacts（复核门设计致 DB⊂JSON、redo 重复台账 3、BOPee 挂账件空正文），非新问题。
