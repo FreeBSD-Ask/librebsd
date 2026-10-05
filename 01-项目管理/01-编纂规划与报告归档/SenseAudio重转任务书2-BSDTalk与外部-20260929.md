@@ -68,7 +68,7 @@
 - 复核波21＝48 期（8 路派发 5 组撞限额，3+2 降级重派）：**48/48 全 pass**。
 - 复核波22＝48 期（4 组子代理＋4 组主代理内联复核 fallback）：**48/48 全 pass**。⚠️ 新坑两则：① 子代理派发**配额耗尽**（exceed quota limit，今日已派 ~220 子代理）→ 主代理内联机械复核 fallback（脚本算全 QC＋首尾通读，已实证）；② **子代理偶发评审了未派发期**（H 组回报是 auWNprSPRG4 等 ≠ 派发的 5cOyIJt2cAw 等）——磁盘验证按「派发清单逐个有裁决件」核对，缺失即补审，误审件自然进下轮。
 - 复核波19＝48 期（8 路×6 期派发，3 路撞并发上限降级重派）：**47 pass／1 fail**（`Qc0QRdxVv3g` 空转录 full_text=0 字符→**挂账累计 8**：前 7 项＋Qc0QRdxVv3g；fail 裁决挡门禁，下批 15_parallel 启动时自动重转重审）。⚠️ 新坑：`-qd-Xjkdb2k`（vid 带前导横杠）裁决文件 key 被写成 `youtube:qd-Xjkdb2k`（丢横杠）→门禁按 key 匹配漏入库；修正 key 后补入库对账一致——**裁决文件 key 必须逐字符含 vid 前导连字符**。
-- 入库累计 **+734 transcripts**（…＋波21 48＋波22 48，每批对账 segments==utterances 逐件一致；DB↔跟踪清单差集审计＝零真实缺口，779＝45 旧战役＋734 本战役）；senseaudio 行 **779 全 `'reviewed'`**；删已入库音频累计 ~14GB（manifest×36）。
+- 入库累计 **+686 transcripts**（53＋66＋48＋48＋47＋47＋15＋11＋16＋4＋6＋9＋12＋30＋17＋4＋9＋47＋48＋48＋48…，每批对账 segments==utterances 逐件一致；DB↔跟踪清单差集审计＝零真实缺口，731＝45 旧战役＋686 本战役）；senseaudio 行 **731 全 `'reviewed'`**；删已入库音频累计 ~14GB（manifest×36）。
 - 入大纲：119 期 pass 件派发＝**全部 0 既有条目**（本战役为新增未引用期；入纲=独立增补 campaign）。
 - 清理：删已入库期音频 119 件（manifest×2 留痕）；`_pcm_gc.py` 多轮回收（含「无JSON且mtime>2h」规则，主理人已批）。
 - `05_audit.py` 门禁 5 FAIL 全为已知 artifacts（复核门设计致 DB⊂JSON、redo 重复台账 3、BOPee 挂账件空正文），非新问题。
