@@ -8,7 +8,7 @@
 - **库**：只写 `03-原始史料库/14-播客史料/youtube.duckdb`（transcripts／segments／source_info）。
 - **音频**：`14-播客史料/audio/` 的 `youtube_<vid>.mp3` 族。survey（`01_survey.py` 三步链重建＝01→13 候选补丁→15 curated 补丁）统计 **4,255 期有在盘音频**＝DB 匹配 13＋curated 4,191＋候选 44（去重后口径；curated 清单 `_tmp/yt_channels/curated_final.txt` 4,197）。
 - **去重**：转录/入库前按 vid 去重；DB 已有 pass 级 transcripts 的期跳过；同 vid 多 JSON 取最新。
-- **当前进度（2026-10-05 16:30 快照，随批更新见 §五）**：转录 **902／4,255**、复核 **847 份**（838 pass／9 fail 挂账）、入库 **senseaudio 行 883 全 `'reviewed'`**（DB transcripts 2,058／segments 1,581,571）、费用 ~971 元、剩余 **3,353 期**（ETA 1.7–2.3 天@30 路）。
+- **当前进度（2026-10-05 18:20 快照，随批更新见 §五）**：转录 **954／4,255**、复核 **915 份**（905 pass／10 fail 挂账）、入库 **senseaudio 行 950 全 `'reviewed'`**（youtube.duckdb transcripts 950／segments 103,279，含 45 期被删 json 历史期 segments 已知 artifact）、费用 ~1,019 元、剩余 **~3,301 期**（ETA 1.7–2.3 天@30 路）。
 
 ## 二、模型与 API（契约书 `_tmp/senseaudio_out/API_CONTRACT.md`）
 
@@ -68,6 +68,13 @@
    - **门禁**：`05_audit.py`（已知 artifacts 白名单：复核门设计 DB⊂JSON、redo 重复台账、挂账件空正文）；
    - **记档**：本任务书 §一/§五 进度数字＋交接书 §十三＋git 提交（index.lock 竞争重试或延后；陈旧锁先核锁龄）。
 7. **触发机制（无定期任务）**：任何会话收到「继续」→ 先**实况复核**（worker 数／ledger 尾项／json 计数／未复核积压／RAM／`_KEY_EXHAUSTED`）→ 自第 4 步续跑；worker=0 或积压>0 均按本表处置；两者皆正常则等积压或小批推进。
+
+**进度批次记录（2026-10-05，跨会话续接位）**：
+- **波36 复核**：派 16 组 92 期；**10 组完成、59 期 pass 全落盘验证**（g1–g10；g3 半途重跑一次；防注入物理校验逐期过、无注入）；**1 fail＝Rsk2YZPOpG0**（44.5min 音频空输出 usage=0，已移 failbak，挂账累计 10）。
+- **入库本批 +67**（dry→实跑 pass 门禁；segments +5,584，逐件对账全齐；置位 reviewed）→ **DB 950/950 全 reviewed**；本批**无重复 transcript**（dup=0 实证）。
+- **清理**：删已入库期音频 **67 期 1.39 GB**（manifest `audio_deleted_w36b.jsonl`）；`_pcm_gc --apply` 回收 done 152（5.34 GB）＋stale 353（18.04 GB），in-flight 148 保留、in-use 273 跳过。
+- **审计 05_audit**：仅 3 项**文档化 artifact** 残留（台账 redo 重复键 4、历史被删 json 期 DB segments 残留 45 期），非回归。
+- **待续**：复核积压 ~40 期（g11/g12＋w37 四组）；**子代理侧 18 时起瞬态失败**（「计费账户已被冻结」多路→单路试跑成功→再「Model request failed」）——重试或内联 fallback；转录 30 路滚动（最新 18:03:52 起持续推进）。
 
 ## 六、入库规则（03_ingest.py）
 
