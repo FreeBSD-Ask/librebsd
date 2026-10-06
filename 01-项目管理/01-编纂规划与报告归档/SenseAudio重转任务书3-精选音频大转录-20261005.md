@@ -99,6 +99,7 @@
 - **坑 ⑦（10-06 主理人订正）**：曾把早期批次「派发 0 既有条目」的结论当后续所有批次的免跑依据，跳过扫描动作——条件性跳过（若 0 则记录）被误读成无条件跳过。**「0」只能是当批扫描的输出。**
 - **已知素材缺口→已扩入（2026-10-06 全量扫描＋主理人当日批准执行）**：大纲共 **1,459 处 `YouTube EP<vid>` 引用／46 个 vid**，全部不在原 survey 且无 transcript——**已批准扩入本战役**：46 期音频已全量下载（cookies 管线＋ffmpeg 探针，**46/46 全过 fail=0**，合计 3.21 GB；下载格式教训见坑⑧），survey 46 行已填 `audio_files/upload_source`，随 30 路重启并入转录池；后续＝转录→复核→入库→**按引用索引逐期原地改写 PODCAST_REVIEW 块**（主代理串行）。索引在案 `senseaudio_out/tb2/_outline_yt_cites.json`。
 - **坑 ⑧（下载格式，10-06 主理人订正）**：沿用精选批的 `-f b[height<=360]`（≤360p 视频流＋音轨）传输量是纯音频的 4–6 倍（FreeBSD Fridays 系列单件 200–400MB vs m4a ~15–60MB）；**web_safari（HLS-only）无纯音频格式**（`ba` 空匹配→静默回退 360p），须**默认 client**（无 `--extractor-args` 限定）才有 DASH 纯音频 itag 140（m4a 129k）／251（opus 115k）；定案 `-f "140/251/ba/b[height<=360][protocol~=m3u8]/b[height<=360]/b"`（`46_outline_cited_audio.py`）。杀进程改格式重启时，旧格式 .part 成为孤儿件须清理（ZGmuZz5ETHs 405MB 实例）。
+- **坑 ⑨（键型双轨，10-06 实证）**：youtube 期 `transcripts.episode_id` **双轨**——不在 `episodes` 表（全表仅 1,191 行子集）的期 episode_id＝**vid**，表内期（含 46 引用期）＝**数值 id**；JSON doc 同理（常规期 `episode_id==episode_number==vid`，46 期为数值）。因此：**裁决文件一律 vid 键**（曾以数值键写出 reviews/303.json 等错名件，已删）；**置位/对账 SQL 须双路**（`episode_id=vid` 直配 ∨ 经 `episodes` 表 vid→id 映射），单一通路必漏一边（实证 18 期漏置位＋2 期错名）。
 
 ## 八、对账门禁（05_audit.py，全绿才收口）
 
