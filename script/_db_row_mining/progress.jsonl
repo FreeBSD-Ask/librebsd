@@ -1246,4 +1246,5 @@
 {"ts": "2026-10-05T22:41:14", "db": "freebsd-hackers", "batch": "fhk_b066", "rows_read": 1108, "desc": "fhk_b066（1108 块, 宿主 885, CL-RM-388972~CL-RM-390079）"}
 {"ts": "2026-10-06T02:13:20", "db": "openbsd_mail", "batch": "ob_b005", "rows_read": 2000, "desc": "ob_b005（offset 87000, n 2000, 539 块, 宿主 1911,1912,1913,1914,1915,1916,1921,1922,1923,1925,1926,2101,2103）"}
 {"ts": "2026-10-06T03:32:45", "db": "freebsd-hackers", "batch": "fhk_b067", "rows_read": 813, "desc": "fhk_b067（813 块, 宿主 885, CL-RM-396473~CL-RM-397285）"}
-{"ts": "2026-10-06T06:49:22", "db": "freebsd-hackers", "batch": "fhk_b068", "rows_read": 813, "desc": "fhk_b068（1091 块, 宿主 885, CL-RM-397825~CL-RM-398915）"}
+{"ts": "2026-10-06T06:49:22", "db": "freebsd-hackers", "batch": "fhk_b068", "rows_read": 1091, "desc": "fhk_b068（1091 块, 宿主 885, CL-RM-397825~CL-RM-398915）"}
+{"ts": "2026-10-06T09:11:19", "db": "freebsd-questions", "batch": "fq_b101", "rows_read": 2000, "desc": "fq_b101（offset 200000, n 2000, 293 块, 宿主 921,10016,10017,923,924）"}
