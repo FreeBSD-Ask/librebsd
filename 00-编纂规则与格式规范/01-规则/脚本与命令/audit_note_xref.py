@@ -15,6 +15,7 @@
   但**显式标注「旧／原／迁入／并入／拆分」等溯源声明**者（非现行指位）剔除，免误报。
 - **P3 自指卷号**（仅复核清单，不判 FAIL）：指向「本卷第 Y 章」者列出供人工复核。
 - **P4 ref 编号著录完备性**（判 FAIL，2026-09-30 立）：注内 `ref N` 指向的编号须在
+- **P5 主体—谓词误配**（仅复核清单，不判 FAIL，2026-10-06 立，119d ★9）：注文内出现「基金会＋版本/发行谓词」「项目＋法人谓词」「操作系统＋授权结构谓词」三类高频误配模式者列出供人工复核（判据真值＝写作规则「历史主体四分与称谓纪律」与 04-史学方法论 09 件之「主体×对象不可承载」表）。
   `catalog.json` 的 `refs` 中有**非空著录**（页面 ref 浮层的唯一取数源）；悬空即 FAIL。
   设立缘由：2026-09-30 产物实读发现 **25 处**引用 7 个未著录编号（`ref 10001`–`ref 10008`），
   而当时的 JS 自校验第 ④ 项为**死判据**（扫描对象恒为空集）、权威库又存在「已登记、`bibliography_entry` 为空」
@@ -160,6 +161,28 @@ def iter_volrefs(note):
     return out
 
 
+# ── P5（2026-10-06 立，119d ★9）：主体—谓词误配（列复核清单，不判 FAIL，同 P3 例）──
+#   真值＝写作规则.md「历史主体四分与称谓纪律」＋04-史学方法论 09 件「主体×对象不可承载」表。
+#   仅取三类高频、低歧义模式；命中即列清单，最终判定仍须人工实读一手史料（不以机检替代实读）。
+SUBJ_MISMATCH = [
+    (re.compile(r"基金会[^。；〔〕]{0,14}(发布|释出|发行)"), "基金会（法人）＋版本／发行谓词：制品面应归项目或发布工程团队"),
+    (re.compile(r"项目[^。；〔〕]{0,10}(注册|年报|财务报表|商标权|法人登记)"), "项目（共同体）＋法人谓词：法人面应归基金会"),
+    (re.compile(r"操作系统[^。；〔〕]{0,10}(选举|改选|任命)"), "操作系统（制品）＋授权结构谓词：职位面应归团队与职位"),
+]
+
+
+def scan_subject_agency(lines):
+    """P5：注文内主体—谓词误配复核清单（不判 FAIL）。"""
+    out = []
+    for i, l in enumerate(lines, 1):
+        if "@@" not in l and "分工" not in l and "另见" not in l:
+            continue
+        for rx, why in SUBJ_MISMATCH:
+            if rx.search(l):
+                out.append((i, why, l.strip()[:140]))
+    return out
+
+
 def scan_refs(lines, refs, o=None):
     """P4：注文引用的 ref 编号须在页面数据层 catalog.json 的 refs 中有非空著录。
 
@@ -207,12 +230,17 @@ def main():
     refs = json.loads(CATALOG.read_text(encoding="utf-8")).get("refs", {})
     p1, p2, p3 = run(o, lines)
     p4 = scan_refs(lines, refs, o)
+    p5 = scan_subject_agency(lines)
     n_ref = sum(1 for l in lines for _ in REF_RE.finditer(l))
     n_ref_id = len({m.group(1) for l in lines for m in REF_RE.finditer(l)})
     if args.list:
         print("P3 自指卷号复核清单（人工复核，不判 FAIL）：")
         for i, l in p3:
             print(f"  L{i}: {l}")
+        print("P5 主体—谓词误配复核清单（人工复核，不判 FAIL）：")
+        for i, why, txt in p5:
+            print(f"  L{i}: {why}")
+            print(f"      {txt}")
         return 0
     for tag, lst in (("P1", p1), ("P2", p2)):
         for i, why, txt in lst:
@@ -225,8 +253,13 @@ def main():
         print(f"FAIL：P1 {len(p1)} 条，P2 {len(p2)} 条，"
               f"P4 ref 未著录 {len(p4)} 个编号／{sum(len(v) for v in p4.values())} 处")
         return 1
+    if p5:
+        print(f"[P5] 主体—谓词误配复核清单（{len(p5)} 条，不判 FAIL，--list 查看）：")
+        for i, why, txt in p5[:8]:
+            print(f"  L{i}: {why}")
+            print(f"      {txt}")
     print(f"PASS：P1/P2 无失效；P4 ref 著录完备（{n_ref} 处引用／{n_ref_id} 个编号）；"
-          f"P3 自指复核 {len(p3)} 条（--list 查看）")
+          f"P3 自指复核 {len(p3)} 条、P5 主体误配 {len(p5)} 条（--list 查看）")
     return 0
 
 
