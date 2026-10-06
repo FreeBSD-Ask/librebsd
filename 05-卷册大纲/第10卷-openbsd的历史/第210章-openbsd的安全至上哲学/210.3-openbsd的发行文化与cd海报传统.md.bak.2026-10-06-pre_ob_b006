@@ -1,0 +1,362 @@
+# 210.3 OpenBSD 的发行文化与 CD/海报传统
+
+**要点**：OpenBSD 自 2.0（1996-10 发布）起保持每年 5 月与 11 月 6 个月固定发布周期传统——OpenBSD 7.9（2026-05-19 发布）是第 60 个 release〔存疑：60 系自 2.0 至 7.9 计数（2.x-7.x 各 10 版），不计 1.x 早期版本〕，从未跳过发布窗口（各版日期在 5 月初至 6 月中、10 月底至 11 月初间浮动，如 2.7 延至 2000-06-15）（OpenBSD 各版本发布日期均见 <https://www.openbsd.org/> 各版本页面）；CD 封面艺术（每版由不同艺术家创作，如 3.4 的 Puffy Hood 署名“Tyson Ads”〔存疑：署名来路不明，与 EP96 口述封面作者 Ty Semaka 及 3.x 期海报作者 Teemu Korpilahti、Marcus Herbert 等记载冲突，须以 openbsd.org/34.html 与发行艺术存档回核〕）与 release song（发布歌曲，3.4 为“The Legend of Puffy Hood”）构成独特的发行文化；该传统自 2.x 系列延续至 7.x 系列〔存疑：歌曲传统起点两说——本节正文作 2.x，EP8 口述为自 3.0 版起，待 lyrics.html 核对〕
+
+**史料**：OpenBSD 各版本 CD 封面艺术与 release song 存档（<https://www.openbsd.org/lyrics.html>）；OpenBSD Release Notes（<https://www.openbsd.org/plus.html>）；OpenBSD 邮件列表中关于发行传统的讨论（<https://marc.info/?l=openbsd-misc>）；OpenBSD 3.4 Release Page（<https://www.openbsd.org/34.html>，明确发布日期 Nov 1, 2003）
+
+**史观**：总纲第 15 条——文化即形式主义：发行文化是 OpenBSD 社区文化资产——CD 封面艺术与 release song 将工程发布升格为文化仪式，使每次 release 成为社区认同的强化节点；总纲第 4 条——分离聚合是永恒规律：6 个月固定发布周期塑造 OpenBSD 的开发节奏——所有功能须在 cutoff 日期前合入，否则顺延至下个 release〔存疑：原“总纲第 8 条——社区文化即技术资产”“总纲第 5 条——组织结构塑造技术路径”均为伪标签，第 8 条实为“本体论上各方平等”、第 5 条实为“没有必然性，只有偶然性”；前者按语义改挂第 15 条，后者候选重映射第 4 条，待主理人审定〕
+
+**辨析**：原叙事中“2003 年因 Iraq War 推迟 3.4 发布”的说法与官方记录不符——OpenBSD 3.4 于 2003-11-01 按期发布（<https://www.openbsd.org/34.html>），与 Iraq War（2003-03-20 开始）无推迟关系；DARPA 撤资事件发生于 2003-04，亦未影响 3.4 发布；6 个月发布周期自 OpenBSD 2.0（1996-10 发布）起确立，至 2026-05-19 的 7.9 共 60 个 release，发布窗口从未跳过但逐版间隔有浮动
+
+**文献**：OpenBSD CD 封面艺术（各 release 发布页，如 <https://www.openbsd.org/34.html>）［原引 lyrics.html 作 CD/海报艺术存档系同 URL 双名义，歌词页不承载封面艺术，已改引——2026-09-13 整改留痕］；OpenBSD Release Songs [EB/OL]. <https://www.openbsd.org/lyrics.html>；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD 3.4 Release Page [EB/OL]. <https://www.openbsd.org/34.html> ［A］
+
+**OpenBSD 6 个月发布周期关键节点**：
+
+| 版本 | 发布日期 | 备注 |
+| --- | --- | --- |
+| 2.0 | 1996-10 | 6 个月固定周期传统确立（精确发布日异说待核，1997-06-01 系 2.1 日期） |
+| 3.4 | 2003-11-01 | 按期发布，与 Iraq War（2003-03-20）无推迟关系 |
+| 7.9 | 2026-05-19 | 第 60 个 release |
+
+**OpenBSD 发行文化元素概览**：
+
+| 元素 | 示例 | 说明 |
+| --- | --- | --- |
+| CD 封面艺术 | 3.4 Puffy Hood（作者署名存疑，见要点） | 每版由不同艺术家创作〔存疑：EP96 口述称 Ty Semaka 连续绘制约 13-15 版封面，待回核〕 |
+| release song | 3.4“The Legend of Puffy Hood” | 发布歌曲〔存疑：起点两说——本表作自 2.x 延续，EP8 口述为自 3.0 版起，须以 lyrics.html 逐版核对〕 |
+| 发布周期 | 每年 5 月与 11 月 | 6 个月固定周期，从未推迟 |
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+
+<!-- ROW_MINE: usenet_mail.messages.195230 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076341`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+jpd 指出 OpenBSD 缺少 netgraph 这类子系统，故 PPPoE 处理不如 FreeBSD 优雅高效。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197465 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091262`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 3.4 自带 lrzsz 的 lrz 上传大文件收不到 ZFIN 而挂死，小文件与 lsz 均正常，属工具使用疑难。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199690 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091503`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+naddy 断言 SCO 的指控站不住脚，并给出 lemis 站点上的长篇分析链接。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201459 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091705`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回应远程升级问题，指出 3.3 进 CVS 后流程与 3.2 无异。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203408 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092332`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Espie 回应 Courier 作者对 3.2 重用 pid 的指责，建议改用 mkdtemp，并称相关 ports 将被标记 BROKEN引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.205193 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092564`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+自述在 3.1 上跟 OPENBSD_3_2 标签升级，make build 全程无错引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207930 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094874`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+mips 指出 OpenBSD ports 的环境变量应为 FLAVOR 而非 FLAVOURS，并给出正确的 make install 写法引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209781 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-095913`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+自述用 NTLDR 双启动 NT 与 OpenBSD 的完整步骤，含 installboot 与 dd 引导扇区命令引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211643 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097037`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 说明源码树里的那段是导入 mg 后加入的简易 emacs doctor 模式，供开发者解闷引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213640 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097282`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+walt 感叹 OpenBSD 拒用 GPL 软件妨碍开源协作，称这个世界已有太多需要操心的事引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215421 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098905`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Matti Kärki 称 OpenBSD 2.9 电视卡头文件改为与 NetBSD 一致，已无 Meteor 头文件，fxtv 因常量缺失编译失败引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234015 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104699`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 AlphaStation 200 4/233 上 OpenBSD 2.2 无软驱支持且缺 X 服务器，自建 X 在安装阶段报错引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217271 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105738`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出 NetBSD 的 ftpd.conf 提供 rateget 与 rateput 限速指令，但不确定是否已移植到 OpenBSD引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230775 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106232`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+J Wunsch 说明 FreeBSD 把第三方软件原始发行版放 contrib 以便升级引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232020 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106411`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Theo de Raadt 引 isapnp 注意事项说明须把厂商专有标识加入 /sys/dev/isa/pnpdevs 再重编内核引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228650 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107025`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Steven Richards 转发 Security Wire Digest 所载 Red Hat 收购 OpenBSD 的消息，并询问此事是否属实引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230487 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107221`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+David Burgess 梳理 BSD 分家史：三大系统均可回溯到 386BSD 与 4.3BSD，分家虽痛却各有专攻引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220238 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107393`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+在 /etc/mk.conf 写入 SKIPDIR+=named 可让 make build 跳过 named，sendmail 同理引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226644 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107883`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Zbigniew Kossowski 报告 EtherExpress PRO/10 在 2.6 正常，升级 2.7 后配 IP 即触发 uvm_fault引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221010 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108060`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖称 OpenBSD 只能读取多区段光盘的第一个区段，并建议未报缺陷者提交缺陷报告引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222580 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108273`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 2.8 GENERIC 内核编译因 grep 参数错误中断，最终发现与 root 登录文件改动有关引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224156 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108458`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 2.8 快照挂载 Linux 的 ext2 分区时大量目录缺失，180MB 只显示约 110MB引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232851 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-116078`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Bruno Rohee 建议订阅 announce 列表，并转发 Todd C. Miller 关于 2.4 中 mail.local 不再 setuid引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP8、BSDTalk EP68、BSDTalk EP96（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- PC-BSD 发布 1.0 的第二候选版：本质是将 FreeBSD 6.0 打包为单 CD 的桌面导向系统，预装 KDE 3.5，全程图形化安装并默认创建普通用户与自动登录，明确面向家用场景。其区别于普通 FreeBSD 加 KDE 之处在于自研包管理器：以单个文件夹容纳应用的程序、库与配置，以双击式安装器交付并请求 root 密码安装，库彼此隔离以避免依赖冲突；当事人梳理此应用包理念的前史为 Acorn 的 RISC OS 与 NeXT，经 Apple 的 Darwin 推广。批评者指其制造冗余膨胀，当事人认为在单用户桌面系统上代价可接受；系统另提供在线更新，免除传统 make world 升级流程；因 1.0 正式版未至，当事人认为此时难作定评。（BSDTalk EP8，[55.22-316.42]，L1）
+- 当事人盘点五项免费 BSD shell 账户服务：GNUK（转写亦作 gnooc）与 metawire.org 基于 OpenBSD，arbornet.org 基于 FreeBSD，freeshell.org 基于 NetBSD，此类社区服务多在低配硬件上勉强维持；另有惠普的 HP Test Drive 提供 FreeBSD、NetBSD、Tru64 UNIX、OpenVMS 与 Linux 的 shell，硬件规模远超社区服务（含 16 CPU 系统、GB 级内存），其 NetBSD 已是 3.0 版。当事人注册 GNUK.org 实测获当天技术支持响应，账户按使用年限与捐赠硬件分级、可申请提升配额；并警告挂 IRC 机器人、拒绝服务攻击、骚扰等滥用会毁掉此类免费服务。（BSDTalk EP8，[389.20-605.24]，L1）
+- 对 HP Test Drive 以 Telnet 接入一事，当事人批评 OpenSSH 作为 BSD 许可的安全 Telnet 替代品早已人人可用，Telnet 继续被使用不可原谅；并推测 HP 或有意以不安全协议劝阻用户将测试机当重要系统使用。（BSDTalk EP8，[559.26-605.24]，L1）
+- OpenBSD 发行传统：自 3.0 版起每版附带一首发布歌曲，当事人以其中一首作为本期节目开场音乐。（BSDTalk EP8，[42.72-51.34]，L1）
+- SpamD 是一个小型邮件延迟守护进程：对 SMTP 连接或以 450/451 应答令对方稍后重试，或经调整 PF 表放行；兼具 tarpitting 与灰名单两类用途。其设计目标之一是与 Theo 商定确保在一台 SPARCstation IPC 上过滤一个大网络——守护进程不 fork，而是一个读大量套接字、跟踪全部连接状态并与 PF 通话的状态机；对邮件内容不做任何判断（不做正文统计词频分析），只依据 SMTP 连接本身的性质——是否符合标准、是否有规避反垃圾措施的迹象——作判断，故可跑在内存极小的机器上。在阿尔伯塔大学约八万个账户的中央邮件环境里，受访者把 SpamD 放在 Exchange 服务器之前，配合较激进的灰名单，五封 SMTP 消息约四封被挡下、仅一封进入实际处理，显著减轻主邮件处理器负载。（BSDTalk EP68，[77.8-496.0]，L1）
+- 运行观察驱动默认行为：SpamD 初期对每个连接前 10 秒以极低速应答后恢复正常，受访者观察日志发现大量连接在三秒即断——垃圾邮件软件以此探测 tarpitting——遂把 10 秒初始延迟设为默认且不设旋钮；对发件方还可启用把 TCP 窗口压到极小、令其分片重传的“残忍”选项以考验对方 TCP 栈（代价是带宽，默认关闭）；对 SMTP auth 场景建议不用 25 端口提交，而以 465 的 SMTPS 与 587 的 mail submission 端口加 SSL 认证解决，必要时可用 PF 重定向规则整网豁免；对早期灰名单担心的出站邮件服务器地址池问题，其经验是一般不构成障碍——可预置 graylisting.org 公布的大站白名单，小池子重试终会通过，出入站共用地址会因 SpamD 观察外发而逐步白名单化，大型站点约两个月才需一次人工干预；相较之下 Sendmail Milter 负载高且按发件人-收件人-IP 三元组粒度过激，不适合大学站点，SpamD 以整 IP 白名单加进出双向观察更为合用。（BSDTalk EP68，[252.24-496.0]，L1）
+- greytrapping 机制与轶事：把站点内已公开且弃用的邮件地址设为陷阱，凡向陷阱地址发信的机器即被阻塞 24 小时并遭低速应答，纵使一次投递百封也全数不通；受访者的陷阱名单甚至包括其历年写进软件文档的示例假地址。其举的 bigbutts@obtuse.com 一例成为蠕虫式扩散的活教材：文章发表前先布入陷阱，数日内即有垃圾邮件命中；数月后统计脚本发现命中暴涨，用 Google 一查，某 BSD 期刊的 OpenBSD 文章被色情站点爬虫抓取并在隐藏标签中复制全文，垃圾邮件发送者再爬色情站点把地址再次拾取——清理者与滥用者的食物链在陷阱地址上叠印。（BSDTalk EP68，[673.06-895.48]，L1）
+- 社区体验与多重贡献：受访者形容 OpenBSD 社区是一群高强度但自得其乐的人——hackathon 通宵、技术讨论时大喊大叫上蹿下跳，留下来是因为“有趣且对我们有用”；其本人自认什么都碰：重写过 SpamD（不满意即推倒重来）、近期在拆解 SCSI 层——多数 BSD 的磁带机与磁带库 changer 支持基本残废，遂对 SCSI 层、磁带驱动与 changer 驱动作内核级修整；参与各处的修复、测试与发布验证，运营 orders 网站（藏在其公司机器与自家地下室）；自嘲“样样通样样松”，并强调自己不是 OpenBSD 狂热者而只是一个 UNIX 用户——用其所善、避其所短。（BSDTalk EP68，[897.92-1020.56]，L1）
+- 缘起故事：约 1995 年，受访者与合伙人写防火墙软件并在咨询业务中营销，以把它移植到一切平台为乐（含内核修改）；当时无线买不起联网可用机，弄到一台 SPARCstation 后发现 NetBSD 的 SPARC 移植完全不可用，而 OpenBSD 正在起步——安全正对其胃口，也不管社区恩怨只问“能不能用”；下载 SPARC 发行版果然能跑且修掉了一批旧 bug；当年网站还是 Theo 的个人页，写着“喜欢就打这个电话”——竟是卡尔加里一家比萨店的号码，身在三小时车程外埃德蒙顿的他打电话订比萨遭拒后转而向 Theo 抱怨，两人在汉堡店见面，他买下一张 CD，从此入伙。（BSDTalk EP68，[1020.56-1118.98]，L1）
+- 桌面、家庭与文化参与：受访者笔记本、桌面与孩子的机器都跑 OpenBSD（孩子双启 Windows 只为游戏）；其桌面是极简的 fvwm，但承认近年 ports 收集安装体验进步惊人，孩子用全套 KDE 加 Linux 兼容层跑 OpenOffice 与教育、游戏软件，女儿用 MSN 客户端、儿子玩 Blender，全家充当 ports 的发布测试“小白鼠”；家中防火墙以 PF 的操作系统指纹特性只放行 Windows 走 80 端口以隔绝病毒。发行文化方面：4.0 已分支并开放预购，预购者常在 FTP 放开前拿到 CD；本次除 CD 套装外首推收录 3.0 至 4.0 全部发行歌曲加彩蛋曲目的音频 CD；受访者为 3.5 的“鱼执照”歌曲写过歌词（自认 Monty Python 粉丝玩过火）；制作水准主要来自卡尔加里的 Ty Semaka 与 Jonathan Lewis（乐队 Plaid Tongued Devils），他自己也在一曲中与 Theo、Peter Valchev 及儿子 Calvin 合唱“酒吧合唱”；收尾呼吁买 CD、T 恤、捐款——强调 OpenBSD 反哺众多项目、直接间接被广泛使用，募款并非乞讨。（BSDTalk EP68，[1159.18-1535.58]，L1）
+- 受访者 Ty Semaka 为卡尔加里的平面设计师与乐队成员，经共同朋友在酒馆结识 Theo de Raadt；后者正寻找能画漫画的人为其吉祥物 Puffy（河豚）作画，几幅卡通之后他接下 release 封面的工作，至今已为约 13 至 15 个 release 绘制封面，并为最近 10 至 11 个 release 配制歌曲。（BSDTalk EP96，[77.7-141.66]，L1）
+- 创作流程与工具链：封面卡通以铅笔手绘、经 Theo 批准后上墨、扫描入计算机再以 Photoshop 上色；CD 封面（近期已转为 DVD 小册格式）以 Adobe InDesign 排版、涉及字体设计时辅以 Illustrator；音乐的技术录制由乐队同伴 Jonathan Lewis 以 Logic 完成。整个 release 艺术流程建立在 Mac 与 Adobe 工具链之上。（BSDTalk EP96，[158.66-233.66]，L1）
+- release 歌曲的制作与免费决策：他与 Theo 合作打磨歌词以讲述每个 release 主题的故事，依封面主题决定歌曲形态，再在卡尔加里的音乐人圈中按曲目挑选最合适的乐手录制、一次性付酬。因项目性质与 Theo 的私交，所有歌曲完全免费发布；乐手均事先被告知无版税、一次性付清。他刻意不在加拿大表演权组织 SOCAN 注册这些作品——尽管注册本可经由政府渠道获得版税——以使歌曲不背负任何权利负担。（BSDTalk EP96，[528.52-634.8]，L1）
+- 艺术任务的认知外溢：每个 release 的封面制作都要求分析解剖通常以技术为基础的情境——例如为无线设备或 RAID 阵列争取文档的斗争、有时亦涉及政治性议题；他以自嘲的“刚好够画漫画”的方式习得开源的基础观念：开放意味着什么、为什么应当保持开放、OpenBSD 具体面临哪些挑战。艺术委托成为非技术者理解项目的通道。（BSDTalk EP96，[410.92-463.6]，L1）
+
+**史料**：
+
+- PC-BSD 1.0 RC2 的一手试用记录（安装流程、KDE 3.5 环境、bundle 式包管理器、卸载系统与在线更新），为桌面 BSD 早期形态的直接证词；另含 2006 年 1 月免费 BSD shell 账户服务名录及其底层系统、硬件规模与滥用生态的口述记录，以及 OpenBSD 发行歌传统（自 3.0 起）的口述。（BSDTalk EP8，[42.72-479.56]，L1）
+- 本期提及的一手材料：spamd 手册页中的灰名单超时与连接预留等选项、graylisting.org 公布的大站灰名单白名单、早期 OpenBSD 网站留存于 Theo 个人页面的“喜欢就打电话”比萨店电话轶事、由受访者运营的 OpenBSD orders 订购网站、4.0 预购与 3.0-4.0 发行歌曲音频 CD 合辑，以及受访者观察 SpamD 运行日志所得的连接断开剖面。（BSDTalk EP68，[1316.3-1352.74]，L1）
+- 本期为 OpenBSD release 艺术家 Ty Semaka 的口述访谈（bsdtalk096，2007-01-26），提供发行文化社会网络的一手细节：他绘制约 20 件 OpenBSD T 恤，乐队巡演欧洲时常因 T 恤被认出、得知其为封面作者后请酒，本地杂货店亦发生被陌生人认出的插曲；Theo 在卡尔加里有十数位常一同喝酒的本地 OpenBSD 用户，身份涵盖开发者、客户与朋友；OpenBSD 的委托还为其带来 Electronic Frontier Foundation（旧金山、致力于网络表达权利的律师组织）等重要客户及零星开源相关工作。（BSDTalk EP96，[237.66-375.76]，L1）
+
+**史观**：
+
+- 总纲15 文化即形式主义：OpenBSD 每版附发行歌的做法，把版本发布这一纯技术事件转化为可感知的文化仪式：例行发布程序被赋予音乐形式而成为社区文化产品，显示技术社群如何以仪式性形式维系自我认同与传播节奏。（BSDTalk EP8，[42.72-51.34]，L1）
+- 总纲9 经验优先：受访者把“三秒即断”的日志观察直接固化为默认且无旋钮的行为，把 OpenBSD 社区“我们讨厌旋钮”的立场说成减少误配的工程伦理——默认值不是理论推演而是从生产邮件环境的 disconnect 剖面里读出来的；这种以运维现场经验而非参数表驱动设计的取向，是经验优先原则在安全工程中的具体形态。（BSDTalk EP68，[456.36-484.24]，L1）
+- 总纲15 文化即形式主义：release 封面与歌曲把每次版本发布编码为可辨识的文化仪式：卡通主题呼应技术斗争、歌曲讲述 release 的故事、T 恤将符号带入日常空间。版本号的时间刻度之外，社区以艺术形式为自身造像并生产认同，发行文化由此成为一套自我指涉的仪式体系。（BSDTalk EP96，[528.52-634.8]，L1）
+
+**辨析**：
+
+- 免费 shell 服务的 OpenBSD 系站点域名在转写中出现 gnooc.org 与 GNUK.org 两种拼写，实名待考；引用该服务名录前须核对域名实名。当事人对 HP 采用 Telnet 的动机解释（有意以不安全协议劝阻重度使用）是其自承的猜测，无 HP 方面证据支撑，Telnet 接入的事实本身可信，但动机解释仅可作推测对待。[存疑脚注] 域名拼写不一致且企业动机无一手佐证。　[存疑脚注] gnooc.org 与 GNUK.org 拼写不一致，需与 2006 年免费 shell 服务名录核对；HP 采用 Telnet 的动机为当事人推测。（BSDTalk EP8，[389.20-605.24]，L4）
+- 转写专名失真须回核音频：Spamdy/spam log D/BAMD 均应为 SpamD，Tai Samaka 应为 Ty Semaka，Plattongue Devils 应为 Plaid Tongued Devils，FBWM 应为 fvwm；“Diffsin TCP”与“Lowcore.S”疑为“diffs in tcp”与“locore.s”，无法确证；bigbutts@obtuse.com 轶事及所涉 BSD 期刊名称为受访者单方追述，期刊与色情站点放大链条须另行核实。　[存疑脚注] 发行歌曲参与人员姓名转写失真；TCP/locore.s 提交细节与 bigbutts 轶事的传播链均待音频与外部材料核实（BSDTalk EP68，[1304.22-1417.98]，L5）
+- 设计工具的私有依赖与理念的距离：作为设计师他固定于 Mac 与 Adobe 工具链，虽因工作理解开源理念，却未认真评估开源设计与插画工具——听闻其水平远不及 Mac 上的软件后便止步；他知道 SSH 在其 Mac 上运行并保障安全，却不知其所在与原理。终端用户的工具选择由行业生态与习惯决定而非理念驱动，对安全的感知亦止于“知道它在”的层次。（BSDTalk EP96，[463.6-517.64]，L1）
+
+**文献**：
+
+- [BSDTalk EP8] Backman W. BSDTalk: No Cost BSD Shell Accounts[EB/OL]. (2006-01-23)[2026-08-15]. <https://archive.org/download/bsdtalk008/bsdtalk008.ogg>.
+- [BSDTalk EP68] Backman W. BSDTalk: 68: bsdtalk068 - Interview with OpenBSD Developer Bob Beck[EB/OL]. (2006-09-22)[2026-08-27]. <https://archive.org/details/bsdtalk068>.
+- [BSDTalk EP96] Backman W. BSDTalk: 96: bsdtalk096 - Artist and Musician Ty Semaka[EB/OL]. (2007-01-26)[2026-08-27]. <https://archive.org/details/bsdtalk096>.
+
+<!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: openbsd_mail.messages.183930 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371945`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 3 月 8 日，Austin Hook 报 OpenBSD 4.0 CD 附带说明书存在版式错误，导致 disklabel 步骤混乱，说明书共 12 页含封面封底，建议在第 6 页安装说明的页脚加注说明其后两页文字互换以便照原阅读顺序翻阅。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184012 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371975`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 3 月 16 日，Andrei GUDIU 就 Karel Kulhavy 询问 openbsd41_cover 等 OpenBSD 漫画作者归属的问题回帖并转发 tysemaka 站点的相关页面供参考。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184697 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372198`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 5 月 8 日，Bibby 收到寄抵中国深圳的 OpenBSD 4.1 正式版光盘与 T 恤表示外观不错并致谢全体开发者的辛勤工作与 Wim 的耐心等待邮件附上中国大陆 OpenBSD 商店页面。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184718 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372210`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 5 月 9 日，Jimmy Mitchener表示信用卡刚被扣款 54.92 美元期望这属于 4.1 发货并转述 Greg Thomas 的洛杉矶订单四月中旬下单五月初收货的经历。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184726 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-372212`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 5 月 9 日，Wim Vandeputte 宣布 OpenBSD 4.1 订单基本已发出并预告 roadtrip 今晚与明晚在荷兰 Ede 参加 NLUUG 春会本周末与 Felix Henning 前往波兰克拉科夫参加 Confidence 2007。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184734 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-372217`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 5 月 10 日，Wilhelm Buehler 宣布 OpenBSD 与 OpenSSH 参加 2007-05-30 至 2007-06-02 于德国柏林举办的 LinuxTag 会议并说明 BSD Day 演讲在 2007-06-01 星期五邀请大家到场拜访。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186068 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376562`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 9 日，Siju George 报告 OpenBSD 4.2 CD 已安全抵达印度，收到时完好无损，坦言此前一直担心运输途中出问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186077 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376564`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 10 日，Aaron Hsu 收到 OpenBSD 4.2 CD 到货，称赞贴纸较之前更好且册子印刷质量较之前更优，订购两张其中一张赠送他人。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186118 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376574`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 13 日，Austin Hook 致歉 PayPal 反钓鱼过滤仍会拦截提及该平台的订单邮件提醒更新 orders.html 说明并将 PayPal 支付邮箱列为 cshop@computershop.ca 建议以预付方式下单。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186119 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376575`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 13 日，Austin Hook 说明 OpenBSD CD 发货延迟原因指向蒙大拿州发往加拿大的批量订单被发货部门过早扫描未同步入 USPS 系统且 Sweet Grass 邮局当日难以处理堆积邮件导致追踪信息滞后。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186230 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376612`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 23 日，Wim Vandeputte 通报慕尼黑 Systems 博览会本周于 110-2 有 OpenBSD 与 OpenSSH 展台现场可领取 4.2 快照 CD 与 T 恤并招协助人手。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186254 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376625`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 25 日，Joel Sing 就 metajunkie 询问 4.2 获取途径并指出官网仅列 4.1 为已发布回复 4.2 可通过在线订购获取并自述今年配送效率良好从订购到新西兰送达不足两周。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186430 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-376673`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 11 月 6 日，Bibby 报告 OpenBSD 4.2 正式版 CD 已抵达深圳并将寄给所有客户向全球开发者与贡献者致谢感谢他们让本次发行成为可能特别感谢 Wim 与 Austin 署名 Michael Bibby Huangbin Zhang。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186521 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376698`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 11 月 11 日，Darrin Chandler 因本地取件失败将 Inigo 的发行贴图素材上传至美国 Phoenix BSD 站点供美洲用户下载取用并注明已获 Inigo 许可。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188006 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378138`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 3 月 10 日，Saulo Bozzi Daleprane 转贴 Nick Holland 称 4.2 安装修复只影响官方购买 CD 集，并说自己用 ftp.openbsd.org 的 ISO 在 ProLiant ML370 上无法由 CD 启动，改试 floppy42.fs。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188327 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378225`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 4 月 10 日，雅斯珀·瓦伦丁通报 Puffy 和 Cryptonauts 周边已抵达荷兰 Hoorn，感谢开发团队发货，附维基百科条目链接，是发行周边到达用户手中的例行通报。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188365 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378245`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 4 月 14 日，Pierre-Emmanuel André 告知自家 4.3 CD 套装当日在马赛到货，转引 Paul de Weerd 于苏黎世收到同一套装并在 weirdnet.nl 上传照片致谢开发团队。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188375 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378250`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 4 月 14 日，Todd Alan Smith 报 4.3 CD 套装于 4 月 12 日在威斯康星州麦迪逊到货，自陈正读完 Peter 的 pf 书并致谢整个 OpenBSD 团队。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188658 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378354`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 5 月 8 日，Zhang Huangbin报告4.3 CD共15套、Book of PF七本、Secure Architectures with OpenBSD一本、T恤五件，自美国寄抵深圳用时一周。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188832 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378420`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 5 月 23 日，Otto Moerbeek 按偏好顺序建议 HL-DT-ST GCE-8527B 无法用 cdrecord 写 ISO 时可改用 base 自带 cdio 打 tao 镜像，或把设备写成 /dev/rcd0c 再交给 cdrecord。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189110 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378519`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 6 月 16 日，Anton Karpov 周二到周五在莫斯科，愿带 4.3 CD 与 4.2 T 恤给当地爱好者，称手头有 3 张 CD 与两件 4.2 T 恤，留 toxa 邮箱联系电话。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189170 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378551`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 6 月 20 日，Calvert 就 Stephen Day 追问 4.3 与快照的 x 发行集为何缺 MD5 校验和回复，x 集与其他包在不同时间不同机器上分别构建，维护单一校验文件复杂，至于不另设两个校验文件只是猜测无人有迫切意愿。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189919 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388537`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 9 月 5 日，Matthew Dempsky 发现 4.4 T 恤加入 tshirts.html 时锚点名号被复制粘贴写成 29 而非 30，并提交网页修正补丁。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189924 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388539`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 9 月 6 日，Guilherme M. Schroeder 报告在巴西用国际信用卡购买 4.4 预售 T 恤顺利，运费 12 美元，并推测 CD 盒同价。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190259 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388650`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 8 日，Don Hiatt 回应 Theo de Raadt 关于是否有人拿到海报的询问，通报自己刚收到海报订单已发货的通知，说此刻身在 BC，只能等它到货。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190273 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388656`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 9 日，Daniel Polak 通报 OpenBSD 4.4 CD 已运抵阿姆斯特丹并附图，感谢各位开发者又一个好版本，并邀列表上的欧洲用户趁早下单自己的 CD 套装，让 Wim 更辛苦工作也算帮到 OpenBSD。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190294 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388660`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 11 日，Peter N. M. Hansteen 说 4.4 版包裹午后刚投入挪威卑尔根的信箱，附图并提醒若赶在正式发布日前下单，预购品仍会及时送达，随后他要去准备 Strasbourg 的活动。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190322 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388670`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 14 日，Henri Salo 报告 4.4 CD 与 The Book Of PF 及 Secure Architectures With OpenBSD 两册书同日抵达芬兰埃斯波，并称两本书写得很好。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190327 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388673`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 15 日，J.C. Roberts 称 4.4 光盘已送达硅谷，感谢 Austin 与 Computer Shop Calgary 的快捷发货，并向 OpenBSD 开发者致谢。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190340 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388678`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 15 日，Fred Crowson 称预定的 4.4 CD 集终于送达英国，感谢开发者，并贴出 OpenBSD 4.4 GENERIC 内核在 IBM 2525FAG 上的 dmesg 输出。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190345 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388679`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 15 日，Matthew Szudzik 指出 OpenBSD 4.4 CD 集封底把 sparc 与 i386、macppc、amd64、sparc64 并列写入架构清单，而光盘并未包含 sparc 的操作系统与应用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190526 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388734`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 29 日，Matthias Pfeifer 收到 OpenBSD 4.4 CD 套装，称赞 Pictures、stickers 与 song 这些发行材料，并感谢项目组成员把操作系统做得如此出色。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192286 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397602`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 21 日，Bryan 在圣地亚哥收到 4.5 版介质，把信封贴纸给了三岁女儿而自留了内页贴纸，并吐槽封面人物 Sark 神似 RMS。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192408 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397641`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 29 日，Matthias Pfeifer 宣布 OpenBSD 光盘已抵达 Nienburg 与 Hannover 两地，并感谢全体 OpenBSD 人为本次发布所作的贡献，也对本次发布的艺术作品与发行歌曲表示感谢。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。

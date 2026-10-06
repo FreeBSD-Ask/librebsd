@@ -84,3 +84,9 @@ volume: 第09卷-netbsd的历史
 - [YouTube EPmZ-dhntnkCQ] BSDCan 2026. BSDCan Saturday 2026-06-20 周六场流（Allan Jude、Kirk McKusick、Brooks Davis 等多场演讲合流）[EB/OL]. (2026-06-20)[2026-08-15]. <https://www.youtube.com/watch?v=mZ-dhntnkCQ>.［著录注：原条目作者与题名误著录为"YouTube"且残留流水号"1160"、日期空括号，依核查报告按行内演讲者与流标题重著；正式逐讲题名待核会议官方议程］ [订正：原"YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]."→重著作者、题名并补发布日期，内容复核]
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

@@ -55,3 +55,8 @@ volume: 第17卷-政治制度与社区治理
 - 上述各子节文献综合；FreeBSD Foundation 年报；参见相关章节关于 FreeBSD Foundation 与 Linux Foundation 治理模式比较及公众认知的史料；项目史观总纲第 1、4、5、8、9、10、13、14、19、21、23 条（见 据原文第 25 章、据原文第 14 章 14.2 节、据原文第 21 章 21.1-21.2 节、据原文第 23 章 23.1 节） ［A］
 - 媒体报道档案；公众认知调查；用户文章 ［C］
 
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

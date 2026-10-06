@@ -92,3 +92,34 @@ volume: 第14卷-商业生态与企业案例
 - [BSD Now EP591] Pennington J. BSD Now: 591: The Three Wise Men (hosts)[EB/OL]. (2024-12-26)[2026-08-15]. <https://www.bsdnow.tv/591>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-14-034 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-14-034`；login 逐条遍历判定采纳）
+
+2000年6月USENIX ;login: 专栏记录：微软反垄断败诉后当事人认为其市场支配力短期内不会改变；同期索尼VAIO 505VE内置winmodem无法在Linux/BSD下工作、Win98恢复盘会破坏Linux分区，反映专有硬件与Windows预装生态对UNIX类系统桌面部署的实际阻碍。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-14-034 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-14-034`；login 逐条遍历判定采纳）
+
+2000年6月USENIX ;login: 专栏记录：微软反垄断败诉后当事人认为其市场支配力短期内不会改变；同期索尼VAIO 505VE内置winmodem无法在Linux/BSD下工作、Win98恢复盘会破坏Linux分区，反映专有硬件与Windows预装生态对UNIX类系统桌面部署的实际阻碍。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-14-034 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-14-034`；login 逐条遍历判定采纳）
+
+2000年6月USENIX ;login: 专栏记录：微软反垄断败诉后当事人认为其市场支配力短期内不会改变；同期索尼VAIO 505VE内置winmodem无法在Linux/BSD下工作、Win98恢复盘会破坏Linux分区，反映专有硬件与Windows预装生态对UNIX类系统桌面部署的实际阻碍。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

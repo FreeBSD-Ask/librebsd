@@ -371,3 +371,19 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - [BSDTalk EP237] Backman W. BSDTalk: 237: bsdtalk237 - The FreeBSD Journal with George Neville-Neil[EB/OL]. (2014-01-08)[2026-08-27]. <https://bsdtalk.blogspot.com/2014/01/bsdtalk237-freebsd-journal-with-george.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-5-114 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-114`；login 逐条遍历判定采纳）
+
+2000年春，Bob Gray 在科罗拉多大学本科操作系统课程中弃用基于 binary-only Windows NT 的 userland 作业，改用源码可得的 production UNIX（FreeBSD）让学生直接修改内核（如实现 undelete），95名三年级学生参与，作者主张真实内核实践优于模拟器教学。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-5-114 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-114`；login 逐条遍历判定采纳）
+
+2000年春，Bob Gray 在科罗拉多大学本科操作系统课程中弃用基于 binary-only Windows NT 的 userland 作业，改用源码可得的 production UNIX（FreeBSD）让学生直接修改内核（如实现 undelete），95名三年级学生参与，作者主张真实内核实践优于模拟器教学。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-5-114 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-114`；login 逐条遍历判定采纳）
+
+2000年春，Bob Gray 在科罗拉多大学本科操作系统课程中弃用基于 binary-only Windows NT 的 userland 作业，改用源码可得的 production UNIX（FreeBSD）让学生直接修改内核（如实现 undelete），95名三年级学生参与，作者主张真实内核实践优于模拟器教学。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

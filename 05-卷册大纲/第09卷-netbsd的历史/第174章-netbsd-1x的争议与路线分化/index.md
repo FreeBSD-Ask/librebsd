@@ -29,3 +29,14 @@ volume: 第09卷-netbsd的历史
 
 - NetBSD Project. About NetBSD [EB/OL]. <https://www.netbsd.org/about/>；NetBSD Project. History of the NetBSD Project [EB/OL]. <https://www.netbsd.org/about/history.html>；NetBSD Foundation. NetBSD 1.5 Release Announcement [EB/OL]. 2000-12-06. <https://www.netbsd.org/releases/formal-1.5/NetBSD-1.5.html>；NetBSD Foundation. NetBSD 1.6 Release Announcement [EB/OL]. 2002-09-14. <https://www.netbsd.org/releases/formal-1.6/NetBSD-1.6.html>；Jordan K. Hubbard. FreeBSD 4.0-RELEASE Announcement [EB/OL]. 2000-03-14. <https://www.freebsd.org/releases/4.0R/announce/>；**02-sacred源材料/sacred_sources.duckdb** 项目统摄史观第 25 章（总纲第 13、19、21 条）；**02-sacred源材料/sacred_sources.duckdb** 项目统摄史观第 11 章（法哲学与政治历史哲学）；**02-sacred源材料/sacred_sources.duckdb** 项目统摄史观第 19 章（历史解释学与权力）；**02-sacred源材料/sacred_sources.duckdb** 项目统摄史观第 21 章（革命与改革：历史方法论） ［A］<!-- foundation-writeback: NetBSD Foundation | NetBSD Foundation 政策文件 -->**NetBSD Foundation 史料**（NetBSD Foundation 政策文件，下载日期 2026-07-26）：
 - de Raadt 撤权事件档案；OpenBSD 创建史料；BSD fork 史研究；OpenBSD 官方 changelog（<https://www.openbsd.org/plus.html>）；deraadt 在 netbsd-src 末条 commit. netbsd-src 仓库 [DB/OL]. 1994-12-17T23:12:41Z. commit: 699d2a37b0e3；deraadt 在 openbsd-src 首条 commit. openbsd-src 仓库 [DB/OL]. 1995-10-18T08:37:01Z. commit: df930be708d5；deraadt 在 openbsd-src 当日连续 commit. openbsd-src 仓库 [DB/OL]. 1995-10-18T08:37:01Z—12:22:00Z. commits: df930be708d5, 23993aedadda, 70e96dcb50e3 等 ［A］<!-- foundation-writeback: NetBSD Foundation | NetBSD Foundation 历年财务报告（2004-2025） -->**NetBSD Foundation 史料**（NetBSD Foundation 历年财务报告（2004-2025），下载日期 2026-07-26）：
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

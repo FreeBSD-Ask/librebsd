@@ -267,7 +267,7 @@ _consistency_check.py
 *.mp3
 /04-现代研究文献/03-文献下载/.models
 *.pdf
-*.pdf
+*.epub
 /04-现代研究文献/05-参考文献全文数据库
 /03-原始史料库
 /03-原始史料库
@@ -389,3 +389,4 @@ _backup/disk_layer_pre_p211_20261002.tar
 /login-db/txt_ia
 /login-db/txt_online
 /specs
+/_audit_tmp

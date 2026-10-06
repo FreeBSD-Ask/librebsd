@@ -88,3 +88,14 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. <https://www.bsdnow.tv/191>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.5913 -->
+**一手刊文**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-7-054`；login 逐条遍历判定采纳）
+
+该记录为 ;login: 2008年2月号（Vol.33 No.1）的目录页与刊头信息，含编辑名单、USENIX 出版信息及各栏目文章标题列表。属纯目录行/刊头噪声，无具体历史主张内容；其中 Plush、Logical Domains 等文章标题仅具索引价值，正文未随附，无法承载 BSD 史专题论证。。引用时按 L1 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.5916 -->
+**一手刊文**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-7-055`；login 逐条遍历判定采纳）
+
+该记录为 ;login: 2008年2月号（Vol.33 #1）的目录页与刊头信息，含编辑名单、USENIX 出版信息及本期文章标题列表。作为目录/刊头噪声，不含独立历史主张；其价值仅在于为同期具体文章（如 LISA '07 报告、Pete's All Things Sun 等专栏）提供定位索引，本身不构成 BSD 史或 UNIX 商业化脉络的证据。。引用时按 L1 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

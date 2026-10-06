@@ -55,3 +55,8 @@ volume: 第18卷-全球社区地区bsd史
 - 立场文件；演讲视频；邮件列表；媒体报道 ［A］
 - 作者不详. 用户组档案[Z]. 年份不详；作者不详. 邮件列表[EB/OL]. 年份不详；作者不详. 个人回忆[Z]. 年份不详 ［A］
 
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

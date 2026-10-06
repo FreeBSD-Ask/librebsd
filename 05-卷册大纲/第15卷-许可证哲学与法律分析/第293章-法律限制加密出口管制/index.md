@@ -61,3 +61,8 @@ volume: 第15卷-许可证哲学与法律分析
 
 - Junger v. Daley, 225 F.3d 732 (6th Cir. 2000)[Z]. 2000.
 
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

@@ -26,3 +26,44 @@ volume: 第17卷-政治制度与社区治理
 ## 文献
 
 （待补：Ackerman B. The Decline and Fall of the American Republic[M]. Harvard University Press, 2010；Skowronek S. The Politics Presidents Make: Leadership from John Adams to Bill Clinton[M]. Harvard University Press, 1997；Diffie W, Landau S. Privacy on the Line: The Politics of Wiretapping and Encryption[M]. Updated ed. MIT Press, 2007；[DB:references_fulltext:chapter_matches:chmatch_4166]；[DB:references_fulltext:chapter_matches:chmatch_4228]）
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

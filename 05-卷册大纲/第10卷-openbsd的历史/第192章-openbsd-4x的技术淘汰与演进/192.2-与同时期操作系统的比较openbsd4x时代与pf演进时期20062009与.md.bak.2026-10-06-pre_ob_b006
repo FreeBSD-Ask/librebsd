@@ -1,0 +1,720 @@
+# 192.2 与同时期操作系统的比较：OpenBSD 4.x 时代与 pf 演进时期（2006-2009）——与 FreeBSD 5.x/6.x/7.x（pf 移植）、NetBSD 4.x、Linux 2.6（iptables/netfilter）、Windows（基础防火墙）的对比
+
+## 192.2.1 FreeBSD 5.x/6.x/7.x（pf 移植，2004-2008）
+
+**要点**：FreeBSD 在 OpenBSD 4.x 同期为 5.x/6.x/7.x（2004-2008），将 pf 防火墙从 OpenBSD 移植——freebsd.duckdb 显示 FreeBSD 于 2004-02-26 由 Max Laier commit 5c45a928b954 "Vendor import of OpenBSD's packet filter (pf) as of OpenBSD 3.4" 首次移植 pf（5.3 周期；FreeBSD 5.3 发布于 2004-11），后续 pf 3.5 于 2004-06-16 import（commit 32b30983561e），pf 3.7 于 2005-05-03 import（commit f0d663ded81d）；FreeBSD 同时保留 ipfw 与 ipfilter，三者并存；原大纲称 “FreeBSD 6.x/7（2005-2008）将 pf 防火墙从 OpenBSD 移植（2005 起）” 系误记——FreeBSD pf 移植始于 5.3 周期（2004-02-26 vendor import；5.3 发布 2004-11），非 6.x（2005）
+
+**史料**：freebsd.duckdb freebsd-src 仓库 commit 5c45a928b954（2004-02-26 Max Laier "Vendor import of OpenBSD's packet filter (pf) as of OpenBSD 3.4”）、commit 32b30983561e（2004-06-16 Max Laier “Import pf from OpenBSD 3.5”）、commit f0d663ded81d（2005-05-03 Max Laier ”Import pf from OpenBSD 3.7"）；FreeBSD 5.3/6.x/7.x Release Notes；OpenBSD 4.x pf 演进 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：pf 从 OpenBSD 流向 FreeBSD 是 BSD 许可证 “允许 fork 不强制回馈” 特性的具体显现——FreeBSD 可自由移植 pf 而无需 OpenBSD 许可，但 FreeBSD 须自行维护移植版本的同步与本地化
+
+**辨析**：FreeBSD 的 pf 与 ipfw 并存，OpenBSD 4.x 以 pf 为唯一防火墙——FreeBSD 选择多防火墙并存（pf/ipfw/ipfilter）以适配不同用户需求，OpenBSD 选择 pf 独占以简化维护与确保一致性，二者策略各有适配
+
+**文献**：freebsd.duckdb freebsd-src 仓库 commit 5c45a928b954、32b30983561e、f0d663ded81d；FreeBSD Release Notes [EB/OL]. <https://www.freebsd.org/releases/>；OpenBSD 4.x Release Notes [EB/OL]. <https://www.openbsd.org/plus.html> ［A］
+
+## 192.2.2 NetBSD 4.x（2007）
+
+**要点**：NetBSD 在 OpenBSD 4.x 同期为 4.0/4.0.x（2007.12 release），以 NPF（后引入）前的 ipf/PF 支持与多平台见长；NetBSD 4.x 也移植 pf，但 OpenBSD 4.x 是 pf 的创新与维护中心
+
+**史料**：NetBSD 4.x Release Notes（<https://www.netbsd.org/releases/formal-4.0.html>）；NetBSD 4.x 防火墙支持文档；OpenBSD 4.x pf ［B］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：NetBSD 与 OpenBSD 同期共享 pf 代码，是 BSD 家族内代码自由流动的体现——NetBSD 选择移植 pf 与 ipf 并存以适配其多平台导向，OpenBSD 选择 pf 独占以适配其安全优先导向
+
+**辨析**：NetBSD 4.x 的防火墙生态以 NetBSD 文档为准——NetBSD 4.x 支持 ipf（IPFilter，Darren Reed（达伦·里德） 维护）与 pf，二者并存；NPF（NetBSD Packet Filter）由 Mindaugas Rasiukevicius 在 NetBSD 6.0（2012）引入，不在 4.x 时期
+
+**文献**：NetBSD 4.x Release Notes [EB/OL]. <https://www.netbsd.org/releases/formal-4.0.html>；NetBSD pf 指南；OpenBSD pf 指南 [EB/OL]. <https://www.openbsd.org/faq/pf/> ［B］
+
+## 192.2.3 Linux 2.6（iptables/netfilter，2006-2009）
+
+**要点**：Linux 2.6（2003.12 起）在 OpenBSD 4.x 同期以 iptables/netfilter 为事实防火墙，模块化解包与状态检测；iptables 语法复杂但生态广，pf 以简洁规则与锚点著称，二者在 2006-2009 形成防火墙哲学差异——iptables 以 Netfilter 框架的钩子链表组织规则，pf 以配置语言的规则集与 anchors 组织规则
+
+**史料**：Linux iptables/netfilter 文档（<https://www.netfilter.org/documentation/>）；OpenBSD **pf.conf(5)** 手册页（<https://man.openbsd.org/pf.conf.5>） ［B］
+
+**史观**：总纲第 5 条——没有必然性只有偶然性：iptables 模块化与 pf 简洁规则是 Linux 与 BSD 防火墙哲学差异的具体显现——iptables 的模块化提供灵活性但增加配置复杂度，pf 的简洁规则降低配置门槛但限制灵活性
+
+**辨析**：pf 后被多数 BSD 采用（FreeBSD/NetBSD/DragonFly BSD），iptables 在 Linux 主导；nftables 于 Linux 3.13（2014）引入作为 iptables 的现代替代，统一 Linux 侧防火墙配置
+
+**文献**：Linux netfilter/iptables 文档 [EB/OL]. <https://www.netfilter.org/documentation/>；OpenBSD **pf.conf(5)** 手册页 [EB/OL]. <https://man.openbsd.org/pf.conf.5> ［B］
+
+## 192.2.4 Windows（无 pf / 基础防火墙，2006-2009）
+
+**要点**：Microsoft 在 OpenBSD 4.x 同期以 Windows Firewall（XP SP2/Server 2003 起）提供基础包过滤，无 pf 概念、闭源不可审计；Windows 防火墙功能基础、闭源，pf 以开源、强大规则语言著称——二者的差异是闭源商业产品与开源社区项目在防火墙领域的不同路径选择
+
+**史料**：Microsoft Windows Firewall 文档（<https://learn.microsoft.com/windows/security/threat-protection/windows-firewall/>） ［B］
+
+**史观**：总纲第 5 条——没有必然性只有偶然性：闭源基础防火墙与开源强大 pf 在 2006-2009 形成差异——Windows 防火墙以 “开箱即用” 为预设（功能基础、配置简单），pf 以 “可审计与可编程” 为预设（功能强大、配置需学习）
+
+**辨析**：Windows 防火墙后期增强（Windows Vista 起 的 Windows Firewall with Advanced Security），但 pf 的规则表达力与开源审计仍领先——pf 的 anchors 机制允许动态规则替换，Windows 防火墙无等价机制
+
+**文献**：Microsoft Windows Firewall 文档 [EB/OL]. <https://learn.microsoft.com/windows/security/threat-protection/windows-firewall/> ［B］
+
+## 192.2.5 同期防火墙技术总览（2006-2009）
+
+**要点**：2006-2009 防火墙格局：OpenBSD 4.x 的 pf 为 BSD 事实标准（流向 FreeBSD/NetBSD/DragonFly BSD），Linux 以 iptables/netfilter 主导，Windows 基础防火墙闭源；pf 的简洁锚点规则影响后续 BSD 防火墙设计，成为 OpenBSD 4.x 的工程标志
+
+**史料**：各系统 2006-2009 防火墙史料；freebsd.duckdb freebsd-src 仓库 pf import commit；OpenBSD 4.x Release Notes ［B］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：pf 自 OpenBSD 4.x 外溢至 FreeBSD/NetBSD/DragonFly BSD，是 BSD 许可证促进跨 BSD 代码流动的具体显现——pf 的 BSD 许可证允许其他 BSD 项目自由移植与修改，无需 OpenBSD 许可
+
+**辨析**：防火墙选择受生态与许可影响——pf 的 BSD 许可促进跨 BSD 流动，iptables 的 GPL 许可限制其向 BSD 项目回流；OpenBSD 4.x 的 pf 创新源地位以 openbsd.duckdb openbsd-src 仓库 pf 相关 commit 的 author_date 与 freebsd-src 仓库 pf import commit 的 tagger_date 交叉确认
+
+**文献**：OpenBSD pf 指南 [EB/OL]. <https://www.openbsd.org/faq/pf/>；freebsd.duckdb freebsd-src 仓库 pf import commit；BSD 防火墙比较文档 ［B］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 2006-2009 年间：65,854 次提交。
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+<!-- ROW_MINE: usenet_mail.messages.194226 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076135`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+对比OpenBSD 3.3与3.5的top中SIZE与RES字段，推测3.5采用ELF后RES含共享库导致数值大于SIZE，属版本行为差异分析。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194292 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076149`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+公布OpenBSD 3.6 i386安装CD的iso种子下载地址，记录3.6发布期社区的镜像分发途径。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194381 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076161`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+答复获取3.6源码的cvsup标签，确认OPENBSD_3_6标签可用于拉取cvs源码，记录3.6源码发布方式。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194577 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-076191`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+tedu说明sleepycat DB已GPL化故OpenBSD停留在1.85，属开发者对DB许可与版本取舍的陈述。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194059 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076249`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告OpenBSD 3.6发布后tools目录在一段时间存在文件缺失与校验不符，后由ftp.openbsd.org修复，属发布分发问题引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194780 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076272`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+jose nazario 说明 ports stable 分支只收安全与稳定性补丁、不加新 port，维护两个发行版，out-of-date 脚本仅比版本号。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195122 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076324`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Frank 称早前版本的 OpenBSD 在 Blade 100 上无此问题，并建议检查 eeprom 的输入输出设备设置。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195736 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090574`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+确认升级到 3.5 后不必再设 loginterface，用 tcpdump 观察 pflog0 即可，属版本行为差异。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.196169 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090620`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+告知 OpenBSD Journal 已关闭，相关消息改在 undeadly.org 发布，属社区站点的变迁。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.196696 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090663`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+clvrmnky 撰文阐述 OpenBSD 的安全文化：发布前即重视安全并在整个维护周期持续复审，认为系统终会有漏洞，出事就修。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197389 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091251`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+询问 OpenBSD 对旧版本的维护政策，指出 3.3 树仍有零星提交但远少于最新版。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197850 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091314`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 Intergraph TD-3 上的 AIC-7770 控制器：3.1 启动盘正常，3.2 至 3.4 启动盘一律卡在 ahc 探测，为跨版本回归。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198240 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091359`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖主称 3.4 光盘在官方发布日 11 月 1 日之前的 10 月 27 日就寄到，是发布与邮寄流程的一则社区花絮。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198364 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091375`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖主称每个 0.1 版本都含大量实质改进，并提到发布节奏由每年一次改为每半年一次，认为交付及时性无可置疑。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198882 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091423`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+论者称 2.8 早已无补丁，当时仍在提供补丁的最新版本是 3.2，3.3 是下一个，并称 3.3 到 3.4 似乎无法升级。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199459 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091486`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Miod Vallat 指出 Ultra 5 在 pcons0 处冻结是已知缺陷，已在 3.3 及以后版本修正。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199638 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091499`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+询问 sparc64 移植进展是否提速，以及 3.4 版本对该平台的支持前景。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199926 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091526`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+William Ahern 发布基于 BSD auth 的 mod_auth_bsd 与 login_bsd，认证后清除口令，计划跟踪失败登录并延时。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201081 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091664`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+再次回应 ksh 编辑行为，重申 3.3 与旧版本之间的差异。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201448 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091703`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+询问能否像 3.2 那样通过 CVS 远程升级到 3.3 版本。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201757 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091735`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+询问 3.3 中面向桌面的软件包版本为何普遍偏旧，原因何在。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201925 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092150`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+答复指出补丁早已按惯例登在官网 errata31 与 errata32 页面，并给出这两个勘误页的链接。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202258 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092180`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+William Ahern 称 OpenBSD 优先目标不是性能，基准上会输给 Linux 与 FreeBSD，并提及项目内弃用 gcc 的讨论。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203096 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092290`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+William Ahern 在 current 构建失败帖中顺带询问 3.3 发布时间，并提到 propolice 与线程改动令远程升级有风险引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203761 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092377`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Niclas Sodergard 回应称该内核漏洞 OpenBSD 团队已在八月与十月修掉，并给出 errata31 页面引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204168 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092422`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+称该端口已无人维护，并提到半年一次发布前有一个月冻结，ports 基础设施正在重整引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204346 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092436`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 说明 snapshots/i386 被清空是因快照比 3.2 正式版更旧，新快照要等有值得发布的新内容才会做引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204591 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092462`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 指出若源码是从 CVS 取的 stable 分支则无需再打补丁，errata 补丁只面向不用 CVS 的人引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204878 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092497`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 回应 3.2 何时发布：文件出现在镜像站的那一刻即为发布，具体时刻属保密引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.205134 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092555`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Richard Caley 称参考 TCP 协议栈随 4.2BSD 于 1984 年前后发布引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206117 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092612`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+建议按 FAQ 逐版本执行 2.8 到 3.1 的升级步骤以更新基本系统引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206707 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094733`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖人称升级到 OpenSSH 3.4 后 cvs update 报 CVS/Root 指向不存在的仓库引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206956 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094753`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖人称相关 OpenSSL 补丁已公布在 Errata 页面，并已并入 -stable 源码树引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206991 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094760`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖人跨多台机器与多个 OpenBSD 版本实测磁盘速度仅每秒 4 到 7MB，远低于标称值引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207608 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094826`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Jan-Uwe Finck 称两天内已有三人报告被入侵且都未跟进 errata，劝其重装后再打补丁引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208482 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094932`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 说明 2.9 已被退役不会再出补丁，开发者无力维护所有过往版本引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208651 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094950`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 说明 ftp 发布版只做一次，补丁须安装后自行打上，好处是系统状态一目了然引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209249 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095836`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Melinda Shore 称赞 OpenBSD 最近两个版本都提前发布，并称正在从 CD 安装引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209441 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095871`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Stephen Marley 指出须用与 OpenBSD 版本匹配的 ports 树构建 MySQL，否则易出问题引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209857 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095928`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+nobody 判断 mplayer 在当时的 binutils 与 gcc 组合下无法编译，且含大量 i386 汇编优化，移植到其他平台很费劲引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210628 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-096013`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 3.0 release 加全部勘误后随机崩溃，6 个 1GB core 文件回溯一致指向 uvm 的 amap_ref引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211061 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-096048`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+称 SBLive 在 3.0 不受支持，驱动发布于其后且只在 current 中，可装快照或反向合并驱动引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211463 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097014`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 反驳服务器装编译器不安全的说法，认为能运行编译器就说明已能运行任意代码引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211915 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097075`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 指出 OpenBSD 不发布签名漏洞公告也没有漏洞上报公钥，与 FreeBSD、Debian 的做法不同，但他认可这种宽松模式引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212355 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097132`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户报告 Intel Pro/100 网卡在 OpenBSD 3.0 出现 SCB timeout，而 2.9 下运行正常，疑为版本回归引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213529 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097268`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+G.T. 在吉祥物讨论中表示，宁可要任何版本的河豚形象，也不要那些老套的守护进程形象引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214149 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-098759`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+从 2.9 升级到 3.0 后普通用户发信失败，sendmail 报无法建队列临时文件，附目录权限与升级步骤引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214722 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098829`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Timothy Lee 称 Linksys LNE100TX 有四种版本，其中三种用 dc 驱动、最老的用 de 驱动引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215011 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098864`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Mike Warner 报告 2.9 下 KDE 2.2.2 无法构建，qt 包缺 bin/uic 编译器，源码构建卡在 tsort 达四小时引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215571 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098920`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Jose Nazario 称 USR 56k v.90 PCMCIA 调制解调器在 OpenBSD 下工作良好，识别为 pccom3引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216000 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098954`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+walt 转述 Theo 对其 sendbug 的回复，称相关补丁几个月前就已发布引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.233370 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104633`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dan McGregor 为 OpenBSD 的 pnpdevs 补上 MOT15f0 的 com 与 pccom 标签引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234449 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-104720`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+de Raadt 列出 OpenBSD 2.3 支持的 Sparc 机型与显卡，并指明该版本不支持 UltraSPARC引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234589 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-104740`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Thomas H. Ptacek 发布安全公告，剖析 4.4BSD 虚拟内存允许只读描述符被读写映射，可借内存设备提权引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.235083 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-104811`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dug Song 表示想在 OpenBSD 上移植 PAO，并称 OpenBSD 2.1 的 APM 支持损坏、pccard 极简且拔卡会 panic引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216324 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105648`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖主张 OpenBSD 重在演进而非革命，版本号本身不重要，改进虽小但数量众多引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216776 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105693`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖根据连接后显示的 SNAP 协议版本推测 cvsup 服务器是否过时，并承认无法可靠判断引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217292 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105740`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 OpenBSD 2.9 端口的 trafshow 3.1 存在流量显示不全问题，改回 2.8 端口版本后恢复正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217892 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105797`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dave Uhring 引 openbsd.org 的 ports 说明，称 current ports 树不能配前一 release，八月十五日切换引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218518 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105880`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+anon 详述 OpenBSD 2.9 上 X10 串口通信失败，列出 pccom 设备与 BIOS 设置并问如何建 /dev 节点引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.231679 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106362`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Theo de Raadt 称不提供 ISO、并断言若提供则那将是最后一个版本引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232211 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106438`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Artur Grabowski 称 OpenBSD 各版本都缺像样 IDE 驱动，新驱动昨日入树，基准提升四到五倍引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228232 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106984`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Theo de Raadt 列出 2.6 内置 OpenSSH 的版本沿革，直至支持 ssh2 协议、不再需要 RSA 的 2.0引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228403 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107005`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dan McGregor 给出交叉编译 OpenBSD 的做法，gcc 目标设为 i386-openbsd，binutils 则按 NetBSD 配置引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.229236 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107089`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Eric Melville 说明 OpenBSD 不发布 ISO，因 CD 版面受版权保护，卖 CD 是维持项目的资金来源引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230250 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107196`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dominik Bodi 报 OpenBSD 2.6 在 PCChips M567 上因 apm 触发页错误，并给出禁用 apm 的临时办法引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218875 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107255`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Cedric 汇总 ports 树的两条分支与经 CD、CVS、FTP 获取和更新的步骤，并说明 current 在下一版发布前约两月切换引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220189 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107386`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+2.9 源码构建两次遇 sig11 导致工具链损坏，重装 comp29 才恢复引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220615 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107433`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+2.8 无法直接升级到 current，2.8 与 2.9 差异过大，须装快照或用补丁分支引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.225861 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107778`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖中问能否在 OpenBSD 上使用 LFS，并报 newlfs 树缺 lfs_cksum.c、须借用 NetBSD 版本引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.227583 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107980`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Peter N. M. Hansteen 称按以往经验预订的 OpenBSD CD 会在发布日当天开始寄出，并以其 2.6 包裹邮戳为据引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221154 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108081`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖者指出 2.9 恢复 Alpha 平台发布且仅提供 FTP 下载，质疑其优先级低于 Sun3 等平台引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221314 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108102`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Matthieu Herrb 称 XFree86 4.0.3 将随 OpenBSD 2.9 发布，现有 2.9 快照可供升级引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221733 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108149`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dave Uhring 称 OpenBSD 2.8 采用 BIND 4.9.7 是因为它是漏洞最少的版本，并建议查阅 CERT引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222218 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108225`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 2.6 至 2.8 各版本 ftp 写入时必 panic，换 IDE 与 SCSI 盘及控制器皆同引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222914 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108312`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Stian Grytoyr 称需 ipfilter 3.3.4 或更新版本即可支持 GRE，自己在 2.7 与 2.8 上验证可用引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.223687 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108418`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告服务器由 2.7 升级到 2.8 后，在约三十 GB 的传输中整机四次完全失去响应引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224100 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108449`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+说明 OpenBSD 不发二进制更新，须取源码补丁重编，并建议订阅 security-announce 与查 errata 页引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224693 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108532`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖主就 OpenBSD 2.8 发布时间的追问回帖，指向快照目录与开发进度引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.225727 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108617`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+deraadt 称 RSA 代码已入 -current，因专利未到期而推迟下个版本发布引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.183405 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371786`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 1 月 28 日，David Newman 回应 Joe 关于 FreeBSD 上 100 到 200 Mbps 网络全量抓包能否在 OpenBSD 上达到同等吞吐的疑问指出同等硬件下预期相似并指向 /etc/pf.os 与 ps.of(5) 手册页说明即便同一系统家族内抓包实现也存在差异。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.183843 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371917`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 3 月 1 日，Joachim Schipper 就 OpenBSD as Virtualbox guest 议题回帖转述 Peter 指出 VirtualBox 官方提示 OpenBSD 4.0 可能工作不佳而实测 OpenBSD 4.0 与 FreeBSD 6.2 均无法工作。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184057 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371990`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 3 月 19 日，Karel Kulhavy 转发 FreeBSD 宣布获得 Intel 同意重新分发无线固件的消息指出 FreeBSD 用户须先通过系统变量同意许可证方能使用 Intel 固件。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184309 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372071`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 4 月 5 日，Joachim Schipper 说明 OpenBSD 内核不具备 FreeBSD 式的文件系统 ACL 与 kern.ps_showallprocs 隐藏进程特性并表示 3.7 曾有过一次解决补丁建议改用其他系统或巧妙使用 systrace。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184695 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372197`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 5 月 7 日，Michal Soltys 实测 OpenBSD 的延迟确认行为与两种 Linux 发行版及 win2k/xp 不同指出后者均为每至多两个分组回一个 ack 且延迟不超过 RFC 规定的 500ms 上限。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.184850 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372249`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 5 月 18 日，Stuart Henderson 说明 syslog.conf 中加号前缀是 FreeBSD 扩展 NetBSD 连同其他改动一并引入而 OpenBSD 与他刚查的 Linux 版本都不支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.185471 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376404`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 7 月 10 日，Maxim Belooussov 补充实测 T42 配 ATI 显卡的 Linux FC6 在 X 运行时同样无法完成挂起与恢复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.185509 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376412`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 7 月 14 日，Timo Schoeler 在 IBM RS/6000 移植议题中回应 Doug Tutty 关于 AIX 非自由的质疑澄清自己从未称 AIX 为自由软件原意是用 GNU/Linux 作对比说明某些人的判断方式。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.185513 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376413`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 7 月 15 日，Vincent GROSS 就汇编直调 write 在 OpenBSD 下无输出致谢转引 Marcus Watts 指出 Linux 参数走寄存器且错误以负数返回而 OpenBSD 参数在栈上由内核按 C 约定就地取用错误改用 carry 标志指示。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.185763 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376474`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 8 月 12 日，Artur Grabowski 认同 Pawel Jakub Dawidek 对 FreeBSD syscall 包装器的批评，坦言自己一直不喜欢 systrace 也强硬抨击 sysjail，认为该方案落在错误的层次，假设太多容易出错应当弃用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.185893 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376512`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 8 月 30 日，Constantine A. Murenin 转发 Theo de Raadt 就 Linux 驱动违反 BSD 许可证事件的评论该事件由 undeadly 博客报道而由 Darrin Chandler 在 misc@ 提及引发。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186012 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376544`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 10 月 4 日，Lars Noodén 在 MS Exchange 替代讨论中回复引述 Joachim Schipper 关于前置部署 Postfix Exim 或 Sendmail 收集排队与存储邮件并限制与网络接触的建议。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186515 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376695`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 11 月 11 日，Matthew Szudzik提交compat_linux中mprotect补丁的OpenBSD 4.2更新版解释Linux mprotect系统调用所用标志位不受支持导致Mathematica等Linux应用无法运行。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.186523 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376699`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 11 月 11 日，Ingo Schwarze 回应 Adrian Fisher 询问 OpenBSD 上是否有类 Linux From Scratch 的做法指出 OpenBSD 设计为一致完整的操作系统且通过 ports 扩展无需用户自行拼装。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187031 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376813`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 12 月 17 日，Lars Noodén 在 BSD 与 Debian 对比讨论中说明自 1997 年起使用 Debian 而 OpenBSD 使用较晚主要用在雇主的工作站与服务器上接受 Debian 提供安全补丁回移与发布长期支持的特性。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187036 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-376816`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 12 月 17 日，Ingo Schwarze 在 BSD 与 Debian 对比讨论中反驳 Lars Noodin 可接受每 18 个月才迁移一次的说法指出这样升级频率过低最后约 6 个月将需自行回移安全补丁有时高度非平凡且工作量很大。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187180 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-377924`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 12 月 30 日，Jason George 转引 NetBSD 对该 ARM 平台移植的反映称数位开发者看过却评价不高，并称自持两台 x86 姊妹机 TS-5400 运行 OpenBSD，需在引导代码补 A20 与键盘控制器，板载 dc 桥接吞吐仅 5Mbit/s。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187316 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-377963`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 1 月 14 日，Stuart 回复 Lord Sporkton 多口卡作交换机之问，举 geeks.com A-3500-WB 单芯片五口交换机即 RTL8305SC，称芯片支持 VLAN 可配 EEPROM 软复位，或用 FreeBSD rlswitch 移植。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187532 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378007`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 1 月 31 日，ropers 答 frantisek holop 称多数 BSD 用 Berkeley Fast File System，Linux 默认允许挂载 FFS 但 Ubuntu 7.10 默认只读，mount -t ufs -o ufstype=44bsd 挂 OpenBSD 软盘。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187613 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378028`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 2 月 7 日，Dries Schellekens 认为 BSD 修复 ip_id 需维护状态笨拙，列 FreeBSD DragonFly NetBSD 的 ip_id.c，建议用 Niels Provos 分组密码计数模式配目的密钥，附 scanssh 3.2 及 djbdns PRNG。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187797 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378084`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 2 月 22 日，Alexander Hall 就 Janne Johansson 在 SunOS 5.10 缺 find -print0 的回应，给出 find 配 printf 与 xargs 的跨 Unix 替代写法，并指出 Solaris 未必有 xargs -0。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187841 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378093`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 2 月 25 日，Joachim Schipper 就 Jon 关于 AMD64 OpenBSD SMP 与 Debian Stable 对比的提问回应，称 OpenBSD 支持多处理器但暂未按多线程跨 CPU 并行，密集线程应用不如 Linux 用满资源。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.187942 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378124`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 3 月 5 日，Siju George 转引 Henning Brauer 称 OpenBSD 无 ng 接口并说明用接口组匹配 ppp0 等可克隆接口，指出 FreeBSD 有 ng 接口并给出 freebsdonline 链接。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188436 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378267`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 4 月 19 日，Stuart Henderson 转引 Red Hat 知识库称 tcp_tw_recycle 与 tcp_tw_reuse 引起 hoststated relayd 调试消息属良性产物并以 Oh so clever 讽刺红帽在后续发行版压低此消息。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188719 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378378`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 5 月 13 日，Nick Holland 说明 OpenBSD 将 sparc 与 sparc64 视为两个完全独立平台处理器与二进制均不兼容交叉编译需自行测试。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188872 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378433`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 5 月 26 日，Denis Doroshenko 就 Pierre Lamy 将十 kHz 误算为十毫秒的算术错误反问 十 kHz 实为一零零微秒 转引的 Claudio Jeker 反对 FreeBSD 上万级 HZ 设置。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189230 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388278`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 6 月 26 日，raven 回复 Jim Razmus 转引的质疑后称，可让对方使用 linux emulation 运行 VMWare Server，前提是确有 Linux 版可用，并为自己英语不佳致歉。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189550 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388393`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 7 月 25 日，Jesus Sanchez 转引 Marc Tooley 称把 NetBSD 汇编笔记移植到 OpenBSD 只需把 ELF notes 换成 OpenBSD notes，并追问能否用 readelf 把 .note.openbsd.ident 抽成对象文件。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189577 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388409`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 7 月 28 日，Nick Guenther 转引 Nick Holland 称这是 Windows 缺陷，Windows 对可移动设备虽支持多分区却只识别首个，故解析 OpenBSD 分区失败后不再看后面的 Windows 分区，应把 Windows 分区置于首位再接 OpenBSD。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.189844 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388512`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 8 月 28 日，Morris Roy 在 4.2-stable 上用 postgres 8.2.4 报共享内存段创建失败，转引 Stuart Henderson 称默认 32MB 装不下请求的 72MB，需调 kern.shminfo.shmmax，并转引其建议升级前先 dumpall。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190010 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388571`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 9 月 15 日，Toni Mueller 转述 Beavis 打算改用 OpenVZ 的方案并建议改用 KVM，并说希望 OpenBSD 也有类似方案。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190283 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388658`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 10 月 10 日，Raimo Niskanen 仅以加一附议 Denny White 对 Rosetta Stone for Unix 对照站的辩护，Denny 转引 Theo de Raadt 批评此类页面错误众多，并称站方欢迎更正且回复及时。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.190601 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-388754`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 11 月 3 日，John Jackson 建议在 Debian 主机上直接运行 OpenBSD 的 isakmpd 来与 OpenBSD 建立 IPSec VPN，用 apt-get install isakmpd 即可，标准 Debian 内核默认已启用相关模块。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191221 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397302`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 1 月 8 日，System Administrator 转发回复 Toni Mueller，认为 apcupsd 相比 nut 在异构 OS 环境兼容性更佳，部分 linux 发行版自带新版而 nut 过期或缺二进制包，Windows 侧 WinNUT 仅客户端且更旧。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191378 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397341`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 1 月 25 日，Tobias Ulmer 解释 Nepenthes 报错是因其可选使用 libcap 库设置 POSIX 1e 能力，这属于内核扩展但 OpenBSD 并不支持，在 Linux 等系统上则较为流行。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191510 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397367`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 2 月 4 日，Duncan Patton a Campbell 认为 Linux 内核驱动并不理会 bios 设置，而是直接与 16450 或 550 硬件对话，因此 ThinkPad 的串口在 Linux 下能开箱可用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191625 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397407`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 2 月 14 日，johan beisser 补充称面向 Windows 客户端时所有可用的 NFS 实现都很差，故 Samba 仍是最优选择，NFS 仅在纯协议效率上是明显赢家。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191858 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397475`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 3 月 5 日，Stuart Henderson 答 VNC 之问，指 TightVNC 服务端建立在很旧的 X 之上且可移植性差，建议改用 x11vnc 配 ssvnc 查看器，称 ssvnc 版本比 tightvnc-viewer 明显更快。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191944 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397495`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 3 月 13 日，ropers 判断 NFS 传输视频变慢源于 Linux 桌面预览生成任务与传输任务争抢文件访问，OpenBSD 端无需负责也无从修复，若使用 Nautilus 或 GNOME 可在预览设置里仅显示本地文件或更小尺寸文件的缩略图。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192162 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397567`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 8 日，Daniel Ouellet 认为 FreeBSD 目标是击败 Linux，而 OpenBSD 挑的是更难也更值得的 Cisco 与整个互联网，OpenBSD 在做这项挑战时干得更好。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192390 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397632`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 28 日，Ted Unangst 就与 FreeBSD 之间追求最大可移植性的文件系统选型作出技术评估，认为 FFS 应当可行且过去也确曾可行，但两者容易逐渐走偏，启用 FFS2 之后甚至有可能重新靠拢。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192454 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397656`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 5 月 4 日，Mark Shroyer iptables sysctl 翻译成 pf：net.inet.ip.forwarding=1 开转发，rp_filter 换 block drop in quick from urpf-failed 规则，另指出两处注释与行为相反。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192461 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397660`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 5 月 5 日，William Chivers 建议不要试图把 iptables 规则迁移到 pf，尤其不要依赖自动化转换工具，而应先想清楚防火墙的目标，然后从零开始用 pf 设计，这样能确定其工作正常并长期可靠维护。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192480 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397662`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 5 月 6 日，Claudio Jeker 说明 OpenBGPD 与 Quagga 默认配置取向的差异：OpenBGPD 尽量为使用者提供有点偏保守的好默认，而其它项目与厂商相信每台系统都必须表现一致，否则 CCIE 会无所适从。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192585 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397688`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 5 月 15 日，Mathias Schmocker 说他发现 TrueCrypt 也能充当引导加载器，在 TrueCrypt 密码提示上按 ESC 就能直接进入 OpenBSD 安装启动。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192773 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397732`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 6 月 2 日，Ted Unangst 简短回答指出 isdn4linux 不支持 usb-modem，因此在 Sparc64 上不可行。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192926 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397771`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 6 月 17 日，Peter Hansteen 说明编译器随机崩溃常因内存硬件故障，建议直接 pkg_add splix 用 PKG_PATH 指向合适位置，并提醒 OpenBSD 的 ports 与 FreeBSD 是彻底重写应查自身文档。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.193034 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397796`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 6 月 29 日，Gregory Colpart 实测 Linux NFS 客户端用 udp 配 OpenBSD 4.5 服务端有 25 Mbit/s，降到 OpenBSD 4.4 即便用 udp 也只有 400 Kbit/s。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。

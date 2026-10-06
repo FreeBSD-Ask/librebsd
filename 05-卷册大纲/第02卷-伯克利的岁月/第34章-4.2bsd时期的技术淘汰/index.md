@@ -43,3 +43,19 @@ volume: 第02卷-伯克利的岁月
 - Datamation 1983 年市场报告；Salus, P. (1994) “A Quarter Century of UNIX”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - 4.2BSD Release Notes (1983.8)；4.2BSD 网络源代码；Spafford E H. The Internet Worm Program: An Analysis [R]. Purdue University CSD-TR-823, 1988；CERT/CC CA-1988:01 公告；Bellovin S M. The Internet Worm and the FTP Security Workshop [R]. AT&T Bell Laboratories, 1989；Leffler S J, McKusick M K, Karels M J, Quarterman J S. The Design and Implementation of the 4.3BSD UNIX Operating System [M]. Reading: Addison-Wesley, 1989. ISBN 0-201-06196-1（2026-09-12 整改：行尾粘接的旧章号标题“## 33.9.3 …”残留已删除留痕）
 - Postel J. RFC 791: Internet Protocol [EB/OL]. (1981-09)[2026-07-29]. <https://www.rfc-editor.org/rfc/rfc791>；Postel J. RFC 793: Transmission Control Protocol [EB/OL]. (1981-09)[2026-07-29]. <https://www.rfc-editor.org/rfc/rfc793>；Braden R. RFC 1122: Requirements for Internet Hosts -- Communication Layers [EB/OL]. (1989-10)[2026-07-29]. <https://www.rfc-editor.org/rfc/rfc1122>；Jacobson V. Congestion Avoidance and Control [C]//SIGCOMM '88. Stanford: ACM, 1988: 314-329；Larsen M, Gont F. RFC 6093: On the Implementation of the TCP Urgent Mechanism [EB/OL]. (2011-01)[2026-07-29]. <https://www.rfc-editor.org/rfc/rfc6093>；Paxson V, Allman M, Chu J, Henderson M. RFC 6298: Computing TCP's Retransmission Timer [EB/OL]. (2011-06)[2026-07-29]. <https://www.rfc-editor.org/rfc/rfc6298>；Leffler S J, McKusick M K, Karels M J, Quarterman J S. The Design and Implementation of the 4.3BSD UNIX Operating System [M]. Reading: Addison-Wesley, 1989. ISBN 0-201-06196-1（2026-09-12 整改：行尾孤儿脚注定义 [^doubt-resolved-194]（Mach 内核存疑消解，与本文件无关）与 ［A］ 残留标记已移除留痕，脚注应迁回原存疑点所在文件）
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
