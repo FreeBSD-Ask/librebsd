@@ -288,6 +288,22 @@ CREATE TABLE IF NOT EXISTS concept_history (
     FOREIGN KEY (file_id) REFERENCES files(id) ON DELETE CASCADE
 );
 
+-- 表 9b：organization_index（组织机构索引分表，2026-10-06 119j 批 119d ★10 新增）
+-- category: 法人（基金会）/ 团队 / 职位；subject 取值＝四类历史主体（法人→基金会；团队·职位→团队与职位）
+CREATE TABLE IF NOT EXISTS organization_index (
+    id VARCHAR,
+    file_id VARCHAR,
+    category VARCHAR,
+    entry VARCHAR,
+    subject VARCHAR,
+    anchor VARCHAR,
+    aliases VARCHAR,
+    note VARCHAR
+);
+
+CREATE INDEX IF NOT EXISTS idx_organization_index_file_id ON organization_index(file_id);
+CREATE INDEX IF NOT EXISTS idx_organization_index_subject ON organization_index(subject);
+
 -- -----------------------------------------------------------------------------
 -- 数据库 D：03-原始史料库/original_sources.db
 -- -----------------------------------------------------------------------------
