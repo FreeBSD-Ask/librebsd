@@ -26,7 +26,7 @@ import duckdb
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
 WAVE = [
-    ("fhk_b068", "freebsd-hackers", "_outline_fhk_b068.py", 813),
+    ("fhk_b068", "freebsd-hackers", "_outline_fhk_b068.py", 1091),
 ]
 ROOT = "d:\\librebsd\\05-卷册大纲"
 RL = os.path.join(HERE, "review_logs")
