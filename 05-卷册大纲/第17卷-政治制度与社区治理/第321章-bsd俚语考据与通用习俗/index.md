@@ -28,3 +28,79 @@ volume: 第17卷-政治制度与社区治理
 
 - 项目史观总纲第 7、8、13、14、19、21、23、25 条；Raymond E S. The Jargon File [EB/OL]. Version 4.4.7. (2003)[2026-07-27]. `catb.org/jargon/`；McKusick M K. History of the BSD Daemon [EB/OL]. [2026-07-27]. `mckusick.com/beastie/`；The FreeBSD Documentation Project. Committer's Guide [EB/OL]. (1999-2022)[2026-07-27]. `docs.freebsd.org/en/articles/committers-guide/`；The NetBSD Project. Commit Guidelines [EB/OL]. (2024-05 revision)[2026-07-27]. Internet Archive 存档版本。<https://web.archive.org/web/2024/https://www.netbsd.org/developers/commit-guidelines.html>；freebsd-advocacy 邮件列表存档 [EB/OL]. [2026-07-27]. <https://lists.freebsd.org/archives/freebsd-advocacy/>（2026-09-12 整改：URL 尖括号错乱粘连修复——批次 C023 问题 6）；The FreeBSD Project. FreeBSD Manual Pages [EB/OL]. [2026-07-27]. `man.freebsd.org/cgi/man.cgi`；OpenBSD Project. OpenBSD Project Goals [EB/OL]. [2026-07-27]. `openbsd.org/goals.html`；第 22.22.1-22.22.5 节史料综合；参见相关章节 BSD 文化溯源与治理批评部分史料 ［A］
 - 上述第 22.23.1-22.23.8 节所有文献综合；项目史观总纲第 4、5、7、8、9、13、22、23 条 ［A］
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

@@ -2,8 +2,9 @@
 
 - **编号**：login杂志交接任务书-20261005
 - **日期**：2026-10-05
-- **状态**：**执行中 · 暂停交接**（T2 试点暴露阻塞缺陷；DB 零改写，可安全接手）
+- **状态**：**全链闭环（2026-10-06）：T1–T7 七项任务全部完成并终检通过**
 - **修订（2026-10-05 主理人复核反馈）**：执行架构定案——**全部 OCR/抽取/复核由 Python 引擎直调 API（≤120 路、KeyPool 轮替存储 key、复用既有 T1 线路），不派子代理**；spec v3「40 路子代理轮询池」作废（spec 已加 v3.1 注记）
+- **修订（2026-10-06 执行实况）**：主理人令「不修 sensenova lib，复用旧线路」——实际采用**旧线路** `api.senseaudio.cn/v1 + glm-5.3-flash + 存储 key 池轮替`（`script\_glm_line_20261006.py`，两引擎各换 import 一行，sensenova lib 一字未动）；探针实测文本抽取 4.1s、视觉转写 200，56 枚存储 key 中 30 枚活；T2 全链当日闭环（详见 §三）
 - **权威源**：`d:\librebsd\.trae\specs\execute-login-title-fix-and-figures-ocr\`（spec.md v3 已批准 / tasks.md / checklist.md）
 - **本任务书性质**：磁盘实况快照 + 接手操作指引（2026-10-05 23:30 盘查）；与 spec 冲突时以 spec 为准，数字以本任务书核验值为准
 
@@ -11,8 +12,15 @@
 
 ## 〇、一句话交接
 
-spec v3 已批准；**T1（密钥池/客户端库/冒烟）、T3（schema v2 增量）已完成**；**T2 管线六脚本已落盘并通过语法校验、队列 236 期已建、试点已跑两期**，但试点暴露**模型响应解析缺陷（推理链占据输出、无 content 键）属阻塞项**，且 **writer 从未实跑、数据库零改写**；T4–T7 未开始。
-**接手第一件事：修 `_sensenova_lib_20261005.py` 响应解析 → 重跑试点 → 再开 Python 并发全量（≤120 路，不派子代理）。**
+**T1–T7 全链闭环（2026-10-06），终检全绿**：
+- **T2 标题治理**：5,680 篇 100% 终态（reviewed_ok 938 / unresolved 4,742 带原因），A/B 复核＋仲裁 468 全落库；
+- **T4 figures OCR**：16,806 项 100% 终态（done 11,988 / skip 4,818＝幽灵 4,403＋无 colorspace 415），pending/failed 残留 0；
+- **T5 双通道复核**：A/B 各 11,988/11,988，quality 均分 96，仲裁 679，done 项 reviewed 100%；
+- **T6 入大纲**：938 篇 relevance v2 重判；outline_mappings v2（旧值标 superseded_by 4,439 行 + auto_keyword_v2 4,449 + model_confirmed_v2 279）；图文映射 13,976 行；87 卷《;login: 材料清单》→ `大纲映射/`；
+- **T7 收尾**：update_log id=5 COMPLETION 登记；folder_db_registry 刷新（size 442,511,360 / sha256 c8f04d7f… / v1.1.0）；终局 manifest `script/_fig_ocr_final_manifest_20261005.json`；README 终局化。
+- **终检全绿**：行数守恒（issues 419 / articles 6604 / chunks 41899 / relevance 6604 / figures 16806 / citations 662）、覆盖率 100%、二进制列 0、page 锚对位失配 0。
+全程旧线路（glm-5.3-flash，Python 引擎 ≤120 路，未派子代理）。
+**接手后续（可选）**：citations 662 行复核（status=auto）、修正文章引用抽查、按波提交材料清单与任务书。
 
 ---
 
@@ -61,18 +69,24 @@ spec v3 已批准；**T1（密钥池/客户端库/冒烟）、T3（schema v2 增
 
 ---
 
-## 三、T2 进度快照（关键）
+## 三、T2 进度快照（2026-10-06 全链闭环实况）
 
 | 项 | 状态 | 证据 / 实况 |
 |---|---|---|
-| 队列构建 | ✅ | `script\_task_queue_title_20261005.jsonl`，**236 期**（shard 0–39） |
-| 六脚本落盘 | ✅ | 全部 `py_compile` 通过（见 §4.1 清单） |
-| 试点 · issue 25 | ⚠ 单期完成但 0 修正 | `login_june-july-1978`（队列最小期，n=1）：窗口 1 → **模型条目 0** → 1 行 unresolved；已写入 done 断点 |
-| 试点 · issue 1 | ❌ 失败 | `unix_news_july-30-1975`（n=11）：两窗 × 3 次全部**响应解析失败** → 2 条 issue_failed；11 行 unresolved |
-| staging | ⚠ 未回写 | `script\_title_fix_staging_20261005.jsonl` 16 行（13 article_update + 1 issue_done + 2 issue_failed） |
-| writer | ⛔ **从未实跑** | `articles=6604`、`seg_review_status` 全 NULL、`needs_review=5680`；游标/隔离文件未生成 |
-| 数据库 | ✅ 零改写 | T2 全程只读；figures 全 pending、review_status 全 NULL（T4+ 未动） |
-| 冷却机制 | ✅ 生效过 | `_sensenova_cooldown_20261005.json` 曾有 key（尾 `qbyr1Z`）冷却 120s（现为陈旧条目） |
+| 队列 236 期 | ✅ 全闭环 | 引擎完成 232 期 + 重试 2 期（199/222）+ 试点 2 期；断点 236 行 |
+| 治理覆盖 | ✅ 100% | needs_review 5,680 → **reviewed_ok 938 / unresolved 4,742**（终态外残留 0） |
+| 复核 A | ✅ 938/938 | 1 单元（937）模型输出未转义引号，按模型原判解析恢复落盘 |
+| 复核 B | ✅ 146 期 | 有 corrected 行的期全部复核 |
+| 仲裁 | ✅ 468 篇 | A 判不一致 265 ∪ B 报问题 327，全部终裁 |
+| writer | ✅ 实跑收口 | staging 全清偿（offset=EOF）；applied/cycle/review 全部入库；隔离 2 行（历史，已重放成功） |
+| 数据库 | ✅ 守恒 | articles 6604 / figures 16806 / chunks 41899 / relevance 6604 / outline_mappings 27388 / citations 662 不变；二进制列 0 |
+| 报告 | ✅ | `script\_title_fix_report_20261005.json` |
+
+**执行实况（关键经验，T4 直接复用）**：
+1. **旧线路**＝`script\_glm_line_20261006.py`（api.senseaudio.cn + glm-5.3-flash + 存储 key 池轮替 + 429 冷却 + billing/invalid 冻结 24h + `extract_json` 含 `strict=False` 容错）；key 池 56 枚存储、30 枚活（`_glm_line_alive_keys_20261006.txt`）；**sensenova lib 未修未用**。
+2. **DuckDB 1.5.5 FK 限制（联网证实：duckdb#20246/#8988/#13819，无修复版）**：articles 被 4 表 FK 引用，对被引用行 UPDATE 含 LIST 列（authors）触发行重写并按**已提交状态**重查 FK——同事务删子行不可见、DROP CONSTRAINT 未实现。writer 已改造为**差量 UPDATE（未变字段剔除）＋ authors 变更走「子表存档落盘→删→改→回插」autocommit 三步回路 + 启动恢复协议**（`_title_fix_childcycle_20261006.jsonl`）；标量列 UPDATE 不触发、T4 的 figures 更新（无子表引用、ocr_text 为标量）**不受影响**。
+3. Windows 下 `os.replace` 游标文件会被并发读取占用——writer save_cursor 已带 5 次重试；监控时**勿在读游标的同时跑写者**。
+4. glm-5.3-flash 抽取大期时串值可能含裸换行（strict=False 解决）与未转义内嵌引号（偶发，重试或按原判恢复）。
 
 ---
 

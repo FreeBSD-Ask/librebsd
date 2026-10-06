@@ -70,3 +70,14 @@ volume: 第14卷-商业生态与企业案例
 - [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. <https://www.bsdnow.tv/633>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-14-034 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-14-034`；login 逐条遍历判定采纳）
+
+2000年6月USENIX ;login: 专栏记录：微软反垄断败诉后当事人认为其市场支配力短期内不会改变；同期索尼VAIO 505VE内置winmodem无法在Linux/BSD下工作、Win98恢复盘会破坏Linux分区，反映专有硬件与Windows预装生态对UNIX类系统桌面部署的实际阻碍。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-14-034 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-14-034`；login 逐条遍历判定采纳）
+
+2000年6月USENIX ;login: 专栏记录：微软反垄断败诉后当事人认为其市场支配力短期内不会改变；同期索尼VAIO 505VE内置winmodem无法在Linux/BSD下工作、Win98恢复盘会破坏Linux分区，反映专有硬件与Windows预装生态对UNIX类系统桌面部署的实际阻碍。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

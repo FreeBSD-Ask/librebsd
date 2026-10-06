@@ -99,3 +99,34 @@ volume: 第08卷-freebsd的范式转换
 <!-- dangan-20260908 消解回写 -->
 - Juniper. Networks. Junos OS Documentation [EB/OL]. [2026-07-27]. **<https://www.juniper.net/documentation/product/us/en/junos-os/>**[EB/OL]. 2026.［DKC-2326→fulltext:6152］；Juniper. Networks. Junos OS Evolved Documentation [EB/OL]. [2026-07-27]. **<https://www.juniper.net/documentation/product/us/en/junos-os-evolved/>**[EB/OL]. 2026.［DKC-2327→fulltext:6153］
 <!-- /dangan-20260908 -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-8-037 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-8-037`；login 逐条遍历判定采纳）
+
+1975年7月UNIX News记载，哈佛大学宣布其UNIX软件将向其他学术机构以仅收取复制成本的名义价格提供，系统已在重度使用的学生环境中运行，文档预计当年夏末完成，联系人为哈佛科学中心技术事务主任Lewis A. Law。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-8-038 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-8-038`；login 逐条遍历判定采纳）
+
+2000年11月;login:刊载的安全专家Blaine Burnham访谈中，当事人明确主张'安全不是附加物（security is not an add-on）'，并指出SOAP协议白皮书将安全视为他人问题、不声称支持安全服务；他还将糟糕代码视为降低攻击者成本的关键因素，反映2000年前后安全界对设计阶段安全的共识性焦虑。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-8-038 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-8-038`；login 逐条遍历判定采纳）
+
+2000年11月;login:刊载的安全专家Blaine Burnham访谈中，当事人明确主张'安全不是附加物（security is not an add-on）'，并指出SOAP协议白皮书将安全视为他人问题、不声称支持安全服务；他还将糟糕代码视为降低攻击者成本的关键因素，反映2000年前后安全界对设计阶段安全的共识性焦虑。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-8-038 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-8-038`；login 逐条遍历判定采纳）
+
+2000年11月;login:刊载的安全专家Blaine Burnham访谈中，当事人明确主张'安全不是附加物（security is not an add-on）'，并指出SOAP协议白皮书将安全视为他人问题、不声称支持安全服务；他还将糟糕代码视为降低攻击者成本的关键因素，反映2000年前后安全界对设计阶段安全的共识性焦虑。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

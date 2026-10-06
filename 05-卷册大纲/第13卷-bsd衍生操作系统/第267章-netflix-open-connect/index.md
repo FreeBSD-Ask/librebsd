@@ -135,3 +135,14 @@ volume: 第13卷-bsd衍生操作系统
 - [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. <https://vpetersson.com/podcast/s01e25/>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.3406 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-13-045`；login 逐条遍历判定采纳）
+
+Michele Crabb（NASA NAS 系统安全分析师）关于安全策略设计的经验性文章，属 ;login: 一手当事人文本（R8），反映 1990 年代中期大型计算站点 UNIX 运维与安全治理的组织政治现实。但其内容为通用安全管理实践指南（'Clip n Save' 清单、政治因素分析），与 BSD 发展史、UNIX 商业化脉络或社区分离聚合等本书专题无直接关联，五维度均难挂靠。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.5699 -->
+**一手刊文**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-13-044`；login 逐条遍历判定采纳）
+
+该记录为 ;login: 2006年4月刊（Vol.31 #2）的目录页与刊头信息，属数据库遍历中的结构性噪声形态。虽含 OpenSolaris、MINIX 3、John Lions 基金等与 UNIX 社区史相关的条目标题，但本记录仅提供篇名索引，无正文内容，不构成可承载历史主张的一手文本。目录行与刊头按既有规则通常不入库；若后续遍历到其中具体文章（如 OpenSolaris:The Model 或 Lions Chair 基金公告）可单独判定。。引用时按 L1 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

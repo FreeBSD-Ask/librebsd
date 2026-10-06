@@ -76,3 +76,49 @@ volume: 第17卷-政治制度与社区治理
 - [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. <https://www.bsdnow.tv/623>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-17-043 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-17-043`；login 逐条遍历判定采纳）
+
+Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客户-服务器串口控制台管理工具发布，此后十年依据用户需求持续演化并自由分发，成为 2000 年前后互联网公司系统管理员节省时间、减少宕机的关键运维工具。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-3-075 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-075`；login 逐条遍历判定采纳）
+
+2022 年 ;login: 刊文记载：FreeBSD 开发者 Robert Watson 等开发了 Capsicum 内核与库机制，允许程序精确声明自身所需能力并放弃获取新资源的权限，超过 50 个 FreeBSD 程序已改写以使用该机制；该软件能力路线与 CHERI 硬件能力架构共同构成内存安全方案谱系。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

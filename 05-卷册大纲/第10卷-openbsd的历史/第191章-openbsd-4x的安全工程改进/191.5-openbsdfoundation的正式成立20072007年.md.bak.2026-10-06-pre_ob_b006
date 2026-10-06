@@ -1,0 +1,402 @@
+# 191.5 OpenBSD Foundation 的正式成立（2007）——2007 年 OpenBSD Foundation 在加拿大注册为非营利组织，为项目提供资金与法律支持
+
+## 191.5.1 Foundation 成立的语境与过程
+
+**要点**：OpenBSD Foundation 于 2007 年在加拿大注册为非营利法人，由 de Raadt 与若干社区成员推动；成立动机是为接收捐赠、处理法律事务、为 hackathons 提供资金通道；先前 OpenBSD 资金长期由 de Raadt 个人管理，缺乏法律实体
+
+**史料**：OpenBSD Foundation 官方网站 about 页面（<https://www.openbsdfoundation.org/>）；de Raadt 在 misc@ 的基金会成立公告（<https://marc.info/?laccopenbsd-misc>）；加拿大政府非营利组织注册记录 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配〔存疑：原挂第 23 条“社区治理”系伪标签，按核查报告处方重挂待终核〕：Foundation 的成立是 OpenBSD 社区治理结构化的关键一步——先前项目资金由个人管理（de Raadt）的法律风险（个人责任、税务合规）通过 Foundation 的法人地位化解
+
+**辨析**：Foundation 成立的精确日期以加拿大政府注册记录与 OpenBSD Foundation 官方公告为准——Foundation 官网首页（**<https://www.openbsdfoundation.org/>**）记载为“Canadian not-for-profit corporation”，结合 Wayback Machine 2007-08-01 快照（**<https://web.archive.org/web/20070801000000/http://www.openbsdfoundation.org/>**）显示 Foundation 网站已上线运作，可佐证 2007 年说的合理性；具体日期须以加拿大工业部注册数据库查询结果为准 ［考据注：2026-07-28 联网考据留痕，模板句式已按规范精简（WO-004）；语义以正文与所引来源为准］；【2026-07-30 第二轮考据·Corporations Canada 数据库检索】经 WebFetch 加拿大 Corporations Canada 在线查询入口（**<https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fra/rcmudf.html>** 与 **<https://ised-isde.canada.ca/cc/lgcy/federallyincorporated/search-recherche/formulaire-form?lang=eng>**），两个 URL 均返回 404 Page Not Found，原 **jianyi.md** 提供的 Corporations Canada 数据库在线查询接口已失效或迁移；经 OpenBSD Foundation 官网 Bylaws（**<https://www.openbsdfoundation.org/foundation/bylaws.html>**）一手核验，bylaws 引用“Canada Not-For-Profit Corporations Act S.C. 2009, c. 23”（即 2009 年法案，2011-10-17 施行），结合 Foundation activities 页面 2014 年记录“transitioning to the New Canadian Federal Not For Profit Act”，可推断 Foundation 2007 年依据旧法案注册，2014 年过渡至 2009 年新法案；成立初期的董事会成员以 Foundation 官网记录为准；【2026-07-30 第三轮考据·三种成立年份说法来源辨析】针对 Foundation 成立年份的三种说法考据如下：（1）**2007 年说**——来源为 OpenBSD Foundation 官网首页（**<https://www.openbsdfoundation.org/>**）与 Wayback Machine 2007-08-01 快照（**<https://web.archive.org/web/20070801000000/http://www.openbsdfoundation.org/>**）显示 Foundation 网站已上线运作，且 1.5.3 节三大 BSD Foundation 对比表中 OpenBSD Foundation 注册年份列为 2007，社区共识（如 FreeBSD/NetBSD Foundation 对比资料）亦采此说；（2）**2009 年说**——来源为 Bylaws（**<https://www.openbsdfoundation.org/foundation/bylaws.html>**）第 1 条定义中引用的“Canada Not-For-Profit Corporations Act S.C. 2009, c. 23”，此为 Foundation **当前适用法案**（2014 年过渡后）的引用，而非 Foundation 的注册年份，2009 年为该法案的通过年份，2011-10-17 才施行，2014 年 Foundation 过渡至该法案，故 2009 年说系对“法案年份”与“注册年份”的混淆；（3）**2013 年说**——来源为 Foundation Activities 页面（**<https://www.openbsdfoundation.org/activities.html>**）首次公开年度财务报告的年份为 2013 年（链接 **<https://www.openbsdfoundation.org/financials/2013>**），Activities 页面中 2007-2012 年无条目，2013 年为首次公开财务报告的年份，故 2013 年说系对“首次公开年报年份”与“注册年份”的混淆；【存疑判定依据】Foundation 注册的最终核实路径为 Corporations Canada 数据库注册号查询，但该数据库在线查询接口 URL 已失效（见上述第二轮考据），无法直接核实注册号与注册日期，须待 Corporations Canada 数据库新入口或加拿大政府档案公开后方可补充确证；保留 [存疑脚注：OpenBSD Foundation 成立的精确日期与 Corporations Canada 注册号未在现有公开来源中定位，2007 年说为社区共识与 Wayback Machine 快照佐证，2009 年说与 2013 年说系对法案年份与年报年份的混淆，须以 Corporations Canada 注册记录为最终核实路径]；[2026-08-15 邮件列表库验证通过]：openbsd-announce 2007-07-25 Bob Beck “Announcing: The OpenBSD Foundation” 明确载明 Foundation 已完成 Canadian federal non-profit corporation 注册，2007-07-26 Theo de Raadt 在 openbsd-misc 公开确认，邮件列表一手证据与“2007 年说”一致。
+
+**文献**：OpenBSD Foundation 官方网站 [EB/OL]. <https://www.openbsdfoundation.org/>；de Raadt 邮件列表公告 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD Foundation Bylaws [EB/OL]. <https://www.openbsdfoundation.org/foundation/bylaws.html>；OpenBSD Foundation Activities 页面 [EB/OL]. <https://www.openbsdfoundation.org/activities.html> ［A］
+
+## 191.5.2 加拿大注册的法律地位
+
+**要点**：OpenBSD Foundation 在加拿大注册为非营利公司（non-profit corporation），具有独立法人地位；选择加拿大的原因包括 de Raadt 居住于加拿大阿尔伯塔省卡尔加里、避免美国 501(c)(3) 的复杂税务要求；Foundation 不直接持有 OpenBSD 商标，商标由 de Raadt 个人持有
+
+**史料**：加拿大公司注册数据库；OpenBSD Foundation bylaws（<https://www.openbsdfoundation.org/>）；de Raadt 关于法律实体的邮件列表发言（<https://marc.info/?laccopenbsd-misc>） ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配〔存疑：原挂第 12 条“法律结构”系自撰名目，按核查报告处方重挂待终核〕：法律实体形式（加拿大非营利公司）塑造了 OpenBSD 项目的资金与法律治理结构——加拿大非营利公司法的治理要求（董事会、年报、财务公开）与 OpenBSD 社区的 BDFL 治理（de Raadt 主导）形成双层结构
+
+**辨析**：Foundation 与 OpenBSD 商标的关系以 OpenBSD Foundation 官网与 de Raadt 邮件列表发言为准——商标由 de Raadt 个人持有而非 Foundation，这一安排保留了 de Raadt 对项目名称的控制权；加拿大与美国非营利法律差异以法律专家分析为准——加拿大非营利公司注册程序较美国 501(c)(3) 简单，但捐赠抵税待遇不同
+
+**文献**：加拿大公司注册数据库；OpenBSD Foundation bylaws [EB/OL]. <https://www.openbsdfoundation.org/>；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
+
+## 191.5.3 与 FreeBSD/NetBSD Foundation 的比较
+
+**要点**：FreeBSD Foundation 成立于 2000 年（美国 501(c)(3)），NetBSD Foundation 成立于 1994 年（USENIX 会议签署，2004 年获 501(c)(3)），均早于 OpenBSD Foundation（2007，加拿大非营利）；FreeBSD Foundation 资金规模最大、雇有专职员工，NetBSD Foundation 资金紧张，OpenBSD Foundation 介于两者之间；三大 Foundation 治理结构差异反映项目文化
+
+  **三大 BSD Foundation 对比**：
+
+  | Foundation | 注册年份 | 注册地 | 法律形式 | 资金规模 | 专职员工 |
+  | --- | --- | --- | --- | --- | --- |
+  | NetBSD Foundation | 1994 | 美国（USENIX 会议签署） | 非营利组织（2004 年获 501(c)(3)） | 较小 | 无 |
+  | FreeBSD Foundation | 2000 | 美国 Delaware | 501(c)(3) | 最大（2023 年约 240 万美元〔存疑：待年报原文复核〕） | 有（2010 年起） |
+  | OpenBSD Foundation | 2007 | 加拿大 | 非营利公司 | 介于两者之间 | 无 |
+
+**史料**：FreeBSD Foundation 官网与年报（<https://www.freebsdfoundation.org/>）；NetBSD Foundation 官网与年报（<https://www.netbsd.org/foundation/>）；OpenBSD Foundation 官网与年报（<https://www.openbsdfoundation.org/>） ［B］
+
+**史观**：总纲第 15 条——文化即形式主义〔存疑：原挂第 23 条“社区治理”系伪标签，按核查报告处方重挂待终核〕：三大 BSD 项目 Foundation 的不同治理结构反映各自社区文化——FreeBSD Foundation 的美国 501(c)(3) 与专职员工制适配其大规模商业生态，NetBSD Foundation 的非营利制与志愿者制适配其学术与可移植性导向，OpenBSD Foundation 的加拿大非营利制适配其小团队与独立性优先
+
+**辨析**：三大 Foundation 资金规模以各自年报为准——FreeBSD Foundation 2023 年收入约 240 万美元（年报公开）［存疑脚注：该收入额未经年报原文独立复核］，NetBSD Foundation 与 OpenBSD Foundation 年报资金规模较小；FreeBSD Foundation 雇佣专职员工的具体时间点以 FreeBSD Foundation 年报为准——2010 年起雇佣首位全职员工
+
+**文献**：FreeBSD Foundation 年报 [EB/OL]. <https://www.freebsdfoundation.org/>；NetBSD Foundation 年报 [EB/OL]. <https://www.netbsd.org/foundation/>；OpenBSD Foundation 年报 [EB/OL]. <https://www.openbsdfoundation.org/> ［B］
+
+## 191.5.4 注册文件与治理文档考据
+
+**要点**：OpenBSD Foundation 的注册文件、bylaws、董事会决议是研究其治理结构的核心史料；bylaws 详细规定捐赠接收、资金使用、董事会选举等流程
+
+**史料**：OpenBSD Foundation bylaws（<https://www.openbsdfoundation.org/>）；加拿大政府注册记录；Foundation 董事会会议记录 ［A］
+
+**史观**：总纲第 9 条——经验优先〔存疑：原挂第 25 条“0 信任原则”系伪标签，按核查报告处方重挂待终核〕：Foundation 文档考据须以实际经验为检验——bylaws 的文本须与实际运作（董事会更替、资金流向）交叉验证，仅凭 bylaws 文本无法确认实际治理实践
+
+**辨析**：bylaws 的修订历史以 Foundation 官网公布的版本与加拿大政府注册记录为准——不同版本的 bylaws 可能存在差异；董事会会议记录的公开程度有限，须以 Foundation 年报与邮件列表公告补充
+
+**文献**：OpenBSD Foundation bylaws [EB/OL]. <https://www.openbsdfoundation.org/>；加拿大政府注册记录；OpenBSD Foundation 年报 ［B］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 2007-2007 年间：16,998 次提交。
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+<!-- ROW_MINE: usenet_mail.messages.194241 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076139`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+jose重贴先前回答，叙述移植linux-igd到OpenBSD因底层库问题暂停，需自写PF规则插入器，属OpenBSD移植障碍转述。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195606 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090561`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出 OpenBSD 3.5 尚未支持 Sil3114 SATA 控制器，但该型号已列入 pcidevs，询问新机部署可行性。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197777 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091307`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+判断地址解析报错源于路由设置，并指出重装系统无益、症状会复现，属边际排障判断。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200055 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091540`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+William Ahern 报多线程应用随 SIGALRM 同步执行，3.3 之前正常，3.3 上信号处理期间再触发即崩溃。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201783 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091739`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 建议用二分法排查内核缺失选项导致 esp 不可用的问题。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203687 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092366`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+G.T. 回帖纠正来问 OpenUNIX 8 的人，称这里是 OpenBSD 新闻组，两者是完全不同的操作系统引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.205982 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092596`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+tedu 预告 3.2 将把更多系统守护进程放入 chroot，Apache 是重点引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208298 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094914`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ash 报告 IBM IntelliStation M Pro 装完 OpenBSD 3.1 后无法从硬盘引导，附 disklabel 与完整 dmesg引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209964 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095944`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Stephen Marley 建议用 3.1 snapshot 与 3.1 的 python 端口，称 3.1 原生线程在 FreeBSD 协助下已大幅修好引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211925 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097077`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Condor 报告其 Permedia II 显卡在 2.9 下降分辨率可正常，在 3.0 的 X 4.1.0 下同样问题无法解决引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212772 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097179`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+John 称 OpenBSD 用包转发 PF，但认为 PF 只在 3.0 及以后版本才有，并指向 faq6 说明引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212825 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097184`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Vadim Zaliva 称非奔腾机器上必须启用 ALTQ_NOPCC 内核选项，否则启动 altqd 会立刻内核崩溃引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212918 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097191`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Gilbert Fernandes 称已把公司网关迁到 OpenBSD 3.0 配 pf 与 ALTQ，认为 pf 性能优于 ipf 且不再回头引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213099 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097214`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Gilbert Fernandes 报告 3.0 上对 Realtek 8139 网卡启用 hfsc 失败报设备不支持，而 ALTQ 文档称 rl 驱动支持引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213177 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097225`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Sam Wun 报告用 nmap 扫 3.0 加 PF 的机器时被踢下线，日志满是 rtt 异常与 RTTVAR 增长引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213419 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097256`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+IPFilter 作者 Darren Reed 反驳 pf 更强之说，称 pf 仅有 iptables 部分功能，其自动跳过不匹配规则更像编译器强制优化引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213552 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097270`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Daniel Hartmeier 给出重定向连续端口范围的 rdr 写法，并称该语法已补入手册页引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213656 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097286`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Daniel Hartmeier 强调地址转换先于过滤规则求值，rdr 后包的目的地址已变为内网地址，故按原地址写的 pass 规则不会命中引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213748 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097296`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ian Mortimer 汇总桥接防火墙教程链接，并比较 pf 与 ipf 在桥上可过滤方向及规则优化上的差异引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213802 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097303`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Daniel Hartmeier 说明 DHCP 换址时可让 dhclient-script 重载 nat 规则，规则写接口名即可适应动态地址引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213910 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098731`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+给出动态地址下分文件配置 nat 的做法，用 ppp.linkup 与 linkdown 以 pfctl 载入与还原规则，并提示无地址时 pfctl 报错引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214148 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098758`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+称其 OpenBSD 加固文档已于十二月十五日更新到 3.0，指出最大变化是 PF 取代 IPF，sendmail 也有若干意外改动引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214590 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098810`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+论证 ZoneAlarm 与 pf 不可比，按程序放行且与目标同机有风险引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214856 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098849`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖给出允许外部 ftp 服务器回连 ftp-proxy 端口区间的 pf 规则并附说明引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215085 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098878`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Michael Cornwell 称大量修复只进下一个发行版而不出补丁，3.0 因换用 pf 而特殊，建议暂缓升级引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215746 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098930`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Gerrit Kuehn 称 ipf 可在单桥三网卡上做过滤，而 3.0 的 pf 用 in 与 out 规则似难支持该桥接情形引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216114 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098965`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Carson Harding 称自己从防火墙、网站、文件与邮件服务器到台式机与笔记本都用 OpenBSD，缺的只是一个不卡的图形浏览器引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216319 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105647`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖称版本号取 3.0 因排序优于 2.10，3.0 最大变化是以自研 pf 取代 Darren Reed 的 ipf引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216926 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105708`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖通告其 OpenBSD PPPoE 网关与防火墙搭建指南已更新，开始覆盖 2.9 版本引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217304 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105742`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+引用 current 变更页中引入 pf 的条目，认为这体现项目对该包过滤器的投入引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218110 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105830`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Sebastian Stark 称要试 PF 得跑 current 快照或自行从源码构建引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218264 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-105860`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Egern 称 OpenBSD 2.7 跑在 486DX-33、40MB 内存的 IBM PS/1 上，配两块 3Com 网卡做防火墙兼邮件服务逾一年引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218494 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105879`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Steve Vertigan 称 ppp 的 nat 与 alias 本地端口映射不按文档工作，并考虑退回 FreeBSD引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.231186 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106287`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Scott D. Wells 提到一本讲 Linux 与 OpenBSD 防火墙设置的书，并称不再用 Linux 做防火墙引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232897 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106530`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Julien Oster 实测 IPnat 的 rdr 只作用于进入的包，本机自己发出的包不会经过透明代理引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228954 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107058`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Stephen 记录 2.6 CD 版 ppp 在 modem busy 后 chat 失败需自源码重建，并给出 ppp.linkup 刷新 ipnat 写法引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230097 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107170`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Timothy J. Lee 询问 2.5 上如何透明放行主动 ftp，并指出 ipnat 的 ftp 代理会引发内核崩溃引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.219167 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107279`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marc Espie 称 ALTQ 数日前已并入 -current，下一步是 ipcomp，并称网络工具进展很快引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.219546 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107318`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+给出 2.9 新增 pf.c 的 cvsweb 地址，并称改动每十五分钟涌入一次引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.219875 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107349`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+讨论 Gnutella 客户端置于 ipnat 之后时所需的映射与转发规则引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220392 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107410`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ulf 指出当时 OpenBSD 尚无内置带宽控制，社区多人在找该功能，可先看 ALTQ引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220905 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107466`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+32MB 内存的 OpenBSD 防火墙不用交换空间，去掉 socks 与 squid 后 16MB 也够引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.225949 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107791`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖中引 ipf 指南说明 NAT 可用 0/32 自动取接口地址，并用 portmap 限定源端口范围引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226217 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107820`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+同一接口上 ipnat 的 rdr 无法完成重定向，改用 TIS FWTK 的 plug-gw 改写源地址后成功引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226318 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107842`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+GS 描述其桥接防火墙的入侵检测布置，包括把可执行文件与配置的 MD5 清单定时送往远端比对引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226704 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107892`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Peter 称其 90MHz 奔腾加 32MB 内存与三块 3c905b 的 OpenBSD 2.6 防火墙吞吐极佳，接近线速引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.227400 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107961`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Andreas Gunnarsson 警告放行 VPN 隧道会削弱防火墙，并给出 esp 与 ah 的 ipf 放行写法引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221307 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108099`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Jens Kaalby Thomsen 实测经桥接防火墙传输比直连慢约十倍，并给出两组吞吐数字引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221496 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108124`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖称改用 OpenBSD 2.8 做 NAT 后客户端极慢，把网卡从 TLan 换成 Via Rhine 芯片网卡后恢复正常且快于 Linux引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222148 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108215`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告改用 OpenBSD 后改写 dhclient-script 以在租约变化时刷新 ipf 与 ipnat 规则，并问 ipmon 日志格式引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222487 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108261`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Darren Reed 回应 ipnat 重定向问题，给出 rdr 规则的可用写法引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222781 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108298`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+David Hill 跟进称一月三十日重新 cvsup 并重建后 NAT 仍不通，而 2.8 发行内核正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.223237 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108360`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖者报告 2.8 防火墙下内网机器的 traceroute 全部失效，其余服务正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224096 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108447`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+称其 486 在 OpenBSD 下同样承担 NAT 与过滤，裁剪内核后体积约减半引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224476 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108488`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+引安全著作指出 ICQ 客户端多次出现拒绝服务与溢出问题，建议防火墙不放行 ICQ引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224613 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108513`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Majikthse Kato 报告 ipf 规则在 http 流量下使 NAT 整体挂起，附完整规则与状态表现象引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224680 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108530`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+nitsuj 在 BIG nat 线程中建议记录被拒包并查看状态表引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.183424 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371791`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 1 月 29 日，Bob Beck 就美国 501c 非营利结构的资金用途限制作说明指出此类实体须在境内支出大部分经费对美国项目不利并提及加拿大方案正在筹备 Jack J. Woehr 追问具体是哪类非营利结构时 Beck 以轻松的口吻回应并非 501c。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.185624 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-376442`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2007 年 7 月 26 日，Theo de Raadt 说明 OpenBSD Foundation 并非 OpenBSD 本身而是与之并列的独立机构用于为公司与个人提供可开具收据的捐赠渠道以促进更均衡的项目资助本人对此予以背书。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.188264 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-378209`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2008 年 4 月 4 日，John Wright 就 www.openbsd.org 首页基金措辞改动致 cvsweb 版本更新指出该措辞令他误以为 T恤本用于资助 OpenBSD 开发，表示对此颇感失望。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.191929 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397492`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 3 月 12 日，Damien Miller 认为 OpenSSH 用户多从 OS 供应商处获取，为 CD 提供多平台二进制发行所需的构建与验证基础设施超出当前活跃开发者规模，建议以向 OpenBSD 捐款方式支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192157 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397565`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 7 日，Owain Ainsworth 追问 Wim 之后其他捐赠是否也非过账，要求证明 kd85 与 Wim 本人未从中获利，既然应当直接过户到项目就不该有私吞空间。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192167 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397570`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 8 日，Jason George 称本次捐赠风波是把人工的中间人攻击注入到社会信任模型中，追问当时是否有人肉版的 tcpdump 在后台跑，想看输出。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.192170 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-397573`；2026-10-05 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2009 年 4 月 8 日，Jacob Yocom-Piatt 列出 kd85 三疑点：CD 应收款未清、捐赠分配到非 OpenBSD 用途、捐赠走人工中间人收款，并给出追责路径。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。

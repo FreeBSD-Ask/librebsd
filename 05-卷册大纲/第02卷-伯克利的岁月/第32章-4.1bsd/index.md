@@ -57,3 +57,9 @@ volume: 第02卷-伯克利的岁月
 - McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手完整列举 4BSD 特性清单）；4BSD Release Notes (1980.10) ［B］
 - 4BSD Release Notes (1980.10)；4.1BSD Release Notes (1981.6)；TUHS Unix Tree 4BSD 条目（<https://www.tuhs.org/cgi-bin/utree.pl?file=4BSD>，CSRG Archives Kirk McKusick 捐赠）（2026-09-12 整改：URL 内全角逗号移出链接）
 - McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手完整列举 12 人委员会名单） ［B］
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
