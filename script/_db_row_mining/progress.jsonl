@@ -1199,7 +1199,6 @@
 {"ts": "2026-09-27T06:40:08", "db": "freebsd-ports", "batch": "fpo_b178", "rows_read": 3000, "desc": "fpo_b178（offset 81000, n 3000, 847 块, 宿主 892,894,906,907,909）"}
 {"ts": "2026-09-27T06:40:23", "db": "freebsd-net", "batch": "fn_b174", "rows_read": 3000, "desc": "fn_b174（offset 54000, n 3000, 1091 块, 宿主 364,187）"}
 {"ts": "2026-09-27T10:02:59", "db": "freebsd-fs", "batch": "h5fs_b527_4", "rows_read": 6000, "desc": "h5fs_b527_4（offset 18000, n 6000, 1711 块, 宿主 11210,1214,1211,12210）"}
-
 {"ts": "2026-09-27T10:51:58", "db": "freebsd-questions", "batch": "fq_b077", "rows_read": 2000, "desc": "fq_b077（offset 152000, n 2000, 180 块, 宿主 921,923,924,10016,10017）"}
 {"ts": "2026-09-27T12:43:37", "db": "freebsd-fs", "batch": "h5fs_b527_4", "rows_read": 6000, "desc": "h5fs_b527_4（offset 18000, n 6000, 1711 块, 宿主 11210,1214,1211,12210）"}
 {"ts": "2026-09-27T13:25:43", "db": "freebsd-hackers", "batch": "fhk_b039", "rows_read": 2000, "desc": "fhk_b039（201 块, 宿主 1069,1588,1648, CL-RM-299335~CL-RM-299535）"}
@@ -1252,3 +1251,4 @@
 {"ts": "2026-10-06T14:27:29", "db": "freebsd-questions", "batch": "fq_b102", "rows_read": 2000, "desc": "fq_b102（offset 202000, n 2000, 359 块, 宿主 921,10016,10017,924）"}
 {"ts": "2026-10-06T20:52:23", "db": "freebsd-questions", "batch": "fq_b103", "rows_read": 2000, "desc": "fq_b103（offset 204000, n 2000, 399 块, 宿主 921,923,924,10016,10017）"}
 {"ts": "2026-10-07T00:01:42", "db": "freebsd-hackers", "batch": "fhk_b070", "rows_read": 1077, "desc": "fhk_b070（1077 块, 宿主 885, CL-RM-403349~CL-RM-404425）"}
+{"ts": "2026-10-07T06:12:39", "db": "freebsd-questions", "batch": "fq_b104", "rows_read": 2000, "desc": "fq_b104（offset 206000, n 2000, 364 块, 宿主 921,924,10016,10017, CL-RM-409629~CL-RM-409992）"}
