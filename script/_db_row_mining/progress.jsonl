@@ -1248,3 +1248,5 @@
 {"ts": "2026-10-06T03:32:45", "db": "freebsd-hackers", "batch": "fhk_b067", "rows_read": 813, "desc": "fhk_b067（813 块, 宿主 885, CL-RM-396473~CL-RM-397285）"}
 {"ts": "2026-10-06T06:49:22", "db": "freebsd-hackers", "batch": "fhk_b068", "rows_read": 1091, "desc": "fhk_b068（1091 块, 宿主 885, CL-RM-397825~CL-RM-398915）"}
 {"ts": "2026-10-06T09:11:19", "db": "freebsd-questions", "batch": "fq_b101", "rows_read": 2000, "desc": "fq_b101（offset 200000, n 2000, 293 块, 宿主 921,10016,10017,923,924）"}
+{"ts": "2026-10-06T14:21:13", "db": "freebsd-hackers", "batch": "fhk_b069", "rows_read": 1362, "desc": "fhk_b069（1362 块, 宿主 885, CL-RM-398916~CL-RM-400277）"}
+{"ts": "2026-10-06T14:27:29", "db": "freebsd-questions", "batch": "fq_b102", "rows_read": 2000, "desc": "fq_b102（offset 202000, n 2000, 359 块, 宿主 921,10016,10017,924）"}
