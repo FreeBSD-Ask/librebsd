@@ -143,15 +143,19 @@ SPINE = [(5, "BSD 伊始", 1974), (6, "4.3BSD", 1980), (7, "CSRG 后期", 1983),
 # 使卷题时段扩为（1991–1997），早于卷 11 起点 1992，破坏 N-a1 主干递增假设 → 移出编年主干锚；卷 14 时段一致性仍由 N-b4 校验。
 # 维护记录（2026-10-05）：卷 7 卷题时段经主理人裁定由（1986–1991）扩为（1983–1991）（其第 1 章 2BSD 平行支线起 1983），期望起始年由 1986 改 1983；起点序 1974→1980→1983 仍递增。
 # 维护记录（2026-10-06，119c 批）：卷 30 卷题主体化——「DragonFly BSD 的历史（2003–2026）」补主体标注为「DragonFly BSD 操作系统的历史（2003–2026）」（与卷 21／24「XX 操作系统的历史」平行）；SPINE 键同步「DragonFly BSD 的历史」→「DragonFly BSD 操作系统的历史」，起点年 2003 不变。
-HORIZ = [(8, "GNU 与自由软件运动"), (9, "独立操作系统的形成"), (10, "UNIX 战争"), (12, "UNIX 标准化"),
+HORIZ = [(8, "GNU 与自由软件运动"), (9, "独立操作系统的形成"), (10, "UNIX 战争"),
          (18, "BSD UNIX 技术专题史"), (19, "开源运动"), (20, "来源、参照与判定"),
          (33, "技术发展史的横向比较"), (37, "macOS"),
          (38, "BSD 软件作品史"), (40, "BSD 许可证与法律"), (41, "BSD 合规"),
          (42, "BSD–Linux 关系史"), (43, "遮蔽与文化挪用"), (44, "遮蔽与文化挪用"),
          (46, "BSD 治理专题"), (47, "DARPA"),
-         (49, "开源会议"), (51, "传言"), (52, "BSD 的传播载体"), (53, "会者定离")]
+         (49, "开源会议"), (51, "传言"), (52, "BSD 的传播载体"), (53, "会者定离"), (61, "商业 UNIX 市场与标准化")]
+# 维护记录（2026-10-07，S8 批）：删 (12, "UNIX 标准化")——卷 12 经 ★12 甲案撤销（三章分流：
+# ch1 研究线并入卷 1 ch7／ch2 标准化迁卷 61 ch2／ch3 继承之争迁卷 54 ch5），标准化语义由
+# 卷 61 ch2 承载；卷 61 为挂尾暂号，待役三 ★22 重排后随全库卷号一并登记。
 # 维护记录（2026-10-06）：主理人令卷 19/20 前移至 17/18（原 17/18 顺延为 19/20）——(17,"开源运动")→(19)、(18,"来源、参照与判定")→(20)、(20,"BSD UNIX 技术专题史")→(18)；卷 19（BSD UNIX 文化与哲学，原 19）不在 HORIZ，维持。
-BIB_HAS = [1, 3, 10, 15, 17, 18, 26, 27, 29, 32, 33, 36, 37, 50]
+BIB_HAS = [1, 3, 10, 15, 17, 18, 26, 27, 29, 32, 33, 36, 37, 50, 61]
+# 维护记录（2026-10-07，S8 批）：删卷 12 行（无登记）——BIB_HAS 原无 12 无需动；卷 61 挂尾（ch4 述评）登记＋越界自检边界改 max(vno)+1；卷 10 卷题改「UNIX 战争：阵营、联盟与体系整合」（关键词「UNIX 战争」不变，SPINE/HORIZ 键无需动）。
 # 维护记录（2026-10-06）：主理人令卷 19/20 前移至 17/18——卷末述评章随卷易位（原 19,20 → 17,18）；新 19/20（开源运动／来源参照）无卷末述评章。   # 2026-10-05 新建卷 36（116b 丙案）：原 ≥36 各 +1（macOS 36→37、编程之夏 49→50）＋新卷 36（有卷末述评章）   # 2026-10-04 110 号文（卷9分流＋卷14拆分）：原 [1,3,10,15,16,22,23,25,28,29,32,43] 按映射 15–47→+2 同步
 
 
@@ -223,11 +227,15 @@ def main():
         vols.append((m.group(1), re.sub(r"<[^>]+>", "", m.group(2)).strip(), m.start()))
     vols.append(("END", "", len(h)))
     vno = [int(v[0].split("-")[1]) for v in vols[:-1]]
-    okB = vno == list(range(1, len(vno) + 1))
+    # 2026-10-07 S8 批适配挂尾模式：卷 12 撤销＋卷 61 挂尾后，锚点序列为
+    # {1..11, 13..61}——「1..N 连续」放宽为「唯一且严格递增」；卷题中文序数改与
+    # 锚点号一致（原判「=文档序 i+1」在断档期整体错位 49 处误报）。
+    # 役三 ★22 全库重排后序列回到连续形态，本判据两种形态均覆盖。
+    okB = len(set(vno)) == len(vno) and all(a < b for a, b in zip(vno, vno[1:]))
     vtitle_bad = []
     for i, (vid, t, _) in enumerate(vols[:-1]):
         m = re.match(r"^第([一二三四五六七八九十]+)卷[　\s]*(.*)$", t)
-        if not m or cn2int(m.group(1)) != i + 1:
+        if not m or cn2int(m.group(1)) != vno[i]:
             vtitle_bad.append(t)
     print(f"B 卷: 锚点 {len(vno)} 个，1..{len(vno)} 连续唯一 ? {okB} | 卷题序数不符 {len(vtitle_bad)}")
     for t in vtitle_bad:
@@ -427,10 +435,23 @@ def main():
     n_bad, n_info = [], []
 
     def _seg(vn):
-        return h[vols[vn - 1][2]:vols[vn][2]]
+        k = vidx[vn]
+        return h[vols[k][2]:vols[k + 1][2]]
+
+    # 2026-10-07 S8 批：按锚点号取卷题（原按文档序 vols[vn-1] 索引，卷号断档期
+    # ——卷 12 撤销＋卷 61 挂尾——整体错位一位，N-a1/N-a3 报 49 处「判据键错位」误报）。
+    vmap = {}
+    vidx = {}
+    for k, (vid, t, _) in enumerate(vols[:-1]):
+        try:
+            n_ = int(vid.split("-")[1])
+            vmap[n_] = t
+            vidx[n_] = k
+        except ValueError:
+            pass
 
     def _plain(vn):
-        return re.sub("^第[一二三四五六七八九十]+卷\\s\\s*", "", vols[vn - 1][1]).strip()
+        return re.sub("^第[一二三四五六七八九十]+卷\\s\\s*", "", vmap[vn]).strip()
 
     def _yr(t):
         m = re.search("（(1[89][0-9][0-9]|20[0-4][0-9])", t)
@@ -438,7 +459,7 @@ def main():
 
     # 卷序索引表越界自检（2026-10-02 补，101 号文 §九 P0-3）——
     # 三表按卷号硬编码，卷序重排后须同步；越界即 FAIL，防静默失效。
-    _vt = _check_vol_tables(len(vols))
+    _vt = _check_vol_tables(max(vno) + 1)   # S8 挂尾期：边界＝最大锚点号+1（len(vols) 在断档期≠最大卷号）
     if _vt:
         n_bad.append("卷序索引表越界（卷序变更后须同步 SPINE／HORIZ／BIB_HAS）：%s" % _vt)
     n_info.append("卷序索引表越界 0 处（SPINE %d／HORIZ %d／BIB %d）"
@@ -485,24 +506,24 @@ def main():
     n_info.append("N-a3 横向卷 %d 卷，缺注 %d" % (len(HORIZ), len(miss_note)))
 
     # N-b1 卷导言恒设
-    no_ov = [i + 1 for i in range(len(vols) - 1) if '<p class="vol-overview">' not in _seg(i + 1)]
+    no_ov = [vn for vn in sorted(vidx) if '<p class="vol-overview">' not in _seg(vn)]
     if no_ov:
         n_bad.append("N-b1 缺卷导言 %d 卷：%s" % (len(no_ov), no_ov))
     n_info.append("N-b1 卷导言缺失 %d 卷" % len(no_ov))
 
     # N-b2 述评章登记表（R55：按独立史料域判定，设与不设均登记）
     BIB = {v: "有" for v in BIB_HAS}
-    for vn in [i + 1 for i in range(len(vols) - 1) if (i + 1) not in BIB]:
+    for vn in sorted(set(vidx) - set(BIB)):
         BIB[vn] = "E1：编年卷或专题卷，述评以章末「本章书目述评」节承载，或由所属专卷承担"
     has_bib = []
-    for i in range(len(vols) - 1):
-        for c in re.findall(r'<h3 class="chapter"[^>]*>(.*?)</h3>', _seg(i + 1), re.S):
+    for vn in sorted(vidx):
+        for c in re.findall(r'<h3 class="chapter"[^>]*>(.*?)</h3>', _seg(vn), re.S):
             if "卷末书目述评" in c:
-                has_bib.append(i + 1)
+                has_bib.append(vn)
                 break
-    if set(BIB) != set(range(1, len(vols))):
+    if set(BIB) != set(vidx):
         n_bad.append("N-b2 述评登记表未覆盖全部卷：缺 %s"
-                     % sorted(set(range(1, len(vols))) - set(BIB)))
+                     % sorted(set(vidx) - set(BIB)))
     if sorted(has_bib) != sorted(k for k, v in BIB.items() if v == "有"):
         n_bad.append("N-b2 述评章实况与登记表不符：实有 %s ／ 登记 %s"
                      % (has_bib, sorted(k for k, v in BIB.items() if v == "有")))
@@ -529,7 +550,7 @@ def main():
     # 豁免：卷题无年代区间者不判；述评章不计。
     YR4 = re.compile(r'(1[89][0-9][0-9]|20[0-4][0-9])')
     b4_bad = []
-    for vi in range(1, len(vols)):
+    for vi in sorted(vmap):   # 2026-10-07 S8：遍历实际锚点号（挂尾断档期 12 缺席）
         vt = re.sub("<[^>]+>", "", _plain(vi))
         rm = re.search(r'（(1[89][0-9][0-9])[–\-—](20[0-4][0-9])', vt)
         if not rm:
@@ -558,7 +579,7 @@ def main():
               "14.11 分工”分句失据",
               "注因两章同迁入本卷而消解")
     b5 = []
-    for vi in range(1, len(vols)):
+    for vi in sorted(vidx):
         _clean = re.sub(r"<(script|style)[^>]*>.*?</>", " ", _seg(vi), flags=re.S | re.I)
         _clean = re.split(r"<script|<style", _clean)[0]   # 兜底：截断未闭合的 script/style 残段
         for t in re.findall(r"<li[^>]*>(.*?)</li>", _clean, re.S):
@@ -613,7 +634,7 @@ def main():
               "证据层级：当事人叙述", "从物质证据到文化解释", "尚未解决的问题：缺失档案",
               "ASLR 与 KASLR", "BDFL", "本章书目述评")
     sec_titles = _dd(list)
-    for vi in range(1, len(vols)):
+    for vi in sorted(vidx):
         seg = _seg(vi)
         for cm in re.finditer(r'<h3 class="chapter"[^>]*>(.*?)</h3>\s*<ul class="sections">(.*?)</ul>', seg, re.S):
             ct = re.sub("<[^>]+>", "", cm.group(1)).strip()
