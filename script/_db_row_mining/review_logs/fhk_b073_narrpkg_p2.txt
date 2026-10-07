@@ -1,0 +1,22 @@
+2602483|L4|Andre Albsmeier：2.2.5-STABLE 上 tar 期间反复 umount 挂载点触发系统冻结十秒并重启
+2602486|L4|John Birrell：将 _POSIX_THREAD_SAFE_FUNCTIONS 的 otherwise 情形理解为使相关函数成为可选项
+2602488|L4|John Birrell：libc 中 cerror 应调用 __error 而非全局 errno，否则不支持内核线程
+2602489|L4|Kaleb S. KEITHLEY：ANSI POSIX ISO C 保留下划线开头的标识符，故弱 __error 应置于 libc 而非 Xlib
+2602490|L4|John Birrell：Xlib 不应知道操作系统如何提供 POSIX 接口，__error 属内部实现细节
+2602491|L4|bug.fe.up.pt：umount 内核调试 kgdb 命中 unmount 与 vfs_syscalls.c 断点
+2602495|L3|Chris Timmons 讨论不同系统正则库探测，提及 Linux regexp.h、Solaris regexpr.h、BSD POSIX regex.h
+2602500|L3|Nate Williams 宣布 JDK1.1.5 for FreeBSD 发布并给出官方下载地址
+2602502|L4|Ulf Zimmermann 表示 AMI 已拒绝提供编程文档、Mylex 已同意提供文档与免费控制器用于驱动开发
+2602504|L3|Ken Hansen 询问 3Com Fast EtherLink XL 网卡性能，并与 NetGear FA-310TX 做对比
+2602505|L4|Satoshi Asami 认为讨论在线扩大 RAID 阵列大小是无意义的建议，主张聚焦可用文件系统
+2602506|L4|Mike Smith：明确不建议目前购买 3Com Fast EtherLink XL
+2602507|L4|Greg Lehey 请他人解释 kgdb 停在 bwrite 时正在写磁盘块的问题，贴出 vop_stdbwrite 反栈
+2602521|L4|Curt Sampson 反驳 CSMA/CD 拥堵导致效率低是十年前已被推翻的旧观点，并举 Ethernet 3000 英尺 24 主机实测
+2602523|L4|Curt Sampson：测网卡 CPU 开销不必量中断处理，用 netperf 在同一空闲系统测总利用率对比即可
+2602524|L4|Terry Lambert：FFS 通过追加 cylinder group 支持扩大容量，仅存在轻微碎片问题
+2602526|L4|Satoshi Asami 质疑为何扩大 FFS 需要补丁，反问是否应告知
+2602527|L4|Terry Lambert：愿考虑补一个 FFS 扩大补丁，实为 tunefs 微调，可能与 soft updates 改动冲突
+2602528|L4|Greg Lehey：等 soft updates 改动就绪后再看 FFS 扩大补丁
+2602529|L4|sthaug：der mouse 为 NetBSD 写了一个 fsresize，可扩可缩，源码约 50KB 已贴
+2602530|L4|Mike Smith 指出 fsresize 支持双向调整容量极为有用，询问实际使用体验
+2602531|L4|ktsin 提议为 ntpdate 增加 -u 标志允许使用小于 1024 的非保留端口，请求合入源树

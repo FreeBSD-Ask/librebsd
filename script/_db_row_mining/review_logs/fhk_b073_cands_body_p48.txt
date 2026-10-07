@@ -1,0 +1,836 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604318 ###
+===== 库内序 145875 | PK 2604318 | 等级 L3 =====
+DATE: 1998-04-10T07:56:42+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet" 
+摘要: Jordan K. Hubbard 举出 Mozilla 组织派大巴车拉 Linux 支持者但 FreeBSD 未做营销的空缺实例
+
+> Where do I sign up?
+> "FreeBSD Marketing: Who Do You Want To Picket And Beat To Death With Stats
+> Today?"
+
+Heh, you joke, but Mike Smith and I were kicking ourselves today
+thinking "DAMN!  After that big Linux user's group meeting, a big bus
+went up to the Mozilla party several times with busloads of Linux
+advocates and what a wasted opportunity!  We could have had a guy in a
+Chuck costume standing there, handing out FreeBSD CDs (along with a
+little pamphlet describing how a Linux user might evaluate and
+possibly transition to FreeBSD) to each person getting off the bus.
+Damn damn damn!  We suck at marketing!"
+
+Our comments were half in jest, but little PR stunts like this, done
+in the proper humor, are seriously worth doing if you can pull them
+off.  It'd also be kinda nice if we pulled one off occasionally rather
+than just thinking about it afterwards, and for that we need better
+advance notification and planning when such opportunities present
+themselves.  Should any of you spot such an opportunity and need some
+help in making it happen, let us know!
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604319 ###
+===== 库内序 145876 | PK 2604319 | 等级 L3 =====
+DATE: 1998-04-10T08:35:22+00:00
+FROM: Alex Belits <abelits@phobos.illtel.denver.co.us>
+SUBJ: Re: Please create mozilla@freebsd.org mailling list
+摘要: Alex Belits 认为其他长线程里 mozilla 邮件与 FreeBSD 开发相关性更低因此更需要独立倡导邮件列表
+
+On Fri, 10 Apr 1998, Darren Reed wrote:
+
+> ARGH!  Can we please STOP all this mozilla/netscape email on hackers
+> and take it to its own mailling list PLEASE ?
+
+  It will be reasonable, however judging by the number and relevance to
+the FreeBSD development of mail in some other long threads here, there is
+more need in separate advocacy list.
+
+--
+Alex
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604321 ###
+===== 库内序 145878 | PK 2604321 | 等级 L4 =====
+DATE: 1998-04-10T08:45:06+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Jordan K. Hubbard: 认为对方读过头 与 FreeBSD 支持者交流后判断是 ignorance rather than malice
+
+> there. And after netscape denounced the rest of the Free OS world by
+> saying linux was their OS platform of choice instead of being fair about
+> it, they have clearly indicated they dont care about our talents, or our 
+> useage of things like CVS which we clearly have more knowledge in.
+
+Well, I think you may be reading just a _wee_ bit more into it than
+necessary - Netscape's attitude cannot be so easily encapsulated as
+this, and I just spent some time talking to one of Netscape's internal
+FreeBSD advocates at tonite's FreeBSD-SF meeting and he strongly
+suggested that ignorance rather than malice was chiefly at work in
+those statements.  More to the point, we DO have friends inside of
+Netscape and saying "Netscape can go take a flying &@%$*! at a rolling
+@%$#!!" would be counter-productive at best and hardly help their
+efforts at consciousness-raising from the inside.
+
+To put it another way, we should be demanding a seat at the tablek
+rather than attempting to piss on the table because someone didn't
+give us a seat. :-)
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604325 ###
+===== 库内序 145882 | PK 2604325 | 等级 L4 =====
+DATE: 1998-04-10T09:15:20+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Jordan K. Hubbard: 刚建好 CVS 库 只在 bento 上 Warner Losh 查改动 尚未向外部导出 cvsupd 配置也未做
+
+All of this is really premature.  I only just created the CVS
+repository and there is no cvsupd or anon cvs capability for it yet!
+In other words, you can log in on bento and check changes in, as
+Warner Losh (yay Warner) has already been doing, but it's NOT EXPORTED
+to anyone else yet!
+
+I don't freaking know yet how to set up all the appropriate cvsupd
+config files for that to happen (haven't had a chance to even look at
+it) and anon cvs is still a big question mark for me since I've
+already got one request concerning its support pending with Peter - I
+haven't heard back from him yet on just what it'd take for us to
+support it or what the security implications of it are.
+
+So the answer is that making it widely available is well within the
+plan and has always been within the plan, it's just not ready yet for
+the reasons outlined above and people are going to have to be just a
+little more patient here.
+
+					Jordan
+
+> 
+> Lets just put up the CVS server, make the damn thing widely available and
+> save the speculations for later.
+> 
+> 
+> 	Amancio
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604326 ###
+===== 库内序 145883 | PK 2604326 | 等级 L3 =====
+DATE: 1998-04-10T09:19:27+00:00
+FROM: "Matthew D. Fuller" <fullermd@futuresouth.com>
+SUBJ: Re: Netscape: Linux a top priority (news.com article)
+摘要: Matthew D. Fuller: 看到 NPR Linux 报道后动身 给 NPR 寄信 97 年 FreeBSD 2.1.6 划 100M 分区
+
+On Thu, 9 Apr 1998, Alan Batie wrote:
+
+> Just add a bit more to the general Linux indignation running around here,
+> check out yesterday's Linux piece on NPR at
+> 
+>     http://www.npr.org/news/tech/
+> 
+> (Real Audio needed)
+OK, this is moving *ME* off my lazy @$$.  And that's a job of moving.
+Last time I moved, it was in January of '97 to put a 100 meg partition for
+FreeBSD-2.1.6.  Here's a letter I just sent off to NPR.  Apologies in
+advance for toes stepped on/liberties taken/stupid things said.
+
+----------------------------------------------
+
+>From fullermd@futuresouth.com Fri Apr 10 04:17:21 1998
+Date: Fri, 10 Apr 1998 03:58:09 -0500 (CDT)
+From: "Matthew D. Fuller" <fullermd@futuresouth.com>
+To: atc@npr.org
+Subject: Alternative to MS
+
+I am gratified to hear the positive mention of free OS's in your show.
+It's been a long time since any large entity so respected as NPR showed
+such an alternative to expensive, commercial operating systems in such a
+good light.  I commend you for this and implore you to continue; there is
+much more information that could be covered in a longer segment in the
+future.
+
+Additionally, there is a point I'd like to bring forward here.  Linux IS a
+very nice operating system, but, as with any software, it cannot be all
+things to all people.  My choice for the systems I administer is FreeBSD.
+Linux is an excellent operating system for smaller systems, but larger
+servers require a more powerful, stable OS.  Systems such as Yahoo! and
+Walnut Creek CDROM run some of the most highly loaded servers in the world
+(Walnut Creek CDROM boasts the worlds largest public access general FTP
+site), yet both have chosen to run FreeBSD for it's unparalleled
+stability under immense loads.. Unlike Linux, which is a UNIX-like OS
+written by Linus Torvalds, FreeBSD is descended directly from 4.4BSD-Lite,
+the last official release of UNIX from Berkely, and is thus a true UNIX
+(ignoring present trademarks on the word).  Information on FreeBSD can be
+found at http://www.freebsd.org, and you may contact core@freebsd.org if 
+you'd like to talk to someone about set
+[…中段省略 49 字符…]  free software is wonderful; I for one should
+like to see this continue in the future, and hope to hear remarks also on
+FreeBSD, as well as other free OS's available such as NetBSD
+(www.netbsd.org), OpenBSD (www.openbsd.org), and the various releases of
+Linux (Caldera, Red Hat, SuSe, Slackware, etc).
+
+Regards,
+Matthew Fuller
+System Administrator, FutureSouth Communications, Inc.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604327 ###
+===== 库内序 145884 | PK 2604327 | 等级 L3 =====
+DATE: 1998-04-10T09:20:38+00:00
+FROM: Pierre.Beyssac@hsc.fr (Pierre Beyssac)
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: Pierre Beyssac: 认为 OpenBSD CDROM 靠项目自身资金出版所以不花钱营销 但 Theo 常带 CDROM 去安全或 Unix 会议
+
+According to Nicholas Charles Brawn:
+> remember. And come to think of it, I have yet to see *any* OpenBSD cd's so
+> far in Australia, I guess their camp isn't marketing themselves too
+> heavily either.
+
+AFAIK, the OpenBSD CDROM is edited on the OpenBSD project's own funds,
+so they don't have money to waste on marketing. On the other hand,
+Theo is present at most security and Unix related conferences where
+OpenBSD CDROMs are selling like hotcakes. IIRC you can also order from
+their Web site (www.openbsd.org).
+-- 
+Pierre.Beyssac@hsc.fr
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604328 ###
+===== 库内序 145885 | PK 2604328 | 等级 L4 =====
+DATE: 1998-04-10T09:20:48+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Jordan K. Hubbard: 不把 Mozilla 库放进标准 CVS 库 因为不适合 只好另建 Bento 恰好有空余空间
+
+> I would still prefer to see it on freefall, so that people can
+> cvsup it incrementally instead of having to download a package or
+> a port.
+> 
+> Jordan, why-did-you-do-it-this-way? 8-)
+
+Because I didn't want it to be part of the standard CVS repository,
+for obvious reasons (it doesn't belong there), and that meant creating
+a new repository wherever there was sufficient space to host it.
+Bento had sufficient space. :)
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604330 ###
+===== 库内序 145887 | PK 2604330 | 等级 L3 =====
+DATE: 1998-04-10T09:26:17+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Please create mozilla@freebsd.org mailling list 
+摘要: Jordan K. Hubbard: 建议把 PR 讨论立刻转到 -chat 由那边决定是否近期成立 freebsd-pr 邮件列表
+
+> ARGH!  Can we please STOP all this mozilla/netscape email on hackers
+> and take it to its own mailling list PLEASE ?
+
+Fair point.  All involved with the PR discussion, please redirect
+*now* to -chat and we'll decide there whether to form a freebsd-pr
+mailing list in the immediate or short term.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604336 ###
+===== 库内序 145893 | PK 2604336 | 等级 L4 =====
+DATE: 1998-04-10T09:48:02+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Any support for multitrack data CD ?
+摘要: Luigi Rizzo: 询问 FreeBSD 对多轨数据 CD 有无支持 用 mount_cd9660 能否读取非首轨的第二数据轨
+
+Since a CD burn was unexpectedly aborted today, i tried to close the
+trackleaving the next one open, and burned a second track on the disk.
+
+this went ok, (and if i look at the TOC on the disk i have two data
+tracks), but it seems that there is no way to tell mount_cd9660 to use
+a track different from the first data track ?
+
+I'd expect the fix to this to be quite simple, just read the TOC from
+the disk and use a different starting block, but i am ot sure if there
+is any support in the wcd driver for things like
+
+	/dev/wcd0track0
+
+would it be hard to implement it ? And where, perhaps in the wcd
+driver ?
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604339 ###
+===== 库内序 145896 | PK 2604339 | 等级 L3 =====
+DATE: 1998-04-10T12:13:24+00:00
+FROM: Andreas Klemm <andreas@klemm.gtn.com>
+SUBJ: libqt-1.39 snap: ld: -L differences between Linux and FreeBSD ???
+摘要: Andreas Klemm: 反映 libqt 1.39 快照在 FreeBSD 下用 ld 的 -L 目录列表编译困难 与 Linux 行为不同
+
+Have difficulties compiling the newest libqt snapshot.
+The seem to have a ld(1), that is able to get a list of
+directories (-L flags) first, which is valid for every
+further -l command option ...
+
+cd t1; gmake
+gmake[2]: Entering directory
+`/home/andreas/src/freefall/myports/work/qt/work/qt-1.39-19980406/tutorial/t1'
+gcc -L/home/andreas/src/freefall/myports/work/qt/work/qt-1.39-19980406/lib
+-L/usr/X11R6/lib  -o t1 main.o  -lqt -lX11 
+ld: -lqt: no match
+
+Error is, the libqt isn't searched in 
+	/home/andreas/src/freefall/myports/work/qt/work/qt-1.39-19980406/lib
+
+But this seems to run on other platforms...
+
+This surely would work ...
+gcc -o t1 main.o -L/home/andreas/src/freefall/myports/work/qt/work/qt-1.39-19980406/lib -lqt -L/usr/X11R6/lib -lX11 
+
+What's right, what's wrong ???
+
+Do I have to rewrite the Rules of every Makefile.in now ??? 
+14 subdirs: tutorial/t1 ...  tutorial/t14 ?!
+
+Or does somone have a patch for ld around ???
+
+-- 
+Andreas Klemm                             http://www.FreeBSD.ORG/~andreas
+What gives you 90% more speed, for example in kernel compilation ?
+               http://www.FreeBSD.ORG/~fsmp/SMP/akgraph-a/graph1.html
+                          powered by ,,symmetric multiprocessor FreeBSD''
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604340 ###
+===== 库内序 145897 | PK 2604340 | 等级 L3 =====
+DATE: 1998-04-10T12:37:52+00:00
+FROM: Cliff Addy <fbsdlist@federation.addy.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: Cliff Addy: 认为 4.4BSD 手册集只是全部 man page 的印刷版 有在线版且持续更新所以没什么价值
+
+On Fri, 10 Apr 1998, Pierre Beyssac wrote:
+
+> > The closest I could find to a real concern was that their 4.4BSD
+> > manual set didn't sell nearly as well as they had expected.
+> 
+> AFAIK, this is basically a printed copy of all the man pages...
+
+I looked at it once and that was my impression, too.  Given the fact that
+it's online and the online version is up to date, the manual set seemed to
+be of no value.  Reminds me of their Apache book, I think it was about
+version 1.1, totally outdated and useless (to me, anyway).
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604341 ###
+===== 库内序 145898 | PK 2604341 | 等级 L3 =====
+DATE: 1998-04-10T12:39:36+00:00
+FROM: Robert Withrow <witr@rwwa.com>
+SUBJ: Ntrigue croaks FreeBSD X servers?
+摘要: Robert Withrow: 报告 Ntrigue 让 FreeBSD 上 XFree86 3.3.1 和 3.3.2 挂死 Sun 上不出
+
+It seems as though recent Ntrigue clients cause my X servers on
+FreeBSD systems to hang (the pointer stops moving and keys are ignored,
+etc).  This happens on FreeBSD 2.1.6 with XFree86 Version 3.3.1 and
+FreeBSD 2.2.6 with XFree86 Version 3.3.2.  It doesn't happen on
+sun systems with similar versions of X11.  It didn't happen with
+earlier versions of Ntrigue.
+
+Anyone have similar problems or have a workaround?
+
+---------------------------------------------------------------------
+Robert Withrow, R.W. Withrow Associates, Swampscott MA, witr@rwwa.COM
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604342 ###
+===== 库内序 145899 | PK 2604342 | 等级 L3 =====
+DATE: 1998-04-10T12:51:19+00:00
+FROM: "Bryan K. Ogawa" <bkogawa@primenet.com>
+SUBJ: Easy ways to publicize FreeBSD (was: Re: Where is the FreeBSD Mozilla CVS server?)
+摘要: Bryan K. Ogawa: 提出改善 FreeBSD 宣传的办法之一是向应用开发者推销 FreeBSD 的能力
+
+In localhost.freebsd.hackers you write:
+
+>To put it another way, we should be demanding a seat at the tablek
+>rather than attempting to piss on the table because someone didn't
+>give us a seat. :-)
+
+>					Jordan
+
+This is a great quote!
+
+Here are some specific things I think "average folks" can do to
+improve FreeBSD's publicity:
+
+We can advertise what you can do with FreeBSD by reaching out to
+application developers.  This can be done in a couple of ways:
+
+- If you use an application under FreeBSD, drop the developer a note
+  and let him or her know!  It's great to be appreciated and increases
+  visibility.  If possible, let him/her know a bit about your setup.
+
+- If you make a port for an application, offer to contribute the
+  changes back to the original developer.  In addition, let the
+  developer know where to find the port (a specific URL), and suggest
+  that if he/she maintains a page with binary distributions that a
+  link to the port be made.  Explain that for many FreeBSD users a
+  port is even more convenient than a package.
+
+- If you have built a binary package of an application (or if you know
+  the location of a binary package, like one that's part of a release)
+  then let the original developer know about the location of the
+  package.  Do this even if you have a port location; more options are
+  better.
+
+- Ask them to post any future annoucements concerning their
+  application to comp.unix.bsd.freebsd.announce and freebsd-announce.
+
+This leads into my second suggestion:
+
+Actively ask those who provide FreeBSD products, services, and
+activities to post announcements to comp.unix.bsd.freebsd.announce or
+freebsd-announce .
+
+I have been reading comp.os.linux.announce for the past few months (to
+get a better handle on what's out there), and frankly, the number of
+announcements there is staggering compared to the FreeBSD equivalents.
+
+Many of these announcements are relevant to FreeBSD as well as Linux.
+A number even mention FreeBSD explicitly, but were not posted to the
+FreeBSD equivalents.
+
+I am planning to send email to all of the ones that are specific
+[…中段省略 887 字符…] g list).  With
+volunteers, anything that you do to get them in the door and active
+should increase participation, particularly something that's
+low-commitment.
+
+This is particularly true if the list is "friendly"--encourage folks
+joining it to introduce themselves and talk a little bit about their
+skills.
+-- 
+bryan k ogawa  <bkogawa@primenet.com>   http://www.primenet.com/~bkogawa/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604349 ###
+===== 库内序 145906 | PK 2604349 | 等级 L3 =====
+DATE: 1998-04-10T14:12:51+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Re[2]: Fw: Your Article "Freeware: The Heart & Soul of the Internet" 
+摘要: Jordan K. Hubbard: 新 newsletter 至多 2 周进 print me 流水线 面向各种层次 是 newsletter 不是技术期刊
+
+> When's the next newsletter? It looks like you might prefer to stick with
+> hacker level contributions. Is that impression correct?
+
+I hope to have it in the "print me" pipeline in at least 2 weeks or
+less.   I'm also open to any sorts of contributions, hacker level
+or otherwise.  It's a newsletter, not a tech journal. :-)
+
+						jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604353 ###
+===== 库内序 145910 | PK 2604353 | 等级 L4 =====
+DATE: 1998-04-10T14:38:33+00:00
+FROM: Wolfram Schneider <wosch@cs.tu-berlin.de>
+SUBJ: here is the FreeBSD Mozilla CVS server
+摘要: Wolfram Schneider: mozilla-cvs cvsup 镜像 cvsup.de.freebsd.org 每日 05:50 和 17:50
+
+On 1998-04-10 04:53:18 -0700, Jordan K. Hubbard wrote:
+> > The mozilla cvs tree is exported with the cvsweb.cgi script.
+> > http://www.freebsd.org/cgi/cvsweb.cgi
+> 
+> News to me - cool! :-)
+
+I setup a cvsup mirror for mozilla-cvs. 
+
+host: cvsup.de.freebsd.org 
+collection: mozilla-all 
+
+Update is twice a day at 05:50 and 17:50 middle european
+summer time (UTC+0200, 3:50 and 15:50 UTC).
+
+-- 
+Wolfram Schneider   <wosch@freebsd.org>   http://www.freebsd.org/~wosch/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604354 ###
+===== 库内序 145911 | PK 2604354 | 等级 L3 =====
+DATE: 1998-04-10T15:00:45+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server?
+摘要: Nate Williams: 说 FreeBSD.org 有指向其邮件列表的 Java 页面因此收到大量正面反馈
+
+> > I disagree. It is a cheap way to market FreeBSD and to show that we are 
+> > good Net Citizens .
+> 
+> And deliver nothing more than you get from mozilla.org. If people
+> would pick up mozilla like Nate et al have picked up the jdk, then you'd
+> have something to be proud of.
+
+Not to bang on my own drum, but because FreeBSD.org has a java page that
+points to a FreeBSD.org mailing list, I've gotten a *LOT* of positive
+response on our JDK efforts, including a number of folks from SUN and
+other OS's interested in helping the FreeBSD effort out. :)
+
+
+
+Nate
+
+ps. My personal feeling on the matter is that FreeBSD is doing a better
+job of creating a great product as a volunteer product.  This is both
+a strength and a weakness.  People get the mistaken impression that
+there is no support for our product this way, where with Linux you have
+RedHat and Caldera that you can whine to (with no response).  Sitting in
+corporate American, the people who make decisions don't remember what
+it's like in the trenches, and *really* honestly think that if they can
+send a check somewhere they'll get a response.  So, IMHO the *best*
+thing that Jordan can do is startup 'FreeBSD Inc.' right away that
+sells a value-added version of FreeBSD.  Unfortunately, this involves a
+fair amount of risk, since it'll be stepping on lots of toes (including
+WC's), but IMHO this is the only way FreeBSD will ever break out of it's
+'hacker-only' OS image.
+
+'nuff said.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604355 ###
+===== 库内序 145912 | PK 2604355 | 等级 L4 =====
+DATE: 1998-04-10T15:03:20+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Nate Williams: 警告把 Java 加回 Mozilla 会被 Sun 起诉 因当前 license 仅限教学 还会吊销 CVS 权限
+
+> For your info , given that the Net seems to be slow at bringing in 
+> Java back into Mozilla , I am thinking of doing it.
+
+For what it's worth, if you do it (given that you have access to the
+FreeBSD JDK), you'll potentially be sued by Sun, since you can' t use
+their technology except for 'educational' purposes with the current
+license scheme we've all signed.
+
+And, I'd have to yank your CVS priviledges to the tree and ask you to
+delete the FreeBSD bits. :(
+
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604356 ###
+===== 库内序 145913 | PK 2604356 | 等级 L4 =====
+DATE: 1998-04-10T15:29:36+00:00
+FROM: Matthias.Apitz@SOFTCON.de
+SUBJ: O2Micro OZ6832 && 3c589D && FreeBSD 2.2.6
+摘要: Matthias Apitz: 新笔记本 O2Micro OZ6832 桥 3c589D 网卡 FreeBSD 2.2.6 不受支持 自己加 PCI 部分
+
+
+I have a brand new notebook with a O2Micro OZ6832 PCI CardBus
+bridge and a 3Com Etherlink III 3c589D PCMCIA network card.
+
+This configuration isn't supported in 2.2.6-RELEASE and also
+didn't work with PAO for 2.2.5. I started to dig into the
+drivers and with the help of Nate Williams, David Hinds, folks
+from O2Micro and a good manual of the OZ6832 from O2Micro I
+added support for this controller into the PCI part (e.g.
+into usr/src/sys/pci/pcic_p.*) and I think the bridge is now
+configured properly but doesn't steer out the interrupts from
+the 3c589D *or* doesn't get interrupts from the 3c589D. At the
+moment I think the latter is true.
+
+BTW: all other functions like IRQ for card changes, card
+detection in user-land in the /etc/pccardd.conf etc. are working
+fine. Even the transfer of TCP/IP pkgs does work but every
+transmit causes a "timeout" and a call to the watchdog-routine
+because the ep driver doesn't see interrupts. Needless to say
+that both are also working in Win95.
+
+OK. I think the 1st half of the way is done and it's time
+to look into the ep driver itself. There are also some
+notes in usr/src/sys/i386/isa/if_ep.c that "The order in
+here seems important. Otherwise we may not receive interrups"
+(near line 678 of if_ep.c). Don't kow who wrote this
+comment and it also seems that the code was later changed
+by someone else and (maybe) now isn't working for 3c589D
+(it's only a guess at the moment). To check the logic
+in if_ep.c I need a programming manual of the 3c589D.
+Is someone able to provide me with such a manual?
+
+The file if_epreg.h contains a hint about an "Etherlink III
+Parallel Tasking EISA and ISA Technical Reference" "Beta Draft
+10/30/92" manual from 3Com. I checked the web pages of 3Com
+but did not found such a manual.
+
+Thanks in advance for any hint.
+
+	matthias
+-- 
+firm: matthias.apitz@sisis.de [voc:+49-89-61308-351, fax: +49-89-61308-188]
+priv: guru@thias.muc.de
+ PGP: Key fingerprint = 0C 01 F2 23 EC 17 A2 D5  46 2D 29 4C 0E 8B 7E 8F
+ URL: http://www.sisis.de/~guru/         http://www.muc.de/~thias/
+
+from USENET:
+People who run servers understand that flashy interactive interfaces have
+nothing to do with the underlying functionality and often get in the way.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604357 ###
+===== 库内序 145914 | PK 2604357 | 等级 L3 =====
+DATE: 1998-04-10T18:49:00+00:00
+FROM: Adam Turoff <AdamT@smginc.com>
+SUBJ: RE: Re[2]: Fw: Your Article "Freeware: The Heart & Soul of the  
+	Internet"
+摘要: Adam Turoff: 能否请 Walnut Creek 当 FreeBSD sugar daddy 因 Caldera RedHat SuSE 常送 CD
+
+
+Frank writes:
+> The Linux community uses add slicks and authorized re-sellers and
+> wholsalers tp promate their product.  Take a look at www.caldera.com or
+> www.suse.com
+
+Could we ask Walnut Creek to be the FreeBSD sugar daddy?  Caldera,
+RedHat and SuSE make money off of selling CDs but frequently drop off
+a case of current or near-current CDs for user groups to give away.  I   
+think
+I picked up 3 CDs of Caldera OpenLinux 1.1 from a recent
+tradeshow - one from LXNY and one or two from the Caldera booth.
+RedHat was there and may have had some CDs to give away too.
+
+(Remember, Linux CDs make great coasters!)
+
+Walnut Creek is shipping 2.2.6 RSN, and in an ideal world there would
+be no inventory of 2.2.5 left.  Realistically, there must be a few
+cases of CDs collecting dust or waiting to be destroyed.  I for one
+would volunteer to be one of a group of Johnny FreeBSDseeds around
+the world giving away FreeBSD-(N-1)-RELEASE CDs.  Worst case,
+it might get installed and Walnut Creek would have someone
+buying the Book/CD combo of FreeBSD-(N)-RELEASE and possibly
+N+1.
+
+Hell.  If Walnut Creek doesn't want to do it, why not just set up a
+PO Box to send your recently-obsoleted CD sets for
+evangelical redistribution?
+
+Evangelism doesn't _need_ to cost lots of money or become a jihad.
+
+The Linux movement is doing some things well.  If we can't learn
+from them it's our own damn fault.
+
+ -- Adam.  
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604360 ###
+===== 库内序 145917 | PK 2604360 | 等级 L3 =====
+DATE: 1998-04-10T16:38:10+00:00
+FROM: Peter Schwenk <schwenk@voicenet.com>
+SUBJ: Re: Re[2]: Fw: Your Article "Freeware: The Heart & Soul of the  Internet"
+摘要: Peter Schwenk: 在 Borders Books 看到 Complete FreeBSD 2nd Ed 认为 FreeBSD 需大推动提升知名度
+
+Just as a data point... I thought it was a good start that I saw copies of
+"The Complete FreeBSD, 2nd Ed." with the CDs and all in a large chain
+bookstore, Borders Books and Music.  Now, if it spreads to the book
+sections of large computer stores, like I've seen Linux do, we'll be
+getting somewhere.
+
+In my opinion, FreeBSD's just beginning to ramp up it's mindshare, but it
+needs a significant boost if it is going to compete with Linux.  Every
+chance I get, I tell any interested parties about FreeBSD.  Although I
+find FreeBSD fairly simple to install, I think if it is going to ever make
+any serious inroads, it will need simpler setup schemes for things like
+window managers.  People like GUIs, and I found getting a decent setup
+running a bit of a chore.  I hate bringing up RedHat (the Linux
+distribution with which I am most familiar), but they have a decent window
+manager setup right out of the box (even though it sorta looks like
+Win95).
+
+I think if the FreeBSD team spends a bit more time with making the GUI
+setup a bit more brainless, then it will make it easier to recommend to
+quasi-newbies.
+
+On 10 Apr 1998, Jason Nordwick wrote:
+
+> 
+> Frank Pawlak, on Thu 4/9/1998, wrote the following:
+> > 
+> > Such is true.  I am a "newish" FreeBSD user and SuSE Linux reseller.  I
+> > see a ready market for free "low cost" software in college bookstores,
+> > particularly those universities that have computer engineering and
+> > comsci departments.  Part of evangelism is marketing and market
+> > presence.  Having this OS on display at universities will attract a
+> > young audience the very people that are evangelizing Linux.
+> > Frank
+> > 
+> 
+> Would it be possible to have the Walnut Creek CDs in computer/bookstores,
+> as I see the Linux CDs ?
+> 
+> What would this take, just calling and marketing ?
+> 
+> jay
+> -- 
+> Join the FreeBSD Revolution.
+> Support the FSF, buy GNU.
+> http://xcf.berkeley.edu/
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-questions" in the body of the message
+> 
+
+- Peter Schwenk - schwenk@voicenet.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604364 ###
+===== 库内序 145921 | PK 2604364 | 等级 L3 =====
+DATE: 1998-04-10T17:40:50+00:00
+FROM: michael butler <imb@sarah.asstdc.com.au>
+SUBJ: Re: Re[2]: Fw: Your Article "Freeware: The Heart & Soul of the   Internet"
+摘要: michael butler: Walnut Creek 在做 但认为 CD 应发给 ISOC Developing Countries Workshops
+
+> Could we ask Walnut Creek to be the FreeBSD sugar daddy?  Caldera,
+> RedHat and SuSE make money off of selling CDs but frequently drop off
+> a case of current or near-current CDs for user groups to give away.  
+
+Walnut Creek already do this to some extent .. IMHO I'd much rather they'd
+be given to the groups they currently support, e.g. the ISOC Developing
+Countries Workshops held annually just prior to the INET conference*, than
+anyone else (thanks!).
+
+These guys may not have the "profile" that some seem to want FreeBSD to have
+in a commercial sense but, whilst I know that I run the coolest O/S
+currently available, I see no need to ram it down everyone's throat. The
+_fact_ that it's being used to hold an ever-increasing proportion of the
+'net together and promoting both a stable and low-cost entry to 'net
+connecivity and development says way more than any egocentric splattering
+the 'net with unsubstantiated opinion,
+
+	Michael
+
+* see http://www.isoc.org/inet98/net.shtml
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.3ia
+
+mQCNAzHgkA0AAAEEAOz4+nIIfWB9TFN8d+4jJVhqidOKHbSRgueofsIJsvLjCfp1
+3BwkDdvuKP4iR3DibhZ2Rq7dBiBS+qbTPWlCDn/zRakoqAzQaWNmb5e3ueAN/oIi
+mAEe3QQv0LdHnVDUja9ggWyQXFeMUDF7PkdpfM3AZpm/hjYk0hIU3H6iGYQlAAUR
+tCJtaWNoYWVsIGJ1dGxlciA8aW1iQGFzc3RkYy5jb20uYXU+iQCVAwUQMeCQDRIU
+3H6iGYQlAQGWhwP/TqngBL222Vjk5ooQ3JcNJuq0iaToQ4wrJJMfxMUkL/IpXSyR
+fSkZFwmc8AuLdrDmKLOMr3MJ/MRMPyU16GbsGXwZO3h7oe5QgY974mudFbacqN7L
+IUPplXwH/sd+LrC/RnkuG3aqag4ahtKMxZZeOMcyTdshZiP64N3Q1aCH6020Gm1p
+Y2hhZWwgYnV0bGVyIDxwbmkuYWIuY2E+iQCVAwUQNSi00xIU3H6iGYQlAQEBcAQA
+ubM4FR0MCFsTUW3H5R29kI+g/JKcdjcGtrg9a1xoptSRYPSwtbsdD4Qqy0Bj3b7P
+EaC2pHwICfk1lftjvBZEnUprypxTrYrVbSSyF9SjAbpxUByRC0onRE6PNBXCiILv
+55+TyNuD+sVEBDg7asnrHHRc+uLIuRfpiUr3MeaYhQ60H21pY2hhZWwgYnV0bGVy
+IDxpbWJAc2NndC5vei5hdT6JAJUDBRAyVeYmEhTcfqIZhCUBAYJ+BAC1qa5XNNuB
+LMAMu8l0+tcjYaeDPlSeCxGm39vw6R/MJGMyBoe8CD1IjCxDR4DD2kzJah/n58Pq
+nO+3fgoO1ENV9rcZE6M2+DZ8np82o3aeWwTHBlQ5LJW0hYlceFfLa1sXfXHLNrj1
+jMyWOwgDOYiw5J9+7v3bRPnE7jRcWmeqbg==
+=YFui
+-----END PGP PUBLIC KEY BLOCK-----
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

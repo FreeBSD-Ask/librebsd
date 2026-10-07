@@ -1,0 +1,796 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602441 ###
+===== 库内序 144001 | PK 2602441 | 等级 L4 =====
+DATE: 1998-02-27T01:59:33+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: Volume manager (was: SCSI Bus redundancy...)
+摘要: Greg Lehey：尚未修改 ffs，仍在测试 volume manager 驱动
+
+On Fri, 27 February 1998 at 10:53:56 +0900, Michael Hancock wrote:
+> On Fri, 27 Feb 1998, Greg Lehey wrote:
+>
+>> I have that already:
+>>
+>
+> [snip]
+>
+>> Any similarities with the Veritas Volume Manager are merely
+>> intentional.
+>
+> Did you have to change anything in ffs to get this working?
+
+No.  I may find I have to at some point, though.  I'm still testing
+the driver.
+
+Greg
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602443 ###
+===== 库内序 144003 | PK 2602443 | 等级 L4 =====
+DATE: 1998-02-27T02:32:09+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: _POSIX_THREAD_SAFE_FUNCTIONS, but no thread-safe functions
+摘要: John Birrell：援引 POSIX 2.9.3 节各函数条款补充说明 _POSIX_THREAD_SAFE_FUNCTIONS 定义关系
+
+Kaleb S. KEITHLEY wrote:
+> I'm looking at a 3.0-971225-SNAP machine, and <pthread.h> has
+> _POSIX_THREAD_SAFE_FUNCTIONS defined, but libc_r does not have any of
+> the thread-safe functions, e.g. getpwnam_r, gethostbyname_r, strtok_r,
+> etc.
+
+The standard says that if _POSIX_THREADS is defined, then
+_POSIX_THREAD_SAFE_FUNCTIONS shall also be defined. [2.9.3]
+
+And then, for each function, it says "Either the implementation
+shall support the foobar() function as described above or the
+foobar() function shall not be provided".
+
+The standard doesn't prescribe how the feature test is supposed
+to be done. 8-(
+
+But we really should have these functions in libc. Generally, though,
+this involves a complete re-write of each of the existing functions
+in terms of the re-entrant versions.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@netbsd.org; jb@freebsd.org
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602446 ###
+===== 库内序 144006 | PK 2602446 | 等级 L4 =====
+DATE: 1998-02-27T02:51:49+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: Volume manager (was: SCSI Bus redundancy...)
+摘要: Greg Lehey：volume manager 尚未完备，RAID-5 部分存在商业兴趣问题
+
+On Thu, 26 February 1998 at 21:35:05 -0500, Matthew N. Dodd wrote:
+> On Fri, 27 Feb 1998, Greg Lehey wrote:
+>> No.  I may find I have to at some point, though.  I'm still testing
+>> the driver.
+>
+> Any chance you can snapshot your work and let the rest of us beat on it a
+> bit?
+
+Definitely a chance.  It's not quite ready at the moment, and there's
+also a problem with commercial interest in the RAID-5 part.  I'll
+reply to you privately with more information.
+
+Greg
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602447 ###
+===== 库内序 144007 | PK 2602447 | 等级 L4 =====
+DATE: 1998-02-27T02:49:41+00:00
+FROM: Doug Ambrisko <ambrisko@whistle.com>
+SUBJ: Re: a chicken-egg problem with bootp and nfs_mountroot
+摘要: Doug Ambrisko：options 生成的宏在 strcmp 中作字符串常量需以双引号字面量形式定义
+
+John-Mark Gurney writes:
+| Doug Ambrisko scribbled this message on Feb 26:
+| > BTW anyone know how to pass a string in via a #define in config?
+| 
+| in your config file:
+| options	"DEFINENAME=string value"
+| 
+| should do it...
+
+
+Don't think so for example:
+	options	"BOOTP_WIRED_TO=fxp0"
+Then in a c-snippet:
+	strcmp(string,BOOTP_WIRED_TO)
+Will change into
+	strcmp(string,fxp0)
+which will fail to compile want
+	 strcmp(string,"fxp0")
+so for now I stick in a 
+	#define BOOTP_WIRED_TO "fxp0" 
+in the code.
+
+I need the quotes passed through or made to happen someway.
+
+Doug A.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602448 ###
+===== 库内序 144008 | PK 2602448 | 等级 L3 =====
+DATE: 1998-02-27T02:35:05+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: Volume manager (was: SCSI Bus redundancy...)
+摘要: Matthew N. Dodd：询问 Greg Lehey 能否快照 volume manager 工作让其他人参与测试
+
+On Fri, 27 Feb 1998, Greg Lehey wrote:
+> No.  I may find I have to at some point, though.  I'm still testing
+> the driver.
+
+Any chance you can snapshot your work and let the rest of us beat on it a
+bit?
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602451 ###
+===== 库内序 144011 | PK 2602451 | 等级 L4 =====
+DATE: 1998-02-27T03:28:35+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: do you support 
+摘要: Tom：认为 Adaptec 收购 Symbios 后文档可用性不会变差，因为 Adaptec 也公开文档
+
+
+On Fri, 27 Feb 1998, Michael Hancock wrote:
+
+> Now that Adaptec owns Symbios I wonder if the document availability will
+> change.
+
+  I doubt it, as Adaptec makes documents available too.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602452 ###
+===== 库内序 144012 | PK 2602452 | 等级 L3 =====
+DATE: 1998-02-27T04:28:10+00:00
+FROM: Manish Apte <mapte@frontier-soft.com>
+SUBJ: FW: ISO/OSI stack support on FreeBSD
+摘要: Manish Apte：询问 FreeBSD 为何不随发行版发布 OSI 网络栈，声称原因是缺乏兴趣
+
+
+
+-----Original Message-----
+From:	Manish Apte [SMTP:mapte@frontier-soft.com]
+Sent:	Thursday, February 26, 1998 6:16 PM
+To:	'FreeBSDQuestions'
+Subject:	ISO/OSI stack support on FreeBSD
+
+Hi,
+
+I am currently using FreeBSD v2.2.2 on i386.
+
+While understanding the OS build procedure I realized that FreeBSD has OSI support but it is not shipped with the distribution/sources because of 'lack of interest' (I found this mentioned in the file "/usr/src/sys/i386/conf/LINT").
+
+I am interested in getting the ISO/OSI related sources (/usr/src/sys/netiso directory I presume, possibly with other files) so that I could build a kernel with OSI stack support in it.
+
+Is it possible to get the missing OSI stack related files ? If yes how ?
+
+Regards
+
+Manish
+mapte@frontier-soft.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602453 ###
+===== 库内序 144013 | PK 2602453 | 等级 L4 =====
+DATE: 1998-02-27T05:03:00+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: do you support 
+摘要: Mike Smith：怀疑 wcarchive 使用 CAM 驱动集，因其为 2.2 系列机器而 CAM 属 3.0 代码
+
+>   Also, the existing ahc driver is not being maintained anymore.  It has
+> known bugs that no one will fix, because the SCSI people are looking ahead
+> to CAM.  The CAMified ahc driver is reputed to very solid
+> (wcarchive.cdrom.com uses it), but is only for serious hackers right now.
+
+I would be surprised if wcarchive is using the CAM driver set; 
+it's a 2.2 family machine, and CAM is very much 3.0 code.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602454 ###
+===== 库内序 144014 | PK 2602454 | 等级 L4 =====
+DATE: 1998-02-27T05:04:07+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: a chicken-egg problem with bootp and nfs_mountroot 
+摘要: Mike Smith：建议 options 定义中用三重反斜杠转义内嵌双引号以获得字符串字面量
+
+> John-Mark Gurney writes:
+> | Doug Ambrisko scribbled this message on Feb 26:
+> | > BTW anyone know how to pass a string in via a #define in config?
+> | 
+> | in your config file:
+> | options	"DEFINENAME=string value"
+> | 
+> | should do it...
+> 
+> 
+> Don't think so for example:
+> 	options	"BOOTP_WIRED_TO=fxp0"
+
+options "BOOTP_WIRED_TO=\"fxp0\""
+
+You may need to triple the backslashes, it's been a while since I tried 
+this.
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602455 ###
+===== 库内序 144015 | PK 2602455 | 等级 L4 =====
+DATE: 1998-02-27T05:08:04+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: do you support 
+摘要: Nate Williams：称 NCR 卡性能在 Adaptec 驱动 10% 以内且三年未出故障
+
+>   Programming info is available for Adaptec cards, just like the NCR
+> cards.  Perhaps maybe 3 years ago that was case, but not for a long time.
+> The Adaptec cards do more things on-board so the driver is more complex.
+
+My NCR board performs within 10% (sometimes faster in certain
+benchmarks) of the Adaptec driver, and hasn't been broken in 3 years.
+Tell me that the stability/usability of not having it broken *ever* in 3
+years isn't worth it.
+
+>   Also, the existing ahc driver is not being maintained anymore.
+
+The NCR has rarely been touched as well.
+
+> It has known bugs that no one will fix, because the SCSI people are
+> looking ahead to CAM.
+
+Yet another good reason not to use the Adaptec boards.  Looking to the
+future is all well and good, but it leaves a bitter taste in my mouth to
+get stuck with brokeness all in the name of progress, especially when
+other options exist.
+
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602456 ###
+===== 库内序 144016 | PK 2602456 | 等级 L4 =====
+DATE: 1998-02-27T05:09:18+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: Re: a chicken-egg problem with bootp and nfs_mountroot
+摘要: Archie Cobbs：提出用 #define Q(x) #x 宏使 Q(asdf) 展开为字符串字面量
+
+Doug Ambrisko writes:
+> Don't think so for example:
+> 	options	"BOOTP_WIRED_TO=fxp0"
+> Then in a c-snippet:
+> 	strcmp(string,BOOTP_WIRED_TO)
+> Will change into
+> 	strcmp(string,fxp0)
+> which will fail to compile want
+> 	 strcmp(string,"fxp0")
+> so for now I stick in a 
+> 	#define BOOTP_WIRED_TO "fxp0" 
+> in the code.
+
+#define Q(x)	#x
+
+Then Q(asdf) returns "asdf" (as I remember).
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602461 ###
+===== 库内序 144021 | PK 2602461 | 等级 L3 =====
+DATE: 1998-02-27T06:25:09+00:00
+FROM: Conrad Minshall <conrad@apple.com>
+SUBJ: lockd client side
+摘要: Conrad Minshall：询问 FreeBSD rpc.lockd 是否有人扩展客户端锁实现，已查 netBSD 与 openBSD
+
+FreeBSD's rpc.lockd seems to only implements the server side.  Has anyone
+enhanced it so FreeBSD clients can get locks?
+
+Pointers to any other freeware lockd sources are welcome.  I've already
+checked {net,open}BSD.
+
+
+--
+Conrad Minshall         	mailto:conrad@apple.com
+If "conrad@apple.com" doesn't work, try using one of my alternates:
+"rad@acm.org", "conradm@computer.org", or "conrad@technologist.com"
+Picon viewable at: http://facesaver.usenix.org/h/48/4704.htm
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602463 ###
+===== 库内序 144023 | PK 2602463 | 等级 L4 =====
+DATE: 1998-02-27T06:44:25+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: lockd client side
+摘要: Terry Lambert：说明 rpc.lockd 客户端代码位于 NFS 客户端文件系统实现，先做服务端再补客户端
+
+> FreeBSD's rpc.lockd seems to only implements the server side.  Has anyone
+> enhanced it so FreeBSD clients can get locks?
+> 
+> Pointers to any other freeware lockd sources are welcome.  I've already
+> checked {net,open}BSD.
+
+The code goes in the NFS client FS implementation.  I expect to implement
+this shortly, though I expect to implement the server code first.
+
+The client code has its own problems that have to be resolved before
+everything is happy.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602466 ###
+===== 库内序 144026 | PK 2602466 | 等级 L4 =====
+DATE: 1998-02-27T07:01:05+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: do you support 
+摘要: Tom：认为 ahc 事务开销显著低于 ncr 驱动
+
+
+On Thu, 26 Feb 1998, Nate Williams wrote:
+
+> >   Programming info is available for Adaptec cards, just like the NCR
+> > cards.  Perhaps maybe 3 years ago that was case, but not for a long time.
+> > The Adaptec cards do more things on-board so the driver is more complex.
+> 
+> My NCR board performs within 10% (sometimes faster in certain
+
+  Possibly.  The transaction overhead of the ahc is much lower than
+the ncr driver.  The only way to see this is to use lots of simultaneous
+io to lots of drives.  I'm not aware of any benchmark software that lets
+me test this easily.  bonnie isn't much good for this.
+
+  Also, if you want performance, skip both Adaptec and NCR and get a DPT
+PM334UW instead.  I having _great_ success with a DPT PM334UW on a
+FreeBSD 2.2-stable system.
+
+> benchmarks) of the Adaptec driver, and hasn't been broken in 3 years.
+> Tell me that the stability/usability of not having it broken *ever* in 3
+> years isn't worth it.
+
+  I'm not to argue that, but this problem does not exist as result of not
+having programming specs.  The Adaptec specs are available.
+
+  Also, the ahc driver support Ultra months before the ncr driver.
+
+> >   Also, the existing ahc driver is not being maintained anymore.
+> 
+> The NCR has rarely been touched as well.
+
+  Don't confuse maintenance with "touching".  FreeBSD has many examples of
+code that is rotting, because of lack of attention.  Be glad that someone
+is maintaining the ncr driver once and while.
+
+> > It has known bugs that no one will fix, because the SCSI people are
+> > looking ahead to CAM.
+> 
+> Yet another good reason not to use the Adaptec boards.  Looking to the
+> future is all well and good, but it leaves a bitter taste in my mouth to
+> get stuck with brokeness all in the name of progress, especially when
+> other options exist.
+
+  Yes, it is bad thing, but not because you get "stuck with brokeness",
+but because the brokeness existed at all.  The ahc driver doesn't have to
+be "bad".
+
+  Both existing ahc and ncr users are going to be stuck anyhow.  The
+existing SCSI code is dead.  Anything new will be CAM.  This is hardest on
+new SCSI drivers, because they won't be brought in until CAM is brought
+in.  There is a perfectly good DPT driver in the wings waiting for this,
+plus I believe a new AdvanSys driver too.
+
+> Nate
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602467 ###
+===== 库内序 144027 | PK 2602467 | 等级 L4 =====
+DATE: 1998-02-27T07:04:39+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: do you support 
+摘要: Tom：称 Justin 与 Dave G 正为 2.2-stable 制作 CAM patchkit，2.2.6 之后或以内核选项形式合入
+
+
+On Thu, 26 Feb 1998, Mike Smith wrote:
+
+> >   Then I'll consider you surprised then, because it is running CAM.
+> 
+> I am surprised. 8)  I wonder if the demon that did the backport would 
+> consider bundling it such that we could ship it as an optional extra?
+
+  Well, this was discussed on freebsd-scsi I believe...
+
+  Justin and/or Dave G are working on making a patchkit for 2.2-stable I
+believe.  There is is even talking including CAM in the 2.2 branch after
+2.2.6.  I suspect that would be done as a kernel option, because some
+drivers are not CAMified yet.
+
+> -- 
+> \\  Sometimes you're ahead,       \\  Mike Smith
+> \\  sometimes you're behind.      \\  mike@smith.net.au
+> \\  The race is long, and in the  \\  msmith@freebsd.org
+> \\  end it's only with yourself.  \\  msmith@cdrom.com
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602468 ###
+===== 库内序 144028 | PK 2602468 | 等级 L3 =====
+DATE: 1998-02-27T07:13:36+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: FIOASYNC ...
+摘要: Luigi Rizzo：询问音频设备驱动中 FIOASYNC 处理方式与读写数据不足时应返回短计数还是阻塞
+
+anyone knows how should i handle FIOASYNC within the audio device
+driver ? Following Bruce's comments about FIONBIO which should be
+handled at vfs rather than device driver, i wonder if the same applies
+to FIOASYNC.
+
+second thing how do i behave when a read (or a write) is issued which
+would block because there is no sufficient data in the buffer (or not
+enough buffering for the write) ? Should i return with a short count or
+with an error ?
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602470 ###
+===== 库内序 144030 | PK 2602470 | 等级 L4 =====
+DATE: 1998-02-27T09:45:57+00:00
+FROM: Jaye Mathisen <mrcpu@cdsnet.net>
+SUBJ: Another apparent NFS related 2.2.5 crash.
+摘要: Jaye Mathisen：报告 2.2.5 出现 NFS 相关崩溃，panic 信息为 vinvalbuf flush failed
+
+
+
+Copyright 1996 Free Software Foundation, Inc...
+IdlePTD 9bd000
+current pcb at 1fbb88
+panic: vinvalbuf: flush failed
+#0  boot (howto=256) at ../../kern/kern_shutdown.c:266
+266                                     dumppcb.pcb_cr3 = rcr3();
+(kgdb) where
+#0  boot (howto=256) at ../../kern/kern_shutdown.c:266
+#1  0xf0118193 in panic (fmt=0xf0137710 "vinvalbuf: flush failed")
+    at ../../kern/kern_shutdown.c:390
+#2  0xf0137944 in vinvalbuf (vp=0xf3ff0d00, flags=1, cred=0xf3efad80, 
+    p=0xf38cb800, slpflag=0, slptimeo=0) at ../../kern/vfs_subr.c:545
+#3  0xf015ee20 in nfs_vinvalbuf (vp=0xf3ff0d00, flags=1, cred=0xf3efad80, 
+    p=0xf38cb800, intrflg=1) at ../../nfs/nfs_bio.c:799
+#4  0xf015e452 in nfs_write (ap=0xefbffee8) at ../../nfs/nfs_bio.c:538
+#5  0xf013c697 in vn_write (fp=0xf3afe9c0, uio=0xefbfff34,
+cred=0xf3efad80)
+    at vnode_if.h:283
+#6  0xf011fc23 in write (p=0xf38cb800, uap=0xefbfff94, retval=0xefbfff84)
+    at ../../kern/sys_generic.c:263
+#7  0xf01d01c7 in syscall (frame={tf_es = 39, tf_ds = -272695257, 
+      tf_edi = 385062, tf_esi = 384800, tf_ebp = -272639104, 
+      tf_isp = -272629788, tf_ebx = 19, tf_edx = 210, tf_ecx = 264036, 
+      tf_eax = 4, tf_trapno = 12, tf_err = 7, tf_eip = 537542593, tf_cs =
+31, 
+      tf_eflags = 658, tf_esp = -272639160, tf_ss = 39})
+    at ../../i386/i386/trap.c:914
+#8  0x200a3fc1 in ?? ()
+#9  0x1663b in ?? ()
+#10 0x85b8 in ?? ()
+#11 0x8643 in ?? ()
+#12 0xb2c4 in ?? ()
+---Type <return> to continue, or q <return> to quit---q
+
+
+Any ideas on how to fix?  This is one of our web servers, taking NFS V2
+UDP to a Netapp.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602471 ###
+===== 库内序 144031 | PK 2602471 | 等级 L4 =====
+DATE: 1998-02-27T11:06:39+00:00
+FROM: Graham Wheeler <gram@cdsec.com>
+SUBJ: Temporary freezes on a Compaq
+摘要: Graham Wheeler：FreeBSD 2.2.2 网关 Compaq 3C509 双网卡频繁出现 3-4 秒全局冻结
+
+Hi all
+
+A friend of mine has asked me if I can help him solve a problem he is 
+experiencing with FreeBSD 2.2.2 running on a Compaq with 32Mb RAM (although
+his kernel isn't patched so only 16Mb is seen), two 3C509 Ethernet cards,
+and an IDE HDD.  The machine is acting as a gateway between two networks.
+
+Apparently every so often (quite frequently) all activity on the machine
+freezes for 3-4 seconds and then resumes. Or rather, all network activity;
+no one is actually working on the console so I don't know whether this
+applies to non-network activity as well. I asked him to check the load,
+free memory, etc, to try to determine whether it is simply caused by
+bus-mastering disk activity; however, it seems the load is not very high
+and there is no obvious cause related to disk I/O.
+
+Has anyone experienced this? Is it perhaps related to the 3C509 driver?
+Any suggestions would be appreciated.
+
+TIA
+Graham
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602473 ###
+===== 库内序 144033 | PK 2602473 | 等级 L4 =====
+DATE: 1998-02-27T16:27:11+00:00
+FROM: "Kaleb S. KEITHLEY" <k.#nojunk#keithley@opengroup.org>
+SUBJ: symbols in libc_r not in libc
+摘要: Kaleb S. KEITHLEY：3.0-971225-SNAP 上 MT-safe Xlib 链非线程程序出现 ___error 未解析外部符号
+
+Consider building an MT-safe library that might get used by both
+threaded and non-threaded programs -- in this case libX11.
+
+On a 3.0-971225-SNAP system, when I build Xlib thread-safe I use
+-D_REENTRANT and -D_THREAD_SAFE, and all references to errno are
+converted to *__error(). No problem there.
+
+Now when I link a non-threaded program, e.g. xterm, to the mt-safe Xlib,
+when I try to run it I get unresolved externals for ___error. 
+
+What that tells me is that libc (not libc_r) needs a #pragma weak
+__error so that when I link non-threaded programs against libX11,
+they'll work, and when I link a threaded program with libX11 and libc_r,
+it'll get the right version of __error.
+
+And no, I don't want to require that all non-threaded programs link with
+libc_r, nor do I want to link libX11 with libc_r and thereby cause all
+programs that link with it to be implicitly linked with libc_r. I only
+want the extra overhead (if there is any) when a program is explicitly
+linked with libc_r.
+
+(Hmmh. I subscribed to hackers a ways back, but it doesn't seem to have
+taken. C'est la vie.)
+
+--
+Kaleb S. KEITHLEY
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602478 ###
+===== 库内序 144038 | PK 2602478 | 等级 L4 =====
+DATE: 1998-02-27T15:46:06+00:00
+FROM: Brett Taylor <brett@peloton.physics.montana.edu>
+SUBJ: Re: rc5des 
+摘要: Brett Taylor：家中 P166 跑 393 构建 rc5des 客户端稳定，办公 PPro200 却频繁崩溃
+
+Hi all,
+
+> earlier I said :
+
+> I have now gone back to the old rc564 client.  Distributed.net is aware of
+> the problem and is supposed to be building new clients.
+
+Hmm.... I just noticed my home machine is still running the 393 build
+flawlessly.  Weird.  The only difference between the home and work machine
+is home is a P166, work PPro200 and the PPro has been updated w/ a make
+world once (very recent).  
+
+-shrug-
+
+*********************************************************
+Brett Taylor 		brett@peloton.physics.montana.edu
+http://peloton.physics.montana.edu/brett/
+
+When you wake up in the morning
+With the blues in your fingertips
+Get out that ol' guitar and play
+It's the only way to scratch that itch
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602479 ###
+===== 库内序 144039 | PK 2602479 | 等级 L3 =====
+DATE: 1998-02-27T15:52:52+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: telnet root login
+摘要: Snob Art Genre：建议使用 ssh 替代 telnet，其自带加密且可避免密码走线传输
+
+Why don't you use ssh instead?  Ssh is a secure replacement for rsh, it
+does encryption, and if you set it up right you need never send your
+password over the wire, not even encrypted.
+
+On Thu, 26 Feb 1998, Capriotti wrote:
+
+> ????????????? 
+> 
+> I had to set - unfortunately - my network connection as secure to have
+> telnet access.
+> 
+> Now I think this is something for hackers.
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602482 ###
+===== 库内序 144042 | PK 2602482 | 等级 L4 =====
+DATE: 1998-02-27T16:38:32+00:00
+FROM: "Kaleb S. KEITHLEY" <k.keithley@opengroup.org>
+SUBJ: Re: _POSIX_THREAD_SAFE_FUNCTIONS and *_r functions
+摘要: Kaleb S. KEITHLEY：援引 POSIX 1003.1 第 2.9.3 节与表 2.10 讨论线程安全函数的定义条件
+
+Someone (who I can't cite because I inadvertantly deleted their email)
+said:
+
+  POSIX 1003.1 2.9.3 says if _POSIX_THREADS is defined, then 
+  _POSIX_THREAD_SAFE_FUNCTIONS must also be defined.
+
+It's true that that's what POSIX says, but it's a simplistic answer, and
+doesn't really address *everything* that POSIX says
+
+Table 2.10 in 2.9.3 says "...if _POSIX_THREAD_SAFE_FUNCTIONS is defined
+then the implementation supports the Thread Safe Functions option.
+
+Section 4.2.4.2 says:
+
+  If _POSIX_THREAD_SAFE_FUNCTIONS is defined: The getlogin_r()...
+
+Section 4.7.2.2 says:
+
+  If _POSIX_THREAD_SAFE_FUNCTIONS is defined: The ttyname_r()...
+
+Section 5.1.2.2 says:
+
+  If _POSIX_THREAD_SAFE_FUNCTIONS is defined: The readdir_r()...
+
+Section 8.3.3.2 says:
+
+  If _POSIX_THREAD_SAFE_FUNCTIONS is defined: The strtok_r()...
+
+And so on for getpwnam_r, etc.
+
+That means that if you don't have the Thread Safe Functions, then you
+can't define _POSIX_THREAD_SAFE_FUNCTIONS. (And therefore you can't
+define _POSIX_THREADS, which is sort of the reverse of the claim that if
+you define _POSIX_THREADS then you must define
+_POSIX_THREAD_SAFE_FUNCTIONS.)
+
+-- 
+Kaleb
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

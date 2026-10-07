@@ -1,0 +1,21 @@
+2604318	885	jkh 与 Mike Smith 复盘 Mozilla 派对，指 Linux 用户会后一辆大巴多次满载 Linux 支持者涌来却无人到场发放 FreeBSD 光盘与试用小册子，自嘲营销能力弱，呼吁下次类似机会需提前获知并有人出面执行
+2604319	885	abelits 回应 Darren Reed 的邮件转场请求，认为合理，并指出其他长线程中此类邮件数量多且与 FreeBSD 开发相关性低，更应独立出倡导邮件列表
+2604321	885	jkh 认为对方对 Netscape 表态的解读过头，称当晚 FreeBSD 的 SF 会议上与 Netscape 内部 FreeBSD 支持者交谈后判断其言论主因是无知而非恶意，主张应争取上桌席位而非向桌子泼水
+2604325	885	jkh 说明刚建好 CVS 库尚无 cvsupd 与 anon cvs 能力，目前只能登 bento 查改动，Warner Losh 已在用，尚未向任何人导出，自己也不清楚配置 cvsupd 文件怎么做，anon cvs 待 Peter 答复
+2604326	885	fullermd 自述看到 NPR 上 Linux 报道后给 NPR 寄信推荐 FreeBSD，回忆上次搬家是为 -2.1.6 划 100 兆分区，信中称 Yahoo 与 Walnut Creek CDROM 等大型服务器都跑 FreeBSD
+2604327	885	pierre 指出 OpenBSD CDROM 由项目自身资金出版因此没有钱花在营销上，但 Theo 常出席各类安全与 Unix 相关会议并在会上热卖 CDROM，补充称也可从其网站订购
+2604328	885	jkh 回答为何不把该库并入标准 CVS 仓库，称其不属于那里只能另建独立仓库找有空余空间的主机，Bento 恰好满足要求
+2604330	885	jkh 接受该点，要求所有参与 PR 讨论的人立刻转到 -chat，由那边决定是否近期成立 freebsd-pr 邮件列表
+2604336	885	luigi 报告 CD 刻录意外中断后成功在盘上写入第二数据轨，TOC 显示两轨数据但 mount_cd9660 似乎无法读取非首轨，询问 wcd 驱动是否支持类似 /dev/wcd0track0 的设备名及实现难度
+2604339	885	andreas 反映最新 libqt 快照在编译时遇到 ld 行为异常，-L 目录列表需逐个跟随 -l 选项才能生效，qt-1.39-19980406 下出现 ld: -lqt: no match，称该写法在其他平台可用，询问是否有 ld 补丁
+2604340	885	fbsdlist 自述看过该手册集后觉得它只是印刷版，因有在线版且持续更新所以认为没什么价值，并类比 Apache 书约 1.1 版早已过时无用
+2604341	885	witr 报告近期 Ntrigue 客户端让 FreeBSD 上 X 服务器挂死，复现于 2.1.6 配 XFree86 3.3.1 与 2.2.6 配 XFree86 3.3.2，sun 系统及早期 Ntrigue 版本不出现
+2604342	885	bkogawa 提出改善 FreeBSD 宣传的做法，建议使用者向应用开发者说明其在 FreeBSD 下运行该应用，移植时向原开发者回馈并附 port 地址，还建议从 comp.os.linux.announce 获取 FreeBSD 相关公告
+2604349	885	jkh 回答 newsletter 发布时间，称两周内可进入 print me 流水线，欢迎 hacker level 或各层次投稿，强调它是 newsletter 而非技术期刊
+2604353	885	wosch 自述搭建了 mozilla-cvs 的 cvsup 镜像，主机 cvsup.de.freebsd.org 集合 mozilla-all，每日 05:50 与 17:50 中欧夏令时更新，折合 UTC 3:50 与 15:50
+2604354	885	nate 自述 FreeBSD.org 有指向其邮件列表的 java 页面因此 JDK 工作收到大量正面反馈，包括 SUN 与其他 OS 人士愿助 FreeBSD 项目，附注建议 Jordan 创办 FreeBSD 公司销售增值版以打破黑客专用形象
+2604355	885	nate 警告对方若用 FreeBSD 的 JDK 引入该技术可能被 Sun 起诉，因当前 license 方案仅允许教育用途，且他会吊销对方 CVS 权限并要求删除 FreeBSD 代码
+2604356	885	matthias 报告新笔记本 O2Micro OZ6832 PCI 桥与 3c589D 网卡在 2.2.6-RELEASE 不受支持，经 Nate Williams 与 David Hinds 协助已加入 PCI 部分，但 ep 驱动收不到中断
+2604357	885	Adam 建议请 Walnut Creek 当 FreeBSD 的 sugar daddy，因 Caldera RedHat SuSE 常把 CD 送用户组分发，自己愿当 FreeBSDseeds 之一派发旧版 CD，若不愿则设 PO Box 回收
+2604360	885	Peter 自述在 Borders Books and Music 看到 The Complete FreeBSD 第二版带 CD 的实体书，认为 FreeBSD 刚开始提升知名度，但要与 Linux 竞争还需要大幅推动，并建议简化窗口管理器的安装方案
+2604364	885	Michael 认为 Walnut Creek 已在一定程度上做此事，但更希望 CD 发给其目前支持的团体如 ISOC Developing Countries Workshops，而非用来提升商业形象，自己觉得 FreeBSD 撑住日益增长的互联网流量已说明一切

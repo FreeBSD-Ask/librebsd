@@ -1,0 +1,801 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604366 ###
+===== 库内序 145923 | PK 2604366 | 等级 L3 =====
+DATE: 1998-04-10T17:51:00+00:00
+FROM: Ray Seals <rayseals@midwestis.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: Ray Seals: 建议用 FreeBSD 加 sendmail 替换客户 MS Mail 服务器以省 Outlook 迁移费用 但对方对维护有疑虑
+
+The Heart & Soul of the Internet is not the problem.  It's corporate 
+America.  I'm fairly new to FreeBSD, I've only been using for about 1 year. 
+ I have a client who is also a pretty decent friend of mine.  I told him 
+that could pull out all his MS Mail servers and replace them with FreeBSD 
+servers running sendmail.  Thus saving them some major cash on moving to 
+Outlook.  But he brought up a good point, what about maintenance.  It's 
+hard to find good UNIX people, Netware people, NT people or any competent 
+people for that fact.
+
+In general I have been able to find a FreeBSD equivalent to most of the 
+Microsoft Server applications but one.  I haven't found anything to replace 
+Schedule + or Group colaberation software.  If anyone can help me there I 
+would appreciate it.
+
+The desktop will normally be ruled by Windoze.  The server end is were you 
+can make some headway.  We need to advertise the fact that FreeBSD can be 
+an SQL server, it can be a Web server, it can be a file and print server, 
+it can be a proxy server, it can be anything.
+
+Most technical people will agree that there is something better than 
+Micro$oft.  Management on the other hand is leery of free software.  Most 
+Management people are not technical people.
+
+Jordan, I would like to go on record as saying that I would pay for the BSD 
+news letter to help our cause.
+
+Ray
+
+- I don't know if I said anything of interest, but I feel better.
+
+----------------------------------------------------------------
+Midwest Information Systems
+
+http://www.midwestis.com
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Ray Seals
+Network Engineer
+rayseals@midwestis.com
+Direct Dial: 314.663.3987
+Office: 314.298.0873
+Fax: 314.298.8482
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+"Providing clear vision to the future"
+----------------------------------------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604368 ###
+===== 库内序 145925 | PK 2604368 | 等级 L3 =====
+DATE: 1998-04-10T17:54:52+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the  Internet"
+摘要: Brett：自荐 FreeBSD 首席传道官，承认 19 岁仍尝试把布道做到适度得体
+
+On Thu, 9 Apr 1998, John S. Dyson wrote:
+
+> The problem with FreeBSD, is that people working on FreeBSD are generally
+> older, and find evangelism to be painful.  Also, people using FreeBSD
+> are busy using it, as opposed to worshipping it.
+
+I'm 19, and I like evangelizing, though I do try to keep it tasteful.
+
+I hesitate to be so hubristic, but here goes: I'd gladly be a Chief
+Evangelizer if one is really needed.
+ 
+> How do we (really) deal with this?
+> 
+> John
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604370 ###
+===== 库内序 145927 | PK 2604370 | 等级 L3 =====
+DATE: 1998-04-10T18:05:08+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the  Internet"
+摘要: Brett：撤回首席称谓改为副官，被引者评价其心思明显全在计算机上
+
+On Fri, 10 Apr 1998, Snob Art Genre wrote:
+
+> I hesitate to be so hubristic, but here goes: I'd gladly be a Chief
+> Evangelizer if one is really needed.
+
+Erm, s/Chief/Lieutenant
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604371 ###
+===== 库内序 145928 | PK 2604371 | 等级 L3 =====
+DATE: 1998-04-10T08:05:17+00:00
+FROM: ken@mui.net
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet
+摘要: ken@mui.net：建议查论坛补丁与 Jann Linder 对日历的改动，未指明具体位置
+
+> In general I have been able to find a FreeBSD equivalent to most of the 
+> Microsoft Server applications but one.  I haven't found anything to replace 
+> Schedule + or Group colaberation software.  If anyone can help me there I 
+> would appreciate it.
+
+Ray,
+
+check out selina sol's groupware calendar.   make sure you look at 
+the forum for the bug fixes.  also, check out jann linder's changes 
+to the calendar (same location).  It's a cgi-script that isn't too 
+bad.
+
+http://www.extropia.com/Scripts/calendar.html
+
+forum (for bug fixes)
+http://www.sidestreets.com:8080/~77
+
+http://www.jann.com/Perl/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604372 ###
+===== 库内序 145929 | PK 2604372 | 等级 L3 =====
+DATE: 1998-04-10T18:13:16+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Amancio：表示可请 Sun 表态；被引者警告用 Sun 技术做 JDK 开发可能遭 Sun 起诉
+
+I of course can ask Sun to see what they think about the idea 8)
+
+	Amancio
+> > For your info , given that the Net seems to be slow at bringing in 
+> > Java back into Mozilla , I am thinking of doing it.
+> 
+> For what it's worth, if you do it (given that you have access to the
+> FreeBSD JDK), you'll potentially be sued by Sun, since you can' t use
+> their technology except for 'educational' purposes with the current
+> license scheme we've all signed.
+> 
+> And, I'd have to yank your CVS priviledges to the tree and ask you to
+> delete the FreeBSD bits. :(
+> 
+> 
+> 
+> 
+> Nate
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604373 ###
+===== 库内序 145930 | PK 2604373 | 等级 L3 =====
+DATE: 1998-04-10T18:15:51+00:00
+FROM: Mark Murray <mark@grondar.za>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Mark Murray：建议将 mozilla 从 $CVSROOT 分出，像 distrib/doc/src/ports 便于导出与过滤
+
+John Birrell wrote:
+> Why doesn't it belong in the standard CVS repository?
+> It's just another src/contrib. 8-)
+
+Better off the $CVSROOT, like distrib/doc/src/ports etc. That would make
+it a cinch to export and easy to "filter out".
+
+My 0.02.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604375 ###
+===== 库内序 145932 | PK 2604375 | 等级 L3 =====
+DATE: 1998-04-10T08:18:54+00:00
+FROM: ken@mui.net
+SUBJ: RE: Fw: Your Article "Freeware: The Heart & Soul of the Internet
+摘要: ken@mui.net：建议 FreeBSD 用户致电 ORA 询问 FreeBSD 书籍需求，指出 ORA 按需求决策
+
+> If there's any resistance at ORA, it looks to me like the
+> (english-speaking) *BSD market isn't big enough, or the market
+> is suffering from aftershocks of the "fractionalization" of
+> the *BSD movement.
+
+actually, perhaps all it may take is for lots of us FreeBSD users to 
+call ORA and ask them what books they have on FreeBSD.  ORA like 
+other companies go by what they think the demand is.  Since most of 
+the books they have directly apply to FreeBSD, I think it gets lost 
+in the shuffle.  Mentioning the request by name should help, I think.
+
+a thought - I wonder if anyone would take the time to get the current 
+genre of ORA books and post a kind of errata for FreeBSD users.  It 
+would be nice ...
+
+ken
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604376 ###
+===== 库内序 145933 | PK 2604376 | 等级 L3 =====
+DATE: 1998-04-10T18:19:54+00:00
+FROM: Kris Kirby <kris@ninbox.ml.org>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the  
+		Internet"
+摘要: AOL 与 Linux CD 的替代用途讨论，如弹弓、飞盘、靶标及高速转子的新型链锯
+
+Adam Turoff wrote:
+> 
+> (Remember, Linux CDs make great coasters!)
+
+AOL CDs are better, because there are more of them. Alternative uses:
+Pop art (ask my father), frisbee (a little small), target practice, etc.
+If you can get them moving fast enough (cross a 24x CDROM drive [for
+spin] with a missle launcher [forward linear motion]) you might find a
+revolutionary new chainsaw. But how to stop the ammo... (Got a better
+word for a 500 mph. AOL CD?)
+-- 
+
+Kris Kirby <kris@airnet.net>
+-------------------------------------------
+TGIFreeBSD... 'Nuff said.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604378 ###
+===== 库内序 145935 | PK 2604378 | 等级 L4 =====
+DATE: 1998-04-10T18:21:53+00:00
+FROM: "Pitcairn, Duncan" <DuncanP@Cairnwood.com>
+SUBJ: Re: Natd Support for Microsoft PPTP / VPN using protocol 47
+摘要: Duncan Pitcairn：询问 NATd 是否支持透传 Microsoft PPTP 的 IP 协议 47 及进展如何
+
+Last month there was a chain of messages regarding NATd passing PPTP
+traffic through IP port 47 (this is how Microsoft defines it). Is there
+activity on this change to NATd? Does anyone need information to assist
+them? 
+
+As you can tell from above,  I would also like to be able to pass PPTP
+traffic through NATd.
+
+
+Thanks.,
+
+Duncan Pitcairn
+
+CCC Alliance, Cairnwood Cooperative
+Southampton, Pennsylvania
+USA
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604380 ###
+===== 库内序 145937 | PK 2604380 | 等级 L4 =====
+DATE: 1998-04-10T18:34:36+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Mozilla CVS repository, OK give it a shot.
+摘要: Jordan K. Hubbard：给出 mozilla cvsup 同步条目 host 指向 mozilla.FreeBSD.org 供同步
+
+This is what the cvsup entries should look like:
+
+*default prefix=/home/mozilla base=/home/mozilla host=mozilla.FreeBSD.org release=cvs delete compress use-rel-suffix
+
+## Main Source Tree
+cvs-mozilla
+
+To sync with the freebsd-mozilla source tree available from
+mozilla.freebsd.org.  Any questions?
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604382 ###
+===== 库内序 145939 | PK 2604382 | 等级 L4 =====
+DATE: 1998-04-10T18:37:11+00:00
+FROM: Timothy Moore <moore@WOLFENET.com>
+SUBJ: Re: Netscape: Linux a top priority (news.com article)
+摘要: Timothy Moore：指出 NPR 报道中 FreeBSD 与 BSD 完全缺席，认为 FreeBSD 在主流视野里不可见
+
+   Date: Fri, 10 Apr 1998 02:14:37 -0400 (EDT)
+   From: Open Systems Networking <opsys@mail.webspan.net>
+
+   On Thu, 9 Apr 1998, Alan Batie wrote:
+
+   > Just add a bit more to the general Linux indignation running around here,
+   > check out yesterday's Linux piece on NPR at
+   > 
+   >     http://www.npr.org/news/tech/
+
+   Grrrr. See this is the problem. We are not even mentioned. We DONT EXIST.
+   We're invisible to alot of people. I think were making a big mistake not
+   taking advantage of this PR ploy of the mozilla CVS tree. We should be
+   mailing PR's to all the online news sources.
+
+I don't think it is appropriate to be peeved at NPR for not mentioning
+FreeBSD in a 7 minute story on Linux, free operating systems and free
+software in general.  Consider that they had to explain what an OS is,
+what source code is, why having it might be a good thing, etc.
+The story of a lone hacker in benighted Finland beating the best of
+the commercial offerings is compelling and, distorted as that might
+be, is likely to be of more interest to listeners than anything about
+FreeBSD.
+
+It's amazing to hear Linus Torvalds and RMS on national radio and have
+the story, mostly of interest to geeks like us, exposed to a mass audience
+(well, a fairly self-selective, intellectual audience).  It's
+great that NPR story increases the awareness of free software; I think
+that will ultimately help the FreeBSD cause even if we weren't
+mentioned on the air.
+
+Tim
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604384 ###
+===== 库内序 145941 | PK 2604384 | 等级 L4 =====
+DATE: 1998-04-10T18:44:10+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: TIME FOR A SEPERATE VENUE!!!
+摘要: Terry Lambert：提出新建 comp.unix.bsd.freebsd.advocacy 与 advocacy@freebsd.org 承接宣传议题
+
+I suggest the creation of a couple of new venues:
+
+1)	comp.unix.bsd.freebsd.advocacy
+
+2)	advocacy@freebsd.org
+
+-hackers is getting swamped.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604385 ###
+===== 库内序 145942 | PK 2604385 | 等级 L3 =====
+DATE: 1998-04-10T18:45:32+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: mozilla-all 8)
+摘要: Amancio：询问如何用 cvsup 获取 mozilla 发行版，请求回复指引
+
+How do I access the mozilla distribution with cvsup?
+
+
+	Tnks!
+	Amancio
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604388 ###
+===== 库内序 145945 | PK 2604388 | 等级 L4 =====
+DATE: 1998-04-10T19:03:44+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Mozilla CVS repository, OK give it a shot. 
+摘要: Amancio：正用 cvsup 拉 mozilla，建议增设 Mozilla 页面并附 cvsup 字段说明与 HTML 手册指针
+
+Most Cool!
+
+I am cvsupping  mozilla as I write this .
+
+After the dust settles we need 
+
+1. http://www.freebsd.org/Mozilla web page
+	The Power to Serve Mozilla world wide
+	a pointer to the  nice long list of world wide freebsd sup servers
+
+2. quick intructions on what the fields 
+	base
+	prefix
+	release
+
+3. in the same page an html pointer to an html version of cvsup
+
+
+4. Press Release
+	
+5. Post to the appropiate mozilla news group
+
+	Tnks!
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604389 ###
+===== 库内序 145946 | PK 2604389 | 等级 L3 =====
+DATE: 1998-04-10T19:05:36+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Where is the FreeBSD Mozilla CVS server? 
+摘要: Mike Smith：建议 bento 作为测试构建机，称其容量与权限均充足
+
+> Amancio Hasty wrote:
+> > 
+> > Lets just put up the CVS server, make the damn thing widely available and
+> > save the speculations for later.
+> 
+> Well the cvs server is there... idle. It's available to all committers,
+> including you. It lets me log in. As I write this, I'm the only user.
+
+... just to point out that bento is an excellent machine for doing your
+test-builds on too.  It has both the balls and the space, and if you
+need anything organised, poke me or Jordan and we'll get it sorted out
+pronto.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604390 ###
+===== 库内序 145947 | PK 2604390 | 等级 L3 =====
+DATE: 1998-04-10T19:13:29+00:00
+FROM: "Fred Muller" <fred@madtec.com>
+SUBJ: Re:Your Article "Freeware: The Heart & Soul of the Internet" 
+摘要: Fred Muller：赞同向图书馆撒 FreeBSD CD-ROM 及派小职员着 daemon 服亮相行业活动，认为定期新闻稿有用
+
+In reply to what Bret wrote:
+
+I'm not psychic.... I just subscribe to the right mailing lists and read
+a lot. I found out about the Linux events via the "Appraising Microsoft"
+list on Ralph Nader's essential.org site, for example.
+[...]
+I like the idea of scattering FreeBSD CD-ROMs to libraries hither and yon --
+and also of having a little guy in a daemon suit at industry events. I think
+that regular press releases are essential -- as well as publicity on the
+major Internet news sites. C|Net has a bunch of good reporters who will
+recognize what's newsworthy; so do TechWeb, The Red Herring, and Wired.
+
+I propose that FreeBSD develop a PR team -- perhaps a group of volunteers
+coordinated by someone who's paid at least part-time. There should be a
+budget
+for hiring writers, for mailing, for FAXing, and for a speaker bureau.
+
+--Brett---------------------------------------------------------------------
+--------------------
+
+Hi,
+
+I've been following this discussion since the beginning and I feel like
+everybody says "well we should do that and this and that.." but nothing
+really happens (or maybe I'm missing some parts - which might really be
+possible).
+
+So is there anybody in charge? (sorry maybe this is also a stupid question,
+as I'm really new to FreeBSD)
+
+What I mean is that if you plan to do something there should be a
+coordinator (maybe elections then if any?), plans and of course funds. I
+think these kinds of battle need full time involvement.
+Raising fund should not be that difficult : you can sell T-shirts (I think
+RH does this already) or any kind of cheap items that FreeBSD users would
+purchase to support this action (anyway if this leads to a FreeBSD market
+share development, those people would easily get back their "donation" by
+"selling" their knowledge at a professional level).
+
+I don't really see what I can do myself (though I'd really like to help) as
+I live in South East Asia which is quite far from where things happen.
+
+Well that was just another comment to express my questions and feelings
+about what's happening. If I really said something stupid please forgive
+me...
+
+Fred
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-questions" in the body of the message
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604392 ###
+===== 库内序 145949 | PK 2604392 | 等级 L4 =====
+DATE: 1998-04-10T19:45:58+00:00
+FROM: Derek Laufenberg <laufen@wi.net>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: Derek Laufenberg： FreeBSD 企业采购常被 bean counters 与 marketing weenies 压制
+
+
+I've been reading this thread and finally decided to throw my .02 cents
+in.  
+
+I've been a user of FreeBSD for about 3+ years and have watched the OS
+grow and improve since 2.0.  I selected it over linux because it had to
+me a more reputable background (4.4BSD).  Numerous times I have tried to
+use the product with in a corporate environment and have gotten shot down
+by bean counters, marketing weenies, and narrow minded Micro$oft share
+holders I've worked with.  For the record, I was with GE - Medical
+Systems at the time.
+
+Let me review a situation or two.
+
+Corporations like GE like the warm and fuzzy feeling of having some other
+legal entity which they can blame should a problem occur.  The mindset is
+that if support is needed, they can go to the company which sells the OS.
+Even GE has trouble getting useful support form MSFT, but that doesn't
+stop the big public agreements which force the use of only their
+products.
+
+The source is available line of argument never seemed to help the support
+objections.  I don't know why, since anytime we incorporated a product
+into one of our products, we would get a source escrow.  I guess the
+source is hard and takes experts to fix.
+
+Beleive or not, I had one of the legal staff tell me that with the name
+"FreeBSD" we shouldn't use it inside one of our products.  It implies
+an inferior level of technology - clearly, a "you get what you pay
+for" line of thought. (You should have seen him go over the GPL for some
+compression code one of my engineers incorporated.)  I remember the "whats
+in a name" thread a few years back.  I really wished a new "Marketron"(tm)
+name would have been selected.  "Free" in the coporate world is only good
+if the customer doesn't know it was free.
+
+I did manage to get FreeBSD into one product.  It slipped by only because
+it was for a university research program and would have a limited
+distribution.  (oh yea, the M$FT solution would have cost $1000 more)
+
+When our group was force fed PCs for SW development, when our primary
+tools were Sun/Unix.  The "correct" solution was to run xterminal
+software on th
+[…中段省略 1607 字符…] h.
+
+Thanks for letting me vent a bit.  I am truely impressed with the quality
+of FreeBSD.  It has the potential to be a silver bullet, but it needs
+killer applications - WORD & Excel.
+
+
+
+------------------------------------------------------------------
+Derek Laufenberg                             Laufenberg Consulting
+laufen@wi.net                                Networking, DICOM
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604393 ###
+===== 库内序 145950 | PK 2604393 | 等级 L3 =====
+DATE: 1998-04-10T19:45:32+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: Dan Janowski：在 newsletter 讨论中提出协调 FreeBSD 用户组的组建，并自述一月前在此发起过 NYC UG
+
+Jordan K. Hubbard wrote:
+
+> I hope to have it in the "print me" pipeline in at least 2 weeks or
+> less.   I'm also open to any sorts of contributions, hacker level
+> or otherwise.  It's a newsletter, not a tech journal. :-)
+>
+>                                                 jordan
+
+My first suggestion/contribution is that we need to coordinate
+the fostering and formation of FreeBSD user groups. I started
+this thought about a month ago here for a New York City UG,
+and am about to push on that. Maybe through the news letter
+and www.freebsd.org we can encourage and coordinate this.
+
+This is a kind of 'think globally, act locally.' Local user
+groups can take advantage of oportunities to appear
+and educate. The FreeBSD Inc. side can take responsibility
+for national/international media. The local UGs will be
+able to contribute both material as well as momentum to
+the effort.
+
+If there is a consensus, I would be glad to work on this
+thing.
+
+Dan
+
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604394 ###
+===== 库内序 145951 | PK 2604394 | 等级 L4 =====
+DATE: 1998-04-10T19:47:48+00:00
+FROM: The Hermit Hacker <scrappy@hub.org>
+SUBJ: filename from open file descriptor...
+摘要: The Hermit Hacker：请求由打开的文件描述符反查对应文件名的方法，指出 fstat 返回一切却不返回名字
+
+
+Hi...
+
+	I'm trying to debug some code, and have an open file descriptor
+that I want to find the file name that its associated with...
+
+	is this possible?  my first thought was fstat(), but that appears
+to return everything but the name :(
+
+Thanks...
+
+Marc G. Fournier                                
+Systems Administrator @ hub.org 
+primary: scrappy@hub.org           secondary: scrappy@{freebsd|postgresql}.org 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604395 ###
+===== 库内序 145952 | PK 2604395 | 等级 L3 =====
+DATE: 1998-04-10T19:50:02+00:00
+FROM: Brett Glass <brett@lariat.org>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the
+  Internet" 
+摘要: Brett Glass：请人教如何配 Hylafax 自动转接 vgetty 语音信箱，自称一直不知 FreeBSD 下可做语音信箱
+
+At 12:18 PM 4/10/98 -0700, Amancio Hasty wrote:
+>Personally, I setup my modem to answer voice
+>and receive faxes . My voice mail goes to my MH folder voice and
+>I also have the capability to mail my voice-messages anywhere that
+>I want so in theory we can setup you with a remote phone/fax office 8)
+
+I'd like to learn how to do this! I knew that Hylafax could do FAX
+under FreeBSD, but I didn't know there was a voice mail package
+available. It'd be great to have it go to e-mail. (What kind of
+app or plug-in would I use to play it?)
+
+--Brett
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604398 ###
+===== 库内序 145955 | PK 2604398 | 等级 L4 =====
+DATE: 1998-04-10T20:01:43+00:00
+FROM: Giao Nguyen <giao@learnix.com>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: Giao Nguyen：指出 Microsoft 许可为 as-is 无明示默示保证，反问道 BSD 何以承担更重的法律责任
+
+Derek Laufenberg said:
+> 
+> Corporations like GE like the warm and fuzzy feeling of having some other
+> legal entity which they can blame should a problem occur.  The mindset is
+
+The really interesting thing is that if you read the Microsoft license
+agreement, the software is sold as-is. No warrantees expressed or implied.
+MS isn't responsible for anything that happens when you use their software.
+So how legally responsible is it if a MS driven missile range crashes and
+hoses the local neighborhood vs. a FreeBSD driven missle range crashes
+and hoses all the neighborhoods? Nothing! See, part of the problem is that
+no one reads these damn licenses. Being a former contract legalese speaking
+pointy-hair-induvidual, I've read through the MS license. And it doesn't
+give you jack but the rights to have their intellectual property on your
+machines.
+
+> that if support is needed, they can go to the company which sells the OS.
+> Even GE has trouble getting useful support form MSFT, but that doesn't
+> stop the big public agreements which force the use of only their
+> products.
+
+But FreeBSD does have support. Walnut Creek does have support lines for
+FreeBSD and Linux. Jordan, correct me if I'm wrong. Maybe we need some
+marketing to say "Oh, and by the way, support if available from Walnut
+Creek." FreeBSD sells and Walnut Creek picks up the pennies too.
+
+> I did manage to get FreeBSD into one product.  It slipped by only because
+> it was for a university research program and would have a limited
+> distribution.  (oh yea, the M$FT solution would have cost $1000 more)
+
+A company I was with used FreeBSD to develop Java code that was eventually
+pushed onto the Windows desktop. I loved it. The ultimate irony. I pay
+$0 for development tools and sold this project with very little overhead.
+
+> What I think is needed is the following:
+> 1) A corporate release version of product with 
+> 	- Marketron name
+
+I'm all in favor of a marketron name. Like maybe FreeBSD98. Just kidding!
+
+> 	- Word, Excel, and Win/NT networking work-a-likes
+
+My pick for this category has always been Applixware. I 
+[…中段省略 1449 字符…] uely impressed with the quality
+> of FreeBSD.  It has the potential to be a silver bullet, but it needs
+> killer applications - WORD & Excel.
+
+We don't need no silly Word & Excel. We've got sendmail. :)
+
+Giao Nguyen
+
+--
+If God had meant you to get it right the first time, He would not have
+put "alter table" into SQL.
+        -- Philip Greenspun, "How to be a Web Whore Just Like Me"
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

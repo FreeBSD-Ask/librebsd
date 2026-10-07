@@ -1,0 +1,673 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603824 ###
+===== 库内序 145381 | PK 2603824 | 等级 L3 =====
+DATE: 1998-03-31T21:10:22+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: mozilla source
+摘要: Open Systems Networking：提议建立一个 FreeBSD 为中心的 mozilla 团队而非各自为政
+
+
+Just curious if there is going to be a FreeBSD/Netscape group :)
+
+Is there a group effort here to trim this baby, un-bloat it, debug it, for
+FreeBSD somewhere? Or is it an everyman for himself kinda thing?
+I know that mozilla.org has the bluesky project and whatnot, but all im
+really interested in is a FreeBSD centered effort. I see some really cool
+things happening now that we have the source. Cool for me being just
+having the daemon replace the N as the icon in the top right corner :)
+
+Just curious if there were people getting together and discussing what to
+fix first etc..
+
+Chris
+
+--
+"I am closed minded. It keeps the rain out."
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603825 ###
+===== 库内序 145382 | PK 2603825 | 等级 L3 =====
+DATE: 1998-03-31T21:12:15+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: mozilla source 
+摘要: Amancio Hasty：提议把 Java VM 升级到 JDK1.1.5 并提供安全机制
+
+Second task, upgrade the Java VM to our JDK1.1.5 8)
+
+Third task, provide secured mechanism 
+
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603826 ###
+===== 库内序 145383 | PK 2603826 | 等级 L4 =====
+DATE: 1998-03-31T21:13:18+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: mozilla source
+摘要: Snob Art Genre：指出退出挂死是 Netscape 4 的 bug 且 unix 源码比 Win 和 Mac 小约三分之一
+
+On Tue, 31 Mar 1998, John Fieber wrote:
+
+> Great!  First task: figure out and fix that annoying
+> hang-and-burn-cpu-cycles-on-exit bug.
+
+That's a Netscape 4 bug, isn't it?  (At least, I experience it with
+Netscape 4.)  And we're talking about Netscape 5 source, no?
+
+BTW, did anyone else notice that the unix source code was about a third
+smaller than the Mac and Windows source?  Of course, they were all
+compressed differently, but still.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603827 ###
+===== 库内序 145384 | PK 2603827 | 等级 L4 =====
+DATE: 1998-03-31T21:13:44+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: mozilla source
+摘要: Eivind Eklund：mozilla.org 已计划引入 CVS 并向有经验者征求协助
+
+On Wed, Apr 01, 1998 at 07:04:55AM +1000, John Birrell wrote:
+> John Fieber wrote:
+> > Great!  First task: figure out and fix that annoying
+> > hang-and-burn-cpu-cycles-on-exit bug.
+> 
+> Is anyone planning to maintain the code in a public cvs so that possible
+> fixes like this can be shared?
+
+Yes - mozilla.org is planning to do this, and has asked for
+information/help from 'people that have experience with large
+Open-Source projects under CVS' - that means us, guys!
+
+Eivind, who started reading the Mozilla newsgroups earlier today.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603828 ###
+===== 库内序 145385 | PK 2603828 | 等级 L3 =====
+DATE: 1998-03-31T21:21:22+00:00
+FROM: "Justin T. Gibbs" <gibbs@plutotech.com>
+SUBJ: Debugging new/delete for C++
+摘要: Justin Gibbs：询问能报告未释放 C++ 对象来源行号大小的调试分配器
+
+Anyone know of a debugging allocator package for C++ programs.
+Essentially all I want is to dump out a list of all unfreed objects
+at program termination listing the file and line number where they
+were allocated, the size, and perhaps an allocation number.
+
+Thanks,
+Justin
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603830 ###
+===== 库内序 145387 | PK 2603830 | 等级 L3 =====
+DATE: 1998-03-31T21:27:50+00:00
+FROM: John Fieber <jfieber@indiana.edu>
+SUBJ: Re: mozilla source
+摘要: John Fieber：认为先核实该挂死 bug 的状态比较合适
+
+On Tue, 31 Mar 1998, Snob Art Genre wrote:
+
+> On Tue, 31 Mar 1998, John Fieber wrote:
+> 
+> > Great!  First task: figure out and fix that annoying
+> > hang-and-burn-cpu-cycles-on-exit bug.
+> 
+> That's a Netscape 4 bug, isn't it?  (At least, I experience it with
+> Netscape 4.)  And we're talking about Netscape 5 source, no?
+
+True.  I suppose the status of that bug should be verified first.
+
+-john
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603831 ###
+===== 库内序 145388 | PK 2603831 | 等级 L4 =====
+DATE: 1998-03-31T21:33:55+00:00
+FROM: "Kaleb S. KEITHLEY" <k.keithley@opengroup.org>
+SUBJ: Re: mozilla source
+摘要: Kaleb S. KEITHLEY：怀疑该问题是 libc select/poll 引起并指出自己 3.0-971225-SNAP 上所有 X 程序退出都挂死
+
+Snob Art Genre wrote:
+> 
+> On Tue, 31 Mar 1998, John Fieber wrote:
+> 
+> > Great!  First task: figure out and fix that annoying
+> > hang-and-burn-cpu-cycles-on-exit bug.
+> 
+> That's a Netscape 4 bug, isn't it?  (At least, I experience it with
+> Netscape 4.)  And we're talking about Netscape 5 source, no?
+
+Are you sure it's not a libc select/poll bug? __Every__ X program linked
+with FreeBSD libc on my 3.0-971225-SNAP system hangs and burns CPU on
+exit. Netscape 3.04 doesn't because it's statically linked -- with
+BSDI's libc.
+
+This problem didn't exist when I was running 2.2.2-RELEASE. It only
+started after I upgraded to 3.0-971225-SNAP.
+
+Doesn't matter whether I build X to use select or poll, so I'm
+suspicious that the select/poll reimplementation broke something. I
+haven't had a chance to dig into it, but I have some degree of
+confidence that it's a libc or kernel bug because Xlib didn't loop on
+2.2.2, nor does it on any of the half dozen other systems that I build X
+on.
+
+-- 
+Kaleb S. KEITHLEY
+X Architect, The Open Group X Project Team
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603833 ###
+===== 库内序 145390 | PK 2603833 | 等级 L3 =====
+DATE: 1998-03-31T21:40:53+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: mozilla source
+摘要: Open Systems Networking：主张建立一个 FreeBSD 中心的 netscape CVS 树供协作后向上游提交
+
+On Wed, 1 Apr 1998, John Birrell wrote:
+
+> That would be nice. I was hoping that there would be a place where
+> FreeBSD people could commit fixes to the source prior to them being
+> accepted by mozilla.org. I think there is a case for the source to
+> be added to src/contrib (if the licence allows - I haven't checked 8-).
+
+Thats what I was getting at, a FreeBSD centered netscape CVS tree that we
+can hack on THEN submit those patches back to the mozilla people.
+And they do have listed there going to have a read only CVS tree soon, so
+im only guessing there talking to someone in the FreeBSD camp to get this
+done. I don't know who else they would talk to. And since FreeBSD is
+listed in the "people to thank" section on mozilla.org I'm assuming thats
+why. Anyway yeah our own cvs tree is what I'd like to see.
+
+Chris
+
+--
+"I am closed minded. It keeps the rain out."
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603834 ###
+===== 库内序 145391 | PK 2603834 | 等级 L3 =====
+DATE: 1998-03-31T21:37:38+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: getting netatalk to work on 2.2.5R
+摘要: Wilko Bulte：请对方过目自己发给 -hackers 的 diff 若认可则提交 send-pr
+
+As Julian Elischer wrote...
+> it is trivial
+> 
+> remove the extra un-needed arg and check the others..
+> use if_ethersubr as a guide.
+
+Would you mind taking a look at the diff I sent to -hackers earlier?
+If it is OK I'll send-pr
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+-------------------------------------------------- Powered by FreeBSD ------
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603835 ###
+===== 库内序 145392 | PK 2603835 | 等级 L3 =====
+DATE: 1998-03-31T22:11:54+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: mozilla source 
+摘要: Jordan K. Hubbard：打算到 Mozilla 聚会上问 Jaime 是否维护公开 CVS
+
+> John Fieber wrote:
+> > Great!  First task: figure out and fix that annoying
+> > hang-and-burn-cpu-cycles-on-exit bug.
+> 
+> Is anyone planning to maintain the code in a public cvs so that possible
+> fixes like this can be shared?
+
+That's a very good question.  Maybe I'll go to the Mozilla party
+tomorrow and ask Jaime. :-)
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603837 ###
+===== 库内序 145394 | PK 2603837 | 等级 L4 =====
+DATE: 1998-03-31T22:18:10+00:00
+FROM: John Fieber <jfieber@indiana.edu>
+SUBJ: Re: mozilla source
+摘要: John Fieber：确认该问题在 2.2.2-RELEASE 不存在升到 3.0-971225-SNAP 后才出现
+
+On Tue, 31 Mar 1998, Kaleb S. KEITHLEY wrote:
+
+> Are you sure it's not a libc select/poll bug? __Every__ X program linked
+> with FreeBSD libc on my 3.0-971225-SNAP system hangs and burns CPU on
+> exit. Netscape 3.04 doesn't because it's statically linked -- with
+> BSDI's libc.
+> 
+> This problem didn't exist when I was running 2.2.2-RELEASE. It only
+> started after I upgraded to 3.0-971225-SNAP.
+
+The described problem with Netscape 4 occurs on 2.2.5 and 2.2.6
+and is intermittent--about half the time it exits just fine.
+
+-john
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603838 ###
+===== 库内序 145395 | PK 2603838 | 等级 L4 =====
+DATE: 1998-03-31T22:24:32+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: mozilla source
+摘要: John Birrell：Netscape 已从源码中剥离所有授权代码 Java 支持被移除
+
+Jordan K. Hubbard wrote:
+> That's a very good question.  Maybe I'll go to the Mozilla party
+> tomorrow and ask Jaime. :-)
+
+A question that you might also want to ask: "How do we get back to
+a version that has _any_ java support built in?" Netscape has stripped
+out all code that they've licenced and that includes java. The source
+contains just stubs. A browser these days without java is pretty lame.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603839 ###
+===== 库内序 145396 | PK 2603839 | 等级 L4 =====
+DATE: 1998-03-31T22:28:44+00:00
+FROM: "James E. Housley" <housley@pr-comm.com>
+SUBJ: Re: Repost/Refined of Additions to anti-spam rules
+摘要: James E. Housley：撤回先前未经测试的 anti-spam 补充并修正 allowip.db 为本地放行 IP 列表
+
+I am VERY sorry about my previous post.  I must have been on something
+when I tested it, because is DEFINITELY doesn't work.  SORRY.  This is
+properly tested and works the way intended.  allowip.db is a hash map of
+allowable IP address, ie local address that are good and therefore won't
+be checked by check_rbl.  The intended use is for people with local
+networks and "expensive" dialup internet access, ie small business.
+
+Comments welcome
+
+Jim
+-- 
+ -------------------------------------------+-------------------------
+ James E. Housley                           | PGP:   1024/03983B4D
+ PR Communications, Inc.                    | 2C 3F 3A 0D A8 D8 C3 13
+ www.servtech.com/public/pr-comm            | 7C F0 B5 BF 27 8B 92 FE
+
+### PK 2603841 ###
+===== 库内序 145398 | PK 2603841 | 等级 L4 =====
+DATE: 1998-03-31T22:34:50+00:00
+FROM: spork <spork@super-g.com>
+SUBJ: NFS over TCP
+摘要: spork：telnet 测试显示 rpcinfo mountd portmapper nfsd 均在 TCP 端口监听并询问 mountd 能否禁用 UDP
+
+Hi,
+
+It's my understanding that NFS in -stable can be run with TCP as the
+transport rather than UDP.
+
+As an exercise in firewalling, I'm trying to make the entire nfs suite
+work over TCP, as it seems easier to control than UDP.  Looking at
+rpcinfo, mountd, portmapper, and nfsd all listen on TCP ports, and
+telnetting to these ports shows that there is indeed something there
+listening:
+
+   program vers proto   port
+    100000    2   tcp    111  portmapper
+    100000    2   udp    111  portmapper
+    100003    2   udp   2049  nfs
+    100003    3   udp   2049  nfs
+    100003    2   tcp   2049  nfs
+    100003    3   tcp   2049  nfs
+    100005    3   udp    967  mountd
+    100005    3   tcp   1012  mountd
+    100005    1   udp    967  mountd
+    100005    1   tcp   1012  mountd
+
+However, if I disallow UDP traffic between the nfs server and client, I
+see a whole bunch of UDP packets denied by ipfw.  I have started nfsd with
+the "-t" flag on the server, and am specifying a version 3 tcp mount on
+the client.  Is it possible to actually disable udp in mountd and portmap?
+I couldn't find a flag for this in the manpages...
+
+Thanks for any info,
+
+C
+
+Charles Sprickman
+spork@super-g.com
+---- 
+                           "I'm not a prophet or a stone-age man
+                           Just a mortal with potential of a superman
+                           I'm living on"      -DB
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603842 ###
+===== 库内序 145399 | PK 2603842 | 等级 L3 =====
+DATE: 1998-03-31T22:35:02+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: mozilla source
+摘要: Open Systems Networking：说 mozilla 新闻组里因 Sun 授权而无法内嵌 Java 建议另寻办法
+
+On Wed, 1 Apr 1998, John Birrell wrote:
+
+> A question that you might also want to ask: "How do we get back to
+> a version that has _any_ java support built in?" Netscape has stripped
+> out all code that they've licenced and that includes java. The source
+> contains just stubs. A browser these days without java is pretty lame.
+
+good luck, In the newly formed mozilla newsgroups they say the reason they
+did this was because they licensed java from sun, and they cannot include
+it in the src because of that license. So getting the java code from this
+is probably futile at best.
+
+Chris
+--
+"I am closed minded. It keeps the rain out."
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603843 ###
+===== 库内序 145400 | PK 2603843 | 等级 L3 =====
+DATE: 1998-03-31T22:32:32+00:00
+FROM: Omar Thameen <omar@clifford.inch.com>
+SUBJ: how does the CD-R filesystem work?
+摘要: Omar Thameen：询问 CD-R 是否支持多会话以及 cdrecord 用途
+
+Hi,
+
+I started this out on -questions, then tried -hardware, but no responses.
+I'm trying to get an idea of how the whole CD-R procedure works on a
+general level.
+
+Say I'm using one of the supported CD-R drives and I wanted to archive
+logs.  Are the CD-Rs multisession?  That is, can I write a set of files
+to the CD-R today, and then write another set tomorrow?
+
+Am I correct in concluding that the cdrecord program is for making
+copies of existing CDs and so cannot be used for archiving files as
+described above?
+
+Thanks,
+Omar
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603844 ###
+===== 库内序 145401 | PK 2603844 | 等级 L4 =====
+DATE: 1998-03-31T22:35:23+00:00
+FROM: Jacques Vidrine <nectar@nectar.com>
+SUBJ: Re: mozilla source
+摘要: Jacques Vidrine：在 2.2.5 上跑两个月用 Netscape 4 未遇到该退出挂死并愿比较配置
+
+
+FYI, I'm running 2.2.5 on my laptop for about 2 months, using Netscape
+4, and I don't experience any problems.  I'd be happy to compare
+configuration information with those interested.
+
+Haven't tried on my -current box.
+
+On Tue, Mar 31, 1998 at 05:18:10PM -0500, John Fieber wrote:
+> On Tue, 31 Mar 1998, Kaleb S. KEITHLEY wrote:
+> 
+> > Are you sure it's not a libc select/poll bug? __Every__ X program linked
+> > with FreeBSD libc on my 3.0-971225-SNAP system hangs and burns CPU on
+> > exit. Netscape 3.04 doesn't because it's statically linked -- with
+> > BSDI's libc.
+> > 
+> > This problem didn't exist when I was running 2.2.2-RELEASE. It only
+> > started after I upgraded to 3.0-971225-SNAP.
+> 
+> The described problem with Netscape 4 occurs on 2.2.5 and 2.2.6
+> and is intermittent--about half the time it exits just fine.
+> 
+> -john
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603845 ###
+===== 库内序 145402 | PK 2603845 | 等级 L3 =====
+DATE: 1998-03-31T22:47:01+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: mozilla source
+摘要: Studded：认为这是赢得正面宣传的好机会并希望 FreeBSD 主导
+
+Open Systems Networking wrote:
+
+>  And since FreeBSD is
+> listed in the "people to thank" section on mozilla.org I'm assuming thats
+> why. Anyway yeah our own cvs tree is what I'd like to see.
+
+	I agree. This is an excellent opportunity for us to get positive
+publicity. I'd really like to see us take the lead here.
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603847 ###
+===== 库内序 145404 | PK 2603847 | 等级 L3 =====
+DATE: 1998-03-31T22:57:45+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: mozilla source 
+摘要: Jordan K. Hubbard：说找回任何 java 支持已是 FAQ SSL 问题相同
+
+> Jordan K. Hubbard wrote:
+> > That's a very good question.  Maybe I'll go to the Mozilla party
+> > tomorrow and ask Jaime. :-)
+> 
+> A question that you might also want to ask: "How do we get back to
+> a version that has _any_ java support built in?" Netscape has stripped
+
+This is already a FAQ, right along with "How do we get back a version
+that has _any_ security (SSL) support built in?" - various people are
+indeed working on both problems and I suspect that any further queries
+by us on these topics would merely be redundant at best. :)
+
+http://www.mozilla.org/community.html contains some good pointers to
+forums where these topics are already being actively discussed.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603849 ###
+===== 库内序 145406 | PK 2603849 | 等级 L4 =====
+DATE: 1998-03-31T23:04:33+00:00
+FROM: "Eric J. Schwertfeger" <ejs@bfd.com>
+SUBJ: Re: mozilla source
+摘要: Eric J. Schwertfeger：确认该挂死问题在 2.2.5 和 2.2.6 上间歇出现约一半概率
+
+On Tue, 31 Mar 1998, John Fieber wrote:
+
+> > This problem didn't exist when I was running 2.2.2-RELEASE. It only
+> > started after I upgraded to 3.0-971225-SNAP.
+> 
+> The described problem with Netscape 4 occurs on 2.2.5 and 2.2.6
+> and is intermittent--about half the time it exits just fine.
+
+Oddly enough, I've only seen it once. Then again, I usually only restart
+once a week or so.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603850 ###
+===== 库内序 145407 | PK 2603850 | 等级 L4 =====
+DATE: 1998-03-31T23:07:03+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: mozilla source 
+摘要: Jordan K. Hubbard：因 Sun 授权无法把 java 代码纳入源码故从该源码取 java 基本无用
+
+> good luck, In the newly formed mozilla newsgroups they say the reason they
+> did this was because they licensed java from sun, and they cannot include
+> it in the src because of that license. So getting the java code from this
+> is probably futile at best.
+
+Frankly, I think that the Kaffe folks have needed a more reasonable
+target to try and hit for some time in helping to focus their efforts,
+and perhaps the free'd Mozilla will provide them with a vehicle for
+doing exactly that.
+
+					Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

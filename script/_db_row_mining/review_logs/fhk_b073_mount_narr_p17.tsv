@@ -1,0 +1,22 @@
+2603143	885	walter 确认 device 指 device driver 并建议把 SHUTDOWN_POWEROFF 从 step 8 移出内核放到 step 5 的 callout 函数 Halt Panic Reboot 因各种原因仍留在内核
+2603145	885	tom 回复 ken 关于两台站点两个用户数据库如何处置 建议直接把两个站点的 passwd 文件合并 至于 Radius 那部分反问对方是否在用 说自己也不了解
+2603147	885	andrew 确认终于理解了移出 kernel 的想法 自嘲是因为自己英语不好 但认为改动没什么大优势 更像一点追求完美的改进 不过也该做
+2603150	885	kazu 建议最好先制定一个统一框架 让两类实现都能在其中以标准化的方式被实现并运行起来 末了还以反问句征求大家的认同 全文只谈框架层面
+2603151	885	mike 提出 APM poweroff 在 ATX 主板与笔记本之间不同 FreeBSD 早已能关笔记本 但一直没在 ATX 主板上生效过
+2603155	885	hosokawa 表示 -current 已有 APM power-off 功能 自己也在 PAO 中用扩展 at_shutdown 方式实现了 但两种实现各有道理 目前没有替换现有代码的计划
+2603156	885	julian 回应同步镜像请求给出定义 指在物理分离并联网的系统上维护副本 TCP/IP 网络支持 实时捕获主服务器 I/O 变更持续发送到目标机 磁盘块级别保护
+2603163	885	terry 希望在断电场景下若启用软更新则无需清理磁盘 打算引入 soft read-only 在 syncer queue 为空时设 clean flag 并写出 superblock 且不打算依赖 UPS
+2603167	885	erik 表示已知最简单方案是合并密码文件 建议在大 db 文件构建时把 openinfo 结构中 cache size 设为略小于最终 db 大小以加快 pwd_mkdb 和 yp_mkdb
+2603168	885	tcobb 询问 FreeBSD 的 PAM 过去半年是否有人做过初版实现 想知道具体是谁做的在哪 是否真正能正常工作 因为这事断断续续讨论了很久
+2603169	885	tcobb 询问 UNION FS 现状 希望把 NFS 服务器上的用户目录挂到新机器 再叠加常用二进制以支持 chroot telnet 并问 UNION 是否稳定到可以登录时动态映射
+2603170	885	julian 建议无需 chroot 在服务器上为每个二进制保留单份并用 hard link 指向各 chroot 目录 这样只需每份一个副本
+2603171	885	eivind 回应 julian 关于无需 chroot 的说法 认为 julian 想表达的其实是 union 借此澄清误解
+2603172	885	tcobb 表示 NULLFS 可能是解法 已在 P75 32MB 的机器上快速挂载 1000 个 NULLFS 未见明显问题 唯一困扰是 rdonly 挂载选项不生效 怀疑它继承了底层文件系统选项
+2603175	885	abial 认为 mike smith 做过 PAM 初版但很快被其他任务淹没 两周前问时似乎已搁置 自己愿意接手动改 login 与 ftp 支持 SecurID 令牌与 radius 认证
+2603181	885	sbabkin 建议把远程镜像拆成两部分更清晰易实现 ccd 承担镜像本体 另一部分是映射远程盘 远程盘本身也有独立用途
+2603189	885	benedict 认为要恰到好处地仿真 Microsoft 代码 或许走 WINE 这条路是唯一可行的方式 话说得带点玩笑意味 但也没提别的现实替代方案
+2603191	885	yuri 转述学生的疑问 询问有没有 API 可以让主机自身覆盖自己网卡的 MAC 地址 还是必须去改内核才能实现这一效果
+2603193	885	sbabkin 回复说虽然有 API 但目前没有驱动去实现 建议在 IPX 代码里找比如 if_ether.c 也可以参考 if_ep.c 这类驱动代码
+2603194	885	tyoung 认为买一张靠卸载来省 CPU 的卡太贵 宁可买两张 3com 高端网卡分放不同网段 觉得网卡占用的处理器周期并不多 省下的 500 美元拿去买交换式集线器更划算
+2603195	885	terry 继续质疑 FreeBSD 容错论断 认为 panic 正是需要防范的故障类型 若用户没有 UPS 就不该自称容错 FreeBSD 差别在 SFT 软件容错
+2603197	885	shimon 把 panic 分两类 可预测的是代码主动决定关机 不可预测的是 NULL 指针和无效地址 Unix 包括 FreeBSD 都没法从这类恢复 建议切换到备用计算引擎更稳

@@ -1,0 +1,872 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603589 ###
+===== 库内序 145147 | PK 2603589 | 等级 L4 =====
+DATE: 1998-03-24T12:03:40+00:00
+FROM: "Justin M. Seger" <jseger@freebsd.scds.com>
+SUBJ: Re: the Future Domain TMC-16XX
+摘要: Seger：称该驱动大体可用但错误恢复有问题且其故障卡会直接挂住内核并用作主控制器
+
+   Well, it sorta worked when i tried it.  It had some problems with
+   error recovery (i've got a faulty adapter that completely hangs the
+   kernel, as opposed to simply fail probing, and continuing to boot).
+
+Currently I'm using this driver as my primary HD controller in a 
+freebsd-current system.  I do have occasional system crashes that MAY be
+related to the driver, however I am not sure.
+
+   The driver no longer compiled under my -current system as of about a
+   month ago, so i had to disable it on my only machine i've got such an
+   adaptor.  Sorry, i'm out of time to maintain this driver myself right
+   now.
+
+I have a version that DOES compile under -current.  If given permission, I'd
+be happy to import that driver and do any maintenance that was required,
+however I have no device driver programming experience.
+
+   The guy who sent me the driver (whose name escaped me right now) would
+   probably maintain it, but he indicated me that he doesn't have the
+   technical skills e.g. to rewrite it enough to fit into the FreeBSD way
+   of doing things either.  Together with the advent of the CAM
+   subsystem, i'm not sure whether it's the right time to import it (but
+   i wouldn't mind if someone did it, *and* maintained the driver later
+   on).
+
+If you want me to import it, I'd be happy to.  I'd also be happy to test and 
+commit any patches or anything that were sent my way, however it's unlikely
+that I would have much success in fixing bugs myself.
+
+TTYL,
+-Justin Seger-
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603590 ###
+===== 库内序 145148 | PK 2603590 | 等级 L4 =====
+DATE: 1998-03-24T15:12:56+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: TCP connection hang
+摘要: Snob：判断 SCO 端未发 FIN 终止连接问题应在其应用软件侧
+
+Your SCO box doesn't seem to be sending a FIN packet to terminate the
+connection.  The problem is probably in the application software on the
+SCO side.
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603592 ###
+===== 库内序 145150 | PK 2603592 | 等级 L4 =====
+DATE: 1998-03-24T16:09:02+00:00
+FROM: bmah@CA.Sandia.GOV (Bruce A. Mah)
+SUBJ: Re: TCP connection hang 
+摘要: Mah：质疑另有原因并指出 SCO 端连发五段未获 FreeBSD 侧任何确认
+
+If memory serves me right, Snob Art Genre wrote:
+> Your SCO box doesn't seem to be sending a FIN packet to terminate the
+> connection.  The problem is probably in the application software on the
+> SCO side.
+
+I'm wondering if there isn't something else at work here.  Note that at the 
+end of the trace, the SCO box sent five segments without getting any 
+acknowledgement back from the FreeBSD machine, yet the FreeBSD machine was 
+sending back ACK segments mostly normally before.
+
+Arman Hazairin wrote:
+> 15:27:42.040119 20.12.39.21.5577 > 68.10.3.1.1292: . ack 4225 win 16384
+> (DF)
+> 15:27:42.207945 68.10.3.1.1292 > 20.12.39.21.5577: . 4225:4737(512) ack
+> 1 win 4096
+> 15:27:42.274151 68.10.3.1.1292 > 20.12.39.21.5577: . 4737:5249(512) ack
+> 1 win 4096
+> 15:27:42.341464 68.10.3.1.1292 > 20.12.39.21.5577: . 5249:5761(512) ack
+> 1 win 4096
+> 15:27:42.408820 68.10.3.1.1292 > 20.12.39.21.5577: . 5761:6273(512) ack
+> 1 win 4096
+> 15:27:42.475081 68.10.3.1.1292 > 20.12.39.21.5577: . 6273:6785(512) ack
+> 1 win 4096
+
+It *almost* looks to me like the FreeBSD host just stopped sending ACKs for 
+some reason, while the SCO box was several packets (window size 5 segments, 
+512-byte MSS) into slow-start.  Is it possible that the application on the 
+FreeBSD box somehow isn't reading the data out of its socket buffers?
+
+Bruce.
+
+
+
+
+### PK 2603593 ###
+===== 库内序 145151 | PK 2603593 | 等级 L4 =====
+DATE: 1998-03-24T16:55:49+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Free-BSD threads & IO
+摘要: Tom：指出 2.2.1 的 libc_r 有很多 bug 多数在 2.2.6 修好但 signal 与 alarm 处理仍怪
+
+
+On Tue, 24 Mar 1998, Dalibor Sramek wrote:
+
+> So - is there any explanation for this problem and is thread support OK in
+> Free-BSD? I still use 2.2.1 installation.
+
+  There are many bugs in libc_r in 2.2.1.  Most were fixed in 2.2.6, but
+signal/alarm handling seems a little funny.
+
+> Thanks
+> 
+> Dalibor Sramek
+> The British Council, Prague Czech Republic
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603595 ###
+===== 库内序 145153 | PK 2603595 | 等级 L4 =====
+DATE: 1998-03-24T18:02:59+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: How do you increase available SYSV shared memory?
+摘要: Shapiro：自责未公开新存储管理器计划并称改动不到 50 行
+
+
+On 24-Mar-98 Kent S. Gordon wrote:
+ ...
+
+> I am not going to change any of the storage manager code.
+
+Thank you.  It is my fault in a way, not broadcasting my intention to write
+a new storage manager, so others know to consider/respect that.
+
+ ...
+
+> I probably will not be using /dev/zero, but yes I am just replacing
+> one method of getting shared memory with another way.  It looks like
+> it will only impact less than 50 lines of postgres code.
+
+The number of lines is not important.  The nature of these lines is :-)
+
+Thanx!
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603597 ###
+===== 库内序 145155 | PK 2603597 | 等级 L3 =====
+DATE: 1998-03-24T18:32:08+00:00
+FROM: Martin Heller <mheller@student.uni-kl.de>
+SUBJ: FYI: PDP-11 UNIX Src Licenses Available 
+摘要: Heller：转发关于 SCO 开放 PDP-11 UNIX 源码许可的邮件
+
+
+
+---------- Forwarded message ----------
+Date: Wed, 11 Mar 1998 14:08:18 +1100 (EST)
+From: Warren Toomey <wkt@henry.cs.adfa.oz.au>
+To: mheller@acm.org
+Subject: PDP-11 UNIX Src Licenses Available
+
+Hello, you are receiving this mail for one of the following reasons:
+
+	+ you signed a petition urging SCO to make source licenses for
+	  PDP-11 UNIX available
+
+	+ your filled in a survey detailing what you wanted in such a
+	  source license
+
+	+ you are a member of the PUPS mailing list
+
+I am glad to announce that, as a result of the petition, SCO have made
+source licenses available for most versions of PDP-11 UNIX. The essential
+details of the license are:
+
+	Covers research Editions 1 to 7, and 32V.
+	Covers derived versions of UNIX which ran on PDP-11s.
+	Specifically excludes System V onwards.
+	Full source code, binaries and documentation.
+	Personal, non-commercial use.
+	Exchange of sources and modifications to other licensees.
+	Non-disclosure to unlicensed people.
+
+The cost is US$100. Details on how to obtain the license are available at
+
+	http://minnie.cs.adfa.oz.au/PUPS/getlicense.html
+
+SCO will not ship any media with this license. The PDP-11 Unix Preservation
+Society has a number of volunteers who are prepared to cut CD-ROMs and tapes
+in order to distribute the PUPS Archive of old Unix software to licensed
+people. Details about this archive are available at
+
+	http://minnie.cs.adfa.oz.au/PUPS/pupsfaq.html
+
+We would like a few more licensed people to volunteer to create CD-ROMs and
+tapes, to take the load off the existing volunteers.
+
+Finally, none of this would have been possible without the immense support
+which we received from Dion Johnson within SCO. He battled with the legal
+eagles over a period of 18 months or so to make the license available. If
+you can, please send Dion a thank you card at the address
+
+	The Santa Cruz Operation, Inc.
+        400 Encinal Street
+        Santa Cruz, CA 95061-1900
+        United States of America
+
+        Attention: Dion Johnson
+
+This will be a surprise for him, but I'm sure he will appreciate your
+thanks.
+
+In turn, I would like to thank you all for your support. Without the
+signatures on the petition, none of this would have been possible.
+
+	Warren Toomey	wkt@cs.adfa.oz.au
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603598 ###
+===== 库内序 145156 | PK 2603598 | 等级 L3 =====
+DATE: 1998-03-24T18:36:20+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: TCP connection hang
+摘要: Snob：认同 Hazairin 关于两侧沉默致连接永久挂起的判断
+
+On Wed, 25 Mar 1998, Arman Hazairin wrote:
+
+> The SCO box never sent any FIN packet because it never finish the
+> transfer.
+> That two boxes just kept silent, SCO waiting for ACK it never received
+> (the last 5 packets in tcpdump output below), the FreeBSD box just kept
+> silent after sending ack for seq. 4225. After all the sequence below,
+> the connection is hang forever until timeout occur.
+
+You're clearly correct.  I must increase my dose of coffee.  Perhaps the
+undocumented kernel config option TCP_DEBUG might be of use to you.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603599 ###
+===== 库内序 145157 | PK 2603599 | 等级 L4 =====
+DATE: 1998-03-24T18:55:10+00:00
+FROM: bmah@CA.Sandia.GOV (Bruce A. Mah)
+SUBJ: Re: TCP connection hang 
+摘要: Mah：注意到首个 128 字节分段不像批量传输应发的并追问被测应用为何物
+
+If memory serves me right, Arman Hazairin wrote:
+
+> If you look into the last ack, it's about 4K of data being transferred.
+
+Yes.  What's also kind of interesting is the inital 128-byte segment that gets 
+sent...I wouldn't have expected this from a bulk transfer application.
+
+> It
+> is almost the same in ftp application, 
+
+What's the application under test?  If FTP behaves similarly it might not 
+matter lots, I guess.  (I was thinking that if the receiver wasn't actually 
+reading the data, it could cause this, but then we'd see different window size 
+advertisements from receiver to sender.)
+
+> if i do that in that two box,
+> vice versa.
+> I've tried to turn off rfc1323 and rfc1644 option, still doesn't work.
+> Any hint ?
+
+Ummm.  Let me ask this one more time....what's the network path like between 
+your two machines?
+
+I assume at this point the SCO box is trying to shove a huge file over the 
+FreeBSD machine, right?  What happens if you try to go the opposite direction? 
+(Is that what you meant by "vice versa" above?)
+
+Also, where is your tcpdump trace being taken?  Is it on one of the two 
+endhosts or at some point in the middle?
+
+Do you regularly do other types of communication over this path (e.g. HTTP, 
+telnet, anything?)?  If so, how do they fare?
+
+Bruce.
+
+
+
+
+### PK 2603600 ###
+===== 库内序 145158 | PK 2603600 | 等级 L3 =====
+DATE: 1998-03-24T16:25:28+00:00
+FROM: leifn@Image.dk (Leif Neland)
+SUBJ: Re: Serial Keyboards
+摘要: Neland：提出一个想法但自己不确定是否可行
+
+At 24 Mar 98 04:08:52 Warner Losh (2:234/49.99) wrote to All  regarding Re:
+Serial Keyboards in area "freebsd-hacker"
+
+ WL> OK.  I wasn't precise enough.  I have a keyboard that generates
+ WL> RS-232C or RS-423 level signals that I'd like to connect to a
+ WL> PC-like thing (most people call them laptops, mine is a Libretto
+ WL> 50CT) that is currently running FreeBSD.
+
+An idea, I don't know if it is possible:
+
+Use the serial console, then set the vga-console to snoop on the serial.
+
+
+Leif Neland
+leifn@image.dk
+
+---
+|Fidonet:  Leif Neland 2:234/49
+|Internet: leifn@image.dk
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603601 ###
+===== 库内序 145159 | PK 2603601 | 等级 L3 =====
+DATE: 1998-03-25T02:37:26+00:00
+FROM: Arman Hazairin <arman@ai3.net>
+SUBJ: Re: TCP connection hang
+摘要: Hazairin：确认文件大小约 1.4MB 由软盘镜像经 dd 命令生成
+
+Bruce A. Mah wrote:
+
+> If memory serves me right, Arman Hazairin wrote:
+> 
+> > If you look into the last ack, it's about 4K of data being transferred.
+> 
+> Yes.  What's also kind of interesting is the inital 128-byte segment that gets
+> sent...I wouldn't have expected this from a bulk transfer application.
+
+You are absolutely right, the file size is about 1.4MB. Created from
+floppy
+disk image over 'dd' command.
+
+> > It is almost the same in ftp application,
+> 
+> What's the application under test?  If FTP behaves similarly it might not
+> matter lots, I guess.  (I was thinking that if the receiver wasn't actually
+> reading the data, it could cause this, but then we'd see different window size
+> advertisements from receiver to sender.)
+
+First I tried using ftp, then try to make trace over the data that
+transferred
+over the link by using small program that doing binary file transfer
+over the link.
+
+> > if i do that in that two box, vice versa.
+> > I've tried to turn off rfc1323 and rfc1644 option, still doesn't work.
+> > Any hint ?
+> 
+> Ummm.  Let me ask this one more time....what's the network path like between
+> your two machines?
+
+
+Those two machines are connected by 64kbps leasedline, using Cisco
+router in between.
+The encapsulation is Cisco HDLC, using ip header compression option.
+
+> I assume at this point the SCO box is trying to shove a huge file over the
+> FreeBSD machine, right?  What happens if you try to go the opposite direction?
+> (Is that what you meant by "vice versa" above?)
+
+If you say that 1.4MB is huge, i hope that is not the case, because we
+need
+to transfer that kind of size (or even more) between the two boxes.
+I've tried both direction.
+FYI, using binary mode for transferring file through ftp, 1
+postscript/text file
+can went through (size: 1.8MB), but, if i try to pick binary file, that
+problem appear again (i've tried 600K binary file).
+I tried to split the original file into pieces (using split(1)), and
+start
+transferring 1st sequence, it can't  went through transferring the file.
+
+> Also, where is your tcpdump trace being taken?  Is it on on
+[…中段省略 33 字符…] e point in the middle?
+
+the tcpdump is being taken from FreeBSD box.
+
+> Do you regularly do other types of communication over this path (e.g. HTTP,
+> telnet, anything?)?  If so, how do they fare?
+
+As in the previous e-mail, telnet connection went fine over the link.
+Also,
+transferring text file (using binary/ascii mode) over ftp connection
+also fine.
+
+> 
+> Bruce.
+
+regards,
+
+-arman-
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603602 ###
+===== 库内序 145160 | PK 2603602 | 等级 L3 =====
+DATE: 1998-03-24T20:54:34+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: TCP connection hang 
+摘要: Greenman：追问两侧是否尝试过重传
+
+>The SCO box never sent any FIN packet because it never finish the
+>transfer.
+>That two boxes just kept silent, SCO waiting for ACK it never received
+>(the last 5 packets in tcpdump output below), the FreeBSD box just kept
+>silent after sending ack for seq. 4225. After all the sequence below,
+>the connection is hang forever until timeout occur.
+
+   Does either side attempt retransmission? At the very least, the SCO machine
+should continue to retransmit the segments until it gets an ACK. Also, on
+which side is this tcpdump taken - closest to the SCO or closest to the
+FreeBSD?
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603603 ###
+===== 库内序 145161 | PK 2603603 | 等级 L3 =====
+DATE: 1998-03-24T21:09:03+00:00
+FROM: thuall <thuall@wanadoo.fr>
+SUBJ: pb using RAWIP socket with IP_HDRINCL option 
+摘要: thuall：请求指导在 FreeBSD 2.2.2 上用 RAW IP 套接字配 IP_HDRINCL 做用户态 ICMP 分片
+
+Hello,
+
+I am trying to use under FreeBSD 2.2.2 the RAW IP socket interface with IP_HDRINCL option.
+The aim of this exercise is to manage at the user level the fragmentation of an ICMP packet.
+My Ethernet interface has it's MTU set to 1500 bytes.
+1/ What I want to do is the following :
+* build an ICMP packet which length is 1000 bytes. 
+* send the first half of the payload (488 bytes) in a first IP packet (with the full IP header 	constructed with MF bit set, with a self allocated ID for the IP packet, etc .....). 
+* send the second half of the payload (512 bytes), in a second packet (with the full IP header 	constructed with Offset field set to 61 (488/8), with the same allocated ID for the IP packet, etc...)...
+
+2/ What I see is the following :
+* The first IP packet sent has not the MF bit set, and the Total Length of this packet is '1020 	bytes' !!.
+* The second paquet is like it was supposed to be.
+
+And if :
+* If I wait some times (1 sec) between the emission of the 2 IP packets, the first (MF set, ...) and 	the second packet are like they were supposed to be.
+* If I change the IP ID for the second paquet : the first paquet has it's MF set, and the both  	packets are  like they were supposed to be (unfortunately their IP ident are differents for the reassembling).
+
+
+Any help would be appreciated to understand this behavior, to find a solution to my pb.
+Sincerely 
+
+Lionel
+
+Thuall@wanadoo.fr
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603605 ###
+===== 库内序 145163 | PK 2603605 | 等级 L3 =====
+DATE: 1998-03-24T22:04:47+00:00
+FROM: "pratap singh" <v_pr@hotmail.com>
+SUBJ: ARP REQUEST question
+摘要: pratap singh 问 ARP frame 没有 checksum 是不是因为 ARP 不跨越 LAN 边界且 LAN 差错率低于 WAN
+
+Hi all gurus of Networking,
+I have a basic doubt. Every layer has a cehcksum being calculated 
+whereas the ARP frame does not have. Can anyone throw light on this
+please. Is it because the ARP packets donot traverse the LAN boundary 
+and error rates in LAN environment are very low compared to the WAN 
+error rates???? 
+Regards,
+prats
+
+______________________________________________________
+Get Your Private, Free Email at http://www.hotmail.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603606 ###
+===== 库内序 145164 | PK 2603606 | 等级 L3 =====
+DATE: 1998-03-24T22:25:16+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: ARP REQUEST question
+摘要: Snob Art Genre 指出以太网信框有错误检查但 ARP 请求本身也可能在传输中被损坏
+
+On Tue, 24 Mar 1998, pratap singh wrote:
+
+> Hi all gurus of Networking,
+> I have a basic doubt. Every layer has a cehcksum being calculated 
+> whereas the ARP frame does not have. Can anyone throw light on this
+> please. Is it because the ARP packets donot traverse the LAN boundary 
+> and error rates in LAN environment are very low compared to the WAN 
+> error rates???? 
+
+Probably.  Also, let's say an ARP frame does get corrupted.  Where do
+you report the error?  Better just to wait for the request to get
+retransmitted, which it will.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603607 ###
+===== 库内序 145165 | PK 2603607 | 等级 L3 =====
+DATE: 1998-03-24T22:25:08+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: ARP REQUEST question 
+摘要: David Greenman 答复 ARP 帧无自身校验和是因为所有以太网包都由 32bit CRC 保护
+
+>Hi all gurus of Networking,
+>I have a basic doubt. Every layer has a cehcksum being calculated 
+>whereas the ARP frame does not have. Can anyone throw light on this
+>please. Is it because the ARP packets donot traverse the LAN boundary 
+>and error rates in LAN environment are very low compared to the WAN 
+>error rates???? 
+
+   All ethernet packets have a 32bit CRC, so the arps are protected by that.
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603608 ###
+===== 库内序 145166 | PK 2603608 | 等级 L3 =====
+DATE: 1998-03-24T22:35:20+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: TCP connection hang 
+摘要: David Greenman 要求对方在 SCO 那一侧也抓 tcpdump 并询问 FreeBSD 机器上的以太网卡型号
+
+>If you look into full trace of ftp session below, there are no
+>retransmission attempt from either side.
+
+   Very strange; I can't explain this behavior. Is it possible for you to
+get a tcpdump on the other side as well? It might be interesting to see
+if there is any difference with what the SCO machine sees.
+   What type of ethernet card is in the FreeBSD machine?
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603609 ###
+===== 库内序 145167 | PK 2603609 | 等级 L3 =====
+DATE: 1998-03-24T23:11:01+00:00
+FROM: Vladimir Kushnir <kushn@mail.kar.net>
+SUBJ: Re: DEVFS awareness for VoxWare?
+摘要: Vladimir Kushnir 承认 pine 里自定义 From 拼写错误导致邮件被静默拒绝并承诺下次用 send-pr 交补丁
+
+Sorry for a delay with an answer (misspelling in customized From: in pine 
+- and everything was quietly rejected <:-().
+
+On Mon, 23 Mar 1998, Eivind Eklund wrote:
+
+> It is usually better to submit patches through send-pr, in case nobody
+> take care of it immediately.  However, we're not picky - anybody
+> sending in enhancements deserve praise, not flames.
+
+Thank you, I will try to do it the right way next time (hardly soon with
+my programming skills, though - a pity).
+
+> 
+> Can you test if the following patch work for you?  This should cover
+> all cases (except trixmidi, which for some reason is removed from the
+> driver list, and which I thus can't test for.)
+> 
+<Snip>
+>  
+> If this works, I'll commit it.  (I've done a few style changes, which
+> you probably notice.)
+
+Thanks a lot. Everything works all right: I've tried it under both old
+mount scheme and with devfs mounted /dev (well, I did that before as well,
+of course). I should have thought, though, that in this last case there's
+no /dev/dsp, /dev/mixer and so on (there are /dev/dsp0,..), while most
+apps expect them to be. My fault.
+ 
+> 
+> Eivind.
+>  
+Regards,
+Vladimir 
+
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603611 ###
+===== 库内序 145169 | PK 2603611 | 等级 L4 =====
+DATE: 1998-03-25T01:20:44+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Free-BSD threads & IO
+摘要: Terry Lambert 指出 -D_THREAD_SAFE 是系统特定 FreeBSD 必需 MySQL thr_alarm 在 FreeBSD 线程上挂起
+
+> > Did you compile with -D_THREAD_SAFE and link with -lc_r?
+> 
+> I linked the library but I did not used the -D_THREAD_SAFE option. Is this
+> option system specific? (I used makefile provided with the examples).
+> Anyway I will try it.
+
+Yes, it's system specific.  I don't like it being that way, but
+that's the way it is (for now, FreeBSD requires "-D_THREAD_SAFE").
+
+If you are not using "-stable", but instead are using a FreeBSD
+from a CDROM, you will not be able to get your threads code to
+work reliably, especially if you are using signals, sockets, the
+fcntl() for dup, dup, dup2, or the ioctl() to set the fd into
+non-blocking mode (which is incorrectly sent down instead of
+being proxied into the flags for the thread fd).  You will also
+have problems with the return values of various functions.
+
+For the -stable version of pthreads, there are only a few things
+to look out for.  Most of these are the result of the differences
+between pthreads draft 4 and the draf 10/final implementations;
+FreeBSD -stable and -current are currently draft 4 implementations.
+
+The two major "gotcha's" are:
+
+	o	you can't statically initialize a pthread_mutex_t
+		in draft 4 pthreads
+
+	o	If you pass an attribute to pthread_create, you
+		need to pass the address of the attribute instead
+		of the attribute itself.
+
+You can compile-time test for draft 4 by:
+
+#ifndef PTHREAD_MUTEX_INITIALIZER
+
+	/*
+	 * Draft 4 code here
+	 */
+
+#else	/* !PTHREAD_MUTEX_INITIALIZER*/
+
+	/*
+	 * Draft 10/final code here
+	 */
+
+#endif	/* !PTHREAD_MUTEX_INITIALIZER*/
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603617 ###
+===== 库内序 145175 | PK 2603617 | 等级 L3 =====
+DATE: 1998-03-25T10:23:26+00:00
+FROM: Joe McGuckin <joe@via.net>
+SUBJ: Stupid problem with bounce buffers
+摘要: Joe McGuckin 报告 2.2.5-Release 装 384M 内存后 bounce buffer out of range 报错
+
+
+on 2.2.5-Release...
+
+Putting 384M of ram in machine results in a kernel panic on boot:
+
+   bounce buffer memory out of range
+
+Is there any way to fix this other than physically removing 128Meg of RAM
+and regenerating a new kernel ?
+
+joe
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603618 ###
+===== 库内序 145176 | PK 2603618 | 等级 L3 =====
+DATE: 1998-03-25T10:39:08+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Stupid problem with bounce buffers 
+摘要: David Greenman 建议等几天后发布的 2.2.6 版本以解决 bounce buffer memory out of range 启动崩溃
+
+>on 2.2.5-Release...
+>
+>Putting 384M of ram in machine results in a kernel panic on boot:
+>
+>   bounce buffer memory out of range
+>
+>Is there any way to fix this other than physically removing 128Meg of RAM
+>and regenerating a new kernel ?
+
+   Get 2.2.6 when it comes out in a day or so.
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603619 ###
+===== 库内序 145177 | PK 2603619 | 等级 L4 =====
+DATE: 1998-03-25T10:45:34+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Stupid problem with bounce buffers 
+摘要: Jordan K Hubbard 指出 bounce buffer 问题已在 2.2-stable 修复并给出 machdep.c 的 diff
+
+> Is there any way to fix this other than physically removing 128Meg of RAM
+> and regenerating a new kernel ?
+
+This was fixed in 2.2-stable.  Here's the diff:
+
+RCS file: /home/ncvs/src/sys/i386/i386/machdep.c,v
+retrieving revision 1.209.2.21
+retrieving revision 1.209.2.22
+diff -u -u -r1.209.2.21 -r1.209.2.22
+--- machdep.c   1998/03/12 13:06:42     1.209.2.21
++++ machdep.c   1998/03/23 05:30:29     1.209.2.22
+@@ -304,7 +304,6 @@
+        if (Maxmem > 4096) {
+                if (bouncepages == 0) {
+                        bouncepages = 64;
+-                       bouncepages += ((Maxmem - 4096) / 2048) * 32;
+                }
+                v = (caddr_t)((vm_offset_t)round_page(v));
+                valloc(bouncememory, char, bouncepages * PAGE_SIZE);
+
+You could also just wait a few hours and install 2.2.6 on the machine. :-)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603620 ###
+===== 库内序 145178 | PK 2603620 | 等级 L3 =====
+DATE: 1998-03-25T11:21:43+00:00
+FROM: black@bleep.ishiboo.com
+SUBJ: interface byte count insanity
+摘要: black@bleep.ishiboo.com 用 theo deraadt 的内核补丁改 ifconfig 打印接口统计后发现行为异常
+
+i've been mucking around with struct if_data to get useful interface
+statistics out of the kernel and have stumbled upon some rather ugly
+behavior.
+
+theo deraadt wrote a little kernel patch for me that adds a socket
+ioctl call to return the if_data structure for an interface, and i
+then modified ifconfig to print interface stats using the new ioctl.
+
+i tested on a P6-200 running vanilla 2.2.5R using de, fxp, and vx
+cards.
+
+for all cards tested the byte counts for both input and output are
+complete, though slowly increasing, garbage.  after transferring over
+100MB through the interface i saw this:
+
+de0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        82632 packets input, 39371 bytes, 0 drops, 0 errors
+        39371 packets output, 2178386 bytes, 154 collisions, 0 errors
+        inet 172.21.8.239 netmask 0xffffff00 broadcast 172.21.8.255
+        ether 00:40:05:41:10:18 
+        media: autoselect (10baseT/UTP) status: active
+
+the packet counts are about right, but the byte counts are obviously
+silly.
+
+another oddity is the higher collision rate with the de card vs. the
+fxp card.  i saw single digit collisions for the same amount of data
+with the fxp.  i will re-run the tests to verify this behavior.
+
+do any of the current ethernet drivers correctly increment their byte
+counts?  would anyone be averse to expanding struct if_data to include
+more detailed stats on errors and collision types?  would the kernel
+and ifconfig patches be worth commiting to the tree (the kernel patch
+is particularly useful because it allows a modified netstat to run
+without being setgid kmem)?
+
+
+ben
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

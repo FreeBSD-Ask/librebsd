@@ -1,0 +1,22 @@
+2603239	885	blue 提出在 LKM 的已知偏移写入 PCI Vendor ID 与 PCI Device ID 让内核在驱动加载之前完成设备探测，效率更高，代价是 probe 段无法承载其他逻辑且需要设备名匹配表
+2603240	885	gray 询问 shell 提示符下 for 循环的写法，说自己之前看过一次但如今忘了原句，希望在 bash 或 sh 提示符上直接输入多行直到 done 就能执行
+2603241	885	robert 答无 root 无死锁的认证机制首选 Kerberos，并提到几周前在 hackers 列表提过组建替代认证邮件列表反响不错，等 IETF 草案 Friday 交完就起草章程
+2603242	885	cmsedore 说 FreeBSD 机器上数据包计数大约每 5 到 7 天回绕一次，进出各超 40 亿包，机器已连续运行 48 天无异常，问 interface 与 ip 栈计数改 64 位有无推进
+2603244	885	studded 认为这不属于 hacker 讨论范围就转到 questions 列表跟进，同时说明 bash 或 sh 提示符下可以一行行输入直到 done，并给出 bash 提示符下一段 for 循环的示例
+2603245	885	fuller 给出一段 sh 提示符样例用分号分隔 for i in 到 do 的整段，把三个域名丢进一次循环 ping 各五次再丢弃输出，退出后提示符回到百分比
+2603246	885	jgm 表示 linker set 完全能和 kld 配合使用只是没人花时间去做，并打算一周内提交 VFS 变更作为第二次也是最后一次警告
+2603248	885	perlsta 反馈 linux emulation 下跑 x11amp 残留 SYSVSHM 段，控制台反复刷 linux-emu setup 未实现的告警，查了 linux man 里 setup 不该被用户态调用但怀疑手册早已过时
+2603249	885	rkw 预警下周终止 ctm-src-2_1 列表并释放各镜像上的空间，理由是 FreeBSD 的 2.1 分支已死或近死不值得每周做 delta，未升级者可用 CVSup 或本地 CVS 树取更新
+2603252	885	ccsanady 询问能否提高默认分区数上限 8，如果不合理就退而求其次做成类似 NetBSD 那样的可配置项，但他自己也说不清背后的问题是什么
+2603253	885	dg 反馈输出字节计数大约每 20 分钟回绕一次，日均发送约四分之一 TB 数据，落款 FreeBSD 项目核心团队首席架构师
+2603257	885	jonny 解释 SYSSHM 段应由程序主动释放不会在 exit 里自动清理，程序直接中止时共享内存就残留下来，建议看一下 ipcrm 的使用方式
+2603263	885	karl 报告同一机器上两个进程对同一 NFS 文件持有 flock 时，用 O_WRONLY 加 O_APPEND 打开的写者偶尔不写进文件末尾，怀疑 O_APPEND 没有触发隐式的 lseek SEEK_END，本地挂载从不发生
+2603268	885	liuigi 提交三份针对 2.2.6-BETA 的音频驱动补丁，请 Jordan 应用，最后一份修掉 dmabuf.c 里存在已久的问题，前两份曾提交但被合到错误的分支
+2603269	885	karl 报告 3.0-CURRENT 版本今早两次出现奇怪的问题，贴上 dmesg 显示 Pentium Pro 加 Intel 82440FX 主板两块 Digital 21140A 网卡以及 Adaptec 2940 控制器
+2603273	885	mika 提到 accton 厂商仍在标准 10 到 100 网卡上沿用 21140 芯片，追问 21140-AE 与 21140-AF 是否有本质区别并求对这家厂商的评价
+2603274	885	karl 收到一批 Intel PRO 100 加网卡，初步结果令人印象深刻，自动协商含 FDX 都能工作，连 100BaseTX FDX 接 Intel 510T 交换机也表现突出，同时指出在 TYN 主板上跑 100BaseT 会掉到 10Mbps
+2603285	885	terry 认为这并非新的 NFS 问题而是已知 race 条件，根因在 lease 代码，他自己给过补丁但没人合并，近期写入路径也走 paging 的改动放大了它
+2603286	885	msmith 发现 ffs_vfsops.c 里对未干净挂载打印的告警路径是上次挂载位置而非这次尝试位置，对可移动磁盘容易误导，建议输出同时给设备与新目标路径，强制挂载场景应显示设备而非新路径
+2603288	885	roberto 追问如何验证芯片 stepping 以及是否被 -v 参数显示，自陈机器是 HP XU 加 PPro 200 配 Orion 芯片
+2603292	885	ian 建议改用 Merit Radius 服务器提供的 elm 认证来分流两个站点，用户以 user 加 at 加站点名的形式登录，radius 服务器依 authfile 把查询转给另一个 radius 服务器，并提到自己也动过这个服务器打算提供虚拟 ISP 服务
+2603302	885	msmith 宣布 freefall 因硬件故障自深夜 11 点宕到凌晨 5 点一刻至今未彻底解决，数据与文件均未丢失，另安排 15 日下午 8 点 PST 维护

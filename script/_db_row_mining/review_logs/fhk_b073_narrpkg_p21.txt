@@ -1,0 +1,22 @@
+2603338|L3|Archie Cobbs：转发 freebsd-security 关于 DIVERT socket 与 TCP source routing 问题
+2603339|L3|Kent Gordon：询问 kernel config 中如何调整以扩大 SYSV 共享内存上限
+2603340|L3|Alfred Perlstein：求助 DPT 驱动的稳定度依赖硬件兼容与配置说明
+2603341|L3|Wilko Bulte：Netscape 4 在 2.2.5R 上循环吃满 CPU ktrace 显示反复 gettimeofday
+2603342|L3|Lars Jonas Olsson：ports 的 slapd 会死循环询问是否有多线程可用版本
+2603343|L3|Eivind Eklund：据作者所说 DPT 应算稳定但本人尚未实测硬件
+2603344|L4|Ollivier Robert：移除 preferences.js 或给 netscape script 加 XCMSDB=/dev/null 可解
+2603345|L4|Ollivier Robert：内核配置加 options SHMMAXPGS=1024 可扩到 4096 KB 共享内存
+2603346|L4|garman：删除 user_pref browser.startup.license_accepted 即可复现启动
+2603347|L3|Brandon Huey：询问 dpt0 驱动的内核构建成功案例与 2.2.6 boot floppy 镜像
+2603348|L3|Jordan Hubbard：他在征大家写文章而非让他人替他列选题
+2603349|L3|Simon Shapiro：建议将 DPT 资料并入 FreeBSD handbook 并问 Jordan 可否做 newsletter 核心
+2603350|L3|Terry Lambert：ports 的 LDAP 完全不可用建议换用别的来源
+2603352|L4|CHOI Junho：XFree86 里给 ExtraLibraries 加 -lxpg4 后重新编译可用
+2603353|L3|Alfred Perlstein：IRC 上有人改过 lint 文件本人未试用 DPT 驱动希望补 man page
+2603354|L3|David Kelly：不写稿改用 Olympus 相机给 wcarchive 机器拍照
+2603355|L4|Studded：/usr/src/etc/Makefile 漏装 /boot.help 提交补丁修复
+2603356|L4|Studded：提交补丁为 make.conf 与 Makefile 记录 NOPERL 选项
+2603357|L3|Warner Losh：Cabletron E2010 探测即锁机 ed 驱动下无 cabletron 命中
+2603358|L3|Thomas Wahyudi：建议用 ln -s 修改 ftp daemon 根目录
+2603359|L3|Timothy M. Hughes：询问 RealTek RTL 8129 是否有成功用例 questions 回复疑为专有驱动
+2603360|L3|Eivind Eklund：RealTek 常支持自由 OS 有时会自己写驱动

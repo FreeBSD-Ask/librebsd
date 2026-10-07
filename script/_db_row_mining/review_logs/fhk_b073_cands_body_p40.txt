@@ -1,0 +1,678 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604017 ###
+===== 库内序 145574 | PK 2604017 | 等级 L3 =====
+DATE: 1998-04-04T14:26:42+00:00
+FROM: Brian Somers <brian@Awfulhak.org>
+SUBJ: Re: modem settings using chat 
+摘要: Brian Somers：用 cron 和 chat 脚本向 tty 写 AT s0=1 让 uucp dialup 自动应答不生效
+
+> I need to have a cron job ensure that the modem is set to s0=1 (Auto Answer)
+> for an uucp dialup connection. Once in a while the modem loses the setting
+> and
+> then (obviously won't answer)
+> I am trying
+> chat  -f chat.script </dev/cuaa1 >/dev/cuaa1
+> with chat script set to
+> AT s0=1
+> 
+> and it doesn't seem to work
+> 
+> any one got any ideas (preferably better ones that work! )
+> 
+> ta muchly
+> mn
+
+I'd try `chat -f chat.script </dev/cuaa1 >&0
+
+otherwise, it'll probably just hang trying to open cuaa1 for the 
+second time....
+-- 
+Brian <brian@Awfulhak.org>, <brian@FreeBSD.org>, <brian@OpenBSD.org>
+      <http://www.Awfulhak.org>
+Don't _EVER_ lose your sense of humour....
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604019 ###
+===== 库内序 145576 | PK 2604019 | 等级 L3 =====
+DATE: 1998-04-05T04:48:46+00:00
+FROM: Andrew Heath <drew@bluetongue.com.au>
+SUBJ: Re: Memory Leak??? Apache, CGI, can't spawn child process
+摘要: Andrew Heath：致谢 John 找到根因，重配 login.conf 重启后服务器恢复
+
+I'd like to publicly thank John, he has hit the nail right on the head.
+
+I've no reconfigured the server, rebooted, and all seems to be running well.
+Thankyou to the others who also pointed out other potential problems with the
+system.
+
+Below I have included the important data from his script before and after the
+reconfiguration of /etc/login.conf
+
+Before:
+Limits:
+file size           (512-blocks, -f)  131072
+max user processes              (-u)  32
+
+After:
+Limits:
+file size           (512-blocks, -f)  262144
+max user processes              (-u)  256
+
+Hopefully, we will be able to start having less problems now.
+
+Cheers,
+
+Drew
+Blue Tongue Online Services - http://www.bluetongue.com.au/
+Melbourne Internet Business Directory - http://www.melbourne.business.au.com/
+
+John Fieber wrote:
+
+> On Fri, 3 Apr 1998, Andrew Heath wrote:
+>
+> > I appreciate any assistance here, as our server is now continually comung
+> > up with a CGI can't spawn child process error, and as we are running a
+> > reasonable heavily loaded server, this is a problem.
+> >
+> > FYI we are also running a reasonable loaded DNS server, and Hughes
+> > MiniSQL. The mimiSQL server is running as "nobody"
+>
+> One word:  /etc/login.conf
+>
+> According to the information you supplied, you have gobs of free
+> resources, but /etc/login.conf sets limits on how much users can
+> use. Put the attached cgi script in your cgi-bin and call it.  It
+> will report limits that the web server is running under.
+>
+> The limits specified under "daemon" in /etc/login.conf are in
+> effect when /etc/rc is run, which I presume is when you are
+> starting apache and friends.  You probably need to boost the
+> number of processes that daemon can run.
+>
+> Resource limits are inherited and don't change unless explicitly
+> changed by the process.  Init sets the limits according to the
+> daemon entry in /etc/login.conf when running /etc/rc.  Thus,
+> httpd daemons started by boot by root running as nobody inherit
+> the limits for daemon.
+>
+> -john
+>
+>   ------------------------------------------------------------------------
+> #!/bin/sh
+>
+> #
+> # Print some information about the operating environment
+> # of the httpd daemon and the cgi scripts it runs.
+> #
+>
+> echo "Content-type: text/plain"
+> echo ""
+>
+> echo "I am:"
+> id
+>
+> echo ""
+> echo "Limits:"
+> ulimit -a
+>
+> echo ""
+> echo "Environment:"
+> env
+>
+> echo ""
+> echo "Uptime:"
+> uptime
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604020 ###
+===== 库内序 145577 | PK 2604020 | 等级 L3 =====
+DATE: 1998-04-05T04:58:53+00:00
+FROM: Alex Povolotsky <tarkhil@asteroid.svib.ru>
+SUBJ: Perl5 port and PII: am I crazy?
+摘要: Alex Povolotsky：在 PII 上编译 Perl 5.004.04 时 makedepend 递归到系统耗尽进程
+
+Hello!
+
+I've tried recently to build perl5 (5.004.04 if that matters) on new PII box, 
+and, during configure,
+sh ./makedepend
+caused 
+sh ./makedepend 
+to be run, and recursion proceeded until system runs out of processes.
+
+I've tried three different version of FreeBSD (from 2.2.5-STABLE to 
+3.0-980225-SNAP), and it runned nicely from the same disk on the box with P5.
+
+Am I crazy, or my hardware, or makefile?
+
+Generic kernel in all cases.
+
+Alex.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604021 ###
+===== 库内序 145578 | PK 2604021 | 等级 L3 =====
+DATE: 1998-04-05T06:04:06+00:00
+FROM: Sean Harding <sharding@ophelia.uoregon.edu>
+SUBJ: FreeBSD and Rhapsody (fwd)
+摘要: Sean Harding：把 Wilfredo Sanchez 关于 FreeBSD 和 Rhapsody 的来信转给 hackers
+
+I'm forwarding this to freebsd-hackers@freebsd.org; those are good people
+to talk to. 
+
+Sean
+
+---------- Forwarded message ----------
+Date: Sat, 04 Apr 1998 20:46:22 -0800
+From: Wilfredo Sanchez <wsanchez@apple.com>
+To: questions@FreeBSD.ORG
+Subject: FreeBSD and Rhapsody
+
+Howdy-
+
+  I'm having a hard time figuring out how one becomes a FreeBSD developer 
+from your web site, so perhaps you guys can help me out. I work for Apple 
+Computer, and as you may know, we're building this operating system with 
+the code name Rhapsody. Rhapsody has a full BSD subsystem in it, and we'd 
+like to get a relationship going with FreeBSD if the FreeBSD team is 
+interested.
+
+  Most of our BSD code comes from 4BSD Lite, which is a bit dated. Since 
+last year, I've updated a lot of our user commands using NetBSD's 
+sources. The decision to use NetBSD was pretty much arbitrary, although 
+the fact that I can acces their code via CVS, and now can commit changes 
+back in was a big influence.
+
+  In any case, the BSD kernel guys at Apple usually use FreeBSD as a 
+reference. This led to some small gotchas due to differences between 
+NetBSD and FreeBSD, such as the fact that NetBSD lets you change mode 
+bits on symlinks, which FreeBSD (I think) doesn't. So I had a little 
+trouble with commands like cp, which tried to do this thing we don't 
+support. I haven't gotten to the network and system commands and the 
+libraries, where I think the biggest incompatibility problem lie, and the 
+consensus is that I should look into using FreeBSD for those. There will 
+be problems in any case, since we implement BSD over Mach, which makes 
+commands like ps somewhat unique from other BSD's, but the goal is to 
+minimize that.
+
+  What I need to know is the degree that you would like to work together 
+with Apple, if at all, in this regard. It's important that we be able to 
+send our changes back upstream, since I believe that staying in sync with 
+our source provider is more important than any competitive advantage that 
+might buy us. UNIX is of little importance to Rhapsody from a market 
+standpoint; there are 
+[…中段省略 1526 字符…] ou 
+can some paid developers to help with bugs.
+
+     Thanks,
+     -Fred
+
+
+---
+        Wilfredo Sanchez - wsanchez@apple.com - 408.974-5174
+    Apple Computer, Inc. - Rhapsody Core Operating Systems Group
+       2 Infinite Loop, Mail Stop 302-4K, Cupertino, CA 95014
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-questions" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604022 ###
+===== 库内序 145579 | PK 2604022 | 等级 L3 =====
+DATE: 1998-04-05T07:25:13+00:00
+FROM: Mark Murray <mark@grondar.za>
+SUBJ: Re: Perl5 port and PII: am I crazy? 
+摘要: Mark Murray：让 Alex Povolotsky 重装 rorts 集，自己这边 Perl5 移植正常
+
+Alex Povolotsky wrote:
+> Am I crazy, or my hardware, or makefile?
+
+Reinstall you rorts collection some where and try again. Methinks your 
+configuration or something is screwed. The P5 port works just fine for 
+me.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+### PK 2604023 ###
+===== 库内序 145580 | PK 2604023 | 等级 L3 =====
+DATE: 1998-04-05T08:22:02+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Cool WebTop for Freebsd? 
+摘要: Amancio Hasty：问有没有适合 FreeBSD 的漂亮主页，附一个 netscape webwizard 链接
+
+http://developer.netscape.com/docs/examples/netcast/webwizard/webwizard.htm
+
+Just wondering if anyone has cool web page for FreeBSD.
+
+	Tnks,
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604024 ###
+===== 库内序 145581 | PK 2604024 | 等级 L3 =====
+DATE: 1998-04-05T09:32:07+00:00
+FROM: Christoph Kukulies <kuku@gilberto.physik.RWTH-Aachen.DE>
+SUBJ: bzip2 - is it worth to take a look at?
+摘要: Christoph Kukulies：讨论 bzip2 能否用来扩充安装盘内容，压缩比比 gzip 好 20 个百分点
+
+
+A new compression tool - bzip2 - is gaining popularity and I 
+want to put it to discussion whether it could be used to augment
+the installation floppy towards even higher functionality like
+containing more tools etc. etc.
+
+bzip2 compresses about 20 % better than gzip.
+
+Try it at:
+
+   ftp://ftp.gimp.org/pub/apps/
+
+-- 
+Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604025 ###
+===== 库内序 145582 | PK 2604025 | 等级 L3 =====
+DATE: 1998-04-05T09:36:26+00:00
+FROM: tcobb <tcobb@staff.circle.net>
+SUBJ: Softupdate for 2.2.6?
+摘要: Troy Cobb：询问 2.2.6 是否有可用的 softupdate 补丁
+
+Are there softupdate patches available for 2.2.6?
+
+Thanks!
+
+- Troy Cobb
+Circle Net, Inc.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604026 ###
+===== 库内序 145583 | PK 2604026 | 等级 L3 =====
+DATE: 1998-04-05T10:57:35+00:00
+FROM: Frank Ederveen <frank@our.domaintje.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Frank Ederveen：自己还在盯着邮件等 2.2.6 的 softupdate 或 CAM 公告，公司有 7 块盘 news 服务器等
+
+
+  Are there softupdate patches available for 2.2.6?
+Not yet I think, but I'm checking my mail every few minutes
+because I hope to find an announcement of softupdates and/or
+CAM for 2.2.. There are some machines here that could really
+use it (newsservers with7 or so disks).
+
+Would development improve if I were to send some good bottles
+of beer somewhere?
+
+Regards,
+
+FrankE
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604027 ###
+===== 库内序 145584 | PK 2604027 | 等级 L4 =====
+DATE: 1998-04-05T11:09:00+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Jordan K. Hubbard：2.2.x 不会发 softupdates、CAM、SMP 的第三方补丁
+
+>   Are there softupdate patches available for 2.2.6?
+> Not yet I think, but I'm checking my mail every few minutes
+> because I hope to find an announcement of softupdates and/or
+> CAM for 2.2.. There are some machines here that could really
+
+Q. Will any of the following features ever be in 2.2.x, even as
+   3rd party patches?
+
+A. 1. Soft Updates:  No.
+   2. CAM: No.
+   3. SMP: No (you didn't ask, but I figured while I was making a list... :-)
+
+Sorry.  :-(
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604028 ###
+===== 库内序 145585 | PK 2604028 | 等级 L4 =====
+DATE: 1998-04-05T11:55:50+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Jordan K. Hubbard：只是说各任务太难，提问者看不到这些补丁发布，非主张第三方补丁中央管控
+
+No implication of centralized control over third party patches was
+intended.  I am simply saying that each task is hard enough to do that
+it's highly unlikely that the questioner will see such patches
+released.
+
+					Jordan
+
+> > Q. Will any of the following features ever be in 2.2.x, even as
+> >    3rd party patches?
+> > 
+> > A. 1. Soft Updates:  No.
+> >    2. CAM: No.
+> >    3. SMP: No (you didn't ask, but I figured while I was making a list... :
+-)
+> 
+> since when is anyone in control of third party patches ?
+> (i mean except licensing restrictions). If some good soul wants to do
+> the backport and provide a patchfile, i don't see any problem with
+> that. I understand that you are being realistic and "No" means "I don't
+> think we'll ever find someone willing to do the backport"
+> 
+> 	cheers
+> 	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604029 ###
+===== 库内序 145586 | PK 2604029 | 等级 L3 =====
+DATE: 1998-04-05T10:00:13+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: bzip2 - is it worth to take a look at?
+摘要: Luigi Rizzo：反问 bzip2 的解码器体积相比 gzip 是多少
+
+> A new compression tool - bzip2 - is gaining popularity and I 
+> want to put it to discussion whether it could be used to augment
+> the installation floppy towards even higher functionality like
+> containing more tools etc. etc.
+> 
+> bzip2 compresses about 20 % better than gzip.
+
+decoder size compared to gzip ?
+
+	cheers
+	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604030 ###
+===== 库内序 145587 | PK 2604030 | 等级 L3 =====
+DATE: 1998-04-05T09:51:16+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: Softupdate for 2.2.6?
+摘要: Luigi Rizzo：认为第三方补丁除许可限制外不受任何控制，有人做 backport 就应发补丁文件
+
+> Q. Will any of the following features ever be in 2.2.x, even as
+>    3rd party patches?
+> 
+> A. 1. Soft Updates:  No.
+>    2. CAM: No.
+>    3. SMP: No (you didn't ask, but I figured while I was making a list... :-)
+
+since when is anyone in control of third party patches ?
+(i mean except licensing restrictions). If some good soul wants to do
+the backport and provide a patchfile, i don't see any problem with
+that. I understand that you are being realistic and "No" means "I don't
+think we'll ever find someone willing to do the backport"
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604031 ###
+===== 库内序 145588 | PK 2604031 | 等级 L3 =====
+DATE: 1998-04-05T12:11:23+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: Softupdate for 2.2.6?
+摘要: Luigi Rizzo：说明自己上条只是替别人做澄清，并非替官方表态
+
+> No implication of centralized control over third party patches was
+
+I should have specified that mine was meant only as a clarification
+to other people.
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604032 ###
+===== 库内序 145589 | PK 2604032 | 等级 L4 =====
+DATE: 1998-04-05T13:14:04+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: bzip2 - is it worth to take a look at?
+摘要: Ollivier Robert：bzip2 压缩解压各占 7MB 内存且比 gzip 慢 5 倍，最少也要 5MB，仅在空间紧时用
+
+According to Christoph Kukulies:
+> bzip2 compresses about 20 % better than gzip.
+
+But take around 7 MB in memory for compression and decompression. Besides
+it is 5 times as slow... The memory consumption may be reduced but it will
+take at least 5 MB.
+
+I use it only when I'm really short of space.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #0: Mon Mar 30 22:21:31 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604033 ###
+===== 库内序 145590 | PK 2604033 | 等级 L3 =====
+DATE: 1998-04-05T13:55:06+00:00
+FROM: Frank Ederveen <frank@our.domaintje.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Frank Ederveen：既拿不到 2.2.6 softupdate 就只能去 current，公司也想测试 SMP
+
+
+jkh wrote:
+>  A. 1. Soft Updates:  No.
+>     2. CAM: No.
+>     3. SMP: No (you didn't ask, but I figured while I was making a list... :-)
+>  Sorry.  :-(
+
+Oh well, I'll just have to go to current then. It's about time we start testing
+SMP at our company also. Just putting in a new board and cpu is the cheapest
+way to get more umpfh.
+
+Any news on the european meeting this summer yet?
+
+FrankE
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604034 ###
+===== 库内序 145591 | PK 2604034 | 等级 L3 =====
+DATE: 1998-04-05T14:08:50+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Jordan K. Hubbard：欧洲会议今年夏天的安排尚未明朗，会尽快给出说法
+
+> Any news on the european meeting this summer yet?
+
+Not yet, we'll try and get some clarity on that soon though!
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604035 ###
+===== 库内序 145592 | PK 2604035 | 等级 L4 =====
+DATE: 1998-04-05T15:00:42+00:00
+FROM: Alex Povolotsky <tarkhil@asteroid.svib.ru>
+SUBJ: It's HARD to be an idiot ;-) (Was: Re: Perl5 port and PII: am I 
+ crazy? )
+摘要: Alex Povolotsky：找到根因是机器系统时间被设得太早，导致 makedepend 递归
+
+ <199804050725.JAA11696@greenpeace.grondar.za>Mark Murray writes:
+>Alex Povolotsky wrote:
+>> Am I crazy, or my hardware, or makefile?
+>
+>Reinstall you rorts collection some where and try again. Methinks your 
+>configuration or something is screwed. The P5 port works just fine for 
+>me.
+
+I was pointed to my mistake... On that machine DATE WAS SET INCORRECTLY - too early. So, resulting file had earlier date than source, and make gone REALLY mad.
+
+It's hard to be an idiot ;-)
+
+Alex.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604036 ###
+===== 库内序 145593 | PK 2604036 | 等级 L4 =====
+DATE: 1998-04-05T15:45:32+00:00
+FROM: "Justin T. Gibbs" <gibbs@narnia.plutotech.com>
+SUBJ: Re: Softupdate for 2.2.6?
+摘要: Justin T. Gibbs：CAM 在 2.2.x 是有可能出第三方补丁的
+
+>> Q. Will any of the following features ever be in 2.2.x, even as
+>>    3rd party patches?
+>> 
+>> A. 1. Soft Updates:  No.
+>>    2. CAM: No.
+>>    3. SMP: No (you didn't ask, but I figured while I was making a list... :-)
+
+CAM: yes.
+
+--
+Justin
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604038 ###
+===== 库内序 145595 | PK 2604038 | 等级 L3 =====
+DATE: 1998-04-05T16:41:55+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: C|Net about FreeBSD
+摘要: Dag-Erling：做了 cnet 的人格测试，被推荐尝试 FreeBSD
+
+Vadim Kolontsov <vadim@tversu.ru> writes:
+>      http://www.cnet.com/Content/Reviews/Compare/AltOS/?dd
+
+Hey, I took their personality test and it recommended that I try this
+weird new free OS they call FreeBSD or something ;)
+
+-- 
+fprintf(stderr, "I have a closed mind. It helps keeping the rain out.\n");
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604039 ###
+===== 库内序 145596 | PK 2604039 | 等级 L3 =====
+DATE: 1998-04-05T17:20:03+00:00
+FROM: Chris Timmons <skynyrd@opus.cts.cwu.edu>
+SUBJ: Re: Softupdate for 2.2.6?
+摘要: Chris Timmons：提到跨房间新闻服务器 cvsup.freebsd.org 都在等 CAM 补丁
+
+
+WHEW!  cvsup.freebsd.org and the news server across the room from it are
+looking forward to that :) 
+
+On Sun, 5 Apr 1998, Justin T. Gibbs wrote:
+
+> >> Q. Will any of the following features ever be in 2.2.x, even as
+> >>    3rd party patches?
+> >> 
+> >> A. 1. Soft Updates:  No.
+> >>    2. CAM: No.
+> >>    3. SMP: No (you didn't ask, but I figured while I was making a list... :-)
+> 
+> CAM: yes.
+> 
+> --
+> Justin
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

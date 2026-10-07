@@ -1,0 +1,22 @@
+2602864	885	nik 提议为 ftp.freebsd.org 下 incoming 目录制订新政策文档并同步发到 hackers 与 ports 两个邮件列表请人提意见
+2602868	885	greg 换 ISP 后 FreeBSD 主机用 ppp -auto 无法连接 ppp.log 停在把分配的 IP 关联到网卡之前
+2602869	885	ken 猜故障原因可能是 ppp 登录脚本存在差异不同 ISP 的登录提示各不相同可能是 login 也可能是 log 或 logname 因此 ppp -auto 匹配不上提示
+2602870	885	greg 确认新 ISP 能登录成功但不确定应该把 buad rate 从 115200 改成 33.6 以匹配对方 33.6 modem
+2602871	885	Yuri 指出 115200 指的是 port speed，无需降回调制解调器的速率，因为 modem 之间会自行做数据压缩，波特率按端口速度设即可
+2602877	885	niall 断言 sbabkin 提出的两台 DNS 服务器共享数据结构的动态 DNS 方案会让 DNS 服务器过载不堪
+2602878	885	tom 说 BIND 本身用 NOTIFY 就能做到这一点不必引入共享内存结构且反驳 Niall 指出的 resolver 库等主服务器超时才转投从服务器的说法称自己连主服务器失效都察觉不到
+2602879	885	gibbs 说 SCB paging 上限 255 事务当前 SCSI 系统开到那么高有危险建议试用下个 CAM snapshot 观察性能变化
+2602880	885	karl 说 RAID 阵列上跑的是不能宕的 NFS 文件服务器 news 与认证库但 CURRENT 内核在系统层面口碑不稳
+2602882	885	niall 反驳 karl 断言没有一台机器能容忍宕机的说法反问是否听过 Stratus Computer Corporation 这类主打高可用而生的厂商
+2602886	885	ron 归纳 FreeBSD 的 VM 有问题实现、与 VFS 交互（如 NFS）与架构三类其中架构问题最困扰他举例 NFS 后端 mmap 后调 msync 页面并未被清除
+2602887	885	benedict 说重启应该用 kill -INT 1 而不是 Leif Neland 建议的 kill -KILL 1
+2602888	885	wilko 提议在荷兰 Arnhem 办第二届欧洲黑客聚会参照 Christoph Kuku Kukulies 几年前办的 Aachen party 并搭了封闭 mailing list 收集意向
+2602890	885	terry 说他的 DEC 驱动器关不了 write cache 需要改的是硬盘板载写缓存 julian 会做一批硬件测试
+2602896	885	sbabkin 问 Philips 26XX 与 HP 4020i/6020i 停产后 FreeBSD 还支持哪些 CD writer 并问 Sony SCSI 写盘机是否在支持之列
+2602897	885	Andrew Maltsev 问 FreeBSD 里 ATX 自动关机和锁定电源开关特性是否有人实现并表示想自己动手尝试实现而非只等别人完成
+2602898	885	gibbs 说 WCArchive 也不能宕与 NFS 文件服务器 news 与认证库同类且老系统经移植 CAM 应能跑起来
+2602899	885	minnich 追问 3.0-SMP 下 vm_map_clean 把 syncio 和 invalidate 合一传给 vm_object_page_clean 底层 VFS 收不到区分 invalidate 的独立信息
+2602900	885	Smith 说这些 ATX 特性据他所知目前无人实现建议改用 APM 并注意 BIOS 设置正确并补充电源风扇等编程接口应该也已标准化
+2602902	885	jordan 提议把 FreeBSD 的 WorldCon 与荷兰黑客聚会合并日程定在九月二十五日阿姆斯特丹两个活动或许可以合办
+2602903	885	Lewis 说自己查 PPP 链路是否活动一直用 /var/spool/lock/LCK..cuaa? 锁文件是否存在判断但怀疑这个方法不够周全
+2602904	885	gibbs 说 DPT 驱动需要 CAM 那套软中断钩子 2.2.6 发布前做不了这么大的改动等 2.2.6 切出后再合并

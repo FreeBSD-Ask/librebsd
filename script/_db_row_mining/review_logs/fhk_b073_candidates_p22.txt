@@ -1,0 +1,36 @@
+2603503|L4|Robert Nordier 建议用 mtools 处理大磁盘并修订 mkdosfs 支持 FAT12 FAT16 FAT32
+2603504|L4|Luigi Rizzo 有 mtools 3.0 补丁支持 HD 至 512MB 并可 DOS Windows95 启动
+2603505|L3|Luigi Rizzo 提交 Vibra16X 部分播放支持补丁 待测试反馈以赶上 stable 截止期
+2603506|L4|Benjamin Greenwald 宣布 vx 驱动重写开发启动 已从 3Com 收到技术文档
+2603507|L3|David Cross 询问 XTI TLI 是否计划迁入内核或提供库层标准支持
+2603508|L4|Atipa 认为 3Com 100Mb 网卡架构一般 NFS 流量表现不如 DEC 和 Intel 同类
+2603509|L4|Robert Nordier 用 mtools 3.9 预发行测试 正确支持超过 65535 簇的 FAT32 分区
+2603512|L4|Simon Shapiro 反对改用 mmapped 文件 因 PostgreSQL 除文件外还支持其他存储管理器
+2603513|L3|Benjamin Greenwald 在混合 Sparc PA-RISC 环境测 3Com 网卡 NFS 性能至少与同代相当 Intel 最灵活
+2603519|L3|Studded 称 rc.conf 等仍是临时补丁 呼吁 /etc 配置方案真正可扩展
+2603521|L3|Jeff Buseman 回复 Eivind 关于 TCP UDP 之外的处理 附他人提供文档要点总结
+2603523|L3|Ken Key 询问 Intel 82557 82558 网卡驱动文档 82557 Users Manual 无处可查
+2603524|L3|sbabkin 转发 Moldova 地址来信 询问 Digi Exp 相关支持
+2603526|L3|Joe McGuckin 报告 fxp 网卡在 BAY 350T 交换机无指示灯但在 10M 集线器正常 询因
+2603527|L4|Alfred Perlstein 提出 mremap 方案 锁内核后解除映射并按用户意愿重映射
+2603528|L4|Dan Nelson 曾见 350T 交换机问题 建议用 ifconfig 强制两端速率和双工
+2603529|L3|Joe McGuckin 报告 inetd 在 realloc 触发警告 状态不可恢复需手工重启
+2603530|L4|John Dyson 说 3 月中旬至下旬 current 版本触发的 realloc 警告可能已损坏文件系统
+2603531|L3|Wilko Bulte 报告 Netscape 4 调用 gettimeofday 与 sigreturn 陷入启动循环
+2603532|L4|Andrzej Bialecki 发布 PicoBSD 0.31 单软盘版含 SSH telnet FTP 与 IP 防火墙 SNMP agent
+2603535|L3|John Dyson 建议改用 procfs 建立映射 而非 rfork 类新原语
+2603536|L3|Leif Neland 说 Ollivier 建议的修复对他有效 认为 Netscape 4 行为反常
+2603537|L3|szabo 请求取消订阅 freebsd-hackers-digest 邮件列表
+2603538|L3|Tim ONeil 回复订阅取消请求并附上完整说明与其原信全文
+2603540|L3|allen campbell 寻找 Paul Traina 关于 etc 配置模板方案的原帖 config hackers stable 列表均无果
+2603541|L3|CHOI Junho 建议修改 FreeBSD.cf 使 SJIS EUC 在链接 X 库时与 xpg4 绑定
+2603542|L3|Satoshi Asami 告知本周前往巴尔的摩开会 周四启程 邀人线下会面对原因随意
+2603543|L3|James Raynard 警告 earthlink.net 常发垃圾邮件 疑似地址采集应直接屏蔽
+2603544|L3|Eric Schwertfeger 认为垃圾邮件者直接让其采集机器人订阅列表更容易不必回信拦截
+2603545|L3|Terry Lambert 说 procmail 过滤可挡 95 至 99 百分比 spam 但已先付下载流量代价
+2603548|L3|Alex Le Heux 询问 FreeBSD 是否支持多端口 10baseT 以太网卡或哪些可能容易支持
+2603549|L4|Luigi Rizzo 分享微软 web 服务器管理文章链接 需 Word 查看器无法直接看 只考虑 Windows 用户
+2603550|L3|pratap singh 建议 Alex 关注 Antares Microsystems 的 SBUS 10 Base-T 四端口以太网卡
+2603551|L3|Jonathan Bresler 指出所引文章日期为 1997 年 5 月 8 日
+2603552|L3|Alex Le Heux 追问 SBUS 是否指 Sparc 机器所用 及 FreeBSD 是否支持 Sparc 平台
+2603553|L3|dag-erli 补充见到 IDE 加 LPIP 同时活动导致的锁死现象 与主讨论场景一致

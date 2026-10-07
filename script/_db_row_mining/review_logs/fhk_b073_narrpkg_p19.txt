@@ -1,0 +1,22 @@
+2603239|L3|匿名作者建议在 LKM 已知偏移写入 PCI Vendor ID 与 PCI Device ID 供内核识别设备驱动
+2603240|L3|Greg Fraize 问 shell 提示符下 for 循环的写法 之前看到过但想不起来了
+2603241|L3|Robert Watson：回答无 root 无死锁的认证机制问题是 Kerberos 另提曾在 -hackets 发帖想建认证邮件列表
+2603242|L3|Christopher Sedore 的 FreeBSD 机器包计数每 5 到 7 天回绕 问 interface 与 ip 栈计数改 64 位有无推进
+2603244|L3|Studded 把命令行 for 循环问题转给 -questions 因为不属于 hacker 讨论范围
+2603245|L3|Matthew D. Fuller 给出 sh 里 for 循环的样例用法 直接粘贴 for i in url list do done 就能跑
+2603246|L3|John-Mark Gurney 认为完整的 LKM 方案下应当能够加载 LKMs
+2603248|L3|Alfred Perlstein 观察到 linux-emu 下跑 x11amp 残留 SYSVSHM 段并反复刷 setup 未实现告警
+2603249|L3|Richard Wackerbarth 提议停止 CTM 分发 FreeBSD-2.1 因该分支已死或近死 不值得每周 delta 改由 CVSup
+2603252|L3|Chris Csanady：询问能否调高 FreeBSD 默认分区数 8 或做成类似 NetBSD 的可配项
+2603253|L3|David Greenman：反馈监控场景下输出字节每 20 分钟回绕一次，日均发送约四分之一个 TB
+2603257|L4|Alfred Perlstein：报告 linux emulation 下程序退出未释放 SYSVSHM 段导致大量内存泄漏
+2603263|L3|Karl Denninger：报告同一机器上两个写者对同一 NFS 文件持 flock 并发操作时的异常现象
+2603268|L4|Luigi Rizzo：向 Jordan 提交三份音频驱动补丁含修复长期存在的 snd 层问题
+2603269|L3|Karl Denninger：报告 FreeBSD 3.0-CURRENT 启动后系统 hang 两次并贴出 dmesg
+2603273|L4|mika ruohotie：提到 accton 等其他厂商仍在标准 10/100 卡上沿用 21140 芯片并求评价
+2603274|L3|Karl Denninger：介绍 INTEL PRO/100+ 卡到手初步性能令人印象深刻
+2603285|L4|Terry Lambert：指出该 NFS 故障并非新问题是已知的 lease 代码问题且补丁曾提出未被合并
+2603286|L4|Mike Smith：报告 ffs_vfsops.c 中未干净挂载告警的 printf 打印上次的挂载路径
+2603288|L3|Ollivier Robert：询问如何验证芯片 stepping 是否被 -v 参数显示出来
+2603292|L4|Ian Freislich：建议用 Merit Radius 服务器提供的 elm 认证来处理用户数据库查询问题
+2603302|L4|Mike Smith：宣布 freefall 因硬件故障宕机约 16 小时无数据丢失并安排 15 日下午八点维护

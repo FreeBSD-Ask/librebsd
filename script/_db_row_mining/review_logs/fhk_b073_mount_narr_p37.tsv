@@ -1,0 +1,21 @@
+2603851	885	Jacques 表明更希望做 Python 集成，另建议支持 tcl、Perl 与 Rexx；认为 JPython 与 NetRexx 这类 Java 实现都只是纯粹的开销，此系个人意见
+2603852	885	dannyman 报告在 FreeBSD3.0 编译 mozilla 时 unix/unixpref.c 报 Xm/Xm.h No such file，询问绕行策略，并问是否有人注释掉 dist/public/java/bool.h 第 23 行
+2603853	885	Faried 转述 dannyman 那句下载网页时戳破标 MS 字样的气球的段子，同时贴出 mozilla-contest.hungry.com 链接并写 Go wild 鼓励大家放手去做
+2603854	885	jkh 在 dannyman 抱怨 Errors 已需动用智力才能克服之后补充，还叠加了 Motif 的问题，本封回复仅一句 That and Motif 加一个笑脸表情
+2603857	885	Dan 补充说自己用 Xi CDE 与 motif 1.2 时那类问题并不存在，而是在 cmd/xfe/Makefile 的 OTHER_LIBS 里加了 -lintl 才编下去
+2603858	885	Pete 询问是否计划支持现代主板的环境监控，如电源电压、风扇 RPM 与 CPU 温度，以及这些值通过 memory mapped 还是 I/O mapped 读出
+2603859	885	Robert 记录 ncftp ftp.cdrom.com 时被拒，提示当前 3000 用户上限已满，随后转述其给出的 info@cdrom.com 邮件与 1-800 电话订购渠道，并反问该限制属硬件软件还是带宽
+2603862	885	Ollivier 认为无法限制 portmapper 的 UDP 使用，首次调用一定走 UDP；所回应的是 spork 提出的能否关闭 mountd 与 portmap 上的 udp
+2603864	885	Terry 回复确认 Ollivier 关于 portmapper 首次调用一定走 UDP 的说法正确，并补上首次 mount 请求同样走 UDP，本封回复只有两句话
+2603869	885	Narvi 提议再加一项，让 128 bit crypto 变成可选插拔以便把加密部分留在美国之外，此封署名 Sander 并附一段悲观格言
+2603870	885	Amancio 报告套用 Eivind 提供的 patch 后运行 moz-export http://www.freebsd.org 时 mozilla 已成功启动，并向 Eivind 致谢
+2603873	885	andy 询问 gprof(1) 配 cc -pg 的用法示例，在 2.2.5R 上执行 cc -pg -g test.c 时 ld 报 -lc_p no match，且本机并无 libc_p
+2603875	885	John 说明 gcc 的 -thread 只链接 -lc_r 并不定义相关宏；_THREAD_SAFE 仅用于取线程安全的 errno，这是为满足 libc_r 不得给 libc 带来运行时影响的折衷
+2603876	885	Karl 询问 3.0-980311 SNAP 是否已够可用能起机并开始跟踪 -CURRENT；自述机器为双路 P-Pro200 但目前只用一颗 CPU
+2603882	885	Philippe 推荐 horac 这个基于 curses 的纯文本图形库，可作 SVGAlib 的 drop-in 替换，还能在 160x60 分辨率下跑 doom
+2603884	885	Soren 补充说 Philippe 推荐的库其实不是 Aprils fool 玩笑而是真货，本人隶属 FreeBSD 核心团队
+2603886	885	Matthew 请人解释 mbufs 究竟是什么以及在整体架构中处于什么位置，所用系统为 2.2.5，并自认此问或许过于宽泛
+2603887	885	spork 用 nfsd -t 启动服务，rpcinfo -p 显示 portmapper 走 tcp 111 与 udp 111，但 mount_nfs 与 showmount 仍尝试 UDP 并失败，询问是否应提 PR
+2603888	885	John 建议查阅 Addison-Wesley 的 TCP/IP Illustrated Volume 2 The Implementation，作者 Gary R. Wright 与 W. Richard Stevens，称此书对此讲得最全
+2603889	885	Alex 报告在 2.2.5-RELEASE 上把 mozilla 与 LessTif 结合可以编译通过，静态链接产物超 67 Mb 完全无法运行，动态链接则大量报错并崩溃
+2603890	885	Alex 回复 Justin Gibbs 关于 C++ 调试分配器之问，建议若不需线程支持可用 SGI 的 boehm gc，它支持 C 与 C++，且已由 Jeffrey Hsu 移植到 FreeBSD

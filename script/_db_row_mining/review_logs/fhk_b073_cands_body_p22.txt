@@ -1,0 +1,775 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603361 ###
+===== 库内序 144919 | PK 2603361 | 等级 L4 =====
+DATE: 1998-03-17T13:05:30+00:00
+FROM: "Matthew D. Fuller" <fullermd@futuresouth.com>
+SUBJ: Re: How do I
+摘要: Matthew D. Fuller：chroot 后 ln -s 无效需改配置
+
+On Tue, 17 Mar 1998, Thomas Wahyudi wrote:
+
+> On Fri, 13 Mar 1998 aj@gims.net wrote:
+> 
+> #How do I change the root directory of my ftp daemon.  It is currently
+> #pointing to
+> #/var/ftp  and I want it to point to /home/ftp.  I changed the
+> #/etc/passwd and the /etc/master.passwd file but that doesn't seem to be
+> #it.  What file is controling it?
+> have you try using ln -s ?
+Won't work once it's chroot'd.
+You have to make ~ftp be /home/ftp, and USE VIPW!!
+10 to 1, you didn't remake the hashes after you changed it.
+do this (assuming you changed the home dir)
+# cd /etc
+# pwd_mkdb -p master.passwd
+
+And it should work
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+|       FreeBSD; the way computers were meant to be       |
+* "The only reason I'm burning my candle at both ends, is *
+| that I haven't figured out how to light the middle yet."|
+*    fullermd@futuresouth.com      :-}  MAtthew Fuller    *
+|      http://keystone.westminster.edu/~fullermd          |
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603362 ###
+===== 库内序 144920 | PK 2603362 | 等级 L4 =====
+DATE: 1998-03-17T13:08:16+00:00
+FROM: "Alfred Perlstein" <perlsta@cs.sunyit.edu>
+SUBJ: Re: RealTek RTL 8129 PCI Fast Ethernet Card
+摘要: Alfred Perlstein：网卡未出现在 dmesg 便视为不支持建议转告 Timothy
+
+well this is just an assumption on my part, but as most PCI cards are
+automagically :) configured by the kernel, and i think all ethernet cards
+are included in the GENERIC kernel, i doubt that the card is supported if it
+has not come up in your dmesg.
+
+-Alfred
+
+P.S. if anyone has any more info on this please e-mail the Timothy at:
+tim@usgcc.odu.edu
+because he is not on the list.
+
+-----Original Message-----
+From: Timothy M. Hughes <tim@usgcc.odu.edu>
+To: freebsd-hackers@FreeBSD.ORG <freebsd-hackers@FreeBSD.ORG>;
+freebsd-hardware@FreeBSD.ORG <freebsd-hardware@FreeBSD.ORG>;
+freebsd-questions@FreeBSD.ORG <freebsd-questions@FreeBSD.ORG>
+Date: Tuesday, March 17, 1998 4:01 AM
+Subject: RealTek RTL 8129 PCI Fast Ethernet Card
+
+
+>Has anyone got one of these things to work yet??  I mailed
+>questions@freebsd.org and got a response that it was "probably" a
+>proprietary driver.  If you have a driver or have gotten it to work,
+>please email me directly (I dont subscibe).
+>
+>Any help is appreciated.
+>
+>Thanks
+>
+>  Tim
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603364 ###
+===== 库内序 144922 | PK 2603364 | 等级 L3 =====
+DATE: 1998-03-17T14:03:27+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: PCI & multiport FastEthernet cards
+摘要: sbabkin@dcn.att.com：询问 PCI 编程书目与 4 口网卡可否共用中断
+
+Hi!
+
+Can someone recommend a good reading about programming PCI things ?
+I know that it's possible to look at drivers but reading book is
+simpler and may give more background information.
+
+The second question is related. Do those 4-port FastEthernet cards
+use separate interrupt per each port ? Is it possible to make
+them using one interrupt ?
+
+Thanks!
+
+Serge Babkin
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603366 ###
+===== 库内序 144924 | PK 2603366 | 等级 L4 =====
+DATE: 1998-03-17T16:36:07+00:00
+FROM: Doug Ambrisko <ambrisko@whistle.com>
+SUBJ: Re: PCI & multiport FastEthernet cards
+摘要: Doug Ambrisko：BIOS 可设单一中断但没必要现有 3 张四口卡分中断够用
+
+sbabkin@dcn.att.com writes:
+| The second question is related. Do those 4-port FastEthernet cards
+| use separate interrupt per each port ? Is it possible to make
+| them using one interrupt ?
+
+This is a function of the BIOS, setup your BIOS to use only one 
+interrupt but why would you want to do that.  Here we use 3 quad 
+ethernet cards in a few servers.  I just setup the BIOS not to use the
+interrupts that are being used with ISA and then let it sort things
+out.  I did have some trouble with early BIOS's on the ASUS XP55T2P4
+motherboards but the newer ones work just fine.  The problem was that
+with all the cards in the machine the BIOS would hang at PNP initialization.
+
+Another issue I've had with the Adaptec cards 2143 based & Quad 10/100 cards
+is that I need to do a tcpdump on the interface to get the card to work.
+The scenario is 
+      -	ping to host (doesn't work)
+      -	tcpdump -i <interface>
+      -	the ping now starts to works.
+
+Doug A.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603367 ###
+===== 库内序 144925 | PK 2603367 | 等级 L4 =====
+DATE: 1998-03-17T18:27:32+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Patch to install boot.help
+摘要: Snob Art Genre：boot 提示符按问号列内核时 boot.help 被滚出屏幕
+
+By the way, I noticed a problem with /boot.help -- when I type "?" at
+the boot: prompt to see what kernels I have available, boot.help scrolls
+it off the screen.
+
+Should I send in a pr?
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603368 ###
+===== 库内序 144926 | PK 2603368 | 等级 L3 =====
+DATE: 1998-03-17T20:13:26+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: PCI & multiport FastEthernet cards
+摘要: Terry Lambert：推荐 PCI System Architecture 一书 ISBN 0-201-40993-3
+
+> Can someone recommend a good reading about programming PCI things ?
+> I know that it's possible to look at drivers but reading book is
+> simpler and may give more background information.
+
+PCI System Architecture
+MindShare, Inc.
+Tom Shanley / Don Anderson
+ISBN: 0-201-40993-3
+URL: http://cseng.aw.com/bookdetail.qry?ISBN=0%2D201%2D40993%2D3&ptype=0
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603369 ###
+===== 库内序 144927 | PK 2603369 | 等级 L4 =====
+DATE: 1998-03-17T20:14:36+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: PCI & multiport FastEthernet cards
+摘要: Terry Lambert：Adaptec 卡需先跑 tcpdump 触发混杂模式才工作怀疑寄存器初始化
+
+> Another issue I've had with the Adaptec cards 2143 based & Quad 10/100 cards
+> is that I need to do a tcpdump on the interface to get the card to work.
+> The scenario is 
+>       -	ping to host (doesn't work)
+>       -	tcpdump -i <interface>
+>       -	the ping now starts to works.
+
+This looks like a register isn't being set in normal mode that needs
+setting, but that it's set (or reset) by promiscuous mode.  I think
+this is probably a driver bug.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603370 ###
+===== 库内序 144928 | PK 2603370 | 等级 L3 =====
+DATE: 1998-03-17T20:23:06+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: RE: 2.2.6-BETA w/DPT RAID successes?
+摘要: Simon Shapiro：sendero.simon-shapiro.org 的 /FreeBSD 提供 2.2 与 3.0 镜像
+
+
+On 16-Mar-98 Brandon Huey wrote:
+> Has anyone successfully built a kernel with the dpt0 driver?
+> Perhaps someone knows of a location that has boot floppy images?
+>  
+> ftp-ing simon-shapiro.org reveals a crash/floppies directory, but it is
+> empty.
+
+I am so bad about it.  My sincere apologies.  Try
+sendero.simon-shapiro.org.  In /FreeBSD there are several 2.2 and 3.0
+images.  I am adding 2 more right this minute.  The latest 2.2 will be one
+built from the 2.2 checked-in sources, not from my local patches.
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603371 ###
+===== 库内序 144929 | PK 2603371 | 等级 L3 =====
+DATE: 1998-03-17T20:25:31+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: 2nd Newsletter (finally!) due to go to press in 10 days.
+摘要: Simon Shapiro：曾寄 DPT RAID 组稿给 Jordan 只需英文化改写即可用
+
+
+On 17-Mar-98 Jordan K. Hubbard wrote:
+> Indeed.  I wasn't asking for people to send me requests for what *I*
+> should write for the newsletter, I was asking for people to write
+> stuff for the newsletter. :-)
+
+How about the piece on setting up DPT RAID I sent you?  You did not have to
+write that one :-)
+
+Only re-write it in English, perhaps...
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603372 ###
+===== 库内序 144930 | PK 2603372 | 等级 L4 =====
+DATE: 1998-03-17T20:20:42+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: DPT driver?
+摘要: Simon Shapiro：多数 DPT PCI 卡内藏 Qlogic 芯片经 EATA 协议访问
+
+
+On 16-Mar-98 Eivind Eklund wrote:
+ 
+..
+
+> The DPT is a specific SCSI chipset (or at least a specific vendor).
+> The DPT driver only work for those cards.  The vendor has a web-page
+> at "http://www.dpt.com/".
+
+A bit of background;  Most DPt PCi cards actually have a Qlogic chip
+burried within.  I do not know of any way of getting to them from the
+system bus.
+
+The way we talk to the DPT card, is via a protocol called EATA.  It is an
+Extended ATA, and an ANSI standard.  The protocol is basically a DMA
+arrangement of mailboxes.  The next patch to the DPT driver will include in
+usr.sbin/dpt, a file called DPTdesign.{lyx,ps}.  There is more information
+there.  Unlike most/many other SCSI HBA vendors,  ALL DPT cards since the
+mid 1980's use this very same protocol.
+
+The next generation cards speak I2O and this will be available to FreeBSD
+too.  Once I get the card & docs to write the drivers (which are ``on the
+way'').
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603374 ###
+===== 库内序 144932 | PK 2603374 | 等级 L3 =====
+DATE: 1998-03-17T20:33:00+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: 2nd Newsletter (finally!) due to go to press in 10 days. 
+摘要: Jordan K. Hubbard：收件夹未见 DPT RAID 稿件请重发并补充性能收益
+
+> How about the piece on setting up DPT RAID I sent you?  You did not have to
+> write that one :-)
+
+Hmmmm?  I don't have anything like that in my pending folder.  Are you
+sure I got it?  Can you please resubmit it?  Thanks!  If it covers
+some of the performance benefits as well (don't forget the intended
+audience of the newsletter - it's not just going to be technically
+savvy folk) that would be really cool and I'd be more than happy to
+publish it.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603375 ###
+===== 库内序 144933 | PK 2603375 | 等级 L3 =====
+DATE: 1998-03-17T20:48:56+00:00
+FROM: Gabor Kincses <gabor@acm.org>
+SUBJ: Thinkpad and ppbus
+摘要: Gabor Kincses：ThinkPad 并口 ZIP 用 ppbus 未工作 vpo0 Adaptec aic7110 SCSI 出现
+
+I'm trying to get my parallel port ZIP drive working with the new ppbus
+driver set, but I'm stuck.  Here's the relevant portion of dmesg:
+
+ppc0 at 0x3bc irq 7 flags 0x4 on isa
+ppc0: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in EPP mode (EPP 1.9)
+ppi0: <generic parallel i/o> on ppbus 0
+plip0: <PLIP network interface> on ppbus 0
+nlpt0: <generic printer> on ppbus 0
+nlpt0: Interrupt-driven port
+vpo0: <Adaptec aic7110 scsi> on ppbus 0
+vpo0 waiting for scsi devices to settle
+npx0 flags 0x1 on motherboard
+npx0: INT 16 interface
+
+Could an increased timeout value be necessary for this box (755CX, fall
+1995)?
+
+Also, after the vpo lines show up, the console goes blank, until
+switching to ttyv1 and back to ttyv0.  Then the background is bright
+red.  I also had to hack syscons.h to a 37x100 console.
+
+-- 
+Gabor Kincses
+(gabor@acm.org)
+FreeBSD 2.2.5-STABLE (early March)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603376 ###
+===== 库内序 144934 | PK 2603376 | 等级 L3 =====
+DATE: 1998-03-17T22:03:46+00:00
+FROM: Studded <Studded@dal.net>
+SUBJ: Re: bin/6039
+摘要: Studded：建议 fdimage 检测非二进制传输时拒写镜像以省去多数 bin 问题
+
+Tim Vanderhoek wrote:
+
+> Actually, there have been enough of these reports that I
+> seriously suspect that fdimage simply isn't working correctly on
+> some machines.
+
+	Is it possible to fix something up so that fdimage won't try to write
+the image if it wasn't transferred in binary mode?  This would eliminate
+about 80% of the questions about this in -questions.
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603377 ###
+===== 库内序 144935 | PK 2603377 | 等级 L3 =====
+DATE: 1998-03-17T23:11:14+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: want to trade: DEFPA FDDI cards
+摘要: Wilko Bulte：换出 2 张 Digital DEFPA FDDI SAS 换 P233MMX 内存或 SCSI CDwriter
+
+Sorry for a slight abuse of -hackers but:
+
+I want to trade my 2 Digital DEFPA FDDI boards for something that is more
+directly useful to me: I'm looking for a Pentium P233mmx, 32Mbyte 60ns 
+EDO SIMMs. Also interesting might be a SCSI CDwriter (should work with
+FreeBSD of course.. ;-)
+
+Both DEFPA are SAS Fibre versions:
+
+fpa0 <Digital DEFPA PCI FDDI Controller> rev 1 int a irq 15 on pci0:9
+fpa0: DEC DEFPA PCI FDDI SAS Controller
+fpa0: FDDI address 00:00:f8:81:bc:90, FW=3.10, HW=1, SMT V7.2
+fpa0: FDDI Port = S (PMD = ANSI Multi-Mode)
+
+Work just fine, one is in my FreeBSD box, the other in an Alpha running
+NetBSD.
+
+Second hand pricing for DEFPAs seem to in the US$ 500 - 900 range, so I
+suppose this could work out.
+
+Please reply directly to me, not to the list
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_)    Arnhem, The Netherlands       WWW:   http://www.tcja.nl
+----------------------------------------------------------------------------  
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603378 ###
+===== 库内序 144936 | PK 2603378 | 等级 L3 =====
+DATE: 1998-03-17T23:30:51+00:00
+FROM: Mark Newton <newton@camtech.com.au>
+SUBJ: BSDI executables
+摘要: Mark Newton：询问 2.2.5 下 ld -Q 生成的可执行文件在 BSD/OS 2.0 上能否运行
+
+
+I'm off-list at the moment, so please be gentle when replying :-)
+
+I've told a colleague that the -Q option to ld still works under 2.2.5,
+and will generate an executable which stands a better-than-even chance
+of running under BSD/OS 2.0 from BSDI.
+
+Have I mislead my colleague?  I don't have a BSDI system nearby to
+check, so all I have is the manpage, which could be out of date
+(especially with the way we and BSDI have tended to follow a "MAGIC-of-
+the-month" style development rationale :-)
+
+As a supplementary question, does said executable have to be statically
+linked?  If any part of BSDI compatibility was going to fall over I'd
+guess it'd be that...
+
+Any other pitfalls with building under FreeBSD and running under BSDI?
+[ we have a commercial application here which will run on lots of platforms;
+  we're working out a least-effort path for building it ]
+
+     - mark
+
+---
+Mark Newton                               Email: newton@communica.com.au
+Systems Engineer and Senior Trainer       Phone: +61-8-8303-3300
+Communica Systems, a member of the        Fax:   +61-8-8303-4403
+CAMTECH group of companies                WWW:   http://www.communica.com.au
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603379 ###
+===== 库内序 144937 | PK 2603379 | 等级 L4 =====
+DATE: 1998-03-17T23:44:56+00:00
+FROM: Karl Denninger  <karl@mcs.net>
+SUBJ: Re: BSDI executables
+摘要: Karl Denninger：cc -static 静态链接即可在 BSDI 上九成时间运行无需 ld -Q
+
+Static link it and it will run on BSDI 99% of the time.  I don't use "-Q".
+
+"cc -static" seems to be enough.
+
+--
+-- 
+Karl Denninger (karl@MCS.Net)| MCSNet - Serving Chicagoland and Wisconsin
+http://www.mcs.net/          | T1's from $600 monthly / All Lines K56Flex/DOV
+			     | NEW! Corporate ISDN Prices dropped by up to 50%!
+Voice: [+1 312 803-MCS1 x219]| EXCLUSIVE NEW FEATURE ON ALL PERSONAL ACCOUNTS
+Fax:   [+1 312 803-4929]     | *SPAMBLOCK* Technology now included at no cost
+
+On Wed, Mar 18, 1998 at 10:00:51AM +1030, Mark Newton wrote:
+> 
+> I'm off-list at the moment, so please be gentle when replying :-)
+> 
+> I've told a colleague that the -Q option to ld still works under 2.2.5,
+> and will generate an executable which stands a better-than-even chance
+> of running under BSD/OS 2.0 from BSDI.
+> 
+> Have I mislead my colleague?  I don't have a BSDI system nearby to
+> check, so all I have is the manpage, which could be out of date
+> (especially with the way we and BSDI have tended to follow a "MAGIC-of-
+> the-month" style development rationale :-)
+> 
+> As a supplementary question, does said executable have to be statically
+> linked?  If any part of BSDI compatibility was going to fall over I'd
+> guess it'd be that...
+> 
+> Any other pitfalls with building under FreeBSD and running under BSDI?
+> [ we have a commercial application here which will run on lots of platforms;
+>   we're working out a least-effort path for building it ]
+> 
+>      - mark
+> 
+> ---
+> Mark Newton                               Email: newton@communica.com.au
+> Systems Engineer and Senior Trainer       Phone: +61-8-8303-3300
+> Communica Systems, a member of the        Fax:   +61-8-8303-4403
+> CAMTECH group of companies                WWW:   http://www.communica.com.au
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603380 ###
+===== 库内序 144938 | PK 2603380 | 等级 L4 =====
+DATE: 1998-03-17T23:49:44+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: BSDI executables 
+摘要: Jordan K. Hubbard：BSD/OS 2.0 已无法运行 FreeBSD 二进制用 -Q 亦无效
+
+> I've told a colleague that the -Q option to ld still works under 2.2.5,
+> and will generate an executable which stands a better-than-even chance
+> of running under BSD/OS 2.0 from BSDI.
+
+I don't believe that BSD/OS 2.0 is capable of running any sort of
+FreeBSD binaries now, linked with -Q or otherwise.  They've simply
+done too much to break binary compatability with FreeBSD and my last
+few attempts to get things working on a BSD/OS 2.0 box led to failure.
+
+You'd be better off building under BSD/OS and running with FreeBSD,
+really, since we've gone to a lot more effort to stay compat than
+they evidently have. :-(
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603381 ###
+===== 库内序 144939 | PK 2603381 | 等级 L3 =====
+DATE: 1998-03-18T01:10:35+00:00
+FROM: "Luis E. Muñoz" <lem@cantv.net>
+SUBJ: SMP kernel on Compaq anyone?
+摘要: Luis E. Muñoz：询问是否有在 Compaq 硬件跑 SMP FreeBSD 者请分享配置
+
+
+Hi There:
+
+Is anyone running SMP FreeBSD on Compaq hardware?
+I would be interested in knowing about your setup
+as we're considering this alternative.
+
+Please reply by direct email. I'll summarize if there's
+interest.
+
+Best regards.
+
+-lem
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603383 ###
+===== 库内序 144941 | PK 2603383 | 等级 L4 =====
+DATE: 1998-03-18T02:48:56+00:00
+FROM: Douglas Carmichael <dcarmich@mcs.com>
+SUBJ: I have a patch for rc.network to allow specifying DHCP in rc.conf
+摘要: Douglas Carmichael：提交补丁让 rc.network 从 rc.conf 读 DHCP 参数并移出 pccard_ether
+
+I took the DHCP if part out of /etc/pccard_ether.
+(Is the dhcpc program normally in /usr/local/sbin?)
+
+You may commit this patch if you want to, but tell me first.
+Please reply to dcarmich@mcs.com directly (I'm not on the mailing list).
+
+This patch is against a 2.2.5-RELEASE rc.network file.
+
+*** /etc/rc.network.old	Tue Mar 17 20:36:22 1998
+--- /etc/rc.network	Tue Mar 17 20:36:49 1998
+***************
+*** 31,39 ****
+  		    . /etc/start_if.${ifn} ${ifn}
+  	    fi
+  	    # Do the primary ifconfig if specified
+! 	    eval ifconfig_args=\$ifconfig_${ifn}
+  	    if [ -n "${ifconfig_args}" ] ; then
+  		    ifconfig ${ifn} ${ifconfig_args}
+  	    fi
+  	    # Check to see if aliases need to be added
+  	    alias=0
+--- 31,43 ----
+  		    . /etc/start_if.${ifn} ${ifn}
+  	    fi
+  	    # Do the primary ifconfig if specified
+!  	    eval ifconfig_args=\$ifconfig_${ifn}
+!             if [ "x$ifconfig_args" = "xDHCP" ] ; then
+!                 /usr/local/sbin/dhcpc $interface
+!             else
+  	    if [ -n "${ifconfig_args}" ] ; then
+  		    ifconfig ${ifn} ${ifconfig_args}
++ 	    fi
+  	    fi
+  	    # Check to see if aliases need to be added
+  	    alias=0
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603385 ###
+===== 库内序 144943 | PK 2603385 | 等级 L3 =====
+DATE: 1998-03-18T04:24:45+00:00
+FROM: Tim Vanderhoek <hoek@hwcn.org>
+SUBJ: Re: bin/6039
+摘要: Tim Vanderhoek：fdimage 加判断应不难并追问为何多用户以 ascii 模式传输
+
+On Tue, 17 Mar 1998, Studded wrote:
+
+> 	Is it possible to fix something up so that fdimage won't try to write
+> the image if it wasn't transferred in binary mode?  This would eliminate
+> about 80% of the questions about this in -questions.
+
+Offhand, I imagine it would be trivial.
+
+Why is it that so many people transfer it in ascii mode?
+
+
+--
+Outnumbered?  Maybe.  Outspoken?  Never!
+tIM...HOEk
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603386 ###
+===== 库内序 144944 | PK 2603386 | 等级 L3 =====
+DATE: 1998-03-18T04:39:28+00:00
+FROM: Studded <Studded@dal.net>
+SUBJ: Re: bin/6039
+摘要: Studded：认可 fdimage 非二进制检查改动非常欢迎
+
+Tim Vanderhoek wrote:
+> 
+> On Tue, 17 Mar 1998, Studded wrote:
+> 
+> >       Is it possible to fix something up so that fdimage won't try to write
+> > the image if it wasn't transferred in binary mode?  This would eliminate
+> > about 80% of the questions about this in -questions.
+> 
+> Offhand, I imagine it would be trivial.
+
+	It would be a very welcome addition. :)
+
+> Why is it that so many people transfer it in ascii mode?
+
+	A lot of people use weird ftp clients, netscape, or something else that
+transfers in ascii by default. It would be nice if the thing gave a
+shiny warning with a hint to the correct procedure.
+
+Thanks for the response,
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603387 ###
+===== 库内序 144945 | PK 2603387 | 等级 L3 =====
+DATE: 1998-03-18T07:24:24+00:00
+FROM: "muthu olagappan" <olagappan@hotmail.com>
+SUBJ: OS features to be done - Help
+摘要: muthu olagappan：熟悉 Oracle 询问 FreeBSD 可加哪些特性以提升数据库性能
+
+Hi,
+
+	Iam working on freebsd since 1997. I would like to contribute to 
+freebsd. I have knowledge of database like Oracle. I would like to what 
+features can be added to FreeBSD, so that database (like Oracle) 
+performance will improve. I also had a look through the tasks to be 
+done, which is listed in documentation part of FreeBSD site. I received 
+a mail from Database Engineer(FreeBSD), pointing that people are working 
+in these areas and it will better if I send a mail to hackers list. Can 
+anybody help me to list out features that can be added to FreeBSD, so 
+that Database performance will improve?
+
+
+Please send mail to olagappan@hotmail.com
+
+Regards,
+Muthu
+	
+
+______________________________________________________
+Get Your Private, Free Email at http://www.hotmail.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

@@ -1,0 +1,22 @@
+2603389	885	watson 自述要重放 tcpdump 抓到的混杂嗅探数据包做性能测试与 bug 复现，其中不少并非 IP 包，故想手动送到链路层；已知 bpf 可收发但难找示例，rarp 源码与 man 页帮助有限
+2603391	885	luigi 转述一位不在列表上的朋友：以 nice -20 在后台跑 while 1 死循环会把 2.2.5 上的编译拖到两倍时间以上，疑与低优先级进程未被打断有关；他本人在 2.2.1 无法复现
+2603392	885	studded 为自己把 NOPERL 说明发到 -hackers 致歉，此前在 freebsd-stable 上提过十四次无人回应，本以为自己做补丁会获回应，不料最终在 CVS 提交日志里被记录下来
+2603393	885	gurney 回答为何如此多人以 ascii 模式传文件：win95 与 solaris 2.5 的 ftp 客户端都默认 ascii 为传输模式，而他估计这些流量多数来自 win95 用户
+2603395	885	nate 说只要把所有 FreeBSD 的 shlibs 拷到较新的 BSDi 机器上就能跑通 FreeBSD 非内核二进制，tcsh、kaffe、ssh 都能正常运行，唯独 JDK 无法工作
+2603396	885	nate 指出 dhcpc 根本不是 FreeBSD 的一部分，因此不应被放进任何 rc 脚本，所以先留在 pccard_ether 中以便 PAO 集成
+2603397	885	leifn 提出 fdimage 可在写入前检测是否有裸的 lf，只要每一个 lf 都紧跟在 cr 后面就代表该镜像是以 ascii 模式传输过来的
+2603398	885	sbabkin@dcn.att.com 追问对方是否真在 FreeBSD 上跑起来 Oracle 数据库，若是这本身就是一份不错的贡献，若还没有跑起来那促成它运行同样很有价值
+2603399	885	perlstein 觉得对方思路未免太天真，建议去查 DIVERT socket：内核防火墙配合一个 divert socket 就能捕获网络流量
+2603400	885	jkh 解释自己那段话只是重提一句沿用多年的老话：增强请求与 bug 修复应走 send-pr 提交，而不是发到邮件列表里让大伙自行挖出来
+2603402	885	jkh 说自己在 BSD/OS 1.x 机器上把 FreeBSD 的 shlibs 与 ld.so 拷过去后就能跑 FreeBSD 的 emacs 与 fvwm，但 BSD/OS 2.1 却拒绝执行并声称镜像格式无效
+2603404	885	owensc 报告 C. Donly 的 Perl5 Net::LDAPapi 模块可编译安装，但 ldapwalk.pl 每次匹配都打印 chunk is already free 告警，2.2.2-STABLE 上还抛 OUT OF MEMORY，CURRENT 上不再崩溃
+2603405	885	dmlb 转述 Mike Smith 此前评论称 bev 已被 current 中的 /etc/periodic 取代，并追问对方是否看过它
+2603407	885	jdp 表示不确定 SMP FreeBSD 是否能在 Compaq 机器上跑起来，并以邻居狗随处撒尿作比来吐槽 Compaq 硬件连电源与螺丝都非标准
+2603408	885	kgor 说自己一直在考虑把 Postgres 改用 mmap 文件来取代 SYSV shared memory，这样才可能支持更大规模的配置，仍在权衡 MAP_SHARED 与 MAP_HASSEMAPHORE 等选项
+2603411	885	templin 在 IBM ThinkPad 560E 上调试自写的 Netwave PCMCIA 无线网卡驱动时遇上疑为缓存一致性的问题，读内存正常但写回后会破坏数据或不同步，volatile 声明也没能避免
+2603412	885	sampson 反问为何不能提 PR，指出 PR 系统本来就是用来跟踪 change request 与 bug 报告的，你不去登记就得别人替你补录
+2603413	885	stud 承认自己口气说重了，是鼻窦发炎里小人在拿大锤施工加上昨天两场个人冲突拖低了他昨晚的耐心，感谢大家私下提醒他别太当真，并说会留意继续提更多 PR
+2603416	885	joelh 反驳称自己常在工作时用 Netscape 传 zip 从未损坏，多数会用 ncftp 这类所谓奇怪客户端的人其实很懂 ftp，反问究竟还有谁默认以 ascii 模式传输
+2603417	885	johnp 询问能否同时访问并显示 RTC 时钟与系统时间时钟这两类时钟，自述对此感到有点困惑，恳请大家伸出援手帮他指出路
+2603418	885	souchu 提出两点建议：用 flags 0x1 强制 NIBBLE 模式，以及在 BIOS 中把并行端口改成仅 EPP 或 SPP，另外还追问对方 Thinkpad 板载 chipset 的型号
+2603419	885	dnelson 指出两者默认是同一个东西，settimeofday 会一直写入 RTC 时钟，除非 sysctl 变量 machdep.disable_rtc_set 被置为 1

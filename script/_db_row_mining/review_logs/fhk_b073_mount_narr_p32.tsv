@@ -1,0 +1,21 @@
+2603706	885	alexander tatmaniants 提交 syscons 补丁把 sysmouse 注册进 devfs 使 moused 与 X 可共存 并提问 2.2.6-stable 中 devfs 是否可用 mount 何时执行以及未文档化内核选项 DEVFS_ROOT 的含义
+2603709	885	jkh 回应对方检出失败的说法，指出自己在本地不需要修改 taginfo 就能直接检出，判断对方拿到的可能是有问题的仓库副本
+2603710	885	jkh 说某软件已收录于 FreeBSD 的 ports 库中 Mike Smith 引入后当面演示过看起来很干净 Java 客户端比较慢但整体仍然清爽
+2603711	885	amancio 认为用 exmh 配合 glimpse 作为邮件前端性能可以接受 exmh 是 Tcl Tk 脚本实现的 mh 图形界面 glimpse 用作邮件文件夹搜索引擎
+2603712	885	luigi 认为慢的主要原因在 Win32 server 端组件而不是 tcl tk 客户端前端 这可能与对方使用的环境恰好相反
+2603713	885	remy 需要一种能通过 DNS 按主机名解析出地址来应答 DHCP 请求的 bootpd 他已手工改造 ISC DHCP2 使其工作 但开发机使用可拆卸磁盘导致硬件地址频繁变化 DHCP 租约一片混乱
+2603714	885	ron 转发 Douglas Eadline 关于 Free BERT 77 的消息称其是 Paralogic 推出的 Fortran 并行优化转换工具 自己尚未试兼容模式但认为应用到 FreeBSD 集群上很有意思
+2603715	885	julian 指出 devfs 在 2.2.6 中功能完整但实用性不强 所需改动可以补丁形式应用到当前分支 其中包含 alexander 提供的 syscons 修改
+2603716	885	atipa 询问 FreeBSD 上运行的是哪个版本的 ORACLE 以及其原生平台是 Linux 还是 BSDI 还是 SCO
+2603717	885	dennis 反映其服务器运行速度偏快 询问除重启之外有没有办法让系统直接从 BIOS 重新读取时间 以便不必重启机器即可校正时钟
+2603718	885	dan nelson 反问 dennis 是否是指其服务器时钟跑得比实际快太多 以致 xntpd 根本无法把它校准到准确时间
+2603719	885	gianmarco giovannelli 在 Pentium 2 300mhz 配 a2940uw 与两块 scsi 硬盘的环境上多次运行 make world 比较 async 与 softupdates 性能 观察到 async 在四组测试中都更快
+2603720	885	wilko 反映自己在 FreeBSD 2.2.5R 上折腾了很久都没能让 netatalk 跑起来，怀疑和 bug 5811 有关
+2603721	885	malcolm newton 希望用 cron 定期把 modem 设置为 s0=1 自动应答以维持 uucp 拨号连接 但用 chat 脚本传 AT s0=1 命令似乎不起作用
+2603722	885	vinay bannai 回忆见过有关 Cisco 售价约 150 美元的千兆以太网卡讨论 询问从哪里能买到以及在邮件列表和 Cisco 网站都查不到更多厂商信息
+2603723	885	warner losh 提议基于 us.iso.kbd 新增一套类 unix 键盘映射 交换 ESCAPE 与 backtick、CTRL 与 CAPS LOCK、BACKSPACE 与 DELETE 并希望作为替代加入 syscons keymaps 目录
+2603724	885	dannyman 反问 wilko 是否在 kernel 配置中加了 options NETATALK 提示这可能是 netatalk 无法运行的原因
+2603725	885	michael kiernan 提供千兆网卡信息源并列出 Alteon、Essential Communications 与 Packet Engines 三家厂商 指出 Alteon 为 Sun 供货 网卡驱动目前 350 Mbps 就会打满整颗 CPU
+2603726	885	david langford 只回了一句 建议 vinay 直接访问 www.alteon.com 自行查阅相关资料 未给出其他厂商名单
+2603727	885	dan busarow 说 FreeBSD 的 CD 上带的 netatalk 软件包可以装上 atalkd 启动看似挂起其实只是启动需要几分钟并非真正卡死
+2603729	885	john fieber 指出有若干 post-release 补丁是必须打的，让人去 www.freebsd.org/releases 上的 errata 页查

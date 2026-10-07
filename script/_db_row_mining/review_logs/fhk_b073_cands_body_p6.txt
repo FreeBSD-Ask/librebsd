@@ -1,0 +1,758 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602652 ###
+===== 库内序 144210 | PK 2602652 | 等级 L4 =====
+DATE: 1998-03-02T18:49:31+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Kernel debugging: what's going on here?
+摘要: Julian Elischer:提及曾在 DDB 中看到机器仍能响应 ping 并追问分配方式
+
+M
+> Whoops.  OK, are we sure that "bp" points to the same type in both
+> cases?  And more importantly, that bp->b_vp is expected to be the same
+> type?  (Yes, this is *really* clutching at straws).  There's not much
+> else short of a GDB bug that I can think of that would cause this.
+>
+
+many interrupts are still running..
+the clock is still ticking..
+
+I've seen a machine in DDB respond to pings.
+
+how are you allocating the new buffer?
+
+it looks like it got BZERO'd between the two..
+did the malloc actually succeed? etc.etc.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602656 ###
+===== 库内序 144214 | PK 2602656 | 等级 L4 =====
+DATE: 1998-03-02T19:52:43+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Re: ports for X11 stuff
+摘要: Satoshi Asami:赞成 X 装到 /usr/local 并软链接到 /usr 以便独立分区
+
+ * A question - would it be desirable for X to be installed, by default,
+ * somewhere *else*, and just symlinked into /usr?  Should it go in 
+ * /usr/local, so that an experienced admin can assign a separate 
+ * filesystem for this?
+
+Yes.
+
+Actually, if you can do something like "if /usr/local is a separate
+filesystem from /usr or a symlink to a directory in a separate
+filesystem from /usr, then make /usr/X11R6 a symlink into
+/usr/local/X11R6", that will be great, but that's probably asking too
+much. :)
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602658 ###
+===== 库内序 144216 | PK 2602658 | 等级 L4 =====
+DATE: 1998-03-02T20:58:17+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: g77 - status? 
+摘要: Mike Smith:说明 g77 编译方式与 f77 几乎一致且仍使用 libf2c 运行时库
+
+> 
+> Could someone give me a short brief-in on the issues related with
+> using g77 instead of f77 (f2c) under FreeBSD-2.2.5? 
+
+Not much different, really.  You call 'g77' rather than 'f77' to 
+compile. 
+
+> Can g77 be installed out of the box from the package? I did and it
+> seems so. 
+
+Yup.
+
+> Does it use libf2c.a or does it have it's own runtime library?
+
+It still uses libf2c.
+
+> Has there been a problem with g77 under FreeBSD-2.2.2 ?
+
+We didn't have any.  The resultant code seems to perform fairly 
+similarly to that produced by f2c, but the error messages are generally 
+better.  There are some extra F90 language features that none of our 
+users touched, so I can't speak for them.
+
+I would certainly recommend it just for the improved error reporting, 
+and I suspect that the non-improvements in performance probably had 
+more to do with the outrageously bogus code that we were feeding it 
+than any shortcomings in the compiler itself.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602660 ###
+===== 库内序 144218 | PK 2602660 | 等级 L3 =====
+DATE: 1998-03-02T21:42:16+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Jordan K. Hubbard:认为编程语言争论十年也产不出代码呼吁聚焦成品落地
+
+I fail to see how ANY of this discussion brings us any closer to
+having the end product.  We can discuss the relative merits of every
+programming language under the sun for the next ten years, but it
+won't get one line of code written.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602661 ###
+===== 库内序 144219 | PK 2602661 | 等级 L3 =====
+DATE: 1998-03-02T21:39:38+00:00
+FROM: Ladislav Kostal <kostal@pefstud.uniag.sk>
+SUBJ: users limits
+摘要: 询问如何按时间窗口限制用户进程数并为数百用户配置 FTP 与 IRC 策略
+
+Hello !
+
+I would be very happy if someone could help me with this:
+
+There is for example user paul and I want to restrict him to use just one
+copy of ftp after 16.00 and irc after 18.00 and during weekends.
+(This is just example, real limitations would be more complex)
+How to do that ? How can I control number of processes ran by users ?
+I want to set limits for all users of course. (300+)
+
+Is there some software for that or have I to write it myself ?
+
+Thanks for your answers.
+
+                                        Ladislav Kostal
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602662 ###
+===== 库内序 144220 | PK 2602662 | 等级 L4 =====
+DATE: 1998-03-02T21:45:55+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: ports for X11 stuff 
+摘要: Jordan K. Hubbard:建议直接重定义 X11BASE 变量而非新增 make.conf 开关
+
+> Then add a /etc/make.conf non-default flag to do this. It would decide
+> whether USE_X11 means /usr/X11R6 or /usr/local/X11R6. Then you won't
+
+Why not simply redefine X11BASE then if that's what you want?  It
+already exists..
+
+						Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602663 ###
+===== 库内序 144221 | PK 2602663 | 等级 L4 =====
+DATE: 1998-03-02T21:49:44+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Re: Cluster?
+摘要: Satoshi Asami:确认 FreeBSD 有集群支持并附 Berkeley Td 项目链接与本地实例
+
+ * Clusters on FreeBSD does exist? GREAT! 
+ * 
+ * Is it possible to get patches/whitepapers/etc. on it?
+
+We have a small one here too (only 20 machines).  See
+
+ http://now.cs.berkeley.edu/Td/
+
+for details.
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602665 ###
+===== 库内序 144223 | PK 2602665 | 等级 L4 =====
+DATE: 1998-03-02T22:25:10+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: help - make world fails 
+摘要: Jordan K. Hubbard:补充设备特殊文件同样难以在无状态文件系统设计中表达
+
+> something :).  The problem with stateless is, of course, that not all
+> concepts associated with file system access are representable in a
+> stateless way -- such as locking.  Coda, for example, retains a lot of
+
+Or device special files...
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602668 ###
+===== 库内序 144226 | PK 2602668 | 等级 L4 =====
+DATE: 1998-03-02T22:46:16+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: ports for X11 stuff 
+摘要: Jordan K. Hubbard:认为现在不适合迁移 X 位置以保持 2.2.6 版本 POLA 兼容
+
+> A question - would it be desirable for X to be installed, by default,
+> somewhere *else*, and just symlinked into /usr?  Should it go in =
+> /usr/local, so that an experienced admin can assign a separate =
+> filesystem for this?
+
+I don't think that's such a good idea for now - enough will be
+changing with 2.2.6 that we want to keep POLA as intact as possible.
+
+						Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602669 ###
+===== 库内序 144227 | PK 2602669 | 等级 L3 =====
+DATE: 1998-03-02T22:55:31+00:00
+FROM: Anatoly Vorobey <mellon@pobox.com>
+SUBJ: Re: ports for X11 stuff
+摘要: Anatoly Vorobey:反对用 X11BASE 变通方案因其为临时 hack 不符合设计目标
+
+You, Jordan K. Hubbard, were spotted writing this on Mon, Mar 02, 1998 at 01:45:55PM -0800:
+> > Then add a /etc/make.conf non-default flag to do this. It would decide
+> > whether USE_X11 means /usr/X11R6 or /usr/local/X11R6. Then you won't
+> 
+> Why not simply redefine X11BASE then if that's what you want?  It
+> already exists..
+
+For at least two reasons:
+
+1. It's a kludge, and that's definitely not what I want. /usr/local/X11R6
+is _not_, logically, a X11BASE. A port may reasonably expect to find standard 
+header files at $X11BASE/include, etc. 
+
+2. As one of consequences of it being a kludge, during 'make install' with
+such modified X11BASE, mtree will mirror /etc/mtree/BSD.x11.dist dir
+structure under /usr/local/X11R6 - a sight neither happy nor useful.
+One can define NO_MTREE, further kludging things up, of course... In
+a clean solution, you would either add an mtree file for /usr/local/X11R6,
+or invoke mtree on BSD.local.dist, or not invoke mtree, or do something
+else I'm not bright enough for... ;)
+
+I hope that sooner or later (sooner is better ;)) Xfree86 will change config/cf
+directory to discourage imake from believing there's only One True X
+hierarchy on the system. Then one'll be able to easily reroute all imake-built
+ports to /usr/local/X11R6 or wherever; and I believe a previous discussion
+showed that a lot of folks would be quite willing and happy to adapt to
+this; but if the problem of non-imake ports will stay as it is, one
+won't have an easy way to reroute all of _them_ into /usr/local/X11R6,
+and confusion will reign ;) So what'd bad about one tiny non-default
+/etc/make.conf switch, really? :)
+
+-- 
+Anatoly Vorobey,
+mellon@pobox.com http://pobox.com/~mellon/
+"Angels can fly because they take themselves lightly" - G.K.Chesterton
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602670 ###
+===== 库内序 144228 | PK 2602670 | 等级 L4 =====
+DATE: 1998-03-02T22:59:10+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Re: ports for X11 stuff
+摘要: Satoshi Asami:指出改 X11BASE 之外还需改 site.def 中 ProjectRoot 并破坏厂商二进制
+
+ * > Then add a /etc/make.conf non-default flag to do this. It would decide
+ * > whether USE_X11 means /usr/X11R6 or /usr/local/X11R6. Then you won't
+ * 
+ * Why not simply redefine X11BASE then if that's what you want?  It
+ * already exists..
+
+That's not the end of the story.  You (at least) also need to change
+the definition of ProjectRoot in /usr/X11R6/lib/X11/config/site.def.
+Then you'll have problems with vendor binaries having /usr/X11R6 built
+in there.  And you'll still have the problem of having the base stuff
+and add-ons sharing the same tree.
+
+Folks, we have been through this before, many times.  It is an X
+issue, not a FreeBSD issue.  Whatever we do to try to change it will
+only confuse more people (I know, I tried, and I confused the heck out 
+of myself).
+
+The source of the problem lies is in the imake model (and config
+files).  If someone feels strongly enough about it, go read the imake
+macros, and send the diff to David Dawes.  As for others, please
+symlink /usr/X11R6 to wherever you want and be happy. ;)
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602671 ###
+===== 库内序 144229 | PK 2602671 | 等级 L3 =====
+DATE: 1998-03-02T23:17:16+00:00
+FROM: David Dawes <dawes@rf900.physics.usyd.edu.au>
+SUBJ: Re: ports for X11 stuff
+摘要: David Dawes:不看好 imake 会主动放弃假定单一 X 层级的期望
+
+On Tue, Mar 03, 1998 at 12:55:31AM +0200, Anatoly Vorobey wrote:
+
+>I hope that sooner or later (sooner is better ;)) Xfree86 will change config/cf
+>directory to discourage imake from believing there's only One True X
+>hierarchy on the system. Then one'll be able to easily reroute all imake-built
+>ports to /usr/local/X11R6 or wherever; and I believe a previous discussion
+
+Don't hold your breath.  As much as I'd like to see that functionality
+in the imake config, it isn't a priority for XFree86.  We're kind of
+preoccupied with X servers, new and improved hardware drivers, and
+implementing our new X server design.  It will only be implemented if
+someone who really wants it done does it (hmm, where have I heard that
+before :-).  There have been volunteers several times in the past, but
+I've never seen an end result.
+
+In the past I've offered to assist with and review such an implementation.
+That offer still stands.
+
+David
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602672 ###
+===== 库内序 144230 | PK 2602672 | 等级 L3 =====
+DATE: 1998-03-02T23:21:00+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: A web-based FreeBSD configuration tool.
+摘要: Terry Lambert:反驳执行方式决定脚本语言的立场并称 C 也是经硬件解释的汇编
+
+> > > But old isn't necessarily bad, and Java isn't a scripting language.  And
+> > > scripting launguages have a very valuable role in this problem domain. 
+> > 
+> > You must not be running the same JAVA *interpreter* I run...
+> 
+> Since when has the manner in which a program is "executed" decided if
+> it is a scripting langauge?
+
+Uh, "day one"?
+
+> C is translated into assembler which is interpreted by the hardware
+> in my Intel processor, does that make C or assembler scripting langauges?
+> No.
+
+Right.  No.  It makes them compiled languages, or more formally, native
+instruction set languages.
+
+JAVA can be this... on JAVA chips.  LISP can be this on Symbolics machines.
+
+
+> What if I use the Bochs interpreter?  Still no.
+
+BOCHs is not an interpreter, it's a simulator.  You are confusing
+interpretation, simulation, and emulation.
+
+> You wouldn't make a distinction between imperative, functional and logic
+> programming languages based on their execution mode, but rather in their
+> approach to expressing relationships and algorithms, it is the same with
+> scripting languages.
+
+Iterative programming is not ideally suited to interpretation.  An
+interpretive language that allows it to be done anyway is a scripting
+language.
+
+Would you feel more comfortable if I discarded the term "scripting"
+in favor of "interpretive"?
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602675 ###
+===== 库内序 144233 | PK 2602675 | 等级 L3 =====
+DATE: 1998-03-02T23:53:52+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: vnodes for sockets.
+摘要: 询问能否为 socket 关联 vnode 以及 VOP_WRITE 等 VOP 函数是否对其有效
+
+
+Is it possible to associate a vnode with a socket ?
+
+if so, (or just for unix domain sockets), do the various VOP functions
+such as VOP_WRITE work properly with them ?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602677 ###
+===== 库内序 144235 | PK 2602677 | 等级 L3 =====
+DATE: 1998-03-03T01:45:42+00:00
+FROM: Robert Withrow <witr@rwwa.com>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Robert Withrow:主张不必在黑客列表继续此争论并保留自己原立场
+
+
+I said:
+:- Java isn't a scripting language.
+
+tlambert@primenet.com said:
+:- ???
+:- You must not be running the same JAVA *interpreter* I run... 
+
+Terry: 
+
+"interpreted" is not a synonym for "scripting language".
+
+If it were then C, BASIC, PL1, PASCAL, and probably COBOL would be
+called scripting languages, since they all run or have been
+interpreted. 
+
+But lets not debate this further on hacker.  Besides, I don't consider
+*this* issue debatable.  Sorry.
+
+---------------------------------------------------------------------
+Robert Withrow, R.W. Withrow Associates, Swampscott MA, witr@rwwa.COM
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602678 ###
+===== 库内序 144236 | PK 2602678 | 等级 L4 =====
+DATE: 1998-03-03T01:48:19+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro:解释 RAID-5 扩容涉及每 n 块加一块的地址空间重组需非平凡数据搬移
+
+
+On 02-Mar-98 Greg Lehey wrote:
+ 
+...
+
+> That's not the point.  OK, we were talking about RAID 5 here, which
+> also has parity blocks, but the point is that if you add another disk,
+> you're effectively adding another block every n blocks in the file
+> system address space.  It requires some non-trivial data movement to
+> rearrange all the data (more specifically, except for the first n (n =
+> old number of drives) blocks, you must move *everything*, and you must
+> recalculate parity for every stripe.
+
+Not quite.  The [parity is not in the filesystem.  It is in the ``device''.
+ The filesystem sees a plain, old LBA addressable ``disk''.  If a RAID-5
+array grows, the ``disk'' will grow by having its last block address be
+(old_size - 1) + increment.
+
+> My question ("How can that work?") was based on the misassumption that
+> this would be too much work to be justifiable.
+
+``Justifiable'' is a relative term.  If the cost is 30% reduction in
+perfromance vs. shutdown of service for 2 hours, that may be real cheap.
+Some of the systems we work on measure downtime in minutes/year, and number
+of shutdowns in once/several_years.  In that scenario, a customer may find
+this ability, as complex as it may be, quite attractive.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602680 ###
+===== 库内序 144238 | PK 2602680 | 等级 L3 =====
+DATE: 1998-03-03T02:41:40+00:00
+FROM: "Daniel O'Connor" <doconnor@gsoft.com.au>
+SUBJ: Argh! Why the heck is this making ELF object files?!
+摘要: 抱怨移植 craft 游戏时 gmake 生成的却是 ELF 目标文件并附编译日志
+
+I am trying to port a game called craft.. I hacked up a make file to get it 
+working, but now its making ELF object files!?!
+
+[holly 1:00pm] /usr/ports/games/craft/work> gmake PREFIX=/usr/local/ building.o
+hcc/hcc -compiler /usr/bin/gcc -O2 -I/usr/X11/include -Dpic_cata_name=\\\"/usr/local//share/craft/pic_cata_new\\\" -Dpic_names=\\\"/usr/local//share/craft/pic\\\" -Dinfo_name=\\\"/usr/local//share/craft/infos\\\" -c building
+[holly 1:00pm] /usr/ports/games/craft/work> file building.o
+building.o: ELF 32-bit LSB relocatable, Intel 80386, version 1, not stripped
+[holly 1:00pm] /usr/ports/games/craft/work> /usr/bin/gcc -O2 -I/usr/X11/include -Dpic_cata_name=\"/usr/local/share/craft/pic_cata_new\\" -Dpic_names=\"/usr/local/share/craft/pic\" -Dinfo_name=\"/usr/local/share/craft/infos\" -c building.cc
+[holly 1:00pm] /usr/ports/games/craft/work> file building.o
+building.o: NetBSD/i386 object file not stripped
+
+Now you may think 'ahh, its that hcc thing!' but that is basically a glorified 
+preprocessor, if I do -
+hcc/hcc -compiler cat building
+
+It outputs a C++ source file.
+Anyone want to tell me what the heck is going on here?
+I am running -current (FreeBSD holly.dons.net.au 3.0-CURRENT
+FreeBSD 3.0-CURRENT #6: Sun Mar  1 18:10:56 CST 1998     
+darius@holly.dons.net.au:/opt/src/sys/compile/HOLLY  i386)
+And /usr/bin/gcc -v gives "gcc version 2.7.2.1"
+Which is pretty useless, but hey :)
+
+I feel I am missing the totally obvious.. Does someone want to tell me what it 
+is? :)
+I last CVSuped on March 1st..(I built world then too)
+
+---------------------------------------------------------------------
+|Daniel O'Connor software and network engineer for Genesis Software |
+|http://www.gsoft.com.au                                            |
+|The nice thing about standards is that there are so many of them to|
+|choose from. -- Andrew Tanenbaum                                   |
+---------------------------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602681 ###
+===== 库内序 144239 | PK 2602681 | 等级 L4 =====
+DATE: 1998-03-03T03:25:15+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: vnodes for sockets.
+摘要: Terry Lambert:确认 socket 可关联 vnode 但 VOP 函数目前不适用因 vp 被 fileops 接管
+
+> Is it possible to associate a vnode with a socket ?
+
+Yes, this happens.
+
+> if so, (or just for unix domain sockets), do the various VOP functions
+> such as VOP_WRITE work properly with them ?
+
+No, this is not currently possible.  The vp is subverted out of the
+VFS architecture using a struct fileops pointer specific to the
+sockets.  The pipe code and the IPC code use the same approach.
+
+If you look at the standard system calls, (like read, in sys_generic.c),
+you will see the indirection through the struct fileops.
+
+The code is an artifact at the system call level.  This means that
+the kernel internal vn_* calls will not work against the code.
+
+You will need to indirect the same way (ie: use struct file and
+dereference out the f_ops ops member, and call the function from
+the struct, directly).
+
+
+We hope to clean this up in the future (struct fileops must die).
+PTY's are unusable from the kernel because of them being implemented
+as a device; perhaps you can use a pty, instead.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602682 ###
+===== 库内序 144240 | PK 2602682 | 等级 L3 =====
+DATE: 1998-03-03T03:48:26+00:00
+FROM: Jay Nelson <jdn@acp.qiv.com>
+SUBJ: Recommendation needed for real time monitor
+摘要: 征询能同时处理 31 路 19200 串口实时监测的 FreeBSD 硬件推荐方案
+
+Don't know if this is the right list for this, so point me in the right
+direction it I'm wrong.
+
+Given the available hardware supported by FreeBSD, what are your
+hardware recommendations for a machine capable of handling 31
+simultaneous serial connections at 19200? This is a real-time machine
+monitoring situation, not dial up users. Data is bursty and
+non-compressed. I need to insure worst case with no buffer overruns.
+
+Thanks
+
+-- Jay
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602685 ###
+===== 库内序 144243 | PK 2602685 | 等级 L3 =====
+DATE: 1998-03-03T04:50:16+00:00
+FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG>
+SUBJ: Re: ports for X11 stuff 
+摘要: Jordan K. Hubbard:认为迁移分区不是重点而是应向用户提供足够磁盘容量估算
+
+> It's quite achievable; the question is (as Jordan asked) whether it's 
+> going to surprise people that *expect* it to be in /usr.
+
+I think attempting to move things to their own partitions in an
+attempt to outsmart the user also only misses the point.  The *real*
+nut in need of cracking here is to simply supply enough sizing
+information that /usr or any other partition becomes as big (either as
+an advisory or as the default behavior for "auto" layout) as its
+contents merit.
+
+In other words, this problem does NOT call for a special case, it
+calls for the general case (of sizing any partition) being made more
+robust. :)
+
+Mike & I will be talking about this a fair bit before 2.2.6 comes out
+in an attempt to arrive at a workable solution.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602686 ###
+===== 库内序 144244 | PK 2602686 | 等级 L4 =====
+DATE: 1998-03-03T07:26:32+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Tertiary Disk and GridPix
+摘要: Satoshi Asami:介绍 Tertiary Disk 存储架构旨在兼具磁带成本与磁盘性能的万亿方案
+
+Tertiary Disk: Scalable, Economical Storage meets the Art World
+
+Tertiary Disk is a storage system architecture that exploits the
+rapidly decreasing disk price to create large disk storage
+systems. The name comes from twin goals: to have the cost per megabyte
+and capacity of tape libraries and the performance of magnetic disk
+drives. We use commodity, off-the-shelf components to develop a
+scalable, low cost, terabyte-capacity disk system.  Tertiary Disk uses
+PCs connected by a switched network to host a large number of disks.
+
+This architecture has several advantages over traditional disk arrays:
+it avoids the cost of custom designed components, is more flexible,
+and supports incremental expansion.  Our prototype consists of 20
+200MHz P6 PCs that host 370 8GB IBM disks and connected through
+100Mbps switched Ethernet.  The PCs run FreeBSD 3.0-current with
+Justin Gibbs' CAM patches.
+
+The main application of Tertiary Disk is the image server called "the
+Zoom Project."  The Fine Arts Museums of San Francisco have thumbnail
+sketches of about 65,000 objects of art, which they have been
+providing over the Internet for two years with a search engine.  The
+Tertiary Disk prototype is used to serve larger versions (up to 3,072
+x 2048 pixels) of the images.  Cal undergrads have cleaned up about
+22,000 full-sized images so far that you can zoom in and zoom out via
+a HTML-based user interface called "GridPix".  The range is from 1/8th
+actual size to 4X times actual size in powers of 2.
+
+If you want to see the images yourself, go to www.thinker.org (the
+museum site), click on the Imagebase area, then type in your favorite
+artist.  When a list of thumbnails appear, click on any one with a red
+numeral next to it, and then click on GridPix or select your screen
+size from the menu.  You can zoom in by clicking anywhere in the
+image, zoom out by clicking on the magnifying glass with the minus
+sign, and click on ? to learn more commands.
+
+Satoshi Asami
+asami@freebsd.org, asami@cs.berkeley.edu
+
+This is the moderated mailing list freebsd-announce.
+The list contains announcements of new FreeBSD capabilities,
+important events and project milestones.
+See also the FreeBSD Web pages at http://www.freebsd.org
+
+To unsubscribe from freebsd-announce, send a mail to
+majordomo@freebsd.org with the body
+
+unsubscribe freebsd-announce
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-announce" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602693 ###
+===== 库内序 144251 | PK 2602693 | 等级 L3 =====
+DATE: 1998-03-03T08:48:43+00:00
+FROM: Philippe Regnauld <regnauld@deepo.prosa.dk>
+SUBJ: Re: ports for X11 stuff
+摘要: Philippe Regnauld:澄清只想让 X 与 /usr/local 同置并强调两者性质相似合乎常理
+
+Satoshi Asami writes:
+>  * 
+>  * It's quite achievable; the question is (as Jordan asked) whether it's 
+>  * going to surprise people that *expect* it to be in /usr.
+> 
+> Um, I haven't asked it to create a new partition or anything, just
+> asked that it put in the same place as /usr/local.  Since /usr/X11R6
+> and /usr/local are, by all accounts, very similar in nature, I think
+> this is just natural.
+
+	For the sake of wasting bandwidth: I agree with this.
+
+-- 
+ -[ Philippe Regnauld / sysadmin / regnauld@deepo.prosa.dk / +55.4N +11.3E ]-
+     �Pluto placed his bad dog at the entrance of Hades to keep the dead
+	    IN and the living  OUT!  The archetypical corporate firewall?�
+                      - S. Kelly Bootle, ("MYTHOLOGY", in Marutukku distrib)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

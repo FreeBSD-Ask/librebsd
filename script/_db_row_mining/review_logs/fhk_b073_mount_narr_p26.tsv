@@ -1,0 +1,22 @@
+2603501	885	luigi 说 which mkdosfs 给出 /usr/sbin/mkdosfs, man -k FAT 列出 mkdosfs(1) 手册, 自嘲当时没先查就发帖问
+2603502	885	dannyman 说上午约两个小时列表管理员的配方出了问题, 致他收到的每封来信都被自动回信, 就因此涌向列表的垃圾向众人致歉
+2603503	885	robert 建议用 mtools 处理大磁盘, 并说自己已有一份修订版 mkdosfs 支持 FAT12 FAT16 FAT32, 愿寄给 luigi 审阅测试
+2603504	885	luigi 说自己有 mtools 3.0 的补丁可让 HD 支持到 512MB 并启动 DOS 或 Windows95, 询问 robert 是否愿意整合
+2603505	885	luigi 提交针对 snd980215 的补丁为 sb_dsp.c 与 sbcard.h 增加 Vibra16X 播放部分支持, 主要源自 Torsten Ackemann 的代码贡献, 请求有卡者测试以赶 stable 截止
+2603506	885	ben 借机宣布启动新版 vx 驱动开发工作, 称刚从 3Com 拿到技术文档, 下周有充裕时间坐下来动手写这份新的网卡驱动
+2603507	885	david 询问 FreeBSD 是否有计划把 XTI 也就是 TLI 这个接口迁入内核, 或至少为这个标准接口提供库层的支持
+2603508	885	atipa 转述他人观点称这类网卡架构一般, NFS 流量下表现不及 DEC 与 Intel 同类, 并反问对方期望何种性能表现
+2603509	885	robert 说用 mtools 3.9 预发行测过独立 FAT32 支持, 超过 0xffff 簇的分区工作正常, 但整套工具未细看, 若 luigi 用得着就应纳入
+2603512	885	simon 反对把 PostgreSQL 改成只用文件存数据的方案, 因除文件外还支持内存与分布式等其他存储管理器, 呼吁别把这些弄坏
+2603513	885	ben 说曾在 Sparc 与 PA-RISC 混合网里测过 3Com 网卡, NFS 性能至少与同代相当, 认为 Intel 网卡最灵活而 DEC 有对齐限制影响性能
+2603519	885	studded 请 jordan 关闭 PR, 说自己若做得出会乐意做更好的替代方案但自认没这个能力, 认为有些方案总胜过没有, 且 base 里目前没写升级说明
+2603521	885	jeff 回复 eivind 附上自己整理的 pptp 相关文档链接汇总, 包括 gre 协议的 rfc1701 rfc1702 与 pptp 草案, 并请人抓包配合
+2603523	885	ken 想动手改 if_fxp 驱动但 Intel 官网数据表没写驱动接口只提 82557 Users Manual, 询问谁能拿到这份手册
+2603524	885	sbabkin 说私发给对方失败改转到列表, 附他和 moldnet.md 一位用户关于 Digi Xem 与 Xe 主板支持的往来邮件
+2603526	885	joe 报告用 2.2.5-RELEASE 时 fxp 网卡插在 BAY 350T 交换机上连状态灯和 link 灯都不亮, 但插 10Mb 集线器就正常, 询问原因
+2603527	885	alfred 提出做 mremap 时先锁内核解除映射再按用户意愿重映射, 失败时按 unmoveable flag 决定是否原地重映射, 承认这方法未必高效但思路合理
+2603528	885	dan 说自己也在 350T 上遇到过这种故障, 建议用 ifconfig media 或 telnet 界面把一端或两端的速率强制成想要的值再看效果
+2603529	885	joe 说 Inetd 触发警告后完全不可恢复, 只能手工把它重启起来, 询问到底是什么触发的, 并请遇到过同样情况的人帮忙回答
+2603530	885	john 说自己曾在 buggy 的 -current 上遇到过这个问题, 提醒 3 月 13 到 20 之间跑的 current 可能已经把文件系统搞坏了
+2603531	885	wilko 反馈 Ollivier 提议的修法对自己生效了, Netscape 现在启动正常, 顺便感叹 Netscape 真是极其古怪的程序
+2603532	885	andrzej 宣布 PicoBSD 0.31 发布, 这是能装进单张软盘的 FreeBSD 变体, 含 SSH telnet FTP 客户端可做拨号接入, 或做小路由带 IP 防火墙与 SNMP agent

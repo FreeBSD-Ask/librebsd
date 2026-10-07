@@ -1,0 +1,834 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602483 ###
+===== 库内序 144043 | PK 2602483 | 等级 L4 =====
+DATE: 1998-02-27T17:17:27+00:00
+FROM: Andre Albsmeier <andre.albsmeier@mchp.siemens.de>
+SUBJ: 2.2.5-STABLE: is this a bug in umount?
+摘要: Andre Albsmeier：2.2.5-STABLE 上 tar 期间反复 umount 挂载点触发系统冻结十秒并重启
+
+Hi,
+
+let's assume the following (done as root):
+
+	mount /dev/sd3c /mnt
+	tar cf /mnt/bla.tar some_big_directory
+
+While the tar is running we do the following in another shell:
+
+	umount /mnt
+
+If we see a "Device busy" error we just repeat the umount again and again.
+Suddenly the system freezes for about 10 seconds and reboots. During the
+bootstrap the following message appears:
+
+	bali daemon.alert savecore: reboot after panic: vinvalbuf: dirty bufs
+
+
+Now my question is: Is this the expected behaviour from umount? If you ask
+me why I do such a silly thing, it's because I mount my portable disk drive
+with amd. Then I start a timeconsuming job on this drive (in my case a tar
+from the network). After the default timeout of 5 minutes the amd unmounts
+the fs and the system crashes. I can reproduce this if you tell me.
+
+All that happens on a FreeBSD 2.2.5-STABLE system.
+
+Is this a bug (so I will send in a PR) or a feature?
+
+Thanks,
+
+	-Andre
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602486 ###
+===== 库内序 144046 | PK 2602486 | 等级 L4 =====
+DATE: 1998-02-27T19:19:45+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: _POSIX_THREAD_SAFE_FUNCTIONS and *_r functions
+摘要: John Birrell：将 _POSIX_THREAD_SAFE_FUNCTIONS 的 otherwise 情形理解为使相关函数成为可选项
+
+Kaleb S. KEITHLEY wrote:
+> That means that if you don't have the Thread Safe Functions, then you
+> can't define _POSIX_THREAD_SAFE_FUNCTIONS. (And therefore you can't
+> define _POSIX_THREADS, which is sort of the reverse of the claim that if
+> you define _POSIX_THREADS then you must define
+> _POSIX_THREAD_SAFE_FUNCTIONS.)
+
+Hmm, I've always read the "otherwise" case as making these functions
+optional, but now you've made me reread the clauses, I think I
+agree that _POSIX_THREAD_SAFE_FUNCTIONS means these functions should
+be there. I think they should be in libc, not just libc_r.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@netbsd.org; jb@freebsd.org
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602488 ###
+===== 库内序 144048 | PK 2602488 | 等级 L4 =====
+DATE: 1998-02-27T19:32:47+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: symbols in libc_r not in libc
+摘要: John Birrell：libc 中 cerror 应调用 __error 而非全局 errno，否则不支持内核线程
+
+Kaleb S. KEITHLEY wrote:
+> Well, just that Xlib isn't in the business of providing libc functions
+> or putting a band-aid over a broken libc.
+> 
+> The weak __error() function belongs in libc.
+
+The cerror in libc needs to call __error() instead of just referencing
+the global "int errno". It does this when compiled into libc_r, but
+that won't support kernel threads (which will use libc + libpthread
+instead of libc_r).
+
+I'd like to change errno.h to define errno as *__error() all the
+time so that you don't have to do anthing special to compile a
+thread-aware library (like Xlib). I've been running with a complete
+'make world' under -current with this errno implementation for some
+time. I guess I should ask for the go-ahead to commit this to
+-current.
+
+I'd like to see 3rd-party libraries (like Xlib) come thread-aware
+out-of-the-box.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@netbsd.org; jb@freebsd.org
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602489 ###
+===== 库内序 144049 | PK 2602489 | 等级 L4 =====
+DATE: 1998-02-27T19:40:46+00:00
+FROM: "Kaleb S. KEITHLEY" <k.keithley@opengroup.org>
+SUBJ: Re: symbols in libc_r not in libc
+摘要: Kaleb S. KEITHLEY：ANSI POSIX ISO C 保留下划线开头的标识符，故弱 __error 应置于 libc 而非 Xlib
+
+John Birrell wrote:
+> 
+> Kaleb S. KEITHLEY wrote:
+> > Well, just that Xlib isn't in the business of providing libc functions
+> > or putting a band-aid over a broken libc.
+> >
+> > The weak __error() function belongs in libc.
+
+Another reason why the weak __error() belongs in libc, and not in Xlib
+is because ANSI/POSIX/ISO C reserves all identifiers that begin with an
+underscore (X used _X* before ANSI C annexed underscore as a prefix) so
+it's clear to me that __error() in Xlib would be an egregious hack.
+
+
+-- 
+Kaleb
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602490 ###
+===== 库内序 144050 | PK 2602490 | 等级 L4 =====
+DATE: 1998-02-27T19:50:52+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: symbols in libc_r not in libc
+摘要: John Birrell：Xlib 不应知道操作系统如何提供 POSIX 接口，__error 属内部实现细节
+
+Kaleb S. KEITHLEY wrote:
+> Another reason why the weak __error() belongs in libc, and not in Xlib
+> is because ANSI/POSIX/ISO C reserves all identifiers that begin with an
+> underscore (X used _X* before ANSI C annexed underscore as a prefix) so
+> it's clear to me that __error() in Xlib would be an egregious hack.
+
+Xlib shouldn't have to know how an OS goes about providing a POSIX
+interface. __error() is internal and implementation dependent.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@netbsd.org; jb@freebsd.org
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602491 ###
+===== 库内序 144051 | PK 2602491 | 等级 L4 =====
+DATE: 1998-02-27T20:21:09+00:00
+FROM: freebsd@bug.fe.up.pt
+SUBJ: Re: 2.2.5-STABLE: is this a bug in umount?
+摘要: bug.fe.up.pt：umount 内核调试 kgdb 命中 unmount 与 vfs_syscalls.c 断点
+
+
+Hi!
+
+I did a kernel debug on it and here is the log of the debug (I've 
+included an attachment with the full log):
+
+(kgdb) down
+#9  0xf01318fc in unmount (p=0xf1509800, uap=0xefbfff94, retval=0xefbfff84)
+    at ../../kern/vfs_syscalls.c:280
+280		return (dounmount(mp, uap->flags, p));
+(kgdb) list
+275		 * Don't allow unmount of the root filesystem
+276		 */
+277		if (mp->mnt_flag & MNT_ROOTFS)
+278			return (EINVAL);
+279	
+280		return (dounmount(mp, uap->flags, p));
+281	}
+282	
+283	/*
+284	 * Do the actual file system unmount.
+(kgdb) exit
+
+The solution is to add an if before the return checking if there is 
+activity in that partition. The way to do that I'll leave to the 
+core team or someone with commit priviliges.
+
+				Jorge
+
+--
+\\ Nobody can be exactly like me.  \\ Jorge Miguel Goncalves
+\\ Sometimes even I have trouble   \\ 
+\\ doing it.                       \\ j@bug.fe.up.pt
+\\        -- Talluulah Bankhead    \\ 
+
+On Fri, 27 Feb 1998, Andre Albsmeier wrote:
+
+> Hi,
+> 
+> let's assume the following (done as root):
+> 
+> 	mount /dev/sd3c /mnt
+> 	tar cf /mnt/bla.tar some_big_directory
+> 
+> While the tar is running we do the following in another shell:
+> 
+> 	umount /mnt
+> 
+> If we see a "Device busy" error we just repeat the umount again and again.
+> Suddenly the system freezes for about 10 seconds and reboots. During the
+> bootstrap the following message appears:
+> 
+> 	bali daemon.alert savecore: reboot after panic: vinvalbuf: dirty bufs
+> 
+> 
+> Now my question is: Is this the expected behaviour from umount? If you ask
+> me why I do such a silly thing, it's because I mount my portable disk drive
+> with amd. Then I start a timeconsuming job on this drive (in my case a tar
+> from the network). After the default timeout of 5 minutes the amd unmounts
+> the fs and the system crashes. I can reproduce this if you tell me.
+> 
+> All that happens on a FreeBSD 2.2.5-STABLE system.
+> 
+> Is this a bug (so I will send in a PR) or a feature?
+> 
+> Thanks,
+> 
+> 	-Andre
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+> 
+
+
+### PK 2602495 ###
+===== 库内序 144054 | PK 2602495 | 等级 L3 =====
+DATE: 1998-02-27T22:51:36+00:00
+FROM: Chris Timmons <skynyrd@opus.cts.cwu.edu>
+SUBJ: detecting regexp implementations with gnu autoconf
+摘要: Chris Timmons 讨论不同系统正则库探测，提及 Linux regexp.h、Solaris regexpr.h、BSD POSIX regex.h
+
+
+I'm making some adjustments to a program which currently uses (linux?) 
+regular expression processing:
+
+	#include <regexp.h>
+	Call compile() then step()
+
+A solaris machine I have uses:
+
+     #include <regexpr.h>
+
+     char *compile(char *instring, char *expbuf,
+          const char *endbuf);
+
+     int step(const char *string, const char *expbuf);
+
+
+It looks like *BSD supports POSIX regular expressions:
+
+       #include <sys/types.h>
+       #include <regex.h>
+
+       int      regcomp(regex_t *preg,       const char *pattern,
+                 int cflags);
+
+       int regexec(const regex_t *preg,       const char *string,
+                 size_t nmatch, regmatch_t pmatch[], int eflags);
+
+       size_t regerror(int errcode,          const regex_t *preg,
+                 char *errbuf, size_t errbuf_size);
+
+       void regfree(regex_t *preg);
+
+
+What would the best way to dance around this in the application program?
+I want to submit source changes to the maintainers which will allow the
+program to compile and run on *BSD.  Right now the plan is to have
+autoconf look for regex.h, regcomp(), regexc(), regerror() and regfree()
+as the signature for the POSIX implementation.  Otherwise use compile()
+and step() if they are present.  
+
+#if defined(HAVE_REGEX_H) && defined(HAVE_REGCOMP) \ 
+    && defined(HAVE_REGEXEC) && defined(HAVE_REGERROR) \
+    && defined(HAVE_REGFREE)
+#define USE_POSIX_REGEX 1
+
+#elif defined(HAVE_COMPILE) && defined(HAVE_STEP)
+#define USE_SYSV_REGEX 1
+
+#else
+#error "Need either POSIX or SYSV (compile/step) regex support."
+
+#endif
+
+
+Suggestions?
+
+-Chris
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602500 ###
+===== 库内序 144059 | PK 2602500 | 等级 L3 =====
+DATE: 1998-02-27T22:23:44+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: New version of JDK1.1.5 for FreeBSD
+摘要: Nate Williams 宣布 JDK1.1.5 for FreeBSD 发布并给出官方下载地址
+
+The Java Development Kit for FreeBSD is now released.  For more
+information check out:
+
+http://www.FreeBSD.org/java/
+
+Of interest:
+
+To make a a distribution that works with X/Motif *and* without X, two
+java/jre binaries are provided.  The first is linked without X, and is
+the standard binary.  The second binary is linked against a static
+version of Motif, and against the shared X libraries.  The version used
+is controlled by the setting of the DISPLAY environment variable, which
+is used by X to determine where to send the output.
+
+Fixed in this release:
+- X is no longer required to run non-AWT applications (see above).
+- JDK's built on 2.2.2 should now work again.
+- The AWT now correctly sets the Window name.
+- Fixed obscure bug that could cause a core dump if you hit a button
+  in a dialog box multiple times.
+- Fixed bug where SHMEM wasn't released when using images, causing a
+  leak.
+
+In addtion, a JRE and the patches used to build this release are made
+available.
+
+
+
+- The FreeBSD Java team
+
+This is the moderated mailing list freebsd-announce.
+The list contains announcements of new FreeBSD capabilities,
+important events and project milestones.
+See also the FreeBSD Web pages at http://www.freebsd.org
+
+To unsubscribe from freebsd-announce, send a mail to
+majordomo@freebsd.org with the body
+
+unsubscribe freebsd-announce
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-announce" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602502 ###
+===== 库内序 144061 | PK 2602502 | 等级 L4 =====
+DATE: 1998-02-28T00:55:34+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: FYI: AMI MegaRaid and Mylex DAC960 Raid controllers
+摘要: Ulf Zimmermann 表示 AMI 已拒绝提供编程文档、Mylex 已同意提供文档与免费控制器用于驱动开发
+
+AMI: 
+
+In the beginning they aggreed to give me programming documentation, but
+now refuse to do it. I will follow up with their marketing director
+who got not involved in this sofar.
+
+Mylex:
+
+I got programming documentation and a free 3 channel DAC960PJ controller
+to do the driver development and I will begin this weekend. If you have
+any suggestions for features, please send them to me.
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602504 ###
+===== 库内序 144063 | PK 2602504 | 等级 L3 =====
+DATE: 1998-02-28T01:03:26+00:00
+FROM: Ken Hansen <khansen@njcc.com>
+SUBJ: Fast EtherLink XL NIC
+摘要: Ken Hansen 询问 3Com Fast EtherLink XL 网卡性能，并与 NetGear FA-310TX 做对比
+
+Sorry, I guess I dozed off in the middle of the "Which NIC is Fastest"
+debate, and I find myself now looking at the latest 3Com card that is
+available for $45 from 3Com (at 1-888-906-3COM (ext. 128) - is this
+a good, high-performance card for a 100MB/s network? I am curious with
+its performance relative to, say, a NetGear FA-310TX at about the same
+price ($35 +/-)?
+
+Thanks in advance (and sorry for stirring up the pot again!),
+
+Ken
+khansen@njcc.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602505 ###
+===== 库内序 144064 | PK 2602505 | 等级 L4 =====
+DATE: 1998-02-28T01:05:08+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Satoshi Asami 认为讨论在线扩大 RAID 阵列大小是无意义的建议，主张聚焦可用文件系统
+
+ * DPT arrays?  Simple;  you make an ioctl call into the DPT driver, I write a
+ * message to the controler, specifying which disk to add to which array, the
+ * controller starts a hot rebuild, etc.  The details escape me right now, but
+ * I belive it is doable.  Why would you want to do that?  No idea... :-)
+
+This is pointless.
+
+I think it's about time people stop answering the question "can I
+increase the size of an array?" with anything else than "not until we
+have a filesystem to support it."  We're just confusing people.
+
+Satoshi (yeah, ccd can increase the size of the array too, but so what?)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602506 ###
+===== 库内序 144065 | PK 2602506 | 等级 L4 =====
+DATE: 1998-02-28T01:10:04+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Fast EtherLink XL NIC 
+摘要: Mike Smith：明确不建议目前购买 3Com Fast EtherLink XL
+
+> Sorry, I guess I dozed off in the middle of the "Which NIC is Fastest"
+> debate, and I find myself now looking at the latest 3Com card that is
+> available for $45 from 3Com (at 1-888-906-3COM (ext. 128) - is this
+> a good, high-performance card for a 100MB/s network? I am curious with
+> its performance relative to, say, a NetGear FA-310TX at about the same
+> price ($35 +/-)?
+
+NO!  
+
+At this point in time, DO NOT purchase or plan to purchase any 3Com 
+PCI adapter for use with FreeBSD on 100Mb/s networks.
+
+Whilst some of the adapters may indeed posess high-performance 
+features, FreeBSD does not support these features.  Your performance 
+will *SUCK*.
+
+> Thanks in advance (and sorry for stirring up the pot again!),
+
+Please consider consulting the FreeBSD mailing list archives at 
+www.freebsd.org before asking questions like this.  8)
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602507 ###
+===== 库内序 144066 | PK 2602507 | 等级 L4 =====
+DATE: 1998-02-28T01:13:49+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Kernel debugging: what's going on here?
+摘要: Greg Lehey 请他人解释 kgdb 停在 bwrite 时正在写磁盘块的问题，贴出 vop_stdbwrite 反栈
+
+Can anybody explain this to me?  I'm writing a disk block, and am
+currently at bwrite:
+
+(kgdb) bt
+#0  bwrite (bp=0xf051ec00) at ../../kern/vfs_bio.c:364
+#1  0xf0138d6a in vop_stdbwrite (ap=0xf2a76c74) at ../../kern/vfs_default.c:283
+#2  0xf0138bb1 in vop_defaultop (ap=0xf2a76c74) at ../../kern/vfs_default.c:130
+#3  0xf0146639 in spec_vnoperate (ap=0xf2a76c74) at ../../miscfs/specfs/spec_vnops.c:127
+#4  0xf01c5679 in ufs_vnoperatespec (ap=0xf2a76c74) at ../../ufs/ufs/ufs_vnops.c:2242
+#5  0xf2aab097 in VOP_BWRITE (bp=0xf051ec00) at vnode_if.h:1117
+#6  0xf2aa95c4 in vinumstart (vol=0xf0563000, bp=0xf10f1bb0) at request.c:228
+#7  0xf2aa9189 in vinumstrategy (bp=0xf10f1bb0) at request.c:71
+#8  0xf2aa7b63 in vinum_writedisklabel (vol=0xf0563000, lp=0xf0563110) at io.c:830
+
+I've handed a buffer header up from frame 6 (not the bp in the
+parameter list).  When it gets to bwrite, it has a different content.
+gdb tells me different contents depending on the frame it's in:
+
+(kgdb) f 0
+#0  bwrite (bp=0xf051ec00) at ../../kern/vfs_bio.c:364
+364             int oldflags = bp->b_flags;
+(kgdb) p bp->b_vp        
+$13 = (struct vnode *) 0xf29ecbc0
+(kgdb) p ((struct vnode *) 0xf29ecbc0)->v_type
+$14 = VBLK
+(kgdb) f 6
+#6  0xf2aa95c4 in vinumstart (vol=0xf0563000, bp=0xf10f1bb0) at request.c:228
+228               VOP_BWRITE (&rqe->b);                             /* do an asynchronous write */
+(kgdb) p ((struct vnode *) 0xf29ecbc0)->v_type
+$15 = VNON
+(kgdb) 
+
+Significant parts of the vnode are different; I just showed v_type to
+demonstrate it.  What's going on here?  I don't see any remapping of
+memory going on anwhere here.  Is this a bug in gdb, or in me?
+
+Greg
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602521 ###
+===== 库内序 144080 | PK 2602521 | 等级 L4 =====
+DATE: 1998-02-28T03:05:34+00:00
+FROM: Curt Sampson <cjs@portal.ca>
+SUBJ: RE: Token Ring for FreeBSD yet?
+摘要: Curt Sampson 反驳 CSMA/CD 拥堵导致效率低是十年前已被推翻的旧观点，并举 Ethernet 3000 英尺 24 主机实测
+
+On Tue, 24 Feb 1998, Chris Dillon wrote:
+
+> CSMA/CD just isn't very
+> efficient on a heavily loaded network.  The CSMA/CD network (Ethernet) 
+> would spend more time dealing with collisions than it would passing usable
+> data.
+
+*Sigh*. It's now been nearly ten years since this myth was killed,
+and yet people are still repeating it. If you want to see a real
+live Ethernet 3000 feet long with 24 hosts on it operating at
+greater than 90% capacity, with an offered load that *continuously*
+exceeds the theoretical capacity of the network, have a look at
+
+    ftp://ftp.cynic.net/pub/cjs/ethnetcap.ps.gz
+
+cjs
+
+Curt Sampson    cjs@portal.ca	   Info at http://www.portal.ca/
+Internet Portal Services, Inc.	   Through infinite mist, software reverberates
+Vancouver, BC  (604) 257-9400	   In code possess'd of invisible folly.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602523 ###
+===== 库内序 144082 | PK 2602523 | 等级 L4 =====
+DATE: 1998-02-28T03:14:50+00:00
+FROM: Curt Sampson <cjs@portal.ca>
+SUBJ: Re: "Best" Fast Ethernet Card 
+摘要: Curt Sampson：测网卡 CPU 开销不必量中断处理，用 netperf 在同一空闲系统测总利用率对比即可
+
+On Fri, 27 Feb 1998, Mike Smith wrote:
+
+> > > The question is how to measure CPU overhead, since that is the issue at 
+> > > hand.
+> > 
+> > netperf has done this for ages.
+> 
+> It can measure interrupt handler execution time for just the adapter 
+> driver?
+
+No. But you don't need that. You just need to run netperf on the
+same completely idle system with each network card and see the
+overall difference in CPU utilisation. This has the added advantage
+that this will catch other problems with the driver, such as having
+to copy due to bad alignment or things like that. (This is probably
+not a big deal on i386, but the Intel chipset's ability to pad the
+in-memory Ethernet header by a couple of bytes is a godsend on
+Alphas, where you generally want the IP header to be aligned.)
+
+cjs
+
+Curt Sampson    cjs@portal.ca	   Info at http://www.portal.ca/
+Internet Portal Services, Inc.	   Through infinite mist, software reverberates
+Vancouver, BC  (604) 257-9400	   In code possess'd of invisible folly.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602524 ###
+===== 库内序 144083 | PK 2602524 | 等级 L4 =====
+DATE: 1998-02-28T03:17:37+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Terry Lambert：FFS 通过追加 cylinder group 支持扩大容量，仅存在轻微碎片问题
+
+> I think it's about time people stop answering the question "can I
+> increase the size of an array?" with anything else than "not until we
+> have a filesystem to support it."  We're just confusing people.
+
+FFS can support increased size through the addition of cylinder groups.
+There are (minor) fragmentation issues with doing this, but they can
+be addressed seperately (most easily with a backup/restore).
+
+The code to bump the number of cylinder groups up is trivial.
+
+You can't bump the number of cylinder groups down without writing a
+defragmenter that includes code to allow biasing reallocation against
+the area you want to remove.  There isn't currently any kind of
+defragmenter because you don't get fragmentation unless you go out
+of your way to overfill the disk and/or you start adding cylinder
+groups.  8-).
+
+
+The code to deal with removing an intermediate piece (instead of taking
+it off the end) is also trivial, assuming it has been defragged out of.
+You set some limit M on the number of elements you can agregate together
+into a virtual device, and steal log2(M) bits off the top of the 64 bit
+block address space.  This will reduce the maximum size an FS can be,
+but nobody has written an HSM for FreeBSD, and hooked up the largest
+tape robot there is to it, so it's not an issue.  8-).  When a block
+request comes in, you split the bits into "element identifier" and
+"block on element".  This is a pretty trivial change to *_balloc(),
+and it won't affect any existing FS's, unless M gets set insanely large.
+
+
+Removing the *first* piece is a harder problem because of the definitional
+value for inode #2 (historical note: FS roots are inode #2 because inode
+#1 used to be the bad block list, and can't be used because there are
+archivers that know this and won't archive inode #1).  This requires that
+you change the location of the root of the FS to a different inode
+number.  This is actually not terribly difficult; you can do it by
+allocating a "root inode" field in the superblock.  The problem here
+is that superblock changes like new/deleted fields are non-trivial
+because
+[…中段省略 30 字符…] ion problem and the tools problems
+they cause (ie: newfs would have to know about it, fsck would have to
+know about it, you'd have to change every copy of the superblock on disk
+so mount wouldn't go ballistic, etc. -- it's an upgrade nightmare).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602526 ###
+===== 库内序 144085 | PK 2602526 | 等级 L4 =====
+DATE: 1998-02-28T03:42:06+00:00
+FROM: asami@cs.berkeley.edu (Satoshi Asami)
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Satoshi Asami 质疑为何扩大 FFS 需要补丁，反问是否应告知
+
+ * FFS can support increased size through the addition of cylinder groups.
+
+Patch?
+
+ * There are (minor) fragmentation issues with doing this, but they can
+ * be addressed seperately (most easily with a backup/restore).
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Um, I don't think we need you to tell us that, Terry. ;)
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602527 ###
+===== 库内序 144086 | PK 2602527 | 等级 L4 =====
+DATE: 1998-02-28T03:52:52+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Terry Lambert：愿考虑补一个 FFS 扩大补丁，实为 tunefs 微调，可能与 soft updates 改动冲突
+
+>  * FFS can support increased size through the addition of cylinder groups.
+> 
+> Patch?
+
+I'll consider doing one; it's a tunefs tweak, really.  If I do, though,
+it will probably conflict with the soft updates changes to tunefs, at
+least until they are committed (I thought that was going to happen soon?).
+
+
+>  * There are (minor) fragmentation issues with doing this, but they can
+>  * be addressed seperately (most easily with a backup/restore).
+>                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Um, I don't think we need you to tell us that, Terry. ;)
+
+The right way is a defragger.  A backup/restore is the cowards way out.
+;-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602528 ###
+===== 库内序 144087 | PK 2602528 | 等级 L4 =====
+DATE: 1998-02-28T04:08:13+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Greg Lehey：等 soft updates 改动就绪后再看 FFS 扩大补丁
+
+On Sat, 28 February 1998 at  3:52:52 +0000, Terry Lambert wrote:
+>>  * FFS can support increased size through the addition of cylinder groups.
+>>
+>> Patch?
+>
+> I'll consider doing one; it's a tunefs tweak, really.  If I do, though,
+> it will probably conflict with the soft updates changes to tunefs, at
+> least until they are committed (I thought that was going to happen soon?).
+
+Let me have them as soon as they're ready to test.  I can offer
+extensible volumes :-)
+
+Greg
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602529 ###
+===== 库内序 144088 | PK 2602529 | 等级 L4 =====
+DATE: 1998-02-28T10:20:32+00:00
+FROM: sthaug@nethelp.no
+SUBJ: Re: SCSI Bus redundancy...
+摘要: sthaug：der mouse 为 NetBSD 写了一个 fsresize，可扩可缩，源码约 50KB 已贴
+
+> >  * FFS can support increased size through the addition of cylinder groups.
+> > 
+> > Patch?
+> 
+> I'll consider doing one; it's a tunefs tweak, really.  If I do, though,
+> it will probably conflict with the soft updates changes to tunefs, at
+> least until they are committed (I thought that was going to happen soon?).
+
+der mouse made an "fsresize" program for NetBSD. It can both grow and shrink
+file systems. The source is about 50 kB, I can post it here if anybody is
+interested (or you can get it from http://www.nethelp.no/scsi/fsresize.c).
+
+Steinar Haug, Nethelp consulting, sthaug@nethelp.no
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602530 ###
+===== 库内序 144089 | PK 2602530 | 等级 L4 =====
+DATE: 1998-02-28T10:29:20+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: resizing ffs filesystems (was Re: SCSI Bus redundancy...)
+摘要: Mike Smith 指出 fsresize 支持双向调整容量极为有用，询问实际使用体验
+
+> der mouse made an "fsresize" program for NetBSD. It can both grow and shrink
+> file systems. The source is about 50 kB, I can post it here if anybody is
+> interested (or you can get it from http://www.nethelp.no/scsi/fsresize.c).
+
+The URL is fine.  Is there any anecdotal evidence as to how well this 
+works?  It does appear to handle both expansion and contraction, which 
+would be a very nice thing indeed to have.
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602531 ###
+===== 库内序 144090 | PK 2602531 | 等级 L4 =====
+DATE: 1998-02-28T11:04:27+00:00
+FROM: ktsin@acm.org
+SUBJ: new flag for ntpdate
+摘要: ktsin 提议为 ntpdate 增加 -u 标志允许使用小于 1024 的非保留端口，请求合入源树
+
+I have added a new flag -u to tell ntpdate to use a non-reserved port
+( < 1024 ) so that clients behind a firewall could synchronize with
+external NTP servers. 
+
+I wonder if the patches could be merged into the source tree. 
+
+kt
+
+

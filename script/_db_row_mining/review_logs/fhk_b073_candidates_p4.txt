@@ -1,0 +1,23 @@
+2602596|L3|Terry Lambert 讨论 NFS 补丁尚未合入的架构分歧，主张 advisory locking 改用 veto-based 接口
+2602597|L3|Capriotti：sysinstall 讨论中承认像素界面未必关键，更强调视觉界面必须保留
+2602602|L3|David Greenman：系统芯片组为 Intel 82443LX 与 82371AB，网卡芯片 82557
+2602603|L3|Ulf Zimmermann：手册标注 Intel 82555 PHY，机箱实物待拆解确认
+2602604|L3|David Greenman：82555 在驱动里已被识别为 type=7，实际芯片版本疑与手册不符
+2602605|L3|Darren Reed：Booteasy 代码设计只适合简单配置，复杂拓扑需要其他方案
+2602607|L3|Ulf Zimmermann：手册标注 Intel 82555 PHY，实物芯片刻字 S82555 L736EB68
+2602608|L3|Chris Timmons：询问 Intel DK440LX 主板整体表现，并提到 SMP 社区对 phoenix bios 的顾虑
+2602609|L3|Anatoly Vorobey：X11 ports 应装到 /usr/local/X11R6 而非 /usr/X11R6，imake 问题需在上游解决
+2602610|L3|Thomas David Rivers：fsck 与 CG 代码 bug 已排除，Dave Rivers panic 实为 IDE 线过长
+2602612|L3|Luigi Rizzo：建议改用 -stable 与 -current 中的新 pnp 代码，替代 Sujal 的旧 ISA_PNP
+2602614|L3|John-Mark Gurney 在 ISA_PNP 线程内就 Alexander Gnativ 报的 pnp.c 编译告警继续回复讨论
+2602616|L3|Studded：支持将 X11 ports 迁至 /usr/local/X11R6，理由是保持一致性与良好的设计
+2602617|L4|Gianmarco Giovannelli：2.2.5 没有 current 版本，应用 stable-supfile 取 2.2.5-STABLE
+2602618|L3|Jordan K. Hubbard：反对把 /usr/X11R6 改成 /usr/local/X11R6，担心引起大范围混乱
+2602620|L3|Chris Kukulies 询问 g77 相较 f2c 的差异，能否直接从 FreeBSD 2.2.5 软件包安装，运行时库依赖如何
+2602624|L3|Alex Povolotsky 询问 FreeBSD 上是否存在集群实现，希望获取补丁与白皮书等文档
+2602630|L3|Daniel J Blueman：安装 cvsup 包后运行时 libXaw.so.6.1 缺失，locate 也未查到
+2602631|L3|Amancio Hasty：脚本语言难维护，主张用 Java 或 C++ 等更灵活可扩展的方案做配置工具
+2602632|L4|Niall Smart：libXaw 是 X Window System 的一部分，未装 X 时需安装 X 或从网上下载 libXaw 包
+2602636|L3|Niall Smart：不同意 C++ 一定比 Java 快，脚本语言在该配置工具领域仍然有重要价值
+2602637|L3|Robert Withrow：老不等于不好，Java 并非脚本语言，脚本语言在该领域仍有其独特价值
+2602639|L3|Amancio Hasty：小站与小 ISP 场景下 C++ 与 Java 的性能差异并不显著

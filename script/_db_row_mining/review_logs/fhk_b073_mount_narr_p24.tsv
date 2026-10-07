@@ -1,0 +1,22 @@
+2603421	885	jason 答 Joel Ray Holveck 关于仍有发行版默认以 ascii 模式传输 ftp 文件之问 表示答案是有的 且名字以 Windows 开头
+2603422	885	greg 回忆自己在 BSD/OS 上直到停用它之前一直运行 FreeBSD 二进制 到 2.1 版本时仍在用 记不清有过重大问题
+2603423	885	jeff 问 NATd 是否只能翻译 TCP 与 UDP 能否扩展支持 protocol 47 让 MS PPTP 穿越防火墙 提及 tcp 1723 端口翻译正常而 protocol 47 不处理
+2603424	885	eivind 说 NATd 目前只处理 TCP 与 UDP 若要扩展须请 Charles 或自己去改 libalias 若能提供文档可较快完成
+2603425	885	warner 笑称自家 presario 实际装有 40M 内存却只报 16M 并笑赞其使用的 torx T15 螺丝在商店里几乎买不到
+2603426	885	fred 报告给 560E 的 PCMCIA 内存窗口加 wait states 后 Netwave 卡的写坏问题消失 说明根因是内存时序而非缓存问题
+2603433	885	alfred 说明 LINT kernel 中存在一个选项可让机器不信任 BIOS 报告的内存计数 也可将具体数值硬连线写死
+2603434	885	phk 建议从 www.intel.com 取 tech-man 并 dump 寄存器观察所使用内存区域实际行为 附提自家 560 机器配 NE2000 卡工作正常
+2603436	885	nik 答 Leif Neland 只要在 PR 中留可用邮箱即可自动收到处理通知 处理人往来邮件也应同步到 GNATS 以留下审计轨迹
+2603441	885	max 请教在 manual page 中如何在行首指定句间双空格 尝试在 .Tn FIFO 后加空格却导致断行 请求宏用法指针
+2603448	885	james 说 vx 手册在 2.2.2 中仅提 10Mb 支持 询问是否已升级到 100mbit 全双工 表示自己愿贡献但驱动编程经验甚少
+2603450	885	baum 自述作为 CS 本科生参与团队欲在 FreeBSD 的 TCP/IP 层之上加 IPSec 打算从 OpenBSD 移植并询问是否已有人在推进
+2603451	885	ted 建议 max 在 .Tn FIFO 后加一个含两个空格的片段 提醒 doc(7) 手册值得查阅 并询问 FreeBSD 是否附带 troff 相关文档
+2603453	885	max 回报 ted 建议的空格片段其实已在里面 但加了转义仍只得 1 或 3 个空格 表示可能难题且未见现有手册页涉及
+2603455	885	amancio 表示此前听说日本已有人在 FreeBSD 上跑起 IPSec 因此在看到相关 FreeBSD 移植话题时略感旧闻重现
+2603457	885	jorge 转述另一 Unix 分支主开发机日发十万封邮件已连续运行三个月 另有同分支机器已运行四百五十八天 建议 FreeBSD 就 ISP 场景做类似调查
+2603458	885	studded 认为提供本地改动 diff 便于打补丁是好办法 但觉得写在 man 页中更佳 并表示若脚本被采纳愿亲笔撰写
+2603459	885	studded 公布先前提交的 PR 编号为 6064 表示原想把脚本留在 etc 保持整洁但接受 nik 建议改到 usr/bin 更合适 并强调更愿纳入主线发行而非做成 port
+2603460	885	jordan 表示不赞同把 etc 拷到 etc/pristine 的做法 主张用户可变部分改为 template based 这是 Paul Traina 两年前首提 并问是否有人接手
+2603464	885	jordan 主张真正的解法是设计一个封装全部必要信息的单一文件 由它生成 legacy 文件 好处是更简洁地表达服务属性并分离默认值与改动值 还能覆盖当前方案办不到的场景
+2603467	885	tim 追问 usr/share/examples/etc 的文件为何于 1995 年底被移除 翻阅归档找不到相关 commit 消息也无讨论记录 另提及关于此事已有 PR 故才发问
+2603469	885	jordan 认为这是可行方式之一 主张系统应对每个实体允许指定文档串启用位命令参数默认值与依赖项 至于用 m4 还是更复杂方案交给实现者决定

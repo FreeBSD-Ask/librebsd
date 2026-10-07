@@ -1,0 +1,1042 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603562 ###
+===== 库内序 145120 | PK 2603562 | 等级 L3 =====
+DATE: 1998-03-23T19:25:20+00:00
+FROM: "Kenneth P. Stox" <ken@stox.sa.enteract.com>
+SUBJ: Re: a possibly interesting article...
+摘要: Stox：回应时称关于微软服务器管理的内容很有意思
+
+
+
+On Mon, 23 Mar 1998, Luigi Rizzo wrote:
+
+> ... on how microsoft manages its web server (May 1997).
+> 
+> http://microsoft.com/syspro/technet/tnnews/features/mscom.htm
+> 
+> The web page has some data, and a pointer to an article in MSWord
+> format.
+> 
+> The instruction also instruct you to download the Word Viewer if
+> you don't have MSWord.
+> 
+> The case that you don't run Windows is not contemplated :)
+
+Very interesting. And an out and out lie. When Windows 95 was released, I
+watched their web site(s) very carefully. They were running BSDI on a
+number of machines because it was obvious that NT was falling over too
+often.  Over time, and once NT4.0 was released this all changed. I really
+wished I had taken the time to document it, and take them to task. :-(
+
+The statements they make now may be true, but were not in the past.
+
+-Ken
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603563 ###
+===== 库内序 145121 | PK 2603563 | 等级 L4 =====
+DATE: 1998-03-23T19:42:57+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Re: multi-port ethernet cards
+摘要: Zimmermann：称自有的 Zynx ZX-314 四口卡在 FreeBSD 下工作良好
+
+> Hi,
+> 
+> Does anyone know of any multi-port ethernet (10baseT) cards that
+> are supported?
+> Or that might easily become supported?
+> 
+> Alex
+> 
+> -- 
+> A computer without Windows is like a fish without a bicycle.
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+http://www.zynx.com/
+
+I have the ZX-314 and works great with FreeBSD (4 port card). Adaptec/Cogent
+makes one too, which is supported as far I know.
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603564 ###
+===== 库内序 145122 | PK 2603564 | 等级 L4 =====
+DATE: 1998-03-23T19:18:37+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: a possibly interesting article...
+摘要: Tom：指出 winamillion.msn.com 也是非 NT 系统并称 MSN 还有别的非 NT 机器
+
+
+On Mon, 23 Mar 1998, Kenneth P. Stox wrote:
+
+> Very interesting. And an out and out lie. When Windows 95 was released, I
+> watched their web site(s) very carefully. They were running BSDI on a
+
+  http://winamillion.msn.com is also non-NT (probably BSDI).  Apparently,
+MSN has a few other non-NT systems too.
+
+Tom
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603566 ###
+===== 库内序 145124 | PK 2603566 | 等级 L3 =====
+DATE: 1998-03-23T20:48:07+00:00
+FROM: Narvi <narvi@haldjas.folklore.ee>
+SUBJ: Finding an FS on the disk
+摘要: Narvi：请求找回被覆盖 disklabel 后文件系统起始位置以便恢复数据
+
+
+I blew a disklabel on a disk today 8-(
+
+The layout of the disk was:
+
+1) disklabel
+2) some free sectors
+3) swap partition 64-128M (I don't really remember)
+4) A file system of ~800MB
+
+Now what I want to do is find (if even aproximately) the beginning of the
+file system to get the data.
+
+The program in the archives does not do what I want (it looks for a disk
+label, but there is none to be found, as the only one got overwritten by
+disklabel sd2 auto).
+
+	Sander
+
+	There is no love, no good, no happiness and no future -
+	all these are just illusions.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603567 ###
+===== 库内序 145125 | PK 2603567 | 等级 L4 =====
+DATE: 1998-03-23T21:33:40+00:00
+FROM: Andrew Heybey <ath@niksun.com>
+SUBJ: Re: Finding an FS on the disk
+摘要: Heybey：提供 SunOS 版 find_super 改造后在 FreeBSD 扫描超级块并给出用法示例
+
+Here is some code I wrote when I had a similar problem under SunOS.  I
+just modified it to compile and (apparently) work under FreeBSD.  Do
+something like:
+
+./find_super /dev/rwd0c
+
+and it will print something like:
+
+Found possible superblock at sector 16:
+size 65536, bsize 8192, fsize 1024
+Found possible superblock at sector 32:
+size 65536, bsize 8192, fsize 1024
+... superblocks (& backups) from /var, /usr, etc.
+
+You have to figure out a) whether you just got unlucky and there
+happened to be an FS_MAGIC at the beggining of a sector of otherwise
+random data (which is why my program prints out size, bsize & fsize
+for sanity checking), b) which superblock is the one at the beginning
+of the file system you care about and c) how to recover your data once
+you have passed a) and b).
+
+Good luck.
+
+andrew
+
+==================== cut here (MIME? what's that?) ==================
+/* Hunt for file system superblocks on disk.
+ * Andrew Heybey, ath@niksun.com
+ *
+ * This code is placed in the public domain.  No warantee.
+ *
+ * $Id: find_super.c,v 1.2 1998/03/23 21:28:48 ath Exp $
+ */
+
+#include <sys/param.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <ufs/ffs/fs.h>
+
+#define BUFSIZE (512*1024)
+
+main(argc, argv)
+  int argc;
+  char *argv[];
+{
+    char *dev = argv[1];
+    int fd;
+    int res;
+    FILE *out = stdout;
+    u_long sect = 0;
+    char buf[BUFSIZE];
+    int cnt, limit;
+    struct fs *fs;
+
+    fd = open (dev, O_RDONLY);
+    if (fd < 0)  {
+	perror ("open");
+	exit (1);
+    }
+
+    for (;;)  {
+	res = read (fd, buf, sizeof (buf));
+	if (res != sizeof (buf))
+	    break;
+	for (cnt = 0; cnt < BUFSIZE; cnt += 512, sect++)  {
+	    fs = (struct fs *)&buf[cnt];
+
+	    if (fs->fs_magic != FS_MAGIC)
+		continue;
+
+	    fprintf (out, "Found possible superblock at sector %u:\n", sect);
+
+	    fprintf (out, "size %ld, bsize %ld, fsize %ld\n",
+		     fs->fs_size, fs->fs_bsize, fs->fs_fsize);
+	}
+    }
+
+    if (res < 0)  {
+	perror ("read");
+    }
+
+    close (fd);
+}
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603568 ###
+===== 库内序 145126 | PK 2603568 | 等级 L4 =====
+DATE: 1998-03-23T21:49:34+00:00
+FROM: Vladimir Kushnir <kushn@mail.kar.net>
+SUBJ: DEVFS awareness for VoxWare?
+摘要: Kushnir：提议给旧 VoxWare 驱动加 DEVFS 支持因新声卡驱动尚不支持 midi 口并附补丁
+
+Hello,
+Sorry if this does not belong here or just plain stupid.
+Yes, I know fairly well this is not one of the urgent things (especially
+now), but since new sound driver does not yet support midi port, would not
+it make some sence to update a bit the old one? In particular, I mean
+adding DEVFS awareness to it. It doesn't seem to be too difficult (see
+patch below). It works (as it should to - after all, there's nothing new
+there). Unfortunately, I'm too ignorant as a programmer and can't suggest
+nothing better, but perhaps somebody would take a pain to improve it (to
+avoid silly code duplication with all unneeded if's) and add other
+supported cards (I've got only  Yamaha SA2 card with MSS and SB
+simulations and OPL3 FM)?   
+
+Regards,
+Vladimir
+
+/*--------------------sys/i386/isa/sound/soundcard.c.diff-----------------*/
+
+*** ../tmp/soundcard.c	Mon Mar 23 22:48:26 1998
+--- soundcard.c	Mon Mar 23 16:22:06 1998
+***************
+*** 26,33 ****
+--- 26,37 ----
+   * SUCH DAMAGE.
+   * 
+   */
++ #include "opt_devfs.h"
+  
+  #include <i386/isa/sound/sound_config.h>
++ #ifdef DEVFS
++ #include <sys/devfsext.h>
++ #endif /* DEVFS */
+  
+  #if NSND > 0	/* from "snd.h" */
+  #include <vm/vm.h>
+***************
+*** 449,456 ****
+  	dev = makedev(CDEV_MAJOR, 0);
+  	cdevsw_add(&dev, &snd_cdevsw, NULL);
+      }
+! 
+! 
+      return TRUE;
+  }
+  
+--- 453,481 ----
+  	dev = makedev(CDEV_MAJOR, 0);
+  	cdevsw_add(&dev, &snd_cdevsw, NULL);
+      }
+! #ifdef DEVFS
+! /*    if (dev->id_driver == &sbdriver || dev->id_driver == &gusdriver ||
+!        dev->id_driver == &sbxvidriver || dev->id_driver == &mssdriver) */
+!     if (dev->id_driver == &mssdriver)   
+!     {
+!     devfs_add_devswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_DSP, DV_CHR,
+! 		     UID_ROOT, GID_WHEEL, 0666, "dsp%n", dev->id_unit);
+!     devfs_add_devswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_DSP16, DV_CHR,
+! 		     UID_ROOT, GID_WHEEL, 0666, "dspW%n", dev->id_unit);
+!     devfs_add_devswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_AUDIO, DV_CHR,
+! 		     UID_ROOT, GID_WHEEL, 0666, "audio%n", dev->id_unit);
+!     devfs_add_devswf(&sn
+[…中段省略 334 字符…] evswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_SEQ, DV_CHR,
+! 		     UID_ROOT, GID_WHEEL, 0666, "sequencer%n", dev->id_unit);
+!     else if (dev->id_driver == &mpudriver)        
+!     devfs_add_devswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_MIDIN, DV_CHR,
+! 		     UID_ROOT, GID_WHEEL, 0666, "midi%n", dev->id_unit);
+! #endif /* DEVFS */            
+      return TRUE;
+  }
+  
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603569 ###
+===== 库内序 145127 | PK 2603569 | 等级 L4 =====
+DATE: 1998-03-23T22:26:15+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: DEVFS awareness for VoxWare?
+摘要: Eklund：建议补丁走 send-pr 以便无人即时处理时仍可追踪并称赞投稿者
+
+On Mon, Mar 23, 1998 at 11:49:34PM +0200, Vladimir Kushnir wrote:
+> Hello,
+> Sorry if this does not belong here or just plain stupid.
+
+It is usually better to submit patches through send-pr, in case nobody
+take care of it immediately.  However, we're not picky - anybody
+sending in enhancements deserve praise, not flames.
+
+> Yes, I know fairly well this is not one of the urgent things (especially
+> now), but since new sound driver does not yet support midi port, would not
+> it make some sence to update a bit the old one? In particular, I mean
+> adding DEVFS awareness to it. It doesn't seem to be too difficult (see
+> patch below). It works (as it should to - after all, there's nothing new
+> there). Unfortunately, I'm too ignorant as a programmer and can't suggest
+> nothing better, but perhaps somebody would take a pain to improve it (to
+> avoid silly code duplication with all unneeded if's) and add other
+> supported cards (I've got only  Yamaha SA2 card with MSS and SB
+> simulations and OPL3 FM)?   
+
+Can you test if the following patch work for you?  This should cover
+all cases (except trixmidi, which for some reason is removed from the
+driver list, and which I thus can't test for.)
+
+Index: soundcard.c
+===================================================================
+RCS file: /home/ncvs/src/sys/i386/isa/sound/soundcard.c,v
+retrieving revision 1.63
+diff -u -r1.63 soundcard.c
+--- soundcard.c	1998/02/10 21:51:00	1.63
++++ soundcard.c	1998/03/23 22:21:30
+@@ -26,8 +26,12 @@
+  * SUCH DAMAGE.
+  * 
+  */
++#include "opt_devfs.h"
+ 
+ #include <i386/isa/sound/sound_config.h>
++#ifdef DEVFS
++#include <sys/devfsext.h>
++#endif /* DEVFS */
+ 
+ #if NSND > 0	/* from "snd.h" */
+ #include <vm/vm.h>
+@@ -449,8 +453,34 @@
+ 	dev = makedev(CDEV_MAJOR, 0);
+ 	cdevsw_add(&dev, &snd_cdevsw, NULL);
+     }
+-
+-
++#ifdef DEVFS
++    if (dev->id_driver == &opldriver)
++	devfs_add_devswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_SEQ,
++			 DV_CHR, UID_ROOT, GID_WHEEL, 0666,
++			 "sequencer%n", dev->id_unit);
++    else if (dev->id_driver == &mpudriver || dev->id_driver == &sbmididriver ||
++	     dev->id_d
+[…中段省略 636 字符…]  4) | SND_DEV_CTL,
++			 DV_CHR, UID_ROOT, GID_WHEEL, 0666,
++			 "mixer%n", dev->id_unit);
++	devfs_add_devswf(&snd_cdevsw, (dev->id_unit << 4) | SND_DEV_STATUS,
++			 DV_CHR, UID_ROOT, GID_WHEEL, 0666,
++			 "sndstat%n", dev->id_unit);
++    }
++#endif /* DEVFS */
+     return TRUE;
+ }
+ 
+If this works, I'll commit it.  (I've done a few style changes, which
+you probably notice.)
+
+Eivind.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603570 ###
+===== 库内序 145128 | PK 2603570 | 等级 L4 =====
+DATE: 1998-03-23T22:32:47+00:00
+FROM: Andrew Hobson <ahobson@eng.mindspring.net>
+SUBJ: Re: Finding an FS on the disk
+摘要: Hobson：给出 zsh 脚本循环 dd 读扇区再用 hexdump 与 grep 过滤
+
+
+On 23 Mar 1998 16:33:40 -0500, Andrew Heybey <ath@niksun.com> said:
+
+> Here is some code I wrote when I had a similar problem under SunOS.  I
+> just modified it to compile and (apparently) work under FreeBSD.
+
+I did just about the same thing, except I used a shell script:
+
+#!/usr/local/bin/zsh
+for x in {0..1024}; do
+  dd if=/dev/sd0 bs=1m skip=$x count=1 of=/tmp/ddfile 2>/dev/null
+  echo "$x:"
+  hexdump /tmp/ddfile | grep '1954 0001$'
+done
+exit 0
+
+
+All of the information below is gleaned from experience and not from
+reading the code, so I hope it's accurate for more than just my
+computer.
+
+When you see two magic numbers separated by 8k:
+
+128: 000a350 0001 0000 0000 0000 0000 0000 1954 0001
+000c350 0001 0000 0000 0000 0000 0000 1954 0001
+
+You should have found a partition.
+
+Of course, then you have to figure out how to construct your disklabel
+appropriately.  In my case, it found the block at 128M (if your
+partitions are aligned on MB boundaries, then you should see the magic
+numbers at offsets a350 and c350 like I do above), so this partition
+would be at offset 128*1024*2 = 262114.
+
+Drew
+
+-- 
+"Joe, release me from your Kung-Fu grip." -- Stacy Lavelle
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603572 ###
+===== 库内序 145130 | PK 2603572 | 等级 L4 =====
+DATE: 1998-03-24T01:18:23+00:00
+FROM: Drew Derbyshire - UUPC/extended software support <software@kew.com>
+SUBJ: build -current kernel on -stable?
+摘要: Derbyshire：报告在 wd2s2 装 -current 内核后启动找不到 root 并怀疑与 wd2s3 有关
+
+I had a request to check a problem by building on a -current kernel on my
+-stable test system.  while I have the disk space to install kernel, it had to
+go on the second hard drive partition, which in my case is wd2s2.
+
+For the record, the kernel gets really pissed off when you try this and it
+can't find root.  I don't know if it's because there is a second FreeBSD slice
+on the disk (wd2s3), no wd1, or what.  
+
+I'm trying to work through it with a build of the kernel on the -stable side. 
+I mounted the -current root and -current /usr (as /current/root and
+/current/usr), and added -I/current/usr/include to the Makefile.  
+
+Should this work?  I'm using the -stable config, Make, and gcc -- I tweaked
+the i386.options to make NPX Standard ...
+
+-- 
+Drew Derbyshire         UUPC/extended e-mail:  software@kew.com
+                                   Telephone:  617-279-9812
+
+AAAAAA - American Association Against Acronym Abuse Anonymous.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603573 ###
+===== 库内序 145131 | PK 2603573 | 等级 L4 =====
+DATE: 1998-03-24T01:25:01+00:00
+FROM: Warner Losh <imp@village.org>
+SUBJ: Serial Keyboards
+摘要: Losh：想以串口键盘替换或并行于 pckbd 并称查 syscons.c 与 sio.c 后认为可行但费事
+
+
+OK.  I've been looking at ways to get a serial keyboard that I picked
+up cheap working on FreeBSD.  I need some way to either replace the
+pckbd interface keyboard with one connected to a serial port, or
+failing that to have something that works in parallel with that
+keyboard.
+
+Looking at syscons.c, pcvt/* and sio.c makes me think that this won't
+be easy or simple to do, but that it is possible to do it with enough
+hacking....
+
+Comments?
+
+Warner
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603574 ###
+===== 库内序 145132 | PK 2603574 | 等级 L3 =====
+DATE: 1998-03-24T01:35:06+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Serial Keyboards
+摘要: Tom：追问串口键盘是什么用途并认为做串口控制台代码最接近
+
+
+On Mon, 23 Mar 1998, Warner Losh wrote:
+
+> 
+> OK.  I've been looking at ways to get a serial keyboard that I picked
+
+  What is a serial keyboard?  What is it for?
+
+...
+> Looking at syscons.c, pcvt/* and sio.c makes me think that this won't
+> be easy or simple to do, but that it is possible to do it with enough
+> hacking....
+
+  Well, since it is serial, working with the serial console code is
+probably closest.
+
+> Comments?
+> 
+> Warner
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603575 ###
+===== 库内序 145133 | PK 2603575 | 等级 L4 =====
+DATE: 1998-03-24T02:31:37+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Serial Keyboards
+摘要: Shapiro：称常见串口键盘多为 1200 或 9600 波特率并指对方所指为 RS-232C 键盘
+
+
+On 24-Mar-98 Tom wrote:
+> 
+> On Mon, 23 Mar 1998, Warner Losh wrote:
+> 
+>> 
+>> OK.  I've been looking at ways to get a serial keyboard that I picked
+> 
+>   What is a serial keyboard?  What is it for?
+
+All keyboards I have seen in the last N years are serial. Most of them are
+either 1200 or 9600 boaud, no parity, 8bit data, 1.5 bits start/stop.
+
+What our correspondent intends to say is RS-232C (?) keyboard.  PC
+keyboards are TTL level only.
+
+> ...
+>> Looking at syscons.c, pcvt/* and sio.c makes me think that this won't
+>> be easy or simple to do, but that it is possible to do it with enough
+>> hacking....
+> 
+>   Well, since it is serial, working with the serial console code is
+> probably closest.
+
+Except that he probably would like to have stdout and stderr (and
+console?) still go to the VGA board. 
+
+Why would anyone want that, is a good question.  A NEW PC KB is $15.
+
+Simon
+ 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603576 ###
+===== 库内序 145134 | PK 2603576 | 等级 L4 =====
+DATE: 1998-03-24T03:08:52+00:00
+FROM: Warner Losh <imp@village.org>
+SUBJ: Re: Serial Keyboards 
+摘要: Losh：澄清手上有输出 RS-232C 或 RS-423 电平信号的键盘想接到 Libretto 50CT
+
+In message <XFMail.980323183137.shimon@simon-shapiro.org> Simon Shapiro writes:
+: What our correspondent intends to say is RS-232C (?) keyboard.  PC
+: keyboards are TTL level only.
+
+OK.  I wasn't precise enough.  I have a keyboard that generates
+RS-232C or RS-423 level signals that I'd like to connect to a PC-like
+thing (most people call them laptops, mine is a Libretto 50CT) that is
+currently running FreeBSD.
+
+: Except that he probably would like to have stdout and stderr (and
+: console?) still go to the VGA board. 
+
+Yup.  I want to present the same interface to the kernel that the
+current PC keyboard interface so it would work with things like X as
+well (this may require a lot of translation on my part, which is
+cool).  There is also a cool chording keyboard that I'd like to give a
+go at running as my system keyboard, but that one is also a RS-232
+device....
+
+: Why would anyone want that, is a good question.  A NEW PC KB is $15.
+
+It is a laptop machine that doesn't have a keyboard port. I have a
+small, light weight serial (aka RS323) keyboard (from a newton) that
+I'd like to connect to its serial port.  I do ahve a port replicator
+which has a keyboard interface, but that is too bulky and fragile to
+carry with me.
+
+Warner
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603578 ###
+===== 库内序 145136 | PK 2603578 | 等级 L3 =====
+DATE: 1998-03-24T03:52:00+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Serial Keyboards
+摘要: Shapiro：表示在考虑修改 getty 这一路
+
+
+On 24-Mar-98 Warner Losh wrote:
+ 
+..
+
+> Yup.  I want to present the same interface to the kernel that the
+> current PC keyboard interface so it would work with things like X as
+> well (this may require a lot of translation on my part, which is
+> cool).  There is also a cool chording keyboard that I'd like to give a
+> go at running as my system keyboard, but that one is also a RS-232
+> device....
+
+I think modifying getty to split stdin from std{out,err} is easy.  Once
+this is done, the rest will follow.  Maybe getty already knows how to do
+that, or the BSD equivalent of inittab (/etc/ttys?)
+
+Console is not a problem, unless you want to re-direct the input.
+If you go for serial console, you will be sending the output there too.
+Again, the kernel may be smark enough to split the two.
+
+ ...
+
+>: Why would anyone want that, is a good question.  A NEW PC KB is $15.
+> 
+> It is a laptop machine that doesn't have a keyboard port. I have a
+> small, light weight serial (aka RS323) keyboard (from a newton) that
+> I'd like to connect to its serial port.  I do ahve a port replicator
+> which has a keyboard interface, but that is too bulky and fragile to
+> carry with me.
+
+Never underestimate the real use (when compared to design goals).
+This is all quite doable.  Some code hacking may be needed, but you have
+the sources :-)
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603580 ###
+===== 库内序 145138 | PK 2603580 | 等级 L4 =====
+DATE: 1998-03-24T04:05:50+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Serial Keyboards
+摘要: Shapiro：认为除 X 外 getty 够用因它为子进程建立 stdio 流并提到 /dev/console 可配置
+
+
+On 24-Mar-98 Greg Lehey wrote:
+> The way I see it, getty's the wrong level.  This is the system
+> console, and it should be able to handle X, for example.
+
+Assumptions... On my part, probably.  Unless /dev/console is used and
+configurable.  Except for X, getty should (maybe is not) be fine, as it
+established stdio streams for its children.
+
+It is (was) possible in X11 to specify each resource explicitly.
+But I am talking from faded memory, not from cold, hard, reality.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603581 ###
+===== 库内序 145139 | PK 2603581 | 等级 L4 =====
+DATE: 1998-03-24T06:42:41+00:00
+FROM: j@uriah.heep.sax.de (J Wunsch)
+SUBJ: Re: Determining CDROM volume label... how?
+摘要: Wunsch：认为除 scsi(8) 外没有命令行工具并追问 CD 卷标究竟是什么
+
+Charles Owens <owensc@enc.edu> wrote:
+
+> Is there a command line tool for doing this?
+
+Probably not (except scsi(8)).
+
+> There are times where Windows software that's reading my CD (via Samba)
+> insists that I set the Samba volume label parameter to the CDROM's actual
+> label.  It is a pain to have to stick the CD in a Windows system just to
+> find out what the label is...
+
+What exactly _is_ the label of a CD?  Can you express this in terms of
+bytes from the beginning (of the session, i suppose)?  E.g., do this
+by extracting the label in Win*, and then hd'ing /dev/rcd0a in
+FreeBSD.
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE
+Never trust an operating system you don't have sources for. ;-)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603582 ###
+===== 库内序 145140 | PK 2603582 | 等级 L4 =====
+DATE: 1998-03-24T06:49:29+00:00
+FROM: j@uriah.heep.sax.de (J Wunsch)
+SUBJ: Re: the Future Domain TMC-16XX
+摘要: Wunsch：称一直没拿定主意因该架构杂乱会把 NetBSD 底层 SCSI 例程拖进 FreeBSD 树
+
+Bruce Vandiver <76350.1227@compuserve.com> wrote:
+
+>>But it may be better to ask *Joerg Wunsch* to make up his mind
+>>how to import that driver into -current ... Regards, STefan.
+
+Well, i never made up my mind about it, really.  The architecture of
+all this is a mishmash that would drag into our tree a number of
+NetBSD low-level SCSI routines, where everything is organized ``just a
+little different'' from the FreeBSD low-level SCSI stuff.  (In case
+anybody wonders, all this came from NetBSD via PAO.)
+
+>>Well I never.  If anyone out there is using this driver, can we have 
+>>some feedback?  If it works and appears to be maintained, we ought to
+>>incorporate it...
+> From: Bob Bishop <rb@gid.co.uk>
+> 
+> I am especially interested in the comment "If it works and appears to be
+> maintained, we ought to incorporate it..." From Bob Bishop.
+
+Well, it sorta worked when i tried it.  It had some problems with
+error recovery (i've got a faulty adapter that completely hangs the
+kernel, as opposed to simply fail probing, and continuing to boot).
+
+The driver no longer compiled under my -current system as of about a
+month ago, so i had to disable it on my only machine i've got such an
+adaptor.  Sorry, i'm out of time to maintain this driver myself right
+now.
+
+The guy who sent me the driver (whose name escaped me right now) would
+probably maintain it, but he indicated me that he doesn't have the
+technical skills e.g. to rewrite it enough to fit into the FreeBSD way
+of doing things either.  Together with the advent of the CAM
+subsystem, i'm not sure whether it's the right time to import it (but
+i wouldn't mind if someone did it, *and* maintained the driver later
+on).
+
+Btw., there's a snapshot of it on the 2.2.5 CD-ROM, in /xperimnt.
+I've even provided an installation floppy there.
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE
+Never trust an operating system you don't have sources for. ;-)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603583 ###
+===== 库内序 145141 | PK 2603583 | 等级 L3 =====
+DATE: 1998-03-24T16:07:33+00:00
+FROM: Arman Hazairin <arman@ai3.net>
+SUBJ: TCP connection hang
+摘要: Hazairin：报告两台 unix 主机间传文件时 TCP 连接挂死并贴出 tcpdump 记录
+
+Dear All,
+
+When I do transferring file between 2 unix box, I have following tcpdump
+output:
+
+--- start of dump ---
+15:27:41.311138 68.10.3.1.1292 > 20.12.39.21.5577: S
+2596672001:2596672001(0) win 4096
+15:27:41.311309 20.12.39.21.5577 > 68.10.3.1.1292: S
+2957115446:2957115446(0) ack 2596672002 win 16384 <mss 1460> (DF)
+15:27:41.332507 68.10.3.1.1292 > 20.12.39.21.5577: . ack 1 win 4096
+15:27:41.350373 68.10.3.1.1292 > 20.12.39.21.5577: P 1:129(128) ack 1
+win 4096
+15:27:41.440059 20.12.39.21.5577 > 68.10.3.1.1292: . ack 129 win 16384
+(DF)
+15:27:41.525956 68.10.3.1.1292 > 20.12.39.21.5577: . 129:641(512) ack 1
+win 4096
+15:27:41.591975 68.10.3.1.1292 > 20.12.39.21.5577: . 641:1153(512) ack 1
+win 4096
+15:27:41.592106 20.12.39.21.5577 > 68.10.3.1.1292: . ack 1153 win 16384
+(DF)
+15:27:41.672896 68.10.3.1.1292 > 20.12.39.21.5577: . 1153:1665(512) ack
+1 win 4096
+15:27:41.740248 68.10.3.1.1292 > 20.12.39.21.5577: . 1665:2177(512) ack
+1 win 4096
+15:27:41.740389 20.12.39.21.5577 > 68.10.3.1.1292: . ack 2177 win 16384
+(DF)
+15:27:41.810799 68.10.3.1.1292 > 20.12.39.21.5577: . 2177:2689(512) ack
+1 win 4096
+15:27:41.840117 20.12.39.21.5577 > 68.10.3.1.1292: . ack 2689 win 16384
+(DF)
+15:27:41.876887 68.10.3.1.1292 > 20.12.39.21.5577: . 2689:3201(512) ack
+1 win 4096
+15:27:41.943775 68.10.3.1.1292 > 20.12.39.21.5577: . 3201:3713(512) ack
+1 win 4096
+15:27:41.943906 20.12.39.21.5577 > 68.10.3.1.1292: . ack 3713 win 16384
+(DF)
+15:27:42.009857 68.10.3.1.1292 > 20.12.39.21.5577: . 3713:4225(512) ack
+1 win 4096
+15:27:42.040119 20.12.39.21.5577 > 68.10.3.1.1292: . ack 4225 win 16384
+(DF)
+15:27:42.207945 68.10.3.1.1292 > 20.12.39.21.5577: . 4225:4737(512) ack
+1 win 4096
+15:27:42.274151 68.10.3.1.1292 > 20.12.39.21.5577: . 4737:5249(512) ack
+1 win 4096
+15:27:42.341464 68.10.3.1.1292 > 20.12.39.21.5577: . 5249:5761(512) ack
+1 win 4096
+15:27:42.408820 68.10.3.1.1292 > 20.12.39.21.5577: . 5761:6273(512) ack
+1 win 4096
+15:27:42.475081 68.10.3.1.1292 > 20.12.39.21.5577: . 6273:6785(512) ack
+1 win 4096
+
+--- end of dump ---
+
+after the last line, the connection just hang, waiting for io timeout,
+the transfer
+itself never finish.
+I have the same problem also with ftp service between the two machine.
+Info:
+  68.10.3.1 is a SCO box (SYS SYS 3.2 2 i386)
+  20.12.39.21 is a FreeBSD 2.2.2-RELEASE box.
+
+is the problem in FreeBSD TCP/IP stack ?
+
+regards,
+
+-arman-
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603585 ###
+===== 库内序 145143 | PK 2603585 | 等级 L4 =====
+DATE: 1998-03-24T09:16:01+00:00
+FROM: Dalibor Sramek <dali@proxima.britcoun.cz>
+SUBJ: Free-BSD threads & IO
+摘要: Sramek：称按 pthreads 手册编译 libc_r 后示例中 accept 调用不阻塞而是立即返回
+
+Hi.
+
+I'd like to learn Posix threads programming and I want to use Free-BSD
+system for my experiments. According to 'man pthreads' I compiled libc_r.
+Then I started with several multithreaded examples from Unix Net
+Programming (by R.W. Stevens).
+Soon I realized that compiled examples did not work as I'd expected. The
+problem is that for example 'accept' call does not block and return
+immediately.
+I tested the same examples on Linux system and they worked fine. Although
+I spent much time searching for information about threads and IO blocking
+I found it neither in my books or on Internet.
+
+So - is there any explanation for this problem and is thread support OK in
+Free-BSD? I still use 2.2.1 installation.
+
+Thanks
+
+Dalibor Sramek
+The British Council, Prague Czech Republic
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603586 ###
+===== 库内序 145144 | PK 2603586 | 等级 L4 =====
+DATE: 1998-03-24T09:41:45+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: Free-BSD threads & IO
+摘要: Birrell：问是否用 -D_THREAD_SAFE 编译并链 -lc_r 并建议改用 -stable 或 2.2.6
+
+Dalibor Sramek wrote:
+> So - is there any explanation for this problem and is thread support OK in
+> Free-BSD? I still use 2.2.1 installation.
+
+Did you compile with -D_THREAD_SAFE and link with -lc_r?
+I suggest you at least use -stable (or 2.2.6 that'll be out soon).
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603587 ###
+===== 库内序 145145 | PK 2603587 | 等级 L3 =====
+DATE: 1998-03-24T10:40:22+00:00
+FROM: Dalibor Sramek <dali@proxima.britcoun.cz>
+SUBJ: Re: Free-BSD threads & IO
+摘要: Sramek：回称已链接库但未用 -D_THREAD_SAFE 并问该选项是否系统相关
+
+
+
+On Tue, 24 Mar 1998, John Birrell wrote:
+
+> Did you compile with -D_THREAD_SAFE and link with -lc_r?
+
+I linked the library but I did not used the -D_THREAD_SAFE option. Is this
+option system specific? (I used makefile provided with the examples).
+Anyway I will try it.
+
+Dalibor Sramek
+The British Council, Prague Czech Republic
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603588 ###
+===== 库内序 145146 | PK 2603588 | 等级 L4 =====
+DATE: 1998-03-24T12:24:22+00:00
+FROM: Kris Kennaway <kkennawa@physics.adelaide.edu.au>
+SUBJ: Help in diagnosing hardware failure
+摘要: Kennaway：报告重装硬盘后 FreeBSD -CURRENT 上重磁盘操作导致 panic 或死机
+
+A few weeks ago I removed my hard drives to mount them in another machine 
+and copy across the data - upon reinstalling them, some part of my system 
+seems to have become trashed. I've made sure the drive connectors are 
+seated properly, etc, but it has not helped:
+
+Any kind of heavy disk activity under FreeBSD (-CURRENT as of 28/2) causes 
+either a panic, or a dead freeze. For example, attempting a make world 
+will trigger this within a few seconds (<20), running X usually freezes 
+within 10-15 minutes (probably because of the higher demands on system 
+resources), etc. However, as long as I keep the load down, things are 
+fine (as I speak my machine has been up for the past 7 days running 
+console-based stuff).
+
+Booting into win95 since the problems started occurring has never got 
+past the splash screen before hanging, and similarly booting to an MSDOS 
+floppy to try and run norton diagnostics causes hangs within a minute or 
+two of trying. The fact that my machine is still quite functional under 
+freebsd is very nice and means I can still do pretty much everything I 
+need to until I can get the time and money to have it repaired :-)
+
+Almost universally after a hang/panic in FreeBSD, when I reboot I get 
+'Error: C:3357 > 1024 (BIOS Limit)' or words to that effect 
+(interestingly, it always seems to be the same two cylinder numbers that 
+are reported). Powering down for a few minutes and trying again 
+eventually lets me boot up completely. This particular symptom leads me 
+to suspect the IDE controller (dmesg output attached).
+
+This is a typical panic message/traceback when it panics (not that I 
+expect this to tell great volumes, but you never know :-) (oh yeah, and I 
+often get signal 11's interspersed with the panics and hangs when trying 
+to compile a new kernel, for example).
+
+Fatal trap 12: page fault while in kernel mode
+fault virtual address	= 0x4
+fault code		= supervisor write, page not present
+instruction pointer	= 0x8:0xf01af652
+stack pointer		= 0x10:0xf3a05e58
+frame pointer		= 0x10:0xf3a05e78
+code segment		= base 0x0, limit 0xfffff, type 0x1b
+			= DPL
+[…中段省略 467 字符…] +0x15
+--- trap 0xc, eip=0x200872e2, esp=0xefbfd6c4, ebp=0xefbfd6e8 ---
+
+If anyone can throw some light onto the probable cause of this problem it 
+would be most appreciated :-)
+
+Kris
+
+ WOWBO     /\  .      Through the darkness of future past,     /\  .     BWOWB
+ OBWOW    /##\/#\          The Magician longs to see.         /##\/#\    BOBWO
+ WBOBW   /       \     One chance out between two worlds,    /       \   OWBOB
+ WOWBO  /         \           Fire, Walk with me!           /         \  BWOWB
+
+

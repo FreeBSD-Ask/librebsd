@@ -1,0 +1,25 @@
+2603402|L4|Jordan K. Hubbard：把 FreeBSD shlibs 与 ld.so 拷到 BSD/OS 后可运行 FreeBSD 非内核二进制
+2603404|L3|Charles Owens：Perl5 Net::LDAPapi 模块可编译安装但 ldapwalk.pl 报 free 已释放块告警
+2603405|L3|Duncan Barclay：认为 bev 已被 current 的 /etc/periodic 取代并问是否看过
+2603407|L3|John Polstra：SMP FreeBSD 在 Compaq 机器上很可能跑不起来并以邻居狗作比
+2603408|L4|Kent S. Gordon：考虑把 Postgres 改用 mmap 文件替代 SYSV shared memory 以支持更大配置
+2603411|L3|Fred L. Templin：在 ThinkPad 560E 上调 Netwave PCMCIA 无线网卡驱动遇 L2 缓存疑问题
+2603412|L4|Curt Sampson：PR 系统用于跟踪 change request 与 bug 报告没入系统就得别人去补
+2603413|L3|Studded：承认口气重了并称鼻窦炎加个人冲突拖低了自己昨天的耐心
+2603416|L4|Joel Ray Holveck：许多 ftp 客户端如 netscape 默认 ascii 是 fdimage 常被传错的原因
+2603417|L3|John Prince：想同时读取 RTC 时钟和系统时间时钟但对此感到困惑请求协助
+2603418|L4|Nicolas Souchu：建议尝试 flags 0x1 强制 NIBBLE 及改 BIOS 并问 Thinkpad 板载 chipset 型号
+2603419|L4|Dan Nelson：settimeofday 默认会写 RTC 除非 machdep.disable_rtc_set 置 1
+2603421|L3|Jason Andresen：仍有发行版默认 ascii 传输 ftp 而名字以 Windows 开头
+2603422|L3|Greg Lehey：曾用 FreeBSD 二进制在 BSD/OS 上跑到 2.1 但已不记得细节
+2603423|L3|Jeff Buseman：问 NATd 能否做 protocol 47 的翻译还是只处理 TCP 和 UDP
+2603424|L4|Eivind Eklund：NATd 只处理 TCP 和 UDP 想扩展得让 Charles 或自己去改 libalias
+2603425|L4|Warner Losh：presario 实际 40M 却只报 16M 印证 Compaq 藏技术细节的说法
+2603426|L4|Fred L. Templin：给 560E 的 PCMCIA 内存窗加 wait state 消除写坏 说明根因是内存时序
+2603433|L4|Alfred Perlstein：LINT kernel 有选项不信任 BIOS 内存计数并可硬连线
+2603434|L3|Poul-Henning Kamp：建议查 Intel tech-man 并 dump 寄存器观察实际行为
+2603436|L4|nik：发 PR 时留可用邮箱会自动收到处理通知
+2603441|L3|Max Euston：在 man page 里想在行首指定句间双空格但不知如何实现
+2603448|L3|James Flemer：vx 驱动手册只写 10mbit 支持想知道是否已升级到 100mbit
+2603450|L3|Alexander Indenbaum：CS 学生团队计划从 OpenBSD 移植 IPSEC 到 FreeBSD 并询问是否有人已在做
+2603451|L3|Ted Faber：man page 句间空格建议在 .Tn FIFO 后接一个带空格的两个字符片段

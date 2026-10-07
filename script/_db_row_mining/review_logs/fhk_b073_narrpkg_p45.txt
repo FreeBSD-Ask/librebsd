@@ -1,0 +1,21 @@
+2604188|L3|Adrian Pavlykevych：询问 ifa_if 系列在 userland 用法称库中找不到只有头文件与内核源
+2604189|L4|Stephen A. Derdau：2.2.6 改主片名建议 fstab 由 /dev/wd0a 改为 /dev/wd0s2a 并 MAKEDEV
+2604190|L4|Graham Wheeler：写过 C++ 调试宏包可在程序退出时列出未释放对象的文件行号与大小
+2604206|L4|Justin T. Gibbs：先完成 BusLogic 驱动再转软更新移植预计还需一周
+2604208|L3|Vinay Bannai：2.2.6 下 Matrox MGA 2MB X server 分辨率与模式差 Xfree 3.3.2 删模式
+2604209|L4|Capriotti：建议花 30 美元买 2MB S3 Virge 卡即可正常显示
+2604210|L3|Jean-Marc Zucconi：c++ -g -O 报 this:V25 多重定义单用 -g 或 -O 皆不复现疑为 gcc bug
+2604211|L4|David Kelly：识别 pax -r -w 触发 copy 模式改用 cat / zcat 与子 shell 中 pax -r -v
+2604215|L4|Terry Lambert：-ERR Cant get lock 的答案取决于 U of Washington 代码还是 CMU Cyrus
+2604219|L3|Giannis Vlachos：FreeBSD 2.2.2 上询问哪里获取 POP Server 安装包
+2604220|L4|Dean Hollister：以 root 从 ports 装 popper make install 后在 inetd.conf 添加 pop3 行
+2604221|L3|Darren Reed 建议建立 netscape@freebsd.org 邮箱承接后续相关讨论
+2604223|L4|Ruslan Ermilov 提醒 committer 跟进其一周前提交的 PR conf/6226 class change-request
+2604226|L4|Alex Belits 认为 FreeBSD 用户与开发者应减少操作系统之间的意气之争把时间投入 FreeBSD 改进与移植
+2604227|L3|Archie Cobbs 询问 FreeBSD 中如何编写 PnP 感知驱动 probe 阶段如何设置参数做自检
+2604229|L3|David Shanes 转发自己写给 OReilly 创始人 Tim OReilly 的邮件支持开源软件立场
+2604232|L4|Mike Smith 认为操作系统是互联网软件基础 summit 宣传把 Linux 置前很能说明问题
+2604236|L3|Kris Kirby 询问有无免费 PCNFSD 客户端支持 Packet driver 或 ODI 都可以
+2604237|L4|Mike Smith 认为 FreeBSD 服务 DOS 与 Windows 系统文件共享最佳方案是 Samba
+2604238|L3|Joe McGuckin 迁移到 sendmail 2.2.6 后脚本调用 mail 或 sendmail 把发往外域的邮件送到本地用户
+2604240|L4|Michael K. Sanders 猜测是 IP 虚拟主机导致 sendmail 把它们全塞进 Cw 建议看 DontProbeInterfaces

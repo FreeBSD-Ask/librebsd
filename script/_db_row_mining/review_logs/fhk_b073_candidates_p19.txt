@@ -1,0 +1,41 @@
+2603352|L4|CHOI Junho：XFree86 里给 ExtraLibraries 加 -lxpg4 后重新编译可用
+2603353|L3|Alfred Perlstein：IRC 上有人改过 lint 文件本人未试用 DPT 驱动希望补 man page
+2603354|L3|David Kelly：不写稿改用 Olympus 相机给 wcarchive 机器拍照
+2603355|L4|Studded：/usr/src/etc/Makefile 漏装 /boot.help 提交补丁修复
+2603356|L4|Studded：提交补丁为 make.conf 与 Makefile 记录 NOPERL 选项
+2603357|L3|Warner Losh：Cabletron E2010 探测即锁机 ed 驱动下无 cabletron 命中
+2603358|L3|Thomas Wahyudi：建议用 ln -s 修改 ftp daemon 根目录
+2603359|L3|Timothy M. Hughes：询问 RealTek RTL 8129 是否有成功用例 questions 回复疑为专有驱动
+2603360|L3|Eivind Eklund：RealTek 常支持自由 OS 有时会自己写驱动
+2603361|L4|Matthew D. Fuller：chroot 后 ln -s 无效需改配置
+2603362|L4|Alfred Perlstein：网卡未出现在 dmesg 便视为不支持建议转告 Timothy
+2603364|L3|sbabkin@dcn.att.com：询问 PCI 编程书目与 4 口网卡可否共用中断
+2603366|L4|Doug Ambrisko：BIOS 可设单一中断但没必要现有 3 张四口卡分中断够用
+2603367|L4|Snob Art Genre：boot 提示符按问号列内核时 boot.help 被滚出屏幕
+2603368|L3|Terry Lambert：推荐 PCI System Architecture 一书 ISBN 0-201-40993-3
+2603369|L4|Terry Lambert：Adaptec 卡需先跑 tcpdump 触发混杂模式才工作怀疑寄存器初始化
+2603370|L3|Simon Shapiro：sendero.simon-shapiro.org 的 /FreeBSD 提供 2.2 与 3.0 镜像
+2603371|L3|Simon Shapiro：曾寄 DPT RAID 组稿给 Jordan 只需英文化改写即可用
+2603372|L4|Simon Shapiro：多数 DPT PCI 卡内藏 Qlogic 芯片经 EATA 协议访问
+2603374|L3|Jordan K. Hubbard：收件夹未见 DPT RAID 稿件请重发并补充性能收益
+2603375|L3|Gabor Kincses：ThinkPad 并口 ZIP 用 ppbus 未工作 vpo0 Adaptec aic7110 SCSI 出现
+2603376|L3|Studded：建议 fdimage 检测非二进制传输时拒写镜像以省去多数 bin 问题
+2603377|L3|Wilko Bulte：换出 2 张 Digital DEFPA FDDI SAS 换 P233MMX 内存或 SCSI CDwriter
+2603378|L3|Mark Newton：询问 2.2.5 下 ld -Q 生成的可执行文件在 BSD/OS 2.0 上能否运行
+2603379|L4|Karl Denninger：cc -static 静态链接即可在 BSDI 上九成时间运行无需 ld -Q
+2603380|L4|Jordan K. Hubbard：BSD/OS 2.0 已无法运行 FreeBSD 二进制用 -Q 亦无效
+2603381|L3|Luis E. Muñoz：询问是否有在 Compaq 硬件跑 SMP FreeBSD 者请分享配置
+2603383|L4|Douglas Carmichael：提交补丁让 rc.network 从 rc.conf 读 DHCP 参数并移出 pccard_ether
+2603385|L3|Tim Vanderhoek：fdimage 加判断应不难并追问为何多用户以 ascii 模式传输
+2603386|L3|Studded：认可 fdimage 非二进制检查改动非常欢迎
+2603387|L3|muthu olagappan：熟悉 Oracle 询问 FreeBSD 可加哪些特性以提升数据库性能
+2603389|L3|Robert Watson：求资料用 tcpdump 重放捕获数据含非 IP 包到链路层
+2603391|L4|Luigi Rizzo：转述 nice -20 后台循环致 2.2.5 编译严重变慢 2.2.1 无法复现
+2603392|L3|Studded：因把 NOPERL 说明发到 -hackers 致歉此前在 stable 提过 14 次无人理
+2603393|L4|John-Mark Gurney：win95 与 solaris 2.5 的 ftp 客户端默认 ascii 多数流量来自 win95
+2603395|L4|Nate Williams：把 FreeBSD 共享库放到新版 BSDi 上即可跑非内核二进制
+2603396|L4|Nate Williams：DHCP 尚未纳入 FreeBSD 故不放进 rc 脚本暂留 pccard_ether
+2603397|L4|leifn@image.dk：fdimage 可检测裸 lf 若 lf 都跟在 cr 后即为 ascii 传输
+2603398|L3|sbabkin@dcn.att.com：询问是否在 FreeBSD 跑过 Oracle 若是可作切入点
+2603399|L4|Alfred Perlstein：建议看 DIVERT socket 配合内核防火墙即可捕获流量
+2603400|L3|Jordan K. Hubbard：那只是提一句老话即增强请求与 bug 修复应走 send-pr 而非列表

@@ -1,0 +1,21 @@
+2603894	885	studded 报告在 2.2.6 上套用 Eivind 的 port 配 Motif 2.0 能 compile 通过 但动态版报库缺失错误而静态版只增占 cpu 始终不出界面
+2603902	885	pratap 建议去翻一翻 Richard Stevens 的 TCP/IP 第二卷这本书 或许对原提问的人找答案有帮助
+2603904	885	ken 报告他配 3.0-current 加 lesstif 0.83 与 Eilvind 的 port 能带起第一个界面 结果一显示就锁死
+2603908	885	jamesn 报告他需要把 BUILD_OPT 与其余环境变量都设好 Mozilla 才跑得起来 建议 strip 掉符号 体积降到约 7.5 兆 邮件与新闻模块仍编不出
+2603910	885	jkf 报告静态链接 pthread 时 gcc 用 -static 报 _pthread_join 未定义 去掉 -static 后照常编译运行 他在 libc_r.a 里查到 uthread_join.o 存在 不解原因
+2603912	885	jhb 把 -lc_r 放到 -o 之后 因为链接器认为已经搜过 libc_r 不会回扫在 blah.o 中再解析出的符号
+2603916	885	vadim 问客户端服务器应用该怎么做成 port 并问是否应该拆成 client 与 server 两个独立 port
+2603918	885	satoshi 认为把 client 与 server 各自做成独立 port 分开打包的做法可能更好 优于让单一安装脚本让用户挑选的方式
+2603919	885	benedict 问之前讨论的修复是否已经提交到 port 里了 还是说必须自己手工打补丁或者等 0.84 的版本出来才行呢
+2603921	885	alex 提交 mozilla 补丁 由 Boris Tobotras 编写 在 libi18n 的 ugendata 中加一条 CS_KOI8_R 映射以支持西里尔字符
+2603924	885	alex 打算今天先 RTFM cvsupd 手册 也就是读说明文档 也许今天就把 cvsupd 搭起来试试看能不能成功呢
+2603926	885	amancio 建议由有 freefall 账户的人来做这件事比较好 信末用 Cheers 结尾表示建议完毕更好一些呢吧
+2603930	885	nazeer 询问 NE2000 以太网驱动在源码树中的位置 并想了解设备文件名 以及符号名是否叫 ed0 这类 还想打开它读收到的以太包
+2603933	885	eivind 答用 bpf 而不是 ed0 并在 tcpdump 中给出使用示例 同时告知 ed 驱动位于 src/sys/i386/isa/if_ed.c
+2603935	885	chuck 认为 netscape 方面既然自荐作补丁集中渠道并宣告自建 cvs 树 就不该另建 建议直接使用他们的服务
+2603938	885	alfred 询问 Ricoh 2meg SCSI cd-rw 驱动是否被支持 他推断既然为 SCSI 设备 应该已包含在内
+2603943	885	nice_guy 答配合 lesstif0.83 已能运行静态与动态两个版本 并附上 moz-export 的 ldd 依赖列表
+2603944	885	adrian 提议去联系 Mozilla 方在其站点建立 FreeBSD 分支 便于与上游同步并可向对方介绍 CVSup 的用法
+2603946	885	ted 答 Ricoh MP6200 有 1MB 缓冲 由 ports 中 cdrecord 支持 支持 SCSI-3 MMC 命令
+2603951	885	torsten 答 Plextor Plexwriter 4/12 有 2MB 缓冲 支持 MMC 并与 cdrecord 兼容
+2603952	885	paul 问是否要建 CVS 树 由谁牵头 并表示自己会把它搭完 同时提到 Amancio 建议由有 freefall 账户的人负责

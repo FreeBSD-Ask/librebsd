@@ -1,0 +1,751 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604070 ###
+===== 库内序 145627 | PK 2604070 | 等级 L3 =====
+DATE: 1998-04-06T13:33:44+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Hubbard: softupdate 2.2.6 无望 3.0 稳定性取决于多种因素
+
+One hopes not, but I'm just trying to be conservative here and avoiding
+instilling any false hopes.
+
+						Jordan
+
+> On Mon, 6 Apr 1998, Jordan K. Hubbard wrote:
+> 
+> > No, there will be no 2.3.  Whether or not 3.0 is "stable" or not at
+> > the outset will also just have to depend on a variety of factors and
+> > it's too early to say whether it'll be 3.0 or 3.0.5 or even 3.0.6
+> > before it's safe to jump aboard with that branch.
+> 
+> So we can expect a rerun of 2.0?
+> 
+> -- 
+> Jamie Bowden
+> Systems Administrator, iTRiBE.net
+> 
+> If we've got to fight over grep, sign me up.  But boggle can go.
+> 	-Ted Faber (on Hasbro's request for removal of /usr/games/boggle)
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604072 ###
+===== 库内序 145629 | PK 2604072 | 等级 L3 =====
+DATE: 1998-04-06T15:16:04+00:00
+FROM: "James E. Housley" <housley@pr-comm.com>
+SUBJ: Daylight Savings Time - bug
+摘要: Housley: 夏令时切换日 Daily 与 Security 脚本未运行报为 bug
+
+Did anyone else notice that the Sunday AM Daily and Security scripts
+didn't run with the change of time to daylight savings?  Is this a know
+glitcht that only happens once a year and there for is not a big
+problem?
+
+Jim
+-- 
+ -------------------------------------------+-------------------------
+ James E. Housley                           | PGP:   1024/03983B4D
+ PR Communications, Inc.                    | 2C 3F 3A 0D A8 D8 C3 13
+ www.servtech.com/public/pr-comm            | 7C F0 B5 BF 27 8B 92 FE
+
+### PK 2604075 ###
+===== 库内序 145632 | PK 2604075 | 等级 L3 =====
+DATE: 1998-04-05T20:55:32+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Summary: shopping for new video adapter
+摘要: Bulte: Matrox Millennium II 在 75MHz PCI 无问题 83MHz 亦可 Xfree 存疑
+
+I've been asked for a summary, so here it is:
+
+- My question was specific to whether a Matrox Millenium II would be a good
+choice for (stock) Xfree and whether it would run OK on a 75Mc PCI bus.
+
+The general opinion seems to be that a Matrox Millenium II is indeed a very
+good card, and should run without problems on a 75Mc bus. Even 83Mc buses
+seem to work OK. Whether stock Xfree is OK seems to be under debate. Both
+claims that stock Xfree is OK and claims that you need Xaccel are present. 
+
+A trip to www.xfree86.org seems to indicate that the Xfree86 distribution
+now supports the Millenium II. You want to take a close look on the RAMDAC
+speed in case you want the highest resolutions and refresh rates (and you
+probably do ;-)
+
+So, people sound pleased and I'll probably be getting in the near term.
+
+Wilko
+
+Snippets of received comments:
+...
+Not unless you are willing to buy Xaccel.  XFree86 doesn't support it 
+very well at all.  Xaccel 4.01 is pretty good, modulo some 
+font-handling bugs.
+...
+
+Except for teh "stock XFree" part.  There *is* an X server for it, off of
+the SUSE stuff.  But the freebsd port is unsupported.
+I dont' know abotu a 75MHz bus speed, though.
+...
+
+I have a Millenium II, and while I only run it at 66mhz, I am very pleased
+with it.  It comes with a minimum of 4M, and I run it at 1152x900 32bpp
+with that configuration.  Even though the XFree86 3.3.1 drivers are
+considered alpha, I have had no problems with the card.  I don't know
+about the 75mhz bus speed only because I haven't jumped into the
+overclocking world yet.  All Millenium II's can be upgraded to 16M.  It
+also loads my customized X cursor fully, which my #9 Motion 771 2M card
+didn't do.
+...
+
+I've run several Milleniums at 83MHz bus speed with no difficulties.
+1600x1200 is crystal clear.  I highly recommend the card.
+...
+
+The 4mb Millenium (not millenium 2) I have does this... I've not found any
+major problems with it... I beleive the driver is OK (i.e. pretty
+'accelerated' ;-)
+...
+
+Yes.  So would the Mystique I think (using both here in 32 and 16 bit,
+1152x864).  They can push to 1600 x 
+[…中段省略 653 字符…] to
+things like PCI busses, since verification of proper behaviour is so
+much more difficult.
+...
+
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+__________________________________________________ Powered by FreeBSD ______
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604078 ###
+===== 库内序 145635 | PK 2604078 | 等级 L3 =====
+DATE: 1998-04-06T18:18:21+00:00
+FROM: Andrew Hobson <ahobson@eng.mindspring.net>
+SUBJ: Optimization bug with gcc 2.7.2 + mktemp
+摘要: Hobson: -fomit-frame-pointer 令 mktemp.c 编译错 _gettemp 第三参变垃圾
+
+
+I'm running -current supped at the beginning of March.
+
+I been having core dumps when using programs that called mktemp(3)
+repeatedly.  I finally traced it down to the fact that when I compile
+libc with -fomit-frame-pointer, mktemp.c is compiled incorrectly.
+Specifially, when _gettemp is called, the third argument (domkdir) is
+garbage.  This is "impossible" because _mktemp calls it thusly:
+
+        return(_gettemp(path, (int *)NULL, 0) ? path : (char *)NULL);
+
+I realize it's my own damn fault for compiling with optimization out
+the wazoo, but I was wondering if anyone else has had this same
+problem.
+
+I haven't seen any warnings about this, so I thought I'd pass it
+along.  From browsing the mailing list archives, it seems that patches
+have been submitted in the past to make FreeBSD "-fomit-frame-pointer
+safe".  Specifically, lib/csu/i386/Makefile explicitly adds
+-fno-omit-frame-pointer to CFLAGS.  I don't know if that's the right
+answer this time or not.
+
+Drew
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604082 ###
+===== 库内序 145639 | PK 2604082 | 等级 L4 =====
+DATE: 1998-04-07T00:15:13+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: I hope someone is following this up 
+摘要: Hubbard: 已在与 Apple 方面接触并开始 FreeBSD 兼容性对话
+
+> This seems like a great opportunity for both sides.  The visablity for
+> FreeBSD would be nice and it would help in keeping things compatible.
+
+Yes, we're already in contact with the individual from Apple and
+having a dialog now.  Thanks.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604085 ###
+===== 库内序 145642 | PK 2604085 | 等级 L3 =====
+DATE: 1998-04-07T00:46:27+00:00
+FROM: dannyman <dannyman@sasquatch.dannyland.org>
+SUBJ: Re: I hope someone is following this up
+摘要: dannyman: W4R3Z 是 warez 的写法意为破解商业软件
+
+On Tue, Apr 07, 1998 at 10:45:00AM +1000, John Birrell wrote:
+> dannyman wrote:
+> > W4R3Z !!!
+> > 
+> > =)
+> 
+> WTFDTM? (What the <expletive deleted> does that mean).
+
+W4R3Z is the W4R3Z D00D!!! way to spell 'warez' which means 'good stuff'
+though in the context of W4R3Z D00D!!! it means '1337 H4X0R3D commercial
+software.
+
+HTH :)
+
+-- 
+  //       dannyman yori aiokomete       ||  Our Honored Symbol deserves
+\\/ http://www.dannyland.org/~dannyman/  ||  an Honorable Retirement (UIUC)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604092 ###
+===== 库内序 145649 | PK 2604092 | 等级 L3 =====
+DATE: 1998-04-07T01:55:52+00:00
+FROM: Wilfredo Sanchez <wsanchez@apple.com>
+SUBJ: Small Request
+摘要: Sanchez: 请求不要在 FreeBSD 社区外转发其邮件
+
+Howdy again-
+
+  I've gotten a lot of feedback from the FreeBSD community; that's 
+appreciated.
+
+  If you could, however, refrain from forwarding my email, or the gist 
+thereof to people outside of the FreeBSD community (say, for example, 
+MacOSRumors.com...), it would make this process, and my life, 
+considerably easier.
+
+  I think we've been good at making sure that once we ship a product, 
+that it can be made clear that FreeBSD has been helpful to Apple, as 
+appropriate, but letting people know that we might do something or other 
+in the future is contrary to Apple interests, and may mean we bail out on 
+that effort. My apologies for not considering that these are public 
+lists, after all, but if we could just keep it in-house, that would be 
+nice.
+
+  In any case, I got a lot of encouragement, and that's a good thing.
+
+     Thanks for the help,
+     -Fred
+
+
+---
+        Wilfredo Sanchez - wsanchez@apple.com - 408.974-5174
+    Apple Computer, Inc. - Rhapsody Core Operating Systems Group
+       2 Infinite Loop, Mail Stop 302-4K, Cupertino, CA 95014
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604097 ###
+===== 库内序 145654 | PK 2604097 | 等级 L4 =====
+DATE: 1998-04-07T03:06:33+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Nate Williams: 4MB Velocity 屏显 1024x768 16bpp 64MB 内存 xengine 约 650 RPM
+
+> /usr/ports/benchmarks/xengine results. It may not be much of a 
+> benchmark but its something more than seat of the pants.
+> 
+> I get between 750 and 1000 (peak) RPM, usually in the 800's with a 2MB 
+> PCI Mach32, 1024x768 16bpp with exmh also open. 64MB PPro-200/512k.
+> 
+> About 1100 RPM on an 800x600 16bpp P-133 Mach64 machine at work.
+
+Display settings (size) didn't matter, but I'm getting ~650 rpm. on a
+4MB Velocity 64B (S3 968) board running 24bit mode on an XIG 3.1 server.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604099 ###
+===== 库内序 145656 | PK 2604099 | 等级 L3 =====
+DATE: 1998-04-07T06:26:03+00:00
+FROM: The Hermit Hacker <scrappy@hub.org>
+SUBJ: Re: Softupdate for 2.2.6?
+摘要: Marc G. Fournier: CAM 表示可以做 现跑到 10Mps 想上到 40 追问 ETA
+
+On Sun, 5 Apr 1998, Justin T. Gibbs wrote:
+
+> >> Q. Will any of the following features ever be in 2.2.x, even as
+> >>    3rd party patches?
+> >> 
+> >> A. 1. Soft Updates:  No.
+> >>    2. CAM: No.
+> >>    3. SMP: No (you didn't ask, but I figured while I was making a list... :-)
+> 
+> CAM: yes.
+
+	Any ETA?  'm running at 10Mps right now, and its stable, but
+I'd like to get it pop'd up to 40 :)
+
+Marc G. Fournier                                
+Systems Administrator @ hub.org 
+primary: scrappy@hub.org           secondary: scrappy@{freebsd|postgresql}.org 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604100 ###
+===== 库内序 145657 | PK 2604100 | 等级 L4 =====
+DATE: 1998-04-07T05:38:05+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: gsutter: cron 非 bug 是 DST 日 0200 时刻缺失致任务未执行
+
+gsutter@pobox.com writes:
+> On Mon, 6 Apr 1998, dannyman wrote:
+> >> On Mon, Apr 06, 1998 at 11:16:04AM -0400, James E. Housley wrote:
+> >> > Did anyone else notice that the Sunday AM Daily and Security scripts
+> >> > didn't run with the change of time to daylight savings?  Is this a know
+> >
+> >One note I've seen is this isn't a cron bug, but stems from the fact that
+> >on the day we switch to DST, there is no 0200h - it's really just an
+> >oversight on the part of whoever it was that set the default here to 2AM.
+> 
+> In the fall, do 0159h or 0200h crons run twice?
+
+I think it only runs once. In other words, it can be designed
+to work "correctly" in the fall or in the spring, but not both.
+This is because "correct" is a matter of policy, not true
+correctness.
+
+Some cron entries are "meant" to run once every day (month,
+hour, whatever) e.g. /etc/daily. Others are meant to run once,
+at the specified time (e.g., on April 15, remind me that my
+taxes are due). Which behavior you choose makes one of these
+types work but not the other.
+
+I agree that /etc/daily and friends should be scheduled to
+run at some time other than between 2am and 3am.
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604101 ###
+===== 库内序 145658 | PK 2604101 | 等级 L3 =====
+DATE: 1998-04-07T05:42:10+00:00
+FROM: dannyman <dannyman@sasquatch.dannyland.org>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: dannyman: cron 处理 0420 时段显得古怪并不真正聪明
+
+On Tue, Apr 07, 1998 at 01:10:19AM -0400, gsutter@pobox.com wrote:
+
+> In the fall, do 0159h or 0200h crons run twice?
+
+No.  cron seems particularly eccentric to the point of being rather clever,
+but not quite bright. :)
+
+> >Me, my crons run at 0430h, for sentimental reasons. :)
+> 
+> Mine run at 0420h, because I know I'll not be at the computer just then.
+
+That's the sort of philosophy I used to use with my Amiga.
+
+Another strategy I found fruitless was "be in bed before cron runs" ...
+
+-dan
+
+-- 
+  //       dannyman yori aiokomete       ||  Our Honored Symbol deserves
+\\/ http://www.dannyland.org/~dannyman/  ||  an Honorable Retirement (UIUC)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604102 ###
+===== 库内序 145659 | PK 2604102 | 等级 L3 =====
+DATE: 1998-04-07T05:58:12+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: Janowski: 上床早于 cron 的策略失败 硬盘疯狂寻道前抢关机徒劳
+
+dannyman wrote:
+
+> Another strategy I found fruitless was "be in bed before cron runs" ...
+>
+
+ I too tried this, but it was a depressing point to cross in that somtimes
+panic moment when I was trying to get something done and turn off
+the monitor before I heard the crazed seeking of my disk drives.
+I have abandoned this strategy and really put my foot down on being
+in bed before I get hungry for another meal. ;)
+
+Dan
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604103 ###
+===== 库内序 145660 | PK 2604103 | 等级 L4 =====
+DATE: 1998-04-07T05:59:25+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: DMI etc 
+摘要: Smith: 主板环境监测有计划 DMI taskforce 提供规范 -current 已有 DMI BIOS 签名代码
+
+> Is there any plan to support some of the environmental monitoring functions
+> in modern motherboards, like the power supply voltages and fan RPM?
+> (and cpu chip temperature, etc)
+
+Plans, sure.
+
+> (or are there specs that tell one where these show up, memory mapped
+> or I/O mapped, etc etc, and I could have a go at it.)
+
+The DMI taskforce (www.dmtf.org) publishes various standards describing 
+this.  There is code in -current to locate the DMI BIOS signature, but 
+no more (yet).  
+
+An enthusiastic DMI developer would be welcomed with open arms.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604104 ###
+===== 库内序 145661 | PK 2604104 | 等级 L4 =====
+DATE: 1998-04-07T05:47:38+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: bzip2 - is it worth to take a look at? 
+摘要: Smith: bzip2 不宜作 gzip 替代 更慢 内存耗大 且仅 bzip 可解压缩包
+
+> 
+> A new compression tool - bzip2 - is gaining popularity and I 
+> want to put it to discussion whether it could be used to augment
+> the installation floppy towards even higher functionality like
+> containing more tools etc. etc.
+
+Bzip is an unattractive alternative to gzip for a number of reasons:
+
+ - It's significantly slower in most cases.
+ - It's a memory pig.
+ - The only code for handling bzip-compressed data is bzip, which is
+   GPL'd.
+ - The author admits to uncertainty regarding the legal status of the 
+   code.
+
+> bzip2 compresses about 20 % better than gzip.
+> 
+> Try it at:
+> 
+>    ftp://ftp.gimp.org/pub/apps/
+
+Try /usr/ports/archivers/bzip2.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604108 ###
+===== 库内序 145665 | PK 2604108 | 等级 L4 =====
+DATE: 1998-04-07T06:41:53+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Hasty: 自有 Matrox Millennium 用 fxtv 顺畅观看 PCI 到 PCI 传输 基准 1.2M xstones
+
+I own a Matrox Millenium and is fast enough for me . It works and I can 
+watch TV on it with fxtv  using PCI to PCI transfer. Unless you are 
+doing heavy cad usage or pumping thousands of polygons / sec must 
+adapters now days are sufficient except the ones with DRAM .
+
+When I originally benchmarked my matrox millenium it clocked at 1.2 
+million xstones. 
+
+Now days, I think in terms of added features for instance:
+1. mpeg playback
+2. 3d capabilities
+3. sound 
+4. support for multiple cards (you can have two milleniums in a system)
+5. builtin video out.
+
+	Amancio
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604111 ###
+===== 库内序 145668 | PK 2604111 | 等级 L3 =====
+DATE: 1998-04-07T09:38:05+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: Studded: James 邮件签名过长 传统四行以外信息归入 finger
+
+James E. Housley wrote:
+> 
+> Did anyone else notice that the Sunday AM Daily and Security scripts
+> didn't run with the change of time to daylight savings?  Is this a know
+> glitcht that only happens once a year and there for is not a big
+> problem?
+
+	Before I forget, your .sig is way too long. Some would say that the
+traditional 4 lines is also too long, but most of the info in yours is
+better suited in a finger somewhere. That said, this is a known problem.
+
+	I suggested a band-aid solution a while back, namely setting the daily
+script to run at 1:59 am. That would eliminate the problem for the vast
+majority of the western world minus a few european countries that do the
+change from 1 to 2 am or 1:30 to 2:30. At the time I was told that
+because there is no time to run the job that completely eliminates the
+possibility of conflict, no change would be made. Personally I think
+that kind of reasoning is nuts, but I don't get to make decisions around
+here. :)
+
+	As others have already indicated, the simplest solution at this point
+is to reschedule the job locally. 
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604112 ###
+===== 库内序 145669 | PK 2604112 | 等级 L4 =====
+DATE: 1998-04-07T10:01:05+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: Studded: cron 支持 S 与 U 后缀 15 2S 全年标准时 15 2U 走 UTC
+
+Terry Lambert wrote:
+
+> How does cron deal with time adjustments?  
+
+	Like so much else in the unix world, it expects the operator to be
+smarter than it is. :) There are a couple of us who are working on some
+proposals for Paul Vixie along the following lines.
+
+15 2S * * * /job
+	Would run the job in standard time all year round, ignoring DST
+15 2U * * * /job
+	Runs the job in UTC time.
+
+	Without modification the job would happen or not happen the same way it
+does now. I would like to add a warning for the user if they schedule a
+job that happens during the magic hour. This would probably require a
+text file somewhere, probably in /var/cron. The implementation would be
+something like:
+
+1. cron starts up, polls the system to determine the dates and hour of
+the DST change and compares the value in the file (if any) to the answer
+it received and writes it as necessary. 
+
+2. User foo edits their crontab file and adds a job that is scheduled
+during the magic hour. While crontab writes out the tab it checks for
+this condition and warns the user that they've scheduled a job during
+this time period and they gives them options, something like:
+
+Your job "15 2 * * * /usr/foo" is scheduled during the hour of the
+Daylight Savings Time transition in the Pacific time zone where this
+machine is located. If this might result in a scheduling problem please
+read the "Sceduling Options" section of the man page for crontab(5). 
+
+3. cron saves the fact that it's warned the user about this job to the
+file mentioned above, perhaps using an MD5 checksum of the job for
+security? 
+
+4. When user foo does subsequent updates to their crontab as long as
+they don't change that job they won't get warned about that job. 
+Comments?
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604113 ###
+===== 库内序 145670 | PK 2604113 | 等级 L3 =====
+DATE: 1998-04-07T10:57:53+00:00
+FROM: Remy NONNENMACHER <remy@synx.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: NONNENMACHER: 双 Matrox 卡 1600x1200 与 1800x1400 多头接 Xig4 无问题
+
+>... 
+> If you can live with swarming ants, random pixel garbage and occasional 
+> snow, by all means go for it.  Otherwise, hang back a few months and 
+> let the nice XFree MII hackers finish the job.
+> 
+
+Strange! You have problems i seen only on the first version of the old 
+matrox with XIG 1.2.
+
+I use 2 matrox cards (1600x1200 and 1800x1400 Multi-headed) with Xig4 and 
+have no problems !!. (cards; MII, 1AGP, 1PCI, all two 8Mb).
+
+Last time i checked, the Matrox support in XFree was not accelerated. 
+Will it be for the MII ?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604115 ###
+===== 库内序 145672 | PK 2604115 | 等级 L3 =====
+DATE: 1998-04-07T10:17:21+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: Apple and FreeBSD
+摘要: Cross: 众人宜停手让 Wilfredo 专心研发不必回答社区询问
+
+I think we should all let this [mostly] drop so this fair gentleman can go
+about his buisness and produce a damn fine piece of software without
+having to spend his time answering us back all the time.  I for one will
+take approach of being silent unless being spoken to.
+
+--
+David Cross
+UNIX Systems Administrator
+GE Corporate R&D
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604117 ###
+===== 库内序 145674 | PK 2604117 | 等级 L4 =====
+DATE: 1998-04-07T10:42:26+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Hasty: Matrox 在 XFree86 下已加速 且属最快兼容卡之一
+
+>Last time i checked, the Matrox support in XFree was not accelerated. 
+
+It looks very accelerated here  and if I am not mistaken it is one
+of the fastest cards which work with XFree86 .
+
+
+	Cheers,
+	Amancio
+
+
+	
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604119 ###
+===== 库内序 145676 | PK 2604119 | 等级 L3 =====
+DATE: 1998-04-07T11:41:27+00:00
+FROM: Konstantin Chuguev <joy@urc.ac.ru>
+SUBJ: pkg_add from FTP repositary
+摘要: Chuguev: pkg_add 用 URL 参数时无法自动安装依赖 PKG_PATH 只走本地文件
+
+Hi All.
+
+I'm installing FreeBSD packages to my home computer from an FTP archive
+at my office. (It is faster to download binaries than to download and
+compile sources with my home processor and link speeds).
+
+I'm using a URL as a parameter for pkg_add. But then I cannot
+automatically install the packages which the first one depends on.
+PKG_PATH is used only for local files. Of course, it is correct, because
+searching files in FTP site is expensive.
+But could pkg_add have a last resort option for trying to get a package
+from some URL?
+For example, it could have a -<letter> <URL-path> option. If it has not
+found a package in PKG_PATH, it prepends a <URL-path> to the package
+name,
+and does the last try... Or an environment variable instead of an
+option.
+Comments?
+
+--
+	Konstantin V. Chuguev.		System administrator of
+					Ural Regional Center of FREEnet,
+	Joy@urc.ac.ru			Chelyabinsk, Russia.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

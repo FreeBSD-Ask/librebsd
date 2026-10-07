@@ -1,0 +1,31 @@
+2603658|L4|Terry Lambert 建议把 exclusion list 并入 build-limitation system 以避免每个 install 都扫表
+2603661|L4|Josef Belkovics：DHCP forwarding 按 RFC 由 DHCP proxy 承担 FreeBSD 未必有此能力
+2603663|L4|Terry Lambert：可参考 Japan 的 WIDE project 其 ISCdhcpd 或已支持 DHCP 代理
+2603666|L3|Terry Lambert 讨论用 unix domain socket 传递 fd 作为 SYSV SHMEM 替代方案
+2603667|L4|Archie Cobbs：较新的 ISC DHCP server 同时含 gateway 与 client 代码见 www.isc.org
+2603668|L3|Archie Cobbs 转告 Netscape free the lizard 开源代码发布活动 mozilla.org party 页面
+2603670|L4|John S. Dyson：FreeBSD in -current 已用 4MB 页但仅限内核与 device buffers 如视频内存
+2603672|L3|Giannis Vlachos 用 FreeBSD 2.2.2 建拨号接入服务器请求用户会话日志文件方案
+2603673|L3|p6ms2t15 询问如何读取 ethernet card 的发送接收与碰撞等计数器数据
+2603675|L3|Drew Derbyshire 打算把 S/Key 一次性口令集成进 popper 询问相关调用是否受出口管制
+2603677|L4|Mark Murray：对 s/key library 调用的出口管制问题回答为 No
+2603678|L4|John Polstra：澳大利亚镜像的 maintainer 名单见 FreeBSD Handbook 23.4 节 CVSup Sites
+2603679|L4|Snob Art Genre：读取网卡统计的方法就是 man netstat
+2603680|L3|Doug Ambrisko 参与 ip forward-protocol udp 170 关于 DHCP proxy 可行性的讨论
+2603682|L3|Open Systems Networking 对比 FreeBSD -current 与 bsdi 3.1 的 dflt MSS 是 512 还是 536
+2603683|L4|Eivind Eklund：install 支持 exclusions list 配合 /etc/noclobber.conf 方案开发工作量约三小时
+2603684|L3|Open Systems Networking 询问 ellipse ftp server 与自带 ftpd 或 wu-ftp 性能对比情况
+2603685|L4|Peter Jeremy 定位 LPIP 问题根因 sys/mbuf.h 要求 mbuf 操作受 splimp 保护而 LPIP 从未添加
+2603687|L4|Studded：DHCP client 在 http://home.san.rr.com/freebsd/dhcp.html 有 setup 指引
+2603688|L3|Brian Somers 建议取 FreeBSD.org 上的最新 ppp 使 -direct 连接进入 utmp 可用 last 查看
+2603691|L4|Doug Ambrisko 在 ip forward-protocol udp 170 线程中确认 ISC DHCP client 已在实际使用
+2603692|L4|David Greenman：非本地网络 mss 官方默认 512 但 FreeBSD 有 PMTU Discovery 默认从接口 MTU 起下探
+2603693|L4|Robert Watson 用 /dev/tun 建 VPN toolkit 采 UDP 传输 p2p 加 flow-control
+2603694|L4|Matthew N. Dodd 正在开发 kernel level tunnel driver 采用通用封装便于扩展新路由
+2603697|L4|Mark Murray：kip 不是 Skip 而是 Kerberised IP 搭配 KerberosIV 使用
+2603698|L3|Greg Lehey 尝试 cvs co -r 2.2.6-RELEASE src 未检出有效内容并在 CVSROOT 中找到 val-tags
+2603699|L4|Jordan K. Hubbard：应使用 RELENG_2_2_5_RELEASE 形式的 tag 2.2.6-RELEASE 无效
+2603700|L4|Greg Lehey 更正实际使用 tag 为 RELENG_2_2_6_RELEASE 但需先改 CVSROOT/taginfo
+2603702|L4|Luigi Rizzo 试用后发现 Linux client 在 Connect 阶段 die 而 Win32 版在 NT 上 hang
+2603703|L4|Ruslan Shevchenko：/usr/ports/net/vnc 可用但速度很慢
+2603704|L4|Eivind Eklund 在 /usr/ports 下构建 FTP proxy daemon 用于其网络环境

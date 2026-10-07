@@ -1,0 +1,863 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603501 ###
+===== 库内序 145059 | PK 2603501 | 等级 L4 =====
+DATE: 1998-03-20T15:40:30+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: newmsdosfs anyone ?
+摘要: Luigi Rizzo：which 找到 mkdosfs 在 usr/sbin man -k FAT 也列出该手册自嘲没先查
+
+> How about mkdosfs(1)?
+
+so much for not having appropriate manpages...
+
+    prova# which mkdosfs
+    /usr/sbin/mkdosfs
+    prova# man -k msdos | grep mkdosfs
+    prova# man -k FAT
+    mkdosfs(1) - create an MS-DOS (FAT) file system
+
+no need to say i did not think to run man -k FAT before asking...
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603502 ###
+===== 库内序 145060 | PK 2603502 | 等级 L3 =====
+DATE: 1998-03-20T17:38:49+00:00
+FROM: dannyman <dannyman@SASQUATCH.dannyland.org>
+SUBJ: apologies for mail loop
+摘要: dannyman：majordomo 配方失误致每封来信被自动回信故向列表致歉
+
+hello,
+
+for about two hours this morning, i had a bad bad bad bad majordomo recipe
+which was causing every piece of mail I received to be auto-responded to.  i
+would like to apologise for any crap spewed upon the lists because of this.  i
+feel pretty dumb.  sorry everyone.
+
+-dan
+
+-- 
+  //Dan   -=-     This message brought to you by djhoward@uiuc.edu    -=-
+\\/yori   -=-    Information - http://www.uiuc.edu/ph/www/djhoward/   -=-
+aiokomete -=-   Our Honored Symbol deserves an Honorable Retirement
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603503 ###
+===== 库内序 145061 | PK 2603503 | 等级 L4 =====
+DATE: 1998-03-20T17:59:49+00:00
+FROM: Robert Nordier <rnordier@iafrica.com>
+SUBJ: Re: newmsdosfs anyone ?
+摘要: Robert Nordier 建议用 mtools 处理大磁盘并修订 mkdosfs 支持 FAT12 FAT16 FAT32
+
+Luigi Rizzo wrote:
+
+> Hi,
+> 
+> i am in the need of creating a formatted MSDOS filesystem on >512MB
+> disks from FreeBSD.
+> 
+> One option i used was mtools but only for small disks, and i am not
+> sure how it works with larger disks. In any case, i was wondering if
+> there is some smaller code doing only the formatting part of the work...
+> 
+> 	thanks
+> 	luigi
+
+The latest mtools works pretty well for large disks.
+
+I have a revised mkdosfs (the current FreeBSD one only does floppies)
+which I've been meaning to polish and submit, anyway.  This handles
+FAT12, FAT16, and FAT32.  If you want to review/test it, I can send
+it to you by the end of next week.
+
+-- 
+Robert Nordier
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603504 ###
+===== 库内序 145062 | PK 2603504 | 等级 L4 =====
+DATE: 1998-03-20T17:10:37+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: newmsdosfs anyone ?
+摘要: Luigi Rizzo 有 mtools 3.0 补丁支持 HD 至 512MB 并可 DOS Windows95 启动
+
+> The latest mtools works pretty well for large disks.
+
+3.8 or later ?
+
+> I have a revised mkdosfs (the current FreeBSD one only does floppies)
+> which I've been meaning to polish and submit, anyway.  This handles
+> FAT12, FAT16, and FAT32.  If you want to review/test it, I can send
+> it to you by the end of next week.
+
+yes i'd be interested.
+
+I have patches (for mtools 3.0) to support HDs (but only up to 512MB)
+and make them bootable in DOS or Windows95 (you need a DOS/Win
+licence, and you need to grab the init files and boot sector and put
+them into /usr/local/lib/mtools...
+
+Would you be interested to integrate that as well ?
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603505 ###
+===== 库内序 145063 | PK 2603505 | 等级 L3 =====
+DATE: 1998-03-20T17:14:52+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: patch for Vibra16X -- test please!
+摘要: Luigi Rizzo 提交 Vibra16X 部分播放支持补丁 待测试反馈以赶上 stable 截止期
+
+[forgive me for the crosspost but I'm trying to get some feedback
+quickly... since this might go into -stable and the deadline is
+close...]
+
+By popular demand, enclosed is a small patch to hopefully add
+PARTIAL Vibra16X support for playback (there is also some still
+non-functional code for the ESS -- don't worry about that bu i
+prefer not to handcraft the patchfile). This is mostly derived from
+code contributed by Torsten Ackemann.
+
+The diff is against snd980215 which is essentially what is now in
+-current and -stable. The modified files are only sb_dsp.c and
+sbcard.h
+
+Note that, assuming this code works at all:
+
+ * it might affect plain SB16 support, so I'd like to have feedback from
+   someone with the SB16 (it should still work fine);
+ * it only works in playback; we haven't figured out yet how
+   to tell capture from playback interrupts. And I have not
+   been successful in getting documentation from Creative or Realtek
+   (the latter make a Vibra16X clone).
+ * you might have to add the PnP vend_id of your card near the
+   end of sb_dsp.c -- there is a comment marked with VIBRA16X in this patch
+   in the point where you should make the addition.
+
+As usual, feedback is not only welcome but absolutely necessay
+since I don't have a Vibra16X or clone. I need to know both if it
+works and if it not works.  Do not forget to give details about
+your card (e.g. brand, PnP vendor ID)
+
+	cheers
+	luigi
+
+
+diff -ubwr snd/sb_dsp.c /sys/i386/isa/snd/sb_dsp.c
+--- snd/sb_dsp.c	Tue Jan 27 21:01:49 1998
++++ /sys/i386/isa/snd/sb_dsp.c	Fri Mar 20 19:32:52 1998
+@@ -275,9 +275,12 @@
+      * SB < 4.0 is half duplex and has only 1 bit for int source,
+      * so we fake it. SB 4.x (SB16) has the int source in a separate
+      * register.
++     * The Vibra16X has separate flags for 8 and 16 bit transfers, but
++     * I have no idea how to tell capture from playback interrupts...
+      */
++#define PLAIN_SB16(x) ( ( (x) & (BD_F_SB16|BD_F_SB16X) ) == BD_F_SB16)
+ again:
+-    if (d->bd_flags & BD_F_SB16) {
++    if (PLAIN_SB16(d->bd_flags)) {
+ 	c = sb_getmixer(io_base, IRQ_STAT);
+ 	/* this tells
+[…中段省略 6219 字符…] :08 1998
++++ /sys/i386/isa/snd/sound.c	Sat Mar 14 23:11:35 1998
+@@ -717,7 +717,7 @@
+ 	    snd_chan_param *p = (snd_chan_param *)arg;
+ 	    d->play_speed = p->play_rate;
+ 	    d->rec_speed = p->play_rate; /* XXX one speed allowed */
+-	    if (p->play_format & SND_F_STEREO)
++	    if (p->play_format & AFMT_STEREO)
+ 		d->flags |= SND_F_STEREO ;
+ 	    else
+ 		d->flags &= ~SND_F_STEREO ;
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603506 ###
+===== 库内序 145064 | PK 2603506 | 等级 L4 =====
+DATE: 1998-03-20T18:57:38+00:00
+FROM: Benjamin Greenwald <beng@lcs.mit.edu>
+SUBJ: New vx driver (Re: vx device (3c905-100mb) )
+摘要: Benjamin Greenwald 宣布 vx 驱动重写开发启动 已从 3Com 收到技术文档
+
+I might as well take this as an opportunity to announce that a new vx driver 
+is under development.  I just received the technical docs from 3Com and should 
+have a good amount of time to sit down and hack this coming week.
+
+-Ben Greenwald
+
+> The man page for the 'vx' device only mentions 10Mb support (in 2.2.2).
+> Has this device been updated to support 100mbit yet? And if not is anyone
+> working on updating it? I have time to work on the driver, but have done
+> (very) little driver programming.
+> I would like to run it at 100mbit-full-duplex, but it does not appear to
+> be fully supported in this configuration.
+> -James Flemer
+>  <flemer@tiger.acsu.k12.vt.us>
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603507 ###
+===== 库内序 145065 | PK 2603507 | 等级 L3 =====
+DATE: 1998-03-20T19:13:11+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: XTI (shudder)
+摘要: David Cross 询问 XTI TLI 是否计划迁入内核或提供库层标准支持
+
+Are there any plans to migrate XTI(TLI) into the kernel or provide library
+support for this 'standard'?
+
+--
+David Cross
+UNIX Systems Administrator
+GE Corporate R&D
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603508 ###
+===== 库内序 145066 | PK 2603508 | 等级 L4 =====
+DATE: 1998-03-20T19:33:08+00:00
+FROM: Atipa <freebsd@atipa.com>
+SUBJ: Re: New vx driver (Re: vx device (3c905-100mb) )
+摘要: Atipa 认为 3Com 100Mb 网卡架构一般 NFS 流量表现不如 DEC 和 Intel 同类
+
+
+I have heard that those cards are architecturally unimpressive. What type
+of performance do you expect? I have heard they are slower than the DECs
+and Intels, especially for NFS traffic. Any comments?
+
+Kevin
+
+On Fri, 20 Mar 1998, Benjamin Greenwald wrote:
+
+> I might as well take this as an opportunity to announce that a new vx driver 
+> is under development.  I just received the technical docs from 3Com and should 
+> have a good amount of time to sit down and hack this coming week.
+> 
+> -Ben Greenwald
+> 
+> > The man page for the 'vx' device only mentions 10Mb support (in 2.2.2).
+> > Has this device been updated to support 100mbit yet? And if not is anyone
+> > working on updating it? I have time to work on the driver, but have done
+> > (very) little driver programming.
+> > I would like to run it at 100mbit-full-duplex, but it does not appear to
+> > be fully supported in this configuration.
+> > -James Flemer
+> >  <flemer@tiger.acsu.k12.vt.us>
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-hackers" in the body of the message
+> > 
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603509 ###
+===== 库内序 145067 | PK 2603509 | 等级 L4 =====
+DATE: 1998-03-20T19:45:28+00:00
+FROM: Robert Nordier <rnordier@iafrica.com>
+SUBJ: Re: newmsdosfs anyone ?
+摘要: Robert Nordier 用 mtools 3.9 预发行测试 正确支持超过 65535 簇的 FAT32 分区
+
+Luigi Rizzo wrote:
+
+> > The latest mtools works pretty well for large disks.
+> 
+> 3.8 or later ?
+
+I used a 3.9 pre-release to test standalone FAT32 support I was doing
+for sysinstall.  Mtools did work correctly for FAT32 partitions > 0xffff
+clusters, but I didn't really look at the whole package.
+
+[ ... ] 
+> I have patches (for mtools 3.0) to support HDs (but only up to 512MB)
+> and make them bootable in DOS or Windows95 (you need a DOS/Win
+> licence, and you need to grab the init files and boot sector and put
+> them into /usr/local/lib/mtools...
+> 
+> Would you be interested to integrate that as well ?
+
+If you're likely to use it, I guess it should be added.
+
+-- 
+Robert Nordier
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603512 ###
+===== 库内序 145070 | PK 2603512 | 等级 L4 =====
+DATE: 1998-03-20T20:32:19+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: How do you increase available SYSV shared memory?
+摘要: Simon Shapiro 反对改用 mmapped 文件 因 PostgreSQL 除文件外还支持其他存储管理器
+
+
+On 18-Mar-98 Kent S. Gordon wrote:
+> 
+>>>>>> "shimon" == Simon Shapiro <shimon@simon-shapiro.org> writes:
+> I have been thinking of changing Postgres to use mmapped files instead 
+> of SYSV shared memory.  I think this should allow for larger postgres
+
+This will be a disaster.  It assumes that PostgreSQL uses files for data
+storage.  While this is the default mode, it is NOT the only storage
+meanager.  In PostgreSQL, like most true RDBMS, the storage of data is
+decoupled from the logic of the relational model, etc.  I am building a
+storage manager that uses a totally different (distributed) storage model
+than Unix files.  A memory based storage manager already exists in
+PostgreSQL.  Please do not break these.
+
+Sion
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603513 ###
+===== 库内序 145071 | PK 2603513 | 等级 L3 =====
+DATE: 1998-03-20T20:26:04+00:00
+FROM: Benjamin Greenwald <beng@lcs.mit.edu>
+SUBJ: Re: New vx driver (Re: vx device (3c905-100mb) ) 
+摘要: Benjamin Greenwald 在混合 Sparc PA-RISC 环境测 3Com 网卡 NFS 性能至少与同代相当 Intel 最灵活
+
+I hadn't heard about any problems with NFS traffic.  I've used these cards in 
+a mixed network with Sparc and PA-RISC workstations and I have to say I got at 
+least comparable NFS performance from the 3Com NIC's.
+
+The Intel cards are probably the best... they are certainly the most flexible. 
+ As to the DEC cards, it is my understanding that they have alignment 
+restrictions (packets have to be long word aligned... therefore a copy is 
+required) that limit performance.
+
+I'm not saying the 3Com cards are the best out there. I _know_ there is a 
+great deal of improvement to be made (the card under Win NT screams), but just 
+how much I'm not going to attempt to quantify at this rather early date. The 
+truth is it doesn't matter.  There are a lot of these cards out there and a 
+lot of people who run FreeBSD use them.  Whatever performance we can suck out 
+of them, we should.  If it turns out that the numbers are less impresive than 
+the Intel or DEC numbers, at least people can make a more informed decision 
+about purchasing because they'll be comparing apples to apples, not apples to 
+rotten acorns.  For the rest of us who are stuck with what we've got, at least 
+we won't feel that rush of air and the sonic boom as the world passes us by.
+
+-Ben
+
+> 
+> I have heard that those cards are architecturally unimpressive. What type
+> of performance do you expect? I have heard they are slower than the DECs
+> and Intels, especially for NFS traffic. Any comments?
+> 
+> Kevin
+> 
+> On Fri, 20 Mar 1998, Benjamin Greenwald wrote:
+> 
+> > I might as well take this as an opportunity to announce that a new vx drive
+r 
+> > is under development.  I just received the technical docs from 3Com and sho
+uld 
+> > have a good amount of time to sit down and hack this coming week.
+> > 
+> > -Ben Greenwald
+> > 
+> > > The man page for the 'vx' device only mentions 10Mb support (in 2.2.2).
+> > > Has this device been updated to support 100mbit yet? And if not is anyone
+> > > working on updating it? I have time to work on the driver, but have done
+> > > (very) little driver programming.
+> > > I would lik
+[…中段省略 197 字符…] ribe: send mail to majordomo@FreeBSD.org
+> > > with "unsubscribe freebsd-hackers" in the body of the message
+> > > 
+> > 
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-hackers" in the body of the message
+> > 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603519 ###
+===== 库内序 145077 | PK 2603519 | 等级 L3 =====
+DATE: 1998-03-20T22:39:40+00:00
+FROM: Studded <Studded@dal.net>
+SUBJ: Re: Discussion about script to update /etc, etc.
+摘要: Studded 称 rc.conf 等仍是临时补丁 呼吁 /etc 配置方案真正可扩展
+
+Jordan K. Hubbard wrote:
+
+[design model snipped]
+
+> As the author of a number of the temporary bodges we're using right
+> now (/etc/rc.conf and friends), I can say that they're exactly that -
+> temporary bodges with numerous limitations.  I was hoping we'd stop
+> hacking out ever more temporary solutions to the /etc configuration
+> problem someday and start thinking of something that actually SCALES
+> worth a damn, but we clearly haven't gotten to that point yet. :)
+
+	Ok, go ahead and close the PR. If I read between the lines it sounds to
+me like you don't want this as a port either, however if I'm incorrect
+in that assumption please let me know and I'll see what I can do about
+getting it done before the deadline. 
+
+	I agree that a better solution is desirable, I made that point myself.
+If I were capable of putting together something along the lines of what
+you want I would be happy to do so. However it seems to me that some
+solution is better than no solution, especially when you consider that
+there is currently nothing in the base that explains how to do the
+upgrade properly. 
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603521 ###
+===== 库内序 145079 | PK 2603521 | 等级 L3 =====
+DATE: 1998-03-20T15:16:57+00:00
+FROM: "Jeff Buseman" <jeff@netronix.com>
+SUBJ: (Fwd) Re: Natd Support for Microsoft PPTP / VPN using protocol
+摘要: Jeff Buseman 回复 Eivind 关于 TCP UDP 之外的处理 附他人提供文档要点总结
+
+Eivind,
+
+   Thank you for your reponse.
+
+> It only handle TCP and UDP traffic.  The only way to get it to handle
+> something else is by asking Charles or me to make libalias do so, preferably
+> with pointer to suitable documentation.  I might find time to handle this
+> fairly quickly if you come up with docs.
+
+   I see that others have sent you some references, and I'm including
+my summary of what I've found so far below.  I have someone who would 
+be willing to try to capture some packets on the incoming side, if 
+that would help.  If you need anything else that I could do, let me 
+know.   Thanks again.
+
+PPTP Documentation
+
+  RFC's describing the GRE protocol
+      http://www.es.net/pub/rfcs/rfc1701.txt
+      http://www.es.net/pub/rfcs/rfc1702.txt
+
+  Draft Proposal for PPTP
+      ftp://ietf.org/internet-drafts/draft-ietf-pppext-pptp-02.txt
+      http://www.microsoft.com/communications/exes/draft-ietf-pppext-p
+      ptp-01.txt
+
+  Linux program for protocol redirection (including protocol 47)
+      http://bmrc.berkeley.edu/people/chaffee/linux_pptp.html    
+      http://www.pdos.lcs.mit.edu/~cananian/Projects/IPfwd/
+
+  Microsoft Documentation on PPTP
+    Index: http://www.microsoft.com/communications/morepptp.htm
+
+  Microsoft Dial-Up Networking Documentation (DUN12.DOC)
+      http://support.microsoft.com/support/kb/articles/Q166/2/88.asp
+           (Section 4 briefly describes PPTP / Firewalls)
+
+
+Jeff Buseman
+jeff@netronix.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603523 ###
+===== 库内序 145081 | PK 2603523 | 等级 L3 =====
+DATE: 1998-03-20T23:56:00+00:00
+FROM: Ken Key <key@cs.utk.edu>
+SUBJ: Need Intel 82557/82558 Ethernet docs to hack if_fxp.
+摘要: Ken Key 询问 Intel 82557 82558 网卡驱动文档 82557 Users Manual 无处可查
+
+Hi folks,
+
+   I want to try a slightly sick hack to the if_fxp driver and am having
+a devil of a time finding adequate programming docs for the Intel 82557
+or 82558 LAN controller.  I've pulled the data sheets off of Intel's
+developer web-site but it skips completely over the actual device driver
+interface and refers to the "82557 Users Manual", that I cannot find
+a reference to at their site.  Does anyone know how a mere mortal may
+obtain a copy of this manual to hack on the if_fxp?
+
+Thanks,
+Ken Key  (key@cs.utk.edu)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603524 ###
+===== 库内序 145082 | PK 2603524 | 等级 L3 =====
+DATE: 1998-03-20T18:23:37+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: FW: Digi Exp 
+摘要: sbabkin 转发 Moldova 地址来信 询问 Digi Exp 相关支持
+
+
+Sorry, I tried to send this message personally but it was not
+delivered. I think it's not to far from -hackers subject.
+
+> ----------
+> From: 	Babkin, Serge
+> Sent: 	Friday, March 20, 1998 1:20 PM
+> To: 	'decebal@moldnet.md'
+> Subject: 	RE: Digi Exp 
+> 
+> ----------
+> From: 	decebal@moldnet.md[SMTP:decebal@moldnet.md]
+> 
+> On Fri, 20 Mar 1998, Alfred Perlstein wrote:
+> 
+> > no, you can't do this, are you sure we don't support this?
+> > 
+> 
+> Yes FreeBSD doesn't support Xem.
+> FreeBSD suport Xe board that is not like Xem.
+> I compiled Xe driver and kernel was not able to init the board.
+> 
+> Well, Linux has sources for Digi Xem and all Digi boards for all buses
+> but i am just beginer and will not be able to port them to FreeBSD.
+> 
+> In this case it must be not that difficult provided that
+> the FreeBSD driver (yes, originally written by me) was 
+> originally based on Linux driver and although many 
+> things were redesigned, the
+> major structure is probably still like Linux. If it's not
+> then perhaps it's time to drop the GNU-style copyright
+> from it :-)
+> 
+> -SB
+> 
+> P.S. Personally I'm not going to add Xem support for BSD because I
+> have now no Digi card and, yet worse, I have no motivation to do that.
+> 
+> 
+> 
+> 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603526 ###
+===== 库内序 145084 | PK 2603526 | 等级 L3 =====
+DATE: 1998-03-21T05:19:30+00:00
+FROM: Joe McGuckin <joe@via.net>
+SUBJ: fxp strange problem
+摘要: Joe McGuckin 报告 fxp 网卡在 BAY 350T 交换机无指示灯但在 10M 集线器正常 询因
+
+
+
+I have had odd problems with a number of fxp cards. I'm using 2.2.5-RELEASE.
+
+I have a machine that refuses to work if I plug it into a BAY 350T 10/100
+ethernet switch. I don't even get status or link lights. If I plug it into
+a 10Mb ethernet hub, it works fine.
+
+Any ideas ?
+
+Joe
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603527 ###
+===== 库内序 145085 | PK 2603527 | 等级 L4 =====
+DATE: 1998-03-21T05:32:23+00:00
+FROM: "Alfred Perlstein" <perlsta@cs.sunyit.edu>
+SUBJ: Re: mremap?
+摘要: Alfred Perlstein 提出 mremap 方案 锁内核后解除映射并按用户意愿重映射
+
+
+wouldn't a simple resolution lie in just "locking" the kernel, unmapping the
+segment and seeing if it was possible to remap it according to the user's
+wishes then mmap it again the unlock the kernel? in SMP situations if the
+request for a remap fialed right after the unmap we could check if the user
+specified the "unmoveable flag" and then remap as/if nessesary.
+
+
+maybe this isn't the most effecient method.. but i makes sense to someone
+who hasn't even looked at the sources yet in regards to implementing this.
+
+i'm looking at your proposals for mremap() right after i send this.
+
+-Alfred
+
+
+>-----Original Message-----
+>From: John S. Dyson <toor@dyson.iquest.net>
+>To: Mike Smith <mike@smith.net.au>
+>Cc: perlsta@cs.sunyit.edu <perlsta@cs.sunyit.edu>; hackers@FreeBSD.ORG
+><hackers@FreeBSD.ORG>
+>Date: Friday, March 20, 1998 11:13 AM
+>Subject: Re: mremap?
+>
+>
+>>> > ok, i'm not promising anything here, but if i implemented mremap(),
+>would
+>>> > there be any interest in allowing it into -current?
+>>> >
+>>> > mremap just allows for moving and resizing mmap'd segments.
+>>>
+>>> You're more than welcome to give it a try.  I had a look at the way
+>>> Linux does it, and frankly the layering violations were pretty shocking
+>>> (although there appears to be a great deal less sophistication in their
+>>>  VM system).
+>>>
+>>> I couldn't see how to provide similar functionality with FreeBSD, but
+>>> if you're willing to get a little close to the way that memory mapping
+>>> works (check with David Greenman if you need advice here) you should be
+>>> able to pull it off.
+>>>
+>>I was planning on implementing mremap.  I am not sure of the api, but
+>>it should be "easy" to implement with our current VM code.  Think
+>>of map entries as being the address space "chunks", and objects as being
+>>the data repositorys.  I want to foster others knowing how the code
+>>works, so now I don't want to do it :-).  It would take me about 4Hrs
+>>to implement, and I want more people on the project to be able to
+>>do this stuff.  The initial learning curve is long, but after that,
+>>there will be more peop
+[…中段省略 711 字符…] rrect.  You'll have to UTSL to
+>>see how to do that.
+>>
+>>This is little more complex than forking a process, but not
+>>brain surgery...  Our VM code as inherited from Mach, is extremely
+>>flexible and really easy to work with.  Take a look at the fork code
+>>(vmspace_fork) for a slightly not applicable example of moving address
+>>space entries (map entries) around.
+>>
+>>John
+>>
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603528 ###
+===== 库内序 145086 | PK 2603528 | 等级 L4 =====
+DATE: 1998-03-21T05:48:28+00:00
+FROM: Dan Nelson <dnelson@emsphone.com>
+SUBJ: Re: fxp strange problem
+摘要: Dan Nelson 曾见 350T 交换机问题 建议用 ifconfig 强制两端速率和双工
+
+In the last episode (Mar 20), Joe McGuckin said:
+> 
+> 
+> I have had odd problems with a number of fxp cards. I'm using
+> 2.2.5-RELEASE.
+> 
+> I have a machine that refuses to work if I plug it into a BAY 350T
+> 10/100 ethernet switch. I don't even get status or link lights. If I
+> plug it into a 10Mb ethernet hub, it works fine.
+
+I've seen this happen on 350T's also.  Try forcing one or both ends
+(the card via ifconfig media, or the 350T via the telnet interface) to
+the speed you want and see if that helps.
+
+	-Dan Nelson
+	dnelson@emsphone.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603529 ###
+===== 库内序 145087 | PK 2603529 | 等级 L3 =====
+DATE: 1998-03-21T06:25:25+00:00
+FROM: Joe McGuckin <joe@via.net>
+SUBJ: inetd in realloc():warning:junk pointer, towo low to make sense.
+摘要: Joe McGuckin 报告 inetd 在 realloc 触发警告 状态不可恢复需手工重启
+
+
+What causes this?  It seems to unrecoverable. Inetd must be restarted
+by hand.
+
+-joe
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603530 ###
+===== 库内序 145088 | PK 2603530 | 等级 L4 =====
+DATE: 1998-03-21T06:45:04+00:00
+FROM: "John S. Dyson" <toor@dyson.iquest.net>
+SUBJ: Re: inetd in realloc():warning:junk pointer, towo low to make sense.
+摘要: John Dyson 说 3 月中旬至下旬 current 版本触发的 realloc 警告可能已损坏文件系统
+
+> 
+> What causes this?  It seems to unrecoverable. Inetd must be restarted
+> by hand.
+> 
+I have seen the problem when running a buggered version of -current.  If
+you are running a current between 13-mar and 20-mar, you could be hosing
+your filesystems.
+
+John
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603531 ###
+===== 库内序 145089 | PK 2603531 | 等级 L3 =====
+DATE: 1998-03-20T20:38:12+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: netscape4 weirdness: what is happening here??
+摘要: Wilko Bulte 报告 Netscape 4 调用 gettimeofday 与 sigreturn 陷入启动循环
+
+As Randall Hopper wrote...
+> Wilko Bulte:
+>  |I'm running Netscape 4 on my 2.2.5R box. Every now and then it refuses to
+>  |start properly. It just loops, consuming CPU.
+>  |
+>  |   979 netscape.bin CALL  gettimeofday(0xefbfa4f0,0)
+>  |   979 netscape.bin RET   gettimeofday 0
+>  |   979 netscape.bin CALL  sigreturn(0xefbfa5b8)
+>  |   979 netscape.bin RET   sigreturn JUSTRETURN
+>  |   979 netscape.bin PSIG  SIGALRM caught handler=0x76cdf8 mask=0x0 code=0x0
+> ...
+>  |
+>  |This repeats forever. FWIW this happens both with and without the ISDN/ppp
+>  |link to the Internet.
+> 
+> Ollivier Robert:
+>  |export XCMSDB; XCMSDB=/dev/null
+> 
+> garman@earthling.net:
+>  |More simply, every time this happened to me, I found that removing the line:
+>  |
+>  |user_pref("browser.startup.license_accepted", "1000 4.04");
+
+FWIW: the fix Ollivier suggested seems to do the trick for me.
+
+Netscape seems to be a truly weird program. %-)
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_)    Arnhem, The Netherlands       WWW:   http://www.tcja.nl
+----------------------------------------------------------------------------  
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603532 ###
+===== 库内序 145090 | PK 2603532 | 等级 L4 =====
+DATE: 1998-03-21T16:05:31+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: ANNOUNCE: PicoBSD 0.31
+摘要: Andrzej Bialecki 发布 PicoBSD 0.31 单软盘版含 SSH telnet FTP 与 IP 防火墙 SNMP agent
+
+Hi!
+
+I am pleased to announce that PicoBSD version 0.31 is available. This is a
+version of FreeBSD fitting on a single floppy - it can serve as a
+dialup-access tool (includes SSH, telnet and FTP clients), or as a small
+router replacement (includes IP firewall and SNMP agent). Visit
+
+	http://www.freebsd.org/~abial
+
+for further information and download.
+
+Have fun!
+
+Andrzej Bialecki
+
+---------------------+---------------------------------------------------------
+abial@warman.org.pl  | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic  | "Be open-minded, but don't let your brains to fall out."
+Network in Poland    | All of the above (and more) is just my personal opinion.
+---------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

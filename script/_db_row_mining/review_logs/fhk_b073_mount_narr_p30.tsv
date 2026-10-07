@@ -1,0 +1,22 @@
+2603622	885	peter 指出 TCP 传输失败不在文件大小而在内容 若数据链路不完全 8bit 干净且 SCO 终端在做 cr 到 cr-lf 翻译 则 tcpdump 会看到损坏包但 TCP 因校验和失配而丢弃
+2603624	885	josef 询问 FreeBSD 上有没有工具能转发 UDP 与广播包 类似于 Cisco IOS 的 ip forward-protocol 命令
+2603625	885	pratap 说明 ARP 没有二层校验和的原因在于 IP 会穿越多个网段 而 ARP 只在本链路 所以二层 CRC 已足够
+2603627	885	am 提议给 make world 加用户可配置的排除列表 默认空白以免覆盖 tcp wrappers 编辑器和 shell 等历史改动文件 并计划为 install 命令加排除功能与 noclobber.conf
+2603629	885	perlsta 提供了一个 NATd 项目链接供转发 UDP 包参考 附了自己的 unix 信息页面地址 并表示希望这样有帮助
+2603630	885	jdp 询问 ps -l 输出中 RSS 大于 VSZ 的情形 贴出表格末行显示 VSZ 为 644 而 RSS 为 276 并猜测是否与该进程大量使用 mmap 有关
+2603631	885	Ben 建议用 split 命令把文件切成两半 再看哪一半导致传输挂起 然后重复该过程反复二分 直到隔离出致命的字节序列 并认为这会很有启发
+2603633	885	tom 指出标准 UNIX 路由代码可以转发任何类型的 IP 流量 并强调广播通常不应该被转发 转发任何广播流量都是坏主意
+2603638	885	joy 说明因安全原因不允许 NFS 访问其构建服务器 因此改为挂载根目录 usr var 三元组 但 NFS 上无法 chflags noschg 只能手工找不可变文件
+2603639	885	leifn 转述 David Greenman 建议等 2.2.6 的说法 表示今天 cvsup 时已经拿到了 2.2.6
+2603642	885	mshar@vax.ipm.ac.ir 介绍 DIPC 分布式进程间通信可用于组建 PC 集群 提供消息 信号量与透明分布式共享内存 目前仅 Linux 版本 可移植到 FreeBSD
+2603649	885	david greenman 针对引文中 405919 个因坏校验和被丢弃的包大呼数量惊人 并判断根因在 routers 而非两端的 computers
+2603651	885	arman 解释 405919 个坏校验和是因为该 FreeBSD 机器已连续运行 139 天 实际每次 ftp 会话只多出约 7 个 并提议对比两端 tcpdump 输出甚至把 FreeBSD 换成 SCO
+2603658	885	terry 讨论 build-limitation 系统 建议将排除列表合并进去避免每次 install 都扫排除文件 并希望从只读 CDROM 直接构建安装
+2603661	885	josef 询问 FreeBSD 上是否有 DHCP proxy 认为 ISCdhcpd beta_5_14 不算 DHCP 代理 并转述 Terry Lambert 关于 DHCP 转发由 DHCP proxy 完成的说法
+2603663	885	terry 建议参考 Japan 的 WIDE project 认为较新的 ISCdhcpd 可能已能处理这类 DHCP 转发 并建议用 ipfw 的 DIVERT 规则配合 BPF 转发 UDP 包
+2603666	885	terry 回应 unix domain socket 传递 fd 的思路 提出如何抵达信息交换中心 建议改用 SYSV IPC
+2603667	885	archie 说明较新的 ISC DHCP server 同时包含 gateway 与 client 代码 并给出 www.isc.org 作为参考
+2603668	885	archie 转告 Netscape 正在举办 free the lizard 开源代码发布活动 邀请加入 mozilla.org party 页面
+2603670	885	john s dyson 说明 FreeBSD current 已使用 4MB 页面 但仅限内核与 device buffers 如视频内存 并表示如果实际应用能通过 4MB 页映射预分配内存获益 愿负责实现
+2603672	885	giannis 表示已下载并安装 2.2.2 并搭建拨号接入服务器 希望创建日志文件记录每个用户从串口登录的登录与登出时间及日期 以便统计串口流量
+2603673	885	p6ms2t15 询问如何读取 zn 以太网卡上的数据 例如已发送的分组数 已接收的分组数与碰撞次数 并说自己就是 Stephan losa

@@ -1,0 +1,764 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603033 ###
+===== 库内序 144591 | PK 2603033 | 等级 L4 =====
+DATE: 1998-03-08T05:59:24+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: weird problem (lost packets) in iijppp
+摘要: Luigi Rizzo 从 brian 主页下载的 ppp 版本未复现丢包问题
+
+> Would you be able to try this with the ppp from -current, -stable or 
+> http://www.FreeBSD.org/~brian ?
+
+well the problem seems not to occur in the version i got from your URL
+above...
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603038 ###
+===== 库内序 144596 | PK 2603038 | 等级 L3 =====
+DATE: 1998-03-08T09:04:35+00:00
+FROM: freebsd@isvara.net
+SUBJ: TuneFS options...
+摘要: 询问 tunefs 应使用何种 special-device 是否须单用户模式运行
+
+Hi,
+    when I use tunefs what special-device do I tell it to use (I've
+tried /dev/wd0a, etc.).
+Do I run tunefs from single-user mode (ie. readonly partitions)?
+
+I think I'm missing something here.
+
+Thanks,
+    Dan
+
+_____________________________________
+Daniel J Blueman
+BSc Computation, UMIST, Manchester
+Email: blue@challenge.isvara.net
+Web: http://www.challenge.isvara.net/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603039 ###
+===== 库内序 144597 | PK 2603039 | 等级 L4 =====
+DATE: 1998-03-08T09:32:27+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: TuneFS options...
+摘要: Greg Lehey tunefs 用 raw 设备如 rwd0a 可作用于未挂载文件系统但根分区困难
+
+On Sun,  8 March 1998 at  9:04:35 +0000, freebsd@isvara.net wrote:
+> Hi,
+>     when I use tunefs what special-device do I tell it to use (I've
+> tried /dev/wd0a, etc.).
+
+Use the raw device, in this case /dev/rwd0a.
+
+> Do I run tunefs from single-user mode (ie. readonly partitions)?
+
+You can run tunefs on any unmounted file system.  Unfortunately, that
+makes it almost impossible to run it against the root file system,
+which appears to be your intention.  To do that, you'll have to boot
+from floppy and use the fixit floppy.  For the others, single-user is
+a good idea.
+
+Greg
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603040 ###
+===== 库内序 144598 | PK 2603040 | 等级 L4 =====
+DATE: 1998-03-08T11:00:38+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: DPT COMMITED in 2.2, please test
+摘要: Julian Elischer DPT 已入 2.2 需 config 加 DPTOPT 直至证明工作后再去除该选项
+
+
+as it says..
+I've commited the DPT into 2.2
+please test...
+you need options DPTOPT in your config file
+until it's been proven to work, then that option should not be needed.
+
+julian
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603045 ###
+===== 库内序 144603 | PK 2603045 | 等级 L4 =====
+DATE: 1998-03-08T19:57:22+00:00
+FROM: "Alfred Perlstein" <perlsta@cs.sunyit.edu>
+SUBJ: Re: Uncle Sam, got a million bucks?
+摘要: Alfred Perlstein 应聚焦 wine 项目集成 win32 会引入无用调用使 FreeBSD 臃肿
+
+why would we do that? instead we should focus on the wine project,
+integrating win32 to freebsd would just bloat it with useless calls that
+would never be used in normal u*ix apps.
+
+having wine as a seperate app would be the best choice, wine support should
+be important to freebsd.
+
+-Alfred
+
+-----Original Message-----
+From: Terry Lambert <tlambert@primenet.com>
+To: David Kelly <dkelly@hiwaay.net>
+Cc: hackers@FreeBSD.ORG <hackers@FreeBSD.ORG>
+Date: Friday, March 06, 1998 3:49 PM
+Subject: Re: Uncle Sam, got a million bucks?
+
+
+>> > Wandering , if we can get a grant from the goverment to support the SMP
+>> > project or to support FreeBSD ?
+>>
+>> I think you'd stand a better chance with the US Gov if you sold your
+>> pitch as a free and secure replacement for Windows. NT "security" was
+>> pitched hard and only now is the true situation being realized.
+>>
+>> Problem is to replace Windows you would also have to replace Word and
+>> Excel. These days government computers are essentially Microsoft Office
+>> platforms, and Microsoft Office is essentially the OS.
+>
+>Get a grant for Win32 on FreeBSD first.  8-).
+>
+>
+> Terry Lambert
+> terry@lambert.org
+>---
+>Any opinions in this posting are my own and not those of my present
+>or previous employers.
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603047 ###
+===== 库内序 144605 | PK 2603047 | 等级 L3 =====
+DATE: 1998-03-08T20:11:27+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Uncle Sam, got a million bucks? 
+摘要: Amancio Hasty 曾有公司专注类似 wine 产品只差一点助力被我们错过但已忘记具体名称
+
+
+Actually, there was company dedicated with a product similar to wine
+and they required just a little push which we didn't give them.
+
+Forgot which company it was however I am sure that Terry knows
+who I am talking about .
+
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603048 ###
+===== 库内序 144606 | PK 2603048 | 等级 L4 =====
+DATE: 1998-03-08T20:15:05+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: make world problems...
+摘要: David E. Cross 2.2-STABLE make world 缺 sl_SI.ISO_8859-2 locale 目录需手工 mkdir
+
+I experienced the following problem on a 2.2-STABLE machine as I did a
+make world the past 2 days:
+
+install: /usr/share/locale/sl_SI.ISO_8859-2/LC_TIME: No such file of
+directory
+
+The fix was simple enough, make the directory
+/usr/share/locale/sl_SI.ISO_8859-2, should not part of the installworld be
+to setup directories and symlinks though?
+
+--
+David Cross
+UNIX Systems Administrator
+GE Corporate R&D
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603050 ###
+===== 库内序 144608 | PK 2603050 | 等级 L3 =====
+DATE: 1998-03-08T20:31:04+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: Re: DPT COMMITED in 2.2, please test
+摘要: David E. Cross 请解释 DPT 具体是什么
+
+On Sun, 8 Mar 1998, Julian Elischer wrote:
+
+> 
+> as it says..
+> I've commited the DPT into 2.2
+> please test...
+> you need options DPTOPT in your config file
+> until it's been proven to work, then that option should not be needed.
+> 
+
+Pardon my naive'ty, but what is DPT?
+
+--
+David Cross
+UNIX Systems Administrator
+GE Corporate R&D
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603052 ###
+===== 库内序 144610 | PK 2603052 | 等级 L4 =====
+DATE: 1998-03-08T19:04:12+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: weird problem (lost packets) in iijppp
+摘要: Luigi Rizzo：建议用 deny deflate 与 disable deflate 强制 pred1 压缩排查丢包
+
+> This sounds like a compression dictionary problem.  I haven't read 
+
+right, i also suspected that... but i wonder what has changed
+between 2.2.1 and your code in this respect...
+
+> I got your other mail that says it doesn't happen with the latest 
+> version.  Can you try the latest version with `deny deflate' and 
+> `disable deflate' ?  This will force pred1 compression again :-)
+
+will try tomorrow
+
+> This area needs looking at.  The two mallocs (one for the mbuf and 
+> one for the data) can be consolidated into one, but the queues may 
+> get quite long.  It's possible that packets may be sent that are 
+> blocked by the dial filter, but not by the output filter.  These 
+
+doesn't make much sense to keep such long queues, since most things
+will be retransmitted in 5-10s anyways because of timeouts.
+
+more on this later...
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603053 ###
+===== 库内序 144611 | PK 2603053 | 等级 L4 =====
+DATE: 1998-03-08T20:34:41+00:00
+FROM: Daniel Berlin <root@danberlin.resnet.rochester.edu>
+SUBJ: Re: DPT COMMITED in 2.2, please test
+摘要: Daniel Berlin：DPT 是 SCSI 控制器厂商擅长 raid ISA DPT 2021 快过多数 PCI 卡
+
+Distributed Processing Technology
+They make scsi controllers.
+Damn good at raid.
+My ISA DPT 2021 kicked the crap out of most PCI cards.
+
+
+On Sun, 8 Mar 1998, David E. Cross wrote:
+
+> On Sun, 8 Mar 1998, Julian Elischer wrote:
+> 
+> > 
+> > as it says..
+> > I've commited the DPT into 2.2
+> > please test...
+> > you need options DPTOPT in your config file
+> > until it's been proven to work, then that option should not be needed.
+> > 
+> 
+> Pardon my naive'ty, but what is DPT?
+> 
+> --
+> David Cross
+> UNIX Systems Administrator
+> GE Corporate R&D
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603054 ###
+===== 库内序 144612 | PK 2603054 | 等级 L4 =====
+DATE: 1998-03-08T19:58:51+00:00
+FROM: "Alfred Perlstein" <perlsta@cs.sunyit.edu>
+SUBJ: Re: Where is OS-BS?
+摘要: Alfred Perlstein：指出 OS-BS 工具位于 ftp://ftp.freebsd.org/pub/FreeBSD/tools
+
+this isn't a -hackers question
+
+
+but anyway:
+ftp://ftp.freebsd.org/pub/FreeBSD/tools
+
+-Alfred
+
+-----Original Message-----
+From: Vinay Bannai <bannai@best.com>
+To: freebsd-hackers@FreeBSD.ORG <freebsd-hackers@FreeBSD.ORG>
+Date: Friday, March 06, 1998 8:37 PM
+Subject: Where is OS-BS?
+
+
+>Can anyone point me the location of OS-BS? URL perhaps? Source code?
+>
+>Thanks
+>Vinay
+>-- 
+>Vinay Bannai                     E-mail: bannai@best.com
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603055 ###
+===== 库内序 144613 | PK 2603055 | 等级 L4 =====
+DATE: 1998-03-08T22:06:10+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: TuneFS options...
+摘要: Ollivier Robert：单用户模式下 tunefs / 后立即重启即可因文件系统只读无需先卸载
+
+According to Greg Lehey:
+> You can run tunefs on any unmounted file system.  Unfortunately, that
+> makes it almost impossible to run it against the root file system,
+
+When in single-user, you can tunefs / and reboot immediately since it is
+read-only.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #0: Sun Mar  1 18:50:39 CET 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603056 ###
+===== 库内序 144614 | PK 2603056 | 等级 L4 =====
+DATE: 1998-03-08T23:01:13+00:00
+FROM: Brian Somers <brian@Awfulhak.org>
+SUBJ: Re: weird problem (lost packets) in iijppp 
+摘要: Brian Somers：2.2.1 到新版无实质变化但 DEFLATE 优先于 PREDICTOR1 怀疑新版启用 deflate 压缩
+
+> > This sounds like a compression dictionary problem.  I haven't read 
+> 
+> right, i also suspected that... but i wonder what has changed
+> between 2.2.1 and your code in this respect...
+[.....]
+
+Nothing, but DEFLATE is preferred over PREDICTOR1..... I suspect you 
+got deflate compression with the new version.
+
+> 	cheers
+> 	luigi
+
+-- 
+Brian <brian@Awfulhak.org>, <brian@FreeBSD.org>, <brian@OpenBSD.org>
+      <http://www.Awfulhak.org>
+Don't _EVER_ lose your sense of humour....
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603057 ###
+===== 库内序 144615 | PK 2603057 | 等级 L4 =====
+DATE: 1998-03-08T23:02:25+00:00
+FROM: Randall Hopper <rhh@ct.picker.com>
+SUBJ: Re: emacs & less bug (process disowned)
+摘要: Randall Hopper：/bin/sh SIGIO 缺陷致 emacs 脱离 configure 加 --with-exec-shell=SHELL
+
+Ollivier Robert:
+ |According to Randall Hopper:
+ |> Any thoughts?
+ |
+ |The problem is that emacs plays with SIGIO (^G) and due to a bug in /bin/sh 
+ |(used to run emacs from Mutt), it makes emacs detach. There even now an
+ |option for mutt to use another shell.
+ |
+ |Run configure with
+ |
+ | --with-exec-shell=SHELL    Specify alternate shell (ONLY if /bin/sh is broken)
+ |
+ |Details are a bit muddy in my memory but that should do it.
+
+Thanks. (sorry about the time lag)  Using /bin/csh clears it right up.
+
+BTW, do you know if the /bin/sh SIGIO-related bug has been reported and/or
+fixed in -current?
+
+Thanks,
+
+Randall
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603058 ###
+===== 库内序 144616 | PK 2603058 | 等级 L3 =====
+DATE: 1998-03-08T23:29:45+00:00
+FROM: "Christopher J. White" <cjwhite@empire.net>
+SUBJ: FreeBSD routing code
+摘要: Christopher J. White：想用 BSD 做 IP 转发引擎接 OSPF VxWorks 上 PowerPC 目标 10000 路由
+
+I'm interested in the possiblity of using BSD code
+as the IP forwarding engine, interfaced to commercial
+versions of routing protocols such as OSPF.  This is all
+using VxWorks on a PowerPC.  The target is a rather
+high performance router capable of upto 10,000 routes.
+
+I've heard that BSDs TCP/IP is just about the fastest
+around, so I thought I'd take a look at it.  A thread
+from about two years ago indicated that BSD as a router
+is certainly possible, but this seemed to be system running
+the full BSD operating system, not just the router code.
+
+Has anyone ripped out just the BSD routing code to
+build a router on top of another operating system?
+How much effort is involved?
+
+I'm new to BSD code, but on the face of it, the routing 
+code seems pretty tightly coupled to the kernel.  
+
+Any thoughts?
+
+...cj
+Christohper J. White
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603059 ###
+===== 库内序 144617 | PK 2603059 | 等级 L3 =====
+DATE: 1998-03-08T23:45:49+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: FreeBSD routing code 
+摘要: Amancio Hasty：提及 OSKit 也从各操作系统取特性但建议路由器用途直接用 FreeBSD 裁剪
+
+
+I think that there is an OSKit out in the net which has taken different 
+features from OSes. I am not involved in this effort.
+
+A friend of mine wants to use OSKit for a router thingy and I just
+told him to grab FreeBSD and hack it down to his needs.
+
+	Amancio
+
+
+>From: Jay Lepreau <lepreau@cs.utah.edu>
+>To: oskit-users@cs.cs.utah.edu
+>Subject: OSKit release story
+>Date: Wed, 11 Feb 98 04:56:26 MST
+>
+>Hi folks, it's been a long time.  This message is to do four things.
+>Tell you (yet again!) that the OSKit will be released soon.
+>Give you an idea of why it has taken so long.
+>Give you an idea of the licensing.
+>Give you an idea of what will be in the release.
+>
+>I said we'd release the OSKit last year, several times.  None happened.
+>So I stopped saying anything.  I believe it's now close enough to say
+>"soon" -- I believe in the next couple of weeks.  Although we've made a
+>lot of additions and fixes to both the code and the documentation since
+>then-- many mentioned below-- those weren't the main reasons for the
+>delay.  The main problem was working out licensing terms acceptable to us
+>on the team, to the university, and to its lawyers.  For the record, most
+>of the technical people in the team just wanted to push it out any old
+>free way.  Personally, I find this kind of stuff distasteful, and
+>compounded by all the other demands on my time, didn't devote enough
+>concentrated effort to it.
+>
+>Well, it's finally pretty much settled.  The licensing will be GPL for
+>those parts which encapsulate GPL'ed code, and de facto GPL for the rest
+>(modeled after Bostic's DB2.0 and McKusick's soft update licenses).  A
+>user can negotiate with the University a different license for the latter.
+>Note that although University officialdom has ok'ed the concept, the
+>final wording hasn't been cleared yet.
+>
+>I do not intend to get into a discussion of these issues.  This message is
+>to let you know what's coming, and to excuse the technical Flux people of
+>guilt >
+>So, putting administrivia behind us, on to lists.   What's new?
+>
+>Components:
+>NetBSD ffs filesystem
+>Linux files
+[…中段省略 957 字符…] it X clients
+>
+>Apps:
+>DoomOS -- but no sound right now
+>netboot: load a file from an NFS server and boot it
+>Lots of simple example programs
+>(Unfortunately the Kaffe port isn't quite ready)
+>
+>Doc:
+>Up to a frightening 622 pages.  Luckily I think you can often
+>just be guided by the examples, using the doc mainly for reference.
+>
+>Jay Lepreau
+>Flux Project, University of Utah
+>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603060 ###
+===== 库内序 144618 | PK 2603060 | 等级 L3 =====
+DATE: 1998-03-09T00:16:19+00:00
+FROM: Joao Carlos Mendes Luis <jonny@coppe.ufrj.br>
+SUBJ: Re: VM/Buffer cache sizing... (e.g. for serving NFS)
+摘要: Joao Carlos Mendes Luis：引用 John S. Dyson 说明 FreeBSD 有写回与写穿两种缓存
+
+#define quoting(John S. Dyson)
+// There are two kinds of caching in FreeBSD, (write-back) and
+// (write-through, read) caching.  Note that the write-back caching
+// is limited to a reasonable size (to keep the disk from being
+// overwhelmed by pending write requests), but the other cache
+// is all of memory (including .text and mmapped files.)  The two
+// caches are physically the same and totally coherent, but logically
+// slightly different.  FreeBSD will not sandbag your disk subsystem
+// with pending write requests.  This design keeps the 'sync' command
+// from freezing your system :-).
+
+Let me try to understand.  The write-back cache is has as small
+timeout, after which it starts writing.  After writing, those pages
+are sent to the write-through cache, in case they are used again.
+If you would wait for sync() or for a memory leak to start writing,
+all those writes would compete in time without need.  Also, system
+stabilty would worse because more data is kept desnecessarily in
+memory for more time.  Is this the point ?
+
+A question somewhat related: in top(8), what's the diffence between
+cache and buffer memory ?  I've read that active memory is also
+used for cacheing, so how can we measure if a machine would perform
+better with more memory for cacheing ?
+
+TIA,
+
+					Jonny
+
+--
+Joao Carlos Mendes Luis			jonny@gta.ufrj.br
++55 21 290-4698				jonny@coppe.ufrj.br
+Universidade Federal do Rio de Janeiro	UFRJ/COPPE/CISI
+PGP fingerprint: 29 C0 50 B9 B6 3E 58 F2  83 5F E3 26 BF 0F EA 67
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603062 ###
+===== 库内序 144620 | PK 2603062 | 等级 L3 =====
+DATE: 1998-03-09T01:45:06+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Uncle Sam, got a million bucks?
+摘要: Terry Lambert：那公司是 Willows 商业且面向大 UNIX FreeBSD 加 Willows 成本超 Windows95
+
+> Actually, there was company dedicated with a product similar to wine
+> and they required just a little push which we didn't give them.
+> 
+> Forgot which company it was however I am sure that Terry knows
+> who I am talking about .
+
+Willows.
+
+The problem with this product is that it's commercial, and targetted
+at big UNIX.  The out of the box cost for FreeBSD + Willows would
+exceed the out of the box cost for Windows95.
+
+The governement is generally willing to give grants in order to
+support work that results in them not requiring sole-source
+justification documents on contracts.
+
+If you watched any of the hearings on C-SPAN, or saw Bill on Charlie
+Rose that night, trying to spin the monopoly issue, you'd think that
+maybe Bill himself would support an effort.  ;-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603063 ###
+===== 库内序 144621 | PK 2603063 | 等级 L4 =====
+DATE: 1998-03-09T01:53:52+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: kernel wishlist for web server performance
+摘要: Terry Lambert：质疑为何要做成系统调用建议 mmap 后大 write 免复制配合 AIO 免额外线程
+
+> > A sendfile() (eg. HPUX 11.x) or TransmitFile (eg. WinNT) system call. 
+> > The key features are: 
+> > 	- it can transmit from an arbitrary start position and an 
+> > 	  arbitrary length.  Sending starting from the current position
+> 
+> why do you want it to be a syscall ? Can't you mmap() the file and then
+> issue a large write() to save the copy ? (and having AIO might also
+> save you from using a separate thread...)
+
+To save the copy from the backing object to the mbuf, I'm betting.
+
+A lot of NT products use TransmitFile() to avoid the overhead
+involves in the way most WinSock implementations operate (the last
+NT product I worked on used this, in fact).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603064 ###
+===== 库内序 144622 | PK 2603064 | 等级 L3 =====
+DATE: 1998-03-09T02:13:07+00:00
+FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG>
+SUBJ: Re: Uncle Sam, got a million bucks? 
+摘要: Jordan K. Hubbard：Wine 从来都需要远超一点推动力相比 SoftPC 运行 Win95 二进制远不够用
+
+> Actually, there was company dedicated with a product similar to wine
+> and they required just a little push which we didn't give them.
+
+Wine has always required more than a "little push", it's required a
+Saturn rocket up the ass.  When compared to real solutions like SoftPC
+from Insignia solutions, it's not even close to being sufficient for
+the intended purpose (running popular Win95 binaries, in case people
+forgot) and I doubt that it ever will be.
+
+Sorry for the rampant pessimism but I've watched that project for
+going on 3 years now and I think I could grow old and die waiting for
+it to bear any real fruit.  They bit off more than they could chew and
+it wouldn't be the first time somebody's done that.  At this point,
+I'd say it'd be better to simply work on making BOCHS perform well and
+forget WINE ever existed.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603065 ###
+===== 库内序 144623 | PK 2603065 | 等级 L4 =====
+DATE: 1998-03-09T02:14:42+00:00
+FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG>
+SUBJ: Re: make world problems... 
+摘要: Jordan K. Hubbard：目录缺失跑 mtree -deU -f /usr/src/etc/mtree/BSD.usr.dist -p /usr
+
+> I experienced the following problem on a 2.2-STABLE machine as I did a
+> make world the past 2 days:
+> 
+> install: /usr/share/locale/sl_SI.ISO_8859-2/LC_TIME: No such file of
+> directory
+
+Things like this will pop up from time to time - you need to rerun the
+mtree rules in order to create the correct directory structure:
+
+        mtree -deU -f /usr/src/etc/mtree/BSD.usr.dist -p /usr
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603066 ###
+===== 库内序 144624 | PK 2603066 | 等级 L3 =====
+DATE: 1998-03-09T02:17:16+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Uncle Sam, got a million bucks?
+摘要: Terry Lambert：WINE 运行时 WIN32 应用表现不佳且需 C:\WINDOWS 相关组件
+
+> why would we do that? instead we should focus on the wine project,
+> integrating win32 to freebsd would just bloat it with useless calls that
+> would never be used in normal u*ix apps.
+> 
+> having wine as a seperate app would be the best choice, wine support should
+> be important to freebsd.
+
+Last time I checked, WINE didn't really run WIN32 applications all that
+well, and required components form C:\WINDOWS from a DOS machine to
+function (mostly DLL's).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

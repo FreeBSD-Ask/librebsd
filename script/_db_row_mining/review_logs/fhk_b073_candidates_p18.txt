@@ -1,0 +1,35 @@
+2603303|L3|求助：2.2.5 引导盘 probe 不识别 3f8 irq4 与 2f8 irq3 的 sio0 与 sio1
+2603305|L4|insat 无线调制解调器无需写驱动即可在 FreeBSD 下工作
+2603306|L3|求助：486DX2-50 VLB 主板 2.2.5R 下 IDE 加 LPIP 出现随机锁死
+2603308|L4|announce GUI Web admin 0.96 含 Tk 与 CGI 界面并实现用户管理
+2603309|L4|Terry Lambert：vn_read 与 vn_write 调用时 vp 应为 unlocked
+2603310|L3|Mike Smith：怀疑是 Iwill 主板配合 Acer 多合一 IO 芯片所致
+2603311|L3|Karl Denninger：解锁 NFS 文件时先刷新缓存属性再释放内核锁是否可行
+2603312|L3|提问：0.96 版本不到 0.95 三分之一体积究竟移除了什么内容
+2603314|L3|Karl Denninger：开启 NQNFS 后系统几乎立刻硬挂起 I/O 全无
+2603316|L3|求助：buildworld 构建共享 C 库时 nm 反复报 no name list 与 Error code 1
+2603318|L3|Brian Handy：怀疑本机硬件有问题同源 rebuildworld 第二次成功
+2603319|L3|Studded：请先说明运行的是 current 还是 stable 再转投对应列表
+2603324|L3|Jordan Hubbard：征稿期十天期望配合 2.2.6 CDROM 一并发出
+2603325|L3|sbabkin：请就 FreeBSD 支持的 DVD drives 型号给出更详细资料
+2603326|L3|Luigi Rizzo：询问投稿是否一律需控制在 300 字以内
+2603329|L3|Nate Johnson：依据 Complete FreeBSD 封底 FreeBSD on DVD 订购单希望有兼容驱动器
+2603330|L4|Jordan Hubbard：DVD 广告在成功复刻前即已外发之后才发现光盘复刻厂无法处理
+2603331|L3|Andrzej Bialecki：希望与 DG 就 wcarchive 建立过程做专访对 ISP 尤有可读性
+2603332|L3|Luigi Rizzo：与其做专访不如写一篇关于 PicoBSD 的文章
+2603334|L3|提问：SJIS 与 EUC locale 支持为何放在 libxpg4 而不放进 libc
+2603335|L3|Newbie 求助 LFS 文献并询问日志文件系统与日志结构文件系统有何区别
+2603337|L3|Ron Rosson：希望读到建立 wcarchive 过程中所作的取舍抉择
+2603338|L3|Archie Cobbs：转发 freebsd-security 关于 DIVERT socket 与 TCP source routing 问题
+2603339|L3|Kent Gordon：询问 kernel config 中如何调整以扩大 SYSV 共享内存上限
+2603340|L3|Alfred Perlstein：求助 DPT 驱动的稳定度依赖硬件兼容与配置说明
+2603341|L3|Wilko Bulte：Netscape 4 在 2.2.5R 上循环吃满 CPU ktrace 显示反复 gettimeofday
+2603342|L3|Lars Jonas Olsson：ports 的 slapd 会死循环询问是否有多线程可用版本
+2603343|L3|Eivind Eklund：据作者所说 DPT 应算稳定但本人尚未实测硬件
+2603344|L4|Ollivier Robert：移除 preferences.js 或给 netscape script 加 XCMSDB=/dev/null 可解
+2603345|L4|Ollivier Robert：内核配置加 options SHMMAXPGS=1024 可扩到 4096 KB 共享内存
+2603346|L4|garman：删除 user_pref browser.startup.license_accepted 即可复现启动
+2603347|L3|Brandon Huey：询问 dpt0 驱动的内核构建成功案例与 2.2.6 boot floppy 镜像
+2603348|L3|Jordan Hubbard：他在征大家写文章而非让他人替他列选题
+2603349|L3|Simon Shapiro：建议将 DPT 资料并入 FreeBSD handbook 并问 Jordan 可否做 newsletter 核心
+2603350|L3|Terry Lambert：ports 的 LDAP 完全不可用建议换用别的来源

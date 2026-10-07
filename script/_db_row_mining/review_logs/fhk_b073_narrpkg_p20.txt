@@ -1,0 +1,22 @@
+2603303|L3|求助：2.2.5 引导盘 probe 不识别 3f8 irq4 与 2f8 irq3 的 sio0 与 sio1
+2603305|L4|insat 无线调制解调器无需写驱动即可在 FreeBSD 下工作
+2603306|L3|求助：486DX2-50 VLB 主板 2.2.5R 下 IDE 加 LPIP 出现随机锁死
+2603308|L4|announce GUI Web admin 0.96 含 Tk 与 CGI 界面并实现用户管理
+2603309|L4|Terry Lambert：vn_read 与 vn_write 调用时 vp 应为 unlocked
+2603310|L3|Mike Smith：怀疑是 Iwill 主板配合 Acer 多合一 IO 芯片所致
+2603311|L3|Karl Denninger：解锁 NFS 文件时先刷新缓存属性再释放内核锁是否可行
+2603312|L3|提问：0.96 版本不到 0.95 三分之一体积究竟移除了什么内容
+2603314|L3|Karl Denninger：开启 NQNFS 后系统几乎立刻硬挂起 I/O 全无
+2603316|L3|求助：buildworld 构建共享 C 库时 nm 反复报 no name list 与 Error code 1
+2603318|L3|Brian Handy：怀疑本机硬件有问题同源 rebuildworld 第二次成功
+2603319|L3|Studded：请先说明运行的是 current 还是 stable 再转投对应列表
+2603324|L3|Jordan Hubbard：征稿期十天期望配合 2.2.6 CDROM 一并发出
+2603325|L3|sbabkin：请就 FreeBSD 支持的 DVD drives 型号给出更详细资料
+2603326|L3|Luigi Rizzo：询问投稿是否一律需控制在 300 字以内
+2603329|L3|Nate Johnson：依据 Complete FreeBSD 封底 FreeBSD on DVD 订购单希望有兼容驱动器
+2603330|L4|Jordan Hubbard：DVD 广告在成功复刻前即已外发之后才发现光盘复刻厂无法处理
+2603331|L3|Andrzej Bialecki：希望与 DG 就 wcarchive 建立过程做专访对 ISP 尤有可读性
+2603332|L3|Luigi Rizzo：与其做专访不如写一篇关于 PicoBSD 的文章
+2603334|L3|提问：SJIS 与 EUC locale 支持为何放在 libxpg4 而不放进 libc
+2603335|L3|Newbie 求助 LFS 文献并询问日志文件系统与日志结构文件系统有何区别
+2603337|L3|Ron Rosson：希望读到建立 wcarchive 过程中所作的取舍抉择
