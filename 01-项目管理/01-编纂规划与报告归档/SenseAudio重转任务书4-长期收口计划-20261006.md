@@ -19,6 +19,7 @@
 
 - WS 流式端点 `wss://api.senseaudio.cn/ws/v1/realtime/transcriptions`，模型 `senseaudio-asr-stream-1.5-260910`，16k mono s16le、server_vad、smart_edit off（verbatim）、15 分钟分块（BLOCK_SECONDS=900）、~8x 实时；**术语热词已撤销**；PCM 流式读取（`02_transcribe.py` seek/read 增量，RSS 44–55MB/worker）。
 - **服务端全局并发上限 ≈30–40**（32/48/80/120 路实测 1011 风暴），**30 路＝上限内最优**；零星 1011 走 worker 内部 retry 自愈，风暴则降并发。
+- **120 路实测定案（2026-10-07 18:0x-18:13，主理人令测试）**：120 路重启后 ~113 路起**大量 1011 "realtime transcribe service unavailable"**（新 worker 日志 18 分钟内 1,652 条、重试风暴拖慢实际吞吐），本机 **RAM load 93%、可用 1.0 GB**（15.8 GB 机；30 路时 74%/4.0 GB）；**吞吐实测 120 路＝4 期/8min（30 期/h），低于 30 路基线 ~49 期/h**。结论＝**120 路双重约束不可行（服务器 1011 拒绝＋本机内存近枯），30 路仍为最优**；已按机制回落 30 路（杀旧＋重启，RAM 回升 4.0 GB/74%）。附带：120 路期间 giceCouM3F8 ffmpeg 解码探针失败（rc=4294967294）——该期已完整 reviewed（episodes 表数字 id 319），无数据损失。
 
 ## 三、key（同任务书3）
 
