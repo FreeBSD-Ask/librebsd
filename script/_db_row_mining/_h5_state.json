@@ -1,0 +1,2118 @@
+{
+ "decisions_20260925": {
+  "d1_cross_system_host": {
+   "verdict": "采纳：81.20 与 81.21 同时接纳为跨系统宿主",
+   "代价": "h5mb 得第5键 8120（蓝牙桶 3.5%）；h5mm 保住唯一主宿主 8121（音频 27.3%）。若不采，h5mm 剩约 6% 覆盖，等于判 36779 封整体缓开",
+   "判据": "标题后缀同为（跨 BSD/UNIX/macOS 扩展）＋正文要点确有 BSD 对照＋两节均自陈「本节仅释读 Linux 一支」＋两节均被 R1969 类整改清过误配块。四要件齐备、两节同构，不能只取其一",
+   "实证": "81.20-bluez.md:5「与 FreeBSD/NetBSD 蓝牙栈在功能上类似但实现独立」、:11「后者采用 Netgraph 节点图」；81.21-alsa.md:11「ALSA 与 BSD audio(4) 在功能上类似但实现路径独立」；81.20:20 与 81.21:21 均有订正注",
+   "风险管控": "8121「仅释读 Linux 一支」与误配史是真实风险，但属叙述层纪律问题（逐块回源正文＋NONE 判定），不是宿主池问题。宿主池只是候选池，纪律0 逐块复核才是防线"
+  },
+  "d2_era_lock_criterion": {
+   "verdict": "采纳判据：优先选无时代限制节；仅当「全书唯一以该主题正面立题的节」本身时代锁死时例外",
+   "目的": "三案一判据自洽，写进台账避免下一轮批次重新争论",
+   "结果": "15413 留（全书唯一写 base system 精简；本库该段仅 657/35166 行）；1064 撤（有 112.10 可用）；h5sec 那 12 个按版本切分节撤（有 160.9 可用）"
+  },
+  "d3_host_1718_validation": {
+   "verdict": "实证为伪阻塞，无需任何动作——不放宽校验，也不给文件补二级标题",
+   "实证": "load_hosts() 解析总数 1993，1718 正确解析到 第08卷/第171章/171.8-BSD-init-发展史-从-UNIX-V6-init-到现代.md；outline 模板 grep 零 ## 假设；全管线无校验要求文件内含二级标题",
+   "结论": "提案担忧是「若」字开头的假设。H1 已是完整节题，补二级标题属纯冗余"
+  },
+  "d4_h5mm_choice": {
+   "verdict": "选①：按 3 键（8121/12410/8812）开批，不加 optional 2208/1949；66% 无宿主素材走 NONE 纪律，不硬塞",
+   "为何不选②": "倒转大纲规定的工作顺序——节标题与范围本应由挖掘到的素材确定；且只建 360 不建同为空的 359 属任意",
+   "为何不选③": "会连 34% 合法素材一起搁置（音频根帖 29.1%、图形 3.1%、1995–1998 段约 70 封），而这三块宿主吻合度是实证的",
+   "关键实证": "第360章 概述.md 原文「本章节文件待对应批次的行级挖掘完成后建立——2026-09-15 建卷时留痕」；第21卷六章中 358/359/360/361 四章节文件均为 0，356/357 各 4 节；SUMMARY.md 中 [360. 条目 0 条，键无法编码",
+   "遗留": "第21卷 359/360/361 章登记为大纲侧缺口，待对应批次行级挖掘完成后按大纲规定顺序建节"
+  },
+  "d5_no_host_rule": {
+   "verdict": "全局「无宿主」记录规则：素材无大纲对应节时判 NONE，不得为凑量灌进最近的节",
+   "实证": "五库共同失败模式——h5mb 无 PCMCIA/ACPI/笔记本选型节（pccard|pcmcia|cardbus 与 acpi|电源管理 在 SUMMARY 均 0 命中）；h5ar 有 9.8% 流程治理＋libc/ABI 之争无节；h5sec 54.18% RESID；h5mm 66%；h5fs 约 26% 无关键词 subject",
+   "执行": "h5mb 的 ACPI 类封一律判 NONE，不得灌进 12410"
+  }
+ },
+ "libs": [
+  {
+   "base_tag": "h5x_b502",
+   "batches": [
+    {
+     "cands": "366",
+     "claims": "CL-RM-121864-122229",
+     "commit": "bb557680a",
+     "n": 6000,
+     "note": "主会话直读 p1-p9(324 候选)+3 路读手 p10(21)/p11(15)/p12(16) 完成，待收尾合并",
+     "offset": 1000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5x_b502_1"
+    },
+    {
+     "cands": "115",
+     "claims": "CL-RM-124532-124646",
+     "commit": "a740df7d5",
+     "n": 1152,
+     "note": "",
+     "offset": 7000,
+     "parts": 3,
+     "state": "committed",
+     "tag": "h5x_b502_2"
+    }
+   ],
+   "hosts_final": [
+    "892",
+    "894",
+    "895"
+   ],
+   "hosts_guess": [
+    "892",
+    "894",
+    "895"
+   ],
+   "n_batches": 2,
+   "name": "freebsd-x11",
+   "note": "",
+   "offset": 1000,
+   "remaining": 7152,
+   "state": "committed",
+   "total": 8152
+  },
+  {
+   "base_tag": "h5ip_b503",
+   "batches": [
+    {
+     "cands": "664",
+     "claims": "CL-RM-122230-122893",
+     "commit": "57f8c01e8",
+     "n": 6000,
+     "note": "",
+     "offset": 1000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5ip_b503_1"
+    },
+    {
+     "cands": "228",
+     "claims": "CL-RM-124720-124947",
+     "commit": "0d4fcd8d8",
+     "n": 2388,
+     "note": "",
+     "offset": 7000,
+     "parts": 5,
+     "state": "committed",
+     "tag": "h5ip_b503_2"
+    }
+   ],
+   "hosts_final": [
+    "1032"
+   ],
+   "hosts_guess": [
+    "1032",
+    "10017"
+   ],
+   "n_batches": 2,
+   "name": "freebsd-ipfw",
+   "note": "",
+   "offset": 1000,
+   "remaining": 8388,
+   "state": "committed",
+   "total": 9388
+  },
+  {
+   "base_tag": "h5dk_b506",
+   "batches": [
+    {
+     "cands": "348",
+     "claims": "",
+     "commit": "37feb12e9",
+     "n": 6000,
+     "note": "",
+     "offset": 1000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5dk_b506_1"
+    },
+    {
+     "cands": "302",
+     "claims": "",
+     "commit": "748e6fc66",
+     "n": 2545,
+     "note": "",
+     "offset": 7000,
+     "parts": 6,
+     "state": "committed",
+     "tag": "h5dk_b506_2"
+    }
+   ],
+   "hosts_final": [],
+   "hosts_guess": [],
+   "n_batches": 2,
+   "name": "freebsd-desktop",
+   "note": "",
+   "offset": 1000,
+   "remaining": 8545,
+   "state": "committed",
+   "total": 9545
+  },
+  {
+   "base_tag": "h5cu_b504",
+   "batches": [
+    {
+     "cands": "677",
+     "claims": "CL-RM-122894-123570",
+     "commit": "efead9c8a",
+     "n": 6000,
+     "note": "",
+     "offset": 1000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5cu_b504_1"
+    },
+    {
+     "cands": "618",
+     "claims": "",
+     "commit": "729d10672",
+     "n": 3064,
+     "note": "",
+     "offset": 7000,
+     "parts": 7,
+     "state": "committed",
+     "tag": "h5cu_b504_2"
+    }
+   ],
+   "hosts_final": [],
+   "hosts_guess": [
+    "1481",
+    "1483",
+    "1495",
+    "1511"
+   ],
+   "n_batches": 2,
+   "name": "cu",
+   "note": "",
+   "offset": 1000,
+   "remaining": 9064,
+   "state": "committed",
+   "total": 10064
+  },
+  {
+   "base_tag": "h5acp_b505",
+   "batches": [
+    {
+     "cands": "872",
+     "claims": "CL-RM-123571-124442",
+     "commit": "e021d5180",
+     "n": 6000,
+     "note": "",
+     "offset": 1000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5acp_b505_1"
+    },
+    {
+     "cands": "807",
+     "claims": "CL-RM-129398-130204",
+     "commit": "aa5929763",
+     "n": 3203,
+     "note": "",
+     "offset": 7000,
+     "parts": 7,
+     "state": "committed",
+     "tag": "h5acp_b505_2"
+    }
+   ],
+   "hosts_final": [],
+   "hosts_guess": [
+    "10611",
+    "1067",
+    "1069"
+   ],
+   "n_batches": 2,
+   "name": "freebsd-acpi",
+   "note": "",
+   "offset": 1000,
+   "remaining": 9203,
+   "state": "committed",
+   "total": 10203
+  },
+  {
+   "base_tag": "h5smp_b507",
+   "batches": [
+    {
+     "cands": "871",
+     "claims": "CL-RM-130205-131075",
+     "commit": "c03db5694",
+     "n": 6000,
+     "note": "12 份读手 912 候选；41 条(pk 2502925-2503415)已登记挂161.8剔除 → 871 落库；宿主 911=701/982=145/984=25",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5smp_b507_1"
+    },
+    {
+     "cands": "919",
+     "claims": "CL-RM-132110-133014",
+     "commit": "f97649a98",
+     "n": 4013,
+     "note": "905 块(919候选-14已登记)；宿主 911=470/982=384/984=51；CL-RM-132110-133014",
+     "offset": 6000,
+     "parts": 9,
+     "state": "committed",
+     "tag": "h5smp_b507_2"
+    }
+   ],
+   "hosts_final": [
+    "911",
+    "982",
+    "984"
+   ],
+   "hosts_guess": [
+    "1618"
+   ],
+   "n_batches": 2,
+   "name": "freebsd-smp",
+   "note": "",
+   "offset": 0,
+   "remaining": 10013,
+   "state": "committed",
+   "total": 10013
+  },
+  {
+   "base_tag": "h5i3_b508",
+   "batches": [
+    {
+     "cands": "499",
+     "claims": "CL-RM-133720-134218",
+     "commit": "a6fe3dbbb",
+     "n": 6000,
+     "note": "495 块(499候选-4机器转发)；宿主 986=185/1011=201/10110=48/10112=61；CL-RM-133720-134218",
+     "offset": 1000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5i3_b508_1"
+    },
+    {
+     "cands": "214",
+     "claims": "CL-RM-134837-135050",
+     "commit": "b42080604",
+     "n": 5231,
+     "note": "214 块；宿主 1614=185/1067=17/1611=10/10611=2；CL-RM-134837-135050；库末批",
+     "offset": 7000,
+     "parts": 11,
+     "state": "committed",
+     "tag": "h5i3_b508_2"
+    }
+   ],
+   "hosts_final": [],
+   "hosts_guess": [
+    "10611",
+    "1067",
+    "1069"
+   ],
+   "n_batches": 2,
+   "name": "freebsd-i386",
+   "note": "",
+   "offset": 1000,
+   "remaining": 11231,
+   "state": "committed",
+   "total": 12231
+  },
+  {
+   "base_tag": "h5sp_b509",
+   "batches": [
+    {
+     "cands": "948",
+     "claims": "CL-RM-136113-137060",
+     "commit": "216bd35dc",
+     "n": 6000,
+     "note": "948 块；宿主 989=527/10112=286/10018=105/10110=30；CL-RM-136113-137060；p1-p4 子代理+p5-p12 手工(配额用尽)",
+     "offset": 1000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5sp_b509_1"
+    },
+    {
+     "cands": "1212",
+     "claims": "CL-RM-137661-138872",
+     "commit": "69d48aa85",
+     "n": 5560,
+     "note": "已建批(5560 行/12 份)；读手待派——子代理配额用尽(200/200)，需新会话或提高配额；任务书 _READ_TASK_h5sp_b509_2.md 已就绪(年代 1997-2020 含移植开创期)",
+     "offset": 7000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5sp_b509_2"
+    }
+   ],
+   "hosts_final": [
+    "918",
+    "9110",
+    "9311",
+    "10110",
+    "10112"
+   ],
+   "hosts_guess": [
+    "981",
+    "982",
+    "986"
+   ],
+   "n_batches": 2,
+   "name": "freebsd-sparc64",
+   "note": "",
+   "offset": 1000,
+   "remaining": 11560,
+   "state": "committed",
+   "total": 12560
+  },
+  {
+   "base_tag": "h5ppc_b510",
+   "batches": [
+    {
+     "cands": "2149",
+     "claims": "2149",
+     "commit": "4d795da0f",
+     "n": 6000,
+     "note": "",
+     "offset": 1000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5ppc_b510_1"
+    },
+    {
+     "cands": "2860",
+     "claims": "2860",
+     "commit": "727cba8dc",
+     "n": 6000,
+     "note": "",
+     "offset": 7000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5ppc_b510_2"
+    },
+    {
+     "cands": "176",
+     "claims": "176",
+     "commit": "62fd28ba4",
+     "n": 291,
+     "note": "1 份 291 行，主代理直读",
+     "offset": 13000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5ppc_b510_3"
+    }
+   ],
+   "hosts_final": [
+    "1315",
+    "10018",
+    "989",
+    "14911"
+   ],
+   "hosts_guess": [
+    "981",
+    "982",
+    "986"
+   ],
+   "n_batches": 3,
+   "name": "freebsd-ppc",
+   "note": "已全库收口 2026-09-21：3 批全 committed（4d795da0f / 727cba8dc / 62fd28ba4），候选 2149+2860+176=5185 条，claim CL-RM 覆盖 151007-154415 段，宿主最终 1315/10018/989/14911。审计 PASS（133882 条块头等级与库中真值全一致）。注意：本文件 lib 级 offset/remaining 是批计划起点口径（total-offset），非活动游标，故收口后仍显示 1000/12291，属设计非缺陷。",
+   "offset": 1000,
+   "remaining": 12291,
+   "state": "committed",
+   "total": 13291
+  },
+  {
+   "base_tag": "h5tp_b528",
+   "batches": [
+    {
+     "cands": "1141",
+     "claims": "1141",
+     "commit": "1c3015051",
+     "n": 6000,
+     "note": "",
+     "offset": 1500,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5tp_b528_1"
+    },
+    {
+     "cands": "1477",
+     "claims": "1477",
+     "commit": "b34760350",
+     "n": 6000,
+     "note": "",
+     "offset": 7500,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5tp_b528_2"
+    },
+    {
+     "cands": "152",
+     "claims": "152",
+     "commit": "1204cc175",
+     "n": 431,
+     "note": "2026-09-22 追溯订正：叙述手 02:08 回报晚于 1204cc175 提交，2 行漂移（284538 由 185.2 改挂 189.2、284581 叙述删不可核断言）已外科修复，见 amend 4b3958771；bookkeep PASS、audit PASS 140815",
+     "offset": 13500,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5tp_b528_3"
+    }
+   ],
+   "hosts_final": [
+    "1892",
+    "1852",
+    "1876"
+   ],
+   "hosts_guess": [
+    "1792"
+   ],
+   "n_batches": 3,
+   "name": "tech-pkg",
+   "note": "2026-09-22 tech-pkg 整库闭环：13931 封全量覆盖，claim 2922 条＝入纲块 2922（5 宿主，零孤儿零重复）。库首段（库内序 0-1499，pk 270703-272459）并非漏读——2026-09-11 另一会话已处理并入纲 179.2（152 块，commit 85a71de45），本轮误判为漏读缺口而重做 h5tp_b528_0（3 路读手 374 条、register 281 条 CL-RM-162346-162626），经比对 93 条与 179.2 已入纲块重复，已整批 purge 回滚（anchor 残留 0，库内 MAX 回落 162345）。",
+   "offset": 1500,
+   "remaining": 12431,
+   "state": "committed",
+   "total": 13931
+  },
+  {
+   "base_tag": "h5pl_b511",
+   "batches": [
+    {
+     "cands": "344",
+     "claims": "344",
+     "commit": "d21af0d90",
+     "n": 6000,
+     "note": "",
+     "offset": 1000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5pl_b511_1"
+    },
+    {
+     "cands": "418",
+     "claims": "418",
+     "commit": "483cdab64",
+     "n": 6000,
+     "note": "",
+     "offset": 7000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5pl_b511_2"
+    },
+    {
+     "cands": "106",
+     "claims": "106",
+     "commit": "54fe31b1c",
+     "n": 1437,
+     "note": "",
+     "offset": 13000,
+     "parts": 3,
+     "state": "committed",
+     "tag": "h5pl_b511_3"
+    }
+   ],
+   "hosts_final": [
+    "168",
+    "906",
+    "907",
+    "3066"
+   ],
+   "hosts_guess": [
+    "168",
+    "906",
+    "907",
+    "3066"
+   ],
+   "n_batches": 3,
+   "name": "freebsd-perl",
+   "note": "",
+   "offset": 1000,
+   "remaining": 13437,
+   "state": "committed",
+   "total": 14437
+  },
+  {
+   "base_tag": "h5gk_b512",
+   "batches": [
+    {
+     "cands": "274",
+     "claims": "CL-RM-180054-180327",
+     "commit": "83026cd15",
+     "n": 2000,
+     "n_before_fix": 6000,
+     "note": "2026-09-22 批1 全链闭环：库内序 1000-2999，候选 274（L4 196/L3 78），宿主坍缩 2621=273/907=1，叙述 60-140 均值 111.0，入纲 +1370 行幂等二跑 +0，bookkeep 三零 PASS，等级门禁 PASS 165078 块头 0 错标",
+     "offset": 1000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5gk_b512_1"
+    },
+    {
+     "cands": "259",
+     "claims": "CL-RM-183894-184152",
+     "commit": "072343181",
+     "n": 2000,
+     "n_before_fix": 6000,
+     "note": "2026-09-22 全链闭环 072343181：库内序 3000-4999（pk 1208122-1210122）。候选 259（L4 199/L3 60），宿主 2621=257/2701=1/3066=1，叙述 60-140 均值 115.4，入纲 +1295 行幂等二跑 +0，bookkeep 缺块0/claim不符0/重复0 PASS，等级门禁 PASS 169057 块头 0 错标。叙述层四轮回源裁定：真臆造 3 条（1209118 虚构列表名 freebsd-gecko、1209494 省略号截断文件名、1208681 makefile←make file）；22 条 ISO 日期串属门禁盲区（DB body 列不含 dump 的 DATE: 行）；归属门禁 12 条仅引用命中全为假阳。GOV 分类器补三支 SVN-Commit 超时词形才把 1208440 分到 3066。【2026-09-22 订正】offset/n 由旧粗切 7000/6000 改为 spec 实测 3000/2000。",
+     "offset": 3000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5gk_b512_2"
+    },
+    {
+     "cands": "235",
+     "claims": "CL-RM-187503-187737",
+     "commit": "9c4bb10cf",
+     "n": 2000,
+     "n_before_fix": 1991,
+     "note": "2026-09-22 全链闭环 9c4bb10cf：库内序 5000-6999（pk 1210123-1212118）。候选 235（L4 178/L3 57）＝2000 行收率 11.75%，宿主 2621=233/3066=1/907=1；叙述 10 包 235 行 60-140 均值 116.8，硬门禁 _vn_b512_3.py exit 0（235 行硬错 0）；_vcn 8 待查＋_vcq 16 归属嫌疑全部回源裁定，2 处真错已修：1211689 署名臆造 Kevon Oberman→Kevin Oberman、1211714「6.0」属被引者非作者；另有 2 条压缩回归由叙述手回源发现（1212100 补回 sem(4) manpage 无弃用说明、1212077 -Werror 恢复为致构建失败）——压缩是内容破坏性操作须单独复核，脚本全查不出。验收：check 违规0/越界0、outline +235 幂等二跑 +0、bookkeep 缺块0/claim不符0/重复0 PASS、等级门禁 PASS 235 条 0 错标（全库 179522）、git diff 3 文件 +1175/-0＝235×5 恰合。🔴 自建 _audit_levels_h5gk_b512_3.py 首跑假 FAIL 178 条：JOIN 写成 ON ce.evidence_id = ce.evidence_id 自比较恒真退化为笛卡尔积（235×179520=42187200 行），dict 折叠后行数看着正常却拿别人的 claim_id（CL-RM-012019）报错标；已加 len(rows)==len(uniq pk) 硬断言拦截",
+     "offset": 5000,
+     "parts": 8,
+     "state": "committed",
+     "tag": "h5gk_b512_3"
+    },
+    {
+     "cands": "231",
+     "claims": "CL-RM-193480-193710",
+     "commit": "fea956d5b",
+     "n": 2000,
+     "n_before_fix": 2000,
+     "note": "2026-09-23 全链闭环 fea956d5b：库内序7000-8999，单一宿主 262.1，check 违规0、bookkeep 三零 PASS、等级门禁 PASS",
+     "offset": 7000,
+     "parts": 8,
+     "state": "committed",
+     "tag": "h5gk_b512_4"
+    },
+    {
+     "cands": "312",
+     "claims": "CL-RM-193711-194022",
+     "commit": "81615d791",
+     "n": 2000,
+     "n_before_fix": 2000,
+     "note": "2026-09-23 全链闭环 81615d791：库内序9000-10999，单一宿主 262.1，check 违规0、bookkeep 三零 PASS、等级门禁 PASS",
+     "offset": 9000,
+     "parts": 8,
+     "state": "committed",
+     "tag": "h5gk_b512_5"
+    },
+    {
+     "cands": "198",
+     "claims": "CL-RM-193282-193479",
+     "commit": "f380693fb",
+     "n": 2000,
+     "n_before_fix": 2000,
+     "note": "2026-09-23 全链闭环 f380693fb：库内序11000-12999，单一宿主 262.1，check 违规0、bookkeep 三零 PASS、等级门禁 PASS",
+     "offset": 11000,
+     "parts": 8,
+     "state": "committed",
+     "tag": "h5gk_b512_6"
+    },
+    {
+     "cands": "164",
+     "claims": "CL-RM-194023-194186",
+     "commit": "9a712fe7d",
+     "n": 1991,
+     "n_before_fix": 1991,
+     "note": "整库闭环：1778 claim 零孤儿零未挂",
+     "offset": 13000,
+     "parts": 8,
+     "state": "committed",
+     "tag": "h5gk_b512_7"
+    }
+   ],
+   "hosts_final": [
+    "2621",
+    "2701",
+    "907",
+    "3066"
+   ],
+   "hosts_guess": [
+    "906",
+    "907",
+    "3066"
+   ],
+   "n_batches": 8,
+   "name": "freebsd-gecko",
+   "note": "2026-09-22 n_batches 3->8（total 14991，库内序 1000 起 2000/批，末批 1991）；batch offset/n 已按 spec 实测订正（b1 3000/2000、b3 5000/2000），旧粗切值存于 n_before_fix。批1 h5gk_b512_1 committed 83026cd15（274 块，262.1 +273 / 90.7 +1，+1370 行）；批2 h5gk_b512_2 committed 072343181（259 块，262.1 +257 / 270.1 +1 / 306.6 +1，+1295 行）；【2026-09-22】批4-7 全部建批/dump/切分完成（4 批×8 份＝32 份，每份 250 行），双查通过：claim 库 gecko 块 pk 上界 1212118、新窗 1212123-1221274 为 0 条，大纲 3 宿主本窗 0 锚。spec pk_range 已补（b4 1212123-1214122/b5 1214123-1216122/b6 1216123-1218122/b7 1218123-1221274）。lib remaining 0（7 批覆盖库内序 1000-14990）；【2026-09-23 整库闭环】7 批全 committed：b4 fea956d5b 231 块 CL-RM-193480-193710、b5 81615d791 312 块 CL-RM-193711-194022、b6 f380693fb 198 块 CL-RM-193282-193479、b7 9a712fe7d 164 块 CL-RM-194023-194186。lib state committed、offset 14991。整库验收 PASS：14991 行全处理、1778 条 claim（含 fgecko_b073 旧线 105 条）、5 宿主文件 1778 锚零孤儿零未挂零重复",
+   "offset": 14991,
+   "remaining": 0,
+   "state": "committed",
+   "total": 14991
+  },
+  {
+   "base_tag": "h5adv_b513",
+   "batches": [
+    {
+     "cands": "827",
+     "claims": "827",
+     "commit": "0bea21c03",
+     "n": 6000,
+     "note": "827 块入 4 宿主 100.15=668/100.17=1/100.18=78/100.19=80；收率 13.78%；含落库后 claim_text 定点订正 2 条",
+     "offset": 1000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5adv_b513_1"
+    },
+    {
+     "cands": "1114",
+     "claims": "CL-RM-198991-200104",
+     "commit": "",
+     "n": 6000,
+     "note": "1114块入4宿主 100.15=972/100.19=101/100.18=39/100.17=2；commit ac7f875e1 +5570行；叙述层回源改出40余处归属错位",
+     "offset": 7000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5adv_b513_2"
+    },
+    {
+     "cands": "328",
+     "claims": "328",
+     "commit": "d513961be",
+     "n": 2097,
+     "note": "328块入纲 100.15=240/100.17=7/100.18=23/100.19=58；CL-RM-197207-197534；+1640行；剔除838699（Watson本人话语在截断点后）",
+     "offset": 13000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5adv_b513_3"
+    }
+   ],
+   "hosts_final": [],
+   "hosts_guess": [
+    "10015",
+    "10017",
+    "10018",
+    "10019"
+   ],
+   "n_batches": 3,
+   "name": "freebsd-advocacy",
+   "note": "",
+   "offset": 1000,
+   "remaining": 14097,
+   "state": "pending",
+   "total": 15097
+  },
+  {
+   "base_tag": "h5alp_b514",
+   "batches": [
+    {
+     "cands": "1122",
+     "claims": "1122",
+     "commit": "daa3a2a11",
+     "n": 6000,
+     "note": "911=345 981=621 10112=96 1059=60 CL-RM-165027-166148",
+     "offset": 0,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5alp_b514_1"
+    },
+    {
+     "cands": "1066",
+     "claims": "CL-RM-167285-168350",
+     "commit": "2d53346e7",
+     "n": 6000,
+     "note": "",
+     "offset": 6000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5alp_b514_2"
+    },
+    {
+     "cands": "1949",
+     "claims": "1949",
+     "commit": "add518fc7",
+     "n": 4943,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5alp_b514_3"
+    }
+   ],
+   "hosts_final": [
+    "911",
+    "981",
+    "10112",
+    "1059"
+   ],
+   "hosts_guess": [
+    "1059"
+   ],
+   "n_batches": 3,
+   "name": "freebsd-alpha",
+   "note": "3/3 批全 committed，库内序 0-16942 全覆盖 16943/16943。批1 daa3a2a11(1122)/批2 2d53346e7(1066)/批3 add518fc7(1949)。宿主最终 911/981/10112/1059，批3 坍缩单一 981。",
+   "offset": 0,
+   "remaining": 16943,
+   "state": "committed",
+   "total": 16943
+  },
+  {
+   "base_tag": "h5a64_b515",
+   "batches": [
+    {
+     "cands": "721",
+     "claims": "CL-RM-204715-205435",
+     "commit": "106daa60f",
+     "n": 6000,
+     "note": "H5 第13库 b515_1 全链闭环：候选721（L3 180/L4 541）、单宿主1614、721块入161.4、+3605行、审计PASS、幂等二跑+0；叙述层由主代理自写28件（rpm exhausted 大面积零落盘后改主代理产出），门禁 _vn_b513 --expect 721 --hosts 1614 全绿",
+     "offset": 0,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5a64_b515_1"
+    },
+    {
+     "cands": "1689",
+     "claims": "CL-RM-355071-356759",
+     "commit": "225018375",
+     "n": 6000,
+     "note": "H5 第15库 b515_2 全链闭环：候选1689（L4 1548/L3 141）、单宿主1614、1689块入161.4、+8445行＝1689x5、total_refs 947→2636、审计全绿（_verify_blocks 问题0 / _audit_hosts FAIL=0 / _audit_claims FAIL=0）、幂等二跑+0；叙述门禁 _verify_narr_h5a64_b515_2 40 项 FAIL 合计0 ALL PASS；读手40分件→merge 1689 唯一违规0；register supported 1689/1689；叙述手40分件→merge 1689 缺0多0违规0；p15 缺 host_key 列与 5 条不足60字已机械修补（备份 .pre_p15_*，未入库）；宿主写入前备份 .bak_h5a64_b515_2（592834 B，sha256 9a5f7579…）",
+     "offset": 6000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5a64_b515_2"
+    },
+    {
+     "cands": "996",
+     "claims": "CL-RM-361996-362991",
+     "commit": "8b63e3f2e",
+     "n": 6000,
+     "note": "H5 第15库 b515_3 全链闭环：候选996（L4 877/L3 119）、单宿主1614、996块入161.4、+4980行＝996x5、total_refs 2636→3632、审计全绿（_verify_blocks 问题0 / _audit_hosts FAIL=0 / _audit_claims FAIL=0）、幂等二跑+0；叙述门禁 _verify_narr_h5a64_b515_3 40 项 FAIL 合计0 ALL PASS；读手40分件→原始1459，按任务书判据4机械剔除 bot 署名463（bugzilla-noreply 462 + tinderbox 1，FROM 列判据、留痕 review_logs/h5a64_b515_3_botattr_dropped.json）→merge 996 违规0；register supported 996/996、四表 join 命中996、quote 反查996/996；叙述手40分件→merge 996 缺0多0违规0；分块脚本对本批邮件正文自带 CRLF 只做行尾归一化（p33 实测6处CRLF、0处孤立CR），孤立 CR 一律抛错不静默改；宿主写入前备份 .bak_h5a64_b515_3（1740082 B，sha256 685637c2…）",
+     "offset": 12000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5a64_b515_3"
+    },
+    {
+     "cands": "100",
+     "claims": "CL-RM-366430-366529",
+     "commit": "d080d49d0",
+     "n": 1709,
+     "note": "H5 第15库 b515_4 全链闭环（库末批，库内序 18000-19709、pk 852473-854181）：候选100（L4 93/L3 7）、单宿主1614、100块入161.4、+500行＝100x5、total_refs 3632→3732、审计全绿（_verify_blocks 问题0 / _audit_hosts FAIL=0 / _audit_claims FAIL=0）、幂等二跑+0；叙述门禁 _verify_narr_h5a64_b515_4 13 项 FAIL 合计0 ALL PASS；读手40分件→原始230条人工行（1709行中 bot 1479＝86.5%、人 230＝13.5%，14片零人工行），候选100全部由机械复核复核通过、bot 署名误挂剔除0（留痕 review_logs/h5a64_b515_4_botattr_dropped.json 为空集）；register supported 100/100、四表 join 命中100、quote 反查100/100、CL-RM 段号连续唯一；叙述手10分件（100条÷10，非40路：40路则每人仅2-3块，低于独立判断阈值且固定读任务书开销不省）→merge 100 缺0多0违规0、叙述长度 67-140 均113.3；宿主写入前备份 .bak_h5a64_b515_4（2429802 B，sha256 59ff1f37…）；完成后 freebsd-amd64 整库 19709/19709＝100% 收口，lib.state=complete",
+     "offset": 18000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5a64_b515_4"
+    }
+   ],
+   "hosts_final": [
+    "1614"
+   ],
+   "hosts_guess": [
+    "1614"
+   ],
+   "n_batches": 4,
+   "name": "freebsd-amd64",
+   "note": "b515_1（721 条 106daa60f）+ b515_2（1689 条 225018375）+ b515_3（996 条 8b63e3f2e）+ b515_4（100 条 d080d49d0）全部 committed；整库 19709 行已读 19709 / 剩 0；freebsd-amd64 全库收口",
+   "offset": 19709,
+   "remaining": 0,
+   "state": "complete",
+   "total": 19709
+  },
+  {
+   "base_tag": "h5sc_b516",
+   "batches": [
+    {
+     "cands": 688,
+     "claims": "CL-RM-208626-209313",
+     "commit": "f5684a71f",
+     "n": 6000,
+     "note": "H5 波次收口：候选 688 条（占本批窗 6000 行的 11.5%），叙述 102 处外科修正后门禁全绿；121.3=636 / 122.6=27 / 91.2=25；688 块入纲 3440 行（=688x5）",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5sc_b516_1"
+    },
+    {
+     "cands": "1528",
+     "claims": "CL-RM-228079-229606",
+     "commit": "9eb3ec2f9",
+     "n": 6000,
+     "note": "台账对账回填：本批全链早已完成并提交 9eb3ec2f9（波2 freebsd-scsi 收官），候选1528（L4 1252/L3 276）入 claim 库 CL-RM-228079-229606（四表 join anchor=h5sc_b516_2 实测1528），入纲 3 宿主 121.3=482 / 122.6=41 / 91.2=1005 合计1528块、numstat 7640行，3 宿主 git 工作树干净；此前台账停留 cands 0 / state split，lib.offset 少算 6000。",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5sc_b516_2"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5sc_b516_3"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 1851,
+     "note": "",
+     "offset": 18000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5sc_b516_4"
+    }
+   ],
+   "hosts_final": [
+    "1213",
+    "1226",
+    "912"
+   ],
+   "hosts_guess": [
+    "912",
+    "1213",
+    "1226"
+   ],
+   "n_batches": 4,
+   "name": "freebsd-scsi",
+   "note": "b516_1（688 条 f5684a71f）+ b516_2（1528 条 9eb3ec2f9）已 committed；整库 19851 行已读 12000 / 剩 7851；余 2 批（offset 12000 n 6000、18000 n 1851）",
+   "offset": 12000,
+   "remaining": 7851,
+   "state": "in_progress",
+   "total": 19851
+  },
+  {
+   "base_tag": "h5jv_b517",
+   "batches": [
+    {
+     "cands": "680",
+     "claims": "CL-RM-205630-206309",
+     "commit": "0d84fe14b",
+     "n": 6000,
+     "note": "读手12分件+12叙述手；候选680(L4 649/L3 31)；宿主167；insertions 3400=680x5",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5jv_b517_1"
+    },
+    {
+     "cands": 2004,
+     "claims": "CL-RM-390080-392083",
+     "commit": "41ea366bc",
+     "n": 6000,
+     "note": "读手10分件+40叙述手；候选2004(L4 1723/L3 281)；宿主167；insertions 10020=2004x5；叙述 51x39+15=2004；min60 max120 avg69.4",
+     "offset": 6000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5jv_b517_2"
+    },
+    {
+     "cands": 1070,
+     "claims": "CL-RM-392084-393153",
+     "commit": "41ea366bc",
+     "n": 6000,
+     "note": "读手7分件+28叙述手；候选1070(L4 886/L3 184)；宿主167；insertions 5350=1070x5；叙述 39x27+17=1070；min60 max140 avg82.0",
+     "offset": 12000,
+     "parts": 28,
+     "state": "committed",
+     "tag": "h5jv_b517_3"
+    },
+    {
+     "cands": 960,
+     "claims": "CL-RM-393154-394113",
+     "commit": "41ea366bc",
+     "n": 3280,
+     "note": "读手6分件+24叙述手；候选960(L4 827/L3 133)；宿主167；insertions 4800=960x5；叙述 40x24=960；min60 max139 avg81.7",
+     "offset": 18000,
+     "parts": 24,
+     "state": "committed",
+     "tag": "h5jv_b517_4"
+    }
+   ],
+   "hosts_final": [
+    "167"
+   ],
+   "hosts_guess": [
+    "167",
+    "1712"
+   ],
+   "n_batches": 4,
+   "name": "freebsd-java",
+   "note": "四批全 committed（b517_1 offset 0 n6000 680 CL-RM-205630-206309；b517_2 offset 6000 n6000 2004 CL-RM-390080-392083；b517_3 offset 12000 n6000 1070 CL-RM-392084-393153；b517_4 offset 18000 n3280 960 CL-RM-393154-394113）；四批合计 4714 块全 L3L4 全 supported；宿主 167 total_refs 680->4714 numstat +20170=4034x5；整库 21280 行 offset 达 21280，freebsd-java 全库收口",
+   "offset": 21280,
+   "remaining": 0,
+   "state": "complete",
+   "total": 21280
+  },
+  {
+   "base_tag": "h5hw_b518",
+   "batches": [
+    {
+     "cands": 370,
+     "claims": "CL-RM-211982-212351",
+     "commit": "86ffd88d0",
+     "n": 6000,
+     "note": "H5 波次收口：候选 370 条（宿主裁定后 299 条无对应节已登记债务），叙述 4 处外科修正后门禁全绿；123.5=125 / 91.2=125 / 101.4=81 / 161.4=35 / 122.5=4；370 块入纲 1848 行（=370x5-2）",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5hw_b518_1"
+    },
+    {
+     "cands": "1259",
+     "claims": "CL-RM-229607-230865",
+     "commit": "ecdb3734e",
+     "n": 6000,
+     "note": "台账对账回填（原 split cands=0）：全链早已完成并提交 ecdb3734e，候选 1259 条入 claim 库 CL-RM-229607-230865（四表 join anchor=h5hw_b518_2 实测 1259），入纲 5 个宿主 {'912': 745, '1235': 490, '1014': 15, '1614': 6, '1225': 3}、合计 1259 块，宿主内容已在 git 中（HEAD 与工作树段号块数一致）；此前台账未回填导致 lib.offset 少算 n=6000。",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5hw_b518_2"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5hw_b518_3"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 4679,
+     "note": "",
+     "offset": 18000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5hw_b518_4"
+    }
+   ],
+   "hosts_final": [
+    "912",
+    "1235",
+    "1014",
+    "1614",
+    "1225"
+   ],
+   "hosts_guess": [],
+   "n_batches": 4,
+   "name": "freebsd-hardware",
+   "note": "",
+   "offset": 12000,
+   "remaining": 10679,
+   "state": "in_progress",
+   "total": 22679
+  },
+  {
+   "base_tag": "h5py_b519",
+   "batches": [
+    {
+     "cands": "660",
+     "claims": "CL-RM-207001-207660",
+     "commit": "8617a3d88",
+     "n": 6000,
+     "note": "committed：660 候选收率 11.0%，12 分件全落，host 168 单宿主，audit PASS 190885 块头错标 0",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5py_b519_1"
+    },
+    {
+     "cands": "623",
+     "claims": "CL-RM-223808-224430",
+     "commit": "2409767d4",
+     "n": 6000,
+     "note": "台账对账回填（原 split cands=0）：全链早已完成并提交 2409767d4，候选 623 条入 claim 库 CL-RM-223808-224430（四表 join anchor=h5py_b519_2 实测 623），入纲 1 个宿主 {'168': 623}、合计 623 块，宿主内容已在 git 中（HEAD 与工作树段号块数一致）；此前台账未回填导致 lib.offset 少算 n=6000。",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5py_b519_2"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5py_b519_3"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 4701,
+     "note": "",
+     "offset": 18000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5py_b519_4"
+    }
+   ],
+   "hosts_final": [
+    "168"
+   ],
+   "hosts_guess": [
+    "168",
+    "227"
+   ],
+   "n_batches": 4,
+   "name": "freebsd-python",
+   "note": "批1 committed（8617a3d88，660 块入 16.8，+3300 行）；offset 推进至 6000，剩余 16701",
+   "offset": 12000,
+   "remaining": 10701,
+   "state": "in_progress",
+   "total": 22701
+  },
+  {
+   "base_tag": "h5em_b520",
+   "batches": [
+    {
+     "cands": 638,
+     "claims": "CL-RM-210715-211352",
+     "commit": "04cbf395b",
+     "n": 6000,
+     "note": "H5 波次收口：候选 638 条（占本批窗 6000 行的 10.6%），叙述 11 处外科修正后门禁全绿；101.8=626 / 149.7=8 / 134.8=4；638 块入纲 3188 行（=638x5-2，两文件首块复用既有空行）",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5em_b520_1"
+    },
+    {
+     "cands": "1160",
+     "claims": "CL-RM-226680-227839",
+     "commit": "94906073d",
+     "n": 6000,
+     "note": "台账对账回填（原 split cands=0）：全链早已完成并提交 94906073d，候选 1160 条入 claim 库 CL-RM-226680-227839（四表 join anchor=h5em_b520_2 实测 1160），入纲 3 个宿主 {'1018': 1141, '1497': 19, '1348': 0}、合计 1160 块，宿主内容已在 git 中（HEAD 与工作树段号块数一致）；此前台账未回填导致 lib.offset 少算 n=6000。",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5em_b520_2"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5em_b520_3"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 18000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5em_b520_4"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 1791,
+     "note": "",
+     "offset": 24000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5em_b520_5"
+    }
+   ],
+   "hosts_final": [
+    "1018",
+    "1497",
+    "1348"
+   ],
+   "hosts_guess": [
+    "1348"
+   ],
+   "n_batches": 5,
+   "name": "freebsd-emulation",
+   "note": "",
+   "offset": 12000,
+   "remaining": 13791,
+   "state": "in_progress",
+   "total": 25791
+  },
+  {
+   "base_tag": "h5arm_b521",
+   "batches": [
+    {
+     "cands": 650,
+     "claims": "CL-RM-212352-213001",
+     "commit": "90aaea410",
+     "n": 6000,
+     "note": "H5 波次收口：候选 650 条（占本批窗 6000 行的 10.8%）；叙述 39 处长度外科修正（p1 3 处／p2 4 处／p6 8 处／p8 13 处／p10 10 处）＋补写 p6 缺行 pk 884553（narrpkg 摘要称「tinderbox 失败」，回源正文实为 G D 请求移植 Cavium Econa CNS34XX 并捐板）后门禁全绿；123.1=481 / 101.3=151 / 133.5=18；650 块入纲 3250 行（=650x5 恰合，无首块空行复用）；check 违规 0／outline 幂等二跑 +0／bookkeep 三零／audit PASS 650 块头 0 错标",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5arm_b521_1"
+    },
+    {
+     "cands": "1387",
+     "claims": "CL-RM-237893-239279",
+     "commit": "0155aa7b6",
+     "n": 6000,
+     "note": "1387 块（123.1=1360/133.5=27）",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5arm_b521_2"
+    },
+    {
+     "cands": "1707",
+     "claims": "CL-RM-250685-252391",
+     "commit": "8997bb637",
+     "n": 6000,
+     "note": "1707 块（123.1=1608/133.5=99）",
+     "offset": 12000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5arm_b521_3"
+    },
+    {
+     "cands": "1740",
+     "claims": "CL-RM-254281-256020",
+     "commit": "4a06d0969",
+     "n": 6000,
+     "note": "1740 块（123.1=1574/133.5=166）",
+     "offset": 18000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5arm_b521_4"
+    },
+    {
+     "cands": 715,
+     "claims": "CL-RM-271504-272218",
+     "commit": "c189f8709",
+     "n": 6000,
+     "note": "2026-09-26 收口：候选 715（L4 657/L3 58）；叙述 13 片 715 行（p3 一度零落盘、p6 缺行 908388，均补派补齐）；NONE 80 判 rejected；入纲 635 块（123.1=479/133.5=133/101.3=23）=3175 行；outline 幂等二跑 +0；bookkeep 三零；audit PASS；本库 6 批至此全部 committed",
+     "offset": 24000,
+     "parts": 13,
+     "state": "committed",
+     "tag": "h5arm_b521_5"
+    },
+    {
+     "cands": "66",
+     "claims": "CL-RM-263770-263835",
+     "commit": "34c79007f",
+     "n": 113,
+     "note": "52 块入纲（101.3=30/133.5=22），1231=0；NONE 14 判 rejected；本库末批",
+     "offset": 30000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5arm_b521_6"
+    }
+   ],
+   "hosts_final": [
+    "1231",
+    "1013",
+    "1335"
+   ],
+   "hosts_guess": [
+    "1013",
+    "1289",
+    "1335"
+   ],
+   "n_batches": 6,
+   "name": "freebsd-arm",
+   "note": "六批中 4 批已 committed（_1/_2/_3/_4/_6），**b521_5 @ offset 24000 n 6000 仍 pending 且盘上无产物**——spec 未建、无候选无叙述，两线未清零",
+   "offset": 30113,
+   "remaining": 0,
+   "state": "complete",
+   "total": 30113
+  },
+  {
+   "base_tag": "h5pu_b522",
+   "batches": [
+    {
+     "cands": 629,
+     "claims": "CL-RM-211353-211981",
+     "commit": "260a7fd76",
+     "n": 6000,
+     "note": "H5 波次收口：候选 629 条（占本批窗 6000 行的 10.5%），叙述 21 处外科修正后门禁全绿；179.2=476 / 185.2=88 / 185.3=48 / 187.3=17；629 块入纲 3144 行（=629x5-1）",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5pu_b522_1"
+    },
+    {
+     "cands": "1710",
+     "claims": "CL-RM-239280-240989",
+     "commit": "0155aa7b6",
+     "n": 6000,
+     "note": "1710 块（179.2 单宿主 100%）",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5pu_b522_2"
+    },
+    {
+     "cands": "1670",
+     "claims": "CL-RM-252392-254061",
+     "commit": "8997bb637",
+     "n": 6000,
+     "note": "1670 块（179.2 单宿主 100%）",
+     "offset": 12000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5pu_b522_3"
+    },
+    {
+     "cands": "1524",
+     "claims": "CL-RM-256021-257544",
+     "commit": "4a06d0969",
+     "n": 6000,
+     "note": "1524 块（179.2 单宿主 100%）",
+     "offset": 18000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5pu_b522_4"
+    },
+    {
+     "cands": 908,
+     "claims": "CL-RM-272219-273126",
+     "commit": "c189f8709",
+     "n": 6000,
+     "note": "2026-09-26 收口：候选 908（L4 770/L3 138）；叙述 17 片 908 行；NONE 29 判 rejected；入纲 879 块（179.2=862/187.3=10/185.2=4/185.3=3）=4395 行；outline 幂等二跑 +0；bookkeep 三零；audit PASS；本库 6 批至此全部 committed",
+     "offset": 24000,
+     "parts": 17,
+     "state": "committed",
+     "tag": "h5pu_b522_5"
+    },
+    {
+     "cands": "409",
+     "claims": "CL-RM-263836-264244",
+     "commit": "34c79007f",
+     "n": 2475,
+     "note": "391 块入纲（1792=386/1873=2/1852=2/1853=1），NONE 18 判 rejected；本库末批",
+     "offset": 30000,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5pu_b522_6"
+    }
+   ],
+   "hosts_final": [
+    "1792",
+    "1852",
+    "1853",
+    "1873"
+   ],
+   "hosts_guess": [
+    "1731",
+    "1761",
+    "1792",
+    "1892"
+   ],
+   "n_batches": 6,
+   "name": "pkgsrc-users",
+   "note": "六批中 4 批已 committed（_1/_2/_3/_4/_6），**b522_5 @ offset 24000 n 6000 仍 pending 且盘上无产物**——spec 未建、无候选无叙述，两线未清零",
+   "offset": 32475,
+   "remaining": 0,
+   "state": "complete",
+   "total": 32475
+  },
+  {
+   "base_tag": "h5mb_b523",
+   "batches": [
+    {
+     "cands": 1262,
+     "claims": "CL-RM-406746-408007",
+     "commit": "c4a81731d",
+     "n": 6000,
+     "note": "12 分件 1262 候选（L4 1135/L3 127），宿主 12410 76/1065 38/8120 26/1014 0，1122 判 NONE；numstat +699/0（140块×5行，81.20 因块格式少 1 行实为 139 行）；幂等二跑 +0；supplement_log +140；读手 12 分件×500 行 digest、叙述手 12 片×106（末片 96）；p4 报告 108 实为 106 已核；62 条 >140 字已前缀归一",
+     "offset": 0,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5mb_b523_1"
+    },
+    {
+     "cands": 1222,
+     "claims": "CL-RM-411986-413207",
+     "commit": "a2dc9974c",
+     "n": 6000,
+     "note": "12 分件 1222 候选（L4 1013/L3 209），宿主 12410 93/1065 47/8120 8/1014 0，1074 判 NONE；numstat +740/0（148块×5行）；幂等二跑 +0；supplement_log +148；读手 12 分件×500 行 digest、叙述手 12 片×102（末片 100）；p6 223 条偏多但经 register 反查 1222/1222 全命中；p8 读手 8 条 pk 重复已去重 89→81；62 条 >140 字已前缀归一",
+     "offset": 6000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5mb_b523_2"
+    },
+    {
+     "cands": 1301,
+     "claims": "CL-RM-414723-416023",
+     "commit": "843ba75c9",
+     "n": 6000,
+     "note": "12 分件 1301 候选（L4 1083/L3 218），宿主 12410 131/1065 19/8120 1/1014 1，1149 判 NONE；numstat +759/0（152块×5行）；幂等二跑 +0；supplement_log +152；读手 12 分件×500 行 digest、叙述手 12 片×109（末片 102）；p3 读手 3 次重试、p7 叙述手 1 次重试、p6 读手 223 条偏多但经 register 反查 1301/1301 全命中",
+     "offset": 12000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5mb_b523_3"
+    },
+    {
+     "cands": 742,
+     "claims": "CL-RM-417311-418052",
+     "commit": "385362cf1",
+     "n": 6000,
+     "note": "742 候选入纲 38 块（124.10 +24/106.5 +14）、1 叙述缺失跳过（1419837）、幂等 +0、提交 385362cf1",
+     "offset": 18000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5mb_b523_4"
+    },
+    {
+     "cands": 681,
+     "claims": "CL-RM-419817-420497",
+     "commit": "d67decca7",
+     "n": 6000,
+     "note": "681 候选入纲 49 块（124.10 +35/106.5 +14）、46 叙述缺失跳过、幂等 +0",
+     "offset": 24000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5mb_b523_5"
+    },
+    {
+     "cands": 369,
+     "claims": "CL-RM-421718-422086",
+     "commit": "9c9277a68",
+     "n": 3435,
+     "note": "369 候选入纲 55 块（12410 36/1065 16/8120 3）、3 叙述缺失跳过、幂等 +0、提交 9c9277a68",
+     "offset": 30000,
+     "parts": 12,
+     "state": "committed",
+     "tag": "h5mb_b523_6"
+    }
+   ],
+   "hostpool_decided_at": "2026-09-25",
+   "hostpool_memo": "决策1采纳：加 8120；12410 收窄只收图形/X11/显存，ACPI 类判无宿主；权重按实测桶占比记",
+   "hosts_final": [
+    "1014",
+    "1314",
+    "12410",
+    "1065",
+    "8120"
+   ],
+   "hosts_guess": [],
+   "n_batches": 6,
+   "name": "freebsd-mobile",
+   "note": "6 批全 committed（b523_1~6），整库 33435 封全部读完，0 剩余",
+   "offset": 33435,
+   "remaining": 0,
+   "state": "complete",
+   "total": 33435
+  },
+  {
+   "base_tag": "h5ar_b524",
+   "batches": [
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 0,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5ar_b524_1"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 6000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5ar_b524_2"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5ar_b524_3"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 18000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5ar_b524_4"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 24000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5ar_b524_5"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 5166,
+     "note": "",
+     "offset": 30000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5ar_b524_6"
+    }
+   ],
+   "hostpool_decided_at": "2026-09-25",
+   "hostpool_memo": "决策2采纳：15413 保留（全书唯一写 base system 精简）；决策3实证为伪阻塞（load_hosts 走文件名前缀，模板零 ## 假设）",
+   "hosts_final": [
+    "1615",
+    "15413",
+    "1012",
+    "1718"
+   ],
+   "hosts_guess": [],
+   "n_batches": 6,
+   "name": "freebsd-arch",
+   "note": "",
+   "offset": 0,
+   "remaining": 35166,
+   "state": "pending",
+   "total": 35166
+  },
+  {
+   "base_tag": "h5mm_b525",
+   "batches": [
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 0,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_1"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 6000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_2"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 12000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_3"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 18000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_4"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 24000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_5"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 6000,
+     "note": "",
+     "offset": 30000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_6"
+    },
+    {
+     "cands": 0,
+     "claims": "",
+     "commit": "",
+     "n": 779,
+     "note": "",
+     "offset": 36000,
+     "parts": 0,
+     "state": "pending",
+     "tag": "h5mm_b525_7"
+    }
+   ],
+   "hostpool_decided_at": "2026-09-25",
+   "hostpool_memo": "决策1采纳：8121 保留（与 8120 同构）；决策4选①按 3 键开批，不加 optional 2208/1949；66% 无宿主走 NONE；第360章待挖掘后建节",
+   "hosts_final": [
+    "8121",
+    "12410",
+    "8812"
+   ],
+   "hosts_guess": [],
+   "n_batches": 7,
+   "name": "freebsd-multimedia",
+   "note": "",
+   "offset": 0,
+   "remaining": 36779,
+   "state": "pending",
+   "total": 36779
+  },
+  {
+   "base_tag": "h5sec_b526",
+   "batches": [
+    {
+     "cands": 2510,
+     "claims": "CL-RM-325688-328197",
+     "commit": "1af06ad09",
+     "n": 6000,
+     "note": "全链闭环 2510 块入 4 宿主（160.9 +1740 / 160.6 +391 / 103.2 +234 / 159.4 +145）；register 拆 7 跑（≤400 行）；claim_map 库内四表 join 重建缺0孤儿0；bookkeep PASS；等级审计 2510/2510 错标0悬空0（L3 459/L4 2051）；numstat +12548/0；签名 N",
+     "offset": 0,
+     "parts": 80,
+     "state": "complete",
+     "tag": "h5sec_b526_1"
+    },
+    {
+     "cands": 2674,
+     "claims": "CL-RM-330367-333040",
+     "commit": "76c74731b",
+     "n": 6000,
+     "note": "全链闭环 2674 块入 4 宿主（160.9 +1800 / 160.6 +616 / 103.2 +105 / 159.4 +153）；register 单跑 2674 行；claim_map 库内四表 join 重建 2674 条 set 全等；叙述 80 份全绿（长度 60/140/91.5）；check 违规 0；幂等二跑 +0；bookkeep PASS；等级审计 5184 块头命中、本批错标0悬空0（L3 669/L4 2005）；numstat +13370/0 = 2674×5；签名 N",
+     "offset": 6000,
+     "parts": 80,
+     "state": "complete",
+     "tag": "h5sec_b526_2"
+    },
+    {
+     "cands": 2475,
+     "claims": "CL-RM-334189-338299",
+     "commit": "c1d6787f7 / 5913ac4",
+     "n": 6000,
+     "note": "全链闭环 2475 块入 4 宿主（160.9 +2081 / 160.6 +170 / 103.2 +161 / 159.4 +63）；register 分段入库 2475 行；claim_map 库内四表 join 重建 2475 条 set 全等；叙述 80 份全绿（长度 60/140/92.1）；check 缺0多0违规0；幂等二跑 +0；bookkeep PASS（缺块0/claim_id不符0/重复0/格式违规0）；等级审计 _chk_levels_lib.py 不一致0/缺失0（L3 448/L4 2027）；numstat +12375/0 = 2475×5；签名 N",
+     "offset": 12000,
+     "parts": 80,
+     "state": "complete",
+     "tag": "h5sec_b526_3"
+    },
+    {
+     "cands": 1531,
+     "claims": "CL-RM-338937-340467",
+     "commit": "bf52ac2dd",
+     "n": 6000,
+     "note": "全链闭环 1531 块入 4 宿主（160.9 +1232 / 103.2 +150 / 160.6 +80 / 159.4 +69）；register 单跑 1531 行，写后 quote 反查 1531/1531，四表 join 1531；claim_map 1531 条 set 全等（CL-RM-338937~340467 跨度 1531，占位率 100%，全段无并发穿插）；正文抽取 2036119 B / 1531 块 0 缺；叙述 60 份全绿（长度 60/140/96.4，p28 与 p47 由主会话自读自写兜底）；_merge_narr 缺0 多0 升序True 违规0；outline 幂等二跑 +0，numstat +7655/0 = 1531x5；四宿主 BOM=False CR=0 角括号=0；_chk_levels_lib 等级不一致0 候选缺失0 PASS；ROW_MINE 8860→10391；签名 N；主会话直写，supplement_log.jsonl 未并入本线提交（工作区含 H1/H3 线 400 行在途追加）",
+     "offset": 18000,
+     "parts": 60,
+     "state": "complete",
+     "tag": "h5sec_b526_4"
+    },
+    {
+     "cands": 2568,
+     "claims": "CL-RM-342533-345100",
+     "commit": "ac121e139",
+     "n": 6000,
+     "note": "全链闭环 2568 块入 4 宿主（160.9 +1660 / 160.6 +366 / 103.2 +342 / 159.4 +200）；register 单跑 2568 行，claim 段 CL-RM-342533~345100 跨度恰 2568、占位率 100%、全段无并发穿插；claim_map 2568 条与候选集完全一致；正文抽取 3196373 B / 2568 块 0 缺；叙述 40 份全绿（长度 60/140/均值 81.5，p13 重派修 TAB、p24/p26/p29 主会话外科兜底）；_merge_narr 缺0 多0 升序True 违规0；outline 幂等二跑 合计拟插 0 块；numstat +12840/0 = 2568x5；四宿主 BOM=False CR=0；_chk_levels_lib 等级不一致0 候选缺失0 PASS；_verify_cands parts=100 missing=[] VIOLATIONS=0；_audit_hosts_b526_5 块总2568 期望2568 等级纪律尾齐2568 重复0 漏块0 FAIL=0；ROW_MINE 10391→12959；提交 ac121e139 共 346 件 +541286/0、gpgsig=0；supplement_log.jsonl 未并入本线提交（工作区该文件含本线 2568 行追加与他会话在途追加）；台账 remaining 更正为 7939：freebsd-security.duckdb.messages 实测 37939 行，37939-30000=7939 亦等于 b526_6(6000)+b526_7(1939)；旧值 17429 系自 b526_4 起按 remaining-6000 机械递减，与全库实测行数自始不符",
+     "offset": 24000,
+     "parts": 40,
+     "state": "complete",
+     "tag": "h5sec_b526_5"
+    },
+    {
+     "cands": 2127,
+     "claims": "CL-RM-348745-350871",
+     "commit": "56a27fa43 + 5f3e5390d + 214aceda0 + 4ae28c254(晚到 p8 回炉)",
+     "n": 6000,
+     "note": "全链闭环 2127 块入 4 宿主；晚到 p8 分件回炉后终态 1609=1472 / 1032=286 / 1606=198 / 1594=171（首轮 1473/288/195/171，回炉后 47 条叙述原地重建正文行、2521520/2521660/2521661 归 1606 成立、2521514 无 SA 通告号系误判已退回 1609）；回读 forread 原文驳回晚到稿 2 处编造（2521640「改 DNS 重启服务」实为 dynamic routing、2521514「IPv4 已被注释」原文仅发问一致性）；register 2127 行，claim 段 CL-RM-348745~350871 跨度恰 2127、占位率 100%、全段无并发穿插；claim_map 2127 条与候选集完全一致；五层审计全 PASS（audit_hosts / verify_blocks / verify_narr / audit_claims / diff_stale），supplement_log 留痕 2132＝2127＋5 次重插，唯一 row_id 集合恰等于候选全集",
+     "offset": 30000,
+     "parts": 40,
+     "state": "complete",
+     "tag": "h5sec_b526_6"
+    },
+    {
+     "cands": 644,
+     "claims": "CL-RM-351121-351764",
+     "commit": "58fbe54d8",
+     "n": 1939,
+     "note": "全链闭环 644 块入 4 宿主（160.9 +512 / 160.6 +73 / 159.4 +31 / 103.2 +28）；读手 40/40 分件，候选 644 条（L3 86 / L4 558），候选门禁 VIOLATIONS=0；register --apply COMMITTED 644，claim 段 CL-RM-351121~351764 跨度恰 644、连续唯一；claim_map 644 条与候选集完全一致；正文抽取 835746 B / 644 块 0 缺；40 路叙述子代理全落盘 644 行，_merge_narr 缺0 多0 升序True 违规0，_verify_narr ALL PASS（14 类门禁全 0，长度 60/140/均值 88.0）；叙述长度越界由主会话按正文原样自修共 15 条：首轮 4 条（2526779 174→136、2526789 158→135、2526794 46→65、2527409 146→128），次轮 2 条（2528202 57→67、2528241 145→127），末轮 p30 9 条（2527921/2527929/2527933/2527935/2527936/2527937/2527938/2527943/2527946）；另有 9 条复检时已被补派代理自合规（2527409 复检、2528000、2528203、2528212、2528221、2528224、2528230、2527424、2527462）不覆盖，其中 p38 pk 2528224 摘要有「&& 影响 MySQL 启动脚本」而正文全篇无 MySQL，判定为摘要层臆造未采纳；outline --write 幂等二跑 合计拟插 0 块，supplement_log 留痕 644 条唯一 row_id 644；_verify_blocks 644 块问题0；_audit_hosts_b526_7 块总644 期望644 等级纪律尾齐644 重复0 漏块0 FAIL=0；_audit_claims_b526_7 A/B/C 三节全绿（段号连续唯一、库内 644 条全 supported、留痕 644）FAIL=0；提交 58fbe54d8（35 件 +83342/0，含 4 宿主 + 4 份 .bak_h5sec_b526_7 写入前快照），gpgsig=0；supplement_log.jsonl 未并入本线提交（工作区该文件含他会话在途追加）；附带修复：子代理误删 fcu_b009 线的 review_logs/_check_p13.py 已按 HEAD 逐字节恢复；messages count(*)==37939、max(id)==2528338，本批已覆盖库内序 36000-37938，H5 线无剩余批次",
+     "offset": 36000,
+     "parts": 40,
+     "state": "complete",
+     "tag": "h5sec_b526_7"
+    }
+   ],
+   "hostpool_decided_at": "2026-09-25",
+   "hostpool_memo": "采用；GEN 桶 5519 行并入 1606 属政策选择非标题匹配，严格口径仅 31.27%",
+   "hosts_final": [
+    "1606",
+    "1609",
+    "1032",
+    "1594"
+   ],
+   "hosts_guess": [],
+   "n_batches": 7,
+   "name": "freebsd-security",
+   "note": "h5sec_b526_1 / b526_2 / b526_3 / b526_4 / b526_5 已 complete（2026-10-01）；2026-10-02 全面复核后 lib 层状态由 in_progress 订正为 complete：七批全 complete、remaining 0、库内 count(*)=37939=覆盖尾",
+   "offset": 30000,
+   "remaining": 0,
+   "state": "complete",
+   "total": 37939
+  },
+  {
+   "base_tag": "h5fs_b527",
+   "batches": [
+    {
+     "cands": "687",
+     "claims": "CL-RM-263083-263769",
+     "commit": "34c79007f",
+     "n": 6000,
+     "note": "495 块入纲（121.1=236/112.10=141/121.4=60/122.10=58），NONE 192 判 rejected",
+     "offset": 0,
+     "parts": 0,
+     "state": "committed",
+     "tag": "h5fs_b527_1"
+    },
+    {
+     "cands": 789,
+     "claims": "CL-RM-270715-271503",
+     "commit": "c189f8709",
+     "n": 6000,
+     "note": "2026-09-26 收口：候选 789（L4 683/L3 106）；两轮归属核验（三批共 242 条候选复核，改 165 删 22，全线候选 2433→2412）；叙述 15 片 789 行，NONE 227 判 rejected；入纲 562 块（112.10=382/121.1=110/121.4=56/122.10=14）=2810 行；outline 幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0/格式0；audit PASS",
+     "offset": 6000,
+     "parts": 15,
+     "state": "committed",
+     "tag": "h5fs_b527_2"
+    },
+    {
+     "cands": 871,
+     "claims": "CL-RM-284773-285643",
+     "commit": "591bb9144",
+     "n": 6000,
+     "note": "2026-09-26 收口：候选 871（L4 853/L3 18，越界 0 违规 0）；40 片叙述 871 行盘检零违规；NONE 155 判 rejected（照 b527_2 口径仅改 status+updated_at）；入纲 716 块（112.10=541/121.4=97/121.1=68/122.10=10）=3580 行，numstat 纯追加；register COMMITTED 871 写后反查 quote 871/871 四表 join 871；outline 幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0；audit_evidence_level_labels PASS（266918 行）；候选层两轮归属核验（一审 KEEP684/FIX128/DROP66，二审翻转 FIX-BAD12/DROP-RESTORE10/FIX补3）",
+     "offset": 12000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5fs_b527_3"
+    },
+    {
+     "cands": 1896,
+     "claims": "CL-RM-294572-296467",
+     "commit": "38bf25905",
+     "n": 6000,
+     "note": "2026-09-27 收口：候选 1896（L4 1762/L3 134，收率 31.60%）；候选层一轮读手＋两轮归属核验；185 条 NONE 判 rejected（照 b527_3 口径只改 status+updated_at，reviewed_by 留 NULL、created_by 留 llm:agent、不写 provenance_history）；入纲 1711 块（112.10=1063/121.4=448/121.1=173/122.10=27）=8555 行，numstat 纯追加；outline 幂等二跑 +0；bookkeep 三零 PASS；audit_evidence_level_labels PASS",
+     "offset": 18000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5fs_b527_4"
+    },
+    {
+     "cands": 2322,
+     "claims": "CL-RM-305088-307409",
+     "commit": "f8cd309f0",
+     "n": 6000,
+     "note": "2026-09-28 收口：读手 40 路 2416 条 → 两轮归属核验剔除 94 条 → 定稿 2322（L4 2079/L3 243，收率 38.70%）；候选层缺陷率 21.15%（b527_4 为 7.27%），40 路二审纠 118 处（摘要张冠李戴 50／误删 23／改写不忠实 37）＋主代理按「一审 DROP 且 body>420」强筛选器直查补出 4 条误删、作废 1 条二审误报；97 条 NONE 判 rejected；register COMMITTED 2322 写后反查 quote 2322/2322 四表 join 2322；入纲 2225 块（112.10=1381/121.4=486/121.1=347/122.10=11）=11125 行，numstat +11125/0=2225x5；outline 幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0/格式0；audit PASS（288938 块头错标 0）；签名 Good",
+     "offset": 24000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5fs_b527_5"
+    },
+    {
+     "cands": 2470,
+     "claims": "CL-RM-314192-316661",
+     "commit": "8f6306e64",
+     "n": 6000,
+     "note": "2026-09-29 收口：候选 2470（L4 2194/L3 276，收率 41.17%）经读手 40 路＋一审 40 路＋二审 12 路定稿；322 条 NONE 判 rejected（只改 status+updated_at，reviewed_by 留 NULL、created_by 留 llm:agent、不写 provenance_history，清单 review_logs/_rejected_h5fs_b527_6.txt）；register COMMITTED 2470 写后反查 quote 2470/2470、四表 join 2470；入纲 2148 块（112.10=963/121.4=853/121.1=314/122.10=18）=10740 行，numstat +10740/0=2148x5；outline 幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0/格式0；anchor 间距 5（2144 处 0 例外）、五行体例违规 0、pk↔claim_id/等级不符 0；audit_evidence_level_labels PASS（298230 块头错标 0 悬空 0）；签名 N（本机无签钥，主理人授权 --no-gpg-sign）",
+     "offset": 30000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5fs_b527_6"
+    },
+    {
+     "cands": 1122,
+     "claims": "CL-RM-319901-320419 + CL-RM-321961-322563",
+     "commit": "96aa9d763 / 4c2e4f308 / 1c2cc7ad7",
+     "n": 2710,
+     "note": "2026-09-29 收口（分两段入库入大纲，段间各自走完 8 步链）：段A parts1-19 pk 1211671-1212904，519 候选（L4 476/L3 43）→ 519 claim(CL-RM-319901-320419) → 3 宿主 519 块（121.1=194/121.4=286/122.10=39/11210=0），本线独立提交 96aa9d763（numstat +2595/0=519x5）；段B parts20-40 pk 1212907-1214397，603 候选 → 603 claim(CL-RM-321961-322563) → 603 块（121.1=264/121.4=265/122.10=74/11210=0），宿主写入落 4c2e4f308、review_logs 与脚本落 1c2cc7ad7（并行会话「进度保护提交」带走，非本线独立提交，故本批 commit 记三条）。两段合计 1122 候选（L4 1001/L3 121，收率 41.40%）→ 1122 claim → 1122 块，numstat +5610/0=1122x5（段A 2595＋段B 3015）。register 拆两跑避开 600s 前台超时（b1 274 行 seq321961-322234 / b2 329 行 seq322235-322563），写后反查 quote 603/603、四表 join 1122 精确；outline 幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0/格式0 PASS；等级审计 1122 claim 对 4508 块头，错标0悬空0 PASS。本库 38710 行全数收口，remaining=0，state=complete。本批三处系统缺陷留档：① register --apply 被 600s 超时 SIGTERM 优雅收尾，已完成的 executemany 落库而 claim/claim_evidence 丢失（段A 519 条 evidence 成孤儿），重跑被 source_id 去重判「待写 0」而不补写，须用 _repair_b5277_claims.py 定向补 claim+claim_evidence；② 交接书反复引用的 audit_evidence_level_labels.py 磁盘不存在（幻影门禁），实际用 review_logs/_audit_levels_h5fs_b527_7.py 逐批替代；③ digest 正文无换行、> 引用标记内联，OWN 段切分须按段落边界与引用头而非行首标记。",
+     "offset": 36000,
+     "parts": 40,
+     "state": "committed",
+     "tag": "h5fs_b527_7"
+    }
+   ],
+   "hostpool_decided_at": "2026-09-25",
+   "hostpool_memo": "已按此池跑完 b527_1；台账推测池 10016/1064/1091 判为部分对（1091 设计哲学类仅 0.03% 命中）",
+   "hosts_final": [
+    "11210",
+    "1214",
+    "1211",
+    "12210"
+   ],
+   "hosts_guess": [
+    "10016",
+    "1064",
+    "1091"
+   ],
+   "n_batches": 7,
+   "name": "freebsd-fs",
+   "note": "七批中 b527_1.._6 已 committed（offset 0..34999 走完）；_7 offset 36000 n 2710 pending（末批）；游标 @30000 下一批 h5fs_b527_7。宿主池实测 11210 占比偏高（_3 批 541/716=62%、_5 批 1381/2225=62%、_6 批 963/2148=45%），ZFS 长线程主导，非误配；_6 批 1214 升至 39.7% 经查为 geom/NFS/VFS 与 1995-1999 老归档段真实内容，非兜底误配",
+   "offset": 38710,
+   "remaining": 0,
+   "state": "complete",
+   "total": 38710
+  }
+ ],
+ "policy": {
+  "commit_per_batch": true,
+  "frontier_rule": "开工前必须四源交叉：台账 records／claim anchor／源库 id 位次／changelog 库内序；以 changelog 为决定性",
+  "idempotent_rerun_required": true,
+  "max_rows_per_batch": 6000,
+  "reader_wave_limit": 3,
+  "rows_per_read_part": 500
+ },
+ "source": "H5 交接书 v2.1（含 2026-09-19 三源交叉复核订正）",
+ "totals": {
+  "batches": 110,
+  "h5_20260926_closeout": {
+   "arm_b521_5": 635,
+   "blocks_total": 2076,
+   "cands": 2412,
+   "claims": "CL-RM-270715-273126",
+   "commit": "c189f8709",
+   "fs_b527_2": 562,
+   "lines": 10380,
+   "note": "三批一次性提交 11 个大纲 md；audit PASS（255551 块头等级与库真值全一致，错标 0）；arm 与 pu 两库至此全库挖完，fs 余 5 批",
+   "pu_b522_5": 879
+  },
+  "h5_20260926_fs3_closeout": {
+   "blocks": 716,
+   "cands": 871,
+   "claims": "CL-RM-284773-285643",
+   "commit": "591bb9144",
+   "fs_b527_3": 716,
+   "lines": 3580,
+   "none_rejected": 155,
+   "note": "单批提交 4 个大纲 md（112.10/121.1/121.4/122.10）；numstat +3580/0=716块x5行；签名 Good；audit PASS"
+  },
+  "h5_20260928_fs45_closeout": {
+   "blocks_total": 3936,
+   "cands": 4218,
+   "claims": "CL-RM-294572-296467 / CL-RM-305088-307409",
+   "commit": "38bf25905 / f8cd309f0",
+   "fs_b527_4": 1711,
+   "fs_b527_5": 2225,
+   "lines": 19680,
+   "none_rejected": 282,
+   "note": "两批各提交 4 个大纲 md（112.10/121.1/121.4/122.10），合计 numstat +19680/0 = 3936 块 x 5 行；两批签名均 Good；audit_evidence_level_labels PASS 288938 块头错标 0 悬空 0"
+  },
+  "h5_20260929_fs6_closeout": {
+   "blocks": 2148,
+   "cands": 2470,
+   "claims": "CL-RM-314192-316661",
+   "commit": "8f6306e64",
+   "fs_b527_6": 2148,
+   "lines": 10740,
+   "none_rejected": 322,
+   "note": "单批提交 4 个大纲 md（112.10/121.1/121.4/122.10）＋progress.jsonl +1；numstat +10740/0=2148 块x5 行精确吻合；签名 N（--no-gpg-sign，本机无签钥）；audit PASS（298230 块头等级与库真值全一致，错标 0 悬空 0）；fs 余 1 批"
+  },
+  "h5_20260930_sec1_closeout": {
+   "blocks": 2510,
+   "cands": 2510,
+   "claims": "CL-RM-325688-328197",
+   "commit": "1af06ad09",
+   "h5sec_b526_1": 2510,
+   "hosts": {
+    "103.2": 234,
+    "159.4": 145,
+    "160.6": 391,
+    "160.9": 1740
+   },
+   "ledger": "freebsd-security remaining 37939→35429（余 6 批）",
+   "lines": 12548,
+   "narr_packs": 80,
+   "none_rejected": 0,
+   "note": "单批提交 4 个大纲 md ＋4 份写入前 .bak_h5sec_b526_1 快照＋512 件共 +1007174 行 0 删除；幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0/格式违规0；audit PASS 2510/2510（L3 459/L4 2051，错标0悬空0）；签名 N（--no-gpg-sign，本机无签钥）；supplement_log.jsonl 129MB 共享追加日志含多线条目故未纳入本提交",
+   "register_runs": 7
+  },
+  "h5_20260930_sec2_closeout": {
+   "blocks": 2674,
+   "cands": 2674,
+   "claims": "CL-RM-330367-333040",
+   "commit": "76c74731b / d58d3e337",
+   "h5sec_b526_2": 2674,
+   "hosts": {
+    "103.2": 105,
+    "159.4": 153,
+    "160.6": 616,
+    "160.9": 1800
+   },
+   "ledger": "freebsd-security remaining 35429→29429（余 5 批）",
+   "lines": 13370,
+   "narr_packs": 80,
+   "none_rejected": 0,
+   "note": "单批提交 4 个大纲 md；幂等二跑 +0；bookkeep 缺块0/claim_id不符0/重复0/格式违规0；audit PASS 5184 块头命中、本批 2674 条错标0悬空0（L3 669/L4 2005）；签名 N（--no-gpg-sign，本机无签钥）；新增硬校验器 _verify_narr_pack.py 补 _merge_narr.py 长度软门禁；单批 472 件 +249643/0，签名 N（commit 对象无 gpgsig 头）",
+   "register_runs": 1
+  },
+  "libs": 27,
+  "rows": 534974,
+  "h5_20260930_sec3_closeout": {
+   "blocks": 2475,
+   "cands": 2475,
+   "claims": "CL-RM-334189-338299",
+   "commit": "c1d6787f7 / 5913ac4",
+   "h5sec_b526_3": 2475,
+   "hosts": {
+    "103.2": 161,
+    "159.4": 63,
+    "160.6": 170,
+    "160.9": 2081
+   },
+   "ledger": "freebsd-security remaining 29429→23429（余 4 批）",
+   "lines": 12375,
+   "narr_packs": 80,
+   "none_rejected": 0,
+   "note": "单批提交 4 个大纲 md ＋478 件共 +224248 行 0 删除；幂等二跑 +0；bookkeep PASS；等级审计 PASS（不一致0/缺失0）；handoff §十四单独提交 5913ac4"
+  },
+  "h5_20261001_sec4_closeout": {
+   "blocks": 1531,
+   "cands": 1531,
+   "claims": "CL-RM-338937-340467",
+   "commit": "bf52ac2dd",
+   "h5sec_b526_4": 1531,
+   "hosts": {
+    "160.9": 1232,
+    "103.2": 150,
+    "160.6": 80,
+    "159.4": 69
+   },
+   "ledger": "offset 18000→24000，remaining 23429→17429",
+   "lines": 7655
+  },
+  "h5_20261001_sec5_closeout": {
+   "blocks": 2568,
+   "cands": 2568,
+   "claims": "CL-RM-342533-345100",
+   "commit": "ac121e139",
+   "h5sec_b526_5": 2568,
+   "hosts": {
+    "160.9": 1660,
+    "160.6": 366,
+    "103.2": 342,
+    "159.4": 200
+   },
+   "ledger": "offset 24000→30000，remaining 更正为 7939（全库 37939 行实测）",
+   "ledger_correction": "旧 remaining 17429 系自 b526_4 起机械递减（23429→17429），与 freebsd-security.duckdb.messages 实测 37939 行不符",
+   "commit_files": 346,
+   "commit_numstat": "+541286/0",
+   "lines": 12840
+  },
+  "h5_20261003_a64_b515_2_closeout": {
+   "a64_b515_2": 1689,
+   "blocks": 1689,
+   "cands": 1689,
+   "claims": "CL-RM-355071-356759",
+   "commit": "225018375",
+   "host": "1614",
+   "host_total_refs": 2636,
+   "lines": 8445,
+   "note": "单批提交 1 个大纲 md（161.4）+ 备份 + 21 份脚本/任务书 + 245 份 review_logs 产物，共 268 件 +400713/0；gpgsig=0；numstat +8445/0＝1689块x5行；宿主 total_refs 947→2636（含 b515_1 的 721 与 freebsd-i386 的 185 旧块）；幂等复跑 +0；supplement_log +1689；三审计 FAIL 0"
+  },
+  "campaign_recount_20261003": {
+   "libs": 27,
+   "ledger_total_sum": 547474,
+   "ledger_cands_sum": 75475,
+   "rate_pct_vs_ledger_total": 13.79,
+   "note": "两套口径不可混用：① 台账口径＝对全部批次 cands 求和、非数字记 0，分母取台账 total 之和 547474，得 13.79%。② _h5_review_D_fix_and_totals.py 口径的分母是各库 .duckdb 实查 count(*) 之和 395688，故同分子 75475 对应 19.07%。两分母差 151786 来自台账 total 与源库实查行数不一致，不是本批引入。2026-10-03 本轮做四批台账对账（h5sc_b516_2 1528 / h5hw_b518_2 1259 / h5py_b519_2 623 / h5em_b520_2 1160，合计 +4570 条候选早已在 claim 库与大纲宿主内、唯台账未回填）。"
+  },
+  "h5_20261003_a64_b515_3_closeout": {
+   "a64_b515_3": 996,
+   "blocks": 996,
+   "cands": 996,
+   "claims": "CL-RM-361996-362991",
+   "commit": "8b63e3f2e",
+   "host": "1614",
+   "host_total_refs": 3632,
+   "lines": 4980,
+   "note": "numstat +4980/0＝996块x5行；宿主 total_refs 2636→3632（含 b515_1 的 721、b515_2 的 1689 与 freebsd-i386 的 185 旧块）；幂等复跑 +0；supplement_log +996；三审计 FAIL 0；candidate 层新增 bot 署名机械剔除口径（463 条，留痕 json），避免 37% 候选把 bugzilla/tinderbox 通知当成发帖人自述入纲"
+  },
+  "h5_20261003_a64_b515_4_closeout": {
+   "a64_b515_4": 100,
+   "blocks": 100,
+   "cands": 100,
+   "claims": "CL-RM-366430-366529",
+   "commit": "d080d49d0",
+   "host": "1614",
+   "host_total_refs": 3732,
+   "lines": 500,
+   "note": "numstat +500/0＝100块x5行；宿主 total_refs 3632→3732（含 b515_1 的 721、b515_2 的 1689、b515_3 的 996 与 freebsd-i386 的 185 旧块，amd64 合计 3506）；幂等复跑 +0；supplement_log +100；三审计 FAIL 0；本批 1709 行中 86.5% 为 bugzilla-noreply 通知，14 片零人工行、任务书明示「0 候选是正确结果」，读手如实产出 100 条且 bot 误挂剔除 0；本批完成后 freebsd-amd64 19709/19709＝100% 全库收口，是 27 库战役最后一个库级里程碑"
+  },
+  "h5_20261003_sc_b516_2_reconcile": {
+   "sc_b516_2": 1528,
+   "blocks": 1528,
+   "cands": 1528,
+   "claims": "CL-RM-228079-229606",
+   "commit": "9eb3ec2f9",
+   "hosts": {
+    "912": 1005,
+    "1213": 482,
+    "1226": 41
+   },
+   "note": "台账对账，非新施工：全链产物（118 件 review_logs，其中 115 件已入库）、claim 库 1528 条、3 宿主 1528 块均已在提交 9eb3ec2f9 中，唯 _h5_state.json 未回填，导致 lib.offset 少算 6000。"
+  },
+  "h5_20261003_hw_b518_2_reconcile": {
+   "blocks": 1259,
+   "cands": 1259,
+   "claims": "CL-RM-229607-230865",
+   "commit": "ecdb3734e",
+   "hosts": {
+    "912": 745,
+    "1014": 15,
+    "1225": 3,
+    "1235": 490,
+    "1614": 6
+   },
+   "note": "台账对账，非新施工：claim 库与 5 宿主块均已在提交 ecdb3734e 中，唯台账未回填。"
+  },
+  "h5_20261003_py_b519_2_reconcile": {
+   "blocks": 623,
+   "cands": 623,
+   "claims": "CL-RM-223808-224430",
+   "commit": "2409767d4",
+   "hosts": {
+    "168": 623
+   },
+   "note": "台账对账，非新施工：claim 库与 1 宿主块均已在提交 2409767d4 中，唯台账未回填。"
+  },
+  "h5_20261003_em_b520_2_reconcile": {
+   "blocks": 1160,
+   "cands": 1160,
+   "claims": "CL-RM-226680-227839",
+   "commit": "94906073d",
+   "hosts": {
+    "1018": 1141,
+    "1348": 0,
+    "1497": 19
+   },
+   "note": "台账对账，非新施工：claim 库与 3 宿主块均已在提交 94906073d 中，唯台账未回填。"
+  },
+  "h5_20261005_jv_b517_2_closeout": {
+   "b517_2": 2004,
+   "blocks": 2004,
+   "cands": 2004,
+   "claims": "CL-RM-390080-392083",
+   "host": "167",
+   "host_total_refs": 2684,
+   "lines": 10020,
+   "note": "读手 10 分件+叙述手 40 片（末片 15 条）；候选 2004 L4 1723/L3 281；宿主 167 total_refs 680→2684（+2004）；numstat +10020/0=2004块x5行；register 反查 quote 2004/2004；claim_map 2004 条；幂等二跑 +0；p25 host 笔误 667 已外科修回 167；p15 pk 1385683 叙述 57 字已同义扩至 81 字；p23 子代理错派到 script/review_logs 已清理",
+   "commit": "41ea366bc"
+  },
+  "h5_20261005_jv_b517_3_closeout": {
+   "b517_3": 1070,
+   "blocks": 1070,
+   "cands": 1070,
+   "claims": "CL-RM-392084-393153",
+   "host": "167",
+   "host_total_refs": 3754,
+   "lines": 5350,
+   "note": "读手 7 分件+叙述手 28 片（末片 17 条）；候选 1070 L4 886/L3 184；宿主 167 total_refs 2684→3754（+1070）；numstat +5350/0=1070块x5行；register 反查 quote 1070/1070；claim_map 1070 条；幂等二跑 +0",
+   "commit": "41ea366bc"
+  },
+  "h5_20261005_jv_b517_4_closeout": {
+   "b517_4": 960,
+   "blocks": 960,
+   "cands": 960,
+   "claims": "CL-RM-393154-394113",
+   "host": "167",
+   "host_total_refs": 4714,
+   "lines": 4800,
+   "note": "读手 6 分件+叙述手 24 片；候选 960 L4 827/L3 133；宿主 167 total_refs 3754→4714（+960）；numstat +4800/0=960块x5行；register 反查 quote 960/960；claim_map 960 条；幂等二跑 +0；本批完成后 freebsd-java 21280/21280=100% 全库收口",
+   "commit": "41ea366bc"
+  },
+  "h5_20261005_jv_final_closeout": {
+   "blocks_total": 4714,
+   "blocks_this_wave": 4034,
+   "cands_this_wave": 4034,
+   "claims_this_wave": "CL-RM-390080-394113",
+   "host": "167",
+   "host_total_refs": 4714,
+   "numstat_this_wave": "+20170/0=4034块x5行",
+   "note": "freebsd-java 四批全 committed（b517_1 680 + b517_2 2004 + b517_3 1070 + b517_4 960 = 4714）；宿主 167 total_refs 680→4714；整库 21280 行 offset 达 21280，freebsd-java 全库 100% 收口；三批 register 4034 条反查 quote 4034/4034 全命中；claim 区间 CL-RM-390080..394113 全 supported 全 L3L4",
+   "commit": "41ea366bc"
+  },
+  "h5_20261007_mb_b523_1_closeout": {
+   "b523_1": 1262,
+   "blocks": 140,
+   "cands": 1262,
+   "claims": "CL-RM-406746-408007",
+   "commit": "c4a81731d",
+   "hosts": {
+    "1014": 0,
+    "1065": 38,
+    "8120": 26,
+    "12410": 76
+   },
+   "ledger": "freebsd-mobile remaining 33435→27435（余 5 批）",
+   "lines": 699,
+   "none_rejected": 1122,
+   "note": "首批 freebsd-mobile；读手 12 分件×500 行 digest、叙述手 12 片×106（末片 96）；候选 1262 L4 1135/L3 127；1122 判 NONE（PCMCIA/ACPI/atapci/无线等无宿主）；3 宿主 +699/0；numstat +699/0；幂等二跑 +0；register 1262 条全 supported；supplement_log +140；宿主 1314（13.14）未建故从 hosts_final 剔除，仅 4 宿主有效；62 条 >140 字已前缀归一；p4 报告 108 实为 106 已核"
+  },
+  "h5_20261007_mb_b523_2_closeout": {
+   "b523_2": 1222,
+   "blocks": 148,
+   "cands": 1222,
+   "claims": "CL-RM-411986-413207",
+   "commit": "a2dc9974c",
+   "hosts": {
+    "1014": 0,
+    "1065": 47,
+    "8120": 8,
+    "12410": 93
+   },
+   "ledger": "freebsd-mobile remaining 27435→21435（余 4 批）",
+   "lines": 740,
+   "none_rejected": 1074,
+   "note": "读手 12 分件×500 行 digest、叙述手 12 片×102（末片 100）；候选 1222 L4 1013/L3 209；1074 判 NONE（PCMCIA/ACPI/atapci/无线等无宿主）；3 宿主 +740/0；numstat +740/0；幂等二跑 +0；register 1222 条全 supported；supplement_log +148；p6 读手 223 条偏多、p8 读手 8 条 pk 重复已去重、62 条 >140 字已前缀归一"
+  },
+  "h5_20261007_mb_b523_3_closeout": {
+   "b523_3": 1301,
+   "blocks": 152,
+   "cands": 1301,
+   "claims": "CL-RM-414723-416023",
+   "commit": "843ba75c9",
+   "hosts": {
+    "1014": 1,
+    "1065": 19,
+    "8120": 1,
+    "12410": 131
+   },
+   "ledger": "freebsd-mobile remaining 21435→15435（余 3 批）",
+   "lines": 759,
+   "none_rejected": 1149,
+   "note": "读手 12 分件×500 行 digest、叙述手 12 片×109（末片 102）；候选 1301 L4 1083/L3 218；1149 判 NONE（PCMCIA/ACPI/atapci/无线等无宿主）；4 宿主 +759/0；numstat +759/0=152块x5行；幂等二跑 +0；register 1301 条全 supported（CL-RM-414723~416023 连续无洞）；supplement_log +152；p3 读手 3 次重试（model 输出超长）、p7 叙述手 1 次重试"
+  }
+ },
+ "updated": "2026-10-07",
+ "version": 2
+}
