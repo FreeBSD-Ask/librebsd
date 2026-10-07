@@ -104,8 +104,39 @@ def write(p, s):
 
 
 # ── 内容层：解析 ────────────────────────────────────────────────────────
+_CN_DIGIT = {'零': 0, '一': 1, '二': 2, '三': 3, '四': 4, '五': 5,
+             '六': 6, '七': 7, '八': 8, '九': 9}
+
+
+def cn2int_robust(s):
+    """中文数字 → int（支持 1–99：X／十／X十／十X／X十Y）；阿拉伯直返；失败返回 None。"""
+    if s.isdigit():
+        return int(s)
+    if s in _CN_DIGIT:
+        return _CN_DIGIT[s]
+    if s == '十':
+        return 10
+    if s.startswith('十') and len(s) == 2 and s[1] in _CN_DIGIT:
+        return 10 + _CN_DIGIT[s[1]]
+    if s.endswith('十') and len(s) == 2 and s[0] in _CN_DIGIT:
+        return _CN_DIGIT[s[0]] * 10
+    if '十' in s:
+        a, _, b = s.partition('十')
+        if a in _CN_DIGIT and b in _CN_DIGIT:
+            return _CN_DIGIT[a] * 10 + _CN_DIGIT[b]
+    return None
+
+
+_VOLNUM_RE = re.compile(r'第\s*([\d一二三四五六七八九十]+)\s*卷')
+_CHNUM_RE = re.compile(r'第\s*(\d{1,3})\s*章')
+
+
 def parse_outline(text):
-    """outline.txt → [{卷题, overview, note, chapters:[{章题, secs:[(节号, 题文, src, 前置?)]}]}]"""
+    """outline.txt → [{num, title, overview, note, chapters:[{num, title, secs:[…]}]}]
+    2026-10-07 S8：卷／章锚点 id 一律取卷题／章题的**真实号**（中文数字解析）——
+    此前按 enumerate 顺序编号，卷号连续（含 S1–S6 挂尾恰在尾部）时二者一致；
+    卷 12 撤销后顺序与真实号错位，导致 vol-N 锚点与全库引用体系错配（第五件
+    50 处误报「章越界」、第七件 R 组误报）。解析失败即 sys.exit，硬失败优于静默错位。"""
     vols, vol = [], None
     ch = None
     for ln, raw in enumerate(text.split("\n"), 1):
@@ -114,7 +145,11 @@ def parse_outline(text):
             continue
         m = VOL_RE.match(line)
         if m:
-            vol = {"title": m.group(1), "overview": None, "note": None, "chapters": []}
+            mv = _VOLNUM_RE.search(m.group(1))
+            vnum = cn2int_robust(mv.group(1)) if mv else None
+            if vnum is None:
+                sys.exit("outline.txt 第 %d 行：卷题无法解析真实卷号：%r" % (ln, line[:40]))
+            vol = {"num": vnum, "title": m.group(1), "overview": None, "note": None, "chapters": []}
             vols.append(vol)
             ch = None
             continue
@@ -134,7 +169,11 @@ def parse_outline(text):
             continue
         m = CH_RE.match(line)
         if m:
-            ch = {"title": m.group(1), "secs": []}
+            mc = _CHNUM_RE.search(m.group(1))
+            cnum = int(mc.group(1)) if mc else None
+            if cnum is None:
+                sys.exit("outline.txt 第 %d 行：章题无法解析真实章号：%r" % (ln, line[:40]))
+            ch = {"num": cnum, "title": m.group(1), "secs": []}
             vol["chapters"].append(ch)
             continue
         m = SEC_LINE_RE.match(line)
@@ -167,7 +206,8 @@ def esc(t):
 def render_outline(vols):
     """标准形渲染：31 卷块（每块以 </section> + 空行 结尾）。"""
     out = []
-    for v, vol in enumerate(vols, 1):
+    for vol in vols:
+        v = vol["num"]
         out.append('<section class="doc-block" id="vol-%d" role="doc-part">' % v)
         out.append("<h2>%s</h2>" % esc(vol["title"]))
         out.append("")
@@ -177,7 +217,8 @@ def render_outline(vols):
         if vol["note"] is not None:
             out.append('<p class="vol-note">%s</p>' % esc(vol["note"]))
             out.append("")
-        for m, ch in enumerate(vol["chapters"], 1):
+        for ch in vol["chapters"]:
+            m = ch["num"]
             out.append('<h3 class="chapter" id="vol-%d-ch-%d">%s</h3>' % (v, m, esc(ch["title"])))
             out.append('<ul class="sections">')
             for num, title, src, pre in ch["secs"]:
@@ -202,11 +243,13 @@ def render_toc_static(vols):
     输出（与内容区 `&amp;` 不一致，严格校验不通过），见 98 号文 §八·丙-1。"""
     left = ['<ul class="toc-left-list">']
     right = []
-    for i, v in enumerate(vols, 1):
+    for v in vols:
+        i = v["num"]
         left.append('<li class="toc-vol"><a href="#vol-%d" data-target="vol-%d">%s</a>'
                     % (i, i, esc(v["title"])))
         left.append('<ul class="toc-ch-list">')
-        for m, ch in enumerate(v["chapters"], 1):
+        for ch in v["chapters"]:
+            m = ch["num"]
             left.append('<li><a href="#vol-%d-ch-%d" data-target="vol-%d-ch-%d">%s</a></li>'
                         % (i, m, i, m, esc(ch["title"])))
             right.append('<div class="toc-sec-title">%s</div>' % esc(ch["title"]))
