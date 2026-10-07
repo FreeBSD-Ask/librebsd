@@ -1,0 +1,778 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604154 ###
+===== 库内序 145711 | PK 2604154 | 等级 L4 =====
+DATE: 1998-04-07T23:45:06+00:00
+FROM: "Kent Vander Velden" <graphix@iastate.edu>
+SUBJ: Optimization bug with gcc 2.7.2 + mktemp
+摘要: Kent Vander Velden：转引他人 mktemp 优化 bug 报告 说他也遇到同样问题
+
+>I'm running -current supped at the beginning of March.
+>I been having core dumps when using programs that called mktemp(3)
+>repeatedly.  I finally traced it down to the fact that when I compile
+>libc with -fomit-frame-pointer, mktemp.c is compiled incorrectly.
+>Specifially, when _gettemp is called, the third argument (domkdir) is
+>garbage.  This is "impossible" because _mktemp calls it thusly:
+
+  I have been having similar problems with cvs.  It leaves the /tmp/cvs*
+files
+and core dumps very often.  I forget the actual trace dump at the moment but
+it had to do with tmpnam().  I compile with -O2 and do not
+use -fomit-frame-pointer.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604155 ###
+===== 库内序 145712 | PK 2604155 | 等级 L3 =====
+DATE: 1998-04-07T23:51:59+00:00
+FROM: Robert Watson <robert@cyrus.watson.org>
+SUBJ: Netscape: Linux a top priority  (news.com article)
+摘要: Robert Watson：转 news.com 报道 追问能否让 Netscape 也做 FreeBSD 版本
+
+
+http://www.news.com/News/Item/0,4,20863,00.html?st.ne.ni.lh
+
+Quotes Netscape people indicating that the Suitespot server is being
+developed for Linux -- and by the sounds of it, not even as a
+farm-out-to-third-party-vendor as is done with BSD/OS (something that
+irked me, as BSDI is a version or so behind Netscape's releases).  I
+wonder if we could pursuade Netscape to write on FreeBSD also?  I know
+of a number of companies who would be interested in paying for Netscape's
+servers on FreeBSD :).  I also wonder what it will take to get the FreeBSD
+release to appear on Netscape's standard list of clients, and not always
+in their development directory?
+
+These things are small, but they do make us look a little like a
+second-class operating system in the eyes of Netscape.  And given that
+FreeBSD makes such a great network server platform, that is a little
+upsetting.
+
+
+  Robert N Watson 
+
+
+----
+Carnegie Mellon University  http://www.cmu.edu/
+Trusted Information Systems http://www.tis.com/
+SafePort Network Services   http://www.safeport.com/
+robert@fledge.watson.org    http://www.watson.org/~robert/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604156 ###
+===== 库内序 145713 | PK 2604156 | 等级 L3 =====
+DATE: 1998-04-08T00:10:19+00:00
+FROM: Robert Watson <robert@cyrus.watson.org>
+SUBJ: Netscape ported to Qt (fwd)
+摘要: Robert Watson：Netscape 移植 Qt 听着好玩 他没在 Linux 模拟器下试 因为挪威连通差
+
+
+Sounds fun.  I haven't tried it under the Linux emulator yet, as I don't
+get great connectivity with Norway :).  Would no doubt make a great port,
+however.
+
+  Robert N Watson 
+
+
+----
+Carnegie Mellon University  http://www.cmu.edu/
+Trusted Information Systems http://www.tis.com/
+SafePort Network Services   http://www.safeport.com/
+robert@fledge.watson.org    http://www.watson.org/~robert/
+
+---------- Forwarded message ----------
+Date: 06 Apr 1998 23:26:42 +0200
+From: info@troll.no
+To: mozilla-announce@mozilla.org
+Subject: Netscape ported to Qt
+Resent-Date: Tue, 7 Apr 1998 16:57:11 -0700 (PDT)
+Resent-From: mozilla-announce@mozilla.org
+
+FOR IMMEDIATE RELEASE: TROLL TECH PRESENTS Qt-BASED VERSION OF NETSCAPE
+NAVIGATOR 5.0
+
+
+(April 6, 1998) Troll Tech today released the QtScape demonstration
+program to the public. A team of seven programmers have in five days
+ported to Qt the newly released Netscape Navigator web browser source
+code. Qt is Troll Tech's multi-platform Graphical User Interface (GUI)
+toolkit. The free QtScape is released as a "proof of concept" that Qt
+as a platform provides all the functionality required for making
+state-of-the-art GUI applications, as well as allowing rapid
+application development.
+
+
+"When Netscape Communications Corporation earlier this year announced
+that it would release the source code of Communicator 5.0, we decided
+that this was the perfect opportunity to show the world the
+flexibility and effectiveness of our GUI toolkit" said Eirik Eng, CEO
+of Troll Tech. "By giving a team of seven programmers only five days -
+a "mythical man-month" - to achieve a functioning Qt port of Netscape
+Navigator, we wanted to demonstrate the ease and speed of developing
+graphical user interfaces with Qt."
+
+
+The QtScape development team, consisting of five Troll Tech senior
+engineers as well as two programmers volunteering from the free
+software community. Netscape released the Communicator source code
+March 31, and the team came together the day after to face an immense
+task: to replace the 500 000 lines of C and C++ code in the
+X-Windows/Motif and Mi
+[…中段省略 1189 字符…] n
+multi-platform C++ libraries for graphical user interfaces. Its
+flagship product Qt is used as a basis for successful commercial
+applications world wide. Troll Tech is located in Oslo,
+Norway. Further information is available at http://www.troll.no. 
+
+
+Netscape, Navigator and Communicator are trademarks of Netscape
+Communications Corporation. Qt is a trademark of Troll Tech AS.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604157 ###
+===== 库内序 145714 | PK 2604157 | 等级 L4 =====
+DATE: 1998-04-08T00:18:44+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: pkg_add from FTP repositary 
+摘要: Jordan K. Hubbard：pkg_add 会解析 URL 找兄弟包所在 若站点没有 packages All 目录就会失效
+
+> Have you actually tried this?  pkg_add(1) is supposed to be able
+> to automatically fetch dependencies over FTP based on the
+> original URL you pass it.  I think you need to have all of the
+> packages in the same directory, though.
+
+Well, what it's supposed to do is take the URL apart and try
+to figure out where its "brother" packages live.  If there's no
+packages/All/ directory on the site in question, that might be
+difficult.
+
+To be honest, it's also been awhile since I've actually tested this
+feature, but it *is* supposed to work. :-)
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604158 ###
+===== 库内序 145715 | PK 2604158 | 等级 L4 =====
+DATE: 1998-04-07T23:38:30+00:00
+FROM: Atipa <freebsd@atipa.com>
+SUBJ: Any of these kernel opts break RPC?
+摘要: Atipa Kevin：2.2.6-STABLE 0404 上 MD5 DDB PERFMON IPFIREWALL 一开 RPC 无法绑定
+
+
+When I have these opts in my config files, RPC services can not bind.
+Kernel is 2.2.6-STABLE from 0404. Removing these lines fixed RPC.
+
+options         "MD5"                   # Encryption
+options         DDB                     # Debugger
+options         PERFMON                 # Performance Monitor
+options         IPFIREWALL              # For bpfilter
+
+This machine is NIS master, so I did not have time to have it down long
+enought to reboot 4 times :(.
+
+Any known problems?
+
+Kevin
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604159 ###
+===== 库内序 145716 | PK 2604159 | 等级 L3 =====
+DATE: 1998-04-08T00:49:08+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Greg Lehey：Millenium I 有两种 大板旧款与 XI graphics 1.3 兼容 新款不行
+
+On Wed,  8 April 1998 at  0:50:14 +0200, Soren S. Jorvang wrote:
+>
+> [Matrox Millenium stability]
+>
+> If you want to be "sure" that the Matrox Millenium you buy works with
+> XFree86, get the original ('I') PCI model with an 2**n amount of
+> memory.
+
+Unfortunately, there are two different types of Millenium I.  I have
+one of each; the older (larger board) works with my XI graphics server
+1.3, the newer one doesn't.  I suspect both would work with the latest
+version of the server, but $375 is more than I'm prepared to pay.
+
+Greg
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604160 ###
+===== 库内序 145717 | PK 2604160 | 等级 L4 =====
+DATE: 1998-04-08T01:02:09+00:00
+FROM: Stefan Bethke <stb@transit.hanse.de>
+SUBJ: Re: Any of these kernel opts break RPC?
+摘要: Stefan Bethke：IPFIREWALL 与 bpf 无关 参见 ipfw(8) /etc/rc.local /etc/rc.firewall
+
+On Tue, 7 Apr 1998, Atipa wrote:
+
+> 
+> When I have these opts in my config files, RPC services can not bind.
+> Kernel is 2.2.6-STABLE from 0404. Removing these lines fixed RPC.
+> 
+> options         "MD5"                   # Encryption
+> options         DDB                     # Debugger
+> options         PERFMON                 # Performance Monitor
+> options         IPFIREWALL              # For bpfilter
+IPFIREWALL has nothing to do with Berkeley Packet Filter (bpf or bpfilter).
+
+Look at ipfw(8), /etc/rc.local and /etc/rc.firewall on how to use this IP 
+packet filtering facility properly.
+
+> This machine is NIS master, so I did not have time to have it down long
+> enought to reboot 4 times :(.
+
+The most probable cause for your problems is that you haven't set up any 
+firewall rules, so communication through the loopback interface fails, or 
+at least connections to your NIS server are dropped.
+
+As a general hint, you might want to study LINT before including any 
+option in your kernel config. From LINT:
+# IPFIREWALL enables support for IP firewall construction, in
+# conjunction with the `ipfw' program.  IPFIREWALL_VERBOSE sends
+# logged packets to the system logger.  IPFIREWALL_VERBOSE_LIMIT
+# limits the number of times a matching entry can be logged.
+#
+# WARNING:  IPFIREWALL defaults to a policy of "deny ip from any to any"
+# and if you do not add other rules during startup to allow access,
+# YOU WILL LOCK YOURSELF OUT.  It is suggested that you set firewall=open
+# in /etc/rc.conf when first enabling this feature, then refining the
+# firewall rules in /etc/rc.firewall after you've tested that the new kernel
+# feature works properly.
+
+
+Stefan
+
+--
+Stefan Bethke
+Muehlendamm 12            Phone: +49-40-256848, +49-177-3504009
+D-22087 Hamburg           <stefan.bethke@hanse.de>
+Hamburg, Germany          <stb@freebsd.org>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604162 ###
+===== 库内序 145719 | PK 2604162 | 等级 L4 =====
+DATE: 1998-04-08T01:03:47+00:00
+FROM: Vladimir Kushnir <kushn@mail.kar.net>
+SUBJ: Re: Netscape ported to Qt (fwd)
+摘要: Vladimir Kushnir：Qt 在 FreeBSD 也能编译 只需在 QT 前端 Makefile 加 -L/usr/X11R6/lib
+
+
+
+On Tue, 7 Apr 1998, Robert Watson wrote:
+
+> 
+> Sounds fun.  I haven't tried it under the Linux emulator yet, as I don't
+> get great connectivity with Norway :).  Would no doubt make a great port,
+> however.
+> 
+>   Robert N Watson 
+> 
+
+It's fun all right. Actually it compiles on FreeBSD as well (with some
+very minor tweaking (add -L/usr/X11R6/lib in QT front-end  Makefile and 
+likes). 
+A nessessary QT snapshot is at ftp://ftp.troll.no/qt/snapshots. And it's
+really alot faster than (Mo/Less)tif version, and with (obviously) not as
+large memory footprint.
+
+Regards,
+Vladimir
+
+<Most of the original announcement omitted>
+> 
+> 
+> QtScape is available at http://www.troll.no/qtscape/.  It is presented
+> as a Qt demonstration program only, not a Troll Tech product. The full
+> source code is released under the Netscape Public License, which
+> allows free distribution and modification. Further information about
+> the release of Netscape Communicator is available at
+> http://www.mozilla.org.
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604163 ###
+===== 库内序 145720 | PK 2604163 | 等级 L3 =====
+DATE: 1998-04-08T01:24:01+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Accton EN1207 (need help fast)
+摘要: Dag-Erling：全新 Accton EN1207 Cheetah 在 2.2.6-STABLE 上被识别为 de0 100baseTX 但联网失败
+
+I'm having trouble getting a brand new Accton EN1207 (Cheetah) to work
+on my FreeBSD 2.2.6-STABLE system. The adapter is detected as follows:
+
+de0 <Digital 21140A Fast Ethernet> rev 34 int a irq 5 on pci0:9:0
+de0: ACCTON EN1207 21140A [10-100Mb/s] pass 2.2
+de0: address 00:00:e8:4a:83:63
+de0: enabling 100baseTX port
+
+I have set up the following in rc.conf.local:
+
+network_interfaces="lo0 de0 lp0"
+ifconfig_de0="inet 62.92.165.69 netmask 255.255.224.0"
+
+I have also tried:
+
+network_interfaces="lo0 de0 lp0"
+ifconfig_de0="inet 62.92.165.69 netmask 255.255.224.0 media 10baseT/UTP"
+
+IP, netmask, gateway, etc. are all correct - everything works
+perfectly with my old 3Com 3c509 (ep0).
+
+I get a link light on the hub when I connect to it - the hub and the
+cable are known to be working. If I try to ping the broadcast address,
+the link light will blink once a second (as one would expect) but it
+would seem that no data is getting through.
+
+I need to get this working within 24 hours if at all possible, so I'd
+appreciate a quick response from anybody who has experience with that
+adapter and/or chipset.
+
+-- 
+fprintf(stderr, "I have a closed mind. It helps keeping the rain out.\n");
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604164 ###
+===== 库内序 145721 | PK 2604164 | 等级 L3 =====
+DATE: 1998-04-08T01:50:07+00:00
+FROM: Joel Ray Holveck <joelh@gnu.org>
+SUBJ: How to rebuild parts of source tree
+摘要: Joel Ray Holveck：慢机器上 make world 耗时长 想问只改动少量时 make install 是否正常工作
+
+I have a rather slow machine, and `make world' can tie it up for quite
+some time.  This is partially because it seems to rebuild everything,
+not just what's changed.  Does `make install' DTRT if only a few parts
+of the system have changed?
+
+Thanks,
+joelh
+
+-- 
+Joel Ray Holveck - joelh@gnu.org - http://www.wp.com/piquan
+   Fourth law of programming:
+   Anything that can go wrong wi
+sendmail: segmentation violation - core dumped
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604165 ###
+===== 库内序 145722 | PK 2604165 | 等级 L3 =====
+DATE: 1998-04-08T02:09:55+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: Netscape ported to Qt (fwd)
+摘要: Matthew Dodd：应推动 GTK 阵营做 Netscape GTK 版摆脱 motif 是首要目标 SSLeay 已集成
+
+On Tue, 7 Apr 1998, Robert Watson wrote:
+> Sounds fun.  I haven't tried it under the Linux emulator yet, as I don't
+> get great connectivity with Norway :).  Would no doubt make a great port,
+> however.
+
+Someone needs to encourage the gtk people to do a GTK port.  Getting rid
+of motif should be a primary goal for any netscape work. :)
+
+You'll also note that the SSLeay people have a working integration
+already. :)
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604166 ###
+===== 库内序 145723 | PK 2604166 | 等级 L3 =====
+DATE: 1998-04-08T02:16:23+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Netscape: Linux a top priority (news.com article) 
+摘要: Amancio Hasty：需要向 Netscape 开始抱怨 他记得公司在内部有 FreeBSD 支持者
+
+I think that we just need to start bitching to Netscape . If I am not
+mistaken we also have FreeBSD supporters in Netscape .
+
+	Cheers,
+	Amancio
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604167 ###
+===== 库内序 145724 | PK 2604167 | 等级 L3 =====
+DATE: 1998-04-08T02:23:27+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Netscape ported to Qt (fwd) 
+摘要: Amancio Hasty：GTK 志愿工已在 mozilla 组里被 flogged 一遍
+
+The gtk workers or volunteers have been properly flogged in the mozilla 
+newsgroup.
+
+	Amancio
+
+> On Tue, 7 Apr 1998, Robert Watson wrote:
+> > Sounds fun.  I haven't tried it under the Linux emulator yet, as I don't
+> > get great connectivity with Norway :).  Would no doubt make a great port,
+> > however.
+> 
+> Someone needs to encourage the gtk people to do a GTK port.  Getting rid
+> of motif should be a primary goal for any netscape work. :)
+> 
+> You'll also note that the SSLeay people have a working integration
+> already. :)
+> 
+> /* 
+>    Matthew N. Dodd		| A memory retaining a love you had for life	
+>    winter@jurai.net		| As cruel as it seems nothing ever seems to
+>    http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+> */
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604168 ###
+===== 库内序 145725 | PK 2604168 | 等级 L3 =====
+DATE: 1998-04-08T02:48:39+00:00
+FROM: Brian Reichert <reichert@numachi.com>
+SUBJ: dhcpc and ed3 interface
+摘要: Brian Reichert：wide-dhcpc 重启后偶发抱怨设备未配置 DHCP 重开就好 他用最便宜的 NE2000 克隆
+
+Hiya-
+
+I'm having marginal luck getting the wide-dhcpc DHCP client working
+consistently.   I've got the bpf interface built, etc, but
+occasionally, when I reboot, the dhcpc process bitches that my
+'device isn't configured for dhcp'.
+
+Rebooting _eventually_ clues it in, but I feel it's silly to adopt
+such an M$-like solution.
+
+I admit I'm using the worlds cheapest PCI NE2000 clones.  But these
+things have been behaving quite well.
+
+Does anyone have an opinion as to to why the dhcpc software
+occasionally thinks my card isn't configured?
+
+-- 
+Brian Reichert				reichert@numachi.com
+37 Crystal Ave. #303			Current daytime number: (617)-873-4337
+Derry NH 03038-1713 USA			Intel architecture: the left-hand path
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604169 ###
+===== 库内序 145726 | PK 2604169 | 等级 L4 =====
+DATE: 1998-04-08T03:21:51+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: softupdates vs. async
+摘要: Julian Elischer：softupdates 崩溃断电后磁盘仍一致 某些情形更快 建议 /usr/tmp 上试 softdep 或 async
+
+sorry for the long delay...
+soft updates leaves you however with a disk that is consistant after a
+crash or power fail. it is also much FASTER in some cases..
+(but not all). do you have /usr/tmp async or softdep (for example)
+(or wherever gcc puts it's tmp files..)
+
+julian
+
+On Sat, 28 Mar 1998, Gianmarco Giovannelli wrote:
+
+> I tried several make world in these days trying different configurations
+> to see which of them works better...
+> 
+> I saw that async is performing better than softupdates (is it possible
+> ???) ... infact :
+> 
+> **** -j4 build+install X softup *****
+> ---- Start Make World : Thu Mar 26 21:56:33 GMT 1998
+> ---- End Make World : Thu Mar 26 23:41:36 GMT 1998
+> 
+> 1h 45m
+> 
+> 
+> **** -j4 build+install X async *****
+> ---- Start Make World : Fri Mar 27 07:02:58 GMT 1998
+> ---- End Make World : Fri Mar 27 08:26:35 GMT 1998
+> 
+> 1h 24m
+> 
+> 
+> **** -j4 build+install notcl noprofi noperl noX async *****
+> ---- Start Make World : Fri Mar 27 10:43:23 GMT 1998
+> ---- End Make World : Fri Mar 27 11:56:25 GMT 1998
+> 
+> 1h 13m
+> 
+> 
+> **** -j4 world notcl noprofi noperl noX async *****
+> ---- Start Make World : Fri Mar 27 20:29:01 GMT 1998
+> ---- End Make World : Fri Mar 27 21:41:02 GMT 1998
+> 
+> 1h 12m
+> 
+> 
+> Now considering that my box is a Pentium 2 (300mhz) with a2940uw
+> (onboard) and two hd wide scsi /usr/src and /usr/obj on two different
+> drives... it seems to me that I am quite slow considering the times I
+> saw in this area...
+> 
+> Any suggests ?
+> 
+> -- 
+> 
+> Regards...
+> 
+> Gianmarco
+> "Unix expert since yesterday"
+> 
+> http://www.giovannelli.it
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604180 ###
+===== 库内序 145737 | PK 2604180 | 等级 L4 =====
+DATE: 1998-04-08T10:58:31+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Kernel with a detection only routine for Mylex DAC960 PCI versions
+摘要: Ulf Zimmermann：上线 Mylex DAC960 PCI 固件 4.x 检测内核供实机开机器验证通道与内存
+
+I put a compiled kernel with the detection routine for any PCI based
+Mylex DAC 960 controller with firmware 4.x online. Controller with 
+firmware 3.x should work too, but I can't promise it. I am asking anyone
+who has a controller and some drives available to just put the kernel
+on a floppy and let a machine boot. Check if it detects the controller
+type, channels, memory, system drives correctly. It should also detect
+any dead drives, offline or critical system drives.
+
+You can find the kernel at:
+
+	ftp://ftp.Alameda.net/pub/FreeBSD/kernel.dac960.gz
+
+Regards, Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604181 ###
+===== 库内序 145738 | PK 2604181 | 等级 L4 =====
+DATE: 1998-04-08T11:20:51+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: Pax weirdness (bug?)
+摘要: Darren Reed：建议导入 Matthew Green 为 NetBSD pax 完成的所有改动含 GNU tar 功能
+
+In some mail from Mike Smith, sie said:
+> 
+> 
+> Try this:
+> 
+> % cat /cdrom/info/info.* | zcat | pax -r -w -v tmpdir
+> 
+> Be quick with ^C.
+> 
+> Any ideas?  Known bogon?  Fixes?  (Nothing intuitive, anyway.)
+
+It might be worth importing all the changes Matthew Green has done for
+the NetBSD pax.  From memory, they were working on making cpio/tar both
+a part of pax (specially adding in GNU tar functionality).
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604183 ###
+===== 库内序 145740 | PK 2604183 | 等级 L3 =====
+DATE: 1998-04-08T11:38:43+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: ipopd/imapd - -ERR Can't get lock.  Try again or use IMAP instead
+摘要: Darren Reed：tkrat 1.1 与 ipopd imapd 装完三个 daemon 都报 Cant get lock
+
+
+Having compiled tkrat 1.1 and installed ipop{2,3}d as well as imapd
+on FreeBSD 2.2.5, all three of the daemons fail to work with the
+following error:
+
+-ERR Can't get lock.  Try again or use IMAP instead
+
+Can anyone shed any light on why this might happen ?
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604184 ###
+===== 库内序 145741 | PK 2604184 | 等级 L4 =====
+DATE: 1998-04-08T13:18:18+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: ipopd/imapd - -ERR Can't get lock.  Try again or use IMAP instead
+摘要: Darren Reed：锁定 Cant get lock 的根因是 /tmp
+
+In some mail from Darren Reed, sie said:
+> 
+> 
+> Having compiled tkrat 1.1 and installed ipop{2,3}d as well as imapd
+> on FreeBSD 2.2.5, all three of the daemons fail to work with the
+> following error:
+> 
+> -ERR Can't get lock.  Try again or use IMAP instead
+> 
+> Can anyone shed any light on why this might happen ?
+
+err, /tmp
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604186 ###
+===== 库内序 145743 | PK 2604186 | 等级 L3 =====
+DATE: 1998-04-08T15:21:29+00:00
+FROM: Evren Yurtesen <yurtesen@ispro.net.tr>
+SUBJ: !!!
+摘要: Evren Yurtesen：重启报 /dev/wd0a on / Specified device does not match 挂载失败
+
+well I rebooted my system and it says to me
+
+/dev/wd0a on /: Specified device does not match mounted device.
+Filesystem mount, failed startup aborted
+
+what should I do???
+
+PS. well my server is not working right now...this is a kind of serious
+problem for me.
+
+Evren Yurtesen
+ISPRO A.S.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604187 ###
+===== 库内序 145744 | PK 2604187 | 等级 L4 =====
+DATE: 1998-04-08T15:24:52+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: !!!
+摘要: Eivind Eklund：wd0a 不匹配建议回滚内核或升级 mount 先旧内核启动再升级后启新内核
+
+On Wed, Apr 08, 1998 at 06:21:29PM +0300, Evren Yurtesen wrote:
+> well I rebooted my system and it says to me
+> 
+> /dev/wd0a on /: Specified device does not match mounted device.
+> Filesystem mount, failed startup aborted
+> 
+> what should I do???
+
+Either rollback your kernel or upgrade 'mount'.  I'd boot with my old
+kernel, then upgrade mount, then re-boot with the new kernel.
+
+> PS. well my server is not working right now...this is a kind of serious
+> problem for me.
+
+That's not an excuse to crosspost.
+
+I've set Mailfollowup-to: questions.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

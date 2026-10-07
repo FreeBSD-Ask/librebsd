@@ -1,0 +1,22 @@
+2602812	885	Simon 针对数据仓库全表读取负载建议采用 256KB 或更大的条带并开启 read-ahead 预读，认为此类应用会受益于 Super-Ultra-Wide-ExtraWide SCSI
+2602818	885	Simon 提到自己上次接触 Mylex DAC960 时其水平只相当于五年前的 DPT 且更易出错，当时在 Intel 做大型基准找不到支持，匿名打电话给 DPT 热线反而更有帮助
+2602819	885	Simon 认可专用系统更易长期运行，理由是变体更少代码执行路径也更少，像恒转速运行的发动机一样稳定，并希望有计算机科学家来研究这个现象
+2602820	885	Simon 认为基准测试多用直连磁盘而非 RAIDbox 的差异很大程度源于厂商政治，他曾为一家 CPU 厂商工作，其基准主要跑在特定 O/S 与 RDBMS 上，选用非 RAID 控制器因政治正确品牌有 bug
+2602821	885	Bob 报告升级到 2.2.5 后 ed0 偶发 NIC memory corrupt 报 invalid packet length，网卡型号 SMC8216 地址 00:00:c0:69:14:86，询问是否值得提交 bug
+2602823	885	Simon 不认为 Plan9 能解决线程提出的问题，指出 Plan9 比 5ESS 更新，并自评自己的定义是 Plan9 应当是 Unix 本该有的样子
+2602824	885	Mike 表示除非硬件明确要求，否则应假设 mbuf cluster 按所运行架构对齐，若有硬件要求则应编码兼容各种情况并针对最契合的对齐做优化以提升可移植性
+2602831	885	Nate 提议将 SCSI Bus redundancy 讨论移至 scsi 列表，认为该话题已长时间延续虽仍有帮助但已不再适合 hackers 列表，并特意留下在 hackers 请其他人帮忙转移
+2602832	885	Terry 反问对方测试是否包含 soft updates，认为软更新在拓扑上等同于把写缓存从控制器挪到内核，并说自己手头没有能关闭 DEC 硬盘写缓存的硬件无法自答
+2602834	885	Simon 称自己开发环境使用 FDDI CDDI，DEC 卡受 FreeBSD 支持，即插即用，能提供冗余且无需昂贵交换机，同时用 Intel 100B 卡跑 100mbit PtP，评价内核子系统好用不出问题就是最高褒奖
+2602837	885	Simon 回忆 FibreChannel 数年前演示中单盘超过 1700 TPS 且冗余抗 EMI RFI，可惜昂贵；他澄清自己并非为 DPT 工作，只是有需要时得到慷慨帮助，另在科罗拉多见过另一家公司有 FCAL HBA 但从未联系上
+2602838	885	Simon 指出对方方案属用户空间应用层，在黑箱 O/S 与黑箱 DBMS 上是唯一可行方案；若想借 FreeBSD 让应用免除此负担则次优；并称 FreeBSD 至今未有伯克利许可下的 journaling 文件系统
+2602840	885	Simon 称自己所有测试均为数据库导向偏斜至 50% WRITE 占空比，并有一台可登录跑测试的系统配 32MB cache 和 6 宽 RAID-0 阵列，只等对方提供基准测试程序
+2602844	885	Mike 询问是否有支持 DMA 的 IDE 缓存控制器，认为值得支持；此前 Wilko 提议起价 250 美元的 IDE 缓存控制器测得 2us 以内缓存命中延迟
+2602846	885	Simon 称数据库引擎类工作的内存访问比专用硬件慢 10 到 25 倍，节点间通信速率约 800MB/Sec，认为聚类内存访问是有智识挑战性的项目
+2602848	885	Simon 直接答复 Mike 关于 DMA 之问，DPT 控制器都做 DMA，PCI 版只走 DMA 已无 PIO；但 IDE 卡看起来像标准 IDE controller，商店里号称做 DMA 的其实他 IDE 知识已过时不敢断言
+2602850	885	Simon 反问能否把 SMP FreeBSD 的 PC 放到那里作为 5E 调试机，肯定比 SPARC 跑得更好，回应 Dyson 关于 Sun 工作站上跑 5E 调试测试版可能未产品化之说
+2602852	885	Peter 询问如何在程序里检测 PPP 是否连上，运行 PPP in auto 模式时希望随时判断调制解调器是否已接通，但他发现 tun0 上 flags 恒为 0x8051，无论调制解调器连接与否都相同
+2602853	885	Peter 想通过 WWW 网页给 FreeBSD 管理 UUCP 与 Squid 并做重启按钮，用 CGI Perl 脚本调用 /sbin/reboot 却只见进程全被杀而重启流程停滞，推断是 httpd 被杀带崩 CGI 与 reboot，即使在 CGI 里 fork 也一样
+2602856	885	Wilko 附议自己同样使用 FDDI DEC 卡，即插即用开箱即用，每张只花了 5 美元觉得应该多买几张，现在还想再弄一个 FDDI hub 免得为用 FDDI 把机器全开机
+2602858	885	wilko 向 terry 反问到底想关哪台机器哪块硬盘的 write cache，说自己手头没有他说的 DEC drive 那种关不掉的硬件，也许能帮着找出让磁盘同意的方法
+2602863	885	Remy 回答 terry 关于 soft updates 的问题，说自己没有测，用的是 12 月 25 日的 3.0，反问 soft update 与 async mounts 相比如何，以及驱动对每次写都立即回 OK 是否还使 soft update 有效

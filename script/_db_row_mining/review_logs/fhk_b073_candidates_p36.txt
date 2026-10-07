@@ -1,0 +1,22 @@
+2604221|L3|Darren Reed 建议建立 netscape@freebsd.org 邮箱承接后续相关讨论
+2604223|L4|Ruslan Ermilov 提醒 committer 跟进其一周前提交的 PR conf/6226 class change-request
+2604226|L4|Alex Belits 认为 FreeBSD 用户与开发者应减少操作系统之间的意气之争把时间投入 FreeBSD 改进与移植
+2604227|L3|Archie Cobbs 询问 FreeBSD 中如何编写 PnP 感知驱动 probe 阶段如何设置参数做自检
+2604229|L3|David Shanes 转发自己写给 OReilly 创始人 Tim OReilly 的邮件支持开源软件立场
+2604232|L4|Mike Smith 认为操作系统是互联网软件基础 summit 宣传把 Linux 置前很能说明问题
+2604236|L3|Kris Kirby 询问有无免费 PCNFSD 客户端支持 Packet driver 或 ODI 都可以
+2604237|L4|Mike Smith 认为 FreeBSD 服务 DOS 与 Windows 系统文件共享最佳方案是 Samba
+2604238|L3|Joe McGuckin 迁移到 sendmail 2.2.6 后脚本调用 mail 或 sendmail 把发往外域的邮件送到本地用户
+2604240|L4|Michael K. Sanders 猜测是 IP 虚拟主机导致 sendmail 把它们全塞进 Cw 建议看 DontProbeInterfaces
+2604241|L4|Ulf Zimmermann 提醒还要考虑 Best MX is local 这个因素
+2604242|L4|Jordan K. Hubbard 转述 Eric Raymond 说 BSD 家族因太多且不愿涉政治而被排除于 summit
+2604248|L3|David E. Cross 询问 FreeBSD 内核级线程处于什么状态 是稳定 当前 还是空中楼阁
+2604251|L4|John Birrell 说明稳定版因需大量 VM 工作不可能 当前是停滞中的进行中 他负责用户态端内核端待补
+2604260|L4|Charles Owens 感谢 Terry Lambert 放出 LDAP 补丁
+2604261|L4|Dan Janowski 认为这场争论两大议题是市场存在感与成熟度 Linux 优势在于被当成互联网长出的时髦事物
+2604262|L3|Amancio Hasty 询问 FreeBSD Mozilla CVS 服务器位置催促当晚把服务上线
+2604263|L4|Dan Janowski 提议开展 FreeBSD 用户普查 放到网站 FTP 横幅与 CDROM 上
+2604264|L4|Mark Mayo 认为时间紧迫 尽快发出 FreeBSD 为 Mozilla.org 提供全球镜像与源码修订架构的报道
+2604266|L4|Paul Saab 表示原先以为 Jordan 已把 Mozilla CVS 服务器放在 bento.cdrom.com 所以没再搭
+2604267|L4|John Fieber 认同 Dyson 所说 FreeBSD 用户更偏爱使用而非传教 自己 1993 年就选了 386BSD 弃 Amiga 转平台
+2604270|L4|Brett Glass 反驳 Hubbard 所述 BSD 内部相互排斥是无稽之谈 各 BSD 派系彼此关系远比 Artistic License 之争融洽

@@ -1,0 +1,22 @@
+2603675	885	drew 打算把 S/Key 一次性口令集成进 popper，改动放在 #ifdef SKEY 之下，只要 s/key library 调用不受出口管制他便会把补丁一并提交回 ports
+2603677	885	mark 对 drew 提出的 s/key library 调用是否属于出口管制范围这一询问只回复了两个字：No，未作任何扩展说明
+2603678	885	John 说 Daniel 询问 cvsup.au.freebsd.org 访问拒绝应直接联系镜像维护者，名单列在 FreeBSD 的 Handbook 第 23.4 节 CVSup Sites 一节，澳大利亚镜像维护者是 dawes
+2603679	885	Snob Art Genre 对 Stephan losa 询问网卡收发计数与碰撞统计的读法只答了一句 man netstat
+2603680	885	doug 提到 Archie Cobbs 说新版 ISC DHCP server 含 gateway 与 client 代码，并补充 client 部分只在 beta releases 中出现过
+2603682	885	opsys 对比 FreeBSD 当前树与 bsdi 3.1 的 sysctl，询问 dflt MSS 究竟是 512 还是 536，他更偏向 512 因为它须是 512 的倍数
+2603683	885	Eivind 说 install 支持 exclusions list 方案的开发量约三小时，补丁给 bsd.subdir.mk 增加 SDIR_OVERRIDE 及 subdirlist、subdiradd、subdirdrop 三类子目录
+2603684	885	opsys 询问 ellipse ftp server 的性能与本机 ftpd、wu-ftp 相比如何，并顺手提到 wcarchives 的 DG-ftp 更强
+2603685	885	peter 定位 LPIP 根因：sys/mbuf.h 要求 mbuf 操作受 splimp 保护，LPIP 从未把 lpt 中断加进 net_imask；另涉 net/if.h 与 ipintrq，PR 为 kern/6099、kern/1271、i386/5698
+2603687	885	Studded 说 Doug 提到的 ISC DHCP client 其实很稳定，并给出 home.san.rr.com/freebsd/dhcp.html 上的 setup 说明
+2603688	885	brian 建议从 FreeBSD.org 上的 latest ppp 版本入手，使所有 direct 连接都写进 utmp，用 last 命令即可得到连接统计
+2603691	885	doug 确认自己用 ISC DHCP client 已在制造流程里跑了一两年，也在自己的 laptop 上跑着，设置比服务端略麻烦
+2603692	885	David 说 512 与 536 之争的答复是不支持 Path MTU Discovery 的默认才是 512，FreeBSD 走 PMTU Discovery，tcp_mssdflt 变量实际取对端 mss 与接口 MTU 的最小值
+2603693	885	Robert Watson 正用 /dev/tun 拼装一个 simple VPN toolkit，已跑通 point-to-point 隧道与 UDP transport、加上 flow-control 与 SKIP 认证，打算以 BSD license 形式公开发布
+2603694	885	Matthew N. Dodd 说自己正在写 kernel level tunnel driver，采取 generalised 的 encapsulation 手法，好让后续新增路由与处理只是一件 code 的事
+2603697	885	mark 澄清 FreeBSD 里的 kip 并非 Skip 而是 Kerberised IP，需搭配 KerberosIV 使用
+2603698	885	Greg 说他用 cvs co -r 2.2.6-RELEASE src 什么也没检出，翻到 $CVSROOT/CVSROOT 的 val-tags 里只有 RELENG_2_2_5_RELEASE，补上 RELENG_2_2_6_RELEASE 后才成功
+2603699	885	JHB 说 Greg 用的那个 tag 形式不对，要查 tag 词表最省事的是进 /usr/src 后跑 cvs log Makefile 看前几屏的输出
+2603700	885	Greg 更正自己实际输入的是 cvs co -r RELENG_2_2_6_RELEASE，但改完 $CVSROOT/CVSROOT/taginfo 才检出成功
+2603702	885	luigi 试用 VNC 的二进制文件未果，Linux client 在 Connect 阶段就死掉，怀疑是模拟问题，而 NT 上的 Win32 版本则整个挂起
+2603703	885	Ruslan Shevchenko 回复 Luig Rizzo 的二进制试用询问，指出 /usr/ports/net/vnc 可用但速度很慢
+2603704	885	Eivind 在 luigi 询问 Xfree 配置之后，用 cd /usr/ports/net/vnc && make && make install 装完端口，玩笑说归功于 Mike Smith

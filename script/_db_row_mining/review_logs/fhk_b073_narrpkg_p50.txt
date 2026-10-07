@@ -1,0 +1,21 @@
+2604399|L3|David Langford：接住 John Birrell 说 mozilla 只是又一个 src/contrib 不宜放入标准 CVS 仓库
+2604401|L3|Amancio：提议为 FreeBSD 组建公关支持小组，愿意建媒体联系库但缺人负责名单日常管理
+2604402|L3|Luigi Rizzo：确认 xnfs 等两个 shareware PCNFS 客户端存在，并猜测对方问的是否为 bwnfs 相关
+2604405|L4|Amancio：称用 mgetty 与 vgetty 处理电话，Hylafax 能启 vgetty 但未调试，平时发传真则杀掉 vgetty
+2604408|L3|Ruslan Shevchenko：回应 JRE 许可更宽松可在其他平台开发再在 FreeBSD 上验证
+2604410|L3|Matthew Dodd：对 GUI 应用有兴趣但因 X11 与 tkperl 门槛劝退，愿意找人分担
+2604411|L3|Tommy Hallgren：推介 SCO UDI http://www.sco.com/UDI/ 作为可移植设备驱动的示例
+2604412|L3|dannyman：回应 John Birrell 因 Motif 无法自购转而问 GTK 或 QT 方是否已将 Netscape 移植到自家工具箱
+2604413|L4|Johan Larsson：转述 Wolfram 的 mozilla-cvs CVSup 镜像 host cvsup.de.freebsd.org 同步
+2604415|L3|Brett Glass：认为 FreeBSD 语音信箱与传真方案值得大力宣传，主张可让浏览器邮件客户端收语音与传真与邮件
+2604416|L4|Nate Williams：澄清 Sun JRE 许可不允许用于开发 Java 虚拟机，但可搭配产品分发，改 Netscape 使用 JRE 合规
+2604417|L3|Amancio Hasty 提到 Java JDK 可从 freebsd.org/java 获取并介绍 Java Workshop 2.0 与 JACE
+2604419|L3|Matthew N Dodd 反问为何系统管理前端要用 Java 认为 Perl GTK 更轻更快
+2604421|L4|Amancio Hasty 主张用 Java 理由是围绕 Java 的跨平台 IDE 支持基础设施庞大
+2604422|L3|Amancio Hasty 按 JKH 指示已用 cvsup 建出 mozilla tree 并说明需要访问 cvs 仓库的额外指引
+2604423|L4|Terry Lambert 指出 open 打开时调用方已持有文件名因此描述符不必回传名字
+2604424|L4|Jonathan M Bresler 说明 freebsd-mozilla 列表已开放订阅且为闭合列表
+2604428|L3|Frank Pawlak 认同 JKH 两万五千注册用户只是冰山一角并强调关键是先界定市场总规模
+2604437|L4|Robert Watson 补充至少两家公司因缺少 CMU Cyrus 服务而放弃 FreeBSD 与 BSD OS
+2604438|L4|John-Mark Gurney 回答 mozilla cvs 仓库约 45.6 MB 检出后约 45.5 MB
+2604443|L4|Mark Mayo 支持增设独立倡导场域认同 advocacy@freebsd.org 长期该设立

@@ -1,0 +1,905 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602812 ###
+===== 库内序 144370 | PK 2602812 | 等级 L4 =====
+DATE: 1998-03-04T20:18:31+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：建议数据仓库全表读取类负载采用 256KB 或更大条带并开启预读
+
+
+On 04-Mar-98 Wilko Bulte wrote:
+ 
+...
+
+>> The difficulty is in having FreeBSD capable of producing this traffic on
+>> small blocks (dd if=/dev/zero of=/dev/something bs=64k is NOT typical
+>> application).
+> 
+> Build a datawarehouse and do full-table reads etc. For dataprocessing etc
+> you will never come near.
+
+Sure.  These you make with 256KB stripes or larger, and turn read-ahead on.
+BTW, these applications should enjoy Super-Ultra-Wide-ExtraWide SCSI.
+
+> We've seen host adapters becoming saturated before the RAIDbox. This is
+> of course using an artificial benchmark that produces 100% cache hits on
+> the RAIDbox' cache.
+
+Yup.  I think you will enjoy the new generation DPT controllers.  Even as a
+passthrough to your RAID box.
+
+>> > I could run two host channels on this thing across two RAID sets into
+>> > two
+>> > Adaptec adapters.  That might be a big win.
+> 
+> That could be possible, highly depends on the adapter & driver. But for
+> single stream a well written driver & good card will probably not be the
+> bottleneck. 
+
+The bottleneck is not in the driver, but most likely in the SCSI sequencer.
+ I suspect something in the kernel is also holding things down.  A clue can
+be had in the drop in I/O rate when you switch from UP to SMP.  I dropped
+the ball on tracking these down but will pick it up soon.  SMP is twice as
+slow as UP in these tests.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602818 ###
+===== 库内序 144376 | PK 2602818 | 等级 L4 =====
+DATE: 1998-03-04T20:58:32+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：指 Mylex DAC960 在他经手时水平相当于五年前的 DPT 但更易出错且几乎无人支持
+
+
+On 04-Mar-98 Wilko Bulte wrote:
+
+...
+
+>   Anxiously awaiting. I just missed an opportunity today to obtain a
+>   Mylex DAC960 3 channel RAIDcard. Bah.
+
+Last I touched these, they were where DPT was 5 years prior, only buggier.
+I was at Intel at the time, working on a ``big'' benchmark and could get
+zilch support.  I far a lot better calling, anonymously into DPT hotline,
+saying ``I have this 1991 vintage card a friend gave me, and it does...''
+
+Part of a product is its producer and support.  Maybe Mylex is much better
+at it today.
+
+ ...
+
+>   A couple of years ago while working at Philips Info Systems we had a
+>   SysV2 derivative that could do powerfail/restart (as we called it). 
+>   It used some battery backed up RAM, and it was not a PC (M68K cpu).
+>   Having never worked on that kernel I don't know how they did it.
+>   But it worked pretty well.
+
+The details fail me and we may be talking about two different things:
+A device driver monitors the power-fail line (typically, on VME it is an
+NMI).  The driver's inerrupt service routine pushes the stack into memory,
+sets a bit and halts.
+
+When you boot, you FIRST look at that bit.  If it is ON, you do NOT run
+memory test :-), you simply pop the stack and CONT (or whatever).
+That driver leaked into the SVR4 source tree.  I used it in another project
+on a 486 port, but we did not use a BIOS *Yup, we built a PC that could not
+boot DOS, only Unix.
+
+>> Memory SNAP:  If you write it into a DPT controller, and the controller
+>> has
+>> enough cache to hold it, it is pretty fast.  I can sustain about 2us per
+>> transaction overhead and about 120MB/Sec.  This gives us about a second
+>> or
+>> two.  The new DPT's can retain the cache until power returns.
+>> Even a small UPS (with poer alarms will last long enough.
+> 
+>   But how do you checkpoint things? So, where did the processor leave
+>   off?
+
+The DPT gets transactions form the host.  It processes them in an
+autonomous manner.  If the entire transaction is OK, an ACK is sent to the
+host.  If not, not.  If Power-Fail is detected, the DPT simply halts until
+it sees a reset f
+[…中段省略 1083 字符…] el actually checkpoint itself, with any better resolution,
+or intelligence will have to change too many things.  I am trying to make
+the system monitoring drivers implement a general purpose, hardware
+independent manner.  How successful that will be I do not know yet.
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602819 ###
+===== 库内序 144377 | PK 2602819 | 等级 L4 =====
+DATE: 1998-03-04T21:06:43+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：认可专用系统更稳定 因变体更少代码执行路径也更少 近乎像恒转速运行的发动机
+
+
+On 04-Mar-98 Wilko Bulte wrote:
+ ....
+
+> And best of all: no users.. We all know that systems tend to stay up much
+> longer when left alone (read: dedicated to say WWW serving or something
+> like that).
+
+sure.  The number of variants is much smaller then, the number of execution
+paths through the code is smaller.  It is almost as if software behaves
+like mechanics (like an engine running at constant RPM lasts much longer
+than one stat stops-n-goes, etc.).  Some computer scientist needs to pick
+up on this phenomenon (really).
+
+>> No, I use FreeBSD for the last 18 months.  Seagate claims, in writing
+>> 1,000,000 hours mean time between failures on their drives.  Can FreeBSD
+> 
+> Read the fine print on MTBF: it applies to large enough populations. You
+> as Joe Average user will never have a statistically sound sample to claim
+> anything. So they can essentially write down what they like.
+
+Oh, I am fully aware of it.  But I still claim (with confidence), that the
+typical modern hard disk has a much better (many times better) uptime than
+any Unix (or NT) does,  I suspect they even have better uptime than most
+motherboards and most memory SIMMs (although this makes no sense at all).
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602820 ###
+===== 库内序 144378 | PK 2602820 | 等级 L4 =====
+DATE: 1998-03-04T21:14:46+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：认为基准多用直连磁盘而非 RAIDbox 的差异很大程度源于厂商政治
+
+
+On 04-Mar-98 Wilko Bulte wrote:
+ ...
+
+> Interestingly enough these benchmarks are mostly run with direct attached
+> disks, no RAID controller in sight. Assuming enough CPU horsepower
+> (a AlphaServer 8400 will do just fine with 8x 625Mc CPU will do...) you
+> do striping on the machine. Lots faster than any RAIDbox.
+
+A lot of that has to do with politics.  Some years ago i worked (briefly!)
+for a certiain CPU manufacturer who ran RDBMS menchmarks mainly on certain
+O/S and certain RDBMS engine (both made by the same vendor, dare I say). 
+One brand of RAID controllers was not used because it had a politically
+incorrect CPU on board.  the other brand of RAID controllers was pushed
+hard as it had a politiclly correct CPU, but was so buggy, we could never
+finish formatting the disks.  We ended up with another brand of non-RAID
+controllers which was politically acceptable (they did not use the proper
+CPU or any CPU at all, but the politically wrong O/S was not getting the
+inside track to this controller).
+
+Yes, a very hot CPU arrangement, with many channels, on a fast I/O bus will
+deliver carefully configured benchmark very well.  It is not necessarily an
+optimal setup for most of us (utilizing 5% of a disk is not what we
+normally do either.  There ar ebenchmarks, and there is real life.
+
+> Who cares about data integrity, it is TPC you want for the glossies.
+
+Actually some benchmarks are supposed to consider that. But I could tell
+you some funny stories there too.
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602821 ###
+===== 库内序 144379 | PK 2602821 | 等级 L3 =====
+DATE: 1998-03-04T21:37:12+00:00
+FROM: Bob Bishop <rb@gid.co.uk>
+SUBJ: ed0: NIC memory corrupt
+摘要: Bob Bishop 报告升级到 2.2.5 后偶发 ed0 NIC memory corrupt 网卡为 SMC8216 询问是否值得提交 bug
+
+Hi,
+
+Since upgrading this box to 2.2.5, I'm getting occasional
+
+ed0: NIC memory corrupt - invalid packet length <big number>
+
+It's an 8216:
+
+ed0 at 0x280-0x29f irq 5 maddr 0xd8000 msize 16384 on isa
+ed0: address 00:00:c0:69:14:86, type SMC8216/SMC8216C (16 bit)
+
+Is this worth a bug report?
+
+
+--
+Bob Bishop              (0118) 977 4017  international code +44 118
+rb@gid.co.uk        fax (0118) 989 4254  between 0800 and 1800 UK
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602823 ###
+===== 库内序 144381 | PK 2602823 | 等级 L4 =====
+DATE: 1998-03-04T22:44:08+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: RE: SCSI Bus redundancy...
+摘要: Simon Shapiro：不认为 Plan9 能解决该问题 称其比 5ESS 更新 并自评其为 Unix 应有的样子
+
+
+On 04-Mar-98 Jamie Bowden wrote:
+> On Wed, 4 Mar 1998, Simon Shapiro wrote:
+> 
+>> This is a simplistic examples.  Life is nastier than that.  Can it be
+>> solved?  Of course.  With Unix? Yes, what do you think a 5ESS switch
+>> runs?
+>> With FreeBSD?  Yes.  As is today?  No....
+> 
+> Plan9?
+
+I do not really know, but do not think so.  Plan9 is newer than 5ESS.
+
+Besides, my definition of Plan9:  What Unix should have been"
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602824 ###
+===== 库内序 144382 | PK 2602824 | 等级 L4 =====
+DATE: 1998-03-04T22:34:51+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Are mbufs aligned or bounded on something? 
+摘要: Mike Smith：除非硬件明确要求否则应假设 mbuf cluster 按所运行架构对齐 有硬件要求时须兼容各种情况
+
+> 
+> In other words: should i care about mbuf cluster is bounded on PAGE_SIZE
+> in physical memory.
+
+Unless it explicitly matters to your hardware, you should assume that 
+mbuf clusters are aligned to suit the architecture you're running on.
+
+If it *does* matter to your hardware, I would be inclined to suggest 
+that you code to handle all situations, and optimise for the case where 
+the alignment best suits you.  This will greatly improve the 
+portability of your code.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602831 ###
+===== 库内序 144389 | PK 2602831 | 等级 L3 =====
+DATE: 1998-03-04T23:07:52+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: MOVE THIS!!! (was Re: SCSI Bus redundancy...)
+摘要: Nate Williams 提议将 SCSI Bus redundancy 讨论移至 -scsi 认为已不适合 hackers 列
+
+Can we *please* move this to -scsi?  It has gone on a very long time,
+and while it may be helpful, it's no longer 'hackers' material.
+
+Thanks!
+
+
+Nate
+ps. I left it on -hackers so that others would see to move it!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602832 ###
+===== 库内序 144390 | PK 2602832 | 等级 L4 =====
+DATE: 1998-03-04T23:12:53+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Disk write caches
+摘要: Terry Lambert：认为软更新在拓扑上等同于把写缓存从控制器挪到内核
+
+> > I would be very interested to see what the benchmarks on a machine
+> > with soft updates would be with a disk with and without write
+> > cacheing.
+> 
+> I tested cache benefits within disks. Write cache disabling lowered the 
+> perfs from 2 to 10 time depending on operations.
+
+Did this include soft updates, however?
+
+IMO, soft updates is topologically equivalent to moving a write cache
+from the controller to the kernel.
+
+I am *specifically* interested in what an FS mounted with soft updates
+would do (as I don't personally have the hardware wherewithall to be
+able to answer the question for myself; my DEC drives don't seem to
+allow me to turn things off).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602834 ###
+===== 库内序 144392 | PK 2602834 | 等级 L4 =====
+DATE: 1998-03-04T23:28:04+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：称 DEC 网卡受 FreeBSD 支持 即插即用 且提供冗余无需昂贵交换机
+
+
+On 04-Mar-98 Wilko Bulte wrote:
+ 
+...
+
+> free, like a $10-15 pricepoint. No real use for it here, but maybe fun
+> to play with. Like the FDDI network here ;-)
+
+I am using FDDI (CDDI) here on my development setup.  The DEC cards
+supported by FreeBSD.  Very boring setup;  You plug them in and it works. 
+Nice thing is it provides redundancy and does not need an expensive switch.
+I use the Intel 100B cards for 100mbit PtP.  Just as boring but twice as
+fast. (boring here is the ultimate compliment a kernel subsystem can have; 
+it works well without any problems).
+
+ ...
+
+>  An extra power supply is money well spent. We ship all our standalone
+>  arrays at least with N+1, optional 2N power. 2N gives you 2 seperate
+>  power entry points to the power grid. Now we only need to educate people
+>  to use two different power branches (phases? what's the right English
+> term?)
+
+The old DPT 9W tower (made by DEC) had an interesting feature, where the
+power INPUT was switchable too.  If the AC to one supply went dowm it will
+draw AC from the other.
+
+Yes, 2N P/S is trivial to do (2 diods/circuit if I remember right) and
+cheap.  Technically, you want each supply fed from a different phase.  In
+the US they are referredto as ``independant circuits''.  I have seen people
+paying lots of money to get that, where they have 220V right in the same
+room (220BAC in the US is 2-phases, 180 degrees apart, unlike the European
+3 phasees 120 degrees apart.  Yest, you can get 3phase circuits in the US
+too).  The hot wire in a 220VAC, in the us is 117VAC to ground, 220VAC
+hot-hot.
+
+>> To have the kernel actually checkpoint itself, with any better
+>> resolution,
+>> or intelligence will have to change too many things.  I am trying to
+>> make
+> 
+>  OK, that was my original question. Had a bad feeling about exactly what
+> you mention here.
+
+What's bad? I would like to know if you think there is a mistake here.
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602837 ###
+===== 库内序 144395 | PK 2602837 | 等级 L4 =====
+DATE: 1998-03-05T00:14:32+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：称 FibreChannel 数年前演示中单盘超过 1700 TPS 且冗余且抗 EMI RFI
+
+ ...
+
+> Or a FibreChannel array. Will be playing with that for the rest of the
+> week.  I'm pretty curious to see how that behaves.
+
+Ah, the first usable and functional disk channel to hit small computers.
+The demos I saw several years ago showed over 1,700 TPS to a single drive. 
+And it is redundant, EMI/RFI clean, wonderful, and expensive.
+
+ ...
+
+> I don't know if DPT will be part of our product offering. I play with
+> what they throw at me ;-) The FC array is cute so I don't complain.
+
+I do NOT work for DPT.  I get generous help when I need it.  But they have
+an FCAL HBA someplace.  There was another company in Colorado (?) which had
+a controller.  They promised me a card to write the FreeBSD driver, but I
+never hear from them anymore.
+
+...
+
+>> the ball on tracking these down but will pick it up soon.  SMP is twice
+>> as slow as UP in these tests.
+> 
+> Somebody/something locking resources? But that is definetely worth
+> investigating for SMP users.
+
+Yup.  I never invoked any interest in this phenomenon, other than ``if you
+find why, give me the patch''.
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602838 ###
+===== 库内序 144396 | PK 2602838 | 等级 L4 =====
+DATE: 1998-03-05T00:20:01+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: RE: SCSI Bus redundancy...
+摘要: Simon Shapiro：指对方方案属用户空间应用层 对黑箱系统与黑箱数据库是唯一可行 更好的系统应免除应用此负担
+
+
+On 04-Mar-98 sbabkin@dcn.att.com wrote:
+ ...
+
+Self - Reminder;  This is a FreeBSD, hackers mailing list.
+
+Now, Your solutions are workable, but they are user-space, application
+level solutions.  If you are on a black box O/S with a black box DBMS, they
+are not only valid, but the only workable solution.  If you are thinking of
+way to may FreeBSD, as na O/S better, so that applications can be relieved
+from this burden, then your solutions are less optimal.
+
+> No. If you use Online JFS, what you do: make your database
+> residing in one filesystem. This is a must. Then take another
+> 30G volume (the exact size depends on the intensity of changes,
+> this one estimates that no more than ~1/3 of blocks in your
+> original filesystem will be changed during backup) and mount it as 
+> a "freeze" to your original filesystem. When some operation is done 
+> on your original filesystem, the contents at the time of "freezing"
+> will be saved to the second volume. So when your backup reads the
+> "freezed" filesystem, it will take a proper block from either the
+> original or second volume. 
+
+FreeBSD does not have, to date, a journaling file system, available in
+source under the Berkeley license.  Even if it did, it will not solve the
+original problem of this thread, which was how to guarantee reliability in
+the face of a SCSI bus failure.
+
+> Yet better idea: don't store your database right in the filesystem, 
+> store it in Oracle and you will get possibility of online backups
+> for free.
+
+Oracle for FREE?  Where?
+
+>> This is a simplistic examples.  Life is nastier than that.  Can it be
+>> solved?  Of course.  With Unix? Yes, what do you think a 5ESS switch
+>> runs?
+>> With FreeBSD?  Yes.  As is today?  No....
+>> 
+> Unless someone will make Oracle working on it :-)
+
+huh!
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602840 ###
+===== 库内序 144398 | PK 2602840 | 等级 L4 =====
+DATE: 1998-03-05T01:32:22+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: RE: Disk write caches
+摘要: Simon Shapiro：称自有测试均为数据库导向且写入占比 50% 并有可登录系统配 32MB 缓存与 6 宽 RAID-0
+
+
+On 04-Mar-98 Terry Lambert wrote:
+> I would be very interested to see what the benchmarks on a machine
+> with soft updates would be with a disk with and without write
+> cacheing.
+
+I would, if I could have it not freeze up the system long enough.
+Any benchmark in mind?  All mine are DBMS oriented, and skewed too (50%
+WRITE duty cycle).
+I have a system you csan login into and run against a 32MB cache to a
+6-wide RAID-0 array.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602844 ###
+===== 库内序 144402 | PK 2602844 | 等级 L3 =====
+DATE: 1998-03-05T01:37:49+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Disk write caches 
+摘要: Mike Smith 询问是否有支持 DMA 的 IDE 缓存控制器 认为值得支持
+
+> > Not sure IMHO. Typical wait time before write starts is 20 to 50 ms or 
+> > half the internal disk buffers. Far less than sync daemon.
+> 
+> Get a caching controller, they start at $250.00 for IDE ones.  I measure
+> 2us or less for a cache hit to such controller.
+
+Do you know of any that do DMA?  That'd be something *very* much worth 
+supporting.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602846 ###
+===== 库内序 144404 | PK 2602846 | 等级 L4 =====
+DATE: 1998-03-05T02:30:37+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Cluster?
+摘要: Simon Shapiro：称数据库引擎类工作内存访问慢 10 到 25 倍 测量在专用硬件上进行
+
+
+On 04-Mar-98 Robert Watson wrote:
+ ....
+> For clustered computational work, however, there are no debates about
+> performance :).  Hiding clustering of network services as well as
+> retaining reliability is a very interesting problem -- perhaps use of a
+> NAT to do magic would help here?
+We conputed about 10-25 times slower memory access for database engine type
+work.  This was with specialized hardware, with about 800MB/Sec node-node
+communications.
+
+Intelectually challenging project, though...
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602848 ###
+===== 库内序 144406 | PK 2602848 | 等级 L4 =====
+DATE: 1998-03-05T02:51:45+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Disk write caches
+摘要: Simon Shapiro：DPT 控制器都做 DMA，直接答复 Mike Smith 关于 DMA 支持之问
+
+
+On 05-Mar-98 Mike Smith wrote:
+>> > Not sure IMHO. Typical wait time before write starts is 20 to 50 ms or
+>> > half the internal disk buffers. Far less than sync daemon.
+>> 
+>> Get a caching controller, they start at $250.00 for IDE ones.  I measure
+>> 2us or less for a cache hit to such controller.
+> 
+> Do you know of any that do DMA?  That'd be something *very* much worth 
+> supporting.
+
+All The DPT controllers do DMA.  The PCI ones do only DMA, no pio anymore. 
+But these are SCSI.  The IDE ones look like a standard IDE ``controller''. 
+The ones I saw in the store claimed to do DMA, but my knowledge of IDE is
+old, outdated.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602850 ###
+===== 库内序 144408 | PK 2602850 | 等级 L4 =====
+DATE: 1998-03-05T03:00:03+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：把 SMP FreeBSD PC 用作 5E 调试机，认为比 SPARC 更好
+
+
+On 05-Mar-98 John S. Dyson wrote:
+
+ ...
+
+> There is a debugging/testing version of the 5E, that will run on a Sun
+> workstation.  You can theoretically connect the Sun to SMs and have
+> a small 5E in your office :-).  I don't know if it was ever productized
+> though.
+
+How about putting a PC with SMP FreeBSD there?  Surely will run better than
+a SPARC...
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602852 ###
+===== 库内序 144410 | PK 2602852 | 等级 L3 =====
+DATE: 1998-03-05T05:16:09+00:00
+FROM: Peter van Heusden <pvh@leftside.wcape.school.za>
+SUBJ: Detecting state of PPP
+摘要: Peter van Heusden 询问如何在程序里检测 PPP 是否连上，tun0 flags 恒为 0x8051 不能判
+
+Hi 
+
+How does one go about writing a program to check if a PPP link is up or
+down? I'm running PPP in -auto mode, and I'd like to be able to tell
+whether the PPP link is actually up (i.e. the modem connection is in
+place) at any particular time. Unfortunately, the flags on tun0 stay the
+same (0x8051 on my system) whether the modem is connected or not. What
+should I be looking at?
+
+Thanks,
+Peter
+--
+Peter van Heusden |    Computers Networks Reds Greens Justice Peace Beer Africa
+pvh@leftside.wcape.school.za | Support the SAMWU 50 litres campaign!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602853 ###
+===== 库内序 144411 | PK 2602853 | 等级 L3 =====
+DATE: 1998-03-05T05:13:05+00:00
+FROM: Peter van Heusden <pvh@leftside.wcape.school.za>
+SUBJ: Doing a reboot from a CGI script?
+摘要: Peter van Heusden 询问从 CGI Perl 脚本调用 /sbin/reboot 时为何进程全被杀
+
+Hi
+
+I'm busy writing a set of scripts to make the management of a FreeBSD box
+easier (basically provide a WWW interface to manage UUCP, Squid, etc). One
+of the capabilities I want to build in is the ability to reboot the
+machine by pressing a button on a HTML page. I've tried doing this by
+running '/sbin/reboot' from the cgi-bin script (which is written in perl),
+but all that happens is that all processes are killed, and the reboot
+process stops there. I would imagine that somehow this means that the
+through killing the httpd process, the cgi-bin script and thus the reboot
+process have died. This seems to happen even if I fork a process from the
+cgi-bin script.
+
+Is there any way to get around this? Has anyone tried this before?
+
+Thanks for any info,
+Peter
+--
+Peter van Heusden |    Computers Networks Reds Greens Justice Peace Beer Africa
+pvh@leftside.wcape.school.za | Support the SAMWU 50 litres campaign!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602856 ###
+===== 库内序 144414 | PK 2602856 | 等级 L4 =====
+DATE: 1998-03-05T07:20:33+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Wilko Bulte：FDDI DEC 卡 FreeBSD 支持好，即插即用，$ 5 一张，和 Simon 一样
+
+As Simon Shapiro wrote...
+> 
+> On 04-Mar-98 Wilko Bulte wrote:
+>  
+> ...
+> 
+> > free, like a $10-15 pricepoint. No real use for it here, but maybe fun
+> > to play with. Like the FDDI network here ;-)
+> 
+> I am using FDDI (CDDI) here on my development setup.  The DEC cards
+> supported by FreeBSD.  Very boring setup;  You plug them in and it works. 
+
+Same experience here. 'Just works'.  Picked mine up for $ 5 a piece.
+Should've bought more :<
+
+> Nice thing is it provides redundancy and does not need an expensive switch.
+
+I'm trying to get a FDDI hub, don't want to power up all boxes to use FDDI.
+
+> >  An extra power supply is money well spent. We ship all our standalone
+> >  arrays at least with N+1, optional 2N power. 2N gives you 2 seperate
+> >  power entry points to the power grid. Now we only need to educate people
+> >  to use two different power branches (phases? what's the right English
+> > term?)
+> 
+> The old DPT 9W tower (made by DEC) had an interesting feature, where the
+> power INPUT was switchable too.  If the AC to one supply went dowm it will
+> draw AC from the other.
+> 
+> Yes, 2N P/S is trivial to do (2 diods/circuit if I remember right) and
+> cheap.  Technically, you want each supply fed from a different phase.  In
+> the US they are referredto as ``independant circuits''.  I have seen people
+> paying lots of money to get that, where they have 220V right in the same
+> room (220BAC in the US is 2-phases, 180 degrees apart, unlike the European
+> 3 phasees 120 degrees apart.  Yest, you can get 3phase circuits in the US
+> too).  The hot wire in a 220VAC, in the us is 117VAC to ground, 220VAC
+> hot-hot.
+
+I don't think you can get 2phase power here. We're slowly moving from 220 ->
+230. And ultimatly to 240. And 50Hz iso 60Hz op course.
+
+> >> To have the kernel actually checkpoint itself, with any better
+> >> resolution,
+> >> or intelligence will have to change too many things.  I am trying to
+> >> make
+> > 
+> >  OK, that was my original question. Had a bad feeling about exactly what
+> > you mention here.
+> 
+> What's bad? I would like to know if you think the
+[…中段省略 17 字符…] ere.
+
+Well, bad in the sense of very complicated. Not in the sense of mistake.
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte email: wilko @ yedi.iaf.nl http://www.tcja.nl/~wilko
+ |/|/ / / /( (_) Arnhem, The Netherlands - Do, or do not. There is no 'try'
+---------------  Support your local daemons: run [Free,Net,Open]BSD Unix  --
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602858 ###
+===== 库内序 144416 | PK 2602858 | 等级 L3 =====
+DATE: 1998-03-05T07:22:16+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: Disk write caches
+摘要: Wilko Bulte 请 Terry Lambert 澄清要关哪台机器的哪块硬盘的 write cache
+
+As Terry Lambert wrote...
+
+> I am *specifically* interested in what an FS mounted with soft updates
+> would do (as I don't personally have the hardware wherewithall to be
+> able to answer the question for myself; my DEC drives don't seem to
+> allow me to turn things off).
+
+What do you want to turn of? And what drives? I might be able to find out
+how to 'convince' them
+
+W/
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte email: wilko @ yedi.iaf.nl http://www.tcja.nl/~wilko
+ |/|/ / / /( (_) Arnhem, The Netherlands - Do, or do not. There is no 'try'
+---------------  Support your local daemons: run [Free,Net,Open]BSD Unix  --
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602863 ###
+===== 库内序 144421 | PK 2602863 | 等级 L4 =====
+DATE: 1998-03-05T10:53:10+00:00
+FROM: Remy NONNENMACHER <remy@synx.com>
+SUBJ: Re: Disk write caches
+摘要: Remy NONNENMACHER：答复 Terry Lambert 关于软更新的问题，未测，用的是 December 25 的 3.0
+
+
+On Wed, 4 Mar 1998, Terry Lambert wrote:
+
+> > > I would be very interested to see what the benchmarks on a machine
+> > > with soft updates would be with a disk with and without write
+> > > cacheing.
+> > 
+> > I tested cache benefits within disks. Write cache disabling lowered the 
+> > perfs from 2 to 10 time depending on operations.
+> 
+> Did this include soft updates, however?
+>
+
+No. It was using 3.0 from December (25). How does soft update compares 
+with async mounts ? Will the driver immediatly responding 'OK' for each 
+write have no more interest with soft update ?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

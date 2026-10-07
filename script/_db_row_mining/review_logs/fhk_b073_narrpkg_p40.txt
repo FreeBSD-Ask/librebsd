@@ -1,0 +1,21 @@
+2604017|L3|Brian Somers：用 cron 和 chat 脚本向 tty 写 AT s0=1 让 uucp dialup 自动应答不生效
+2604019|L3|Andrew Heath：致谢 John 找到根因，重配 login.conf 重启后服务器恢复
+2604020|L3|Alex Povolotsky：在 PII 上编译 Perl 5.004.04 时 makedepend 递归到系统耗尽进程
+2604021|L3|Sean Harding：把 Wilfredo Sanchez 关于 FreeBSD 和 Rhapsody 的来信转给 hackers
+2604022|L3|Mark Murray：让 Alex Povolotsky 重装 rorts 集，自己这边 Perl5 移植正常
+2604023|L3|Amancio Hasty：问有没有适合 FreeBSD 的漂亮主页，附一个 netscape webwizard 链接
+2604024|L3|Christoph Kukulies：讨论 bzip2 能否用来扩充安装盘内容，压缩比比 gzip 好 20 个百分点
+2604025|L3|Troy Cobb：询问 2.2.6 是否有可用的 softupdate 补丁
+2604026|L3|Frank Ederveen：自己还在盯着邮件等 2.2.6 的 softupdate 或 CAM 公告，公司有 7 块盘 news 服务器等
+2604027|L4|Jordan K. Hubbard：2.2.x 不会发 softupdates、CAM、SMP 的第三方补丁
+2604028|L4|Jordan K. Hubbard：只是说各任务太难，提问者看不到这些补丁发布，非主张第三方补丁中央管控
+2604029|L3|Luigi Rizzo：反问 bzip2 的解码器体积相比 gzip 是多少
+2604030|L3|Luigi Rizzo：认为第三方补丁除许可限制外不受任何控制，有人做 backport 就应发补丁文件
+2604031|L3|Luigi Rizzo：说明自己上条只是替别人做澄清，并非替官方表态
+2604032|L4|Ollivier Robert：bzip2 压缩解压各占 7MB 内存且比 gzip 慢 5 倍，最少也要 5MB，仅在空间紧时用
+2604033|L3|Frank Ederveen：既拿不到 2.2.6 softupdate 就只能去 current，公司也想测试 SMP
+2604034|L3|Jordan K. Hubbard：欧洲会议今年夏天的安排尚未明朗，会尽快给出说法
+2604035|L4|Alex Povolotsky：找到根因是机器系统时间被设得太早，导致 makedepend 递归
+2604036|L4|Justin T. Gibbs：CAM 在 2.2.x 是有可能出第三方补丁的
+2604038|L3|Dag-Erling：做了 cnet 的人格测试，被推荐尝试 FreeBSD
+2604039|L3|Chris Timmons：提到跨房间新闻服务器 cvsup.freebsd.org 都在等 CAM 补丁

@@ -1,0 +1,841 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602610 ###
+===== 库内序 144168 | PK 2602610 | 等级 L3 =====
+DATE: 1998-03-02T03:39:27+00:00
+FROM: Thomas David Rivers <rivers@dignus.com>
+SUBJ: Re: The 'dave rivers' memorial panic.
+摘要: Thomas David Rivers：fsck 与 CG 代码 bug 已排除，Dave Rivers panic 实为 IDE 线过长
+
+
+John Dyson said:
+> 
+> Terry Lambert said:
+> > 
+> > We thought it was a bug in fsck and in the CG code.
+> > 
+> > It turned out to be a longer-than-functional IDE cable.
+> > 
+> > Try using a shorter IDE cable.
+> > 
+> Slightly off subject:
+> 
+> Even though Ultra-DMA/33 doesn't have higher clockrates than
+> 16MHz EIDE (Mode 4), it seems that the Promise controller and
+> WD drives DO NOT like out-of-spec IDE cables when running
+> Ultra-DMA/33.  (Ultra-DMA uses both edges of the clock, so
+> there can be more transitions than EIDE, and the spectrum
+> will be higher in freq, also with more sensitivity to clock
+> skew, due to timing constraints.)
+> 
+
+ Umm... I don't know anything about this - but just a reminder;
+my "memorial" panic occurs with SCSI devices.... (but, I do have
+a reproduction on IDE as well.)   Julian had mentioned he'd seen
+reproductions on different devices - but I didn't see the particulars.
+
+ Or, are you guys discussing something else?
+
+	- Dave Rivers -
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602612 ###
+===== 库内序 144170 | PK 2602612 | 等级 L3 =====
+DATE: 1998-03-02T04:01:23+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA_PNP for FreeBSD
+摘要: Luigi Rizzo：建议改用 -stable 与 -current 中的新 pnp 代码，替代 Sujal 的旧 ISA_PNP
+
+> > Alexander Gnativ scribbled this message on Feb 28:
+> > > I am installing subj. for my FreeBSD 2.2.5
+> > > I want to configure my sound card (sb0) and have done all
+
+just to be sure, did you install the old Sujal's code named ISA_PNP, or
+the new pnp code that is also in -stable and -current ?
+You should definitely use the latter if you don't already.
+
+> > > ../../i386/isa/pnp.c: At top level:
+> > > ../../i386/isa/pnp.c:325: warning: function declaration isn't a prototype
+> > > *** Error code 1
+...
+> > well... that isn't the real error... that's just a warning...  the real
+> > error is earlier...
+...
+> > > In the string 325 I found function pnp_configure()
+> > > Please, tell me what I must to do in such case.
+> > 
+> > add a void in the param list...
+> 
+> Unfortunately, it didn't help. :-((
+
+as John Mark said, you have to see what is the real error and fix that
+one :) . the warning is not the problem.
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602614 ###
+===== 库内序 144172 | PK 2602614 | 等级 L3 =====
+DATE: 1998-03-02T06:01:57+00:00
+FROM: John-Mark Gurney <gurney_j@efn.org>
+SUBJ: Re: ISA_PNP for FreeBSD
+摘要: John-Mark Gurney 在 ISA_PNP 线程内就 Alexander Gnativ 报的 pnp.c 编译告警继续回复讨论
+
+Alexander Gnativ scribbled this message on Mar 2:
+> In reply to John-Mark Gurney who wrote:
+> > Alexander Gnativ scribbled this message on Feb 28:
+> > > I am installing subj. for my FreeBSD 2.2.5
+> > > I want to configure my sound card (sb0) and have done all
+> > > from README file. But when I begin to compile the new kernel,
+> > > process stops with such diagnostic:
+> > > 
+> > > ../../i386/isa/pnp.c: At top level:
+> > > ../../i386/isa/pnp.c:325: warning: function declaration isn't a prototype
+> > > *** Error code 1
+> > > 
+> > > Stop. 
+> > 
+> > well... that isn't the real error... that's just a warning...  the real
+> > error is earlier...
+
+please read the above and send me the lines from the last ^{g,}cc line
+to end of compile...
+
+> > > In the string 325 I found function pnp_configure()
+> > > Please, tell me what I must to do in such case.
+> > 
+> > add a void in the param list...
+> 
+> Unfortunately, it didn't help. :-((
+
+it did get rid of the message that you sent to use didn't it??  it's
+all the help I could give you with the information that you gave...
+
+-- 
+  John-Mark Gurney                          Modem/FAX: +1 541 683 6954
+  Cu Networking					  P.O. Box 5693, 97405
+
+  Live in Peace, destroy Micro$oft, support free software, run FreeBSD
+	    Don't trust anyone you don't have the source for
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602616 ###
+===== 库内序 144174 | PK 2602616 | 等级 L3 =====
+DATE: 1998-03-02T07:21:44+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: ports for X11 stuff
+摘要: Studded：支持将 X11 ports 迁至 /usr/local/X11R6，理由是保持一致性与良好的设计
+
+Anatoly Vorobey wrote:
+> 
+> Re: earlier discussion of X11 ports ought to be in /usr/local/X11R6
+> and not /usr/X11R6.
+
+	I'd like to second this. It is a small thing, but for the sake of
+consistency as well as good design I'd like to see it changed.
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602617 ###
+===== 库内序 144175 | PK 2602617 | 等级 L4 =====
+DATE: 1998-03-02T07:33:55+00:00
+FROM: Gianmarco Giovannelli <gmarco@giovannelli.it>
+SUBJ: Re: cvsup & make 'world'
+摘要: Gianmarco Giovannelli：2.2.5 没有 current 版本，应用 stable-supfile 取 2.2.5-STABLE
+
+Joe McGuckin wrote:
+> 
+> I used cvsup for the first time today. The base system is 2.2.5-RELEASE.
+> I used the default 'standard-supfile' in /usr/src/share/examples/cvsup.
+> 
+> I believe this should update my source tree to 2.2.5-current - right ?
+
+Not quite right, I think you are updating to 3.0-current 
+The 2.2.5-current doesn't exist , the right name is 2.2.5-STABLE and you
+have to use the stable-supfile instead...
+
+> I cd'd to /usr/src and performed a 'make buildworld'. I got a compile
+> error some way into the process.
+> 
+> Is it very unusual for the -current tree to not build ?
+
+3.0-current build fine, you have only mixed too much things ..
+
+-- 
+
+Regards...
+
+Gianmarco
+"Unix expert since yesterday"
+
+http://www.giovannelli.it
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602618 ###
+===== 库内序 144176 | PK 2602618 | 等级 L3 =====
+DATE: 1998-03-02T07:47:45+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: ports for X11 stuff 
+摘要: Jordan K. Hubbard：反对把 /usr/X11R6 改成 /usr/local/X11R6，担心引起大范围混乱
+
+> 	I'd like to second this. It is a small thing, but for the sake of
+> consistency as well as good design I'd like to see it changed.
+
+Actually, this would be far from consistent - it would confuse the
+piss out of folks who've become more than used to /usr/X11R6 as the
+location for X libraries and binaries over the last 3 years.  Changing
+it at this juncture would only be a recipe for complete and utter
+chaos.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602620 ###
+===== 库内序 144178 | PK 2602620 | 等级 L3 =====
+DATE: 1998-03-02T08:01:20+00:00
+FROM: Christoph Kukulies <kuku@gilberto.physik.RWTH-Aachen.DE>
+SUBJ: g77 - status?
+摘要: Chris Kukulies 询问 g77 相较 f2c 的差异，能否直接从 FreeBSD 2.2.5 软件包安装，运行时库依赖如何
+
+
+Could someone give me a short brief-in on the issues related with
+using g77 instead of f77 (f2c) under FreeBSD-2.2.5? 
+
+Can g77 be installed out of the box from the package? I did and it
+seems so. 
+
+Does it use libf2c.a or does it have it's own runtime library?
+
+Has there been a problem with g77 under FreeBSD-2.2.2 ?
+
+
+-- 
+Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602624 ###
+===== 库内序 144182 | PK 2602624 | 等级 L3 =====
+DATE: 1998-03-02T09:05:09+00:00
+FROM: Alex Povolotsky <tarkhil@minas-tirith.pol.ru>
+SUBJ: Cluster?
+摘要: Alex Povolotsky 询问 FreeBSD 上是否存在集群实现，希望获取补丁与白皮书等文档
+
+ <19980302094702.33670@follo.net>Eivind Eklund writes:
+>> > we have a 128-node cluster here at sarnoff. no keyboards, no monitors, no
+
+Clusters on FreeBSD does exist? GREAT! 
+
+Is it possible to get patches/whitepapers/etc. on it?
+
+Alex.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602630 ###
+===== 库内序 144188 | PK 2602630 | 等级 L3 =====
+DATE: 1998-03-02T11:28:57+00:00
+FROM: freebsd@isvara.net
+SUBJ: CVSup failing...
+摘要: Daniel J Blueman：安装 cvsup 包后运行时 libXaw.so.6.1 缺失，locate 也未查到
+
+Hi,
+
+    I've installed the cvsup packages, and tried to get it up and
+running.
+Sysinstall also installed the modula library (as a dependancy), but when
+I try running it, I get:
+    ld.so failed: Can't find shared library "libXaw.so.6.1"
+
+I've tried finding this library file with locate, but it isn't there.
+Any pointers?
+
+Cheers,
+    Dan
+
+_____________________________________
+Daniel J Blueman
+BSc Computation, UMIST, Manchester
+Email: blue@challenge.isvara.net
+Web: http://www.challenge.isvara.net/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602631 ###
+===== 库内序 144189 | PK 2602631 | 等级 L3 =====
+DATE: 1998-03-02T11:35:59+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Amancio Hasty：脚本语言难维护，主张用 Java 或 C++ 等更灵活可扩展的方案做配置工具
+
+I don't have many comments --- well okay at work we got a 20000 line
+system install thingy all written in shell try debugging that 8)
+<granted thats one bad extreme>
+
+Traditional scripting languages for unix, sh, csh , tcsh are
+a bit antiquated and downright awkward to work with.
+
+Java is extensible and its supporting structure is intensively being
+worked on . 
+
+For design methodologies , there are excellent books such as
+Design Patterns : Elements of Reusable Object-Oriented Software
+Erich Gamma
+Richard Helm
+Ralph Johnson
+John Vlissides
+
+If you have not read it is an excellent book .
+
+	Best Regards,
+	Amancio
+
+
+> On Mon, 2 Mar 1998, Amancio Hasty wrote:
+> 
+> > > I'd suspect the keyboard/montitor-less configuration is much more
+> > > important in the set of people that contribute to FreeBSD than in the
+> > > average case.  The question is if we want to lock out the people that
+> > > _do_ contribute code.
+> > 
+> > > Eivind. 
+> > 
+> > For a user friendly configuration tools  we can forget about experts.
+> > Besides most of them are fully capable of deploying their own configuration
+> > tools. Well, at least I was able to for one of my contracts 8)
+> 
+>   I disagree. We can produce "easy configuration" tools as much as we
+> want, but we will have to re-do them every time, some change is done (in
+> distributed version, or locally by an "expert" sysadmin), if those tools
+> won't be extensible and suitable for complex tasks. Red Hat with its
+> tcl-based configuration is just below the acceptable level (it has more or
+> less configurable scripts and horribly inflexible interface, no networked
+> reconfiguration in synchronized manner, no reasonable way to add new
+> features, no general transactions mechanism, etc), and I think that we
+> should do something above it if we don't want to be studied in schools as 
+> the point where unix/unixlike development degraded into the same amateur
+> level, some other kinds of programmers are known for. Sun won't do it for
+> us (NIS+ is the best it was capable of, even though it's the opposite
+> approach), neither will others (nothing wo
+[…中段省略 956 字符…] o was
+> exaplining/defending here Linux's reasons for multiple distributions --
+> but they don't apply well in this case).
+> 
+> > The latest version of the jdk can be run without X .
+> 
+>   With all GUI? What low-level interface will it use?
+> 
+> --
+> Alex
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602632 ###
+===== 库内序 144190 | PK 2602632 | 等级 L4 =====
+DATE: 1998-03-02T11:40:14+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: CVSup failing...
+摘要: Niall Smart：libXaw 是 X Window System 的一部分，未装 X 时需安装 X 或从网上下载 libXaw 包
+
+On Mar 2, 11:28am, freebsd@isvara.net wrote:
+} Subject: CVSup failing...
+>     I've installed the cvsup packages, and tried to get it up and
+> running.
+>
+> I try running it, I get:
+>     ld.so failed: Can't find shared library "libXaw.so.6.1"
+> 
+> I've tried finding this library file with locate, but it isn't there.
+> Any pointers?
+
+libXaw is part of the X Window System, if you aren't using X then either
+install it or pull down the source for cvsup and see if you can build
+it without support for X.  If you already have X installed run ldconfig
+/usr/X11R6/lib as root.
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602636 ###
+===== 库内序 144194 | PK 2602636 | 等级 L3 =====
+DATE: 1998-03-02T12:17:04+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: A web-based FreeBSD configuration tool.
+摘要: Niall Smart：不同意 C++ 一定比 Java 快，脚本语言在该配置工具领域仍然有重要价值
+
+On Mar 2,  4:08am, Amancio Hasty wrote:
+} Subject: Re: A web-based FreeBSD configuration tool.
+> > 
+> >   I never said that anything that configures system remotely should be
+> > written in shell. Perl is adequate, but I rather prefer C++, which is
+> > still more flexible and efficient than java.
+> 
+> Yeap, I have to agree that C++ is significantly faster than Java for system 
+> configuration 8)
+
+I disagree, C++ may be faster than Java, but that difference is not
+significant when doing GUI-type system administration.
+
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602637 ###
+===== 库内序 144195 | PK 2602637 | 等级 L3 =====
+DATE: 1998-03-02T12:25:04+00:00
+FROM: Robert Withrow <witr@rwwa.com>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Robert Withrow：老不等于不好，Java 并非脚本语言，脚本语言在该领域仍有其独特价值
+
+
+hasty@rah.star-gate.com said:
+:- Traditional scripting languages for unix, sh, csh , tcsh are a bit
+:- antiquated and downright awkward to work with.
+:- Java is extensible and its supporting structure is intensively being
+:- worked on .  
+
+But old isn't necessarily bad, and Java isn't a scripting language.  And
+scripting launguages have a very valuable role in this problem domain. 
+
+Also, for a view of where scrpting languages live in modern design
+methodologies, see
+
+  http://www-dse.doc.ic.ac.uk/%7Enp2/patterns/scripting/index.html
+
+---------------------------------------------------------------------
+Robert Withrow, R.W. Withrow Associates, Swampscott MA, witr@rwwa.COM
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602639 ###
+===== 库内序 144197 | PK 2602639 | 等级 L3 =====
+DATE: 1998-03-02T12:22:24+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Amancio Hasty：小站与小 ISP 场景下 C++ 与 Java 的性能差异并不显著
+
+Cool, you caught my smiley 8)
+
+Yes, I agree that there shouldn't be any performance difference
+between C++ and Java admin tool except when we are dealing with
+very large numbers of items;however, for a newbie or a single
+seat work station or a small ISP there shouldn't be any performance
+difference between java and c++ based tools.
+
+	Amancio
+
+> On Mar 2,  4:08am, Amancio Hasty wrote:
+> } Subject: Re: A web-based FreeBSD configuration tool.
+> > > 
+> > >   I never said that anything that configures system remotely should be
+> > > written in shell. Perl is adequate, but I rather prefer C++, which is
+> > > still more flexible and efficient than java.
+> > 
+> > Yeap, I have to agree that C++ is significantly faster than Java for system 
+> > configuration 8)
+> 
+> I disagree, C++ may be faster than Java, but that difference is not
+> significant when doing GUI-type system administration.
+> 
+> 
+> Niall
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602644 ###
+===== 库内序 144202 | PK 2602644 | 等级 L3 =====
+DATE: 1998-03-02T14:35:27+00:00
+FROM: Jamie Bowden <jamie@itribe.net>
+SUBJ: Re: help - make world fails
+摘要: 质疑 NFS 是否真无状态并怀疑 Sun 当初为何选择无状态网络设计
+
+On Sun, 1 Mar 1998, Terry Lambert wrote:
+
+> o	NFS client locks need to be remembered locally so that
+> 	they can be reasserted in case of a server crash.  This
+> 	is my way of saving the state.
+
+Isn't NFS stateless.  Sonetimes I wonder what Sun was thinking trying
+implement a stateless design over a network.
+
+-- 
+Jamie Bowden
+Systems Administrator, iTRiBE.net
+
+If we've got to fight over grep, sign me up.  But boggle can go.
+	-Ted Faber (on Hasbro's request for removal of /usr/games/boggle)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602645 ###
+===== 库内序 144203 | PK 2602645 | 等级 L4 =====
+DATE: 1998-03-02T16:02:40+00:00
+FROM: "Alfred Perlstein" <perlsta@cs.sunyit.edu>
+SUBJ: Re: CVSup failing...
+摘要: Alfred Perlstein:建议用非 GUI 版或静态编译版 cvsup 并附 FreeBSD 手册链接
+
+i think there are statically compiled versions of cvsup
+and if you don't have X installed try the non-gui version
+http://www.freebsd.org/handbook/cvsup.html
+has links to some reduced forms and statically compiled binaries.
+
+-Alfred
+
+
+-----Original Message-----
+From: Niall Smart <njs3@doc.ic.ac.uk>
+To: freebsd@isvara.net <freebsd@isvara.net>; FreeBSD Hackers
+<hackers@FreeBSD.ORG>
+Date: Monday, March 02, 1998 3:24 AM
+Subject: Re: CVSup failing...
+
+
+>On Mar 2, 11:28am, freebsd@isvara.net wrote:
+>} Subject: CVSup failing...
+>>     I've installed the cvsup packages, and tried to get it up and
+>> running.
+>>
+>> I try running it, I get:
+>>     ld.so failed: Can't find shared library "libXaw.so.6.1"
+>>
+>> I've tried finding this library file with locate, but it isn't there.
+>> Any pointers?
+>
+>libXaw is part of the X Window System, if you aren't using X then either
+>install it or pull down the source for cvsup and see if you can build
+>it without support for X.  If you already have X installed run ldconfig
+>/usr/X11R6/lib as root.
+>
+>Niall
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602646 ###
+===== 库内序 144204 | PK 2602646 | 等级 L4 =====
+DATE: 1998-03-02T16:20:16+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: help - make world fails
+摘要: Terry Lambert:指出文件共享无状态但文件锁定并非无状态
+
+> > o	NFS client locks need to be remembered locally so that
+> > 	they can be reasserted in case of a server crash.  This
+> > 	is my way of saving the state.
+> 
+> Isn't NFS stateless.  Sonetimes I wonder what Sun was thinking trying
+> implement a stateless design over a network.
+
+File sharing is, file locking isn't.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602647 ###
+===== 库内序 144205 | PK 2602647 | 等级 L3 =====
+DATE: 1998-03-02T16:42:08+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: A web-based FreeBSD configuration tool.
+摘要: Terry Lambert:认为对方所运行的 Java 解释器应与自己不同
+
+> But old isn't necessarily bad, and Java isn't a scripting language.  And
+> scripting launguages have a very valuable role in this problem domain. 
+
+???
+
+You must not be running the same JAVA *interpreter* I run...
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602648 ###
+===== 库内序 144206 | PK 2602648 | 等级 L4 =====
+DATE: 1998-03-02T16:52:57+00:00
+FROM: Robert Watson <robert@cyrus.watson.org>
+SUBJ: Re: help - make world fails
+摘要: Robert Watson:引用 Sandberg 1985 论文论证 NFS 状态设计的合理性
+
+On Mon, 2 Mar 1998, Jamie Bowden wrote:
+
+> > o	NFS client locks need to be remembered locally so that
+> > 	they can be reasserted in case of a server crash.  This
+> > 	is my way of saving the state.
+> 
+> Isn't NFS stateless.  Sonetimes I wonder what Sun was thinking trying
+> implement a stateless design over a network.
+
+Sandberg, et. al, "Design and Implementation of the Sun Network
+Filesystem", ~1985?
+
+"The NFS uses a stateless protocol.  The parameters to each procedure call
+contain all of the information necessary to complete the call, and the
+server does not keep track of any past requests.  This makes crash
+recovery very easy; when a server crashes, the client resends NFS requests
+until a response is received, and the server does no crash recovery at
+all..."
+
+"...Using a stateless protocol allows us to avoid complex crash recovery
+and simplifies the protocol...  In fact the client can not tell the
+difference between a server that has crashed and recovered, and a server
+that is slow."
+
+This said, of course, my clients still crash when the server goes down and
+something happens on the client (i.e., a call to mount, df, quota, or
+something :).  The problem with stateless is, of course, that not all
+concepts associated with file system access are representable in a
+stateless way -- such as locking.  Coda, for example, retains a lot of
+state with regards to cache information on both client and server side.
+The client retains the file (:)), and the server forms a callback so that
+it can notify the client on a change.  Coda does not have a concept of
+locking, though, as it was determined (:O) that most of the file activity
+of interest involved sequential one-time read followed by sequential
+one-time write, no shared access, etc.  This is true in the general case,
+but resoundingly not true for the specific cases where people try to use
+locking :).  I'd love to see someone write a simple lock manager for Coda
+to allow exclusive advisory locking support (posix-style) based on some
+kind of distributed quorum database or something.
+
+  Robert N Watson 
+
+Carnegie Mellon University http://www.cmu.edu/
+SafePort Network Services  http://www.safeport.com/
+robert@fledge.watson.org   http://www.watson.org/~robert/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602649 ###
+===== 库内序 144207 | PK 2602649 | 等级 L3 =====
+DATE: 1998-03-02T18:11:16+00:00
+FROM: Mark Mayo <mark@vmunix.com>
+SUBJ: Re: A web-based FreeBSD configuration tool.
+摘要: 计划与三人暑期做 FreeBSD GUI 管理系统采 C++ 服务端与 Java 客户端
+
+On Mon, Mar 02, 1998 at 05:07:31AM -0800, Amancio Hasty wrote:
+> Well, all this is academic for "we ain't got no" application developers
+> in this group .
+
+:-)  As it turns out, myself and 3 others will be attempting a
+FreeBSD GUI admin system (client/server) over the summer for a course
+credit. Right now, the initial design is leaning towards using a
+C++ server and a Java client talking to it over an established protocol.
+Likely going to be using LDAP for distribution, etc, as Terry suggested
+in a much earlier post.
+
+So, wait til summer and then we'll see what happens. :-)
+
+With my project, and the 2 others that are going on right now
+(HTTP based, and the Tcl/Tk one) by fall I suspect there will be
+some rather neat administration tools for FreeBSD. Yeah!
+
+-Mark
+
+> 
+> 
+> 	Cheers,
+> 	Amancio
+> 
+> 
+> > On Mon, 2 Mar 1998, Niall Smart wrote:
+> > 
+> > > > >   I never said that anything that configures system remotely should be
+> > > > > written in shell. Perl is adequate, but I rather prefer C++, which is
+> > > > > still more flexible and efficient than java.
+> > > > 
+> > > > Yeap, I have to agree that C++ is significantly faster than Java for system 
+> > > > configuration 8)
+> > > 
+> > > I disagree, C++ may be faster than Java, but that difference is not
+> > > significant when doing GUI-type system administration.
+> > 
+> > On the client side -- maybe, but when I am remotely changing something on
+> > a system that already is in some kind of trouble (and possibly has a lot
+> > of resources used up), I will rather depend on something small, fast,
+> > and preferrably kept running, and sleeping most of time.
+> > 
+> > --
+> > Alex
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-hackers" in the body of the message
+> > 
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+-- 
+------------------------------------------------------------------------
+ Mark Mayo		  				mark@vmunix.com       
+ RingZero Comp.  	  		    http://www.vmunix.com/mark 
+
+	 finger mark@vmunix.com for my PGP key and GCS code
+------------------------------------------------------------------------
+ "The problem is how do you build tools that understand your programs
+  at a deeper semantic level." - James Gosling
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602650 ###
+===== 库内序 144208 | PK 2602650 | 等级 L4 =====
+DATE: 1998-03-02T18:37:12+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Amancio Hasty:推荐考察 ACE 框架以配合 FreeBSD 即将到来的 elf 支持
+
+Most Cool!
+
+If you haven't already check out ACE which should be easier to deal with
+FreeBSD  upcoming elf support.
+
+	Good Luck!
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602651 ###
+===== 库内序 144209 | PK 2602651 | 等级 L3 =====
+DATE: 1998-03-02T18:53:58+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: A web-based FreeBSD configuration tool.
+摘要: Niall Smart:反驳以执行方式判定脚本语言的立场并指出 C 也经汇编被硬件解释
+
+On Mar 2,  4:42pm, Terry Lambert wrote:
+} Subject: Re: A web-based FreeBSD configuration tool.
+> > But old isn't necessarily bad, and Java isn't a scripting language.  And
+> > scripting launguages have a very valuable role in this problem domain. 
+> 
+> You must not be running the same JAVA *interpreter* I run...
+
+Since when has the manner in which a program is "executed" decided if
+it is a scripting langauge?  C is translated into assembler which is
+interpreted by the hardware in my Intel processor, does that make C or
+assembler scripting langauges?  No.  What if I use the Bochs interpreter?
+Still no.
+
+You wouldn't make a distinction between imperative, functional and logic
+programming languages based on their execution mode, but rather in their
+approach to expressing relationships and algorithms, it is the same with
+scripting languages.
+
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

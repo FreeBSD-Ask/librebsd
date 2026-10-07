@@ -1,0 +1,822 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604188 ###
+===== 库内序 145745 | PK 2604188 | 等级 L3 =====
+DATE: 1998-04-08T15:36:54+00:00
+FROM: Adrian Pavlykevych <pam@polynet.lviv.ua>
+SUBJ: ifa_if* functions usage
+摘要: Adrian Pavlykevych：询问 ifa_if 系列在 userland 用法称库中找不到只有头文件与内核源
+
+Hi everybody,
+
+Can somebody advise me on the way I can use ifa_if* functions in the
+userland? I hadn't any luck finding these functions in libs. There is only
+/usr/include/net/if.h and /usr/src/sys/net/if.c
+
+Thanks in advance,
+
+Adrian Pavlykevych
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604189 ###
+===== 库内序 145746 | PK 2604189 | 等级 L4 =====
+DATE: 1998-04-08T15:57:26+00:00
+FROM: "Stephen A. Derdau" <sderdau@xtdl.com>
+SUBJ: Re: !!!
+摘要: Stephen A. Derdau：2.2.6 改主片名建议 fstab 由 /dev/wd0a 改为 /dev/wd0s2a 并 MAKEDEV
+
+I had this problem when I rebuilt 2.2.6 from 2.2.25
+2.2.6 changes the name of the slice to it's truc slice name 
+I assume you also upgraded....
+AnYWAY YOU MAY Also want to wait for someone elses reply
+since I AM A NEWBIE TO ALL OF THIS.  It worked for me though
+
+
+ok boot old kernel.old
+cd /etc vi fstab
+change /dev/wd0a  to /dev/wd0s2a 
+however you want to check to see if such a device exists.
+cd /etc 
+sh MAKEDEV wd0s2a
+then when you reboot you should be able to mount /
+I'll cc you some info I sent yesterday regarding this
+******* 
+******* AGAIN I AM NOT AN EXPERT AND STILL LEARNING *****
+
+Thank You !
+
+Stephen A. Derdau
+"So What if it is wrong. I am getting closer to the right answer!"
+"If I had a nickle for every time I was wrrong , I would want a quarter
+instead. :-)"
+
+On Wed, 8 Apr 1998, Evren Yurtesen wrote:
+
+> well I rebooted my system and it says to me
+> 
+> /dev/wd0a on /: Specified device does not match mounted device.
+> Filesystem mount, failed startup aborted
+> 
+> what should I do???
+> 
+> PS. well my server is not working right now...this is a kind of serious
+> problem for me.
+> 
+> Evren Yurtesen
+> ISPRO A.S.
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-questions" in the body of the message
+> 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604190 ###
+===== 库内序 145747 | PK 2604190 | 等级 L4 =====
+DATE: 1998-04-08T16:22:17+00:00
+FROM: Graham Wheeler <gram@cdsec.com>
+SUBJ: Re: Debugging new/delete for C++
+摘要: Graham Wheeler：写过 C++ 调试宏包可在程序退出时列出未释放对象的文件行号与大小
+
+> Anyone know of a debugging allocator package for C++ programs.
+> Essentially all I want is to dump out a list of all unfreed objects
+> at program termination listing the file and line number where they
+> were allocated, the size, and perhaps an allocation number.
+
+I wrote a simple macro package some time back for this. It isn't perfect, 
+does require code modifiication, and also only works for classes, but may
+suit your requirements.
+
+Here it is:
+
+------- debug.h --------------------------------------------------------
+#ifndef __DEBUG_H
+#define __DEBUG_H
+
+#ifdef MEMTRACE
+
+// A class for tracing construction/destruction of objects
+
+#include <stdio.h>
+
+class _OT
+{
+  protected:
+    char *cname;
+    char *fname;
+    int linenum;
+    long id;
+  public:
+    _OT(char *cname_in, char *fname_in, int linenum_in);
+    _OT(const _OT &ot);
+    _OT& operator=(const _OT&)
+    {
+	return *this;
+    }
+    ~_OT();
+};
+
+struct _MT
+{
+  public:
+    _MT(char *nm);
+    ~_MT();
+};
+
+#define TRACE(cn)	struct OT : public _OT { OT() : _OT(#cn,__FILE__, __LINE__) {} } xxxxx;
+#define MAINTRACE(nm)	struct _MT yxyxyx(#nm);
+
+#else
+
+#define	TRACE(cn)
+#define MAINTRACE(nm)
+
+#endif // MEMTRACE
+
+#endif
+------- debug.cc -------------------------------------------------------
+#ifdef MEMTRACE
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
+#include "debug.h"
+
+static FILE *tracefp = 0;
+static long nextid = 1;
+static int flush = 0;
+static char fname[80] = { 0 };
+
+static void TraceClose()
+{
+    if (tracefp)
+    {
+	fprintf(tracefp, "Closing\n");
+	fclose(tracefp);
+	tracefp = 0;
+    }
+    flush = 2;
+}
+
+static void TraceOpen()
+{
+    if (fname[0]==0)
+    {
+        if (stdout==0) return; // sanity
+        sprintf(fname, "/tmp/mtrace.%ld", getpid());
+	unlink(fname);
+	atexit(TraceClose);
+    }
+    if (fname[0] && stdout != 0 && tracefp==0)
+        tracefp = fopen(fname, "a");
+}
+
+static void TraceFlush()
+{
+    if (flush == 1) fflush(tracefp);
+    else if (flush == 2) { fclose(tracefp); tracefp = 0; }
+}
+
+static void Trace(char *op, long id, char *name, char *where, int lnum)
+{
+    Trace
+[…中段省略 4503 字符…] ---------------
+
+Hope this helps!
+
+-- 
+Dr Graham Wheeler                          E-mail: gram@cdsec.com
+Citadel Data Security                      Phone:  +27(21)23-6065/6/7
+Internet/Intranet Network Specialists      Mobile: +27(83)-253-9864
+Firewalls/Virtual Private Networks         Fax:    +27(21)24-3656
+Data Security Products                     WWW:    http://www.cdsec.com/
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604206 ###
+===== 库内序 145763 | PK 2604206 | 等级 L4 =====
+DATE: 1998-04-08T22:24:15+00:00
+FROM: "Justin T. Gibbs" <gibbs@plutotech.com>
+SUBJ: Re: Softupdate for 2.2.6? 
+摘要: Justin T. Gibbs：先完成 BusLogic 驱动再转软更新移植预计还需一周
+
+>> CAM: yes.
+>
+>	Any ETA?  'm running at 10Mps right now, and its stable, but
+>I'd like to get it pop'd up to 40 :)
+
+I'm working to finish the BusLogic driver and then will turn my attention
+toward the port.  It will probably be another week.
+
+>Marc G. Fournier                                
+>Systems Administrator @ hub.org 
+>primary: scrappy@hub.org           secondary: scrappy@{freebsd|postgresql}.org
+
+--
+Justin
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604208 ###
+===== 库内序 145765 | PK 2604208 | 等级 L3 =====
+DATE: 1998-04-08T23:44:21+00:00
+FROM: Vinay Bannai <bannai@best.com>
+SUBJ: Matrox MGA card!!
+摘要: Vinay Bannai：2.2.6 下 Matrox MGA 2MB X server 分辨率与模式差 Xfree 3.3.2 删模式
+
+I am trying to setup X server on 2.2.6 and running into all kinds of
+problems. I have a Matrox MGA with 2MB. I went thru the xf86config setup
+and when I run startx, I get the server to work but the resolution and
+screen mod is crappy and I can't seem to cycle thru the various
+resolutions by pressing ctrl-alt-+ 
+
+The version of Xfree that i am running is 3.3.2. It deletes the modes
+because they are outside of the horizontal and vertical ranges. It also
+says that it is a unknown Matrox chipset and reports 64k video ram. 
+
+Can anybody shed some light on this? Should I replace the card?
+
+Thanks
+Vinay
+-- 
+Vinay Bannai                     E-mail: bannai@best.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604209 ###
+===== 库内序 145766 | PK 2604209 | 等级 L4 =====
+DATE: 1998-04-09T11:54:03+00:00
+FROM: Capriotti <capriotti@geocities.com>
+SUBJ: Re: Matrox MGA card!!
+摘要: Capriotti：建议花 30 美元买 2MB S3 Virge 卡即可正常显示
+
+At 04:44 PM 4/8/98 -0700, Vinay Bannai wrote:
+>Can anybody shed some light on this? Should I replace the card?
+
+That's an easy one, heheh. If you can afford for, let's say $30, buy a 2MB
+brandless S3 virge card. Works great !
+
+>
+>Thanks
+>Vinay
+>-- 
+>Vinay Bannai                     E-mail: bannai@best.com
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-questions" in the body of the message
+>
+>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604210 ###
+===== 库内序 145767 | PK 2604210 | 等级 L3 =====
+DATE: 1998-04-09T00:37:54+00:00
+FROM: Jean-Marc Zucconi <jmz@cabri.obs-besancon.fr>
+SUBJ: Cryptic ld message (gcc bug?)
+摘要: Jean-Marc Zucconi：c++ -g -O 报 this:V25 多重定义单用 -g 或 -O 皆不复现疑为 gcc bug
+
+This happens when I compile with "c++ -g -O", but not with only "c++ -g" or
+only "c++ -O". What do this means ?
+
+ld: /tmp/ccLf96521.o: unexpected multiple definitions of symbol `this:V25', type 0x27
+�:484352: Definition of symbol `this:V25' (multiply defined)
+ld: /tmp/ccLf96521.o: unexpected multiple definitions of symbol `this:V25', type 0x27
+�:484352: Definition of symbol `this:V25' (multiply defined)
+
+Here is the source program (the error disapear if you remove the last
+3 lines!):
+#include <math.h>
+
+class X {
+private:
+    double **x;
+public:
+    X () {};
+    ~X () {};
+    double data (int i, int j) {return x[i][j];}
+};
+
+X *D;
+
+main (int argc, char **argv)
+{
+    double e2, b;
+    int i, j, i1, i2;
+    D = new X;
+
+    j = 20;
+    double y[j];
+
+    i1 = 4; i2 = 8;
+    e2 = 2;
+    for (i = 0 ; i < j; i++)
+	if (D->data (i, 1) < e2)
+	    break;
+    for (i = i2; i < j; i++) {
+	b = D->data(i, 0) - D->data(i1, 0);
+	y[i] *= exp (b*b*3);
+    }
+    for (i = 0; i < i1; i++) {
+	b = D->data(i, 0) - D->data(i1, 0);
+	y[i] *= exp (b*b*3);
+    }
+}
+
+Jean-Marc
+ _____________________________________________________________________________
+ Jean-Marc Zucconi       Observatoire de Besancon       F 25010 Besancon cedex
+                   PGP Key: finger jmz@cabri.obs-besancon.fr
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604211 ###
+===== 库内序 145768 | PK 2604211 | 等级 L4 =====
+DATE: 1998-04-09T01:31:30+00:00
+FROM: David Kelly <dkelly@hiwaay.net>
+SUBJ: Re: Pax weirdness (bug?) 
+摘要: David Kelly：识别 pax -r -w 触发 copy 模式改用 cat / zcat 与子 shell 中 pax -r -v
+
+> Try this:
+> 
+> % cat /cdrom/info/info.* | zcat | pax -r -w -v tmpdir
+> 
+> Be quick with ^C.
+> 
+> Any ideas?  Known bogon?  Fixes?  (Nothing intuitive, anyway.)
+
+What's so weird about it? It appears you have invoked "copy" mode using 
+"-r -w"
+
+I think "cat /cdrom/info/info.[a-z][a-z] | zcat | (cd tmpdir; pax -r -v)" is 
+what it takes to extract the files.
+
+--
+David Kelly N4HHE, dkelly@nospam.hiwaay.net
+=====================================================================
+The human mind ordinarily operates at only ten percent of its
+capacity -- the rest is overhead for the operating system.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604215 ###
+===== 库内序 145772 | PK 2604215 | 等级 L4 =====
+DATE: 1998-04-09T02:52:14+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: ipopd/imapd - -ERR Can't get lock.  Try again or use IMAP instead
+摘要: Terry Lambert：-ERR Cant get lock 的答案取决于 U of Washington 代码还是 CMU Cyrus
+
+> Having compiled tkrat 1.1 and installed ipop{2,3}d as well as imapd
+> on FreeBSD 2.2.5, all three of the daemons fail to work with the
+> following error:
+> 
+> -ERR Can't get lock.  Try again or use IMAP instead
+> 
+> Can anyone shed any light on why this might happen ?
+
+Is this the U of Washington code, or the CMU Cyrus code?  The
+answer is different for them.  I am most familiar with operating
+Cyrus, but most familiar hacking the U of W (I rewrote it in
+C++ on a lark; boy, does the code, as distributed, have cases
+where it can make calls to unitiialized pointers out the wazoo!).
+
+For the Cyrus case, this will happen if the /tmp directory is
+not accessible, if the semaphore is set during a crash (use the
+rebuild program; I forget the name, but it comes with Cyrus),
+or if the POP maildrop is already open by another user (POP
+protocol enforces single user access to maildrops).
+
+You could also look in the log files, since the reason was
+probably syslog'ed.  8-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604219 ###
+===== 库内序 145776 | PK 2604219 | 等级 L3 =====
+DATE: 1998-04-09T07:58:50+00:00
+FROM: Giannis Vlachos <gvlachos@unionion.uion.edu.gr>
+SUBJ: Pop server
+摘要: Giannis Vlachos：FreeBSD 2.2.2 上询问哪里获取 POP Server 安装包
+
+Hello
+
+I have install freebsd 2.2.2 release and i need to install o POP Server in
+this maschine. Where can i found that package for Freebsd. 
+
+Does anybody can help me.
+
+Thanks in advance 
+
+Giannis X. Vlachos
+Corfu,Greece
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604220 ###
+===== 库内序 145777 | PK 2604220 | 等级 L4 =====
+DATE: 1998-04-09T08:12:23+00:00
+FROM: Dean Hollister <dean@odyssey.apana.org.au>
+SUBJ: Re: Pop server
+摘要: Dean Hollister：以 root 从 ports 装 popper make install 后在 inetd.conf 添加 pop3 行
+
+At 10:58 09/04/98 +0300, Giannis Vlachos wrote:
+
+>I have install freebsd 2.2.2 release and i need to install o POP Server in
+>this maschine. Where can i found that package for Freebsd. 
+>
+>Does anybody can help me.
+
+As root:
+
+cd /usr/ports/mail/popper
+
+make
+
+make install
+
+You then need to enable it in /etc/inetd.conf. Add the line:
+
+pop3    stream  tcp     nowait  root    /usr/local/libexec/popper popper -s
+
+Save the changes and exit. Then:
+
+kill -1 1
+
+To reload inetd.conf.
+
+Regards,
+
+d.
+
++--------------------------------------------------------+
+| Dean Hollister,           | dean@odyssey.apana.org.au* |
+| Region Co-Ordinator,      | deanh@iinet.net.au         |
+| APANA,                    |                            |
+| Western Australia.        | *finger A/C for DISCLAIMER | 
++--------------------------------------------------------+
+ST:VOY Kess: "I wish people would stop talking to me as if
+              I'm still a child! I'm three years old now!"
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604221 ###
+===== 库内序 145778 | PK 2604221 | 等级 L3 =====
+DATE: 1998-04-09T09:32:58+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: Netscape: Linux a top priority (news.com article)
+摘要: Darren Reed 建议建立 netscape@freebsd.org 邮箱承接后续相关讨论
+
+
+how about a "netscape@freebsd.org" for this and all that will follow ?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604223 ###
+===== 库内序 145780 | PK 2604223 | 等级 L4 =====
+DATE: 1998-04-09T10:48:20+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: Committers, wake up!!!
+摘要: Ruslan Ermilov 提醒 committer 跟进其一周前提交的 PR conf/6226 class change-request
+
+Hi!
+
+A week ago I've sent PR conf/6226 of class
+change-request with patch attached.
+
+Would you be so kind to follow-up on this one?
+
+Thank you,
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604226 ###
+===== 库内序 145783 | PK 2604226 | 等级 L4 =====
+DATE: 1998-04-09T20:30:45+00:00
+FROM: Alex Belits <abelits@genesyslab.com>
+SUBJ: Re: Netscape: Linux a top priority (news.com article) 
+摘要: Alex Belits 认为 FreeBSD 用户与开发者应减少操作系统之间的意气之争把时间投入 FreeBSD 改进与移植
+
+
+
+On Thu, 9 Apr 1998, Tony Kimball wrote:
+
+> Subject: Re: Netscape: Linux a top priority (news.com article) 
+> 
+> Y'know, FBSD would get a lot more press if it changed its name
+> to LinuxBSD.
+> 
+> Just a suggestion.
+
+  FreeBSD users and developers will get a lot more time for FreeBSD
+improvement and software porting if they reduced the number of holy wars
+between operating systems, they participate in. 2 is definitely realistic,
+but kinda lacking, 1 is almost perfect, 0 is the ideal that no one will
+ever reach, but everyone can dream of.
+
+--
+Alex
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604227 ###
+===== 库内序 145784 | PK 2604227 | 等级 L3 =====
+DATE: 1998-04-09T20:38:37+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: PnP driver question
+摘要: Archie Cobbs 询问 FreeBSD 中如何编写 PnP 感知驱动 probe 阶段如何设置参数做自检
+
+
+Need a little help understanding how to write a PnP aware device driver.
+
+Suppose I have a PnP card that I want to do a self-test on before
+claiming that it's been officially detected. Since the attach() routine
+in struct pnp_device returns NULL, then this has to be done in the
+probe routine, right?
+
+In order to talk to the card to do the self-test, I have to set
+the PnP params and enable the card during the probe routine... 
+
+My question is.. is this safe? Is this this right way to proceed?
+
+I'm wondering because in Luigi's paper "PnP support in FreeBSD",
+the example has a very simple probe routine (which just compares the
+unqiue identifiers), while the attach routine does all the initialization
+work.
+
+Thanks,
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604229 ###
+===== 库内序 145786 | PK 2604229 | 等级 L3 =====
+DATE: 1998-04-09T20:37:44+00:00
+FROM: "David Shanes" <dshanes@personalogic.com>
+SUBJ: Fw: Your Article "Freeware: The Heart & Soul of the Internet"
+摘要: David Shanes 转发自己写给 OReilly 创始人 Tim OReilly 的邮件支持开源软件立场
+
+To All,
+    This is the message that I sent Tim O'Reilly, the founder of O'Reilly
+and Associates. Next I will send you his response.
+
+David
+
+-----Original Message-----
+From: David Shanes <dshanes@personalogic.com>
+To: tim@oreilly.com <tim@oreilly.com>
+Date: Thursday, April 09, 1998 11:45 AM
+Subject: Your Article "Freeware: The Heart & Soul of the Internet"
+
+
+>Mr. O'reilly,
+>    I applaud ORA's endorsement of Open Source software. It is a huge step
+>to gather together the "forefathers" of some of the most popular and stable
+>software in use on the Internet today.
+>    Personally, I use FreeBSD and was wondering if there was any particular
+>reason that the developers of FreeBSD were not included in your "Freeware
+>Summit".
+>    FreeBSD has much to offer over Linux and has a huge developer/user
+base,
+>including Yahoo! and CDROM.COM.
+>
+>Sincerely,
+>David Shanes
+>_____________________________________________________
+>David Shanes                                   7535 Metropolitan Drive
+>dshanes@personalogic.com          San Diego, CA  92108
+>Database Developer                       (619) 220-5800 x228
+>PersonaLogic, Inc.                           (619) 220-5899 (fax)
+>http://www.PersonaLogic.com
+>
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604232 ###
+===== 库内序 145789 | PK 2604232 | 等级 L4 =====
+DATE: 1998-04-09T21:24:18+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Fw: Your Article "Freeware: The Heart & Soul of the Internet" 
+摘要: Mike Smith 认为操作系统是互联网软件基础 summit 宣传把 Linux 置前很能说明问题
+
+> Here is Tim O'Reilly's response.
+...
+> >BTW, the main focus was on internet software, not on 
+> >operating systems.
+
+Of course, operating systems are the foundation on which internet 
+software is built.  And the promotional material for the "summit" made 
+that much pretty clear in its placement of the word "Linux".
+
+If Tim would like an introduction to Jordan, may I suggest he gets a 
+reference to me from Greg Lehey, and then I'll introduce him to Jordan. 
+Of course, Jordan's not quite the jackbooted dictator(*) that Linus is, 
+and other members of the FreeBSD effort have strong ideas of their own.
+
+(*) This is humour, for those of you that missed it.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604236 ###
+===== 库内序 145793 | PK 2604236 | 等级 L3 =====
+DATE: 1998-04-09T23:21:36+00:00
+FROM: Kris Kirby <kris@ninbox.ml.org>
+SUBJ: Free PCNFSD Client?
+摘要: Kris Kirby 询问有无免费 PCNFSD 客户端支持 Packet driver 或 ODI 都可以
+
+With all this talk about using NetWare servers/clients, I never thought
+about the possibility of using PCNFSD... Has anyone seen a free PCNFSD
+client? Packet driver or ODI will do nicely. Thanks.
+-- 
+
+Kris Kirby <kris@airnet.net>
+-------------------------------------------
+TGIFreeBSD... 'Nuff said.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604237 ###
+===== 库内序 145794 | PK 2604237 | 等级 L4 =====
+DATE: 1998-04-09T23:26:20+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Free PCNFSD Client? 
+摘要: Mike Smith 认为 FreeBSD 服务 DOS 与 Windows 系统文件共享最佳方案是 Samba
+
+> With all this talk about using NetWare servers/clients, I never thought
+> about the possibility of using PCNFSD... Has anyone seen a free PCNFSD
+> client? Packet driver or ODI will do nicely. Thanks.
+
+The best way, bar none, to do file service for DOS/Windows systems with 
+a FreeBSD system is using Samba.  Microsoft have a new, functional 
+version of their DOS client, WfW has had a stack for ages, and Win32 
+systems all talk SMB over TCP.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604238 ###
+===== 库内序 145795 | PK 2604238 | 等级 L3 =====
+DATE: 1998-04-10T00:00:16+00:00
+FROM: Joe McGuckin <joe@via.net>
+SUBJ: Sendmail oddities
+摘要: Joe McGuckin 迁移到 sendmail 2.2.6 后脚本调用 mail 或 sendmail 把发往外域的邮件送到本地用户
+
+
+Now that I've moved over to 2.2.6, my scripts that use 'mail' or 'sendmail' to 
+send outgoing mail no longer work.
+
+They keep trying to deliver the mail to a local user when the MX record for that 
+domain points to a different machine.
+
+Here's an example:
+
+  www.foo.com  is a virtual host on one of our web servers.
+  foo.com has an mx record that points to mail.via.net
+
+  on the web server (www.foo.com and foo.com have IP addresses aliased to this machine)
+  if I try to use mail to send a message to x@foo.com, it attempts to deliver locally
+  and dies by saying that 'x' is an unknown user.
+
+Help!
+
+Joe
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604240 ###
+===== 库内序 145797 | PK 2604240 | 等级 L4 =====
+DATE: 1998-04-10T00:14:07+00:00
+FROM: "Michael K. Sanders" <msanders@aros.net>
+SUBJ: Re: Sendmail oddities 
+摘要: Michael K. Sanders 猜测是 IP 虚拟主机导致 sendmail 把它们全塞进 Cw 建议看 DontProbeInterfaces
+
+[This belongs on -questions, no?]
+
+In message <199804100000.RAA20963@monk.via.net>, Joe McGuckin writes:
+>
+>They keep trying to deliver the mail to a local user when the MX record for th
+>domain points to a different machine.
+
+I'm guessing that you're using IP based virtual hosts, and Sendmail is
+being retarded and adding them all to Cw for you.  Look at the
+'DontProbeInterfaces' option.
+
+:: Mike ::
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

@@ -1,0 +1,21 @@
+2604399	885	Langford 质疑 Birrell 把 mozilla 当作又一个 contrib 塞进标准 CVS 仓库的说法，反问是否要把浏览器塞进 base OS，还拿最近有人因此惹上麻烦的例子上来提醒
+2604401	885	Amancio 愿为对方组建公关支持小组，媒体联系名单可让数据库专家建库，但承认缺人专职管理联系人，并把 hylafax 服务器加调制解调器接 voice 与邮件转发方案一并托给 Jordan 商量
+2604402	885	Luigi 澄清 BWNFS 即 Beame&Whiteside 是商业软件而非 shareware，九二年九三年买过数份许可证，当年在 DOS 下是好东西，并转述引用中另有两份 shareware PCNFS 客户端的说法
+2604405	885	Amancio 用 mgetty 与 vgetty 管电话，Hylafax 能启 vgetty 但没调过，发传真就杀掉 vgetty；vgetty 抓到语音会把流包成 mime 发来，exmh 前端加 NCD 音频播放器完成回放
+2604408	885	Ruslan 回应 Amancio 提到 JRE 许可更宽松，可在其他平台开发 Java 项目再在 FreeBSD 上验证
+2604410	885	winter 建议对 GUI 应用感兴趣却嫌 TK 麻烦的人去看 Perl 的 GTK 绑定，指其相当 slick，并给出 http://www.gtk.org/ 网址
+2604411	885	Tommy 贴出 http://www.sco.com/UDI/ 并标注这是可移植设备驱动，称也许这对众人有用，签名里自称好啤酒之源
+2604412	885	dannyman 回 Birrell 因买不起 Motif 的困扰，指出 gtk 或是 qt 那边已把 Netscape 移植到自家工具箱，界面更漂亮可执行文件也更小，愿代查网址
+2604413	885	Johan 转述 Wolfram 为 mozilla-cvs 建的 cvsup 镜像，host 为 cvsup.de.freebsd.org，collection 叫 mozilla-all，按中欧时间每天同步两次
+2604415	885	Brett 认为这套语音与传真方案正是 FreeBSD 该大力宣传的方向，建议打包推出让用户在浏览器邮件客户端里同时收回语音传真与邮件，足以让人愿意搭 FreeBSD 服务器
+2604416	885	Nate 澄清 Sun 的 JRE 许可不允许拿 Sun 源码开发 Java 虚拟机，但可以随任意产品分发 JRE，改 netscape 使用 JRE 完全合规
+2604417	885	Amancio 建议直接用 Java，jdk 在 http://www.freebsd.org/java，写过 Java Workshop 2.0 跑 FreeBSD 的做法，另推荐 ACE 的 Java 版 JACE 与 IBM SanFrancisco
+2604419	885	winter 反问系统管理前端工具为什么要用 Java，认为 Perl 加 GTK 那一套更轻量也更快，反正本质还是 Perl
+2604421	885	Amancio 主张用 Java，理由是围绕 Java 已经建起庞大的支持基础设施与跨平台 IDE 环境，直接 Java 编码即可
+2604422	885	Amancio 按 JKH 的指示建出了 mozilla tree 且毫无阻碍，并说访问 cvs 仓库还差一点指引，提醒以后别再做无用空转回复
+2604423	885	Terry Lambert 指出 open 打开文件时调用方自己就持有文件名，因此不必从描述符反查；给出覆盖 libc 的 open 符号的代码，按描述符下标缓存 strdup 的 path，并用 fdname 函数取回
+2604424	885	jmb 宣布 freebsd-mozilla 邮件列表已开放订阅，mozilla 只是别名快捷方式，实际是闭合列表，可发往 freebsd-mozilla@freebsd.org 或 mozilla@freebsd.org
+2604428	885	Frank 认同 jkh 说的两万五千注册用户只是冰山一角，关键是先界定冰山实际规模；若目标只是扩大曝光与用户基数则此问题未必要紧
+2604437	885	Robert 补充至少有两家机构因缺少 CMU Cyrus 服务而放弃 FreeBSD 或 BSD/OS，最终转投 MS Exchange 加 Schedule；问题不在排斥 UNIX 而在需求不合
+2604438	885	John-Mark Gurney 回答对方关于数据量大小的提问，说 cvs 仓库约 45.6 megs，检出后的副本约 45.5 megs
+2604443	885	Mayo 支持 Terry Lambert 提出的新增独立倡导场域建议，认为 advocacy@freebsd.org 早就该设立，给 USENET freebsd 组加 .advocacy 是好主意

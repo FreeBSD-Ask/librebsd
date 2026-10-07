@@ -1,0 +1,29 @@
+2602544|L3|Stefan Esser：Justin Gibbs 在 AH2940UW 驱动上投入更多工作，倾向选 Adaptec 而非 ASUS PCI-SC875
+2602545|L3|Terry Lambert：lastlog 按 uid 记录登录，建议单调递增 uid 避免重复使用
+2602547|L3|Archie Cobbs：建议同时用 send-pr 提交补丁以免在 source tree 中被遗忘
+2602548|L4|Willem Jan Withagen：FFS 可通过添加 cylinder group 扩展容量，代价是少量碎片
+2602549|L4|Mike Smith：BSDI 或 Linux 共享库不行，可考虑 BSD/OS 2.1 库；Linux 库仅极受限条件可用
+2602550|L3|Tom：认为可用 linux-dev kit 把相关代码编译到原生环境再加载
+2602551|L3|Mike Smith：DPT 驱动目前仅存在于 2.2-stable 未提交到主线，希望先稳定再谈厂商支持
+2602554|L3|Amancio Hasty：建议建立 trace event queue 并把相关节点信息入队，panic 后按队列回溯调试
+2602555|L3|Joe McGuckin：用 cvsup 更新到 2.2.5-current 后 make buildworld 途中报编译错误，想确认是否常见
+2602557|L3|Joe McGuckin：make world 在 libskey 编译时因告警被当作错误而失败
+2602558|L4|John Birrell：src/lib/libskey/Makefile 的 CFLAGS 含 -Werror，编译告警被当成错误中断，并追问头文件是否已更新
+2602559|L3|Karl Denninger：疑问 -Werror 为何出现在相关 Makefiles 中，未定义变量并没那么糟糕
+2602561|L3|John Birrell：libskey 与 lpr 套件同样因告警被当错误而无法 make world，喊话 Jordan 出手
+2602565|L3|Studded：没有 commit 权限也能读 CVS log，可直接查 cvs repository 链接
+2602566|L4|Terry Lambert：以为 fsck 与 CG 有 bug，实为过长的 IDE 电缆导致，换用更短的 IDE 线即可
+2602568|L3|Terry Lambert：NFS 卡死指的是客户端，最近深入该代码，是 client 侧会冻住整机
+2602569|L4|John S. Dyson：Ultra-DMA/33 未提高时钟但 Promise 控制器与 WD 硬盘不兼容超长 IDE 线
+2602572|L3|Eivind Eklund：装有 Terry 补丁的 NFS 客户端现在比较稳定，但他自己并未重度使用
+2602574|L3|John Paul Lonie：就 Libretto 笔记本在 FreeBSD 下的运行情况发言
+2602575|L3|Andreas Klemm：询问具体是哪些流行的协议栈实现了硬件 checksum 卸载
+2602576|L3|Andreas Klemm：看到 PicoBSD 0.3 的公告后觉得挺有意思
+2602577|L3|Darren Reed：freebsd 2.2.x 的 boot manager 在有多块磁盘时只能引导第一块，问能否修复
+2602578|L3|John S. Dyson：问已提及的 bug fix 能否解决服务器侧失联时 NFS 客户端冻结整机的情况
+2602584|L3|Chris Day：装上 OPTi 82C931 声卡补丁后 FreeBSD 下依然没有声音
+2602586|L3|Ulf Zimmermann：Intel DK440LX 主板内置 EtherExpress Pro/100B，fxp 驱动报不支持的 PHY
+2602587|L3|Andrzej Bialecki：同样遇到 fxp 不支持的 PHY 警告
+2602591|L3|Mike Smith：认为 boot manager 的问题是可以修复的
+2602592|L3|dannyman：-current 版本系统负载飙高但 CPU 空闲，不知是 bug 还是系统现象
+2602593|L4|Terry Lambert：引导三块以上磁盘需刷 BIOS 把 drive count 从 2 改大，boot manager 只能经 INT 13 读入代码

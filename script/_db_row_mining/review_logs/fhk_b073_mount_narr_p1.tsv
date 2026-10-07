@@ -1,0 +1,22 @@
+2602441	885	greg 回复称目前 volume manager 驱动仍在测试尚未完成并坦言今后可能还会需要额外动手调整相关代码以让整套驱动能顺利工作
+2602443	885	jb 援引 POSIX 2.9.3 指出若 _POSIX_THREADS 已定义则 _POSIX_THREAD_SAFE_FUNCTIONS 也应随之定义并强调函数应真正放入 libc 通常需按重入版本完整重写现有实现
+2602446	885	greg 回复称手头工作距离可用尚有一段距离并坦言 RAID-5 部分存在商业利益相关的顾虑会另开一封邮件私下补充更多信息
+2602447	885	doug 举例说 config 里 options 传字符串宏如 BOOTP_WIRED_TO=fxp0 到 c-snippet 中 strcmp 会因缺少字面双引号无法编译只好在代码里用 #define BOOTP_WIRED_TO 显式加双引号
+2602448	885	winter 在回复里向 Greg 发问能否把自己手头这份工作打个快照共享出来让其他同学帮忙折腾一下并挑挑毛病反馈意见以便帮忙测试
+2602451	885	tom 表示怀疑文档可用性会变差因为 Adaptec 自己也公开相关文档并不比过去更封闭保守所以文档可获得性应该不会显著变差
+2602452	885	manish 说自己跑 v2.2.2 on i386 发现 FreeBSD 有 OSI 支持但发行版未随附源码他看到 LINT 文件里写着原因是缺乏兴趣并想拿 netiso 目录相关源文件自行编译带 OSI 的 kernel
+2602453	885	mike 表示自己很怀疑 wcarchive 会用 CAM 驱动集因为它是一台 2.2 系列机器而 CAM 是很典型的 3.0 代码
+2602454	885	mike 建议 options 里想传字符串字面量时把内嵌双引号写成转义形式即把 BOOTP_WIRED_TO 后的 fxp0 加上反斜杠双引号并注明必要时反斜杠可能要写成三重
+2602455	885	nate 称自己那块 NCR 卡性能与 Adaptec 驱动差距在 10% 以内某些基准还能更快且三年来从未出过故障并认为这种稳定性和可用性绝对值得
+2602456	885	archie 提出用一个 #define Q(x) #x 的宏把参数自动包成字符串字面量举例 Q(asdf) 就返回 asdf 这个字符串效果
+2602461	885	conrad 表示 FreeBSD 的 rpc.lockd 似乎只实现了服务端并询问是否有人做过客户端扩展使 FreeBSD 客户端能拿锁同时表示自己已经看过其他开源 lockd 源码
+2602463	885	terry 说明客户端代码要放进 NFS 客户端文件系统实现里并说自己会尽快动手但服务端代码会先做完客户端代码自身还有一些问题需要先解决
+2602466	885	tom 认为 ahc 的事务开销显著低于 ncr 驱动但要看出差别得用大量并发 io 打到多台硬盘上而现有 benchmark 工具如 bonnie 都不太适合测这一点
+2602467	885	tom 称 Justin 与 Dave G 正在为 2.2-stable 制作 patchkit 且 2.2.6 之后可能把 CAM 收进 2.2 分支他猜测会以 kernel option 形式合入因为部分驱动还没 CAMified
+2602468	885	luigi 询问 audio 设备驱动里 FIOASYNC 该怎么处理同时提到 Bruce 曾建议 FIONBIO 应由 vfs 而非设备驱动处理想知道 FIOASYNC 是否同样如此还问读写阻塞时应返回短计数还是报错
+2602470	885	jaye 报告自己的一台 web server 出现崩溃 panic 信息为 vinvalbuf flush failed 调用栈指向 nfs_bio 里的 nfs_vinvalbuf 与 nfs_write 该机器以 NFS V2 UDP 挂载到 Netapp 上
+2602471	885	gram 转述朋友在 2.2.2 的 Compaq 上用 3C509 双网卡加 IDE 硬盘做网关时常出现 3 到 4 秒全网断联现象负载内存与磁盘 I/O 都查不出明显原因怀疑与 3C509 驱动有关
+2602473	885	kaleb 在 3.0-971225-SNAP 上构建 MT-safe 版 Xlib 时给 errno 全部改成 __error 但把非线程程序 xterm 链接上去跑却报 ___error 未解析外部符号主张在 libc 里加一个 #pragma weak __error
+2602478	885	brett 表示自己家里的 P166 还在跑 393 版本客户端却运行得毫无问题而工作用的 PPro200 已经做过一次 make world 更新所以两台机器表现差异可能与此有关
+2602479	885	ben 反问为什么不用 ssh 而称 ssh 是 rsh 的安全替代品自身带加密机制如果设置得当完全可以避免在链路上发送密码甚至不需要加密形式传输密码
+2602482	885	kaleb 认为有人说 POSIX 1003.1 2.9.3 定义 _POSIX_THREADS 就得定义 _POSIX_THREAD_SAFE_FUNCTIONS 的说法过于简略并援引表 2.10 与 4 到 8 节多条款说明缺少实现则不能定义

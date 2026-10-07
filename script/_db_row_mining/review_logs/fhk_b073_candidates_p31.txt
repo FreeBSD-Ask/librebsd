@@ -1,0 +1,18 @@
+2603965|L4|Dannyman：tcsh 中 set prompt 使用 %＃ 字符可在超级用户下显示＃ 提示符
+2603969|L3|Vladimir N. Kovalev：FreeBSD 2.2.5R 下用 ANU 的 PPPD 2.3.3 编译用户态代码通过，但内核更新后无法重建
+2603973|L3|Muthu：FreeBSD 2.2.5 内核 bcopy 超 1024 字节走 FPU 实现，libc 只用通用实现，建议 libc 也做 FPU 化
+2603976|L3|Joel Ray Holveck：未启用反垃圾邮件规则，DeliveryMode deferred，但发送时机器仍拨号外联
+2603986|L4|John Fieber：指出 Apache CGI 派生进程失败与 /etc/login.conf 配置相关
+2603989|L4|Peter Edwards：查看 swtch.s 和 save87 结构后质疑内核不会保存 FPU 寄存器的说法
+2603992|L4|Julian Elischer：听会后转述 Van Jacobson 的 UDP 快速路径已达约 30 条指令，与 TCP 数字不符
+2603995|L3|Dan Busarow：用 /etc/aliases 配合改写 popper 的方法可处理超过 8 字符的用户名，前提是截断后无冲突
+2603996|L4|Brian Cully：补丁里 OBJC 变量已可指向任意编译器，问题在 bsd.prog.mk 的一处赋值
+2603997|L4|Open Systems Networking：FreeBSD 手册记载用户名可扩到 16 字符，但会破坏 NIS 等服务的兼容性
+2603998|L3|Wilko Bulte：选购兼容 XFree 的 PCI 显卡要求 74Hz 刷新，询问 Matrox Millenium II 是否合适
+2604000|L3|Rob Maher：为 FreeBSD 与 Linux TCP/IP 栈差异研究征集大负载下的实现效率与鲁棒性资料
+2604002|L4|Mike Smith：Yamaha 6x2x2x SCSI 光驱不被 wormcontrol 支持，建议用 ports 中的 cdrecord
+2604003|L4|Terry Lambert：已在使用 32 字符的 AppleTalk 用户名，说明长用户名并非不可行
+2604006|L4|Tom：更改用户名字段不会破坏 NIS 兼容性，这是被反复重述的误解，NIS 基于自由文本记录
+2604007|L4|Mike：建议建立 8 字符有效账户，在 /etc/virtusertable 中把超长用户名映射到该账户以承载邮件
+2604013|L4|Søren Schmidt：cdrecord 在 FreeBSD 下不支持 IDE 光驱，并提及自己在推进 atapi cd 驱动
+2604015|L3|Viren R. Shah：在 2.2.6 系统上构建当前版本内核，buildworld 通过后内核构建失败原因不明

@@ -1,0 +1,36 @@
+2603052|L4|Luigi Rizzo：建议用 deny deflate 与 disable deflate 强制 pred1 压缩排查丢包
+2603053|L4|Daniel Berlin：DPT 是 SCSI 控制器厂商擅长 raid ISA DPT 2021 快过多数 PCI 卡
+2603054|L4|Alfred Perlstein：指出 OS-BS 工具位于 ftp://ftp.freebsd.org/pub/FreeBSD/tools
+2603055|L4|Ollivier Robert：单用户模式下 tunefs / 后立即重启即可因文件系统只读无需先卸载
+2603056|L4|Brian Somers：2.2.1 到新版无实质变化但 DEFLATE 优先于 PREDICTOR1 怀疑新版启用 deflate 压缩
+2603057|L4|Randall Hopper：/bin/sh SIGIO 缺陷致 emacs 脱离 configure 加 --with-exec-shell=SHELL
+2603058|L3|Christopher J. White：想用 BSD 做 IP 转发引擎接 OSPF VxWorks 上 PowerPC 目标 10000 路由
+2603059|L3|Amancio Hasty：提及 OSKit 也从各操作系统取特性但建议路由器用途直接用 FreeBSD 裁剪
+2603060|L3|Joao Carlos Mendes Luis：引用 John S. Dyson 说明 FreeBSD 有写回与写穿两种缓存
+2603062|L3|Terry Lambert：那公司是 Willows 商业且面向大 UNIX FreeBSD 加 Willows 成本超 Windows95
+2603063|L4|Terry Lambert：质疑为何要做成系统调用建议 mmap 后大 write 免复制配合 AIO 免额外线程
+2603064|L3|Jordan K. Hubbard：Wine 从来都需要远超一点推动力相比 SoftPC 运行 Win95 二进制远不够用
+2603065|L4|Jordan K. Hubbard：目录缺失跑 mtree -deU -f /usr/src/etc/mtree/BSD.usr.dist -p /usr
+2603066|L3|Terry Lambert：WINE 运行时 WIN32 应用表现不佳且需 C:\WINDOWS 相关组件
+2603067|L3|Terry Lambert：同意 Jordan 观点即使时间估算翻四倍也在三以下
+2603070|L3|Tom Torrance：adapttec 2740A 486DX2/66 ccd0 复制 /usr/ports 时 SCSI 超时问是否致损坏
+2603071|L3|Amancio Hasty：没看 C-span 听证但用 -current linux real-audio 和 voxware 3.5 听过
+2603073|L3|Louis A. Mamakos：质疑对方 10000 路由是少写位数还是误解高性能路由器市场
+2603075|L4|M. Warner Losh：ft 驱动不支持 Iomega Ditto 2GB IDE tape 有初步支持由 Soeren Schmidt 提供
+2603077|L3|Marc G. Fournier：新增硬盘装 Win95 跑 Simply Accounting 问 FreeBSD 加 boot-mgr 双启动
+2603078|L4|Mike Smith：Windows 95 只能从系统第一块磁盘启动
+2603082|L4|Mikael Karpberg：建议 GRUB 可设置活动分区与链加载替代商用启动管理器 http://www.uruk.org/grub
+2603083|L3|Alfred Perlstein：winse 缺志愿者文档不足难以编码
+2603085|L3|Tony Kimball：称 Sun 关闭 WABI 项目未产出可用 Win32 接口并建议派人查证
+2603086|L3|Daniel OConnor：询问能否通过 libvgl 获取显卡 framebuffer 指针以便移植 svgalib 应用
+2603087|L4|Søren Schmidt：可行看 /usr/share/examples/libvgl 初始化后使用 VGLDisplay 结构
+2603088|L3|Mike Smith：追问 linear framebuffers 何时支持
+2603089|L3|Ian Kallen：不知道纽约有用户组建议 hackers 与 c.u.b.f.m 发帖召集本地同好无官方支持
+2603090|L3|Daniel OConnor：linear framebuffer 支持要等有人把 svgalib 代码剥出来
+2603091|L3|Amancio Hasty：其实代码应剥自 XFree86 而非 svgalib
+2603092|L4|Søren Schmidt：都错内核内需能直接做 VESA BIOS 调用给到这点就能出模式和线性缓冲
+2603095|L3|Amancio Hasty：挺好至少商业实体若看重此特性就知道找谁合作祝好
+2603096|L3|Darren Reed：较新 SiS PCI 芯片组对比 Intel 430TX 缓存与 RAM 覆盖及 16550 与 83877 串口支持
+2603097|L3|Marino：奥地利没有 OLTP 业务即不存在跨互联网业务场景
+2603098|L3|Amancio Hasty：问 Matrox 与 S3 显卡情况如何
+2603100|L4|Martin Cracauer：/bin/sh SIGIO 缺陷 -current -commit 讨论多两套 http://www.freebsd.org

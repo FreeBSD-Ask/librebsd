@@ -1,0 +1,22 @@
+2603361	885	Matthew 指出 chroot 之后相关改动不生效须把 ftp 用户的家目录设为 /home/ftp 并用 pwd_mkdb 重造 master.passwd 的哈希
+2603362	885	Alfred 假设内核会自动配置多数 PCI 卡且以太网卡都收在 GENERIC 内核里怀疑未在 dmesg 出现的卡就未被支持并建议转告 Timothy
+2603364	885	sbabkin 询问 PCI 编程有何好书推荐认为读书比看驱动更易得背景知识并追问 4 口 FastEthernet 卡各端口是否共用中断或可否设为单一中断
+2603366	885	Doug 指出中断数量由 BIOS 决定自己用 3 张四口以太网卡分中断够用还提到早期 ASUS XP55T2P4 主板 BIOS 在 PNP 初始化时挂起 Adaptec 2143 系列卡需先跑 tcpdump 才工作
+2603367	885	Snob 报告在 boot 提示符按下问号以列出可用内核时 boot.help 会把清单滚出屏幕之外看不见并询问要不要提 pr 报告
+2603368	885	Terry 推荐 PCI System Architecture 一书 MindShare 出版作者 Tom Shanley 与 Don Anderson ISBN 0-201-40993-3
+2603369	885	Terry 判断这种网卡问题像是某个寄存器在正常模式下没被设置而混杂模式打开时才把它设置或重置因此推测根本原因多半是驱动程序本身存在 bug
+2603370	885	Simon 致歉后改用 sendero.simon-shapiro.org 提供 /FreeBSD 目录下若干 2.2 与 3.0 镜像并称会即时追加两份最新 2.2 由 checked-in 源码构建
+2603371	885	Simon 拿早前寄给 Jordan 的 DPT RAID 组稿发问称那篇无需 Jordan 亲笔撰写只要改写成英文稍作修改即可采用
+2603372	885	Simon 说明多数 DPT 卡内部封装 Qlogic 芯片外部通过 EATA 协议访问 EATA 是 ANSI 标准的扩展 ATA 以邮箱方式实现 DMA 并预告下一代改用 I2O
+2603374	885	jkh 说 pending 文件夹里根本没找到那份稿件请对方重发并建议稿件最好带上性能收益内容提醒读者不全是懂技术的人若是如此将更乐意刊发稿件
+2603375	885	Gabor 说并行口 ZIP 驱动器用新 ppbus 驱动集无法工作 dmesg 里出现 vpo0 Adaptec aic7110 SCSI 后控制台黑屏切 ttyv1 再切回时背景变红并需改 syscons.h
+2603376	885	Studded 建议给 fdimage 加判断镜像若未以二进制模式传输就拒写以免产生坏镜像并称此举可省去提问列表里约八成相关咨询问题
+2603377	885	Wilko 想换两张 Digital DEFPA FDDI SAS 卡换 Pentium P233mmx 32Mbyte 60ns EDO SIMM 内存或 SCSI CDwriter 并称二手价在 US$ 500 到 900 区间
+2603378	885	Mark 问 ld 的 -Q 选项在 2.2.5 下生成的可执行文件能否在 BSDI 的 BSD/OS 2.0 上运行以及是否必须静态链接并称没有 BSDI 系统在手头只能查手册
+2603379	885	Karl 建议直接用 cc -static 命令做静态链接即可让可执行文件在 BSDI 上约九成时间能跑并称自己从来不用 -Q 选项
+2603380	885	jkh 判断 BSD/OS 2.0 已无法运行任何 FreeBSD 二进制无论加不加 -Q 都无望并称最近几次尝试都在 BSD/OS 2.0 机器上失败建议反向构建
+2603381	885	lem 询问是否有人在 Compaq 硬件上跑 SMP FreeBSD 并表示自家正在评估这一方案欢迎以私下邮件回复配置详情承诺若有人回应会汇总整理
+2603383	885	Douglas 从 /etc/pccard_ether 抽出 DHCP 分支改成在 rc.network 里按参数值触发 /usr/local/sbin/dhcpc 补丁针对 2.2.5-RELEASE
+2603385	885	Tim 认为对方提议的改动实现起来应该十分容易并称不解为何这么多用户会以 ascii 模式去传输镜像以至于相关问题层出不穷不断重复发问
+2603386	885	Studded 称赞对方提议的改动非常欢迎并解释许多人用怪异 ftp 客户端或 netscape 默认以 ascii 传输希望工具能给出醒目提示并指向正确流程
+2603387	885	muthu 说自己从 1997 年就在做 FreeBSD 有 Oracle 等数据库知识询问 FreeBSD 可加哪些特性以提升数据库性能并请列出可做的具体条目

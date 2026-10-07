@@ -1,0 +1,648 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604121 ###
+===== 库内序 145678 | PK 2604121 | 等级 L3 =====
+DATE: 1998-04-07T12:06:39+00:00
+FROM: "Muthu" <MOLAGAPP.IN.oracle.com.ofcmail@in.oracle.com>
+SUBJ: Any print server available on freebsd?
+摘要: Muthu问 FreeBSD 是否有 print server 能与网络打印机通信 daemon 收客户端 lpd 请求转发到打印机
+
+Hi, 
+   
+   This may be simple question. Is there any print server available on freebsd 
+which can contact with printer in the network?. Basically in my environment, 
+the printer is given a ip address. I want a daemon running on freebsd (server) 
+which Q's the print requests from all the client machines and send it to the 
+printer. The client can run lpd with /etc/printcap configured as the server ip. 
+ 
+Regards, 
+ 
+Muthu. O.L. 
+ 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604126 ###
+===== 库内序 145683 | PK 2604126 | 等级 L3 =====
+DATE: 1998-04-07T14:53:46+00:00
+FROM: David Wolfskill <dhw@whistle.com>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: David Wolfskill：赞同 Archie 但认为其例更适合 calendar 而非 cron
+
+>From: Archie Cobbs <archie@whistle.com>
+>Date: Mon, 6 Apr 1998 22:38:05 -0700 (PDT)
+
+>Some cron entries are "meant" to run once every day (month,
+>hour, whatever) e.g. /etc/daily. Others are meant to run once,
+>at the specified time (e.g., on April 15, remind me that my
+>taxes are due). Which behavior you choose makes one of these
+>types work but not the other.
+
+Yes (though the example is more suited to calendar than cron -- but
+then, calendar is run by cron...).
+
+>I agree that /etc/daily and friends should be scheduled to
+>run at some time other than between 2am and 3am.
+
+Quite.
+
+david
+-- 
+David Wolfskill		dhw@whistle.com	(650) 577-7158	pager: (650) 401-0168
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604131 ###
+===== 库内序 145688 | PK 2604131 | 等级 L3 =====
+DATE: 1998-04-07T17:34:53+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Snob Art Genre：这条购物线太吵请把讨论挪到 -chat 否则只能崩溃
+
+Please, please, puh-leeze take this thread to -chat or something. 
+Hearing about everyone's worldstone results was bad enough, if I have to
+wade through everyone's xengine output I think I'm gonna scream. 
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604132 ###
+===== 库内序 145689 | PK 2604132 | 等级 L4 =====
+DATE: 1998-04-07T17:49:07+00:00
+FROM: David Kelly <dkelly@fly.HiWAAY.net>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: David Kelly：告知 xengine 位于 /usr/ports/benchmarks/xengine
+
+Jamie Bowden <jamie@itribe.net> writes:
+> > 
+> > Interesting summary, as I may shortly be in the market to replace 
+> > my 2MB Mach32 card. Was surprised nobody quoted 
+> > /usr/ports/benchmarks/xengine results. It may not be much of a 
+> > benchmark but its something more than seat of the pants.
+[snip]
+> 
+> Where can xengine be found?  I will run it on my machine and post results.
+
+/usr/ports/benchmarks/xengine
+
+--
+David Kelly N4HHE, dkelly@hiwaay.net (hm)
+======================================================================
+The human mind ordinarily operates at only ten percent of its
+capacity -- the rest is overhead for the operating system.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604133 ###
+===== 库内序 145690 | PK 2604133 | 等级 L3 =====
+DATE: 1998-04-07T17:51:43+00:00
+FROM: Joseph Thomas <jpt@networkcs.com>
+SUBJ: Permedia 2 XFree support (was Re: Summary: shopping for new video adapter)
+摘要: Joseph Thomas：LeadTek L2300 Permedia2 Xaccel 4.01 1280x1024x32 得 1860 rpm
+
+> 
+> Running on 2xPII 233MHz:
+> I recently got a LeadTek L2300 8Meg AGP Permedia2 based 3D accelerator.
+> On Xaccel 4.01, 1280x1024x32 - 1860rpm.  No screen problems.
+> No XFree86 Permedia2 support I know of, but if I can get the necessary info...
+> 
+
+	The S.u.S.E. group has released a binary XFree server based
+on their Linux code for the Permedia 2 chipset. Checkout
+
+	http://www.suse.de/XSuSE/XSuSE_E.html (english version)
+
+bottom of the page under 'Other Operating Systems' has the link for
+the FreeBSD version.
+
+-- 
+Joseph Thomas                           E/Mail:  jpt@networkcs.com
+Network Computing Services, Inc.    	 	 jpt@magic.net
+1200 Washington Ave So.			Tel:	 +1 612 337 3558
+Minneapolis, MN     55415-1227          FAX:     +1 612 337 3400
+
+	An elephant is a mouse with an operating system.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604134 ###
+===== 库内序 145691 | PK 2604134 | 等级 L3 =====
+DATE: 1998-04-07T18:31:01+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Daylight Savings Time - bug
+摘要: Terry Lambert：他和几位在为 Paul Vixie 拟 cron DST 提案 认为人们挑时刻基于两理由
+
+> 	Like so much else in the unix world, it expects the operator to be
+> smarter than it is. :) There are a couple of us who are working on some
+> proposals for Paul Vixie along the following lines.
+> 
+> 15 2S * * * /job
+> 	Would run the job in standard time all year round, ignoring DST
+> 15 2U * * * /job
+> 	Runs the job in UTC time.
+
+[ ... ]
+
+> Comments?
+
+I think people put cron jobs at the times they do for two reasons:
+
+1)	They want the job to run when it is unlikely to impact
+	users
+
+2)	The want the job to run so that it's done before some set
+	time based on an estimation of how long the run will be.
+
+Neither of these are really served by the proposed changes.
+
+On the other hand, if you were to "instantaneously" advance the
+clock through the hour, and were to hold the clock for one hour
+through the overlap, you would address these.
+
+For things that run on one hour (or less) intervals, they would
+ignore the change (effectively, your UTC option).
+
+The remaining problem is order of operation of connected tasks,
+and implying the connectivity by order of scheduling in cron.
+
+This is a programming error; it's a job for a shell script, not
+two or more cron entries.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604136 ###
+===== 库内序 145693 | PK 2604136 | 等级 L3 =====
+DATE: 1998-04-07T18:11:55+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Wilko Bulte：把 Mike 的 summary 更正为大多数用户满意 Mike 显然不悦
+
+As Mike Smith wrote...
+> > I've been asked for a summary, so here it is:
+
+[snip]
+
+> > So, people sound pleased and I'll probably be getting in the near term.
+
+Make this: _most_ people are pleased (Mike obviously is not)
+
+> > Snippets of received comments:
+> > ....
+> > Not unless you are willing to buy Xaccel.  XFree86 doesn't support it 
+> > very well at all.  Xaccel 4.01 is pretty good, modulo some 
+> > font-handling bugs.
+> > ....
+> 
+> This is my comment, I'll make it again.  I have an MII, I have the 
+> latest XFree86, and Xaccel 4.01.  Xaccel is sufficiently buggy that I 
+> have to use XFree occasionally (colour and font handling).  I would 
+> not want to be using it on a regular basis (it reminds me of the old 
+> days with the S3 server in its infancy), however, as the XFree server 
+> has a number of extremely annoying and distracting cosmetic problems.
+> 
+> If you can live with swarming ants, random pixel garbage and occasional 
+> snow, by all means go for it.  Otherwise, hang back a few months and 
+> let the nice XFree MII hackers finish the job.
+
+Maybe I'm overlooking something, but in re-reading your original comment
+I get the impression that you are quite a bit more distressed in your
+followup comment than in the original one. Sorry if you feel
+mis-interpreted..
+
+But for some reason the majority of the people don't have problems ??
+Don't ask me why.
+
+NB I also found: http://www.bf.rmit.edu.au/~ajv/xf86-matrox.html when
+looking for Matrox info.
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+__________________________________________________ Powered by FreeBSD ______
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604137 ###
+===== 库内序 145694 | PK 2604137 | 等级 L4 =====
+DATE: 1998-04-07T19:06:39+00:00
+FROM: Brian McGovern <bmcgover@cisco.com>
+SUBJ: PortalFS w/tcp...
+摘要: Brian McGovern：PortalFS TCP 失败在 mount_portal activate.c sendmsg 返回 EINVAL
+
+I am wondering if anyone has been using the portalFS code at all. I'm trying to
+make it work with TCP connections, and it keeps failing. After much code 
+chasing, I found that it was failing in activate.c of mount_portal, in the
+function send_reply. Specifically, the sendmsg() call near the end of the
+function generates an error code (n = -1, errno = 22) of EINVAL (invalid
+arguement).
+
+I guess I'm curious to find out if the problem is due to code stagnation, 
+a known problem elsewhere, or whether I'm just unlucky, or have a bad
+configuration for it. 
+
+I'd eventually like to work to fix it, so if you can provide any information,
+I'd greatly appreciate it.
+	-Brian
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604138 ###
+===== 库内序 145695 | PK 2604138 | 等级 L4 =====
+DATE: 1998-04-07T19:28:00+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Amancio Hasty：加载 fastvid 模块开启写合并能让 PCI 线性映射 framebuffer 吞吐翻四倍
+
+I hope that you have loaded the fastvid module to enable write combining
+to your card .
+
+Write combining can quadruple your thruput to your PCI linearly mapped
+frame buffer.
+
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604140 ###
+===== 库内序 145697 | PK 2604140 | 等级 L3 =====
+DATE: 1998-04-07T19:45:29+00:00
+FROM: S�ren Schmidt <sos@FreeBSD.ORG>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Soren Schmidt：他没加载 fastvid 想问怎么把该模块加载进内核
+
+In reply to Amancio Hasty who wrote:
+> I hope that you have loaded the fastvid module to enable write combining
+> to your card .
+
+No I have not.
+
+> Write combining can quadruple your thruput to your PCI linearly mapped
+> frame buffer.
+
+Interesting, endeed, how do I go about to load that ??
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+S�ren Schmidt               (sos@FreeBSD.org)               FreeBSD Core Team
+                Even more code to hack -- will it ever end
+..
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604141 ###
+===== 库内序 145698 | PK 2604141 | 等级 L3 =====
+DATE: 1998-04-07T20:23:13+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Amancio Hasty：fastvid.tar.gz 在他 ftp 站 pub 下 模块还不友好 README 里有作者邮箱
+
+I can't chat with you guys right now cause I am at work .
+
+There is an old version in my ftp site:
+ftp://rah.star-gate.com/pub/fastvid.tar.gz
+
+The module still needs minor tweaking to be 
+user friendly however the README has the 
+author's email 8)
+
+	Have Fun Guys,
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604142 ###
+===== 库内序 145699 | PK 2604142 | 等级 L4 =====
+DATE: 1998-04-07T20:47:45+00:00
+FROM: S�ren Schmidt <sos@FreeBSD.ORG>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Soren Schmidt：装 fastvid 后 S3 Virge/DX 4MB 1152x900x24 xengine 810-920 rpm 升 25%
+
+In reply to Amancio Hasty who wrote:
+
+OK with fastvid I get this:
+
+3.0 23March  2x200Mhz P6 66Mhz bus NoName S3Virge/DX(4MB EDO RAM)
+XFree86-SVGA 3.3.2 1152x900x24bpp - 810-920rpm (varying)
+
+25% increase in rpm, well not bad for a simple program :)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+S�ren Schmidt               (sos@FreeBSD.org)               FreeBSD Core Team
+                Even more code to hack -- will it ever end
+..
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604143 ###
+===== 库内序 145700 | PK 2604143 | 等级 L3 =====
+DATE: 1998-04-07T21:03:49+00:00
+FROM: Kris Kirby <kris@ninbox.ml.org>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Kris Kirby：讽刺 Amancio 说的双卡多屏功能 FreeBSD 上未见 但至少追上了 Mac
+
+Amancio Hasty wrote:
+
+> 4. support for multiple cards (you can have two milleniums in a system)
+
+Come on, let's see that working under FreeBSD. A PC with two monitors?
+At least we'd be gaining on the Macs.
+-- 
+
+Kris Kirby <kris@airnet.net>
+-------------------------------------------
+TGIFreeBSD... 'Nuff said.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604144 ###
+===== 库内序 145701 | PK 2604144 | 等级 L3 =====
+DATE: 1998-04-07T20:20:17+00:00
+FROM: Atipa <freebsd@atipa.com>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Atipa Kevin：XI Graphics Multihead Server 已支持一屏 8 位 Cirrus Logic 一屏 24 位 MII 可买
+
+
+Multihead Server from XI Graphics already does this. You can have one
+screen an 8-bit cirrus logic and the other a 24-bit Millenium II. Pretty
+cool...
+
+You can buy it from www.atipa.com. :)
+
+Kevin
+
+ On Tue, 7 Apr 1998, Kris Kirby wrote:
+
+> Amancio Hasty wrote:
+> 
+> > 4. support for multiple cards (you can have two milleniums in a system)
+> 
+> Come on, let's see that working under FreeBSD. A PC with two monitors?
+> At least we'd be gaining on the Macs.
+> -- 
+> 
+> Kris Kirby <kris@airnet.net>
+> -------------------------------------------
+> TGIFreeBSD... 'Nuff said.
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604145 ###
+===== 库内序 145702 | PK 2604145 | 等级 L3 =====
+DATE: 1998-04-07T21:42:17+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Amancio Hasty：他脱离 X server 开发但确实可行 有 XIG 双头服务器的人已在用两块显示器
+
+Sorry , I am out of the X server development and yes it is possible
+and a few who have Xig dual headed servers are using two monitors
+with the PCs.
+
+	Cheers,
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604146 ###
+===== 库内序 145703 | PK 2604146 | 等级 L3 =====
+DATE: 1998-04-07T19:14:35+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Wilko Bulte：承认引发讨论 认为用户经验反馈重要 引一句 WRAM 无替代玩笑回应
+
+As Snob Art Genre wrote...
+> Please, please, puh-leeze take this thread to -chat or something. 
+> Hearing about everyone's worldstone results was bad enough, if I have to
+> wade through everyone's xengine output I think I'm gonna scream. 
+
+Like 'there is no substitute for lots of WRAM' ? ;-)
+
+I seem to have started quite a discussion. For me the input on what
+people's experiences are (working, non working etc) are important.
+
+Especially the 'non working' cases need attention. So, thanks for all 
+responses.
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+__________________________________________________ Powered by FreeBSD ______
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604147 ###
+===== 库内序 145704 | PK 2604147 | 等级 L3 =====
+DATE: 1998-04-07T19:10:06+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: Summary: shopping for new video adapter
+摘要: Wilko Bulte：说 Mike 不是他但信息仍有趣 回复 Mike 对 summary 的引用
+
+As Mike Smith wrote...
+> > Wilko Bulte writes:
+
+  Not really me, but interesting info all the same.
+
+> > Interesting summary, as I may shortly be in the market to replace 
+> > my 2MB Mach32 card. Was surprised nobody quoted 
+> > /usr/ports/benchmarks/xengine results. It may not be much of a 
+> > benchmark but its something more than seat of the pants.
+> 
+> OK, people asked for it.  8)
+> 
+> > I get between 750 and 1000 (peak) RPM, usually in the 800's with a 2MB 
+> > PCI Mach32, 1024x768 16bpp with exmh also open. 64MB PPro-200/512k.
+
+[snip]
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+__________________________________________________ Powered by FreeBSD ______
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604148 ###
+===== 库内序 145705 | PK 2604148 | 等级 L3 =====
+DATE: 1998-04-07T22:18:16+00:00
+FROM: Tim Vanderhoek <ac199@hwcn.org>
+SUBJ: Re: pkg_add from FTP repositary
+摘要: Tim Vanderhoek：Konstantin 你试过没 pkg_add 本应根据原始 URL 自动抓依赖
+
+On Tue, 7 Apr 1998, Konstantin Chuguev wrote:
+
+> I'm using a URL as a parameter for pkg_add. But then I cannot
+> automatically install the packages which the first one depends on.
+> PKG_PATH is used only for local files. Of course, it is correct, because
+> searching files in FTP site is expensive.
+
+Have you actually tried this?  pkg_add(1) is supposed to be able
+to automatically fetch dependencies over FTP based on the
+original URL you pass it.  I think you need to have all of the
+packages in the same directory, though.
+
+
+--
+ tIM...HOEk
+OPTIMIZATION: the process of using many one-letter variables names
+              hoping that the resultant code will run faster.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604149 ###
+===== 库内序 145706 | PK 2604149 | 等级 L3 =====
+DATE: 1998-04-07T22:39:26+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Pax weirdness (bug?)
+摘要: Mike Smith：报 pax 恢复诡异现象 试把 /cdrom/info 目录经 zcat 喂给 pax -r -w -v
+
+
+Try this:
+
+% cat /cdrom/info/info.* | zcat | pax -r -w -v tmpdir
+
+Be quick with ^C.
+
+Any ideas?  Known bogon?  Fixes?  (Nothing intuitive, anyway.)
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604151 ###
+===== 库内序 145708 | PK 2604151 | 等级 L3 =====
+DATE: 1998-04-07T23:10:13+00:00
+FROM: Chris Radek <cradek@in221.inetnebr.com>
+SUBJ: Accton EtherPocket device driver porting help
+摘要: Chris Radek：想把 Accton EtherPocket 并口网卡 Linux 驱动移植到 FreeBSD 求起步点与 WIP 指引
+
+
+Hello all!
+
+I am wanting to port the Linux driver for the Accton EtherPocket
+parallel port ethernet device to FreeBSD.  I am having trouble finding a
+starting point - the FreeBSD Device Driver Writer's Guide looks great
+for character devices, but is unhelpful (empty!) for network devices.
+
+So I have two questions:
+
+Is there work in progress for supporting this, or any other, parallel
+port ethernet device?
+
+If not, where does a person begin when porting a network driver?  I am
+not allergic to digging through existing code, but a summary of the
+necessary parts would be very helpful.  Perhaps something like Linux's
+skeleton.c?
+
+Thanks and regards,
+
+-Chris
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604152 ###
+===== 库内序 145709 | PK 2604152 | 等级 L3 =====
+DATE: 1998-04-07T23:21:36+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Summary: shopping for new video adapter 
+摘要: Amancio Hasty：他对讨论热度感到惊喜 想转到 comp.windows.x.i386unix 又忍住留在这里
+
+Actually, I am pleasantly surprised at the interest . 
+For a while, I was tempted to start redirecting the discussion
+to comp.windows.x.i386unix , then I said : "Nah , just keep
+quiet who knows a strong X or multimedia hacker may come out
+this discussion" 8)
+
+	Have Fun Guys and Yes enjoy your systems 8)
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

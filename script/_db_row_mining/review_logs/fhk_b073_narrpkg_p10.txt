@@ -1,0 +1,22 @@
+2602864|L4|nik@iii.co.uk：为 ftp.freebsd.org/pub/incoming/ 提出新政策提案，同步发到两个社区
+2602868|L3|Greg Fraize 换 ISP 后 ppp -auto 无法连接，/var/log/ppp.log 停在分配 IP 前
+2602869|L4|ken@mui.net：可能是 PPP login script 与新 ISP 的 login 名不匹配
+2602870|L3|Greg Fraize 确认 ISP 能连上登录，但不确定 buad rate 该设 115200 还是 33.6
+2602871|L4|Mashkovtsev, Yuri：115200 是 port speed，不用降到 33.6，注意 modem 之间的数据压缩
+2602877|L4|Niall Smart：sbabkin 提的 DNS 方案会让 DNS servers overload
+2602878|L4|Tom：Niall 提的两台 DNS 用共享内存方案，BIND 有 NOTIFY 也能实现类似效果
+2602879|L4|Justin T. Gibbs：SCB paging 上限 255 但当前 SCSI 这么高危险，建议试下一个 CAM snapshot
+2602880|L4|Karl Denninger：RAID 阵列上都是 NFS 文件服务器、News、认证库等高可用机器，且 -CURRENT 内核不稳
+2602882|L4|Niall Smart：反问 Karl Denninger 是否听过 Stratus Computer Corporation 这类高可用厂商
+2602886|L4|Ron G. Minnich：VM 有实现、VFS 交互(NFS)与架构三类问题，架构问题最困扰他，举例 NFS 后端 mmap 后 msync
+2602887|L4|Snob Art Genre：重启应该用 kill -INT 1 而不是 Leif Neland 说的 kill -KILL 1
+2602888|L4|Wilko Bulte：提议办第二届欧洲黑客聚会于荷兰 Arnhem，参考 Kuku Kukulies 的 Aachen party
+2602890|L4|Terry Lambert：DEC drives 关不了 write cache，Julian 会做一批硬件测试
+2602896|L3|sbabkin 问 Philips 26XX 与 HP 4020i/6020i 停产后 FreeBSD 支持哪些 CD writer，含 Sony SCSI
+2602897|L3|Andrew Maltsev 询问 FreeBSD 里 ATX 自动关机和锁定电源开关特性的实现，希望有指路资料
+2602898|L4|Justin T. Gibbs：WCArchive 也是不能宕的高可用机器，与 NFS 文件服务器、News、认证库同类
+2602899|L4|Minnich：3.0-SMP 下询问 msync 带与不带 MS_INVALIDATE 能否作两类请求传至 VFS 认为不能
+2602900|L3|Smith：ATX 自动关机与锁定开关特性目前无人实现建议用 APM 并注意 BIOS 设置
+2602902|L3|Hubbard：提议将 FreeBSD WorldCon 9 月 25 日阿姆斯特丹日程与荷兰黑客聚会合并
+2602903|L3|Lewis：检查 PPP 链路状态自己一直查 /var/spool/lock/LCK..cuaa? 文件存在但怀疑不够周全
+2602904|L4|Gibbs：DPT 驱动需要与 CAM 相同的软中断钩子无法赶在 2.2.6 发布前提交将在其切出后合并

@@ -1,0 +1,22 @@
+2602610|L3|Thomas David Rivers：fsck 与 CG 代码 bug 已排除，Dave Rivers panic 实为 IDE 线过长
+2602612|L3|Luigi Rizzo：建议改用 -stable 与 -current 中的新 pnp 代码，替代 Sujal 的旧 ISA_PNP
+2602614|L3|John-Mark Gurney 在 ISA_PNP 线程内就 Alexander Gnativ 报的 pnp.c 编译告警继续回复讨论
+2602616|L3|Studded：支持将 X11 ports 迁至 /usr/local/X11R6，理由是保持一致性与良好的设计
+2602617|L4|Gianmarco Giovannelli：2.2.5 没有 current 版本，应用 stable-supfile 取 2.2.5-STABLE
+2602618|L3|Jordan K. Hubbard：反对把 /usr/X11R6 改成 /usr/local/X11R6，担心引起大范围混乱
+2602620|L3|Chris Kukulies 询问 g77 相较 f2c 的差异，能否直接从 FreeBSD 2.2.5 软件包安装，运行时库依赖如何
+2602624|L3|Alex Povolotsky 询问 FreeBSD 上是否存在集群实现，希望获取补丁与白皮书等文档
+2602630|L3|Daniel J Blueman：安装 cvsup 包后运行时 libXaw.so.6.1 缺失，locate 也未查到
+2602631|L3|Amancio Hasty：脚本语言难维护，主张用 Java 或 C++ 等更灵活可扩展的方案做配置工具
+2602632|L4|Niall Smart：libXaw 是 X Window System 的一部分，未装 X 时需安装 X 或从网上下载 libXaw 包
+2602636|L3|Niall Smart：不同意 C++ 一定比 Java 快，脚本语言在该配置工具领域仍然有重要价值
+2602637|L3|Robert Withrow：老不等于不好，Java 并非脚本语言，脚本语言在该领域仍有其独特价值
+2602639|L3|Amancio Hasty：小站与小 ISP 场景下 C++ 与 Java 的性能差异并不显著
+2602644|L3|质疑 NFS 是否真无状态并怀疑 Sun 当初为何选择无状态网络设计
+2602645|L4|Alfred Perlstein:建议用非 GUI 版或静态编译版 cvsup 并附 FreeBSD 手册链接
+2602646|L4|Terry Lambert:指出文件共享无状态但文件锁定并非无状态
+2602647|L3|Terry Lambert:认为对方所运行的 Java 解释器应与自己不同
+2602648|L4|Robert Watson:引用 Sandberg 1985 论文论证 NFS 状态设计的合理性
+2602649|L3|计划与三人暑期做 FreeBSD GUI 管理系统采 C++ 服务端与 Java 客户端
+2602650|L4|Amancio Hasty:推荐考察 ACE 框架以配合 FreeBSD 即将到来的 elf 支持
+2602651|L3|Niall Smart:反驳以执行方式判定脚本语言的立场并指出 C 也经汇编被硬件解释

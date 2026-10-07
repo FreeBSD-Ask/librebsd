@@ -1,0 +1,709 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602905 ###
+===== 库内序 144463 | PK 2602905 | 等级 L3 =====
+DATE: 1998-03-06T00:18:56+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party
+摘要: Lehey：认为黑客聚会与 FreeBSD WorldCon 本是一回事不应表述为两个事件
+
+On Thu,  5 March 1998 at 15:59:35 -0800, Jordan K. Hubbard wrote:
+> Actually, a few of us here were also thinking about putting together a
+> "FreeBSD WorldCon" this year - the date would be September 25th and
+> the location would be Amsterdam, Holland.  Perhaps we should attempt
+> to merge the two events?
+
+Two events?  I count one.
+
+Greg
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602917 ###
+===== 库内序 144475 | PK 2602917 | 等级 L3 =====
+DATE: 1998-03-06T04:14:53+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: CD burners: recommendations?
+摘要: Lehey：询问 FreeBSD 下 CD 刻录机推荐及实战经验
+
+I'm considering getting a CD-ROM burner.  Can anybody offer
+recommendations, war stories or comments?
+
+Greg
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602918 ###
+===== 库内序 144476 | PK 2602918 | 等级 L3 =====
+DATE: 1998-03-06T04:17:13+00:00
+FROM: Daniel Berlin <root@danberlin.resnet.rochester.edu>
+SUBJ: Re: CD burners: recommendations?
+摘要: Berlin：推荐 Ricoh MP6200 光驱并自述在各主流系统均可正常工作
+
+MP6200s from Ricoh.
+I've gotten that thing to work on every OS known to man.
+And some known only to Aliens (IE Linux for the 3BX$#&@!*#&!@# (it's
+unpronouncable in your hoo-man languages))
+--DAn
+
+On Fri, 6 Mar 1998, Greg Lehey wrote:
+
+> I'm considering getting a CD-ROM burner.  Can anybody offer
+> recommendations, war stories or comments?
+> 
+> Greg
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602919 ###
+===== 库内序 144477 | PK 2602919 | 等级 L3 =====
+DATE: 1998-03-06T04:37:28+00:00
+FROM: Ustimenko Semen <semen@iclub.nsu.ru>
+SUBJ: Re: Are mbufs aligned or bounded on something? 
+摘要: Semen：认同 mbuf 数据区不跨页并追问需连续内存时用 contigmalloc 还是 malloc
+
+On Thu, 5 Mar 1998, Mike Smith wrote:
+
+> 
+> Ah.  You should look at the fxp driver to see how this is handled.  I 
+> suspect that you're actually safe to assume that the data area will not 
+> cross a page boundary, but you might want to check.
+> 
+
+I've suspected the same:) And it works. But it should be better
+to read this somewhere.
+
+By the way: if i need aligned memory, should i use contigmalloc(), or
+better to use malloc, and align block by hands?
+ 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602920 ###
+===== 库内序 144478 | PK 2602920 | 等级 L3 =====
+DATE: 1998-03-05T23:24:40+00:00
+FROM: David Kelly <dkelly@hiwaay.net>
+SUBJ: Re: Uncle Sam, got a million bucks? 
+摘要: Kelly：建议以免费安全 Windows 替代品定位争取美国政府资助但需同时替代 Word 与 Excel
+
+Amancio Hasty writes:
+> 
+> Wandering , if we can get a grant from the goverment to support the SMP
+> project or to support FreeBSD ?
+
+I think you'd stand a better chance with the US Gov if you sold your 
+pitch as a free and secure replacement for Windows. NT "security" was 
+pitched hard and only now is the true situation being realized.
+
+Problem is to replace Windows you would also have to replace Word and 
+Excel. These days government computers are essentially Microsoft Office 
+platforms, and Microsoft Office is essentially the OS.
+
+--
+David Kelly N4HHE, dkelly@nospam.hiwaay.net
+=====================================================================
+The human mind ordinarily operates at only ten percent of its
+capacity -- the rest is overhead for the operating system.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602922 ###
+===== 库内序 144480 | PK 2602922 | 等级 L3 =====
+DATE: 1998-03-06T06:36:53+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Uncle Sam, got a million bucks? 
+摘要: Smith：推荐 WordPerfect 作为 FreeBSD 上的字处理器称其品质出色
+
+> 
+> Hmm, thre are products, now available such as Applix and StarOffice for
+> some unix platforms...maybe freebsd should be one of those /
+
+Actually, if what you want is a really nice wordprocessor, WordPerfect 
+(which runs on FreeBSD) is _very_ nice.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602923 ###
+===== 库内序 144481 | PK 2602923 | 等级 L4 =====
+DATE: 1998-03-06T06:49:49+00:00
+FROM: Joao Carlos Mendes Luis <jonny@coppe.ufrj.br>
+SUBJ: Re (Solved) dump bug or file system problem ?
+摘要: Jonny：自答根因是主板故障频繁 panic 致 /usr/bin/ranlib 显示 1125899906859008 字节畸形尺寸
+
+Answering myself, I think I found the problem.  I had a bad hardware for
+some time (motherboard), and the system was frequently panicing.  I have
+even once to remove an inode manually (clri), for fsck could not fix
+the file system.  Now I found this:
+
+gaia::jonny [521] ls -lisa /usr/bin/ranlib 
+8050 16 -r-xr-xr-x  1 bin  bin  1125899906859008 Feb 16 16:58 /usr/bin/ranlib
+
+I am really amazed that ls could even list a file with this size.  :)
+But dump could not, and gave me that negative numbers.  (Should we have
+a 64 bit aware dump now ?  :) ).
+
+#define quoting(jonny)
+// Hi,
+// 
+//   I've sent this to -questions (and got no answer), but after reading
+// the sources of dump, I think it's more a -hackers question.
+// 
+//   I'm right now trying to make a dump of my file system, but it seems
+// to never end (dumping to /dev/null to make sure it's not a tape
+// problem):
+// 
+// gaia::jonny [503] dump 0fa /dev/null /usr
+//   DUMP: Date of this level 0 dump: Wed Mar  4 13:57:54 1998
+//   DUMP: Date of last level 0 dump: the epoch
+//   DUMP: Dumping /dev/rsd0f (/usr) to /dev/null
+//   DUMP: mapping (Pass I) [regular files]
+//   DUMP: mapping (Pass II) [directories]
+//   DUMP: estimated 1545215 tape blocks.
+//   DUMP: dumping (Pass III) [directories]
+//   DUMP: 27.30% done, finished in 0:13
+//   DUMP: 57.87% done, finished in 0:07
+//   DUMP: 88.27% done, finished in 0:01
+//   DUMP: 119.27% done, finished in 0:-3
+//   DUMP: 148.05% done, finished in 0:-8
+//   DUMP: 176.90% done, finished in 0:-13
+//   DUMP: 208.32% done, finished in 0:-18
+//   DUMP: 240.57% done, finished in 0:-23
+//   DUMP: 270.01% done, finished in 0:-28
+//   DUMP: 300.63% done, finished in 0:-33
+//   DUMP: 332.25% done, finished in 0:-38
+//   DUMP: 363.33% done, finished in 0:-43
+//   DUMP: 393.50% done, finished in 0:-48
+//   DUMP: 418.82% done, finished in 0:-53
+//   DUMP: 445.49% done, finished in 0:-58
+//   DUMP: 473.04% done, finished in -1:-3
+//   DUMP: 502.15% done, finished in -1:-8
+//   DUMP: 530.49% done, finished in -1:-13
+//   DUMP: 558.39% done, finished in -1:-17
+//   (and continues...)
+// 
+
+[…中段省略 920 字符…]  290-4698				jonny@coppe.ufrj.br
+// Universidade Federal do Rio de Janeiro	UFRJ/COPPE/CISI
+// PGP fingerprint: 29 C0 50 B9 B6 3E 58 F2  83 5F E3 26 BF 0F EA 67
+// 
+
+
+					Jonny
+
+--
+Joao Carlos Mendes Luis			jonny@gta.ufrj.br
++55 21 290-4698				jonny@coppe.ufrj.br
+Universidade Federal do Rio de Janeiro	UFRJ/COPPE/CISI
+PGP fingerprint: 29 C0 50 B9 B6 3E 58 F2  83 5F E3 26 BF 0F EA 67
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602924 ###
+===== 库内序 144482 | PK 2602924 | 等级 L4 =====
+DATE: 1998-03-06T06:54:13+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Are mbufs aligned or bounded on something? 
+摘要: Greenman：malloc 返回内存保证按 2 的幂对齐且小于等于一页时不跨页需物理连续则用 contigmalloc
+
+>By the way: if i need aligned memory, should i use contigmalloc(), or
+>better to use malloc, and align block by hands?
+
+   All memory returned by malloc() is guaranteed to be power of two aligned
+and won't span a page boundry if <= a page in size; there are many places in
+the kernel that rely on this.
+   If you need a large chunk of memory that must be physically contiguous,
+then use contigmalloc().
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602926 ###
+===== 库内序 144484 | PK 2602926 | 等级 L3 =====
+DATE: 1998-03-06T07:09:06+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party
+摘要: Bulte：指出 Amsterdam 与 Arnhem 并非同一座城市反对把两个活动当作一场的表述
+
+As Jordan K. Hubbard wrote...
+> Uh, what?
+
+Like in Amsterdam != Arnhem ...
+
+> > On Thu,  5 March 1998 at 15:59:35 -0800, Jordan K. Hubbard wrote:
+> > > Actually, a few of us here were also thinking about putting together a
+> > > "FreeBSD WorldCon" this year - the date would be September 25th and
+> > > the location would be Amsterdam, Holland.  Perhaps we should attempt
+> > > to merge the two events?
+> > 
+> > Two events?  I count one.
+> > 
+> > Greg
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte email: wilko @ yedi.iaf.nl http://www.tcja.nl/~wilko
+ |/|/ / / /( (_) Arnhem, The Netherlands - Do, or do not. There is no 'try'
+---------------  Support your local daemons: run [Free,Net,Open]BSD Unix  --
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602927 ###
+===== 库内序 144485 | PK 2602927 | 等级 L3 =====
+DATE: 1998-03-06T07:15:44+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party
+摘要: Robert：赞成合并两活动的提议并询问是否有同行会参加六月 New Orleans 会议
+
+According to Jordan K. Hubbard:
+> Actually, a few of us here were also thinking about putting together a
+> "FreeBSD WorldCon" this year - the date would be September 25th and
+> the location would be Amsterdam, Holland.  Perhaps we should attempt
+> to merge the two events?
+
+That would be great. While we're on the subject of meeting together, Anyone 
+going to the New Orleans Conference in June ? I plan to go there... (I just
+can't miss a FREENIX-labelled conference while having a .freenix.fr address 
+:-))
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #0: Sun Mar  1 18:50:39 CET 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602929 ###
+===== 库内序 144487 | PK 2602929 | 等级 L3 =====
+DATE: 1998-03-06T07:25:27+00:00
+FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG>
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party 
+摘要: Hubbard：New Orleans 会议今年 FreeBSD 核心团队到场人数将比以往任何一次单地聚会都多
+
+> That would be great. While we're on the subject of meeting together, Anyone 
+> going to the New Orleans Conference in June ? I plan to go there... (I just
+
+Quite a few of us are going.  In fact, I think that there will be more
+core team members in New Orleans this year than have ever gotten
+together in one place. :)
+
+						Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602932 ###
+===== 库内序 144490 | PK 2602932 | 等级 L3 =====
+DATE: 1998-03-06T07:59:03+00:00
+FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG>
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party 
+摘要: Hubbard：强调两活动本非一事而是建议因地点相近合并举办以免一月内往返阿纳姆与阿姆斯特丹
+
+> I think you need to make it clear that the hacker party and the
+> "FreeBSD WorldCon" are not the same thing.  With the supplied
+> documentation, that wasn't obvious.
+
+Erm, they were never the same thing - who said they were?  What I was
+trying to suggest here was the possibility of merging the two events
+into one since the locales are already rather close and it seems silly
+to go do Arnhem one month and then return to Amsterdamn on another
+month. :-)
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602933 ###
+===== 库内序 144491 | PK 2602933 | 等级 L3 =====
+DATE: 1998-03-06T08:40:38+00:00
+FROM: lada@ws2301.gud.siemens.at (marino.ladavac@siemens.at)
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party
+摘要: Marino：询问 FreeBSD 是否会在即将举行的 CeBIT 设展位并出售 FreeBSD CDROM
+
+BTW, any chance that FreeBSD will have its booth at the upcoming CeBIT?
+If so, where, and will you have FreeBSD CR-ROMs for sale?
+
+Thanks,
+/Marino
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602935 ###
+===== 库内序 144493 | PK 2602935 | 等级 L3 =====
+DATE: 1998-03-06T12:48:15+00:00
+FROM: Frank Ederveen <frank@our.domaintje.com>
+SUBJ: Re: RFC: Polling for interest on 2nd European (Dutch) hacker party 
+摘要: Ederveen：建议 FreeBSD 增加 CeBIT 会议企业赞助以应对 CDROM 销售受限问题
+
+
+Mr. Jordan wrote:
+  >We stopped going to CeBIT when the organizers forbade us from selling
+  >CDROMs, something which used to basically pay for going to the show.
+
+This might be a difficult issue, but did you consider getting more sponsorship
+from companies yet? I looked at the website and there aren't too many sponsors
+listed. Not as many as I would expect atleast.
+
+I have talked to some people here about making a small budget for sponsoring 
+of 'free' projects which we find very usefull like FreeBSD, Squid, Diablo, 
+Apache, etc. and I don't think it would be impossible.
+
+There must be plenty of other happy users who might be willing to chip in a 
+bit. Escpecially if that would improve support for things like SMP and RAID; 
+things needed for larger machines. Of course how to spend the money would be 
+up to you people. There was some discussion earlier about getting someone to
+do the less fun bits for which it's hard to find volunteers?
+
+Just a thought,
+
+FrankE
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602938 ###
+===== 库内序 144496 | PK 2602938 | 等级 L4 =====
+DATE: 1998-03-06T10:43:27+00:00
+FROM: Didier Derny <didier@omnix.net>
+SUBJ: Re: CD burners: recommendations?
+摘要: Derny：购 Yamaha CRW4260t 但 FreeBSD 附带软件不可用自写程序仍存尾端问题致 Win95 拒读
+
+On Fri, 6 Mar 1998, Greg Lehey wrote:
+
+I bought a Yamaha CRW4260t recently, I've not been able to use it
+with the software I found on the FreeBSD cdrom but I'm writing
+a program to write a single track.
+
+(actually, it write the tracks but there is a problem a the end
+FreeBSD can mount and use the cd produced but Win95 Refuse it.
+this problem should be fixed in a few days)
+
+
+I like the CRW4260 for:
+
+2Mb of memory 
+it's using the MMC command 
+6X read, 4X write CDR, 2X write CDE
+
+> 
+> I'm considering getting a CD-ROM burner.  Can anybody offer
+> recommendations, war stories or comments?
+> 
+> Greg
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+--
+Didier Derny
+didier@omnix.net
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602939 ###
+===== 库内序 144497 | PK 2602939 | 等级 L3 =====
+DATE: 1998-03-06T13:56:13+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: CD burners: recommendations?
+摘要: Babkin：追问 Ricoh MP6200 刻录机在 FreeBSD 上实现难度几何
+
+> ----------
+> From: 	Daniel Berlin[SMTP:root@danberlin.resnet.rochester.edu]
+> 
+> MP6200s from Ricoh.
+> I've gotten that thing to work on every OS known to man.
+> And some known only to Aliens (IE Linux for the 3BX$#&@!*#&!@# (it's
+> unpronouncable in your hoo-man languages))
+> 
+How difficult is to make it work with FreeBSD ?
+
+-SB
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602941 ###
+===== 库内序 144499 | PK 2602941 | 等级 L3 =====
+DATE: 1998-03-06T14:34:41+00:00
+FROM: "Daniel M. Eischen" <deischen@iworks.InterWorks.org>
+SUBJ: RE: CD burners: recommendations?
+摘要: Eischen：无法从 Ricoh 取得 MP6200 的 SCSI 规格因对方要求签署保密协议
+
+> > MP6200s from Ricoh.
+> > I've gotten that thing to work on every OS known to man.
+> > And some known only to Aliens (IE Linux for the 3BX$#&@!*#&!@# (it's
+> > unpronouncable in your hoo-man languages))
+>
+> How difficult is to make it work with FreeBSD ?
+
+FYI, I was unable to get the SCSI specs for that CD-ROM
+from Ricoh.  They wanted me to sign an NDA.
+
+Although, if there is Linux support for it, someone must
+have figured out how to use it.
+
+Dan Eischen
+deischen@iworks.InterWorks.org
+
+(Who owns an HP SureStore 6020 which works fine with FreeBSD :)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602942 ###
+===== 库内序 144500 | PK 2602942 | 等级 L3 =====
+DATE: 1998-03-06T16:33:20+00:00
+FROM: Daniel Berlin <root@danberlin.resnet.rochester.edu>
+SUBJ: RE: CD burners: recommendations?
+摘要: Berlin：建议向 OEM 厂商索取规格或利用 cdwrite 基于 SCSI 3 MMC 通用驱动无需专用规格文档
+
+On Fri, 6 Mar 1998, Daniel M. Eischen wrote:
+Well, here's the trick.
+Either
+A. Get them from a company that OEM's the drive and releases it
+themselves. Sometimes they are dumb enough not to make you sign NDA's
+B. Why do you need the specs to write code for it? I can get you the
+programming info you need if need be, but doesn't cdwrite use the scsi 3
+mmc generic driver?
+
+ > 
+> FYI, I was unable to get the SCSI specs for that CD-ROM
+> from Ricoh.  They wanted me to sign an NDA.
+> 
+> Although, if there is Linux support for it, someone must
+> have figured out how to use it.
+> 
+> Dan Eischen
+> deischen@iworks.InterWorks.org
+> 
+> (Who owns an HP SureStore 6020 which works fine with FreeBSD :)
+> 
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602944 ###
+===== 库内序 144502 | PK 2602944 | 等级 L4 =====
+DATE: 1998-03-06T18:02:52+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Shapiro：反驳 Marino 认为 ISP 断电即失效的说法称大型 ISP 已采用 48VDC 并集中部署于 NAP 交换中心
+
+
+On 06-Mar-98 marino.ladavac@siemens.at wrote:
+ 
+...
+
+> Honestly, don't you think you're overdoing it a bit here.  I mean, we're
+> still talking ISP, right?  If the power goes, your modems are dead as
+> well.
+
+Nope.  There are ISPs and there are ISPs.  All the larger ones I visit are
+taking their availability very seriously.  Many are already on 48VDC.  Many
+co-locate equipment in NAPs and switching centers, which comply with Telco
+standards.
+
+Consifer a small ISP with, say 5,000 accounts which loses power during ruch
+hour.  Can you count the number of support calls?
+Consider a web server with 2,000 virtual servers.  Many used for OLTP, thus
+directly generating revenue.  If I had my business run on such a server, I
+sure would demand it is imunne to power glitches.
+
+I found FreeBSD being seriously deployed,  or considered for deployment
+serving 5,000 accounts and up.  All the way to 200,000 account (takes more
+than 1 FreeBSD machine to do that :-).
+
+> And if you want to UPS that, you're using motor-generator pairs with
+> Diesel
+> backup and don't really care about batteries (a 30 year old Diesel still 
+> kicks in within a second and if your power supply cannot stand a few
+> second
+> intermittent failure then you have some seriously underdimensioned power
+> supplies).
+
+Wrong again.  Diesel generators have a 15-180 seconds switch over time. 
+You use the diesels to feed the battery chargers.  The battery packs are
+impressive.  If you are in the Portland Oregon area, call me and I'll take
+you to a small switching center. Fascinating to see.
+
+There ARE many ISPs who are still hacking it.  A lump of PCs, SPARCS, and
+whathaveyou on picnic tables and Sportster modems stacked on each other
+(Hey, I ran my local ISP service that way :-), etc.  But they will either
+change or disappear as the role Internet plays in our life.  Internet, in
+this context is an alias to a TCP/IP network, public, private, or otherwise.
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602945 ###
+===== 库内序 144503 | PK 2602945 | 等级 L3 =====
+DATE: 1998-03-06T17:49:34+00:00
+FROM: "Gregory D. Moncreaff" <moncrg@bt340707.res.ray.com>
+SUBJ: FW: ISO/OSI stack support on FreeBSD
+摘要: Moncreaff：建议从 CVS 取 ISO OSI 相关代码或参考 OpenBSD 因 FreeBSD 封存后其代码经清理
+
+you could probably get it from cvs...
+you might also want to look at net/open bsd as there code
+went through some cleanup after the freebsd code was
+attic'd
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602946 ###
+===== 库内序 144504 | PK 2602946 | 等级 L3 =====
+DATE: 1998-03-06T19:24:56+00:00
+FROM: "Daniel M. Eischen" <deischen@iworks.InterWorks.org>
+SUBJ: RE: CD burners: recommendations?
+摘要: Eischen：追问 Ricoh MP6200 规格获取线索并说明想支持 wormcontrol(8) 需修改 worm 驱动
+
+> Well, here's the trick.
+> Either
+> A. Get them from a company that OEM's the drive and releases it
+> themselves. Sometimes they are dumb enough not to make you sign NDA's
+
+Got any pointers?
+
+> B. Why do you need the specs to write code for it? I can get you the
+> programming info you need if need be, but doesn't cdwrite use the scsi 3
+> mmc generic driver?
+
+I wanted to be able to use wormcontrol(8).  That would mean adding the
+necesary code to the worm driver.
+
+Dan Eischen
+deischen@iworks.InterWorks.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602947 ###
+===== 库内序 144505 | PK 2602947 | 等级 L3 =====
+DATE: 1998-03-06T19:46:19+00:00
+FROM: Daniel Berlin <root@danberlin.resnet.rochester.edu>
+SUBJ: RE: CD burners: recommendations?
+摘要: Berlin：推荐 ftp.fokus.gmd.de 上 cdrecord alpha 版配合 README.xxxBSD 使用
+
+
+
+On Fri, 6 Mar 1998, Daniel M. Eischen wrote:
+
+> > Well, here's the trick.
+> > Either
+> > A. Get them from a company that OEM's the drive and releases it
+> > themselves. Sometimes they are dumb enough not to make you sign NDA's
+> 
+> Got any pointers?
+here's a great one
+ftp.fokus.gmd.de/pub/unix/cdrecord/alpha
+yes
+get the latest alpha, also read the README.xxxBSD file
+and you should be able to get what you want.
+
+> 
+> > B. Why do you need the specs to write code for it? I can get you the
+> > programming info you need if need be, but doesn't cdwrite use the scsi 3
+> > mmc generic driver?
+> 
+> I wanted to be able to use wormcontrol(8).  That would mean adding the
+> necesary code to the worm driver.
+> 
+> Dan Eischen
+> deischen@iworks.InterWorks.org
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

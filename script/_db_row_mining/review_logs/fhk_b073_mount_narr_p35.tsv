@@ -1,0 +1,21 @@
+2603792	885	tony 自述启动时把系统磕碰了一寸导致挂起 重启后 NCR 控制器报 MEDIUM 错误 那块 1GB Seagate Hawk ST31051N 上 dd fsck newfs 全用不上 挂到 Sparc 跑表面扫描后首块被 spare 出 询问能否恢复文件系统
+2603793	885	jmb 回 James E. Housley 建议交上下文 diff 指出 RBL 检查在 2.2.6 与 current 里已从 check_relay 挪到 check_mail 里比对 client_addr 版本升到 1.6 顺手提了用 IP 白名单避免本地邮件拨号上网
+2603794	885	kris 回应 John Hay 说只支持以太网 II 帧这事其实不算坏事，Beame 与 Whiteside 这类用 IPX ODI 驱动跑 TCP/IP 的堆栈本身就要 Ethernet_II，他也回忆用 IPX 搬数据时曾在 tcpdump 里看到过输出
+2603795	885	imp 已把旧 NCD 键盘的扫描码适配到 X 和 syscons 在 Libretto 上验证通过 但 BIOS 下功能键映射与标准 PC 键盘不一致 另有两个键作前缀改变其他键含义 需在 syscons.c 翻译表里低层修补 加虚拟键盘更难
+2603798	885	roelof 装 FreeBSD 后 pccardd 认不出 Accton EN2216 报 No card in database 换其他网卡与调 rc.conf pccard.conf 均无果 怀疑 Cirrus Logic PD672X 控制器
+2603800	885	housley 附 sendmail.cf.additions 的上下文 diff 说这条规则类似 denyip 但用文件列表存 IP 白名单 用来避免本地邮件为核对 RBL 而拨号上网 基于 src-2.2.0671.gz 版本
+2603802	885	jakob 询问手里的 Epson Stylus Color 300 打印机能否在 FreeBSD 下使用，如果能的话求具体配置办法，并说明回复请直接发给他个人
+2603803	885	rminnich 说在 extreme linux conference 上摆下的挑战是从用户态系统调用指令到线上首位比特 10 微秒 UNET 已经做到 走 TCP 更合意 直接拼成快速 TCP 就跳过了 nfs-over-udp 的坑 RP3 项目补丢包检查的做法可参考
+2603804	885	cshenton 报告在 2.2.6-STABLE 上构建 Perl5.004.04 时 DB_File.xs 反复报 recno_t undeclared 源码里搜不到该类型定义 怀疑是 ports 问题或自己遗留的老版本残渣 求判断
+2603807	885	rminnich 建议量首包上线路径延时最好拿示波器或逻辑分析仪接在以太网上 同时需一个可 mmap 的设备 把设备映射进来让程序往设备内存写入再调用 send 系统调用 观察位流出现量时间差 他提醒这套搭起来有点费事但值得试
+2603808	885	rminnich 转述 Van Jacobson 曾把 TCP 接收侧快路径压到大约 30 条指令 这说法自 1990 年前后就开始流传 可至今没谁真正见到过代码 现在提起这个数人们普遍不信 他觉得挺遗憾
+2603809	885	tom 提醒 Chris Shenton 说那个未定义的 recno_t 其实就定义在 /usr/include/db.h 里，并不是他手上那份源码自己带的
+2603811	885	luigi 回 10 微秒挑战指标 说 P5-100 在百兆网上一来一回 ping 大约 200 微秒 无特殊优化的单向上行也该少于 100 微秒 差距不算太远 又问 UNET 到底是什么 认为去掉拥塞控制这类对特定场景没用的功能能压掉一些 TCP 冗余
+2603813	885	cshenton 报告这个 port 的首个报错出在已 include 了 db.h 的 DB_File.xs，他手动把 typedef u_int32_t recno_t 插进 xs 才让代码编译通过，但仍担心是 CC 处理 .h 头文件 typedef 出了问题
+2603814	885	tom 认为更像构建环境有问题而不是 cc 出问题 因为 perl5 已在 2.2.6 系统上打包装过一遍 他怀疑是同时存在多个 db.h 之类的情况 请对方先检查构建环境
+2603815	885	ron 问内核脚手架部分是否已并入任何现有内核 他已拿到代码 现在想弄清围着代码的这些脚手架部分有没有被整合到某个当前在用的内核里
+2603817	885	viren 问在 2.2.6 下如何做一张含非支持驱动的 boot.flp 他已有打过补丁的 /sys 树用来生成内核 想知道能否只单独制作 floppy 以及 KERNELS?=GENERIC 那行是否意味 boot.floppy 会取 GENERIC
+2603818	885	paul 修了 StringDefs.h 里 XmNlist 的 define 让 mozilla 编译通过 起因是 ComboBox.c 第 272 行找不到该符号 原定义只在 XmVersion 小于 2000 时成立 而 X11R6 motif 2.0 不满足
+2603820	885	Jordan K. Hubbard 转发 Ton Roosendaal 的 Blender 消息 说 Linux 与 FreeBSD 版 Beta 定于 4 月 15 日发布 官方版在其后 4 至 6 周跟进 他感叹还得等到 4 月 15 日才拿到 Beta
+2603821	885	jfieber 回 Paul Saab 时把定位并修好那个退出时挂死且持续吃满 CPU 的问题列为 mozilla 的首个待办任务
+2603823	885	jb 回 John Fieber 时提议用公共 cvs 协作维护 mozilla 源码 让此类修复能被共享 而非各自本地打补丁

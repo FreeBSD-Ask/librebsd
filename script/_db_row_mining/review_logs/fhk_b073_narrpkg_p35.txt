@@ -1,0 +1,21 @@
+2603792|L3|求助恢复被磕碰后挂起的 1GB Seagate Hawk ST31051N 磁盘 NCR 控制器报 MEDIUM 错误且无法 dd 或 fsck
+2603793|L4|Jonathan M. Bresler 指出 RBL 检查在 2.2.6 与 current 里已从 check_relay 迁至 check_mail
+2603794|L3|Kris Kirby 认为只用 Ethernet_II 并非坏事
+2603795|L3|Warner Losh 已找出 NCD 键盘扫描码适配 X 与 syscons 但 BIOS 下功能键映射不一致询问是否值得加入
+2603798|L3|求助 PCMCIA 网卡问题配置 Acer Extensa 355 搭配 Cirrus Logic PD672X 控制器
+2603800|L4|James E. Housley 附 sendmail.cf.additions 上下文 diff 类似 denyip 但允许 IP 白名单以防本地邮件拨号上网
+2603802|L3|询问 Epson Stylus Color 300 打印机是否可在 FreeBSD 下使用以及如何配置
+2603803|L4|Ron G. Minnich 给 extreme linux conference 的 10 微秒挑战是从用户态系统调用指令到线上首位比特
+2603804|L3|Chris Shenton 报告 Perl5.004.04 构建时类型 recno_t 未定义
+2603807|L4|Ron G. Minnich 建议用示波器或逻辑分析仪配合可 mmap 设备与 send 调用测得首包上线路径延时
+2603808|L4|Ron G. Minnich 转述 Van Jacobson 已将 TCP 接收快路径做到约 30 条指令称此说自 1990 年流传但无人见过代码
+2603809|L4|Tom 指出未定义类型 recno_t 定义在 /usr/include/db.h
+2603811|L4|Luigi Rizzo：在 extreme linux conference 提出从用户态 system call 到线上首比特 10 微秒的挑战指标
+2603813|L4|Chris Shenton：recno_t 定义在 /usr/include/db.h 中故该 Perl5.004.04 port 存在构建故障
+2603814|L4|Tom：判断为构建环境故障而非 cc 问题并指出可能同时存在多个 db.h
+2603815|L3|Ron：问内核脚手架部分是否已并入任何现有内核
+2603817|L3|Viren Shah：问如何在 FreeBSD 2.2.6 制作含非支持驱动的 boot.flp
+2603818|L4|Paul Saab：修复 StringDefs.h 中 XmNlist 的 define 让 mozilla 编译通过
+2603820|L3|Jordan K. Hubbard：转发 Blender 新闻并感叹 Beta 需等到 4 月 15 日
+2603821|L3|John Fieber：把 mozilla 首个待办任务定为定位并修复退出时挂死烧 CPU 的问题
+2603823|L3|John Birrell：问是否有人计划用公共 CVS 维护 mozilla 源码以便共享修复

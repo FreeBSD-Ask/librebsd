@@ -1,0 +1,21 @@
+2604241|L4|Ulf Zimmermann 提醒还要考虑 Best MX is local 这个因素
+2604242|L4|Jordan K. Hubbard 转述 Eric Raymond 说 BSD 家族因太多且不愿涉政治而被排除于 summit
+2604248|L3|David E. Cross 询问 FreeBSD 内核级线程处于什么状态 是稳定 当前 还是空中楼阁
+2604251|L4|John Birrell 说明稳定版因需大量 VM 工作不可能 当前是停滞中的进行中 他负责用户态端内核端待补
+2604260|L4|Charles Owens 感谢 Terry Lambert 放出 LDAP 补丁
+2604261|L4|Dan Janowski 认为这场争论两大议题是市场存在感与成熟度 Linux 优势在于被当成互联网长出的时髦事物
+2604262|L3|Amancio Hasty 询问 FreeBSD Mozilla CVS 服务器位置催促当晚把服务上线
+2604263|L4|Dan Janowski 提议开展 FreeBSD 用户普查 放到网站 FTP 横幅与 CDROM 上
+2604264|L4|Mark Mayo 认为时间紧迫 尽快发出 FreeBSD 为 Mozilla.org 提供全球镜像与源码修订架构的报道
+2604266|L4|Paul Saab 表示原先以为 Jordan 已把 Mozilla CVS 服务器放在 bento.cdrom.com 所以没再搭
+2604267|L4|John Fieber 认同 Dyson 所说 FreeBSD 用户更偏爱使用而非传教 自己 1993 年就选了 386BSD 弃 Amiga 转平台
+2604270|L4|Brett Glass 反驳 Hubbard 所述 BSD 内部相互排斥是无稽之谈 各 BSD 派系彼此关系远比 Artistic License 之争融洽
+2604271|L4|Brett Glass：指出 ORA 偏向 Linux 而非 BSD 根本原因是市场规模更大即万能美元
+2604272|L3|John Fieber：回复 Dan Janowski 的普查提议称结果统计效力几乎为零自己做过一次随机抽样
+2604273|L3|Adam Furman 报告机器夜间重启后运行不超1小时就挂起越来越频繁请求判断是否为内核错误
+2604275|L3|John S. Dyso 解释 Borg nano-probe 意指在 Borg 血里流动的微型赛博格实体
+2604276|L4|Amancio Hasty 建议发布 Qt 编译的 Mozilla 二进制版让无 motif 库用户免下10MB包并追问 FreeBSD CVS 服务器公告
+2604277|L3|John Kenagy 强调营销至上一切皆需营销产品再好也会被大营销机器碾压 FreeBSD 若营销得当可成银弹
+2604278|L4|Tim Vanderhoek 建议向本地公共图书馆批量捐 FreeBSD 光盘以提升可见度无需组织化攻势
+2604280|L4|Greg Lehey：否认万能美元是唯一原因称 ORA 也出版书籍 Linux 市场规模更大才是关键
+2604282|L3|Open Systems Networking 支持立即向新闻门户与新闻网站发送 FreeBSD 与 Mozilla CVS 关联 PR

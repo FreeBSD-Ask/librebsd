@@ -1,0 +1,854 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603730 ###
+===== 库内序 145288 | PK 2603730 | 等级 L3 =====
+DATE: 1998-03-28T04:50:30+00:00
+FROM: 0000-Administrator <root@core.acroal.com>
+SUBJ: Permissions on /root
+摘要: 有人在两台机器上被脚本把 root 目录权限从 0700 改成 0755
+
+
+It seems that some script it changing my permissions on /root from 0700
+(which is what I want them to be) to 0755.  This is starting to really
+annoy me because it happens on two machines I have.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603731 ###
+===== 库内序 145289 | PK 2603731 | 等级 L4 =====
+DATE: 1998-03-28T07:17:37+00:00
+FROM: John-Mark Gurney <gurney_j@efn.org>
+SUBJ: Re: modem settings using chat
+摘要: John-Mark Gurney：chat 用 expect send 对 AT s0=1 应该写成空格加 ATs0=1
+
+Malcolm Newton scribbled this message on Mar 27:
+> I need to have a cron job ensure that the modem is set to s0=1 (Auto Answer)
+> for an uucp dialup connection. Once in a while the modem loses the setting
+> and
+> then (obviously won't answer)
+> I am trying
+> chat  -f chat.script </dev/cuaa1 >/dev/cuaa1
+> with chat script set to
+> AT s0=1
+
+might try changing it to:
+"" ATs0=1
+
+chat uses an expect/send pair... first it expects "" which is nothing..
+then it sends ATS0=1...  
+
+> and it doesn't seem to work
+> 
+> any one got any ideas (preferably better ones that work! )
+
+you should probably also try to lock the modem using a uucp lock file
+so that you don't inject ATS0=1 while there is a uucp transfer in
+progress...
+
+I've never worked with uucp, so don't ask for help from me on that end
+of things...
+
+-- 
+  John-Mark Gurney                      Modem Rev/FAX: +1 541 346 9237
+  Cu Networking					  P.O. Box 5693, 97405
+
+  Live in Peace, destroy Micro$oft, support free software, run FreeBSD
+	    Don't trust anyone you don't have the source for
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603732 ###
+===== 库内序 145290 | PK 2603732 | 等级 L4 =====
+DATE: 1998-03-28T10:57:46+00:00
+FROM: Dmitry Kohmanyuk <dk@dog.farm.org>
+SUBJ: Re: multi-port ethernet cards
+摘要: Dmitry Kohmanyuk：纠正域名应写 znyx 并使用 ZX-314 四端口网卡
+
+In article <199803231942.LAA21699@Gatekeeper.Alameda.net> you wrote:
+> > Does anyone know of any multi-port ethernet (10baseT) cards that
+> > are supported?
+> > Or that might easily become supported?
+> > 
+
+> http://www.zynx.com/
+
+correction here - www.znyx.com ...
+
+> I have the ZX-314 and works great with FreeBSD (4 port card). Adaptec/Cogent
+> makes one too, which is supported as far I know.
+
+I use ZX314 too, and it works great.  This is the same card used in 
+NetApp NFS servers btw.  Here is a dmesg:
+
+Copyright (c) 1992-1997 FreeBSD Inc.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California.  All rights reserved.
+
+FreeBSD 2.2-STABLE #0: Thu Sep 18 18:19:29 PDT 1997
+CPU: Pentium (90.00-MHz 586-class CPU)
+  Origin = "GenuineIntel"  Id = 0x525  Stepping=5
+  Features=0x1bf<FPU,VME,DE,PSE,TSC,MSR,MCE,CX8>
+real memory  = 67108864 (65536K bytes)
+avail memory = 62492672 (61028K bytes)
+DEVFS: ready for devices
+Probing for devices on PCI bus 0:
+chip0 <Intel 82437FX PCI cache memory controller> rev 2 on pci0:0
+chip1 <Intel 82371FB PCI-ISA bridge> rev 2 on pci0:7:0
+chip2 <Intel 82371FB IDE interface> rev 2 on pci0:7:1
+chip3 <generic PCI bridge (vendor=1011 device=0021 subclass=4)> rev 1 on pci0:17
+vga0 <VGA-compatible display device> rev 83 int a irq 15 on pci0:18
+bt0 <Buslogic 946 SCSI host adapter> rev 0 int a irq 5 on pci0:19
+bt0: Bt946C/ 0-(32bit) bus
+bt0: reading board settings, busmastering, int=11
+bt0: version 4.25J, fast sync, parity, 32 mbxs, 32 ccbs
+bt0: targ 0 sync rate=10.00MB/s(100ns), offset=15
+bt0: Using Strict Round robin scheme
+bt0 waiting for scsi devices to settle
+(bt0:0:0): "MICROP 4110-09NB_Nov18F TN0F" type 0 fixed SCSI 2
+sd0(bt0:0:0): Direct-Access 1002MB (2053880 512 byte sectors)
+sd0(bt0:0:0): with 2428 cyls, 9 heads, and an average 93 sectors/track
+de0 <Digital 21140A Fast Ethernet> rev 32 int a irq 10 on pci0:20
+de0: DE500-AA 21140A [10-100Mb/s] pass 2.0
+de0: address 00:00:f8:03:a4:8f
+Probing for devices on PCI bus 1:
+de1 <Digital 21040 Ethernet> rev 36 int a irq 11 on pci1:4
+de1: ZNYX ZX314 21040 [10Mb/s] pass 2.
+[…中段省略 765 字符…] on isa
+lpt0: Interrupt-driven port
+lp0: TCP/IP capable interface
+psm0 not found at 0x60
+cy0 irq 9 maddr 0xd4000 msize 8192 on isa
+fdc0 at 0x3f0-0x3f7 irq 6 drq 2 on isa
+fdc0: NEC 72065B
+fd0: 1.44MB 3.5in
+bt: unit number (1) too high
+bt1 not found at 0x330
+npx0 on motherboard
+npx0: INT 16 interface
+DEVFS: ready to run
+IP packet filtering initialized, divert enabled, logging disabled
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603733 ###
+===== 库内序 145291 | PK 2603733 | 等级 L3 =====
+DATE: 1998-03-28T15:35:16+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Network throttle...
+摘要: Dan Janowski 想把一个接口限到 T1 带宽并询问高速线进入低速线时数据包去向
+
+I am looking for a way to create a lower bandwidth restriction on an
+interface. I have an ethernet interface that I want to restrict to a
+maximum
+of T1 throughput.
+
+1. Is there a way to do this (easy or kernel hacking)
+
+What happens, i.e. the mechanics, when there is a higher
+capacity link feeding into a lower capacity link. Where does all
+the data go? I know it is buffered to an extent, but that has limits.
+Do the packets get dropped? I seem to remember an ICMP type that
+indicates transmission of too much data and for the sender to cut back
+or something.
+
+All thanks,
+
+Dan
+
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603736 ###
+===== 库内序 145294 | PK 2603736 | 等级 L4 =====
+DATE: 1998-03-28T16:13:13+00:00
+FROM: Howard Goldstein <hgoldste@bbs.mpcs.com>
+SUBJ: Re: Network throttle...
+摘要: Howard Goldstein：用 ALTQ 就能限制接口带宽并给出参考页面
+
+danj wrote:
+ : 
+ : I am looking for a way to create a lower bandwidth restriction on an
+ : interface. I have an ethernet interface that I want to restrict to a
+ : maximum
+ : of T1 throughput.
+ : 
+ : 1. Is there a way to do this (easy or kernel hacking)
+
+Easy, yes.  ALTQ.  See http://www.csl.sony.co.jp/person/kjc/programs.html
+
+ : What happens, i.e. the mechanics, when there is a higher
+ : capacity link feeding into a lower capacity link. Where does all
+ : the data go? I know it is buffered to an extent, but that has limits.
+ : Do the packets get dropped? 
+
+Under ALTQ, after free space in the delay queue is exhausted, yes they
+are dropped.  
+
+ : I seem to remember an ICMP type that
+ : indicates transmission of too much data and for the sender to cut back
+ : or something.
+
+Not sure if source quenching is part of ALTQ...
+
+ : Triskelion Systems, Inc.
+
+I wager 50 quatloos you'll like it...
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603737 ###
+===== 库内序 145295 | PK 2603737 | 等级 L3 =====
+DATE: 1998-03-28T16:43:25+00:00
+FROM: dennis <dennis@etinc.com>
+SUBJ: Re: Network throttle...
+摘要: dennis 指自己公司有商用带宽限制产品 bwmgr
+
+At 10:35 AM 3/28/98 -0500, Dan Janowski wrote:
+>I am looking for a way to create a lower bandwidth restriction on an
+>interface. I have an ethernet interface that I want to restrict to a
+>maximum
+>of T1 throughput.
+>
+>1. Is there a way to do this (easy or kernel hacking)
+
+We have a commercial add-on product that does this
+
+http://www.etinc.com/bwmgr.htm
+
+>
+>What happens, i.e. the mechanics, when there is a higher
+>capacity link feeding into a lower capacity link. Where does all
+>the data go? I know it is buffered to an extent, but that has limits.
+>Do the packets get dropped? I seem to remember an ICMP type that
+>indicates transmission of too much data and for the sender to cut back
+>or something.
+
+Our product "simulates" the functioning of IP packets when they reach a 
+slower link. Data is only dumped when the hold time is greater that a 
+threshold (as TCP will retransmit anyway). In normal operation (ie without
+substantial overload like video feeds or flood pinging) TCP is self-throttling
+by "slowing the acks". Source quenching is not necessary, unreliable and
+generally creates a mess.
+
+You can limit the entire interface, limit individual hosts by IP address, 
+entire networks or limit data types (like cu-seeme traffic). 
+
+Dennis
+>
+>All thanks,
+>
+>Dan
+>
+>
+>--
+>danj@3skel.com
+>Dan Janowski
+>Triskelion Systems, Inc.
+>Bronx, NY
+>
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603739 ###
+===== 库内序 145297 | PK 2603739 | 等级 L4 =====
+DATE: 1998-03-28T17:24:46+00:00
+FROM: Christian Kuhtz <chk@eng.bellsouth.net>
+SUBJ: PPP install broken in 2.2.6?
+摘要: Christian Kuhtz：2.2.5 安装盘 PPP 安装正常 2.2.6 装到一半就 SetIpDevice 报错
+
+
+Errr.. 2.2.5-RELEASE boot.flp worked flawlessly over here when trying to install
+via PPP.. this is what happens under 2.2.6-RELEASE:
+
+ppp ON schizophrenia> Packet mode.
+PPP ON schizophrenia> Error: SetIpDevice: ioctl(SIOCAIFADDR): Destination address required
+Error: IPcpLayerUp: unable to set ip address
+
+Anyone have similiar experiences or knows a workaround?
+
+Cheers,
+Chris
+
+-- 
+Christian Kuhtz <chk@eng.bellsouth.net> (770) 522-4000            BellSouth.net
+                                                          Sr. Network Architect
+I speak only for myself, and my opinion belongs to me.        Atlanta, GA, U.S.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603740 ###
+===== 库内序 145298 | PK 2603740 | 等级 L3 =====
+DATE: 1998-03-28T16:20:18+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: UFS changes in 2.2.6 ?
+摘要: Luigi Rizzo 报告 2.2.6 上挂 wcd0c 返回 mount 命令失败
+
+Some time ago, just to see how it worked, I dumped the content of a
+ufs partition on a CD, and was then able to mount it using
+
+	mount /dev/wcd0c /mnt
+
+i.e. as an UFS file system. Things were not perfect since I could crash
+the machine relatively easily by doing  tar cvf /dev/null /mnt , but at
+least the disk was mounted.
+
+Today i was trying the same thing on a diskless 2.2.6, and the mount
+command replies "/dev/wcd0c on /mnt: Input/output error".
+
+What has changed to prevent the mount ? The disk is readable (using dd
+etc.).
+
+Being able to mount a cd as UFS partition is quite useful for doing
+backups, since you don't need the space (and the time) to create a
+temporary ISOFS image. With CDROM being cheap as they are, this is a
+real plus.
+
+	Cheers
+	Luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603741 ###
+===== 库内序 145299 | PK 2603741 | 等级 L3 =====
+DATE: 1998-03-28T18:07:45+00:00
+FROM: Jacques Vidrine <n@nectar.com>
+SUBJ: jaz / adaptec 2930 woes
+摘要: Jacques Vidrine 反映 Jaz 加 Adaptec 2930 在 current 上很 flakey 磁头停转后全报 I/O 错
+
+
+Hi Folks,
+
+I've been having a heck of a time using an Iomega Jaz drive and an
+Adaptec 2930 on my -current system.
+
+I was able to make some use of the Jaz drive on a February -current
+kernel, but it was a bit flakey.  When the Jaz spun down after some
+inactivity, I would get nothing but I/O errors until rebooting.  I
+never did get to do any serious work with the drive, but at least I
+could make a filesystem on it and mount it.
+
+Now I'm running a 03/12/1998 -current, and it seems that whenever I
+access the Jaz drive, the accessing processed (whether it be
+mount/newfs/dd or whatever) hangs in a deadlock in vclean.  Or rather,
+it hangs, and when shutting down the system I get a ``panic: vclean:
+deadlock''.
+
+I've not yet tried the latest -current, but I did not see any commit
+logs after 3/12 that indicate changes in this area (to my limited
+experience).
+
+The drive is external.
+
+Here are the (verbose) boot messages I get on the 03/12 kernel
+regarding the Adaptec and the Jaz:
+
+--- begin dmesg excerpt ---
+found-> vendor=0x9004, dev=0x6078, revid=0x01
+  class=01-00-00, hdrtype=0x00, mfdev=0
+  intpin=a, irq=10
+  map[0]: type 4, range 32, base 00006000, size  8
+  map[1]: type 1, range 32, base e1001000, size 12
+ahc0: <Adaptec aic7860 SCSI host adapter> rev 0x01 int a irq 10 on pci0.20.0
+ahc0: Reading SEEPROM...done.
+internal50 cable is present
+internal68 cable not present
+brdctl == 0xc
+external cable not present
+eprom not present
+brdctl == 0x6c
+low byte termination enabled, high byte termination disabled
+ahc0: aic7860 Single Channel, SCSI Id=7, 3 SCBs
+ahc0: Resetting Channel A
+ahc0: Downloading Sequencer Program...ahc0: 366 instructions downloaded
+Done
+ahc0: Probing channel A
+scbus0 at ahc0 bus 0
+ahc0: target 4 synchronous at 10.0MHz, offset = 0xf
+sd0 at scbus0 target 4 lun 0   
+sd0: <iomega jaz 1GB J.83> type 0 removable SCSI 2
+sd0: Direct-Access
+sd0: ILLEGAL REQUEST asc:24,0 Invalid field in CDB
+sd0 could not mode sense (4). Using ficticious geometry
+1021MB (2091050 512 byte sectors)
+sd0: with 1021 cyls, 64 heads, and an average 32 sectors/track
+--- end dmesg excerpt ---
+
+[…中段省略 412 字符…] ' and ``internal68 cable not present''.  This is backwards --
+  I have no internal SCSI devices, only the external Jaz drive.
+
+* What do the messages ``sd0: ILLEGAL REQUEST [..]'' and ``sd0 could
+  not mode sense [...]'' mean?
+
+* What does the message ``sd0: physio split the request.. cannot proceed''
+  indicate?
+
+Any help would be much appreciated!
+
+
+Jacques Vidrine <n@nectar.com>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603742 ###
+===== 库内序 145300 | PK 2603742 | 等级 L3 =====
+DATE: 1998-03-28T09:03:53+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: getting netatalk to work on 2.2.5R
+摘要: Wilko Bulte 承认自己在 kernel 里配过 options NETATALK
+
+As dannyman wrote...
+> On Fri, Mar 27, 1998 at 07:53:51PM +0100, Wilko Bulte wrote:
+> > Has anyone succeeded in getting netatalk to work on FreeBSD 2.2.5R? I've
+> > been figgling around without much luck.
+> > 
+> > It seems that bug 5811 is also biting me.. :/
+> 
+> Did you config your kernel with options NETATALK ? ;)
+
+Yep.
+
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+-------------------------------------------------- Powered by FreeBSD ------
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603743 ###
+===== 库内序 145301 | PK 2603743 | 等级 L3 =====
+DATE: 1998-03-28T20:05:07+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: This is embarassing, but...
+摘要: Jordan Hubbard 求找带 MD5 a6b9016d45dfba089b2e79105fbadda4 的 cvsupit.tgz 副本
+
+If any folks here remember my little 'cvsupit.tgz' package (a package
+which sort of front-ends the installation of CVSup and its configuration
+file(s)) and they just so happen to have saved a copy which does NOT
+have the following MD5 signature:
+
+	MD5 (cvsupit.tgz) = a6b9016d45dfba089b2e79105fbadda4
+
+Then I'd really like to hear from them as it might save me from having
+to reimplement the same src-subselection feature for the 3rd time. :-)
+
+Two times now, or I'm just going crazy, I have managed to somehow spam
+every single one of my working copies with an older version that predates
+the the implementation of this feature - it just keeps coming back like
+zombie-version-from-beyond-the-grave or something and even the master
+copy at ftp.freebsd.org is the old one, even though I can practically
+swear that I updated it after I last reimplemented the "choose which
+parts of src you want" bits in +INSTALL.  Argh.  This must be what
+happens to you when you do too much release engineering (AKA "bit herding") -
+your bits start to go into the same parallel universe that socks in the
+clothes dryer get spun into. :)
+
+Anyway, if anyone managed to grab the new version during the window
+where I initially released it and it was spammed again, I'd appreciate
+being saved the work of doing it One More Time. :-)
+
+Thanks.
+
+
+				Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603744 ###
+===== 库内序 145302 | PK 2603744 | 等级 L4 =====
+DATE: 1998-03-28T22:43:57+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Permissions on /root
+摘要: Tom：mtree 负责修 /root 权限 另外用 root 收邮件更糟糕
+
+
+On Fri, 27 Mar 1998, 0000-Administrator wrote:
+
+> It seems that some script it changing my permissions on /root from 0700
+> (which is what I want them to be) to 0755.  This is starting to really
+> annoy me because it happens on two machines I have.
+
+  mtree
+
+  BTW, using root for e-mail is much worse...
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603745 ###
+===== 库内序 145303 | PK 2603745 | 等级 L3 =====
+DATE: 1998-03-28T23:16:05+00:00
+FROM: "Bruce M. Walter" <walter@fortean.com>
+SUBJ: de driver and sshd
+摘要: Bruce M Walter 反映 de 网卡机器上 sshd 会不定时长达数分钟失联
+
+Hello, all.
+
+Has anyone experienced problems with sshd on a box with a de (digital)
+based NIC?  Specifically, the interface stops communicating for a
+indeterminate period of time, usually on the order of several minutes.
+Just as mysteriously as it starts, it stops and everything goes back to
+normal.
+
+I had experienced this under 2.2 and 2.2.1 and thought that 2.2.5 had
+fixed it.  I had changed NIC's in that period though to a 3com, which was
+apparently the real fix. Now I've started working with a 2.2.5 machine
+with a Kingston PCI NIC and the problem has resurfaced. 
+
+Killing sshd makes the problem go away.  This has also happened on several
+de based NIC's (Kingston, DEC and I believe an SMC Etherpower2).  There
+doesn't have to be any ssh client activity, just running the server for
+several hours apparently is enough (for me at least).
+
+I realize this info is nebulous, but I want see if any others have
+encountered this or if there are known issues before I dive into the
+driver source (that tulip stuff looks pretty hairy).
+
+- Bruce
+
+========================================================================
+|| Bruce M. Walter                    || 107 Timber Hollow Court #335 ||
+|| Senior Network Consultant          || Chapel Hill, NC  27514       ||
+|| Fortean Technologies, Inc.         || Tel: 919-967-4766            ||
+|| Information Technology Consultants || Fax: 919-967-4395            ||  
+========================================================================
+||       BSD Unix -- It's not just a job, it's a way of life!         ||
+========================================================================
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603746 ###
+===== 库内序 145304 | PK 2603746 | 等级 L3 =====
+DATE: 1998-03-29T00:01:21+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: This is embarassing, but...
+摘要: Darren Reed 表示自己有带指定 MD5 的 cvsupit.tgz 副本
+
+In some mail from Jordan K. Hubbard, sie said:
+> 
+> If any folks here remember my little 'cvsupit.tgz' package (a package
+> which sort of front-ends the installation of CVSup and its configuration
+> file(s)) and they just so happen to have saved a copy which does NOT
+> have the following MD5 signature:
+> 
+> 	MD5 (cvsupit.tgz) = a6b9016d45dfba089b2e79105fbadda4
+> 
+> Then I'd really like to hear from them as it might save me from having
+> to reimplement the same src-subselection feature for the 3rd time. :-)
+
+Does this imply that cvsupit source isn't under any software version
+control system ?! :)
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603749 ###
+===== 库内序 145307 | PK 2603749 | 等级 L3 =====
+DATE: 1998-03-29T09:09:58+00:00
+FROM: Gianmarco Giovannelli <gmarco@giovannelli.it>
+SUBJ: program to add users via web ...
+摘要: Gianmarco Giovannelli 询问有无人用过可通过网页添加用户的程序
+
+Is there anyone that use/know a program to add users via web pages
+(password and login chosen by me:-) ? 
+
+Please reply directly to me too ...
+
+-- 
+
+Regards...
+
+Gianmarco
+"Unix expert since yesterday"
+
+http://www.giovannelli.it
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603751 ###
+===== 库内序 145309 | PK 2603751 | 等级 L4 =====
+DATE: 1998-03-29T10:58:53+00:00
+FROM: David Dawes <dawes@rf900.physics.usyd.edu.au>
+SUBJ: Re: Australias CVSup server?
+摘要: David Dawes：cvsup.au.freebsd.org access denied 是 cvsupd 升 15.3 引起的现已修复
+
+On Thu, Mar 26, 1998 at 11:09:52AM +1030, Daniel O'Connor wrote:
+
+>I am trying to cvsup from cvsup.au.freebsd.org but I keep gett access denied 
+>messages :(
+>Any idea why?
+
+There was a problem related to upgrading cvsupd to 15.3.  It should be
+fixed now.  Contact me directly if you find further problems with it.
+
+David
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603752 ###
+===== 库内序 145310 | PK 2603752 | 等级 L4 =====
+DATE: 1998-03-29T20:40:57+00:00
+FROM: Lyndon Nerenberg <lyndon@ve7tcp.ampr.org>
+SUBJ: Keyboard mappings and Emacs (was Re: Proposal )
+摘要: Lyndon Nerenberg 给出 .emacsrc 里重绑定 C-h 和 M-? 的写法
+
+For Emacs I use the following in my .emacsrc:
+
+(global-set-key "\C-h" 'delete-backward-char)
+(global-set-key "\M-?" 'help-command)
+
+This makes both ^H and DEL do the "delete previous character" things,
+and I remap help to ESC-?. Works great in that it doesn't mess with
+my terminal-specific ^H/DEL settings in my login rc files (and emacs
+is consistent everywhere).
+
+--lyndon
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603753 ###
+===== 库内序 145311 | PK 2603753 | 等级 L4 =====
+DATE: 1998-03-29T15:16:29+00:00
+FROM: Christian Kuhtz <chk@eng.bellsouth.net>
+SUBJ: Re: PPP install broken in 2.2.6?
+摘要: Christian Kuhtz：2.2.6 下 PPP 安装和后续使用均故障 只有 pppd 的 ppp0 可用
+
+
+Ok, I am not only seeing this during the install, also later on.. the only
+thing that actually does work is the old fashioned ppp0 via pppd.  
+
+This is irritating. What happened?
+
+Chris
+
+On Mar 28, Christian Kuhtz <chk@eng.bellsouth.net> wrote:
+> 
+> Errr.. 2.2.5-RELEASE boot.flp worked flawlessly over here when trying to install
+> via PPP.. this is what happens under 2.2.6-RELEASE:
+> 
+> ppp ON schizophrenia> Packet mode.
+> PPP ON schizophrenia> Error: SetIpDevice: ioctl(SIOCAIFADDR): Destination address required
+> Error: IPcpLayerUp: unable to set ip address
+> 
+> Anyone have similiar experiences or knows a workaround?
+
+-- 
+Christian Kuhtz <chk@eng.bellsouth.net> (770) 522-4000            BellSouth.net
+                                                          Sr. Network Architect
+I speak only for myself, and my opinion belongs to me.        Atlanta, GA, U.S.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603754 ###
+===== 库内序 145312 | PK 2603754 | 等级 L4 =====
+DATE: 1998-03-29T13:34:25+00:00
+FROM: Ruslan Shevchenko <Ruslan@Shevchenko.Kiev.UA>
+SUBJ: Re: program to add users via web ...
+摘要: Ruslan Shevchenko：推荐 cam.grad.kiev.ua 上 admin 0.96p1 网页加用户程序
+
+Gianmarco Giovannelli wrote:
+
+> Is there anyone that use/know a program to add users via web pages
+> (password and login chosen by me:-) ?
+>
+
+http://cam.grad.kiev.ua/~rssh/admin/admin.html
+
+0.96p1 is the latest stable.
+
+It is uses, without problem on few machines in our local
+network.
+
+Please, send me any comments and suggestions.
+
+> Please reply directly to me too ...
+>
+> --
+>
+> Regards...
+>
+> Gianmarco
+> "Unix expert since yesterday"
+>
+> http://www.giovannelli.it
+>
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--
+
+    @=
+     //RSSH                              mailto:Ruslan@Shevchenko.Kiev.UA
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603755 ###
+===== 库内序 145313 | PK 2603755 | 等级 L3 =====
+DATE: 1998-03-29T18:17:58+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: getting netatalk to work on 2.2.5R
+摘要: Wilko Bulte 承认自己只打了 netatalk 官网上的补丁没打 FreeBSD errata
+
+As John Fieber wrote...
+> On Fri, 27 Mar 1998, Wilko Bulte wrote:
+> 
+> > Has anyone succeeded in getting netatalk to work on FreeBSD 2.2.5R? I've
+> > been figgling around without much luck.
+> 
+> There are some post-release patches which are essential.  Check
+> the errata page on www.freebsd.org/releases.
+
+Right.. My mistake. I only applied the patches that are on the netatalk 
+www site.  It seems there are multiple patches around, some for the 
+kernel code, some for netatalk itself.
+
+Interestingly enough I can now run an unpatched netatalk 1.4b2, having applied
+the kernel patches.
+
+There is unfortunately a side effect of the kernel patches: they break fddi 
+support:
+
+cc -c -O -pipe -Wreturn-type -Wcomment -Wredundant-decls -Wimplicit  -Wnested-externs
+-Wstrict-prototypes -Wmissing-prototypes  -Wpointer-arith  -nostdinc -I- -I. -I../..
+-I../../../include -DUKKEYMAP -DIPDIVERT -DFIFO -DCOM_BIDIR -DTCP_COMPAT_42 -DCOMPAT_43
+-DNFS -DFFS -DNETATALK -DINET -Di486 -DKERNEL  ../../net/if_fddisubr.c
+../../net/if_fddisubr.c: In function `fddi_output':
+../../net/if_fddisubr.c:233: too many arguments to function `at_ifawithnet'
+*** Error code 1
+
+Stop.
+
+I hope to find time to fix this, apparantly the patches break some 
+interface inside the kernel. Can some kind soul check if this is fixed 
+in 2.2.6R already?
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+-------------------------------------------------- Powered by FreeBSD ------
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603756 ###
+===== 库内序 145314 | PK 2603756 | 等级 L4 =====
+DATE: 1998-03-29T19:13:04+00:00
+FROM: John Fieber <jfieber@indiana.edu>
+SUBJ: Re: getting netatalk to work on 2.2.5R
+摘要: John Fieber：netatalk port 在 2.2.6 系统上开箱即用
+
+On Sun, 29 Mar 1998, Wilko Bulte wrote:
+
+> I hope to find time to fix this, apparantly the patches break some 
+> interface inside the kernel. Can some kind soul check if this is fixed 
+> in 2.2.6R already?
+
+The netatalk port works "out-of-the-box" on and "out-of-the-box"
+2.2.6 system.
+
+-john
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

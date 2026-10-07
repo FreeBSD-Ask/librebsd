@@ -1,0 +1,941 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603303 ###
+===== 库内序 144861 | PK 2603303 | 等级 L3 =====
+DATE: 1998-03-15T16:09:56+00:00
+FROM: Dan Ontanu <dano@dossv1.ici.ro>
+SUBJ: A problem with serial ports.
+摘要: 求助：2.2.5 引导盘 probe 不识别 3f8 irq4 与 2f8 irq3 的 sio0 与 sio1
+
+I have a boot floppy for FreeBSD 2.2.5. The probe program doesn't see the
+serial ports sio0 and sio1 (at 3f8 irq 4 and 2f8 irq 3, respectively).
+These are the correct settings, for sure. No other serial ports are
+installed. The mainboard is a very new one
+(at least here in Romania) i430 TX based (or inspired...). The CPU is K6
+at 200 MHz. The ISA boards installed are the SVGA (S3 based), the Sound
+Blaster Pro (8 bit) and the Adaptec 1542B host adapter. No PCI board is
+installed. The NT had no problem in seeing the ports and also Linux
+(Slackware 3.4). Of course, the two ports are enabled from the Award BIOS
+Setup program, with the above I/O addresses and IRQ's.
+
+Does someone have a solution?
+
+Sincerely,
+Dan Ontanu.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603305 ###
+===== 库内序 144863 | PK 2603305 | 等级 L4 =====
+DATE: 1998-03-15T17:40:28+00:00
+FROM: "Adam W. Hawks" <awhawks@usa.net>
+SUBJ: Insat Wireless Modem
+摘要: insat 无线调制解调器无需写驱动即可在 FreeBSD 下工作
+
+
+----------------------------------
+E-Mail: Adam W. Hawks <awhawks@usa.net>
+Date: 14-Mar-98
+Time: 16:06:10
+
+This message was sent by XFMail
+----------------------------------
+Well folks a while back there was some talk about the insat wireless
+modem and whether it would work in FreeBSD or whether drivers had to
+be written. Well I took the leap and bought one and it will work in
+FreeBSD without any coding. 
+
+The modem is a standard CDPD modem.
+For it to work with FreeBSD you have to give up the Venturi compression.
+The max rate in FreeBSD (without the compression) will be 19200 (portrate)
+and this will vary with CDPD signal strength.
+If someone can get info on the Venturi algorithm or get them to do a FreeBSD
+version then this should also work.
+
+How I got it to work.
+1) turned of encryption in the modem.
+2) I conected to modem with cu and put modem in SLIP mode "at sli slip"
+3) I then did "ifconfig sl0 inet mymodemIP -> DNSserver(seems to be the same as
+   the gateway)
+4) I then did "slattach -h -s 19200 /dev/modem
+5) I then did "route add default DNSserver
+6) at this point I could work on the net.
+
+This may be trivial to some of you but it took me a while to find out the modem
+command that would let it work. It does seem that SLIP is the only way to
+connect with this modem.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603306 ###
+===== 库内序 144864 | PK 2603306 | 等级 L3 =====
+DATE: 1998-03-15T21:37:16+00:00
+FROM: Peter Jeremy <Peter.Jeremy@alcatel.com.au>
+SUBJ: IDE+LPIP causing random lockups
+摘要: 求助：486DX2-50 VLB 主板 2.2.5R 下 IDE 加 LPIP 出现随机锁死
+
+I have been having occasional lockups on my main system for some time
+now (it occurs with all 2.2.x releases, I can't recall if 2.1.x was
+affected).  I am wondering if anyone else has seen something similar.
+
+Configuration:
+main machine: VLB-based 486DX2-50 with 2 IDE disks (32-bit, multiblock 16)
+	on 1 (VLB) controller, running 2.2.5-R.
+2nd machine: Toshiba T1850 (386SX25 with 1 IDE disk) running 2.2.1-R
+
+The machines are joined by a laplink cable and use LPIP.
+
+The symptoms are that my main machine (only) locks up and needs a
+reset to recover.  The laptop has never been affected.  The problem
+only occurs when there is LPIP activity between the machines and seems
+to also correlate with disk activity on the main machine, and using
+ssh to transfer data.  Running XFree86 also seems to make it worse
+(but this might just be the increased disk activity associated with
+running X11 in less than infinite RAM).  Note that between talking to
+IDE disks and communicating with a slow host via LPIP, the machine
+spends a lot of time inside interrupts - often over 30% according to
+top.
+
+Having (finally) gotten around to loading a kernel with DDB, I find
+that the lockup appears to be caused by sbcompress() attempting to
+add an mbuf to itself - sbappend() is called to append an mbuf to
+sockbuf that already includes that mbuf in the mbuf list.  When this
+is passed to sbcompress(), it winds up in an infinite loop.
+
+My suspicion is that something is continuing to use an mbuf after it
+frees it, probably associated with some sort of interrupt window.
+I've added some checks in the mbuf code to try and pick this up, but
+haven't found the problem yet.  I did notice that the splXXX()
+routines don't atomically update cpl, but the associated comments (in
+i386/include/spl.h) say this is OK.
+
+I have (less frequently) seen kernel page faults with addresses like
+0xf400xxxx, 0x79xxxxxx.  I haven't looked into these yet.  I'm hoping
+they are caused by the mbuf's being used for two things at once.
+
+Does anyone have any ideas?
+
+Peter
+--
+Peter Jeremy (VK2PJ)                    peter.jeremy@alcatel.com.au
+Alcatel Australia Limited
+41 Mandible St                          Phone: +61 2 9690 5019
+ALEXANDRIA  NSW  2015                   Fax:   +61 2 9690 5247
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603308 ###
+===== 库内序 144866 | PK 2603308 | 等级 L4 =====
+DATE: 1998-03-15T22:04:54+00:00
+FROM: Ruslan Shevchenko <Ruslan@Shevchenko.kiev.ua>
+SUBJ: ANNOUNCE: GUI/Web admin-0.96
+摘要: announce GUI Web admin 0.96 含 Tk 与 CGI 界面并实现用户管理
+
+I'm happy to announce 0.96 version of GUI admin tool.
+
+It have Tk and CGI interfaces and fully implement
+adduser/edituser/rmuser  actions.
+
+For more informations. please, refer to
+http://cam.grad.kiev.ua/~rssh/admin/admin.html
+
+
+--
+
+    @=
+     //RSSH                              mailto:Ruslan@Shevchenko.Kiev.UA
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603309 ###
+===== 库内序 144867 | PK 2603309 | 等级 L4 =====
+DATE: 1998-03-15T22:12:59+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Odd problem we're seeing here
+摘要: Terry Lambert：vn_read 与 vn_write 调用时 vp 应为 unlocked
+
+> If you look at the code around the vn_read and vn_write, vs. the
+> code around vn_rdwr, you will see a pattern begin to emerge.
+> 
+> In all cases, when vn_read or vn_write is called, the vp is locked.
+
+I meant "unlocked".
+
+Right now, I am unsure of the lease code.  When I say that I think
+the vp should be locked, that's because all vp's should be locked
+before they are dereferenced to make VOP calls.  This is also why
+vp locking should be done with a vn_lock() function which locks
+the vp before it makes the VOP_LOCK call by dereferencing the vp
+to get the FS specific function.  This is also why the underlying
+VOP_LOCK should be veto-based.
+
+Basically, if a vp is in the VOF layer (not necessarily just below
+the VFS layer, at least until Michael Hancock's VOP_VRELE), the vp
+should be locked.
+
+Period.
+
+This drastically simplifies a VFS consumer's view of the world.
+
+I do not think the lease code would actually survive being called
+with a locked vp at this point because of nqnfs_lease_updatetime,
+which traverses the mountlist.
+
+This is not something trivially fixable without a lot of controversial
+code.
+
+Hence the punt.
+
+Is that enough information?
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603310 ###
+===== 库内序 144868 | PK 2603310 | 等级 L3 =====
+DATE: 1998-03-15T22:26:49+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: A problem with serial ports. 
+摘要: Mike Smith：怀疑是 Iwill 主板配合 Acer 多合一 IO 芯片所致
+
+> I have a boot floppy for FreeBSD 2.2.5. The probe program doesn't see the
+> serial ports sio0 and sio1 (at 3f8 irq 4 and 2f8 irq 3, respectively).
+> These are the correct settings, for sure. No other serial ports are
+> installed. The mainboard is a very new one
+> (at least here in Romania) i430 TX based (or inspired...).
+
+This wouldn't happen to be an Iwill board, perhaps using an Acer 
+multi-I/O device, hmm?
+
+If this is the case, then you will need a patch for the 'sio' driver,
+available from Greg Lehey's page (http://www.lemis.com/).  This UART 
+appears to have some serious behavioural disorders, and the sio probe is
+extremely severe about the port working correctly.
+
+(In the current context, this is perhaps a little foolish...)
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603311 ###
+===== 库内序 144869 | PK 2603311 | 等级 L3 =====
+DATE: 1998-03-15T22:35:31+00:00
+FROM: Karl Denninger  <karl@mcs.net>
+SUBJ: Re: Odd problem we're seeing here
+摘要: Karl Denninger：解锁 NFS 文件时先刷新缓存属性再释放内核锁是否可行
+
+I don't understand something.
+
+Why not, when you release a lock on a file mounted over NFS, just flush the
+cached attributes BEFORE you release the lock at the kernel level?
+
+No, it doesn't take care of the case where you don't lock.  But it DOES
+solve the problem where you do (and if you're not locking, you arguably
+deserve what you get anyway).
+
+--
+-- 
+Karl Denninger (karl@MCS.Net)| MCSNet - Serving Chicagoland and Wisconsin
+http://www.mcs.net/          | T1's from $600 monthly / All Lines K56Flex/DOV
+			     | NEW! Corporate ISDN Prices dropped by up to 50%!
+Voice: [+1 312 803-MCS1 x219]| EXCLUSIVE NEW FEATURE ON ALL PERSONAL ACCOUNTS
+Fax:   [+1 312 803-4929]     | *SPAMBLOCK* Technology now included at no cost
+
+On Sun, Mar 15, 1998 at 10:12:59PM +0000, Terry Lambert wrote:
+> > If you look at the code around the vn_read and vn_write, vs. the
+> > code around vn_rdwr, you will see a pattern begin to emerge.
+> > 
+> > In all cases, when vn_read or vn_write is called, the vp is locked.
+> 
+> I meant "unlocked".
+> 
+> Right now, I am unsure of the lease code.  When I say that I think
+> the vp should be locked, that's because all vp's should be locked
+> before they are dereferenced to make VOP calls.  This is also why
+> vp locking should be done with a vn_lock() function which locks
+> the vp before it makes the VOP_LOCK call by dereferencing the vp
+> to get the FS specific function.  This is also why the underlying
+> VOP_LOCK should be veto-based.
+> 
+> Basically, if a vp is in the VOF layer (not necessarily just below
+> the VFS layer, at least until Michael Hancock's VOP_VRELE), the vp
+> should be locked.
+> 
+> Period.
+> 
+> This drastically simplifies a VFS consumer's view of the world.
+> 
+> I do not think the lease code would actually survive being called
+> with a locked vp at this point because of nqnfs_lease_updatetime,
+> which traverses the mountlist.
+> 
+> This is not something trivially fixable without a lot of controversial
+> code.
+> 
+> Hence the punt.
+> 
+> Is that enough information?
+> 
+> 					Terry Lambert
+> 					terry@lambert.org
+> ---
+> Any opinions in this posting are my own and not those of my present
+> or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603312 ###
+===== 库内序 144870 | PK 2603312 | 等级 L3 =====
+DATE: 1998-03-15T22:34:28+00:00
+FROM: Chuck Robey <chuckr@glue.umd.edu>
+SUBJ: Re: ANNOUNCE: GUI/Web admin-0.96
+摘要: 提问：0.96 版本不到 0.95 三分之一体积究竟移除了什么内容
+
+On Mon, 16 Mar 1998, Ruslan Shevchenko wrote:
+
+> I'm happy to announce 0.96 version of GUI admin tool.
+> 
+> It have Tk and CGI interfaces and fully implement
+> adduser/edituser/rmuser  actions.
+> 
+> For more informations. please, refer to
+> http://cam.grad.kiev.ua/~rssh/admin/admin.html
+
+New one is less than 1/3 the size of the 0.95 version.  What got
+removed?
+
+> 
+> 
+> --
+> 
+>     @=
+>      //RSSH                              mailto:Ruslan@Shevchenko.Kiev.UA
+> 
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+> 
+
+----------------------------+-----------------------------------------------
+Chuck Robey                 | Interests include any kind of voice or data 
+chuckr@glue.umd.edu         | communications topic, C programming, and Unix.
+213 Lakeside Drive Apt T-1  |
+Greenbelt, MD 20770         | I run Journey2 and picnic, both FreeBSD
+(301) 220-2114              | version 3.0 current -- and great FUN!
+----------------------------+-----------------------------------------------
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603314 ###
+===== 库内序 144872 | PK 2603314 | 等级 L3 =====
+DATE: 1998-03-15T23:06:14+00:00
+FROM: Karl Denninger  <karl@mcs.net>
+SUBJ: Re: Odd problem we're seeing here
+摘要: Karl Denninger：开启 NQNFS 后系统几乎立刻硬挂起 I/O 全无
+
+All I got out of turning on the NQNFS mode was a near-immediate hard system
+hang - no I/O, no nothing.
+
+Needless to say, that's no good :-)
+
+I don't know if my earlier mail got out or not, but wouldn't an effective
+workaround for the cache coherency problem be to flush the attribute cache
+on any flock(..., LOCK_UN) operation (either explicit or implied on file
+close)?
+
+--
+-- 
+Karl Denninger (karl@MCS.Net)| MCSNet - Serving Chicagoland and Wisconsin
+http://www.mcs.net/          | T1's from $600 monthly / All Lines K56Flex/DOV
+			     | NEW! Corporate ISDN Prices dropped by up to 50%!
+Voice: [+1 312 803-MCS1 x219]| EXCLUSIVE NEW FEATURE ON ALL PERSONAL ACCOUNTS
+Fax:   [+1 312 803-4929]     | *SPAMBLOCK* Technology now included at no cost
+
+On Sun, Mar 15, 1998 at 10:12:59PM +0000, Terry Lambert wrote:
+> > If you look at the code around the vn_read and vn_write, vs. the
+> > code around vn_rdwr, you will see a pattern begin to emerge.
+> > 
+> > In all cases, when vn_read or vn_write is called, the vp is locked.
+> 
+> I meant "unlocked".
+> 
+> Right now, I am unsure of the lease code.  When I say that I think
+> the vp should be locked, that's because all vp's should be locked
+> before they are dereferenced to make VOP calls.  This is also why
+> vp locking should be done with a vn_lock() function which locks
+> the vp before it makes the VOP_LOCK call by dereferencing the vp
+> to get the FS specific function.  This is also why the underlying
+> VOP_LOCK should be veto-based.
+> 
+> Basically, if a vp is in the VOF layer (not necessarily just below
+> the VFS layer, at least until Michael Hancock's VOP_VRELE), the vp
+> should be locked.
+> 
+> Period.
+> 
+> This drastically simplifies a VFS consumer's view of the world.
+> 
+> I do not think the lease code would actually survive being called
+> with a locked vp at this point because of nqnfs_lease_updatetime,
+> which traverses the mountlist.
+> 
+> This is not something trivially fixable without a lot of controversial
+> code.
+> 
+> Hence the punt.
+> 
+> Is that enough information?
+> 
+> 					Terry Lambert
+> 					terry@lambert.org
+> ---
+> Any opinions in this posting are my own and not those of my present
+> or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603316 ###
+===== 库内序 144874 | PK 2603316 | 等级 L3 =====
+DATE: 1998-03-16T00:27:53+00:00
+FROM: Brian Handy <handy@sag.space.lockheed.com>
+SUBJ: building world...
+摘要: 求助：buildworld 构建共享 C 库时 nm 反复报 no name list 与 Error code 1
+
+I always wonder what I'm doing wrong.  It's rare I can get a buildworld to
+ever go through cleanly, but I don't hear anyone else complaining, so I'm
+not sure what's up.
+
+Anyway, any ideas what this means?
+
+building shared c library (version 3.1)
+nm: bt_debug.so: no name list
+nm: euc.so: no name list
+nm: mskanji.so: no name list
+nm: utf2.so: no name list
+nm: putw.so: not object file or archive
+nm: refill.so: not object file or archive
+nm: remove.so: not object file or archive
+nm: rewind.so: not object file or archive
+nm: rget.so: not object file or archive
+nm: scanf.so: not object file or archive
+nm: snprintf.so: not object file or archive
+ld: snprintf.so: malformed input file (not rel or archive)
+*** Error code 1
+
+Stop.
+
+
+
+
+Brian
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603318 ###
+===== 库内序 144876 | PK 2603318 | 等级 L3 =====
+DATE: 1998-03-16T02:42:32+00:00
+FROM: Brian Handy <handy@sag.space.lockheed.com>
+SUBJ: Re: building world...
+摘要: Brian Handy：怀疑本机硬件有问题同源 rebuildworld 第二次成功
+
+>On Sun, 15 Mar 1998, Brian Handy wrote:
+> [2.2-STABLE]
+>
+>> building shared c library (version 3.1)
+>> nm: bt_debug.so: no name list
+>> [...]
+>> *** Error code 1
+>
+>Huh.  Mine go through fairly regularly.  How confident are you of your
+>sources, Brian?
+
+
+Hmmm, I wonder if I've got some screwed-up hardware here.  I kicked off
+the buildworld again and it worked the second time.  No change in the
+sources between builds.
+
+More experimentation is clearly in order.  Bah...
+
+
+Brian
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603319 ###
+===== 库内序 144877 | PK 2603319 | 等级 L3 =====
+DATE: 1998-03-16T02:52:12+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: building world...
+摘要: Studded：请先说明运行的是 current 还是 stable 再转投对应列表
+
+Brian Handy wrote:
+> 
+> I always wonder what I'm doing wrong.  It's rare I can get a buildworld to
+> ever go through cleanly, but I don't hear anyone else complaining, so I'm
+> not sure what's up.
+> 
+> Anyway, any ideas what this means?
+
+	It's hard to tell since you didn't say what version you're running. If
+you're running -current, please follow up to freebsd-current. If
+-stable, freebsd-stable. 
+
+> building shared c library (version 3.1)
+> nm: bt_debug.so: no name list
+> nm: euc.so: no name list
+> nm: mskanji.so: no name list
+> nm: utf2.so: no name list
+
+	I see these kinds of warnings all the time on -stable. 
+
+> nm: putw.so: not object file or archive
+> nm: refill.so: not object file or archive
+> nm: remove.so: not object file or archive
+> nm: rewind.so: not object file or archive
+> nm: rget.so: not object file or archive
+> nm: scanf.so: not object file or archive
+> nm: snprintf.so: not object file or archive
+> ld: snprintf.so: malformed input file (not rel or archive)
+> *** Error code 1
+
+	Those luck bad. :)  They also look like classic dirty /usr/src or
+/usr/obj directory errors. Have you tried totally deleting /usr/obj/*
+and /usr/src/* and downloading fresh source?  I have a step-by-step
+procedure for this on my make world page,
+http://home.san.rr.com/freebsd/upgrade.html. I also just updated it
+today so it's a good time to give it a look. :)
+
+Hope this helps,
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud operator, designer and maintainer of the world's largest
+*** Internet Relay Chat server.  5,328 clients and still growing.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603324 ###
+===== 库内序 144882 | PK 2603324 | 等级 L3 =====
+DATE: 1998-03-16T16:05:26+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: 2nd Newsletter (finally!) due to go to press in 10 days.
+摘要: Jordan Hubbard：征稿期十天期望配合 2.2.6 CDROM 一并发出
+
+I know, I know, I've been a real hoser about getting issue #2 ready
+but I think you folks know how it is.
+
+So anyway, here's the deal: I'd like to get the next edition finished
+and off to the printers within the next 10 days, giving me enough time
+to get copies back in time to ship along with the 2.2.6 CDROM, and if
+you've got an article you'd like to have published in the next
+newsletter or even if you sent me a previous submission and now want
+to update it, please get it to me ASAP!  I promise to be a better
+editor this time and actually get back to you with feedback before we
+both turn old and grey, honest! :)
+
+Submissions should be in simple ASCII (we'll handle the formatting
+details) and sent to me directly.  Some possible topics ideas:
+
+*  An article comparing FreeBSD to other OS's, or unique features
+
+     A comparison of FreeBSD and Linux
+     A comparison of FreeBSD and Solaris
+     A comparison of FreeBSD and BSDI
+     A comparison of FreeBSD and NetBSD
+     A comparison of FreeBSD and Windows-NT
+     A comparison of FreeBSD and the Timex Sinclair (just checking to
+     see if you were paying attention).
+
+----------------------------------------------------------------------
+*  An article about kernel internals
+
+    -- VM system
+    -- Filesytem -- Comparison of FFS vs LFS
+    -- How to write a device driver
+    -- ???
+----------------------------------------------------------------------
+*  An article about application programming with some working code
+
+   -- Programming with POSIX threads
+   -- Programming with sockets
+   -- Programming with mapped files
+   -- How to use GDB to debug your program
+   -- How to use gprof to profile and optimize your program
+   -- Porting a program to FreeBSD.  What are the most likely porting problems
+       and how to fix them
+   -- Using Gnu "Configure" to make your programs portable
+   -- About the ports collection
+
+----------------------------------------------------------------------
+*  An article answering a common tech support problem
+
+   --  Installing FreeBSD -- common problems, and how to work around them
+   -
+[…中段省略 2547 字符…] 
+----------------------------------------------------------------------
+*  Reviews of new books, hardware or commercial software
+
+   Books:
+          -- The "4.4 BSD Internals" book
+          -- Greg Lehey's thick book
+          -- ???
+
+   Hardware:
+          -- New DVD drives that work with FreeBSD
+          -- List of vendors that supply FreeBSD capable hardware
+          -- ???
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603325 ###
+===== 库内序 144883 | PK 2603325 | 等级 L3 =====
+DATE: 1998-03-16T16:17:18+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: DVD, was:RE: 2nd Newsletter (finally!) due to go to press in 10 d
+	ays.
+摘要: sbabkin：请就 FreeBSD 支持的 DVD drives 型号给出更详细资料
+
+> ----------
+> From: 	Jordan K. Hubbard[SMTP:jkh@time.cdrom.com]
+> 
+>    Hardware:
+>           -- New DVD drives that work with FreeBSD
+> 
+Huh ? Which ones ? Can you please give more detail ? Thanks!
+
+-SB
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603326 ###
+===== 库内序 144884 | PK 2603326 | 等级 L3 =====
+DATE: 1998-03-16T14:57:51+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: 2nd Newsletter (finally!) due to go to press in 10 days.
+摘要: Luigi Rizzo：询问投稿是否一律需控制在 300 字以内
+
+> Submissions should be in simple ASCII (we'll handle the formatting
+> details) and sent to me directly.  Some possible topics ideas:
+... [how to do X with FreeBSD]
+
+and all in less than 300 words, right ?
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603329 ###
+===== 库内序 144887 | PK 2603329 | 等级 L3 =====
+DATE: 1998-03-16T16:40:08+00:00
+FROM: nsj@ncsu.edu (Nate Johnson)
+SUBJ: Re: DVD, was:RE: 2nd Newsletter (finally!) due to go to press in 10 d ays.
+摘要: Nate Johnson：依据 Complete FreeBSD 封底 FreeBSD on DVD 订购单希望有兼容驱动器
+
+%> >    Hardware:
+%> >           -- New DVD drives that work with FreeBSD
+%> > 
+%> Huh ? Which ones ? Can you please give more detail ? Thanks!
+%
+%It was just an idea and I have no idea if any actually work with
+%FreeBSD.  That's why we need articles about it, SB. :)
+
+Considering the back page of Greg Lehey's latest revision of
+_Complete_FreeBSD_ has an ad (actually, an order form!) for a 
+copy of FreeBSD on DVD, I would hope that there are some in existence 
+that do work. =)
+
+Of course, I've never seen one.  If a DVD disc is stamped in the forest,
+but there aren't any supported DVD machines...
+
+Cheers,
+nsj
+
+--
+Nate Johnson \ nsj@ncsu.edu \ nsj@nortel.net \ nsj@FreeBSD.org
+Gallery & News Editor, FreeBSD Documentation Project / http://www.freebsd.org/
+Inside your PC is a daemon waiting to be unleashed; unleash it with FreeBSD!
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603330 ###
+===== 库内序 144888 | PK 2603330 | 等级 L4 =====
+DATE: 1998-03-16T17:13:47+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: DVD, was:RE: 2nd Newsletter (finally!) due to go to press in 10 d ays. 
+摘要: Jordan Hubbard：DVD 广告在成功复刻前即已外发之后才发现光盘复刻厂无法处理
+
+> Considering the back page of Greg Lehey's latest revision of
+> _Complete_FreeBSD_ has an ad (actually, an order form!) for a 
+> copy of FreeBSD on DVD, I would hope that there are some in existence 
+> that do work. =)
+
+Heh.  Actually, I hate to say that the advert went out before we'd
+successfully produced such a thing.  It's only afterwards that we
+found out (after much work and sweat) that the CD replication houses
+are completely and totally incapable of producing DVDs with long
+filenames.  I'm not sure that there will ever be a FreeBSD DVD.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603331 ###
+===== 库内序 144889 | PK 2603331 | 等级 L3 =====
+DATE: 1998-03-16T17:23:52+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Re: 2nd Newsletter (finally!) due to go to press in 10 days.
+摘要: Andrzej Bialecki：希望与 DG 就 wcarchive 建立过程做专访对 ISP 尤有可读性
+
+On Mon, 16 Mar 1998, Jordan K. Hubbard wrote:
+
+> ----------------------------------------------------------------------
+> *  A corporate or individual profile or interview
+> 
+>      An article about an organization using FreeBSD for an interesting or
+>      innovative application.  Or an interview of a FreeBSD developer and
+>      the projects under development.
+
+I'd love to see an interview with you and DG on history and details of
+setting up the wcarchive. This would make an interesting reading
+especially for ISPs... 
+
+Andrzej Bialecki
+
+---------------------+---------------------------------------------------------
+abial@warman.org.pl  | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic  | "Be open-minded, but don't let your brains to fall out."
+Network in Poland    | All of the above (and more) is just my personal opinion.
+---------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603332 ###
+===== 库内序 144890 | PK 2603332 | 等级 L3 =====
+DATE: 1998-03-16T17:39:28+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: 2nd Newsletter (finally!) due to go to press in 10 days.
+摘要: Luigi Rizzo：与其做专访不如写一篇关于 PicoBSD 的文章
+
+> I'd love to see an interview with you and DG on history and details of
+> setting up the wcarchive. This would make an interesting reading
+> especially for ISPs... 
+
+i think instead that a few things about PicoBSD would be great....
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603334 ###
+===== 库内序 144892 | PK 2603334 | 等级 L3 =====
+DATE: 1998-03-16T19:34:46+00:00
+FROM: "Kaleb S. KEITHLEY" <k.keithley@opengroup.org>
+SUBJ: 3.0-971225SNAP, Japanese/Korean locales, and libxpg4
+摘要: 提问：SJIS 与 EUC locale 支持为何放在 libxpg4 而不放进 libc
+
+What's the rationale for having the SJIS and EUC locale support in
+libxpg4 instead of libc?
+
+I want X programs to work in any locale. Making me drag in a static
+setlocale w/ SJIS/EUC support from libxpg4 instead of just getting it
+from shared libc seems, er, shall we say strange.
+
+(I had sent this question once before over the weekend, and it never
+came back, so I think you did lose some files when freefall went down.)
+
+-- 
+Kaleb S. KEITHLEY
+X Architect, The Open Group X Project Team
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603335 ###
+===== 库内序 144893 | PK 2603335 | 等级 L3 =====
+DATE: 1998-03-16T20:14:22+00:00
+FROM: "Nguyen HM (Mike)" <NguyenHM@ucarb.com>
+SUBJ: Newbie LFS question
+摘要: Newbie 求助 LFS 文献并询问日志文件系统与日志结构文件系统有何区别
+
+I remember seeing a paper about LFS, maybe in one of my old computer
+architecture classes. I'm pretty sure it was a paper written about LFS
+as it applied to 4.4BSD. Does anyone have any references, also for LFSs
+and JFSs in general?
+
+Thanks,
+Mike.
+
+P.S. Here's a quickie: what exactly is the difference between a
+journalled filesystem and a log-structured filesystem? I would imagine
+they have similar goals.
+
+   // Mike Nguyen
+  //  Unix Systems Analyst and Geek
+ //   Union Carbide Corporation * (281) 212-8073
+//    nguyenhm@ucarb.com * mikenguyen@sprintmail.com (personal)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603337 ###
+===== 库内序 144895 | PK 2603337 | 等级 L3 =====
+DATE: 1998-03-16T20:38:22+00:00
+FROM: "Ron 'The Insane One' Rosson" <insane@oneinsane.net>
+SUBJ: Re: 2nd Newsletter (finally!) due to go to press in 10 days.
+摘要: Ron Rosson：希望读到建立 wcarchive 过程中所作的取舍抉择
+
+Just adding my 2 cents.. I would love to here about
+the choices that went into making wcarchive.
+Ron
+
+On Mon, Mar 16, 1998 at 06:23:52PM +0100, Andrzej Bialecki wrote:
+> On Mon, 16 Mar 1998, Jordan K. Hubbard wrote:
+> 
+> > ----------------------------------------------------------------------
+> > *  A corporate or individual profile or interview
+> > 
+> >      An article about an organization using FreeBSD for an interesting or
+> >      innovative application.  Or an interview of a FreeBSD developer and
+> >      the projects under development.
+> 
+> I'd love to see an interview with you and DG on history and details of
+> setting up the wcarchive. This would make an interesting reading
+> especially for ISPs... 
+> 
+> Andrzej Bialecki
+> 
+> ---------------------+---------------------------------------------------------
+> abial@warman.org.pl  | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+> Research & Academic  | "Be open-minded, but don't let your brains to fall out."
+> Network in Poland    | All of the above (and more) is just my personal opinion.
+> ---------------------+---------------------------------------------------------
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+-- 
+--------------------------------------------------------
+Ron Rosson              ... and a UNIX user said ...
+The InSaNe One                    rm -rf *
+insane@oneinsane.net      and all was null and void
+--------------------------------------------------------
+It's so nice to be insane, nobody asks you to explain.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

@@ -1,0 +1,22 @@
+2603143|L4|Bruce M. Walter同意区分设备与核心系统,设备特指driver,代码应放在driver中
+2603145|L3|Tom建议合并两站passwd文件,并不了解ken是否在用Radius
+2603147|L3|Andrew Maltsev确认理解将poweroff移出内核放到callout是Bruce意图,但认为优势有限
+2603150|L4|Kazutaka YOKOTA指APM poweroff在ATX主板与笔记本上不同,FreeBSD已可关笔记本但不能关ATX
+2603151|L4|Mike Smith：APM 关机在 ATX 主板与笔记本上不同 FreeBSD 早已支持笔记本 APM 关机但 ATX 无效
+2603155|L3|hosokawa：-current 已有 APM power-off 我也在 PAO 中用 at_shutdown 扩展方式实现
+2603156|L3|Julian Elischer：同步镜像为跨网络实时同步主服务器 I/O 变更到目标机
+2603163|L3|Terry Lambert：希望断电时若启用软更新则无需 fsck 磁盘
+2603167|L3|Erik E Rantapaa：两站点 RADIUS 合并密码文件为已知最简单方案
+2603168|L3|tcobb：询问 FreeBSD PAM 初版实现者及位置是否可用
+2603169|L3|tcobb：询问 UNION FS 现状希望 NFS 目录挂到另一机器上支持 chroot telnet
+2603170|L4|Julian Elischer：不必 chroot 每二进制留单份用 hard link 指向各 chroot 目录
+2603171|L3|Eivind Eklund：确认 Julian 想说的是 union 澄清误解
+2603172|L3|tcobb：NULLFS 可能是解法 已在 P75 32MB 机器上做快速测试
+2603175|L3|Andrzej Bialecki：据称 Mike Smith 做过 PAM 初版后陷入其他任务两周前问似乎搁置
+2603181|L3|sbabkin：远程镜像宜拆成镜像本体由 ccd 承担与远程盘映射两部分更清晰
+2603189|L3|Snob Art Genre：WINE 快速松散的编码或为仿真微软代码的唯一可行方式
+2603191|L3|Mashkovtsev：询问是否有 API 供主机自身覆盖网卡 MAC 地址还是必须改内核
+2603193|L3|sbabkin：MAC 覆盖有 API 但目前无驱动实现 可看 IPX 代码 if_ether.c 与 if_ep.c
+2603194|L3|Terrance Young：EtherExpress 太贵 我宁买两张 3com 分放不同网段
+2603195|L4|Terry Lambert：质疑 FreeBSD 容错论断认为 panic 正是需要防范的故障类型
+2603197|L4|Simon Shapiro：panic 分可预测与不可预测两类 NULL 指针与无效地址 Unix 无法避免

@@ -1,0 +1,1081 @@
+2602441	885	greg 回复称目前 volume manager 驱动仍在测试尚未完成并坦言今后可能还会需要额外动手调整相关代码以让整套驱动能顺利工作
+2602443	885	jb 援引 POSIX 2.9.3 指出若 _POSIX_THREADS 已定义则 _POSIX_THREAD_SAFE_FUNCTIONS 也应随之定义并强调函数应真正放入 libc 通常需按重入版本完整重写现有实现
+2602446	885	greg 回复称手头工作距离可用尚有一段距离并坦言 RAID-5 部分存在商业利益相关的顾虑会另开一封邮件私下补充更多信息
+2602447	885	doug 举例说 config 里 options 传字符串宏如 BOOTP_WIRED_TO=fxp0 到 c-snippet 中 strcmp 会因缺少字面双引号无法编译只好在代码里用 #define BOOTP_WIRED_TO 显式加双引号
+2602448	885	winter 在回复里向 Greg 发问能否把自己手头这份工作打个快照共享出来让其他同学帮忙折腾一下并挑挑毛病反馈意见以便帮忙测试
+2602451	885	tom 表示怀疑文档可用性会变差因为 Adaptec 自己也公开相关文档并不比过去更封闭保守所以文档可获得性应该不会显著变差
+2602452	885	manish 说自己跑 v2.2.2 on i386 发现 FreeBSD 有 OSI 支持但发行版未随附源码他看到 LINT 文件里写着原因是缺乏兴趣并想拿 netiso 目录相关源文件自行编译带 OSI 的 kernel
+2602453	885	mike 表示自己很怀疑 wcarchive 会用 CAM 驱动集因为它是一台 2.2 系列机器而 CAM 是很典型的 3.0 代码
+2602454	885	mike 建议 options 里想传字符串字面量时把内嵌双引号写成转义形式即把 BOOTP_WIRED_TO 后的 fxp0 加上反斜杠双引号并注明必要时反斜杠可能要写成三重
+2602455	885	nate 称自己那块 NCR 卡性能与 Adaptec 驱动差距在 10% 以内某些基准还能更快且三年来从未出过故障并认为这种稳定性和可用性绝对值得
+2602456	885	archie 提出用一个 #define Q(x) #x 的宏把参数自动包成字符串字面量举例 Q(asdf) 就返回 asdf 这个字符串效果
+2602461	885	conrad 表示 FreeBSD 的 rpc.lockd 似乎只实现了服务端并询问是否有人做过客户端扩展使 FreeBSD 客户端能拿锁同时表示自己已经看过其他开源 lockd 源码
+2602463	885	terry 说明客户端代码要放进 NFS 客户端文件系统实现里并说自己会尽快动手但服务端代码会先做完客户端代码自身还有一些问题需要先解决
+2602466	885	tom 认为 ahc 的事务开销显著低于 ncr 驱动但要看出差别得用大量并发 io 打到多台硬盘上而现有 benchmark 工具如 bonnie 都不太适合测这一点
+2602467	885	tom 称 Justin 与 Dave G 正在为 2.2-stable 制作 patchkit 且 2.2.6 之后可能把 CAM 收进 2.2 分支他猜测会以 kernel option 形式合入因为部分驱动还没 CAMified
+2602468	885	luigi 询问 audio 设备驱动里 FIOASYNC 该怎么处理同时提到 Bruce 曾建议 FIONBIO 应由 vfs 而非设备驱动处理想知道 FIOASYNC 是否同样如此还问读写阻塞时应返回短计数还是报错
+2602470	885	jaye 报告自己的一台 web server 出现崩溃 panic 信息为 vinvalbuf flush failed 调用栈指向 nfs_bio 里的 nfs_vinvalbuf 与 nfs_write 该机器以 NFS V2 UDP 挂载到 Netapp 上
+2602471	885	gram 转述朋友在 2.2.2 的 Compaq 上用 3C509 双网卡加 IDE 硬盘做网关时常出现 3 到 4 秒全网断联现象负载内存与磁盘 I/O 都查不出明显原因怀疑与 3C509 驱动有关
+2602473	885	kaleb 在 3.0-971225-SNAP 上构建 MT-safe 版 Xlib 时给 errno 全部改成 __error 但把非线程程序 xterm 链接上去跑却报 ___error 未解析外部符号主张在 libc 里加一个 #pragma weak __error
+2602478	885	brett 表示自己家里的 P166 还在跑 393 版本客户端却运行得毫无问题而工作用的 PPro200 已经做过一次 make world 更新所以两台机器表现差异可能与此有关
+2602479	885	ben 反问为什么不用 ssh 而称 ssh 是 rsh 的安全替代品自身带加密机制如果设置得当完全可以避免在链路上发送密码甚至不需要加密形式传输密码
+2602482	885	kaleb 认为有人说 POSIX 1003.1 2.9.3 定义 _POSIX_THREADS 就得定义 _POSIX_THREAD_SAFE_FUNCTIONS 的说法过于简略并援引表 2.10 与 4 到 8 节多条款说明缺少实现则不能定义
+2602483	885	andré 自述 2.2.5-STABLE 上挂 amd 便携盘启动耗时的 tar 作业，amd 到默认超时自行 umount 后系统挂起约十秒并重启，savecore 报 vinvalbuf 脏缓冲 panic，他询问这是 umount 的缺陷还是特性
+2602486	885	jhb 承认自己一直把 _POSIX_THREAD_SAFE_FUNCTIONS 的 otherwise 情形理解为把这些相关函数列为可选项，但经 Kaleb 提醒重读标准条款后改变看法，认为既然定义了就该在 libc 里备好而不只是 libc_r
+2602488	885	jhb 指出 libc 里的 cerror 应调用 __error 而非仅引用全局 errno，只编进 libc_r 会不支持内核线程，内核线程用的是 libc 加 libpthread，他还打算改 errno.h 让 errno 永远指向 __error()
+2602489	885	kalebskeithley 补充 __error 弱符号应属 libc 而非 Xlib 的另一条理由，ANSI POSIX ISO C 保留以下划线开头的标识符，历史上 X 用过 _X 前缀那是在 ANSI C 划走下划线之前，所以 __error 出现在 Xlib 里相当粗暴
+2602490	885	jhb 反驳 Xlib 不该知道操作系统怎么提供 POSIX 接口，__error 属于内部且随实现而变的东西，把它塞进 Xlib 相当于把底层 libc 的实现细节泄露给了上层图形库
+2602491	885	bug 做了内核调试并把日志贴在附件里，kgdb 的断点命中 unmount，回溯到 vfs_syscalls.c 第 280 行执行 dounmount，他建议在 return 前加一段判断该分区是否还有活动，但具体做法留给核心团队或拥有提交权限的人
+2602495	885	Chris 讨论跨系统正则库探测，Linux 用 regexp.h 的 compile/step，Solaris 用 regexpr.h，BSD 类走 POSIX regex.h 的 regcomp 等，autoconf 探测 POSIX 签名否则退回 compile/step
+2602500	885	nate 宣布 FreeBSD 版 JDK 已发布并给出 FreeBSD.org/java 地址，提供两个 java/jre 二进制不链接 X 与链接 Motif 加共享 X 库版本由 DISPLAY 变量决定走哪一版，并修复 AWT 窗口名与 SHMEM 泄漏问题
+2602502	885	Ulf 报告 AMI 起初同意提供编程文档如今改口拒绝，他将去找尚未介入此事的市场总监；Mylex 则已同意提供编程文档和一台免费的三通道 DAC960PJ 控制器供驱动开发，本周末即开工
+2602504	885	ken 说自己错过了 Which NIC is Fastest 那场讨论的中段，如今看到 3Com 45 美元的网卡便问它是不是适合百兆网络的高性能卡，并想和大约同价 35 美元上下的 NetGear FA-310TX 比一比
+2602505	885	asami 认为回答能否在线扩大阵列尺寸时应只说等有了支持它的文件系统再说别的都是浪费，讨论 DPT 阵列在线扩容毫无意义只会让人越听越晕，他坦言 ccd 也能扩尺寸但那又有什么关系
+2602506	885	mike 明确表示别买也别计划买任何 3Com PCI 网卡配 FreeBSD 用，即便部分适配器确实具备高性能特性 FreeBSD 也不支持这些特性，性能会一塌糊涂，他还请对方先去 FreeBSD 邮件列表存档里搜搜再发问
+2602507	885	grog 用 kgdb 写磁盘块时卡在 bwrite，回栈经过 vop_stdbwrite 到 vinumstart 与 vinumstrategy，帧 0 上 v_type 是 VBLK 帧 6 上变成 VNON，他看不出有何内存重映射，怀疑是 gdb 的问题或自己搞错了
+2602521	885	cjs 对 CSMA/CD 在重负载网络下碰撞消耗过大导致低效的论断大感无奈，说这种神话早被推翻近十年却仍在被人重复，他举出 ftp.cynic.net 上的 ethnetcap 文档，一条长 3000 英尺挂 24 台主机的以太网跑在九成以上容量
+2602523	885	cjs 认为测网卡 CPU 开销不必去量中断处理时间，只要在完全空闲的同一系统上分别装每张网卡跑 netperf，比较整体 CPU 利用率的差异即可，顺带还能暴露驱动里因对齐不当而需要额外拷贝之类的问题
+2602524	885	terry 指出 FFS 通过追加 cylinder group 即可支持扩容，只伴随轻微碎片化问题可用备份恢复化解，向上加 group 的代码微不足道，但要摘掉中间的块就得先写一个防碎片工具把重分配偏向要移除的那段区域
+2602526	885	asami 反问所谓 FFS 扩容到底是要打补丁还是已经支持，并针对碎片化可用备份恢复处理这句话直接说 Terry 不必专门提醒我们，语气相当不解
+2602527	885	terry 表示愿意考虑做一个扩大 FFS 容量的补丁，实际上只是 tunefs 的一次微调，但一旦开工很可能和 soft updates 正在改动的 tunefs 冲突，直到 soft updates 那些改动被提交合并之前，他还觉得那本该很快完成
+2602528	885	greg 表示希望 soft updates 相关的改动一就绪就发给他测试，他还提到自己这边可以提供一块 extensible volumes 作为试验对象
+2602529	885	sthaug 提到 der mouse 为 NetBSD 写了一个 fsresize 程序，既能扩容也能缩容，源码体积大约 50 kB，愿意贴出来，或从 nethelp.no/scsi/fsresize.c 那个地址取
+2602530	885	mike 认可 sthaug 给的那个地址没问题，转而追问实际用起来效果究竟如何有没有轶事，他认为 fsresize 能同时处理扩展和收缩这两件事，真做得到将极为有用
+2602531	885	ktsin 报告已在 ntpdate 上添加 -u 标志，使它能使用小于 1024 的非保留端口以便位于防火墙后的客户端与外部 NTP 服务器同步，并询问这些补丁能否合入源树
+2602534	885	Luigi 指出 dmabuf.c 一处 bug: d->flags 用或运算处理 SND_F_ABORTING 应改成按位与以清除标志位, 缺陷潜藏已久, 仅影响使用捕获通道且阻塞在 tsleep 时被信号打断的应用, 数日内将提交补丁
+2602537	885	gam 在 2.2.5 上为 sb0 声卡装驱动后重编译内核, i386/isa/pnp.c 的 pnp_configure 处报 function declaration 非原型诊断并 Error code 1 中止, 求教如何处理
+2602538	885	Tom 询问能否让 FreeBSD 原生应用加载 BSDI 2.1 或 3.1 与 Linux 的共享库, 提到 Openlink Software 只发布这些平台 ODBC 驱动而 iODBC 源码可取得并要求按需加载相应驱动
+2602539	885	freebsd 询问从 IDE 升级到 SCSI 该选哪种卡, Adaptec 2940UW 售价约 330 美元太贵, ASUS PCI-SC875 廉价却只支持 SCSI-2 无法接 Quantum Atlas II, 亦提到 DPT 卡很快打算以后添置
+2602542	885	hasty 请求社区里有人出面联系 DPT, 请对方把 FreeBSD 也纳入其支持自家控制器芯片的操作系统名单, 与其他系统并列
+2602543	885	Tom 认为 DPT 人员常在 freebsd-scsi 列表活动, 建议待 DPT 驱动进入 FreeBSD 正式发布版再谈, 因 2.2-stable 版本虽好但尚未提交
+2602544	885	se 称 Justin Gibbs 在 AH2940 驱动上的投入多于自己在 NCR/Symbios 驱动上的, 两者性能与 CPU 负载仅差几个百分点, 家用机 ASUS SC875 足够, 接近 100GB 才宜上 DPT
+2602545	885	terry 指出 /var/log/lastlog 按 uid 记录登录, 建议 uid 单调递增避免重用, 若用户删除可写入 0 值 time_t 作为重置标记, 并提醒不可销毁前一用户会计信息
+2602547	885	archie 在 ktsin 来信之后建议补丁另走 send-pr(1) 一并提交一份, 免得补丁只躺在邮件里无人跟进而被遗忘
+2602548	885	wjw 表示计划为多台服务器做 RAID-5 并搭配 PCI/DPT 与外置 SCSI 控制器, 若能像 Simon 所说那样扩充文件系统, 就能按需增加可用磁盘, 认为这会成为很好的 FreeBSD 特性也好作宣传
+2602549	885	Mike Smith 表示或可考虑 BSD/OS 2.1 库, Linux 库仅极受限条件下可用, 建议问 Openlink 移植 FreeBSD, 若已有 BSD/OS 版本则移植应属简单
+2602550	885	Tom 猜可用 linux-dev kit 把整套东西都做成 Linux 版来跑, 并问是否还有人对 FreeBSD 数据库连接感兴趣, 觉得厂商不会只为他一人做移植
+2602551	885	Mike Smith 表示若 2.2 驱动已稳定且不牵动系统其余部分便可用, 并请非集成驱动维护者查看 src/tools/tools/kdrv 里的脚本, 以便把驱动与自动安装卸载脚本一起打包
+2602554	885	hasty 建议搭一个 trace event queue, 把节点上想留的相关信息都放进去, panic 之后沿该事件队列回溯, 从中提取调试信息
+2602555	885	joe 首次用 cvsup, base system 为 2.2.5-RELEASE, 借 default 的 standard-supfile 更新到 2.2.5-current, 跑 make buildworld 中途编译报错, 问 -current 树能否构建
+2602557	885	joe 报 libskey 编译中断, 命令行带 -Werror, cc1 把告警当错误, stdio.h 与 ctype.h 报 __sputc __istype __toupper __tolower defined but not used
+2602558	885	John Birrell 指出 src/lib/libskey/Makefile 的 CFLAGS 里含 -Werror, 导致编译告警被当作错误中断构建, 追问头文件是否已更新, 并说明 CVS log 记录加入这些标志暗示该库本应能干净编译
+2602559	885	Karl Denninger 疑惑 -Werror 开关为何出现在这些 Makefiles 中, 认为把告警当错误会炸断构建并不合理, 定义而后未使用并非大不了的事, 请人解释缘由
+2602561	885	John Birrell 转述 skey 库与 lpr 套件均因告警被当错误而阻断 make world, 感叹是时候让 Jordan 出大棒了
+2602565	885	Studded 说明即使无 commit 权限也能查阅 CVS log, 直接到 FreeBSD 官网 support.html 页面上的 CVS repository 链接即可看到变更缘由
+2602566	885	terry 说起初以为 fsck 或 CG code 存在 bug, 实际是 IDE 电缆超出工作长度所致, 建议改用更短的 IDE 线即可解决
+2602568	885	terry 请人确认 NFS 卡死是否指客户端, 称自己近来一直在深入这段代码, 卡住的确实是 client 侧会把整机冻住
+2602569	885	jdyson 指出 Ultra-DMA/33 未比 16MHz EIDE Mode 4 提高时钟速率，但 Promise 控制器与 WD 硬盘跑 Ultra-DMA/33 时不容忍超长 IDE 线，因为双沿采样使频谱更高也更敏感于时钟偏斜
+2602572	885	eivind 自述装上 Terry 补丁后的 NFS 应当已经相当稳定，但他自己并不重度使用因而无法确证，除偶发构建问题与不定期的 VM 故障外 current 眼下整体还算稳定
+2602574	885	lonie 指出连设备支持范围更宽的 linux 也不支持这台笔记本的软驱，言外之意 FreeBSD 下同样无解，并附言自己正坐在这台机器上撰写此封邮件
+2602575	885	andreas 追问 Vinay Bannai 提到的那两个流行协议栈究竟是哪两个实现，并打趣反问这是否也算某种不可告人的秘密
+2602576	885	andreas 回复 Andrzej Bialecki 在同线程发来的软盘版 FreeBSD 发布公告，只回一句听起来很有意思，未补充任何安装或使用经验
+2602577	885	dreed 报告 freebsd 2.2.x 的 boot manager 在多盘环境下只呈现一块盘的菜单，两块时可跳到第二块再返回，三块时只能从第一块引导，因此询问能否修复
+2602578	885	jdyson 就 Norman C Rice 的追问回答称那些待修的补丁尚不能解决客户端在服务器失联时冻结整机的问题，他眼下正处理更严重的故障，但并未否认此问题同样严重
+2602584	885	chris 报告装上 pnp971020.tgz 与 snd980215.tgz 源码补丁、在 config 里写入 OPTi931 的 PnP 行之后声卡仍无声音，只能先由 DOS 初始化再进 FreeBSD，并询问所用 tgz 是否最新
+2602586	885	ulf 报告 Intel DK440LX 主板板载 EtherExpress Pro/100B 被 fxp 报 unsupported PHY 警告，type 为 11，ifconfig 只显示 manual 介质，无法用 mediaopt 调整
+2602587	885	abial 表示自己也收到与 Ulf Zimmermann 相同的硬件警告，但对方所说的无法设置问题在他手上完全不存在，一切正常运作，并反问对方漏报了系统版本，自己跑的是 current 版本
+2602591	885	msmith 指出要修好需先拿到 Booteasy 源码及其构建所用工具，并提醒即便修复菜单也只会列出两块盘，需要三块以上功能得改用 OS-BS 这类更聪明的引导器
+2602592	885	dannyman 报告近一周构建的 current 版本突然出现持续高负载，top 输出显示 load averages 已达 3.16 而绝大多数进程 CPU 占用为零，他不确定是 bug 还是正常现象，也在犹豫该走 send-pr 还是发信到列表
+2602593	885	terry 回答可以修，需重刷机器 BIOS 把 drive count 从 2 改大以让 BIOS 给出正确的 dl 值，因为引导管理器只能经 INT 13 接口加载代码而 BIOS 对该接口设了上限，SCSI BIOS 通常没有此限制
+2602596	885	terry 说明自己的 NFS 补丁只涉及锁，争议在于 advisory locking 是否该改成 veto-based 接口，理由是锁改挂 vnode、客户端锁须本地留存以便服务器崩溃后重设，而 rpc.lockd 与 rpc.statd 未完成，所以迟迟未提交
+2602597	885	capriotti 承认像素级界面固然好看但未必那么重要，坚持可视界面才是必需，并以自己花几天配好 NetWare 服务器联网的经历说明友好界面能把不懂的人在一周内变成管理员
+2602602	885	dgreenman 以 FreeBSD 项目核心团队首席架构师身份回复，称必须先确认主板上实际装的是哪颗 PHY 芯片，它应当紧挨着 82557 并与之直接相连，仅凭已有信息无法判断问题所在
+2602603	885	ulf 回复说说明书上标注的是 Intel 82555 PHY，不过机箱实物他还没有拆开，打算稍后打开机器确认板上实际安装的是哪一颗芯片
+2602604	885	dgreenman 回应说 82555 在驱动里其实早已被支持并标记为 type 等于 7，所以这台机器上那颗芯片必定是新版本，或者与既有支持列表里的型号存在差异
+2602605	885	dreed 引述 Mike Smith 关于 Booteasy 代码设计只适合简单配置的判断，随后给出自己的经验之谈，认为 OS-BS 用起来还不如 Booteasy 顺手
+2602607	885	ulf 拆开机箱后回报实物芯片上的刻字是 S82555 与 L736EB68，供对照驱动里既已支持的 82555 型号判断二者是否同一器件
+2602608	885	timmons 追问对方对这块板的整体使用感受，称听说它配备的是名声很糟的 phoenix bios，且在 SMP 列表上看到有人正因这个原因劝退
+2602609	885	mellon 提出 X11 ports 应装到 /usr/local/X11R6，用 imake 的 port 属 imake 层面问题应在上游解决，而 configure 程序不必装进 /usr/X11R6，建议在 bsd.port.mk 增加 USE_X11_LOCALLY
+2602610	885	rivers 提到自己的纪念性 panic 出现在 SCSI 设备，但 IDE 上也能复现，Julian 说过在不同设备上见到过复现，并反问各位是否在讨论别的事情
+2602612	885	luigi 询问 Alexander 装的是旧的 Sujal ISA_PNP 还是 stable 与 current 里的新 pnp 代码，建议改用后者，并说明 pnp.c 的警告不是真错误，真错误需要单独定位并修
+2602614	885	jmark 在 ISA_PNP 线程内请 Alexander 把上一次编译输出中最后一条 gcc 到编译结束的行发过来，说明加 void 的做法已经清掉了报出的那条消息，手上的信息已不足以进一步定位
+2602616	885	studded 附议 Anatoly Vorobey 提议把 X11 ports 从 /usr/X11R6 改到 /usr/local/X11R6，理由是为了一致性也与良好设计
+2602617	885	gianmarco 指出 2.2.5 并不存在 current 版本，正确名字是 2.2.5-STABLE，要用 stable-supfile 而不是 default 的 standard-supfile，并称 3.0-current 编译起来正常
+2602618	885	hubbard 反对把 X11 路径由 /usr/X11R6 改成 /usr/local/X11R6，认为这不是什么一致而是混淆，三年里大家早已习惯 /usr/X11R6 存放 X 库与二进制，此时改只会造成混乱
+2602620	885	kukulies 询问 -2.2.5 下 g77 相较 f77 或 f2c 有何不同，能否直接作为包安装，运行时是依赖 libf2c.a 还是自带运行时库，另问 -2.2.2 上是否有过问题
+2602624	885	povolotsky 从引用回复中得知 FreeBSD 上确有集群实现并直呼 GREAT，随即追问能否取得该实现的 patches 与 whitepapers 等文档材料
+2602630	885	dan 安装了 cvsup 系列包，Sysinstall 附带装了 modula 作为依赖，运行时报 ld.so failed 找不到 libXaw.so.6.1，用 locate 也没查到该库文件
+2602631	885	hasty 说公司里两万行 shell 写的系统安装工具试过调试，认为 sh csh tcsh 等传统 Unix 脚本语言已经过时且笨拙，推荐 Java 因它可扩展，并推崇 Design Patterns 一书
+2602632	885	niall 说明 libXaw 属于 X Window System 的一部分，未装 X 时可安装 X 或拉源码去掉 X 支持重编 cvsup，若已装 X 则用 root 执行 ldconfig /usr/X11R6/lib
+2602636	885	niall 反驳 C++ 在系统配置里显著快于 Java 的说法，认为 C++ 也许比 Java 快，但在做 GUI 类型系统管理时这层差异并不显著
+2602637	885	withrow 反驳传统 Unix 脚本语言过时且笨拙的说法，认为老并不必然差，Java 并非脚本语言，脚本语言在这一问题域仍有重要价值，另附一个讨论脚本语言在现代设计中地位的网址
+2602639	885	hasty 承认除处理海量项目外 C++ 与 Java 管理工具并无性能差异，认为新手、单工位工作站或小 ISP 场景下 java 与 c++ 方案的工具都不会有性能差别
+2602644	885	jamie 质疑 NFS 真无状态的说法，反问 Sun 当初试图在 network 上实现无状态设计时究竟是怎么考虑的，并直言自己也时常有此疑问
+2602645	885	alfred perlstein 建议可以尝试 cvsup 的非 GUI 版或在没有 X 的环境下用静态编译版，并给出 freebsd.org 手册 cvsup 页面的链接
+2602646	885	terry 澄清文件共享确实是无状态的，但文件锁定并不属于无状态范畴，强调这两者不可混为一谈，回应了上一条对无状态性质的质疑
+2602647	885	terry 反问对方所运行的 JAVA 解释器应该与自己不同，直言自己对此颇感不解，暗示判断差异正源于此，并回应上一条关于 JAVA 的讨论
+2602648	885	watson 引 Sandberg 1985 年的论文指出无状态协议让崩溃恢复简单，同时指出现实中文件锁定这种无状态无法表达的概念，并提及 Coda 保留客户端与服务端缓存状态但没有锁
+2602649	885	mark 计划与三人暑期开发 FreeBSD 的 GUI 管理系统，初始设计倾向 C++ 服务端配 Java 客户端走已有协议，可能采用 LDAP 做分布问题，并期待秋天 HTTP 与 Tcl/Tk 等项目会形成不错的 FreeBSD 管理工具
+2602650	885	hasty 先以 Most Cool 表示赞同，再建议对方可以看看 ACE 框架，认为它应该更容易配合 FreeBSD 即将到来的 elf 支持，末了祝对方 Good Luck
+2602651	885	niall 反驳按执行方式判定脚本语言的立场，指出 C 会先翻译成汇编再由 Intel 处理器硬件解释，Bochs 解释器也一样，反问这是否就算脚本语言，认为区分编程语言应看表达方式而非执行模式
+2602652	885	julian 自述在 DDB 中见过机器仍响应 ping 中断仍在跑时钟仍在走并追问新缓冲区如何分配与 malloc 是否成功以及是否已被 BZERO 清零
+2602656	885	asami 赞同 X 默认装到 /usr/local 并软链接到 /usr 以便管理员分配独立分区且提议将 /usr/X11R6 软链到 /usr/local/X11R6
+2602658	885	mike 说明调用 g77 与调用 f77 差异不大但仍使用 libf2c 运行时库并称错误信息一般更好生成的代码性能与 f2c 相似
+2602660	885	jkh 指出各种编程语言争论十年也写不出一行代码呼吁把精力转向成品落地而非在 sun 之下各语言优劣的相对讨论上浪费时间
+2602661	885	ladislav kostal 询问如何按时间窗口限制用户进程数并为三百多名用户配置 16 点后 ftp 与 18 点后 irc 及周末限制策略
+2602662	885	jkh 建议直接重定义 X11BASE 变量而不必在 /etc/make.conf 新增开关因为 X11BASE 已经存在且可直接修改达到目的
+2602663	885	asami 确认 FreeBSD 上有集群并提到本地实例仅 20 台机器同时附 Berkeley Td 项目链接 http://now.cs.berkeley.edu/Td
+2602665	885	jkh 补充设备特殊文件同样难以在无状态文件系统设计中表达与 locking 同属不可表示的概念而 Coda 则保留了大量状态
+2602668	885	jkh 认为现在把 X 位置改到 /usr/local 之外不合适称 2.2.6 版本变化已经不少希望能保持 POLA 尽量完整以维持兼容
+2602669	885	anatoly 反对用 X11BASE 变通方案称其属临时 hack 因 /usr/local/X11R6 逻辑上并非 X11BASE 会导致 mtree 安装时镜像 BSD.x11.dist 结构
+2602670	885	asami 指出改 X11BASE 之外还需修改 site.def 中 ProjectRoot 且厂商二进制硬编码路径会出问题并称此为 X 本身问题而非 FreeBSD 问题
+2602671	885	dawes 不看好 imake 会主动放弃单一 X 层级假设称 XFree86 当前重点在 X 服务器与硬件驱动但自己仍愿意协助审查相关实现
+2602672	885	terry 反驳执行方式决定脚本语言的立场称 C 也是经硬件解释属指令集语言而非脚本语言并建议改用 interpretive 一词并指出 BOCHs 是模拟器
+2602675	885	darren 询问能否为 socket 关联 vnode 以及 VOP_WRITE 等 VOP 函数是否对之有效并特别提及 unix domain sockets 场景
+2602677	885	robert 主张不必在 hacker 列表继续此争论并称若按执行方式定义脚本语言则 C 与 BASIC 与 PL1 与 PASCAL 与 COBOL 也应归入
+2602678	885	shimon 纠正 RAID-5 阵列扩容时奇偶校验位于设备层而非文件系统层文件系统只见普通 LBA 可寻址磁盘并称三十百分点性能折损对两小时停机代价可接受
+2602680	885	DOconnor 抱怨移植 craft 游戏时 gmake 生成 ELF 目标文件而 hcc 直接调用与 gcc 命令行得到不同输出并附 gcc 版本 2.7.2.1
+2602681	885	terry 确认 socket 可关联 vnode 但 VOP 函数不适用因 vp 被 fileops 指针接管内核 vn_ 系列调用无法直接对其工作
+2602682	885	jay 征询 FreeBSD 支持的硬件推荐方案能否同时处理 31 路 19200 波特率串行连接并应对突发非压缩数据的实时监测不出现缓冲区溢出
+2602685	885	jkh 认为迁移到独立分区不是重点而是应向用户提供足够磁盘容量估算信息以让 /usr 或其他分区按需大小并指出这是通用情形而非特殊情形
+2602686	885	asami 介绍 Tertiary Disk 存储架构旨在兼具磁带成本与磁盘性能以商用组件构建万亿容量盘系统并用 20 台 PC 运行 3.0-current 与 GridPix 界面
+2602693	885	philippe 表示赞同把 X 与 /usr/local 同置因 /usr/X11R6 与 /usr/local 性质相似合乎常理并称这是浪费带宽的合理讨论
+2602695	885	jkh 承认对方最初宣布 GUI 配置工具时自己已亲自测试过，但认为界面实现太少，还不足以判断在实际工作中能否行得通，故打算等更完备之后再回来看
+2602696	885	Philippe 询问能否让机器所有分区都做 CCD 镜像并包含根分区，坦承 bootblocks 无法读取镜像分区，又回忆曾以单用户重启修改 ccdconfig 移除坏盘后以单侧镜像恢复运行的经历
+2602700	885	asami 说明把 X 相关端口安装到 /usr/local/X11R6 之下并非 FreeBSD 自身的问题，除非大幅改造 imake 否则根本做不到，建议直接找 XFree86 方面交涉
+2602704	885	John 求助在 Compaq Contura 4/25 笔记本上安装 2.2.5 时，装入扩展 RAM 卡把内存提到 20MB 后即使 MAXMEM 设为 20 倍 1024 也启动即报 fatal trap 12 且止步于 npx0 探测
+2602710	885	blkirk 提出启动阶段无从安全地读两份 bootblocks，建议让 boot code 到多个位置检查 kernel 并做校验和挑好的启动，同时配合 /altroot 或 mfs 在 rc 早期完成这个动作
+2602712	885	nate 否定说 ACE 需要 ELF 支持才能纳入当前版本，直接指出 ACE 其实早已经在 Java 里实现了，因此不必等待 ELF 支持并入 current
+2602713	885	hasty 说明自己针对的是那些不想用 Java 实现服务器的用户，希望能把服务器做小，从而在系统资源紧张时也能获得更佳的响应表现
+2602714	885	stephen 提出像 BeOS 那样把数据库集成进文件系统的问题，设想在 vfs 层加挂钩用 rdbms 维护状态，并让应用借助现存 API 使用它，以 /etc 配置选择数据库
+2602716	885	dag 反问没有合适的规范就无法证明代码正确，认为这一点对复杂抽象数据类型或协议类代码尤其重要，并自述自己在奥斯陆大学讲授这方面内容
+2602717	885	terry 澄清对方可能把 JavaScript 与 Java Language 混为一谈，指网页管理工具在浏览器中执行代码时谈到的其实是 JavaScript，因此这属于 scripting 范畴
+2602720	885	shimon 认为 RAID5 断电导致奇偶校验错误其实类似未提交事务，可在启动时安排回滚，并列举把状态放进 NVRAM、在磁盘已知位置保存或实现日志等实现方式
+2602721	885	shimon 分享早年见到的一种方案：不用电池，而是用主轴电机的能量去刷新缓存，断电后由盘片电机发电再钳住引线停止主轴，此法在十四英寸主轴盘上曾实现过
+2602728	885	mike 承认自己对老磁盘断电行为的实验结论有误，感谢对方纠正，引对方提到厂商确认在识别到断电时立即停止所有操作，认为主轴惯性早已不再用于供电
+2602730	885	shimon 回应断电时磁头应立即离开活跃介质表面的说法，指出断电并非瞬时事件而是短暂过程需要一定时间，那些支持命令完成机制的旧驱动器丢失数据反倒更少
+2602742	885	shimon 对比后偏爱控制器级 RAID，指出可用现成磁盘和机箱更灵活，DPT 三个总线可分散输入输出并承受致命故障，并认为 RAID 已从运行特性转为一种保险，聚焦风险管理
+2602744	885	shimon 指出增大电容对开关电源会造成影响，认为这类思路已随着高保真转变为固态立体声而失宠，还反问 RAID 控制器的备用电池在 BIOS 复位后究竟能做什么用
+2602750	885	terry 提出希望在开启 soft updates 的机器上比较磁盘写缓存开启与关闭两种情形的基准数据，并怀疑磁盘写缓存这种功能很快就会过时
+2602751	885	john 指出仍有部分资金流入学术界，举例美国国家科学基金会的数字图书馆计划今年发放约五千万美元，可惜 SMP 开发在其提案要求里只属于边缘议题
+2602752	885	nate 表示政府资金会持续流入学术界和 SRI，但已远非过去规模，SRI 拿到的钱与十年前相比大概差一个数量级以上，说明整个局面正在改变
+2602753	885	amancio 表示必须拥有 SMP 才能支撑 tb 级资料库，建议安排熟悉华盛顿运作方式的人去争取经费，并指出 FreeBSD 的政府支持并不限于美国
+2602755	885	shimon 认为新闻一直是采用重度缓存 RAID-0 的理想候选，采用八条带配置，并凭经验推断 /var/spool/news 大约每十八个月才会故障一次
+2602757	885	shimon 认为不能假定操作系统会承担全部冗余逻辑，指出 Unix 缺乏隔室化，任何不相关代码的故障都会波及你的代码，因此文件系统与卷管理器比 RAID 本身更有研究价值
+2602759	885	ron 指向 sarnoff metacomputing 站点作为入口并称 FreeBSD 集群自 1994 年起便已在此处存在
+2602760	885	joe 自述 2.2.5 系统用作 web 服务器时突发无法登录报 /bin/sh 权限拒绝而 root 与静态程序仍可用动态链接程序却打不开 ld.so
+2602762	885	john 称曾在 2.2.5 上遇到同类故障是 486 硬件损坏致磁盘出错 fsck 把大段盘块搬到 lost+found 甚至吞掉大部分 /usr 最后换主板才解决
+2602763	885	tom 建议核查是否以 nosuid 挂载 /usr 否则许多功能会失效并追问根目录权限是否被改动因为那样会破坏各类非 root 操作
+2602765	885	tom 回应称已有集群设计只把重点放在性能上而非可靠性并举例说明希望能把功能从故障节点无感知地迁移到健康节点上继续运行而用户不会察觉到服务中断的情况
+2602766	885	tom 解释此举会让非 root 用户根本无法读取任何位置的任何文件并称这其实并不值得惊讶因为权限机制在所有系统上都是这样运作的
+2602768	885	alfred 怀疑所有盘块可能没有正确挂载或缺失分区甚至磁盘已死并建议检查 dmesg 中的坏扇区报告来确认分区是否完整无缺
+2602769	885	asami 认为为不依赖 imake 的 X11 端口新建目录没有意义并举 rxvt 为例说明去掉 USE_X11 后程序会像其它 X 程序一样进入 /usr/local
+2602770	885	tom 询问 FreeBSD 是否支持 Iomega Ditto 2GB 这类软盘形态的 streamer 设备并补充说明该设备属于软盘类型
+2602772	885	asami 提醒要当心 X 资源文件问题并非人人都设置了 XAPPRESDIR 这一环境因此承认对方说法成立但该方案能否生效并不确定
+2602776	885	fernando 作为阿根廷 ISP 网管反映从自家 FBSD 拨号到 Bay Networks System 5000 后与其它 FBSD 之间 telnet 不通而经 Cisco 则正常
+2602777	885	remy 实测关闭磁盘写缓存后性能下降 2 到 10 倍认为内核 RAID 虽是廉价方案但他更偏好外置并要求该功能务必设为可选
+2602778	885	jeremy 认为资助更可能来自 Netscape 因其近期需要一款快速稳定的廉价 i386 OS 来应对 SuiteSpot 网络缓慢这一尴尬局面
+2602780	885	nate 称据他所知从未有任何 NCR 用户报告它出问题认为它要么可用要么不可用既无数据损坏也无怪异报错只要被探测到就能正常工作
+2602781	885	dan 计划编写支持 Bus master DMA 传输的 3Com 3C905 网卡驱动并询问从零接入内核接口需要哪些调用以及 xxinit 与 xxattach 各该做什么
+2602783	885	larry 在编写 token ring 驱动时询问 probe/attach 期间能否处理适配器中断并说明调整 spl 级别围绕 DELAY() 调用仍无中断响应
+2602790	885	peter 否定称中断处理程序是在 probe/attach 之后才安装并指向 /sys/i386/isa/isa.c 作为参考依据
+2602792	885	semen 询问 mbuf cluster 在物理内存上是否按 PAGE_SIZE 边界对齐并请教是否需要为此专门加以考虑处理
+2602793	885	alfred 就先前误发出去的一份玩笑稿向大家致歉说明若冒犯了任何人请见谅并称那只是一份草稿和玩笑并非有意对外发出希望大家别太介意
+2602796	885	tom 补充集群可通过分布式锁管理器加共享磁盘存储实现并称这是当前集群开发方向同时指出 DNS 已有容错机制且 IP 地址接管最为关键
+2602797	885	nate 补充指出 PCCARD 设备属于例外情形并明确这其实是一处 bug 除此之外的情形与前述关于中断处理程序安装时机的判断一致
+2602799	885	jonny 求助 dump 到 /dev/null 仍无法正常结束进度异常上升疑似 dump 缺陷或文件系统问题并称近期出现过 freeing a free frag 类 panic 而 fsck 查不出错
+2602812	885	Simon 针对数据仓库全表读取负载建议采用 256KB 或更大的条带并开启 read-ahead 预读，认为此类应用会受益于 Super-Ultra-Wide-ExtraWide SCSI
+2602818	885	Simon 提到自己上次接触 Mylex DAC960 时其水平只相当于五年前的 DPT 且更易出错，当时在 Intel 做大型基准找不到支持，匿名打电话给 DPT 热线反而更有帮助
+2602819	885	Simon 认可专用系统更易长期运行，理由是变体更少代码执行路径也更少，像恒转速运行的发动机一样稳定，并希望有计算机科学家来研究这个现象
+2602820	885	Simon 认为基准测试多用直连磁盘而非 RAIDbox 的差异很大程度源于厂商政治，他曾为一家 CPU 厂商工作，其基准主要跑在特定 O/S 与 RDBMS 上，选用非 RAID 控制器因政治正确品牌有 bug
+2602821	885	Bob 报告升级到 2.2.5 后 ed0 偶发 NIC memory corrupt 报 invalid packet length，网卡型号 SMC8216 地址 00:00:c0:69:14:86，询问是否值得提交 bug
+2602823	885	Simon 不认为 Plan9 能解决线程提出的问题，指出 Plan9 比 5ESS 更新，并自评自己的定义是 Plan9 应当是 Unix 本该有的样子
+2602824	885	Mike 表示除非硬件明确要求，否则应假设 mbuf cluster 按所运行架构对齐，若有硬件要求则应编码兼容各种情况并针对最契合的对齐做优化以提升可移植性
+2602831	885	Nate 提议将 SCSI Bus redundancy 讨论移至 scsi 列表，认为该话题已长时间延续虽仍有帮助但已不再适合 hackers 列表，并特意留下在 hackers 请其他人帮忙转移
+2602832	885	Terry 反问对方测试是否包含 soft updates，认为软更新在拓扑上等同于把写缓存从控制器挪到内核，并说自己手头没有能关闭 DEC 硬盘写缓存的硬件无法自答
+2602834	885	Simon 称自己开发环境使用 FDDI CDDI，DEC 卡受 FreeBSD 支持，即插即用，能提供冗余且无需昂贵交换机，同时用 Intel 100B 卡跑 100mbit PtP，评价内核子系统好用不出问题就是最高褒奖
+2602837	885	Simon 回忆 FibreChannel 数年前演示中单盘超过 1700 TPS 且冗余抗 EMI RFI，可惜昂贵；他澄清自己并非为 DPT 工作，只是有需要时得到慷慨帮助，另在科罗拉多见过另一家公司有 FCAL HBA 但从未联系上
+2602838	885	Simon 指出对方方案属用户空间应用层，在黑箱 O/S 与黑箱 DBMS 上是唯一可行方案；若想借 FreeBSD 让应用免除此负担则次优；并称 FreeBSD 至今未有伯克利许可下的 journaling 文件系统
+2602840	885	Simon 称自己所有测试均为数据库导向偏斜至 50% WRITE 占空比，并有一台可登录跑测试的系统配 32MB cache 和 6 宽 RAID-0 阵列，只等对方提供基准测试程序
+2602844	885	Mike 询问是否有支持 DMA 的 IDE 缓存控制器，认为值得支持；此前 Wilko 提议起价 250 美元的 IDE 缓存控制器测得 2us 以内缓存命中延迟
+2602846	885	Simon 称数据库引擎类工作的内存访问比专用硬件慢 10 到 25 倍，节点间通信速率约 800MB/Sec，认为聚类内存访问是有智识挑战性的项目
+2602848	885	Simon 直接答复 Mike 关于 DMA 之问，DPT 控制器都做 DMA，PCI 版只走 DMA 已无 PIO；但 IDE 卡看起来像标准 IDE controller，商店里号称做 DMA 的其实他 IDE 知识已过时不敢断言
+2602850	885	Simon 反问能否把 SMP FreeBSD 的 PC 放到那里作为 5E 调试机，肯定比 SPARC 跑得更好，回应 Dyson 关于 Sun 工作站上跑 5E 调试测试版可能未产品化之说
+2602852	885	Peter 询问如何在程序里检测 PPP 是否连上，运行 PPP in auto 模式时希望随时判断调制解调器是否已接通，但他发现 tun0 上 flags 恒为 0x8051，无论调制解调器连接与否都相同
+2602853	885	Peter 想通过 WWW 网页给 FreeBSD 管理 UUCP 与 Squid 并做重启按钮，用 CGI Perl 脚本调用 /sbin/reboot 却只见进程全被杀而重启流程停滞，推断是 httpd 被杀带崩 CGI 与 reboot，即使在 CGI 里 fork 也一样
+2602856	885	Wilko 附议自己同样使用 FDDI DEC 卡，即插即用开箱即用，每张只花了 5 美元觉得应该多买几张，现在还想再弄一个 FDDI hub 免得为用 FDDI 把机器全开机
+2602858	885	wilko 向 terry 反问到底想关哪台机器哪块硬盘的 write cache，说自己手头没有他说的 DEC drive 那种关不掉的硬件，也许能帮着找出让磁盘同意的方法
+2602863	885	Remy 回答 terry 关于 soft updates 的问题，说自己没有测，用的是 12 月 25 日的 3.0，反问 soft update 与 async mounts 相比如何，以及驱动对每次写都立即回 OK 是否还使 soft update 有效
+2602864	885	nik 提议为 ftp.freebsd.org 下 incoming 目录制订新政策文档并同步发到 hackers 与 ports 两个邮件列表请人提意见
+2602868	885	greg 换 ISP 后 FreeBSD 主机用 ppp -auto 无法连接 ppp.log 停在把分配的 IP 关联到网卡之前
+2602869	885	ken 猜故障原因可能是 ppp 登录脚本存在差异不同 ISP 的登录提示各不相同可能是 login 也可能是 log 或 logname 因此 ppp -auto 匹配不上提示
+2602870	885	greg 确认新 ISP 能登录成功但不确定应该把 buad rate 从 115200 改成 33.6 以匹配对方 33.6 modem
+2602871	885	Yuri 指出 115200 指的是 port speed，无需降回调制解调器的速率，因为 modem 之间会自行做数据压缩，波特率按端口速度设即可
+2602877	885	niall 断言 sbabkin 提出的两台 DNS 服务器共享数据结构的动态 DNS 方案会让 DNS 服务器过载不堪
+2602878	885	tom 说 BIND 本身用 NOTIFY 就能做到这一点不必引入共享内存结构且反驳 Niall 指出的 resolver 库等主服务器超时才转投从服务器的说法称自己连主服务器失效都察觉不到
+2602879	885	gibbs 说 SCB paging 上限 255 事务当前 SCSI 系统开到那么高有危险建议试用下个 CAM snapshot 观察性能变化
+2602880	885	karl 说 RAID 阵列上跑的是不能宕的 NFS 文件服务器 news 与认证库但 CURRENT 内核在系统层面口碑不稳
+2602882	885	niall 反驳 karl 断言没有一台机器能容忍宕机的说法反问是否听过 Stratus Computer Corporation 这类主打高可用而生的厂商
+2602886	885	ron 归纳 FreeBSD 的 VM 有问题实现、与 VFS 交互（如 NFS）与架构三类其中架构问题最困扰他举例 NFS 后端 mmap 后调 msync 页面并未被清除
+2602887	885	benedict 说重启应该用 kill -INT 1 而不是 Leif Neland 建议的 kill -KILL 1
+2602888	885	wilko 提议在荷兰 Arnhem 办第二届欧洲黑客聚会参照 Christoph Kuku Kukulies 几年前办的 Aachen party 并搭了封闭 mailing list 收集意向
+2602890	885	terry 说他的 DEC 驱动器关不了 write cache 需要改的是硬盘板载写缓存 julian 会做一批硬件测试
+2602896	885	sbabkin 问 Philips 26XX 与 HP 4020i/6020i 停产后 FreeBSD 还支持哪些 CD writer 并问 Sony SCSI 写盘机是否在支持之列
+2602897	885	Andrew Maltsev 问 FreeBSD 里 ATX 自动关机和锁定电源开关特性是否有人实现并表示想自己动手尝试实现而非只等别人完成
+2602898	885	gibbs 说 WCArchive 也不能宕与 NFS 文件服务器 news 与认证库同类且老系统经移植 CAM 应能跑起来
+2602899	885	minnich 追问 3.0-SMP 下 vm_map_clean 把 syncio 和 invalidate 合一传给 vm_object_page_clean 底层 VFS 收不到区分 invalidate 的独立信息
+2602900	885	Smith 说这些 ATX 特性据他所知目前无人实现建议改用 APM 并注意 BIOS 设置正确并补充电源风扇等编程接口应该也已标准化
+2602902	885	jordan 提议把 FreeBSD 的 WorldCon 与荷兰黑客聚会合并日程定在九月二十五日阿姆斯特丹两个活动或许可以合办
+2602903	885	Lewis 说自己查 PPP 链路是否活动一直用 /var/spool/lock/LCK..cuaa? 锁文件是否存在判断但怀疑这个方法不够周全
+2602904	885	gibbs 说 DPT 驱动需要 CAM 那套软中断钩子 2.2.6 发布前做不了这么大的改动等 2.2.6 切出后再合并
+2602905	885	lehey 反问所谓两活动其实算一桩 认为把黑客聚会与另一场活动并列描述为两件事根本不成立 只当是一场聚会应当合并起来看待
+2602917	885	lehey 自述正在考虑入手一台 CD-ROM 刻录机 向列表征询机器型号推荐以及实战经验与相关使用心得 想听到有实操者给出的建议
+2602918	885	berlin 推荐 Ricoh 家的 MP6200 光驱 自述这台机器在他手上所有主流操作系统都能正常工作 连平时不好搞的 Linux 环境也一并搞定了
+2602919	885	semen 认同 mbuf 数据区不会跨越页边界的判断并说自己实测也跑通了 又追问需要一段对齐内存时应该直接调用 contigmalloc 还是 malloc 再手动对齐
+2602920	885	kelly 建议把争取资助的定位改成免费又安全的 Windows 替代品 因为政府现在才意识到 NT 那套安全宣传其实名不副实 但替代 Windows 还得顺带替代 Word 与 Excel 因为政府机器实际上就是 Microsoft Office 平台
+2602922	885	smith 反驳说如果要找一个真正称心的字处理器就上 WordPerfect 因为它确实能在 FreeBSD 上跑起来而且品质极佳远胜前面提到的那些替代方案
+2602923	885	jonny 自答根因在于主板有故障让系统频繁 panic 他甚至要用 clri 手工删除 inode 因为 fsck 也修复不了文件系统 结果 ls 列出 /usr/bin/ranlib 尺寸显示 1125899906859008 而 dump 却报出负数时长
+2602924	885	greenman 说明 malloc 返回的内存保证按 2 的幂对齐 且大小不超过一页时不会跨越页边界 内核里许多地方都依赖这一性质 需要一大块物理连续内存则改用 contigmalloc
+2602926	885	bulte 指出 Amsterdam 与 Arnhem 根本就不是同一座城市 因此反驳把黑客聚会与另一场活动当作一场来看待的表述根本不成立
+2602927	885	robert 表态把两场活动合并举办是个好主意 又顺势询问有没有人会去六月 New Orleans 的 FREENIX 会议并表示自己也打算前往 毕竟他挂着 freenix.fr 地址不能错过
+2602929	885	hubbard 说自己一行人打算去 New Orleans 参加这次会议 事实上今年去那里的核心团队人数会比以往任何一次单地聚会都要多
+2602932	885	hubbard 强调两活动本来就不是一回事并反问谁说过它们相同 建议因两地点已经很近索性合并举办 免得一月去 Arnhem 再回 Amsterdam 折腾一趟
+2602933	885	marino 顺便问 FreeBSD 会不会在即将举行的 CeBIT 上设展位 如果会的话展位设在何处 顺便是否还会出售 FreeBSD 的 CR-ROMs
+2602935	885	ederveen 建议 FreeBSD 争取更多企业为 CeBIT 之类会议提供赞助以弥补 CDROM 销售受限的缺口 并表示愿意凑小预算支持 FreeBSD 以及 Squid Diablo Apache 等自由项目 也提到赞助若能用于 SMP 与 RAID 等需求会更受欢迎
+2602938	885	derny 说买了台 Yamaha CRW4260t 但 FreeBSD 光盘里带的软件用不了 自己写单轨写入程序虽然能写但结尾仍有问题 FreeBSD 能挂载而 Win95 拒读 这台机器有 2Mb 内存使用 MMC 命令支持 6X 读 4X 写 CDR 与 2X 写 CDE
+2602939	885	babkin 简短追问大家提到那款 Ricoh MP6200 刻录机要在 FreeBSD 上做到能正常工作究竟存在多大的实现难度
+2602941	885	eischen 补充说无法从 Ricoh 拿到那款 CD-ROM 的 SCSI 规格因为对方要求他先签保密协议 NDA 不过他相信既然 Linux 那边已经有人支持就一定摸清了用法 他自己拥有的一台 HP SureStore 6020 在 FreeBSD 上跑得很好
+2602942	885	berlin 给出两条路一去找 OEM 转产该光驱的公司索取规格 因为有些厂商不会让人签 NDA 二反问其实并不需要规格文档就能写代码 因为 cdwrite 用的就是 scsi 3 mmc 的通用驱动
+2602944	885	shapiro 反驳说大型 ISP 对可用性非常重视 不少已经改用 48VDC 并把设备集中托管在 NAP 交换中心以符合 Telco 标准 同时指出柴油发电机组切换需要 15 到 180 秒并非瞬间可用
+2602945	885	moncreaff 建议从 cvs 上取那份相关代码 又提醒可以参考 net/open bsd 的实现 因为 freebsd 封存之后他们的代码经过一轮清理质量更整齐
+2602946	885	eischen 追问对方提到的那条路线能否给出具体指向 又说明自己希望支持 wormcontrol 就需要向 worm 驱动里补入相关代码才能实现
+2602947	885	berlin 直接给出一个靠谱来源 ftp.fokus.gmd.de 上的 cdrecord alpha 版 建议取最新版本并阅读 README.xxxBSD 说明文件就能拿到想要的东西
+2602949	885	brian handy 自述从菜鸟视角给 worm 驱动添加代码并不棘手，只要让设备按 worm 驱动器识别即可，与 HP 或 Plasmon 用同命令便能成功，若遇到不配合的新型号难度才上升，本人不代 eide 驱动器发言
+2602950	885	bishop 承认切换时间问题并补充说柴油发电机其实不太可靠，不管启动多少回都会失败一次，比例记号记为 N，上次接触这类设备时 N 大约十五
+2602952	885	madd 罗列让柴油发动机可靠启动所需的十项改装：块加热器控温在八十到一百二十华氏、油加热器、电动油泵提前三十秒供二十至六十 PSI、加大油滤、冷却水泵五至十 PSI、电池组、每轮检验气阻器、连续运行不低于四小时、月度测试
+2602953	885	brian handy 反驳称长年维护大量电视发射机和电话前哨站从未在用户手册中看到十步清单，也许该上 Cummins 网页查，若费这么大力气保养柴油机该休假，那些互锁装置会先失效到连启动机都来不及转
+2602958	885	terry lambert 建议需要使用 contigmalloc 就在开机时分配，当前内核不支持页面迁移作为消除内存碎片的手段保证后续随时能拿到连续内存，若频繁分配释放又会留下连续区域碎片化问题
+2602960	885	daniel berlin 称 SCO 的 merge 4.0 支持 win95 在 openserver 下运行，含网络能力，可运行于 x window 或全屏窗口；若有多处理器则 win95 比普通 win95 更快
+2602962	885	terry lambert 主张真正的高可用应建立在 48VDC 电源、独立电池包与独立供电之上，这是电信业的常规做法，同时补充美国开始严肃讨论互联网拨号音概念，要求数据包必须流通，若自称公共运营商就得按运营商的可靠性标准行动
+2602963	885	simon 在回应中认同 Karl 关于 DC 到 DC 转换的说法，其要嘛昂贵、要嘛廉价但耗散大，还补充自己曾做过卫星地面站微控制器相关工程，并总结超过六台服务器就值得改机架式直流供电
+2602965	885	simon 明确肯定 Terry 的论点并补充称电信设备运行在 48VDC 上，大多数交换机房内不允许也不存在市电交流，机柜里甚至连生成交流电都不允许，据此重申若 ISP 自称公共运营商就必须像运营商那样在可靠性上行动
+2602967	885	simon 给出具体比例称住宅区约二十比一、商业区约四到六比一，同时请求 Terry 参与构建 FreeBSD 高可用服务器，说自己在原雇主处做这类工作时约定通用代码回流 FreeBSD，该约定依然有效
+2602968	885	karl denninger 提醒 48VDC 听起来无害其实不然，那些交换中心的功率足够大让他工作时要格外小心，若把正负极短接就会发现危险所在
+2602970	885	greg lehey 提出 RAID 5 驱动实现写入需要读回两块做异或再写回，读等正常请求可并行下发子请求并在 iodone 里做 biodone，但若 iodone 属下半部不能调用 VOP_STRATEGY，则难以实现干净方案，故询问能否在驱动程序下半部调用
+2602971	885	julian 说明 DPT 驱动相关代码已做条件编译，只要不去启用 DPT 驱动就不会见到问题，但真去启用时无法正常编译，本人承诺明早修复
+2602973	885	ccsanady 询问 FreeBSD 缓冲区缓存目前最大上限是否仍在编译期静态设定，Linux 上缓存可动态增长至接近物理内存上限，能否在 FreeBSD 上做类似机制，上限若设过高会不会挤干其他部分，并提到有五百一十二兆内存的场景
+2602976	885	John S. Dyson 说明 FreeBSD 有两种缓存机制：写回缓存限定合理大小避免磁盘被挂起请求压垮，另一部分是全部内存的写穿读取缓存，两者物理上同一逻辑上略异；建议可用 iozone 近满内存测试验证
+2602978	885	John S. Dyson 澄清 Chuck Robey 所说的电信设备标称 48V 实际运行约 55 至 56 伏、被电击并不算事只是振铃电池更痛，真正问题是 48V 加上千五百安培电流下金属首饰会熔化烧伤皮肤
+2602983	885	simon 补陈螺丝刀短路事件声响如手榴弹，那把掉落的螺丝刀未伤及人只罚了大约三十五天禁闭，并援引遥控车比赛中 sub C 镍镉电池可放出六十安培约三分钟的现象佐证低阻抗物体短路直流电源的危险，还提到直流方案源自早期机电式直流交流转换器的时代
+2602984	885	simon 认同并非所有电信公司在托管机房都禁止 110V 交流电源，这对像他雇主那样的人有意思，但他们的设备直接连交换机所以他们坚持 48VDC，也可能是自己没问
+2602985	885	zach heilig 按 Terry Lambert 建议整理代码并清理后编译测试，结果 ppp 检测始终返回 tun0 为 up，与实际链路状态无关
+2602986	885	asami 说明 Tertiary Disk 与 GridPix 项目已把更多资料加到架构页面，可从主入口 now.cs.berkeley.edu 下的 Td 主页进入，本人明日启程日本一周后回来补充，并回复说他们不运行奇偶校验类 RAID 也不运行任何网络文件系统
+2602987	885	vinay bannai 请求有人指明 OS-BS 所在位置，是否可给出 URL 或有源代码，并以 best.com 邮箱署名
+2602989	885	Allen Campbell 建议不要查锁文件是否存在而应查看接口状态，指出 pppctl(8) 手册页给出了如何检测 ppp 状态的示例，并认为 pppctl 仍不够理想，因为它通过 telnet socket 控制运行中的守护进程并要求解析会话输出，故提议 ppp 需要
+2602990	885	Chris Csanady 用 soft updates 代码建内核重启，rm -rf /usr/obj/usr 时系统自动重启，fsck 修复数千行，ls 报 Bad file descriptor，并现 UNEXPECTED SOFTDEP INCONSISTENCY
+2602991	885	rich 提供 ppp_up shell 脚本以检测 PPP 是否在运行，脚本正文是一行 ifconfig -l -u 接 grep 检查 tun0 接口，用 ppp_up 加 echo PPP is running 即可判定 tun0 up 状态
+2602992	885	original man 回复询问 OS-BS 位置的问题，给出的 URL 是 http://www.prz.tu-berlin.de/wolf/os-bs.html，并称 you re welcome 附眨眼表情
+2602993	885	John S. Dyson 称 soft-updates 团队接近提交，但启用时仍可能不稳约两周，尚需 testing 与回归测试，个人估算到四月一日的 softupdates 将真正可用
+2602995	885	allen campbell 指出通过 ifconfig -l -u grep tun0 仅能判断 tun 接口有活动却不知具体是什么在跑，他配置了多个 ppp 分段，并建议解析 netstat 输出或做反向域名查找
+2602996	885	ian kallen 通告 SF Bay Area FreeBSD 的 User Group 于 3 月 12 日在 Silicon Reef 举办 meetup，URL 在 arachna.com，声明 URL 之后关于 UUBP 的内容是玩笑，正式议题待定
+2602997	885	terry lambert 建议去查看 net/if.h 中的 IFF_RUNNING 标志以判断链路状态，再用 ifconfig -a 在链路 up 前后对比这些 flags 就能定位应观察的对象
+2602998	885	回答是否已在 /etc/fstab 里启用 soft-updates，dan 提到该代码 commit 之后仍可能要经 testing 与回归测试才能稳定，故 fstab 的启用方式有待确认
+2603000	885	daniel 询问定义上如何创建一个新的 ethernet device，并列出他可以使用什么样的 device name，同时提出他提议使用 dx 这个名字是否可行
+2603003	885	Keith Pitcher 在 2.2.5-release 上应用 Ustimenko Semen 的 SMC9432tx 驱动 patch 1.62，重编内核重启后系统只检测到一个未知硬件类型 tx0，dmesg 中并无 tx0 设备
+2603008	885	Ollivier Robert 回答 soft-updates 目前须通过 tunefs 而非 /etc/fstab 启用，列出 tunefs 的 a d e m n o p 各选项，包括 n 的 enable 与 disable 及 p 仅打印当前设置
+2603011	885	ainvar 说他手上的 MP6200 IDE 版 FreeBSD 不识，附带的 Windows 95 软件不支持 Rockridge，因而无法做出长文件名，他转而想装 Linux 来制作 BSD cds
+2603014	885	Luigi Rizzo 在一台机器上起两个 ppp 实例做 ppp over tcp 测试，ping 出现 3 percent packet loss，丢失的是中间序列号 23 的包，并猜测与 TCP delayed ack 有关
+2603015	885	Amancio Hasty 通告 ACE 已被移植到 Java 但仅完成大部分，项目主页在 wustl.edu 的 pjain java ace 路径，并附上 FreeBSD 的 Java 主页链接 http://www.freebsd.org/java/
+2603016	885	Joe Orthoefer 用外部 SCSI 版 MP6200 在 3.0-971108-SNAP 上烧盘成功，探测为 cd0 但报 CD-ROM can not get the size，关键步骤是建立 scgx 指向 cd0c 的软链，他开着 SCSIDEBUG
+2603020	885	marc 为 Apache 2.0 提出高性能 web 服务器内核需求，含 decent kernel threads、可作用于 sockets 的 AIO、sendfile 系统调用、高效 poll，并追问 MCLBYTES 分块是否已修复
+2603022	885	John S. Dyson 说明 decent kernel threads 与 AIO 都将入 V3.0，他正与 John Birrell 合作内核线程，AIO 已在 current 只余一两处小 bug，且已被一家大数据库厂商使用
+2603023	885	Luigi Rizzo 补充丢包测试：每次丢回复包时 show compress 输出中的 miss 或 uncompress 计数就增长，他不确定是否只对 ICMP 生效，并顺便建议 ppp 用定长数组替代每包两次 malloc
+2603026	885	marc 建议 sendfile 系统调用应接收 file descriptor、socket 以及 header trailer 信息，让 header、文件描述符与 trailer 直接到网络上，从而避免在 write 与 socket buffer 之间做拷贝规避的内核工作
+2603028	885	Mike Smith 对 sendfile 持怀疑态度，认为那更像一种 grubby hack，问 mmap 与 AIOwrite 是否已足够，指出 AIO 已能满足写完或失败前无需干预 write 的需求，并反问是否真有必要
+2603031	885	marc 澄清他早前提到的 HTTP-transmit-file 系统调用只是玩笑并非认真提案，转述 HTTP-NG 当前处于早期开发将允许多路复用传输即多个文档在同一 TCP 连接上复用，并给出 MUX 草案链接
+2603032	885	Luigi Rizzo 指出当前 mmap 方案有两处拷贝，一为 write 到 socket buffer，一为将 socket buffer 组装成网络卡可直接 DMA 的报文，且这些拷贝在现代机器上可达 250Mbytes 每秒，故不值得做
+2603033	885	luigi 说从对方给出的 URL 下载到的 ppp 版本没有复现丢包问题，他此前仅在该版本上验证过，并未实际测试当前或稳定版本
+2603038	885	dan 询问 tunefs 使用时应指定哪个特殊设备，他试了 /dev/wd0a 但拿不准是否必须在单用户只读分区下运行，认为自己有遗漏什么
+2603039	885	grog 说 tunefs 用 raw 设备如 /dev/rwd0a 作用于未挂载文件系统，但根分区做不到只能从 floppy 引导用 fixit，其他情况 single-user 较好
+2603040	885	julian 说 DPT 驱动已入 2.2，需在 config 文件中加 DPTOPT 选项先测试，待证明工作后再无需该选项
+2603045	885	alfred 认为应聚焦 wine 项目，把 win32 集成到 freebsd 只会带来无用的调用并使 freebsd 臃肿，wine 作为独立应用更好
+2603047	885	amancio 提到曾有一家做类似 wine 产品的公司只缺一点助力而我们没给，他已忘记公司名字并认为 Terry 知道指的是谁
+2603048	885	david 报告在 2.2-STABLE 系统上运行 make world 时 install 步骤因缺少 locale 目录 sl_SI.ISO_8859-2 下 LC_TIME 失败，他手工 mkdir 修复并质疑 installworld 是否应自动建目录和符号链接
+2603050	885	任职 GE Corporate R&D 的 david 在 julian 关于 DPT 提交的邮件下补一句，坦白自己对这一缩写并不熟悉，请求他人解释 DPT 究竟指什么
+2603052	885	luigi 也认同对方的怀疑并追问 2.2.1 到对方代码间有何变化，同意次日再试，同时质疑保留长队列无意义因为超时会重传
+2603053	885	danberlin 解释 DPT 全称是 Distributed Processing Technology，做 SCSI 控制器且擅长 RAID，他的 ISA DPT 2021 性能强于多数 PCI 卡
+2603054	885	alfred 指出相关工具位于 ftp://ftp.freebsd.org/pub/FreeBSD/tools 下，并说明这并非 hackers 讨论的话题
+2603055	885	ollivier 引 Greg Lehey 的结论补充道，单用户模式下直接对根分区运行 tunefs 后立即重启即可，因为文件系统已为只读状态无需先卸载
+2603056	885	brian 说两者之间并无实质差别，但 DEFLATE 优先级高于 PREDICTOR1，因此他推测新版启用了 deflate 压缩
+2603057	885	randall 说改用 /bin/csh 就立刻修复了问题，并询问 /bin/sh 那个 SIGIO 相关缺陷是否已在 -current 中报告或修复
+2603058	885	cj 想用 BSD 代码做 IP 转发引擎在 VxWorks 上接 OSPF 路由，目标是一台支持上至 10000 条路由的高性能路由器，但他承认路由代码与内核耦合紧密
+2603059	885	amancio 说 OSKit 从各操作系统提取特性但他并不参与，他一位朋友想用 OSKit 做路由器，他建议直接用 FreeBSD 裁剪即可
+2603060	885	jonny 引用 dyson 解释 FreeBSD 有两种缓存，写回有大小上限而写穿读缓存用全部内存，两者物理同一份逻辑不同，设计让 sync 不会冻结系统
+2603062	885	terry 指出那家公司是 Willows，它商业且面向大 UNIX，FreeBSD 加 Willows 开箱成本超过 Windows95，政府资助倾向支持免独家采购论证的项目
+2603063	885	terry 认为做系统调用的意义在于省掉从 backing object 到 mbuf 的复制，并指出许多 NT 产品用 TransmitFile 规避 WinSock 开销
+2603064	885	jkh 认为 Wine 相比 SoftPC 从来不够用，它需要远超一点推动力，观察它三四年以来都不够跑 Win95 二进制，与其等 Wine 成果不如把 BOCHS 性能做好
+2603065	885	jkh 说目录结构偶有缺失是 mtree 规则未重跑所致，只需跑 mtree -deU -f /usr/src/etc/mtree/BSD.usr.dist -p /usr 即可重建正确目录
+2603066	885	terry 说上次检查时 WINE 运行 WIN32 应用表现并不好，还需要从 DOS 机器上 C 盘 WINDOWS 目录取相关组件才能运行，多数是 DLL
+2603067	885	terry 自述同意 Jordan 观点 认为五人小组耗时不到三年即可做出支持 WIN32 运行 MicroSoft Office 的版本 同时批评 Wine 项目起步偏早只做 Windows 3.1 调用且进度核算方式夸大
+2603070	885	Tom 报告在 adaptec 2740A 与 486DX2 66 平台上 sd1 sd2 sd3 组成 ccd0 interleave 32 递归复制 /usr/ports 期间 sd1 出现 timed out 与 SCB Abort 日志 追问是否致 ccd0 损坏
+2603071	885	hasty 表示未看 C-span 听证但通过 -current 使用 linux real-audio 加 voxware 3.5 听完整场 评价参议院向纳税人汇报已履行职责的语气颇为讨巧
+2603073	885	louie 质疑对方称的高性能路由器 10000 路由 或漏写位数或误解市场 因当下高性能路由需 OC-12 接口与远超 10K 表容量 举例 Ascend GRF 用 BSDI 只做控制面
+2603075	885	warner 说明 ft 驱动无专门支持 Iomega Ditto 2GB 且已被吐槽代码腐烂 同时指出 IDE tape drives 已有 Soeren Schmidt 提供的初步内核支持 价格更具竞争力
+2603077	885	marc 说明新添硬盘想装 Win95 运行 Simply Accounting 求问如何为 FreeBSD 添加 boot-mgr 实现双启动
+2603078	885	mike 指出 Windows 95 只能从系统第一块磁盘启动 除非用商用启动管理器 提到 System Commander 与通过改 /etc/fstab 让 FreeBSD 跑在第二磁盘配合 bootinst.com 引导的方案
+2603082	885	mikael 提议 GRUB 可设置活动分区并链加载从而替代商用启动管理器 给出地址 http://www.uruk.org/grub 询问这是否足够
+2603083	885	perlsta 说 winse 缺的有两样，一是志愿者数量不够，二是缺少说明如何为它写代码的文档，两项都不到位使进展举步维艰
+2603085	885	tony 指出 Sun 关闭 WABI 项目尚未产出可用的 Win32 接口 建议派人与 Sun 联络确认能否以 BSD 许可发布相关代码
+2603086	885	daniel 询问能否通过 libvgl 获取显卡 framebuffer 指针 目标是在 svgalib 风格下移植 svgalib 应用
+2603087	885	søren 表示可行 建议查看 /usr/share/examples/libvgl 的初始化示例后使用 VGLDisplay 结构以取得目标 Bitmap 指针
+2603088	885	mike 先转述对方说想要的是 Bitmap 指针，随后追问 linear framebuffers 的支持究竟何时能够实现，末句画了个笑脸收住
+2603089	885	ian 建议在 hackers 与 c.u.b.f.m 发帖召集纽约本地 FreeBSD 同好 说明无官方支持仅靠热心人的时间场地与精力 并说自己偶尔去纽约
+2603090	885	daniel 回应 linear framebuffer 的支持要等到有人把 svgalib 里的代码剥出来，原句是用退格删掉了开头一个词才接上 someone
+2603091	885	amancio 用一句更正的语气说明代码其实应当从 XFree86 里剥出来而不是从 svgalib，指出上一条把出处指到 svgalib 并不准确
+2603092	885	søren 反驳说 XFree86 与 svgalib 都不对 真正需要的是内核能直接做 VESA BIOS 调用 有了这点就能提供屏幕模式与线性缓冲区 其他方案至多覆盖半数硬件
+2603095	885	amancio 回应对方关于时间与付费的说法，认为这样挺好，至少商业实体若觉得这个特性有价值就知道该找谁接洽，末了写一句 Good Luck 收尾
+2603096	885	darren 询问较新 SiS PCI 芯片组与 Intel 430TX 相比如何 是否仍有缓存与 RAM 覆盖限制问题 也问除 16550 外是否支持 83877 等新串口
+2603097	885	marino 说明奥地利没有跨互联网的 OLTP 业务场景 主要因安全浏览器缺失受 ITAR 限制 且当地供电稳定 五年仅一次计划停电 电信业未必需要医院级备用
+2603098	885	amancio 说这个方案不错，随即追问它在 Matrox 与 S3 显卡上究竟能不能跑，请对方说明这两种卡的支持情况，末了写了句 Tnks 致谢
+2603100	885	martin 指出 /bin/sh 的 SIGIO 缺陷在 -current 与 -commit 邮件列表讨论已久 他给出两套可用方案及差异与测试用例 另指出 make 在前景进程运行时错误处理 SIGINT 导致递归 make 难中断
+2603105	885	eivind提出FreeBSD构建树补丁，新增regress与testbox两个目标，另加有限构建补丁。regress用于原位回归测试并附LKM配置文件，testbox从零构建测试盒、清盘并写入可配置大小的交换分区
+2603106	885	k.keithley追问ChristopherSedore主张的轻量级X11替代品photon，问信息出处，以及它如何保存企业已有X11应用投入，还是像Java那样要全部重写；他自述五年前已在486-25加8MB内存上运行FreeBSD与X，换Pentium只是明显更快
+2603107	885	dan说明多数支持DMA传输的新型网卡也支持scatter/gather列表，并称赞硬件协议校验和好功能，为互联网协议栈这些优化没人做而惋惜，附上ChuckBolz整理的协议栈改进长列表并呼吁把sosend类优化并入FreeBSD
+2603110	885	sthaug指出这些内核优化其实一直在进行，他已向CraigPartridge询问，收到覆盖部分需求的代码片段，正尽力整合进-current；他代表Nethelp咨询，署名sthaug@nethelp.no
+2603112	885	am提交2.2-stable基线补丁，内核apm驱动可关机，shutdown新增-p在关机后断电；Intel AL440LX实测通过，请有提交权限者评审合并，仍不确定apm_power_off该放kern/kern_shutdown.c还是i386/i386/machdep.c
+2603114	885	walter认为内核电源关闭能力对他的UPS工作很重要，此前已通过send-pr提交shutdown队列补丁但未见合入；他主张需要一种标准且安全的方式请求内核给机器断电，期待这些工作协同起来
+2603116	885	mellon想做ddb改进，但不确定是否值得，因为严肃开发者都在用kgdb；他手里没有两台FreeBSD机器做kgdb，也被好用的调试器惯坏了，列了符号支持、陷阱封装
+2603117	885	nik询问GNUmake如何模拟FreeBSD里.if!target加.endif的写法，他花了一整天翻文档并检索AltaVista与DejaNews都没找到答案；怀疑从长远看把BSDmake移植到Solaris反而更省事
+2603118	885	ken认为按电源按钮就能安全关机对FreeBSD是大有裨益的功能，那样他就放心把基于ATX的FreeBSD部署给不在意shutdown命令重要性的用户，并致谢
+2603119	885	luigi报告禁用deflate后iijppp丢包问题似乎消失，随后指出保留两个静态队列不美，建议改用公平队列机制，ALTQ现成代码可并入，把压缩放到选中片段之后才写入调制解调器链路更合理，短线上最小MTU开销可接受
+2603120	885	alex认为把BSDmake移植到Solaris其实很容易，但需要用到少量FreeBSD函数才能落地，回应nik之前提出的长远思路
+2603121	885	ken补充说有些UPS型号除内置电池之外还支持热插拔电池与外置电池包等配置，像APC这类产品必要时能撑几个小时，为长时间停电场景提供了更实用的电池选择
+2603122	885	chris调查Perl线程在FreeBSD的怪异，九十成认定测试套件本身坏，把join$t改成$t->join才对，即便修正后测试仍在FreeBSD2.2.5-stable上失败，线程压根不并发，他怀疑自己误解了Thread语义或真有严重问题
+2603123	885	walter提议用at_shutdown接口做内核callout hook，让/dev/apm等驱动插入调用队列，由kern_shutdown.c的reboot调用；补丁新增SHUTDOWN_POWEROFF队列并支持队列排序，但他不愿在服务器内核放APM代码，只想要UPS关机
+2603126	885	walter认为halt-p与reboot-p有缺陷，-p情况下同时设置RB_POWEROFF与RB_HALT，他认为二者互斥应分别处理；当前-p仅置位而实际无效，其补丁启用-p并把boot的howto参数传给callout让驱动判断是否轮到自己
+2603127	885	am为没搞懂而致歉，他仍不解为何把something_power_off作为系统关机最后一步调用会出问题，虽承认at_shutdown之类阶段确有存在，也说自己是几小时前才首次读完APM规范
+2603128	885	Ben在检索快速以太网信息时看到EtherExpressPRO/100智能网卡资料，说它板载Intel i960处理器能为主机CPU卸负载、带来更低占用和更高吞吐，售价895美元、版本PILA8485，问是否有人听说过以及FreeBSD是否支持
+2603130	885	terry解释OLTP是在线交易处理On-LineTransactionProcessing的简称，在澳洲存在，猜测对方把它当成电子商务服务才误以为不存在；他强调ISP更关心服务中断而非数据保险，磁盘断电时不刷新写缓存会破坏依赖顺序的数据，开着写缓存仍需UPS
+2603131	885	karl报告他把100BaseTX集线器换成Intel510T交换机后，服务器接口悬置几分钟，随后NFS代码持续积压mbuf不入队，数小时后高峰期报outofmbutfclusters崩溃，重启后只剩四百到五百个mbuf在用
+2603132	885	ken询问两个地点各有独立用户数据库时如何配置，使认证在站点A失败后转去站点B，或是否有更好的方式，并问是否涉及Radius协议
+2603137	885	jim指出即便存在令人沮丧的mbuf泄漏，分配到网络的内存也不足8MB，建议放弃追内存泄漏改买更多内存，说karl那台服务器配128MB专用于网络缓冲并不离谱，等用完再加256MB可能更划算，还打了个可抛弃式内存的比方
+2603141	885	walter谈ATX电源按钮拦截关机，说从UPS一侧看他不肯定FreeBSD是否支持或可支持，但他相信这是可能的，建议翻列表里关于linux如何处理的相关发帖，也可请AndrewMaltsev解答
+2603143	885	walter 确认 device 指 device driver 并建议把 SHUTDOWN_POWEROFF 从 step 8 移出内核放到 step 5 的 callout 函数 Halt Panic Reboot 因各种原因仍留在内核
+2603145	885	tom 回复 ken 关于两台站点两个用户数据库如何处置 建议直接把两个站点的 passwd 文件合并 至于 Radius 那部分反问对方是否在用 说自己也不了解
+2603147	885	andrew 确认终于理解了移出 kernel 的想法 自嘲是因为自己英语不好 但认为改动没什么大优势 更像一点追求完美的改进 不过也该做
+2603150	885	kazu 建议最好先制定一个统一框架 让两类实现都能在其中以标准化的方式被实现并运行起来 末了还以反问句征求大家的认同 全文只谈框架层面
+2603151	885	mike 提出 APM poweroff 在 ATX 主板与笔记本之间不同 FreeBSD 早已能关笔记本 但一直没在 ATX 主板上生效过
+2603155	885	hosokawa 表示 -current 已有 APM power-off 功能 自己也在 PAO 中用扩展 at_shutdown 方式实现了 但两种实现各有道理 目前没有替换现有代码的计划
+2603156	885	julian 回应同步镜像请求给出定义 指在物理分离并联网的系统上维护副本 TCP/IP 网络支持 实时捕获主服务器 I/O 变更持续发送到目标机 磁盘块级别保护
+2603163	885	terry 希望在断电场景下若启用软更新则无需清理磁盘 打算引入 soft read-only 在 syncer queue 为空时设 clean flag 并写出 superblock 且不打算依赖 UPS
+2603167	885	erik 表示已知最简单方案是合并密码文件 建议在大 db 文件构建时把 openinfo 结构中 cache size 设为略小于最终 db 大小以加快 pwd_mkdb 和 yp_mkdb
+2603168	885	tcobb 询问 FreeBSD 的 PAM 过去半年是否有人做过初版实现 想知道具体是谁做的在哪 是否真正能正常工作 因为这事断断续续讨论了很久
+2603169	885	tcobb 询问 UNION FS 现状 希望把 NFS 服务器上的用户目录挂到新机器 再叠加常用二进制以支持 chroot telnet 并问 UNION 是否稳定到可以登录时动态映射
+2603170	885	julian 建议无需 chroot 在服务器上为每个二进制保留单份并用 hard link 指向各 chroot 目录 这样只需每份一个副本
+2603171	885	eivind 回应 julian 关于无需 chroot 的说法 认为 julian 想表达的其实是 union 借此澄清误解
+2603172	885	tcobb 表示 NULLFS 可能是解法 已在 P75 32MB 的机器上快速挂载 1000 个 NULLFS 未见明显问题 唯一困扰是 rdonly 挂载选项不生效 怀疑它继承了底层文件系统选项
+2603175	885	abial 认为 mike smith 做过 PAM 初版但很快被其他任务淹没 两周前问时似乎已搁置 自己愿意接手动改 login 与 ftp 支持 SecurID 令牌与 radius 认证
+2603181	885	sbabkin 建议把远程镜像拆成两部分更清晰易实现 ccd 承担镜像本体 另一部分是映射远程盘 远程盘本身也有独立用途
+2603189	885	benedict 认为要恰到好处地仿真 Microsoft 代码 或许走 WINE 这条路是唯一可行的方式 话说得带点玩笑意味 但也没提别的现实替代方案
+2603191	885	yuri 转述学生的疑问 询问有没有 API 可以让主机自身覆盖自己网卡的 MAC 地址 还是必须去改内核才能实现这一效果
+2603193	885	sbabkin 回复说虽然有 API 但目前没有驱动去实现 建议在 IPX 代码里找比如 if_ether.c 也可以参考 if_ep.c 这类驱动代码
+2603194	885	tyoung 认为买一张靠卸载来省 CPU 的卡太贵 宁可买两张 3com 高端网卡分放不同网段 觉得网卡占用的处理器周期并不多 省下的 500 美元拿去买交换式集线器更划算
+2603195	885	terry 继续质疑 FreeBSD 容错论断 认为 panic 正是需要防范的故障类型 若用户没有 UPS 就不该自称容错 FreeBSD 差别在 SFT 软件容错
+2603197	885	shimon 把 panic 分两类 可预测的是代码主动决定关机 不可预测的是 NULL 指针和无效地址 Unix 包括 FreeBSD 都没法从这类恢复 建议切换到备用计算引擎更稳
+2603199	885	Mik 自述曾移植 Linux-PAM 套件并跟踪数月后转冷 因看到 pppd 等难以接入 PAM 框架而不建议作为通用认证方案 重移植基本是重写其过于偏向 Linux 的 Makefile 手头或许还留着自己旧作的副本
+2603200	885	wilko 建议在 majordomo 上增设 freebsd-ha 邮件列表以分流 HA 讨论 免得人们频繁修改自己的 procmailrc 从 -hackers 里过滤 HA 相关线程
+2603201	885	greg 认同改进 ddb 值得做并称自己也在琢磨 因自己用过更好的调试器 反对为符号补全加额外方案 认为 tab 补全已足够 肯定 ddb 触发 trap 是 bug 也支持让 ddb 独立于 syscons
+2603202	885	shimon 建议把 HA 讨论迁移到已存在的 freebsd-database 邮件列表 理由在他看来只有 database 用户在关注这类话题 签名留 shimon at simon-shapiro org
+2603204	885	robert 询问 FreeBSD 上 NIS+ 结合 SecureRPC 的开发进展与当前状态 想确认原计划是让服务端与客户端两种角色都工作 并顺便请教如何在邮件归档里精确搜索 NIS+
+2603205	885	ishizuka 想用 3.0-980309-SNAP 的 boot.flp 从旧的 3.0-SNAP 升级 却发现该 boot.flp 内的分区编辑器在升级安装过程中识别不出已有分区 请他人分享成功升级的经验
+2603207	885	mik 说明 SecurID 依赖类似信用卡计算器的物理令牌显示每间隔变化的随机数作为口令 服务器端知道序列并会容忍卡片的时间漂移 从口令样本反推序列被认为极难 比 Kerberos 安全但仍需信任主机
+2603208	885	ejs 报告自己在过去一个月内至少三个 2.2 SNAP 上都碰到同类问题 不是格式变化 他今天装了 2.2-980309-SNAP 后重启正常 从 boot floppy 选 update 后切片能被识别 FreeBSD 分区却看不到
+2603209	885	robert 报告 MIT 的 Krb5 发布版在其 2.2-STABLE 机器上干净编译通过 并建议把 Kerberos 作为 PAM 本身的替代方案供选择 只要认证系统使用共享密钥并能让服务器预测秘密就可以整合进 Kerberos 服务器
+2603213	885	mayo 询问 ftp.cdrom.com 这类繁忙机器上每秒 context switches 的数量 打算把 FreeBSD 机器放进同时处理大量邮件且常态 700 到 1000 进程的装机场景 家里的低负载机上 Csw 通常只在 250 到 300
+2603216	885	dg 回复说 ftp.cdrom.com 上 context switches 大约每秒 2500 数字会随用户数量以及互联网的健康程度等其他因素一起波动
+2603217	885	terry 认为把 userconfig 改为 linker set 方案的困难在于 linker set 必须在运行时聚合而不是链接时聚合 允许其分布在物理不同的 ELF 段中但逻辑上呈一份数据 加载器需在装载内存时把各片段拼成整体 linker set
+2603218	885	mashkovtsev 追问 yet 是否意味着 FreeBSD 开发组打算实现 MAC 地址覆盖 建议参考 IPX 代码 if_ether.c 与 if_ep.c 等相关实现并询问是否有整体介绍内核结构的资料可作起点
+2603220	885	mckusick 宣布开设 BSD 内核源码高级课程 面向熟悉 BSD 算法并想深入 2.2.5 实现细节的学习者 内容含 15 次 160 分钟讲座 2.2.5 CD-ROM 与纸质内核 三册约 2000 页 个人 1500 公司 2500
+2603224	885	gibbs 转述 Eivind 所说 -current 的 PCI LKM 代码不工作 并推测大概因为 pciconf 坏了 若 SE 批准可从 CAM 引入 pciconf 代码以便轻松修复
+2603225	885	perlsta 说自己的 -current 机器在 make buildworld 时 panic 重启 这是他长跑数月来的首次 panic 前一晚刚以 3 月 9 日构建并跑过多份并行大编译负载高达 19 希望下次能抓到 crash dump
+2603228	885	mellon 对 trap 封装改动的分层归属尚不明确 指出该改动必然属于 i386 特定 而 sys/ddb 本意架构中立 追问这一层改动究竟该落在哪一层
+2603229	885	perlsta 提到他把自己那台 -current 机器当作 NFS 服务器使用 只挂载 /usr/X11R6 目录以便为 apsfilter 使用其中的库 使用期间偶尔出现打印异常 后来打印恢复正常 但都在致命 make world 之前
+2603230	885	szoli 询问 FBSD 上 termio 的 tcgetattr tcsetattr tcflush tcdrain 等函数行为是否与 Linux 一致 因自己要写处理串口的应用 在 RedHat 与 FBSD 共存的情况下已放弃使用 FBSD 并想请知情者确认
+2603231	885	julian 提出所有驱动都应做成 LKM 而编译期链接的使用单个 linker set 调用与加载为 LKM 时同一份 init 例程 表示多年来缓慢推进 因此多数驱动现在都具备用来说明添加 devsw 条目的 init
+2603235	885	terry 认为 linker sets 很麻烦 针对不在意兼容 a.out 的情况建议改用 section attribution 方案 让 boot blocks 与 kld loader 分别加载 init 段并直接调用同一注册机制 userconfig
+2603237	885	terry 建议以 ELF 内核模块配 a.out 内核作为过渡方案 用 extras 段作头文件位置 靠文件长度减去应有部分得到大小 认为驱动 LKM 化反而提升可靠性 单个驱动失败系统仍能启动 并指出 userconfig 做成 linker set 是能用但替换困难的做法
+2603239	885	blue 提出在 LKM 的已知偏移写入 PCI Vendor ID 与 PCI Device ID 让内核在驱动加载之前完成设备探测，效率更高，代价是 probe 段无法承载其他逻辑且需要设备名匹配表
+2603240	885	gray 询问 shell 提示符下 for 循环的写法，说自己之前看过一次但如今忘了原句，希望在 bash 或 sh 提示符上直接输入多行直到 done 就能执行
+2603241	885	robert 答无 root 无死锁的认证机制首选 Kerberos，并提到几周前在 hackers 列表提过组建替代认证邮件列表反响不错，等 IETF 草案 Friday 交完就起草章程
+2603242	885	cmsedore 说 FreeBSD 机器上数据包计数大约每 5 到 7 天回绕一次，进出各超 40 亿包，机器已连续运行 48 天无异常，问 interface 与 ip 栈计数改 64 位有无推进
+2603244	885	studded 认为这不属于 hacker 讨论范围就转到 questions 列表跟进，同时说明 bash 或 sh 提示符下可以一行行输入直到 done，并给出 bash 提示符下一段 for 循环的示例
+2603245	885	fuller 给出一段 sh 提示符样例用分号分隔 for i in 到 do 的整段，把三个域名丢进一次循环 ping 各五次再丢弃输出，退出后提示符回到百分比
+2603246	885	jgm 表示 linker set 完全能和 kld 配合使用只是没人花时间去做，并打算一周内提交 VFS 变更作为第二次也是最后一次警告
+2603248	885	perlsta 反馈 linux emulation 下跑 x11amp 残留 SYSVSHM 段，控制台反复刷 linux-emu setup 未实现的告警，查了 linux man 里 setup 不该被用户态调用但怀疑手册早已过时
+2603249	885	rkw 预警下周终止 ctm-src-2_1 列表并释放各镜像上的空间，理由是 FreeBSD 的 2.1 分支已死或近死不值得每周做 delta，未升级者可用 CVSup 或本地 CVS 树取更新
+2603252	885	ccsanady 询问能否提高默认分区数上限 8，如果不合理就退而求其次做成类似 NetBSD 那样的可配置项，但他自己也说不清背后的问题是什么
+2603253	885	dg 反馈输出字节计数大约每 20 分钟回绕一次，日均发送约四分之一 TB 数据，落款 FreeBSD 项目核心团队首席架构师
+2603257	885	jonny 解释 SYSSHM 段应由程序主动释放不会在 exit 里自动清理，程序直接中止时共享内存就残留下来，建议看一下 ipcrm 的使用方式
+2603263	885	karl 报告同一机器上两个进程对同一 NFS 文件持有 flock 时，用 O_WRONLY 加 O_APPEND 打开的写者偶尔不写进文件末尾，怀疑 O_APPEND 没有触发隐式的 lseek SEEK_END，本地挂载从不发生
+2603268	885	liuigi 提交三份针对 2.2.6-BETA 的音频驱动补丁，请 Jordan 应用，最后一份修掉 dmabuf.c 里存在已久的问题，前两份曾提交但被合到错误的分支
+2603269	885	karl 报告 3.0-CURRENT 版本今早两次出现奇怪的问题，贴上 dmesg 显示 Pentium Pro 加 Intel 82440FX 主板两块 Digital 21140A 网卡以及 Adaptec 2940 控制器
+2603273	885	mika 提到 accton 厂商仍在标准 10 到 100 网卡上沿用 21140 芯片，追问 21140-AE 与 21140-AF 是否有本质区别并求对这家厂商的评价
+2603274	885	karl 收到一批 Intel PRO 100 加网卡，初步结果令人印象深刻，自动协商含 FDX 都能工作，连 100BaseTX FDX 接 Intel 510T 交换机也表现突出，同时指出在 TYN 主板上跑 100BaseT 会掉到 10Mbps
+2603285	885	terry 认为这并非新的 NFS 问题而是已知 race 条件，根因在 lease 代码，他自己给过补丁但没人合并，近期写入路径也走 paging 的改动放大了它
+2603286	885	msmith 发现 ffs_vfsops.c 里对未干净挂载打印的告警路径是上次挂载位置而非这次尝试位置，对可移动磁盘容易误导，建议输出同时给设备与新目标路径，强制挂载场景应显示设备而非新路径
+2603288	885	roberto 追问如何验证芯片 stepping 以及是否被 -v 参数显示，自陈机器是 HP XU 加 PPro 200 配 Orion 芯片
+2603292	885	ian 建议改用 Merit Radius 服务器提供的 elm 认证来分流两个站点，用户以 user 加 at 加站点名的形式登录，radius 服务器依 authfile 把查询转给另一个 radius 服务器，并提到自己也动过这个服务器打算提供虚拟 ISP 服务
+2603302	885	msmith 宣布 freefall 因硬件故障自深夜 11 点宕到凌晨 5 点一刻至今未彻底解决，数据与文件均未丢失，另安排 15 日下午 8 点 PST 维护
+2603303	885	dano 自述 2.2.5 引导盘 probe 识别不出 sio0 与 sio1，二者分位于 3f8 irq 4 与 2f8 irq 3，主板基于 i430 TX 芯片组，CPU 为 K6 200 MHz，而 NT 与 Slackware 3.4 均可识别
+2603305	885	awhawks 报告 insat CDPD 调制解调器在 FreeBSD 下无需写驱动即可工作，因 Venturi 压缩未实现速率上限 19200；须关闭加密并用 cu at sli slip 切至 SLIP，slattach -h -s 19200 连 /dev/modem
+2603306	885	peter 求助：486DX2-50 VLB 主板在 2.2.5-R 下经 laplink cable 以 LPIP 连 Toshiba T1850 时随机锁死，装载 DDB 内核见 sbcompress 向已含该 mbuf 的 sockbuf 追加同 mbuf 陷入无限循环
+2603308	885	ruslan 宣布 0.96 版 GUI admin 工具发布，具备 Tk 与 CGI 两种界面并完整实现 adduser 与 edituser 与 rmuser 三项用户管理动作，详细信息请查阅 cam.grad.kiev.ua 站点的 admin 页面
+2603309	885	terry 澄清前文 vn_read 与 vn_write 被调用时 vp 应处于 unlocked 而非 locked，主张 vp 只要位于 VOP 层即 Michael Hancock 的 VOP_VRELE 之前都应加锁，底层 VOP_LOCK 采否决式，故暂缓
+2603310	885	msmith 提示 dano 的串口探测问题疑似 Iwill 主板搭配 Acer multi-I/O 芯片所致，该 UART 有严重行为异常，需从 Greg Lehey 主页获取 sio 驱动补丁，当前 sio probe 对端口正确性要求极为严苛
+2603311	885	karl 反问为何释放 NFS 挂载文件锁时不在内核层释放锁之前先刷新缓存属性，认为该方案虽不覆盖从未加锁的场景但可解决已加锁的缓存一致性场景
+2603312	885	chuckr 追问新版体积不到 0.95 版的三分之一究竟移除了什么内容，希望发新版的 Ruslan Shevchenko 就删减范围给出更详细说明
+2603314	885	karl 报告开启 NQNFS 模式后系统几乎立刻硬挂起，I/O 全无，并建议对任何 flock LOCK_UN 操作如显式或文件关闭隐含触发时刷新属性缓存以缓解缓存一致性问题
+2603316	885	brian 求助 buildworld 构建共享 C 库 3.1 时 nm 对 bt_debug 等 so 报 no name list，另多个 so 报 not object file，ld snprintf.so malformed input 后 Error code 1
+2603318	885	brian 怀疑本机硬件有问题：同源 buildworld 第二次运行即成功且两次构建之间源文件未作任何改动，认为还需继续实验
+2603319	885	studded 提醒先说明运行版本，-current 转 freebsd-current，-stable 转 freebsd-stable；他认为 not object file 与 Error code 1 是脏 /usr/src 或 /usr/obj 的征兆，建议清空重下源码
+2603324	885	jordan 宣布第二期期望十天内完稿寄印，以与 2.2.6 CDROM 一并发出，欢迎投稿或更新既有稿件，并列举 FreeBSD 与其他 OS 比较、内核细节、POSIX 线程、GDB 调试、ports 集合、FFS 与 LFS 对比、DVD 驱动器与硬件供应商清单等选题
+2603325	885	sbabkin 回复只追问清单里究竟指的是哪些型号，并请对方给出更详细的资料，表示这一条让他困惑，末尾以 SB 署名并向对方致谢
+2603326	885	luigi 就投稿要求提出疑问，追问所列 how to do X with FreeBSD 类选题是否一律需控制在 300 words 以内
+2603329	885	nsj 指出 Greg Lehey 最新版手册封底附有 FreeBSD 的 DVD 版本订购单，据此希望 FreeBSD 应有兼容 DVD 驱动器，同时坦言自己从未见过一台可用驱动器
+2603330	885	jordan 承认 FreeBSD 的 DVD 广告在成功制作前即已外发，直到事后经大量工作与汗水才发觉光盘复刻厂完全无法处理带长文件名的 DVD，不确定是否还会有 FreeBSD 的 DVD
+2603331	885	abial 表示希望看到就 wcarchive 建立的历史与细节、与 DG 进行的一场专访，认为对 ISP 群体来说是很值得一读的内容
+2603332	885	luigi 认为与其做专访，不如写一篇讲 PicoBSD 的文章，觉得关于 PicoBSD 的几件事都值得展开讲讲，比专访更有价值
+2603334	885	keithley 质疑为何把 SJIS 与 EUC 的 locale 支持放进 libxpg4 而非 libc，称这迫使 X 程序需在任意 locale 下工作时拖入含静态 setlocale 与 SJIS/EUC 支持的 libxpg4，而不能直接从共享 libc 获取
+2603335	885	mike 回忆在旧计算机体系结构课程中读到过关于适用于 4.4BSD 的 LFS 论文，请人提供 LFS 与 JFS 的一般参考文献，并追问日志文件系统与日志结构文件系统究竟有何区别
+2603337	885	rosson 表态自己也想读到关于建立 wcarchive 过程中所作出的取舍抉择，就此补上自己的一份意见，希望编辑采纳这一选题方向
+2603338	885	archie 转发一封来自 freebsd-security 的来信向列表求助请更懂 tcp 与 source routing 的人看看 ip_input 中 divert 处理使 IP 选项被跳过以及 IPDIVERT 未把 ip_nhops 复位前就接受报文的问题
+2603339	885	kent 询问 kernel config 文件里需要改什么才能扩大 SYSV 共享内存可用额度他说自己也想知道当前上限查了内核源码也没找到要改的地方
+2603340	885	alfred 自述自己是 scsi 与 raid 新手除了看源码之外没什么办法向列表索要 dpt0 驱动的资料他问了四个问题包括是否稳定依赖项是否兼容所有 pci scsi 卡以及如何配置
+2603341	885	wilko 报告 Netscape 4 在他 2.2.5R 的系统上时不时启动即循环空转吃满 cpu 他用 ktrace 追踪看到调用反复落在 gettimeofday 与 sigreturn 之间同时反复触发 SIGALRM 有或没有 isdn ppp 链接都一样
+2603342	885	lars 说他试用 ports 里 net/ldap 的 slapd 一启动就进死循环而且端口里也没启用多线程他打算把它和 imapd ipopd 一起给邮件客户端当目录服务想知道有没有能用的版本
+2603343	885	eivind 回答 dpt0 的问题他说驱动只适用于 DPT 芯片组的 pci scsi 卡厂商官网在 dpt.com他自己还在等网卡到货才能实测所以关于稳定性的判断只是转述作者的说法
+2603344	885	ollivier 从邮件存档里翻出 netscape 启动卡死的两种解法一是删掉 home 目录下 .netscape 里的 preferences.js 二是给 netscape 启动脚本加一行 export XCMSDB XCMSDB 设为 dev/null
+2603345	885	ollivier 从自己的 kernel config 里摘出一段说加 options SYSVSHM SYSVSEM SYSVMSG 与 SHMMAXPGS 设为 1024 就能把共享内存扩到 4MB 并指出信号量与消息队列也有类似的常数可调
+2603346	885	garman 说他每次遇到 netscape 启动卡死把 preferences.js 里的 user_pref browser.startup.license_accepted 这一行删掉就能启动虽然得重新接受一次许可协议但没别的副作用
+2603347	885	brandon 询问有没有人成功编过带 dpt0 驱动的内核也说想找能用的 boot floppy 镜像他在 ftp simon-shapiro.org 上看到 crash/floppies 目录但里头是空的
+2603348	885	jordan 澄清他说自己不是在向大家征集 newsletter 的选题建议而是在请别人把文章写给 newsletter 大家不要给他列提纲
+2603349	885	simon 建议把 dpt0 的问答内容一并收录进 FreeBSD 的手册他解释自己在 IRC 上每周至少会遇到一次同样的问题为省带宽与手机费希望纳入并附上了资料放在自己 ftp 的 crash 目录里也可贴出来给需要的人
+2603350	885	terry 报告 ports 里的 LDAP 坏到无法使用建议改用他自己维护的补丁要打在未改动的 University of Michigan 代码上并需跑 current 或带 Jeremy Allison 加入 pthreads 更新的 stable SSL 要另打补丁
+2603352	885	CHOI 说自己是 EUC 用户他把 -lxpg4 加进 ExtraLibraries 后重编 XFree86 就能用另一种是登录时 LD_PRELOAD 指向 libxpg4.so.2.0 免重编译但与 Linux 应用或其他 LD_PRELOAD 冲突得写包装脚本清掉它
+2603353	885	alfred 说 IRC 上有人给 lint 文件补了说明若一开始就写进去他就不会那么犯糊涂他到现在还没试用过 DPT 驱动只是觉得应该补一份 man page 说清楚用法
+2603354	885	david 调侃说不写稿也行拿那台 Olympus 数码相机给 wcarchive 机器拍张照就行并且要交代怎么把照片从相机弄进 newsletter
+2603355	885	studded 发现 /usr/src/etc/Makefile 里没有安装 /boot.help 的设置他在老系统上升级时这个文件就完全没装上去于是提了补丁通过 cd 到 sys/i386/boot/biosboot 目录再执行 install 补上它
+2603356	885	studded 说 NOPERL 选项一直被人要求现在既然有了就该推广一下他提了两个补丁在 make.conf 里注释出 NOPERL 为 true 即可避免编译 /usr/src/gnu/usr.bin 下的 perl 同时在 Makefile 里加上 -DNOPERL 的说明
+2603357	885	warner 说他有一块 cabletron E2010 以太网卡基于 ed 驱动支持的 CP8290DN 芯片系列可是探测一下就锁机源码里 grep cabletron 也没有命中他想知道支持它要花多少工作量
+2603358	885	thomas 建议改 ftp daemon 的根目录用软链接 ln 把 /var/ftp 指向 /home/ftp 就够了他提到改 /etc/passwd 与 master.passwd 都不奏效
+2603359	885	timothy 询问 RealTek RTL8129 有没有人能跑通他说自己写信去 questions 得到的回复说是专有驱动如果有人有驱动或者已经用起来了请私下告诉他因为他没订阅列表
+2603360	885	eivind 说 RealTek 对自由操作系统一向支持不错甚至有时会自己写驱动所以拿资料应该不难但他也判断那芯片可能是专有芯片接口几乎完全克隆自某个流行的芯片组所以写驱动应该不会太难
+2603361	885	Matthew 指出 chroot 之后相关改动不生效须把 ftp 用户的家目录设为 /home/ftp 并用 pwd_mkdb 重造 master.passwd 的哈希
+2603362	885	Alfred 假设内核会自动配置多数 PCI 卡且以太网卡都收在 GENERIC 内核里怀疑未在 dmesg 出现的卡就未被支持并建议转告 Timothy
+2603364	885	sbabkin 询问 PCI 编程有何好书推荐认为读书比看驱动更易得背景知识并追问 4 口 FastEthernet 卡各端口是否共用中断或可否设为单一中断
+2603366	885	Doug 指出中断数量由 BIOS 决定自己用 3 张四口以太网卡分中断够用还提到早期 ASUS XP55T2P4 主板 BIOS 在 PNP 初始化时挂起 Adaptec 2143 系列卡需先跑 tcpdump 才工作
+2603367	885	Snob 报告在 boot 提示符按下问号以列出可用内核时 boot.help 会把清单滚出屏幕之外看不见并询问要不要提 pr 报告
+2603368	885	Terry 推荐 PCI System Architecture 一书 MindShare 出版作者 Tom Shanley 与 Don Anderson ISBN 0-201-40993-3
+2603369	885	Terry 判断这种网卡问题像是某个寄存器在正常模式下没被设置而混杂模式打开时才把它设置或重置因此推测根本原因多半是驱动程序本身存在 bug
+2603370	885	Simon 致歉后改用 sendero.simon-shapiro.org 提供 /FreeBSD 目录下若干 2.2 与 3.0 镜像并称会即时追加两份最新 2.2 由 checked-in 源码构建
+2603371	885	Simon 拿早前寄给 Jordan 的 DPT RAID 组稿发问称那篇无需 Jordan 亲笔撰写只要改写成英文稍作修改即可采用
+2603372	885	Simon 说明多数 DPT 卡内部封装 Qlogic 芯片外部通过 EATA 协议访问 EATA 是 ANSI 标准的扩展 ATA 以邮箱方式实现 DMA 并预告下一代改用 I2O
+2603374	885	jkh 说 pending 文件夹里根本没找到那份稿件请对方重发并建议稿件最好带上性能收益内容提醒读者不全是懂技术的人若是如此将更乐意刊发稿件
+2603375	885	Gabor 说并行口 ZIP 驱动器用新 ppbus 驱动集无法工作 dmesg 里出现 vpo0 Adaptec aic7110 SCSI 后控制台黑屏切 ttyv1 再切回时背景变红并需改 syscons.h
+2603376	885	Studded 建议给 fdimage 加判断镜像若未以二进制模式传输就拒写以免产生坏镜像并称此举可省去提问列表里约八成相关咨询问题
+2603377	885	Wilko 想换两张 Digital DEFPA FDDI SAS 卡换 Pentium P233mmx 32Mbyte 60ns EDO SIMM 内存或 SCSI CDwriter 并称二手价在 US$ 500 到 900 区间
+2603378	885	Mark 问 ld 的 -Q 选项在 2.2.5 下生成的可执行文件能否在 BSDI 的 BSD/OS 2.0 上运行以及是否必须静态链接并称没有 BSDI 系统在手头只能查手册
+2603379	885	Karl 建议直接用 cc -static 命令做静态链接即可让可执行文件在 BSDI 上约九成时间能跑并称自己从来不用 -Q 选项
+2603380	885	jkh 判断 BSD/OS 2.0 已无法运行任何 FreeBSD 二进制无论加不加 -Q 都无望并称最近几次尝试都在 BSD/OS 2.0 机器上失败建议反向构建
+2603381	885	lem 询问是否有人在 Compaq 硬件上跑 SMP FreeBSD 并表示自家正在评估这一方案欢迎以私下邮件回复配置详情承诺若有人回应会汇总整理
+2603383	885	Douglas 从 /etc/pccard_ether 抽出 DHCP 分支改成在 rc.network 里按参数值触发 /usr/local/sbin/dhcpc 补丁针对 2.2.5-RELEASE
+2603385	885	Tim 认为对方提议的改动实现起来应该十分容易并称不解为何这么多用户会以 ascii 模式去传输镜像以至于相关问题层出不穷不断重复发问
+2603386	885	Studded 称赞对方提议的改动非常欢迎并解释许多人用怪异 ftp 客户端或 netscape 默认以 ascii 传输希望工具能给出醒目提示并指向正确流程
+2603387	885	muthu 说自己从 1997 年就在做 FreeBSD 有 Oracle 等数据库知识询问 FreeBSD 可加哪些特性以提升数据库性能并请列出可做的具体条目
+2603389	885	watson 自述要重放 tcpdump 抓到的混杂嗅探数据包做性能测试与 bug 复现，其中不少并非 IP 包，故想手动送到链路层；已知 bpf 可收发但难找示例，rarp 源码与 man 页帮助有限
+2603391	885	luigi 转述一位不在列表上的朋友：以 nice -20 在后台跑 while 1 死循环会把 2.2.5 上的编译拖到两倍时间以上，疑与低优先级进程未被打断有关；他本人在 2.2.1 无法复现
+2603392	885	studded 为自己把 NOPERL 说明发到 -hackers 致歉，此前在 freebsd-stable 上提过十四次无人回应，本以为自己做补丁会获回应，不料最终在 CVS 提交日志里被记录下来
+2603393	885	gurney 回答为何如此多人以 ascii 模式传文件：win95 与 solaris 2.5 的 ftp 客户端都默认 ascii 为传输模式，而他估计这些流量多数来自 win95 用户
+2603395	885	nate 说只要把所有 FreeBSD 的 shlibs 拷到较新的 BSDi 机器上就能跑通 FreeBSD 非内核二进制，tcsh、kaffe、ssh 都能正常运行，唯独 JDK 无法工作
+2603396	885	nate 指出 dhcpc 根本不是 FreeBSD 的一部分，因此不应被放进任何 rc 脚本，所以先留在 pccard_ether 中以便 PAO 集成
+2603397	885	leifn 提出 fdimage 可在写入前检测是否有裸的 lf，只要每一个 lf 都紧跟在 cr 后面就代表该镜像是以 ascii 模式传输过来的
+2603398	885	sbabkin@dcn.att.com 追问对方是否真在 FreeBSD 上跑起来 Oracle 数据库，若是这本身就是一份不错的贡献，若还没有跑起来那促成它运行同样很有价值
+2603399	885	perlstein 觉得对方思路未免太天真，建议去查 DIVERT socket：内核防火墙配合一个 divert socket 就能捕获网络流量
+2603400	885	jkh 解释自己那段话只是重提一句沿用多年的老话：增强请求与 bug 修复应走 send-pr 提交，而不是发到邮件列表里让大伙自行挖出来
+2603402	885	jkh 说自己在 BSD/OS 1.x 机器上把 FreeBSD 的 shlibs 与 ld.so 拷过去后就能跑 FreeBSD 的 emacs 与 fvwm，但 BSD/OS 2.1 却拒绝执行并声称镜像格式无效
+2603404	885	owensc 报告 C. Donly 的 Perl5 Net::LDAPapi 模块可编译安装，但 ldapwalk.pl 每次匹配都打印 chunk is already free 告警，2.2.2-STABLE 上还抛 OUT OF MEMORY，CURRENT 上不再崩溃
+2603405	885	dmlb 转述 Mike Smith 此前评论称 bev 已被 current 中的 /etc/periodic 取代，并追问对方是否看过它
+2603407	885	jdp 表示不确定 SMP FreeBSD 是否能在 Compaq 机器上跑起来，并以邻居狗随处撒尿作比来吐槽 Compaq 硬件连电源与螺丝都非标准
+2603408	885	kgor 说自己一直在考虑把 Postgres 改用 mmap 文件来取代 SYSV shared memory，这样才可能支持更大规模的配置，仍在权衡 MAP_SHARED 与 MAP_HASSEMAPHORE 等选项
+2603411	885	templin 在 IBM ThinkPad 560E 上调试自写的 Netwave PCMCIA 无线网卡驱动时遇上疑为缓存一致性的问题，读内存正常但写回后会破坏数据或不同步，volatile 声明也没能避免
+2603412	885	sampson 反问为何不能提 PR，指出 PR 系统本来就是用来跟踪 change request 与 bug 报告的，你不去登记就得别人替你补录
+2603413	885	stud 承认自己口气说重了，是鼻窦发炎里小人在拿大锤施工加上昨天两场个人冲突拖低了他昨晚的耐心，感谢大家私下提醒他别太当真，并说会留意继续提更多 PR
+2603416	885	joelh 反驳称自己常在工作时用 Netscape 传 zip 从未损坏，多数会用 ncftp 这类所谓奇怪客户端的人其实很懂 ftp，反问究竟还有谁默认以 ascii 模式传输
+2603417	885	johnp 询问能否同时访问并显示 RTC 时钟与系统时间时钟这两类时钟，自述对此感到有点困惑，恳请大家伸出援手帮他指出路
+2603418	885	souchu 提出两点建议：用 flags 0x1 强制 NIBBLE 模式，以及在 BIOS 中把并行端口改成仅 EPP 或 SPP，另外还追问对方 Thinkpad 板载 chipset 的型号
+2603419	885	dnelson 指出两者默认是同一个东西，settimeofday 会一直写入 RTC 时钟，除非 sysctl 变量 machdep.disable_rtc_set 被置为 1
+2603421	885	jason 答 Joel Ray Holveck 关于仍有发行版默认以 ascii 模式传输 ftp 文件之问 表示答案是有的 且名字以 Windows 开头
+2603422	885	greg 回忆自己在 BSD/OS 上直到停用它之前一直运行 FreeBSD 二进制 到 2.1 版本时仍在用 记不清有过重大问题
+2603423	885	jeff 问 NATd 是否只能翻译 TCP 与 UDP 能否扩展支持 protocol 47 让 MS PPTP 穿越防火墙 提及 tcp 1723 端口翻译正常而 protocol 47 不处理
+2603424	885	eivind 说 NATd 目前只处理 TCP 与 UDP 若要扩展须请 Charles 或自己去改 libalias 若能提供文档可较快完成
+2603425	885	warner 笑称自家 presario 实际装有 40M 内存却只报 16M 并笑赞其使用的 torx T15 螺丝在商店里几乎买不到
+2603426	885	fred 报告给 560E 的 PCMCIA 内存窗口加 wait states 后 Netwave 卡的写坏问题消失 说明根因是内存时序而非缓存问题
+2603433	885	alfred 说明 LINT kernel 中存在一个选项可让机器不信任 BIOS 报告的内存计数 也可将具体数值硬连线写死
+2603434	885	phk 建议从 www.intel.com 取 tech-man 并 dump 寄存器观察所使用内存区域实际行为 附提自家 560 机器配 NE2000 卡工作正常
+2603436	885	nik 答 Leif Neland 只要在 PR 中留可用邮箱即可自动收到处理通知 处理人往来邮件也应同步到 GNATS 以留下审计轨迹
+2603441	885	max 请教在 manual page 中如何在行首指定句间双空格 尝试在 .Tn FIFO 后加空格却导致断行 请求宏用法指针
+2603448	885	james 说 vx 手册在 2.2.2 中仅提 10Mb 支持 询问是否已升级到 100mbit 全双工 表示自己愿贡献但驱动编程经验甚少
+2603450	885	baum 自述作为 CS 本科生参与团队欲在 FreeBSD 的 TCP/IP 层之上加 IPSec 打算从 OpenBSD 移植并询问是否已有人在推进
+2603451	885	ted 建议 max 在 .Tn FIFO 后加一个含两个空格的片段 提醒 doc(7) 手册值得查阅 并询问 FreeBSD 是否附带 troff 相关文档
+2603453	885	max 回报 ted 建议的空格片段其实已在里面 但加了转义仍只得 1 或 3 个空格 表示可能难题且未见现有手册页涉及
+2603455	885	amancio 表示此前听说日本已有人在 FreeBSD 上跑起 IPSec 因此在看到相关 FreeBSD 移植话题时略感旧闻重现
+2603457	885	jorge 转述另一 Unix 分支主开发机日发十万封邮件已连续运行三个月 另有同分支机器已运行四百五十八天 建议 FreeBSD 就 ISP 场景做类似调查
+2603458	885	studded 认为提供本地改动 diff 便于打补丁是好办法 但觉得写在 man 页中更佳 并表示若脚本被采纳愿亲笔撰写
+2603459	885	studded 公布先前提交的 PR 编号为 6064 表示原想把脚本留在 etc 保持整洁但接受 nik 建议改到 usr/bin 更合适 并强调更愿纳入主线发行而非做成 port
+2603460	885	jordan 表示不赞同把 etc 拷到 etc/pristine 的做法 主张用户可变部分改为 template based 这是 Paul Traina 两年前首提 并问是否有人接手
+2603464	885	jordan 主张真正的解法是设计一个封装全部必要信息的单一文件 由它生成 legacy 文件 好处是更简洁地表达服务属性并分离默认值与改动值 还能覆盖当前方案办不到的场景
+2603467	885	tim 追问 usr/share/examples/etc 的文件为何于 1995 年底被移除 翻阅归档找不到相关 commit 消息也无讨论记录 另提及关于此事已有 PR 故才发问
+2603469	885	jordan 认为这是可行方式之一 主张系统应对每个实体允许指定文档串启用位命令参数默认值与依赖项 至于用 m4 还是更复杂方案交给实现者决定
+2603470	885	leec 认为 Jordan 关于 FreeBSD 集群愿望的说法可能正确，但他当年不在现场无法核实，也不清楚那份 wishlist 究竟在哪里，甚至不知道它是否真实存在
+2603471	885	leec 报告向 majordomo 发出 who 命令查询列表成员后收到 Command not recognized 回复，随后追问 FreeBSD 的 majordomo 究竟用哪条命令才能取到用户列表
+2603472	885	jkh 说明 FreeBSD 的 wishlist 更像集体潜意识，是 hackers 与 current 列表中各类奇想帖子的总和，并说 top 并没有真正的 leadership
+2603473	885	jkh 表示关闭 majordomo 的 who 命令是为了防止 spam 邮件抓取 FreeBSD 列表订阅者名单，这一措施对防垃圾邮件至关重要
+2603474	885	sef 提出好的 wishlist 做法是先坐到 FreeBSD 机器前登录，做让自己感兴趣的事，找出困扰之处，然后把它改掉
+2603475	885	jkh 认为约 90 成 FreeBSD 严肃工作都是这样完成的，开发者因被功能困扰而动手，没有更好的动机，不会有人照 TODO 清单来做事
+2603476	885	Tom 转述有人在别的列表上说正构建容错集群，已做出分布式锁管理器让成员共享资源，现作原始设备访问，另提 Coda 项目
+2603478	885	sef 自述核心团队特权无非是把被反对的代码合入并无视抗议，其余皆无，唯 vm86 例外，只因 Jordan 说服 BSDi 捐出代码才动手做
+2603480	885	jkh 否认 FreeBSD 有定期碰头的核心团队，说自己只是偶尔就真正需要做的事发牢骚，实际做的事仍然是志愿的，团队靠判断功能是否合 FreeBSD 精神维持凝聚，由 David Greenman 作为首席架构师在悬而未决时裁决
+2603481	885	jkh 建议对核心成员越界行为应更正式地向 David Greenman 作为首席架构师提出反对，要求他介入，而不是仅在 hackers 列表上抱怨
+2603483	885	alfred 在 FreeBSD 上询问是否有人希望他实现 mremap 系统调用来移动和调整 mmap 段大小，如果实现是否愿意并入 current，计划照 Linux 版动手
+2603484	885	frank 描述正在移植 Schneider & Koch SK G16 网卡的 Linux 驱动到 FreeBSD，问是否应并入 ed 驱动而不是新做 if_skg16 独立模块
+2603485	885	David Greenman 称 BSD 未见有 mremap 提案，m 系列系统调用多源自 SunOS 实现，SunOS 自己也没有 mremap
+2603488	885	pierre 认为 FreeBSD 上的 IPSEC 很有用，可优先用 SKIP 包，但 SKIP 并非完全兼容 IPsec，用的协议号是 57
+2603489	885	luigi 说需要在 FreeBSD 上格式化大于 512MB 磁盘的 MSDOS 文件系统，mtools 只适用小盘，故想找只做格式化的更小工具
+2603490	885	decebal 说自己在这份 FreeBSD 邮件列表已经发过一次却无人回复，因此再次发帖，请对方告知是否发错了地方，语气焦急并致谢
+2603491	885	alfred 说这事做不了，但也反问 FreeBSD 是否真的不支持这块板，语气存疑，暗示 FreeBSD 未必真的没有该板支持
+2603492	885	leec 说 David Greenman 的看法合理，能理解协调志愿团队的困难，并接受 FreeBSD 工作本质上是自愿性质的，谢谢各方反馈
+2603493	885	decebal 承认 FreeBSD 不支持 Xem，但支持 Xe 板，自己编译 Xe 驱动后内核仍无法初始化，而 Linux 有 Xem 源码
+2603495	885	mike 欢迎尝试 mremap，但看过 Linux 做法后觉得层间违规严重，FreeBSD 的 VM 系统精细度更高，建议参考 BSD/OS 或 NetBSD 的做法
+2603496	885	jkh 说 Ron Minnich 刚就集群实现无人接住一事联系他，他为 core 的失误道歉，并建议拉 Minnich 进入 committers 组
+2603497	885	benedict 建议用 mkdosfs 工具来格式化磁盘，作为 FreeBSD 上 MSDOS 文件系统格式化的替代方案
+2603501	885	luigi 说 which mkdosfs 给出 /usr/sbin/mkdosfs, man -k FAT 列出 mkdosfs(1) 手册, 自嘲当时没先查就发帖问
+2603502	885	dannyman 说上午约两个小时列表管理员的配方出了问题, 致他收到的每封来信都被自动回信, 就因此涌向列表的垃圾向众人致歉
+2603503	885	robert 建议用 mtools 处理大磁盘, 并说自己已有一份修订版 mkdosfs 支持 FAT12 FAT16 FAT32, 愿寄给 luigi 审阅测试
+2603504	885	luigi 说自己有 mtools 3.0 的补丁可让 HD 支持到 512MB 并启动 DOS 或 Windows95, 询问 robert 是否愿意整合
+2603505	885	luigi 提交针对 snd980215 的补丁为 sb_dsp.c 与 sbcard.h 增加 Vibra16X 播放部分支持, 主要源自 Torsten Ackemann 的代码贡献, 请求有卡者测试以赶 stable 截止
+2603506	885	ben 借机宣布启动新版 vx 驱动开发工作, 称刚从 3Com 拿到技术文档, 下周有充裕时间坐下来动手写这份新的网卡驱动
+2603507	885	david 询问 FreeBSD 是否有计划把 XTI 也就是 TLI 这个接口迁入内核, 或至少为这个标准接口提供库层的支持
+2603508	885	atipa 转述他人观点称这类网卡架构一般, NFS 流量下表现不及 DEC 与 Intel 同类, 并反问对方期望何种性能表现
+2603509	885	robert 说用 mtools 3.9 预发行测过独立 FAT32 支持, 超过 0xffff 簇的分区工作正常, 但整套工具未细看, 若 luigi 用得着就应纳入
+2603512	885	simon 反对把 PostgreSQL 改成只用文件存数据的方案, 因除文件外还支持内存与分布式等其他存储管理器, 呼吁别把这些弄坏
+2603513	885	ben 说曾在 Sparc 与 PA-RISC 混合网里测过 3Com 网卡, NFS 性能至少与同代相当, 认为 Intel 网卡最灵活而 DEC 有对齐限制影响性能
+2603519	885	studded 请 jordan 关闭 PR, 说自己若做得出会乐意做更好的替代方案但自认没这个能力, 认为有些方案总胜过没有, 且 base 里目前没写升级说明
+2603521	885	jeff 回复 eivind 附上自己整理的 pptp 相关文档链接汇总, 包括 gre 协议的 rfc1701 rfc1702 与 pptp 草案, 并请人抓包配合
+2603523	885	ken 想动手改 if_fxp 驱动但 Intel 官网数据表没写驱动接口只提 82557 Users Manual, 询问谁能拿到这份手册
+2603524	885	sbabkin 说私发给对方失败改转到列表, 附他和 moldnet.md 一位用户关于 Digi Xem 与 Xe 主板支持的往来邮件
+2603526	885	joe 报告用 2.2.5-RELEASE 时 fxp 网卡插在 BAY 350T 交换机上连状态灯和 link 灯都不亮, 但插 10Mb 集线器就正常, 询问原因
+2603527	885	alfred 提出做 mremap 时先锁内核解除映射再按用户意愿重映射, 失败时按 unmoveable flag 决定是否原地重映射, 承认这方法未必高效但思路合理
+2603528	885	dan 说自己也在 350T 上遇到过这种故障, 建议用 ifconfig media 或 telnet 界面把一端或两端的速率强制成想要的值再看效果
+2603529	885	joe 说 Inetd 触发警告后完全不可恢复, 只能手工把它重启起来, 询问到底是什么触发的, 并请遇到过同样情况的人帮忙回答
+2603530	885	john 说自己曾在 buggy 的 -current 上遇到过这个问题, 提醒 3 月 13 到 20 之间跑的 current 可能已经把文件系统搞坏了
+2603531	885	wilko 反馈 Ollivier 提议的修法对自己生效了, Netscape 现在启动正常, 顺便感叹 Netscape 真是极其古怪的程序
+2603532	885	andrzej 宣布 PicoBSD 0.31 发布, 这是能装进单张软盘的 FreeBSD 变体, 含 SSH telnet FTP 客户端可做拨号接入, 或做小路由带 IP 防火墙与 SNMP agent
+2603535	885	jdyson 提出与其发明大量新原语不如沿用现有且够用的 VM primitives 继续推进，转述 Terry Lambert 曾偏好以 procfs 而非 rfork 实现跨进程描述符表共享的 UnixWare 方案
+2603536	885	leifn 转述 Wilko 在 2.2.5R 上遇到 Netscape 4 循环卡死时 Ollivier 建议的修复对他有效并称此程序确实古怪，本人仅补充一周左右就能修好
+2603537	885	szabo 请求取消订阅 freebsd-hackers-digest 邮件列表，正文只附一句取消请求与致谢，并整段粘贴该列表第四卷第七十五期完整汇总作为引用块
+2603538	885	toniel 回复订阅取消请求时说明自己已给当事人回信并附上订阅取消说明与其原信完整引用，并追问列表里是否还有其他人也提出取消订阅
+2603540	885	allen campbell 表示找不到 Paul Traina 关于把 /etc 配置改为模板化的原始邮件，尝试 config hackers stable 三个列表均无结果，询问对方记得在哪个列表发的
+2603541	885	choi 提议修改 FreeBSD.cf 使 SJIS 与 EUC 在 X 窗口下与 xpg4 库绑定，虽不能解决 more vi perl5 等命令行工具问题，但希望后续 FreeBSD 版本纳入 XFree86 3.3.2 附带 xpg4 库
+2603542	885	satoshi 告知本周前往 Baltimore 参加一次会议并周四启程，邀请其他人若无往 SOB 脸上扔派之意可到他该地址线下见面
+2603543	885	james 警告 earthlink.net 常发出大量 spam 邮件并怀疑其实是地址采集行动，因此建议直接屏蔽这些邮件而非回复对方
+2603544	885	eric 反问垃圾邮件者其实直接让地址采集机器人订阅列表更方便，并补充自己也收到大量 earthlink 来源的 spam，procmail 过滤经改进可挡住 98-99%
+2603545	885	terry 指出目标过滤最大问题是先付钱把垃圾邮件下载到本地再丢弃，还会占用非平月租运营商按消息计费额度，因此这并非目标过滤的合理理由
+2603548	885	alexlh 询问 FreeBSD 上目前是否已有支持的 10baseT 多端口以太网卡，或哪些型号将来可能较容易被纳入支持范围
+2603549	885	luigi 分享一篇讲 microsoft 如何管理其 web 服务器的文章链接，页面本身只是数据入口并指向 MSWord 格式正文，若无 MSWord 需下载 Word Viewer，非 Windows 平台不被考虑
+2603550	885	pratap 建议 alex 关注 Antares Microsystems 出品的 SBUS 10 Base-T 四端口以太网卡，认为该线路可解决多端口需求
+2603551	885	Jonathan Bresler 指出所引 microsoft 管理 web 服务器文章日期为 1997 年 5 月 8 日，并称 FreeBSD 邮件列表上一位微软方面人士否认该文准确性但始终未回复提供准确数据
+2603552	885	alexlh 追问 pratap 所说的 SBUS 是否指 Sparc 机器上的 SBUS，并问 FreeBSD 如何为 Sparc 平台提供支持
+2603553	885	dag-erli 补充自己也见过 IDE 加 LPIP 同时活动导致锁死的相同场景，称二月十号提交过 PR i386/5698 并附查询 URL，只做过 lp 驱动的小清理
+2603556	885	Jonathan Bresler 承认微软主要跑 http 而自己这边主要跑 ftp，仍认为四四比一的吞吐差大体合理，回应用户拿 wcarchive 与微软服务器直接对比的说法
+2603557	885	watson 讽刺 HTML 跨平台可访问是其少数优点之一，微软若不把营销文档改用 HTML 格式发布而是要求读者先下载 Word Viewer，就难以说服用户相信其站点
+2603558	885	slemko 指出动态内容与静态内容不可比，微软网站大量使用动态内容而 wcarchive 极少使用，并补充 NT 本身需要更多硬件以保证稳定，拿二者流量对比并不公平
+2603559	885	berlin 表示可通过全球通讯录查证身份并说明其工作性质，自称是某所大学学生兼职做 professional evangelist，愿意替人查询但不愿引发争论
+2603560	885	luigi 说明本意不想挑起服务器竞赛并指出流量与单条目请求数数据不易获取，追问 FreeBSD 新版本发布前几天每六小时的下载量以及改走 RMDP 多播分发可省下多少带宽与 CPU
+2603561	885	terry 指出 Hotmail 属于地址收割器，非 Hotmail 用户致信或 Hotmail 用户回信即会把自己的地址送进可出售的 spam 名单，收发双向都受害
+2603562	885	Stox 回应称文章所述不实，Windows 95 时期微软站点多台跑 BSDI 因 NT 常常掉线，NT4.0 推出后才改变，后悔没留下文档
+2603563	885	Zimmermann 报告自有 Zynx ZX-314 四口以太网卡在 FreeBSD 上运行良好，并给出厂商网址，同时提到 Adaptec 与 Cogent 也做同款且据他所知已支持
+2603564	885	Tom 指出 winamillion.msn.com 亦非 NT 系统，推测同为 BSDI，并补充称 MSN 还有若干其他非 NT 机器
+2603566	885	Narvi 自述误用 disklabel 命令覆写 sd2 磁盘标签后请求协助恢复数据，磁盘布局为标签区空白扇区 64 至 128MB 交换分区与约 800MB 文件系统，需要定位文件系统起始扇区
+2603567	885	Heybey 提供改造自 SunOS 的 find_super 工具在 FreeBSD 下编译通过，用法为 find_super /dev/rwd0c 输出扇区偏移与 fs_size fs_bsize fs_fsize
+2603568	885	Kushnir 提议给旧声卡驱动加 DEVFS 支持因新驱动尚不支持 midi 口，附 soundcard.c 补丁用 devfs_add_devswf 注册 dsp audio sequencer 等节点，自陈仅有一台 Yamaha SA2
+2603569	885	Eklund 建议补丁走 send-pr 以便无人即时处理时仍可追踪，认为发送增强补丁者应受赞赏而非斥责，并自改补丁覆盖除 trixmidi 外全部驱动，承诺测试可用即提交
+2603570	885	Hobson 给出 zsh 脚本循环 dd 逐 MB 读 sd0 扇区再用 hexdump 加 grep 过滤 1954 0001 形态的 FS_MAGIC，指出两个魔数间隔 8K 出现即定位分区，并举 128M 对齐时偏移 262114
+2603572	885	Derbyshire 报告在 -stable 系统上把 -current 内核装到第二硬盘的 wd2s2 后启动找不到 root，怀疑与同盘第二个 FreeBSD 分片 wd2s3 或缺少 wd1 有关，已挂载 -current 的根与 usr 并在 Makefile 加 -I
+2603573	885	Losh 想以手上买到的便宜串口键盘替换或并联于 pckbd 接口，翻过 syscons.c pcvt 与 sio.c 后判断可行但不简单
+2603574	885	Tom 反问串口键盘究竟是什么以及拿来做什么用，认为既然本身就走在串行口上那么去做串口控制台的代码大概最接近这个需求，随后又贴出对方关于改起来不容易的原话
+2603575	885	Shapiro 称近年见过的键盘几乎全走串行接口，速率多为一千二百或九千六波特率无校验八位数据，并澄清对方想说的其实是 RS-232C 键盘，因为 PC 键盘电平只有 TTL
+2603576	885	Losh 澄清手上有输出 RS-232C 或 RS-423 电平信号的键盘想接到运行 FreeBSD 的 Libretto 50CT，希望向内核呈现与现有 PC 键盘相同的行为并配合 X 使用
+2603578	885	Shapiro 认为修改 getty 把标准输入与标准输出错误流分开并不难，做成后其余自会跟上，也可能 getty 自己或 inittab 的 BSD 对应物 /etc/ttys 已支持，控制台本身不算难题
+2603580	885	Shapiro 认为除 X 外 getty 就够用因为它为子进程建立标准输入输出流，除非使用可配置的 /dev/console，另提到 X11 可逐项显式指定每个资源
+2603581	885	Wunsch 认为除 scsi(8) 外并无命令行工具可看 CD 卷标，追问卷标究竟是什么、能否以会话起始处的字节序列表述，建议先取出标签再用 hd 扫 /dev/rcd0a 对比
+2603582	885	Wunsch 表示一直没拿定主意是否导入该驱动，因整体架构杂乱会把一批 NetBSD 底层 SCSI 例程拖进树且组织方式与 FreeBSD 底层 SCSI 不同，CAM 子系统出现后时机更难判断，2.2.5 CD-ROM 的 /xperimnt 目录留有快照与安装软盘
+2603583	885	Hazairin 报告 SCO 3.2 i386 主机与 2.2.2-RELEASE 主机间 TCP 连接挂死，tcpdump 显示持续发数据段对方只回累积 ACK 直到 io timeout，ftp 服务亦同样卡住
+2603585	885	Sramek 称按 pthreads 手册编译 libc_r 后运行 Unix Net Programming 里的多线程示例，accept 调用未阻塞而是立即返回，同一批示例在 Linux 上工作正常，现仍装 2.2.1
+2603586	885	Birrell 追问是否用 -D_THREAD_SAFE 编译并链 -lc_r，建议改用 -stable 或即将发布的 2.2.6 版本
+2603587	885	Sramek 回称已链接该库但未使用 -D_THREAD_SAFE 选项，用的是示例自带 makefile，并追问该选项是否系统相关，称会去试
+2603588	885	Kennaway 报告重装硬盘后系统部分损坏，FreeBSD -CURRENT 下任何重磁盘操作必致 panic 或死机，make world 二十秒内触发，运行 X 十至十五分钟冻结，降负载则正常，重启常报 Error C 3357 > 1024 BIOS 上限，怀疑 IDE
+2603589	885	seger自述TMC-16XX驱动大体可用但错误恢复有问题一张故障卡直接挂住内核他把该驱动用作freebsd当前系统主硬盘控制器偶发崩溃可能与驱动相关
+2603590	885	snob判断对方SCO方并未发出FIN包来终止TCP连接所以问题大概率出在SCO侧的应用软件上而非FreeBSD一侧的问题
+2603592	885	Mah质疑另有原因指出SCO方连发5个段却未收到FreeBSD侧任何ACK回传而此前FreeBSD方回ACK段却都正常他推测接收方未从套接字缓冲区读走数据
+2603593	885	Tom指出2.2.1里的libc_r存在不少bug大多数在2.2.6里已修复但signal与alarm的处理似乎仍有些怪异
+2603595	885	Shapiro自责未公开自己编写新存储管理器storage manager的计划并补充说改动应只涉及少于50行postgres代码但行数并非关键
+2603597	885	Heller转发一封邮件称SCO已开放PDP-11 UNIX源码许可覆盖研究版一至七及32V不含System V需一百美元且仅限个人非商业用途
+2603598	885	snob承认Hazairin正确即两侧沉默致连接永久挂起需等超时并推荐一份未文档化的内核配置项TCP_DEBUG也许有助排查
+2603599	885	Mah注意到起始128字节的分段不像批量传输应用会发出的追问被测应用是哪一种若FTP表现类似则问题不大并要弄清两端之间的网络路径
+2603600	885	neland针对Warner Losh关于RS-232C或RS-423电平信号键盘接到跑FreeBSD的Libretto 50CT上提出一个自己也不确定可行的想法即启用串口控制台后再让VGA控制台侦听串口
+2603601	885	Hazairin确认文件约1.4MB由软盘镜像经dd命令生成两端以64kbps租用线路相连经Cisco路由器封装为Cisco HDLC并启用了IP报头压缩
+2603602	885	Greenman追问双方是否尝试过重传指出SCO方至少应持续重传直到收到ACK并要求说明tcpdump究竟抓在靠近SCO还是靠近FreeBSD的一侧
+2603603	885	thuall请求指导如何在2.2.2上用RAW IP套接字配IP_HDRINCL在用户态完成ICMP包分片首包未置MF位且首包总长1020字节延迟一秒或换IP ID即正常但重组ID不同
+2603605	885	pratap singh 询问为何每层都计算校验而ARP帧没有是不是因为ARP包不跨越LAN边界且LAN环境差错率远低于WAN
+2603606	885	snob认同这一解释并指出若ARP帧在传输中损坏也没处上报差错最好就是等请求被重传ARP请求重传时以太网帧本身的错误检查会拦下
+2603607	885	David Greenman 答复所有以太网信框本身都带32bit CRC所以ARP帧由该CRC间接保护并不存在覆盖空缺
+2603608	885	David Greenman 表示无法解释该行为并要求对方在SCO那侧也抓一份tcpdump以观察SCO方看到的内容是否与FreeBSD侧不同同时询问FreeBSD机器上装的是什么型号以太网卡
+2603609	885	Vladimir Kushnir 承认自己在pine里自定义的From字段拼写错误导致回信被静默拒绝承诺下次用send-pr交补丁并确认Eivind发的补丁在旧挂载方案与devfs挂载两种情形下都正常工作
+2603611	885	Terry Lambert 指出D_THREAD_SAFE是系统特定的选项FreeBSD当前必需并称不用stable而用CDROM上FreeBSD会导致线程库在signals sockets及fcntl dup2等非阻塞设置上异常
+2603617	885	Joe McGuckin 报告在2.2.5-Release的机器装上384M内存后启动即触发kernel panic报bounce buffer memory out of range问除了拔掉128Meg RAM并重建内核外有无解决办法
+2603618	885	David Greenman 建议等几天后发布的2.2.6版本即可以此修掉bounce buffer memory out of range的启动崩溃
+2603619	885	Jordan K Hubbard 指出bounce buffer问题已在2.2-stable修复并贴出i386的machdep.c里删掉bouncepages按Maxmem增量分配那一行的diff还提到也可等几个小时装上2.2.6
+2603620	885	black@bleep.ishiboo.com 用theo deraadt写的内核补丁改ifconfig以打印接口统计后在P6-200的2.2.5R上测得de fxp和vx的字节计数都是缓慢递增的乱值并询问是否愿意扩大struct if_data
+2603622	885	peter 指出 TCP 传输失败不在文件大小而在内容 若数据链路不完全 8bit 干净且 SCO 终端在做 cr 到 cr-lf 翻译 则 tcpdump 会看到损坏包但 TCP 因校验和失配而丢弃
+2603624	885	josef 询问 FreeBSD 上有没有工具能转发 UDP 与广播包 类似于 Cisco IOS 的 ip forward-protocol 命令
+2603625	885	pratap 说明 ARP 没有二层校验和的原因在于 IP 会穿越多个网段 而 ARP 只在本链路 所以二层 CRC 已足够
+2603627	885	am 提议给 make world 加用户可配置的排除列表 默认空白以免覆盖 tcp wrappers 编辑器和 shell 等历史改动文件 并计划为 install 命令加排除功能与 noclobber.conf
+2603629	885	perlsta 提供了一个 NATd 项目链接供转发 UDP 包参考 附了自己的 unix 信息页面地址 并表示希望这样有帮助
+2603630	885	jdp 询问 ps -l 输出中 RSS 大于 VSZ 的情形 贴出表格末行显示 VSZ 为 644 而 RSS 为 276 并猜测是否与该进程大量使用 mmap 有关
+2603631	885	Ben 建议用 split 命令把文件切成两半 再看哪一半导致传输挂起 然后重复该过程反复二分 直到隔离出致命的字节序列 并认为这会很有启发
+2603633	885	tom 指出标准 UNIX 路由代码可以转发任何类型的 IP 流量 并强调广播通常不应该被转发 转发任何广播流量都是坏主意
+2603638	885	joy 说明因安全原因不允许 NFS 访问其构建服务器 因此改为挂载根目录 usr var 三元组 但 NFS 上无法 chflags noschg 只能手工找不可变文件
+2603639	885	leifn 转述 David Greenman 建议等 2.2.6 的说法 表示今天 cvsup 时已经拿到了 2.2.6
+2603642	885	mshar@vax.ipm.ac.ir 介绍 DIPC 分布式进程间通信可用于组建 PC 集群 提供消息 信号量与透明分布式共享内存 目前仅 Linux 版本 可移植到 FreeBSD
+2603649	885	david greenman 针对引文中 405919 个因坏校验和被丢弃的包大呼数量惊人 并判断根因在 routers 而非两端的 computers
+2603651	885	arman 解释 405919 个坏校验和是因为该 FreeBSD 机器已连续运行 139 天 实际每次 ftp 会话只多出约 7 个 并提议对比两端 tcpdump 输出甚至把 FreeBSD 换成 SCO
+2603658	885	terry 讨论 build-limitation 系统 建议将排除列表合并进去避免每次 install 都扫排除文件 并希望从只读 CDROM 直接构建安装
+2603661	885	josef 询问 FreeBSD 上是否有 DHCP proxy 认为 ISCdhcpd beta_5_14 不算 DHCP 代理 并转述 Terry Lambert 关于 DHCP 转发由 DHCP proxy 完成的说法
+2603663	885	terry 建议参考 Japan 的 WIDE project 认为较新的 ISCdhcpd 可能已能处理这类 DHCP 转发 并建议用 ipfw 的 DIVERT 规则配合 BPF 转发 UDP 包
+2603666	885	terry 回应 unix domain socket 传递 fd 的思路 提出如何抵达信息交换中心 建议改用 SYSV IPC
+2603667	885	archie 说明较新的 ISC DHCP server 同时包含 gateway 与 client 代码 并给出 www.isc.org 作为参考
+2603668	885	archie 转告 Netscape 正在举办 free the lizard 开源代码发布活动 邀请加入 mozilla.org party 页面
+2603670	885	john s dyson 说明 FreeBSD current 已使用 4MB 页面 但仅限内核与 device buffers 如视频内存 并表示如果实际应用能通过 4MB 页映射预分配内存获益 愿负责实现
+2603672	885	giannis 表示已下载并安装 2.2.2 并搭建拨号接入服务器 希望创建日志文件记录每个用户从串口登录的登录与登出时间及日期 以便统计串口流量
+2603673	885	p6ms2t15 询问如何读取 zn 以太网卡上的数据 例如已发送的分组数 已接收的分组数与碰撞次数 并说自己就是 Stephan losa
+2603675	885	drew 打算把 S/Key 一次性口令集成进 popper，改动放在 #ifdef SKEY 之下，只要 s/key library 调用不受出口管制他便会把补丁一并提交回 ports
+2603677	885	mark 对 drew 提出的 s/key library 调用是否属于出口管制范围这一询问只回复了两个字：No，未作任何扩展说明
+2603678	885	John 说 Daniel 询问 cvsup.au.freebsd.org 访问拒绝应直接联系镜像维护者，名单列在 FreeBSD 的 Handbook 第 23.4 节 CVSup Sites 一节，澳大利亚镜像维护者是 dawes
+2603679	885	Snob Art Genre 对 Stephan losa 询问网卡收发计数与碰撞统计的读法只答了一句 man netstat
+2603680	885	doug 提到 Archie Cobbs 说新版 ISC DHCP server 含 gateway 与 client 代码，并补充 client 部分只在 beta releases 中出现过
+2603682	885	opsys 对比 FreeBSD 当前树与 bsdi 3.1 的 sysctl，询问 dflt MSS 究竟是 512 还是 536，他更偏向 512 因为它须是 512 的倍数
+2603683	885	Eivind 说 install 支持 exclusions list 方案的开发量约三小时，补丁给 bsd.subdir.mk 增加 SDIR_OVERRIDE 及 subdirlist、subdiradd、subdirdrop 三类子目录
+2603684	885	opsys 询问 ellipse ftp server 的性能与本机 ftpd、wu-ftp 相比如何，并顺手提到 wcarchives 的 DG-ftp 更强
+2603685	885	peter 定位 LPIP 根因：sys/mbuf.h 要求 mbuf 操作受 splimp 保护，LPIP 从未把 lpt 中断加进 net_imask；另涉 net/if.h 与 ipintrq，PR 为 kern/6099、kern/1271、i386/5698
+2603687	885	Studded 说 Doug 提到的 ISC DHCP client 其实很稳定，并给出 home.san.rr.com/freebsd/dhcp.html 上的 setup 说明
+2603688	885	brian 建议从 FreeBSD.org 上的 latest ppp 版本入手，使所有 direct 连接都写进 utmp，用 last 命令即可得到连接统计
+2603691	885	doug 确认自己用 ISC DHCP client 已在制造流程里跑了一两年，也在自己的 laptop 上跑着，设置比服务端略麻烦
+2603692	885	David 说 512 与 536 之争的答复是不支持 Path MTU Discovery 的默认才是 512，FreeBSD 走 PMTU Discovery，tcp_mssdflt 变量实际取对端 mss 与接口 MTU 的最小值
+2603693	885	Robert Watson 正用 /dev/tun 拼装一个 simple VPN toolkit，已跑通 point-to-point 隧道与 UDP transport、加上 flow-control 与 SKIP 认证，打算以 BSD license 形式公开发布
+2603694	885	Matthew N. Dodd 说自己正在写 kernel level tunnel driver，采取 generalised 的 encapsulation 手法，好让后续新增路由与处理只是一件 code 的事
+2603697	885	mark 澄清 FreeBSD 里的 kip 并非 Skip 而是 Kerberised IP，需搭配 KerberosIV 使用
+2603698	885	Greg 说他用 cvs co -r 2.2.6-RELEASE src 什么也没检出，翻到 $CVSROOT/CVSROOT 的 val-tags 里只有 RELENG_2_2_5_RELEASE，补上 RELENG_2_2_6_RELEASE 后才成功
+2603699	885	JHB 说 Greg 用的那个 tag 形式不对，要查 tag 词表最省事的是进 /usr/src 后跑 cvs log Makefile 看前几屏的输出
+2603700	885	Greg 更正自己实际输入的是 cvs co -r RELENG_2_2_6_RELEASE，但改完 $CVSROOT/CVSROOT/taginfo 才检出成功
+2603702	885	luigi 试用 VNC 的二进制文件未果，Linux client 在 Connect 阶段就死掉，怀疑是模拟问题，而 NT 上的 Win32 版本则整个挂起
+2603703	885	Ruslan Shevchenko 回复 Luig Rizzo 的二进制试用询问，指出 /usr/ports/net/vnc 可用但速度很慢
+2603704	885	Eivind 在 luigi 询问 Xfree 配置之后，用 cd /usr/ports/net/vnc && make && make install 装完端口，玩笑说归功于 Mike Smith
+2603706	885	alexander tatmaniants 提交 syscons 补丁把 sysmouse 注册进 devfs 使 moused 与 X 可共存 并提问 2.2.6-stable 中 devfs 是否可用 mount 何时执行以及未文档化内核选项 DEVFS_ROOT 的含义
+2603709	885	jkh 回应对方检出失败的说法，指出自己在本地不需要修改 taginfo 就能直接检出，判断对方拿到的可能是有问题的仓库副本
+2603710	885	jkh 说某软件已收录于 FreeBSD 的 ports 库中 Mike Smith 引入后当面演示过看起来很干净 Java 客户端比较慢但整体仍然清爽
+2603711	885	amancio 认为用 exmh 配合 glimpse 作为邮件前端性能可以接受 exmh 是 Tcl Tk 脚本实现的 mh 图形界面 glimpse 用作邮件文件夹搜索引擎
+2603712	885	luigi 认为慢的主要原因在 Win32 server 端组件而不是 tcl tk 客户端前端 这可能与对方使用的环境恰好相反
+2603713	885	remy 需要一种能通过 DNS 按主机名解析出地址来应答 DHCP 请求的 bootpd 他已手工改造 ISC DHCP2 使其工作 但开发机使用可拆卸磁盘导致硬件地址频繁变化 DHCP 租约一片混乱
+2603714	885	ron 转发 Douglas Eadline 关于 Free BERT 77 的消息称其是 Paralogic 推出的 Fortran 并行优化转换工具 自己尚未试兼容模式但认为应用到 FreeBSD 集群上很有意思
+2603715	885	julian 指出 devfs 在 2.2.6 中功能完整但实用性不强 所需改动可以补丁形式应用到当前分支 其中包含 alexander 提供的 syscons 修改
+2603716	885	atipa 询问 FreeBSD 上运行的是哪个版本的 ORACLE 以及其原生平台是 Linux 还是 BSDI 还是 SCO
+2603717	885	dennis 反映其服务器运行速度偏快 询问除重启之外有没有办法让系统直接从 BIOS 重新读取时间 以便不必重启机器即可校正时钟
+2603718	885	dan nelson 反问 dennis 是否是指其服务器时钟跑得比实际快太多 以致 xntpd 根本无法把它校准到准确时间
+2603719	885	gianmarco giovannelli 在 Pentium 2 300mhz 配 a2940uw 与两块 scsi 硬盘的环境上多次运行 make world 比较 async 与 softupdates 性能 观察到 async 在四组测试中都更快
+2603720	885	wilko 反映自己在 FreeBSD 2.2.5R 上折腾了很久都没能让 netatalk 跑起来，怀疑和 bug 5811 有关
+2603721	885	malcolm newton 希望用 cron 定期把 modem 设置为 s0=1 自动应答以维持 uucp 拨号连接 但用 chat 脚本传 AT s0=1 命令似乎不起作用
+2603722	885	vinay bannai 回忆见过有关 Cisco 售价约 150 美元的千兆以太网卡讨论 询问从哪里能买到以及在邮件列表和 Cisco 网站都查不到更多厂商信息
+2603723	885	warner losh 提议基于 us.iso.kbd 新增一套类 unix 键盘映射 交换 ESCAPE 与 backtick、CTRL 与 CAPS LOCK、BACKSPACE 与 DELETE 并希望作为替代加入 syscons keymaps 目录
+2603724	885	dannyman 反问 wilko 是否在 kernel 配置中加了 options NETATALK 提示这可能是 netatalk 无法运行的原因
+2603725	885	michael kiernan 提供千兆网卡信息源并列出 Alteon、Essential Communications 与 Packet Engines 三家厂商 指出 Alteon 为 Sun 供货 网卡驱动目前 350 Mbps 就会打满整颗 CPU
+2603726	885	david langford 只回了一句 建议 vinay 直接访问 www.alteon.com 自行查阅相关资料 未给出其他厂商名单
+2603727	885	dan busarow 说 FreeBSD 的 CD 上带的 netatalk 软件包可以装上 atalkd 启动看似挂起其实只是启动需要几分钟并非真正卡死
+2603729	885	john fieber 指出有若干 post-release 补丁是必须打的，让人去 www.freebsd.org/releases 上的 errata 页查
+2603730	885	用户 0000-Administrator 反映某脚本在其两台机器上将 /root 目录权限从 0700 改为 0755，他希望该目录保持 0700 权限，两台机器都反复出现这种改动
+2603731	885	gurney_j 建议把 chat 脚本里原本的 AT s0=1 改写成空 expect 后跟 ATs0=1，因为 chat 用 expect 加 send 工作流，并提醒用 uucp 文件锁防止与 uucp 传输冲突
+2603732	885	dk 更正域名为 www.znyx.com 而非 zynx，并自述也在用 ZX314 这张四端口网卡，dmesg 里标识为 21040，与 NetApp NFS 服务器采用同一张卡
+2603733	885	danj 想把自己一块以太网接口最大带宽限到 T1，询问能否便捷或改内核做到，并追问高速线注入低速线时数据包是否只是被缓冲然后丢弃
+2603736	885	hgoldste 回复说用 ALTQ 就能限制接口带宽并给出参考页面，说明延迟队列空间耗尽后数据被丢弃，但不确定 ALTQ 是否包含 source quenching
+2603737	885	dennis 自述公司有商用附加产品 bwmgr 可完成同样的带宽限制，其模拟 IP 包到达慢速链路行为，按 IP 地址或网络乃至数据类型分别限定，TCP 靠减慢 ack 自适应节流
+2603739	885	kuhtz 自述 2.2.5-RELEASE 引导软盘经 PPP 安装毫无问题，但 2.2.6-RELEASE 装到一半报 SetIpDevice 的 ioctl SIOCAIFADDR 需要目的地地址，无法设置 IP 地址
+2603740	885	rizzo 报告在 2.2.6 无盘机上 mount /dev/wcd0c 到 /mnt 返回 Input/output error，此前用 dd 可以读到磁盘内容
+2603741	885	vidrine 反映 Iomega Jaz 加 Adaptec 2930 在 03/12 的 -current 内核上极不稳定，磁头停转后只剩 I/O 错误，运行 mount 或 newfs 或 dd 会卡在 vclean 死锁，关机时触发 panic
+2603742	885	wilko 对 dannyman 的追问只回了一个 Yep，用最短的一句做了确认，没有再补充任何内核配置细节，署名里照例画了 ASCII 艺术并标注 Powered by FreeBSD
+2603743	885	jkh 请求他人发给他 MD5 为 a6b9016d45dfba089b2e79105fbadda4 的 cvsupit.tgz 副本，以免第三次重做 src 子选择功能
+2603744	885	tom 回复说 mtree 是改回 /root 权限的工具，他还指出用 root 收邮件反而更糟，用 root 收邮件比 /root 权限被动修改严重得多
+2603745	885	walter 反映 de 网卡机器上 sshd 会不定期失联通常持续几分钟，Kingston DEC SMC Etherpower2 等多种 de 网卡上均出现过，杀掉 sshd 即可恢复
+2603746	885	avalon 反问 cvsupit 源码难道没纳入任何软件版本控制系统，他觉得这事实在不太可能，语气里明显带着不信和惊讶
+2603749	885	gmarco 询问是否有人使用或知晓可通过 web 页面添加用户的程序，用户密码和登录名由他自己选定，并请回复者直接给他发一份
+2603751	885	dawes 指出 cvsup.au.freebsd.org 出现 access denied 是 cvsupd 升到 15.3 引起的问题，目前已经修复
+2603752	885	lyndon 在 .emacsrc 里用 global-set-key 把 C-h 绑到 delete-backward-char，并把 M-? 绑到 help-command，使 ^H 和 DEL 都删除前一字符，同时把 help 重映射到 ESC 后接问号的组合键
+2603753	885	chk 补充说这个故障不只出现在安装阶段，后续使用时同样存在，唯一真正能用的只有传统的 pppd 配合 ppp0 的方式
+2603754	885	Ruslan 推荐自己在 cam.grad.kiev.ua 上使用的 admin 0.96p1 网页加用户程序，自称是最新稳定版，在局域网几台机器上无问题运行
+2603755	885	wilko 承认自己只打了 netatalk 官网上的补丁而未打 FreeBSD 的 errata 补丁，打上内核补丁后可运行未打补丁的 netatalk 1.4b2，但补丁破坏了 fddi 支持
+2603756	885	john 表示 netatalk port 在 2.2.6 系统上完全是开箱即用的状态，装上之后无需任何额外配置就能直接跑起来
+2603758	885	pedro 自述在 NIST 期间留意到该所 POSIX 验证套件与并行处理资源页面，并建议设立 parallel-FreeBSD 邮件列表以协调 PVM、MPICH 用户与移植 Stanford SUIF、UIUC Pablo 项目
+2603759	885	terry 针对 SUBJ Re 主题 program to add users via web 的询问建议用 ldap2html 实现通过网页添加用户
+2603761	885	randy 报告持有 ZX314 网卡在 2.2.6 环境下工作正常，但换到 3.0 SMP 机器上仅能 ping 本机端口而无法把包路由到网络中其他机器
+2603762	885	pete 排查 INN 1.7.2-insync-1.1d 新闻服务器异常缓慢，dmesg 显示两个 SCSI 通道与一块网卡共用同一中断，另一网卡、显卡与另一 SCSI 通道共用另一中断，怀疑先探测设备被轮询
+2603763	885	jonny 设想同一物理以太网上架两个逻辑 IP 网络，A 机 ifconfig fxp0 加 route add -net 10.0.1.0 -interface fxp0，观察到 1 跳互通；改 default 指向 alias 10.0.0.2 后即可
+2603765	885	josef 询问 2.2.6 下的 ipx 是不是只支持 ethernet_ii 这一种帧类型，还是此后已经有所变更，希望得到明确答复
+2603766	885	john 回复否认其他帧类型支持，目前仍仅支持 Ethernet_II 帧类型，其他若干帧类型目前已有补丁在民间流传之中
+2603767	885	julian 购入 Quantum Bigfoot 12Gig 硬盘发现在 2.2.2 下柱面数 23361 超出内核可接受上限 16383，只能识别约 8G，考虑升级 2.2.5 但不确定能否解决
+2603768	885	wilko 询问能否在 kernel config 中加入 Digital DEFPA fddi 控制器，即 device fpa0 与 pseudo-device fddi 两项
+2603770	885	rod 询问如何拒绝 FTP 用户查看或移动到他人家目录，举例 foobar 用户 ftp 家目录为 /home/foobar，意外离开家目录到 /home 虽未必造成破坏但希望管理员限制
+2603771	885	eivind 指出该 FTP 权限问题应发到 -questions 列表，并直接给出办法把用户放入 /etc/ftpchroot
+2603772	885	chris 介绍 VIA 是低层网络接口规范旨在为集群环境提供高效高带宽极低延迟通信，可能需要 Myrinet 或 hippi 等真实网络硬件，并询问是否有人愿意共同推进该规范实现
+2603773	885	ron 介绍 LBL 的 Bozeman 为 linux 写有 via 仿真实现，app-app 延迟约 20 微秒与 UNET 相当，指出真正实现低延迟需硬件 via 接口而 HIPPI 支持不佳
+2603775	885	ron 提到千兆以太网帧很快会升到 9300 字节，与 PCI 事务约 2048 周期交互将对系统产生有趣影响，同时询问 tcp 栈在什么条件下难以做到 10 微秒延迟
+2603776	885	brian 调整 /usr/share/mk 让 Objective C 程序可编译，添加 CFLAGS、LDADD 与 .m 后缀规则，定义 OBJC、OBJCINCLUDES、OBJCLIBS 三变量，认为应放在 bsd.lib.mk 而非 bsd.prog.mk
+2603780	885	brian 根据 chuck 提示意识到 sys.mk 会 source /etc/make.conf，之前观察到的行为差异源自不该改 sys.mk 而应改 /etc/make.conf，随后询问 send-pr 的补丁是否可能被合入
+2603785	885	faried 表示支持 Objective C 程序无需修改 /etc/make.conf 即可像 C++ 那样直接编译，尤其提到 GNOME 或 GTK 的 objc 绑定场景
+2603786	885	mike 指出 Cisco 早前曾收购了 Granite Systems，但此次收购至今仍未有任何产出或相关技术成果或产品
+2603788	885	mike 认为千兆以太网不仅借鉴了光纤通道的编码方案，还借用了 SX CX 标准的部分物理层，同时谈到 Alteon 网卡已被 Sparc 文件服务器采用且 Foundry 与 Bay Networks 的千兆交换机表现良好
+2603790	885	jim 在 sendmail.cf 增加规则跳过本地邮件的 RBL 查询以避免拨号，规则插在 check_relay 中 RBL 检查之前，请求他人评论
+2603791	885	julian 回复称该编译错误其实并不复杂，只需去掉多余的参数并检查其他参数，参考 if_ethersubr 作为参考即可
+2603792	885	tony 自述启动时把系统磕碰了一寸导致挂起 重启后 NCR 控制器报 MEDIUM 错误 那块 1GB Seagate Hawk ST31051N 上 dd fsck newfs 全用不上 挂到 Sparc 跑表面扫描后首块被 spare 出 询问能否恢复文件系统
+2603793	885	jmb 回 James E. Housley 建议交上下文 diff 指出 RBL 检查在 2.2.6 与 current 里已从 check_relay 挪到 check_mail 里比对 client_addr 版本升到 1.6 顺手提了用 IP 白名单避免本地邮件拨号上网
+2603794	885	kris 回应 John Hay 说只支持以太网 II 帧这事其实不算坏事，Beame 与 Whiteside 这类用 IPX ODI 驱动跑 TCP/IP 的堆栈本身就要 Ethernet_II，他也回忆用 IPX 搬数据时曾在 tcpdump 里看到过输出
+2603795	885	imp 已把旧 NCD 键盘的扫描码适配到 X 和 syscons 在 Libretto 上验证通过 但 BIOS 下功能键映射与标准 PC 键盘不一致 另有两个键作前缀改变其他键含义 需在 syscons.c 翻译表里低层修补 加虚拟键盘更难
+2603798	885	roelof 装 FreeBSD 后 pccardd 认不出 Accton EN2216 报 No card in database 换其他网卡与调 rc.conf pccard.conf 均无果 怀疑 Cirrus Logic PD672X 控制器
+2603800	885	housley 附 sendmail.cf.additions 的上下文 diff 说这条规则类似 denyip 但用文件列表存 IP 白名单 用来避免本地邮件为核对 RBL 而拨号上网 基于 src-2.2.0671.gz 版本
+2603802	885	jakob 询问手里的 Epson Stylus Color 300 打印机能否在 FreeBSD 下使用，如果能的话求具体配置办法，并说明回复请直接发给他个人
+2603803	885	rminnich 说在 extreme linux conference 上摆下的挑战是从用户态系统调用指令到线上首位比特 10 微秒 UNET 已经做到 走 TCP 更合意 直接拼成快速 TCP 就跳过了 nfs-over-udp 的坑 RP3 项目补丢包检查的做法可参考
+2603804	885	cshenton 报告在 2.2.6-STABLE 上构建 Perl5.004.04 时 DB_File.xs 反复报 recno_t undeclared 源码里搜不到该类型定义 怀疑是 ports 问题或自己遗留的老版本残渣 求判断
+2603807	885	rminnich 建议量首包上线路径延时最好拿示波器或逻辑分析仪接在以太网上 同时需一个可 mmap 的设备 把设备映射进来让程序往设备内存写入再调用 send 系统调用 观察位流出现量时间差 他提醒这套搭起来有点费事但值得试
+2603808	885	rminnich 转述 Van Jacobson 曾把 TCP 接收侧快路径压到大约 30 条指令 这说法自 1990 年前后就开始流传 可至今没谁真正见到过代码 现在提起这个数人们普遍不信 他觉得挺遗憾
+2603809	885	tom 提醒 Chris Shenton 说那个未定义的 recno_t 其实就定义在 /usr/include/db.h 里，并不是他手上那份源码自己带的
+2603811	885	luigi 回 10 微秒挑战指标 说 P5-100 在百兆网上一来一回 ping 大约 200 微秒 无特殊优化的单向上行也该少于 100 微秒 差距不算太远 又问 UNET 到底是什么 认为去掉拥塞控制这类对特定场景没用的功能能压掉一些 TCP 冗余
+2603813	885	cshenton 报告这个 port 的首个报错出在已 include 了 db.h 的 DB_File.xs，他手动把 typedef u_int32_t recno_t 插进 xs 才让代码编译通过，但仍担心是 CC 处理 .h 头文件 typedef 出了问题
+2603814	885	tom 认为更像构建环境有问题而不是 cc 出问题 因为 perl5 已在 2.2.6 系统上打包装过一遍 他怀疑是同时存在多个 db.h 之类的情况 请对方先检查构建环境
+2603815	885	ron 问内核脚手架部分是否已并入任何现有内核 他已拿到代码 现在想弄清围着代码的这些脚手架部分有没有被整合到某个当前在用的内核里
+2603817	885	viren 问在 2.2.6 下如何做一张含非支持驱动的 boot.flp 他已有打过补丁的 /sys 树用来生成内核 想知道能否只单独制作 floppy 以及 KERNELS?=GENERIC 那行是否意味 boot.floppy 会取 GENERIC
+2603818	885	paul 修了 StringDefs.h 里 XmNlist 的 define 让 mozilla 编译通过 起因是 ComboBox.c 第 272 行找不到该符号 原定义只在 XmVersion 小于 2000 时成立 而 X11R6 motif 2.0 不满足
+2603820	885	Jordan K. Hubbard 转发 Ton Roosendaal 的 Blender 消息 说 Linux 与 FreeBSD 版 Beta 定于 4 月 15 日发布 官方版在其后 4 至 6 周跟进 他感叹还得等到 4 月 15 日才拿到 Beta
+2603821	885	jfieber 回 Paul Saab 时把定位并修好那个退出时挂死且持续吃满 CPU 的问题列为 mozilla 的首个待办任务
+2603823	885	jb 回 John Fieber 时提议用公共 cvs 协作维护 mozilla 源码 让此类修复能被共享 而非各自本地打补丁
+2603824	885	opsys 询问是否存在 FreeBSD 与 Netscape 的团队以及有人提议建立一个 FreeBSD 中心的 mozilla 团队协作裁剪瘦身调试源码而不是各自为政，并说自己现在只想把 N 图标换成守门员 daemon
+2603825	885	amancio 列出后续两项任务，把 Java VM 升级到 JDK1.1.5，并再提供一个 secured mechanism 安全机制，未说明第一项任务内容
+2603826	885	benedict 认为退出挂死是 Netscape 4 的问题，自己也用 Netscape 4 遇到该现象，并指出 unix 源码比 Mac 与 Windows 版本约小三分之一，虽然压缩方式不同
+2603827	885	eivind 转述读到 mozilla 新闻组的消息，mozilla.org 已经计划推进该工作并向大型开源项目 CVS 有经验者征求信息协助，认为这件事正落到 FreeBSD 社区头上
+2603828	885	gibbs 询问是否知道可用于 C++ 程序的调试分配器包，希望在程序终止时列出所有未释放对象的分配文件与行号以及大小和分配序号
+2603830	885	jfieber 承认 Snob Art Genre 提出的 Netscape 4 归属质疑成立，认为该挂死问题的状态应先行核实，不宜在没有依据前直接动手修复
+2603831	885	keithley 怀疑该问题是 libc 的 select 或 poll 重实现引起的，自己在 3.0-971225-SNAP 上所有链到系统 libc 的 X 程序退出都挂死消耗 CPU，而 Netscape 3.04 静态链 BSDI libc 不受影响
+2603833	885	opsys 提出建立 FreeBSD 中心的 netscape CVS 树供社区协作修改后再把补丁向上游提交，并推测 mozilla.org 即将提供只读 CVS 树可能正与 FreeBSD 阵营商量
+2603834	885	wilko 请 Julian Elischer 过目自己先前发给 -hackers 邮件列表的 diff，如果没问题就提交 send-pr
+2603835	885	jkh 认为邮件列表希望共享修复的想法值得肯定，打算到 Mozilla 聚会上问 Jaime 是否有人在维护公开 CVS 让各方共享修改
+2603837	885	jfieber 补充版本分布信息，报告 Netscape 4 的退出挂死在 2.2.5 与 2.2.6 上都存在并且是间歇性的，大约一半时候能正常退出
+2603838	885	jb 指出 Netscape 已从源码中剥离所有他们获得授权的代码，其中就包括 java，源码里只剩 stubs，导致浏览器基本功能残缺
+2603839	885	housley 道歉并撤回先前未经测试的 anti-spam 规则补充，说明 allowip.db 是本地允许 IP 地址的哈希表，供 check_rbl 放行本地地址，适用于小公司和拨号宽带
+2603841	885	spork 用 telnet 测试 rpcinfo 显示 portmapper、nfsd、mountd 均在 TCP 端口监听，但防火墙仍拦截大量 UDP 包，询问 mountd 与 portmap 能否彻底禁用 UDP，手册里没有找到该选项
+2603842	885	opsys 转述新建 mozilla 新闻组的说法，因 Netscape 从 Sun 处获得 java 授权，故无法纳入 src，从该源码获取 java 代码基本无用
+2603843	885	omar 询问 FreeBSD 支持的 CD-R 驱动器是否支持多会话以便分天归档日志文件，以及 cdrecord 是否只用于复制现有光盘而无法用来归档自己写好的文件
+2603844	885	jacques 说自己在笔记本上跑 2.2.5 大约两个月并使用 Netscape 4 未遇到退出挂死，愿与有兴趣者比较配置信息，但尚未在 current 机器上试过
+2603845	885	studded 认同 opsys 建立 FreeBSD 中心 CVS 树的想法，认为这是赢得正面宣传的绝佳机会并希望 FreeBSD 主导该进程
+2603847	885	jkh 说找回任何 java 支持与找回 SSL 支持都已是常见问题，各方正在处理，我们继续追问只会重复，并给出 mozilla.org 社区页面链接作为讨论去处
+2603849	885	ejs 说自己只见过一次这个挂死，因为通常一周才重启一次机器，并转述 John Fieber 所说该问题在新版本上一半概率间歇出现，自己不作同一结论
+2603850	885	jkh 认为 Kaffe 团队需要一个更合理的目标来集中精力，刚被开放源码的 Mozilla 也许正好可以提供这样一个车辆，但没有复述 Sun 授权导致取 java 无用的说法
+2603851	885	Jacques 表明更希望做 Python 集成，另建议支持 tcl、Perl 与 Rexx；认为 JPython 与 NetRexx 这类 Java 实现都只是纯粹的开销，此系个人意见
+2603852	885	dannyman 报告在 FreeBSD3.0 编译 mozilla 时 unix/unixpref.c 报 Xm/Xm.h No such file，询问绕行策略，并问是否有人注释掉 dist/public/java/bool.h 第 23 行
+2603853	885	Faried 转述 dannyman 那句下载网页时戳破标 MS 字样的气球的段子，同时贴出 mozilla-contest.hungry.com 链接并写 Go wild 鼓励大家放手去做
+2603854	885	jkh 在 dannyman 抱怨 Errors 已需动用智力才能克服之后补充，还叠加了 Motif 的问题，本封回复仅一句 That and Motif 加一个笑脸表情
+2603857	885	Dan 补充说自己用 Xi CDE 与 motif 1.2 时那类问题并不存在，而是在 cmd/xfe/Makefile 的 OTHER_LIBS 里加了 -lintl 才编下去
+2603858	885	Pete 询问是否计划支持现代主板的环境监控，如电源电压、风扇 RPM 与 CPU 温度，以及这些值通过 memory mapped 还是 I/O mapped 读出
+2603859	885	Robert 记录 ncftp ftp.cdrom.com 时被拒，提示当前 3000 用户上限已满，随后转述其给出的 info@cdrom.com 邮件与 1-800 电话订购渠道，并反问该限制属硬件软件还是带宽
+2603862	885	Ollivier 认为无法限制 portmapper 的 UDP 使用，首次调用一定走 UDP；所回应的是 spork 提出的能否关闭 mountd 与 portmap 上的 udp
+2603864	885	Terry 回复确认 Ollivier 关于 portmapper 首次调用一定走 UDP 的说法正确，并补上首次 mount 请求同样走 UDP，本封回复只有两句话
+2603869	885	Narvi 提议再加一项，让 128 bit crypto 变成可选插拔以便把加密部分留在美国之外，此封署名 Sander 并附一段悲观格言
+2603870	885	Amancio 报告套用 Eivind 提供的 patch 后运行 moz-export http://www.freebsd.org 时 mozilla 已成功启动，并向 Eivind 致谢
+2603873	885	andy 询问 gprof(1) 配 cc -pg 的用法示例，在 2.2.5R 上执行 cc -pg -g test.c 时 ld 报 -lc_p no match，且本机并无 libc_p
+2603875	885	John 说明 gcc 的 -thread 只链接 -lc_r 并不定义相关宏；_THREAD_SAFE 仅用于取线程安全的 errno，这是为满足 libc_r 不得给 libc 带来运行时影响的折衷
+2603876	885	Karl 询问 3.0-980311 SNAP 是否已够可用能起机并开始跟踪 -CURRENT；自述机器为双路 P-Pro200 但目前只用一颗 CPU
+2603882	885	Philippe 推荐 horac 这个基于 curses 的纯文本图形库，可作 SVGAlib 的 drop-in 替换，还能在 160x60 分辨率下跑 doom
+2603884	885	Soren 补充说 Philippe 推荐的库其实不是 Aprils fool 玩笑而是真货，本人隶属 FreeBSD 核心团队
+2603886	885	Matthew 请人解释 mbufs 究竟是什么以及在整体架构中处于什么位置，所用系统为 2.2.5，并自认此问或许过于宽泛
+2603887	885	spork 用 nfsd -t 启动服务，rpcinfo -p 显示 portmapper 走 tcp 111 与 udp 111，但 mount_nfs 与 showmount 仍尝试 UDP 并失败，询问是否应提 PR
+2603888	885	John 建议查阅 Addison-Wesley 的 TCP/IP Illustrated Volume 2 The Implementation，作者 Gary R. Wright 与 W. Richard Stevens，称此书对此讲得最全
+2603889	885	Alex 报告在 2.2.5-RELEASE 上把 mozilla 与 LessTif 结合可以编译通过，静态链接产物超 67 Mb 完全无法运行，动态链接则大量报错并崩溃
+2603890	885	Alex 回复 Justin Gibbs 关于 C++ 调试分配器之问，建议若不需线程支持可用 SGI 的 boehm gc，它支持 C 与 C++，且已由 Jeffrey Hsu 移植到 FreeBSD
+2603894	885	studded 报告在 2.2.6 上套用 Eivind 的 port 配 Motif 2.0 能 compile 通过 但动态版报库缺失错误而静态版只增占 cpu 始终不出界面
+2603902	885	pratap 建议去翻一翻 Richard Stevens 的 TCP/IP 第二卷这本书 或许对原提问的人找答案有帮助
+2603904	885	ken 报告他配 3.0-current 加 lesstif 0.83 与 Eilvind 的 port 能带起第一个界面 结果一显示就锁死
+2603908	885	jamesn 报告他需要把 BUILD_OPT 与其余环境变量都设好 Mozilla 才跑得起来 建议 strip 掉符号 体积降到约 7.5 兆 邮件与新闻模块仍编不出
+2603910	885	jkf 报告静态链接 pthread 时 gcc 用 -static 报 _pthread_join 未定义 去掉 -static 后照常编译运行 他在 libc_r.a 里查到 uthread_join.o 存在 不解原因
+2603912	885	jhb 把 -lc_r 放到 -o 之后 因为链接器认为已经搜过 libc_r 不会回扫在 blah.o 中再解析出的符号
+2603916	885	vadim 问客户端服务器应用该怎么做成 port 并问是否应该拆成 client 与 server 两个独立 port
+2603918	885	satoshi 认为把 client 与 server 各自做成独立 port 分开打包的做法可能更好 优于让单一安装脚本让用户挑选的方式
+2603919	885	benedict 问之前讨论的修复是否已经提交到 port 里了 还是说必须自己手工打补丁或者等 0.84 的版本出来才行呢
+2603921	885	alex 提交 mozilla 补丁 由 Boris Tobotras 编写 在 libi18n 的 ugendata 中加一条 CS_KOI8_R 映射以支持西里尔字符
+2603924	885	alex 打算今天先 RTFM cvsupd 手册 也就是读说明文档 也许今天就把 cvsupd 搭起来试试看能不能成功呢
+2603926	885	amancio 建议由有 freefall 账户的人来做这件事比较好 信末用 Cheers 结尾表示建议完毕更好一些呢吧
+2603930	885	nazeer 询问 NE2000 以太网驱动在源码树中的位置 并想了解设备文件名 以及符号名是否叫 ed0 这类 还想打开它读收到的以太包
+2603933	885	eivind 答用 bpf 而不是 ed0 并在 tcpdump 中给出使用示例 同时告知 ed 驱动位于 src/sys/i386/isa/if_ed.c
+2603935	885	chuck 认为 netscape 方面既然自荐作补丁集中渠道并宣告自建 cvs 树 就不该另建 建议直接使用他们的服务
+2603938	885	alfred 询问 Ricoh 2meg SCSI cd-rw 驱动是否被支持 他推断既然为 SCSI 设备 应该已包含在内
+2603943	885	nice_guy 答配合 lesstif0.83 已能运行静态与动态两个版本 并附上 moz-export 的 ldd 依赖列表
+2603944	885	adrian 提议去联系 Mozilla 方在其站点建立 FreeBSD 分支 便于与上游同步并可向对方介绍 CVSup 的用法
+2603946	885	ted 答 Ricoh MP6200 有 1MB 缓冲 由 ports 中 cdrecord 支持 支持 SCSI-3 MMC 命令
+2603951	885	torsten 答 Plextor Plexwriter 4/12 有 2MB 缓冲 支持 MMC 并与 cdrecord 兼容
+2603952	885	paul 问是否要建 CVS 树 由谁牵头 并表示自己会把它搭完 同时提到 Amancio 建议由有 freefall 账户的人负责
+2603960	885	dannyman 回忆早年有人分享过一份 rc 配置 让提示符按是否为超级用户分别显示 # 或 > 他说自己已记不清这份配置的写法 想问有没有人能看出它的来龙去脉 信末还附了自己的主页地址
+2603961	885	Ulf 答在 tcsh 中把 prompt 变量设为 %# 即可让提示符按是否为超级用户呈现不同符号 他文末只署名 Ulf 签名栏里另附 Alameda 的街道地址与电话号码
+2603964	885	archie 回信说想找这类文字资料基本没戏 只能去读源码 他接着建议读者去看做地址转换的 natd 程序 那是真正在做这事的实现 文末署名并附上 Whistle 公司网址
+2603965	885	dannyman 回信致谢 Ulf 并贴出一段实机操作记录作印证 在 arh0300 这台机器上用带 -m 选项的 su 切到超级用户后 提示符末尾确实从大于号变成井号 切之前还列出了多封未读邮件
+2603969	885	vladimir 问在 2.2.5R 上该怎么安装 PPPD 2.3.3 他说用户态代码能编译通过 但内核更新之后无法重建内核 并附上 anu.edu.au 上的下载目录 请求大家先行帮忙
+2603973	885	muthu 说 2.2.5 内核里的 bcopy 在字节数超过 1024 时走浮点单元实现 否则退回通用 bcopy 而 libc 一律只用通用实现 他建议有 pentium 的机器把 libc 也改成浮点实现 并反问还有何正当理由
+2603976	885	joelh 说他没启用反垃圾邮件规则也没有 check_relay 规则集 DeliveryMode 是 deferred 可一发邮件机器仍然拨号外联 他用的是 -current 的 sendmail.cf 主机名为 detlev.UUCP 求人查原因
+2603986	885	john 指出根因是 /etc/login.conf 它给用户设了使用上限 他附上一段 cgi 脚本放进 cgi-bin 一跑即报出 web 服务器当前生效的限制 降为 nobody 的 httpd 会继承这套限制 建议调大 daemon 的进程数
+2603989	885	peter 反问被引用者所谓内核不保存浮点寄存器内容的说法 他质疑浮点寄存器理应被保存 否则用户程序就无法直接用浮点指令跑出像样的速度 他翻看 swtch.s 与 /usr/include/sys/pcb.h 里的 save87 结构后认为这能印证该看法
+2603992	885	julian 说他到场旁听过一场报告 讲者说 UDP 快速路径只要 30 条指令 而非 TCP 他据此纠正被引用段落里把这项 30 条指令的数字算到 TCP 头上的说法 提醒别人别把归属记错
+2603995	885	dan 说只要把账户名截断到 8 字符后没有冲突 用 /etc/aliases 配合改写 popper 的办法就很省事 这是他当年把邮件从 SVR4 系统搬到 FreeBSD 时用的路子 他现在跑的是 ipop3d 如果对方也用这个 他可以把补丁寄过去
+2603996	885	brian 说他的补丁允许把 ${OBJC} 设为任意编译器 问题出在 bsd.prog.mk 其中把 LDADD+=-lobjc 写成见到 .m 源文件就加 他觉得改用 ${LIBOBJC} 并不难 只要默认情形纳入 bsd.libnames.mk
+2603997	885	opsys 说 FreeBSD 手册里有专门一节讲这个 在文档链接下面可以找到 用户名可以改成 16 字符 但他认为这会破坏 NIS 等部分服务的兼容性 不过他仍确认这样做是可行的 并建议去读手册
+2603998	885	wilko 正在挑新的显示适配器 要求 1280x1024 至少 16 位色深 刷新率 74Hz 要与自带的 XFree 搭配可用 必须是 PCI 且确认在 75MHz 总线速度下能正常工作 他点名问 Matrox Millenium II 是否合用
+2604000	885	rob 说他在为一份研究报告做准备 内容是 FreeBSD 与 Linux 两套 TCP/IP 栈的差异以及哪套实现更高效更健壮 他想找人说清两栈之间可能让其中一套在处理大量用户负载时显得更好的关键差别 并请回复直接寄他的邮件地址以免占用列表
+2604002	885	mike 直接把答案指到 /usr/ports/sysutils/cdrecord 说按他看来 wormcontrol 相比之下能提供的东西不多 建议改用它来处理前面讨论的刻录驱动选择问题 签名里另列 msmith 等几个邮箱
+2604003	885	terry 拿自己那边的实际经验回应前面的顾虑 说他们已经用 32 字符的用户名跑了一段时间 那些是 AppleTalk 账户 长用户名其实完全可行 他还声明帖内观点纯属个人不代表雇主
+2604006	885	tom 说改用户名字段并不会破坏 NIS 这是个被反复重述的误解 他觉得奇怪 NIS 建立在自由文本记录之上本可支持长达几百字符的用户名 不过他承认在无法处理 8 字符以上用户名的系统上会出问题 并举了 SunOS 4.1.x 为例
+2604007	885	mike 提出可先建一批 8 字符内合法账户 再在 /etc/virtusertable 里把超长用户名映射过去 例如账户叫 user 想让发到 superlongusername 的邮件落到 user 就加一条映射 然后跑 makemap 让改动生效
+2604013	885	sos 补充说 cdrecord 在 FreeBSD 下配不上 IDE 光驱 他几乎把 atapi cd 驱动跑通了 能带动 IDE CD-RW 光驱 但还不算完全就绪 另一路是仿 Linux 做一个 atapi 转 SCSI 的适配层 他也在看但时间紧
+2604015	885	viren 想在 2.2.6 系统上用 -current 构建内核 make buildworld 一次通过 但接着用生成的 config 编译 GENERIC 内核时在 if_de.c 的 tulip_addr_filter 里报出 step 尺寸未知 疑为头文件冲突
+2604017	885	brian 建议把 chat -f chat.script 的输入输出都接到 /dev/cuaa1 的零号文件描述符上,否则程序会卡在第二次打开 cuaa1
+2604019	885	drew 致谢 John 指到问题关键,重配 login.conf 并重启服务器后恢复正常,附上改前改后资源限制数据,file size 由 131072 块涨到 262144 块,最大进程数由 32 涨到 256
+2604020	885	tarkhil 自述在新 PII 上编译 perl5 时 configure 阶段 sh ./makedepend 递归调用自身直至进程耗尽,在 2.2.5-STABLE 至 3.0-980225-SNAP 三档版本上重现,同一光盘换到 P5 却完全正常
+2604021	885	sharding 说把这封来信转给 freebsd-hackers@freebsd.org 更合适,因为这批人是值得交流的对象
+2604022	885	mark 让 Alex 换个地方重装 rorts 集合再试一次，猜测是配置或别的什么东西出了岔子，并说自己这边 P5 移植运行起来完全没问题
+2604023	885	hasty 附一个 netscape developer webwizard 示例地址,问是否有人有 FreeBSD 的漂亮主页
+2604024	885	kuku 提议用 bzip2 扩充安装盘内容,称 bzip2 比 gzip 压缩率好约 20,并给出 gimp.org 下载位置
+2604025	885	tcobb 询问 2.2.6 是否已有可用的 softupdate 补丁,末尾署名 Circle Net, Inc. 并表示感谢
+2604026	885	frank 称自己持续刷邮件期待 2.2 的 softupdate 或 CAM 公告,公司有一台约 7 块硬盘的 news 服务器正需要,并开玩笑问送啤酒能否加速开发进度
+2604027	885	jkh 逐项列出答复,2.2.x 不会提供 Soft Updates、CAM 或 SMP 的第三方补丁,即便作为独立补丁也不会发布
+2604028	885	jkh 澄清自己并没有主张对第三方补丁做集中管控，只是想说每一件事本身都难到足以致使提问者不太可能看到相应的补丁正式被发布出来
+2604029	885	luigi 反问相比 gzip 的解码器体积到底有多大，指出单凭压缩率的提升并不足以判断这个格式该不该引入，落点全在体积上
+2604030	885	luigi 反问第三方补丁何时受人控制,除许可限制外无人管控,只要有人愿意做 backport 就应允许发布 patchfile,认为所谓不发布实为没人愿意做回移
+2604031	885	luigi 补充说明自己上一条只是想替其他参与者做澄清而已，本意并非代表任何人对外表态发言，末了照例写句 cheers 署名 luigi
+2604032	885	roberto 接 Christoph Kukulies 的话头,指出那项工具压缩与解压各占约 7 MB 内存,速度慢 5 倍,最少也得占 5 MB,只在空间极度紧张时才用
+2604033	885	frank 说只能直接去 current,公司也想开始测试 SMP,认为装块新板加个 cpu 是获取更多 umpfh 最省钱的办法
+2604034	885	jkh 就对方追问的进度给出简短答复，说相关安排还没有定下来，不过团队会尽快把情况弄清楚并给出明确说法，末尾附了一个感叹号
+2604035	885	tarkhil 承认根因是那台机器的系统日期被设得太早，生成的文件日期比源文件还早，make 因此彻底失控，自嘲当笨蛋真难
+2604036	885	gibbs 就对方追问 CAM 补丁能否推出只回了一句 CAM 可以，署名 Justin 之后就此收口，没有再做任何解释或补充说明
+2604038	885	dag-erli 说自己也做了别人提到的人格测试，结果被推荐去试那个他们称作 FreeBSD 的免费系统，末尾签名用 fprintf 写自己脑子封闭能挡雨
+2604039	885	skynyrd 说 cvsup.freebsd.org 以及隔壁那台新闻服务器都在等着那个补丁快点出来，语气里满是期盼，末尾还画了个笑脸
+2604040	885	jacques 建议使用 Cyrus 或类似不必为每个邮箱单独建立 UNIX 账户的邮件服务器方案，让邮箱账号直接挂在服务器上而无需在系统里为每个邮箱创建对应用户
+2604041	885	tom 反驳稳定版不会做 CAM 的说法，指出他已知有人让 CAM 在 2.2 上跑起来，Justin 也在此表明愿意为 2.2 出 patch kit 除非有人抢先
+2604042	885	dyson 指出 softupdates 侵入性过强，移植到 2.2.X 恐怕需要另做一份新移植，且 FreeBSD 相对 BSD 的差异让维护者每次介入都会碰到新问题
+2604046	885	tom 反问软更新补丁能否工作，直言 current 里的 softupdates 本身不工作，要在 current 之前把 softupdates 弄到 2.2.x 上更是难上加难
+2604048	885	jkh 对 CAM 可行的说法表示第一次听说，认为 2.2-stable 变动并不大，问既然如此为何不开始发布一些 patch set
+2604049	885	gibbs 表示需先把 current 的 Interrupt Driven Configuration hooks、CAM SWI hooks 与 buf_queue 改进搬入，等 NAB 和 BusLogic 完工后再动
+2604050	885	oliver 反问 Tom 如何得出该结论，说他以为 Softupdates 基于 4.4BSD，向 -STABLE 移植并不更困难，也承认未跟进两棵树的近期变化
+2604051	885	amancio 对前述移植难度结论表示不太认同，指出 -current 已经积累了大量 VM 相关变更，因此不宜断言移植很容易完成
+2604052	885	ulf 询问是否存在关于编写 kernel device driver 的手册，表示主要想学如何 map memory 以及挂载 IRQs
+2604053	885	beekey 报告 Toshiba Tecra 750DVD 安装 2.2.5 后 boot 卡在 BIOS basemem 639K 与 RTC basemem 640K 不一致的报错，怀疑问题出在 machdep.c 中的 BIOS 检查函数
+2604057	885	greg 建议 Ulf 先看 freebsd.org 上 ddwg 目录里的教程，指出教程本身尚不完整，欢迎对方也来帮忙补齐这块内容
+2604058	885	peter 自述在 FreeBSD 可执行文件上用 bzip2 相对 gzip 测得 5-10% 的压缩率节省，但速度偏慢，不建议用于 CD-ROM 安装归档
+2604059	885	kenjiro 宣布 ALTQ 1.0.1 发布，含 CBQ、WFQ、RED、FIFOQ 实现及 CBQ 工具与 RSVP 桩，支持 -2.2.6 内核，新增 tx 与 lnc 驱动支持以及 de 驱动性能修复
+2604060	885	joe 报告拔掉 de 网卡网线后接口就一直死掉，即使把网线重新插上也不恢复，BAY 与 Kingston 两种 de 卡上他均见到该现象
+2604062	885	jkh 表示 2.2.x 的寿命无法保证，主要受用户需求驱动而非刻意规划，他推测 2.2.x 撑不过 November 1998，之后进入 legacy support mode 维护模式
+2604064	885	andrzej 表示若所跑版本支持 media flags，可手动执行 ifconfig 选择合适介质，因 de 驱动在链路失败时会尝试切换介质且链路恢复时不自动感应，否则可试 ifconfig de0 down 再 up
+2604065	885	amancio 也遇 de 驱动古怪问题，唯一恢复连接的办法是设置 media autoselect 后在两端把 de 接口先 up 后 down，他使用的卡基于 Bay Networks 21140A
+2604066	885	ulf 征集持有 Mylex DAC960 控制器的用户联系他，说明自己的驱动已基本能检测控制器与系统盘，需要不同配置的人测常规例程，并附 myx0 打印的 Firmware 4.04-0-00 与 Ultra SCSI 通道信息
+2604067	885	jkh 否认会有 2.3，认为 3.0 是否稳定取决于多种因素，还太早判断究竟是 3.0、3.0.5 还是 3.0.6 才算安全上路，也拒绝帮列版本差异与移植难度清单
+2604068	885	luigi 回应 jkh 表示清单无需精确或穷尽，只要覆盖最重要的差异，从用户角度看对应系统功能显著变化，预计不超过 10-15 条大项，忽略小补丁与既有子系统的改进
+2604069	885	bowden 就在前封表态后追问是否会有 2.0 的 rerun，即在无下一分支延续的情况下是否会重跑 2.0 那条既定路线
+2604070	885	jkh 坦言自己只是保守行事以避免灌输错误预期，转述自己早前的立场即不会再有中间小版本，后续主版本是否稳定要取决于多种因素
+2604072	885	housley 报告夏令时切换日周日早晨 Daily 与 Security 脚本未运行，并询问这是否为已知且一年只发生一次的缺陷
+2604075	885	bulte 汇总 Matrox Millenium II 在 75Mc PCI 上无问题，83Mc 亦可工作，但原生 Xfree 支持存疑、Xaccel 说法不一；建议为最高分辨率与刷新率核查 RAMDAC 速度
+2604078	885	hobson 报告给 libc 加 -fomit-frame-pointer 令 mktemp.c 出错，_gettemp 第三参 domkdir 变成垃圾，而 lib/csu/i386/Makefile 显式加了 -fno-omit-frame-pointer
+2604082	885	jkh 证实自己已和 Apple 方面相关人员建立联系并正在对话，作为对兼容性讨论的回应并感谢来信人提议，转述对方认为这对双方都是好机会
+2604085	885	dannyman 解释 W4R3Z 是 W4R3Z D00D!!! 圈子里 warez 的写法，含义是破解过的商业软件，即 1337 H4X0R3D commercial software
+2604092	885	sanchez 请求不要把其邮件或要点转发到 FreeBSD 社区之外，例如 MacOSRumors.com，因为产品发布前透露动向损害 Apple 利益
+2604097	885	nate 报告 4MB Velocity 64B 即 S3 968 显卡在 XIG 3.1 服务器上以 24bit 模式运行时跑到约 650 rpm，并称分辨率大小并不影响结果
+2604099	885	marc 即 hub.org 的系统管理员 Fournier，报告自己目前跑到 10Mps 已稳定，希望能拉到 40Mps，并追问 ETA
+2604100	885	archie 认为秋季 cron 只运行一次，因为正确是策略而非真正确，故 daily 与 friends 应安排在 2am 到 3am 之外运行
+2604101	885	dannyman 称 cron 处理得相当古怪并不真正聪明，并承认自己在 cron 运行前上床的策略行不通，此前在 Amiga 上也用过类似做法
+2604102	885	janowski 承认自己在定时任务前上床的策略失败，总在听见硬盘疯狂寻道声前赶着关掉显示器，最终放弃此策略改为一饿便上床
+2604103	885	mike 确认主板环境监测功能有计划支持，因为 DMI taskforce 即 dmtf.org 发布了相关规范，且 -current 已有定位 DMI BIOS 签名的代码
+2604104	885	mike 认为 bzip2 不宜替代 gzip，多数情况更慢，内存耗大，且仅 bzip 可解 bzip 压缩包而 bzip 为 GPL，作者对代码法律地位不确定；建议通过 ports 取 bzip2
+2604108	885	hasty 表示自有 Matrox Millenium 已足够快，用 fxtv 观看电视借助 PCI to PCI 传输，早期基准跑出 1.2 million xstones，并列出 mpeg 回放与 3d 等新增需求
+2604111	885	studded 指出 housley 的签名过长，传统四行以外信息应放到 finger 里，并转述此前有人提过把 daily 脚本改到 1:59 am，但被告知不存在完全无冲突的时刻因而未采纳
+2604112	885	studded 说明 cron 期待操作者比它聪明，并提出与 vixie 讨论的方案包括 15 2S 全年标准时与 15 2U 走 UTC，以及在 crontab 文件中按 MD5 记录已警告用户
+2604113	885	nonnennmacher 报告自己用两块 Matrox 卡多头接 Xig4 分别跑 1600x1200 与 1800x1400 无问题，型号为 MII、1AGP 与 1PCI 各 8Mb；并询问 XFree 中 Matrox 是否仍无加速
+2604115	885	cross 建议众人停手让这位仁兄安心做他的事，专心产出一款出色的软件，不必再花时间回复众人的询问，自己将保持沉默除非被点名
+2604117	885	hasty 称该卡在其 XFree86 环境下加速效果已经很好，若非记错则是兼容卡中最快的一类，以此反驳上文认为该驱动尚未加速的说法
+2604119	885	chuguev 报告用 URL 作 pkg_add 参数时无法自动安装依赖，PKG_PATH 仅走本地文件，建议为 pkg_add 增加 URL-path 选项或环境变量作为兜底方案
+2604121	885	muthu 问 freebsd 有无 print server 能与网络上给定 ip 地址的打印机通信 daemon 收各客户端 lpd 请求转发过去并让客户端在 /etc/printcap 里把 server ip 配好
+2604126	885	david 认可这个观点但认为所举例其实更适合 calendar 而非 cron 随后补一句说 calendar 本身说到底也是靠 cron 来跑起来的
+2604131	885	ben 三次恳求把这条购物线挪到 -chat 或什么地方去说听众人晒 worldstone 结果已经够难受了再要他一遍遍翻大家的 xengine 输出他估计要尖叫
+2604132	885	david 直接给出 xengine 所在路径 /usr/ports/benchmarks/xengine 回应有人问去哪里找到这个基准程序想在自己机器上跑并贴出结果
+2604133	885	joseph 说 S.u.S.E. 小组已基于其 Linux 代码发布针对 Permedia 2 芯片组的二进制 XFree 服务器在英文页底部其他操作系统栏目下有 FreeBSD 版链接
+2604134	885	terry 说人们给 cron 任务挑时刻出于两条理由一是避开影响用户二是确保在某设定时间前跑完而这两条都不被提议改动满足他改主张把时钟瞬间跳过那一小时并在重叠时段按住一小时
+2604136	885	wilko 把 mike 的 summary 更正为大多数人是满意的而 mike 显然不满意并指出 mike 在后续回复里显得比原帖更恼火随后说多数人其实没问题并提到自己也找到一份 matrox 信息页
+2604137	885	brian 问有没有人用过 portalFS 说自己想让它跑 TCP 却老是失败追查后发现在 mount_portal 的 activate.c 里 send_reply 末尾 sendmsg 返回错误码 n 为负一 errno 为 22 即 EINVAL
+2604138	885	amancio 提示你应当已经加载了 fastvid 模块以便给显卡开启写合并功能他说明写合并能够让送往 PCI 线性映射 frame buffer 的吞吐量直接翻四倍
+2604140	885	soren 回复 amancio 说自己确实还没有加载过 fastvid 模块对写合并这件事挺感兴趣便追问到底该怎么做才能把这个模块加载进系统
+2604141	885	amancio 说自己在上班现在没法聊天给出 ftp 站 pub 目录下 fastvid.tar.gz 旧版地址并说明模块还需要小幅调整才能对用户友好而 README 里有作者邮箱
+2604142	885	soren 回复 amancio 报告装上 fastvid 后实测 2x200Mhz P6 66Mhz 总线配 S3Virge/DX 4MB EDO RAM 在 XFree86-SVGA 3.3.2 下 1152x900x24bpp 跑出 810 到 920 rpm 升 25%
+2604143	885	kris 嘲讽 amancio 提到的双卡多屏功能说先让我们看看它在 FreeBSD 上到底能不能跑起来一台 PC 配两台显示器至少算追上了 Macs
+2604144	885	kevin 说 XI Graphics 的 Multihead Server 已经能实现这个功能一台屏幕可用 8 位 cirrus logic 另一台用 24 位 Millenium II 并表示在 www.atipa.com 上可以买到
+2604145	885	amancio 说很抱歉自己已经脱离了 X server 开发但这件事确实可行并提到有几位使用 Xig 双头服务器的人已经在 PC 上挂两块显示器实际在用
+2604146	885	wilko 用一句没有大量 WRAM 替代品可言的玩笑开场随后说似乎自己引发了不小的讨论他看重用户关于能用与不能用等使用经验的反馈尤其那些不能用的案例更值得重点关注
+2604147	885	wilko 回复 mike 针对他引用 summary 中 Wilko Bulte 那段话说其实那个人并不是他不过这些信息本身依然挺有意思的
+2604148	885	tim 回复 konstantin 问对方是不是真的试过 pkg_add 应当能根据你传入的原始 URL 自动通过 FTP 抓取依赖包他猜所有包需要在同一目录下才行
+2604149	885	mike 报一个 pax 恢复时的诡异现象建议把 /cdrom/info 下的 info 文件经 zcat 喂给 pax -r -w -v 解压到 tmpdir 并提醒要快按 ^C 问大家是不是已知缺陷
+2604151	885	chris 说想把 Accton EtherPocket 并口网卡的 Linux 驱动移植到 FreeBSD 但设备驱动写作指南对网络设备部分空白找不到起步点于是问有没有相关进行中的工作以及移植网络驱动该从哪开始
+2604152	885	amancio 说自己对讨论热度感到意外惊喜一度想把话题转到 comp.windows.x.i386unix 又忍住留下想看看会不会从这场讨论里冒出厉害的 X 或多媒体高手
+2604154	885	kent 说他也遇到类似 cvs 问题 留 /tmp/cvs 临时文件且常 core dump 忘了精确 trace dump 但怀疑跟 tmpnam 有关 他编译用 -O2 没用 -fomit-frame-pointer
+2604155	885	robert watson 转引 news.com 报道 引 Netscape 的人说 Suitespot 服务器在 Linux 上开发 追问能否说服 Netscape 同时为 FreeBSD 做 他觉得 FreeBSD 是好网服平台却像二等系统
+2604156	885	robert watson 说 QtScape 听着好玩 他在 Linux 模拟器下没试 因为跟挪威连通一般 觉得移植若成会很不错 转发的是 Troll Tech 的 QtScape 公告
+2604157	885	jkh 说按设计它会拆开 URL 找兄弟包所在 若站点没有 packages/All/ 目录就会失效 他自己也好久没实测这个功能了 但认为它本该能工作
+2604158	885	kevin 报 2.2.6-STABLE 0404 内核同时开 MD5 DDB PERFMON IPFIREWALL 时 RPC 服务无法绑定 移除后恢复 机器是 NIS 主 没时间重启四次
+2604159	885	greg 指出 Matrox Millenium I 有两种 较老的大板子能与 XI graphics server 1.3 一起工作 新的不行 他两块都拥有 认为最新版 server 或许都能用
+2604160	885	stefan 指出 IPFIREWALL 与 bpf 无关 建议看 ipfw(8) /etc/rc.local /etc/rc.firewall 用法 推测根因是没配防火墙规则致环回接口通信失败 提醒先在 rc.conf 设 firewall=open
+2604162	885	vladimir 说 Qt 在 FreeBSD 上也能编译 只需在 QT 前端 Makefile 里加 -L/usr/X11R6/lib 并做点微调 他给的快照从 ftp.troll.no/qt/snapshots 下载 并说比原先版本快不少内存占用也更小
+2604163	885	dag-erli 报全新 Accton EN1207 Cheetah 在 2.2.6-STABLE 上被识别为 de0 的 Digital 21140A Fast Ethernet 并启用 100baseTX 却连不上网 换 3Com 3c509 就正常
+2604164	885	joelh 说他的机器较慢 make world 耗时很长 似乎会重建所有东西而不只改动部分 想问只改动少量时 make install 是否能正确工作 并感谢帮忙
+2604165	885	dodd 建议应推动 gtk 阵营做 Netscape GTK 版 摆脱 motif 应是首要目标 他还指出 SSLeay 的人已经有工作集成
+2604166	885	hasty 说我们应该开始向 Netscape 抱怨 他记得公司在内部有 FreeBSD 支持者 不过他加了句如果我没记错
+2604167	885	hasty 说 GTK 的志愿者在 mozilla 新闻组里已经被好好训过一遍 这条评论后面还附上此前关于推动 GTK 移植的转引原文
+2604168	885	reichert 用 wide-dhcpc DHCP 客户端 重启后偶尔抱怨设备未配置为 DHCP 反复重启才生效 他说自己用最便宜的 PCI NE2000 克隆卡 觉得它们表现尚可 想问为什么 dhcpc 有时会误认网卡
+2604169	885	julian 说 soft updates 在崩溃或断电后能保住磁盘一致性 在某些场景还更快 建议看看 /usr/tmp 是否设成 async 或 softdep 因为 gcc 也把临时文件放那里
+2604180	885	ulf 把一个带 Mylex DAC 960 检测例程的内核上线到 ftp.Alameda.net 支持固件 4.x 系列 说 3.x 应也能工作但不打包票 请持有控制器与硬盘的志愿者把内核拷软盘开机 验证是否检测到控制器类型通道内存与系统盘 也能识别死盘离线或临界盘
+2604181	885	darren 建议导入 Matthew Green 为 NetBSD pax 所做的所有改动 据他记忆目标是让 cpio 与 tar 都成为 pax 一部分并加入 GNU tar 功能
+2604183	885	darren 在 2.2.5 上装了自编译的 tkrat 1.1 以及 ipop{2,3}d 与 imapd 三个 daemon 全都报无法取得锁 想知道成因
+2604184	885	darren 只回了 err 和 /tmp 两词作答 他先前报的那三个邮件服务全都报无法取得锁 根因就在 /tmp 这个目录
+2604186	885	yurtesen 重启服务器出现 /dev/wd0a on / Specified device does not match mounted device 挂载失败启动中止 服务器瘫痪他请人尽快指导
+2604187	885	eklund 建议要么回滚内核要么升级 mount 他推荐先启动旧内核 再升级 mount 然后换新内核重启 他还说这不能算交叉发帖的借口 并给 questions 设了 Mailfollowup-to
+2604188	885	adrian 询问 ifa_if 系列函数在 userland 中的用法，称在 libs 里找不到这些函数，只找到 /usr/include/net/if.h 与 /usr/src/sys/net/if.c
+2604189	885	derdau 说自己从 2.2.25 重编 2.2.6 时遇过同类故障，称该版本改了 slice 名称，建议把 fstab 里的 /dev/wd0a 改成 /dev/wd0s2a，并在 /etc 下跑 sh MAKEDEV wd0s2a
+2604190	885	gram 说早先写过一套简易宏包做对象泄漏追踪，需改代码且只对类对象有效，可在程序退出时列出未释放对象所在的文件名、行号与分配序号
+2604206	885	gibbs 说自己眼下正忙着收尾 BusLogic 驱动，等这个驱动做完工之后才会把注意力转向移植那一项工作，他预计那还得再花上一周左右的时间
+2604208	885	bannai 说在 2.2.6 上配 Matrox MGA 2MB 卡后 startx 能起但分辨率与显示模式很差，ctrl-alt-+ 也无法切换；所用 Xfree 为 3.3.2，因模式超出水平和垂直范围被删，并报成未知 Matrox chipset
+2604209	885	capriotti 回应 Bannai 关于要不要换显卡的疑问，说这问题好答，建议若预算允许花大约 30 美元买一张 2MB 的无品牌 S3 virge 卡，效果就好得很
+2604210	885	jmz 说用 c++ -g -O 编译时 ld 报 this:V25 多重定义，而单独用 -g 或单独用 -O 都不复现，并贴出触发该错误的完整源码请求指教
+2604211	885	dkelly 指出对方用 -r -w 其实触发了 copy 模式，建议改用 cat /cdrom/info/info 系列与 zcat 组合，并在子 shell 中执行 pax -r -v 来提取文件
+2604215	885	tlambert 反问这是 U of Washington 的代码还是 CMU Cyrus 的代码，说两者答案不同；Cyrus 情形下该错误源于 /tmp 不可访问、崩溃后信号量未清或 maildrop 已被另一用户打开，他也提到自己曾把 U of W 代码改写为 C++
+2604219	885	gvlachos 说自己在 2.2.2 release 上装好系统后要装 POP Server，询问哪里能取到对应的安装包并请人帮忙
+2604220	885	dean 以 root 进 /usr/ports/mail/popper 跑 make 与 make install 装上 popper，再在 /etc/inetd.conf 加一行 pop3 条目，最后用 kill -1 1 让 inetd 重载配置
+2604221	885	avalon 提议干脆为这条讨论开一个 netscape@freebsd.org 邮件列表，用它来承接这一条以及随后所有相关的全部讨论
+2604223	885	ru 说他一周前已提交 PR conf/6226，该提案属 change-request 类并附了补丁，他在此请维护者跟进并推进一下
+2604226	885	alex 认为 FreeBSD 用户与开发者若减少操作系统之间的意气之争，就能腾出更多时间投入到 FreeBSD 的改进与软件移植上
+2604227	885	archie 求助 FreeBSD 中如何编写 PnP 感知设备驱动，问 struct pnp_device 的 attach 返回 NULL 时自检只能放在 probe 阶段是否安全，以及那时是否需要先设置 PnP 参数并启用卡片
+2604229	885	dshanes 把这封邮件转发给所有人，说明这是他早前亲自写给 Tim 的那一封，并说紧接着还会再把 Tim 本人的回复一并发过来
+2604232	885	mike 认为操作系统是互联网软件的根基，而 summit 的宣传材料把 Linux 摆在显眼位置很能说明问题；他又提出若 Tim 想认识 Jordan 可请 Greg Lehey 做引荐，并说 Jordan 远不像 Linus 那样独裁
+2604236	885	kris 说听着大家讨论 NetWare 服务端与客户端时忽然想到 PCNFSD，询问是否见过免费的 PCNFSD 客户端，支持 Packet driver 或 ODI
+2604237	885	mike 认为 FreeBSD 为 DOS 与 Windows 系统提供文件共享的最佳方案就是 Samba，因为微软新版 DOS 客户端功能完好、WfW 早已有协议栈、Win32 系统都通过 TCP 讲 SMB
+2604238	885	joe 说迁移到 2.2.6 后他的脚本用 mail 或 sendmail 发外发邮件都不再工作，即便目标域名的 MX record 指向另一台机器，sendmail 仍坚持投递给本地用户并报收件人是未知用户
+2604240	885	msanders 猜测他是在用 IP 虚拟主机，Sendmail 表现得过于冒失把这些 IP 虚拟主机都塞进了 Cw，建议检查 DontProbeInterfaces 选项
+2604241	885	Ulf 提醒在讨论邮件反复被投递给本地用户的故障时除了已有的排查方向外还要记得考虑 Best MX is local 这个因素它会影响 MX 记录解析完成后是否走本地投递的判定
+2604242	885	jkh 转述 Eric Raymond 在 Mozilla 派对上对他说的话称 BSD 家族成员因数量过多且不便涉入政治而被有意排除在峰会之外并批评 Linux 阵营持续指责 BSD 分裂是双重标准
+2604248	885	dec 好奇 FreeBSD 内核级线程的现状究竟是已经稳定还是要进 current 分支抑或纯粹是空中楼阁的 vaporware 只是提了一下问题并没有给出自己的判断或时间预期
+2604251	885	jb 说明 stable 版本做不出来因为要做的 VM 工作量太大 current 只是停滞中的进行项他自己负责用户态一端内核端还欠得很多并未给出预期完成时间
+2604260	885	owens 感谢 Terry Lambert 放出 LDAP 补丁说自己在上面磨了超过一个月已经跑出能用于给几台 web 服务器做认证的 beta 效果不错并追问 libc 补丁何时能用
+2604261	885	danj 认为这场争论的两大议题是市场存在感与成熟度 Linux 的优势在于被当成从互联网长出来的时髦事物而 BSD 派生版因存在太久而被忽略呼吁不要贬低 Linux 而是正视自身在吸引力可见度可及性上的短板
+2604262	885	amancio 说他以为早就有人接了但没看到进展催促大家如果今晚还没上线就赶紧动手别再拖下去并说自己本以为已经安排过志愿者了
+2604263	885	danj 提议做一次 FreeBSD 用户普查把问卷放到网站上再放到 wcarchive 的 FTP 横幅上还要印到 CDROM 光盘上去借此摸清用户分布情况
+2604264	885	mark 强调时间紧迫应尽快发出 FreeBSD 为 Mozilla.org 提供全球镜像与源码修订架构的公关标题建议立刻上线并往 mozilla.org 的新闻组发帖同时向 news.com 与 infoworld.com 发通稿并主动提出可以帮忙写新闻稿
+2604266	885	paul 表示他原先以为 Jordan 已经把服务器放在 bento.cdrom.com 上因此自己没有再搭一份并说这是他当时没动手的原因
+2604267	885	john 认同 Dyson 说 FreeBSD 用户更偏爱使用而非传教自己 1993 年选了 386BSD 而不是 Linux 因为当时正打算弃 Amiga 平台受不了狂热传教的用户群选 BSD 是因为捣鼓它的人比 Linux 圈子更成熟并说没走 NetBSD 分叉也是同样考虑
+2604270	885	brett 反驳 Hubbard 说 BSD 内部相互排斥是无稽之谈称各 BSD 派系关系远比 Larry Wall 那群 Artistic License 拥护者对待 Linux 狂热分子融洽并表态该采取公关攻势因为自由软件正在上升期
+2604271	885	brett 指出 ORA 偏向 Linux 而不是 BSD 的根本原因是所谓万能美元因为 ORA 认为 Linux 的市场规模更大因此倾向于 Linux 并说他们曾解释过不愿意把自己的 Windows 与 NT Web 服务器或会议软件移植到 UNIX 也是同样原因
+2604272	885	john 回复 Dan Janowski 的普查提议称结果在统计效力上几乎为零因为不知道人群总量时问人登记并不能定义总体他自己做过一次邮件列表订阅者的随机抽样就 FreeBSD 网站发问卷只收到两三个百分点回复远低于六十到七十的底线并呼吁做出有代表性的样本
+2604273	885	adam 报告机器夜间重启后每次运行不超一小时就挂起而且越来越频繁询问是硬盘还是主板集成 IDE 控制器出问题说系统跑的是 2.2.5 Stable 带 128megs 内存和 7GIG 的 Maxtor 硬盘硬盘用了三四个月主板用了两年半
+2604275	885	dyson 解释 Borg nano-probe 是在 Borg 血液里流动的微型赛博格实体用来影响同化过程他把个人狂热者比作纳米探针为集体被牺牲合在一起才有显著效果并指出这场同化战争其实是 Linux 与其余软件之争不要被以为是自由对抗支配因为两者都是支配
+2604276	885	amancio 追问 FreeBSD 的 Mozilla 进展有没有在 netscape.public.mozilla.general 公布并问有没有指向 FreeBSD 仓库的页面还建议发布用 Qt 编译的 Mozilla 二进制版让缺 motif 库的用户免下 10MB 包
+2604277	885	john 强调营销至上一切皆需营销产品再好也会被大营销机器碾压但 FreeBSD 若经营得当可成银弹并列举自己因 BSD 血统被吸引选择 FreeBSD 的理由说它两年内从未失败还提到自己在奥斯汀找公关支持
+2604278	885	tim 建议向本地公共图书馆批量捐赠 FreeBSD 光盘以提升 FreeBSD 可见度并说这不需要组织化攻势只需把许多小事做起来
+2604280	885	greg 否认万能美元是唯一原因指出 ORA 也出版书籍因此完全可以出 BSD 书并且德国 ORA 正在筹划一本 BSD 图书他通过 Porting UNIX software 一书在 ORA 有联系人并说 4.4BSD 手册集销量远不如预期
+2604282	885	opsys 支持 Mark Mayo 的建议说立刻向 wired cnet yahoo 以及此前提到的新闻页面发出 PR 强调我们使用 CVS Mozilla 树的事实并表示只要足够有力地覆盖这些媒体就能拿到不错的初始公关收益称这是个好的开始应该做
+2604286	885	adrian 自述那个志愿者本应是他但 jordan 不愿把服务器放在 freefall 转而在 bento.freebsd.org 上另架一台因此建议直接联系 jordan 了解详情
+2604291	885	hasty 反对这样做认为那只是廉价营销 FreeBSD 并展示善意的方式因此主张让 Linux 阵营先出头再谈自家份额问题
+2604292	885	opsys 反驳 John Birrell 指出所有项目同期获得源码但 FreeBSD 每日使用 CVS 别人不用这是加分项并警告若继续无所作为将让 FreeBSD 边缘化
+2604294	885	John Birrell 认为为 Mozilla 造势只会得到 mozilla.org 上已有的东西并呼吁先做出可夸耀成果如像 Nate 那样采纳 jdk 否则只是制造无法兑现的期待
+2604296	885	hasty 主张直接把 CVS 服务器架起来广泛开放让所有人能上手使用把空谈与猜测都留到以后再处理免得在此议题上浪费时间
+2604297	885	John Birrell 说明那台 cvs 服务器已经架好只是闲置着它对全体 committer 开放包括对方自己而他写这封邮件时是唯一登录用户
+2604299	885	opsys 赞同 Greg Lehey 对 FreeBSD 的 PR 提议的想法并索要副本归档称这可能成为 FreeBSD 首次真正 PR 值得留档
+2604300	885	Jordan 建议想参与宣传者把稿件投给 FreeBSD 的 newsletter 作为起点因为 newsletter 内容可自由再发布所以代价很小即便不会写代码也能贡献
+2604302	885	jordan 认为 Linux 实现分裂带来的公众尴尬反倒能促成各分支更紧密协作也减轻 LDAP 移植障碍并强调扭转市场印象比公布技术事实更有效
+2604304	885	hasty 询问架在 freebsd.org 某个角落的 cvs 服务器如何访问并想转贴到 mozilla 新闻组同时表示既然网络迟迟没把 Java 带回 Mozilla 他想自己接手
+2604305	885	hermithacker 问该改哪一项 datasize 才能让 INN 2.0 expire 在 cron 下运行并贴出登录时 datasize 262144 而 cron 下仅 32768 的对比
+2604306	885	hermithacker 补充称自己先前改错了项并重启 cron 之后问题就已经解决于是直接撤回原帖免得列表上继续讨论这个话题
+2604307	885	marcus 提出愿请熟识的广告公司主席为 FreeBSD 提供无偿广告资源并主动请求具体想法同时询问 Apple Rhapsody 援助进展
+2604308	885	John Birrell 说明那台服务器需登录并非公开访问并追问 Jordan 为何不走 freefall 以便用 cvsup 增量取码同时抱怨对方因他不是美国人而要加价
+2604309	885	jordan 称 FreeBSD 公司缺的不是钱而是市场营销人员并透露 Walnut Creek CDROM 今年有意在定向广告上投入但 2.2.6 至今缺一段简洁广告文案
+2604311	885	jordan 赞同 FreeBSD 需着力吸引力可见性与易用性并澄清自己从未主张对 Linux 发起负面公关转而主张直接宣称我们在 X Y Z 上更强应选我们
+2604312	885	John Birrell 解释对方所称国际定价高于美国是因语言因素所以德国市场若想要德语文档就得自己承担代价而自己只要英文文档
+2604313	885	jordan 面对普查提议直接回复称现有数据显示已有 25000 名注册用户在手因此完全不必再发起一次全系统的普查统计工作
+2604314	885	hasty 承认 jordan 借用了他的论述并建议当前阶段招初级营销人员补位此空缺认为局面已够严峻并向 Brett 求助
+2604316	885	opsys 建议组建 PR 小组认为狂热使用者最懂产品也最能推销 FreeBSD 因此应把它们当作主力来推动品牌宣传推广工作
+2604317	885	darren 抱怨 mozilla 与 netscape 相关邮件在 hackers 列表上过多请求把这些话题挪到独立 mailling list 处理
+2604318	885	jkh 与 Mike Smith 复盘 Mozilla 派对，指 Linux 用户会后一辆大巴多次满载 Linux 支持者涌来却无人到场发放 FreeBSD 光盘与试用小册子，自嘲营销能力弱，呼吁下次类似机会需提前获知并有人出面执行
+2604319	885	abelits 回应 Darren Reed 的邮件转场请求，认为合理，并指出其他长线程中此类邮件数量多且与 FreeBSD 开发相关性低，更应独立出倡导邮件列表
+2604321	885	jkh 认为对方对 Netscape 表态的解读过头，称当晚 FreeBSD 的 SF 会议上与 Netscape 内部 FreeBSD 支持者交谈后判断其言论主因是无知而非恶意，主张应争取上桌席位而非向桌子泼水
+2604325	885	jkh 说明刚建好 CVS 库尚无 cvsupd 与 anon cvs 能力，目前只能登 bento 查改动，Warner Losh 已在用，尚未向任何人导出，自己也不清楚配置 cvsupd 文件怎么做，anon cvs 待 Peter 答复
+2604326	885	fullermd 自述看到 NPR 上 Linux 报道后给 NPR 寄信推荐 FreeBSD，回忆上次搬家是为 -2.1.6 划 100 兆分区，信中称 Yahoo 与 Walnut Creek CDROM 等大型服务器都跑 FreeBSD
+2604327	885	pierre 指出 OpenBSD CDROM 由项目自身资金出版因此没有钱花在营销上，但 Theo 常出席各类安全与 Unix 相关会议并在会上热卖 CDROM，补充称也可从其网站订购
+2604328	885	jkh 回答为何不把该库并入标准 CVS 仓库，称其不属于那里只能另建独立仓库找有空余空间的主机，Bento 恰好满足要求
+2604330	885	jkh 接受该点，要求所有参与 PR 讨论的人立刻转到 -chat，由那边决定是否近期成立 freebsd-pr 邮件列表
+2604336	885	luigi 报告 CD 刻录意外中断后成功在盘上写入第二数据轨，TOC 显示两轨数据但 mount_cd9660 似乎无法读取非首轨，询问 wcd 驱动是否支持类似 /dev/wcd0track0 的设备名及实现难度
+2604339	885	andreas 反映最新 libqt 快照在编译时遇到 ld 行为异常，-L 目录列表需逐个跟随 -l 选项才能生效，qt-1.39-19980406 下出现 ld: -lqt: no match，称该写法在其他平台可用，询问是否有 ld 补丁
+2604340	885	fbsdlist 自述看过该手册集后觉得它只是印刷版，因有在线版且持续更新所以认为没什么价值，并类比 Apache 书约 1.1 版早已过时无用
+2604341	885	witr 报告近期 Ntrigue 客户端让 FreeBSD 上 X 服务器挂死，复现于 2.1.6 配 XFree86 3.3.1 与 2.2.6 配 XFree86 3.3.2，sun 系统及早期 Ntrigue 版本不出现
+2604342	885	bkogawa 提出改善 FreeBSD 宣传的做法，建议使用者向应用开发者说明其在 FreeBSD 下运行该应用，移植时向原开发者回馈并附 port 地址，还建议从 comp.os.linux.announce 获取 FreeBSD 相关公告
+2604349	885	jkh 回答 newsletter 发布时间，称两周内可进入 print me 流水线，欢迎 hacker level 或各层次投稿，强调它是 newsletter 而非技术期刊
+2604353	885	wosch 自述搭建了 mozilla-cvs 的 cvsup 镜像，主机 cvsup.de.freebsd.org 集合 mozilla-all，每日 05:50 与 17:50 中欧夏令时更新，折合 UTC 3:50 与 15:50
+2604354	885	nate 自述 FreeBSD.org 有指向其邮件列表的 java 页面因此 JDK 工作收到大量正面反馈，包括 SUN 与其他 OS 人士愿助 FreeBSD 项目，附注建议 Jordan 创办 FreeBSD 公司销售增值版以打破黑客专用形象
+2604355	885	nate 警告对方若用 FreeBSD 的 JDK 引入该技术可能被 Sun 起诉，因当前 license 方案仅允许教育用途，且他会吊销对方 CVS 权限并要求删除 FreeBSD 代码
+2604356	885	matthias 报告新笔记本 O2Micro OZ6832 PCI 桥与 3c589D 网卡在 2.2.6-RELEASE 不受支持，经 Nate Williams 与 David Hinds 协助已加入 PCI 部分，但 ep 驱动收不到中断
+2604357	885	Adam 建议请 Walnut Creek 当 FreeBSD 的 sugar daddy，因 Caldera RedHat SuSE 常把 CD 送用户组分发，自己愿当 FreeBSDseeds 之一派发旧版 CD，若不愿则设 PO Box 回收
+2604360	885	Peter 自述在 Borders Books and Music 看到 The Complete FreeBSD 第二版带 CD 的实体书，认为 FreeBSD 刚开始提升知名度，但要与 Linux 竞争还需要大幅推动，并建议简化窗口管理器的安装方案
+2604364	885	Michael 认为 Walnut Creek 已在一定程度上做此事，但更希望 CD 发给其目前支持的团体如 ISOC Developing Countries Workshops，而非用来提升商业形象，自己觉得 FreeBSD 撑住日益增长的互联网流量已说明一切
+2604366	885	ray 建议把客户端 MS Mail 服务器换成 FreeBSD 配 sendmail 以省 Outlook 迁移开支并指 FreeBSD 可作 SQL Web 文件打印代理服务器还缺 Schedule+ 替代
+2604368	885	benedict 自荐 Chief Evangelizer 自述十九岁仍乐于布道并力求保持 tasteful 同时承认自称有 hubristic 之意
+2604370	885	benedict 用 s 替换把 Chief 改为 Lieutenant 撤回首席传道官自称 s Chief Lieutenant
+2604371	885	ken 建议查 selina sol 的 groupware calendar 与 Jann Linder 对 calendar 的改动并给出 extropia 的 calendar 页 forum 的 bug 列表与 jann.com 的 Perl 页
+2604372	885	amancio 表示自己可以去问 Sun 对这主意怎么想并转述被引者警告说用 Sun 技术做 JDK 开发可能遭 Sun 起诉还得收回 CVS 权限叫对方删掉 FreeBSD 那部分
+2604373	885	mark 建议把 mozilla 从 $CVSROOT 分出像 distrib 与 ports 那样便于导出和过滤并引用 John Birrell 关于标准 CVS 归属的疑问
+2604375	885	ken 建议 FreeBSD 用户致电 ORA 询问 FreeBSD 书籍因 ORA 依据 demand 决策提及书名或能改善被淹没状况
+2604376	885	kris 列举 AOL CD 的替代用途波普艺术飞盘与靶标并提出以 24x CDROM 驱动配导弹发射器组合或许可造出革命性新链锯且缺一词形容 500 mph 的 AOL CD
+2604378	885	duncan pitcairn 询问 NATd 是否支持透传 Microsoft PPTP 所用的 IP port 47 并追问这项改动是否有进展
+2604380	885	jordan k hubbard 给出 mozilla cvsup 同步条目 prefix base host 指向 mozilla.FreeBSD.org release cvs delete compress use-rel-suffix 询问任何疑问
+2604382	885	timothy moore 认为对 NPR 7 分钟 Linux 报道未提 FreeBSD 生气不太合适并指 lone hacker in benighted Finland 的 Linux 故事对听众更吸引且有助于 free software 认知
+2604384	885	terry lambert 提议新建 comp.unix.bsd.freebsd.advocacy 讨论组与 advocacy@freebsd.org 邮件列表承接宣传议题称 -hackers 已被淹没
+2604385	885	amancio 求助如何用 cvsup 访问 mozilla distribution 并在 Tnks 致谢后期待得到回复指引
+2604388	885	amancio 正用 cvsup 拉 mozilla 建议 freebsd.org 增设 Mozilla 页面附 sup servers 长列表并对 base prefix release 字段给出简要说明再配 cvsup 的 HTML 版指针
+2604389	885	mike smith 指出 bento 是很好的 test-builds 机称它既有 balls 又有 space 如需张罗可找 mike 或 Jordan 会马上排好
+2604390	885	fred muller 自述一直跟读讨论觉得人人都说该做这事却没什么真正发生并追问是否有人主持并主张需 coordinator 与计划与经费且这类仗要打要全职投入可像 RH 那样卖 T-shirt 筹款
+2604392	885	derek laufenberg 报告在 GE 等企业采购中 FreeBSD 常被 bean counters marketing weenies 与窄见 Micro$ft 股东压制GE 法务认为 FreeBSD 名暗示技术低
+2604393	885	dan janowski 提议协调 FreeBSD 的 user groups 组建自述一月前在此发起 New York City UG 并建议借 news letter 与 www.freebsd.org 推进
+2604394	885	scrappy 请求由打开的 file descriptor 反查对应文件名指 fstat 返回一切却独缺名字并署 Marc G Fournier 邮箱
+2604395	885	brett glass 询问 FreeBSD 下把 Hylafax 自动转接语音信箱的配置并欲知 app 或 plug-in 播放并自称不知 FreeBSD 有 voice mail 包
+2604398	885	giao nguyen 指出 Microsoft 许可为 as-is 无明示默示保证并反问 MS 导弹场炸毁街区也没责任那么 FreeBSD 导弹场又何来法律责任且责问没人读这些 licenses
+2604399	885	Langford 质疑 Birrell 把 mozilla 当作又一个 contrib 塞进标准 CVS 仓库的说法，反问是否要把浏览器塞进 base OS，还拿最近有人因此惹上麻烦的例子上来提醒
+2604401	885	Amancio 愿为对方组建公关支持小组，媒体联系名单可让数据库专家建库，但承认缺人专职管理联系人，并把 hylafax 服务器加调制解调器接 voice 与邮件转发方案一并托给 Jordan 商量
+2604402	885	Luigi 澄清 BWNFS 即 Beame&Whiteside 是商业软件而非 shareware，九二年九三年买过数份许可证，当年在 DOS 下是好东西，并转述引用中另有两份 shareware PCNFS 客户端的说法
+2604405	885	Amancio 用 mgetty 与 vgetty 管电话，Hylafax 能启 vgetty 但没调过，发传真就杀掉 vgetty；vgetty 抓到语音会把流包成 mime 发来，exmh 前端加 NCD 音频播放器完成回放
+2604408	885	Ruslan 回应 Amancio 提到 JRE 许可更宽松，可在其他平台开发 Java 项目再在 FreeBSD 上验证
+2604410	885	winter 建议对 GUI 应用感兴趣却嫌 TK 麻烦的人去看 Perl 的 GTK 绑定，指其相当 slick，并给出 http://www.gtk.org/ 网址
+2604411	885	Tommy 贴出 http://www.sco.com/UDI/ 并标注这是可移植设备驱动，称也许这对众人有用，签名里自称好啤酒之源
+2604412	885	dannyman 回 Birrell 因买不起 Motif 的困扰，指出 gtk 或是 qt 那边已把 Netscape 移植到自家工具箱，界面更漂亮可执行文件也更小，愿代查网址
+2604413	885	Johan 转述 Wolfram 为 mozilla-cvs 建的 cvsup 镜像，host 为 cvsup.de.freebsd.org，collection 叫 mozilla-all，按中欧时间每天同步两次
+2604415	885	Brett 认为这套语音与传真方案正是 FreeBSD 该大力宣传的方向，建议打包推出让用户在浏览器邮件客户端里同时收回语音传真与邮件，足以让人愿意搭 FreeBSD 服务器
+2604416	885	Nate 澄清 Sun 的 JRE 许可不允许拿 Sun 源码开发 Java 虚拟机，但可以随任意产品分发 JRE，改 netscape 使用 JRE 完全合规
+2604417	885	Amancio 建议直接用 Java，jdk 在 http://www.freebsd.org/java，写过 Java Workshop 2.0 跑 FreeBSD 的做法，另推荐 ACE 的 Java 版 JACE 与 IBM SanFrancisco
+2604419	885	winter 反问系统管理前端工具为什么要用 Java，认为 Perl 加 GTK 那一套更轻量也更快，反正本质还是 Perl
+2604421	885	Amancio 主张用 Java，理由是围绕 Java 已经建起庞大的支持基础设施与跨平台 IDE 环境，直接 Java 编码即可
+2604422	885	Amancio 按 JKH 的指示建出了 mozilla tree 且毫无阻碍，并说访问 cvs 仓库还差一点指引，提醒以后别再做无用空转回复
+2604423	885	Terry Lambert 指出 open 打开文件时调用方自己就持有文件名，因此不必从描述符反查；给出覆盖 libc 的 open 符号的代码，按描述符下标缓存 strdup 的 path，并用 fdname 函数取回
+2604424	885	jmb 宣布 freebsd-mozilla 邮件列表已开放订阅，mozilla 只是别名快捷方式，实际是闭合列表，可发往 freebsd-mozilla@freebsd.org 或 mozilla@freebsd.org
+2604428	885	Frank 认同 jkh 说的两万五千注册用户只是冰山一角，关键是先界定冰山实际规模；若目标只是扩大曝光与用户基数则此问题未必要紧
+2604437	885	Robert 补充至少有两家机构因缺少 CMU Cyrus 服务而放弃 FreeBSD 或 BSD/OS，最终转投 MS Exchange 加 Schedule；问题不在排斥 UNIX 而在需求不合
+2604438	885	John-Mark Gurney 回答对方关于数据量大小的提问，说 cvs 仓库约 45.6 megs，检出后的副本约 45.5 megs
+2604443	885	Mayo 支持 Terry Lambert 提出的新增独立倡导场域建议，认为 advocacy@freebsd.org 早就该设立，给 USENET freebsd 组加 .advocacy 是好主意

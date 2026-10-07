@@ -1,0 +1,21 @@
+2604121	885	muthu 问 freebsd 有无 print server 能与网络上给定 ip 地址的打印机通信 daemon 收各客户端 lpd 请求转发过去并让客户端在 /etc/printcap 里把 server ip 配好
+2604126	885	david 认可这个观点但认为所举例其实更适合 calendar 而非 cron 随后补一句说 calendar 本身说到底也是靠 cron 来跑起来的
+2604131	885	ben 三次恳求把这条购物线挪到 -chat 或什么地方去说听众人晒 worldstone 结果已经够难受了再要他一遍遍翻大家的 xengine 输出他估计要尖叫
+2604132	885	david 直接给出 xengine 所在路径 /usr/ports/benchmarks/xengine 回应有人问去哪里找到这个基准程序想在自己机器上跑并贴出结果
+2604133	885	joseph 说 S.u.S.E. 小组已基于其 Linux 代码发布针对 Permedia 2 芯片组的二进制 XFree 服务器在英文页底部其他操作系统栏目下有 FreeBSD 版链接
+2604134	885	terry 说人们给 cron 任务挑时刻出于两条理由一是避开影响用户二是确保在某设定时间前跑完而这两条都不被提议改动满足他改主张把时钟瞬间跳过那一小时并在重叠时段按住一小时
+2604136	885	wilko 把 mike 的 summary 更正为大多数人是满意的而 mike 显然不满意并指出 mike 在后续回复里显得比原帖更恼火随后说多数人其实没问题并提到自己也找到一份 matrox 信息页
+2604137	885	brian 问有没有人用过 portalFS 说自己想让它跑 TCP 却老是失败追查后发现在 mount_portal 的 activate.c 里 send_reply 末尾 sendmsg 返回错误码 n 为负一 errno 为 22 即 EINVAL
+2604138	885	amancio 提示你应当已经加载了 fastvid 模块以便给显卡开启写合并功能他说明写合并能够让送往 PCI 线性映射 frame buffer 的吞吐量直接翻四倍
+2604140	885	soren 回复 amancio 说自己确实还没有加载过 fastvid 模块对写合并这件事挺感兴趣便追问到底该怎么做才能把这个模块加载进系统
+2604141	885	amancio 说自己在上班现在没法聊天给出 ftp 站 pub 目录下 fastvid.tar.gz 旧版地址并说明模块还需要小幅调整才能对用户友好而 README 里有作者邮箱
+2604142	885	soren 回复 amancio 报告装上 fastvid 后实测 2x200Mhz P6 66Mhz 总线配 S3Virge/DX 4MB EDO RAM 在 XFree86-SVGA 3.3.2 下 1152x900x24bpp 跑出 810 到 920 rpm 升 25%
+2604143	885	kris 嘲讽 amancio 提到的双卡多屏功能说先让我们看看它在 FreeBSD 上到底能不能跑起来一台 PC 配两台显示器至少算追上了 Macs
+2604144	885	kevin 说 XI Graphics 的 Multihead Server 已经能实现这个功能一台屏幕可用 8 位 cirrus logic 另一台用 24 位 Millenium II 并表示在 www.atipa.com 上可以买到
+2604145	885	amancio 说很抱歉自己已经脱离了 X server 开发但这件事确实可行并提到有几位使用 Xig 双头服务器的人已经在 PC 上挂两块显示器实际在用
+2604146	885	wilko 用一句没有大量 WRAM 替代品可言的玩笑开场随后说似乎自己引发了不小的讨论他看重用户关于能用与不能用等使用经验的反馈尤其那些不能用的案例更值得重点关注
+2604147	885	wilko 回复 mike 针对他引用 summary 中 Wilko Bulte 那段话说其实那个人并不是他不过这些信息本身依然挺有意思的
+2604148	885	tim 回复 konstantin 问对方是不是真的试过 pkg_add 应当能根据你传入的原始 URL 自动通过 FTP 抓取依赖包他猜所有包需要在同一目录下才行
+2604149	885	mike 报一个 pax 恢复时的诡异现象建议把 /cdrom/info 下的 info 文件经 zcat 喂给 pax -r -w -v 解压到 tmpdir 并提醒要快按 ^C 问大家是不是已知缺陷
+2604151	885	chris 说想把 Accton EtherPocket 并口网卡的 Linux 驱动移植到 FreeBSD 但设备驱动写作指南对网络设备部分空白找不到起步点于是问有没有相关进行中的工作以及移植网络驱动该从哪开始
+2604152	885	amancio 说自己对讨论热度感到意外惊喜一度想把话题转到 comp.windows.x.i386unix 又忍住留下想看看会不会从这场讨论里冒出厉害的 X 或多媒体高手

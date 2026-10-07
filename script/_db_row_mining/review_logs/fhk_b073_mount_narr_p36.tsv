@@ -1,0 +1,21 @@
+2603824	885	opsys 询问是否存在 FreeBSD 与 Netscape 的团队以及有人提议建立一个 FreeBSD 中心的 mozilla 团队协作裁剪瘦身调试源码而不是各自为政，并说自己现在只想把 N 图标换成守门员 daemon
+2603825	885	amancio 列出后续两项任务，把 Java VM 升级到 JDK1.1.5，并再提供一个 secured mechanism 安全机制，未说明第一项任务内容
+2603826	885	benedict 认为退出挂死是 Netscape 4 的问题，自己也用 Netscape 4 遇到该现象，并指出 unix 源码比 Mac 与 Windows 版本约小三分之一，虽然压缩方式不同
+2603827	885	eivind 转述读到 mozilla 新闻组的消息，mozilla.org 已经计划推进该工作并向大型开源项目 CVS 有经验者征求信息协助，认为这件事正落到 FreeBSD 社区头上
+2603828	885	gibbs 询问是否知道可用于 C++ 程序的调试分配器包，希望在程序终止时列出所有未释放对象的分配文件与行号以及大小和分配序号
+2603830	885	jfieber 承认 Snob Art Genre 提出的 Netscape 4 归属质疑成立，认为该挂死问题的状态应先行核实，不宜在没有依据前直接动手修复
+2603831	885	keithley 怀疑该问题是 libc 的 select 或 poll 重实现引起的，自己在 3.0-971225-SNAP 上所有链到系统 libc 的 X 程序退出都挂死消耗 CPU，而 Netscape 3.04 静态链 BSDI libc 不受影响
+2603833	885	opsys 提出建立 FreeBSD 中心的 netscape CVS 树供社区协作修改后再把补丁向上游提交，并推测 mozilla.org 即将提供只读 CVS 树可能正与 FreeBSD 阵营商量
+2603834	885	wilko 请 Julian Elischer 过目自己先前发给 -hackers 邮件列表的 diff，如果没问题就提交 send-pr
+2603835	885	jkh 认为邮件列表希望共享修复的想法值得肯定，打算到 Mozilla 聚会上问 Jaime 是否有人在维护公开 CVS 让各方共享修改
+2603837	885	jfieber 补充版本分布信息，报告 Netscape 4 的退出挂死在 2.2.5 与 2.2.6 上都存在并且是间歇性的，大约一半时候能正常退出
+2603838	885	jb 指出 Netscape 已从源码中剥离所有他们获得授权的代码，其中就包括 java，源码里只剩 stubs，导致浏览器基本功能残缺
+2603839	885	housley 道歉并撤回先前未经测试的 anti-spam 规则补充，说明 allowip.db 是本地允许 IP 地址的哈希表，供 check_rbl 放行本地地址，适用于小公司和拨号宽带
+2603841	885	spork 用 telnet 测试 rpcinfo 显示 portmapper、nfsd、mountd 均在 TCP 端口监听，但防火墙仍拦截大量 UDP 包，询问 mountd 与 portmap 能否彻底禁用 UDP，手册里没有找到该选项
+2603842	885	opsys 转述新建 mozilla 新闻组的说法，因 Netscape 从 Sun 处获得 java 授权，故无法纳入 src，从该源码获取 java 代码基本无用
+2603843	885	omar 询问 FreeBSD 支持的 CD-R 驱动器是否支持多会话以便分天归档日志文件，以及 cdrecord 是否只用于复制现有光盘而无法用来归档自己写好的文件
+2603844	885	jacques 说自己在笔记本上跑 2.2.5 大约两个月并使用 Netscape 4 未遇到退出挂死，愿与有兴趣者比较配置信息，但尚未在 current 机器上试过
+2603845	885	studded 认同 opsys 建立 FreeBSD 中心 CVS 树的想法，认为这是赢得正面宣传的绝佳机会并希望 FreeBSD 主导该进程
+2603847	885	jkh 说找回任何 java 支持与找回 SSL 支持都已是常见问题，各方正在处理，我们继续追问只会重复，并给出 mozilla.org 社区页面链接作为讨论去处
+2603849	885	ejs 说自己只见过一次这个挂死，因为通常一周才重启一次机器，并转述 John Fieber 所说该问题在新版本上一半概率间歇出现，自己不作同一结论
+2603850	885	jkh 认为 Kaffe 团队需要一个更合理的目标来集中精力，刚被开放源码的 Mozilla 也许正好可以提供这样一个车辆，但没有复述 Sun 授权导致取 java 无用的说法

@@ -1,0 +1,22 @@
+2603622|L4|Peter Edwards 指出 TCP 传输失败不是文件大小而是内容问题 SCO 终端设备可能在做 cr-lf 转换
+2603624|L3|Josef Belkovics 询问 FreeBSD 上有没有工具能像 Cisco ip forward-protocol 那样转发 udp 和广播包
+2603625|L3|pratap singh 认为二层 CRC 不够因为 IP 会路由穿越多个网段 ARP 却只在本地链路
+2603627|L3|Andrew Maltsev 提议给 make world 加用户可配置的不覆盖文件列表并计划修改 install 支持排除
+2603629|L3|Alfred Perlstein 推荐参考 NATd 的信息链接来转发 udp 包
+2603630|L3|John Polstra 问 ps -l 输出中 RSS 大于 VSZ 的情况附 644 276 的进程数据
+2603631|L3|Snob Art Genre 建议用 split(1) 把文件切成两半找出导致传输挂起的那一半
+2603633|L3|Tom 指出广播通常不应该被转发而普通 IP 流量可以由标准 UNIX 路由代码转发
+2603638|L3|Konstantin Chuguev 询问 NFS 上 chflags 的可行性他拒绝用 NFS 挂载源树只挂 / usr var 三元组
+2603639|L3|Leif Neland 表示 David Greenman 建议的 2.2.6 已经通过 cvsup 获取到了
+2603642|L3|mshar@vax.ipm.ac.ir 介绍 DIPC 分布式进程间通信可用于组建 PC 集群目前只有 Linux 版
+2603649|L4|David Greenman 指出 netstat 里 405919 个坏校验和丢包根因在路由器而非两端主机
+2603651|L3|Arman Hazairin 解释 405919 个坏校验和来自机器连续 139 天运行平均每天约七个
+2603658|L4|Terry Lambert 建议把 exclusion list 并入 build-limitation system 以避免每个 install 都扫表
+2603661|L4|Josef Belkovics：DHCP forwarding 按 RFC 由 DHCP proxy 承担 FreeBSD 未必有此能力
+2603663|L4|Terry Lambert：可参考 Japan 的 WIDE project 其 ISCdhcpd 或已支持 DHCP 代理
+2603666|L3|Terry Lambert 讨论用 unix domain socket 传递 fd 作为 SYSV SHMEM 替代方案
+2603667|L4|Archie Cobbs：较新的 ISC DHCP server 同时含 gateway 与 client 代码见 www.isc.org
+2603668|L3|Archie Cobbs 转告 Netscape free the lizard 开源代码发布活动 mozilla.org party 页面
+2603670|L4|John S. Dyson：FreeBSD in -current 已用 4MB 页但仅限内核与 device buffers 如视频内存
+2603672|L3|Giannis Vlachos 用 FreeBSD 2.2.2 建拨号接入服务器请求用户会话日志文件方案
+2603673|L3|p6ms2t15 询问如何读取 ethernet card 的发送接收与碰撞等计数器数据

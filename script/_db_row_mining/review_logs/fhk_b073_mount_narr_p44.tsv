@@ -1,0 +1,21 @@
+2604154	885	kent 说他也遇到类似 cvs 问题 留 /tmp/cvs 临时文件且常 core dump 忘了精确 trace dump 但怀疑跟 tmpnam 有关 他编译用 -O2 没用 -fomit-frame-pointer
+2604155	885	robert watson 转引 news.com 报道 引 Netscape 的人说 Suitespot 服务器在 Linux 上开发 追问能否说服 Netscape 同时为 FreeBSD 做 他觉得 FreeBSD 是好网服平台却像二等系统
+2604156	885	robert watson 说 QtScape 听着好玩 他在 Linux 模拟器下没试 因为跟挪威连通一般 觉得移植若成会很不错 转发的是 Troll Tech 的 QtScape 公告
+2604157	885	jkh 说按设计它会拆开 URL 找兄弟包所在 若站点没有 packages/All/ 目录就会失效 他自己也好久没实测这个功能了 但认为它本该能工作
+2604158	885	kevin 报 2.2.6-STABLE 0404 内核同时开 MD5 DDB PERFMON IPFIREWALL 时 RPC 服务无法绑定 移除后恢复 机器是 NIS 主 没时间重启四次
+2604159	885	greg 指出 Matrox Millenium I 有两种 较老的大板子能与 XI graphics server 1.3 一起工作 新的不行 他两块都拥有 认为最新版 server 或许都能用
+2604160	885	stefan 指出 IPFIREWALL 与 bpf 无关 建议看 ipfw(8) /etc/rc.local /etc/rc.firewall 用法 推测根因是没配防火墙规则致环回接口通信失败 提醒先在 rc.conf 设 firewall=open
+2604162	885	vladimir 说 Qt 在 FreeBSD 上也能编译 只需在 QT 前端 Makefile 里加 -L/usr/X11R6/lib 并做点微调 他给的快照从 ftp.troll.no/qt/snapshots 下载 并说比原先版本快不少内存占用也更小
+2604163	885	dag-erli 报全新 Accton EN1207 Cheetah 在 2.2.6-STABLE 上被识别为 de0 的 Digital 21140A Fast Ethernet 并启用 100baseTX 却连不上网 换 3Com 3c509 就正常
+2604164	885	joelh 说他的机器较慢 make world 耗时很长 似乎会重建所有东西而不只改动部分 想问只改动少量时 make install 是否能正确工作 并感谢帮忙
+2604165	885	dodd 建议应推动 gtk 阵营做 Netscape GTK 版 摆脱 motif 应是首要目标 他还指出 SSLeay 的人已经有工作集成
+2604166	885	hasty 说我们应该开始向 Netscape 抱怨 他记得公司在内部有 FreeBSD 支持者 不过他加了句如果我没记错
+2604167	885	hasty 说 GTK 的志愿者在 mozilla 新闻组里已经被好好训过一遍 这条评论后面还附上此前关于推动 GTK 移植的转引原文
+2604168	885	reichert 用 wide-dhcpc DHCP 客户端 重启后偶尔抱怨设备未配置为 DHCP 反复重启才生效 他说自己用最便宜的 PCI NE2000 克隆卡 觉得它们表现尚可 想问为什么 dhcpc 有时会误认网卡
+2604169	885	julian 说 soft updates 在崩溃或断电后能保住磁盘一致性 在某些场景还更快 建议看看 /usr/tmp 是否设成 async 或 softdep 因为 gcc 也把临时文件放那里
+2604180	885	ulf 把一个带 Mylex DAC 960 检测例程的内核上线到 ftp.Alameda.net 支持固件 4.x 系列 说 3.x 应也能工作但不打包票 请持有控制器与硬盘的志愿者把内核拷软盘开机 验证是否检测到控制器类型通道内存与系统盘 也能识别死盘离线或临界盘
+2604181	885	darren 建议导入 Matthew Green 为 NetBSD pax 所做的所有改动 据他记忆目标是让 cpio 与 tar 都成为 pax 一部分并加入 GNU tar 功能
+2604183	885	darren 在 2.2.5 上装了自编译的 tkrat 1.1 以及 ipop{2,3}d 与 imapd 三个 daemon 全都报无法取得锁 想知道成因
+2604184	885	darren 只回了 err 和 /tmp 两词作答 他先前报的那三个邮件服务全都报无法取得锁 根因就在 /tmp 这个目录
+2604186	885	yurtesen 重启服务器出现 /dev/wd0a on / Specified device does not match mounted device 挂载失败启动中止 服务器瘫痪他请人尽快指导
+2604187	885	eklund 建议要么回滚内核要么升级 mount 他推荐先启动旧内核 再升级 mount 然后换新内核重启 他还说这不能算交叉发帖的借口 并给 questions 设了 Mailfollowup-to

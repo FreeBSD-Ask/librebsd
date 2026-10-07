@@ -1,0 +1,845 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2603535 ###
+===== 库内序 145093 | PK 2603535 | 等级 L3 =====
+DATE: 1998-03-22T00:14:59+00:00
+FROM: "John S. Dyson" <dyson@FreeBSD.ORG>
+SUBJ: Re: mremap?
+摘要: John Dyson 建议改用 procfs 建立映射 而非 rfork 类新原语
+
+Terry Lambert said:
+> 
+> My preferred mechanism for doing this would be to use a call through
+> procfs to establish the mapping.
+> 
+> Of course, I preferred using procfs to set attributes on one's self
+> instead of an rfork implementation (this is, in fact, how I implemented
+> the interprocess sharng of the per process descriptor table in UnixWare).
+>
+Rather than invent lots of primitives, we need to continue to use
+the existing and sufficient VM primitves.  The VM code is really
+flexible and easy to use.  If anything, you could implement the
+procfs stuff over the VM code if you want to.
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603536 ###
+===== 库内序 145094 | PK 2603536 | 等级 L3 =====
+DATE: 1998-03-21T09:41:10+00:00
+FROM: leifn@image.dk (Leif Neland)
+SUBJ: Re: netscape4 weirdness: what is happening here??
+摘要: Leif Neland 说 Ollivier 建议的修复对他有效 认为 Netscape 4 行为反常
+
+At 20 Mar 98 21:38:12 Wilko Bulte (2:234/49.99) wrote to All  regarding Re:
+netscape4 weirdness: what is happening here?? in area "freebsd-hacker"
+
+ WB>>  |I'm running Netscape 4 on my 2.2.5R box. Every now and then
+ WB> it refuses to
+ WB>>  |start properly. It just loops, consuming CPU.
+ WB>>  |
+ WB>
+ WB> FWIW: the fix Ollivier suggested seems to do the trick for me.
+ WB>
+ WB> Netscape seems to be a truly weird program. %-)
+
+Well, in a week or so you can fix it :-)
+
+
+Leif Neland
+leifn@image.dk
+
+---
+|Fidonet:  Leif Neland 2:234/49
+|Internet: leifn@image.dk
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603537 ###
+===== 库内序 145095 | PK 2603537 | 等级 L3 =====
+DATE: 1998-03-22T01:25:42+00:00
+FROM: "szabo" <tszabo@earthlink.net>
+SUBJ: Re: freebsd-hackers-digest V4 #75
+摘要: szabo 请求取消订阅 freebsd-hackers-digest 邮件列表
+
+Please cancel this newsletter. Thank you.
+
+
+---------------TOM-------------------
+
+----------
+> From: freebsd-hackers-digest <owner-freebsd-hackers-digest@FreeBSD.ORG>
+> To: freebsd-hackers-digest@FreeBSD.ORG
+> Subject: freebsd-hackers-digest V4 #75
+> Date: Saturday, March 21, 1998 1:48 PM
+> 
+> 
+> freebsd-hackers-digest    Saturday, March 21 1998    Volume 04 : Number
+075
+> 
+> 
+> 
+> In this issue:
+> Re: mremap? 
+> Re: SCO (was Re: hi terry) 
+> Re: newmsdosfs anyone ?
+> Re: SCO (was Re: hi terry)
+> Re: SCO (was Re: hi terry) 
+> Re: SCO (was Re: hi terry)
+> Re: newmsdosfs anyone ?
+> apologies for mail loop
+> Re: newmsdosfs anyone ?
+> Re: newmsdosfs anyone ?
+> patch for Vibra16X -- test please!
+> New vx driver (Re: vx device (3c905-100mb) )
+> XTI (shudder)
+> Re: New vx driver (Re: vx device (3c905-100mb) )
+> Re: newmsdosfs anyone ?
+> Re: SCO (was Re: hi terry)
+> Re: mremap?
+> Re: How do you increase available SYSV shared memory?
+> Re: New vx driver (Re: vx device (3c905-100mb) ) 
+> Re: How do you increase available SYSV shared memory?
+> Re: How do you increase available SYSV shared memory?
+> Re: How do you increase available SYSV shared memory?
+> Re: mremap?
+> Re: mremap?
+> Re: Discussion about script to update /etc, etc.
+> Re: mremap?
+> (Fwd) Re: Natd Support for Microsoft PPTP / VPN using protocol
+> Re: mremap?
+> Need Intel 82557/82558 Ethernet docs to hack if_fxp.
+> FW: Digi Exp 
+> Re: 3.0-971225SNAP, Japanese/Korean locales, and libxpg4
+> fxp strange problem
+> Re: mremap?
+> Re: fxp strange problem
+> inetd in realloc():warning:junk pointer, towo low to make sense.
+> Re: inetd in realloc():warning:junk pointer, towo low to make sense.
+> Re: netscape4 weirdness: what is happening here??
+> ANNOUNCE: PicoBSD 0.31
+> Re: How do you increase available SYSV shared memory?
+> 
+> ----------------------------------------------------------------------
+> 
+> Date: Fri, 20 Mar 1998 08:38:29 -0800
+> From: Mike Smith <mike@smith.net.au>
+> Subject: Re: mremap? 
+> 
+> > ok, i'm not promising anything here, but if i implemented mremap(),
+would
+> > there be any interest in allowing it i
+[…中段省略 62935 字符…] NCE: PicoBSD 0.31
+> 
+> Hi!
+> 
+> I am pleased to announce that PicoBSD version 0.31 is available. This is
+a
+> version of FreeBSD fitting on a single floppy - it can serve as a
+> dialup-access tool (includes SSH, telnet and FTP clients), or as a small
+> router replacement (includes IP firewall and SNMP agent). Visit
+> 
+> 	http://www.freebsd.org/~abial
+> 
+> for further information and download.
+> 
+> Have fun!
+> 
+> Andrzej Bialecki
+> 
+> -
+---------------------+---------------------------------------
+
+### PK 2603538 ###
+===== 库内序 145096 | PK 2603538 | 等级 L3 =====
+DATE: 1998-03-22T02:33:29+00:00
+FROM: "Tim O'Neil" <toniel@flash.net>
+SUBJ: Re: freebsd-hackers-digest V4 #75
+摘要: Tim ONeil 回复订阅取消请求并附上完整说明与其原信全文
+
+szabo wrote:
+>Please cancel this newsletter. Thank you.
+
+Well, I replied with instructions and a full quote
+of his letter.
+Anyone else?
+
+-Tim
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603540 ###
+===== 库内序 145098 | PK 2603540 | 等级 L3 =====
+DATE: 1998-03-22T04:05:38+00:00
+FROM: allen campbell <allenc@verinet.com>
+SUBJ: Re: Discussion about script to update /etc, etc.
+摘要: allen campbell 寻找 Paul Traina 关于 etc 配置模板方案的原帖 config hackers stable 列表均无果
+
+> Hmmmmm.  I don't like this.  I think we need to simply bite the bullet
+> and make the user-mutable parts of the /etc configuration template
+> based, as Paul Traina first suggested about, oh, 2 years ago. :-)
+
+I had no success searching for Paul's message(s) which you cite
+here.  Do you happen to remember which list?  I tried config,
+hackers and stable.
+
+  Allen Campbell
+  allenc@verinet.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603541 ###
+===== 库内序 145099 | PK 2603541 | 等级 L3 =====
+DATE: 1998-03-22T06:10:24+00:00
+FROM: CHOI Junho <junker@jazz.snu.ac.kr>
+SUBJ: Re: 3.0-971225SNAP, Japanese/Korean locales, and libxpg4
+摘要: CHOI Junho 建议修改 FreeBSD.cf 使 SJIS EUC 在链接 X 库时与 xpg4 绑定
+
+
+- So, what's the official position of FreeBSD on this?  If it is going to
+- stay in libxpg4 rather than be in libc, I'll make the appropriate change
+- to the FreeBSD.cf in the XFree86 source.  Perhaps something like the
+- following (relative to XFree86 3.3.2)?
+
+I think it is good enough for now... of course it cannot resolve some
+problem of command-line utilities(more, vi, perl5, etc...), but in the
+X-window, it is good, and better if later FreeBSD release(2.2.6?) will
+include XFree86 3.3.2 with xpg4 library...
+
+-- 
+ ----Cool FreeBSD!----MSX Forever!---J.U.N.K.E.R/Beat Snatchers!----
+  CHOI Junho <junker@jazz.snu.ac.kr>  http://jazz.snu.ac.kr/~junker
+ Distributed Computing System Lab,CS Dept.,Seoul National Univ., ROK
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+### PK 2603542 ###
+===== 库内序 145100 | PK 2603542 | 等级 L3 =====
+DATE: 1998-03-22T15:03:51+00:00
+FROM: asami@cs.berkeley.edu (Satoshi Asami)
+SUBJ: going to Baltimore....
+摘要: Satoshi Asami 告知本周前往巴尔的摩开会 周四启程 邀人线下会面对原因随意
+
+I'm going to Baltimore this week for a conference.  If someone wants
+to get together (for reasons other than "I want to throw a pie on the
+SOB's face"), please drop me a note at this address.  I'll be leaving
+on Thursday.
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603543 ###
+===== 库内序 145101 | PK 2603543 | 等级 L3 =====
+DATE: 1998-03-22T11:18:44+00:00
+FROM: James Raynard <fhackers@jraynard.demon.co.uk>
+SUBJ: Re: freebsd-hackers-digest V4 #75
+摘要: James Raynard 警告 earthlink.net 常发垃圾邮件 疑似地址采集应直接屏蔽
+
+On Sat, Mar 21, 1998 at 06:33:29PM -0800, Tim O'Neil wrote:
+> 
+> Well, I replied with instructions and a full quote
+> of his letter.
+
+Careful - I've seen a lot of spam originating from earthlink.net,
+so this could well be an address-gathering exercise.
+
+A better response would be to block them, IMHO.
+
+James
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603544 ###
+===== 库内序 145102 | PK 2603544 | 等级 L3 =====
+DATE: 1998-03-22T18:09:11+00:00
+FROM: "Eric J. Schwertfeger" <ejs@bfd.com>
+SUBJ: Re: freebsd-hackers-digest V4 #75
+摘要: Eric Schwertfeger 认为垃圾邮件者直接让其采集机器人订阅列表更容易不必回信拦截
+
+On Sun, 22 Mar 1998, James Raynard wrote:
+
+> On Sat, Mar 21, 1998 at 06:33:29PM -0800, Tim O'Neil wrote:
+> > 
+> > Well, I replied with instructions and a full quote
+> > of his letter.
+> 
+> Careful - I've seen a lot of spam originating from earthlink.net,
+> so this could well be an address-gathering exercise.
+
+Don't you think it would be easier for the spammer to just subscribe his
+address-gathering robot to the list?
+
+And while I have seen a lot of spam from earthlink as well, effective
+procmail filters get rid of almost all of it (95% in my experience, and
+I've made some improvements that seem to have taken that up to 98-99%).
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603545 ###
+===== 库内序 145103 | PK 2603545 | 等级 L3 =====
+DATE: 1998-03-22T23:30:52+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: freebsd-hackers-digest V4 #75
+摘要: Terry Lambert 说 procmail 过滤可挡 95 至 99 百分比 spam 但已先付下载流量代价
+
+> And while I have seen a lot of spam from earthlink as well, effective
+> procmail filters get rid of almost all of it (95% in my experience, and
+> I've made some improvements that seem to have taken that up to 98-99%).
+
+The best thing about destination filtering like this is that you get
+to pay to download the SPAM before you throw it away, so it can count
+against your 200 hours (~8 days) before message units kick in on ISDN
+links from non-flat-rate providers like Pac Bell and US West (among
+others).
+
+Oh wait, that's not why destination filtering is a *good* idea, that's
+why it's a *stupid* idea...
+
+Anyone with an ISDN link that they've had to pay message units on
+this month?  If so, you should bill the SPAM'mers for the difference.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603548 ###
+===== 库内序 145106 | PK 2603548 | 等级 L3 =====
+DATE: 1998-03-23T15:49:43+00:00
+FROM: Alex Le Heux <alexlh@funk.org>
+SUBJ: multi-port ethernet cards
+摘要: Alex Le Heux 询问 FreeBSD 是否支持多端口 10baseT 以太网卡或哪些可能容易支持
+
+Hi,
+
+Does anyone know of any multi-port ethernet (10baseT) cards that
+are supported?
+Or that might easily become supported?
+
+Alex
+
+-- 
+A computer without Windows is like a fish without a bicycle.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603549 ###
+===== 库内序 145107 | PK 2603549 | 等级 L4 =====
+DATE: 1998-03-23T14:20:04+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: a possibly interesting article...
+摘要: Luigi Rizzo 分享微软 web 服务器管理文章链接 需 Word 查看器无法直接看 只考虑 Windows 用户
+
+... on how microsoft manages its web server (May 1997).
+
+http://microsoft.com/syspro/technet/tnnews/features/mscom.htm
+
+The web page has some data, and a pointer to an article in MSWord
+format.
+
+The instruction also instruct you to download the Word Viewer if
+you don't have MSWord.
+
+The case that you don't run Windows is not contemplated :)
+
+	Cheers
+	Luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603550 ###
+===== 库内序 145108 | PK 2603550 | 等级 L3 =====
+DATE: 1998-03-23T16:09:26+00:00
+FROM: "pratap singh" <v_pr@hotmail.com>
+SUBJ: Re: multi-port ethernet cards
+摘要: pratap singh 建议 Alex 关注 Antares Microsystems 的 SBUS 10 Base-T 四端口以太网卡
+
+
+Hi Alex,
+I think SBUS 10 Base-T Ethernet cards are available from Antares 
+Microsystems, Inc. These are quad port ethernet cards.
+Hope this helps,
+prats
+>From owner-freebsd-hackers@freebsd.org Mon Mar 23 07:51:24 1998
+>Received: from hub.freebsd.org (hub.FreeBSD.ORG [204.216.27.18])
+>	by smyrno.sol.net (8.8.8/8.8.8/SNNS-1.02) with ESMTP id JAA23372;
+>	Mon, 23 Mar 1998 09:51:15 -0600 (CST)
+>Received: from localhost (daemon@localhost)
+>          by hub.freebsd.org (8.8.8/8.8.8) with SMTP id HAA06972;
+>          Mon, 23 Mar 1998 07:51:12 -0800 (PST)
+>          (envelope-from owner-freebsd-hackers)
+>Received: by hub.freebsd.org (bulk_mailer v1.6); Mon, 23 Mar 1998 
+07:49:55 -0800
+>Received: (from majordom@localhost)
+>          by hub.freebsd.org (8.8.8/8.8.8) id HAA06448
+>          for freebsd-hackers-outgoing; Mon, 23 Mar 1998 07:49:54 -0800 
+(PST)
+>          (envelope-from owner-freebsd-hackers@FreeBSD.ORG)
+>Received: from p.funk.org (p.funk.org [194.109.86.226])
+>          by hub.freebsd.org (8.8.8/8.8.8) with ESMTP id HAA06426
+>          for <freebsd-hackers@freebsd.org>; Mon, 23 Mar 1998 07:49:46 
+-0800 (PST)
+>          (envelope-from alexlh@p.funk.org)
+>Received: (from alexlh@localhost)
+>	by p.funk.org (8.8.8/8.8.8) id QAA00687;
+>	Mon, 23 Mar 1998 16:49:44 +0100 (CET)
+>	(envelope-from alexlh)
+>Message-ID: <19980323164943.11214@p.funk.org>
+>Date: Mon, 23 Mar 1998 16:49:43 +0100
+>From: Alex Le Heux <alexlh@funk.org>
+>To: freebsd-hackers@FreeBSD.ORG
+>Subject: multi-port ethernet cards
+>Mime-Version: 1.0
+>Content-Type: text/plain; charset=us-ascii
+>X-Mailer: Mutt 0.89.1i
+>Sender: owner-freebsd-hackers@FreeBSD.ORG
+>X-Loop: FreeBSD.ORG
+>
+>Hi,
+>
+>Does anyone know of any multi-port ethernet (10baseT) cards that
+>are supported?
+>Or that might easily become supported?
+>
+>Alex
+>
+>-- 
+>A computer without Windows is like a fish without a bicycle.
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+
+______________________________________________________
+Get Your Private, Free Email at http://www.hotmail.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603551 ###
+===== 库内序 145109 | PK 2603551 | 等级 L3 =====
+DATE: 1998-03-23T16:24:46+00:00
+FROM: "Jonathan M. Bresler" <jmb>
+SUBJ: Re: a possibly interesting article...
+摘要: Jonathan Bresler 指出所引文章日期为 1997 年 5 月 8 日
+
+Luigi Rizzo wrote:
+> ... on how microsoft manages its web server (May 1997).
+> 
+> http://microsoft.com/syspro/technet/tnnews/features/mscom.htm
+> 
+> The web page has some data, and a pointer to an article in MSWord
+> format.
+> 
+> The instruction also instruct you to download the Word Viewer if
+> you don't have MSWord.
+> 
+> The case that you don't run Windows is not contemplated :)
+
+	this article is dated May 8, 1997.
+
+	in email on the FreeBSD mailing lists, a person from 
+	microsoft disavowed the accuracy of this article.
+	when asked for accurate data, they never replied.
+	
+	grrr......i cant find it in the mail archive for
+	questions and hackers.
+jmb
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603552 ###
+===== 库内序 145110 | PK 2603552 | 等级 L3 =====
+DATE: 1998-03-23T16:41:01+00:00
+FROM: Alex Le Heux <alexlh@funk.org>
+SUBJ: Re: multi-port ethernet cards
+摘要: Alex Le Heux 追问 SBUS 是否指 Sparc 机器所用 及 FreeBSD 是否支持 Sparc 平台
+
+On Mon, Mar 23, 1998 at 08:09:26AM -0800, pratap singh wrote:
+> 
+> Hi Alex,
+> I think SBUS 10 Base-T Ethernet cards are available from Antares 
+> Microsystems, Inc. These are quad port ethernet cards.
+
+Hi,
+
+Is this SBUS as you find them in Sparc machines? How's that going to
+be supported by FreeBSD?
+
+Alex
+-- 
+A computer without Windows is like a fish without a bicycle.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603553 ###
+===== 库内序 145111 | PK 2603553 | 等级 L3 =====
+DATE: 1998-03-23T16:50:10+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: IDE+LPIP causing random lockups
+摘要: dag-erli 补充见到 IDE 加 LPIP 同时活动导致的锁死现象 与主讨论场景一致
+
+Duncan Barclay <dmlb@ragnet.demon.co.uk> writes:
+> On 15-Mar-98 Peter Jeremy wrote:
+> > The symptoms are that my main machine (only) locks up and needs a
+> > reset to recover.  The laptop has never been affected.  The problem
+> > only occurs when there is LPIP activity between the machines and seems
+> > to also correlate with disk activity on the main machine, and using
+> Only to add that I have seen this happen in a similar set up. However I feel it 
+> is also to do with having a "fast" and "slow" machine. The "fast" machine
+> dies more frequently than the "slow" machine; and it depends on which machine
+
+I submitted a PR about this (i386/5698) on February 10th. It would be
+useful if you could both follow it up with whatever information and
+observations you have. Just point your browser to this URL:
+
+	http://www.freebsd.org/cgi/query-pr.cgi?pr=5698
+
+I have been looking into this a little, but did not really get
+anywhere except a slight cleanup of the lp driver (which has been
+merged into -current - or so I've been told; I don't run -current
+myself, for lack of bandwidth). Since the last of these reboots cost
+me the root inode on my laptop's /usr, I am somewhat disinclined to do
+any more testing unless I get my hands on a second scratch machine.
+
+-- 
+fprintf(stderr, "I have a closed mind. It helps keeping the rain out.\n");
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603556 ###
+===== 库内序 145114 | PK 2603556 | 等级 L3 =====
+DATE: 1998-03-23T18:02:56+00:00
+FROM: "Jonathan M. Bresler" <jmb>
+SUBJ: Re: a possibly interesting article...
+摘要: Bresler：承认 http 与 ftp 场景不同但认为 44 比 1 的吞吐差大体合理
+
+Mike Smith wrote:
+> What's most amusing to me is that they require this obscene pile of 
+> garbage to put out a measly 350GB/day.
+> 
+> Wcarchive does about 250GB with a single P6.  8)
+
+	BINGO!
+
+	admittedly they do mostly http
+	and we do ftp
+
+	but still a 44:1 ratio.....seems about right to me ;P
+jvb
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603557 ###
+===== 库内序 145115 | PK 2603557 | 等级 L3 =====
+DATE: 1998-03-23T18:20:12+00:00
+FROM: Robert Watson <robert@cyrus.watson.org>
+SUBJ: Re: a possibly interesting article...
+摘要: Watson：讥讽 HTML 需要下载 Word Viewer 才能读文档也算少数优点
+
+On Mon, 23 Mar 1998, Luigi Rizzo wrote:
+
+> ... on how microsoft manages its web server (May 1997).
+> 
+> http://microsoft.com/syspro/technet/tnnews/features/mscom.htm
+> 
+> The web page has some data, and a pointer to an article in MSWord
+> format.
+> 
+> The instruction also instruct you to download the Word Viewer if
+> you don't have MSWord.
+
+So, one of the great things about HTML (one of the few great things about
+HTML :) is that it is almost universally accessible across platforms.  Now
+if only Microsoft practiced what they preached, and used HTML for their
+documents, maybe I would be able to see their marketing junk :).  As it
+is, they are surely not going to convert me if they won't put their
+documents online in a format where I can read them.
+
+Perhaps it is just as well, from having read a few of the other responses
+:).  They are saving themselves from having me laugh at them when relating
+their story to friends :). 
+
+  Robert N Watson 
+
+Carnegie Mellon University http://www.cmu.edu/
+SafePort Network Services  http://www.safeport.com/
+robert@fledge.watson.org   http://www.watson.org/~robert/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603558 ###
+===== 库内序 145116 | PK 2603558 | 等级 L4 =====
+DATE: 1998-03-23T18:36:01+00:00
+FROM: Marc Slemko <marcs@znep.com>
+SUBJ: Re: a possibly interesting article... 
+摘要: Slemko：指出动态内容与静态内容不可比微软站点大量使用动态内容
+
+(followups probably better directed to chat...)
+
+On Mon, 23 Mar 1998, Mike Smith wrote:
+
+> What's most amusing to me is that they require this obscene pile of 
+> garbage to put out a measly 350GB/day.
+> 
+> Wcarchive does about 250GB with a single P6.  8)
+
+That is not a fair comparison.
+
+Dynamic content is very different than static content.  Microsoft does an
+awful lot of dynamic content on their website, sometimes for no apparent
+reason.  wcarchive does very little dynamic content from what I would
+guess.
+
+I'm not claiming that NT isn't horrible and doesn't require more hardware,
+especially to make it stable, but this particular comparison really isn't
+too meaningful.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603559 ###
+===== 库内序 145117 | PK 2603559 | 等级 L3 =====
+DATE: 1998-03-23T19:12:42+00:00
+FROM: Daniel Berlin <root@danberlin.resnet.rochester.edu>
+SUBJ: Re: a possibly interesting article...
+摘要: Berlin：表示可为名单在微软全球通讯录中查身份并注明自己是学生兼职
+
+If you get me the name, i'll look it up in the global address book (tell
+you who they are, what they do, etc).
+I work part time for MS (I'm a college student, at college). Technically
+i'm a professional evangelist. But i'm not here to argue, so please don't
+pick a fight. As i said, I'm a college student, i need the money, and
+it's quite a fun job from my perspective.
+--Dan
+On Mon, 23 Mar 1998, Jonathan M. Bresler wrote:
+
+> Luigi Rizzo wrote:
+> > ... on how microsoft manages its web server (May 1997).
+> > 
+> > http://microsoft.com/syspro/technet/tnnews/features/mscom.htm
+> > 
+> > The web page has some data, and a pointer to an article in MSWord
+> > format.
+> > 
+> > The instruction also instruct you to download the Word Viewer if
+> > you don't have MSWord.
+> > 
+> > The case that you don't run Windows is not contemplated :)
+> 
+> 	this article is dated May 8, 1997.
+> 
+> 	in email on the FreeBSD mailing lists, a person from 
+> 	microsoft disavowed the accuracy of this article.
+> 	when asked for accurate data, they never replied.
+> 	
+> 	grrr......i cant find it in the mail archive for
+> 	questions and hackers.
+> jmb
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603560 ###
+===== 库内序 145118 | PK 2603560 | 等级 L3 =====
+DATE: 1998-03-23T17:43:06+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: a possibly interesting article...
+摘要: Rizzo：说明本意不挑起服务器竞赛并指出单条目请求数等流量数据难获取
+
+> (followups probably better directed to chat...)
+
+maybe, although I did not want to start a competition among different
+servers. It's just that such data on traffic etc is not easily
+available, and even less available is data on the number of requests
+for a single item.
+
+So, the page does have some interesting numbers.
+
+E.g. one thing i would be curious, and never found out, is how many
+downloads there are of a new FreeBSD release when it comes out, say in
+6hrs periods for the first few days.
+
+And, how much bandwidth and CPU could be saved if FreeBSD was
+distributed using multicast e.g. with an application like RMDP...
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2603561 ###
+===== 库内序 145119 | PK 2603561 | 等级 L4 =====
+DATE: 1998-03-23T19:23:25+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: freebsd-hackers-digest V4 #75
+摘要: Lambert：指出 Hotmail 是会收集地址的收割机并说明收发双方都可能被收割
+
+> > Oh wait, that's not why destination filtering is a *good* idea, that's
+> > why it's a *stupid* idea...
+> 
+> Stupid for your situation, Terry, not for mine. Blocking all hotmail is
+> not fine for us, because some of our customers are using hotmail.
+
+Not that Hotmail is relevent, but...
+
+Just FYI, Hotmail is a harvester.  If you send mail to a Hotmail
+user from a non-Hotmail user, or if a Hotmail user sends you mail,
+your address gets "harvested" and put onto a for-sale "SPAM me"
+list.
+
+Juno does the same thing, as do three of the four "unsubscribe me"
+``services'' referenced from the Ziff-Davis page.
+
+I intentionally bought (and burned) a domain testing this out.  From
+different accounts, I sent mail to or sent mail from the various
+"free" mail accounts, or "unsubscribed" using one of the "services"
+for unsubscribing.
+
+I also sent "unsubscribe" messages from other accounts to the various
+"send an 'unsubscribe' to this account to get off our list" addresses
+from various SPAM.
+
+Each account was seperate, and no address had appeared anywhere at
+any time, except through those venues.
+
+Out of 70 accounts, all but 6 received SPAM.
+
+So you would do well to block mail both *from* and *to* such addresses.
+
+
+> So we're to punish everyone that uses an email address who's domain
+> has ever been forged?
+
+All forgeries are detectable.  All of them.  Period.  The "Received:"
+timestamp/"From:" line ordering give them away.
+
+The only place where this isn't so is a SPAM'mer-friendly ISP, which
+does not verify IP addresses in the timestamp.
+
+And yes, such ISP's whould be blocked until they can play by the
+RFC822/RFC821 header rules.
+
+
+> We don't have metered usage, and aren't near capacity either, so
+> it's not a serious cost.
+
+Well, feel free to burn CPU cycles, disk, and bandwidth dealing with
+the problem on your end of things.
+
+
+> For the record, I still go through every spam we receive and contact
+> the ISP of the injection point if it's apparent,
+
+I do the same.  It's always apparent, because I go through the same
+"probe" process as the SPAM'mer, with a purpose-built SMTP/DN
+[…中段省略 928 字符…] t cost than the
+> bandwith of 3% of our email, which even that is a drop in the
+> bucket compared to how much surfing gets done during lunch
+> around here.
+
+I recommend RBL.  If you automate the task, it will take much less
+than 3% of your time.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

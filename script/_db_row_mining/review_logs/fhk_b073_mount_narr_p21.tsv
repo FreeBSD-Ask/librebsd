@@ -1,0 +1,22 @@
+2603338	885	archie 转发一封来自 freebsd-security 的来信向列表求助请更懂 tcp 与 source routing 的人看看 ip_input 中 divert 处理使 IP 选项被跳过以及 IPDIVERT 未把 ip_nhops 复位前就接受报文的问题
+2603339	885	kent 询问 kernel config 文件里需要改什么才能扩大 SYSV 共享内存可用额度他说自己也想知道当前上限查了内核源码也没找到要改的地方
+2603340	885	alfred 自述自己是 scsi 与 raid 新手除了看源码之外没什么办法向列表索要 dpt0 驱动的资料他问了四个问题包括是否稳定依赖项是否兼容所有 pci scsi 卡以及如何配置
+2603341	885	wilko 报告 Netscape 4 在他 2.2.5R 的系统上时不时启动即循环空转吃满 cpu 他用 ktrace 追踪看到调用反复落在 gettimeofday 与 sigreturn 之间同时反复触发 SIGALRM 有或没有 isdn ppp 链接都一样
+2603342	885	lars 说他试用 ports 里 net/ldap 的 slapd 一启动就进死循环而且端口里也没启用多线程他打算把它和 imapd ipopd 一起给邮件客户端当目录服务想知道有没有能用的版本
+2603343	885	eivind 回答 dpt0 的问题他说驱动只适用于 DPT 芯片组的 pci scsi 卡厂商官网在 dpt.com他自己还在等网卡到货才能实测所以关于稳定性的判断只是转述作者的说法
+2603344	885	ollivier 从邮件存档里翻出 netscape 启动卡死的两种解法一是删掉 home 目录下 .netscape 里的 preferences.js 二是给 netscape 启动脚本加一行 export XCMSDB XCMSDB 设为 dev/null
+2603345	885	ollivier 从自己的 kernel config 里摘出一段说加 options SYSVSHM SYSVSEM SYSVMSG 与 SHMMAXPGS 设为 1024 就能把共享内存扩到 4MB 并指出信号量与消息队列也有类似的常数可调
+2603346	885	garman 说他每次遇到 netscape 启动卡死把 preferences.js 里的 user_pref browser.startup.license_accepted 这一行删掉就能启动虽然得重新接受一次许可协议但没别的副作用
+2603347	885	brandon 询问有没有人成功编过带 dpt0 驱动的内核也说想找能用的 boot floppy 镜像他在 ftp simon-shapiro.org 上看到 crash/floppies 目录但里头是空的
+2603348	885	jordan 澄清他说自己不是在向大家征集 newsletter 的选题建议而是在请别人把文章写给 newsletter 大家不要给他列提纲
+2603349	885	simon 建议把 dpt0 的问答内容一并收录进 FreeBSD 的手册他解释自己在 IRC 上每周至少会遇到一次同样的问题为省带宽与手机费希望纳入并附上了资料放在自己 ftp 的 crash 目录里也可贴出来给需要的人
+2603350	885	terry 报告 ports 里的 LDAP 坏到无法使用建议改用他自己维护的补丁要打在未改动的 University of Michigan 代码上并需跑 current 或带 Jeremy Allison 加入 pthreads 更新的 stable SSL 要另打补丁
+2603352	885	CHOI 说自己是 EUC 用户他把 -lxpg4 加进 ExtraLibraries 后重编 XFree86 就能用另一种是登录时 LD_PRELOAD 指向 libxpg4.so.2.0 免重编译但与 Linux 应用或其他 LD_PRELOAD 冲突得写包装脚本清掉它
+2603353	885	alfred 说 IRC 上有人给 lint 文件补了说明若一开始就写进去他就不会那么犯糊涂他到现在还没试用过 DPT 驱动只是觉得应该补一份 man page 说清楚用法
+2603354	885	david 调侃说不写稿也行拿那台 Olympus 数码相机给 wcarchive 机器拍张照就行并且要交代怎么把照片从相机弄进 newsletter
+2603355	885	studded 发现 /usr/src/etc/Makefile 里没有安装 /boot.help 的设置他在老系统上升级时这个文件就完全没装上去于是提了补丁通过 cd 到 sys/i386/boot/biosboot 目录再执行 install 补上它
+2603356	885	studded 说 NOPERL 选项一直被人要求现在既然有了就该推广一下他提了两个补丁在 make.conf 里注释出 NOPERL 为 true 即可避免编译 /usr/src/gnu/usr.bin 下的 perl 同时在 Makefile 里加上 -DNOPERL 的说明
+2603357	885	warner 说他有一块 cabletron E2010 以太网卡基于 ed 驱动支持的 CP8290DN 芯片系列可是探测一下就锁机源码里 grep cabletron 也没有命中他想知道支持它要花多少工作量
+2603358	885	thomas 建议改 ftp daemon 的根目录用软链接 ln 把 /var/ftp 指向 /home/ftp 就够了他提到改 /etc/passwd 与 master.passwd 都不奏效
+2603359	885	timothy 询问 RealTek RTL8129 有没有人能跑通他说自己写信去 questions 得到的回复说是专有驱动如果有人有驱动或者已经用起来了请私下告诉他因为他没订阅列表
+2603360	885	eivind 说 RealTek 对自由操作系统一向支持不错甚至有时会自己写驱动所以拿资料应该不难但他也判断那芯片可能是专有芯片接口几乎完全克隆自某个流行的芯片组所以写驱动应该不会太难

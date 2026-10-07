@@ -1,0 +1,838 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602569 ###
+===== 库内序 144127 | PK 2602569 | 等级 L4 =====
+DATE: 1998-03-01T07:34:07+00:00
+FROM: "John S. Dyson" <dyson@FreeBSD.ORG>
+SUBJ: Re: The 'dave rivers' memorial panic.
+摘要: John S. Dyson：Ultra-DMA/33 未提高时钟但 Promise 控制器与 WD 硬盘不兼容超长 IDE 线
+
+Terry Lambert said:
+> 
+> We thought it was a bug in fsck and in the CG code.
+> 
+> It turned out to be a longer-than-functional IDE cable.
+> 
+> Try using a shorter IDE cable.
+> 
+Slightly off subject:
+
+Even though Ultra-DMA/33 doesn't have higher clockrates than
+16MHz EIDE (Mode 4), it seems that the Promise controller and
+WD drives DO NOT like out-of-spec IDE cables when running
+Ultra-DMA/33.  (Ultra-DMA uses both edges of the clock, so
+there can be more transitions than EIDE, and the spectrum
+will be higher in freq, also with more sensitivity to clock
+skew, due to timing constraints.)
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602572 ###
+===== 库内序 144130 | PK 2602572 | 等级 L3 =====
+DATE: 1998-03-01T12:07:57+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: help - make world fails
+摘要: Eivind Eklund：装有 Terry 补丁的 NFS 客户端现在比较稳定，但他自己并未重度使用
+
+On Sat, Feb 28, 1998 at 11:41:46PM -0600, Karl Denninger wrote:
+> I've seen enough commentary on the hackers and current lists to think that
+> perhaps its not a good idea to consider -current a stable piece of code
+> right now..... am I right in this?  In particular, the place I usually run
+> into trouble is the NFS code and its stability.
+
+NFS w/Terry's patches should be fairly good now (but I don't run it harshly,
+so I really can't tell).
+
+Apart from build problems (which have usually been for minor things) and
+sporadic VM-problems (I'm not certain if all of these are fixed) -current
+seems to be fairly stable right now.  The build problems haven't been due to
+major changes; these usually come from minor changes, and don't indicate
+-current's health too well.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602574 ###
+===== 库内序 144132 | PK 2602574 | 等级 L3 =====
+DATE: 1998-02-04T21:07:20+00:00
+FROM: John Paul Lonie <jp@zip.com.au>
+SUBJ: Re: A truly losing laptop for FreeBSD.
+摘要: John Paul Lonie：就 Libretto 笔记本在 FreeBSD 下的运行情况发言
+
+Hello all.
+
+Warner Losh wrote:
+
+> In message <199801301238.XAA04311@word.smith.net.au> Mike Smith writes:
+> My libretto is plenty snappy.  I get similar results to what Mike has
+> been seeing.  The disk drive is a little slow, but not all that bad.
+> FreeBSD supports my beast, modulo the floppy drive, very very well.
+
+Even under linux which tends to have a wider range of device support does
+not support the floppy.
+
+PS writing this on one ;-)
+
+
+### PK 2602575 ###
+===== 库内序 144133 | PK 2602575 | 等级 L3 =====
+DATE: 1998-03-01T12:19:21+00:00
+FROM: Andreas Klemm <andreas@klemm.gtn.com>
+SUBJ: Re: "Best" Fast Ethernet Card
+摘要: Andreas Klemm：询问具体是哪些流行的协议栈实现了硬件 checksum 卸载
+
+On Fri, Feb 27, 1998 at 04:13:12PM -0800, Vinay Bannai wrote:
+> 
+> Yup. The ifnet device has a flag which indicates that it is capable of
+> doing checksum in the hardware and you set this flag in the mbufs and pass
+> it along. This is pretty usefule when computing checksumn in hardware for
+> transmits too.
+> 
+> I know of atleast two protocol stack implementations (popular too) that
+> use these techniques...
+
+Which one ?
+
+Is it a secret ? ;-)
+
+-- 
+Andreas Klemm
+powered by ,,symmetric multiprocessor FreeBSD''
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602576 ###
+===== 库内序 144134 | PK 2602576 | 等级 L3 =====
+DATE: 1998-03-01T12:53:11+00:00
+FROM: Andreas Klemm <andreas@klemm.gtn.com>
+SUBJ: Re: ANNOUNCE: PicoBSD 0.3 is available!
+摘要: Andreas Klemm：看到 PicoBSD 0.3 的公告后觉得挺有意思
+
+On Mon, Feb 23, 1998 at 12:43:39PM +0100, Andrzej Bialecki wrote:
+> Hi!
+> 
+> After lengthy period of fighting with memory-related issues, I am pleased
+> to announce the availability of PicoBSD 0.3 - one floppy version of
+> FreeBSD 3.0. There are basically two variants of it: one for dialup
+> access, and one router-like. You can get more info, and download it at:
+> 
+> 	http://www.freebsd.org/~abial
+
+Sounds interesting ;-)
+
+-- 
+Andreas Klemm
+powered by ,,symmetric multiprocessor FreeBSD''
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602577 ###
+===== 库内序 144135 | PK 2602577 | 等级 L3 =====
+DATE: 1998-03-01T14:19:32+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: boot manager w/ freebsd
+摘要: Darren Reed：freebsd 2.2.x 的 boot manager 在有多块磁盘时只能引导第一块，问能否修复
+
+
+The boot manager used with freebsd 2.2.x usually presents one with a menu
+of F-keys for each partition which can be booted from.
+
+When there are two disks on the system, there'll be an extra to goto
+the second disk and back again.
+
+When there are three disks on the system, you can only boot from the
+first (no option to goto the second or third disk is given).
+
+Is this fixable ?
+
+FWIW, I've found that the boot manager so installed has been the most
+reliable (for me) with multibooting varios operating systems.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602578 ###
+===== 库内序 144136 | PK 2602578 | 等级 L3 =====
+DATE: 1998-03-01T15:31:21+00:00
+FROM: "John S. Dyson" <dyson@FreeBSD.ORG>
+SUBJ: Re: help - make world fails
+摘要: John S. Dyson：问已提及的 bug fix 能否解决服务器侧失联时 NFS 客户端冻结整机的情况
+
+Norman C Rice said:
+> > 
+> > I think that the system is very close to stable again, with the
+> > NFS caveat.  Once I can solve the (very reproduceable) problem,
+> > I will be much happier with NFS.  There are also some outstanding
+> > bugfixes for NFS, which I am working with in my local tree...
+> 
+> Would any of those outstanding ``bug fixes'' resolve the issue with
+> NFS client freezing the system when the server is non-responsive?
+> 
+Not yet.  I am working on things that are *more* severe than that
+right now.  Not discounting the above problem though as not being
+severe.
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602584 ###
+===== 库内序 144142 | PK 2602584 | 等级 L3 =====
+DATE: 1998-03-02T07:58:26+00:00
+FROM: "Chris Day" <the_reman@hotmail.com>
+SUBJ: 
+摘要: Chris Day：装上 OPTi 82C931 声卡补丁后 FreeBSD 下依然没有声音
+
+Luigi (and others),
+
+I have a tiny problem getting my soundcard to work under FreeBSD.  Yes, 
+it is the infamous OPTi 82C931.  I actually have a proper OPTi 
+soundcard, so I thought, stupidly, that it might be easy to get it to 
+work.
+
+Anyway, I installed pnp971020.tgz source patched the files, then 
+installed the snd980215.tgz source and patched the files.  Then I 
+included various bits, compiled, then no matter what I tried it didn't 
+work.
+
+This is sound part of my kernel config file - GENERIC
+>controller	pnp0
+>device		pcm0 at isa? port 0x530 tty irq 10 drq 1 flags 0x10 >vector 
+pcmintr
+>device		pcm1 at isa? port 0x220 tty irq 5 drq 1 vector pcmintr
+
+The reason I put in two pcm devices was just in case it detected and 
+attached the OPTi in MSS or SB Pro mode.
+
+I was hacking the kernel to see if I could get the sound card operating, 
+but it wasn't until I found out that it had to be configured with the 
+PnP registers that I realized that I couldn't do it via the non-PnP 
+drivers within the original /sys/i386/isa/snd directory.
+
+Finally the last thing I did was go into the config and enter this PnP 
+line.
+
+>OPTi931: PnP id 0x3109143e
+>
+>	http://www.opti.com/  opti931_21.pdf
+>
+>    pnp 1 1 os enable port0 0x534 port2 0x220 port3 0xe0d irq0 10 >drq0 
+1 drq1 6
+
+After I entered this it still didn't work.  Something funny I noted was 
+that if you went into DOS and loaded the driver, the card still didn't 
+get detected by the PnP auto-detect but was still getting attached to 
+the pcm0 device at 0x220,5,1.  But, when this happened I couldn't get 
+any audio. (Even if I changed all /dev's to snd1)
+
+If I reinstall all the sources and add an sb0 device et al in as normal, 
+I can do the boot up in DOS get the OPTi initialized then reboot into 
+FreeBSD and getting it working okay.  Should I stick to this?  Finally, 
+is the files I have for pnp???.tgz and snd???.tgz the most up to date?
+
+Some things you might want to know. I have -
+486 dx2 80
+FreeBSD 2.2.5/Current
+Non-PnP motherboard
+
+I think thats about all you need.  If you were able to get it working 
+under these conditions
+[…中段省略 1239 字符…] ll set (0xff)
+>pcm0 not found at 0x530
+>mss_detect error, busy still set (0xff)
+>pcm1 not found at 0x220
+
+Thanks in advance.
+
+regards, chris
+
+--
+Christopher Day, The reman, Loosecannon
+
+E-Mail   the_reman@hotmail.com
+Homepage http://www.geocities.com/TimesSquare/Lair/1218
+
+
+______________________________________________________
+Get Your Private, Free Email at http://www.hotmail.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602586 ###
+===== 库内序 144144 | PK 2602586 | 等级 L3 =====
+DATE: 1998-03-01T18:41:25+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Intel DK440LX motherboard with EtherExpress Pro/100B on board
+摘要: Ulf Zimmermann：Intel DK440LX 主板内置 EtherExpress Pro/100B，fxp 驱动报不支持的 PHY
+
+Hi.
+
+I bought an Intel DK440LX motherboard (Dual PII, Adaptec AIC-7895, Crystal
+sound card and EtherExpress Pro/100B onboard). The fxp driver seems to
+have a little problem:
+
+fxp0: <Intel EtherExpress Pro 10/100B Ethernet> rev 0x02 int a irq 11 on pci0.3.0
+fxp0: Ethernet address 00:a0:c9:61:68:05
+fxp0: warning: unsupported PHY, type = 11, addr = 1
+
+Ifconfig shows:
+
+fxp0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet 207.90.181.122 netmask 0xffffff80 broadcast 207.90.181.127
+        ether 00:a0:c9:61:68:05 
+        media: manual
+        supported media: manual
+
+And you can't set anything via "ifconfig media ... mediaopt"
+
+Anyone seen this ? Any idea ?
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602587 ###
+===== 库内序 144145 | PK 2602587 | 等级 L3 =====
+DATE: 1998-03-01T19:35:07+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Re: Intel DK440LX motherboard with EtherExpress Pro/100B on board
+摘要: Andrzej Bialecki：同样遇到 fxp 不支持的 PHY 警告
+
+On Sun, 1 Mar 1998, Ulf Zimmermann wrote:
+
+> Hi.
+> 
+> I bought an Intel DK440LX motherboard (Dual PII, Adaptec AIC-7895, Crystal
+> sound card and EtherExpress Pro/100B onboard). The fxp driver seems to
+> have a little problem:
+> 
+> fxp0: <Intel EtherExpress Pro 10/100B Ethernet> rev 0x02 int a irq 11 on pci0.3.0
+> fxp0: Ethernet address 00:a0:c9:61:68:05
+> fxp0: warning: unsupported PHY, type = 11, addr = 1
+
+The same warning in my case. But see below.
+
+> 
+> Ifconfig shows:
+> 
+> fxp0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+>         inet 207.90.181.122 netmask 0xffffff80 broadcast 207.90.181.127
+>         ether 00:a0:c9:61:68:05 
+>         media: manual
+>         supported media: manual
+> 
+> And you can't set anything via "ifconfig media ... mediaopt"
+
+Hmmm. Not in my case - it works perfectly.  But I run -current on it, and
+you forgot to tell us your version... ;-)
+
+Andrzej Bialecki
+
+---------------------+---------------------------------------------------------
+abial@warman.org.pl  | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic  | "Be open-minded, but don't let your brains to fall out."
+Network in Poland    | All of the above (and more) is just my personal opinion.
+---------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602591 ###
+===== 库内序 144149 | PK 2602591 | 等级 L3 =====
+DATE: 1998-03-01T21:33:10+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: boot manager w/ freebsd 
+摘要: Mike Smith：认为 boot manager 的问题是可以修复的
+
+> 
+> The boot manager used with freebsd 2.2.x usually presents one with a menu
+> of F-keys for each partition which can be booted from.
+> 
+> When there are two disks on the system, there'll be an extra to goto
+> the second disk and back again.
+> 
+> When there are three disks on the system, you can only boot from the
+> first (no option to goto the second or third disk is given).
+> 
+> Is this fixable ?
+
+It needs someone with the Booteasy source code, and whatever tool(s) 
+were used to build it.
+
+Note that it won't present you with a list of more than 2 drives, even 
+if it is fixed.  If you want that functionality, you will need to 
+install something slightly smarter like OS-BS.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602592 ###
+===== 库内序 144150 | PK 2602592 | 等级 L3 =====
+DATE: 1998-03-01T21:38:50+00:00
+FROM: dannyman <dannyman@sasquatch.dannyland.org>
+SUBJ: high load, idle CPU
+摘要: dannyman：-current 版本系统负载飙高但 CPU 空闲，不知是 bug 还是系统现象
+
+my system has just jumped in to sustained high load, and i don't know why.
+this is a build of -current i think within the past week.  would this be a
+bug in the system somewhere, or some naturally weird phenomenon?  (i don't
+know whether to send-pr or email hackers, but the traffic's been a bit light
+so ...)
+
+top -b;
+
+last pid: 27341;  load averages:  3.16,  2.50,  1.56    15:35:37
+86 processes:  3 running, 83 sleeping
+
+Mem: 6368K Active, 48M Inact, 16M Wired, 6908K Cache, 8323K Buf, 712K Free
+Swap: 100M Total, 87M Used, 13M Free, 87% Inuse
+
+
+  PID USERNAME PRI NICE  SIZE    RES STATE    TIME   WCPU    CPU COMMAND
+  243 root       2   0  5256K  3268K select  53:30  2.17%  2.17% XF86_S3
+  261 dannyman   2   0   296K   356K select  13:04  0.08%  0.08% xdaliclock
+  260 dannyman  10   0   272K   364K nanslp   7:36  0.04%  0.04% xosview
+17294 dannyman   2   0   516K  1280K select   0:00  0.04%  0.04% xterm
+  263 dannyman  10   0   728K   296K nanslp  14:57  0.00%  0.00% xearth
+  740 dannyman  10   0 75012K   844K wait     1:09  0.00%  0.00% perl5.00404
+  270 dannyman   2   0 17508K   816K select   0:56  0.00%  0.00% pppload
+  194 root       2   0   248K   272K select   0:37  0.00%  0.00% atalkd
+  174 root      10   0   500K   264K nanslp   0:26  0.00%  0.00% httpd
+  216 root       2   0   476K   388K select   0:23  0.00%  0.00% nmbd
+27464 dannyman  10   0   232K   296K nanslp   0:22  0.00%  0.00% tail
+17212 dannyman   2   0   296K   608K select   0:18  0.00%  0.00% xdaliclock
+23232 dannyman   2   0 13044K  2420K select   0:15  0.00%  0.00% communicator-4
+22329 dannyman   2   0   404K   288K select   0:14  0.00%  0.00% ssh
+17214 dannyman  10   0   584K   508K nanslp   0:11  0.00%  0.00% xearth
+  256 dannyman   2   0   396K   300K select   0:08  0.00%  0.00% afterstep
+  268 dannyman   2   0   284K   408K select   0:07  0.00%  0.00% xload
+ 4046 dannyman   2   0   764K   344K select   0:07  0.00%  0.00% mutt
+
+okay, and if dmesg is something that might be valuable;
+
+Copyright (c) 1992-1998 FreeBSD Inc.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the Universit
+[…中段省略 2188 字符…] 8 (pppload), uid 1000: exited on signal 6 (core dumped)
+swap_pager: suggest more swap space: 158 MB
+pid 17228 (pppload), uid 1000: exited on signal 6 (core dumped)
+
+-- 
+  //Dan   -=-     This message brought to you by djhoward@uiuc.edu    -=-
+\\/yori   -=-    Information - http://www.uiuc.edu/ph/www/djhoward/   -=-
+aiokomete -=-   Our Honored Symbol deserves an Honorable Retirement
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602593 ###
+===== 库内序 144151 | PK 2602593 | 等级 L4 =====
+DATE: 1998-03-01T22:43:33+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: boot manager w/ freebsd
+摘要: Terry Lambert：引导三块以上磁盘需刷 BIOS 把 drive count 从 2 改大，boot manager 只能经 INT 13 读入代码
+
+> When there are three disks on the system, you can only boot from the
+> first (no option to goto the second or third disk is given).
+> 
+> Is this fixable ?
+
+Yes.  You need to burn a new BIOS for your machine and up the drive
+count from 2 to however many you want so that the BIOS will put the
+right %dl value (ie: 0x82, 0x83, ...).
+
+The problem is that boot managers can only load code via the INT 13
+read interface, and your BIOS provides limits on the interface.
+
+Some SCSI BIOSes don't have these limits, so if you are using SCSI
+hardware, it may not be a problem.
+
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602596 ###
+===== 库内序 144154 | PK 2602596 | 等级 L3 =====
+DATE: 1998-03-01T23:17:00+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: help - make world fails
+摘要: Terry Lambert 讨论 NFS 补丁尚未合入的架构分歧，主张 advisory locking 改用 veto-based 接口
+
+> Well, that's not good enough.  Terry's patches haven't been committed, and
+> there has to be a reason for that.
+
+My NFS patches being discussed don't do anything other than locks.
+
+There is an architectural issue here as to whether or not the advisory
+locking should go to a veto-based interface.  My arguments for this are:
+
+o	Common code
+
+o	Locks go to vnode instead of in core inode
+
+o	locks off vnode helps with stacking if VOP_FINALVP is
+	implemented and used.  This is pretty much a win for
+	union and agregate FS's *only*
+
+o	NFS client locks need to be remembered locally so that
+	they can be reasserted in case of a server crash.  This
+	is my way of saving the state.
+
+o	NFS wire traffic is reduced, if the lock conflict is
+	between clients on the same machine (faster fail).
+
+o	Ability to teat-and-not-set for multiplexing FS's (NFS
+	is a mux for local vs. remote locks, and unionfs is a
+	mux for local vs. local locks).
+
+I think they are overwhelming, but I may be biased, having written
+the code.  ;-).
+
+This is a style decision that I have not been persuasive enough
+about yet.  That the code is "there" is not enough, probably
+because the rpc.lockd and rpc.statd code has not been completed
+and/or the client RPC code has not been completed.  I'm wary of
+doing either of these before the infrastructure is committed
+because of mega-commit-phobia.
+
+
+> I HATE off-stream things.  I have to deal with some of them all the time,
+> because we have some local ones (to do our funny clustering and kernel-based
+> permission masking, to name two).  That's enough of a pain in the ass to
+> track across multiple revisions.
+
+If they were committed, they would not fix your client problems, unless
+your problems were lock-related.  If your problems *were* lock related,
+they would *apparently* fix them, if you only test between clients on
+the same machine, until the other code goes in as well.
+
+Most likely, your client problems are *not* lock related, so for you,
+the patches being integrated would be a NOP.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602597 ###
+===== 库内序 144155 | PK 2602597 | 等级 L3 =====
+DATE: 1998-03-02T11:29:23+00:00
+FROM: Capriotti <capriotti@geocities.com>
+SUBJ: Re: /usr/src/release/sysinstall needs YOU. :-)
+摘要: Capriotti：sysinstall 讨论中承认像素界面未必关键，更强调视觉界面必须保留
+
+I hate do discuss things I cannot help with - rolling up sleeves and
+working I mean - but this is a discussion I started (re starded as far as I
+know) and I still feel unconfortable for it's repercution, so, here we go
+one more time:
+
+I agree thet a pixel based interface would look graet, but I surrender to
+the argument that it may not be THAT important.
+
+BUT, a visual interface IS.
+
+I won't give my opinion; I will one more time call you attention to facts
+like: 
+
+you put someone familiarized to networking in front of a NetWare server and
+tell him a couple of basic commands; In a couple of hours he will be able
+to put the server up and running, reconfigured, and probably better than it
+wasw.
+
+you can make an administrator for netware out of nothing in a week or so,
+and all of this because of a friendly VISUAL interface.
+
+of course documentation is important, but also is the visual efect of
+organization.
+
+I am that case; I had to configure a Netware server to access Internet w/o
+ever having done that and I was able to do it in a couple of days, w/o
+anyones help (some documentation was avaliable, of course).
+
+But I had problems to remove one of the network cards from free, because I
+just couldn't find where I shoud mess. Documentation is fine, but just if
+you know where to start looking at.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602602 ###
+===== 库内序 144160 | PK 2602602 | 等级 L3 =====
+DATE: 1998-03-02T00:08:57+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Intel DK440LX motherboard with EtherExpress Pro/100B on board 
+摘要: David Greenman：系统芯片组为 Intel 82443LX 与 82371AB，网卡芯片 82557
+
+>System chipset is Intel 82443LX PCI/A.G.P. and Intel 82371AB. The
+>Ethernet chip is 82557.
+
+   I need to know which PHY chip is being used; it should be close to the
+82557 since it connects to it.
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602603 ###
+===== 库内序 144161 | PK 2602603 | 等级 L3 =====
+DATE: 1998-03-02T00:21:23+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Re: Intel DK440LX motherboard with EtherExpress Pro/100B on board
+摘要: Ulf Zimmermann：手册标注 Intel 82555 PHY，机箱实物待拆解确认
+
+> >System chipset is Intel 82443LX PCI/A.G.P. and Intel 82371AB. The
+> >Ethernet chip is 82557.
+> 
+>    I need to know which PHY chip is being used; it should be close to the
+> 82557 since it connects to it.
+> 
+
+I will open it later, but the manual says: Intel 82555 PHY.
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602604 ###
+===== 库内序 144162 | PK 2602604 | 等级 L3 =====
+DATE: 1998-03-02T00:34:30+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Intel DK440LX motherboard with EtherExpress Pro/100B on board 
+摘要: David Greenman：82555 在驱动里已被识别为 type=7，实际芯片版本疑与手册不符
+
+>>    I need to know which PHY chip is being used; it should be close to the
+>> 82557 since it connects to it.
+>> 
+>
+>I will open it later, but the manual says: Intel 82555 PHY.
+
+   Hmmm...there must be a new version of the chip or something since the
+82555 is already supported (type=7).
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602605 ###
+===== 库内序 144163 | PK 2602605 | 等级 L3 =====
+DATE: 1998-03-02T00:56:42+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: boot manager w/ freebsd
+摘要: Darren Reed：Booteasy 代码设计只适合简单配置，复杂拓扑需要其他方案
+
+In some mail from Mike Smith, sie said:
+> 
+> > > When there are three disks on the system, you can only boot from the
+> > > first (no option to goto the second or third disk is given).
+> > > 
+> > > Is this fixable ?
+> > 
+> > Yes.  You need to burn a new BIOS for your machine and up the drive
+> > count from 2 to however many you want so that the BIOS will put the
+> > right %dl value (ie: 0x82, 0x83, ...).
+> 
+> Uh, actually I think the problem is the Booteasy only checks the LSB of 
+> the drive count value.  If it's set, there's one drive, if it's clear, 
+> there are two.  It's been a long time since I looked at the code, but I 
+> do seem to recall that with 4 drives you get two items on the menu 
+> again.
+> 
+> Either way, the booteasy code design is such that it's really only 
+> suited for simple arrangements.  For more complex systems, I have to 
+> recommend either the OS/2 Boot Manager (if you have OS/2) or System 
+> Commander.  If you insist on freeware, then OS-BS may also do what you 
+> want.
+
+In my experience, OS-BS doesn't work as well as Booteasy.
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602607 ###
+===== 库内序 144165 | PK 2602607 | 等级 L3 =====
+DATE: 1998-03-02T01:19:50+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Re: Intel DK440LX motherboard with EtherExpress Pro/100B on board
+摘要: Ulf Zimmermann：手册标注 Intel 82555 PHY，实物芯片刻字 S82555 L736EB68
+
+> >>    I need to know which PHY chip is being used; it should be close to the
+> >> 82557 since it connects to it.
+> >> 
+> >
+> >I will open it later, but the manual says: Intel 82555 PHY.
+> 
+>    Hmmm...there must be a new version of the chip or something since the
+> 82555 is already supported (type=7).
+> 
+> -DG
+> 
+
+Numbers on the chip are S82555 and L736EB68.
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602608 ###
+===== 库内序 144166 | PK 2602608 | 等级 L3 =====
+DATE: 1998-03-02T03:15:20+00:00
+FROM: Chris Timmons <skynyrd@opus.cts.cwu.edu>
+SUBJ: Re: Intel DK440LX motherboard with EtherExpress Pro/100B on board
+摘要: Chris Timmons：询问 Intel DK440LX 主板整体表现，并提到 SMP 社区对 phoenix bios 的顾虑
+
+
+Besides this, how do you like the board?  I understand that it has the
+"dreaded phoenix bios" and I saw some folks on the -SMP list recommending
+against it for that reason.
+
+-Chris
+
+On Sun, 1 Mar 1998, Ulf Zimmermann wrote:
+
+> Hi.
+> 
+> I bought an Intel DK440LX motherboard (Dual PII, Adaptec AIC-7895, Crystal
+> sound card and EtherExpress Pro/100B onboard). The fxp driver seems to
+> have a little problem:
+> 
+> fxp0: <Intel EtherExpress Pro 10/100B Ethernet> rev 0x02 int a irq 11 on pci0.3.0
+> fxp0: Ethernet address 00:a0:c9:61:68:05
+> fxp0: warning: unsupported PHY, type = 11, addr = 1
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602609 ###
+===== 库内序 144167 | PK 2602609 | 等级 L3 =====
+DATE: 1998-03-02T03:30:01+00:00
+FROM: Anatoly Vorobey <mellon@pobox.com>
+SUBJ: ports for X11 stuff
+摘要: Anatoly Vorobey：X11 ports 应装到 /usr/local/X11R6 而非 /usr/X11R6，imake 问题需在上游解决
+
+Re: earlier discussion of X11 ports ought to be in /usr/local/X11R6
+and not /usr/X11R6.
+
+It's clear that for ports that use imake, it's a fundamental imake
+(or XFree86) problem and should be solved on that level. However,
+there're still many programs that use configure, custom makefiles,
+whatever and don't *have* to be installed in /usr/X11R6. If I want
+to place those in /usr/local/X11R6 cleanly, I'm stuck: 
+currently PREFIX= USE_X11 ? /usr/X11R6 : /usr/local/, so to speak,
+and both locations are unsuitable. Certainly one can hack around,
+but shouldn't there be another option in bsd.port.mk? Something
+like USE_X11_LOCALLY? 
+
+-- 
+Anatoly Vorobey,
+mellon@pobox.com http://pobox.com/~mellon/
+"Angels can fly because they take themselves lightly" - G.K.Chesterton
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

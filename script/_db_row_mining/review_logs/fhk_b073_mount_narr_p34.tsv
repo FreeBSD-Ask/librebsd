@@ -1,0 +1,21 @@
+2603758	885	pedro 自述在 NIST 期间留意到该所 POSIX 验证套件与并行处理资源页面，并建议设立 parallel-FreeBSD 邮件列表以协调 PVM、MPICH 用户与移植 Stanford SUIF、UIUC Pablo 项目
+2603759	885	terry 针对 SUBJ Re 主题 program to add users via web 的询问建议用 ldap2html 实现通过网页添加用户
+2603761	885	randy 报告持有 ZX314 网卡在 2.2.6 环境下工作正常，但换到 3.0 SMP 机器上仅能 ping 本机端口而无法把包路由到网络中其他机器
+2603762	885	pete 排查 INN 1.7.2-insync-1.1d 新闻服务器异常缓慢，dmesg 显示两个 SCSI 通道与一块网卡共用同一中断，另一网卡、显卡与另一 SCSI 通道共用另一中断，怀疑先探测设备被轮询
+2603763	885	jonny 设想同一物理以太网上架两个逻辑 IP 网络，A 机 ifconfig fxp0 加 route add -net 10.0.1.0 -interface fxp0，观察到 1 跳互通；改 default 指向 alias 10.0.0.2 后即可
+2603765	885	josef 询问 2.2.6 下的 ipx 是不是只支持 ethernet_ii 这一种帧类型，还是此后已经有所变更，希望得到明确答复
+2603766	885	john 回复否认其他帧类型支持，目前仍仅支持 Ethernet_II 帧类型，其他若干帧类型目前已有补丁在民间流传之中
+2603767	885	julian 购入 Quantum Bigfoot 12Gig 硬盘发现在 2.2.2 下柱面数 23361 超出内核可接受上限 16383，只能识别约 8G，考虑升级 2.2.5 但不确定能否解决
+2603768	885	wilko 询问能否在 kernel config 中加入 Digital DEFPA fddi 控制器，即 device fpa0 与 pseudo-device fddi 两项
+2603770	885	rod 询问如何拒绝 FTP 用户查看或移动到他人家目录，举例 foobar 用户 ftp 家目录为 /home/foobar，意外离开家目录到 /home 虽未必造成破坏但希望管理员限制
+2603771	885	eivind 指出该 FTP 权限问题应发到 -questions 列表，并直接给出办法把用户放入 /etc/ftpchroot
+2603772	885	chris 介绍 VIA 是低层网络接口规范旨在为集群环境提供高效高带宽极低延迟通信，可能需要 Myrinet 或 hippi 等真实网络硬件，并询问是否有人愿意共同推进该规范实现
+2603773	885	ron 介绍 LBL 的 Bozeman 为 linux 写有 via 仿真实现，app-app 延迟约 20 微秒与 UNET 相当，指出真正实现低延迟需硬件 via 接口而 HIPPI 支持不佳
+2603775	885	ron 提到千兆以太网帧很快会升到 9300 字节，与 PCI 事务约 2048 周期交互将对系统产生有趣影响，同时询问 tcp 栈在什么条件下难以做到 10 微秒延迟
+2603776	885	brian 调整 /usr/share/mk 让 Objective C 程序可编译，添加 CFLAGS、LDADD 与 .m 后缀规则，定义 OBJC、OBJCINCLUDES、OBJCLIBS 三变量，认为应放在 bsd.lib.mk 而非 bsd.prog.mk
+2603780	885	brian 根据 chuck 提示意识到 sys.mk 会 source /etc/make.conf，之前观察到的行为差异源自不该改 sys.mk 而应改 /etc/make.conf，随后询问 send-pr 的补丁是否可能被合入
+2603785	885	faried 表示支持 Objective C 程序无需修改 /etc/make.conf 即可像 C++ 那样直接编译，尤其提到 GNOME 或 GTK 的 objc 绑定场景
+2603786	885	mike 指出 Cisco 早前曾收购了 Granite Systems，但此次收购至今仍未有任何产出或相关技术成果或产品
+2603788	885	mike 认为千兆以太网不仅借鉴了光纤通道的编码方案，还借用了 SX CX 标准的部分物理层，同时谈到 Alteon 网卡已被 Sparc 文件服务器采用且 Foundry 与 Bay Networks 的千兆交换机表现良好
+2603790	885	jim 在 sendmail.cf 增加规则跳过本地邮件的 RBL 查询以避免拨号，规则插在 check_relay 中 RBL 检查之前，请求他人评论
+2603791	885	julian 回复称该编译错误其实并不复杂，只需去掉多余的参数并检查其他参数，参考 if_ethersubr 作为参考即可

@@ -1,0 +1,32 @@
+2604271|L4|Brett Glass：指出 ORA 偏向 Linux 而非 BSD 根本原因是市场规模更大即万能美元
+2604272|L3|John Fieber：回复 Dan Janowski 的普查提议称结果统计效力几乎为零自己做过一次随机抽样
+2604273|L3|Adam Furman 报告机器夜间重启后运行不超1小时就挂起越来越频繁请求判断是否为内核错误
+2604275|L3|John S. Dyso 解释 Borg nano-probe 意指在 Borg 血里流动的微型赛博格实体
+2604276|L4|Amancio Hasty 建议发布 Qt 编译的 Mozilla 二进制版让无 motif 库用户免下10MB包并追问 FreeBSD CVS 服务器公告
+2604277|L3|John Kenagy 强调营销至上一切皆需营销产品再好也会被大营销机器碾压 FreeBSD 若营销得当可成银弹
+2604278|L4|Tim Vanderhoek 建议向本地公共图书馆批量捐 FreeBSD 光盘以提升可见度无需组织化攻势
+2604280|L4|Greg Lehey：否认万能美元是唯一原因称 ORA 也出版书籍 Linux 市场规模更大才是关键
+2604282|L3|Open Systems Networking 支持立即向新闻门户与新闻网站发送 FreeBSD 与 Mozilla CVS 关联 PR
+2604286|L4|Adrian T. Filipi-Martin：说明 FreeBSD Mozilla CVS 由 Jordan 放到 bento.freebsd.org
+2604291|L4|Amancio Hasty：反对为 Mozilla CVS 造势主张廉价营销 FreeBSD 让 Linux 阵营先行
+2604292|L4|Open Systems Networking 反驳 John Birrell 称所有项目同获源码但只有 FreeBSD 每日使用 CVS 因此有额外加分
+2604294|L4|John Birrell 反对为 Mozilla CVS 树发 PR 呼吁先做出像采纳 jdk 那样可夸耀的成果避免无法兑现的期待
+2604296|L3|Amancio Hasty 主张直接把 CVS 服务器架起来广泛开放推迟空谈
+2604297|L4|John Birrell：说明 FreeBSD CVS 服务器已可用但闲置对全体 committer 开放自己写稿时是唯一登录用户
+2604299|L4|Open Systems Networking 赞同 dannyman 关于 FreeBSD PR 的提议并索要副本归档
+2604300|L4|Jordan K. Hubbard：建议想参与 PR 者投 FreeBSD newsletter 文章作为起点即使不会写代码也可贡献
+2604302|L4|Jordan K. Hubbard 认为 Linux 实现分裂带来的公众难堪反倒能促成各分支更紧密协作并减轻 LDAP 移植障碍
+2604304|L3|Amancio Hasty 询问 bento.freebsd.org 上 Mozilla CVS 服务器访问方式并想转贴 mozilla 新闻组
+2604305|L3|The Hermit Hacker 询问修改 etc login conf 哪一项 datasize 才能让 INN 2.0 expire 在 cron 下运行
+2604306|L3|The Hermit Hacker 补充修改错项改为 daemon 项并重启 cron 后问题已解决
+2604307|L3|Joe Marcus Clarke 提出愿请熟识的广告公司主席为 FreeBSD 提供无偿广告资源并请求具体想法
+2604308|L4|John Birrell 说明 FreeBSD Mozilla CVS 服务器仅 committer 可登录并追问 Jordan 为何不放 freefall
+2604309|L4|Jordan K. Hubbard：称 FreeBSD Inc 缺的不是钱而是市场营销人员并已获 Walnut Creek CDROM 定向广告投资
+2604311|L3|Jordan K. Hubbard 赞同须着力 FreeBSD 的吸引力可见性与易用性同时警告批评 Linux 会招致反噬此事关乎形象而非实力
+2604312|L4|John Birrell 解释 Xig 国际定价高于美国是因语言因素德国市场若选德语文档则自付代价
+2604313|L4|Jordan K. Hubbard 面对普查提议回复称已有25000名注册用户
+2604314|L3|Amancio Hasty 承认 Jordan 借用了自己的观点并建议招聘初级营销人员向 Brett 求助
+2604316|L3|Open Systems Networking 主张组建 PR 小组并认为狂热使用者最懂产品最能推销应作为主力
+2604317|L3|Darren Reed 抱怨 mozilla 与 netscape 相关邮件在 hackers 上过多请求建立独立邮件列表
+2604318|L3|Jordan K. Hubbard 举出 Mozilla 组织派大巴车拉 Linux 支持者但 FreeBSD 未做营销的空缺实例
+2604319|L3|Alex Belits 认为其他长线程里 mozilla 邮件与 FreeBSD 开发相关性更低因此更需要独立倡导邮件列表

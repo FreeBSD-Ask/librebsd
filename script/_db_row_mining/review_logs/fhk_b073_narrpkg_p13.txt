@@ -1,0 +1,22 @@
+2602990|L4|Chris Csanady：soft updates代码新内核导致系统启动时rm -rf /usr/obj/usr自动重启和fsck大量修复
+2602991|L4|Richard M. Neswold：提供了名为ppp_up的shell脚本来检测PPP守护进程是否在运行
+2602992|L4|original man：提供OS-BS主页URL为http://www.prz.tu-berlin.de/wolf/os-bs.html
+2602993|L4|John S. Dyson：soft updates代码接近提交但仍可能不稳约两周
+2602995|L4|allen campbell：通过ifconfig -l -u仅能发现tun接口有活动无法识别具体是什么在运行
+2602996|L3|SF Bay Area FreeBSD Users Group 3月12日活动介绍POSIX hops替代MIT UUBP实现
+2602997|L4|Terry Lambert：PPP状态检测应查net/if.h中IFF_RUNNING标志并用ifconfig -a观察链路
+2602998|L4|Dan：询问soft updates代码提交后是否需要在/etc/fstab文件中启用
+2603000|L3|问创建新以太网设备的方式与可用设备名及 dx 是否可行
+2603003|L4|Keith Pitcher 在 2.2.5-release 应用 1.62 patch 后只检测到 tx0 未知硬件
+2603008|L4|Ollivier Robert 目前需通过 tunefs(8) 启用而非 fstab 并列出 tunefs 各选项
+2603011|L4|ainvar FreeBSD 不识 Ricoh MP6200 IDE 版驱动器
+2603014|L3|Luigi Rizzo ppp over tcp 两实例间 ping 出现丢包
+2603015|L3|Amancio Hasty 分享 ACE 移植到 Java 项目 JACE 与 FreeBSD Java 主页链接
+2603016|L4|Joe Orthoefer cdrecord 用 MP6200 SCSI 报 cd0 CD-ROM 无法获取容量
+2603020|L3|Marc Slemko 为 Apache 2.0 提出高性能 web 服务器内核需求含内核线程与套接字 AIO
+2603022|L4|John S. Dyson 内核线程与 AIO 均入 FreeBSD 3.0 AIO 已在 current 被大数据库厂商使用
+2603023|L4|Luigi Rizzo 丢包伴随 show compress 中 miss 与 uncompress 计数增长
+2603026|L3|Marc Slemko sendfile 应传文件描述符与套接字并携 header trailer 避免中间拷贝
+2603028|L4|Mike Smith sendfile 便于拷贝规避从 buffer cache 直达网络不经 mbufs 中间拷贝
+2603031|L3|Marc Slemko 澄清 HTTP-transmit-file 调用仅为玩笑 HTTP-NG 将支持多路复用
+2603032|L4|Luigi Rizzo mmap 方案有两处拷贝一为 write 到 socket buffer 一为报文组装

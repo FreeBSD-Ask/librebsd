@@ -1,0 +1,22 @@
+2602569|L4|John S. Dyson：Ultra-DMA/33 未提高时钟但 Promise 控制器与 WD 硬盘不兼容超长 IDE 线
+2602572|L3|Eivind Eklund：装有 Terry 补丁的 NFS 客户端现在比较稳定，但他自己并未重度使用
+2602574|L3|John Paul Lonie：就 Libretto 笔记本在 FreeBSD 下的运行情况发言
+2602575|L3|Andreas Klemm：询问具体是哪些流行的协议栈实现了硬件 checksum 卸载
+2602576|L3|Andreas Klemm：看到 PicoBSD 0.3 的公告后觉得挺有意思
+2602577|L3|Darren Reed：freebsd 2.2.x 的 boot manager 在有多块磁盘时只能引导第一块，问能否修复
+2602578|L3|John S. Dyson：问已提及的 bug fix 能否解决服务器侧失联时 NFS 客户端冻结整机的情况
+2602584|L3|Chris Day：装上 OPTi 82C931 声卡补丁后 FreeBSD 下依然没有声音
+2602586|L3|Ulf Zimmermann：Intel DK440LX 主板内置 EtherExpress Pro/100B，fxp 驱动报不支持的 PHY
+2602587|L3|Andrzej Bialecki：同样遇到 fxp 不支持的 PHY 警告
+2602591|L3|Mike Smith：认为 boot manager 的问题是可以修复的
+2602592|L3|dannyman：-current 版本系统负载飙高但 CPU 空闲，不知是 bug 还是系统现象
+2602593|L4|Terry Lambert：引导三块以上磁盘需刷 BIOS 把 drive count 从 2 改大，boot manager 只能经 INT 13 读入代码
+2602596|L3|Terry Lambert 讨论 NFS 补丁尚未合入的架构分歧，主张 advisory locking 改用 veto-based 接口
+2602597|L3|Capriotti：sysinstall 讨论中承认像素界面未必关键，更强调视觉界面必须保留
+2602602|L3|David Greenman：系统芯片组为 Intel 82443LX 与 82371AB，网卡芯片 82557
+2602603|L3|Ulf Zimmermann：手册标注 Intel 82555 PHY，机箱实物待拆解确认
+2602604|L3|David Greenman：82555 在驱动里已被识别为 type=7，实际芯片版本疑与手册不符
+2602605|L3|Darren Reed：Booteasy 代码设计只适合简单配置，复杂拓扑需要其他方案
+2602607|L3|Ulf Zimmermann：手册标注 Intel 82555 PHY，实物芯片刻字 S82555 L736EB68
+2602608|L3|Chris Timmons：询问 Intel DK440LX 主板整体表现，并提到 SMP 社区对 phoenix bios 的顾虑
+2602609|L3|Anatoly Vorobey：X11 ports 应装到 /usr/local/X11R6 而非 /usr/X11R6，imake 问题需在上游解决

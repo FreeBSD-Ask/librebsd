@@ -1,0 +1,21 @@
+2604040	885	jacques 建议使用 Cyrus 或类似不必为每个邮箱单独建立 UNIX 账户的邮件服务器方案，让邮箱账号直接挂在服务器上而无需在系统里为每个邮箱创建对应用户
+2604041	885	tom 反驳稳定版不会做 CAM 的说法，指出他已知有人让 CAM 在 2.2 上跑起来，Justin 也在此表明愿意为 2.2 出 patch kit 除非有人抢先
+2604042	885	dyson 指出 softupdates 侵入性过强，移植到 2.2.X 恐怕需要另做一份新移植，且 FreeBSD 相对 BSD 的差异让维护者每次介入都会碰到新问题
+2604046	885	tom 反问软更新补丁能否工作，直言 current 里的 softupdates 本身不工作，要在 current 之前把 softupdates 弄到 2.2.x 上更是难上加难
+2604048	885	jkh 对 CAM 可行的说法表示第一次听说，认为 2.2-stable 变动并不大，问既然如此为何不开始发布一些 patch set
+2604049	885	gibbs 表示需先把 current 的 Interrupt Driven Configuration hooks、CAM SWI hooks 与 buf_queue 改进搬入，等 NAB 和 BusLogic 完工后再动
+2604050	885	oliver 反问 Tom 如何得出该结论，说他以为 Softupdates 基于 4.4BSD，向 -STABLE 移植并不更困难，也承认未跟进两棵树的近期变化
+2604051	885	amancio 对前述移植难度结论表示不太认同，指出 -current 已经积累了大量 VM 相关变更，因此不宜断言移植很容易完成
+2604052	885	ulf 询问是否存在关于编写 kernel device driver 的手册，表示主要想学如何 map memory 以及挂载 IRQs
+2604053	885	beekey 报告 Toshiba Tecra 750DVD 安装 2.2.5 后 boot 卡在 BIOS basemem 639K 与 RTC basemem 640K 不一致的报错，怀疑问题出在 machdep.c 中的 BIOS 检查函数
+2604057	885	greg 建议 Ulf 先看 freebsd.org 上 ddwg 目录里的教程，指出教程本身尚不完整，欢迎对方也来帮忙补齐这块内容
+2604058	885	peter 自述在 FreeBSD 可执行文件上用 bzip2 相对 gzip 测得 5-10% 的压缩率节省，但速度偏慢，不建议用于 CD-ROM 安装归档
+2604059	885	kenjiro 宣布 ALTQ 1.0.1 发布，含 CBQ、WFQ、RED、FIFOQ 实现及 CBQ 工具与 RSVP 桩，支持 -2.2.6 内核，新增 tx 与 lnc 驱动支持以及 de 驱动性能修复
+2604060	885	joe 报告拔掉 de 网卡网线后接口就一直死掉，即使把网线重新插上也不恢复，BAY 与 Kingston 两种 de 卡上他均见到该现象
+2604062	885	jkh 表示 2.2.x 的寿命无法保证，主要受用户需求驱动而非刻意规划，他推测 2.2.x 撑不过 November 1998，之后进入 legacy support mode 维护模式
+2604064	885	andrzej 表示若所跑版本支持 media flags，可手动执行 ifconfig 选择合适介质，因 de 驱动在链路失败时会尝试切换介质且链路恢复时不自动感应，否则可试 ifconfig de0 down 再 up
+2604065	885	amancio 也遇 de 驱动古怪问题，唯一恢复连接的办法是设置 media autoselect 后在两端把 de 接口先 up 后 down，他使用的卡基于 Bay Networks 21140A
+2604066	885	ulf 征集持有 Mylex DAC960 控制器的用户联系他，说明自己的驱动已基本能检测控制器与系统盘，需要不同配置的人测常规例程，并附 myx0 打印的 Firmware 4.04-0-00 与 Ultra SCSI 通道信息
+2604067	885	jkh 否认会有 2.3，认为 3.0 是否稳定取决于多种因素，还太早判断究竟是 3.0、3.0.5 还是 3.0.6 才算安全上路，也拒绝帮列版本差异与移植难度清单
+2604068	885	luigi 回应 jkh 表示清单无需精确或穷尽，只要覆盖最重要的差异，从用户角度看对应系统功能显著变化，预计不超过 10-15 条大项，忽略小补丁与既有子系统的改进
+2604069	885	bowden 就在前封表态后追问是否会有 2.0 的 rerun，即在无下一分支延续的情况下是否会重跑 2.0 那条既定路线

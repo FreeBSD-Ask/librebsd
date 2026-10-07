@@ -1,0 +1,983 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2602695 ###
+===== 库内序 144253 | PK 2602695 | 等级 L3 =====
+DATE: 1998-03-03T08:58:53+00:00
+FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG>
+SUBJ: Re: A web-based FreeBSD configuration tool. 
+摘要: Jordan K. Hubbard:承认曾测试但该 alpha 版可操作界面太少尚不足以判断实用性
+
+>   Interesting, that after posting  info about alpha-version of my GUI
+> config tool,I receive  only one feedback  from  wich, who actually test
+> it.
+
+Well, I did actually test it myself when you first announced it but,
+to be perfectly honest, there were so few actual configuration screens
+currently implemented that I thought "hmmmm, nice idea but not enough
+here to see whether it's going to work out in actual practice or not
+so I will come back and look at it when there is more here."
+
+Perhaps that was unfair, but I think that's probably an accurate
+summation of how most folks will look at it.  For what it's worth the
+same thing happened to "FreEasy" from our friends in Holland.  It was
+complete enough to make some folks think "hmm, interesting!" but not
+complete enough to get folks raving about it loudly enough to get
+everyone else to jump in and look at it.  In order to really catch the
+public attention with a configuration tool, you need to be able to
+configure enough stuff to be useful to the "working system
+administrator" in his daily job.  That seems to be the case with all
+the other successful tools I've seen, anyway, and whether that's a
+nice situation or not it's also the way things simply are. :-(
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602696 ###
+===== 库内序 144254 | PK 2602696 | 等级 L4 =====
+DATE: 1998-03-03T09:03:27+00:00
+FROM: Philippe Regnauld <regnauld@deepo.prosa.dk>
+SUBJ: CCD & booting on /
+摘要: Philippe Regnauld：讨论每分区含根分区做 CCD 镜像的可行性,指出 boot blocks 无法读取镜像分区的问题,分享单机用户模式恢复经验
+
+Stop me when I'm falling over the edge :-)
+
+I'm interested in getting a machine with having every partition
+as a CCD mirror -- including /.
+
+I'm aware of the usual problem of having / as a ccd: the bootblocks
+won't be able to read the partition, etc...
+
+But I remember, on one setup using _mirroring_ (and only in that
+case of course) where one of the disks died, I just rebooted
+single user on the remaining disk, changed the ccdconfig
+line to remove the defective disk, and ran ccdconfig with the same
+options -- and I was up and running again, with a 1-sided mirror :-)
+
+My question is: is there no workaround/unspeakable hack that
+could be made, with CCD in the kernel,  for the bootblocks to read 
+from the first of an N-part mirror, just to get past the boot ?
+
+Yeah, I could of course have / = 2 MB and symlink everything
+somewhere else :-P
+
+-- 
+                                            -[ Philippe Regnauld / Sysadmin ]-
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602700 ###
+===== 库内序 144258 | PK 2602700 | 等级 L4 =====
+DATE: 1998-03-03T10:41:47+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Re: ports for X11 stuff
+摘要: Satoshi Asami：说明 X 端口无法直接安装到 /usr/local 位置,除非大幅改造 imake 构建系统
+
+ * about different things. What I was talking about (and pardon me for not
+ * making myself clear) is installing any X related ports into
+ * /usr/local/X11R6/*, not installing all of X into /usr/local. My
+
+Let me make myself clear one more time; and I'll shut up.
+
+This is not a FreeBSD issue.  It is *not possible* for us to change
+this without massive imake hacking.  Talk with the XFree86 folks about
+it if you really care about it.
+
+Now back to our regularly scheduled Terry-o-rama....
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602704 ###
+===== 库内序 144262 | PK 2602704 | 等级 L3 =====
+DATE: 1998-03-03T14:39:32+00:00
+FROM: The Good/John Scholvin <good@enteract.com>
+SUBJ: Help: 2.2.5 crashing on boot after I add RAM
+摘要: John Duncan：求助 2.2.5 在 Compaq Contura 笔记本上添加 RAM 后启动崩溃的问题
+
+
+Please accept my apologies if thie list is inappropriate for this question!
+I tried comp.unix.bsd.freebsd.misc and didn't see anything.
+
+
+I've got an old Compaq Contura 4/25 laptop which I'm trying to install 2.2.5
+on, and I've got a problem I can't figure out. The machine boots the GENERIC
+kernel fine when it has 8MB RAM installed. I've got an expansion RAM card
+which, when installed, ups the total to 20MB. The GENERIC kernel no longer
+boots; it never even gets to the probe stage. I figure, no problem, build a
+new kernel with option "MAXMEM=(20*1024)" after the example I found in
+LINT.
+
+With this new kernel, I now get a message before the probing starts which
+says
+
+	BIOS basemem (639K) != RTC basemem (640K), setting to BIOS value
+	BIOS extmem (15232K) != RTC extmem (15360K)
+
+Then the probing occurs, apparently successfully, and after the npx0 probe,
+I get this (typed in by hand, but I think I copied it correctly):
+
+	Fatal trap 12: page fault while in kernel mode
+	fault virtual address	= 0x2c
+	fault code		= supervisor read, page not present
+	instruction pointer	= 0x8:0xf01a48b3
+	stack pointer		= 0x10:0xefbffef8
+	frame pointer		= 0x10:0xefbfff04
+	code segment		= base 0x0, limit 0xfffff, type 0x1b
+				= DPL 0, pres 1, def32 1, gran 1
+	processor eflags	= interrupt enabled, resume, IOPL = 0
+	current process		= 0 (swapper)
+	interrupt mask		=
+	panic: page fault
+
+	syncing disks... done
+
+
+Any ideas? Obviously, it's idea of how much extended memory I have is
+confused. Is 20MB a valid option? Does that number need to be an even power
+of 2, or is there something else going on here?
+
+
+Also, I have another question since I originally posted. The laptop that's
+crashing is bare bones; I build the kernel on my desktop and ftp it over. If
+I config the crashing kernel -g and I want to analyze the crash dump from it
+on the other machine, can I do this? Which files do I need to transfer back
+to the desktop?
+
+Thanks in advance!
+
+John
+
+-- 
+good@enteract.com is The Good, or probably John Scholvin speaking for them.
+      OUR WEB SITE IS UP!  Check out http://www.enteract.com/~good
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602710 ###
+===== 库内序 144268 | PK 2602710 | 等级 L3 =====
+DATE: 1998-03-03T17:43:57+00:00
+FROM: "Ben Kirkpatrick, ELI" <blkirk@float.eli.net>
+SUBJ: Re: CCD & booting on /
+摘要: Ben Kirkpatrick：建议启动时让 boot code 检查多个 boot block 位置以应对 CCD 分区不可读
+
+
+On Tue, 3 Mar 1998, Philippe Regnauld wrote:
+> My question is: is there no workaround/unspeakable hack that
+> could be made, with CCD in the kernel,  for the bootblocks to read 
+> from the first of an N-part mirror, just to get past the boot ?
+
+Here's another idea (very out there).  During boot, I don't think there's
+any way of safely reading two copies of the boot blocks.  But, you could
+have the boot code check several places for a kernel and do checksums on
+them.  Then pick a good one and boot.  I've never tried this, but you'd
+have to umount+mount / again... Perhaps have an /altroot or a mfs to
+accomplish this early in the rc's.  Okey, I'd better quit now, my
+crack-tablet-dispenser is broken.
+
+--Ben Kirkpatrick
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602712 ###
+===== 库内序 144270 | PK 2602712 | 等级 L4 =====
+DATE: 1998-03-03T18:23:41+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: OOP and Java
+摘要: Nate Williams：指出 ACE 不需要 ELF 支持,因为 ACE 已经在 Java 里实现了
+
+> Here is a great pointer to ACE --- a C++ class library suitable for
+> building servers:
+> 
+> http://www.cs.wustl.edu/~schmidt/ACE-netsvcs.html
+> 
+> We should be in good shape to support ACE once ELF support is rolled into
+> current.
+
+We don't need ELF for ACE.  ACE is already implemented in Java.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602713 ###
+===== 库内序 144271 | PK 2602713 | 等级 L3 =====
+DATE: 1998-03-03T18:31:44+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: OOP and Java 
+摘要: Amancio Hasty：回复 Java 服务器讨论,提到目标是那些不想用 Java 做服务器的用户
+
+Most Cool!
+
+I was just targetting those who don't want to see a server implemented 
+in Java. There was a quick rapid exchange on this issue and out it
+came :
+
+mark@vmunix.com said:
+> :-)  As it turns out, myself and 3 others will be attempting a FreeBSD
+> GUI admin system (client/server) over the summer for a course credit.
+> Right now, the initial design is leaning towards using a C++ server
+> and a Java client talking to it over an established protocol. Likely
+> going to be using LDAP for distribution, etc, as Terry suggested in a
+> much earlier post.
+
+> So, wait til summer and then we'll see what happens. :-)
+
+> With my project, and the 2 others that are going on right now (HTTP
+> based, and the Tcl/Tk one) by fall I suspect there will be some rather
+> neat administration tools for FreeBSD. Yeah!
+
+There was also a concern to keep the servers small with the hope
+that it would respond better under low system resources scenarios.
+
+	Amancio
+
+
+> > Here is a great pointer to ACE --- a C++ class library suitable for
+> > building servers:
+> > 
+> > http://www.cs.wustl.edu/~schmidt/ACE-netsvcs.html
+> > 
+> > We should be in good shape to support ACE once ELF support is rolled into
+> > current.
+> 
+> We don't need ELF for ACE.  ACE is already implemented in Java.
+> 
+> 
+> Nate
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602714 ###
+===== 库内序 144272 | PK 2602714 | 等级 L3 =====
+DATE: 1998-03-03T18:54:00+00:00
+FROM: stephen farrell <stephen@farrell.org>
+SUBJ: hook database into filesystem like BeOS?
+摘要: stephen farrell：提问能否像 BeOS 那样把数据库集成到文件系统,文件系统层调用 hooks 同步数据库
+
+
+one nice thing about the BeOS is the database integration with the
+filesystem.  what this means is that all meta-data about files and
+directories is stored simultaneously in a database.  i assume that the
+two are independant, really, but that the filesystem layer has some
+hooks it calls to keep the database in sync.
+
+the advantages are great: searches across the entire filesystem (say
+for all files containing the letter "e" that were edited between 2pm
+and 4pm yesterday) take less than a second, instead of minutes or tens
+of minutes with find.  additionally, updates are "live", so it's not
+like locate where the file will show up only if it was there the
+last time updatedb was run.  this has some rather impressively neat
+affects, like if you're at the command line (BeOS much posix
+compliance), and you rename a file and happen to have the filemanager
+open on that dir, you'll see the file change.
+
+this is nifty and all, but i would also imagine that such a system
+would be extremely useful for more important issues: e.g., it could
+also store inode numbers and thus allow an alternative way for
+applications to access files very quickly (like news server).
+
+so my question is: 1. anyone thinking about this?  2. how difficult do
+you think it would be to get started playing with this--adding hooks
+to the vfs layer to maintain the state in a rdbms (mysql, postgres,
+etc)?  3. do you think it might be possible that such a system could
+be, in principal, integrated with the c library so that applications
+(e.g., find, file managers) would use it while calling the existing
+api (analagous to nis vs. passwd file... perhaps a /etc config file
+telling it whether it should use database, if so what kind, if so
+which hostname is the database on, etc)?
+
+--
+
+Steve Farrell
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602716 ###
+===== 库内序 144274 | PK 2602716 | 等级 L3 =====
+DATE: 1998-03-03T19:13:39+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Sm�rgrav)
+SUBJ: Re: cshort - speaking of new utilities
+摘要: freebsd@isvara.net：分享自己大学和服务器使用 FreeBSD 并认为 FreeBSD 比 Linux 更稳定更快
+
+Michael Hancock <michaelh@cet.co.jp> writes:
+> On Thu, 26 Feb 1998, Niall Smart wrote:
+> > > int
+> > > foobar(a)
+> > > 	int a;
+> > > 	REQUIRE(a > 0);
+> > > 	ENSURE(retval < 100);
+> > 
+> > Ugh, do you really use this precondition stuff?
+> 
+> Sure.  It beats writing specs and they're kept up to date.  If you were
+> really pedantic about it every time you looked at a piece of code without
+> preconditions you would say, "Anything goes".  This code is telling me
+> that I can give it whatever I want as arguments. 
+
+AOL.
+
+Plus - can you *prove* that your code is correct? No you can't, not
+without a suitable specification. And sometimes it is extremely useful
+to be able to prove your code is correct, especially stuff lik complex
+ADTs, or protocols. I ought to know - I teach this stuff at the
+Univeristy of Oslo...
+
+-- 
+"I have a closed mind. It helps keeping the rain out." (Michael Press on a.s.r)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602717 ###
+===== 库内序 144275 | PK 2602717 | 等级 L4 =====
+DATE: 1998-03-03T19:14:23+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: A web-based FreeBSD configuration tool.
+摘要: Terry Lambert：澄清 JavaScript 与 Java Language 区别,web-based admin tool 属 scripting
+
+> >But lets not debate this further on hacker.  Besides, I don't consider
+> >*this* issue debatable.  Sorry.
+> 
+> Perhap he is  confusing JavaScript with Java Language?
+
+Perhaps I'm just reading the subject line about the code being
+executed in a browser, which implies JavaScript...
+
+If we are talking Java in a web-based admin tool, then we are
+talking about scripting.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602720 ###
+===== 库内序 144278 | PK 2602720 | 等级 L4 =====
+DATE: 1998-03-03T20:10:08+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：回应 RAID5 断电时奇偶校验错问题,认为类似未提交事务,可在启动时安排回滚
+
+
+On 03-Mar-98 Greg Lehey wrote:
+ 
+...
+
+> Obviously there are a number of problems.  But in fact it's not as
+> difficult as it sounds.  There's a problem with RAID 5 anyway if
+> there's, say, a power failure during a write.  After bringing it back
+> up again, you can recognize that there's a parity error, but where?
+
+This sounds like an uncomitted transaction.  Quite easy to arrange for a
+rollback at boot time.  You keep such gems in NVRAM, for example, or in a
+known place on the disks, or you implement a journal, or...
+
+ ...
+
+> Vinum offers another alternative: attach a second plex with the same
+> data, maybe only a few megabytes at a time.  During the time this area
+> of the volume is being updated, the plex supplies a backup in case of
+> failure.  When the region is left, the plex is detached and reattached
+> at the next point in the array.  If anything goes down, the correct
+> data will be in the auxiliary plex.
+
+Concatenation with journaling.  Could be done.
+
+> Does that make sense?  I'll try to formulate it more clearly if
+> anybody has difficulty with the concepts.
+ 
+The only problem I have here, is the assumption that the O/S will do all
+that.  Not only it consumes much CPU, I/O bus, memory bandwidth, etc., but
+O/S crashes are the number one cause of failure in any modern computer. 
+Putting all this logic there is asking for it to crash frequently, and run
+under load all the time.  I think that the RAID logic should be outside the
+VPU/O/S proper, just like CRC checking is not done in the CPU anymode, and
+since SCSI and IDE, so is data separation, PLL detection loops, etc.  If
+your data is so important to you, spend few dollars to get it done in a
+predictable and reliable manner.
+
+BTW, Since 1984 or so, I NEVER lost data due to disk failure.  I lost a LOT
+of data due to O/S failures, and some data due to bugs in RAID logic.
+
+Although I do not belive Seagate's claim for 1,000,000 hours MTBF, I think
+the realized MTBF will far exceed any FreeBSD uptime.
+
+This discussion is very enlightening none the less.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602721 ###
+===== 库内序 144279 | PK 2602721 | 等级 L4 =====
+DATE: 1998-03-03T20:14:51+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：提到曾见过用主轴电机能量替代电池刷新磁盘缓存的解决方案
+
+
+On 03-Mar-98 Wilko Bulte wrote:
+ ...
+
+> This is called the 'write hole' in the literature. The trick is to
+> use battery backed cache not only for RAID5 (write)performance
+> reasons, but also to keep the data until date AND parity have safely
+> landed on the disks.
+
+I have seen an interesting solution some time ago;  Instead of battery, the
+spindle motor (on the disk) was used to generate the power needed to flush
+the caches.  then the motor leads will be clamped, and the spidle shut down
+quickly (normal procedure nowdays).  This was done on a 14" spindle that
+had a bit more inertia than todays' disks. But the circuitry consumed more
+power too.
+
+> Same problems for mirror sets BTW. And don't enable the write caches *on
+> the
+> disks themselves* unless you feel suicidal ;-)
+
+Unless they use the above trick...
+
+ ...
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602728 ###
+===== 库内序 144286 | PK 2602728 | 等级 L3 =====
+DATE: 1998-03-03T21:31:53+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: SCSI Bus redundancy... 
+摘要: Mike Smith：感谢纠正,承认自己对老磁盘断电行为的实验结果有误
+
+> spindle inertia is no longer used for power.
+...
+> We queried the manufacturers closely on this
+> and they confirmed that they cease all operation IMMEDIATLY on 
+> recognition of power loss.
+
+Well, that's what I get for experimenting with old disks.  Thanks for 
+the correction!
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602730 ###
+===== 库内序 144288 | PK 2602730 | 等级 L3 =====
+DATE: 1998-03-03T22:09:56+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：回应断电时磁头立即离活跃介质的说法,说明断电并非瞬时事件,老驱动器丢失数据更少
+
+
+On 03-Mar-98 Karl Denninger wrote:
+ 
+...
+
+> You want the heads off the active media surface and the write gate off
+> *now*
+> if you detect a power failure.
+
+``now'' is a relative term.  f you are writing a sector, you want ``now''
+to be ``just as soon as the sector is done''.
+Power failure is not instantenous.  It is a short event, but takes some
+time.  Those old drives that sported ``command completion'' lost less data
+upon power failure than these new ``1,000,000 MTBF 10,000RPM as lnog as I do
+not get warm even once'' drives.  They also cost a lot more per megabyte,
+vibrated real nice and loud and kept my garage warm ieven in the dead of
+winter.  Ah, the good old days...  :-)
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602742 ###
+===== 库内序 144300 | PK 2602742 | 等级 L4 =====
+DATE: 1998-03-04T00:23:24+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Nate Williams：指出政府已没有钱资助此类项目,以曾为公司从联邦政府拉项目员工的身份回应
+
+
+On 03-Mar-98 Wilko Bulte wrote:
+ 
+...
+
+> Hear hear. RAID parity is also done in hardware these days. Mostly for
+> speed reasons. A second reason to go for a standalone RAIDbox is of
+> course
+> the clustering/multi-host thingy. Backplane RAID is IMHO more for
+> low(er)-end solutions.
+
+Where does that leave kernel RAID?  I like controller level RAID because:
+
+a.  Much more flexible in packaging;  I can use of-the shelf disks in
+    off-the-shelf cases if I choose to).
+
+b.  In the case of a DPT, you get better performance and better
+    reliability, as I have three busses to spread the I/O across, and three
+    busses to take fatal failures on.
+
+c.  I am used to it (see you argue with that :-)
+
+ ...
+
+> This is probably true. You also want to realise that the early production
+> units of a given drive model tend to have substantially lower MTBFs. It
+> seems when manufacturing plants get the 'feel' for producing a specific
+> model MTBF gets better. 
+
+I think the focus has to change:
+
+*  We used to do RAID to protect from hardware failure disrupting service. 
+   In the face of O/S and firmware volatility and buginess, this is absurd; 
+   As I said, I am using DPT controllers for ALL my storage. and yet have to
+   loose a byte to disk failure (unless I use WD or certain Micropolis
+   models).
+
+*  I think RAID is only important to protect us fro mthe damage WHEN the
+   failure occurs.
+
+I think the focus changed from operational feature to insurance policy. 
+Risk management is something not too many of us is any good at (count the
+number of times you/I/we delivered a project on time.
+
+What does it all mean?  I dunno.  I leave it to the scientists to ponder.
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602744 ###
+===== 库内序 144302 | PK 2602744 | 等级 L4 =====
+DATE: 1998-03-04T00:57:21+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro：提到增加电容对开关电源会造成影响
+
+
+On 04-Mar-98 Karl Denninger wrote:
+ 
+...
+
+> Well, if you have a big enough cap on the output side of the regulator
+> you 
+> can write the rest of the current sector.  But these days, trying to get
+> that on the circuit board is basically impossible.
+
+There is a problem with that too.  Increased capacitance does funny things
+to switching power supplies.  I think the whole idea went the way of good
+sound when Hi-Fi turned into solidstate stereo.
+
+ ...
+
+> This is one of the reasons I like the CMD RAID controllers.  They have a
+> nice big cache on them (with appropriate SIMMs), but they ALSO have an
+> input for a 6V gelcel battery, and an internal *charging circuit* to 
+> manage it.
+
+Question is;  Do they actually know how to do something useful with that
+cache?  Or is the reset that comes from the BIOS wipe them clean?  Before
+you answer, try it.  I have seen batteries on computers before.  They do
+not always do what you think they should.
+
+> In addition, they have inputs on them to sense UPS health (if you have
+> one).
+> 
+> You therefore get three levels of protection:
+> 
+> 1)    If the UPS goes onto battery, the unit starts "watching" things.
+> 
+> 2)    If it gets a low power warnings (ie: the "2 minute warning")
+>       it flushes the cache and goes into write-through mode.  Now
+>       you're "safe" if you get screwed.  
+> 
+> 3)    If you get dumped without warning, the battery is there and it will
+>       pick up the pieces when power returns.
+> 
+> Note that if you have no battery connected or its discharged (the
+> controller 
+> is smart enough to know), getting a 2-minute warning flushes the cache
+> and 
+> quiesces the controller IMMEDIATELY.
+> 
+> These controllers will not operate without either a battery or UPS, and 
+> both are (of course) preferred.
+
+That's the way I like it.  Except, if the O/S is not in the loop, it may do
+stupid things.
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602750 ###
+===== 库内序 144308 | PK 2602750 | 等级 L3 =====
+DATE: 1998-03-04T03:13:36+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Disk write caches
+摘要: 讨论带 soft updates 与开启关闭 disk write caching 的基准对比并怀疑写缓存将很快过时
+
+I would be very interested to see what the benchmarks on a machine
+with soft updates would be with a disk with and without write
+cacheing.
+
+In many repsects, write caching could be obsolete soon... ;-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602751 ###
+===== 库内序 144309 | PK 2602751 | 等级 L4 =====
+DATE: 1998-03-04T03:29:31+00:00
+FROM: John Fieber <jfieber@indiana.edu>
+SUBJ: Re: Uncle Sam, got a million bucks?
+摘要: John Fieber: 政府已无此类资助 NSF 数字图书馆计划每年约 50 万美元但 SMP 开发不在其议题内
+
+On Tue, 3 Mar 1998, Nate Williams wrote:
+
+> > Wandering , if we can get a grant from the goverment to support the SMP
+> > project or to support FreeBSD ?
+> 
+> The government has no money for such things anymore.
+
+There is some money flowing into academia.  The NSF digitial
+library initiative is handing out about US$50 million this year.
+Unfortunately, SMP devolpment would be on the fringes of their
+agenda specified in their request for proposals.
+
+-john
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602752 ###
+===== 库内序 144310 | PK 2602752 | 等级 L4 =====
+DATE: 1998-03-04T03:33:12+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Uncle Sam, got a million bucks?
+摘要: Nate Williams: 政府资金仍在流入学术界和 SRI 但规模已与过去不在同一量级
+
+> > > Wandering , if we can get a grant from the goverment to support the SMP
+> > > project or to support FreeBSD ?
+> > 
+> > The government has no money for such things anymore.
+> 
+> There is some money flowing into academia.
+
+There will always be some money flowing from the government, but it's
+nowhere near the same as it used to be.  There is still $$ going into
+SRI as well, but it's probably over an order of magnitude less than it
+was 10 years ago, which means that things are a changing.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602753 ###
+===== 库内序 144311 | PK 2602753 | 等级 L4 =====
+DATE: 1998-03-04T03:58:12+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Uncle Sam, got a million bucks? 
+摘要: Amancio Hasty: 必须获得 SMP 才能支持 TB 级资料库并建议安排熟悉华盛顿运作的人去争取经费
+
+
+I must have a cool SMP in order to support tera bytes libraries, 
+how else will I drive giganets with PCs, Cool if we get funding
+we can drive Internet II , etc...
+
+I know that there is money flowing around we need a couple of 
+guys that know they way around Washington to get the money. 
+Incidently,  FreeBSD goverment backing is not restricted to the US 8)
+
+	Cheers,
+	Amancio
+
+> On Tue, 3 Mar 1998, Nate Williams wrote:
+> 
+> > > Wandering , if we can get a grant from the goverment to support the SMP
+> > > project or to support FreeBSD ?
+> > 
+> > The government has no money for such things anymore.
+> 
+> There is some money flowing into academia.  The NSF digitial
+> library initiative is handing out about US$50 million this year.
+> Unfortunately, SMP devolpment would be on the fringes of their
+> agenda specified in their request for proposals.
+> 
+> -john
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602755 ###
+===== 库内序 144313 | PK 2602755 | 等级 L4 =====
+DATE: 1998-03-04T05:23:10+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro: 认为 news 一直是 heavily cached RAID-0 的理想候选
+
+
+On 04-Mar-98 Karl Denninger wrote:
+ 
+...
+
+> If the filesystem has news on it?  Forget it.  The small files blast
+the
+> hell out of restore (or pax, or anything else) during the creates - even
+> if
+> mounted async during that operation.  It simply takes forever.  I've
+> tried
+> copying a 4G news spool disk before - get ready for a 12 hour wait.
+
+I always thought news is an excellent candidate for a heavily cached RAID-0.
+8 stripes or better.  Some of my customers insist on RAID-5 which is very
+slow on WRITE.  Never understood why.  I figured out, whith 8 stripes on a
+RAID-0, you will fail /var/spool/news aboutevery 18 months.
+
+ ...
+> Databases on Unix filesystems aren't safe.  Neither are databases on raw
+> partitions.  I've seen both lost due to physical problems.  Ever see a
+> disk
+> adapter decide to "translate" a block address?  I have - and guess what
+> happened to the database (this one was on a raw partition)?  It was 
+> over a week later before the problem was detected when the back-end
+> crashed
+> for no ascertainable reason, and the validate failed.  That one wasn't my
+> responsibility, and the person who *WAS* the DBA wasn't doing the right
+> things with the TLOGs.
+
+Failures will occur, but if a database is on ``raw disk'' which is
+RAID-{1,5} on a relaible adapter, you will not have much to complain about.
+What I am nervous about, is running RAID-{1,5} in the Unix kernel.  It
+makes the actualy integrity of your disks dependant on the sound driver,
+the VGA driver, X11, PPP, etc.  Any bug in these not only will lay your
+filesystem to rest. It will take the ``disk'' with it.  Then I have yet to
+see an in-kernel RAID that can truely recover concurrently with the O/S
+operation.  I am not talking perfromance, I am taking functionality at all.
+ 
+...
+
+>> True.  Your perfromance also goes up with the smaller drives.  You can
+>> stripe better.  I think I mentioned it before in this forum;  Most DBMS
+>> benchmarks only use 300MB of the disk.  This is sort of the ``sweet
+>> spot''
+>> between system cost and perfrormance.
+> 
+> To a point this is true.  The problem i
+[…中段省略 271 字符…] een seek latency and transfer time.  If there are
+> lots of small files, the huge number of small disks wins big.  If there
+> are
+> a few large files, the small number of disks with speed on the physical
+> I/O
+> wins, provided you can seek sequentially.
+
+Yes, but they all end up on a SCSI bus.  The great equalizer.  At least I
+do not feel so lonely in my views any more :-)
+
+
+Simon
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2602757 ###
+===== 库内序 144315 | PK 2602757 | 等级 L4 =====
+DATE: 1998-03-04T05:52:15+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: SCSI Bus redundancy...
+摘要: Simon Shapiro: 认为不能假定 O/S 会承担全部冗余逻辑
+
+
+On 04-Mar-98 Greg Lehey wrote:
+ 
+...
+
+>> The only problem I have here, is the assumption that the O/S will do all
+>> that.  Not only it consumes much CPU, I/O bus, memory bandwidth, etc.,
+>> but
+>> O/S crashes are the number one cause of failure in any modern
+>> computer.
+> 
+> Sure.
+> 
+>> Putting all this logic there is asking for it to crash frequently,
+>> and run under load all the time.
+> 
+> I don't think you can assume that.  The load depends on the input.
+> The reliability depends on the quality of the code.
+
+It does not matter at all how good your code is.  It matterswhat the sound
+driver decided to do, the PPP driver, the x25 driver, X11, serial console,
+etc.  There is no compartmentalizing in Unix.  This means that any failure
+in totally unrelated code WILL crash your code.  In a RAID controller, as
+long is power is applied, and the hardware did not fail, the firmware has
+to worry about only one thing;  the firmware.  There are fewer interrupts,
+fewer processes, simpler O/S, no filesystem topaic with freeing free inode.
+ Just SCSI devices on one side and (in the case of DPT, etc.) a PCI
+interface.  I think the work you do is great and important, but the
+filesystem and volume managers are more interesting than the RAID stuff.
+
+When I joined Oracle, I thought just like you.  The attitude there was that
+Oracle does not do ANY storage availability at all.  This is in the
+platform.  If the platform has RAID, then Oracle will have a more reliable
+storage.  If not, not.  It assumes that if (write(...) == 0) then the data
+can be read.  This is how it was.  I will be amazed if that changed.
+I tend these days to think the same way.  If I can buy the realiability in
+a black box, for the cost of a single drive, and get a host of other
+features with it for free, and (in most real life cases) get also a better
+perfromance, why waste my time?
+
+Now, the Unix filesystem is a different matter altogether.  It is totally
+volatile, explosive and self igniting.  FreeBSD has a darn good one, but I
+have lost more than once filesystem to crashes.  The best?  ALL the
+executablesin
+[…中段省略 3108 字符…] MTBF will far exceed any FreeBSD uptime.
+> 
+> Especially not when it comes from Seagate :-)
+
+I think, left in the orignal container, in temperature controlled room,
+non-operational, it may survive for 500,000 hours.  Maybe.  Running in a
+badly cooled PC?  5 years top.
+
+
+----------
+
+
+Sincerely Yours, 
+
+Simon Shapiro
+Shimon@Simon-Shapiro.ORG                      Voice:   503.799.2313
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

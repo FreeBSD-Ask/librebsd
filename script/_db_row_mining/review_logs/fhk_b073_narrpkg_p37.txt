@@ -1,0 +1,21 @@
+2603851|L3|Jacques Vidrine：倾向 Python 集成反对 Java 认为其是纯粹的开销
+2603852|L4|dannyman：在 3.0 上编译 mozilla 报 unixpref.c 缺 Xm/Xm.h 头文件导致编译失败
+2603853|L3|Faried Nawaz：提议做一个下载网页时戳破标有 MS 字样的气球的守护程序
+2603854|L3|Jordan K. Hubbard：补充除编译报错外还有 Motif 的问题
+2603857|L4|Dan Busarow：不用改 XmNlist 定义只需在 cmd/xfe/Makefile 的 OTHER_LIBS 加 -lintl 即可
+2603858|L3|Pete Carah：问是否计划支持主板的环境监控如电压风扇转速和温度以及这些值如何读出
+2603859|L4|Robert Watson：ncftp 报 ftp.cdrom.com 已用满 3000 用户上限并列出 CDROM 订购渠道
+2603862|L4|Ollivier Robert：认为 portmapper 上无法限制 UDP 使用首次调用一定走 UDP
+2603864|L4|Terry Lambert：首次 portmapper 调用与首次 mount 请求均走 UDP
+2603869|L3|Narvi：提议让 128 位加密做成可选插件，好把加密部分留在美国之外
+2603870|L3|Amancio Hasty：套用 Eivind 的 patch 后 mozilla 已能起来
+2603873|L3|求 cc -pg 配 gprof 的用法示例，cc -pg 编译时 ld 报 -lc_p 无匹配
+2603875|L4|John Birrell：FreeBSD gcc 的 -thread 会带 -lc_r 但不定 _THREAD_SAFE，这是不拖累 libc 的妥协
+2603876|L3|Karl Pielorz：追问 3.0-980311-SNAP 是否足够可用，以便开始跟踪 -CURRENT
+2603882|L3|Philippe Regnauld：推荐 horac 这个 curses 纯文本图形库，可替代 SVGAlib 跑 doom
+2603884|L3|Soren Schmidt：确认所引库真货，非 Aprils fool 玩笑
+2603886|L3|Matthew Hagerty：请教 FreeBSD 2.2.5 上 mbuf 究竟是什么以及在整体架构中的位置
+2603887|L4|spork：nfsd 加 -t 启动，rpcinfo 显示 portmapper 走 tcp 111
+2603888|L3|John Polstra：建议查 TCP/IP Illustrated Volume 2，此书详解 mbuf 实现
+2603889|L3|Alex Povolotsky：LessTif 版 mozilla 编译通过，静态链接超 67 Mb 无法运行，动态链接大量报错并崩溃
+2603890|L4|Alex Boisvert：不使用线程支持时，可看 SGI 的 boehm gc，支持 C 与 C++ 且已移植

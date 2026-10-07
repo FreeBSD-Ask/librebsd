@@ -1,0 +1,22 @@
+2602695|L3|Jordan K. Hubbard:承认曾测试但该 alpha 版可操作界面太少尚不足以判断实用性
+2602696|L4|Philippe Regnauld：讨论每分区含根分区做 CCD 镜像的可行性,指出 boot blocks 无法读取镜像分区的问题,分享单机用户模式恢复经验
+2602700|L4|Satoshi Asami：说明 X 端口无法直接安装到 /usr/local 位置,除非大幅改造 imake 构建系统
+2602704|L3|John Duncan：求助 2.2.5 在 Compaq Contura 笔记本上添加 RAM 后启动崩溃的问题
+2602710|L3|Ben Kirkpatrick：建议启动时让 boot code 检查多个 boot block 位置以应对 CCD 分区不可读
+2602712|L4|Nate Williams：指出 ACE 不需要 ELF 支持,因为 ACE 已经在 Java 里实现了
+2602713|L3|Amancio Hasty：回复 Java 服务器讨论,提到目标是那些不想用 Java 做服务器的用户
+2602714|L3|stephen farrell：提问能否像 BeOS 那样把数据库集成到文件系统,文件系统层调用 hooks 同步数据库
+2602716|L3|freebsd@isvara.net：分享自己大学和服务器使用 FreeBSD 并认为 FreeBSD 比 Linux 更稳定更快
+2602717|L4|Terry Lambert：澄清 JavaScript 与 Java Language 区别,web-based admin tool 属 scripting
+2602720|L4|Simon Shapiro：回应 RAID5 断电时奇偶校验错问题,认为类似未提交事务,可在启动时安排回滚
+2602721|L4|Simon Shapiro：提到曾见过用主轴电机能量替代电池刷新磁盘缓存的解决方案
+2602728|L3|Mike Smith：感谢纠正,承认自己对老磁盘断电行为的实验结果有误
+2602730|L3|Simon Shapiro：回应断电时磁头立即离活跃介质的说法,说明断电并非瞬时事件,老驱动器丢失数据更少
+2602742|L4|Nate Williams：指出政府已没有钱资助此类项目,以曾为公司从联邦政府拉项目员工的身份回应
+2602744|L4|Simon Shapiro：提到增加电容对开关电源会造成影响
+2602750|L3|讨论带 soft updates 与开启关闭 disk write caching 的基准对比并怀疑写缓存将很快过时
+2602751|L4|John Fieber: 政府已无此类资助 NSF 数字图书馆计划每年约 50 万美元但 SMP 开发不在其议题内
+2602752|L4|Nate Williams: 政府资金仍在流入学术界和 SRI 但规模已与过去不在同一量级
+2602753|L4|Amancio Hasty: 必须获得 SMP 才能支持 TB 级资料库并建议安排熟悉华盛顿运作的人去争取经费
+2602755|L4|Simon Shapiro: 认为 news 一直是 heavily cached RAID-0 的理想候选
+2602757|L4|Simon Shapiro: 认为不能假定 O/S 会承担全部冗余逻辑

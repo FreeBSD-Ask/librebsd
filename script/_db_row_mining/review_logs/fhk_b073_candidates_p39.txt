@@ -1,0 +1,31 @@
+2604368|L3|Brett：自荐 FreeBSD 首席传道官，承认 19 岁仍尝试把布道做到适度得体
+2604370|L3|Brett：撤回首席称谓改为副官，被引者评价其心思明显全在计算机上
+2604371|L3|ken@mui.net：建议查论坛补丁与 Jann Linder 对日历的改动，未指明具体位置
+2604372|L3|Amancio：表示可请 Sun 表态；被引者警告用 Sun 技术做 JDK 开发可能遭 Sun 起诉
+2604373|L3|Mark Murray：建议将 mozilla 从 $CVSROOT 分出，像 distrib/doc/src/ports 便于导出与过滤
+2604375|L3|ken@mui.net：建议 FreeBSD 用户致电 ORA 询问 FreeBSD 书籍需求，指出 ORA 按需求决策
+2604376|L3|AOL 与 Linux CD 的替代用途讨论，如弹弓、飞盘、靶标及高速转子的新型链锯
+2604378|L4|Duncan Pitcairn：询问 NATd 是否支持透传 Microsoft PPTP 的 IP 协议 47 及进展如何
+2604380|L4|Jordan K. Hubbard：给出 mozilla cvsup 同步条目 host 指向 mozilla.FreeBSD.org 供同步
+2604382|L4|Timothy Moore：指出 NPR 报道中 FreeBSD 与 BSD 完全缺席，认为 FreeBSD 在主流视野里不可见
+2604384|L4|Terry Lambert：提出新建 comp.unix.bsd.freebsd.advocacy 与 advocacy@freebsd.org 承接宣传议题
+2604385|L3|Amancio：询问如何用 cvsup 获取 mozilla 发行版，请求回复指引
+2604388|L4|Amancio：正用 cvsup 拉 mozilla，建议增设 Mozilla 页面并附 cvsup 字段说明与 HTML 手册指针
+2604389|L3|Mike Smith：建议 bento 作为测试构建机，称其容量与权限均充足
+2604390|L3|Fred Muller：赞同向图书馆撒 FreeBSD CD-ROM 及派小职员着 daemon 服亮相行业活动，认为定期新闻稿有用
+2604392|L4|Derek Laufenberg： FreeBSD 企业采购常被 bean counters 与 marketing weenies 压制
+2604393|L3|Dan Janowski：在 newsletter 讨论中提出协调 FreeBSD 用户组的组建，并自述一月前在此发起过 NYC UG
+2604394|L4|The Hermit Hacker：请求由打开的文件描述符反查对应文件名的方法，指出 fstat 返回一切却不返回名字
+2604395|L3|Brett Glass：请人教如何配 Hylafax 自动转接 vgetty 语音信箱，自称一直不知 FreeBSD 下可做语音信箱
+2604398|L4|Giao Nguyen：指出 Microsoft 许可为 as-is 无明示默示保证，反问道 BSD 何以承担更重的法律责任
+2604399|L3|David Langford：接住 John Birrell 说 mozilla 只是又一个 src/contrib 不宜放入标准 CVS 仓库
+2604401|L3|Amancio：提议为 FreeBSD 组建公关支持小组，愿意建媒体联系库但缺人负责名单日常管理
+2604402|L3|Luigi Rizzo：确认 xnfs 等两个 shareware PCNFS 客户端存在，并猜测对方问的是否为 bwnfs 相关
+2604405|L4|Amancio：称用 mgetty 与 vgetty 处理电话，Hylafax 能启 vgetty 但未调试，平时发传真则杀掉 vgetty
+2604408|L3|Ruslan Shevchenko：回应 JRE 许可更宽松可在其他平台开发再在 FreeBSD 上验证
+2604410|L3|Matthew Dodd：对 GUI 应用有兴趣但因 X11 与 tkperl 门槛劝退，愿意找人分担
+2604411|L3|Tommy Hallgren：推介 SCO UDI http://www.sco.com/UDI/ 作为可移植设备驱动的示例
+2604412|L3|dannyman：回应 John Birrell 因 Motif 无法自购转而问 GTK 或 QT 方是否已将 Netscape 移植到自家工具箱
+2604413|L4|Johan Larsson：转述 Wolfram 的 mozilla-cvs CVSup 镜像 host cvsup.de.freebsd.org 同步
+2604415|L3|Brett Glass：认为 FreeBSD 语音信箱与传真方案值得大力宣传，主张可让浏览器邮件客户端收语音与传真与邮件
+2604416|L4|Nate Williams：澄清 Sun JRE 许可不允许用于开发 Java 虚拟机，但可搭配产品分发，改 Netscape 使用 JRE 合规

@@ -1,0 +1,21 @@
+2604070	885	jkh 坦言自己只是保守行事以避免灌输错误预期，转述自己早前的立场即不会再有中间小版本，后续主版本是否稳定要取决于多种因素
+2604072	885	housley 报告夏令时切换日周日早晨 Daily 与 Security 脚本未运行，并询问这是否为已知且一年只发生一次的缺陷
+2604075	885	bulte 汇总 Matrox Millenium II 在 75Mc PCI 上无问题，83Mc 亦可工作，但原生 Xfree 支持存疑、Xaccel 说法不一；建议为最高分辨率与刷新率核查 RAMDAC 速度
+2604078	885	hobson 报告给 libc 加 -fomit-frame-pointer 令 mktemp.c 出错，_gettemp 第三参 domkdir 变成垃圾，而 lib/csu/i386/Makefile 显式加了 -fno-omit-frame-pointer
+2604082	885	jkh 证实自己已和 Apple 方面相关人员建立联系并正在对话，作为对兼容性讨论的回应并感谢来信人提议，转述对方认为这对双方都是好机会
+2604085	885	dannyman 解释 W4R3Z 是 W4R3Z D00D!!! 圈子里 warez 的写法，含义是破解过的商业软件，即 1337 H4X0R3D commercial software
+2604092	885	sanchez 请求不要把其邮件或要点转发到 FreeBSD 社区之外，例如 MacOSRumors.com，因为产品发布前透露动向损害 Apple 利益
+2604097	885	nate 报告 4MB Velocity 64B 即 S3 968 显卡在 XIG 3.1 服务器上以 24bit 模式运行时跑到约 650 rpm，并称分辨率大小并不影响结果
+2604099	885	marc 即 hub.org 的系统管理员 Fournier，报告自己目前跑到 10Mps 已稳定，希望能拉到 40Mps，并追问 ETA
+2604100	885	archie 认为秋季 cron 只运行一次，因为正确是策略而非真正确，故 daily 与 friends 应安排在 2am 到 3am 之外运行
+2604101	885	dannyman 称 cron 处理得相当古怪并不真正聪明，并承认自己在 cron 运行前上床的策略行不通，此前在 Amiga 上也用过类似做法
+2604102	885	janowski 承认自己在定时任务前上床的策略失败，总在听见硬盘疯狂寻道声前赶着关掉显示器，最终放弃此策略改为一饿便上床
+2604103	885	mike 确认主板环境监测功能有计划支持，因为 DMI taskforce 即 dmtf.org 发布了相关规范，且 -current 已有定位 DMI BIOS 签名的代码
+2604104	885	mike 认为 bzip2 不宜替代 gzip，多数情况更慢，内存耗大，且仅 bzip 可解 bzip 压缩包而 bzip 为 GPL，作者对代码法律地位不确定；建议通过 ports 取 bzip2
+2604108	885	hasty 表示自有 Matrox Millenium 已足够快，用 fxtv 观看电视借助 PCI to PCI 传输，早期基准跑出 1.2 million xstones，并列出 mpeg 回放与 3d 等新增需求
+2604111	885	studded 指出 housley 的签名过长，传统四行以外信息应放到 finger 里，并转述此前有人提过把 daily 脚本改到 1:59 am，但被告知不存在完全无冲突的时刻因而未采纳
+2604112	885	studded 说明 cron 期待操作者比它聪明，并提出与 vixie 讨论的方案包括 15 2S 全年标准时与 15 2U 走 UTC，以及在 crontab 文件中按 MD5 记录已警告用户
+2604113	885	nonnennmacher 报告自己用两块 Matrox 卡多头接 Xig4 分别跑 1600x1200 与 1800x1400 无问题，型号为 MII、1AGP 与 1PCI 各 8Mb；并询问 XFree 中 Matrox 是否仍无加速
+2604115	885	cross 建议众人停手让这位仁兄安心做他的事，专心产出一款出色的软件，不必再花时间回复众人的询问，自己将保持沉默除非被点名
+2604117	885	hasty 称该卡在其 XFree86 环境下加速效果已经很好，若非记错则是兼容卡中最快的一类，以此反驳上文认为该驱动尚未加速的说法
+2604119	885	chuguev 报告用 URL 作 pkg_add 参数时无法自动安装依赖，PKG_PATH 仅走本地文件，建议为 pkg_add 增加 URL-path 选项或环境变量作为兜底方案
