@@ -1458,14 +1458,14 @@
      "tag": "h5ar_b524_5"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 170,
+     "claims": "CL-RM-424059-424228",
+     "commit": "ac6b3f766",
      "n": 5166,
-     "note": "",
+     "note": "170 候选入纲 37 块（161.5=18/101.2=16/154.13=2/171.8=1）、132 判 NONE、numstat +185/0=37块x5行、register 反查 quote 170/170、四表 join 37、seq CL-RM-424059-424228 连续无洞、幂等二跑 +0、提交 ac6b3f766；1 条候选（896038）因叙述过短（<60 字）不入大纲仍入 claim 库；整库 35166 行已读 35166 / 剩 0；freebsd-arch 全库收口（9/27）",
      "offset": 30000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 11,
+     "state": "committed",
      "tag": "h5ar_b524_6"
     }
    ],
@@ -1480,10 +1480,10 @@
    "hosts_guess": [],
    "n_batches": 6,
    "name": "freebsd-arch",
-   "note": "h5ar_b524_5 已 committed，整库 35166 封已读 30000 / 剩 5166（余 1 批）",
-   "offset": 30000,
-   "remaining": 5166,
-   "state": "in_progress",
+   "note": "h5ar_b524_6（170 候选 37 块 ac6b3f766）全部 committed；整库 35166 行已读 35166 / 剩 0；freebsd-arch 全库收口",
+   "offset": 35166,
+   "remaining": 0,
+   "state": "complete",
    "total": 35166
   },
   {
