@@ -1414,14 +1414,14 @@
      "tag": "h5ar_b524_1"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 227,
+     "claims": "CL-RM-423367-423593",
+     "commit": "62ea1d449",
      "n": 6000,
-     "note": "",
+     "note": "227 候选入纲 93 块（161.5=26/154.13=44/101.2=22/171.8=1）、134 判 NONE、numstat +465/0=93块x5行、register 反查 quote 227/227、四表 join 93、seq CL-RM-423367-423593 连续无洞、幂等二跑 +0、提交 62ea1d449；p12 迟到代理在装配后落盘已采纳更完整文本（873254/873299）",
      "offset": 6000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 12,
+     "state": "committed",
      "tag": "h5ar_b524_2"
     },
     {
@@ -1480,9 +1480,9 @@
    "hosts_guess": [],
    "n_batches": 6,
    "name": "freebsd-arch",
-   "note": "b524_1 已 committed，整库 35166 封已读 6000 / 剩 29166；余 5 批",
-   "offset": 6000,
-   "remaining": 29166,
+   "note": "h5ar_b524_2 已 committed，整库 35166 封已读 12000 / 剩 23166（余 4 批）",
+   "offset": 12000,
+   "remaining": 23166,
    "state": "in_progress",
    "total": 35166
   },
@@ -2113,6 +2113,6 @@
    "note": "读手 12 分件×500 行 digest、叙述手 12 片×109（末片 102）；候选 1301 L4 1083/L3 218；1149 判 NONE（PCMCIA/ACPI/atapci/无线等无宿主）；4 宿主 +759/0；numstat +759/0=152块x5行；幂等二跑 +0；register 1301 条全 supported（CL-RM-414723~416023 连续无洞）；supplement_log +152；p3 读手 3 次重试（model 输出超长）、p7 叙述手 1 次重试"
   }
  },
- "updated": "2026-10-07",
+ "updated": "2026-10-08",
  "version": 2
 }
