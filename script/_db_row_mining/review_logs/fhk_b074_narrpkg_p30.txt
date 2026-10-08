@@ -1,0 +1,24 @@
+2605594|L3|Jordan K. Hubbard：指出对方非 PnP 专用资源分配方案令讨论跑题，反问现在在谈 sysctl 还是又绕回非 ISA 设备
+2605595|L3|Amancio Hasty：表示对方所求的机制其实存在，直接找 NCI 询问即可
+2605596|L4|Julian Elischer：称 Oracle 有该版本只是不对外销售，请 john 查出可联系的销售人员姓名并归档，便于统一渠道
+2605597|L4|Justin T. Gibbs：告知把 mfs_vfsops.c 同步到 1.22.2.4 版本即可解决，承认自己昨天合并操作时漏掉了这个改动
+2605598|L3|Hellmuth Michaelis：承认对方关于新系统的说法可能成立，但指出新系统不等于多数系统，原假设依然站不住
+2605602|L3|Nate Williams：称大中型公司普遍留着 486 与 Pentium 90 旧机，另有非 PnP 老笔记本，且系统尚不支持 CardBus
+2605605|L3|Fred L. Templin：自制 Z80182 卡模拟 16550，sio.c 配 SLIP 可收发，写满 16 字节 FIFO 后无接收数据中断
+2605606|L4|Tim Baur：尝试往源码加入 3C905B 条目同样失败，认为 3com 在 FreeBSD 上支持不佳，打算改用 SMC
+2605609|L4|Justin T. Gibbs：建议把 mfs_vnops.c 同步到 rev 1.14.2.1 以解决 stable 内核构建失败
+2605611|L3|Warner Losh：反驳 Tony Overfield 关于新机均有 PnP BIOS 的说法，称大量 486 机器永不会有 PnP 却仍在生产环境服役
+2605612|L4|Warner Losh：答复 Jim Carroll，PnP 硬件向量表位于 location 0，需在 DOS 下读取，即便如此也看不出真实占用
+2605613|L4|Jason K. Fritcher：同步 mfs_vnops.c 到 rev 1.14.2.1 解决了 stable 内核构建失败
+2605614|L3|Jordan K. Hubbard：未看懂对方上一条所述想表达什么，反问其具体所指
+2605615|L4|Julian Elischer：质疑 FreeBSD 已被放弃的说法，建议对方告知 John 消息来源，因 John 仍在推进且未被通知停止
+2605616|L3|Andreas Huber：pipe 写端关闭后读端 read 未返回错误或 EOF 而持续阻塞，询问是否有其他办法中断该 read
+2605621|L3|John S. Dyson：称前述说法可能只指个别已不再使用 FreeBSD 的具体项目，本人位于 NCI 主基地
+2605622|L3|Stephen Hocking：询问是否有人对 Oracle 7 做过基准测试并与同硬件上的其他操作系统作比较
+2605623|L3|Greg Lehey：称多数系统具备 PnP BIOS 支持这一假设不成立，且缺乏扎实论证支撑
+2605625|L3|Mike Smith：认为否定 PnP BIOS 普遍支持的断言毫无根据，主张把精力转向利用 PC 市场进步带来的机会
+2605626|L4|Mike Smith：3C905A 受支持而 3C905B 及后续版本目前不受支持，驱动开发据称在进行，现阶段建议另选网卡
+2605628|L3|Daryn Kiely：TCP 客户端向已关闭连接的服务器调用 write 时进程直接退出不返回，预期应得到 -1，求同类经验
+2605629|L4|Tim Baur：本地经销商已不进货 3C905A 只卖 3C905B，3com 驱动难以跟进，建议改用 SMC 或 Intel Etherexpress
+2605630|L3|CharIesFox：Windows 95 下安装 FreeBSD 2.2.6 中断且仅检测到数个扇区，担心装进 2000 多兆主分区会删除文件，求指导
+2605631|L4|David Kelly：64M 物理内存加 128M 交换足够，问题在资源上限设置，建议检查 login.conf 与 ulimit

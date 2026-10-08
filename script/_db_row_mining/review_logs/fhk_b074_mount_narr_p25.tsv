@@ -1,0 +1,24 @@
+2605379	885	jgrosch 报告 3.0-Current 构建中断，三次尝试 make world 都在 libexec/named-xfer 目标处失败，两次失败间夹着 cvsup 更新，报错称 make 不认识 named-xfer.c，错误码 2
+2605380	885	dag-erli 回应 Atipa 关于 win95 direct modem connection 需单独安装的说法，称据他所知该功能并不支持 ppp，而是采用微软的专有协议
+2605382	885	robert 称 blender 非常酷，本想替 FreeBSD 用户做 Port/Package 让获取与使用更省事，但对方婉拒称已有人接手，而至今未见公告；他还反驳 marc 说没收到过用户反馈，表示自己其实两者都发过
+2605386	885	amancio 表示需要一名 X11 程序员来修复 blender 的几处小问题，请有资质者把信发给 marc 或他自己，并赞同对方继续做 ports package
+2605390	885	amancio 称 blender 在他 PPro 200Mhz 上飞速运行，期待在 PII 400Mhz 上更带劲；他针对对方转述的 P-166 上极慢的说法给出了正面反馈
+2605391	885	andreas 称自己也碰到过同样的情况，说 blender 默认以全屏模式启动，改用更小的几何参数只能部分成功，摆弄界面还能触发 segfault，但他手上的 2.2-stable 机器都是没有 X11 的服务器，所以无法核实那个假设
+2605393	885	luigi 放出 dummynet 与 ipfw 集成的补丁，目标 2.2.6，但仍有致 panic 的已知缺陷；他按 julian 建议给 m_pkthdr 加 flow_id 字段，把首块 mbuf 的 MHLEN 压到 104
+2605394	885	jamie 称它在 MIPS R4600 的 indy 上运行良好，认为对方 P-166 性能应当差不多；他还贴上 hinv 输出，显示 133 MHZ IP22、64 Mbytes 内存与 Indy 24-bit 图形板
+2605395	885	chris 询问 SONY 的 SDT-9000 DDS-3 DAT 磁带机在 FreeBSD 2.2.6 上是否可用，并署名 FreeBSD 的 Book Project 的 Computer Support Analyst
+2605396	885	tom 建议服务器把 MAXUSERS 设为 64 以获得大量 mbuf，他说这是服务器本该采用的设置，并说可用 netstat -m 观察当前用量与高水位；开头先问对方目前的设置是多少
+2605397	885	tom 补充称除了既有方案之外还有 pax 可用，他喜欢 pax 的运行时路径转换能力；另有商用 BRU 可用于 FreeBSD，它按文件压缩且校验特性很好，两者并列为可选
+2605400	885	donald 称他也给 NeoGeo 发过 blender 反馈，因 neo geo 网页表单无法工作，就直接把反馈邮件发到 blender@neogeo.nl，并说自己那封邮件明确提到用的是 FreeBSD 移植版
+2605401	885	dan 表示手上有 HP DD3 运行良好，可作兼容性参考，这是他对别人关于某款磁带机能否正常工作的提问给出的直接答复，未展开驱动或配置细节，只给出了这一个可用型号，未提其他磁带机
+2605402	885	shenton 报告他从光盘装 2.2.6 RELEASE 后 CVSup 到 STABLE，make buildworld 失败，他把完整编译日志贴出，失败在 cc1 目标，c-parse.y 的 yyparse 报 parse error before ;，错误码 1
+2605403	885	brian 称他在 1600x1200 与 16bpp 下运行，1.30 与 1.31_dynamic 两个版本都正常工作，以此反驳 open systems networking 称该分辨率会导致崩溃的表述
+2605405	885	brian 补充说自己机器装的是第一块 Millenium，所以问题可能与 Millenium II 有关，但他觉得这个说法有些牵强，并未确认显卡就是病因
+2605406	885	opsys 称他与 brian 之间唯一的共同点就是都装 Mill. II 显卡，但他不确定这就是问题所在，只是唯一共同点而已，没有别的可比之处
+2605409	885	andreas 称对方描述的窗口无法移动和调整尺寸的情形自己无法复现，几秒前刚把 blender 窗口调整了好几次，用的是 Afterstep 1.0，怀疑也许是窗口管理器问题，不过一进全屏 blender 就崩溃
+2605410	885	se 质疑 FreeBSD 是否真的依赖 BIOS32 接口来配置 PCI 卡，称这让本以为熟悉 PCI 代码内部的自己感到意外，他引述 Stefan Bethke 的原话提出这个疑问
+2605411	885	chris day 称有些卡在 PnP 探测时拒绝被识别，只能在 PnP 配置完成后走专有端口配置，其 OPTi931 音卡即如此；他无 PnP bios 怎么试都无法初始化，最后买 AWE64 PnP 才首次成功，故建议买卡前先测能退
+2605414	885	luigi 认为此种情形出现说明该卡不符合 ISA-PnP 规范，但称 OPTi931 的 PnP 配置在他经验里正常，除非该卡禁用 PnP 的引脚被硬接线；卡需要专有初始化程序不等于不符合 PnP，只是不完全兼容 SB 或 WSS 克隆
+2605416	885	bill paul 自述为 Texas Instruments ThunderLAN 网卡写驱动，两周已基本完成，支持约六种 Compaq Netelligent 与 Netflex 控制器，并在 FreeBSD 3.0-current 上征集测试
+2605417	885	dg 指出在 P6 级处理器上用内存映射访问寄存器比 PIO 更快，他认为 PIO 会冲刷指令流水线；引述里提到 Linux 与 NetBSD 驱动都用 PIO，而他在自己的 fxp 驱动中用内存映射且从未收到投诉
+2605418	885	greg 称对对方所问的那一款型号是否可用不清楚，但从未听说有 DDS 驱动器在 FreeBSD 上不能工作，这是他基于见闻给出的判断，自己并未实际测试

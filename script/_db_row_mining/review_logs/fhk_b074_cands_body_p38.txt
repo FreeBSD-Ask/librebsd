@@ -1,0 +1,1032 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605933 ###
+===== 库内序 147490 | PK 2605933 | 等级 L3 =====
+DATE: 1998-05-18T18:52:29+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: nfs exported FreeBSD cvs repository, mounted on client, update problems
+摘要: Terry Lambert：反驳不加全局锁几无影响的说法，指出若同样逻辑成立，则也无法信任提交者做必要测试从而导致树构建失败
+
+> However, as time and millions of commits have proven, not 'global'
+> locking the tree down *rarely* (< .001%) causes any problems.  Terry
+> will pipe up now and try to get us to optimize the rare case, but as any
+> good engineer nows that penalizes the standard case for the rare case is
+> always a bad idea.
+
+So are trees that don't build because the people checking code in can't
+be trusted to do the requisite test compiled before typing "cvs commit".
+
+If you have a situation where an unenforced protocol is being violated,
+how do you propose to stop the violations without enforcement?
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605936 ###
+===== 库内序 147493 | PK 2605936 | 等级 L3 =====
+DATE: 1998-05-18T20:15:03+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: talk (fwd)
+摘要: Julian Elischer：转发一则讲座通知，并打趣 FreeBSD 会不会出 strong-arm 版本
+
+do we have a strong-arm version of FreeBSD coming up? :-)
+
+
+---------- Forwarded message ----------
+Date: Mon, 18 May 1998 11:45:04 -0700
+From: Anne Urban <agu@alumni.cse.ucsc.edu>
+To: colen@San-Jose.ate.slb.com, decker@alumni.caltech.edu,
+    joeld@engr.sgi.com, julian@whistle.com, ktl@hyperparallel.com,
+    markv@pixar.com, nitzberg@netcom.com
+Subject: talk
+
+>From owner-colloq-local-list@lists.Stanford.EDU Fri May 15 20:35 PDT 1998
+Date: Fri, 15 May 1998 18:43:53 -0700 (PDT)
+From: Andreas Paepcke <paepcke@cs.stanford.edu>
+To: colloq@cs.stanford.edu
+Subject: Talk: Itsy: An Open Platform for Pocket Computing
+
+
+On Wednesday, May 20, 1998, we will  host a talk by Dr. Deborah Wallach of
+DEC WRL. It will take place in the Stanford Gates Building, Rm B03 in the
+basement. Time: 3:15. For those interested, there will be a demo in Room
+104 at 4:15, after the talk.
+
+          Itsy: An Open Platform for Pocket Computing 
+                     Deborah A. Wallach, DEC WRL
+
+The "Itsy Pocket Computer" is a small handheld computer based on the
+low-power, high-performance StrongARM SA-1100 microprocessor. Our
+current prototype runs at 200MHz on a pair of AAA batteries, and
+sports a tiny, high-resolution LCD touchscreen, a high-quality audio
+codec, and up to 64MB of memory.
+
+Itsy is designed to be an open platform for research projects ranging
+from OS power management to novel gesture and speech-based user
+interfaces. The base Itsy hardware provides a flexible interface for
+adding a custom daughtercard, enabling a wide range of hardware
+projects such as wireless networking and GPS. Itsy also supports the
+Linux OS and standard GNU tools, facilitating the development of both
+kernel and application software, as well as ports of existing packages
+such as Apache.
+
+Deborah A. Wallach received her S.B., S.M., and Ph.D. degrees in Computer
+Science from the Massachusetts Institute of Technology, where she worked in
+a variety of areas including massively parallel computer architecture,
+distributed systems, operating systems, and networks.  Dr. Wallach has been
+a member of the research staff 
+[…中段省略 469 字符…]  colloq-subscribe@cs.stanford.edu.  To be removed from this list,|
+| send a message to colloq-unsubscribe@cs.stanford.edu. For more information,|
+| send an arbitrary message to colloq-request@cs.stanford.edu. For directions|
+| to Stanford, check out http://www-forum.stanford.edu                       |
++-------------------------------------------------------------------------xcl+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605937 ###
+===== 库内序 147494 | PK 2605937 | 等级 L4 =====
+DATE: 1998-05-18T20:56:56+00:00
+FROM: Doug White <dwhite@gdi.uoregon.edu>
+SUBJ: Re: Device driver problem with 2.2.6 upgrade (fwd)
+摘要: Doug White：matcd 驱动改动已生效，至少对该位报障用户解决了 2.2.6 升级后的设备驱动问题
+
+Report from the front line:
+
+Looks like the matcd changes worked, at least for this person. 
+
+Doug White                              | University of Oregon  
+Internet:  dwhite@resnet.uoregon.edu    | Residence Networking Assistant
+http://gladstone.uoregon.edu/~dwhite    | Computer Science Major
+
+
+---------- Forwarded message ----------
+Date: Fri, 15 May 1998 09:16:14 +1000 (EST)
+From: Justin Giles-Clark <J.GilesClark@dpac.tas.gov.au>
+To: Freebsd-questions@FreeBSD.ORG
+Cc: Studded <Studded@dal.net>
+Subject: Re: Device driver problem with 2.2.6 upgrade
+
+Dear all,
+
+At 23:50 12/05/98 -0700, Doug wrote:
+>
+>	A fix for what I hope is your problem was committed either yesterday or
+>today. Try the very latest version of the boot floppy on ftp.freebsd.org
+>and please report back whether that works for you. 
+>
+
+Downloaded updated floppy and it now works. 
+
+Interestingly it mounts the matcd0a driver not the matcd0c. Upgrade was a
+complete success!
+
+Regards
+-------------------------------------------------------------------------
+Email:  J.GilesClark@dpac.tas.gov.au (Justin Giles-Clark)
+Information Systems Branch - Systems and Network Administrator.
+Dept of Premier & Cabinet GPO Box 123b, Hobart, Tasmania, 7001, AUSTRALIA
+Phone: +61 362 332 976 Fax: +61 362 348 691 Mobile: +61 419 327 712
+------------------- 'tremendum et fascinans' ----------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-questions" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605940 ###
+===== 库内序 147497 | PK 2605940 | 等级 L3 =====
+DATE: 1998-05-18T18:06:01+00:00
+FROM: Jacques Vidrine <n@nectar.com>
+SUBJ: Re: system config database... 
+摘要: Jacques Vidrine：就系统配置数据库线程提议为 FreeBSD 配置数据制定 XML 的 DTD
+
+-----BEGIN PGP SIGNED MESSAGE-----
+
+
+
+Time for a DTD for FreeBSD Configuration XML?
+
+Jacques Vidrine <n@nectar.com> 
+
+On 18 May 1998 at 9:22, "Jordan K. Hubbard" <jkh@time.cdrom.com> wrote:
+[snip]
+> If I had my druthers, there would be a single text file in /etc which
+> stored all the configuration data for system startup.  People wouldn't
+> (generally) be expected to edit it directly but rather use one or more
+> browsing tools for displaying and editing each "startup object" in a
+> friendlier form, that perhaps looking something like this:
+> 
+> name:	  amd
+> desc:	  The Auto Mount Daemon for NFS filesystems.
+> enabled:  no
+> class:	  net
+> order:	  9
+> requires: is_enabled nfs_client && is_enabled network
+> v_exec:   amd
+> v_flags:  -a /net -c 1800 -k i386 -d ${domain} -l syslog /host /etc/amd.map
+> command:  ${v_exec} ${v_flags}
+[snip]
+
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: 2.6.2
+
+iQCVAwUBNWB4iTeRhT8JRySpAQEFQgQAtnm2yYsoZq6WJ9dT/JXOp1eP/3cSQGU9
+92dJGi8oiybEbQZF7LeBsXYErr1XWCfLhzx8/x30MKcLAYdI9tlBkCI+IBy64aTg
+v+n4UScU4aX8ueXly2aSfm+0gmqu5N+kDFbXnfnL9wtFxQprvdDA24nMf05qAomc
+Nze5Miq5pog=
+=3mpv
+-----END PGP SIGNATURE-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605941 ###
+===== 库内序 147498 | PK 2605941 | 等级 L4 =====
+DATE: 1998-05-19T00:54:19+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: system config database... 
+摘要: Jordan K. Hubbard：明确否决为 FreeBSD 配置数据制定 XML DTD 的提议
+
+> Time for a DTD for FreeBSD Configuration XML?
+
+No. :)
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605942 ###
+===== 库内序 147499 | PK 2605942 | 等级 L3 =====
+DATE: 1998-05-19T00:46:34+00:00
+FROM: Jay Nelson <jdn@acp.qiv.com>
+SUBJ: Re: system config database... 
+摘要: Jay Nelson：认同 Dan 提到的 AIX SMIT 式思路，认为 SMIT 并不坏只是不够优雅，觉得 Jordan 的想法不错
+
+On Mon, 18 May 1998, Dan Janowski wrote:
+
+>
+>This is in line with my current thinking. As sick
+>as this may sound, it will be a little smit-ish
+>(ever use AIX?). Me thinks the major parsing and
+>generation of directives (what should happen next)
+>should not be shell based; too hazardous.
+
+I've also been thinking about this. I don't think SMIT is so sick,
+though it isn't very elegant. I think Jordan's idea is good with the
+addition of methods for controlling daemons, etc. 
+
+Would this mean we would have to have an ODMish "predefined" db and a
+"customized" db so the user wouldn't need to understand the mechanics 
+of the changes he makes?
+
+To be valuable, though, a tool should generate "standard" rc.* files
+and also be able to parse them in case they've been changed by hand.
+
+>It seems that there still a need for a per service
+>set of scripted instruction for startup.
+>An /etc/rc.d with mini-scripts for features. Some
+
+For god's sake, don't do that. What's wrong with an ODM that can be
+parsed and generate standard rc.* files? Unique scripts can be tucked
+off in a place like /etc/conf/sbin or some such and used only by the
+SMITtish type tool.
+
+>similarites with SysV, but with out rc2.d rc1.d.
+>
+>Encapsulation and easy interface to the meta-data
+>through a static binary that will run the
+>boot process, allow for general queries and
+>updates.
+
+I'm not sure I understood what you just said -- but why tie it to the
+boot process? Queries, updates should be made against the configuration
+database. Updates should be made to the db and generate "standard" rc
+files.
+
+>It would be an atomic replacement for
+>the current rc stuff, but not to spell
+>a dead end for the old way, as you suggest.
+
+Giving up the ability to control the system by hand would be, I think,
+a mistake. For someone coming off a SunOS system, AIX/LVM/ODM is a
+bitch. I'd like to see the two approaches work smoothly together. And,
+I know it's easier said than done.
+
+What we have may not be elegant, but it isn't broken. I would hate to
+break it. Even AIX gives you the option of BSD style configuration.
+
+-- Jay
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605943 ###
+===== 库内序 147500 | PK 2605943 | 等级 L3 =====
+DATE: 1998-05-19T01:25:17+00:00
+FROM: Byron Johnson <byron@dbs-ca.com>
+SUBJ: Re: [byron@dbs-ca.com: FreeBSD install]
+摘要: Byron Johnson：应询问列出 FreeBSD 2.2.6 装机硬件清单，含 486-66、32Mb 内存与 3Com 509b 网卡
+
+Using FreeBSD 2.2.6
+486-66 w/ 32Mb, 486SV2G M/B, 3Com 509b & Linksys Ether16 (NE2000 compatible),
+Orchid Kelvin-EZ VLB SVGA, SIIG IDE & I/O card, NEC IDE CD-ROM, WD Caviar 2540
+HD, Colorado 250 Mb TBU w/ card, cooling card, 3.5" floppy.
+
+What else?                       s/ BYRON
+
+Julian Elischer wrote:
+
+> BTW some version info & H/W info might help..
+>
+> On Sat, 16 May 1998, Josef Grosch wrote:
+>
+> >
+> > I got a call tonight from this guy, Byron Johnson. He is trying to install
+> > on to his system. This is his reply to my suggestions.
+> >
+> > >Thanks for taking the call tonight. I did the floppy thing instead of
+> > >the CD, but I'm still toast!  The result is exactly the same as coming
+> > >of the CD:
+> > >
+> > >At the blue screen, when the dialog box is showing "Probing devices,
+> > >please wait..."
+> > >I then get the following error:
+> > >   panic: vm_fault: fault on nofault entry, addr: f3140000
+> > >
+> > >And it reboots after waiting 15 seconds and my life ends there!
+> > >What's a next best guess?
+> > >
+> >
+> >
+> > I'm stumped as to what is the problem. Any one see this one?
+> >
+> >
+> > Josef
+> >
+> > --
+> > Josef Grosch           | Another day closer to a |    FreeBSD 2.2.6
+> > jgrosch@MooseRiver.com |   Micro$oft free world  | UNIX for the masses
+> >
+> >
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-hackers" in the body of the message
+> >
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605944 ###
+===== 库内序 147501 | PK 2605944 | 等级 L3 =====
+DATE: 1998-05-19T01:02:23+00:00
+FROM: Masachika ISHIZUKA <ishizuka@ish.org>
+SUBJ: umountall request from unprivileged por
+摘要: Masachika ISHIZUKA：升级 3.0-980426-SNAP 后日志出现 mountd 报 umountall request，询问含义
+
+  Hi.
+
+  I upgraded to 3.0-980426-SNAP and the following messages 
+can be found in /var/log/messages.
+  What do they mean ?
+
+| May 17 03:07:49 onion mountd[123]: umountall request from 210.145.219.202
+|  from unprivileged port
+
+  "onion" is the machine installed 3.0-980426-SNAP, and
+210.145.219.202 is the ip address of onion.
+
+--- 
+ishizuka@ish.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605946 ###
+===== 库内序 147503 | PK 2605946 | 等级 L3 =====
+DATE: 1998-05-19T05:09:38+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: system config database...
+摘要: Terry Lambert：接续 /etc 配置元格式讨论，追问既然 rc 变成一行 systemrc 调用，是否应把 make 静态链接
+
+> The information needs to be combined and sh unfortunately isn't really
+> "expressive" enough for that - a metaformat which gets compiled into
+> sh or is even run by some sort of helper program, e.g. /etc/rc becomes
+> a one liner:
+> 
+>    /sbin/systemrc /etc/rc.sys
+
+So, we should statically link "make"?
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605947 ###
+===== 库内序 147504 | PK 2605947 | 等级 L4 =====
+DATE: 1998-05-19T05:19:44+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: nfs exported FreeBSD cvs repository, mounted on client, update problems
+摘要: Terry Lambert：反驳涉及人为因素就无法优化的说法，主张把不工作的情况约束到最终可达目标的流程路径上
+
+> When correctness involves human behavior, you can't optimize for it,
+
+Yes, you can.
+
+> nor guarantee that it will always work.
+
+You can constrain the cases that don't work to procedural pathways
+that result in your goals being met (at least eventually).
+
+> In other words, trying to gain 100% computer correctness is a bad
+> thing when 5% of the time the incorrectness is due to human error
+
+It's precisely the cases where human error is possible where you need
+to build procedural contraints to forestall the incorrectness.
+
+Would you settle for 95% of the CERT advisories handled, with "only"
+5% of them falling through the cracks?
+
+This is exactly analogous, because in both cases the PR result is
+that FreeBSD looks bad.
+
+
+> (and unavoidable given the current resources)
+
+What resources do you think are needed?  Give me your list; you
+already have mine... 8-).  Maybe your list can be satisfied; there
+seems to be plenty of "new blood" recently; I'm sure they'd let you
+use them constructively.
+
+
+> then it makes no sense to try to optimize any more past that
+> point.
+
+Ever read "Insanely Great"?  Or Demming's "Out of the Crisis"?  Or
+"Total Quality Management"?
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605948 ###
+===== 库内序 147505 | PK 2605948 | 等级 L3 =====
+DATE: 1998-05-19T07:00:07+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Anoyone know of "ERP" software for FreeBSD?
+摘要: Open Systems Networking：企业拟上 BAAN 的 ERP 且需对接 oracle，询问 FreeBSD 有无同类可用软件
+
+
+A local aerospace company is getting a new ERP (Enterprise Resource
+Planning) software package, and their plans are for BAAN www.baan.com
+Has anyone ever seen a package like this availble for FreeBSD or had to
+implement such a thing? It is supposed to integrate with oracle.
+Just curious, didnt know if such a thing existed in BSD land.
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605949 ###
+===== 库内序 147506 | PK 2605949 | 等级 L3 =====
+DATE: 1998-05-19T07:22:55+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: ppp - unused UDP socket?
+摘要: Ruslan Ermilov：2.2.6-STABLE 上每次 ppp -direct 都留下未绑定的 UDP 套接字，附 fstat 输出求解释
+
+Hi!
+
+I'm running FreeBSD 2.2.6-STABLE (as of May 13).
+
+What this unbound UDP socket below for?
+
+Every ``ppp -direct'' uses it.
+
+USER       PID  PPID  PGID   SESS JOBC STAT  TT       TIME COMMAND
+root     20706     1 20706 13d1dc0    0 Ss+  c01    0:00.45 ppp -direct
+
+# fstat -p 20706
+USER     CMD          PID   FD MOUNT      INUM MODE         SZ|DV R/W
+root     ppp        20706   wd /             2 drwxr-xr-x     512  r
+root     ppp        20706 text /usr     345756 -r-sr-x---  143360  r
+root     ppp        20706    0 /          1105 crw-------  cuac01 rw
+root     ppp        20706    1 /          1001 -rw-------     475  r
+root     ppp        20706    2 /          1001 -rw-------     475  r
+root     ppp        20706    3 /           604 crw-------    tun0 rw
+root     ppp        20706    4* internet dgram udp f137b880
+root     ppp        20706    5* local dgram f0c90a94 <-> f0bc5114
+root     ppp        20706    6 /          1001 -rw-------     475  r
+
+# netstat -Aan -finet | grep f137b880
+f137b880 udp        0      0  *.*                *.*               
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605950 ###
+===== 库内序 147507 | PK 2605950 | 等级 L3 =====
+DATE: 1998-05-19T08:31:10+00:00
+FROM: Stephen Roome <steve@visint.co.uk>
+SUBJ: Re: talk (fwd)
+摘要: Stephen Roome：就 Julian 转发的 Itsy Pocket Computer 讲座追问其价格
+
+On Mon, 18 May 1998, Julian Elischer wrote:
+> The "Itsy Pocket Computer" is a small handheld computer based on the
+> low-power, high-performance StrongARM SA-1100 microprocessor. Our
+> current prototype runs at 200MHz on a pair of AAA batteries, and
+> sports a tiny, high-resolution LCD touchscreen, a high-quality audio
+> codec, and up to 64MB of memory.
+
+
+So, how much do they cost ?
+
+> do we have a strong-arm version of FreeBSD coming up? :-)
+
+I guess that would be a "No". Wasn't someone writing ARMbsd or RISCbsd or
+something.. did he die or did Intel pay him to stop or something ?
+
+[It still amazes me that there are so many better options than Intel and
+no-one ever uses them, writing ARM is a damn sight easier than 80x86 code
+yet no-one ever writes for what seems to be a cheaper and far superior
+chipset.Please excuse my ranting, but I find this overmonopolised (sp?)
+industry this somewhat depressing.]
+
+	Steve
+
+Steve Roome - Vision Interactive Ltd.
+Tel:+44(0)117 9730597 Home:+44(0)976 241342
+WWW: http://dylan.visint.co.uk/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605951 ###
+===== 库内序 147508 | PK 2605951 | 等级 L3 =====
+DATE: 1998-05-19T09:30:54+00:00
+FROM: Dmitry Kohmanyuk <dk@dog.farm.org>
+SUBJ: Re: nfs exported FreeBSD cvs repository, mounted on client, update problems 
+摘要: Dmitry Kohmanyuk：就 CVSup 加锁方案提出折中，仅在更新某目录的文件时对该目录加锁
+
+In article <199805180342.VAA22777@mt.sri.com> you wrote:
+> > How difficult would it be for CVSup to lock the entire repository while 
+> > it's running?  Is it worth the effort?
+
+> Easy, but expensive, since CVS doesn't use a global lock for all
+> commits.  It would have to lock every directory in the entire tree down,
+> something CVS isn't willing to do.
+
+how about locking directory while updating its files?  From cvsup logs, it
+looks like it always does a breadth-first traversal...  so, it would 
+require locking and unlocking {of each directory in which files were updated}
+only once.
+
+--
+Others run "biff" to alert them about new mail. I run /bin/true
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605952 ###
+===== 库内序 147509 | PK 2605952 | 等级 L3 =====
+DATE: 1998-05-19T12:04:44+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Question about -mdoc
+摘要: Niall Smart：求 -mdoc 缩进项目列表写法，用 .Bl -tag -width Ds 配 .It Xo X Y .Xc 但结果挤在同一行
+
+Hi hackers, 
+
+Could anyone illuminate me as to how to achieve the following in
+-mdoc?
+
+Basically I want to have a bulleted list like this:
+
+        X       this is the text of the bulleted 
+        Y       item asd asd asd asd asd asd asd
+                asd asd asd asd as das das dasd
+
+Or:
+        X
+        Y
+                this is the text of the bulleted
+                item asd asd asd asd asd asd asd
+                asd asd asd asd as das das dasd
+
+I tried using
+
+.Bl -tag -width Ds
+.It Xo
+X
+Y
+.Xc
+
+but that gives:
+
+        X Y     this is the text of the bulleted
+                list asd asd asd asd asd asd asd
+
+Any ideas?
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605955 ###
+===== 库内序 147512 | PK 2605955 | 等级 L3 =====
+DATE: 1998-05-19T15:20:56+00:00
+FROM: Mike <mike@ns1.seidata.com>
+SUBJ: Re: talk (fwd)
+摘要: Mike：称 StrongARM 是增强版 RISC 处理器，做法为削减部分指令以超低功耗运行并加大缓存，并提到已停产的 Apple MessagePad
+
+On Tue, 19 May 1998, Stephen Roome wrote:
+
+> I guess that would be a "No". Wasn't someone writing ARMbsd or RISCbsd
+> or something.. did he die or did Intel pay him to stop or something ?
+
+*laff*  The StrongARM is a 'souped up' RISC processor, right?  Didn't they
+basically take a RISC chip, strip out a few select instructions (modified
+to run at super-low power) and add lots of cache?  The now discontinued
+Apple Message Pad 2100 used the ARM at ~200MHz, I believe.  Impressive.
+
+I've always heard (I have no motorola experience, yet) that motorola asm
+blows x86 away when it comes to efficiency.  A friend I have develops for
+Be and he's always ranting about it. :)
+
+> [It still amazes me that there are so many better options than Intel and
+> no-one ever uses them, writing ARM is a damn sight easier than 80x86
+
+Likewise, it always amazes me that there are so many better options than
+M$ and very few utilize them.  Personally, I'm always interested in new
+ideas/ports/processes.  Anything to work toward a 'bigger/badder/better'
+future. ;)
+
+	-mike
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605957 ###
+===== 库内序 147514 | PK 2605957 | 等级 L4 =====
+DATE: 1998-05-19T15:41:04+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: Re: ppp - unused UDP socket?
+摘要: Ruslan Ermilov: PR/6690 含 RELENG_2_2 分支 ppp 补丁，可修正 ppp -direct 遗留未绑定 UDP socket
+
+Hi!
+
+The PR/6690 contains the patch for RELENG_2_2 ppp
+which corrects the problem below.
+
+On Tue, May 19, 1998 at 10:22:55AM +0300, I wrote:
+> Hi!
+> 
+> I'm running FreeBSD 2.2.6-STABLE (as of May 13).
+> 
+> What this unbound UDP socket below for?
+> 
+> Every ``ppp -direct'' uses it.
+> 
+> USER       PID  PPID  PGID   SESS JOBC STAT  TT       TIME COMMAND
+> root     20706     1 20706 13d1dc0    0 Ss+  c01    0:00.45 ppp -direct
+> 
+> # fstat -p 20706
+> USER     CMD          PID   FD MOUNT      INUM MODE         SZ|DV R/W
+> root     ppp        20706   wd /             2 drwxr-xr-x     512  r
+> root     ppp        20706 text /usr     345756 -r-sr-x---  143360  r
+> root     ppp        20706    0 /          1105 crw-------  cuac01 rw
+> root     ppp        20706    1 /          1001 -rw-------     475  r
+> root     ppp        20706    2 /          1001 -rw-------     475  r
+> root     ppp        20706    3 /           604 crw-------    tun0 rw
+> root     ppp        20706    4* internet dgram udp f137b880
+> root     ppp        20706    5* local dgram f0c90a94 <-> f0bc5114
+> root     ppp        20706    6 /          1001 -rw-------     475  r
+> 
+> # netstat -Aan -finet | grep f137b880
+> f137b880 udp        0      0  *.*                *.*               
+
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605959 ###
+===== 库内序 147516 | PK 2605959 | 等级 L3 =====
+DATE: 1998-05-19T17:14:30+00:00
+FROM: "Chris Silva" <ras@interaccess.com>
+SUBJ: xdm problem
+摘要: Chris Silva: 以 -nodaemon 启动 xdm 测试时登录尝试后退回登录提示，显卡为 Matrox Millennium 设成 1024 模式
+
+-----BEGIN PGP SIGNED MESSAGE-----
+
+Hi everyone,
+	I evoke xdm -nodaemon &  to test this (I've checked my tty's and vt3
+is disabled, actually it don't say off, it says -nodaemon)
+
+	Anywise, If I try to login via xdm, It tries to, then flips back to
+the login screen.  Has anyone had this happen?  I use a Matrox Mill
+set to 1024 mode.
+
+TIA
+Chris
+_____________________________________________________________________
+
+RSA Key Fingerprint = 6D0B 5536 7825 3D09 9093 384A 9694 FDB6
+RSA Key Fingerprint = 4390 44E5 E316 F2AA A11E 5755 F3F9 D69B
+DH/DSS Fingerprint = 089B 0B5C 75C7 A7B4 B050 DD14 2D65 5DD6 E87D 239A
+
+PGP Mail encouraged / preferred - keys available on common keyservers
+_____________________________________________________________________
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: PGP 5.5.5
+Comment: Out of NT, over the ISDN link, via my ISP - Nuthin' but net!
+
+iQEVAwUBNWG98P9tKFG94DNTAQE1Lwf/UC5uGRNZG8ZRUahlzv7Kr+Iy79kPaflw
+zql/2LKX51WGguFPp/4B2YtC/+wslLC52gQqbT0/k0d1XsezdEgiwQR2I8aqOSUa
+v47EeP7Gt1+w1YGgjlGQv6ZlWFlFvQHo7MmIlQKdOTV3PjjLE+GDH+43BwHc2YAe
+tq8RCbYzQNRhNzLtEByQ7hTzGVNUGZmh1IL97/bL5LJ5I7uMgB5vAxWaIlF2jcX+
+DAT2rqhnIbnHiiaAnDpfvy1RO3+jzR7KWKKB6yMOs7KGRetjQkfKnHBBTfR2WOvr
++zlAC3JksithvbZXGynWTuWRSlq/1kp2XghY2P7aFmyCYypSWxU8jg==
+=vnWb
+-----END PGP SIGNATURE-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605960 ###
+===== 库内序 147517 | PK 2605960 | 等级 L3 =====
+DATE: 1998-05-19T17:13:40+00:00
+FROM: zhihuizhang <bf20761@binghamton.edu>
+SUBJ: Simple Virtual Memory Questions
+摘要: zhihuizhang: 询问内核链在虚拟地址 0xf0100000 而加载于 0x00100000 时 KERNBASE 即 0xf0000000 的含义
+
+
+I believe the following VM questions are simple to experts and hope one of
+them will help me out (simple answer is OK):
+
+(1) I think the linked address should be the virtual address.  The
+kernel is linked at virtual address 0xf0100000 (specified by the linker
+option -T ) and loaded at 0x00100000 (that is the reason why the
+relocation macro R(foo) works in locore.s). So what is the meaning of
+KERNBASE (0xf0000000)? The kernel image should start at 0xf0100000, not
+0xf0000000.  Besides, we have constants like UPT_MIN_ADDRESS and
+UPT_MAX_ADDRESS which are even less than KERNBASE.  Can anyone clarify
+the use of virtual memory address space in kernel for me?
+
+(2) In locore.s, we install a pde for a temporary double map of bottom of
+VA by the following statements:
+
+        movl    R(_KPTphys), %eax
+        xorl    %ebx, %ebx
+        movl    $1, %ecx
+        fillkpt(R(_IdlePTD), $PG_RW)
+
+The mapping is cleared, if I am correct, in pmap_bootstrap() by the
+following statement:
+
+	* (int *) PTD = 0;
+
+I have not found any usage of this mapping before it is cleared. Am I
+wrong?  If yes, what is the usage for this temporary mapping? 
+
+(3) In routine pmap_growkernel(), we have the following statement:
+
+	*pmap_pde(kernel_pmap, kernel_vm_end) = pdir_pde(PTD, kernel_vm_end);
+
+Is this redundant?  Because we already have a statement in the same
+routine (before the above statement) which says: 
+
+	pdir_pde(PTD, kernel_vm_end) =
+	(pd_entry_t)(VM_PAGE_TO_PHYS(nkpg) | PG_V |PG_RW);
+
+Thanks a lot.
+
+-------------------------------------------------
+
+Zhihui Zhang
+100 Roberts Street, Apt #21-6
+Binghamton, NY 13901, U.S.A
+
+Web Site: http://cs.binghamton.edu/~zzhang
+
+-------------------------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605961 ###
+===== 库内序 147518 | PK 2605961 | 等级 L3 =====
+DATE: 1998-05-19T17:44:11+00:00
+FROM: Brian Handy <handy@sag.lmsal.com>
+SUBJ: Hardware Question
+摘要: Brian Handy: 询问在 Gateway 机型装 FreeBSD 的成功经验，重点是 Ultra ATA 硬盘与 nVidia 显卡
+
+Hey Folks,
+
+I've got a guy who wants to buy a Gateway computer and install FreeBSD on
+it...any recent success stories out there on these?  The things I don't
+know about are the Ultra ATA hard drives, the nVidia graphics card (I
+haven't checked the XFree86 site yet) and this Ensoniq wavetable sound
+card. 
+
+
+Thanks,
+
+Brian
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605962 ###
+===== 库内序 147519 | PK 2605962 | 等级 L3 =====
+DATE: 1998-05-19T18:08:49+00:00
+FROM: Oliver Fromme <olli@dorifer.heim3.tu-clausthal.de>
+SUBJ: Re: talk (fwd)
+摘要: Oliver Fromme: 认同 Motorola 汇编效率胜过 x86，因 x86 只有 4 个通用寄存器与 4 个同尺寸地址寄存器
+
+In list.freebsd-hackers Mike wrote:
+ > [...]
+ > I've always heard (I have no motorola experience, yet) that motorola asm
+ > blows x86 away when it comes to efficiency.  A friend I have develops for
+ > Be and he's always ranting about it. :)
+
+He's right.  The x86 has 4 general-purpose registers, each of
+them 16 bits (they were extended to 32 bits in the 80386) and
+4 address registers of the same size.  And there are certain
+restrictions on their usage, e.g. you can only use the CX
+register as counter in the "loop" instruction etc.
+
+On the other hand, the Motorola 68k has 8 general-purpose
+registers of 32 bits and 8 address registers (also 32 bits).
+There is no restriction on their use, except that the 8th
+address regsiter is the default stack pointer.
+
+I programmed on both architectures in assembler, and I have to
+say that the 68k is definitely easier to program, and the
+higher number of registers allows for efficient programming.
+
+Maybe it was the biggest mistake ever made in computer history
+when IBM selected the 8088 for their first PC back in 1979.
+(Or was it 1978?  Don't know, I probably couldn't even spell
+the word "Computer" correctly back then.)  If they used the
+68000 -- which was already available at that time -- we would
+have less problems today, I guess.
+
+I was very pleased when I got to know that 3Com's PalmPilot
+uses an 68328 ("DragonBall"), which is an 68000 plus a few
+extensions.
+ > 
+ > > [It still amazes me that there are so many better options than Intel and
+ > > no-one ever uses them, writing ARM is a damn sight easier than 80x86
+ > 
+ > Likewise, it always amazes me that there are so many better options than
+ > M$ and very few utilize them.  Personally, I'm always interested in new
+ > ideas/ports/processes.  Anything to work toward a 'bigger/badder/better'
+ > future. ;)
+
+Same here.  :-)
+
+Regards
+   Oliver
+
+-- 
+Oliver Fromme, Leibnizstr. 18-61, 38678 Clausthal, Germany
+(Info: finger userinfo:olli@dorifer.heim3.tu-clausthal.de)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605965 ###
+===== 库内序 147522 | PK 2605965 | 等级 L3 =====
+DATE: 1998-05-19T19:24:43+00:00
+FROM: Brett Taylor <brett@peloton.physics.montana.edu>
+SUBJ: Re: xdm problem
+摘要: Brett Taylor: 建议查看 /usr/X11R6/lib/X11/xdm/xdm-errors 定位 xdm 退回登录画面的原因，需切控制台才能看
+
+> 	Anywise, If I try to login via xdm, It tries to, then flips back to
+> the login screen.  Has anyone had this happen?  I use a Matrox Mill
+> set to 1024 mode.
+
+What's /usr/X11R6/lib/X11/xdm/xdm-errors have in it?
+
+(you'll need to switch to the console to get in)
+
+Brett
+*********************************************************
+Brett Taylor 		brett@peloton.physics.montana.edu
+http://peloton.physics.montana.edu/brett/
+
+But Master, does not the fire need water too?
+Does not the mountain need the storm?  		- Beavis
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605966 ###
+===== 库内序 147523 | PK 2605966 | 等级 L3 =====
+DATE: 1998-05-19T19:39:09+00:00
+FROM: "Christopher R. Bowman" <crb@ChrisBowman.com>
+SUBJ: Re: xdm problem
+摘要: Christopher R. Bowman: 建议检查 .xsession 是否归本人所有且可读，以此定位 xdm 登录后立即退回登录画面的问题
+
+On Tue, 19 May 1998, Chris Silva wrote:
+
+>-----BEGIN PGP SIGNED MESSAGE-----
+>
+>Hi everyone,
+>	I evoke xdm -nodaemon &  to test this (I've checked my tty's and vt3
+>is disabled, actually it don't say off, it says -nodaemon)
+>
+>	Anywise, If I try to login via xdm, It tries to, then flips back to
+>the login screen.  Has anyone had this happen?  I use a Matrox Mill
+>set to 1024 mode.
+
+Is your .xsession own by you, and read and executable by you?
+Is the last statement not forked?
+Have a look at your .xsession-errors file (if one exists)
+and also /usr/X11R6/lib/X11/xdm/xdm-errors.  This should give you some
+cluse to at least look at.
+
+---------
+Christopher R. Bowman
+crb@ChrisBowman.com
+<A HREF="http://www.ChrisBowman.com">My home page</A>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605967 ###
+===== 库内序 147524 | PK 2605967 | 等级 L4 =====
+DATE: 1998-05-19T20:31:30+00:00
+FROM: "Gregory D. Moncreaff" <moncrg@am026091.res.ray.com>
+SUBJ: Re: Hardware Question
+摘要: Gregory D. Moncreaff: 在较新的 E series 装 2.2.5 时须拔掉 AGP 卡改插 Mach64 PCI 才能完成 X 设置
+
+I installed 2.2.5 on a recent E series and had to pull the AGP card
+and put in an Mach64 PCI to setup X...
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

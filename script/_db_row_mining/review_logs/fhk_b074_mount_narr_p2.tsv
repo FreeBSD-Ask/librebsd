@@ -1,0 +1,25 @@
+2604483	885	bernie 称 3.0 内核内存使用文档位于 /usr/share/doc/handbook/handbook290.html，并询问 2.2.5 版是否有同类文档
+2604484	885	amancio 回信称该意见成立，表示现阶段他主要想招揽贡献者，若对方恰为该包的维护者则更佳，并欢迎各方参与到这一方向中来
+2604485	885	satoshi 请若他方贡献出可运行的新版本，或为 hylafax 增加语音能力，记得把成果交给维护者并入 ports tree
+2604486	885	amancio 称不会忘记与各端口维护者对接，目前用个人 mh 文件夹 voice-project 跟踪项目，若贡献者增多愿接管项目管理工作
+2604488	885	amancio 称 Sun 向合格教育机构免费开放 Java 工具，并附相关页面地址；该套件包含可在 FreeBSD 运行的 Java WorkShop
+2604489	885	josef 回信称自己正盯着该页却找不到 FreeBSD 条目，请 amancio 给出含 FreeBSD 支持的 URL 以便直接访问
+2604490	885	amancio 转贴自己早前发过的旧帖到本线，并请 FreeBSD 的 Java Team 把该信息补进 FreeBSD 的 Java 网页，语气轻松并称只是随手贴出旧帖供参考
+2604491	885	julian 回应 greg 的邮件，称自己几年前就想自己动手做这件事，只因 FreeBSD 的真实事务太多，没能把该想法大力推进下去
+2604493	885	terry 转贴前文内容，并在自有正文里特别注明必须向对方注册才能下载该代码，末尾自署 Terry Lambert 并称发帖意见仅代表本人
+2604494	885	nate 说对方已是该团队一员并拥有提交权限，若其提交新的 html 页面，他保证该页面会在 freefall 上同步更新
+2604495	885	amancio 回信给 nate，称自己正忙于 multimedia 与 java 方向的活，请求团队成员中若有人主动便代为放上该网页内容，若无人主动他也能接受
+2604496	885	bob 转引 michael eager 关于是否有人关心 PLSIG 相关讨论的邮件，说明该人提议重启 PLSIG 主导 Dwarf 规范讨论
+2604497	885	krygier 询问能否让 Linux 仿真仅对共享库与系统文件走 /compat/linux 树而不在用户层生效，以便运行 Linux 备份客户端 NSR，并说明其异构环境下商业客户端仅在 Linux 提供客户端软件而 FreeBSD 无
+2604499	885	niall 询问对方 /usr/lib 是否有 libcrypt.a 与 libcrypt.so.2.0，并给出指向 libdescrypt 的符号链接实测，建议若无则从光碟重新安装
+2604500	885	niall 转述 john 称该报错实为汇编器缺陷且修复已提交至 obj-aout.c，自己表示问题已消失并追问能否把它合并到 -stable
+2604501	885	john 表示早已料到会有人追问，同意把该修复合并到 -stable 分支但不会立即执行，因其在 -current 中仅五天不够久
+2604502	885	shigio 发现 FreeBSD 2.2.5 上 htags 报 Out of memory，判断 /usr/bin/perl 泄漏内存，给出 pkg_add 从 cdrom/packages/lang 安装 perl-5.00401.tgz 并符号链接替换旧版本的变通方案
+2604503	885	phk 为 3.0-RELEASE 审查 gnats 数据库，将有价值却难完成的 PR 移入 suspended 状态供他人拾取，并呼吁相关者关闭不再适用的 PR
+2604504	885	pat 指出近来关于为 Mozilla 获取或编写 JVM/JRE 的讨论完全误解了 Netscape 剥离 JVM 的原因，认为该决策在宣布开放源代码前就已做出，并建议专注确保 Mozilla 与现有 jdk-1.1.5 port 及其 JRE 兼容
+2604505	885	amancio 说明 Mozilla 开发有专用邮件列表 mozilla-freebsd@freebsd.org，订阅需向 majordomo@freebsd.org 发送订阅命令
+2604506	885	aaron 请求加入 FreeBSD 邮件列表，自称对 FreeBSD 仍陌生但觉得不错，希望了解如何上手使用，并请对方回复确认已收到
+2604507	885	niall 转述对方疑问为何需让 Linux 应用强制访问 /compat/linux 而非根目录，并报告创建符号链接后 Linux 二进制能读到真实 /etc 内容，认为该行为已属缺陷并已 send-pr，提议改用 FreeBSD 的 tar 进程收集文件
+2604508	885	jay 认为多数大学计算机书店由学生组织或学校运营不受常规租金约束，少量货架空间在这些本就稀疏的区域并不难要，但说服其采购存货则是另一回事
+2604509	885	mike smith 回答称没有办法有效区分某 Linux 应用应查找 /compat/linux 中的文件还是应查找真实文件系统空间，并解释目录遍历有问题，在 Linux 二进制下打开根目录时 /compat/linux 下的同名路径会成功命中
+2604510	885	jim 在 picobsd 上尝试用内建 PCI 以太网卡 Am79C971 芯片，lnc1 探测到 NE2100 且已在监听对话，但启动或执行 ifconfig 时无法初始化，请列表协助排查

@@ -1,0 +1,29 @@
+2605758|L4|Kirk McKusick：TAILQ 宏在插入删除查找上比 CIRCLEQ 快约 20%，CIRCLEQ 只在大量反向遍历时占优
+2605759|L3|Chris Smith 想加入 RUNDOS 工作，等自己的机器装好 FreeBSD 之后再参与
+2605761|L4|Justin T. Gibbs：建议直接用 TAILQ，它能用也更快，客户端代码不必知道实现细节
+2605763|L3|tcobb：2.2.6 配 DPT RAID 控卡约每三天 panic 报 biodone buffer not busy，据其查无补丁可修
+2605764|L4|Jason Nordwick：补 cp.c 与 utils.c 修 bin/5733，非终端目录只读时递归复制失败，utils.c 误报 chown 错误
+2605766|L4|Robert Swindells：网络栈可用 ISODE，X.400 代码可用 PP，两者移植到 FreeBSD 都不难
+2605767|L4|Bernd Rosauer：SONY SDT-9000 DAT 磁带机在他的 FreeBSD-current 上正常，对内核只是普通 SCSI 磁带机
+2605768|L4|Andrzej Bialecki：发布内建 SCSI CAM 的安装软盘，可装 AHA7895 控卡机器，需两片软盘并按 README 特殊引导流程
+2605769|L4|Ruslan Ermilov：installworld 后到 usr/src/bin/cat 下 make 仍要重建，根因是 PROG 依赖 libc.a
+2605770|L3|vak@cronyx.ru 为 Cronyx-Tau 串口适配器驱动请求字符设备主号，并愿向 FreeBSD-current 提交源码
+2605771|L4|Jordan K. Hubbard：主设备号已定为 99 tau 给 Cronyx/Tau 串口适配器，因对方未提其他偏好才取名 tau
+2605772|L3|Amancio Hasty：这是全新未占用的主设备号，驱动作者还有机会自己给设备起名
+2605773|L3|Studded 清理 ircd makefile 时卡住，贴出 SHELL THINGSTOCLEAN 与 clean 目标片段求指导
+2605774|L3|Robert Eckardt 问 FreeBSD 是否还有人做 NIS+ 客户端及进展，另问 Linux 支持能否通用、SecureRPC 是否完备
+2605776|L3|Nickolay N. Dudorov 问 Tau 驱动能否比同源的 Cronyx/Sigma cx 驱动得到更好的作者支持
+2605778|L4|vak@cronyx.ru：请把 99 tau 改名为 99 ct Cronyx/Tau serial adapter，并同步修正 42 cx 那条驱动注释
+2605779|L4|Allen Smith：pccard 移出 SUBDIRS 后，installworld 的 mtree 报 panic: fdesc attr 并重启系统
+2605781|L4|Jordan K. Hubbard：已改为 99 ct 并同步注释，下次请一次说清格式，并追问 Sigma 驱动维护不佳的说法
+2605782|L4|vak@cronyx.ru：FreeBSD 里的 Sigma 驱动版本确实过时，最新版一直可从 www.cronyx.ru 取，用户并不在意
+2605785|L3|Alexey Lukin 问是否有人在为 Intel Flash 2 系列 PCMCIA 卡写引导代码，他要做闪存卡启动的 FreeBSD 无盘路由器
+2605788|L3|Matthew Cashdollar 问 PPP 为何默认写成 /var/log/ppp.log 与 slip.log，其他日志文件都直接用名字
+2605791|L3|John Hay：最新 ntp4 检测到 sched_setscheduler 后按 SCHED_FIFO 取最低优先级调用，贴代码问用法是否妥当
+2605795|L4|Brian Somers：PPP 早期就叫这个名字，改成 syslogd 之后沿用了，没有好理由只是大家一直这么叫
+2605796|L4|Peter Dufault：SCHED_FIFO 与 SCHED_RR 同属 RTPRIO 类且共用调度代码，FIFO 不轮转而 RR 轮转，可抢占分时进程
+2605798|L4|Jordan K. Hubbard：顺带提议把名不副实的 -alias 标志逐步改名为 -nat
+2605799|L3|Eivind Eklund 认为改名或许可取，因为术语本身就容易让人混淆
+2605801|L3|Tom Secula 问有没有人做过 ISP 计费程序，能否读导出的 Cisco netflow 记录或轮询 ip precedence MIB
+2605802|L4|Greg Lehey：发布 vinum 首个 alpha 版 vinum-0.01，Berkeley 风格版权，功能大致等同 ccd 驱动，自动启动未完工
+2605806|L3|Brian Somers：改名问题不大，但为求一致 libalias 也得跟着改成 libnat，并 cc Charles 征询看法

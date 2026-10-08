@@ -1,0 +1,25 @@
+2604789	885	chris 贴出本机 fpa0 接口的 netstat 统计与 uptime 输出佐证，机器已连续运行 85 天无中断无卡顿，Ierrs、Oerrs 与 Coll 计数全为零，由此认为驱动稳定得无可挑剔
+2604790	885	mike 指出任何 /etc 消亡方案所需的机制都不会比现在更多，系统仍然只需 init、shell 与 ifconfig 三者，而把配置集中到 rc.conf 已是流行做法，这一步只是略作延伸
+2604792	885	charles 询问是否有人把以太网 VLAN 与 FreeBSD 路由结合使用，说明以太网包在 48 位标识之外可附带额外标签，并认为给 ifconfig 增加选项再加少量内核改动即可完成支持
+2604793	885	david 称团队已完成 IPSec 向 FreeBSD 的移植，这是用 IPSec 保护 MobileIP 项目的第一步，嵌入内核的 mobileIP 代码量极少且便于剥离也可以直接不启用，熟悉 Security Associations 者基本可开箱使用
+2604794	885	kapil 指出 ELF 转 a.out 的转换工具对 sparc 移植可能是必需的，因为 Sparc OpenBoot 只能从 a.out 镜像启动，而 UltraLinux 已经有这样一款工具可用
+2604796	885	raul 称正在构建一台配备 1 gygabyte 内存的 FreeBSD-current 服务器，但找不到 David Greenman 的补丁来用尽全部内存，于是请人把补丁发给他
+2604800	885	matthew 指出 ether_input 函数内部已经存在一段处理 VLAN 的代码，说明内核层面并非毫无基础，可供后续讨论参考
+2604801	885	matthew 回应称在理想状态下 bootstraps 应保持 a.out 格式并由它去拉起 ELF 内核，不过他也承认这只是完美世界里的设想
+2604802	885	wilko 说自己用 2 块 Digital DEFPA 网卡把 FreeBSD 主机接上自己的 NetBSD/axp 机器，运行完全正常，并认为 Matt 在驱动上做得很好
+2604803	885	niall 转述对方告知该 PR 之外还有一份后续补丁，同时指出既然 OpenBSD、NetBSD、Solaris、glibc 与 IRIX 在这一点上都符合 POSIX 就不值得为省几微秒而脱离一致做法，他附上补丁希望说服对方改主意
+2604806	885	ben 对前面提议中把全部配置交给单一外部机制的选项表示强烈反对，反问有人试过在 NetInfo 数据被 spammed 之后修复 NeXTStep 机器吗，并保证那场面一点都不好看
+2604807	885	chris 表示实现质量才是决定成败的关键，他说自己很欣赏那套小规模的 Apollos 网络，却极其反感 NT 注册表造成的混乱局面
+2604809	885	andrew 指出即使指定 -8E，telnet 遇到 0xff 仍会落入命令模式，这不符合 -E 选项关于不让任何字符被当作转义字符的文档含义，他已在 bin/6317 提交补丁并询问为何不予合入
+2604811	885	studded 建议把导入推迟一段时间，因为 Ted 刚在 dhcp-client 上宣布大概这个周末要发布新版本，他还担心进入 base 后会像 xntpd 和 top 那样很快被遗弃
+2604812	885	eric 询问只拿到一个 vnode 指针时是否有办法取得其父目录的 inode 号，说明他的具体场景是在 sys/kern/vfs_vnops.c 里的 vn_write 函数中实现这一步
+2604813	885	steve 提出用 nsswitch.conf 让系统先查数据库再查文件以兼顾两种机制，并梦想到用 portalfs 挂载 /etc，由一个转换器把数据库里的数据以传统格式呈现，使 vi /etc/rc.conf 直接可用
+2604814	885	james 确认他没有合入宏改动因为觉得收益不值得，随后指出对方附上的补丁几乎与他原 PR 中的补丁完全一致，只是自己当初没写 man page
+2604817	885	gianmarco 说他一向用 vmount 挂载 dos zip 驱动器，这次改用 3.0-current 的 msdos 挂载来测速，同一批文件 stock 拷贝耗时 2 分 30 秒而 vmount 只要 15 秒多，当时 PII 300 还在跑 make world
+2604820	885	terry 指出使用 DHCP 客户端做统一配置时若还去维护并行的文本文件就是做错了，并追问改一个配置项后能否免掉 kill -1 重启半数服务，认为应当只有一个中心化的 get/put 式接口来通知各方变化
+2604821	885	terry 答称可以先取得文件 vnode 对应的 inode 号，再全面搜索文件系统中的目录块，找出指向该 inode 的那个块即为父目录；但他提醒 inode 存在多重链接时就只是其中一个父目录，另有基于 VM object alias 的方案会大幅增加 vnode 开销
+2604822	885	terry 对收到的构想只回了一句简短评价，称这是一条极其精彩的点子，属于零保留的直接叫好，全篇再没有任何技术展开，也没有附加任何使用条件
+2604823	885	peter 澄清 ABI 的定义本身就涵盖程序的打包方式，除可执行格式与系统调用机制之外也包括包格式，虽然它看上去与运行可执行文件无关，对制作 shrink-wrapped 软件却至关重要，并补充说自己早先回避 SystemV 工具还有别的原因
+2604824	885	alejandro 求助说邮件服务器多数时候正常，隔几天却会收到 mail loops back to me 与 Local configuration error 两类报错，并贴出 DNS 中 NS 与 MX 指向同一主机的记录
+2604826	885	raul 说因经费短缺不得不把内存砍到 1024 MB，语气里带着玩笑式的无奈，但依然追问那个所需内核补丁究竟在哪里可以找得到
+2604828	885	warner 指出向 ARC 平台也就是基于 R4x00 的机器做移植时也有同类问题，其标准只支持 ECOFF 引导，而 netbsd 与 openbsd 的树里已经有相关工具，不过转换镜像本身相对容易，转换可能含系统调用和平台相关数据结构的库则要难得多

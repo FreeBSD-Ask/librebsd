@@ -1,0 +1,24 @@
+2605379|L3|Josef Grosch：报告 3.0-Current 下三次 make world 均在 libexec/named-xfer 处失败并附完整错误
+2605380|L4|dag-erli：指 win95 的 direct modem connection 不支持 ppp 而是采用微软的私有协议
+2605382|L3|Robert Withrow：称自己曾想为 blender 做 Port/Package 但被 NeoGeo 婉拒并评其非常好用
+2605386|L4|Amancio Hasty：同意继续做 blender 的 ports package 并求一名 X11 程序员修复几处小问题
+2605390|L3|Amancio Hasty：称 blender 在其 PPro 200MHz 上运行流畅并期待在 PII 400MHz 上更快
+2605391|L3|Andreas Braukmann：在 -current 上试跑 blender 后屏幕迅速变蓝并指出它默认以全屏模式启动
+2605393|L4|Luigi Rizzo：放出 dummynet 与 ipfw 集成的注释与补丁快照目标 2.2.6 并称尚有致 panic 的已知缺陷
+2605394|L3|Jamie Bowden：称 blender 在其 MIPS R4600 的 indy 上运行正常并认为对方 P-166 性能应相当
+2605395|L3|Chris Coleman：询问 SONY SDT-9000 DDS-3 DAT 磁带机在 FreeBSD 2.2.6 上是否可用
+2605396|L4|Tom：建议服务器把 MAXUSERS 设为 64 以获得较多 mbuf 并可用 netstat -m 观察当前用量
+2605397|L4|Tom：补充 pax 与商用 BRU 亦可作备份替代并赞赏 pax 的运行时路径转换能力
+2605400|L3|Donald J. Maddox：称 NeoGeo 网页表单失效故直接把 blender 反馈邮件发给 blender@neogeo.nl
+2605401|L3|Dan Janowski：表示手上有 HP DD3 运行良好可作 DAT 磁带机兼容性参考
+2605402|L3|Chris Shenton：报告 2.2.6 RELEASE 经 CVSup 到 STABLE 后 make buildworld 在 cc 处失败
+2605403|L4|Brian Cully：称在 1600x1200 16bpp 下 blender 1.30 与 1.31_dynamic 均能正常运行
+2605405|L3|Brian Cully：称本机装的是第一块 Millenium，故疑与 Millenium II 有关但觉牵强
+2605406|L3|Open Systems Networking：称与 Brian Cully 同为 Millenium II 显卡是二者唯一共同点，但不确定这就是问题
+2605409|L3|Andreas Braukmann：称对方所述无法移动与调整窗口的情形自己无法复现，数秒前刚多次调整过 blender 窗口
+2605410|L3|Stefan Esser：质疑 FreeBSD 依赖 BIOS32 接口配置 PCI 卡的说法，称自己本以为熟悉该代码内部
+2605411|L4|Chris Day：称有些卡在 PnP 探测时拒绝被识别，只能在 PnP 配置完成后改走专有端口，其 OPTi931 即如此
+2605414|L4|Luigi Rizzo：认为出现此种情形即不符合 ISA-PnP 规范，但称 OPTi931 的 PnP 配置在其经验中正常
+2605416|L4|Bill Paul：自研 Texas Instruments ThunderLAN 网卡驱动约两周已基本完成并征集测试者
+2605417|L4|David Greenman：称寄存器内存映射访问在 P6 级处理器上比编程式 I/O 快，Linux 与 NetBSD 驱动则用 PIO
+2605418|L3|Greg Lehey：称不清楚 SDT-9000 该型号在 FreeBSD 2.2.6 是否可用，但未听说有 DDS 驱动器不能工作

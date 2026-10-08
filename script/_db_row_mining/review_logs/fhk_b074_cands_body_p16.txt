@@ -1,0 +1,891 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605019 ###
+===== 库内序 146576 | PK 2605019 | 等级 L3 =====
+DATE: 1998-04-24T14:57:58+00:00
+FROM: Jaroslav Klaus <J.Klaus@sh.cvut.cz>
+SUBJ: freebsd-gnome (Was: freebsd-kde - create one)
+摘要: Jaroslav Klaus：反问是否也要建 FreeBSD Gnome 小组，并认为应归入 freebsd-ports
+
+
+
+On Fri, 24 Apr 1998, Christoph Kukulies wrote:
+
+> I vote for creating a FreeBSD kde group.
+
+And what about Freebsd Gnome group? :-)
+
+Jarda Klaus
+
+PS: I think it should be in freebsd-ports, shouldn't be?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605021 ###
+===== 库内序 146578 | PK 2605021 | 等级 L3 =====
+DATE: 1998-04-24T16:04:13+00:00
+FROM: Christoph Kukulies <kuku@gilberto.physik.RWTH-Aachen.DE>
+SUBJ: Re: freebsd-gnome (Was: freebsd-kde - create one)
+摘要: Christoph Kukulies：认为把 KDE 放进 ports 会很快淹没 ports，并称 KDE 特殊因为它不只是移植品
+
+On Fri, Apr 24, 1998 at 04:57:58PM +0200, Jaroslav Klaus wrote:
+> 
+> 
+> On Fri, 24 Apr 1998, Christoph Kukulies wrote:
+> 
+> > I vote for creating a FreeBSD kde group.
+> 
+> And what about Freebsd Gnome group? :-)
+> 
+> Jarda Klaus
+> 
+> PS: I think it should be in freebsd-ports, shouldn't be?
+
+That would swamp -ports with kde specific stuff soon, I think.
+KDE is too peculiar since it's not just a port. It's a way UNIX could
+survive (overemphasized speaking). And there are already little 
+pinguins around everywhere :-).
+
+-- 
+Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605022 ###
+===== 库内序 146579 | PK 2605022 | 等级 L4 =====
+DATE: 1998-04-24T17:19:24+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: fsck rc and login.conf
+摘要: Tom：指出必须修改 daemon 类而不是通用类，因为 init 在启动 rc 脚本前已切换到 daemon 类
+
+
+On Fri, 24 Apr 1998, Raul Zighelboim wrote:
+
+> 	I edited /etc/login.conf to set maxmemsize to 64K (from 32K) and
+> rebuilt te db with no success.
+
+  On which class did you make this change?  You must change the daemon
+class.  init changes to class daemon before starting the rc* stuff.
+
+> 	I set up user daemon on Class daemon, with no success.
+
+  This doesn't do anything.  I'm not sure why you'd think so...
+
+> 	I edited /etc/rc and added 'ulimit -m 65355' at the begining of
+> the file, with no success.
+
+  This can't do anything as ulimit will only increae the soft limit up the
+hard limit.
+
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605026 ###
+===== 库内序 146583 | PK 2605026 | 等级 L3 =====
+DATE: 1998-04-25T08:17:45+00:00
+FROM: Robert Watson <robert@cyrus.watson.org>
+SUBJ: Context switch time
+摘要: Robert Watson：询问 syscall 的上下文切换耗时与换入另一进程的耗时，以及内核 profiler 是否计及切入内核上下文的时间
+
+
+Hi,
+
+I was wondering what the average context switch time across a syscall
+invocation is, also, how long it takes to switch in a different process.
+Presumably just on a Pentium 100ish processor.  Is this data I can
+retrieve from the kernel profiler?  mi_switch and tsleep both appear in
+the profiling data, but it is not clear to me that this includes the time
+for the switch to kernel context, etc.
+
+Thanks,
+
+  Robert N Watson 
+
+
+----
+Carnegie Mellon University  http://www.cmu.edu/
+Trusted Information Systems http://www.tis.com/
+SafePort Network Services   http://www.safeport.com/
+robert@fledge.watson.org    http://www.watson.org/~robert/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605029 ###
+===== 库内序 146586 | PK 2605029 | 等级 L3 =====
+DATE: 1998-04-25T12:06:19+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Tips needed about dynamic device registering
+摘要: Ulf Zimmermann：询问如何像 device sd0 那样在启动时动态注册 raid 控制器的块设备，希望知道不用 DEVFS 的做法
+
+I need some tips how I should go ahead and register dynamic on boot time
+disk drive device, simular like "device sd0". The raid controller I am
+working on can have up to 32 "drives", which have mainly a read block
+and a write block function. 
+
+DEVFS would probably one way, but I am also interested in doing it without
+DEVFS.
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605030 ###
+===== 库内序 146587 | PK 2605030 | 等级 L4 =====
+DATE: 1998-04-25T12:51:33+00:00
+FROM: Christoph Toshok <toshok@Hungry.COM>
+SUBJ: threads performance
+摘要: Christoph Toshok：称 FreeBSD 上 pthreads 性能极差，改用 NSPR 后 javac 编译从 39 秒降到 18 秒
+
+
+I'm working on japhar (the hungry java vm) and I'm primarily using
+freebsd for my work.  One of the central "features" of japhar is that
+it uses platform's thread library -- pthreads on freebsd and linux,
+cthreads on nextstep and the hurd.
+
+On freebsd the performance is just abysmal.  Really, it's *awful*.
+Just for kicks, I ported the thread api to NSPR (Netscape's Portable
+Runtime) and the runtime for javac compiling a trivial .java file
+drops from 39 seconds to 18 seconds.
+
+Are there any plans to address the performance of threads in the
+coming weeks/months?  The fact that NSPR can drop 21 seconds off the
+runtime (in this very contrived example) makes me think that there is
+a lot going on in libc_r that is suboptimal, but perhaps there is just
+no other way to implement things so they conform to the posix spec.
+
+I realize kernel threads (a la clone()) are on the horizon, but
+there's a lot to be said for making a lightweight user level thread
+package, and making it fast.
+
+christoph
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605031 ###
+===== 库内序 146588 | PK 2605031 | 等级 L3 =====
+DATE: 1998-04-25T13:11:21+00:00
+FROM: Hans Huebner <hans@artcom.de>
+SUBJ: FreeBSD HA configuration / Ethernet address takeover
+摘要: Hans Huebner：为承载 NIS DNS 邮件等关键服务的 FreeBSD 主机寻找热备接管方案，希望实现 NIS 与 DNS 故障切换
+
+Hello there,
+
+we're running some of our critial LAN services (NIS, DNS, mail etc.) on
+FreeBSD.  The systems are quite stable, but from time to time we need to
+take a system down for maintenance purposes.  Also, hardware problems can
+cause unplanned down times.
+
+I'm currently looking for a solution to configure a PC as a warm-standby
+fallback server for the most important services (NIS and DNS).  To make a
+failover to the fallback server as transparent to the users as possible,
+it would be best if the fallback system could take over the ethernet
+address of the failed server.  I've seen this work with certain
+(expensive) Solaris configurations, and I'd like to do something similar
+with FreeBSD.
+
+I tried to implement DNS failover by moving our name service IP address to
+another machine, but this resulted in severe client problems (most clients
+fail to renegotiate the MAC adress with ARP within finite time).
+
+Looking at the ifconfig manpage, I could not find a general way to set a
+Ethernet card's MAC address.  Is there a documented solution to this
+problem?  If not, would adding such functionality be problematic?
+
+Any pointers, hints or suggestions are greatly appreciated.  I'd also be
+interested in any reports on running two FreeBSD systems on one shared
+SCSI bus.  I suppose the disk driver would need to be changed quite a bit
+to make use of the RESERVE UNIT SCSI command to prevent access collisions.
+
+Thanks,
+Hans
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605032 ###
+===== 库内序 146589 | PK 2605032 | 等级 L4 =====
+DATE: 1998-04-25T09:42:56+00:00
+FROM: Alfred Perlstein <perlsta@fang.cs.sunyit.edu>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover
+摘要: Alfred Perlstein：建议用 MX 记录配合 NIS 从服务器与 DNS 从服务器解决，指出网卡 MAC 烧录在卡上，多 PTR 轮询未证实
+
+a combination of MX records (DNS), proper NIS slave servers and DNS
+secondaries should take care of your problem.  Afaik, the MAC level
+address is burnt into the card.
+
+there is also a way of using DNS to round robin IP addresses, i _think_
+you can define multiple PTR records and if one IP "times out" the resolver
+library tries the next IP in the list of PTRs.  I've only heard of this,
+you'd have to look into the implementation.
+
+All the services you talk about offer thier own versions of redundancy,
+you need to read more about the features offered by DNS and NIS and thier
+slave system capabilities.
+
+-Alfred
+
+On Sat, 25 Apr 1998, Hans Huebner wrote:
+
+> Hello there,
+> 
+> we're running some of our critial LAN services (NIS, DNS, mail etc.) on
+> FreeBSD.  The systems are quite stable, but from time to time we need to
+> take a system down for maintenance purposes.  Also, hardware problems can
+> cause unplanned down times.
+> 
+> I'm currently looking for a solution to configure a PC as a warm-standby
+> fallback server for the most important services (NIS and DNS).  To make a
+> failover to the fallback server as transparent to the users as possible,
+> it would be best if the fallback system could take over the ethernet
+> address of the failed server.  I've seen this work with certain
+> (expensive) Solaris configurations, and I'd like to do something similar
+> with FreeBSD.
+> 
+> I tried to implement DNS failover by moving our name service IP address to
+> another machine, but this resulted in severe client problems (most clients
+> fail to renegotiate the MAC adress with ARP within finite time).
+> 
+> Looking at the ifconfig manpage, I could not find a general way to set a
+> Ethernet card's MAC address.  Is there a documented solution to this
+> problem?  If not, would adding such functionality be problematic?
+> 
+> Any pointers, hints or suggestions are greatly appreciated.  I'd also be
+> interested in any reports on running two FreeBSD systems on one shared
+> SCSI bus.  I suppose the disk driver would need to be changed quite a bit
+> to make use of the RESERVE UNIT SCSI command to prevent access collisions.
+> 
+> Thanks,
+> Hans
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605033 ###
+===== 库内序 146590 | PK 2605033 | 等级 L3 =====
+DATE: 1998-04-26T14:48:11+00:00
+FROM: Jos Backus <jbackus@plex.nl>
+SUBJ: NO{_}SENDMAIL macro
+摘要: Jos Backus：询问宏名是 make.conf 的 NOSENDMAIL 还是 usr/sbin/Makefile 的 NO_SENDMAIL
+
+Is it NOSENDMAIL (src/etc/make.conf) or NO_SENDMAIL (src/usr/sbin/Makefile)?
+
+Cheers,
+-- 
+Jos Backus                 _/  _/_/_/        "Modularity is not a hack."
+                          _/  _/   _/                -- D. J. Bernstein
+                         _/  _/_/_/             
+                    _/  _/  _/    _/
+jbackus@plex.nl     _/_/   _/_/_/            use Std::Disclaimer;
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605034 ###
+===== 库内序 146591 | PK 2605034 | 等级 L3 =====
+DATE: 1998-04-26T15:23:57+00:00
+FROM: Jos Backus <jbackus@plex.nl>
+SUBJ: Re: NO{_}SENDMAIL macro
+摘要: Jos Backus：自纠拼写后重问宏名是 NOSENDMAIL 还是 NO_SENDMAIL，路径改为 usr.sbin/Makefile
+
+[Typo police. Grr.]
+
+Is it NOSENDMAIL (src/etc/make.conf) or NO_SENDMAIL (src/usr.sbin/Makefile)?
+
+-- 
+Jos Backus                 _/  _/_/_/        "Modularity is not a hack."
+                          _/  _/   _/                -- D. J. Bernstein
+                         _/  _/_/_/             
+                    _/  _/  _/    _/
+jbackus@plex.nl     _/_/   _/_/_/            use Std::Disclaimer;
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605035 ###
+===== 库内序 146592 | PK 2605035 | 等级 L4 =====
+DATE: 1998-04-25T15:45:36+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover
+摘要: Darren Reed：补充至少在 Sun 上可用 ifconfig le0 ether a:b:c:d:e:f 修改以太地址
+
+In some mail from Alfred Perlstein, sie said:
+> 
+> a combination of MX records (DNS), proper NIS slave servers and DNS
+> secondaries should take care of your problem.  Afaik, the MAC level
+> address is burnt into the card.
+
+At least on Sun's you can "ifconfig le0 ether a:b:c:d:e:f".
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605036 ###
+===== 库内序 146593 | PK 2605036 | 等级 L3 =====
+DATE: 1998-04-25T16:31:20+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover
+摘要: Eivind Eklund：回复 Hans Huebner 关于共享 SCSI 总线的问题，提到 Simon Shapiro 写过相关代码
+
+On Sat, Apr 25, 1998 at 03:11:21PM +0200, Hans Huebner wrote:
+> Any pointers, hints or suggestions are greatly appreciated.  I'd also be
+> interested in any reports on running two FreeBSD systems on one shared
+> SCSI bus.  I suppose the disk driver would need to be changed quite a bit
+> to make use of the RESERVE UNIT SCSI command to prevent access collisions.
+
+Simon Shapiro <shimon@simon-shapiro.org> has written code to do this
+for the DPT, specifically to enable FreeBSD to do HA.
+
+I've got the code here for commit, but need to do some re-writes for
+the splXX() use (at the suggestion of Bruce).
+
+Now it looks like I won't get time for it this weekend, either; I have
+to help fix up somebody else's botch at work :-(
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605039 ###
+===== 库内序 146596 | PK 2605039 | 等级 L3 =====
+DATE: 1998-04-25T19:06:44+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: threads performance 
+摘要: Jordan K. Hubbard：澄清自己想知道的是 FreeBSD 用户线程相比其他平台用户线程包为何慢，而非讨论内核线程
+
+> The issue of kernel threads is on my plate, I have been *ordered*
+
+I think he was still wanting to know (and I'm darn curious myself)
+why our *user* threads are so slow in comparison to the user thread
+packages on other platforms.  I'm not saying kernel threads aren't
+neat or needed, I'm just wondering what specific performance bogon
+we're suffering from in userland which makes it so?
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605040 ###
+===== 库内序 146597 | PK 2605040 | 等级 L4 =====
+DATE: 1998-04-25T19:13:57+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover 
+摘要: Mike Smith：说明许多 PC 市场网卡不允许改动出厂 MAC 地址，因此 FreeBSD 不提供改址设施
+
+> 
+> Looking at the ifconfig manpage, I could not find a general way to set a
+> Ethernet card's MAC address.  Is there a documented solution to this
+> problem?  If not, would adding such functionality be problematic?
+
+Many network adapters sold into the PC market do not allow the MAC 
+address to be changed from the factory-assigned value.  Because of 
+this, FreeBSD does not offer the facility to change the address (as it 
+wouldn't be a general solution).
+
+In your case, if you know the adapter(s) you're using, you could add 
+code to allow the change to be made.  This would involve implementing 
+the SIOCGIFHWADDR and SIOCSIFHWADDR (get/set hardware address) socket
+ioctls, which would be relatively simple.
+
+You could also obtain such work from a FreeBSD consultant for a very 
+reasonable sum, if you were willing to supply one of each of the 
+adapters you intended to use.
+
+> Any pointers, hints or suggestions are greatly appreciated.  I'd also be
+> interested in any reports on running two FreeBSD systems on one shared
+> SCSI bus.  I suppose the disk driver would need to be changed quite a bit
+> to make use of the RESERVE UNIT SCSI command to prevent access collisions.
+
+None of the filesystems supported by FreeBSD are suited to multiple
+consumers, so I'm not sure what you would hope to gain from such a
+thing.  If your intention was to be able to swap the disk set to the
+replacement server, you'd be better off with a SCSI switch.  FreeBSD
+systems don't tend to take very long to come up when suitably configured,
+so you could well just shut the primary server down, flip the SCSI 
+switch and then hit enter at the boot: prompt on your warm spare.
+
+As others have suggested, though, all of the services that you've 
+described already support redundant servers.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605041 ###
+===== 库内序 146598 | PK 2605041 | 等级 L4 =====
+DATE: 1998-04-25T19:17:27+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Tips needed about dynamic device registering 
+摘要: Mike Smith：建议照 sd 驱动的做法动态注册设备，并说明仍需要预创建的 /dev 节点
+
+> I need some tips how I should go ahead and register dynamic on boot time
+> disk drive device, simular like "device sd0". The raid controller I am
+> working on can have up to 32 "drives", which have mainly a read block
+> and a write block function. 
+
+Just do it like 'sd' does.  You'll still require precreated /dev nodes.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605043 ###
+===== 库内序 146600 | PK 2605043 | 等级 L3 =====
+DATE: 1998-04-25T20:40:45+00:00
+FROM: hans@artcom.de (Hans Huebner)
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover
+摘要: Hans Huebner：认为共用 SCSI 总线能把 HA 双机的停机时间压到最低，以此反驳改用 SCSI switch 的建议
+
+Hello Mike,
+
+In article <199804251913.MAA00572@antipodes.cdrom.com> you write:
+>None of the filesystems supported by FreeBSD are suited to multiple
+>consumers, so I'm not sure what you would hope to gain from such a
+>thing. If your intention was to be able to swap the disk set to the
+>replacement server, you'd be better off with a SCSI switch.
+A common bus would minimize the downtime of a HA pair.  Also, such a
+mechanism could allow for easy sharing of removeable media drives.
+
+>								FreeBSD
+>systems don't tend to take very long to come up when suitably configured,
+... and orderly shut down.
+
+>so you could well just shut the primary server down, flip the SCSI 
+>switch and then hit enter at the boot: prompt on your warm spare.
+This is fine as long as an operator is present.  Also, the downtime
+will be considerably longer than the time a ethernet address failover
+would require, since the latter involves no manual switching of
+SCSI busses and booting of servers.
+
+>As others have suggested, though, all of the services that you've 
+>described already support redundant servers.
+I'm aware of that.  I'd prefer failing over the ethernet address
+because it would also simplify the implementation of redundant
+servers.  This is because the server processes themselves only need
+to support orderly shutdown.  Designing a high availabilty mechanism
+at the application level is bound to be more problematic than failing
+over the server processes at the operating system level.
+
+For example, DNS client libraries usually allow for multiple name
+servers be specified in client libraries.  The order in which the
+servers are used for queries is often not specified and system
+dependant.  Many implementations just query the first server listed,
+and try the second if the first one does not respond in a few
+seconds.  Bad (existing) implementations do not share the information
+about name servers which are down among applications on the client
+system.  This usually leads to intolerable delays at the clients
+if the first listed name server goes down.
+
+Failing over the ethernet address is comple
+[…中段省略 204 字符…] e fact that
+the machine can have real identity on another network interface and
+perform useful work while being prepared for a failover.  The cold
+standby solution costs rack space and requires careful maintenance of
+the standby system to ensure that it is actually ready to perform
+the failover.
+
+Regards,
+Hans
+
+
+P.S.: Sorry for the improperly set Cc: in my last message.  Stupid me.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605046 ###
+===== 库内序 146603 | PK 2605046 | 等级 L3 =====
+DATE: 1998-04-25T22:14:01+00:00
+FROM: Hans Huebner <hans@artcom.de>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover 
+摘要: Hans Huebner：针对 IP 层接管功能等价的看法，指出 IP 层故障切换需要重新 arp 该地址
+
+> Why do it at the eternet level and not at the IP level? Doing it at the IP 
+> level will give the same functionality if the only protocol that you are 
+> using is IP. All the support is already there. Just set up two IP adresses
+> on the server that is covering for the failing server, the normal IP and the 
+> IP of the failing server. 
+Because that requires re-arping of the IP address in the failover case.
+Also, I'm not sure whether I want to restrict the HA configuration to IP
+only.  Supporting AppleTalk failover would also be useful.
+
+> If you do it at the ethernet level then the backup server can't be used for 
+> other things as its's ethernet adress will disapear if you change the ethernet 
+> adress on it.
+For a good HA configuration, multiple ethernet interfaces are useful
+anyway.  Also, many ethernet chips support multiple ethernet addresses on
+a single ethernet interface.
+
+Hans
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605048 ###
+===== 库内序 146605 | PK 2605048 | 等级 L4 =====
+DATE: 1998-04-25T22:29:09+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: threads performance
+摘要: John Birrell：指出在没有内核特殊支持时用抢占式调度器实现用户线程，必须依赖信号来触发上下文切换
+
+Christoph Toshok wrote:
+> On freebsd the performance is just abysmal.  Really, it's *awful*.
+> Just for kicks, I ported the thread api to NSPR (Netscape's Portable
+> Runtime) and the runtime for javac compiling a trivial .java file
+> drops from 39 seconds to 18 seconds.
+
+Implementing user-threads with a pre-emptive scheduler over a BSD
+kernel with no special support requires the use of signals to cause
+context switches. The thread library has to perform atomic operations
+that require signals to be blocked. It is this blocking and unblocking
+that affects performance in certain benchmarks.
+
+The second area where performance takes a hit is with FILE locking
+the way that POSIX specifies it. The worst case is that a fgetc()
+will lock and unlock the FILE with each call. If you want performance
+with FILE operations and you know that only one thread will be accessing
+the file, then the unlocked versions of the stdio functions will restore
+the lost performance. If the java VM implementation does it's own
+locking at object level (like Sun's implementation does), then the
+use of the unlocked stdio functions is a porting issue.
+
+This is where the use of the FreeBSD mozilla CVS repository will
+come in handy. Can you provide patches that will allow us to build the
+same executables in which you see the performance hit?
+
+Xig finally sold me Motif at the US domestic price so I can build now.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605052 ###
+===== 库内序 146609 | PK 2605052 | 等级 L4 =====
+DATE: 1998-04-25T23:19:11+00:00
+FROM: Mattias Pantzare <pantzer@ludd.luth.se>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover 
+摘要: Mattias Pantzare：ifconfig 会自动发出免费 ARP 来刷新邻居主机上的缓存
+
+
+> A lot of ARP caches will retain the original server's MAC address for
+> some number of minutes, so being able to take over the MAC address is
+> a very good thing.
+
+No, when you ifconfig a interface it will send a gratuitous ARP request. That 
+will update the ARP caches on the other hosts.
+
+Now if you are worying about lost packets you need to take a look at your 
+network... :-)
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605053 ###
+===== 库内序 146610 | PK 2605053 | 等级 L4 =====
+DATE: 1998-04-25T23:54:03+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: threads performance
+摘要: John Birrell：阻塞系统调用让延迟机制不值得，应集中做内核线程接口
+
+John S. Dyson wrote:
+> > Why this hurts so much be comparison to other platforms (which 
+> > supposedly also do this) is another question entirely.
+> > 
+> We need to use a deferred mechanism, a lot like our interrupt
+> code.
+
+The issue of blocking syscalls makes this "not worth doing". It would
+only be possible for -current, anyway.
+
+I'd prefer that we concentrate on the kernel thread interface so that the
+blocking syscall issue goes away. And with it goes the need to block
+signals.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605054 ###
+===== 库内序 146611 | PK 2605054 | 等级 L3 =====
+DATE: 1998-04-25T23:59:11+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: National Semi SONIC DP83932 support?
+摘要: Matthew N. Dodd 询问 KNE-3221 网卡 SONIC DP83932 芯片是否被支持
+
+
+I've got a pair of Kingston KNE-3221 EISA ethernet cards that use the
+National Semi. SONIC DP83932 chip.
+
+I had assumed that this was an NE2000 compatible chipset but now I'm not
+so sure.
+
+Anyone else have any info?
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605057 ###
+===== 库内序 146614 | PK 2605057 | 等级 L4 =====
+DATE: 1998-04-26T02:31:31+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: National Semi SONIC DP83932 support? 
+摘要: Mike Smith：SONIC DP83932 就是 SONIC，并不与 8390x 兼容
+
+> 
+> I've got a pair of Kingston KNE-3221 EISA ethernet cards that use the
+> National Semi. SONIC DP83932 chip.
+> 
+> I had assumed that this was an NE2000 compatible chipset but now I'm not
+> so sure.
+> 
+> Anyone else have any info?
+
+It's a SONIC, as the label says.  Not 8390x compatible as such, no.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605058 ###
+===== 库内序 146615 | PK 2605058 | 等级 L4 =====
+DATE: 1998-04-26T02:58:38+00:00
+FROM: Alex <garbanzo@hooked.net>
+SUBJ: Speaking of packaging tools..
+摘要: Alex：推荐一个只生成 ELF 二进制且不依赖 libc 的包生成工具改造 pkg 系统
+
+Here's a little something that was posted to the kde-devel mailing list.
+It only generates ELF binaries which isn't a huge problem, because it
+doesn't seem to use anything from libc.  Perhaps this could prove useful
+in revamping pkg_*.  And, yes, it does work nicely (without ELF libs).
+
+- alex
+
+"Contrary to popular belief, penguins are not the salvation of modern
+technology.  Neither do they throw parties for the urban proletariat."
+
+---------- Forwarded message ----------
+Date: Sat, 25 Apr 1998 17:51:20 -0500
+From: Timothy Whitfield <timothy@100webstreet.com>
+To: kde-devel@alpha.tat.physik.uni-tuebingen.de
+Subject: kinstallshield: CALL FOR TESTORS
+Resent-Date: Sun, 26 Apr 1998 02:04:43 +0200
+Resent-From: kde-devel@alpha.tat.physik.uni-tuebingen.de
+
+
+This call is not actually to test kinstallshield itself, being that it isn't
+written yet.  It is; however, to test the first baby step program that is
+working toward kinstallshield (still trying to come up with a better 
+name. any ideas?)
+
+The program is called bzip2se, and it creates self-extracting archives
+from tar.bz2 files.  It isn't a windowing program, but it is a baby step
+toward accomplishing an installer.
+
+You can find the self-extracting archive of it at
+ftp://dominion.datasync.com/pub/extract_se
+
+by next week sometime I should have the dns set so you can go to
+ftp://ftp.100webstreet.com/pub/extract_se instead
+
+(btw -- I am interested in keeping a binary shadow archive for kde
+ someone talk to me.)
+
+Anyone interested in "trying" to get it to work on other OS's please email me.
+This self-extracting archive was compiled on linux-2.0.33
+
+The self extractor creator itself should work on any elf based platform.  I
+would be VERY interested to know if it works on a.out or such.  Email me, and
+I will send it to you in a more portable format.
+
+THIS IS ALPHA-WARE!!! NO SPAM ABOUT NO AUTOCONF IN THIS DIST!
+I don't know how to use autoconf, I am investigating how to use autoconf, and
+this will be available in autoconf at a later date.
+
+tar and bzip2 are required to compress a file before making it self extracting.
+bzip2 is not required to unextract, but tar is.
+
+Seemed like it would be a waste to compile in tar when it is already on every
+unix and the whole point is to keep the overhead down on the self-extracting
+files.
+
+Thanks,
+Timothy
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605063 ###
+===== 库内序 146620 | PK 2605063 | 等级 L4 =====
+DATE: 1998-04-26T03:27:50+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Speaking of packaging tools.. 
+摘要: Jordan K. Hubbard：现有 pkg_add 格式本身就是打包木马示范，别推可执行包
+
+> Neat - but do we really want to go in the direction of packages that
+> can contain trojans?  Personally I wouldn't like running a
+
+Erm..  We've not only already gone in that direction, we reached the
+destination long ago and have spent enough time at the location to
+build a small town there.  The existing pkg_add format is a walking,
+talking demonstration model for creating packaged trojans and I'm not
+talking about condoms (rim shot) - the +INSTALL component of a pkg can
+be literally anything from a benign shell-script to a system-eating
+binary horror.  There are no checks on what it does save for the
+permissions available to the uid pkg_add is running as, that generally
+being root of course.  Packages aren't even SIGNED, as you well know,
+and it'd be essentially correct to say that the *BSD package system is
+completely, totally and utterly without any form of security
+whatsoever and is probably saved only by the fact that hacking it
+would prove no challenge whatsoever and hence isn't enough fun. :-)
+
+What I'm more curious to know about these self-extractors is
+where exactly they extract and how one controls that behavior.
+
+The biggest problem with executable packages is also, of course, the
+fact that people will typically use ftp to xfer them and they won't
+then run without the user knowing how to use chmod to set the execute
+bit.  This isn't a problem that pkg_add has to worry about with data
+files.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605065 ###
+===== 库内序 146622 | PK 2605065 | 等级 L4 =====
+DATE: 1998-04-26T03:46:45+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Speaking of packaging tools.. 
+摘要: Jordan K. Hubbard：不应该鼓励可执行包，签名包并附安装脚本警示才是目标
+
+> OK, so my wording was lousy.  What I *meant* is "do we want the
+> ultimate destination for the package system to be one where you run a
+> random executable some shadowy person has put on a web- or FTP-site,
+> instead of having nice, signed packages with warnings when they
+> include install-scripts or go outside their alloted filesystem arena?"
+
+No, you probably don't want to encourage executable packages if for
+no other reason than the fact that it's easier to hide bogus packages
+among good ones if all a package does is run itself.  If pkg_add is
+properly hardened, it can provide far more reliable validation.
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

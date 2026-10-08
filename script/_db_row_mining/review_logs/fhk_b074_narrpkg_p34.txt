@@ -1,0 +1,24 @@
+2605772|L3|Amancio Hasty：这是全新未占用的主设备号，驱动作者还有机会自己给设备起名
+2605773|L3|Studded 清理 ircd makefile 时卡住，贴出 SHELL THINGSTOCLEAN 与 clean 目标片段求指导
+2605774|L3|Robert Eckardt 问 FreeBSD 是否还有人做 NIS+ 客户端及进展，另问 Linux 支持能否通用、SecureRPC 是否完备
+2605776|L3|Nickolay N. Dudorov 问 Tau 驱动能否比同源的 Cronyx/Sigma cx 驱动得到更好的作者支持
+2605778|L4|vak@cronyx.ru：请把 99 tau 改名为 99 ct Cronyx/Tau serial adapter，并同步修正 42 cx 那条驱动注释
+2605779|L4|Allen Smith：pccard 移出 SUBDIRS 后，installworld 的 mtree 报 panic: fdesc attr 并重启系统
+2605781|L4|Jordan K. Hubbard：已改为 99 ct 并同步注释，下次请一次说清格式，并追问 Sigma 驱动维护不佳的说法
+2605782|L4|vak@cronyx.ru：FreeBSD 里的 Sigma 驱动版本确实过时，最新版一直可从 www.cronyx.ru 取，用户并不在意
+2605785|L3|Alexey Lukin 问是否有人在为 Intel Flash 2 系列 PCMCIA 卡写引导代码，他要做闪存卡启动的 FreeBSD 无盘路由器
+2605788|L3|Matthew Cashdollar 问 PPP 为何默认写成 /var/log/ppp.log 与 slip.log，其他日志文件都直接用名字
+2605791|L3|John Hay：最新 ntp4 检测到 sched_setscheduler 后按 SCHED_FIFO 取最低优先级调用，贴代码问用法是否妥当
+2605795|L4|Brian Somers：PPP 早期就叫这个名字，改成 syslogd 之后沿用了，没有好理由只是大家一直这么叫
+2605796|L4|Peter Dufault：SCHED_FIFO 与 SCHED_RR 同属 RTPRIO 类且共用调度代码，FIFO 不轮转而 RR 轮转，可抢占分时进程
+2605798|L4|Jordan K. Hubbard：顺带提议把名不副实的 -alias 标志逐步改名为 -nat
+2605799|L3|Eivind Eklund 认为改名或许可取，因为术语本身就容易让人混淆
+2605801|L3|Tom Secula 问有没有人做过 ISP 计费程序，能否读导出的 Cisco netflow 记录或轮询 ip precedence MIB
+2605802|L4|Greg Lehey：发布 vinum 首个 alpha 版 vinum-0.01，Berkeley 风格版权，功能大致等同 ccd 驱动，自动启动未完工
+2605806|L3|Brian Somers：改名问题不大，但为求一致 libalias 也得跟着改成 libnat，并 cc Charles 征询看法
+2605807|L3|Hellmuth Michaelis：宣布 1998 年 6 月 20 与 21 日在汉堡家中办 BSD 周末聚会，请自备睡袋与充气床垫
+2605808|L3|Jordan K. Hubbard：认为改用 transparent proxy 这个叫法只会让人与 socks 混淆，与是否走 RFS 无关都是坏主意
+2605809|L4|Andrzej Bialecki：称已收到两封互不相干的来信表示也在做 PCMCIA Flash 卡启动 FreeBSD，其中一人已成功
+2605811|L3|Darren Reed：询问 vinum 究竟是什么以及它未来会成为什么
+2605812|L3|Julian Elischer：说那个周末他要在 New Orleans 观光，去不了汉堡聚会
+2605816|L4|Peter Wemm：引 vinum README 首行说明它是 FreeBSD 的卷管理器，认为 Greg 发布时本该说清

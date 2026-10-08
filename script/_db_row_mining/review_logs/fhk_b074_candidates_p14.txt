@@ -1,0 +1,30 @@
+2605100|L3|Jason: 感谢 John Birrell 着手把信号处理改为单一 sigaction 集合并直接派发信号
+2605102|L3|Kaleb: 认为此次 SNAP 升级状况反常并附议，愿为有兴趣者补充信息
+2605106|L3|Birrell: 请 Terry Lambert 明确 ACAP 测试该由谁执行，因回信发给了 Jason 的邮件
+2605107|L4|Julian: 指出 DIVERT 设计缺陷，包经 NATD 重注入后对该规则获 immunity 而不再 REDIVERT
+2605109|L4|Richards: 认为各地进入 Euro 后可把本地货币符号替换为 Euro 符号，英国布局该符号 keycode 为 243
+2605110|L4|Dag-Erling: 称可设任意 MAC 地址但会显著拖慢性能，因硬件丢弃非本机包的工作要移到软件
+2605111|L3|Martti: 问最简便统计程序汇编指令总数的办法，gdb disassemble 只能逐函数反汇编
+2605112|L4|Tom: 实测 mit-pthreads 在 2.2.6-stable 稳定且略快于 libc_r，mysql 配 libc_r 可用但较慢
+2605113|L4|Luigi: 认同应改 DIVERT 语义，主张把 divert 视作包转发图，每节点挂一组规则并由匹配规则指定重启节点
+2605114|L4|Julian: 指出图式方案的问题在于过滤程序必须能自行指定包的去向
+2605116|L4|Hans: 建议用 objdump --disassemble 配 wc -l 减四行头统计指令数，并称 objdump 未收进 ports
+2605120|L3|Ron: 分享 Sarnoff 新集群页面，可从 www.sarnoff.com:8000 的 metacomputing 入口查看
+2605122|L3|Ben: 与 John Dyson 讨论共享与静态链接后欲联系维护者，ports 能取 MAINTAINER，基系统部分如何确定
+2605123|L3|Dirk-Willem: 致谢协助，已把 FreeBSD-2.2.x、PAO 与 X11 在 VAIO-505 上的配置经验整理发布成指南
+2605125|L4|Dave: 若能重编译可给 gcc 加 -S 保留汇编源码，再用 wc 数行数近似指令数
+2605126|L3|Brian: 问 ioctl group 字段是否有标准，自述将为新驱动定义 IOCTL 操作，头文件中 group 值存在重叠
+2605127|L4|Cross: 介绍 AIX 的 SIGDANGER 33 号信号在空间告急时由内核发出并默认杀进程释放内存，问 FreeBSD 能否实现
+2605128|L3|Branson: 转发 kirch.net/unix-nt.html 的 Unix 与 NT 对比论文称对本团队当前困境有帮助
+2605132|L4|Greenman: 认为提供禁用 ARP 的接口标志有用且成本近零，但说明这并非最终结论
+2605133|L3|Mike: 问能否只留 dmesg 列出的设备来定制内核，另问 wine 报 bad system call 是否因缺 SYSVSEM
+2605134|L4|Withrow: 承认 SIGDANGER 有价值但称它是 AIX 最愚蠢特性之一，会杀掉三小时编译或 emacs 这类最不该杀的进程
+2605135|L4|Gurney: 建议先看网页否则此类问题该发 freebsd-questions 而非 hackers，并确认可按 dmesg 裁剪内核设备
+2605136|L4|Greenman: 回应 wine 的 bad system call，指出 SYSVSEM 其实是一个内核选项
+2605139|L3|Warner: ctm 归档断电时只部分应用而 ctm_status 误报已应用，问有无按 md5 是否匹配决定处理的选项
+2605140|L4|Warner: 认为 OpenBSD/arc 已有 SONIC 驱动且源自 mac 移植，或可移植到 FreeBSD
+2605141|L4|Warner: 称按 dmesg 裁剪大体可行且必需设备极少，认为 npx 是唯一一个，并否认 SYSVSEM 只见于 Linux
+2605142|L3|Dodd: 表示会去查看该驱动的样子，并确认 NatSemi 数据手册正在打印中
+2605145|L3|Warner: 称刚用二分查找自行查完就收到该建议，另问是否有人遇 cvs 更新 share/dict 报 server aborted
+2605146|L4|Dodd: 称 NatSemi 提供 PC/TCP 参考驱动及针对 SONIC+PLX 卡的 Application Note
+2605148|L3|Dodd: 以戏谑口吻提议把扩展信号命名为 SIGDANGERWILLROBINSON

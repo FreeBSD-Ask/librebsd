@@ -1,0 +1,24 @@
+2605343	885	tom 指出网络缓冲区耗尽是 mbuf 不足所致，建议调大 MAXUSERS 或 NMBCLUSTERS，并称 dump/restore 在大文件系统上已坏，应把它从 FreeBSD 移除
+2605344	885	tom 补上一条观察，称 tx ethernet 网卡驱动似乎同样会丢失 mbufs，可见 mbuf 不足会影响不止一种网卡驱动
+2605345	885	stephen 反问这套工具是否真的在转译源码而不仅是做表层处理，并追问对方手里是否另有程序能处理运行时 pcode 一类问题
+2605348	885	sysadmin 想搭一台 simpleIRCD，希望有办法在消息进出该进程之前按词表把词移除或掩码，例如 PRIVMSG 里的词被替换
+2605349	885	amancio 建议直接从 blender 厂商自己的 ftp 站点去下载该程序，而不要从 FreeBSD 赞助的镜像处取
+2605352	885	julian 回应 Stephen 的疑问，反问 pcode 这个词从何而来，并直接说明该转换器做的事情是把源码翻译成 C 代码
+2605355	885	joerg 提议与 Greg 交换各自的测试程序以便复现并比对数据差异，同时贴出 Dell OptiPlex GXa 上 300 MHz PentiumPro 的实测数据
+2605356	885	greg 贴出自己基准测试程序的源码，指出该文件虽名为 getpid.c 却实际调用 getuid，并认为这表明触及了别的上限
+2605357	885	joerg 接 Greg 的说法认为那正是瓶颈所在，并补出最初版本与改写后的两段测试程序，后者用 gettimeofday 计时并统计每秒调用次数
+2605358	885	karl 自述每月用 dump 与 restore 备份 3 个 9Gig 文件系统，本机 12+Gb 每周备份，并追问 dump/restore 究竟坏在哪里
+2605359	885	andrew 称认识一位持有早期 BASIC 数学程序的人并打算说服其把程序迁到 FreeBSD，自称闻到了 CP/M 与 8080 的味道
+2605360	885	jkh 断言绝不会把 dump/restore 从 FreeBSD 移走，那一天就是地狱冻结的那天，以此劝退有人把它删掉的做法
+2605361	885	andreas 举 star 作替代并称自己的移植已在 ports 集合里，其作者曾被让接管 GNU tar 却因不喜代码而拒
+2605362	885	tomas 求 ATAPI 传输数据的文档，并述 CDIOCCLOSE 只在 GOLDSTAR 4x 上生效，Mitsumi 与 Aopen 的机位关不掉
+2605364	885	marc 自述负责为 NeoGeo 提供 Linux 与 FreeBSD 版本的咨询，想借此回应 Amancio 的看法，并称至今没收到一份 bug report
+2605366	885	christoph 自答先前用 KDE 浏览器查 FreeBSD 的 GNATS 数据库不正常，改用 netscape 才看到那两份报告，且显示它们仍是开着的
+2605367	885	jkh 表示此前并不知有人经 2.2.x-stuff 链接错误引用，说明正确路径应为 2.2.x-RELEASE/commerce，并建议把 blender 改用较新的 JPEG 库重链
+2605369	885	josh 指出 sunsite.unc.edu 上有把 QuickBASIC 转 C 的 qb2c 工具但称其用处不大，只有 Berkeley 风格许可这点尚可取
+2605371	885	stefan 指出 FreeBSD 的 ISA-PnP 代码目前仍依赖 BIOS 来初始化设备，PCI 则靠 BIOS32 接口，并引 Luigi 前说
+2605372	885	stefan 因 Asus 486SP3G 的 BIOS 无 PnP 支持而求不依赖 BIOS 配置 ISA-PnP 设备的方法，并希望把 NE2000-PnP-clone 插进老 386/25
+2605373	885	frank 建议改用 egcs 编译 Blender 并针对 pentium 生成代码，自称见过相对普通代码约 30% 的提速
+2605374	885	luoqi 提交 bin/6509 让 dd 改用 64bit 偏移，以便在普遍大于 2G 的磁盘上越过 2G 触及硬盘下半部
+2605377	885	dag-erli 述 2.2.6 上经 NFS 播大文件时服务器卡死，ping 报 no buffer space，把接口 ifconfig 下再上即愈，并求 mbuf clusters 配置经验
+2605378	885	dag-erli 指关键词过滤要么改 IRC server 要么写 proxy，因为据他所知任何应用层以下的层都做不了这件事

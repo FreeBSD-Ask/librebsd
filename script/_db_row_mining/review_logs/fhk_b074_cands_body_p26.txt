@@ -1,0 +1,886 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605419 ###
+===== 库内序 146976 | PK 2605419 | 等级 L4 =====
+DATE: 1998-05-05T07:39:23+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Terry Lambert：认为在驱动中调用 INT 10 通常不妥，需在期望 CLI/STI 下手动清掉内核侧未完成操作
+
+> We don't use bios calls for drivers however very recently someone checked in
+> code to make bios calls which can come in handy for video adapters video
+> modes.
+
+Making INT 10 calls is generally a bad idea.
+
+It requires taking down most of the outstanding operations manually
+from the kernel side, in the expectation of CLI/STI/etc..
+
+This is because it is common practice for video cards with DRAM,
+and some with "VRAM" (dual ported RAM) that have inherited BIOS
+code from a DRAM card, to disable all interrupts while doing any
+INT 10 processing.
+
+Specifically, I worked for a company that produced terminal emulators,
+and one of the modes it could operate in was a direct INT 10 call
+based interface (for compatability, without new drivers, with new
+hardware as it was released; it was a support stop-gap -- I design
+software for minimal engineering involvement in the support process,
+for the obvious reason that I am an engineer 8-)).
+
+We found an interesting problem, specifically with British Telecom
+and French Ministry of Defense users of the product.  It seems that
+keybuk.com and keybfr.com both trap the keyboard interrupt, and will
+process to completion, but are very timing sensitive.
+
+Because of the elongated timing of input processing (and, truly, the
+stupid way the keyboard driver wedges were glued in), when the local
+keyboard driver was installed, we would lose keystrokes.
+
+Without the local keyboard driver installed, we did not lose keystrokes.
+
+The culprit was the Paradise(tm) and ATI(tm) VGA cards in the machines
+that were being used at the installations.  Their INT 10 BIOS would
+disable interrupts, wait for a vertical blanking interval, and do the
+data writes during the interval to avoid producing visible artifacts.
+
+Because they wanted to not be interrupted between the time they saw
+the vertical retrace, and the time they did their work, they disabled
+all interrupts.
+
+
+While this may be an acceptable thing to happen on a single user
+system, it's *NOT* an acceptable thing to happen whenever the
+screen saver (for example) kicks in on your NFS server (please, no
+[…中段省略 605 字符…] es under which you let
+an INT 10 call be made.  The other calls ar not so timing critical
+(well, a floppy tape drive running program would probably fail, too),
+but INT 10 is a bear, if you emulate STI/CTI via VMM traps and CR4,
+where available.
+
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605420 ###
+===== 库内序 146977 | PK 2605420 | 等级 L3 =====
+DATE: 1998-05-05T07:41:09+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Terry Lambert：反对把 dump/restore 从 FreeBSD 移除，问已有大量离线存储用该格式，修好它有何不好
+
+>   Beware, dump/restore is also broken for large filesystems.  I personally
+> think that dump/restore should be dropped from FreeBSD.
+
+Why would this be better than fixing it, considering the amount of
+offline storage that already exists in dump format?
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605421 ###
+===== 库内序 146978 | PK 2605421 | 等级 L4 =====
+DATE: 1998-05-05T07:53:07+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Terry Lambert：认为 dump/restore 的裸文件系统访问本身是失误，按该理由也应删去 fsck
+
+>   Really?  Since dump/restore requires direct knowledge of filesystem
+> internals, it should probably be dropped for being a gross layering
+> violation alone.  Assuming it can even capture a consistant view of an
+> active filesystem (I doubt it myself).  dump/restore's idea of raw
+> filesystem access was a mistake.
+
+1)	You are not supposed to use it on mounted FS's.
+
+2)	By that reasoning, we should get rid of fsck.
+
+>   But dump/restore has been broken forever.  I hope that you don't have
+> any 4+GB filesystems that you are dumping, because you will get a nasty
+> surprise trying to restore it.
+
+The dump format would have to change to be 64 bits (or more).
+
+The fix is probably:
+
+	struct statfs	fssb;
+	off_t		tot;
+
+	if( statfs( path, &fssb)) {
+		perror( "statfs");
+		exit( EX_SOFTWARE);
+	}
+
+	tot = fssb.f_bsize;
+	tot *= f_blocks;
+
+	if( tot & 0xffffffff00000000LL) {
+		fprintf( stderr, "fs is too large for dump\n");
+		exit( EX_DATAERR);
+	}
+
+Meanwhile, break you FS's up; your backups will take less time, too.
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605424 ###
+===== 库内序 146981 | PK 2605424 | 等级 L3 =====
+DATE: 1998-05-05T07:52:09+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Call for testers for ThunderLAN ethernet driver
+摘要: Julian Elischer：称新驱动不破坏既有功能，建议拿到首条可用反馈后即提交入库，便于更多持 Compaq 机器者试用
+
+neat!
+since it's a new driver and doesn't break anyone's existing functionality,
+when you get the first "it works", then I suggest it be checked in
+so that teh rest of the world can easily try it out..
+particularly thise with compaq machines.. that'll get you a lot of testing
+a lot quicker..
+
+sounds like you've done a thorough job!
+
+julian
+
+
+On Tue, 5 May 1998, Bill Paul wrote:
+
+> Recently I had a couple of Compaq machines with integrated ethernet
+> controllers foisted on me, and was lucky enough to be able to install 
+> FreeBSD on one of them. Unfortunately, FreeBSD didn't support the Texas 
+> Instruments ThunderLAN (tm) ethernet chip in this machine, so I took it 
+> upon myself to write my own driver for it.
+> 
+> After a whole two weeks worth of work, the driver is more or less
+> complete (inasmuch as it works for me), and now I'd like to find some
+> other people to test it before I slap it into the tree. I'm especially
+> interested in testers for FreeBSD 3.0-current: I initially developed
+> this driver for FreeBSD 2.2.6 and have only been able to test it there.
+> I've made the necessary changes to make it compile on -current, but
+> I can't trash this machine to install a -current snapshot to test it
+> as it's now more or less in production.
+> 
+> The driver supports about a half-dozen Compaq Netelligent adapters and
+> Netflex integrated ethernet controllers. It also supports both the
+> ThunderLAN embedded physical interface (PHY) and external PHYs such as the
+> National Semiconductor DP83840A. It should also work with any other PHY
+> that is MII-compliant. With the DP83840A (or equivalent) PHY, both
+> 10Mbps and 100Mbps in half or full duplex are supported. The ThunderLAN's
+> built-in PHY only supports 10Mbps. Modes can be set either manually or
+> through autonegotiation.
+> 
+> Although I have not tested it, it should also support some Texas Instruments
+> ethernet adapters based on the ThunderLAN chip as well.
+> 
+> The driver is available at the following places:
+> 
+> ftp.ctr.columbia.edu:/pub/misc/freebsd/thunderlan.tar.gz
+> ftp.freebsd.org:/pub/FreeBSD/incoming
+[…中段省略 2241 字符…] ity, New York City
+> =============================================================================
+>  "It is not I who am crazy; it is I who am mad!" - Ren Hoek, "Space Madness"
+> =============================================================================
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605425 ###
+===== 库内序 146982 | PK 2605425 | 等级 L4 =====
+DATE: 1998-05-05T08:04:16+00:00
+FROM: Karl Pielorz <kpielorz@tdx.co.uk>
+SUBJ: Re: dump/restore broken?
+摘要: Karl Pielorz：问须在多大文件系统上测试，称自己两个 9G 与一个 12G 的 UFS 系统至今未失败
+
+Tom wrote:
+
+>   Perhaps, but dump/restore is broken for large filesystems.  Perhaps one
+> of the dump/restore advocates should fix it before a new user is swayed by
+> the rhetoric into using dump/restore, only to watch restore core dump on
+> large dumps.
+
+Just how large a file system does this need testing on? - I run it on 2 x
+9Gig UFS systems and one 12Gig UFS filesystem - and it's not failed yet
+(Typically the file systems are at around 70% capacity when running dump).
+
+If dump/restore really is broken - I'd kinda like to know now, although the
+results of our last disaster recovery test (i.e. take a blank machine and 2
+tapes) were successful...
+
+The only time I've seen problems with dump/restore was with a dodgy SCSI
+bus, in which case the dump would work fine - but the restore would either
+claim the tape was "not a dump tape", or it would core dump/panic at varying
+parts into the restore... Fixing the termination on the bus fixed this
+though - and it has been thoroughly tested...
+
+Regards,
+
+Karl Pielorz
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605426 ###
+===== 库内序 146983 | PK 2605426 | 等级 L3 =====
+DATE: 1998-05-05T08:09:11+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Terry Lambert：称需在 PnP BIOS 配置之外自带初始化的卡只能算 P，要在插接时真正起作用才算 nP
+
+> The fact that the card wants its own initialization, like any other
+> card in the world, does not mean it is not PnP,
+
+Sure it does.  If it wants it's own init on top of the PnP BIOS
+configuration, the card is just "P".  To be "nP", it has to actually
+"play" when you "plug" it.  8-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605429 ###
+===== 库内序 146986 | PK 2605429 | 等级 L4 =====
+DATE: 1998-05-05T06:53:25+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Luigi Rizzo：解释初始化指写 I/O 寄存器配置卡，如设 UART 波特率，OPTi931 仍需额外写入
+
+> > The fact that the card wants its own initialization, like any other
+> > card in the world, does not mean it is not PnP,
+
+for 'initialization' i mean writing bits to the io registers to
+configure the card to do the right thing (e.g. set the baud rate on a
+UART, or set the emulation mode on a sound card, etc.).
+
+The original poster mentioned the OPTI931 -- this card claims to be
+SB/WSS compatible, but you need to write to some of its registers to
+set the mode of operation you like, or just be happy with what the card
+does by default
+
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605430 ###
+===== 库内序 146987 | PK 2605430 | 等级 L4 =====
+DATE: 1998-05-05T08:47:56+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Dag-Erling Smørggrav：建议把 MAXUSERS 设为 64，服务器尤应如此，如此将拥有大量 mbuf
+
+Tom <tom@sdf.com> writes:
+> On 4 May 1998, Dag-Erling Coidan [iso-8859-1] Sm�rgrav  wrote:
+> > Tom <tom@sdf.com> writes:
+> > >   Not enough mbufs.  Increase MAXUSERS or NMBCLUSTERS
+> > Does anybody have a thumb rule for the amount of mbuf clusters needed?
+>   What are you at now?  If you have MAXUSERS set to 64 (which you should
+> probably do anyhow for servers), you will have a large number of mbufs.
+
+I have maxusers set at 64, which should give me 512 + 64 * 16 = 1536
+mbufs, but that is apparently not enough. I made world yesterday and
+recompiled my kernel with NBUF set to 2048 and NMBCLUSTERS set to
+8192. That ought to be enough (and with 128 MB of RAM, I'm not really
+short on memory)
+
+> You can use "netstat -m" to look at current usage, and the high-water
+
+I'll try that.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605432 ###
+===== 库内序 146989 | PK 2605432 | 等级 L3 =====
+DATE: 1998-05-05T09:37:33+00:00
+FROM: "Stefan Bethke" <stefan@promo.de>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Stefan Bethke：就 FreeBSD 是否经 BIOS32 接口配置 PCI 卡一事道歉，称自己本应先查源码再发言
+
+--On Mon, 4. Mai 1998 22:42 Uhr +0200 "Stefan Esser" <se@freebsd.org> wrote:
+
+
+> On 1998-05-04 13:41 +0200, Stefan Bethke <stefan@promo.de> wrote:
+>> Also, for PCI, FreeBSD relies on the BIOS32 interface for card
+>> configuration.
+> 
+> Really ?
+> 
+> And I thought I did know the inner workings of the PCI code ... ;-)
+
+Sorry. I better look into the source before making claims...
+
+Btw., you might want to adjust the comments in sys/i386/isa/pcibus.c, they
+might prove to be somewhat misleading.
+
+Sorry,
+Stefan
+
+
+--
+Stefan Bethke
+Promo Datentechnik      |  Tel. +49-40-851744-18
++ Systemberatung GmbH   |  Fax. +49-40-851744-44
+Eduardstrasse 46-48     |  e-mail: stefan@Promo.DE
+D-20257 Hamburg         |  http://www.Promo.DE/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605434 ###
+===== 库内序 146991 | PK 2605434 | 等级 L4 =====
+DATE: 1998-05-05T10:34:35+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: dump/restore - broken?
+摘要: Dag-Erling Smørggrav：调侃对方论断气魄太小，并以本机根分区 df 实测逾 310M 块为证
+
+Karl Pielorz <kpielorz@tdx.co.uk> writes:
+> If we took every drive in the building, and CCD'd them all together - we
+> might _just_ make it to the 100Gb mark - which is 1/10th of a Terabyte, so I
+> don't think we have to worry about that for a while... :-)
+
+What a wimp :)
+
+dag-erli@hrotti ~$ hostname
+hrotti.ifi.uio.no
+dag-erli@hrotti ~$ df | awk '{ n += $2 } END { print n }'
+310254931
+
+And that's not counting the local disks in the 100+ workstations in
+the building (500 MB in each Indy, 1.5 GB in each Ultra, totalling
+around 150 GB)
+
+Unfortunately, not a single one of these boxes runs FreeBSD (then
+again, none of them are Intel boxes either...)
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605436 ###
+===== 库内序 146993 | PK 2605436 | 等级 L3 =====
+DATE: 1998-05-05T13:04:31+00:00
+FROM: Alexey V Ivanov<subbsta@surnet.ru>
+SUBJ: 
+摘要: Alexey V Ivanov：新加入列表，询问如何收取 FreeBSD-hackers 邮件及 Digiboard 卡驱动该传到何处
+
+Hello.
+I'm new in this group.
+And i have some questions.
+1. How can i read mail from FreeBSD-hackers@freebsd.org
+2. I'm research driver for Digiboard PC/Xem, PC/Xr, PC/Xeve, PC/Xe, PC/Xi on freebsd. and where i can upload it.
+3. I'm research tacacs server with mSQL database support.
+4. in few days later im finish research driver for Compaq Ethernet adapter.
+if any body see me write me please.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605438 ###
+===== 库内序 146995 | PK 2605438 | 等级 L3 =====
+DATE: 1998-05-05T13:12:59+00:00
+FROM: "James E. Housley" <housley@pr-comm.com>
+SUBJ: ftp.gulf.net
+摘要: James E. Housley：报告 ftp.gulf.net 的 sendmail_additions SPAM 名单许久无响应
+
+I have noticed that ftp.gulf.net, used the the sendmail_additions, for
+the SPAM ips and domains is not responding and hasn't for a while.  Is
+that list available else where?
+
+Jim
+-- 
+ James E. Housley                            PGP:   1024/03983B4D
+ PR Communications, Inc.                     2C 3F 3A 0D A8 D8 C3 13
+ www.servtech.com/public/pr-comm             7C F0 B5 BF 27 8B 92 FE
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605439 ###
+===== 库内序 146996 | PK 2605439 | 等级 L4 =====
+DATE: 1998-05-05T14:13:14+00:00
+FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM>
+SUBJ: an interesting problem with pkg_add
+摘要: Ron G. Minnich：pkg_add 经 FTP 取包时按 Ctrl-C 中断，随即见 rm 自根目录起删除整盘
+
+Here you go: I ran the following:
+pkg_add -f ftp://ftp.freebsd.org/pub/FreeBSD/CVSup/cvsupit.tgz
+
+Then I ^C because as usual our network connection got awful. 
+
+As i write this, there is an rm -r running on /. I am losing my system. 
+I'm going to let it go because it got too far before I caught it, the 
+following clued me in:
+
+rm: /proc/0/segs: Read-only file system
+rm: /proc/0: Read-only file system
+etc, etc, etc.
+rm: /proc: Device busy
+
+
+It will be interesting to see how long this machine lasts with this rm 
+running :-)
+
+anyway I think this indicates a bug in pkg_add :-) 
+
+Eating all of one's hard disk is hardly a good thing. Guess I'll run 
+linux on this machine for a while, til i get over the shock.
+
+ron
+
+
+Ron Minnich                |Java: an operating-system-independent, 
+rminnich@sarnoff.com       |architecture-independent programming language
+(609)-734-3120             |for Windows/95 and Windows/NT on the Pentium
+ftp://ftp.sarnoff.com/pub/mnfs/www/docs/cluster.html 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605442 ###
+===== 库内序 146999 | PK 2605442 | 等级 L3 =====
+DATE: 1998-05-05T15:01:31+00:00
+FROM: Jonathan Lemon <jlemon@americantv.com>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Jonathan Lemon：认同在驱动中调用 INT 10 不妥，称自己只是为感兴趣的开发者多提供线索
+
+On May 05, 1998 at 07:39:23AM +0000, Terry Lambert wrote:
+> > We don't use bios calls for drivers however very recently someone checked in
+> > code to make bios calls which can come in handy for video adapters video
+> > modes.
+> 
+> Making INT 10 calls is generally a bad idea.
+
+First off, let me say that I agree with this.  I'm just providing more
+rope for interested developers.  :-)  Besides, wasn't it you who wanted
+an INT 10 disk-driver as a fallback mechanism?
+
+
+> It requires taking down most of the outstanding operations manually
+> from the kernel side, in the expectation of CLI/STI/etc..
+
+But this is wrong.  Our real-mode INT calls are done in a vm86 sandbox,
+so they never actually get their grubby hands on the actual PSL_I bit.
+This will probably break things that are timing sensitive, but I'd argue
+that those things are better suited for a real kernel driver anyway.
+
+[ snippage of timing-related issues due to interrupts being disabled ]
+
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605443 ###
+===== 库内序 147000 | PK 2605443 | 等级 L4 =====
+DATE: 1998-05-05T15:18:45+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: 3D "blender" package from NeoGeo now released.
+摘要: sbabkin：称用 XFree86 与 CL5462 显卡启动 blender 无碍，家目录无 .B 文件亦可，当前目录有即可
+
+> ----------
+> From: 	Brian Cully[SMTP:shmit@kublai.com]
+> 
+> I had the same problem Chris describes, but it had to do with not
+> coping
+> the .B.blend and .Bfs files into my home directory.
+> 
+I had no problem with starting it with XFree86 and CL5462 graphics
+card. Even without .B* files in home directory (but with them in
+current directory).
+
+> It's a pretty slick package, but DOG slow on my P-166.
+> 
+I have AMD K6/233. I tried to run only one tutor that seemed smaller, 
+tutor2 with sphere and box and after I started animation as described,
+Blender ate all the processor power but I got absolutely no effects
+on the screen. May be someone can please point me what I did wrong ?
+Another question is how to exit from Blender ? It seems to be quite
+not obvious and I have found no answer in manual. The only way I found
+was to kill it from another session. Thanks!
+
+-Serge
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605446 ###
+===== 库内序 147003 | PK 2605446 | 等级 L4 =====
+DATE: 1998-05-05T15:28:59+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: an interesting problem with pkg_add 
+摘要: Jordan K. Hubbard：称 pkg_add 一两个版本前确有此行为，现已远不激进，自己最终修好该缺陷
+
+> Eating filesystems for breakfast is very bad program behaviour.  BAAD
+> program.  Go sit in the corner the next two hours ;-)
+
+It used to do that a revision or two back, but pkg_add has been a much
+less ambitious remover of files for some time now.  I can only
+conclude that the poster had a pre-2.2.6 version of pkg_add there?
+It's been extensively reported on, in any case, and I *did* fix the
+bug finally. :-)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605448 ###
+===== 库内序 147005 | PK 2605448 | 等级 L4 =====
+DATE: 1998-05-05T16:37:44+00:00
+FROM: Jacques Vidrine <n@nectar.com>
+SUBJ: Re: an interesting problem with pkg_add 
+摘要: Jacques Vidrine：称 pkg_add 未以 root 运行并中断会删除当前目录文件，见于 2.1.5 至 2.2-GAMMA
+
+-----BEGIN PGP SIGNED MESSAGE-----
+
+
+
+Just FYI, FWIW.
+
+This has bitten me in the past.
+
+I'd start a pkg_add, forgetting to be root first.  Upon realizing I was not 
+root, I hit ^C.
+
+Boom, no more home directory.  Apparently, rm -rf * in your current working
+directory.
+
+After two times, I've not ^C'd pkg_add ever again.  
+
+This was in the 2.1.5 - 2.2-GAMMA timeframe that I saw the behavior.
+
+Jacques Vidrine <n@nectar.com> 
+
+On 5 May 1998 at 16:51, Eivind Eklund <eivind@yes.no> wrote:
+> On Tue, May 05, 1998 at 10:13:14AM -0400, Ron G. Minnich wrote:
+> > Here you go: I ran the following:
+> > pkg_add -f ftp://ftp.freebsd.org/pub/FreeBSD/CVSup/cvsupit.tgz
+> > 
+> > Then I ^C because as usual our network connection got awful. 
+> > 
+> > As i write this, there is an rm -r running on /. I am losing my system. 
+> > I'm going to let it go because it got too far before I caught it, the 
+> 
+> I'm assuming you mean that an 'rm -rf' is going on your system?
+> Otherwise, I can't see anywhere where it could have come from pkg_add.
+> 
+> > It will be interesting to see how long this machine lasts with this rm 
+> > running :-)
+> > 
+> > anyway I think this indicates a bug in pkg_add :-) 
+> 
+> I'd guess it does.  Sounds like the PenLocation variable of pkg_add
+> has been garbled somehow - this can (theoretically) happen if your
+> quit-signal comes while the filename is being copied into that
+> variable.
+> 
+> This probably mean we should add some locking here - but I don't know
+> how easy it will be to do.
+> 
+> > Eating all of one's hard disk is hardly a good thing. Guess I'll run 
+> > linux on this machine for a while, til i get over the shock.
+> 
+> Eating filesystems for breakfast is very bad program behaviour.  BAAD
+> program.  Go sit in the corner the next two hours ;-)
+> 
+> Actually, I guess it was lucky you were the one that was caught by
+> this - if I've understood correctly, you have good
+> error-recoverability.  It would probably have been more of a disaster
+> for a random user.
+> 
+> Eivind.
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: 2.6.2
+
+iQCVAwUBNU9AWDeRhT8JRySpAQFxNgP+NsxnOecpfODodbzQ9vvDn6xYaSxEjHwN
++8zxUsXQ285vZfZ4Ql+HhhGzvNPKzpBrhe8Jjf4C+i2UF61X8Noue1oWkmUQkxT8
+9OK/poDm2OAIm55AkqyLqHy86nj24/FuaymtTUbwBEr4o9gA8SgBJFXi5Ngps/xf
+6MbVTSuOT0A=
+=EFdo
+-----END PGP SIGNATURE-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605450 ###
+===== 库内序 147007 | PK 2605450 | 等级 L3 =====
+DATE: 1998-05-05T16:52:16+00:00
+FROM: Frank Ederveen <frank@our.domaintje.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Frank Ederveen：问 sbabkin 是否试过按 q 退出 blender，并建议在手册加入键位功能表
+
+sbabkin wrote:
+> Another question is how to exit from Blender ? It seems to be quite
+> not obvious and I have found no answer in manual. The only way I found
+> was to kill it from another session. Thanks!
+
+Tried 'q' ? A table of keys/functions would be extremely welcome, and
+shouldn't be too hard to come up with for someone who knows Blender well.
+
+Regards,
+
+FrankE
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605451 ###
+===== 库内序 147008 | PK 2605451 | 等级 L3 =====
+DATE: 1998-05-05T16:52:52+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: an interesting problem with pkg_add
+摘要: Snob Art Genre：称 2.1.5 时代 pkg_add 中断只吃掉其家目录，JKH 言该缺陷于 2.1.6 修复
+
+I had this happen to me back in the days of 2.1.5, only it was just my
+home directory that got eaten.
+
+JKH assured me that the bug was fixed in 2.1.6.  :-(
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605452 ###
+===== 库内序 147009 | PK 2605452 | 等级 L3 =====
+DATE: 1998-05-05T16:58:44+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: Character major number request: loopback ethernet
+摘要: sbabkin：请分配 loopback 伪以太网驱动的字符主设备号，驱动名 loe 供 pcemu 取网络接口
+
+Hi!
+
+Should I have sent this request to -current instead of -hackers ?
+
+I would like to get the character major number for loopback 
+pseudo-Ethernet driver. This is intended to be used as interface
+for network access from pcemu (and may be from other emulators
+also in future). The current driver name is "loe".
+
+This driver has two access methods, network and character. The first
+one is for access from FreeBSD, the second one for emulators.
+
+The device is configured like 
+
+  pseudo-device loe 4
+
+that brings up network interfaces loe[0-3] and character devices
+/dev/loe[0-3]. All of them are connected to the same virtual Ethernet
+bus. Each logical interface can be configured in FreeBSD or
+used as interface for pcemu (one pcemu for one interface, so
+in the example above one interface must be configured in FreeBSD
+for routing and 3 interfaces can be used to run 3 copies of pcemu
+with network access simultaneously).
+
+-Serge
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605457 ###
+===== 库内序 147014 | PK 2605457 | 等级 L4 =====
+DATE: 1998-05-05T18:01:14+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: an interesting problem with pkg_add 
+摘要: Jordan K. Hubbard：pkg_add 清理代码曾有两个缺陷，都会在按 ^C 时清空当前目录，其中一个已在 2.1.5 后修复
+
+> I had this happen to me back in the days of 2.1.5, only it was just my
+> home directory that got eaten.
+> 
+> JKH assured me that the bug was fixed in 2.1.6.  :-(
+
+There were two bugs in the cleanup code.  One removed everything in
+the current directory on ^C if you whapped it at just the right time
+and I fixed it right after 2.1.5 came out.  The other bug removed
+everything the current directory on ^C if you whapped it at just the
+right time and I fixed it right after 2.2.5 came out. :-) [yes, exact
+same symptoms, different bugs].
+
+I know these bugs were extremely pathological and if I hadn't already
+done my best to chase down and fix them, I'd feel a lot worse than I
+do right now about it.  Having fixed it (knock on wood), all I can say
+at this stage is "man, I'm sorry Ron!  I hope you had backups and I
+only wish you'd hit ^C *after* the package tools had been upgraded to
+2.2-stable!"  :-)
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605458 ###
+===== 库内序 147015 | PK 2605458 | 等级 L3 =====
+DATE: 1998-05-05T18:17:45+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Amancio Hasty：说明退出 blender 只需按 q，并指手册中已经写明
+
+To exit hit "q" and that is on the manual.
+
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605459 ###
+===== 库内序 147016 | PK 2605459 | 等级 L4 =====
+DATE: 1998-05-05T18:39:40+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：说明 FreeBSD 上只有非官方的 Legato 2.2.x 客户端可用，Legato 服务器没有 FreeBSD 版本
+
+
+On Tue, 5 May 1998, Ollivier Robert wrote:
+
+> According to Tom:
+> >   There is also the commercial BRU for FreeBSD.  It does compression by
+> > file, and has great verify features.
+> 
+> For larger (and richer) environments, there is an unofficial Legato client
+> for 2.2.x. I've been using it for more than 4 months at work and it is
+> working really fine.
+
+  But the Legato server is not available for FreeBSD.
+
+  If you have only a moderate amount of data to backup, you might as well
+just backup to other cheaper disks.  I setup an NFS server with 4 x 8.4GB
+IDE drives just for backups.  The disks are slow and unreliable by disk
+standards, but fast and reliable by tape standards.
+
+> -- 
+> Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+> FreeBSD keltia.freenix.fr 3.0-CURRENT #8: Tue Apr 21 02:45:53 CEST 1998
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605463 ###
+===== 库内序 147020 | PK 2605463 | 等级 L3 =====
+DATE: 1998-05-05T21:47:52+00:00
+FROM: Stefan Esser <se@FreeBSD.ORG>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Stefan Esser：反问 pcibus.c 注释到底哪里会造成误导，并追问对方用的是 FreeBSD 哪个版本
+
+On 1998-05-05 11:37 +0200, Stefan Bethke <stefan@promo.de> wrote:
+> Btw., you might want to adjust the comments in sys/i386/isa/pcibus.c, they
+> might prove to be somewhat misleading.
+
+Hmmm, what's wrong with the comments in that file ?
+Under which version of FreeBSD, BTW ?
+
+Regards, STefan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

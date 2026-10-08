@@ -1,0 +1,24 @@
+2606006	885	grindle 今晨 cvsup 更新后编译 -stable 内核，加载时报无法解析 isa_devtab_cam，他在 ioconf.c 补了该数组作临时修补；另报同一 ide 链上两台 cdrom 只被 FreeBSD 认出主盘
+2606007	885	hermit 配 anoncvs 未果，按手册示例把 CVSROOT 设为 anoncvs@anoncvs.freebsd.org:/cvs，checkout ls 与 co ls 都回 cannot find module
+2606012	885	carl 连问四题，问 BPF 能否监控出方向数据包及由其他协议写入的包，问 Solaris 的 Network Interface Tap 能否双向监控，问 socket 层有无类似接口，又问 HP-UX、Linux 与 AIX
+2606013	885	andreas 称赞 Hellmuth Michaelis 挂出的那页网页不错，建议顺手也给 Paul Henning Kamp 送一份副本，签名里附自建主页并写着 NT 意为 Not Today
+2606014	885	jason 提醒说不能忘记 DNARD 的设计已被其他公司采用，很快能看到别家厂商推出的 DNARD 机型，签名标注他就职于 NASA Ames Research Center，署名 Jason R. Thorpe
+2606017	885	mike 对四个问题逐条作答，第一条答 Yes 并称做个简单测试就能看出这一点，第二条同样答 Yes，第三条答 No，第四条说多数系统都有类似机制，随后建议直接采用 libpcap，因为它已在多数平台之上提供统一抽象
+2606020	885	stefan 想固定某个 tty 与 ppp 单元的对应以配合 ipfw 与计费，指出 ppp_tty.c 与 if_ppp.c 中 pppopen 调 pppalloc 只选第一个空闲单元，建议新增 PPPIOSUNIT 让 pppd 指定单元
+2606021	885	eivind 回话说 mIRC 据报道能与 WINE 完美配合运行，而且这个说法已经流传很多年，他顺手称对方是 mIRC 狂热者，末尾只签了一个 Eivind
+2606023	885	carl 谢过 mike 后追问 BPF 一类设备能否拦截路过的包，具体是拦住出站包修改其中如目的端口的内容再注入 NIC，还是拦截入站包改写后送回更高层协议与应用，末尾署名 Carl
+2606024	885	barry 说一台 compaq 桌面机跑 2.2.6 承担 YP、DNS、sendmail 与 pop，近两天 fork 出几十个 inetd 却不完成 popper 的 exec，top 也停止显示 CPU 状态且全为 0.0%
+2606027	885	dan 认为对方要的是 divert(4) 这一机制，并指出 natd 就是靠它实现的，签名处署 Dan Janowski，来自 Triskelion Systems，地址在 Bronx
+2606028	885	manar 回忆说 strongarm 上不见 freebsd 移植，netbsd 移植却成熟，早期因历史原因也叫 RiscBSD，相关者后来改投 NetBSD，并成立 Causality，其合资公司 ChalTech 正推出能跑 NetBSD/Arm 的主板
+2606030	885	tatu 推测该脚本可能同时向 stdout 与 stderr 输出，Ssh 会把这两路数据分开传递，两边同时写入时数据到达顺序没有任何保证，签名列出 SSH Communications Security
+2606031	885	soren 解释 IBM 选 8088 的原因，说设计团队想要超过 8 位又不想上满 16 位，因当时多数外设芯片只有 8 位而 DRAM 仅 x1 型，约 1980 年只有 Intel 的 8088 合用，Motorola 当时只有 68000
+2606032	885	jaye 说完全相同的问题与解法自己早在很久之前就已报过，3.0 没有问题，2.2.5 则频繁崩溃，末尾留言说很高兴这次奏效了，并附转引 Igor Timkin 关于升级后服务器已运行多日未再崩溃的经过
+2606034	885	mike 明确回答不能，说拿到的只是此前已经路过的包的副本，因此无法改写后再送回；他重申对方需要的是 divert(4) 机制，并说据他所知前述系统都没有这种能力，必须自己加内核内组件，研究实现可看 Darren Reed 的 ipfilter
+2606036	885	andrew 就其他厂商将推出相关机型一事追问具体细节，说自己要是价钱够便宜就很想要一台，签名只署 Andrew，末尾附了 Ken Thompson 那句硬盘稳定状态就是满的名言
+2606037	885	don 补充说 SunOS 4.x 上的 NIT 只能查看入站包，因为只有一台 Sun 就无法同时查看会话两侧；Solaris 2.x 里对应特性名为 Data Link Provider Interface，他不确定这一限制是否同样存在
+2606040	885	jonathan 以 Huh 回应 Chuck Robey，指出寄存器重命名从架构视角看只指片内寄存器即 reservation stations，而非编译器可见的外部寄存器，内部寄存器由 reorder buffer 在执行末提交或 squashed
+2606044	885	mahlon 说明下载好要用的 theme 之后不要 untar，把 exec /usr/X11R6/bin/enlightenment -theme 加上主题路径写进 .xinitrc 即可，末尾署名 Mahlon，答复的是 Chris Silva
+2606046	885	andrzej 新建列表 freebsd-small 讨论小型与嵌入式 FreeBSD 安装，向 majordomo@freebsd.org 发 subscribe freebsd-small 即可加入，议题涵盖启动流程、外设与配置以及 PicoBSD 特例
+2606047	885	peter 自曝网络底子浅，说刚拿到一台在 UDP 端口讲 ASCII 的设备，想在不写程序的前提下先试探它，该设备是 Keithley SmartLink，属 68K 系列的小型数据采集装置，可挂在 ethernet 上，署名 Peter Dufault
+2606048	885	carl 自述两年前做过链路层拦截驱动，近期刚完成 socket 层拦截项目即 WinSock2 的 LSP，需把这些 Windows 代码移植到 UNIX 平台，并追问 divert() 版 ipfilter 工具在哪可取，认为 BPF 与 DLPI 只够监控
+2606049	885	jkh 转发 Eileen Cohen 来信，问 ;login 是否为 FREENIX 会场各分组的报告写摘要的人，并追问同样会参加 USENIX 的有人接手吗，自己说眼下不会再报名任何写作任务

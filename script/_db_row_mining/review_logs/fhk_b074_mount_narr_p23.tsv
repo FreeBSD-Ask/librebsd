@@ -1,0 +1,24 @@
+2605311	885	mike 自述花三十万美元做 POP 改造，把几个站点换到带 PRI 接口的 Enterprise Network Hubs，本端必须全程 100% digital，并追问 AntiOnline 的 I/O 里 Annex 盒子 port 5000 问题是配置失误还是标准行为
+2605312	885	dag-erli 反问对方程序跑的时候有没有看过机器负载，指出把所有字段都设成 0 会让终端进入 raw 非阻塞模式，于是陷入不断读 EOF 的空转循环很不划算，建议改用 cfmakeraw，但许多广泛流通的商用系统缺少它
+2605313	885	julian 给出做引导软盘的步骤：取普通软盘 format，disklabel 会自动加 bootblocks，没有就加 e-B 选项显式添加，再 newfs 与 mount，写一个内容为 1:sd(0,a)/kernel 的 boot.config，最后 unmount 试跑
+2605314	885	spork 自述为了让 mit-pthreads 在 3.0 下跑起来不得不做几处 ugly hacks，换来明显更好的 performance 与更长 uptime，现在已经接近一周没重启，他视之为重要里程碑
+2605316	885	greg 回复 Julian 说但愿如此，并认为记不住自己当初写的语言本该是大多数编译器的通行要求，落款只写 Greg，另注明可用 finger 取 PGP public key
+2605317	885	joe 提醒 VAX 曾有 WCS 即可写控制存储选配，因此能自定义指令集，Pentium II 也具备 boot-time 更新 microcode 的能力，许多较新的 BIOS 都支持这一特性
+2605318	885	doug 就 Omar Thameen 的追问回答 Yes，确认 login class 信息会在 shell 之间继承，落款自己在 University of Oregon 任 Residence Networking Assistant
+2605319	885	doug 询问 BIND 4.9.7 何时进入 source tree、是否有人在跟进，因 4.9.6 已存在重大 security bugs 需要加快这次升级，末尾向收件人致谢
+2605320	885	Studded 说 Peter 当天在处理，自己 cvsup 后编出的 -stable 里 named 已是 4.9.7-T1b，-current 也有，会升到 8.1.2 beta，Paul Vixie 近日放出 gold versions，文末署名却是 Doug
+2605321	885	luigi 发问 Windows95 怎么在 dedicated line 上跑 ppp、是否支持 soft flow control，因为 Win95 配置似乎只提供经 modem 的 ppp 接入，连接前后虽能调出 terminal，却仍强行下发 modem 命令并卡死
+2605322	885	matthew 回称有人为 win95 的 modem 驱动程序配置控件写过 null-modem 定义，他上次试用时工作正常，落款附 winter@jurai.net 与站点 http://www.jurai.net/~winter
+2605323	885	dan 提出有些 boot 进程需要的资源比 normal daemons 该拥有的更多，问是否有明确办法让 init 的 login.class 套用到前台 boot 进程，而后台进程仍以 daemon.class 生成，待 init 结束即完成启动流程
+2605324	885	nicolas 连问四个 PnP 问题：Microsoft-ISA PnP 有无进展、是否该相信 BIOS 已代劳并只在 power up 时取回信息、PCI PnP 与 ISA PnP 的交互、sound-PnP 是否支持，另自述本想写并口 chipset 代码
+2605326	885	luigi 提醒 PnP 在不同总线上的实现方式并不相同，PCI、ISA、parallel port、serial ports 各有各的，并说 2.2.6 已有 ISA PnP 支持、2.2.X 的补丁挂在他自己的网页上，也可 boot 时加 -c 手动覆盖 PnP 配置
+2605327	885	luigi 反驳说系统完全不依赖 BIOS 的说法是错的，光是从磁盘 boot 就用到 BIOS services，PCI 与 ISA-PnP 设备的资源同样由 bios 分配，随后落款自己在 PISA 的联系方式
+2605328	885	chuck 澄清原意是驱动不调用任何 bios routines，boot 并非 FreeBSD 完成所以他当时说法仍成立，并追问 PnP assignment 是否 FreeBSD 取得控制前已做完、是否从不调用 bios code，连 remapped code 也算
+2605331	885	Atipa 回复 Luigi 建议找 direct modem connection 并单独安装，它支持 null-modem 与 laplink 即并口，所以专线不成问题，文末却只署名 Kevin
+2605333	885	amancio 说有时确实要靠 BIOS 做 PnP initialization，若设备不需超出 PnP bios 所给的初始化，FreeBSD 驱动就无须再动，而 GUS PnP sound card 仍需额外初始化，并呼吁为 legacy 系统做总线无关层
+2605334	885	amancio 表示驱动并不使用 bios calls，但最近有人 checked in 一段会调 bios 的代码，这对 video adapters 的 video modes 会有帮助，落款只写 Cheers 与 Amancio
+2605336	885	amancio 只发一句追问，问有没有人真的在 trying out 这个 wonderful package，随后仅落款 Amancio，正文未给出任何试用结果或版本信息
+2605337	885	opsys 下载后在 -current 上试跑，程序 fires up 后屏幕很快变蓝随即 core dump，之后一切恢复正常，他自述没花太多时间折腾，怀疑是因为软件只适配 2.2.5 与 2.2.6，落款 Chris
+2605339	885	amancio 认为这不是 2.x 与 3.x 的问题，因为自己在 -current 上跑通了 blender，请对方贴出 stack trace，并说明有些程序在特定 color depth 下会出问题，最好同时给出 resolution
+2605340	885	amancio 说 linux 领先的原因之一是对 blender 这类关键技术反应冷淡或不回应，而 FreeBSD 已有一家态度友好的厂商，不应弄丢这段关系
+2605342	885	david 用 dump 配 nc 向 solaris 2.5.1 备份机做网络备份，传到约 75% 时中间路由器掉线，FreeBSD 2.2.6-stable 主机随即异常，连 ping 都报 no network buffers available，重启才恢复

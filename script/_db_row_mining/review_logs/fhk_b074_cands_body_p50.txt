@@ -1,0 +1,1021 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606394 ###
+===== 库内序 147950 | PK 2606394 | 等级 L4 =====
+DATE: 1998-06-01T03:58:43+00:00
+FROM: Jason Evans <jasone@canonware.com>
+SUBJ: sigprocmask() and threads question
+摘要: Jason Evans：剖析发现单线程程序也有过半时间耗在 sigprocmask，因各 pthread 函数调用时都会屏蔽全部信号
+
+After doing some profiling of some multithreaded code I'm developing under
+FreeBSD, I decided to take a look at the code to see why even for
+single-threaded applications, more than half the time is spent in
+sigprocmask().
+
+As near as I can tell, every time any of the pthread_* functions are
+called, the bodies of the pthread_* functions are wrapped in such a way
+that all signals are blocked while executing.  This makes sense to me if
+we're worried about being in an inconsistent state (in the pthreads
+library)  when a signal is delivered.  Is this in fact why signals are
+blocked?  Perhaps we need to correctly set the signal stack before
+allowing signal delivery?
+
+So, here are some ideas for which someone probably has good technical
+reasons not to use:
+
+==========================================================================
+
+Suppose that the pthreads library puts wrappers around the signal
+functions, such that when the user program installs a signal handler, the
+pthreads library merely makes a note of it and sets up an internal signal
+handler to catch whatever signals the user program specified.  Now, make
+sure that the internal signal handler is intelligent enough to handle a
+signal at any time.  When a signal is caught that should actually be
+caught by the user's signal handler, either:
+
+1) a) Get to a consistent internal state.
+   b) Fake a signal handler stack frame, and whatever else needs to be
+      done, and deliver the fake signal to the user's signal handler.
+
+or
+
+2) a) Get to a consistent internal state.
+   b) Uninstall the internal signal handler for the signal we're currently 
+      dealing with.
+   c) raise() the signal again.
+   d) After the signal has been caught and dealt with by the user's signal
+      handler, re-install the internal signal handler.
+
+==========================================================================
+
+Block all signals, then check for pending signals every so often (how
+often is often enough?).  If there are any pending signals, unblock the
+signals, call sigsuspend(), then block the signals again. 
+
+======================
+[…中段省略 295 字符…] le to avoid having to block and unblock signal delivery
+so often.
+
+(Disclaimer: I don't have a clue about thread implementations.  Forgive my
+ignorance. =) )
+
+Jason
+
+Jason Evans
+Email: [jasone@canonware.com]
+Web: [http://www.canonware.com/~jasone]
+Home phone: [(650) 856-8204]
+Work phone: [(408) 774-8007]
+Quote: ["Invention is 1% inspiration and 99% perspiration" - Thomas Edison]
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606395 ###
+===== 库内序 147951 | PK 2606395 | 等级 L4 =====
+DATE: 1998-06-01T04:43:33+00:00
+FROM: John Birrell  <jb@cimlogic.com.au>
+SUBJ: Re: sigprocmask() and threads question
+摘要: John Birrell：指出该现象只存在于 2.2.x，3.0-current 已不再采用该实现，建议改去剖析当前代码
+
+Jason Evans wrote:
+> After doing some profiling of some multithreaded code I'm developing under
+> FreeBSD, I decided to take a look at the code to see why even for
+> single-threaded applications, more than half the time is spent in
+> sigprocmask().
+
+You must be doing this on 2.2.x
+
+3.0-current has changed away from this implementation. If anything,
+please spend your time profiling the current code. You should be
+able to use a current libc_r on 2.2.6 AFAIK.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606398 ###
+===== 库内序 147954 | PK 2606398 | 等级 L3 =====
+DATE: 1997-01-26T06:38:07+00:00
+FROM: hiren <hiren@wipinfo.soft.net>
+SUBJ: macro definitions of VOP_??? 
+摘要: hiren：询问 VOP_ 系列宏定义在哪个文件，另问 vop_create_args 之类结构体的声明位置
+
+Hi,
+
+I was looking at the sources of FreeBSD virtual file system (VFS)
+implementation.
+It uses all macros starting with VOP_ (e.g. VOP_OPEN, VOP_CLOSE,
+VOP_ACCESS, etc).
+I could not find it at all. Can somebody respond with the name of the
+file which contains
+the macro definition of VOP_???.
+
+Another thing is, I was trying to find structure declarations of the
+vop_???_args
+(e.g. vop_create_args, vop_mknod_args, vop_close_args, vop_access_args,
+vop_read_args, etc.)
+This also I could not find in the sources.
+
+Please help me out.
+
+Thanks
+Hiren
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606399 ###
+===== 库内序 147955 | PK 2606399 | 等级 L3 =====
+DATE: 1998-06-01T07:24:23+00:00
+FROM: Curt Sampson <cjs@portal.ca>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Curt Sampson：反驳称 Linux 与 NetBSD 里设备驱动源码同样充足
+
+On Mon, 1 Jun 1998, Doug Rabson wrote:
+
+> Don't worry, I am fully aware of the PALcode problem.  I think it will be
+> a far easier problem to deal with the bootstrap installing PALcode than
+> for it to have a complete set of device drivers.  There is plenty of
+> PALcode source in milo.
+
+There's plenty of device driver source code in Linux and NetBSD, too. :-)
+
+My point is, every time a new type of Alpha comes along, you have
+to write new PALcode and compile it in to the boot loader. This is
+not really all that different than having to write and compile in
+a new device driver every time a new device comes along.
+
+cjs
+
+Curt Sampson    cjs@portal.ca	   Info at http://www.portal.ca/
+Internet Portal Services, Inc.	   Through infinite mist, software reverberates
+Vancouver, BC  (604) 257-9400	   In code possess'd of invisible folly.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606407 ###
+===== 库内序 147963 | PK 2606407 | 等级 L3 =====
+DATE: 1998-06-01T09:05:31+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Signed executables, safe delete etc. 
+摘要: David Greenman：自认该讨论已明显偏离 FreeBSD 主题，但既然在谈架构就接着谈下去
+
+(this is getting WAY off the subject of FreeBSD, but since we're discussing
+architecture...)
+
+>>  As I was a VMS user and kernel software developer for 10 years prior to
+>> hacking on Unix source, I'm quite familiar with how VMS works both internally
+>> and externally. The linker in VMS is not installed with any special privilege
+>> and any user can make a binary executable. A user, for example, can use kermit
+>> or other file transfer utility to copy over a VMS executable and as long as
+>> the file record type is correct (fixed, 512 byte records) and he sets the
+>> execute permission (set file/prot=exec...I'd mention the system call to do
+>> this if I could remember it), he can execute it.
+>
+>If you have BYPASS priv, then even this is not necessary. You simply run
+>it.
+
+   Normal users usually don't have BYPASS privilege, else you have a serious
+security hole. :-)
+
+>>  As I mentioned above, the SYSPRIV privilege allows the process to access
+>> resources as if he had a system UIC. There are 4 sets of permissions bits
+>> in VMS: user, system, group, and world. A system UIC is (usually) a UIC that
+>> has a group number that is less than 9. If you have a system UIC or you
+>                             ^^^^^^^^^^^
+>VMS UICs are in octal (usually). A system UIC is one that has group < 10
+>(octal), or less than 8 if you happen to favor decimal notation...
+
+   You're right that in VMS one usually specifies UICs in octal. However,
+according to the online documentation:
+
+SYSGEN>  HELP PARAM MAXSYSGROUP
+
+Parameters
+
+  MAXSYSGROUP
+
+
+     Highest system UIC - The highest value that a group number can have
+     and still be classified as a a system UIC group member.  In decimal.
+
+Topic? 
+SYSGEN>  SHOW MAXSYSGROUP
+Parameter Name            Current    Default     Min.     Max.     Unit  Dynamic
+--------------            -------    -------    -------  -------   ----  -------
+MAXSYSGROUP                     8          8         1     32768 UIC Group  D
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606408 ###
+===== 库内序 147964 | PK 2606408 | 等级 L4 =====
+DATE: 1998-06-01T09:11:16+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Re: Signed executables, safe delete etc.
+摘要: Andrzej Bialecki：建议为文件系统加类似 Novell purge on delete 标志的选项，让数据删后不长期滞留未用块
+
+
+... And one more thing: as far as I know, Novell knows the notion of
+"purge on delete" flag, and it's extremely useful in situation when you
+don't want your data to stay indefinitely long in unused disk blocks...
+And it doesn't seem to require too many changes in FS code to implement
+(well, I can hear you saying: then go and do it! but FS is still black
+magic to me :-).
+
+Andrzej Bialecki
+
+--------------------+---------------------------------------------------------
+abial@nask.pl       | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic | "Be open-minded, but don't let your brains to fall out."
+Network in Poland   | All of the above (and more) is just my personal opinion.
+--------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606409 ###
+===== 库内序 147965 | PK 2606409 | 等级 L4 =====
+DATE: 1998-06-01T10:14:46+00:00
+FROM: Peter Wemm <peter@netplex.com.au>
+SUBJ: Re: cvs commit: src/lib/libutil libutil.h logwtmp.c src/usr.bin/login login.c 
+摘要: Peter Wemm：建议同时把 UT_HOSTNAME 翻倍，这样 utmp 记录由 2.x 的 32 字节变为 64 字节，BSDI 也做过同样翻倍
+
+Atsushi Murai wrote:
+> amurai      1998/06/01 01:47:05 PDT
+>   Trim a domain part for wtmp as same as showed by "netstat -r".
+>   Here is a some example for avoiding a confusion.
+
+Incidently, I think we should double the UT_HOSTNAME length as well.  That 
+means we end up with a 64 byte utmp record instead of the original 32 byte 
+record in 2.x.  BSDI also doubled the UT_HOSTNAME field, if we followed 
+then we'd have compatable utmp/wtmp files again, and BSD/OS binaries could 
+read ours too.
+
+I'm not sure I want to go through _another_ utmp record size change again 
+though..... :-(
+
+I might also add that I think utmp/wtmp is a horrible hack.  It would be
+great if it could be redesigned with a real API for reading/writing it. It
+would be nice to have a SYSV/Linux/Xopen/Unix98 compatable API too. A
+utmp.conf file might also be nice if it could configure the record sizes.
+
+Alternatively, perhaps use a DB utmp.db file with variable record sizes
+keyed on hashed tty name.  wtmp.db would need something more space
+efficient than a hash method file and would need to maintain sequence,
+perhaps the btree DB method?  As long as there was a get/put{u,w}tmp style 
+API and logwtmp(), then that should cover most incompatability problems.  
+Since libutil is shared, we could update that library and it would 
+automatically update many of the utmp-using binaries to use the new format.
+
+Sigh, oh the things that could be done with infinite spare time... :-)
+
+Cheers,
+-Peter
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606410 ###
+===== 库内序 147966 | PK 2606410 | 等级 L4 =====
+DATE: 1998-06-01T10:28:50+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: macro definitions of VOP_???
+摘要: Niall Smart：答复称 VOP_ 宏由 shell 脚本生成，脚本大致在 sys/kern 下，细节可问 Terry Lambert
+
+> Hi,
+> 
+> I was looking at the sources of FreeBSD virtual file system (VFS)
+> implementation.
+> It uses all macros starting with VOP_ (e.g. VOP_OPEN, VOP_CLOSE,
+> VOP_ACCESS, etc).
+> I could not find it at all. Can somebody respond with the name of the
+> file which contains
+> the macro definition of VOP_???.
+
+They are generated from a shell script, which lives in sys/kern I
+think.  I'm sure Terry Lambert can reveal all.
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606412 ###
+===== 库内序 147968 | PK 2606412 | 等级 L4 =====
+DATE: 1998-06-01T10:52:36+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: Signed executables, safe delete etc.
+摘要: Niall Smart：说明 securelevels 的设计意图是防止任何人修改已存在的二进制
+
+> On Sun, 31 May 1998, Joe McGuckin wrote:
+
+> Yes, that's the situation I'm thinking about. As it was suggested to me by
+> Niall Smart, we already have something called securelevel.  but this
+> protects only already existing binaries (and not new ones, possibly
+> exploiting e.g. kernel bugs)
+
+I'm not sure what you mean here, securelevels are intended to prevent
+binaries from being modified by anyone (among other things).  You can
+set the immutable flags for any new binaries you compile.
+
+> and only on running system. To be more
+> precise: I know that when securelevel=2 or something, all the binaries
+> with immutable and append-only flags cannot be changed. But this doesn't
+> prevent executing user's own program (possibly in order to get root
+> shell).
+
+The huge majority of exploits can be written in shell script, so I doubt
+this will help much.  For example, the vast majority of buffer overflows
+can simply be exploited using:
+
+suidprog -f `cat shellcode.bin`
+
+> What I thought was two separate ideas:
+> * the system would refuse to execute non-signed binary
+
+This is not useful, see my earlier post.  Anyway, an easier way to do
+this would be to only allow the superuser to chmod +x an executable.
+
+> * the system would even refuse to boot and to load the kernel without
+> appropriate authentication. This would require cooperation from filesystem
+> (like encrypting parts of it, say superblocks) so that attacker couldn't
+> get the disk to other machine and mount it there. 
+
+This is a good idea, though I would encrypt the whole disk.  I have been
+thinking about this before and I think the best way to store the key to
+unlock the filesystem would be on a floppy disk, using stenography to
+embed it in a picture of Pamela Anderson or something.  Anyway, I need
+to take those anti-paranoia pills now.
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606413 ###
+===== 库内序 147969 | PK 2606413 | 等级 L3 =====
+DATE: 1998-06-01T11:11:37+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Binary diffs between -RELEASE and -STABLE
+摘要: Andrzej Bialecki：为波兰电脑杂志准备 2.2.6 的 CD 版，问能否只取 -RELEASE 与 -STABLE 间的二进制补丁
+
+Hi,
+
+I'm preparing a CD release of 2.2.6 for one of Polish computer magazines. 
+As someone pointed to me, perhaps it would be better to use -stable for
+this (as there were some bugs dicovered in the menatime). However, it
+seems wasteful to download the whole distribution (which I'm doing at the
+moment - I don't have enough resources to generate release myself) when I
+could download only a set of binary patches between 2.2.6-RELEASE and
+given 2.2-xxxxxx-SNAP...
+
+
+Andrzej Bialecki
+
+--------------------+---------------------------------------------------------
+abial@nask.pl       | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic | "Be open-minded, but don't let your brains to fall out."
+Network in Poland   | All of the above (and more) is just my personal opinion.
+--------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606414 ###
+===== 库内序 147970 | PK 2606414 | 等级 L3 =====
+DATE: 1998-06-01T12:40:55+00:00
+FROM: George Uhl <uhl@mamba-e.gsfc.nasa.gov>
+SUBJ: Problems with shadow interface
+摘要: George Uhl 在 FreeBSD 2.2.2 加载最新 ALTQ，配 ATM 接口做组播，en0 与 shadow pvc0 配置有问题
+
+
+I'm running FreeBSD 2.2.2 and I've loaded the latest
+ALTQ (1.0.1) onto it.  I'm configuring an ATM
+interface to make it multicast capable.
+
+ATM interface en0 configuration:
+
+ifconfig en0 198.119.22.6 netmask 0xfffffffc
+route add -iface 198.119.22.5 -link en0:3.0.0.a
+
+Shadow interface pvc0 configuration:
+
+pvcsif en0   (creates pvc0 shadow interface bound to en0)
+ifconfig pvc0 198.119.22.6 netmask 0xfffffffc 198.119.22.5
+pvctxctl pvc0 0:10 -b 155M  (assigns pvc 10 to pvc0)
+
+When I start mrouted, it finds pvc0 from the kernel and 
+assigns it as vif#2. When mrouted installs vif#2 (pvc0) 
+from reading the config file and tries to install it, it
+bombs with the following messages:
+
+warning - can't join group 224.0.0.4 on interface 198.119.22.6:
+can't assign requested address
+
+setsockopt IP_MULTICAST_IF 198.119.22.6: can't assign requested
+address
+
+It looks like mrouted cannot handle having the same address
+assigned to 2 interfaces even if the second interface is
+a pseudo bound to the real interface.
+
+Is anyone else experiencing similar problems the ALTQ ATM
+driver?
+
+Thanks,
+George Uhl
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606416 ###
+===== 库内序 147972 | PK 2606416 | 等级 L3 =====
+DATE: 1998-06-01T14:52:23+00:00
+FROM: Peter Wemm <peter@netplex.com.au>
+SUBJ: Re: patches for fast forwarding (with kernel option & sysctl) 
+摘要: Peter Wemm 怀疑唯一理智的结局是发给 INRIA 与 WIDE、KAME 等组重武器，让他们决斗到死
+
+Kazu Yamamoto wrote:
+> > >> 	- FreeBSD with INRIA 
+> > >	Another reason not to wait :-P
+> > 
+> > 	KAME is also supported :-P
+> 
+> And Ishiguro-san, the author of Zebra, is our friend. :p
+> 
+> --Kazu, KAME Project
+
+I'm beginning to suspect that the only sane outcome from this will be if we
+give the INRIA and WIDE/KAME/whatever-this-week folks some high-powered
+duelling weapons for a fight to the death or something....
+
+1/2 :-)
+
+Cheers,
+-Peter
+--
+Peter Wemm <peter@netplex.com.au>   Netplex Consulting
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606417 ###
+===== 库内序 147973 | PK 2606417 | 等级 L4 =====
+DATE: 1998-06-01T15:07:21+00:00
+FROM: Kenjiro Cho <kjc@csl.sony.co.jp>
+SUBJ: Re: Problems with shadow interface 
+摘要: Kenjiro Cho：用 shadow pvc 接口时不要 ifconfig en 接口，本来就不需要它；真要配就换个 IP
+
+
+>> It looks like mrouted cannot handle having the same address
+>> assigned to 2 interfaces even if the second interface is
+>> a pseudo bound to the real interface.
+
+>> Is anyone else experiencing similar problems the ALTQ ATM
+>> driver?
+
+Don't ifconfig the "en" interface.  You don't need it when you use
+shadow pvc interfaces.  (if you do, use a different IP address.)
+
+--Kenjiro
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606420 ###
+===== 库内序 147976 | PK 2606420 | 等级 L3 =====
+DATE: 1998-06-01T17:16:53+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: AlphaBIOS documentation
+摘要: Terry Lambert：认为初始移植不用 OSF PALcode 是失误，并反问对方 Linux 是否使用 ARC 代码
+
+> Does anyone know if there is documentation available for the ARC or
+> AlphaBIOS boot sequence?  In particular, what services does the firmware
+> provide to the bootstrap program (e.g. linload.exe).  Alternatively, does
+> anyone know where I can find the source code to linload.exe?
+
+You aren't using the OSF/1 PALcode?  I think this is a mistake for an
+initial port.
+
+Is your Linux using the ARC code?  The person at the University of
+Arizona, in Tucson, where I used to live, who did the initial
+Linux Alpha work was using a modified OSF PALcode (it was modified
+to allow as "little" as 16M of RAM).
+
+
+If you have an NT system, I would suggest disassembling the bootstrap
+for the purposes of documenting the interface.
+
+NT generally runs in protected mode as early as possible.  One of
+the reasons NT is so hardware limited is that it, like FreeBSD, fails
+to implement a BIOS interface for use by drivers to allow it to "fall
+back" to a VMM-based driver.
+
+With this in mind, you should expect that the ARC/AlphaBIOS code is
+abandoned as soon ass the NT kernel image is loaded.
+
+You are probably going to have a problem supporting the NT PALcode
+in general because of VM differences.
+
+
+You may want to contact Chris Demetriou; I *think* he can still be
+reached at cgd@NetBSD.ORG.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606421 ###
+===== 库内序 147977 | PK 2606421 | 等级 L4 =====
+DATE: 1998-06-01T18:09:03+00:00
+FROM: zhihuizhang <bf20761@binghamton.edu>
+SUBJ: Re: macro definitions of VOP_???
+摘要: zhihuizhang：VOP 宏定义可查 vnode_if.sh 与 vnode_if.src，这两个文件是很简单的 awk 文件
+
+
+You can check the files vnode_if.sh and vnode_if.src.  They are simple
+awk files.
+ 
+
+-------------------------------------------------
+
+Zhihui Zhang
+
+Department of Computer Science
+State University of New York at Binghamton
+
+Web Site: http://cs.binghamton.edu/~zzhang
+
+-------------------------------------------------
+
+On Mon, 1 Jun 1998, Niall Smart wrote:
+
+> > Hi,
+> > 
+> > I was looking at the sources of FreeBSD virtual file system (VFS)
+> > implementation.
+> > It uses all macros starting with VOP_ (e.g. VOP_OPEN, VOP_CLOSE,
+> > VOP_ACCESS, etc).
+> > I could not find it at all. Can somebody respond with the name of the
+> > file which contains
+> > the macro definition of VOP_???.
+> 
+> They are generated from a shell script, which lives in sys/kern I
+> think.  I'm sure Terry Lambert can reveal all.
+> 
+> Niall
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606427 ###
+===== 库内序 147983 | PK 2606427 | 等级 L4 =====
+DATE: 1998-06-01T19:46:07+00:00
+FROM: Jason Thorpe <thorpej@nas.nasa.gov>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Jason Thorpe：Alpha 本质上是 64 位架构，因此说 NT 在 64 位寻址模式下只是未被测试并不合理
+
+On Mon, 1 Jun 1998 20:10:53 +0100 (BST) 
+ Doug Rabson <dfr@nlsystems.com> wrote:
+
+ > >From what I understand, they are just untested in 64bit addressing modes.
+ > Personally, I think this is short term brain damage which will disappear
+ > when NT supports 64bit addressing.
+
+You understand wrong.  It is silly to say "they are just untested in 64bit
+addressing modes".  The Alpha is _fundamentally_ a 64-bit architecture; all
+addresses, as far as the hardware is concerned, are 64 bits wide.
+
+No, the unconfirmed rumor is that these chips are missing the piece that
+allows the superpage to be moved.  I.e. the KSEG is hardwired at
+0x80000000 (just where it lives on the MIPS; it is normally configurable,
+and lives at 0xfffffc0000000000 in the OSF/1 PALcode).  However, like I
+said, this rumor/threat has never been confirmed.  I've heard lots of
+reports of "NT-only" systems running SRM consoles (and NetBSD :-) just fine,
+if you can get the SRM image for the Digital UNIX version of the platform.
+
+There is another rumor that some of these NT systems have suicide logic
+in the SROM that refuses to load anything other than an ARC console image.
+
+Who knows, really...
+
+Jason R. Thorpe                                       thorpej@nas.nasa.gov
+NASA Ames Research Center                            Home: +1 408 866 1912
+NAS: M/S 258-5                                       Work: +1 650 604 0935
+Moffett Field, CA 94035                             Pager: +1 650 428 6939
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606428 ###
+===== 库内序 147984 | PK 2606428 | 等级 L4 =====
+DATE: 1998-06-01T19:47:42+00:00
+FROM: Jason Thorpe <thorpej@nas.nasa.gov>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Jason Thorpe：反正也用不了 NT PALcode，它提供的功能太离谱，让 Alpha 看起来太像 MIPS，不合口味
+
+On Mon, 1 Jun 1998 20:07:36 +0100 (BST) 
+ Doug Rabson <dfr@nlsystems.com> wrote:
+
+ > Again, I am not using NT palcode.  When I write it, the ARC bootloader
+ > will switch to OSF palcode before running the kernel.
+
+And, in fact, you would not be able to use the NT PALcode, really.  The
+functionality provided by the NT PALcode is really out in space, and makes
+the Alpha look way too much like a MIPS for my taste :-)
+
+Jason R. Thorpe                                       thorpej@nas.nasa.gov
+NASA Ames Research Center                            Home: +1 408 866 1912
+NAS: M/S 258-5                                       Work: +1 650 604 0935
+Moffett Field, CA 94035                             Pager: +1 650 428 6939
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606432 ###
+===== 库内序 147988 | PK 2606432 | 等级 L4 =====
+DATE: 1998-06-01T21:53:08+00:00
+FROM: Curt Sampson <cjs@portal.ca>
+SUBJ: Re: AlphaBIOS documentation
+摘要: Curt Sampson：文档请找 Sites 与 Witek 的 Alpha Axp Architecture Reference Manual
+
+On Mon, 1 Jun 1998, Terry Lambert wrote:
+
+> One place you might look is the "DEC C for OpenVMS Alpha systems"
+> documentation.  The compiler has inline instructions to allow you
+> to make PAL calls (implying that the available calls would be
+> documented as to purpose and effect)....
+
+If you're looking for that documentation, just grab a copy of _Alpha
+Axp Architecture Reference Manual_ by Sites and Witek (Digital
+Press). The most recent edition documents both the VMS and DU calls
+in OSF1 PALCode, and the NT calls in the ARC (or whatever it is)
+PALcode.
+
+I ordered my copy from www.clbooks.com.
+
+cjs
+
+Curt Sampson    cjs@portal.ca	   Info at http://www.portal.ca/
+Internet Portal Services, Inc.	   Through infinite mist, software reverberates
+Vancouver, BC  (604) 257-9400	   In code possess'd of invisible folly.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606433 ###
+===== 库内序 147989 | PK 2606433 | 等级 L4 =====
+DATE: 1998-06-01T23:01:44+00:00
+FROM: Kevin Street <street@iname.com>
+SUBJ: Re: Star Office Installation
+摘要: Kevin Street：提了一个可能修复 Star Office 退出时 ipc 共享数据段未清除的补丁，本人未实测
+
+Amancio Hasty <hasty@rah.star-gate.com> writes:
+
+> Well, I guess on Linux star office misbehaves by deleting its ipc
+> shared data segments when it exits.
+> 
+> Most likely whats going is that we are not handling properly the ipc
+> calls or possibly something else which is causing Star Office not
+> to delete the ipc shared data segments upon exit.
+
+I have a possible fix for this.  I have not tested this with Star
+Office (I downloaded 3.1 which does not have the problem, I took a
+look for 4, but at the dl rate I'm currently getting it's an 8 hour
+download ... I'm not going to do this) but x11amp was also leaving
+shared segments around and it's a *lot* smaller.  x11amp appears to be
+calling shmctl(id, IPC_RMID, 0) and the emulation layer does not like
+the null shmid_ds buffer pointer.  The emulation layer returned an
+error without ever calling FreeBSD's shmctl, so the segments were not
+being deleted when the reference count went to zero.  I think there's
+a high probability that Star Office does the same thing.
+
+Can someone who has Star Office 4 try this patch out and confirm
+whether this works for Star Office too?
+
+To try it:
+save the following patch to /tmp/linux.pat
+
+modstat
+modunload -i <id>
+
+cd /usr/src/sys/i386/linux
+patch < /tmp/linux.pat
+
+cd /usr/src/lkm/linux
+make all install
+
+linux
+run star office and check to see if the shared segments are being
+cleaned up after it exits.
+
+Here's the patch to /usr/src/sys/i386/linux/linux_ipc.c
+
+*** linux_ipc.c.orig	Mon Jun  1 11:35:17 1998
+--- linux_ipc.c	Mon Jun  1 14:02:11 1998
+***************
+*** 430,443 ****
+      case LINUX_IPC_RMID:
+  	bsd_args.shmid = args->arg1;
+  	bsd_args.cmd = IPC_RMID;
+! 	if ((error = copyin(args->ptr, (caddr_t)&linux_shmid, 
+! 		    	    sizeof(linux_shmid))))
+! 	    return error;
+! 	linux_to_bsd_shmid_ds(&linux_shmid, &bsd_shmid);
+! 	bsd_args.buf = (struct shmid_ds*)stackgap_alloc(&sg, sizeof(struct shmid_ds));
+! 	if ((error = copyout((caddr_t)&bsd_shmid, (caddr_t)bsd_args.buf,
+! 		     	     sizeof(struct shmid_ds))))
+! 	    return error;
+  	return shmctl(p, &bsd_args);
+  
+      case LINUX_I
+[…中段省略 278 字符…] turn error;
+! 	    linux_to_bsd_shmid_ds(&linux_shmid, &bsd_shmid);
+! 	    bsd_args.buf = (struct shmid_ds*)stackgap_alloc(&sg, sizeof(struct shmid_ds));
+! 	    if ((error = copyout((caddr_t)&bsd_shmid, (caddr_t)bsd_args.buf,
+! 		     		 sizeof(struct shmid_ds))))
+! 		return error;
+! 	}
+  	return shmctl(p, &bsd_args);
+  
+      case LINUX_IPC_INFO:
+
+-- 
+Kevin Street
+street@iName.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606435 ###
+===== 库内序 147991 | PK 2606435 | 等级 L4 =====
+DATE: 1998-06-01T23:22:20+00:00
+FROM: Randall Hopper <rhh@ct.picker.com>
+SUBJ: Fxtv 0.47 released
+摘要: Randall Hopper 发布 fxtv 0.47，新增 YUV 视频采集、X10 MouseRemote 支持与多张 Bt848 卡
+
+     The features & fixes list was piling up so I thought it'd be a good
+time to cut a new version.  Available here:
+
+          http://multiverse.com/~rhh/fxtv/
+
+Brief summary of changes (see ChangeLog for details):
+
+     : YUV video capture 
+     : X10 MouseRemote support (www.x10.com) 
+     : MPEG-encode streaming (IYUV & PPM) 
+     : Multi-Bt848 card support 
+     : Multi-/no-soundcard support, and TV audio on CD-IN 
+     : Can now get at internal audio mux from GUI 
+     : Support clean build on non-XFree86 and Linux systems 
+     : New Action Rtns: TVToggleFreeze, TVVideoRecordStart/Stop 
+     : Video conversion process externalized (user-defined script) 
+     : Grab mouse when entering Zoom full-screen mode 
+     : More verbose "-debug startup" output 
+     : Misc. Fixes (XImage conv, TIFF saves, remote display, X ext
+       detection, etc.) 
+
+By default, it builds for XFree86.  To build on Xi/etc., grab the source
+package and do: "gmake HAVE_XFREE86=NO"
+
+You might also check out the "Sentinel.mps" sample off the web page.  I
+captured it using IYUV last night, on stock IBM/WD EIDE drives no less :-)
+
+A note on video encoding.  mpeg_encode(1) works fine for IYUV @ 320x240,
+but it doesn't like the IYUV video stream length for many other resolutions
+so I left RGB/PPM the default capture path.  For other resolutions, try
+RGB/PPM, but by all means use IYUV/YUV for 320x240.  It gives you 25% more
+disk bandwidth to play with.  (Also, if you dig into this and figure out
+what mpeg_encode's so upset about please let me know.)
+
+Enjoy!
+
+Randall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606436 ###
+===== 库内序 147992 | PK 2606436 | 等级 L4 =====
+DATE: 1998-06-01T23:41:16+00:00
+FROM: Randall Hopper <rhh@ct.picker.com>
+SUBJ: X-10 Mouse Remote patch
+摘要: Randall Hopper 发布 moused 补丁给 -current 加 X-10 Mouse Remote 支持，兼容独立与透传两种模式
+
+     Here's a kernel/moused(8) patch to -current that adds "X-10 Mouse Remote"
+support to moused:
+
+          http://multiverse.com/~rhh/moused.x10remote.patch.gz
+
+(it's also enclosed in the Fxtv-0.47 source package).  See:
+
+          http://www.x10.com/products/x10_mk19a.htm 
+
+for details on this product.
+
+     The patch supports using the X10 Mouse Remote in both stand-alone and
+pass-through configurations, so you can plug your mouse and remote into the
+same serial port, use the mouse for X, and use the remote for other apps
+like Fxtv.
+
+     The mouse events are channeled through the syscons/sysmouse I/F like
+normal, and the remote buttons are "syphoned off" to a UNIX-domain stream
+socket (defined as _PATH_MOUSEREMOTE in <machine/mouse.h>) for a
+remote-aware app to grab and use.
+
+     Hope you find this useful.
+
+Randall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606437 ###
+===== 库内序 147993 | PK 2606437 | 等级 L3 =====
+DATE: 1998-06-01T23:41:59+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: kernfs/procfs questions...
+摘要: Mike Smith 问 procfs 该不该放非进程相关数据，Linux 用独立内核目录会污染命名空间，NetBSD 有类似做法
+
+
+With the recent discussions regarding emulation of Linux' procfs, as 
+well as other comments on the general topic, I'm wondering what the 
+feeling is with regard to other, not-specifically-process-related data 
+in procfs.
+
+The Linux model is to have a separate directory for the kernel 
+(/proc/kern or similar).  This keeps the root-level clutter down, but 
+does "pollute" the namespace.
+
+Thet NetBSD folks have something similar (although the implementation 
+still seems a bit raw) with their 'kernfs', which they mount on /kern, 
+keeping the separation between the two clear.
+
+Does anyone have any strong opinions?  Justifications?
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606443 ###
+===== 库内序 147999 | PK 2606443 | 等级 L4 =====
+DATE: 1998-06-02T10:10:25+00:00
+FROM: Martin Cracauer <cracauer@cons.org>
+SUBJ: Re: allegro lisp
+摘要: Martin Cracauer：FreeBSD 4.2 的 coredump 修复几周前已提交 -current，本意是修好它，本人未试
+
+In <E0yf1Z1-0001h4-00@oak66.doc.ic.ac.uk>, Niall Smart wrote: 
+> AFAIK Allegro Lisp is used by quite a few people who run FreeBSD,
+> therefore I suggest we contact them to inquire about the possibility
+> of helping to ensure that the Linux version works under emulation on
+> FreeBSD.  
+
+A fix for the 4.2 coredump problem has been committed to -current a
+few weeks ago. I didn't try it, but the change was supposed to make
+ACL work.
+
+> As someone has noted already, 5.0 beta does not work in
+> FreeBSD compatability because it expects a linux /proc filesystem which
+> the emulation layer does not fully support.  Perhaps they will consider
+> modifying it to do whatever it is trying to do in a more portable way,
+> or at least one which is compatable with our compatability layer :)
+
+Well, I think
+a) relying on undocumented procfs behaviour to do anything will make
+   your software break on future version of the OS as well.
+b) Should we try to emulate /proc, we will quickly run into problems
+   that kernel or process structure internals will be exposed when
+   they shouldn't. Or in other words, there's a good chance that the
+   application in question moves from using an API to using an
+   inplementation, which is where we have to stop emulating.
+
+> If anyone here is friendly with the folks at Franz Inc. or has a support
+> contract with them and is willing to request this of them then please
+> email me.  Otherwise I will contact them myself later this week.
+
+Please do so. Maybe they can provide an exact list they expect /proc
+to do (that menas what they are missing from the API). Also, check the
+Staroffice thread on -hackers as well, exactly the same problem.
+
+Martin
+-- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Martin Cracauer <cracauer@cons.org> http://www.cons.org/cracauer
+BSD User Group Hamburg, Germany     http://www.bsdhh.org/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606444 ###
+===== 库内序 148000 | PK 2606444 | 等级 L4 =====
+DATE: 1998-06-02T10:50:14+00:00
+FROM: "Daniel M. Eischen" <deischen@iworks.InterWorks.org>
+SUBJ: Re: Fix for YAAIP (Yet another ATAPI install problem)
+摘要: Dan Eischen：ATAPI CD-ROM 装 FreeBSD 两次失败；-stable 与 -current 的 atapi.c 里已有修复
+
+
+I wrote:
+> I'm 0 for 2 in trying to install FreeBSD from ATAPI CD-ROM
+> drives.  The problem and fix for the first time is in gnats
+> (kern/6253).  This time on another system, it seems that the
+> never occurs before sending the command.  Below you'll find
+> the quick hack I did to make it work and a dmesg.
+
+After looking at atapi.c in -stable and -current, it looks like
+there is a fix for this :)
+
+Dan Eischen
+deischen@iworks.InterWorks.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

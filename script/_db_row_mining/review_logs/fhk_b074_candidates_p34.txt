@@ -1,0 +1,27 @@
+2606108|L4|John Birrell：-current 为性能移除信号阻塞 uthread_write.c 的 _thread_kern_sig_block 已过期
+2606110|L4|Eivind Eklund：发起内核开发技巧文档并自荐任编辑 建议用 ports 里的 glimpse 索引 /sys 以加快 grep
+2606112|L4|Mike Haertel：寄存器重命名旨在消除反依赖 并给出反依赖即长延迟写后紧跟另一长延迟操作的定义
+2606113|L4|Ron Rosson：更新流程 cvsup 后 make world 再 config make depend make install 后 sync 重启
+2606114|L3|Studded：反对互相指责 表示若问题能在服务端层面处理 则希望有相应手段可用
+2606116|L4|Chuck Robey：寄存器重命名由处理器完成而非编译器 故不能按编译器角度作出那种推断
+2606117|L3|Jim Shankland：认为双方分歧主要在术语 承认 LAST-ACK 与 CLOSE_WAIT 这类状态名易混淆
+2606118|L4|Jim Shankland：此类连接的 fd 已不存在 服务器已关闭套接字 最大隐患是大量事实上已死的 TCP 连接
+2606119|L4|Dave Marquardt：肯定 BPF 能监控出向数据包 并称一个简单测试即可自证
+2606122|L4|Joel Ray Holveck：Sound Galaxy NX Pro 16 配 sb 驱动必须用 CONFIG_SBPRO 才工作
+2606124|L3|Nicholas Charles Brawn：询问 FreeBSD 4.4 内核开发有无类 Linux Kernel Hackers Guide 的在线文档
+2606127|L4|Eivind Eklund：没有成体系的内核开发文档 只有一份计划成为设备驱动作者指南的材料
+2606130|L4|Josef Karthauser：Bochs 下装 Win95 最终成功 Pentium 200 上耗时约三天 FreeBSD USB 发行版顺利
+2606132|L4|Terry Lambert：确认所引 STD7 第 2358 行附近的 CLOSE-WAIT 行为 并澄清原意是未收到应到的报文
+2606137|L3|Sune Stjerneby：承认自己从不喜欢 Intel 若无靠谱 BSD 实现便不会跑 x86 现有约五六种
+2606143|L3|Mara Cabrales：FreeBSD 2.2.5 下 socket 程序服务器正常 客户端报 connect failure 49 无此文件
+2606144|L3|Yonny Cardenas Baron：重发 socket 客户端 connect failure 49 求助 附 SERV_TCP_PORT 与套接字参数
+2606145|L4|Niall Smart：追问是否各处都用 AF_INET 或 PF_INET 而非 AF_UNIX 或 PF_UNIX
+2606146|L4|Alex G. Bulushev：指出 socket 首参应为 PF_INET 第三参应为 IPPROTO_TCP 但此处非本错误成因
+2606147|L4|Ruslan Ermilov：建议在 /usr/include/sys/errno.h 中 grep 49 查出对应错误宏以确认含义
+2606149|L3|Wilko Bulte：预发布 1998 年 10 月荷兰 Arnhem FreeBSD 聚会信息稿 征集名称并欢迎意见
+2606150|L4|Peter Jeremy：glimpse 的替代是 ports 中的 id-utils 但它更像 tags 数据库而非通用索引设施
+2606152|L3|Amancio Hasty：希望新建邮件列表前足够内聚 并设一名负责人或小工作组来引导方向
+2606155|L3|Jonathan M. Bresler：质疑列表设负责人之说 认为 newbies 与 sue blake 只是例外并追问谁是负责人
+2606156|L3|Amancio Hasty：反对该看法 认为 FreeBSD 列表过于闲聊 希望转向行动导向 闲聊去 bsd-chat
+2606157|L3|Chuck Robey：询问设备如何进入被探测列表 知驱动文件入内核并见到 probe 函数 但不清楚谁调用
+2606158|L3|Alex Povolotsky：询问是否有人实测 sendmail 8.9 新版本 传闻其防垃圾邮件能力更强

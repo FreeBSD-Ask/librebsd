@@ -1,0 +1,1106 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605466 ###
+===== 库内序 147023 | PK 2605466 | 等级 L4 =====
+DATE: 1998-05-05T00:21:33+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA PnP / snd PnP developments? 
+摘要: Mike Smith：说明 FreeBSD 对 ISA PnP 有一定支持但不与 PnP BIOS 交互，并认为不能指望 BIOS 代为完成配置
+
+> Hi there,
+> 
+> Here are few questions about PnP support...
+> 
+> o Is there any developments currently for Microsoft-ISA PnP support?
+
+There is some support for ISA PnP, but no interaction with the PnP BIOS.
+
+> o Should we consider the BIOS does all job for us, and just
+>   retrieve information from BIOS at power up? And with broken BIOS?
+
+No, there are three cases:
+
+ - All devices configured and active.
+ - Only boot-related devices configured and active.
+ - No PnP BIOS, nothing configured or active.
+
+We have to support all three.
+
+> o What are the interactions between PCI PnP and ISA PnP?
+
+They are generally limited to resource allocations from a shared pool.
+
+> o Does the sound-PnP stuff support such things?
+
+The sound drivers are just consumers of the ISA PnP support.
+
+> I was about to write some parallel chipset dependent code, and I
+> realized all chipsets will be controlled identicaly soon (according
+> to the ISA PnP standard).
+
+No, they won't be.  PnP just tells you how they are configured.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605467 ###
+===== 库内序 147024 | PK 2605467 | 等级 L4 =====
+DATE: 1998-05-05T08:06:40+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Mike Smith：说明 blender 在 1600x1200x16bpp 下可正常运行，推测对方是资源不足或漏掉 .B.blend 文件
+
+> On Mon, 4 May 1998, Andreas Braukmann wrote:
+> Yes I just posted this morning about the same explanation. It does start
+> full screen and for some reason it oes NOT like 1600x1200x16bpp it just
+> freaks and core dumps.
+
+Actually, it runs fine at 1600x1200x16bpp; that's what I normally use.
+
+You sound like you have resource problems, or possibly forgot the 
+.B.blend file.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605468 ###
+===== 库内序 147025 | PK 2605468 | 等级 L3 =====
+DATE: 1998-05-05T23:32:41+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Open Systems Networking：猜测 blender 不兼容 SMP，请有人用 -current SMP 与 Millenium II 验证
+
+On Tue, 5 May 1998, Mike Smith wrote:
+
+> Sorry, that aint it either - I have a Millenium II and Blender works 
+> fine under both AccelX 4.x and XFree86.
+
+Ok sure, fine mike go ahead and shoot that thoery down to! :)
+Maybe it doesnt like SMP then, anyone running it under -current with smp,
+and a matrox Mill. II? And no im not under any means ruling out operator
+error. Like I said I can get it to run fine if I use the -p flag and
+specify 1024x768. 
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605469 ###
+===== 库内序 147026 | PK 2605469 | 等级 L4 =====
+DATE: 1998-05-05T23:50:06+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Julian Elischer：NC-server 自带原生 FreeBSD 版 Oracle，建议直接向 NC 购买预装机器
+
+We have an NC-server here to evaluate. (from NC corp..) (aka oracle)
+
+It's a FreeBSD box and it has a fully native FreeBSD oracle on it..
+
+My sugestion:
+
+ask NC corp to sell you a NC server
+get the oracle pre-installed :-)
+
+I haven't tried upgrading to a newer FreeBSD, but My guess is that 
+it might work. It's NCOS 2.0 (whatever version of FreeBSD on earth 
+THAT actually is..)
+
+If I knew anything about Oracle I'd have tar'd it up and tried 
+running it on a newer FreeBSD by now..
+
+
+julian
+
+Steve Shoecraft wrote:
+> 
+> 
+> 
+>      I too run Oracle 7 (7.3.3.5.1) on HP-UX (10.20).  I thought it'd be
+>      great if I could get it running at home on my FreeBSD box.  FTP'd the
+>      image from Oracle and installed it.  Seems to work great, like I said,
+>      except the networking (SQL*Net).
+> 
+>      The note you attached indicated that I should install Oracle on an SCO
+>      box, then copy the stuff over to FreeBSD.  I don't have an SCO box,
+>      and would still like to re-link SQL*Net.
+> 
+>      Let me ask the question I have in another way:
+> 
+>         o Is it possible to convert the SCO object files (ELF?) to what
+>      FreeBSD uses natively (COFF?)?
+> 
+>         o If I can't convert the object files, can I link the object files
+>      together to make a binary?
+> 
+>      - Steve
+> 
+> ______
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605470 ###
+===== 库内序 147027 | PK 2605470 | 等级 L4 =====
+DATE: 1998-05-06T00:13:22+00:00
+FROM: Brian Somers <brian@Awfulhak.org>
+SUBJ: 
+摘要: Brian Somers：答复向 majordomo@freebsd.org 发 help，并指 PC/Xe 驱动在 /sys/gnu/i386/isa
+
+> Hello.
+> I'm new in this group.
+> And i have some questions.
+> 1. How can i read mail from FreeBSD-hackers@freebsd.org
+
+Send a message saying `help' to majordomo@freebsd.org.
+
+> 2. I'm research driver for Digiboard PC/Xem, PC/Xr, PC/Xeve, PC/Xe, PC/Xi on freebsd. and where i can upload it.
+
+There's a functional PC/Xe driver in /sys/gnu/i386/isa.
+
+[.....]
+
+-- 
+Brian <brian@Awfulhak.org>, <brian@FreeBSD.org>, <brian@OpenBSD.org>
+      <http://www.Awfulhak.org>
+Don't _EVER_ lose your sense of humour....
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605471 ###
+===== 库内序 147028 | PK 2605471 | 等级 L4 =====
+DATE: 1998-05-06T00:33:33+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Open Systems Networking：blender 全屏失败根因是文件权限，chmod 777 改 .B.blend 与 .Bfs 后恢复
+
+
+Ok I solved *my* problem. I had the right files in the home dir as it
+said. The problem was apparently the file perms. I did chmod 777 on the
+.B.blend and .Bfs and everything is peachy now.
+How it was able to run in a window with the -p option but not fullscreen
+if the perms were wrong i have NO idea. I mean perms are either right or
+wrong there isnt any halfway ground. it runs or it doesnt. Odd. But it
+works so Andreas may want to try that to.
+
+Now I need to get it to render that blacksmith demo. it does s small part
+of it then the rest is pink. ick. Hrmm tackle that next after i upgrade to
+.31
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605473 ###
+===== 库内序 147030 | PK 2605473 | 等级 L4 =====
+DATE: 1998-05-06T00:37:22+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: SMP softupdates users problems
+摘要: Open Systems Networking：警告在 SMP 上跑 softupdates 很不稳定，崩溃时会毁掉最后操作的文件，须做好丢失准备
+
+
+For those not aware running softupdates on SMP as I have been is pretty
+unstable for me. And when it crashes it has taken the last file I was
+doing anything with and nukes it. I was editing my .cshrc file saved it
+fired up netscape and the machine wedged rebooted and .cshrc is gone.
+
+Just a warning to anyone thinking about running them on an SMP box, be
+prepared to loose stuff when it vomits.
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605475 ###
+===== 库内序 147032 | PK 2605475 | 等级 L4 =====
+DATE: 1998-05-06T01:33:45+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Terry Lambert：指出 INT 10 调用运行在 VM86 沙箱内，video BIOS 挂起中断并不会带来问题
+
+> > Making INT 10 calls is generally a bad idea.
+> > 
+> > It requires taking down most of the outstanding operations manually
+> > from the kernel side, in the expectation of CLI/STI/etc..
+> 
+> Given that the calls in question run inside a VM86 penalty box, most of 
+> your qualms here are fundamentally invalid - suspension of interrupts 
+> etc. by the video BIOS isn't going to be a problem.
+
+You must have missed the part where I talked about trapping STI/CLI
+to a VMM.
+
+You can protect STI/CLI (and you should); however, doing so may
+introduce a number of problems in frequency syncing with some
+monitors after a mode switch.  I have a KFC monitor that would
+require you to turn it off then on if the card missed a blanking
+interval, for example.  At a minimum, you will tend to look
+crappy -- exactly the thing the vendors BIOS writers were trying
+to avoid.  "Works fine under DOS/Windows" is very annoying to
+refute with "your hardware sucks".
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605477 ###
+===== 库内序 147034 | PK 2605477 | 等级 L4 =====
+DATE: 1998-05-06T01:28:22+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Terry Lambert：建议卸载镜像阵列中一块盘做离线备份，文件系统一般应保持静止，多数人用单用户模式跑 dump
+
+> > 1)	You are not supposed to use it on mounted FS's.
+> 
+>   Really?  That isn't in the manual.  It also makes it useless for
+>   24x7 servers.
+
+Why not?  Unmount a mirrored drive in a mirror array, and back it up
+offline.
+
+In general, the FS should be quiescent, at the very least.
+
+Most people run dump/restore in single user mode.
+
+> > Meanwhile, break you FS's up; your backups will take less time, too.
+> 
+>   4GB filesystems are rather limiting.  It places a large burden on the
+> administrator to constantly balance storage needs.  No thanks.
+
+I don't know where you keep getting 4G.  2^32 * 512 = 1TB.
+
+>   I'm not sure why backing up 8 x 4GB filesystems, as opposed to 1 x 32GB
+> filesystem would be faster.
+
+It's not.  Backing up 6 x 4GB filesystems is faster than 1 x32GB.  The
+point is that you only need to back up "live" data, not data that
+hasn't changed (ie: /usr/local needs backing up less frequently than
+/usr/home).
+
+
+>   I think you need to donate your time at site that runs some 24x7
+> servers, so you can some reality experience.
+
+I'll ignore this.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605478 ###
+===== 库内序 147035 | PK 2605478 | 等级 L4 =====
+DATE: 1998-05-06T01:16:22+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：反驳 FreeBSD 中无法卸载镜像盘做离线备份的说法，并指出即便可行重新同步磁盘也是麻烦事
+
+
+On Wed, 6 May 1998, Terry Lambert wrote:
+
+> > > 1)	You are not supposed to use it on mounted FS's.
+> > 
+> >   Really?  That isn't in the manual.  It also makes it useless for
+> >   24x7 servers.
+> 
+> Why not?  Unmount a mirrored drive in a mirror array, and back it up
+> offline.
+
+  Not possible in FreeBSD.  Even where it is possible, re-syncing the disk
+when it is brought back into the mirror can be a real problem.
+
+> In general, the FS should be quiescent, at the very least.
+> 
+> Most people run dump/restore in single user mode.
+
+  ...making it a useless backup tool, but an acceptable  
+duplication/replication tool.
+
+> > > Meanwhile, break you FS's up; your backups will take less time, too.
+> > 
+> >   4GB filesystems are rather limiting.  It places a large burden on the
+> > administrator to constantly balance storage needs.  No thanks.
+> 
+> I don't know where you keep getting 4G.  2^32 * 512 = 1TB.
+
+  dump/restore does not work on my 32GB filesystem.  Why?  Possibly a 4+GB
+bug, though somone has speculated that it is sparse file problem.  What
+happens?  dump generates a corrupted archive (bug), and restore detects
+the corruption and crashes anyway (another bug).  There has been
+an outstanding PR on this for a long time.  While browsing the PR
+database, I found that dump/restore does not always save/restore the new
+4.4 attributes.
+
+Tom
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605480 ###
+===== 库内序 147037 | PK 2605480 | 等级 L3 =====
+DATE: 1998-05-05T22:18:04+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Mike Smith：反驳因卡需自行初始化就否定其 PnP 身份的说法，指出该论断会误导人以为 PnP 卡无需驱动支持
+
+> > The fact that the card wants its own initialization, like any other
+> > card in the world, does not mean it is not PnP,
+> 
+> Sure it does.  If it wants it's own init on top of the PnP BIOS
+> configuration, the card is just "P".  To be "nP", it has to actually
+> "play" when you "plug" it.  8-).
+
+This fallaciously suggests that a PnP card requires no driver support.
+
+Whilst one might get this impression from most of the advertising 
+around these days, I regret to inform you that it's pretty uncommon.  8)
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605483 ###
+===== 库内序 147040 | PK 2605483 | 等级 L4 =====
+DATE: 1998-05-05T21:52:53+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Mike Smith：否认 Millenium II 显卡是 blender 崩溃的共同原因，称自己也有该卡而 blender 正常
+
+> On Mon, 4 May 1998, Brian Cully wrote:
+> 
+> > I have the first Millenium in this box, so it may have something to do
+> > with the Millenium II, but that seems to be stretching.
+> 
+> Well it is the only common factor here. Between us. We both have Mill. II
+> cards. Im not positive if this is the problem but it is the only common
+> link.
+
+Sorry, that aint it either - I have a Millenium II and Blender works 
+fine under both AccelX 4.x and XFree86.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605485 ###
+===== 库内序 147042 | PK 2605485 | 等级 L4 =====
+DATE: 1998-05-06T02:33:10+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Terry Lambert：指出并不存在 4G 问题，若问题源于类型尺寸应在 2G 附近而非 4G 处触发
+
+>   dump/restore does not work on my 32GB filesystem.  Why?  Possibly a 4+GB
+> bug, though somone has speculated that it is sparse file problem.  What
+> happens?  dump generates a corrupted archive (bug), and restore detects
+> the corruption and crashes anyway (another bug).  There has been
+> an outstanding PR on this for a long time.
+
+There is no "4G problem".  If there is a problem based on type size,
+it will occur at 2G + 1, *not* 4G.
+
+The "long" type is a 32 bit signed value, meaning 31 bits of data
+and the sign bit, meaning 2G.
+
+The "long long" type is a 64 bit signed value, meaning 63 bits of
+data and the sign bit, meaning 2G * 4G.
+
+If a "long" type is used to represent block offests instead of byte
+offsets, then the problem, if existant, will occur at 2^31 * 512 = 1T.
+
+If the "long long" type is used to represent block offsets instead of
+byte offset, then the problem, if existant, will occur at 512 * 2G * 4G,
+otherwise known as "more disk than you have".
+
+
+Now you are claiming the problem occurs in dump instead of restore.
+
+If the problem has anything to do with sparse files (which it doesn't),
+you will be able to repeat it by creating a file, writing some small
+number of blocks up front, and then seeking out to:
+
+	off_t	off = 1 << 34;
+
+And writing some more blocks, then dumping the FS containing the file.
+
+You could fit this file on a floppy disk, since it's sparse, and make
+the test case teeny.
+
+Having run this experiment the other night with my QIC SCSI 2525
+drive, I can tell you that the problem is not in dump or restore,
+unless it's a byte/block offfset problem.
+
+If you are seeing a byte/block offset problem, it's not going to be
+occurring where ou are saying you are seeing the problem ("4G"), it's
+going to occur at one of the boundry conditions I identified, above.
+
+
+If you are seeing a problem where you said you are seeing the problem,
+then it is the driver/controller/tape drive/tape that is causing it.
+
+
+What version of FreeBSD are you running?
+
+What is the controller for the tape drive?
+
+Which driver is responsible for that controller?
+
+What exact 
+[…中段省略 611 字符…] was not using group permissions
+to access devices?  He will not be able to restore attributes
+accessible only to root unless he is root.
+
+Likewise, the secure level will affect the ability of the user to
+perform certain flags related operations.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605486 ###
+===== 库内序 147043 | PK 2605486 | 等级 L3 =====
+DATE: 1998-05-06T02:56:42+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: Call for testers for ThunderLAN ethernet driver
+摘要: Dan Janowski：求助 Compaq 的 AMD SCSI/Lance 芯片，2.2.6 下 lnc1 探测正常但 ifconfig 报初始化失败
+
+
+On a related by different note, just today I've been trying
+to get a Compaq with the AMD SCSI/Lance chip working. I've
+got 2.2.6, the SCSI is fine, the PCI lance lnc1 is probing ok.
+When I ifconfig it I get the 'Initialisation failed' message.
+I looked in the archives, the latest comments coming from jkh,
+so I didn't do the thing setting the port addrs and irqs of the
+ISA driver.
+
+What am I missing?
+
+Dan
+
+
+On Tue, 5 May 1998, Eivind Eklund wrote:
+
+> On Tue, May 05, 1998 at 08:14:52AM -0500, Chris Dillon wrote:
+> > On Tue, 5 May 1998, Bill Paul wrote:
+> > 
+> > > I would appreciate if people running FreeBSD 2.2.6 that have Compaq
+> > > hardware could test this driver to make sure it works, and if people
+> > 
+> > I have an older Compaq ProsiginiaVS server (486-66, EISA) running 2.2.5
+> > which has onboard Ethernet and SCSI, neither of which I got working (the
+> > onboard Ether is a Lance/PCnet chip, i think, so it should work), and the
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605487 ###
+===== 库内序 147044 | PK 2605487 | 等级 L4 =====
+DATE: 1998-05-06T04:25:52+00:00
+FROM: John-Mark Gurney <gurney_j@efn.org>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: John-Mark Gurney：说明 FreeBSD 有配置 PnP 卡的代码，但不具备判断系统哪些资源空闲的能力
+
+Stefan Bethke scribbled this message on May 5:
+> However, my expectation was that the card would have been configured
+> automagically, despite the lack of the BIOS; or, more specifically, I would
+> expect the PnP code to auto-configure all PnP devices if there seems to be
+> no PnP BIOS support.
+
+FreeBSD contains code the configure PnP cards, but doesn't have the
+smarts on what parts of the system are free for the card to use... what
+happens if you have an unsupported arcnet card in the machine that you
+use in dos mode?  how is FreeBSD suppose to know about that card and
+not use the same resources that the card uses...
+
+of course you will counter with, "but Win95 does this!", yes, they do,
+but they also happen to have all manufacturers writing drivers and
+detection routines for them so they can be pretty sure about what
+resources are free...  Win95 will have the same problem FreeBSD will
+if you stick a card of your own make (i.e. NO win95 drivers) into a
+machine...  FreeBSD just doesn't hide the problem...
+
+> Is there any particular reason (besides lack of interest or resources) for
+> no implementing this?
+
+well, the code that deals with the isa bus (and all busses for that
+matter) is actually going under a complete rewrite...  once that is done
+we should be able to support autoconfiguration of PnP devices...
+
+-- 
+  John-Mark Gurney                      Modem Rev/FAX: +1 541 346 9237
+  Cu Networking					  P.O. Box 5693, 97405
+
+  Live in Peace, destroy Micro$oft, support free software, run FreeBSD
+	    Don't trust anyone you don't have the source for
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605488 ###
+===== 库内序 147045 | PK 2605488 | 等级 L4 =====
+DATE: 1998-05-06T19:33:11+00:00
+FROM: "Chris Day" <the_reman@hotmail.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Chris Day：说明若 disable PnP 引脚已硬接则本应能用专有端口完成配置初始化，但实测无响应，PnP 状态端口显示 Wait4Key
+
+>if this happens they are not ISA-PnP compliant. In the case of the
+>OPTi931, the PnP configuration works fine in my experience (unless the
+>card you have has the 'disable PnP' pin hardwired on, but that's
+>another story
+
+If the pin is hardwired on then I should have been able to config and 
+init it by the proprietry ports, when i tried it didn't respond and the 
+PnP status port said it was in Wait4Key state, and it needed PnP 
+initialisation first.  Then when I went to the PnP ports it didnt 
+respond to any of them!!  So I have to ask, because the only way I can 
+init it is via the dos driver that opti wrote, and by neither the PnP 
+method or via the proprietry ports, how do you do it then with no DOS 
+driver.
+
+My best guess is that my opti card has been programmed in firmware to 
+only respond to a certain sequence or set of ports or init sequence, and 
+that opti ain't gonna tell anyone.
+
+regards, chris
+
+--
+Christopher Day, The reman, Loosecannon, Mortis, The Flatliner
+
+E-Mail   the_reman@hotmail.com
+Homepage http://www.geocities.com/TimesSquare/Lair/1218
+
+when the rain/when the children reign/keep your conscience in the dark
+melt the statues in the park - Fall On Me
+
+
+______________________________________________________
+Get Your Private, Free Email at http://www.hotmail.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605489 ###
+===== 库内序 147046 | PK 2605489 | 等级 L3 =====
+DATE: 1998-05-06T05:55:35+00:00
+FROM: Andreas Braukmann <braukmann@tse-online.de>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Andreas Braukmann：答复自己在跑 3.0-current SMP，机器为双 ppro200 配 Gigabyte 686DX 主板
+
+Hi,
+
+On Tue, May 05, 1998 at 07:32:41PM -0400, Open Systems Networking wrote:
+> Maybe it doesnt like SMP then, anyone running it under -current with smp,
+> and a matrox Mill. II? 
+yes, me.
+Sorry, I thought I mentioned it. (It's more or less the single cause
+for me running 3.0-current at all. dual ppro200, Gigabyte 686DX board).
+
+-ab
+
+-- 
+/// TSE TeleService GmbH  |  Gsf: Arne Reuter        |
+/// Hovestrasse 14        |       Andreas Braukmann  | We do it with
+/// D-48351 Everswinkel   |  HRB: 1430, AG WAF       |  FreeBSD/SMP     
+/// -------------------------------------------------------------------
+/// PGP-Key:          http://www.tse-online.de/~ab/public-key
+/// Key fingerprint:  12 13 EF BC 22 DD F4 B6  3C 25 C9 06 DC D3 45 9B
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605490 ###
+===== 库内序 147047 | PK 2605490 | 等级 L4 =====
+DATE: 1998-05-06T03:49:09+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Luigi Rizzo：以经验之谈说明该卡的实际行为并不严格符合规格书描述
+
+> If the pin is hardwired on then I should have been able to config and 
+
+probably. but in my experience the card does not
+behave exactly as in the specs.
+
+> My best guess is that my opti card has been programmed in firmware to 
+> only respond to a certain sequence or set of ports or init sequence, and 
+> that opti ain't gonna tell anyone.
+
+more or less. don't know if this is deliberate or just poor quality
+documentation.
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605491 ###
+===== 库内序 147048 | PK 2605491 | 等级 L4 =====
+DATE: 1998-05-06T03:55:56+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Luigi Rizzo：指出未写 at isa 标识会让传统 ISA 与 PnP 设备无法区分，并认为自动资源分配需先知道哪些资源可用
+
+> I agree with Stefan's sentiment. It seems like this should be
+> the paradigm:
+...
+>     device   foo0 port 0x220 irq 7 vector foointr
+
+i notice you did not put the "at isa?" specification -- is this
+deliberate or not ? because in this case one could differentiate
+between legacy isa and PnP stuff.
+
+In any case there are two major problems in my view:
+1) to do automatic resource assignment you'd need to know which
+   resources are available. Maybe the bios knows (more or less, since
+   legacy isa devices with no driver cannot be easily detected, and the
+   PnP detection of conflicts i am not sure how well it works),
+   but i have no idea on how to fetch this info
+
+2) providing a configuration in the kernel config file via "device..."
+   entry is hard, since a single pnp device can have 8 io ports, 2 drq, 2
+   irq, 4 memory addresses ... how do you fit this info in the few bits
+   available on the "device" line ?
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605492 ###
+===== 库内序 147049 | PK 2605492 | 等级 L3 =====
+DATE: 1998-05-06T06:05:41+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Archie Cobbs：承认漏写 at isa 标识并非有意，只是忘记了
+
+Luigi Rizzo writes:
+> > I agree with Stefan's sentiment. It seems like this should be
+> > the paradigm:
+> ...
+> >     device   foo0 port 0x220 irq 7 vector foointr
+> 
+> i notice you did not put the "at isa?" specification -- is this
+> deliberate or not ? because in this case one could differentiate
+> between legacy isa and PnP stuff.
+
+Not deliberate.. just forgot :-)
+
+> In any case there are two major problems in my view:
+> 1) to do automatic resource assignment you'd need to know which
+>    resources are available. Maybe the bios knows (more or less, since
+>    legacy isa devices with no driver cannot be easily detected, and the
+>    PnP detection of conflicts i am not sure how well it works),
+>    but i have no idea on how to fetch this info
+
+Couldn't the config file account for all of the resources in use?
+This might require adding some "dummy" entries or .. ?
+
+I mean, if the kernel doesn't know about some interrupt being used,
+then who else is using it and what the heck for? I guess I don't
+completely understand this issue.
+
+> 2) providing a configuration in the kernel config file via "device..."
+>    entry is hard, since a single pnp device can have 8 io ports, 2 drq, 2
+>    irq, 4 memory addresses ... how do you fit this info in the few bits
+>    available on the "device" line ?
+
+Fix "config" to handle it. In the meantime, don't support devices
+that use more than the "normal" number of resources.
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605494 ###
+===== 库内序 147051 | PK 2605494 | 等级 L3 =====
+DATE: 1998-05-06T06:00:25+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：反问对方提到的 hole in map 究竟记载在哪一页 man 手册里
+
+
+On Wed, 6 May 1998, Terry Lambert wrote:
+
+> >   Anyhow, basically any kind of restore operation (restore -t, or
+> > restore -r) results in an immediate "hole in map" response, with a "abort?
+> > [yn]" prompt, and then about three seconds later, a segmentation fault.
+> 
+> 
+> I think you need to read the man pages.
+
+  In what man page is "hole in map" mentioned?
+
+> A hole in a map won't happen unless you have bad media.  If you
+> traceback the panic in the source code, you'll see that the problem
+> is a zero-valued block map.
+
+  Question:  why does it segfault several seconds after producing the
+"abort?" prompt?  It had already detected the "hole in map" problem?
+Regardless this is still a bug, even assuming that the media is bad (it
+isn't, as I did a full backup and restore to the media with tar).
+
+...
+> You can ignore your damaged media using the "-y" option to restore:
+
+  Doesn't do anything in this case.  A "restore -t -v -y" tells me that
+every file (at least those I bother to let it read) had CRC errors.  That
+isn't right, as I can use the same tape to do a full tar and untar with no
+problems.
+
+> 	-y      Do not ask the user whether to abort the restore in
+> 		the event of an error.  Always try to skip over the
+> 		bad block(s) and continue.
+> 
+> It is recommended that you, instead, fix the underlying problem.
+
+  What is that?  The only thing you've said, is bad tape.  But it isn't.
+Next.
+
+> 					Terry Lambert
+> 					terry@lambert.org
+> ---
+> Any opinions in this posting are my own and not those of my present
+> or previous employers.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605496 ###
+===== 库内序 147053 | PK 2605496 | 等级 L3 =====
+DATE: 1998-05-06T06:26:27+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Mike Smith：称该议题去年已充分讨论，建议翻找旧线程，当时主要是 Luigi、Stefan Esser 与他本人在交换想法
+
+> I agree with Stefan's sentiment. It seems like this should be
+> the paradigm:
+
+We actually thrashed this out last year; you might be able to dig the 
+thread up again.  Mostly it was Luigi, Stefan Esser and myself throwing 
+ideas around. 
+
+>   CASE #1: Kernel config file looks like this:
+>   --------------------------------------------
+> 
+>     device   foo0
+> 
+>   In this case, the kernel automatically configures stuff for driver
+>   foo0. If the BIOS has already configured the card, and that's
+>   acceptable, the kernel can go along. Otherwise, the kernel should
+>   pick resources that are free and configure the card itself.
+> 
+> 
+>   CASE #2: Kernel config file looks like this:
+>   --------------------------------------------
+> 
+>     device   foo0 port 0x220 irq 7 vector foointr
+> 
+>   Kernel should override whatever is already configured in the
+>   card (if anything) with the given values.
+> 
+> 
+> Does this make sense to anyone else besides me? What are the
+> technical things that need to be done to make it happen?
+
+This actually falls a little short.  It's easier to look at it from a 
+different angle, too.
+
+  For each PnP device/function in the system
+    If the device/function is not supported (unknown, no driver present)
+      deconfigure device (if required)
+      continue
+    else
+      while resources required
+        allocate new resources
+        test resources (using PnP test facility if available)
+      endwhile
+      if resources available
+        allocate a new driver instance, assign resources
+      else
+        continue
+    endif
+  endfor
+
+  For each explicitly-configured ISA devices
+    if resource config does not conflict with PnP-configured device
+      allocate resources
+      if probe succeeds
+        allocate new driver instance
+      else
+        free resources
+      endif
+    endif
+  endfor
+
+So 
+
+device	foo0
+
+will support any number of 'foo' devices.
+
+device	foo0 at isa? port "IO_FOO0"
+
+will support any number of 'foo' devices, as well as probing for one at 
+IO_FOO0 after the PnP probe.
+
+The following things have to happen to make this 
+[…中段省略 1122 字符…] ic" PnP device identifiers as well that
+   should be used whenever possible.  The "extras" stuff that I did for 
+   the splash screen code can be used for this.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605499 ###
+===== 库内序 147056 | PK 2605499 | 等级 L3 =====
+DATE: 1998-05-06T06:26:18+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Luigi Rizzo：拒绝研读对方推荐的 Microsoft ESCD 文档
+
+> No; for starters the "resources in use" information is dynamic.
+> 
+> Luigi, you want the "ESCD" document from Microsoft which details how to 
+
+no, i want the time to read them :)
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605500 ###
+===== 库内序 147057 | PK 2605500 | 等级 L4 =====
+DATE: 1998-05-06T07:59:32+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Ruslan Ermilov：质疑原生一词所指，认为据其所知并不存在面向 BSD 类 Unix 的 Oracle Server 版本
+
+On Tue, May 05, 1998 at 04:50:06PM -0700, Julian Elischer wrote:
+> We have an NC-server here to evaluate. (from NC corp..) (aka oracle)
+> 
+> It's a FreeBSD box and it has a fully native FreeBSD oracle on it..
+
+What do you mean by "native" ?
+AFAIK there is no Oracle Server version for BSD unixes...
+
+> 
+> My sugestion:
+> 
+> ask NC corp to sell you a NC server
+> get the oracle pre-installed :-)
+> 
+> I haven't tried upgrading to a newer FreeBSD, but My guess is that 
+> it might work. It's NCOS 2.0 (whatever version of FreeBSD on earth 
+> THAT actually is..)
+> 
+> If I knew anything about Oracle I'd have tar'd it up and tried 
+> running it on a newer FreeBSD by now..
+> 
+> 
+> julian
+
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

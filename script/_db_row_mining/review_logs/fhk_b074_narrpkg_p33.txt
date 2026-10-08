@@ -1,0 +1,24 @@
+2605723|L3|John W. DeBoskey：发信到 Awfulhak.org 被拒，报 550 we do not relay 与 User unknown
+2605724|L4|Jim Flowers：2.2.6 与 3.0 的 lnc 初始化 Am79C971 失败，CSR0 不置 IDON，改为直接 inw 绕过
+2605731|L3|Brian Somers：实现 multilink ppp 遇难题，两进程各有独立 session id，仅 STDIN 挂着控制终端，求解法
+2605732|L4|Ollivier Robert：认为 sendmail 8.9 的反中继规则更好，可按 MX 授权中继，机器是某域 MX 即会尝试投递到它
+2605733|L4|Ruslan Ermilov：Cyclades 新版 Cyclom-Y 驱动适用 2.2.5 以上，不支援 8Yo rev. 6.02、SM8/SM16 II
+2605735|L3|David Greenman：确认已在计划内同步 RELENG_2_2 的驱动与 Cyclades 厂商版本
+2605737|L3|Andreas Klemm：问 -STABLE 系统上能否运行 -current 内核，自认 libkvm 相关会失效
+2605738|L4|Luigi Rizzo：dummynet 在 2.2.6 基本可用，需在内核加 IPFW 与 IPDIVERT，ip_output 参数处理未解
+2605741|L4|sbabkin：网络接口驱动没有主设备号，因为它们既不是字符设备也不是块设备，所以查不到 ed0 的主设备号
+2605742|L3|sbabkin：认为多数人在用过 FreeBSD 的配置流程后，会觉得 Linux 的交互式流程更麻烦
+2605746|L4|Julian Assange：sys/queue.h 中 tqe_prev 与 tqh_last 有缺陷，TAILQ_LAST/TAILQ_PREV 须重定义
+2605748|L3|Gary Kline：问 BSD 体系是否已有人实现 locale.c 与 localedef.c，否则需自行编写，并要求回复时抄送他
+2605749|L4|Justin T. Gibbs：sys/queue.h 是他为 -stable 引入的，但相关改动由 Kirk 完成
+2605758|L4|Kirk McKusick：TAILQ 宏在插入删除查找上比 CIRCLEQ 快约 20%，CIRCLEQ 只在大量反向遍历时占优
+2605759|L3|Chris Smith 想加入 RUNDOS 工作，等自己的机器装好 FreeBSD 之后再参与
+2605761|L4|Justin T. Gibbs：建议直接用 TAILQ，它能用也更快，客户端代码不必知道实现细节
+2605763|L3|tcobb：2.2.6 配 DPT RAID 控卡约每三天 panic 报 biodone buffer not busy，据其查无补丁可修
+2605764|L4|Jason Nordwick：补 cp.c 与 utils.c 修 bin/5733，非终端目录只读时递归复制失败，utils.c 误报 chown 错误
+2605766|L4|Robert Swindells：网络栈可用 ISODE，X.400 代码可用 PP，两者移植到 FreeBSD 都不难
+2605767|L4|Bernd Rosauer：SONY SDT-9000 DAT 磁带机在他的 FreeBSD-current 上正常，对内核只是普通 SCSI 磁带机
+2605768|L4|Andrzej Bialecki：发布内建 SCSI CAM 的安装软盘，可装 AHA7895 控卡机器，需两片软盘并按 README 特殊引导流程
+2605769|L4|Ruslan Ermilov：installworld 后到 usr/src/bin/cat 下 make 仍要重建，根因是 PROG 依赖 libc.a
+2605770|L3|vak@cronyx.ru 为 Cronyx-Tau 串口适配器驱动请求字符设备主号，并愿向 FreeBSD-current 提交源码
+2605771|L4|Jordan K. Hubbard：主设备号已定为 99 tau 给 Cronyx/Tau 串口适配器，因对方未提其他偏好才取名 tau

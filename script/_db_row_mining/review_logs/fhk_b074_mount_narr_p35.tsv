@@ -1,0 +1,24 @@
+2605818	885	karl 说明 vinum 是 Greg Lehey 推出的 CCD 替代品，可把系统内多块磁盘合并以提升速度并做冗余存储，首个 Alpha 版本仅供测试，此刻并不适合胆小者上手
+2605819	885	marc 打算恢复 X.25 与 ISO 网络支持，已从 2.1-RELEASE 光碟取回源码放进 stable 源码树，并试着编出带 CCITT、ISO、LLC 与 HDLC 选项的 kernel，认为只差函数原型等声明整理
+2605820	885	tom 报告 cvsup 加 make world 后重编 kernel，2.2.6-STABLE 下 EISA 总线上的 Adaptec 274X SCSI 适配器 attach failed，他补注本行应显示 irq 与 eisa0 slot 2
+2605822	885	jim 指出有闪存卡以 IDE 磁盘形态出现，BIOS 与 FreeBSD 都将其识别为 IDE 驱动器，因此不必编写驱动，他并附 adtron 与 sandisk 两个网址供参考
+2605823	885	jkh 回应称这块工作你只能自己摸索，若有人长期维护而不只是让代码重新编过就很好，若这是你的打算那就放手去做，并以 Jordan 署名收尾给出明确鼓励
+2605824	885	darren 转述英国版 PC Week 的消息，Intel 正与 Red Hat、VA Research 和 Cygnus 合作把 Linux 移植到 Merced，并问是否有人考虑找 Intel 谈 FreeBSD 上 Merced 的协议
+2605825	885	andrew 以 AUUG 98 程序主席身份附上一份征稿启事，该会议类似 Usenix 技术年会，他尤其欢迎 FreeBSD 相关技术论文，并预告会为 Linux 与 FreeBSD 等自由系统设专门分场
+2605827	885	yuri 提供可打在 FreeBSD-2.2.6-R 上的 sio 驱动补丁，专为主板串口用 Acer Labs UART 例如 IWill 主板而 FreeBSD 探测不到串口的情况，并提醒没有串口探测问题的人别用这个补丁
+2605828	885	luis 在 Compaq Proliant 1600R 装 FreeBSD 2.2.6-RELEASE，无法认出 PCI bus #2 上 1、2、3 槽的卡片，给 if_vx_pci.c 补上 905B-TX 的 board-id 后机器逢报文即挂起
+2605829	885	eivind 称据他所知无人正在做，早前有过恢复部分代码以方便 Token Ring 与更好 IPX 支持的讨论但进展很少，他建议改用 CVS 从 RELENG_2_1_0_BP 检出老版本，每隔六个月前进并用二分查找定位破坏 X.25 的提交
+2605833	885	mike 指出 905 revision B 不受支持，不过内置网卡 TI ThunderLan 有第三方驱动可用，他的签名里并列了 mike@smith.net.au 与 msmith@freebsd.org 两个地址
+2605834	885	mike 说亲眼见过 ALTQ 在系统里运行，上周和 Cho-san 谈过他的工作与方向，认为 FreeBSD 核心团队愿意在他觉得就绪时吸收成果，Cho Kenjiro 今年会在 USENIX 讲 ALTQ
+2605838	885	terry 回应对方对那段关于误导性功能宣传的说法毫不在意这一点本身才令人担忧，并署名 Terry Lambert 附注文中意见仅代表个人而非现任或前任雇主
+2605839	885	terry 说那样一张宽网实在没有必要，它恰好罩住了 -alias 实际做的事情还顺带捞来一堆海草和比目鱼，又类比有人把 MUD 说成 Cyberspace 让他同样恼火
+2605842	885	greg 补发 vinum 说明，称它是仿 Veritas 设计的逻辑卷管理器，不是克隆而是试图以更优雅方式解决 Veritas 的一些问题，它把文件系统与底层磁盘硬件隔离开来让卷跨越多块磁盘甚至大过任何单盘，首个 alpha 仍相当不稳
+2605843	885	charles 喜欢 packet aliasing 这个说法，建议 libalias 改叫 libpktalias 或 libpacketalias 因为它只处理报文，但改库名容易，把 ppp 的 -alias 换成 -pktalias 会让普通用户出问题
+2605844	885	tcobb 从 PR 记录判断这次 panic 与具体硬件无关，只要底层是 SCSI 子系统就会触发，CAM 据说能修但前提是用受支持的卡片，而他们的服务器平均每 1.5 天就 panic 一次毫无预告
+2605845	885	matthew 说若内置网卡是 ThunderLan 就该换 Bill Paul 的新驱动，那人似乎已把所有已知 bug 几乎修完，他还提到据他记 Jordan 说过 905B 不受支持
+2605846	885	matthew 澄清眼下 Token Ring 与 802.3 IPX 帧支持并不依赖第二层 LLC，另建议去 NetBSD 与 OpenBSD 的代码里看看是否还有更多修复
+2605847	885	daniel 建议留一个兼容选项，用户用了旧写法时只发一条警告而不报错，例如 ppp 的 -alias 会提示这是已弃用选项、请改用 -pktalias
+2605848	885	luigi 完全认同，并指出 dummynet 与 ALTQ 是两回事、将来也许能整合，他个人认为 ALTQ 更完整，而 dummynet 的好处是工作在 IP 层不依赖具体接口，还能借用 ipfw 做包过滤省去重复分类
+2605849	885	luoqi 说自己在做数值计算程序频繁调用 expm1，检查 msun 里的实现后惊讶地发现它没用 f2xm1 i387 指令而 exp 却用了，不解为何偏爱 C 实现而不直接用 FPU 指令
+2605850	885	brian 说若命名决策能尽快定下来，他可以在新版支持多处理的 ppp 里一并改掉，反正大家本来也得改几处，还会附一个 README.changes 文件说明变动
+2605851	885	julian 说自己也许会在 WIPS 上做一场关于 Whistle 智能带宽的报告，并且很期待在会中和你们以及 Kenjiro 见面

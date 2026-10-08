@@ -1,0 +1,36 @@
+2605303|L4|BocaBoard 2.1.0 需把 sio.c ftl_init 从 14 改 8 免 silo overflow，2.2.6 已无该符号
+2605304|L3|Julian Elischer：把 1988 年做过的 CBASIC 转 UNIC/C 转换器搬上 FreeBSD，原持有公司已出售业务并注销该软件
+2605305|L3|引用 Julian 的 C-BASIC 移植计划后反问对方还有没有更值得做的事
+2605308|L3|询问 IP over ISDN 网络驱动里 bpfattach 用 DLT_NULL 时是否要给每个 mbuf 前置头长度
+2605309|L3|想做开机自动加载 1:sd(0,a)kernel 的 FreeBSD 启动软盘并问如何实现
+2605310|L4|Eivind Eklund：用 newfs -B 初始化软盘并放 boot.config 指向 1:sd(0,a)/kernel 即可开机自动加载
+2605311|L3|Mike：确认 USR 设备处理 VJ 压缩有问题，自家 POP 改造后接入 PRI 的 Enterprise Network Hubs 需全程数字
+2605312|L4|Dag-Erling：termios 各字段清零使终端处于 raw 非阻塞模式，程序变成不断读 EOF 的空转循环
+2605313|L4|Julian Elischer：disklabel 会给软盘加 bootblocks，再 newfs 挂载并写入 boot.config
+2605314|L4|Charles Sprickman：mit-pthreads 在 3.0 下要靠一些 hack 才能跑，换来更好的性能与近一周不重启
+2605316|L3|Greg Lehey：认为不记得 basic 语法本该是编译器的通行要求
+2605317|L4|Joe McGuckin：VAX 有 WCS 可写控制存储选项可自定义指令集，Pentium II 也能开机时更新微码且新 BIOS 支持
+2605318|L4|Doug White：确认 login class 信息在 shell 间继承，所以 rc.local 也受 daemon class 限制
+2605319|L4|Doug White：询问 BIND 4.9.7 何时进入源码树，因 4.9.6 存在严重安全漏洞需加快升级
+2605320|L4|Studded：Peter 当天在处理，他自己 cvsup 后在 -stable 编译出的 named 已是 4.9.7-T1b
+2605321|L3|Luigi Rizzo：问 Windows 95 如何在专线上做 PPP，其配置只提拨号且中途插入 modem 命令导致挂死
+2605322|L3|Matthew N. Dodd：曾在 Win95 调制解调器驱动配置项里用 null-modem 定义跑通过专线 PPP
+2605323|L3|Dan Janowski：问能否给前台启动流程单独指定 init login.class，使后台进程仍用 daemon.class
+2605324|L3|Nicolas Souchu：问 ISA PnP 支持进展、是否依赖 BIOS 开机分配资源，以及 PCI PnP 与 snd PnP 的交互
+2605326|L4|Luigi Rizzo：PnP 在各总线上的实现各不相同，2.2.6 已有 ISA PnP 支持，2.2.X 补丁在他的网页上
+2605327|L4|Luigi Rizzo：FreeBSD 并非完全不用 BIOS，磁盘启动也依赖 BIOS，PCI 与 ISA-PnP 资源亦由 BIOS 分配
+2605328|L3|Chuck Robey：澄清本意是指驱动代码不调用任何 BIOS 例程
+2605331|L4|Kevin：找 direct modem connection 并单独安装，它支持 null-modem 与 laplink，专线应无问题
+2605333|L4|Amancio Hasty：有时确实要靠 BIOS 完成 PnP 初始化，GUS PnP 声卡还需 BIOS 之外的初始化
+2605334|L4|Amancio Hasty：驱动不用 BIOS 调用，但近期有人提交了会调 BIOS 的代码，可用于显卡显示模式
+2605336|L3|Amancio Hasty：询问有没有人在试用这个 Blender 软件包
+2605337|L3|Chris：在 -current 启动 Blender 后屏幕变蓝随即 core dump，之后自行恢复，疑因只适配 2.2.5 与 2.2.6
+2605339|L4|Amancio Hasty：认为与 2.x 3.x 版本无关，自己在 -current 上跑通了 blender，请对方给出 stack trace
+2605340|L3|Amancio Hasty：FreeBSD 对 blender 这类关键技术若不响应会落后于 Linux，别弄丢这家友好厂商的关系
+2605342|L3|David E. Cross：dump 与 nc 向 Solaris 备份至 75% 时中间路由器掉线，2.2.6-STABLE 主机随即出现异常
+2605343|L4|Tom：指出是 mbuf 不足，需调大 MAXUSERS 或 NMBCLUSTERS，并认为 dump 与 restore 在大文件系统上已坏
+2605344|L4|Tom：tx 网卡驱动同样会丢失 mbuf
+2605345|L3|Stephen：问该工具是否真的转译源码，以及有没有能处理运行时 pcode 的程序
+2605348|L3|想在 IRC 进程内做低层 TCP 过滤，按词表移除或掩码进出消息的词
+2605349|L3|Amancio Hasty：建议直接从 NeoGeo 自己的 FTP 下载 blender，别用 FreeBSD 赞助的镜像
+2605352|L4|Julian Elischer：不存在 pcode，该转换器直接把源码转成 C

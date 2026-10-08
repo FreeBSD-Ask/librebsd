@@ -1,0 +1,24 @@
+2606051|L3|Studded：说在 -questions 发了两三天无人回应，把中级 CVS 问题转来求助
+2606052|L4|Ollivier Robert：建议装 ports 里的 netcat，它有 UDP 模式，并给出 nc 连接与 nc -l -p 监听用法
+2606053|L4|Snob Art Genre：答装 ports 集合里的 netcat 后运行 nc -u 主机名 端口
+2606054|L3|Luigi Rizzo：顺便问 JKH 或 WC 是否在 USENIX 组织 FreeBSD 社交活动
+2606055|L3|Jordan K. Hubbard：答没有计划，反问对方有没有具体设想
+2606056|L3|Gregory D. Moncreaff：openfiles 限为 1024 但 limit 与 limits 报 360，login.conf 无 360
+2606059|L3|询问如何探测须先下载固件才能读取 Vendor/Device ID 的 PCI 设备这一先有鸡先有蛋的问题
+2606061|L4|Jason Thorpe：ipfilter 是 Darren Reed 的内核防火墙产品，divert(4) 是 FreeBSD 原生功能且无其他实现模拟
+2606063|L3|Mike Smith：怀疑该卡使用通用 PCI bridge chip，建议拆开看板上芯片后再尝试匹配
+2606065|L3|询问 SMP 环境下保证临界区单线程通过的函数，指出 UP 环境的 splhigh 对 SMP 不足
+2606067|L4|David E. Cross：isa_devtab_cam 编译失败通过先执行 make world 解决
+2606068|L3|询问大型 Web 服务器出现数千 TIME_WAIT 与 FIN_WAIT_2 套接字是否正常及成因
+2606069|L3|询问 parallel port zip drive 能否可靠工作，并问 ppa 标准做法在已装 SCSI 设备时失效及该移植的维护者
+2606070|L4|Mike Smith：ppa 驱动本身即又一块 SCSI 适配器，与既有 SCSI 设备不存在冲突
+2606073|L4|John S. Dyson：目前普通驱动上下文中用 splhigh 可以工作，但该做法有缺陷且将来会失效
+2606074|L3|就 rpc.lockd 锁管理器发问其机制是否只能算是伪锁定
+2606075|L3|询问 TIME_WAIT 态套接字是否不持有文件描述符，以及等待 FIN 或处于 FIN_WAIT_2 的套接字是否持有
+2606076|L4|Jordan K. Hubbard：先编内核后做 make world 从未经过正确，正确顺序恰好相反
+2606077|L4|报告 FreeBSD 2.2.6 使用 pthreads 与 libc_r 时阻塞 write 向已连接 TCP 套接字会返回部分写入
+2606084|L4|Alex：除先执行 make world 之外还需先重建 config 才能解决编译失败
+2606085|L3|阅读 VM 源码询问 MAP_ENTRY_IS_A_MAP 在何处被置入 vm_map_entry 的 eflags 字段
+2606087|L4|Jim Shankland：服务器端大量 FIN_WAIT_2 说明客户端实际未发送 FIN，使服务端在 FIN_WAIT_2 状态挂起
+2606088|L3|质疑为何 make world 须先于 kernel，认为部分可执行文件依赖内核特性而非相反，内核本身依赖 config 与 mount
+2606090|L4|Julian Elischer：认为性能报告中 freebsd 与 linux 两行被互换，两者 NFS 支持项明显不符

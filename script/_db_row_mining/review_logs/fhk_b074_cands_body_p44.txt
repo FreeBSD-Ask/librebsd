@@ -1,0 +1,811 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606175 ###
+===== 库内序 147732 | PK 2606175 | 等级 L4 =====
+DATE: 1998-05-25T12:28:46+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: Vinum: first alpha release available
+摘要: Dag-Erling：Coda 是分布式文件系统更近于替代 NFS 而非 CCD，靠本地缓存可断线继续工作
+
+Walter Hafner <hafner@informatik.tu-muenchen.de> writes:
+> The way I understand it: CCD is superseeded by vinum. But where comes
+> coda into place?
+
+AFAIK, Coda FS is something totally different. It is a distributed
+file system, more of a replacement for NFS than a replacement for CCD.
+Amongst other features, it is "disconnection-proof": since files are
+cached locally, you can disconnect from the server and still work on
+the files you have cached.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606176 ###
+===== 库内序 147733 | PK 2606176 | 等级 L4 =====
+DATE: 1998-05-25T13:25:36+00:00
+FROM: Marino Ladavac <lada@pc8811.gud.siemens.at>
+SUBJ: RE: limits && /etc/login.conf
+摘要: Marino Ladavac：MAXUSERS 取 10 使文件描述符上限为 360，可加大 MAXUSERS 重编或改 kern.maxfiles
+
+I take it you are running a more or less default kernel with
+MAXUSERS set at 10 in config file.
+
+Thus, 360 file descriptors is a system wide maximum--no more
+than that many can exist at any given time.
+
+This maximum can be increased either by increasing MAXUSERS
+and rebuilding a kernel, or by setting the sysctl variables
+kern.maxfiles and kern.maxfilesperproc during the runtime.
+
+Take a look at kernel rebuild and sysctl manpage for the 
+two approaches.
+
+FWIF, I'm going the sysctl way because I don't need that many
+mbufs, but I do need a lot of file descriptors (KDE apps eat
+fd's for breakfast).
+
+/Marino
+
+On 21-May-98 Gregory D. Moncreaff wrote:
+> 
+> I'm trying to write a program that deals with a
+> couple of thousand descriptors and I'm confused
+> about how limits is reporting what should be
+> derived from login.conf.
+> 
+> Trying a both a "default" and "root" class user,
+> I've set openfiles-cur/max to 1024 but when I
+> type `limit` or `limits` it reports 360 as the
+> openfiles limits.
+> 
+> When I grep for `openfiles` in /etc/login.conf
+> I find no occurences of 360.  Where did it come
+> from?
+> 
+> How/should get/setrlimit work? when I call 
+> getrlimit it reports a max of 360 and cur of 0?
+> 
+> thanx,
+> -g
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+----------------------------------
+Marino Ladavac
+Date: 25-May-98
+Time: 15:18:06
+----------------------------------
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606177 ###
+===== 库内序 147734 | PK 2606177 | 等级 L4 =====
+DATE: 1998-05-25T14:04:10+00:00
+FROM: "Jonathan M. Bresler" <jmb>
+SUBJ: Re: Vinum: first alpha release available
+摘要: Jonathan M. Bresler：Coda 支持断线操作并在重连时同步，属移动计算用途而非卷管理器
+
+Walter Hafner wrote:
+
+> We have a variety of different tools that perform similar or at least
+> overlapping tasks:
+> 
+> - CCD
+> - vinum
+> - coda
+> 
+> The way I understand it: CCD is superseeded by vinum. But where comes
+> coda into place?
+
+	coda is quite a different beast.
+	code allows disconnected  operations with resync when
+	you reconnect to the network--mobile computing.
+jmb
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606178 ###
+===== 库内序 147735 | PK 2606178 | 等级 L3 =====
+DATE: 1998-05-25T14:04:43+00:00
+FROM: Robert Watson <robert@cyrus.watson.org>
+SUBJ: Re: Vinum: first alpha release available
+摘要: Robert Watson 表示不确定 Coda 目前能否干净地归入 FreeBSD 的卷管理格局
+
+On 25 May 1998, Walter Hafner wrote:
+
+> Quick question: What are the 'strategic' plans concerning volume
+> managers and FreeBSD?
+> 
+> We have a variety of different tools that perform similar or at least
+> overlapping tasks:
+> 
+> - CCD
+> - vinum
+> - coda
+> 
+> The way I understand it: CCD is superseeded by vinum. But where comes
+> coda into place?
+
+I'm not sure that Coda currently fits into the picture cleanly.  While it
+does offer volume management services, it also doesn't fit (server-side)
+into the current file system structure well.  Volumes are Coda's
+granularity for replication/recovery locking, as well as its granularity
+for quotas (when implemented).  As such, they are quite similar to the
+traditional concept of managed volumes, as they can be moved around from
+server to server as a chunk, etc.  However, Coda stores the meta-data for
+the volumes in an RVM (Recoverable Virtual Memory -- a logged
+transactional VM system) partition due to Coda's version control and ACL
+requirements.
+
+What Coda might really benfit from is a transactional filesystem so that
+it can stop using RVM :).  
+
+anyhow, so I'm not sure how this fits into the overall picture.  Also,
+Coda is definitely cross-platform.  The Linux people, however, have been
+integrating a number of kernel changes to support coda better, and I
+believe that the Coda kernel-side code is now in their standard release.
+Similarly, they are working on integrating PAG support into their kernel
+for authorization purposes.  There was some discussion a few months ago on
+FreeBSD-Security about token-handling architectures -- we might want to
+wake up the discussion at some point and see if we can find a better
+general-purpose solution than PAGs.
+
+  Robert N Watson 
+
+
+----
+Carnegie Mellon University  http://www.cmu.edu/
+Trusted Information Systems http://www.tis.com/
+SafePort Network Services   http://www.safeport.com/
+robert@fledge.watson.org    http://www.watson.org/~robert/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606179 ###
+===== 库内序 147736 | PK 2606179 | 等级 L4 =====
+DATE: 1998-05-25T06:59:38+00:00
+FROM: Stefan Eggers <seggers@semyam.dinoco.de>
+SUBJ: Re: devices 
+摘要: Stefan Eggers：/usr/sbin/config 读 GENERIC 生成 ioconf.c 放入 sys/compile，内含设备资源表
+
+> Does anyone know how a device gets itself in the list to be probed?  I
+
+/usr/sbin/config takes care of it.  It reads a config file (lets name
+it GENERIC for now :->) where all devices and their resources get
+listed.  From this it builds a source file named ioconf.c which goes
+under /usr/src/sys/compile/GENERIC.
+
+This source file contains tables with all the devices.  From there one
+gets the information which device drivers are in this particular
+kernel.  The rest is just going through this tables and for each of
+the drivers examining their device structure for the field which
+denotes the probe function.  Then this function gets called and if it
+says "hardware is there" one can attach the driver.
+
+Of course all this information is w/o guarantees about correctness.
+It's what I know by now about this from reading sources.  But I think
+it can't be too far from reality.  ;-)
+
+Stefan.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606181 ###
+===== 库内序 147738 | PK 2606181 | 等级 L4 =====
+DATE: 1998-05-25T16:21:19+00:00
+FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM>
+SUBJ: Re: Program with sockets
+摘要: Ron G. Minnich 纠正：端口号换算应该用 htons 而不是 htonl
+
+ports are htons, not htonl
+
+ron
+
+Ron Minnich                |Java: an operating-system-independent, 
+rminnich@sarnoff.com       |architecture-independent programming language
+(609)-734-3120             |for Windows/95 and Windows/NT on the Pentium
+ftp://ftp.sarnoff.com/pub/mnfs/www/docs/cluster.html 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606182 ###
+===== 库内序 147739 | PK 2606182 | 等级 L4 =====
+DATE: 1998-05-25T16:54:18+00:00
+FROM: "Eric J. Schwertfeger" <ejs@bfd.com>
+SUBJ: Re: Sendmail 8.9
+摘要: Eric J. Schwertfeger：8.9 最关键是默认关闭中继，可按 IP 域名 HELO 或 MX 判定，8.8.8 加规则可近似
+
+On Mon, 25 May 1998, Alex Povolotsky wrote:
+
+> Hello!
+> 
+> Has anyone checked this new version? It is claimed to be more spam-proof.
+
+Definitely is that, though you can get most of the way there with 8.8.8
+and various non-distribution rules.  The single most important change is
+that in 8.9, relaying is off by default, and you can choose several ways
+to decide what you relay.  By IP address, by domain, by HELO, by MX
+records, etc.
+
+It also includes dropin rules for RBL, DNS checking, and regex matches.
+I'm not sure how the DNS checking works, it seems to have some way of
+saying "temp failure if we traced to a DNS server that wasn't responding"
+and "permanant failure if we traced to a DNS dead end."
+
+All in all, I'm upgrading our machines as soon as it seems stable enough
+for production use.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606185 ###
+===== 库内序 147742 | PK 2606185 | 等级 L4 =====
+DATE: 1998-05-25T17:57:02+00:00
+FROM: S�ren Schmidt <sos@FreeBSD.ORG>
+SUBJ: Re: FreeBSD Lab
+摘要: Søren Schmidt 建议 FreeBSD Lab 条目增列 ELF 迁移 ATAPI CDRW 与 VESA 图形模式并自任此三项负责人
+
+In reply to Kenneth D. Merry who wrote:
+> > I can do that; (in fact I've already done that ;-)
+> > 
+> > Kernel:
+> >  SMP
+> >  Tuned Unified VM
+> >  Kernel-Threads
+> 
+> [ ... ]
+> 
+> > Please contact me if some hot technologie is not on the list.
+> 
+> 	CAM should be on the list as well.
+
+So should:
+	Transition to ELF format.
+	ATAPI CDR/CDRW drive support
+	VESA graphics mode support.
+
+You can add me as responsible for those 3 items.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+S�ren Schmidt               (sos@FreeBSD.org)               FreeBSD Core Team
+                Even more code to hack -- will it ever end
+..
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606186 ###
+===== 库内序 147743 | PK 2606186 | 等级 L4 =====
+DATE: 1998-05-25T19:47:11+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: ISDN troubles
+摘要: Wilko Bulte：只需把 Bitsurfer 配置正确，FreeBSD 本身无需改动，建议查设备厂商文档
+
+As Chris Silva wrote...
+-- Start of PGP signed section.
+> Hi,
+> 	I was wondering, I can connect PPP via my Bitsurfer Pro, however, I'm
+> unsure how to configure FBSD to use the full 128 mode (actually,
+> 115,200) or Dual band, whatever ya wanna call it.
+
+You just have to configure your Bitsurfer correctly, FreeBSD itself does not
+need adaptions. Check the BS docs.
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+______________________________________________ Powered by FreeBSD __________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606191 ###
+===== 库内序 147748 | PK 2606191 | 等级 L4 =====
+DATE: 1998-05-25T18:12:14+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: Sendmail 8.9
+摘要: Ollivier Robert 认为 8.9 在反垃圾邮件上大幅优于从前，新反中继规则也比 C. Assman 旧规则更灵活
+
+According to Alex Povolotsky:
+> Has anyone checked this new version? It is claimed to be more spam-proof.
+
+It is by a large extend (relaying is disallowed by default). The new
+anti-spam rules are more versatile than the old ones by C. Assman.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606192 ###
+===== 库内序 147749 | PK 2606192 | 等级 L4 =====
+DATE: 1998-05-25T22:43:57+00:00
+FROM: John Polstra <jdp@polstra.com>
+SUBJ: Updated CVSup FAQ
+摘要: John Polstra 已更新并扩充 CVSup FAQ 放在 polstra.com 项目页并欢迎继续反馈意见
+
+Based on suggestions from many people, I've updated and expanded the
+CVSup FAQ.  You can find it at:
+
+    http://www.polstra.com/projects/freeware/CVSup/faq.html
+
+Please take a peek, and keep those suggestions coming.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606194 ###
+===== 库内序 147751 | PK 2606194 | 等级 L4 =====
+DATE: 1998-05-25T23:06:19+00:00
+FROM: Harlan Stenn <Harlan.Stenn@pfcs.com>
+SUBJ: Re: Sendmail 8.9 
+摘要: Harlan Stenn 熟悉 Claus Assman 规则集且有若干 8.9 尚未掌握的用法，并听说 CA 规则集将支持 8.9
+
+> It is by a large extend (relaying is disallowed by default). The new
+> anti-spam rules are more versatile than the old ones by C. Assman.
+
+Perhaps, but I *know* how to set up and use Claus Assman's stuff, and there 
+are things CA's stuff does that I haven't figured out how to do with 8.9.
+
+I also gather that CA's rulesets will support 8.9.
+
+Then again, I postponed cutting over from 5.6x+IDA on everything except my 
+firewalls until the mid-8.8.x for similar reasons.
+
+H
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606195 ###
+===== 库内序 147752 | PK 2606195 | 等级 L3 =====
+DATE: 1998-05-26T00:39:44+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: Re: FreeBSD Lab
+摘要: Archie Cobbs 说明自己不担任 FreeBSD Lab 负责人，该角色由 Andre Oppermann 担任
+
+Julian Elischer writes:
+> hmmmm, you volunteering?
+
+No, but Andre Oppermann is.. :-)
+
+-Archie
+
+> On Mon, 25 May 1998, Archie Cobbs wrote:
+> > 
+> > It would be nice if the 'lab manager' also functioned as an explicit
+> > 'advocate' who works on behalf of all of the projects. The advocate's
+> > job would be to raise issues in the base FreeBSD system that need
+> > to be addressed for the projects to advance. This person should be
+> > no stranger to -hackers and the core group.
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606196 ###
+===== 库内序 147753 | PK 2606196 | 等级 L3 =====
+DATE: 1998-05-26T01:09:28+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: FreeBSD Lab 
+摘要: Amancio Hasty 称赞 Julian 熟悉 FreeBSD 且有跨项目经验，称自己曾在 TRW Systems 与他共事
+
+
+Hi Andre,
+
+Julian is a great source of insight into FreeBSD and he has  great
+inter-project skill sets. I had the pleasure of working with him
+at TRW Systems where I was the Team Lead for an X Server project.
+
+If you run into problems don't hesitate to e-mail!
+
+
+	Enjoy,
+	Amancio
+
+> Julian Elischer writes:
+> > hmmmm, you volunteering?
+> 
+> No, but Andre Oppermann is.. :-)
+> 
+> -Archie
+> 
+> > On Mon, 25 May 1998, Archie Cobbs wrote:
+> > > 
+> > > It would be nice if the 'lab manager' also functioned as an explicit
+> > > 'advocate' who works on behalf of all of the projects. The advocate's
+> > > job would be to raise issues in the base FreeBSD system that need
+> > > to be addressed for the projects to advance. This person should be
+> > > no stranger to -hackers and the core group.
+> 
+> ___________________________________________________________________________
+> Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606198 ###
+===== 库内序 147755 | PK 2606198 | 等级 L3 =====
+DATE: 1998-05-26T04:04:33+00:00
+FROM: Child <child@healing.edunet.aus.net>
+SUBJ: crashing double page fault
+摘要: Child 用 2.2-971218-SNAP 做 15 路 modem 的 pppd 拨入服务器，出现 double page fault 挂死求排查
+
+Dear all i'm running 2.2-971218-SNAP as a pppd dialin server with 15 
+modems connected via a control rocket port
+for the past few weeks i have been getting a double page fault
+and sits until I reset it,
+just wondering what steps I can take to track this problem down 
+I have made no handware/software changes this just started happening ever
+now and then
+and in the mean time anyway to catch this crash and automatic reset to save
+downtime?
+
+thanks 
+
+JS
+
+
+
+
+
+Time to heal....Time to recover...Time to Move on..Time to live life.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606199 ###
+===== 库内序 147756 | PK 2606199 | 等级 L4 =====
+DATE: 1998-05-26T05:31:00+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Telephone Voice Answering Machine under FreeBSD
+摘要: Amancio Hasty 发起电话语音应答机项目，旧说明在 Voice.FAQ 的 ftp 路径，有意者向多媒体邮件列表投稿
+
+
+For a while now my phone is being managed by my FreeBSD box . These  are
+my old instructions on how to setup an answering machine:
+
+ftp://rah.star-gate.com/pub/Voice.FAQ
+
+I am trying to kick off a new voice answering machine project so 
+those interested please post to multimedia@freeBSD.org
+
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606200 ###
+===== 库内序 147757 | PK 2606200 | 等级 L3 =====
+DATE: 1998-05-26T14:43:44+00:00
+FROM: Meir Dukhan <meir@bis.co.il>
+SUBJ: /usr/lib/crt0.o: Undefined symbol `__startup_setlocale
+摘要: Meir Dukhan 编译任何程序都报 crt0.o 未定义符号 __startup_setlocale，怀疑链接文件有问题
+
+Hi,
+
+When trying to build any program I get this message:
+
+/usr/lib/crt0.o: Undefined symbol `__startup_setlocale' referenced from
+text segment
+
+Do I have a problem with my linker files ?
+
+Tia
+
+Meir
+ps: please, cc me at meir@bis.co.il, thanks
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606202 ###
+===== 库内序 147759 | PK 2606202 | 等级 L4 =====
+DATE: 1998-05-26T16:03:27+00:00
+FROM: Meir Dukhan <meir@bis.co.il>
+SUBJ: Re: /usr/lib/crt0.o: Undefined symbol `__startup_setlocale
+摘要: Meir Dukhan 反馈该未定义符号问题只在 2.1.6 出现，2.2.2 下没有问题
+
+Dag-Erling Coidan Sm�rgrav wrote:
+
+> Meir Dukhan <meir@bis.co.il> writes:
+> > When trying to build any program I get this message:
+> >
+> > /usr/lib/crt0.o: Undefined symbol `__startup_setlocale' referenced from
+> > text segment
+> >
+> > Do I have a problem with my linker files ?
+>
+> What version of FreeBSD are you running?
+
+It occurs on 2.1.6, no problem with 2.2.2.
+
+Thanks
+
+Meir
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606205 ###
+===== 库内序 147762 | PK 2606205 | 等级 L4 =====
+DATE: 1998-05-26T17:45:08+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Weird behaviour in BootEasy
+摘要: Simon Shapiro 判断 BootEasy 反复改判磁盘几何是阵列配置混乱所致，并称建盘时用 dptmgr 与 fw0
+
+
+On 24-May-98 Eivind Eklund wrote:
+
+ ...
+
+> It changes it mind.  After I have pressed 'F5', it reports 1024x64x32,
+> before I've pressed F5 it reports 1024x122x32.  Wonder how I can stop
+> this;
+> the easiest is probably by making BootEasy not write out the press of
+> 'F2'.
+> It isn't a correct fix, though.
+
+I am almost certain you are running on a confused array.  When I built your
+disks, I used dptmgr/fw0.  Then I used the Geometry option in sysinstall to 
+arrange the disk in nice, round 1MB ``tracks''.  The geometry you see comes
+from the array re-build (the DPT firmware tries to squeeze as much of the
+disk into BIOS=able geometry as possible.  Somehow the two blocks are
+present and somehow you are reading them both.
+
+Try (if practical) to wipe the disks and run dptmgr/fw0 to create a new
+array.
+
+Simon
+
+
+---
+
+
+Sincerely Yours, 
+
+Simon Shapiro                                           Shimon@Simon-Shapiro.ORG
+                                                        770.265.7340
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606208 ###
+===== 库内序 147765 | PK 2606208 | 等级 L3 =====
+DATE: 1998-05-26T19:18:27+00:00
+FROM: Sabrina Minshall <sabrina@accesscom.com>
+SUBJ: vinum config
+摘要: Sabrina Minshall 在 2.2.6 上用两块 2G SCSI 盘，问如何用 vinum 镜像分配 swap usr src 等分区
+
+Greg,
+   here's the config I have/want: 2 (2-gig) scsi hd's. Installed 2.2.6. 
+   partitions / - 200 MB. I want to allocate and mirror as follows:
+
+   sd0			sd1		   size
+   ---			---		   ----
+   /			/ 		   200Mb (can it be vinum too ?)
+   swap			swap	   vinum (200 MB)
+   /usr			/usr	   vinum (600 MB)
+   /usr/src		/usr/src   vinum (100 MB)
+   /u			/u		   vinum (400 MB)
+   /hw			/hw		   vinum (500 MB)
+
+	How do I go about configuring. I've read the docs
+	but couldn't understand the mapping 
+	volume->plex->subdisks->drives?
+
+	Appreciate any help.
+
+	sabrina
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606209 ###
+===== 库内序 147766 | PK 2606209 | 等级 L3 =====
+DATE: 1998-05-26T19:29:42+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: variant symlinks (was  Re: cvs commit: src Makefile src/gnu/usr.bin Makefile src/gnu/usr.bin/as Makefile src/gnu/usr.bin/ld Makefile sr)
+摘要: Mike Smith 称自己不想要 per-session 变体，但认为 variant symlinks 若实现可用也不会带来麻烦
+
+> <<On Tue, 26 May 1998 11:48:51 -0700, Mike Smith <mike@smith.net.au> said:
+> 
+> > Er, maybe.  It makes per-session variance somewhat difficult though.
+> 
+> That presumes that one actually WANTS per-session variance.  I for one
+> certainly don't.
+
+Sure.  I don't really want a lot of what you do either.  I seem to get
+along OK, and presuming the implementation worked, I suspect it wouldn't
+kill you.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606210 ###
+===== 库内序 147767 | PK 2606210 | 等级 L4 =====
+DATE: 1998-05-26T21:36:25+00:00
+FROM: Michael Hancock <michaelh@cet.co.jp>
+SUBJ: Re: Sendmail 8.9
+摘要: Hancock：指出 sendmail 8.9.0 与 db-2.0 两侧都有授权变更且构建文档偏向 db-2.0 在 SunOS 实测可用
+
+One thing we need to look at is the license.  I was working on sendmail
+8.9.0 with db-2.0 on SunOS recently and I think I saw some licencing
+changes in both distributions. 
+
+The build docs really try hard to steer you into using db-2.0.  It worked
+fine for me.
+
+Regards,
+
+
+Mike
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606211 ###
+===== 库内序 147768 | PK 2606211 | 等级 L4 =====
+DATE: 1998-05-26T22:11:20+00:00
+FROM: Andrew Stesin <stesin@gu.net>
+SUBJ: Re: Sendmail 8.9
+摘要: Stesin：补充 ports 内的 BerkeleyDB 据他记得仍是 2.3.16
+
+
+On Wed, 27 May 1998, Michael Hancock wrote:
+
+> One thing we need to look at is the license.  I was working on sendmail
+> 8.9.0 with db-2.0 on SunOS recently and I think I saw some licencing
+> changes in both distributions. 
+> 
+> The build docs really try hard to steer you into using db-2.0.  It worked
+> fine for me.
+
+	By the way, BerkeleyDB version in ports is still 2.3.16
+	as far as I recall, and current version at www.sleepycat.com
+	is db-2.4.10 with 3 patches; 2.3.16 is removed from there.
+
+	Note: due to the cosmetic but massive changes
+	between 2.3.16 and 2.4.10,
+	2.4.10 doesn't work at FreeBSD as of today.
+
+Best regards,
+Andrew Stesin
+
+nic-hdl: ST73-RIPE
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606212 ###
+===== 库内序 147769 | PK 2606212 | 等级 L4 =====
+DATE: 1998-05-26T22:15:33+00:00
+FROM: Stefan Bethke <stefan.bethke@hanse.de>
+SUBJ: mail fails in malloc?! (2.2.5-RELEASE)
+摘要: Bethke：报告 2.2.5-RELEASE 下 mail 由脚本调用时在 malloc 报递归调用警告并段错误生成 core
+
+Hi,
+
+I just got this:
+
+mail in malloc(): warning: recursive call.
+Segmentation fault - core dumped
+
+mail was invoked from a script:
+-------------------------------------------------------------------
+  mail -s "Konf.-dateien ${HOST}: ${DIR} installiert" admin <<EOF
+Die Konfigurationsdateien auf ${HOST} fuer ${DIR} wurden von mir
+soeben mittels $0 neu installiert.
+
+EOF
+-------------------------------------------------------------------
+
+mail is stripped, and I don't have the sources on that machine.
+
+This was the first time I noticed (it might there were some cron jobs that
+also didn't send mail), and I'm not quite eager to find a pattern on a main
+production system.
+
+Any ideas?
+
+Stefan
+---
+Stefan Bethke             Stefan.Bethke@Hanse.DE
+Muehlendamm 12            stb@FreeBSD.ORG
+D-22087 Hamburg           +49-177-3504009
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

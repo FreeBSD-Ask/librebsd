@@ -1,0 +1,24 @@
+2606319|L3|usura：询问 FreeBSD 是否有 netscape 4.05 US 128 位加密版，只见到非官方国际版指引
+2606320|L4|Mike Smith：指出 8390 家族与原始 NE2000 都没有通用介质选择机制
+2606321|L4|Mahlon Smith：给出 httpd 命令 /usr/local/etc/apache/src/httpd -f httpd.conf，建议放进 rc
+2606322|L3|Mahlon Smith：回帖只给 ports 检索链接 http://www.freebsd.org/cgi/ports.cgi
+2606323|L4|Adrian Filipi-Martin：称样例配置在 /usr/local/etc/apache，启动脚本为 rc.d 下 apache.sh
+2606325|L3|usura：追问 FreeBSD 是否存在 netscape 4.05 US 128 位版，抑或只有国际版
+2606326|L4|arnej：指自己先前 -current 补丁误含 NULL 整型上下文修复，announce.c 已修而 ifconfig.c 与 mount.c 仍有效
+2606327|L3|Staffan Ulfberg：首次发信，依 Handbook 22.1.4 的 MFS 内核加特殊 sbin init 思路问开机后重挂 root
+2606328|L3|Andrzej Bialecki：设想让 kernel 或 init(8) 以 MD5 或 SHA 校验和自校二进制文件，校验失败即拒绝继续
+2606331|L3|Greg Lehey：引述自己此前称 SiS 主板带 UDMA 且 Aladdin 大概率也支持，以回应 FreeBSD 仅支持 PIIX3 UDMA 的担忧
+2606333|L3|Amancio Hasty：自述在闲置 ide 硬盘装 turbo linux 1.2 后 StarOffice 可用
+2606334|L3|Mike Smith：称 Linux 上可用是已知情况并非问题所在
+2606335|L3|Amancio Hasty：为已实测 StarOffice 在 Linux 可用且退出时清理共享段，追问无人深入 linux 层解决 ipc 共享段清理问题
+2606337|L3|Luigi Rizzo：认可 8390 无通用介质控制且取值随卡而异的说法，称自己再去试能否解决
+2606338|L4|Nate Williams：称 FreeBSD 对 APM 的支持优于 PAO，故不必为 APM 而加载 PAO
+2606340|L3|Niall Smart：回帖质疑签名可执行文件与 secure delete 提议，以攻击者若能直接篡改 kernel 或 init 为由
+2606341|L3|Doug Rabson：询问 ARC 或 AlphaBIOS 引导流程文档、固件提供给 linload.exe 的服务及其源码出处
+2606342|L4|Nick Hibma：称已有类似 vold 的 Remedae 且为 beta，支持各类可移动设备并对 SCSI 设备自动挂载
+2606344|L4|Duane H. Hesser：推荐 fortify.net 补丁套件，可为 FreeBSD 版 4.04 与 4.05 Netscape 提供强加密
+2606346|L4|Mike Smith：称 Linux ARC bootloader 是精简版 Linux 内核，几乎不用 ARC 服务
+2606347|L3|Mike Smith：称 Remedae 原有地址无法访问，另补一个 utwente 学生主页地址仍无响应，求其他替代
+2606349|L4|Jordan K. Hubbard：称 FreeBSD 是志愿运行的非营利组织，短期不太可能上市，且资金只会使许多问题更复杂
+2606350|L3|jack：提及早先曾讨论设立网页以允许直接捐款
+2606351|L4|Jordan K. Hubbard：承认网页信用卡捐款确曾推进但 2.2.6 期间自己掉链子，有人寄来卡号与金额却一直未处理

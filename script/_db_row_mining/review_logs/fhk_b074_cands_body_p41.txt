@@ -1,0 +1,890 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606051 ###
+===== 库内序 147608 | PK 2606051 | 等级 L3 =====
+DATE: 1998-05-21T19:51:01+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: [Fwd: Intermediate (?) level CVS questions]
+摘要: Studded：说在 -questions 发了两三天无人回应，把中级 CVS 问题转来求助
+
+No response to this on -questions after a couple days, maybe someone
+here can help? :)
+
+Thanks,
+
+Doug
+
+### PK 2606052 ###
+===== 库内序 147609 | PK 2606052 | 等级 L4 =====
+DATE: 1998-05-21T20:20:05+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: Talking UDP at a given port?
+摘要: Ollivier Robert：建议装 ports 里的 netcat，它有 UDP 模式，并给出 nc 连接与 nc -l -p 监听用法
+
+According to Peter Dufault:
+> I just got a device that talks ASCII at a UDP port.  What
+> is the way to initially poke at this think without writing a
+> program?  I can write one but figure I should know this.
+
+Maybe with netcat (in ports), it has a UDP mode:
+
+connect to somewhere:   nc [-options] hostname port[s] [ports] ... 
+listen for inbound:     nc -l -p port [-options] [hostname] [port]
+options:
+        -g gateway              source-routing hop point[s], up to 8
+        -G num                  source-routing pointer: 4, 8, 12, ...
+        -h                      this cruft
+        -i secs                 delay interval for lines sent, ports scanned
+        -l                      listen mode, for inbound connects
+        -n                      numeric-only IP addresses, no DNS
+        -o file                 hex dump of traffic
+        -p port                 local port number
+        -r                      randomize local and remote ports
+        -s addr                 local source address
+        -u                      UDP mode
+        -v                      verbose [use twice to be more verbose]
+        -w secs                 timeout for connects and final net reads
+        -z                      zero-I/O mode [used for scanning]
+port numbers can be individual or ranges: lo-hi [inclusive]
+
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606053 ###
+===== 库内序 147610 | PK 2606053 | 等级 L4 =====
+DATE: 1998-05-21T20:52:29+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Talking UDP at a given port?
+摘要: Snob Art Genre：答装 ports 集合里的 netcat 后运行 nc -u 主机名 端口
+
+Install netcat from the ports collection and run
+
+nc -u hostname port
+
+On Thu, 21 May 1998, Peter Dufault wrote:
+
+> I'll show my networking ignorance:
+> 
+> I just got a device that talks ASCII at a UDP port.  What
+> is the way to initially poke at this think without writing a
+> program?  I can write one but figure I should know this.
+> 
+> This is a Keithley SmartLink - a small 68K family based data acq
+> device you can hang on an ethernet.
+> 
+> Peter
+> 
+> -- 
+> Peter Dufault (dufault@hda.com)   Realtime development, Machine control,
+> HD Associates, Inc.               Safety critical systems, Agency approval
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606054 ###
+===== 库内序 147611 | PK 2606054 | 等级 L3 =====
+DATE: 1998-05-21T19:20:16+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: Eileen Cohen: ;login: coverage of FREENIX track
+摘要: Luigi Rizzo：顺便问 JKH 或 WC 是否在 USENIX 组织 FreeBSD 社交活动
+
+> Any takers who'll also be at USENIX?  I'm not signing up for any
+> more writing projects right now. :)
+
+speaking of usenix, are you or WC organizing some FreeBSD social event :)
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606055 ###
+===== 库内序 147612 | PK 2606055 | 等级 L3 =====
+DATE: 1998-05-21T21:16:07+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Eileen Cohen: ;login: coverage of FREENIX track 
+摘要: Jordan K. Hubbard：答没有计划，反问对方有没有具体设想
+
+I hadn't planned on it, no.  Did you have some specific ideas?
+
+> > Any takers who'll also be at USENIX?  I'm not signing up for any
+> > more writing projects right now. :)
+> 
+> speaking of usenix, are you or WC organizing some FreeBSD social event :)
+> 
+> 	cheers
+> 	luigi
+> -----------------------------+--------------------------------------
+> Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+> email: luigi@iet.unipi.it    |  Universita' di Pisa
+> tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+> fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+> _____________________________|______________________________________
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606056 ###
+===== 库内序 147613 | PK 2606056 | 等级 L3 =====
+DATE: 1998-05-21T22:06:47+00:00
+FROM: "Gregory D. Moncreaff" <moncrg@am026091.res.ray.com>
+SUBJ: limits && /etc/login.conf
+摘要: Gregory D. Moncreaff：openfiles 限为 1024 但 limit 与 limits 报 360，login.conf 无 360
+
+
+I'm trying to write a program that deals with a
+couple of thousand descriptors and I'm confused
+about how limits is reporting what should be
+derived from login.conf.
+
+Trying a both a "default" and "root" class user,
+I've set openfiles-cur/max to 1024 but when I
+type `limit` or `limits` it reports 360 as the
+openfiles limits.
+
+When I grep for `openfiles` in /etc/login.conf
+I find no occurences of 360.  Where did it come
+from?
+
+How/should get/setrlimit work? when I call 
+getrlimit it reports a max of 360 and cur of 0?
+
+thanx,
+-g
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606059 ###
+===== 库内序 147616 | PK 2606059 | 等级 L3 =====
+DATE: 1998-05-22T00:48:32+00:00
+FROM: Vinay Bannai <bannai@best.com>
+SUBJ: Probing a PCI device!!
+摘要: 询问如何探测须先下载固件才能读取 Vendor/Device ID 的 PCI 设备这一先有鸡先有蛋的问题
+
+Hi folks,
+
+I am trying to probe a PCI device and I am in the odd situation where the
+firmware has to be downloaded onto the card before I can check the
+Vendor/Device ID. It is set by the firmware..
+
+How do I solve the chicken and egg problem? Or am I missing something?
+
+Thanks
+Vinay
+PS: I am not subscribed to the mailing list, could you also CC me!! 
+-- 
+Vinay Bannai                     E-mail: bannai@best.com
+>>> Growing old is mandatory.  Growing up is optional <<<
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606061 ###
+===== 库内序 147618 | PK 2606061 | 等级 L4 =====
+DATE: 1998-05-22T01:07:24+00:00
+FROM: Jason Thorpe <thorpej@nas.nasa.gov>
+SUBJ: Re: Questions about Packet Filter 
+摘要: Jason Thorpe：ipfilter 是 Darren Reed 的内核防火墙产品，divert(4) 是 FreeBSD 原生功能且无其他实现模拟
+
+On Thu, 21 May 1998 16:36:19 -0700 
+ Mike Smith <mike@smith.net.au> wrote:
+
+ > > 1. Are the ipfilter tools using divert() function that Mike and Dan
+ > > mentioned available in somewhere? 
+ > 
+ > ipfilter is Darren Reed's in-kernel firewall product.
+ > 
+ > divert(4) is a FreeBSD-native feature.  It is not, to the best of my
+ > knowledge, emulated by anything else.
+
+Uh... doens't IP Filter implement a divert(4)-like feature?
+
+Jason R. Thorpe                                       thorpej@nas.nasa.gov
+NASA Ames Research Center                            Home: +1 408 866 1912
+NAS: M/S 258-5                                       Work: +1 650 604 0935
+Moffett Field, CA 94035                             Pager: +1 650 428 6939
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606063 ###
+===== 库内序 147620 | PK 2606063 | 等级 L3 =====
+DATE: 1998-05-22T00:16:54+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Probing a PCI device!! 
+摘要: Mike Smith：怀疑该卡使用通用 PCI bridge chip，建议拆开看板上芯片后再尝试匹配
+
+> Hi folks,
+> 
+> I am trying to probe a PCI device and I am in the odd situation where the
+> firmware has to be downloaded onto the card before I can check the
+> Vendor/Device ID. It is set by the firmware..
+> 
+> How do I solve the chicken and egg problem? Or am I missing something?
+
+It's possible that the card is using a generic PCI bridge chip - have a 
+look at the card and see.  If this is the case, you could try matching 
+against the interface vendor/model rather than the device set if the 
+device set is invalid.
+
+Do the device IDs default to anything sensible?
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606065 ###
+===== 库内序 147622 | PK 2606065 | 等级 L3 =====
+DATE: 1998-05-22T02:13:05+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: SMP resource locking
+摘要: 询问 SMP 环境下保证临界区单线程通过的函数，指出 UP 环境的 splhigh 对 SMP 不足
+
+I haven't paid much attention to SMP problems yet, but I need to now.
+Can somebody point me to functions to ensure single-thread passing of
+critical sections?  In a UP environment I'd use splhigh (), but that's
+obviously not enough for SMP.
+
+Greg
+--
+See complete headers for address and phone numbers
+finger grog@lemis.com for PGP public key
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606067 ###
+===== 库内序 147624 | PK 2606067 | 等级 L4 =====
+DATE: 1998-05-22T02:39:53+00:00
+FROM: "David E. Cross" <dcross1@mail.nycap.rr.com>
+SUBJ: Problem resolutions...
+摘要: David E. Cross：isa_devtab_cam 编译失败通过先执行 make world 解决
+
+Ok, I have mostly resolved both of my previous problems;
+
+the first one was an issue with the kernel build bombing out on
+'isa_devtab_cam[]", this
+was fixed by doing a make world first (I normally build the kernel
+first, then make world because
+I remeber some problems other people have reported doing the reverse
+order).
+
+The second problem was regarding the wcd1 device not being discovered.
+I resolved this by switching
+master and slave on the cdrom, however, I still get the following error
+when accessing the aformentioned
+CDROM:
+wcd1: i/o error, status=51<ready,opdone,check>, error=30
+
+and the following are the related dmesg lines related to the type of the
+drive:
+
+wdc1: unit 0 (atapi): <FX400E/K03>, removable, intr, iordis
+wdc1: unit 1 (atapi): <WEARNES CDD-820/B1.0>, removable, dma, iordy
+
+
+[unit 1 is the misbehaving device]
+
+Any ideas on this?  (config file is identical as before)
+
+--
+David Cross
+IMS UNIX Support
+GE Corportate R&D
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606068 ###
+===== 库内序 147625 | PK 2606068 | 等级 L3 =====
+DATE: 1998-05-22T03:09:48+00:00
+FROM: Mark Mayo <mark@vmunix.com>
+SUBJ: TIME_WAIT/FIN_WAIT_2...
+摘要: 询问大型 Web 服务器出现数千 TIME_WAIT 与 FIN_WAIT_2 套接字是否正常及成因
+
+Hi all.. I have a few questions about large web servers. I've run a
+few relatively large web sites on freebsd in the past, but none that
+put out more than 300-400,000 objects per day (html+gif..). I've been
+looking at a Solaris machine today that's putting out about 2 million
+pages a day. The somewhat odd thing is the extraordinary number of
+sockets left open in TIME_WAIT and FIN_WAIT_2. I roughly understand
+what they mean, but we're talking about 3000 entries here (about 400-500
+of which are FIN_WAIT_2, the rest are TIME_WAIT).. So I have ~3000
+sockets in TIME_WAIT/FIN and only about 100 ESTABLISHED.
+
+Is this normal?? It doesn't seem like it to me. If not, what would be
+causing it, and what should I look at tuning on the Slowaris box??
+
+TIA for any ideas! All I know is that I just don't trust sockets on
+Solaris... :-)
+
+-Mark
+
+-- 
+------------------------------------------------------------------------
+ Mark Mayo		  				mark@vmunix.com       
+ RingZero Comp.  	  		    http://www.vmunix.com/mark 
+
+	 finger mark@vmunix.com for my PGP key and GCS code
+------------------------------------------------------------------------
+ "The problem is how do you build tools that understand your programs
+  at a deeper semantic level." - James Gosling
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606069 ###
+===== 库内序 147626 | PK 2606069 | 等级 L3 =====
+DATE: 1998-05-22T03:10:55+00:00
+FROM: "Lee Crites (AEI)" <leec@adam.adonai.net>
+SUBJ: parallel port zip drive
+摘要: 询问 parallel port zip drive 能否可靠工作，并问 ppa 标准做法在已装 SCSI 设备时失效及该移植的维护者
+
+
+Has anyone been able to get the parallel port version of the zip
+drive working?  I don't care if it was *fast*, only reliable.
+One additional slop to add to the soup -- I'm running with scsi
+devices already, so the "standard" instructions from ppa don't
+work.
+
+Barring the above, has anyone taken over keeping the parallel
+zip drive port working?  I haven't been able to get the author to
+respond.
+
+Thanks muchly...
+
+Lee
+
+  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                          Lee Crites
+                     www.adonai.net/~leec
+  Tandem/Compaq (Austin)              Adonai Services Company
+  phone: 512-432-7112                     phone: 512-789-7853
+  leec@austx.tandem.com                       leec@adonai.net
+  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606070 ###
+===== 库内序 147627 | PK 2606070 | 等级 L4 =====
+DATE: 1998-05-22T02:43:48+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: parallel port zip drive 
+摘要: Mike Smith：ppa 驱动本身即又一块 SCSI 适配器，与既有 SCSI 设备不存在冲突
+
+> 
+> Has anyone been able to get the parallel port version of the zip
+> drive working?  I don't care if it was *fast*, only reliable.
+> One additional slop to add to the soup -- I'm running with scsi
+> devices already, so the "standard" instructions from ppa don't
+> work.
+
+There is no conflict with other SCSI devices; the ppa driver is just 
+another SCSI adapter as far as that's concerned.
+
+> Barring the above, has anyone taken over keeping the parallel
+> zip drive port working?  I haven't been able to get the author to
+> respond.
+
+The ppa driver is not being developed any further.  It works quite 
+well, but it is obsoleted by the ppbus-based vpo driver in -current.
+
+vpo drives both the old Parallel port Zip as well as the Jaz Traveller; 
+ppa also works with these.  The new Zip Plus is only supported in SCSI 
+mode at the moment, although parallel support is under devlopment.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606073 ###
+===== 库内序 147630 | PK 2606073 | 等级 L4 =====
+DATE: 1998-05-22T05:01:18+00:00
+FROM: "John S. Dyson" <dyson@FreeBSD.ORG>
+SUBJ: Re: SMP resource locking
+摘要: John S. Dyson：目前普通驱动上下文中用 splhigh 可以工作，但该做法有缺陷且将来会失效
+
+Greg Lehey said:
+> I haven't paid much attention to SMP problems yet, but I need to now.
+> Can somebody point me to functions to ensure single-thread passing of
+> critical sections?  In a UP environment I'd use splhigh (), but that's
+> obviously not enough for SMP.
+> 
+For now, splhigh in a normal driver context will work.  That is
+of course broken, but it will work fine.  In the future, it won't.
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606074 ###
+===== 库内序 147631 | PK 2606074 | 等级 L3 =====
+DATE: 1998-05-22T05:13:53+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: freebsd vs linux (nfs) (fwd)
+摘要: 就 rpc.lockd 锁管理器发问其机制是否只能算是伪锁定
+
+In regards to the lock manager (rpc.lockd), isn't it, for lack of
+a better expression, pseudo-locking?
+
+Dan
+
+
+Nicholas Charles Brawn wrote:
+
+> I was pleased to see the ratings that freebsd received on this.
+>
+> Nick
+>
+> ---------- Forwarded message ----------
+> Date: Mon, 18 May 1998 14:41:58 -0500 (CDT)
+> From: tip <tip@enteract.com>
+> To: dc-stuff@dis.org
+> Subject: freebsd vs linux (nfs)
+>
+> >from unix review's "performance computing" magazine, june 1998,
+> pages 21-28,
+>
+> comparisons are on nt products vs various flavors of unix.
+>
+> for simplicity's sake, linux, bsdi, and freebsd are only mentioned here
+> for comparison of bsd vs linux:
+>
+>                  NFS PROTOCOL SUPPORT
+>                  --------------------
+>             nfs v.2       nfs v.3        webnfs
+>             udp    tcp    udp    tcp
+> bsdi        x      x      x      x
+> freebsd     x      x      x      x         x
+> linux       x
+>
+>                           SUPPORT FOR ANCILLARY NFS PROTOCOLS
+>                           -----------------------------------
+>            RPC PORTMAPPER    MOUNT PROTOCOL      NETWORK LOCK MGR       STATUS
+>          Over UDP Over TCP  Over UDP Over TCP  Over UDP    Over TCP     UDP TCP
+>          v2 v3 v4 v2 v3 v4  v1 v2 v3 v1 v2 v3  v1 v2 v3 v4 v1 v2 v3 v4  v1  v1
+> bsdi     x        x         x     x  x     x
+> freebsd  x        x         x     x  x     x   x     x     x     x      x
+> linux    x        x         x        x
+>
+> again, i like both freebsd and linux, i'm slightly biased towards freebsd,
+> just because of its superior networking and security over linux.
+>
+> thanx,
+> - tip
+>
+
+
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606075 ###
+===== 库内序 147632 | PK 2606075 | 等级 L3 =====
+DATE: 1998-05-22T05:14:34+00:00
+FROM: "Shevland, Joe" <Joe.Shevland@Central.tased.edu.au>
+SUBJ: RE: TIME_WAIT/FIN_WAIT_2... 
+摘要: 询问 TIME_WAIT 态套接字是否不持有文件描述符，以及等待 FIN 或处于 FIN_WAIT_2 的套接字是否持有
+
+Scuse any ignorance on these matters, but are the following true
+statements? (just curious):
+
+i) Sockets in a TIME_WAIT state do not have a (an open?) file descriptor
+associated with them
+ii) Sockets waiting for a FIN segment or in the FIN_WAIT_2 state do.
+
+>> [trimmed] So I have ~3000
+>> sockets in TIME_WAIT/FIN and only about 100 ESTABLISHED.
+>> 
+>> Is this normal?? It doesn't seem like it to me. If not, what would be
+>> causing it, and what should I look at tuning on the Slowaris box??
+>
+>You might be able to tune down the closing delay, but in reality I 
+>can't see it as a "real" problem unless the number is growing or you 
+>are resource-starved because of it.
+>
+>Of course, the "correct" tuning action would be to replace Solaris with 
+>FreeBSD.
+>
+>-- 
+>\\  Sometimes you're ahead,       \\  Mike Smith
+>\\  sometimes you're behind.      \\  mike@smith.net.au
+>\\  The race is long, and in the  \\  msmith@freebsd.org
+>\\  end it's only with yourself.  \\  msmith@cdrom.com
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606076 ###
+===== 库内序 147633 | PK 2606076 | 等级 L4 =====
+DATE: 1998-05-22T05:41:45+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Problem resolutions... 
+摘要: Jordan K. Hubbard：先编内核后做 make world 从未经过正确，正确顺序恰好相反
+
+> was fixed by doing a make world first (I normally build the kernel
+> first, then make world because
+
+Just FYI, that's never been the correct order at any point in time, no
+matter what others may have said.  It is exactly backwards.
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606077 ###
+===== 库内序 147634 | PK 2606077 | 等级 L4 =====
+DATE: 1998-05-22T06:09:47+00:00
+FROM: HighWind Software Information <info@highwind.com>
+SUBJ: FreeBSD 2.2.6 + pthread == write() bug
+摘要: 报告 FreeBSD 2.2.6 使用 pthreads 与 libc_r 时阻塞 write 向已连接 TCP 套接字会返回部分写入
+
+
+We here at HighWind are trying to port some threaded apps to
+FreeBSD-stable (2.2.6). Things seem to be going well, EXCEPT, we
+believe we found a BUG:
+
+When using pthreads (with libc_r), sometimes BLOCKING calls to write()
+down a connected TCP file descriptor are returning partial writes:
+
+....
+    ssize_t byte_count = 0;
+    while ((byte_count = write(fd, data, bytes_to_write)) != bytes_to_write) {
+	if (errno != EINTR && errno != EAGAIN) {
+	    if (errno != EPIPE) {
+		// Use the HighWind "syslog" class
+		Syslog::syslog(LOG_ERR,
+			       "Error write() of Vector Data %d/%d (%m)",
+				byte_count, bytes_to_write);
+	    }
+	    return false;
+	}
+    }
+....
+
+This is syslog'ing (sometimes):
+
+May 22 01:57:57 zonda typhoond[1988]: Error write() of Vector Data 2292/4096 (Undefined error: 0)
+
+Clearly, this shows the "write()" returning with less data written then
+was requested.
+
+This is a write() on a descriptor marked BLOCKING. It should either
+return "bytes_to_write" or an error. It should NEVER return less than
+"bytes_to_write".
+
+Please note, the "while()" loop above is strictly to handle EINTR and
+EAGAIN. It should NOT have to handle partial write's since this is a
+blocking write!
+
+My understanding is that the libc_r makes the fd "non-blocking" and
+does a non-blocking write under the covers. However, that should not
+matter. Outside the library, that write() call should be a BLOCKING
+write.
+
+I suspect (I'm guessing) that libc_r either forgets to remark the fd
+blocking, or it simply doesn't loop on a partial write when it does
+its non-blocking write. I don't know.
+
+We'd be happy to provide more details. This is VERY VERY bad bug for
+us!!  We'd appreciate any help as we have a strong desire to see our
+products on FreeBSD.
+
+Rob Fleischman
+HighWind Software
+rmf@highwind.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606084 ###
+===== 库内序 147641 | PK 2606084 | 等级 L4 =====
+DATE: 1998-05-22T14:07:51+00:00
+FROM: Alex <garbanzo@hooked.net>
+SUBJ: Re: Problem resolutions...
+摘要: Alex：除先执行 make world 之外还需先重建 config 才能解决编译失败
+
+On Thu, 21 May 1998, David E. Cross wrote:
+
+> Ok, I have mostly resolved both of my previous problems;
+> 
+> the first one was an issue with the kernel build bombing out on
+> 'isa_devtab_cam[]", this
+> was fixed by doing a make world first (I normally build the kernel
+> first, then make world because
+> I remeber some problems other people have reported doing the reverse
+> order).
+
+You needed to rebuild config first.  It's in /usr/src/usr.sbin/config.
+
+- alex
+
+| "Contrary to popular belief, penguins are not the salvation of modern  |
+| technology.  Neither do they throw parties for the urban proletariat." |
+| Powered by FreeBSD                            http://www.freebsd.org/  |
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606085 ###
+===== 库内序 147642 | PK 2606085 | 等级 L3 =====
+DATE: 1998-05-22T15:02:22+00:00
+FROM: zhihuizhang <bf20761@binghamton.edu>
+SUBJ: How MAP_ENTRY_IS_A_MAP is used?
+摘要: 阅读 VM 源码询问 MAP_ENTRY_IS_A_MAP 在何处被置入 vm_map_entry 的 eflags 字段
+
+
+Hi, friends:
+
+I am reading VM source code concerning the vm_map_entry structure.  There
+is a flag called MAP_ENTRY_IS_A_MAP used widely, but I search all the
+codes in VM and can not find where this flag gets set into the eflags
+field of the vm_map_entry structure.  By the way, MAP_ENTRY_IS_A_SUB_MAP
+is set in vm_map_submap( ).  It is often used together with
+MAP_ENTRY_IS_A_MAP.  I hope someone can give me a hint on this.
+
+Thanks a lot.
+
+-------------------------------------------------
+
+Zhihui Zhang
+
+Department of Computer Science
+State University of New York at Binghamton
+
+Web Site: http://cs.binghamton.edu/~zzhang
+
+-------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606087 ###
+===== 库内序 147644 | PK 2606087 | 等级 L4 =====
+DATE: 1998-05-22T16:43:04+00:00
+FROM: Jim Shankland <jas@flyingfox.com>
+SUBJ: Re: TIME_WAIT/FIN_WAIT_2...
+摘要: Jim Shankland：服务器端大量 FIN_WAIT_2 说明客户端实际未发送 FIN，使服务端在 FIN_WAIT_2 状态挂起
+
+[mark@vmunix.com (Mark Mayo) asks about large numbers of TCP connections
+in TIME_WAIT and FIN_WAIT_2 states on a busy Web server.
+Terry Lambert <tlambert@primenet.com> responds:
+
+> This is a client bug, specifically with Windows WinSock clients, which
+> do not call "shutdown(2)" in the following way:
+> 
+> 	shutdown( s, 1);
+> 
+> The '1' should be a '2', but many WinSock implementations fail to work
+> correctly if it isn't a '1'.
+> 
+> [...]
+> 
+> The fix is to be bug-compatible with Windows NT as a server, and to,
+> when you are in FIN_WAIT_2 state, back up to resend the FIN.
+> 
+> The problem is the lack of an ACK needed for a state transition in
+> the Windows TCP/IP implemenetation.
+
+Terry, I think you have your TCP states mixed up.  First, none of this
+applies to the TIME_WAIT connections.  As for the FIN_WAIT_2
+connections: FIN_WAIT_2 means, "I'm done sending, I've sent a FIN, the
+other side has ACKed my FIN, but the other side has not sent *me* a
+FIN to indicate that it is done sending."  One would then expect the
+peer to be in CLOSE_WAIT state.  This is a perfectly legal state that
+can persist indefinitely, with the CLOSE_WAIT end sending unbounded
+amounts of data to the FIN_WAIT_2 end for consumption.
+
+Why on earth would you "back up to resend [a] FIN" that has already
+been ACKed?
+
+I suspect what you really mean is that the client side never sends its
+FIN, even though it's really done sending, leaving the server-side
+hanging in FIN_WAIT_2 state, waiting for either more data or a close
+from the client, while the client wll never bother to send either..
+This can happen due to application-layer or TCP-layer bugs on the
+client side, or because the client crashed or was powered off at an
+inopportune time.
+
+What BSD-based TCP stacks do is this: if the FIN_WAIT_2 socket has
+been closed by the application (i.e., there's no-one there to receive
+any data that might arrive), and no data arrives for about 11 minutes,
+then the connection is silently dropped.  (Remember, if the FIN_WAIT_2
+socket has not been closed, then data could arrive after an arbitrarily
+long silence, a
+[…中段省略 445 字符…]  its shutdown stuff, the server can still walk the
+client through an orderly close.  On the other hand, maybe 11 minutes
+is too long?  I'll bet nothing terrible happens if that timeout drops
+to 1 minute ... or 30 seconds.  Even 0 would at worst lead to some
+unnecessary RST's on closing connections.  Anyone have any thoughts on
+this?
+
+Jim Shankland
+Flying Fox Computer Systems, Inc.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606088 ###
+===== 库内序 147645 | PK 2606088 | 等级 L3 =====
+DATE: 1998-05-22T17:22:15+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: Problem resolutions...
+摘要: 质疑为何 make world 须先于 kernel，认为部分可执行文件依赖内核特性而非相反，内核本身依赖 config 与 mount
+
+On Fri, May 22, 1998 at 11:31:00AM -0500, Joel Ray Holveck wrote:
+> 
+> > First 'make world', then kernel.  Almost always true.  (There may be
+> > specific cases where you should get away from the kernel because it eats
+> > filesystems or something...)
+> 
+> Why is that?  I would expect some execs to depend on kernel features,
+> not vice versa.
+
+Kernel is dependent on 'config', and sometimes mount etc (has happened a
+couple of times.) It is cheaper to maintain compatibility in userspace than
+in the kernel, thus that is where we put the compatibility layer.
+
+Eivind.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606090 ###
+===== 库内序 147647 | PK 2606090 | 等级 L4 =====
+DATE: 1998-05-22T18:17:51+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: freebsd vs linux (nfs) (fwd)
+摘要: Julian Elischer：认为性能报告中 freebsd 与 linux 两行被互换，两者 NFS 支持项明显不符
+
+I may be dreaming but..
+
+On Fri, 22 May 1998, Dan Janowski wrote:
+
+> >          Over UDP Over TCP  Over UDP Over TCP  Over UDP    Over TCP     UDP TCP
+> >          v2 v3 v4 v2 v3 v4  v1 v2 v3 v1 v2 v3  v1 v2 v3 v4 v1 v2 v3 v4  v1  v1
+> > bsdi     x        x         x     x  x     x
+> > freebsd  x        x         x     x  x     x   x     x     x     x      x
+> > linux    x        x         x        x
+> >
+either there have been commits I didn't see or I've greatly misunderstood
+something.
+I think the freebsd and linux rows have been swapped.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

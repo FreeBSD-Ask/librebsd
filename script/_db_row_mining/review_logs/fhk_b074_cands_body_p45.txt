@@ -1,0 +1,871 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606213 ###
+===== 库内序 147770 | PK 2606213 | 等级 L4 =====
+DATE: 1998-05-26T21:12:15+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Sendmail 8.9 
+摘要: Smith：指出 db-2.0 默认授权存在隐患若不能回退到 db 1.8x 系列则会有麻烦
+
+> One thing we need to look at is the license.  I was working on sendmail
+> 8.9.0 with db-2.0 on SunOS recently and I think I saw some licencing
+> changes in both distributions. 
+
+db-2.0 is bad licensing ju-ju in the default case.  If it can't be 
+built to work with 1.8x we may be in trouble.  
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606214 ###
+===== 库内序 147771 | PK 2606214 | 等级 L4 =====
+DATE: 1998-05-26T22:35:18+00:00
+FROM: "Eric J. Schwertfeger" <ejs@bfd.com>
+SUBJ: Re: Sendmail 8.9 
+摘要: Schwertfeger：报告 sendmail 在 2.2.6 上干净编译无任何告警故推断其工作正常
+
+On Tue, 26 May 1998, Mike Smith wrote:
+
+> > One thing we need to look at is the license.  I was working on sendmail
+> > 8.9.0 with db-2.0 on SunOS recently and I think I saw some licencing
+> > changes in both distributions. 
+> 
+> db-2.0 is bad licensing ju-ju in the default case.  If it can't be 
+> built to work with 1.8x we may be in trouble.  
+
+It compiled cleanly on 2.2.6 for me, without complaining about anything,
+so I'm assuming that it was working.  It does no longer work with db-1.5X
+and prior, if I remember correctly.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606217 ###
+===== 库内序 147774 | PK 2606217 | 等级 L3 =====
+DATE: 1998-05-26T23:55:06+00:00
+FROM: Simon Shapiro <shimon@simon-shapiro.org>
+SUBJ: Re: Weird behaviour in BootEasy
+摘要: Shapiro：在 BootEasy 异常线程中询问该阵列是 RAID-0 还是 RAID-1 并自称记不清
+
+
+On 26-May-98 Eivind Eklund wrote:
+
+> Not very practical; it's presently housing my homedir, my bootdrive,
+> and most of my sources.  :-(
+
+Yuck.  Is the array RAID-0 or RAID-1?  I forget.
+
+> The interesting point here is that I _haven't_ re-initialized the
+> array - I still have the original DOS slice I got from you. I've
+> concatenated the two slices used to hold the 15 or so BSD paritions to
+> a single slice with a boot partition, a swap partition, and a lagre
+> 'e' partition for sources + homedir.
+
+This is probably where the error is.  I found out that moving partitions
+like that causes these symptoms.  I am not so sure how DPT-specific this is.
+
+> I've run dptmgr.com (or something like that) from DOS a couple of
+> times and re-built one disk, but I've not done anything that should
+> have changed the basic array.
+
+Re-building a RAID-1 array simply copies one disk to the other.
+I do not know what you mean by re-building in the context of RAID-0.
+
+Simon
+
+
+---
+
+
+Sincerely Yours, 
+
+Simon Shapiro                                           Shimon@Simon-Shapiro.ORG
+                                                        770.265.7340
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606221 ###
+===== 库内序 147778 | PK 2606221 | 等级 L3 =====
+DATE: 1998-05-27T02:31:25+00:00
+FROM: Sabrina Minshall <sabrina@accesscom.com>
+SUBJ: Re: vinum config
+摘要: Minshall：确认正照做并向 Greg 询问为何寄给 grog@lemis.com 或 grog@FreeBSD.org 的邮件会退信
+
+Greg,
+   Thanks, I'm doing it right now. BTW why does any mail to
+   grog@lemis.com or grog@FreeBSD.org bounce :-)
+
+
+> On Tue, 26 May 1998 at 12:18:27 -0700, Sabrina Minshall wrote:
+> > Greg,
+> >    here's the config I have/want: 2 (2-gig) scsi hd's. Installed 2.2.6.
+> >    partitions / - 200 MB. I want to allocate and mirror as follows:
+> >
+> >    sd0			sd1		   size
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606222 ###
+===== 库内序 147779 | PK 2606222 | 等级 L3 =====
+DATE: 1998-05-27T04:06:12+00:00
+FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking@prth.pgs.com>
+SUBJ: Dialing into RAS/NT from FreeBSD.
+摘要: Stephen Hocking：询问是否有人用 ppp 或 pppd 从 FreeBSD 拨号进入 RAS/NT
+
+
+Anybody done this using ppp or pppd? I dislike these blasted proprietry 
+protocols.....
+
+
+	Stephen
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606224 ###
+===== 库内序 147781 | PK 2606224 | 等级 L3 =====
+DATE: 1998-05-27T05:08:29+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Load avg 0.33 and 99.2% idle...
+摘要: Janowski：询问 FreeBSD 2.2.6 上为何平均负载为 0.33 同时却显示 99.2% 空闲
+
+
+Load avg 0.33 and 99.2% idle, how can this be?
+
+FreeBSD 2.2.6
+
+Dan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606227 ###
+===== 库内序 147784 | PK 2606227 | 等级 L3 =====
+DATE: 1998-05-27T09:41:03+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: Re: Sendmail 8.9
+摘要: Reed：转述 Peter Wemm 关于请 Sendmail, Inc 澄清授权范围的意见并询问是否有人正与对方交涉
+
+In some mail from Peter Wemm, sie said:
+[...]
+> Anyway, things would be helped a lot if the Sendmail, Inc folks would
+> clarify the scope of the license.  If there's no danger to co-shipped
+> proprietary code, then it can go in.
+
+SO you, or someone else, is taking this up with them ?
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606228 ###
+===== 库内序 147785 | PK 2606228 | 等级 L3 =====
+DATE: 1998-05-27T14:46:18+00:00
+FROM: "Alton, Matthew" <Matthew.Alton@anheuser-busch.com>
+SUBJ: RE: Dialing into RAS/NT from FreeBSD.
+摘要: Matthew Alton：补充提到 SPAP 同样可试并称这类私有协议都很糟糕
+
+Or SPAP, for that matter.  Nasty stuff.
+
+> -----Original Message-----
+> From:	Stephen Hocking-Senior Programmer PGS Tensor Perth
+> [SMTP:shocking@prth.pgs.com]
+> Sent:	Tuesday, May 26, 1998 11:06 PM
+> To:	hackers@FreeBSD.ORG
+> Subject:	Dialing into RAS/NT from FreeBSD.
+> 
+> 
+> Anybody done this using ppp or pppd? I dislike these blasted proprietry 
+> protocols.....
+> 
+> 
+> 	Stephen
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606229 ###
+===== 库内序 147786 | PK 2606229 | 等级 L4 =====
+DATE: 1998-05-27T14:49:34+00:00
+FROM: Dan Nelson <dnelson@emsphone.com>
+SUBJ: Re: Load avg 0.33 and 99.2% idle...
+摘要: Nelson：解释负载平均只是运行队列中的进程数并指出长期停在 select 循环里的代码占队列却不耗 CPU
+
+In the last episode (May 27), Dan Janowski said:
+> 
+> Load avg 0.33 and 99.2% idle, how can this be?
+> 
+> FreeBSD 2.2.6
+
+Load average just means "the number of processes in the run queue".  If
+you have code that sits in a select() loop most of the time, it'll be
+in the run queue almost all of the time, but probably not eat much CPU. 
+I've got some Quake servers running on my machine, and if one person
+joins each of the four servers, my loadavg jumps to 4.  But the CPU
+used doesn't go over 10%.
+
+If you're worried that your machine is overworked, keep an eye on the
+CPU: and Swap: lines in top; loadavg doesn't really mean much compared
+to them.
+
+	-Dan Nelson
+	dnelson@emsphone.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606231 ###
+===== 库内序 147788 | PK 2606231 | 等级 L3 =====
+DATE: 1998-05-27T17:03:24+00:00
+FROM: zhihuizhang <bf20761@binghamton.edu>
+SUBJ: Where are system call stubs in libc?
+摘要: zhihuizhang：询问系统调用桩位于源码何处并说明弄不清 libc/i386/sys/syscall.S 与 read write 的关系
+
+
+I have understood the basic mechanism of making system calls in FreeBSD
+which is quite similar to Linux.  I am now trying to find out where in the
+source code library stubs are added (similar to that found in file
+csu/i386/crt0.c?). I can not figure out how the file
+libc/i386/sys/syscall.S is related to normal system calls like read(),
+write(), etc. Also, when tracing the ENTRY(syscall) in file syscall.S, I
+can not find where __mcount is defined. 
+
+I hope someone can give me a hint on this.  Thanks a lot.  
+
+-------------------------------------------------
+
+Department of Computer Science
+State University of New York at Binghamton
+
+Web Site: http://cs.binghamton.edu/~zzhang
+
+-------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606233 ###
+===== 库内序 147790 | PK 2606233 | 等级 L4 =====
+DATE: 1998-05-27T17:19:10+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: Weird behaviour in BootEasy
+摘要: Bulte：说明 RAID-0 语境下的重建指更换磁盘后加入配置再执行恢复操作
+
+As Simon Shapiro wrote...
+> 
+> On 26-May-98 Eivind Eklund wrote:
+
+> > I've run dptmgr.com (or something like that) from DOS a couple of
+> > times and re-built one disk, but I've not done anything that should
+> > have changed the basic array.
+> 
+> Re-building a RAID-1 array simply copies one disk to the other.
+> I do not know what you mean by re-building in the context of RAID-0.
+
+Replace disk, add to config, restore from tape ? ;-) RAID0 is only usable
+for scratch data, e.g. a news spool you are prepared to loose.
+
+/home on RAID0.... <shudder>
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+______________________________________________ Powered by FreeBSD __________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606236 ###
+===== 库内序 147793 | PK 2606236 | 等级 L4 =====
+DATE: 1998-05-27T18:17:22+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: autoconf.c:setroot() makes bad calculation
+摘要: Janowski：报告 2.2.6-RELEASE 下 autoconf.c:setroot 遇第二块 SCSI 裸 disklabel 时算错根设备
+
+
+This is a re-mailing. I didn't get any answers, if there are
+any.
+
+Any clues?
+
+2.2.6-RELEASE
+
+autoconf.c:setroot() finds wrong root device in following:
+
+  1. booteasy
+  2. boot device, second scsi drive
+  3. second scsi has no slices (raw disklabel)
+  4. config kernel lists sd1a as root
+  5. no IDE in the kernel
+  6. 2 SCSI cards, ahc1 and bt0
+
+  boot loader finds and pulls in kernel from ufs, kernel
+  inits correctly, at the end it says
+  "changing root device to wd1s4a"
+
+  Even wierder: boot.config has '-rv' all ignored, I don't
+  get either -r or -v functions during boot. However, it
+  announces the flags in the boot.config notice.
+
+  If I type in -r at the boot prompt, kernel finds correct
+  root and boots normally.
+
+  I can boot the system, but it won't autoboot because of
+  the combined wrong root calc and ignore of boot.config.
+
+  Any idears?
+
+  Dan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606238 ###
+===== 库内序 147795 | PK 2606238 | 等级 L4 =====
+DATE: 1998-05-27T20:02:01+00:00
+FROM: Craig Spannring <cts@internetcds.com>
+SUBJ: Race conditions in pw
+摘要: Spannring：指出 pw 在调用 pwd_mkdb 时未持有 /etc/master.passwd 锁导致多实例并发竞态并主张悲观式全程持锁
+
+
+
+vipw, chpass and passwd all lock the /etc/master.passwd file for the
+entire time they run.  pw tries not to hold the lock the entire time.
+Specifically it does not have the file locked when it calls pwd_mkdb.
+This causes some race conditions since multiple instances of pwd_mkdb
+can run at the same time.
+
+I think pw should take a pessimistic approach and keep the
+/etc/master.passwd file locked the entire time just like passwd, vipw
+and chpass.  My quick fix for pw opens /etc/master.passwd in main()
+with the O_EXLOCK flag in pw.c and doesn't close the file descriptor.
+I also had to make sure that fileupdate() in fileupd.c does not try to
+lock the /etc/master.passwd file.
+
+I tried to contact David L. Nugent, <davidn@blaze.net.au> last week
+but I have heard back from him yet.
+
+The following perl script will demonstrate the race condition.  It
+forks 10 copies of itself and each one tries to create and delete 100
+users.  With a fixed version of pw there will be no error messages
+from pwd_mkdb and it will delete all of the new accounts before it finishes.  
+
+With the current version of pw you wind up with a large number of
+accounts that aren't deleted because of the race condition and a large
+number of messages from pwd_mkdb such as-
+
+  pwd_mkdb: /etc/pwd.db.tmp: File exists
+  pwd_mkdb: /etc/pwd.db.tmp to /etc/pwd.db: No such file or directory
+  pwd_mkdb: /etc/pwd.db.tmp: No such file or directory
+  pwd_mkdb: /etc/spwd.db.tmp: File exists
+
+
+
+#!/usr/local/bin/perl -w
+#
+#
+# Demonstrate pw glitch that occurs when multiple instances of pw run
+# at the same time.
+#
+
+use strict 'vars';
+use strict 'subs';
+
+use diagnostics;
+use diagnostics -verbose;
+enable diagnostics;
+
+my $a;
+my $b;
+my $i;
+my $notAdded      = 0;
+my $notDeleted    = 0;
+my $wasAdded      = 0;
+my $pwAddFailures = 0;
+my $pwDelFailures = 0;
+
+my $PW="/usr/sbin/pw";
+
+for($i=0; $i<10; $i++)
+{
+    my $rc = fork();
+    if ($rc == -1)
+    {
+        print STDERR "Couldn't fork\n";
+        exit(1);
+    }
+    elsif ($rc == 0)
+    {
+        next;
+    }
+    else
+    {
+        foreach $a ('0'..'9')
+        {
+            forea
+[…中段省略 1299 字符…] ===============================================================
+ Life is short.                  | Craig Spannring 
+      Ski hard, Bike fast.       | cts@internetcds.com
+ --------------------------------+------------------------------------
+ Any sufficiently perverted technology is indistinguishable from Perl.
+=======================================================================
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606239 ###
+===== 库内序 147796 | PK 2606239 | 等级 L3 =====
+DATE: 1998-05-27T20:20:28+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: Load avg 0.33 and 99.2% idle...
+摘要: Janowski：补充说明此前未察觉该现象且刚由 2.2.1 升级到 2.2.6 怀疑是 X 或某守护进程行为不同
+
+
+The odd part is that I hadn't noticed this before. I
+just upgraded to 2.2.6 from 2.2.1. Maybe it's X or some
+other daemon that is running differently. 
+
+Dan
+
+On Wed, 27 May 1998, Jason Nordwick wrote:
+
+> sbabkin@dcn.att.com wrote:
+> > 
+> > It sounds weird to me. The program doing select() sleeps like
+> > any others and do not reside in the run queue. But, on the
+> > other hand, the load computations are based on sampling on
+> > timer interrupts, so if some program is activated on time
+> > intervals, like select() with timeout, the timer interrupt
+> > will encounter longer run queue because itself had woken up
+> > these processes and placed them into the run queue right
+> > before computing the load. I think this explanation is
+> > closer to reality.
+> > 
+> > That raises an interesting issue: should the
+> > load computation use the average of run queue length before
+> > and after waking up the time-awaiting processes ?
+> > 
+> > -Serge
+> > 
+> 
+> Doesn't the soft (hard?) clock (still dont really know the difference
+> well) operate on a random jitter to reduce this problem?  Or does
+> that only reduce the ability of a clock driven program to hog the CPU,
+> by not getting charged for its time?
+> 
+> 
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606241 ###
+===== 库内序 147798 | PK 2606241 | 等级 L4 =====
+DATE: 1998-05-27T22:29:16+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: autoconf.c:setroot() makes bad calculation 
+摘要: Janowski：定位 setroot 出错因设备类型为 unknown 并指出内核或 loader 忽略 boot.config 使 -v 无效
+
+
+Bingo! Type was unknown.
+
+Although this matters little now, the kernel loader, or
+the kernel, is ignoring boot.config flags. I have a -v
+in the file, but it is ignored.
+
+Dan
+
+
+On Wed, 27 May 1998, Mike Smith wrote:
+
+> > 
+> > This is a re-mailing. I didn't get any answers, if there are
+> > any.
+> > 
+> > Any clues?
+> > 
+> > 2.2.6-RELEASE
+> > 
+> > autoconf.c:setroot() finds wrong root device in following:
+> > 
+> >   1. booteasy
+> >   2. boot device, second scsi drive
+> >   3. second scsi has no slices (raw disklabel)
+> >   4. config kernel lists sd1a as root
+> >   5. no IDE in the kernel
+> >   6. 2 SCSI cards, ahc1 and bt0
+> > 
+> >   boot loader finds and pulls in kernel from ufs, kernel
+> >   inits correctly, at the end it says
+> >   "changing root device to wd1s4a"
+> 
+> This can happen if the disklabel on your disk is wrong; check the 
+> 'type' field, and if it's not SCSI, change it.
+> 
+> -- 
+> \\  Sometimes you're ahead,       \\  Mike Smith
+> \\  sometimes you're behind.      \\  mike@smith.net.au
+> \\  The race is long, and in the  \\  msmith@freebsd.org
+> \\  end it's only with yourself.  \\  msmith@cdrom.com
+> 
+> 
+> 
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606242 ###
+===== 库内序 147799 | PK 2606242 | 等级 L4 =====
+DATE: 1998-05-27T22:48:10+00:00
+FROM: Brian Somers <brian@Awfulhak.org>
+SUBJ: Re: Dialing into RAS/NT from FreeBSD. 
+摘要: Somers：认为用 ppp 或 pppd 拨入 RAS/NT 都可以但不要走直连 null-modem 线路
+
+> 
+> Anybody done this using ppp or pppd? I dislike these blasted proprietry 
+> protocols.....
+
+Should be fine from either ppp or pppd.  Just don't try it via a 
+direct (null-modem) connection :-/
+
+> 	Stephen
+
+-- 
+Brian <brian@Awfulhak.org>, <brian@FreeBSD.org>, <brian@OpenBSD.org>
+      <http://www.Awfulhak.org>
+Don't _EVER_ lose your sense of humour....
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606243 ###
+===== 库内序 147800 | PK 2606243 | 等级 L4 =====
+DATE: 1998-05-27T23:54:26+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Load avg 0.33 and 99.2% idle... 
+摘要: Greenman：指出负载平均是 CPU 与磁盘 I/O 等待的综合并认为该现象仍算异常
+
+>Load avg 0.33 and 99.2% idle, how can this be?
+
+   The load average is a combination of CPU and disk I/O waits. The above is
+still a bit unusual, however.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606244 ###
+===== 库内序 147801 | PK 2606244 | 等级 L4 =====
+DATE: 1998-05-28T01:50:17+00:00
+FROM: "Daniel O'Connor" <doconnor@gsoft.com.au>
+SUBJ: Star Office Installation
+摘要: Daniel OConnor：报告 Star Office 4 安装程序要读 procfs 缺失的 /proc/<pid>/cmdline 并求解法
+
+Hi,
+I have been trying to install Star Office 4, but for some weird reason the 
+installation binary tries to open /proc/<pid>/cmdline which doesn't exist in 
+our version of /proc :(
+
+Has anyone got this to install, or do I have to hack procfs myself?
+
+---------------------------------------------------------------------
+|Daniel O'Connor software and network engineer for Genesis Software |
+|http://www.gsoft.com.au                                            |
+|The nice thing about standards is that there are so many of them to|
+|choose from. -- Andrew Tanenbaum                                   |
+---------------------------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606245 ###
+===== 库内序 147802 | PK 2606245 | 等级 L4 =====
+DATE: 1998-05-28T02:38:17+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Please test/check (IPFW/NATD)
+摘要: Elischer：告知已改 IPFW 语义目前仍为可选即将成为标准并计划回合到 -stable 建议使用者复查规则
+
+I have made some changes to the IPFW code that changes slightly
+the semantics of IPFW. These changes are optiona at present
+but should become standard soon and should eventually go back into 
+-stable (2.2.x)
+
+If you use IPFW you should check your rules to see if this affects you
+as it might make the filter behave differently to what you expect.
+
+If you do not use divert sockets, (e.g. NATD) then relax 
+and go on your way..
+
+if you DO, then read on...
+
+The change is presently optional. You need the undocumented option
+IPFW_DIVERT_RESTART
+to make it happen, but it is our intention to make it standard 
+after a while so you should look at this.
+
+The change is that in the normal situation, a packet that is 
+re-injected after diversion will no longer go back to the beginning
+of the filter, but instead will restart at (after) the point that 
+it was diverted.
+If no major processing has occured before your divert rule then 
+there is effectively no change...
+
+If your divert rule is a fair way into your filter set,
+then look at the rules before hand and think about whether
+not running those a second time in the reinjected packet may 
+create a security hole.
+
+The reason for this change is because the original scheme was flawed
+in that you could not divert a packet twice. Doing so would lead to an 
+infinite loop (for the packet).
+so for example the following was not possible:
+
+[rules set 1]
+divert for payload encryption
+[rules set 2..]
+divert for NATD
+[rules set 3]
+
+In the old scheme.
+the executed rules would be:
+
+[set 1] encryption [set 1] [set 2] natd [set 1] encryption [set 1] (etc)
+
+
+
+in the new scheme it is:
+{set 1] encryption [set 2] natd [set 3]
+
+I envision this becoming standard in a couple of weeks
+and really it should go back to 2.2.x
+
+in the common case (natd)
+[rules set 1]
+divert for NATD
+[rules set 2]
+
+The following should happen:
+
+old:
+[set 1] natd [set 1] [set 2]
+
+new:
+[set 1] natd [set 2]
+
+If your ruleset REQUIRES set 1 to be run twice please let me know
+so I can work out the common scenarios.
+
+the example for natd say to put the natd rule at the beginning
+so it should not affect people who followed this advice :-)
+
+julian
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606246 ###
+===== 库内序 147803 | PK 2606246 | 等级 L3 =====
+DATE: 1998-05-28T04:43:12+00:00
+FROM: Darren Reed <avalon@coombs.anu.edu.au>
+SUBJ: freebsd on compaqs
+摘要: Reed：询问 FreeBSD 能否运行在内置 UTP 10/100 网卡的 Compaq Deskpro 上
+
+
+will freebsd run on Compaq Deskpro's with builtin UTP (10/100) ?
+
+Darren
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606247 ###
+===== 库内序 147804 | PK 2606247 | 等级 L4 =====
+DATE: 1998-05-28T05:46:18+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: Star Office Installation
+摘要: Ollivier Robert：称自己安装 Star Office 4 时未出现该报错运行尚可但会随机锁死并吃满 CPU 建议勤保存
+
+According to Daniel O'Connor:
+> Has anyone got this to install, or do I have to hack procfs myself?
+
+I'm really surprised. I installed SO4 a few months ago (when 4.0 release
+came out) and it didn't puke like this.
+
+It runs well but has a tendency to lock (and eat all the CPU) after a
+random amound of time. Just save often :-)
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606248 ###
+===== 库内序 147805 | PK 2606248 | 等级 L4 =====
+DATE: 1998-05-28T06:28:32+00:00
+FROM: Nicholas Charles Brawn <ncb05@uow.edu.au>
+SUBJ: Re: Star Office Installation
+摘要: Brawn：报告在 2.2.6-release 加 linux 模拟下运行 Star Office 4.0 时报出 Abort Trap 并求原因
+
+I recently d/l the 4.0 distribution and it puked at me when i tried to
+run it. The error message was "Abort Trap".
+
+I'm running 2.2.6-release with linux emulation, if anyone has any pointers
+as to why this is happening, i'd love to know. :)
+
+Nick
+
+--
+Email: ncb05@uow.edu.au - DE 30 33 D3 16 91 C8 8D  A7 F8 70 03 B7 77 1A 2A	
+http://rabble.uow.edu.au/~nick - public key available on request.
+Nicholas Brawn - Computer Science Undergraduate, University of Wollongong.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606249 ###
+===== 库内序 147806 | PK 2606249 | 等级 L3 =====
+DATE: 1998-05-28T01:54:58+00:00
+FROM: Alfred Perlstein <perlsta@fang.cs.sunyit.edu>
+SUBJ: Re: Star Office Installation
+摘要: Perlstein：建议下次崩溃后用 ipcs 检查是否堆积大量共享内存段并询问对方跑的是 -stable 还是 -current
+
+could you please check your shared mem segments on the next crash? just
+ipcs and tell me if you have a LOT of segments lyinh around? also are you
+running -stable? -current?
+
+thanks,
+-Alfred
+
+On Thu, 28 May 1998, Ollivier Robert wrote:
+
+> According to Daniel O'Connor:
+> > Has anyone got this to install, or do I have to hack procfs myself?
+> 
+> I'm really surprised. I installed SO4 a few months ago (when 4.0 release
+> came out) and it didn't puke like this.
+> 
+> It runs well but has a tendency to lock (and eat all the CPU) after a
+> random amound of time. Just save often :-)
+> -- 
+> Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+> FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606250 ###
+===== 库内序 147807 | PK 2606250 | 等级 L4 =====
+DATE: 1998-05-28T06:54:40+00:00
+FROM: Bill Fenner <fenner@parc.xerox.com>
+SUBJ: Re: freebsd on compaqs 
+摘要: Fenner：称自己在用 Bill Paul 新写的 Thunderlan 驱动效果尚可但尚无发行版收录故全新安装困难
+
+In message <199805280443.VAA28178@hub.freebsd.org>you write:
+>will freebsd run on Compaq Deskpro's with builtin UTP (10/100) ?
+
+I'm using Bill Paul's brand new driver for the Thunderlan.  It's
+working fairly well, but there's no release with this driver in
+it, so installing from scratch will be a trick.
+
+  Bill
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

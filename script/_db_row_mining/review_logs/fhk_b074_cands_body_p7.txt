@@ -1,0 +1,830 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604658 ###
+===== 库内序 146215 | PK 2604658 | 等级 L4 =====
+DATE: 1998-04-15T12:20:02+00:00
+FROM: Bruce Evans <bde@zeta.org.au>
+SUBJ: Re: syscons.c
+摘要: Bruce Evans：STABLE 分支名为 RELENG_2_2，1.182.2 提交 syscons.c 尚可但会弄坏日志的 Branch 字段
+
+>OK, I committed this to the 1.182.2 branch which is what goes into
+>STABLE unless I am mistaken.
+
+The "STABLE" branch is named RELENG_2_2.  1.182.2 may sort of work
+for syscons.c, but it messes up at least the "Branch:" line in the
+commit logs.
+
+Bruce
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604659 ###
+===== 库内序 146216 | PK 2604659 | 等级 L4 =====
+DATE: 1998-04-15T12:51:26+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: syscons.c
+摘要: Dag-Erling：改动已提交进 1.182.2 也就是 STABLE，询问是否该同时进 -current，自认没跑过 -current 不敢碰
+
+S�ren Schmidt <sos@FreeBSD.ORG> writes:
+> In reply to Dag-Erling Coidan Sm�rgrav who wrote:
+> > OK, I committed this to the 1.182.2 branch which is what goes into
+> > STABLE unless I am mistaken.
+> What about -current ??
+
+I'm afraid to touch -current as long as I don't run it myself.
+
+-- 
+fprintf(stderr, "I have a closed mind. It helps keeping the rain out.\n");
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604660 ###
+===== 库内序 146217 | PK 2604660 | 等级 L3 =====
+DATE: 1998-04-15T12:54:52+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: syscons.c
+摘要: Dag-Erling：接受 STABLE 分支命名的提醒，说自己只翻了 cvs log 的 STABLE 输出没去核对分支名
+
+Bruce Evans <bde@zeta.org.au> writes:
+
+> >OK, I committed this to the 1.182.2 branch which is what goes into
+> >STABLE unless I am mistaken.
+> 
+> The "STABLE" branch is named RELENG_2_2.  1.182.2 may sort of work
+> for syscons.c, but it messes up at least the "Branch:" line in the
+> commit logs.
+
+Thanks, I'll remember that the next time. I looked through the output
+of 'cvs log' for 'STABLE' and didn't think to simply check which tag I
+was cvsupping. I'm still a little wet behind the ears... :)
+
+-- 
+fprintf(stderr, "I have a closed mind. It helps keeping the rain out.\n");
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604661 ###
+===== 库内序 146218 | PK 2604661 | 等级 L3 =====
+DATE: 1998-04-15T13:22:49+00:00
+FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM>
+SUBJ: Re: how to add new system calls...
+摘要: Ron G. Minnich：认可 -current 用 syscalls.master 加 makesyscalls.sh 自动生成系统调用的做法
+
+
+On Wed, 15 Apr 1998, John Birrell wrote:
+> The answer depends on whether or not you are running -current.
+> For 2.2.x, you do need to edit /usr/src/lib/libc/sys/Makefile.inc.
+> For -current, the syscalls will be automatically built into libc by
+> declaring them in syscalls.master, executing makesyscalls.sh and then
+> doing a make obj, depend, all and install from /usr/src/lib/libc.
+
+
+And boy is this slick. At the extreme linux workshop one issue that came 
+up was the difficulty of adding system calls to linux. It's quite messy. 
+I pointed out that I thought freebsd was a real leader in this area, but, 
+(and this is strange) the counter-argument from some of the linux folks 
+was that they didn't want to see people "corrupting the purity of the 
+system call namespace" (those actual words ...). 
+
+ron
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604664 ###
+===== 库内序 146221 | PK 2604664 | 等级 L3 =====
+DATE: 1998-04-15T13:34:26+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Come on guys, close a PR or two, will ya ? 
+摘要: Jordan：认为关键在更健壮的打包系统，自己四年没写出来也拉不动别人写，还估算过要改造现有系统的工作量
+
+> All solveable problems.  A more robust packaging system will solve most of
+> these.
+
+That's like saying "we can get to the stars, we just need a faster
+than light drive - it's obvious guys!" :-)
+
+I've been trying to write or get someone (anyone!) else to write "a
+more robust packaging system" for something close to 4 years now and
+I'm not having any luck at all.  I've also even looked at what it
+would take to make the ports collection generate RPMs (it's sort of
+mappable but definitely not easy) and if Debian were easier to install
+on my spam box I'd probably have looked at that by now too.  Nobody,
+least of all myself, is particularly proud of the current prototype
+package system and would LOVE to see Package System MKII, whether it's
+an import or another indigenous effort.  A more robust packaging
+system / management system is not the answer - that is the question.
+Who's going to do it is the answer we're looking for here. :-)
+
+					Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604666 ###
+===== 库内序 146223 | PK 2604666 | 等级 L4 =====
+DATE: 1998-04-15T14:00:37+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: arplookup 
+摘要: Jordan：注册数更接近两万八，因为反垃圾过滤会丢掉尚未建好 DNS 条目主机上的合法注册，Poul-Henning 另有存档
+
+Yep, it's probably closer to 28K or so since my spamblock software
+tosses away a lot of legit registrations since they come from hosts
+that don't quite exist yet (the person has just configured the box but
+hasn't put an entry into DNS yet, I punt the registration as spam).
+This isn't as catastrophic as it sounds since Poul-Henning is also on
+the recipient list for registrations and he archives his at a
+repository without blocking.  I keep receiving the registrations here
+mostly for general rather than truly accurate reference.
+
+					Jordan
+
+> >> 2nd - I'm curious where the registration figures (25000 users) came
+> >...
+> >
+> >  The figure is bogus.  I don't even know where you got it from, or where
+> >it was even mentioned...
+> 
+>    It came from Jordan. The new installation software will optionally registe
+r
+> the user with us. We currently have 25,000 users registered this way.
+> 
+> -DG
+> 
+> David Greenman
+> Core-team/Principal Architect, The FreeBSD Project
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604667 ###
+===== 库内序 146224 | PK 2604667 | 等级 L3 =====
+DATE: 1998-04-15T14:03:57+00:00
+FROM: Matthew Cashdollar <mattc@rfcnet.com>
+SUBJ: Re: Come on guys, close a PR or two, will ya ?
+摘要: Matthew Cashdollar：认为 Debian 的打包系统是所有系统里最差的，担心新手更困惑
+
+On Wed, Apr 15, 1998 at 01:19:35AM -0400, Matthew N. Dodd wrote:
+
+> A better packaging system/management system solves these.  Debian has most
+> of these problems solved (thought I'm in no way advocating we adopt their
+> tools; they just have some good ideas)
+
+Yuck!  Debian has the worst packaging system of any OS I have ever seen.  If
+newbies are confused now, just wait until they try a debian linux-style
+packaging system.. LOL
+
+Seriously though, I don't see anything wrong with our current ports
+collection and the debian stuff is a step (or two) backwards if you ask me.
+
+
+-- 
+Matthew Cashdollar <mattc@rfcnet.com>
+RF Communications, Inc. -- http://www.rfcinc.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604668 ###
+===== 库内序 146225 | PK 2604668 | 等级 L3 =====
+DATE: 1998-04-15T14:05:03+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Side by side...
+摘要: Dan Janowski：分享 ncworldmag 一篇文章，认为写得清楚并把 Linux 与 FreeBSD 并列提及
+
+
+Whilest poking around for Java resources, I found this article
+which seems pretty articulate as well as referring to
+Linux and FreeBSD on par.
+
+http://www.ncworldmag.com/ncw-04-1998/ncw-04-nextten.html?jw
+
+Dan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604670 ###
+===== 库内序 146227 | PK 2604670 | 等级 L3 =====
+DATE: 1998-04-15T14:16:56+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: 802.2/802.3/802.5 (steps to token ring and others)
+摘要: Eivind Eklund：支持开 freebsd-tokenring 列表，觉得能推动相关努力
+
+On Wed, Apr 15, 1998 at 09:55:36AM -0400, Larry S. Lile wrote:
+> It might be time for a "token-ring@FreeBSD", anybody else think so?
+
+freebsd-tokenring
+
+I'm in favour - might spurn the efforts along.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604672 ###
+===== 库内序 146229 | PK 2604672 | 等级 L3 =====
+DATE: 1998-04-15T14:49:17+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: 802.2/802.3/802.5 (steps to token ring and others)
+摘要: Matthew N. Dodd：建议列表名称放宽到覆盖全部 ISO/IEC 802.x 协议，现阶段不必只盯 token-ring 细节
+
+On Wed, 15 Apr 1998, Larry S. Lile wrote:
+> It might be time for a "token-ring@FreeBSD", anybody else think so?
+
+Something a bit more general that covers all of the ISO/IEC 802.x
+protocols may be a bit better.  At this point we don't need to concentrate
+on the token-ring specifics.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604673 ###
+===== 库内序 146230 | PK 2604673 | 等级 L3 =====
+DATE: 1998-04-15T14:50:33+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: Come on guys, close a PR or two, will ya ?
+摘要: Matthew N. Dodd：同意 dselect 难用，但自己指的并非照搬 Debian 工具，称其新打包工具据说不错
+
+On Wed, 15 Apr 1998, Matthew Cashdollar wrote:
+> Yuck!  Debian has the worst packaging system of any OS I have ever seen.  If
+> newbies are confused now, just wait until they try a debian linux-style
+> packaging system.. LOL
+
+I agree that dselect sucks hard.  That wasn't what I was suggesting.
+(their new packaging tool is supposed to be the cat's meow though.)
+
+> Seriously though, I don't see anything wrong with our current ports
+> collection and the debian stuff is a step (or two) backwards if you ask
+> me. 
+
+dselect is a step or two backwards yes.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604674 ###
+===== 库内序 146231 | PK 2604674 | 等级 L4 =====
+DATE: 1998-04-15T14:57:22+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: 802.2/802.3/802.5 (steps to token ring and others)
+摘要: Matthew N. Dodd：称 Larry 已写出多数 tokenring 硬件驱动但不知插内核何处，ether_input 这类钩子尚缺
+
+On Wed, 15 Apr 1998, Eivind Eklund wrote:
+> freebsd-tokenring
+> 
+> I'm in favour - might spurn the efforts along.
+
+Thats what I'm hoping.  Larry actually has (from what I remember) most of
+an IBM tokenring hardware driver written and was wondering where to plug
+it into the kernel.  Those bits don't exist yet (they would be the
+equivelent of ether_input() and ether_output() IIRC.)
+
+We need some direction from the architects on how we should lay things out
+so we get all the benefits from the 802.2 LLC code. (802.3, IPX frames
+over same, NetBEUI etc).  
+
+I've got a fuzzy picture in my head but it would certainly be helpful to
+direct this discussion and get proper feedback.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604676 ###
+===== 库内序 146233 | PK 2604676 | 等级 L3 =====
+DATE: 1998-04-15T15:04:14+00:00
+FROM: "Alton, Matthew" <Matthew.Alton@anheuser-busch.com>
+SUBJ: RE: Come on guys, close a PR or two, will ya ? 
+摘要: Alton：主动接下 Jordan 提到的打包系统工作，请求给些指点
+
+I'll do it.  Please send me pointers.  Thank you.
+
+> -----Original Message-----
+> From:	Jordan K. Hubbard [SMTP:jkh@time.cdrom.com]
+> Sent:	Wednesday, April 15, 1998 8:34 AM
+> To:	Matthew N. Dodd
+> Cc:	Peter Wemm; Satoshi Asami; phk@FreeBSD.ORG; committers@FreeBSD.ORG;
+> hackers@FreeBSD.ORG
+> Subject:	Re: Come on guys, close a PR or two, will ya ? 
+> 
+> > All solveable problems.  A more robust packaging system will solve most of
+> > these.
+> 
+> That's like saying "we can get to the stars, we just need a faster
+> than light drive - it's obvious guys!" :-)
+> 
+> I've been trying to write or get someone (anyone!) else to write "a
+> more robust packaging system" for something close to 4 years now and
+> I'm not having any luck at all.  I've also even looked at what it
+> would take to make the ports collection generate RPMs (it's sort of
+> mappable but definitely not easy) and if Debian were easier to install
+> on my spam box I'd probably have looked at that by now too.  Nobody,
+> least of all myself, is particularly proud of the current prototype
+> package system and would LOVE to see Package System MKII, whether it's
+> an import or another indigenous effort.  A more robust packaging
+> system / management system is not the answer - that is the question.
+> Who's going to do it is the answer we're looking for here. :-)
+> 
+> 					Jordan
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604678 ###
+===== 库内序 146235 | PK 2604678 | 等级 L4 =====
+DATE: 1998-04-15T15:21:32+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: CFD: 'cce' - "concatenated" ethernet driver
+摘要: Matthew N. Dodd：建议不必抽象成虚拟设备，在接口上加个可设标志就够，让 ifconfig 把多个接口合并成一条大管道
+
+On Wed, 15 Apr 1998, Charlie & wrote:
+> 	What do you think about such an interface ?
+
+You need to see how cisco does this with their high end switch products.
+
+They allow multiple ethernet connections to function as one big pipe,
+backup ethernet connections etc.
+
+[deleted]
+
+You probably wouldn't need to abstract it to a virtual devices.  Having a
+flag you can set on an interface would be sufficient.
+
+ie: ifconfig 2 interfaces with the same IP, set an interface flag that
+specifys Active/Spare or Round-Robin.
+
+You may need to spoof MAC addresses; look at the cisco implementation for
+a reference.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604680 ###
+===== 库内序 146237 | PK 2604680 | 等级 L3 =====
+DATE: 1998-04-15T15:41:47+00:00
+FROM: dannyman <dannyman@dannyland.org>
+SUBJ: Re: Side by side...
+摘要: dannyman：批评那篇文章全是缺乏引用支撑的泛论，只是把 Linux 与 FreeBSD 放在同一句里
+
+On Wed, Apr 15, 1998 at 10:05:03AM -0400, Dan Janowski wrote:
+
+> Whilest poking around for Java resources, I found this article which
+> seems pretty articulate as well as referring to Linux and FreeBSD on par.
+> 
+> http://www.ncworldmag.com/ncw-04-1998/ncw-04-nextten.html?jw
+
+Errr, yeah, an article full of generalizations unsupported by citation that
+mentions FreeBSD and Linux in the same sentence then goes on to list a
+bunch of links for Linux at the bottom.
+
+I get the creepy feeling that it's some sort of underhanded Linux advocacy,
+but I don't mind so much given the target. ;)
+
+-dan
+
+-- 
+  //       dannyman yori aiokomete       ||  Our Honored Symbol deserves
+\\/ http://www.dannyland.org/~dannyman/  ||  an Honorable Retirement (UIUC)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604681 ###
+===== 库内序 146238 | PK 2604681 | 等级 L4 =====
+DATE: 1998-04-15T15:44:14+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Converting ELF shared libs into a.out shared libs 
+摘要: Mike Smith：该查的是库对外消费的接口，也就是它调用了哪些系统调用与哪些库函数以及外部数据结构
+
+> 
+> What's involved, other than the different formats of jump tables and adding 
+> prepended underscores?
+
+The interfaces that library components consume.
+
+> Stephen, who is determined to get that Glide library usable in native fbsd 
+> apps.
+
+You'll want to start by looking at the external interfaces that this
+library uses, ie. what system calls it makes, what other library
+functions it calls, what external data structures it references, etc.
+
+In the general case, it can be nightmare trying to do this.  It's
+possible that the Glide library may be sufficiently self-contained that
+this will be somewhat easier than that.
+
+Start by taking the Linux binutils and pull the library apart into its 
+object modules.  This will let you work with one at a time.
+
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604683 ###
+===== 库内序 146240 | PK 2604683 | 等级 L4 =====
+DATE: 1998-04-15T16:05:28+00:00
+FROM: Antti-Pekka Liedes <apl@mail.cs.hut.fi>
+SUBJ: adding new syscalls, part two
+摘要: Antti-Pekka Liedes：新增 ACL 调用后内核可用，共享 libc 链接报 RRS text relocation at 0x207d6
+
+
+I already read previous thread on adding syscalls, and I did everything as
+it said, ie. added my new syscall to syscalls.master and ran makesyscalls.
+Now, everything works considering the kernel, but I can't make a working
+libc.  I tried as was told in the previous syscalls thread, but when linking
+the shared libc, I get:
+ld: acl_establish_daemon.so: RRS text relocation at 0x207d6 for
+"SYS_acl_establish_daemon"
+
+Because of this(?), ld.so can't resolve SYS_acl_establish_daemon in libc.so,
+and thus can't link it either, and obviously nothing works when you can't
+link shared libc.
+
+-- 
+Antti-Pekka Liedes  *         apl@IRC        *  There's no sign of the
+JMT 6 B 406         *        apl@iki.fi      *  morning coming, you've been
+02150  ESPOO        *  +358 -  9 - 468 3121  *  left on your own, like
+FINLAND             *  +358 - 40 - 5873 593  *  a rainbow in the dark
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604684 ###
+===== 库内序 146241 | PK 2604684 | 等级 L3 =====
+DATE: 1998-04-15T16:06:26+00:00
+FROM: Antti-Pekka Liedes <apl@mail.cs.hut.fi>
+SUBJ: syscalls, duh
+摘要: Antti-Pekka Liedes：补充自己用的是前几周的 3.0-current
+
+
+Forgot to mention the obvious, I'm running 3.0-current from a couple of
+weeks back.
+
+-- 
+Antti-Pekka Liedes  *         apl@IRC        *  There's no sign of the
+JMT 6 B 406         *        apl@iki.fi      *  morning coming, you've been
+02150  ESPOO        *  +358 -  9 - 468 3121  *  left on your own, like
+FINLAND             *  +358 - 40 - 5873 593  *  a rainbow in the dark
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604685 ###
+===== 库内序 146242 | PK 2604685 | 等级 L4 =====
+DATE: 1998-04-15T16:17:51+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: DHCP client/server integration (import proposal)
+摘要: Mike Smith：提议把 ISC DHCP 套件 2.0b1pl0 并入基底系统，理由是系统已提供 bootp 与 bootparam 等前身服务
+
+
+I have a contribified version of the ISC DHCP suite (2.0b1pl0), which I
+would like to incorporate, as a first step towards making FreeBSD a good
+DHCP citizen.
+
+I feel that the move from the DHCP package as an addon to part of the 
+base system is justified as:
+
+ - We already offer the precursor services (bootp, bootparam, rboot).
+ - DHCP is becoming the protocol of choice for this task.
+
+Questions? Comments? Reviewers?
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604687 ###
+===== 库内序 146244 | PK 2604687 | 等级 L3 =====
+DATE: 1998-04-15T16:39:10+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: how to add new system calls...
+摘要: Matthew N. Dodd：设想 tripwired 守护进程，让 cron 在 /var/cron/tabs 之类的配置文件改动时收到信号
+
+On Wed, 15 Apr 1998, Dan Nelson wrote:
+> > Mmm...  tripwired
+> 
+> Sort of like tripwire, but in real time.
+
+Thats what I was implying.  A sort of tripwire-daemon (hence tripwired).
+:)
+
+> The Amiga has a feature where you could monitor a file or directory for
+> changes.  Imagine cron getting a signal when /var/cron/tabs changes.  Or
+> any other daemon that has a config file.  There's a description of the
+> function (but not the assosicated structures unfortunately) at
+
+Indeed.  This will be most useful.
+
+> http://www.cs.man.ac.uk/~lucass/autodoc/dos.htm#StartNotify()
+> 
+> So, how many of you people _were_ Amiga hackers in a previous life?
+
+Not I.  I was on the OS/2 side of the Amiga-OS/2 dicksizing wars.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604689 ###
+===== 库内序 146246 | PK 2604689 | 等级 L4 =====
+DATE: 1998-04-15T16:33:40+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Indus Drivers
+摘要: Tom：认为 Courier I-Modem 很差，他做多 ISDN PRI 常遇到 95 与 NT 端 I-Modem 打不进来
+
+
+On Tue, 14 Apr 1998, David McNett wrote:
+
+> On 14-Apr-1998, Mike Smith wrote:
+> > Try the USR Courier I-modem.
+> 
+> I have two of these, and have my hands near another one.  In all cases,
+> I have had horrific luck getting FreeBSD to play well with the courier.
+
+  The Courier I-Modem is awful.  I do a lot of ISDN (mostly PRI though),
+and run into people trying to call in with I-Modems (mostly 95 and NT) and
+they always have problems.
+
+  Get the 3COM Impact II (or IQ) instead.  Works well under FreeBSD.  Has
+built in STAC support (because you know that FreeBSD ppp(d) will never be
+allowed to do STAC, but STAC is the only compression type most
+central-site gear supports).
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604691 ###
+===== 库内序 146248 | PK 2604691 | 等级 L3 =====
+DATE: 1998-04-15T17:07:23+00:00
+FROM: George_Morgan@BayNetworks.COM (George Morgan)
+SUBJ: Current LLC Implementation in Ethernet Support...
+摘要: George Morgan：询问以太网代码里 LLC 支持在哪，要把这段从 Class I 升到 Class II 以支持 token ring
+
+Does anyone know where the LLC support code is in the FreeBSD ethernet 
+code?  I am working on a project that will upgrade this section from Class I 
+support (all that is needed for Ethernet) to Class II support (support for Token 
+Ring and other transports that require connection based services)
+
+Or, is the LLC already Class II (supports connectionless [Ethernet] and 
+connection based communication)
+
+ 
+George Morgan
+Bay Networks
+gmorgan@baynetworks.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604693 ###
+===== 库内序 146250 | PK 2604693 | 等级 L4 =====
+DATE: 1998-04-15T17:27:40+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: how to add new system calls...
+摘要: Eivind Eklund：指出进程只能对它有访问权限的文件向内核登记监控，并希望事件能被 poll 与 select 唤醒
+
+On Wed, Apr 15, 1998 at 10:12:40AM -0700, Eric A. Davis wrote:
+> Of course a process can only register a monitor with the kernel on file
+> in which it has access. ;-)
+> 
+> Any other ideas would be great.
+
+It would be nice if the events could be noticed by a 'poll' and
+'select', so people could use it to wake up at places where they use
+that to sleep.
+
+Apart from that, I can't think of anything you didn't already cover -
+perhaps 'wait for modification by user X/process Y', but that doesn't
+seem too useful.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604694 ###
+===== 库内序 146251 | PK 2604694 | 等级 L3 =====
+DATE: 1998-04-15T17:30:15+00:00
+FROM: Marino Ladavac <lada@pc8811.gud.siemens.at>
+SUBJ: Re: Come on guys, close a PR or two, will ya ?
+摘要: Marino Ladavac：提出可接打包系统的活，但只熟 System V 风格，手头有 manpages 可看
+
+
+On 15-Apr-98 Jordan K. Hubbard wrote:
+>> All solveable problems.  A more robust packaging system will solve most of
+>> these.
+> 
+>  A more robust packaging
+> system / management system is not the answer - that is the question.
+> Who's going to do it is the answer we're looking for here. :-)
+> 
+>                                       Jordan
+> 
+
+I could take a look at it if you don't mind SystemV packaging style.
+At least I have the manpages for it and I can see how it seems to
+create its filesystem and stream packages.  Most probably I will not
+go for stream package compatibility with SysV because I think it's
+a proprietary binary format (have to take a look at it, there was
+never any need to do that before).
+
+Sadly, it has its bad points in the sense that _all_ files need to be
+specified, but at least it is fairly standard (as far as the word
+standard means anything in the UNIX world :)
+
+/Marino
+
+----------------------------------
+Marino Ladavac
+Date: 15-Apr-98
+Time: 19:22:46
+----------------------------------
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604699 ###
+===== 库内序 146256 | PK 2604699 | 等级 L4 =====
+DATE: 1998-04-15T18:46:50+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: tr-driver (fwd)
+摘要: Matthew N. Dodd：转发 Larry Lile 的 IBM shared ram 卡驱动与 Mach token ring 加 LLC 源码
+
+
+Larry Lile has the bare beginnings of a hardware driver for the IBM shared
+ram cards.
+
+He also has some source from the mach kernel that appears to be a complete
+token ring support with the LLC bits (in much the same manner that the DEC
+FDDI support has the LLC bits.)
+
+Just thought I'd resend this and let others look at it.
+
+The way I read it the Mach copyright allows us enough freedom to do what
+we need.
+
+Anyhow, take a look.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+---------- Forwarded message ----------
+Date: Wed, 15 Apr 1998 13:43:16 -0400 (EDT)
+From: "Larry S. Lile" <lile@stdio.com>
+To: "Matthew N. Dodd" <winter@jurai.net>
+Cc: George Morgan <George_Morgan@BayNetworks.COM>
+Subject: Re: tr-driver
+
+
+anarchy: # uname -a
+FreeBSD anarchy.stdio.com 2.2.6-STABLE FreeBSD 2.2.6-STABLE #0: Tue Mar 31
+10:21:55 EST 1998 lile@anarchy.stdio.com:/usr/src/sys/compile/anarchy  i386
+
+I have attached the 3 files necessary to probe/attach IBM cards, these are
+far from being finished by any stretch of the imagination.  This is just
+low level get the card to play with us stuff.  The interface will actually
+attach to the kernel, and show up in ifconfig/netstat but it is very cranky
+and will crash your machine if you poke it too much.  That whole lack of 
+underlying ioctl's is a pain :)  There are also 2 patches (userconfig.c
+and files.i386) that will get things linked into the kernel they are
+"diff -c" format.  I had some other things written/working but the code
+was far too dirty and more just getting to understand how the card 
+reacted than for actual use.  I am still very interested in working on
+a driver so lets try to put something together.
+
+Also I have included some mach source that I found on the net for a
+token ring driver.  There is a file containing pointers to the source
+with it.
+
+You are both welcome to accounts on anarchy to dig around what code I
+have and the other resources I have gotten.  Just let me know.
+
+L
+[…中段省略 735 字符…] ou are running?  I've got some IBM cards here I can test against.
+> 
+> > Also sorry for not responding more quickly, I wasn't paying attention
+> > to my mail box.
+> 
+> Thats fine.  I knew you were out there and was going to do a directed
+> emailing if this one didn't produce anything.
+> 
+> /* 
+>    Matthew N. Dodd		| A memory retaining a love you had for life	
+>    winter@jurai.net		| As cruel as it seems nothing ever seems to
+>    http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+> */
+> 
+
+

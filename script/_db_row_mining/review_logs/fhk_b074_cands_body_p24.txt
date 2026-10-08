@@ -1,0 +1,859 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605343 ###
+===== 库内序 146900 | PK 2605343 | 等级 L4 =====
+DATE: 1998-05-04T01:12:27+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：指出是 mbuf 不足，需调大 MAXUSERS 或 NMBCLUSTERS，并认为 dump 与 restore 在大文件系统上已坏
+
+
+On Sun, 3 May 1998, David E. Cross wrote:
+
+> similar to (sorry I I did not write it down): "ping: no network buffers
+> available", any  telnet requet, etc would just hang indefinititely, the
+
+  Not enough mbufs.  Increase MAXUSERS or NMBCLUSTERS
+
+  Beware, dump/restore is also broken for large filesystems.  I personally
+think that dump/restore should be dropped from FreeBSD.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605344 ###
+===== 库内序 146901 | PK 2605344 | 等级 L4 =====
+DATE: 1998-05-04T01:13:33+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：tx 网卡驱动同样会丢失 mbuf
+
+
+On Sun, 3 May 1998, David E. Cross wrote:
+
+> similar to (sorry I I did not write it down): "ping: no network buffers
+> available", any  telnet requet, etc would just hang indefinititely, the
+
+  Also, it seems that the tx ethernet driver can lose mbufs too.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605345 ###
+===== 库内序 146902 | PK 2605345 | 等级 L3 =====
+DATE: 1998-05-04T02:08:39+00:00
+FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking@prth.pgs.com>
+SUBJ: Re: C-BASIC anyone? (only oldies need apply :-) 
+摘要: Stephen：问该工具是否真的转译源码，以及有没有能处理运行时 pcode 的程序
+
+
+Hmm. Does it translate the source, and do you have something that'll handle 
+the runtime pcode?
+
+
+	Stephen
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605348 ###
+===== 库内序 146905 | PK 2605348 | 等级 L3 =====
+DATE: 1998-05-04T04:41:46+00:00
+FROM: System Admin <sysadmin@interfusion.aus.net>
+SUBJ: low level tcp filter
+摘要: 想在 IRC 进程内做低层 TCP 过滤，按词表移除或掩码进出消息的词
+
+Dear all
+
+i'm trying to setup a simpleIRCD for an abuse recovery group
+
+i ask mis there a way to enable filters at some leel where words can be
+removed or masked before they as they go in or out of the process
+or atleast masked somewhat...
+ie PRIVMSG #chat :hi thereblah1
+would appear to all other clients as PRIVMSG #chat :hi there ---1
+
+ok i know the syntax isnt EXTACT but you get the idea..
+there would be a list of words that would need to be filtered...
+anyone have any  ideas on how this can be done?
+
+thanks
+eremy SOmmer,
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605349 ###
+===== 库内序 146906 | PK 2605349 | 等级 L3 =====
+DATE: 1998-05-04T04:47:11+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Amancio Hasty：建议直接从 NeoGeo 自己的 FTP 下载 blender，别用 FreeBSD 赞助的镜像
+
+In the meantime, you can download blender from their ftp and
+not from "USA: FTP, Sponsored by FreeBSD".
+
+	Amancio
+
+> On Wed, 15 Apr 1998, Jordan K. Hubbard wrote:
+> 
+> > And available in:
+> > 
+> > 	ftp://ftp.freebsd.org/pub/FreeBSD/2.2.6-RELEASE/commerce/3D/
+> > 
+> > Please see the web page at http://www.neogeo.nl for more information
+> > on the Blender system.  This is an extremely powerful 3D design
+> > package and you WILL need to read the various tutorial documents and
+> > try their examples before you've any hope of using it effectively. :-)
+> 
+> Their web page BTW, has the URL wrong.  It points to the non-existant dir:
+> /pub/FreeBSD/2.2.x-stuff
+> 
+> - alex
+> 
+> "Contrary to popular belief, penguins are not the salvation of modern
+> technology.  Neither do they throw parties for the urban proletariat."
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605352 ###
+===== 库内序 146909 | PK 2605352 | 等级 L4 =====
+DATE: 1998-05-04T05:23:24+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: C-BASIC anyone? (only oldies need apply :-) 
+摘要: Julian Elischer：不存在 pcode，该转换器直接把源码转成 C
+
+pcode?
+it translates the source into C.
+
+
+
+On Mon, 4 May 1998, Stephen Hocking-Senior Programmer PGS Tensor Perth wrote:
+
+> 
+> Hmm. Does it translate the source, and do you have something that'll handle 
+> the runtime pcode?
+> 
+> 
+> 	Stephen
+> 
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605355 ###
+===== 库内序 146912 | PK 2605355 | 等级 L3 =====
+DATE: 1998-05-04T07:20:56+00:00
+FROM: Joerg Micheel <joerg@krdl.org.sg>
+SUBJ: Re: Context switch time
+摘要: Joerg Micheel：在 context switch 计时讨论中提议双方交换各自测试程序以便复现并比对数据差异
+
+Greg,
+
+maybe, we should exchange our test programs :-).
+
+On Mon, May 04, 1998 at 03:52:42PM +0930, Greg Lehey wrote:
+> On Mon,  4 May 1998 at 14:04:42 +0800, Joerg Micheel wrote:
+> > On Sun, May 03, 1998 at 10:23:03PM -0700, John-Mark Gurney wrote:
+> >> Greg Lehey scribbled this message on May 4:
+> >>> On Sat, 25 April 1998 at  3:43:13 -0700, John-Mark Gurney wrote:
+> >>>
+> >>> Strange.  This is what I get from a program that repeatedly calls
+> >>> getpid() on my K6/233:
+> >
+> > These numbers might not that much depend on processor type/speed. What
+> > about memory/cache speed ? Chipset ? Comments ?
+> 
+> I think they have quite a strong relationship with processor power.
+
+> In particular, the P5/133 and your P5/200 seem to handle about 3500
+> syscalls/MHz.  The P5/75 is presumably slower because of the missing
+> cache, and I've noticed before that the K6 isn't as much faster at
+> this sort of thing as I would expect--suggestions for the reasons are
+> welcome.  One could be that it's an Inten TX board with 96 MB, of
+> which only 64 MB are cached, but it seems to match up with John-Mark's
+> observations.
+
+Here is the Dell OptiPlex GXa, a 300 MHz PentiumPro:
+
+CPU: Pentium Pro (298.00-MHz 686-class CPU)
+  Origin = "GenuineIntel"  Id = 0x634  Stepping=4
+  Features=0x80f9ff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,<b11>,MTRR,PGE,MCA,CMOV>
+real memory  = 67108864 (65536K bytes)
+avail memory = 62709760 (61240K bytes)
+
+procs   memory     page                    disks   faults      cpu
+ r b w   avm   fre  flt  re  pi  po  fr  sr s0 c0   in   sy  cs us sy id
+ 1 0 0  3632 15368    1   0   0   0   0   0  0  0  260 802901  19 36 64  0
+ 1 0 0  3632 15368    1   0   0   0   0   0  0  0  235 730504  14 41 59  0
+ 1 0 0  3632 15368    1   0   0   0   0   0  0  0  235 730576  14 33 67  0
+ 1 0 0  3632 15368    1   0   0   0   0   0  0  0  237 730535  15 39 61  0
+ 1 0 0  3992 15368    1   0   0   0   0   0  0  0  238 730391  16 41 59  0
+ 1 0 0  3992 15368    1   0   0   0   0   0  0  0  238 730400  14 36 64  0
+ 1 0 0  3992 15368    1   0   0   0   0   0  0  0  255 729675  14 42 58  0
+
+This t
+[…中段省略 2009 字符…] 't have any slower machines around. I might
+try on my 133MHz Pentium at home tonight.
+
+	Joerg
+-- 
+Joerg B. Micheel			Email: <joerg@krdl.org.sg>
+SingAREN Technology Center		Phone: +65 7705577
+Kent Ridge Digital Labs			Fax:   +65 7795966
+11 Science Park Road			Pager: +65 96016020
+Singapore Science Park II		Plan:  Troubleshooting ATM
+117685 Singapore			       Networks and Applications
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605356 ###
+===== 库内序 146913 | PK 2605356 | 等级 L4 =====
+DATE: 1998-05-04T07:40:54+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: Context switch time
+摘要: Greg Lehey：贴出自己基准测试程序源码并指出该文件虽名为 getpid.c 但实际调用的是 getuid
+
+On Mon,  4 May 1998 at 15:20:56 +0800, Joerg Micheel wrote:
+> Greg,
+>
+> maybe, we should exchange our test programs :-).
+
+#include <stdio.h>
+#include <sys/fcntl.h>
+main (int argc, char *argv [])
+{
+  int i;
+  int count = 1;
+
+  if (argc > 1)
+    count = atoi (argv [1]);
+  for (i = 0; i < count; i++)
+    getuid ();
+}                                
+
+Hmm, interesting, it's called getpid.c, but it calls getuid :-)
+
+> On Mon, May 04, 1998 at 03:52:42PM +0930, Greg Lehey wrote:
+>> On Mon,  4 May 1998 at 14:04:42 +0800, Joerg Micheel wrote:
+>>> On Sun, May 03, 1998 at 10:23:03PM -0700, John-Mark Gurney wrote:
+>>>> Greg Lehey scribbled this message on May 4:
+>>>>> On Sat, 25 April 1998 at  3:43:13 -0700, John-Mark Gurney wrote:
+>>>>>
+>>>>> Strange.  This is what I get from a program that repeatedly calls
+>>>>> getpid() on my K6/233:
+>>>
+>>> These numbers might not that much depend on processor type/speed. What
+>>> about memory/cache speed ? Chipset ? Comments ?
+>>
+>> I think they have quite a strong relationship with processor power.
+>
+>> In particular, the P5/133 and your P5/200 seem to handle about 3500
+>> syscalls/MHz.  The P5/75 is presumably slower because of the missing
+>> cache, and I've noticed before that the K6 isn't as much faster at
+>> this sort of thing as I would expect--suggestions for the reasons are
+>> welcome.  One could be that it's an Inten TX board with 96 MB, of
+>> which only 64 MB are cached, but it seems to match up with John-Mark's
+>> observations.
+>
+> Here is the Dell OptiPlex GXa, a 300 MHz PentiumPro:
+>
+> (results omitted)
+
+> 1375755 usecs/1000000 calls, 726873 calls/sec
+>
+> You seem to be right in some way, but the result does not directly suggest that
+> there is a 1:1 relationship with processor speed, at least not on the high-end machines.
+> The performance gain on the 300 MHz machine is VERY slight (around 1%).
+>
+> Unfortunately, I currently don't have any slower machines around. I might
+> try on my 133MHz Pentium at home tonight.
+
+Hmmm.  This suggests to me that we're hitting some other limit.
+
+Greg
+--
+See complete headers for address and phone numbers
+finger grog@lemis.com for PGP public key
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605357 ###
+===== 库内序 146914 | PK 2605357 | 等级 L4 =====
+DATE: 1998-05-04T07:51:23+00:00
+FROM: Joerg Micheel <joerg@krdl.org.sg>
+SUBJ: Re: Context switch time
+摘要: Joerg Micheel：由测试程序实际调用 getuid 判断那就是瓶颈所在并补出原始版与改写版两段程序
+
+On Mon, May 04, 1998 at 05:10:54PM +0930, Greg Lehey wrote:
+> On Mon,  4 May 1998 at 15:20:56 +0800, Joerg Micheel wrote:
+> 
+> Hmm, interesting, it's called getpid.c, but it calls getuid :-)
+
+Ha! That's the bottleneck! :-)))).
+
+Ok. Just for completeness sake:
+
+The initial test program obviously was:
+
+# include <unistd.h>
+void
+main()
+{
+	for(;;)
+		(void)getpid();
+}
+
+which has been converted to:
+
+# include	<stdio.h>
+# include	<unistd.h>
+# include	<sys/time.h>
+
+void
+main()
+{
+	int		loop = 1000000;
+	long long       total;          /* in usecs */
+
+	while(loop--) {
+		gettimeofday(&start, NULL);
+		while(loop--)
+			(void)getpid();
+		gettimeofday(&stop, NULL);
+	}
+	total = ((long long)stop.tv_sec * 1000000 + (long long)stop.tv_usec)
+		- ((long long)start.tv_sec * 1000000 + (long long)start.tv_usec);
+	printf("%qd\n", total);
+}
+
+I just put another loop around it and computed the calls/sec in the
+latest version.
+
+> Hmmm.  This suggests to me that we're hitting some other limit.
+
+	Joerg
+
+-- 
+Joerg B. Micheel			Email: <joerg@krdl.org.sg>
+SingAREN Technology Center		Phone: +65 7705577
+Kent Ridge Digital Labs			Fax:   +65 7795966
+11 Science Park Road			Pager: +65 96016020
+Singapore Science Park II		Plan:  Troubleshooting ATM
+117685 Singapore			       Networks and Applications
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605358 ###
+===== 库内序 146915 | PK 2605358 | 等级 L3 =====
+DATE: 1998-05-04T09:07:29+00:00
+FROM: Karl Pielorz <kpielorz@tdx.co.uk>
+SUBJ: re: dump/restore - broken?
+摘要: Karl Pielorz：自述每月备份 3 个 9Gig 文件系统且本机 12+Gb 周备并追问 dump/restore 究竟坏在哪里
+
+Tom wrote:
+
+>   Beware, dump/restore is also broken for large filesystems.  I personally
+> think that dump/restore should be dropped from FreeBSD.
+> 
+> Tom
+
+Eeek! - Please don't tell me that! - I use dump and restore to backup 3 x
+9Gig filesystems on a monthly basis, and my own machines 12+Gb on a weekly
+backup...
+
+Whats wrong with dump/restore? - I remember reading an article a while ago
+(either somewhere on the freebsd.org site - or linked from their) discussing
+the various backup methods (Tar, Amanda, Dump etc.) - saying that Dump comes
+out on top for 'out the box' functionality, and ability to cope with
+'open/updated' files during the backup etc?
+
+We use it here because it's quick enough for what we want to do, you can
+install a FreeBSD system - and it's installed by default, and it 'appears'
+to work... (I say 'appears' as now your saying it's broke!?)
+
+Regards
+
+Karl Pielorz
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605359 ###
+===== 库内序 146916 | PK 2605359 | 等级 L3 =====
+DATE: 1998-05-04T09:18:35+00:00
+FROM: Andrew Stesin <stesin@gu.net>
+SUBJ: Re: C-BASIC anyone? (only oldies need apply :-)
+摘要: Andrew Stesin：称认识一位持有一批早期 BASIC 数学程序的人并打算说服其把程序迁到 FreeBSD
+
+
+Huh, I know a man who *has* some good old BASIC programs (mostly math)
+and will be happy to get them up on UNIX (FreeBSD in particular);
+I'll convince him to make
+an attempt.  I'm not sure which BASIC dialect he used, though;
+but I feel the smell of CP/M and 8080 there.
+
+On Sat, 2 May 1998, Julian Elischer wrote:
+
+> It's  CBASIC (yes CP/M's C-BASIC) to UNIC/C translater.
+> It ran in production for years. I've decided to get it 
+> up on FreeBSD.. (now that the original owners have sold the business
+> and written off the software. :-)
+> 
+> you can find the first port attempt at:
+> http://www.freebsd.org/~julian
+
+Best regards,
+Andrew Stesin
+
+nic-hdl: ST73-RIPE
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605360 ###
+===== 库内序 146917 | PK 2605360 | 等级 L4 =====
+DATE: 1998-05-04T09:17:29+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE 
+摘要: Jordan K. Hubbard：断言要把 dump/restore 从 FreeBSD 移走除非地狱冻结从而劝退该提议
+
+Don't worry, the day dump/restore is dropped from FreeBSD is the day
+that hell freezes over.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605361 ###
+===== 库内序 146918 | PK 2605361 | 等级 L4 =====
+DATE: 1998-05-04T09:22:23+00:00
+FROM: Andreas Klemm <aklemm@hightek.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Andreas Klemm：举 star 作替代并称其移植已在 ports 集合里且作者曾被让接管 GNU tar 却因不喜代码而拒
+
+On Sun, May 03, 1998 at 10:51:01PM -0700, Tom wrote:
+> > Do you have a suggestion as to what we'd replace dump/restore with? (And 
+> > PLEASE don't say "tar -g" ... *shiver*)
+
+star looks smart. See my port in the ports collection.
+
+The author has been offered the maintenance of GNU tar by someone
+some time ago he told me. But he didn't like the code. His own product
+is in his production environment for a long time and has been profiled
+excessively. It's even faster than dump, if you add dump's working
+time of looking, what to dump to the transfer time ...
+
+-- 
+B&K Gruppe - Wuppertal                                    <aklemm@hightek.com>
+phone +49 202 7399 - 170                                 <andreas@FreeBSD.ORG>
+fax   +49 202 7399 - 100                      http://www.FreeBSD.ORG/~andreas/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605362 ###
+===== 库内序 146919 | PK 2605362 | 等级 L3 =====
+DATE: 1998-05-04T09:37:39+00:00
+FROM: Tomas Klockar <dateck@ludd.luth.se>
+SUBJ: ATAPI CDROM question
+摘要: Tomas Klockar：求 ATAPI 传输数据文档并述 CDIOCCLOSE 只在 GOLDSTAR 4x 上生效而 Mitsumi 无效
+
+Do anyone happen to have some documentation on the ATAPI data that is sent
+to the cdrom drive.
+
+The cdrom close call does not work completely. (ie ioctl(fh,CDIOCCLOSE))
+But I know that my cd is capable of closing. I had a dos program that could do 
+this.
+I checked with some friends and it seemed that the only drive that cdcontrol 
+managed to close was a GOLDSTAR 4x.
+My Mitsumi "FX001DE/G06" did not. (4x)
+Aopen "CD-ROM 24X/AKOx15/B" did not. (24x)
+
+Please tell me if someone are looking into this problem.
+You can also tell me if you can close your drive.
+
+Best regards,
+
+/Tomas
+
+-- 
+Tomas Klockar can be found at the following adresses:
+
+K�rhusv�gen 4:23     |  Furuv�gen 102       |  dateck@ludd.luth.se
+977 54 Lule�         |  871 52 H�rn�sand    |  dateck@solace.mh.se
+Tel: +46-920-231335  |  Tel: +46-611-13393  |  d94-tkl@sm.luth.se
+Mob: +46-70-664 33 26
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605364 ###
+===== 库内序 146921 | PK 2605364 | 等级 L3 =====
+DATE: 1998-05-04T10:07:47+00:00
+FROM: Marc van Kempen <marc@bowtie.nl>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Marc van Kempen：自述负责为 NeoGeo 提供 Linux 与 FreeBSD 版本咨询并想据此回应 Amancio 的看法
+
+> If you ever wonder why linux is getting ahead , cold or no response
+> to key strategic technologies such as what "blender" represents is
+> one of the reasons that linux is getting ahead of FreeBSD . We
+> have a FreeBSD friendly vendor let us no lose this relationship.
+> 
+> 	Amancio
+> 
+
+Hi,
+
+I'm responsible for advising NeoGeo about the Linux and FreeBSD
+versions. I would like to take this opportunity to react to 
+Amancio's remarks.
+
+To date I haven't received one single bug report and only very 
+little feedback from the FreeBSD users.
+
+Despite the fact that I prefer FreeBSD over Linux any day, you 
+are not making yourselves credible as a commercial market, or 
+even a fun market, enthusiasm is a powerful motivator!
+
+Regards,
+Marc van Kempen.
+
+----------------------------------------------------
+Marc van Kempen                 BowTie Technology     
+Email: marc@bowtie.nl            WWW & Databases
+tel. +31 40 2 43 20 65         
+fax. +31 40 2 44 21 86         http://www.bowtie.nl
+----------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605366 ###
+===== 库内序 146923 | PK 2605366 | 等级 L3 =====
+DATE: 1998-05-04T10:26:32+00:00
+FROM: Christoph Kukulies <kuku@gilberto.physik.RWTH-Aachen.DE>
+SUBJ: Re: closed reports reading
+摘要: Christoph Kukulies：称在 GNATS 上勾选 Closed reports too 仍查不到两份已关闭报告并追问历史查法
+
+On Sun, Apr 26, 1998 at 01:04:52PM +0200, Christoph Kukulies wrote:
+> 
+> I had two gnats reports filed in in the past which seem to be gone
+> and it escaped me under which comments they have been closed.
+> 
+> Looking into the GNATS database on www.freebsd.org doesn't show them
+> to me even when I check "Closed reports too".
+> 
+> How can I trace back the history of these reports?
+
+Just to answer to myself: I was using the KDE http browser
+which obviously doesn't behave right when visiting FreeBSD's
+GNATS DB search page. Using 'normal' netscape again showed the
+reports (as still open btw) but maybe they will fall victim
+to Poul-Hennings chainsaw soon :-)
+
+
+> 
+> -- 
+> Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+-- 
+Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605367 ###
+===== 库内序 146924 | PK 2605367 | 等级 L3 =====
+DATE: 1998-05-04T10:35:16+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Jordan K. Hubbard：表示此前并不知有人经 2.2.x-stuff 链接错误引用 blender 的下载路径
+
+> > Their web page BTW, has the URL wrong.  It points to the non-existant dir:
+> > /pub/FreeBSD/2.2.x-stuff
+> > 
+> 
+> I don't believe you guys, when I tested it, it existed it must have
+> been removed, but why doesn't anyone tell us! Don't you want other
+> FreeBSD'ers to download it?
+
+Sorry, I didn't even know that somebody was referencing it incorrectly
+through the 2.2.x-stuff link.  The correct and canonical way to
+reference commercial stuff (if you check my past postings on the
+subject) has always been to point at it through the
+2.2.x-RELEASE/commerce path, exactly as I deliberately and
+specifically announced it in my own posting, since that could be a
+symlink or a real directory depending on how it and the other "extra
+bits" (like xperimnt) are arranged on the FTP site.  Please change the
+link and, as a general rule, don't ever point to anything that's not
+specifically mentioned in the top level index.html file under
+pub/FreeBSD since you're likely doing the wrong thing in pointing at
+some purely administrative directory when you should be following a
+symlink.
+
+BTW, while I have your ear, I think it's time to relink blender with a
+later JPEG library.  It doesn't change that often these days, but it
+seems to have taken a recent bump to 8.0. :(
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605369 ###
+===== 库内序 146926 | PK 2605369 | 等级 L4 =====
+DATE: 1998-05-04T11:20:34+00:00
+FROM: Josh Gilliam <josh@quick.net>
+SUBJ: Re: C-BASIC anyone? (only oldies need apply :-)
+摘要: Josh Gilliam：指出 sunsite.unc.edu 上有 QuickBASIC 转 C 的 qb2c 工具但称其用处不大
+
+> I have resurected an old project of mine that I did in 1988.
+> (they payed me)
+> 
+> It's  CBASIC (yes CP/M's C-BASIC) to UNIC/C translater.
+> It ran in production for years. I've decided to get it 
+> up on FreeBSD.. (now that the original owners have sold the business
+> and written off the software. :-)
+
+There is a QuickBASIC to C translator at
+ftp://sunsite.unc.edu/pub/Linux/devel/lang/basic/qb2c.tgz
+
+It isn't very useful but has Berkeley-style licensing.
+
+
+-- 
+Josh Gilliam                    <josh@quick.net>
+5333 E Los Arboles Ave            1 714 633 6499
+Orange CA 92869-4216 USA
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605371 ###
+===== 库内序 146928 | PK 2605371 | 等级 L4 =====
+DATE: 1998-05-04T11:41:50+00:00
+FROM: "Stefan Bethke" <stefan@promo.de>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Stefan Bethke：指出 FreeBSD 的 ISA-PnP 代码目前仍依赖 BIOS 来初始化设备并引 Luigi 前说
+
+--On Son, 3. Mai 1998 13:17 Uhr -0400 "Chuck Robey" <chuckr@glue.umd.edu>
+wrote: 
+>> o Does the sound-PnP stuff support such things?
+> 
+> I'm not a device driver author, but I do know that FreeBSD makes _no_
+> use whatsoever of the bios.  It relies in no way whatsoever on anything
+> in the bios that a device might have added.
+
+Currently (as Luigi alread said), the ISA-PnP code does rely on the BIOS to
+initialize the cards.
+
+Also, for PCI, FreeBSD relies on the BIOS32 interface for card
+configuration.
+
+Stefan
+
+--
+Stefan Bethke
+Promo Datentechnik      |  Tel. +49-40-851744-18
++ Systemberatung GmbH   |  Fax. +49-40-851744-44
+Eduardstrasse 46-48     |  e-mail: stefan@Promo.DE
+D-20257 Hamburg         |  http://www.Promo.DE/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605372 ###
+===== 库内序 146929 | PK 2605372 | 等级 L3 =====
+DATE: 1998-05-04T11:48:23+00:00
+FROM: "Stefan Bethke" <stefan@promo.de>
+SUBJ: ISA-PnP w\o BIOS support?
+摘要: Stefan Bethke：因 Asus 486SP3G 的 BIOS 无 PnP 支持而求不依赖 BIOS 配置 ISA-PnP 设备的方法
+
+Hi,
+
+I've just bought an ISA-PnP soundcard, but my old Asus 486SP3G BIOS' doesn't
+have any PnP support. I've searched the archives, but only found one thread
+that wasn't really enlightning to me. (And upgrading the BIOS is no option:
+I had to replace the FlashROM with EPROMS.)
+
+Can someone give me a quick direction what would be necessary to not only
+query the devices in the PnP code, but also to configure them?
+
+Generally, I think this is a good idea: more and more cards are available as
+PnP only, and I'd definitly want to be able to plug that NE2000-PnP-clone in
+old 386/25 for that little router or something...
+
+Thanks,
+Stefan
+
+--
+Stefan Bethke
+Promo Datentechnik      |  Tel. +49-40-851744-18
++ Systemberatung GmbH   |  Fax. +49-40-851744-44
+Eduardstrasse 46-48     |  e-mail: stefan@Promo.DE
+D-20257 Hamburg         |  http://www.Promo.DE/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605373 ###
+===== 库内序 146930 | PK 2605373 | 等级 L3 =====
+DATE: 1998-05-04T12:11:09+00:00
+FROM: Frank Ederveen <frank@our.domaintje.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Frank Ederveen：建议改用 egcs 编译 blender 并针对 pentium 生成代码称见过约三成提速
+
+On Mon, May 04, 1998 at 03:35:16AM -0700, Jordan K. Hubbard wrote:
+> BTW, while I have your ear, I think it's time to relink blender with a
+> later JPEG library.  It doesn't change that often these days, but it
+> seems to have taken a recent bump to 8.0. :(
+
+And how about compiling Blender with egcs and making some pentium code? I've 
+seen speed-ups of about 30% over 'normal' code... 
+
+Regards,
+
+FrankE
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605374 ###
+===== 库内序 146931 | PK 2605374 | 等级 L4 =====
+DATE: 1998-05-04T12:23:44+00:00
+FROM: luoqi@watermarkgroup.com (Luoqi Chen)
+SUBJ: bin/6509: patch allows dd to skip/seek beyond 2G limit
+摘要: Luoqi Chen：提交 bin/6509 让 dd 改用 64 位偏移以便 skip 与 seek 越过 2G 触及硬盘下半部
+
+I just submitted a PR (bin/6509) modifies dd to use 64bit offset. With most
+of disks sold today larger than 2G, I hope some of you will find the 64bit
+dd handy if you want to reach the bottom half of your hard disk.
+-lq
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605377 ###
+===== 库内序 146934 | PK 2605377 | 等级 L3 =====
+DATE: 1998-05-04T13:24:34+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: dag-erli：述 2.2.6 上经 NFS 播大文件时服务器卡死 ping 报 no buffer space 重配接口即愈并求 mbuf 配置经验
+
+Tom <tom@sdf.com> writes:
+>   Not enough mbufs.  Increase MAXUSERS or NMBCLUSTERS
+
+Does anybody have a thumb rule for the amount of mbuf clusters needed?
+I occasionally have problems on my 2.2.6 boxes (one of them plays MP3
+files over NFS from the other; if I play large files, the NFS server
+gets stuck and ping on the server box reports "no buffer space".
+ifconfig'ing the interface down and up again fixes the problem.
+/var/log/messages on the server shows tons of "nfsd: send error 55"
+OSLT.)
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605378 ###
+===== 库内序 146935 | PK 2605378 | 等级 L4 =====
+DATE: 1998-05-04T13:26:58+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: low level tcp filter
+摘要: dag-erli：指关键词过滤只能改 IRC 服务器或写代理因为任何应用层以下的层都做不了这件事
+
+System Admin <sysadmin@interfusion.aus.net> writes:
+> i ask mis there a way to enable filters at some leel where words can be
+> removed or masked before they as they go in or out of the process
+> or atleast masked somewhat...
+
+If you *really* don't want to / have the possibility to patch the IRC
+server to do that, you'll have to write a proxy. There's no way to do
+this at any level below the application layer (to the best of my
+knowledge).
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

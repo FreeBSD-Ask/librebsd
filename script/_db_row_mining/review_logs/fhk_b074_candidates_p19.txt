@@ -1,0 +1,33 @@
+2605355|L3|Joerg Micheel：在 context switch 计时讨论中提议双方交换各自测试程序以便复现并比对数据差异
+2605356|L4|Greg Lehey：贴出自己基准测试程序源码并指出该文件虽名为 getpid.c 但实际调用的是 getuid
+2605357|L4|Joerg Micheel：由测试程序实际调用 getuid 判断那就是瓶颈所在并补出原始版与改写版两段程序
+2605358|L3|Karl Pielorz：自述每月备份 3 个 9Gig 文件系统且本机 12+Gb 周备并追问 dump/restore 究竟坏在哪里
+2605359|L3|Andrew Stesin：称认识一位持有一批早期 BASIC 数学程序的人并打算说服其把程序迁到 FreeBSD
+2605360|L4|Jordan K. Hubbard：断言要把 dump/restore 从 FreeBSD 移走除非地狱冻结从而劝退该提议
+2605361|L4|Andreas Klemm：举 star 作替代并称其移植已在 ports 集合里且作者曾被让接管 GNU tar 却因不喜代码而拒
+2605362|L3|Tomas Klockar：求 ATAPI 传输数据文档并述 CDIOCCLOSE 只在 GOLDSTAR 4x 上生效而 Mitsumi 无效
+2605364|L3|Marc van Kempen：自述负责为 NeoGeo 提供 Linux 与 FreeBSD 版本咨询并想据此回应 Amancio 的看法
+2605366|L3|Christoph Kukulies：称在 GNATS 上勾选 Closed reports too 仍查不到两份已关闭报告并追问历史查法
+2605367|L3|Jordan K. Hubbard：表示此前并不知有人经 2.2.x-stuff 链接错误引用 blender 的下载路径
+2605369|L4|Josh Gilliam：指出 sunsite.unc.edu 上有 QuickBASIC 转 C 的 qb2c 工具但称其用处不大
+2605371|L4|Stefan Bethke：指出 FreeBSD 的 ISA-PnP 代码目前仍依赖 BIOS 来初始化设备并引 Luigi 前说
+2605372|L3|Stefan Bethke：因 Asus 486SP3G 的 BIOS 无 PnP 支持而求不依赖 BIOS 配置 ISA-PnP 设备的方法
+2605373|L3|Frank Ederveen：建议改用 egcs 编译 blender 并针对 pentium 生成代码称见过约三成提速
+2605374|L4|Luoqi Chen：提交 bin/6509 让 dd 改用 64 位偏移以便 skip 与 seek 越过 2G 触及硬盘下半部
+2605377|L3|dag-erli：述 2.2.6 上经 NFS 播大文件时服务器卡死 ping 报 no buffer space 重配接口即愈并求 mbuf 配置经验
+2605378|L4|dag-erli：指关键词过滤只能改 IRC 服务器或写代理因为任何应用层以下的层都做不了这件事
+2605379|L3|Josef Grosch：报告 3.0-Current 下三次 make world 均在 libexec/named-xfer 处失败并附完整错误
+2605380|L4|dag-erli：指 win95 的 direct modem connection 不支持 ppp 而是采用微软的私有协议
+2605382|L3|Robert Withrow：称自己曾想为 blender 做 Port/Package 但被 NeoGeo 婉拒并评其非常好用
+2605386|L4|Amancio Hasty：同意继续做 blender 的 ports package 并求一名 X11 程序员修复几处小问题
+2605390|L3|Amancio Hasty：称 blender 在其 PPro 200MHz 上运行流畅并期待在 PII 400MHz 上更快
+2605391|L3|Andreas Braukmann：在 -current 上试跑 blender 后屏幕迅速变蓝并指出它默认以全屏模式启动
+2605393|L4|Luigi Rizzo：放出 dummynet 与 ipfw 集成的注释与补丁快照目标 2.2.6 并称尚有致 panic 的已知缺陷
+2605394|L3|Jamie Bowden：称 blender 在其 MIPS R4600 的 indy 上运行正常并认为对方 P-166 性能应相当
+2605395|L3|Chris Coleman：询问 SONY SDT-9000 DDS-3 DAT 磁带机在 FreeBSD 2.2.6 上是否可用
+2605396|L4|Tom：建议服务器把 MAXUSERS 设为 64 以获得较多 mbuf 并可用 netstat -m 观察当前用量
+2605397|L4|Tom：补充 pax 与商用 BRU 亦可作备份替代并赞赏 pax 的运行时路径转换能力
+2605400|L3|Donald J. Maddox：称 NeoGeo 网页表单失效故直接把 blender 反馈邮件发给 blender@neogeo.nl
+2605401|L3|Dan Janowski：表示手上有 HP DD3 运行良好可作 DAT 磁带机兼容性参考
+2605402|L3|Chris Shenton：报告 2.2.6 RELEASE 经 CVSup 到 STABLE 后 make buildworld 在 cc 处失败
+2605403|L4|Brian Cully：称在 1600x1200 16bpp 下 blender 1.30 与 1.31_dynamic 均能正常运行

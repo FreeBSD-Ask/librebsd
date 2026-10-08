@@ -1,0 +1,1004 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605723 ###
+===== 库内序 147280 | PK 2605723 | 等级 L3 =====
+DATE: 1998-05-11T00:58:08+00:00
+FROM: "John W. DeBoskey" <jwd@unx.sas.com>
+SUBJ: Re: Unexpected behaviour from pdksh. Comments?
+摘要: John W. DeBoskey：发信到 Awfulhak.org 被拒，报 550 we do not relay 与 User unknown
+
+Hello,
+ 
+   I seem to be unable to send mail to brian@Awfulhak.org... I'm not
+sure why.
+
+   ----- The following addresses had permanent fatal errors -----
+<brian@Awfulhak.org>
+
+   ----- Transcript of session follows -----
+... while talking to awfulhak.org.:
+>>> RCPT To:<brian@Awfulhak.org>
+<<< 550 <brian@Awfulhak.org>... we do not relay jwd@unx.sas.com
+550 <brian@Awfulhak.org>... User unknown
+
+   Anyways...
+
+   While I understand the following coding style, it isn't a very
+pretty sight when trying to convert the following:
+
+cmdx | cmdy | while read line1; do
+   process line1
+   echo new_info | while read line2; do
+      process line2
+   done
+done
+
+   While I am not condoning the above (the processing of line1 could
+be a function of some sort), it is still much, much easier to read
+than the converted format noted below by Brian.
+
+   So, what would it take to add execution of the last pipe element
+in the current shell?
+
+Thanks,
+John
+
+brian@Awfulhak.org (Brian Somers) says:
+
+> The *only* shell that executes the last bit of a pipe inline is  the 
+> original ksh.  Pdksh, zsh, sh, ash, bash and probably just about all 
+> other shells create a subshell.
+>
+> This is a pain - 
+>
+> something | read this that theother
+>
+> must be changed to
+>
+> read this that theother <<eof
+> `something`
+> eof
+>
+> It's too late to change the other shells now though.
+
+
+>> Given the following sample Korn Shell script:
+>> 
+>> export FOO=foo
+>> echo $FOO
+>> 
+>> echo bar | while read var; do
+>>    export FOO=$var
+>>    echo $FOO
+>> done
+>> echo $FOO
+>> 
+>> The output is:
+>> foo
+>> bar
+>> foo
+>> 
+>> where I was expecting:
+>> foo
+>> bar
+>> bar
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605724 ###
+===== 库内序 147281 | PK 2605724 | 等级 L4 =====
+DATE: 1998-05-11T01:09:36+00:00
+FROM: "Jim Flowers" <jflowers@ezo.net>
+SUBJ: Re: Call for testers for ThunderLAN ethernet driver
+摘要: Jim Flowers：2.2.6 与 3.0 的 lnc 初始化 Am79C971 失败，CSR0 不置 IDON，改为直接 inw 绕过
+
+FWIW the built-in Am79C971 on my notebook computer with the lnc driver in
+2.2.6 and 3.0 will not initialize as the read_csr() call to CSR0 never
+returns with IDON set.  It can be forced by substituting a direct call to
+inw(iobase + 10) ala the lance.c driver from linux which then leads to a
+"Device timeout -- Resetting" error from lnc_watchdog when using ifconfig.
+Walking the registers shows initialization has taken place with realistic
+values (don't know how to check physical memory mapping values yet) but the
+ring length settings are confusing - CSR76 @ 0xfff8 and CSR78 @ 0x48
+although both are set in the init_block at 2^3.
+
+This computer works fine with drivers for MS-DOS, Win95 and Linux (lance.c)
+so it appears that the chip implementation is probably correct per the
+design sheets.
+
+
+Jim Flowers <jflowers@ezo.net>
+
+Your message---------------------------------------
+
+
+>>got 2.2.6, the SCSI is fine, the PCI lance lnc1 is probing ok.
+>>When I ifconfig it I get the 'Initialisation failed' message.
+
+
+>The if_lnc driver doesn't contain any specific probing code for
+>anything later than an Am79C970 - the PCnet-PCI I chip, and only seems
+>to initialize a PCnet-PCI II because of a typo in the headers.
+>
+>The PCI probe is done on the PCI ID which is the same across all the
+>AMD devices so this succeeds. My guess is that Compaq have set the
+>thing up with some bus configuration settings that are confusing the
+>initialization code. What is the model number on the AMD chip ?
+>
+>I am doing some changes to the lnc driver for stable at the moment as
+>I am using FreeBSD to debug a laptop with an integrated Am79C970A that
+>we are building at work.
+>
+>Robert Swindells
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605731 ###
+===== 库内序 147288 | PK 2605731 | 等级 L3 =====
+DATE: 1998-05-11T03:23:36+00:00
+FROM: Brian Somers <brian@Awfulhak.org>
+SUBJ: SCM_RIGHTS & session ids
+摘要: Brian Somers：实现 multilink ppp 遇难题，两进程各有独立 session id，仅 STDIN 挂着控制终端，求解法
+
+Hi,
+
+I've bumped into a bit of a problem implementing multilink ppp.  
+Maybe someone can suggest a way out of my dilemma....
+
+I have two processes, each of which has its own session id and is the 
+only process in the sessions only process group.  I've closed STDOUT 
+and STDERR, and STDIN_FILENO is the only thing keeping the 
+controlling terminal attached.  Both the process group and the session 
+id of each process is owned by its respective terminal.
+
+   .-------------.     .-------------.
+   | Session 123 |     | Session 456 |
+   `-------------'     `-------------'
+         |                   |
+   .------------.      .------------.
+   | /dev/cuaa0 |      | /dev/cuaa1 |
+   `------------'      `------------'
+         |                   |
+   .-------------.     .-------------.
+   | Process 123 |     | Process 456 |
+   `-------------'     `-------------'
+
+I wish to pass descriptor 0 from p123 to p456 using SCM_RIGHTS over a 
+unix domain socket, and then for p123 to exit.
+
+When I do this, as soon as p456 selects on the passed descriptor (say 
+descriptor 10), and *after* p123 has exited, I get an exception from 
+select() (exception fdset) and the descriptor is useless.
+
+If I have p123 close() STDIN_FILENO after the transfer, then 
+
+  execl("/bin/sleep", "sleep", 100", NULL)
+
+p456 can read descriptor 10 for 100 seconds - once (I assume) the 
+process group of /dev/cuaa0 is gone, all descriptors are invalidated.
+
+What I've tried (nothing's helped):
+
+o p123 does an fd = open(ttyname(STDIN_FILENO), O_RDWR), then
+  close(STDIN_FILENO) and pass fd to p456.
+
+o p123 calls tcsetpgrp(STDIN_FILENO, 456) - doesn't work 'cos p456 
+  isn't part of p123s session.
+
+This all works when there are no controlling terminals involved (ppp 
+over tcp).
+
+I guess that the problem is that a process group has only 
+one session and a session has only one controlling terminal...
+
+Is the only way to simply exec() a keepalive process() (yeuch) ?
+
+TIA.
+-- 
+Brian <brian@Awfulhak.org>, <brian@FreeBSD.org>, <brian@OpenBSD.org>
+      <http://www.Awfulhak.org>
+Don't _EVER_ lose your sense of humour....
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605732 ###
+===== 库内序 147289 | PK 2605732 | 等级 L4 =====
+DATE: 1998-05-11T06:51:07+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: Unexpected behaviour from pdksh. Comments?
+摘要: Ollivier Robert：认为 sendmail 8.9 的反中继规则更好，可按 MX 授权中继，机器是某域 MX 即会尝试投递到它
+
+According to Mike Smith:
+> The rejection comes from the *target* system.  This is a problem with 
+> the current anti-relaying sendmail rules - I am having inordinate 
+> difficulty delivering mail from my dialup here in japan due to this.
+
+The rules in sendmail 8.9 are much better in that respect. You can
+authorize relaying based on MX. As long as one machine is a MX for foo.com, 
+it will relay attempt to reach foo.com.
+
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #8: Tue Apr 21 02:45:53 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605733 ###
+===== 库内序 147290 | PK 2605733 | 等级 L4 =====
+DATE: 1998-05-11T07:14:46+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: New Cyclom-Y Driver for 2.2.[56] from Cyclades Corp.
+摘要: Ruslan Ermilov：Cyclades 新版 Cyclom-Y 驱动适用 2.2.5 以上，不支援 8Yo rev. 6.02、SM8/SM16 II
+
+Hi!
+
+Two days ago, on May 9, 1998, Cyclades Corp. released
+the modified version of Cyclom-Y driver:
+
+* FreeBSD Cyclom-Y Driver (for FreeBSD 2.2.5 or later)
+* 
+* 	The Cyclom-Y driver included in the FreeBSD distribution does
+* not support the latest Cyclom-Y gear (8Yo rev. 6.02 and SM8/SM16 II).
+* In order to support these devices in your system, you must install
+* this driver revision.
+
+The driver is available from
+ftp://ftp.cyclades.com/pub/cyclades/cyclom-y/freebsd/2.2.5/cyy225.tar.gz
+
+The 2.2.6's version is just symlinked to the above.
+
+Are there any work in progress to sync the driver in RELENG_2_2 with
+vendor version?
+
+Currently I have and use the Cyclom-8Ye (ISA) card.
+At the end of this week I'll have the Cyclom-8YeP (PCI) card revision 6.02.
+
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605735 ###
+===== 库内序 147292 | PK 2605735 | 等级 L3 =====
+DATE: 1998-05-11T08:47:31+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: New Cyclom-Y Driver for 2.2.[56] from Cyclades Corp. 
+摘要: David Greenman：确认已在计划内同步 RELENG_2_2 的驱动与 Cyclades 厂商版本
+
+>Are there any work in progress to sync the driver in RELENG_2_2 with
+>vendor version?
+
+   It's on my list of things to do.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605737 ###
+===== 库内序 147294 | PK 2605737 | 等级 L3 =====
+DATE: 1998-05-11T10:50:56+00:00
+FROM: Andreas Klemm <andreas@klemm.gtn.com>
+SUBJ: -current kernel on top of a -STABLE installation ?
+摘要: Andreas Klemm：问 -STABLE 系统上能否运行 -current 内核，自认 libkvm 相关会失效
+
+Hi !
+
+I'm getting into the demand to have a -STABLE system at home.
+
+Does somebody has made experiences if it would be possible, to run a
+-current kernel on top of stable installation ? I assume, that everything
+libkvm related breaks ...
+
+BTW, how is it possible, that the Linux folks seem to be able to switch
+kernels like hell ? Do they have the same problems or do they have
+something from which we could learn ?
+
+	Andreas ///
+
+-- 
+Andreas Klemm                                http://www.FreeBSD.ORG/~andreas
+     What gives you 90% more speed, for example, in kernel compilation ?
+          http://www.FreeBSD.ORG/~fsmp/SMP/akgraph-a/graph1.html
+             "NT = Not Today" (Maggie Biggs)      ``powered by FreeBSD SMP''
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605738 ###
+===== 库内序 147295 | PK 2605738 | 等级 L4 =====
+DATE: 1998-05-11T10:07:08+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: dummynet is working (more or less)
+摘要: Luigi Rizzo：dummynet 在 2.2.6 基本可用，需在内核加 IPFW 与 IPDIVERT，ip_output 参数处理未解
+
+The updated code for dummynet is available at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+i have it mostly working here on 2.2.6 -- differences with -current
+should be not significant.
+
+In order to make it work you need IPFW and IPDIVERT options in your
+kernel.
+
+There is one problem with the code, which I i am not sure how to fix
+now:
+
+in the call to ip_output, the caller passes a few parameters, including
+a pointer to a "struct route" . The pointer is saved together with the
+mbuf containing the packet, and used some time later when the packet is
+extracted from the queue/delay line and passed to the interface. By
+that time, the original data structure might have been deallocated :(
+resulting in a panic or other weird behaviours.
+
+I am not sure if the correct way to keep this info alive is to increase
+reference count to this structure (to be cleared at a later time, but
+the exact time might be tricky to find out, since i don't really want
+to modify all low level drivers) or what else.
+
+Suggestions welcome.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605741 ###
+===== 库内序 147298 | PK 2605741 | 等级 L4 =====
+DATE: 1998-05-11T12:52:41+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: How to get major device numbers ???
+摘要: sbabkin：网络接口驱动没有主设备号，因为它们既不是字符设备也不是块设备，所以查不到 ed0 的主设备号
+
+> ----------
+> From: 	TOKER ONUR[SMTP:onur@dpc107.dpc.kfupm.edu.sa]
+>  
+>      If I know the name of the device (e.g. ed0), how can I get its
+> major device number. Please don't write me to look at /dev directory
+> 
+You can't. The network card drivers have no major numbers because they
+are not character nor block drivers.
+
+-Serge
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605742 ###
+===== 库内序 147299 | PK 2605742 | 等级 L3 =====
+DATE: 1998-05-11T14:02:10+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: ISA-PnP w\o BIOS support? 
+摘要: sbabkin：认为多数人在用过 FreeBSD 的配置流程后，会觉得 Linux 的交互式流程更麻烦
+
+> ----------
+> From: 	Nate Williams[SMTP:nate@mt.sri.com]
+> 
+> > Ah, so "easier" means "easier for me".  I think you'll find that
+> most 
+> > people consider an interactive configuration process a lot "easier" 
+> > than having to install and build the kernel sources.
+> 
+> Actually no.  Most people are annoyed at the Linux 'interactive'
+> process
+> once they use the FreeBSD process.
+> 
+I would say that having configuration files is more convenient if
+you have experience with them, or to modify them by scripts.
+The menus are more convenient for peoples new to the BSD environment.
+
+Personally I hate the menu-based configuration in Linux. But I think 
+that the wrong thing about it is not the idea but the implementation.
+It is just a very bad designed user interface with lots of short
+menus nested to crazy levels.
+
+-Serge
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605746 ###
+===== 库内序 147303 | PK 2605746 | 等级 L4 =====
+DATE: 1998-05-11T22:22:31+00:00
+FROM: Julian Assange <proff@iq.org>
+SUBJ: more queue.h brokenness
+摘要: Julian Assange：sys/queue.h 中 tqe_prev 与 tqh_last 有缺陷，TAILQ_LAST/TAILQ_PREV 须重定义
+
+
+I notice someone (gibbs?) has updated sys/queue.h
+
+Unfortunately, because of the manner in which tqe_prev, and tqh_last
+are calculated, TAILQ_LAST and TAILQ_PREV need to be redefined like so:
+
+#define TAILQ_LAST(head) ((*((head)->tqh_last))? (*((head)->tqh_last)): TAILQ_FIRST(head))
+#define TAILQ_PREV(head, elm, field) (((elm) == TAILQ_FIRST(head))?NULL: *((elm)->field.tqe_prev))
+
+this is a hack-like solution; the alternative is to do away with the
+double indirection of tqh_last and tqe_prev, which would be annoying.
+
+the other queue.h types (where defined) also have this problem.
+
+TAILQ_PREV is only used in vm/vm_object.c, which, presumably, is why
+no-one has noticed the problem before (and why I've cc'd dyson).
+
+Cheers,
+Julian.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605748 ###
+===== 库内序 147305 | PK 2605748 | 等级 L3 =====
+DATE: 1998-05-12T00:00:13+00:00
+FROM: Gary Kline <kline@thought.org>
+SUBJ: locale.c and localedef.c?
+摘要: Gary Kline：问 BSD 体系是否已有人实现 locale.c 与 localedef.c，否则需自行编写，并要求回复时抄送他
+
+   Has anyone written locale.c and localedef.c for the BSD world?
+   or are these I need to hack out for myself?
+
+   thanks.
+
+   gary
+
+   PS: Please copy me since I'm not subscribed to this list.
+
+
+-- 
+   Gary D. Kline         kline@tao.thought.org          Public service uNix
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605749 ###
+===== 库内序 147306 | PK 2605749 | 等级 L4 =====
+DATE: 1998-05-12T00:21:46+00:00
+FROM: "Justin T. Gibbs" <gibbs@plutotech.com>
+SUBJ: Re: more queue.h brokenness 
+摘要: Justin T. Gibbs：sys/queue.h 是他为 -stable 引入的，但相关改动由 Kirk 完成
+
+>
+>I notice someone (gibbs?) has updated sys/queue.h
+
+For -stable?  Yes, it was me that brought currents sys/queue.h in.  The
+changes that were made to sys/queue.h in this area, however, were 
+performed by Kirk and are used by the soft update code.
+
+>Unfortunately, because of the manner in which tqe_prev, and tqh_last
+>are calculated, TAILQ_LAST and TAILQ_PREV need to be redefined like so:
+>
+>#define TAILQ_LAST(head) ((*((head)->tqh_last))? (*((head)->tqh_last)): TAILQ_
+>FIRST(head))
+>#define TAILQ_PREV(head, elm, field) (((elm) == TAILQ_FIRST(head))?NULL: *((el
+>m)->field.tqe_prev))
+
+This is unnecessary.  The original definitions are correct although 
+perhaps not obviously so.  Let's look at the original definitions:
+
+#define TAILQ_INIT(head) do {                                           \
+        (head)->tqh_first = NULL;                                       \
+        (head)->tqh_last = &(head)->tqh_first;                          \
+} while (0)
+
+#define TAILQ_PREV(elm, headname, field) \
+        (*(((struct headname *)((elm)->field.tqe_prev))->tqh_last))
+
+#define TAILQ_LAST(head, headname) \
+        (*(((struct headname *)((head)->tqh_last))->tqh_last))
+
+So, in the base case, after initialization, TAILQ_LAST returns exactly what
+we would expect:
+        (*(((struct headname *)((head)->tqh_last))->tqh_last))
+
+as our tqh_last points to ourselves, this resolves to:
+
+	(*(head)->tqh_last)
+
+resolves to:
+
+	head->tqh_first == NULL;
+
+As the TAILQ macros will return to the initialized state after any number
+of inserts or removals, the "empty" case works fine.
+
+If the list has any elements in it, TAILQ_LAST also works correctly as 
+we will look at either the tqe_next member of the element before the last,
+or in the case of a single element list, our own tqh_first member.
+
+The argument for TAILQ_PREV is much the same.  I'm sure that if you write
+some code that makes use of these macros you will be able to convince 
+yourself that they do work as desired.  One of the benefits of the new
+TAILQ macros is that TAILQ_PREV gives you what you really want, a pointer 
+to the real object, not your own previous double pointer.
+	
+>TAILQ_PREV is only used in vm/vm_object.c, which, presumably, is why
+>no-one has noticed the problem before (and why I've cc'd dyson).
+
+It's used in the soft update code as well as in latest version of the CAM
+aic7xxx sequencer compiler.  Supporting CAM was the main reason I brought
+the code in.
+
+>Cheers,
+>Julian.
+
+--
+Justin
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605758 ###
+===== 库内序 147315 | PK 2605758 | 等级 L4 =====
+DATE: 1998-05-12T01:58:50+00:00
+FROM: Kirk McKusick <mckusick@McKusick.COM>
+SUBJ: Re: more queue.h brokenness 
+摘要: Kirk McKusick：TAILQ 宏在插入删除查找上比 CIRCLEQ 快约 20%，CIRCLEQ 只在大量反向遍历时占优
+
+TAILQ macros run about 20% faster than CIRCLEQ macros on typical
+insertion, deletion, and lookup ratios due to fewer tests, and
+testing terminaion against NULL rather than a computed value.
+CIRCLEQ's win when your are predominently traversing them in the
+reverse direction. Frankly, if I had figured out how to traverse
+TAILQ's backwards when I wrote the queue macros, I would not have
+put CIRCLEQ's into the macro set at all.
+
+	Kirk McKusick
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605759 ###
+===== 库内序 147316 | PK 2605759 | 等级 L3 =====
+DATE: 1998-05-12T03:48:13+00:00
+FROM: "Chris Smith" <clsmith@bellsouth.net>
+SUBJ: rundos
+摘要: Chris Smith 想加入 RUNDOS 工作，等自己的机器装好 FreeBSD 之后再参与
+
+I am interested in joining the RUNDOS effort with FreeBSD! (Once I get my box running that is)  :-)
+
+Chris Smith
+
+
+### PK 2605761 ###
+===== 库内序 147318 | PK 2605761 | 等级 L4 =====
+DATE: 1998-05-12T04:02:07+00:00
+FROM: "Justin T. Gibbs" <gibbs@plutotech.com>
+SUBJ: Re: more queue.h brokenness 
+摘要: Justin T. Gibbs：建议直接用 TAILQ，它能用也更快，客户端代码不必知道实现细节
+
+>Given how the TAILQ_PREV() and TAILQ_LAST() macros work (when I realized
+>how they work, I had to stop, get up, and go get another cup of coffee
+>to calm my nerves), I just have to ask:
+>
+>	"Why no just use CIRCLEQ?"
+
+I guess I would ask, "Why not use TAILQ?"  It works, it's more efficient,
+and client code never needs to know how they are implemented so who cares 
+if the way they work is "tricky".
+
+--
+Justin
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605763 ###
+===== 库内序 147320 | PK 2605763 | 等级 L3 =====
+DATE: 1998-05-12T07:12:12+00:00
+FROM: tcobb <tcobb@staff.circle.net>
+SUBJ: panic: biodone buffer not busy (2.2.6 with DPT) 
+摘要: tcobb：2.2.6 配 DPT RAID 控卡约每三天 panic 报 biodone buffer not busy，据其查无补丁可修
+
+I am now getting regular (approx. every 3 days) panics on my busy NFS
+server with the above error.  According to what I can piece together,
+there is no 2.2.6 patch which will fix this problem?
+
+As to details, this occurs on a SCSI-only machine with a DPT RAID
+controller.  It doesn't require particularly busy SCSI access to trigger
+it, though I cannot do so at will.  Unfortunately, because this is a
+production server I cannot wait for a crashdump before rebooting.
+
+I upgraded from 2.2.2 to get better integrated DPT support, and to avoid
+an mbuf leak that appeared in my hacked 2.2.2 version which killed me
+with a panic about once every 2 weeks.
+
+Any idea if I should expect this panic to appear in -current?  I don't
+much like the idea of running -current on this machine b/c this NFS
+server is absolutely critical to operations.  I *will* run -current if
+it looks like that will fix my problem (and that there is a relatively
+stable snapshot available).
+
+Any suggestions are much appreciated!  Thanks in advance.
+
+- Troy Cobb
+
+Here's the relevant boot details:
+
+May 12 00:45:54 benzaiten /kernel: Copyright (c) 1992-1998 FreeBSD Inc.
+May 12 00:45:54 benzaiten /kernel: Copyright (c) 1982, 1986, 1989, 1991,
+1993
+May 12 00:45:54 benzaiten /kernel: 	The Regents of the University of
+California.  All rights reserved.
+May 12 00:45:54 benzaiten /kernel: 
+May 12 00:45:54 benzaiten /kernel: FreeBSD 2.2.6-RELEASE #0: Sun Apr  5
+05:23:44 EDT 1998
+May 12 00:45:54 benzaiten /kernel:
+root@phoenix.circle.net:/usr/src/sys/compile/BENZAITEN-2
+May 12 00:45:54 benzaiten /kernel: CPU: Pentium (232.67-MHz 586-class
+CPU)
+May 12 00:45:54 benzaiten /kernel:   Origin = "GenuineIntel"  Id = 0x543
+Stepping=3
+May 12 00:45:54 benzaiten /kernel:
+Features=0x8001bf<FPU,VME,DE,PSE,TSC,MSR,MCE,CX8,MMX>
+May 12 00:45:54 benzaiten /kernel: real memory  = 134217728 (131072K
+bytes)
+May 12 00:45:54 benzaiten /kernel: avail memory = 129118208 (126092K
+bytes)
+May 12 00:45:54 benzaiten /kernel: DPT:  RAID Manager driver, Version
+1.0.1
+May 12 00:45:54 benzaiten /kernel: Probing for devices on PCI bus 0:
+May 12 00:45:54
+[…中段省略 2141 字符…]  /kernel: fdc0: FIFO enabled, 8 bytes threshold
+May 12 00:45:54 benzaiten /kernel: fd0: 1.44MB 3.5in
+May 12 00:45:54 benzaiten /kernel: npx0 flags 0x1 on motherboard
+May 12 00:45:54 benzaiten /kernel: npx0: INT 16 interface
+May 12 00:45:54 benzaiten /kernel: Intel Pentium F00F detected,
+installing workaround
+May 12 00:45:54 benzaiten /kernel: WARNING: / was not properly
+dismounted.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605764 ###
+===== 库内序 147321 | PK 2605764 | 等级 L4 =====
+DATE: 1998-05-12T08:35:12+00:00
+FROM: Jason Nordwick <nordwick@scam.xcf.berkeley.edu>
+SUBJ: cp
+摘要: Jason Nordwick：补 cp.c 与 utils.c 修 bin/5733，非终端目录只读时递归复制失败，utils.c 误报 chown 错误
+
+I was looking into bin/5733 concerning cp and since this
+is my first attempt at fixing anything in the system, I though
+that I would see if it is an okay fix.
+
+The problem was that you could not recursively copy a
+directory structure where a non terminal directory was read-only.
+
+Appended is the diff to cp.c
+Also appended is a diff to utils.c that fixes a small non-problem;
+it used to report chown error, but was really a chmod error.
+
+Finally a questions:  shouldn't the return values in mastercmp()
+be changed if it is to fit the comments above it?  Here is that
+code segment:
+
+/*
+ * mastercmp --
+ *      The comparison function for the copy order.  The order is to copy
+ *      non-directory files before directory files.  The reason for this
+ *      is because files tend to be in the same cylinder group as their
+ *      parent directory, whereas directories tend not to be.  Copying the
+ *      files first reduces seeking.
+ */
+int
+mastercmp(a, b)
+        const FTSENT **a, **b;
+{
+        int a_info, b_info;
+
+        a_info = (*a)->fts_info;
+        if (a_info == FTS_ERR || a_info == FTS_NS || a_info == FTS_DNR)
+                return (0);
+        b_info = (*b)->fts_info;
+        if (b_info == FTS_ERR || b_info == FTS_NS || b_info == FTS_DNR)
+                return (0);
+        if (a_info == FTS_D)
+                return (-1);
+        if (b_info == FTS_D)
+                return (1);
+        return (0);
+}
+
+
+
+And here are the two diffs I said I would have:
+
+--- cp.c.orig   Wed May  6 04:13:48 1998
++++ cp.c        Tue May 12 01:23:46 1998
+@@ -249,7 +249,7 @@
+        struct stat to_stat;
+        FTS *ftsp;
+        FTSENT *curr;
+-       int base = 0, dne, nlen, rval;
++       int base = 0, dne, nlen, rval, postdir = 0;
+        char *p, *target_mid;
+ 
+        if ((ftsp = fts_open(argv, fts_options, mastercmp)) == NULL)
+@@ -266,8 +266,9 @@
+                        warnx("%s: directory causes a cycle",
+curr->fts_path);
+                        rval = 1;
+                        continue;
+-               case FTS_DP:                    /* Ignore, continue. */
+-                      
+[…中段省略 1350 字符…] 1:24:52 1998
++++ utils.c     Tue May 12 01:25:19 1998
+@@ -290,7 +290,7 @@
+                fs->st_mode &= ~(S_ISUID | S_ISGID);
+        }
+        if (fd ? fchmod(fd, fs->st_mode) : chmod(to.p_path, fs->st_mode)) {
+-               warn("chown: %s", to.p_path);
++               warn("chmod: %s", to.p_path);
+                rval = 1;
+        }
+ 
+-- 
+4.4 > 95
+http://www.xcf.berkeley.edu
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605766 ###
+===== 库内序 147323 | PK 2605766 | 等级 L4 =====
+DATE: 1998-05-12T11:46:42+00:00
+FROM: Robert Swindells <swindellsr@genrad.co.uk>
+SUBJ: Re: Help OSI
+摘要: Robert Swindells：网络栈可用 ISODE，X.400 代码可用 PP，两者移植到 FreeBSD 都不难
+
+
+> I have to write an X.400 client, which works on the standard OSI
+> stack. Can any one point me to resources or reference source code
+> for transport layer TP0, and /or, session and presentation layer.
+
+Check out ISODE for the network stack and PP for the X.400 code.
+
+Both will port to FreeBSD fairly easily.
+
+Robert Swindells
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605767 ###
+===== 库内序 147324 | PK 2605767 | 等级 L4 =====
+DATE: 1998-05-09T07:46:24+00:00
+FROM: Bernd Rosauer <br@schiele-ct.de>
+SUBJ: Re: Sony Dat Drives 
+摘要: Bernd Rosauer：SONY SDT-9000 DAT 磁带机在他的 FreeBSD-current 上正常，对内核只是普通 SCSI 磁带机
+
+Chris Coleman <chris@bb.cc.wa.us>:
+
+> Does anyone know if the SDT-9000 DDS-3 DAT tape drives from SONY work on
+> FreeBSD 2.2.6?
+
+The SDT-9000 works fine on my FreeBSD-current box.  For the FreeBSD
+kernel, it's just another SCSI tape drive.
+
+-Bernd
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605768 ###
+===== 库内序 147325 | PK 2605768 | 等级 L4 =====
+DATE: 1998-05-12T12:56:44+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: New boot.flp with CAM support
+摘要: Andrzej Bialecki：发布内建 SCSI CAM 的安装软盘，可装 AHA7895 控卡机器，需两片软盘并按 README 特殊引导流程
+
+Hello!
+
+I prepared new set of installation floppies with built-in SCSI CAM code.
+This allows you (among others) to install FreeBSD on the machines
+equipped with new AHA7895 SCSI controller. You can get them from:
+
+	http://www.freebsd.org/~abial/cam-boot/
+
+Please read carefully the instructions in README - you'll need both
+floppies, and you'll need to follow special bootstrapping procedure
+described therein. 
+
+I used 3.0-current sources from 13.04.1998, patched with CAM patches from
+the same day.
+
+Andrzej Bialecki
+
+--------------------+---------------------------------------------------------
+abial@nask.pl       | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic | "Be open-minded, but don't let your brains to fall out."
+Network in Poland   | All of the above (and more) is just my personal opinion.
+--------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605769 ###
+===== 库内序 147326 | PK 2605769 | 等级 L4 =====
+DATE: 1998-05-12T14:48:22+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: Discussion: the way the files gets installed
+摘要: Ruslan Ermilov：installworld 后到 usr/src/bin/cat 下 make 仍要重建，根因是 PROG 依赖 libc.a
+
+Hi!
+
+While ``making the world my own'' I noticed the strange thing.
+
+Two days ago I've ran ``make buildworld''.
+Today's morning I've ran ``make installworld''.
+
+Then I do:
+# cd /usr/src/bin/cat; make -n all
+cc -O    -static -o cat cat.o  
+
+Why the make wants to build the ``cat'' again, I thought?
+
+Here's what were digged:
+
+1. The ${PROG} target depends on ${DESTDIR}/usr/lib/libc.a
+   (line 64 of bsd.prog.mk, RELENG_2_2)
+   In this case, the ``cat'' binary depends on /usr/lib/libc.a.
+
+2. /usr/lib/libc.a is older than the /usr/obj/usr/src/bin/cat/cat.
+
+-r--r--r--  1 bin   bin  539170 May 12 11:33 /usr/lib/libc.a
+-rw-r--r--  1 root  bin  539170 May 10 19:52 /usr/obj/usr/src/lib/libc/libc.a
+-rwxr-xr-x  1 root  bin   63788 May 10 20:31 /usr/obj/usr/src/bin/cat/cat
+
+Note, that original libc.a in /usr/obj was built earlier that the ``cat''.
+
+That's why the make wants to build the ``cat'' binary again.
+
+The reason why /usr/lib/libc.a gets older than the libc.a in /usr/obj
+is in the way the libs are installed.
+They are installed with ``install -c'' command.
+
+I propose to install progs and libs using ``install -p'' instead of
+``install -c''. This will preserve the original modification times
+of the files being installed and will no confuse the make.
+
+There are many ways to implement this.
+
+The one I thought of was to define and use something like ``PRESERVE= -p''
+in bsd.*.mk.
+
+Regards,
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605770 ###
+===== 库内序 147327 | PK 2605770 | 等级 L3 =====
+DATE: 1998-05-12T15:46:50+00:00
+FROM: vak@cronyx.ru
+SUBJ: request for major device number
+摘要: vak@cronyx.ru 为 Cronyx-Tau 串口适配器驱动请求字符设备主号，并愿向 FreeBSD-current 提交源码
+
+Hello,
+
+Please, I need the character device major number for
+the Cronyx-Tau serial adapter driver.
+
+I am ready to submit the driver sources to FreeBSD-current,
+as long as I will have the registered major device number.
+
+Thanks in advance,
+Serge Vakulenko
+--- 
+Serge Vakulenko                    <vak@cronyx.ru>
+Cronyx Engineering Ltd., Moscow    Digital communication hardware development,
+phone/fax: +7 (095) 196-40-53      Internet services, FreeBSD support
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605771 ###
+===== 库内序 147328 | PK 2605771 | 等级 L4 =====
+DATE: 1998-05-12T17:07:01+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: request for major device number 
+摘要: Jordan K. Hubbard：主设备号已定为 99 tau 给 Cronyx/Tau 串口适配器，因对方未提其他偏好才取名 tau
+
+> Hello,
+> 
+> Please, I need the character device major number for
+> the Cronyx-Tau serial adapter driver.
+
+Done:
+
+99      tau             Cronyx/Tau serial adaptor
+
+I named it "tau" since you neglected to specify any other preference.
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

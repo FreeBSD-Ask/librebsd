@@ -1,0 +1,928 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605252 ###
+===== 库内序 146809 | PK 2605252 | 等级 L4 =====
+DATE: 1998-04-30T04:41:49+00:00
+FROM: "Justin C. Walker" <justin@lilith.apple.com>
+SUBJ: Re: SIGDANGER
+摘要: Justin C. Walker 称 A/UX 存活至 1994 年 3.1.1 版，末版为 Quadra 950 的 Workgroup Server 95
+
+/*
+ * Really ? 1991 ? A/UX was still alive then ? That was many years after
+ * UniSoft did the original port. I always thought that A/UX died a rapid
+ * death due to lack of interest on Apple's part.
+ */
+	Hardly.  A/UX lived through 1994 and release 3.1.1.  The last
+real release was the "Workgroup Server 95" on Quadra 950's, with
+special hardware additions.  I actually still use it daily, for mail
+and the like.  There was interest inside and out of Apple, but it
+never really got to critical mass.
+
+Regards,
+
+Justin
+
+Justin C. Walker, Curmudgeon-At-Large   *
+Institute for General Semantics         | They sentenced me to 20 years
+Apple CoreOS Networking                 |       of boredom
+Apple Computer, Inc.                    | For trying to change the system
+2 Infinite Loop                         |       from within
+Cupertino, CA 95014                     |               LC
+*---------------------------------------*------------------------------------*
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605253 ###
+===== 库内序 146810 | PK 2605253 | 等级 L3 =====
+DATE: 1998-04-30T04:59:58+00:00
+FROM: Jim Carroll <jim@carroll.com>
+SUBJ: BOOT_FORCE_COMCONSOLE trouble
+摘要: Jim Carroll 求助：用 BOOT_FORCE_COMCONSOLE 编译的引导器部署到无显示器无人值守站点，串口通常不接，写串口的应用会卡死等待
+
+
+ We have compiled a  bootloader  BOOT_FORCE_COMCONSOLE  to  work  at  remote
+ locations  where we do not keep moitors and keyboards. Most of the time, we
+ do not have a serial console connected to this  machine.  Any  applications
+ that  attempt  to  write  to  the serial console get caught in a wait state
+ until we either slay them, or connect our serial console.
+ 
+ I  know  we  have missed something basic. Can someone point me in the right
+ direction of where to look ?
+ 
+ Thanks
+
+---
+Jim C., President       | C A R R O L L - N E T, Inc.
+201-488-1332            | New Jersey's Premier Internet Service Provider
+www.carroll.com         | 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605254 ###
+===== 库内序 146811 | PK 2605254 | 等级 L4 =====
+DATE: 1998-04-30T05:47:43+00:00
+FROM: Omar Thameen <omar@clifford.inch.com>
+SUBJ: login.conf and "daemon" class
+摘要: Omar Thameen 指出 ssh 复制大文件触发 daemon 类 filesize 限制，因 sshd 由 rc.d 脚本启动而继承该类
+
+There's a comment before the default "daemon" class in login.conf
+which indicates that the settings are used by /etc/rc.  We recently
+came up against the filesize limitation in an unexpected way.  We
+were trying to copy large files from one machine to another using
+ssh.  Apparently, since sshd is started by a script in 
+/usr/local/etc/rc.d/, which is invoked by /etc/rc, the class "daemon"
+limitations were implemented.  Thus, we were only able to copy
+64M of the files over.
+
+This has also affected a script I was running out of cron - a glimpse
+indexing that was dying because of a malloc failure.  I traced this
+to the same login.conf situation because when I killed and restarted
+cron as root (rather than having it restarted from /etc/rc), the
+script ran fine.
+
+Now /etc/rc.local is also called from /etc/rc, so I assume the same
+class "daemon" restrictions apply - is this correct?  If so, this
+is a critical piece of information for everyone running servers
+because, for example, we start a heavily hit mysqld out of rc.local,
+and despite any customized settings we have for the user running it,
+it would be bound by the "daemon" class until we killed it and
+restarted it as another user.
+
+Finally, while we're on the subject of login.conf, is there anywhere with
+a layman's explanation of all the parameters?  If not, could someone put
+one together?  I've read the man pages, but can't glean from them what
+real world situation many of the parameters would apply to.  Some like
+"filesize" are self-explanatory, but if you're not a programmer, you
+don't know how to relate the errors you get to "datasize" and "stacksize".
+E.g., to figure out which setting was giving me the malloc failure,
+I would have to do trial and error.
+
+Thanks for any comments.
+Omar
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605255 ###
+===== 库内序 146812 | PK 2605255 | 等级 L4 =====
+DATE: 1998-04-30T05:37:08+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: BOOT_FORCE_COMCONSOLE trouble
+摘要: Tom：BOOT_FORCE_COMCONSOLE 在 boot.config 出现后已过时，改用自带引导加载器配 -h -D 即可
+
+
+On Thu, 30 Apr 1998, Jim Carroll wrote:
+
+>  We have compiled a  bootloader  BOOT_FORCE_COMCONSOLE  to  work  at  remote
+>  locations  where we do not keep moitors and keyboards. Most of the time, we
+
+  BOOT_FORCE_COMCONSOLE is obsolete now that we have boot.config
+
+  I use the stock boot loader with "-h -D" in boot.config and it works
+perfectly.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605257 ###
+===== 库内序 146814 | PK 2605257 | 等级 L3 =====
+DATE: 1998-04-30T07:21:31+00:00
+FROM: Eugene Vedistchev <scaner@belabm.by>
+SUBJ: Re: Compaq RAID Array Drivers? (IDA-2)
+摘要: Eugene Vedistchev 给出 Compaq IDA 驱动地址 http://www.dcs.qmw.ac.uk/~md/ida/ 供查阅
+
+Look at :
+
+http://www.dcs.qmw.ac.uk/~md/ida/
+
+Matthew N. Dodd wrote:
+> 
+> I seem to remember something about un-commitable drivers for the Compaq
+> RAID array controllers
+> 
+> Anyone remember where those were?
+> 
+> /*
+>    Matthew N. Dodd              | A memory retaining a love you had for life
+>    winter@jurai.net             | As cruel as it seems nothing ever seems to
+>    http://www.jurai.net/~winter | go right - FLA M 3.1:53
+> */
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605258 ###
+===== 库内序 146815 | PK 2605258 | 等级 L4 =====
+DATE: 1998-04-30T07:53:58+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: how to fseek past 2GB?
+摘要: Terry Lambert：用 fseek 分段偏移绕过 2GB 上限，以 1<<30 配 SEEK_SET 与 SEEK_CUR 逐段推进
+
+> I recently noticed that there is no way to fseek() past the 2GB mark on
+> files opened with fopen().  The offset in the FILE struct is an fpos_t;
+> there's just no way to get at it.
+
+Heh.
+
+	...
+	fseek( fp, 1<<30, SEEK_SET);	/* first 2G*/
+	fseek( fp, 1<<30, SEEK_CUR);	/* next 2G*/
+	fseek( fp, 1, SEEK_END);	/* last byte*/
+	...
+
+It'd be easy to wrap this.  8-).
+
+For a more FreeBSD-specific workaround:
+
+off_t
+lfseek( FILE *fp, off_t offset, int whence)
+{
+	off_t	new;
+
+	fp->_flags &= ~__SOFF;		/* invalidate offset cache*/
+	new = lseek( fileno(fp), offset, whence);
+	fseek( fp, 0, SEEK_CUR);
+
+	return( new);
+}
+
+
+On your patches: I think there are standard names for the functions
+you implemented, so they should probably be rolled in.  But the
+workarounds should work for 2.2.6 people.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605259 ###
+===== 库内序 146816 | PK 2605259 | 等级 L4 =====
+DATE: 1998-04-30T13:15:57+00:00
+FROM: "Viren R. Shah" <viren@rstcorp.com>
+SUBJ: Re:Compaq RAID Array Drivers? (IDA-2)
+摘要: Viren R. Shah：IDA 驱动见 http://www.doc.ic.ac.uk/~md/ ，有 2.2.5 与 2.2.6 版本
+
+>>>>> "Matthew" == Matthew N Dodd <winter@jurai.net> writes:
+
+ Matthew> I seem to remember something about un-commitable drivers for
+ Matthew> the Compaq RAID array controllers
+
+Go to http://www.doc.ic.ac.uk/~md/
+
+There are drivers for 2.2.5 and 2.2.6.
+The driver can also be made to work with -current.
+
+ Matthew> Anyone remember where those were?
+
+Viren
+-- 
+Viren R. Shah
+"I'm in love with you"
+"Now that's a ridiculous thing to go and say."
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605260 ###
+===== 库内序 146817 | PK 2605260 | 等级 L4 =====
+DATE: 1998-04-30T13:31:52+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE:  Ethernet address takeover implementation proposal
+摘要: sbabkin：描述 ServiceGuard 做法，把别名包地址移到另一接口后发出广播 ARP 响应，免去重新编程网卡硬件地址
+
+> ----------
+> From: 	Nguyen HM (Mike)[SMTP:NguyenHM@ucarb.com]
+> 
+> This approach, of using an IP address, would save you the hassle of
+> reprogramming the hardware address of an ethernet controller,  as well
+> as allow you to use whatever networking tech. you want.
+> 
+ServiceGuard does a quite simple thing for Ethernet: after moving
+the alias (package address) to another interface it sends out a
+broadcast ARP response packet that causes all the machines on the
+network
+to refresh the ARP cache with values from this packet. 
+
+Actually, a while ago I have implemented a simple link-level 
+protocol for FreeBSD that does allow to do the same easily. It
+was written for 2.0.5 but if someone does need it (and/or if
+the core team members will consider the idea appropriate) I can
+find it in my archives and port to -current. Personally, I think
+that adding the link-level protocol (if not this then some other) is 
+a Good Thing (tm).
+
+-Serge
+
+P.S. Does somebody need the loopback pseudo-Ethernet driver ? It's the
+thing that allows to make network connections from pcemu, and is
+also very useful for debugging the network code without having a
+real network (like I do at home). Probably the network support can also
+be added to doscmd. I have submitted it a while (~1.5 years) ago
+but it was not committed at this time although the patches for pcemu
+were.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605262 ###
+===== 库内序 146819 | PK 2605262 | 等级 L3 =====
+DATE: 1998-04-30T16:50:36+00:00
+FROM: Andrew Heybey <ath@niksun.com>
+SUBJ: compactPCI
+摘要: Andrew Heybey 询问 FreeBSD 能否跑在 compactPCI 系统上，并问有无足够像普通 PC 的 CPU 模块
+
+[Hope this is appropriate for -hackers.  I thought that compactPCI might be 
+too esoteric for -questions.]
+
+Has anyone run FreeBSD on a compactPCI system?  I would like to build a box 
+with many boards in it, and compactPCI systems seem to be available with many 
+slots.
+
+Are there CPU modules available that look enough like a regular PC that FreeBSD
+would run?  Is there some way that compactPCI doesn't look to the software like
+a "normal" PCI bus?  The compactPCI spec says it is electrically compatible
+which would imply (to me) that it looks the same to the software as well.
+
+thanks,
+andrew
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605263 ###
+===== 库内序 146820 | PK 2605263 | 等级 L4 =====
+DATE: 1998-04-30T17:22:22+00:00
+FROM: Marino Ladavac <lada@pc8811.gud.siemens.at>
+SUBJ: ptread library patch
+摘要: Marino Ladavac 提交 ptread 库小补丁，针对非活动可运行线程的优先级提升，并说明已提交相应 PR
+
+A smallish patch concerning the priority boost for inactive
+runnable threads is attached.
+
+a PR has been submitted.
+
+/Marino
+----------------------------------
+Marino Ladavac
+Date: 30-Apr-98
+Time: 19:19:57
+----------------------------------
+
+
+### PK 2605264 ###
+===== 库内序 146821 | PK 2605264 | 等级 L3 =====
+DATE: 1998-04-30T17:08:48+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: compactPCI 
+摘要: Mike Smith：转述他人经验称 FreeBSD 已在 CPCI 系统上跑起来，回应 compactPCI 适用性询问
+
+> [Hope this is appropriate for -hackers.  I thought that compactPCI might be 
+> too esoteric for -questions.]
+> 
+> Has anyone run FreeBSD on a compactPCI system?  I would like to build a box 
+> with many boards in it, and compactPCI systems seem to be available with many 
+> slots.
+
+I've heard from people running FreeBSD on CPCI systems.
+
+> Are there CPU modules available that look enough like a regular PC that FreeBSD
+> would run?  Is there some way that compactPCI doesn't look to the software like
+> a "normal" PCI bus?  The compactPCI spec says it is electrically compatible
+> which would imply (to me) that it looks the same to the software as well.
+
+The general consensus was that while some CPCI vendors put some weird 
+stuff on their boards, most things work OK.  You might want to be a 
+little careful about things like ethernet adapters &c.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605265 ###
+===== 库内序 146822 | PK 2605265 | 等级 L3 =====
+DATE: 1998-04-30T18:36:27+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: odd network problem
+摘要: Snob Art Genre 求助：两台 FreeBSD-stable 之间只有 ping 与 traceroute 正常，TCP 服务握手完成后即悬挂
+
+I'm having a network problem that only manifests between two
+FreeBSD-stable machines.  I posted about this on questions, but got no
+answer, and I think it might be over the collective questions head
+anyway. 
+
+I have two machines, float and ben.  Float is dialed up PPP to
+interport, ben is on a T1 from Sprint.  I can ping and traceroute either
+machine from the other one, but I cannot use TCP-based services.  The
+TCP handshake completes, and then the connection hangs.  For example, if
+I'm trying to telnet to float from ben, the handshake happens, and then
+ben sends the same 27-byte packet for several minutes until it gives up. 
+
+Meanwhile, telnet/ftp/ssh all work fine from a Solaris/SPARC box and
+from a Linux box, to or from float or ben.
+
+Packet traces available upon request, of course.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605266 ###
+===== 库内序 146823 | PK 2605266 | 等级 L4 =====
+DATE: 1998-04-30T18:54:59+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: Ethernet address takeover implementation proposal
+摘要: sbabkin：称自己的实现协议只做发送，接收交给 BPF，比另造一套协议更简洁也更优雅
+
+> ----------
+> From: 	Ken McKittrick[SMTP:klmac@baldcom.net]
+> 
+> The link-level protocol would go a ways towards the High Availability
+> project. I more intested in that area.
+> 
+This is a short description of my implementation (as I remember it,
+I don't have it handy now to look up):
+
+The protocol implementation is send-only. BPF can be used for
+receiving. I think it's a lot simpler and more elegant way than
+inventing the second BPF-like interface. BPF already has enough
+power to filter out any subset of packets received through an
+interface.
+
+The protocol itself does not make any assumptions about the packet
+contents. It is just transferring the contents to the link level.
+Of course, the implementation has some link-level-specific parts to 
+extract the link-level address from a packet and pass it to the lower 
+level. Now only the Ethernet support if present.
+
+So, essentially it's almost a NOP. :-)
+
+Any suggestions/objections are welcome ! :-) Especially from
+the core team members :-)
+
+Besides sending out a broadcast ARP response, other possible usages
+of this thing include, for example, a slow and inefficient user-level
+Ethernet bridge with arbitrary firewall.
+
+-Serge
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605268 ###
+===== 库内序 146825 | PK 2605268 | 等级 L4 =====
+DATE: 1998-04-30T19:47:51+00:00
+FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM>
+SUBJ: Re: compactPCI 
+摘要: Ron G. Minnich：建议改看 PICMG，称 compactPCI 价格偏高而 PICMG 是更便宜的被动背板标准，团队正据此做集群
+
+Take a look at PICMG. compactpci is basically very pricey. PICMG is a 
+passive backplane standard which looks to be much cheaper. We're looking 
+at doing a cluster based on PICMG. Of course, if you have the dough to 
+spare, check out altatech.
+
+ron
+
+Ron Minnich                |Java: an operating-system-independent, 
+rminnich@sarnoff.com       |architecture-independent programming language
+(609)-734-3120             |for Windows/95 and Windows/NT on the Pentium
+ftp://ftp.sarnoff.com/pub/mnfs/www/docs/cluster.html 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605270 ###
+===== 库内序 146827 | PK 2605270 | 等级 L3 =====
+DATE: 1998-04-30T19:51:21+00:00
+FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM>
+SUBJ: PICMG
+摘要: Ron G. Minnich 给出 PICMG http://www.bsicomputer.com/rackmount/bp/picmg.htm 供参考
+
+check out: http://www.bsicomputer.com/rackmount/bp/picmg.htm
+
+ron
+
+Ron Minnich                |Java: an operating-system-independent, 
+rminnich@sarnoff.com       |architecture-independent programming language
+(609)-734-3120             |for Windows/95 and Windows/NT on the Pentium
+ftp://ftp.sarnoff.com/pub/mnfs/www/docs/cluster.html 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605271 ###
+===== 库内序 146828 | PK 2605271 | 等级 L4 =====
+DATE: 1998-04-30T19:58:40+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: odd network problem 
+摘要: Snob Art Genre：关闭 RFC 1323 扩展后问题消失，根因在 TCP 扩展，此前 Jan L. Peterson 已建议关该开关
+
+On Thu, 30 Apr 1998, Jan L. Peterson wrote:
+
+> I've seen this when dialing up to a xylogics annex.  Turning off 
+> tcp_extensions in /etc/rc.conf solved it (actually, you only had to 
+> turn off one tcp_extension, but I can't remember which one :-).
+> 
+> Check out /etc/rc.conf and /etc/rc.network.  Good luck.
+
+Turning off RFC 1323 extensions did the trick.  Thank you, you have
+saved my sanity.
+
+Now to call up my ISP and yell at them.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605272 ###
+===== 库内序 146829 | PK 2605272 | 等级 L4 =====
+DATE: 1998-04-30T20:06:04+00:00
+FROM: Chrisy Luke <chrisy@flix.net>
+SUBJ: Beta 3 release of Multipath routing and friends.
+摘要: Chrisy Luke 发布 Multipath routing beta 3，含若干修复，metric 与持久路由缓存留待 b4，另增 ipfw 接口支持
+
+ftp://ftp.flirble.org/pub/unix/hacks/FreeBSD/mpath.b3.tgz
+
+README attached.
+
+A few fixes to the Multipath code. The metric stuff and the persistant
+route caching will come in b4.
+
+This code mostly adds support to the ipfw interface and code to support
+two things, which are based on the same thing:
+
+ * Directing INCOMING traffic that match rules to a LOCAL TCP port.
+   This is intended for transparent proxying without external calls
+   to a LKM, it also doesn't touch the packet, so getsockname() works
+   so there's also no need for a subsequent IOCTL to work out what the
+   original destination/port was.
+   It's freaky seeing random remote IP's listed as "Local addresses"
+   in netstat! BSD-router-speed transparent diversion... :-)
+
+ * Modifying the next-hop address of OUTBOUND traffic that matches the
+   rule. My intention for this is to direct web traffic from a core
+   router to a transparent proxy. David Sharnoff also wanted something
+   similar, and the functionality of this thus extends to doing a route
+   table lookup on the specified next-hop and using the route to it,
+   meaning the next-hop doesn't need to be on a directly reachable
+   interface. Remember though, this code only forwards to a directly
+   reachable machine! It doesn't deliver it to the specified next-hop!
+   TCP port numbers are ignored if this rule comes into affect.
+
+The rule-based forwarding mechanism is independant of the Multipath
+stuff, but does have multipath code in it if multipath is compiled in.
+
+Currently on rule-based forwarding there's a douvle-route-table penalty
+on the outbound traffic. I'll probably address this in b4 also.
+
+Chris.
+-- 
+== chris@easynet.net, chrisy@flix.net, chrisy@flirble.org.
+== Head of Systems for Easynet Group PLC.
+
+
+### PK 2605273 ###
+===== 库内序 146830 | PK 2605273 | 等级 L4 =====
+DATE: 1998-04-30T20:18:23+00:00
+FROM: Chrisy Luke <chrisy@flix.net>
+SUBJ: Re: Beta 3 release of Multipath routing and friends.
+摘要: Chrisy Luke 更正自己上一条 ipfw 示例的转述笔误，规则转发命令应写作 ipfw add 2000 fwd 而非 forward to
+
+Chrisy Luke wrote (on Apr 30):
+> ftp://ftp.flirble.org/pub/unix/hacks/FreeBSD/mpath.b3.tgz
+> README attached.
+  [...]
+> The rule-based forwarding package allows me to do this:
+> bash-2.01# ipfw add 2000 forward to 195.40.1.2,23 tcp from any to any 23
+
+s/forward to/fwd/
+
+Sorry. :-) Serves me right for using cut 'n paste...
+
+Cheers,
+Chris.
+-- 
+== chris@easynet.net, chrisy@flix.net, chrisy@flirble.org.
+== Head of Systems for Easynet Group PLC.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605274 ###
+===== 库内序 146831 | PK 2605274 | 等级 L4 =====
+DATE: 1998-04-30T20:22:14+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: odd network problem
+摘要: Snob Art Genre 确认 Tom 的判断成立，FreeBSD 默认启用 TCP 扩展而部分劣质路由器会破坏带扩展报文，与其 PPP 拨入吻合
+
+On Thu, 30 Apr 1998, Tom wrote:
+
+>   TCP extensions.  FreeBSD always uses them, and some broken routers screw
+> packets with TCP extensions up (primarily some old crappy term serve that
+> I can't remember right now).  Most likely your PPP dialup is into one of
+> those boxes.
+
+Sure is.  Many thanks to all those who answered.
+
+>   This is an old question.  I'm sure it is in the FAQ.
+
+Yes, I remember when this hit the lists.  It didn't affect me then, so
+naturally I didn't think of it when it happened to me now.  *slaps
+forehead*
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605275 ###
+===== 库内序 146832 | PK 2605275 | 等级 L3 =====
+DATE: 1998-04-30T20:35:50+00:00
+FROM: Jacques Vidrine <n@nectar.com>
+SUBJ: OK, I must be stupid (ports/6430)
+摘要: Jacques Vidrine 求助：修 ports/6430 需在 trafshow/patches 加补丁，命名 patch-ae 时 hunk 失败
+
+
+I just want to fix PR ports/6430.  It is an easy fix, requiring an 
+additional patchfile in trafshow/patches.
+
+But I'm stumped ... there must be something I'm missing.
+
+If I stick my patch file in trafshow/patches (as the last one, patch-ae),
+I get:
+
+----
+# make patch
+>> Checksum OK for trafshow-2.0.tgz.
+===>  Patching for trafshow-2.0
+===>  Applying FreeBSD patches for trafshow-2.0
+1 out of 1 hunks failed--saving rejects to lib/interfaces.c.rej
+*** Error code 1
+
+Stop.                      
+----
+
+If I apply the same patch manually, without having it in 
+trafshow/patches:
+
+----
+# make patch
+>> Checksum OK for trafshow-2.0.tgz.
+===>  Patching for trafshow-2.0
+===>  Applying FreeBSD patches for trafshow-2.0
+# patch -d $PWD/work/trafshow-2.0 -p0 -E < ~/trafshow.patch
+Hmm...  Looks like a unified diff to me...
+The text leading up to this was:
+--------------------------
+|--- lib/interfaces.c.ae        Wed Apr 29 13:56:21 1998
+|+++ lib/interfaces.c   Wed Apr 29 13:56:30 1998
+--------------------------
+Patching file lib/interfaces.c using Plan A...
+Hunk #1 succeeded at 23.
+done                          
+----
+
+I don't get it.  Can someone help?  I am obviously lost, and
+I think I am missing something magic in bsd.ports.mk.
+
+The trivial patch file:
+
+--- lib/interfaces.c.ae	Wed Apr 29 13:56:21 1998
++++ lib/interfaces.c	Wed Apr 29 13:56:30 1998
+@@ -23,7 +23,6 @@
+ #include <net/if.h>
+ #include <net/slip.h>
+ #include <net/if_var.h>
+-#include <net/if_slvar.h>
+ #ifdef __FreeBSD__
+ #include <net/if_ppp.h>
+ #else
+
+
+Jacques Vidrine <n@nectar.com>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605276 ###
+===== 库内序 146833 | PK 2605276 | 等级 L4 =====
+DATE: 1998-04-30T23:21:17+00:00
+FROM: Robert Withrow <witr@rwwa.com>
+SUBJ: Re: SIGDANGER 
+摘要: Robert Withrow 引 drosih 建议沿用 SIGDANGER 命名，自述同包在 FreeBSD 2.2.x 上构建能完成而唯独 AIX 例外
+
+
+drosih@rpi.edu said:
+:- If what we're implementing is basically the same as AIX's SIGDANGER,
+:- then I'd just as soon call it SIGDANGER.
+
+I must be really stupid.  I do builds of the same software package
+on SunOs, Solaris, FreeBSD(2.2.x), HPUX, and AIX.  These machines are
+simliarly configured with memory, etc, and all of the file space
+is NFS mounted.
+
+The builds on all of the machines *except* AIX *always* run to
+completion.  The AIX box will sometimes complete and sometimes
+not, and sometimes I have to re-start builds two or three times.
+(You can't imagine how annoying it is to get messages like:
+"my build failed!!! What did you do to the build?" when it is just
+stupid AIX shooting innocent processes!)
+
+If this is such a great idea, why is it such a pain in the ass?
+
+Also, why have I never encountered FreeBSD doing this random
+process killin thing, nomatter *how* much load I put on it?
+
+Just asking...
+
+---------------------------------------------------------------------
+Robert Withrow, R.W. Withrow Associates, Swampscott MA, witr@rwwa.COM
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605277 ###
+===== 库内序 146834 | PK 2605277 | 等级 L4 =====
+DATE: 1998-04-30T23:35:40+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: odd network problem
+摘要: Dan Janowski：反问是否开启 TCP 扩展，称部分终端服务器与劣质路由设备会被其卡住，自己也遇过一次
+
+
+Do you have TCP extensions on? Some terminal servers and
+other lame routing hardware get jammed. This one got me
+once. Only between FreeBSD boxes, right?
+
+Dan
+
+On Thu, 30 Apr 1998, Snob Art Genre wrote:
+
+> I'm having a network problem that only manifests between two
+> FreeBSD-stable machines.  I posted about this on questions, but got no
+> answer, and I think it might be over the collective questions head
+> anyway. 
+> 
+> I have two machines, float and ben.  Float is dialed up PPP to
+> interport, ben is on a T1 from Sprint.  I can ping and traceroute either
+> machine from the other one, but I cannot use TCP-based services.  The
+> TCP handshake completes, and then the connection hangs.  For example, if
+> I'm trying to telnet to float from ben, the handshake happens, and then
+> ben sends the same 27-byte packet for several minutes until it gives up. 
+> 
+> Meanwhile, telnet/ftp/ssh all work fine from a Solaris/SPARC box and
+> from a Linux box, to or from float or ben.
+> 
+> Packet traces available upon request, of course.
+> 
+> 
+>  Ben
+> 
+> "You have your mind on computers, it seems." 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605278 ###
+===== 库内序 146835 | PK 2605278 | 等级 L3 =====
+DATE: 1998-05-01T00:14:05+00:00
+FROM: Joe Touch <touch@ISI.EDU>
+SUBJ: ATAPI probe hanging
+摘要: Joe Touch 求助：Hitachi VisionBook Elite 接光驱底座无法开机，2.2.5 内核加 PAO，探测到 wcd0 报无盘便挂起
+
+Hi,
+
+I have a problem booting a laptop with a detachable CDROM base unit,
+when the unit is attached.
+
+The configuration is:
+	Hitachi VisionBook Elite
+	2.2.5 kernel, PAO patches (970616) installed
+
+The symptom is that, during boot:
+
+	finds fd0
+        finds wdc0 (wd0)
+        finds wdc1 (CDROM)
+        finds info about the CDROM at wcd0 - 1722 Kb/s...
+        finds info about the CDROM at wcd0 - no disc inside, unlocked
+
+	(hangs here)
+
+This problem prevents me from using a boot floppy (the PAO floppy,
+e.g.) to boot install from the CDROM.
+
+In attempting to trace the problem, I turned on debugging, and noticed
+that the kernel dealt fine with the first ATAPI device (#0), but it
+was hanging in the probe of the second device (#1), which does not
+exist on this machine. I found a temporary fix, which is:
+
+Change "/usr/src/sys/i386/isa/wd.c" :
+	/*
+         * Probe all free IDE units, searching for ATAPI drives.
+         */
+       for (unit=0; unit<2; ++unit) { 
+
+To:
+       for (unit=0; unit<1; ++unit) {
+
+(the full patch is below)
+
+I would like to know if there is a configuration change that would
+avoid the need for this patch. 
+
+(alternately, if anyone might be able to build a 2.2.5 or 2.2.6 
+PAO boot floppy with that patch, I would be very grateful)
+
+Thanks,
+
+Joe
+
+-------- (patch file follows) --------
+
+*** wd.c        Fri Feb 20 11:14:22 1998
+--- wd.c-old    Fri Feb 20 12:56:33 1998
+***************
+*** 736,743 ****
+        /*
+         * Probe all free IDE units, searching for ATAPI drives.
+         */
+!       /* for Joe      for (unit=0; unit<2; ++unit) { */
+!       for (unit=0; unit<1; ++unit) {
+  #if   NCRD > 0
+                for (lunit=0; lunit<NWD; ++lunit)
+                        if ((lunit_in_use & (1<<lunit)) && wddrives[lunit] &&
+--- 736,742 ----
+        /*
+         * Probe all free IDE units, searching for ATAPI drives.
+         */
+!       for (unit=0; unit<2; ++unit) { 
+  #if   NCRD > 0
+                for (lunit=0; lunit<NWD; ++lunit)
+                        if ((lunit_in_use & (1<<lunit)) && wddrives[lunit] &&
+ 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605279 ###
+===== 库内序 146836 | PK 2605279 | 等级 L3 =====
+DATE: 1998-05-01T01:50:19+00:00
+FROM: black@bleep.ishiboo.com
+SUBJ: recvmsg/sendmsg + pthreads?
+摘要: 提问 recvmsg 与 sendmsg 在 2.2.6-STABLE 下是否线程安全，称多线程同时对 socket 执行 recvmsg 时程序无法正常工作
+
+are the recvmsg and sendmsg calls threadsafe in 2.2.6-STABLE?  i am having
+problems getting things to work when doing recvmsg() on a socket if
+multiple threads are involved.
+
+
+thanks,
+ben
+black@ishiboo.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

@@ -1,0 +1,810 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605379 ###
+===== 库内序 146936 | PK 2605379 | 等级 L3 =====
+DATE: 1998-05-04T13:30:53+00:00
+FROM: Josef Grosch <jgrosch@superior.mooseriver.com>
+SUBJ: 3.0-Current build broken
+摘要: Josef Grosch：报告 3.0-Current 下三次 make world 均在 libexec/named-xfer 处失败并附完整错误
+
+
+3.0-Current build is broken. 3 times I have tried to do a make world with
+  cvsup in between each failure. The exact error message is as follows:
+
+        ===> libexec/named-xfer
+        make: don't know how to make named-xfer.c. Stop
+        *** Error code 2
+
+Any ideas would be helpful.
+
+
+Josef
+
+-- 
+Josef Grosch           | Another day closer to a |    FreeBSD 2.2.6
+jgrosch@MooseRiver.com |   Micro$oft free world  | UNIX for the masses
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605380 ###
+===== 库内序 146937 | PK 2605380 | 等级 L4 =====
+DATE: 1998-05-04T13:31:42+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: win95 ppp config...
+摘要: dag-erli：指 win95 的 direct modem connection 不支持 ppp 而是采用微软的私有协议
+
+Atipa <freebsd@atipa.com> writes:
+> Look for "direct modem connection". You need to install it separately. It
+> supports null-modem and laplink (parallel), so I don't think a dedicated
+> line would be a problem.
+
+AFAIK it doesn't speak ppp, it uses a Microsoft proprietary protocol.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605382 ###
+===== 库内序 146939 | PK 2605382 | 等级 L3 =====
+DATE: 1998-05-04T13:51:38+00:00
+FROM: Robert Withrow <witr@rwwa.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Robert Withrow：称自己曾想为 blender 做 Port/Package 但被 NeoGeo 婉拒并评其非常好用
+
+
+marc@bowtie.nl said:
+:- To date I haven't received one single bug report and only very  little
+:- feedback from the FreeBSD users. 
+
+But....  *I* sent some of both, didn't I Marc?   ;-)
+
+Anyway, blender is *very* cool.  I was going to make a Port/Package
+which would make this much easier for FreeBSD people to get and use
+(not that it is all that hard as it is now).  But they (politely)
+said no-thanks, 'cause they had someome else doing that.  But,
+to date, I havn't seen it announced.
+
+So, if the blender people wouldn't mind, maybe Amancio or me could
+try to put together a package/port for this and maybe that will
+help a little?
+
+---------------------------------------------------------------------
+Robert Withrow, R.W. Withrow Associates, Swampscott MA, witr@rwwa.COM
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605386 ###
+===== 库内序 146943 | PK 2605386 | 等级 L4 =====
+DATE: 1998-05-04T15:27:49+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: 3D "blender" and FreeBSD
+摘要: Amancio Hasty：同意继续做 blender 的 ports package 并求一名 X11 程序员修复几处小问题
+
+>From my perspective, please go ahead and do a ports package.
+
+Also, I need a X11 programmer to fix a few minor problems with
+Blender so please if you are qualified send mail to Marc or me.
+
+	Tnks!
+	Amancio
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605390 ###
+===== 库内序 146947 | PK 2605390 | 等级 L3 =====
+DATE: 1998-05-04T16:12:43+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Amancio Hasty：称 blender 在其 PPro 200MHz 上运行流畅并期待在 PII 400MHz 上更快
+
+>It's a pretty slick package, but DOG slow on my P-166.
+
+blender flies on my PPro 200Mhz should be a lot of fun with 
+the PII 400Mhz 8)
+
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605391 ###
+===== 库内序 146948 | PK 2605391 | 等级 L3 =====
+DATE: 1998-05-04T17:20:27+00:00
+FROM: Andreas Braukmann <braukmann@tse-online.de>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Andreas Braukmann：在 -current 上试跑 blender 后屏幕迅速变蓝并指出它默认以全屏模式启动
+
+Hi,
+
+On Sun, May 03, 1998 at 07:00:38PM -0400, Open Systems Networking wrote:
+> On Sun, 3 May 1998, Amancio Hasty wrote:
+> 
+> > Are people even trying out this wonderful package??
+> I downloaded it and tried it out on -current to see if it worked on
+> -current, but it just fires up, the screen turns blue real fast and then
+been there, too - made the same experience.
+Blender starts up in full-screen mode by default. I made some tries with
+an explicit and smaller geometry and it worked to a certain degree.
+But I got it to segfault by fumbling around with the user-interface.
+(I'm no 3D-guru though, ... )
+
+> core dumps :) and everything goes back to normal. But I didnt dump to much
+> time into getting it to run. But I think it's cause its for 2.2.5(6).
+hmmm. Since my only 2.2-stable machines are our various servers without
+X11 I was not able to verify this assumption.
+
+Regards,
+   Andreas
+
+-- 
+/// TSE TeleService GmbH  |  Gsf: Arne Reuter        |
+/// Hovestrasse 14        |       Andreas Braukmann  | We do it with
+/// D-48351 Everswinkel   |  HRB: 1430, AG WAF       |  FreeBSD/SMP     
+/// -------------------------------------------------------------------
+/// PGP-Key:          http://www.tse-online.de/~ab/public-key
+/// Key fingerprint:  12 13 EF BC 22 DD F4 B6  3C 25 C9 06 DC D3 45 9B
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605393 ###
+===== 库内序 146950 | PK 2605393 | 等级 L4 =====
+DATE: 1998-05-04T16:14:40+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: IP bandwidth manager code snapshot available
+摘要: Luigi Rizzo：放出 dummynet 与 ipfw 集成的注释与补丁快照目标 2.2.6 并称尚有致 panic 的已知缺陷
+
+[Bcc to -hackers in case someone is interested there, apologies for
+duplicates...]
+
+I have put together a few notes and patches (for 2.2.6, but should
+reasonably easy to port to -current as well) on my integration of
+the dummynet code with ipfw. You can find it at
+
+	http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+The code is very close to working (it has known bugs causing panics)
+but i want to have some feedback and advice on how to proceed before
+it's too late (read:  working well enough that i lose any motivation
+to make changes).
+
+Things i have done/plan to do that i want advice on:
+
+  * added a flow_id field to m_pkthdr, following Julian suggestion.
+    It reduces the usable size of the first mbuf (MHLEN) to 104,
+    so it might break something that makes assumptions on MHLEN
+    being 108 ?
+
+  * changed the way to avoid loops when a packet passes through the
+    ip_fw_chk rules multiple times. The flow_id is also a pointer to
+    the chain entry which matched last time, and checks continue from
+    the next rule.
+
+  * the location of the ip_fw_chk() call in ip_output() could be moved ?
+    Right now, if a pkt goes multiple times through ip_output, there
+    is some duplication of work and probably something nasty can be
+    done.
+
+Feedback welcome.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605394 ###
+===== 库内序 146951 | PK 2605394 | 等级 L3 =====
+DATE: 1998-05-04T18:07:13+00:00
+FROM: Jamie Bowden <jamie@itribe.net>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Jamie Bowden：称 blender 在其 MIPS R4600 的 indy 上运行正常并认为对方 P-166 性能应相当
+
+On Mon, 4 May 1998, Brian Cully wrote:
+
+> It's a pretty slick package, but DOG slow on my P-166.
+
+I run it on this old indy, and it runs fine.  Your P-166 should be about
+equivalent.
+
+%hinv
+Iris Audio Processor: version A2 revision 4.1.0
+1 133 MHZ IP22 Processor
+FPU: MIPS R4600 Floating Point Coprocessor Revision: 2.0
+CPU: MIPS R4600 Processor Chip Revision: 2.0
+On-board serial ports: 2
+On-board bi-directional parallel port
+Data cache size: 16 Kbytes
+Instruction cache size: 16 Kbytes
+Secondary unified instruction/data cache size: 512 Kbytes on Processor 0
+Main memory size: 64 Mbytes
+Vino video: unit 0, revision 0, IndyCam connected
+Integral ISDN: Basic Rate Interface unit 0, revision 1.0
+Integral Ethernet: ec0, version 1
+Integral SCSI controller 0: Version WD33C93B, revision D
+  Disk drive: unit 6 on SCSI controller 0
+    Disk drive / removable media: unit 2 on SCSI controller 0
+  Disk drive: unit 1 on SCSI controller 0
+Graphics board: Indy 24-bit
+
+Jamie Bowden
+
+Systems Administrator, iTRiBE.net
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605395 ###
+===== 库内序 146952 | PK 2605395 | 等级 L3 =====
+DATE: 1998-05-04T18:05:06+00:00
+FROM: Chris Coleman <chris@bb.cc.wa.us>
+SUBJ: Sony Dat Drives
+摘要: Chris Coleman：询问 SONY SDT-9000 DDS-3 DAT 磁带机在 FreeBSD 2.2.6 上是否可用
+
+Does anyone know if the SDT-9000 DDS-3 DAT tape drives from SONY work on
+FreeBSD 2.2.6?
+
+Christopher J. Coleman (whyareyou@lookingforme.com)
+Computer Support Analyst I  (509)-762-6341
+FreeBSD Book Project:  http://www.vmunix.com/fbsd-book/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605396 ###
+===== 库内序 146953 | PK 2605396 | 等级 L4 =====
+DATE: 1998-05-04T18:22:04+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：建议服务器把 MAXUSERS 设为 64 以获得较多 mbuf 并可用 netstat -m 观察当前用量
+
+
+On 4 May 1998, Dag-Erling Coidan [iso-8859-1] Sm�rgrav  wrote:
+
+> Tom <tom@sdf.com> writes:
+> >   Not enough mbufs.  Increase MAXUSERS or NMBCLUSTERS
+> 
+> Does anybody have a thumb rule for the amount of mbuf clusters needed?
+
+  What are you at now?  If you have MAXUSERS set to 64 (which you should
+probably do anyhow for servers), you will have a large number of mbufs.
+You can use "netstat -m" to look at current usage, and the high-water
+mark.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605397 ###
+===== 库内序 146954 | PK 2605397 | 等级 L4 =====
+DATE: 1998-05-04T18:37:07+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：补充 pax 与商用 BRU 亦可作备份替代并赞赏 pax 的运行时路径转换能力
+
+
+On Mon, 4 May 1998, Andreas Klemm wrote:
+
+> On Sun, May 03, 1998 at 10:51:01PM -0700, Tom wrote:
+> > > Do you have a suggestion as to what we'd replace dump/restore with? (And 
+> > > PLEASE don't say "tar -g" ... *shiver*)
+> 
+> star looks smart. See my port in the ports collection.
+
+  There is also pax.  I like pax'es on the fly path transformation stuff.
+
+  There is also the commercial BRU for FreeBSD.  It does compression by
+file, and has great verify features.
+
+> -- 
+> B&K Gruppe - Wuppertal                                    <aklemm@hightek.com>
+> phone +49 202 7399 - 170                                 <andreas@FreeBSD.ORG>
+> fax   +49 202 7399 - 100                      http://www.FreeBSD.ORG/~andreas/
+> 
+> 
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605400 ###
+===== 库内序 146957 | PK 2605400 | 等级 L3 =====
+DATE: 1998-05-04T16:05:54+00:00
+FROM: dmaddox@scsn.net (Donald J. Maddox)
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Donald J. Maddox：称 NeoGeo 网页表单失效故直接把 blender 反馈邮件发给 blender@neogeo.nl
+
+On Mon, May 04, 1998 at 09:51:38AM -0400, Robert Withrow wrote:
+> 
+> marc@bowtie.nl said:
+> :- To date I haven't received one single bug report and only very  little
+> :- feedback from the FreeBSD users. 
+> 
+> But....  *I* sent some of both, didn't I Marc?   ;-)
+> 
+
+I have also sent feedback to NeoGeo on the blender...  I couldn't get the form
+on their webpage to work, though, so I just mailed it to blender@neogeo.nl.
+
+I know _my_ email specifically mentioned that I was using the FreeBSD port...
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605401 ###
+===== 库内序 146958 | PK 2605401 | 等级 L3 =====
+DATE: 1998-05-04T20:15:18+00:00
+FROM: Dan Janowski <danj@3skel.com>
+SUBJ: Re: Sony Dat Drives
+摘要: Dan Janowski：表示手上有 HP DD3 运行良好可作 DAT 磁带机兼容性参考
+
+Chris Coleman wrote:
+
+> Does anyone know if the SDT-9000 DDS-3 DAT tape drives from SONY work on
+> FreeBSD 2.2.6?
+>
+> Christopher J. Coleman (whyareyou@lookingforme.com)
+> Computer Support Analyst I  (509)-762-6341
+> FreeBSD Book Project:  http://www.vmunix.com/fbsd-book/
+>
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+I have an HP DD3 running fine.
+
+Dan
+
+--
+danj@3skel.com
+Dan Janowski
+Triskelion Systems, Inc.
+Bronx, NY
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605402 ###
+===== 库内序 146959 | PK 2605402 | 等级 L3 =====
+DATE: 1998-05-04T20:59:59+00:00
+FROM: Chris Shenton <cshenton@it.hq.nasa.gov>
+SUBJ: 2.2.6 RELEASE->STABLE make buildworld fails on "cc1"
+摘要: Chris Shenton：报告 2.2.6 RELEASE 经 CVSup 到 STABLE 后 make buildworld 在 cc 处失败
+
+Installed 2.2.6 RELEASE from CD. CVSupped to get STABLE moments
+ago. Trying to "make buildworld" fails:
+
+
+===> cpp
+cc -O -DFREEBSD_AOUT -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/config -DFREEBSD_NATIVE -DDEFAULT_TARGET_VERSION=\"2.7.2.1\" -DDEFAULT_TARGET_MACHINE=\"i386-unknown-freebsd\" -I/usr/obj/usr/src/gnu/usr.bin/cc/cpp/../cc_tools   -I/usr/obj/usr/src/tmp/usr/include -c /usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/cccp.c
+cc -O -DFREEBSD_AOUT -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/config -DFREEBSD_NATIVE -DDEFAULT_TARGET_VERSION=\"2.7.2.1\" -DDEFAULT_TARGET_MACHINE=\"i386-unknown-freebsd\" -I/usr/obj/usr/src/gnu/usr.bin/cc/cpp/../cc_tools   -I/usr/obj/usr/src/tmp/usr/include -c cexp.c
+cc -O -DFREEBSD_AOUT -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/config -DFREEBSD_NATIVE -DDEFAULT_TARGET_VERSION=\"2.7.2.1\" -DDEFAULT_TARGET_MACHINE=\"i386-unknown-freebsd\" -I/usr/obj/usr/src/gnu/usr.bin/cc/cpp/../cc_tools   -I/usr/obj/usr/src/tmp/usr/include -c /usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/obstack.c
+cc -O -DFREEBSD_AOUT -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/config -DFREEBSD_NATIVE -DDEFAULT_TARGET_VERSION=\"2.7.2.1\" -DDEFAULT_TARGET_MACHINE=\"i386-unknown-freebsd\" -I/usr/obj/usr/src/gnu/usr.bin/cc/cpp/../cc_tools   -I/usr/obj/usr/src/tmp/usr/include -c /usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/version.c
+cc -O -DFREEBSD_AOUT -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc -I/usr/src/gnu/usr.bin/cc/cpp/../../../../contrib/gcc/config -DFREEBSD_NATIVE -DDEFAULT_TARGET_VERSION=\"2.7.2.1\" -DDEFAULT_TARGET_MACHINE=\"i386-unknown-freebsd\" -I/usr/obj/usr/src/gnu/usr.bin/cc/cpp/../cc_tools   -I/usr/obj/usr/src/tmp/usr/include  -o cpp cccp.o cexp.o obstack.o version.o  
+
+===> cc1
+cc -O -DFREEBSD_AOUT -I/usr/src/gnu/usr.bin/cc/cc1/../../../../contrib/gcc -I/usr/src/gnu/usr.bin/cc/cc1/../../../../contrib/gcc/config -DFREEBSD_NATIVE -DDEFAULT_TARGET_VERSION=\"2.7.2.1\" -DDEFAULT_TARGET_MACHINE=\"i386-unknown-freebsd\" -I/usr/obj/usr/src/gnu/usr.bin/cc/cc1/../cc_tools   -I/usr/obj/usr/src/tmp/usr/include -c ../cc_tools/c-parse.c
+c-parse.y: In function `yyparse':
+c-parse.y:1190: parse error before `;'
+*** Error code 1
+
+Stop.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605403 ###
+===== 库内序 146960 | PK 2605403 | 等级 L4 =====
+DATE: 1998-05-04T21:24:17+00:00
+FROM: Brian Cully <shmit@kublai.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Brian Cully：称在 1600x1200 16bpp 下 blender 1.30 与 1.31_dynamic 均能正常运行
+
+On Mon, May 04, 1998 at 03:06:03PM -0400, Open Systems Networking wrote:
+> Yes I just posted this morning about the same explanation. It does start
+> full screen and for some reason it oes NOT like 1600x1200x16bpp it just
+> freaks and core dumps. So I did the same as you changed it to start at
+
+I'm running it at 1600x1200 at 16bpp. Both 1.30 and 1.31_dynamic worked fine.
+
+--
+Brian Cully						<shmit@erols.com>
+``And when one of our comrades was taken prisoner, blindfolded, hung
+  upside-down, shot, and burned, we thought to ourselves, `These are the
+  best experiences of our lives''' -Pathology (Joe Frank, Somewhere Out There)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605405 ###
+===== 库内序 146962 | PK 2605405 | 等级 L3 =====
+DATE: 1998-05-04T21:55:29+00:00
+FROM: Brian Cully <shmit@kublai.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Brian Cully：称本机装的是第一块 Millenium，故疑与 Millenium II 有关但觉牵强
+
+On Mon, May 04, 1998 at 05:39:34PM -0400, Open Systems Networking wrote:
+> Interesting... Hmm perhaps it just doesnt like the Matrox Millinium II?
+> Thats what andreas and myself are using. And we both have the same
+> problem. Maybe it's the matrox it doesnt like then. That would sure be
+> interesting since I think the matrox is a pretty high end card. 
+
+I have the first Millenium in this box, so it may have something to do
+with the Millenium II, but that seems to be stretching.
+
+-bjc
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605406 ###
+===== 库内序 146963 | PK 2605406 | 等级 L3 =====
+DATE: 1998-05-04T22:08:26+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Open Systems Networking：称与 Brian Cully 同为 Millenium II 显卡是二者唯一共同点，但不确定这就是问题
+
+On Mon, 4 May 1998, Brian Cully wrote:
+
+> I have the first Millenium in this box, so it may have something to do
+> with the Millenium II, but that seems to be stretching.
+
+Well it is the only common factor here. Between us. We both have Mill. II
+cards. Im not positive if this is the problem but it is the only common
+link.
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605409 ###
+===== 库内序 146966 | PK 2605409 | 等级 L3 =====
+DATE: 1998-05-04T23:02:37+00:00
+FROM: Andreas Braukmann <braukmann@tse-online.de>
+SUBJ: Re: 3D "blender" package from NeoGeo now released.
+摘要: Andreas Braukmann：称对方所述无法移动与调整窗口的情形自己无法复现，数秒前刚多次调整过 blender 窗口
+
+Hello,
+
+On Mon, May 04, 1998 at 03:06:03PM -0400, Open Systems Networking wrote:
+> freaks and core dumps. So I did the same as you changed it to start at
+> 1024x768 and it runs ok. Except as i mentioned earlier it now becomes a
+> window but it thinks it's running full screen so you cant resize it, move
+> it, 
+I can't reproduce the latter. I resized the blender window a few times
+just a few seconds ago. Could this be a window-manager problem? (I'm
+using Afterstep 1.0)
+
+> click on it to put it behind another window, etc..
+no problem here.
+
+... but as soon as I try to put in fullscreen-mode (through a window-manager
+function for example) it crashes.
+
+-ab
+
+-- 
+/// TSE TeleService GmbH  |  Gsf: Arne Reuter        |
+/// Hovestrasse 14        |       Andreas Braukmann  | We do it with
+/// D-48351 Everswinkel   |  HRB: 1430, AG WAF       |  FreeBSD/SMP     
+/// -------------------------------------------------------------------
+/// PGP-Key:          http://www.tse-online.de/~ab/public-key
+/// Key fingerprint:  12 13 EF BC 22 DD F4 B6  3C 25 C9 06 DC D3 45 9B
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605410 ###
+===== 库内序 146967 | PK 2605410 | 等级 L3 =====
+DATE: 1998-05-04T20:42:04+00:00
+FROM: Stefan Esser <se@FreeBSD.ORG>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Stefan Esser：质疑 FreeBSD 依赖 BIOS32 接口配置 PCI 卡的说法，称自己本以为熟悉该代码内部
+
+On 1998-05-04 13:41 +0200, Stefan Bethke <stefan@promo.de> wrote:
+> Also, for PCI, FreeBSD relies on the BIOS32 interface for card
+> configuration.
+
+Really ?
+
+And I thought I did know the inner workings of the PCI code ... ;-)
+
+Regards, STefan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605411 ###
+===== 库内序 146968 | PK 2605411 | 等级 L4 =====
+DATE: 1998-05-05T16:28:00+00:00
+FROM: "Chris Day" <the_reman@hotmail.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Chris Day：称有些卡在 PnP 探测时拒绝被识别，只能在 PnP 配置完成后改走专有端口，其 OPTi931 即如此
+
+>> I've just bought an ISA-PnP soundcard, but my old Asus 486SP3G BIOS' 
+doesn't
+>
+>boot with -c and use the manual pnp configuration instruction
+
+There are however some cards which will refuse to admit to being there 
+when you do a PnP probe and can only be configured by proprietary ports 
+after the PnP config is done.  This is the case with my OPTi931 sound 
+card.  I don't have a PnP bios (old 486 motherboard) and no matter what 
+I tried I couldn't get it to init.  This is usually the case when the 
+card comes with a special init'er that is usually run under DOS or is a 
+s[ecial Win95 driver, and of course trying to reverse engineer it with 
+d86 just ain't working.
+
+Anyway, to cut a long story short I went out and bought an AWE64 PnP and 
+it worked first time, (well the win 3.1 driver crashes! haw haw).
+So my advice is, make sure that when you buy a card make sure you can 
+test it first and return it if it won't work.  Just coz it says "Plug 
+and Play" doesn't mean it's PnP.
+
+regards, chris
+
+p.s. cheers to luigi, who managed to get at an OPTi931 card to work.
+--
+Christopher Day, The reman, Loosecannon, Mortis, The Flatliner
+
+E-Mail   the_reman@hotmail.com
+Homepage http://www.geocities.com/TimesSquare/Lair/1218
+
+when the rain/when the children reign/keep your conscience in the dark
+melt the statues in the park - Fall On Me
+
+
+______________________________________________________
+Get Your Private, Free Email at http://www.hotmail.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605414 ###
+===== 库内序 146971 | PK 2605414 | 等级 L4 =====
+DATE: 1998-05-05T02:23:43+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Luigi Rizzo：认为出现此种情形即不符合 ISA-PnP 规范，但称 OPTi931 的 PnP 配置在其经验中正常
+
+> >> I've just bought an ISA-PnP soundcard, but my old Asus 486SP3G BIOS' 
+> doesn't
+> >
+> >boot with -c and use the manual pnp configuration instruction
+> 
+> There are however some cards which will refuse to admit to being there 
+> when you do a PnP probe and can only be configured by proprietary ports 
+
+if this happens they are not ISA-PnP compliant. In the case of the
+OPTi931, the PnP configuration works fine in my experience (unless the
+card you have has the 'disable PnP' pin hardwired on, but that's
+another story
+
+The fact that the card wants its own initialization, like any other
+card in the world, does not mean it is not PnP, it only means it
+is not 100% SB or WSS clone and so does not work well if initialized
+as a SB or WSS.
+
+> So my advice is, make sure that when you buy a card make sure you can 
+> test it first and return it if it won't work.  Just coz it says "Plug 
+> and Play" doesn't mean it's PnP.
+
+correct.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605416 ###
+===== 库内序 146973 | PK 2605416 | 等级 L4 =====
+DATE: 1998-05-05T05:05:51+00:00
+FROM: Bill Paul <wpaul@skynet.ctr.columbia.edu>
+SUBJ: Call for testers for ThunderLAN ethernet driver
+摘要: Bill Paul：自研 Texas Instruments ThunderLAN 网卡驱动约两周已基本完成并征集测试者
+
+Recently I had a couple of Compaq machines with integrated ethernet
+controllers foisted on me, and was lucky enough to be able to install 
+FreeBSD on one of them. Unfortunately, FreeBSD didn't support the Texas 
+Instruments ThunderLAN (tm) ethernet chip in this machine, so I took it 
+upon myself to write my own driver for it.
+
+After a whole two weeks worth of work, the driver is more or less
+complete (inasmuch as it works for me), and now I'd like to find some
+other people to test it before I slap it into the tree. I'm especially
+interested in testers for FreeBSD 3.0-current: I initially developed
+this driver for FreeBSD 2.2.6 and have only been able to test it there.
+I've made the necessary changes to make it compile on -current, but
+I can't trash this machine to install a -current snapshot to test it
+as it's now more or less in production.
+
+The driver supports about a half-dozen Compaq Netelligent adapters and
+Netflex integrated ethernet controllers. It also supports both the
+ThunderLAN embedded physical interface (PHY) and external PHYs such as the
+National Semiconductor DP83840A. It should also work with any other PHY
+that is MII-compliant. With the DP83840A (or equivalent) PHY, both
+10Mbps and 100Mbps in half or full duplex are supported. The ThunderLAN's
+built-in PHY only supports 10Mbps. Modes can be set either manually or
+through autonegotiation.
+
+Although I have not tested it, it should also support some Texas Instruments
+ethernet adapters based on the ThunderLAN chip as well.
+
+The driver is available at the following places:
+
+ftp.ctr.columbia.edu:/pub/misc/freebsd/thunderlan.tar.gz
+ftp.freebsd.org:/pub/FreeBSD/incoming/thunderlan.tar.gz
+
+The distribution includes if_tl.c, if_tlreg.h and a README which explains
+how to build a kernel with ThunderLAN support.
+
+So far I've only run limited tests, but they've been encouraging. I have
+a Proliant servera with a 300Mhz Pentium Pro with 512K cache and 64MB RAM
+running FreeBSD 2.2.6 attached to a Cisco Catalyst 2900 10/100 switch.
+I can achieve FTP transfers between this machine and a LoseNT Sewer 4.0 
+system (wit
+[…中段省略 1585 字符…] ork:         wpaul@ctr.columbia.edu | Center for Telecommunications Research
+Home:  wpaul@skynet.ctr.columbia.edu | Columbia University, New York City
+=============================================================================
+ "It is not I who am crazy; it is I who am mad!" - Ren Hoek, "Space Madness"
+=============================================================================
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605417 ###
+===== 库内序 146974 | PK 2605417 | 等级 L4 =====
+DATE: 1998-05-05T06:17:58+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Call for testers for ThunderLAN ethernet driver 
+摘要: David Greenman：称寄存器内存映射访问在 P6 级处理器上比编程式 I/O 快，Linux 与 NetBSD 驱动则用 PIO
+
+>I set up the driver to use PCI memory mapping to access the
+>ThunderLAN's registers as opposed to using programmed I/O, which is
+>what both the Linux and NetBSD drivers do. There probably isn't any
+>particular advantage to doing it this way, but it seemed niftier somehow.
+
+   Memory mapped access to the registers will be faster than PIO on P6 class
+processors. I don't recall all of the issues, but I believe that doing PIO
+causes the instruction pipeline to get flushed. Anyway, I use mapped register
+access in the fxp driver and I've never had a complaint.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605418 ###
+===== 库内序 146975 | PK 2605418 | 等级 L3 =====
+DATE: 1998-05-05T07:17:44+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: Sony Dat Drives
+摘要: Greg Lehey：称不清楚 SDT-9000 该型号在 FreeBSD 2.2.6 是否可用，但未听说有 DDS 驱动器不能工作
+
+On Mon,  4 May 1998 at 11:05:06 -0700, Chris Coleman wrote:
+> Does anyone know if the SDT-9000 DDS-3 DAT tape drives from SONY work on
+> FreeBSD 2.2.6?
+
+I don't know about that particular one, but I've never heard of a DDS
+drive that didn't work on FreeBSD.
+
+Greg
+--
+See complete headers for address and phone numbers
+finger grog@lemis.com for PGP public key
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

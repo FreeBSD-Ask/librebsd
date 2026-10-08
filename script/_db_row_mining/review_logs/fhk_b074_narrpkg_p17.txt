@@ -1,0 +1,25 @@
+2605066|L3|Matthew N. Dodd 追问 SONIC DP83932 是否需要新驱动
+2605069|L4|Julian Elischer：动态注册磁盘设备推荐走 DEVFS
+2605071|L4|Terry Lambert：异步调用门是 1994 年就提过的主意，源自 VMS
+2605072|L4|Jacob Bohn Lorensen：配置分散在 /etc 是缓存一致性问题，建议新信号 SIGCONF
+2605077|L4|Julian Elischer：建议用 KTRACE 对比两版线程实现找出性能差距
+2605083|L4|Julian Elischer：静态 ARP 在技术上没有反对理由
+2605089|L4|Eivind Eklund：静态 ARP 用来固定 MAC 与 IP 的绑定，防止 IP 被冒用
+2605090|L3|Jordan K. Hubbard 半开玩笑问 John Birrell 是否愿意受雇优化 libc_r 线程
+2605093|L4|John Birrell：-current 已支持静态初始化 mutex，STL 的假设并不成立
+2605095|L4|Kaleb S. KEITHLEY：3.0-980311-SNAP 认不出旧超块，被迫 newfs 丢光分区数据
+2605096|L4|John Birrell：已经在为将来接内核线程做 libc_r 的锁改造，不需要别人付费
+2605097|L3|Jordan K. Hubbard：没人遇到同款升级问题，怀疑其实和超块无关
+2605100|L3|Jason: 感谢 John Birrell 着手把信号处理改为单一 sigaction 集合并直接派发信号
+2605102|L3|Kaleb: 认为此次 SNAP 升级状况反常并附议，愿为有兴趣者补充信息
+2605106|L3|Birrell: 请 Terry Lambert 明确 ACAP 测试该由谁执行，因回信发给了 Jason 的邮件
+2605107|L4|Julian: 指出 DIVERT 设计缺陷，包经 NATD 重注入后对该规则获 immunity 而不再 REDIVERT
+2605109|L4|Richards: 认为各地进入 Euro 后可把本地货币符号替换为 Euro 符号，英国布局该符号 keycode 为 243
+2605110|L4|Dag-Erling: 称可设任意 MAC 地址但会显著拖慢性能，因硬件丢弃非本机包的工作要移到软件
+2605111|L3|Martti: 问最简便统计程序汇编指令总数的办法，gdb disassemble 只能逐函数反汇编
+2605112|L4|Tom: 实测 mit-pthreads 在 2.2.6-stable 稳定且略快于 libc_r，mysql 配 libc_r 可用但较慢
+2605113|L4|Luigi: 认同应改 DIVERT 语义，主张把 divert 视作包转发图，每节点挂一组规则并由匹配规则指定重启节点
+2605114|L4|Julian: 指出图式方案的问题在于过滤程序必须能自行指定包的去向
+2605116|L4|Hans: 建议用 objdump --disassemble 配 wc -l 减四行头统计指令数，并称 objdump 未收进 ports
+2605120|L3|Ron: 分享 Sarnoff 新集群页面，可从 www.sarnoff.com:8000 的 metacomputing 入口查看
+2605122|L3|Ben: 与 John Dyson 讨论共享与静态链接后欲联系维护者，ports 能取 MAINTAINER，基系统部分如何确定

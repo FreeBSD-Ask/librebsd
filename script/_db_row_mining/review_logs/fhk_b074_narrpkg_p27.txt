@@ -1,0 +1,24 @@
+2605466|L4|Mike Smith：说明 FreeBSD 对 ISA PnP 有一定支持但不与 PnP BIOS 交互，并认为不能指望 BIOS 代为完成配置
+2605467|L4|Mike Smith：说明 blender 在 1600x1200x16bpp 下可正常运行，推测对方是资源不足或漏掉 .B.blend 文件
+2605468|L3|Open Systems Networking：猜测 blender 不兼容 SMP，请有人用 -current SMP 与 Millenium II 验证
+2605469|L4|Julian Elischer：NC-server 自带原生 FreeBSD 版 Oracle，建议直接向 NC 购买预装机器
+2605470|L4|Brian Somers：答复向 majordomo@freebsd.org 发 help，并指 PC/Xe 驱动在 /sys/gnu/i386/isa
+2605471|L4|Open Systems Networking：blender 全屏失败根因是文件权限，chmod 777 改 .B.blend 与 .Bfs 后恢复
+2605473|L4|Open Systems Networking：警告在 SMP 上跑 softupdates 很不稳定，崩溃时会毁掉最后操作的文件，须做好丢失准备
+2605475|L4|Terry Lambert：指出 INT 10 调用运行在 VM86 沙箱内，video BIOS 挂起中断并不会带来问题
+2605477|L4|Terry Lambert：建议卸载镜像阵列中一块盘做离线备份，文件系统一般应保持静止，多数人用单用户模式跑 dump
+2605478|L4|Tom：反驳 FreeBSD 中无法卸载镜像盘做离线备份的说法，并指出即便可行重新同步磁盘也是麻烦事
+2605480|L3|Mike Smith：反驳因卡需自行初始化就否定其 PnP 身份的说法，指出该论断会误导人以为 PnP 卡无需驱动支持
+2605483|L4|Mike Smith：否认 Millenium II 显卡是 blender 崩溃的共同原因，称自己也有该卡而 blender 正常
+2605485|L4|Terry Lambert：指出并不存在 4G 问题，若问题源于类型尺寸应在 2G 附近而非 4G 处触发
+2605486|L3|Dan Janowski：求助 Compaq 的 AMD SCSI/Lance 芯片，2.2.6 下 lnc1 探测正常但 ifconfig 报初始化失败
+2605487|L4|John-Mark Gurney：说明 FreeBSD 有配置 PnP 卡的代码，但不具备判断系统哪些资源空闲的能力
+2605488|L4|Chris Day：说明若 disable PnP 引脚已硬接则本应能用专有端口完成配置初始化，但实测无响应，PnP 状态端口显示 Wait4Key
+2605489|L3|Andreas Braukmann：答复自己在跑 3.0-current SMP，机器为双 ppro200 配 Gigabyte 686DX 主板
+2605490|L4|Luigi Rizzo：以经验之谈说明该卡的实际行为并不严格符合规格书描述
+2605491|L4|Luigi Rizzo：指出未写 at isa 标识会让传统 ISA 与 PnP 设备无法区分，并认为自动资源分配需先知道哪些资源可用
+2605492|L3|Archie Cobbs：承认漏写 at isa 标识并非有意，只是忘记了
+2605494|L3|Tom：反问对方提到的 hole in map 究竟记载在哪一页 man 手册里
+2605496|L3|Mike Smith：称该议题去年已充分讨论，建议翻找旧线程，当时主要是 Luigi、Stefan Esser 与他本人在交换想法
+2605499|L3|Luigi Rizzo：拒绝研读对方推荐的 Microsoft ESCD 文档
+2605500|L4|Ruslan Ermilov：质疑原生一词所指，认为据其所知并不存在面向 BSD 类 Unix 的 Oracle Server 版本

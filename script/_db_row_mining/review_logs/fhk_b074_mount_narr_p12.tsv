@@ -1,0 +1,25 @@
+2604865	885	amancio 自述邮件阅读器 exmh 同样借助 netscape 远程协议显示 http 链接，收到带 http 指针的邮件时只要点开 URL，netscape 未在运行就启动它，否则由已运行的 netscape 直接显示该地址
+2604866	885	jordan 解释 remote 的含义是向已运行的 netscape 发送消息而无需再次启动，流程是未运行就带着 URL 启动它，否则只发消息；他称自己在 shell 函数里用 netscape -remote 调用 openURL，P6 上快到无感
+2604867	885	brian 在清理庞大的 PR 清单时翻到 kern/2732，标题是 mcopy 3.0 causes kernel hang，日期距今已逾一年，他指出 mtools 已从 3.0 升到 3.8 且实测能正常工作，建议把这条报告关掉
+2604869	885	mike 认为如果已经有一份 Netscape 在运行，再启动第二份并不算太严重，因为二者共享 text 与 data 段，至少在真正拿它做事之前都不是问题
+2604870	885	jordan 转述了对方提出的替代用法，意思是不必再启动整份程序来发送指令，他评价这招颇为巧妙，表示自己日后若腾出时间一定要研究一番，语气轻松并在句末附上笑脸符号
+2604872	885	luigi 在邮件里补充说，以这类庞然大物的体积，人们甚至要开始担心 page tables 本身的大小，说完附了个笑脸符号，最后以 cheers 向大家致意
+2604873	885	rob 询问 IDE CDROM 驱动是否计划加入 CDDA 支持，他用 2.2.6-RELEASE 配 MITSUMI FX240S，按 SFF-8020 加了设备调用，但 READ CD 虽返回，缓冲区却是空的，怀疑 ATAPI 接口回传缓冲有已知问题
+2604878	885	david 解释这类错误源于内核 malloc 区过小，控制参数 VM_KMEM_SIZE 默认 32MB，他的 wcarchive 设为 96MB，但那可能要先整体扩大内核虚拟地址空间；他还说两周前刚在 512MB 机器上装好 2.2.6，发布前 Jordan 也测过
+2604879	885	sos 先反问对方是不是在说自己看过那些东西，随后确认自己确实看过，并表示仍在斟酌如何在 TNG 的 atapi 代码里落实，签名自署 FreeBSD 的 Core Team 成员
+2604882	885	bolotov 说明自己想拿 FreeBSD 做路由器，TCP/IP 转发已经能正常工作，但无法放行 IPX 流量，他已在内核编入 IPX 支持并在 /etc/rc.conf 设置了 IPXrouted，请问该如何把 IPXrouted 用起来
+2604883	885	ruslan 来信询问是否有计划支持 802.3 以外的帧类型，并进一步追问若答案是肯定的，能否同时使用不同的帧；信末他自署系统管理员，签名里还列了所在银行与所在地信息
+2604884	885	dag 以 Brian Handy 刚找到的那条陈旧报告为引子，从 freebsd-bugs 近期密集涌入的 state-change 消息判断，phk 正忙着用 chainsaw 一般的方式清理化石级 PR
+2604885	885	dave 报告一台此前运行完美的 2.2.5-RELEASE 机器突然出现 SEGV，已有程序都能继续跑，任何新程序一启动就段错误，重启可彻底解决；他怀疑内存硬件出问题，也听说该版本有 VM 毛病，机型是 Pentium-mmx 200 mhz 配 32 兆内存
+2604887	885	john 指出 IPX 和 IP 一样也要配置接口，需先知道各网络的网段号再写进 rc.conf，他给出 ifconfig_ed0_ipx、ipxgateway_enable、ipxrouted_enable 三个配置示例，并建议到 www.freebsd.org 查归档
+2604888	885	raul 复测后回信称软盘确实在 512 兆内存下能装 2.2.6，但在 786432K 内存下装不上；他原本想直接用全部内存安装，失败后把内存降到 256 兆才成功
+2604889	885	matthew 对 Ruslan 的两个问题都给了肯定回答，他说多帧并存都会支持，但要先做到基本的 token-ring 支持可用；加入这部分支持涉及解决一些 LLC 问题以及去掉 duplicate code
+2604890	885	david 认为先查数据库再查文件、并自动生成所需配置文件的双轨方案实现起来相当繁琐，但作为系统管理员他确实更想要这类做法，而不是被迫使用 FreeBSD 独有的方式；他还补充说自己很怀念 vipw 缺的一点功能，即用 RCS 跟踪文件变更
+2604891	885	robert 追问是否有人在为这类网卡写支持代码，他尤其点名了 CE56 这一型号，另外还顺口问了 PAO 会不会跟着更新到 2.2.6；信末他自署姓名并附了联系电话
+2604892	885	robert 贴出 sendmail 反复报错的日志，里面有 fill_fd、fd 1 未打开与 Bad file descriptor 字样，他怀疑自己进了 root 登录组后大编译吃掉了 sendmail 所需资源，于是请人帮忙写一份 login.conf 建议
+2604893	885	nick 通报 USB 驱动栈已迈出第一步，已完成 Loadable Kernel Module 与 30 行 PCI 驱动初版，并支持 82371AB 芯片、实现 UHCI 底层与 VHUB 模拟集线器功能，累计约 5000 行代码；他征集同行与测试者，并给出快照下载链接
+2604894	885	tom 建议对方跑 pstat -T 自行查证资源占用情况，他认为这种怀疑站不住脚，除非 MAXUSERS 设得特别低，因为默认 GENERIC 内核有成千上万个 descriptors；他还说明 login.conf 无法提高上限，只限制你能动用多少已有资源
+2604895	885	raul 求助说在 2.2-stable 下会出现 kmem_map too small，随后 syncing disks 并触发 panic，接着进入 15 seconds 的自动重启倒计时，他想问怎样才能避免这种情况
+2604896	885	raul 追问该如何处理 kmem_map too small 引发的故障，他贴出 syncing disks 之后 panic、随后进入 15 seconds 自动重启并输出 Rebooting 的完整过程，请人给出应对办法
+2604897	885	greg 确认自己也在做这件事，说明这属于 class project、本周内就要交作业，打算做完自己的部分后再接入对方团队；他还主动报名承担 OHCI standard 实现以及 SiS 5598 这块 OHCI chipset 的支持
+2604898	885	mike 说早就盼着对方早点公开进展，因为已有面向 USB 设备驱动统一 API 的开发者论坛，他认为对方的意见会被充分重视；他还说自己写过低层硬件无关的 OHCI primitives，足够用于探测和初始化硬件，并问对方是只支持特定设备还是支持所有 UHCI 实现

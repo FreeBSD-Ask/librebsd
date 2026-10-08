@@ -1,0 +1,25 @@
+2604865|L4|Amancio Hasty：称自己的 exmh 也用 netscape 远程协议显示 http 链接，点开 URL 未运行则启动 netscape
+2604866|L4|Jordan K. Hubbard：解释远程协议是向已运行的 netscape 发消息而无需再次启动，其 shell 函数用 netscape -remote
+2604867|L4|Brian Handy：清理陈旧 PR 时找到 kern/2732 报 mcopy 3.0 致内核挂起，因 mtools 已升 3.8 且实测正常建议关闭
+2604869|L4|Mike Smith：认为已有 netscape 在运行时再起一个不严重，共享 text 与 data 段，直到真拿它做事为止
+2604870|L3|Jordan K. Hubbard：对方建议改用 netscape-remote 命令，他觉得很巧妙，表示日后有空研究
+2604872|L3|Luigi Rizzo：认为以 netscape 这类体积的进程，甚至要开始担心页表本身的大小
+2604873|L3|Robert Mooney：问 IDE CDROM 驱动是否计划加 CDDA 支持，按 SFF-8020 加了设备调用后 READ CD 返回却缓冲为空
+2604878|L3|David Greenman：回应称 kmem_map too small 一类错误是由内核引起的
+2604879|L3|sos@FreeBSD.ORG：确认自己看过那些 CDDA 补丁，表示仍在考虑
+2604882|L3|Bolotov Pavel：想用 FreeBSD 做路由器，内核已编入 IPX 并在 /etc/rc.conf 设置 IPXrouted，问该怎么用
+2604883|L3|Ruslan Ermilov：问 -current 是否计划支持 802.3 以外的帧，以及能否同时使用不同帧
+2604884|L3|dag-erli@ifi.uio.no：从 freebsd-bugs 上大量状态变更消息判断 phk 已在忙清理陈旧 PR
+2604885|L3|Thomas David Rivers：一台 2.2.5-RELEASE 机器此前正常突然 SEGV，疑内存硬件，也听说该版本有 VM 问题
+2604887|L4|John Hay：指出 IPX 和 IP 一样也要配置接口，需先知道各网络使用的网段号
+2604888|L4|Raul Zighelboim：复测后称 floppy 在 512 兆内存下能装 2.2.6，786432K 下装不上，降到 256 兆才能装
+2604889|L4|Matthew N. Dodd：确认非 802.3 帧与多帧并存都会支持，但要先做好基本 token-ring 支持，涉及 LLC 与去重复代码
+2604890|L3|David Wolfskill：认为讨论中 nsswitch.conf 先查数据库再查文件并回填 /etc 文件的双轨方案实现起来较麻烦
+2604891|L3|Robert Withrow：问 xircom pccard 支持是否有人在写尤其 CE56，另问 PAO 会不会更新到 2.2.6
+2604892|L3|Robert Withrow：sendmail 输出反复报 fill_fd 时 fd 1 未打开与 Bad file descriptor 错误，疑与限额有关
+2604893|L4|Nick Hibma：通报 USB 驱动栈起步，已完成可加载内核模块与 30 行 PCI 驱动初版，并征集同行与测试者
+2604894|L4|Tom：建议用 pstat -T 查证 sendmail 资源占用，认为对方怀疑站不住，除非 MAXUSERS 设得极低
+2604895|L3|Raul Zighelboim：报 2.2-stable 出现 kmem_map too small 后 panic 并自动重启，问如何避免
+2604896|L3|Raul Zighelboim：续问 kmem_map too small 引发 panic 后进入 15 秒自动重启该如何处理
+2604897|L3|Gregory P. Smith：确认自己也在做 USB 支持，属课业项目，本周内交作业
+2604898|L3|Mike Smith：提到已有面向 USB 设备驱动统一 API 的开发者论坛，表示若项目早一点公开他的参与意愿会被充分重视
