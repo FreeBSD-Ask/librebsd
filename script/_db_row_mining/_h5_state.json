@@ -1447,14 +1447,14 @@
      "tag": "h5ar_b524_4"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 145,
+     "claims": "CL-RM-423914-424058",
+     "commit": "82d788267",
      "n": 6000,
-     "note": "",
+     "note": "145 候选入纲 36 块（161.5=2/154.13=16/101.2=12/171.8=6）、108 判 NONE、numstat +180/0=36块x5行、register 反查 quote 145/145、四表 join 36、seq CL-RM-423914-424058 连续无洞、幂等二跑 +0、提交 82d788267；1 条候选（887035）因叙述过短（<60 字）不入大纲仍入 claim 库",
      "offset": 24000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 12,
+     "state": "committed",
      "tag": "h5ar_b524_5"
     },
     {
@@ -1480,9 +1480,9 @@
    "hosts_guess": [],
    "n_batches": 6,
    "name": "freebsd-arch",
-   "note": "h5ar_b524_4 已 committed，整库 35166 封已读 24000 / 剩 11166（余 2 批）",
-   "offset": 24000,
-   "remaining": 11166,
+   "note": "h5ar_b524_5 已 committed，整库 35166 封已读 30000 / 剩 5166（余 1 批）",
+   "offset": 30000,
+   "remaining": 5166,
    "state": "in_progress",
    "total": 35166
   },
