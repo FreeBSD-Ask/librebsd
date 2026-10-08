@@ -1,0 +1,943 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605168 ###
+===== 库内序 146725 | PK 2605168 | 等级 L3 =====
+DATE: 1998-04-28T13:11:27+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: Routing problem that I need solved.  
+摘要: Matthew N. Dodd：针对 Idiom 多宿主选路需求，建议查看 Vixie 的 ifdefault 补丁
+
+
+Check out Vixie's ifdefault patches.
+
+On Tue, 28 Apr 1998, David Muir Sharnoff wrote:
+
+> 
+> My fellow FreeBSD addicts, I've got a kernel mod that I need done.   
+> I could probably do it myself, but I would much prefer not to as
+> I've got other fish to fry.  I've also got slightly more money than
+> time.  I can afford to $2,000 as a thank-you if someone does this.
+> 
+> 
+> Idiom is now multi-homed.   Idiom has three sets of IP addresses:
+> 	1:  addresses that can only be routed through BEST.COM
+> 	2:  addresses that can only be routed through ABOVE.NET
+> 	3:  addresses that can be routed through either BEST.COM or ABOVE.NET
+> 
+> Most addresses are type 3 (routed through both).  For reliability,
+> it's important to keep a few key services using type 1 and type 2
+> addresses.  For example, the two primary nameservers: ns.idiom.com
+> uses a type 1 address and ns2.idiom.com uses a type 2 address.  
+> 
+> That provides some reliability for the incomming traffic.  What I
+> would like is to make sure that at least some of the outgoing traffic 
+> is symmetrical.
+> 
+> If a packet is coming _from_ a type 1 address, then it should be 
+> routed out through BEST.COM.  If it's coming from a type 2 address then it
+> should be routed out through ABOVE.NET.
+> 
+> I run OSPF internally, so the routing situation tends to be a bit
+> dynamic.
+> 
+> As many utilities as possible should reply using the address they were
+> contacted on.  DNS, radius, etc.  That's a separate problem though.
+> 
+> My solution to this would be to create another ipfw rule: "route through"
+> 
+> Example of usage:
+> 	
+> 	# skip over packets that are inbound.
+> 
+> 	ipfw add 100 skipto 200 all from any to 140.174.82/24 # type 1 
+> 	ipfw add 110 skipto 200 all from any to 209.66.121/24 # type 2 
+> 	ipfw add 120 skipto 200 all from any to 209.157.64/19 # type 3 
+> 
+> 	# selectively route type 1 and type 2 outbound
+> 
+> 	ipfw add 140 pass through 140.174.37.21 all from 140.174.82/24 to any
+> 	ipfw add 150 pass through 209.66.121.1 all from 209.66.121/24 to any
+> 
+> The semantics of "pass through" are that the next hop 
+[…中段省略 499 字符…] 
+> also fit for inclusion in -STABLE.
+> 
+> Thanks,
+> 
+> -Dave
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605170 ###
+===== 库内序 146727 | PK 2605170 | 等级 L3 =====
+DATE: 1998-04-28T13:56:33+00:00
+FROM: Mike <muck@ida.net>
+SUBJ: Re: Custom Kernel
+摘要: Mike：就先前邮件表述不清致歉，说明自己并非想求 wine 的技术帮助，只是想了解 SYSVSEM 是什么
+
+John-Mark Gurney wrote:
+> 
+> Mike scribbled this message on Apr 27:
+> 
+> the web pages should answer these questions...  if not, then
+> freebsd-questions is MUCH better list for these types of questions than
+> freebsd-hackers...  -hackers is for technical discussions...
+
+Perhaps I should've phrased my question better.  I wasn't interested in
+technical help for wine, I was curious as to what SYSVSEM was.  I would
+consider that general technical discussion.  Nowhere in my message did I
+beg and plead for some help getting wine to work.
+
+Am I sorry for violating the sanctity of your precious list?  No.
+
+Thanks to all those who responded, though.  
+
+Mike
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605172 ###
+===== 库内序 146729 | PK 2605172 | 等级 L4 =====
+DATE: 1998-04-28T15:35:38+00:00
+FROM: Warner Losh <imp@village.org>
+SUBJ: Re: ctm question 
+摘要: Warner Losh：确认调高 cvs 服务端与客户端 login classes 内存额度后，大文件 diff 触发 server aborted 即解决
+
+In message <199804281529.KAA02000@soccer.inetspace.com> "Kent S. Gordon" writes:
+: I had this problem until I allowed for move memory usage by cvs. I
+: would check the login classes used by both the cvs server and the
+: client. diff of multiple megabyte files can take a lot of memory.
+
+Give that man a cigar!  That did the trick for me.
+
+Warner
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605173 ###
+===== 库内序 146730 | PK 2605173 | 等级 L3 =====
+DATE: 1998-04-28T15:45:57+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Whom to contact?
+摘要: Snob Art Genre：请对方就如何用 cvs log 查 base system 各部件维护者给出更详细答复
+
+On Mon, 27 Apr 1998, Archie Cobbs wrote:
+
+> Snob Art Genre writes:
+> > For ports this is trivial, as I can pull MAINTAINER from the Makefile,
+> > but how do I determine this for various parts of the base system?
+> 
+> cvs log?
+
+Thanks, but could you give a more detailed answer?  I am not wise in the
+ways of CVS.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605174 ###
+===== 库内序 146731 | PK 2605174 | 等级 L4 =====
+DATE: 1998-04-28T16:17:40+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: Re: SIGDANGER
+摘要: David E. Cross：质疑默认忽略 SIGDANGER 的方案无实际用处，主张默认行为应与 AIX 一致即终止进程以保护系统关键进程
+
+On Tue, 28 Apr 1998, Karl Denninger wrote:
+
+> Well, now wait a minute..
+> 
+> SIGDANGER is useful if properly trapped and handled.  I'd like to see if
+> supported with the default to be "ignore" (ie: you have to ASK for it to 
+> be delivered and processed).
+May I ask what good is it if it is ignored by default????
+
+Default should be as it is on AIX, to terminate the process.  In general
+you care more about system processes than user procs, so I would "make
+world" on my system if this got added, with all the system procs having a
+one line addition in main() to ignore the signal, and I would be ready to
+go.
+
+
+--
+David Cross
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605175 ###
+===== 库内序 146732 | PK 2605175 | 等级 L3 =====
+DATE: 1998-04-28T16:58:08+00:00
+FROM: "Michael A. Suarez" <msuarez@cybernet.com>
+SUBJ: Kernel Programming Question
+摘要: Michael A. Suarez：征询内核改造思路，设想文本段大小最高位置位时在加载期生成 md5 并以 p_pad1 与 p_pad2 存约六字节校验值
+
+I am trying to make a kernel hack that does the following: If the high bit of
+the text segment size is set, which in any normal circumstance would be very
+unlikely, when that executable is loaded, a md5 checksum would be generated and
+stored in the proc structure of that running executable.  I use the p_pad1 and
+p_pad2 elements of the proc structure to store upto 6 bytes of the calculated
+checksum.  (Yes, I know this is a real hack, but I only need it for this one
+machine's kernel). 
+
+I have coded it to the point that the checksum calculations occur if the
+high-bit is set.  Essentially I have modified the imgact_aout to notice the
+high-bit is set and then set proc->p_pad1[0]=1 if it was.  Then in kern_exec, I 
+read through the executable file and, currently, only calculate and print the
+sum.  
+
+The problem is that it only works about half the time.  It fails when trying to
+read the file on the vn_rdwr call.  It fails by simply hanging the processes,
+vn_rdwr does not return.  If I look at the process list, the process is hung in
+the DV+ state.  Also, the system is somewhat flakey after that.  When it works,
+however, it calculates the sum and continues to execute the program without a
+hitch.
+
+I have included both the imgact_aout changes and the kern_exec changes.  These
+are from the 2.2.2 source tree.
+
+If anyone has any suggestions, I would be very happy to hear them.
+
+Thanks,
+Michael
+msuarez@cybernet.com
+
+
+### PK 2605176 ###
+===== 库内序 146733 | PK 2605176 | 等级 L3 =====
+DATE: 1998-04-28T17:10:01+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: SIGDANGER
+摘要: Dag-Erling Coidan Smørgerv：认同 SIGDANGER 有价值，并建议采用此前讨论过的 SIGCONF 替代旧的约定做法
+
+"John S. Dyson" <dyson@FreeBSD.ORG> writes:
+> David E. Cross said:
+> > I was recenlty shown AIX's SIGDANGER (33). It is a signal that the kernel
+> We do need to adopt an extended signal set, and I think that someone
+> else has already developed it.  SIGDANGER could be valuable.
+
+I also think SIGCONF which was discussed on one of the lists some time
+ago (last week?) would be nice (as a replacement for the old tradition
+of reading a SIGHUP as "your configurations files have changed, please
+reread them now")
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605177 ###
+===== 库内序 146734 | PK 2605177 | 等级 L3 =====
+DATE: 1998-04-28T17:48:45+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: Re: Whom to contact?
+摘要: Archie Cobbs：承认自己没搭建过 CVS 仓库，建议就 cvs log 的相关用法查阅 FreeBSD 手册
+
+Snob Art Genre writes:
+> > Snob Art Genre writes:
+> > > For ports this is trivial, as I can pull MAINTAINER from the Makefile,
+> > > but how do I determine this for various parts of the base system?
+> > 
+> > cvs log?
+> 
+> Thanks, but could you give a more detailed answer?  I am not wise in the
+> ways of CVS.
+
+Ah, sorry.. well, you can read all about it in the handbook I think
+(I've never set up a CVS repository myself). But assuming you have
+access to one, "cvs log xxx" will display all checkins to file xxx
+and who did them, when, what the checkin comment was, etc. So this
+is a way to trace the history of a file in terms of maintenance.
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605178 ###
+===== 库内序 146735 | PK 2605178 | 等级 L3 =====
+DATE: 1998-04-28T18:04:32+00:00
+FROM: Karl Denninger  <karl@mcs.net>
+SUBJ: Re: SIGDANGER
+摘要: Karl Denninger：指出若默认忽略 SIGDANGER，等于表示允许内核在必须释放资源时杀掉该进程
+
+Good point, except that if you ignore it, you're saying that its acceptable
+to kill you if the kernel MUST do so.
+
+--
+-- 
+Karl Denninger (karl@MCS.Net)| MCSNet - Serving Chicagoland and Wisconsin
+http://www.mcs.net/          | T1's from $600 monthly / All Lines K56Flex/DOV
+			     | NEW! Corporate ISDN Prices dropped by up to 50%!
+Voice: [+1 312 803-MCS1 x219]| EXCLUSIVE NEW FEATURE ON ALL PERSONAL ACCOUNTS
+Fax:   [+1 312 803-4929]     | *SPAMBLOCK* Technology now included at no cost
+
+On Tue, Apr 28, 1998 at 12:17:40PM -0400, David E. Cross wrote:
+> On Tue, 28 Apr 1998, Karl Denninger wrote:
+> 
+> > Well, now wait a minute..
+> > 
+> > SIGDANGER is useful if properly trapped and handled.  I'd like to see if
+> > supported with the default to be "ignore" (ie: you have to ASK for it to 
+> > be delivered and processed).
+> May I ask what good is it if it is ignored by default????
+> 
+> Default should be as it is on AIX, to terminate the process.  In general
+> you care more about system processes than user procs, so I would "make
+> world" on my system if this got added, with all the system procs having a
+> one line addition in main() to ignore the signal, and I would be ready to
+> go.
+> 
+> 
+> --
+> David Cross
+> 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605179 ###
+===== 库内序 146736 | PK 2605179 | 等级 L4 =====
+DATE: 1998-04-28T18:10:09+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Whom to contact?
+摘要: Snob Art Genre：在发行光盘第三片的 CVS 仓库执行 cvs log 报无法打开 CVS/Entries，各文件均无已知记录
+
+I've got a CVS repository on disc 3 of the distribution set, but:
+
+ben% pwd
+/cdrom/CVS-Repository/src/usr.sbin/inetd
+ben% cvs log *
+cvs log: cannot open CVS/Entries for reading: No such file or directory
+cvs log: nothing known about Makefile,v
+cvs log: nothing known about TRANS.TBL
+cvs log: nothing known about inetd.8,v
+cvs log: nothing known about inetd.c,v
+cvs log: nothing known about pathnames.h,v
+
+Handbook, you say?  *sigh*
+
+On Tue, 28 Apr 1998, Archie Cobbs wrote:
+
+> Ah, sorry.. well, you can read all about it in the handbook I think
+> (I've never set up a CVS repository myself). But assuming you have
+> access to one, "cvs log xxx" will display all checkins to file xxx
+> and who did them, when, what the checkin comment was, etc. So this
+> is a way to trace the history of a file in terms of maintenance.
+> 
+> -Archie
+> 
+> ___________________________________________________________________________
+> Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+> 
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605181 ###
+===== 库内序 146738 | PK 2605181 | 等级 L3 =====
+DATE: 1998-04-28T18:43:40+00:00
+FROM: support@idiom.com (David Muir Sharnoff)
+SUBJ: Re: Routing problem that I need solved.  
+摘要: David Muir Sharnoff：认为 Vixie 的 ifdefault 补丁精巧，但无法解决自身多宿主选路问题
+
+* Check out Vixie's ifdefault patches.
+
+That's neat!  Doesn't solve my problem, but it's a nice hack.
+
+-Dave
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605182 ###
+===== 库内序 146739 | PK 2605182 | 等级 L3 =====
+DATE: 1998-04-28T19:01:59+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: Routing problem that I need solved.  
+摘要: Matthew N. Dodd：承认看完其他回复后意识到自己推荐的 ifdefault 补丁并未切中对方的选路需求
+
+On Tue, 28 Apr 1998, David Muir Sharnoff wrote:
+> * Check out Vixie's ifdefault patches.
+> 
+> That's neat!  Doesn't solve my problem, but it's a nice hack.
+
+Sorry about that...  I realized after reading others replies that my
+answer wasn't addressing your question. :/
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605183 ###
+===== 库内序 146740 | PK 2605183 | 等级 L3 =====
+DATE: 1998-04-28T19:27:42+00:00
+FROM: Jason Nordwick <nordwick@scam.XCF.Berkeley.EDU>
+SUBJ: Re: SIGDANGER
+摘要: Jason Nordwick：质疑默认忽略 SIGDANGER 会让信号几乎总被忽略、需给几乎所有非关键程序打补丁，不如只改少数关键工具
+
+
+Karl Denninger, on Tue 4/28/1998, wrote the following:
+> 
+> SIGDANGER is useful if properly trapped and handled.  I'd like to see if
+> supported with the default to be "ignore" (ie: you have to ASK for it to 
+> be delivered and processed).
+> 
+
+Then it would almost always be ignored?  Wouldn't this reqire patching
+almost every noncritical program?  It would probably be easier just to 
+patch a few important tools and find a Good(c) way to pick the 
+unlucky process.
+
+jay
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605184 ###
+===== 库内序 146741 | PK 2605184 | 等级 L4 =====
+DATE: 1998-04-28T19:27:11+00:00
+FROM: spork <spork@super-g.com>
+SUBJ: Re: Whom to contact?
+摘要: Charles Sprickman：建议用 www.freebsd.org/cgi/cvsweb.cgi 网页版 CVS 仓库查看各文件最后一次修改的提交者
+
+If you go to the web repository (www.freebsd.org/cgi/cvsweb.cgi) you'll be
+able to see who the last person that committed a change to a particular
+file is...
+
+Charles
+
+
+Charles Sprickman
+spork@super-g.com
+---- 
+                           "I'm not a prophet or a stone-age man
+                           Just a mortal with potential of a superman
+                           I'm living on"      -DB
+
+On Tue, 28 Apr 1998, Snob Art Genre wrote:
+
+> On Mon, 27 Apr 1998, Archie Cobbs wrote:
+> 
+> > Snob Art Genre writes:
+> > > For ports this is trivial, as I can pull MAINTAINER from the Makefile,
+> > > but how do I determine this for various parts of the base system?
+> > 
+> > cvs log?
+> 
+> Thanks, but could you give a more detailed answer?  I am not wise in the
+> ways of CVS.
+> 
+> 
+>  Ben
+> 
+> "You have your mind on computers, it seems." 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605186 ###
+===== 库内序 146743 | PK 2605186 | 等级 L3 =====
+DATE: 1998-04-28T19:35:13+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Whom to contact?
+摘要: Snob Art Genre：确认 spork 给出的 cvsweb 查询方法正是自己所需，表示感谢
+
+This is what I was looking for!  Thank you.
+
+On Tue, 28 Apr 1998, spork wrote:
+
+> If you go to the web repository (www.freebsd.org/cgi/cvsweb.cgi) you'll be
+> able to see who the last person that committed a change to a particular
+> file is...
+> 
+> Charles
+> 
+> 
+> Charles Sprickman
+> spork@super-g.com
+> ---- 
+>                            "I'm not a prophet or a stone-age man
+>                            Just a mortal with potential of a superman
+>                            I'm living on"      -DB
+> 
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605187 ###
+===== 库内序 146744 | PK 2605187 | 等级 L3 =====
+DATE: 1998-04-28T19:35:13+00:00
+FROM: "Michael A. Suarez" <msuarez@cybernet.com>
+SUBJ: RE: Kernel Programming Question
+摘要: Michael A. Suarez：为先前以 uuencode 形式提交 kern_exec.c 致歉，本次附上非编码版本
+
+Sorry about the uuencoded version of kern_exec.c.  Attached is included the
+non-uuencoded version.
+
+Michael
+
+
+### PK 2605188 ###
+===== 库内序 146745 | PK 2605188 | 等级 L4 =====
+DATE: 1998-04-28T19:42:44+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Custom Kernel
+摘要: Snob Art Genre：回应 Mike，就 SYSVSEM 指向 sem(2) 手册页的 semop() semctl() 与 semget()
+
+On Tue, 28 Apr 1998, Mike wrote:
+
+> Perhaps I should've phrased my question better.  I wasn't interested in
+> technical help for wine, I was curious as to what SYSVSEM was.  I would
+> consider that general technical discussion.  Nowhere in my message did I
+> beg and plead for some help getting wine to work.
+
+See the sem*(2) man pages: semop(), semctl(), semget().
+ 
+> Am I sorry for violating the sanctity of your precious list?  No.
+
+Oh, relax, nobody flamed you, it was a simple miscommunication.
+
+> Thanks to all those who responded, though.  
+> 
+> Mike
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605190 ###
+===== 库内序 146747 | PK 2605190 | 等级 L3 =====
+DATE: 1998-04-28T19:33:49+00:00
+FROM: Andreas Klemm <andreas@klemm.gtn.com>
+SUBJ: Re: Wow!
+摘要: Andreas Klemm：向 Bob Bishop 追问那则关于 Hotmail 与 Solaris 消息的出处链接，称自己未找到对应 URL
+
+On Tue, Apr 28, 1998 at 12:18:32PM +0100, Bob Bishop wrote:
+> >  Solaris calls Hotmail shots for Microsoft
+
+Where's this article from ? URL ?
+
+> >                First appeared in Network News, 22-April - 1998
+
+Didn't find an URL ...
+
+-- 
+Andreas Klemm                             http://www.FreeBSD.ORG/~andreas
+What gives you 90% more speed, for example in kernel compilation ?
+               http://www.FreeBSD.ORG/~fsmp/SMP/akgraph-a/graph1.html
+                          powered by ,,symmetric multiprocessor FreeBSD''
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605191 ###
+===== 库内序 146748 | PK 2605191 | 等级 L4 =====
+DATE: 1998-04-28T20:55:36+00:00
+FROM: Lyndon Nerenberg <lyndon@ve7tcp.ampr.org>
+SUBJ: Re: SIGDANGER 
+摘要: Lyndon Nerenberg：纠正上述说法，AIX 4.2 实际默认忽略 SIGDANGER，内核监测 paging-space 空闲块低于阈值时发出
+
+>>>>> "David" == David E Cross <dec@phoenix.its.rpi.edu> writes:
+
+    David> Default should be as it is on AIX, to terminate the
+    David> process.
+
+Folks, the default (AIX 4.2) is to *ignore* the signal:
+
+  The system monitors the number of free paging space blocks and detects 
+  when a paging-space shortage exists. When the number of free paging-space 
+  blocks falls below a threshold known as the paging-space warning level, 
+  the system informs all processes (except kprocs) of this condition by 
+  sending the SIGDANGER signal. If the shortage continues and falls below 
+  a second threshold known as the paging-space kill level, the system 
+  sends the SIGKILL signal to processes that are the major users of 
+  paging space and that do not have a signal handler for the SIGDANGER 
+  signal (**the default action for the SIGDANGER signal is to ignore the
+  signal**). The system continues sending SIGKILL signals until the number 
+  of free paging-space blocks is above the paging-space kill level.
+
+[Above quoted from the AIX system doc]
+
+Processes in AIX will eventually die from SIGKILL, the same as any other
+UNIX that overcommits. If you don't do something explicit with SIGDANGER
+you'll never know it's there. (It has to behave this way to maintain
+backwards source compatibility.)
+
+AIX provides a pssignal() subroutine that can be used to query the state
+of the paging space. (pssignal manpage appended to the end of this message.)
+Limited user-space control of the swapspace allocation policy is available:
+
+  If the PSALLOC environment variable is set to early, then every 
+  program started in that environment from that point on, but not 
+  including currently running processes, will run in the early 
+  allocation environment. In the early allocation environment, 
+  interfaces such as the malloc subroutine and the brk subroutine 
+  will fail if sufficient paging space cannot be reserved when the 
+  request is made.
+
+I *especially* like their suggested method of changing the
+policy from within a running program:
+
+  Programming Interface
+
+  The programming interface that 
+[…中段省略 2681 字符…] routine is part of Base Operating System (BOS) Runtime.
+
+Related Information
+
+The swapon subroutine, swapqry subroutine.
+
+The chps command, lsps command, mkps command, rmps command, swapon
+command.
+
+Paging Space Overview in
+
+Subroutines Overview and Understanding Paging Space Programming Requirements
+in AIX Version 4 General Programming Concepts: Writing and Debugging
+Programs.
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605193 ###
+===== 库内序 146750 | PK 2605193 | 等级 L3 =====
+DATE: 1998-04-28T22:33:10+00:00
+FROM: spork <spork@super-g.com>
+SUBJ: Strange console/log message
+摘要: Charles Sprickman：报告内核日志出现 Inflate_error=8 where=182 异常行且控制台同步高亮，求解释含义
+
+I saw this in highlighted text on a console today, this is the
+corresponding log entry:
+
+Apr 28 18:13:47 www /kernel: Output=32 Inflate_error=8 igz.error=8
+error2=0 where=182
+
+I really don't know what this means.  Any ideas?
+
+Charles Sprickman
+spork@super-g.com
+---- 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605194 ###
+===== 库内序 146751 | PK 2605194 | 等级 L3 =====
+DATE: 1998-04-29T00:05:36+00:00
+FROM: craig@tuna.progroup.com (Craig W. Shaver)
+SUBJ: Re: Wow! URL
+摘要: Craig W. Shaver：回应出处追问，贴出 Hotmail 官网的公司介绍页面链接供参考
+
+> 
+> On Tue, Apr 28, 1998 at 12:18:32PM +0100, Bob Bishop wrote:
+> > >  Solaris calls Hotmail shots for Microsoft
+> 
+> Where's this article from ? URL ?
+> 
+> > >                First appeared in Network News, 22-April - 1998
+> 
+> Didn't find an URL ...
+> 
+
+Chew on this ....
+
+http://www.hotmail.com/cgi-bin/xhtml/html/fm_shell.html?title=More+About+Hotmail+Corporation&gifalt=More+About+Hotmail+Corporation&head=Employment+Opportunities&content=jobs&back=corp&from=corp
+
+
+or follow the links to find out more about Hotmail Corporation.
+
+-- 
+Craig Shaver  (craig@progroup.com) (415)390-0654 
+Productivity Group POB 60458 Sunnyvale, CA  94088
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605195 ###
+===== 库内序 146752 | PK 2605195 | 等级 L3 =====
+DATE: 1998-04-29T00:12:06+00:00
+FROM: Bob Bishop <rb@gid.co.uk>
+SUBJ: Re: Wow!
+摘要: Bob Bishop：回复关于消息出处与 URL 的追问，称相关内容是有人经私人邮件转给他的
+
+At 8:33 pm +0100 28/4/98, Andreas Klemm wrote:
+>On Tue, Apr 28, 1998 at 12:18:32PM +0100, Bob Bishop wrote:
+>> >  Solaris calls Hotmail shots for Microsoft
+>
+>Where's this article from ? URL ?
+
+Came to me via private email.
+
+
+--
+Bob Bishop              (0118) 977 4017  international code +44 118
+rb@gid.co.uk        fax (0118) 989 4254  between 0800 and 1800 UK
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605196 ###
+===== 库内序 146753 | PK 2605196 | 等级 L3 =====
+DATE: 1998-04-29T00:26:38+00:00
+FROM: Marca Registrada <inf@nyef.res.cmu.edu>
+SUBJ: Re: SIGDANGER
+摘要: Marca Registrada：补充 SIGHOLD 的语义讨论，主张应仅允许以 root 运行的进程自我豁免随机被杀
+
+Quoting Karl Denninger (karl@mcs.net):
+> Critical programs can either free up resources or exit, as they see fit.  We
+> could also define a semantic that says that if a process set SIGHOLD for
+> that signal, then the kernel should do everything in its power NOT to whack
+> that particular process.
+
+BTW, I'd like to hope that only processes run as root have this power to
+elect themselves to be safe from random kills.  Actually, is there much of
+a danger at all?  With proper login limits it would take a group of users
+in a concerted effort to bring teh machine to its knees.  It should
+possibly be a matter of local system policy (sysctl or compile time
+option) weathor  or not SIGDANGER will be maskable by a non-root process,
+with the default being an open system.
+
+BTW, just for my two cents..  could SIGDANGER also be a producable signal
+(via kill(1)), such that I could say send it to X to have it release
+unneeded memory?
+
+-- 
+
+   - All we hear is internet gaagaa, internet googoo, internet gaagaa
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605198 ###
+===== 库内序 146755 | PK 2605198 | 等级 L4 =====
+DATE: 1998-04-29T02:08:52+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: SIGDANGER
+摘要: Terry Lambert：回答为何被 SIGDANGER 的睡眠进程先遭杀，称原因是它们在需要页时已无可用页，并非因占用资源极少
+
+> 	When I ran this basic example on an AIX box years ago, a buch of
+> the sleepers get killed before the danger process does.  Why kill them?
+> They have only minimal resources allocated.  
+
+Because they needed pages which weren't available when the pages were
+needed.
+
+> 	 I believe it also breaks the POSIX definition of malloc(3), if I
+> am not mistaken.  Perhaps IBM had this ammended after introducing this
+> misfeature. 
+
+Any malloc(3) that doesn't actually preallocate the memory to the
+process, instead of just creating empty page mappings that are
+backed by pages as needed, and any malloc(3) whose free(3) sbrk(2)'s
+memory back to the system are technically in violation of POSIX.
+
+Specifically, POSIX requires that if I free a segment, I should be able
+to malloc the same sized or smaller segment immediately following the
+free, and not have to check for failure.
+
+This is a bit of stupidity in POSIX.
+
+
+My main rant, which Jordan alluded to, is that I think it should be
+possible to preload all necessary pages into swap, and back them with
+swap rather than with the program image.
+
+The primary reason for doing this is so that your dataless machine
+or Network Computer does not freeze waiting for a pagein if the NFS
+server becomes unavailable for whatever reason.
+
+Having worked in an environment where most of engineering was running
+on dataless machines with local swap and local auxillary disk, but
+running most applciations from a central server (much easier to maintain
+40+ engineers this way), and having had 40+ people become unproductive
+while the NFS server reboots... well, it became a design issue for me.
+
+
+
+Going a bit further down this road, one could imagine that certain
+processes should be preallocated real swap for clean data pages which
+may become dirty.
+
+This is a precopy rather than a copy-on-write policy for them.
+
+This would, I think, be the correct use of the "sticky" bit, in a
+memory overcommit environment.
+
+The "swap preload" case in the NFS environment should probably be a
+mount option which only applies to FS's that are flagged as remote.
+
+
+The real a
+[…中段省略 1244 字符…] o on.
+
+A probable optimization would be:
+
+	1)	Shoot everyopne with a "low memory condition" handler
+	2)	wait
+	3)	if memory is still low, shoot the highest working set
+		without a handler and go to 2
+	4)	Satisfy outstanding unsatisfied requests.
+
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605199 ###
+===== 库内序 146756 | PK 2605199 | 等级 L3 =====
+DATE: 1998-04-29T03:09:45+00:00
+FROM: David Kelly <dkelly@hiwaay.net>
+SUBJ: Re: ctm question 
+摘要: David Kelly：请对方说明如何排查并调整 cvs 客户端与服务器的 login classes 内存额度
+
+Warner Losh writes:
+> In message <199804281529.KAA02000@soccer.inetspace.com> "Kent S. Gordon" writ
+> es:
+> : I had this problem until I allowed for move memory usage by cvs. I
+> : would check the login classes used by both the cvs server and the
+> : client. diff of multiple megabyte files can take a lot of memory.
+> 
+> Give that man a cigar!  That did the trick for me.
+
+More detail please! How does one track down the login classes used by 
+such processes?
+
+I've found a near sure fire way to totally lock up my FreeBSD
+2.2.6-stable system is to have Netscape Navigator 3.01 (the 128-bit
+version) up, XFree86 3.3.1, Mach32 server, and to run "cd /usr/ports &&
+cvs -q update -d" in an xterm.
+
+The above almost always freezes my 64MB PPro-200, and always about the
+time cvs is about to finish. No Navigator, no problem. Thought it might
+be a bad block in my swap partition so I moved swap to another disk, no
+change. Split swap across both disks, no change.
+
+Am not running a cvs or ctm server.
+
+--
+David Kelly N4HHE, dkelly@nospam.hiwaay.net
+=====================================================================
+The human mind ordinarily operates at only ten percent of its
+capacity -- the rest is overhead for the operating system.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

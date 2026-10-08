@@ -1,0 +1,977 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605200 ###
+===== 库内序 146757 | PK 2605200 | 等级 L4 =====
+DATE: 1998-04-29T03:27:04+00:00
+FROM: "Stephen J. Roznowski" <sjr@home.net>
+SUBJ: Bmaked version of perl 5 available for testing
+摘要: Stephen J. Roznowski：发布 bmake 版 perl5 供测试，源码置于 /usr/src/gnu/usr.bin 以避免与现有版本冲突
+
+I've uploaded a bmaked version of perl5 to
+
+	ftp.freebsd.org:/pub/FreeBSD/incoming/bmake-perl5-1.0.tar.gz
+
+This tar file contains two items:
+
+	BSD.usr.dist.patch - a patch that adds the perl directories, and
+
+	perl5/ - contains the perl5 code and expects to live in
+		 /usr/src/gnu/usr.bin [I named it this way to prevent
+		 a conflict with the current perl version]
+
+I'd appreciate hearing any feedback on whether I got this completely
+correct. If I don't hear anything in a couple of days or so, I'll send-pr
+it.
+
+One item that isn't working correctly is the installation of the "man3"
+section of the perl5 man pages since they are of the form "xxx::yyy"
+which breaks the bsd.man.mk rules.
+
+Thanks,
+-SR
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605201 ###
+===== 库内序 146758 | PK 2605201 | 等级 L4 =====
+DATE: 1998-04-29T03:41:41+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Kernel Programming Question 
+摘要: David Greenman：指出读盘校验循环应据 resid 决定上界，而非固定按 PAGE_SIZE 计
+
+...
+>             error=vn_rdwr(UIO_READ,imgp->vp,(void *) buf,PAGE_SIZE,offset,
+>                           UIO_SYSSPACE,IO_NODELOCKED,p->p_ucred,&resid,p);
+>             if(!error) 
+>              {
+>               int t=0;
+>               if(resid) bzero((char *)buf+PAGE_SIZE-resid,resid);
+>               for(t=0; t<PAGE_SIZE-resid; t++) sum+=buf[t];
+                         ^^^^^^^^^^^^^^^^^
+
+   Don't you want that to be:
+
+              for(t=0; t < (resid ? resid : PAGE_SIZE); t++) sum+=buf[t];
+
+? (Or perhaps something a bit more optimized)
+
+   Otherwise, I don't see anything obviously wrong that would cause the
+system to hang...but then, I have very little experiance using vn_rdwr(),
+so I could easily be forgetting something.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605203 ###
+===== 库内序 146760 | PK 2605203 | 等级 L4 =====
+DATE: 1998-04-29T04:28:55+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Whom to contact? 
+摘要: Jordan K. Hubbard：提醒非 CVS master 别直接向 CD 上的只读 CVS 仓库提交操作
+
+> ben% pwd
+> /cdrom/CVS-Repository/src/usr.sbin/inetd
+
+Don't use the repository directly off the CD unless you're already
+a CVS master and know how to deal properly with read-only repositories.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605205 ###
+===== 库内序 146762 | PK 2605205 | 等级 L4 =====
+DATE: 1998-04-29T04:35:39+00:00
+FROM: ".signature" <jkh@time.cdrom.com>
+SUBJ: Re: Whom to contact? 
+摘要: Jordan K. Hubbard：建议不懂 CVS 的人走 cvsweb.cgi 网页工具浏览变更日志，而非直指仓库
+
+> Ah, sorry.. well, you can read all about it in the handbook I think
+> (I've never set up a CVS repository myself). But assuming you have
+
+For someone who's not familiar with CVS, it's not the best advice
+to just point them at the repository.  Far better to simply point
+them at http://www.freebsd.org/cgi/cvsweb.cgi and let them use the
+WWW tools for browsing the change logs.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605210 ###
+===== 库内序 146767 | PK 2605210 | 等级 L3 =====
+DATE: 1998-04-29T07:03:33+00:00
+FROM: Michael Schuster <Michael.Schuster@utimaco.co.at>
+SUBJ: Re: SIGDANGER
+摘要: Michael Schuster：提议仿照 nohup 增加 nodanger 工具，让进程主动声明以免于危险信号终止
+
+Garance A Drosihn <drosih@rpi.edu> wrote:
+
+> I may, however, be very unhappy if sshd
+> or the main lpd process gets killed just because they *happen* to be
+> the process which requests memory at the wrong time while you're running
+> that "danger.c" program.
+
+ePerhaps a "nodanger(1)" tool (similar to nohup(1)) could provide
+protection from that behaviour - to be used with discretion, of course.
+OTOH, you could designate a special [e]uid/[e]gid combination (eg. group
+== "nodanger" (very imaginative!)) to achieve this; this would also make
+it harder for any joe user to exploit this for his/her interest.
+
+-- 
+Michael Schuster
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605213 ###
+===== 库内序 146770 | PK 2605213 | 等级 L3 =====
+DATE: 1998-04-29T11:58:52+00:00
+FROM: Aled Morris <aledm@routers.co.uk>
+SUBJ: Re: FreeBSD HA configuration / Ethernet address takeover
+摘要: Aled Morris：举 Cisco HSRP 作为主备切换的另一种实现思路
+
+On Wed, 29 Apr 1998, Greg Lehey wrote:
+
+>     Tandem's Reliable Ethernet product does pretty much what you
+>     suggest: it has one board waiting as a hot standby, and if the
+>     first fails, the second will take its MAC address and carry on as
+>     if nothing had happened.  The main concern is determining when the
+>     first board has failed.
+
+Just to illustrate another approach - Cisco's Hot Standby Routing Protocol
+(HSRP) allows two (or more) routers on the same LAN to share an IP address
+which you can configure into your LAN hosts as their default route.  This
+address is distinct from the actual address of your routers, so the HSRP
+address is basically a secondary (alias) address. 
+
+The HSRP address also has its own MAC address, so if a fail-over occurs, 
+the new "active" router simply starts responding to the HSRP MAC and IP 
+address.  This avoids problems with ARP cache flushing.
+
+The protocol is implemented by broadcasting keep-alives every 10 seconds or
+so on the LAN, and there are tweaks for nominating preferred routers,
+simple security etc.
+
+It would be cool to support this in FreeBSD (of course) but I don't know 
+if the HSRP protocol is published.
+
+Aled
+-- 
+tel  +44 973 207987                     O-
+aledm@routers.co.uk
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605215 ###
+===== 库内序 146772 | PK 2605215 | 等级 L3 =====
+DATE: 1998-04-29T13:16:51+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: Re: SIGDANGER
+摘要: David E. Cross：按工作集高低逐个杀进程的方案难题在等待时长不定，占用者可能耗时数秒
+
+On Wed, 29 Apr 1998, Terry Lambert wrote:
+
+> A probable optimization would be:
+> 
+> 	1)	Shoot everyopne with a "low memory condition" handler
+> 	2)	wait
+> 	3)	if memory is still low, shoot the highest working set
+> 		without a handler and go to 2
+> 	4)	Satisfy outstanding unsatisfied requests.
+
+Hmm, I have a slighlty different idea... (the problem is, how long do
+you wait? A hog process could take a couple of seconds to
+complete and flush memory).
+ 
+This is what I would prefer to see:
+
+1) SIGDANGER (or whatever) would cause a program to terminate by default
+2) To ignore this signal your uid or euid must be 0.
+3) Anyone can install a signal handler.
+
+the Kernel would then treat processes as follows:
+1) Processes that did not have SIGDANGER handled would be the first to be
+killed (just sent a SIGKILL).
+
+2) next processes that had a handler installed would be sent SIGDANGER.
+
+3) Finally processes with SIGDANGER ignored would be killed.
+
+Presumably most processes would fall in group 1, and that could free up
+the majority of processes.
+
+As in the case of a process that dirtys a copy on write page when there is
+no more memory, if the process does not have any SIGDANGER handling, just
+kill it, otherwise complete step 1, if that does not free enough memory
+then kill the offending process.
+
+As there needs to be  wait time with sigdanger, I think that processes
+that have sigdanger should be sent it when memory is 90% full, that will
+be a proactive step to keep memory from running out in the first place.
+
+--
+David Cross
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605216 ###
+===== 库内序 146773 | PK 2605216 | 等级 L4 =====
+DATE: 1998-04-29T13:45:28+00:00
+FROM: "Nguyen HM (Mike)" <NguyenHM@ucarb.com>
+SUBJ: RE: FreeBSD HA configuration / Ethernet address takeover
+摘要: Nguyen HM (Mike)：HP MC/Serviceguard 不做以太网地址接管，而是把包内 IP 映射到当前运行主机接口
+
+At my day job, we use a product that HP makes called MC/Serviceguard w/
+HP-UX. Two or more machines, sharing a set of disks. This system doesn't
+do Ethernet address takeover (we actually use FDDI here). Instead, you
+would define a "package" that would have its own IP address, and the
+MC/Serviceguard would map that to an interface on the machine on which
+the "package" is currently running. The "package" being the software and
+the volume group it lives on. All machines in the cluster have some kind
+of common heartbeat connection (e.g. serial or networking, we use a
+non-routed ethernet between the machines in a cluster). If a machine
+goes down, the MC/S will restart the package on another machine. Of
+course, there is some kind of lock manager to make sure you don't have
+two machines trying to run the same package (and thus access the same
+disks). Works reasonably well, and you can have, for example, two
+packages running on two machines with a common failover. It can also do
+things like hot spare network interfaces (e.g. two or more interfaces
+connected to the same network, but only one is active/ifconfig'ed, if it
+dies, MC/S will automatically bring up a spare interface; we actually
+use this product on several machines just for this purpose).
+
+This approach, of using an IP address, would save you the hassle of
+reprogramming the hardware address of an ethernet controller,  as well
+as allow you to use whatever networking tech. you want.
+
+For those interested, I there's a bunch of stuff, including manuals are
+at http://www.docs.hp.com/hpux/ha, including a doc on how to set up a HA
+NFS environment.
+
+Mike.
+
+   // Mike Nguyen
+  //  Unix Systems Analyst and Geek
+ //   Union Carbide Corporation * (281) 212-8073
+//    nguyenhm@ucarb.com * mikenguyen@sprintmail.com (personal)
+
+
+> ----------
+> From: 	Hans Huebner[SMTP:hans@artcom.de]
+> Sent: 	Wednesday, April 29, 1998 6:02 AM
+> To: 	Greg Lehey
+> Cc: 	freebsd-hackers@FreeBSD.ORG
+> Subject: 	Re: FreeBSD HA configuration / Ethernet address takeover
+> 
+> On Wed, 29 Apr 1998, Greg Lehey wrote:
+> 
+> > A big difference between the env
+[…中段省略 4025 字符…] FS
+> >     or some other protocol, and always read from the local machine.
+> >     As long as the write rate is not too high, this should allow for
+> >     higher availability.
+> 
+> If there is such a thing for FreeBSD, i want it ;)
+> 
+> Best regards,
+> Hans
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605217 ###
+===== 库内序 146774 | PK 2605217 | 等级 L3 =====
+DATE: 1998-04-29T14:10:14+00:00
+FROM: spork <spork@super-g.com>
+SUBJ: Re: Strange console/log message
+摘要: spork：回复其网卡为 Digital 21140 即 de0，跑在 10Mb 链路上
+
+
+On Tue, 28 Apr 1998, Adam McDougall wrote:
+
+>   I got one of these today also, but it was when I was in the middle of
+> copying some files and I switched my computer from  a 10bt hub  to a
+> 100bt hub.
+> Output=32 Inflate_error=8 igz.error=8 error2=0 where=180
+> tx0: device timeout 16 packets
+> 
+> Curious, what version of freebsd do you have, and what kind of network
+> card?
+
+This is a digital 21140(?) or de0, running at 10M.  The machine is running
+2.2-stable from early January...
+
+Charles
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605220 ###
+===== 库内序 146777 | PK 2605220 | 等级 L4 =====
+DATE: 1998-04-29T14:29:04+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Whom to contact? 
+摘要: Mike Smith：只读仓库可 setenv CVSROOT 指向 /cdrom/CVS-Repository 再用 cvs -R 操作
+
+> > ben% pwd
+> > /cdrom/CVS-Repository/src/usr.sbin/inetd
+> 
+> Don't use the repository directly off the CD unless you're already
+> a CVS master and know how to deal properly with read-only repositories.
+
+Having said that, you can get by with:
+
+% setenv CVSROOT /cdrom/CVS-Repository
+% cd /some-work-directory
+% cvs -R <arguments>
+
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605221 ###
+===== 库内序 146778 | PK 2605221 | 等级 L4 =====
+DATE: 1998-04-29T15:07:51+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Strange console/log message 
+摘要: Mike Smith：该内核消息源于有人试图运行一个解压失败的 gzip 可执行文件
+
+> I saw this in highlighted text on a console today, this is the
+> corresponding log entry:
+> 
+> Apr 28 18:13:47 www /kernel: Output=32 Inflate_error=8 igz.error=8
+> error2=0 where=182
+> 
+> I really don't know what this means.  Any ideas?
+
+Someone trying to run a gzipped executable that failed decompression.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605222 ###
+===== 库内序 146779 | PK 2605222 | 等级 L4 =====
+DATE: 1998-04-29T16:37:06+00:00
+FROM: David Wolfskill <dhw@whistle.com>
+SUBJ: Re: SIGDANGER
+摘要: David Wolfskill：认为 SIGKILL 应作为最后手段，因不可捕获无法给进程清理机会
+
+>Date: Wed, 29 Apr 1998 09:16:51 -0400 (EDT)
+>From: "David E. Cross" <dec@phoenix.its.rpi.edu>
+
+>the Kernel would then treat processes as follows:
+>1) Processes that did not have SIGDANGER handled would be the first to be
+>killed (just sent a SIGKILL).
+
+I'm probably exposing my ignorance here, but it seems to me that SIGKILL
+really ought to be a last resort....  Since it can't be caught, it
+provides absolutely no way for such a process to do any cleanup at all.
+
+On a related note, I'm wondering if memory allocation is the only
+resource to which this sort of strategy ought to apply:  I don't think
+of any that are as critical, just now, but I'm not entirely convinced
+that the list (of resources) should contain only a single entry....
+
+david
+-- 
+David Wolfskill		dhw@whistle.com	(650) 577-7158	pager: (650) 401-0168
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605223 ###
+===== 库内序 146780 | PK 2605223 | 等级 L3 =====
+DATE: 1998-04-29T17:19:23+00:00
+FROM: "David E. Cross" <dec@phoenix.its.rpi.edu>
+SUBJ: Re: SIGDANGER
+摘要: David E. Cross：认同非 root 关键进程不该被随机杀，指出这正是 nohup 式程序该出手的地方
+
+On Wed, 29 Apr 1998, Kent S. Gordon wrote:
+
+> On some boxes, some non root process are even more importain than most 
+> root processes.  Database engines are a example of non-root processes
+> that I would like to exclude from random kill (I want it to be the
+> last process killed not the first).
+> 
+yes, and this is where a nohup style program comes in.
+
+--
+David Cross
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605224 ###
+===== 库内序 146781 | PK 2605224 | 等级 L3 =====
+DATE: 1998-04-29T17:12:15+00:00
+FROM: "Allen Smith" <easmith@beatrice.rutgers.edu>
+SUBJ: Proxy ARP for transparent firewalling: arp -s pub vs choparp
+摘要: Allen Smith：因校园防火墙过宽且内部人员可直连，本地网管又不放行，寻求为自家 SGI 自建防火墙方案
+
+Hi. We've got a slightly weird situation, but it may be applicable to
+others. We're needing to set up a firewall to protect our systems,
+because the exterior Rutgers firewall isn't sufficient: A. it's rather
+looser than what's needed to protect SGIs (sigh...); and B. a lot of
+people can get access to PCs, etcetera inside the Rutgers
+firewall. Unfortunately, the local Network Services refuses to admit
+this, and won't reconfigure the building router to send packets for
+our machines to a firewall machine (admittedly, the router in question
+is old and limited in its capabilities), and also won't let us run
+routed on that machine to send RIP packets to do the reconfiguration
+itself.
+
+Therefore, the solution that I've come up with is using proxy
+ARP. This should work as follows:
+
+[Rutgers]---[Rutgers router]--[hub]--[our firewall]--[hub or
+switch]--[our machines]
+
+In this, in order to get the Network Services controlled router to
+direct packets that are for our machines to the firewall's exterior
+interface, it'll need to be sending our ARP packets that will tell the
+router (and the other machines on the local network) that its Ethernet
+interface is the one for all our machines' IP addresses. The firewall
+(a FreeBSD-stable machine that we're in the process of getting in from
+Atipa) will have ip_filter set up on it, which will use its fastroute
+capability to route packets to its interior interface if they're for
+our machines. Our machines will be set up with the firewall's interior
+interface (probably a private IP address, if I can get the routing set
+up properly for those - SGI's route implementation seems to be buggy
+in this regard, although that may be conflicts with routed) as their
+default gateway.
+
+OK. So far, fine and dandy. There are two problems, however:
+
+	A. How do I get the firewall machine to broadcast (on the
+	   _exterior_ interface _only_) ARP packets for the interior
+	   machines? This comes down to a question of arp -s pub vs
+	   choparp. The former requires less machine time and no BPF
+	   interface (a definite advantage for a firewall machine,
+	   give
+[…中段省略 382 字符…] able to me, but I'm not sure what that'll
+do.
+
+I sent this message to freebsd-stable before, and got some help, but I
+need to make sure that things will work _before_ I try doing anything
+like proxy ARP broadcasts - especially given the political
+considerations. Should I also send it to freebsd-isp, as the people
+with the most experience with firewalls?
+
+	Thanks very much,
+
+	-Allen
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605230 ###
+===== 库内序 146787 | PK 2605230 | 等级 L4 =====
+DATE: 1998-04-28T22:13:24+00:00
+FROM: James Raynard <fhackers@jraynard.demon.co.uk>
+SUBJ: Re: SIGDANGER
+摘要: James Raynard：自称 SIGDANGER 基础工作数月前已基本完成但中途搁置，代码见 freebsd.org 个人目录
+
+On Mon, Apr 27, 1998 at 05:30:38PM -0500, John S. Dyson wrote:
+> > 
+> We do need to adopt an extended signal set, and I think that someone
+> else has already developed it.  SIGDANGER could be valuable.
+
+Well, I did most of the base work a couple of months ago, before getting
+stuck. 
+
+http://www.freebsd.org/~jraynard/source/
+
+(Assuming you don't have someone/something else in mind).
+
+James
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605232 ###
+===== 库内序 146789 | PK 2605232 | 等级 L4 =====
+DATE: 1998-04-29T19:23:09+00:00
+FROM: Conrad Minshall <conrad@apple.com>
+SUBJ: Re: SIGDANGER
+摘要: Conrad Minshall：约 1985 年在 IBM 给 RT PC 的 AIX 加 SIGDANGER，此前页空间耗尽会挂死
+
+This talk of SIGDANGER takes me back, way back.  Long ago (circa '85) I
+worked for IBM on an operating system for a box called the RT PC.  AIX was
+the OS, and yes, a young programmer (me) added SIGDANGER to it.
+
+Before SIGDANGER (and the failsafe measure SIGKILL code) AIX would freeze
+up if it ran out of paging space.  That happened all too often because disk
+space was expensive, marketing wanted a low "entry" price, and so user
+systems were by default being configured with paging spaces too small for
+actual usage patterns.
+
+Note a fundamental requirement for AIX was that it support sparse
+allocation.  Some AI and engineering applications required huge virtual
+address spaces that would be backed only "on demand".  In the classic BSD
+model you must have disk space allocated for all virtual space, which was
+wasteful at best and prohibitively expensive at worst.  At the time I
+suggested that sparse allocation should default off and processes have to
+request it somehow, but I was 1) very junior, and 2) unable to propose an
+implementation - the VM code was down in the mysterious "VRM", hidden from
+the Unix kernel layer.
+
+BTW, in the original AIX all signal bits were already in use so SIGEMT,
+which was unused by the system, got converted into SIGDANGER.  That was of
+course a gross hack so later when time permitted signal bits were expanded
+beyond one 32 bit word and SIGDANGER switched from number 7 to number 33.
+
+So much for history/nostalgia.
+
+Terry:
+>If the guy with the highest working set has a SIGDANGER (I prefer
+>naming like SIGLOWMEM or something more descriptive of what the signal
+>actually indicates) handler registered, and pages do not become
+>available, then shoot the next highest working set guy, and so on.
+
+SIGLOSWAP then?.  I chose SIGDANGER as I thought there might be a more
+general purpose use than just for critical lack of paging space.  The
+generalized SIGDANGER was intended to mean "The system is in danger of
+crashing very soon.  Processes, consider yourself warned."
+
+Terry:
+>Specifically, POSIX requires that if I free a segment, I should be able
+>to m
+[…中段省略 352 字符…]  a free followed by a smaller or equal malloc must
+succeed.  Perhaps this came up in one of the standard's
+"interpretations"(?)
+
+
+--
+Conrad Minshall    mailto:conrad@apple.com
+If "conrad@apple.com" doesn't work, try using my alternates: rad@acm.org,
+conradm@computer.org, conrad@technologist.com, and conrad.m@bigfoot.com
+Picon viewable at: http://facesaver.usenix.org/h/48/4704.htm
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605234 ###
+===== 库内序 146791 | PK 2605234 | 等级 L3 =====
+DATE: 1998-04-29T19:53:38+00:00
+FROM: patl@phoenix.volant.org
+SUBJ: Re: sysctl for SIGDANGER
+摘要: patl：建议 sysctl 用 uid 阈值代替布尔开关，uid 不超过该值者取得 SIG_HOLD 语义
+
+> Simple.  sysctl variable for whether or not a user process can set
+> SIG_HOLD. 
+
+Better yet, instead of a simple boolean, make the sysctl variable
+a uid.  Any uid less than or equal to that value is allowed to get
+the SIG_HOLD semantic.  This gives the obvious degenerate cases for
+'root only' and 'anyone'; but also allows the non-root userids that
+many of us prefer for critical daemons to be distinguished from 'real'
+users.
+
+I also think that the value should be checked when the system is
+looking for candidates to kill rather than actually preventing the
+user process from setting SIG_HOLD.  That effectively gives us a
+fourth bucket to hold user processes that don't want to die; but
+will still be killed before SIG_HOLD system processes.  And, more
+importantly, it has the expected behavour if the sys admin changes
+the sysctl variable after user processes have been started.
+
+In fact, it could be taken one step further.  When the system
+is actually choosing processes to send a SIGKILL, it could give
+preference to those with uids above the cutoff point.  So now we
+have six buckets.  With the kill order being: user processes with
+no danger handler, system processes with no danger handler, user
+processes with a danger handler, system processes with a danger
+handler, user processes with SIG_HOLD set, system processes with
+SIG_HOLD set.
+
+
+
+-Pat
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605236 ###
+===== 库内序 146793 | PK 2605236 | 等级 L4 =====
+DATE: 1998-04-29T20:00:55+00:00
+FROM: Dan Nelson <dnelson@emsphone.com>
+SUBJ: how to fseek past 2GB?
+摘要: Dan Nelson：2GB 上限源于 fseek 的 long 偏移参数，fsetpos 本可行却在实现里退化为强转 long
+
+
+I recently noticed that there is no way to fseek() past the 2GB mark on
+files opened with fopen().  The offset in the FILE struct is an fpos_t;
+there's just no way to get at it.
+
+fseek(), unfortunately, is cursed with a "long" file offset, so that
+can't change.
+
+fsetpos() _could_ seek past the 2GB mark, since a fpos_t is a long
+long. Our current fsetpos implementation simply calls 
+(fseek(iop, (long)*pos, SEEK_SET)), though.
+
+What I did for my own use is create lfseek() and lftell() functions
+that basically copy the fseek() and ftell() source, but replace "long"
+with "fpos_t".  It works great.
+
+If I were to submit these as a PR,  what would be the best way to do
+it?  I'm leaning toward making fseek() and fsetpos() call lfseek(), to
+eliminate redundant code.
+
+Is there a "standard" function name for a fseek() function that takes
+an off_t or fpos_t?
+
+	-Dan Nelson
+	dnelson@emsphone.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605237 ###
+===== 库内序 146794 | PK 2605237 | 等级 L3 =====
+DATE: 1998-04-29T20:19:38+00:00
+FROM: Glenn Johnson <gjohnson@nola.srrc.usda.gov>
+SUBJ: debugging
+摘要: Glenn Johnson：f77 下正常运行的 Fortran 程序改用 g77 后结束时报 free 修改指针告警
+
+I sent the message below to questions@freebsd.org a few days ago but have not 
+received a response so I thought I would try here. Thanks.
+
+--------------------------------
+I have some Fortran programs that compile and run fine using f77 (f2c/cc). If 
+I compile the code with g77 I get significantly better performance but some of 
+the programs will give the following message upon completion:
+
+	free(): warning: modified (page-) pointer
+
+I get the correct results from the programs but I am concerned. How serious of 
+a problem is this? Am I correct in assuming that g77 is optimizing the code in 
+a way that is exposing a bug in the program code? Since using gdb on g77 
+compiled code is less than ideal, does anyone have an idea on how to go about 
+finding info on the problem(s)?
+
+I am not a skilled programmer but I would like to be able to provide 
+information to the program developers. The malloc warning does not occur under 
+Linux/g77 and so they may not be aware of any underlying bug(s). Thanks in 
+advance for your help.
+-- 
+Glenn Johnson				Technician
+USDA-ARS-SRRC				Phone: (504) 286-4252
+1100 Robert E. Lee Boulevard		FAX: (504) 286-4217
+New Orleans, LA 70124			e-mail: gjohnson@nola.srrc.usda.gov
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605241 ###
+===== 库内序 146798 | PK 2605241 | 等级 L3 =====
+DATE: 1998-04-29T21:25:10+00:00
+FROM: Tim Vanderhoek <hoek@hwcn.org>
+SUBJ: Re: SIGDANGER
+摘要: Tim Vanderhoek：认为 sysctl 布尔开关区分权限过于粗放，因关键进程可能以非 root 运行
+
+On Wed, 29 Apr 1998, Karl Denninger wrote:
+
+> > We should distinguish between user processes and root processes
+> > somehow, too.  A user shouldn't be able to make root's processes die
+> > unless the machine is explictly configured for that to be possible
+> 
+> Simple.  sysctl variable for whether or not a user process can set SIG_HOLD.
+
+That seems rather a rather blunt method.  Some important
+processes might be run non-root for security, for example.
+How reasonable would it be to add something to login.conf(5)?
+
+
+--
+Outnumbered?  Maybe.  Outspoken?  Never!
+tIM...HOEk
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605245 ###
+===== 库内序 146802 | PK 2605245 | 等级 L4 =====
+DATE: 1998-04-29T22:08:22+00:00
+FROM: Peter Jeremy <peter.jeremy@alcatel.com.au>
+SUBJ: Using BDM from FreeBSD
+摘要: Peter Jeremy：Gunter Magin 的 gdb 4.16 BDM 补丁含 Linux 并口驱动，问能否移植到 FreeBSD
+
+[Followups: Please note cross posting]
+
+Gunter Magin <magin@lpr.e-technik.tu-muenchen.de> has developed a set
+of patches to gdb 4.13 and 4.16 to allow it to talk to a BDM (Motorola
+CPU32 embedded debug) interface
+(ftp://ftp.lpr.e-technik.tu-muenchen.de/pub/bdm/gdb-4.16-bdm-patches.tgz).
+This includes a BDM parallel port device driver for Linux.
+
+Has anyone looked at porting this driver to FreeBSD?  (I realise it
+could also be done from user-mode, but haven't studied it to see if
+this is practical).
+
+Peter
+--
+Peter Jeremy (VK2PJ)                    peter.jeremy@alcatel.com.au
+Alcatel Australia Limited
+41 Mandible St                          Phone: +61 2 9690 5019
+ALEXANDRIA  NSW  2015                   Fax:   +61 2 9690 5247
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605247 ###
+===== 库内序 146804 | PK 2605247 | 等级 L4 =====
+DATE: 1998-04-29T21:46:36+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: SIGDANGER 
+摘要: Mike Smith：PC/RT 配 IBM 首款 RISC 处理器 ROMP，自己当年 90 美元淘来只得到一把螺丝
+
+> Since I was 7 years old at the time, could someone please tell me what a
+> PC RT is, and for that matter what color is an ACIS?  ;-)
+
+The PC/RT redefined the terms "big" and "heavy" in the personal
+computing world.  It also featured IBM's first RISC processor (the ROMP,
+if I remember correctly).  I bought one for $90 hoping to salvage some 
+parts; I think I ended up with a jar of screws and some very strange 
+ISA boards.  I certainly couldn't boot it. 8)
+
+As for colour, that's no challenge.  ACIS would have been green or 
+orange onscreen, and grey, beige, maroon or blue in the box on the 
+shelf.
+
+> On Wed, 29 Apr 1998, Jordan K. Hubbard wrote:
+> 
+> > > This talk of SIGDANGER takes me back, way back.  Long ago (circa '85) I
+> > > worked for IBM on an operating system for a box called the RT PC.  AIX was
+> > > the OS, and yes, a young programmer (me) added SIGDANGER to it.
+> > 
+> > So you're one of those evil AIX people who helped kill the ACIS port,
+> > the only REAL operating system for the PC RT? :-) :-)
+> > 
+> > 			   Jordan [I liked the RT - I had two of them, both
+> > 			   running *ACIS* :) ]
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-hackers" in the body of the message
+> > 
+> 
+> 
+> 
+>  Ben
+> 
+> "You have your mind on computers, it seems." 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605248 ###
+===== 库内序 146805 | PK 2605248 | 等级 L4 =====
+DATE: 1998-04-29T22:10:20+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: debugging 
+摘要: Mike Smith：该 free 告警指向程序自身行为，反问是否确认程序没有 off-by-one 类错误
+
+> I have some Fortran programs that compile and run fine using f77 (f2c/cc). If 
+> I compile the code with g77 I get significantly better performance but some of 
+> the programs will give the following message upon completion:
+> 
+> 	free(): warning: modified (page-) pointer
+
+This is indicative of misbehaviour on the part of the program in 
+question.  Are you reasonably certain that your program doesn't suffer 
+from any off-by-one errors in array indexing, etc.?
+
+> I get the correct results from the programs but I am concerned. How serious of 
+> a problem is this? Am I correct in assuming that g77 is optimizing the code in 
+> a way that is exposing a bug in the program code? Since using gdb on g77 
+> compiled code is less than ideal, does anyone have an idea on how to go about 
+> finding info on the problem(s)?
+
+The problem is moderately serious in that it indicates that at least 
+part of the program is performing incorrectly.  It is difficult to know 
+whether the true problem lies in the Fortran code and is merely being 
+revealed by the different compiler, or whether it is intrinsic to g77.
+
+> I am not a skilled programmer but I would like to be able to provide 
+> information to the program developers. The malloc warning does not occur under 
+> Linux/g77 and so they may not be aware of any underlying bug(s). Thanks in 
+> advance for your help.
+
+The warning comes from the FreeBSD user-space memory manager, which is 
+much more observant of this sort of behaviour than the Linux equivalent.
+
+You might want to try setting some of the extra-touchy malloc options 
+(see the malloc(3) manpage) to see if you can force the program to 
+coredump when the corruption happens.  This may in turn lead you closer 
+to the source of the problem.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605249 ###
+===== 库内序 146806 | PK 2605249 | 等级 L3 =====
+DATE: 1998-04-29T23:49:16+00:00
+FROM: John Birrell <jb@cimlogic.com.au>
+SUBJ: Re: SIGDANGER
+摘要: John Birrell：回忆 PC/RT 外观与速度近似 IBM PC，认为 SIGDANGER 原意只是良性警告
+
+Snob Art Genre wrote:
+> Since I was 7 years old at the time, could someone please tell me what a
+> PC RT is, and for that matter what color is an ACIS?  ;-)
+
+It looked (looks, I still have a client with one 8-) like an IBM PC
+and runs about as slow as one. People would be heard to ask: "Is
+it actually doing _anything_?!". I think that SIGDANGER was actually
+intended as a "Warning Will Robinson, you'll put your back out if
+you lift this". The idea being to prevent little people (like me)
+from attempting to do things that they'll regret, like trying to find
+out if it _was_ doing anything - which it usually was.  The problem
+they had was getting the SIGDANGER signal out of the box with adequate
+warning to the guy with the screw driver. This was before computers
+could talk. So they discontinued production to reduce the work health
+insurance claims.
+
+8-)
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605251 ###
+===== 库内序 146808 | PK 2605251 | 等级 L3 =====
+DATE: 1998-04-30T02:54:59+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Compaq RAID Array Drivers? (IDA-2)
+摘要: Matthew N. Dodd：询问 Compaq IDA-2 RAID 阵列卡未合入的驱动存放处，自己只依稀记得有
+
+
+I seem to remember something about un-commitable drivers for the Compaq
+RAID array controllers
+
+Anyone remember where those were?
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

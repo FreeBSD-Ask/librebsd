@@ -1,0 +1,24 @@
+2605632|L4|Justin C. Walker：说明 pipe 读端会持续等待数据，因为读端被视为服务提供者一侧
+2605635|L4|Tom：Oracle 7 表现传闻不佳，其使用线程或 AIO 且自带用户态线程库，多用户性能平平
+2605636|L4|Tom：认为 CMD640 硬件缺陷占比说法偏高，主板控制器为 Intel 82371SB 不会探测为 CMD640B，故相关 options 无效
+2605637|L4|Jordan K. Hubbard：提议 restore 增加 u 标志，同 tar unlink，确保目标不存在以免 symlink 或 mknod 告警
+2605638|L4|Tom：认为 restore 在提示后仍调用 panic 只是外观缺陷，自第一天起就持此主张
+2605641|L4|Dag-Erling Coidan S：引手册说明 root 也受 login.conf 限制，default 类自动用于无有效登录类的非 root 用户
+2605642|L3|Dag-Erling Coidan S：对 restore 新增 u 标志的提议表示无异议，称这是非常受欢迎的补充
+2605643|L3|CyberPsychotic：由 linux 转用 BSD 后原始套接字编程受阻，SOCK_PACKET 方式不适用，求 SOCK_RAW 用法
+2605644|L4|brian mitchell：建议改用 bpf 做原始抓包，功能与 sock packet 相当但明显更好用
+2605645|L4|Dag-Erling Coidan S：纠正关于 hotmail 的说法，称其 NT 尝试失败前后一直运行 Solaris
+2605647|L4|Stephen McKay：确认 pipe 写端关闭时读端 read 返回 0 字节即到达 EOF 条件
+2605648|L3|Ruslan Ermilov：询问提交日志中出现的 MFC 一词含义
+2605649|L3|Wilko Bulte：询问为何发给 Shimon Shapiro 即 shapiro.org 的邮件会退信，并致歉列表误用
+2605650|L4|Chuck Robey：答复 Ruslan Ermilov，MFC 是 Merge From Current 的缩写
+2605651|L4|Dan Nelson：MFC 即从 current 合并，用于把改动移入 stable 分支，另有 YAMFC 即 Yet Another MFC
+2605654|L3|Mark Tinguely：询问是否有人有在繁忙局域网环境上经 DLT 磁带机备份文件系统的经验
+2605656|L3|看到 SCO 把 Merge 的 DOS 与 Win 模拟版授权给个人非商用免费使用，询问移植到 FreeBSD 大约需要多少工作量与哪些内核支持
+2605660|L3|Amancio 建议需要基准数据时直接找 Julian 索取，称他正在评估 NC 服务器
+2605662|L3|Julian Elischer 主张应让发问者知道究竟是谁在散布 FreeBSD 将被弃用的说法，好去找本人要求其停止
+2605664|L3|询问 BSD4.4 make 的 # 号是否曾用于注释以外的用途，有人称早期 4.4 用它引入 include，本人对此很怀疑求确证
+2605665|L3|Linux 内核 1.2.8 网关极易被学生拿下 root，需在 RedHat 5.0 与 FreeBSD 2.2.5 间升级并问 FreeBSD 安全水平
+2605666|L4|Joe Shevland 澄清先前说法只针对 NC-In-A-Box 这一产品且回帖被退信，并承认低估了之外的开发量
+2605669|L4|Tom 指出 Linux 及各类 Unix 的安全问题通常取决于用户态软件的版本而非内核
+2605670|L4|Benjamin Greenwald 说明 3C905B 不工作是因厂商弃用旧 PIO 接口改用 DMA 引擎，正在写的 vx 新驱动完全不用程序化 I/O

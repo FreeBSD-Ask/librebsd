@@ -1,0 +1,24 @@
+2606006|L3|David E Cross (Grindle): 今晨用 cvsup 更新后编译 -stable 内核，加载最后一步报无法解析 isa_devtab_cam
+2606007|L3|The Hermit Hacker: 按官网示例设 CVSROOT 为 anoncvs.freebsd.org 后 checkout 报找不到模块 ls
+2606012|L3|C L 问 BPF 能否监控出站数据包及协议生成的包，并问 Solaris 的 Network Interface Tap 软驱动有无人在用
+2606013|L3|Andreas Klemm：觉得 Hellmuth Michaelis 建的 FAQ 网页不错，建议把副本发给 Paul Henning Kamp
+2606014|L3|Jason Thorpe：听说 M$ 称要让 Windoze NoThanks 在 alpha 继续跑就取消 NC 项目，并提 DNARD 设计被他人采用
+2606017|L4|Mike Smith：答 BPF 支持监控出站数据包，并说做个简单测试就能看到这一点
+2606020|L4|Stefan Bethke：想固定 tty 与 ppp 单元对应以配合 ipfw 和计费，指出 pppalloc 只选第一个空闲单元，提出修改方案
+2606021|L4|Eivind Eklund：说 mIRC 据报道在 WINE 上运行完美，且长期如此
+2606023|L3|L.C.：谢 Mike 后追问 BPF 类似设备能否拦截过路包、改写如目的端口后注入网卡，或拦截入站包改写后送回上层协议与应用
+2606024|L3|Barry Lustig：2.2.6 桌面机 fork 出几十个 inetd 却不完成 popper 的 exec，top 也停止显示 CPU 状态全为 0
+2606027|L4|Dan Janowski：认为对方要的功能是 divert(4)，natd 就用它
+2606028|L4|Manar Hussain：说 StrongARM 未见 FreeBSD 移植，NetBSD 移植较成熟，因历史原因也叫 RiscBSD
+2606030|L4|Tatu Ylonen：就 ssh-1.2.20 下同一脚本经 ssh 输出乱序，推测脚本同时写 stdout 与 stderr 所致
+2606031|L4|Soren Kristensen：解释 IBM 选 8088 是因为想要高于 8 位又不想用满 16 位，因外设多为 8 位且 DRAM 只有 x1 型
+2606032|L4|Jaye Mathisen：说同一问题与解法自己很久前就报过，3.0 无问题而 2.2.5 频繁崩溃
+2606034|L4|Mike Smith：答不能，BPF 只拿到此前已经过路的包的副本，并再次指出该用 divert(4) 机制
+2606036|L3|Andrew Reilly：就 DNARD 被其他厂商采用一事追问具体机型，说够便宜就想要一台
+2606037|L4|Don Lewis：说 SunOS 4.x 的 NIT 只能看入站包，只有一台 Sun 就无法同时看会话两侧
+2606040|L3|Jonathan Lemon：质疑 Robey 的说法，指出寄存器重命名从架构角度看只指片内寄存器
+2606044|L4|Mahlon Smith：说下载主题后不要解包，在 .xinitrc 里写 exec enlightenment -theme 后跟主题路径
+2606046|L4|Andrzej Bialecki：宣布建 freebsd-small 列表讨论小型与嵌入式安装，向 majordomo 发 subscribe 加入
+2606047|L3|Peter Dufault：求问不用写程序如何试探一台在 UDP 端口讲 ASCII 的设备，该设备是 Keithley SmartLink
+2606048|L3|L.C.：谢各位后说会读所荐书籍并试各法，自述两年前开发过链路层拦截驱动，近又做完 socket 层拦截项目，需把 Windows 代码移植
+2606049|L3|Jordan K. Hubbard：转发 Eileen Cohen 关于 ;login 是否报道 FREENIX 轨，问有无同在 USENIX 者接手

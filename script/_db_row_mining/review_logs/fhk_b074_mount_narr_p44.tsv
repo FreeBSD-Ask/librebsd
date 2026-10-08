@@ -1,0 +1,24 @@
+2606175	885	dag-erli 据自己了解指出 Coda FS 与 CCD 不是一回事，它是分布式文件系统，定位更接近 NFS 的替代；文件缓存在本地，断开服务器后仍可继续操作已缓存的文件
+2606176	885	marino 说默认内核 config 文件里 MAXUSERS 取 10，所以 360 个文件描述符就是全系统上限；可加大 MAXUSERS 重编内核，也可运行时用 sysctl 设 kern.maxfiles 与 kern.maxfilesperproc
+2606177	885	jmb 回复 Walter Hafner 的疑问，说 coda 完全是另一回事，它允许断线操作，等你重新连回网络时再重新同步，真正面向的场景是移动计算
+2606178	885	robert 说不确定 Coda 能否干净地嵌入整体格局：它确实提供卷管理服务，但服务端不契合现有文件系统结构；卷的元数据放在 RVM 即带日志的事务型虚拟内存分区里以满足版本控制与 ACL 需求，若能用上事务文件系统就可不再依赖 RVM
+2606179	885	stefan 说 /usr/sbin/config 负责这件事：读取设备与资源清单，据此生成名为 ioconf.c 的源文件放进 /usr/src/sys/compile/GENERIC，内含各设备表；再遍历驱动检查设备结构里代表探测函数的字段并调用，返回硬件存在即可挂载
+2606181	885	ron 只回一行纠正前面的说法：端口号换算应当用 htons 而不是 htonl，然后签下 rminnich@sarnoff.com，自述关注 Java 这类与操作系统和体系结构无关的编程语言
+2606182	885	eric 认为 8.9 确实更防垃圾邮件，不过 8.8.8 配上各种非分发规则也能达到大部分效果；最关键的变化是 8.9 默认关闭中继，还能按 IP 地址、域名、HELO 或 MX 记录决定转发范围，并附带 RBL、DNS 检查与正则匹配的即插即用规则
+2606185	885	schmidt 在回复里补充三项应列入清单的内容：迁移到 ELF 格式、ATAPI CDR/CDRW 光驱支持、VESA 图形模式支持，并说自己可以担任这三项的负责人
+2606186	885	wilko 回复 Chris Silva 的问题，说只需把 Bitsurfer 配置正确即可，FreeBSD 本身不需要任何适配改动，让他去查 BS 文档；署名 Wilko，位于荷兰 Arnhem
+2606191	885	ollivier 认为这个新版本在防垃圾邮件上远胜从前，理由是中继默认就被禁止；他还说新的反垃圾邮件规则比 C. Assman 的旧规则更为灵活多样
+2606192	885	polstra 依据众人的建议更新并扩充了 CVSup FAQ，放在 http://www.polstra.com/projects/freeware/CVSup/faq.html，请大家去看一眼并继续提建议；署名显示他任职于西雅图
+2606194	885	harlan 反问，说自己很会用 Claus Assman 的那套东西，其中有些功能 8.9 里他还不会做；他听说 CA 的规则集也将支持 8.9，并自述出于类似原因一直把迁移拖到 8.8.x 中期，防火墙之外的机器仍停留在 5.6x+IDA
+2606195	885	archie 否认自己会来做这个负责人，说 Andre Oppermann 会来；他是在 Julian Elischer 追问是否愿意加入后回信，署名显示任职于 Whistle Communications
+2606196	885	amancio 写给 Andre，称赞 Julian 是了解 FreeBSD 的好来源且具备跨项目技能，还说自己在 TRW Systems 与他共事过，当时自己担任 X Server 项目的 Team Lead，并欢迎对方有问题直接发邮件
+2606198	885	child 说他用 2.2-971218-SNAP 做 pppd 拨入服务器，挂 15 路 modem 接到一块 control rocket 卡，近几周反复 double page fault 后挂死只能重启，期间没改过软硬件，想问如何排查以及能否自动抓崩溃并重启
+2606199	885	amancio 说他的电话已经由 FreeBSD 主机代管，贴出旧设置说明的存放地址 ftp://rah.star-gate.com/pub/Voice.FAQ，并打算发起新的语音应答机项目，请有意者向 multimedia@freeBSD.org 发帖
+2606200	885	meir 说构建任何程序都会报 /usr/lib/crt0.o 的未定义符号错误，符号是 __startup_setlocale 从 text segment 被引用，怀疑自己的 linker files 有问题，并请大家把回复抄送到 meir@bis.co.il
+2606202	885	meir 回答 Dag-Erling 追问的版本问题，说这个未定义符号只在 2.1.6 上出现，换到 2.2.2 就没有问题了，道完谢就签名收尾
+2606205	885	simon 判断对方跑在混乱的阵列上：建盘他用的 dptmgr/fw0，随后在 sysinstall 的 Geometry 选项里排成整齐的 1MB 轨道；现在看到的几何参数来自阵列重建，DPT 固件想尽量把盘塞进 BIOS 可接受的几何，两块信息都还在且都被读到
+2606208	885	sabrina 问 Greg，需求是两块 scsi 硬盘装在 2.2.6 上、根分区 200 MB，想让 sd0 与 sd1 镜像分配 swap、/usr、/usr/src、/u、/hw 等，并问 volume 到 plex、subdisks、drives 的映射怎么配
+2606209	885	mike 表示自己其实并不想要对方做法里的很多东西，自己照旧也挺好；只要这套实现能真正跑起来，他认为应该不会带来什么麻烦；署名给出 mike@smith.net.au 与 msmith@freebsd.org 两个地址
+2606210	885	mike 提示要留意授权条款，说他最近在 SunOS 上用 sendmail 8.9.0 搭配 db-2.0 干活，觉得两个发行版都有过授权变更；构建文档非常倾向让人去用 db-2.0，他自己试下来没问题
+2606211	885	stesin 补充说 ports 里的 BerkeleyDB 据他记得仍是 2.3.16，而 www.sleepycat.com 上当前是 db-2.4.10 加 3 个补丁，2.3.16 已撤下；两者改动表面却巨大，2.4.10 至今在 FreeBSD 上跑不起来
+2606212	885	stefan 报告一个报错，内容是 mail 在 malloc 里发出递归调用警告，随后段错误并生成 core；mail 由脚本调起，程序已 stripped 而那台机器上没有源码，这是他第一次注意到，担心还有 cron 任务同样没发出邮件

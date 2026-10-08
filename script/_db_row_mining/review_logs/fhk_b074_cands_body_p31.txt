@@ -1,0 +1,914 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605632 ###
+===== 库内序 147189 | PK 2605632 | 等级 L4 =====
+DATE: 1998-05-08T04:37:02+00:00
+FROM: "Justin C. Walker" <justin@lilith.apple.com>
+SUBJ: Re: Question about pipe()
+摘要: Justin C. Walker：说明 pipe 读端会持续等待数据，因为读端被视为服务提供者一侧
+
+/*
+ * I was under the impression that if the write end of a pipe is closed, a
+ * read() at the other end of the pipe will return an error (or at least
+ * an EOF condition). Apparently it doesn't. Did I miss something? Is
+ * there another way to interrupt the read()?
+ */
+	In case no one's answered: a pipe reader will hang around
+waiting for data to read, the idea being that the pipe reader is a
+"service provider", while the pipe writer is the "service requester".
+A pipe doesn't really have an end-of-file - it's "infinitely long".
+	The writer can get an error condition (EPIPE and/or SIGPIPE)
+because otherwise, there's no way of knowing that the "service
+provider" has taken a vacation (or otherwise wandered off into the
+weeds).
+
+Regards,
+
+Justin
+
+Justin C. Walker, Curmudgeon-At-Large   *
+Institute for General Semantics         | They sentenced me to 20 years
+Apple CoreOS Networking                 |       of boredom
+Apple Computer, Inc.                    | For trying to change the system
+2 Infinite Loop                         |       from within
+Cupertino, CA 95014                     |               LC
+*---------------------------------------*------------------------------------*
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605635 ###
+===== 库内序 147192 | PK 2605635 | 等级 L4 =====
+DATE: 1998-05-08T05:40:53+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: New Advocacy Mission: (Re: Oracle 7 on FreeBSD ) 
+摘要: Tom：Oracle 7 表现传闻不佳，其使用线程或 AIO 且自带用户态线程库，多用户性能平平
+
+
+On Fri, 8 May 1998, Stephen Hocking-Senior Programmer PGS Tensor Perth wrote:
+
+> Hmmm. Has anyone done some benchmarks on this beast and how well does it 
+> compare to other OS's on the same hardware?
+> 
+> 
+> 	Stephen
+
+  Rumours are that it is not good.  AFAIK, Oracle is written with threads
+and/or AIO.  It seems to use its own user mode thread library (just like
+the Solid DBMS), which gives it mediocre multiuser performance (also just
+like Solid).
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605636 ###
+===== 库内序 147193 | PK 2605636 | 等级 L4 =====
+DATE: 1998-05-08T06:02:50+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: dump/restore problem (was: Network problem with 2.2.6-RELEASE)
+摘要: Tom：认为 CMD640 硬件缺陷占比说法偏高，主板控制器为 Intel 82371SB 不会探测为 CMD640B，故相关 options 无效
+
+
+On Thu, 7 May 1998, Terry Lambert wrote:
+
+> options         "CMD640"
+> 
+> 
+> That work around the known hardware bug in about 60% of all IDE
+> controllers out there (by volume).
+
+  The percentage is a bit high.  It is been a while since I've seen any
+of those around.  The controller on my motherboard is an Intel 82371SB.
+Since it doesn't probe as a CMD640B, the 'options "CMD640B"' is a no-op
+anyhow.
+
+  Besides didn't this bug just hang the machine when both channels were
+accessed at once.
+
+> He may also want to play with the flags on his controller; also from
+> LINT:
+
+  Already all off.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605637 ###
+===== 库内序 147194 | PK 2605637 | 等级 L4 =====
+DATE: 1998-05-08T06:44:55+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Would anyone object to the following new flag to restore (-u)
+摘要: Jordan K. Hubbard：提议 restore 增加 u 标志，同 tar unlink，确保目标不存在以免 symlink 或 mknod 告警
+
+It does what --unlink does for tar: Make sure that the target doesn't
+exist before doing an operation that could cause a warning diagnostic
+to be generated (e.g a symlink() or mknod() call with a pre-existing
+target).  Sometimes you really want this behavior when you're using,
+for example, dump/restore back-to-back in order to clone a system disk
+to a backup drive.  Unless you want to newfs the backup drive each and
+every time (which wouldn't allow you to do incremental dumps to it
+either), you're going to get a faceful of diagnostics every time from
+restore which only serve to obscure any real errors that may be
+occuring.  Anyway, if there are no serious objections to this in the
+next 24 hours or so, I'll commit these changes:
+
+Index: main.c
+===================================================================
+RCS file: /home/ncvs/src/sbin/restore/main.c,v
+retrieving revision 1.2.2.3
+diff -u -u -r1.2.2.3 main.c
+--- main.c	1997/10/15 18:33:33	1.2.2.3
++++ main.c	1998/05/08 05:23:03
+@@ -61,6 +61,7 @@
+ 
+ int	bflag = 0, cvtflag = 0, dflag = 0, vflag = 0, yflag = 0;
+ int	hflag = 1, mflag = 1, Nflag = 0;
++int	uflag = 0;
+ int	dokerberos = 0;
+ char	command = '\0';
+ long	dumpnum = 1;
+@@ -97,9 +98,9 @@
+ 		inputdev = _PATH_DEFTAPE;
+ 	obsolete(&argc, &argv);
+ #ifdef KERBEROS
+-#define	optlist "b:cdf:hikmNRrs:tvxy"
++#define	optlist "b:cdf:hikmNRrs:tuvxy"
+ #else
+-#define	optlist "b:cdf:himNRrs:tvxy"
++#define	optlist "b:cdf:himNRrs:tuvxy"
+ #endif
+ 	while ((ch = getopt(argc, argv, optlist)) != -1)
+ 		switch(ch) {
+@@ -154,6 +155,9 @@
+ 			if (dumpnum <= 0)
+ 				errx(1, "dump number must be greater than 0");
+ 			break;
++		case 'u':
++			uflag = 1;
++			break;
+ 		case 'v':
+ 			vflag = 1;
+ 			break;
+@@ -289,10 +293,10 @@
+ {
+ 	(void)fprintf(stderr, "usage:\t%s%s%s%s%s",
+ 	    "restore tfhksvy [file ...]\n",
+-	    "\trestore xfhkmsvy [file ...]\n",
+-	    "\trestore ifhkmsvy\n",
+-	    "\trestore rfksvy\n",
+-	    "\trestore Rfksvy\n");
++	    "\trestore xfhkmsuvy [file ...]\n",
++	    "\trestore ifhkmsuvy\n",
++	    "\trestore rfksvuy\n",
++	    "\trestore Rfksvuy\n");
+ 	done(1);
+ }
+ 
+Index: resto
+[…中段省略 3249 字符…]  mkdir(cp, 0777) < 0 && !uflag) {
+ 		np->e_flags |= EXISTED;
+ 		fprintf(stderr, "warning: %s: %s\n", cp, strerror(errno));
+ 		return;
+@@ -205,6 +205,10 @@
+ 	char *existing, *new;
+ 	int type;
+ {
++
++	/* if we want to unlink first, do it now so *link() won't fail */
++	if (uflag && !Nflag)
++		(void)unlink(new);
+ 
+ 	if (type == SYMLINK) {
+ 		if (!Nflag && symlink(existing, new) < 0) {
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605638 ###
+===== 库内序 147195 | PK 2605638 | 等级 L4 =====
+DATE: 1998-05-08T06:27:39+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Tom：认为 restore 在提示后仍调用 panic 只是外观缺陷，自第一天起就持此主张
+
+
+On Thu, 7 May 1998, Terry Lambert wrote:
+
+> > 
+> >   That is bizare.  So it prints a "y/n" prompt and calls the panic
+> > function anyhow?
+> 
+> Look at the code.
+> 
+> You could argue that this was a cosmetic bug.
+
+  I've been arguing that since day 1.
+
+> > > One possible reason for this problem *could* ge your limits on the
+> > > account doing the restore (see login.conf).
+> > 
+> >   I run restore as root.
+> 
+> Root is limited by login.conf, just like everyone else.
+
+  No, root is not limited by login.conf.
+
+  Also, "time -l" shows resource usage for restore.  A "maximum resident
+set size" of 1264 isn't exactly hard for even a non-root user to cover.
+
+> >   Media is good.  Dump to disk file does same thing.  I've proved that the
+> > tape media and tape drive are not a factor.
+> 
+> OK.  Now we need proof that it isn't the raw disk device, the EIDE
+> controller, the EIDE drive, the cable being too long, etc..
+
+  It is not the cables.  Standard 18 inch cables.
+
+> If you can do that, we still haven't localized it to whether it's
+> dump writing bad data or restore thinking there's bad data when there
+> isn't.
+
+  Except that I could send over a copy of the first few megs of a dump
+archive that doesn't work, and you could prove whether the archive is
+valid or not.
+
+  On the other hand, assume that when dump reads the disk, it gets
+garbage.  Dump takes the garbage and writes an archive.  Why does restore
+crash reading the archive?  Isn't restore just dump in reverse?  Any
+archive written by dump should be restorable by restore.
+
+...
+> Or a fail under heavy access bug.
+
+  Unlikely that dump produce enough load.  The drives can do about
+5MB/s sustained filesystem performance.  A DLT that can do about 1500KB/s
+(as reported by dump), isn't going to be stressing it that much.
+
+...
+> This still won't eliminate some possible non-sequential access bugs
+> that could be introduced either by the driver, the disk cache, or the
+> VM system.
+
+  I guess there is no point arguing "the simplest explanation is always
+the best."
+
+> 					Terry Lambert
+> 					terry@lambert.org
+> ---
+> Any opinions in this posting are my own and not those of my present
+> or previous employers.
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605641 ###
+===== 库内序 147198 | PK 2605641 | 等级 L4 =====
+DATE: 1998-05-08T10:33:20+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Dag-Erling Coidan S：引手册说明 root 也受 login.conf 限制，default 类自动用于无有效登录类的非 root 用户
+
+Tom <tom@sdf.com> writes:
+> On Thu, 7 May 1998, Terry Lambert wrote:
+> > Root is limited by login.conf, just like everyone else.
+>   No, root is not limited by login.conf.
+
+Yes, root *is* limited by login.conf. Excerpt from the login.conf(5)
+man page:
+
+     A special record "default" in the system user class capability database
+     /etc/login.conf is used automatically for any non-root user without a
+     valid login class in /etc/master.passwd. A user with a uid of 0 without a
+     valid login class will use the record "root" if it exists, or "default"
+     if not.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605642 ###
+===== 库内序 147199 | PK 2605642 | 等级 L3 =====
+DATE: 1998-05-08T10:41:19+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: Would anyone object to the following new flag to restore (-u)
+摘要: Dag-Erling Coidan S：对 restore 新增 u 标志的提议表示无异议，称这是非常受欢迎的补充
+
+"Jordan K. Hubbard" <jkh@time.cdrom.com> writes:
+> occuring.  Anyway, if there are no serious objections to this in the
+> next 24 hours or so, I'll commit these changes:
+
+Objections? I'd say it's a most welcome addition.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605643 ###
+===== 库内序 147200 | PK 2605643 | 等级 L3 =====
+DATE: 1998-05-08T21:38:53+00:00
+FROM: CyberPsychotic <fygrave@freenet.bishkek.su>
+SUBJ: SOCK_RAW
+摘要: CyberPsychotic：由 linux 转用 BSD 后原始套接字编程受阻，SOCK_PACKET 方式不适用，求 SOCK_RAW 用法
+
+
+ Hello people,
+ Actually this is BSD C-related programming question, but since i didn't
+find any kind of freebsd-c-programming mailing lists.(time to have one?) I
+think that's the best place to ask:
+
+ I came to bsd from linux, and abit got stuck with its raw packet socket
+programming. I used to use SOCK_PACKET type to get raw stream of data from
+ethernet infreface running in promisc. mode, but found out that it doesn't
+work this way under BSD. (well, it doesn't have SOCK_PACKET at all, so i
+used SOCK_RAW, but still didn't get result i wanted). I would appreciate
+if anyone could provide me sample code or some links/refernces to online
+documentation covering this mistery.
+
+ Thanks beforehands,
+ Best Regards
+ Fyodor
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605644 ###
+===== 库内序 147201 | PK 2605644 | 等级 L4 =====
+DATE: 1998-05-08T12:19:04+00:00
+FROM: brian mitchell <brian@deity.loa.com>
+SUBJ: Re: SOCK_RAW
+摘要: brian mitchell：建议改用 bpf 做原始抓包，功能与 sock packet 相当但明显更好用
+
+Use bpf, it is the same as sock packet, except it does not suck nearly as
+much.
+
+
+
+On Fri, 8 May 1998, CyberPsychotic wrote:
+
+> 
+>  Hello people,
+>  Actually this is BSD C-related programming question, but since i didn't
+> find any kind of freebsd-c-programming mailing lists.(time to have one?) I
+> think that's the best place to ask:
+> 
+>  I came to bsd from linux, and abit got stuck with its raw packet socket
+> programming. I used to use SOCK_PACKET type to get raw stream of data from
+> ethernet infreface running in promisc. mode, but found out that it doesn't
+> work this way under BSD. (well, it doesn't have SOCK_PACKET at all, so i
+> used SOCK_RAW, but still didn't get result i wanted). I would appreciate
+> if anyone could provide me sample code or some links/refernces to online
+> documentation covering this mistery.
+> 
+>  Thanks beforehands,
+>  Best Regards
+>  Fyodor
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605645 ###
+===== 库内序 147202 | PK 2605645 | 等级 L4 =====
+DATE: 1998-05-08T12:59:41+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Dag-Erling Coidan S：纠正关于 hotmail 的说法，称其 NT 尝试失败前后一直运行 Solaris
+
+Ada <ada@noether.lab.usyd.edu.au> writes:
+> > there are some people there who are solaris fanatics who 
+> > view FreeBSD as a threat.
+> and solaris fans there would have loved the fact that microsoft tried to
+> run hotmail.com with NT, failed, and thus replaced a freebsd operation
+> with solaris 2.6
+
+Wrong. They were running Solaris all along, both before and after
+their failed attempt with NT.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605647 ###
+===== 库内序 147204 | PK 2605647 | 等级 L4 =====
+DATE: 1998-05-08T14:32:17+00:00
+FROM: Stephen McKay <syssgm@dtir.qld.gov.au>
+SUBJ: Re: Question about pipe() 
+摘要: Stephen McKay：确认 pipe 写端关闭时读端 read 返回 0 字节即到达 EOF 条件
+
+On Friday, 8th May 1998, "Justin C. Walker" wrote:
+
+> "Andreas Huber" wrote:
+> * I was under the impression that if the write end of a pipe is closed, a
+> * read() at the other end of the pipe will return an error (or at least
+> * an EOF condition). Apparently it doesn't. Did I miss something? Is
+> * there another way to interrupt the read()?
+
+Yes, when the write end is closed, the read end returns 0 bytes to read()
+(ie EOF).  You might have duplicated the write end using fork() though and
+forgotten to close the copy you don't need.  This is a common mistake.
+
+Similarly, a write when the read end is closed (all copies, remember) will
+generate SIGPIPE (which you can set to be ignored) and returns an error
+(with errno == EPIPE).
+
+Named pipes are very similar, but I don't think you were talking about these.
+
+>	In case no one's answered: a pipe reader will hang around
+>waiting for data to read, the idea being that the pipe reader is a
+>"service provider", while the pipe writer is the "service requester".
+>A pipe doesn't really have an end-of-file - it's "infinitely long".
+
+I have no idea what this fellow means here.  I suggest you disregard it.
+
+Stephen.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605648 ###
+===== 库内序 147205 | PK 2605648 | 等级 L3 =====
+DATE: 1998-05-08T15:51:20+00:00
+FROM: Ruslan Ermilov <ru@ucb.crimea.ua>
+SUBJ: MFC
+摘要: Ruslan Ermilov：询问提交日志中出现的 MFC 一词含义
+
+Hi!
+
+MFC word in commitlogs, what does it mean?
+
+-- 
+Ruslan Ermilov          System Administrator
+ru@ucb.crimea.ua        United Commercial Bank
++380-652-247647         Simferopol, Crimea
+2426679                 ICQ Network, UIN
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605649 ###
+===== 库内序 147206 | PK 2605649 | 等级 L3 =====
+DATE: 1998-05-08T16:10:03+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: list-misuse: shapiro.org mail bounces..
+摘要: Wilko Bulte：询问为何发给 Shimon Shapiro 即 shapiro.org 的邮件会退信，并致歉列表误用
+
+Sorry for the abuse of the list, but anybody know why mail to Shimon Shapiro
+bounces? shapiro.org that is.
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+______________________________________________ Powered by FreeBSD __________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605650 ###
+===== 库内序 147207 | PK 2605650 | 等级 L4 =====
+DATE: 1998-05-08T15:30:54+00:00
+FROM: Chuck Robey <chuckr@glue.umd.edu>
+SUBJ: Re: MFC
+摘要: Chuck Robey：答复 Ruslan Ermilov，MFC 是 Merge From Current 的缩写
+
+On Fri, 8 May 1998, Ruslan Ermilov wrote:
+
+> Hi!
+> 
+> MFC word in commitlogs, what does it mean?
+> 
+
+Merge From Current.
+
+> -- 
+> Ruslan Ermilov          System Administrator
+> ru@ucb.crimea.ua        United Commercial Bank
+> +380-652-247647         Simferopol, Crimea
+> 2426679                 ICQ Network, UIN
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+> 
+
+----------------------------+-----------------------------------------------
+Chuck Robey                 | Interests include any kind of voice or data 
+chuckr@glue.umd.edu         | communications topic, C programming, and Unix.
+213 Lakeside Drive Apt T-1  |
+Greenbelt, MD 20770         | I run Journey2 and picnic (FreeBSD-current)
+(301) 220-2114              | and jaunt (NetBSD).
+----------------------------+-----------------------------------------------
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605651 ###
+===== 库内序 147208 | PK 2605651 | 等级 L4 =====
+DATE: 1998-05-08T16:48:02+00:00
+FROM: Dan Nelson <dnelson@emsphone.com>
+SUBJ: Re: MFC
+摘要: Dan Nelson：MFC 即从 current 合并，用于把改动移入 stable 分支，另有 YAMFC 即 Yet Another MFC
+
+In the last episode (May 08), Ruslan Ermilov said:
+> Hi!
+> 
+> MFC word in commitlogs, what does it mean?
+
+Merge from -current.  Used when moving changes to the -stable branch. 
+See also YAMFC (Yet Another MFC).
+
+	-Dan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605654 ###
+===== 库内序 147211 | PK 2605654 | 等级 L3 =====
+DATE: 1998-05-08T17:36:44+00:00
+FROM: Mark Tinguely <tinguely@plains.NoDak.edu>
+SUBJ: Re: dump/restore problem (was: Network problem with 2.2.6-RELEASE)
+摘要: Mark Tinguely：询问是否有人有在繁忙局域网环境上经 DLT 磁带机备份文件系统的经验
+
+>  DLTs need blocksizes >= 64 Kb to be kept happy streaming. I used a DLT2000
+>  for years on my FreeBSD box, I now have a DLT4000. I can't keep 'm streaming
+>  from a 4G Barracuda with the current 64kB physio() limit. Keep the tape and
+>  the disks on seperate SCSI channels (I have 2x NCR810).
+
+do you have any experience using the DLT drive backup filesystem over a
+moderately busy local area network?
+
+--mark.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605656 ###
+===== 库内序 147213 | PK 2605656 | 等级 L3 =====
+DATE: 1998-05-08T17:41:53+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: How to run SCO Merge on FreeBSD ?
+摘要: 看到 SCO 把 Merge 的 DOS 与 Win 模拟版授权给个人非商用免费使用，询问移植到 FreeBSD 大约需要多少工作量与哪些内核支持
+
+Hi!
+
+Yesterday I looked at SCO website and found that they are licensing
+Merge (DOS, Win 3.1 and Win95 emulator) for personal and non-commercial
+usage for free. I have a question now: how much efforts will
+be approximately be needed to run it on FreeBSD ? Surely, some
+additional kernel support is necessary. But I guess the thing
+is worth it. It would be very nice to run it at home. And the
+commercial organizations probably can buy it from SCO without buying
+SCO Open Server :-) 
+
+(yes, I know that it's possible to to get SCO Unix for personal
+use for free and I did it but running Merge on FreeBSD would be
+twice more fun :-)
+
+-Serge
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605660 ###
+===== 库内序 147217 | PK 2605660 | 等级 L3 =====
+DATE: 1998-05-08T20:12:47+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: New Advocacy Mission: (Re: Oracle 7 on FreeBSD ) 
+摘要: Amancio 建议需要基准数据时直接找 Julian 索取，称他正在评估 NC 服务器
+
+Just ask Julian for any benchmark data points that you may need since
+he is evaluating the NC server right now.
+
+	Cheers,
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605662 ###
+===== 库内序 147219 | PK 2605662 | 等级 L3 =====
+DATE: 1998-05-08T22:16:14+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Julian Elischer 主张应让发问者知道究竟是谁在散布 FreeBSD 将被弃用的说法，好去找本人要求其停止
+
+I'm just saying that you should be told who IS saying it so that you can
+call them and ask them to stop SAYING it..
+
+
+julian
+
+
+On Thu, 7 May 1998, John S. Dyson wrote:
+
+> Julian Elischer said:
+> > Joe Shevland wrote:
+> > > 
+> > 
+> > > 
+> > > I've just spoken to some of the parties involved with the NCI
+> > > NC's down here in regard to Oracle 7 and FreeBSD. Now, going by
+> > > what I was just told, FreeBSD _is_ definitely being discontinued 8(
+> > 
+> > maybe you need to let john know the names of the people who 
+> > told you that as He's doing it and no-one has told him to stop 
+> > yet..
+> > 
+> There is a group of people working on *BSD in general.  FreeBSD is
+> not dead here, and there is little that is showing that it is.  There
+> are other products, but they don't affect the use of BSD.
+> 
+> -- 
+> John                  | Never try to teach a pig to sing,
+> dyson@freebsd.org     | it just makes you look stupid,
+> jdyson@nc.com         | and it irritates the pig.
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605664 ###
+===== 库内序 147221 | PK 2605664 | 等级 L3 =====
+DATE: 1998-05-08T21:37:19+00:00
+FROM: Chuck Robey <chuckr@glue.umd.edu>
+SUBJ: Make
+摘要: 询问 BSD4.4 make 的 # 号是否曾用于注释以外的用途，有人称早期 4.4 用它引入 include，本人对此很怀疑求确证
+
+Anybody know if BSD4.4 make has, at any time, used the "#" symbol for
+anything else _except_ the introduction of the comment?  I have someone
+telling me that it was used in early 4.4 to introduce the "include", I'm
+very skeptical about this, and I'd like anyone who can tell me for
+certain to let me know, thanks.
+
+----------------------------+-----------------------------------------------
+Chuck Robey                 | Interests include any kind of voice or data 
+chuckr@glue.umd.edu         | communications topic, C programming, and Unix.
+213 Lakeside Drive Apt T-1  |
+Greenbelt, MD 20770         | I run Journey2 and picnic (FreeBSD-current)
+(301) 220-2114              | and jaunt (NetBSD).
+----------------------------+-----------------------------------------------
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605665 ###
+===== 库内序 147222 | PK 2605665 | 等级 L3 =====
+DATE: 1998-05-08T23:33:18+00:00
+FROM: Sanjit Roy <fiber@phy.iitkgp.ernet.in>
+SUBJ: how safe is FreeBSD 2.2.5
+摘要: Linux 内核 1.2.8 网关极易被学生拿下 root，需在 RedHat 5.0 与 FreeBSD 2.2.5 间升级并问 FreeBSD 安全水平
+
+I need some advise regarding the security level in FreeBSD. Lately, a
+lot of students in my university campus have been into hacking activity.
+I have a Linux (kernel 1.2.8) system on one of my mail gateways and it's
+a piece of cake becoming 'root' on that machine. I immediately need to
+upgrade that to either REDHAT Linux 5.0 or FreeBSD 2.2.5. I have both
+the flavours of unix available with me.
+
+What I want to know is :
+
+1. which of the two is more secure?
+2. Is shadow util really effective in Linux. Don't know if there's one
+in FreeBSD?
+3. what do i have to do/install to make my system secure i.e, what are
+the available patches and where do i get them?
+
+
+Hoping to hear from you soon.
+Sanjit.
+fiber@phy.iitkgp.ernet.in
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605666 ###
+===== 库内序 147223 | PK 2605666 | 等级 L4 =====
+DATE: 1998-05-09T00:06:02+00:00
+FROM: Joe Shevland <joe.shevland@horizonti.com>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Joe Shevland 澄清先前说法只针对 NC-In-A-Box 这一产品且回帖被退信，并承认低估了之外的开发量
+
+Julian Elischer wrote:
+> 
+> I'm just saying that you should be told who IS saying it so that you can
+> call them and ask them to stop SAYING it..
+> [snip]
+
+I did try and respond to this message, unfortunately it bounced.
+
+John was quite correct in saying I was talking about one particular
+product, which was the NC-In-A-Box package. I didn't realise there
+was too much more development going on apart from this and the
+solaris version.
+
+Its still true what I've said, as far as I know, they will discontinue
+FBSD on this product ^ (which involved an NEC server). The NT version is
+in beta and will be released to certain people later this month (?).
+
+However, thanks to John for clarifying matters. Hopefully I've clarified
+my statements also.
+
+-- 
+Joe Shevland
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605669 ###
+===== 库内序 147226 | PK 2605669 | 等级 L4 =====
+DATE: 1998-05-09T00:04:38+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: how safe is FreeBSD 2.2.5
+摘要: Tom 指出 Linux 及各类 Unix 的安全问题通常取决于用户态软件的版本而非内核
+
+
+On Sat, 9 May 1998, Sanjit Roy wrote:
+
+> I need some advise regarding the security level in FreeBSD. Lately, a
+> lot of students in my university campus have been into hacking activity.
+> I have a Linux (kernel 1.2.8) system on one of my mail gateways and it's
+
+  Security problems on Linux (and all Unix distributions) normally have
+more to do with the version of the user mode stuff, rather than the
+kernel.  Unfortunately, Linux versions everything separately, so "Linux
+1.2.8" is meaningless.
+
+> a piece of cake becoming 'root' on that machine. I immediately need to
+> upgrade that to either REDHAT Linux 5.0 or FreeBSD 2.2.5. I have both
+> the flavours of unix available with me.
+> 
+> What I want to know is :
+> 
+> 1. which of the two is more secure?
+
+  I don't know.  There are a lot of updates on www.redhat.com for 5.0.
+FreeBSD 2.2.5 is obsolete and has been replaced by 2.2.6.  Rehat
+5.0+updates should be equivelant to FreeBSD 2.2.6+updates
+
+> 2. Is shadow util really effective in Linux. Don't know if there's one
+> in FreeBSD?
+
+  FreeBSD automatically shadows the password file.  In fact there is no
+option to run without.  The nice part is that it is transparent to
+applications.
+
+> 3. what do i have to do/install to make my system secure i.e, what are
+> the available patches and where do i get them?
+
+  Install 2.2.6 instead of 2.2.5.  Check patches directory for last minute
+changes.
+
+  Making your system is more about what you don't install (or deinstall)
+rather than what you install.  Many people install other software that
+allows easy breakins, mainly due to misconfiguration.
+
+  For example, the problem on your Linux mail gateway could just because
+you haven't updated Sendmail.  Or, because you let other users even login
+into mail gateways (I setup all mail gateways as closed servers,
+dramatically improving security).
+
+> Hoping to hear from you soon.
+> Sanjit.
+> fiber@phy.iitkgp.ernet.in
+
+Tom
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605670 ###
+===== 库内序 147227 | PK 2605670 | 等级 L4 =====
+DATE: 1998-05-09T02:16:03+00:00
+FROM: Benjamin Greenwald <beng@lcs.mit.edu>
+SUBJ: Re: 3C905B 
+摘要: Benjamin Greenwald 说明 3C905B 不工作是因厂商弃用旧 PIO 接口改用 DMA 引擎，正在写的 vx 新驱动完全不用程序化 I/O
+
+The reason the 3C905B doesn't work is because they dropped the old PIO 
+interface in favor of a better DMA engine.
+
+The new vx driver I'm currently writing (and really hope to have something to 
+show soon... work keeps getting in the way) won't use the programmed I/O 
+interface at all.  More than likely, the new driver will work beautifully for 
+the B rev.  The driver is being developed for the 3C905A that I own, so it 
+won't take advantage of any of the fancier features like descriptor polling.
+
+Unless, of course, someone is willing to swap a B rev. card for by A rev.
+
+-Ben
+
+
+> On Thu, 7 May 1998, Jordan K. Hubbard wrote:
+> 
+> > I don't follow this at all.  What are you trying to say here?
+> 
+> Basically what Mike said.. alot of the computer dealer's here dont even
+> stock the 3C905A cards now, only the new 3C905B. Thus its hard to keep up
+> with the 3com cards and drivers to support them. So I was saying prehaps
+> it would be better to switch to a SMC or Intel Etherexpress. Which is what
+> I will probly end up doing :>
+> 
+> -Tim
+> 
+> On Thu, 7 May 1998, Mike Smith wrote:
+> 
+> > The 3c905A is supported.  The B and future revisions are currently not
+> > supported.  There is believed to be ongoing development work on a
+> > driver for this adapter, but for now you would be advised to consider
+> > an alternative.
+> >
+> > --
+> > \\  Sometimes you're ahead,       \\  Mike Smith
+> > \\  sometimes you're behind.      \\  mike@smith.net.au
+> > \\  The race is long, and in the  \\  msmith@freebsd.org
+> > \\  end it's only with yourself.  \\  msmith@cdrom.com
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

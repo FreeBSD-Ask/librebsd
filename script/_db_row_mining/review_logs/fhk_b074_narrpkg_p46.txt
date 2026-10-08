@@ -1,0 +1,24 @@
+2606251|L3|Daniel OConnor：确认自己也得到同样报错并附上 setup.bin 的 linux_kdump 结尾片段
+2606252|L3|Peters：完成 2.2.6-Stable 安装后询问网络配置文件位置及有无工具可重置 ip 设置以改用 Win95 网关
+2606253|L4|Mitchell：指出 VMailer exim smail 都刻意保持 sendmail 兼容并称自己已用 exim 一年多作替代
+2606254|L3|Daniel OConnor：回应称除 PGSQL 外没有其他共享内存段且自己运行的是 -current
+2606255|L3|Elischer：反问这样为 FreeBSD 改走网关上网是否本末倒置并追问缘由
+2606256|L4|Albers：称自己也遇过该问题靠用一版较旧的 SO4 安装程序才装成并愿提供协助
+2606257|L4|Swindells：Allegro Common Lisp 5.0 beta 读 /proc/<pid>/map 失败并宜模拟 Linux procfs
+2606258|L3|Daniel OConnor：回应称自己也不确定这类功能该放何处并提或许只能改 procfs
+2606259|L4|Elischer：判断崩溃源于使用了 FreeBSD 不支持的 Linux procfs 功能随后发生非法内存引用并被自身捕获写 core
+2606261|L3|Fernando 报告 ns3 kernel log 反复出现 arplookup host is not on local network 报错并求助
+2606262|L3|Niall Smart：建议可 hexedit Star Office 安装二进制改为打开 /p/pid/cmdline
+2606263|L4|Niall Smart：建议联系 Allegro Lisp 协助移植，称 5.0 beta 依赖 linux /proc 故不支持 FreeBSD 模拟
+2606264|L3|Luiz de Barros 求助 Etinc 5025PQ E1 卡在 64Kbps 以上有问题，256Kbps 局向用 HDSL 加 V.35 转换
+2606266|L4|Yuri Shemanin：建议 hexedit setup.bin 将 /proc/%u/cmdline 改为 /proc/%u/status 再安装
+2606268|L3|Dennis 追问 Luiz 所称 Etinc 大于 64Kbps 不能工作是否意味着低于该速率可正常工作并求澄清
+2606271|L4|Bill Fenner：建议用 tcpdump arp 抓包并可能需 BPF 内核，解释为收到非直连网络的 ARP 请求
+2606272|L3|Luiz de Barros 澄清 Cisco 2509 与 pathrouter 经 256Kbps E1 互连，欲用 Etinc 替代 cyclades
+2606273|L3|Luiz de Barros 说明 64Kbps 链路及 Cyclades 接 Cisco 256Kbps 均正常，Etinc 替换 cyclades 不通
+2606274|L3|Wilko Bulte 征求 Asus T2P4 主板上 AMD K6/233Mc 与 Intel P55C/233Mc 孰优孰劣的意见
+2606275|L3|Ollivier Robert 称自己只跑 CURRENT 故无法回答关于 SO4 在 2.2.6 模拟下故障的疑问
+2606276|L4|Ollivier Robert：SO4 每次运行后总留数十个共享内存段，即便干净退出亦然，故自备脚本在运行后清理残留
+2606277|L4|Mike Smith：称 SO4 安装失败是已知问题，不解为何不直接用 argc argv，建议为 procfs 增加参数支持
+2606280|L4|Mike Smith：Thunderlan 驱动可用但尚无发行版收录，下个 -SNAP CD 会带或可从 current.freebsd.org 获取
+2606282|L3|Andrzej Bialecki 在 FreeBSD Lab 文件系统讨论里提到 non-IDE flash bootblock

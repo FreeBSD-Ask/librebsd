@@ -1,0 +1,35 @@
+2606261|L3|Fernando 报告 ns3 kernel log 反复出现 arplookup host is not on local network 报错并求助
+2606262|L3|Niall Smart：建议可 hexedit Star Office 安装二进制改为打开 /p/pid/cmdline
+2606263|L4|Niall Smart：建议联系 Allegro Lisp 协助移植，称 5.0 beta 依赖 linux /proc 故不支持 FreeBSD 模拟
+2606264|L3|Luiz de Barros 求助 Etinc 5025PQ E1 卡在 64Kbps 以上有问题，256Kbps 局向用 HDSL 加 V.35 转换
+2606266|L4|Yuri Shemanin：建议 hexedit setup.bin 将 /proc/%u/cmdline 改为 /proc/%u/status 再安装
+2606268|L3|Dennis 追问 Luiz 所称 Etinc 大于 64Kbps 不能工作是否意味着低于该速率可正常工作并求澄清
+2606271|L4|Bill Fenner：建议用 tcpdump arp 抓包并可能需 BPF 内核，解释为收到非直连网络的 ARP 请求
+2606272|L3|Luiz de Barros 澄清 Cisco 2509 与 pathrouter 经 256Kbps E1 互连，欲用 Etinc 替代 cyclades
+2606273|L3|Luiz de Barros 说明 64Kbps 链路及 Cyclades 接 Cisco 256Kbps 均正常，Etinc 替换 cyclades 不通
+2606274|L3|Wilko Bulte 征求 Asus T2P4 主板上 AMD K6/233Mc 与 Intel P55C/233Mc 孰优孰劣的意见
+2606275|L3|Ollivier Robert 称自己只跑 CURRENT 故无法回答关于 SO4 在 2.2.6 模拟下故障的疑问
+2606276|L4|Ollivier Robert：SO4 每次运行后总留数十个共享内存段，即便干净退出亦然，故自备脚本在运行后清理残留
+2606277|L4|Mike Smith：称 SO4 安装失败是已知问题，不解为何不直接用 argc argv，建议为 procfs 增加参数支持
+2606280|L4|Mike Smith：Thunderlan 驱动可用但尚无发行版收录，下个 -SNAP CD 会带或可从 current.freebsd.org 获取
+2606282|L3|Andrzej Bialecki 在 FreeBSD Lab 文件系统讨论里提到 non-IDE flash bootblock
+2606283|L4|Andrzej Bialecki：回忆 SO4.0 最新发行版改用 glibc 而非普通 linux libc，可能正是故障原因
+2606284|L4|Ollivier Robert：K6 整数快浮点慢，L1 cache 64 KB 大于 P55C 32 KB，本人用 K6 一年非常满意
+2606285|L3|Mike Smith：感谢 Andrzej 确认 SO4.0 改用 glibc，称所见 bogon 数量与该库一贯较差的水准相符
+2606286|L4|Ollivier Robert：自查本机 so40_lnx_01.tar.gz 与最新发行一致，时间戳 Mar 14，大小 45482226 字节
+2606287|L4|John Polstra：步骤无大碍但第 8 步多余，第 7 步 sync 其实也不需要，若要安心可重复 sync
+2606288|L4|John Polstra：针对升级 2.2.6 后负载异常现象点名 asclock 是常用元凶，建议读其源码即知原因
+2606289|L3|Daniel OConnor：按建议试过 truss 调试 Linux 模拟下的故障，但相比 kdump 没得到更有用的信息
+2606293|L3|Bill Fenner：唯一建议是用 tcpdump 抓包，看是否有与 kernel 日志里 arplookup 消息对应的 ARP 包
+2606295|L3|Brian Somers：在 arplook 线程里询问 Fernando 的机器上是否有在跑 dhcpc
+2606296|L3|chas 求助将 Cyrus IMAPd 改用另一份 shadow 密码文件，正尝试在源码里替换 getpwnam 调用
+2606298|L3|Fernando Schapachnik：否认跑 dhcpc，将抓 tcpdump arp 但需重编内核，不宜周五做，会回头报告
+2606299|L3|Ron G. Minnich：称 Star Office 是免费提供的，移植本身对公司是成本，劝大家别苛责，作品不错
+2606300|L3|Charles A. Peters：在 FreeBSD 2.2.6 上配 Apache 遇阻，询问有无线上 Apache 邮件列表或新闻组可问
+2606301|L3|Luigi Rizzo：无名 PCMCIA ne2000 克隆卡默认走 UTP 口，问 ed 驱动能否控制收发器类型，media 命令似不支持
+2606302|L3|sbabkin 介绍 SCSI-over-FastEthernet 原型已可用，问后续方向，思路是把 SCSI 封装走 FastEthernet 延长线缆
+2606304|L3|Lutz Albers：否认 Ollivier 所持 so40_lnx_01.tar.gz 为最新版，称 Star Office 另发了新构建
+2606306|L3|Karl Pielorz：建议查 www.apache.org，上面有大量 Apache 资料含具体 FAQ，可直接找答案
+2606307|L3|Stefan Bethke：建议 SCSI-over-FastEthernet 支持跨网络访问设备并能跨不同 OS，举例典型图形设计工作室需访问各类设备
+2606309|L3|Luigi Rizzo：追问那些卡是 PCMCIA 还是 ISA/PCI，并称自己也有相关经验
+2606310|L3|Mike：称自己同样遇到 arplookup host is not on local network 报错，请教资深联系人后转引其答复

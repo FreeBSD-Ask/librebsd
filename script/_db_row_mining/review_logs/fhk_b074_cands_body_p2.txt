@@ -1,0 +1,1032 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604483 ###
+===== 库内序 146040 | PK 2604483 | 等级 L4 =====
+DATE: 1998-04-12T00:43:56+00:00
+FROM: Bernie Doehner <bad@ece.WPI.EDU>
+SUBJ: Kernel memory usage docs..  handbook290.html
+摘要: Bernie Doehner：找到 3.0 内核内存使用文档在 /usr/share/doc/handbook/handbook290.html
+
+Found the docs for 3.0 kernel memory usage under
+/usr/share/doc/handbook/handbook290.html.
+
+Does the same thing exist for 2.2.5?
+
+Bernie
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604484 ###
+===== 库内序 146041 | PK 2604484 | 等级 L3 =====
+DATE: 1998-04-12T00:46:28+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: [Voice/Fax] mgetty-1.1.14 is the latest release 
+摘要: Amancio Hasty：接受该意见，称现阶段他主要想招揽贡献者，若对方恰为该包维护者则更佳
+
+Point well taken , at this point I am interested in contributors and if they
+also happen to be the respective package maintainer thats even better!
+
+	Regards,
+	Amancio
+
+>  * For those interested in turning their boxes into a voice / fax answering
+>  * machine the latest release of mgetty is 1.1.14.
+>  * 
+>  * 
+>  * http://www.leo.org/~doering/mgetty/index.html
+> 
+> Jean-Marc is the maintainer of the mgetty port, can you talk with him
+> to upgrade the port?
+> 
+>  * If you are lost with a problem with vgetty check the faq or go thru
+>  * the archived mailing list:
+>  * 
+>  * http://www.elilabs.com/mgarc/index.html
+>  * 
+>  * I am working on putting a nice wrapper for vgetty to setup voice
+>  * mail and fax if you are interested or have a nefty idea drop me a 
+>  * note;also, I am exploring putting voice capability into hylafax.
+> 
+> Itojun is the maintainer of the hylafax port. :)
+> 
+> Satoshi
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604485 ###
+===== 库内序 146042 | PK 2604485 | 等级 L3 =====
+DATE: 1998-04-12T01:06:16+00:00
+FROM: asami@FreeBSD.ORG (Satoshi Asami)
+SUBJ: Re: [Voice/Fax] mgetty-1.1.14 is the latest release
+摘要: Satoshi Asami：请若他方贡献出可运行的新版本或为 hylafax 增加语音能力，记得交给维护者并入 ports tree
+
+ * Point well taken , at this point I am interested in contributors and if they
+ * also happen to be the respective package maintainer thats even better!
+
+Yes, but if you get other contributors and get the newer versions to
+work (or manage to add voice capabilities to hylafax), please don't
+forget to send them to the maintainers (who will add them to our ports
+tree so everyone can use them easily).
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604486 ###
+===== 库内序 146043 | PK 2604486 | 等级 L3 =====
+DATE: 1998-04-12T01:22:50+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: [Voice/Fax] mgetty-1.1.14 is the latest release 
+摘要: Amancio Hasty：称会联系各维护者，目前用 mh 文件夹 voice-project 跟踪项目，贡献者增多愿接手项目管理
+
+
+Hi ,
+
+I will not forget to interface with the respective mantainers. In fact,for
+now I am keeping track of the project in my mh folder "voice-project".
+If the project really takes off in terms of contributors I will be more
+than happy to step up the project management: mailing list, web page, etc..
+
+	Regards,
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604488 ###
+===== 库内序 146045 | PK 2604488 | 等级 L4 =====
+DATE: 1998-04-12T01:44:28+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Free Java Tools for Education Institutions
+摘要: Amancio Hasty：称 Sun 向合格教育机构免费开放 Java 工具，可在 FreeBSD 运行的 Java WorkShop 属其中套件
+
+
+Sun is offering their Java Tools for free to qualified educational 
+institutions.
+Java WorkShop which runs on FreeBSD is included as one of the free packages 8)
+
+For further info see:
+
+http://sunfreeware.com:8080/
+
+	Enjoy,
+	Amancio
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604489 ###
+===== 库内序 146046 | PK 2604489 | 等级 L3 =====
+DATE: 1998-04-12T02:35:31+00:00
+FROM: Josef Grosch <jgrosch@superior.mooseriver.com>
+SUBJ: Re: Free Java Tools for Education Institutions
+摘要: Josef Grosch：回复称正在看该页却找不到 FreeBSD 条目，请 Amancio 给出含 FreeBSD 支持的 URL
+
+On Sat, Apr 11, 1998 at 06:44:28PM -0700, Amancio Hasty wrote:
+> 
+> Sun is offering their Java Tools for free to qualified educational 
+> institutions.
+> Java WorkShop which runs on FreeBSD is included as one of the free packages 8)
+> 
+> For further info see:
+> 
+> http://sunfreeware.com:8080/
+> 
+
+Amancio,
+
+I know I am looking right at it, I just don'y see it. Could you give me the
+URL to the page with FreeBSD support ?
+
+
+Thanks
+Josef
+
+-- 
+Josef Grosch           | Another day closer to a |    FreeBSD 2.2.5
+jgrosch@MooseRiver.com |   Micro$oft free world  | UNIX for the masses
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604490 ###
+===== 库内序 146047 | PK 2604490 | 等级 L3 =====
+DATE: 1998-04-12T02:46:39+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: 
+摘要: Amancio Hasty：转贴旧帖称 JWS 2.0 可在 FreeBSD 运行，并请求 FreeBSD Java Team 补进 Java 网页
+
+
+Hi,
+
+Here is my old posting.
+
+	--------------
+And can someone from the FreeBSD Java Team please stick this info in the
+FreeBSD Java Web Page. Tnks!
+	--------------
+
+	Enjoy,
+	Amancio
+
+------- Forwarded Message
+
+Return-Path: owner-freebsd-current@FreeBSD.ORG
+Received: from smyrno.sol.net (mail@smyrno.sol.net [206.55.64.117])
+          by rah.star-gate.com (8.8.8/8.8.8) with ESMTP id QAA27495
+          for <hasty@rah.star-gate.com>; Sat, 28 Mar 1998 16:34:03 -0800 (PST)
+          (envelope-from owner-freebsd-current@FreeBSD.ORG)
+Received: from hub.freebsd.org (hub.FreeBSD.ORG [204.216.27.18])
+	by smyrno.sol.net (8.8.8/8.8.8/SNNS-1.02) with ESMTP id SAA28570;
+	Sat, 28 Mar 1998 18:33:38 -0600 (CST)
+Received: from localhost (daemon@localhost)
+          by hub.freebsd.org (8.8.8/8.8.8) with SMTP id QAA02729;
+          Sat, 28 Mar 1998 16:33:34 -0800 (PST)
+          (envelope-from owner-freebsd-current)
+Received: by hub.freebsd.org (bulk_mailer v1.6); Sat, 28 Mar 1998 16:31:30 
+-0800
+Received: (from majordom@localhost)
+          by hub.freebsd.org (8.8.8/8.8.8) id QAA02451
+          for freebsd-current-outgoing; Sat, 28 Mar 1998 16:31:29 -0800 (PST)
+          (envelope-from owner-freebsd-current@FreeBSD.ORG)
+Received: from rah.star-gate.com (rah.star-gate.com [209.133.7.234])
+          by hub.freebsd.org (8.8.8/8.8.8) with ESMTP id QAA02439;
+          Sat, 28 Mar 1998 16:31:24 -0800 (PST)
+          (envelope-from hasty@rah.star-gate.com)
+Received: from rah.star-gate.com (localhost.star-gate.com [127.0.0.1])
+          by rah.star-gate.com (8.8.8/8.8.8) with ESMTP id QAA27476;
+          Sat, 28 Mar 1998 16:31:09 -0800 (PST)
+          (envelope-from hasty@rah.star-gate.com)
+Message-Id: <199803290031.QAA27476@rah.star-gate.com>
+X-Mailer: exmh version 2.0.2 2/24/98
+To: java@FreeBSD.ORG
+cc: current@FreeBSD.ORG
+Subject: JWS 2.0 works in FreeBSD 8)
+Mime-Version: 1.0
+Content-Type: multipart/mixed ;
+	boundary="==_Exmh_4606890830"
+Date: Sat, 28 Mar 1998 16:31:09 -0800
+From: Amancio Hasty <hasty@rah.star-gate.com>
+Sender: owner-freebsd-current@FreeBSD.ORG
+X-Loop: FreeBSD.ORG
+
+This i
+[…中段省略 18274 字符…] I9JHtVU0VSfSBcCgktRGp3cy52YXJpYW50PVwi
+JHtWQVJJQU5UfVwiIFwKICAgICAgICAiLURqd3MudXQucGxhdGZvcm09XCIke1BMQVRGT1JN
+fVwiIiBcCiAgICAgICAgJHtkZWJ1Z19wcm9wfSAke2phdmFfb3B0c30gJHttYWluX2NsYXNz
+fSAke2FwcF9hcmdzfQo=
+
+- --==_Exmh_4606890830--
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+------- End of Forwarded Message
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604491 ###
+===== 库内序 146048 | PK 2604491 | 等级 L3 =====
+DATE: 1998-04-12T02:45:40+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: SPAM: Commercial support for FreeBSD
+摘要: Julian Elischer：称自己几年前就想做这件事，但因 FreeBSD 实际事务太多没能大力推进
+
+I've been thinking of doing this myself for a couple of years.
+But I've had too much 'real FreeBSD work' to push too hard on the idea.
+
+julian (E)
+
+
+On Sat, 11 Apr 1998, Greg Lehey wrote:
+
+> Sorry for the spam.  This will be the only message I send to these
+> lists--please respect the Reply-To: header and follow up either to
+> chat@FreeBSD.org or supporters@nanyang-computer.com.
+> 
+> One of the points raised in the recent flurry of messages about more
+> visibility for FreeBSD is the question of support.  We've discussed
+> this at length before, but somehow the discussions gradually sickered
+> away and we were no closer to a solution.
+> 
+> A company I do a lot of work for, Nan Yang Computer Services Ltd., is
+> interested in providing commercial support for FreeBSD.  They're a
+> *very* low-profile company in England, and they'll expect to be
+> involved mainly in the billing.  This means that the people they're
+> looking for have to do just about everything else themselves, more
+> like consultants than employees.
+> 
+> With this background, I'd like to solicit discussion on the subject.
+> I've set up a mailing list supporters@nanyang-computer.com.  Sign up
+> in the traditional manner: send mail to majordomo@nanyang-computer.com
+> with the text 'subscribe supporters' in the message body.
+> 
+> My intention at this stage is to discuss to following topics:
+> 
+> 1.  How to set up a world-wide commercial support organization for
+>     FreeBSD.  One of the things that I expect to be of great advantage
+>     is that the people involved will be accessible via the Internet,
+>     so it should be possible to provide 24x7 coverage.  In keeping
+>     with Nan Yang's low-key image, I don't envisage any commercial
+>     premises for the support people: they will all be located wherever
+>     it suits them.
+> 
+> 2.  What support to offer.  The obvious choices are:
+> 
+>     - first-level user support ("how do I attach an image to a mail
+>       reply?")
+> 
+>     - defect support ("My machine just said "panic: not enough foos"
+>       and rebooted.  What do I do?").
+> 
+>     - programm
+[…中段省略 763 字符…] ters@nanyang-computer.com (it's a no-obligation signup :-).  If,
+> for some reason, you don't want to do that, please follow up in
+> FreeBSD-chat.
+> 
+> Greg
+> 
+> --
+> See complete headers for address and phone numbers
+> finger grog@lemis.com for PGP public key
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604493 ###
+===== 库内序 146050 | PK 2604493 | 等级 L3 =====
+DATE: 1998-04-12T03:15:29+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: your mail
+摘要: Terry Lambert 谈到 JWS 2.0 的 30 天评估版与 Sun 中期发布的 JFC 1.1 升级
+
+>  5.	JWS2.0 --- get it from http://shop.sun.com/ . There is a 30 day
+> 	evaluation one which you can download and thats what I have over
+> 	here. Sun is supposed to released in mid April an upgrade JWS2.0 
+> 	to support JFC 1.1.
+
+NOTE: You *MUST* register with them to enable you to download this code.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604494 ###
+===== 库内序 146051 | PK 2604494 | 等级 L4 =====
+DATE: 1998-04-12T05:42:40+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: 
+摘要: Nate Williams：你有 FreeBSD Java Team 提交权限 提交新 html 后我保证 freefall 上同步更新
+
+> 	--------------
+> And can someone from the FreeBSD Java Team please stick this info in the
+> FreeBSD Java Web Page. Tnks!
+> 	--------------
+
+You're on the team and have commit priviledges.  If you commit the new
+html page I'll make sure it gets updated on freefall.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604495 ###
+===== 库内序 146052 | PK 2604495 | 等级 L3 =====
+DATE: 1998-04-12T05:49:24+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: 
+摘要: Amancio Hasty 说自己正忙于 multimedia 与 java 方向 让团队成员自行接手该网页内容
+
+Nate, I am asking someone from the team to please put it up if no one
+volunteers thats okay . I am really busy over here doing stuff in the 
+multimedia area and java . I am not asking a lot.
+
+	Amancio
+
+> > 	--------------
+> > And can someone from the FreeBSD Java Team please stick this info in the
+> > FreeBSD Java Web Page. Tnks!
+> > 	--------------
+> 
+> You're on the team and have commit priviledges.  If you commit the new
+> html page I'll make sure it gets updated on freefall.
+> 
+> 
+> Nate
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+### PK 2604496 ###
+===== 库内序 146053 | PK 2604496 | 等级 L3 =====
+DATE: 1998-04-12T10:25:52+00:00
+FROM: Bob Bishop <rb@gid.co.uk>
+SUBJ: Re: Dwarf changes
+摘要: Bob Bishop 转引 Michael Eager 关于重启 PLSIG 主导 Dwarf 规范讨论的邮件线
+
+Hi,
+
+Does anyone here care about this?
+
+>Date: Sat, 11 Apr 1998 22:30:27 -0700
+>From: Michael Eager <eager@eagercon.com>
+>To: PLSIG <plsig@xopen.co.uk>
+>Subject: Re: Dwarf changes
+>Resent-From: plsig@opengroup.org
+>X-Mailing-List: plsig:archive/latest/2296
+>
+>Michael Eager wrote:
+>>
+>> Is there interest in reconvening the PLSIG, looking for a sponsor,
+>> and asserting ownership/control over the Dwarf specification?
+>
+>The lack of response is profound.  Either the email got lost,
+>everybody is working too hard, or there is general apathy.
+>
+>Please advise.
+>
+>--
+>Michael Eager	 eager@eagercon.com
+>1960 Park Blvd., Palo Alto, CA 94306  650-325-8077
+
+His original post was:
+
+>Date: Mon, 06 Apr 1998 11:07:32 -0700
+>From: Michael Eager <eager@eagercon.com>
+>To: PLSIG <plsig@xopen.co.uk>
+>Subject: Dwarf changes
+>Resent-From: plsig@opengroup.org
+>X-Mailing-List: plsig:archive/latest/2295
+>
+>I attended the PowerPC Embedded ABI meeting last week.
+>The PPC EABI committee, if you are not aware, is an ad hoc
+>committee of companies supporting IBM/Motorola PowerPC.
+>The PPC EABI endorses Dwarf 1.1 as its debugging format.
+>Dwarf 1.1 is Dwarf 1 with some minor changes in the processor
+>dependent areas.
+>
+>There have been other changes to Dwarf 1 proposed and apparently
+>adopted by the PPC EABI committee, I believe to improve support
+>for C++, but these have not been well publicized and I don't know
+>the details.
+>
+>There was a long discussion about whether to extend Dwarf 1
+>or to endorse Dwarf 2.  Some comments were raised that Dwarf 2
+>needs modifications, although with only a brief verbal presentation
+>of the proposed changes I was not able to see a strong rationale
+>for adopting them.  I volunteered to "champion" changes to Dwarf 2
+>(with the assistance of Mike Meissner of Cygnus).
+>
+>Part of this discussion also revolved around changes to Dwarf 1.
+>Some of the suggested changes were to pick out pieces of the
+>Dwarf 2 specification and add them to Dwarf 1, and to add various
+>other functionality to Dwarf 1 which is duplicated in Dwarf 2, but
+>which would be implemented in a 
+[…中段省略 1459 字符…] e
+>specification.
+>
+>Is there interest in reconvening the PLSIG, looking for a sponsor,
+>and asserting ownership/control over the Dwarf specification?
+>
+>--
+>Michael Eager	 eager@eagercon.com
+>1960 Park Blvd., Palo Alto, CA 94306  650-325-8077
+
+
+--
+Bob Bishop              (0118) 977 4017  international code +44 118
+rb@gid.co.uk        fax (0118) 989 4254  between 0800 and 1800 UK
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604497 ###
+===== 库内序 146054 | PK 2604497 | 等级 L3 =====
+DATE: 1998-04-12T10:42:50+00:00
+FROM: Klaus Werner Krygier <krygier@kph.uni-mainz.de>
+SUBJ: Linux emulation problem
+摘要: Klaus Werner Krygier 希望 Linux 仿真仅对 /compat/linux 生效 以运行 NSR 备份客户端
+
+
+Hi,
+
+Is it possible to force the Linux emulator to use the /compat/linux
+tree only for shared libraries and other system files but not on the
+user level?
+
+In our heterogenous computer environment we use a commercial client/server
+backup system (NSR) which runs on several platforms. Unfortunately, client
+software for this system is available only for Linux and not for FreeBSD :-(.
+This software seems to work fine under FreeBSD (because of the excellent
+Linux emulation :)) but with one ugly exception:
+
+Instead of files and directories in the / tree the /compat/linux tree is
+accessed. Especially addressing of a subdirectory for which the
+corresponding /compat/linux directory exists yields in accessing ONLY the
+Linux files. The same effect occurs for example if you use a Linux find:
+	$ ./find /etc
+	/etc
+	/etc/host.conf
+	/etc/ld.so.conf
+	/etc/ld.so.cache
+	/etc/revision-history
+	/etc/nsswitch.conf
+	$
+For backup purposes this behaviour is not very useful. In the worst case
+a backup consists only of Linux files - the last thing we want to backup.
+
+Can anyone give us some helpful hints how to solve this problem?
+
+Klaus Werner Krygier
+
++-----------------------------------------------------------------------+
+| Dr. Klaus Werner Krygier            | Email: krygier@kph.uni-mainz.de |
+| Institut f�r Kernphysik             |                                 |
+| Johannes Gutenberg-Universit�t      | Tel:   +49-6131-39-2960         |
+| J.J.Becher-Weg 45                   |        +49-6131-39-5192         |
+| D-55099 Mainz                       | Fax:   +49-6131-39-2964         |
++-----------------------------------------------------------------------+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604499 ###
+===== 库内序 146056 | PK 2604499 | 等级 L4 =====
+DATE: 1998-04-12T16:49:46+00:00
+FROM: Niall Smart <rotel@indigo.ie>
+SUBJ: Re: libcrypt not found part two
+摘要: Niall Smart：询问 /usr/lib 是否有 libcrypt.a 与 libcrypt.so.2.0 并给出符号链接实测
+
+On Apr 11,  5:11pm, "Jonathan Smith" wrote:
+} Subject: libcrypt not found part two
+> just realized that I can't check the email on that system any more :(
+> please send all replies to u_tarakanova@fhu.edu
+
+Do you have these files in /usr/lib?
+
+lrwxrwxrwx  1 root  bin     13 Dec 20  1996 /usr/lib/libcrypt.a -> libdescrypt.a
+lrwxrwxrwx  1 root  bin     18 Dec 20  1996 /usr/lib/libcrypt.so.2.0 -> libdescrypt.so.2.0
+lrwxrwxrwx  1 root  bin     15 Dec 20  1996 /usr/lib/libcrypt_p.a -> libdescrypt_p.a
+-r--r--r--  1 bin   bin  11202 Mar 30 19:30 /usr/lib/libdescrypt.a
+-r--r--r--  1 bin   bin  16698 Mar 30 19:30 /usr/lib/libdescrypt.so.2.0
+-r--r--r--  1 bin   bin  12768 Mar 30 19:30 /usr/lib/libdescrypt_p.a
+
+If you don't then re-install them from the CD, should be part of the bin
+distribution or I can email them to you.
+
+
+
+-- 
+Niall Smart.  Microsoft Suck.  See www.freebsd.org for details.
+echo "#define if(x) if(!(x))" >> /usr/include/stdio.h
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604500 ###
+===== 库内序 146057 | PK 2604500 | 等级 L3 =====
+DATE: 1998-04-12T16:54:47+00:00
+FROM: Niall Smart <rotel@indigo.ie>
+SUBJ: Re: ld: internal error: allocated set symbol space (2) doesn't match actual (6)
+摘要: Niall Smart 转述 John Polstra 将 ld set symbol space 报错归因为汇编器缺陷
+
+On Apr 11,  8:09pm, John Polstra wrote:
+} Subject: Re: ld: internal error: allocated set symbol space (2) doesn't ma
+> 
+> Aha!  Thanks very much for the test case.  It clears up a lot of
+> things.  This is actually an assembler bug.  It just so happens that I
+> committed a fix for it a few days ago.  Get the latest assembler from
+> -current, and you will find that this problem is gone.  The fix is in
+> revision 1.6 of src/gnu/usr.bin/as/config/obj-aout.c.
+
+Aha is right :)  It works fine now, any chance of commiting this
+to -stable?
+
+-- 
+Niall Smart.  Microsoft Suck.  See www.freebsd.org for details.
+echo "#define if(x) if(!(x))" >> /usr/include/stdio.h
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604501 ###
+===== 库内序 146058 | PK 2604501 | 等级 L4 =====
+DATE: 1998-04-12T16:39:27+00:00
+FROM: John Polstra <jdp@polstra.com>
+SUBJ: Re: ld: internal error: allocated set symbol space (2) doesn't match actual (6) 
+摘要: John Polstra：该汇编器修复已合入 obj-aout.c 1.6 版 同意并入 -stable 但因仅入 -current 5 天暂不
+
+> > -current, and you will find that this problem is gone.  The fix is
+> > in revision 1.6 of src/gnu/usr.bin/as/config/obj-aout.c.
+>
+> Aha is right :) It works fine now, any chance of commiting this to
+> -stable?
+
+I just knew somebody was going to ask that. :-)  Yes, I'll merge it
+into -stable, but not yet.  It has only been in -current for 5 days.
+That's not long enough.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604502 ###
+===== 库内序 146059 | PK 2604502 | 等级 L4 =====
+DATE: 1998-04-12T17:12:24+00:00
+FROM: Shigio Yamaguchi <shigio@wafu.netgate.net>
+SUBJ: htags fails.
+摘要: Shigio Yamaguchi 发现 htags 在 2.2.5 上耗尽内存 指出 /usr/bin/perl 仍是 4.0 并给出替换法
+
+Hi,
+htags(1) in FreeBSD 2.2.5(6) fails like follows.
+
+% cd /usr/src/sys
+% gtags
+% htags
+Out of memory!
+%
+
+It seems that /usr/bin/perl leaks memory.
+Here is a workaround.
+
+# cd /cdrom/packages/lang
+# pkg_add perl-5.00401.tgz
+# mv /usr/bin/perl /usr/bin/perl.org
+# ln -s /usr/local/bin/perl /usr/bin/perl
+
+Why is /usr/bin/perl version 4.0?
+--
+Shigio Yamaguchi (Freelance programmer)
+	Mail: shigio@wafu.netgate.net, WWW: http://wafu.netgate.net/tama/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604503 ###
+===== 库内序 146060 | PK 2604503 | 等级 L4 =====
+DATE: 1998-04-12T17:43:44+00:00
+FROM: Poul-Henning Kamp <phk@FreeBSD.ORG>
+SUBJ: IMPORTANT:  PRs in suspended state
+摘要: Poul-Henning Kamp：为 3.0-RELEASE 审查 gnats 库 有价值却难完成的 PR 移入 suspended 态
+
+
+In an attempt to get to the 3.0-RELEASE ready frame of mind, I am
+doing a end-to-other review of our Gnats database right now.  The
+PRs which contain substance, but with little or no hope to get done
+will be moved to "suspended" state.
+
+There are a few PRs already in that state, which I have not visited
+yet, but when I'm done, "suspended" will have the meaning of:
+
+	"Yeah, good idea, where is the patch ?"
+
+So these things will basically be up for grabs by anybody who feels
+like it.  It is not a 100% guarantee that the code will be adopted
+if you write it, but chances are certainly very good.
+
+So if you are one of those people who don't know where to start:
+
+	http://www.freebsd.org/cgi/query-pr-summary.cgi?state=s
+
+may provide you with some good ideas.
+
+Poul-Henning
+
+PS: It would help and speed my review, if you would check all the
+PRs you have opened, and close the ones which doesn't apply any
+more.  If you are not a committer, just submit a followup saying
+	"can be closed because: ..."
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+
+
+### PK 2604504 ###
+===== 库内序 146061 | PK 2604504 | 等级 L4 =====
+DATE: 1998-04-12T18:07:01+00:00
+FROM: patl@phoenix.volant.org
+SUBJ: Java for Mozilla
+摘要: patl@phoenix.volant.org 指出 Netscape 剥离 JVM 因其在各目标平台上已有足够成熟的实现
+
+The recent discussion about obtaining/writing a JVM/JRE to integrate
+with Mozilla seems to have completely missed the point of why Netscape
+removed it in the first place.  If you will recall, they announced
+its removal long before they announced the intention of making the
+Mozilla sources available.  The reasoning was that existing JVM/JRE
+implementations are sufficiently solid on all (of Netscape's) targeted
+platforms that it does not make sense to duplicate the effort of
+maintaining one internally.
+
+We should be focusing on ensuring that Mozilla works with the existing,
+external, jdk-1.1.5 port and it's JRE.  (And, of course, with any later
+jdk releases.)
+
+
+
+-Pat
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604505 ###
+===== 库内序 146062 | PK 2604505 | 等级 L4 =====
+DATE: 1998-04-12T18:23:03+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Java for Mozilla 
+摘要: Amancio Hasty：mozilla 开发有专列表 经 majordomo 订阅 mozilla-freebsd@freebsd.org
+
+Good Point.
+
+In case that you missed the announcement, there is a 
+mozilla-freebsd@freebsd.org 
+mailing list
+
+to subscribe:
+-----
+
+mail majordomo@freebsd.org
+
+
+subscribe mozilla-freebsd@freebsd.org <your email>
+
+
+	Cheers,
+	Amancio
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604506 ###
+===== 库内序 146063 | PK 2604506 | 等级 L3 =====
+DATE: 1998-04-12T22:12:08+00:00
+FROM: Aaron Nowalk <hippy@westol.com>
+SUBJ: FreeBSD Mailing List
+摘要: Aaron Nowalk 请求加入 FreeBSD 邮件列表并称希望了解如何上手使用
+
+Dear Sir/Maam...
+
+I would like to be added to the FreeBSD mailing list.  I don't know much
+about freebsd but from what I am reading on your homepage, it seems great.
+Now, I just need to figure out how to work it!  Thank you very much.
+Please confirm this message by sending one back.  Thank you. 
+
+-Aaron Nowalk
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Support Technician
+Helicon Online
+(724)219-0400
+http://www.westol.com/
+Hours: Mon-Fri 9-9, Sat-Sun 4-9
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604507 ###
+===== 库内序 146064 | PK 2604507 | 等级 L3 =====
+DATE: 1998-04-12T23:59:07+00:00
+FROM: Niall Smart <rotel@indigo.ie>
+SUBJ: Re: Linux emulation problem
+摘要: Niall Smart 回问为何需要让 Linux 应用强制访问 /compat/linux 而非 / 根目录
+
+On Apr 12, 12:42pm, Klaus Werner Krygier wrote:
+} Subject: Linux emulation problem
+> 
+> Hi,
+> 
+> Is it possible to force the Linux emulator to use the /compat/linux
+> tree only for shared libraries and other system files but not on the
+> user level?
+> 
+> Instead of files and directories in the / tree the /compat/linux tree is
+> accessed. Especially addressing of a subdirectory for which the
+> corresponding /compat/linux directory exists yields in accessing ONLY the
+> Linux files. The same effect occurs for example if you use a Linux find:
+> 	$ ./find /etc
+> 	/etc
+> 	/etc/host.conf
+> 	/etc/ld.so.conf
+> 	/etc/ld.so.cache
+> 	/etc/revision-history
+> 	/etc/nsswitch.conf
+> 	$
+> Can anyone give us some helpful hints how to solve this problem?
+
+I just noticed that if you create /compat/linux/foo as a symlink
+to /etc then linux binaries get the contents of the "real" /etc,
+however I consider this to be broken and have send-pr'd it.
+
+Perhaps you could fork off a FreeBSD tar process to collect the
+files for you?
+
+Niall
+
+-- 
+Niall Smart.  Microsoft Suck.  See www.freebsd.org for details.
+echo "#define if(x) if(!(x))" >> /usr/include/stdio.h
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604508 ###
+===== 库内序 146065 | PK 2604508 | 等级 L3 =====
+DATE: 1998-04-12T23:01:13+00:00
+FROM: Jason Nordwick <nordwick@scam.XCF.Berkeley.EDU>
+SUBJ: Re: Re[4]: Fw: Your Article "Freeware: The Heart & Soul of the  Internet"
+摘要: Jason Nordwick 参与讨论 Walnut Creek CD 进驻书店零售的可行性
+
+
+Frank Pawlak, on Thu 4/9/1998, wrote the following:
+> 
+> Jason Nordwick <nordwick@scam.XCF.Berkeley.EDU> wrote:
+> > 
+> > Would it be possible to have the Walnut Creek CDs in
+> > computer/bookstores,
+> > as I see the Linux CDs ?
+> > 
+> > What would this take, just calling and marketing ?
+> 
+> Yes that could be the case.  It is hard to justify a personal visit with
+> a relatively low cost product such as we are talking about here.
+> 
+> The other issue is how to college bookstores view their shelf space. 
+> Normal stores run on profit dollars per square foot of shelf space, with
+> the low and slow movers getting the boot.  I wouldn't think that college
+> bookstore are manage quite this tightly  but could be wrong.
+> 
+
+I think that most college computer stores are run by the Student Body or 
+the University and are not subject to normal rental conditions.  A small
+amount of space in these usually sparsely populated areas is not that much
+to ask.  Getting them to actually purchase some copies for distribution is
+a different story.
+
+> Telemarketing or product on consignment maybe that way to get started.
+> 
+
+If anybody would like to test, I can see if I can get a few stores in the
+Berkeley area to see if they are interested... one problem is that I dont
+really know how this works.
+
+> Another idea that I've had is that those of use that are going to
+> college make a call on the bookstore manager and try to sell them on
+> FreeBSD.  There could be legal issues here with WC CDROM because someone
+> acting as a sales person is an agent of the organization.
+> 
+> CompSci and Computer Engineering Deptartment heads etc., maybe prime
+> prospects for a freeby copy to seed that effort.
+> 
+> Like any marketing effort this would have to be planed out a bit to get
+> desired results.
+> 
+> Frank
+> 
+> > 
+> > jay
+> > -- 
+> > Join the FreeBSD Revolution.
+> > Support the FSF, buy GNU.
+> > http://xcf.berkeley.edu/
+> 
+
+jay
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604509 ###
+===== 库内序 146066 | PK 2604509 | 等级 L4 =====
+DATE: 1998-04-13T01:01:31+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Linux emulation problem 
+摘要: Mike Smith：无法有效强制 因无法区分应用该找 /compat/linux 内文件还是该找普通路径
+
+> 
+> Is it possible to force the Linux emulator to use the /compat/linux
+> tree only for shared libraries and other system files but not on the
+> user level?
+
+Not in a useful fashion, no.  There is no way to tell the difference 
+between a Linux application searching for something that "should" be in 
+/compat/linux and something that "shouldn't".
+
+> In our heterogenous computer environment we use a commercial client/server
+> backup system (NSR) which runs on several platforms. Unfortunately, client
+> software for this system is available only for Linux and not for FreeBSD :-(.
+
+You should be pestering the software vendor about this. 8)
+
+> This software seems to work fine under FreeBSD (because of the excellent
+> Linux emulation :)) but with one ugly exception:
+> 
+> Instead of files and directories in the / tree the /compat/linux tree is
+> accessed.
+
+Directory traversal is problematic.  If you attempt to open "/" for 
+traversal in a Linux binary, the search for "/" under /compat/linux 
+will succeed.  Subsequently, every directory and file you locate during 
+traversal will also be found there.
+
+> For backup purposes this behaviour is not very useful. In the worst case
+> a backup consists only of Linux files - the last thing we want to backup.
+
+Understood.
+
+> Can anyone give us some helpful hints how to solve this problem?
+
+If you don't mind not backing up *everything* on the FreeBSD client, 
+only back up data under directories in the "real" filespace that have 
+no direct equivalent in the Linux filespace.
+
+Depending on your Linux emulation requirements, you may be able to put 
+all of the Linux compatibility files into the "real" filespace, and 
+make /compat/linux a symbolic link to / (this is extremely ugly, and 
+worth avoiding if you can).
+
+Yet another ugly technique would be to ask the Linux software to backup 
+only the directory "/real_root", and make /compat/linux/real_root a 
+symbolic link to /.  The success of this will to depend on how 
+the backup software handles symbolic links.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604510 ###
+===== 库内序 146067 | PK 2604510 | 等级 L3 =====
+DATE: 1998-04-13T04:21:14+00:00
+FROM: Jim Flowers <jflowers@ezo.net>
+SUBJ: lnc1: Initialisation failure
+摘要: Jim Flowers 报告 picobsd 上 lnc1 探测到 NE2100 却初始化失败 求排查
+
+I am trying to bring up picobsd .31 (FreeBSD3.0) on a computer with a 
+built-in pci Ethernet interface using an Am79C971 chip.  My 100697 
+Snapshot has the latest pci lnc driver (1.5).
+
+The probe returns:
+
+lnc1: <PCNet/PCI Ethernet adapter> rev 0x25 int a irq 10 on pci0.7.0
+lnc1: NE2100 (C-LANCE) address 00:e0:c5:fc:1e:17
+
+so at least it is listening/talking.
+
+But it fails to initialise, either on startup or on executing ifconfig 
+giving the subject message.
+
+BIOS does indicate 1022 for it during POST.
+
+Would appreciate a nudge in the right direction.  List only seems to have 
+references to problems previous to the pci driver.
+
+Jim Flowers <jflowers@ezo.net>
+#4 ISP on C|NET, #1 in Ohio
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

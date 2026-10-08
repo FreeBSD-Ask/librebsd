@@ -1,0 +1,25 @@
+2604574|L3|Open Systems Networking：BSD/OS 改窗口 sysctl 到 16K 后 tcpdump 仍见 8K 疑需重编内核
+2604575|L3|Alexander Tatmaniants：建议改到 freebsd-isdn 邮件列表问 Datafire ISDN 驱动事宜
+2604576|L3|John-Mark Gurney：该列表不是 bsd/os 的求助处 需在 FreeBSD 复现同样问题才可协助
+2604578|L3|Alexander B. Povolotsky：双路 SMP 下 bytebench 的 execl 与管道上下文切换近乎减半 求因
+2604579|L3|Dan Janowski：用 ldd /usr/bin/vi 自行验证 另建议单用户下用 /bin 里的 ed 编辑
+2604580|L3|Mike：不用 vi 的多是觉得 vi 不够用的资深用户 例举 Emacs 多窗口并排编辑
+2604585|L3|Stefan Bethke：同意该有可用编辑器但划线应在 vi 而不是更低的层次
+2604587|L4|Alex：kIRC 用 C++ 编写且用到 sys/socket.h 运行正常 故系统头与 C++ 兼容
+2604588|L4|Jordan Hubbard：宣布不再往 /stand 放任何编辑器 这是最终决定 启动软盘已满
+2604589|L3|Matthew D. Fuller：澄清诉求是把 vi 放进 /bin 而不是 /stand
+2604590|L3|Jordan Hubbard：让想要 vi 的人在自有系统上自行搬到 /bin
+2604592|L3|Dan Nelson：引用 tcpdump 输出 指出 BSD/OS 默认窗口似乎只有 8K
+2604593|L4|Matthew N. Dodd：vi 若移入根分区必须连 termcap 数据库一起搬
+2604594|L3|Matthew D. Fuller：撤回把 vi 移入根分区的建议 致歉并表示理解大家不愿提新想法
+2604596|L3|Mike：认为 vi 在正常运作条件下确实有用，但单人用户模式应改用 ed
+2604598|L3|Mike Smith：回应内部 ISDN 卡驱动需求，建议改试 USR Courier I-modem
+2604601|L4|David McNett：称 FreeBSD 与 Courier 配合极差，用 byterunner 串口 230.4kbps 时重入站负载下完全停止处理
+2604602|L3|Jung, Michael：询问 arplookup 出现 host is not on local network 是否表示收到该报文却取不到 mac 地址
+2604606|L3|George Morgan：询问是否有人在开发 token ring 驱动程序，并留下联系方式求助
+2604608|L3|Greg A. Woods：询问 2.2.x 构建启用 MAKE_KERBEROS4=yes 后如何让 bin 发行包仍含普通 /usr/bin/login
+2604610|L3|Matthew N. Dodd：建议 ports 项目独立运作并统一各 BSD 的 ports 与 pkgsrc 以吸纳 OpenBSD、NetBSD 人手
+2604612|L4|Mike Smith：追问对方是否试过内部机型，并称自己那台是 International 型号无法在美国运行
+2604613|L4|Mike Smith：说明 PSEUDO_SET 联编机制功能类似 LKM 的 linker sets，但不确定是否回答了对方关于驱动自动配置的疑问
+2604615|L4|Matthew N. Dodd：表示 token ring 驱动迟早会做并招募想加入协助的人
+2604616|L3|Eric A. Davis：为 McKusick 高级内核课程做按文件监控文件系统活动的项目，询问如何添加新系统调用

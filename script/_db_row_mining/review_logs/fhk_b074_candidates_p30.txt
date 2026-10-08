@@ -1,0 +1,29 @@
+2605911|L4|John Polstra：强调 CVS 的 -R 标志对 CVSup 没有任何区别，一般原则是 CVSup 更新期间避免任何 CVS 操作
+2605912|L4|Peter Jeremy：转述 Robert Collins 论 Pentium F00F bug，批评 Intel 推荐绕法，替代方案改用缓存交互
+2605914|L3|Studded：Pentium F00F bug 初现时对其应当如何修复存在很大分歧，更高效的实现方式固然是好事
+2605916|L4|Nate Williams：CVSup 全库加锁容易但代价大，CVS 提交不用全局锁，只能逐目录加锁；数百万次提交证明不加全局锁极少出问题
+2605918|L3|Dan Janowski：提议为 /etc 建配置系统，M4 路线可参考但嫌其古怪，主张保留标准 /etc 文件以免迁移用户困惑
+2605921|L3|Amancio Hasty：分享自己长期在用的 jcvs，一个 Java 编写的 CVS 客户端，希望他人感兴趣并参与扩展
+2605922|L4|Mark Blackman：报告 2.2.6 的 io(4) 手册与源码不一致，非 uid 为 0 的进程无法写 I/O 端口，手册却称只由文件权限控制
+2605927|L4|Jordan K. Hubbard：M4 不算太古怪但相当隐晦，希望 /etc 的未来标准同时强调灵活性与易用性，因普通 Unix 用户技术水平有限
+2605928|L3|Dan Janowski：认同该配置思路，指令的解析与生成不宜基于 shell 太危险，启动仍需按服务成套脚本，可用 /etc/rc.d 放小脚本
+2605929|L3|Jordan K. Hubbard：当前系统无谓地把配置数据与相应动作分开，如同购物清单一边列编号一边列物品名，信息与动作应当合并
+2605930|L3|David Wolfskill：就 CVSup 加锁之争声明不会代表 Terry 表态，承认为罕见情形做优化通常并不恰当
+2605931|L3|Dan Janowski：启动时约九成工作是简单调用，仅受依赖与顺序约束可封装进配置，ptmp 与 vi -r 等清理类杂事宜留在独立脚本
+2605932|L4|Jordan K. Hubbard：反对把杂项拆成独立脚本，要做一站式就应一把伞全罩住，零散脚本难契合整体框架使 rc.d 系统启动故障难排查
+2605933|L3|Terry Lambert：反驳不加全局锁几无影响的说法，指出若同样逻辑成立，则也无法信任提交者做必要测试从而导致树构建失败
+2605936|L3|Julian Elischer：转发一则讲座通知，并打趣 FreeBSD 会不会出 strong-arm 版本
+2605937|L4|Doug White：matcd 驱动改动已生效，至少对该位报障用户解决了 2.2.6 升级后的设备驱动问题
+2605940|L3|Jacques Vidrine：就系统配置数据库线程提议为 FreeBSD 配置数据制定 XML 的 DTD
+2605941|L4|Jordan K. Hubbard：明确否决为 FreeBSD 配置数据制定 XML DTD 的提议
+2605942|L3|Jay Nelson：认同 Dan 提到的 AIX SMIT 式思路，认为 SMIT 并不坏只是不够优雅，觉得 Jordan 的想法不错
+2605943|L3|Byron Johnson：应询问列出 FreeBSD 2.2.6 装机硬件清单，含 486-66、32Mb 内存与 3Com 509b 网卡
+2605944|L3|Masachika ISHIZUKA：升级 3.0-980426-SNAP 后日志出现 mountd 报 umountall request，询问含义
+2605946|L3|Terry Lambert：接续 /etc 配置元格式讨论，追问既然 rc 变成一行 systemrc 调用，是否应把 make 静态链接
+2605947|L4|Terry Lambert：反驳涉及人为因素就无法优化的说法，主张把不工作的情况约束到最终可达目标的流程路径上
+2605948|L3|Open Systems Networking：企业拟上 BAAN 的 ERP 且需对接 oracle，询问 FreeBSD 有无同类可用软件
+2605949|L3|Ruslan Ermilov：2.2.6-STABLE 上每次 ppp -direct 都留下未绑定的 UDP 套接字，附 fstat 输出求解释
+2605950|L3|Stephen Roome：就 Julian 转发的 Itsy Pocket Computer 讲座追问其价格
+2605951|L3|Dmitry Kohmanyuk：就 CVSup 加锁方案提出折中，仅在更新某目录的文件时对该目录加锁
+2605952|L3|Niall Smart：求 -mdoc 缩进项目列表写法，用 .Bl -tag -width Ds 配 .It Xo X Y .Xc 但结果挤在同一行
+2605955|L3|Mike：称 StrongARM 是增强版 RISC 处理器，做法为削减部分指令以超低功耗运行并加大缓存，并提到已停产的 Apple MessagePad

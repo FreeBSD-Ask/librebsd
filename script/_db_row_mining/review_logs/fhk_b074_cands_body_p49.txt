@@ -1,0 +1,851 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606352 ###
+===== 库内序 147908 | PK 2606352 | 等级 L4 =====
+DATE: 1998-05-30T22:58:43+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: netscape 4.05 US (128 bits)
+摘要: Ollivier Robert：认为 FreeBSD 应存在 Netscape US 版，但取出口版再用 Fortify 打补丁更快
+
+According to usura@zedz.net:
+> Is there a netscape 4.05 US (128 bits) -at all- or is there only the
+> International version for FreeBSD ?
+
+There is probably a US version of Netscape/FreeBSD but it is probably
+faster to get the export one and patch it with Fortify.
+
+<http://www.fortify.net/>
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606353 ###
+===== 库内序 147909 | PK 2606353 | 等级 L3 =====
+DATE: 1998-05-31T12:52:55+00:00
+FROM: Andrew Kenneth Milton <akm@zeus.theinternet.com.au>
+SUBJ: Re: netscape 4.05 US (128 bits)
+摘要: Andrew Kenneth Milton：认为 128 位安全代理市场需求不小，用代理可免逐个给下载的 Netscape 或其他浏览器打补丁
+
++----[ Ollivier Robert ]---------------------------------------------
+| According to usura@zedz.net:
+| > Is there a netscape 4.05 US (128 bits) -at all- or is there only the
+| > International version for FreeBSD ?
+
+I would have thought there was quite a market for 128 bit
+secure proxies, to avoid having to patch them. Then you wouldn't
+have to patch every version of netscape you downloaded (or any
+browser for that matter).
+
+I know they exist for W95 and that they use SSLeay code.
+
+I don't have a pointer here for that however.
+
+-- 
+Totally Holistic Enterprises Internet|  P:+61 7 3870 0066   |  Andrew
+The Internet (Aust) Pty Ltd          |  F:+61 7 3870 4477   |  Milton
+ACN: 082 081 472                     |  M:+61 416 022 411   |72 Col .Sig
+PO Box 403 Booval QLD Australia 4304 |akm@theinternet.com.au|Specialist
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606354 ###
+===== 库内序 147910 | PK 2606354 | 等级 L4 =====
+DATE: 1998-05-31T06:03:11+00:00
+FROM: Warner Losh <imp@village.org>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Warner Losh：纠正称 Linux/MIPS ARC bootloader 并不类似，它借 ARC BIOS 例程绕过多处实现缺陷并用标准调用加载内核
+
+In message <199805301621.JAA06062@antipodes.cdrom.com> Mike Smith writes:
+: I think the Linux-Mips ARC bootloader is similar.
+
+The Linux/MIPS ARC bootloader is *NOT* similar.  It uses the ARC BIOS
+routines in a way that works around many of the bugs in the ARC BIOS
+implementations that are out there.  It loads the kernel using
+standard ARC BIOS calls.  The only thing "interesting" that it does is
+provide support for loading ELF kernels when the ARC BIOS itself only
+supports COFF or ECOFF.
+
+ARC BIOS is kinda cool.  Too bad it is buggy as heck on most
+machines.  It works well enough to get NT running, and that's about it
+:-(.
+
+I don't know how different the ALPHA version of ARC is.  I have the
+standard knocking around somewhere for the MIPS based version.
+
+Warner
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+### PK 2606357 ###
+===== 库内序 147913 | PK 2606357 | 等级 L4 =====
+DATE: 1998-05-31T08:32:39+00:00
+FROM: Cejka Rudolf <xcejka00@dcse.fee.vutbr.cz>
+SUBJ: nullfs problem
+摘要: Cejka Rudolf：最新 -current 下以 nullfs 把 /test 挂到 /mnt，两处拷贝同一文件 diff 相同，重启后再比对
+
+
+First of all I asked this as problem report. No reply...
+Next I asked this on freebsd-fs. No reply...
+So maybe there?
+
+After the latest -current install, I'm trying the following command sequence
+(test_file has 30000 bytes or more):
+	cd /
+	mkdir test
+	mount -t null /test /mnt
+	cp test_file /mnt/test.bad
+	cp test_file /test/test.ok
+	diff /test/test.bad /test/test.ok
+		... Yes, files are the same - great
+	reboot
+		... Login
+	diff /test/test.bad /test/test.ok
+		... Oh no! Files differ! Lengths are the same, but content
+		    of /test/test.bad (file copied via nullfs) is
+		    partially zeroed!
+
+Does anybody use nullfs layer? Is this only my problem on my box?
+(Problem occurs if nullfs is mounted on root ffs.)
+
+--------------------------------------------------------------------------
+Rudolf Cejka                            E-mail: xcejka00@dcse.fee.vutbr.cz
+Technical University of Brno, Faculty of El. Engineering and Comp. Science
+Bozetechova 2, 612 66 Brno, Czech Republic
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606359 ###
+===== 库内序 147915 | PK 2606359 | 等级 L4 =====
+DATE: 1998-05-31T09:38:49+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Star Office Installation
+摘要: Terry Lambert：指共享内存段按定义即持久，最后一个引用消失时删除它是错误，这算设计缺陷
+
+> My next question is ,
+> why so many postings about Star Office without a single soul venturing
+> into the linux layer to solve at least the ipc shared memory segments
+> clean up?
+> 
+> Well, lets chat about it some more 8)
+
+By definition, shared memory segments are persistant.
+
+It would be an error to delete them when the last reference is deleted.
+
+This is arguably a design flaw, but being a design flag, there's really
+nothing you can do about it.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606360 ###
+===== 库内序 147916 | PK 2606360 | 等级 L4 =====
+DATE: 1998-05-31T09:42:44+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：称 Linux 上 StarOffice 退出即删 ipc 共享段并不当，推测 FreeBSD 未正确处理 ipc 调用致清理失效
+
+Well, I guess on Linux star office misbehaves by deleting its ipc
+shared data segments when it exits.
+
+Most likely whats going is that we are not handling properly the ipc
+calls or possibly something else which is causing Star Office not
+to delete the ipc shared data segments upon exit.
+
+
+	Cheers,
+	Amancio
+
+> > My next question is ,
+> > why so many postings about Star Office without a single soul venturing
+> > into the linux layer to solve at least the ipc shared memory segments
+> > clean up?
+> > 
+> > Well, lets chat about it some more 8)
+> 
+> By definition, shared memory segments are persistant.
+> 
+> It would be an error to delete them when the last reference is deleted.
+> 
+> This is arguably a design flaw, but being a design flag, there's really
+> nothing you can do about it.
+> 
+> 
+> 					Terry Lambert
+> 					terry@lambert.org
+> ---
+> Any opinions in this posting are my own and not those of my present
+> or previous employers.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606362 ###
+===== 库内序 147918 | PK 2606362 | 等级 L4 =====
+DATE: 1998-05-31T11:46:27+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: nullfs problem
+摘要: Ollivier Robert：给出结论称 nullfs 尚未跟上近期 VFS 与 VM 的改动
+
+According to Cejka Rudolf:
+> Does anybody use nullfs layer? Is this only my problem on my box?
+> (Problem occurs if nullfs is mounted on root ffs.)
+
+Nullfs is not up-to-date with recent VFS/VM changes.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606364 ###
+===== 库内序 147920 | PK 2606364 | 等级 L3 =====
+DATE: 1998-05-31T17:47:21+00:00
+FROM: Joseph Stein <joes@shasta.wstein.com>
+SUBJ: Re: Sendmail 8.9
+摘要: Joseph Stein：追问 sendmail 8.9 的最终结论与澄清进展，询问是否想装 8.9.0 的人都得自行决定
+
+Peter Wemm allegedly wrote:
+> Argh, I take that back, I shouldn't have uttered such crap, especially when
+> I had a reply in my mailbox that I had not yet seen.  (And even if it
+> wasn't, this still wasn't appropriate).  My big mouth is really going to
+> get me in trouble sooner or later.
+
+
+So what was the final verdict?  Any clarifications in the works, or is 
+everyone that wants to use 8.9.0 on their own? (no problem for me, I'm
+already upgraded, but just a general question.)
+
+joe
+-- 
+Joseph Stein                           Oregon FirePage http://www.ofp.org
+Beaverton, Oregon (*)                                          [OFP4/PDX]
+(503) 301-1575 -or- joes@pager.wstein.com <pgr>  joes@wstein.com <e-mail>
+* Oregon, n.: Eighty billion gallons of water with no place to go on Saturday
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606365 ###
+===== 库内序 147921 | PK 2606365 | 等级 L4 =====
+DATE: 1998-05-31T17:58:17+00:00
+FROM: Tor Egge <Tor.Egge@idi.ntnu.no>
+SUBJ: Re: nullfs problem
+摘要: Tor Egge：-current 中未经改动的 nullfs 层已因多处原因损坏，不建议使用，正确修复需改 VFS/VM 子系统
+
+> Does anybody use nullfs layer? Is this only my problem on my box?
+> (Problem occurs if nullfs is mounted on root ffs.)
+
+Yes. On a production system running -current.  Unfortunately I'm using
+the wrong set of patches.
+
+The unmodified nullfs layer in -current is broken for several reasons
+and should not be used.  Fixing it correctly probably requires some
+changes to the VFS/VM subsystems (modifying vm_fault, resolving
+some locking issues and killing the buffer cache).
+
+- Tor Egge
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606367 ###
+===== 库内序 147923 | PK 2606367 | 等级 L4 =====
+DATE: 1998-05-31T19:32:35+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：建议在 linux_ipc.c 里打印全部 ipc 调用与错误，改后重建 linux 层并热加载，运行期间不可卸载
+
+What we need to do is to modify the linux layer to print all the ipc
+calls and corresponding error messages while running Star Office --
+this exercise should take less than a  1/2 hour.
+
+Modifying the linux layer is easy. edit /sys/i386/linux/linux_ipc.c
+compile layer:
+cd /usr/src/lkm/linux
+make
+
+unload layer
+modstat 
+modunload -i <id>
+
+make install
+linux
+
+run star office
+
+Do not unload the linux layer while a linux program is running or you
+will crash your system.
+
+
+	Amancio
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606368 ###
+===== 库内序 147924 | PK 2606368 | 等级 L3 =====
+DATE: 1998-05-31T19:35:21+00:00
+FROM: Doug Rabson <dfr@nlsystems.com>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Doug Rabson：询问 ARC 标准是否有电子版本，希望索取一份副本
+
+On Sun, 31 May 1998, Warner Losh wrote:
+
+> I don't know how different the ALPHA version of ARC is.  I have the
+> standard knocking around somewhere for the MIPS based version.
+
+Do you have this in electronic form?  If so, can I have a copy?
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 951 1891
+					Fax:   +44 181 381 1039
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606374 ###
+===== 库内序 147930 | PK 2606374 | 等级 L3 =====
+DATE: 1998-05-31T20:48:56+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：强调他要的是 emulation 层的 linux 调用表现得与 Linux 上一致
+
+I am asking for the linux calls in the emulation layer to behave 
+like they do in linux.
+
+	Amancio
+
+> > > > My next question is ,
+> > > > why so many postings about Star Office without a single soul venturing
+> > > > into the linux layer to solve at least the ipc shared memory segments
+> > > > clean up?
+> > > > 
+> > > > Well, lets chat about it some more 8)
+> > > 
+> > > By definition, shared memory segments are persistant.
+> > > 
+> > > It would be an error to delete them when the last reference is deleted.
+> > > 
+> > > This is arguably a design flaw, but being a design flag, there's really
+> > > nothing you can do about it.
+> >
+> > Well, I guess on Linux star office misbehaves by deleting its ipc
+> > shared data segments when it exits.
+> 
+> No, it doesn't.  But if FreeBSD deleted them on it behalf when
+> Star Office exited, FreeBSD would be in error.
+> 
+> 
+> > Most likely whats going is that we are not handling properly the ipc
+> > calls or possibly something else which is causing Star Office not
+> > to delete the ipc shared data segments upon exit.
+> 
+> You mean "shutdown", not "exit".  My point was that SysV IPC is
+> not resource tracked, and it would be an error for FreeBSD to
+> resource track it (which is what was being requested).
+> 
+> 
+> 					Terry Lambert
+> 					terry@lambert.org
+> ---
+> Any opinions in this posting are my own and not those of my present
+> or previous employers.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606375 ###
+===== 库内序 147931 | PK 2606375 | 等级 L4 =====
+DATE: 1998-05-31T19:48:54+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Star Office Installation 
+摘要: Mike Smith：SysV IPC 的资源跟踪是可选的，程序未必请求跟踪，若请求而不被遵从则 FreeBSD 才出错
+
+> You mean "shutdown", not "exit".  My point was that SysV IPC is
+> not resource tracked, and it would be an error for FreeBSD to
+> resource track it (which is what was being requested).
+
+ SysV IPC is optionally resource tracked, and the Linux application may
+or may not be requesting this tracking.  If it is, and we aren't
+honouring the request, then we are in error.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606378 ###
+===== 库内序 147934 | PK 2606378 | 等级 L3 =====
+DATE: 1998-05-31T21:15:35+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Star Office Installation
+摘要: Terry Lambert：不必动 linux 层代码，直接用 SEFs truss 跟踪即可，耗时为零
+
+> What we need to do is to modify the linux layer to print all the ipc
+> calls and corresponding error messages while running Star Office --
+> this exercise should take less than a  1/2 hour.
+
+Or 0 time, if you use SEFs truss... 8-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606379 ###
+===== 库内序 147935 | PK 2606379 | 等级 L3 =====
+DATE: 1998-05-31T21:38:57+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：抱怨 truss 建议堵掉了排查 linux 层的最后借口，并澄清自己并非要求特定个人动手修
+
+> > What we need to do is to modify the linux layer to print all the ipc
+> > calls and corresponding error messages while running Star Office --
+> > this exercise should take less than a  1/2 hour.
+> 
+> Or 0 time, if you use SEFs truss... 8-).
+
+You just took the last possible excuse for someone to trouble shoot
+the linux layer :(
+
+BTW: I am not asking you nor Mike to work on this . I am after 
+a small percentage of the inert/chatty  gray matter on the list.
+
+	Tnks!
+	Amancio
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606380 ###
+===== 库内序 147936 | PK 2606380 | 等级 L3 =====
+DATE: 1998-05-31T21:48:18+00:00
+FROM: Joe McGuckin <joe@via.net>
+SUBJ: Re: Signed executables, safe delete etc.
+摘要: Joe McGuckin：设想用密钥签名二进制并让内核 exec 在载入前验证，以防被攻陷的防火墙被当作跳板
+
+
+I've thought about this in the past - specifically as it would apply to 
+a firewall machine. If binaries could be signed with with a key, and
+the kernel exec routine required that a proper key be decryped before 
+loading the program, this would eliminate someone hacking onto a 
+firewall and using it as a platform for further mischief. Generally, they 
+like to bring over a toolkit of snooping programs written in 'C'.
+
+Even though they could compile their nifty toolset, nothing would execute
+because they couldn't properly sign their binaries.
+
+Of course, the signing program would have to reside on a floppy or other 
+removable media. I don't think it would be wise to leave it on the 
+system.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606384 ###
+===== 库内序 147940 | PK 2606384 | 等级 L3 =====
+DATE: 1998-06-01T01:02:36+00:00
+FROM: Kevin Street <street@iname.com>
+SUBJ: Re: Star Office Installation 
+摘要: Kevin Street：补充说光是下载 Star Office 就要三小时，这也是一项现实门槛
+
+Amancio Hasty writes:
+>> > What we need to do is to modify the linux layer to print all the ipc
+>> > calls and corresponding error messages while running Star Office --
+>> > this exercise should take less than a  1/2 hour.
+>> 
+>> Or 0 time, if you use SEFs truss... 8-).
+>
+>You just took the last possible excuse for someone to trouble shoot
+>the linux layer :(
+
+Well, there's also the 3 hour download just to *get* Star Office ...
+
+-- 
+Kevin Street
+street@iName.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606385 ###
+===== 库内序 147941 | PK 2606385 | 等级 L3 =====
+DATE: 1998-06-01T01:15:22+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：不解为何没人尝试修 Star Office 相关的 linux 模拟层问题，认为早期 FreeBSD 远不是这态度
+
+Now, I am really curious as to why people are not trying to fix
+the linux emulation layer related problems with respect to Star Office.
+
+The 386bsd0.1 crowd would have been trampling each other trying
+to fix the existing problem. Yes, at one point in our history 
+we used to be very active. 
+
+Download time for Star Office is worth noting and if people have 
+an okay net connection they can fire off the download right before
+they go to sleep.
+
+	Amancio
+
+
+> Amancio Hasty writes:
+> >> > What we need to do is to modify the linux layer to print all the ipc
+> >> > calls and corresponding error messages while running Star Office --
+> >> > this exercise should take less than a  1/2 hour.
+> >> 
+> >> Or 0 time, if you use SEFs truss... 8-).
+> >
+> >You just took the last possible excuse for someone to trouble shoot
+> >the linux layer :(
+> 
+> Well, there's also the 3 hour download just to *get* Star Office ...
+> 
+> -- 
+> Kevin Street
+> street@iName.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606386 ###
+===== 库内序 147942 | PK 2606386 | 等级 L3 =====
+DATE: 1998-06-01T01:45:01+00:00
+FROM: "John S. Dyson" <dyson@FreeBSD.ORG>
+SUBJ: Re: Star Office Installation
+摘要: John S. Dyson：表示若有人动手改他会乐意 review，但自己正忙于其他部分代码
+
+Amancio Hasty said:
+>
+> Now, I am really curious as to why people are not trying to fix
+> the linux emulation layer related problems with respect to Star Office.
+> 
+If you do it, I would be willing to review it.  I am very busy working
+on other pieces of the code right now.
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606387 ###
+===== 库内序 147943 | PK 2606387 | 等级 L3 =====
+DATE: 1998-06-01T02:18:43+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Star Office Installation 
+摘要: Jordan K. Hubbard：直言对方有 commit 权限，动手修才是正解，抱怨并不能推动工作反而让人更不愿做
+
+> Now, I am really curious as to why people are not trying to fix
+> the linux emulation layer related problems with respect to Star Office.
+
+So fix it already!  You have commit privileges.  Saying "I'm really
+curious why someone isn't doing the work" has never been a successful
+motivational technique for getting work done around here. If anything
+I'd say the irritation it induces tends to lead people *away* from
+doing whatever it is you're whining about because now you've made it
+less than enjoyable to do so - you're doing it only because someone's
+trying to goad you into it.
+
+Or, to put it somewhat more succinctly: Put up or shut up, Amancio! :-)
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606388 ###
+===== 库内序 147944 | PK 2606388 | 等级 L3 =====
+DATE: 1998-06-01T02:39:31+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：反驳 Jordan 认为 FreeBSD 正需扩大覆盖面，真问题不在 Star Office 而在列表反应迟缓
+
+Sorry, Jordan I differed with your opinion. We are obviously at a stage
+that we need to increase our coverage and in my opinion getting
+Star Office to work on FreeBSD is a good goal so the motivation 
+factor is there.
+
+Again, it would be nice to know the root of the lethargic-ness in this
+mailing list --- that is fixing Star Office is not the problem rather
+the non responsiveness in the mailing list is the problem.
+
+Having one of the well known hackers tackle the problem is not the best way 
+to go for that is creating the "dominant hacker" syndrome. It is sort of 
+like survival of the species and in our case it should be survival of
+the FreeBSD herd not so much of the hacker.
+
+Requesting censorship on the voice of reason is not an option if anything
+the useless thread on Star Office should have been steered in a more 
+pro-active fashion. Perhaps you like to hear that Star Office
+has problems over and over on the list . Who knows maybe someone
+in the list would care to make a song out of the theme...
+
+
+"FreeBSD (Houston ), we have a problem" 
+
+The only problem around here with the aboe  is that there is no
+Mission Control in Houston to answer your distress call .
+
+"FreeBSD, we have a Problem" 
+
+	Later,
+	Amancio
+
+
+
+
+
+> > Now, I am really curious as to why people are not trying to fix
+> > the linux emulation layer related problems with respect to Star Office.
+> 
+> So fix it already!  You have commit privileges.  Saying "I'm really
+> curious why someone isn't doing the work" has never been a successful
+> motivational technique for getting work done around here. If anything
+> I'd say the irritation it induces tends to lead people *away* from
+> doing whatever it is you're whining about because now you've made it
+> less than enjoyable to do so - you're doing it only because someone's
+> trying to goad you into it.
+> 
+> Or, to put it somewhat more succinctly: Put up or shut up, Amancio! :-)
+> 
+> - Jordan
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606389 ###
+===== 库内序 147945 | PK 2606389 | 等级 L3 =====
+DATE: 1998-06-01T03:22:33+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Star Office Installation 
+摘要: Jordan K. Hubbard：指出对方完全没抓到重点，并区分 activism 与 whining，认为二者不可混为一谈
+
+> Sorry, Jordan I differed with your opinion. We are obviously at a stage
+> that we need to increase our coverage and in my opinion getting
+> Star Office to work on FreeBSD is a good goal so the motivation 
+> factor is there.
+
+Um, Amancio, you are just completely and totally missing the point
+here and I don't know how else to put it.
+
+There's activism and then there's whining.  Trying to sell "whining"
+under the activism label just won't fly, no matter how you try and
+twist the words around to justify it, and if you're really motivated
+to do something about the problem then history has more than amply
+shown us that the best results always come from someone actually DOING
+something about a problem!
+
+Lead, and others will follow.  Leave the worrying about "dominant
+hackers" and other such new-age observations to the sociologists and
+be the more pragmatic engineer that I know you can be.  Whining that
+people are sitting on their asses is simply not how you motivate
+engineers, something you should be more than well aware of yourself,
+and it's yelling "charge!" and diving on a problem, perhaps describing
+your ongoing detective work as it progresses, which is far more
+motivational to those surrounding you.  I have plenty of statistical
+evidence on previous failures and successes to back me up on this one
+so just trust me on it, OK?  :-)
+
+> Requesting censorship on the voice of reason is not an option if anything
+> the useless thread on Star Office should have been steered in a more 
+> pro-active fashion. Perhaps you like to hear that Star Office
+
+Ok, consider this message my attempt to steer it in a more pro-active
+fashion then.  I'm telling you outright: What works and works best
+around here are people who are willing to lead from the front.
+Now what are you prepared to do about it?
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606391 ###
+===== 库内序 147947 | PK 2606391 | 等级 L3 =====
+DATE: 1998-06-01T03:36:47+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：谢过建议并声明自己不会亲自动手，认为有足够多的黑客愿意为 Star Office 出力
+
+> Ok, consider this message my attempt to steer it in a more pro-active
+> fashion then.  I'm telling you outright: What works and works best
+> around here are people who are willing to lead from the front.
+> Now what are you prepared to do about it?
+
+
+I appreciate your advise and I will not step in to fix the problem for 
+I think that there are plenty of hackers out there who would enjoy 
+Star Office . If no one steps in to fix the problem then it will not
+get fixed. (Don't worry. We already have a hacker downloading 
+Star Office and  eyeing to fix the linux layer).
+
+On my todo list:
+
+I am actively getting ACE/elf  up and running on -current something
+that was a total fiasco with a.out. Can you believed the size of
+this nice ACE test program compiled with -g:
+{hasty} ls -ald Barri*
+-rwxr-xr-x  1 hasty  rah  82990 May 30 23:37 Barrier_Test
+
+Previously with a.out that used to be an 8 megabyte monster.
+
+After that I have this little thing to integrate in the bt848 driver:
+
+>From Dru Nelson <dnelson@redwoodsoft.com> :
+
+Here it is and a brief description.
+
+I am willing to answer any questions concerning this code to get it
+into the official hasty FreeBSD driver. I probably won't be working
+on this anymore, but at least it can be there if someone wants to
+take it further.
+
+As it stands, the code should only work in NTSC video, no checks
+are done to insure this. It is set up for single capture, then 
+it writes into the buffer (which should be mmaped in). Notice,
+once vbi capture mode is turned on, that is all that gets captured.
+No video is captured. In this current form, I had enought BT848
+RISC to capture 8 frames back to back. This can easily be changed
+to capture just one frame.
+
+---------------------------------------------------------------------------
+
+
+	Amancio
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606393 ###
+===== 库内序 147949 | PK 2606393 | 等级 L4 =====
+DATE: 1998-06-01T03:37:32+00:00
+FROM: Curt Sampson <cjs@portal.ca>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Curt Sampson：指出该 boot loader 里远不止硬件驱动，还含一套完整 PALcode，用于实现底层机器相关功能
+
+On Sun, 31 May 1998, Doug Rabson wrote:
+
+> I have spent a *long* time reading Linux and Milo source code and I really
+> want to avoid putting hardware drivers in the bootloader.
+
+There's a lot more than hardware drivers in that particular
+bootloader. It also includes a complete set of PALcode. (PAL stands
+for `Privileged Architecture Library,' and is used to implement
+some very low-level, machine dependent functions, such as memory
+and TLB management.) This, of course, is different even from machine
+to machine with the same CPU, and thus the bootloader for the
+AXPpci33 is not the same as the bootloader for the Multia, despite
+the fact that they both use the same CPU and the are exactly the
+same machine type (that is, use exactly the same kernel code) under
+NetBSD.
+
+cjs
+
+Curt Sampson    cjs@portal.ca	   Info at http://www.portal.ca/
+Internet Portal Services, Inc.	   Through infinite mist, software reverberates
+Vancouver, BC  (604) 257-9400	   In code possess'd of invisible folly.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

@@ -1,0 +1,24 @@
+2606352|L4|Ollivier Robert：认为 FreeBSD 应存在 Netscape US 版，但取出口版再用 Fortify 打补丁更快
+2606353|L3|Andrew Kenneth Milton：认为 128 位安全代理市场需求不小，用代理可免逐个给下载的 Netscape 或其他浏览器打补丁
+2606354|L4|Warner Losh：纠正称 Linux/MIPS ARC bootloader 并不类似，它借 ARC BIOS 例程绕过多处实现缺陷并用标准调用加载内核
+2606357|L4|Cejka Rudolf：最新 -current 下以 nullfs 把 /test 挂到 /mnt，两处拷贝同一文件 diff 相同，重启后再比对
+2606359|L4|Terry Lambert：指共享内存段按定义即持久，最后一个引用消失时删除它是错误，这算设计缺陷
+2606360|L4|Amancio Hasty：称 Linux 上 StarOffice 退出即删 ipc 共享段并不当，推测 FreeBSD 未正确处理 ipc 调用致清理失效
+2606362|L4|Ollivier Robert：给出结论称 nullfs 尚未跟上近期 VFS 与 VM 的改动
+2606364|L3|Joseph Stein：追问 sendmail 8.9 的最终结论与澄清进展，询问是否想装 8.9.0 的人都得自行决定
+2606365|L4|Tor Egge：-current 中未经改动的 nullfs 层已因多处原因损坏，不建议使用，正确修复需改 VFS/VM 子系统
+2606367|L4|Amancio Hasty：建议在 linux_ipc.c 里打印全部 ipc 调用与错误，改后重建 linux 层并热加载，运行期间不可卸载
+2606368|L3|Doug Rabson：询问 ARC 标准是否有电子版本，希望索取一份副本
+2606374|L3|Amancio Hasty：强调他要的是 emulation 层的 linux 调用表现得与 Linux 上一致
+2606375|L4|Mike Smith：SysV IPC 的资源跟踪是可选的，程序未必请求跟踪，若请求而不被遵从则 FreeBSD 才出错
+2606378|L3|Terry Lambert：不必动 linux 层代码，直接用 SEFs truss 跟踪即可，耗时为零
+2606379|L3|Amancio Hasty：抱怨 truss 建议堵掉了排查 linux 层的最后借口，并澄清自己并非要求特定个人动手修
+2606380|L3|Joe McGuckin：设想用密钥签名二进制并让内核 exec 在载入前验证，以防被攻陷的防火墙被当作跳板
+2606384|L3|Kevin Street：补充说光是下载 Star Office 就要三小时，这也是一项现实门槛
+2606385|L3|Amancio Hasty：不解为何没人尝试修 Star Office 相关的 linux 模拟层问题，认为早期 FreeBSD 远不是这态度
+2606386|L3|John S. Dyson：表示若有人动手改他会乐意 review，但自己正忙于其他部分代码
+2606387|L3|Jordan K. Hubbard：直言对方有 commit 权限，动手修才是正解，抱怨并不能推动工作反而让人更不愿做
+2606388|L3|Amancio Hasty：反驳 Jordan 认为 FreeBSD 正需扩大覆盖面，真问题不在 Star Office 而在列表反应迟缓
+2606389|L3|Jordan K. Hubbard：指出对方完全没抓到重点，并区分 activism 与 whining，认为二者不可混为一谈
+2606391|L3|Amancio Hasty：谢过建议并声明自己不会亲自动手，认为有足够多的黑客愿意为 Star Office 出力
+2606393|L4|Curt Sampson：指出该 boot loader 里远不止硬件驱动，还含一套完整 PALcode，用于实现底层机器相关功能

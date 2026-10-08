@@ -1,0 +1,24 @@
+2605772	885	amancio 认为这个主设备号是全新未占用的空位，因此驱动作者仍有机会自己给自己的设备起名字，这等于在命名上给提问者多留了些余地
+2605773	885	studded 清理 ircd makefile 时卡住，贴出 SHELL、ALLSUBDIRS 与 THINGSTOCLEAN 等变量和 clean 目标，说明改成在子目录中展开变量后 rm 报语法错误，加引号后变量又不展开，于是求助
+2605774	885	robert 在邮件档案检索无果后询问 FreeBSD 上是否仍在实现 NIS+ 客户端以及进展如何，又问 Linux 的 NIS+ 客户端能否在 FreeBSD 上用、SecureRPC 实现是否完备且对非美国公民开放
+2605776	885	dudorov 担心 tau 驱动重蹈 cx 驱动覆辙，指出 cx 首次导入 FreeBSD 后作者只在自身版本上开发，从未为 FreeBSD 提交变更与修缺陷，2.2.6 仍用旧而有缺陷的版本且作者版需打补丁才能用上
+2605778	885	vakulenko 请求把 99 改成 ct 并把注释写成 Cronyx/Tau serial adapter，同步把 42 cx 那条注释改成 Cronyx/Sigma serial adapter
+2605779	885	allen 说明把 pccard 从 SUBDIRS 移出的办法绕过后，在单用户下做 installworld 时 mtree 仍报 fdesc attr 内核恐慌并使系统重启，怀疑与 union-mounted 的 fdesc 文件系统有关
+2605781	885	jkh 确认已照请求改名并同步修正另一条驱动的注释，请对方下次一次说清期望格式以便一步到位，又追问 FreeBSD 中 Sigma 驱动维护不佳的说法是否属实，担心 Tau 驱动重蹈覆辙
+2605782	885	vakulenko 承认 FreeBSD 里的 Sigma 驱动版本确实过时，最新版一直可从 www.cronyx.ru 取，用户对此还算满意所以他没再折腾，现在正把 Tau 与 Sigma 驱动准备提交到 FreeBSD-current
+2605785	885	alexey 询问是否有人在为 Intel Flash 卡 2 和 2+ 系列的 PCMCIA 卡写引导代码，自己想从 PCMCIA Flash 卡启动 FreeBSD 做无盘路由器，配串口控制台与多块网卡，ISA 板方案只作最后手段
+2605788	885	mattc 发问 PPP 为何默认把日志写成 /var/log/ppp.log 与 /var/log/slip.log，指出目录名 log 本已说明文件是日志，自己一向把 ppp.log 改名为 ppp，想知道是否另有缘由
+2605791	885	jhay 指出新版 ntp4 检测到 sched_setscheduler 后就以 SCHED_FIFO 加 sched_get_priority_min 调用，结果 ntpd 反而拿到接近空闲的低优先级被繁忙进程饿死，遂贴代码请人判断写法是否合适
+2605795	885	brian 解释说自己最初接手 ppp 时它就叫这个名字，改用 syslogd 之后仍沿用旧名，其实没有好理由，只是大家都知道这个叫法
+2605796	885	dufault 指出 SCHED_FIFO 与 SCHED_RR 同属 RTPRIO 类应同等对待且共用调度代码，FIFO 不轮转而 RR 轮转，系统分空闲、普通分时和 rtprio 三层，这段代码本应能抢占分时进程
+2605798	885	jkh 在这个命名话题里插话，建议趁慢慢演进的机会，把名不副实、起得并不准确的 alias 标志逐步改名为更贴切的 nat
+2605799	885	eivind 认为改名或许可取，因为相关术语本身就容易让人混淆，别名只是 NAT 各种形式中的一小部分，库本来就该叫 libnat
+2605801	885	tom 询问是否有人做过 ISP 计费程序，能否直接读导出的 Cisco netflow 记录，或轮询 Cisco 的 ip precedence accounting mib
+2605802	885	greg 发布 vinum 首个 alpha 版 vinum-0.01，采用 Berkeley 风格版权，功能大致相当于 ccd 驱动，自动启动、卷名限制、newfs 与 RAID5 都未完善，称适用于 FreeBSD 2.2.6 与较新的 3.0-CURRENT
+2605806	885	brian 觉得改名问题不大，但为保持一致 libalias 也得跟着改成 libnat，并把 Charles 抄送进来征询看法
+2605807	885	hellmuth 宣布 6 月 20 和 21 日在德国汉堡他家中办 BSD 社交聚会，图的是周末一起面对面聊聊而不是整天只发邮件，请参加者自带睡袋和充气床垫，有兴趣的直接联系他
+2605808	885	jkh 认为把透明代理这个叫法用起来只会让人与 socks 再次混淆，无论是否走 RFS 都是坏主意，又说 natd 这个名字沿用八十年代同类硬件设备的叫法就足够了，已经自洽
+2605809	885	abial 说刚收到两封互不相干的来信，写信人都在尝试同一件事，其中一人已经成功，他还请 Jonathan Bresler 建一个叫 freebsd-small 的列表，讨论 picobsd 与嵌入式之类的小型 FreeBSD 安装
+2605811	885	darren 只写了一句，问 vinum 究竟是什么以及它今后会成为什么，对 vinum 的定义和走向都没有给出任何自己的说法
+2605812	885	julian 说 USENIX 之后的那个周末他正要去 New Orleans 观光，所以那场聚会他参加不了，全信就这两句话
+2605816	885	peter 回复 darren 的追问，转述 README 首行说 vinum 是 FreeBSD 的卷管理器，接着评论 Greg 发布时本该把这点说明白

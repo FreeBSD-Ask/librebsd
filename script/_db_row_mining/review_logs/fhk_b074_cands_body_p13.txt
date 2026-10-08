@@ -1,0 +1,761 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604899 ###
+===== 库内序 146456 | PK 2604899 | 等级 L3 =====
+DATE: 1998-04-20T18:17:07+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: FreeBSD USB project, help requested 
+摘要: Mike Smith：主动报名实现 OHCI 标准并支持 SiS 5598 OHCI 芯片组，并调侃自家主板正好就是这颗芯片
+
+> > x Programmers interested in taking part in the project by implementing
+> >   bits and pieces:
+> >   x Implementation of OHCI standard (similar to UHCI)
+> >   x Support for other UHCI/OHCI chipsets
+> 
+> I volunteer for OHCI standard and support for the SiS 5598 OHCI chipset
+> (gee, can you guess what my motherboard has :).
+
+Get the OHCI standard and work from that.  (Which is what I have done 
+for my unknown Toshiba chipset.)  The whole idea behind OHCI is that 
+you don't have to know what sort of chipset you have, and we shouldn't 
+care at all.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604904 ###
+===== 库内序 146461 | PK 2604904 | 等级 L4 =====
+DATE: 1998-04-20T19:13:00+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Is anyone working on xircom pccard support?
+摘要: Nate Williams：指出 PAO 项目与 FreeBSD 项目完全独立，除少量驱动问题外 FreeBSD 的 PCCARD 支持已好于 PAO
+
+> Especially for the CE56?
+
+Which is what?
+
+> Also, will PAO be updated for 2.2.6?
+
+The PAO project is completely separate from the FreeBSD project.
+
+However, aside from a few minor issues (drivers mostly), the PCCARD
+support in FreeBSD is getting better than that in PAO.
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604905 ###
+===== 库内序 146462 | PK 2604905 | 等级 L3 =====
+DATE: 1998-04-20T19:37:24+00:00
+FROM: Robert Withrow <bwithrow@BayNetworks.COM>
+SUBJ: Re: Is anyone working on xircom pccard support? 
+摘要: Robert Withrow：追问 APM 支持是否进 2.2.6 而本人不愿追 bleeding edge，并表示愿意接手驱动开发工作
+
+
+nate@mt.sri.com said:
+:- Which is what? 
+
+The ce56 is the the 10/100/56K combo card.
+
+:- However, aside from a few minor issues (drivers mostly), the PCCARD
+:- support in FreeBSD is getting better than that in PAO. 
+
+And the APM stuff?  In 2.2.6?  (I'd rather not go to bleeding edge...)
+
+Anyway, I'll be glad to do the driver work, if it isn't already being
+done.  I've already gotten the the linux driver guy to put a bsd
+copyright on his code, and he offered to help me with the driver.
+
+Can you offer any tips/pointers for this stuff?
+
+-- 
+Robert Withrow -- (+1 508 916 8256)
+BWithrow@BayNetworks.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604906 ###
+===== 库内序 146463 | PK 2604906 | 等级 L4 =====
+DATE: 1998-04-20T19:45:50+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Is anyone working on xircom pccard support? 
+摘要: Nate Williams：CE56 是 10/100/56K 组合卡，FreeBSD 有无 PAO 都不支持组合卡与百兆卡，Hosokawa 尚未提交驱动
+
+> :- Which is what? 
+> 
+> The ce56 is the the 10/100/56K combo card.
+
+Combo cards aren't supported in FreeBSD, with/without PAO.  Neither are
+any 100MB cards, although Hosokawa has been threatening to commit a
+really slow driver for a couple of weeks now.
+
+> :- However, aside from a few minor issues (drivers mostly), the PCCARD
+> :- support in FreeBSD is getting better than that in PAO. 
+> 
+> And the APM stuff?  In 2.2.6?  (I'd rather not go to bleeding edge...)
+
+The APM stuff in FreeBSD is *better* than in PAO, IMHO.  It has been
+that way for a long time.  And, recently (in between 2.2.5 and 2.2.6)
+the APM/PCCARD integration became usable in FreeBSD.  However, I just
+fixed a couple minor bugs this morming and committed the code to
+-current.  I'll merge it into -stable in a few days if no one notes any
+bugs.
+
+> Anyway, I'll be glad to do the driver work, if it isn't already being
+> done.  I've already gotten the the linux driver guy to put a bsd
+> copyright on his code, and he offered to help me with the driver.
+
+Feel free.  If you need any help, I'm available to answer questions
+anytime.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604907 ###
+===== 库内序 146464 | PK 2604907 | 等级 L3 =====
+DATE: 1998-04-20T19:53:43+00:00
+FROM: Robert Withrow <bwithrow@BayNetworks.COM>
+SUBJ: Re: Is anyone working on xircom pccard support? 
+摘要: Robert Withrow：追问组合卡不被支持究竟是根本性的设计缺陷还是单纯因为没人动手实现
+
+
+nate@mt.sri.com said:
+:- Combo cards aren't supported in FreeBSD, with/without PAO.
+
+Is that because of a fundamental design problem or limitation,
+or just because no one has done it?
+
+
+-- 
+Robert Withrow -- (+1 508 916 8256)
+BWithrow@BayNetworks.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604908 ###
+===== 库内序 146465 | PK 2604908 | 等级 L4 =====
+DATE: 1998-04-20T19:58:02+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Is anyone working on xircom pccard support? 
+摘要: Nate Williams：两问皆是，Jon Bresler 曾在东京时寄过相关补丁但他尚未查看，建议直接向对方索取
+
+> :- Combo cards aren't supported in FreeBSD, with/without PAO.
+> 
+> Is that because of a fundamental design problem or limitation,
+> or just because no one has done it?
+
+Yes, and yes.  However, Jon Bresler sent me some patches when I was in
+Tokyo that I haven't had a chance to look at.  Ask him for them. :)
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604909 ###
+===== 库内序 146466 | PK 2604909 | 等级 L4 =====
+DATE: 1998-04-20T20:35:44+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Re: kmem_map too small
+摘要: Andrzej Bialecki：针对 kmem_map too small 报错，给的第一步是编辑 /sys/i386/include/vmparam.h
+
+On Mon, 20 Apr 1998, Raul Zighelboim wrote:
+
+> 
+> Hello there..... How do you prevent thius from happening under
+> 2.2-stable as of yesterday ?
+> 
+> c: kmem_malloc: kmem_map too small
+> 
+> syncing disks... panic: kmem_malloc: kmem_map too small
+> Automatic reboot in 15 seconds - press a key on the console to abort
+> Rebooting...
+
+1. Edit file /sys/i386/include/vmparam.h. Somewhere near the end you'll
+   find the #define VM_KMEM_SIZE. Multiply the define by two.
+2. Go to /usr/src/release/floppies/boot and make boot floppy (I'm pretty
+   sure you'll have to tweak something on a 2.2.x system... :-( )
+
+If nothing comes out of it, grab the file:
+	ftp://ftp.freebsd.org/pub/FreeBSD/incoming/cam-boot.tgz
+
+This was prepared to make use of CAM support, but this kernel has
+no bounce buffers and increased kmem_map, so you should be ok.
+
+Andrzej Bialecki
+
+--------------------+---------------------------------------------------------
+abial@nask.pl       | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic | "Be open-minded, but don't let your brains to fall out."
+Network in Poland   | All of the above (and more) is just my personal opinion.
+--------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604910 ###
+===== 库内序 146467 | PK 2604910 | 等级 L3 =====
+DATE: 1998-04-20T20:39:44+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: Symbios docs
+摘要: sbabkin：ncr.c 里 Stefan Esser 的邮箱疑已失效，被告知有 Symbios 寄存器手册但厂商只肯给 SCRIPTS 手册
+
+Hi!
+
+I'm trying to locate Stefan Esser whose e-mail address in ncr.c seems
+to be outdated, but any advice from anyone is welcome. :-)
+
+Stefan told me some time ago that there does exist some manual
+describing 
+the registers of Symbios SCSI card. But when I recently tried to
+obtain this manual from Symbios, they told me that all they have
+is the SCRIPTS manual that describes the registers very sparsely
+(and I already have it). May be someone has some additional information 
+about the registers manual, like exact name or order number ? Thanks!
+
+Serge
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604911 ###
+===== 库内序 146468 | PK 2604911 | 等级 L4 =====
+DATE: 1998-04-20T21:01:19+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: kmem_map too small 
+摘要: David Greenman：说已在另一封邮件中回答过 kmem_map 过小问题，提示 VM_KMEM_SIZE 必须调大
+
+>
+>Hello there..... How do you prevent thius from happening under
+>2.2-stable as of yesterday ?
+>
+>c: kmem_malloc: kmem_map too small
+
+   I already answered this in my other message (HINT: VM_KMEM_SIZE must be
+increased).
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604912 ###
+===== 库内序 146469 | PK 2604912 | 等级 L3 =====
+DATE: 1998-04-20T21:44:49+00:00
+FROM: Ken Hansen <khansen@njcc.com>
+SUBJ: Re: Is anyone working on xircom pccard support? (sort of...)
+摘要: Ken Hansen：拟给 Toshiba Libretto 装机，被建议用 PAO 却觉得它与 2.2.6 差异很小，询问 2.2.6 是否适合掌机平台
+
+Hello,
+	I am close to instaling NetBSD on a "palmtop" (Toshiba
+Libretto) and I was told that I should use the PAO (distribution?)
+software, but based on what I infer from the following, it seems
+that the differences between R2.2.6 and PAO are minimal - is that
+true?
+
+	I am concerned about typical laptop things (power, limited
+display, etc) - is R2.2.6 a reasonable relase for such a platform?
+
+	I apologize if this is the wrong forum, but it was Nates noote
+that prompted the question...
+
+Thanks,
+
+Ken
+khansen@njcc.com
+
+Nate Williams wrote:
+> 
+> > Especially for the CE56?
+> 
+> Which is what?
+> 
+> > Also, will PAO be updated for 2.2.6?
+> 
+> The PAO project is completely separate from the FreeBSD project.
+> 
+> However, aside from a few minor issues (drivers mostly), the PCCARD
+> support in FreeBSD is getting better than that in PAO.
+> 
+> Nate
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604915 ###
+===== 库内序 146472 | PK 2604915 | 等级 L4 =====
+DATE: 1998-04-20T23:41:45+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: Is anyone working on xircom pccard support? (sort of...)
+摘要: Nate Williams：表示不了解 NetBSD 的内容，若对方本意指 FreeBSD 则 2.2.6 与 PAO 的差异在他看来并不小但承认自己有偏
+
+> 	I am close to instaling NetBSD on a "palmtop" (Toshiba
+> Libretto) and I was told that I should use the PAO (distribution?)
+> software, but based on what I infer from the following, it seems
+> that the differences between R2.2.6 and PAO are minimal - is that
+> true?
+
+I have no idea what's in NetBSD.  If you meant to say FreeBSD, then the
+differences between 2.2.6 and PAO are not minimal in my eyes, but I'm
+biased.
+
+> 	I am concerned about typical laptop things (power, limited
+> display, etc) - is R2.2.6 a reasonable relase for such a platform?
+
+I believe Warner Losh uses FreeBSD on them right now, and I had one
+working for a very short period of time.  They seem to work fine under
+FreeBSD.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604916 ###
+===== 库内序 146473 | PK 2604916 | 等级 L3 =====
+DATE: 1998-04-20T19:48:33+00:00
+FROM: "Denis A. Baldwin" <baldwin@ns.cac.net>
+SUBJ: writing a book.. need input
+摘要: Denis A. Baldwin：正在撰写一本关于黑客与破解等地下网络文化的书，公开征集稿件、想法与愿意校对的人
+
+I am writing a book on the electronic underworld.  This book includes 
+information, history and a quasi instruction manual to hacking, 
+cracking, phreaking, AMSAT, pirate radio, virii, warez and anything 
+similar.  I am looking for contributions, thoughts, ideas or anybody 
+who wouldn't mind just proof reading and offering some constructive 
+critisism.  I want as much feedback as possible, including negative.  
+Anyone whom is interested in writing a chapter, or leaving their 
+input, please e-mail me at baldwin@cac.net.  Also, I plan on being at 
+Defcon 6 in Vegas July 31st so I may see some of you there.
+
+Denis
+What separates man and beast?  Beast is far less cruel...
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604918 ###
+===== 库内序 146475 | PK 2604918 | 等级 L4 =====
+DATE: 1998-04-21T01:16:11+00:00
+FROM: "Jonathan M. Bresler" <jmb>
+SUBJ: Re: Is anyone working on xircom pccard support?
+摘要: Jonathan M. Bresler：澄清自己提供的补丁并不实现组合卡功能，只让 3com 卡的网络部分能工作起来
+
+Nate Williams wrote:
+> > :- Combo cards aren't supported in FreeBSD, with/without PAO.
+> > 
+> > Is that because of a fundamental design problem or limitation,
+> > or just because no one has done it?
+> 
+> Yes, and yes.  However, Jon Bresler sent me some patches when I was in
+> Tokyo that I haven't had a chance to look at.  Ask him for them. :)
+
+	the patches dont "do" combo cards.
+	they let me get the network half of a 3com network/modem
+	recognized and "configured".
+
+	i say "configured" because there is an interrupt problem.
+	i dont get any!  epwatchdog fires and looks at the card
+	but no interrupts, even if i request an interrupt upon
+	completion of each transmitted packet.
+
+	i can see the packets hit the wire.
+	and once enough pings have been sent, i get a bunch of
+	echo response packets....so once i get interrupts the network
+	half of the card may just work ;)
+
+jmb
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604919 ###
+===== 库内序 146476 | PK 2604919 | 等级 L3 =====
+DATE: 1998-04-21T01:30:59+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Suggestion for somebody with a 16MB testbox
+摘要: Eivind Eklund：称 16MB 机器上裸编 Linux 内核要 3 小时，怀疑其 VM 有问题，建议对比 FreeBSD 模拟与真 Linux 耗时
+
+I just got some totally wild times for compiling a Linux kernel under
+Linux on a 16MB machine (3 hours for a plain kernel compile).  This
+sounds like a totally screwed up VM system.
+
+Now, for kicks, it would be neat to have measurements on how much time
+it takes to compile the Linux kernel on emulation under FreeBSD
+compared to on a true Linux.  If somebody has a scratchbox with that
+little memory (and I don't - I've not even got any small enough SIMMs
+to make one), this'd be a neat experiment to run:
+
+1. Install Linux on scratchbox.
+2. Set up kernel sources and configure kernel.
+3. tar down entire tree and copy somewhere more permanent.
+4. time a Linux kernel compile from the tree on the scratchbox.
+5. install FreeBSD on scratchbox.
+6. run a compile of the same kernel tree in /compat/linux on the
+   scratchbox.
+
+I think we'll come out WAY ahead :-)
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604920 ###
+===== 库内序 146477 | PK 2604920 | 等级 L4 =====
+DATE: 1998-04-21T02:06:41+00:00
+FROM: Peter Wemm <peter@netplex.com.au>
+SUBJ: Re: OK to send e-mail? 
+摘要: Peter Wemm：指出回复这类邮件会把地址送进已验证地址名单，它是收集地址型垃圾邮件，叮嘱任何人都不该回信
+
+dannyman wrote:
+> On Mon, Apr 20, 1998 at 07:40:43PM -0400, list@listme.com wrote:
+> > OK to send an e-mail to hackers@freefall.cdrom.com? 
+>
+> no.
+
+Note the following header in your reply to this spam:
+To: list@listme.com
+You've successfully added yourself to the 'verified addresses' spam lists.
+(It is an address gathering spam, I've seen it on a dozen addresses so far.)
+
+*NEVER* reply to spam..  Addresses of people who have replied are 
+collected and sold.
+
+> -- 
+>   //       dannyman yori aiokomete       ||  Our Honored Symbol deserves
+> \\/ http://www.dannyland.org/~dannyman/  ||  an Honorable Retirement (UIUC)
+
+Cheers,
+-Peter
+--
+Peter Wemm <peter@netplex.com.au>   Netplex Consulting
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604922 ###
+===== 库内序 146479 | PK 2604922 | 等级 L3 =====
+DATE: 1998-04-21T03:11:40+00:00
+FROM: Sue Blake <sue@welearn.com.au>
+SUBJ: IRC - #freebsd-newbies invasion?
+摘要: Sue Blake：新人打算自建 #freebsd-newbies 频道且 FreeBSD IRC 服务器被提名，她觉得在旁边开个频道便于照顾反而有好处
+
+Some newbies are talking about where we should start a #freebsd-newbies IRC
+channel, and among other options the FreeBSD IRC server came up.
+
+I've drifted through a couple of times, and I get the impression you lot
+wouldn't want newbies jumping around in there, and I note that the IrcII
+port no longer defaults to that server. On the other hand, it might actually
+be helpful to have a newbies channel nearby you could send people to. It
+would also be mentioned on the Newbies Resources web page.
+
+What are your thoughts on this?
+
+-- 
+
+Regards,
+        -*Sue*-
+
+find / -name "*.conf" |more
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604923 ###
+===== 库内序 146480 | PK 2604923 | 等级 L3 =====
+DATE: 1998-04-21T04:52:07+00:00
+FROM: Bruce Albrecht <bruce@zuhause.mn.org>
+SUBJ: Re: IRC - #freebsd-newbies invasion?
+摘要: Bruce Albrecht：质疑谁愿意守在 #FreeBSD-newbies 里回答提问，并指出部分 FreeBSD 常驻用户的耐心相当有限
+
+Sue Blake writes:
+ > Some newbies are talking about where we should start a #freebsd-newbies IRC
+ > channel, and among other options the FreeBSD IRC server came up.
+ > 
+ > I've drifted through a couple of times, and I get the impression you lot
+ > wouldn't want newbies jumping around in there, and I note that the IrcII
+ > port no longer defaults to that server. On the other hand, it might actually
+ > be helpful to have a newbies channel nearby you could send people to. It
+ > would also be mentioned on the Newbies Resources web page.
+ > 
+ > What are your thoughts on this?
+
+Who is going to sit in the #FreeBSD-newbies channel and answer questions?
+There are a number of #FreeBSD regulars that have limited patience for
+brain-dead newbies, and so they're not going to be interested in hanging
+around in #FreeBSD-newbies.  We certainly don't need another channel filled 
+with the clueless moaning about how badly FreeBSD sucks and that you can't
+get any help because nobody knows anything about FreeBSD on the channel.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604925 ###
+===== 库内序 146482 | PK 2604925 | 等级 L3 =====
+DATE: 1998-04-21T01:40:42+00:00
+FROM: Alfred Perlstein <perlsta@fang.cs.sunyit.edu>
+SUBJ: Re: IRC - #freebsd-newbies invasion?
+摘要: Alfred Perlstein：认为 EFnet 上的 #freebsd 频道已经挤满新人，完全没有必要再单独开一个频道
+
+#freebsd on EFnet is loaded with newbies, no need for a channel imo.
+
+-Alfred
+
+On Mon, 20 Apr 1998, Bruce Albrecht wrote:
+>  > Some newbies are talking about where we should start a #freebsd-newbies IRC
+>  > channel, and among other options the FreeBSD IRC server came up.
+> Who is going to sit in the #FreeBSD-newbies channel and answer questions?
+> There are a number of #FreeBSD regulars that have limited patience for
+> brain-dead newbies, and so they're not going to be interested in hanging
+> around in #FreeBSD-newbies.  We certainly don't need another channel filled 
+> with the clueless moaning about how badly FreeBSD sucks and that you can't
+> get any help because nobody knows anything about FreeBSD on the channel.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604927 ###
+===== 库内序 146484 | PK 2604927 | 等级 L3 =====
+DATE: 1998-04-21T09:45:00+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Request for major number for Mylex RAID controller
+摘要: Ulf Zimmermann：Mylex RAID 驱动已推进到可工作阶段，请求有人为它分配一个主设备号
+
+I am getting into the phase of a working driver ;-) So I need a major number
+for it. Who can assign one ?
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604928 ###
+===== 库内序 146485 | PK 2604928 | 等级 L3 =====
+DATE: 1998-04-21T12:38:39+00:00
+FROM: Keith Stevenson <k.stevenson@louisville.edu>
+SUBJ: Linux kernel compiles
+摘要: Keith Stevenson：8MB 内存的 486DX-33 上运行 Linux 时，编译 2.0 内核要 4 到 6 小时，取决于是否同时开 X
+
+Before I converted to FreeBSD, I ran Linux on a 486DX-33 with 8MB of RAM.
+Compiling a Linux 2.0 kernel took 4-6 hours depending upon whether or not I
+had X running at the same time.  Unfortunately, I am not in a position to run
+your experiment, but it does sound interesting.
+
+--Keith Stevenson--
+
+-- 
+Keith Stevenson
+System Programmer - Data Center Services - University of Louisville
+k.stevenson@louisville.edu
+PGP key fingerprint =  4B 29 A8 95 A8 82 EA A2  29 CE 68 DE FC EE B6 A0
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604930 ###
+===== 库内序 146487 | PK 2604930 | 等级 L3 =====
+DATE: 1998-04-21T16:27:19+00:00
+FROM: Joe Greco <jgreco@solaria.sol.net>
+SUBJ: Reliable is FreeBSD's middle name.
+摘要: Joe Greco：核心以太路由器已连续运行 300 天且负载很低，此前为加装接口板在 200 天高可用度时将其重启过
+
+I happened to log in on my core ethernet router this morning, and noticed
+
+11:26AM  up 300 days, 16:02, 1 user, load averages: 0.13, 0.06, 0.01
+
+It's too bad that I took it down after a 200 day uptime to stick some
+more interfaces into it, or it'd be 500.  :-)
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/342-4847
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604931 ###
+===== 库内序 146488 | PK 2604931 | 等级 L3 =====
+DATE: 1998-04-21T16:39:43+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Request for major number for Mylex RAID controller 
+摘要: Mike Smith：反问该 Mylex RAID 控制器是否就是 CAM 代码所支持的那一类设备
+
+> I am getting into the phase of a working driver ;-) So I need a major number
+> for it. Who can assign one ?
+
+Is this like the Mylex RAID controller(s) that the CAM code supports?
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604932 ###
+===== 库内序 146489 | PK 2604932 | 等级 L4 =====
+DATE: 1998-04-21T17:41:39+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Re: Request for major number for Mylex RAID controller
+摘要: Ulf Zimmermann：CAM 的 README 讲的是 Mylex 与 Buslogic 控制器，并不是 RAID 卡，DAC-960 才是 RAID
+
+> > I am getting into the phase of a working driver ;-) So I need a major number
+> > for it. Who can assign one ?
+> 
+> Is this like the Mylex RAID controller(s) that the CAM code supports?
+
+Aehm, if I look into the README of CAM, it talks about the Mylex/Buslogic
+controllers, which are not raid controllers. The DAC-960 is a hardware
+level raid controller with 1 to 5 SCSI channels (5 only on EISA) with an
+Intel i960 CPU.
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604934 ###
+===== 库内序 146491 | PK 2604934 | 等级 L4 =====
+DATE: 1998-04-21T18:02:42+00:00
+FROM: "Justin T. Gibbs" <gibbs@narnia.plutotech.com>
+SUBJ: Re: Request for major number for Mylex RAID controller
+摘要: Justin T. Gibbs：问 Mylex RAID 控制器是哪几种，并说明 CAM 支持 MultiMaster SCSI 卡而非 RAID 适配器
+
+In article <199804211639.JAA00440@dingo.cdrom.com> you wrote:
+>> I am getting into the phase of a working driver ;-) So I need a major number
+>> for it. Who can assign one ?
+> 
+> Is this like the Mylex RAID controller(s) that the CAM code supports?
+
+And which Mylex RAID controllers would that be?  The CAM code supports
+the MultiMaster SCSI cards, not the RAID adapters.
+
+--
+Justin
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604936 ###
+===== 库内序 146493 | PK 2604936 | 等级 L3 =====
+DATE: 1998-04-21T18:32:47+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: Symbios docs
+摘要: Wilko Bulte：针对寻找 Stefan Esser 的求助，反问 se@freebsd.org 这个地址不能直接联系他吗
+
+As sbabkin@dcn.att.com wrote...
+> Hi!
+> 
+> I'm trying to locate Stefan Esser whose e-mail address in ncr.c seems
+> to be outdated, but any advice from anyone is welcome. :-)
+
+Doesn't se@freebsd.org work?
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+______________________________________________ Powered by FreeBSD __________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

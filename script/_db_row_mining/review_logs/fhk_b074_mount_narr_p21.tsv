@@ -1,0 +1,24 @@
+2605252	885	Walker 自述 A/UX 存活到 1994 年至 3.1.1 版，末版是 Quadra 950 上的 Workgroup Server 95 需特殊硬件，自己日常仍用
+2605253	885	Carroll 求助：把 BOOT_FORCE_COMCONSOLE 编出的 boot loader 部署到没有显示器与键盘的远程站点，多数时候未接串口控制台，写串口的应用就卡在等待状态
+2605254	885	Thameen 举例说用 ssh 传大文件触到 login.conf 中 daemon 类的 filesize 限制，原因是 sshd 由 /usr/local/etc/rc.d/ 的脚本启动而继承该类
+2605255	885	Tom 自述 BOOT_FORCE_COMCONSOLE 在 boot.config 出现之后已过时，他改用自带 boot loader 配 -h -D 放进 boot.config 即可正常工作
+2605257	885	Eugene Vedistchev 回复驱动查询，给出驱动地址 http://www.dcs.qmw.ac.uk/~md/ida/ 供查阅
+2605258	885	Lambert 建议用 fseek 分段偏移绕过 2GB 上限，以 1<<30 配 SEEK_SET 与 SEEK_CUR 逐段推进，末尾再配 SEEK_END 到位，另给出 FreeBSD 专用 lfseek
+2605259	885	Shah 给出 IDA 驱动地址 http://www.doc.ic.ac.uk/~md/，该页有 2.2.5 与 2.2.6 的驱动，也能移植到 -current 使用
+2605260	885	Serge 描述 ServiceGuard 在以太网上的做法：先把别名包地址移到另一接口，再发出广播 ARP 响应让网内机器刷新 ARP 缓存，省去重新编程网卡硬件地址的麻烦
+2605262	885	Andrew 询问 FreeBSD 能否跑在 compactPCI 系统上，说想组一台多板卡机器，并问 CPU 模块是否足够像普通 PC，以及规格书上 electrically compatible 是否意味着软件上一样
+2605263	885	Marino 提交 ptread 库的补丁，专门处理非活动可运行线程的优先级提升问题，补丁已附在信中，同时说明对应 PR 也已提交
+2605264	885	Mike 转述他人经验称 FreeBSD 已在 CPCI 系统上跑起来，多数共识认为大多正常，仅少数 CPCI 厂商在板上做了奇怪的事，以太网适配器及类似外设都需谨慎
+2605265	885	Ben 求助：两台 FreeBSD-stable 机器 float 与 ben 之间 ping 和 traceroute 正常，TCP 服务握手完成后即悬挂，ben 反复重发同一个 27 字节包直到超时
+2605266	885	Serge 说自己的链路层协议实现只做发送，接收交给 BPF，认为这比另造一个 BPF 类似的接口更简洁优雅，目前仅支持 Ethernet
+2605268	885	Ron 建议改看 PICMG，称 compactpci 价格偏高而 PICMG 是更便宜的被动背板标准，自己团队正据此做集群，若预算充裕可看 altatech
+2605270	885	Ron 在邮件里给出 PICMG 的参考地址 http://www.bsicomputer.com/rackmount/bp/picmg.htm 请大家查阅，署名 Ron Minnich
+2605271	885	Ben 说关闭 RFC 1323 扩展后问题消失，根因在 TCP 扩展，此前 Jan L. Peterson 已建议在 xylogics annex 上关掉 tcp_extensions
+2605272	885	Chrisy 发布 Multipath routing b3 修补包 mpath.b3.tgz，含若干修复，metric 与持久路由缓存留待 b4，ipfw 增规则支持把入站流量导向本地 TCP 端口与出站改下一跳，David Sharnoff 有相似需求
+2605273	885	Chrisy 更正自己上一条里的 ipfw 示例笔误，规则转发命令应写作 ipfw add 2000 fwd 而非 forward to，自认这是复制粘贴导致的笔误
+2605274	885	Ben 确认 Tom 的判断成立，FreeBSD 默认启用 TCP 扩展，部分劣质路由设备会破坏带扩展的报文，与其 PPP 拨入吻合，并致谢所有答复者
+2605275	885	Jacques 求助修 PR ports/6430 需在 trafshow/patches 加补丁，命名 patch-ae 时 1 out of 1 hunks failed，手动 patch 成功，疑 bsd.ports.mk 有问题
+2605276	885	Robert 引 drosih 建议沿用 SIGDANGER 命名，自述在 2.2.x、SunOs、Solaris、HPUX、AIX 上构建同包都能完成，唯独 AIX 例外
+2605277	885	Dan 反问是否开启 TCP 扩展，称部分 terminal servers 和 routing hardware 会被卡住，自己遇到过一次，并问是否仅在 FreeBSD 之间
+2605278	885	Joe 求助 Hitachi VisionBook Elite 接光驱底座无法开机，用 2.2.5 内核加 PAO 补丁，探测到 wcd0 无盘即挂起，自改 wd.c 中 unit 循环上限
+2605279	885	ben 询问 recvmsg 与 sendmsg 在 2.2.6-STABLE 下是否线程安全，称多线程同时对 socket 执行 recvmsg 时程序无法正常工作

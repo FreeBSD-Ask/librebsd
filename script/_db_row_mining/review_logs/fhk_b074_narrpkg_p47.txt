@@ -1,0 +1,24 @@
+2606283|L4|Andrzej Bialecki：回忆 SO4.0 最新发行版改用 glibc 而非普通 linux libc，可能正是故障原因
+2606284|L4|Ollivier Robert：K6 整数快浮点慢，L1 cache 64 KB 大于 P55C 32 KB，本人用 K6 一年非常满意
+2606285|L3|Mike Smith：感谢 Andrzej 确认 SO4.0 改用 glibc，称所见 bogon 数量与该库一贯较差的水准相符
+2606286|L4|Ollivier Robert：自查本机 so40_lnx_01.tar.gz 与最新发行一致，时间戳 Mar 14，大小 45482226 字节
+2606287|L4|John Polstra：步骤无大碍但第 8 步多余，第 7 步 sync 其实也不需要，若要安心可重复 sync
+2606288|L4|John Polstra：针对升级 2.2.6 后负载异常现象点名 asclock 是常用元凶，建议读其源码即知原因
+2606289|L3|Daniel OConnor：按建议试过 truss 调试 Linux 模拟下的故障，但相比 kdump 没得到更有用的信息
+2606293|L3|Bill Fenner：唯一建议是用 tcpdump 抓包，看是否有与 kernel 日志里 arplookup 消息对应的 ARP 包
+2606295|L3|Brian Somers：在 arplook 线程里询问 Fernando 的机器上是否有在跑 dhcpc
+2606296|L3|chas 求助将 Cyrus IMAPd 改用另一份 shadow 密码文件，正尝试在源码里替换 getpwnam 调用
+2606298|L3|Fernando Schapachnik：否认跑 dhcpc，将抓 tcpdump arp 但需重编内核，不宜周五做，会回头报告
+2606299|L3|Ron G. Minnich：称 Star Office 是免费提供的，移植本身对公司是成本，劝大家别苛责，作品不错
+2606300|L3|Charles A. Peters：在 FreeBSD 2.2.6 上配 Apache 遇阻，询问有无线上 Apache 邮件列表或新闻组可问
+2606301|L3|Luigi Rizzo：无名 PCMCIA ne2000 克隆卡默认走 UTP 口，问 ed 驱动能否控制收发器类型，media 命令似不支持
+2606302|L3|sbabkin 介绍 SCSI-over-FastEthernet 原型已可用，问后续方向，思路是把 SCSI 封装走 FastEthernet 延长线缆
+2606304|L3|Lutz Albers：否认 Ollivier 所持 so40_lnx_01.tar.gz 为最新版，称 Star Office 另发了新构建
+2606306|L3|Karl Pielorz：建议查 www.apache.org，上面有大量 Apache 资料含具体 FAQ，可直接找答案
+2606307|L3|Stefan Bethke：建议 SCSI-over-FastEthernet 支持跨网络访问设备并能跨不同 OS，举例典型图形设计工作室需访问各类设备
+2606309|L3|Luigi Rizzo：追问那些卡是 PCMCIA 还是 ISA/PCI，并称自己也有相关经验
+2606310|L3|Mike：称自己同样遇到 arplookup host is not on local network 报错，请教资深联系人后转引其答复
+2606311|L3|Mike：除 Apache FAQ 与 OReilly 手册外他不知其他资料，一般问题宜发往更合适的列表
+2606312|L3|Arne H Juul：询问 MANDEPEND 宏用途，已查 bsd.man.mk 与 bsd.prog.mk 未见差异，删掉也未出问题
+2606314|L3|Brian Tao：询问 Cyclades 新驱动是否含 BREAK，自述改 3.0-current cy.c 给 Cyclom-Y 卡加 BREAK 未成
+2606317|L3|Charles A. Peters：初学 FreeBSD 与 Unix，难点在 httpd 启动而非配置，对 httpd.conf 与 srm.conf 困惑

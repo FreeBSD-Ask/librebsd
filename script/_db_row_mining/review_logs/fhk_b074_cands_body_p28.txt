@@ -1,0 +1,985 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605503 ###
+===== 库内序 147060 | PK 2605503 | 等级 L3 =====
+DATE: 1998-05-06T07:08:14+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Mike Smith：推荐 Mindshare PnP Architecture 一书 称其把大量资料浓缩为可读篇幅 自读体验良好
+
+> > No; for starters the "resources in use" information is dynamic.
+> > 
+> > Luigi, you want the "ESCD" document from Microsoft which details how to 
+> 
+> no, i want the time to read them :)
+
+If you want to reduce the amount of time required, get the Mindshare 
+PnP Architecture book.  It condenses the vast majority of junk down 
+into a relatively readable volume, which I have found very useful.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605505 ###
+===== 库内序 147062 | PK 2605505 | 等级 L3 =====
+DATE: 1998-05-06T08:30:16+00:00
+FROM: "Daniel O'Connor" <doconnor@gsoft.com.au>
+SUBJ: Unknown PCI ID's
+摘要: Daniel OConnor：pciconf -l 显示 2 个未知 PCI 设备 chip 0x71808086 与 0x71818086 求辨认
+
+Hi,
+We have just got a SuperMicro 440LX base PII (P6SLS), and when it boots up, 
+there are 2 unknown devices -
+pciconf -l shows them as
+pci0:0:0:       class=0x060000 card=0x00000000 chip=0x71808086 rev=0x03 hdr=0x00
+pci0:1:0:       class=0x060400 card=0x00000000 chip=0x71818086 rev=0x03 hdr=0x01
+
+Any ideas what they are?
+(Just idle curiosity really :)
+
+---------------------------------------------------------------------
+|Daniel O'Connor software and network engineer for Genesis Software |
+|http://www.gsoft.com.au                                            |
+|The nice thing about standards is that there are so many of them to|
+|choose from. -- Andrew Tanenbaum                                   |
+---------------------------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605506 ###
+===== 库内序 147063 | PK 2605506 | 等级 L3 =====
+DATE: 1998-05-06T08:32:09+00:00
+FROM: Holm Tiffe <freebsd@magnet.geophysik.tu-freiberg.de>
+SUBJ: FreeBSD Development Projects, a suggestion
+摘要: Holm Tiffe：提议增加类似 undump 的工具 以便关机后从被杀位置重启巨型进程 并指出该设想须待 FreeBSD 改用 ELF 对象格式
+
+Hi all,
+
+It is only an riIdea, but is it possible to add a tool like undump
+to FreeBSD ?
+This could be used to restart huge processes after a shutdown at the point
+where the processes got killed before the shutdown.
+Maybe that should wait until FreeBSD has changed ist object format to ELF...
+
+Holm
+
+PS: sorry for my poor english.
+-- 
+*******************************************************************************
+* Holm Tiffe                        holm@geophysik.tu-freiberg.de             *
+* Freiberger Strasse 24                                                       *
+* 09600 Kleinschirma, Germany           Microsoft is not the Answer -         *
+* Tel.: 49 3731 74233                   Microsoft is the Question,            *
+* UUCP: 49 3731 73719  unicorn!holm       and the Answer is no !              *
+*******************************************************************************
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605507 ###
+===== 库内序 147064 | PK 2605507 | 等级 L3 =====
+DATE: 1998-05-06T06:59:46+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Luigi Rizzo：认为无法设想会如此行事的卡 PnP 协议正是这样运作 卡在某种方式唤醒前一直闲置
+
+> > how the non-pnp card uses resources (e.g. it could be listening for
+> > some data before enabling its outputs; since the conflict detection can
+> > only work if the unknown card drives the output lines, in this case the
+> > detection will fail).
+> 
+> I can't actually imagine a card that would behave in this fashion. More 
+
+the PnP protocol works exactly in this way: a card is idle until it is
+woken up in some way. Now, if a manufacturer devises a different
+wakeup protocol which is run _after_ the PnP conflict probe, you are in
+trouble. And many pre-isa-pnp cards had proprietary soft-config
+procedures.
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605511 ###
+===== 库内序 147068 | PK 2605511 | 等级 L4 =====
+DATE: 1998-05-06T09:12:36+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Jordan K. Hubbard：称升级可解决该问题 1.30 有字节序错误 并问如何用 xanim 播放 blacksmith 生成的 IFF 动画
+
+> Now I need to get it to render that blacksmith demo. it does s small part
+> of it then the rest is pink. ick. Hrmm tackle that next after i upgrade to
+> .31
+
+The upgrade will help with this - there were some byte-ordering bogons
+in 1.30.  Now if you can just figure out how to make a viewable (with
+xanim) animation out of all the IFF files that blacksmith description
+generates, I'll be quite interested in hearing how you did it. ;)
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605512 ###
+===== 库内序 147069 | PK 2605512 | 等级 L3 =====
+DATE: 1998-05-06T09:13:57+00:00
+FROM: "Stefan Bethke" <stefan@promo.de>
+SUBJ: Re: ISA PnP / snd PnP developments?
+摘要: Stefan Bethke：指出 sys/i386/isa/pcibus.c 注释可能误导 并自述版本为 1.27.2.1
+
+--On Die, 5. Mai 1998 23:47 Uhr +0200 "Stefan Esser" <se@freebsd.org> wrote:
+
+
+> On 1998-05-05 11:37 +0200, Stefan Bethke <stefan@promo.de> wrote:
+>> Btw., you might want to adjust the comments in sys/i386/isa/pcibus.c,
+they
+>> might prove to be somewhat misleading.
+> 
+> Hmmm, what's wrong with the comments in that file ?
+> Under which version of FreeBSD, BTW ?
+
+1.27.2.1 (RELENG_2_2_6_RELEASE, RELENG_2_2) says:
+..
+/*-----------------------------------------------------------------
+**
+**      The following functions are provided by the pci bios.
+**      They are used only by the pci configuration.
+**
+**      pcibus_setup():
+..
+
+And from what I currently can see in that file, it doesn't do any BIOS
+calls.
+
+Cheers,
+Stefan
+
+--
+Stefan Bethke
+Promo Datentechnik      |  Tel. +49-40-851744-18
++ Systemberatung GmbH   |  Fax. +49-40-851744-44
+Eduardstrasse 46-48     |  e-mail: stefan@Promo.DE
+D-20257 Hamburg         |  http://www.Promo.DE/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605516 ###
+===== 库内序 147073 | PK 2605516 | 等级 L4 =====
+DATE: 1998-05-06T10:16:43+00:00
+FROM: Alexey V Ivanov<subbsta@surnet.ru>
+SUBJ: 
+摘要: Alexey V Ivanov：发布 Digiboard 驱动与 tacacs 并指出 Serge Babkin 驱动队列处理不正确 不适配 PC/Xe
+
+Hello again.
+For Any:
+U can download driver for Digiboard from ftp://devel.surnet.ru
+U can download tacacs with mSQL support from ftp://devel.surnet.ru
+For Serge Babkin:
+Nu da ya tut v SIC'e rabotau. nashet tvoego driver'a ya tvoi kopirait ostavil
+No on imho ne verno obrabatival ocheredi. Eto bilo ispravleno. I tak ge on ne rabotal s PC/Xe.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605517 ###
+===== 库内序 147074 | PK 2605517 | 等级 L3 =====
+DATE: 1998-05-06T10:16:04+00:00
+FROM: Reinier Bezuidenhout <rbezuide@oskar.nanoteq.co.za>
+SUBJ: Weird UDP T/P on fxp0/de0 - 2.2.6-RELEASE
+摘要: Reinier Bezuidenhout：双机 ttcp 互测出现异常吞吐 收端无人监听时出现 ICMP port unreachable 并求解释
+
+Hi ...
+
+I have the following basic setup:
+ 
+         A                                       B
+      PII/266 <--- 100Mbit CAT 5 X-over ----> PII/266
+
+
+I am using ttcp on both sides to test data transfers with 
+diffirent packet sizes.  I ran into some really STRANGE numbers
+during these test.  I have basically two setups on each side
+A is the receiver while B is the transmitter.  The one setup
+is where B transmits, but nothing on A is listening - this
+causes ICMP port unreachable packets to be sent to B (full-duplex
+line).  In the second test I have ttcp listening on A - thus no
+ICMP packets is returned (I veryfied this on B with a tcpdump).
+
+I use ttcp to set the packet size in powers of 2.  I repeated
+each of the tests a few times, just to make sure I get a good
+average.  I configured ttcp in such a way that all transfers take
+at leas 7 seconds as to reduce strage numbers with too few data.
+
+I also dit these test with a Intel Ether express 10/100B and
+an SMC 9332BDT (fxp and de respectively)
+
+The numbers jump up and down in large jumps and the two 
+network cards differ substantialy e.g. 3.1 MB/sec and 10 MB/sec
+for 512 byte packets.  The other VERY VERY strange thing is
+that in most cases the FXP card transfers faster when there
+is ICMP port unreachable packets being sent back ??????
+
+How is this possible ????
+
+The first number is the packet size and the second is the
+transfer rate in KB/sec
+
+               Intel Ether Express (100 - full duplex)
+                         UDP transfers
+  TTCP listening (-r -s -u)             No daemon listening
+  -----------------------------------------------------------------
+  Pkt    fxp0 | de0			Pkt     fxp0 | de0
+  -----------------------------------------------------------------
+  64   - 3320   4952			64    - 1903   1897 
+  128  - 2620   7994			128   - 3522   3412
+  256  - 1873   9685			256   - 7087   7122
+  512  - 3102   4730			512   - 3182   10800
+  1024 - 5960   7550		 	1024  - 5975   8790
+  2048 - 5874   7268			2048  - 5882   7673
+  4096 - 7870   7604			4096  - 7870   7795
+  8096 - 7734   6951			8196  - 7733   6980
+
+
+
+Any ideas ??
+
+Thanx
+Reinier
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605518 ###
+===== 库内序 147075 | PK 2605518 | 等级 L4 =====
+DATE: 1998-05-06T12:14:52+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: Weird UDP T/P on fxp0/de0 - 2.2.6-RELEASE 
+摘要: David Greenman：旧版 ttcp 发送端遇内核 ENOBUFS 即退避睡眠 该睡眠按 10Mbps 以太网调校 称新版未查证
+
+>I am using ttcp on both sides to test data transfers with 
+>diffirent packet sizes.  I ran into some really STRANGE numbers
+>during these test.  I have basically two setups on each side
+
+   I haven't looked at newer versions of ttcp, but the older version, on the
+transmitter side, would do a backoff (sleep) whenever it got ENOBUFS from the
+kernel. The sleep is tuned for 10Mbps ethernet, so the result is that the
+transmitter runs with wild swings filling and draining the kernel's output
+queue. One solution is to reduce the timeout substantially or eliminate it.
+This will cause ttcp to waste lots of CPU while it is running (constantly
+getting ENOBUFS from the kernel), but has the desired positive effect of
+keeping the output queue full. When you make this change, you get results
+like this:
+
+[implode:dg] ttcp -u -p9 -n8192 -t core
+ttcp-t: buflen=8192, nbuf=8192, align=16384/+0, port=9  udp  -> core
+ttcp-t: socket
+ttcp-t: 67108864 bytes in 5.75 real seconds = 11393.10 KB/sec +++
+ttcp-t: 15087 I/O calls, msec/call = 0.39, calls/sec = 2622.80
+ttcp-t: 0.0user 5.3sys 0:05real 94% 141i+315d 168maxrss 0+2pf 0+59csw
+0.054u 5.386s 0:05.75 94.4% 141+315k 0+0io 0pf+0w
+
+   ...that's on a Pentium/133, so the results may be slightly higher on a
+faster machine. In any case, FreeBSD w/fxp driver has no trouble keeping
+the fast ethernet saturated.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605519 ###
+===== 库内序 147076 | PK 2605519 | 等级 L3 =====
+DATE: 1998-05-06T12:17:13+00:00
+FROM: "Kenneth P. Stox" <ken@stox.sa.enteract.com>
+SUBJ: Re: 3D "blender" package from NeoGeo now released. 
+摘要: Kenneth P. Stox：建议把输出格式设为 jpeg 而非 IFF 再用 ImageMagick 的 animate 命令查看动画
+
+
+On Wed, 6 May 1998, Jordan K. Hubbard wrote:
+
+> The upgrade will help with this - there were some byte-ordering bogons
+> in 1.30.  Now if you can just figure out how to make a viewable (with
+> xanim) animation out of all the IFF files that blacksmith description
+> generates, I'll be quite interested in hearing how you did it. ;)
+
+You can set the output to use jpeg, instead of IFF, and then use animate
+from the ImageMagick package. 
+
+-Ken
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605520 ###
+===== 库内序 147077 | PK 2605520 | 等级 L3 =====
+DATE: 1998-05-06T13:03:00+00:00
+FROM: "Viren R. Shah" <viren@rstcorp.com>
+SUBJ: Re: Call for testers for ThunderLAN ethernet driver
+摘要: Viren R. Shah：拥有 Compaq ProLiant 2000 双路 P66 机器 可作为 ThunderLAN 网卡驱动的测试对象
+
+>>>>> "Chris" == Chris Dillon <cdillon@wolves.k12.mo.us> writes:
+
+ Chris> On Tue, 5 May 1998, Eivind Eklund wrote:
+ >> On Tue, May 05, 1998 at 08:14:52AM -0500, Chris Dillon wrote:
+ >> > On Tue, 5 May 1998, Bill Paul wrote:
+ >> > 
+ >> > > I would appreciate if people running FreeBSD 2.2.6 that have Compaq
+ >> > > hardware could test this driver to make sure it works, and if people
+
+I have a Compaq ProLiant 2000 (dual P66, EISA). From what I've read,
+it seems that the driver will not work for this. Is that right? I'm
+pretty sure the NIC has a Lance chip, and I think the Lance ethernet
+driver doesn't support EISA.
+
+
+ Chris> to get that to work.. Mind sharing those patches? :-)  I have the onboard
+ Chris> SCSI and possibly a "Compaq WIDE SCSI" controller I would like to get to
+
+Is this a Compaq RAID controller? If so, try the driver at:
+  http://www.doc.ic.ac.uk/~md/
+
+
+Viren
+-- 
+Viren R. Shah          | Everyone was born right-handed.  
+viren@rstcorp.com      | Only the greatest overcome it.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605521 ###
+===== 库内序 147078 | PK 2605521 | 等级 L3 =====
+DATE: 1998-05-06T13:24:53+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: Oracle 7 on FreeBSD
+摘要: sbabkin：回应 Julian Elischer 购买预装 Oracle 的 NC-server 之建议 并追问能否脱离 NCOS 单独购买
+
+> ----------
+> From: 	Julian Elischer[SMTP:julian@whistle.com]
+> 
+> We have an NC-server here to evaluate. (from NC corp..) (aka oracle)
+> 
+> It's a FreeBSD box and it has a fully native FreeBSD oracle on it..
+> 
+> My sugestion:
+> 
+> ask NC corp to sell you a NC server
+> get the oracle pre-installed :-)
+> 
+Great! Are they going to sell it separately from NCOS ? Would
+it be legal to buy a license for SCO and then obtain 
+somewhere the product for FreeBSD (yes, may be buy one NC server) 
+and run it instead ?
+
+> If I knew anything about Oracle I'd have tar'd it up and tried 
+> running it on a newer FreeBSD by now..
+> 
+Everything related to Oracle should be located in $ORACLE_BASE
+directory (commonly something like /opt/oracle or /usr/oracle). 
+This directory is sometimes $HOME for Oracle superuser, named
+commonly like "oracle" or "oracle7". If it is not, that directory
+is worth copying too.
+The server itself should be located in $ORACLE_HOME directory (according
+to their Oracle Common Architecture, it must be something like
+$ORACLE_BASE/product/7.3.3). There is one file in /etc,
+/etc/oratab and sometimes the network control files are also
+put in /etc, so if you see any /etc/*.ora, copy them too.
+Also there must be some startup/shutdown rc-scripts but they
+are not very important. After you copy everything, login as
+Oracle superuser and run "dbstart". This must start the database.
+"lsnrctl start" must start the network listener. But you will
+probably need to change the network configuration files before
+you get the network support running.
+
+If you need more directions, ask me how :-)
+
+> Steve Shoecraft wrote:
+> >      Let me ask the question I have in another way:
+> > 
+> >         o Is it possible to convert the SCO object files (ELF?) to
+> what
+> >      FreeBSD uses natively (COFF?)?
+> > 
+> >         o If I can't convert the object files, can I link the object
+> files
+> >      together to make a binary?
+> 
+I already had this idea. I can tell you a saga about it :-)
+I wrote COFF (Oracle 7.1.6 for SCO was using 
+COFF format) to BSD a.out converter and started implementa
+[…中段省略 608 字符…] hen it was before crash. If somebody wants to
+continue it, I'm ready to provide the part I did and SCO man pages,
+grouped by compatibility. You will probably also need SCO
+to generate the test examples. I don't know whether SCO is still
+distributing their Open Desktop for nominal charge for personal
+use. That is the sad end of this saga :-(
+
+-Serge Babkin
+working as Oracle DBA now
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605524 ###
+===== 库内序 147081 | PK 2605524 | 等级 L3 =====
+DATE: 1998-05-06T15:30:30+00:00
+FROM: Reinier Bezuidenhout <rbezuide@oskar.nanoteq.co.za>
+SUBJ: Re: Weird UDP T/P on fxp0/de0 - 2.2.6-RELEASE
+摘要: Reinier Bezuidenhout：认同 David Greenman 关于 ttcp 退避延迟的分析 并自述已把该延迟完全移除
+
+Hi ...
+
+>    I haven't looked at newer versions of ttcp, but the older version, on the
+> transmitter side, would do a backoff (sleep) whenever it got ENOBUFS from the
+> kernel. The sleep is tuned for 10Mbps ethernet, so the result is that the
+> transmitter runs with wild swings filling and draining the kernel's output
+
+So this is the part where I go "Oh great master Greenman" :)
+
+First off I just removed the delay completely and YES :) the numbers
+look much better now .. they even increment sequentially from small
+to large packets ...
+
+This will probaly teach me to have a look in the code before I say
+anything :) 
+
+Thanx a lot
+Reinier
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605526 ###
+===== 库内序 147083 | PK 2605526 | 等级 L4 =====
+DATE: 1998-05-06T16:38:22+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Amancio Hasty：以 voxware 声卡的 gus pnp 模块为例 称其实现方式与所提框架相近且不难实现 故该模型可行
+
+The device driver can tell the upper layer which resources it wants or 
+does not need.
+
+The gus pnp section of the voxware sound driver behaves fairly much like
+the enclosed outline and my experience shows that is not that hard
+to implement granted in the case of the gus pnp module it has no upper
+layer to talk to however that can easily be done . My point is that
+the model is feasible.
+
+
+	Amancio
+
+> > >   CASE #1: Kernel config file looks like this:
+> > >   --------------------------------------------
+> > > 
+> > >     device   foo0
+> > > 
+> > >   In this case, the kernel automatically configures stuff for driver
+> > >   foo0. If the BIOS has already configured the card, and that's
+> > >   acceptable, the kernel can go along. Otherwise, the kernel should
+> > >   pick resources that are free and configure the card itself.
+> > > 
+> > > 
+> > >   CASE #2: Kernel config file looks like this:
+> > >   --------------------------------------------
+> > > 
+> > >     device   foo0 port 0x220 irq 7 vector foointr
+> > > 
+> > >   Kernel should override whatever is already configured in the
+> > >   card (if anything) with the given values.
+> > > 
+> > > 
+> > > Does this make sense to anyone else besides me? What are the
+> > > technical things that need to be done to make it happen?
+> > 
+> > This actually falls a little short.  It's easier to look at it from a 
+> > different angle, too.
+> > 
+> >   For each PnP device/function in the system
+> ...
+> >   For each explicitly-configured ISA devices
+> ...
+> 
+> Things is, this falls really short for non-ISA/non-PnP devices as well.
+> Think hot-swappable devices, and devices that *really* no one knows
+> about?  Also, devices that can use IRQ's, but don't necessarily need
+> them.  How do you say 'go ahead and use it', vs. 'don't bother'.
+> 
+> 
+> Nate
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605527 ###
+===== 库内序 147084 | PK 2605527 | 等级 L4 =====
+DATE: 1998-05-06T16:43:29+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Nate Williams：指设备驱动需用户提示才知是否要用某资源 举 PCIC 控制器插拔不中断为例 目前只能白白占用一个 IRQ
+
+> The device driver can tell the upper layer which resources it wants or 
+> does not need.
+
+The device driver needs a hint from the user to know whether or not it
+wants a resource or not.
+
+For example, some PCIC controllers don't correctly interrupt when cards
+are removed/inserted.  In this case, we still assign an IRQ to the
+controller, although all we're doing is wasting an interrupt.  Instead
+of assigning an interrupt, we should simply 'poll' the controller for
+events, which doesn't work as well *but* still allows the hardware to
+work.
+
+However, the FreeBSD kernel can't determine if the controller is
+working, so we need a way for the controller probe to be given 'hints'
+as to whether or not to use an IRQ, and if so a good one to try.  The
+latter is needed because some 'internal' hardware is hidden from the
+kernel, so if I use the first free interrupt it *may* not be correct for
+this configuration, so I must tell it which interrupt to use if I want
+to be safe.
+
+In other words, the device driver does *NOT* have enough information to
+do it's job, hence the current model is incomplete.
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605528 ###
+===== 库内序 147085 | PK 2605528 | 等级 L3 =====
+DATE: 1998-05-06T17:19:49+00:00
+FROM: Archie Cobbs <archie@whistle.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Archie Cobbs：认同 Luigi Rizzo 认为当前项目多于人手应尽快落地实现的看法 表示愿协助完成较琐碎的任务
+
+Luigi Rizzo writes:
+> > I'll take a look on the weekend...
+> 
+> I have to say that shuffling ideas, suggestions, or requests for
+> features is a nice thing, but at this point i think we have by far much
+> more projects than manpower, so what we really need is people start
+> implementing things. So your last sentence is very appreciated...
+
+I'd be willing to help with some of the more "menial" tasks around
+getting things fixed up. For example, the conversion from drivers
+using NFOO to dynaically allocated softc structures and foointr(void *)
+instead of foointr(int).. if you have ideas let me know.
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605532 ###
+===== 库内序 147089 | PK 2605532 | 等级 L3 =====
+DATE: 1998-05-06T18:33:01+00:00
+FROM: Lee Cremeans <lee@st-lcremean.tidalwave.net>
+SUBJ: Porting from BSDi to FreeBSD -- how difficult?
+摘要: Lee Cremeans：受托把 PCI 设备驱动从 BSDi 4.0 移植到 FreeBSD -stable 自述无 BSDi 经验 询问难度是否过大
+
+I have been asked to port a PCI device driver from BSDi 4.0 to FreeBSD
+-stable...how difficult would this task be? I've not worked with BSDi
+before, and I know there are some similarities, ut I want to know if this
+would be something that would drown me.
+
+Thanks..
+
+-- 
+Lee C. -- Manassas, VA, USA  (WakkyMouse on DALnet #watertower)  
+A! JW223 YWD+++^ri P&B++ SL+++^i GDF B&M KK--i MD+++i P++ I++++ Did 
+$++ E5/10/70/3c/73ac/95/96 H2 PonPippi Ay77 M | lcremean@tidalwave.net
+FreeBSD/Linux/Unix hacker...Win95 and M$ evil! (go see www.freebsd.org)
+My home page: http://st-lcremean.tidalwave.net/~lee | finger me for geek code
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605533 ###
+===== 库内序 147090 | PK 2605533 | 等级 L4 =====
+DATE: 1998-05-06T19:05:03+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: SMP softupdates users problems
+摘要: Julian Elischer：认为 softupdates 尚不对 SMP 安全 因而不建议开启 对能跑这么久感到意外
+
+thanks for the comment..
+I don't think that soft-updates is SMP safe yet, so it might not be a
+good idea.. I'm surprised it ran as much as it did :-)
+
+
+julian
+
+Open Systems Networking wrote:
+> 
+> For those not aware running softupdates on SMP as I have been is pretty
+> unstable for me. And when it crashes it has taken the last file I was
+> doing anything with and nukes it. I was editing my .cshrc file saved it
+> fired up netscape and the machine wedged rebooted and .cshrc is gone.
+> 
+> Just a warning to anyone thinking about running them on an SMP box, be
+> prepared to loose stuff when it vomits.
+> 
+> Chris
+>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605535 ###
+===== 库内序 147092 | PK 2605535 | 等级 L4 =====
+DATE: 1998-05-06T17:48:20+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: Porting from BSDi to FreeBSD -- how difficult?
+摘要: Luigi Rizzo：指 /sys/pci/brooktree848.c 兼容 BSDi 与 FreeBSD 可作移植参考 if_de.c 未定
+
+> I have been asked to port a PCI device driver from BSDi 4.0 to FreeBSD
+> -stable...how difficult would this task be? I've not worked with BSDi
+> before, and I know there are some similarities, ut I want to know if this
+> would be something that would drown me.
+
+i think /sys/pci/brooktree848.c works on both bsdi and freebsd so you
+can find it a useful reference. not sure if the same applies to if_de.c
+
+	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605537 ###
+===== 库内序 147094 | PK 2605537 | 等级 L4 =====
+DATE: 1998-05-06T19:40:43+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Julian Elischer：指客户 NC 所用 NCOS 2.0 基于 NetBSD 并表示相关产品用 FreeBSD 而非 NetBSD 会令其惊讶
+
+Manar Hussain wrote:
+
+> >ask NC corp to sell you a NC server
+> >get the oracle pre-installed :-)
+> >
+> >I haven't tried upgrading to a newer FreeBSD, but My guess is that
+> >it might work. It's NCOS 2.0 (whatever version of FreeBSD on earth
+> >THAT actually is..)
+> >
+[..]
+> >julian
+> 
+> NCOS 2.0 as used on client NCs is NetBSD based and I'd be fairly amazed if
+> there was any use of FreeBSD over NetBSD on other related products. I used
+> to be involved in NetBSD/ARM (or RiscBSD as it's often called) which is
+> sort of the root of NCOS 2.0 for the Arm based NC - somehow wound up not
+> being involved by the time NCI got the group to work on NCOS2.0 so I'm not
+> fully up to date on things. Don't know but I wouldn't be at all surprised
+> if there was a port oracle to it given the connection between oracle and NCI.
+>
+no, it is FreeBSD..
+the CLIENTS are NetBSD, but the SERVER is definitly FreeBSD..
+
+(I logged in and had a look around..)
+
+> BTW - how much was the server?
+No idea, we have it on demo.
+
+> 
+> Manar
+>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605538 ###
+===== 库内序 147095 | PK 2605538 | 等级 L3 =====
+DATE: 1998-05-06T20:06:30+00:00
+FROM: "Andrew J. Korty" <ajk@physics.purdue.edu>
+SUBJ: Disabling NFS attribute cache
+摘要: Andrew J. Korty：拟运行 hlfsd 需关闭 NFS 文件系统属性缓存 因同一符号链接按访问方式返回不同值 缓存会造成错误结果
+
+We want to run hlfsd (part of the BSD automounter utilities suite),
+which seems to require the ability to disable the attribute cache on the
+NFS filesystem it creates.  According to the documentation one can force
+it to run anyway, but since it operates by returning different values
+for the same symbolic link depending on how it's accessed, any amount of
+caching may cause incorrect values to be returned.
+
+I assume disabling the cache is possible under FreeBSD, but hlfsd and I
+just don't know how.  Please enlighten us. :-)
+
+Thanks ...
+
+Andrew J. Korty             http://www.physics.purdue.edu/~ajk/
+Software Specialist                      
+Physics Computer Network          85 73 1F 04 63 D9 9D 65       
+Purdue University                 65 2E 7A A8 81 8C 45 75
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605539 ###
+===== 库内序 147096 | PK 2605539 | 等级 L3 =====
+DATE: 1998-05-06T20:03:39+00:00
+FROM: Tom <tom@sdf.com>
+SUBJ: Re: Porting from BSDi to FreeBSD -- how difficult?
+摘要: Tom：答把 PCI 驱动从 BSDi 4.0 移植到 FreeBSD 的难度取决于驱动类型 举以太网 SCSI 声音 串口等为例
+
+
+On Wed, 6 May 1998, Lee Cremeans wrote:
+
+> I have been asked to port a PCI device driver from BSDi 4.0 to FreeBSD
+> -stable...how difficult would this task be? I've not worked with BSDi
+> before, and I know there are some similarities, ut I want to know if this
+> would be something that would drown me.
+> 
+> Thanks..
+
+  Depends a lot on the type of driver:  ethernet, SCSI, sound, serial,
+etc.  I expect that ethernet would be the easiest, but I don't know much
+about BSDI 4.0
+
+> -- 
+> Lee C. -- Manassas, VA, USA  (WakkyMouse on DALnet #watertower)  
+> A! JW223 YWD+++^ri P&B++ SL+++^i GDF B&M KK--i MD+++i P++ I++++ Did 
+> $++ E5/10/70/3c/73ac/95/96 H2 PonPippi Ay77 M | lcremean@tidalwave.net
+> FreeBSD/Linux/Unix hacker...Win95 and M$ evil! (go see www.freebsd.org)
+> My home page: http://st-lcremean.tidalwave.net/~lee | finger me for geek code
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605540 ###
+===== 库内序 147097 | PK 2605540 | 等级 L4 =====
+DATE: 1998-05-06T20:27:11+00:00
+FROM: steve.shoecraft@microchip.com (Steve Shoecraft)
+SUBJ: Re[2]: Oracle 7 on FreeBSD
+摘要: Steve Shoecraft：称 Oracle 装好只需打包整个 oracle 主目录 其 product 下 7.3.x.x 子目录含全部二进制
+
+     
+     I'm running 3.0 SNAP right now, and would be happy to give it a try 
+     for you ;)
+     
+     If Oracle was installed correctly, all you would need to do would be 
+     to tar up the entire oracle home directory.  The oracle user (group 
+     dba) should have a subdirectory called 'product' in it's home 
+     directory, with another subdirectory (7.3.x.x...) in it.  This should 
+     contain the binaries (bin, dbs, rbdms, orainst, etc.).  Another 
+     subdirectory (in the oracle user's home) should be admin, with stuff 
+     like bdump, cdump, scripts, etc.  But, like I said, I don't know how 
+     they installed it.
+     
+     Another way to find out where the binaries are located is to examine 
+     your ORACLE_HOME environment variable, or look in /etc/oratab.
+     
+     All the binaries are located in ORACLE_HOME, so I can just tar that up 
+     and bring it over to another system.
+     
+     It'd be no problem for me to FTP the tar file and give it try...  I 
+     PROMISE I'll delete it when I'm done...
+     
+     - Steve
+
+______________________________ Reply Separator _________________________________
+Subject: Re: Oracle 7 on FreeBSD
+Author:  Julian Elischer <julian@whistle.com> at Internet_Exchange
+Date:    5/5/98 4:50 PM
+
+
+We have an NC-server here to evaluate. (from NC corp..) (aka oracle)
+     
+It's a FreeBSD box and it has a fully native FreeBSD oracle on it..
+     
+My sugestion:
+     
+ask NC corp to sell you a NC server
+get the oracle pre-installed :-)
+     
+I haven't tried upgrading to a newer FreeBSD, but My guess is that 
+it might work. It's NCOS 2.0 (whatever version of FreeBSD on earth 
+THAT actually is..)
+     
+If I knew anything about Oracle I'd have tar'd it up and tried 
+running it on a newer FreeBSD by now..
+     
+     
+julian
+     
+Steve Shoecraft wrote:
+> 
+> 
+> 
+>      I too run Oracle 7 (7.3.3.5.1) on HP-UX (10.20).  I thought it'd be
+>      great if I could get it running at home on my FreeBSD box.  FTP'd the 
+>      image from Oracle and installed it.  Seems to work great, like I said, 
+>      except the networking (SQL*Net
+[…中段省略 27 字符…] ttached indicated that I should install Oracle on an SCO 
+>      box, then copy the stuff over to FreeBSD.  I don't have an SCO box,
+>      and would still like to re-link SQL*Net. 
+> 
+>      Let me ask the question I have in another way: 
+> 
+>         o Is it possible to convert the SCO object files (ELF?) to what 
+>      FreeBSD uses natively (COFF?)?
+> 
+>         o If I can't convert the object files, can I link the object files 
+>      together to make a binary?
+> 
+>      - Steve
+> 
+> ______
+
+### PK 2605542 ###
+===== 库内序 147099 | PK 2605542 | 等级 L4 =====
+DATE: 1998-05-06T20:34:48+00:00
+FROM: steve.shoecraft@microchip.com (Steve Shoecraft)
+SUBJ: Re[2]: Oracle 7 on FreeBSD
+摘要: Steve Shoecraft：请 Serge 提供 COFF 转 BSD 目标文件转换器源码 收到后他会做出 FreeBSD 原生版 Oracle
+
+     
+     Serge,
+     
+        If you send me the sources for your COFF->BSD object file 
+     converter, I'll create a version of Oracle native to FreeBSD...
+     
+        So, the ending may not be so sad after all...
+     
+     - Steve
+     working as a software engineer now
+
+
+______________________________ Reply Separator _________________________________
+Subject: RE: Oracle 7 on FreeBSD
+Author:  sbabkin@dcn.att.com at Internet_Exchange
+Date:    5/6/98 9:24 AM
+
+
+> ----------
+> From:         Julian Elischer[SMTP:julian@whistle.com] 
+> 
+> We have an NC-server here to evaluate. (from NC corp..) (aka oracle) 
+> 
+> It's a FreeBSD box and it has a fully native FreeBSD oracle on it.. 
+> 
+> My sugestion:
+> 
+> ask NC corp to sell you a NC server 
+> get the oracle pre-installed :-)
+> 
+Great! Are they going to sell it separately from NCOS ? Would 
+it be legal to buy a license for SCO and then obtain 
+somewhere the product for FreeBSD (yes, may be buy one NC server) 
+and run it instead ?
+     
+> If I knew anything about Oracle I'd have tar'd it up and tried 
+> running it on a newer FreeBSD by now..
+> 
+Everything related to Oracle should be located in $ORACLE_BASE 
+directory (commonly something like /opt/oracle or /usr/oracle). 
+This directory is sometimes $HOME for Oracle superuser, named 
+commonly like "oracle" or "oracle7". If it is not, that directory 
+is worth copying too.
+The server itself should be located in $ORACLE_HOME directory (according 
+to their Oracle Common Architecture, it must be something like 
+$ORACLE_BASE/product/7.3.3). There is one file in /etc,
+/etc/oratab and sometimes the network control files are also 
+put in /etc, so if you see any /etc/*.ora, copy them too. 
+Also there must be some startup/shutdown rc-scripts but they 
+are not very important. After you copy everything, login as
+Oracle superuser and run "dbstart". This must start the database. 
+"lsnrctl start" must start the network listener. But you will 
+probably need to change the network configuration files before 
+you get the network support running.
+     
+If you need more directions, ask m
+[…中段省略 1027 字符…] restore from this crash
+and many things have occurred since that but this work is still 
+in the state when it was before crash. If somebody wants to
+continue it, I'm ready to provide the part I did and SCO man pages, 
+grouped by compatibility. You will probably also need SCO
+to generate the test examples. I don't know whether SCO is still 
+distributing their Open Desktop for nominal charge for personal 
+use. That is the sad end of this saga :-(
+     
+-Serge Babkin
+working as Oracle DBA now
+     
+

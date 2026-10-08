@@ -1,0 +1,25 @@
+2604899|L3|Mike Smith：主动报名实现 OHCI 标准并支持 SiS 5598 OHCI 芯片组，并调侃自家主板正好就是这颗芯片
+2604904|L4|Nate Williams：指出 PAO 项目与 FreeBSD 项目完全独立，除少量驱动问题外 FreeBSD 的 PCCARD 支持已好于 PAO
+2604905|L3|Robert Withrow：追问 APM 支持是否进 2.2.6 而本人不愿追 bleeding edge，并表示愿意接手驱动开发工作
+2604906|L4|Nate Williams：CE56 是 10/100/56K 组合卡，FreeBSD 有无 PAO 都不支持组合卡与百兆卡，Hosokawa 尚未提交驱动
+2604907|L3|Robert Withrow：追问组合卡不被支持究竟是根本性的设计缺陷还是单纯因为没人动手实现
+2604908|L4|Nate Williams：两问皆是，Jon Bresler 曾在东京时寄过相关补丁但他尚未查看，建议直接向对方索取
+2604909|L4|Andrzej Bialecki：针对 kmem_map too small 报错，给的第一步是编辑 /sys/i386/include/vmparam.h
+2604910|L3|sbabkin：ncr.c 里 Stefan Esser 的邮箱疑已失效，被告知有 Symbios 寄存器手册但厂商只肯给 SCRIPTS 手册
+2604911|L4|David Greenman：说已在另一封邮件中回答过 kmem_map 过小问题，提示 VM_KMEM_SIZE 必须调大
+2604912|L3|Ken Hansen：拟给 Toshiba Libretto 装机，被建议用 PAO 却觉得它与 2.2.6 差异很小，询问 2.2.6 是否适合掌机平台
+2604915|L4|Nate Williams：表示不了解 NetBSD 的内容，若对方本意指 FreeBSD 则 2.2.6 与 PAO 的差异在他看来并不小但承认自己有偏
+2604916|L3|Denis A. Baldwin：正在撰写一本关于黑客与破解等地下网络文化的书，公开征集稿件、想法与愿意校对的人
+2604918|L4|Jonathan M. Bresler：澄清自己提供的补丁并不实现组合卡功能，只让 3com 卡的网络部分能工作起来
+2604919|L3|Eivind Eklund：称 16MB 机器上裸编 Linux 内核要 3 小时，怀疑其 VM 有问题，建议对比 FreeBSD 模拟与真 Linux 耗时
+2604920|L4|Peter Wemm：指出回复这类邮件会把地址送进已验证地址名单，它是收集地址型垃圾邮件，叮嘱任何人都不该回信
+2604922|L3|Sue Blake：新人打算自建 #freebsd-newbies 频道且 FreeBSD IRC 服务器被提名，她觉得在旁边开个频道便于照顾反而有好处
+2604923|L3|Bruce Albrecht：质疑谁愿意守在 #FreeBSD-newbies 里回答提问，并指出部分 FreeBSD 常驻用户的耐心相当有限
+2604925|L3|Alfred Perlstein：认为 EFnet 上的 #freebsd 频道已经挤满新人，完全没有必要再单独开一个频道
+2604927|L3|Ulf Zimmermann：Mylex RAID 驱动已推进到可工作阶段，请求有人为它分配一个主设备号
+2604928|L3|Keith Stevenson：8MB 内存的 486DX-33 上运行 Linux 时，编译 2.0 内核要 4 到 6 小时，取决于是否同时开 X
+2604930|L3|Joe Greco：核心以太路由器已连续运行 300 天且负载很低，此前为加装接口板在 200 天高可用度时将其重启过
+2604931|L3|Mike Smith：反问该 Mylex RAID 控制器是否就是 CAM 代码所支持的那一类设备
+2604932|L4|Ulf Zimmermann：CAM 的 README 讲的是 Mylex 与 Buslogic 控制器，并不是 RAID 卡，DAC-960 才是 RAID
+2604934|L4|Justin T. Gibbs：问 Mylex RAID 控制器是哪几种，并说明 CAM 支持 MultiMaster SCSI 卡而非 RAID 适配器
+2604936|L3|Wilko Bulte：针对寻找 Stefan Esser 的求助，反问 se@freebsd.org 这个地址不能直接联系他吗

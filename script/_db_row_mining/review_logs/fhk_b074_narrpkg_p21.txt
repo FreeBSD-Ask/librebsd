@@ -1,0 +1,24 @@
+2605252|L4|Justin C. Walker 称 A/UX 存活至 1994 年 3.1.1 版，末版为 Quadra 950 的 Workgroup Server 95
+2605253|L3|Jim Carroll 求助：用 BOOT_FORCE_COMCONSOLE 编译的引导器部署到无显示器无人值守站点，串口通常不接，写串口的应用会卡死等待
+2605254|L4|Omar Thameen 指出 ssh 复制大文件触发 daemon 类 filesize 限制，因 sshd 由 rc.d 脚本启动而继承该类
+2605255|L4|Tom：BOOT_FORCE_COMCONSOLE 在 boot.config 出现后已过时，改用自带引导加载器配 -h -D 即可
+2605257|L3|Eugene Vedistchev 给出 Compaq IDA 驱动地址 http://www.dcs.qmw.ac.uk/~md/ida/ 供查阅
+2605258|L4|Terry Lambert：用 fseek 分段偏移绕过 2GB 上限，以 1<<30 配 SEEK_SET 与 SEEK_CUR 逐段推进
+2605259|L4|Viren R. Shah：IDA 驱动见 http://www.doc.ic.ac.uk/~md/ ，有 2.2.5 与 2.2.6 版本
+2605260|L4|sbabkin：描述 ServiceGuard 做法，把别名包地址移到另一接口后发出广播 ARP 响应，免去重新编程网卡硬件地址
+2605262|L3|Andrew Heybey 询问 FreeBSD 能否跑在 compactPCI 系统上，并问有无足够像普通 PC 的 CPU 模块
+2605263|L4|Marino Ladavac 提交 ptread 库小补丁，针对非活动可运行线程的优先级提升，并说明已提交相应 PR
+2605264|L3|Mike Smith：转述他人经验称 FreeBSD 已在 CPCI 系统上跑起来，回应 compactPCI 适用性询问
+2605265|L3|Snob Art Genre 求助：两台 FreeBSD-stable 之间只有 ping 与 traceroute 正常，TCP 服务握手完成后即悬挂
+2605266|L4|sbabkin：称自己的实现协议只做发送，接收交给 BPF，比另造一套协议更简洁也更优雅
+2605268|L4|Ron G. Minnich：建议改看 PICMG，称 compactPCI 价格偏高而 PICMG 是更便宜的被动背板标准，团队正据此做集群
+2605270|L3|Ron G. Minnich 给出 PICMG http://www.bsicomputer.com/rackmount/bp/picmg.htm 供参考
+2605271|L4|Snob Art Genre：关闭 RFC 1323 扩展后问题消失，根因在 TCP 扩展，此前 Jan L. Peterson 已建议关该开关
+2605272|L4|Chrisy Luke 发布 Multipath routing beta 3，含若干修复，metric 与持久路由缓存留待 b4，另增 ipfw 接口支持
+2605273|L4|Chrisy Luke 更正自己上一条 ipfw 示例的转述笔误，规则转发命令应写作 ipfw add 2000 fwd 而非 forward to
+2605274|L4|Snob Art Genre 确认 Tom 的判断成立，FreeBSD 默认启用 TCP 扩展而部分劣质路由器会破坏带扩展报文，与其 PPP 拨入吻合
+2605275|L3|Jacques Vidrine 求助：修 ports/6430 需在 trafshow/patches 加补丁，命名 patch-ae 时 hunk 失败
+2605276|L4|Robert Withrow 引 drosih 建议沿用 SIGDANGER 命名，自述同包在 FreeBSD 2.2.x 上构建能完成而唯独 AIX 例外
+2605277|L4|Dan Janowski：反问是否开启 TCP 扩展，称部分终端服务器与劣质路由设备会被其卡住，自己也遇过一次
+2605278|L3|Joe Touch 求助：Hitachi VisionBook Elite 接光驱底座无法开机，2.2.5 内核加 PAO，探测到 wcd0 报无盘便挂起
+2605279|L3|提问 recvmsg 与 sendmsg 在 2.2.6-STABLE 下是否线程安全，称多线程同时对 socket 执行 recvmsg 时程序无法正常工作

@@ -1,0 +1,24 @@
+2605543	885	sbabkin 说明那个转换器连同源码在那次大崩溃中一起丢失，本以为自己曾分享给别人结果发现并没有，称可以提供 COFF 手册与解析 COFF 和 BSD 可执行文件的样例代码，并指 SCO 兼容库没建好之前仍无法构建可执行文件
+2605545	885	Tim Vanderhoek 说自己实际撞上两次目录被清掉的 bug，第一次之后吸取教训总在空目录里跑 pkg_add，第二次基本无害，还调侃当初那种个人保证该组个签名俱乐部，最后提醒伙计们硬盘上的备份开关就是干这个用的
+2605548	885	Open Systems Networking 就 Julian Elischer 转述的弃 FreeBSD 改走 NT 的说法惊呼，反问怎么会做出这么荒唐的举动，认为拿 NT 当底座替 FreeBSD 在成本上极不明智，除非 Oracle 是烧钱也不要钱
+2605550	885	Nate Williams 否认对方在散布 FUD，说自己的具体例子被抹掉了，重提硬件可以用 IRQ 却不必用的场景，指当前要拿到真中断必须是 ISA 设备否则只能听天由命，并说 sysctl 是个庞大的权宜方案且生效时已太迟
+2605551	885	Nate Williams 认为硬件已经被探测之后再动手已经太迟，主张别再提 PnP BIOS，指当前提案过于只针对 PnP 卡，需要一个覆盖面略大于它们的通用解法
+2605557	885	Terry Lambert 建议按类别在 restore 手册里搜 abort 一词，也可查 4.4BSD 管理员指南中 dump 与 restore 的讨论，解释弹出 abort 提示后仍停顿数秒是程序忙于转储 core，另建议用 compare 选项核对取回内容
+2605559	885	Terry Lambert 说明多数 PnP BIOS 为非 PnP 传统 ISA 卡保留入口使其避开冲突区，Windows95 由操作系统代替 BIOS 做 PnP 检测并可用占位驱动记录为遗留卡保留资源，举例 LANCE 网卡与 MACH32 芯片监听 COM3 区间
+2605560	885	Terry Lambert 否认偏移量用带符号与不带符号写法只是细枝末节，让人转到 restore 与 dump 两个源码目录执行 grep unsigned 匹配源文件与头文件后缀来核对实际类型
+2605561	885	Mike Smith 否认对方所说方案不够用的判断，承认自己可能没回答其具体疑虑，反问能否给出具体问题而不是 FUD，把可用中断却不必用的情形理解为资源饥饿，说这类不必用的设备不多属病态例子，建议改驱动导出 sysctl 变量并从 kernel.config 调整
+2605562	885	Mike Smith 同意给驱动塞一个 sysctl 变量，称从 userconfig 做命令行 sysctl 设置已经跑通，图形界面版本完成约一半，并指出使用 PnP BIOS 的主要问题是一下子暴露出隐藏硬件，使已分配的资源无法再被分配
+2605563	885	Mike Smith 纠正对方认为设置已太晚的说法，说明 sysctl 变量可以在硬件探测之前设定，主张方案是取得权威的资源可用性信息，在 ISA 平台上可来自 PnP 也可预先假定并写进配置文件，重申 PnP BIOS 是唯一权威来源，说对方至今只提供了没依据的 FUD
+2605567	885	Nate Williams 指出 PnP 并非其所有问题的答案，手上出问题的硬件都不带 PnP BIOS，点名 560、Libretto、ThinkPad、NEC 与 Hitachi，并说把它说成万能药是散布错误信息，实际只解决少数问题且目前还无法与之通信
+2605570	885	Nate Williams 反问系统从未启动过之前谁来设置这些变量，又追问所说的配置文件到底从哪来是不是装在启动软盘上，重申 PnP BIOS 根本不存在因而不能算权威来源，说自己并未否认它存在时可以用，只指出提案无法充分分配资源，解决就要面向所有有问题的人而非少数机型
+2605576	885	Jordan K. Hubbard 认为再讲 sysctl 的毛病既不算新鲜也没多大价值，建议对方改说自己希望实现什么以及若有时间打算怎么动手，末尾引了点亮蜡烛胜过诅咒黑暗那句
+2605579	885	Julian Elischer 说自己手里有这些二进制但不能外发，因为装在正在评估的 NC 服务器上，确认它们确实可以运行，并建议众人去缠住 Oracle 与 NC，需要给销售部门施压
+2605581	885	Jason T. Miller 询问有无人在 Compaq Presario 内置的 Bt848 采集卡上把 Bt848 驱动跑通，点名自己手上是 4814 机型，卡片标为 Creativity Imaging Center 并配 S3 Live Video 视频采集功能
+2605583	885	Hellmuth Michaelis 直接回给 Mike Smith，只写一句这个假设是错的，不认可把多数系统都具备那项支持当成默认前提，署名用 hellmuth，落款写明地址在 kts.org 域名下并标注 Hamburg 与 Europe
+2605584	885	Michael Bielicki 报告编译内核失败，mfs_vfsops.c 报结构体没有 tqh_first 与 tqh_last 成员，停在 Error code 1 求助排查
+2605586	885	Jim Carroll 提了个小工具想法，若能遍历硬件中断向量表就能显示哪些中断已有驱动在等待处理，从而看出当前占用情况，再决定 pccard 驱动或其他需要空闲 IRQ 的卡放哪，唯一难点是他不知道如何取得硬件向量表的访问权，愿意动手写代码分享
+2605587	885	Tony Overfield 反问还有哪家厂商在生产不带 PnP BIOS 支持的机器，说自己很难相信近三年造的新系统里没有带这项支持的，认为更老的机型反正已接近淘汰，顺带回应 Mike Smith 与 Hellmuth Michaelis 在该前提上的分歧
+2605588	885	Yee Man Chan 在 FreeBSD 3.0-971225-SNAP 上装 binutils-2.9.1，make install 报 libtool 链接错，xmalloc.c 未定义符号 xexit，同一流程在 SunOS 5.5.1 顺利
+2605590	885	Mariusz Potocki 说自己丢了这线程的部分邮件所以可能跑题，希望有人放出一些 Oracle 二进制供被选中的少数人做实验，也承认这事在法律上只能算半合法，末尾署名附了一句 verba volant scripta manent 的格言
+2605591	885	Snob Art Genre 说删掉 /sys 树并重新 cvsup 取回后毫无变化，内核仍然编不过，转发里报 mfs 的 mfs_vfsops.c 在 mfs_mount 与 mfs_start 两处结构体没有 tqh_first 与 tqh_last 成员
+2605592	885	Amancio Hasty 发起一场推动行动，说自己听够了 ISPs 说非常想要一个有支持的 Oracle 数据库版本，把目标锁定 Oracle 与 NCI，目的是拿到从 NCI 或 Oracle 采购 Oracle 7 的途径，呼吁大家提供联系人邮箱与传真号码

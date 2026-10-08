@@ -1,0 +1,1088 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2605543 ###
+===== 库内序 147100 | PK 2605543 | 等级 L4 =====
+DATE: 1998-05-06T20:47:36+00:00
+FROM: sbabkin@dcn.att.com
+SUBJ: RE: Re[2]: Oracle 7 on FreeBSD
+摘要: sbabkin：称该 COFF 转 BSD 转换器连同源码在那次崩溃中丢失 原以为曾分享给他人 却未证实
+
+> ----------
+> From:
+> steve.shoecraft@microchip.com[SMTP:steve.shoecraft@microchip.com]
+> 
+> 
+> <<File: RFC822 message headers.txt>>
+>      
+>      Serge,
+>      
+>         If you send me the sources for your COFF->BSD object file 
+>      converter, I'll create a version of Oracle native to FreeBSD...
+> 
+The problem is that this converter was lost during that spectacular
+crash together with sources. I hoped that I have shared it with
+someone but it appeared that I did not.
+>      
+>         So, the ending may not be so sad after all...
+> 
+Until you are going to rewrite this converter (that was rather
+simple, I can provide you with COFF man pages and sample code
+that parses COFF and BSD executables) and do the rest of creating
+the SCO compatibility library without which you will not be able
+to build the executables, it's still sad.
+
+-Serge
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605545 ###
+===== 库内序 147102 | PK 2605545 | 等级 L3 =====
+DATE: 1998-05-06T22:32:34+00:00
+FROM: Tim Vanderhoek <ac199@hwcn.org>
+SUBJ: Re: an interesting problem with pkg_add
+摘要: Tim Vanderhoek：自称也遇到两次 pkg_add 目录损坏 bug 并称第一次之后已吸取教训
+
+On Tue, 5 May 1998, Snob Art Genre wrote:
+
+> I had this happen to me back in the days of 2.1.5, only it was just my
+> home directory that got eaten.
+> 
+> JKH assured me that the bug was fixed in 2.1.6.  :-(
+
+I recall a similar personal assurance, once.  We should start a
+big signing club or something.  ;-)
+
+I actually managed to run into two of the directory trashing
+bugs, but after the first one I learnt my lesson and always ran
+pkg_add(1) in an empty dir, so the 2nd was pretty harmless.
+[Never did report that 2nd either, come to think of it].  
+
+That's what the backup switch on your hdd is for, folks! :)
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605548 ###
+===== 库内序 147105 | PK 2605548 | 等级 L3 =====
+DATE: 1998-05-07T00:30:24+00:00
+FROM: Open Systems Networking <opsys@mail.webspan.net>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Open Systems Networking：对 Julian Elischer 称 NC 将弃 FreeBSD 改用 NT 表示震惊 认为成本上极不明智
+
+On Wed, 6 May 1998, Julian Elischer wrote:
+
+> I don't know. Your best bet is to ask them.
+> Apparently they have caved in and are going to use NT instead
+> of FreeBSD in the future, so there is no surity that it will 
+> always be available.
+
+WHAT!!! Say it isn't so!!! John?
+Why would they do such an insanely stupid move.
+The cost of using NT vs FreeBSD as the base surely has to be a very stupid
+move in the eyes of the suits. I mean unles oracle has just decided to
+burn their money for no reason.
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605550 ###
+===== 库内序 147107 | PK 2605550 | 等级 L3 =====
+DATE: 1998-05-07T00:39:33+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Nate Williams：称对方所说自身方案对非 ISA 与非 PnP 设备同样不够用并不成立 要求给出具体问题而非 FUD
+
+> > Things is, this falls really short for non-ISA/non-PnP devices as well.
+> 
+> No, it doesn't.  But I may not have answered your specific qualms.
+> 
+> > Think hot-swappable devices, and devices that *really* no one knows
+> > about?
+> 
+> Yes, what about them?   How about a concrete problem rather than FUD?
+
+There's no FUD.  You just erased my specific examples.
+
+> >  Also, devices that can use IRQ's, but don't necessarily need
+> > them.  How do you say 'go ahead and use it', vs. 'don't bother'.
+> 
+> Huh?  You must specifically be talking about the resource starvation 
+> case where the "can but don't have to" device comes up before a "must 
+> have" device and takes the last interrupt.
+
+No, I'm talking about cases where hardware *can* use IRQ's, but don't
+need them.
+
+> Firstly, there aren't too many devices in the "can but don't have to" 
+> class, so this is a pathalogical example. 
+
+But it's an example of something we need to have now.  (Like, if it were
+there, I could use it today.)
+
+Right not, to get a 'real' interrupt, you must be an ISA device.
+Otherwise, you've got to hope for the best.  This is simply bogus.
+
+And, sysctl is a *huge* hack that's completely incapable of dealing with
+it.  You can't tell a device to not use an interrupt via a sysctl, since
+by the time the syctl is active it's much too late.
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605551 ###
+===== 库内序 147108 | PK 2605551 | 等级 L4 =====
+DATE: 1998-05-07T00:40:52+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Nate Williams：认为给驱动加一个 sysctl 变量太迟 硬件已被探测 并主张方案不应专属 PnP BIOS
+
+> > > The device driver can tell the upper layer which resources it wants or 
+> > > does not need.
+> > 
+> > The device driver needs a hint from the user to know whether or not it
+> > wants a resource or not.
+> 
+> Sure.  Stick a sysctl variable in there.
+
+Too late.  The hardware is already probed.
+
+> The principal issue with using the PnP BIOS
+
+... Forget about PnP BIOS.  We need a solution that is *NOT* specific to
+PnP.  The solution proposed is way too specific to PnP cards, and we
+need a solution that is slightly bigger than them.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605557 ###
+===== 库内序 147114 | PK 2605557 | 等级 L4 =====
+DATE: 1998-05-07T02:44:31+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Terry Lambert：指出要查此类说法，按类别该搜 restore 手册的 abort 条目
+
+> > I think you need to read the man pages.
+> 
+>   In what man page is "hole in map" mentioned?
+
+By class?  Search for the word "abort" in the restore man page.
+
+By explicit reference?  In the 4.4BSD System Administrators Guide
+under the detaild discurrion of dump/restore.
+
+
+> > A hole in a map won't happen unless you have bad media.  If you
+> > traceback the panic in the source code, you'll see that the problem
+> > is a zero-valued block map.
+> 
+>   Question:  why does it segfault several seconds after producing the
+> "abort?" prompt?
+
+Because it is busy dumping core because of the explicit call to "abort"
+because you did not set "yflag" using the "-y" command line option.
+
+> It had already detected the "hole in map" problem?
+
+Yes.  It won't call panic (a function in utilities.c) if it hasn't
+panic'ed.
+
+The reason it takes so long is that it has a very large data area.
+
+
+One possible reason for this problem *could* ge your limits on the
+account doing the restore (see login.conf).
+
+If you went over your datasize or stacksize, and then didn't check
+the validity of the operation (which it doesn't; restore predates
+memory overcommit and it predates login.conf placing arbitrarily
+small limits on working set), then the symptoms would be similar.
+
+
+> Regardless this is still a bug, even assuming that the media is bad (it
+> isn't, as I did a full backup and restore to the media with tar).
+
+Tar proves nothing.  See other post.
+
+> > You can ignore your damaged media using the "-y" option to restore:
+> 
+>   Doesn't do anything in this case.  A "restore -t -v -y" tells me that
+> every file (at least those I bother to let it read) had CRC errors.  That
+> isn't right, as I can use the same tape to do a full tar and untar with no
+> problems.
+
+Use --compare.  You may not be getting back what you think you are
+getting.
+
+If this works, you still haven't fairly eliminated everything that
+could be the problem besides the dump/restore.  First, tar is very
+stupid.  It doesn't do MD5 hashes or any really strong method of
+determining identicality.
+
+Second, the problem can be in the raw 
+[…中段省略 503 字符…] aid, is bad tape.  But it isn't.
+> Next.
+
+That isn't the only thing.  Read my other post.  I identified by line
+item at least 13 things that could give the same symptoms, and a
+14th in the text.  Only two of these things are "dump" or "restore",
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605559 ###
+===== 库内序 147116 | PK 2605559 | 等级 L4 =====
+DATE: 1998-05-07T02:59:48+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Terry Lambert：多数 PnP BIOS 会为非 PnP 传统 ISA 卡预留入口使其避开冲突区，Windows 95 由操作系统执行协商
+
+> no. what is available and what is not depends on the hardware.
+> as someone else (Mike ?) mentioned, if you put your own non-pnp card in
+> a pc and the bios/os/whatever doesn't know how to use it, the card will
+> be undetected until a conflict occurs.
+
+
+Most PnP BIOS support entries for non-PnP legacy ISA cards to allow
+them to be mapped out of the conflict space.
+
+For Windows95, which is a PnP OS, the OS does the PnP detection instead
+of the BIOS.  It has the ability to reserve resources (in "dummy" driver
+records) for legacy cards as well.
+
+A "PnP motherboard" (of which I have only ever seen two) will actually
+disable the slots for undetected hardware on the hardware's behalf.
+This was an alternate soloution to the "non-PnP OS" problem, before
+the PnP BIOS CMOS entry mechanisms started appearing.
+
+
+If you are going to expect someone to find your hardware for you,
+unless it is hardware the stands up and says "I am here" (ie: it's
+PnP), then you will have to expect to probe on its behalf.
+
+This is why ISA must die.
+
+
+> The PnP spec have a way to detect
+> conflicts but i am not sure it can really work because it depends on
+> how the non-pnp card uses resources (e.g. it could be listening for
+> some data before enabling its outputs; since the conflict detection can
+> only work if the unknown card drives the output lines, in this case the
+> detection will fail).
+
+Ie: LANCE based ethernet controllers is one example I can think of; you
+have to poke them, then they have to yelp, before you know they are
+listinging in the wings, waiting to break something.  The MACH32 chips
+listening for outb's in the COM3 I/O address range, even though the
+features that use those ports are not enabled, is another.
+
+
+> so basically the problem is not solvable automatically. By the time you
+> igve hints to the os on which resources are free, you could as well
+> assign resources to the pnp devices which  need them.
+
+For a predominantly PnP machine, it makes sense to do it in the CMOS
+config.
+
+For a non-PnP BIOS machine, or an older PnP BIOS machine, it makes
+sense to implement a PnP OS a
+[…中段省略 431 字符…] hen who else is using it and what the heck for? I guess I don't
+> > completely understand this issue.
+> 
+> see above.
+
+Also see:
+
+	PC System Architecture Series
+	Plug and Play System Architecture
+	Tom Shanley
+	MindShare, Inc.
+	ISBN: 0-201-41013-3
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605560 ###
+===== 库内序 147117 | PK 2605560 | 等级 L4 =====
+DATE: 1998-05-07T03:03:37+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Network problem with 2.2.6-STABLE
+摘要: Terry Lambert：到 /usr/src/sbin/restore 与 dump 源码下 grep unsigned 确认字节偏移类型
+
+>   A "long" or an "unsigned long" used as a byte offset.  It is splitting
+> hairs.
+
+No.
+
+Go to /usr/src/sbin/restore/ and /usr/src/sbin/dump/.
+
+The command you are looking for is:
+
+	grep unsigned *.[ch]
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605561 ###
+===== 库内序 147118 | PK 2605561 | 等级 L3 =====
+DATE: 1998-05-06T22:12:16+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Mike Smith：否认该方案对非 ISA 非 PnP 设备不够用，但承认自己可能并未回答对方提出的具体疑虑
+
+> > This actually falls a little short.  It's easier to look at it from a 
+> > different angle, too.
+> > 
+> >   For each PnP device/function in the system
+> ....
+> >   For each explicitly-configured ISA devices
+> ....
+> 
+> Things is, this falls really short for non-ISA/non-PnP devices as well.
+
+No, it doesn't.  But I may not have answered your specific qualms.
+
+> Think hot-swappable devices, and devices that *really* no one knows
+> about?
+
+Yes, what about them?   How about a concrete problem rather than FUD?
+
+>  Also, devices that can use IRQ's, but don't necessarily need
+> them.  How do you say 'go ahead and use it', vs. 'don't bother'.
+
+Huh?  You must specifically be talking about the resource starvation 
+case where the "can but don't have to" device comes up before a "must 
+have" device and takes the last interrupt.
+
+Firstly, there aren't too many devices in the "can but don't have to" 
+class, so this is a pathalogical example.  Second; you deal with it the 
+same way you always would - you're subject to the behaviour of the 
+driver for the first device and whether it allocates itself an 
+interrupt.  If you're concerned about that, fix the driver to export a 
+sysctl variable and tweak it out of kernel.config.
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605562 ###
+===== 库内序 147119 | PK 2605562 | 等级 L4 =====
+DATE: 1998-05-06T22:19:26+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Mike Smith：同意用 sysctl 变量给驱动资源需求提供提示，称从 userconfig 做命令行 sysctl 设置已跑通，图形版完成约一半
+
+> > The device driver can tell the upper layer which resources it wants or 
+> > does not need.
+> 
+> The device driver needs a hint from the user to know whether or not it
+> wants a resource or not.
+
+Sure.  Stick a sysctl variable in there.  I have commandline sysctl 
+setting working from userconfig, and I'm about half done with the 
+visual version.
+
+> For example, some PCIC controllers don't correctly interrupt when cards
+> are removed/inserted.  In this case, we still assign an IRQ to the
+> controller, although all we're doing is wasting an interrupt.  Instead
+> of assigning an interrupt, we should simply 'poll' the controller for
+> events, which doesn't work as well *but* still allows the hardware to
+> work.
+>
+> However, the FreeBSD kernel can't determine if the controller is
+> working, so we need a way for the controller probe to be given 'hints'
+> as to whether or not to use an IRQ, and if so a good one to try.  The
+> latter is needed because some 'internal' hardware is hidden from the
+> kernel, so if I use the first free interrupt it *may* not be correct for
+> this configuration, so I must tell it which interrupt to use if I want
+> to be safe.
+
+The principal issue with using the PnP BIOS is that all of a sudden, 
+the "hidden" hardware is revealed.  This makes it impossible to assign 
+a resource that is already allocated.
+
+> In other words, the device driver does *NOT* have enough information to
+> do it's job, hence the current model is incomplete.
+
+The current current model, yes.  The proposed model, no.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605563 ###
+===== 库内序 147120 | PK 2605563 | 等级 L4 =====
+DATE: 1998-05-07T02:30:16+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Mike Smith：纠正认为设置已太晚的说法，说明 sysctl 变量可以在硬件探测之前就完成设置
+
+> > > > The device driver can tell the upper layer which resources it wants or 
+> > > > does not need.
+> > > 
+> > > The device driver needs a hint from the user to know whether or not it
+> > > wants a resource or not.
+> > 
+> > Sure.  Stick a sysctl variable in there.
+> 
+> Too late.  The hardware is already probed.
+
+You're not paying attention.  You will be able to set sysctl variables 
+earlier than the hardware probes.
+
+> > The principal issue with using the PnP BIOS
+> 
+> .... Forget about PnP BIOS.  We need a solution that is *NOT* specific to
+> PnP.  The solution proposed is way too specific to PnP cards, and we
+> need a solution that is slightly bigger than them.
+
+The solution is to obtain authoratative resource availibility 
+information.  On the ISA platform this can come from PnP, or you can 
+try to pretend that you know it in advance (use a configuration file).
+
+I'm sorry if you're not aware that the PnP BIOS is the only 
+authoratative source of resource availibility information.  If you care 
+to either read what I've been posting or the standards themselves you 
+would have some understanding of the relationship between the manual 
+BIOS configuration of PnP hardware, non-ISA-PnP configuation in the 
+BIOS domain, and the determination of available assignable resources by 
+an operating system.
+
+If you believe that you have a pathological case where this combination 
+is inadequate, please feel free to publish it.  I'll compare it with my 
+list, and see if the proposed new techniques make the situation any 
+worse than it currently is.
+
+If you can demonstrate that there is a fundamental flaw in the proposed 
+techniques, I'm sure we'd be happy to address the situation.  So far 
+all you've offered is unsupported FUD, which isn't helping the 
+situation at all.  8(
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605567 ###
+===== 库内序 147124 | PK 2605567 | 等级 L3 =====
+DATE: 1998-05-07T03:46:50+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Nate Williams：认为 PnP 并非其所有问题的答案，指出他手上这些有问题的硬件都不带 PnP BIOS，因此解决不了
+
+> > There's no FUD.  You just erased my specific examples.
+> 
+> I haven't seen a single example situation from you yet where knowing 
+> what is and isn't actually available/used is a disadvantage over the 
+> current state of "blessed ignorance".
+
+Huh?  You're claiming that PnP is the answer to all my problems, and the
+fact of the matter is that none of the hardware that has these problems
+have a PnP bios, so it solves nothing.
+
+My 560 doesn't have a PnP BIOS, and neither does Warnar's Libretto, nor
+do any of the ThinkPad's that I have access to, nor the NEC's, nor do
+the Hitachis.
+
+So, your PnP solution doesn't even begin to solve the problem I'm
+having.
+
+You're spreading misinformation by stating that the PnP BIOS is the
+panacea to all of the resource problems, when in fact it only solves a
+minority of the problems that people are seeing, and in fact we can't
+even talk to the PnP BIOS so it's not even a workable solution yet.
+
+> > No, I'm talking about cases where hardware *can* use IRQ's, but don't
+> > need them.
+> 
+> Unless there is a resource starvation issue, who cares?
+
+Because there *is* resource starvation.  There aren't very many free
+interrupts on a laptop with built-in sounds, and IR port, plus a couple
+of PCMCIA/CardBus adapters.
+
+> > Right not, to get a 'real' interrupt, you must be an ISA device.
+> > Otherwise, you've got to hope for the best.  This is simply bogus.
+> 
+> I'm not sure I understand what you're talking about.  What are the 
+> interrupts delivered to PCI devices if not "real" interrupts?
+
+Because they are sharable, and because I don't have any control over
+setting them in FreeBSD.
+
+> Are you 
+> bitching about the current interrupt registration mechanism, or about 
+> free resource determination?
+
+Both.  To allocate resources at compile time, the device must be an ISA
+device.  (Resources include things like flags, interrupts, etc...)
+
+> > And, sysctl is a *huge* hack that's completely incapable of dealing with
+> > it.  You can't tell a device to not use an interrupt via a sysctl, since
+> > by the time the syctl is active it's much too late
+[…中段省略 230 字符…]  solution that should *NOT* be extended.
+
+> And you're thinking *much* too narrowly about when sysctls can be set.
+
+No, it's a poor solution, and should NOT be used anymore than it already
+is.  It's worse than IOCTL's, and it's becoming the garbage dump for
+everything that we don't have easy solutions for, thus making the system
+that much harder to understand and configure.
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605570 ###
+===== 库内序 147127 | PK 2605570 | 等级 L3 =====
+DATE: 1998-05-07T04:01:32+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Nate Williams：反问系统尚未启动前由谁来设置这些 sysctl 变量，并追问配置文件究竟从何而来是否装在启动软盘上
+
+> > Sysctl variables can't be set by the user.
+> 
+> Sorry?  How are they set, then?
+
+Before the system has ever been booted, they can set them?  How?
+
+> > No it can't, since many of these boxes are not PnP boxes.
+> 
+> I'm sorry, I have just said "the information can either come from PnP 
+> or a configuration file".
+
+And where does this file come from?  This is a boot floppy, or something
+similar to it?
+
+> > The PnP BIOS is *NOT* authoratative since it doesn't exist on all the
+> > hardware the functionality is needed.
+> 
+> I'm sorry, but on a system where a PnP BIOS exists...
+
+You're not getting it.  The PnP BIOS is *NOT* authoritative since it
+doesn't exist.  It can't be since it doesn't exist.  It doesn't exist.
+
+IT DOESN'T EXIST.  No PnP BIOS.  Not there, not gonna be there, never
+was there, no plans on it ever being there.
+
+> It is most needed
+
+It's not there.  It's not going to be there, we can't make manufacturers
+put it there, we can't rely on it being there, so for all intents and
+purposes it's *NOT THERE*.
+
+
+> Where the PnP BIOS is able to supply resource information, it should be 
+> used.  I can't understand why you wouldn't want to do this.
+
+I never said we couldn't use it *WHEN IT'S THERE*, but if you go back
+and read the very first statement I made (which I'll repeat here), I'll
+explain the problem.
+
+I said:
+
+> Things is, this [ the proposed solution ] falls really short for
+> non-ISA/non-PnP devices
+
+Again, no PnP BIOS.  Not gonna be there.
+
+> Not at all.  You haven't at any point done anything other than say
+> "there are systems without PnP BIOS support".
+
+Yep, and the proposed solution where resources cannot be adequately
+assigned correctly doesn't even begin to address that problem.  As long
+as we're solving a problem, solve if for *everyone* who has a problem,
+not a small subset of the systems.
+
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605576 ###
+===== 库内序 147133 | PK 2605576 | 等级 L3 =====
+DATE: 1998-05-07T05:02:10+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Jordan K. Hubbard：认为再讲 sysctl 的毛病并无新意也无多大价值，建议改说自己想实现什么以及如何在时间允许下动手
+
+> No, it's a poor solution, and should NOT be used anymore than it already
+> is.  It's worse than IOCTL's, and it's becoming the garbage dump for
+> everything that we don't have easy solutions for, thus making the system
+> that much harder to understand and configure.
+
+Hmmmm.  Rather than tell us about what's wrong with sysctl, such
+criticism being hardly new or even particularly valuable, why not tell
+us what you'd rather see implemented and how you might, given the
+time, go about doing it?
+
+"It is better to light a candle than to curse the darkness."
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605579 ###
+===== 库内序 147136 | PK 2605579 | 等级 L4 =====
+DATE: 1998-05-07T09:27:01+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Julian Elischer：确认 Oracle 7 确实可以运行，但装在被评估的 NC 服务器上不便外发，建议向 Oracle 与 NC 销售施压
+
+I have the binaries but I'm not in a position to give them out as they are
+on an NC server we are evaluating.  however I can say that they DO work.. 
+
+My best suggestion is for people to NAG ORACLE and NC!
+you need to get pressure at the sales office.
+
+
+On Thu, 7 May 1998, Mariusz Potocki wrote:
+
+> 
+> On 07-May-98 Julian Elischer wrote:
+> > Steve Shoecraft wrote:
+> >> 
+> >>It'd be no problem for me to FTP the tar file and give it try...  I
+> >>      PROMISE I'll delete it when I'm done...
+> >> 
+> > That wouldn't be quite what nc had in mind by 'demo' :-)
+> 
+> I lost some mail from this thread, so sorry if I'm off topic.
+> It would be great if someone let access to some Oracle binaries.
+> I know it's semi legal, but for some experiments, for choosen guys...
+
+> 
+> Mariusz
+> 
+>         "verba volant,
+>                 scripta manent"
+> 
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605581 ###
+===== 库内序 147138 | PK 2605581 | 等级 L3 =====
+DATE: 1998-05-07T09:57:16+00:00
+FROM: "Jason T. Miller" <jasomill@indiana.edu>
+SUBJ: Brooktree digitizer on Compaq Presario 4814
+摘要: Jason T. Miller：询问有无人在 Compaq Presario 4814 内置的 Bt848 采集卡上跑通 Bt848 驱动
+
+Anybody gotten the Bt848 driver working with the piss-poor cutesy-titled
+"Creativity Imaging Center" Bt848 / S3 Live Video digitizer h/w built into some
+Compaq Presarios (eg my 4814).
+
+-jasomill@indiana.edu
+
+	"He looked so immaculately frightful
+	 As he bummed a cigarette
+	 Then he went off sniffing drainpipes
+	 And reciting the alphabet" -bob dylan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605583 ###
+===== 库内序 147140 | PK 2605583 | 等级 L3 =====
+DATE: 1998-05-07T11:24:09+00:00
+FROM: hm@kts.org (Hellmuth Michaelis)
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Hellmuth Michaelis：反驳该方案默认多数系统都带 PnP BIOS 支持这一前提，直接称这个假设不成立
+
+Mike Smith wrote:
+
+> [...] by taking advantage of the
+> fact that most systems *do* have PnP BIOS support.
+
+This assumption is wrong.
+
+hellmuth
+-- 
+Hellmuth Michaelis                hm@kts.org                   Hamburg, Europe
+                    "Those who can, do. Those who can't, talk.
+             And those who can't talk, talk about talking." (B. Shaw)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605584 ###
+===== 库内序 147141 | PK 2605584 | 等级 L3 =====
+DATE: 1998-05-07T14:42:59+00:00
+FROM: Michael Bielicki <Michael.Bielicki@linkdesign.com>
+SUBJ: STABLE from today failed to compile kernel
+摘要: Michael Bielicki：报告当天 STABLE 树编译内核失败，报错点在 ../../ufs/mfs/mfs_vfsops.c，求助排查原因
+
+I get the following error:
+
+root@gate(30)# make
+cc -c -O -m486  -pipe -Wreturn-type -Wcomment -Wredundant-decls -Wimplicit  -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes  -Wpointer-arith  -nostdinc -I- -I. -I../.. -I../../../include -DMD5 -DCLK_USE_TSC_CALIBRATION -DIPDIVERT -DFAILSAFE -DCOMPAT_43 -DMSDOSFS -DMFS -DNFS_NOSERVER -DFFS -DINET -DKERNEL  ../../ufs/mfs/mfs_vfsops.c
+../../ufs/mfs/mfs_vfsops.c: In function `mfs_mount':
+../../ufs/mfs/mfs_vfsops.c:395: structure has no member named `tqh_first'
+../../ufs/mfs/mfs_vfsops.c:395: structure has no member named `tqh_last'
+../../ufs/mfs/mfs_vfsops.c:395: structure has no member named `tqh_first'
+../../ufs/mfs/mfs_vfsops.c: In function `mfs_start':
+../../ufs/mfs/mfs_vfsops.c:470: structure has no member named `tqh_first'
+../../ufs/mfs/mfs_vfsops.c:471: structure has no member named `tqh_last'
+*** Error code 1
+
+Stop.
+
+
+                               Michael Bielicki
+Buisnetco Telecom. Ltd.                           Link Design International Ltd.
+13 Iras Str., Office 23                                    65, Cliff Rd, Tramore
+Nicosia 1061, Cyprus       http://www.linkdesign.com      Co. Waterford, Ireland
+Voice: +357-2-813 274                                      Voice: +353-51-386921
+Fax:   +357-2-813 275            We use FreeBSD              Fax: +353-51-390880
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605586 ###
+===== 库内序 147143 | PK 2605586 | 等级 L3 =====
+DATE: 1998-05-07T14:57:54+00:00
+FROM: Jim Carroll <jim@carroll.com>
+SUBJ: Re: ISA-PnP w\o BIOS support? 
+摘要: Jim Carroll：建议写一个小工具遍历硬件中断向量表，列出哪些中断已有驱动在等待处理，借此看出当前占用情况
+
+> One of the hardest things to do right now with the pccard code in
+> FreeBSD -current is to figure out what interrupts you have available.
+ 
+ Amen to that.
+ 
+ I had an idea for quick little utility to help solve  this.  If  you  could
+ walk the hardware interrupt vector list, you could display which interrupts
+ had valid drivers waiting to handle them. This would at least display which
+ interrupts  were  in  use.  You  could  then decide where to put the pccard
+ driver (or any other card that needs a free IRQ).
+ 
+ The only trouble with my idea is I'm not sure how to get access to the
+ hardware vector list.  If someone feels disposed to pointing me in the
+ right direction, I would be happy to cut the code, and share the work.
+
+---
+Jim C., President       | C A R R O L L - N E T, Inc.
+201-488-1332            | New Jersey's Premier Internet Service Provider
+www.carroll.com         | 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605587 ###
+===== 库内序 147144 | PK 2605587 | 等级 L3 =====
+DATE: 1998-05-07T14:58:16+00:00
+FROM: Tony Overfield <tony@dell.com>
+SUBJ: Re: ISA-PnP w\o BIOS support?
+摘要: Tony Overfield：认为近三年造的新系统没有不带 PnP BIOS 支持的，更老机型已近淘汰，反问还有哪家在生产不带 PnP BIOS 的机器
+
+Mike Smith wrote:
+> [...] by taking advantage of the
+> fact that most systems *do* have PnP BIOS support.
+
+Hellmuth Michaelis wrote:
+>This assumption is wrong.
+
+I'd be very surprised if any new system built in the last 
+three years didn't include PnP BIOS support.  IMHO, anything 
+older than that is approaching obsolescence anyway.
+
+Can anybody tell me who still builds systems without PnP 
+BIOS support?
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605588 ###
+===== 库内序 147145 | PK 2605588 | 等级 L3 =====
+DATE: 1998-05-07T15:00:38+00:00
+FROM: Yee Man Chan <ymc@eecs.umich.edu>
+SUBJ: problem to install GNU binutils-2.9.1
+摘要: Yee Man Chan：FreeBSD 3.0-971225-SNAP 装 binutils-2.9.1 时 libtool 链接报错，求助
+
+I tried to install GNU binutils-2.9.1 in my FreeBSD 3.0-971225-SNAP. I
+follow the instructions to install it but the compiler gives me this
+error:
+
+Making install in doc
+:
+/bin/sh ../../../gsrc/gas/../mkinstalldirs
+/a/crib/usr/home/ymc/gnu/man/man1
+ /usr/bin/install -c -m 644 ../../../gsrc/gas/doc/as.1
+/a/crib/usr/home/ymc/gnu/man/man1/as.1
+/bin/sh ./libtool --mode=link gcc -g  -o as-new  app.o as.o
+atof-generic.o bignum-copy.o cond.o  depend.o ecoff.o ehopt.o expr.o 
+flonum-copy.o flonum-konst.o  flonum-mult.o frags.o hash.o
+input-file.o input-scrub.o listing.o  literal.o macro.o messages.o
+output-file.o read.o sb.o stabs.o  subsegs.o symbols.o write.o
+tc-i386.o obj-aout.o atof-ieee.o   ../libiberty/libiberty.a 
+gcc -g -o as-new app.o as.o atof-generic.o bignum-copy.o cond.o
+depend.o ecoff.o ehopt.o expr.o flonum-copy.o flonum-konst.o
+flonum-mult.o frags.o hash.o input-file.o input-scrub.o listing.o
+literal.o macro.o messages.o output-file.o read.o sb.o stabs.o
+subsegs.o symbols.o write.o tc-i386.o obj-aout.o atof-ieee.o
+../libiberty/libiberty.a
+/bin/sh ./libtool --mode=link gcc -g  -o gasp-new  gasp.o macro.o
+sb.o hash.o ../libiberty/libiberty.a 
+gcc -g -o gasp-new gasp.o macro.o sb.o hash.o
+../libiberty/libiberty.a
+../../gsrc/libiberty/xmalloc.c:92: Undefined symbol `_xexit'
+referenced from text segment
+../../gsrc/libiberty/xmalloc.c:130: Undefined symbol `_xexit'
+referenced from text segment
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+
+How I install it:
+./configure --prefix=/my/directory 
+make 
+make install (I get the error when I run make install)
+
+This procedure works seamlessly in my SunOS 5.5.1. What's wrong with the
+FreeBSD? Any clue?
+
+Thanks.
+Yee Man Chan
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605590 ###
+===== 库内序 147147 | PK 2605590 | 等级 L3 =====
+DATE: 1998-05-07T08:42:50+00:00
+FROM: Mariusz Potocki <potok@friko.onet.pl>
+SUBJ: Re: Oracle 7 on FreeBSD
+摘要: Mariusz Potocki：希望有人能放出部分 Oracle 二进制供实验使用，自认此举在法律上处于半合法灰色地带
+
+
+On 07-May-98 Julian Elischer wrote:
+> Steve Shoecraft wrote:
+>> 
+>>It'd be no problem for me to FTP the tar file and give it try...  I
+>>      PROMISE I'll delete it when I'm done...
+>> 
+> That wouldn't be quite what nc had in mind by 'demo' :-)
+
+I lost some mail from this thread, so sorry if I'm off topic.
+It would be great if someone let access to some Oracle binaries.
+I know it's semi legal, but for some experiments, for choosen guys...
+
+Mariusz
+
+        "verba volant,
+                scripta manent"
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605591 ###
+===== 库内序 147148 | PK 2605591 | 等级 L3 =====
+DATE: 1998-05-07T16:11:54+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: -stable kernel not building, any suggestions? (fwd)
+摘要: Snob Art Genre：删除 /sys 重新 cvsup 后仍编译不了 -stable 内核，求助排查
+
+I tried deleting my /sys tree and re-cvsupping it, but that made no
+difference.
+
+Help!
+
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+---------- Forwarded message ----------
+Date: Thu, 7 May 1998 01:34:36 -0400 (EDT)
+From: Snob Art Genre <benedict@echonyc.com>
+To: questions@freebsd.org
+Subject: -stable kernel not building, any suggestions?
+
+../../ufs/mfs/mfs_vfsops.c: In function `mfs_mount':
+../../ufs/mfs/mfs_vfsops.c:395: structure has no member named
+`tqh_first'
+../../ufs/mfs/mfs_vfsops.c:395: structure has no member named `tqh_last'
+../../ufs/mfs/mfs_vfsops.c:395: structure has no member named
+`tqh_first'
+../../ufs/mfs/mfs_vfsops.c: In function `mfs_start':
+../../ufs/mfs/mfs_vfsops.c:470: structure has no member named
+`tqh_first'
+../../ufs/mfs/mfs_vfsops.c:471: structure has no member named `tqh_last'
+
+What could I be doing wrong?
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2605592 ###
+===== 库内序 147149 | PK 2605592 | 等级 L3 =====
+DATE: 1998-05-07T16:20:53+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: New Advocacy Mission: (Re: Oracle 7 on FreeBSD )
+摘要: Amancio Hasty：发起推动 Oracle 7 获得官方支持的行动，目标锁定 Oracle 与 NCI，征集联系人邮箱与传真以便询价
+
+Brief: I am sick and tire of listening to ISPs stating that they would love
+       to have a supported version of Oracle's database.
+
+Target : Oracle and NCI
+
+Objective: Secure option to purchase Oracle 7 from either NCI or Oracle
+
+What we need is contacts, fax numbers, e-mail address so we can ask for
+Oracle 7.
+
+	End - Of - Transmission
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

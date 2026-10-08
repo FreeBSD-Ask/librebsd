@@ -1,0 +1,26 @@
+2604699|L4|Matthew N. Dodd：转发 Larry Lile 的 IBM shared ram 卡驱动与 Mach token ring 加 LLC 源码
+2604701|L3|Andrew Stesin 求助把 mtr 移植到 FreeBSD 2.2.x，Linux 上 mtr-0.17 正常但 raw socket 行为有差异
+2604703|L4|Matthew N. Dodd：freebsd-tokenring@jurai.net 作为临时列表讨论 FreeBSD Token Ring 支持
+2604704|L4|Tony Kimball：Linux emulator 无法只把 /compat/linux 用于系统文件，因无法区分应用查找的两类目标
+2604705|L4|Brian Handy：同意导入 ISC DHCP 套件，并预期会做成 rc.conf 友好以便启用
+2604706|L4|Jonathan M. Bresler：FreeBSD-tokenring 与 FreeBSD-advocacy 已建好可用
+2604711|L3|John Birrell：追问对方是否安装了头文件，以及 /usr/include/sys/syscall.h 是否已包含新项
+2604712|L4|Justin M. Seger：支持以 contrib 方式把 ISC DHCP 并入 base，本人曾做 FreeBSD 移植可担任审阅
+2604714|L3|Snob Art Genre：系统故障时没必要强学 vi，主张 /bin 保留一份静态编译的 ee
+2604716|L4|Peter Jeremy：指出 SysV 打包风格至少 Sun 实现有缺陷，一是无压缩机制，不利于基于 Internet 的分发
+2604718|L4|Ollivier Robert：installworld 崩溃把 /bin/sh 留成 rw------- 致无法启动，改用 /sbin/tcsh 恢复
+2604721|L3|David Wolfskill：建议在包管理需求中增加可重新打包能力，便于按站点定制后再打包供该站点使用
+2604723|L3|Jim Flowers 求助 lnc 是否支持 PCnet-FAST 即 Am79C971，探测成功但 ifconfig 报 File exists
+2604725|L4|Mike Smith：ISC DHCP 工具将按 contrib 方式并入 base，但良好 DHCP 客户端还牵涉 FreeBSD 启动脚本问题
+2604729|L4|Mike Smith：SIOCAIFADDR File exists 通常表示试图添加的地址与另一接口已配的地址或掩码重叠
+2604731|L4|Mike Smith：因自身误解撤回先前提议的 CAM cutover 期限
+2604732|L4|Jordan K. Hubbard：质疑把 make rpm 加进 bsd.ports.mk 就能覆盖多数 ports 的说法，要求先实际查看
+2604734|L4|Terry Lambert：Windows 98 在无 DHCP 服务器时会自行在 10/8 网段随机取址
+2604735|L4|Terry Lambert：SysV 打包的一个优势是满足 IBCS2 兼容性，以及 Solaris 与 UnixWare 商业软件兼容
+2604736|L4|Dag-Erling Coidan S 把 syscons.c 检查顺序改为先判停止屏保，使图形屏保可行，但控制台切换仍未处理好
+2604737|L3|Antti-Pekka Liedes：syscall.h 已含新 syscall 但链接共享 libc 仍报 RRS text relocation
+2604738|L3|Paulo Fragoso 求助 Etinc PCI 卡在 FreeBSD 2.2.6 接 Cisco 2501，两端显示 UP 却仍有问题
+2604740|L3|Ruslan Ermilov 询问 ppp MP 分支的用途，以及该分支的改动是否会进入 stable 或 current
+2604741|L4|Eivind Eklund：MP 分支用于 Multilink PPP 开发，Brian 正在全面改造 PPP，待代码稳定后并入 current
+2604742|L3|Peter Dufault 求助 egcs 与 templates 的搭配工具，ptolemy 编译时汇编器报 GOT relocation 警告
+2604744|L4|Nate Williams：同意 DHCP 并入 base，虽一向反膨胀，认为 DHCP 在许多环境中会像 sendmail 一样常用

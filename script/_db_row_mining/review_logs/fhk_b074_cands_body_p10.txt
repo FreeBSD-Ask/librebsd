@@ -1,0 +1,1181 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604789 ###
+===== 库内序 146346 | PK 2604789 | 等级 L4 =====
+DATE: 1998-04-17T13:39:55+00:00
+FROM: Christopher Sedore <cmsedore@mailbox.syr.edu>
+SUBJ: Re: FDDI driver
+摘要: Christopher Sedore：贴出 fpa0 的 netstat 统计与 85 天 uptime 佐证，Ierrs Oerrs Coll 全为零
+
+
+
+On Thu, 16 Apr 1998, Wolfram Schneider wrote:
+
+> 
+> How good is the FDDI driver in FreeBSD? Would you trust
+> a company which use a FreeBSD router with FDDI card?
+> 
+
+Stats from mine:
+
+bash-2.01$ netstat -I fpa0
+Name  Mtu   Network       Address            Ipkts Ierrs    Opkts Oerrs
+Coll
+fpa0  4470  <Link>      08.00.2b.b1.08.8e 606204798     0 3590305172     0 0
+bash-2.01$ uptime
+ 8:21AM  up 85 days,  6:55, 1 user, load averages: 0.00, 0.00, 0.00
+bash-2.01$ uname -a
+FreeBSD moses.maxwell.syr.edu 2.2.5-RELEASE FreeBSD 2.2.5-RELEASE #0: Thu Jan 22 01:21:31 GMT 1998
+
+bash-2.01$ netstat -I fpa0 1
+            input         (fpa0)           output
+   packets  errs      bytes    packets  errs      bytes colls
+      2274     0     538522       2085     0     440556     0
+      1537     0     342413       1645     0     515930     0
+      1652     0     529496       1620     0     499490     0
+      1674     0     367347       1497     0     544800     0
+      1790     0     442355       1941     0     762522     0
+      1600     0     382010       1572     0     604303     0
+      1700     0     403479       1720     0     542984     0
+      1864     0     427442       1927     0     664278     0
+      1742     0     348727       1793     0     843582     0
+      1152     0     204909       1504     0    1051145     0
+[...]
+
+24 hours/day for the last 85 days, no hiccups, no problems.  (The
+counters above in the first netstat output have wrapped a few times :)
+
+As reliable as it gets.
+
+-Chris
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604790 ###
+===== 库内序 146347 | PK 2604790 | 等级 L3 =====
+DATE: 1998-04-17T14:40:16+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Discussion : Using DHCP to obtain configuration. 
+摘要: Mike Smith：回应 Bob Bishop 对启动机制变多的担忧，称并不会因此增加任何必需的机制
+
+> At 6:34 am +0100 17/4/98, Mike Smith wrote:
+> >A new banner: "/etc must die!".
+> 
+> I disagree. The more mechanism that minimally has to be working before the
+> system can boot, run a shell and talk to a network, the more nervous I get.
+> init is too complicated already. Just because Apallo did it 15 years ago
+> and Windows does it now, doesn't mean it's necessarily a good idea. KISS
+
+There's no more mechanism required under any proposed death-of-etc 
+scheme than there is now; you need init, the shell and ifconfig.  I 
+don't see anyone suggesting that these guys go away.
+
+On the other hand, concentrating much of the system configuration 
+information out of various files in /etc into rc.conf has been a 
+popular move.  This takes it just a little further is all.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604792 ###
+===== 库内序 146349 | PK 2604792 | 等级 L3 =====
+DATE: 1998-04-17T15:17:48+00:00
+FROM: Charles Mott <cmott@srv.net>
+SUBJ: VLANs and FreeBSD
+摘要: Charles Mott：询问 FreeBSD 路由与以太网 VLAN 结合的经验与标准文档，认为给 ifconfig 加选项再做一些内核工作即可
+
+Does anyone have any experience with combining ethernet
+VLANs with FreeBSD routing?  My understanding is that ethernet
+packets can have some extra tag attached to them in addition
+to the 48-bit identifier.  What are some standards documents
+for VLANs?
+
+I think it would be interesting for FreeBSD to be able
+to work with VLANs.  Possibly an extra option to ifconfig
+and a little bit of kernel work would do the job.
+
+Charles Mott
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604793 ###
+===== 库内序 146350 | PK 2604793 | 等级 L4 =====
+DATE: 1998-04-17T15:19:49+00:00
+FROM: David Reeder <dreeder@cs.pdx.edu>
+SUBJ: Re: IPv6/IPsec package 
+摘要: David Reeder：称已有 IPSec 移植到 FreeBSD，是 IPSec 保护 MobileIP 的第一步，内核里 mobileIP 代码易剥离
+
+
+
+We have a port of IPSec to FreeBSD which was the first step of our project to
+secure MobileIP via IPSec.  Web link is:
+
+	http://www.cs.pdx.edu/research/SMN/
+
+Page down to the second section "PSU project code distributions".  The
+minimal amount of mobileIP code embedded into the kernel is easy to isolate
+and is (again) small wrt the line count of IPSec code.  It can also be left
+alone and simply not turned on.  If you are familiar with IPSec and
+defining Security Associations & all that, it should work (roughly) out
+of the box.  Complete instructions and contact information for us may be
+found in the tarball READMEs.
+
+Regards,
+D. Reeder
+
+
+
+		#		#		#		#
+
+Wolfram Schneider <wosch@cs.tu-berlin.de> writes on Mon, 6 Apr 1998 19:40:46 +0200:
+. 
+. ----- Forwarded message from "Mire, John" <jmire@lsumc.edu> -----
+. Message-ID: <F17CAD5363F1D01184F300A0246203121BF286@SH-EXCH1.COMPSERV.LSUMC.EDU>
+. From: jmire@lsumc.edu (Mire, John)
+. To: "'wosch@FreeBSD.ORG'" <wosch@FreeBSD.ORG>
+. Subject: RE: New ports added/updated last two weeks
+. Date: Mon, 6 Apr 1998 11:56:45 -0500 
+. Return-Receipt-To: "Mire, John" <jmire@lsumc.edu>
+. MIME-Version: 1.0
+. X-Mailer: Internet Mail Service (5.5.1960.3)
+. Content-Type: text/plain
+. Content-Length: 531
+. 
+. i'm interested in a NRL IPv6/IPsec package and have several questions...
+. AA: other than searching the ports collection and man pages on
+. freebsd.org, how does one ascertain if there is a port for freebsd?
+. BB: if the package has a BSDI and NetBSD 1.2 ports, which is closest to
+. FreeBSD?
+. CC: is this a question germain to the ports@freebsd.org group?
+. 
+. \john
+. 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604794 ###
+===== 库内序 146351 | PK 2604794 | 等级 L4 =====
+DATE: 1998-04-17T15:51:45+00:00
+FROM: Kapil Chowksey <kchowksey@hns.com>
+SUBJ: Re: Converting ELF shared libs into a.out shared libs
+摘要: Kapil Chowksey：指出 ELF 转 a.out 工具对 sparc 移植可能必需，因 Sparc OpenBoot 只能从 a.out 镜像启动
+
+On Wed, 15 April, John Polstra wrote:
+
+> feasible, and I'm planning to write one.  When I was working through
+> it, I remember I decided that an ELF->a.out converter would be less
+> feasible.  But I can't remember the reason right now.  Sorry, I'm not
+
+An ELF->a.out converter might actually be a neccessity for the sparc
+port. Sparc OpenBoot can only boot from a.out images. There is one
+existing for UltraLinux already.
+
+-- 
+Kapil Chowksey				Viva GNU !
+kchowksey@hns.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604796 ###
+===== 库内序 146353 | PK 2604796 | 等级 L3 =====
+DATE: 1998-04-17T16:23:08+00:00
+FROM: Raul Zighelboim <rzig@verio.net>
+SUBJ: 1 Gbyte of ram
+摘要: Raul Zighelboim 请求 FreeBSD-current 服务器用尽 1GB 内存所需的 David Greenman 补丁出处
+
+
+Hello;
+	I am building a FreeBSD-current server with 1 gygabyte of ram,
+but I have been unable to locate David Greenman patch in order to take
+advantage of all the RAM.
+
+	Could someone send me the patch, please ?
+
+	Thanks.
+
+==================================================
+Raul Zighelboim       		  rzig@verio.net
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604800 ###
+===== 库内序 146357 | PK 2604800 | 等级 L4 =====
+DATE: 1998-04-17T18:05:12+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: VLANs and FreeBSD
+摘要: Matthew N. Dodd 指出 ether_input 函数里已有一段处理 VLAN 的代码可作 FreeBSD 支持 VLAN 的参考
+
+On Fri, 17 Apr 1998, Charles Mott wrote:
+> I think it would be interesting for FreeBSD to be able
+> to work with VLANs.  Possibly an extra option to ifconfig
+> and a little bit of kernel work would do the job.
+
+ether_input() appears to have some code to deal with VLANs.
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604801 ###
+===== 库内序 146358 | PK 2604801 | 等级 L4 =====
+DATE: 1998-04-17T18:06:19+00:00
+FROM: "Matthew N. Dodd" <winter@jurai.net>
+SUBJ: Re: Converting ELF shared libs into a.out shared libs
+摘要: Matthew N. Dodd 认为理想状态下 bootstrap 应保持 a.out 格式 由它去拉起 ELF 内核
+
+On Fri, 17 Apr 1998, Kapil Chowksey wrote:
+> An ELF->a.out converter might actually be a neccessity for the sparc
+> port. Sparc OpenBoot can only boot from a.out images. There is one
+> existing for UltraLinux already.
+
+Which is why the bootstraps would be in a.out format and know how to pull
+up an ELF kernel...
+
+(in a perfect world)
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604802 ###
+===== 库内序 146359 | PK 2604802 | 等级 L4 =====
+DATE: 1998-04-17T17:18:57+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: Re: FDDI driver
+摘要: Wilko Bulte 用两块 Digital DEFPA 卡把 FreeBSD 主机接入 NetBSD/axp 说运行完全正常
+
+As Tom wrote...
+> 
+> On Thu, 16 Apr 1998, Wolfram Schneider wrote:
+> 
+> > How good is the FDDI driver in FreeBSD? Would you trust
+> > a company which use a FreeBSD router with FDDI card?
+> 
+>   Supposed to be very solid.  Simon described the card recently as being
+> "very boring".
+
+Very boring indeed. I have 2 Digital DEFPA (SAS in my case) to connect
+the FreeBSD box to my NetBSD/axp. Works just fine. Matt did a great job
+on the driver.
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+______________________________________________ Powered by FreeBSD __________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604803 ###
+===== 库内序 146360 | PK 2604803 | 等级 L3 =====
+DATE: 1998-04-17T19:32:48+00:00
+FROM: Niall Smart <rotel@indigo.ie>
+SUBJ: Re: PR kern/1144
+摘要: Niall Smart 回复 James Raynard 确认 PR kern/1144 之外另有一份后续补丁
+
+On Apr 15,  8:49pm, James Raynard wrote:
+} Subject: Re: PR kern/1144
+> On Wed, Apr 15, 1998 at 02:03:43AM +0000, Niall Smart wrote:
+> > On Apr 1n,  9:17pm, James Raynard wrote:
+> > > 
+> > > In his reply to my original PR, bde posted a macro that did what you
+> > > suggest for integer arguments (is this not in the PR database?).
+> > 
+> > Nope.  Still got it?
+> 
+> Yep.  Note there's a followup as well.
+
+Thanks for the information.
+
+I noticed you closed off the PR... given that OpenBSD, NetBSD,
+Solaris, glibc and IRIX are all POSIX compliant in this regard, do
+we really want to break ranks?  I don't think saving a few microseconds
+is worth it.  I've appended patches in case I can convince you to
+change your mind. :)
+
+Thanks,
+
+Niall
+
+
+*** /usr/src/lib/libc/gen/sigsetops.c	Mon Jan  5 00:11:29 1998
+--- sigsetops.c	Fri Apr 17 19:15:19 1998
+***************
+*** 38,43 ****
+--- 38,47 ----
+  #endif /* LIBC_SCCS and not lint */
+  
+  #include <signal.h>
++ #include <errno.h>
++ 
++ /* These functions used to be defined as macro's, undef them here in case 
++    someone ends up pulling in an old /usr/include/signal.h */
+  
+  #undef sigemptyset
+  #undef sigfillset
+***************
+*** 66,71 ****
+--- 70,80 ----
+  	sigset_t *set;
+  	int signo;
+  {
++ 	if (signo <= 0 || signo >= NSIG) {
++ 		errno = EINVAL;
++ 		return -1;
++ 	}
++ 
+  	*set |= sigmask(signo);
+  	return (0);
+  }
+***************
+*** 75,80 ****
+--- 84,94 ----
+  	sigset_t *set;
+  	int signo;
+  {
++ 	if (signo <= 0 || signo >= NSIG) {
++ 		errno = EINVAL;
++ 		return -1;
++ 	}
++ 
+  	*set &= ~sigmask(signo);
+  	return (0);
+  }
+***************
+*** 84,88 ****
+--- 98,107 ----
+  	const sigset_t *set;
+  	int signo;
+  {
++ 	if (signo <= 0 || signo >= NSIG) {
++ 		errno = EINVAL;
++ 		return -1;
++ 	}
++ 
+  	return ((*set & sigmask(signo)) != 0);
+  }
+*** /usr/src/include/signal.h	Fri Jun 28 05:27:04 1996
+--- signal.h	Thu Apr 16 12:26:15 1998
+***************
+*** 73,85 ****
+  #endif /* !_ANSI_SOURCE */
+  __END_DECLS
+  
+- #ifndef _ANSI_SOURCE
+- /* List definitions after function declarations, or Reiser cpp gets upset. */
+- #define	sigaddset(set, sign
+[…中段省略 1397 字符…] lure, otherwise it returns 1 if the signal is a member of the set,
+! or 0 if it is not.
+  .Sh ERRORS
+! .Bl -tag -width Er
+! .It Bq Er EINVAL
+! The specified signal
+! .Fa signo
+! is not a valid signal number.
+! .El
+  .Sh SEE ALSO
+  .Xr kill 2 ,
+  .Xr sigaction 2 ,
+
+-- 
+Niall Smart.         finger njs3@doc.ic.ac.uk for PGP key
+FreeBSD: Turning PC's into Workstations.  www.freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604806 ###
+===== 库内序 146363 | PK 2604806 | 等级 L3 =====
+DATE: 1998-04-17T19:45:16+00:00
+FROM: Snob Art Genre <benedict@echonyc.com>
+SUBJ: Re: Discussion : Using DHCP to obtain configuration.
+摘要: Snob Art Genre 以 NeXTStep 的 NetInfo 损坏为例 反对把全部配置交给 DHCP 客户端
+
+On Thu, 16 Apr 1998, Bob Bishop wrote:
+
+> At 2:51 am +0100 16/4/98, Mike Smith wrote:
+
+> > 3 Use the DHCP client for everything.
+> 
+> ...this option would introduce yet another chunk of mechanism which has to
+> be working before one's system will DTRT.
+
+Yes!  Has anyone here ever tried to fix a NeXTStep box when NetInfo was
+spammed?  It's not pretty, I assure you.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604807 ###
+===== 库内序 146364 | PK 2604807 | 等级 L3 =====
+DATE: 1998-04-17T19:44:46+00:00
+FROM: Chris Shenton <cshenton@it.hq.nasa.gov>
+SUBJ: Re: Discussion : Using DHCP to obtain configuration.
+摘要: Chris Shenton 认为实现质量才是关键 说自己用过 Apollo 网络但很反感 NT 注册表的混乱
+
+Mike Smith <mike@smith.net.au> writes:
+
+> Yeah, and?  Ask anyone that's administered a network of Apollo systems 
+> how useful the registry is.
+
+> Isn't it nice to have your ideas judged on the merits of someone else's
+> implementation?
+
+I really liked my little net of Apollos. I really hate the NT registry
+fiasco. Yeah, the implementation makes all the difference... sigh.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604809 ###
+===== 库内序 146366 | PK 2604809 | 等级 L4 =====
+DATE: 1998-04-17T21:18:52+00:00
+FROM: Andrew Maltsev <am@amsoft.ru>
+SUBJ: Telnet non transparence
+摘要: Andrew Maltsev 指出 telnet 加 -E 仍被 0xff 送入转义模式不符合文档语义 已在 bin/6317 提交补丁询问为何不并入
+
+There are three open PR's related to this issue. In the last (bin/6317)
+I'd posted my patch for the problem.  Why not to commit it?
+
+The problem is that even with -8E specified telnet falls to command
+mode by 0xff -- this is not what ``-E -- Stops any character from being
+recognized as an escape character'' usually means :)
+
+Here is the patch:
+
+Index: commands.c
+===================================================================
+RCS file: /.1/FreeBSD/CVS/src/usr.bin/telnet/commands.c,v
+retrieving revision 1.9
+diff -c -r1.9 commands.c
+*** commands.c	1998/02/20 04:33:02	1.9
+--- commands.c	1998/04/16 10:13:09
+***************
+*** 405,411 ****
+      static int
+  send_esc()
+  {
+!     NETADD(escape);
+      return 1;
+  }
+  
+--- 405,412 ----
+      static int
+  send_esc()
+  {
+!     if(escapable)
+!     	NETADD(escape);
+      return 1;
+  }
+  
+***************
+*** 938,944 ****
+  		printf("Telnet rlogin escape character is '%s'.\n",
+  					control(rlogin));
+  	} else {
+! 		escape = (s && *s) ? special(s) : _POSIX_VDISABLE;
+  		printf("Telnet escape character is '%s'.\n", control(escape));
+  	}
+  }
+--- 939,951 ----
+  		printf("Telnet rlogin escape character is '%s'.\n",
+  					control(rlogin));
+  	} else {
+! 		if(s && *s) {
+! 			escape = special(s);
+! 			escapable = 1;
+! 		} else {
+! 			escape = _POSIX_VDISABLE;
+! 			escapable = 0;
+! 		}
+  		printf("Telnet escape character is '%s'.\n", control(escape));
+  	}
+  }
+***************
+*** 1010,1015 ****
+--- 1017,1025 ----
+  	    value = _POSIX_VDISABLE;
+  	}
+  	*(ct->charp) = (cc_t)value;
++ 	if(ct->charp == &escape)	/* special workaround - i'm too lazy */
++ 					/* to add yet another handler (am@) */
++ 		escapable = !(value == _POSIX_VDISABLE);
+  	printf("%s character is '%s'.\n", ct->name, control(*(ct->charp)));
+      }
+      slc_check();
+***************
+*** 1330,1338 ****
+  		printf("new escape character: ");
+  		(void) fgets(buf, sizeof(buf), stdin);
+  		arg = buf;
+  	}
+! 	if (arg[0] != '\0')
+  		escape = arg[0];
+  	if (!In3270) {
+  		printf("Escape character is '%s'.\n", control(escape));
+  	}
+--- 1340,1354 ----
+  		printf("new esc
+[…中段省略 2557 字符…] 	if ((sc == '\n') || (sc == '\r'))
+  			bol = 1;
+! 	} else if (sc == escape) {
+  	    /*
+  	     * Double escape is a pass through of a single escape character.
+  	     */
+--- 1988,1994 ----
+  		}
+  		if ((sc == '\n') || (sc == '\r'))
+  			bol = 1;
+! 	} else if (escapable && sc == escape) {
+  	    /*
+  	     * Double escape is a pass through of a single escape character.
+  	     */
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604811 ###
+===== 库内序 146368 | PK 2604811 | 等级 L3 =====
+DATE: 1998-04-17T22:05:26+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: Discussion : Using DHCP to obtain configuration.
+摘要: Studded 建议推迟 ISC DHCP 导入 因 Ted 已在 dhcp-client 上宣布即将发布新版本
+
+Mike Smith wrote:
+> 
+> I recently posted asking for opinions as to the desirability of making
+> the ISC DHCP tools part of the base system.  The response to this has
+> been positive so far, and unless there are subsequent strong objections
+> they will be imported contrib-style.
+
+	I would suggest that you push back the import for a little while. Ted
+just announced on dhcp-client that he's planning a new release for
+probably this weekend. Also, as much as I think that importing dhcp into
+the base is a necessary step, I have a concern that it will promptly
+become orphaned like (for example) xntpd and top. Please say it won't be
+so. :)
+
+[snip]
+
+> There are three basic approaches we can take to integrating DHCP
+> clienthood with FreeBSD:
+> 
+>  1 Nothing.  Leave the tools and the manpages there for users that
+>    might feel brave and want to set it up themselves.  This doesn't win
+>    us much over the port, but results in the least change.
+
+	This would actually be a minus in relation to the port since this
+dramatically increases the likelihood that it will be orphaned.
+ 
+>  2 Offer a simple choice between "traditional" static configuration, and
+>    "use DHCP" configuration.  Users with complex part-static part-DHCP
+>    configurations can use the DHCP client configuration file to achieve
+>    ultimate flexibility.  This results in the least surprise for
+>    existing users, but perhaps a slightly more convoluted
+>    implementation.
+
+	I posted a proposal for some very simple rc.conf and rc.network changes
+that would make this almost painless several months ago and was told
+that implementing changes like that before xntpd was in the tree
+wouldn't be wise. If you're interested in a slightly modified version of
+my plan feel free to visit http://home.san.rr.com/freebsd/dhcp.html. The
+system as it is now is closer to ready for this change than you might
+think. I would be happy to work with you (and whoever else is
+interested) on details of the implementation.
+ 
+>  3 Use the DHCP client for everything.  This will require a rethunk of
+>    the way that some configuration in
+[…中段省略 1134 字符…] ith this. Do people NFS mount /var?  What
+circumstances are you thinking of?
+
+Glad to see this getting some notice,
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud designer and maintainer of the world's largest Internet
+***    Relay Chat server with 5,328 simultaneous connections.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604812 ###
+===== 库内序 146369 | PK 2604812 | 等级 L3 =====
+DATE: 1998-04-17T23:02:03+00:00
+FROM: "Eric A. Davis" <edavis@nas.nasa.gov>
+SUBJ: vnodes...
+摘要: Eric A. Davis 询问仅持 vnode 指针时能否取到父目录的 inode 号 场景在 vn_write 函数内
+
+
+If I only have a pointer to a vnode, is there any way to get the
+inode number of the intermediate (parent) directory?  More specifically,
+I am looking to do this in the vn_write (sys/kern/vfs_vnops.c) function.
+
+- e
+
+-- 
+     Eric Allen Davis        Network Engineer
+     edavis@nas.nasa.gov     NASA Ames Research Center 
+     Voice: (415)604-2543    NAS Systems Division
+     Pager: (415)428-6931    http://www.nas.nasa.gov/~edavis
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604813 ###
+===== 库内序 146370 | PK 2604813 | 等级 L3 =====
+DATE: 1998-04-17T23:30:44+00:00
+FROM: sfarrell+lists@farrell.org
+SUBJ: Re: Discussion : Using DHCP to obtain configuration.
+摘要: sfarrell+lists 建议用 nsswitch.conf 配置成先查数据库再查文件 以同时兼顾两种机制
+
+Snob Art Genre <benedict@echonyc.com> writes:
+
+> Yes!  Has anyone here ever tried to fix a NeXTStep box when NetInfo
+> was spammed?  It's not pretty, I assure you.
+
+Ugh...
+
+Can't some kind of duality be established that gets the best of both
+worlds?  Use nsswitch.conf file that call tell it to e.g., first look
+in the database and then in files for all information.  Additionally,
+some provision is made for the new system to auto-generate required
+files in /etc? 
+
+Oh.. and while I'm dreaming, how about using portalfs or similar as
+such: mount /etc with portalfs and have a translator present all of
+the data from the database in traditional format.  So vi /etc/rc.conf,
+e.g., would just work, even though you'd actually be read/writing
+directly to the database (a little like vipw, but with more magic).
+Similarly this mechanism would maintain a backup of /etc in files as
+mentioned in the previous paragraph.
+
+This would be *outstanding* b/c one of the most annoying things about
+non-traditional config systems is that they are difficult to figure
+out since nothing is where it is "supposed to be".  Moreover, an
+environmental variable (SYSTEM_CONFIG_STYLE=SysV, e.g.) could control
+the apparent layout of /etc.
+
+(returning to planet earth...)
+
+--
+
+Steve Farrell
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604814 ###
+===== 库内序 146371 | PK 2604814 | 等级 L4 =====
+DATE: 1998-04-18T00:02:42+00:00
+FROM: James Raynard <fhackers@jraynard.demon.co.uk>
+SUBJ: Re: PR kern/1144
+摘要: James Raynard 认为宏改动的收益不值得因此未合入 但仍附上补丁以备改变主意
+
+On Fri, Apr 17, 1998 at 07:32:48PM +0000, Niall Smart wrote:
+> 
+> I noticed you closed off the PR...
+
+Yes, I didn't think the macro changes were worth it.
+
+> given that OpenBSD, NetBSD,
+> Solaris, glibc and IRIX are all POSIX compliant in this regard, do
+> we really want to break ranks?  I don't think saving a few microseconds
+> is worth it.
+
+Maybe...
+
+> I've appended patches in case I can convince you to
+> change your mind. :)
+[snip]
+
+Hmm, these are almost exactly the same as the patches in my original PR
+(except I didn't bother with the man page :-)
+
+James
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604817 ###
+===== 库内序 146374 | PK 2604817 | 等级 L3 =====
+DATE: 1998-04-18T09:05:45+00:00
+FROM: Gianmarco Giovannelli <gmarco@giovannelli.it>
+SUBJ: Msdos code : speed test
+摘要: Gianmarco Giovannelli 试用 3.0-current 的 msdosfs 挂载 zip 驱动器做速度测试 此前一直用 vmount
+
+I always used the good vmount to use my dos zip drives , today I tried
+to mount them with the 3.0-current msdos fs with :
+
+mount -t msdos /dev/sd2s4 /mnt/mzip
+
+Then I tried to copy some files to my /tmp dir from the zip itself...
+
+-rwxr-xr-x  1 root  bin    707052 Apr 18 08:55 1.tif
+-rwxr-xr-x  1 root  bin   1444564 Apr 18 08:55 2.tif
+-rwxr-xr-x  1 root  bin   1207546 Apr 18 08:55 SETUP.EXE
+-rwxr-xr-x  1 root  bin      3321 Apr 18 08:55 adm.tgz
+-rwxr-xr-x  1 root  bin  10878951 Apr 18 08:55 mozilla.tgz
+
+with the stock msdos code :
+
+gmarco:/mnt/mzip#time cp *.??? /tmp  
+0.000u 1.463s 2:30.49 0.9%      70+288k 6957+615io 4pf+0w
+
+with vmount :
+
+gmarco:/mnt/mzip#time cp *.??? /tmp
+0.000u 0.713s 0:15.47 4.5%      72+301k 3+449io 1pf+0w
+
+
+Now I am not able to understand all the data returned by time, but the
+time elapsed is very different ...
+
+Any explanations ?
+
+
+Btw, it isn't so important the important is the msdos code is working
+now :-)
+
+P.s.
+I don't know if it can be related to the results , but the box (PII 300)
+was busy with a make world during this test...
+
+
+
+
+-- 
+
+Regards...
+
+Gianmarco
+"Unix expert since yesterday"
+
+http://www.giovannelli.it
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604820 ###
+===== 库内序 146377 | PK 2604820 | 等级 L3 =====
+DATE: 1998-04-18T08:51:58+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Discussion : Using DHCP to obtain configuration.
+摘要: Terry Lambert 指出用 DHCP 客户端统一配置时若还维护并行文本文件就是做错了
+
+> > ...this option would introduce yet another chunk of mechanism which has to
+> > be working before one's system will DTRT.
+> 
+> Yes!  Has anyone here ever tried to fix a NeXTStep box when NetInfo was
+> spammed?  It's not pretty, I assure you.
+
+vi.
+niload.
+
+This assumes you Do The Wrong Thing and maintain parallel text files.
+
+Another question:
+
+Has anyone tried to change a system configuration parameter (like
+an IP address or the machine name) and had it "just work" without
+having to go kill -1 and/or kill -9 & restart half the world?
+
+Consider the case of us doing the DHCP client thing (for which this
+threads subject was invented).
+
+Now say the server says "no, you can't have your lease back" (maybe
+we have been in suspend mode for 5 days, or the network has been
+renumbered out from under us, and the server was transparently proxying
+our old address on behalf of the inability of the DHCP protocol
+designers to forsee the need for a "REVOKE DHCP LEASE" and a client
+requirement to listen for it on the wire).
+
+For whatever reason, it wants us to have a different IP address.
+
+How would you make this work without a single configuration point
+that could notify interested parties of changes?  (for example,
+via an ACAP or LDAP async server notification, a poll event, or
+whatever).
+
+If you allow idiots to use config files rather than a single,
+central get/put type API, you will *inevitably* end up with a
+"fetchmail"-type program that has a .fmrc with a stale hostname
+squirreled away somewhere.  Or worse.  On SVR4, there are five
+(*five*!) locations where you have to change the hostname.  I'm
+sure that I could, if pressed, find duplications in FreeBSD's
+config files as well.
+
+The system-wide shell startup defined environment variables are
+an example of a name/value pair by administrative fiat.
+
+All we are talking about here is extending the fiat to access
+mechanism, which isn't a bad thing.
+
+I'm positive that a bidirectional data converter could be written
+(I've written one for all of the RFC2307 POSIX NIS schema data,
+in fact).  You would still be free to open yourself up to the
+NeXTStep niload/nidump synchronization problems, if you really
+wanted the headache back in trade for being able to access flat
+files.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604821 ###
+===== 库内序 146378 | PK 2604821 | 等级 L4 =====
+DATE: 1998-04-18T09:10:04+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: vnodes...
+摘要: Terry Lambert 答 Eric A. Davis 可取文件 vnode 的 inode 号再遍历文件系统目录块找到指向该 inode 的父目录
+
+> If I only have a pointer to a vnode, is there any way to get the
+> inode number of the intermediate (parent) directory?  More specifically,
+> I am looking to do this in the vn_write (sys/kern/vfs_vnops.c) function.
+
+You can get the inode number for the vnode of the file.
+
+Then you can exhaustively search the inodes file system for a
+directory block containing a pointer to the inode.
+
+This will be the parent directory.  If the inode has more than
+one link, this will be *a* parent directory.  That is, there
+is more than one parent directory, and you can't know the parent
+directory that was the one that was used to open the inode in
+the first place.
+
+So if you are going to use this to implement inherited rights, or some
+other thing, like deleting an open file or renaming an open file to
+implement automatic log rolling, etc., you are out of luck.
+
+
+I have a design for a mechanism that would allow you to get this
+information, but your vnode use would go up dramatically, and it
+would require the use of the VM object aliases that are still a
+bit problematic for FS stacking, as is.
+
+Effectively, you would associate the parent directory of a file
+with the in-core vnode instance of the file by using a derived
+alias object.
+
+All VOP operations would be indirected through the container
+vnode to the real vnode.
+
+Alternately, if you just care about FFS, you could change the
+on disk structure of hard links to use an intermediate "alias"
+inode.  You would have to change fsck, and you would have to
+handle boundry conditions, such as "deleting the second to last
+link from a file, which was the non-alias inode, so the alias
+inode has to become the real inode before the delete can be
+completed, and -- Whoops!  I just crashed with two ''real''
+inodes!", etc..
+
+I implemented this once already (in SVR4.2 ES/MP back in 1993/1994)
+for NetWare Trustee Rights (which are reverse inherited) in an
+attributed UFS called NWFS.  I also did resource forks and OS/2
+extended attributes and kernel globbing and multiple namespaces and
+a bunch of other cool stuff.  Too bad Novell bought USL during the
+BSDI/UCB lawsuit and shot to hell all Usenix interest in any papers
+from Novell/USG employees, or it would have been published.  8-(.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604822 ###
+===== 库内序 146379 | PK 2604822 | 等级 L3 =====
+DATE: 1998-04-18T09:12:32+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: Discussion : Using DHCP to obtain configuration.
+摘要: Terry Lambert 称赞用 portalfs 挂载 /etc 并以传统格式呈现数据库数据的构想
+
+> Oh.. and while I'm dreaming, how about using portalfs or similar as
+> such: mount /etc with portalfs and have a translator present all of
+> the data from the database in traditional format.
+
+This is a *terrifically* cool idea!
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604823 ###
+===== 库内序 146380 | PK 2604823 | 等级 L3 =====
+DATE: 1998-04-18T10:46:41+00:00
+FROM: Peter Jeremy <Peter.Jeremy@alcatel.com.au>
+SUBJ: RE: Package management
+摘要: Peter Jeremy 认为商业软件不肯用打包机制这件事与 ABI 的定义本身没有关系
+
+On Fri, 17 Apr 1998 09:08:01 -0700 (PDT), David Wolfskill <dhw@whistle.com> wrote:
+I wrote:
+>>BTW, how much commercial s/w actually uses that ABI?
+>?  As to the point that a lot of (commercial) stuff fails to use the
+>"package" mechanism, yes, that's annoying (and your efforts to get the
+>vendors to approximate reasonableness are to be commended!)
+>
+>But what has that to do with an "ABI"?
+The `ABI' defines how a program is packaged as well the executable
+format and system call mechanism.  Whilst a package format mightn't
+sound relevant to running an executable, it is critical for building
+shrink-wrapped software.
+
+>>This would also make it relatively easy to support multiple, different
+>>package formats (as long as the command-line interfaces were not too
+>>dissimilar).
+>
+>I don't see that as a necessary condition, if a "wrapper" interface might
+>be reasonably fabricated.
+That's the way I see it - if a wrapper interface _can_ be reasonably
+fabricated, then the interfaces are not `too dissimilar'.
+
+>>  I've
+>>previously avoided using the SystemV packages for this reason
+Actually, there were some other issues as well, and it wasn't totally
+my decision, but I was trying to point out that the SystemV tools
+aren't perfect.
+
+Peter
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604824 ###
+===== 库内序 146381 | PK 2604824 | 等级 L3 =====
+DATE: 1998-04-18T13:57:23+00:00
+FROM: Alejandro Galindo <agalindo@servidor.exsocom.com.mx>
+SUBJ: MX mail problem 
+摘要: Alejandro Galindo 求助 postmaster 间歇报 mail loops back to me 与本地配置错误的 MX 问题
+
+Our server are working well only in some days i recived the next message
+from postmaser:
+
+------------cut here-------------------
+
+ ----- The following addresses had permanent fatal errors -----
+<alex@exsocom.com.mx>
+
+   ----- Transcript of session follows -----
+553 servidor.exsocom.com.mx. config error: mail loops back to me (MX
+problem?)
+554 <alex@servidor.exsocom.com.mx>... Local configuration error
+
+------------ cut here ---------------------
+
+in the DNS configuration i have the next line for MX
+
+                IN      NS          servidor.exsocom.com.mx.
+                IN      MX    10    servidor.exsocom.com.mx.
+
+the problem its only some times and not with all the users.
+
+Please if you have any suggestion tell me becouse i cant resolve this problem.
+
+Thanks in advanced
+
+Saludos
+Alejandro
+ 
+ ----------------------------------------------------------------------------
+|                                                          ,        ,        |
+|                                                         /(        )`       |
+|                                                         \ \___   / |       |
+|                                                         /- _  `-/  '       |
+|                                                        (/\/ \ \   /\       |
+|     ExSoCom Dgo. MEXICO                                / /   | `    \      |
+|                                                        O O   ) /    |      |
+|                                                        `-^--'`<     '      |
+|                                                       (_.)  _  )   /       |
+|     Alejandro Galindo Chairez                          `.___/`    /        |
+|     Tel: (52 18) 179177                                  `-----' /         |
+|     Fax: (52 18) 179177                     <----.     __ / __   \         |
+|                                             <----|====O)))==) \) /====     |
+|    e-mail agalindo@exsocom.com.mx           <----'    `--' `.__,' \        |
+|                                                          |        |        |
+|          http://www.exsocom.com.mx                       \       /       /\|
+|                                                     ______( (_  / \______/ |
+|                                                   ,'  ,-----'   |          |
+|                      a FreeBSD user               `--{__________)          |
+ ----------------------------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604826 ###
+===== 库内序 146383 | PK 2604826 | 等级 L3 =====
+DATE: 1998-04-18T16:39:14+00:00
+FROM: Raul Zighelboim <rzig@verio.net>
+SUBJ: RE: 1 Gbyte of ram
+摘要: Raul Zighelboim 因经费把内存减到 1024MB 仍询问所需内核补丁从哪里找
+
+
+Due to a shortage of funds, I had to cut the amount of ram to 1024 MBs
+:-)
+
+	nevertheless, were can I find the required patch for the kernel
+?
+
+thanks.
+
+> -----Original Message-----
+> From:	David E. Cross [SMTP:dec@phoenix.its.rpi.edu]
+> Sent:	Friday, April 17, 1998 11:53 AM
+> To:	Raul Zighelboim
+> Cc:	'hackers@freebsd.org'
+> Subject:	Re: 1 Gbyte of ram
+> 
+> On Fri, 17 Apr 1998, Raul Zighelboim wrote:
+> 
+> > 
+> > Hello;
+> > 	I am building a FreeBSD-current server with 1 gygabyte of ram,
+> > but I have been unable to locate David Greenman patch in order to
+> take
+> > advantage of all the RAM.
+> A Gygabyte of RAM... I would like to see that patch ;)
+>   ^^^^^^^^
+> 
+> --
+> David Cross
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604828 ###
+===== 库内序 146385 | PK 2604828 | 等级 L4 =====
+DATE: 1998-04-18T04:43:23+00:00
+FROM: "M. Warner Losh" <imp@village.org>
+SUBJ: Re: Converting ELF shared libs into a.out shared libs 
+摘要: M. Warner Losh 指出 ARC 平台移植有同类问题 其标准只支持 ECOFF 引导 而 netbsd 与 openbsd 树内已有相关工具
+
+In message <199804171551.LAA15913@inssun5.hns.com> Kapil Chowksey writes:
+: An ELF->a.out converter might actually be a neccessity for the sparc
+: port. Sparc OpenBoot can only boot from a.out images. There is one
+: existing for UltraLinux already.
+
+There are similar issues with doing a port to the ARC (R4x00 based)
+machines.  The standard only supports ECOFF booting.  netbsd and
+openbsd have tools in their tree for this already.
+
+However, converting an image is easy (relatively speaking).
+converting a library that might have system calls and oddball system
+dependent data structures to deal with is much much harder...
+
+Warner
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

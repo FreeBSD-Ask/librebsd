@@ -1,0 +1,25 @@
+2604483|L4|Bernie Doehner：找到 3.0 内核内存使用文档在 /usr/share/doc/handbook/handbook290.html
+2604484|L3|Amancio Hasty：接受该意见，称现阶段他主要想招揽贡献者，若对方恰为该包维护者则更佳
+2604485|L3|Satoshi Asami：请若他方贡献出可运行的新版本或为 hylafax 增加语音能力，记得交给维护者并入 ports tree
+2604486|L3|Amancio Hasty：称会联系各维护者，目前用 mh 文件夹 voice-project 跟踪项目，贡献者增多愿接手项目管理
+2604488|L4|Amancio Hasty：称 Sun 向合格教育机构免费开放 Java 工具，可在 FreeBSD 运行的 Java WorkShop 属其中套件
+2604489|L3|Josef Grosch：回复称正在看该页却找不到 FreeBSD 条目，请 Amancio 给出含 FreeBSD 支持的 URL
+2604490|L3|Amancio Hasty：转贴旧帖称 JWS 2.0 可在 FreeBSD 运行，并请求 FreeBSD Java Team 补进 Java 网页
+2604491|L3|Julian Elischer：称自己几年前就想做这件事，但因 FreeBSD 实际事务太多没能大力推进
+2604493|L3|Terry Lambert 谈到 JWS 2.0 的 30 天评估版与 Sun 中期发布的 JFC 1.1 升级
+2604494|L4|Nate Williams：你有 FreeBSD Java Team 提交权限 提交新 html 后我保证 freefall 上同步更新
+2604495|L3|Amancio Hasty 说自己正忙于 multimedia 与 java 方向 让团队成员自行接手该网页内容
+2604496|L3|Bob Bishop 转引 Michael Eager 关于重启 PLSIG 主导 Dwarf 规范讨论的邮件线
+2604497|L3|Klaus Werner Krygier 希望 Linux 仿真仅对 /compat/linux 生效 以运行 NSR 备份客户端
+2604499|L4|Niall Smart：询问 /usr/lib 是否有 libcrypt.a 与 libcrypt.so.2.0 并给出符号链接实测
+2604500|L3|Niall Smart 转述 John Polstra 将 ld set symbol space 报错归因为汇编器缺陷
+2604501|L4|John Polstra：该汇编器修复已合入 obj-aout.c 1.6 版 同意并入 -stable 但因仅入 -current 5 天暂不
+2604502|L4|Shigio Yamaguchi 发现 htags 在 2.2.5 上耗尽内存 指出 /usr/bin/perl 仍是 4.0 并给出替换法
+2604503|L4|Poul-Henning Kamp：为 3.0-RELEASE 审查 gnats 库 有价值却难完成的 PR 移入 suspended 态
+2604504|L4|patl@phoenix.volant.org 指出 Netscape 剥离 JVM 因其在各目标平台上已有足够成熟的实现
+2604505|L4|Amancio Hasty：mozilla 开发有专列表 经 majordomo 订阅 mozilla-freebsd@freebsd.org
+2604506|L3|Aaron Nowalk 请求加入 FreeBSD 邮件列表并称希望了解如何上手使用
+2604507|L3|Niall Smart 回问为何需要让 Linux 应用强制访问 /compat/linux 而非 / 根目录
+2604508|L3|Jason Nordwick 参与讨论 Walnut Creek CD 进驻书店零售的可行性
+2604509|L4|Mike Smith：无法有效强制 因无法区分应用该找 /compat/linux 内文件还是该找普通路径
+2604510|L3|Jim Flowers 报告 picobsd 上 lnc1 探测到 NE2100 却初始化失败 求排查

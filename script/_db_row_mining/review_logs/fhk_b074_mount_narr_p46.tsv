@@ -1,0 +1,24 @@
+2606251	885	oconnor 说自己也得到同样报错，贴出 setup.bin 的 linux_kdump 结尾，可见进程两次 getpid 后打开 /proc/2584/cmdline 失败，触发 SIGSEGV 被捕获，随后 SIGIOT 走默认处理并产出 setup.bin.core
+2606252	885	charles 报告刚经 ftp 完成 2.2.6-Stable 安装，现在想改用 Win95 Midpoint Gateway 上网，需要重新配置网络，问配置文件在哪里、有没有工具可以重置 ip 设置，还说自己对 FreeBSD 很新
+2606253	885	mitchell 指出 VMailer、exim、smail 都尽力做到 sendmail 兼容，自己已用 exim 一年多作 sendmail 替身未见故障，但它仍是 GPL 授权，加上熟悉 sendmail 的系统管理惯性仍在，建议先沿用 8.8.8 直到许可证厘清
+2606254	885	oconnor 回应关于共享内存段的检查，说自己这里只有 PGSQL 留下的那一份段、没有成堆残留，并明确交代当前运行的是 -current
+2606255	885	julian 反问让 Unix 主机经 Win95 上网是否本末倒置，称 BSD 的各种网络技巧无所不能，但不放心 win95 能在整场会话期间不掉线，追问缘由之余顺便告知要改的文件是 /etc/rc.conf
+2606256	885	lutz 说自己也遇过这问题，靠手头一版较旧的 SO4 安装程序才装成，愿意提供协助，但他装完后 soffice pgp 启动即挂起虽然进程仍在运行，猜对方运气可能好些
+2606257	885	robert 提示 Allegro Common Lisp 5.0 beta 会去读 /proc/<pid>/map 并失败，因此也许真该照上周有人建议的那样模拟 Linux procfs
+2606258	885	oconnor 顺着对方的话反问既然如此你们还在等什么，随后说自己也不确定这类功能该放在哪里，提出除非直接改动 procfs 才有办法
+2606259	885	julian 判断安装程序自作聪明用了我们不支持的 LINUX procfs 特性去查命令行，失败后跳出去做非法内存引用，它自己捕获了异常、清理现场并发信号强制生成 core-dump，还提醒 JUSTRETURN 未必是好返回值，建议改用 truss
+2606261	885	fernando 报告 ns3 的 kernel log 反复刷出 arplookup 失败，他读过档案称原因是网内有机器自称 102.255.x.x，问是否同一情形、能否查出扩散者，并交代本机 2.2.6、主地址 200.10.104.x/26 另挂多个别名
+2606262	885	niall 建议用 hexedit 改安装二进制让它去打开 /p/pid/cmdline，代价是要生成大量同名条目，也可以改成调用 getppid，或把调用 getpid 的指令换成返回固定值的 movl
+2606263	885	niall 建议联系 Allegro Lisp 的厂商询问能否让 Linux 版在 FreeBSD 模拟下可用，称 5.0 beta 依赖 linux 的 /proc 文件系统而我们的模拟层并未完全支持，提出若有人认识 Franz Inc. 请来信，否则本周自己去联系
+2606264	885	luiz 求助 Etinc 5025PQ 卡在 64Kbps 以上，其 256Kbps 局向由运营商经 HDSL 终结单元与 G.703 转 V.35 提供，etinc 端口已按手册配成 PPP 与 HDLC 内外时钟并改过 ifconfig 参数仍无法让链路通包
+2606266	885	yuri 建议用十六进制编辑器把 Office40_Install/setup.bin 里的 /proc/%u/cmdline 改成 /proc/%u/status 以强行安装，装完后还要对 libsal364.so 做同样修改，但他仍无法让系统识别俄文键盘
+2606268	885	dennis 追问 luiz 称 Etinc 在 64Kbps 以上不能工作，是否意味着更低速率或其他连接上能跑，若是则高速率并无差异、应使用完全相同的设置，因为该卡在 64kbs 到 2Mbs 之间用的是同一套配置
+2606271	885	bill 建议用 tcpdump arp 抓包看对端是否在发 ARP 请求，可能需以 BPF 重配内核才能跑 tcpdump，并解释该报错源自收到他以为不直连的网络发来的 ARP 请求，另提醒不该把 102 网段当私有网段，RFC1918 已列出合法地址
+2606272	885	luiz 澄清本机是 pathrouter、对端为骨干提供商的 Cisco 2509，链路 256Kbps 经分数 E1，想把 etinc 的口接到 CSU/DSU 换掉 cyclades，但那根 V.35 线接其他路由器都好使、换 etinc 就不通
+2606273	885	luiz 说明另一条连接上 64Kbps 全链路都正常，Cyclades 接对端 Cisco 跑 256Kbps 也没问题，唯独在本处用 Etinc 替换 cyclades 之后就不通了
+2606274	885	wilko 在 Asus T2P4 主板上征求 AMD K6/233Mc 与 Intel P55C/233 Mc 孰优孰劣的意见，只问这一搭配是好是坏
+2606275	885	ollivier 说他实在不清楚那个安装失败是怎么回事，因为他只跑 CURRENT，签名里那台 keltia.freenix.fr 机器同样是 3.0-CURRENT
+2606276	885	ollivier 说 SO4 每次运行完都留下几十段共享内存、即便干净退出亦然，因此自备 tcsh 脚本，跑完 SO4 后用 ipcs 配合 awk 取出段号交给 ipcrm -m 清理，并提醒其他应用也用 shmseg 时需小心
+2606277	885	mike 称这个安装失败是已知问题，他完全无法理解为何 argc 与 argv 还不够用，同时表示对方随时可以给 procfs 加上参数支持自己去做
+2606280	885	mike 说那个网卡驱动下个 -SNAP CD 就会收录进去，在此之前也可以直接从 current.freebsd.org 拿到已经带它的版本
+2606282	885	andrzej 在讨论文件系统清单时补充说明这里的 FFS 指的是 Flash File System，并列出 non-IDE flash bootblock 一项

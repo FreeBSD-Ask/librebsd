@@ -1,0 +1,24 @@
+2606394	885	jason 在 FreeBSD 下剖析多线程代码，发现单线程程序也有过半时间耗在 sigprocmask；他认为每个 pthread_ 函数调用时全部信号都被屏蔽，怀疑是怕信号递送时 pthreads 库处于不一致状态，并提议由库内部包装信号处理函数
+2606395	885	john 回应称对方遇到的现象应该只出现在 2.2.x，3.0-current 已不再采用这套实现；他建议把时间花去剖析当前代码，并提到据他了解 2.2.6 的 libc_r 应该可用
+2606398	885	hiren 在 FreeBSD 的 vfs 源码里查不到 VOP_ 系列宏的定义，也不知道 vop_create_args 等结构体的声明位置；他举 VOP_OPEN、VOP_CLOSE、VOP_ACCESS 与 vop_mknod_args，请人回复文件
+2606399	885	cjs 反驳 Doug Rabson 的说法，指出 Linux 与 NetBSD 里设备驱动源码同样充足；他认为每出现新一代 Alpha 都要重写并编译 PALcode 进引导加载器，这和每来一个新设备就重写编译设备驱动并无实质差别
+2606407	885	david 承认讨论已经严重偏离 FreeBSD 主题，但既然在谈架构就接着谈下去；他还补充普通用户通常没有 BYPASS 权限，否则会有严重安全漏洞，并贴出 MAXSYSGROUP 的默认值
+2606408	885	bialecki 建议文件系统加一个类似 Novell purge on delete 的标志，以免删除的数据无限期滞留在未用磁盘块里；他说实现起来似乎改动不多，但文件系统对他仍是黑魔法
+2606409	885	peter 认为应把 UT_HOSTNAME 长度翻倍，让 utmp 记录从 2.x 的 32 字节变为 64 字节；他说 BSDI 也做过同样翻倍，照此可恢复与 utmp wtmp 文件的兼容，BSD/OS 二进制也能读取，但他犹豫再经历一次记录大小变动
+2606410	885	niall 回答称对方要找的宏不是手写出来的，而是由 shell 脚本生成，脚本他以为放在 sys/kern 下；他说 Terry Lambert 能把所有细节都交代清楚
+2606412	885	niall 说 securelevels 的设计意图正是防止任何人修改二进制文件；他还提到可以为新编译的二进制设置 immutable 标志，并认为大多数漏洞利用都能用 shell 脚本写成，因此怀疑这招未必帮得上忙
+2606413	885	bialecki 为一本波兰电脑杂志准备 2.2.6 的 CD 版，说自己资源不足以自行生成发行版，于是询问能否只下载 2.2.6-RELEASE 与 2.2-xxxxxx-SNAP 之间的二进制补丁，而不必下载整套发行版
+2606414	885	george 在 FreeBSD 2.2.2 加载 ALTQ 1.0.1 并配置 ATM 接口做组播；他用 pvc0 影子接口跑 mrouted 时组播地址无法分配，判断 mrouted 不能处理同一地址配到两个接口
+2606416	885	peter 在 Kazu Yamamoto 从 KAME 项目来信后说，他怀疑此事唯一理智的结局是发给 INRIA 与 WIDE/KAME 等组重武器让他们决斗到死，随后补一句 1/2 表示这是玩笑
+2606417	885	kenjiro 提醒对方用 shadow pvc 接口时不要 ifconfig en 接口，本来就不需要它；他补了一句真的要做 ifconfig 就换一个 IP 地址
+2606420	885	terry 反问对方初始移植居然不用 OSF PALcode，认为这是个失误；他追问你的 Linux 用的是 ARC 代码吗，并提到亚利桑那大学做初始 Linux Alpha 移植的人用的是修改过的 OSF PALcode
+2606421	885	zhihuizhang 直接给出了 Niall Smart 未指明的文件名：可查 vnode_if.sh 与 vnode_if.src 找宏定义，他说这两个都是很简单的 awk 文件
+2606427	885	jason 说 Doug Rabson 理解错了，认为说 NT 只是在 64 位寻址模式下未被测试很荒谬；他强调 Alpha 本质上是 64 位架构，就硬件而言所有地址宽度都是 64 位
+2606428	885	jason 回应 Doug Rabson，说他反正也用不了 NT PALcode，因为那套功能太离谱，还把 Alpha 弄得看起来太像 MIPS，不合他的口味
+2606432	885	cjs 指路说找文档只需拿 Sites 与 Witek 的 Alpha Axp Architecture Reference Manual，最新版同时收录 OSF1 PALCode 下 VMS 与 DU 调用以及 ARC 下的 NT 调用
+2606433	885	kevin 给出补丁思路：他观察到 x11amp 调用 shmctl 时传 IPC_RMID 与空指针，emulation layer 就此报错而未调用 FreeBSD 的 shmctl，段在参考计数归零后未删除；他估计 Star Office 同样如此，但未实测
+2606435	885	randall 发布 fxtv 新版本，新增 YUV 视频采集、X10 MouseRemote 支持与多张 Bt848 卡，默认面向 XFree86 构建，也支持在 Linux 与非 XFree86 环境 clean build
+2606436	885	randall 给 -current 发一份 moused 补丁，为 moused 加入 X-10 Mouse Remote 支持，兼容 stand-alone 与 pass-through 两种配置，让鼠标与遥控器共用同一串口
+2606437	885	mike 问 procfs 里该不该放非进程相关数据；他说 Linux 用单独的 /proc/kern 内核目录会污染命名空间，NetBSD 则用 kernfs 挂在 /kern 下
+2606443	885	martin 说 4.2 的 coredump 修复几周前已提交到 -current，但改动本意是使 ACL 正常工作；他本人没试过，还说依赖未公开的 procfs 行为会让软件在系统将来版本上出问题
+2606444	885	dan 查了 -stable 与 -current 里的 atapi.c 后认为该问题已经有修复；他转述自己早前所说用 ATAPI CD-ROM 装 FreeBSD 连续两次失败，第一次的修复已记录在案

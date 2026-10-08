@@ -1,0 +1,24 @@
+2605933|L3|Terry Lambert：反驳不加全局锁几无影响的说法，指出若同样逻辑成立，则也无法信任提交者做必要测试从而导致树构建失败
+2605936|L3|Julian Elischer：转发一则讲座通知，并打趣 FreeBSD 会不会出 strong-arm 版本
+2605937|L4|Doug White：matcd 驱动改动已生效，至少对该位报障用户解决了 2.2.6 升级后的设备驱动问题
+2605940|L3|Jacques Vidrine：就系统配置数据库线程提议为 FreeBSD 配置数据制定 XML 的 DTD
+2605941|L4|Jordan K. Hubbard：明确否决为 FreeBSD 配置数据制定 XML DTD 的提议
+2605942|L3|Jay Nelson：认同 Dan 提到的 AIX SMIT 式思路，认为 SMIT 并不坏只是不够优雅，觉得 Jordan 的想法不错
+2605943|L3|Byron Johnson：应询问列出 FreeBSD 2.2.6 装机硬件清单，含 486-66、32Mb 内存与 3Com 509b 网卡
+2605944|L3|Masachika ISHIZUKA：升级 3.0-980426-SNAP 后日志出现 mountd 报 umountall request，询问含义
+2605946|L3|Terry Lambert：接续 /etc 配置元格式讨论，追问既然 rc 变成一行 systemrc 调用，是否应把 make 静态链接
+2605947|L4|Terry Lambert：反驳涉及人为因素就无法优化的说法，主张把不工作的情况约束到最终可达目标的流程路径上
+2605948|L3|Open Systems Networking：企业拟上 BAAN 的 ERP 且需对接 oracle，询问 FreeBSD 有无同类可用软件
+2605949|L3|Ruslan Ermilov：2.2.6-STABLE 上每次 ppp -direct 都留下未绑定的 UDP 套接字，附 fstat 输出求解释
+2605950|L3|Stephen Roome：就 Julian 转发的 Itsy Pocket Computer 讲座追问其价格
+2605951|L3|Dmitry Kohmanyuk：就 CVSup 加锁方案提出折中，仅在更新某目录的文件时对该目录加锁
+2605952|L3|Niall Smart：求 -mdoc 缩进项目列表写法，用 .Bl -tag -width Ds 配 .It Xo X Y .Xc 但结果挤在同一行
+2605955|L3|Mike：称 StrongARM 是增强版 RISC 处理器，做法为削减部分指令以超低功耗运行并加大缓存，并提到已停产的 Apple MessagePad
+2605957|L4|Ruslan Ermilov: PR/6690 含 RELENG_2_2 分支 ppp 补丁，可修正 ppp -direct 遗留未绑定 UDP socket
+2605959|L3|Chris Silva: 以 -nodaemon 启动 xdm 测试时登录尝试后退回登录提示，显卡为 Matrox Millennium 设成 1024 模式
+2605960|L3|zhihuizhang: 询问内核链在虚拟地址 0xf0100000 而加载于 0x00100000 时 KERNBASE 即 0xf0000000 的含义
+2605961|L3|Brian Handy: 询问在 Gateway 机型装 FreeBSD 的成功经验，重点是 Ultra ATA 硬盘与 nVidia 显卡
+2605962|L3|Oliver Fromme: 认同 Motorola 汇编效率胜过 x86，因 x86 只有 4 个通用寄存器与 4 个同尺寸地址寄存器
+2605965|L3|Brett Taylor: 建议查看 /usr/X11R6/lib/X11/xdm/xdm-errors 定位 xdm 退回登录画面的原因，需切控制台才能看
+2605966|L3|Christopher R. Bowman: 建议检查 .xsession 是否归本人所有且可读，以此定位 xdm 登录后立即退回登录画面的问题
+2605967|L4|Gregory D. Moncreaff: 在较新的 E series 装 2.2.5 时须拔掉 AGP 卡改插 Mach64 PCI 才能完成 X 设置

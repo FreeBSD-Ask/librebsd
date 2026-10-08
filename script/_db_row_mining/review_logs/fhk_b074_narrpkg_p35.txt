@@ -1,0 +1,24 @@
+2605818|L4|Karl Pielorz：说 vinum 是 Greg Lehey 做的 CCD 替代品，可把多块盘合并提速并做冗余，首个 alpha 仅供测试不适合新手
+2605819|L4|Marc Giannoni：从 2.1-RELEASE 取回 X.25 与 ISO 源码，编出含 CCITT、ISO、LLC、HDLC 的 kernel
+2605820|L3|Tom Torrance：cvsup 后 make world 重编 kernel，在 2.2.6-STABLE 遭遇 SCSI probe failed
+2605822|L4|Jim Shankland：指出有闪存卡以 IDE 磁盘形态呈现，BIOS 与 FreeBSD 都识别为 IDE 驱动，无需再写驱动
+2605823|L3|Jordan K. Hubbard：说没人正在做这块，若能长期维护而不只是让它编过就很好，鼓励 Marc 继续
+2605824|L3|Darren Davis：看到 Intel 与 Red Hat 等合作把 Linux 移植到 Merced，问是否考虑让 Intel 支持 FreeBSD
+2605825|L3|Andrew McRae：以 AUUG 98 程序主席身份附送征稿启事，欢迎 FreeBSD 相关技术论文
+2605827|L4|Yuri Krichevsky：提供适配 2.2.6-R 的 sio 驱动补丁，解决 Acer Labs UART 如 IWill 主板探测不到串口的情况
+2605828|L3|Luis Munoz：Proliant 1600R 装 2.2.6-RELEASE，FreeBSD 认不出插槽 1、2、3 的 3Com 905B-TX 网卡
+2605829|L4|Eivind Eklund：称就他所知无人正在做，早前有人提过恢复部分代码以利于 Token Ring 与更好的 IPX 支持但未成
+2605833|L4|Mike Smith：指出 905 revision B 不受支持，内置网卡是 TI ThunderLan 有第三方驱动可用
+2605834|L3|Mike Smith：询问 ALTQ 何时并入 -current，以及 Kenjiro Cho 提出的 if_dequeueing 抽象层会怎样
+2605838|L3|Terry Lambert：认为对方对功能名不副实毫不介意这一点本身就令人担忧
+2605839|L4|Terry Lambert：不同意 NAT 必须有代理能力的说法，仅需处理服务器回连的特殊情况，能否算代理他自己也不确定
+2605842|L4|Greg Lehey：补发 vinum 说明，它是仿 Veritas 设计的逻辑卷管理器，首个 alpha 仍相当不稳
+2605843|L4|Charles Mott：倾向 packet aliasing，libalias 宜改成 libpktalias 或 libpacketalias
+2605844|L4|tcobb：从 PR 看该 panic 与具体硬件无关，只要走 SCSI 子系统就会触发，用受支持卡片的 CAM 可解
+2605845|L4|Matthew N. Dodd：说若内置网卡是 ThunderLan，可换 Bill Paul 的新驱动，他几乎修完所有已知 bug
+2605846|L4|Matthew N. Dodd：称 Token Ring 与 802.3 IPX 帧支持不依赖 LLC，可查 NetBSD 与 OpenBSD 找更多修复
+2605847|L4|Daniel OConnor：建议保留兼容选项并在使用时给弃用警告，例如 ppp -alias 提示改用 -pktalias
+2605848|L4|Luigi Rizzo：认同 ALTQ 的动态带宽优于静态 ipfw 规则，指出 dummynet 与 ALTQ 是两回事，ALTQ 更完整
+2605849|L3|Luoqi Chen：写数值程序频繁调用 expm1，发现 msun 中未用 f2xm1 i387 指令而 exp 用了，问为何偏爱 C 实现
+2605850|L3|Brian Somers：说若能尽快定案，他可以在新版支持多处理器的 ppp 里一并改掉命名
+2605851|L3|Julian Elischer：FreeNIX 有 dummynet 论文，或做 Whistles smart bandwidth 的 WIPS 演讲

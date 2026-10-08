@@ -1,0 +1,45 @@
+2604493|L3|Terry Lambert 谈到 JWS 2.0 的 30 天评估版与 Sun 中期发布的 JFC 1.1 升级
+2604494|L4|Nate Williams：你有 FreeBSD Java Team 提交权限 提交新 html 后我保证 freefall 上同步更新
+2604495|L3|Amancio Hasty 说自己正忙于 multimedia 与 java 方向 让团队成员自行接手该网页内容
+2604496|L3|Bob Bishop 转引 Michael Eager 关于重启 PLSIG 主导 Dwarf 规范讨论的邮件线
+2604497|L3|Klaus Werner Krygier 希望 Linux 仿真仅对 /compat/linux 生效 以运行 NSR 备份客户端
+2604499|L4|Niall Smart：询问 /usr/lib 是否有 libcrypt.a 与 libcrypt.so.2.0 并给出符号链接实测
+2604500|L3|Niall Smart 转述 John Polstra 将 ld set symbol space 报错归因为汇编器缺陷
+2604501|L4|John Polstra：该汇编器修复已合入 obj-aout.c 1.6 版 同意并入 -stable 但因仅入 -current 5 天暂不
+2604502|L4|Shigio Yamaguchi 发现 htags 在 2.2.5 上耗尽内存 指出 /usr/bin/perl 仍是 4.0 并给出替换法
+2604503|L4|Poul-Henning Kamp：为 3.0-RELEASE 审查 gnats 库 有价值却难完成的 PR 移入 suspended 态
+2604504|L4|patl@phoenix.volant.org 指出 Netscape 剥离 JVM 因其在各目标平台上已有足够成熟的实现
+2604505|L4|Amancio Hasty：mozilla 开发有专列表 经 majordomo 订阅 mozilla-freebsd@freebsd.org
+2604506|L3|Aaron Nowalk 请求加入 FreeBSD 邮件列表并称希望了解如何上手使用
+2604507|L3|Niall Smart 回问为何需要让 Linux 应用强制访问 /compat/linux 而非 / 根目录
+2604508|L3|Jason Nordwick 参与讨论 Walnut Creek CD 进驻书店零售的可行性
+2604509|L4|Mike Smith：无法有效强制 因无法区分应用该找 /compat/linux 内文件还是该找普通路径
+2604510|L3|Jim Flowers 报告 picobsd 上 lnc1 探测到 NE2100 却初始化失败 求排查
+2604511|L3|Frank Pawlak 回击 Kris Kirby 关于 FreeBSD 核心团队沉默与话语权关系的反问
+2604512|L3|Peter Jeremy 指出 2.x 内核结构体对齐与 char 型 boolean 造成填充浪费 问是否有人评估过
+2604513|L4|Peter Jeremy 指出 qdivrem.c 大而慢 libgcc2.c 小一个数量级且用 64 比 32 除法更快
+2604515|L3|Alex Povolotsky 无法订阅 freebsd-mozilla 报 unknown list 与 closed list 两种错误
+2604516|L4|Paul Saab：Alex 订阅名写错 正确列表名是 freebsd-mozilla 请重试
+2604517|L3|Matthias Apitz 转述 Nate Williams 关于 O2Micro OZ6832 与 3c589D 中断交付问题的排查
+2604518|L3|Johan Larsson 反驳 Niall Smart 关于 /compat/linux/foo 符号链接指 /etc 的做法
+2604519|L3|Andrew Stesin 转述 Terry Lambert 关于取得已打开文件描述符对应文件名的方案
+2604520|L3|Darren Reed 在 open 文件描述符反查文件名讨论中追问 rename 方案的可行性
+2604521|L4|Studded：贴出 IDE 加 SCSI 的 buildworld 实测 对比 WD Caviar 1.6G 与 IBM DCAS 34300
+2604523|L4|Niall Smart：sigaddset 等需按 POSIX 校验信号号 以宏实现难单次求值 征询修法
+2604524|L3|Mikael Karpberg 在讨论中引用 Peter Jeremy 关于内核结构体填充浪费的观点
+2604525|L3|Tom Wadlow 三台 NEC 笔记本装 PAO 扩展后 两台 6030 上 PCMCIA 网卡可用 5080 有问题
+2604526|L4|Jonathan M. Bresler：判定为收不到中断 建议在 epwatchdog 与 epintr 加 printf 确认
+2604527|L4|Tom Wadlow 更正原信卡片型号笔误 实际是 3C589D
+2604529|L3|Matthias Apitz 追问 Tom Wadlow 使用的 PCI 或 cardbus 控制器类型及其探测行为
+2604530|L3|James Raynard 在 PR kern/1144 邮件线中确认该 PR 由自己早年提交 并提出后续处理问题
+2604531|L3|Jeremy Samual Sommer 在 2.2.5 上无法驱动 PINE NE2000 兼容 PCMCIA 卡 附 dumpcis 求帮
+2604532|L4|Dan Janowski：为组建纽约用户组建立 UGNY 网站与邮件列表 先在 hackers 发布 -announce 稍后跟进
+2604534|L3|Jacques Vidrine 询问源文件中 $Id$ 与 $FreeBSD$ 两条版本历史记录的来历
+2604535|L3|Kyle McPeek 报告 NIS 服务器上 portmap 间歇死亡 日志见 select failed 与 signal 6
+2604536|L3|Niall Smart 在 Kyle McPeek 的 portmap 崩溃问题上继续追问配置细节
+2604537|L4|Andreas Klemm：定位 libqt 1.39 共享库无法链接 因 ld 调用时缺少 -Bshareable 选项
+2604538|L3|James Raynard 回询 Niall Smart 关于 sigaddset 宏与 POSIX 校验的共识是否仍为官方立场
+2604539|L4|Eivind Eklund：$FreeBSD$ 是为避免跨仓库 Id 被破坏而替代 $Id$ 引入 但当时基础设施不足
+2604540|L3|Bradford A. Bleier 询问 Digi Datafire 等内置 ISDN 卡在 FreeBSD 上的驱动支持情况
+2604541|L3|Jeffrey C. Becker 移植 NetBSD 内存盘驱动时求解释 ccd 的 PSEUDO_SET 链接器机制
+2604542|L3|ReV@BlinkLink.NET 就 FreeBSD 2.2.2a 安装文档中 DOS 二进制支持说法提疑

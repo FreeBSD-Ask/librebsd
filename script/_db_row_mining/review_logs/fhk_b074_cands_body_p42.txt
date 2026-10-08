@@ -1,0 +1,1082 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606092 ###
+===== 库内序 147649 | PK 2606092 | 等级 L4 =====
+DATE: 1998-05-22T18:45:48+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Problem resolutions... 
+摘要: Jordan K. Hubbard：编译顺序为先更新源码，再 make world，再 make kernel，最后 reboot
+
+>   Ok, maybe I am just being obtuse... (maybe I am just a Computer
+> Scientist), but I need this
+> explicitly said to me; what is the propper order for compiling?
+
+1. Cvsup/CTM/whatever your sources up to date.
+2. make world
+3. make kernel
+4. reboot
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606096 ###
+===== 库内序 147653 | PK 2606096 | 等级 L4 =====
+DATE: 1998-05-22T19:29:59+00:00
+FROM: Stefan Eggers <seggers@semyam.dinoco.de>
+SUBJ: Re: Problem resolutions... 
+摘要: Stefan Eggers：编新内核会在 /usr/src/sys/compile/ 下生成与内核配置文件同名的目录
+
+> > First 'make world', then kernel.  Almost always true.  (There may be
+> > specific cases where you should get away from the kernel because it eats
+> > filesystems or something...)
+> 
+> Why is that?  I would expect some execs to depend on kernel features,
+> not vice versa.
+
+For building a new kernel you get a directory named like your kernel
+config file - usually under /usr/src/sys/compile/CONFIG_FILE_NAME.
+Creating this involves generating some C header files from the entries
+in your kernel config file and this is what /usr/sbin/config does.
+
+Now comes the tricky part.  Lets suppose - like it happened lately
+with the CAM devices table - that the kernel sources need something in
+these generated header files which only a new /usr/sbin/config knows
+about.  It works when you first do a "make world" or at least make a
+new config program (the new and more knowledgeable /usr/sbin/config is
+around then) but the computer won't be able to do it the other way
+round.
+
+User programs that "make world" creates sometimes depend on new kernel
+(new features, changed structures and so on) and those won't work in
+part or even in whole before you have a new kernel running.  Usually
+what's missing is some new functionality or some program that you
+don't need for compiling and installing a new kernel.  No loss as you
+are in single user mode by then as "make installworld" in multi user
+mode might cause severy confusion and a few minutes later you have a
+new kernel up and running (hopefully - sometimes bugs get in the way)
+anyway.
+
+Stefan.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606100 ###
+===== 库内序 147657 | PK 2606100 | 等级 L4 =====
+DATE: 1998-05-22T20:20:32+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: Problem resolutions... 
+摘要: Jordan K. Hubbard：buildworld 后编内核无意义，因 buildworld 不安装 config 等内核所需组件，须先 install
+
+Actually, I'm afraid your "correction" is incorrect.  Making
+the kernel after a "buildworld" is completely useless since
+buildworld won't INSTALL any of the things (like config) that
+the kernel needs.  You MUST install before the kernel config,
+build and install stage.
+
+- Jordan
+
+> On Fri, May 22, 1998 at 11:45:48AM -0700, Jordan K. Hubbard wrote:
+> > >   Ok, maybe I am just being obtuse... (maybe I am just a Computer
+> > > Scientist), but I need this
+> > > explicitly said to me; what is the propper order for compiling?
+> > 
+> > 1. Cvsup/CTM/whatever your sources up to date.
+> > 2. make world
+>   s/world/buildworld/
+> 
+> > 3. make kernel
+>   3.5 make installworld
+>   3.6 make install (for kernel)
+> 
+> > 4. reboot
+> 
+> This give you a minimal window of vulnerability to 'anything bad'.
+> Not that it is guaranteed to work anyway, but it give you a better
+> chance.
+> 
+> Eivind.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606102 ###
+===== 库内序 147659 | PK 2606102 | 等级 L4 =====
+DATE: 1998-05-22T20:27:42+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: tcp states and sysctl's
+摘要: Niall Smart：认为无需 shutdown 相关 sysctl，因 BSD 协议栈在此方面已合规，缺的是客户端
+
+Hi,
+
+I don't think a shutdown(2) sysctl is necessary.
+
+a) the BSD stack is currently compliant in this regard, if
+   anything need's changing it's the client.
+
+b) no-one has produced any evidence to show that all
+   these sockets in TIME_WAIT_2 are actully having a
+   negative impact in performance on the system.  Actually,
+   I would seriously hope not, because otherwise this
+   is a relatively easy DoS.  (Though probably not as
+   effective as a SYN flood.)
+ 
+If you do decide to put in a sysctl bear in mind that rsh uses
+shutdown(2) to close down one end of a socket so you don't want
+the timeout to be too short.
+
+Niall
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606103 ###
+===== 库内序 147660 | PK 2606103 | 等级 L4 =====
+DATE: 1998-05-22T20:35:52+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Weird behaviour in BootEasy
+摘要: 报告 BootEasy 在 DPT RAID 引导盘上选择 BSD 分区时显示 F 后跟问号无法正常引导，改选 F5 重启再按 F2 即可
+
+I just switched my system to use a different bootdrive (a DPT RAID
+array, actually) than I had before, and got the following behaviour:
+
+On a standard boot, BootEasy won't go to BSD, displaying 'F?' when I
+select the BSD partiton.  However, if I select F5 for booting to
+another drive (even though I don't have another bootable drive), then
+reboot, and _then_ press F2 when booteasy appears, it boots and works
+fine.
+
+Let me repeat the exact steps to get it to work:
+1. Boot until I reach booteasy
+2. Press F5
+3. Reboot
+4. Continue until I reach booteasy
+5. Press F2
+6. Boot normally from the FreeBSD bootblocks.
+
+If I reboot after this, I again get the F? when it tries to
+auto-select the BSD partition (or if I press F2 without having pressed
+F5 first).
+
+The BIOS and FreeBSD mostly agrees on disk layout - the BIOS believes
+there to be 1024 cylinders, not 1954 as below.
+
+root(bitbox)--# fdisk sd0
+******* Working on device /dev/rsd0 *******
+parameters extracted from in-core disklabel are:
+cylinders=1954 heads=64 sectors/track=32 (2048 blks/cyl)
+
+Figures below won't work with BIOS for partitions not in cyl 1
+parameters to be used for BIOS calculations are:
+cylinders=1954 heads=64 sectors/track=32 (2048 blks/cyl)
+
+Media sector size is 512
+Warning: BIOS sector numbering starts with sector 1
+Information from DOS bootblock is:
+The data for partition 1 is:
+sysid 6,(Primary 'big' DOS (> 32MB))
+    start 32, size 131040 (63 Meg), flag 0
+        beg: cyl 0/ sector 1/ head 1;
+        end: cyl 63/ sector 32/ head 63
+The data for partition 2 is:
+sysid 165,(FreeBSD/NetBSD/386BSD)
+    start 131072, size 3870720 (1890 Meg), flag 80 (active)
+        beg: cyl 64/ sector 1/ head 0;
+        end: cyl 1023/ sector 32/ head 63
+The data for partition 3 is:
+<UNUSED>
+The data for partition 4 is:
+<UNUSED>
+
+
+Any clues?  Or should I just re-install BootEasy and see if it goes
+away?  (It seems like such an interesting little problem... :-)
+
+Eivind.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606105 ###
+===== 库内序 147662 | PK 2606105 | 等级 L4 =====
+DATE: 1998-05-22T21:07:16+00:00
+FROM: John Birrell  <jb@cimlogic.com.au>
+SUBJ: Re: FreeBSD 2.2.6 + pthread == write() bug
+摘要: John Birrell：已看出 pthread write 部分写入问题的症结，将另发邮件附补丁供验证
+
+HighWind Software Information wrote:
+> 
+> >Is the code being compiled with -D_THREAD_SAFE ?
+> 
+> Yep. Everything everytime.
+> 
+> "-D_THREAD_SAFE" and "-D_REENTRANT"
+> 
+> (Although -D_REENTRANT probably does nothing. It is important on other
+> O/S's. So, we left it in.)
+> 
+> Also, linking with "-lc_r"
+
+OK, I think I see the problem. I'll send you a patch in separate mail
+to see if it fixes the problem.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606106 ###
+===== 库内序 147663 | PK 2606106 | 等级 L4 =====
+DATE: 1998-05-22T21:06:57+00:00
+FROM: HighWind Software Information <info@highwind.com>
+SUBJ: Re: FreeBSD 2.2.6 + pthread == write() bug
+摘要: HighWind：客户指出 FreeBSD 3.0 的 uthread_write.c 亦含 _thread_kern_sig_block 调用
+
+John,
+
+A customer of ours pointed out that FreeBSD 3.0's uthread_write.c has
+a "_thread_kern_sig_block(&status);" in there as well. Unknown if that
+is the issue.
+
+I also believe that write() calls are returning "EAGAIN" sometimes and
+writing data.
+
+It is supposed to return EAGAIN and have written NO data. That way, when
+you retry the write() call, it doesn't resend the same data.
+
+-Rob
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606108 ###
+===== 库内序 147665 | PK 2606108 | 等级 L4 =====
+DATE: 1998-05-22T21:19:25+00:00
+FROM: John Birrell  <jb@cimlogic.com.au>
+SUBJ: Re: FreeBSD 2.2.6 + pthread == write() bug
+摘要: John Birrell：-current 为性能移除信号阻塞 uthread_write.c 的 _thread_kern_sig_block 已过期
+
+HighWind Software Information wrote:
+> A customer of ours pointed out that FreeBSD 3.0's uthread_write.c has
+> a "_thread_kern_sig_block(&status);" in there as well. Unknown if that
+> is the issue.
+
+-current has changed away from blocking signals for performance reasons,
+so I think that comment is a bit out-of-date.
+
+> I also believe that write() calls are returning "EAGAIN" sometimes and
+> writing data.
+
+Unless it actually returns an error, you shouldn't bother about what
+errno is set to because the library uses EAGAIN internally.
+
+> 
+> It is supposed to return EAGAIN and have written NO data. That way, when
+> you retry the write() call, it doesn't resend the same data.
+
+Looking at the code, it doesn't check for a short write on a blocking
+fd. You are quite right, it should check the number of bytes written
+and keep looping until it has written the number of bytes required.
+It will take me a little while to update my 2.2.6 system (it normally
+runs -current).
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606110 ###
+===== 库内序 147667 | PK 2606110 | 等级 L4 =====
+DATE: 1998-05-22T21:56:37+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Kernel hackers Tricks & Tips
+摘要: Eivind Eklund：发起内核开发技巧文档并自荐任编辑 建议用 ports 里的 glimpse 索引 /sys 以加快 grep
+
+At request, I start off this document - I'll also volunteer to
+function as editor until it is in a suitable state to be put in the
+handbook.
+
+
+1. The kernel is large; it is convenient to be able to grep in it
+   without it taking time corresponding to it's size.  To accomplish
+   this, you can use 'glimpse' from the ports collection
+   (textproc/glimpse).
+   To build the indexes (assuming you have your kernel in /sys):
+   % glimpseindex -b /sys/ 
+                  ^^ large index - no option give you a tiny index
+                  (2-3%), -o small (7-8%), -b large (20-30%)
+   Afterwards, you just use
+   % glimpse <regexp>
+   to search for <regexp>.  Glimpse support a somewhat limited set of
+   regexpen.
+
+2. Sometimes you might want to do large-scale style-changes to the
+   kernel (e.g, moving options to be 'new-style' instead of
+   'old-style').  These are changes that should result in any change
+   to the kernel, but how do you test that?  Simple - diff the object
+   files from an old kernel against the object files from your a
+   kernel with your changes in it.  However, don't become too scared
+   if something turn up as changed - a few kernel files contain
+   uses __LINE__ for printing debugging info; check for this first.
+
+3. You can automatically find problems (potential bugs) in old source
+   by running flexelint against it - flexelint is available from
+   Gimpel software (http://www.gimpel.com/).  It is kind of pricey,
+   but tend to pay back quickly if you're programming for a living.
+   It e.g. allowed staticizing of the entire FreeBSD kernel in
+   approximately two hours.  ("Just a satisfied customer" and all that
+   stuff.)
+
+4. If you are changing kernel APIs and wonder if your changes are
+   breaking the LKMs, there is a simple test.  Compile the 'LKM'
+   kernel, build the LKMs, and run 'make regress' in the src/lkm
+   directory.
+
+5. There exists a 'magic' way of making timing-related bugs static:
+   Add full checking for the integrity of datastructures (invariants).
+   If you have a weird bug involving timing-dependent corruption, add
+   as full checks as you are able to any nearby data structures.  The
+   bugs tend to suddenly become deterministic failures.  (This assume
+   that you have some knowledge of the area of code you're changing).
+
+Now, anybody else want to chip in?
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606112 ###
+===== 库内序 147669 | PK 2606112 | 等级 L4 =====
+DATE: 1998-05-22T22:52:03+00:00
+FROM: Mike Haertel <mike@ducky.net>
+SUBJ: Re: Original PC and talk
+摘要: Mike Haertel：寄存器重命名旨在消除反依赖 并给出反依赖即长延迟写后紧跟另一长延迟操作的定义
+
+Chuck Robey wrote:
+>It uses those invisible internal registers to store things coming from
+>or going to real registers.  The strategy is far more useful when there
+>are more registers _to_ rename.
+
+You are deeply mistaken.
+
+The purpose of register renaming is to eliminate "antidependencies".
+An antidependency is when you have a long-latency operation that
+writes a registers, followed by another long latency operation
+than writes the same register.  E.g.:
+
+	R1 = long_slow_operation
+	use R1
+	R1 = another_long_slow_operation
+	use R1
+
+Register renaming puts each subsequent write to R1 in a different
+physical register, and keeps track of which physical register
+holds the most recent value of R1.  After being renamed, the
+above code might look like:
+
+	R1 <physical register 100> = long slow operation
+	use R1 <use physical register 100 as the source of R1 data>
+	R1 <physical register 101> = another_long_slow_operation
+	use R1 <use physical register 101 as the source of R1 data>
+
+The idea is that the two long slow operations can now proceed in
+parallel because they are writing different physical registers.
+
+Now you should realize that register renaming is most
+important on a machine with FEW architectural registers.
+
+Extreme example: suppose you had a machine with only one
+register.  Without register renaming, each operation that
+wrote that register would have to wait for the previous
+operation to complete.  With register renaming, the
+machine would only have to wait when there were actual
+data dependencies (younger operation wants to read the
+result of older operation).
+
+On the other hand, if a machine has LOTS of architectural
+registers (like the Alpha) then the compiler can put each
+successive instruction's result into a different register.
+So even if the machine does no register renaming, it can
+proceed without stalling for antidependencies, because
+the compiler can ensure that there aren't any simply by
+not writing any one register too often.  Effectively the
+compiler can do register renaming (think of it as result
+renaming) in software.  So there is less of a need for
+hardware register renaming.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606113 ###
+===== 库内序 147670 | PK 2606113 | 等级 L4 =====
+DATE: 1998-05-22T22:53:49+00:00
+FROM: "Ron 'The Insane One' Rosson" <insane@oneinsane.net>
+SUBJ: Re: Problem resolutions...
+摘要: Ron Rosson：更新流程 cvsup 后 make world 再 config make depend make install 后 sync 重启
+
+Well,
+  to put in plainly this is the understanding I have of cvsup/updating
+the system:
+
+1. Cvsup
+2. make world
+3. config <kernal name>
+4. make depend
+5. make
+6. make install
+7. sync
+8. sync
+9. shutdown -r now 
+
+This has always worked for me and nevr failed. So if I am doing something
+wrong I would like to know.
+
+Ron
+
+
+On Fri, May 22, 1998 at 01:20:32PM -0700, Jordan K. Hubbard wrote:
+> Actually, I'm afraid your "correction" is incorrect.  Making
+> the kernel after a "buildworld" is completely useless since
+> buildworld won't INSTALL any of the things (like config) that
+> the kernel needs.  You MUST install before the kernel config,
+> build and install stage.
+> 
+> - Jordan
+> 
+> > On Fri, May 22, 1998 at 11:45:48AM -0700, Jordan K. Hubbard wrote:
+> > > >   Ok, maybe I am just being obtuse... (maybe I am just a Computer
+> > > > Scientist), but I need this
+> > > > explicitly said to me; what is the propper order for compiling?
+> > > 
+> > > 1. Cvsup/CTM/whatever your sources up to date.
+> > > 2. make world
+> >   s/world/buildworld/
+> > 
+> > > 3. make kernel
+> >   3.5 make installworld
+> >   3.6 make install (for kernel)
+> > 
+> > > 4. reboot
+> > 
+> > This give you a minimal window of vulnerability to 'anything bad'.
+> > Not that it is guaranteed to work anyway, but it give you a better
+> > chance.
+> > 
+> > Eivind.
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+
+-- 
+--------------------------------------------------------
+Ron Rosson              ... and a UNIX user said ...
+The InSaNe One                    rm -rf *
+insane@oneinsane.net      and all was null and void
+--------------------------------------------------------
+It's so nice to be insane, nobody asks you to explain.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606114 ###
+===== 库内序 147671 | PK 2606114 | 等级 L3 =====
+DATE: 1998-05-22T23:32:15+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: tcp states and sysctl's
+摘要: Studded：反对互相指责 表示若问题能在服务端层面处理 则希望有相应手段可用
+
+Niall Smart wrote:
+> 
+> Hi,
+> 
+> I don't think a shutdown(2) sysctl is necessary.
+> 
+> a) the BSD stack is currently compliant in this regard, if
+>    anything need's changing it's the client.
+
+	Finger-pointing doesn't help. If there is a problem we can deal with at
+the server level I want to be able to deal with it. 
+
+> b) no-one has produced any evidence to show that all
+>    these sockets in TIME_WAIT_2 are actully having a
+>    negative impact in performance on the system.  Actually,
+>    I would seriously hope not, because otherwise this
+>    is a relatively easy DoS.  (Though probably not as
+>    effective as a SYN flood.)
+
+	My main concern is fd's right now (mostly due to a project I'm working
+on :). When exactly does the fd associated with a connection like this
+get allocated and when does it get released?  
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+***   Proud designer and maintainer of one of the world's largest
+*** Internet Relay Chat server with 5,328 simultaneous connections
+***   Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606116 ###
+===== 库内序 147673 | PK 2606116 | 等级 L4 =====
+DATE: 1998-05-22T23:08:37+00:00
+FROM: Chuck Robey <chuckr@glue.umd.edu>
+SUBJ: Re: Original PC and talk
+摘要: Chuck Robey：寄存器重命名由处理器完成而非编译器 故不能按编译器角度作出那种推断
+
+On Fri, 22 May 1998, Mike Haertel wrote:
+
+> Chuck Robey wrote:
+> >It uses those invisible internal registers to store things coming from
+> >or going to real registers.  The strategy is far more useful when there
+> >are more registers _to_ rename.
+> 
+> You are deeply mistaken.
+
+No, I'm not at all.  Register renaming isn't done by the compiler, it's
+done by the processor, so you can't say (as you do in your last
+paragraph) that the compiler can handle it.
+
+First, the reason for lots of registers is to cut memory accesses, and
+just makes the dependency problem more difficult.  Your last example,
+where you only have 1 register, is too unreal to cope with (you need 2
+sources and one sink to have _some_ reality), assume you did have 3
+registers.  The problem of keeping track of only 3 registers is far
+simpler than keeping track of, say, 64 registers.  This is fairly
+obvious.
+
+Having those lots of registers makes the compiler's job of marshalling
+arguments easier, and allows the compiler to set things up for maximum
+parallelization, but the processor still has to do the dependency
+checking itself, the compiler doesn't do that.  If the compiler orders
+things wrong, efficiency suffers.  If the processor orders things wrong,
+the resulting data is incorrect.  It's the processor's job to make a
+parallel instruction stream work exactly as if it was a serial stream.
+
+I simplified my original post, because I didn't want to take everyone
+thru this, but I wasn't deeply mistaken.
+
+
+> The purpose of register renaming is to eliminate "antidependencies".
+> An antidependency is when you have a long-latency operation that
+> writes a registers, followed by another long latency operation
+> than writes the same register.  E.g.:
+> 
+> 	R1 = long_slow_operation
+> 	use R1
+> 	R1 = another_long_slow_operation
+> 	use R1
+> 
+> Register renaming puts each subsequent write to R1 in a different
+> physical register, and keeps track of which physical register
+> holds the most recent value of R1.  After being renamed, the
+> above code might look like:
+> 
+> 	R1 <physical register 100> = long slow operatio
+[…中段省略 1473 字符…] ck Robey                 | Interests include any kind of voice or data 
+chuckr@glue.umd.edu         | communications topic, C programming, and Unix.
+213 Lakeside Drive Apt T-1  |
+Greenbelt, MD 20770         | I run Journey2 and picnic (FreeBSD-current)
+(301) 220-2114              | and jaunt (NetBSD).
+----------------------------+-----------------------------------------------
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606117 ###
+===== 库内序 147674 | PK 2606117 | 等级 L3 =====
+DATE: 1998-05-23T00:25:11+00:00
+FROM: Jim Shankland <jas@flyingfox.com>
+SUBJ: Re: TIME_WAIT/FIN_WAIT_2...
+摘要: Jim Shankland：认为双方分歧主要在术语 承认 LAST-ACK 与 CLOSE_WAIT 这类状态名易混淆
+
+> I think it's you that are mixed up... see the Apache FAQ on FIN_WAIT_2,
+> and contact Paul Vixie, as I've suggested.
+
+Let's assume that we mostly differ on terminology.  (I confess I get slightly
+disoriented by phrases like, "Wait for the LAST-ACK," and "If you get
+a CLOSE_WAIT" -- these being TCP states, not messages.  However, I
+think I can figure out what you mean.)
+
+You are, in effect, suggesting turning on a keepalive with a short
+timeout (overriding the normal retry timer) whenever a connection is
+in FIN_WAIT_2 and the socket is closed.  After 2 MSL in the state
+"FIN_WAIT_2-and-the-socket-has-been-closed," you send a keepalive.  If
+the peer responds with a RST, you tear the connection down.  If the
+peer responds with its own FIN within the next 2 MSL, you go through
+the normal close sequence.  If the peer doesn't respond at all, then
+after the second 2MSL wait, you tear the connection down.You don't
+state what you would do if the peer merely ACKs the keepalive;
+presumably keep the connection up, and probe it again later (how much
+later?) with another keepalive?
+
+I dunno; might be marginally better than just tearing the connection
+down after a few minutes.  CGEW.
+
+btw, whoever it was who said, "Don't do this because rsh uses
+half-open connections" -- you missed a key point.  None of this
+applies if the application process still has the socket open.
+This only applies when the application has entirely closed the
+socket, so there's nobody there to receive any data that might
+arrive.
+
+Jim Shankland
+Flying Fox Computer Systems, Inc.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606118 ###
+===== 库内序 147675 | PK 2606118 | 等级 L4 =====
+DATE: 1998-05-23T00:39:21+00:00
+FROM: Jim Shankland <jas@flyingfox.com>
+SUBJ: Re: tcp states and sysctl's
+摘要: Jim Shankland：此类连接的 fd 已不存在 服务器已关闭套接字 最大隐患是大量事实上已死的 TCP 连接
+
+Studded <Studded@san.rr.com> writes:
+
+[Re all those TCP connections in FIN_WAIT_2]:
+> 	My main concern is fd's right now (mostly due to a project I'm working
+> on :). When exactly does the fd associated with a connection like this
+> get allocated and when does it get released?  
+
+The fd is gone; the server has closed the socket.
+
+In my opinion, the biggest (potential) problem with having thousands
+of (de facto dead) TCP connections hanging around in FIN_WAIT_2 is
+the fact that there are still some linear traversals of the TCB
+list in the code (like in the timers).  My apologies in advance if
+this has been addressed in -CURRENT; I "live" on the STABLE branch.
+
+Jim Shankland
+Flying Fox Computer Systems, Inc.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606119 ###
+===== 库内序 147676 | PK 2606119 | 等级 L4 =====
+DATE: 1998-05-23T00:44:12+00:00
+FROM: Dave Marquardt <marquard@zilker.net>
+SUBJ: Re: Questions about Packet Filter
+摘要: Dave Marquardt：肯定 BPF 能监控出向数据包 并称一个简单测试即可自证
+
+Mike Smith <mike@smith.net.au> writes:
+> > Very appreciated if anybody can answer the questions:
+> > 
+> > 1. Does BPF support the monitoring of out going packages? how? I know
+> > it can monitor the receiving packages and directly write a new package
+> > into the specified network interface. How about the packages written
+> > by other network or transport protocols?
+> 
+> Yes.  A simple test would have show you this.
+> 
+> > 2. Solaris seems having a similar soft-driver called "Network
+> > Interface Tap". Anybody use that before? Can it monitoring both
+> > incoming and outgoing packages?
+> 
+> Yes.
+> 
+> > 3. Any similar programming interface in the socket level? 
+> 
+> No.
+> 
+> > 4. How about in HP-UX, Linux, and AIX?
+
+AIX has BPF, but read only.  BPF was ported read-only to support
+tcpdump.
+
+-Dave
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606122 ###
+===== 库内序 147679 | PK 2606122 | 等级 L4 =====
+DATE: 1998-05-23T02:01:20+00:00
+FROM: Joel Ray Holveck <joelh@gnu.org>
+SUBJ: Re: Kernel hackers Tricks & Tips
+摘要: Joel Ray Holveck：Sound Galaxy NX Pro 16 配 sb 驱动必须用 CONFIG_SBPRO 才工作
+
+
+> also, if you run across any options that haven't been documented, or
+> isn't a proper option, send it to me, and I'll document it (or remove
+> it if it isn't used anymore, like LINUX)... :)
+
+Well, to get my Sound Galaxy NX Pro 16 to work with the sb driver, I
+had to use the option CONFIG_SBPRO.  I don't know if most people do or
+not; that's all I could get it to work with.  Note that it was
+probably about six months or so ago that I last was sure it was
+necessary; I haven't removed it for many kernel builds now.  But this
+option is neither documented anywhere (as near as I can tell), nor
+recognized by config.
+
+Here is the relevant section of my config file.  The comments are
+failed attempts to get this working.
+
+# Sound card
+controller snd0
+device sb0 at isa? port 0x220 irq 5 drq 1 vector sbintr
+device opl0 at isa? port 0x388
+# device mss0 at isa? port 0x530 conflicts irq 5 conflicts drq 1 conflicts vector adintr disabled
+# device uart0 at isa? port 0x330 irq 5 vector "m6850intr"
+options CONFIG_SBPRO
+# options	__SGNXPRO__
+device joy0 at isa? port "IO_GAME"
+pseudo-device speaker
+
+Happy hacking,
+joelh
+
+-- 
+Joel Ray Holveck - joelh@gnu.org - http://www.wp.com/piquan
+   Fourth law of programming:
+   Anything that can go wrong wi
+sendmail: segmentation violation - core dumped
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606124 ###
+===== 库内序 147681 | PK 2606124 | 等级 L3 =====
+DATE: 1998-05-23T03:30:29+00:00
+FROM: Nicholas Charles Brawn <ncb05@uow.edu.au>
+SUBJ: Re: Kernel hackers Tricks & Tips
+摘要: Nicholas Charles Brawn：询问 FreeBSD 4.4 内核开发有无类 Linux Kernel Hackers Guide 的在线文档
+
+What I am really interested in is some sort of online documentation on
+FreeBSD/4.4 BSD Kernel Hacking. Something along the lines of the Linux
+Kernel Hackers Guide. Is there any documentation like this available? 
+
+Nick
+
+--
+Email: ncb05@uow.edu.au - DE 30 33 D3 16 91 C8 8D  A7 F8 70 03 B7 77 1A 2A	
+http://rabble.uow.edu.au/~nick - public key available on request.
+Nicholas Brawn - Computer Science Undergraduate, University of Wollongong.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606127 ###
+===== 库内序 147684 | PK 2606127 | 等级 L4 =====
+DATE: 1998-05-23T10:27:45+00:00
+FROM: Eivind Eklund <eivind@yes.no>
+SUBJ: Re: Kernel hackers Tricks & Tips
+摘要: Eivind Eklund：没有成体系的内核开发文档 只有一份计划成为设备驱动作者指南的材料
+
+On Sat, May 23, 1998 at 01:30:29PM +1000, Nicholas Charles Brawn wrote:
+> What I am really interested in is some sort of online documentation on
+> FreeBSD/4.4 BSD Kernel Hacking. Something along the lines of the Linux
+> Kernel Hackers Guide. Is there any documentation like this available? 
+
+Not in any clear form.  There is something that is supposed to become
+a guide for device driver authors, but apart from that most
+documentation is in the books.
+
+I'd recommend The Design and Implementation of BSD 4.4, by McKusick et
+al.
+
+Eivind.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606130 ###
+===== 库内序 147687 | PK 2606130 | 等级 L4 =====
+DATE: 1998-05-23T12:55:19+00:00
+FROM: Josef Karthauser <joe@pavilion.net>
+SUBJ: Re: WINE and Starcraft
+摘要: Josef Karthauser：Bochs 下装 Win95 最终成功 Pentium 200 上耗时约三天 FreeBSD USB 发行版顺利
+
+> > Bochs seems to work.  It's a 386 emulator, and it's in the ports.
+> > (It's still installing Win95 at the moment, but it looks good so far.)
+> 
+> I know that the first time Alex Nash installed Win95 when he was making
+> the port it took around 3 days for the install to complete. :(
+
+It finally installed for me, and it did take around 3 days on a Pentium 200.
+I installed the USB release of FreeBSD just fine and it even runs Internet
+Explorer!  It is far too slow to be usable though. (And no network layer is
+emulated so I couldn't browse :)
+
+Joe
+-- 
+Josef Karthauser
+Technical Manager	FreeBSD: The power to serve (http://www.uk.freebsd.org)
+Pavilion Internet plc.  [joe@pavilion.net, joe@uk.freebsd.org, joe@tao.org.uk]
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606132 ###
+===== 库内序 147689 | PK 2606132 | 等级 L4 =====
+DATE: 1998-05-23T20:38:18+00:00
+FROM: Terry Lambert <tlambert@primenet.com>
+SUBJ: Re: TIME_WAIT/FIN_WAIT_2...
+摘要: Terry Lambert：确认所引 STD7 第 2358 行附近的 CLOSE-WAIT 行为 并澄清原意是未收到应到的报文
+
+> > C)	if you get CLOSE-WAIT, then goto (A).
+> 
+> I'm a little unclear as to what exactly what should happen when
+> a TCP stack receives a packet when it is in CLOSE-WAIT state.  Are
+> you relying on the following bahaviour documented in STD7, line ~2358?
+
+Yes.  I should have said "if you think the client should be sending
+you the packet it should when it goes to CLOSE-WAIT state, but you
+aren't getting that packet" to be technically correct.
+
+
+>     3.  If the connection is in a synchronized state (ESTABLISHED,
+>     FIN-WAIT-1, FIN-WAIT-2, CLOSE-WAIT, CLOSING, LAST-ACK, TIME-WAIT),
+>     any unacceptable segment (out of window sequence number or
+>     unacceptible acknowledgment number) must elicit only an empty
+>     acknowledgment segment containing the current send-sequence number
+>     and an acknowledgment indicating the next sequence number expected
+>     to be received, and the connection remains in the same state.
+> 
+> > D)	if you get no response in 2 MSL, or RST, then act as if
+> > 	you had recieved the CLOSE-WAIT, transitioned to FIN-WAIT-2,
+> > 	and subsequently recieved the LAST-ACK.
+> 
+> Uh-huh.
+> 
+> > E)	(potential "enhancement")  If you get no response, rather
+> > 	than treating it as an RST, goto (A), but maintain the
+> > 	FIN_WAIT_2_TIMEOUT kludge currently in place.
+> 
+> Can I suggest that if you receive a response after step C, which you call
+> the CLOSE-WAIT response, then the TCP stack should remain in FIN-WAIT-2
+> with an infinite timeout, because the response indicates that the remote
+> TCP stack not broken and moreover that the remote client is not finished
+> sending yet.  (i.e. the 11 minute timeout you mention later would not
+> be used)
+
+You can't do this.  You must constantly ask the client "Are you done
+yet?  Are you done yet?" because you have no other method of
+distinguishing a broken client from a non-broken client.
+
+This sucks, but effectively, you have several problems that are
+intractable if you do this:
+
+1)	The Microsoft TCP stack client that isn't done the first
+	time you ask it, but gets done later, and never calls
+	shutdown 
+[…中段省略 2989 字符…] algorithm
+> does have the nice side effect of allowing us to remove the 11 minute
+> non-conformant FIN-WAIT-2 drop.
+
+I would keep it in there to prevent zero window size response based
+denial of service attacks on UNIX servers (enhancement "E").
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606137 ###
+===== 库内序 147694 | PK 2606137 | 等级 L3 =====
+DATE: 1998-05-23T23:22:29+00:00
+FROM: Sune Stjerneby <stjerneby@usa.net>
+SUBJ: Re: talk (fwd)
+摘要: Sune Stjerneby：承认自己从不喜欢 Intel 若无靠谱 BSD 实现便不会跑 x86 现有约五六种
+
+Karl Pielorz wrote:
+> 
+> Is it me or is basically everyone here either a) Not a big fan of Intel
+> (strange considering what FreeBSD runs on ;-)
+
+Certainly. I for one have never been a fan of Intel, and wouldn't be
+running x86 if there wasn't a decent BSD implementation available
+(luckily there are 5-6 =).
+
+> b) Prefers the Motorola? (I certainly do!), and / or c) Largely used to own,
+> program, hack on Amiga's? - or at least want FreeBSD to work as well as the
+> Amiga did <g>
+
+Certainly. It has been said, that had the original IBM PC design used
+the MC68000 (which was available at that time), the world would look
+very different by now. It will be a cold day in hell before i scrap my
+m68k-machines (Amigas etc., which all run NetBSD).
+
+> All way off topic but interesting following - maybe we should start
+> 'nostalgia-freebsd' mailing list? <G>
+
+Folklore and nostalgia is usually enjoyable.
+
+-- 
+//bwulf - Sune Stjerneby
+<stjerneby@usa.net>, [2:238/260.4], ++45 56219988, DK-208, EU
+  -- "Quidquid latine dictum sit, altum viditur."
+  -- "4.4BSD UNIX - A Real Operating System for Real Users."
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606143 ###
+===== 库内序 147700 | PK 2606143 | 等级 L3 =====
+DATE: 1998-05-24T08:37:10+00:00
+FROM: Mara Cabrales <yonny@ingenieria.ingsala.unal.edu.co>
+SUBJ: Program with sockets
+摘要: Mara Cabrales：FreeBSD 2.2.5 下 socket 程序服务器正常 客户端报 connect failure 49 无此文件
+
+Hi
+
+I'm  doing  a program with sockets in my box with FreeBSD 2.2.5,
+the server run good, but the client, show next error message:
+
+Client: connect failure 49
+client: : No such file or directory
+
+I don't know  that is wrong ...
+
+#define SERV_TCP_PORT  4000 
+#define SERV_HOST_ADDR "127.0.0.1" 
+...
+  sockfd = socket ( AF_INET , SOCK_STREAM, 0 );
+...
+  bzero ((char *) &serv_addr, sizeof (serv_addr));
+  serv_addr.sin_family 		= AF_INET ;
+  serv_addr.sin_addr.s_addr  	= inet_addr(SERV_HOST_ADDR ) ;
+  serv_addr.sin_port 		= htonl (SERV_TCP_PORT) ;
+
+  if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr))<0){
+    printf("Client: connect failure %d\n", errno);
+    perror("client: ");
+    exit(1);
+  }
+...
+Thanks for your help 
+
+   -------------------------------------------------------------------------
+	YONNY CARDENAS B.
+	                  				||   ||	|||  || 
+	Universidad Nacional de Colombia 		||   ||	|| | ||
+	Email : yonny@ingenieria.ingsala.unal.edu.co	|||||||	||  ||| 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606144 ###
+===== 库内序 147701 | PK 2606144 | 等级 L3 =====
+DATE: 1998-05-24T03:50:42+00:00
+FROM: Yonny Cardenas Baron <y-carden@uniandes.edu.co>
+SUBJ: Progm with sockets
+摘要: Yonny Cardenas Baron：重发 socket 客户端 connect failure 49 求助 附 SERV_TCP_PORT 与套接字参数
+
+
+Hi
+
+I'm  doing  a program with sockets in my box with FreeBSD 2.2.5,
+the server run good, but the client, show next error message:
+
+Client: connect failure 49
+client: : No such file or directory
+
+I don't know  that is wrong ...
+
+#define SERV_TCP_PORT  4000 
+#define SERV_HOST_ADDR "127.0.0.1" 
+...
+  sockfd = socket ( AF_INET , SOCK_STREAM, 0 );
+...
+  bzero ((char *) &serv_addr, sizeof (serv_addr));
+  serv_addr.sin_family          = AF_INET ;
+  serv_addr.sin_addr.s_addr     = inet_addr(SERV_HOST_ADDR ) ;
+  serv_addr.sin_port            = htonl (SERV_TCP_PORT) ;
+
+  if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr))<0){
+    printf("Client: connect failure %d\n", errno);
+    perror("client: ");
+    exit(1);
+  }
+...
+Thanks for your help 
+
+
+        ------------------------------------
+        YONNY CARDENAS B.
+        e-mail : y-carden@uniandes.edu.co
+                                              
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

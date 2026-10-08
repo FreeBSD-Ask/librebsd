@@ -1,0 +1,31 @@
+2604596|L3|Mike：认为 vi 在正常运作条件下确实有用，但单人用户模式应改用 ed
+2604598|L3|Mike Smith：回应内部 ISDN 卡驱动需求，建议改试 USR Courier I-modem
+2604601|L4|David McNett：称 FreeBSD 与 Courier 配合极差，用 byterunner 串口 230.4kbps 时重入站负载下完全停止处理
+2604602|L3|Jung, Michael：询问 arplookup 出现 host is not on local network 是否表示收到该报文却取不到 mac 地址
+2604606|L3|George Morgan：询问是否有人在开发 token ring 驱动程序，并留下联系方式求助
+2604608|L3|Greg A. Woods：询问 2.2.x 构建启用 MAKE_KERBEROS4=yes 后如何让 bin 发行包仍含普通 /usr/bin/login
+2604610|L3|Matthew N. Dodd：建议 ports 项目独立运作并统一各 BSD 的 ports 与 pkgsrc 以吸纳 OpenBSD、NetBSD 人手
+2604612|L4|Mike Smith：追问对方是否试过内部机型，并称自己那台是 International 型号无法在美国运行
+2604613|L4|Mike Smith：说明 PSEUDO_SET 联编机制功能类似 LKM 的 linker sets，但不确定是否回答了对方关于驱动自动配置的疑问
+2604615|L4|Matthew N. Dodd：表示 token ring 驱动迟早会做并招募想加入协助的人
+2604616|L3|Eric A. Davis：为 McKusick 高级内核课程做按文件监控文件系统活动的项目，询问如何添加新系统调用
+2604617|L3|Niall Smart：称自己未见到 sys/socket.h 等系统头文件与 C++ 不兼容的问题，要求对方给出更多细节
+2604621|L3|Niall Smart：反对立即终结该线程，认为想保留 vi 在 /usr/bin 者与想杀线程者是同一批且议题未讨论充分
+2604623|L3|Mike Smith：解释想杀线程者已多次看过这一争论，认为移动 vi 不值得投入且不欲再听重复结论
+2604624|L4|Christopher Masto：指出讨论遗漏的一点是 vi 位于 fixit disk 上，并支持尽快终结该线程
+2604625|L4|Mike Smith：转发公告称 3.0 的主要特性目标是转向 CAM 式 SCSI 子系统，该转换需要一个硬性切换日期
+2604626|L4|Adrian Colley：推测 portmap 的 select 失败源于 SIGCHLD 恰在其返回时送达，指出 reap 循环调用 wait3
+2604627|L4|Tom：否认只是 arp 解析失败，指出网段上有设备在向所有人宣称自己是 172.20.1.79
+2604628|L4|Matthew N. Dodd：token ring 进展不顺故发帖，希望带动他人参与 802.2/802.3/802.5 的讨论与规划
+2604629|L3|Matthew D. Fuller：承认静态链接 vi 不宜设为默认，但认为它确有额外能力与灵活性，并就其代价征求大家意见
+2604630|L4|Christopher Masto：公告正在重写软盘磁带驱动，征集是否有已弃置未入树的代码，并询问 lft 的下落
+2604632|L3|Charlie：提出 cce 逻辑接口聚合多个物理以太网接口，统一持有某个子网 IP 后转发到达该地址的报文
+2604633|L3|Satoshi Asami：不反对让 ports 集合对其他 BSD 系统更友好，但对其涉及的事务协调情况表示保留
+2604634|L3|Matthew N. Dodd：认为协调各系统差异部分可能增加负担，但可由更广 ports 维护者基础带来的收益抵消
+2604636|L3|Matthew N. Dodd：认为上述问题都能解决，一个更稳健的打包系统可解决其中大部分
+2604637|L4|Andreas Klemm：认同底层基准测不准负载系统性能，并引本机数据称 SMP 在真实应用中提速可达 1.9 倍
+2604638|L3|Terry Lambert：明确希望该线程立即终结，并赞同放入一组最小必需的工具
+2604639|L3|Joe McGuckin：建议改支持 Cisco、Bay、Sun 等厂商做法的 trunking，可能需要能统一 mac 地址的特殊网卡
+2604640|L3|Eric A. Davis：2.2.5 加 fmon 系统调用受阻，称已在 sys/kern/syscalls.master 按 326-330 编号加入定义
+2604642|L4|John Birrell：怀疑编译通过却运行时报 bad system call 是因为内核构建并未包含这些系统调用
+2604644|L4|Jordan K. Hubbard：指出 ports 项目早已实际独立运作，反对为此重复建设 GNATS 等基础设施

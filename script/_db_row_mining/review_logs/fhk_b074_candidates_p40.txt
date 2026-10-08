@@ -1,0 +1,14 @@
+2606414|L3|George Uhl 在 FreeBSD 2.2.2 加载最新 ALTQ，配 ATM 接口做组播，en0 与 shadow pvc0 配置有问题
+2606416|L3|Peter Wemm 怀疑唯一理智的结局是发给 INRIA 与 WIDE、KAME 等组重武器，让他们决斗到死
+2606417|L4|Kenjiro Cho：用 shadow pvc 接口时不要 ifconfig en 接口，本来就不需要它；真要配就换个 IP
+2606420|L3|Terry Lambert：认为初始移植不用 OSF PALcode 是失误，并反问对方 Linux 是否使用 ARC 代码
+2606421|L4|zhihuizhang：VOP 宏定义可查 vnode_if.sh 与 vnode_if.src，这两个文件是很简单的 awk 文件
+2606427|L4|Jason Thorpe：Alpha 本质上是 64 位架构，因此说 NT 在 64 位寻址模式下只是未被测试并不合理
+2606428|L4|Jason Thorpe：反正也用不了 NT PALcode，它提供的功能太离谱，让 Alpha 看起来太像 MIPS，不合口味
+2606432|L4|Curt Sampson：文档请找 Sites 与 Witek 的 Alpha Axp Architecture Reference Manual
+2606433|L4|Kevin Street：提了一个可能修复 Star Office 退出时 ipc 共享数据段未清除的补丁，本人未实测
+2606435|L4|Randall Hopper 发布 fxtv 0.47，新增 YUV 视频采集、X10 MouseRemote 支持与多张 Bt848 卡
+2606436|L4|Randall Hopper 发布 moused 补丁给 -current 加 X-10 Mouse Remote 支持，兼容独立与透传两种模式
+2606437|L3|Mike Smith 问 procfs 该不该放非进程相关数据，Linux 用独立内核目录会污染命名空间，NetBSD 有类似做法
+2606443|L4|Martin Cracauer：FreeBSD 4.2 的 coredump 修复几周前已提交 -current，本意是修好它，本人未试
+2606444|L4|Dan Eischen：ATAPI CD-ROM 装 FreeBSD 两次失败；-stable 与 -current 的 atapi.c 里已有修复

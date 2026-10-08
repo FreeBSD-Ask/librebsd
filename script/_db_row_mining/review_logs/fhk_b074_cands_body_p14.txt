@@ -1,0 +1,1073 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2604938 ###
+===== 库内序 146495 | PK 2604938 | 等级 L3 =====
+DATE: 1998-04-21T20:29:04+00:00
+FROM: Spike Gronim <spork@cncn.com>
+SUBJ: New library.
+摘要: Spike Gronim：读到 APUE 一书后自行编译出所需的 libmisc.a，询问如何让链接器认这个新库以便用书中代码
+
+Hello.
+
+	I just got "Advanced Programming in the Unix Environment", by W.
+Richard Stevens. It is a great book, however it requires a special library
+(libmisc.a) to compile/run the programs in the book. I downloaded the
+source for said file and got it to compile. I now have a file,
+/home/spork/apue/libmisc.a, which I need the linker to recognize. 
+
+	How to I get the linker to look for this new file, so I can use
+the code in it? Please respond directly, as I am not on the list. Thank
+you. 
+
+
+	-Spike Gronim
+	 spork@cncn.com	
+
+
+		"Hacker, n: One who hacks real good"
+			--Computer Contradictionary
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604939 ###
+===== 库内序 146496 | PK 2604939 | 等级 L3 =====
+DATE: 1998-04-21T21:27:18+00:00
+FROM: Richard Wackerbarth <rkw@Dataplex.NET>
+SUBJ: Help! Booting a diskless client.
+摘要: Richard Wackerbarth：反复阅读 Mike 的应用说明仍卡在给无盘客户端装载内核这一步，贴出 mount 输出请人指出错误
+
+I've read, and reread, Mike's application notes.
+Obviously, I'm missing something here.
+Can someone point out my error?
+
+What I really want to do is get a kernel to this machine.
+
+mount shows:
+
+/dev/sd0s1a on / (NFS exported, local, writes: sync 55568 async 78717))
+/dev/sd0s1f on /usr (NFS exported, local, writes: sync 279374 async 261826))
+/dev/sd1f on /diskless/swapfiles (asynchronous, NFS exported, local,
+writes: sync 14 async 1))
+
+/etc/exports shows:
+
+/diskless/root       -maproot=0      -network 208.2.87.0 -mask 255.255.255.224
+/usr                 -maproot=0 -ro  -network 208.2.87.0 -mask 255.255.255.224
+/diskless/swapfiles  -alldirs -maproot=0      -network 208.2.87.0 -mask
+255.255.255.224
+
+ps shows:
+
+root   19881  0.0  0.5   468  336  ??  Is    3:56PM   0:00.02 /sbin/mountd
+-l -r
+
+ls shows:
+
+/diskless:
+total 4
+drwxrwxr-x  2 root  wheel  512 Apr 21 13:05 root
+drwxr-xr-x  2 root  wheel  512 Apr 21 15:40 swapfiles
+
+/diskless/swapfiles:
+total 2064
+-rw-rw-r--  1 root  wheel  1048576 Apr 21 14:56 swap.208.2.87.13
+
+syslog shows:
+
+Apr 21 15:56:53 shrimp mountd[19881]: mount request succeeded from
+208.2.87.13 for /diskless/swapfiles
+Apr 21 15:56:53 shrimp mountd[19881]: umountall request from 208.2.87.3
+from unprivileged port
+Apr 21 15:57:05 shrimp mountd[19881]: umountall request from 208.2.87.3
+from unprivileged port
+
+The diskless client gets its info from dhcp.
+It is assigned IP = 208.2.87.13.
+
+It fetches (tftp) this configuration:
+
+rootfs 208.2.87.3:/diskless/root
+swapfs 208.2.87.3:/diskless/swapfiles
+swapsize 1000
+flags scv
+
+The configuration parameters shown on its screen match what I intended.
+
+Then it proceeds to read the kernel.
+At the end of that, it stops with
+"Unable to open swap.208.2.87.13: Not owner"
+(NB: If I remove the swap. 208.2.87.13 file, I get a different message -
+(not found).
+
+Richard Wackerbarth
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604940 ###
+===== 库内序 146497 | PK 2604940 | 等级 L3 =====
+DATE: 1998-04-21T20:49:20+00:00
+FROM: Stefan Esser <se@FreeBSD.ORG>
+SUBJ: Re: Symbios docs
+摘要: Stefan Esser：为迟迟未回信致歉，说邮箱地址其实没有错只是工作压得太满，目前积压邮件将近一千封
+
+On 1998-04-20 16:39 -0400, sbabkin@dcn.att.com wrote:
+> Hi!
+> 
+> I'm trying to locate Stefan Esser whose e-mail address in ncr.c seems
+> to be outdated, but any advice from anyone is welcome. :-)
+
+Sorry for the lack of response, the mail address 
+was right, I'm just completely overloaded with work.
+I'm not able to keep up reading my mail, and have a 
+backlog of nearly 1000 messages, currently ...
+
+> Stefan told me some time ago that there does exist some manual
+> describing 
+> the registers of Symbios SCSI card. But when I recently tried to
+> obtain this manual from Symbios, they told me that all they have
+> is the SCRIPTS manual that describes the registers very sparsely
+> (and I already have it). May be someone has some additional information 
+> about the registers manual, like exact name or order number ? Thanks!
+
+You need both the Programming Guide (which does
+not address the semantics of the configuration 
+registers in necessary detail) and the data book
+for the chip you are going to use.
+
+SYM53C8XX Family PCI-SCSI I/O Processors 
+Programming Guide
+J10931I / 0294-15MD
+
+SYM53C875 PCI-SCSI I/O Processor with UltraSCSI
+DATA MANUAL REVISION 2.0
+T16962I / 0396-15MD
+
+(Assuming that you want to use the 875 chip ...)
+
+Regards, STefan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604942 ###
+===== 库内序 146499 | PK 2604942 | 等级 L3 =====
+DATE: 1998-04-21T22:13:45+00:00
+FROM: "Steve Sims" <SimsS@IBM.Net>
+SUBJ: RE: Suggestion for somebody with a 16MB testbox 
+摘要: Steve Sims：不久前在 8MB 内存的 486/66 上加一块很老的 WD220 硬盘和 50MB swap 构建自定义内核，耗时 45 分钟
+
+For what it's worth, I just a couple of weekends ago built a custom kernel
+on an 8-meg 486/66 with an ANCIENT WD220 drive (50Mb swap) and the time was
+45 minutes.
+
+Not much of a datapoint, but there ya go....
+
+...sjs...
+
+-----Original Message-----
+From: owner-freebsd-hackers@FreeBSD.ORG
+[mailto:owner-freebsd-hackers@FreeBSD.ORG]On Behalf Of Mike Smith
+Sent: Monday, April 20, 1998 9:44 PM
+To: Eivind Eklund
+Cc: hackers@FreeBSD.ORG
+Subject: Re: Suggestion for somebody with a 16MB testbox
+
+
+> I just got some totally wild times for compiling a Linux kernel under
+> Linux on a 16MB machine (3 hours for a plain kernel compile).  This
+> sounds like a totally screwed up VM system.
+
+Wow, that's really ugly.
+
+> Now, for kicks, it would be neat to have measurements on how much time
+> it takes to compile the Linux kernel on emulation under FreeBSD
+> compared to on a true Linux.  If somebody has a scratchbox with that
+> little memory (and I don't - I've not even got any small enough SIMMs
+> to make one), this'd be a neat experiment to run:
+
+I can arrange that here easily enough.  I have to install RH5 tomorrow
+(again!) to do some emulation-related stuff, so if someone doesn't beat
+me to it in the next 12 hours, if you can produce some no-brainer
+instructions I'll do the lework.  (Or I can give you an account on the
+machine and you can do it yourself 8)
+
+You don't want something stupid like an ISA IDE disk or something in it
+now do you?
+
+--
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604943 ###
+===== 库内序 146500 | PK 2604943 | 等级 L3 =====
+DATE: 1998-04-21T22:43:37+00:00
+FROM: David Greenman <dg@root.com>
+SUBJ: Re: 1 Gbyte of ram 
+摘要: David Greenman：回应 mbuf 到底多少算多的提问，举出 Wcarchive 的服务配置值是 500 这个例子
+
+>>> >BTW will a news server qualify as a system with lots of TCP connections
+>>> >and the need of lots of mbufs ?
+>>> 
+>>>    Probably not. Most large news servers handle on the order of perhaps
+>>> 100-200 TCP connections. When I say "large number", I mean in the
+>thousands.
+>>> 
+>>> -DG
+>>
+>>A big web server will though :-)
+>>
+>
+>So, what is considered 'alot' of mbufs?  1024, 2048, 4096???
+
+   Wcarchive is configured for 50000.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604944 ###
+===== 库内序 146501 | PK 2604944 | 等级 L3 =====
+DATE: 1998-04-21T23:29:39+00:00
+FROM: John Frader <nat@mylanders.com>
+SUBJ: Suggestions on patching kernel src
+摘要: John Frader：2.2.1 机器想打 foof 与 land 等补丁但源码版本不符，不敢做 make world，问只 cvsup src 树重编可否
+
+Hello,
+
+I have a machine running 2.2.1 that I want to apply the recent security
+patches to(foof, land etc...) but it seems that the patches are for newer
+src code than is on the machine. I don't want to do a make world incase
+for some reason something went wrong (the machine is in use and is 4 hours
+away) and was wondering if it would go ok to cvsup just a new src tree and
+recompile?
+
+
+
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604946 ###
+===== 库内序 146503 | PK 2604946 | 等级 L4 =====
+DATE: 1998-04-22T00:13:46+00:00
+FROM: Richard Wackerbarth <rkw@Dataplex.NET>
+SUBJ: Re: Help! Booting a diskless client.
+摘要: Richard Wackerbarth：翻 netboot 代码后确认原先判断有误，延迟实为 nfs 挂载慢，真问题在挂载交换文件而非 rootfs
+
+Digging through the netboot code, I find that I was wrong.
+The delay where I thought that it was loading the kernel was really
+just a slow nfs-mount. :-(
+
+So, the (current) problem is in my attempt to mount the swap file.
+It has nothing to do with the rootfs or the kernel.
+
+Has anyone else mounted files as fs (the -r option to mountd) on "current"
+(CVSup'ed on Apr 18th)?
+
+At 4:27 PM -0500 4/21/98, Richard Wackerbarth wrote:
+>I've read, and reread, Mike's application notes.
+>Obviously, I'm missing something here.
+>Can someone point out my error?
+>
+>What I really want to do is get a kernel to this machine.
+>
+>mount shows:
+
+>/dev/sd1f on /diskless/swapfiles (asynchronous, NFS exported, local,
+>writes: sync 14 async 1))
+>
+>/etc/exports shows:
+
+>/diskless/swapfiles  -alldirs -maproot=0      -network 208.2.87.0 -mask
+>255.255.255.224
+>
+>ps shows:
+>
+>root   19881  0.0  0.5   468  336  ??  Is    3:56PM   0:00.02 /sbin/mountd
+>-l -r
+>
+>ls shows:
+
+>/diskless/swapfiles:
+>total 2064
+>-rw-rw-r--  1 root  wheel  1048576 Apr 21 14:56 swap.208.2.87.13
+
+Richard Wackerbarth
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604953 ###
+===== 库内序 146510 | PK 2604953 | 等级 L3 =====
+DATE: 1998-04-22T04:27:24+00:00
+FROM: Ulf Zimmermann <ulf@Alameda.net>
+SUBJ: Re: Request for major number for Mylex RAID controller
+摘要: Ulf Zimmermann：确认 Mylex RAID 驱动计划导出类磁盘接口，故需再安排一个块设备主号
+
+> >>>>>> I am getting into the phase of a working driver ;-) So I need a major
+> >>>>>> number for it. Who can assign one ?
+> > 
+> > I call it currently myx.
+> 
+> Ok, you have character major 97.  If you plan on exporting a disklike 
+> interface but not using 'sd' or 'da', let me know and I'll arrange a 
+> block major as well.
+
+Yes I do plan that.
+
+> 
+> 
+> -- 
+> \\  Sometimes you're ahead,       \\  Mike Smith
+> \\  sometimes you're behind.      \\  mike@smith.net.au
+> \\  The race is long, and in the  \\  msmith@freebsd.org
+> \\  end it's only with yourself.  \\  msmith@cdrom.com
+> 
+> 
+> 
+
+Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604955 ###
+===== 库内序 146512 | PK 2604955 | 等级 L3 =====
+DATE: 1998-04-22T04:30:41+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Request for major number for Mylex RAID controller 
+摘要: Mike Smith：追问 Mylex 驱动作者是否打算从该卡引导
+
+> > >>>>>> I am getting into the phase of a working driver ;-) So I need a major
+> > >>>>>> number for it. Who can assign one ?
+> > > 
+> > > I call it currently myx.
+> > 
+> > Ok, you have character major 97.  If you plan on exporting a disklike 
+> > interface but not using 'sd' or 'da', let me know and I'll arrange a 
+> > block major as well.
+> 
+> Yes I do plan that.
+
+Do you hope to be able to boot from the Mylex?  If so, do you plan to 
+support 2.2 (or non-DEVFS systems in general?)
+
+There are some issues regarding the bootability of devices with 
+new major numbers that may make this unattractive.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604958 ###
+===== 库内序 146515 | PK 2604958 | 等级 L4 =====
+DATE: 1998-04-22T05:39:27+00:00
+FROM: Richard Wackerbarth <rkw@Dataplex.NET>
+SUBJ: Re: Help! Booting a diskless client.
+摘要: Richard Wackerbarth：引导端什么输出都没有，他以为在载内核的其实只是 NFS 超时
+
+At 11:03 PM -0500 4/21/98, Mike Smith wrote:
+>You don't need '-r', the FreeBSD diskless swapper does a mount RPC on
+>the directory and then looks the file up, rather than other systems
+>that just mount the file directly.  That shouldn't stop this working
+>though.
+>
+>What's the booting system output for "swap is ..."?
+
+Nothing :-(    As he sheeplishly slides away.
+
+What I thought was kernel loading was really NFS timeout. (Now WHY the nfsd
+was down??)
+
+>Are you using bootp?  Did you remember to quote the colons in the
+>swap path?
+
+Nope, DHCP. I'm getting the right stuff through.
+
+Question: Do we even need swap? Cannot I put a line similar to this in the
+fstab
+and get the same thing?
+
+swap-server:/diskless/swapfiles/swap.208.2.87.13         none  swap    0   0
+
+Richard Wackerbarth
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604960 ###
+===== 库内序 146517 | PK 2604960 | 等级 L3 =====
+DATE: 1998-04-22T06:14:50+00:00
+FROM: Studded <Studded@san.rr.com>
+SUBJ: Re: Suggestions on patching kernel src
+摘要: Studded：认为 2.2.1 打 foof 与 land 安全补丁的提问应转到 freebsd-questions 处理
+
+This question actually belongs on freebsd-questions, please reply there
+if needed.
+
+John Frader wrote:
+> 
+> Hello,
+> 
+> I have a machine running 2.2.1 that I want to apply the recent security
+> patches to(foof, land etc...) but it seems that the patches are for newer
+> src code than is on the machine. I don't want to do a make world incase
+> for some reason something went wrong (the machine is in use and is 4 hours
+> away) and was wondering if it would go ok to cvsup just a new src tree and
+> recompile?
+
+	Never ever ever upgrade just the kernel. This is several times more
+important when you are upgrading across version numbers. There is an
+excellent tutorial on how to make world, including tips for remote
+upgrading. You can find it at http://www.freebsd.org/docs.html. I
+upgrade machines remotely all the time, just follow the steps on that
+tutorial to the letter and you'll be ok.
+
+Good luck,
+
+Doug
+
+-- 
+***         Chief Operations Officer, DALnet IRC network       ***
+*** Proud designer and maintainer of the world's largest Internet
+***    Relay Chat server with 5,328 simultaneous connections.
+*** Try spider.dal.net on ports 6662-4    (Powered by FreeBSD)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604961 ###
+===== 库内序 146518 | PK 2604961 | 等级 L3 =====
+DATE: 1998-04-22T06:32:36+00:00
+FROM: Tommy Hallgren <md6tommy@mdstud.chalmers.se>
+SUBJ: Re: Suggestion for somebody with a 16MB testbox
+摘要: Tommy Hallgren：就 16MB 机器编译 Linux 内核耗时三小时的报告，追问是否是 8MHz 386 机型
+
+On Tue, 21 Apr 1998, Eivind Eklund wrote:
+
+> I just got some totally wild times for compiling a Linux kernel under
+> Linux on a 16MB machine (3 hours for a plain kernel compile).  This
+> sounds like a totally screwed up VM system.
+
+When I used Linux, a 2.0 kernel compile took about 45 minutes on my 20MB
+486 66MHz. Are you using 8MHz 386's?
+
+Tommy Hallgren(md6tommy@mdstud.chalmers.se) - the source of all good beers...
+
+      Go to http://www.freebsd.org and get real BSD Unix. Today!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604962 ###
+===== 库内序 146519 | PK 2604962 | 等级 L3 =====
+DATE: 1998-04-22T07:13:05+00:00
+FROM: Walter Hafner <hafner@informatik.tu-muenchen.de>
+SUBJ: Euro key ?
+摘要: Walter Hafner：提醒开发者欧洲即将统一货币 Euro，已有德国厂商在键盘上放置 Euro 符号键
+
+Hi!
+
+Just a reminder for the developers:
+
+In the near future some european countries will get a new common
+currency, the "Euro". Siemens, e.g., does all internal money exchange in
+Euro from 1999 on.
+
+The symbol for the Euro is some kind of "round E with two lines in the
+middle". Sorry, I can't describe it better than that. :-)
+
+Some german computer manufactors (Siemens ...) already ship PCs with the
+Euro symbol at position AltGr-E (and I believe a patched Win95 that
+supports it).
+
+Pleas take care that the console driver supports the Euro symbol as it
+will get pretty importatn over here very soon.
+
+Thanks,
+
+-Walter
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604963 ###
+===== 库内序 146520 | PK 2604963 | 等级 L4 =====
+DATE: 1998-04-22T07:16:57+00:00
+FROM: A Joseph Koshy <koshy@india.hp.com>
+SUBJ: On recursive makes (Miller's paper)
+摘要: A Joseph Koshy：转发 Miller 的 Recursive Make considered Harmful，主张拆分子目录割裂依赖 DAG
+
+
+I didn't find mention of this paper by Peter Miller in the archives,
+so I thought I'd post it.
+
+	"Recursive Make considered Harmful".
+	http://www.canb.auug.org.au/~millerp/rmch/recu-make-cons-harm.html
+
+Millers thesis is that by (manually) dividing development into independent
+subdirectories we are artificially sectioning the projects dependency DAG
+into sub-graphs and are losing dependency information in the process.
+
+Its an interesting paper.
+
+Koshy
+<koshy@india.hp.com>				My Personal Opinions Only.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604964 ###
+===== 库内序 146521 | PK 2604964 | 等级 L4 =====
+DATE: 1998-04-22T10:58:07+00:00
+FROM: Chrisy Luke <chrisy@flix.net>
+SUBJ: Beta 2 Release of Multipath Routing Code.
+摘要: Chrisy Luke：发布 Multipath Routing 代码 Beta 2，支持多接口，可在路由表中为同一目标配多个网关
+
+ftp://ftp.flirble.org/pub/unix/hacks/FreeBSD/mpath/
+
+Multipath routing means you can have more than one gateway per
+destination in the routing table. I dropped the project for a bit
+since the Beta 1 release in January. This release supports multiple
+interfaces and has some installation destructions.
+
+Comments, bugs etc always welcome.
+
+Regards,
+Chris Luke.
+
+
+README.MPATH:
+Multipath Routing for FreeBSD
+-----------------------------
+
+Beta 2 release. 22 April 1998.
+
+Patches for FreeBSD-2.2.6-STABLE (last cvsup'ed on 21 April 1998).
+
+Installation
+------------
+
+Please follow these in order...
+
+NOTE: This is *NOT* production code! Do not use it on a backbone yet.
+      I won't have sympathy for you if you do and it fries...
+
+In the tar file are a number of diffs all relative to /usr/src.
+One is for the sys/ tree (the kernel source) and the others
+for ifconfig(8), netstat(8) and route(8). I recommend you make copies
+of these binary sources into directories called "name.mpath" firstly
+for backup, secondly because cvsup overwrties files with changes with
+their current versions! Patch everything up as usual. If you don't know
+how, you shouldn't be playing with this code...
+
+You will need to copy the patched sys/net/route.h to
+/usr/include/net/route.h, taking a copy of the original first, of course.
+
+There is an example kernel config file in sys/i386/conf/QBert-MPath.
+The important lines in this file are:
+
+options         EA_MULTIPATH
+options         "EA_N_MULTIPATH=4"
+options         "MSIZE=256"
+
+The first two enable the patched code to be compiled in (all the code
+in the kernel is delimited with #ifdef EA_MULTIPATH - I hope) and the
+number of multipath gateways to support for each destination. This has
+to be hardcoded, I'm afraid, without a major rewrite of nearly everything.
+
+MSIZE is the size of an mbuf. The extra data made routing socket messages
+too big for a single mbuf. This shouldn't be too terrible an overheard,
+many people have been considering making this the default for a long time.
+
+Compile the kernel, compile the patches binaries. You will also need to
+recompi
+[…中段省略 2687 字符…] ensible, but not quite. When I've done GateD4 I'll submit those changes
+back to the Consortium.
+
+I'm not going to touch routed. Someone else can do that, if they want. I'll
+include diffs here should I recieve them.
+
+Bugs, comments, flames to chris@easynet.net or chrisy@flix.net.
+-- 
+== chris@easynet.net, chrisy@flix.net, chrisy@flirble.org.
+== Head of Systems for Easynet Group PLC.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604967 ###
+===== 库内序 146524 | PK 2604967 | 等级 L3 =====
+DATE: 1998-04-22T11:53:30+00:00
+FROM: Tommy Hallgren <md6tommy@mdstud.chalmers.se>
+SUBJ: ACPI and LM78
+摘要: Tommy Hallgren：询问是否有人在开发 ACPI 支持，他本人特别关注 LM78 温度部分
+
+Is anyone working on ACPI support? I'm particulary interested in the LM78
+temperature stuff.
+
+Tommy Hallgren(md6tommy@mdstud.chalmers.se) - the source of all good beers...
+
+      Go to http://www.freebsd.org and get real BSD Unix. Today!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604968 ###
+===== 库内序 146525 | PK 2604968 | 等级 L3 =====
+DATE: 1998-04-22T12:28:20+00:00
+FROM: "Kaleb S. KEITHLEY" <k.#nojunk#keithley@opengroup.org>
+SUBJ: Re: Euro key ?
+摘要: Kaleb S. KEITHLEY：反对靠编辑 ISO8859-x 字体来匹配 Euro 符号，认为这完全不是正确做法
+
+remy@synx.com wrote:
+> On 22 Apr, Soren Schmidt wrote:
+> > In reply to Walter Hafner who wrote:
+> >> The symbol for the Euro...
+> >
+> > Yeah but where is it in the iso8859-1 page ??
+>
+> No hurry. Let's wait to see what funny code the Wxx will return, put it
+> on keyboard mapping, and let European users fontedit the X fonts to have
+> things match.
+
+Editing ISO8859-x fonts is far from the right thing to do.
+
+Making X display the Euro glyph is easy, but there are larger problems
+than X. 
+
+For example, if you fontedit your ISO8859-x fonts to change the currency
+glyph (code point 0xa4) to the Euro glyph, that'll make it possible for
+things to look nice on your screen, but then you're not going to get the
+same thing on a piece of paper when you print that file.
+
+ISO needs to do two things. First they need to define an ISO2022 escape
+sequence that you can use switch to a codeset that defines the Euro.
+Second, they need to define that new codeset that contains the Euro, and
+all the other miscellaneous currency characters, e.g. that are defined
+in Unicode/ISO10646 but not in any other character set. (Perhaps they've
+already done this?)
+
+I already have a query in to ISO about those two things. Whether they
+can act quickly enough to produce something usable is a different
+question. Perhaps I presume too much when I think that there's a risk
+that they'll come back and say "it's in Unicode, use Unicode." Is
+everyone ready to switch en mass to Unicode? 
+
+In the mean time the X11 specifications and the Sample Implementation
+are being augmented with new keysyms, one or more new fonts, and a
+non-standard escape sequence to switch between codesets. Once ISO
+defines a standard escape sequence then the SI will be changed
+accordingly.
+
+(Now the rest of the world gets to learn how to deal with codeset
+switching, which the Japanese have been doing for years. All thanks to
+the Euro. :-)
+
+--
+
+Kaleb S. KEITHLEY
+X Architect, The Open Group X Project Team
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604969 ###
+===== 库内序 146526 | PK 2604969 | 等级 L3 =====
+DATE: 1998-04-22T13:12:32+00:00
+FROM: Robert Withrow <bwithrow@BayNetworks.COM>
+SUBJ: Re: Sendmail error messages...caused by limits? 
+摘要: Robert Withrow：贴出 sendmail putoutmsg 的输出通道报错，并称构建期间用 tcl 脚本定期跑 pstat -T
+
+
+tom@sdf.com said:
+:- Do a "pstat -T" to find out.  I find this doubtful, unless you have
+:- a really low MAXUSERS setting.  A default GENERIC has thousands of
+:- descriptors. 
+
+>From my config file:
+
+maxusers	40
+
+I had a tcl script do periodic pstat -T's while building the software.
+
+Sendmail said:
+
+Apr 22 09:01:51 tuva sendmail[3267]: NOQUEUE: SYSERR: putoutmsg (NO-HOST): 
+error on output channel sending "451 fill_fd: before readcf: fd 1 not open: 
+Bad file descriptor": Input/output error
+Apr 22 09:01:51 tuva sendmail[3267]: NOQUEUE: SYSERR(bwithrow): fill_fd: 
+before readcf: fd 1 not open: Bad file descriptor
+Apr 22 09:01:59 tuva sendmail[3267]: NOQUEUE: SYSERR(bwithrow): fill_fd: 
+before readcf: fd 2 not open: Bad file descriptor
+
+pstat said:
+
+Wed Apr 22 09:01:32 EDT 1998 -- 186/1320 files 57M/137M swap space
+Wed Apr 22 09:01:39 EDT 1998 -- 183/1320 files 46M/137M swap space
+Wed Apr 22 09:01:45 EDT 1998 -- 183/1320 files 46M/137M swap space
+Wed Apr 22 09:01:50 EDT 1998 -- 182/1320 files 46M/137M swap space
+Wed Apr 22 09:01:55 EDT 1998 -- 182/1320 files 45M/137M swap space
+Wed Apr 22 09:02:01 EDT 1998 -- 184/1320 files 45M/137M swap space
+
+The 9:01 time corresponds to when this executable was being linked:
+
+  -rwxrwxr-x   1 <user>  <group>  23904904 Apr 22 09:01 <program>
+
+>From observation, the sendmail error messages *always* correspond to
+the time when this executable is being linked.  This seems to indicate
+that *some* resource is being exhausted, but apparently not swap or
+descriptors.
+
+Can anyone suggest something else to try?
+
+P.S.: 
+bash-2.01$ uname -r
+2.2.6-RELEASE
+
+-- 
+Robert Withrow -- (+1 508 916 8256)
+BWithrow@BayNetworks.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604970 ###
+===== 库内序 146527 | PK 2604970 | 等级 L3 =====
+DATE: 1998-04-22T13:22:27+00:00
+FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav )
+SUBJ: Re: writing a book.. need input
+摘要: dag-erli：质疑把 hacking 与 cracking、phreaking、AMSAT 等并列成书，看不出其中共同点
+
+"Denis A. Baldwin" <baldwin@ns.cac.net> writes:
+> I am writing a book on the electronic underworld.  This book includes 
+> information, history and a quasi instruction manual to hacking, 
+> cracking, phreaking, AMSAT, pirate radio, virii, warez and anything 
+> similar.  I am looking for contributions, thoughts, ideas or anybody 
+
+I must be stupid, as I fail to see the similarities between hacking
+and "cracking, phreaking, AMSAT, pirate radio, virii, warez and
+anything similar". Everybody on this list is involved in the former;
+nobody I know of is involved in the latter.
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604971 ###
+===== 库内序 146528 | PK 2604971 | 等级 L3 =====
+DATE: 1998-04-22T14:20:42+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Beta 2 Release of Multipath Routing Code. 
+摘要: Amancio Hasty：对 Multipath 路由 Beta 2 的 installation destructions 提法表示不想碰上
+
+> ftp://ftp.flirble.org/pub/unix/hacks/FreeBSD/mpath/
+> 
+> Multipath routing means you can have more than one gateway per
+> destination in the routing table. I dropped the project for a bit
+> since the Beta 1 release in January. This release supports multiple
+> interfaces and has some installation destructions.
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Not sure that I want to experience "installation destructions" 8)
+
+	Cheers,
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604972 ###
+===== 库内序 146529 | PK 2604972 | 等级 L3 =====
+DATE: 1998-04-22T18:17:58+00:00
+FROM: "Leon Felipe Rodriguez J. -CENCAR" <leonf@osiris.staff.udg.mx>
+SUBJ: Undefined symbol `_crypt' referenced from text segment
+摘要: Leon Felipe Rodriguez J. -CENCAR：改写的 htpasswd 编译报 Undefined symbol _crypt
+
+Hi!!!
+
+i'm working on web design and I need to create encripted passwors, I tried with
+a modified version of NCSA htpasswd program:
+
+genpass.c
+
+# more genpass.c
+/*
+ * htpasswd.c: simple program for manipulating password file for NCSA httpd
+ *
+ */
+
+#include <sys/types.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/signal.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define LF 10
+#define CR 13
+
+#define MAX_STRING_LEN 256
+
+char *tn;
+
+
+
+/* From local_passwd.c (C) Regents of Univ. of California blah blah */
+static unsigned char itoa64[] =         /* 0 ... 63 => ascii - 64 */
+        "./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+to64(s, v, n)
+  register char *s;
+  register long v;
+  register int n;
+{
+    while (--n >= 0) {
+        *s++ = itoa64[v&0x3f];
+        v >>= 6;
+    }
+}
+
+char *crypt(char *pw, char *salt); /* why aren't these prototyped in include */
+
+void add_password(char *user,char *pw) {
+    char *cpw, *pru, salt[3];
+
+    (void)srand((int)time((time_t *)NULL));
+    to64(&salt[0],rand(),2);
+    cpw = crypt(pw,salt);
+    printf("%s",cpw);
+}
+main(int argc, char *argv[]) {
+    char user[MAX_STRING_LEN];
+    char line[MAX_STRING_LEN];
+    char l[MAX_STRING_LEN];
+    char w[MAX_STRING_LEN];
+    char command[MAX_STRING_LEN];
+    int found;
+
+    tn = NULL;
+    add_password(argv[1],argv[2]);
+}
+
+but i get this mesg
+
+gcc -o genpass genpass.c
+/var/tmp/cc0159851.o: Undefined symbol `_crypt' referenced
+
+any idea?
+
+Thanx
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604973 ###
+===== 库内序 146530 | PK 2604973 | 等级 L4 =====
+DATE: 1998-04-22T16:26:27+00:00
+FROM: The Hermit Hacker <scrappy@hub.org>
+SUBJ: Re: Undefined symbol `_crypt' referenced from text segment
+摘要: The Hermit Hacker：gcc 编译 genpass.c 需补 -lcrypt，可解决 Undefined symbol _crypt
+
+On Wed, 22 Apr 1998, Leon Felipe Rodriguez J. -CENCAR wrote:
+
+> gcc -o genpass genpass.c
+> /var/tmp/cc0159851.o: Undefined symbol `_crypt' referenced
+> 
+> any idea?
+
+	gcc -o genpass genpass.c -lcrypt
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604974 ###
+===== 库内序 146531 | PK 2604974 | 等级 L3 =====
+DATE: 1998-04-22T16:26:56+00:00
+FROM: Dan Busarow <dan@dpcsys.com>
+SUBJ: Re: Sendmail error messages...caused by limits? 
+摘要: Dan Busarow：问该系统是否配置大量 IP 别名，并提示新版 sendmail 有 ListenOn 类指令应对此情况，但自己不确定指令名
+
+On Wed, 22 Apr 1998, Robert Withrow wrote:
+> Apr 22 09:01:51 tuva sendmail[3267]: NOQUEUE: SYSERR: putoutmsg (NO-HOST): 
+> error on output channel sending "451 fill_fd: before readcf: fd 1 not open: 
+> Bad file descriptor": Input/output error
+
+Do you have a lot if IPs aliased on this system?
+
+The latest sendmail has a ListenOn style directive (I don't need it
+so don't know the real name, sorry) for this situation.
+
+Dan
+-- 
+ Dan Busarow                                                  714 443 4172
+ DPC Systems / Beach.Net                                    dan@dpcsys.com
+ Dana Point, California  83 09 EF 59 E0 11 89 B4   8D 09 DB FD E1 DD 0C 82
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604975 ###
+===== 库内序 146532 | PK 2604975 | 等级 L4 =====
+DATE: 1998-04-22T17:05:46+00:00
+FROM: Antti Kaipila <anttik@iki.fi>
+SUBJ: Re: Undefined symbol `_crypt' referenced from text segment
+摘要: Antti Kaipila：给 genpass.c 的 gcc 命令补 -lcrypt，解决 Undefined symbol _crypt 链接错误
+
+"Leon Felipe Rodriguez J. -CENCAR" <leonf@osiris.staff.udg.mx> writes:
+
+> Hi!!!
+> 
+> i'm working on web design and I need to create encripted passwors, I tried with
+> a modified version of NCSA htpasswd program:
+
+* KLIP KLIP KLIP *
+
+> but i get this mesg
+> 
+> gcc -o genpass genpass.c
+> /var/tmp/cc0159851.o: Undefined symbol `_crypt' referenced
+> 
+> any idea?
+
+gcc -o genpass genpass.c -lcrypt
+
+-- 
+  Antti Kaipila <anttik@iki.fi>
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2604976 ###
+===== 库内序 146533 | PK 2604976 | 等级 L3 =====
+DATE: 1998-04-22T17:03:09+00:00
+FROM: Robert Withrow <bwithrow@BayNetworks.COM>
+SUBJ: Re: Sendmail error messages...caused by limits? 
+摘要: Robert Withrow：否认存在大量别名 IP，并贴出 ifconfig -a 显示仅 vx0、lp0、tun0、lo0 等接口
+
+
+dan@dpcsys.com said:
+:- Do you have a lot if IPs aliased on this system? 
+
+Nope.
+
+bash-2.01$ ifconfig -a
+vx0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet 192.32.68.38 netmask 0xffffff00 broadcast 192.32.68.255
+        ether 00:a0:24:6d:04:e8 
+lp0: flags=8810<POINTOPOINT,SIMPLEX,MULTICAST> mtu 1500
+tun0: flags=8010<POINTOPOINT,MULTICAST> mtu 1500
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+        inet 127.0.0.1 netmask 0xff000000 
+
+Also, it seems like this problem happens frequently when I ld anything of
+substantial size, but it doesn't happen every time...
+
+-- 
+Robert Withrow -- (+1 508 916 8256)
+BWithrow@BayNetworks.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

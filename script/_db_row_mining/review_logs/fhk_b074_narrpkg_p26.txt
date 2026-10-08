@@ -1,0 +1,24 @@
+2605419|L4|Terry Lambert：认为在驱动中调用 INT 10 通常不妥，需在期望 CLI/STI 下手动清掉内核侧未完成操作
+2605420|L3|Terry Lambert：反对把 dump/restore 从 FreeBSD 移除，问已有大量离线存储用该格式，修好它有何不好
+2605421|L4|Terry Lambert：认为 dump/restore 的裸文件系统访问本身是失误，按该理由也应删去 fsck
+2605424|L3|Julian Elischer：称新驱动不破坏既有功能，建议拿到首条可用反馈后即提交入库，便于更多持 Compaq 机器者试用
+2605425|L4|Karl Pielorz：问须在多大文件系统上测试，称自己两个 9G 与一个 12G 的 UFS 系统至今未失败
+2605426|L3|Terry Lambert：称需在 PnP BIOS 配置之外自带初始化的卡只能算 P，要在插接时真正起作用才算 nP
+2605429|L4|Luigi Rizzo：解释初始化指写 I/O 寄存器配置卡，如设 UART 波特率，OPTi931 仍需额外写入
+2605430|L4|Dag-Erling Smørggrav：建议把 MAXUSERS 设为 64，服务器尤应如此，如此将拥有大量 mbuf
+2605432|L3|Stefan Bethke：就 FreeBSD 是否经 BIOS32 接口配置 PCI 卡一事道歉，称自己本应先查源码再发言
+2605434|L4|Dag-Erling Smørggrav：调侃对方论断气魄太小，并以本机根分区 df 实测逾 310M 块为证
+2605436|L3|Alexey V Ivanov：新加入列表，询问如何收取 FreeBSD-hackers 邮件及 Digiboard 卡驱动该传到何处
+2605438|L3|James E. Housley：报告 ftp.gulf.net 的 sendmail_additions SPAM 名单许久无响应
+2605439|L4|Ron G. Minnich：pkg_add 经 FTP 取包时按 Ctrl-C 中断，随即见 rm 自根目录起删除整盘
+2605442|L3|Jonathan Lemon：认同在驱动中调用 INT 10 不妥，称自己只是为感兴趣的开发者多提供线索
+2605443|L4|sbabkin：称用 XFree86 与 CL5462 显卡启动 blender 无碍，家目录无 .B 文件亦可，当前目录有即可
+2605446|L4|Jordan K. Hubbard：称 pkg_add 一两个版本前确有此行为，现已远不激进，自己最终修好该缺陷
+2605448|L4|Jacques Vidrine：称 pkg_add 未以 root 运行并中断会删除当前目录文件，见于 2.1.5 至 2.2-GAMMA
+2605450|L3|Frank Ederveen：问 sbabkin 是否试过按 q 退出 blender，并建议在手册加入键位功能表
+2605451|L3|Snob Art Genre：称 2.1.5 时代 pkg_add 中断只吃掉其家目录，JKH 言该缺陷于 2.1.6 修复
+2605452|L3|sbabkin：请分配 loopback 伪以太网驱动的字符主设备号，驱动名 loe 供 pcemu 取网络接口
+2605457|L4|Jordan K. Hubbard：pkg_add 清理代码曾有两个缺陷，都会在按 ^C 时清空当前目录，其中一个已在 2.1.5 后修复
+2605458|L3|Amancio Hasty：说明退出 blender 只需按 q，并指手册中已经写明
+2605459|L4|Tom：说明 FreeBSD 上只有非官方的 Legato 2.2.x 客户端可用，Legato 服务器没有 FreeBSD 版本
+2605463|L3|Stefan Esser：反问 pcibus.c 注释到底哪里会造成误导，并追问对方用的是 FreeBSD 哪个版本

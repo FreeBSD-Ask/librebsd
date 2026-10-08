@@ -1,0 +1,969 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606251 ###
+===== 库内序 147808 | PK 2606251 | 等级 L3 =====
+DATE: 1998-05-28T06:59:59+00:00
+FROM: "Daniel O'Connor" <doconnor@gsoft.com.au>
+SUBJ: Re: Star Office Installation 
+摘要: Daniel OConnor：确认自己也得到同样报错并附上 setup.bin 的 linux_kdump 结尾片段
+
+
+> I recently d/l the 4.0 distribution and it puked at me when i tried to
+> run it. The error message was "Abort Trap".
+> 
+> I'm running 2.2.6-release with linux emulation, if anyone has any pointers
+> as to why this is happening, i'd love to know. :)
+That's the error message I get.
+
+Here is the end of a linux_kdump of the setup.bin file -
+  2584 setup.bin NAMI  "/compat/linux/usr/home/darius/projects/Office40_Install/setup.ini"
+  2584 setup.bin NAMI  "/usr/home/darius/projects/Office40_Install/setup.ini"
+  2584 setup.bin RET   linux_newstat JUSTRETURN
+  2584 setup.bin CALL  getpid
+  2584 setup.bin RET   getpid 2584/0xa18
+  2584 setup.bin CALL  linux_open(0xefbfc8f0,0x800,0)
+  2584 setup.bin NAMI  "/compat/linux/proc/2584/cmdline"
+  2584 setup.bin NAMI  "/proc/2584/cmdline"
+  2584 setup.bin RET   linux_open JUSTRETURN
+  2584 setup.bin PSIG  SIGSEGV caught handler=0x835e794 mask=0x0 code=0xc
+  2584 setup.bin CALL  linux_sigprocmask(0x1,0xefbfcc0c,0)
+  2584 setup.bin RET   linux_sigprocmask 0
+  2584 setup.bin CALL  linux_sigaction(0x6,0xefbfcb74,0xefbfcb64)
+  2584 setup.bin RET   linux_sigaction 0
+  2584 setup.bin CALL  getpid
+  2584 setup.bin RET   getpid 2584/0xa18
+  2584 setup.bin CALL  linux_kill(0xa18,0x6)
+  2584 setup.bin PSIG  SIGIOT SIG_DFL
+  2584 setup.bin NAMI  "setup.bin.core"
+
+
+---------------------------------------------------------------------
+|Daniel O'Connor software and network engineer for Genesis Software |
+|http://www.gsoft.com.au                                            |
+|The nice thing about standards is that there are so many of them to|
+|choose from. -- Andrew Tanenbaum                                   |
+---------------------------------------------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606252 ###
+===== 库内序 147809 | PK 2606252 | 等级 L3 =====
+DATE: 1998-05-28T03:31:30+00:00
+FROM: "Charles A. Peters" <Charles.A.Peters@ais.ais-gwd.com>
+SUBJ: New installation requireing ip reconfiguration.
+摘要: Peters：完成 2.2.6-Stable 安装后询问网络配置文件位置及有无工具可重置 ip 设置以改用 Win95 网关
+
+I have just sucessfully completed a ftp install of FreeBSD 
+2.2.6-Stable, and I am now having trouble reconfigureing my network 
+information (I installed over my cable modem, and now need to 
+reconfigure the FreeBSD machine to use the Win95 Midpoint Gateway for 
+internet access).
+
+Where can I find the network config files, and is there a utility to 
+allow me to reset my ip config data.
+
+I am very new to FreeBSD, and need some hand holding.
+
+
+Thanks,
+
+Charles
+charlespeters@tecpro.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606253 ###
+===== 库内序 147810 | PK 2606253 | 等级 L4 =====
+DATE: 1998-05-28T07:26:58+00:00
+FROM: Dom Mitchell <dom@myrddin.demon.co.uk>
+SUBJ: Re: Sendmail 8.9
+摘要: Mitchell：指出 VMailer exim smail 都刻意保持 sendmail 兼容并称自己已用 exim 一年多作替代
+
+Peter Wemm <peter@netplex.com.au> writes:
+> Before everybody jumps up and says "use xyzmail[er] instead" or "just 
+> don't ship anything in the base", I'm not sure that we can do that as 
+> parts of the base *assume* that sendmail (or a workalike) is present.
+
+VMailer, exim and smail all go to quite strong lengths to be sendmail
+compatible.  In particular, I've been using exim for some time (over a 
+year) as a sendmail replacement and found no faults.  It's still GPL'd 
+though.
+
+And there's still the massive body of sysadmin inertia that *knows*
+sendmail...
+
+Wouldn't it be easier to just stick with 8.8.8 until the licensing
+issues of this latest sendmail can be clarified?
+
+> Maybe it's time to bring back a basic local-only mail transport that gets 
+> blown away when a real sendmail or comparable (qmail, smail, vmailer, 
+> exim, etc etc) gets installed from a port.  Sigh.
+
+That's certainly one solution; was one of these things used before?
+If so, where can I get a look at it?
+
+P.S.  You left out MMDF.  :-)
+-- 
+"Every minute there's a UNIX system crashing somewhere." -- DJB
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606254 ###
+===== 库内序 147811 | PK 2606254 | 等级 L3 =====
+DATE: 1998-05-28T07:58:25+00:00
+FROM: "Daniel O'Connor" <doconnor@gsoft.com.au>
+SUBJ: Re: Star Office Installation 
+摘要: Daniel OConnor：回应称除 PGSQL 外没有其他共享内存段且自己运行的是 -current
+
+
+> could you please check your shared mem segments on the next crash? just
+> ipcs and tell me if you have a LOT of segments lyinh around? also are you
+> running -stable? -current?
+I only have the shared memory from PGSQL..
+I am running -current
+
+---------------------------------------------------------------------
+|Daniel O'Connor software and network engineer for Genesis Software |
+|http://www.gsoft.com.au                                            |
+|The nice thing about standards is that there are so many of them to|
+|choose from. -- Andrew Tanenbaum                                   |
+---------------------------------------------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606255 ###
+===== 库内序 147812 | PK 2606255 | 等级 L3 =====
+DATE: 1998-05-28T07:59:12+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: New installation requireing ip reconfiguration.
+摘要: Elischer：反问这样为 FreeBSD 改走网关上网是否本末倒置并追问缘由
+
+
+
+On Thu, 28 May 1998, Charles A. Peters wrote:
+
+> I have just sucessfully completed a ftp install of FreeBSD 
+> 2.2.6-Stable, and I am now having trouble reconfigureing my network 
+> information (I installed over my cable modem, and now need to 
+> reconfigure the FreeBSD machine to use the Win95 Midpoint Gateway for 
+> internet access).
+
+If you'll excuse the question, Isn't this a bit backwards?
+why on EARTH would one route a Unix box through a Win95 box?
+Kind of like towing the winabago behind the VW..
+
+BSD can do every kind of networking trick in the book plus a few, but I'm
+not sure I'd trust win95 to stay up for an entire session if someone was
+using it..
+
+I'm sure you have a reason but my curiosity is killing me.
+
+The file you want BTW is /etc/rc.conf
+
+
+> 
+> Where can I find the network config files, and is there a utility to 
+> allow me to reset my ip config data.
+> 
+> I am very new to FreeBSD, and need some hand holding.
+> 
+> 
+> Thanks,
+> 
+> Charles
+> charlespeters@tecpro.com
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606256 ###
+===== 库内序 147813 | PK 2606256 | 等级 L4 =====
+DATE: 1998-05-28T06:07:41+00:00
+FROM: Lutz Albers <lutz@muc.de>
+SUBJ: Re: Star Office Installation
+摘要: Albers：称自己也遇过该问题靠用一版较旧的 SO4 安装程序才装成并愿提供协助
+
+Daniel O'Connor wrote:
+> 
+> I have been trying to install Star Office 4, but for some weird reason the
+> installation binary tries to open /proc/<pid>/cmdline which doesn't exist in
+> our version of /proc :(
+> 
+> Has anyone got this to install, or do I have to hack procfs myself?
+
+Hi,
+
+I had that problem myself. I got it to install by using an old version
+of the SO4 installer I ahd lying around. Contact me, if you need/want
+it. BTW, I didn't got it to work after install, the soffice pgp just
+hung (well it was RUNning) after start.
+Maybe you haver better luck :-)
+
+ciao
+  lutz
+
+--
+Lutz Albers, lutz@muc.de         
+Do not take life too seriously, you will never get out of it alive.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606257 ###
+===== 库内序 147814 | PK 2606257 | 等级 L4 =====
+DATE: 1998-05-28T08:32:29+00:00
+FROM: Robert Swindells <swindellsr@genrad.co.uk>
+SUBJ: Re: Star Office Installation
+摘要: Swindells：Allegro Common Lisp 5.0 beta 读 /proc/<pid>/map 失败并宜模拟 Linux procfs
+
+
+[kdump of Star Office startup deleted]
+
+FWIW the latest version of Allegro Common Lisp (5.0 beta) tries to
+read /proc/<pid>/map and fails.
+
+Maybe we do need to emulate the Linux procfs as somebody suggested
+last week.
+
+Robert Swindells
+----------------------------------
+Robert Swindells     - GenRad Ltd.
+rjs@genrad.co.uk     - Work
+rjs@fdy2.demon.co.uk - Home
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606258 ###
+===== 库内序 147815 | PK 2606258 | 等级 L3 =====
+DATE: 1998-05-28T08:35:44+00:00
+FROM: "Daniel O'Connor" <doconnor@gsoft.com.au>
+SUBJ: Re: Star Office Installation 
+摘要: Daniel OConnor：回应称自己也不确定这类功能该放何处并提或许只能改 procfs
+
+
+> FWIW the latest version of Allegro Common Lisp (5.0 beta) tries to
+> read /proc/<pid>/map and fails.
+> Maybe we do need to emulate the Linux procfs as somebody suggested
+> last week.
+Heh, so what are you waiting for? ;)
+
+I'm not sure _where_ you put things like that.. Unless we just alter our 
+procfs.
+
+---------------------------------------------------------------------
+|Daniel O'Connor software and network engineer for Genesis Software |
+|http://www.gsoft.com.au                                            |
+|The nice thing about standards is that there are so many of them to|
+|choose from. -- Andrew Tanenbaum                                   |
+---------------------------------------------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606259 ###
+===== 库内序 147816 | PK 2606259 | 等级 L4 =====
+DATE: 1998-05-28T08:16:08+00:00
+FROM: Julian Elischer <julian@whistle.com>
+SUBJ: Re: Linux emulation failure (was Star-office)
+摘要: Elischer：判断崩溃源于使用了 FreeBSD 不支持的 Linux procfs 功能随后发生非法内存引用并被自身捕获写 core
+
+they are trying to be smart and using a LINUX procfs feature that we don't
+support. probably trying to find out something about their command line..
+(what an odd idea what's wrong with argv/argc?)
+
+probably due to this failure, they are leaping off into space
+and doing an illegal memory reference. To their credit, they are trapping
+that, cleaning up and sending themselves a signal to force a core-dump.
+
+probably JUSTRETURN may not be the best return value, as the program
+may not realise it had an error.
+try truss, as that gives better information under linux emulation I'm
+told.
+
+
+
+On Thu, 28 May 1998, Daniel O'Connor wrote:
+
+> 
+> > I recently d/l the 4.0 distribution and it puked at me when i tried to
+> > run it. The error message was "Abort Trap".
+> > 
+> > I'm running 2.2.6-release with linux emulation, if anyone has any pointers
+> > as to why this is happening, i'd love to know. :)
+> That's the error message I get.
+> 
+> Here is the end of a linux_kdump of the setup.bin file -
+>   2584 setup.bin NAMI  "/compat/linux/usr/home/darius/projects/Office40_Install/setup.ini"
+>   2584 setup.bin NAMI  "/usr/home/darius/projects/Office40_Install/setup.ini"
+>   2584 setup.bin RET   linux_newstat JUSTRETURN
+>   2584 setup.bin CALL  getpid
+>   2584 setup.bin RET   getpid 2584/0xa18
+>   2584 setup.bin CALL  linux_open(0xefbfc8f0,0x800,0)
+>   2584 setup.bin NAMI  "/compat/linux/proc/2584/cmdline"
+>   2584 setup.bin NAMI  "/proc/2584/cmdline"
+>   2584 setup.bin RET   linux_open JUSTRETURN
+>   2584 setup.bin PSIG  SIGSEGV caught handler=0x835e794 mask=0x0 code=0xc
+>   2584 setup.bin CALL  linux_sigprocmask(0x1,0xefbfcc0c,0)
+>   2584 setup.bin RET   linux_sigprocmask 0
+>   2584 setup.bin CALL  linux_sigaction(0x6,0xefbfcb74,0xefbfcb64)
+>   2584 setup.bin RET   linux_sigaction 0
+>   2584 setup.bin CALL  getpid
+>   2584 setup.bin RET   getpid 2584/0xa18
+>   2584 setup.bin CALL  linux_kill(0xa18,0x6)
+>   2584 setup.bin PSIG  SIGIOT SIG_DFL
+>   2584 setup.bin NAMI  "setup.bin.core"
+> 
+> 
+> ---------------------------------------------------------------------
+> |Daniel O'Connor softwar
+[…中段省略 79 字符…]                                      |
+> |The nice thing about standards is that there are so many of them to|
+> |choose from. -- Andrew Tanenbaum                                   |
+> ---------------------------------------------------------------------
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606261 ###
+===== 库内序 147818 | PK 2606261 | 等级 L3 =====
+DATE: 1998-05-28T11:57:15+00:00
+FROM: Fernando Schapachnik <fpscha@ns1.sminter.com.ar>
+SUBJ: arplook
+摘要: Fernando 报告 ns3 kernel log 反复出现 arplookup host is not on local network 报错并求助
+
+Hello:
+	I'm getting:
+
+ns3 kernel log messages:
+> arplookup 102.255.209.107 failed: host is not on local network
+> arplookup 102.255.207.132 failed: host is not on local network
+> arplookup 102.255.76.88 failed: host is not on local network
+> arplookup 102.255.154.140 failed: host is not on local network
+> arplookup 102.255.56.204 failed: host is not on local network
+> arplookup 102.255.10.0 failed: host is not on local network
+> arplookup 102.255.30.166 failed: host is not on local network
+> arplookup 102.255.63.6 failed: host is not on local network
+[...]
+
+	I've read in the archives that the cause of this is that someone 
+in my ethernet is telling he is 102.255.x.x. May this be the same case? 
+Is there a way to find who is spreading this info?
+
+	My machine has 2.2.6, it's main IP is 200.10.104.x/26 and it has 
+an alias in 200.10.102.0/24, an other in 200.10.100.0/24 and more than 50 
+between 200.10.104.0/26 and 200.10.104.64/26.
+
+	Thanks and kind regards!
+
+
+PS: Please reply to me, I'm not following hackers.
+
+
+Fernando P. Schapachnik
+Administracion de la red
+S&M Internet
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606262 ###
+===== 库内序 147819 | PK 2606262 | 等级 L3 =====
+DATE: 1998-05-28T12:00:52+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: Star Office Installation
+摘要: Niall Smart：建议可 hexedit Star Office 安装二进制改为打开 /p/pid/cmdline
+
+On May 28, 11:20am, "Daniel O'Connor" wrote:
+} Subject: Star Office Installation
+> Hi,
+> I have been trying to install Star Office 4, but for some weird reason the 
+> installation binary tries to open /proc/<pid>/cmdline which doesn't exist in 
+> our version of /proc :(
+> 
+> Has anyone got this to install, or do I have to hack procfs myself?
+
+maybe you can hexedit the binary so that it tries to open /p/pid/cmdline
+instead.  of course this necessitates generating a load of /p/2323/cmdline
+/p/2324/cmdline of course.  perhaps you can also change the binary so
+it calls getppid instead or perhaps just get it to use a constant pid
+by replacing the insns which call getpid with ones that movl $0, %eax
+
+niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606263 ###
+===== 库内序 147820 | PK 2606263 | 等级 L4 =====
+DATE: 1998-05-28T12:13:42+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: allegro lisp
+摘要: Niall Smart：建议联系 Allegro Lisp 协助移植，称 5.0 beta 依赖 linux /proc 故不支持 FreeBSD 模拟
+
+Hi,
+
+AFAIK Allegro Lisp is used by quite a few people who run FreeBSD,
+therefore I suggest we contact them to inquire about the possibility
+of helping to ensure that the Linux version works under emulation on
+FreeBSD.  As someone has noted already, 5.0 beta does not work in
+FreeBSD compatability because it expects a linux /proc filesystem which
+the emulation layer does not fully support.  Perhaps they will consider
+modifying it to do whatever it is trying to do in a more portable way,
+or at least one which is compatable with our compatability layer :)
+
+If anyone here is friendly with the folks at Franz Inc. or has a support
+contract with them and is willing to request this of them then please
+email me.  Otherwise I will contact them myself later this week.
+
+
+Regards,
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606264 ###
+===== 库内序 147821 | PK 2606264 | 等级 L3 =====
+DATE: 1998-05-28T12:34:12+00:00
+FROM: Luiz de Barros <luiz@nlink.com.br>
+SUBJ: Cabling problems with etinc?
+摘要: Luiz de Barros 求助 Etinc 5025PQ E1 卡在 64Kbps 以上有问题，256Kbps 局向用 HDSL 加 V.35 转换
+
+Dear ALL,
+
+We purchased an Etinc 5025PQ PCI quad syncronous E1/T1/Fractional card and
+are havind a few problems putting it to work with more than 64Kbps.
+We have a 256Kbps fractional E1 link provided by the TELCO via an HDSL
+Termination Unit and a G.703 to V.35 E1 converter. 
+
+We would like to make a FreeBSD router, connecting our various networks
+and holding our connection to internet.
+
+The whole setup works fine with a cisco on the other side and IBM, Cisco
+and Cyclades routers here at our ISP (Same CSU/DSU cable, connecting the
+V.35 cable with the V.35 DTE cable from the router ). Etinc keeps saying
+it is a clable problem, CSU/DSU problem, but how does it work with any
+router?
+
+I configured etinc port to PPP, HDLC, internal, external clock, changed
+ifconfig parameters according to the manual and i am not being able to put
+the link up and IP packets going from one side to the other at 256Kbps.
+
+I purchased etinc because of good recomendations here on the list but as i
+could see, the support from etinc is not as good as it should be.  Did
+anybody already experienced any similar situation? Do i need to change
+etinc's cable?  Does anybody know of any other card that can work in this
+situation?
+
+I have heard of many other choices of Sync cards and maybe next time i
+will use another card, that can give me support to work with more than
+64Kbps. I used to recomend etinc to my friends because of its support to
+FreeBSD, a Robust system with full support from the developers, etc but
+now i am quite disappointed with etinc's support.
+
+Luiz
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606266 ###
+===== 库内序 147823 | PK 2606266 | 等级 L4 =====
+DATE: 1998-05-28T13:42:03+00:00
+FROM: Yuri Shemanin <yuri@stu.neva.ru>
+SUBJ: Re: Star Office Installation
+摘要: Yuri Shemanin：建议 hexedit setup.bin 将 /proc/%u/cmdline 改为 /proc/%u/status 再安装
+
+Hi,
+
+> I have been trying to install Star Office 4, but for some weird reason the 
+> installation binary tries to open /proc/<pid>/cmdline which doesn't exist in 
+> our version of /proc :(
+> 
+> Has anyone got this to install, or do I have to hack procfs myself?
+
+To force it to install and run:
+
+- using some hex editor change "/proc/%u/cmdline" to "/proc/%u/status\0"
+  in Office40_Install/setup.bin binary;
+
+- install it;
+
+- make the same change in <instdir>/lib/libsal364.so
+
+But I still can't have it understand Russian keyboard :(
+
+Regards, Yuri.
+ 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606268 ###
+===== 库内序 147825 | PK 2606268 | 等级 L3 =====
+DATE: 1998-05-28T15:23:11+00:00
+FROM: Dennis <dennis@etinc.com>
+SUBJ: Re: Cabling problems with etinc?
+摘要: Dennis 追问 Luiz 所称 Etinc 大于 64Kbps 不能工作是否意味着低于该速率可正常工作并求澄清
+
+At 09:34 AM 5/28/98 -0300, Luiz de Barros wrote:
+>Dear ALL,
+>
+>We purchased an Etinc 5025PQ PCI quad syncronous E1/T1/Fractional card and
+>are havind a few problems putting it to work with more than 64Kbps.
+>We have a 256Kbps fractional E1 link provided by the TELCO via an HDSL
+>Termination Unit and a G.703 to V.35 E1 converter. 
+
+You say "greater than 64kbs...does that imply that you have it working at
+lower
+speeds or on some other connection? If so, there is no difference for the
+higher
+speed...you should use EXACTLY the same settings. the board uses the same 
+setting @ 64kbs and 2Mbs.
+>
+>We would like to make a FreeBSD router, connecting our various networks
+>and holding our connection to internet.
+>
+>The whole setup works fine with a cisco on the other side and IBM, Cisco
+>and Cyclades routers here at our ISP (Same CSU/DSU cable, connecting the
+>V.35 cable with the V.35 DTE cable from the router ). Etinc keeps saying
+>it is a clable problem, CSU/DSU problem, but how does it work with any
+>router?
+>
+>I configured etinc port to PPP, HDLC, internal, external clock, changed
+>ifconfig parameters according to the manual and i am not being able to put
+>the link up and IP packets going from one side to the other at 256Kbps.
+>
+>I purchased etinc because of good recomendations here on the list but as i
+>could see, the support from etinc is not as good as it should be.  Did
+>anybody already experienced any similar situation? Do i need to change
+>etinc's cable?  Does anybody know of any other card that can work in this
+>situation?
+>
+>I have heard of many other choices of Sync cards and maybe next time i
+>will use another card, that can give me support to work with more than
+>64Kbps. I used to recomend etinc to my friends because of its support to
+>FreeBSD, a Robust system with full support from the developers, etc but
+>now i am quite disappointed with etinc's support.
+>
+>Luiz
+>
+>
+>
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-hackers" in the body of the message
+> 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606271 ###
+===== 库内序 147828 | PK 2606271 | 等级 L4 =====
+DATE: 1998-05-28T17:03:07+00:00
+FROM: Bill Fenner <fenner@parc.xerox.com>
+SUBJ: Re: arplook 
+摘要: Bill Fenner：建议用 tcpdump arp 抓包并可能需 BPF 内核，解释为收到非直连网络的 ARP 请求
+
+Are these machines on the same physical wire as you, and are they
+sending ARP requests for your IP address?  (use "tcpdump arp" to
+see; you might have to reconfigure your kernel with BPF in order
+to run tcpdump).  One explanation for this message is that you
+received an ARP request for your address from someone who you don't
+think is on a directly-connected network.
+
+BTW, you shouldn't be using network 102 as a private network.
+RFC1918 lists appropriate addresses for use on private networks.
+
+  Bill
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606272 ###
+===== 库内序 147829 | PK 2606272 | 等级 L3 =====
+DATE: 1998-05-28T17:11:11+00:00
+FROM: Luiz de Barros <luiz@nlink.com.br>
+SUBJ: Re: Cabling problems with etinc?
+摘要: Luiz de Barros 澄清 Cisco 2509 与 pathrouter 经 256Kbps E1 互连，欲用 Etinc 替代 cyclades
+
+Dear Edwin and ALL,
+
+I think i was not very clear.
+We have now a pathrouter here and a Cisco 2509 router on the other side (
+The backbone presence provider ). The connection is at 256Kbps via
+fractional E1.
+I would like to put one of the ports from etinc ( 0 or 1 ) connected to
+the CSU/DSU ( Converter ) and take out the cyclades router ( FreeBSD is
+quite better than a single router ).
+My CSU/DSU has a V.35 cable that works very fine with no problem if i
+connect it to a Cyclades, Cisco, IBM router  but not with etinc ( putting
+etinc instead of the router ).
+I thought it could be a cable incompatibility but it seems quite strange,
+as all routers work with it. I tryed connecting RXclockA to TxclockA and
+TxclockB to RxclockB on etinc but it did not work as well. Why should the
+converter not work with etinc and work with a router?
+
+Luiz
+
+
+
+
+
+On Thu, 28 May 1998, Edwin Culp wrote:
+
+> Luiz de Barros wrote:
+> > 
+> > Dear ALL,
+> > 
+> > We purchased an Etinc 5025PQ PCI quad syncronous E1/T1/Fractional card and
+> > are havind a few problems putting it to work with more than 64Kbps.
+> > We have a 256Kbps fractional E1 link provided by the TELCO via an HDSL
+> > Termination Unit and a G.703 to V.35 E1 converter.
+> > 
+> > We would like to make a FreeBSD router, connecting our various networks
+> > and holding our connection to internet.
+> > 
+> > The whole setup works fine with a cisco on the other side and IBM, Cisco
+> > and Cyclades routers here at our ISP (Same CSU/DSU cable, connecting the
+> > V.35 cable with the V.35 DTE cable from the router ). Etinc keeps saying
+> > it is a clable problem, CSU/DSU problem, but how does it work with any
+> > router?
+> Why would you want to connect your etinc card to/through your cisco?
+> Isn't that defeating the purpose?  What I would want, would be remove
+> the cisco or if it were necessary for another connection use ethernet
+> between it and my FreeBSD ROUTER.  Maybe I'm on another channel, and
+> if I am please desregard the question.
+> 
+> ed
+> 
+> P.D.  I think the problem is cable incompatability.  I think Dennis once
+> made that observati
+[…中段省略 696 字符…] ive me support to work with more than
+> > 64Kbps. I used to recomend etinc to my friends because of its support to
+> > FreeBSD, a Robust system with full support from the developers, etc but
+> > now i am quite disappointed with etinc's support.
+> > 
+> > Luiz
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-isp" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606273 ###
+===== 库内序 147830 | PK 2606273 | 等级 L3 =====
+DATE: 1998-05-28T17:24:41+00:00
+FROM: Luiz de Barros <luiz@nlink.com.br>
+SUBJ: Re: Cabling problems with etinc?
+摘要: Luiz de Barros 说明 64Kbps 链路及 Cyclades 接 Cisco 256Kbps 均正常，Etinc 替换 cyclades 不通
+
+I have everything working ok at 64Kbps on other connection and a Cyclades
+connected to a Cisco on the other side at 256Kbps. I would like to connect
+Etinc instead of cyclades here and it does not work.
+
+Luiz
+
+
+On Thu, 28 May 1998, Dennis wrote:
+
+> At 09:34 AM 5/28/98 -0300, Luiz de Barros wrote:
+> >Dear ALL,
+> >
+> >We purchased an Etinc 5025PQ PCI quad syncronous E1/T1/Fractional card and
+> >are havind a few problems putting it to work with more than 64Kbps.
+> >We have a 256Kbps fractional E1 link provided by the TELCO via an HDSL
+> >Termination Unit and a G.703 to V.35 E1 converter. 
+> 
+> You say "greater than 64kbs...does that imply that you have it working at
+> lower
+> speeds or on some other connection? If so, there is no difference for the
+> higher
+> speed...you should use EXACTLY the same settings. the board uses the same 
+> setting @ 64kbs and 2Mbs.
+> >
+> >We would like to make a FreeBSD router, connecting our various networks
+> >and holding our connection to internet.
+> >
+> >The whole setup works fine with a cisco on the other side and IBM, Cisco
+> >and Cyclades routers here at our ISP (Same CSU/DSU cable, connecting the
+> >V.35 cable with the V.35 DTE cable from the router ). Etinc keeps saying
+> >it is a clable problem, CSU/DSU problem, but how does it work with any
+> >router?
+> >
+> >I configured etinc port to PPP, HDLC, internal, external clock, changed
+> >ifconfig parameters according to the manual and i am not being able to put
+> >the link up and IP packets going from one side to the other at 256Kbps.
+> >
+> >I purchased etinc because of good recomendations here on the list but as i
+> >could see, the support from etinc is not as good as it should be.  Did
+> >anybody already experienced any similar situation? Do i need to change
+> >etinc's cable?  Does anybody know of any other card that can work in this
+> >situation?
+> >
+> >I have heard of many other choices of Sync cards and maybe next time i
+> >will use another card, that can give me support to work with more than
+> >64Kbps. I used to recomend etinc to my friends because of its support to
+> >FreeBSD, a Robust system with full support from the developers, etc but
+> >now i am quite disappointed with etinc's support.
+> >
+> >Luiz
+> >
+> >
+> >
+> >
+> >
+> >
+> >To Unsubscribe: send mail to majordomo@FreeBSD.org
+> >with "unsubscribe freebsd-hackers" in the body of the message
+> > 
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606274 ###
+===== 库内序 147831 | PK 2606274 | 等级 L3 =====
+DATE: 1998-05-28T17:25:14+00:00
+FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: opinions on K6 versus P55C in Asus T2P4
+摘要: Wilko Bulte 征求 Asus T2P4 主板上 AMD K6/233Mc 与 Intel P55C/233Mc 孰优孰劣的意见
+
+I'm looking for opinions on an AMD K6/233Mc versus an Intel P55C/233 Mc
+in an Asus T2P4 mainboard.
+
+Good/bad ?
+
+Wilko
+_     ______________________________________________________________________
+ |   / o / /  _  Bulte 				  email: wilko @ yedi.iaf.nl 
+ |/|/ / / /( (_) Arnhem, The Netherlands          WWW:   http://www.tcja.nl
+______________________________________________ Powered by FreeBSD __________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606275 ###
+===== 库内序 147832 | PK 2606275 | 等级 L3 =====
+DATE: 1998-05-28T17:59:36+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: Star Office Installation
+摘要: Ollivier Robert 称自己只跑 CURRENT 故无法回答关于 SO4 在 2.2.6 模拟下故障的疑问
+
+According to Nicholas Charles Brawn:
+> I'm running 2.2.6-release with linux emulation, if anyone has any pointers
+> as to why this is happening, i'd love to know. :)
+
+I really don't know, I only run CURRENT... :-)
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606276 ###
+===== 库内序 147833 | PK 2606276 | 等级 L4 =====
+DATE: 1998-05-28T17:58:02+00:00
+FROM: Ollivier Robert <roberto@keltia.freenix.fr>
+SUBJ: Re: Star Office Installation
+摘要: Ollivier Robert：SO4 每次运行后总留数十个共享内存段，即便干净退出亦然，故自备脚本在运行后清理残留
+
+According to Alfred Perlstein:
+> could you please check your shared mem segments on the next crash? just
+> ipcs and tell me if you have a LOT of segments lyinh around? also are you
+> running -stable? -current?
+
+It always leave a few dozen shared mem segments laying around. Even when it 
+does exit cleanly. I have a script that wipe out the shared segments after
+running SO4.
+
+-=-=-=-
+#! /sbin/tcsh
+set path=(/z/Office40/bin $path)
+mesg n
+soffice $*
+ipcs | awk '/^m/ {print $2}' | xargs -n1 -t ipcrm -m
+-=-=-=-
+
+Use with caution if you have other applications used shmseg.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #60: Fri May 15 21:04:22 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606277 ###
+===== 库内序 147834 | PK 2606277 | 等级 L4 =====
+DATE: 1998-05-28T18:42:12+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Star Office Installation 
+摘要: Mike Smith：称 SO4 安装失败是已知问题，不解为何不直接用 argc argv，建议为 procfs 增加参数支持
+
+> Hi,
+> I have been trying to install Star Office 4, but for some weird reason the 
+> installation binary tries to open /proc/<pid>/cmdline which doesn't exist in 
+> our version of /proc :(
+> 
+> Has anyone got this to install, or do I have to hack procfs myself?
+
+This is a known problem.  I am at a complete loss as to why argc/argv 
+aren't good enough for those losers, but you are very welcome to add 
+argument support to procfs.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606280 ###
+===== 库内序 147837 | PK 2606280 | 等级 L4 =====
+DATE: 1998-05-28T19:10:53+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: freebsd on compaqs 
+摘要: Mike Smith：Thunderlan 驱动可用但尚无发行版收录，下个 -SNAP CD 会带或可从 current.freebsd.org 获取
+
+> In message <199805280443.VAA28178@hub.freebsd.org>you write:
+> >will freebsd run on Compaq Deskpro's with builtin UTP (10/100) ?
+> 
+> I'm using Bill Paul's brand new driver for the Thunderlan.  It's
+> working fairly well, but there's no release with this driver in
+> it, so installing from scratch will be a trick.
+
+The next -SNAP CD will have this, or you can get one from
+current.freebsd.org.
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606282 ###
+===== 库内序 147839 | PK 2606282 | 等级 L3 =====
+DATE: 1998-05-28T20:45:45+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Re: FreeBSD Lab
+摘要: Andrzej Bialecki 在 FreeBSD Lab 文件系统讨论里提到 non-IDE flash bootblock
+
+On Mon, 25 May 1998, IBS / Andre Oppermann wrote:
+
+> Filesystem:
+>  FFS soft-updates
+>  NFS Locking
+>  vinum
+>  CODA
+>  RAIDframe
+>  RIO
+>  IDA
+
+FFS
+(i.e. Flash File System :-))
+non-IDE flash bootblock
+
+Andrzej Bialecki
+
+--------------------+---------------------------------------------------------
+abial@nask.pl       | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic | "Be open-minded, but don't let your brains to fall out."
+Network in Poland   | All of the above (and more) is just my personal opinion.
+--------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

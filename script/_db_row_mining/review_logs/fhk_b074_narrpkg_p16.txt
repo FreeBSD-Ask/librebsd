@@ -1,0 +1,25 @@
+2605019|L3|Jaroslav Klaus：反问是否也要建 FreeBSD Gnome 小组，并认为应归入 freebsd-ports
+2605021|L3|Christoph Kukulies：认为把 KDE 放进 ports 会很快淹没 ports，并称 KDE 特殊因为它不只是移植品
+2605022|L4|Tom：指出必须修改 daemon 类而不是通用类，因为 init 在启动 rc 脚本前已切换到 daemon 类
+2605026|L3|Robert Watson：询问 syscall 的上下文切换耗时与换入另一进程的耗时，以及内核 profiler 是否计及切入内核上下文的时间
+2605029|L3|Ulf Zimmermann：询问如何像 device sd0 那样在启动时动态注册 raid 控制器的块设备，希望知道不用 DEVFS 的做法
+2605030|L4|Christoph Toshok：称 FreeBSD 上 pthreads 性能极差，改用 NSPR 后 javac 编译从 39 秒降到 18 秒
+2605031|L3|Hans Huebner：为承载 NIS DNS 邮件等关键服务的 FreeBSD 主机寻找热备接管方案，希望实现 NIS 与 DNS 故障切换
+2605032|L4|Alfred Perlstein：建议用 MX 记录配合 NIS 从服务器与 DNS 从服务器解决，指出网卡 MAC 烧录在卡上，多 PTR 轮询未证实
+2605033|L3|Jos Backus：询问宏名是 make.conf 的 NOSENDMAIL 还是 usr/sbin/Makefile 的 NO_SENDMAIL
+2605034|L3|Jos Backus：自纠拼写后重问宏名是 NOSENDMAIL 还是 NO_SENDMAIL，路径改为 usr.sbin/Makefile
+2605035|L4|Darren Reed：补充至少在 Sun 上可用 ifconfig le0 ether a:b:c:d:e:f 修改以太地址
+2605036|L3|Eivind Eklund：回复 Hans Huebner 关于共享 SCSI 总线的问题，提到 Simon Shapiro 写过相关代码
+2605039|L3|Jordan K. Hubbard：澄清自己想知道的是 FreeBSD 用户线程相比其他平台用户线程包为何慢，而非讨论内核线程
+2605040|L4|Mike Smith：说明许多 PC 市场网卡不允许改动出厂 MAC 地址，因此 FreeBSD 不提供改址设施
+2605041|L4|Mike Smith：建议照 sd 驱动的做法动态注册设备，并说明仍需要预创建的 /dev 节点
+2605043|L3|Hans Huebner：认为共用 SCSI 总线能把 HA 双机的停机时间压到最低，以此反驳改用 SCSI switch 的建议
+2605046|L3|Hans Huebner：针对 IP 层接管功能等价的看法，指出 IP 层故障切换需要重新 arp 该地址
+2605048|L4|John Birrell：指出在没有内核特殊支持时用抢占式调度器实现用户线程，必须依赖信号来触发上下文切换
+2605052|L4|Mattias Pantzare：ifconfig 会自动发出免费 ARP 来刷新邻居主机上的缓存
+2605053|L4|John Birrell：阻塞系统调用让延迟机制不值得，应集中做内核线程接口
+2605054|L3|Matthew N. Dodd 询问 KNE-3221 网卡 SONIC DP83932 芯片是否被支持
+2605057|L4|Mike Smith：SONIC DP83932 就是 SONIC，并不与 8390x 兼容
+2605058|L4|Alex：推荐一个只生成 ELF 二进制且不依赖 libc 的包生成工具改造 pkg 系统
+2605063|L4|Jordan K. Hubbard：现有 pkg_add 格式本身就是打包木马示范，别推可执行包
+2605065|L4|Jordan K. Hubbard：不应该鼓励可执行包，签名包并附安装脚本警示才是目标

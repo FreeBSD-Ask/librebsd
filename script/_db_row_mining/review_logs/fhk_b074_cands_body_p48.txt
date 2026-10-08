@@ -1,0 +1,844 @@
+署名归属规则（先读）：行首带 `>` 的是引用块，里面的话属于被引者，不得署给本封 FROM。本封作者只算 FROM 行 + 正文末尾自签 + 第一人称自述。正文中段的 `>` 块内人名与结论，一律不归给 FROM。
+### PK 2606319 ###
+===== 库内序 147876 | PK 2606319 | 等级 L3 =====
+DATE: 1998-05-28T16:13:24+00:00
+FROM: usura@zedz.net
+SUBJ: netscape 4.05 us
+摘要: usura：询问 FreeBSD 是否有 netscape 4.05 US 128 位加密版，只见到非官方国际版指引
+
+
+Does anyone know if there is a netscape 4.05 US (128 bits encryption)
+for FreeBSD ? (there is an 'unsupported international version' but I've
+not seen any pointers to the US version.
+
+Help appreciated.
+
+-AJ-
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606320 ###
+===== 库内序 147877 | PK 2606320 | 等级 L4 =====
+DATE: 1998-05-29T15:30:03+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: flags for media selection on "ed" card ? 
+摘要: Mike Smith：指出 8390 家族与原始 NE2000 都没有通用介质选择机制
+
+> Hi,
+> 
+> I have a no-name PCMCIA ne2000 clone which works fine with 226+PAO,
+> but  defaults to use the UTP port. Is there a way to control the
+> transceiver type on the ed driver ? It seems not to support "media"
+> commands, and the link0, link1 and link2 seem to have no noticeable
+> effect
+
+There is no generic media control facility on the 8390 family of parts, 
+and none in the original NE2000.  Your card probably takes its setting 
+from the EEPROM or some other GP IO bit.  Without knowing this (which 
+tends to vary on a card-to-card basis), you're probably going to have 
+to resort to using the card-specific setup program.
+
+Just FWIW, you shouldn't need PAO for this...
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606321 ###
+===== 库内序 147878 | PK 2606321 | 等级 L4 =====
+DATE: 1998-05-29T20:27:29+00:00
+FROM: Mahlon Smith <reich@internetcds.com>
+SUBJ: Re: Apache configuration help (sample config files please)?
+摘要: Mahlon Smith：给出 httpd 命令 /usr/local/etc/apache/src/httpd -f httpd.conf，建议放进 rc
+
+
+Charles wrote: 
+> My problems are not so much with the Apache configuration, my 
+> problems mainly relate to getting the httpd process statrted.
+
+
+Usually the startup line looks like this:
+/usr/local/etc/apache/src/httpd -f /usr/local/etc/apache/conf/httpd.conf
+
+Where it's
+[path to the daemon] -f [path to the config file]
+
+It's a good idea to make a shell script with that line in it, and stick it
+in your /usr/local/etc/rc.d/  directory, so it launches at startup.
+
+> I am 
+> new to FreeBSD, and Unix, and I am confused as to some of the proper 
+> settings in the config files (acces.conf, httpd.conf, and srm.conf).  
+
+If you look through those files, *every* option is commented, and those
+comments tell exactly what the command does.  If you are unsure about a
+specific command, that's where the apache web pages
+(http://www.apache.org> come in - you're correct, they don't have much in
+the way of sample config files, but they have an incredible amount of info
+relating to specific commands.
+
+Armed with that stuff, you should be able to get a apache server running
+nicely.
+
+
+Mahlon
+reich@internetcds.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606322 ###
+===== 库内序 147879 | PK 2606322 | 等级 L3 =====
+DATE: 1998-05-29T20:38:54+00:00
+FROM: Mahlon Smith <reich@internetcds.com>
+SUBJ: Re: netscape 4.05 us
+摘要: Mahlon Smith：回帖只给 ports 检索链接 http://www.freebsd.org/cgi/ports.cgi
+
+
+
+On Thu, 28 May 1998 usura@zedz.net wrote:
+
+> Does anyone know if there is a netscape 4.05 US (128 bits encryption)
+> for FreeBSD ? (there is an 'unsupported international version' but I've
+> not seen any pointers to the US version.
+
+
+http://www.freebsd.org/cgi/ports.cgi?query=netscape&stype=all
+
+
+
+-Mahlon
+-reich@internetcds.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606323 ###
+===== 库内序 147880 | PK 2606323 | 等级 L4 =====
+DATE: 1998-05-29T21:29:13+00:00
+FROM: Adrian Filipi-Martin <adrian@nvl.virginia.edu>
+SUBJ: Re: Apache configuration help (sample config files please)?
+摘要: Adrian Filipi-Martin：称样例配置在 /usr/local/etc/apache，启动脚本为 rc.d 下 apache.sh
+
+Hi Charles,
+
+	If you installed apache as a port or package, take a look in the
+/usr/local/etc/apache directory for sample/default configuration files.
+Then take alook at /usr/local/etc/rc.d/apache.sh to see how it is started
+at boot time.  www.apache.org has a complete and searchable set of
+documentation on-line as well.
+
+	In the future, please post this type of question to the questions
+mailing list.  It is perfectly appropriate there.  The hackers list is
+more for the developers to discuss implementation details.
+
+	The questions list can be reached at freebsd-questions@freebsd.org.
+
+cheers,
+
+	Adrian
+--
+adrian@virginia.edu        ---->>>>| If I were stranded on a desert island, and
+System Administrator         --->>>| I could only have one OS for my computer,
+Neurosurgical Visualization Lab ->>| it would be FreeBSD.  Think about it.....
+http://www.nvl.virginia.edu/     ->|      http://www.freebsd.org/
+
+
+On Fri, 29 May 1998, Charles A. Peters wrote:
+
+> Earlier I asked about apache configuration information.
+> 
+> My problems are not so much with the Apache configuration, my 
+> problems mainly relate to getting the httpd process statrted.  I am 
+> new to FreeBSD, and Unix, and I am confused as to some of the proper 
+> settings in the config files (acces.conf, httpd.conf, and srm.conf).  
+> I also am not sure about setting up acess groups and that sort of 
+> thing.  One thing that might help me would be a sample set of the 
+> above mentioned files (commented of coarse). 
+> 
+> I have searched the Apache site and they have no sample config files, 
+> or clear primers for novices.
+> 
+> Thank you for your assistance and advise.
+> 
+> 
+> Charles
+> charlespeters@tecpro.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606325 ###
+===== 库内序 147881 | PK 2606325 | 等级 L3 =====
+DATE: 1998-05-29T21:58:20+00:00
+FROM: usura@zedz.net
+SUBJ: netscape 4.05 US (128 bits)
+摘要: usura：追问 FreeBSD 是否存在 netscape 4.05 US 128 位版，抑或只有国际版
+
+
+Is there a netscape 4.05 US (128 bits) -at all- or is there only the
+International version for FreeBSD ?
+
+-aj-
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606326 ###
+===== 库内序 147882 | PK 2606326 | 等级 L4 =====
+DATE: 1998-05-29T23:44:36+00:00
+FROM: arnej+freebsd@stud.math.ntnu.no
+SUBJ: Re: MANDEPEND
+摘要: arnej：指自己先前 -current 补丁误含 NULL 整型上下文修复，announce.c 已修而 ifconfig.c 与 mount.c 仍有效
+
+I wrote:
+> I've appended the patch for -current
+
+but that patch shouldn't have included some old fixes for NULL used in
+integer context... sorry about that:
+
+> Index: src/libexec/talkd/announce.c
+> Index: src/sbin/ifconfig/ifconfig.c
+> Index: src/sbin/mount/mount.c
+
+(The first one is already fixed, but the two other patches seems to
+be relevant still... anyone want to commit those two?)
+
+  -arnej
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606327 ###
+===== 库内序 147883 | PK 2606327 | 等级 L3 =====
+DATE: 1998-05-30T00:05:12+00:00
+FROM: Staffan Ulfberg <staffanu@nada.kth.se>
+SUBJ: Re-mounting root after boot?
+摘要: Staffan Ulfberg：首次发信，依 Handbook 22.1.4 的 MFS 内核加特殊 sbin init 思路问开机后重挂 root
+
+Hello,
+
+This is my first post to this mailing list, and I hope it's not
+terribly off-topic.  The content is very similar to a post to
+comp.unix.bsd.freebsd yesterday, but I hope the main question is
+better answered here.
+
+The FreeBSD Handbook, sec 22.1.4, "Interesting Combinations" contains
+the following:
+
+Boot a kernel with a MFS in it with a special /sbin/init which...
+  -  NFS mounts your server:~you/FreeBSD as /nfs, chroots to /nfs and
+     executes /sbin/init there
+
+My question is: is this really possible?  To test it out, I simply
+made a new /sbin/init on a working system:
+
+Before launching the single user sh, init now does the following (when
+booting "normally," init works as usual).
+
+system("/sbin/ifconfig zp0 inet 62.20.128.20 netmask 0xffffff80");
+system("/sbin/mount -t nfs multivac:/f /mnt");
+chroot("/mnt");
+chdir("/");
+	
+The shell is launched correctly, and the chroot works.  (Before
+rebooting, I made a copy of the machine's kernel in the new root since
+the boot kernel is expected to be in the root directory.)  This was
+easy...  after CTRL-D boot continues normally, and everything seems to
+work.  After a minute or so, however (sometimes I have the time to log
+in and type a few commands, sometimes not), the kernel panics.
+"Unexpected page fault while in kernel mode," process: idle.
+
+Question: am I close to having it all working, or is there a
+fundamental flaw in this setup?  For example, maybe the kernel has
+some record of the root device which is now inconsistent with the one
+I'm using?
+
+Staffan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606328 ###
+===== 库内序 147884 | PK 2606328 | 等级 L3 =====
+DATE: 1998-05-30T00:15:42+00:00
+FROM: Andrzej Bialecki <abial@nask.pl>
+SUBJ: Signed executables, safe delete etc.
+摘要: Andrzej Bialecki：设想让 kernel 或 init(8) 以 MD5 或 SHA 校验和自校二进制文件，校验失败即拒绝继续
+
+Hi hackers,
+
+Recently I was thinking about various security-related issues, and came up
+with this idea (I'm sure nothing new at all).
+
+What I imagine is e.g. to have kernel and/or init(8) check it's own binary
+file against a checksum of some kind (preferably MD5 or SHA) stored
+somewhere. If the checksumming fails (i.e. the kernel or init have been
+tampered with) it refuses to go on. This checking could go even earlier,
+that is in the bootblocks (I know - there is not single byte left
+there...), which could require user to enter a password in order to load
+the kernel (possibly decrypting previously encrypted part of freebsd
+partition).
+
+As for the signed binaries: this could be also a good way to ensure of the
+creator, owner etc of the binary, even with his email address and PGP
+key... :-) (ok, maybe I'v gone too far). 
+
+I'm sure there are many difficult issues to resolve in this idea (such
+as: how to manage the keys). 
+
+You can wonder what all this is for: it helps to ensure that no element of
+the system has been changed without you knowing it. It could be performed
+during startup of the system, and/or just before executing each binary (as
+far as I understand it, ELF allows to put pretty arbitrary sections into
+the binary). Moreover, this helps to ensure that the system won't boot
+without proper authorization, and even if someone steals it, it could
+refuse to give in (this would require encrypting the disk contents, of
+course - that's why I said about bootblocks...).
+
+The second idea is to add new flag and functionality to FFS: purge on
+delete. If this flag is set, kernel would wipe out the contents of the
+file which is being deleted, using special patterns (3-7 times). This
+would ensure that if you delete the sensitive data, they are really
+deleted and unrecoverable.
+
+So, my question is: is this something worth pursuing? Has anyone seen
+something similar? etc, etc...
+
+
+Andrzej Bialecki
+
+--------------------+---------------------------------------------------------
+abial@nask.pl       | if(halt_per_mth > 0) { fetch("http://www.freebsd.org") }
+Research & Academic | "Be open-minded, but don't let your brains to fall out."
+Network in Poland   | All of the above (and more) is just my personal opinion.
+--------------------+---------------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606331 ###
+===== 库内序 147887 | PK 2606331 | 等级 L3 =====
+DATE: 1998-05-30T01:19:16+00:00
+FROM: Greg Lehey <grog@lemis.com>
+SUBJ: Re: VP3 supports UDMA?
+摘要: Greg Lehey：引述自己此前称 SiS 主板带 UDMA 且 Aladdin 大概率也支持，以回应 FreeBSD 仅支持 PIIX3 UDMA 的担忧
+
+Following up to -hackers
+
+On Thu, 28 May 1998 at 18:00:36 -0500, Tony Kimball wrote:
+> Quoth Greg Lehey on Fri, 29 May:
+>
+> : No.  I have a SiS motherboard with UDMA.  I'm pretty sure that Aladdin
+> : (probably the #1 choice) also supports it.
+>
+> To clarify my concern:  While I understand that VP3 and SiS support
+> UDMA, my concern is the FreeBSD does not support UDMA on anything but
+> PIIX3, last time I heard.
+
+Oh.  I hadn't heard that.  I checked the logs on the SiS disk, and I
+hadn't tried to enable UDMA there.  I no longer have the disk (I was
+installing it for somebody else), but I'd be rather more than
+disappointed if the UDMA (or other DMA) support didn't work there.
+
+Greg
+--
+See complete headers for address and phone numbers
+finger grog@lemis.com for PGP public key
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606333 ###
+===== 库内序 147889 | PK 2606333 | 等级 L3 =====
+DATE: 1998-05-30T03:17:20+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：自述在闲置 ide 硬盘装 turbo linux 1.2 后 StarOffice 可用
+
+I installed turbo linux 1.2 on one of my spare ide drives and 
+StarOffice seems to work.
+
+	
+	Amancio
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606334 ###
+===== 库内序 147890 | PK 2606334 | 等级 L3 =====
+DATE: 1998-05-30T04:08:55+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Star Office Installation 
+摘要: Mike Smith：称 Linux 上可用是已知情况并非问题所在
+
+> I installed turbo linux 1.2 on one of my spare ide drives and 
+> StarOffice seems to work.
+
+Yes, we know it works on Linux.  That's not the problem. 8)
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606335 ###
+===== 库内序 147891 | PK 2606335 | 等级 L3 =====
+DATE: 1998-05-30T05:21:42+00:00
+FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Star Office Installation 
+摘要: Amancio Hasty：为已实测 StarOffice 在 Linux 可用且退出时清理共享段，追问无人深入 linux 层解决 ipc 共享段清理问题
+
+Yes, it could be a problem and at least I verify that it works . Had 
+instances in the past where linux people blindly claimed that something
+worked and such was not the case. Additionally, upon exit StarOffice
+cleans up its shared segments.
+
+My next question is ,
+why so many postings about Star Office without a single soul venturing
+into the linux layer to solve at least the ipc shared memory segments
+clean up?
+
+Well, lets chat about it some more 8)
+
+	Amancio
+
+> > I installed turbo linux 1.2 on one of my spare ide drives and 
+> > StarOffice seems to work.
+> 
+> Yes, we know it works on Linux.  That's not the problem. 8)
+> 
+> -- 
+> \\  Sometimes you're ahead,       \\  Mike Smith
+> \\  sometimes you're behind.      \\  mike@smith.net.au
+> \\  The race is long, and in the  \\  msmith@freebsd.org
+> \\  end it's only with yourself.  \\  msmith@cdrom.com
+> 
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606337 ###
+===== 库内序 147893 | PK 2606337 | 等级 L3 =====
+DATE: 1998-05-30T04:59:21+00:00
+FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+SUBJ: Re: flags for media selection on "ed" card ?
+摘要: Luigi Rizzo：认可 8390 无通用介质控制且取值随卡而异的说法，称自己再去试能否解决
+
+> There is no generic media control facility on the 8390 family of parts, 
+> and none in the original NE2000.  Your card probably takes its setting 
+> from the EEPROM or some other GP IO bit.  Without knowing this (which 
+
+right...
+
+> tends to vary on a card-to-card basis), you're probably going to have 
+> to resort to using the card-specific setup program.
+
+right... i guess i will have to see if i can make it work under
+pcmeu :)
+
+> Just FWIW, you shouldn't need PAO for this...
+
+i know, but i loaded PAO because it seems to support well APM
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606338 ###
+===== 库内序 147894 | PK 2606338 | 等级 L4 =====
+DATE: 1998-05-30T07:16:29+00:00
+FROM: Nate Williams <nate@mt.sri.com>
+SUBJ: Re: flags for media selection on "ed" card ?
+摘要: Nate Williams：称 FreeBSD 对 APM 的支持优于 PAO，故不必为 APM 而加载 PAO
+
+> > Just FWIW, you shouldn't need PAO for this...
+> 
+> i know, but i loaded PAO because it seems to support well APM
+
+The APM support in FreeBSD is better than PAO.
+
+
+Nate
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606340 ###
+===== 库内序 147896 | PK 2606340 | 等级 L3 =====
+DATE: 1998-05-30T09:32:43+00:00
+FROM: njs3@doc.ic.ac.uk (Niall Smart)
+SUBJ: Re: Signed executables, safe delete etc.
+摘要: Niall Smart：回帖质疑签名可执行文件与 secure delete 提议，以攻击者若能直接篡改 kernel 或 init 为由
+
+On May 30,  2:15am, Andrzej Bialecki wrote:
+} Subject: Signed executables, safe delete etc.
+> 
+> What I imagine is e.g. to have kernel and/or init(8) check it's own binary
+> file against a checksum of some kind (preferably MD5 or SHA) stored
+> somewhere. If the checksumming fails (i.e. the kernel or init have been
+> tampered with) it refuses to go on.
+
+If an attacker can tamper with the kernel or init then he can simply
+remove this code which performs this check, or make it a nop.  Use
+securelevels to protect system binaries from modification.  Also check
+out tripwire which has the kind of functionality you talk about and can be
+useful when setting immutable flags on a particular file is impractical.
+(e.g everyones .login)
+
+> The second idea is to add new flag and functionality to FFS: purge on
+> delete. If this flag is set, kernel would wipe out the contents of the
+> file which is being deleted, using special patterns (3-7 times). This
+> would ensure that if you delete the sensitive data, they are really
+> deleted and unrecoverable.
+
+Yes, this would be useful to certain people.  A encryption layer on
+top of the read/write interface to disks would also be nice,  people
+have worked on this, but I don't have the URL handy.
+
+Niall
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606341 ###
+===== 库内序 147897 | PK 2606341 | 等级 L3 =====
+DATE: 1998-05-30T10:50:41+00:00
+FROM: Doug Rabson <dfr@nlsystems.com>
+SUBJ: AlphaBIOS documentation
+摘要: Doug Rabson：询问 ARC 或 AlphaBIOS 引导流程文档、固件提供给 linload.exe 的服务及其源码出处
+
+Does anyone know if there is documentation available for the ARC or
+AlphaBIOS boot sequence?  In particular, what services does the firmware
+provide to the bootstrap program (e.g. linload.exe).  Alternatively, does
+anyone know where I can find the source code to linload.exe?
+
+Sigh.  I should have read more source code while I was at Microsoft :-).
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 951 1891
+					Fax:   +44 181 381 1039
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606342 ###
+===== 库内序 147898 | PK 2606342 | 等级 L4 =====
+DATE: 1998-05-30T12:59:58+00:00
+FROM: Nick Hibma <nick.hibma@jrc.it>
+SUBJ: Vold (was: What to do with this thing ?! (fwd))
+摘要: Nick Hibma：称已有类似 vold 的 Remedae 且为 beta，支持各类可移动设备并对 SCSI 设备自动挂载
+
+
+    > The "correct" solution would be to mount the media locally, however:
+    > - we don't have a "vold" (or comparable)
+
+We actually have. It's called Remedae. And yes it is beta. And yes I
+would appreciate a lot of feedback whether it works and why not. 
+
+It handles all kinds of removable devices and can do automounting for
+SCSI devices. As in, you insert your Yaz disk and after a second it
+mounts the device. The automounting requires patching of the kernel (the
+kernel is a bit noisy if you try to mount a device and the medium is not
+present) and libc_r to be present (I used threads to separate the
+automounting from the forced mounting). The approach is very simple: 
+daemon and a small program to chat to the daemon through a socket. 
+
+One nice feature: you can easily tell it to bugger off and mind its own
+business and NOT automount a specific device for a moment, without
+zapping the rmd: rmunmanage/rmmanage
+
+Can't remember the exact location, but a pointer can be found on
+
+http://www.etla.net/~n_hibma/
+
+Nick
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606344 ###
+===== 库内序 147900 | PK 2606344 | 等级 L4 =====
+DATE: 1998-05-30T14:43:30+00:00
+FROM: "Duane H. Hesser" <dhh@androcles.com>
+SUBJ: RE: netscape 4.05 us
+摘要: Duane H. Hesser：推荐 fortify.net 补丁套件，可为 FreeBSD 版 4.04 与 4.05 Netscape 提供强加密
+
+Try
+
+https://www.fortify.net/ 
+(or)
+http://www.fortify.net/
+
+for a kit which will patch many versions of Netscape (including at least
+the 4.04 and 4.05 FreeBSD versions) to provide strong encryption capabilities. 
+
+The software was developed outside the US, and download sites are non-US.
+
+Source code is distributed, along with binaries for many Unix versions (as well
+as OS/2 and NT),
+
+If you use this (I do), keep in mind that you will need to trust the developers
+of the package.  The source code is available, but the patching process is a
+bit opaque (at least to me).
+
+--------------
+Duane H. Hesser
+dhh@androcles.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606346 ###
+===== 库内序 147902 | PK 2606346 | 等级 L4 =====
+DATE: 1998-05-30T16:21:08+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: AlphaBIOS documentation 
+摘要: Mike Smith：称 Linux ARC bootloader 是精简版 Linux 内核，几乎不用 ARC 服务
+
+> Does anyone know if there is documentation available for the ARC or
+> AlphaBIOS boot sequence?  In particular, what services does the firmware
+> provide to the bootstrap program (e.g. linload.exe).  Alternatively, does
+> anyone know where I can find the source code to linload.exe?
+
+The Linux ARC bootloader is a cut-down Linux kernel.  Last I talked to 
+anyone about it, it used almost none of the ARC services, rather it 
+just banged directly on the hardware.
+
+I think the Linux-Mips ARC bootloader is similar.
+
+> Sigh.  I should have read more source code while I was at Microsoft :-).
+
+8)  Would they have let you at something like that anyway?
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606347 ###
+===== 库内序 147903 | PK 2606347 | 等级 L3 =====
+DATE: 1998-05-30T16:45:45+00:00
+FROM: Mike Smith <mike@smith.net.au>
+SUBJ: Re: Vold (was: What to do with this thing ?! (fwd)) 
+摘要: Mike Smith：称 Remedae 原有地址无法访问，另补一个 utwente 学生主页地址仍无响应，求其他替代
+
+> We actually have. It's called Remedae. And yes it is beta. And yes I
+> would appreciate a lot of feedback whether it works and why not. 
+...
+> Can't remember the exact location, but a pointer can be found on
+> 
+> http://www.etla.net/~n_hibma/
+
+  http://mat075207.student.utwente.nl/~nick/rmd/index.html
+
+Unfortunately, it's not responding.  Any alternatives?
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606349 ###
+===== 库内序 147905 | PK 2606349 | 等级 L4 =====
+DATE: 1998-05-30T23:06:06+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: FreeBSD supporter 
+摘要: Jordan K. Hubbard：称 FreeBSD 是志愿运行的非营利组织，短期不太可能上市，且资金只会使许多问题更复杂
+
+> I am ready to purchase stocks if you are on the wall street market.
+> Hope to hear from you soon.
+
+Heh.  No, and I doubt we'll be so listed anytime soon.
+
+We're a non-profit group run primarily by volunteers, and one thing
+I've found out as we get further into this is that money frequently
+only _complicates_ a number of issues.
+
+Sure, it's a fond vision to imagine $10M or so in the bank and a group
+of 20 hard-core developers all working away from our FreeBSD workshop
+set up in a picturesque european city on the banks of the Rhine river
+somewhere, but to accomplish all that would first require that some
+number of us pretty much cease all other work while all the 1001
+details of going commercial were worked out.  Meanwhile, the market
+would move on and our progess would be impeded while all the details
+of who would be employed and who would not were being worked out, to
+say nothing of getting useful work out of the 20 while they shuffled
+their lives completely around.
+
+Meanwhile, without any of this kind of overhead, we're doing very well
+this year and if progress is slow, it's in only a few areas which a
+few spot applications of cash can also help out a lot more than a big
+stock offering and I think to aggressively pursue commercial
+opportunities right now would only be a good way of potentially
+grabbing defeat from the jaws of victory.
+
+The system we have now works pretty well, money is being found here
+and there for those who really want to work on FreeBSD full-time (and
+have the skills to do so) and I don't think it's really the right time
+to be changing horses. :-)
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606350 ###
+===== 库内序 147906 | PK 2606350 | 等级 L3 =====
+DATE: 1998-05-31T00:16:08+00:00
+FROM: jack <jack@germanium.xtalwind.net>
+SUBJ: Re: FreeBSD supporter 
+摘要: jack：提及早先曾讨论设立网页以允许直接捐款
+
+On Sat, 30 May 1998, Jordan K. Hubbard wrote:
+
+> The system we have now works pretty well, money is being found here
+> and there for those who really want to work on FreeBSD full-time (and
+> have the skills to do so) and I don't think it's really the right time
+> to be changing horses. :-)
+
+There was mention a while ago, during a thread/flame war about
+contributions, about setting up a web page or something to allow
+direct contributions to FreeBSD Inc. using credit cards.  Did
+that ever happen?
+
+
+--------------------------------------------------------------------------
+Jack O'Neill                    Systems Administrator / Systems Analyst
+jack@germanium.xtalwind.net     Crystal Wind Communications, Inc.
+          Finger jack@germanium.xtalwind.net for my PGP key.
+   PGP Key fingerprint = F6 C4 E6 D4 2F 15 A7 67   FD 09 E9 3C 5F CC EB CD
+               enriched, vcard, HTML messages > /dev/null
+       Mail from netcom.com blocked until they stop relaying SPAM
+--------------------------------------------------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+### PK 2606351 ###
+===== 库内序 147907 | PK 2606351 | 等级 L4 =====
+DATE: 1998-05-31T00:20:11+00:00
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+SUBJ: Re: FreeBSD supporter 
+摘要: Jordan K. Hubbard：承认网页信用卡捐款确曾推进但 2.2.6 期间自己掉链子，有人寄来卡号与金额却一直未处理
+
+> There was mention a while ago, during a thread/flame war about
+> contributions, about setting up a web page or something to allow
+> direct contributions to FreeBSD Inc. using credit cards.  Did
+> that ever happen?
+
+Sorry, yes, that did sort of happen but I dropped the ball after that
+when 2.2.6 came up.  Someone even sent me his credit card details and
+the amount he wanted charged, and of course I never did so he's
+probably wondering now... :-)
+
+I think we'll just start from a clean slate at this point since I'm
+not going to thwack someone with a credit card debit some 3 months the
+donation was actually made, and as soon as I have a web page up which
+gives all the details and offers a secure form and all that (we'll
+probably just leach a page off of Walnut Creek CDROM's server) I'll
+make another announcement here for folks who'd like to donate funds
+that way.  Thanks for the prod!
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+

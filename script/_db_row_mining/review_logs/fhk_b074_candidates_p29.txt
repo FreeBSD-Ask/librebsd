@@ -1,0 +1,31 @@
+2605857|L3|提出把不能并入发行版却仍解决问题的补丁与驱动集中收录在一处含安装软盘
+2605860|L3|Andreas Klemm：称 Dmitry 建议的 cvs -R 只读模式访问 NFS 挂载仓库已足够
+2605862|L3|征集 CVSup FAQ 的补充问题条目
+2605863|L3|询问 FreeBSD 2.2.2 如何新增系统调用来在线修改 ip_input.c 中的全局数组
+2605864|L3|Studded：愿协助测试 WINE 相关补丁但感叹 FreeBSD 上的 Windows 模拟器恐难有进展
+2605867|L3|就集中收录非官方驱动与补丁的想法讨论该集合应如何命名
+2605868|L3|Matthew N. Dodd：称已在为 simon-shapiro.org 提供备份的 MX 与 NS 服务
+2605869|L3|询问 FreeBSD 2.2.5 下 Quantum DLT 磁带以 dump 与 rdump 组合备份后的还原方法
+2605870|L3|Erik E. Rantapaa：报告 ssh 1.2.20 下经 localhost 执行同一段 Perl 脚本与直接运行输出长度相同但内容重排
+2605871|L3|转述用户从软盘与光盘安装 FreeBSD 时在探测设备阶段出现 panic 的现象
+2605872|L4|Richard Wackerbarth：称构建机与目标机长期运行不同版本的说法并不完全成立
+2605873|L4|Luigi Rizzo：-stable 的 tcp_input.c 仍有 1.11 版本地网免慢启动优化疑违反 TCP 规范
+2605875|L3|Chuck Robey：询问 g++ 的 new 算子用自身分配器还是 PHK 的 libc malloc
+2605876|L3|Dennis：认为 Whistle 智能带宽的 WIPS 专题很特别但多数 ISP 未必需要
+2605877|L4|Luigi Rizzo：CBQ 与 WFQ 需在接口请求发包时选定下一个包故挂钩须放在驱动层
+2605878|L4|Kenjiro Cho：仅改 IF_DEQUEUE 不够因有驱动直接窥探 if_snd 或用 IF_PREPEND 不支持多队列
+2605879|L4|John Polstra：CVSup 既不创建锁也不理会锁故运行期间不要更新 NFS 上的 CVS 仓库
+2605881|L3|询问 vinum 是否计划加入 FreeBSD 以及是否本人的作品
+2605882|L4|Greg Lehey：认为 g++ 的 new 使用与可执行文件绑定的那个 malloc
+2605886|L3|转发 mozilla.org 的 CVS 查询界面 bonsai 的说明信息
+2605887|L4|Satoshi Asami：认为 vinum 动态卷调整实际需 FFS 支持已有文件系统调整或用原始磁盘分区且功能约等于 ccd
+2605891|L3|讨论 FreeBSD 在嵌入式系统中以 PCMCIA Flash 卡启动组路由器的可行性
+2605893|L4|Luigi Rizzo：认为只要内核配置得当就不会有等待不存在设备造成的长延时
+2605895|L3|询问 FreeBSD 网关接入使用 DHCP 的 NT 网络时如何按服务过滤主机访问
+2605897|L4|Jay Nelson：说明 DHCP 与 bootp 一样是广播未配置 DHCP 中继则其他子网主机看不到请求
+2605898|L3|Julian Elischer：称安装故障无人回复是因为自己也一筹莫展
+2605900|L3|Dan Janowski：报告 2.2.6 下 setroot 在第二块 SCSI 无切片原始磁盘标签场景选错根设备
+2605901|L4|Julian Elischer：建议用 disklabel -B sd1 更换引导块
+2605902|L4|Dan Janowski：确认已更换引导块并重试仍复现错误根设备现象
+2605903|L3|Mike Smith：认同 CVSup 既不创建锁也不理会锁这一点
+2605905|L3|Open Systems Networking：报告 softupdates 内核已持续运行两天五十四分钟并贴出挂载统计
