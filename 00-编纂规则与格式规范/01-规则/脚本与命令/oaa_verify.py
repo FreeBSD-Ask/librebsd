@@ -53,23 +53,71 @@ def cjk(s):
     return sum(1 for c in s if ord(c) > 0x2E7F)
 
 
-def is_bad_star(s):
-    """`*` 是否属禁用强调符。仅两种算强调：①成对 Markdown（`*word*` / `**bold**`）；
-    ②中文正文里被中文夹住的裸星（`*强调*`）。凡前后为英文/代码/层级通配（`*BSD`、`(*p)`、`comp.unix.*`）均豁免。
-    判定：找 `*` 成对包裹（下一个 `*` 之前无换行/空白断裂）→ 强调；或 `*` 两侧直接是中文 → 强调。"""
-    # 找成对星号包裹（单词强调 *word*；排除 C 注释 /* */ 与含空白的通配）
-    import re as _re
-    if _re.search(r"(?<!/)\*([^*\s/]{1,16})\*(?!\w)", s):
-        return True
-    # 中文夹星（两侧紧邻汉字）
+STAR_PAIR = re.compile(r"(?<!/)\*([^*\s/]{1,16})\*(?!\w)")
+# 粗体标记 `**` 的两两配对，用于识别「粗体接缝」
+DBL_STAR = re.compile(r"\*\*")
+# 被强调词的可能内文：纯字母/CJK/数字/下划线/连字符/撇号，不含任何标点
+PLAUSIBLE = re.compile(r"^\w[\w'’-]*$")
+
+
+def _pairs_and_roles(s):
+    """`**` 标记按序两两配对。返回 (pairs, role)。
+    pairs = [{'a': 开启标记起点, 'b': 闭合标记末位+1}]
+    role  = {字符索引: (对序号, 'open'|'close')}"""
+    ms = [m.start() for m in DBL_STAR.finditer(s)]
+    pairs = []
+    for i in range(0, len(ms) - 1, 2):
+        a, c = ms[i], ms[i + 1]
+        pairs.append({"a": a, "b": c + 2})
+    role = {}
+    for pid, p in enumerate(pairs):
+        role[p["a"]] = (pid, "open")
+        role[p["a"] + 1] = (pid, "open")
+        role[p["b"] - 2] = (pid, "close")
+        role[p["b"] - 1] = (pid, "close")
+    return pairs, role
+
+
+def _is_crossing(a, b, role):
+    """起星落在某对的【闭合】标记、终星落在【另一对】的【开启】标记 → 粗体接缝，非强调。"""
+    ra, rb = role.get(a), role.get(b)
+    return bool(ra and rb and ra[1] == "close" and rb[1] == "open"
+                and ra[0] != rb[0])
+
+
+def violation_stars(s):
+    """应判违规的星号索引集合。
+    STAR_PAIR 命中当且仅当 (a) 内文匹配 PLAUSIBLE 纯词、(b) 非跨对接缝。
+    内文含标点者只可能是通配星间隔（`*BSD`、`comp.unix.*`、`multi_x*_defconfig`）
+    或粗体内正则量词，不可能是被强调的词；跨对接缝剥掉会打断两枚相邻粗体。"""
+    _pairs, role = _pairs_and_roles(s)
+    vs = set()
+    for m in STAR_PAIR.finditer(s):
+        a, b = m.start(), m.end() - 1
+        if not PLAUSIBLE.match(m.group(1)):
+            continue
+        if _is_crossing(a, b, role):
+            continue
+        vs.add(a)
+        vs.add(b)
     for i, c in enumerate(s):
         if c != "*":
             continue
         prev = s[i - 1] if i > 0 else ""
         nxt = s[i + 1] if i + 1 < len(s) else ""
         if prev and ord(prev) > 0x2E7F and nxt and ord(nxt) > 0x2E7F:
-            return True
-    return False
+            vs.add(i)
+    return vs
+
+
+def is_bad_star(s):
+    """`*` 是否属禁用强调符。返回布尔（兼容旧调用方）。
+    判违规两类：①成对短词强调 `*word*`（内文为纯词）；②中文正文里被中文夹住的裸星 `*强调*`。
+    豁免三类：(i) 内文含标点的星号区间——通配星间隔 `*BSD`/`comp.unix.*` 与粗体内正则量词；
+    (ii) 相邻两枚粗体之间的接缝——起星在前一对闭合标记、终星在下一对开启标记，剥掉会打断粗体
+    （2026-10-08 F4 批次十三实测全库 1,040 处）；(iii) 前后为英文/代码/层级通配的裸星。
+    收窄依据见 `08-核查报告与多轮复核/07-目录审计/大纲邮件审计_批次OAA_F4批次十三_20261008.md` §二。"""
+    return bool(violation_stars(s))
 
 
 def main():

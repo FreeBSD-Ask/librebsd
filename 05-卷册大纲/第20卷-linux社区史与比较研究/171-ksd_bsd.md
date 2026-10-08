@@ -4299,7 +4299,7 @@
 - 【Linux社区】Geert 答 Jani：ARM patch system 不像 dim 那般可免用；延续社区治理工具差异讨论 `<!-- ROW_MINE: ksummit-discuss.messages.349265 -->`
 - 【Linux社区】Greg KH 谈 staging：atomisp 由 Intel 推入后遭弃置致从内核剔除，谦称此乃流程正常运作；阐明 Free Linux Driver 项目与 staging 仍活跃，被弃代码可 git revert 取回 `<!-- ROW_MINE: ksummit-discuss.messages.349266 -->`
 - 【Linux社区】Mauro 论 API 替换与废弃：不应动 W 维度，media 已致力 W=1 零警告，而 W=2/W=3 在 gcc 8 核心 kAPI 下噪声过多；提议加 D=1 标记废弃项 `<!-- ROW_MINE: ksummit-discuss.messages.349267 -->`
-- 【Linux社区】Peter Huewe 谈静态检查：赞同 ninja-check 包装器（聚合多静态分析器），请 Wolfram Sang 分享其脚本；属 2014 封面与静态检查 tech topic `<!-- ROW_MINE: ksummit-discuss.messages.349268 -->`
+- 【Linux社区】Peter Huewe 谈静态检查（2014-05-14，ksummit-discuss 的 coverity 与静态检查主题）：对被引段自述用以聚合多静态分析器的 ninja-check 包装器表 +1 支持并索要该脚本；该被引段无发件人抬头，使用者不可考 `<!-- ROW_MINE: ksummit-discuss.messages.349268 -->`
 - 【Linux社区】Daniel Vetter 问 Geert：ARM patch system 有无文档或链接，自称此前从未耳闻；延续治理工具差异讨论 `<!-- ROW_MINE: ksummit-discuss.messages.349269 -->`
 - 【Linux社区】Leon Romanovsky 论邮件评审的教化价值：公开 review 是众人可学的教材，gerrit 类工具偏好一对一；以被迫用内部 gerrit 与跨 netdev/RDMA 提交之苦佐证多工具世界之难 `<!-- ROW_MINE: ksummit-discuss.messages.349270 -->`
 - 【Linux社区】Geert 答 Daniel：给出 arm.linux.org.uk/developer/patches 链接，指出其仅收合规则的 git-send-email 补丁，并发现 Documentation/arm/README 仍过时（2.6、FTP） `<!-- ROW_MINE: ksummit-discuss.messages.349271 -->`
