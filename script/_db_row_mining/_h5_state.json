@@ -1403,14 +1403,14 @@
    "base_tag": "h5ar_b524",
    "batches": [
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 236,
+     "claims": "CL-RM-423131-423366",
+     "commit": "94860a4fe",
      "n": 6000,
-     "note": "",
+     "note": "236 候选入纲 78 块（161.5=14/154.13=32/101.2=20/171.8=12）、158 判 NONE、幂等 +0、提交 94860a4fe",
      "offset": 0,
-     "parts": 0,
-     "state": "pending",
+     "parts": 12,
+     "state": "committed",
      "tag": "h5ar_b524_1"
     },
     {
@@ -1480,10 +1480,10 @@
    "hosts_guess": [],
    "n_batches": 6,
    "name": "freebsd-arch",
-   "note": "",
-   "offset": 0,
-   "remaining": 35166,
-   "state": "pending",
+   "note": "b524_1 已 committed，整库 35166 封已读 6000 / 剩 29166；余 5 批",
+   "offset": 6000,
+   "remaining": 29166,
+   "state": "in_progress",
    "total": 35166
   },
   {
