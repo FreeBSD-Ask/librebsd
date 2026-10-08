@@ -1425,14 +1425,14 @@
      "tag": "h5ar_b524_2"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 158,
+     "claims": "CL-RM-423594-423751",
+     "commit": "cc3da1758",
      "n": 6000,
-     "note": "",
+     "note": "158 候选入纲 34 块（161.5=5/154.13=19/101.2=7/171.8=3）、124 判 NONE、numstat +170/0=34块x5行、register 反查 quote 158/158、四表 join 34、seq CL-RM-423594-423751 连续无洞、幂等二跑 +0、提交 cc3da1758；p2 编造 pk 874260 已剔除、p8/p11 在入纲后落盘已外科补丁（877507/878600 叙述句）",
      "offset": 12000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 12,
+     "state": "committed",
      "tag": "h5ar_b524_3"
     },
     {
@@ -1480,9 +1480,9 @@
    "hosts_guess": [],
    "n_batches": 6,
    "name": "freebsd-arch",
-   "note": "h5ar_b524_2 已 committed，整库 35166 封已读 12000 / 剩 23166（余 4 批）",
-   "offset": 12000,
-   "remaining": 23166,
+   "note": "h5ar_b524_3 已 committed，整库 35166 封已读 18000 / 剩 17166（余 3 批）",
+   "offset": 18000,
+   "remaining": 17166,
    "state": "in_progress",
    "total": 35166
   },
