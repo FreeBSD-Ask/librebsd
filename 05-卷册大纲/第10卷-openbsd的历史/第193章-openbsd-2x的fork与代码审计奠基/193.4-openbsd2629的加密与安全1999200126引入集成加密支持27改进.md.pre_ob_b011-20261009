@@ -1,0 +1,215 @@
+# 193.4 OpenBSD 2.6-2.9 的加密与安全（1999-2001）——2.6 引入集成加密支持、2.7 改进 IPsec 并引入 OpenSSH 2.0、2.8-2.9 持续演进（防火墙仍为 IPFilter，pf 首现于 3.0）
+
+**OpenBSD 2.6-2.9 版本发布时间线**：
+
+| 版本 | 发布日期 | 主要特性 | 标注 |
+| --- | --- | --- | --- |
+| **2.6** | 1999-12 | 集成加密支持（**Kerberos IV**、IPsec、OpenSSL 0.9.4、OpenSSH 1.2.2 整合） | 首个将加密作为基本系统组件的 BSD 发行版 |
+| **2.7** | 2000-06 | 改进 IPsec 实现（由 Angelos Keromytis 主导）；引入 OpenSSH 2.0（2000-06-15） | 最早的开源 IPsec 实现之一 |
+| **2.8** | 2000 | 搭载 OpenSSH 2.3.0 世代（SSH 协议 2 支持自 2.7 起） | 与 IETF secsh 工作组协作 |
+| **2.9** | 2001 | 防火墙仍为 IPFilter | IPFilter 2001-05-30 因许可证问题移出 CVS，pf 系从头重写、首随 3.0（2001-12-01）发布 |
+
+## 193.4.1 2.6 集成加密支持的工程效应
+
+**要点**：OpenBSD 2.6（1999-12）引入集成加密支持，包括 Kerberos IV（KTH kth-krb，仅支持 DES；Kerberos V 迟至 2001-2003 年经 Heimdal 迁移方引入）、IPsec、OpenSSL 0.9.4、OpenSSH 1.2.2 的整合；2.6 是首个将加密作为基本系统组件的 BSD 发行版；其全球部署能力的关键在加拿大起源不受美国出口管制约束（USENIX 1999 论文载“unaffected by export restriction laws”）与 RSA 专利期内的双区分发技巧，美国管制（如 BXA/EAR）放松仅为外部条件之一
+
+**史料**：OpenBSD 2.6 Release Notes；CVS commit log；BXA/EAR 出口管制文档 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：出口管制法律框架的松紧直接改变加密软件的利益分配格局，管制的放松是 OpenBSD 集成加密得以全球部署的法律条件之一
+
+**辨析**：美国出口管制对 OpenBSD 加密集成的具体影响在不同叙事中存在差异——需对照 BXA/EAR 文档核验；2.6 集成加密的具体组件列表需考据
+
+**文献**：OpenBSD 2.6 Release Notes；BXA/EAR 出口管制文档；OpenBSD 加密历史文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 193.4.2 IPsec 的改进与部署
+
+**要点**：OpenBSD 2.7（2000.6）改进 IPsec 实现，由 Angelos Keromytis 主导；OpenBSD IPsec 是最早的开源 IPsec 实现之一；IPsec 改进让 OpenBSD 在 VPN 与企业网络安全市场获得部署
+
+**史料**：OpenBSD 2.7 Release Notes；Keromytis IPsec 设计文档；CVS commit log ［A］
+
+**史观**：总纲第 10 条——动手者创造历史：Keromytis 作为希腊裔动手者主导 IPsec 实现与后续演进
+
+**辨析**：OpenBSD IPsec 与 KAME 项目（日本）IPsec 实现的关系存在叙事分歧——两者是否有代码共享需考据；OpenBSD IPsec 在企业 VPN 市场的部署规模缺乏权威统计
+
+**文献**：OpenBSD 2.7 Release Notes；Keromytis IPsec 文档；KAME 项目文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 193.4.3 OpenSSH 2.0 的协议升级
+
+**要点**：OpenSSH 2.0 于 2000-06-15 随 OpenBSD 2.7 发布，支持 SSH 协议 2（协议 2 支持由 Markus Friedl 实现、约 2000-05 达到可用），引入 DSA 公钥认证与三重 DES 加密（AES 套件系约 2.9/3.x 世代后续引入）；OpenSSH 2.0 与 IETF secsh 工作组协作；SSH 协议 2 解决了协议 1 的安全缺陷（如插入攻击）
+
+**史料**：OpenSSH 2.0 Release Notes；IETF secsh 工作组档案；OpenBSD CVS commit log ［A］
+
+**史观**：专题语（不设总纲条号）——协议规范与实现的辩证：SSH 协议 2 作为“形式”（协议规范）改变 OpenSSH“内容”（实现）的安全能力
+
+**辨析**：OpenSSH 2.0 的具体发布日期在不同来源中存在差异——需对照 OpenBSD 官方公告核验；SSH 协议 2 与协议 1 的兼容性策略需考据
+
+**文献**：OpenSSH 2.0 Release Notes；IETF secsh 档案；OpenBSD CVS 仓库［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 193.4.4 发布说明与 commit 记录考据
+
+**要点**：OpenBSD 2.6-2.9 的 Release Notes 与 CVS commit log 是研究此时期 OpenBSD 加密与安全发展的核心史料；Release Notes 详细记录加密集成、IPsec 改进、OpenSSH 升级等
+
+**史料**：OpenBSD 2.6-2.9 Release Notes；OpenBSD CVS commit log；OpenBSD 邮件列表 ［A］
+
+**史观**：总纲第 9 条——经验优先：Release Notes 与 commit log 作为一手经验记录，其考据先于任何二手转述
+
+**辨析**：Release Notes 的完整性需考据——部分细节可能滞后于实际代码；commit log 中的加密相关 commit 需对照 export 控制合规性核验
+
+**文献**：OpenBSD 2.6-2.9 Release Notes；OpenBSD CVS 仓库［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1999-2001 年间：43,038 次提交。
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+<!-- ROW_MINE: usenet_mail.messages.186543 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-021269`；2026-09-14 ng43 全库行级遍历考据采纳）
+
+2000 年 Insulander 澄清 OpenBSD 的 KerberosIV 实现基于 KTH 版本、不受 MIT 实现新近缓冲区溢出影响——KTH 与 MIT 两条 Kerberos 谱系的分野在安全事件中的显影引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.144733 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-026735`；2026-09-13 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 称 OpenBSD 内置 KTH Kerberos 已近两年,正融入最新 KTH KerberosIV 并回馈修正引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.145906 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-028349`；2026-09-13 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 说明 ITAR 只约束经美国的加密技术，OpenBSD 从加拿大出口故不受其限引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+
+
+
+
+<!-- ROW_MINE: usenet_mail.messages.200107 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091544`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Hugo Villeneuve 述 OpenBSD 不支持打印机口 PLIP，串口虽支持 SLIP、PPP 与直连但安装介质不提供。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201846 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092144`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户据 3.3 更新日志指出 route-to 不再接受 lo0 以免成环，改指向内网口后触发内核崩溃，升级前需改规则。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203742 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092373`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Måns Nilsson 报告 3.2 的 linux 模拟下 Netscape 7 连接全被拒，并提及 RFORK_FDSHARE 改动引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206055 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092606`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户报告 RAIDframe 镜像根分区时开机出现 raidX 设备已配置提示，功能正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208412 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094927`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Gilbert Fernandes 给出 Eden VIA C3 800MHz 小板装 OpenBSD 3.1 的完整启动记录引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210003 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095953`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Kurt B. Kaiser 详述 2.9 升 3.1 的步骤，先装二进制 snapshot 再重编内核与系统并用 mergemaster 合并 etc引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212006 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097087`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Darren Reed 长文讨论信任与中间人攻击，认为除非有预共享秘密，任何获取 OpenBSD 的途径都可能被篡改，但实际概率很低引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213953 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098736`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出该 arp 报错出自 netinet/if_ether.c，说明 ISP 用了被保留作多播的管理位以太网地址，并请对方跑 tcpdump -e引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215947 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098947`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+u n d e r a c h i e v e r 自称懒管理员，喜欢 OpenBSD 因它做了大量杂活，如精简安装与每日提醒邮件引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234695 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104757`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Phillip F Knaack 指导把 OpenBSD 根分区设到 sd1：内核配置写 root on sd1，或引导时加 -a 指定根设备引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217568 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-105772`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marc Espie 承认 psql 链接 readline 崩溃是自己 2.9 之后引入、随即修复的 tsort 缺陷，并反问对方是否确实在跑 2.9引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230939 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106257`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dennis Davis 建议改用 FAQ 中 RAID 方案替代 ccd，并引 openbsd-misc 上的四盘条带实例引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232275 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106442`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Tobias Weingartner 称 Adaptec 迟迟不给文档，无文档则移植 AIC7890 毫无意义引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228946 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107055`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Seagate ST1144A 旧盘在 2.6 下被按 LBA 误报扇区数，fdisk 与 disklabel 均无法写入分区表引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218829 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107251`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marc Espie 解释 OPENBSD_#_BASE 标签只为制作 CD 而设，真正要紧的只有代表稳定版的 OPENBSD_# 与开发版 HEAD引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220498 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107426`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Kristoff Bonne 指出各 BSD 内核独立开发，与共用内核的 Linux 发行版不同引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226981 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107918`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+bob johnson 称在 Compaq Presario 上加 option EXTMEM_SIZE 后 OpenBSD 可认到 48MB 内存引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221312 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108101`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖者怀疑 OpenBSD 2.7 主机被入侵，贴出 netstat 与 ps 输出请求判断引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222926 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108315`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+vkd 主张 OpenBSD 安装程序的分区工具应支持按 KB 或 MB 输入并交互显示分区结果引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224523 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108499`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Steven Smolinski 反映 2.7 只认约 56M 内存，NetBSD 的 EXTMEM_SIZE 办法在 OpenBSD 不适用引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202074 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422475`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 17 日，Bob Beck 分析 ssleay 在美国受 RSA 专利约束、不用 RSAREF 授权即属违法，随后指出最新 TLS 规范已经允许无专利加密路径，即 TLSv1 配 EDH-DSA-3DES 密码套件用临时 Diffie Helman 交换密钥、DSA 签名、3DES 对称加密，但所有美国浏览器厂商都使用 RSA 加密套件做初始密钥交换，因此无 RSA 的服务器目前无法与主流浏览器互通。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202164 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422523`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 11 月 1 日，Dug Song 提交 ssh-1.2.26 log_msg 溢出修复补丁，依据 IBM 应急安全公告 ERS-SVA-E01-1998:005.1 及 rootshell 安全公告第 25 号，把 log-server.c 中三处 vsprintf 改为 vsnprintf，并在 Makefile.in 的 OBJ 与 HEADERS 列表加入 snprintf.o 与 snprintf.h。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203044 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-423026`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 3 月 22 日，Niels Provos 回应关于减少 blowfish 轮数以加快登录的提议，指出以 2 的幂计的轮数下限为 4、当前上限为 31，每一轮基本都用 Blowfish 完全重新加密 S-Boxes，由于并未改动 Blowfish 密码体制本身，减少轮数只会让口令验证更快，也就相当于让口令破解者在单位时间内尝试更多口令。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。

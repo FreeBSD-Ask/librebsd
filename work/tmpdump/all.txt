@@ -1,0 +1,3998 @@
+====================================================================================================
+IDX 1 PK 184060
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371992`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-19T14:52:06+00:00 FROM Stefan Sperling <stsp () stsp ! in-berlin ! de>
+SUBJ Re: sendto: No buffer space available
+SUMM 2007 年 3 月 19 日，Stefan Sperling 就 Walter Doerr 报告使用 OpenBSD 4.0 盒子经 2Mbit SDSL 用户空间 PPP 跨线 ping 时偶发 sendto 报 No buffer space available 一事作回应。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Mon, Mar 19, 2007 at 01:40:02PM +0100, Walter Doerr wrote:
+> Hello,
+>
+> I am using an OpenBSD 4.0 box connected to a 2Mbit SDSL line in
+> Germany (using user space PPP).
+>
+> When pinging a host across the SDSL line, I get an occasional
+> "sendto: No buffer space available" message:
+>
+>
+> 64 bytes from xxx.xxx.xxx.xxx: icmp_seq=566 ttl=254 time=62.674 ms
+> 64 bytes from xxx.xxx.xxx.xxx: icmp_seq=568 ttl=254 time=38.090 ms
+> ping: sendto: No buffer space available
+> ping: wrote xxx.xxx.xx 64 chars, ret=-1
+> 64 bytes from xxx.xxx.xxx.xxx: icmp_seq=569 ttl=254 time=1320.651 ms
+> 64 bytes from xxx.xxx.xxx.xxx: icmp_seq=571 ttl=254 time=35.792 ms
+
+That happens to me when I use ppp for VPN in conjunction with pptp.
+If the VPN server cannot be reached for a while, e.g. because the link
+the VPN tunnel runs on top of is suddenly brought down, ppp will
+continue to buffer packets until its buffer is full. Then I see
+that message when I try to send more packets.
+
+> Does this message point to a problem within OpenBSD or is this a
+> problem with the SDSL line?
+
+No clue. You could enable very verbose logging (set log All)
+and see if you find some indication in the logs.
+
+If you use pppoe for your SDSL, you might want to give pppoe(4) a try.
+It's in-kernel and has less overhead because it does not context switch
+as much as user-ppp.
+
+--
+stefan
+http://stsp.in-berlin.de                                 PGP Key: 0xF59D25F0
+
+[demime 1.01d removed an attachment of type application/pgp-signature]
+
+
+====================================================================================================
+IDX 2 PK 184063
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371993`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-19T19:46:10+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: acx on soekris with openbsd 4.0
+SUMM 2007 年 3 月 19 日，Stuart Henderson 就 Steve Glaus 在 soekris 上让 acx 驱动识别 MiniPCI 无线卡未成功一事指出 dmesg 中根本没有列出该卡建议复核 MiniPCI 插入是否到位因其常易松动。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/03/19 11:14, Steve Glaus wrote:
+> I'm trying to get a mini pci card working on OpenBSD 4.0. I ripped this
+> card out of a dlink router that we weren't using. From what I understand
+> it's supposed to use the acx driver.
+
+Knowing that minipci can be fiddly, I would double-check it's
+inserted correctly; it's not listed at all in dmesg and this...
+
+> "NS \M-[C1100 SMI" rev 0x00 at pci0 dev 18 function 1 not configured
+
+...looks a bit odd.
+
+
+====================================================================================================
+IDX 3 PK 184064
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371994`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-19T19:06:46+00:00 FROM Marc Espie <espie () nerim ! net>
+SUBJ Re: cat.c includes
+SUMM 2007 年 3 月 19 日，Marc Espie 主张 cat.c 应显式保留 ctype err errno string unistd 等头文件因其被直接调用读代码者应能看到依赖列表并建议以 -Wall 编译因未声明函数在 alpha 与 sparc64 等架构上常出问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Mon, Mar 19, 2007 at 02:07:25PM +0100, Otto Moerbeek wrote:
+> On Mon, 19 Mar 2007, Nick ! wrote:
+> 
+> > On 3/19/07, hiren <hir3npatel@gmail.com> wrote:
+> > > hi all,
+> > > 
+> > > i found it interesting that cat.c compiles after removing these
+> > > includes:
+> > > 
+> > > #include <ctype.h>
+> > > #include <err.h>
+> > > #include <errno.h>
+> > > #include <string.h>
+> > > #include <unistd.h>
+> > > 
+> > > im just curious to hear opinions and learn something ;)
+> > 
+> > That's probably because all these files are implicitly included by
+> > some other include files. However, it is more correct to keep them all
+> > here explicitly because cat.c uses them directly; you should want
+> > someone reading the code to have a list of 'libraries' it relies on.
+> > 
+> > Good question.
+> 
+> Compile with -Wall and draw your conclusions. 
+> 
+> While it's legal to call a undeclared function, it is not wise to do
+> so. 
+
+Let me guess, that guy is running on i386. Usually, this kind of stunt
+works badly on fun arches like alpha or sparc64...
+
+
+====================================================================================================
+IDX 4 PK 184068
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371995`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-19T21:39:48+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: OpenOSPFd and kernel routing table
+SUMM 2007 年 3 月 19 日，Stuart Henderson 就 Falk Brockerhoff 询问 OpenOSPFd 与内核路由表中 carp 路由未正确清除致失去冗余一事建议查看 kroute.c 1.43。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/02/23 12:52, Falk Brockerhoff wrote:
+> Claudio Jeker schrieb:
+> > Hmm. For some reasons the carp route is not cleared correctly.
+> > I'll have a look at it.
+> >   
+> Do you have any news on this topic? I like to run OpenOSPFd on my
+> routers, but since the bugfix there isn't any redundancy. Hope to hear
+> some good news :)
+
+try kroute.c 1.43
+
+
+====================================================================================================
+IDX 5 PK 184072
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371996`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-19T23:43:25+00:00 FROM Kamil Monticolo <birkoff () aster ! pl>
+SUBJ panic on Dell PowerEdge850 GENERIC.MP 4.0 (dmesg incl.)
+SUMM 2007 年 3 月 19 日，Kamil Monticolo 报告多台 Dell PowerEdge 850 服务器在 OpenBSD 4.0 上运行 GENERIC.MP 内核时以同样 EIP d02ce554 触发 page fault 6 算术故障据此排除内存故障。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Hello guys.
+
+I'm migrating to 4.0 now and I have problem with panic on couple of my servers on 4.0.
+Servers crashes irregulary with page fault (6) -
+(/src/sys says that's an arthmetic fault).
+All servers crashes with the same EIP d02ce554, so I think it cannot be RAM.
+Machines have Pentium D with 1 GB ECC RAM, kernel GENERIC.MP.
+Dmesg and panic are below, moreover I will send you trace and ps from ddb if I catch them.
+### BEGIN DMESG
+OpenBSD 4.0 (GENERIC.MP) #936: Sat Sep 16 19:27:28 MDT 2006
+    deraadt@i386.openbsd.org:/usr/src/sys/arch/i386/compile/GENERIC.MP
+cpu0: Intel(R) Pentium(R) D CPU 3.00GHz ("GenuineIntel" 686-class) 3.01 GHz
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CF
+LUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,SBF,SSE3,MWAIT,DS-CPL,EST,CNXT-ID,CX16
+real mem  = 1073053696 (1047904K)
+avail mem = 970772480 (948020K)
+using 4256 buffers containing 53755904 bytes (52496K) of memory
+mainbus0 (root)
+bios0 at mainbus0: AT/286+(00) BIOS, date 08/22/06, BIOS32 rev. 0 @ 0xffe90, SMB
+IOS rev. 2.3 @ 0xfa3d0 (48 entries)
+bios0: Dell Computer Corporation PowerEdge 850
+pcibios0 at bios0: rev 2.1 @ 0xf0000/0x10000
+pcibios0: PCI IRQ Routing Table rev 1.0 @ 0xfb840/176 (9 entries)
+pcibios0: PCI Interrupt Router at 000:31:0 ("Intel 82801GB LPC" rev 0x00)
+pcibios0: PCI bus #7 is the last bus
+bios0: ROM list: 0xc0000/0xb000 0xcb000/0x1000 0xcc000/0x3c00 0xd0000/0x1600 0xd
+1800/0x600 0xec000/0x4000!
+ipmi0 at mainbus0: version 1.5 interface KCS iobase 0xca8/8 spacing 4
+mainbus0: Intel MP Specification (Version 1.4) (DELL     PE 01B6     )
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: apic clock running at 200 MHz
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Pentium(R) D CPU 3.00GHz ("GenuineIntel" 686-class) 3.01 GHz
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CF
+LUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,SBF,SSE3,MWAIT,DS-CPL,EST,CNXT-ID,CX16
+mainbus0: bus 0 is type PCI   
+mainbus0: bus 1 is type PCI   
+mainbus0: bus 2 is type PCI   
+mainbus0: bus 3 is type PCI   
+mainbus0: bus 4 is type PCI   
+mainbus0: bus 5 is type PCI   
+mainbus0: bus 6 is type PCI   
+mainbus0: bus 7 is type PCI   
+mainbus0: bus 8 is type ISA   
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+ioapic0: misconfigured as apic 0, remapped to apid 2
+ioapic1 at mainbus0: apid 3 pa 0xfec10000, version 20, 24 pins
+ioapic1: misconfigured as apic 0, remapped to apid 3
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel E7230 MCH" rev 0x00
+ppb0 at pci0 dev 1 function 0 "Intel E7230 PCIE" rev 0x00
+pci1 at ppb0 bus 1
+em0 at pci1 dev 0 function 0 "Intel PRO/1000 PT (82572EI)" rev 0x06: apic 2 int 
+16 (irq 5), address 00:15:17:15:9c:54
+ppb1 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x01
+pci2 at ppb1 bus 2
+ppb2 at pci2 dev 0 function 0 "Intel PCIE-PCIE" rev 0x09
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 2 function 0 vendor "Hint", unknown product 0x0022 rev 0x04
+pci4 at ppb3 bus 4
+vga1 at pci4 dev 2 function 0 "ATI Radeon VE QY" rev 0x00
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+vendor "Dell", unknown product 0x0010 (class undefined unknown subclass 0x00, re
+v 0x00) at pci4 dev 4 function 0 not configured
+"Dell DRAC 4 Virtual UART" rev 0x00 at pci4 dev 4 function 1 not configured
+"Dell DRAC 4 SMIC" rev 0x00 at pci4 dev 4 function 2 not configured
+pciide0 at pci4 dev 7 function 0 "CMD Technology PCI0680" rev 0x02
+pciide0: bus-master DMA support present
+pciide0: channel 0 wired to native-PCI mode
+pciide0: using apic 3 int 0 (irq 5) for native-PCI interrupt
+atapiscsi0 at pciide0 channel 0 drive 0
+scsibus0 at atapiscsi0: 2 targets
+sd0 at scsibus0 targ 0 lun 0: <DELL, VSF, 0123> SCSI0 0/direct removable
+sd0: drive offline
+atapiscsi1 at pciide0 channel 0 drive 1
+scsibus1 at atapiscsi1: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <DELL, VCD, 0133> SCSI0 5/cdrom removable
+sd0(pciide0:0:0): using PIO mode 3
+cd0(pciide0:0:1): using PIO mode 3
+pciide0: channel 1 wired to native-PCI mode
+ppb4 at pci0 dev 28 function 4 "Intel 82801G PCIE" rev 0x01
+pci5 at ppb4 bus 5
+bge0 at pci5 dev 0 function 0 "Broadcom BCM5721" rev 0x11, BCM5750 B1 (0x4101): 
+apic 2 int 16 (irq 5), address 00:15:c5:fa:47:d2
+brgphy0 at bge0 phy 1: BCM5750 10/100/1000baseT PHY, rev. 0
+ppb5 at pci0 dev 28 function 5 "Intel 82801G PCIE" rev 0x01
+pci6 at ppb5 bus 6
+bge1 at pci6 dev 0 function 0 "Broadcom BCM5721" rev 0x11, BCM5750 B1 (0x4101): 
+apic 2 int 17 (irq 3), address 00:15:c5:fa:47:d3
+brgphy1 at bge1 phy 1: BCM5750 10/100/1000baseT PHY, rev. 0
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x01: apic 2 int 20 (irq
+ 11)
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0
+uhub0: Intel UHCI root hub, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x01: apic 2 int 21 (irq
+ 10)
+usb1 at uhci1: USB revision 1.0
+uhub1 at usb1
+uhub1: Intel UHCI root hub, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x01: apic 2 int 22 (irq
+ 6)
+usb2 at uhci2: USB revision 1.0
+uhub2 at usb2
+uhub2: Intel UHCI root hub, rev 1.00/1.00, addr 1
+uhub2: 2 ports with 2 removable, self powered
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x01: apic 2 int 20 (irq
+ 11)
+usb3 at ehci0: USB revision 2.0
+uhub3 at usb3
+uhub3: Intel EHCI root hub, rev 2.00/1.00, addr 1
+uhub3: 6 ports with 6 removable, self powered
+ppb6 at pci0 dev 30 function 0 "Intel 82801BA AGP" rev 0xe1
+pci7 at ppb6 bus 7
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801GB LPC" rev 0x01: PM disabled
+pciide1 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x01: DMA, channel 0 c
+onfigured to compatibility, channel 1 configured to compatibility
+atapiscsi2 at pciide1 channel 0 drive 0
+scsibus2 at atapiscsi2: 2 targets
+cd1 at scsibus2 targ 0 lun 0: <TEAC, CD-ROM CD-224E-N, 3.AB> SCSI0 5/cdrom remov
+able
+cd1(pciide1:0:0): using PIO mode 4, Ultra-DMA mode 2
+pciide1: channel 1 ignored (disabled)
+pciide2 at pci0 dev 31 function 2 "Intel 82801GB SATA" rev 0x01: DMA, channel 0 
+configured to native-PCI, channel 1 configured to native-PCI
+pciide2: using apic 2 int 20 (irq 11) for native-PCI interrupt
+wd0 at pciide2 channel 0 drive 0: <WDC WD800JD-75MSA3>
+wd0: 16-sector PIO, LBA48, 76293MB, 156250000 sectors
+wd0(pciide2:0:0): using PIO mode 4, Ultra-DMA mode 5
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x01pci_intr_map: bu
+s 0 dev 31 func 3 pin 2; line 10
+pci_intr_map: no MP mapping found
+: irq 10
+iic0 at ichiic0: disabled to avoid ipmi0 interactions
+isa0 at ichpcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: <PC speaker>
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: using exception 16
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+biomask 0 netmask 0 ttymask 0
+pctr: user-level cycle counter enabled
+uhidev0 at uhub2 port 2 configuration 1 interface 0
+uhidev0: Avocent Dell 03R874, rev 1.10/1.00, addr 2, iclass 3/1
+ukbd0 at uhidev0: 8 modifier keys, 6 key codes, country code 33
+uhidev1 at uhub0 port 1 configuration 1 interface 0
+uhidev1: Dell DRAC4, rev 1.10/0.00, addr 2, iclass 3/1
+ukbd1 at uhidev1: 8 modifier keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev2 at uhub2 port 2 configuration 1 interface 1
+uhidev2: Avocent Dell 03R874, rev 1.10/1.00, addr 2, iclass 3/1
+uhidev2: 3 report ids
+ums0 at uhidev2 reportid 1: 5 buttons and Z dir.
+wsmouse0 at ums0 mux 0
+uhid0 at uhidev2 reportid 2: input=2, output=0, feature=0
+uhid1 at uhidev2 reportid 3: input=1, output=0, feature=0
+wskbd2 at ukbd1 mux 1
+wskbd2: connecting to wsdisplay0
+uhidev3 at uhub0 port 1 configuration 1 interface 1
+uhidev3: Dell DRAC4, rev 1.10/0.00, addr 2, iclass 3/1
+ums1 at uhidev3
+uhid1 at uhidev2 reportid 3: input=1, output=0, feature=0
+wskbd2 at ukbd1 mux 1
+wskbd2: connecting to wsdisplay0
+uhidev3 at uhub0 port 1 configuration 1 interface 1
+uhidev3: Dell DRAC4, rev 1.10/0.00, addr 2, iclass 3/1
+ums1 at uhidev3
+ums1: X report 0x0002 not supported
+dkcsum: wd0 matches BIOS drive 0x80
+root on wd0a
+rootdev=0x0 rrootdev=0x300 rawdev=0x302
+### END DMESG
+
+
+### BEGIN PANIC
+fatal page fault (6) in supervisor mode
+trap type 6 code 2 eip d02ce554 cs 8 eflags 10282 cr2 3a cpl 20
+panic: trap type 6, code = 2 ,pc=d02ce554
+Starting stack trace...
+
+
+
+panic (20,0,e9184ea0,20) at panic+0x71
+panic(d068ba47,6,2,d02ce554,d73ee028) at panic+0x71
+trap() at trap+0x13d
+---trap (number 6) ---
+bmc_io_wait(d1affa00,d1b21e80,0,e9183000,0) at _bmc_io_wait+0x1c
+softclock(e9180058,e9180010,10,e9183000) at softclock+0x22c
+bad frame pointer: 0xe9184f20
+end of stack trace
+syncing disks...
+
+### END PANIC
+
+
+====================================================================================================
+IDX 6 PK 184074
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371997`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-19T22:19:10+00:00 FROM Otto Moerbeek <otto () drijf ! net>
+SUBJ Re: adjusting mbuf
+SUMM 2007 年 3 月 19 日，Otto Moerbeek 指出接口被标记 up 并有 IP 但无 carrier 时 rup 与 ruptime 遍历接口列表发广播会被接口拒绝并以 ENOBUFS 报错建议对 sis1 与 sis2 执行 ifconfig down。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Mon, 19 Mar 2007, Gustavo Rios wrote:
+
+> Here is the output:
+> 
+> $ ifconfig -a
+> lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 33224
+>        groups: lo
+>        inet 127.0.0.1 netmask 0xff000000
+>        inet6 ::1 prefixlen 128
+>        inet6 fe80::1%lo0 prefixlen 64 scopeid 0x7
+> sis0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+>        lladdr 00:00:24:c7:31:20
+>        media: Ethernet 100baseTX (100baseTX full-duplex)
+>        status: active
+>        inet 10.0.0.1 netmask 0xffffff00 broadcast 10.0.0.255
+>        inet6 fe80::200:24ff:fec7:3120%sis0 prefixlen 64 scopeid 0x1
+> sis1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+>        lladdr 00:00:24:c7:31:21
+>        media: Ethernet 100baseTX (none)
+>        status: no carrier
+>        inet 10.0.1.1 netmask 0xffffff00 broadcast 10.0.1.255
+>        inet6 fe80::200:24ff:fec7:3121%sis1 prefixlen 64 scopeid 0x2
+> sis2: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+>        lladdr 00:00:24:c7:31:22
+>        media: Ethernet 100baseTX (none)
+>        status: no carrier
+>        inet 10.0.2.1 netmask 0xffffff00 broadcast 10.0.2.255
+>        inet6 fe80::200:24ff:fec7:3122%sis2 prefixlen 64 scopeid 0x3
+> pflog0: flags=141<UP,RUNNING,PROMISC> mtu 33224
+> pfsync0: flags=0<> mtu 1460
+>        groups: carp
+> enc0: flags=0<> mtu 1536
+> pppoe0: flags=8851<UP,POINTOPOINT,RUNNING,SIMPLEX,MULTICAST> mtu 1492
+>        dev: sis0 state: session
+>        sid: 0xdda5 PADI retries: 0 PADR retries: 0 time: 2d 21:08:21
+>        sppp: phase network authproto pap authname "3732163010@telemar.com.br"
+>        groups: pppoe egress
+>        inet6 fe80::200:24ff:fec7:3120%pppoe0 ->  prefixlen 64 scopeid 0x8
+>        inet 201.78.27.251 --> 0.0.0.1 netmask 0xffffffff
+> $
+> 
+> So, this is! What i am doing wrong ?
+
+Something to try: ifconfig sis1 down, same for sis2.
+
+The hypothesis is: the interfaces are marked up and have an IP, but no
+carrier. rup and ruptime walk the interface list to send broadcasts.
+If an interface is up but has no physcial connnection, it wil refuse
+packets, signalling that with an ENOBUFS. 
+
+	-Otto
+
+> 
+> On 3/19/07, Otto Moerbeek <otto@drijf.net> wrote:
+> > 
+> > On Mon, 19 Mar 2007, Gustavo Rios wrote:
+> > 
+> > > Ok,
+> > >
+> > > Here is my output of netstat:
+> > > $ netstat -m
+> > > 331 mbufs in use:
+> > >        326 mbufs allocated to data
+> > >        2 mbufs allocated to packet headers
+> > >        3 mbufs allocated to socket names and addresses
+> > > 72/152/6144 mbuf clusters in use (current/peak/max)
+> > > 420 Kbytes allocated to network (53% in use)
+> > > 0 requests for memory denied
+> > > 0 requests for memory delayed
+> > > 0 calls to protocol drain routines
+> > > $
+> > >
+> > > But rusers still gives that warning message, as also rup:
+> > > $ rusers
+> > > rusers: can't send broadcast packet: No buffer space available
+> > > $ rup
+> > > rup: RPC: Unable to send
+> > > $
+> > >
+> > > How could i fix it?
+> > 
+> > This is more probably a case of a funky network interface config than a
+> > real mbuf shortage. Check your ip's, netmasks and broadcasts addresses.
+> > 
+> >         -Otto
+> > 
+> > >
+> > > On 3/19/07, Darren Spruell <phatbuckett@gmail.com> wrote:
+> > > > On 3/19/07, Gustavo Rios <rios.gustavo@gmail.com> wrote:
+> > > > > Dear list members,
+> > > > >
+> > > > > how could i adjust my mbuf size? Need i to compile a news kernel ?
+> > > > >
+> > > >
+> > > > kern.maxclusters allows setting new limits for mbufs.
+> > > >
+> > > > This would supposedly go out with the same tuning warnings as usual;
+> > > > you may find you need a very good reason to adjust that, if it should
+> > > > be adjusted at all. Does 'netstat -m' show that you're hitting limits?
+> > > >
+> > > > This advice may apply to your situation as well:
+> > > >
+> > > > http://archives.neohapsis.com/archives/openbsd/2004-07/1783.html
+> > > >
+> > > > DS
+
+
+====================================================================================================
+IDX 7 PK 184077
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-371998`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-20T04:59:46+00:00 FROM Mike Erdely <mike () erdelynet ! com>
+SUBJ Re: Two indentical timed cronjobs, one gets ignored
+SUMM 2007 年 3 月 20 日，Mike Erdely 就 Han Boetes 询问两个同一时刻的 cronjob 只有其一被执行并要求查看 /var/cron/log 一事答复自述有大量任务同时运行。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Tue, Mar 20, 2007 at 03:44:05AM +0100, Han Boetes wrote:
+> I just had two cronjobs which were set on the same time and the
+> first match was executed and the second was ignored.
+
+Does /var/cron/log say anything?
+
+> Of course this is not entirely enexpected but is this considered a
+> bug or something which would be nice to be mentioned in the
+> manpage as a caveat?
+
+I have many jobs that run at the same time.
+
+-ME
+
+
+====================================================================================================
+IDX 8 PK 184081
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372000`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-20T10:08:51+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: strange output on openbsd C code
+SUMM 2007 年 3 月 20 日，Stuart Henderson 就 Gustavo Rios 报告简单 C 程序变量每次运行取值都变一事答复称在 i386 amd64 与 sparc64 上均未重现该现象并给出各平台输出 x:8589934593。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/03/19 19:12, Gustavo Rios wrote:
+> I am writing a very simple program but the output change for the c
+> variable value change every time i run it.
+
+It doesn't do this on any system I've tried it on -
+
+>i386, amd64:
+
+x:8589934593
+0,1:1,2
+c:2
+
+>sparc64:
+
+x:8589934593
+0,1:2,1
+c:2
+
+
+====================================================================================================
+IDX 9 PK 184082
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372001`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-20T10:42:33+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: NOOP and Spamd
+SUMM 2007 年 3 月 20 日，Stuart Henderson 就 Lyndon Nerenberg 提到 SMTP 客户端复用已建立会话以 RSET 与 NOOP 分隔事务一事指出在与 spamd 交互时不会发生会话复用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/03/19 20:39, Lyndon Nerenberg wrote:
+> You will also find the command sequence RSET+NOOP used to delimit  
+> transactions when an SMTP client reuses an established SMTP session  
+> to send multiple messages.
+
+That (reusing an established session) won't happen whilst talking to spamd.
+
+
+====================================================================================================
+IDX 10 PK 184089
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372002`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-20T11:45:33+00:00 FROM Robert Nagy <robert () openbsd ! org>
+SUBJ Call For Testing: PHP5 update and PEAR relocation
+SUMM 2007 年 3 月 20 日，Robert Nagy 提出 php5 升级补丁移除 www/php5/core 下的 pear 子包指出新 pear port 已导入 www/pear 但尚未纳入构建该 diff 把依赖旧 pear 包的 port 切到新包并用 @group 标注修正 PLIST。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Hi.
+
+The following patch updates php5 to the current version, and removes
+the pear subpackage from www/php5/core.
+
+The new pear port has been imported yesterday to www/pear (not hooked to
+the builds yet), so this diff basically switches all the ports depending
+on the old pear package, to the new one.
+The diff also fixes the PLIST of all pear ports by
+doing proper @group annotations and removing some of the unneeded files.
+
+This diff needs *heavy* testing so please go ahead, update your ports
+tree and apply this patch. And test it with all your php stuff.
+
+Write me a mail in private if it works or if you encounter any problems.
+
+Thanks
+
+Index: www/php5/Makefile.inc
+===================================================================
+RCS file: /cvs/ports/www/php5/Makefile.inc,v
+retrieving revision 1.13
+diff -u -r1.13 Makefile.inc
+--- www/php5/Makefile.inc	24 Oct 2006 09:30:25 -0000	1.13
++++ www/php5/Makefile.inc	20 Mar 2007 11:36:53 -0000
+@@ -4,9 +4,8 @@
+ # and has Apache that supports DSO's.
+ NOT_FOR_ARCHS=		${NO_SHARED_ARCHS}
+ 
+-V=			5.1.6
+-PEAR_V= 		20060428
+-SUHOSIN_V=		0.9.5
++V=			5.2.1
++SUHOSIN_V=		0.9.6.2
+ DISTNAME?=		php-${V}
+ CATEGORIES=		www lang
+ 
+@@ -36,7 +35,6 @@
+ 
+ # where the PEAR and extension modules are (inside the chroot)
+ CHROOT_DIR?=		/var/www
+-PEAR_DIR?=		${CHROOT_DIR}/pear
+ MODULES_SUBDIR=		lib/php/modules
+ MODULES_DIR=		${CHROOT_DIR}/${MODULES_SUBDIR}
+ 
+@@ -47,7 +45,7 @@
+ CONFIGURE_STYLE=	autoconf
+ AUTOCONF_VERSION=	2.52
+ CONFIGURE_ENV=          CFLAGS="${CFLAGS} -I${LOCALBASE}/include -pthread" \
+-                        LDFLAGS="-L${LOCALBASE}/lib ${PHP_LDFLAGS}" \
++                        LDFLAGS="-L${LOCALBASE}/lib ${PHP_LDFLAGS} -pthread" \
+ 			EXTENSION_DIR=${MODULES_DIR}
+ MAKE_ENV=               ${CONFIGURE_ENV}
+ 
+Index: www/php5/distinfo
+===================================================================
+RCS file: /cvs/ports/www/php5/distinfo,v
+retrieving revision 1.10
+diff -u -r1.10 distinfo
+--- www/php5/distinfo	21 Oct 2006 11:44:10 -0000	1.10
++++ www/php5/distinfo	20 Mar 2007 11:36:53 -0000
+@@ -1,12 +1,10 @@
+-MD5 (pear-20060428.tar.gz) = 28ab6f44a90cbcb5dd9ed0aef32d2fa9
+-MD5 (php-5.1.6.tar.gz) = 04d6166552289eaeff771f5ec953b065
+-MD5 (suhosin-patch-5.1.6-0.9.5.patch.gz) = a34ef9819a1681ed03e61d1423c5b9e1
+-RMD160 (pear-20060428.tar.gz) = 34bac3122dfc8218efdce0ea7df046da031e72e7
+-RMD160 (php-5.1.6.tar.gz) = 89aeed0b88368f4e93bd7bdacdd94ce47eebe115
+-RMD160 (suhosin-patch-5.1.6-0.9.5.patch.gz) = 38420c6cb6f381cd763a9463e3c35706a7518f09
+-SHA1 (pear-20060428.tar.gz) = 09713b3052904c1c45acba015dc067ddad0136cb
+-SHA1 (php-5.1.6.tar.gz) = e6f9df1db989e694dac6e1e190c5022f75c6a9cc
+-SHA1 (suhosin-patch-5.1.6-0.9.5.patch.gz) = 7863e0b2cfb433ba4f82c5ad4aa27d73a47e920d
+-SIZE (pear-20060428.tar.gz) = 619353
+-SIZE (php-5.1.6.tar.gz) = 8187896
+-SIZE (suhosin-patch-5.1.6-0.9.5.patch.gz) = 23141
++MD5 (php-5.2.1.tar.gz) = 604eaee2b834bb037d2c83e53e300d3f
++MD5 (suhosin-patch-5.2.1-0.9.6.2.patch.gz) = 98cae8ee994df74e3ea1b25c955310e8
++RMD160 (php-5.2.1.tar.gz) = cca8b966106ea87b2abf27e10091ecb447bb4ecf
++RMD160 (suhosin-patch-5.2.1-0.9.6.2.patch.gz) = 6bab11d96224725b6c45f2de1bfdc69b992302eb
++SHA1 (php-5.2.1.tar.gz) = 221ef0402d8fa49464c648d95debc7d21a3f16d9
++SHA1 (suhosin-patch-5.2.1-0.9.6.2.patch.gz) = dbb007554f2cc4544d60bd80a23a6af305744fbd
++SHA256 (php-5.2.1.tar.gz) = 4dc753a9bc63a161fd4dd027c9ff37e77124bd681db28ea5463895b29442d66d
++SHA256 (suhosin-patch-5.2.1-0.9.6.2.patch.gz) = 78802a71c35ed2bed2e0e32cb8443f682451989ebe1ed5d5b384b7bb85b90c1b
++SIZE (php-5.2.1.tar.gz) = 9010594
++SIZE (suhosin-patch-5.2.1-0.9.6.2.patch.gz) = 22679
+Index: www/php5/core/Makefile
+===================================================================
+RCS file: /cvs/ports/www/php5/core/Makefile,v
+retrieving revision 1.19
+diff -u -r1.19 Makefile
+--- www/php5/core/Makefile	25 Nov 2006 11:09:04 -0000	1.19
++++ www/php5/core/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -1,13 +1,8 @@
+ # $OpenBSD: Makefile,v 1.19 2006/11/25 11:09:04 espie Exp $
+ 
+-MULTI_PACKAGES=	-main -pear
+-
+-COMMENT-main=	"server-side HTML-embedded scripting language"
+-COMMENT-pear=	"base classes for common PHP tasks"
+-PKGNAME-main=	php5-core-${V}p0
+-FULLPKGNAME-pear= php5-pear-${V}p0
+-DISTFILES=	php-${V}.tar.gz \
+-		pear-${PEAR_V}.tar.gz:0
++COMMENT=	"server-side HTML-embedded scripting language"
++PKGNAME=	php5-core-${V}
++DISTFILES=	php-${V}.tar.gz
+ 
+ CONFIGURE_ARGS+=--with-apxs=/usr/sbin/apxs \
+ 		--without-mysql \
+@@ -46,44 +41,22 @@
+ WANTLIB=	c crypto m ssl stdc++ z pthread
+ LIB_DEPENDS=	xml2.>=8::textproc/libxml
+ 
+-PREFIX-pear=		${CHROOT_DIR}
+-RUN_DEPENDS-pear=	:php5-core-${V}:www/php5/core
+-WANTLIB-pear=
+-LIB_DEPENDS-pear=
+-
+-
+ pre-fake:
+ 	${INSTALL_DATA_DIR} ${PREFIX}/${APACHE_MODULE_SUBDIR}
+ INSTALL_TARGET= install-headers install-build install-programs
+ FAKE_FLAGS=	INSTALL_ROOT=${DESTDIR}
+ 
+ pre-configure:
+-	@cd ${WRKDIR}/pear && ${PATCH} -p0 --quiet < patch-OpenBSD 
+ 	@perl -pi -e "s,OPENBSD_PEAR_ROOT,'${CHROOT_DIR}/pear',g" \
+-		${WRKDIR}/pear/PEAR/Config.php ${WRKSRC}/scripts/phpize.in \
++		${WRKSRC}/scripts/phpize.in \
+ 		${WRKSRC}/scripts/php-config.in
+ 
+ post-install:
+ 	${INSTALL_DATA} ${WRKBUILD}/.libs/libphp5.so \
+ 		${PREFIX}/${APACHE_MODULE_SUBDIR}
+-	${INSTALL_DATA_DIR} ${WRKINST}/${CHROOT_DIR}/pear/lib
+ 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/php5
+ 	${INSTALL_PROGRAM} ${WRKBUILD}/sapi/cli/php ${PREFIX}/bin
+ 	
+-	@cd ${WRKDIR}/pear && ${PREFIX}/bin/php \
+-		-n -dshort_open_tag=0 -dsafe_mode=0 -derror_reporting=E_ALL \
+-		-ddetect_unicode=0 install-pear.php -b ${PREFIX}/bin \
+-		-c ${WRKINST} -d ${WRKINST}${CHROOT_DIR}/pear *.tar 
+-
+-	@cp ${WRKDIR}/pear/PEAR/Config.php \
+-		${WRKINST}${CHROOT_DIR}/pear/lib/PEAR/Config.php
+-	@perl -pi -e "s,${WRKINST},,g" ${PREFIX}/bin/pear \
+-				${PREFIX}/bin/peardev \
+-				${PREFIX}/bin/pecl \
+-				${WRKINST}${PEAR_DIR}/lib/pearcmd.php \
+-				${WRKINST}${PEAR_DIR}/lib/peclcmd.php \
+-				${WRKINST}${PEAR_DIR}/lib/PEAR/Command/Package.php
+-
+ .for i in dist recommended
+ 	@sed -e 's,MODULES_DIR,${MODULES_DIR},' \
+ 	     -e 's,OPENBSD_INCLUDE_PATH,/pear/lib:${CHROOT_DIR}/pear/lib,' \
+Index: www/php5/core/patches/patch-scripts_php_config_in
+===================================================================
+RCS file: /cvs/ports/www/php5/core/patches/patch-scripts_php_config_in,v
+retrieving revision 1.2
+diff -u -r1.2 patch-scripts_php_config_in
+--- www/php5/core/patches/patch-scripts_php_config_in	10 May 2006 13:48:01 -0000	1.2
++++ www/php5/core/patches/patch-scripts_php_config_in	20 Mar 2007 11:36:53 -0000
+@@ -1,15 +1,16 @@
+-$OpenBSD: patch-scripts_php_config_in,v 1.2 2006/05/10 13:48:01 wilfried Exp $
+---- scripts/php-config.in.orig	Fri Apr 28 00:49:53 2006
+-+++ scripts/php-config.in	Fri Apr 28 01:03:19 2006
+-@@ -1,9 +1,9 @@
++$OpenBSD$
++--- scripts/php-config.in.orig	Thu Jul 27 10:53:16 2006
+++++ scripts/php-config.in	Wed Feb 21 23:27:24 2007
++@@ -1,10 +1,10 @@
+  #! /bin/sh
+  
+ -prefix="@prefix@"
+ +prefix=OPENBSD_PEAR_ROOT
+  exec_prefix="@exec_prefix@"
+  version="@PHP_VERSION@"
++ version_id="@PHP_VERSION_ID@"
+ -includedir="@includedir@/php"
+ +includedir="@PEAR_INSTALLDIR@/include"
+- includes="-I$includedir -I$includedir/main -I$includedir/TSRM -I$includedir/Zend -I$includedir/ext"
++ includes="-I$includedir -I$includedir/main -I$includedir/TSRM -I$includedir/Zend -I$includedir/ext -I$includedir/ext/date/lib"
+  ldflags="@PHP_LDFLAGS@"
+  libs="@EXTRA_LIBS@"
+Index: www/php5/core/pkg/DESCR
+===================================================================
+RCS file: www/php5/core/pkg/DESCR
+diff -N www/php5/core/pkg/DESCR
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ www/php5/core/pkg/DESCR	20 Mar 2007 11:36:53 -0000
+@@ -0,0 +1,18 @@
++At the most basic level, PHP can do anything any other CGI program 
++can do, such as collect form data, generate dynamic page content, 
++or send and receive cookies.
++
++PHP also has support for talking to other services using protocols
++such as IMAP, SNMP, NNTP, POP3, or even HTTP. You can also open 
++raw network sockets and interact using other protocols.
++
++This package installs a stand-alone binary which can be used for
++command-line scripts, as well as an Apache module.
++
++By default this port uses the suhosin patch.
++The suhosin patch adds security hardening features to PHP
++to protect your servers on the one hand against a number of
++well known problems in PHP applications and on the other hand
++against potential unknown vulnerabilities within those
++applications or the PHP core itself.
++http://www.hardened-php.net/suhosin/index.html
+Index: www/php5/core/pkg/DESCR-main
+===================================================================
+RCS file: www/php5/core/pkg/DESCR-main
+diff -N www/php5/core/pkg/DESCR-main
+--- www/php5/core/pkg/DESCR-main	25 Nov 2006 11:09:43 -0000	1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,18 +0,0 @@
+-At the most basic level, PHP can do anything any other CGI program 
+-can do, such as collect form data, generate dynamic page content, 
+-or send and receive cookies.
+-
+-PHP also has support for talking to other services using protocols
+-such as IMAP, SNMP, NNTP, POP3, or even HTTP. You can also open 
+-raw network sockets and interact using other protocols.
+-
+-This package installs a stand-alone binary which can be used for
+-command-line scripts, as well as an Apache module.
+-
+-By default this port uses the suhosin patch.
+-The suhosin patch adds security hardening features to PHP
+-to protect your servers on the one hand against a number of
+-well known problems in PHP applications and on the other hand
+-against potential unknown vulnerabilities within those
+-applications or the PHP core itself.
+-http://www.hardened-php.net/suhosin/index.html
+Index: www/php5/core/pkg/DESCR-pear
+===================================================================
+RCS file: www/php5/core/pkg/DESCR-pear
+diff -N www/php5/core/pkg/DESCR-pear
+--- www/php5/core/pkg/DESCR-pear	2 Oct 2004 12:36:49 -0000	1.1.1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,6 +0,0 @@
+-PEAR (PHP Extensions and Add-on Repository) is a code repository
+-for PHP extensions and PHP library code inspired by TeX's CTAN and
+-Perl's CPAN.
+-
+-While it is currently distributed with PHP, it is being dissociated,
+-and future versions will be upgradable independently of PHP5.
+Index: www/php5/core/pkg/MESSAGE
+===================================================================
+RCS file: www/php5/core/pkg/MESSAGE
+diff -N www/php5/core/pkg/MESSAGE
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ www/php5/core/pkg/MESSAGE	20 Mar 2007 11:36:53 -0000
+@@ -0,0 +1,14 @@
++To finish the install, enable the php5 module with:
++    ${PREFIX}/sbin/phpxs -s
++
++To enable parsing of PHP scripts, add the following to
++/var/www/conf/httpd.conf:
++    
++    AddType application/x-httpd-php .php
++
++Copy the config file below into ${PHP_CONFIG_FILE}
++${PREFIX}/share/examples/php5/php.ini-recommended
++
++Don't forget that the default OpenBSD httpd is chrooted
++into /var/www by default, so you may need to create support
++directories such as /var/www/tmp for PHP to work correctly.
+Index: www/php5/core/pkg/MESSAGE-main
+===================================================================
+RCS file: www/php5/core/pkg/MESSAGE-main
+diff -N www/php5/core/pkg/MESSAGE-main
+--- www/php5/core/pkg/MESSAGE-main	25 Nov 2006 11:09:43 -0000	1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,14 +0,0 @@
+-To finish the install, enable the php5 module with:
+-    ${PREFIX}/sbin/phpxs -s
+-
+-To enable parsing of PHP scripts, add the following to
+-/var/www/conf/httpd.conf:
+-    
+-    AddType application/x-httpd-php .php
+-
+-Copy the config file below into ${PHP_CONFIG_FILE}
+-${PREFIX}/share/examples/php5/php.ini-recommended
+-
+-Don't forget that the default OpenBSD httpd is chrooted
+-into /var/www by default, so you may need to create support
+-directories such as /var/www/tmp for PHP to work correctly.
+Index: www/php5/core/pkg/PFRAG.shared
+===================================================================
+RCS file: www/php5/core/pkg/PFRAG.shared
+diff -N www/php5/core/pkg/PFRAG.shared
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ www/php5/core/pkg/PFRAG.shared	20 Mar 2007 11:36:53 -0000
+@@ -0,0 +1,2 @@
++@comment $OpenBSD: PFRAG.shared-main,v 1.1 2006/11/25 11:09:43 espie Exp $
++lib/php/libphp5.so
+Index: www/php5/core/pkg/PFRAG.shared-main
+===================================================================
+RCS file: www/php5/core/pkg/PFRAG.shared-main
+diff -N www/php5/core/pkg/PFRAG.shared-main
+--- www/php5/core/pkg/PFRAG.shared-main	25 Nov 2006 11:09:43 -0000	1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,2 +0,0 @@
+-@comment $OpenBSD: PFRAG.shared-main,v 1.1 2006/11/25 11:09:43 espie Exp $
+-lib/php/libphp5.so
+Index: www/php5/core/pkg/PLIST
+===================================================================
+RCS file: www/php5/core/pkg/PLIST
+diff -N www/php5/core/pkg/PLIST
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ www/php5/core/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -0,0 +1,17 @@
++@comment $OpenBSD: PLIST-main,v 1.1 2006/11/25 11:09:43 espie Exp $
++@conflict php4-core-*
++@pkgpath www/php5/core
++@pkgpath www/php5/core,hardened
++%%SHARED%%
++bin/php
++bin/php-config
++bin/phpize
++lib/php/
++@man man/man1/php-config.1
++@man man/man1/php.1
++@man man/man1/phpize.1
++sbin/phpxs
++share/examples/php5/
++share/examples/php5/php.ini-dist
++share/examples/php5/php.ini-recommended
++@unexec rm -f /usr/lib/apache/modules/libphp5.so
+Index: www/php5/core/pkg/PLIST-main
+===================================================================
+RCS file: www/php5/core/pkg/PLIST-main
+diff -N www/php5/core/pkg/PLIST-main
+--- www/php5/core/pkg/PLIST-main	25 Nov 2006 11:09:43 -0000	1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,20 +0,0 @@
+-@comment $OpenBSD: PLIST-main,v 1.1 2006/11/25 11:09:43 espie Exp $
+-@conflict php4-core-*
+-@pkgpath www/php5/core
+-@pkgpath www/php5/core,hardened
+-%%SHARED%%
+-bin/pear
+-bin/peardev
+-bin/pecl
+-bin/php
+-bin/php-config
+-bin/phpize
+-lib/php/
+-@man man/man1/php-config.1
+-@man man/man1/php.1
+-@man man/man1/phpize.1
+-sbin/phpxs
+-share/examples/php5/
+-share/examples/php5/php.ini-dist
+-share/examples/php5/php.ini-recommended
+-@unexec rm -f /usr/lib/apache/modules/libphp5.so
+Index: www/php5/core/pkg/PLIST-pear
+===================================================================
+RCS file: www/php5/core/pkg/PLIST-pear
+diff -N www/php5/core/pkg/PLIST-pear
+--- www/php5/core/pkg/PLIST-pear	25 Nov 2006 11:09:04 -0000	1.10
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,402 +0,0 @@
+-@comment $OpenBSD: PLIST-pear,v 1.10 2006/11/25 11:09:04 espie Exp $
+-@conflict php4-pear-*
+-@group daemon
+-pear/
+-pear/build/
+-pear/build/Makefile.global
+-pear/build/acinclude.m4
+-pear/build/config.guess
+-pear/build/config.sub
+-pear/build/libtool.m4
+-pear/build/ltmain.sh
+-pear/build/mkdep.awk
+-pear/build/phpize.m4
+-pear/build/run-tests.php
+-pear/build/scan_makefile_in.awk
+-pear/build/shtool
+-pear/data/
+-pear/data/PEAR/
+-pear/data/PEAR/package.dtd
+-pear/data/PEAR/template.spec
+-pear/doc/
+-pear/doc/Archive_Tar/
+-pear/doc/Archive_Tar/docs/
+-pear/doc/Archive_Tar/docs/Archive_Tar.txt
+-pear/include/
+-pear/include/TSRM/
+-pear/include/TSRM/TSRM.h
+-pear/include/TSRM/acconfig.h
+-pear/include/TSRM/readdir.h
+-pear/include/TSRM/tsrm_config.h
+-pear/include/TSRM/tsrm_config.w32.h
+-pear/include/TSRM/tsrm_config_common.h
+-pear/include/TSRM/tsrm_nw.h
+-pear/include/TSRM/tsrm_strtok_r.h
+-pear/include/TSRM/tsrm_virtual_cwd.h
+-pear/include/TSRM/tsrm_win32.h
+-pear/include/Zend/
+-pear/include/Zend/FlexLexer.h
+-pear/include/Zend/acconfig.h
+-pear/include/Zend/zend.h
+-pear/include/Zend/zend_API.h
+-pear/include/Zend/zend_alloc.h
+-pear/include/Zend/zend_builtin_functions.h
+-pear/include/Zend/zend_compile.h
+-pear/include/Zend/zend_config.h
+-pear/include/Zend/zend_config.nw.h
+-pear/include/Zend/zend_config.w32.h
+-pear/include/Zend/zend_constants.h
+-pear/include/Zend/zend_dynamic_array.h
+-pear/include/Zend/zend_errors.h
+-pear/include/Zend/zend_exceptions.h
+-pear/include/Zend/zend_execute.h
+-pear/include/Zend/zend_extensions.h
+-pear/include/Zend/zend_fast_cache.h
+-pear/include/Zend/zend_globals.h
+-pear/include/Zend/zend_globals_macros.h
+-pear/include/Zend/zend_hash.h
+-pear/include/Zend/zend_highlight.h
+-pear/include/Zend/zend_indent.h
+-pear/include/Zend/zend_ini.h
+-pear/include/Zend/zend_ini_parser.h
+-pear/include/Zend/zend_ini_scanner.h
+-pear/include/Zend/zend_interfaces.h
+-pear/include/Zend/zend_istdiostream.h
+-pear/include/Zend/zend_iterators.h
+-pear/include/Zend/zend_language_parser.h
+-pear/include/Zend/zend_language_scanner.h
+-pear/include/Zend/zend_list.h
+-pear/include/Zend/zend_llist.h
+-pear/include/Zend/zend_mm.h
+-pear/include/Zend/zend_modules.h
+-pear/include/Zend/zend_multibyte.h
+-pear/include/Zend/zend_multiply.h
+-pear/include/Zend/zend_object_handlers.h
+-pear/include/Zend/zend_objects.h
+-pear/include/Zend/zend_objects_API.h
+-pear/include/Zend/zend_operators.h
+-pear/include/Zend/zend_ptr_stack.h
+-pear/include/Zend/zend_qsort.h
+-pear/include/Zend/zend_stack.h
+-pear/include/Zend/zend_static_allocator.h
+-pear/include/Zend/zend_stream.h
+-pear/include/Zend/zend_strtod.h
+-pear/include/Zend/zend_ts_hash.h
+-pear/include/Zend/zend_types.h
+-pear/include/Zend/zend_variables.h
+-pear/include/Zend/zend_vm.h
+-pear/include/Zend/zend_vm_def.h
+-pear/include/Zend/zend_vm_execute.h
+-pear/include/Zend/zend_vm_opcodes.h
+-pear/include/ext/
+-pear/include/ext/date/
+-pear/include/ext/date/lib/
+-pear/include/ext/date/lib/timelib.h
+-pear/include/ext/date/lib/timelib_config.h
+-pear/include/ext/date/lib/timelib_structs.h
+-pear/include/ext/date/php_date.h
+-pear/include/ext/dom/
+-pear/include/ext/dom/xml_common.h
+-pear/include/ext/hash/
+-pear/include/ext/hash/php_hash.h
+-pear/include/ext/hash/php_hash_adler32.h
+-pear/include/ext/hash/php_hash_crc32.h
+-pear/include/ext/hash/php_hash_gost.h
+-pear/include/ext/hash/php_hash_haval.h
+-pear/include/ext/hash/php_hash_md.h
+-pear/include/ext/hash/php_hash_ripemd.h
+-pear/include/ext/hash/php_hash_sha.h
+-pear/include/ext/hash/php_hash_snefru.h
+-pear/include/ext/hash/php_hash_tiger.h
+-pear/include/ext/hash/php_hash_types.h
+-pear/include/ext/hash/php_hash_whirlpool.h
+-pear/include/ext/iconv/
+-pear/include/ext/iconv/php_have_bsd_iconv.h
+-pear/include/ext/iconv/php_have_glibc_iconv.h
+-pear/include/ext/iconv/php_have_iconv.h
+-pear/include/ext/iconv/php_have_libiconv.h
+-pear/include/ext/iconv/php_iconv.h
+-pear/include/ext/iconv/php_iconv_supports_errno.h
+-pear/include/ext/iconv/php_php_iconv_h_path.h
+-pear/include/ext/iconv/php_php_iconv_impl.h
+-pear/include/ext/libxml/
+-pear/include/ext/libxml/php_libxml.h
+-pear/include/ext/pcre/
+-pear/include/ext/pcre/pcrelib/
+-pear/include/ext/pcre/pcrelib/internal.h
+-pear/include/ext/pcre/pcrelib/pcre.h
+-pear/include/ext/pcre/pcrelib/pcre_internal.h
+-pear/include/ext/pcre/pcrelib/pcre_scanner.h
+-pear/include/ext/pcre/pcrelib/pcre_stringpiece.h
+-pear/include/ext/pcre/pcrelib/pcrecpp.h
+-pear/include/ext/pcre/pcrelib/pcrecpparg.h
+-pear/include/ext/pcre/pcrelib/pcreposix.h
+-pear/include/ext/pcre/pcrelib/ucp.h
+-pear/include/ext/pcre/pcrelib/ucpinternal.h
+-pear/include/ext/pcre/php_pcre.h
+-pear/include/ext/pdo/
+-pear/include/ext/pdo/php_pdo.h
+-pear/include/ext/pdo/php_pdo_driver.h
+-pear/include/ext/session/
+-pear/include/ext/session/mod_files.h
+-pear/include/ext/session/mod_user.h
+-pear/include/ext/session/php_session.h
+-pear/include/ext/standard/
+-pear/include/ext/standard/base64.h
+-pear/include/ext/standard/basic_functions.h
+-pear/include/ext/standard/crc32.h
+-pear/include/ext/standard/credits.h
+-pear/include/ext/standard/credits_ext.h
+-pear/include/ext/standard/credits_sapi.h
+-pear/include/ext/standard/css.h
+-pear/include/ext/standard/cyr_convert.h
+-pear/include/ext/standard/datetime.h
+-pear/include/ext/standard/dl.h
+-pear/include/ext/standard/dns.h
+-pear/include/ext/standard/exec.h
+-pear/include/ext/standard/file.h
+-pear/include/ext/standard/flock_compat.h
+-pear/include/ext/standard/fsock.h
+-pear/include/ext/standard/head.h
+-pear/include/ext/standard/html.h
+-pear/include/ext/standard/info.h
+-pear/include/ext/standard/md5.h
+-pear/include/ext/standard/microtime.h
+-pear/include/ext/standard/pack.h
+-pear/include/ext/standard/pageinfo.h
+-pear/include/ext/standard/php_array.h
+-pear/include/ext/standard/php_assert.h
+-pear/include/ext/standard/php_browscap.h
+-pear/include/ext/standard/php_crypt.h
+-pear/include/ext/standard/php_dir.h
+-pear/include/ext/standard/php_ext_syslog.h
+-pear/include/ext/standard/php_filestat.h
+-pear/include/ext/standard/php_fopen_wrappers.h
+-pear/include/ext/standard/php_ftok.h
+-pear/include/ext/standard/php_http.h
+-pear/include/ext/standard/php_image.h
+-pear/include/ext/standard/php_incomplete_class.h
+-pear/include/ext/standard/php_iptc.h
+-pear/include/ext/standard/php_lcg.h
+-pear/include/ext/standard/php_link.h
+-pear/include/ext/standard/php_mail.h
+-pear/include/ext/standard/php_math.h
+-pear/include/ext/standard/php_metaphone.h
+-pear/include/ext/standard/php_rand.h
+-pear/include/ext/standard/php_smart_str.h
+-pear/include/ext/standard/php_smart_str_public.h
+-pear/include/ext/standard/php_standard.h
+-pear/include/ext/standard/php_string.h
+-pear/include/ext/standard/php_type.h
+-pear/include/ext/standard/php_uuencode.h
+-pear/include/ext/standard/php_var.h
+-pear/include/ext/standard/php_versioning.h
+-pear/include/ext/standard/proc_open.h
+-pear/include/ext/standard/quot_print.h
+-pear/include/ext/standard/reg.h
+-pear/include/ext/standard/scanf.h
+-pear/include/ext/standard/sha1.h
+-pear/include/ext/standard/streamsfuncs.h
+-pear/include/ext/standard/uniqid.h
+-pear/include/ext/standard/url.h
+-pear/include/ext/standard/url_scanner.h
+-pear/include/ext/standard/url_scanner_ex.h
+-pear/include/ext/xml/
+-pear/include/ext/xml/expat_compat.h
+-pear/include/ext/xml/php_xml.h
+-pear/include/include/
+-pear/include/main/
+-pear/include/main/SAPI.h
+-pear/include/main/build-defs.h
+-pear/include/main/config.w32.h
+-pear/include/main/fopen_wrappers.h
+-pear/include/main/logos.h
+-pear/include/main/php.h
+-pear/include/main/php3_compat.h
+-pear/include/main/php_compat.h
+-pear/include/main/php_config.h
+-pear/include/main/php_content_types.h
+-pear/include/main/php_globals.h
+-pear/include/main/php_ini.h
+-pear/include/main/php_logos.h
+-pear/include/main/php_main.h
+-pear/include/main/php_memory_streams.h
+-pear/include/main/php_network.h
+-pear/include/main/php_open_temporary_file.h
+-pear/include/main/php_output.h
+-pear/include/main/php_reentrancy.h
+-pear/include/main/php_regex.h
+-pear/include/main/php_scandir.h
+-pear/include/main/php_streams.h
+-pear/include/main/php_syslog.h
+-pear/include/main/php_ticks.h
+-pear/include/main/php_variables.h
+-pear/include/main/php_version.h
+-pear/include/main/rfc1867.h
+-pear/include/main/safe_mode.h
+-pear/include/main/snprintf.h
+-pear/include/main/spprintf.h
+-pear/include/main/streams/
+-pear/include/main/streams/php_stream_context.h
+-pear/include/main/streams/php_stream_filter_api.h
+-pear/include/main/streams/php_stream_mmap.h
+-pear/include/main/streams/php_stream_plain_wrapper.h
+-pear/include/main/streams/php_stream_transport.h
+-pear/include/main/streams/php_stream_userspace.h
+-pear/include/main/streams/php_streams_int.h
+-pear/include/main/suhosin_globals.h
+-pear/include/main/suhosin_logo.h
+-pear/include/main/suhosin_patch.h
+-pear/include/main/win95nt.h
+-pear/include/regex/
+-pear/include/regex/cclass.h
+-pear/include/regex/cname.h
+-pear/include/regex/regex.h
+-pear/include/regex/regex2.h
+-pear/include/regex/regex_extra.h
+-pear/include/regex/utils.h
+-pear/lib/
+-pear/lib/.channels/
+-pear/lib/.channels/.alias/
+-pear/lib/.channels/.alias/pear.txt
+-pear/lib/.channels/.alias/pecl.txt
+-pear/lib/.channels/__uri.reg
+-pear/lib/.channels/pear.php.net.reg
+-pear/lib/.channels/pecl.php.net.reg
+-pear/lib/.depdb
+-pear/lib/.depdblock
+-pear/lib/.registry/
+-pear/lib/.registry/.channel.__uri/
+-pear/lib/.registry/.channel.pecl.php.net/
+-pear/lib/.registry/archive_tar.reg
+-pear/lib/.registry/console_getopt.reg
+-pear/lib/.registry/pear.reg
+-pear/lib/.registry/xml_rpc.reg
+-pear/lib/Archive/
+-pear/lib/Archive/Tar.php
+-pear/lib/Console/
+-pear/lib/Console/Getopt.php
+-pear/lib/OS/
+-pear/lib/OS/Guess.php
+-pear/lib/PEAR/
+-pear/lib/PEAR.php
+-pear/lib/PEAR/Autoloader.php
+-pear/lib/PEAR/Builder.php
+-pear/lib/PEAR/ChannelFile/
+-pear/lib/PEAR/ChannelFile.php
+-pear/lib/PEAR/ChannelFile/Parser.php
+-pear/lib/PEAR/Command/
+-pear/lib/PEAR/Command.php
+-pear/lib/PEAR/Command/Auth.php
+-pear/lib/PEAR/Command/Auth.xml
+-pear/lib/PEAR/Command/Build.php
+-pear/lib/PEAR/Command/Build.xml
+-pear/lib/PEAR/Command/Channels.php
+-pear/lib/PEAR/Command/Channels.xml
+-pear/lib/PEAR/Command/Common.php
+-pear/lib/PEAR/Command/Config.php
+-pear/lib/PEAR/Command/Config.xml
+-pear/lib/PEAR/Command/Install.php
+-pear/lib/PEAR/Command/Install.xml
+-pear/lib/PEAR/Command/Mirror.php
+-pear/lib/PEAR/Command/Mirror.xml
+-pear/lib/PEAR/Command/Package.php
+-pear/lib/PEAR/Command/Package.xml
+-pear/lib/PEAR/Command/Pickle.php
+-pear/lib/PEAR/Command/Pickle.xml
+-pear/lib/PEAR/Command/Registry.php
+-pear/lib/PEAR/Command/Registry.xml
+-pear/lib/PEAR/Command/Remote.php
+-pear/lib/PEAR/Command/Remote.xml
+-pear/lib/PEAR/Command/Test.php
+-pear/lib/PEAR/Command/Test.xml
+-pear/lib/PEAR/Common.php
+-pear/lib/PEAR/Config.php
+-pear/lib/PEAR/Dependency.php
+-pear/lib/PEAR/Dependency2.php
+-pear/lib/PEAR/DependencyDB.php
+-pear/lib/PEAR/Downloader/
+-pear/lib/PEAR/Downloader.php
+-pear/lib/PEAR/Downloader/Package.php
+-pear/lib/PEAR/ErrorStack.php
+-pear/lib/PEAR/Exception.php
+-pear/lib/PEAR/Frontend/
+-pear/lib/PEAR/Frontend.php
+-pear/lib/PEAR/Frontend/CLI.php
+-pear/lib/PEAR/Installer/
+-pear/lib/PEAR/Installer.php
+-pear/lib/PEAR/Installer/Role/
+-pear/lib/PEAR/Installer/Role.php
+-pear/lib/PEAR/Installer/Role/Common.php
+-pear/lib/PEAR/Installer/Role/Data.php
+-pear/lib/PEAR/Installer/Role/Data.xml
+-pear/lib/PEAR/Installer/Role/Doc.php
+-pear/lib/PEAR/Installer/Role/Doc.xml
+-pear/lib/PEAR/Installer/Role/Ext.php
+-pear/lib/PEAR/Installer/Role/Ext.xml
+-pear/lib/PEAR/Installer/Role/Php.php
+-pear/lib/PEAR/Installer/Role/Php.xml
+-pear/lib/PEAR/Installer/Role/Script.php
+-pear/lib/PEAR/Installer/Role/Script.xml
+-pear/lib/PEAR/Installer/Role/Src.php
+-pear/lib/PEAR/Installer/Role/Src.xml
+-pear/lib/PEAR/Installer/Role/Test.php
+-pear/lib/PEAR/Installer/Role/Test.xml
+-pear/lib/PEAR/PackageFile/
+-pear/lib/PEAR/PackageFile.php
+-pear/lib/PEAR/PackageFile/Generator/
+-pear/lib/PEAR/PackageFile/Generator/v1.php
+-pear/lib/PEAR/PackageFile/Generator/v2.php
+-pear/lib/PEAR/PackageFile/Parser/
+-pear/lib/PEAR/PackageFile/Parser/v1.php
+-pear/lib/PEAR/PackageFile/Parser/v2.php
+-pear/lib/PEAR/PackageFile/v1.php
+-pear/lib/PEAR/PackageFile/v2/
+-pear/lib/PEAR/PackageFile/v2.php
+-pear/lib/PEAR/PackageFile/v2/Validator.php
+-pear/lib/PEAR/PackageFile/v2/rw.php
+-pear/lib/PEAR/Packager.php
+-pear/lib/PEAR/REST/
+-pear/lib/PEAR/REST.php
+-pear/lib/PEAR/REST/10.php
+-pear/lib/PEAR/REST/11.php
+-pear/lib/PEAR/Registry.php
+-pear/lib/PEAR/Remote.php
+-pear/lib/PEAR/RunTest.php
+-pear/lib/PEAR/Task/
+-pear/lib/PEAR/Task/Common.php
+-pear/lib/PEAR/Task/Postinstallscript/
+-pear/lib/PEAR/Task/Postinstallscript.php
+-pear/lib/PEAR/Task/Postinstallscript/rw.php
+-pear/lib/PEAR/Task/Replace/
+-pear/lib/PEAR/Task/Replace.php
+-pear/lib/PEAR/Task/Replace/rw.php
+-pear/lib/PEAR/Task/Unixeol/
+-pear/lib/PEAR/Task/Unixeol.php
+-pear/lib/PEAR/Task/Unixeol/rw.php
+-pear/lib/PEAR/Task/Windowseol/
+-pear/lib/PEAR/Task/Windowseol.php
+-pear/lib/PEAR/Task/Windowseol/rw.php
+-pear/lib/PEAR/Validate.php
+-pear/lib/PEAR/Validator/
+-pear/lib/PEAR/Validator/PECL.php
+-pear/lib/PEAR/XMLParser.php
+-pear/lib/System.php
+-pear/lib/XML/
+-pear/lib/XML/RPC/
+-pear/lib/XML/RPC.php
+-pear/lib/XML/RPC/Dump.php
+-pear/lib/XML/RPC/Server.php
+-pear/lib/pearcmd.php
+-pear/lib/peclcmd.php
+-pear/tests/
+-pear/tests/XML_RPC/
+-pear/tests/XML_RPC/tests/
+-pear/tests/XML_RPC/tests/allgot.inc
+-pear/tests/XML_RPC/tests/empty-value-struct.php
+-pear/tests/XML_RPC/tests/empty-value.php
+-pear/tests/XML_RPC/tests/extra-lines.php
+-pear/tests/XML_RPC/tests/protoport.php
+-pear/tests/XML_RPC/tests/test_Dump.php
+-pear/tests/XML_RPC/tests/types.php
+-@group
+Index: www/php5/core/pkg/UNMESSAGE
+===================================================================
+RCS file: www/php5/core/pkg/UNMESSAGE
+diff -N www/php5/core/pkg/UNMESSAGE
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ www/php5/core/pkg/UNMESSAGE	20 Mar 2007 11:36:53 -0000
+@@ -0,0 +1,8 @@
++To completely deinstall the package you need to
++perform these steps as root:
++
++    edit /var/www/conf/httpd.conf
++    remove the line LoadModule php5_module
++
++Do not do this if you plan on re-installing php5
++package at some future time.
+Index: www/php5/core/pkg/UNMESSAGE-main
+===================================================================
+RCS file: www/php5/core/pkg/UNMESSAGE-main
+diff -N www/php5/core/pkg/UNMESSAGE-main
+--- www/php5/core/pkg/UNMESSAGE-main	25 Nov 2006 11:09:43 -0000	1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,8 +0,0 @@
+-To completely deinstall the package you need to
+-perform these steps as root:
+-
+-    edit /var/www/conf/httpd.conf
+-    remove the line LoadModule php5_module
+-
+-Do not do this if you plan on re-installing php5
+-package at some future time.
+Index: www/php5/extensions/Makefile
+===================================================================
+RCS file: /cvs/ports/www/php5/extensions/Makefile,v
+retrieving revision 1.32
+diff -u -r1.32 Makefile
+--- www/php5/extensions/Makefile	9 Feb 2007 13:48:20 -0000	1.32
++++ www/php5/extensions/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -1,6 +1,6 @@
+ # $OpenBSD: Makefile,v 1.32 2007/02/09 13:48:20 bernd Exp $
+ 
+-FULLPKGNAME-main=		php5-extensions-${V}p0
++FULLPKGNAME-main=	php5-extensions-${V}
+ COMMENT-main=		"informational package about PHP5 extensions"
+ 
+ MULTI_PACKAGES=	-main
+@@ -48,7 +48,7 @@
+ CONFIGURE_ARGS+=	--with-curl=shared,${LOCALBASE}
+ LIB_DEPENDS-curl=	curl.>=2::net/curl
+ WANTLIB-curl=		${WANTLIB} crypto ssl z
+-FULLPKGNAME-curl=	php5-curl-${V}p2
++FULLPKGNAME-curl=	php5-curl-${V}
+ .endif
+ 
+ # dba
+@@ -73,17 +73,6 @@
+ LIB_DEPENDS-dbase=
+ .endif
+ 
+-# filepro
+-PSEUDO_FLAVORS+=	no_filepro
+-.if ${FLAVOR:L:Mno_filepro}
+-CONFIGURE_ARGS+=	--disable-filepro
+-.else
+-MULTI_PACKAGES+=	-filepro
+-COMMENT-filepro=	"filepro database access extensions for php5"
+-CONFIGURE_ARGS+=	--enable-filepro=shared
+-LIB_DEPENDS-filepro=
+-.endif
+-
+ # gd
+ PSEUDO_FLAVORS+=	no_gd
+ .if ${FLAVOR:L:Mno_gd}
+@@ -101,11 +90,11 @@
+ 
+ . if ${FLAVOR:L:Mno_x11}
+ CONFIGURE_ARGS+=	--without-xpm-dir --without-freetype-dir
+-FULLPKGNAME-gd=		php5-gd-${V}-no_x11p2
++FULLPKGNAME-gd=		php5-gd-${V}-no_x11
+ . else
+ USE_X11=		yes
+ CONFIGURE_ARGS+=	--with-xpm-dir=${X11BASE}
+-FULLPKGNAME-gd=		php5-gd-${V}p1
++FULLPKGNAME-gd=		php5-gd-${V}
+ WANTLIB-gd+=		X11 Xpm freetype
+ . endif
+ .endif
+@@ -290,7 +279,7 @@
+ COMMENT-sybase_ct=	"sybase database access extensions for php5"
+ CONFIGURE_ARGS+=        --with-sybase-ct=shared,${LOCALBASE}
+ LIB_DEPENDS-sybase_ct=	ct::databases/freetds
+-FULLPKGNAME-sybase_ct=	php5-sybase_ct-${V}p2
++FULLPKGNAME-sybase_ct=	php5-sybase_ct-${V}
+ .endif
+ 
+ # xml-rpc
+@@ -318,7 +307,7 @@
+ .endif
+ 
+ .for i in ${MULTI_PACKAGES}
+-FULLPKGNAME${i} ?=	php5${i}-${V}p1
++FULLPKGNAME${i} ?=	php5${i}-${V}
+ RUN_DEPENDS${i}=	:php5-core-${V}:www/php5/core
+ MODULE_NAME${i}=	${i:S/-//g}
+ .endfor
+Index: www/php5/extensions/patches/patch-ext_curl_interface_c
+===================================================================
+RCS file: www/php5/extensions/patches/patch-ext_curl_interface_c
+diff -N www/php5/extensions/patches/patch-ext_curl_interface_c
+--- www/php5/extensions/patches/patch-ext_curl_interface_c	12 Nov 2006 13:40:20 -0000	1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,20 +0,0 @@
+-$OpenBSD: patch-ext_curl_interface_c,v 1.1 2006/11/12 13:40:20 robert Exp $
+---- ext/curl/interface.c.orig	Sun Nov 12 14:23:01 2006
+-+++ ext/curl/interface.c	Sun Nov 12 14:23:25 2006
+-@@ -271,7 +271,7 @@ PHP_MINIT_FUNCTION(curl)
+- 	REGISTER_CURL_CONSTANT(CURLOPT_FTPAPPEND);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_NETRC);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_FOLLOWLOCATION);
+--	REGISTER_CURL_CONSTANT(CURLOPT_FTPASCII);
+-+	REGISTER_CURL_CONSTANT(CURLOPT_TRANSFERTEXT);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_PUT);
+- #if CURLOPT_MUTE != 0
+- 	REGISTER_CURL_CONSTANT(CURLOPT_MUTE);
+-@@ -311,7 +311,6 @@ PHP_MINIT_FUNCTION(curl)
+- 	REGISTER_CURL_CONSTANT(CURLOPT_FILETIME);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_WRITEFUNCTION);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_READFUNCTION);
+--	REGISTER_CURL_CONSTANT(CURLOPT_PASSWDFUNCTION);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_HEADERFUNCTION);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_MAXREDIRS);
+- 	REGISTER_CURL_CONSTANT(CURLOPT_MAXCONNECTS);
+Index: www/php5/extensions/pkg/DESCR-filepro
+===================================================================
+RCS file: www/php5/extensions/pkg/DESCR-filepro
+diff -N www/php5/extensions/pkg/DESCR-filepro
+--- www/php5/extensions/pkg/DESCR-filepro	2 Oct 2004 11:32:37 -0000	1.1.1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,5 +0,0 @@
+-These functions allow read-only access to data stored in filePro
+-databases.
+-
+-filePro is a registered trademark of fP Technologies, Inc. You can
+-find more information about filePro at http://www.fptech.com/
+Index: www/php5/extensions/pkg/PLIST-filepro
+===================================================================
+RCS file: www/php5/extensions/pkg/PLIST-filepro
+diff -N www/php5/extensions/pkg/PLIST-filepro
+--- www/php5/extensions/pkg/PLIST-filepro	21 Oct 2006 11:44:10 -0000	1.3
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,4 +0,0 @@
+-@comment $OpenBSD: PLIST-filepro,v 1.3 2006/10/21 11:44:10 robert Exp $
+-@conflict php4-filepro-*
+-@pkgpath www/php5/extensions,-filepro,hardened
+-lib/php/modules/filepro.so
+Index: www/php5/patches/patch-ext_posix_posix_c
+===================================================================
+RCS file: www/php5/patches/patch-ext_posix_posix_c
+diff -N www/php5/patches/patch-ext_posix_posix_c
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ www/php5/patches/patch-ext_posix_posix_c	20 Mar 2007 11:36:53 -0000
+@@ -0,0 +1,21 @@
++$OpenBSD$
++--- ext/posix/posix.c.orig	Tue Mar 20 00:38:18 2007
+++++ ext/posix/posix.c	Tue Mar 20 00:39:48 2007
++@@ -884,7 +884,7 @@
++ 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "l", &gid) == FAILURE) {
++ 		RETURN_FALSE;
++ 	}
++-#ifdef HAVE_GETGRGID_R
+++#if defined(ZTS) && defined(HAVE_GETGRGID_R) && defined(_SC_GETGR_R_SIZE_MAX)
++ 	
++ 	grbuflen = sysconf(_SC_GETGR_R_SIZE_MAX);
++ 	grbuf = emalloc(grbuflen);
++@@ -909,7 +909,7 @@
++ 		php_error_docref(NULL TSRMLS_CC, E_WARNING, "unable to convert posix group struct to array");
++ 		RETVAL_FALSE;
++ 	}
++-#ifdef HAVE_GETGRGID_R
+++#if defined(ZTS) && defined(HAVE_GETGRGID_R) && defined(_SC_GETGR_R_SIZE_MAX)
++ 	efree(grbuf);
++ #endif
++ }
+Index: www/php5/patches/patch-php_ini-dist
+===================================================================
+RCS file: /cvs/ports/www/php5/patches/patch-php_ini-dist,v
+retrieving revision 1.6
+diff -u -r1.6 patch-php_ini-dist
+--- www/php5/patches/patch-php_ini-dist	9 May 2006 14:15:40 -0000	1.6
++++ www/php5/patches/patch-php_ini-dist	20 Mar 2007 11:36:53 -0000
+@@ -1,7 +1,7 @@
+-$OpenBSD: patch-php_ini-dist,v 1.6 2006/05/09 14:15:40 robert Exp $
+---- php.ini-dist.orig	Tue Nov 15 00:14:23 2005
+-+++ php.ini-dist	Sat Nov 26 13:18:08 2005
+-@@ -441,10 +441,7 @@
++$OpenBSD$
++--- php.ini-dist.orig	Thu Dec 21 14:05:27 2006
+++++ php.ini-dist	Wed Feb 21 23:30:37 2007
++@@ -455,10 +455,7 @@
+  ;;;;;;;;;;;;;;;;;;;;;;;;;
+  
+  ; UNIX: "/path1:/path2"
+@@ -13,7 +13,7 @@
+  
+  ; The root of the PHP pages, used only if nonempty.
+  ; if PHP was not compiled with FORCE_REDIRECT, you SHOULD set doc_root
+-@@ -458,7 +455,7 @@
++@@ -472,7 +469,7 @@
+  user_dir =
+  
+  ; Directory in which the loadable extensions (modules) reside.
+@@ -22,16 +22,16 @@
+  
+  ; Whether or not to enable the dl() function.  The dl() function does NOT work
+  ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
+-@@ -519,7 +516,7 @@
++@@ -533,7 +530,7 @@
+  ;;;;;;;;;;;;;;;;;;
+  
+  ; Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+ -allow_url_fopen = On
+ +allow_url_fopen = Off
+  
+- ; Define the anonymous ftp password (your email address)
+- ;from="john@doe.com"
+-@@ -537,70 +534,6 @@
++ ; Whether to allow include/require to open URLs (like http:// or ftp://) as files.
++ allow_url_include = Off
++@@ -554,81 +551,6 @@
+  ; fgets() and file() will work regardless of the source of the file.
+  ; auto_detect_line_endings = Off
+  
+@@ -64,45 +64,56 @@
+ -; extension folders as well as the separate PECL DLL download (PHP 5).
+ -; Be sure to appropriately set the extension_dir directive.
+ -
+--;extension=php_mbstring.dll
+ -;extension=php_bz2.dll
+ -;extension=php_curl.dll
+ -;extension=php_dba.dll
+ -;extension=php_dbase.dll
+ -;extension=php_exif.dll
+ -;extension=php_fdf.dll
+--;extension=php_filepro.dll
+ -;extension=php_gd2.dll
+ -;extension=php_gettext.dll
++-;extension=php_gmp.dll
+ -;extension=php_ifx.dll
+ -;extension=php_imap.dll
+ -;extension=php_interbase.dll
+ -;extension=php_ldap.dll
++-;extension=php_mbstring.dll
+ -;extension=php_mcrypt.dll
+ -;extension=php_mhash.dll
+ -;extension=php_mime_magic.dll
+ -;extension=php_ming.dll
+--;extension=php_mssql.dll
+ -;extension=php_msql.dll
++-;extension=php_mssql.dll
+ -;extension=php_mysql.dll
++-;extension=php_mysqli.dll
+ -;extension=php_oci8.dll
+ -;extension=php_openssl.dll
+--;extension=php_oracle.dll
++-;extension=php_pdo.dll
++-;extension=php_pdo_firebird.dll
++-;extension=php_pdo_mssql.dll
++-;extension=php_pdo_mysql.dll
++-;extension=php_pdo_oci.dll
++-;extension=php_pdo_oci8.dll
++-;extension=php_pdo_odbc.dll
++-;extension=php_pdo_pgsql.dll
++-;extension=php_pdo_sqlite.dll
+ -;extension=php_pgsql.dll
++-;extension=php_pspell.dll
+ -;extension=php_shmop.dll
+ -;extension=php_snmp.dll
++-;extension=php_soap.dll
+ -;extension=php_sockets.dll
+ -;extension=php_sqlite.dll
+ -;extension=php_sybase_ct.dll
+ -;extension=php_tidy.dll
+ -;extension=php_xmlrpc.dll
+ -;extension=php_xsl.dll
+--
++-;extension=php_zip.dll
+ -
+  ;;;;;;;;;;;;;;;;;;;
+  ; Module Settings ;
+  ;;;;;;;;;;;;;;;;;;;
+-@@ -616,13 +549,6 @@
++@@ -670,13 +592,6 @@
+  define_syslog_variables  = Off
+  
+  [mail function]
+@@ -116,7 +127,7 @@
+  ; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+  ;sendmail_path =
+  
+-@@ -1173,6 +1099,53 @@
++@@ -1252,6 +1167,53 @@
+  ; instead of original one.
+  soap.wsdl_cache_ttl=86400
+  
+Index: www/php5/patches/patch-php_ini-recommended
+===================================================================
+RCS file: /cvs/ports/www/php5/patches/patch-php_ini-recommended,v
+retrieving revision 1.6
+diff -u -r1.6 patch-php_ini-recommended
+--- www/php5/patches/patch-php_ini-recommended	9 May 2006 14:15:40 -0000	1.6
++++ www/php5/patches/patch-php_ini-recommended	20 Mar 2007 11:36:53 -0000
+@@ -1,7 +1,7 @@
+-$OpenBSD: patch-php_ini-recommended,v 1.6 2006/05/09 14:15:40 robert Exp $
+---- php.ini-recommended.orig	Tue Nov 15 00:14:23 2005
+-+++ php.ini-recommended	Sat Nov 26 13:19:47 2005
+-@@ -499,10 +499,7 @@
++$OpenBSD$
++--- php.ini-recommended.orig	Thu Dec 21 14:05:27 2006
+++++ php.ini-recommended	Wed Feb 21 23:33:04 2007
++@@ -500,10 +500,7 @@
+  ;;;;;;;;;;;;;;;;;;;;;;;;;
+  
+  ; UNIX: "/path1:/path2"
+@@ -13,7 +13,7 @@
+  
+  ; The root of the PHP pages, used only if nonempty.
+  ; if PHP was not compiled with FORCE_REDIRECT, you SHOULD set doc_root
+-@@ -516,7 +513,7 @@
++@@ -517,7 +514,7 @@
+  user_dir =
+  
+  ; Directory in which the loadable extensions (modules) reside.
+@@ -22,16 +22,16 @@
+  
+  ; Whether or not to enable the dl() function.  The dl() function does NOT work
+  ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
+-@@ -577,7 +574,7 @@
++@@ -578,7 +575,7 @@
+  ;;;;;;;;;;;;;;;;;;
+  
+  ; Whether to allow the treatment of URLs (like http:// or ftp://) as files.
+ -allow_url_fopen = On
+ +allow_url_fopen = Off
+  
+- ; Define the anonymous ftp password (your email address)
+- ;from="john@doe.com"
+-@@ -595,70 +592,6 @@
++ ; Whether to allow include/require to open URLs (like http:// or ftp://) as files.
++ allow_url_include = Off
++@@ -599,81 +596,6 @@
+  ; fgets() and file() will work regardless of the source of the file.
+  ; auto_detect_line_endings = Off
+  
+@@ -64,45 +64,56 @@
+ -; extension folders as well as the separate PECL DLL download (PHP 5).
+ -; Be sure to appropriately set the extension_dir directive.
+ -
+--;extension=php_mbstring.dll
+ -;extension=php_bz2.dll
+ -;extension=php_curl.dll
+ -;extension=php_dba.dll
+ -;extension=php_dbase.dll
+ -;extension=php_exif.dll
+ -;extension=php_fdf.dll
+--;extension=php_filepro.dll
+ -;extension=php_gd2.dll
+ -;extension=php_gettext.dll
++-;extension=php_gmp.dll
+ -;extension=php_ifx.dll
+ -;extension=php_imap.dll
+ -;extension=php_interbase.dll
+ -;extension=php_ldap.dll
++-;extension=php_mbstring.dll
+ -;extension=php_mcrypt.dll
+ -;extension=php_mhash.dll
+ -;extension=php_mime_magic.dll
+ -;extension=php_ming.dll
+--;extension=php_mssql.dll
+ -;extension=php_msql.dll
++-;extension=php_mssql.dll
+ -;extension=php_mysql.dll
++-;extension=php_mysqli.dll
+ -;extension=php_oci8.dll
+ -;extension=php_openssl.dll
+--;extension=php_oracle.dll
++-;extension=php_pdo.dll
++-;extension=php_pdo_firebird.dll
++-;extension=php_pdo_mssql.dll
++-;extension=php_pdo_mysql.dll
++-;extension=php_pdo_oci.dll
++-;extension=php_pdo_oci8.dll
++-;extension=php_pdo_odbc.dll
++-;extension=php_pdo_pgsql.dll
++-;extension=php_pdo_sqlite.dll
+ -;extension=php_pgsql.dll
++-;extension=php_pspell.dll
+ -;extension=php_shmop.dll
+ -;extension=php_snmp.dll
++-;extension=php_soap.dll
+ -;extension=php_sockets.dll
+ -;extension=php_sqlite.dll
+ -;extension=php_sybase_ct.dll
+ -;extension=php_tidy.dll
+ -;extension=php_xmlrpc.dll
+ -;extension=php_xsl.dll
+--
++-;extension=php_zip.dll
+ -
+  ;;;;;;;;;;;;;;;;;;;
+  ; Module Settings ;
+  ;;;;;;;;;;;;;;;;;;;
+-@@ -674,13 +607,6 @@
++@@ -715,13 +637,6 @@
+  define_syslog_variables  = Off
+  
+  [mail function]
+@@ -116,7 +127,7 @@
+  ; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+  ;sendmail_path =
+  
+-@@ -1231,6 +1157,53 @@
++@@ -1300,6 +1215,53 @@
+  ; instead of original one.
+  soap.wsdl_cache_ttl=86400
+  
+Index: www/php5/pear/Makefile.pear
+===================================================================
+RCS file: www/php5/pear/Makefile.pear
+diff -N www/php5/pear/Makefile.pear
+--- www/php5/pear/Makefile.pear	2 Oct 2004 11:32:38 -0000	1.1.1.1
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,9 +0,0 @@
+-# $OpenBSD: Makefile.pear,v 1.1.1.1 2004/10/02 11:32:38 robert Exp $
+-# Default Makefile to install a PHP PEAR module
+-
+-default:
+-
+-install:
+-	cp ${WRKDIR}/package.xml ${.CURDIR}
+-	mkdir -p ${PREFIX}/lib/php
+-	${LOCALBASE}/bin/pear install -R ${WRKINST} -n ${.CURDIR}/package.xml
+Index: www/php5/pear/pear.port.mk
+===================================================================
+RCS file: www/php5/pear/pear.port.mk
+diff -N www/php5/pear/pear.port.mk
+--- www/php5/pear/pear.port.mk	9 May 2006 14:15:40 -0000	1.3
++++ /dev/null	1 Jan 1970 00:00:00 -0000
+@@ -1,18 +0,0 @@
+-# $OpenBSD: pear.port.mk,v 1.3 2006/05/09 14:15:40 robert Exp $
+-# PHP PEAR module
+-
+-RUN_DEPENDS+=	:php5-pear-*:www/php5/core,-pear
+-BUILD_DEPENDS+=	${RUN_DEPENDS}
+-
+-NO_BUILD=	Yes
+-.if !target(do-regress)
+-NO_REGRESS=	Yes
+-.endif
+-
+-MAKE_FILE=	${PORTSDIR}/www/php5/pear/Makefile.pear
+-FAKE_FLAGS+=	WRKINST=${WRKINST} WRKDIR=${WRKDIR}
+-
+-PREFIX=		/var/www
+-
+-PEAR_LIBDIR=	${PREFIX}/pear/lib
+-PEAR_PHPBIN=	${LOCALBASE}/bin/php
+Index: benchmarks/pear-Benchmark/Makefile
+===================================================================
+RCS file: /cvs/ports/benchmarks/pear-Benchmark/Makefile,v
+retrieving revision 1.9
+diff -u -r1.9 Makefile
+--- benchmarks/pear-Benchmark/Makefile	3 Nov 2006 07:18:31 -0000	1.9
++++ benchmarks/pear-Benchmark/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"framework to benchmark PHP scripts or function calls"
+ 
+ DISTNAME=	Benchmark-1.2.6
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	benchmarks pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # BSD
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: benchmarks/pear-Benchmark/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/benchmarks/pear-Benchmark/pkg/PLIST,v
+retrieving revision 1.7
+diff -u -r1.7 PLIST
+--- benchmarks/pear-Benchmark/pkg/PLIST	28 Oct 2006 13:54:47 -0000	1.7
++++ benchmarks/pear-Benchmark/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,17 +1,14 @@
+ @comment $OpenBSD: PLIST,v 1.7 2006/10/28 13:54:47 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
++@group
++pear/doc/
++@group daemon
+ pear/doc/Benchmark/
+ pear/doc/Benchmark/LICENSE
+ pear/doc/Benchmark/doc/
+ pear/doc/Benchmark/doc/timer_example.php
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/benchmark.reg
+ pear/lib/Benchmark/
+ pear/lib/Benchmark/Iterate.php
+Index: databases/pear-DB/Makefile
+===================================================================
+RCS file: /cvs/ports/databases/pear-DB/Makefile,v
+retrieving revision 1.4
+diff -u -r1.4 Makefile
+@@ -3,14 +3,14 @@
+ COMMENT=	"database abstraction layer for PHP"
+ 
+ DISTNAME=	DB-1.7.6
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	net pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: databases/pear-DB/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/databases/pear-DB/pkg/PLIST,v
+retrieving revision 1.2
+diff -u -r1.2 PLIST
+@@ -1,7 +1,7 @@
+ @comment $OpenBSD: PLIST,v 1.2 2006/10/22 13:36:54 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
+-pear/
+ pear/doc/
+ pear/doc/DB/
+ pear/doc/DB/doc/
+@@ -9,19 +9,6 @@
+ pear/doc/DB/doc/MAINTAINERS
+ pear/doc/DB/doc/STATUS
+ pear/doc/DB/doc/TESTERS
+-pear/lib/
+-@comment pear/lib/.channels/
+-@comment pear/lib/.channels/.alias/
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+-pear/lib/.registry/
+-@comment pear/lib/.registry/.channel.__uri/
+-@comment pear/lib/.registry/.channel.pecl.php.net/
+ pear/lib/.registry/db.reg
+ pear/lib/DB/
+ pear/lib/DB.php
+@@ -40,7 +27,6 @@
+ pear/lib/DB/sqlite.php
+ pear/lib/DB/storage.php
+ pear/lib/DB/sybase.php
+-pear/tests/
+ pear/tests/DB/
+ pear/tests/DB/tests/
+ pear/tests/DB/tests/db_error.phpt
+Index: devel/pear-Cache/Makefile
+===================================================================
+RCS file: /cvs/ports/devel/pear-Cache/Makefile,v
+retrieving revision 1.2
+diff -u -r1.2 Makefile
+--- devel/pear-Cache/Makefile	28 Oct 2006 12:40:51 -0000	1.2
++++ devel/pear-Cache/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"Framework for caching of arbitrary data for PHP"
+ 
+ DISTNAME=	Cache-1.5.4
+-PKGNAME=	pear-${DISTNAME}p0
++PKGNAME=	pear-${DISTNAME}p1
+ CATEGORIES=	devel pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: devel/pear-Cache/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/devel/pear-Cache/pkg/PLIST,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 PLIST
+--- devel/pear-Cache/pkg/PLIST	28 Oct 2006 12:35:11 -0000	1.1.1.1
++++ devel/pear-Cache/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,16 +1,8 @@
+ @comment $OpenBSD: PLIST,v 1.1.1.1 2006/10/28 12:35:11 mbalmer Exp $
+-lib/
+-lib/php/
++@group daemon
+ pear/data/Cache/
+ pear/data/Cache/Container/
+ pear/data/Cache/Container/mdb_cache_schema.xml
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/cache.reg
+ pear/lib/Cache/
+ pear/lib/Cache.php
+Index: devel/pear-Config/Makefile
+===================================================================
+RCS file: /cvs/ports/devel/pear-Config/Makefile,v
+retrieving revision 1.6
+diff -u -r1.6 Makefile
+--- devel/pear-Config/Makefile	28 Oct 2006 17:54:37 -0000	1.6
++++ devel/pear-Config/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"configuration file library for PHP"
+ 
+ DISTNAME=	Config-1.10.7
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	devel pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ RUN_DEPENDS=	:pear-XML-Parser-*:textproc/pear-XML-Parser \
+ 		:pear-XML-Util-*:textproc/pear-XML-Util
+Index: devel/pear-Config/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/devel/pear-Config/pkg/PLIST,v
+retrieving revision 1.6
+diff -u -r1.6 PLIST
+--- devel/pear-Config/pkg/PLIST	28 Oct 2006 17:54:37 -0000	1.6
++++ devel/pear-Config/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,18 +1,10 @@
+ @comment $OpenBSD: PLIST,v 1.6 2006/10/28 17:54:37 mbalmer Exp $
+-lib/
+-lib/php/
++@group daemon
+ pear/doc/Config/
+ pear/doc/Config/docs/
+ pear/doc/Config/docs/Apache.php
+ pear/doc/Config/docs/IniCommented.php
+ pear/doc/Config/docs/IniFromScratch.php
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/config.reg
+ pear/lib/Config/
+ pear/lib/Config.php
+Index: devel/pear-Date/Makefile
+===================================================================
+RCS file: /cvs/ports/devel/pear-Date/Makefile,v
+retrieving revision 1.7
+diff -u -r1.7 Makefile
+--- devel/pear-Date/Makefile	28 Oct 2006 17:50:19 -0000	1.7
++++ devel/pear-Date/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"date and timezone classes for PHP"
+ 
+ DISTNAME=	Date-1.4.6
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	devel pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # BSD
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: devel/pear-Date/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/devel/pear-Date/pkg/PLIST,v
+retrieving revision 1.7
+diff -u -r1.7 PLIST
+--- devel/pear-Date/pkg/PLIST	28 Oct 2006 17:40:51 -0000	1.7
++++ devel/pear-Date/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,16 +1,13 @@
+ @comment $OpenBSD: PLIST,v 1.7 2006/10/28 17:40:51 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
++@group
++pear/doc/
++@group daemon
+ pear/doc/Date/
+ pear/doc/Date/LICENSE
+ pear/doc/Date/TODO
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/date.reg
+ pear/lib/Date/
+ pear/lib/Date.php
+Index: devel/pear-Log/Makefile
+===================================================================
+RCS file: /cvs/ports/devel/pear-Log/Makefile,v
+retrieving revision 1.9
+diff -u -r1.9 Makefile
+--- devel/pear-Log/Makefile	28 Oct 2006 17:49:11 -0000	1.9
++++ devel/pear-Log/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,7 +3,7 @@
+ COMMENT=	"logging utilities for PHP"
+ 
+ DISTNAME=	Log-1.9.9
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	devel pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+@@ -12,7 +12,7 @@
+ HOMEPAGE=	http://www.csh.rit.edu/~jon/projects/pear_log/
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+ 
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: devel/pear-Log/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/devel/pear-Log/pkg/PLIST,v
+retrieving revision 1.9
+diff -u -r1.9 PLIST
+--- devel/pear-Log/pkg/PLIST	28 Oct 2006 17:49:11 -0000	1.9
++++ devel/pear-Log/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,9 +1,13 @@
+ @comment $OpenBSD: PLIST,v 1.9 2006/10/28 17:49:11 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
+ pear/data/Log/
+ pear/data/Log/misc/
+ pear/data/Log/misc/log.sql
++@group
++pear/doc/
++@group daemon
+ pear/doc/Log/
+ pear/doc/Log/docs/
+ pear/doc/Log/docs/examples/
+@@ -22,13 +26,6 @@
+ pear/doc/Log/docs/examples/syslog.php
+ pear/doc/Log/docs/examples/win.php
+ pear/doc/Log/docs/guide.txt
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/log.reg
+ pear/lib/Log/
+ pear/lib/Log.php
+Index: devel/pear-PHPUnit2/Makefile
+===================================================================
+RCS file: /cvs/ports/devel/pear-PHPUnit2/Makefile,v
+retrieving revision 1.2
+diff -u -r1.2 Makefile
+--- devel/pear-PHPUnit2/Makefile	9 May 2006 14:16:50 -0000	1.2
++++ devel/pear-PHPUnit2/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"regression testing framework for PHP 5"
+ 
+ DISTNAME=	PHPUnit2-2.1.6
+-PKGNAME=	pear-${DISTNAME}p0
++PKGNAME=	pear-${DISTNAME}p1
+ CATEGORIES=	devel pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Aleksander Piotrowski <alek@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ RUN_DEPENDS=	::benchmarks/pear-Benchmark
+ 
+Index: devel/pear-PHPUnit2/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/devel/pear-PHPUnit2/pkg/PLIST,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 PLIST
+--- devel/pear-PHPUnit2/pkg/PLIST	2 Mar 2005 13:53:44 -0000	1.1.1.1
++++ devel/pear-PHPUnit2/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,6 +1,5 @@
+ @comment $OpenBSD: PLIST,v 1.1.1.1 2005/03/02 13:53:44 mbalmer Exp $
+-lib/
+-lib/php/
++@group daemon
+ pear/lib/.registry/phpunit2.reg
+ pear/lib/PHPUnit2/
+ pear/lib/PHPUnit2/Extensions/
+Index: mail/pear-Mail/Makefile
+===================================================================
+RCS file: /cvs/ports/mail/pear-Mail/Makefile,v
+retrieving revision 1.3
+diff -u -r1.3 Makefile
+--- mail/pear-Mail/Makefile	28 Oct 2006 17:58:48 -0000	1.3
++++ mail/pear-Mail/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"class that provides multiple interfaces for sending email"
+ 
+ DISTNAME=	Mail-1.1.14
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	mail pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: mail/pear-Mail/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/mail/pear-Mail/pkg/PLIST,v
+retrieving revision 1.2
+diff -u -r1.2 PLIST
+--- mail/pear-Mail/pkg/PLIST	28 Oct 2006 17:58:48 -0000	1.2
++++ mail/pear-Mail/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,13 +1,7 @@
+ @comment $OpenBSD: PLIST,v 1.2 2006/10/28 17:58:48 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/mail.reg
+ pear/lib/Mail/
+ pear/lib/Mail.php
+Index: mail/pear-Mail-Mime/Makefile
+===================================================================
+RCS file: /cvs/ports/mail/pear-Mail-Mime/Makefile,v
+retrieving revision 1.5
+diff -u -r1.5 Makefile
+--- mail/pear-Mail-Mime/Makefile	28 Oct 2006 18:01:52 -0000	1.5
++++ mail/pear-Mail-Mime/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"classes to create and decode MIME messages in PHP"
+ 
+ DISTNAME=	Mail_Mime-1.3.1
+-PKGNAME=	pear-${DISTNAME:S/_/-/}
++PKGNAME=	pear-${DISTNAME:S/_/-/}p0
+ CATEGORIES=	mail pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: mail/pear-Mail-Mime/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/mail/pear-Mail-Mime/pkg/PLIST,v
+retrieving revision 1.6
+diff -u -r1.6 PLIST
+--- mail/pear-Mail-Mime/pkg/PLIST	28 Oct 2006 18:01:52 -0000	1.6
++++ mail/pear-Mail-Mime/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,16 +1,10 @@
+ @comment $OpenBSD: PLIST,v 1.6 2006/10/28 18:01:52 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
+ pear/data/Mail_Mime/
+ pear/data/Mail_Mime/xmail.dtd
+ pear/data/Mail_Mime/xmail.xsl
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/mail_mime.reg
+ pear/lib/Mail/
+ pear/lib/Mail/mime.php
+Index: net/pear-HTTP/Makefile
+===================================================================
+RCS file: /cvs/ports/net/pear-HTTP/Makefile,v
+retrieving revision 1.3
+diff -u -r1.3 Makefile
+--- net/pear-HTTP/Makefile	22 Oct 2006 12:17:47 -0000	1.3
++++ net/pear-HTTP/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"miscellaneous HTTP utilities for PHP"
+ 
+ DISTNAME=	HTTP-1.3.6
+-PKGNAME=	pear-${DISTNAME}
++PKGNAME=	pear-${DISTNAME}p0
+ CATEGORIES=	net pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: net/pear-HTTP/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/net/pear-HTTP/pkg/PLIST,v
+retrieving revision 1.2
+diff -u -r1.2 PLIST
+--- net/pear-HTTP/pkg/PLIST	22 Oct 2006 12:17:47 -0000	1.2
++++ net/pear-HTTP/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,19 +1,6 @@
+ @comment $OpenBSD: PLIST,v 1.2 2006/10/22 12:17:47 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
+-pear/
+-pear/lib/
+-@comment pear/lib/.channels/
+-@comment pear/lib/.channels/.alias/
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+-pear/lib/.registry/
+-@comment pear/lib/.registry/.channel.__uri/
+-@comment pear/lib/.registry/.channel.pecl.php.net/
+ pear/lib/.registry/http.reg
+ pear/lib/HTTP.php
+Index: net/pear-HTTP-Request/Makefile
+===================================================================
+RCS file: /cvs/ports/net/pear-HTTP-Request/Makefile,v
+retrieving revision 1.7
+diff -u -r1.7 Makefile
+--- net/pear-HTTP-Request/Makefile	28 Oct 2006 22:19:00 -0000	1.7
++++ net/pear-HTTP-Request/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"an easy way to perform HTTP requests for PHP"
+ 
+ DISTNAME=	HTTP_Request-1.4.0
+-PKGNAME=	pear-${DISTNAME:S/_/-/}
++PKGNAME=	pear-${DISTNAME:S/_/-/}p0
+ CATEGORIES=	net pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: net/pear-HTTP-Request/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/net/pear-HTTP-Request/pkg/PLIST,v
+retrieving revision 1.2
+diff -u -r1.2 PLIST
+--- net/pear-HTTP-Request/pkg/PLIST	28 Oct 2006 22:19:00 -0000	1.2
++++ net/pear-HTTP-Request/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,17 +1,10 @@
+ @comment $OpenBSD: PLIST,v 1.2 2006/10/28 22:19:00 mbalmer Exp $
+-lib/
+-lib/php/
++pear/doc/
++@group daemon
+ pear/doc/HTTP_Request/
+ pear/doc/HTTP_Request/docs/
+ pear/doc/HTTP_Request/docs/download-progress.php
+ pear/doc/HTTP_Request/docs/example.php
+-@comment pear/lib/.channels/.alias/pear.txt
+-@comment pear/lib/.channels/.alias/pecl.txt
+-@comment pear/lib/.channels/__uri.reg
+-@comment pear/lib/.channels/pear.php.net.reg
+-@comment pear/lib/.channels/pecl.php.net.reg
+-@comment pear/lib/.depdb
+-@comment pear/lib/.depdblock
+ pear/lib/.registry/http_request.reg
+ pear/lib/HTTP/
+ pear/lib/HTTP/Request/
+Index: net/pear-Net-IMAP/Makefile
+===================================================================
+RCS file: /cvs/ports/net/pear-Net-IMAP/Makefile,v
+retrieving revision 1.3
+diff -u -r1.3 Makefile
+--- net/pear-Net-IMAP/Makefile	22 Oct 2006 12:28:49 -0000	1.3
++++ net/pear-Net-IMAP/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"an implementation of the IMAP protocol for PHP"
+ 
+ DISTNAME=	Net_IMAP-1.0.3
+-PKGNAME=	pear-${DISTNAME:S/_/-/}p0
++PKGNAME=	pear-${DISTNAME:S/_/-/}p1
+ CATEGORIES=	net pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # PHP License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: net/pear-Net-IMAP/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/net/pear-Net-IMAP/pkg/PLIST,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 PLIST
+--- net/pear-Net-IMAP/pkg/PLIST	15 Feb 2005 09:45:37 -0000	1.1.1.1
++++ net/pear-Net-IMAP/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,11 +1,11 @@
+ @comment $OpenBSD: PLIST,v 1.1.1.1 2005/02/15 09:45:37 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
+ pear/lib/.registry/net_imap.reg
+ pear/lib/Net/
+ pear/lib/Net/IMAP.php
+ pear/lib/Net/IMAPProtocol.php
+-pear/tests/
+ pear/tests/Net_IMAP/
+ pear/tests/Net_IMAP/docs/
+ pear/tests/Net_IMAP/docs/test_IMAP.php
+Index: net/pear-Net-LDAP/Makefile
+===================================================================
+RCS file: /cvs/ports/net/pear-Net-LDAP/Makefile,v
+retrieving revision 1.2
+diff -u -r1.2 Makefile
+--- net/pear-Net-LDAP/Makefile	20 Nov 2006 20:00:05 -0000	1.2
++++ net/pear-Net-LDAP/Makefile	20 Mar 2007 11:36:53 -0000
+@@ -3,14 +3,14 @@
+ COMMENT=	"pear ldap"
+ 
+ DISTNAME=	Net_LDAP-0.6.6
+-PKGNAME=	pear-${DISTNAME:S/_/-/}p0
++PKGNAME=	pear-${DISTNAME:S/_/-/}p1
+ CATEGORIES=	net pear
+ 
+ MASTER_SITES=	http://pear.php.net/get/
+ EXTRACT_SUFX=	.tgz
+ 
+ MAINTAINER=	Marc Balmer <mbalmer@openbsd.org>
+-MODULES=	www/php5/pear
++MODULES=	www/pear
+ 
+ # BSD License
+ PERMIT_PACKAGE_CDROM=	Yes
+Index: net/pear-Net-LDAP/pkg/PLIST
+===================================================================
+RCS file: /cvs/ports/net/pear-Net-LDAP/pkg/PLIST,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 PLIST
+--- net/pear-Net-LDAP/pkg/PLIST	28 Oct 2006 17:21:03 -0000	1.1.1.1
++++ net/pear-Net-LDAP/pkg/PLIST	20 Mar 2007 11:36:53 -0000
+@@ -1,6 +1,10 @@
+ @comment $OpenBSD: PLIST,v 1.1.1.1 2006/10/28 17:21:03 mbalmer Exp $
++@group daemon
+ lib/
+ lib/php/
++@group
++pear/doc/
++@group daemon
+ pear/doc/Net_LDAP/
+ pear/doc/Net_LDAP/LICENSE
+ pear/doc/Net_LDAP/doc/
+@@ -11,13 +15,6 @@
+ pear/doc/Net_LDAP/doc/utf8.txt
+ pear/doc/Net_LDAP/tests/
+ pear/doc/Net_LDAP/tests/tests.php
+====================================================================================================
+IDX 11 PK 184092
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372004`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-21T00:30:24+00:00 FROM Marc Espie <espie () nerim ! net>
+SUBJ Re: ODBC on OpenBSD
+SUMM 2007 年 3 月 21 日，Marc Espie 就 OpenBSD 的 ODBC 访问建议用 Perl 的 DBD::Proxy 与 DBI::Proxyserver 让 HTML::Mason 从 Unix 直读 Windows 上的 Access 数据库缺点是需 Windows 上跑 perl 脚本。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Another possibility is perl.
+I've been using DBD::Proxy/DBI::Proxyserver across Unix <-> Windows
+to get an HTML::Mason app directly talking to an Access database, and
+I'm in the process of migrating it to DBIx::Class (often enough Catalyst).
+
+This does just work. The only downside is that you need to run a perl script
+on the windows machine...
+
+
+====================================================================================================
+IDX 12 PK 184095
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372005`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-21T07:06:01+00:00 FROM Marc Espie <espie () nerim ! net>
+SUBJ Re: groff update?
+SUMM 2007 年 3 月 21 日，Marc Espie 回应 Gareth 关于树内是否有机会升级到新版 groff 的询问Gareth 点明候选版本为 groff 1.18 或 1.19Marc Espie 直接答复 Yes 确认这两个版本会被导入代码树。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Wed, Mar 21, 2007 at 08:11:17AM +0200, Gareth wrote:
+> Is there any chance of a newer version of groff (1.18 or 1.19) being
+> imported into the tree?  
+Yes
+
+
+====================================================================================================
+IDX 13 PK 184099
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372008`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-21T14:35:08+00:00 FROM "Jason Crawford" <jasonrcrawford () gmail ! com>
+SUBJ Re: Daylight savings fix with OpenNTPD
+SUMM 2007 年 3 月 21 日，Jason Crawford 建议把 /etc/localtime 指向 /usr/share/zoneinfo/US/Eastern 时区目录即可在 EST 与 EDT 之间自动切换Dan Farrell 原用 zic -I EST5EDT 手工写入时区设置仍差一小时。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+If you set /etc/localtime to /usr/share/zoneinfo/US/Eastern, it'll
+automatically switch between EST and EDT.
+
+On 3/21/07, Dan Farrell <danno@appliedi.net> wrote:
+> I'm using the EST timezone (as reported in 'date') and yet I'm still an
+> hour behind... much like you...
+>
+> NTPD is running and syncing up with pool.ntp.org.
+>
+> And in looking further Bob's right (as usual)... I'm not using the
+> correct timezone setting.
+>
+> I had to change that to the 'correct' EST setting...
+>
+> zic -I EST5EDT
+>
+>
+> Perhaps you need to do something similar? I got this from-
+>
+> http://archives.neohapsis.com/archives/openbsd/2005-08/0756.html
+>
+>
+> danno
+>
+> -----Original Message-----
+> From: owner-misc@openbsd.org [mailto:owner-misc@openbsd.org] On Behalf
+> Of Bob Beck
+> Sent: Tuesday, March 20, 2007 3:44 PM
+> To: Bray Mailloux
+> Cc: misc@openbsd.org
+> Subject: Re: Daylight savings fix with OpenNTPD
+>
+> * Bray Mailloux <BradenM@SonomaComputer.com> [2007-03-20 13:33]:
+> > Have a patch been issued?
+>
+>         Yes. see the errata page
+>
+> > It might just be the time servers, but date is
+> > reporting 11:04:31 when it is 12:05.
+>
+>         It aint the time servers they report in UCT.
+>
+>         Your timezone is wrong
+>
+>         -Bob
+
+
+====================================================================================================
+IDX 14 PK 184105
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372009`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-22T00:12:25+00:00 FROM "Jeff Quast" <af.dingo () gmail ! com>
+SUBJ Re: compile faster?
+SUMM 2007 年 3 月 22 日，Jeff Quast 回应 chuckr 在 Zaurus 上构建 /usr/src 耗时两天并考虑交叉编译的问题断言不该花两天建议用 NFS 挂载 /usr/src 与 /usr/obj 加速并反对交叉编译称找被夹带的 bug 比省下的时间更多建议改买 Thecus。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 3/21/07, chuckr <chuckr@chuckr.org> wrote:
+> I am going into doing a bit of compiling on my Zaurus.  I have both a
+> Linux and a FreeBSD server, both pretty fast Intel boxes, sitting right
+> besides them, and in fact, all of my source directories (sources for
+> /usr/src and /usr/ports) are remotely mounted from my FreeBSD box (sept
+> is my Zaurus, april my FreeBSD, and june my Linux box).
+>
+> What am I getting on about?  Well, compilation, as I now do it, ssh'd
+> into sept from april (the FreeBSD box).  Is there anything that anyone
+> else is doing, that they're actually gotten to work?
+>
+> I'm wondering about doing maybe a cross-compiler.  I'm not sure about
+> the spec of the floating point work, you need to get that precisely
+> right.  If anyone is doing this successfukky, I sure would like to hear
+> a report about it.  It takes me about 2 days to do a /usr/src build.
+
+Shouldn't take two days. NFS mount your /usr/src and /usr/obj and it
+will go much faster.
+
+The CF card is something like 5MB/s on mine.
+
+Don't cross compile, you'll spend more time finding bugs that were
+snuck in than you will have saved. Buy a more powerful arm computer,
+like a Thecus :)
+
+
+====================================================================================================
+IDX 15 PK 184107
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372010`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-22T00:37:38+00:00 FROM "Clint M. Sand" <clint () neotrance ! dyndns ! org>
+SUBJ Re: cvs or cvsup
+SUMM 2007 年 3 月 22 日，Clint M. Sand 在 Stefan Sperling 罗列 cvsup 与 cvs 差异后补充一点称 cvs 属于 base 而 cvsup 是需额外安装维护的 port 或 package原文认为 cvsup 更快可整树复制但不加密且仅 i386 可用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Wed, Mar 21, 2007 at 10:59:22AM +0100, Stefan Sperling wrote:
+> On Wed, Mar 21, 2007 at 01:39:51AM -0700, Kernel Monkey wrote:
+> > I've been using the cvsup client to update my sources. What is the
+> > difference between cvs and cvsup when updating sources?
+> > 
+> > Is one better than the other?
+> 
+> There is no easy answer.
+> It depends on what you want.
+> 
+> + cvsup is much faster. It's optimized for getting as much
+>   out of your bandwidth as it can.
+>   See http://www.cvsup.org/howsofast.html
+> + cvsup can copy the whole OpenBSD CVS repository, not just
+>   check out working copies. You can even add local branches to
+>   the repo and commit on them! See the development(7) man page
+>   from FreeBSD for a nice guide written by Matthew Dillon himself
+>   on how to do this.
+> - cvsup does not provide encryption
+> - cvsup only works on i386
+> + cvsup is written in modula3 (yes, this is a +, but just
+>   because I am familiar with the cm3 compiler from work,
+>   ie. the existence of modula3 and killer apps that use it
+>   have been paying some of my rent. Keep them coming! :-P)
+> 
+> - cvs is slower
+> + cvs can do diffs and view logs, and using the nifty cvsdo utility
+>   from the cvsutils port you can even diff new files you've added
+> + cvs provides encryption over ssh
+> - but many anoncvs mirrors probably sync using sup/cvsup, so the
+>   encrypted distribution channel provided by anoncvs does not go all
+>   the way up to the master server anyway... :-( This may or may not
+>   cancel out the benefit of encryption for you.
+> + cvs works on all arches
+
+Great points but one to add:
+
+*cvs is part of base, cvsup is yet another port/package I have to install
+and maintain. 
+> 
+> -- 
+> stefan
+> http://stsp.in-berlin.de                                 PGP Key: 0xF59D25F0
+
+
+====================================================================================================
+IDX 16 PK 184120
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372012`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-22T21:00:48+00:00 FROM Stefek Zaba <s-gwp3-obsdmisc-jan06 () zaba ! com>
+SUBJ Do symlinks "exist"? (sh, ksh, /bin/test documentation ambiguity)
+SUMM 2007 年 3 月 22 日，Stefek Zaba 讨论 sh、ksh 与 /bin/test 三处 manpage 对 -e 判定符号链接的文档歧义指出三处对 -e 的描述都只写 file exists 而其他文件类测试都写成 file exists and 后接附加条件导致判定与预期不符。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+I expect it's old, old news to those with more shell scripting scars: but
+the results of the [ -e ] test are at variance with my allegedly reasonable
+reading of the documentation.
+
+For all three of sh, ksh, and the /bin/test manpages, the description of the
+-e test reads "file exists", unlike the other file-related tests which read
+"file exists and <further condition>", with <further condition> being
+is-writable, is-exucatable, is-readable, and the like. The manpage for
+/bin/test is even more emphatic in suggesting it's going to be true for a
+strict superset of the files for which the other tests return true - "True
+if file exsits (regardless of type)".
+
+However, there are arguments for which -e returns false, but a different
+file-related test returns true. These arguments are symlinks which don't
+resolve to an existing file - both symlinks that point 'nowhere', i.e. to
+non-existent targets (directly or indirectly), and symlinks which will error
+with ELOOP if stat()ed.
+
+Changing the behaviour of -e for non-resolving symlinks is almost certainly
+a Really Bad Idea: the existing behaviour of -e is doubtless relied on by a
+few million shellscripts, all more or less strongly bound to the idea that
+if -e returns true, there's Something There, and a strong expectation that
+the Something is stat()able rather than merely lstat()able. But perhaps a
+small change to the venerable text of the sh, ksh, and /bin/test manpages
+might be in order? Some form of words like "exists (target exists if a
+symbolic link)" might capture the actual behaviour more accurately.
+
+Yes, it's a picky point - and one I wouldn't bother raising in the Linux
+world, where manpages are at best impressionistic; but the pithy clarity of
+OpenBSD manpages is a pearl beyond price, and thus worth cleaning of even
+small specks.
+
+As far as testing in shell scripts whether 'things' are present - using
+[ -e $file -o -h $file ] catches the 'exists, maybe as a symlink which
+doesn't resolve' case; as could the use of stat(1) with suitable
+format-strings, -q, -L, and related incantatia...
+
+Cheers, Stefek
+
+
+====================================================================================================
+IDX 17 PK 184121
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372013`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T01:01:45+00:00 FROM "Sam Fourman Jr." <sfourman () gmail ! com>
+SUBJ Re: openbsd acpi help
+SUMM 2007 年 3 月 23 日，Sam Fourman Jr. 回应 Jay Jesus Amorin 询问如何在运行 openbsd 4.1-current 的笔记本上启用 ACPI 的问题给出在 boot 提示符下依次输入 boot -c 然后 enable acpi 再 quit 的命令序列。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+at the boot prompt type boot -c
+
+then type enable acpi then type quit
+
+
+Sam Fourman Jr.
+
+On 3/22/07, Jay Jesus Amorin <jdamorin@gmail.com> wrote:
+> good day!
+>
+> can anyone here help me on how i can enable acpi on my laptop?
+>
+> my laptop is running openbsd 4.1-current.
+>
+> thanks for your help
+>
+>
+> long live openbsd.
+>
+>
+> --jay--
+
+
+====================================================================================================
+IDX 18 PK 184123
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372014`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T04:25:41+00:00 FROM "RW" <glisten () witworx ! com>
+SUBJ Re: IPsec gone assymetric
+SUMM 2007 年 3 月 23 日，RW 就两端 ipsecctl 输出互为镜像但隧道仍变为不对称的问题回帖描述其悉尼至墨尔本的双端配置使用较简单的 ipsec.conf 已稳定运行数月当日两端执行 ipsecctl -s all 均产生预期输出且互为镜像netstat -rnf encap 在两端也显示预期结果。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Thu, 22 Mar 2007 05:30:45 -0600, Jacob Yocom-Piatt wrote:
+
+>RW wrote:
+>> I have a simple setup.
+>> Sydney to Melbourne and the ipsec.conf is one of the nice easy ones
+>> whilst I learn to do more complex setups. It has been working for
+>> months.
+>>
+>> Today doing "ipsecctl -s all" at either end generates the expected
+>> output. Each is a mirror of the other.
+>>
+>> netstat -rnf encap shows expected output at both ends. Again mirrors of
+>> the other.
+>>
+>> However sshing into each and doing a traceroute to t'other end gives
+>> madly assymetric results.
+>>
+>> With the distant gateway as the target Syd gets to Mel in one hop, as
+>> expected.
+>> Mel gets to Syd going out the $ext_if rather than the encap. As the
+>> LANs are RFC1918s Mel cannot get to Syd but Syd can get to Mel.
+>>
+>>   
+>
+>i wouldn't expect you to have a route not set on the isakmpd endpoints,
+>but i have a "route add <remote net> <internal private IP>" in the
+>hostname.if files for the internal interfaces on both endpoints. that's
+>the only thing i can think of that would work for a while (manually
+>added routes) and then stop working after, say, a reboot of one endpoint.
+
+No, not the problem here. It works without any extra route lines, but
+read the update at the bottom of the quoted stuff.
+>
+>cheers,
+>jake
+>
+>
+>> Killing (desperation set in) isakmpd and restarting both ends did
+>> nothing to change the situation.
+>>
+>> What kind of diagnostics can I use to debug this? Extra points for a
+>> correct guess as to the cause all this time after installation.
+>>
+>> Thanks,
+
+OK, a night's sleep led to an early morning Eureka moment.
+
+I should have said "What changed?" and I did. The mistake that dummy me
+made was not to consider a change made ages ago. That change did not
+break ipsec for the clients but did for the firewall endpoint at one
+end.
+
+For the benefit of others here is the detail:
+
+Originally Mel (bourne) was on an ADSL connection running half-bridge
+so the OpenBSD firewall had the WAN IP on $ext_if and the first
+(usable) of a /29 on the server LAN NIC.
+
+Due to problems with the modem we swapped it out for one that does not
+do half-bridge.
+
+So I gave $ext_if 192.168 addr to mate with the one on the modem. I
+then did  all the NAT stuff based on $svrlan_if
+e.g.
+nat on $ext_if from $fwext to any -> $svr_if
+nat on $ext_if from $lan_ip to any -> $svr_if
+where fwext is the IP on $ext_if and lan_ip is the /24 for the LAN
+users.
+So all outbound packets look like they come from the svr_lan nic.
+That works sweetly and I have a similar setup at home. Neither of those
+has the /30 that would be preferred to make everything work but that's
+IP scarcity for you.
+
+So ipsec works just fine for everything on Mel and its mate, Syd.
+Except for packets I generated at Mel using ssh login. Until I woke up
+and used the -I flag in ping and the -s flag in traceroute to "source"
+the packets from the svrlan_if address, that is.
+
+I don't know what, if anything, can be done to ensure that packets
+generated in the firewall Mel can be forced to use the tunnel when the
+destination is Syd, but it isn't a showstopper (fingers crossed!)
+
+So, there was a change ages ago and I had never after it, until now,
+tried to ping up the tunnel from the firewall so I didn't know that it
+was kinda broken, and if anybody knows how to "unbreak" it I'll be
+pleased just in case........
+
+Thanks Jacob for your reply.
+
+Rod/
+
+
+====================================================================================================
+IDX 19 PK 184125
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372015`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T15:25:31+00:00 FROM Boris Golberg <boris () twopoint ! com>
+SUBJ Re: isakmpd gateway-to-gateway VPN woes...
+SUMM 2007 年 3 月 23 日，Boris Golberg 就 Jack 的 isakmpd 网关间 VPN 问题回帖复述拓扑网段 10.0.0.2/24 与 10.0.0.1/24 经两台 Soekris net4801 防火墙 F1 与 F2 相接并注明主机到本端与两防火墙间 lan 及 IPSec 可用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Hello Jack,
+
+Thursday, March 22, 2007, 6:49:14 PM, you wrote:
+
+JB> ... having some trouble getting a LAN-to-LAN VPN working ...
+
+JB>                10.0.0.2/24 --- 10.0.0.1/24
+JB>     L1             F1               F2             L2
+JB> 10.4.14.1 --- 10.4.12.1/22     10.2.12.1/22 --- 10.2.14.1
+
+JB> L1,L2 - laptops
+JB> F1,F2 - Soekris net4801 firewalls
+
+JB> What works:
+
+JB> L1-F1 lan communication
+JB> L2-F2 lan communication
+JB> F1-F2 lan communication
+JB> F1-F2 IPSec communication (evidenced by F1 running "ping 10.0.0.1" and
+JB> seeing only esp packets in tcpdump)
+
+JB> What doesn't work:
+
+JB> F1-L2 gateway'd VPN
+JB> F2-L1 gateway'd VPN
+JB> L1-L2 gateway-to-gateway'd VPN
+
+  Sorry   if   I  miss  something,  but  I  don't  see  you  trying to test
+Network-to-Network VPN you are talking about. Does it work from an internal
+computer in one network to an internal computer in another?
+  Gateway-to-Gateway doesn't (and shouldn't, I think) work "out of the box"
+with the Network-to-Network VPN. Adding manual routs helped me to solve it.
+Something  like "route add 10.2.12.0/22 10.4.14.1" on the F1 and "route add
+10.4.12.0/22  10.2.14.1"  on the F2. Your numbers a bit confusing, but it's
+a "route add <network_on_the_other_side> <gateways_internal_interface>".
+
+-- 
+Best regards,
+ Boris                            mailto:boris@twopoint.com
+
+
+====================================================================================================
+IDX 20 PK 184126
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372016`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T15:52:18+00:00 FROM Theo de Raadt <deraadt () cvs ! openbsd ! org>
+SUBJ Re: zaurus bootstrapping
+SUMM 2007 年 3 月 23 日，Theo de Raadt 回应关于即使硬盘被完全清空或移除也能从内置闪存启动 linux 的追问说明 Zaurus 嵌入式闪存的有效容量只够装下以单用户模式引导的 linux自研 boot 程序就放在这块闪存中再由它从硬盘引导 OpenBSD。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+> Also, if I understand correctly, the HD can be blown away completely
+> (or even removed), and we can still boot linux off the embedded flash?
+
+It can still boot linux off the embedded flash effectively in single
+user mode.  That's all that they fit up there.  And that is where
+we place our boot program, which then boots openbsd off the drive.
+
+
+====================================================================================================
+IDX 21 PK 184129
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372017`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T18:15:27+00:00 FROM "J.C. Roberts" <jcroberts () designtools ! org>
+SUBJ Re: named stopped with error
+SUMM 2007 年 3 月 23 日，J.C. Roberts 就 RW 反馈 named 停止报错且手工启动后仍像过去那样运行的问题转贴 src/usr.sbin/bind/lib/isc/mem.c 的 mem_put 实现该函数执行 free 并做内存填充与越界检测开关 ISC_MEM_CHECKOVERRUN。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Thursday 22 March 2007 23:32, RW wrote:
+> It started up manually and ran as it has for the past (nearly) year,
+> so it looks like a one-off but I'd love to hear of possible causes.
+>
+> Thanks,
+> Rod/
+
+from: src/usr.sbin/bind/lib/isc/mem.c
+/*
+ * Perform a free, doing memory filling and overrun detection as   
+   necessary.
+ */
+static inline void
+mem_put(isc_mem_t *ctx, void *mem, size_t size) {
+#if ISC_MEM_CHECKOVERRUN
+	INSIST(((unsigned char *)mem)[size] == 0xbe);
+#endif
+#if ISC_MEM_FILL
+	memset(mem, 0xde, size); /* Mnemonic for "dead". */
+#else
+	UNUSED(size);
+#endif
+	(ctx->memfree)(ctx->arg, mem);
+}
+
+The error you hit was in a free function, line 628. Listed in the CVE is 
+a "Use-after-free vulnerability" (CVE-2007-0493) which may or may not 
+be related (OpenBSD is not listed as vulnerable).
+http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=bind
+
+jcr
+
+
+====================================================================================================
+IDX 22 PK 184134
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372019`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T21:17:01+00:00 FROM Miod Vallat <miod () online ! fr>
+SUBJ Re: Plextor PX-EH40L (landisk) power-off button?
+SUMM 2007 年 3 月 23 日，Miod Vallat说明 Plextor PX-EH40L landisk 电源开关在 OpenBSD 下无反应Linux 原版系统会收到信号执行关机OpenBSD 须将 sysctl machdep.kbdreset 设为 1并参见 power(4)。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+> Has anyone using the Plextor PX-EHxxL landisk hardware gotten the power 
+> toggle switch to fulfill its intended purpose?
+> Under the original Linux-based OS, the switch would send a signal to the 
+> OS to start a shutdown procedure and once properly shutdown, the OS 
+> would then power off the device.
+> Under OpenBSD, this switch does nothing.
+
+You need to sysctl machdep.kbdreset=1, for example by uncommenting the
+entry in /etc/sysctl.conf. See power(4) for details.
+
+Miod
+
+
+====================================================================================================
+IDX 23 PK 184136
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372020`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-23T23:07:10+00:00 FROM Boris Golberg <boris () twopoint ! com>
+SUBJ Re: HP SA P400/P800 ciss support and caveats
+SUMM 2007 年 3 月 23 日，Boris Golberg回复 Joel 咨询HP ProLiant DL320s 搭配 Smart Array P400 或 P800 拟购 5 到 8 terabyte 存储用于备份询问 ciss 驱动仅支持每台控制器一个逻辑卷是否够用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Hello Joel,
+
+Friday, March 23, 2007, 11:16:20 AM, you wrote:
+
+>>   We  are  looking  to  buy  an  HP  ProLiant  DL320s server with about 5-8
+>> terabyte  of  storage  and  Smart Array P400 or P800 for a backup purposes.
+>> According to www.openbsd.org/cgi-bin/man.cgi?query=ciss&arch=i386&sektion=4
+>> it should be supported in -current, but "the current code only supports one
+>> logical   volume  per  controller". This scared me because according to the
+>> FAQ  there  is "a 1T limit on the size of the physical disk", but I need to
+>> utilize much more.
+>> 
+>>   What does "logical volume" mean here - RAID set or LUN ?
+>> 
+>>   In the other words, is there any way to use that storage with OBSD ?
+
+
+JK> The FAQ is referring to a RAID volume.
+
+JK> You should search the archives for discussion of the 1TB limit.
+
+  Again,  what is "RAID volume" - RAID set or LUN ? Can I have 10 LANs (for
+example) and see them as separate devices (like sd0, sd1, sd2, etc) ?
+  Then I wont need to worry about a terabyte limit.
+
+-- 
+Best regards,
+ Boris                            mailto:boris@twopoint.com
+
+
+====================================================================================================
+IDX 24 PK 184140
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372021`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-24T09:14:03+00:00 FROM viq <vicviq () gmail ! com>
+SUBJ Re: ntpd can no longer cope with the clock drift
+SUMM 2007 年 3 月 24 日，viq回复 ntpd 无法跟上时钟漂移由 OpenNTPd 改用 ntpd 并将 7 月 7 日快照更新到 3 月 22 日快照后时钟差每小时增数秒尝试将 kern.timecounter.hardware 由 VIAPM 改为 i8254 时钟差从约 94 秒降至 88 秒。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 24/03/07, viq <vicviq@gmail.com> wrote:
+> On 24/03/07, Otto Moerbeek <otto@drijf.net> wrote:
+> >
+> > On Sat, 24 Mar 2007, viq wrote:
+> >
+> > > I have a rather old x86 box, running a 600 MHz Duron. It does have
+> > > problems keeping the clock in sync, so one of the first things I ran
+> > > on it was OpenNTPd, and it was sometimes spamming the logs with the
+> > > sync messages, but keeping the time beautifully. That is, untill
+> > > yesterday, when I updated from 7th Match snapshots to 22nd March
+> > > snapshots. Right now the clock difference increases few seconds every
+> > > hour, which is less than what it would be if left alone, but
+> > > apparently more than ntpd can deal with. So... How can I deal with
+> > > that? What more info is needed to help diagnose this?
+> >
+> > In snaps i386 moved to a new timekeeping mechanism called
+> > timecounters. The range of clock error adjustment timecounters can do
+> > is somewhat more limited than the old mechanism. It's on my list to
+> > look into that.
+> >
+> > Btw, with sysctl kern.timecounter you can look if there are
+> > alternative time sources on your system. Choose another by setting
+> > kern.timecounter.hardware if there is more than one available (apart
+> > from dummy).
+>
+> Thank you for explanation.
+> $ sysctl kern.timecounter
+> kern.timecounter.tick=1
+> kern.timecounter.timestepwarnings=0
+> kern.timecounter.hardware=VIAPM
+> kern.timecounter.choice=i8254(0) VIAPM(1000) dummy(-1000000)
+>
+> I just tried setting kern.timecounter.hardware to i8254, shall see
+> what that will help.
+
+Actually I already see this is helping, the difference in that time
+just reduced from 94 or so seconds to 88.
+
+> >         -Otto
+> >
+>
+>
+> --
+> viq
+>
+
+
+-- 
+viq
+
+
+====================================================================================================
+IDX 25 PK 184148
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372022`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-25T00:27:27+00:00 FROM a.velichinsky () gmail ! com
+SUBJ find setuid/gid files and devices, is there a better solution ?
+SUMM 2007 年 3 月 25 日，A. Velichinsky指出 /etc/security 脚本自 cron 调用时扫描 setuid setgid 文件与设备造成全部磁盘抖动却不理会以 nosuid 与 nodev 挂载的文件系统也不理会无 setuid 能力的 CD 与 FAT 分区请求换掉这一权宜方案。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+The /etc/security script, when called from cron, keeps thrashing all my
+disks when searching for changes in setuid/setgid files and devices -
+
+It doesn't care about filesystems mounted with the nosuid and nodev flags,
+or filesystems unable to do setuid executables or devices at all
+(like CDs without RockRidge extensions or FAT partitions). This is
+useless and painful.
+
+Is there a better solution instead of this kludge ?
+I think of something that would make statfs(2) usable from the shell,
+just as stat(1) does for stat(2).
+
+--- /usr/src/etc/security	Tue Oct 31 03:38:22 2006
++++ /etc/security	Sun Mar 25 02:08:00 2007
+@@ -456,9 +456,11 @@
+ fi
+ 
+ # Display any changes in setuid/setgid files and devices.
++nosude=`mount | awk '/nodev, nosuid/{print "-o -path "$3" "}'`
+ pending="\nChecking setuid/setgid files and devices:\n"
+ (find / \( ! -fstype local \
+-	-o -fstype procfs -o -fstype afs -o -fstype xfs \) -a -prune -o \
++	-o -fstype procfs -o -fstype afs -o -fstype xfs $nosude \) \
++	-a -prune -o \
+ 	-type f -a \( -perm -u+s -o -perm -g+s \) -print0 -o \
+ 	! -type d -a ! -type f -a ! -type l -a ! -type s -a ! -type p \
+ 	-print0 | xargs -0 ls -ldgT | sort +9 > $LIST) 2> $OUTPUT
+
+
+====================================================================================================
+IDX 26 PK 184155
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372023`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-26T02:40:59+00:00 FROM "Sylwester S. Biernacki" <obeer () obeer ! com>
+SUBJ Re: GRE over IPsec
+SUMM 2007 年 3 月 26 日，Sylwester S. Biernacki就 GRE 隧道叠加 IPsec 并要与 Fortigate 及 Netscreen 防火墙互通的问题回帖Chris Jones 描述在路由型 VPN 网络中配置 OpenBSD 4.0 防火墙缺乏 man page 以外的配置指引。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Sunday, March 25, 2007, at 18:55:31, Chris Jones wrote:
+
+> Hey all,
+
+> I know that it's possible to run GRE over and IPsec tunnel but I am
+> wondering if anyone here has seen some good documentation (besides the man
+> pages) or a howto on setting this up. I'm trying to config my OpenBSD
+> 4.0firewall to interop with a route-based VPN network with a mix of
+> Fortigate
+> and Netscreen firewalls. Fortigates and Netscreens both use GRE interaces as
+> "tunnel interfaces" when creating route-based VPN tunnels. Right now all
+> endpoints are using un-numbered (0.0.0.0/0) GRE interfaces and so I would
+> like to use a similar configuration on the OpenBSD side but I am just
+> wondering how to accomplish this as I am uncertain how to bind the GRE
+> interface to a tunnel.
+
+Hello Cris,
+
+  GRE is standard and works in OpenBSD as RFC says ;-)
+
+  When I was running gre over ipsec tunnel between two openbsd boxes
+  (OpenBSD 3.8 or sth like that) it worked without any problems.
+  but it works till now, so example from config of that machine (ip
+  changed):
+  
+vpn1# cat /etc/hostname.gre0
+1.1.1.1 2.2.2.2.netmask 0xffffffff carp0
+!ifconfig gre0 tunnel 1.1.1.1 2.2.2.2
+!route add -inet 192.168.1.0/24 2.2.2.2
+
+  few things you should be aware of:
+  a) sysctl.conf (net.inet.gre.allow=1, net.inet.ip.mtudisc=1)
+  b) MTU - gre is "taking" 24 bytes from frame (i.e. 1476 from 1500
+     bytes)
+  c) IPSec uses DF bit - if you don't remember about that you can get
+     into windowing problem (ethernet uses 1500 bytes and can't be
+     splitted into fragments because of don't fragment bit)
+  d) use different ip address space for your vpn-routers/concentrators
+     and for your local networks. If you get blank paper and try to draw
+     that (with OSI model in mind) you will make it in a few minutes :-)
+
+  Good luck :)
+  
+-- 
+Sylwester S. Biernacki <obeer@obeer.com>
+X-NET, http://www.xnet.com.pl/
+
+
+====================================================================================================
+IDX 27 PK 184159
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372024`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-26T07:01:09+00:00 FROM "Kian Mohageri" <kian.mohageri () gmail ! com>
+SUBJ Re: any site or doc about openbsd kernel configuration, info or tweak?
+SUMM 2007 年 3 月 26 日，Kian Mohageri就 OpenBSD 内核定制文档问题回帖指向 openbsd.org 的 FAQ 5.6 称多数情况下并不需要定制内核配置内核选项应参考同页 Options 章节而非另寻站点。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 3/25/07, Jay Jesus Amorin <jdamorin@gmail.com> wrote:
+>
+> any site or doc about openbsd kernel configuration, info or tweak
+> aside from man page?
+>
+> thanks
+>
+>
+http://www.openbsd.org/faq/faq5.html#Why
+
+Q: 5.6 - Why do I need a custom kernel?
+A: Actually, you probably don't.
+
+That said,
+
+http://www.openbsd.org/faq/faq5.html#Options
+
+-- 
+Kian Mohageri
+
+
+====================================================================================================
+IDX 28 PK 184161
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372025`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-26T08:57:30+00:00 FROM Jason McIntyre <jmc () kerhand ! co ! uk>
+SUBJ Re: Symbols in a .so
+SUMM 2007 年 3 月 26 日，Jason McIntyre转发 Ingo Schwarze 补丁说明 binutils 的 addr2line 与 readelf man page 一直在构建却未被安装补丁在 binutils Makefile bsd wrapper 的 MAN 变量中补入这两项。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Mon, Mar 19, 2007 at 04:48:23AM +0100, Ingo Schwarze wrote:
+> 
+> Don't blame the missing man page on the GNU.
+> It is being built, but it is not being installed.
+> 
+> 
+> Index: gnu/usr.bin/binutils/Makefile.bsd-wrapper
+> ===================================================================
+> RCS file: /cvs/src/gnu/usr.bin/binutils/Makefile.bsd-wrapper,v
+> retrieving revision 1.67
+> diff -u -r1.67 Makefile.bsd-wrapper
+> --- gnu/usr.bin/binutils/Makefile.bsd-wrapper	6 Oct 2006 20:58:17 -0000	1.67
+> +++ gnu/usr.bin/binutils/Makefile.bsd-wrapper	19 Mar 2007 03:34:43 -0000
+> @@ -40,8 +40,8 @@
+>  SUBDIRS+=	binutils ld gas
+>  CONF_SUBDIRS+=	binutils ld gas
+>  INST_SUBDIRS+=	binutils ld gas
+> -MAN+=		binutils/ar.1 binutils/ranlib.1 \
+> -		binutils/objcopy.1 \
+> +MAN+=		binutils/addr2line.1 binutils/ar.1 binutils/ranlib.1 \
+> +		binutils/objcopy.1 binutils/readelf.1 \
+>  		binutils/strings.1 binutils/strip.1 \
+>  		gas/doc/as.1 ld/ld.1
+>  .  else
+
+it's all fixed now. thanks for the mail.
+jmc
+
+
+====================================================================================================
+IDX 29 PK 184164
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372026`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-26T11:08:13+00:00 FROM Henning Brauer <lists-openbsd () bsws ! de>
+SUBJ Re: OpenBGPD MIB
+SUMM 2007 年 3 月 26 日，Henning Brauer就 OpenBGpd MIB 编写回帖认为 Pierre-Yves Ritschard 打开 /var/log/bgpd.sock 采集 OID 所需信息的做法方向错误应将 bgpctl 视为 API 来调用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+* Pierre-Yves Ritschard <pyr@spootnik.org> [2007-03-26 09:26]:
+> This allows to write really simple programs (ask me for a skeleton),
+> you'd just have to write more code to open /var/log/bgpd.sock and
+> gather the information needed to answer for the OIDs.
+
+that is the wrong approach.
+consider bgpctl to be the API.
+
+-- 
+Henning Brauer, hb@bsws.de, henning@openbsd.org
+BS Web Services, http://bsws.de
+Full-Service ISP - Secure Hosting, Mail and DNS Services
+Dedicated Servers, Rootservers, Application Hosting - Hamburg & Amsterdam
+
+
+====================================================================================================
+IDX 30 PK 184170
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372027`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-26T15:01:18+00:00 FROM naddy () mips ! inka ! de (Christian Weisgerber)
+SUBJ Re: Where to download cvsup-16.1h-no_x11.tgz for amd64
+SUMM 2007 年 3 月 26 日，Christian Weisgerber就下载 cvsup-16.1h-no_x11.tgz 与 man csup 信息不足的问题回帖说明 csup 故意沿用 cvsup 的配置语法并指向 openbsd.org 的 cvsup 页面确认 csup 只支持 checkout 模式。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Stephen Liu <satimis@yahoo.com> wrote:
+
+> "man csup" doesn't provide much info and examples running this package.
+>  Where can I find such info.  TIA
+
+csup purposely uses the same configuration syntax as cvsup.  See
+http://www.openbsd.org/cvsup.html
+
+> It further mentioned "csup only supports "checkout" mode.  CVSUP
+> supports both CVS and checkout mode"
+
+Yes.
+
+-- 
+Christian "naddy" Weisgerber                          naddy@mips.inka.de
+
+
+====================================================================================================
+IDX 31 PK 184178
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372028`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-26T20:05:38+00:00 FROM "JT Croteau" <jt.n1ese () gmail ! com>
+SUBJ Re: i386 kernel: Identifying unconfigured devices
+SUMM 2007 年 3 月 26 日，JT Croteau借 PCIdatabase.com 认定内核报出的未知 PCI 设备vendor 0x12de product 0x0204 位于 pci1 dev 2 function 0 未配置是 Rainbow Technologies 加密设备疑为 SSL 加速器。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 3/26/07, JT Croteau <jt.n1ese@gmail.com> wrote:
+> unknown vendor 0x12de product 0x0204 (class crypto subclass
+> network/computing, rev 0x00) at pci1 dev 2 function 0 not configured
+
+Ok, thanks to PCIdatabase.com, I have identified the vendor on this
+one.  It's some type of Rainbow Technologies crypto device.. probably
+an SSL accelerator.
+
+-- 
+  JT Croteau, N1ESE - Manchester, NH
+  http://n1ese.qrpradio.com
+
+
+====================================================================================================
+IDX 32 PK 184184
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372029`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-27T03:31:05+00:00 FROM "Mail Lists" <mail-lists () peachnet ! com>
+SUBJ Re: maxcluster errors
+SUMM 2007 年 3 月 27 日，Stuart Henderson就 maxcluster 中断问题回复指出在 soekris 上执行 top 时中断占用停在约 30 百分比是硬件局限soekris 是低功耗机器而不是高 I/O 机器并附 altq 与 priq 配置示例。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 3/26/07, Stuart Henderson <stu@spacehopper.org> wrote:
+>
+> On 2007/03/26 16:41, mail-lists wrote:
+> > I'm noticing that when I do a 'top' my interrupt usage stays at aroudn
+> > 30%. Again - I have to think that this is a hardware limitation on the
+> > soekris.
+>
+> soekris is not a fast i/o machine, it is a low-power machine.
+>
+> > altq on $wii_if priq bandwidth 40Mb queue {wii_std, wii_voip}
+>
+> it definitely won't push 40Mb/s of data (nor will 802.11 wireless,
+> for that matter).
+
+
+No, I don't imagine it would. Those queues aren't actually being used
+though. I'd say maybe 10Mb/s at most right now
+
+> pass in quick  on $wii_if from $wireless_lan to $VOIP_SERVERS keep state
+> > pass in  quick on $int_if from $VOIP_SERVERS to $wireless_lan keep state
+> > pass in quick on $ext_if from $VOIP_GATEWAYS to $VOIP_SERVERS
+>
+> small packets too, that won't help.
+
+
+Yeah, I was afraid of that.
+
+However, another soekris I have seems to do fine with ~ 30Mb/s peaks, also
+handling a fair amount of VOIP traffic.
+The difference is that it's not serving as a wireless AP
+
+
+====================================================================================================
+IDX 33 PK 184205
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372031`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T10:00:35+00:00 FROM Henning Brauer <lists-openbsd () bsws ! de>
+SUBJ Re: IPv6 and OpenBGPD - Protocol not available
+SUMM 2007 年 3 月 28 日，Henning Brauer承认 bgpd 过滤器此前从未真正 v6 感知并称会修复反驳 Claudio Jeker 认为已能过滤 v6 前缀prefixlen 默认仍按 v4 给出 deny from any prefix ::/0 prefixlen >= 64 的绕行办法。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+* Claudio Jeker <cjeker@diehard.n-r-g.com> [2007-03-28 11:57]:
+> On Wed, Mar 28, 2007 at 10:41:17AM +0200, Henning Brauer wrote:
+> > * Claudio Jeker <cjeker@diehard.n-r-g.com> [2007-03-27 20:42]:
+> > > On Tue, Mar 27, 2007 at 07:12:50PM +0100, Jon Morby wrote:
+> > > > Thanks Claudio ... you guys are super stars! :)
+> > > > 
+> > > > Seems to be working a treat
+> > > > 
+> > > > Now to work out the filters :(
+> > > > 
+> > > > /etc/bgpd.conf:796: king bula sez: AF_INET only
+> > > > 
+> > > > 796:allow quick to any prefix 2a01:2c0::/32
+> > > > 
+> > > > What's the correct way to ensure your AF_INET6 prefixes are properly  
+> > > > exported?
+> > > > 
+> > > 
+> > > Oops looks like some very old leftovers.
+> > 
+> > no, we never really made th filters v6 aware
+> 
+> Sure we did. The RDE is able to filter on v6 prefixes with the small
+> exeption of prefixlen which defaults to v4 unless a prefix is previously
+> specified. I think a simple workaround for this would be to use
+> deny from any prefix ::/0 prefixlen >= 64
+
+I'm pretty sure we didn't, and certainly not completely, otherwise I 
+had removed that check. anyway, we'll fix that
+
+-- 
+Henning Brauer, hb@bsws.de, henning@openbsd.org
+BS Web Services, http://bsws.de
+Full-Service ISP - Secure Hosting, Mail and DNS Services
+Dedicated Servers, Rootservers, Application Hosting - Hamburg & Amsterdam
+
+
+====================================================================================================
+IDX 34 PK 184208
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372032`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T13:15:02+00:00 FROM Antoine Jacoutot <ajacoutot () lphp ! org>
+SUBJ Re: maildrop package (missing components)
+SUMM 2007 年 3 月 28 日，Antoine Jacoutot指出 maildirmake 包含在 maildrop-utils 子包中回应 Peter Matulis 报告 OpenBSD 的 maildrop 包缺该工具Peter Matulis 以 ports 方式安装了 MySQL flavor 版本。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Wed, 28 Mar 2007, Peter Matulis wrote:
+> I have been working recently with the maildrop package.  I installed into via 
+> ports with the MySQL flavor.  Much documentation refer to the associated 
+> utility 'maildirmake' but I see that the OpenBSD port does not include it. 
+> Is this intended or is it an oversight?  Or maybe I'm not looking in the 
+> right place.  Please advise on this important matter.
+
+It is included in the maildrop-utils subpackage.
+
+-- 
+Antoine
+
+
+====================================================================================================
+IDX 35 PK 184210
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372033`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T16:59:21+00:00 FROM Guido Tschakert <guido.tschakert () src-gmbh ! de>
+SUBJ Re: ifconfig pfsync0 down
+SUMM 2007 年 3 月 28 日，Guido Tschakert回复 Ronnie Garcia 的 ifconfig pfsync0 down 失效问题指出 pfsync 是伪设备停止伪设备须执行 ifconfig pfsync0 destroy而非 down并参见 man pfsync。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Ronnie Garcia wrote:
+> Hey,
+> 
+> I was expecting to stop pfsync with :
+> ifconfig pfsync0 down
+> 
+Hi
+
+pfsync is a pseudo-device (see man pfsync)
+To stop a pseudo-device you have to destroy it:
+ifconfig pfsync0 destroy (see man ifconfig and search for pseudo-device)
+
+hth
+
+guido
+
+
+
+> But it did not.
+> I could stop pfsync by down'ing the physical device, but is there any
+> other way around ?
+> 
+> I'm using 4.0
+> 
+> Rgds,
+
+
+====================================================================================================
+IDX 36 PK 184211
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372034`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T16:51:18+00:00 FROM "L. V. Lammert" <lvl () omnitec ! net>
+SUBJ Re: premature scripts?
+SUMM 2007 年 3 月 28 日，L. V. Lammert说明 OpenBSD 4.0 内置 Apache 可运行 CGI 指出默认环境处于 chroot 内如需使用 /etc 下的 resolv.conf 或邮件器须自行在 chroot 中配置并建议使用 mini_sendmail。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+At 09:54 AM 3/28/2007 -0600, Beavis wrote:
+>hi guys,
+>
+>    Just wanted to know if the default setup for the built-in apache on
+>4.0can work with cgi's?
+
+Certainly! What sort of cgi environment? Remember that the default 
+environment is chroot'd, so if you need any libraries or stuff in /etc (a 
+la resolv.conf) or a mailer (see mini_sendmail or the equivalent) you will 
+need to set that up also in the chroot.
+
+As always, the FAQs are your friend:
+
+http://www.openbsd.org/faq/faq10.html#httpdchroot
+
+>I am currently building some mailboxes and I would like to run it on openbsd
+
+Huh? Why aren't you using a standard MUA/MTA? They will handle mailboxes 
+automatically.
+
+         Lee
+
+
+====================================================================================================
+IDX 37 PK 184214
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372035`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T19:21:45+00:00 FROM Stefan Sperling <stsp () stsp ! in-berlin ! de>
+SUBJ Re: Distorted sound with clcs(4) on Thinkpad 600X
+SUMM 2007 年 3 月 28 日，Stefan Sperling提交 piixpcib 补丁使 ThinkPad 600X SpeedStep 生效承认遗漏附带 sys/arch/i386/conf/files.i386 需从 2007-03-20_4 补丁复制并告知 apmd 可代为处理 hw.setperf。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Wed, Mar 28, 2007 at 02:16:58PM -0400, Julian Leyh wrote:
+> On 15:13 Wed 28 Mar     , Stefan Sperling wrote:
+> > Can you try the following patch and let me know if it makes
+> > SpeedStep work for you?
+> > 
+> > http://stsp.in-berlin.de/piixpcib/piixpcib-2007-03-24_3.diff
+> > 
+> > Examine the hw.cpuspeed sysctl. The dmesg may still report CPU speed
+> > incorrectly.
+> 
+> Thanks alot. This made SpeedStep work. CPU speed is still shown wrong in
+> dmesg, and also in hw.cpuspeed, but if i change hw.setperf, hw.cpuspeed
+> shows the correct value.
+
+If you run apmd it will handle hw.setperf for you.
+ 
+> You forgot to include the file sys/arch/i386/conf/files.i386 in your new
+> patches, had to copy it from the older one (2007-03-20_4).
+
+Doh!
+
+> You don't happen to know how I could fix the sound problem, do you?
+
+No, sorry :-/
+-- 
+stefan
+http://stsp.in-berlin.de                                 PGP Key: 0xF59D25F0
+
+
+====================================================================================================
+IDX 38 PK 184215
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372036`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T20:06:09+00:00 FROM Igor Sobrado <igor () string1 ! ciencias ! uniovi ! es>
+SUBJ Re: [OpenBSD/i386 BOOT 2.10] "diskinfo" command on net4801
+SUMM 2007 年 3 月 28 日，Igor Sobrado说明 net4801 上 diskinfo 输出 Cyls 显示为 1 的问题源于 comBIOS 1.29 的 LBA 转译缺陷该缺陷已由 Soren Kristensen 在 net4501 与 net4801 的新固件版本中修复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Igor Sobrado writes:
+> 
+> I would like to ask if this output for the "machine diskinfo" command
+> on the OpenBSD/i386 BOOT release 2.10 is expected:
+> 
+> 
+> Using drive 0, partition 3.
+> Loading...
+> probing: pc0 com0 com1 mem[639K 255M a20=on] 
+> disk: hd0+ hd1+
+> >> OpenBSD/i386 BOOT 2.10
+> -
+> com0: 9600 baud
+> switching console to com0
+> >> OpenBSD/i386 BOOT 2.10
+> boot> machine diskinfo
+> Disk    BIOS#   Type    Cyls    Heads   Secs    Flags   Checksum
+> hd0     0x80    label   1       16      63      0x2     0xd8299676
+> hd1     0x81    label   1       16      63      0x2     0xc99b9503
+> boot> 
+
+The problem was related with a LBA translation bug in comBIOS 1.29
+(released on february 2007).  Soren Kristensen fixed this bug in
+a new firmware revision for the net4501 and net4801, released
+yesterday, and all is fine right now.  (Thanks Soren!)
+
+> On another computer, an old Pentium 166 MHz, there is a different
+> but annoying output too:
+> 
+> MBR on floppy or old BIOS
+> Using drive 0, partition 3.
+> Loading...
+> probing: pc0 com0 com1 mem[639K 127M a20=on] 
+> disk: fd0 hd0+ hd1+
+> >> OpenBSD/i386 BOOT 2.10
+> boot> machine diskinfo
+> Disk    BIOS#   Type    Cyls    Heads   Secs    Flags   Checksum
+> fd0     0x0     *none*  80      2       18      0x4     0x0
+> hd0     0x80    label   15      15      63      0x2     0xcbea9586
+> hd1     0x81    label   1019    16      63      0x2     0xc8d994f7
+> boot> 
+
+This is a different beast, think.  It looks like (another) bug in the
+BIOS of this old computer (hd0 is a 6 GB IDE drive, hd1 is a 2 GB drive).
+
+Cheers,
+Igor.
+
+
+====================================================================================================
+IDX 39 PK 184217
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372037`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T20:40:39+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: Spamdb Output Format Mismatch
+SUMM 2007 年 3 月 28 日，Stuart Henderson确认 spamdb 输出 WHITE 条目 source 之后字段为空与手册 type source IP helo from to first pass expire block pass 格式不符但不确定属文档缺陷还是软件缺陷。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/03/28 16:28, Jason Haag wrote:
+>     For GREY or WHITE entries, the format is:
+>           type|source IP|helo|from|to|first|pass|expire|block|pass
+> 
+> When I at the spamdb output on my box I get (2 representative entries):
+> WHITE|91.89.52.244|||1175062170|1175064001|1178174455|3|0
+
+> Can anyone confirm this? Or is my box messed up in the head?
+
+Mine does the same. I don't know whether it's a doc-bug or sw-bug.
+
+Of course this gets especially confusing when somebody sends a helo
+with | in it...
+
+
+====================================================================================================
+IDX 40 PK 184219
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372038`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T21:41:41+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: Atheros wireless card in -current
+SUMM 2007 年 3 月 28 日，Stuart Henderson回应 Francisco Valladolid 关于 ath0 芯片 AR5213 的疑问指出 AR5213 未列入 ath(4) 手册列出的支持网卡清单。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/03/28 15:08, Francisco Valladolid wrote:
+> ath0: AR5213 7.9 phy 4.5 rf2112a 5.6, ETSI1W, address xx:xx:xx:xx:xx
+             ^
+AR5213 is not on the list of supported cards in ath(4).
+
+
+====================================================================================================
+IDX 41 PK 184223
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372039`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-28T23:51:53+00:00 FROM Stuart Henderson <stu () spacehopper ! org>
+SUBJ Re: IBGP Problems
+SUMM 2007 年 3 月 28 日，Stuart Henderson回应 rezidue 关于 iBGP 初始建立后大批 prefix 撤回的疑问说明此为正常行为主机从 210k prefix 降到 59k 或 197k 属常见情况。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On 2007/03/28 17:52, rezidue wrote:
+> When the hosts connect to each other a full prefix table is sent but then
+> almost immediately it's neighbor starts withdrawing prefixes.  On one host I
+> jump from 210k prefixes in the initial connection to only 59k after all of
+> the withdrawals.  On the other host I go from 210k to 197k which isn't as
+> bad but I'm still unsure of why it does this.
+
+It's normal.
+
+Where I-BGP is concerned, when one router A sees a better route to a
+prefix from an internal peer B, it will withdraw that prefix because
+it knows all the other I-BGP routers must know about it (due to the
+requirement for full-mesh or RR).
+
+If that better route from B goes away, A will advertise the prefix
+again.
+
+`better' is defined by, in order: localpref, shortest AS path,
+origin, MEDs (for multiple routes through the same AS), then on
+OpenBGP there are some extensions: E-BGP is preferred over I-BGP,
+weight, optionally route age - then tiebreakers to make sure
+there's a definite choice e.g. router ID.
+
+(Some routers also consider distance to the nexthop by looking
+at igp metrics, this is done after evaluating MEDs).
+
+> ...just use carp for my gateway.
+
+take care with this if you're running PF on the routers, pfsync
+isn't fast enough to keep up if you have asymmetric routing, you may
+need to use stateless rulesets. (If you're not running PF and just
+using carp to provide a protected gateway address, this comment
+doesn't apply).
+
+
+====================================================================================================
+IDX 42 PK 184233
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372040`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-29T20:37:03+00:00 FROM Joachim Schipper <j.schipper () math ! uu ! nl>
+SUBJ Re: ntpd not synching
+SUMM 2007 年 3 月 29 日，Joachim Schipper确认 Otto Moerbeek 判断指出用户时钟漂移幅度超过 ntpd 补偿能力 ntpd 无法跟上用户只能反复使用 rdate(8) 手动校时。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Thu, Mar 29, 2007 at 09:13:56AM +0200, Otto Moerbeek wrote:
+> On Wed, 28 Mar 2007, peter@tech-no-logical.net wrote:
+> 
+> > hi,
+> > 
+> > On Tue, Mar 27, 2007 at 01:49:16PM +0200, Otto Moerbeek wrote:
+> >  
+> > > It looks like your clock drifts more that ntpd can compensate. Please
+> > > share some details on your setup, like the dmesg.  Also, if you remove
+> > > the drift file, you must reboot, since otherwise the existing
+> > > frequency compensations stays in effect. 
+> > 
+> > ok, i cleared the drift-file and rebooted. as near as i can
+> > figure (i had to boot multiple times, and unclean at that) this
+> > is what happend slightly bfore/during/after the last boot (the times 
+> > are so screwed i can't really make it out).
+> 
+> Yep, this configrms it. Your clock is drifting so much that ntpd can't
+> keep up. I'm afraid there's not a lot I can do about that.
+
+Unless I'm very confused, though, repeated use of something like
+rdate(8) will work, or, rather, 'work'...
+
+		Joachim
+
+
+====================================================================================================
+IDX 43 PK 184236
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372041`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-29T23:26:20+00:00 FROM Travers Buda <traversbuda () gmail ! com>
+SUBJ Re: Video choppy with mplayer and vlc under xenocara?
+SUMM 2007 年 3 月 29 日，Travers Buda说明用户多显示器环境下 xvideo 扩展在新 xenocara 下仅出现在首屏 screen 0 上导致 mplayer 与 vlc 无法流畅播放视频。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+* viq <vicviq@gmail.com> [2007-03-29 23:10:41]:
+
+> Did anyone experience this? My box was able to play videos fine even
+> when compiling under old XF4, and now after switching to xenocara both
+> mplayer and vlc don't play videos smoothly...
+> dmesg.boot attached, any other info I should provide?
+
+I have a multi-head setup (mga,) and the xvideo extension is now only present on screen 0 with the new xenocara. You can check with "xvinfo." I have not looked into this.
+
+-- 
+Travers Buda
+
+
+====================================================================================================
+IDX 44 PK 184237
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372042`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-30T04:25:26+00:00 FROM "J.C. Roberts" <jcroberts () designtools ! org>
+SUBJ Re: dmesg for 29 10/100 Ethernet Ports in one PC
+SUMM 2007 年 3 月 30 日，J.C. Roberts建议 Sam Fourman 检查各网卡与系统 BIOS 固件版本并清除 ESCD 缓存后逐张添加网卡以绕过 pnp 冲突随后更正早前笔误将 ACPI 改为 ESCD 并提示 PCI 总线带宽有限满载所有端口会饱和。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Thursday 29 March 2007 21:06, J.C. Roberts wrote:
+> On Thursday 29 March 2007 16:57, Sam Fourman Jr. wrote:
+> > Everything worked great the only trouble I had was *if* the plug
+> > and play os option in bios was set to yes. the GENERIC kernel will
+> > panic on boot up, however with the plug and play os option in bios
+> > set to NO I get the following dmesg.
+>
+> Sam,
+>
+> You didn't specifically mention model numbers, so I'm unable to check
+> if this is even applicable; you might want to try making sure each of
+> the cards is running current firmware. Depending on the mfg age
+> (and/or firmware revision), this *might* make a difference to
+> plug-n-play. Same is true for your system bios firmware.
+>
+> It's a long shot but worth a try.
+>
+> Also clearing the system cache of ACPI data in the bios, then adding
+> the cards one at a time might help to get past the pnp conflict (i.e.
+> conflict is stored).
+>
+> The largest test I've done was years ago with 20+ ports with various
+> brands of NIC's. It works but you need to realize the limitations of
+> your PCI buses. If you try to do max bandwidth across all ports, you
+> can expect poor performance since you will be saturating the PCI
+> buses.
+>
+> -jcr
+
+crap! s/ACPI/ESCD
+
+The problematic configuration data can be cached/stored in the Extended 
+System Configuration Data (ECSD) not the ACPI. Sorry for the brain 
+fade.
+
+jcr
+
+
+====================================================================================================
+IDX 45 PK 184241
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372043`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-30T07:33:17+00:00 FROM Antoine Jacoutot <ajacoutot () lphp ! org>
+SUBJ macppc snap panic
+SUMM 2007 年 3 月 30 日，Antoine Jacoutot报告 2007-03-29 15:40:00 发布的最新 macppc 快照在其 PowerBook 5,5 上发生 panic 并附上 panic 与 trace 图片及旧快照的 dmesg。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Hi.
+
+The latest macppc snapshot ("03/29/07 15:40:00" on ftp.openbsd.org) 
+panics on my Powerbook 5,5.
+
+--> http://www.obsd.fr/OpenBSD/tmp/panic.jpg
+--> http://www.obsd.fr/OpenBSD/tmp/trace_ps.jpg
+
+
+dmesg from older snapshot:
+
+[ using 364712 bytes of bsd ELF symbol table ]
+console out [ATY,Jasper_A]console in [keyboard] ADB found
+using parent ATY,JasperParent:: memaddr b8000000 size 8000000, : consaddr b8008000, : ioaddr b0020000, size 20000: memtag 8000, iotag 8000: width 1440 linebytes 1536 height 900 depth 8
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+ 	The Regents of the University of California.  All rights reserved.
+Copyright (c) 1995-2007 OpenBSD. All rights reserved.  http://www.OpenBSD.org
+
+OpenBSD 4.1-current (GENERIC) #1225: Mon Mar 26 14:30:09 MDT 2007
+     deraadt@macppc.openbsd.org:/usr/src/sys/arch/macppc/compile/GENERIC
+real mem = 536870912 (524288K)
+avail mem = 481783808 (470492K)
+using 1254 buffers containing 26841088 bytes (26212K) of memory
+mainbus0 (root): model PowerBook5,5
+cpu0 at mainbus0: 7447A (Revision 0x101): 1499 MHz: 512KB L2 cache
+memc0 at mainbus0: uni-n
+"hw-clock" at memc0 not configured
+ki2c0 at memc0 offset 0xf8001000
+iic0 at ki2c0
+adt0 at iic0 addr 0xae: adt7460 rev 0x6a
+"lmu-controller" at iic0 addr 0x42 not configured
+mpcpcibr0 at mainbus0 pci: uni-north, Revision 0xff
+pci0 at mpcpcibr0 bus 0
+pchb0 at pci0 dev 11 function 0 "Apple UniNorth AGP" rev 0x00
+vgafb0 at pci0 dev 16 function 0 "ATI Radeon Mobility M10 NP" rev 0x00, mmio
+wsdisplay0 at vgafb0 mux 1: console (std, vt100 emulation)
+mpcpcibr1 at mainbus0 pci: uni-north, Revision 0x5
+pci1 at mpcpcibr1 bus 0
+pchb1 at pci1 dev 11 function 0 "Apple UniNorth PCI" rev 0x00
+"Broadcom BCM4306" rev 0x03 at pci1 dev 18 function 0 not configured
+cbb0 at pci1 dev 19 function 0 "TI PCI1510 CardBus" rev 0x00: irq 53
+macobio0 at pci1 dev 23 function 0 "Apple Intrepid" rev 0x00
+openpic0 at macobio0 offset 0x40000: version 0x4614
+macgpio0 at macobio0 offset 0x50
+macgpio1 at macgpio0 offset 0x9 irq 47
+"programmer-switch" at macgpio0 offset 0x11 not configured
+"cpu-vcore-select" at macgpio0 offset 0x6b not configured
+"gpio4" at macgpio0 offset 0x1e not configured
+"gpio5" at macgpio0 offset 0x6f not configured
+"gpio6" at macgpio0 offset 0x70 not configured
+"extint-gpio4" at macgpio0 offset 0x5c not configured
+"gpio11" at macgpio0 offset 0x75 not configured
+"extint-gpio15" at macgpio0 offset 0x67 not configured
+"escc-legacy" at macobio0 offset 0x12000 not configured
+zsc0 at macobio0 offset 0x13000: irq 22,23
+zstty0 at zsc0 channel 0
+zstty1 at zsc0 channel 1
+snapper0 at macobio0 offset 0x10000: irq 30,1,2
+"timer" at macobio0 offset 0x15000 not configured
+adb0 at macobio0 offset 0x16000 irq 25: via-pmu, 3 targets
+akbd0 at adb0 addr 2: iBook keyboard with inverted T (ISO layout)
+wskbd0 at akbd0: console keyboard, using wsdisplay0
+ams0 at adb0 addr 3: EMP trackpad <tpad> 4-button, 400 dpi
+wsmouse0 at ams0 mux 0
+abtn0 at adb0 addr 7: brightness/volume/eject buttons
+apm0 at adb0: battery flags 0x5, 88% charged
+pi2c0 at adb0
+iic1 at pi2c0
+"battery" at macobio0 offset 0x0 not configured
+"backlight" at macobio0 offset 0xf300 not configured
+ki2c1 at macobio0 offset 0x18000
+iic2 at ki2c1
+wdc0 at macobio0 offset 0x20000 irq 24: DMA
+atapiscsi0 at wdc0 channel 0 drive 0
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <MATSHITA, DVD-R UJ-825, DAND> SCSI0 5/cdrom removable
+cd0(wdc0:0:0): using BIOS timings, DMA mode 2
+audio0 at snapper0
+ohci0 at pci1 dev 24 function 0 "Apple Intrepid USB" rev 0x00: irq 0, version 1.0, legacy support
+ohci1 at pci1 dev 25 function 0 "Apple Intrepid USB" rev 0x00: irq 0, version 1.0, legacy support
+ohci2 at pci1 dev 26 function 0 "Apple Intrepid USB" rev 0x00: irq 29, version 1.0, legacy support
+ohci3 at pci1 dev 27 function 0 "NEC USB" rev 0x43: irq 63, version 1.0
+ohci4 at pci1 dev 27 function 1 "NEC USB" rev 0x43: irq 63, version 1.0
+ehci0 at pci1 dev 27 function 2 "NEC USB" rev 0x04: irq 63
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0
+uhub0: NEC EHCI root hub, rev 2.00/1.00, addr 1
+uhub0: 5 ports with 5 removable, self powered
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 1 device 0 cacheline 0x8, lattimer 0x20
+pcmcia0 at cardslot0
+usb1 at ohci0: USB revision 1.0
+uhub1 at usb1
+uhub1: Apple OHCI root hub, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+usb2 at ohci1: USB revision 1.0
+uhub2 at usb2
+uhub2: Apple OHCI root hub, rev 1.00/1.00, addr 1
+uhub2: 2 ports with 2 removable, self powered
+usb3 at ohci2: USB revision 1.0
+uhub3 at usb3
+uhub3: Apple OHCI root hub, rev 1.00/1.00, addr 1
+uhub3: 2 ports with 2 removable, self powered
+usb4 at ohci3: USB revision 1.0
+uhub4 at usb4
+uhub4: NEC OHCI root hub, rev 1.00/1.00, addr 1
+uhub4: 3 ports with 3 removable, self powered
+usb5 at ohci4: USB revision 1.0
+uhub5 at usb5
+uhub5: NEC OHCI root hub, rev 1.00/1.00, addr 1
+uhub5: 2 ports with 2 removable, self powered
+mpcpcibr2 at mainbus0 pci: uni-north, Revision 0x6
+pci2 at mpcpcibr2 bus 0
+pchb2 at pci2 dev 11 function 0 "Apple UniNorth PCI" rev 0x00
+kauaiata0 at pci2 dev 13 function 0 "Apple Intrepid ATA" rev 0x00
+wdc1 at kauaiata0 irq 39: DMA
+wd0 at wdc1 channel 0 drive 0: <Hitachi IC25N080ATMR04-0>
+wd0: 16-sector PIO, LBA48, 76319MB, 156301488 sectors
+wd0(wdc1:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5
+"Apple UniNorth Firewire" rev 0x81 at pci2 dev 14 function 0 not configured
+gem0 at pci2 dev 15 function 0 "Apple Uni-N2 GMAC" rev 0x80: irq 41, address 00:0d:93:3c:64:8a
+eephy0 at gem0 phy 0: Marvell 88E1111 Gigabit PHY, rev. 1
+uhidev0 at uhub5 port 1 configuration 1 interface 0
+uhidev0: Logitech Optical USB Mouse, rev 2.00/3.40, addr 2, iclass 3/1
+ums0 at uhidev0: 3 buttons and Z dir.
+wsmouse1 at ums0 mux 0
+Apple Computer ADB device, class 0/0, rev 2.00/15.86, addr 2, uhub3 port 1 not configured
+bootpath: '/pci@f4000000/ata-6@d/disk@0/bsd'
+boot device: wd0.
+root on wd0a
+rootdev=0x0 rrootdev=0xb00 rawdev=0xb02
+ugen0 at uhub4 port 1
+ugen0: Canon Inc. DIGITAL IXUS 300, rev 1.00/0.01, addr 2
+ugen0: at uhub4 port 1 (addr 2) disconnected
+ugen0 detached
+
+-- 
+Antoine
+
+
+====================================================================================================
+IDX 46 PK 184244
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372044`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-30T11:53:11+00:00 FROM Jason Dixon <jason () dixongroup ! net>
+SUBJ Re: Apple hardware support?
+SUMM 2007 年 3 月 30 日，Jason Dixon说明自己曾在 MacBook Pro Core Duo 上双启动运行 OpenBSD 快照 X 可运行但声卡与无线不可用随后基于两位用户已运行成功的报告倾向于认为他人失败源于操作失误。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Mar 30, 2007, at 2:19 AM, Otto Moerbeek wrote:
+
+> On Thu, 29 Mar 2007, Mike Erdely wrote:
+>
+>> Otto Moerbeek wrote:
+>>> On Thu, 29 Mar 2007, Tasmanian Devil wrote:
+>>>> The i386 GENERIC.MP kernel runs fine on Intel Macs. You just  
+>>>> need to
+>>>> enable ACPI with "config -ef bsd.mp" (or on the boot prompt).
+>>> This is not true. At least it has been reported that the MacBook Pro
+>>> with Core Due 2 processor does not run.
+>>
+>> Tas is right.  I have my MacBook Pro Core 2 Duo dual booting with  
+>> OS X and
+>> OpenBSD (snap around 3/10).  I _think_ my installation process was  
+>> this (since
+>> I didn't do make release with -current):
+>>  1. Install 4.0 from the CD.
+>>  2. Copy an ACPI-enabled bsd.rd to a CDROM, boot to OpenBSD and  
+>> copy to the
+>> hard drive.
+>>  3. Reboot and boot to bsd.rd and install the snapshot using FTP.
+>
+> That's different than the report fom Jason Dixon. He was trying
+> current bsd.rd. Anyway, as you mention some problems remain. To me the
+> most annyoing is the UKC prompt not working, which means you can't
+> enable ACPI on a stock bsd.rd and you have to compile a bsd.rd with
+> ACPI enabled.
+
+Actually, mine was a Core Duo like yours.  I no longer have this  
+laptop, but it's still "in the family" (Darrin Chandler).
+
+> Other than that my MacBook (with Core Duo (no 2)) works quite ok,
+> apart from the sound and wireless, which do not work.  Even X works,
+> but you'll have to use the 915 resolution port to get native
+> resolution.
+
+The broken UKC is certainly an obstacle.  Since both of you have  
+gotten it working on Core [2] Duo MacBook Pro's, I lean towards  user  
+error.
+
+--
+Jason Dixon
+DixonGroup Consulting
+http://www.dixongroup.net
+
+
+====================================================================================================
+IDX 47 PK 184245
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372045`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-30T14:05:50+00:00 FROM Chris Black <chris () lotuscat ! com>
+SUBJ VPNs (was: Re: Long WEP key)
+SUMM 2007 年 3 月 30 日，Chris Black区分 OpenVPN 与 IPSec 指出前者用 SSL 走 IP 包在端口 1194 后者用 ESP 而非 tcp 或 udp 团队因缺 nat traversal 且需更友好的免费 Windows 客户端由 isakmpd 迁至 openvpn。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+mail-lists wrote:
+>> Openvpn....
+>
+> Unless I'm mistaken Openvpn is not equal to Ipsec
+>
+You are not mistaken. Openvpn uses SSL over regular IP packets with its
+own server/client setup on a dedicated port (1194). IPSec is a different
+protocol (proto esp rather than tcp or udp). We moved from an
+isakmpd/ipsec solution to openvpn due to lack of nat traversal issues
+and a nicer free windows client.
+
+Best,
+Chris
+
+
+====================================================================================================
+IDX 48 PK 184250
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372046`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-30T18:21:12+00:00 FROM "smith" <smith () tem ! confuciun ! com>
+SUBJ Re: Long WEP key
+SUMM 2007 年 3 月 30 日，smith说明在无网络控制权的移动场景下若当前无线网络封锁 ipsec 端口而 openvpn 服务器监听在 80 或 53 或 21 端口则 OpenVPN 优于 ipsec 使用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Fri, 30 Mar 2007 08:45:44 -0500, mail-lists wrote
+> > Openvpn....
+> 
+> Unless I'm mistaken Openvpn is not equal to Ipsec
+
+good enough to accomplish the job securely.  Better than ipsec if you have no
+control of the network you are on, i.e. you are a mobile user who happens to
+be on a wireless network that has the ipsec ports blocked but your openvpn
+server is listening on port 80, or 53, or 21 or all of them.
+
+
+====================================================================================================
+IDX 49 PK 184252
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372047`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-30T21:16:27+00:00 FROM Matthew Clarke <clamat () telus ! net>
+SUBJ Re: CVS server question
+SUMM 2007 年 3 月 30 日，Matthew Clarke说明 CVS 的 log_accum2 脚本通过 sendmail 提交邮件因此本地 sendmail 必须能接受来自本地系统的邮件并投递到目标地址若有问题建议检查 /var/log/maillog。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+Fri, Mar 30, 2007 at 07:50:43PM +0300, Zoli may have written:
+
+> Sorry because I ask a stupid question, I need to configure my sendmail
+> for loginfo?
+> 
+> DEFAULT         $CVSROOT/CVSROOT/log_accum2 -m zoli@email.com -f
+> $CVSROOT/CVSROOT/ChangeLog -s %s
+> 
+> After CVS commit I don't receive the message on e-mail.
+
+log_accum2 submits mail via sendmail, so yes, your sendmail needs to be
+configured to accept mail from the local system and deliver it on to
+whereever it should go.  Check /var/log/maillog for clues.
+
+-- 
+>> Thus again, we have successfully proven that I cannot read minds. 
+> It doesn't help.  Almost all you ever get is "This mind intentionally
+> left blank." 
+				-- Steve VanDevender, to AJS, in ASR
+
+> Thanks!
+> 
+> On 3/30/07, Matthew Clarke <clamat@telus.net> wrote:
+> >Fri, Mar 30, 2007 at 05:47:53PM +0300, Zoli may have written:
+> >
+> >> Hi
+> >> I have a cvs server running on OpenBSD 4.0. I use this documentation
+> >> to create the CVS server :
+> >> http://davespicks.com/writing/programming/cvsonopenbsd.html
+> >>
+> >> The cvs server work great!
+> >>
+> >> I use this command for login:
+> >>
+> >> $ cvs -d :pserver:zoliky@cvs.mydomain.com:/home/cvs login
+> >>
+> >> And for checkout:
+> >>
+> >> $ cvs -d :pserver:zoliky@cvs.mydomain.com:/home/cvs co folder
+> >>
+> >> If someone commit changes all user want to receive an e-mail on
+> >> mailing list. Exist a script to do this ? To send an e-mail with
+> >> changes to mailing list ? I need something like OpenBSD-cvs mailing
+> >> list.
+> >>
+> >> I appreciate any help!
+> >>
+> >> Thanks
+> >
+> >I like Russ Allbery's cvslog and cvsprep scripts for this.
+> >
+> >        http://www.eyrie.org/~eagle/software/cvslog/
+> >
+> >--
+> >"On two occasions I have been asked [by members of Parliament!], `Pray, Mr.
+> >Babbage, if you put into the machine wrong figures, will the right answers
+> >come out?'  I am not able rightly to apprehend the kind of confusion of
+> >ideas that could provoke such a question."      -- Charles Babbage
+
+
+====================================================================================================
+IDX 50 PK 184253
+HEAD **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-372048`；2026-10-04 openbsd_mail 战线 全库行级遍历考据采纳）
+LEVEL L3
+DATE 2007-03-31T01:05:50+00:00 FROM Matthew Szudzik <mszudzik () andrew ! cmu ! edu>
+SUBJ Re: SMP causing uvm_fault
+SUMM 2007 年 3 月 31 日，Matthew Szudzik与 Art 交流后判断自己遇到的 SMP uvm_fault 实为 ath 驱动问题而非 SMP bug 在 boot -c 单用户模式并执行 disable ath 后问题消失。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+--- BODY ---
+On Fri, 30 Mar 2007 at 16:48 -0400, Matthew Szudzik wrote:
+> I suspect that I may be experiencing the same problem.
+
+After talking with Art, we've decided that I'm probably experiencing a 
+problem with the ath driver, and not the SMP uvm_fault bug.  My problem 
+disappears when I boot -c and "disable ath".
+
+
