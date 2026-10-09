@@ -1,0 +1,152 @@
+# 205.3 早期重大漏洞发现与修复（1996-2000）
+
+**要点**：OpenBSD 1996-2000 年间通过代码审计发现并修复大量安全漏洞，包括缓冲区溢出（如 ftpd、telnetd 远程溢出）、格式化字符串漏洞（如 wu-ftpd Format String Vulnerability CVE-2000-0573，2000-06 披露）、信任边界问题；部分漏洞在审计前已被利用（如 1999 年 BIND NXT 漏洞 CVE-1999-0833），部分是审计发现的新型漏洞；OpenBSD Security Advisories 页面（<https://www.openbsd.org/security.html>）逐条记录了 1996 年至 2000 年间的所有 advisory，每条含 CVE 编号、影响版本、修复 commit hash，advisory 总数在该页面可直接计数
+
+**史料**：OpenBSD Security Advisories 1996-2000（<https://www.openbsd.org/security.html>，逐条记录 advisory）；CVS commit log（<https://cvsweb.openbsd.org/>）；BUGTRAQ 邮件列表档案（<https://seclists.org/bugtraq/>）；CVE-2000-0573 wu-ftpd 格式化字符串漏洞；CVE-1999-0833 BIND NXT 漏洞
+
+**史观**：边缘者贡献：OpenBSD 作为边缘项目通过审计贡献安全成果至整个 Unix 生态——审计发现的漏洞修复经 cross-BSD 协调反馈至 FreeBSD/NetBSD，部分修复被 Linux 发行版移植，OpenBSD 的审计劳动为整个 Unix 生态提供了免费的安全质量保证服务；0 信任原则：OpenBSD 审计方法论对基本系统源码保持 0 信任——即使是一手代码（如 CSRG 遗留代码、NetBSD 继承代码）也逐行审查，不因来源可信而免检，这一原则在 1996-2000 年间通过发现并修复 BIND NXT、ftpd 溢出等已存在多年的漏洞得到验证
+
+**辨析**：“数千个漏洞” 的具体数字——OpenBSD Security Advisories 页面（<https://www.openbsd.org/security.html>）逐条记录了 1996 年至今的 advisory，1996-2000 年间的 advisory 可直接在该页面计数；advisory 数量与实际修复的漏洞数量非一一对应——一条 advisory 可能修复多个相关漏洞，一个漏洞的修复可能跨多个 commit；“数千个漏洞” 的表述可能源于 OpenBSD 团队在邮件列表与宣传材料中的概括性说法，精确数字应以 advisory 页面计数为准 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；wu-ftpd 格式化字符串漏洞（CVE-2000-0573）的披露时间为 2000-06 而非 1997，格式化字符串漏洞作为漏洞类别在 1999-2000 年间被广泛认知（Proneys 1999 年工作与 Tymm Twillman 2000 年工作奠定），部分资料将 wu-ftpd 格式化字符串漏洞误记为 1997 年
+
+**文献**：OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；BUGTRAQ 邮件列表存档 [EB/OL]. <https://seclists.org/bugtraq/>；CVE-2000-0573 [EB/OL]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0573>；CVE-1999-0833 [EB/OL]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0833> ［A］
+
+**早期重大漏洞 CVE 列表（1996-2000）**：
+
+| CVE 编号 | 披露时间 | 漏洞类型 | 影响组件 | 备注 |
+| --- | --- | --- | --- | --- |
+| CVE-1999-0833 | 1999 | 信任边界 | BIND NXT | 审计前已被利用 |
+| CVE-2000-0573 | 2000-06 | 格式化字符串 | wu-ftpd | Format String Vulnerability |
+| — | 1996-2000 | 缓冲区溢出 | ftpd、telnetd | 远程溢出，详见 Security Advisories |
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1996-2000 年间：44,681 次提交。
+
+<!-- ROW_MINE: usenet_mail.messages.182258 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-055680`；ng41_s25 全库行级遍历考据采纳）
+
+Theo de Raadt 辩 OpenBSD 从未受 crt0 漏洞影响，该洞在 FreeBSD 2.2 发布后才公布，且 OpenBSD 早在当年八月已审计 libc 的 locale 与 nls引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.182466 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-055704`；ng41_s25 全库行级遍历考据采纳）
+
+Theo de Raadt 回应称 OpenBSD 已大修 ftp 服务器源码，约六人参与，修掉诸多古怪缺陷，暗指对方只作讥评不出力引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198934 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091425`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖主实测 OpenBSD 3.3 下 Netgear MA311 吞吐不足 250Kbps，笔记本 Orinoco 卡可达 2.6Mbps。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200952 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091641`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dave Uhring 列出 3.3 安装目录，指出需取文件名以 x 开头的 xbase、xserv、xfont 等集合。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202979 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092279`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+John Sloan 报告用 ports 里的 Dante SOCKS 服务让 MSN Messenger 在 OpenBSD 3.1 上可用引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204910 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092498`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Daniel Hartmeier 指出 scrub 规则里同时写接口列表与 on all 从来不是有效写法，去掉后半段也只是碰巧能过，3.2 起才明确报错引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207340 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094804`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Daniel Hartmeier 说明线程与进程上限受 ulimit 与 login.conf 约束，三十二位机上 pid 不可能达到 ULONG_MAX引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209420 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095867`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+说明经 CVS 重建可远程升级，但须取 3.1 stable 分支以保证编译成功引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210947 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-096044`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+给出含 softdep 的 fstab 示例，并称实测 Solaris 8 x86 的 NFS 服务比 OpenBSD 更快引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213110 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097219`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+John McGrail 指出 FAQ 的内核源码说明已过时，建议清掉从 CD 复制的文件后解压 srcsys.tar.gz引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214786 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098840`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Larry Keebler 称最新 Samba 2.2.2 在 3.0 上能编译但工作不正常，在 2.9 上正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.233433 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104647`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Emmanuel Dreyfus 报两段可让非特权用户崩溃 NetBSD 1.3.2 与 OpenBSD 2.3 内核的概念验证代码引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216545 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105668`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+OpenBSD 开发者 Matthieu Herrb 指出基本系统由 tar 文件构成而非包，删 XFree86 应直接删目录引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218231 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-105856`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Han 在 HAL2001 的 OpenBSD 帐篷现场发帖，列出同帐的 Dug Song、Theo de Raadt、Niels Provos 等人引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.231637 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106355`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+force 报 BusLogic 磁带机缺陷、开机时仓内有带会被误识别为硬盘 sd1引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232892 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106527`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+James J. Lippard 给出 Navigator 与 Mozilla 的官方 port 路径，并称 BSDI 版需 COMPAT_BSDOS引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.229995 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107157`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+James Graves 报告 2.6 对多款 IDE 光驱的识别退化，并给出换用新引导盘或改从硬盘安装的绕法引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.219701 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107334`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+按手册写 isakmpd.policy 后所有连接被拒，帖中附完整策略文件引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226227 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107823`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Mamading Ceesay 发现 fdisk 误报几何，照它建 OpenBSD 分区后 disklabel 仍能取到正确扇区数引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.227803 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-108007`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Sergio Jachtchenco 报告在 VMWare 里顺利装上 OpenBSD，宿主为双 Celeron 366 与 NT 4.0 SP6a引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222134 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108211`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+称电缆调制解调器会编码全部流量，其 ipf 在 9.5 天内拦下约 12 万包与 4.3 万个 ping引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.223427 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108391`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+主张把 enlightenment、blackbox、gnome 等 X 相关包放入 /usr/X11R6 而非 /usr/local，并询问负责人引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.225697 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108612`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+询问 2.6 上 keep state 动态规则过期过快可否经内核配置延长引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201653 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422276`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 8 月 13 日，Theo de Raadt 就外部转来的只读 CVS 访问安全问题回应，表明 OpenBSD 采用完全不同的做法来做 anoncvs，他个人无法接受 pserver 并称其不安全，因此坚持 chroot 模型，认为这远更可靠。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201974 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422428`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 3 日，Hans-Guenter Weigand 确认这正是 vrele panic 的修复，同时也关闭了 PR#585；PR#585 记录显示 98 年 9 月 23 日 art 修改 sys/kern/kern_exec.c，让 f_flag 使用与 vn_open 一致的标志，否则 vn_close 不会为 vnode 递减 v_writecount 引发 panic；他建议直接更新源码，嫌带宽小可看 ctm 每日更新。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202664 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422811`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 14 日，Chris 回复防 Smurf 咨询 说 IPFilter 拦 icmp echo 与 echo-rep 广播只能挡 ping 真正防御要在 ISP 路由器限流 而 sysctl -w net.inet.ip.directed-broadcast=0 可让 OpenBSD 路由机不成为 smurf 放大器。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
