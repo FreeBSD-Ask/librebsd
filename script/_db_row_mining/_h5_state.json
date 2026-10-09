@@ -1490,13 +1490,13 @@
    "base_tag": "h5mm_b525",
    "batches": [
     {
-     "cands": 0,
-     "claims": "",
+     "cands": 621,
+     "claims": "CL-RM-428209-428829",
      "commit": "",
      "n": 6000,
-     "note": "",
+     "note": "621 候选（全 L4）归一 619 条叙述（NONE 392/8121 210/12410 15/8812 2），register 落库 CL-RM-428209-428829 连续 621 无洞全 supported、写后反查 quote 621/621、四表 join 621；本次入纲 17 块（124.10=15/88.12=2，numstat +81/-3）提交 de694e878；210 条 8121 目标块暂缓——81.21-alsa.md 自述「本节仅释读 Linux 一支」且留 2026-09-12 R1969 批量误配注入整改痕，与本批 FreeBSD 音频驱动/ALSA 兼容层主题冲突，待主理人裁定后单独放行；台账未前进（本批未闭环，避免台账先行）；2 条候选（1416427/1417455）因叙述过短（49/38 字）不入大纲仍入 claim 库；大纲脚本 ROW_MINE 锚点写死 freebsd-arch.messages 的 bug 已修为 %s.messages.%s",
      "offset": 0,
-     "parts": 0,
+     "parts": 12,
      "state": "pending",
      "tag": "h5mm_b525_1"
     },
