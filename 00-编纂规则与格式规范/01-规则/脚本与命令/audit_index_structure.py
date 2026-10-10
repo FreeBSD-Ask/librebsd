@@ -12,7 +12,7 @@ xref 交叉引用、视觉回归套件；第六件为大纲注入块证据等级
      （即不得连空两格）。设立缘由：2026-09-18 发现卷题自 2026-09-05 起长期为 U+3000 形制
      （插卷/重编号脚本模板写死），而本门禁原 A 组不检空格，规则无自动化护栏。
   B 卷：卷锚点 1..N 连续唯一；卷题中文序数与锚点一致
-  C 章：每卷章号 1..K 连续唯一；章题「第 M 章」与锚点一致；章题全局唯一
+  C 章：每卷章号 1..K 连续唯一；章题「第 M 章」与锚点一致；章题**卷内唯一**（剥「第 N 章」前缀后按卷比对，与页面自检 `dupTitles` 同口径；2026-10-10 由「全局唯一」改卷内）
   D 节：每章节号 M.1..M.k 连续；节题非空（src 注不计入题文）
   E 述评恒末：**若有**「本章书目述评」节须居章末（与 audit_sequence_continuity.py 同规）；
     27 号文「有则设、无则不设」→ 不以「每章必有述评」为判据，无述评的正章仅列参考
@@ -257,6 +257,7 @@ def main():
     seen_ch = {}
     sec_total = src_total = 0
     for i, (vid, vt, st) in enumerate(vols[:-1]):
+        seen_in_vol = {}   # C 组「卷内唯一」容器（2026-10-10：原全局 seen_ch，改卷内、剥「第 N 章」前缀）
         # 三级结构判据须先屏蔽 <script>/<style>：页面构建脚本内含 '<li>' 等字符串字面量，
         # 直接计数会把脚本源码误判为「章外孤立节行」（2026-09-27 首次实现即被该假阳性拦下）。
         seg = re.sub(
@@ -284,9 +285,11 @@ def main():
             m = re.match(r"^第\s*(\d+)\s*章\s*(.*)$", t)
             if not m or int(m.group(1)) != cn_:
                 ch_bad.append((cid, t))
-            if t in seen_ch:
-                dup_ch.append((t, seen_ch[t], cid))
-            seen_ch[t] = cid
+            _t2 = m.group(2).strip() if m else t   # 剥「第 M 章」前缀（与页面自检 dupTitles／pureTitle 同口径）
+            if _t2 in seen_in_vol:
+                dup_ch.append((_t2, seen_in_vol[_t2], cid))
+            seen_in_vol[_t2] = cid
+            seen_ch[t] = cid                       # 保留全局累积：I 组 n_bibch 依赖（勿改语义）
             # L 不设附录（O1）：章题去「第 N 章」前缀后以「附录」起首即 FAIL。
             if re.match(r"^附录", re.sub(r"^第\s*\d+\s*章\s*", "", t)):
                 appx_bad.append((cid, t))
@@ -334,7 +337,7 @@ def main():
         if _seg_li != _ch_li:
             tri_bad.append((vid, f"章外孤立节行 {_seg_li - _ch_li} 条"))
     print(f"C 章: 共 {ch_total} 章 | 卷内章号异常 {len([x for x in ch_bad if isinstance(x[1], list)])} 卷 |"
-          f" 章题/锚点异常 {len([x for x in ch_bad if not isinstance(x[1], list)])} | 重题 {len(dup_ch)}")
+          f" 章题/锚点异常 {len([x for x in ch_bad if not isinstance(x[1], list)])} | 卷内重题 {len(dup_ch)}")
     for x in ch_bad[:10]:
         print("   ❌", x)
     for x in dup_ch[:5]:
@@ -810,6 +813,7 @@ def main():
         or (not okB)
         or vtitle_bad
         or ch_bad
+        or dup_ch
         or sec_bad
         or bib_bad
         or (not okF)
