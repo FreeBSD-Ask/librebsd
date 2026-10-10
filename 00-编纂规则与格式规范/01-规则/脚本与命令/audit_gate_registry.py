@@ -108,7 +108,7 @@ REGISTRY = [
          trigger="改章号/卷号或批量改号后（丁-1；87 号文 R-3 工程化）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第十八件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_page_version_bump.py",
-         kind="门禁（版本号递增兜底，独立计数）", object="HEAD vs 工作区 index.html——口径/注数变化而版本号未变即 FAIL",
+         kind="门禁（版本号刷新兜底，独立计数）", object="HEAD vs 工作区 index.html——口径/注数变化而版本号未刷新即 FAIL（正则兼容 X.Y.Z 旧形与 UTC+8 时间戳新形）",
          trigger="每批收口（涉页面变更）后（2026-10-07 立，堵 116c 后执行缺口）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第十九件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_anchor_resolution.py",
