@@ -24,7 +24,7 @@ font_subset_rebuild.py — 目录页字体子集重建与 cmap 审计（重构20
        「源字体本无（系统 fallback，允许）」与「源字体有但重建丢失（回归，禁止）」。
 
 前置：
-    - fonttools + brotli（venv：C:/Users/ykla/.workbuddy/binaries/python/envs/default）
+    - fonttools + brotli（任一含该依赖的解释器；2026-10-11 校正：原指定 venv 已失效，现用系统 `C:/Python314/python.exe`）
     - 字体源 tgz：script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz
       （若缺失，从 git 历史或字体包重新获取，路径常量在本文件顶部）
 
