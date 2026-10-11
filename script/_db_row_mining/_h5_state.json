@@ -120,6 +120,17 @@
    "base_tag": "h5dk_b506",
    "batches": [
     {
+     "cands": "49",
+     "claims": "CL-RM-434672-434703",
+     "commit": "261be5418",
+     "n": 1000,
+     "note": "49 候选（offset 0-1000，parts 4）→ 49 叙述 → register 32 claim_id CL-RM-434672-434703 连续无洞；另 17 条 pk 已由 fdesk_b030 13／fdesk_b059 4 认领，register 幂等未新增 claim_id（叙述已写不入纲）；入纲 26 块入 262.1（+26 块／NONE 6），numstat +130/0＝26×5、append-only 前缀逐字节一致、幂等二跑 +0；本库三批全闭环 9545/9545＝100%",
+     "offset": 0,
+     "parts": 4,
+     "state": "committed",
+     "tag": "h5dk_b506_0"
+    },
+    {
      "cands": "348",
      "claims": "",
      "commit": "37feb12e9",
@@ -142,14 +153,18 @@
      "tag": "h5dk_b506_2"
     }
    ],
-   "hosts_final": [],
-   "hosts_guess": [],
-   "n_batches": 2,
+   "hosts_final": [
+    "2621"
+   ],
+   "hosts_guess": [
+    "2621"
+   ],
+   "n_batches": 3,
    "name": "freebsd-desktop",
-   "note": "",
-   "offset": 1000,
-   "remaining": 8545,
-   "state": "committed",
+   "note": "2026-10-10 b506_0 收口后本库三批全闭环：9545/9545＝100%，余量 0；宿主仅 2621（262.1 GhostBSD 与 FreeBSD 桌面化 2009-2026）",
+   "offset": 9545,
+   "remaining": 0,
+   "state": "complete",
    "total": 9545
   },
   {
@@ -1492,45 +1507,45 @@
     {
      "cands": 621,
      "claims": "CL-RM-428209-428829",
-     "commit": "",
+     "commit": "de694e878",
      "n": 6000,
      "note": "621 候选（全 L4）归一 619 条叙述（NONE 392/8121 210/12410 15/8812 2），register 落库 CL-RM-428209-428829 连续 621 无洞全 supported、写后反查 quote 621/621、四表 join 621；本次入纲 17 块（124.10=15/88.12=2，numstat +81/-3）提交 de694e878；210 条 8121 目标块暂缓——81.21-alsa.md 自述「本节仅释读 Linux 一支」且留 2026-09-12 R1969 批量误配注入整改痕，与本批 FreeBSD 音频驱动/ALSA 兼容层主题冲突，待主理人裁定后单独放行；台账未前进（本批未闭环，避免台账先行）；2 条候选（1416427/1417455）因叙述过短（49/38 字）不入大纲仍入 claim 库；大纲脚本 ROW_MINE 锚点写死 freebsd-arch.messages 的 bug 已修为 %s.messages.%s",
      "offset": 0,
      "parts": 12,
-     "state": "pending",
+     "state": "committed",
      "tag": "h5mm_b525_1"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 1071,
+     "claims": "CL-RM-432453-433523",
+     "commit": "261be5418",
      "n": 6000,
-     "note": "",
+     "note": "1071 候选→1071 叙述（parts 24）→ register 1071 claim_id 连续无洞；入纲 32 块（88.12 +12／124.10 +20），8121 目标 333 条挂账待主理人裁定，NONE 706",
      "offset": 6000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 24,
+     "state": "committed",
      "tag": "h5mm_b525_2"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 730,
+     "claims": "CL-RM-433524-434253",
+     "commit": "261be5418",
      "n": 6000,
-     "note": "",
+     "note": "730 候选→730 叙述（parts 24）→ register 730 claim_id 连续无洞；入纲 17 块（88.12 +5／124.10 +12），8121 目标 158 条挂账，NONE 555",
      "offset": 12000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 24,
+     "state": "committed",
      "tag": "h5mm_b525_3"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 418,
+     "claims": "CL-RM-434254-434671",
+     "commit": "261be5418",
      "n": 6000,
-     "note": "",
+     "note": "418 候选→418 叙述（parts 16）→ register 418 claim_id 连续无洞；入纲 13 块（88.12 +9／124.10 +4），8121 目标 146 条挂账，NONE 259",
      "offset": 18000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 16,
+     "state": "committed",
      "tag": "h5mm_b525_4"
     },
     {
@@ -1577,9 +1592,9 @@
    "hosts_guess": [],
    "n_batches": 7,
    "name": "freebsd-multimedia",
-   "note": "",
-   "offset": 0,
-   "remaining": 36779,
+   "note": "2026-10-10 b525_1~b525_4 四批闭环（offset 0-24000，cands 2840、register CL-RM-428209-434671 连续无洞）；余 b525_5~7 三批 12779 行未开窗；8121 目标累计 847 条挂账待主理人裁定（81.21-alsa.md 自述「本节仅释读 Linux 一支」）",
+   "offset": 24000,
+   "remaining": 12779,
    "state": "pending",
    "total": 36779
   },
@@ -1794,7 +1809,18 @@
  },
  "source": "H5 交接书 v2.1（含 2026-09-19 三源交叉复核订正）",
  "totals": {
-  "batches": 110,
+  "batches": 109,
+  "h5_20261010_wave4_closeout": {
+   "batches": "h5dk_b506_0 / h5mm_b525_1 / h5mm_b525_2 / h5mm_b525_3 / h5mm_b525_4",
+   "blocks_outlined": 88,
+   "blocks_host": "262.1 +26 / 88.12 +26 / 124.10 +36",
+   "cands": 2268,
+   "claims": "CL-RM-432453-434703（2251 条连续无洞）+ b525_1 CL-RM-428209-428829",
+   "commit": "261be5418",
+   "gated_8121": 847,
+   "lines": 440,
+   "note": "numstat +440/0＝88块×5 行纯 append-only、append-only 前缀 3/3 逐字节一致、幂等二跑 +0；desktop 三批全闭环 9545/9545＝100%；multimedia 四批闭环 offset 0-24000，余 12779 行／三批；8121 目标 847 条（b525_1 210＋b525_2 333＋b525_3 158＋b525_4 146）挂账待主理人裁定——81.21-alsa.md 自述「本节仅释读 Linux 一支」且留 2026-09-12 R1969 批量误配注入整改痕，与本批 FreeBSD 音频驱动/ALSA 兼容层主题构成编辑冲突（非技术冲突）"
+  },
   "h5_20260926_closeout": {
    "arm_b521_5": 635,
    "blocks_total": 2076,
@@ -1876,7 +1902,7 @@
    "register_runs": 1
   },
   "libs": 27,
-  "rows": 534974,
+  "rows": 547474,
   "h5_20260930_sec3_closeout": {
    "blocks": 2475,
    "cands": 2475,
@@ -2113,6 +2139,6 @@
    "note": "读手 12 分件×500 行 digest、叙述手 12 片×109（末片 102）；候选 1301 L4 1083/L3 218；1149 判 NONE（PCMCIA/ACPI/atapci/无线等无宿主）；4 宿主 +759/0；numstat +759/0=152块x5行；幂等二跑 +0；register 1301 条全 supported（CL-RM-414723~416023 连续无洞）；supplement_log +152；p3 读手 3 次重试（model 输出超长）、p7 叙述手 1 次重试"
   }
  },
- "updated": "2026-10-08",
+ "updated": "2026-10-10",
  "version": 2
 }
