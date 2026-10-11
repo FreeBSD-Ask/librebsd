@@ -21,7 +21,9 @@
   ② 品牌派生件（真矢量 logo／三帧 favicon）系第十七批手工产物，形制无护栏，
      若被光栅原件覆盖将静默膨胀体积；
   ③ 「零外部依赖」是单体交付的核心不变量（加载期请求数 = 1），无静态护栏；
-  ④ 测试套件含随目录变动须同步的夹具值，陈旧夹具会以「判据缺陷」形式误报。
+  ④ 测试套件含随目录变动须同步的夹具值，陈旧夹具会以「判据缺陷」形式误报；
+  ⑤ 页面派生指标「未决项」（N_PENDING）原无门禁守护：存在性与数值变化皆静默
+     （2026-10-11 实测事故，见 E4 注；本件以 E4 交叉核验补位）。
 
 核验项（0 异常 exit 0；有异常 exit 1；环境缺失 exit 2）：
   A  装配源清单：五层解耦的 9 个源文件存在且非空
@@ -43,6 +45,9 @@
      E1 `tests/*.mjs` 口径串与页面 doc-metrics 一致
      E2 `tests/*.mjs` 溯源注计数与页面 `.src` 节数一致
      E3 `tests/README.md` 断言清单 T 编号集与 `visual_regression.mjs` 的 record() 编号集一致
+     E4 页面 doc-metrics「未决项」格与内容源结构性待补声明双向一致（独立实现交叉核验；
+        2026-10-11 立，缘由＝引述文本误报事故——装配器 N_PENDING 旧判据为朴素子串，
+        7.3 注引述镜像旧标注致瓦片自 0 复活且静默；装配器判据同期收紧）
 
 触发条件：**改动任一装配源、品牌派生件或字体子集后必跑**。
 
@@ -59,6 +64,7 @@
   <fontTools+brotli-python> audit_page_assets.py --root <dir>           # 审计指定树根（备份件／快照交叉验证、
                                                                         # 负向测试；默认 重构2026/）
   <fontTools+brotli-python> audit_page_assets.py --refresh-source-cmap  # 从字体源 tgz 重建 B4 基准清单
+  <fontTools+brotli-python> audit_page_assets.py --selftest               # 判据非空自检（E4 双向四用例，临时树）
 
 规则索引：本脚本登记于 `01-规则/README.md`（固定脚本）与流程规则.md
 「页面资产层完整性门禁」小节。
@@ -137,6 +143,34 @@ def rec(label, ok, detail=""):
 def info(label, detail):
     print("INFO | " + label + " | " + detail)
     INFOS.append(label + "：" + detail)
+
+
+# ---------- 未决项交叉核验（E4；2026-10-11 立） ----------
+
+def count_pending_decl(text):
+    """内容源中的**结构性待补声明**计数（独立实现，不复用装配器判据）。
+
+    定义（与装配器收紧后判据同语义、不同实现）：节行（`- N.M `）的注文段
+    （`@@` 定界；前置形 `@@〔…〕@@`、后缀形 `…@@〔…〕`）以「〔待补」或「〔待重建」
+    **起首**者计入；注文中部的引述（如镜像旧标注名）不计入。
+    """
+    n = 0
+    for ln in text.splitlines():
+        if not ln.startswith("- "):
+            continue
+        for seg in re.findall(r"@@(.*?)(?=@@|$)", ln):
+            if re.match(r"〔(?:待补|待重建)", seg):
+                n += 1
+    return n
+
+
+def page_pending_value(h):
+    """页面 doc-metrics「未决项」格值；无格（N_PENDING=0 时整格隐藏）返回 0。
+
+    锚＝小字文案〔待补／待重建〕（与 E1／E2 同构）；该文案调整时须同步本判据。
+    """
+    m = re.search(r"<strong>(\d+)</strong><small>〔待补／待重建〕</small>", h)
+    return int(m.group(1)) if m else 0
 
 
 # ---------- 字体源覆盖清单（B4 基准） ----------
@@ -222,7 +256,12 @@ def main():
                     help="被审计树根（默认 重构2026/；备份件／快照交叉验证与负向测试用）")
     ap.add_argument("--refresh-source-cmap", action="store_true",
                     help="从字体源 tgz 重建 data/font-source-cmap.txt 后退出")
+    ap.add_argument("--selftest", action="store_true",
+                    help="判据非空自检（E4 双向四用例，临时最小树；不触碰正式树）")
     args = ap.parse_args()
+
+    if args.selftest:
+        return cmd_selftest()
 
     set_root(args.root)
 
@@ -429,12 +468,78 @@ def main():
     else:
         rec("E1/E2/E3 测试夹具口径一致性", False, "无法从 doc-metrics 解析口径三元组")
 
+    # ---- E4 未决项交叉核验（2026-10-11 立；独立实现，不随 ABCD/E1-3 短路） ----
+    try:
+        ol_text = io.open(os.path.join(ROOT, "data", "outline.txt"), encoding="utf-8").read()
+    except OSError as e:
+        rec("E4 未决项格与内容源结构性待补声明双向一致", False, "内容源读取失败：%r" % e)
+    else:
+        n_decl = count_pending_decl(ol_text)
+        p_page = page_pending_value(h)
+        rec("E4 未决项格与内容源结构性待补声明双向一致", n_decl == p_page,
+            "源声明 %d ／ 页面格 %s" % (n_decl, str(p_page) if p_page else "无（N_PENDING=0，整格隐藏）"))
+
     print("-" * 68)
     if FAILS:
         print("门禁结论：FAIL %d 项 —— %s" % (len(FAILS), "；".join(FAILS)))
         return 1
     print("门禁结论：页面资产层完整性 PASS（INFO %d 项）" % len(INFOS))
     return 0
+
+
+def cmd_selftest():
+    """E4 判据非空自检（2026-10-11 立）：临时最小树注入四用例——
+    T1 页面有格 N=1 而源仅含引述（非结构性）→ 应 FAIL（引述误报守护）；
+    T2 页面无格而源有结构性声明 → 应 FAIL（反向脱节）；
+    T3 页面格 N=1 且源有 1 条结构性声明 → 应 PASS（合法对）；
+    T4 页面无格且源仅含引述 → 应 PASS（引述不计入）。
+    四用例全中 exit 0，否则 exit 1。"""
+    import shutil
+    tmp = tempfile.mkdtemp(prefix="pageassets_selftest_")
+    LQ, RQ = chr(0x201c), chr(0x201d)
+    note = "〔待补／待重建〕"
+    decl_line = "- 1.1 测试节@@〔待补·待重建：正文期补齐〕"
+    quote_line = "- 1.1 测试节@@〔溯源：镜像旧标注" + LQ + "待补（B3 深化）" + RQ + "——引述不计〕"
+
+    def mk(idx_val, ol_lines):
+        d = tempfile.mkdtemp(dir=tmp)
+        os.makedirs(os.path.join(d, "data"))
+        if idx_val is None:
+            idx = '<div class="doc-metrics"></div>'
+        else:
+            idx = ('<div class="doc-metric"><span>未决项</span><strong>%d</strong>'
+                   '<small>%s</small></div>' % (idx_val, note))
+        io.open(os.path.join(d, "index.html"), "w", encoding="utf-8", newline="\n").write(idx)
+        io.open(os.path.join(d, "data", "outline.txt"), "w", encoding="utf-8",
+                newline="\n").write("\n".join(ol_lines) + "\n")
+        return d
+
+    cases = [
+        ("T1 引述误报守护（页面 1 ／ 源引述）", 1, [quote_line], True),
+        ("T2 反向脱节（页面无 ／ 源声明）", None, [decl_line], True),
+        ("T3 合法对（页面 1 ／ 源声明 1）", 1, [decl_line], False),
+        ("T4 引述不计入（页面无 ／ 源引述）", None, [quote_line], False),
+    ]
+    ok_all = True
+    print("第九件 --selftest：E4 判据非空（临时最小树四用例）")
+    for name, val, lines, exp_fail in cases:
+        d = mk(val, lines)
+        n_src = count_pending_decl(io.open(os.path.join(d, "data", "outline.txt"),
+                                           encoding="utf-8").read())
+        n_page = page_pending_value(io.open(os.path.join(d, "index.html"),
+                                            encoding="utf-8").read())
+        got_fail = (n_src != n_page)
+        ok = (got_fail == exp_fail)
+        ok_all = ok_all and ok
+        print("  %s %s（源 %d ／ 页面 %d；预期 %s，实得 %s）"
+              % ("✅" if ok else "❌", name, n_src, n_page,
+                 "FAIL" if exp_fail else "PASS", "FAIL" if got_fail else "PASS"))
+    shutil.rmtree(tmp, ignore_errors=True)
+    if ok_all:
+        print("  ✅ E4 判据非空：四用例（双向×正反）全部命中")
+        return 0
+    print("  ❌ E4 判据可能为空：存在未命中用例", file=sys.stderr)
+    return 1
 
 
 if __name__ == "__main__":

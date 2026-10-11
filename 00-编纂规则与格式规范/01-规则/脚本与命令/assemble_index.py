@@ -281,7 +281,10 @@ def derive_metrics(vols):
     n_src = sum(1 for v in vols for c in v["chapters"] for (num, title, src, pre) in c["secs"] if src)
     n_pending = sum(1 for v in vols for c in v["chapters"]
                     for (num, title, src, pre) in c["secs"]
-                    if src and ("待补" in src or "待重建" in src))
+                    if src and re.match(r"〔(?:待补|待重建)", src))
+    # 2026-10-11 收紧：仅认**结构性待补声明**（注文以〔待补／〔待重建起首），
+    #   不再匹配注文中部的引述。缘由：7.3 注引述镜像旧标注“待补（B3 深化）”被旧判据
+    #   误计为 1，致未决项瓦片自 0 复活且无告警（131 批）。第九件 E4 以独立实现交叉核验。
     return {
         "N_VOL": n_vol, "N_CH": n_ch, "N_SEC": n_sec,
         "N_CH_MAIN": n_ch - n_bib, "N_CH_BIBLIO": n_bib,
