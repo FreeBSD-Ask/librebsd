@@ -46,18 +46,19 @@
 
 触发条件：**改动任一装配源、品牌派生件或字体子集后必跑**。
 
-依赖：fontTools + brotli（解析 woff2）。须以带该依赖的解释器运行（字体子集脚本同源）：
-  C:/Users/ykla/.workbuddy/binaries/python/envs/default/Scripts/python.exe audit_page_assets.py
+依赖：fontTools + brotli（解析 woff2）。须以带该依赖的解释器运行（字体子集脚本同源；
+任一含 fontTools＋brotli 的解释器均可，2026-10-11 校正——原指定 venv 已失效）：
+  C:/Python314/python.exe audit_page_assets.py
 
 字体源 tgz（B4 交叉核验用）位于 `script/_font_embed_20260905/`，该目录被 `.gitignore` 的
 `/script` 规则排除（临时目录规则），故**不依赖其存在**：B4 的基准是受版本控制的
 `data/font-source-cmap.txt`；tgz 在场时额外交叉核验，缺失时仅记 INFO。
 
-用法：
-  <venv-python> audit_page_assets.py                        # 常规审计
-  <venv-python> audit_page_assets.py --root <dir>           # 审计指定树根（备份件／快照交叉验证、
-                                                            # 负向测试；默认 重构2026/）
-  <venv-python> audit_page_assets.py --refresh-source-cmap  # 从字体源 tgz 重建 B4 基准清单
+用法（解释器须含 fontTools＋brotli，任选其一）：
+  <fontTools+brotli-python> audit_page_assets.py                        # 常规审计
+  <fontTools+brotli-python> audit_page_assets.py --root <dir>           # 审计指定树根（备份件／快照交叉验证、
+                                                                        # 负向测试；默认 重构2026/）
+  <fontTools+brotli-python> audit_page_assets.py --refresh-source-cmap  # 从字体源 tgz 重建 B4 基准清单
 
 规则索引：本脚本登记于 `01-规则/README.md`（固定脚本）与流程规则.md
 「页面资产层完整性门禁」小节。
@@ -233,8 +234,7 @@ def main():
     except ImportError:
         print("环境错误：缺少 fontTools（本门禁需解析 woff2）。")
         print("请以带该依赖的解释器运行，例如：")
-        print("  C:/Users/ykla/.workbuddy/binaries/python/envs/default/Scripts/python.exe "
-              "audit_page_assets.py")
+        print("  C:/Python314/python.exe audit_page_assets.py")
         return 2
 
     # 字符集定义与 font_subset_rebuild.py 同源（避免两脚本判据漂移）
