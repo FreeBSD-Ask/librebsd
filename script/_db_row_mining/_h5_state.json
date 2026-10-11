@@ -70,8 +70,8 @@
    "n_batches": 2,
    "name": "freebsd-x11",
    "note": "",
-   "offset": 1000,
-   "remaining": 7152,
+   "offset": 8152,
+   "remaining": 0,
    "state": "committed",
    "total": 8152
   },
@@ -111,8 +111,8 @@
    "n_batches": 2,
    "name": "freebsd-ipfw",
    "note": "",
-   "offset": 1000,
-   "remaining": 8388,
+   "offset": 9388,
+   "remaining": 0,
    "state": "committed",
    "total": 9388
   },
@@ -203,8 +203,8 @@
    "n_batches": 2,
    "name": "cu",
    "note": "",
-   "offset": 1000,
-   "remaining": 9064,
+   "offset": 10064,
+   "remaining": 0,
    "state": "committed",
    "total": 10064
   },
@@ -243,8 +243,8 @@
    "n_batches": 2,
    "name": "freebsd-acpi",
    "note": "",
-   "offset": 1000,
-   "remaining": 9203,
+   "offset": 10203,
+   "remaining": 0,
    "state": "committed",
    "total": 10203
   },
@@ -285,8 +285,8 @@
    "n_batches": 2,
    "name": "freebsd-smp",
    "note": "",
-   "offset": 0,
-   "remaining": 10013,
+   "offset": 10013,
+   "remaining": 0,
    "state": "committed",
    "total": 10013
   },
@@ -325,8 +325,8 @@
    "n_batches": 2,
    "name": "freebsd-i386",
    "note": "",
-   "offset": 1000,
-   "remaining": 11231,
+   "offset": 12231,
+   "remaining": 0,
    "state": "committed",
    "total": 12231
   },
@@ -371,8 +371,8 @@
    "n_batches": 2,
    "name": "freebsd-sparc64",
    "note": "",
-   "offset": 1000,
-   "remaining": 11560,
+   "offset": 12560,
+   "remaining": 0,
    "state": "committed",
    "total": 12560
   },
@@ -427,8 +427,8 @@
    "n_batches": 3,
    "name": "freebsd-ppc",
    "note": "已全库收口 2026-09-21：3 批全 committed（4d795da0f / 727cba8dc / 62fd28ba4），候选 2149+2860+176=5185 条，claim CL-RM 覆盖 151007-154415 段，宿主最终 1315/10018/989/14911。审计 PASS（133882 条块头等级与库中真值全一致）。注意：本文件 lib 级 offset/remaining 是批计划起点口径（total-offset），非活动游标，故收口后仍显示 1000/12291，属设计非缺陷。",
-   "offset": 1000,
-   "remaining": 12291,
+   "offset": 13291,
+   "remaining": 0,
    "state": "committed",
    "total": 13291
   },
@@ -479,9 +479,9 @@
    ],
    "n_batches": 3,
    "name": "tech-pkg",
-   "note": "2026-09-22 tech-pkg 整库闭环：13931 封全量覆盖，claim 2922 条＝入纲块 2922（5 宿主，零孤儿零重复）。库首段（库内序 0-1499，pk 270703-272459）并非漏读——2026-09-11 另一会话已处理并入纲 179.2（152 块，commit 85a71de45），本轮误判为漏读缺口而重做 h5tp_b528_0（3 路读手 374 条、register 281 条 CL-RM-162346-162626），经比对 93 条与 179.2 已入纲块重复，已整批 purge 回滚（anchor 残留 0，库内 MAX 回落 162345）。",
-   "offset": 1500,
-   "remaining": 12431,
+   "note": "库首 1500 行由 2026-09-11 提交 d1cafd8f7 完成（152 块入 179.2）但从未立 batch 记录，故旧 offset 停在 b528_1 的 1500；2026-10-11 对账按台账实测 13931/13931 订正 offset。另：anchor h5tp_b528_0 名下 claim 库仍存 281 条（CL-RM-262802~263082），与提交 393addaaddc 所称「误做 281 条已 purge 回滚」矛盾，待主理人裁定。",
+   "offset": 13931,
+   "remaining": 0,
    "state": "committed",
    "total": 13931
   },
@@ -537,8 +537,8 @@
    "n_batches": 3,
    "name": "freebsd-perl",
    "note": "",
-   "offset": 1000,
-   "remaining": 13437,
+   "offset": 14437,
+   "remaining": 0,
    "state": "committed",
    "total": 14437
   },
@@ -696,8 +696,8 @@
    "n_batches": 3,
    "name": "freebsd-advocacy",
    "note": "",
-   "offset": 1000,
-   "remaining": 14097,
+   "offset": 15097,
+   "remaining": 0,
    "state": "pending",
    "total": 15097
   },
@@ -750,8 +750,8 @@
    "n_batches": 3,
    "name": "freebsd-alpha",
    "note": "3/3 批全 committed，库内序 0-16942 全覆盖 16943/16943。批1 daa3a2a11(1122)/批2 2d53346e7(1066)/批3 add518fc7(1949)。宿主最终 911/981/10112/1059，批3 坍缩单一 981。",
-   "offset": 0,
-   "remaining": 16943,
+   "offset": 16943,
+   "remaining": 0,
    "state": "committed",
    "total": 16943
   },
@@ -843,25 +843,25 @@
      "tag": "h5sc_b516_2"
     },
     {
-     "cands": 0,
-     "claims": "",
+     "cands": 1991,
+     "claims": "CL-RM-369690-371680",
      "commit": "",
      "n": 6000,
-     "note": "",
+     "note": "2026-10-11 H5 对账回填：本批早已执行，claim 库三表 join anchor=h5sc_b516_3 实测 1991 条（L4=1923／L3=68，全部 attribution_allowed，rejected 0）、状态全 supported／attribution_allowed，仅 _h5_state.json 未登记（旧值 cands=0／state=pending）。",
      "offset": 12000,
      "parts": 0,
-     "state": "pending",
+     "state": "committed",
      "tag": "h5sc_b516_3"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 622,
+     "claims": "CL-RM-373632-374253",
+     "commit": "4a764250b",
      "n": 1851,
-     "note": "",
+     "note": "2026-10-11 H5 对账回填：本批早已执行，claim 库三表 join anchor=h5sc_b516_4 实测 622 条（L4=591／L3=31，全部 attribution_allowed，rejected 4（故入纲 618 块））、状态全 supported／attribution_allowed，仅 _h5_state.json 未登记（旧值 cands=0／state=pending）。",
      "offset": 18000,
      "parts": 0,
-     "state": "pending",
+     "state": "committed",
      "tag": "h5sc_b516_4"
     }
    ],
@@ -878,9 +878,9 @@
    "n_batches": 4,
    "name": "freebsd-scsi",
    "note": "b516_1（688 条 f5684a71f）+ b516_2（1528 条 9eb3ec2f9）已 committed；整库 19851 行已读 12000 / 剩 7851；余 2 批（offset 12000 n 6000、18000 n 1851）",
-   "offset": 12000,
-   "remaining": 7851,
-   "state": "in_progress",
+   "offset": 19851,
+   "remaining": 0,
+   "state": "completed",
    "total": 19851
   },
   {
@@ -972,14 +972,14 @@
      "tag": "h5hw_b518_2"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 1618,
+     "claims": "CL-RM-374254-375871",
+     "commit": "3e9319f71",
      "n": 6000,
-     "note": "",
+     "note": "2026-10-11 H5 对账回填：本批早已执行，claim 库三表 join anchor=h5hw_b518_3 实测 1618 条（L4=1430／L3=188，全部 attribution_allowed，rejected 0）、状态全 supported／attribution_allowed，仅 _h5_state.json 未登记（旧值 cands=0／state=pending）。",
      "offset": 12000,
      "parts": 0,
-     "state": "pending",
+     "state": "committed",
      "tag": "h5hw_b518_3"
     },
     {
@@ -1004,9 +1004,9 @@
    "hosts_guess": [],
    "n_batches": 4,
    "name": "freebsd-hardware",
-   "note": "",
-   "offset": 12000,
-   "remaining": 10679,
+   "note": "2026-10-11 H5 对账订正：本库实为 18000/22679（79.37%）而非已 completed——源库 messages 实测 22679 行、已覆盖仅 18000 行，尾批 h5hw_b518_4 未执行（claim 库无该 anchor 条目、本文件记 pending/cands=0）。此前台账曾把 hi 直接记到库总行数 22679 并误标 completed，现已订正，余 4679 行待新批开窗。",
+   "offset": 18000,
+   "remaining": 4679,
    "state": "in_progress",
    "total": 22679
   },
@@ -1036,14 +1036,14 @@
      "tag": "h5py_b519_2"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 146,
+     "claims": "CL-RM-376167-376312",
+     "commit": "8b597a538",
      "n": 6000,
-     "note": "",
+     "note": "2026-10-11 H5 对账回填：本批早已执行，claim 库三表 join anchor=h5py_b519_3 实测 146 条（L4=112／L3=34，全部 attribution_allowed，rejected 0）、状态全 supported／attribution_allowed，仅 _h5_state.json 未登记（旧值 cands=0／state=pending）。",
      "offset": 12000,
      "parts": 0,
-     "state": "pending",
+     "state": "committed",
      "tag": "h5py_b519_3"
     },
     {
@@ -1067,9 +1067,9 @@
    ],
    "n_batches": 4,
    "name": "freebsd-python",
-   "note": "批1 committed（8617a3d88，660 块入 16.8，+3300 行）；offset 推进至 6000，剩余 16701",
-   "offset": 12000,
-   "remaining": 10701,
+   "note": "2026-10-11 H5 对账订正：本库实为 18000/22701（79.29%）而非已 completed——源库 messages 实测 22701 行、已覆盖仅 18000 行，尾批 h5py_b519_4 未执行（claim 库无该 anchor 条目、本文件记 pending/cands=0）。此前台账曾把 hi 直接记到库总行数 22701 并误标 completed，现已订正，余 4701 行待新批开窗。",
+   "offset": 18000,
+   "remaining": 4701,
    "state": "in_progress",
    "total": 22701
   },
@@ -1099,14 +1099,14 @@
      "tag": "h5em_b520_2"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 1500,
+     "claims": "CL-RM-381935-383434",
+     "commit": "7a9e3fce1",
      "n": 6000,
-     "note": "",
+     "note": "2026-10-11 H5 对账回填：本批早已执行，claim 库三表 join anchor=h5em_b520_3 实测 1500 条（L4=1334／L3=166，全部 attribution_allowed，rejected 0）、状态全 supported／attribution_allowed，仅 _h5_state.json 未登记（旧值 cands=0／state=pending）。",
      "offset": 12000,
      "parts": 0,
-     "state": "pending",
+     "state": "committed",
      "tag": "h5em_b520_3"
     },
     {
@@ -1142,9 +1142,9 @@
    ],
    "n_batches": 5,
    "name": "freebsd-emulation",
-   "note": "",
-   "offset": 12000,
-   "remaining": 13791,
+   "note": "2026-10-11 H5 对账订正：本库实为 18000/25791（69.79%）而非已 completed——源库 messages 实测 25791 行、已覆盖仅 18000 行，尾批 h5em_b520_4、h5em_b520_5 未执行（claim 库无该 anchor 条目、本文件记 pending/cands=0）。此前台账曾把 hi 直接记到库总行数 25791 并误标 completed，现已订正，余 7791 行待新批开窗。",
+   "offset": 18000,
+   "remaining": 7791,
    "state": "in_progress",
    "total": 25791
   },
@@ -1509,44 +1509,48 @@
      "claims": "CL-RM-428209-428829",
      "commit": "de694e878",
      "n": 6000,
-     "note": "621 候选（全 L4）归一 619 条叙述（NONE 392/8121 210/12410 15/8812 2），register 落库 CL-RM-428209-428829 连续 621 无洞全 supported、写后反查 quote 621/621、四表 join 621；本次入纲 17 块（124.10=15/88.12=2，numstat +81/-3）提交 de694e878；210 条 8121 目标块暂缓——81.21-alsa.md 自述「本节仅释读 Linux 一支」且留 2026-09-12 R1969 批量误配注入整改痕，与本批 FreeBSD 音频驱动/ALSA 兼容层主题冲突，待主理人裁定后单独放行；台账未前进（本批未闭环，避免台账先行）；2 条候选（1416427/1417455）因叙述过短（49/38 字）不入大纲仍入 claim 库；大纲脚本 ROW_MINE 锚点写死 freebsd-arch.messages 的 bug 已修为 %s.messages.%s",
+     "note": "621 候选（全 L4）归一 619 条叙述（NONE 392/8121 210/12410 15/8812 2），register 落库 CL-RM-428209-428829 连续 621 无洞全 supported、写后反查 quote 621/621、四表 join 621；本次入纲 17 块（124.10=15/88.12=2，numstat +81/-3）提交 de694e878；210 条 8121 目标块暂缓——81.21-alsa.md 自述「本节仅释读 Linux 一支」且留 2026-09-12 R1969 批量误配注入整改痕，与本批 FreeBSD 音频驱动/ALSA 兼容层主题冲突，待主理人裁定后单独放行；台账未前进（本批未闭环，避免台账先行）；2 条候选（1416427/1417455）因叙述过短（49/38 字）不入大纲仍入 claim 库；大纲脚本 ROW_MINE 锚点写死 freebsd-arch.messages 的 bug 已修为 %s.messages.%s；2026-10-11 主理人批准放行 81.21 宿主：210 条 8121 目标块已入 81.21-alsa.md（提交 7967f2ab2），本批全链闭环",
      "offset": 0,
      "parts": 12,
      "state": "committed",
-     "tag": "h5mm_b525_1"
+     "tag": "h5mm_b525_1",
+     "commit_8121": "7967f2ab2"
     },
     {
      "cands": 1071,
      "claims": "CL-RM-432453-433523",
      "commit": "261be5418",
      "n": 6000,
-     "note": "1071 候选→1071 叙述（parts 24）→ register 1071 claim_id 连续无洞；入纲 32 块（88.12 +12／124.10 +20），8121 目标 333 条挂账待主理人裁定，NONE 706",
+     "note": "1071 候选→1071 叙述（parts 24）→ register 1071 claim_id 连续无洞；入纲 32 块（88.12 +12／124.10 +20），8121 目标 333 条挂账待主理人裁定，NONE 706；2026-10-11 主理人批准放行 81.21 宿主：333 条 8121 目标块已入 81.21-alsa.md（提交 7967f2ab2），本批全链闭环",
      "offset": 6000,
      "parts": 24,
      "state": "committed",
-     "tag": "h5mm_b525_2"
+     "tag": "h5mm_b525_2",
+     "commit_8121": "7967f2ab2"
     },
     {
      "cands": 730,
      "claims": "CL-RM-433524-434253",
      "commit": "261be5418",
      "n": 6000,
-     "note": "730 候选→730 叙述（parts 24）→ register 730 claim_id 连续无洞；入纲 17 块（88.12 +5／124.10 +12），8121 目标 158 条挂账，NONE 555",
+     "note": "730 候选→730 叙述（parts 24）→ register 730 claim_id 连续无洞；入纲 17 块（88.12 +5／124.10 +12），8121 目标 158 条挂账，NONE 555；2026-10-11 主理人批准放行 81.21 宿主：158 条 8121 目标块已入 81.21-alsa.md（提交 7967f2ab2），本批全链闭环",
      "offset": 12000,
      "parts": 24,
      "state": "committed",
-     "tag": "h5mm_b525_3"
+     "tag": "h5mm_b525_3",
+     "commit_8121": "7967f2ab2"
     },
     {
      "cands": 418,
      "claims": "CL-RM-434254-434671",
      "commit": "261be5418",
      "n": 6000,
-     "note": "418 候选→418 叙述（parts 16）→ register 418 claim_id 连续无洞；入纲 13 块（88.12 +9／124.10 +4），8121 目标 146 条挂账，NONE 259",
+     "note": "418 候选→418 叙述（parts 16）→ register 418 claim_id 连续无洞；入纲 13 块（88.12 +9／124.10 +4），8121 目标 146 条挂账，NONE 259；2026-10-11 主理人批准放行 81.21 宿主：146 条 8121 目标块已入 81.21-alsa.md（提交 7967f2ab2），本批全链闭环",
      "offset": 18000,
      "parts": 16,
      "state": "committed",
-     "tag": "h5mm_b525_4"
+     "tag": "h5mm_b525_4",
+     "commit_8121": "7967f2ab2"
     },
     {
      "cands": 0,
@@ -1691,7 +1695,7 @@
    "n_batches": 7,
    "name": "freebsd-security",
    "note": "h5sec_b526_1 / b526_2 / b526_3 / b526_4 / b526_5 已 complete（2026-10-01）；2026-10-02 全面复核后 lib 层状态由 in_progress 订正为 complete：七批全 complete、remaining 0、库内 count(*)=37939=覆盖尾",
-   "offset": 30000,
+   "offset": 37939,
    "remaining": 0,
    "state": "complete",
    "total": 37939
@@ -2137,8 +2141,59 @@
    "lines": 759,
    "none_rejected": 1149,
    "note": "读手 12 分件×500 行 digest、叙述手 12 片×109（末片 102）；候选 1301 L4 1083/L3 218；1149 判 NONE（PCMCIA/ACPI/atapci/无线等无宿主）；4 宿主 +759/0；numstat +759/0=152块x5行；幂等二跑 +0；register 1301 条全 supported（CL-RM-414723~416023 连续无洞）；supplement_log +152；p3 读手 3 次重试（model 输出超长）、p7 叙述手 1 次重试"
-  }
+  },
+  "h5_20261011_8121_release": {
+   "batches": "h5mm_b525_1 / h5mm_b525_2 / h5mm_b525_3 / h5mm_b525_4",
+   "blocks": 847,
+   "per_batch": {
+    "h5mm_b525_1": 210,
+    "h5mm_b525_2": 333,
+    "h5mm_b525_3": 158,
+    "h5mm_b525_4": 146
+   },
+   "host": "81.21-alsa.md",
+   "host_lines": "21 -> 4256（+4235 ＝ 847×5）",
+   "host_bytes": "3330 -> 532247",
+   "lines": 4235,
+   "numstat": "+4235/0 纯 append-only",
+   "commit": "7967f2ab2",
+   "claim_range": "CL-RM-428215~434654（847 条，全落 h5mm 号段 428209~434703）",
+   "gated_8121": 0,
+   "note": "主理人 2026-10-11 批准放行 81.21 宿主。裁定依据：宿主标题本身即「Linux 的音频子系统（跨 BSD/UNIX/macOS 扩展）」且正文含 FreeBSD 声音子系统兼容 OSS API 的存疑注记，与 847 条 FreeBSD 音频驱动／ALSA 兼容层叙述主题一致；宿主内 2026-09-12 R1969 整改留痕未动，以 append-only 追加方式落地而非改写既有正文。验盘：append-only 前缀 3330 B 与写前备份逐字节同一、无 BOM／无 CRLF、pk 847 条全唯一、claim_id 847 条全落本号线段、幂等二跑 +0；supplement_log +847（本地 62 -> 909 行）。h5mm_b525_1~4 至此全链闭环；multimedia offset 24000 不变，余 12779 行／3 批。"
+  },
+  "h5_20261011_state_reconcile": {
+   "offset_fixed_libs": 17,
+   "offset_sum_before": 347924,
+   "offset_sum_after": 517524,
+   "tail_batches_booked": [
+    "h5em_b520_3",
+    "h5hw_b518_3",
+    "h5py_b519_3",
+    "h5sc_b516_3",
+    "h5sc_b516_4"
+   ],
+   "ledger_overstatement_fixed": {
+    "freebsd-hardware": {
+     "was": 22679,
+     "now": 18000,
+     "unmined": 4679
+    },
+    "freebsd-python": {
+     "was": 22701,
+     "now": 18000,
+     "unmined": 4701
+    },
+    "freebsd-emulation": {
+     "was": 25791,
+     "now": 18000,
+     "unmined": 7791
+    }
+   },
+   "unmined_total": 17171,
+   "note": "17 库 lib 级 offset 陈旧（合计 347924 仅占台账口径 63.55%）已全部回算至台账 read_judged。其中 scsi／x11／ipfw／cu／acpi／smp／i386／sparc64／ppc／perl／advocacy／alpha／security／tech-pkg 等 14 库为纯记账滞后（claim 库与大纲均已到齐）。hardware／python／emulation 3 库属台账高估：曾被误记 completed 100%，实测源库 messages 分别 22679／22701／25791 行、已覆盖各仅 18000 行，尾批 h5hw_b518_4（4679）／h5py_b519_4（4701）／h5em_b520_4+5（7791）从未执行（claim 库无对应 anchor、state 记 pending/cands=0），合计 17171 行需重新入队。根因：前次施工把台账 hi 直接记到库 messages 总数并据此判「本库收口」，未与本文件预建 batch 列表逐批对账。"
+  },
+  "updated": "2026-10-11"
  },
- "updated": "2026-10-10",
+ "updated": "2026-10-11",
  "version": 2
 }
