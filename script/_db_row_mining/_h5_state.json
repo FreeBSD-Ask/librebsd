@@ -1553,36 +1553,36 @@
      "commit_8121": "7967f2ab2"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 776,
+     "claims": "CL-RM-445927-446702",
+     "commit": "6a77cc564",
      "n": 6000,
-     "note": "",
+     "note": "776 候选（L4 707/L3 69）→ register CL-RM-445927-446702 连续 776 条洞 0、库内四表 join 与 claim_map 776/776 一致；叙述 26 分件合并 776/776 违规 0（p22 三条偏短 54/58/56、p26 一条超长 144，返修归零）；入纲 232 块（81.21 +222／88.12 +8／124.10 +2）append-only +1160 行，三宿主前缀逐字节恒等、行数守恒 5366-1310、幂等二跑 +0，提交 6a77cc564；本批全链闭环",
      "offset": 24000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 26,
+     "state": "committed",
      "tag": "h5mm_b525_5"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 642,
+     "claims": "CL-RM-446789-447430",
+     "commit": "066b3fe00",
      "n": 6000,
-     "note": "",
+     "note": "642 候选（L4 474/L3 168）→ register CL-RM-446789-447430 连续 642 条洞 0、库内四表 join 与 claim_map 642/642 一致；叙述 26 分件合并 642/642 违规 0（p20 五行 189/141/173/141/159、p21 一行 144，共 6 处超 140 字返修归零）；入纲 288 块（81.21 +191／88.12 +27／124.10 +70）append-only +1440 行，三宿主前缀逐字节恒等、行数守恒、幂等二跑 +0，提交 066b3fe00；本批全链闭环",
      "offset": 30000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 26,
+     "state": "committed",
      "tag": "h5mm_b525_6"
     },
     {
-     "cands": 0,
-     "claims": "",
-     "commit": "",
+     "cands": 86,
+     "claims": "CL-RM-446703-446788",
+     "commit": "a3a96337c",
      "n": 779,
-     "note": "",
+     "note": "86 候选（L4 76/L3 10）→ register CL-RM-446703-446788 连续 86 条洞 0、库内四表 join 与 claim_map 86/86 一致；叙述 6 分件合并 86/86 违规 0；入纲 30 块（81.21 +27／88.12 +1／124.10 +2）append-only +150 行，三宿主前缀逐字节恒等、行数守恒、幂等二跑 +0，提交 a3a96337c；本批全链闭环",
      "offset": 36000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 6,
+     "state": "committed",
      "tag": "h5mm_b525_7"
     }
    ],
@@ -1596,10 +1596,10 @@
    "hosts_guess": [],
    "n_batches": 7,
    "name": "freebsd-multimedia",
-   "note": "2026-10-10 b525_1~b525_4 四批闭环（offset 0-24000，cands 2840、register CL-RM-428209-434671 连续无洞）；余 b525_5~7 三批 12779 行未开窗；8121 目标累计 847 条挂账待主理人裁定（81.21-alsa.md 自述「本节仅释读 Linux 一支」）",
-   "offset": 24000,
-   "remaining": 12779,
-   "state": "pending",
+   "note": "2026-10-10 b525_1~b525_4 四批闭环（offset 0-24000，cands 2840、register CL-RM-428209-434671 连续无洞）；余 b525_5~7 三批 12779 行未开窗；8121 目标累计 847 条挂账待主理人裁定（81.21-alsa.md 自述「本节仅释读 Linux 一支」）；2026-10-12 b525_5/b525_6/b525_7 三批全链闭环（offset 24000-36000、n 6000/6000/779、cands 776/86/642、register CL-RM-445927-447430 连续 1504 条洞 0、入纲 550 块 append-only +2750 行、三宿主前缀逐字节恒等、幂等二跑 +0、提交 6a77cc564/a3a96337c/066b3fe00）；b525_1~7 七批全闭环，offset 36000 已含全库 36779 封（实测 messages 表 36779），remaining 0，本库收口 complete",
+   "offset": 36000,
+   "remaining": 0,
+   "state": "complete",
    "total": 36779
   },
   {
@@ -2194,6 +2194,6 @@
   },
   "updated": "2026-10-11"
  },
- "updated": "2026-10-11",
+ "updated": "2026-10-12",
  "version": 2
 }
