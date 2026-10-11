@@ -21,6 +21,8 @@
 
 - **w165 字幕替代波收口（2026-10-11 01:0x～02:1x，主理人令「优先下载字幕＋使用 cookies 加速」）**：①895 清单（`_tmp/yt_new_list.txt`，池内未转录 871＋failbak 24 口径）终态 **871/895 落盘**（651 为前波已存＋本轮 2 分片并行 OK 219＋tv 客户端重试收回 1），**24 期确认真无英字挂账**（`yt_subs/yt_subs_fail_final.txt`；cookies＋PO Token＋node 运行时＋tv/bare 双客户端全试尽，均为 no-sub 非限流），无字幕期等转录恢复后走 ASR 补转。②cookies 管线四修（主理人 20 条 cookies 转 Netscape 落 `yt_subs/cookies.txt`，script/ 整树不入 git 不外泄；修 `--cookies` 插入位 bug——曾被 `python -m` 当模块名致整轮零请求假失败；装 **yt-dlp-ejs 0.8.0**＋脚本固化 `--js-runtimes node`——yt-dlp 2026.08 默认仅启用 deno，本机无 deno 致 n-challenge 失败格式清单为空，即「Requested format is not available」刷屏根因；**bgutil PO Token 常驻服务 v2.0.1 起 127.0.0.1:4416**）。③效果：429 计数清零（此前匿名跑频发限流），实测 ~8 期/分。④转录线并行无恙：观察器值守中服务端仍未恢复（>56h），恢复即自动 30 路。⑤盘存 `03-原始史料库/14-播客史料/youtube_subs/` 4,107 件。
 
+- **w166 字幕排除令＋全线静默（2026-10-11 02:3x，主理人令「已有字幕的视频不要再转录，立刻结束」）**：①**排除规则固化**进 `tb2/15_parallel_transcribe.py`（`SUB_VIDS`＝`youtube_subs/` 内任一 `.en*` 件在盘的 vid 集合，构建 pending 时直接跳过）——实测**排除 882 期**，转录队列从 946 收敛至 **64 期**（＝24 真无英字＋failbak 无字期＋清单外无字期），服务端恢复后 30/55 路重启只会派这 64 期。②**全线静默**：观察器 `_server_watch_autostart.py` 与 bgutil PO Token 服务（4416）即刻 TaskStop，进程与端口复验零残留；转录保持 worker=0 等服务端恢复（>56h），恢复后按 §五 重启。③字幕波终态 871/895、24 期挂账见 w165；本批记档随 `4b6aeea6c` 后补提交。
+
 ## 二、模型与 API（同任务书3）
 
 - WS 流式端点 `wss://api.senseaudio.cn/ws/v1/realtime/transcriptions`，模型 `senseaudio-asr-stream-1.5-260910`，16k mono s16le、server_vad、smart_edit off（verbatim）、15 分钟分块（BLOCK_SECONDS=900）、~8x 实时；**术语热词已撤销**；PCM 流式读取（`02_transcribe.py` seek/read 增量，RSS 44–55MB/worker）。
