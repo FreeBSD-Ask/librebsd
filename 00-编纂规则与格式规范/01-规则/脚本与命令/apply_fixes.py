@@ -127,27 +127,64 @@ def main(hosts):
                     lines[ln - 1] = ns
                 n_apply += 1
                 continue
-            # 独立行锚型：锚点向下 5 行内找摘要行——先按纪律串「引用时按」，
-            # 再按 DSLXC 族收尾「以上为邮件列表当事人」，最后按 fetch 摘要行原文精确匹配兜底
-            si = -1
-            for j in range(ln, min(ln + 5, len(lines))):
-                if TAIL in lines[j]:
-                    si = j
+            # 独立行锚型：锚点向下 5 行内找摘要行。窗口一律止于下一个 ROW_MINE 锚点——
+            # 否则窗口内命中的纪律串／摘要行可能属于下一块（2026-10-04 F3 波 1 实测 157.6
+            # 有 11 条命中下一块锚点行、1 条命中下一块摘要行，旧代码整宿主照写）。
+            nxt = len(lines)
+            for j in range(ln, len(lines)):
+                if lines[j].lstrip().startswith("<!--"):
+                    nxt = j
                     break
-            if si < 0:
-                for j in range(ln, min(ln + 5, len(lines))):
-                    if ALT_TAIL in lines[j]:
+            hi = min(ln + 5, nxt)
+            summ = (fb.get("summ_line") or "").strip()
+            si = -1
+            # 优先逐字命中 fetch 摘要行。独立行锚型下摘要正文与收尾常分处两行，先搜纪律串
+            # 会落到收尾行、旧摘要正文原地残留成双重摘要（F3 波 1 实测 3,189 条）。
+            if summ:
+                for j in range(ln, hi):
+                    if lines[j].strip() == summ:
                         si = j
                         break
-            if si < 0 and (fb.get("summ_line") or "").strip():
-                for j in range(ln, min(ln + 5, len(lines))):
-                    if lines[j].strip() and lines[j] == fb["summ_line"]:
+            if si < 0:
+                for j in range(ln, hi):
+                    if TAIL in lines[j]:
+                        si = j
+                        break
+            if si < 0:
+                for j in range(ln, hi):
+                    if ALT_TAIL in lines[j]:
                         si = j
                         break
             if si < 0:
                 print(f"  ! 摘要行（纪律串）未找到: {key} line {ln}", file=sys.stderr)
                 n_err += 1
                 continue
+            # 落点校验：落点须是 fetch 摘要行逐字命中，或是纪律尾行（收尾已含在尾串里）。
+            # 二者皆非＝落到了别块的正文，宁可报错也不写入。
+            if summ and lines[si].strip() != summ \
+                    and TAIL not in lines[si] and ALT_TAIL not in lines[si]:
+                print(f"  ! 摘要行落点与 fetch summ_line 不一致: {key} line {ln}", file=sys.stderr)
+                n_err += 1
+                continue
+            # 双重摘要防护：块内若已有另一份非结构性摘要行，写入会与其并存成两份摘要。
+            # 结构性行（空行／锚点／抬头／纪律尾行／摘要行本身）一律豁免。
+            if summ and lines[si].strip() == summ:
+                dup = -1
+                for j in range(ln, nxt):
+                    if j == si:
+                        continue
+                    s = lines[j].strip()
+                    if not s or s.startswith("<!--") or s.startswith("**"):
+                        continue
+                    if s == summ or TAIL in s or ALT_TAIL in s:
+                        continue
+                    dup = j
+                    break
+                if dup >= 0:
+                    print(f"  ! 块内已有另一份摘要行，拒绝写入避免双重摘要: {key} line {dup+1}",
+                          file=sys.stderr)
+                    n_err += 1
+                    continue
             # 幂等判据：先按 tail 规则构造 new_line，再与现行整行比对相等才跳过
             # （勿用「ns 是现行子串」判幂等——重复日期前缀族会让真改动被假跳，2026-09-29 F1/F3-02 实证 13+41 行）
             tail = ""
