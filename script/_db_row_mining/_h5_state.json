@@ -436,6 +436,17 @@
    "base_tag": "h5tp_b528",
    "batches": [
     {
+     "cands": "281",
+     "claims": "CL-RM-262802~263082",
+     "commit": "d19c4206d",
+     "n": 1500,
+     "note": "2026-10-13 补叙入纲闭环：本批 register 早已落 claim 库（281 条 CL-RM-262802~263082 连续、洞 0，L4 114／L3 167，全 supported、0 rejected），但提交 393addaaddc 误称「误做 281 条已 purge 回滚」而 purge 从未落到 claim 库，大纲侧 0 块；该提交的「claim 2922」口径恰是排除本批后的数（3203-281=2922）。主理人 2026-10-13 裁定「保留并补叙述入纲」。叙述 16 分件两波子代理产出，合并 281 行、_chk_mount_narr 门禁违规 0（1792:73／1892:175／NONE:33）；入纲 248 块＝281−33 NONE（179.2+73／189.2+175），tech-pkg 大纲块 2922→3170，append-only +1240/0、幂等二跑 +0，提交 d19c4206d。与大纲既有 2922 块逐 pk 求交为 0：本批 pk 窗 270704~272455 内既有 151 块（全在 179.2、claim 系列 CL-RM-016xxx）与本批 281 条交错不重叠⇒非重复入纲，是同一库内窗从未矿过的另一批消息。claim 库零改动。",
+     "offset": 0,
+     "parts": 16,
+     "state": "committed",
+     "tag": "h5tp_b528_0"
+    },
+    {
      "cands": "1141",
      "claims": "1141",
      "commit": "1c3015051",
@@ -477,9 +488,9 @@
    "hosts_guess": [
     "1792"
    ],
-   "n_batches": 3,
+   "n_batches": 4,
    "name": "tech-pkg",
-   "note": "库首 1500 行由 2026-09-11 提交 d1cafd8f7 完成（152 块入 179.2）但从未立 batch 记录，故旧 offset 停在 b528_1 的 1500；2026-10-11 对账按台账实测 13931/13931 订正 offset。另：anchor h5tp_b528_0 名下 claim 库仍存 281 条（CL-RM-262802~263082），与提交 393addaaddc 所称「误做 281 条已 purge 回滚」矛盾，待主理人裁定。",
+   "note": "库首 1500 行由 2026-09-11 提交 d1cafd8f7 完成（152 块入 179.2）但从未立 batch 记录，故旧 offset 停在 b528_1 的 1500；2026-10-11 对账按台账实测 13931/13931 订正 offset。另：anchor h5tp_b528_0 名下 claim 库存 281 条（CL-RM-262802~263082），与提交 393addaaddc 所称「误做 281 条已 purge 回滚」矛盾——purge 从未落地；2026-10-13 主理人裁定保留并补叙述入纲，已立 batch 记录 h5tp_b528_0 并于 d19c4206d 入纲 248 块，claim 库零改动，该矛盾闭合。",
    "offset": 13931,
    "remaining": 0,
    "state": "committed",
@@ -2192,7 +2203,7 @@
    "unmined_total": 17171,
    "note": "17 库 lib 级 offset 陈旧（合计 347924 仅占台账口径 63.55%）已全部回算至台账 read_judged。其中 scsi／x11／ipfw／cu／acpi／smp／i386／sparc64／ppc／perl／advocacy／alpha／security／tech-pkg 等 14 库为纯记账滞后（claim 库与大纲均已到齐）。hardware／python／emulation 3 库属台账高估：曾被误记 completed 100%，实测源库 messages 分别 22679／22701／25791 行、已覆盖各仅 18000 行，尾批 h5hw_b518_4（4679）／h5py_b519_4（4701）／h5em_b520_4+5（7791）从未执行（claim 库无对应 anchor、state 记 pending/cands=0），合计 17171 行需重新入队。根因：前次施工把台账 hi 直接记到库 messages 总数并据此判「本库收口」，未与本文件预建 batch 列表逐批对账。"
   },
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "h5_20261012_wave4_partial": {
    "batches": "h5hw_b518_4 / h5py_b519_4 / h5em_b520_4 / h5em_b520_5",
    "cands": 2466,
@@ -2246,7 +2257,8 @@
    "batches": "109/109 全 committed 或 complete",
    "libs": "27/27 全收口",
    "note": "波4 四批闭环后 H5 全量复算：批 109/109、库 27/27 全收口，offset 合计 547474＝total 547474（100.00%）。本次两处订正均为字段陈旧——multimedia offset 少记末批 779 行、advocacy state 未切——无任何读进缺口，故 H5 无下一站读进工作。唯一在途项仍是 tech-pkg 281 条待主理人裁定（补叙述 vs 真 purge），该库 state 记 committed，不属本轮订正范围。"
-  }
+  },
+  "h5_20261013_tp528_supplement": "2026-10-13：tech-pkg 补叙入纲。§11.3③ 挂账（h5tp_b528_0 281 条与 393addaaddc 的 purge 说法矛盾）经实测裁定为真缺口非重复：281 条 claim 全 supported、洞 0、与大纲既有 2922 块逐 pk 求交为 0，本批 pk 窗 270704~272455 内既有 151 块属 CL-RM-016xxx 系列且与本批交错不重叠。主理人裁定「保留并补叙述入纲」⇒叙述 16 分件产出、门禁违规 0、入纲 248 块（179.2+73／189.2+175）、append-only +1240/0、幂等二跑 +0，提交 d19c4206d。tech-pkg n_batches 3→4、batch 记录补齐、claim 库与台账零改动（台账 tech-pkg 13931/13931 早已 completed 且 records tags 本就含 h5tp_b528_0）。教训：库级批次完整性必须按 anchor 实查 claim 库，不能凭提交信息里的 purge 声明；「已提交声明＝已执行」在本库已二次证伪（393addaaddc 之后本次）。"
  },
  "updated": "2026-10-12",
  "version": 2
