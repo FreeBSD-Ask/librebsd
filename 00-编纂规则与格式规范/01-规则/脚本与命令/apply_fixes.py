@@ -202,9 +202,13 @@ def main(hosts):
                 continue
             # 双重摘要防护：块内若已有另一份非结构性摘要行，写入会与其并存成两份摘要。
             # 结构性行（来源标记／claim-id 溯源串／机读台账／编排注／锚点／抬头）一律豁免。
+            # 扫描上界止于本块自己的纪律尾行（si+1）而非下一个锚点：块体以纪律尾收口，
+            # 尾行之后的内容属于别块或叙述章。锚点缺失的宿主上，窗口会一路延伸到章节末，
+            # 把叙述章正文当成「另一份摘要」拒写——282.2 实测 1 处此类误拒就因 all-or-nothing
+            # 挡掉整宿主 436 条合法写入。收窄只缩小扫描范围，不放松块体内的任何判据。
             if summ and lines[si].strip() == summ:
                 dup = -1
-                for j in range(ln, nxt):
+                for j in range(ln, si + 1):
                     if j == si:
                         continue
                     s = lines[j].strip()
