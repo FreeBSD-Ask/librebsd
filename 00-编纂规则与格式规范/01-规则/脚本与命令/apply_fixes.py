@@ -106,6 +106,14 @@ def main(hosts):
                 n_err += 1
                 continue
             ln = fb["line"]  # 锚点行（1-based）
+            # 越界先拦：fetch 档案里存在指向宿主行数之外的 line（宿主被收缩或跨档案
+            # 键覆盖后未刷新），直接 lines[ln-1] 会 IndexError 使整轮 apply 中断，
+            # 前面已写盘的宿主全部失去事后核验。改为按锚点行不匹配处理并计入 n_err。
+            if not isinstance(ln, int) or not (1 <= ln <= len(lines)):
+                print(f"  ! 锚点行越界: {key} line {ln}（宿主仅 {len(lines)} 行）",
+                      file=sys.stderr)
+                n_err += 1
+                continue
             if lines[ln - 1] != fb["anchor_line"]:
                 print(f"  ! 锚点行不匹配: {key} line {ln}", file=sys.stderr)
                 n_err += 1
