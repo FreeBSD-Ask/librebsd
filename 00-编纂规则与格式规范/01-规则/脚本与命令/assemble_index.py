@@ -60,6 +60,11 @@ DOC_CSS = BASE / "assets" / "doc.css"
 MODERN_CSS = BASE / "assets" / "modern.css"
 THEME_JS = BASE / "assets" / "theme-preset.js"
 DOC_JS = BASE / "assets" / "doc.js"
+# 行为层源件清单（2026-10-12 143 批 wave5）：src/js/*.js 按 manifest 顺序拼接，
+# assets/doc.js 自此为派生件（装配器唯一写者；拼接异于盘面 → 常规装配写回、--check FAIL）。
+SRC_JS_DIR = BASE / "src" / "js"
+SRC_JS_MANIFEST = SRC_JS_DIR / "manifest.txt"
+CHECK_MODE = False
 OUTLINE = BASE / "data" / "outline.txt"
 CATALOG = BASE / "data" / "catalog.json"
 UI_STRINGS = BASE / "data" / "ui-strings.json"
@@ -105,6 +110,28 @@ def cn2int(s):
 
 def read(p):
     return p.read_text(encoding="utf-8")
+
+
+def behavior_source():
+    """行为层源＝src/js/manifest.txt 按序拼接（2026-10-12 143 批 wave5）。
+    assets/doc.js 为派生件：拼接异于盘面 → 常规装配写回（装配器＝唯一写者）、
+    --check 报漂移 FAIL。清单缺位回退直读 doc.js（拆分前兼容态，旧树／备份件）。"""
+    if not SRC_JS_MANIFEST.exists():
+        return read(DOC_JS)
+    parts = []
+    for ln in SRC_JS_MANIFEST.read_text(encoding="utf-8").splitlines():
+        ln = ln.strip()
+        if ln and not ln.startswith("#"):
+            parts.append((SRC_JS_DIR / ln).read_bytes())
+    blob = b"".join(parts)
+    disk = DOC_JS.read_bytes()
+    if disk != blob:
+        if CHECK_MODE:
+            sys.exit("漂移：src/js 拼接（%d B）≠ assets/doc.js（%d B）——常规装配将写回"
+                     % (len(blob), len(disk)))
+        DOC_JS.write_bytes(blob)
+        print("assemble：src/js 拼接刷新 assets/doc.js（%d B）" % len(blob))
+    return blob.decode("utf-8")
 
 
 def write(p, s):
@@ -394,7 +421,7 @@ def assemble():
         "OUTLINE": body,
         "BLOB": blob_body,
         "SRI": sri,
-        "JS_BEHAVIOR": read(DOC_JS).strip("\n"),
+        "JS_BEHAVIOR": behavior_source().strip("\n"),
         "LOGO": data_uri(BRAND_LOGO, "image/svg+xml"),
         "FAVICON": data_uri(BRAND_FAVICON, "image/x-icon"),
         "TOUCH_ICON": data_uri(BRAND_TOUCH, "image/png"),
@@ -440,6 +467,8 @@ def main():
     ap = argparse.ArgumentParser(description="重构2026 目录页装配器（四层解耦）")
     ap.add_argument("--check", action="store_true", help="漂移检测（重装到内存与磁盘比对）")
     args = ap.parse_args()
+    global CHECK_MODE
+    CHECK_MODE = args.check
     if args.check:
         return cmd_check()
     built = assemble()
