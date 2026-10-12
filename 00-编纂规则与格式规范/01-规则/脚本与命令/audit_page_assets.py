@@ -26,7 +26,8 @@
      （2026-10-11 实测事故，见 E4 注；本件以 E4 交叉核验补位）。
 
 核验项（0 异常 exit 0；有异常 exit 1；环境缺失 exit 2）：
-  A  装配源清单：五层解耦的 9 个源文件存在且非空
+  A  装配源清单：五层解耦源文件存在且非空（行为层 src/js/manifest.txt 清单驱动，
+     2026-10-12 143 批 wave5；清单缺位回退 9 文件兼容态）
   B  内嵌字体子集：
      B1 `assets/doc.css` 中 `@font-face` 恰 1 片，`src` 为 data:font/woff2 URI（无外链）
      B2 内嵌 woff2 可解析、cmap 非空
@@ -294,10 +295,20 @@ def main():
     print("=" * 68)
 
     # ---- A 装配源清单 ----
-    miss = [("%s %s" % (l, p)) for l, p in SRC_FILES
+    src_files = list(SRC_FILES)
+    mf = ROOT + "/src/js/manifest.txt"
+    if os.path.isfile(mf):
+        # 143 批 wave5：行为层源件清单化——manifest＋清单件入列（doc.js 仍列，派生件须在盘）
+        names = [ln.strip() for ln in io.open(mf, encoding="utf-8").read().splitlines()
+                 if ln.strip() and not ln.strip().startswith("#")]
+        src_files.append(("行为层", "src/js/manifest.txt"))
+        for nm in names:
+            src_files.append(("行为层", "src/js/" + nm))
+    miss = [("%s %s" % (l, p)) for l, p in src_files
             if not (os.path.isfile(ROOT + "/" + p) and os.path.getsize(ROOT + "/" + p) > 0)]
-    rec("A 装配源清单（9 个源文件存在且非空）", not miss,
-        "缺失/空：" + "、".join(miss) if miss else "9/9 齐备")
+    total = len(src_files)
+    rec("A 装配源清单（%d 个源文件存在且非空）" % total, not miss,
+        ("缺失/空：" + "、".join(miss)) if miss else "%d/%d 齐备" % (total, total))
 
     # ---- 读取产物 ----
     h = io.open(INDEX, encoding="utf-8").read()

@@ -43,8 +43,16 @@ BAD = [
 
 def main():
     fix = "--fix" in sys.argv
+    files = list(FILES)
+    # 143 批 wave5（2026-10-12）：行为层源件清单化——src/js 清单项入守卫面
+    mf = ROOT + "src/js/manifest.txt"
+    if os.path.exists(mf):
+        for ln in io.open(mf, encoding="utf-8").read().splitlines():
+            ln = ln.strip()
+            if ln and not ln.startswith("#"):
+                files.append("src/js/" + ln)
     bad_total = 0
-    for rel in FILES:
+    for rel in files:
         p = ROOT + rel
         if not os.path.exists(p):
             print("  %-28s 缺失" % rel)
