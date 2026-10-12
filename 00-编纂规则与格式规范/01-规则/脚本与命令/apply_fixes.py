@@ -13,6 +13,7 @@
 import glob
 import json
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -22,6 +23,31 @@ OVER22 = os.path.join(WORK, "_over22_fix.json")
 TAIL = "引用时按"
 # DSLXC 族（13-deepseek 战线收编块）摘要行不用「引用时按」，用「以上为邮件列表当事人…」收尾
 ALT_TAIL = "以上为邮件列表当事人"
+
+# 来源标记独占行（【linux邮件提取】等）：DSLXC 块体模板的固定尾元素
+TAG_ONLY = re.compile(r"^[【\[（(][^】\]）)]{1,24}[】\]）)]$")
+# H 线紧凑内联族（22.4／31.3）块尾分隔符：`---- PK <n>` 指向紧随的下一个 ROW_MINE 锚点
+SEP_PK = re.compile(r"^-{3,}\s*PK\s*\d+\s*$")
+# markdown 标题（任意级）：叙述章的小节标题落在锚点窗口内，但不是素材摘要
+MD_HEAD = re.compile(r"^#{1,6} ")
+# 其他战役线的结构性行前缀：机读台账块 / 编排注
+STRUCT_HEADS = ("####", "{", "〔")
+
+
+def is_structural(s):
+    """块内非摘要正文的结构性行。误把这些当「重复摘要」会把 DSLXC 族的合法写入整批拒掉
+    ——实测 3,167 条 RISK 全部是来源标记独占行，另含 H 线 claim-id 溯源串
+    （数据库分析发现｜L4｜…CL-RM-…｜批次 …）、机读台账块、编排注。"""
+    if not s:
+        return True
+    if s.startswith("<!--") or s.startswith("**"):
+        return True
+    if TAG_ONLY.match(s) or SEP_PK.match(s) or MD_HEAD.match(s) \
+            or s.startswith(STRUCT_HEADS):
+        return True
+    if "CL-RM-" in s or "批次 " in s:
+        return True
+    return len(s) < 12
 
 
 def load_judgements():
@@ -175,14 +201,14 @@ def main(hosts):
                 n_err += 1
                 continue
             # 双重摘要防护：块内若已有另一份非结构性摘要行，写入会与其并存成两份摘要。
-            # 结构性行（空行／锚点／抬头／纪律尾行／摘要行本身）一律豁免。
+            # 结构性行（来源标记／claim-id 溯源串／机读台账／编排注／锚点／抬头）一律豁免。
             if summ and lines[si].strip() == summ:
                 dup = -1
                 for j in range(ln, nxt):
                     if j == si:
                         continue
                     s = lines[j].strip()
-                    if not s or s.startswith("<!--") or s.startswith("**"):
+                    if is_structural(s):
                         continue
                     if s == summ or TAIL in s or ALT_TAIL in s:
                         continue
