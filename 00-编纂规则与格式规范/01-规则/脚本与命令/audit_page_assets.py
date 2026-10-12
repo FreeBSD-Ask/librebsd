@@ -38,6 +38,7 @@
      C1 `assets/logo.svg` 为真矢量（含 `<svg`、无 `<image>`、无 base64 光栅）
      C2 `assets/favicon.ico` 为合法 ICO 且含 16／32／48 三帧
      C3 页面内嵌品牌件与磁盘派生件逐字节一致
+     C4 og:image 与 apple-touch-icon 逐字节一致且尺寸元数据完整（2026-10-12 141 批）
   D  自包含性（零外部依赖）：
      D1 index.html 无 http(s) 外链资源引用、无 @import
      D2 内嵌数据 blob 的 data-integrity（SRI）与实际内容一致
@@ -418,6 +419,21 @@ def main():
         c3_bad.append("apple-touch-icon 与 assets/apple-touch-icon.png 不一致")
     rec("C3 页面内嵌品牌件与磁盘派生件逐字节一致", not c3_bad,
         "；".join(c3_bad) if c3_bad else "logo ＋ favicon ＋ apple-touch-icon 均一致")
+
+    m_ogi = re.search(r'<meta property="og:image" content="data:image/png;base64,([A-Za-z0-9+/=]+)">', h)
+    m_ogw = re.search(r'<meta property="og:image:width" content="(\d+)">', h)
+    m_ogh = re.search(r'<meta property="og:image:height" content="(\d+)">', h)
+    c4_bad = []
+    if not m_ogi:
+        c4_bad.append("页面无 og:image data URI")
+    elif base64.b64decode(m_ogi.group(1)) != touch:
+        c4_bad.append("og:image 与 assets/apple-touch-icon.png 不一致")
+    if not m_ogw or m_ogw.group(1) != "180":
+        c4_bad.append("og:image:width 非 180")
+    if not m_ogh or m_ogh.group(1) != "180":
+        c4_bad.append("og:image:height 非 180")
+    rec("C4 og:image 与 apple-touch-icon 逐字节一致且尺寸元数据完整（2026-10-12 141 批）", not c4_bad,
+        "；".join(c4_bad) if c4_bad else "og:image ＝ apple-touch-icon（%d B），180x180" % len(touch))
 
     # ---- D 自包含性 ----
     ext = []
