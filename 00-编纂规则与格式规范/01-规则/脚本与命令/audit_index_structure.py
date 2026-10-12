@@ -204,6 +204,8 @@ def main():
     # A2 空格形制（流程规则 L1532，2026-09-09 主理人裁定；2026-09-18 补入门禁）：
     #   禁用全角空格 U+3000；卷题（h2）卷号与题名之间用 2 个半角空格；
     #   章题（h3.chapter）与节序号（span.sec-num）后有且只有 1 个半角空格。
+    #   2026-10-12（136 批）：题名首词可为语言标记（⟦lang:…⟧ → <span lang="…">），
+    #   n_ch_ok／n_dbl 放行「章 」后接语言标记 span 的形态（仅此一种 span；其他标签仍 FAIL）。
     sp_bad = []
     n_u3000 = h.count("\u3000")
     if n_u3000:
@@ -216,13 +218,15 @@ def main():
         sp_bad.append(
             f"卷题形制异常 {len(bad_vt)} 处（应「第N卷」＋2 个半角空格＋题名）：{bad_vt[:3]}"
         )
-    n_ch_ok = len(re.findall(r'<h3 class="chapter" id="vol-\d+-ch-\d+">第 \d+ 章 [^<]', h))
+    _LSP = r'<span lang="[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*">'
+    n_ch_ok = len(re.findall(
+        r'<h3 class="chapter" id="vol-\d+-ch-\d+">第 \d+ 章 (?:[^<]|%s)' % _LSP, h))
     n_ch_all = len(re.findall(r'<h3 class="chapter" id="vol-\d+-ch-\d+">', h))
     if n_ch_ok != n_ch_all:
         sp_bad.append(
             f"章题形制异常 {n_ch_all - n_ch_ok} 处（应「第 N 章」＋1 个半角空格＋题名）"
         )
-    n_dbl = len(re.findall(r"</span>  ", h)) + len(re.findall(r"章  [^<]", h))
+    n_dbl = len(re.findall(r"</span>  ", h)) + len(re.findall(r"章  (?:[^<]|%s)" % _LSP, h))
     if n_dbl:
         sp_bad.append(f"序号或章题后连空两格 {n_dbl} 处（应有且只有 1 个半角空格）")
     print(
@@ -764,9 +768,10 @@ def main():
     #   `**`（Markdown 加粗——91 号文 §8.3 P0-1 同类缺陷两度复发：13 处清零后，
     #   2026-10-06 复核再抓 5 行 6 处，均位于溯源注内）；`@@`（溯源注定界符——装配器
     #   只解析节行，章题行携带 `@@〔…〕` 会原样透传，2026-10-06 复核抓出卷 49 ch9
-    #   章题一处、产物 3 面〔静态目录／浮动目录／正文 h3〕）。两类缺陷在 A 编码／
-    #   G 标签平衡／P 括注配对等既有判据下均静默通过。
-    #   判据非空由 `tests/tri_structure_negtest.py` 的「Q 可见标记泄漏」两缺陷副本自证。
+    #   章题一处、产物 3 面〔静态目录／浮动目录／正文 h3〕）；`⟦`／`⟧`（语言标记定界符，
+    #   2026-10-12 136 批立：⟦lang:文本⟧ 应在装配期被 esc()／plain() 消费，产物零出现，
+    #   残留即泄漏）。三类缺陷在 A 编码／G 标签平衡／P 括注配对等既有判据下均静默通过。
+    #   判据非空由 `tests/tri_structure_negtest.py` 的「Q 可见标记泄漏」三缺陷副本自证。
     q_bad = []
     # 掩码法：整块删除 style/script 与 HTML 注释、以等量换行占位保持行号——
     # （不可用逐行状态机：行为脚本内 JS 模板串含「</style>」字面会把状态机提前复位，
@@ -775,8 +780,9 @@ def main():
                   lambda _m: "\n" * _m.group(0).count("\n"), h, flags=re.S | re.I)
     _vis = re.sub(r"<!--.*?-->", lambda _m: "\n" * _m.group(0).count("\n"), _vis, flags=re.S)
     for _i, _l in enumerate(_vis.split("\n"), 1):
-        if "**" in _l or "@@" in _l:
-            _tag = "加粗 **" if "**" in _l else "定界符 @@"
+        if "**" in _l or "@@" in _l or "⟦" in _l or "⟧" in _l:
+            _tag = ("加粗 **" if "**" in _l
+                    else "定界符 @@" if "@@" in _l else "语言标记 ⟦⟧")
             q_bad.append("Q 可见标记泄漏（%s）第 %d 行 —— %s" % (_tag, _i, _l.strip()[:80]))
     #   Q2「谱系」禁用（2026-10-08 立，125 号文 阶段 F；主理人硬令「标题＋注文一并清理」）：
     #   全库标题本体与注文均禁用「谱系」二字；页面上残留即 FAIL。判据非空由
@@ -786,7 +792,7 @@ def main():
         if "谱系" in _l:
             q2_bad.append("Q2 谱系残留第 %d 行 —— %s" % (_i, _l.strip()[:80]))
     print("Q 正文可见标记泄漏:",
-          "PASS（**＝0／@@＝0）" if not q_bad else "FAIL %d 行" % len(q_bad))
+          "PASS（**＝0／@@＝0／⟦⟧＝0）" if not q_bad else "FAIL %d 行" % len(q_bad))
     for _x in q_bad[:10]:
         print("   ❌", _x)
     print("Q2 『谱系』禁用:",
