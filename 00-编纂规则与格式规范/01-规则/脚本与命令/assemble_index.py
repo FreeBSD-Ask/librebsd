@@ -67,9 +67,12 @@ SCHEMA = BASE / "data" / "schema.jsonld"
 # 品牌资源：**页面资产层**承载页面用派生件（2026-09-18 第十六批）
 #   - 源：仓库根 logo.svg（1336px 光栅内嵌）／favicon.ico（单帧 256²）
 #   - 页面用：BASE/assets/logo.svg（真矢量，21,887 B）／assets/favicon.ico（16²／32²／48²，6,424 B）
+#     ／assets/apple-touch-icon.png（180²，8,737 B；2026-10-12 138 批 D2：自 logo.svg 经
+#     Playwright canvas 生成，生成器 script/_138_touchicon.mjs，底 #F9F5F0＋12px 边距居中）
 #   - 生成器：script/_r66/vectorize_logo.py（源文件不动，与字体子集同模式：源全量、页面用派生件）
 BRAND_LOGO = BASE / "assets" / "logo.svg"
 BRAND_FAVICON = BASE / "assets" / "favicon.ico"
+BRAND_TOUCH = BASE / "assets" / "apple-touch-icon.png"
 
 # 复用 embed.py 的数据层序列化／SRI 函数（同目录）
 _spec = importlib.util.spec_from_file_location("_embed", pathlib.Path(__file__).with_name("embed.py"))
@@ -394,6 +397,7 @@ def assemble():
         "JS_BEHAVIOR": read(DOC_JS).strip("\n"),
         "LOGO": data_uri(BRAND_LOGO, "image/svg+xml"),
         "FAVICON": data_uri(BRAND_FAVICON, "image/x-icon"),
+        "TOUCH_ICON": data_uri(BRAND_TOUCH, "image/png"),
         # 非正文文案层 → 行为层运行时映射（同一真相源；"</" 须转义为 "<\/"）
         "UI_JSON": json.dumps(_ui_runtime, ensure_ascii=False, separators=(",", ":"))
                    .replace("</", "<\\/"),

@@ -93,6 +93,7 @@ DOC_JS = ASSETS + "/doc.js"
 THEME_JS = ASSETS + "/theme-preset.js"
 LOGO_SVG = ASSETS + "/logo.svg"
 FAVICON = ASSETS + "/favicon.ico"
+TOUCH_ICON = ASSETS + "/apple-touch-icon.png"
 CATALOG_JSON = DATA + "/catalog.json"
 SRC_CMAP = DATA + "/font-source-cmap.txt"
 FONT_SOURCE_TGZ = r"D:/librebsd/script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz"
@@ -102,7 +103,7 @@ FONT_FAMILY = "LXGW WenKai Screen"
 def set_root(root):
     """切换被审计树根（`--root`；用于备份件／快照交叉验证与负向测试）。"""
     global ROOT, ASSETS, DATA, TESTS, INDEX, DOC_CSS, DOC_JS, THEME_JS
-    global LOGO_SVG, FAVICON, CATALOG_JSON, SRC_CMAP
+    global LOGO_SVG, FAVICON, TOUCH_ICON, CATALOG_JSON, SRC_CMAP
     ROOT = root.rstrip("/\\")
     ASSETS = ROOT + "/assets"
     DATA = ROOT + "/data"
@@ -113,6 +114,7 @@ def set_root(root):
     THEME_JS = ASSETS + "/theme-preset.js"
     LOGO_SVG = ASSETS + "/logo.svg"
     FAVICON = ASSETS + "/favicon.ico"
+    TOUCH_ICON = ASSETS + "/apple-touch-icon.png"
     CATALOG_JSON = DATA + "/catalog.json"
     SRC_CMAP = DATA + "/font-source-cmap.txt"
 
@@ -386,8 +388,21 @@ def main():
     rec("C2 favicon.ico 含 16／32／48 三帧", not c2_bad,
         "；".join(c2_bad) if c2_bad else "帧 %s，%d 字节" % (sorted(frames), len(ico)))
 
+    touch = open(TOUCH_ICON, "rb").read()
+    c2b_bad = []
+    if touch[:8] != b"\x89PNG\r\n\x1a\n":
+        c2b_bad.append("非 PNG 签名")
+    else:
+        # PNG IHDR：宽/高为大端 32 位（偏移 16/20）
+        tw, th = struct.unpack(">II", touch[16:24])
+        if (tw, th) != (180, 180):
+            c2b_bad.append("尺寸 %dx%d ≠ 180x180" % (tw, th))
+    rec("C2b apple-touch-icon.png 为 180x180 PNG（2026-10-12 138 批 D2）", not c2b_bad,
+        "；".join(c2b_bad) if c2b_bad else "%d 字节" % len(touch))
+
     m_logo = re.search(r'src="data:image/svg\+xml;base64,([A-Za-z0-9+/=]+)"', h)
     m_ico = re.search(r'href="data:image/x-icon;base64,([A-Za-z0-9+/=]+)"', h)
+    m_touch = re.search(r'rel="apple-touch-icon"[^>]*href="data:image/png;base64,([A-Za-z0-9+/=]+)"', h)
     c3_bad = []
     if not m_logo:
         c3_bad.append("页面无内嵌 logo")
@@ -397,8 +412,12 @@ def main():
         c3_bad.append("页面无内嵌 favicon")
     elif base64.b64decode(m_ico.group(1)) != ico:
         c3_bad.append("favicon 与 assets/favicon.ico 不一致")
+    if not m_touch:
+        c3_bad.append("页面无内嵌 apple-touch-icon")
+    elif base64.b64decode(m_touch.group(1)) != touch:
+        c3_bad.append("apple-touch-icon 与 assets/apple-touch-icon.png 不一致")
     rec("C3 页面内嵌品牌件与磁盘派生件逐字节一致", not c3_bad,
-        "；".join(c3_bad) if c3_bad else "logo ＋ favicon 均一致")
+        "；".join(c3_bad) if c3_bad else "logo ＋ favicon ＋ apple-touch-icon 均一致")
 
     # ---- D 自包含性 ----
     ext = []
