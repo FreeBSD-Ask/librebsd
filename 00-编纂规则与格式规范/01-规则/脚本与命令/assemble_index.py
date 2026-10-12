@@ -25,6 +25,7 @@
 - 1.1 从数学逻辑到语言哲学：现代形式化思想的形成      → 节（<li>）：节号 ＋ 1 个半角空格 ＋ 题文
 - 2.1 @@〔第一卷第 8 章 8.5 分工注〕@@ 商业大厦…    → @@ 定界＝溯源注**前置**（紧跟节号）
 - 7.8 V7 前夜的 UNIX 生态与操作系统谱系@@〔时间：1978 年〕  → @@ 定界＝溯源注**后置**（行尾）
+- 2.1 ⟦en:POSIX⟧：从接口兼容到标准化        → 语言标记：⟦lang:文本⟧ → <span lang="lang">（WCAG 3.1.2；2026-10-12 立）
 ```
 
 **标准形（canonical）**：一元素一行、LF、UTF-8 无 BOM；卷题后空一行；`<h3>` 与 `<ul class="sections">`
@@ -81,6 +82,10 @@ OVER_RE = re.compile(r"^> (.*)$")
 NOTE_RE = re.compile(r"^! (.*)$")
 CH_RE = re.compile(r"^## (.*)$")
 SEC_LINE_RE = re.compile(r"^- (.*)$")
+# 语言标记（2026-10-12 立，136 批；U+27E6/U+27E7）：⟦lang:文本⟧ → <span lang="lang">文本</span>。
+#   用于 WCAG 2.1 AA 3.1.2 局部语言标注（如 ⟦en:USENIX⟧）；lang 为小写 BCP47 主码（en、en-US……）。
+#   装配期消费——定界符不落产物；未配对／嵌套／空文本在 esc()／plain() 处硬失败（不静默透传）。
+LANG_RE = re.compile(r"⟦([a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*):([^⟦⟧]+)⟧")
 CN = "一二三四五六七八九十"
 
 
@@ -199,8 +204,33 @@ def parse_outline(text):
 
 
 def esc(t):
-    """文本 → HTML（内容源存解码文本，转义由格式层负责）。"""
-    return html.escape(t, quote=False)
+    """文本 → HTML（内容源存解码文本，转义由格式层负责）。
+
+    2026-10-12（136 批）：支持语言标记 ⟦lang:文本⟧ → <span lang="lang">文本</span>
+    （WCAG 2.1 AA 3.1.2 局部语言；标注渐进）。定界符由本器消费、不落产物；
+    未配对／嵌套／空文本／语言码不符即 sys.exit（硬失败优于静默透传）。"""
+    if "⟦" not in t and "⟧" not in t:
+        return html.escape(t, quote=False)
+    out, pos = [], 0
+    for m in LANG_RE.finditer(t):
+        out.append(html.escape(t[pos:m.start()], quote=False))
+        out.append('<span lang="%s">%s</span>' % (m.group(1), html.escape(m.group(2), quote=False)))
+        pos = m.end()
+    out.append(html.escape(t[pos:], quote=False))
+    s = "".join(out)
+    if "⟦" in s or "⟧" in s:
+        sys.exit("语言标记形制非法（未配对／嵌套／空文本／语言码不符）：%r" % t[:80])
+    return s
+
+
+def plain(t):
+    """语言标记 → 纯文本（⟦en:X⟧ → X）——JSON-LD 等非 HTML 语境用（2026-10-12，136 批）。"""
+    if "⟦" not in t and "⟧" not in t:
+        return t
+    s = LANG_RE.sub(r"\2", t)
+    if "⟦" in s or "⟧" in s:
+        sys.exit("语言标记形制非法（未配对／嵌套／空文本／语言码不符）：%r" % t[:80])
+    return s
 
 
 def render_outline(vols):
@@ -266,9 +296,10 @@ def render_toc_static(vols):
 
 
 def derive_has_part(vols):
-    """P3-3：JSON-LD Book.hasPart —— 卷级 Chapter 节点（position/name）。"""
+    """P3-3：JSON-LD Book.hasPart —— 卷级 Chapter 节点（position/name）。
+    2026-10-12（136 批）：name 经 plain() 去语言标记（JSON-LD 为纯文本语境，不得含 ⟦⟧）。"""
     import json as _json
-    parts = [{"@type": "Chapter", "position": i, "name": v["title"]}
+    parts = [{"@type": "Chapter", "position": i, "name": plain(v["title"])}
              for i, v in enumerate(vols, 1)]
     return _json.dumps(parts, ensure_ascii=False, separators=(",", ":"))
 
