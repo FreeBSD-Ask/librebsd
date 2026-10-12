@@ -695,10 +695,10 @@
    ],
    "n_batches": 3,
    "name": "freebsd-advocacy",
-   "note": "",
+   "note": "2026-10-12 波4 收尾订正：lib 级 state 原 pending，实已收口——3 批（h5adv_b513_1/2/3）全 committed、offset＝total＝15097、remaining 0，台账侧 status 早已 completed（judged-complete-20261005），仅本字段未切。",
    "offset": 15097,
    "remaining": 0,
-   "state": "pending",
+   "state": "complete",
    "total": 15097
   },
   {
@@ -985,12 +985,12 @@
     {
      "cands": 1085,
      "claims": "CL-RM-447591-448308（718 条；367 条由 h5hw_b518_3 等前批认领）",
-     "commit": "",
+     "commit": "1693c13b3＋60c8fd3b6",
      "n": 4679,
-     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
+     "note": "2026-10-12 波4 闭环：read+narrate+register 全落，outline 入纲 203 块（123.5×104／122.5×8／161.4×1／91.2×73／101.4×17），纯 append-only、幂等二跑 +0。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0，属正常去重非缺陷。脏宿主 4 者他会话 76 行就地修正已于 5cf072dc5 提交，并发解除后按 OUTLINE_HOSTS 定向补写。",
      "offset": 18000,
      "parts": 10,
-     "state": "in_progress",
+     "state": "committed",
      "tag": "h5hw_b518_4"
     }
    ],
@@ -1004,10 +1004,10 @@
    "hosts_guess": [],
    "n_batches": 4,
    "name": "freebsd-hardware",
-   "note": "2026-10-11 H5 对账订正：本库实为 18000/22679（79.37%）而非已 completed——源库 messages 实测 22679 行、已覆盖仅 18000 行，尾批 h5hw_b518_4 未执行（claim 库无该 anchor 条目、本文件记 pending/cands=0）。此前台账曾把 hi 直接记到库总行数 22679 并误标 completed，现已订正，余 4679 行待新批开窗。",
-   "offset": 18000,
-   "remaining": 4679,
-   "state": "in_progress",
+   "note": "2026-10-12 波4 尾批 h5hw_b518_4 入纲收口：22679/22679＝100%，余量 0；本库四批全闭环。宿主 91.2／101.4／123.5／122.5／161.4。",
+   "offset": 22679,
+   "remaining": 0,
+   "state": "complete",
    "total": 22679
   },
   {
@@ -1049,12 +1049,12 @@
     {
      "cands": 267,
      "claims": "CL-RM-448309-448548（240 条；27 条由 h5py_b519_3 认领）",
-     "commit": "",
+     "commit": "60c8fd3b6",
      "n": 4701,
-     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
+     "note": "2026-10-12 波4 闭环：read+narrate+register 全落，outline 入纲 228 块（16.8×228），纯 append-only、幂等二跑 +0。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0，属正常去重非缺陷。脏宿主 4 者他会话 76 行就地修正已于 5cf072dc5 提交，并发解除后按 OUTLINE_HOSTS 定向补写。",
      "offset": 18000,
      "parts": 10,
-     "state": "in_progress",
+     "state": "committed",
      "tag": "h5py_b519_4"
     }
    ],
@@ -1067,10 +1067,10 @@
    ],
    "n_batches": 4,
    "name": "freebsd-python",
-   "note": "2026-10-11 H5 对账订正：本库实为 18000/22701（79.29%）而非已 completed——源库 messages 实测 22701 行、已覆盖仅 18000 行，尾批 h5py_b519_4 未执行（claim 库无该 anchor 条目、本文件记 pending/cands=0）。此前台账曾把 hi 直接记到库总行数 22701 并误标 completed，现已订正，余 4701 行待新批开窗。",
-   "offset": 18000,
-   "remaining": 4701,
-   "state": "in_progress",
+   "note": "2026-10-12 波4 尾批 h5py_b519_4 入纲收口：22701/22701＝100%，余量 0；本库四批全闭环。宿主 16.8。",
+   "offset": 22701,
+   "remaining": 0,
+   "state": "complete",
    "total": 22701
   },
   {
@@ -1112,23 +1112,23 @@
     {
      "cands": 743,
      "claims": "CL-RM-448549-449014（466 条；277 条由 h5em_b520_3 等认领）",
-     "commit": "",
+     "commit": "1693c13b3＋60c8fd3b6",
      "n": 6000,
-     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
+     "note": "2026-10-12 波4 闭环：read+narrate+register 全落，outline 入纲 283 块（149.7×62／101.8×221），纯 append-only、幂等二跑 +0。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0，属正常去重非缺陷。脏宿主 4 者他会话 76 行就地修正已于 5cf072dc5 提交，并发解除后按 OUTLINE_HOSTS 定向补写。",
      "offset": 18000,
      "parts": 12,
-     "state": "in_progress",
+     "state": "committed",
      "tag": "h5em_b520_4"
     },
     {
      "cands": 371,
      "claims": "CL-RM-449015-449207（193 条；178 条由 h5em_b520_3/b527_1 认领）",
-     "commit": "",
+     "commit": "60c8fd3b6",
      "n": 1791,
-     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
+     "note": "2026-10-12 波4 闭环：read+narrate+register 全落，outline 入纲 104 块（101.8×104），纯 append-only、幂等二跑 +0。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0，属正常去重非缺陷。脏宿主 4 者他会话 76 行就地修正已于 5cf072dc5 提交，并发解除后按 OUTLINE_HOSTS 定向补写。",
      "offset": 24000,
      "parts": 4,
-     "state": "in_progress",
+     "state": "committed",
      "tag": "h5em_b520_5"
     }
    ],
@@ -1142,10 +1142,10 @@
    ],
    "n_batches": 5,
    "name": "freebsd-emulation",
-   "note": "2026-10-11 H5 对账订正：本库实为 18000/25791（69.79%）而非已 completed——源库 messages 实测 25791 行、已覆盖仅 18000 行，尾批 h5em_b520_4、h5em_b520_5 未执行（claim 库无该 anchor 条目、本文件记 pending/cands=0）。此前台账曾把 hi 直接记到库总行数 25791 并误标 completed，现已订正，余 7791 行待新批开窗。",
-   "offset": 18000,
-   "remaining": 7791,
-   "state": "in_progress",
+   "note": "2026-10-12 波4 尾批 h5em_b520_4／b520_5 入纲收口：25791/25791＝100%，余量 0；本库五批全闭环。宿主 101.8／149.7／134.8。",
+   "offset": 25791,
+   "remaining": 0,
+   "state": "complete",
    "total": 25791
   },
   {
@@ -1596,8 +1596,8 @@
    "hosts_guess": [],
    "n_batches": 7,
    "name": "freebsd-multimedia",
-   "note": "2026-10-10 b525_1~b525_4 四批闭环（offset 0-24000，cands 2840、register CL-RM-428209-434671 连续无洞）；余 b525_5~7 三批 12779 行未开窗；8121 目标累计 847 条挂账待主理人裁定（81.21-alsa.md 自述「本节仅释读 Linux 一支」）；2026-10-12 b525_5/b525_6/b525_7 三批全链闭环（offset 24000-36000、n 6000/6000/779、cands 776/86/642、register CL-RM-445927-447430 连续 1504 条洞 0、入纲 550 块 append-only +2750 行、三宿主前缀逐字节恒等、幂等二跑 +0、提交 6a77cc564/a3a96337c/066b3fe00）；b525_1~7 七批全闭环，offset 36000 已含全库 36779 封（实测 messages 表 36779），remaining 0，本库收口 complete",
-   "offset": 36000,
+   "note": "2026-10-10 b525_1~b525_4 四批闭环（offset 0-24000，cands 2840、register CL-RM-428209-434671 连续无洞）；余 b525_5~7 三批 12779 行未开窗；8121 目标累计 847 条挂账待主理人裁定（81.21-alsa.md 自述「本节仅释读 Linux 一支」）；2026-10-12 b525_5/b525_6/b525_7 三批全链闭环（offset 24000-36000、n 6000/6000/779、cands 776/86/642、register CL-RM-445927-447430 连续 1504 条洞 0、入纲 550 块 append-only +2750 行、三宿主前缀逐字节恒等、幂等二跑 +0、提交 6a77cc564/a3a96337c/066b3fe00）；b525_1~7 七批全闭环，offset 36000 已含全库 36779 封（实测 messages 表 36779），remaining 0，本库收口 complete；2026-10-12 波4 收尾订正：lib 级 offset 原记 36000（末批 b525_7 起始下界），实为覆盖上界 36779——本库 7 批 n 之和＝6000×6＋779＝36779＝total、remaining 0、7 批全 committed，按「本库收口判据＝预建 batch 列表逐条 committed」确已收口。此前 offset 少记 779 行系字段口径笔误，非读进缺口。",
+   "offset": 36779,
    "remaining": 0,
    "state": "complete",
    "total": 36779
@@ -2192,7 +2192,7 @@
    "unmined_total": 17171,
    "note": "17 库 lib 级 offset 陈旧（合计 347924 仅占台账口径 63.55%）已全部回算至台账 read_judged。其中 scsi／x11／ipfw／cu／acpi／smp／i386／sparc64／ppc／perl／advocacy／alpha／security／tech-pkg 等 14 库为纯记账滞后（claim 库与大纲均已到齐）。hardware／python／emulation 3 库属台账高估：曾被误记 completed 100%，实测源库 messages 分别 22679／22701／25791 行、已覆盖各仅 18000 行，尾批 h5hw_b518_4（4679）／h5py_b519_4（4701）／h5em_b520_4+5（7791）从未执行（claim 库无对应 anchor、state 记 pending/cands=0），合计 17171 行需重新入队。根因：前次施工把台账 hi 直接记到库 messages 总数并据此判「本库收口」，未与本文件预建 batch 列表逐批对账。"
   },
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "h5_20261012_wave4_partial": {
    "batches": "h5hw_b518_4 / h5py_b519_4 / h5em_b520_4 / h5em_b520_5",
    "cands": 2466,
@@ -2204,6 +2204,48 @@
    "gated_hosts": "91.2=73 / 101.4=17 / 16.8=228 / 101.8=221",
    "lines": 875,
    "note": "numstat +875/0＝175 块×5 行纯 append-only、前缀与写前备份逐字节同一、无 BOM／无 CRLF、行数守恒、幂等二跑各 +0。b520_4 p8 有 15 行第 2 列被写成证据等级 L3/L4，已按宿主表返修 1018x12＋NONE×3（同批 388 条 1018 先例口径），叙述列逐字节未动。4 挂账宿主 mtime 同为 2026-10-12 16:47（±16 秒批次写签名）＋等量就地替换（55/55、1/1、1/1、19/19），判他会话活写手，按 H3 纪律脏宿主禁施工。台账与登记表本轮一律未动（批次未闭环）。"
+  },
+  "h5_20261012_wave4_closeout": {
+   "batches": "h5hw_b518_4 / h5py_b519_4 / h5em_b520_4 / h5em_b520_5",
+   "libs": [
+    "freebsd-hardware",
+    "freebsd-python",
+    "freebsd-emulation"
+   ],
+   "rows_mined": 17171,
+   "rows_total_libs": 71171,
+   "offset_sum_before": 529524,
+   "offset_sum_after": 546695,
+   "h5_total_rows": 547474,
+   "h5_coverage": "99.86%",
+   "closed_count": 26,
+   "libs_total": 27,
+   "blocks_outlined": 818,
+   "blocks_outlined_split": "175（1693c13b3，4 干净宿主）＋643（60c8fd3b6，4 脏宿主并发解除后）＝818",
+   "numstat": "60c8fd3b6：+3215/0；1693c13b3：+875/0；合计 +4090/0 纯 append-only",
+   "claim_range": "CL-RM-447591~449207（1617 条连续无洞，四表 join 逐条一致）",
+   "note": "波4 四批（hardware／python／emulation 三库尾批）全链闭环：register 1617 条、叙述合并 2466 行 0 违规、入纲 818 块。三库读进覆盖全部抵达 100%，H5 由 529524/547474 推进至 546695/547474（99.86%）。该 779 行差额见 h5_20261012_state_cleanup：实为 freebsd-multimedia 的 offset 字段口径笔误，非读进缺口。tech-pkg 281 条仍挂主理人裁定（补叙述 vs 真 purge），不计入本批。口径订正：大纲块正文＝日期前缀＋叙述＋纪律串三段合成，实测 2,234 块正文长 299–568 字符（中位 404）；60–140 是 mount_narr.tsv 叙述列门禁，不约束大纲正文，勿据之判大纲缺陷。",
+   "state_cleanup_after": {
+    "offset_sum": 547474,
+    "coverage": "100.00%",
+    "libs_closed": 27
+   }
+  },
+  "h5_20261012_state_cleanup": {
+   "kinds": "lib 级字段陈旧订正（非读进推进，不改 records／batches／台账）",
+   "freebsd-multimedia": {
+    "offset": "36000 -> 36779",
+    "basis": "7 批 n 之和 36779＝total、remaining 0、全 committed"
+   },
+   "freebsd-advocacy": {
+    "state": "pending -> complete",
+    "basis": "3 批全 committed、offset＝total 15097、remaining 0、台账侧已 completed"
+   },
+   "offset_sum": "546695 -> 547474",
+   "coverage": "99.86% -> 100.00%",
+   "batches": "109/109 全 committed 或 complete",
+   "libs": "27/27 全收口",
+   "note": "波4 四批闭环后 H5 全量复算：批 109/109、库 27/27 全收口，offset 合计 547474＝total 547474（100.00%）。本次两处订正均为字段陈旧——multimedia offset 少记末批 779 行、advocacy state 未切——无任何读进缺口，故 H5 无下一站读进工作。唯一在途项仍是 tech-pkg 281 条待主理人裁定（补叙述 vs 真 purge），该库 state 记 committed，不属本轮订正范围。"
   }
  },
  "updated": "2026-10-12",
