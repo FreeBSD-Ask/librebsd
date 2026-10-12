@@ -8,6 +8,10 @@
   不再拼接（否则纪律串重复——2026-09-29 实测已致 22 行落盘缺陷）；写前断言新行纪律串恰 1 次
 - 定位双重校验：行号 + 锚点行内容 + 原摘要行内容三方匹配，任一不符即报错停机
 - 单行换单行，文件总行数守恒；幂等（已含新句则跳过）
+- 零写入不重写盘（幂等空跑不产生假 diff）；写回保留原文件的尾换行状态——
+  无条件 `+ "\n"` 会给原本不带尾换行的宿主补 1 字节，而本函数的行数守恒断言
+  用 splitlines 计数会把那 1 字节掩盖掉（2026-10-12 b20 65.1、2026-10-13
+  b21 65.9 各中招一次，均由差分门禁 G_D0 的 EOF 字节级断言查出）
 用法：python apply_fixes.py <host1相对路径> <host2相对路径> ...
 """
 import glob
@@ -103,6 +107,9 @@ def main(hosts):
     over22 = load_over22()
     for rel in hosts:
         path = os.path.join(ROOT, rel)
+        # 先记原文件的尾换行状态：splitlines 会丢掉它，写回时必须按原样恢复
+        with open(path, "rb") as fbr:
+            had_lf = fbr.read().endswith(b"\n")
         with open(path, encoding="utf-8", newline="") as fh:
             lines = fh.read().splitlines()
         orig_n = len(lines)
@@ -258,10 +265,16 @@ def main(hosts):
         if n_err:
             print(f"{rel}: 有 {n_err} 处错误，放弃写盘", file=sys.stderr)
             continue
+        if n_apply == 0:
+            # 零写入不重写盘：无条件补尾换行会给不带尾换行的宿主加 1 字节，
+            # 且幂等空跑也会凭空产生 diff（b20 65.1／b21 65.9 各中招一次）
+            print(f"{rel}: 应用 {n_apply} ｜ 幂等跳过 {n_skip} ｜ 未写盘（行数守恒 {orig_n}）")
+            continue
         with open(path, "w", encoding="utf-8", newline="") as fh:
-            fh.write("\n".join(lines) + "\n")
+            fh.write("\n".join(lines) + ("\n" if had_lf else ""))
         assert len(lines) == orig_n, f"{rel} 行数漂移 {orig_n}->{len(lines)}"
-        print(f"{rel}: 应用 {n_apply} ｜ 幂等跳过 {n_skip} ｜ 行数守恒 {orig_n}")
+        print(f"{rel}: 应用 {n_apply} ｜ 幂等跳过 {n_skip} ｜ 行数守恒 {orig_n}"
+              f"｜尾换行={'保留' if had_lf else '去除'}")
 
 
 if __name__ == "__main__":

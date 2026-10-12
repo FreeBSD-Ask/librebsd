@@ -52,6 +52,11 @@ def main(paths, ledger=None):
 
 
 if __name__ == "__main__":
+    # --help 必须在任何文件访问之前拦下：旧写法只判 `len(sys.argv) < 2`，
+    # 显式 `--help` 会被当作判读文件名，先读到台账一半才报 FileNotFoundError
+    if any(a in ("-h", "--help") for a in sys.argv[1:]):
+        print(__doc__)
+        sys.exit(0)
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(2)
