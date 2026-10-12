@@ -983,14 +983,14 @@
      "tag": "h5hw_b518_3"
     },
     {
-     "cands": 0,
-     "claims": "",
+     "cands": 1085,
+     "claims": "CL-RM-447591-448308（718 条；367 条由 h5hw_b518_3 等前批认领）",
      "commit": "",
      "n": 4679,
-     "note": "",
+     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
      "offset": 18000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 10,
+     "state": "in_progress",
      "tag": "h5hw_b518_4"
     }
    ],
@@ -1047,14 +1047,14 @@
      "tag": "h5py_b519_3"
     },
     {
-     "cands": 0,
-     "claims": "",
+     "cands": 267,
+     "claims": "CL-RM-448309-448548（240 条；27 条由 h5py_b519_3 认领）",
      "commit": "",
      "n": 4701,
-     "note": "",
+     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
      "offset": 18000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 10,
+     "state": "in_progress",
      "tag": "h5py_b519_4"
     }
    ],
@@ -1110,25 +1110,25 @@
      "tag": "h5em_b520_3"
     },
     {
-     "cands": 0,
-     "claims": "",
+     "cands": 743,
+     "claims": "CL-RM-448549-449014（466 条；277 条由 h5em_b520_3 等认领）",
      "commit": "",
      "n": 6000,
-     "note": "",
+     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
      "offset": 18000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 12,
+     "state": "in_progress",
      "tag": "h5em_b520_4"
     },
     {
-     "cands": 0,
-     "claims": "",
+     "cands": 371,
+     "claims": "CL-RM-449015-449207（193 条；178 条由 h5em_b520_3/b527_1 认领）",
      "commit": "",
      "n": 1791,
-     "note": "",
+     "note": "2026-10-12 波4：read+narrate 全落（narrpkg 与 mount_narr 分件 1:1、合并 0 违规），register 由他会话入库；outline 仅 4 干净宿主入纲，其余宿主 mtime 16:47 他会话活写手就地重判既有块，脏宿主禁施工挂账。849 条未被本批 claim_map 收录者经 raw_source.local_pk 反查全部由前批认领，真缺口 0。",
      "offset": 24000,
-     "parts": 0,
-     "state": "pending",
+     "parts": 4,
+     "state": "in_progress",
      "tag": "h5em_b520_5"
     }
    ],
@@ -2192,7 +2192,19 @@
    "unmined_total": 17171,
    "note": "17 库 lib 级 offset 陈旧（合计 347924 仅占台账口径 63.55%）已全部回算至台账 read_judged。其中 scsi／x11／ipfw／cu／acpi／smp／i386／sparc64／ppc／perl／advocacy／alpha／security／tech-pkg 等 14 库为纯记账滞后（claim 库与大纲均已到齐）。hardware／python／emulation 3 库属台账高估：曾被误记 completed 100%，实测源库 messages 分别 22679／22701／25791 行、已覆盖各仅 18000 行，尾批 h5hw_b518_4（4679）／h5py_b519_4（4701）／h5em_b520_4+5（7791）从未执行（claim 库无对应 anchor、state 记 pending/cands=0），合计 17171 行需重新入队。根因：前次施工把台账 hi 直接记到库 messages 总数并据此判「本库收口」，未与本文件预建 batch 列表逐批对账。"
   },
-  "updated": "2026-10-11"
+  "updated": "2026-10-11",
+  "h5_20261012_wave4_partial": {
+   "batches": "h5hw_b518_4 / h5py_b519_4 / h5em_b520_4 / h5em_b520_5",
+   "cands": 2466,
+   "claims": "CL-RM-447591-449207（1617 条连续无洞，真缺口 0）",
+   "blocks_outlined": 175,
+   "blocks_host": "123.5 +104 / 122.5 +8 / 161.4 +1 / 149.7 +62",
+   "commit": "1693c13b3",
+   "gated": 643,
+   "gated_hosts": "91.2=73 / 101.4=17 / 16.8=228 / 101.8=221",
+   "lines": 875,
+   "note": "numstat +875/0＝175 块×5 行纯 append-only、前缀与写前备份逐字节同一、无 BOM／无 CRLF、行数守恒、幂等二跑各 +0。b520_4 p8 有 15 行第 2 列被写成证据等级 L3/L4，已按宿主表返修 1018x12＋NONE×3（同批 388 条 1018 先例口径），叙述列逐字节未动。4 挂账宿主 mtime 同为 2026-10-12 16:47（±16 秒批次写签名）＋等量就地替换（55/55、1/1、1/1、19/19），判他会话活写手，按 H3 纪律脏宿主禁施工。台账与登记表本轮一律未动（批次未闭环）。"
+  }
  },
  "updated": "2026-10-12",
  "version": 2
