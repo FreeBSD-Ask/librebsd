@@ -3585,15 +3585,15 @@
     "freebsd-ports": {
       "messages": 191637,
       "status": "in_progress",
-      "read_spec": 164999,
-      "read_judged": 164999,
+      "read_spec": 170999,
+      "read_judged": 170999,
       "queued_spec": 0,
-      "read_effective": 164999,
+      "read_effective": 170999,
       "status_source": "spec-only",
       "records": [
         {
           "lo": 0,
-          "hi": 164999,
+          "hi": 170999,
           "tags": [
             "fpo_b151",
             "fpo_b152",
@@ -3649,7 +3649,9 @@
             "fpo_b202",
             "fpo_b203",
             "fpo_b204",
-            "fpo_b205"
+            "fpo_b205",
+            "fpo_b206",
+            "fpo_b207"
           ],
           "source": "spec"
         }
