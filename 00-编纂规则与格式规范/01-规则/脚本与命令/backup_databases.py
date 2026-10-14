@@ -9,6 +9,23 @@
 2026-08-26 修订：播客两库（bsdnow_podcast/bsd_podcasts_external）拆分为 10 个按播客实际名独立的 DuckDB
 （bsd-now/bsdtalk/youtube/software-engineering-daily/the-changelog/floss-weekly/nerding-out-with-victor/
 freebsd-fridays/bsd-conferences-youtube/freebsd-office-hours），SCOPE 相应更新，库计数由 16 调至 24。
+2026-10-14 修订（主理人令，historical_claims 广播事故次日）：启用**强化策略**——
+①historical_claims 专项（任务 `librebsd-hc-backup-30min` 每 30 分钟触发）；
+②二次令：**全部库统一并入强化策略**（密槽＝最近 24 小时按 30 分钟粒度逐份保留 ≤48 份；
+日槽＝1/2/3/4/7/15 日各保留最新一份 ≤6 份；合计 ≤54 份），由任务 `librebsd-dball-backup-30min`
+每 30 分钟执行 `--all`；轮换参数见 `DEFAULT_DENSE`／`DENSE_POLICY`。原 5 槽（当次/1/2/3/7 日）
+机制废止（2026-08-18 立、2026-10-14 升级）。单套全库 gz 实测约 854MB、全程约 90 秒；
+historical_claims 单份约 210.6MB。
+③三次令（备份范围裁剪，2026-10-14）：**播客库 10 个自 SCOPE 移除，不纳入备份**（原文物可再生成，
+无需常备防护）；**邮件列表库（261 分库）与新闻组库（usenet_mail）确认排除**（本不在范围）；
+**references_fulltext 全文数据库保留常备**。裁剪后范围＝14 功能/史料库 + 12 代码仓库库 = 26 库。
+详见流程规则「数据库备份保留规则」小节。
+④四次裁定（2026-10-14，主理人令「A」）：**historical_claims 由专项任务独担**——`--all` 备份循环
+跳过该库（`ALL_SKIP`），消除与 `librebsd-hc-backup-30min` 的重复备份；dball 实轮转 25 库 + hc 专项 1 库；
+轮换（prune）维持全库收尾（幂等）。另：三任务执行程序已改 **pythonw.exe**（无窗口后台，2026-10-14 主理人令）——
+std 流为空时自动重定向至 `12-数据库备份/backup_console.log`。
+⑤五次令（2026-10-14）：**桌面执行日志**——每次运行向 `桌面/数据库备份.txt` 追加一行成功/失败记录
+（`record_run_log`），滚动保留 15 日、超期自动清除；写入失败不影响主流程。
 
 用法：
   python backup_databases.py --all          # 全量备份 + 轮换
@@ -38,23 +55,27 @@ BACKUP_ROOT = os.path.join(BASE, "12-数据库备份")
 LOG_JSONL = os.path.join(BACKUP_ROOT, "backup_log.jsonl")
 PRUNE_PREVIEW = os.path.join(BACKUP_ROOT, "prune_preview_latest.json")
 
-# 备份范围：16 个非邮件正式库（2026-08-25 全部 DuckDB 格式）
+# 2026-10-14：适配计划任务无窗口后台运行（pythonw.exe）——std 流为空时重定向至控制台日志
+if sys.stdout is None or sys.stderr is None:
+    os.makedirs(BACKUP_ROOT, exist_ok=True)
+    _con = open(os.path.join(BACKUP_ROOT, "backup_console.log"), "a", encoding="utf-8", buffering=1)
+    if sys.stdout is None:
+        sys.stdout = _con
+    if sys.stderr is None:
+        sys.stderr = _con
+
+# 备份范围：14 个功能/史料正式库 + 12 个代码仓库库 = 26 库
+# （2026-10-14 三次令裁剪：播客 10 库移出；邮件列表库/新闻组库本不在范围；references_fulltext 全文数据库保留）
+# （2026-10-14 裁定 A：--all 备份循环跳过 historical_claims（ALL_SKIP）——该库由 hc 专项任务独担）
 SCOPE = {
     "changelog": r"01-项目管理\00-变更记录\changelog.duckdb",
     "sacred_sources": r"02-sacred源材料\sacred_sources.duckdb",
     "phoronix_news": r"03-原始史料库\01-代码仓库史料\01-数据库本体\phoronix_news.duckdb",
     "资料数据库": r"03-原始史料库\01-代码仓库史料\01-数据库本体\资料数据库.duckdb",
-    # 播客史料按实际播客名逐一独立 DuckDB（2026-08-26 拆分，替代原 bsdnow_podcast / bsd_podcasts_external 两合成库）
-    "bsdnow": r"03-原始史料库\14-播客史料\bsd-now.duckdb",
-    "bsdtalk": r"03-原始史料库\14-播客史料\bsdtalk.duckdb",
-    "software-engineering-daily": r"03-原始史料库\14-播客史料\software-engineering-daily.duckdb",
-    "the-changelog": r"03-原始史料库\14-播客史料\the-changelog.duckdb",
-    "floss-weekly": r"03-原始史料库\14-播客史料\floss-weekly.duckdb",
-    "nerding-out-with-victor": r"03-原始史料库\14-播客史料\nerding-out-with-victor.duckdb",
-    "freebsd-fridays": r"03-原始史料库\14-播客史料\freebsd-fridays.duckdb",
-    "bsd-conferences-youtube": r"03-原始史料库\14-播客史料\bsd-conferences-youtube.duckdb",
-    "freebsd-office-hours": r"03-原始史料库\14-播客史料\freebsd-office-hours.duckdb",
-    "youtube": r"03-原始史料库\14-播客史料\youtube.duckdb",
+    # 播客史料 10 库（bsd-now/bsdtalk/software-engineering-daily/the-changelog/floss-weekly/
+    # nerding-out-with-victor/freebsd-fridays/bsd-conferences-youtube/freebsd-office-hours/youtube）
+    # ——2026-10-14 主理人令（三次令）：**不纳入备份范围**，自 SCOPE 移除（原 2026-08-26 拆分并入）。
+    # 同步排除（确认）：邮件列表库（261 分库）与新闻组库 usenet_mail 本不在范围；references_fulltext 保留。
     "original_sources": r"03-原始史料库\original_sources.duckdb",
     "research_notes": r"04-现代研究文献\research_notes.duckdb",
     "historical_claims": r"04-现代研究文献\historical_claims.duckdb",
@@ -65,10 +86,86 @@ SCOPE = {
     "review_reports": r"08-核查报告与多轮复核\review_reports.duckdb",
     "cross_indexes": r"10-交叉索引\cross_indexes.duckdb",
     "metadata_interfaces": r"11-元数据接口\metadata_interfaces.duckdb",
+    # 代码仓库史料库（2026-10-14 并入；体量大，采用轻槽策略——见 DENSE_POLICY）
+    "freebsd": r"03-原始史料库\01-代码仓库史料\02-FreeBSD\db\duckdb\freebsd.duckdb",
+    "netbsd": r"03-原始史料库\01-代码仓库史料\03-NetBSD\db\duckdb\netbsd.duckdb",
+    "openbsd": r"03-原始史料库\01-代码仓库史料\04-OpenBSD\db\duckdb\openbsd.duckdb",
+    "dragonfly": r"03-原始史料库\01-代码仓库史料\05-DragonFlyBSD\db\duckdb\dragonfly.duckdb",
+    "openzfs": r"03-原始史料库\01-代码仓库史料\06-OpenZFS\db\duckdb\openzfs.duckdb",
+    "bsd-derivatives": r"03-原始史料库\01-代码仓库史料\07-BSD衍生项目\db\duckdb\bsd-derivatives.duckdb",
+    "cross_source_identity": r"03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\cross_source_identity.duckdb",
+    "illumos-gate": r"03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\illumos-gate.duckdb",
+    "openssh-apple": r"03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\openssh-apple.duckdb",
+    "openssh": r"03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\openssh.duckdb",
+    "darwin": r"03-原始史料库\01-代码仓库史料\09-Darwin\db\duckdb\darwin.duckdb",
+    "linux-kernel": r"03-原始史料库\01-代码仓库史料\10-LinuxKernel\db\duckdb\linux-kernel.duckdb",
 }
 
-# 轮换槽位（日）
-SLOT_DAYS = [1, 2, 3, 7]
+# 原 5 槽参数（SLOT_DAYS）已于 2026-10-14 废止——全库改走 DEFAULT_DENSE / DENSE_POLICY（密槽＋日槽）
+
+# 强化策略（2026-10-14 主理人令）：全库统一走 DEFAULT_DENSE；DENSE_POLICY 保留库级覆盖位
+# 密槽：dense_window_hours 小时内按 dense_minutes 分钟粒度逐份保留；
+# 日槽：daily_slots 列出的每个时点各保留「距今 ≥ N 日中的最新一份」；
+# 2026-10-14 二次令：全部库并入定时任务（librebsd-dball-backup-30min，每 30 分钟 --all）。
+DEFAULT_DENSE = {
+    "dense_minutes": 30,
+    "dense_window_hours": 24,
+    "daily_slots": [1, 2, 3, 4, 7, 15],
+}
+DENSE_POLICY = {
+    "historical_claims": {
+        "dense_minutes": 30,
+        "dense_window_hours": 24,
+        "daily_slots": [1, 2, 3, 4, 7, 15],
+    },
+}
+# 代码仓库库群（12 库，合计 gz 约 2.8GB/套）采用轻槽：无密槽，仅「当次＋1/2/3/4/7/15 日槽」（≤7 份）
+for _k in ("freebsd", "netbsd", "openbsd", "dragonfly", "openzfs", "bsd-derivatives",
+           "cross_source_identity", "illumos-gate", "openssh-apple", "openssh", "darwin", "linux-kernel"):
+    DENSE_POLICY[_k] = {"dense_minutes": 30, "dense_window_hours": 0, "daily_slots": [1, 2, 3, 4, 7, 15]}
+
+# 2026-10-14 主理人裁定 A：historical_claims 由专项任务 librebsd-hc-backup-30min 独担——
+# --all 备份循环跳过该库（消除重复备份：此前该库每 ~15 分钟被双任务各备一份）；
+# 轮换（prune）维持全库收尾（幂等、按库名取策略，不受本表影响）；--db historical_claims 不受影响。
+ALL_SKIP = {"historical_claims"}
+
+
+def _desktop_log_path():
+    """桌面《数据库备份.txt》路径（兼容 OneDrive 桌面重定向）。"""
+    home = os.path.expanduser("~")
+    for cand in (os.path.join(home, "Desktop"), os.path.join(home, "OneDrive", "Desktop")):
+        if os.path.isdir(cand):
+            return os.path.join(cand, "数据库备份.txt")
+    return os.path.join(home, "Desktop", "数据库备份.txt")
+
+
+def record_run_log(ok, text):
+    """向桌面《数据库备份.txt》追加一条 成功/失败 记录；自动清除超过 15 日的旧记录。
+    2026-10-14 主理人令；本函数任何失败均不影响备份主流程。"""
+    try:
+        p = _desktop_log_path()
+        now = datetime.datetime.now()
+        kept = []
+        if os.path.exists(p):
+            with open(p, encoding="utf-8") as f:
+                for ln in f.read().split("\n"):
+                    ln = ln.strip()
+                    if not ln:
+                        continue
+                    try:
+                        t = datetime.datetime.strptime(ln[:19], "%Y-%m-%d %H:%M:%S")
+                        if (now - t).total_seconds() <= 15 * 86400:
+                            kept.append(ln)
+                    except ValueError:
+                        kept.append(ln)
+        kept.append("{} | {} | {}".format(now.strftime("%Y-%m-%d %H:%M:%S"), "成功" if ok else "失败", text))
+        with open(p, "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(kept) + "\n")
+    except Exception as e:
+        try:
+            print("[警告] 桌面执行日志写入失败：{}".format(str(e)[:100]))
+        except Exception:
+            pass
 
 
 def sha256_of(path):
@@ -185,14 +282,26 @@ def prune_one(name, now):
     stamped.sort(reverse=True)
     keep = set()
     if stamped:
-        keep.add(stamped[0][1])
-        for days in SLOT_DAYS:
+        policy = DENSE_POLICY.get(name, DEFAULT_DENSE)  # 2026-10-14 起全库统一强化策略
+        # 密槽：最近 dense_window_hours 内按 dense_minutes 分钟分桶，每桶保留最新一份
+        window_start = now - datetime.timedelta(hours=policy["dense_window_hours"])
+        buckets = {}
+        for ts, f in stamped:
+            if ts >= window_start:
+                key = int((now - ts).total_seconds() // (policy["dense_minutes"] * 60))
+                if key not in buckets:
+                    buckets[key] = f
+        keep.update(buckets.values())
+        # 日槽：daily_slots 各时点保留「距今 ≥ N 日中的最新一份」
+        for days in policy["daily_slots"]:
             for ts, f in stamped:
                 if f in keep:
                     continue
                 if (now - ts).total_seconds() >= days * 86400:
                     keep.add(f)
                     break
+        # 当次：最新一份兜底
+        keep.add(stamped[0][1])
     removed = []
     for ts, f in stamped:
         if f not in keep:
@@ -238,7 +347,7 @@ def cmd_list():
 def main():
     ap = argparse.ArgumentParser(description="数据库常设备份与轮换（5 槽：当次/1日/2日/3日/7日）——DuckDB 适配版")
     g = ap.add_mutually_exclusive_group(required=True)
-    g.add_argument("--all", action="store_true", help="全部 16 库备份 + 轮换")
+    g.add_argument("--all", action="store_true", help="全范围备份 + 轮换（跳过 ALL_SKIP：historical_claims 由专项任务独担）")
     g.add_argument("--db", metavar="<db_name>", help="单库备份 + 轮换")
     g.add_argument("--prune-only", action="store_true", help="仅轮换清理，不新增备份")
     g.add_argument("--list", action="store_true", help="查看各库备份现状")
@@ -253,7 +362,7 @@ def main():
 
     targets = []
     if args.all:
-        targets = list(SCOPE.keys())
+        targets = [t for t in SCOPE.keys() if t not in ALL_SKIP]
     elif args.db:
         if args.db not in SCOPE:
             print("未知库名: {}（可用：{}）".format(args.db, ", ".join(SCOPE)))
@@ -276,9 +385,22 @@ def main():
         json.dump(preview, f, ensure_ascii=False, indent=2)
 
     bad = [m for m in done if m["integrity"] != "ok"]
+    if args.all or args.db:
+        mode = "全库任务（{} 库）".format(len(done)) if args.all else "单库任务（{}）".format(args.db)
+        if bad:
+            detail = "、".join("{}（{}）".format(m["db_name"], str(m["integrity"])[:40]) for m in bad)
+            record_run_log(False, "{}：{} 库成功、{} 库异常——{}".format(mode, len(done) - len(bad), len(bad), detail))
+        else:
+            record_run_log(True, "{}：全部成功".format(mode))
     print("完成：备份 {} 库，integrity 异常 {} 库；轮换预览见 {}".format(len(done), len(bad), os.path.basename(PRUNE_PREVIEW)))
     return 1 if bad else 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except SystemExit:
+        raise
+    except Exception as e:
+        record_run_log(False, "脚本异常终止：{}".format(str(e)[:100]))
+        raise
