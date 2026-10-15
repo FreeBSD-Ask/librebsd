@@ -18,7 +18,7 @@ AGENTS.md 是本文件（CLAUDE.md）的别名副本，必须一模一样，任�
 [01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md](01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md)
 —— 它汇总全项目 **17 条长线**的**状态 / 权威源（唯一真值）/ 续跑入口 / 健康检查**。
 
-- **校验**：`C:/Python314/python.exe script/_longline_status.py --check`（exit 1 = 数值不一致或权威源缺失）
+- **校验**：`C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --check`（exit 1 = 数值不一致或权威源缺失；本文件真身在该目录，**不在 `script/`**——旧记 `script/_longline_status.py` 查无此文件，2026-10-15 复核订正）
 - **刷新**：`… --write-block` 刷新登记表内嵌机读块（唯一写操作：写前备份、写后断言块外内容逐字节未变、内容不变则不写盘）
 - **总进度**：`… --progress`（**分档口径**，不提供单一数字：消息口径被 mail2d 主导、等权口径被已收官小线抬高；见登记表 §十六）
 - **原则**：登记表是**派生视图**，数字一律由各线权威源派生；**与权威源冲突时以权威源为准**。
@@ -88,7 +88,7 @@ AGENTS.md 是本文件（CLAUDE.md）的别名副本，必须一模一样，任�
   - **08-引文网络/** —— G7 引文网络（含 4 JSON + 1 CSV）
   - **09-文件夹数据库索引/** —— 7 个文件夹数据库的主索引与跨库引用映射（含 `folder_db_registry.csv`、`cross_db_references.csv`、`dashboard.md`）
 
-- **12-数据库备份/** —— 数据库备份与归档层（补编号缺口 12）—— 全部正式库升格 DuckDB 后由 `backup_databases.py`（DuckDB 适配版，SCOPE 26 库＝14 功能/史料库＋12 代码仓库库，`.duckdb.gz` 轮替压缩；`--all` 实轮转 25 库——historical_claims 由 hc 专项独担）承担常设备份；**2026-10-14 主理人令：备份全面系统化——三计划任务自动执行（`librebsd-dball-backup-30min`／`librebsd-hc-backup-30min`／`librebsd-outline-backup-30min`；2026-10-15 主理人令：频次由每 30 分钟调整为每 5 小时），执行程序均 pythonw.exe（无窗口后台）；全库 24 小时密槽（30 分钟粒度；2026-10-15 频次调整后 24 小时内实际 ≤5 份/库）＋1/2/3/4/7/15 日槽（historical_claims 滚动预算约 2.3GB）；常规备份不再为人工义务，重大施工前仍须专项 prebak；播客/邮件列表/新闻组库明确不备份（三次令）；桌面《数据库备份.txt》执行日志（成功/失败各一行、滚动 15 日）**；各库 SQLite 原库以 `ARCHIVE_FINAL_*.db.gz` 永久归档于每库子目录（prune 豁免）；含 `backup_log.jsonl` 运行日志；执行脚本 `00-编纂规则与格式规范/01-规则/脚本与命令/backup_databases.py`；规则详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 数据库备份保留规则小节；删除本目录任何内容须用户明示
+- **12-数据库备份/** —— 数据库备份与归档层（补编号缺口 12）—— 全部正式库升格 DuckDB 后由 `backup_databases.py`（DuckDB 适配版，SCOPE 26 库＝14 功能/史料库＋12 代码仓库库，`.duckdb.gz` 轮替压缩；**归档体实为 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 的**逻辑导出（34 张 parquet ＋ `schema.sql` ＋ `load.sql`），**不是压缩后的物理 DuckDB 文件——恢复须跑档内 `load.sql` 而非单文件拷贝**（2026-10-15 复核订正：旧描述易被读成"压缩的物理 .duckdb"，据此判断恢复方式会整库丢数据）；**归档体完整性由 `verify_archive()` 三段校验（解 gzip 到 EOF 触发 CRC → 读 tar 核表数 → 逐个 parquet 用 DuckDB 加载计数），失败改判 `archive_open_failed`／`archive_incomplete`／`archive_unreadable`**——侧车 `integrity: ok` 只对"源库导出完整"成立，**不代表归档体可读**，故判据不得用"档内前 6 字节 == DUCK 魔数"；`--all` 实轮转 25 库——historical_claims 由 hc 专项独担）承担常设备份；**2026-10-14 主理人令：备份全面系统化——三计划任务自动执行（`librebsd-dball-backup-30min`／`librebsd-hc-backup-30min`／`librebsd-outline-backup-30min`；2026-10-15 主理人令：频次由每 30 分钟调整为每 5 小时），执行程序均 pythonw.exe（无窗口后台）；全库 24 小时密槽（30 分钟粒度；2026-10-15 频次调整后 24 小时内实际 ≤5 份/库）＋1/2/3/4/7/15 日槽（historical_claims 滚动预算约 2.3GB）；常规备份不再为人工义务，重大施工前仍须专项 prebak；播客/邮件列表/新闻组库明确不备份（三次令）；桌面《数据库备份.txt》执行日志（成功/失败各一行、滚动 15 日）**；各库 SQLite 原库以 `ARCHIVE_FINAL_*.db.gz` 永久归档于每库子目录（prune 豁免）；含 `backup_log.jsonl` 运行日志；执行脚本 `00-编纂规则与格式规范/01-规则/脚本与命令/backup_databases.py`；规则详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 数据库备份保留规则小节；删除本目录任何内容须用户明示
 
 ### 原位置保留目录（未迁移至一级文件夹）
 
