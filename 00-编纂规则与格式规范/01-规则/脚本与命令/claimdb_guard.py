@@ -219,8 +219,10 @@ def run_path(path):
 def run_all():
     scope = load_scope()
     snap = load_state()
-    dbs = snap.setdefault("dbs", {})
-    fails, warns = [], 0
+    # 快照 dbs 只保留本轮 SCOPE 内的条目：库被移出 SCOPE 或本轮 SKIP 时，旧行数不得
+    # 滞留——滞留会让下方的通过/跳过计数被陈旧条目污染（2026-10-15 复核坐实）。
+    dbs = {k: v for k, v in (snap.get("dbs") or {}).items() if k in scope}
+    fails, skips = [], []
     print("== claimdb_guard · --all 全库体检（{} 库）==".format(len(scope)))
     for name in sorted(scope):
         path = os.path.join(BASE, scope[name])
@@ -230,6 +232,7 @@ def run_all():
             con.close()
         except Exception as e:
             print("  {:<24} SKIP（{}）".format(name, str(e)[:60]))
+            skips.append(name)
             continue
         verdict, reasons = evaluate_generic(name, tables, dbs)
         total = sum(tables.values())
@@ -245,8 +248,9 @@ def run_all():
     if fails:
         print("== 裁决: FAIL（{}）——修复前禁写 ==".format("、".join(fails)))
         return 1
+    snap["dbs"] = dbs
     save_state(snap)
-    print("== 裁决: PASS（{}/{} 库通过，{} SKIP；快照已刷新）==".format(len(scope) - len(fails) - (len(scope) - len(dbs) - len(fails)), len(scope), len(scope) - len(dbs) + 0))
+    print("== 裁决: PASS（{}/{} 库通过，{} SKIP；快照已刷新）==".format(len(dbs), len(scope), len(skips)))
     return 0
 
 
