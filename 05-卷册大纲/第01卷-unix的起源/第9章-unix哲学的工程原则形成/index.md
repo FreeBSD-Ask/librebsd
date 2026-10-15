@@ -722,3 +722,29 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1294 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1294`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：把管道操作符直接放进 shell（command and command line interpreter）以便把上一程序输出送入下一程序输入，据讲者所知是 Unix 的一个新想法；讲者收藏的历史文献中有一页为 Doug McIlroy 于 1964 年所写，述及他们想要一个用于“screwing”的机制（保留 ASR 原文用词）。（YouTube EPbKzonnwoR2I，[60.7-90.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1322 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1322`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：1978 年，在发明晶体管的同一间实验室（贝尔实验室），有人写下了“程序只做一件事，并把这件事做好”这句准则。（YouTube EPpr69dMlhFwQ，[0-30]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1324 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1324`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：1956 年与美国政府达成的同意裁定（consent decree）使拥有贝尔实验室的电话公司 AT&T 完全退出软件生意，因此 Unix 不能出售，只能交给主动索取的大学。（YouTube EPpr69dMlhFwQ，[60-90]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1325 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1325`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：让一个程序的输出直接流入下一个程序输入的管道构想，是 McIlroy 早在 1964 年的一份备忘中勾勒的，他把程序相互连接比作软管（garden hose）一段段拧接。（YouTube EPpr69dMlhFwQ，[90-120]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1323 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1323`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Ken Thompson 与 Dennis Ritchie 被从臃肿且失败的 Multics 上撤下后，拿起角落里一台废弃的 PDP-7，写出了一个更小的系统并取名 Unix，其中一半是开玩笑——因为它想做的事更少。（YouTube EPpr69dMlhFwQ，[30-60]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

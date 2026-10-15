@@ -94,3 +94,25 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. <https://www.bsdnow.tv/2>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-209 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-209`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：FreeBSD 6 时代核心转储格式由 .out 改为 ELF。（YouTube EP-ebuXo668Mk，[672.53-683.08]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-210 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-210`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：Robert Watson 在 FreeBSD 7.1 中添加了文本转储类型。（YouTube EP-ebuXo668Mk，[751.14-758.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-972 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-972`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：在移植 OpenStack 组件时，讲者选用 Open vSwitch（转写音作 open V switch）作为虚拟化机制驱动，原因当时尚无 Neutron 的 FreeBSD Bridge agent。（YouTube EPTUHfTw6OX-8，[2059.359-2070.149]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1019 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1019`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Sam Gwydir 口述：与 FreeBSD 核心转储相关的脚本写作于 2004 年的杜克大学，据称从未进入上游（转写音作“it was never up”）（YouTube EPV-tx-K05NiY，[325.71-330.12]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

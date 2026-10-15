@@ -90,3 +90,10 @@ volume: 第05卷-freebsd的工程化奠基
 - [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. <https://www.bsdnow.tv/231>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-474 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-474`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2024〕讲者 Olivier Certner 口述：FreeBSD 有两种实时优先级类型：RT_PR 是先出现的、更原生的一种，另一种为 POSIX 风格。（YouTube EPeUr4qI0nlKM，[183.84-192.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

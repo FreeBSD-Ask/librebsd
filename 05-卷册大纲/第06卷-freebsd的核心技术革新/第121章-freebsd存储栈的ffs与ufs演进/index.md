@@ -122,3 +122,39 @@ volume: 第06卷-freebsd的核心技术革新
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1160 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1160`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：ZFS 动态分配所有数据块，并在全部 vdev 之间做条带化分布（YouTube EPYDuCB-3o5OQ，[444.88-452.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1295 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1295`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：一道考题出现在 Plan Nine 起步同期，据讲者回忆该考题约为 1988 年。（YouTube EPdi1W6r-0cAU，[135.9-147.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-597 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-597`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Pawel Dawidek 口述：在 ZFS 之上实现 jail 的常见做法是使用 ZFS 克隆。（YouTube EPhYBgoaQC-vo，[1100.24-1107.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-865 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-865`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Chuck Tuffli 口述：该 NVMe 设备被 NVMe 驱动报告处于只读模式。（YouTube EPq4vtp4hJfao，[1250.03-1258.62]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-864 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-864`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Chuck Tuffli 口述：出问题那套环境是 FreeBSD 12 系统，经 iSCSI（转写音作 ice Guzzi）提供 ZFS（转写音作 zi falls）服务，SLOG 位于一块 NVMe（转写音作 NDB）设备上。（YouTube EPq4vtp4hJfao，[1238.33-1250.02]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-891 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-891`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSDFridays〕讲者口述：在 BSD 上 UFS（又称 FFS）作为本地文件系统，其之上可再叠一层 NFS 服务器。（YouTube EPr5nFapl5C1s，[736-743.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1133 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1133`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2008〕讲者 Pawel Jakub Dawidek 口述：GEOM 的 GELI 类也会使用 CPU 自带的自动加密核心（转写音作 automatic CPU cores），从而加速加密。（YouTube EPxMpmOezBJZo，[1620.88-1626.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

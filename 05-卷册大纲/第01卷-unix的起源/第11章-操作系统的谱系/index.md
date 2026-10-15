@@ -119,3 +119,9 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-961 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-961`；w172 YouTube 章节路由采纳）
+
+据〔Hello World 技术分享〕讲者口述：TLS 指针在 MIPS 上按线程设置，通过名为 ciserek（转写音作 ciserek，正字待考）的特殊 syscall 完成。（YouTube EPtIBVQDF2YCw，[1447.42-1456.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

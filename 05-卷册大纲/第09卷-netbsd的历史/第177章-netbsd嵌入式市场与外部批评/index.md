@@ -90,3 +90,19 @@ volume: 第09卷-netbsd的历史
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1111 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1111`；w172 YouTube 章节路由采纳）
+
+据〔EndBASIC 嵌入式开发套件演讲〕讲者 Julio Merino 口述：其开发工具可从 FreeBSD、Linux 等任意宿主机的磁盘镜像为 NetBSD 生成引导镜像（YouTube EPWZFYTInWAqc，[884.88-890.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1110 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1110`；w172 YouTube 章节路由采纳）
+
+据〔EndBASIC 嵌入式开发套件演讲〕讲者 Julio Merino 口述：其放弃 FreeBSD，改用 NetBSD（YouTube EPWZFYTInWAqc，[858.639-864.949]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-381 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-381`；w172 YouTube 章节路由采纳）
+
+据〔用 NetBSD 构建瘦客户端产品演讲〕讲者 Stephen Borrill 口述：1994 年 NetBSD 移植到 Compaq RISC PC（转写音作 con risk pcs），此后成为 NetAlpha32（转写音作 net mr. allen 32），并于 1996 年导入。（YouTube EPcDAzk7hDFiI，[184.13-195.49]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

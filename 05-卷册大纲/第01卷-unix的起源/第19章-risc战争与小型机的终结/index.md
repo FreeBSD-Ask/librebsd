@@ -52,3 +52,15 @@ volume: 第01卷-unix的起源
 - [BSD Now EP425] Pennington J. BSD Now: 425: Releases galore[EB/OL]. (2021-10-21)[2026-08-15]. <https://www.bsdnow.tv/425>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-084 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-084`；w172 YouTube 章节路由采纳）
+
+据〔普林斯顿大学 Brian Kernighan 口述历史访谈（续）〕讲者口述：他逐项验收 Go 的目标：编译"very very fast"，且产出静态二进制，依赖地狱由此根除；并发模型源自 Tony Hoare 上世纪 70 年代的通信顺序进程（CSP）思想，"very very well and efficiently implemented"，这也是他自认掌握最好的部分〔59:07〕。他阐释 goroutine 与带类型 channel 的所有权语义：我的数据经 channel 送出，"now you've got it and I don't have it anymore"，思维层面不存在共享的中间态，无意共享数据结构的一类问题在该层级无从发生；运行时自然要在底层替你保证一致性，但传统锁与互斥量因此用得少得多；据他亲手做的几个小实验，爬网络、遍历分布式文件系统这类活计用 Go 写等价代码，比 Python 或 Java 的线程模型快约三分之一〔59:31〕。有人称 Go 是"21 世纪的 C"：表面语法足够像 C，同样推崇最小机制；但它又在 C 的松散处反其道而行——各类型的位宽被明确写死、表达式里不许夹带赋值等副作用，还有标准排版程序让所有 Go 代码形态如一，括号位置之争的"religious wars"就此消失；类型错误大多在编译期而非运行期暴露，这比 Python 的动态类型可靠，于是 Go 一边蚕食 C++ 一边蚕食 Python，写爬虫或分布式服务时是"really good choice"〔61:32〕。（YouTube EPbTWv-l0JhAc）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-083 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-083`；w172 YouTube 章节路由采纳）
+
+据〔普林斯顿大学 Brian Kernighan 口述历史访谈〕讲者口述：话题转入 Go：Kernighan 常年在纽约的 Google 过夏天，自嘲"kind of like an intern in many respects"，某年恰被安排坐进 Go 团组，"in effect I was his intern for the summer"，学到够用的 Go，并结识了此前素不相识的 Alan Donovan；两人都不满意市面上已有的 Go 书，遂花约一年时间打磨合写 The Go Programming Language，他直言书中工作"at least 90% his"，因为 Donovan 对包括 Go 在内的各门语言从里到外了如指掌〔55:27〕。随后他把 Go 放进语言谱系：从 CPL 到 Martin Richards 的 BCPL，再到贝尔实验室 Ken Thompson 的 B、Dennis Ritchie 的 C，其后是 C++ 与 Java——"many of these are reactions to the language that went before"，新语言多是对上一代语言不满的回应；而硬件演进让处理速度与内存更充裕，加之"我们对要做什么、怎么做的理解也在改进"，重起炉灶遂变得可行〔56:58〕。按他的归纳，Java 部分是对 C++ 体量的反应，且得益于十年摩尔定律才可改用解释器代替编译器；Go 则"explicitly a reaction to the complexity of C++"，由 Robert Griesemer、Rob Pike 与 Ken Thompson 在 Google 开发，指导原则就是干脆不做 C++，转而解决 Google 写超大规模代码的现实难题——编译时间太长、可移植性问题，以及"dependency hell"（不一致的库版本酿祸）；项目 2007 年启动，数年后开源，如今已是彻底的开源项目〔58:08〕。（YouTube EPbTWv-l0JhAc）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -60,3 +60,19 @@ volume: 第17卷-政治制度与社区治理
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-220 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-220`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Foundation Enterprise Working Group〕讲者口述：会上提到 OpenSSL 3 存在若干挑战，并建议把 MIT Kerberos 移植拆分为客户端与服务端两部分。（YouTube EP0TQUlipFvXM，[2931.66-2950.38]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-899 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-899`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Enterprise WG Meeting 2〕讲者口述：Sam Carp（转写音作 Sam carp）写了 runJ，Doug Rabson（转写音作 Doug Robson）写了 OCI jails 等项目。（YouTube EPrCRi57tdHns，[1463.88-1477.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-900 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-900`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Enterprise WG Meeting 2〕讲者口述：Doug Rabson（转写音作 Doug rapson）另有一个涉及 podman、FreeBSD 与 OCI 的项目。（YouTube EPrCRi57tdHns，[1104.419-1119.299]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

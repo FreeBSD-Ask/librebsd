@@ -49,3 +49,15 @@ volume: 第17卷-政治制度与社区治理
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-685 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-685`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Day 2024〕讲者 Colin Percival 口述：FreeBSD 13.2 是他本人第一次亲手负责的版本发布，属于他个人发布工作的起点。（YouTube EPK9FNwNhZwog，[844.16-849.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-686 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-686`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Day 2024〕讲者 Colin Percival 口述：已故的副发布工程师（deputy release engineer）Mike Karels（转写音作 Mike Carrells）曾答应接下 FreeBSD 13.4 的发布工作。（YouTube EPK9FNwNhZwog，[1386.48-1393.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

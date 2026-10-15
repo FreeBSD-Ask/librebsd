@@ -99,3 +99,30 @@ volume: 第10卷-openbsd的历史
 - [BSDTalk EP23] Backman W. BSDTalk: 23: bsdtalk023 - Interview with OpenBSD developer Henning Brauer[EB/OL]. (2006-03-10)[2026-08-27]. <https://archive.org/details/bsdtalk023>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-267 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-267`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2013〕讲者口述：OpenSMTPD 可运行于 OpenBSD 5.3 与 Mac OS X。（YouTube EP7kaSyQYYGRQ，[3703.326-3707.157]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-677 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-677`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2013〕讲者口述：relayd（转写音作 Rel lady）的历史起源于 2006 年，讲者在介绍其设计时给出了这一时间起点。（YouTube EPJtMxGslqGbM，[318.07-318.08]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-328 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-328`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Tom Smyth 口述：其网络同时使用 ospfd 与 OSPF（转写音作“ospf 60”），并以 OpenBSD 作为操作系统（YouTube EPat3laddm-T8，[278.24-284.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1157 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1157`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Henning Brauer 口述：他自制的版本中，当 CARP 接口处于 backup 状态时，BGP 会把依赖它的所有会话保持为 idle 状态不做任何事（转写音作 carpenter phase，据其后文 'the carp interface is typically your' 疑为 carp interface）。（YouTube EPy_krYfVqljE，[2149.22-2157.579]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1156 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1156`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Henning Brauer 口述：他自 1996 至 1998 年前后起运营一个 OpenBGPD feed，并重度使用 OpenBSD（转写音作 96 98 ish）（YouTube EPy_krYfVqljE，[63.6-73.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

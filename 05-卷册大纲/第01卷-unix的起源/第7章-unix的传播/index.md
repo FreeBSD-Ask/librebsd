@@ -2116,3 +2116,14 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 2022 年 ;login: 刊文记载：FreeBSD 开发者 Robert Watson 等开发了 Capsicum 内核与库机制，允许程序精确声明自身所需能力并放弃获取新资源的权限，超过 50 个 FreeBSD 程序已改写以使用该机制；该软件能力路线与 CHERI 硬件能力架构共同构成内存安全方案谱系。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1306 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1306`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：今天我们所知的这台计算机，没有 Unix 就不可能存在。（YouTube EPg3jOJfrOknA，[26.8-43.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-809 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-809`；w172 YouTube 章节路由采纳）
+
+据〔November 2021 FreeBSD Vendor Summit〕讲者口述：他介绍 Unix 早期历史，并称 Unix 于几年前刚满五十周年。（YouTube EPoI6Mu8Vlk8A，[118.56-126.389]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

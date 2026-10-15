@@ -88,3 +88,10 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. <https://www.bsdnow.tv/270>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-562 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-562`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：OpenBSD 存在一个针对 unveil 的特殊 pledge（YouTube EPgvmGfpMgny4，[174.099-176.399]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -73,3 +73,30 @@ volume: 第15卷-许可证哲学与法律分析
 ## 史料
 
 - [DB:historical_claims:claim] 关键词行级挖掘素材线索 289.9-关键词行级挖掘素材线索（5 条，CL-RM 段，见 289.9-关键词行级挖掘素材线索.md）
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-573 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-573`；w172 YouTube 章节路由采纳）
+
+据〔November 2023 FreeBSD Vendor Summit〕讲者 Alan Jude 口述：ZFS 需支持 Linux 内核 3.6 至 6.6 的跨版本工作（YouTube EPh5C97dwIjM8，[1422.88-1432.669]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-571 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-571`；w172 YouTube 章节路由采纳）
+
+据〔November 2023 FreeBSD Vendor Summit〕讲者 Alan Jude 口述：Alan Jude 为 Clara 的 CTO 与联合创始人，使用 FreeBSD 逾 20 年（YouTube EPh5C97dwIjM8，[72.04-79.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-572 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-572`；w172 YouTube 章节路由采纳）
+
+据〔November 2023 FreeBSD Vendor Summit〕讲者 Alan Jude 口述：为客户在 0.7 分支上开发特性时面临诸多挑战，首要是 OpenZFS 0.7 时期 Solaris 移植层与 ZFS 本体分属两个 git 仓库（0.8 起已合并），回移植相关修复困难。（YouTube EPh5C97dwIjM8，[1204.28-1212.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1175 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1175`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者接触到的嵌入式产品中，操作系统几乎都是 Linux，而非 FreeBSD、OpenBSD、NetBSD、HardenedBSD、DragonFlyBSD 等 BSD 各系。（YouTube EPyUY09ocwiUQ，[2433-2449.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1176 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1176`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：NetBSD 与 FreeBSD 的 sys 代码行数几乎相同但 CVE 数量不同；NetBSD 在日本 IIJ 的路由器上被广泛部署，讲者未能找到两者完整的用户列表。（YouTube EPyUY09ocwiUQ，[585.2-617.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

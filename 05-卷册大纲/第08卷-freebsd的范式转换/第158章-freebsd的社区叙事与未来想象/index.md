@@ -130,3 +130,29 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 2000年11月;login:刊载的安全专家Blaine Burnham访谈中，当事人明确主张'安全不是附加物（security is not an add-on）'，并指出SOAP协议白皮书将安全视为他人问题、不声称支持安全服务；他还将糟糕代码视为降低攻击者成本的关键因素，反映2000年前后安全界对设计阶段安全的共识性焦虑。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-357 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-357`；w172 YouTube 章节路由采纳）
+
+据〔FOSDEM 2022 FreeBSD 展望〕讲者口述：讲者提及 Syzkaller（转写音作 syscaller）在 FreeBSD RISC-V（转写音作 risk five）上的支持，并呼吁 RISC-V 国际社区赞助（原文“if you have a sponsorship uh with the risk five uh community risk five international uh support uh syscaller on freebsd risk five”，断句不全，未明示是否已上线运行）。（YouTube EPbRQ55YSuBBo，[173.599-176.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-358 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-358`；w172 YouTube 章节路由采纳）
+
+据〔FOSDEM 2022 FreeBSD 展望〕讲者口述：Raspberry Pi 4 可运行 FreeBSD。（YouTube EPbRQ55YSuBBo，[607.76-612.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-356 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-356`；w172 YouTube 章节路由采纳）
+
+据〔FOSDEM 2022 FreeBSD 展望〕讲者口述：Syzkaller（转写音作 syscaller）在 FreeBSD 上发现数百个漏洞，且修复迅速。（YouTube EPbRQ55YSuBBo，[108.56-112.469]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-624 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-624`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Panel〕讲者口述：netscaler 成立于 1998 年，最初选择 FreeBSD 2.2.5（YouTube EPiLYjZ6Ad9TQ，[249.439-258.629]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-623 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-623`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Panel〕讲者口述：自 2000 年加入 netscaler 起负责 FreeBSD，版本从 2.2.5 移植至 4.4、4.9、6.3、8.4（YouTube EPiLYjZ6Ad9TQ，[270.56-282.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

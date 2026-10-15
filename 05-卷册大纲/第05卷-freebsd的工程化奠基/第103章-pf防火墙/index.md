@@ -173,3 +173,15 @@ volume: 第05卷-freebsd的工程化奠基
 - [BSDTalk EP234] Backman W. BSDTalk: 234: bsdtalk234 - Henning Brauer at vBSDCon[EB/OL]. (2013-11-11)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/11/bsdtalk234-henning-brauer-at-vbsdcon.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-678 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-678`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Kristof Provost 口述：FreeBSD 的 pf 是把 OpenBSD 的 pf 代码移植进 FreeBSD 而来的。（YouTube EPJtSg6ylDALo，[671.279-682.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1261 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1261`；w172 YouTube 章节路由采纳）
+
+据 AsiaBSDCon 2014 讲者口述：讲者称该包过滤器（NPF）于 2010 年加入。（YouTube EPcgBh0iC9WhM，[83.189-87.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

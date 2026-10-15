@@ -219,3 +219,25 @@ volume: 第13卷-bsd衍生操作系统
 - [YouTube EPBPDTTqA__xM] YouTube. YouTube: Trying Dragonfly BSD With XFCE Was Surprising![EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=BPDTTqA__xM>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-353 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-353`；w172 YouTube 章节路由采纳）
+
+据〔June 2021 FreeBSD Developer Summit Desktop/Distro Panel〕讲者口述：讲者认为 beehive 中的实现大致停留在 2013 年的技术水平。（YouTube EPBOBXappJk5w，[3140.48-3154.309]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-352 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-352`；w172 YouTube 章节路由采纳）
+
+据〔June 2021 FreeBSD Developer Summit Desktop/Distro Panel〕讲者口述：讲者提到基本系统的二进制直接来自 FreeBSD，当前所处版本为 12.2。（YouTube EPBOBXappJk5w，[832.32-843.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-838 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-838`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Andi Artz 口述：GhostBSD（转写音作 ghostbeasty ghostbc）基于 FreeBSD 13.0 发布，其社区面向日常使用，并欢迎新用户加入。（YouTube EPPHtipWOBbNk，[418.72-429.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-839 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-839`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Andi Artz 口述：他直到 2019 年才开始使用 FreeBSD，属于较晚进入 BSD 阵营的日用桌面用户。（YouTube EPPHtipWOBbNk，[1883.559-1887.269]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

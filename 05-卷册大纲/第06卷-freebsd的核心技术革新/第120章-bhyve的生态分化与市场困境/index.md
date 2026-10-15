@@ -109,3 +109,20 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP128] Pennington J. BSD Now: 128: The State of BSD[EB/OL]. (2016-02-10)[2026-08-15]. <https://www.bsdnow.tv/128>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-385 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-385`；w172 YouTube 章节路由采纳）
+
+据〔User Friendly bhyve 演讲〕讲者 Michael Dexter 口述：FreeBSD 安装程序使用 UFS。（YouTube EPcF-qS7FQNPo，[1399.36-1403.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-384 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-384`；w172 YouTube 章节路由采纳）
+
+据〔User Friendly bhyve 演讲〕讲者 Michael Dexter 口述：bhyve 可运行 Solaris zone 或 Linux 品牌 zone，类似 compat-linux jail。（YouTube EPcF-qS7FQNPo，[1231.679-1240.549]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-702 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-702`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon 2024〕讲者口述：OpenBSD 技术包含 sec0（音作 SEC zero）、sect4、ospf、BGP（YouTube EPko8-nbDRiBQ，[2520.252-2525.522]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

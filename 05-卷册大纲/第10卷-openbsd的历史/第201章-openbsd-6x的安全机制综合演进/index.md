@@ -145,3 +145,25 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. <https://www.bsdnow.tv/203>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-272 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-272`；w172 YouTube 章节路由采纳）
+
+据〔Never lose a Syslog Message 演讲〕讲者口述：讲者称开始改进 syslog 时只有 IPv4，如今 IPv4 与 IPv6 两侧都能承载 UDP、TCP 与 TLS。（YouTube EP8p6lnxClMak，[1498.26-1508.36]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-704 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-704`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者表示将来还会增加一项支持能力（转写音作 SSV SS SMP，讲者当场未展开缩写），服务于 secure nested paging 安全嵌套分页。（YouTube EPKpPY0wKSURM，[1180.16-1189.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-703 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-703`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者说他已经在做的事之一，是让 OpenBSD 作为客户机跑在 Linux KVM 宿主机上，并且这个配置可以启用 SMP。（YouTube EPKpPY0wKSURM，[3046.88-3055.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1290 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1290`；w172 YouTube 章节路由采纳）
+
+据〔Developing Software in a Hostile Environment（Ted Unangst 讲）〕讲者口述：讲者（Ted Unangst）称他们的工作是在开放 BSD 内核里完成的。（YouTube EP_q8zzWHj15Q，[2451.5-2454.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

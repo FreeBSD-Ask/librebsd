@@ -134,3 +134,10 @@ volume: 第08卷-freebsd的范式转换
 - [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. <https://www.bsdnow.tv/164>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-355 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-355`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Fridays〕讲者口述：讲者指出 FreeBSD 13 的工程分支版本为 13.0 加少量增量，并伴随新的安全通告发布。（YouTube EPBRACcRqgnWQ，[2197.119-2203.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

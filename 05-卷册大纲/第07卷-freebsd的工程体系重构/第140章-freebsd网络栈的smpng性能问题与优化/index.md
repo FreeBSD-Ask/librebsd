@@ -87,3 +87,30 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSDTalk EP250] Backman W. BSDTalk: 250: bsdtalk250 - WhatsApp: Half a billion unsuspecting FreeBSD users by Rick Reed[EB/OL]. (2015-01-31)[2026-08-27]. <https://bsdtalk.blogspot.com/2015/01/bsdtalk250-whatsapp-half-billion.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-270 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-270`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 网络栈 NUMA 优化演讲〕讲者口述：团队自 2016 年起流量规模约为 100（原文此处置截断未给单位），这是推动网络栈优化的动因。（YouTube EP8NSzkYSX5nY，[46.98-57.92]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-271 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-271`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 网络栈 NUMA 优化演讲〕讲者口述：讲者提到最初一批针对不同厂商硬件的测试结果，约出自 2018 年秋的 FreeBSD 系统。（YouTube EP8NSzkYSX5nY，[1563.33-1572.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-641 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-641`；w172 YouTube 章节路由采纳）
+
+据〔November 2022 FreeBSD Vendor Summit〕讲者口述：分层公平服务曲线（HFSC）由卡内基梅隆大学开发，约在演讲时点往前二十年。（YouTube EPiZaTBmWejRY，[149.16-155.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-734 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-734`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 软件分段卸载主题演讲〕讲者 Stefano Garzarella口述：FreeBSD 自 7.1 起即已存在该套件的软件实现，硬件卸载版本更易扩展以支持新协议（YouTube EPlP-il89FgSY，[144.44-147.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-808 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-808`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Network Stack Optimizations 报告（来源不详）〕讲者 Robert Watson 口述：某些硬件设备的事务或操作并非原子。（YouTube EPohLVNmI3lCg，[2463.829-2465.28]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

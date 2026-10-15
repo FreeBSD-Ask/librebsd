@@ -135,3 +135,15 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- dangan-20260908 消解回写 -->
 - Watson. R. N. M. et al. (2024). CHERI: Hardware-Enabled C/C++ Memory Protection at Scale. IEEE Security & Privacy, 22(4)[C]. 2024. ［DKC-1908→fulltext:6004］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-782 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-782`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者指出另一种模型是 OpenBSD 的 pledge，与 POSIX capabilities 不同，它收窄的是执行权限范围。（YouTube EPNe4l5U_ETAw，[496.8-506.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-986 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-986`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mariusz Zaborski 口述：截至 2015 年只有少量应用采用 Capsicum，实例包括 kata 与 tcpdump（转写音作“capsicum + knives”，疑为配套组件名讹字）（YouTube EPu-AYkUKOp4w，[310.84-318.48]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

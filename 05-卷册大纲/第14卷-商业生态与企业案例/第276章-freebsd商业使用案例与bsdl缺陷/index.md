@@ -173,3 +173,80 @@ volume: 第14卷-商业生态与企业案例
 - [YouTube EP66enuplpZxw] YouTube. YouTube: Warner Losh - Using FreeBSD in a Commercial Setting[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=66enuplpZxw>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-217 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-217`；w172 YouTube 章节路由采纳）
+
+据〔Fall 2024 FreeBSD Summit〕讲者口述：讲者称部署到家庭内部的设备同样运行 FreeBSD，版本已达 FreeBSD 14.1，即当时最新发行版。（YouTube EP0_etgBlkVas，[597.8-607.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-216 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-216`；w172 YouTube 章节路由采纳）
+
+据〔Fall 2024 FreeBSD Summit〕讲者口述：讲者自述自 2008 年起便在使用 FreeBSD，这段经验是他本次乡村宽带接入分享的前提。（YouTube EP0_etgBlkVas，[156.68-164.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1234 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1234`；w172 YouTube 章节路由采纳）
+
+据 2020 FreeBSD Vendor Summit 讲者口述：2017 年 AsiaBSDCon 上 Intel 宣布加大对 FreeBSD 的支持，向 FreeBSD Foundation 进行了大额投入（原文 big spending），并启动了 FreeBSD 工作组／开发组。（YouTube EP8LUdZseNrpE，[1503-1523.3]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1235 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1235`；w172 YouTube 章节路由采纳）
+
+据 2020 FreeBSD Vendor Summit 讲者口述：不少客户仍误把 FreeBSD 当作一款 Linux 发行版，需要向其说明 FreeBSD 是一个完整的操作系统，而 Linux 只是一个内核。（YouTube EP8LUdZseNrpE，[2299.7-2323.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-494 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-494`；w172 YouTube 章节路由采纳）
+
+据〔MeetBSD 2008〕讲者口述：讲者明确指出，FreeBSD 在当时的闪存（flash memory）支持方面存在很多不足之处，需要持续改进。（YouTube EPFc3xYrxvIU0，[1653.705-1653.743]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-793 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-793`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Mike Wagner（Medify CEO）口述：因空间受限、需将镜像压到极小，Medify 最终采用 FreeBSD 13.2 作为其数据中心节点的系统底座。（YouTube EPNRAFiQDCgM0，[1854.32-1861.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-777 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-777`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2023〕讲者 Michael Dexter 口述：FreeBSD 的 jail 技术自 2000 年前后即开始服役，直到该演讲时已稳定运行约二十余年，堪称相当不错的履历。（YouTube EPN_AkqTzwFro，[657.66-664.009]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-974 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-974`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：ZFS 提供名为 sharenfs 的数据集属性，给某个数据集设置它，就能直接把这个数据集通过 NFS 共享出去。（YouTube EPTwbX5qNiReY，[1796.039-1802.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1023 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1023`；w172 YouTube 章节路由采纳）
+
+据〔AWS 上安装 FreeBSD 演讲〕讲者口述：AWS Lightsail（转写音作 Light Sale）上可在一分钟内跑起可用 FreeBSD 实例。（YouTube EPV9-5QC6vLHY，[294.32-299.749]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1024 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1024`；w172 YouTube 章节路由采纳）
+
+据〔AWS 上安装 FreeBSD 演讲〕讲者口述：该测试选取的操作系统为 FreeBSD 14.2。（YouTube EPV9-5QC6vLHY，[259.28-267.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-881 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-881`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Michael Shirk 口述：其蜜罐环境所参考的真实版本为 Linux 109（转写音原样照录，疑为版本号串读）、FreeBSD 3、Windows NT4 与 NetBSD 1.6。（YouTube EPqmq1GTJuxOw，[381.273-389.505]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-882 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-882`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Michael Shirk 口述：HardenedBSD 是 FreeBSD 的衍生项目，默认加入安全特性。（YouTube EPqmq1GTJuxOw，[182.892-191.186]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-989 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-989`；w172 YouTube 章节路由采纳）
+
+据〔2020 FreeBSD Vendor Summit〕讲者口述：该站提及 Tom Jones 的 Raspberry Pi 相关工作与 Michael Lucas 的 jails 相关工作（YouTube EPu0mG-wSKzn8，[2301.04-2308.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-998 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-998`；w172 YouTube 章节路由采纳）
+
+据〔Fall 2024 FreeBSD Summit〕讲者口述：FreeBSD 12 不含 Open SSL 0.9.8（转写音作 op SSL 9 0.9.8），相关配置在 FreeBSD 9 可用，因此使用 jails。（YouTube EPuFBUtgDyMvA，[591.2-603.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-999 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-999`；w172 YouTube 章节路由采纳）
+
+据〔Fall 2024 FreeBSD Summit〕讲者口述：ktls 是仅 FreeBSD 13.1 才出现的功能。（YouTube EPuFBUtgDyMvA，[1386.919-1395.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

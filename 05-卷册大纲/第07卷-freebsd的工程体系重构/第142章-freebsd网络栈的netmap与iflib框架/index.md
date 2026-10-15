@@ -84,3 +84,75 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSD Now EP111] Pennington J. BSD Now: 111: Xenocratic Oath[EB/OL]. (2015-10-14)[2026-08-15]. <https://www.bsdnow.tv/111>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-307 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-307`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者给出的最后一张图对比了 QUIC（转写音作 quick）与 TCP 搭配 TLS 1.2 或 TLS 1.3 的表现，QUIC 居中。（YouTube EPA2gmtkLMPf8，[2278-2286.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-308 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-308`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者提到本年有 dummynet 相关支持落地 FreeBSD，并点名 Kristof Provost（转写音作 kristoff provost）完成了 v-net 支持。（YouTube EPA2gmtkLMPf8，[2360.88-2365.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-862 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-862`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：讲者推荐 FreeBSD 上一个好用的小工具（转写音作 packag gen），称它由 Luigi Rizzo 加入。（YouTube EPPxnmk_h7CyI，[1175.44-1181.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-861 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-861`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：加密框架 OCF（转写音作 ocf）源自 OpenBSD，NetBSD 与 FreeBSD 也都实现了它；John Mark Gurney（转写音作 gurnie）为 OCF 加入转写音作 asni 的指令支持（原句未明确指令集名）。（YouTube EPPxnmk_h7CyI，[2237.64-2253.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-300 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-300`；w172 YouTube 章节路由采纳）
+
+据〔Netflix 400Gbps FreeBSD 演讲〕讲者 Drew Gallatin 口述：Mellanox ConnectX-6 Dx（转写音作 melon ox connect x6 dx）可卸载 TLS 1.2 与 1.3 的 AES-GCM，为其最常用密码。（YouTube EP_o-HcG8QxPc，[1141.36-1147.909]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-301 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-301`；w172 YouTube 章节路由采纳）
+
+据〔Netflix 400Gbps FreeBSD 演讲〕讲者 Drew Gallatin 口述：KTLS 已向上游合入 FreeBSD。（YouTube EP_o-HcG8QxPc，[2423.28-2429.109]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-375 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-375`；w172 YouTube 章节路由采纳）
+
+据〔netmap-fwd 演讲〕讲者口述：Netmap 可在 Linux、FreeBSD 与 Windows 上运行。（YouTube EPcAVgvzivzII，[129.819-138.173]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-374 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-374`；w172 YouTube 章节路由采纳）
+
+据〔netmap-fwd 演讲〕讲者口述：在 FreeBSD 上使用 netmap-forward 可显著提升转发速率。（YouTube EPcAVgvzivzII，[893.956-898.305]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-725 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-725`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：NetMap 提供体积很小的 pcap 仿真库，只需替换动态库即可让使用 pcap 的应用直接运行于 NetMap 之上。（YouTube EPla5kzNhqhGs，[1145.6-1161.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-724 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-724`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：经改造后，其用户态实现使用标准 libpcap 可达约八十万包每秒，仅把 pcap 库换成 NetMap 即再提速四倍。（YouTube EPla5kzNhqhGs，[1355.5-1385.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-723 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-723`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：作为参照，free/vs（转写音作 free v s，非 Free vSwitch）深度桥接约七十万包每秒；改用 libpcap 仿真做接口间转发可达约七百五十万包每秒。（YouTube EPla5kzNhqhGs，[1319.8-1349.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-796 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-796`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2014 (P3B)〕讲者 Luigi Rizzo 口述：英特尔的 DPDK 设有两层 Netmap 兼容层，一层在 DPDK 之上模拟 Netmap，另一层在 Netmap 之上模拟 DPDK。（YouTube EPnW8iHgOL9y4，[903.4-919.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-797 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-797`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2014 (P3B)〕讲者 Luigi Rizzo 口述：其学生 Vincenzo Maffione 于二月做出该网络后端（转写音作 BI，转写未能辨明所指）在 Netmap 上的首个原型，讲者随后补上事件支持（转写音作 TQK，转写未能辨明所指）。（YouTube EPnW8iHgOL9y4，[927.7-965]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1155 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1155`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Michio Honda 口述：PASTE 的 netmap 扩展最初在 Linux 上实现，如今正在移植到 FreeBSD（YouTube EPy_F-8HijfOA，[1476.32-1483.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

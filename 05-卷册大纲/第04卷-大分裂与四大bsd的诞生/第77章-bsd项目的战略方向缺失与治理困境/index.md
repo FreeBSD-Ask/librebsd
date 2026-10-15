@@ -145,3 +145,24 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 2000 年前后，斯坦福大学在公共集群上以 Kerberos 单点登录配合 rsh 脚本实现远程批量管理，少数管理员即可管理数百台主机、每台约 30000 活跃账户；同期系统管理实践普遍采用 OS 加固（关闭不必要服务与 setuid 程序）以降低提权风险。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1184 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1184`；w172 YouTube 章节路由采纳）
+
+据〔DCBSDCon〕讲者 Jason Dixon 口述：DragonFly BSD 项目起于 FreeBSD 4.8 的延续，创始者因其对 SMP 线程模型的愿景而分叉。（YouTube EPYzXLwhkBe80，[994.5-998.78]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1185 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1185`；w172 YouTube 章节路由采纳）
+
+据〔DCBSDCon〕讲者 Jason Dixon 口述：BSD 开发一度延续向 POSIX 合规推进；讲者称 AT&T 代码已成累赘（'the AT&T code was a hassle'），故引出 CSRG 的 Keith Bostic。（YouTube EPYzXLwhkBe80，[637.03-644.98]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-534 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-534`；w172 YouTube 章节路由采纳）
+
+据〔NYCBSDCon 2007〕讲者 Jason Dixon 口述：1986 年 4.3BSD 相对 4.2BSD 引入性能改进；1988 年发布 4.3BSD-Tahoe（YouTube EPg7tvI6JCXD0，[404.1-413.299]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-533 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-533`；w172 YouTube 章节路由采纳）
+
+据〔NYCBSDCon 2007〕讲者 Jason Dixon 口述：1983 年 4.2BSD 使用来自 BBN 的 TCP/IP（YouTube EPg7tvI6JCXD0，[390.539-394.159]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

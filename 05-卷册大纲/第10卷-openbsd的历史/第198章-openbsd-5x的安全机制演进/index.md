@@ -123,3 +123,15 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP19] Pennington J. BSD Now: 19: The Installfest[EB/OL]. (2014-01-08)[2026-08-15]. <https://www.bsdnow.tv/19>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-663 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-663`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mariusz Zaborski 口述：至 2015 年 Capsicum 已在若干工具中实现（YouTube EPjHfjEJIdmTQ，[385.72-391.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-662 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-662`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mariusz Zaborski 口述：Capsicum 于 FreeBSD 9 引入（YouTube EPjHfjEJIdmTQ，[106.96-114.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

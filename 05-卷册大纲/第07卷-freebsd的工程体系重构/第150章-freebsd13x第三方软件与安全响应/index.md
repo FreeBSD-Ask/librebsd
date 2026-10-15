@@ -51,3 +51,15 @@ volume: 第07卷-freebsd的工程体系重构
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-500 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-500`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Thomas Munro 口述：举例说明曾运行大规模 illumos ZFS 上 PostgreSQL 数据库集群的团队经验（YouTube EPfdbO5Jpopbg，[445.12-452.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1205 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1205`；w172 YouTube 章节路由采纳）
+
+据讲者 Matthias Wolf 口述：Chromium 移植到 FreeBSD 后已能无缝进行网络会议。（YouTube EPzHKn-56nxRE，[112-117.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

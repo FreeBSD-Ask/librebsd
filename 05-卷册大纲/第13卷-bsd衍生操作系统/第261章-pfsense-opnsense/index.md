@@ -95,3 +95,35 @@ volume: 第13卷-bsd衍生操作系统
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 pfSense/OPNsense 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-365 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-365`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者仅提及项目支持 TLS 1.2，但该项目的 TLS 支持实际可达 1.3。（转写音作 TLs）（YouTube EPByvSwhCl8k8，[243.2-255.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-316 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-316`；w172 YouTube 章节路由采纳）
+
+据〔pfSense 网络边缘冗余讲座〕讲者 Chris Buechler 口述：pfSense 使用 IPFW 实现 captive portal 功能。（YouTube EPaElQidbWUxA，[284.8-287.28]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-315 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-315`；w172 YouTube 章节路由采纳）
+
+据〔pfSense 网络边缘冗余讲座〕讲者 Chris Buechler 口述：pfSense 1.2.2 基于 FreeBSD 7.0 基本系统构建。（YouTube EPaElQidbWUxA，[454.12-456.469]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-389 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-389`；w172 YouTube 章节路由采纳）
+
+据〔2010 NYCBSDCon〕讲者 Chris Buechler 口述：当时 pfSense 稳定版为 1.2.8.3，基于 FreeBSD 7.2；2.0 beta 基于 FreeBSD 8.1，即将进入 RC1。（YouTube EPckesvwkNiJE，[897.2-913.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-390 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-390`；w172 YouTube 章节路由采纳）
+
+据〔2010 NYCBSDCon〕讲者 Chris Buechler 口述：pfSense 立项评估时，OpenBSD 尚无 WPA 与 WPA2 支持，且没有加入计划。（YouTube EPckesvwkNiJE，[394.3-422.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-924 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-924`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mariusz Zaborski 口述：FreeBSD 有两个主要文件系统，分别是 ZFS 与 NewFS（转写音作 new FS）。（YouTube EPry_TNXz-A2E，[466.509-473.629]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

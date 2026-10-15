@@ -103,3 +103,19 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 2000 年前后，斯坦福大学在公共集群上以 Kerberos 单点登录配合 rsh 脚本实现远程批量管理，少数管理员即可管理数百台主机、每台约 30000 活跃账户；同期系统管理实践普遍采用 OS 加固（关闭不必要服务与 setuid 程序）以降低提权风险。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1008 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1008`；w172 YouTube 章节路由采纳）
+
+据〔服务器迁移讲座〕讲者 Stefan 口述：BSD 常用特性含 ZFS、Bhyve（转写音作 Behive）与 jail；DragonFly BSD 另有 Hammer 2 文件系统。（YouTube EPUnVp25-6Qao，[2028.08-2038.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1129 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1129`；w172 YouTube 章节路由采纳）
+
+据〔BSD 4 Linux Users (October 2009)〕讲者口述：BSD 各发行版均提供 binary emulation，可在 BSD 上直接运行 Linux、Solaris、SCO 二进制文件。（YouTube EPxk6ouxX51NI，[1177.2-1191.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1130 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1130`；w172 YouTube 章节路由采纳）
+
+据〔BSD 4 Linux Users (October 2009)〕讲者口述：ZFS 与 DTrace 已内建 FreeBSD；OpenBSD 提出了开放冗余协议 CARP。（YouTube EPxk6ouxX51NI，[1194.1-1209.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

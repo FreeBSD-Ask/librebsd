@@ -85,3 +85,45 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- dangan-20260908 消解回写 -->
 - Corbet. J. (2007-08-07). On DTrace envy. LWN.net. lwn.net/Articles/244536/[Z]. 2007. ［DKC-1901→fulltext:6001］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-503 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-503`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2023〕讲者口述：DTrace 于 2005 年源自 Solaris，其后在若干年后被移植到 FreeBSD。（YouTube EPFffzafx0sng，[44.28-51.369]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-789 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-789`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者 Brian Kidney 口述：现今各平台的 DTrace 实现多派生自 illumos（转写音作 Lumos），而 FreeBSD 的 DTrace 则是从 Solaris 直接取来的。（YouTube EPNMUf6VGK2fI，[2683.57-2694.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-788 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-788`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者 Brian Kidney 口述：DTrace 的一项变更由 Matthew Aaron 在 2016 年秋季提交，随后由 Mark Johnson 完成把它向 FreeBSD 的移植工作。（YouTube EPNMUf6VGK2fI，[1125.6-1138.46]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1059 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1059`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者 Arun Thomas 口述：DTrace 于 2008 年并入 FreeBSD，随后在 FreeBSD 中默认启用。（YouTube EPVstwq5l_dwY，[696.949-702.639]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1060 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1060`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者 Arun Thomas 口述：DTrace 始于 2001 年开发，并于 2003 年集成进 Solaris。（YouTube EPVstwq5l_dwY，[524.34-530.54]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1336 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1336`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：他本人创建了首个通用 Unix 内核跟踪包。（YouTube EPWY7hRTiFLKM，[72.1-77.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-383 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-383`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2023〕讲者 Tim Elniski 口述：讲者将 ASLR、Capsicum 以及 pledge、unveil 一律排除在本场告警方案范围之外。（转写音作 aslr is out of scope capsicum comes out of scope pledge unveil all out of scope）（YouTube EPcE_xwH_FFXs，[226.2-235.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-921 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-921`；w172 YouTube 章节路由采纳）
+
+据〔The School of Hard Knocks - Part 1 报告（来源不详）〕讲者 Sevan Janiyan 口述：Brian Cantrell 2009 年做过一场 DTrace 早期史演讲。（YouTube EPrV-J0ITkq4g，[514.95-522.62]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

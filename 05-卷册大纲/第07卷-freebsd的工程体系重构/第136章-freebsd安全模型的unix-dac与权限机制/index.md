@@ -101,3 +101,29 @@ volume: 第07卷-freebsd的工程体系重构
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-880 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-880`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：讲者指出 NFSv4 ACL 的能力覆盖 POSIX ACL，凡是 POSIX ACL 能做到的访问控制操作，用 NFSv4 ACL 同样都能实现。（YouTube EPQmkkjPpnBrg，[199.45-204.069]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-879 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-879`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：讲者主要讨论 NFSv4 ACL，指出这类访问控制列表在 ZFS 与 UFS（转写音作 u FS）两种文件系统中均已实现。（YouTube EPQmkkjPpnBrg，[145.85-159.25]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1264 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1264`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：该提权方案自 FreeBSD 14.2 起就已内置于操作系统之中。（YouTube EPdA-TNsVG9IY，[66.04-69.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-630 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-630`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon（标题截断）〕讲者 Dag-Erling Smørgrav 口述：讲者引用的一张界面截图取自 FreeBSD 5.3。（YouTube EPiRQvrrIhq0k，[363.68-369.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-631 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-631`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon 2012〕讲者 Dag-Erling Smørgrav 口述：讲者展示的 login.conf 配置文件（转写音作 login.com）来自 FreeBSD 4.3，并说明这并非该功能引入之时，而是 FreeBSD 开始实际使用之时。（YouTube EPiRQvrrIhq0k，[420.319-430.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

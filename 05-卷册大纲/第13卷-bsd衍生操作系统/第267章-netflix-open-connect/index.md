@@ -146,3 +146,39 @@ Michele Crabb（NASA NAS 系统安全分析师）关于安全策略设计的经�
 
 该记录为 ;login: 2006年4月刊（Vol.31 #2）的目录页与刊头信息，属数据库遍历中的结构性噪声形态。虽含 OpenSolaris、MINIX 3、John Lions 基金等与 UNIX 社区史相关的条目标题，但本记录仅提供篇名索引，无正文内容，不构成可承载历史主张的一手文本。目录行与刊头按既有规则通常不入库；若后续遍历到其中具体文章（如 OpenSolaris:The Model 或 Lions Chair 基金公告）可单独判定。。引用时按 L1 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-248 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-248`；w172 YouTube 章节路由采纳）
+
+据〔Netflix 内核改造演讲〕讲者口述：Netflix 流媒体服务器运行 FreeBSD 10，其上 Web 服务器采用 Engine X（引文转写为 engine X，实为 nginx）、BGP 采用 Bird。（YouTube EP4sZZN8Szh14，[212.949-216.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-554 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-554`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：Netflix 在仓库内建一个 subtree（转写音作 sube）模块，以提供 FreeBSD 的完整历史与精确提交。（YouTube EPGQ0mvmZtbaY，[324.199-332.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-555 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-555`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：Netflix 先从 FreeBSD 历史起点执行 split，再每隔数月继续拆分剩余历史。（YouTube EPGQ0mvmZtbaY，[2230.119-2236.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-784 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-784`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Open Connect CDN 自建立之初便一直使用 FreeBSD Current 作操作系统、Nginx 作 Web 服务器、BIRD 作路由与智能代理。（YouTube EPnHG8d14FWxY，[262.2-292.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-785 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-785`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：构建该 CDN 时设计目标很简单：使用开源软件，并能高效读盘与向网络 socket 写数据。（YouTube EPnHG8d14FWxY，[262.2-292.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1033 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1033`；w172 YouTube 章节路由采纳）
+
+据讲者口述：该 FreeBSD 分支约三年前拆出，并有 11.1 等特定点版本。（YouTube EPveQwkG0WdN8，[1301.24-1306.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1032 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1032`；w172 YouTube 章节路由采纳）
+
+据讲者口述：Netflix 用 FreeBSD 与商用硬件实现每秒 90 吉比特、承载 100% TLS 流量。（YouTube EPveQwkG0WdN8，[761.36-766.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

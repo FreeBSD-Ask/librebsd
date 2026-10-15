@@ -60,3 +60,15 @@ volume: 第13卷-bsd衍生操作系统
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-673 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-673`；w172 YouTube 章节路由采纳）
+
+据〔November 2021 FreeBSD Vendor Summit〕讲者口述：Junos 5.0 于 2001 年 8 月发布（YouTube EPjoqeT-9uiZI，[265.759-268.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-672 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-672`；w172 YouTube 章节路由采纳）
+
+据〔November 2021 FreeBSD Vendor Summit〕讲者口述：1998 年 7 月 FreeBSD 2.2.7 发布。（YouTube EPjoqeT-9uiZI，[214.319-218.869]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -72,3 +72,15 @@ volume: 第05卷-freebsd的工程化奠基
 <!-- dangan-20260908 消解回写 -->
 - Barham. et al. (2003) Xen SOSP[C]. 2003. ［DKC-1783→fulltext:5975］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-371 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-371`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：jail 于 2000 年加入 FreeBSD，至今已有 18 年，与 bhyve 一样在系统中仍属“异类”。（转写音作 jail arrived in 2000 and so 18 years）（YouTube EPC8gei7BadqI，[224.019-232.619]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-560 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-560`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Kristof Provost 口述：IPv6 分片处理曾多次损坏，因此他把这部分从 OpenBSD 解放（转写音作 liberated，实为移植）过来。（YouTube EPgTyt7KLz1mw，[248.389-257.529]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

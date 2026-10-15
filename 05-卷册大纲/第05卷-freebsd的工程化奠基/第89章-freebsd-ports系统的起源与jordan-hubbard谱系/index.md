@@ -155,3 +155,19 @@ volume: 第05卷-freebsd的工程化奠基
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-221 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-221`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Bitrig 在 2014 年发布了 1.0 版本。（YouTube EP0wy8ZLDtyLE，[259.299-262.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-765 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-765`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：Baptiste Daroussin 说明 FreeBSD 移植树已同时认识 ARMv6 与 MIPS64 架构，为跨平台构建 ports tree 提供架构层起点。（YouTube EPMt_EYfIHx9M，[67.56-75.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-741 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-741`；w172 YouTube 章节路由采纳）
+
+据〔Installing a Port on FreeBSD 教程（来源不详）〕讲者口述：ports 集合取自 get.freebsd.org 的 ports.git 仓库（转写音作 ports.get）。（YouTube EPlywkQkTXMEY，[77.42-86.69]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

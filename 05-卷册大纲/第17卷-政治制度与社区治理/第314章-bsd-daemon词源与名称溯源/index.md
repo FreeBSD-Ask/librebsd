@@ -79,3 +79,20 @@ volume: 第17卷-政治制度与社区治理
 - [FLOSS Weekly EP662] Searls D, Powers S. FLOSS Weekly: FreeBSD with Deb Goodkin[EB/OL]. (2022-01-05)[2026-08-15]. <https://cdn.twit.tv/audio/floss/floss0662/floss0662.mp3>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1259 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1259`；w172 YouTube 章节路由采纳）
+
+据 Fall 2024 FreeBSD Summit 讲者口述：（某作品）是为 4.4 BSD 委托创作的。（YouTube EPbKAp9Wremd0，[2355.52-2359.349]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1257 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1257`；w172 YouTube 章节路由采纳）
+
+据 Fall 2024 FreeBSD Summit 讲者口述：（他们）终于完成 4.3 BSD 教材。（YouTube EPbKAp9Wremd0，[1286.799-1290.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1258 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1258`；w172 YouTube 章节路由采纳）
+
+据 Fall 2024 FreeBSD Summit 讲者口述：1988 年（该书）终于准备出版，但到那时版本已从 4.2 变为 4.3，因此第一本出的书对应 4.3。（YouTube EPbKAp9Wremd0，[1427.039-1435.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

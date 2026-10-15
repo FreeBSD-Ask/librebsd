@@ -111,3 +111,25 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSDTalk EP233] Backman W. BSDTalk: 233: bsdtalk233 - From GCC to LLVM/CLANG with David Chisnall[EB/OL]. (2013-11-01)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/11/bsdtalk233-from-gcc-to-llvmclang-with.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-319 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-319`；w172 YouTube 章节路由采纳）
+
+据〔LLDB 调试器讲座〕讲者 Ed Maste 口述：1993 年发布的 FreeBSD 1.0 中已包含 gdb 3.5。（YouTube EPaG3vdyA1XBo，[86.63-91.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-867 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-867`；w172 YouTube 章节路由采纳）
+
+据〔LLDB FreeBSD Kernel Module Improvement 报告（来源不详）〕讲者 ShengYi Hung 口述：FreeBSD 在十余年前（原文 above 10 or 15 years ago）把某项基础组件由 G 换成了 LV——原文该处缺词且为缩写（changed the to from G to LV），具体所指无法从转写确证；讲者随后举出编译器由 GCC 换成 CL、C++ 库以及链接加载器等工具链组件随之更换为例。（YouTube EPq_Kzdr6LcNI，[105.96-118.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1279 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1279`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：LD BFD 于 1993 年已具备相关（格式）支持。（原句 ASR 讹 'do' 应为 'ld'。）（YouTube EPtkL88X1IPVA，[407.16-410.189]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1280 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1280`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：工程师在 2006 年前后启动了 gold（链接器）。（YouTube EPtkL88X1IPVA，[451.56-455.909]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -37,3 +37,15 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 linux-kernel.duckdb
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-935 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-935`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Tomohiro Kusumi（转写音作 Tommoiro Kusumi）多次表示要将 HAMMER1 移植到 FreeBSD 与 OpenBSD。（YouTube EPsGBZc3rhE9M，[3017.04-3025.109]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-936 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-936`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：相关项目始于 23 年前，由 Andrew Moore、Jeff Schneider、Arto Dubski（转写音作 Arto Dubski）等人发起。（YouTube EPsGBZc3rhE9M，[168.8-176.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

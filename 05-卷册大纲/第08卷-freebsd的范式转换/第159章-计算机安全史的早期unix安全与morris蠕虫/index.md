@@ -96,3 +96,10 @@ volume: 第08卷-freebsd的范式转换
 - [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. <https://www.bsdnow.tv/281>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1269 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1269`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2022〕讲者 Samuel Aubertin 口述：本议题涉及 Ken Thompson 的论文《Trusting Trust》，讲者口述年份为 1974（紧随的转写另出现 84，年份存疑）。（YouTube EPikAbK9HFwkI，[205.58-215.509]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

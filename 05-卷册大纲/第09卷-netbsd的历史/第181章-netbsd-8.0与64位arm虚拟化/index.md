@@ -100,3 +100,15 @@ volume: 第09卷-netbsd的历史
 <!-- dangan-20260908 消解回写 -->
 - Bluetooth. SIG. Bluetooth BR/EDR Security Vulnerability [EB/OL]. (2019)[2026-07-22]. <https://www.bluetooth.com/security/>[EB/OL]. 2019. ［待核·needs_fix］［DKC-2443→fulltext:6190］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-266 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-266`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者自二零零九年起担任 NetBSD 提交者，致力于构建更快启动的微虚拟机。（YouTube EP6znKosuX3EM，[136.67-142.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-539 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-539`；w172 YouTube 章节路由采纳）
+
+据〔NetBSD 8.0 前瞻（会议不详，推测）〕讲者口述：讲者明确表示并未纳入 HAMMER 文件系统，其中一个原因是它涉及 VFS 层的改动。（YouTube EPG9tqr9LlnHY，[996.579-1009.079]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
