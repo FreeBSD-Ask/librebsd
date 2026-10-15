@@ -184,3 +184,55 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. <https://www.bsdnow.tv/50>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1272 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1272`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：SSL 3.0 于 1996 年发布。（YouTube EPMCVIBwGOwNY，[168.209-171.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1273 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1273`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：TLS 1.0 于 1999 年引入。（YouTube EPMCVIBwGOwNY，[195.569-200.839]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1271 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1271`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：SSL 2.0（zero）于 1995 年发布。（YouTube EPMCVIBwGOwNY，[154.799-158.839]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1274 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1274`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：TLS 1.1 于 2006 年发布。（YouTube EPMCVIBwGOwNY，[219.87-225.14]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1281 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1281`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：2014 年的 Heartbleed 漏洞直接促使 OpenSSH 开发者从 OpenSSL 分叉出 LibreSSL。（YouTube EPW0qxHckVA9Y，[146.1-166.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1283 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1283`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Hardened BSD 与 TrueOS 的下一版本都将采用 LibreSSL；TrueOS 为滚动发布版本、已实际使用 LibreSSL，而 Hardened BSD 的当前分支已默认采用 LibreSSL，其 10/11 分支也将转向基于 LibreSSL。（YouTube EPW0qxHckVA9Y，[2082.7-2105.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1282 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1282`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Hardened BSD 是 FreeBSD 的分叉版本，添加了包括 ASLR 在内的一系列安全特性。（YouTube EPW0qxHckVA9Y，[1637.2-1647.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-345 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-345`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2022〕讲者 Theo Buehler 口述：OpenBSD 全系统均在使用 LibreSSL，凡涉及 TLS 的部分统一调用 libtls。（YouTube EPbF1d_aCSzS0，[368.66-376.85]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-344 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-344`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2022〕讲者 Theo Buehler 口述：LibreSSL 中一项清室重写的 TLS 1.3 协议栈实现（转写音作 tls313；上下文为 record layer 与 handshake state machine，疑即 TLS 1.3），主要完成于 2018 至 2020 年。（YouTube EPbF1d_aCSzS0，[389.28-400.49]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-608 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-608`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Ted Unangst 口述：FreeBSD 发布的安全公告与 OpenSSL 公告等价，但发布时间晚一个多月（YouTube EPi9ibV-sPPz0，[806.63-814.88]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

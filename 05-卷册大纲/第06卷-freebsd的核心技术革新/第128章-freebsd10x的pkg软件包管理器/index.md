@@ -164,3 +164,15 @@ volume: 第06卷-freebsd的核心技术革新
 - [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=rGdylV-Up_E>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1100 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1100`；w172 YouTube 章节路由采纳）
+
+据〔pkgbase 演讲〕讲者口述：pkgbase 内含 FreeBSD 引导加载器（bootloader）包，该包涵盖所有 boot 相关文件（除内核外），另含引导配置文件。（YouTube EPWp4u-SoJw1g，[757.9-759.93]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-811 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-811`；w172 YouTube 章节路由采纳）
+
+据〔pkg 包管理工具教程〕讲者口述：pkg 包管理工具支持从 ports 集合安装软件，FreeBSD 9.1 之前的用户需回忆旧流程（YouTube EPoKfbW8Qdu9c，[2.36-6.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

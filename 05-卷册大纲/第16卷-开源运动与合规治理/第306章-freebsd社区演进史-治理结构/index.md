@@ -173,3 +173,70 @@ volume: 第16卷-开源运动与合规治理
 - [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=XUj2vCKtegU>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-211 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-211`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020-04-16〕讲者口述：FreeBSD 剩余工作是拉入新版并替换旧的 illumos 版 ZFS 副本。（YouTube EP-MpltC87L3E，[1215.5-1226.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-212 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-212`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020-04-16〕讲者口述：自 FreeBSD 12.1 版本起，FreeBSD 已发布通用 ZFS 支持。（YouTube EP-MpltC87L3E，[3017.659-3021.759]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-264 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-264`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020-04-01〕讲者口述：FreeBSD 需要来自我们旧版 Solaris 兼容层的一些代码。（YouTube EP6qBm5NM3zTQ，[191.81-197.729]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-297 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-297`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020年5月27日〕讲者 Kevin Bowling 口述：Kevin Bowling 参与 FreeBSD 时间较长，2014 年起更深度参与开发。（YouTube EP_NLEM2zebTM，[282.65-294.61]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1241 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1241`；w172 YouTube 章节路由采纳）
+
+据 FreeBSD Office Hours (2020-07-08) 讲者口述：FreeBSD 在 2020 年近期举行过一次治理机构（governing body）选举。（YouTube EP_gS9YDySvGI，[11.04-17.109]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1243 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1243`；w172 YouTube 章节路由采纳）
+
+据 FreeBSD Office Hours (2020-07-08) 讲者口述：BSDCan 在讲者所说的上年于 6 月举行。（YouTube EP_gS9YDySvGI，[1556.24-1558.789]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1242 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1242`；w172 YouTube 章节路由采纳）
+
+据 FreeBSD Office Hours (2020-07-08) 讲者口述：一名 FreeBSD 核心团队成员目前供职于 Intel。（YouTube EP_gS9YDySvGI，[337.52-340.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1244 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1244`；w172 YouTube 章节路由采纳）
+
+据 FreeBSD Office Hours (2020-07-08) 讲者口述：讲者提及上年（last year）BSDCan 之后曾在基奇纳（Kitchener）举办一场黑客马拉松（原文如此，由 edmast 组织、Mark Johnson 协助）——原文“in kitchener after bsd can last year”，基奇纳系修饰该黑客马拉松而非 BSDCan。（YouTube EP_gS9YDySvGI，[3117.52-3120.39]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-348 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-348`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020年8月19日〕讲者口述：OpenZFS 将移植回 FreeBSD，以取代较旧的 illumos 分支 ZFS。（YouTube EPbIdXSeTphKA，[1053.76-1060.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-349 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-349`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020年8月19日〕讲者口述：OpenZFS 下一主版本 2.0 大致定位为 2021 年版本。（YouTube EPbIdXSeTphKA，[1196.08-1203.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-480 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-480`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours 2020-07-07〕讲者口述：该讲者曾任职于一家基于 FreeBSD 打造产品的公司，并于 2005 年获得 FreeBSD 提交权限（YouTube EPexxgZoephis，[111.439-121.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-749 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-749`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Kirk McKusick 口述：FreeBSD 早期核心团队先由 Bill 负责，其后为当日在场的 Mike Karl's、讲者本人与 Keith Bostick。（YouTube EPmfOrJ8zUdM8，[353.03-362.86]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1026 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1026`；w172 YouTube 章节路由采纳）
+
+据〔September 2024 Developer Summit〕讲者口述：FreeBSD 拥有原生 OpenZFS 集成，据讲者称是地球上唯一如此且已运行 jails 数十年的操作系统。（YouTube EPva3HFhiDF8c，[2164.48-2172.069]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

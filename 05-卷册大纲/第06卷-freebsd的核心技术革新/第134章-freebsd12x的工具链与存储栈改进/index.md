@@ -126,3 +126,15 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. <https://www.bsdnow.tv/88>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-241 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-241`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit〕讲者口述：讲者指出，为 ZFS 引入引导代码更新器才是这项改动的最主要驱动因素。（YouTube EP4GjJ7MDSzSQ，[324.96-332.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-254 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-254`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者提到该可复现构建流程自干净检出起产出 FreeBSD 10.3 全部二进制构件。（YouTube EP53ZxvFiCHmU，[332.34-334.74]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

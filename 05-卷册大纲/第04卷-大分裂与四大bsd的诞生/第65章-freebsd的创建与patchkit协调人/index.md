@@ -110,3 +110,15 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - [YouTube EPnwbqBdghh6E] YouTube. YouTube: FreeBSD Kernel Internals, Dr. Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=nwbqBdghh6E>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-908 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-908`；w172 YouTube 章节路由采纳）
+
+据〔June 2022 FreeBSD Developer Summit〕讲者口述：讲者自称 FreeBSD 项目三位原始创始人之一，另两位为 Roger Scherl（转写音作 Rod Grimes）与 Nate Williams。（YouTube EPRJ_r50qlh2s，[49.053-55.696]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-909 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-909`；w172 YouTube 章节路由采纳）
+
+据〔June 2022 FreeBSD Developer Summit〕讲者口述：讲者提及当年系统运行于 VAX 与 SunOS core，而 SunOS 正是 Solaris 的前身。（YouTube EPRJ_r50qlh2s，[90.152-96.317]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

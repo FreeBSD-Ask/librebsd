@@ -145,3 +145,10 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. <https://www.bsdnow.tv/185>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-659 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-659`；w172 YouTube 章节路由采纳）
+
+据〔November 2021 FreeBSD Vendor Summit〕讲者口述：FreeBSD 以自定义端口形式获得 ZFS（转写音作 cfs）支持；2010 年起转写音作 finance 的一方切换使用 ZFS。（YouTube EPjeKLvleCQ9w，[298-308.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

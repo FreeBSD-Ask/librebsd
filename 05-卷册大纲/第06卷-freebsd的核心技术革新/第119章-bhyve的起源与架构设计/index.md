@@ -140,3 +140,95 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP20] Pennington J. BSD Now: 20: Bhyve Mind[EB/OL]. (2014-01-15)[2026-08-15]. <https://www.bsdnow.tv/20>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-458 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-458`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2023〕讲者口述：讲者强调模拟方面目前仅支持直通 passthrough，尚不支持虚拟 TPM。（YouTube EPEg_Q7Smx1s4，[1051.04-1061.45]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-457 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-457`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2023〕讲者口述：讲者称其当前实际支持 TPM 2.0（转写音作 PPM、EDM version 2.0），也就是最新的 TPM 版本。（YouTube EPEg_Q7Smx1s4，[1032.919-1043.809]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1303 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1303`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：本次演讲的主题是在 bhyve（转写讹作 beehive）上引导 Linux 内核。（YouTube EPFNgVqw8CsIQ，[21.4-23.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1278 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1278`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：讲者于 2012 年开始从事 BSD 系统相关工作，起点项目为 DragonFly BSD。（YouTube EPOGMBwnx6J-Y，[60.8-69.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-847 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-847`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：在启用全盘加密的 FreeBSD 加 ZFS 安装场景下，VZVOL 会改用第二个 zpool，但用户仍可手动指定覆盖默认选择。（YouTube EPPoHsYzzzp8Q，[840.589-847.689]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-949 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-949`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者称自己于 2015 年开始移植 bhyve（转写音作 behive），该项目即本次演讲主题。（YouTube EPT7rXyPXpQyc，[256.079-261.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1010 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1010`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Alexandru Elisei 口述：FreeBSD 内核在裸机启动时依赖描述镜像自身与启动环境的数据，该信息由启动引导程序负责提供（YouTube EPUoPcKlaywCg，[268.6-274.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1009 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1009`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Alexandru Elisei 口述：所依据的代码基线为 2017 年 7 月版本，bhyve 的 arm64 已在 ARM（转写音作“Barr”）为 ARMv8 CPU 制作的基础平台仿真器上运行（YouTube EPUoPcKlaywCg，[147-158.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-303 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-303`；w172 YouTube 章节路由采纳）
+
+据〔qemu bsd-user 上游化讲座〕讲者 Warner Losh 口述：在 FreeBSD 上直接运行 NetBSD 二进制文件此前从未可行，这正是 bsd-user 上游化要解决的问题之一。（YouTube EP_Pv1qjwhYVs，[1842.24-1846.389]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-350 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-350`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan〕讲者 Maria-Elena Mihailescu 口述：其开发 bhyve（转写音作 Beehive）代码，并在 OpenBSD（转写音作 OpenVBSD）10.3 上测试，因当时为稳定版。（YouTube EPbIYOdtDtaKo，[1075.4-1096.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-351 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-351`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan〕讲者 Maria-Elena Mihailescu 口述：bhyve 保存恢复项目起于 Bucharest 理工大学，同事已实现 Intel CPU 的保存恢复，涵盖客户机物理内存、APIC 相关组件及虚拟 Hyper-precision Event Timer 等设备。（YouTube EPbIYOdtDtaKo，[184-217.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-391 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-391`；w172 YouTube 章节路由采纳）
+
+据〔bhyve 硬件加速 GPU 演讲〕讲者 Michael Chiu 口述：在 bhyve 中运行 FreeBSD 客户机必须使用 UEFI 加载器。（YouTube EPckqveGsIcA0，[541.09-545.82]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-392 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-392`；w172 YouTube 章节路由采纳）
+
+据〔bhyve 硬件加速 GPU 演讲〕讲者 Michael Chiu 口述：相关限制位于 FreeBSD 的 UEFI 加载器（转写音作 su Fei loader）。（YouTube EPckqveGsIcA0，[1405.67-1411.21]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1277 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1277`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：讲者于 2012 年开始从事 BSD 系统相关工作，起点项目为 DragonFly BSD。（YouTube EPogfxNScy5OM，[60.8-69.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-902 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-902`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Vincent Milum Jr 口述：他使用多台 Raspberry Pi，让它们指向同一个 iSCSI 存储，从而可以迁移虚拟机。（YouTube EPrEhUXKc9f-U，[396.88-402.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-903 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-903`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Vincent Milum Jr 口述：项目遇到许多待处理的问题，其中 FreeBSD 的 SMP 在首日不工作。（YouTube EPrEhUXKc9f-U，[268.68-275.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-919 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-919`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者 Mihai Carabas 口述：他已从事 FreeBSD 项目四年，四年前从 DragonFly BSD 转而来做 bhyve（转写音作 beehive）。（YouTube EPrtTjweOVYkk，[54.289-61.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1101 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1101`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2014〕讲者 Peter Grehan 口述：讲者讨论按需分页的利弊，指出 FreeBSD 已有一个管理分页结构的模块。（YouTube EPwptkUxJSNMY，[561.11-562.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

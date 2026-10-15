@@ -93,3 +93,25 @@ FreeBSD 的经济结构从诞生起就带着一个悖论：BSDL 允许任何人�
 - [BSDTalk EP72] Backman W. BSDTalk: 72: bsdtalk072 - Interview with Poul-Henning Kamp about Varnish[EB/OL]. (2006-10-02)[2026-08-27]. <https://archive.org/details/bsdtalk072>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-263 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-263`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2014〕讲者口述：讲者按字母序列举四家发行版：DragonFly BSD、FreeBSD、NetBSD 与 OpenBSD。（YouTube EP6eKMLuzsTbY，[234.799-237.12]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1086 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1086`；w172 YouTube 章节路由采纳）
+
+据〔鼓励 SME 参与 BSD 贡献演讲〕讲者口述：FreeBSD Foundation 在推广 BSD 方面表现优异（YouTube EPWfFXt1gM8tQ，[180-185.869]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-894 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-894`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者介绍了 pfSense（转写音作 PF / PFSense）的联合创始人 Chris。（YouTube EPr_u0SSUk9pM，[1813.64-1823.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-895 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-895`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：团队在 Azure 上支持的 FreeBSD 版本从 10 起。（YouTube EPr_u0SSUk9pM，[3517.52-3525.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

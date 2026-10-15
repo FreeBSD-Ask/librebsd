@@ -294,3 +294,15 @@ volume: 第18卷-全球社区地区bsd史
 - [BSDTalk EP76] Backman W. BSDTalk: 76: bsdtalk076 - OpenBSD Developer Marc Balmer[EB/OL]. (2006-10-12)[2026-08-27]. <https://archive.org/details/bsdtalk076>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-535 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-535`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon Recap〕讲者 Patrick McEvoy 口述：自 2016 年起一直在处理 BSDCan 开发峰会与 FreeBSD 欧洲开发峰会（quote 仅 'doing the dev summit'，未明说制作视频）（YouTube EPg9cfKXRkCkw，[1026.8-1044.3]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-536 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-536`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon Recap〕讲者 Patrick McEvoy 口述：某设备目前在 Mauser 上标价约八百美元，而 DCH 正推动社区定价（YouTube EPg9cfKXRkCkw，[1263.7-1288.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

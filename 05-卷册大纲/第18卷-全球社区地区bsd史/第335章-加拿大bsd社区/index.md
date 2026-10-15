@@ -163,3 +163,10 @@ volume: 第18卷-全球社区地区bsd史
 - [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. <https://www.bsdnow.tv/626>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1265 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1265`；w172 YouTube 章节路由采纳）
+
+据 BSDCan（年份不详）讲者口述：该活动是一场 PGP 密钥签名会，属于 birds of a feather 类活动。（YouTube EPdHDQyMZPQ1M，[11.4-15.869]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

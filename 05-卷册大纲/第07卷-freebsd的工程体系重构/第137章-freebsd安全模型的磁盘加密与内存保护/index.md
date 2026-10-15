@@ -87,3 +87,54 @@ volume: 第07卷-freebsd的工程体系重构
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-229 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-229`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者向听众声明自己是 HardenBSD 项目的联合创始人之一。（YouTube EP2lon3X3__5o，[237.47-243.62]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-228 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-228`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Apple 于 2007 年开始为 OS X 10（转写音作 OS 10）研发 ASLR，2012 年完成；至于 OpenBSD，讲者此前称其 2004 年起已开始实施 ASLR（quote‘in 2008 OpenBSD’句被截断，未给出其动作）。（YouTube EP2lon3X3__5o，[624.79-636.06]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-444 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-444`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者口述：讲者说明 OpenSSL 属于 FreeBSD base 的一部分，因此把公钥信任基础设施设计成基于 X.509 证书。（YouTube EPDYHhTT05_7E，[809-818.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-826 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-826`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 John Baldwin 口述：有驱动已包含 OCF（转写音作 ocf）支持，据称已测试过 kTLS 与 ZFS 两种用途。（YouTube EPOxnrUwtVZ0U，[3411.92-3419.829]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1150 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1150`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018 Simon Gerraty 演讲〕讲者 Simon Gerraty 口述：许多人误以为没有 TPM 就无法启用 secure boot（YouTube EPY0ljyA68B94，[2934.16-2940.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-644 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-644`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 John Mark Gurney 口述：他自 1997 年起即为 FreeBSD 提交者（转写音作 John Mark Carney，实为 John Mark Gurney）。（YouTube EPj4ICLdGAwVw，[26.97-33.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-645 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-645`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 John Mark Gurney 口述：GELI 支持 CBC 加密模式。（YouTube EPj4ICLdGAwVw，[334.03-338.409]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-646 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-646`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 John Mark Gurney 口述：在 FreeBSD 上测量性能的另一工具是 DTrace。（YouTube EPj4ICLdGAwVw，[2314.54-2321.94]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-696 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-696`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：该 FreeBSD 启动安全方案采用 TPM 2.0。（YouTube EPkgq3y4fCWWc，[1238.56-1245.93]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-831 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-831`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：约两年前在保加利亚举行的 EuroBSDCon 期间，Colin 与 Chris Moore 曾合作完成相关工作。（YouTube EPp_rsW88FA54，[2380.16-2392.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

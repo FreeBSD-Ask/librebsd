@@ -169,3 +169,60 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP19] Pennington J. BSD Now: 19: The Installfest[EB/OL]. (2014-01-08)[2026-08-15]. <https://www.bsdnow.tv/19>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-230 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-230`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者口述：讲者称其团队（时称 PC-BSD）到 2015 年 12 月已实际拥有基于 FreeBSD current 的滚动构建。（YouTube EP30V_clQToRw，[579.8-585.64]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-768 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-768`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2008〕讲者 Matt Olander 口述：现场演示的 PC-BSD 系统基于 FreeBSD 6.3，讲者据此给出肯定答复。（YouTube EPN0q37X-MJzY，[1423.89-1428.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-769 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-769`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2008〕讲者 Chris 口述：PC-BSD 1.6 计划于当年夏末发布，首个版本将基于 FreeBSD 7 重构，并希望同时采用 ZFS。（YouTube EPN0q37X-MJzY，[1666.78-1683.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1189 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1189`；w172 YouTube 章节路由采纳）
+
+据〔PC-BSD 安装器讲座〕讲者 Kris Moore 口述：PC-BSD 安装器支持 UFS 软更新、GJOURNAL 与 ZFS 等多种文件系统。（YouTube EPZ0yOuDelXUU，[295.24-297.08]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1188 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1188`；w172 YouTube 章节路由采纳）
+
+据〔PC-BSD 安装器讲座〕讲者 Kris Moore 口述：其称团队在上一个发布约六个月后推出了 8.0（原文 'we released 8.0 6 months after'；可见上下文内未出现 FreeBSD 8.0，基准版本无法确认）。（YouTube EPZ0yOuDelXUU，[1253.039-1254.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-320 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-320`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Kris Moore 口述：PC-BSD 安装程序的初始设置包含本地用户、磁盘选项与文件系统选项，可选带日志的 UFS 或 ZFS（YouTube EPaHRRa-OvwxM，[284.88-290.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-361 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-361`；w172 YouTube 章节路由采纳）
+
+据〔PC-BSD 演进至 TrueOS 演讲〕讲者 Kris Moore 口述：OpenSSL 是备受关注的目标（原句止于“OpenSSL has been a very high-profile target for everybody and OpenBSD”，其后语无转写可据）。（YouTube EPbwbLuQDoxuQ，[865.91-868.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1068 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1068`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2014〕讲者 Kris Moore 口述：直接引导 FreeBSD 内核是通过一种特殊的 ZFS 数据布局实现的（YouTube EPw-0PlAVSg5U，[146.33-148.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1067 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1067`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2014〕讲者 Kris Moore 口述：其可回滚启动方案先用 GRUB 直接引导 FreeBSD 内核（YouTube EPw-0PlAVSg5U，[139.61-141.02]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1069 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1069`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：相关结果将包含于 PC-BSD 10.1，其发布时间与 FreeBSD 10.1 一致。（YouTube EPw-OoWiSldcQ，[1329.59-1338.61]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1070 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1070`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者自述名为 Chris Moore（转写音作 Chris Moore，正字为 Kris Moore），并为该组织创始人。（YouTube EPw-OoWiSldcQ，[71.15-77.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

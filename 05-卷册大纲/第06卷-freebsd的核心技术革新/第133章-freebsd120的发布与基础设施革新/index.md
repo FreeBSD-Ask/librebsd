@@ -138,3 +138,10 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. <https://www.bsdnow.tv/276>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-305 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-305`；w172 YouTube 章节路由采纳）
+
+据〔Unbound & FreeBSD 演讲〕讲者 Pablo Carboni 口述：实测环境为 Dell PowerEdge 运行 FreeBSD 8.4 于 AMD64 架构。（YouTube EP_xCh20l-vHA，[460.92-471.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

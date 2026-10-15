@@ -105,3 +105,125 @@ volume: 第10卷-openbsd的历史
 <!-- /PODCAST_REVIEW -->
 
 > （2026-09-12 整改：原 dangan-20260908 消解回写块（“IT. 之家 2024-05-17 报道”条，含内部工单标记 DKC-0046→fulltext:5461、[EB/OL] 重复、URL 系腾讯云开发者转载非一手）删除留痕；如该报道确有史料价值须另行按规范著录后归档——批次 C218 问题 5。）
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-283 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-283`；w172 YouTube 章节路由采纳）
+
+据〔The OpenBSD Hypervisor in the wild 演讲〕讲者口述：讲者称自己只提供 OpenBSD 虚拟机而非 Linux 虚拟机，且当时 OpenBSD 6.6 即将发布。（YouTube EP9TuWCR9X-wY，[445.31-454.45]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-396 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-396`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者约在三年前在 OpenBSD 中实现了 VXLAN 控制器这一组件。（YouTube EPCuo0qT-lqig，[46.462-57.176]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-542 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-542`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者 Reyk Floeter 口述：OpenBSD 虚拟机守护进程的客户机支持中 FreeBSD 仍在推进，此前因未满足若干假设而受阻。（YouTube EPGEXzo6hRf3M，[983.12-996.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-563 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-563`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者正在为 OpenBSD 处理 Hyper-V 驱动相关工作，依据是 FreeBSD 侧已经有可用的同类驱动可以移植参考。（YouTube EPGWwhgIPdKH0，[2920.599-2930.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-755 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-755`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2023〕讲者 Otto Moerbeek 口述：OpenBSD 在 2008 年（距演讲时约十五年前）改用自有的 malloc 实现，在那之前 OpenBSD 与 FreeBSD 一样沿用同一套 malloc 实现。（YouTube EPMIjUsv91rXg，[76.82-90.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-976 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-976`；w172 YouTube 章节路由采纳）
+
+据讲者口述：OpenBSD 4.5（转写音作 LWBV 4.5）仅收录 72 个传感器驱动，讲者预计 4.6 版将增至 76 个，仍低于原订目标。（YouTube EPTwcWU626TzI，[2030.8-2042.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-975 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-975`；w172 YouTube 章节路由采纳）
+
+据讲者口述：OpenBSD 的传感器子系统于 1999 或 2000 年被引入，2003 年由 Alexander Yershov 报告并加入了 lm4 与 amp 两个传感器驱动。（YouTube EPTwcWU626TzI，[1704.1-1721.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-310 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-310`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Iain R. Learmonth 口述：OpenBSD 于 1995 年自 NetBSD 分叉，此后力求默认安全并重视代码质量。（YouTube EPa2ttG9bdfig，[1312.48-1324.31]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-311 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-311`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Iain R. Learmonth 口述：LibreSSL 提供了新的 libtls API。（YouTube EPa2ttG9bdfig，[2233.599-2241.109]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-611 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-611`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Laurent Bernaille 口述：迄今 AWS 对 OpenBSD 仍无官方 MI 支持（转写音作 MI；MI 指 OpenBSD 的 machine-independent，机器无关代码）。（YouTube EPicR06naQ8LI，[3077.73-3086.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-627 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-627`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者称约五年前该技术突然以内核驱动形式出现在 OpenBSD（转写音作 open V on openbsd）上，且当时实现相当简陋。（YouTube EPipbPcNXeDj4，[371.08-379.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-679 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-679`；w172 YouTube 章节路由采纳）
+
+据〔NYC*BUG 2023〕讲者 Ori Bernstein 口述：GEFS 快照代计数机制借鉴自 ZFS；Matt Ahrens 于 2019 年 BSDCan 曾演讲详解该机制（YouTube EPjuFndFy72gI，[1149.2-1172.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-738 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-738`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Massimiliano Stucchi 口述：他通过 pfctl 填写 table，把现场看到正在攻击目标的 IP 地址加进去。（YouTube EPlty1aqNgqkU，[6737.28-6748.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-801 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-801`；w172 YouTube 章节路由采纳）
+
+据〔Modernizing relayd & the road to HTTP/2 报告（来源不详）〕讲者 Reyk Floeter 口述：libtls（转写音作 Lib tlf）是不错的 TLS 库，构建在 libssl 之上。（YouTube EPo4T41IQFhMg，[965.36-978.31]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-842 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-842`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：当时显而易见的选择是采用 FreeBSD 或 NetBSD 的 rc.d 与 rc.order。（YouTube EPpjHDvO_haQY，[598.24-606.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-841 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-841`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：他们曾快速考察过 Solaris 与 Illumos 的 SMF（转写音作 SMH SMF）以及 launch（转写音作 launchd）方案。（YouTube EPpjHDvO_haQY，[476.36-481.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-877 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-877`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon〕讲者 Dave Voutila 口述：NetBSD 与 OpenBSD 在 UVM 上已大量分化，而 FreeBSD 如今使用的是一套完全不同的虚拟内存框架。（YouTube EPqKrxVzS96BM，[1710.72-1723.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-885 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-885`；w172 YouTube 章节路由采纳）
+
+据〔Why rewrite fw_update(8)? 报告（来源不详）〕讲者 Andrew Hewus Fresh 口述：fw_update 的 FTP 组件虽已 pledge 与 unveil，仍属旧实现。（YouTube EPqsGBjXzI9OU，[1782.76-1789.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-987 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-987`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Ayaka Koshibe 口述：Mininet 的 OpenBSD 端口自 2017 年 8 月起合入 ports 树，讲者另维护一个也支持 FreeBSD 的 Mininet（转写音作 mignonette）GitHub Fork。（YouTube EPu-E8emCBGXI，[2654.859-2662.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-988 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-988`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Ayaka Koshibe 口述：Mininet Fork 在 FreeBSD 上运行于 VM 中的 jails 内（转写音作 vm h jails）。（YouTube EPu-E8emCBGXI，[2662.9-2681.22]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1119 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1119`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon 2012〕讲者 Philip Guenther 口述：Solaris 9 及 FreeBSD 在相关线程实现上采用了相同方式。（YouTube EPxAJpfy_Hhy4，[152.56-164.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1118 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1118`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon 2012〕讲者 Philip Guenther 口述：Solaris、FreeBSD、NetBSD 采用 jump table 作为线程切换的已知方法。（YouTube EPxAJpfy_Hhy4，[2698.88-2706.309]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1164 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1164`；w172 YouTube 章节路由采纳）
+
+据〔OpenBSD 技术分享〕讲者口述：DTrace 在 Solaris 发布数年后约 2007 年进入 macOS，并延伸至 FreeBSD、NetBSD、Linux。（YouTube EPyHKx57Wv6DA，[291.7-301.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1165 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1165`；w172 YouTube 章节路由采纳）
+
+据〔OpenBSD 技术分享〕讲者口述：DTrace 最初为 Solaris 开发，之后也被 FreeBSD 与 NetBSD 采用。（YouTube EPyHKx57Wv6DA，[74.61-85.49]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -87,3 +87,25 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. <https://www.bsdnow.tv/580>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-591 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-591`；w172 YouTube 章节路由采纳）
+
+据〔May 2024 FreeBSD Developer Summit〕讲者口述：讲者在发布工程讨论中指出，FreeBSD 14.0 的开发离不开 OpenSSL 3 的支持。（YouTube EPHNpKdPOa2ro，[490.039-494.629]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-932 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-932`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：FreeBSD 项目的持续集成历史横跨 2002 年至 2014 年，其间有多个阶段性的研究与改进工作。（YouTube EPSCLfKWaUGa8，[296.06-308.92]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-486 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-486`；w172 YouTube 章节路由采纳）
+
+据〔June 2022 FreeBSD Developer Summit〕讲者口述：Cirrus CI 已有一个开放票据，目的是为 FreeBSD 增加原生 arm64 支持。（YouTube EPf_j14OtqllE，[2364.96-2370.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-487 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-487`；w172 YouTube 章节路由采纳）
+
+据〔June 2022 FreeBSD Developer Summit〕讲者口述：团队向 Google Compute Engine 申请 FreeBSD 13.1 镜像，规格为 8 核、8GB 内存。（YouTube EPf_j14OtqllE，[1382.4-1392.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

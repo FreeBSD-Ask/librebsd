@@ -363,3 +363,45 @@ volume: 第05卷-freebsd的工程化奠基
 - [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=rGdylV-Up_E>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-395 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-395`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Stefan Grönke 口述：libiocage 为保证 jail 网络隔离，必须借助 IPFW 建立二层过滤。（YouTube EPCTGc3zYToh0，[584.24-593.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-438 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-438`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：据讲者引述的检索结果，最早的 jail 类代码是在 1975 年 7 月 18 日至 1979 年 5 月 7 日之间加入 BSD 的（转写音作 gel-like）；jail 此后持续演进，现代形态出现于 1998 年（YouTube EPDShkyYlqpmw，[502.409-525.519]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-439 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-439`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：可把 ZFS 数据集乃至整个 zpool 委派（delegate）给 jail；讲者已将其用于大型话单系统，并用 ls -vfs 说明 jail 内外各自可管理的范围（YouTube EPDShkyYlqpmw，[1901.72-1925.26]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-860 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-860`；w172 YouTube 章节路由采纳）
+
+据〔May 2008 developer Vimage report〕讲者口述：2008 年该 vimage 报告说明，jail 内行为若违反权限约束会被拦下，因 FreeBSD 在 vimage 中做了权限虚拟化。（YouTube EPPx-pSXm32dE，[3686.27-3688.39]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1134 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1134`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018 FaaS 演讲〕讲者 Brian Downs 口述：FreeBSD FaaS 系统组件包括 jail、ZFS 及 Go（转写音作 go ZFS）。（YouTube EPXpdO3RaqXY4，[160.68-168.05]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-337 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-337`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 容器实现演讲〕讲者 Luca Pizzamiglio 口述：FreeBSD 中启动与停止 jail 非原子操作。（YouTube EPb0IB0mc2KTE，[1956.84-1963.01]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-690 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-690`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Dan Langille 口述：jails 于 FreeBSD 4.0 引入，距今近 20 年（YouTube EPkAJ7RzfPaLA，[253.81-265.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1215 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1215`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2022〕讲者 Yan Ka Chiu 口述：其生产环境中 NFS 服务器在导出数据集之前会先克隆该数据集（YouTube EPzN7BRJIm5NY，[2046.48-2054.57]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

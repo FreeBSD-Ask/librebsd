@@ -104,3 +104,60 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- dangan-20260908 消解回写 -->
 - Watson. R. N. M. et al. (2024). CHERI: Hardware-Enabled C/C++ Memory Protection at Scale. IEEE Security & Privacy, 22(4)[C]. 2024. ［DKC-1908→fulltext:6004］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-676 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-676`；w172 YouTube 章节路由采纳）
+
+据〔November 2023 FreeBSD Vendor Summit〕讲者口述：讲者称 FreeBSD 首版发布于 1993 年，1996 年即出现缓冲区溢出黑客写手文 Smashing the Stack for Fun and Profit。（YouTube EPJsQoonHCGAw，[145.12-166.959]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-675 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-675`；w172 YouTube 章节路由采纳）
+
+据〔November 2023 FreeBSD Vendor Summit〕讲者口述：讲者援引 Wikipedia 指出，缓冲区溢出作为攻击手段最早见于 1972 年的一份文献。（YouTube EPJsQoonHCGAw，[85.119-97.64]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-990 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-990`；w172 YouTube 章节路由采纳）
+
+据〔November 2023 FreeBSD Vendor Summit〕讲者口述：1988 年 Morris 蠕虫使用的多种手段之一就是缓冲区溢出，讲者以此讲缓冲区溢出史。（YouTube EPU3lfk3tNEWU，[119-127.469]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1249 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1249`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：CheriBSD 是一个 FreeBSD 的研究分支，旨在支持 Cheri CPU。（YouTube EPaMbuSbQM7Bo，[14.8-37.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1251 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1251`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：该团队在 ASPLOS 2015 发表过一篇关于其 C 语言模型的论文，并由此认识到指针必须独立于 base 与 length 之外存在。（YouTube EPaMbuSbQM7Bo，[2645.6-2658.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1250 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1250`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：CheriBSD 于 2013 年迁移到 GitHub。（YouTube EPaMbuSbQM7Bo，[2046.1-2050.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-354 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-354`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit, June 2022〕讲者口述：即便已有 AddressSanitizer 与静态分析，缓冲区溢出问题依然普遍存在（YouTube EPbP546j9REKg，[202.48-206.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-373 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-373`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Brooks Davis 口述：2010 年做出的决策是在 MIPS 上采取新增指令特性的兼容扩展路径（转写音作“the MIPS II thing”）（YouTube EPcAuhWjDDM0k，[2125.29-2131.849]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-372 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-372`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Brooks Davis 口述：CheriABI 相关工作仍在进行，在 DARPA 项目资助下将 ISA 从 MIPS 移植到 RISC-V（转写音作“risk 5”）（YouTube EPcAuhWjDDM0k，[2406.109-2412.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-977 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-977`；w172 YouTube 章节路由采纳）
+
+据〔CheriBSD 技术分享〕讲者 Andrew Turner 口述：讲者为 FreeBSD committer 约 10 年，主要工作为 arm64，副业项目为内核移植。（YouTube EPtwZXvKNZOvU，[25.039-32.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1171 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1171`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Fridays〕讲者口述：CHERI 项目最初以 MIPS 平台为基础（转写音作 cherry）。（YouTube EPyrk5FfjHDCo，[2088-2091.669]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

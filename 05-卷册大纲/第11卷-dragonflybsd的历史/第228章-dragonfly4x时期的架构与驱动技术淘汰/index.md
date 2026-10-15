@@ -56,3 +56,25 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
 > 2011-2018 年间：568,339 次提交。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-215 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-215`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：相较多数现代特性来源，FreeBSD 决定保留旧版 DRM 实现。（YouTube EP-wzPzyv2qK8，[606.05-613.37]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-214 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-214`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：FreeBSD 的 Radeon 驱动开发者以 Linux 3.8 为基础，OpenBSD 亦针对 Linux 3.8。（YouTube EP-wzPzyv2qK8，[663.81-674.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-720 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-720`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 François Tigeot 口述：他自二〇一二年夏天开始移植 i915 显卡驱动。（YouTube EPl8JfLKvuLE4，[522.64-538.56]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-721 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-721`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 François Tigeot 口述：DragonFly BSD 于二〇〇三年由 Matthew Dillon 从 FreeBSD 分叉而来。（YouTube EPl8JfLKvuLE4，[53.219-66.17]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

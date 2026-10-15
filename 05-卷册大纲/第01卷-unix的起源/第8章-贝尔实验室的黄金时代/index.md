@@ -330,3 +330,74 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1285 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1285`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕口述：到 1971 年，UNIX 已在 PDP-11 上运行。（YouTube EP6LMs3yOMF3Y，[858.7-863]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1286 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1286`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕口述：1971 至 1972 年间，Dennis Ritchie 着手改造 B 语言。（YouTube EP6LMs3yOMF3Y，[1096.5-1100.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-281 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-281`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：在梳理 Unix 谱系时，讲者指出 1964 年 AT&T 联合 GE 与 MIT 共同创建 Multics 项目。（YouTube EP9tQw75-vlDI，[37.28-43.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-282 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-282`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者提到 Zork 1 的早期版本是一个 PDP-11 二进制程序，可在 4.2 BSD 上以仿真模式运行。（YouTube EP9tQw75-vlDI，[2471.24-2477.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1296 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1296`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述（Brian Kernighan）：其职业生涯延续至 2000 年仍在贝尔实验室任职。（YouTube EPECCr_KFl41E，[28-29]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1301 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1301`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：团队在 PDP-11 上决定编写 UNIX。（YouTube EPEY6q5dv_B-o，[2650.1-2658]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1300 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1300`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：UNIX 源于 Multics 项目经验。（YouTube EPEY6q5dv_B-o，[1046.7-1054]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1318 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1318`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：Brian Kernighan 著有《UNIX: A History and a Memoir》，并共同创建了 awk。（YouTube EPO9upVbGSBFo，[29.4-38]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1319 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1319`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：到 1969 年，有一群人刚刚完成 Multics 的工作。（YouTube EPO9upVbGSBFo，[284-293]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1320 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1320`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：到 1991 年，Torvalds 决定开发一个 unix-like 系统。（YouTube EPO9upVbGSBFo，[1708.4-1717.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1317 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1317`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：Brian Kernighan 与 Dennis Ritchie 合著了 C 编程语言。（YouTube EPO9upVbGSBFo，[14.8-23.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1338 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1338`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：1969 年贝尔实验室的计算机科学家常·汤普逊与丹尼斯·里奇开始开发自用程序，其后演化为如今广泛使用的 Unix 操作系统（原文 "Babs"、"Richie" 为 Bell Labs、Ritchie 之 ASR 讹字）。（YouTube EPXvDZLjaCJuw，[14.7-34.3]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1173 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1173`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：其 1980 年加入贝尔实验室从事 Unix 性能工程（YouTube EPYsZ-Kf3T9A0，[17-35.3]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1174 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1174`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：其首台 Unix 主机为 1982 至 1983 年间部署于波士顿科普利广场的机器（YouTube EPYsZ-Kf3T9A0，[35.3-53.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

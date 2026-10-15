@@ -128,3 +128,25 @@ volume: 第10卷-openbsd的历史
 <!-- dangan-20260908 消解回写 -->
 - OpenBSD. Canada Not-For-Profit Corporations Act S.C. 2009, c. 23[EB/OL]. 2009. ［待核·needs_fix］［DKC-0036→fulltext:5460］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-255 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-255`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：路由表功能补齐 IPv6 支持，赶在 OpenBSD 5.5 发布前完成。（YouTube EP5bcsDxmE0-A，[165.84-173.839]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-794 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-794`；w172 YouTube 章节路由采纳）
+
+据 Peter Hansteen 讲者口述：FreeBSD 内置的 pf 大致等同于 OpenBSD 4.5 的版本，任何 4.5 之后的新特性都已超出 FreeBSD 现有 pf 的范围。（YouTube EPNRUHSEqHwgA，[950.28-956.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-844 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-844`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Aaron Poffenberger 口述：对无法投递的邮件先回 451 让对方重试，讲者称 OpenBSD 最早在 3.5 版实现了它。（YouTube EPPKY6rSpzTIQ，[528.05-536.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-845 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-845`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Aaron Poffenberger 口述：他使用跑在 OpenBSD 上的 BGPSPAMD（转写音作 BGP spam D），并信赖其默认名单条目。（YouTube EPPKY6rSpzTIQ，[1395.45-1405.73]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

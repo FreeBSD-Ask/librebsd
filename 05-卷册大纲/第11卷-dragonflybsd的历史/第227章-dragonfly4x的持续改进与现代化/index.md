@@ -74,3 +74,30 @@ volume: 第11卷-dragonflybsd的历史
 > 2003-2026 年间：656,207 次提交。
 
 <!-- /DB_REF -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1248 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1248`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：DragonFlyBSD 网络栈中 send(2) 完全异步——UDP socket 的 send(2) 错误无人关心，TCP 的 send(2) 错误即连接断开，故无需同步调用 send(2)。（YouTube EPAblGHmmGmho，[2643.1-2657.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1247 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1247`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：DragonFlyBSD 网络栈不区分 UDP/TCP/ICMP 包，仅用 packet hash 分发并把它们统一放入同一侧（原文讹字 NDR）。（YouTube EPAblGHmmGmho，[2537.2-2550.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1246 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1246`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：DragonFlyBSD 网络栈的内核线程之间不会互相抢占，因此用户线程可能阻塞 TCP 线程、TCP 线程可能阻塞网卡线程。（YouTube EPAblGHmmGmho，[2525.6-2537]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-670 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-670`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Francois Tigeot 口述：DragonFly 上最早的 PostgreSQL PGbench 测试于 2011 年 11 月进行（转写音作 PG benched Rams）（YouTube EPjLMeK-sTymM，[221.93-232.02]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-669 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-669`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Francois Tigeot 口述：DragonFly BSD 由 Matthew Dillon 于 2003 年自 FreeBSD 4 分叉（YouTube EPjLMeK-sTymM，[74.21-84.52]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

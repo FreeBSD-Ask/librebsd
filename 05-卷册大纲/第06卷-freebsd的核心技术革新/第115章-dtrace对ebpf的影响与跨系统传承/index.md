@@ -126,3 +126,30 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- dangan-20260908 消解回写 -->
 - Corbet. J. (2007-08-07). On DTrace envy. LWN.net. lwn.net/Articles/244536/[Z]. 2007. ［DKC-1901→fulltext:6001］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-958 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-958`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Ryan Stone 口述：讲者称其工作是把 eBPF 带入 FreeBSD，并与 Capsicum 结合实现通常所称的 oblivious sandboxing（无意识沙箱）。（YouTube EPTGA4wbjbqXc，[28.16-35.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-959 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-959`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Ryan Stone 口述：他称 FreeBSD 已成功把大量 base 系统工具转进 Capsicum 沙箱内运行。（YouTube EPTGA4wbjbqXc，[41.2-48.709]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1289 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1289`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：eBPF 实际上是基于 FreeBSD 中的经典 BPF，eBPF 于 2014 年被引入 Linux。（YouTube EP__2WUqcTJjg，[48.1-58.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-510 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-510`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mateusz Piotrowski 口述：基准测试中 FreeBSD 侧使用 UFS 文件系统，Linux 侧使用 XFS。（YouTube EPfM2UGCCqL7g，[1397.94-1406.09]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-511 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-511`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mateusz Piotrowski 口述：真实世界的追踪在 FreeBSD 上应使用 VFS provider，而非 fbt。（YouTube EPfM2UGCCqL7g，[933.42-941.09]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

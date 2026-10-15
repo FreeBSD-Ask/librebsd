@@ -112,3 +112,25 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSDTalk EP61] Backman W. BSDTalk: 61: bsdtalk061 - Interview with lighttpd developer Jan Kneschke[EB/OL]. (2006-08-15)[2026-08-27]. <https://archive.org/details/bsdtalk061>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-601 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-601`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Paweł Jakub Dawidek 口述：pfsync 会同步集群节点间的 failover 状态（转写音作 PF Sync）（YouTube EPi0KFFsdebpM，[348-360.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-600 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-600`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Paweł Jakub Dawidek 口述：FreeBSD 自带的 ZFS 提供 send/receive，可按时间间隔发送文件系统之间的差异（YouTube EPi0KFFsdebpM，[333.2-346.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-599 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-599`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Paweł Jakub Dawidek 口述：FreeBSD 以 CARP（Common Address Redundancy Protocol）在节点间协商 master 与 slave 角色（YouTube EPi0KFFsdebpM，[227.6-242.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-923 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-923`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit, June 2021〕讲者口述：为 Wireshark 添加 CAMcorder 的自定义 pcap（custom pcaps）有多种方式，讲者希望能做到这一点。（YouTube EPrxU7HAlUchg，[986.56-996.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

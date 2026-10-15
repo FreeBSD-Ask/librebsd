@@ -46,3 +46,10 @@
 - OpenZFS 开发讨论在 openzfshackers 邮件列表
 - illumos 邮件列表讨论 ZFS 内核移植
 - Solaris/SunOS ZFS 起源讨论在 Sun Developer Network（已归档）
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1245 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1245`；w172 YouTube 章节路由采纳）
+
+据 OpenZFS Dev Summit 2014 讲者口述：ZFS on Linux 当时的当前版本为 0.6.3（原文口述讹字 on links、063）。（YouTube EP_MVOpMNV7LY，[19.359-26.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

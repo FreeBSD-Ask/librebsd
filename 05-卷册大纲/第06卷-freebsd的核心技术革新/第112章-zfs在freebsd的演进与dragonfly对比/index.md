@@ -353,3 +353,410 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- dangan-20260908 消解回写 -->
 - OpenZFS. Project. *Feature Flags Documentation* [EB/OL]. 获取路径：<https://openzfs.github.io/openzfs-docs/Basic%20Concepts/Feature%20Flags>[EB/OL]. 2026. ［DKC-1987→fulltext:6029］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-218 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-218`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者提出 OpenZFS 3.0 发布设有一系列 aspirational（远景）目标。（YouTube EP0_Gr0ojL104，[142.16-149.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-225 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-225`；w172 YouTube 章节路由采纳）
+
+据〔ZFS 性能排障演讲〕讲者口述：协议层观察到 1 G 吞吐后，讲者转而检查 VFS，改为直接在 ZFS 上执行测试。（YouTube EP1fnhpRGuY0s，[924.56-931.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-238 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-238`；w172 YouTube 章节路由采纳）
+
+据〔ZFS ARC 演讲〕讲者 George Wilson 口述：所讨论的 ARC 相关修复均已纳入 OpenZFS 2.0（转写音作 open cfs 2.0）。（YouTube EP3xKeUAmxvM8，[1212.96-1217.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-278 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-278`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者指出在 Solaris 上可以把数据集的一个子集的控制权委派给容器、jail 或 zone。（YouTube EP9o61ozATAoQ，[106.5-112.85]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-340 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-340`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：讲者 Jitendra Patidar 指出，ZFS send/recv 的流式代码优化已被纳入 ZFS 2.1 版本发布。（YouTube EPB6HFHPXJYGc，[347.84-365.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-387 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-387`；w172 YouTube 章节路由采纳）
+
+据〔August 2024 OpenZFS Leadership Meeting〕讲者口述：讲者讨论 310 是否真实存在，以及 311 与 4.0 这些版本号的支持策略。（YouTube EPChqQ_YYAHpk，[438.68-447.029]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-409 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-409`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者最初开发该功能初始版本时直接基于 OpenZFS 2.0 之前的 ZFS；此后 FreeBSD 中全部 ZFS 代码已从 sys/cddl/uts/common/fs/zfs 迁至 cddl/contrib/openzfs（转写音作 sys cdl open / cis contrib）（YouTube EPD7Unkq1WXW0，[1589.919-1616.31]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-408 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-408`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：相关讨论曾在 2018 年的两个场合出现，即 Datto 主办的 ZFS User Summit 与同年稍晚的 OpenZFS Dev Summit。（YouTube EPD7Unkq1WXW0，[26.88-36.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-452 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-452`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2019〕讲者口述：CDDL 许可始于约 2005 年，2007 年移植到 FreeBSD，2008 年在 Linux 上启动运行，2010 年出现转折。（转写音作 CDL）（YouTube EPE8kAVmvlBLQ，[96.409-109.679]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-583 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-583`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS European Conference 2015〕讲者口述：讲者表示，Intel 及其他若干厂商实际上已经在 ZFS on Linux 之上支持 Lustre 文件系统（转写音作 luster）。（YouTube EPHhje5KEF5cE，[1325.669-1336.279]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-616 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-616`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：ztest 做测试时用普通文件充当 vdev 的后端（backing vdevs），而这一能力自 ZFS 诞生之初就已具备。（YouTube EPIDK9xCzLuEc，[139.24-153.88]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-634 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-634`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者指出自 FreeBSD 9.2 起，ZFS 就已具备 trim 相关能力。（YouTube EPITxwrmESLAI，[319.184-324.276]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-726 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-726`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：Paul Dagnelie 与 Dan Kimmel（转写音作 Paul dagnelli、Dan Kimmel）长期投入 ZFS send 与 receive。（YouTube EPLaNgoAZeTww，[0-9.77]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-767 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-767`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者提到这个补丁已被拆分，其中一部分由他的同事在两个月前贡献进了 Linux 的 VFS 实现。（YouTube EPN0OZN8Z2IX0，[525.12-531.26]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-816 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-816`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS Leadership Meeting 2020-08〕讲者口述：讲者大约两个月前为 FreeBSD Journal 写过一篇文章，内容是介绍 OpenZFS 2.0 将带来的新东西。（YouTube EPOpvyKVjHEFE，[2017.519-2023.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-840 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-840`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2012〕讲者口述：讲者指出 zfs-stats 源自 Ben Rockwood（转写音作 Ben Rook Wood）为 Solaris 编写的 ARC summary。（YouTube EPPIpI7Ub6yjo，[2037.96-2044.269]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-868 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-868`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS Leadership Meeting 2026-02〕讲者口述：现场讨论的问题很像 OpenZFS 在 2014 或 2015 年修复过的问题之一，讲者表示已经把那个补丁回移植（backport）过来。（YouTube EPQAduKR4DjEY，[1989.679-1997.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-904 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-904`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2023〕讲者 Mateusz Piotrowski 口述：ZFS 于 2008 年被移植进 FreeBSD；到 2023 年 FreeBSD 已转而使用 OpenZFS 这个 fork 变体版本。（YouTube EPRFy6VtDwQ8U，[129-138.17]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-905 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-905`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2023〕讲者 Mateusz Piotrowski 口述：ZFS 目录的间接块大小可用 vfs.zfs.default_ibsz（转写音作 VFS ZFS default IBS）参数控制，其默认值 17 对应 2 的 17 次方，即 128 KB 的块大小。（YouTube EPRFy6VtDwQ8U，[1256.88-1270.45]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-918 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-918`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS European Conference 2015〕讲者口述：ZFS 得以移植到一批不同平台，其起点是 2008 年的 FreeBSD。（YouTube EPRQlMDmnty80，[392.039-398.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-917 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-917`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS European Conference 2015〕讲者口述：ZFS 内部大致划分为三层结构，其中最上一层即 POSIX。（YouTube EPRQlMDmnty80，[240.68-246.309]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-931 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-931`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：讲者提到，检查 SSH 通道窗口大小的这一实现，大约在 4.7 版本前后由一位 OpenBSD 开发者加入了改动。（YouTube EPSbDx2rqo_Is，[927.12-937.019]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-991 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-991`；w172 YouTube 章节路由采纳）
+
+据 Christian Schwarz 讲者口述：ZREPL 可以被轻松交叉编译到所有受支持的平台，实际已在 FreeBSD、Linux 与 Solaris 三大平台上运行。（YouTube EPU4TUPQzZzPk，[1358-1362.669]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1016 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1016`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS 领导组会议 2025年2月〕讲者口述：ZFS 在 zpool status 输出中会标记该受损的 dnode（目录节点）。（YouTube EPUVFE209Z1mE，[478.759-485.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1015 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1015`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS 领导组会议 2025年2月〕讲者口述：有人正在设计 zpool 或 ZFS fsck 命令，聚焦逻辑层面。（YouTube EPUVFE209Z1mE，[38.92-44.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1080 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1080`；w172 YouTube 章节路由采纳）
+
+据〔可观测性扩展讲座〕讲者 Sam Atkinson 口述：该项目力求与 libzfs 接口对齐，提供查看 zpool iostat 与数据集属性等能力。（YouTube EPWchtPQJfm5w，[729.56-744.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1339 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1339`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者 Alexander Motin 自述为 IX systems 下的 OS 团队负责人，长期从事 freebiesd（ASR 讹字，原样保留）的开发工作。（YouTube EPY_tPs3xsIaA，[5.4-11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1180 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1180`；w172 YouTube 章节路由采纳）
+
+据〔VDEV 属性讲座〕讲者 Allan Jude 口述：Allan Jude 现任 Klara 公司 CTO，此前从事过 ZFS 开发。（YouTube EPYy8fhyrBV-Y，[0-6.72]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1181 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1181`；w172 YouTube 章节路由采纳）
+
+据〔VDEV 属性讲座〕讲者 Allan Jude 口述：ZFS 的 boot size 属性源自 illumos，尚未从 Solaris 移植过来。（YouTube EPYy8fhyrBV-Y，[268.8-280.96]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1222 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1222`；w172 YouTube 章节路由采纳）
+
+据〔2020年12月 OpenZFS 领导层会议〕讲者口述：FreeBSD 上运行 OpenZFS 2.0 时，.zfs 目录（转写音作 zfs directory）不再如旧版那样工作，尤其在 jail 内。（YouTube EPZUOBo8X5VY4，[1085.76-1095.909]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1214 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1214`；w172 YouTube 章节路由采纳）
+
+据〔dRAID 与 RAIDZ 对比讲座〕讲者 Stew Redfield 口述：测试环境为 Ubuntu 22.04 搭配 6.8 内核，分别试跑 OpenZFS 2.2.5 与 2.2.6。（YouTube EPZmCt_i6Mnu8，[155.96-177.88]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1291 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1291`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Alan Jude 是 Clara 的 CTO，并担任 ZFS 开发者已相当多年。（YouTube EP_T2lkb49gc8，[3.2-9.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-298 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-298`；w172 YouTube 章节路由采纳）
+
+据〔Zelta ZFS 复制演讲〕讲者 Daniel Bell 口述：Zelta 追求在 FreeBSD 等 ZFS 平台普遍可用，持续在其中测试。（YouTube EP_nmgQTs8wgE，[2527.16-2529.829]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-299 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-299`；w172 YouTube 章节路由采纳）
+
+据〔Zelta ZFS 复制演讲〕讲者 Daniel Bell 口述：存在名为 aJail 的 jail 管理器（转写音作 a Jailer），把 ZFS 作为一等公民。（YouTube EP_nmgQTs8wgE，[901.92-907.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-341 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-341`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan Calvin Hendryx-Parker 演讲〕讲者 Calvin Hendryx-Parker 口述：其团队未曾运行过 Linux 与 ZFS 的组合（YouTube EPb9Hw2YjQv64，[732.399-740.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-368 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-368`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Christian Schwarz 口述：讲者确认该内容将纳入 FreeBSD 11.2，而非 FreeBSD 11.1。（YouTube EPc1LKeyP1mos，[356.45-362.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-394 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-394`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS 存储网络讲座〕讲者口述：NFS 客户端默认以 64k 分块发送数据，而 ZFS 默认记录大小为 128k，两者不一致会引发性能问题。（YouTube EPcNuE8OrnTBQ，[619.12-632.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-377 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-377`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS This I Learned / Story Time〕讲者口述：讲者使用 4 组 24 盘位 SAS JBOD 存储。（YouTube EPcbmYQLdxDMg，[910.32-922.24]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-376 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-376`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS This I Learned / Story Time〕讲者口述：使用 zfs allow 授权 snapshot 时必须完整写出 snapshot 一词。（YouTube EPcbmYQLdxDMg，[56.64-59.76]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-546 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-546`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Solaris 在 CDDL（转写音作 CD DL）下衍生出 illumos，成为 ZFS 的上游（YouTube EPgmaHZBwDKho，[132.09-140.57]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-547 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-547`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：NetBSD 起步时选择移植 FreeBSD 版本的 ZFS（而非 illumos 版本），以更好匹配其自身 VFS（YouTube EPgmaHZBwDKho，[393.5-399.37]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-594 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-594`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者转述 Slack 上 Alex Pinchuk 的观点，指出存在一套现已相当分叉的用户态 OpenZFS 实现。（YouTube EPhSv87w-bxNs，[3384.24-3392.309]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-596 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-596`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Allan Jude（转写音作 Alan Jude）口述：Allan Jude 为 FreeBSD committer，参与编写 FreeBSD Mastery NFS（YouTube EPhWnWEitDPlM，[47.29-54.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-595 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-595`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Allan Jude 口述：ZSTD 引入 FreeBSD 时为 1.1 版本，现更新至 1.3（YouTube EPhWnWEitDPlM，[230.84-236.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-637 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-637`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS European Conference 2015〕讲者 Matt Ahrens 口述：ZPL 是 ZFS 之上的 POSIX 层。（YouTube EPiY44jPMvxog，[625-629.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-658 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-658`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mark Maybee 口述：其实验迄今使用部分高端 NVMe 硬盘，容量为 3.8TB。（YouTube EPjdXOtEF6Fh0，[3029.119-3038.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-657 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-657`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Mark Maybee 口述：该特性于 2018 年被 Cray 采用，作为其 ZFS 版本的一项关键能力。（YouTube EPjdXOtEF6Fh0，[48.8-58.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-700 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-700`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Matt Ahrens 口述：他提到 FreeBSD 有 witness 锁，可作为类似机制的参考。（YouTube EPkn5xnqKehfY，[307.309-311.319]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-701 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-701`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Matt Ahrens 口述：ZFS 有意不照搬 VFS 的加锁方案。（YouTube EPkn5xnqKehfY，[411.33-419.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-758 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-758`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Jason Lee 口述：他来自 Los Alamos，研究方向是让 ZFS 更快，即为 ZFS 做加速。（YouTube EPmKDDKG0yVRg，[5.72-14.829]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-783 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-783`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan（标题被截断）〕讲者 Rodney W Grimes 口述：他自称 FreeBSD 早期奠基者，自一九九二年的 patch kit 与 386bsd 起参与项目。（YouTube EPngk84blmbek，[27.73-37.17]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-817 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-817`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：ZFS 由 OpenSolaris 开源项目引入开源界。（YouTube EPopW9KhjOQ3Q，[32.56-42.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-819 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-819`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：对象存储以 VDEV 形式接入，内核内部仍以 ZFS 块为单位描述数据。（YouTube EPopW9KhjOQ3Q，[902.76-908.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-818 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-818`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：ZFS 目前已可用于 Windows、FreeBSD、Linux 与 Illumos。（YouTube EPopW9KhjOQ3Q，[248.32-254.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-821 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-821`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Matt Ahrens 口述：他本人当年在 Sun Microsystems 参与创建了 ZFS。（YouTube EPoue2cPFK7AU，[15.52-20.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-820 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-820`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Matt Ahrens 口述：该特性当年已合入 Illumos、FreeBSD 与 ZFS on Linux，并随 FreeBSD 11.2 发布。（YouTube EPoue2cPFK7AU，[2229.44-2238.349]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-830 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-830`；w172 YouTube 章节路由采纳）
+
+据〔ZFS Send/Receive 性能改进报告（来源不详）〕讲者 Matt Ahrens 口述：他任职 Delphix（转写音作 delfix），主讲 ZFS send/receive 性能。（YouTube EPp9VHwuCRPes，[5.92-7.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-854 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-854`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Brian Behlendorf 口述：OpenZFS 构建列表中 FreeBSD 通过 qemu 在 Ubuntu 构建机上运行。（YouTube EPpUCUAKXkXTo，[1929.72-1948.52]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-853 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-853`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Brian Behlendorf 口述：受 FreeBSD vfs 层限制，OpenZFS 2.3 的长文件名目前只能在 Linux 上获得。（YouTube EPpUCUAKXkXTo，[1079.08-1092.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-876 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-876`；w172 YouTube 章节路由采纳）
+
+据〔ZIO Pipeline 报告开场（来源不详）〕报告介绍人（非 George Wilson 本人）口述：George Wilson 是早期的 OpenZFS 与 ZFS 开发者之一。（YouTube EPqkA5HhfzsvM，[9.139-14.279]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-884 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-884`；w172 YouTube 章节路由采纳）
+
+据〔Block Cloning 报告（来源不详）〕讲者 Pawel Jakub Dawidek 口述：FreeBSD 的 copy_file_range 仅在同一挂载点内生效，VFS 有校验。（YouTube EPqsE3R0Ysc8g，[1745.6-1755.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-933 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-933`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者称 ZFS 具备内建的 VDEV IO 聚合机制。（YouTube EPsdNCLGbSDCo，[324.96-331.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-982 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-982`；w172 YouTube 章节路由采纳）
+
+据〔ZFS Direct IO 分享〕讲者 Mateusz Piotrowski 口述：讲者兴趣领域包括 ports、rc.conf（转写音作 RCA）与 ZFS，rc.conf 是 FreeBSD 的 init 系统。（YouTube EPtYCN8Yg-0JQ，[50.559-58.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-981 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-981`；w172 YouTube 章节路由采纳）
+
+据〔ZFS Direct IO 分享〕讲者 Mateusz Piotrowski 口述：从讲者所称今年起 FreeBSD 改用 OpenZFS，几年前已从原有 ZFS 切换过来。（YouTube EPtYCN8Yg-0JQ，[191.2-198.869]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-984 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-984`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS Production User Requests and Proposals〕讲者口述：OpenZFS 是仅次于 FAT32 的移植性文件系统，可同时在 Linux、illumos、FreeBSD 上共用审计与加密实现。（YouTube EPtZy_o_B5z3w，[1086.8-1105.32]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-985 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-985`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS Production User Requests and Proposals〕讲者口述：ZFS 引入兼容性别名 snap 后可使用 ZFS list -t snap，无需再键入 -t snapshot。（YouTube EPtZy_o_B5z3w，[214.16-229.96]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1022 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1022`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2022〕讲者 Allan Jude 口述：他本人是 FreeBSD 开发与支持公司 Clara 的 CTO（转写音作 Alan Jude）（YouTube EPv8sl8gj9UnA，[22.38-28.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1043 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1043`；w172 YouTube 章节路由采纳）
+
+据〔Hackathon Presentations at GitHub〕讲者口述：ZFS on Linux 变更需由 Brian 或 Matt 等 OpenZFS 维护者签核并落地该平台，经生产验证后再向 Illumos 或 OpenZFS 提交 pull request。（YouTube EPvKiJzj-vRYM，[654.5-680.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1042 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1042`；w172 YouTube 章节路由采纳）
+
+据〔Hackathon Presentations at GitHub〕讲者口述：设计讨论应在各平台集成阶段完成而非 OpenZFS 集成阶段，以避免 Linux 或 FreeBSD 移植到 OpenZFS 代码库时的大改。（YouTube EPvKiJzj-vRYM，[720-760.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1078 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1078`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS Developer Summit 2024〕讲者 Allan Jude 口述：讲者为 Klara 联合创始人兼首席解决方案架构师，该公司是围绕 ZFS 的专业服务公司。（YouTube EPwA6hL4opG4I，[68.24-80.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1077 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1077`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS Developer Summit 2024〕讲者 Allan Jude 口述：2024 年 OpenZFS Developer Summit 上其主题是如何让 ZFS 面向未来扩展以适配新硬件。（YouTube EPwA6hL4opG4I，[2.44-16.12]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1076 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1076`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Rob Norris 口述：FreeBSD 支持很重要，因为 OpenZFS 以 FreeBSD 为目标平台（YouTube EPw_tC-D6xWIk，[1913.44-1917.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1136 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1136`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：在 Raspberry Pi 上把 FreeBSD 跑起来只需几分钟（YouTube EPxqFiTRYo1fk，[44.16-51.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1138 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1138`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Devin Teske 口述：讲者以 2009 年为 FreeBSD 与 DTrace 发展的中间节点，并称现场至少都有一台装有 DTrace 的 FreeBSD 系统。（YouTube EPxqOl_HY86n8，[127.68-135.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1137 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1137`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Devin Teske 口述：向 DTrace 查询参数可得 probe 名 syscall:FreeBSD:kill:entry（转写音作 syscall {colon} FreeBSD {colon} kill {colon} entry）。（YouTube EPxqOl_HY86n8，[881.4-889.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1161 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1161`；w172 YouTube 章节路由采纳）
+
+据〔June 2021 FreeBSD Developer Summit〕讲者口述：讲者指出 ZFS 自 FreeBSD 13 起与 Linux 共用同一套代码库。（YouTube EPyF2KgQGmUic，[1695.679-1702.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1192 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1192`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Dru Lavigne 口述：Warden 为 FreeBSD jails 提供了便捷的前端界面（YouTube EPz5apZFFvx4k，[1289.75-1292.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1228 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1228`；w172 YouTube 章节路由采纳）
+
+据讲者口述：Olaf Faaland 来自劳伦斯利弗莫尔国家实验室，将介绍如何在高可用集群中安全处理 ZFS。（YouTube EPzZTP3zEfKYM，[7.34-14.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1197 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1197`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：AnyRAID（转写音作 any rigid）是 ZFS 中的一种新的 VDEV 类型，除容量收益外还有其他好处（YouTube EPzdIGhDiZWU4，[281.04-288.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1213 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1213`；w172 YouTube 章节路由采纳）
+
+据〔August 2019 OpenZFS Leadership Meeting〕讲者口述：讲者缺乏统计数据，不确定是否有人在 32 位 PowerPC 上使用 ZFS（转写音作 32-bit weights a PowerPC）。（YouTube EPzl4CUMOIi18，[522.029-531.139]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1212 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1212`；w172 YouTube 章节路由采纳）
+
+据〔August 2019 OpenZFS Leadership Meeting〕讲者口述：讲者数年前做 ZFS 兼容性层时用 compacts gjb（转写音作 compacts gjb，正字待考）实现原子读。（YouTube EPzl4CUMOIi18，[473.659-481.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

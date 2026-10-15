@@ -280,3 +280,15 @@ FreeBSD 发展关键里程碑
 - [YouTube EPbVSXXeiFLgk] YouTube. YouTube: A Narrative History of BSD[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=bVSXXeiFLgk>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-436 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-436`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Kirk McKusick 口述：采用来自 BBN 的 TCP/IP 代码与 4.2BSD 中的 TCP 代码（YouTube EPds77e3aO9nA，[1703.33-1708.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-437 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-437`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Kirk McKusick 口述：Bill Jolitz 尤其始终未做那件事（转写原文 just never did that，所指在可得转写窗口内未明示），故该发行版遭到抨击（got hammered），FreeBSD 不得不自行完成（YouTube EPds77e3aO9nA，[2894.929-2902.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

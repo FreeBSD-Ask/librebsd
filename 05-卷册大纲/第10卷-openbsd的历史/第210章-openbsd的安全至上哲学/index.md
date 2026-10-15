@@ -148,3 +148,10 @@ volume: 第10卷-openbsd的历史
 - [BSDTalk EP66] Backman W. BSDTalk: 66: bsdtalk066 - Interview with Michael Dexter about sysjail[EB/OL]. (2006-09-20)[2026-08-27]. <https://archive.org/details/bsdtalk066>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-284 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-284`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：Stuart Henderson（stn@openbsd）与 Omar Polo（op@openbsd）关注了相关作品。（YouTube EP9uTBkdQpxZo，[2654.319-2659.349]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

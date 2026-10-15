@@ -107,3 +107,10 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- dangan-20260908 消解回写 -->
 - Vanhoef. M, Piessens F. Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 [C]//ACM CCS 2017. Dallas, 2017[C]. 2017.［DKC-2095→fulltext:6073］；Vanhoef. M. KRACK Attacks [EB/OL]. (2017-10-16)[2026-07-22]. <https://krackattacks.com/>[EB/OL]. 2017.［DKC-2096→fulltext:6074］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1333 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1333`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSD〕讲者Steven Murdoch口述：OpenBSD 的初始序列号几乎是完全随机的；FreeBSD 采用的方案受贝尔实验室（Bell Labs）生成序列号的方案启发，但并不与之完全相同，因而无法据此给出 10 秒量级的时间界限。（YouTube EPUYrKLvW3RKg，[299.7-317]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

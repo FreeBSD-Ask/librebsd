@@ -105,3 +105,30 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP140] Pennington J. BSD Now: 140: Tracing it back to BSD[EB/OL]. (2016-05-04)[2026-08-15]. <https://www.bsdnow.tv/140>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-469 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-469`；w172 YouTube 章节路由采纳）
+
+据讲者 Theo de Raadt 口述：当程序无法满足该前置要求时，其既不能用 pledge 保护，也不能用 capsicum 保护。（YouTube EPEr44ur7wkXQ，[1531.72-1538.659]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-561 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-561`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：OpenBSD 提供一个简单的名为 pledge 的机制，用于过滤系统调用，已用于约七成（close to seventy percent）的软件包。（YouTube EPGu27m2TKVd4，[161.9-169.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-694 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-694`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：他回看几年前的 Snowden 资料，称其中有一张幻灯片据称出自 Booz Allen。（YouTube EPKeQWET79t_Y，[546.41-552.34]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-363 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-363`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Bob Beck 口述：OpenBSD 上的 OpenSSL 命令行工具本身已启用 pledge 沙箱。（YouTube EPbXO6nelFt-E，[3545.04-3549.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-364 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-364`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Bob Beck 口述：Robert Nagy 与 ports 团队为 OpenBSD 的 Chrome 准备好了 pledge 补丁。（YouTube EPbXO6nelFt-E，[1350.8-1359.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

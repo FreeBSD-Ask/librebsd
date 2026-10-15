@@ -32,3 +32,10 @@ volume: 第09卷-netbsd的历史
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 netbsd.duckdb
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-231 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-231`；w172 YouTube 章节路由采纳）
+
+据〔Rump Device Drivers 演讲〕讲者口述：讲者指出 rump 在内核设备驱动场景并非总能适用，而他自己工作站的实际运行版本是 NetBSD 5。（YouTube EP3AJNxa33pzk，[409.8-413.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

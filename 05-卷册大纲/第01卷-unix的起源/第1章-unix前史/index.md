@@ -174,3 +174,10 @@ volume: 第01卷-unix的起源
 - [BSD Now EP315] Pennington J. BSD Now: 315: Recapping vBSDcon 2019[EB/OL]. (2019-09-12)[2026-08-15]. <https://www.bsdnow.tv/315>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1297 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1297`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：作为一个多程序设计（multiprogramming）操作系统，Unix 使得每个人可以同时运行多个程序。（YouTube EPemh22gT5e9k，[14.9-21.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

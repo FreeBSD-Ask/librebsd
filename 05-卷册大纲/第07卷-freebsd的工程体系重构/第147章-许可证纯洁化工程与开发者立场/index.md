@@ -107,3 +107,15 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. <https://www.bsdnow.tv/36>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-243 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-243`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2021〕讲者口述：讲者提醒 FreeBSD 使用者该设备节点为 nvd0，因为 FreeBSD 实际内置了两个 NVMe 磁盘驱动。（YouTube EP4HHZOEp8KrE，[1360.799-1369.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-242 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-242`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2021〕讲者口述：smart(8) 是 smartctl(8) 的宽松授权替代实现，由 Chuck 与 Michael Dexter 提出，本次为该项目的更新报告。（YouTube EP4HHZOEp8KrE，[5.04-12.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -98,3 +98,35 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. <https://www.bsdnow.tv/7>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-473 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-473`；w172 YouTube 章节路由采纳）
+
+据〔Oblivious sandboxing 演讲〕讲者口述：讲者提到 Capsicum 沙箱方向是自 2010 年首次公开发表以来团队持续思考的问题。（YouTube EPErXtGMmRzJs，[3028.56-3037.16]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-334 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-334`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Fridays: Capsicum 入门〕讲者口述：经少量改动，FreeBSD 自带虚拟机管理程序 bhyve（转写音作 Bhyve）已被 capsicum 化。（YouTube EPaXby7dnmEOI，[3116-3122.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-335 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-335`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Fridays: Capsicum 入门〕讲者口述：进入 Capsicum 能力模式只需调用一个系统调用 cap_enter。（YouTube EPaXby7dnmEOI，[830.36-839.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-907 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-907`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Ed Schouten 口述：他在 2014 年末正在使用 Capsicum（原文 so late 2014 I was using capsicum；同段转写另有 captions 讹字）。（YouTube EPrI2PnpaGq6c，[645.16-648.81]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-897 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-897`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：约十年后受 Niels Provos 在 sshd（转写音作 SSHD）上的工作部分启发，出现了在用户态应用中推行特权分离的转向。（YouTube EPraNx9L4VH2k，[389.3-405.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-896 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-896`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：微内核项目始于 1980 年代末至 1990 年代初，目标是把大型软件拆分为更小的组件以提升健壮性与安全性。（YouTube EPraNx9L4VH2k，[371.2-389.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

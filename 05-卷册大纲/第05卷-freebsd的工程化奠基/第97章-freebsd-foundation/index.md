@@ -387,3 +387,119 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 2000年春，Bob Gray 在科罗拉多大学本科操作系统课程中弃用基于 binary-only Windows NT 的 userland 作业，改用源码可得的 production UNIX（FreeBSD）让学生直接修改内核（如实现 undelete），95名三年级学生参与，作者主张真实内核实践优于模拟器教学。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-249 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-249`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Vendor Summit〕讲者口述：讲者提到 BSD Canada 2023 的日期刚刚公布，而 BSDCon（转写音作 hbsdcon）将于三月以线下形式重返东京。（YouTube EP4y97JrZCgN8，[861.959-870.65]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1252 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1252`；w172 YouTube 章节路由采纳）
+
+据 BSDCan '19 Dev Summit 讲者口述：FreeBSD 基金会多年来负责会议协调工作，Tarsnap 多年来一直是其赞助者。（YouTube EPB4CvnaALl20，[240.5-259.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-382 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-382`；w172 YouTube 章节路由采纳）
+
+据〔September 2024 FreeBSD Developer Summit〕讲者口述：Tom 于 2023 年底最初加入 FreeBSD 基金会，任务是移植 VPP 即向量包处理器。（YouTube EPCDEb_0CSur4，[426.479-438.029]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-420 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-420`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit〕讲者口述：讲者称 FreeBSD 核心团队须在 FreeBSD 13（转写音作 3bsd 13）宣布 arm64 升为一级架构。（YouTube EPDdWtZs_u2tg，[1585.279-1594.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-419 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-419`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit〕讲者口述：2016 年的那块 CPU 被用作 FreeBSD arm64 的首个参考平台。（YouTube EPDdWtZs_u2tg，[1518.96-1525.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-664 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-664`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Office Hours - May 13 2020〕讲者口述：基金会创始人 Justin 约 20 年前设立该慈善机构，到 2020 年他同时是主席与创始人。（YouTube EPJi4ux4FWpRU，[137.37-149.18]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-739 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-739`；w172 YouTube 章节路由采纳）
+
+据讲者口述：FreeBSD 15 的测试版搭载 ZFS 2.4 RC2 发布；FreeBSD 力求让自身发布与上游 ZFS 的发布节奏对齐，以便跟随上游更新。（YouTube EPLuACOMhq3eY，[727.12-734.629]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-740 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-740`；w172 YouTube 章节路由采纳）
+
+据讲者口述：FreeBSD 需同时维护 ZFS 2.1、2.2、2.3 三个分支，2.4 又被纳入，形成多版本并行的维护压力。（YouTube EPLuACOMhq3eY，[1598.159-1604.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-872 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-872`；w172 YouTube 章节路由采纳）
+
+据〔Fall 2024 FreeBSD Summit〕讲者口述：讲者称 OpenZFS 2.3 当时尚未发布，因此在 FreeBSD main 中保留其快照做法合理。（YouTube EPQItEVRojKB8，[2349-2359.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1000 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1000`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Olivier Cochard Labbé 口述：所用为标准 TCP/IP 协议栈（未使用 DPDK 或 netmap）；存储磁盘文件系统为 UFS，ZFS 用于操作系统（快照、启动）等部分。（YouTube EPUfUFNNo0bvY，[55.92-71.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1001 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1001`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Olivier Cochard Labbé 口述：其每日回归工作由 FreeBSD 的同事 David（转写音作“David Wkll”）协作完成（YouTube EPUfUFNNo0bvY，[270.72-276.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1035 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1035`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2016 闭幕会议〕讲者口述：该 NVMe 驱动的用户态部分取自 FreeBSD，且与 OpenBSD 版不同，其支持 MSIX。（YouTube EPVEw7qZh2tlQ，[961.12-975.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1139 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1139`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Foundation 讲座〕讲者口述：FreeBSD 是首个非 Solaris 平台集成 OpenZFS 的操作系统。（YouTube EPXrL_Zsiw3M4，[261.28-271.479]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1199 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1199`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018 闭幕与拍卖〕讲者 Dan Langille 口述：该拍卖品实为 FreeBSD 引导加载器画面而非启动画面。（YouTube EPZdiU2T7mJrE，[3392.17-3394.98]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1198 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1198`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018 闭幕与拍卖〕讲者 Dan Langille 口述：这件 FreeBSD 基金会官方衬衫上收集了签名，左侧为 FreeBSD 创建者（founding fathers，含 Kirk McKusick、Rod Grimes 等），右侧为现任 core team。（YouTube EPZdiU2T7mJrE，[1606.33-1614.12]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-674 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-674`；w172 YouTube 章节路由采纳）
+
+据〔July 2024 Enterprise Working Group Meeting〕讲者口述：被列举的目前或曾基于 FreeBSD 的产品中包含 pfSense。（YouTube EPjQFOjoMe9zk，[2532.76-2543.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-665 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-665`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：FreeBSD 基金会是一家 501(c)(3) 非营利组织，致力于支持 FreeBSD 项目。（YouTube EPjiZggbvn4Aw，[36.32-43.549]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-666 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-666`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：FreeBSD 项目是一个 1993 年起步的活跃开源社区。（YouTube EPjiZggbvn4Aw，[7.519-15.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-772 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-772`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：该会议最初名为 BSDCon Europe，后来改名为 EuroBSDCon。（YouTube EPn7J6EkpBKDM，[926.52-931.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-866 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-866`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit 2024-05 基金会更新〕讲者口述：FreeBSD 14.0 准备期推进 LLVM 与 OpenSSL v3 更新，并带来 ports 连带影响。（YouTube EPq_GdcOuc2ec，[934.959-948.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1143 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1143`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Day 采访〕讲者 Deb Goodkin 口述：Justin Gibbs 为 FreeBSD 基金会主席兼创始人，于 2000 年创立该基金会，创立前有本职工作。（YouTube EPxuYBsRAMvA8，[150.36-158.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1148 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1148`；w172 YouTube 章节路由采纳）
+
+据〔Update From the FreeBSD Foundation〕讲者口述：开发者 Andrew Turner（转写音作 Andy Turner）曾在 FreeBSD 基金会工作，并参与 arm64 Bhyve 开发。（YouTube EPxyFOOPOmW3E，[2611.88-2620.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1147 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1147`；w172 YouTube 章节路由采纳）
+
+据〔Update From the FreeBSD Foundation〕讲者口述：讲者列举 FreeBSD 内建的 DTrace、jails、ZFS 等技术作为其优点。（YouTube EPxyFOOPOmW3E，[1257.52-1264.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

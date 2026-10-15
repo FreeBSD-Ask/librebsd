@@ -117,3 +117,35 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. <https://www.bsdnow.tv/58>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1122 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1122`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon 2024〕讲者 Andrew Turner 口述：FreeBSD arm64 移植始于约 2014 年，距今将近十年。（YouTube EPXGfTCK4kFM0，[1331.08-1335.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1123 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1123`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDCon 2024〕讲者 Andrew Turner 口述：Mark Johnston（转写音作 Mark did Johnson）为 FreeBSD arm64（转写音作 m64）实现原子操作，arm64 上的原子操作对应纯 ARMv8.0（转写音作 pure RV 8.0）。（YouTube EPXGfTCK4kFM0，[2202.28-2211.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1170 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1170`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018 Emmanuel Vadot 演讲〕讲者 Emmanuel Vadot 口述：其为 Rockchip RK3288（转写音作 rockchip III 2002 8）完成了时钟支持工作（YouTube EPYoB5NknHWbk，[1439.95-1449.84]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-400 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-400`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Vendor Summit, 2021 年 11 月〕讲者口述：FreeBSD 11.0 是其 arm64 移植后首个纳入该支持的发行版。（YouTube EPczbF9wA10jY，[175.599-178.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-492 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-492`；w172 YouTube 章节路由采纳）
+
+据〔June 2021 FreeBSD Developer Summit〕讲者口述：该方案支持手工安装 FreeBSD，并使用 ZFS 替代预制的 UFS 镜像（YouTube EPfanQQp2I_aw，[1024.799-1035.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-512 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-512`；w172 YouTube 章节路由采纳）
+
+据〔2020 FreeBSD Vendor Summit〕讲者口述：讲者指出 GCC 9.4（转写音作 gcc and gc 9.4）已支持 outline atomics（轮廓原子操作）。（YouTube EPfmZ9o7CbIvU，[203.599-216.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

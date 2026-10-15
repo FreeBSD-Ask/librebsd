@@ -120,3 +120,30 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. <https://www.bsdnow.tv/55>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-727 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-727`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者口述：World IPv6 Launch Day 定在 2008 年 6 月 6 日，讲者指出到他讲演前的那一周星期三正好满六年整。（YouTube EPLeGQd_R-G-M，[99.85-107.31]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-910 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-910`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2012〕讲者 Zbigniew Bodek 口述：他介绍了 FreeBSD 与 NetBSD 针对 APM86290 系统级芯片的移植成果。（YouTube EPRlowLXP0Cro，[9.32-19.029]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-911 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-911`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon 2012〕讲者 Zbigniew Bodek 口述：与 FreeBSD 挂钩既有低层平台初始化码的做法不同，NetBSD 的（平台初始化）引导码装载器是通用的、按平台共享的实现。（YouTube EPRlowLXP0Cro，[1172.76-1184.23]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1004 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1004`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：FreeBSD 14.3 计划在视频发布后的次月推出，将带来开箱即用的更高速率（YouTube EPUic0ksaqOwE，[32.239-38.069]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1027 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1027`；w172 YouTube 章节路由采纳）
+
+据〔virtual BSDCan 2020〕讲者 Scott Long 口述：本场就 FreeBSD 上的 Thunderbolt 支持进行演讲。（YouTube EPVbAJf2PBE-M，[17.84-23.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

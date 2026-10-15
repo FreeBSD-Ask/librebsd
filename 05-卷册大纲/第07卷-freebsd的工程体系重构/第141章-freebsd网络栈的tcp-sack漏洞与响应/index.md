@@ -69,3 +69,10 @@ volume: 第07卷-freebsd的工程体系重构
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-711 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-711`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017〕讲者口述：SYN cookies（转写音作 sin cash）机制早已在 FreeBSD、OpenBSD 与 NetBSD 三个协议栈中长期实现。（YouTube EPKuHepyI0_KY，[735.04-742.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

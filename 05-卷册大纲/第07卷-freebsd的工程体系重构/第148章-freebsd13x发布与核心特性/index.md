@@ -66,3 +66,35 @@ volume: 第07卷-freebsd的工程体系重构
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-403 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-403`；w172 YouTube 章节路由采纳）
+
+据〔CloudABI 与 Kubernetes 演讲〕口述：Ed Schoute（转写音作 ed scouted）自述 2008 年起即为 FreeBSD 开发者。（YouTube EPD13u9Gsz_R8，[47.969-53.479]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-404 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-404`；w172 YouTube 章节路由采纳）
+
+据〔CloudABI 与 Kubernetes 演讲〕讲者口述：CloudABI 支持已并入其中，只需安装 FreeBSD 11.0 即可获得相应能力。（YouTube EPD13u9Gsz_R8，[1774.299-1780.799]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1092 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1092`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Linuxulator 演讲〕讲者 Charlie Li 口述：FreeBSD Linuxulator 内 uname 显示为 Linux 4.4.0 FreeBSD Linux 内核。（YouTube EPWJXBWuHSejM，[1232.266-1241.735]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1093 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1093`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Linuxulator 演讲〕讲者 Charlie Li 口述：Hurricane Electric 提供 IPv6 DNS 服务器。（YouTube EPWJXBWuHSejM，[2448.098-2452.774]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1102 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1102`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Colin Percival 口述：2015 年 3 月他与发行工程师 Glenn Barber 协作，把 FreeBSD 的 EC2 构建集成进发行流程（YouTube EPwrlCxwH6MsA，[161.04-169.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1103 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1103`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Colin Percival 口述：他现任 FreeBSD 发行工程负责人，已推出 13.3 版本，14.1 即将发布（YouTube EPwrlCxwH6MsA，[2223.52-2233.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

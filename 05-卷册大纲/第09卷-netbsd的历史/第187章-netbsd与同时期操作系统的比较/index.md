@@ -51,3 +51,9 @@ volume: 第09卷-netbsd的历史
 - NetBSD Project. 10 years of pkgsrc - Alistair Crooks [EB/OL]. (2007-10-17)[2026-07-24]. **<https://www.netbsd.org/gallery/10years.html#alcrooks>**; NetBSD Project. pkgsrc Guide [EB/OL]. [2026-07-27]. **<https://www.netbsd.org/docs/pkgsrc/>**; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260724_alistair-crooks-netbsd-1x-growth.md`; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md` ［A］
 - NetBSD 官方历史页面、Ports 列表、Adam Glass 1994 邮件、OpenBSD FAQ、pkgsrc Guide、本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md`
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-379 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-379`；w172 YouTube 章节路由采纳）
+
+据〔My BSD Sucks Less Than Yours 演讲〕讲者口述：多年前 FreeBSD 曾有一个名为 sisjail（转写音作 sis jail）的 import 概念但因内在设计问题被放弃（YouTube EPcc54e2G9qDM，[2143.569-2149.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

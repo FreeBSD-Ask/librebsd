@@ -323,3 +323,24 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-538 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-538`；w172 YouTube 章节路由采纳）
+
+据〔2021 年 6 月 FreeBSD Developer Summit〕讲者口述：现场有提问询问该机构为何在约二十年前起步时就选择了 FreeBSD（YouTube EPG9MxLhm8tzI，[1231.48-1238.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-537 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-537`；w172 YouTube 章节路由采纳）
+
+据〔2021 年 6 月 FreeBSD Developer Summit〕讲者口述：冰岛 DNS 登记机构计划用运行在 x86 上的 FreeBSD 替换掉跑在旧 SPARC 服务器上的 Solaris 环境。（YouTube EPG9MxLhm8tzI，[821.48-829.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1030 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1030`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Daniel Mahoney 口述：MFSBSD 另附一个 zfs install 工具，能直接消费 FreeBSD 官方 OS tarball（YouTube EPvCiCvQsxucc，[1664.96-1672.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1031 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1031`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Daniel Mahoney 口述：MFSBSD 的相关材料挂在 Martin Matuska 的个人站点（转写音作 mfsbsd.something.vx）上（YouTube EPvCiCvQsxucc，[1793.24-1803.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -125,3 +125,60 @@ volume: 第09卷-netbsd的历史
 - [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. <https://www.bsdnow.tv/330>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-236 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-236`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：这些 subfiles 工作是为 NetBSD 7.3 完成的（quote‘this was done for netbsd 7.3’），要把 7.3 上已工作的部分带到 netbsd-current 尚有大量待办。（YouTube EP3rSTLHKm7fI，[605.76-614.59]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-235 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-235`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者开场提到 NetBSD since 1993 这一历史脉络，并预告随后一小时内的议程安排。（YouTube EP3rSTLHKm7fI，[122.6-134.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1231 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1231`；w172 YouTube 章节路由采纳）
+
+据 AsiaBSDCon 2013 讲者口述：在讲者梳理的哈希演进早期阶段，Bostic 于 1984 年前后发表了后续算法的前身（原文 Bostic published the predecessor of jeer uh around 1984，jeer 为 ASR 讹字）。（YouTube EP87pUZYERkNQ，[353.5-356.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1232 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1232`；w172 YouTube 章节路由采纳）
+
+据 AsiaBSDCon 2013 讲者口述：讲者第一个细讲的算法 chm（按其发明者命名）出自 1992 年，被他认为是首个期望线性时间的完美哈希算法。（YouTube EP87pUZYERkNQ，[586.56-590.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-559 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-559`；w172 YouTube 章节路由采纳）
+
+据来源不详讲者口述：Alistair Crooks 于 2009 年在 EuroBSDCon 首次提出 NetBSD 底层安全模型，本场谈更新其实现并给出位图角色模型。（YouTube EPGSCi4veDsfc，[348.8-363.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-983 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-983`；w172 YouTube 章节路由采纳）
+
+据会议不详讲者口述：Alistair Crooks 指出 verexec（转写音作 very exec）自 2004 年起内置于 NetBSD 内核，为程序运行验证框架。（YouTube EPTZ-5c3I2o_A，[133.68-141.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1106 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1106`；w172 YouTube 章节路由采纳）
+
+据〔PF 性能与可靠性改进演讲〕讲者口述：root2 与 PF sync 不兼容，需借助 CARP 或 BGP 实现故障切换（YouTube EPWvlao_YhcdY，[2308.16-2314.39]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1221 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1221`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon〕讲者 Taylor R Campbell 口述：autoconf 驱动（转写音作“another con driver”）由 match、attach、detach 三个部分构成（“三个部分”转写音作“three Moon Parts”）。（YouTube EPZtThzncVw2E，[146.819-153.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1220 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1220`；w172 YouTube 章节路由采纳）
+
+据〔EuroBSDcon〕讲者 Taylor R Campbell 口述：使用 USB 串口控制台的设备节点可与树莓派（Raspberry Pi）或 BeagleBone 等单板机通信（YouTube EPZtThzncVw2E，[531.48-538.13]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-718 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-718`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Taylor R Campbell 口述：他援引数年前的 Debian OpenSSL 乱数事件为例，说明攻击者不应能轻易穷举随机数。（YouTube EPkXUmlBnTTHg，[1030.15-1038.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1066 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1066`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Taylor Campbell 口述：他因反复抓到 ZFS bug，曾向 NetBSD 提交若干 PR，怀疑这些是其 ZFS 版本的本地缺陷（YouTube EPvZmzWNcV0Q0，[141.44-147.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

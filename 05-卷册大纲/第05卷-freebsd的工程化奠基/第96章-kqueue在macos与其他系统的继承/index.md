@@ -81,3 +81,15 @@ volume: 第05卷-freebsd的工程化奠基
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 2000 年间：29,754 次提交。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1168 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1168`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：混合调度策略相较一对一模型的低时延吞吐高 27 倍，尾部延迟降低逾千倍。（YouTube EPymVQKWuZQ4I，[711.8-722.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1167 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1167`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：在 zipf 分布请求下线程间差异为 46%；讲者研究的服务器应用多为事件驱动，依赖内核事件机制：老系统为 poll/select，新系统为 FreeBSD 的 kqueue 与 Linux 的 epoll。（YouTube EPymVQKWuZQ4I，[138-158.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

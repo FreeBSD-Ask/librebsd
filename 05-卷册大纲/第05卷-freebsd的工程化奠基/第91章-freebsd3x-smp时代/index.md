@@ -83,3 +83,20 @@ volume: 第05卷-freebsd的工程化奠基
 ## 91.14 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
 
 ## 91.15 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-269 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-269`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 定时器基础设施演讲〕讲者口述：2008 年 Jeff Roberson 移除了内核中的单一中断线程设计。（YouTube EP8DoApGiY62w，[767.92-769.76]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-837 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-837`；w172 YouTube 章节路由采纳）
+
+据 Brooks Davis 讲者口述：相关讨论提出把 jail 的能力继续扩充，使其在语义与功能上更接近 Solaris 的 zones 隔离模型。（YouTube EPPe8LdJpBGJ4，[1716.17-1720.019]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-836 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-836`；w172 YouTube 章节路由采纳）
+
+据 Brooks Davis 讲者口述：该千兆以太网集群目前仍运行 FreeBSD 6.0，讲者说明团队一直未做系统升级。（YouTube EPPe8LdJpBGJ4，[226.149-230.219]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

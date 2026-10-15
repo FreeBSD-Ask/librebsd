@@ -88,3 +88,15 @@ volume: 第14卷-商业生态与企业案例
 - [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-786 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-786`；w172 YouTube 章节路由采纳）
+
+据〔FOSDEM 2022 What's Ahead in 2022 for FreeBSD〕讲者口述：调试器历来是 FreeBSD 基本系统的一部分。（YouTube EPnImPSxWoQFM，[365.6-369.029]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-787 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-787`；w172 YouTube 章节路由采纳）
+
+据〔FOSDEM 2022 What's Ahead in 2022 for FreeBSD〕讲者口述：拟预备 FreeBSD 内核中的一套实现（转写音作 ocf，转写未能辨明所指），以支持 WireGuard 的需求。（YouTube EPnImPSxWoQFM，[656.48-662.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

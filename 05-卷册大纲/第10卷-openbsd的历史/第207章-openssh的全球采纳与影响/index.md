@@ -89,3 +89,30 @@ volume: 第10卷-openbsd的历史
 - [BSDTalk EP27] Backman W. BSDTalk: 27: bsdtalk027 - Interview with OpenBSD developer Marco Peereboom[EB/OL]. (2006-03-23)[2026-08-27]. <https://archive.org/details/bsdtalk027>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-940 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-940`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Dag Erling Smørgrav 口述：他们遇过不少 IPv6（转写音作 IPV6）问题，因此不得不在其上再套一层 RFC 1918 私有网段。（YouTube EPSRYU262QHzc，[851.36-860.15]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-941 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-941`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Dag Erling Smørgrav 口述：FreeBSD 9 里的 CARP 问题很多，Gleb 在 FreeBSD 10 中彻底重写了 CARP，效果好得多。（YouTube EPSRYU262QHzc，[1232.96-1241.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1052 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1052`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Christian 口述：Catch22 使用 52 个已知恶意的 SSH 公钥，对 IPv4 与 IPv6 同时扫描（IPv6 采用 Public IPv6 Hit List），扫描自 2024 年 4 月 4 日启动且仍在进行（YouTube EPvNAth4yOdJ4，[539.9-586.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1050 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1050`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Christian 口述：SSH（Secure Shell）于 1995 年首次引入，是作为替代 Telnet 的新协议（YouTube EPvNAth4yOdJ4，[11.3-41.3]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1051 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1051`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Christian 口述：全球运行 SSH 服务器的机器已有超过 4000 万台。（YouTube EPvNAth4yOdJ4，[41.3-58.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -66,3 +66,10 @@ volume: 第11卷-dragonflybsd的历史
 <!-- dangan-20260908 消解回写 -->
 - OSNews.. FreeBSD 4.x Forked Into DragonFly [EB/OL]. 2003-07-17. **osnews.com/story/4058/**（含 51 条评论）[EB/OL]. 2003. ［DKC-0104→fulltext:5469］
 <!-- /dangan-20260908 -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-369 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-369`；w172 YouTube 章节路由采纳）
+
+据〔DCBSDCon 2009〕讲者 Robert Luciani 口述：DragonFly BSD 从 FreeBSD 4.9 分叉而来。（YouTube EPc5E2pWTwxJE，[1342.35-1342.36]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -91,3 +91,60 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSDTalk EP115] Backman W. BSDTalk: 115: bsdtalk115 - Jun-ichiro “itojun” Itoh Hagino[EB/OL]. (2007-06-01)[2026-08-27]. <https://archive.org/details/bsdtalk115>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-656 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-656`；w172 YouTube 章节路由采纳）
+
+据 John Baldwin 讲者口述：OpenSSL 主分支已合入 TLS 1.1 与 1.2 的 kTLS 支持（转写音作 tls1.1.2），这部分改动将在 OpenSSL 3.0 版本发布时一并交付给用户使用。（YouTube EPJdgOQi6lX5M，[1886.679-1892.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-655 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-655`；w172 YouTube 章节路由采纳）
+
+据 John Baldwin 讲者口述：FreeBSD 已合入 kTLS 的传输端支持，覆盖 TLS 1.0 至 1.3 全部版本，相关代码已进入 FreeBSD 13 的开发分支（转写音作 de-13）。（YouTube EPJdgOQi6lX5M，[1795.12-1802.549]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1202 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1202`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2017 IPv6 演讲〕讲者 Massimiliano Stucchi 口述：IPv6 于 1995 年启动。（YouTube EPZFpdrAb14Hc，[404.729-415.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-288 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-288`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD VXLAN 演讲〕讲者口述：VXLAN 使用 UDP 端口 4789。（YouTube EP_1Ne_TgF3MQ，[1049.76-1053.909]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-287 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-287`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD VXLAN 演讲〕讲者口述：FreeBSD 10.2 于上年加入 VXLAN 支持。（YouTube EP_1Ne_TgF3MQ，[863.92-871.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-362 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-362`；w172 YouTube 章节路由采纳）
+
+据〔TCP-to-SCTP 网关讲座〕讲者 Ryan Bickhart 口述：相关代码原置于 FreeBSD 4.10，现正移植到 FreeBSD 7，需补充锁与 SMP 相关适配。（YouTube EPbWiPOhkUQJs，[284.36-292.18]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-829 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-829`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：内核 TLS 代码当前主干只支持到 TLS 1.2，TLS 1.3 补丁已可工作。（YouTube EPp9fbofDUUr4，[2451.1-2458.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-916 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-916`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Massimiliano Stucchi 口述：他用一台运行 FreeBSD 的 Raspberry Pi 连到一个与另一家 ISP 共用的交换机。（YouTube EPrOahvokPtrs，[2490.4-2498.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-914 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-914`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Massimiliano Stucchi 口述：他目前在这些设备上运行 FreeBSD 14.0。（YouTube EPrOahvokPtrs，[1110.8-1116.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-915 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-915`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Massimiliano Stucchi 口述：他主要使用 BIRD 搭配 OSPFv2、OSPFv3、BGP 与 BFD。（YouTube EPrOahvokPtrs，[1134.64-1144.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1011 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1011`；w172 YouTube 章节路由采纳）
+
+据〔BSD networking BoF〕讲者 Tom Smyth 口述：对 OpenBSD 路由器而言该议题重要，因为 OpenBSD 仍未充分利用 SMP 多核并行能力（YouTube EPupfkXx0u5WY，[779.839-784.949]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

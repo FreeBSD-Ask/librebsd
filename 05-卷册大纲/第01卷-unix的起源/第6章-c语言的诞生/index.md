@@ -647,3 +647,24 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-520 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-520`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：1964 年 PDP-11 或 PDP-7（转写音作 PDV 7）问世；1969 年 Bell Labs 从 Multics 项目撤出。（YouTube EPFTlzaDgzPY8，[400.18-411.76]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-521 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-521`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Dennis 着手将 B 编译器改造以生成 PDP-11 指令码，图为早期 PDP 11 s 20（转写音作 PDP-11/20）机型。（YouTube EPFTlzaDgzPY8，[1034.46-1046.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1276 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1276`；w172 YouTube 章节路由采纳）
+
+据 BSDCan 2018 讲者口述：UNIX v3 出现在 1973 年。（YouTube EPnRJWS9_cEUU，[378.09-382.589]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1275 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1275`；w172 YouTube 章节路由采纳）
+
+据 BSDCan 2018 讲者口述：第一版 UNIX 大约出现在 1970 年。（YouTube EPnRJWS9_cEUU，[333.13-337.17]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

@@ -92,3 +92,39 @@ volume: 第16卷-开源运动与合规治理
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-378 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-378`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Day 2024〕讲者 Ian Evans 口述：其自 2019 年起为 FreeBSD 的 metapf5 项目（转写音作 metap five）持续工作。（YouTube EPCC2KhOoBPy4，[26.359-34.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-483 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-483`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD by the Fire〕讲者口述：Justin Gibbs 首次加入 FreeBSD 项目时正值 2.2 时代，他认为是 FreeBSD 3.0 前后。（YouTube EPF-S7q1Ctcn8，[411.96-419.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1140 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1140`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 开发者峰会 2023年5月〕讲者 Michael J. Karels 口述：从 Berkeley 得到的 BSD 4.2 只运行在一个平台上，即 VAX；但讲者随即补充，它其实也运行在 Sun 平台上，且使用了相似的源代码组织。（YouTube EPXSziyKlG1ws，[2330-2340.77]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1141 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1141`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 开发者峰会 2023年5月〕讲者 Michael J. Karels 口述：Bill 停止回传补丁后 NetBSD 兴起，随后 FreeBSD 出现。（YouTube EPXSziyKlG1ws，[3730.2-3738.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1304 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1304`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Mitchell Horn（自报，ASR 讹作 horn）是 FreeBSD 源码提交者（source committer）。（YouTube EPfohwHgpa9Ig，[0.1-6.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-629 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-629`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Robert Friemer 口述：2007 或 2008 年决定从 Windows 切换到 FreeBSD 作为桌面（YouTube EPiRJaUjopO18，[70.24-82.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-955 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-955`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 用户访谈〕讲者 Charlie Li 口述：讲者自 2017 年开始使用 FreeBSD，并于 2021 年成为 FreeBSD ports 提交者。（YouTube EPtdB_GBOAzKc，[10.24-19.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->

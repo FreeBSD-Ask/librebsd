@@ -80,3 +80,125 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP31] Pennington J. BSD Now: 31: Edgy BSD Users[EB/OL]. (2014-04-01)[2026-08-15]. <https://www.bsdnow.tv/31>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-280 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-280`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者提到 OpenZFS 2.3 近期引入长文件名支持这一新特性。（YouTube EP9Si69u0mOV0，[790.8-796.68]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-279 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-279`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：OpenZFS 通过 cherry-picked 特性支持 illumos、FreeBSD、GNU Linux、Mac OS、Windows、NetBSD 与 Solaris 多个平台。（YouTube EP9Si69u0mOV0，[17.36-31.36]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-430 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-430`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：讲者 Imtiaz Mohammad 指出，其最新一次测试未启用压缩、仅使用 128k 写入（转写音作 without ... without compression just 128k rights），此时 ZFS 仍存在若干问题，表现不及 OpenZFS 2.0（转写音作 open gfs 2.0）（YouTube EPDmJ0uxF0wes，[926.24-941.43]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-429 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-429`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：讲者 Imtiaz Mohammad 表示，其团队约两年前开始从事该 ZFS on Windows 工作时，open gfs 2.0 版本尚未发布。（YouTube EPDmJ0uxF0wes，[639.76-644.949]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-479 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-479`；w172 YouTube 章节路由采纳）
+
+据〔2019-02-26 OpenZFS Leadership Meeting〕讲者口述：illumos 的 NFS hook 参数不被 FreeBSD 的 NFS hook 所理解。（YouTube EPEXstK9ckcZQ，[3576-3585.29]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-484 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-484`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：OpenZFS 设计目的是把各社区汇入统一伞下，新 GitHub 仓库基于 Illumos gate，允许通过 pull request 将增强汇入主干。（YouTube EPF7af6_wb4PU，[155.8-185.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-857 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-857`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者 Tarkan Maner 口述：他约 2 年前加入 Nexenta，此前已了解 ZFS，并称扩大 ZFS 用户基数是首要目标。（YouTube EPPWS1TR8X4Fo，[71.96-80.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-898 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-898`；w172 YouTube 章节路由采纳）
+
+据 Michael Dexter 与 Jorgen Lundman 讲者口述：FreeBSD 是 ZFS 移植的早期参与者之一，而 NetBSD 的移植起步相对滞后，两者形成明显的先后差距。（YouTube EPRc-9QmUlDXs，[114.32-118.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1328 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1328`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者自述其在 ZFS 上工作（转写讹作 'ZF'），并称这是其选择该课题的主要原因之一；转写标题逐字载明 'Scrub/Resilver Performance by Saso Kiselkov'。（YouTube EPSZFwv8BdBj4，[4.4-14.3]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-979 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-979`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者称其旧机器上运行 Lustre 2.5，下层为 ZFS 0.6.5（以 Lustre 承托 ZFS）。（YouTube EPTyA0EKhGRsE，[89.76-100.39]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-980 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-980`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者称其另有环境运行 Lustre 2.8，底层为 ZFS 0.7.9，且通常跟随最新发行版。（YouTube EPTyA0EKhGRsE，[103.2-110.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1013 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1013`；w172 YouTube 章节路由采纳）
+
+据〔OpenZFS 开发者峰会 2014〕讲者 Prakash Surya 口述：OpenZFS 项目于 2013 年创建。（YouTube EPUtlGt3ag0o0，[49.8-53.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1216 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1216`；w172 YouTube 章节路由采纳）
+
+据〔系统性能分析方法论主题演讲〕讲者 Brendan Gregg 口述：其旧图出自 Solaris，包含其编写的多个 DTrace 工具（YouTube EPZNkFDHLQnrA，[3305.019-3314.309]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-329 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-329`；w172 YouTube 章节路由采纳）
+
+据〔2022年12月 OpenZFS 领导组会议〕讲者口述：FreeBSD 的 VFS 层已有名为 rctl 的类似机制（YouTube EPatbW3Ecqm5s，[1191.66-1195.909]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-339 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-339`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Richard Elling 口述：在 Solaris 与 Illumos（转写音作“Solaris alumina”）体系内，ZFS 的可观测性采用 DTrace（YouTube EPb5awF6SVNwI，[1796.8-1801.5]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-505 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-505`；w172 YouTube 章节路由采纳）
+
+据〔August 2022 OpenZFS Leadership Meeting〕讲者口述：FreeBSD 上也有对应的 exports 文件，转写音作 Etc ZFS exports（读作 /etc/zfs/exports，确切文件名转写存疑）。（YouTube EPfi_ZKc_od54，[903.24-911.569]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-516 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-516`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Satabdi Das 口述：某些元数据密集型负载会使 ARC 大小远超所配置的 zfs_arc_max 值（YouTube EPfqQ95LlwOGg，[1029.48-1039.189]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-514 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-514`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Satabdi Das 口述：该 OpenZFS 之上的文件系统实现支持 NFS v3、v4.1 与 v4.2 协议（转写音作 V3 for 4.1 and 4.2）（YouTube EPfqQ95LlwOGg，[116.7-125.87]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-515 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-515`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Satabdi Das 口述：讲者称其团队于 2021 年 12 月推出 FSX for OpenZFS（转写音作“FSX for open CFS”；本条视频标题为 Operating OpenZFS at Scale）。（YouTube EPfqQ95LlwOGg，[69.18-77.149]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-584 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-584`；w172 YouTube 章节路由采纳）
+
+据〔February 2022 OpenZFS Leadership Meeting〕讲者口述：讨论提到在 Linux 上实现类似 FreeBSD jail 或 illumos zone（转写音作 alumos）的隔离能力。（YouTube EPhij7PGGjevc，[3530.96-3537.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-585 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-585`；w172 YouTube 章节路由采纳）
+
+据〔February 2022 OpenZFS Leadership Meeting〕讲者口述：zfs clone 这一文件功能最初位于 FreeBSD。（YouTube EPhij7PGGjevc，[262-266.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-810 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-810`；w172 YouTube 章节路由采纳）
+
+据〔Sandboxing OpenZFS on Linux 报告（来源不详）〕讲者 Albert Lee 口述：该沙箱引入前，FreeBSD 已有同类设施 jails。（YouTube EPokF7D6lr2BI，[83.96-89.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-883 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-883`；w172 YouTube 章节路由采纳）
+
+据〔December 2024 OpenZFS Leadership Meeting〕讲者口述：FreeBSD 另有一种 unlink（转写音作 you unlink）标志，文件属主可设置与清除它，而 ZFS 目前不支持。（YouTube EPqQcSXScRo6s，[866.199-875.949]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-996 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-996`；w172 YouTube 章节路由采纳）
+
+据讲者口述：讲者来自 Delphix，分享在 illumos 与 Linux 上调试 ZFS 的经验。（YouTube EPuDDJnzSb-2w，[11.889-20.099]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
