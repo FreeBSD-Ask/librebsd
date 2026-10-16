@@ -29,7 +29,7 @@
 - `00-编纂规则与格式规范/01-规则/script/**`（脚本运行日志）。
 
 > 2026-09-20 起：`长线任务总登记表.md` **已纳入闸面**（原遗留 63 条已按纯格式治理归零；
-> 其机读块由 `_longline_status.py --write-block` 生成、不含表格，不影响闸面）。
+> 其机读块由本目录 `_longline_status.py --write-block` 生成、不含表格，不影响闸面）。
 
 退出码
 ------
@@ -59,13 +59,20 @@
     python audit_markdown_lint.py --allow-version
 """
 import argparse
+import os
 import re
 import shutil
 import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+# 用 os.path.abspath 而非 Path.resolve()：本仓库根在映射网络盘（D: ← \\HOST\share\d），
+# pathlib 的 .resolve() 会走 GetFinalPathNameByHandleW，把盘符还原成 UNC 路径；而
+# run_lint() 把 str(ROOT) 传给 Node 的 cwd，Node 的 cmd.exe 启动器不支持 UNC cwd、
+# 会回落到 C:\Windows 去找 `--config .markdownlint.json` 并报 ENOENT
+# （2026-10-15 实测：闸面 99 文件全部判「无法解析 lint 输出」，实为配置未加载）。
+# os.path.abspath 不做符号链接/盘符解析，保留盘符，Node 侧即可正常加载配置。
+ROOT = Path(os.path.abspath(__file__)).parents[3]
 
 PINNED = ("0.22.1", "0.40.0")  # markdownlint-cli2 / markdownlint
 
