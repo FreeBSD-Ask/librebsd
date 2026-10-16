@@ -152,8 +152,8 @@ REGISTRY = [
          selftest=None, in_tests_readme=False),
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_provenance_dupes.py",
          kind="门禁（数据库类，独立计数）",
-         object="historical_claims.provenance_history 审计表：D1 真重复（同 source_id/event_type/at/detail 多行）FAIL；D2 id 列空值率、D3 source_id 空值率 WARN；D4 三元组重复中 detail 分歧者记 INFO（正当形态，非缺陷）。只读连接，不写活库",
-         trigger="provenance_history 任何写入后（2026-10-16 立：三元组判据经实测推翻——601 组重复全部 detail 分歧、真重复 0，故只判真重复；若按三元组判会把 1,690 条正当审计行全误报）",
+         object="historical_claims.provenance_history 审计表：D1 真重复（同 source_id/event_type/at/detail 多行）FAIL；D2a 裁定前空 id 仅登记 INFO、D2b 裁定日起空 id（违反统一约定）FAIL；D3 source_id 空值率 WARN；D4 三元组重复中 detail 分歧者记 INFO（正当形态，非缺陷）；D5 id 序列冲突（同号多行）裁定后 FAIL／裁定前 WARN。只读连接，不写活库",
+         trigger="provenance_history 任何写入后（2026-10-16 立：三元组判据经实测推翻——601 组重复全部 detail 分歧、真重复 0，故只判真重复；若按三元组判会把 1,690 条正当审计行全误报。同日主理人裁定 id 统一约定＝前向收紧不回填：实测 id 为真实全局单调序号（按 at 升序回落 0/1618）、空 id 行仍持续产生（f4_b24_dbfix 23 行为全表最新），故 8,936 行存量显式登记为债务、裁定日 2026-10-17 起新写入缺 id 即 FAIL）",
          selftest="--selftest", in_tests_readme=False),
 ]
 
