@@ -150,6 +150,11 @@ REGISTRY = [
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_folder_db_integrity.py",
          kind="门禁（数据库类）", object="文件夹级数据库与磁盘文件清单一致性", trigger="改文件夹库后",
          selftest=None, in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_provenance_dupes.py",
+         kind="门禁（数据库类，独立计数）",
+         object="historical_claims.provenance_history 审计表：D1 真重复（同 source_id/event_type/at/detail 多行）FAIL；D2 id 列空值率、D3 source_id 空值率 WARN；D4 三元组重复中 detail 分歧者记 INFO（正当形态，非缺陷）。只读连接，不写活库",
+         trigger="provenance_history 任何写入后（2026-10-16 立：三元组判据经实测推翻——601 组重复全部 detail 分歧、真重复 0，故只判真重复；若按三元组判会把 1,690 条正当审计行全误报）",
+         selftest="--selftest", in_tests_readme=False),
 ]
 
 
