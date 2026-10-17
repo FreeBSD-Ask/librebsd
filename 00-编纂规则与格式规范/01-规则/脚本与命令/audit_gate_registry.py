@@ -155,6 +155,16 @@ REGISTRY = [
          object="historical_claims.provenance_history 审计表：D1 真重复（同 source_id/event_type/at/detail 多行）FAIL；D2a 裁定前空 id 仅登记 INFO、D2b 裁定日起空 id（违反统一约定）FAIL；D3 source_id 空值率 WARN；D4 三元组重复中 detail 分歧者记 INFO（正当形态，非缺陷）；D5 id 序列冲突（同号多行）裁定后 FAIL／裁定前 WARN。只读连接，不写活库",
          trigger="provenance_history 任何写入后（2026-10-16 立：三元组判据经实测推翻——601 组重复全部 detail 分歧、真重复 0，故只判真重复；若按三元组判会把 1,690 条正当审计行全误报。同日主理人裁定 id 统一约定＝前向收紧不回填：实测 id 为真实全局单调序号（按 at 升序回落 0/1618）、空 id 行仍持续产生（f4_b24_dbfix 23 行为全表最新），故 8,936 行存量显式登记为债务、裁定日 2026-10-17 起新写入缺 id 即 FAIL）",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/register_waterlock.py",
+         kind="写库排他门禁（独立计数）",
+         object="historical_claims.claim_id 号段跨会话排他：claim_id **无主键约束**（实测 information_schema.table_constraints 计数 0）⇒ 撞号静默成功。锁文件 12-数据库备份/waterlock/（O_CREAT+O_EXCL 原子创建）串行化——锁内实测 MAX 回吐本批号段，释放前断言 rows == distinct == count（无主键约束下唯一能证明号段连续的机会，不符即拒放锁）。TTL 3 小时、超 24 小时判陈旧；接管须显式 --force 且强制填写理由。只读连接，不写活库。是串行化设施，不替代 claimdb_guard.py（写前哨兵）与写前 prebak",
+         trigger="任何 register 写库前（2026-10-17 升格入库：原驻 script/_db_row_mining/ 受 .gitignore *.py 排除、永久不可入库，改一轮丢一轮；迁入后 repo_root() 上行 3 层即达，路径解析不破，selftest 与活库只读 probe 均实测通过）",
+         selftest="selftest", in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/rotate_guard_state.py",
+         kind="写库排他门禁（独立计数）",
+         object="claimdb_guard 快照多槽轮换：单槽 12-数据库备份/claimdb_guard_state.json 被每次非 FAIL 运行就地覆盖 ⇒ 污染态（2026-10-13 广播事故）被记成基线、S2/S4 从此对假水位比对。健康判定只读快照自带指标（不碰库）：fact_max_pct>0.25 或 upd_max_pct>0.50 ⇒ poisoned（＝S1/S3 FAIL 阈值），>0.05 或 distinct/rows<0.90 ⇒ suspect；实测健康 0.994/0.00017 vs 污染 0.025/0.975，差两个数量级。restore --best 取**最近的健康槽**（不是「最近槽」）、--dry-run 只报不换、prune 健康槽至少留 1",
+         trigger="register／claimdb_guard 前后（2026-10-17 立；BASE 走 D:/UNC 双候选＋--base，不可解析 exit 2 不静默空转）",
+         selftest="selftest", in_tests_readme=False),
 ]
 
 
