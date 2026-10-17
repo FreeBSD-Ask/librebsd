@@ -1,0 +1,142 @@
+---
+chapter: 第 341 章
+id: CH341
+volume: 第18卷-全球社区地区bsd史
+---
+
+# 第341章 中东政府企业与bsd张力
+
+## 要点
+
+- 海湾国家主权基金（如沙特 PIF、阿联酋 Mubadala 等）对开源的投资有限，BSD 项目在主权基金投资中地位边缘；具体投资须通过主权基金公开档案核查
+- 1990 年代至 2000 年代中东各国政府对 BSD 普遍漠视；2010 年代后随海湾国家主权基金对开源的投资增加，部分国家政府开始有限关注 BSD；演变须通过政府政策文件统计验证
+- 中东政府对 BSD 的政策态度较非洲更明确，主要因中东有更成熟的开源政策与主权基金投资；非洲政府对 BSD 的漠视反映非洲开源政策的薄弱；比较须控制开源政策完善程度变量
+- 中东政企张力史料以政府政策文件、企业档案、FreeBSD Foundation 合作记录为主，缺乏系统性的学术研究；政府政策文件须警惕执行差距；企业档案须警惕商业秘密限制
+- IL-BUG 定期在特拉维夫举办 meetup。FreeBSD 在 Check Point、CyberArk 部分基础设施中部署。
+
+## 史观
+
+- 总纲第 13 条——法律与道德是利益分配，主权基金对 BSD 的边缘投资反映 BSD 在中东产业利益分配中的弱势
+  - 辨析：主权基金的投资数据须通过原始档案核查；“边缘”的判断须量化——BSD 投资占比
+  - 文献：沙特 PIF 公开档案；阿联酋 Mubadala 公开档案；海湾国家主权基金投资报告［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- 边缘者的贡献被中心叙事遮蔽，媒体报道的选择性使 BSD 在中东的边缘地位被固化
+  - 辨析：Geektime 的创立时间（2009 年）、前身（Newsgeek）、创始人（Yaniv Feldman 与 Moran Bar）、2014 年扩展英文市场须经三项独立来源交叉验证（Calcalistech 2022 年 2 月 Moran Leshem Bar 专访、Kochava Media Index）
+- 总纲第 13 条——法律与道德是利益分配，地缘制裁对 BSD 可用性的质疑反映出口管制法律框架的利益分配限制
+  - 辨析：质疑的代表性须评估——是否仅反映部分受制裁国家开发者的观点；BSD 许可证与 EAR 的关系须通过法律文本具体分析
+  - 文献：受制裁国家开发者声明档案；社区邮件列表存档；EAR 法律文本；OFAC 制裁名单档案 ［A］
+
+## 341.15.2 政企张力从漠视到有限投资的演变
+
+- 要点：1990 年代至 2000 年代中东各国政府对 BSD 普遍漠视；2010 年代后随海湾国家主权基金对开源的投资增加，部分国家政府开始有限关注 BSD；演变须通过政府政策文件统计验证
+- 史料：中东各国政府政策文件、海湾国家主权基金投资档案、FreeBSD Foundation 合作记录
+- 辨析：Geektime 的创立时间（2009 年）、前身（Newsgeek）、创始人（Yaniv Feldman 与 Moran Bar）、2014 年扩展英文市场须经三项独立来源交叉验证（Calcalistech 2022 年 2 月 Moran Leshem Bar 专访、Kochava Media Index）；Check Point/Juniper 的 BSD 使用情况须通过企业档案验证
+- IL-BUG 记录； 产业报告 ［B］
+- Geektime 历史文章存档；Webrazzi 历史文章存档；Check Point/Juniper 公司档案；Calcalistech 专访；Kochava Media Index ［A］
+
+## 341.17.2 公众认知从空白到偏见的演变
+
+- 要点：1990 年代中东公众对 BSD 普遍空白，将其与 Linux 混淆；2000 年代后随 Linux 在中东主流化，BSD 被部分公众视为“过时的西方技术”；演变须通过历届中东技术会议公众调查与媒体报道分析
+- 史料：中东技术会议公众调查、中东技术媒体报道、BSD 与 Linux 用户论坛讨论
+- 史观：总纲第 15 条——文化即形式主义，“过时的西方技术”的公众印象反映文化建构对技术形象的塑造
+
+## 341.18.2 BSD 可用性质疑的演变与效应
+
+- 要点：BSD 可用性质疑随美国制裁政策变化而演变——2000 年代后随制裁加剧，质疑增加；2010 年代后随 BSD 许可证法律分析深入，部分质疑缓解；演变须通过社区档案与法律评论验证
+- 史料：EAR 修订历史、OFAC 制裁名单变化、社区邮件列表、法律评论文章
+- 史观：总纲第 13 条——法律与道德是利益分配，BSD 可用性质疑的演变反映出口管制与制裁体系对技术可及性的利益分配调整
+- 辨析：“质疑增加”与“质疑缓解”的判断须量化——社区邮件列表与法律评论文章的量化统计
+- Israel FreeBSD User Group 邮件列表存档；Check Point 企业档案；伊朗地下镜像维护者访谈记录 ［A］；openbsd.duckdb 查询 L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.2
+
+## 341.19.2 重要贡献者与边缘者：以色列早期 adopter 与伊朗地下镜像维护者
+
+- 要点：中东 BSD 贡献者多从学生时代或工程师生涯活跃，后因就业压力、地缘政治限制、人才外流等转向其他领域；Israel FreeBSD User Group 活跃度在 2000 年代中期达峰后下滑；演变须通过 Israel FreeBSD User Group 邮件列表与贡献者档案统计验证
+- 史观：边缘者的贡献被中心叙事遮蔽，以色列早期 adopter 与伊朗地下镜像维护者的工作在 BSD 全球叙事中长期被忽视；统计结论印证：统计结论 [L3.3.1] 时区分布中东主要时区 +03:00 74,576 commit / 3,977 贡献者（与俄罗斯莫斯科、东非共用）与 +04:00 与俄罗斯萨马拉共用无法单独区分中东贡献者，与统计结论 [L3.3.2] TLD 分布中东
+- 辨析：以色列早期 adopter 名单须通过 Israel FreeBSD User Group 邮件列表核实；伊朗地下镜像维护者的实际情况因安全限制难以完全核查；【0 信任原则·地理识别局限】author_email TLD 不等于实际地理位置，中东 ccTLD 全部归入 other 类意味着中东贡献者数据严重缺失，且中东时区 +03:00 与欧洲、俄罗斯共用，+04:00 与俄罗斯萨马拉共用，时区偏移不等于居住地
+- 文献：Pardus 项目档案；TÜBİTAK 官方文件；Israel FreeBSD User Group 邮件列表存档 ［A］
+
+## 341.20.2 中东 OS 生态的演变趋势
+
+- 要点：1990 年代末至 2000 年代中期中东 OS 生态以 Linux 为主，BSD 边缘化；2010 年代后云计算与容器化使中东 OS 生态同质化，BSD 与 Linux 的本地差异缩小；趋势须通过历届中东技术会议议题统计验证
+- 史料：中东技术会议议程、中东 ISP 部署统计、中东云服务商公开数据［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. <https://www.checkpoint.com/about-us/company-overview/> （访问日期 2026-07-23）；《亚伯拉罕协议》公开文本；OFAC 制裁清单；freebsd.duckdb freebsd-src 仓库以色列与阿拉伯语开发者
+- 辨析：Pardus 2003 年由 TÜBİTAK 启动规划已由 OSOR 与 TÜBİTAK 官方档案交叉验证；Pardus 首个 Live CD 1.0（2005-02-04）与首个可安装版本 1.0（2005-12-27）的两个里程碑已由 gonullu.pardus.org.tr 与 turkipedia 交叉验证；Pardus 与 BSD 在中东的占比须量化
+  - 文献：Pardus 项目档案；TÜBİTAK 官方文件 ［A］
+
+## 自反性声明
+
+本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-18-067 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-18-067`；login 逐条遍历判定采纳）
+
+2000年前后，家用用户已可用NetBSD在旧PC上构建低成本、免维护的NAT防火墙；作者主张该配置安全性优于部分商业防火墙，并因BSD/Linux在旧硬件上表现良好而被选为家用网关平台。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-18-067 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-18-067`；login 逐条遍历判定采纳）
+
+2000年前后，家用用户已可用NetBSD在旧PC上构建低成本、免维护的NAT防火墙；作者主张该配置安全性优于部分商业防火墙，并因BSD/Linux在旧硬件上表现良好而被选为家用网关平台。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-18-067 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-18-067`；login 逐条遍历判定采纳）
+
+2000年前后，家用用户已可用NetBSD在旧PC上构建低成本、免维护的NAT防火墙；作者主张该配置安全性优于部分商业防火墙，并因BSD/Linux在旧硬件上表现良好而被选为家用网关平台。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-18-067 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-18-067`；login 逐条遍历判定采纳）
+
+2000年前后，家用用户已可用NetBSD在旧PC上构建低成本、免维护的NAT防火墙；作者主张该配置安全性优于部分商业防火墙，并因BSD/Linux在旧硬件上表现良好而被选为家用网关平台。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-18-067 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-18-067`；login 逐条遍历判定采纳）
+
+2000年前后，家用用户已可用NetBSD在旧PC上构建低成本、免维护的NAT防火墙；作者主张该配置安全性优于部分商业防火墙，并因BSD/Linux在旧硬件上表现良好而被选为家用网关平台。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-18-067 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-18-067`；login 逐条遍历判定采纳）
+
+2000年前后，家用用户已可用NetBSD在旧PC上构建低成本、免维护的NAT防火墙；作者主张该配置安全性优于部分商业防火墙，并因BSD/Linux在旧硬件上表现良好而被选为家用网关平台。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

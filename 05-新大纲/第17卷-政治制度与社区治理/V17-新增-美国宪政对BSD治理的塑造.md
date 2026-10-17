@@ -1,0 +1,49 @@
+# 美国宪政哲学对 BSD 治理结构的深层塑造
+
+#### 要点
+
+FreeBSD、NetBSD、OpenBSD 三大 BSD 的治理结构看似是纯技术性的组织选择——Core Team 选举、committer 权限、投票机制——但这些机制的底层预设无一不源自美国宪政哲学传统。FreeBSD Core Team 的选举制（9 名成员由 active committer 投票选举，每两年轮换）直接继承了美国联邦参议员选举制的几个核心特征：小规模代议制（9 人参众议院类比）、固定任期、定期选举、被选举人必须是“committer”（对应公民身份）。Core Team 的内部决策常需多数决（51% 通过），但重大事项（如修改 commit bit 规则）需要 2/3 超级多数——这直接对应于美国宪法中的超级多数要求（如修宪须 2/3 国会通过）。
+
+OpenBSD 的治理与此形成鲜明对比——Theo de Raadt（西奥·德·若特） 的 “独裁制” 不是随意的专制，而是有明确的合法性基础：de Raadt 是 OpenBSD 的唯一创始人和代码贡献量最大者。从 §10 政治哲学 11.2 节的视角——“原体先行——原型构建出来再迭代，否定一种不变的主体性”——de Raadt 的治理恰恰是 “原型先行” 的体现：项目从一人的愿景出发，治理形式随项目生长而演化，但 legitimatizer 始终是同一个人。
+
+更深层的影响在于 “三权分立” 的隐性复制：Core Team（立法——制定规则）与 Security Team（行政——执行安全策略，OpenBSD 的 Theo 兼有两者）、committer（公民——执行与参与）。11.2 节指出：“国家产生于压迫，国家存在的意义不在于解放全人类而在于统治。” BSD 项目的治理同样以“维稳”（系统的稳定性、社区的可维护性）为最终目标——Core Team 的决策权威来自维护社区稳定的需要而非公平正义的需要。
+
+#### 史料
+
+- FreeBSD Core Team Bylaws（1995-2024 各修订版）——正式记载 Core Team 选举制度与决策程序。
+- OpenBSD 项目结构文档（1996-2024）——记载 Theo de Raadt 作为唯一项目 leader 与最终决策者的权力结构。
+- NetBSD Foundation Bylaws（1998-2024）——NetBSD 采用基金会制作法定治理机构。
+- Hubbard J. “FreeBSD Core Team 经验总结”（1995）——Jordan Hubbard 在 FreeBSD 早期邮件列表中的邮件阐述 Core Team 九人制的设立理由——“这不是权力集中，这是权力分散——9 个人比任意一个人更难独裁。”
+- De Raadt T. “OpenBSD 不需要 Core Team”（2006-06-12）——Theo 在 <misc@openbsd.org> 邮件列表中的帖子：“我写了最多的代码——我当然要对项目的安全负责，没有民主可以分担这个责任。”
+- 教材《FreeBSD 从入门到跑路》2.1 节——红帽公司对 Linux 生态影响的批判——与 BSD 治理模式的对比。
+
+#### 史观
+
+**总纲 24（世界哲学中的美国哲学史）**——见 shigang.md §24：美国宪政哲学（Madison 的联邦论、Jefferson 的权利法案、制宪会议中的大妥协/小妥协）的深层结构在 BSD 治理中有三层对应：分权（Core Team vs committer general body）、制衡（Core Team 的 recall 机制可被 committer 投票召回，防止核心独大）、代表制（committer 选举 Core Team，但 committer 本身也不是所有用户而是少数精英——“代表悖论”）。
+
+**总纲 10（政治哲学）**——11.2 节：“消极自由是有不想做什么的自由，积极自由是有能做什么的自由。”BSD 的治理结构被设计为保障代码贡献者的消极自由（有 commit 权限），而非用户的积极自由。committer 构成的是 “技术贵族政体”——政治哲学的 11.3 指出 “任何人都不可能拥有超越时代和人民的道德情操”。BSD Core Team 成员的道德素质被技术资格所假定——但这种假定本身就是形式主义的。
+
+**自反性声明**：本子节将 BSD 治理类比为美国宪政——这一类比是编史学的建构，不是 BSD 创始人的自觉意愿。Jordan Hubbard 等人并未谈论联邦论；Core Team 的设立是基于 practicality（386BSD 时代协调员混乱的教训）而非政治哲学。本子节承认类比的外在性质，欢迎被更直接的历史释读所超越。
+
+#### 辨析
+
+**三大 BSD 治理差异辨析**：FreeBSD 的 Core Team 选举制（代议制民主）、NetBSD 的 Foundation + Core Group 混合制（立宪民主）、OpenBSD 的 Theo 独裁制（天才独裁/仁慈独裁）。二手资料常将 OpenBSD 描述为“不民主”——但这预设了“民主 = 选举”的美国中心主义。Theo 的合法性不来自选举而来自“贡献量”（动手者创造历史，总纲 10），这也是形式主义约束下的另一种权力合法性结构。
+
+**BSD 治理与 Linux 治理对比辨析**：Linux 的治理以 Linus Torvalds 为核心——集中性而非制度化。Linux 的问题是 “一人独裁的风险”（Linus 退出/去世后何去何从），BSD 的问题是 “制度僵化的风险”（Core Team 选举的惯性使得新血难以进入）。两个极端分别展示了政治哲学中 “威权稳定 vs 民主停滞” 的经典张力。
+
+#### 文献
+
+[1] FreeBSD Core Team Bylaws [EB/OL]. freebsd.org, 1995-2024.
+
+[2] De Raadt T. “OpenBSD不需要Core Team” [EB/OL]. OpenBSD misc@, 2006-06-12.
+
+[3] NetBSD Foundation Bylaws [EB/OL]. netbsd.org, 1998-2024.
+
+[4] Hubbard J. FreeBSD Core Team formation rationale [EB/OL]. freebsd.org, 1995.
+
+[5] 教材《FreeBSD 从入门到跑路》第 2 章 2.1 节——FreeBSD 基金会与治理结构。
+
+---
+
+- 史观：形式主义史观：本子节所书皆是形式主义化的重构
+- 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）

@@ -1,0 +1,180 @@
+---
+chapter: 第 296 章
+id: CH296
+volume: 第15卷-许可证哲学与法律分析
+---
+
+# 第296章 当代unix史商业unix演化
+
+## 要点
+
+- linux-kernel 代码仓库共 1,474,341 次提交（1970-01-01 至 2026-08-24；起点系时区边界记录），39,865 位贡献者（contributors 表行数）
+
+## 史观
+
+- 自反性：许可证哲学辩论本身需要被审视——‘自由’的定义是形式主义化的
+  - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+- 自反性：许可证哲学辩论本身需要被审视——‘自由’的定义是形式主义化的
+  - 辨析：贡献者高度集中——Top 1 贡献者 Linus Torvalds 占比 33.2%，需考量‘个人主导’与‘社区协作’的叙事张力
+  - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 linux_kernel.duckdb 代
+- 多方平等：在本体论层面平等对待所有立场，不预设优劣
+  - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+- 自反性：对自身的审视是学术严谨性的必要条件
+  - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+
+## 辨析
+
+- 部分二手资料称 “HP-UX 11i v3 是 HP-UX 最后一个主要版本”，但 HPE 仍发布 Update 补丁包（最新为 2024 年 Update 17），技术上 HP-UX 11i v3 仍在维护中；所谓 “终版” 指无新功能更新，仅有补丁与安全修复。本子节采用 “HP-UX 11i v3 为最后一个主要版本（2007 年发布），仍以 Update 补丁包形式维护” 的限定性表述。
+- 部分二手资料称 “HP-UX 10.20 是首个 64 位 UNIX”，部分称 “Solaris 7 是首个 64 位 UNIX”，部分称 “AIX 4.3 是首个 64 位 UNIX”；考据结论：HP-UX 10.20（1997 年 6 月）最先发布 64 位支持（PA-RISC 2.0），先于 Solaris 7（1998 年 11 月）与 AIX 4.3（1997 年 10 月，但 AIX
+- Intel 于 2017 年发布 Itanium 9700（Kittson）作为最后一个 Itanium 芯片，2021 年 1 月 29 日正式停产 Itanium 9700；部分二手资料称 “Itanium 2020 年停产”，但 Intel 官方档案明确为 2021 年。本子节采用 “2021 年 Intel 正式停产 Itanium” 的表述。
+- 2010 年 Oracle 宣布停止 Itanium 开发，HP 起诉 Oracle 违反 2010 年 Hurd 加入 Oracle 时的口头承诺（Oracle 辩称无书面合同）；2012 年法院判决 Oracle 须继续支持 Itanium 至 2015 年合同期满；〔待核：原文截断，后文待回源〕
+- 辨析：本章辨析的核心张力在于“自反性：许可证哲学辩论本身需要被审视——‘自由’的定义是形式主义化的”的边界条件，各子节辨析字段已展开，卷面综合辨析在正文撰写阶段横向汇总（据本章概述史观整理）
+  - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+
+## 文献
+
+- [DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+- [DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 linux_kernel.duckdb 代码仓库数据
+
+## 自反性声明
+
+本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP580（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[466.0-571.0]，L1）[订正：原 [476.24-547.40]，2026-10-01 SenseAudio 重转核对]
+- Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[617.0-769.1]，L1）[订正：原 [630.52-756.16]，2026-10-01 SenseAudio 重转核对]
+- Colin 回顾 freebsd-update 工具源于 2003 年他为简化系统补丁更新而编写，并为此创造了 bsdiff 二进制差分工具，后者后来被广泛用于各处的增量更新。（BSD Now EP580，[192.7-235.5]，L1）[订正：原 [210.06-229.42]，2026-10-01 SenseAudio 重转核对]
+- Andrew Hewus 自述约 2003 年在亚利桑那州一家小型 ISP 从 OpenBSD 3.5 或 3.6 开始，将 DNS、邮件与路由逐步替换为 OpenBSD，后经邮件列表接手 OpenBSD 基本系统中的 Perl 维护。（BSD Now EP580，[1455.1-1578.3]，L1）[订正：原 [1455.12-1565.32]，2026-10-01 SenseAudio 重转核对]
+- Liam Proven 梳理商业 Unix 的当代存续：Xinuos 继承 SCO 的 Xenix 与 UnixWare 业务并提供基于 FreeBSD 的清理版本；AIX 开发团队迁往印度；Solaris 不再出新版本但仍获安全修复；illumos 与 Oxide Computer 延续 OpenSolaris 谱系。（BSD Now EP580，[2905.8-3025.7]，L2）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- Liam Proven 以其亲历的 FreeBSD 13 升级 14 后桌面环境损坏为例，指出 BSD 桌面在升级平滑度与新手进入门槛上的短板，并批评 systemd 及其安全启动方向正在收窄用户对系统的控制。（BSD Now EP580，[3037.3-3352.6]，L1）[订正：原 [3043.30-3344.86]，2026-10-01 SenseAudio 重转核对]
+
+**史料**：
+
+- 本期为 EuroBSDcon 2024 现场采访；Colin Percival 与 Andrew Hewus 为一手自述，Liam Proven 为 The Register 记者的一手见闻与二手综述。（BSD Now EP580，[40.2-1294.1]，L1）[订正：原 [59.28-1293.58]，2026-10-01 SenseAudio 重转核对]
+
+**史观**：
+
+- 总纲10 动手者创造历史：Colin 因自身补丁更新需求编写 freebsd-update 与 bsdiff，其工具后来成为 FreeBSD 更新基础设施的一部分，体现动手者为解决具体问题而塑造系统历史。（BSD Now EP580，[192.7-235.5]，L1）[订正：原 [210.06-229.42]，2026-10-01 SenseAudio 重转核对]
+- 总纲3 不存在进步，只有权力再分配：FreeBSD 发布工程从即兴决策到日历化、支持期从五年缩为四年的过程，是工程与治理权力在项目内部的重新配置。（BSD Now EP580，[617.0-769.1]，L1）[订正：原 [630.52-756.16]，2026-10-01 SenseAudio 重转核对]
+- 总纲21 革命与改革是历史方法论的分歧：Liam 对 systemd 与安全启动方向的批评，呈现开源生态中激进变革与保守续存两种方法论之间的持续张力。（BSD Now EP580，[3037.3-3166.5]，L2）[订正：原 [3043.30-3164.96]，2026-10-01 SenseAudio 重转核对]
+
+**辨析**：
+
+- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。 [存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。 [存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
+
+**文献**：
+
+- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. <https://www.bsdnow.tv/580>.
+
+<!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

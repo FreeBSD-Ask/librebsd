@@ -1,0 +1,130 @@
+---
+chapter: 第 320 章
+id: CH320
+volume: 第17卷-政治制度与社区治理
+---
+
+# 第320章 治理批评综合收束审视
+
+## 史料
+
+- [WEB:freebsd.org/administration.html] FreeBSD 官方治理页面（一手）：团队选举与 charter 制度——治理批评综合审视的制度基准
+- [WEB:undeadly.org OpenBSD Journal] OpenBSD 社区治理一手记录：OpenBSD Foundation 2007 成立与资助结构演变
+
+## 要点
+
+- 从项目史观总纲第 13 条“法律与道德是利益分配，社区治理亦是形式主义的政治产物”审视，BSD 治理模式的历史演变呈现连续性与断裂的双重结构——其一，连续性维度：BSD 治理模式自 CSRG 时期（1976-1995）即以“精英主导、技术优先、消极自由”为核心特征，CSRG 由 Robert Fabry、Sam Leffler、Mike Karels、Marshall Kirk McKusick（马歇尔·柯克·麦库西克） 等核心成员主导决策，决策过程的“闭门会议”传统延续至 FreeBSD Core Team（1993 年至今）、NetBSD Foundation（1994 年至今）、OpenBSD（1995 年至今）三大分支——FreeBSD Core Team 选举权仅限 active committer（2000 年章程第 1 条"Active committers have made a commit to the tree in the last 12 months"，经 <https://www.freebsd.org/internal/bylaws/> 一手核验），OpenBSD 由 Theo de Raadt（西奥·德·若特） 个人主导（自 1995 年至今 31 年治理结构基本未变，经 <https://www.openbsd.org/goals.html> 一手核验），NetBSD Foundation 自 2003 年成立 <core@NetBSD.org> 等执行委员会后治理结构基本稳定，三者皆是 CSRG 精英主导传统的延续；消极自由传统亦延续——BSD license 允许商业公司免费使用代码而不强制回馈（如苹果 macOS XNU 内核、索尼 PlayStation 系统软件以专有形式发布且未回馈上游），与 GPL 强制衍生作品开源的积极自由形成对照（FSF 官方将 Modified BSD license、FreeBSD license、ISC license 列为“GPL-Compatible Free Software Licenses”，经 <https://www.gnu.org/licenses/license-list.en.html> 一手核验）；其二，断裂性维度：BSD 治理模式在历史演变中亦呈现若干断裂——CSRG 于 1995 年解散后，FreeBSD Core Team 从 CSRG 内部任命转为社区选举（虽然选举权仅限 active committer，但仍是治理结构的根本性变革），FreeBSD Foundation 于 2000-12-07 获得 IRS 501(c)(3) 公益慈善地位认定（Determination Letter，作为独立法律实体的诞生），FreeBSD Core Bylaws 于 2026.5.27 通过新章程（由 Dag-Erling Smørgrav 于 2026-05-28 提交，cgit.freebsd.org/doc/commit/?id = 7aabb3eea3，新章程原文"an Incumbent Core Team Member currently in their third or fourth consecutive year may not run for reelection"，经一手核验），引入任期限制（拟 2028 年生效），是 FreeBSD 治理结构自 2000 年章程沿用 26 年来的首次根本性调整；NetBSD Foundation 于 2003 年成立执行委员会，是 NetBSD 治理结构从核心团队制向执行委员会制的断裂；OpenBSD 自 1995 年至今治理结构基本未变，但 OpenSSH、LibreSSL、OpenSMTPD 等子项目的治理逐渐呈现“核心团队 + 维护者”模式，是隐性断裂；其三，BSD 治理模式演变与 Linux 治理模式演变的对照：BSD 治理模式的演变是“改革性”的——FreeBSD Core Team 2000 章程沿用 26 年至 2026 新章程，新章程拟 2028 年生效，过渡期长达 2 年，改革幅度仅限于任期限制与年度选举，未触及核心团队制本身；OpenBSD 自 1995 年至今 31 年治理结构基本未变；NetBSD Foundation 自 2003 年后治理结构基本稳定；Linux 治理模式则是“革命性”的——1991 年 Linus Torvalds 个人发起 Linux 内核，2000 年 OSDL 由 IBM、HP、Intel 等企业创立，2007 年 1 月 22 日 OSDL 与 Free Standards Group 合并成立 Linux Foundation，2014 年后 CNCF、Kubernetes、Hyperledger 等多项目托管扩展，每次重构都是治理结构的根本性变革；BSD 的“改革性”与 Linux 的“革命性”在本体论上地位相等（总纲第 8 条），无道德高下之分——BSD 改革性的代价是治理调整缓慢（如 FreeBSD Core Team 任期限制从提出到通过到生效需要数年），Linux 革命性的代价是治理结构频繁重构带来的适应性成本（如 OSDL 与 Free Standards Group 合并后的整合挑战）；其四，本审视作为历史小说的自觉（总纲第 23 条）：本节作为 BSD 治理模式历史演变的审视，本身是基于项目统摄史观设定的历史小说——“连续性”与“断裂性”的区分是史家的形式主义建构，实际历史过程是连续与断裂交织的复杂形态，史家须自觉呈现这一建构而非伪装客观中立的旁观者
+- 从项目史观总纲第 19 条“前理解的差异使分歧不可避免，权力与知识在历史书写中共谋”审视，BSD 治理模式的未来展望呈现三类议题——其一，2028 FreeBSD 新章程生效的预期效应：2026.5.27 新章程引入任期限制（"an Incumbent Core Team Member currently in their third or fourth consecutive year may not run for reelection"，经 <https://www.freebsd.org/internal/bylaws/> 一手核验），拟 2028 年生效，预期效应有三——效应一是 Core Team 成员的强制轮换，Core.10 回顾显示 Hiroki Sato（佐藤広生） 已任 7 届、John Baldwin（约翰·鲍德温） 6 届、Warner Losh（沃纳·洛什） 6 届（FreeBSD Core Team Activity Reports，2020-07-27），任期限制可能打破“小圈子循环”现象；效应二是选举周期的固定化，新章程引入年度选举机制，可能提升 Core Team 决策的社区可见度；效应三是过渡期的适应成本，2026 至 2028 年的 2 年过渡期可能产生“旧章程惯性”与“新章程预演”的双轨期，须考据观察；其二，OpenBSD de Raadt 个人主导模式的传承挑战：OpenBSD 自 1995 年至今 31 年由 Theo de Raadt 个人主导（经 <https://www.openbsd.org/goals.html> 一手核验，"Be as politics-free as possible; solutions should be decided on the basis of technical merit"），但 de Raadt 本人对传承规划未公开表态，OpenSSH、LibreSSL、OpenSMTPD 等子项目的维护者群体已形成隐性传承结构（如 OpenSSH 维护者 Damien Miller），隐性传承结构是否能在 de Raadt 退出后维持 OpenBSD 项目目标，是未来展望的核心不确定项；其三，跨 BSD 项目协作的可能性：FreeBSD、NetBSD、OpenBSD、DragonFly BSD 四大 BSD 项目在 pkgsrc（NetBSD 主导，跨 BSD 共享软件包管理系统）、mfsBSD（FreeBSD 衍生，用于系统安装与恢复）、OpenSSH（OpenBSD 主导，跨 BSD 共享 SSH 实现）等组件上已有协作实践，但四大项目的治理结构差异（FreeBSD Core Team 选举制、NetBSD Foundation 执行委员会制、OpenBSD BDFL 制、DragonFly BSD 个人主导制）使跨项目协作呈现“组件级协作、治理级独立”的格局，未来展望的核心议题是“组件级协作”是否可能扩展至“治理级协作”（如跨 BSD 项目的安全响应协调、跨 BSD 项目的版权与许可证协议）；其四，BSD 与 Linux 治理模式未来展望的对照：BSD 治理模式的未来展望是“改革性”的——FreeBSD 2026 新章程的任期限制、OpenBSD 隐性传承结构的逐渐显化、跨 BSD 项目组件级协作的扩展皆是渐进调整；Linux 治理模式的未来展望是“革命性”的——Linux Foundation 自 2014 年后持续扩展多项目托管（CNCF、Kubernetes、Hyperledger 等），未来可能进一步整合开源生态治理；BSD 的“改革性”未来展望与 Linux 的“革命性”未来展望在本体论上地位相等（总纲第 8 条），皆是开源生态的一刻状态；其五，本审视作为历史小说的自觉（总纲第 23 条）：本节作为 BSD 治理模式未来展望的审视，本身是基于项目统摄史观设定的历史小说——“未来展望”是史家基于当下史料的推断而非已实现的事实，史家须自觉呈现这一推断的限度而非伪装预言者
+- 综合项目史观总纲第 13 条（许可证哲学）、第 19 条（解释学循环与权力知识共谋）、第 21 条（革命与改革）三个视角，BSD 治理批评的最终综合审视揭示三重张力的收束——其一，总纲第 13 条的最终审视：BSD 治理批评的历史演变与未来展望皆是利益分配的话语呈现——CSRG 精英主导传统、FreeBSD Core Team 选举权限制（active committer 门槛）、OpenBSD BDFL 模式（de Raadt 个人主导）、NetBSD Foundation 执行委员会制、BSD license 与 GPL 差异（消极自由 vs 积极自由）、2026 FreeBSD 新章程任期限制皆是利益分配机制的具体显现；这些利益分配机制在本体论上地位相等（总纲第 8 条），无道德高下之分——BSD license 允许商业公司免费使用代码是消极自由的利益分配，GPL 强制衍生作品开源是积极自由的利益分配，二者皆是合法的自由软件许可证（FSF 官方将 BSD 系许可证列为“GPL-Compatible Free Software Licenses”，经 <https://www.gnu.org/licenses/license-list.en.html> 一手核验）；其二，总纲第 19 条的最终审视：BSD 治理批评的叙事建构受前理解差异制约——BSD 阵营以“工程传统”“治理独立性”为前理解，Linux 阵营以“治理现代化”“市场份额”为前理解，中国大陆用户以“区域重视”为前理解，商业 Unix 阵营以“商业支持”为前理解，学术研究者以“文明层积”为前理解，五者难以通约；权力与知识在 BSD 治理批评的叙事建构中共谋——“BSD is dying”叙事的传播渠道非对称性（Linux 阵营多渠道 vs BSD 阵营 freebsd-advocacy 邮件列表 2022-2024 年共 7 条消息，经 <https://lists.freebsd.org/archives/freebsd-advocacy/> 一手核验）、daemon 版权私有化使文化叙事权集中于 McKusick 个人、Core Team 决策过程的“闭门会议”传统、OpenBSD“政治最小化”原则排除治理民主讨论，皆是权力知识共谋的具体显现；其三，总纲第 21 条的最终审视：BSD 治理批评的核心张力是“革命性”治理重构与“改革性”渐进调整的方法论分歧——Linux 治理模式经历了多次革命性重构（1991 年 Linus Torvalds 个人发起 Linux 内核、2000 年 OSDL 由 IBM、HP、Intel 等企业创立、2007 年 1 月 22 日 OSDL 与 Free Standards Group 合并成立 Linux Foundation、2014 年后 CNCF、Kubernetes、Hyperledger 等多项目托管扩展），每次重构都是治理结构的根本性变革；BSD 治理模式则是渐进改革——FreeBSD Core Team 2000 年章程沿用 26 年至 2026 年才通过新章程，新章程拟 2028 年生效，过渡期长达 2 年，改革幅度仅限于任期限制与年度选举，未触及核心团队制本身；OpenBSD 自 1995 年至今 31 年治理结构基本未变，仍由 Theo de Raadt 个人主导；NetBSD Foundation 自 2003 年成立 <core@NetBSD.org> 等执行委员会后治理结构基本稳定；“改革的困难远高于革命”在 FreeBSD 2026 新章程的延迟生效（2028 年）中具体显现，“破山中贼易，破心中贼难”在 committer 群体与 Core Team 成员对治理惯性的内化中具体显现；其四，三重张力的收束：许可证哲学维度的“消极自由 vs 积极自由”张力、解释学循环维度的“前理解差异”张力、革命与改革维度的“改革性 vs 革命性”张力是 BSD 治理批评的结构性矛盾，不可能通过单次审视完全消除——BSD license 的宽松性是 BSD 阵营有意识的哲学选择，GPL 的 copyleft 亦是 GPL 阵营有意识的哲学选择，二者的差异是“心中贼”而非“山中贼”；前理解差异使分歧不可避免，史家的叙事重构须面对既有前理解的惯性阻力；“改革性”与“革命性”是历史方法论的不同而非本体等级的高下，BSD“改革性”治理传统的延续与 Linux“革命性”治理传统的重构在本体论上地位相等；其五，本审视作为历史小说的自觉（总纲第 23 条）：本节作为 BSD 治理批评三重张力收束的审视，本身是基于项目统摄史观设定的历史小说——“三重张力”的归纳是史家的形式主义建构，实际治理批评过程是多重张力交织的复杂形态，史家须自觉呈现这一建构而非伪装客观中立的旁观者
+- 作为全书争议审视的收束性章节之一，第 156 章 BSD 文化溯源与治理批评的最终综合审视收束全书争议审视的核心张力——其一，收束性章节的定位：第 156 章作为第十二卷反思性收尾章，集中容纳对 BSD/FreeBSD 项目的文化溯源与治理批评两类叙事，与第十一卷许可证哲学辩论（第 134、135 章）、第十二卷合规治理叙事（第 139 章）共同构成全书争议审视的收束性章节群；本节作为第 156 章的最终综合审视，收束 BSD 文化溯源与治理批评的核心张力，作为全书争议审视的收束性章节之一；其二，争议不可完全调和性的承认：全书争议审视的核心张力——许可证哲学维度的“消极自由 vs 积极自由”张力、解释学循环维度的“前理解差异”张力、革命与改革维度的“改革性 vs 革命性”张力——是开源生态的结构性矛盾，不可能通过单次审视完全消除；BSD license 的宽松性是 BSD 阵营有意识的哲学选择，GPL 的 copyleft 亦是 GPL 阵营有意识的哲学选择，二者的差异是“心中贼”而非“山中贼”；前理解差异使分歧不可避免，史家的叙事重构须面对既有前理解的惯性阻力；“改革性”与“革命性”是历史方法论的不同而非本体等级的高下，BSD“改革性”文化传统的延续与 Linux“革命性”文化传统的重构在本体论上地位相等；其三，和解路径的指出：本审视指出三条和解路径——路径一是制度化调整路径（如 2026 FreeBSD 新章程的任期限制、commit bit 授予流程公开化、社区咨询机制引入），BSD 阵营在保持“改革性”文化传统的同时适度引入“革命性”治理调整；路径二是叙事对称呈现路径（如本节最终综合审视试图打破单一叙事的权力垄断，使 BSD 阵营、Linux 阵营、中国大陆用户、商业 Unix 阵营、学术研究者的论点对称呈现），史家在书写 BSD 文化溯源与治理批评时自觉呈现各阵营的前理解差异与权力知识共谋；路径三是许可证哲学对话路径（如 BSD 阵营与 GPL 阵营在保持各自自由观选择的同时，承认对方自由观的合法性，避免以“道德高下”预先判定），BSD license 与 GPL 的差异是利益分配机制的不同而非道德高下；此三条和解路径不寻求消除张力而寻求呈现张力，符合总纲第 6 条“和解优于斗争”——合图不寻求消除张力而寻求呈现张力，BSD 文化溯源与治理批评的“许可证哲学差异”“前理解差异”“改革性 vs 革命性”是同一开源生态的不同共生效应；其四，本体论平等的最终确认：BSD 阵营与 Linux 阵营、批评方与反批评方、BSD license 与 GPL、改革性文化与革命性文化、CSRG 精英主导与 Linux Foundation 多项目托管、FreeBSD Core Team 选举制与 OpenBSD BDFL 制在本体论上地位相等，各方皆是开源生态的一刻状态——差异是工程哲学、治理模式、自由观、文化传统的不同而非本体等级的高下；其五，史家自身的形式主义化自反（总纲第 7、23 条）：本节作为全书争议审视的收束性合图，自身亦嵌入项目统摄史观的前理解，须自觉呈现这一前理解而非伪装中立——“收束性合图”的归纳是史家的形式主义建构，实际争议审视过程是多重张力交织的开放形态，本节的收束不是争议的终结而是阶段性综合，随开源生态演进（如 2028 年 FreeBSD 新章程生效、OpenBSD 传承规划公开、Linux Foundation 治理调整、GPL 阵营新动态、BSD 文化溯源新考据）须重新展开；本节的“和解路径”不寻求消除张力而寻求呈现张力，符合总纲第 6 条“和解优于斗争”——和解是事物真正完整的一刻，而非妥协或归并；本节的最终综合审视作为全书争议审视的收束性章节之一，承认争议的不可完全调和性，同时指出和解路径，使读者在知晓矛盾的前提下评估叙事的合理性与局限性
+
+## 史观
+
+- 总纲第 13 条——法律与道德是利益分配，BSD 治理模式历史演变皆是利益分配的话语呈现，精英主导传统、消极自由传统、选举权限制、BDFL 模式、BSD license 与 GPL 差异皆是利益分配机制的具体显现；总纲第 8 条——本体论上各方平等，BSD 治理模式与 Linux 治理模式、BSD license 与 GPL、改革性与革命性在本体论上地位相等；总纲第 23 条——一切历史写作都是基
+- 总纲第 19 条——解释学循环与权力知识共谋，BSD 治理模式未来展望的审视受前理解差异制约（BSD 阵营以“工程传统”为前理解，Linux 阵营以“治理现代化”为前理解，外部观察者以“民主化”为前理解），未来展望的叙事建构本身是权力知识共谋的具体显现；总纲第 8 条——本体论上各方平等，BSD 改革性未来展望与 Linux 革命性未来展望在本体论上地位相等；总纲第 23 条——一切历史写作都是基
+- 总纲第 13 条——法律与道德是利益分配，BSD 治理批评的叙事建构皆是利益分配的话语呈现；总纲第 19 条——解释学循环与权力知识共谋，BSD 治理批评的叙事建构受前理解差异制约，话语权争夺的非对称性是权力知识共谋的具体显现；总纲第 21 条——革命与改革，BSD 治理批评叙事的“改革性”与 Linux“革命性”是历史方法论的不同，“改革的困难远高于革命”“破山中贼易，破心中贼难”在 BSD 治
+- 总纲第 6 条——和解优于斗争，合图不寻求消除张力而寻求呈现张力，BSD 文化溯源与治理批评的“许可证哲学差异”“前理解差异”“改革性 vs 革命性”是同一开源生态的不同共生效应；总纲第 7 条——理论必须自反，本节作为全书争议审视的收束性合图，自身亦嵌入项目统摄史观的前理解，须自觉呈现这一前理解而非伪装中立；总纲第 8 条——本体论上各方平等，BSD 阵营与 Linux 阵营、批评方与反批评方、
+
+## 辨析
+
+- 考据过程留痕——【查证来源】FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 一手核验，确认 2000 年章程第 1 条"Active committers have made a commit to the tree in the last 12 months"与 2
+- 考据过程留痕——【查证来源】FreeBSD Core Bylaws 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 一手核验，确认任期限制条款原文"an Incumbent Core Team Member currently in their third or fourth consecutive year may not run
+- 考据过程留痕——【查证来源】合图层史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <https://www.freebsd.org/c>
+- 考据过程留痕——【查证来源】收束性合图史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <https://www.freebsd.org>
+
+## 文献
+
+- 项目史观总纲第 13、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2000.8.28 版与 2026.5.27 新版）；FreeBSD Foundation IRS Determination Letter（2000-12-07）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license->
+- 项目史观总纲第 19、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2026.5.27 新版）；FreeBSD Core Team Activity Reports（Core.10 回顾 2020-07-27）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；OpenSSH 维护者档案；pkgsrc 项目档案；mfsBSD 项目档案；Linux Foundation 多项目托管档案；参见相关章节
+- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 13、19、21、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://www.gn>
+- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 6、7、8、13、19、21、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://ww>
+
+## 自反性声明
+
+本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
