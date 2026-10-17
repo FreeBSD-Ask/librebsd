@@ -196,6 +196,23 @@ def dump(rows):
 
 # ---------------------------------------------------------------- CLI 子命令
 
+def next_slot_path(base, md5hex):
+    """槽路径：微秒时间戳＋内容 md5 前 8 位；同名再加序号，绝不覆盖写。
+
+    槽名按字典序即按时间序（固定宽度时间戳前缀）。秒级时间戳会让同秒建的
+    槽落回 md5 十六进制序，「最近」变成乱序，restore --best 会选错基线
+    ——2026-10-17 自检 T8 首次运行靠运气通过、复跑即崩，故钉死到微秒。
+    """
+    root = backup_root(base)
+    ts = datetime.now().strftime("%Y%m%dT%H%M%S%f")
+    p = os.path.join(root, "{}{}-{}.json".format(SLOT_PREFIX, ts, md5hex[:8]))
+    k = 2
+    while os.path.exists(p):
+        p = os.path.join(root, "{}{}-{}_{}.json".format(SLOT_PREFIX, ts, md5hex[:8], k))
+        k += 1
+    return p
+
+
 def cmd_adopt(args, label):
     """把当前单槽快照存成一个槽。"""
     base = resolve_base(args.base)
@@ -206,8 +223,7 @@ def cmd_adopt(args, label):
         die2("无快照可存档：{} 不存在（先跑一次 claimdb_guard 生成基线）".format(sp))
     cur = row_for(sp, "live")
     dup = [r for r in all_slots(base) if r.get("md5") == cur.get("md5")]
-    ts = datetime.now().strftime("%Y%m%dT%H%M%S")
-    dst = os.path.join(backup_root(base), "{}{}-{}.json".format(SLOT_PREFIX, ts, cur["md5"][:8]))
+    dst = next_slot_path(base, cur["md5"])
     atomic_copy(sp, dst)
     row = row_for(dst, label)
     row["duplicated"] = bool(dup)
@@ -327,6 +343,11 @@ def selftest():
 
     def chk(name, cond, detail=""):
         if not cond:
+            if not isinstance(detail, str):
+                try:
+                    detail = json.dumps(detail, ensure_ascii=False)
+                except Exception:
+                    detail = repr(detail)[:200]
             fails.append("{}{}".format(name, "　" + detail if detail else ""))
 
     def mk(base_dir, claims):
@@ -388,10 +409,15 @@ def selftest():
         chk("T7 两槽＋live", rc == 0 and len(j) == 3 and names[-1].startswith(SLOT_PREFIX),
             "{} {}".format(rc, names))
 
-        # T8 health：有健康槽 => exit 0，且 newest_healthy 指向健康槽
-        rc, j, _ = run("health", "--base", b1)
-        chk("T8 health 有健康槽 exit 0", rc == 0 and j["healthy"] == 1
-            and j["newest_healthy"] != j["newest_slot"], j)
+        # T8 health：两槽、健康 1
+        rc, h, _ = run("health", "--base", b1)
+        chk("T8 health 计数", rc == 0 and h["total"] == 2 and h["healthy"] == 1, h)
+        # T8b 新鲜度：最新槽必须是刚建的污染槽——否则无从回退
+        rc, ls, _ = run("list", "--base", b1)
+        newest = [r for r in ls if r["source"] == "slot"][-1]
+        chk("T8b 最新槽＝刚建的污染槽", newest["verdict"] == "poisoned", newest)
+        # T8c 最新健康槽必须是另一个（本项曾因秒级时间戳同秒乱序而假通过）
+        chk("T8c 最新健康槽≠最新槽", h["newest_healthy"] != newest["name"], h)
 
         # T9 restore --best 必须回到健康槽（不能取最新=污染槽）
         rc, j, _ = run("restore", "--best", "--base", b1)
