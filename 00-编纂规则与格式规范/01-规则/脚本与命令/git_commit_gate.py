@@ -82,7 +82,8 @@ def gate(cwd=None):
     for st, path in items:
         if not path:
             continue
-        if run_git(["check-ignore", "-q", "--", path], cwd=cwd).returncode == 0:
+        # --no-index：暂存区中的路径默认不按 ignore 规则评估，须强制按规则匹配
+        if run_git(["check-ignore", "--no-index", "-q", "--", path], cwd=cwd).returncode == 0:
             bad_ignored.append(path)
         sz = blob_size(path, cwd=cwd)
         if sz > THRESHOLD:

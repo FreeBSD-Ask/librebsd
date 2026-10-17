@@ -95,6 +95,8 @@
 | [chapter_reviews表操作.sql](chapter_reviews表操作.sql) | `chapter_reviews` 表操作：自动入库追加文献综述（`revised_by='auto_ingest'`）、人工确认追加（`revised_by='manual'`）、字数超长（>5000）查询、字数不足（<300）查询、综述存在性判断 | 流程规则.md “新增文献自动检测规则” → “综述追加程序”、“自动入库与人工复核关系”小节 |
 | [folder_db_common_schema.sql](folder_db_common_schema.sql) | 7 个文件夹级数据库通用架构定义：5 张通用表（files/blocks/blocks_fts/cross_references/update_log）+ 文件夹专属扩展表的 CREATE 语句；所有 CREATE 语句使用 `IF NOT EXISTS`，可重复执行（幂等） | 流程规则.md “其他文件夹转数据库规则” → “通用 Schema”小节 |
 | [folder_db_cross_references.sql](folder_db_cross_references.sql) | 文件夹级数据库交叉引用查询模板：按引用类型统计、按解析状态统计、按目标数据库汇总、失效链接查询、跨库引用查询等 SELECT 模板（非自动执行脚本，使用时须替换参数占位符） | 流程规则.md “其他文件夹转数据库规则” → “交叉引用解析规则”小节 |
+| [scan_md_invisible.py](scan_md_invisible.py) | `.md` 不可见字符全库复扫判据：对 git 跟踪的全部 `*.md` 逐件扫描 Unicode Zs（除 U+0020）／Cf 格式控制符／填充符，按码位汇总并逐处落明细 `script/_inv_md/detail.jsonl`；只读不写源文件 | 流程规则.md “AI 不可见字符清理规则” |
+| [fix_md_invisible.py](fix_md_invisible.py) | `.md` 不可见字符清理执行器：默认 dry-run，`--apply` 写盘——Cf 零宽格式符删除；Zs 空格类（U+3000 等）一律改 1 个半角空格并合并空白串、行首行尾整段删除；U+FFFD 不处置；换行形态逐行保留，写盘前逐件断言“去除全部空白与目标字符后逐字相同” | 流程规则.md “AI 不可见字符清理规则” |
 
 ## 未实现脚本登记
 
