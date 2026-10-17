@@ -124,7 +124,8 @@ def build_body(titles, order, tail_vols, regen=False):
                 cdir = os.path.join(vdir, c)
                 files = sorted(os.listdir(cdir))
                 cp = "%s/%s" % (v, c)
-                ct = titles.get(cp + "/概述.md") or h1(os.path.join(cdir, "概述.md")) or c
+                ct = (h1(os.path.join(cdir, "概述.md")) if regen else None) \
+                    or titles.get(cp + "/概述.md") or h1(os.path.join(cdir, "概述.md")) or c
                 out.append("  - [%s](./%s/概述.md)" % (ct, cp))
 
                 secs = sorted([f for f in files if re.match(r"^\d+\.\d+(\.\d+)?-.*\.md$", f)], key=sec_key)
@@ -135,7 +136,8 @@ def build_body(titles, order, tail_vols, regen=False):
                 others.sort(key=lambda f: (prev.index(f) if f in prev else 10 ** 6, f))
                 for f in secs + others:
                     fp = "%s/%s" % (cp, f)
-                    t = titles.get(fp) or h1(os.path.join(cdir, f)) or f[:-3]
+                    t = (h1(os.path.join(cdir, f)) if regen else None) \
+                        or titles.get(fp) or h1(os.path.join(cdir, f)) or f[:-3]
                     out.append("    - [%s](./%s)" % (t, fp))
                 if "index.md" in files:
                     t = titles.get(cp + "/index.md") or "本章索引"
@@ -146,7 +148,8 @@ def build_body(titles, order, tail_vols, regen=False):
             for f in sorted(f for f in os.listdir(vdir)
                             if f.endswith(".md") and f != "00-总览.md" and not f.startswith("卷末")):
                 fp = "%s/%s" % (v, f)
-                t = titles.get(fp) or h1(os.path.join(vdir, f)) or f[:-3]
+                t = (h1(os.path.join(vdir, f)) if regen else None) \
+                    or titles.get(fp) or h1(os.path.join(vdir, f)) or f[:-3]
                 out.append("  - [%s](./%s)" % (t, fp))
 
         if os.path.exists(os.path.join(vdir, "卷末书目述评.md")):
@@ -158,6 +161,7 @@ def build_body(titles, order, tail_vols, regen=False):
 
 def main():
     write = "--write" in sys.argv
+    regen = "--regen-titles" in sys.argv
     cur = io.open(SUM, encoding="utf-8").read().split("\n")
     titles, order = parse_existing(cur)
     i_h2 = next(i for i, l in enumerate(cur) if l.strip() == H2_BODY)
@@ -171,8 +175,21 @@ def main():
             pth = m.group(3)
             if pth.startswith("./") and pth.endswith("/00-总览.md"):
                 tail_vols.add(pth[2:].rsplit("/", 1)[0])
-    body = build_body(titles, order, tail_vols)
+    body = build_body(titles, order, tail_vols, regen=regen)
     new = head + body + [""] + tail
+    if regen:
+        # 标题归一模式的护栏：结构与路径序列必须与现行逐条一致，只许改链接文字
+        def seq(lines):
+            r = []
+            for l in lines:
+                m = PAT_LINK.match(l)
+                if m:
+                    p = m.group(3)
+                    r.append((len(m.group(1)), p[2:] if p.startswith("./") else p))
+            return r
+        assert seq(cur) == seq(new), "regen-titles 护栏：结构/路径序列发生变化，中止"
+        nchg = sum(1 for a, b in zip(cur, new) if a != b)
+        print("标题归一：改写 %d 行（结构与路径序列零变化）" % nchg)
 
     print("现行 %d 行 / 重生成 %d 行" % (len(cur), len(new)))
     n_vol = sum(1 for l in body if l.startswith("### "))
