@@ -87,10 +87,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。　[存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
-- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningcamp、Paul Hankamp、Paul Henningsen），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。　[存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）[订正：原 转写变体 Paul Henningkamp、Paul Heinkamp、Paul Henningham，2026-09-30 SenseAudio 重转核对]
-- [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。　[存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
-- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Puffle；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。　[存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）[订正：原 Pawel 误写作 Pappel，2026-09-30 SenseAudio 重转核对]
+- Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。 [存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
+- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningcamp、Paul Hankamp、Paul Henningsen），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。 [存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）[订正：原 转写变体 Paul Henningkamp、Paul Heinkamp、Paul Henningham，2026-09-30 SenseAudio 重转核对]
+- [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。 [存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
+- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Puffle；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。 [存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）[订正：原 Pawel 误写作 Pappel，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -130,3 +130,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔来源不详〕讲者口述：微内核项目始于 1980 年代末至 1990 年代初，目标是把大型软件拆分为更小的组件以提升健壮性与安全性。（YouTube EPraNx9L4VH2k，[371.2-389.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2342 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2342`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Capsicum and Casper fairy tale about solving security problems 讲者口述〕讲者口述：讲者把 Capsicum 拆成两部分，其中一部分是 tiny sandbox：运行 cap_enter 这个系统调用即进入沙箱，此后进程失去对全局命名空间的访问，不能读磁盘文件，也看不到其他进程。（YouTube EP60HqpCvZaMA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2343 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2343`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Capsicum and Casper fairy tale about solving security problems 讲者口述〕讲者口述：Capsicum 的另一部分是 capability；讲者称其设计者认为文件描述符本身已相当擅长承载权限，因此在描述符之上再加一层轻量限制以便进一步收敛权限，FreeBSD 的 Capsicum 约有 80 个 capability right，且按描述符分别授予。（YouTube EP60HqpCvZaMA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2344 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2344`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Capsicum and Casper fairy tale about solving security problems 讲者口述〕讲者口述：讲者承认 Capsicum 目前用得并不广泛，只见于少数基本系统工具（他前文提到的 uniq 与此处转写作 TCB dump 者），此外用于 FreeBSD 自身的包管理系统，另有一份给 chromium 做沙箱的补丁。（YouTube EP60HqpCvZaMA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2345 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2345`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Capsicum and Casper fairy tale about solving security problems 讲者口述〕讲者口述：讲者说明 Casper 的新架构放弃了原先连接 casperd 守护进程的做法，改为由实际需要服务的那个进程直接 fork 出 Casper，同时把原先的若干个库精简为只剩一个 libcap_casper，它承担 Casper 与服务之间的 IPC。（YouTube EP60HqpCvZaMA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2597 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2597`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：能力机制作为安全手段有长久历史，起源于基于能力的操作系统，晚近又发展于编程语言与应用隔离工具，例证之一就是 FreeBSD 的 Capsicum。（YouTube EPBlu8Gl47TBQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2598 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2598`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：该能力安全 shell 语言的原型实现为 Racket 语言的能力安全子集加一个新的基于能力的系统库，而为实现这个库，讲者团队向 FreeBSD 新增了若干基于文件描述符的系统调用。（YouTube EPBlu8Gl47TBQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2599 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2599`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：该语言的基于能力的沙箱实现为 FreeBSD Trusted MAC 框架的一个策略模块。（YouTube EPBlu8Gl47TBQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2600 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2600`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：在案例评估中，讲者用 find 找出 BSD 源码树里的全部 C 文件，再对每个文件在各自独立的基于能力的沙箱里运行 grep。（YouTube EPBlu8Gl47TBQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

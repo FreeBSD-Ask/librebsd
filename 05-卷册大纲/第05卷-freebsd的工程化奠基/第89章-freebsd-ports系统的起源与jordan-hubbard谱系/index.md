@@ -68,7 +68,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 新闻部分报道 DragonFly BSD 3.6 发布、dports 默认化，以及 FreeBSD CURRENT 中 ZFS 在 SSD 上启用 TRIM 时的数据损坏风险警告。（BSD Now EP13，[566.2-737.9]，L2）
 - Vinum 起源于真实故障而非规划：Lehey 在中国为 Tandem 讲学时接触 Veritas 卷管理器颇为赞赏；其后加州的 Nicole Harrington 因公司磁盘崩溃无法恢复而求助，其系统运行 FreeBSD 的 CCD 串联磁盘驱动，而 CCD 当时本就不善处理磁盘失败；Lehey 判断 FreeBSD 需要类似 Veritas 的卷管理器，以拉丁语双关命名为 vinum（意为酒）；恰逢 CyberNet 公司寻求 RAID5 实现并支付费用，成果于 1998 年底进入 FreeBSD 源码树。（BSDTalk EP55，[397.8-462.52]，L1）
 - 至 2006 年访谈时，Vinum 已被多个 GEOM 类取代，但 Lehey 认为部分 GEOM 类仍未具备 Vinum 五年前已有的特性，希望社区将其吸收进传统 GEOM 类，显示替代并非完整的功能接续。（BSDTalk EP55，[462.52-483.24]，L1）
-- SMPNG 的直接诱因是 1999 年 Mindcraft 基准：微软展示 Windows 在部分网络场景胜过 Linux，BSD 方面自知成绩亦不会好看而选择沉默；约一年后社区聚议，认定真正问题在于 Linux 与 BSD 处理多处理器的方式，遂于 2000 年 6 月在 Yahoo 园区开会确立 SMPNG（新一代 SMP 支持）；Lehey 从头参与并先做了约六个月中断处理程序，其后主要由 John Baldwin 接手；项目启动时预计约两年，最终五年后才正式宣告结束。　[考据脚注] 转写将 Mindcraft 误作 Minecraft、将 SMPNG 会址写作 Yahoo complex，本条按通行名称重写，细节以当期录音与 SMPNG 设计文档复核为准。（BSDTalk EP55，[558.88-625.44]，L1）
+- SMPNG 的直接诱因是 1999 年 Mindcraft 基准：微软展示 Windows 在部分网络场景胜过 Linux，BSD 方面自知成绩亦不会好看而选择沉默；约一年后社区聚议，认定真正问题在于 Linux 与 BSD 处理多处理器的方式，遂于 2000 年 6 月在 Yahoo 园区开会确立 SMPNG（新一代 SMP 支持）；Lehey 从头参与并先做了约六个月中断处理程序，其后主要由 John Baldwin 接手；项目启动时预计约两年，最终五年后才正式宣告结束。 [考据脚注] 转写将 Mindcraft 误作 Minecraft、将 SMPNG 会址写作 Yahoo complex，本条按通行名称重写，细节以当期录音与 SMPNG 设计文档复核为准。（BSDTalk EP55，[558.88-625.44]，L1）
 - Lehey 的职业生涯呈连续跨界：1982 年起在 Tandem 十年，从专有操作系统转到 UNIX；1992 年认定大公司不知去向而转做顾问，由此获得写书时间；1999 年底经 Dan Shearer 召集加入 LinuxCare 澳洲分部任“BSD 专员”，但公司不知如何使用 BSD，他自述大半年未做实际工作；.com 泡沫破灭后澳洲分部关闭，多数同事转往 IBM 从事 Linux，他因居家办公方式不合 IBM 文化而离开，此后在阿德莱德一家存储系统公司任职（因保密协议不能详述），约 2005 年转投 MySQL。（BSDTalk EP55，[78.96-660.16]，L1）
 - 在 MySQL 任在线备份方向高级软件工程师，重点工作之一是确保 MySQL 在 FreeBSD 上良好运行，同时也是 NetBSD 开发者；其自述旨趣是防止 BSD 碎片化、推广所有 BSD 项目，认为 2006 年碎片化正在改善——跨项目沟通增多、个人恩怨减少；其经手的大型 FreeBSD 安装上存在仅在线上复现的竞态类崩溃（MySQL bug 12187，追踪逾半年、无法在测试环境重现），公开向听众征集相似案例。（BSDTalk EP55，[683.4-876.16]，L1）
 - 著述经历：O‘Reilly 的 Porting UNIX Software 于 1995 年底出版（Tim O’Reilly 曾断言此类书只有两年好卖）；The Complete FreeBSD 起于与 Jack Velte 等 FreeBSD 人士在德国书展的会面，原约化为 50 页安装手册、成书 200 页，历经五版并相当成功；因无暇更新，他选择将全书放入公有领域而非任其消亡，并希望组建团队维护。（BSDTalk EP55，[222.32-331.0]，L1）
@@ -86,7 +86,7 @@ volume: 第05卷-freebsd的工程化奠基
 - backtrace.io 的编译器可调试性文章，以 DWARF 状态机解释优化后变量的取值恢复。（BSD Now EP223，[72.32-97.84]，L2）
 - Andrew Cherkashin 的 Rust 移植 Medium 文章（以 fd 工具为例说明 port 的 Makefile 结构）。（BSD Now EP223，[923.72-1010.84]，L2）
 - FreeBSD 基金会 2017 年 11 月开发项目更新，含 RAID-Z 扩容、Broadcom Wi-Fi、ARM bhyve 与 LLD。（BSD Now EP223，[5033.72-5513.96]，L2）
-- 该期含多条早期 BSD 一手线索：在德国以 1,000 美元购得 BSD Unix 源码使用权（对比此前 System V 单份授权高达 5 万美元），由此接触 BSDi 的 BSD/386 并长期使用；Jordan Hubbard 曾寄来 FreeBSD 0.9 磁带，其评价为“几乎与 BSD/386 一样好”；1996-1998 年间因 BSDI 更新不断涨价而逐步转向 FreeBSD；为 Novell System V/Unixware 移植约 150 个自由软件并制成 CD，他称之为 ports 集合的前身。　[考据脚注] 转写将 Jack Velte 误作 Veltie/Volte、将 LinuxCare 误作 Limitscare，人名与公司名已按通行拼写重写。（BSDTalk EP55，[122.92-227.32]，L1）
+- 该期含多条早期 BSD 一手线索：在德国以 1,000 美元购得 BSD Unix 源码使用权（对比此前 System V 单份授权高达 5 万美元），由此接触 BSDi 的 BSD/386 并长期使用；Jordan Hubbard 曾寄来 FreeBSD 0.9 磁带，其评价为“几乎与 BSD/386 一样好”；1996-1998 年间因 BSDI 更新不断涨价而逐步转向 FreeBSD；为 Novell System V/Unixware 移植约 150 个自由软件并制成 CD，他称之为 ports 集合的前身。 [考据脚注] 转写将 Jack Velte 误作 Veltie/Volte、将 LinuxCare 误作 Limitscare，人名与公司名已按通行拼写重写。（BSDTalk EP55，[122.92-227.32]，L1）
 
 **史观**：
 
@@ -106,13 +106,13 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。　[存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
-- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。　[存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
-- [存疑脚注] 转写中讲座作者姓名与报告出处存在拼写噪音，且观点为节目转述，未与 WWIT Pro 原报告逐条核对。　[存疑脚注] 报告出处与人名未经原报告核对（BSD Now EP312，[68.72-74.16]，L4）
-- 转写将受访者姓名记为 Niklas Seising 与 Nicholas Seizing 两种拼法，且分段时间戳明显乱序；依据上下文应为 FreeBSD 图形团队成员 Niclas Zeising，但本卡片保留转写原拼写。　[存疑脚注] 受访者姓名拼写未经一手核对，且该期转写质量较差、时间戳乱序。（BSD Now EP283，[52.96-57.04]，L4）
-- 受访者关于图形栈“基本可用”的自我评估带有当事人立场，且其承认与 Windows、macOS 存在差距、挂起与交换分区交互存在偶发冻结，须与版本发布记录与社区测试报告交叉验证。　[存疑脚注] 具体故障复现与修复状态未能从本期转写确认。（BSD Now EP283，[451.52-557.74]，L3）
-- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
-- 本卡片所据转写文本实际存放于 663.txt（其内部标为第 13 期），而 664.txt 为第 12 期内容之重复，转写文件与期号存在错位。　[存疑脚注] 转写文件错位：664.txt 实为第 12 期，第 13 期内容见于 663.txt。（BSD Now EP13，[57.6-66.7]，L4）
+- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。 [存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
+- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。 [存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
+- [存疑脚注] 转写中讲座作者姓名与报告出处存在拼写噪音，且观点为节目转述，未与 WWIT Pro 原报告逐条核对。 [存疑脚注] 报告出处与人名未经原报告核对（BSD Now EP312，[68.72-74.16]，L4）
+- 转写将受访者姓名记为 Niklas Seising 与 Nicholas Seizing 两种拼法，且分段时间戳明显乱序；依据上下文应为 FreeBSD 图形团队成员 Niclas Zeising，但本卡片保留转写原拼写。 [存疑脚注] 受访者姓名拼写未经一手核对，且该期转写质量较差、时间戳乱序。（BSD Now EP283，[52.96-57.04]，L4）
+- 受访者关于图形栈“基本可用”的自我评估带有当事人立场，且其承认与 Windows、macOS 存在差距、挂起与交换分区交互存在偶发冻结，须与版本发布记录与社区测试报告交叉验证。 [存疑脚注] 具体故障复现与修复状态未能从本期转写确认。（BSD Now EP283，[451.52-557.74]，L3）
+- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。 [存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
+- 本卡片所据转写文本实际存放于 663.txt（其内部标为第 13 期），而 664.txt 为第 12 期内容之重复，转写文件与期号存在错位。 [存疑脚注] 转写文件错位：664.txt 实为第 12 期，第 13 期内容见于 663.txt。（BSD Now EP13，[57.6-66.7]，L4）
 
 **文献**：
 
@@ -171,3 +171,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔Installing a Port on FreeBSD 教程（来源不详）〕讲者口述：ports 集合取自 get.freebsd.org 的 ports.git 仓库（转写音作 ports.get）。（YouTube EPlywkQkTXMEY，[77.42-86.69]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2511 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2511`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon（场合见正文开场介绍）〕讲者口述：约二十年前 OpenBSD 的这部分——ports／打包体系——一切承自 FreeBSD。（YouTube EPaw2Gezj-Nkw，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2512 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2512`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon（正文开场语所示）〕讲者口述：最早一代 packing-list 生成工具不过一百五十来行 Perl，做法是扫描本地文件系统、找出哪些文件是新装出来的，据此生成 packing list。（YouTube EPaw2Gezj-Nkw，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2513 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2513`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon（正文开场语所示）〕讲者口述：他们把打包改为 staged install——先把内容装进系统上一个与运行系统无关的暂存位置，再从那里制作包；当时他们叫它 fake，讲者说或许 stage 才是更好的名字，但因为是 OpenBSD 最先做的，所以由他们定了这个名字。（YouTube EPaw2Gezj-Nkw，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2514 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2514`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon（正文开场语所示）〕讲者口述：他决定最终替换承自 FreeBSD 的旧包工具，主要是出于安全原因——让本应保证安全的操作去处理大量字符串近乎疯狂。（YouTube EPaw2Gezj-Nkw，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -23,7 +23,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 辨析
 
 - 10.0 支持周期（原计划至 2015.1.31）实际因后续 10.1/10.2 等版本发布而延长——单个 RELEASE 版本支持周期通常为至下一个次版本发布后一个月，stable/10 分支整体支持至 2018.10.31。
-- bhyve 客户机多 vCPU（SMP）能力自 10.0 合入 base 即具备，实际可用性受 CPU 的 UG（Unrestricted Guest）硬件特性约束——原稿“SMP 客户机支持在 10.3 才加入”无官方公告依据　[存疑脚注] 多 vCPU 客户机的版本归属表述以 bhyve(8) 现行手册与 10.x/11.0 官方公告复核为准；bhyve 在 10.1 仍无 UEFI 固件支持——uefi-edk2-bhyve 端口在 10.x 后期才成熟。
+- bhyve 客户机多 vCPU（SMP）能力自 10.0 合入 base 即具备，实际可用性受 CPU 的 UG（Unrestricted Guest）硬件特性约束——原稿“SMP 客户机支持在 10.3 才加入”无官方公告依据 [存疑脚注] 多 vCPU 客户机的版本归属表述以 bhyve(8) 现行手册与 10.x/11.0 官方公告复核为准；bhyve 在 10.1 仍无 UEFI 固件支持——uefi-edk2-bhyve 端口在 10.x 后期才成熟。
 - 原文件提到 “pkg 1.10.1 升级后整个 pkg 环境无法使用、从 1.x 升级到 2.10 时大量包被意外安装、jail 环境中 pkg 命令陷入无限循环”——这些问题发生在 pkg 1.x 早期版本（约 2014-2015 年），属迁移期真实问题但多数在 10.2 时期已修复；pkg 2.x 系列实际是在更晚版本中出现，10.x 携带的是 pkg 1.x 系列。
 - 10.3 中 Hyper-V 集成持续改进但 Azure 镜像在 10.3 Announcement 中仍链接 VMDepot 而非 Azure Marketplace——FreeBSD 10.3 镜像于 2016 年 6 月 8 日宣布上架 Azure Marketplace（早于 10.4-RELEASE）。
 - 不应将 10.x 神化为 “最好的 FreeBSD 版本”——10.0-10.2 时期存在大量迁移期 bug，10.3/10.4 才趋于稳定；但 10.x 时期完成的基础架构转型规模与深度在 FreeBSD 历史上前所未有，其工程价值在后续版本中得到充分体现。
@@ -81,10 +81,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。　[存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
-- OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。　[存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
+- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。 [存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
+- OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。 [存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
 - 转写对当事人姓名的识别：新转写将 Henning Brauer 一致写作正确原名，Daniel Hartmeier 仍被误写作 Daniel Hakmaier；引用时以英文原名 Henning Brauer、Daniel Hartmeier、Claudio Jeker、Theo de Raadt 为准，不自行音译。（BSD Now EP9，[892.0-1882.7]，L2）[订正：原 Henning Brauer 被写作多种变体且 [888.4-1895.7]，2026-09-30 SenseAudio 重转核对]
-- FreeBSD 10.0 是否彻底移除 BIND、以及 resolv.conf 与 DHCP 切换的具体方案在本期仍属进行中的计划，须以 10.0 最终发布说明为准。　[存疑脚注] BIND 移除与解析配置迁移为当时未定稿规划，播客转述不等同于正式发布决策。（BSD Now EP2，[4181.74-4227.38]，L4）
+- FreeBSD 10.0 是否彻底移除 BIND、以及 resolv.conf 与 DHCP 切换的具体方案在本期仍属进行中的计划，须以 10.0 最终发布说明为准。 [存疑脚注] BIND 移除与解析配置迁移为当时未定稿规划，播客转述不等同于正式发布决策。（BSD Now EP2，[4181.74-4227.38]，L4）
 
 **文献**：
 
@@ -116,3 +116,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔来源不详〕讲者 Sam Gwydir 口述：与 FreeBSD 核心转储相关的脚本写作于 2004 年的杜克大学，据称从未进入上游（转写音作“it was never up”）（YouTube EPV-tx-K05NiY，[325.71-330.12]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1974 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1974`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“freebsd 8 to 10”讲者 Nick Wolfe（ORNet）〕讲者口述：BSD install 是官方安装器，据他推测是 FreeBSD 9 或 10 引入的；转写作“pc sis install”的 PC-BSD 安装器则出自 PC-BSD。（YouTube EPT8sIibxw6aM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1975 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1975`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“freebsd 8 to 10”讲者 Nick Wolfe（ORNet）〕讲者口述：迁移完成后其机构已用 ZFS 取代 UFS，并改用 64 位 GPT 分区；安装介质也从自制的 CF install 换成现代 USB 记忆棒。（YouTube EPT8sIibxw6aM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1976 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1976`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“freebsd 8 to 10”讲者 Nick Wolfe（ORNet）〕讲者口述：按他当时的说法，freebsd-stable 的构建流程产出的是不含 boot0 的盘；boot0 本身是极少量代码，可在启动时选择引导来源，并用 F1／F6 在各切片间切换。（YouTube EPT8sIibxw6aM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1977 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1977`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“freebsd 8 to 10”讲者 Nick Wolfe（ORNet）〕讲者口述：Life Preserver 是 PC-BSD（转写“PCBs DS”）的备份系统，主要面向 ZFS，可处理 ZFS scrub 与快照计划任务，也负责在 SSH 上执行 ZFS send／receive。（YouTube EPT8sIibxw6aM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

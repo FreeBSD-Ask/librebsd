@@ -172,7 +172,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 本集新闻以 Wired 报道收束于 FreeBSD 的产业纵深：WhatsApp 以约 50 名工程师支撑 9 亿用户，1980 年代 Ericsson 为电话系统设计的 Erlang 配合 FreeBSD 网络栈维持数百万并发 TCP 连接，被 Facebook 收购后底座未变；主持人并补充 Facebook Messenger 转用 Haskell，Google 与 Mozilla 以 Go 与 Rust 追逐同类部署灵活性。（BSD Now EP107，[1094.84-1224.04]，L2）
 - 技术动态层面，主持人转述 Alexander Motin 已将 CTL 高可用实现提交至 FreeBSD 11：双头存储控制器经自定义 TCP interlink 协调磁盘访问，设 active-unavailable、active-standby、active-active、active-proxy 四种模式，因协议不含认证而仅限内部链路使用；早年仅有纸面设计，落地由此次提交完成。（BSD Now EP107，[562.04-792.60]，L2）
 - Daroussin 阐明 base 打包化的三重动机：freebsd-update 跨大版本升级缓慢且自建更新服务器困难；需要精确追踪 base 系统每个文件并在升级时清理旧文件；拆分为多包后嵌入式等场景可按需取用子集实现最小安装。初期方案先用极少数包整体承载 base，再逐步细分。（BSD Now EP84，[1535.16-1601.32]，L1）
-- 技术补齐细节：pkg 1.4 已能处理 base 系统文件的不可变标志，但缺少清单声明手段，遂在清单中新增声明并注入脚本环境变量以支持非 root 与跨字节序安装；为升级 etc 配置文件，从 Fossil 版本控制系统提取三方合并代码改造进 pkg 1.5，合并失败则保留冲突文件交用户处理；1.5 引入 -R 选项，不做 chroot、仅前缀目标目录，为跨架构安装、jail 供给、mtree 清单与 makefs 镜像铺路；时间表定为 BSDCan 前可测、EuroBSDCon 出 beta、11.0 约于 2016 年夏正式。　[存疑脚注] 转写专名多处失真：mtree 误作 m3.5、Poudriere 多种变体、AsiaBSDCon 误作 token BSD，均按语义复原，待与原始音频核对。（BSD Now EP84，[1790.44-2211.36]，L1）
+- 技术补齐细节：pkg 1.4 已能处理 base 系统文件的不可变标志，但缺少清单声明手段，遂在清单中新增声明并注入脚本环境变量以支持非 root 与跨字节序安装；为升级 etc 配置文件，从 Fossil 版本控制系统提取三方合并代码改造进 pkg 1.5，合并失败则保留冲突文件交用户处理；1.5 引入 -R 选项，不做 chroot、仅前缀目标目录，为跨架构安装、jail 供给、mtree 清单与 makefs 镜像铺路；时间表定为 BSDCan 前可测、EuroBSDCon 出 beta、11.0 约于 2016 年夏正式。 [存疑脚注] 转写专名多处失真：mtree 误作 m3.5、Poudriere 多种变体、AsiaBSDCon 误作 token BSD，均按语义复原，待与原始音频核对。（BSD Now EP84，[1790.44-2211.36]，L1）
 - PC-BSD/TrueOS 一侧的主持者以分发者身份陈述痛点：freebsd-update 需在虚拟机中以时间戳对比方式重复构建并手动上传签名，每次安全更新负担沉重；实际运维中 base 与第三方并存两套包系统。pkg base 许诺单一升级入口与单一事实来源，build world 一次即可产出，安全团队无须为每个支持版本重复构建，补丁周转有望加快，自定义仓库与滚动跟踪 CURRENT 的门槛同步降低。（BSD Now EP84，[2467.62-2644.92]，L1）
 - FreeBSD 基金会于 2000 年前后创立，直接动因是让项目拥有可持有注册商标并募集资金的法律实体；首任团队由 Justin Gibbs、John Polstra 与 John Bresler 等志愿者组成，早期由 Gibbs 个人垫资起步。（BSD Now EP616，[248.88-257.34]，L1）
 - 基金会选择 501(c)(3) 公共慈善结构，而非 Linux 基金会式的 501(c)(6) 会员制；前者的资金来源以公众捐赠为主，且须证明其服务于公共目的，这一法律结构差异决定了二者的治理取向。（BSD Now EP616，[289.12-311.36]，L1）
@@ -236,13 +236,13 @@ volume: 第05卷-freebsd的工程化奠基
 - 本期宣介的《FreeBSD Journal》2016 年 3-4 月号以操作系统教学为专题，含 George Neville-Neal 与 Robert Watson 论以追踪、分析与实验讲授 FreeBSD，Brooks Davis 论 CHERI 构建安全可信计算基座，Kirk McKusick 的快速文件系统简史，以及对核心团队成员、发布工程与副安全官、Netflix 高级开发者 Gleb Smirnoff 的访谈，另载 FOSDEM BSD 开发者房间与台北 PortsCamp 会议报告，是同期一手文献的集中索引。（BSD Now EP139，[906.9-1055.3]，L2）[订正：原 [918.10-1053.86]，2026-09-30 SenseAudio 重转核对]
 - 本期援引的代码仓库与社区一手材料包括：FreeBSD head 分支合入的磁盘 I/O 限额实验性提交，新增按读写字节与 IOPS 计的四种 RCTL 资源，主持人当场宣读提交说明并呼吁测试 VFS 与 VM 部分；NetBSD 在 amd64 默认启用 ASLR 的提交与 DragonFly BSD 对 Bay Trail 挂起的修复；Bryan Cantrill 关于 jails 与 zones 历史的演讲及其配套学术论文；Chris Siebenmann 关于 Unix 文件持久性的博客文章；以及 John、Thomas、Ben、Bryson、Adrien 等多位读者来信。（BSD Now EP139，[2750.0-2803.1]，L2）[订正：原 [2756.71-2801.36]，2026-09-30 SenseAudio 重转核对]
 - 该期可直接追溯的一手材料包括：受访者置于 GitHub 并以知识共享许可开放的演讲幻灯片（末页附嵌入素材授权清单）、Rich Murphy 展示过的 Walnut Creek CD、OpenBSD misc 邮件列表中 Soekris 4501 启动问题串、FreeBSD 仓库中 CTL 高可用提交与配套文档更新、OpenBSD current 快照默认启用 GPT 的提交、Ted Unangst 关于可复现构建的博客及其与 Debian 社区的往来回应、Wired 的 WhatsApp 报道与 VBSDCon 主题演讲视频。（BSD Now EP107，[2283.72-2306.68]，L1）
-- 一手史料包括 pkg 作者 Baptiste Daroussin 本人口述访谈（提及 Developer Summit 报告与 AsiaBSDCon 上在 Intel NUC 演示 Xen 运行 Windows XP 虚拟机的现场经历）、OpenZFS 办公时间约一小时视频问答（Matt Ahrens、George Wilson、Justin Gibbs 等当事人到场）、OpenBSD ports 提交日志的 OK 署名惯例与 FreeBSD 提交日志的 Reviewed by、Approved by 署名实例、OpenBSD 开发者撰写的教学时刻博文《A Tale of Two Educational Moments》、NetBSD 7 的 AsiaBSDCon 闭幕进展报告。　[存疑脚注] 转写将访谈者姓名录为 Darasong/Rossion，按 pkg 作者身份复原为 Baptiste Daroussin；博文作者转写径作 Brian Callahan。（BSD Now EP84，[1504.72-2218.78]，L1）　[订正：原 “教学时刻博文两篇”“与 EuroBSDCon 2014 工具链演讲链接”及失真对照“d'Arson/Therasson、Brian Kala 疑指”，2026-09-30 SenseAudio 重转核对——新转写博文为《A Tale of Two Educational Moments》一篇，未提及 EuroBSDCon 2014 工具链演讲，姓名转写为 Darasong/Rossion 并径作 Brian Callahan]
-- 本期为 FreeBSD 基金会执行董事 Deb Goodkin 与早期创始人 Justin Gibbs 的口述访谈，属当事人一手自述；访谈提及早期商标转让与基金会自筹资金的历史细节。　[存疑脚注] 转写将商标原持有人写作 Gwyn River，疑为 Walnut Creek 的语音识别讹误，须以基金会档案核实。（BSD Now EP616，[420.22-528.70]，L1）
+- 一手史料包括 pkg 作者 Baptiste Daroussin 本人口述访谈（提及 Developer Summit 报告与 AsiaBSDCon 上在 Intel NUC 演示 Xen 运行 Windows XP 虚拟机的现场经历）、OpenZFS 办公时间约一小时视频问答（Matt Ahrens、George Wilson、Justin Gibbs 等当事人到场）、OpenBSD ports 提交日志的 OK 署名惯例与 FreeBSD 提交日志的 Reviewed by、Approved by 署名实例、OpenBSD 开发者撰写的教学时刻博文《A Tale of Two Educational Moments》、NetBSD 7 的 AsiaBSDCon 闭幕进展报告。 [存疑脚注] 转写将访谈者姓名录为 Darasong/Rossion，按 pkg 作者身份复原为 Baptiste Daroussin；博文作者转写径作 Brian Callahan。（BSD Now EP84，[1504.72-2218.78]，L1） [订正：原 “教学时刻博文两篇”“与 EuroBSDCon 2014 工具链演讲链接”及失真对照“d'Arson/Therasson、Brian Kala 疑指”，2026-09-30 SenseAudio 重转核对——新转写博文为《A Tale of Two Educational Moments》一篇，未提及 EuroBSDCon 2014 工具链演讲，姓名转写为 Darasong/Rossion 并径作 Brian Callahan]
+- 本期为 FreeBSD 基金会执行董事 Deb Goodkin 与早期创始人 Justin Gibbs 的口述访谈，属当事人一手自述；访谈提及早期商标转让与基金会自筹资金的历史细节。 [存疑脚注] 转写将商标原持有人写作 Gwyn River，疑为 Walnut Creek 的语音识别讹误，须以基金会档案核实。（BSD Now EP616，[420.22-528.70]，L1）
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[65.60-2456.00]，L1） [订正：原 [1059.58-1612.28]，2026-09-30 SenseAudio 重转核对]
 - 本期对 Poul-Henning Kamp 的当事人访谈自述，他是 FreeBSD 项目早期成员，也是 jail、GEOM、GBDE 与 MD5 crypt 的亲历者。（BSD Now EP7，[718.30-2292.60]，L1）[订正：原 [707.32-2296.90]，2026-09-30 SenseAudio 重转核对]
 - Kamp 与 Robert Watson 合著论文《Jails: Confining the Omnipotent Root》（BSDCon 2000），是对 jail 的系统化表述。（BSD Now EP7，[1052.26-1077.26]，L3）
 - jail(2)、gbde(8)、geli(8) 手册页及 FreeBSD 源码仓库中对应提交记录，可作为交叉验证来源。（BSD Now EP7，L3）
-- Lucas 给出 jail 考古时间窗：最早的类 jail 代码出现在 1975 年 7 月 18 日至 1979 年 5 月 7 日之间，现代 jails 始于 1998 年并迅速发展；此说出自其《FreeBSD Mastery: Jails》一书的考据，本讲仅口头陈述而未展示所据一手史料。　[存疑脚注] 时间区间疑指 PWB/UNIX 1.0（1975-07-18）至 3BSD（1979-05-07）的发布窗口，须核对《FreeBSD Mastery: Jails》原文与相应版本发行记录方可确证。（YouTube EPhQmOc0egcl4，[602.16-627.44]，L4）
+- Lucas 给出 jail 考古时间窗：最早的类 jail 代码出现在 1975 年 7 月 18 日至 1979 年 5 月 7 日之间，现代 jails 始于 1998 年并迅速发展；此说出自其《FreeBSD Mastery: Jails》一书的考据，本讲仅口头陈述而未展示所据一手史料。 [存疑脚注] 时间区间疑指 PWB/UNIX 1.0（1975-07-18）至 3BSD（1979-05-07）的发布窗口，须核对《FreeBSD Mastery: Jails》原文与相应版本发行记录方可确证。（YouTube EPhQmOc0egcl4，[602.16-627.44]，L4）
 - 当事人一手经历：Lucas 回忆上一份全职工作中，雇主的关键业务应用是运行于 FreeBSD 4 的自研程序（约 PHP 2 与 MySQL 3），硬件为服役十五年的翻新桌面机，备份方案仅是另一台同型号废弃桌面机；他将重要数据打包迁至 FreeBSD 10/11 宿主并装入 jail，由此获得现代备份能力并将旧系统纳入宿主的现代防护之下。（YouTube EPhQmOc0egcl4，[2207.839-2304.48]，L1）
 - 功能演进口述：SysV IPC 最初为全部 jail 共享内存空间，多个数据库 jail 同宿主时互相污染，中期可经 sysctl 整体开关，后期演化为 per-jail 参数；UFS 因与虚拟内存栈深度耦合被判定永远无法在 jail 内管理，ZFS 与设备文件系统则设计为 jail-safe；vnet 网络栈约自 2006 年开始开发，早期确实 bug 丛生，至 FreeBSD 12 已成为默认且足够稳固。（YouTube EPhQmOc0egcl4，[1844.399-2157.68]，L2）
 - 本期为 EuroBSDcon 2024 的一手口述，讲者 Dan Langille 为 FreshPorts 创始人与 BSDCan、PGCon 创办者：自述 2000 年、FreeBSD 4.1 时代开始使用 jail（jail 机制始于 4.0），并给出其 jail 配置项来自 Michael Lucas 的 FreeBSD Mastery: Jails 一书、证书方案取法 Peter Wemm 的 FreeBSD 集群、周期脚本性能事故曾获 iXsystems 的 Josh Paetzel 协助定位等一手线索；谈中多次给出其博客与脚本的 URL，可用于追索 make jail 配置、Poudriere 迁移脚本与证书工具 anvil 的实现细节。[考据脚注] 本流转写为双声轨交错合并且被标记 repetition_detected，工具与人名多音变（ezjail、iocage、Gitea、Let's Encrypt、Josh Paetzel 等），数字与 URL 须与讲者博客及会议官方录像核对。（YouTube EPrGdylV-Up_E，[2182.2-2250.8]，L3）
@@ -307,37 +307,37 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- 关于 su 降权误用的历史叙述将 Fielder 与 Hunter 1986 年著作视为源头之一，但该书是否确实传播该误用、以及 su 语义演化的精确时间线，需结合 4.4BSD 手册与 PAM 引入记录核验。　[存疑脚注] su 语义演化时间线为单一文章转述，未给出原始手册或提交编号，须交叉验证。（BSD Now EP513，[1574.8-1800.0]，L4）[订正：原 [1583.36-1788.98]，2026-10-01 SenseAudio 重转核对]
-- OpenBSD dt 设备在 6.7 中悄然进入源码树的说法为节目转述，其首次引入版本与功能范围需以 OpenBSD 发布说明与提交记录确认。　[存疑脚注] dt 的引入版本与早期功能缺乏当期节目的一手出处，须以官方发布说明核验。（BSD Now EP513，[1947.4-2003.8]，L4）[订正：原 [1963.84-1978.36]，2026-10-01 SenseAudio 重转核对]
-- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。　[存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
-- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。　[存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
-- 转写对 BSD grep 重写的 GSoC 年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的 GSoC 项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2810.8-2886.5]，L4）[订正：原 [2820.16-2879.38]，2026-09-30 SenseAudio 重转核对]
-- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
-- “jails 书被低估”是 Lucas 的主观判断，销量与影响力需外部数据佐证，不能仅以作者自评作为传播史结论。　[存疑脚注] 当事人单方判断，缺独立销量或读者调查证据（BSD Now EP329，[438.66-454.30]，L4）
-- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。　[存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1281.2]，L4）[订正：原 [1150.66-1162.46]，2026-09-30 SenseAudio 重转核对]
-- ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。　[存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
-- 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。　[考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
-- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
-- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
-- [存疑脚注] 转写中 iocage 拼写波动（IO cage、iokage、ILCage 等）与部分书名细节存在 ASR 噪音，未与出版物核对。　[存疑脚注] iocage 等专名拼写未经出版物核对（BSD Now EP293，[1408.58-1571.16]，L4）
-- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
-- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
-- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
-- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
-- fork 的利益结构辨析：八十至九十年代 NetApp、Juniper、Nokia、Isilon 等商业 fork 曾坐享 BSD 红利，十年后却陷入缺 SMP、缺 64 位与新驱动的维护赤字；社区侧则呈现单点悖论——做得差无人可用，做得好反使用户系于可能消失的维护者，Dexter 以 Brexit 喻 fork 的隐性代价，并主张以分支或 branch 而非整体分叉承载实验性工作。　[存疑脚注] 商业 fork 现状、Miros 与 HardenedBSD 定性等均系 Dexter 单一口述，无独立文件佐证；专名在转写中多处失真，引用前须核校。（BSD Now EP149，[5844.31-5948.60]，L4）
-- 转写质量辨析：全篇为双音轨交错、时间戳乱序，专名系统性失真——bhyve 一律转作 “Beehive”（2703.93-2712.87），Xen 作 “Zen”，Kristaps Dzonsons 作 “Kristaps Jonesons”，Matt Ahrens 间作 “Matt Aronson”；各段语义仍完整可辨，但任何人名、项目名与命令名在引用前必须回校原音频与当期节目笔记。　[存疑脚注] 全部专名系转写音译误差，需对照原节目音频与节目 shownotes 逐项核校后方可进入考据链。　[订正：原 NetBSD 作 NetVSD／Kristaps Dzonsons 作 Christoph Johnson／Matt Ahrens 作 Matt Aaron（新转写 NetBSD 拼写正确，人名失真见正文），2026-09-30 SenseAudio 重转核对]（BSD Now EP149，[2703.93-2712.87]，L5）
+- 关于 su 降权误用的历史叙述将 Fielder 与 Hunter 1986 年著作视为源头之一，但该书是否确实传播该误用、以及 su 语义演化的精确时间线，需结合 4.4BSD 手册与 PAM 引入记录核验。 [存疑脚注] su 语义演化时间线为单一文章转述，未给出原始手册或提交编号，须交叉验证。（BSD Now EP513，[1574.8-1800.0]，L4）[订正：原 [1583.36-1788.98]，2026-10-01 SenseAudio 重转核对]
+- OpenBSD dt 设备在 6.7 中悄然进入源码树的说法为节目转述，其首次引入版本与功能范围需以 OpenBSD 发布说明与提交记录确认。 [存疑脚注] dt 的引入版本与早期功能缺乏当期节目的一手出处，须以官方发布说明核验。（BSD Now EP513，[1947.4-2003.8]，L4）[订正：原 [1963.84-1978.36]，2026-10-01 SenseAudio 重转核对]
+- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。 [存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
+- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。 [存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
+- 转写对 BSD grep 重写的 GSoC 年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。 [考据脚注] BSD grep 重写的 GSoC 项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2810.8-2886.5]，L4）[订正：原 [2820.16-2879.38]，2026-09-30 SenseAudio 重转核对]
+- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。 [存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
+- “jails 书被低估”是 Lucas 的主观判断，销量与影响力需外部数据佐证，不能仅以作者自评作为传播史结论。 [存疑脚注] 当事人单方判断，缺独立销量或读者调查证据（BSD Now EP329，[438.66-454.30]，L4）
+- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。 [存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1281.2]，L4）[订正：原 [1150.66-1162.46]，2026-09-30 SenseAudio 重转核对]
+- ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。 [存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
+- 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。 [考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
+- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。 [存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
+- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。 [考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
+- [存疑脚注] 转写中 iocage 拼写波动（IO cage、iokage、ILCage 等）与部分书名细节存在 ASR 噪音，未与出版物核对。 [存疑脚注] iocage 等专名拼写未经出版物核对（BSD Now EP293，[1408.58-1571.16]，L4）
+- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。 [存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
+- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。 [存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。 [存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。 [存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
+- fork 的利益结构辨析：八十至九十年代 NetApp、Juniper、Nokia、Isilon 等商业 fork 曾坐享 BSD 红利，十年后却陷入缺 SMP、缺 64 位与新驱动的维护赤字；社区侧则呈现单点悖论——做得差无人可用，做得好反使用户系于可能消失的维护者，Dexter 以 Brexit 喻 fork 的隐性代价，并主张以分支或 branch 而非整体分叉承载实验性工作。 [存疑脚注] 商业 fork 现状、Miros 与 HardenedBSD 定性等均系 Dexter 单一口述，无独立文件佐证；专名在转写中多处失真，引用前须核校。（BSD Now EP149，[5844.31-5948.60]，L4）
+- 转写质量辨析：全篇为双音轨交错、时间戳乱序，专名系统性失真——bhyve 一律转作 “Beehive”（2703.93-2712.87），Xen 作 “Zen”，Kristaps Dzonsons 作 “Kristaps Jonesons”，Matt Ahrens 间作 “Matt Aronson”；各段语义仍完整可辨，但任何人名、项目名与命令名在引用前必须回校原音频与当期节目笔记。 [存疑脚注] 全部专名系转写音译误差，需对照原节目音频与节目 shownotes 逐项核校后方可进入考据链。 [订正：原 NetBSD 作 NetVSD／Kristaps Dzonsons 作 Christoph Johnson／Matt Ahrens 作 Matt Aaron（新转写 NetBSD 拼写正确，人名失真见正文），2026-09-30 SenseAudio 重转核对]（BSD Now EP149，[2703.93-2712.87]，L5）
 - 围绕 FreeBSD 缺少 ASLR 的争议，Allan Jude 以亲历者身份提出保留意见：ASLR 十年前价值显著，如今其真实防护效用有限，开发者峰会上甚至有“你需要它更多是出于营销目的”（3645.72-3649.88）的判断，并称其使用 FreeBSD 十五年未觉其缺；此辨析提示安全特性的工程价值、社区预期与生态形象之间存在张力，NetBSD 已在 amd64 默认启用而 FreeBSD 相关实现仍在 current 落地。（BSD Now EP139，[3629.1-3686.7]，L1）[订正：原 [3641.28-3668.64]，2026-09-30 SenseAudio 重转核对]
 - 主持人转述 Chris Siebenmann 对文件持久性的考察：崩溃后博客评论丢失源于程序未保证目录项落盘，仅对文件调用 fsync 在 ext4 等传统文件系统上并不足够，新文件可能“文件仍在，却不在目录中，因而无处可寻”（186.92-192.84），正确做法因操作系统、内核与文件系统而异，作者甚至求助于 os.sync 这样的全局同步；这一案例暴露了 Unix 写路径持久性语义的系统性含糊，并以写时复制文件系统的崩溃一致性为对照（参见 417.54-477.18 段）。（BSD Now EP139，[153.1-252.6]，L2）[订正：原 [162.20-244.78]，2026-09-30 SenseAudio 重转核对]
 - 主持人转述 Ted Unangst 对可复现构建的限定：它不防 Shellshock 类代码级漏洞，也无法对抗 trusting trust 式编译器后门——若编译器全域被攻陷，可复现性只会忠实复现后门；其结论是可复现构建是工具箱中的一件工具而非安全终点，这对 Debian 主导的可复现构建热构成边界辨析。（BSD Now EP107，[4014.74-4277.72]，L2）
 - 是否 Linux 化的分歧被摆上台面：听众来信以 base 与附加软件的清晰区隔正是 FreeBSD 区别于任意包集合式 Linux 发行版之处为由质疑打包化方向；主持人与访谈者反复申明 base 与第三方以 usr/local 为界的结构不变、world 与 kernel 仍一体化开发，pkg 只是升级与分发载体。争议实际落在工具链变更与本体论边界的混淆上。（BSD Now EP84，[3885.96-3985.84]，L2）
-- 企业存在与治理文化的双重辨析：主持人断言 Juniper 设备几乎皆基于 FreeBSD、多数 Cisco 防火墙亦然，PF 已内置于 OS X 与 iOS，以此论证 BSD 技能的职场价值；另以 OpenBSD 提交日志末尾的 OK 署名对照 FreeBSD 的 Reviewed by 与 Approved by 机制，展示两项目代码评审治理的同构与差异。　[存疑脚注] 多数 Cisco 防火墙基于 FreeBSD 的说法为主持人单方断言，本期未给出处，未经交叉验证；Juniper 基于 FreeBSD 属可查事实但同样未当期举证。（BSD Now EP84，[4197.66-4389.78]，L2）
-- 访谈中的预算（约 270 万至 290 万美元）与募资（约 550 万美元）数字为当事人口述的单一来源，须与基金会年度报告交叉核对。　[存疑脚注] 预算与募资金额为当事人口述，未经年报交叉验证。（BSD Now EP616，[570.70-586.06]，L4）
-- HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
-- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningcamp、Paul Hankamp、Paul Henningsen），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。　[存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）[订正：原 转写变体 Paul Henningkamp、Paul Heinkamp、Paul Henningham，2026-09-30 SenseAudio 重转核对]
-- [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。　[存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
-- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Puffle；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。　[存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）[订正：原 Pawel 误写作 Pappel，2026-09-30 SenseAudio 重转核对]
-- jails 与 Docker 的比较是本讲最显著的争议点：Lucas 认为两者是相似思路的不同边缘，并以其检查时点判断 jails 的轻量虚拟化当时更为完整；他批评 Docker 镜像如 Linux 包般散落随机站点、缺乏集中审计，与官方 iocage 插件的集中分发形成对照；该判断个人立场鲜明且时效敏感，Lucas 自己也承认三个月内情况可能已经改变。　[存疑脚注] jails 比 Docker 完整为讲者在 2020 年前后的个人判断，引用前须与 Docker 及容器运行时的后续版本演进交叉核验。（YouTube EPhQmOc0egcl4，[2782.8-2880.0]，L4）
-- 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。　[存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2299.0-2366.3]，L4）[订正：原 [2346.319-2397.079]→[2299.0-2366.3]，内容复核；Pushover 段位于 1904.5-1913.0，不在此区间]
+- 企业存在与治理文化的双重辨析：主持人断言 Juniper 设备几乎皆基于 FreeBSD、多数 Cisco 防火墙亦然，PF 已内置于 OS X 与 iOS，以此论证 BSD 技能的职场价值；另以 OpenBSD 提交日志末尾的 OK 署名对照 FreeBSD 的 Reviewed by 与 Approved by 机制，展示两项目代码评审治理的同构与差异。 [存疑脚注] 多数 Cisco 防火墙基于 FreeBSD 的说法为主持人单方断言，本期未给出处，未经交叉验证；Juniper 基于 FreeBSD 属可查事实但同样未当期举证。（BSD Now EP84，[4197.66-4389.78]，L2）
+- 访谈中的预算（约 270 万至 290 万美元）与募资（约 550 万美元）数字为当事人口述的单一来源，须与基金会年度报告交叉核对。 [存疑脚注] 预算与募资金额为当事人口述，未经年报交叉验证。（BSD Now EP616，[570.70-586.06]，L4）
+- HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。 [存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
+- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningcamp、Paul Hankamp、Paul Henningsen），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。 [存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）[订正：原 转写变体 Paul Henningkamp、Paul Heinkamp、Paul Henningham，2026-09-30 SenseAudio 重转核对]
+- [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。 [存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
+- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Puffle；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。 [存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）[订正：原 Pawel 误写作 Pappel，2026-09-30 SenseAudio 重转核对]
+- jails 与 Docker 的比较是本讲最显著的争议点：Lucas 认为两者是相似思路的不同边缘，并以其检查时点判断 jails 的轻量虚拟化当时更为完整；他批评 Docker 镜像如 Linux 包般散落随机站点、缺乏集中审计，与官方 iocage 插件的集中分发形成对照；该判断个人立场鲜明且时效敏感，Lucas 自己也承认三个月内情况可能已经改变。 [存疑脚注] jails 比 Docker 完整为讲者在 2020 年前后的个人判断，引用前须与 Docker 及容器运行时的后续版本演进交叉核验。（YouTube EPhQmOc0egcl4，[2782.8-2880.0]，L4）
+- 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。 [存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2299.0-2366.3]，L4）[订正：原 [2346.319-2397.079]→[2299.0-2366.3]，内容复核；Pushover 段位于 1904.5-1913.0，不在此区间]
 
 **文献**：
 
@@ -405,3 +405,145 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔EuroBSDcon 2022〕讲者 Yan Ka Chiu 口述：其生产环境中 NFS 服务器在导出数据集之前会先克隆该数据集（YouTube EPzN7BRJIm5NY，[2046.48-2054.57]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1484 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1484`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD jail(8) Overview, the Secure Virtual Server 讲者 Isaac Levy 的口述〕讲者口述：jail 是手册第八节收录的一个用户态工具，与 ifconfig 同类，生成一个虚拟系统映像，以进程树为基础；其核心是 jail 系统调用，代码量与 chroot 相当；讲者随即强调 jail 并非经典的机器模拟器（machine emulator）。（YouTube EPpTttIVRvVOs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1485 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1485`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD jail(8) Overview, the Secure Virtual Server 讲者 Isaac Levy 的口述〕讲者口述：与整机虚拟化的对照中，讲者指出真正的虚拟机是完整模拟硬件的软件，而 jail 与此毫无关系——jail 讲的是 containment（容纳约束），是对容器作细粒度调整，不是在运行虚拟机。（YouTube EPpTttIVRvVOs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1486 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1486`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD jail(8) Overview, the Secure Virtual Server 讲者 Isaac Levy 的口述〕讲者口述：过去 FreeBSD 的 jail 启动脚本中存在一个安全漏洞，起因是挂载时若干可疑的符号链接把其他设备置于可执行代码的位置；系统一启动便等于在宿主机上执行来自 jail 的代码，讲者称之为所有人都完蛋了。（YouTube EPpTttIVRvVOs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1487 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1487`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD jail(8) Overview, the Secure Virtual Server 讲者 Isaac Levy 的口述〕讲者口述：就历史而言 jail 的根目录下不存在内核文件；讲者推测这在 486 时代之所以如此，是因为当时没人知道根目录下没有名为 kernel 的东西会发生什么，他认为原因涉及一次 RCE 问题。（YouTube EPpTttIVRvVOs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1792 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1792`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to BastilleBSD》Christopher Edwards 演讲〕讲者口述：FreeBSD 早在 2000 年即已有 jails；到他 2021 年演讲时约二十一年，他形容那感觉“像一百年前”。（YouTube EPIOUr7Is5FSU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1793 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1793`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to BastilleBSD》Christopher Edwards 演讲〕讲者口述：FreeBSD 做容器化比几乎所有其他系统都早，jails 在他眼中是“这款操作系统上把他一次次拉回来的杀手级特性”，他在其他系统上找不到同等轻量级的系统虚拟化。（YouTube EPIOUr7Is5FSU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1794 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1794`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to BastilleBSD》Christopher Edwards 演讲〕讲者口述：BastilleBSD 沿用 FreeBSD jails 的 thin jail 与 thick jail 之分——thin jail 会共用一份已 bootstrap 的 FreeBSD 13 发行版基底（他又称其为 shared release jail），因此在安全与打补丁方面有利：他举例若二十五台容器共用同一份发行版，只需对那份共享发行版动手一次即可全部生效。（YouTube EPIOUr7Is5FSU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1795 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1795`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to BastilleBSD》Christopher Edwards 演讲〕讲者口述：该工具支持第三种容器联网方式 vnet，被他评为“非常酷”，但 vnet 入基底系统的时间“也许只有最近一两年”；其机制是创建一座网桥再把容器挂到该桥上，使其像一台虚拟交换机。（YouTube EPIOUr7Is5FSU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2111 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2111`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Yan Ka Chiu 演讲〕讲者口述：只要采用 OCI 的分发规范，就能直接借用现有基础设施来分发 FreeBSD 容器，例如把镜像推到 Docker Hub 或 SE（转写音，疑指某镜像仓库）；而这正是他这个项目的首要目标。（YouTube EP7__Iee8vmOw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2112 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2112`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Yan Ka Chiu 演讲〕讲者口述：在 Linux 上容器本质是一组 cgroup 与 namespace，无法把整个容器当作一个对象来追踪，只能追踪某个具体进程，而不能像追踪一个整体容器那样把其中所有进程一起追。（YouTube EP7__Iee8vmOw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2113 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2113`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Yan Ka Chiu 演讲〕讲者口述：在 FreeBSD 上既能建立 vnet jail 也能建立非 vnet jail，非 vnet jail 有相当不错的安全特性，例如无法修改网络栈；此外还能运行 Linux jail，对他而言这是一项非常重要的功能。（YouTube EP7__Iee8vmOw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2114 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2114`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Yan Ka Chiu 演讲〕讲者口述：另一方面又不希望镜像自行声明要把全部设备节点暴露给容器，所以需要一个守卫机制来阻止这种事。（YouTube EP7__Iee8vmOw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2179 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2179`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays：Introduction to Jails（讲者 Michael Lucas）〕讲者口述：jail 不等同于 chroot——chroot 只是把某个目录当成新的根目录的一次文件系统命名空间转换，而 jail 是一组命名空间转换，除目录变根目录之外还包括进程号等命名空间的转换。（YouTube EPhQmOc0egcl4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2180 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2180`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays：Introduction to Jails（讲者 Michael Lucas）〕讲者口述：讲者称最早的 jail 代码出现于两个日期之间的某时（转写为 1975 年 7 月 18 日至 1979 年 5 月 7 日），现代 jails 自 1998 年起开始出现并演化很快，而 jails 如今最大的问题是文档过时。（YouTube EPhQmOc0egcl4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2181 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2181`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays：Introduction to Jails（讲者 Michael Lucas）〕讲者口述：jail 内的 userland 版本必须与宿主一致，不能在 FreeBSD 12 宿主上跑 FreeBSD 13 的 jail；讲者并请老手回忆 FreeBSD 4 当年用的是 TGZ 而非 TXZ。（YouTube EPhQmOc0egcl4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2182 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2182`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays：Introduction to Jails（讲者 Michael Lucas）〕讲者口述：VNET 在 FreeBSD 12 中成为默认，使 jail 拥有自己的网络栈、可自行配置网络并运行自己的防火墙；VNET 的开发约始于 2006 年，讲者承认早期版本确有缺陷。（YouTube EPhQmOc0egcl4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2261 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2261`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore 在 EuroBSDcon 2012 演讲（The Warden - FreeBSD and Linux Jail Management）〕讲者口述：Warden 是一款 jail 管理工具，最初随 PC-BSD 8.x 作为附加包（add-on）随附，并非操作系统本身的一部分；它同时提供图形界面与命令行界面，功能限于 jail 的导入、导出等基础操作，讲者自述当时设计初衷也只是先把 GUI 与命令行打通作为起点。（YouTube EP2WEX_W7nH3Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2262 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2262`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore 在 EuroBSDcon 2012 演讲（The Warden - FreeBSD and Linux Jail Management）〕讲者口述：到了 9.1，Warden 不再是需要另行下载的附加包，而是直接内置于 TrueOS 与 PC-BSD 9.1；讲者称此前他曾花约两个月集中开发这些新功能。（YouTube EP2WEX_W7nH3Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2263 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2263`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore 在 EuroBSDcon 2012 演讲（The Warden - FreeBSD and Linux Jail Management）〕讲者口述：Warden 的 Linux jail 可以在 jail 内部安装 Debian 或 Gentoo 等发行版，底层仍沿用 ZFS 及其全部功能，并保留 Warden 所提供的功能；讲者另称这些用于填充 Linux jail 的脚本可由用户自行配置，并欢迎社区提交其他发行版的脚本以便并入发行版。（YouTube EP2WEX_W7nH3Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2264 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2264`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore 在 EuroBSDcon 2012 演讲（The Warden - FreeBSD and Linux Jail Management）〕讲者口述：针对现场关于“jail 是不是 hypervisor、是否加载 Linux 内核”的提问，讲者回答 jail 并非 hypervisor，并不运行 Linux 内核，而是继续使用 FreeBSD 的 Linux 兼容层；因此 Linux 兼容层中的 bug 会影响 jail，他希望此类问题随时间逐渐被修掉。（YouTube EP2WEX_W7nH3Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2432 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2432`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille，EuroBSDcon 2024 答问环节〕讲者口述：jails“四点零”即 FreeBSD 4.0 就已有，他本人自 4.1 起开始使用；同一场里他另说用 jails 已“近二十五年”。此为讲者记忆式自述，转写在版本与年份处重复含混。（YouTube EPrGdylV-Up_E，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2433 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2433`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille，EuroBSDcon 2024〕讲者口述：他自述了 FreeBSD jail 管理方式的更替链条——先是手工建 jail（make world 加 -D 一类做法），再用 EasyJail 以求一次升级全部 jail，继而迁到 iocage 与 py-iocage，最后因为讨厌批量升级全部 jail 而退回 jail.conf；另说明现在用的 makejail 只管 jail 的创建与升级、不管配置。（YouTube EPrGdylV-Up_E，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2434 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2434`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille，EuroBSDcon 2024〕讲者口述：他把自己 Jail 形态的转变称作“Great Jail Migration”，路径是 thick 到 thin 再到 vanilla；理由是同时维护三四十个 jail 时逐个升级不堪负担，且宿主机升级会因二进制不兼容打破 jail，最终他偏好看得见可直接改的“plain vanilla”配置。（YouTube EPrGdylV-Up_E，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2435 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2435`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille，EuroBSDcon 2024〕讲者口述：早期在同一宿主机上跑多个 jail 时，每个 jail 里要各建一个用户、且各用户的 UID 必须不同，原因是共享内存；他点明是 System V 共享内存，并称自己当年的说法是“memory stomping”；他把这种负担与如今把 Postgres 放进 jail“非常容易”作了对照。（YouTube EPrGdylV-Up_E，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2456 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2456`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“2020 FreeBSD Vendor Summit - Container Based Service Mesh”演讲〕讲者口述：讲者指出 Linux 上的容器技术承袭自 FreeBSD 的 jails，jails 与容器同属虚拟化操作系统而非硬件的机制，并称可用 FreeBSD 构建一套让容器化部署得以实现的技术。（YouTube EP0JNWNtJh0v0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2457 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2457`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“2020 FreeBSD Vendor Summit - Container Based Service Mesh”演讲〕讲者口述：jail 的启动命令行不结束时启动流程即不完成，poststart 段因此永远不会被执行，而 persist 参数只在启动完成后才应用；讲者称为此自己做了 workaround。这体现“每容器一进程”惯例与 jail 启动脚本之间的摩擦。（YouTube EP0JNWNtJh0v0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2458 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2458`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“2020 FreeBSD Vendor Summit - Container Based Service Mesh”演讲〕讲者口述：FreeBSD 的发行周期对 jail 能在何处运行设有严格规则，创建镜像时 FreeBSD 版本很重要，因为它限制了镜像能在哪些宿主上运行——宿主内核可能不同。（YouTube EP0JNWNtJh0v0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2459 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2459`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“2020 FreeBSD Vendor Summit - Container Based Service Mesh”演讲〕讲者口述：jail 以 prison 形式存在于内核之内，内核外对其生命周期几乎没有可见性；若要在 FreeBSD 上原生实现成熟的容器环境，需要一个 runtime supervisor 来克服 jails 目前的限制。（YouTube EP0JNWNtJh0v0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

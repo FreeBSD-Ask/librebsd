@@ -91,8 +91,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- Scott Fahlman 提出 emoticon 的具体日期来自节目转述的推文，须以卡内基梅隆大学保存的原始消息核实。　[存疑脚注] emoticon 起源日期为二手转述，未经 CMU 原始档案核实。（BSD Now EP529，[2636.36-2699.48]，L4）
-- Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。　[存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
+- Scott Fahlman 提出 emoticon 的具体日期来自节目转述的推文，须以卡内基梅隆大学保存的原始消息核实。 [存疑脚注] emoticon 起源日期为二手转述，未经 CMU 原始档案核实。（BSD Now EP529，[2636.36-2699.48]，L4）
+- Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。 [存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
 
 **文献**：
 
@@ -161,3 +161,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔FreeBSD Fridays〕讲者口述：CHERI 项目最初以 MIPS 平台为基础（转写音作 cherry）。（YouTube EPyrk5FfjHDCo，[2088-2091.669]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1592 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1592`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔#CheriABI: Hardware enforced memory safety for #FreeBSD，Brooks Davis 演讲〕讲者口述：他声称已经得到一个完整的类 UNIX 操作系统，以硬件强制的空间与引用内存安全方式编译而成，覆盖用户态程序、库、动态链接器，以及内核访问用户内存的路径——当内核试图访问用户传入的数组而用户给出的长度参数错误时，不会越过分配边界。（YouTube EPR4iTt6rYwHM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1593 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1593`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔#CheriABI: Hardware enforced memory safety for #FreeBSD，Brooks Davis 演讲〕讲者口述：讲者介绍其纯能力模式（pure capability mode）实现建立在 Cherry BSD 之上，而 Cherry BSD 是一个带 CHERI 支持的 FreeBSD 分叉；在该模式中程序内的所有指针都是能力，包括系统调用的参数与内核返回的值。（YouTube EPR4iTt6rYwHM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1594 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1594`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔#CheriABI: Hardware enforced memory safety for #FreeBSD，Brooks Davis 演讲〕讲者口述：相较现行 FreeBSD 的构建系统，该工作改为先构建能力版库、再构建程序，因此必须改动 FreeBSD 的程序构建基础设施，使每个程序可选择以混合二进制或纯能力二进制方式链接。（YouTube EPR4iTt6rYwHM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1595 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1595`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔#CheriABI: Hardware enforced memory safety for #FreeBSD，Brooks Davis 演讲〕讲者口述：由于在该系统中所有用户态访问都经由能力，讲者指出 FreeBSD 内核原有的 copyin／copyout 系列函数需要对应的能力感知版本；在非能力型进程中调用普通版本会直接报错。（YouTube EPR4iTt6rYwHM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

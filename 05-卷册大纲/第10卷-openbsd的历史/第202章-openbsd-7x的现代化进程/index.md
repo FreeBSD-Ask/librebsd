@@ -93,9 +93,9 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
-- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
-- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
+- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。 [存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
+- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。 [存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
+- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。 [存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 
 **文献**：
 
@@ -227,3 +227,270 @@ volume: 第10卷-openbsd的历史
 
 据〔OpenBSD 技术分享〕讲者口述：DTrace 最初为 Solaris 开发，之后也被 FreeBSD 与 NetBSD 采用。（YouTube EPyHKx57Wv6DA，[74.61-85.49]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1746 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1746`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ted Unangst《OpenBSD vs SMP, Threading, and Concurrency》演讲〕讲者口述：OpenBSD 内核中散布的 simple locks（自旋锁）是继承自 Berkeley 的遗留物，在 OpenBSD 中从未被使用、也不会被使用，部分原因是它们很可能本身就是错的。（YouTube EPhKpljl-kI3I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1747 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1747`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ted Unangst《OpenBSD vs SMP, Threading, and Concurrency》演讲〕讲者口述：巨型锁（giant）实际上把内核里其他所有互斥量都吞并了——即使专门给 TCP 栈加上七十几个新锁、实测一切看着正常，也根本没法判断改动是否真的生效，因为那些代码本身仍然在 giant 的保护之下跑。（YouTube EPhKpljl-kI3I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1748 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1748`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ted Unangst《OpenBSD vs SMP, Threading, and Concurrency》演讲〕讲者口述：OpenBSD 当时自带的 libpthread（转写作“the L P thread”）是一个纯用户态实现、属于 FreeBSD 的附加件，之前工作得很好，但存在一系列问题，其中之一是完全无法扩展到 SMP。（YouTube EPhKpljl-kI3I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1749 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1749`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ted Unangst《OpenBSD vs SMP, Threading, and Concurrency》演讲〕讲者口述：面对当场听众问“其他项目为何不直接取用（FreeBSD 的）witness”，台下指出它就是 BSD 授权的、不存在许可障碍。（YouTube EPhKpljl-kI3I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1777 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1777`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024 Rob Keizer《Global anycast using OpenBSD on a budget》演讲〕讲者口述：OpenBSD 上现有的 FUSE 版本仅支持 sshfs 与少数其他项，这是讲者最希望看到改变的一点（他同时表示 FUSE 本身很好用、自己也并未编写该实现）。（YouTube EPHiEzmIi3B24，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1778 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1778`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024 Rob Keizer《Global anycast using OpenBSD on a budget》演讲〕讲者口述：讲者称 OpenBSD 的包处理大致只能有效跑满单核，需借助网卡卸载，但即便如此，在推到两三百 Gbps 量级时 CPU 侧仍是问题所在。（YouTube EPHiEzmIi3B24，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1779 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1779`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024 Rob Keizer《Global anycast using OpenBSD on a budget》演讲〕讲者口述：corosync 在 OpenBSD 上需自行打补丁方能运行（耗时良久），且其默认网络栈已弃用 UDP，故讲者通常不建议拿 corosync 承担此用途。（YouTube EPHiEzmIi3B24，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1796 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1796`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building an accessible OpenBSD laptop〕讲者口述：讲者称这台笔记本所用的基层 USB 3 控制器驱动并不支持该传输类型——既没有正确的错误处理，也没有把缓冲区正确送入送出的方式，这部分根本没做、未被实现，因此相关流式设备无法使用；他自 2017 年起着手补这块。（YouTube EPMa_Y1hVmK8o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1797 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1797`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building an accessible OpenBSD laptop〕讲者口述：讲者称这段 USB 相关工作并非他一人完成——他当时还在并行做别的事，恰逢合适的人在合适的时间出现并加入协作，最终由 Alexander Racha 修掉了其中大量 bug，他称之为非常难得的一件事。（YouTube EPMa_Y1hVmK8o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1798 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1798`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building an accessible OpenBSD laptop〕讲者口述：讲者称本机第二个扬声器无法开箱使用，这部分并非他本人完成，而是由一位贡献者（转写音作 Joshua）反向工程该音频设备的驱动，找出能启用正确扬声器的一串魔数命令序列，需要向硬件喂入一长列十六进制值。（YouTube EPMa_Y1hVmK8o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1799 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1799`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building an accessible OpenBSD laptop〕讲者口述：麦克风与扬声器是另一回事——虽也开箱不工作，但讲者查出问题出在某处的连接方式（转写音作 one surface wired up）上，只需改配置即可修好，不需要改动任何代码。（YouTube EPMa_Y1hVmK8o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1978 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1978`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Klemens Nanni（字幕误作 Clements/Clements）EuroBSDcon 2023 讲座 The OpenBSD Installer〕讲者口述：OpenBSD 安装器不只是安装，也能升级；用户已有 OpenBSD 系统想取新版本时，执行升级的代码与执行安装的代码完全相同，“安装”一词在其口径中涵盖所有模式。讲者称转写中 'open business' 实为 OpenBSD。（YouTube EPr6MwG5D5r5U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1979 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1979`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Klemens Nanni EuroBSDcon 2023 讲座 The OpenBSD Installer〕讲者口述： OpenBSD 安装器的绝大部分能装进一张小 i386 软盘，仅数兆字节，却可完成安装、升级、无人值守安装与联网交互式升级，并称在如此小的体量下做到这些颇为令人惊讶。（YouTube EPr6MwG5D5r5U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1980 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1980`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Klemens Nanni EuroBSDcon 2023 讲座 The OpenBSD Installer〕讲者口述：OpenBSD 自多年以前就已官方支持 amd64 及其他平台的加密磁盘安装；安装器中那行看似简单、默认选否的“加密根分区”新提问，实际是多年间进入代码树的庞大改动列表的结果——若想把这一能力从 amd64 扩展到更多架构，就会发现自己触及大量此前没人考虑过的边角情形。补充口述：softcrypto（可加密磁盘与软加密）在所支持的全部架构上都能编译启用，但并非全部架构都能在引导加载器阶段就识别此类磁盘，故加密安装在 amd64 机器上可行，在 armv7 上则不可行。（YouTube EPr6MwG5D5r5U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1997 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1997`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔D. Gwynne 的 OpenBSD active-active 防火墙集群演讲〕讲者口述：OpenBSD 的防火墙叫做 PF，它替代的是此前的 IP filter；后来对 IP filter 的许可证条款作了一次澄清，结果它因此被从源码树中移除，讲者称这对他个人来说相当令人震惊。（YouTube EPcBxDgevQpCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1998 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1998`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔D. Gwynne 的 OpenBSD active-active 防火墙集群演讲〕讲者口述：所幸有一位名叫 Daniel Hartmeier 的人接上来动手写了 PF；讲者称亲眼看着事情推进之快相当惊人——IP filter 在数周内（或一个月内）就从树上消失了，而 PF 随即就位，并赶在下一个版本发布时进入。（YouTube EPcBxDgevQpCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1999 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1999`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔D. Gwynne 的 OpenBSD active-active 防火墙集群演讲〕讲者口述：几年前出现的做法是一种叫做 pfsync 的协议，它存在的唯一目的就是在多台 PF 防火墙之间共享状态表；它是一个非常简单的协议——就是一个带 IP 头的裸 IP 包，内部没有任何声明自己是 UDP 或 TCP 之类的内容，只是内核之间的数据报。（YouTube EPcBxDgevQpCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2000 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2000`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔D. Gwynne 的 OpenBSD active-active 防火墙集群演讲〕讲者口述：讲者自述已投入 OpenBSD 源码树的是协议处理、状态管理与解析的整块重写，这次约四千行改动的绝大部分在数周前已提交进 open BSD 的源码库，并将进入 4.5 版本的发布。（YouTube EPcBxDgevQpCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2023 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2023`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD vmm Update -- Mike Larkin 讲题〕讲者口述：讲者称该 C BIOS 包不随 base 交付，因为它属于“强许可”（转写音作 Stockman opener），且有人不希望 base 中出现此类许可。（YouTube EPg2kJGkVxWa8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2024 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2024`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD vmm Update -- Mike Larkin 讲题〕讲者口述：讲者称 FreeBSD 来宾所暴露的问题需要指令译码器（instruction decoder）；vmm 开发已两年多却一直不需要它，他一直有意识地把它往后推。（YouTube EPg2kJGkVxWa8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2025 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2025`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD vmm Update -- Mike Larkin 讲题〕讲者口述：讲者称 Pratik 是其圣何塞州立大学硕士课程的学生，他与另外三名学生实现了 vmm 的“send and receive”即迁移；新版 vmctl/vmd（转写音作 NCTM e of d）可暂停与恢复，并可发送与接收虚拟机。（YouTube EPg2kJGkVxWa8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2026 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2026`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD vmm Update -- Mike Larkin 讲题〕讲者口述：讲者提出的内核隐藏（undrJV）思路是借 vmm 把现有宿主自身当作虚拟机启动，从而隐藏全部内核文本；他自认这不是新想法，Blue Pill 早已做过类似事情，也可能有人做过相近的事。（YouTube EPg2kJGkVxWa8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2103 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2103`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024〕讲者口述：OpenBSD 的 IPv6 支持起于 1999 年 KAME 并入（字幕音作“K St”“K project”）；KAME 是一个日本研究项目，其内容早于讲者本人的时期，他自述并非史家；该研究项目 2006 年停止，其代码并入后仍由 OpenBSD（字幕音作“OPD”）继续维护。（YouTube EPQ4b26mqb_G8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2104 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2104`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024〕讲者口述：对照 RFC 6724 逐行读 OpenBSD 的源地址选择实现，他盯着那张判定表与代码看了好几天，想弄清“是否需要替换当前最佳地址”的分支究竟会不会被触发，结论是不会——不存在任何会实际执行替换的情形，这段判定逻辑在实现中不会走到。（YouTube EPQ4b26mqb_G8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2105 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2105`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024〕讲者口述：为解决旧做法的缺陷，他把 router advertisement 处理从内核整体拆出、搬到用户态，亲自写了 slaacd——他称 2018 年 BSDCan 已有一场专门的报告讲这件事，该进程特权分离并执行 pledge（字幕音作“privileg separated”“pledged”，slaacd 音作“slacky”）。（YouTube EPQ4b26mqb_G8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2106 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2106`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024〕讲者口述：在 IPv6-only 场景下客户端侧用 pf 也能完成这套地址转换，但规则“极其复杂”（字幕音作“massively more comp complicated”）且有其原因——首先必须把该 IPv6 地址动态设置上去，因为 pf 没有办法表达“取该接口上的全局地址、把它填作 from”，这不是 pf 的能力。（YouTube EPQ4b26mqb_G8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2119 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2119`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD Network Stack Internals，Claudio Jeker〕讲者口述：socket API 是 BSD 最成功的一次输出——连 Windows 也实现了它；因此 OpenBSD 尽量不大幅改动 socket API。（YouTube EPV85It0dGUF4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2120 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2120`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD Network Stack Internals，Claudio Jeker〕讲者口述：mbuf“API”其实并非 API，只是一堆操纵 mbuf 与指针的函数，多数带不算太坏、部分带极坏的副作用，是网络相关故障的第一大原因；网络栈一崩溃，要么出在 mbuf，要么多半出在路由表。（YouTube EPV85It0dGUF4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2121 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2121`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD Network Stack Internals，Claudio Jeker〕讲者口述：PF 是 m_tag 的最大使用者，几乎所有每个数据包都挂有 m_tag；把这份元数据从 m_tag 直接移入包头后，PF 在低速机器上的性能翻了一倍。（YouTube EPV85It0dGUF4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2122 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2122`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD Network Stack Internals，Claudio Jeker〕讲者口述：OpenBSD 在近年扩展了路由表代码：加入路由标签（route labels）、启用多路径（multipath）路由、支持多张路由表；另两项在研工作是路由域与路由优先级。（YouTube EPV85It0dGUF4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2238 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2238`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024，Alexander Bluhm 演讲“A Packet's Journey Through the OpenBSD Network Stack”〕讲者口述：OpenBSD 的网络协议栈已把诸如 X.25 之类的非 IP 协议族全部移除，如今只保留 IP 一族，其上只叠置 UDP、TCP 与 raw IP，再往上是 socket 层作为应用与协议之间的接口。（YouTube EPKn2XEW4Qre0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2239 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2239`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024，Alexander Bluhm 演讲〕讲者口述：当 UDP 报文的队列丢弃计数上升时，说明系统处理速度不足；RX 恒指接收队列、TX 指发送队列，据此可判断瓶颈位于本地上游——是 UDP 或 raw IP 报文送达速度超出本机处理能力。（YouTube EPKn2XEW4Qre0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2240 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2240`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDCon 2024，Alexander Bluhm 演讲〕讲者口述：OpenBSD 的 PF 本质上是嵌在 IP 输入与 IP 输出路径中、调用 PF 测试函数完成全部 PF 处理；规则写作 PF in／PF out 两类，in 规则匹配报文进入方向，out 规则匹配报文离开方向。（YouTube EPKn2XEW4Qre0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2476 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2476`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD 网络启动工作站一讲〕讲者口述：起因是公司内 IT 部门的岗位交换项目，由此生出想法——试试看把 OpenBSD 跑到公司工作站上到底有多难。（YouTube EPkFqHXfWEB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2477 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2477`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD 网络启动工作站一讲〕讲者口述：他们部署新机器的办法是把该机的 MAC 地址录入中心系统、再把它放到公司某处，机器随后启动、选定安装项并自动完成安装。（YouTube EPkFqHXfWEB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2478 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2478`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD 网络启动工作站一讲〕讲者口述：他在自己研究部门的项目里把两台机器用一根网线直连成一个小型网络，结果网络启动不工作、机器卡住报错，因为始终拿不到反向 ARP 的应答（转写音作 the reverse a purpose）。（YouTube EPkFqHXfWEB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2479 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2479`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenBSD 网络启动工作站一讲〕讲者口述：上述失败的原因是启动时内核探测并初始化所有设备，网卡初始化使链路反复 down/up，对端链路随之抖动，服务端应答地址请求的那个守护进程（转写音作 demon）因此漏掉了客户端询问自身 IP 地址的报文。（YouTube EPkFqHXfWEB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2483 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2483`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“Bidirectional Forwarding Detection BFD implementation and support in OpenBSD”汇报〕讲者口述：讲者自名 Peter（转写音作 Hustler），正在为 OpenBSD 实现双向转发检测（BFD）协议。（YouTube EPnLq6T8zUryo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2484 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2484`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔同上 OpenBSD BFD 汇报〕讲者口述：受 OpenBSD 内核架构的制约，其 BFD 实现极不可能支持快于每 50 毫秒一次的检测，即便 50 毫秒也已非常激进；就其当前用例而言这不成问题。（YouTube EPnLq6T8zUryo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2485 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2485`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔同上 OpenBSD BFD 汇报〕讲者口述：截至汇报时，其实现已覆盖 RFC 5880 与 5881（BFD 基础规范与单跳 IPv4/IPv6 规范）的全部必选项，能与 Juniper 设备建起会话并完成常规健康检查。（YouTube EPnLq6T8zUryo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2486 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2486`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔同上 OpenBSD BFD 汇报〕讲者口述：该实现完全位于内核之内，但因所用机制并未绕过协议栈，BFD 报文以普通数据包形式进出常规网络接口，故可用 PF 对其拦截或作其他操纵。（YouTube EPnLq6T8zUryo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2487 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2487`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Cupać 关于 OpenBSD 高可用 WAN 的演讲〕讲者口述：其负责运维一张约 30 节点的广域网，该网完全基于 OpenBSD 路由器构建，站点侧交换机则用 Juniper。（YouTube EP2-GwlUFG6oA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2488 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2488`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Cupać 关于 OpenBSD 高可用 WAN 的演讲〕讲者口述：其公司自托管 DNS、Web、数据库、邮件、LDAP、即时通信等全部基础互联网服务，均以 FreeBSD jails 承载。（YouTube EP2-GwlUFG6oA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2489 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2489`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Cupać 关于 OpenBSD 高可用 WAN 的演讲〕讲者口述：其 WAN 采用 hub-and-spoke 拓扑，hub 侧实施 CARP 与 pf 状态同步，每个 spoke 四条 GRE 隧道并以传输模式 IPsec 保护，密钥交换机制选用 isakmpd。（YouTube EP2-GwlUFG6oA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2490 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2490`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Cupać 关于 OpenBSD 高可用 WAN 的演讲〕讲者口述：其明知 iked 更新、还有更新的东西，仍坚持选用 isakmpd，理由是它久经验证、成熟可靠。（YouTube EP2-GwlUFG6oA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2534 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2534`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker 在 AsiaBSDCon（东京）口述 vscsi(4) 与 iscsid〕讲者口述：vscsi 是 OpenBSD 的用户态虚拟 SCSI 控制器，其目的把内核 SCSI 中间层暴露到用户态，让用户态得以实现 SCSI 控制器：内核通过 ioctl 接口把 SCSI 命令自中间层下传，用户态程序对这些调用作出回应。（YouTube EP9SPM1y-HynQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2535 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2535`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker 在 AsiaBSDCon（东京）口述 vscsi(4) 与 iscsid〕讲者口述：讲者自认 OpenBSD 在 iSCSI initiator 上“fairly late in the game”并作三大 BSD 对比： FreeBSD 已有 initiator，全部在内核里实现，用一个内含全部 initiator 代码的内核模块；NetBSD 是用户态 initiator，走其 FUSE（原文 “re-fuse or whatever they call it now”）一类的用户态文件系统接口。（YouTube EP9SPM1y-HynQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2536 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2536`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker 在 AsiaBSDCon（东京）口述 vscsi(4) 与 iscsid〕讲者口述：OpenBSD 自写 initiator 的理由是目标不同：要简单实现与更多安全，不愿在内核里放大量以超用户权限运行的代码，也不愿常驻一个以超用户权限运行的守护进程；同段后文称因此重视 privilege dropping 与 privilege separation，并补充说 vscsi 只需在打开设备节点时取权，故 iscsid 可用 chroot 加降权而无需完整特权分离。（YouTube EP9SPM1y-HynQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2537 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2537`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker 在 AsiaBSDCon（东京）口述 vscsi(4) 与 iscsid〕讲者口述：内核侧 vscsi 实现约 600 行代码，用户态 iscsid 为数千行，因此整个工程对外看似复杂的协议实际上是个很小的程序。（YouTube EP9SPM1y-HynQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2644 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2644`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alexandre Ratchov〕讲者口述：就音频子系统应置于内核还是用户态，讲者的结论是内核实现并无额外好处，故该项目在用户态实现，以求简单。（YouTube EPWcro3UliMZ4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2645 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2645`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alexandre Ratchov〕讲者口述：该框架围绕一个音频服务器构建，由它完成格式转换、重采样、混音与声道映射。（YouTube EPWcro3UliMZ4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2646 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2646`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alexandre Ratchov〕讲者口述：音量控制选择走 MIDI（转写音作 Medi／Med），因为 MIDI 是标准协议，可以直接复用现有应用。（YouTube EPWcro3UliMZ4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2647 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2647`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alexandre Ratchov〕讲者口述：该项目的目的之一，是让若干小工具能够协同工作，而不是依赖大而单一的程序（Unix 哲学）。（YouTube EPWcro3UliMZ4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

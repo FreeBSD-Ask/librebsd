@@ -90,8 +90,8 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。　[存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
-- 转写讹误提示：受访者名讹作 Brower（通行拼写为 Henning Brauer），isakmpd 讹作 iSarKMPD，NVIDIA 讹作 Vidya，RFC 讹作 RCS，KAME 记作 Japanese project，Paul Watson 演讲名与会议名存疑（转写 Sleeping the Window 与 Kansas Agrest 2004 无法确证），OpenNTPD 讹作 op-menti PD，多处数字与设备名含混；引用本访谈的专名与文献信息前须逐一核对。[存疑脚注] 专名讹误与存疑处较多，需对音核实。　[存疑脚注] 人名、项目名、会议名与演讲名多处讹误或无法确证，引用前需对音核实。（BSDTalk EP23，[203.60-1466.70]，L5）
+- 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。 [存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
+- 转写讹误提示：受访者名讹作 Brower（通行拼写为 Henning Brauer），isakmpd 讹作 iSarKMPD，NVIDIA 讹作 Vidya，RFC 讹作 RCS，KAME 记作 Japanese project，Paul Watson 演讲名与会议名存疑（转写 Sleeping the Window 与 Kansas Agrest 2004 无法确证），OpenNTPD 讹作 op-menti PD，多处数字与设备名含混；引用本访谈的专名与文献信息前须逐一核对。[存疑脚注] 专名讹误与存疑处较多，需对音核实。 [存疑脚注] 人名、项目名、会议名与演讲名多处讹误或无法确证，引用前需对音核实。（BSDTalk EP23，[203.60-1466.70]，L5）
 
 **文献**：
 
@@ -126,3 +126,110 @@ volume: 第10卷-openbsd的历史
 
 据〔来源不详〕讲者 Henning Brauer 口述：他自 1996 至 1998 年前后起运营一个 OpenBGPD feed，并重度使用 OpenBSD（转写音作 96 98 ish）（YouTube EPy_krYfVqljE，[63.6-73.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1754 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1754`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Gilles Chehade 谈 OpenSMTPD 现状〕讲者口述：他自 2007 年起把 smtpd 作为个人项目推进，当时与 OpenBSD 完全无关；此后经他人劝说才将其变成 OpenSMTPD，对方只说"这会是个不错的项目"。（YouTube EPp0S1bbO-h0k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1755 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1755`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Gilles Chehade 谈 OpenSMTPD 现状〕讲者口述：OpenSMTPD 的第一个生产版本发布于 2013 年，此前项目尚无官方赞助；此后获得赞助，方使他得以全职投入开发。（YouTube EPp0S1bbO-h0k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1756 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1756`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Gilles Chehade 谈 OpenSMTPD 现状〕讲者口述：多数人把 pledge 视为安全特性（可阻止 shellcode 在已恰当 pledge 的进程中执行），但他认为 pledge 的本质是"质量问题"——它让你发现自己对程序行为的假设有误。（YouTube EPp0S1bbO-h0k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1757 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1757`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Gilles Chehade 谈 OpenSMTPD 现状〕讲者口述：面对赞助方（高流量邮件服务商）的诉求，团队讨论约五分钟便决定终止赞助、另为其编写定制工具，以保全 OpenSMTPD 作为通用实现的定位；他称此事根本算不上争论。（YouTube EPp0S1bbO-h0k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2097 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2097`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Joel Carnat 演讲〕讲者口述：relayd 是运行于 OpenBSD 之上的多用途守护进程，自 OpenBSD 4.3 起即可用；其前身在 OpenBSD 4.1 时即已引入，只是当时用另一个名字，讲者自称念不出那个旧名。（YouTube EPyW8QSZyEs6E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2098 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2098`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Joel Carnat 演讲〕讲者口述：relayd 配置所用的词与 PF 语法大体相同，已熟悉 PF 者不会对这些用词感到意外。（YouTube EPyW8QSZyEs6E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2199 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2199`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲“Reyk Floeter: OpenIKED (P1B)”〕讲者口述：讲者为德国人、OpenBSD 项目成员，称 OpenIKED 是他写的第一部软件、第一个守护进程，并说它可移植，除 OpenBSD 外也在 FreeBSD、NetBSD 与 Linux 上运行。（YouTube EP2PJdXHISwlc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2200 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2200`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲“Reyk Floeter: OpenIKED (P1B)”〕讲者口述：讲者称这套 IPsec 守护进程 isakmpd 于 1998 年便在 OpenBSD 中实现。（YouTube EP2PJdXHISwlc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2201 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2201`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲“Reyk Floeter: OpenIKED (P1B)”〕讲者口述：讲者称 OpenBSD 是首个默认启用 ipsec 的操作系统，并表示惊讶其他 BSD 的通用内核中 ipsec 仍未默认开启，点名 FreeBSD 与 DragonFly BSD。（YouTube EP2PJdXHISwlc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2202 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2202`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲“Reyk Floeter: OpenIKED (P1B)”〕讲者口述：讲者说明 OpenIKED 的 CA 子进程独占保管密钥与证书，即使 IKEv2 协议进程被击溃或遭利用，攻击者也不会自动取得私钥；并称这一 CA 进程概念后来被从事 opensmtpd 的人移植借鉴。（YouTube EP2PJdXHISwlc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2413 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2413`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2016“OpenPAM and BSD”演讲〕讲者口述：早期 UNIX 若要更换认证方式，通常得自己写好认证模块的代码并重新编译软件，想做系统级的定制基本无路可走；是 Sun 提出把认证方法做成库、让程序链接它们并配置这些库，从而所有程序共用一套认证后端。讲者称问过若干当年在场的人，压倒性的说法是 PAM 当初确是进步。（YouTube EP-CXp3byvI1g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2414 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2414`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2016“OpenPAM and BSD”演讲〕讲者口述：OpenPAM 是 DES 受 FreeBSD 委托合同写成的，规模远小于 Linux PAM、也简单得多，其模块本就出自 FreeBSD，是货真价实的 BSD 产物，但“和所有人的 PAM 一样有 bug”；讲者并建议想找贡献入口的人去 FreeBSD 问题数据库检索 PAM 相关 PR，关掉它们就会被吸进 DragonFly、NetBSD 等一连串项目。（YouTube EP-CXp3byvI1g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2415 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2415`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2016“OpenPAM and BSD”演讲〕讲者口述：OpenPAM 明确不支持 Linux PAM 的扩展控制（extended controls），且这不是缺陷；就“谁在用”而言，OpenBSD 不用它——OpenBSD 对 PAM 整体有偏见，改用自己的 BSD authentication；OpenPAM 的用者是 FreeBSD 与 DragonFly，OSX 也用 PAM 但加了自家苹果式的特殊改动。讲者另称 OpenBSD 不采用 PAM 也是其限制之一。（YouTube EP-CXp3byvI1g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2416 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2416`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2016“OpenPAM and BSD”演讲〕讲者口述：PAM 真正恼人之处是没有一份获得认可的正式标准，只有一份 1997 年的 X/Open 文档被普遍视为定义性标准，而没有任何认证机构出面宣布“这才是官方做法”；其后果是 PAM 规则的各个组成部分没有官方语言，同一要素有人叫 type、有人叫 facility，网络上各家自造术语，因此讲者在书中自行择词。（YouTube EP-CXp3byvI1g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2417 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2417`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：该期演讲者自述其为 OpenBSD 开发者（2012 年入行），平日工作以撰写、产出与运维守护进程（demons）为主，也琢磨内核与网络栈，并靠运维自己的服务器谋生。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2418 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2418`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：该特权分离的校验型递归名字服务器在其各进程上使用 pledge 机制限制能力：进程自己不能向互联网打开 socket，须由父进程代为执行（如打开 53 端口），父进程也负责打开文件读句柄并在进程间传递。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2419 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2419`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：解析子进程不欲其纵览整个文件系统，仅以 unveil 放开 DNS over TLS 校验所需的证书包一个文件，使其“只能看见这一个文件”。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2612 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2612`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W. Lucas 讲者〕讲者口述：OpenBSD 做得最出色的一件事就是“说不”——“不行，不给加”“这个工具就只做这些，不再多”——因为功能加得越多，复杂度与出故障的途径就越多。（YouTube EPu-62QXjhLxk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2613 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2613`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W. Lucas 讲者〕讲者口述：OpenBSD 的 web 栈由 HTTP 服务器 httpd、通用代理与重定向器 relayd 组成，以 carp 实现 IP 层冗余，全部接入 PF，并构建在 LibreSSL 之上。（YouTube EPu-62QXjhLxk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2614 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2614`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W. Lucas 讲者〕讲者口述：这套 web 栈与 LibreSSL 强耦合——系统若没有 LibreSSL，就只能自行构建软件包或改用其他 web 服务器；httpd 用的是 LibreSSL 专有 API，而非 OpenSSL。（YouTube EPu-62QXjhLxk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2615 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2615`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W. Lucas 讲者〕讲者口述：OpenBSD 内置面向 ACME（自动证书管理环境）的 acme 客户端，讲者称这是他所见过最简洁好用的 ACME 客户端，签发的证书有效期为九十天。（YouTube EPu-62QXjhLxk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

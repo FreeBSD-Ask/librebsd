@@ -221,7 +221,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 访谈内嵌多条可回溯的一手史料：Dexter 保存的旧式 Unix 光盘与 CSRG 档案实物（1795.82-1806.61）、其维护于 multiplicity.bsd.lv 的 Xen/NetBSD 文档与 multiplicity 脚本、投向 AsiaBSDCon 与 BSDCan 的 SMART 工具设计论文，以及他转述的 Robert Watson 关于系统调用包装器并发缺陷的 WOOT 论文（2220.21-2227.67），可供 bhyve 与 jails 相关章节的口述史与文献双轨考据。（BSD Now EP149，[1795.82-1806.61]，L1）
 - Mark Phillips 访谈（2025 年 7 月柏林 Hackathon 现场）。（BSD Now EP622，[66.14-3216.34]，L1）
 - FreeBSD Foundation 关于页面与 YouTube 频道内容。（BSD Now EP622，[2688.00-2695.60]，L2）
-- 本期可入档的一手与准一手材料包括：AsiaBSDCon 2015 现场见闻（Dev Summit 与 vendor Summit、NetBSD Developer Summit、运行 NetBSD 的 Dreamcast 展台）；Lawrence Teo 专访（Calyptix 自 2006 年起每周向客户设备自动推送升级，含 LibreSSL 替换与 OpenBSD 本体整版升级）；Miod Vallat 将 OpenBSD versions 文件改回 -current 的提交日志（附仿《回到未来》的提交信息）；OpenSSH 6.8 发布公告；FreeBSD Foundation“FreeBSD from the Trenches”系列 AutoFS 博文；OpenBSD 澳洲 hackathon 报告（Jonathan Gray 的 AMD GPU 与图形工作、Ted Unangst 的虚拟内存层 SMP 工作）；OpenBSD 邮件列表经 SNDIO 与 SSH 端口转发跨网络播放音频 CD 的帖子；openBGPD 分发 PF 表更新的操作文章；GNU IceCat 31.5.0（Firefox 自由软件版）缺 BSD 移植的邮件列表问询帖；以及 Glenn Barber 关于 ZFS 旧池残留致启动挂起的博文。（BSD Now EP81，[4728.66-5006.99]，L2）　[订正：原 “Tor Browser Bundle 缺 BSD 版本的移植笔记”（新转写为 GNU IceCat 31.5.0 移植问询帖），2026-09-30 SenseAudio 重转核对]
+- 本期可入档的一手与准一手材料包括：AsiaBSDCon 2015 现场见闻（Dev Summit 与 vendor Summit、NetBSD Developer Summit、运行 NetBSD 的 Dreamcast 展台）；Lawrence Teo 专访（Calyptix 自 2006 年起每周向客户设备自动推送升级，含 LibreSSL 替换与 OpenBSD 本体整版升级）；Miod Vallat 将 OpenBSD versions 文件改回 -current 的提交日志（附仿《回到未来》的提交信息）；OpenSSH 6.8 发布公告；FreeBSD Foundation“FreeBSD from the Trenches”系列 AutoFS 博文；OpenBSD 澳洲 hackathon 报告（Jonathan Gray 的 AMD GPU 与图形工作、Ted Unangst 的虚拟内存层 SMP 工作）；OpenBSD 邮件列表经 SNDIO 与 SSH 端口转发跨网络播放音频 CD 的帖子；openBGPD 分发 PF 表更新的操作文章；GNU IceCat 31.5.0（Firefox 自由软件版）缺 BSD 移植的邮件列表问询帖；以及 Glenn Barber 关于 ZFS 旧池残留致启动挂起的博文。（BSD Now EP81，[4728.66-5006.99]，L2） [订正：原 “Tor Browser Bundle 缺 BSD 版本的移植笔记”（新转写为 GNU IceCat 31.5.0 移植问询帖），2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 
@@ -291,36 +291,36 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
-- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。　[存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
-- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。　[存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
-- Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。　[存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
-- OpenBSD 体验帖的 RAM 耗尽死机成因不确定是 OpenBSD 本身还是 Vultr 虚拟化环境，作者本人未下定论。　[考据脚注] 环境变量未隔离，因果归属存疑（BSD Now EP324，[691.12-706.72]，L4）
-- [存疑脚注] 转写中上一期引述与若干人名拼写（如 Kurt Mojic 等）存在 ASR 噪音，未与 Undeadly 原文核对。　[存疑脚注] 人名拼写与上一期引述未经原文核对（BSD Now EP308，[704.02-710.98]，L4）
-- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
-- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
-- [存疑脚注] 转写中会议演讲归属与人名拼写（如 Jan Piet Mens、Chuck Tuffli 等）存在 ASR 噪音，未逐一与 BSDCan 议程核对。　[存疑脚注] 演讲归属与人名未经议程核对（BSD Now EP300，[965.4-1043.32]，L4）
-- [存疑脚注] 转写将 unlink 描述为最早的系统调用之一、FreeBSD syscall 10，并与 Linux 架构相关编号并列，未逐一核对各平台编号表。　[存疑脚注] 系统调用编号未经各平台编号表核对（BSD Now EP295，[71.12-90.44]，L4）
-- 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
-- Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
-- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
-- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
-- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
-- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。　[存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
-- [存疑脚注] ino64 的 2007 年起始点与十年开发时长系播客转述，需对照 FreeBSD 提交历史核验。　[存疑脚注] 单一来源转述的时间线，缺提交记录印证。（BSD Now EP191，[2889.64-2908.0]，L4）
-- [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。　[存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）
-- [存疑脚注] ping“一晚写成”与 4.2a BSD 内核 ICMP 支持的时间线系作者自述，需与 4.2BSD 源码与 DARPA 会议记录交叉核验。　[存疑脚注] 单一来源自述，缺少独立档案印证。（BSD Now EP190，[4708.38-4780.22]，L4）
-- [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。　[存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
-- [存疑脚注] 转写将文章作者记作“Chris Stapps/Christoph”，实际姓名须核验原文署名。　[存疑脚注] 作者姓名须核验。（BSD Now EP170，[1385.34-1497.66]，L4）
-- [存疑脚注] 转写将 man page 历史项目作者记作“Seven Johnian”，应为 FreeBSD 提交者 Sevan Janiyan 的误转，须核验。　[存疑脚注] 人名须核验。（BSD Now EP170，[1955.24-2015.8]，L4）
-- [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。　[存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
-- [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。　[存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
-- fork 的利益结构辨析：八十至九十年代 NetApp、Juniper、Nokia、Isilon 等商业 fork 曾坐享 BSD 红利，十年后却陷入缺 SMP、缺 64 位与新驱动的维护赤字；社区侧则呈现单点悖论——做得差无人可用，做得好反使用户系于可能消失的维护者，Dexter 以 Brexit 喻 fork 的隐性代价，并主张以分支或 branch 而非整体分叉承载实验性工作。　[存疑脚注] 商业 fork 现状、Miros 与 HardenedBSD 定性等均系 Dexter 单一口述，无独立文件佐证；专名在转写中多处失真，引用前须核校。（BSD Now EP149，[5844.31-5948.60]，L4）
-- 转写质量辨析：全篇为双音轨交错、时间戳乱序，专名系统性失真——bhyve 一律转作 “Beehive”（2703.93-2712.87），Xen 作 “Zen”，Kristaps Dzonsons 作 “Kristaps Jonesons”，Matt Ahrens 间作 “Matt Aronson”；各段语义仍完整可辨，但任何人名、项目名与命令名在引用前必须回校原音频与当期节目笔记。　[存疑脚注] 全部专名系转写音译误差，需对照原节目音频与节目 shownotes 逐项核校后方可进入考据链。　[订正：原 NetBSD 作 NetVSD／Kristaps Dzonsons 作 Christoph Johnson／Matt Ahrens 作 Matt Aaron（新转写 NetBSD 拼写正确，人名失真见正文），2026-09-30 SenseAudio 重转核对]（BSD Now EP149，[2703.93-2712.87]，L5）
-- 访谈为 Mark Phillips 单方自述，其职业时间线与 FreeBSD Foundation 任职细节为单一来源，关键节点须以基金会公告交叉验证。　[存疑脚注] 职业履历为当事人单一来源自述，未与其他公开资料交叉验证（BSD Now EP622，[407.42-944.24]，L4）
-- 安全叙事存在单源与转写双重风险：Teo 以 Michal Zalewski 对各操作系统随机性的可视化研究作为其选择 OpenBSD 的关键论据，属当事人回忆中的单一二手引用（1693.70-1715.22）；HardenedBSD 的完整性强制机制仅有主持人转述，其与 NetBSD Veriexec 的类比、SHA-1/SHA-256 哈希清单机制及未来 X.509 ELF 签名计划均未经他源核证，细节可信度有限。　[存疑脚注] 本次转写专名拼写正确（IntegriForce、Veriexec、Michal Zalewski），但机制描述均为主持人单一转述，待与 HardenedBSD 官方公告核证（BSD Now EP81，[3070.24-3159.92]，L4）　[订正：原 失真对照“IntegraForce/VeraExec/Zalewski 姓名拼写存疑”，2026-09-30 SenseAudio 重转核对]
-- 听众 Robert 的迁移个案为 2015 年 BSD 桌面生态提供正反两面当事人证词：因 PulseAudio 整合混乱与对 systemd 缺乏信心而离开 Linux，PC-BSD 10.1.1 实现硬件即插即用并带来“回到有理智 shell 的类 UNIX 环境”的体验（3817.50-3847.50）；但无线网卡仅 a/b/g 模式、可查文档仅有三年前 wiki 清单，以及大文件拷贝时的内存占用观感问题（后被澄清为 inactive memory 误读），暴露无线驱动支持与内存统计认知层面的生态短板。（BSD Now EP81，[3772.80-3856.78]，L1）　[订正：原 引文段（3793.64-3835.46）及范围起点 [3793.64]，2026-09-30 SenseAudio 重转核对]
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。 [考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。 [存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
+- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。 [存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
+- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。 [存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
+- Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。 [存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
+- OpenBSD 体验帖的 RAM 耗尽死机成因不确定是 OpenBSD 本身还是 Vultr 虚拟化环境，作者本人未下定论。 [考据脚注] 环境变量未隔离，因果归属存疑（BSD Now EP324，[691.12-706.72]，L4）
+- [存疑脚注] 转写中上一期引述与若干人名拼写（如 Kurt Mojic 等）存在 ASR 噪音，未与 Undeadly 原文核对。 [存疑脚注] 人名拼写与上一期引述未经原文核对（BSD Now EP308，[704.02-710.98]，L4）
+- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。 [存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
+- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。 [考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
+- [存疑脚注] 转写中会议演讲归属与人名拼写（如 Jan Piet Mens、Chuck Tuffli 等）存在 ASR 噪音，未逐一与 BSDCan 议程核对。 [存疑脚注] 演讲归属与人名未经议程核对（BSD Now EP300，[965.4-1043.32]，L4）
+- [存疑脚注] 转写将 unlink 描述为最早的系统调用之一、FreeBSD syscall 10，并与 Linux 架构相关编号并列，未逐一核对各平台编号表。 [存疑脚注] 系统调用编号未经各平台编号表核对（BSD Now EP295，[71.12-90.44]，L4）
+- 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。 [存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
+- Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。 [存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
+- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。 [存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。 [存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。 [存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
+- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。 [存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
+- [存疑脚注] ino64 的 2007 年起始点与十年开发时长系播客转述，需对照 FreeBSD 提交历史核验。 [存疑脚注] 单一来源转述的时间线，缺提交记录印证。（BSD Now EP191，[2889.64-2908.0]，L4）
+- [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。 [存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）
+- [存疑脚注] ping“一晚写成”与 4.2a BSD 内核 ICMP 支持的时间线系作者自述，需与 4.2BSD 源码与 DARPA 会议记录交叉核验。 [存疑脚注] 单一来源自述，缺少独立档案印证。（BSD Now EP190，[4708.38-4780.22]，L4）
+- [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。 [存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
+- [存疑脚注] 转写将文章作者记作“Chris Stapps/Christoph”，实际姓名须核验原文署名。 [存疑脚注] 作者姓名须核验。（BSD Now EP170，[1385.34-1497.66]，L4）
+- [存疑脚注] 转写将 man page 历史项目作者记作“Seven Johnian”，应为 FreeBSD 提交者 Sevan Janiyan 的误转，须核验。 [存疑脚注] 人名须核验。（BSD Now EP170，[1955.24-2015.8]，L4）
+- [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。 [存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
+- [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。 [存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
+- fork 的利益结构辨析：八十至九十年代 NetApp、Juniper、Nokia、Isilon 等商业 fork 曾坐享 BSD 红利，十年后却陷入缺 SMP、缺 64 位与新驱动的维护赤字；社区侧则呈现单点悖论——做得差无人可用，做得好反使用户系于可能消失的维护者，Dexter 以 Brexit 喻 fork 的隐性代价，并主张以分支或 branch 而非整体分叉承载实验性工作。 [存疑脚注] 商业 fork 现状、Miros 与 HardenedBSD 定性等均系 Dexter 单一口述，无独立文件佐证；专名在转写中多处失真，引用前须核校。（BSD Now EP149，[5844.31-5948.60]，L4）
+- 转写质量辨析：全篇为双音轨交错、时间戳乱序，专名系统性失真——bhyve 一律转作 “Beehive”（2703.93-2712.87），Xen 作 “Zen”，Kristaps Dzonsons 作 “Kristaps Jonesons”，Matt Ahrens 间作 “Matt Aronson”；各段语义仍完整可辨，但任何人名、项目名与命令名在引用前必须回校原音频与当期节目笔记。 [存疑脚注] 全部专名系转写音译误差，需对照原节目音频与节目 shownotes 逐项核校后方可进入考据链。 [订正：原 NetBSD 作 NetVSD／Kristaps Dzonsons 作 Christoph Johnson／Matt Ahrens 作 Matt Aaron（新转写 NetBSD 拼写正确，人名失真见正文），2026-09-30 SenseAudio 重转核对]（BSD Now EP149，[2703.93-2712.87]，L5）
+- 访谈为 Mark Phillips 单方自述，其职业时间线与 FreeBSD Foundation 任职细节为单一来源，关键节点须以基金会公告交叉验证。 [存疑脚注] 职业履历为当事人单一来源自述，未与其他公开资料交叉验证（BSD Now EP622，[407.42-944.24]，L4）
+- 安全叙事存在单源与转写双重风险：Teo 以 Michal Zalewski 对各操作系统随机性的可视化研究作为其选择 OpenBSD 的关键论据，属当事人回忆中的单一二手引用（1693.70-1715.22）；HardenedBSD 的完整性强制机制仅有主持人转述，其与 NetBSD Veriexec 的类比、SHA-1/SHA-256 哈希清单机制及未来 X.509 ELF 签名计划均未经他源核证，细节可信度有限。 [存疑脚注] 本次转写专名拼写正确（IntegriForce、Veriexec、Michal Zalewski），但机制描述均为主持人单一转述，待与 HardenedBSD 官方公告核证（BSD Now EP81，[3070.24-3159.92]，L4） [订正：原 失真对照“IntegraForce/VeraExec/Zalewski 姓名拼写存疑”，2026-09-30 SenseAudio 重转核对]
+- 听众 Robert 的迁移个案为 2015 年 BSD 桌面生态提供正反两面当事人证词：因 PulseAudio 整合混乱与对 systemd 缺乏信心而离开 Linux，PC-BSD 10.1.1 实现硬件即插即用并带来“回到有理智 shell 的类 UNIX 环境”的体验（3817.50-3847.50）；但无线网卡仅 a/b/g 模式、可查文档仅有三年前 wiki 清单，以及大文件拷贝时的内存占用观感问题（后被澄清为 inactive memory 误读），暴露无线驱动支持与内存统计认知层面的生态短板。（BSD Now EP81，[3772.80-3856.78]，L1） [订正：原 引文段（3793.64-3835.46）及范围起点 [3793.64]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -760,3 +760,435 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔August 2019 OpenZFS Leadership Meeting〕讲者口述：讲者数年前做 ZFS 兼容性层时用 compacts gjb（转写音作 compacts gjb，正字待考）实现原子读。（YouTube EPzl4CUMOIi18，[473.659-481.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1345 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1345`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens 于 freebsd intensive code walkthrough 讲座（Lecture on OpenZFS read and write code paths）讲者口述：ZFS 于 Sun Microsystems 完成约四年至五年的开发后，作为 OpenSolaris 项目的一部分开源，随后可移植到其他操作系统（如 FreeBSD），并于 2008 年进入 FreeBSD 7.0。（YouTube EPptY6-K78McY，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1346 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1346`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens 于 freebsd intensive code walkthrough 讲座（Lecture on OpenZFS read and write code paths）讲者口述：Oracle 收购 Sun 之后停止对 ZFS 贡献源代码，已发布的代码仍供所有人继续使用，但 2010 年之后 Oracle 继续作出的改动被保留为私有与专有。（YouTube EPptY6-K78McY，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1347 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1347`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens 于 freebsd intensive code walkthrough 讲座（Lecture on OpenZFS read and write code paths）讲者口述：OpenZFS 的目的大体是让 FreeBSD 版 ZFS、Illumos 版 ZFS 等此前各自孤立工作的不同社区相互沟通、协作决定 ZFS 的后续走向。（YouTube EPptY6-K78McY，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1356 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1356`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nerding Out with Victor 播客 · Allan Jude〕讲者口述：Sun 决定把 ZFS 开源后，FreeBSD 开发者判断可以移植，理由是 Solaris 本就源自 BSD、诸多概念差别不大；其中开发者 Pavel Dorodek 在不足一个月的紧张冲刺中，把 ZFS 从 FreeBSD 仓库里完全没有，做到可以实际挂载、读写文件，用时极短。此后 ZFS 持续进入 FreeBSD 并受到较多关注。（YouTube EPhTbqEf9LRGE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1357 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1357`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nerding Out with Victor 播客 · Allan Jude〕讲者口述：Oracle 收购 Sun 之后关闭了 ZFS 源码，于是出现以最后一个开源版 Solaris 分叉而成的 Illumos 项目；FreeBSD 转而从 Illumos 获取较新的 ZFS 特性，并把自身改动回馈到那里。讲者并指出，彼时各操作系统的 ZFS 版本彼此独有、各自维护，彼此之间难以保持同步；ZFS on Linux 项目大约同期起步，其首个发行晚于 FreeBSD。（YouTube EPhTbqEf9LRGE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1358 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1358`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nerding Out with Victor 播客 · Allan Jude〕讲者口述：为了 FreeBSD 13.0，把各操作系统适配层一并纳入同一仓库、成为唯一上游代码仓库的方案得以落地；因此如今 GitHub 上的 OpenZFS 仓库实际上混合了 Linux 与 FreeBSD 双方的代码——modules 子目录下有一个 OS 目录，其中分别设 Linux 一份、FreeBSD 一份，全部共用代码放在 modules ZFS 中，各操作系统各自的特殊部分放在其余目录里。由此 FreeBSD 与 Linux 上的 ZFS 字面上来自完全相同的源码；讲者称加入版本号后，FreeBSD 14 与 Ubuntu 24.04 基本上跑的是同一版本 ZFS。该适配层被讲者称为Solaris 移植层，负责把共用代码的 Solaris 调用翻译为 Linux 或 FreeBSD 调用，例如向内核申请内存——Linux 用 slab 分配器，FreeBSD 用 UMA 统一内存架构。（YouTube EPhTbqEf9LRGE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1359 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1359`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nerding Out with Victor 播客 · Allan Jude〕讲者口述：ZFS 未能进入 Linux 主线的技术症结是与 GPL 的兼容性冲突——把 ZFS 编译成内核模块并链接进 GPL 内核，GPL 就要求 ZFS 的源码也转为 GPL 许可，而 CDDL 不允许这样做，讲者称这在逻辑上说不通。他并述：ZFS 至今仍未被纳入 Linux 上游主线，只是由 Ubuntu 等发行版自行编译分发（以 DKMS 方式装载模块），而且无人因此起诉；相比之下 FreeBSD 侧的集成程度更深——boot loader 完整支持 ZFS、安装器也完全了解 ZFS，并在其上构建了 boot environments 功能，即基于根文件系统快照的多个根文件系统，可在启动时选择回退到前一小时的状态。（YouTube EPhTbqEf9LRGE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1391 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1391`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Wilson《Performance Retrospective》OpenZFS 欧洲会议 2015 演讲〕讲者口述：ZFS 的分配方式是把单个设备切分为约 200 个大小相等、称为 meta slab 的区域；为何是 200，讲者自答“100 看起来不对，300 又太多”。（YouTube EPKBI6rRGUv4E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1392 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1392`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Wilson《Performance Retrospective》OpenZFS 欧洲会议 2015 演讲〕讲者口述：讲者称 80% 是业界早已流传的、公认的“性能断崖”（known Cliff of performance problems）数字：容量到 80% 往往已算侥幸；而讲者手上的这台真实系统曾一度跑到接近 90%，“勉强还能运转”。（YouTube EPKBI6rRGUv4E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1393 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1393`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Wilson《Performance Retrospective》OpenZFS 欧洲会议 2015 演讲〕讲者口述：讲者报告其 allocation throttle 的效果：并没有停止向已接近满（mostly full）的设备分配，而是“给它们能接受的尽可能多的工作”；他展示这一对比时说明，图上排在顶部的是较慢设备、排在底部的是较快设备。（YouTube EPKBI6rRGUv4E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1394 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1394`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Wilson《Performance Retrospective》OpenZFS 欧洲会议 2015 演讲〕讲者口述：讲者宣布其在 delix 内部仓库已完成、处于可用状态的 compressed ARC：ARC 缓存中的块以磁盘上所用的压缩形式驻留——磁盘上用 gzip 9 时，内存中即持有该块的 gzip 9 压缩副本，而非解压后形态。（YouTube EPKBI6rRGUv4E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1395 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1395`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Metaslab Allocation Performance》演讲〕讲者口述：ZFS 的 metaslab 约 16 GB 大小，一块盘上通常约 200 个（讲者随即自我更正为“on the disk”而非“on the system”），具体数量随磁盘容量变化；metaslab 的实际职责是跟踪其所辖磁盘区域内可分配、已分配与空闲空间。（YouTube EPLZpaTGNvalE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1396 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1396`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Metaslab Allocation Performance》演讲〕讲者口述：在 ZFS 单次分配的各步骤中，metaslab 加载“far and away the most expensive”（远超其余各项）；挑选一个合适的 metaslab 约需 100 微秒，在其中找到可放置的位置再加几百微秒，而加载一个 metaslab 在真正的大型系统上可达整整一秒——“an actual real second”。（YouTube EPLZpaTGNvalE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1397 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1397`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Metaslab Allocation Performance》演讲〕讲者口述：改用新数据结构后内存用量由约 30% 进一步降到 16%，即“用 1/6 的内存存下基本上完全相同的信息”；此外把 space map 载入 range tree 的 CPU 消耗降到原先的 60%，仅凭切换数据结构就削掉了 40% 的 CPU。（YouTube EPLZpaTGNvalE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1398 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1398`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Metaslab Allocation Performance》演讲〕讲者口述：为化解外挂 SLOG 在纯 SSD 池上退化为单盘瓶颈的问题，讲者提出 embedded SLOG 方案——挑出每块盘上空闲空间最多的 metaslab，把它变成一个小“迷你 SLOG”，每块盘各有一个。（YouTube EPLZpaTGNvalE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1402 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1402`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Monitoring Roundtable〕讲者口述：他们所在的 FreeBSD NFS 服务器群长期被内核的 out-of-memory killer 困扰——一台装有 1TB 内存、仍有约 120GB 空闲的NFS 服务器，按说不该被 killer 杀进程。（YouTube EPMiszoVjJIbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1403 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1403`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Monitoring Roundtable〕讲者口述：他们有很多已经严重碎片化的旧 zpool，用了八到十年；而 zpool 无法原地碎片整理，要整理只能整份拷到别处，可研究团队不愿花钱更换旧文件服务器，他也拿不到可拷的目标空间，碎片化便只能一直留着。（YouTube EPMiszoVjJIbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1404 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1404`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Monitoring Roundtable〕讲者口述：FreeBSD 的 NFS 只有在 NFS 层真正接受了 RPC 并对其做了处理之后，才在 TCP 层确认；好处是客户端因此能获得背压（back pressure）。（YouTube EPMiszoVjJIbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1405 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1405`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Monitoring Roundtable〕讲者口述：为压低锁开销，ZFS 采用 write-mostly 计数器（Mav 在这方面做了不少工作）——按 CPU 各自维护计数、把数据放在一旁，只有当统计系统这类读取方来读时，才由另一个线程把各 per-CPU 计数汇总、算出真值；这样不必在正常写入路径上付加锁成本。（YouTube EPMiszoVjJIbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1441 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1441`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：loader.efi 在极早期判定自身被加载的来源设备，可能是 ESP、转写音作 FS 的分区或 ZFS 分区，并自该分区读取 EFI,Free BSD/loader.env，像解析 URL 一样解析其中指向的 boot 配置；讲者称选择该目录是因为在 UEFI 环境下这是 FreeBSD 唯一独占的目录。（YouTube EPGgDXOd0ryOg，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1442 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1442`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：引导器可以通过 UEFI 变量取得“下一次引导”所需的配置，但 UEFI 侧没有 ZFS 原生的这一途径；讲者转述与会者在聊天窗的说明：bectl 的 activate-t 仅在 MBR 下有效，其做法是写 ZFS boot config 标签，因此目前缺少直接的 UEFI 支持，需要增强。（YouTube EPGgDXOd0ryOg，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1443 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1443`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：目前引导码位于 ZFS 池之外，因此以 checkpoint 回滚不会连带回退引导码；讲者说真正要解决的问题是：安装了新的转写音作 GPT CFS boot 的引导码或 loader.efi 之后，却发现它与硬件不兼容、系统已无法进入引导菜单。（YouTube EPGgDXOd0ryOg，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1444 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1444`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：在考察可供 FreeBSD 引入的 UEFI 引导方案时，讲者称 Refit（refind 所依据者）虽为 BSD 许可，但年代久远且已无人维护，恐已无实用价值；另有 Rebecca 在 IRC 更正称转写音作 shem 的方案实为 BSD 许可。（YouTube EPGgDXOd0ryOg，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1608 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1608`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber EuroBSDcon 2023《Immutable FreeBSD》讲者〕讲者口述：讲者描述把 FreeBSD jail 装配成只读容器的做法：用 ZFS 并把整个数据集设为只读，只在 jail 内的 user Etc 下写入少量配置文件；对 web server 一类负载，把静态数据用 nullifsmount 挂进 jail；TLS 终止则留在 jail 外的反向代理上，理由在于这样一来 jail 内不再存放任何密钥。（YouTube EP5oHLU9w1vVk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1609 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1609`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber EuroBSDcon 2023《Immutable FreeBSD》讲者〕讲者口述：讲者自承他的容器状态发现方案“并不干净”：直接把 FreeBSD jail 状态查询命令的输出（显示当前有哪些 jail 在运行）不做任何加工、也不做更新处理，原样经 ncat 管道转发到一个 socket 上，供外部持续轮询；他判断熟悉 FreeBSD jails 的人会认出这就是那条命令的输出。（YouTube EP5oHLU9w1vVk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1610 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1610`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber EuroBSDcon 2023《Immutable FreeBSD》讲者〕讲者口述：讲者说明 poudriere 是其团队构建 FreeBSD 全部软件包所用的构建工具，并且还能用它构建自定义 FreeBSD 镜像：可以从想要的 FreeBSD 源码树出发构建、按需包含 ports，还可以附加一个 overlay 目录，把自定义文件注入镜像。（YouTube EP5oHLU9w1vVk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1611 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1611`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber EuroBSDcon 2023《Immutable FreeBSD》讲者〕讲者口述：讲者用 bectl 列出系统上活动的 boot environment；他当时的系统上只有两个——默认的启动环境，以及他认为的前一个 13.1 发布版，其部署即按 FreeBSD boot environment 逐个登记。（YouTube EP5oHLU9w1vVk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1612 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1612`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Shared Log Pool》演讲（会议不详）〕讲者口述：讲者说明 ZIL 是每文件系统或每数据集的数据结构，由一串 ZIL 块链成，这些块承载同步写入与其余必须同步发生的操作，彼此首尾相接；他强调 ZIL 不是长期存储方案——数据写进 ZIL 之后并不会永远留在那里。（YouTube EPZ5L44a2gJdg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1613 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1613`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Shared Log Pool》演讲（会议不详）〕讲者口述：讲者提出的解法是 shared log pool：它的本质就是一个 slog 设备的池，多个客户端池与这个共享池通信、直接把它当作自己的 slog 来用。（YouTube EPZ5L44a2gJdg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1614 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1614`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Shared Log Pool》演讲（会议不详）〕讲者口述：讲者给出支撑共享日志池的核心数据结构 chain map：它把文件系统（或对象集）映射到一条 ZIL 链，而且具体映射到链中的首块，作用相当于普通存储池中的 ZIL 头；在内存中实现为 AVL 树套 AVL 树，第一层对应所有正在使用这个共享池的客户端池。（YouTube EPZ5L44a2gJdg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1615 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1615`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Dagnelie《Shared Log Pool》演讲（会议不详）〕讲者口述：讲者自陈该实现尚存限制：其一，客户端池不能做 rename（他口述为 regid）——因为这次更新需要在客户端与 chain map 之间同步，技术上有难度，即使在共享池一侧借助 ZIL 也难以做到。（YouTube EPZ5L44a2gJdg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1635 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1635`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2023 年 8 月 OpenZFS 领导层会议〕讲者口述：在讨论 zed 是否应据 incpath 自动把磁盘识别为换盘时，有 FreeBSD 侧发言者指出，他们此前从未触发过该逻辑，原因只是 FreeBSD 上部署时本来就划分磁盘分区；正是 FreeBSD 这一特有部署习惯，间接使他们免于此类非预期的自动换盘活动。（YouTube EPsLX-bKEDpNE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1636 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1636`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2023 年 8 月 OpenZFS 领导层会议〕讲者口述：用于判断磁盘是否插回同一插槽的 incpath 属性（转写作 ink pad）非常依赖 Linux；讲者手上没有 FreeBSD 上的样例，怀疑该属性在 FreeBSD 上根本不会被填充，因此需要在一台 FreeBSD 机器上实际核对。（YouTube EPsLX-bKEDpNE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1637 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1637`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2023 年 8 月 OpenZFS 领导层会议〕讲者口述：OpenZFS 正在扩展 zed 的自动换盘能力——原先已可用每个 vdev 的属性（转写作 Vita）设定单位时间内的 I/O 错误或校验错误阈值以触发自动换盘，本次扩展把同一机制用于慢 I/O：某块盘在设定时间内出现过多慢 I/O 时，ZFS 会自动以备用盘替换它，以挽回被单块尚未彻底失效的磁盘拖低的整池性能。（YouTube EPsLX-bKEDpNE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1638 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1638`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2023 年 8 月 OpenZFS 领导层会议〕讲者口述：会议中展示了把去重（DDT）默认间接块与叶块大小从 4K 改为 32K 的 master 提交带来的实测影响——块大小调到 32K 后，写入专用 vdev 的数据量（写放大）几乎翻倍，尤其在小块场景下恶化明显；该改动虽然使 DDT 本身更小、更易于压缩，却以放大写流量为代价，此后讨论转向为 DDT 磁盘结构重构与去重日志摊销方案。（YouTube EPsLX-bKEDpNE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1655 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1655`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Christian Schwarz《A New ZIL That Keeps Up With Persistent Memory Latency》〕讲者口述：ZFS 为满足需要立即持久性的应用所设的机制是 ZIL，做法是在磁盘结构之上为每个 object set 增设一个链表头，链表节点自带校验和，因而无需更新任何指向这些节点的父级块指针，即可在事务组同步之外独立向链表追加。讲者以此作为其论文改造的现行实现描述。（YouTube EP2ouRsQEbusk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1656 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1656`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Christian Schwarz《A New ZIL That Keeps Up With Persistent Memory Latency》〕讲者口述：VFS 操作并不直接把日志记录写入磁盘链表，因为此时往往尚无法判定该操作是同步还是异步——该判定要等到用户空间调用 fsync 时才做出，故 VFS 层先创建驻留 DRAM 的意图日志事务（intent log transaction，缩写 itx），再交给 ZIL 由 commit 阶段决定哪些须落成日志记录。（YouTube EP2ouRsQEbusk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1657 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1657`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Christian Schwarz《A New ZIL That Keeps Up With Persistent Memory Latency》〕讲者口述：Linux 栈中访问持久内存的直接访问 API 为 GPL-only，故除非把元许可证改为 GPL，否则这些 API 无法用于上游 ZFS 模块；讲者表示本人乐意为此改许可证，并愿在分组讨论中讨论处置方式。（YouTube EP2ouRsQEbusk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1716 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1716`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rob Norris 在“Why fsync() on OpenZFS can't fail”报告〕讲者口述：他按源码逐系统筗了各系统在fsync失败后的行为，得出一个结论：这一带没有任何统一性。他归纳的基础是三个页缓存标志——他说这些标志在多数基于 BSD 的系统中是真实存在的，在其他系统中至少是概念性的：“dirty”标记该页有变更待写回。（YouTube EPdfH0I6D9ZAA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1717 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1717`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rob Norris 在“Why fsync() on OpenZFS can't fail”报告〕讲者口述：FreeBSD 4 的一个提交把 fsync 失败后的处理从“标无效并丢弃”改为“保留 dirty”——他在转写中把该提交归年为“1993”，即 fsync 清掉错误标志但留下 dirty，以便后续的异步刷新能再次写入并由下一次 fsync 报告结果。这是他把各系统分成两种策略的分界点。（YouTube EPdfH0I6D9ZAA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1718 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1718`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rob Norris 在“Why fsync() on OpenZFS can't fail”报告〕讲者口述：各分支在页缓存标志上的差异根源于同一份祖先代码——他说这很有意思，因为这允许他在各台同源地只查一次：行为定义在那个释放页函数里。（YouTube EPdfH0I6D9ZAA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1761 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1761`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 领导层会议2021年12月 Jason Lee 汇报〕讲者口述：加速器接口在把数据交给硬件加速器后回传一个句柄，ZFS 只保留该句柄用于跟踪，句柄存于 abd 中，对 ZFS 不透明，ZFS 无法对其做任何操作，只能原样传递。（YouTube EP_097QvCwT4Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1762 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1762`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 领导层会议2021年12月 Jason Lee 汇报〕讲者口述：该数据处理器服务模块有两侧接口——供调用方（例为 ZFS）使用的一侧采用宽松许可，以免与 CDDL 冲突；provider 一侧采用 GPL 许可，以便实现方调用内核中已处于 GPL 之下的函数。（YouTube EP_097QvCwT4Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1763 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1763`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 领导层会议2021年12月 Rich Lowe 汇报〕讲者口述：加密相关缺陷中最主要的一类是 dnode 计数错误——两个线程各自以为持有对同一 dnote 的唯一引用，其中一个释放之后另一个随即出错。（YouTube EP_097QvCwT4Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1764 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1764`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 领导层会议2021年12月 Rich Lowe 汇报〕讲者口述：另有一组缺陷发生在增量 send/receive 上，会直接损毁数据集使其再也无法打开；他提到其中一种表现涉及从发送流拷入的 user object counting 数据。（YouTube EP_097QvCwT4Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1812 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1812`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Allan Jude〕讲者口述：他查明问题所在后，重编译 FreeBSD 内核，把栈的页数从 4 改成 12 以腾出足够空间，问题随即消失；但他承认这不算长久之计。（YouTube EP7N6lMi6g5UU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1813 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1813`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Allan Jude〕讲者口述：面对压缩级别如何编码的问题，他在 FreeBSD／OpenZFS 开发者峰会上征求意见，Robert Muth 与 Sascha Zhilkov 各自独立向他提出了同一方案——把压缩级别存为独立属性，而在用户界面上仍把它呈现为单一属性。（YouTube EP7N6lMi6g5UU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1814 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1814`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Allan Jude〕讲者口述：为解决“块指针只知道压缩类型、不知道压缩级别”所致的问题，他复用磁盘上数据的前 4 字节——本用于记录解压时所需缓冲区大小、以便做一致性检查——用它的高位同时存放压缩级别。（YouTube EP7N6lMi6g5UU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1815 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1815`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Allan Jude〕讲者口述：ZStandard 在 1.3 版把许可证改为纯 BSD 许可或BSD/GPL 双许可，并去掉了专利方面的条款；由于他们没有修改 ZStandard 代码本身，于是直接切换到这个 BSD 许可的新版本即可纳入 FreeBSD。（YouTube EP7N6lMi6g5UU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1816 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1816`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Schenkeveld: Minimizing service windows on servers using NanoBSD + ZFS + jails 讲题〕讲者口述：约两年前有一位（转写音作“Mr PA DC at Poland”，人名不可辨）自 OpenSolaris 把 ZFS 移植入 FreeBSD，此后 FreeBSD 得以轻松管理数量众多的文件系统。（YouTube EPLT85JTFJGxM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1817 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1817`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Schenkeveld: Minimizing service windows on servers using NanoBSD + ZFS + jails 讲题〕讲者口述：FreeBSD 主机沿用 MBR 切片与 BSD label 时，每盘只支持约四个切片、每切片七个分区，且必须为每个切片静态分配空间，扩容不易。（YouTube EPLT85JTFJGxM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1818 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1818`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Schenkeveld: Minimizing service windows on servers using NanoBSD + ZFS + jails 讲题〕讲者口述：FreeBSD 的 NanoBSD 采用双映像模型——介质上存有整套操作系统的两份拷贝，一份正在运行，新版本可装入另一份，从而自动获得一步式回退。（YouTube EPLT85JTFJGxM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1819 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1819`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Schenkeveld: Minimizing service windows on servers using NanoBSD + ZFS + jails 讲题〕讲者口述：FreeBSD 8 起 jail 可同时拥有多个 IPv4 与 IPv6 地址（此前受限），并正把一项称为“V image”的网络隔离技术并入 jail 系统。（YouTube EPLT85JTFJGxM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1824 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1824`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：他们投入生产后很快发现，512 字节扇区大小（five hundred twelve sector size）的 RAID-Z 配置“无法使用”，于是改用 4K 扇区大小；4K 扇区对 32KB 及以上写入性能尚可，但小块 I/O 会带来空间膨胀。（YouTube EPOaZmkq5jgfk，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1825 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1825`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：以 8+2（转写音作 eight plus two RAID C two）为例，客户通常预期空间开销只该是 20%，但在 4K 扇区下写 4K 会被写成 D1 加两个校验 P、Q，即 4K 逻辑 I/O 在盘上变成 12K，客户一查就是三倍空间。（YouTube EPOaZmkq5jgfk，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1826 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1826`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：他举 ZFS 系统的轶事说，规模相当可观（约百 TB 量级）的系统，重同步（resilvering）大概三个月也跑不完。（YouTube EPOaZmkq5jgfk，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1952 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1952`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens“How ZFS snapshots really work And why they perform well”演讲〕讲者口述：讲者称自己现从事 ZFS 开发（字幕将雇主作 "Dell KACE real"），此前曾在 Sun Microsystems 工作，并称自己很早以前（way way way back in the day）就帮助设计与实现过 ZFS 快照。（YouTube EPNXg86uBDSqI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1953 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1953`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens“How ZFS snapshots really work And why they perform well”演讲〕讲者口述：ZFS 为每个块记录出生时间（分配并写入该块的时刻），删除块时据此判断是否仍有快照引用它——块的写入时间晚于最近一次快照，即说明没有快照引用它，可以释放。（YouTube EPNXg86uBDSqI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1954 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1954`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens“How ZFS snapshots really work And why they perform well”演讲〕讲者口述：原始快照删除算法代价高到——在一块单转磁盘中约有 200 megabits per second 的带宽，可回收空间的速度却可能不到 1 megabyte per second，从而成为写入吞吐的瓶颈。（YouTube EPNXg86uBDSqI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1955 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1955`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens“How ZFS snapshots really work And why they perform well”演讲〕讲者口述：ZFS 最初实现在快照删除上用的就是前一种（逐块遍历）算法且偏慢；约 2008 或 2009 年，讲者一方修订了所谓 "cheetah" 算法，它是基于 dead list 的前一算法的扩展。（YouTube EPNXg86uBDSqI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2050 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2050`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 基金会 FreeBSD Fridays 第5期“Introduction to ZFS”〕讲者 Dan Langel 口述：他大约在 2010 年前后开始使用 ZFS。（YouTube EPpN7OLChclH8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2051 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2051`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 基金会 FreeBSD Fridays 第5期“Introduction to ZFS”〕讲者 Dan Langel 口述：他记得那第一场演讲，他认为 Paul“PJD”把 ZFS（转写音作 Zatifas）引入了 FreeBSD（转写音作 FreeBSC）；他听完那场首次演讲后觉得“这正是我想要的”，此后一直使用至今。（YouTube EPpN7OLChclH8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2052 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2052`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 基金会 FreeBSD Fridays 第5期“Introduction to ZFS”〕讲者 Dan Langel 口述：在 FreeBSD 上运行 ZFS 不要使用硬件 RAID 卡——RAID 卡会自行尝试修复故障、随后把磁盘移除，从而妨碍 ZFS 本身对磁盘的处理；RAID 会隐藏磁盘真实状态，向操作系统报告磁盘故障，而这不是使用者所期望的行为。（YouTube EPpN7OLChclH8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2053 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2053`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 基金会 FreeBSD Fridays 第5期“Introduction to ZFS”〕讲者 Dan Langel 口述：一个 zpool 由一个或多个 vdev 组成，冗余与容错能力落在 vdev 层级而非 zpool 层级——单个 vdev 失效则该 zpool 整体失效，设计 zpool 时必须把这一点放在心上。（YouTube EPpN7OLChclH8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2058 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2058`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 FreeBSD 演讲 Michael Dexter〕讲者口述：在 FreeBSD 的 OpenZFS 语境下，他把只读重挂载与卸载称作免费操作——可以卸载整个文件系统、整个操作系统再以只读重挂，即便只能读写、甚至处于单用户只读状态，也能做细粒度的免费只读卸载；他希望勒索软件时代系统能瞬时转只读以应对敌意威胁。（YouTube EP-qFG8LebHvo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2059 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2059`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 FreeBSD 演讲 Michael Dexter〕讲者口述：自九十年代首次自建网络服务器并自托管以来，他做备份最忌讳索取 root 权限，因此最看重 OpenZFS 的委派权限——以非特权用户身份把文件系统快照送出本机，即使这些快照内容属于 root 级。（YouTube EP-qFG8LebHvo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2060 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2060`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 FreeBSD 演讲 Michael Dexter〕讲者口述：FreeBSD 的构建选项（build options）中，without_jail 关掉的是一项嵌套 ABI，without_iscsi 关掉的是一份 RFC 3720 的实现，两者都可随操作系统的构建开关。（YouTube EP-qFG8LebHvo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2061 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2061`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 FreeBSD 演讲 Michael Dexter〕讲者口述：OpenBSD 已经移除 Linux compat 与其他兼容层，因为发现其 Linux 兼容层过于陈旧，Linux 本身已不支持那个子集；他据此说明一切兼容层都是“移动靶”。（YouTube EP-qFG8LebHvo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2090 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2090`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pawel Jakub Dawidek 的《ZFS in FreeBSD》演讲〕讲者口述：ZFS 由 Sun 以 CDDL 许可证发布；他判断 CDDL 并非对所有人都合适，但对 FreeBSD 来说是相当不错的许可证。（YouTube EP5-CR3o-Q2CU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2091 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2091`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pawel Jakub Dawidek 的《ZFS in FreeBSD》演讲〕讲者口述：ZPL 是 ZFS 移植中最费力的部分，因为它要对接 FreeBSD 的 VFS 与 UFS；这段 C 代码相当复杂，而且与 Solaris 上的对应实现差别不小。（YouTube EP5-CR3o-Q2CU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2092 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2092`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pawel Jakub Dawidek 的《ZFS in FreeBSD》演讲〕讲者口述：他已备好把 FreeBSD 上的 ZFS 从版本 6 升到版本 13 的补丁，属一大步；版本 13 附带委派管理等新特性，管理员可把某棵文件系统树授权给指定用户自行管理。（YouTube EP5-CR3o-Q2CU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2093 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2093`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pawel Jakub Dawidek 的《ZFS in FreeBSD》演讲〕讲者口述：被问及 FreeBSD 的 ZFS 何时可用于生产时，他认为唯一的问题是 ZFS 当前只有一名维护者；要让 ZFS 摘掉 experimental 状态，至少还需再培养一名维护者，使现任维护者不再独担。（YouTube EP5-CR3o-Q2CU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2304 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2304`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sara Hartse 在 BSDCan 2018 演讲〕讲者口述：ZFS 删除克隆的基本算法是遍历整棵 on-disk 树、按 birth time 剪枝——凡诞生早于克隆创建时刻的间接块即断定不属克隆，其下整支一并忽略；需逐一找出的只有克隆专属块，随后释放。（YouTube EPyQGGwhDxkdw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2305 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2305`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sara Hartse 在 BSDCan 2018 演讲〕讲者口述：写入稀疏分散时删除克隆极慢，讲者给出的量级约为每太字节 45 分钟；后果是快照堆积、理论上已释放的空间迟迟无法复用。（YouTube EPyQGGwhDxkdw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2306 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2306`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sara Hartse 在 BSDCan 2018 演讲〕讲者口述：改为在写入时以 live list 记录块指针的分配与释放，可使克隆删除工作量正比于克隆自身的写入量而非快照规模，且额外开销仅相当于向链表尾追加。（YouTube EPyQGGwhDxkdw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2307 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2307`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sara Hartse 在 BSDCan 2018 演讲〕讲者口述：该优化当时已在 Delphix 内部使用数月，讲者表示将上游至 OpenZFS，并计划向 Linux 上的 ZFS 移植。（YouTube EPyQGGwhDxkdw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2323 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2323`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Serapheim Dimitropoulos 大会演讲《Faster Allocation with the Log Spacemap》〕讲者口述：在 ZFS 中，每个 top-level vdev 被划分为大约 200 个等大小区域，称为 metaslab，每个 metaslab 代表 ZFS 对其负责区间内空闲与已分配空间的视图。（YouTube EPjj2IxRkl5bQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2324 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2324`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Serapheim Dimitropoulos 大会演讲《Faster Allocation with the Log Spacemap》〕讲者口述：讲者援引 DTrace 从一台 Delphix VM 采集的输出，作为 space map 追加写入开销的实证——某次事务启动滞后列值为 0 ms，即紧接前一次事务结束即启动；讲者并称约 25% 的 IO 花在追加 space map 上，sync pass 整体占约 20% 至 40% 的落盘时间。（YouTube EPjj2IxRkl5bQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2325 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2325`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Serapheim Dimitropoulos 大会演讲《Faster Allocation with the Log Spacemap》〕讲者口述：讲者就 space map 编码扩容口述称，旧编码的 run length 仅 15 位、只能表示约 60 MB 区段，offset 47 位在 512 字节寻址粒度下只能寻址到 64 PB，不足以支撑 vdev 级或池级 space map（含池级 log space map）；新编码把 run 扩至 36 位、offset 扩至 63 位并新增 vdev ID 字段，单条 entry 可表示 35 TB 区段，最低字节寻址能力下可寻址约 4.7 ZB。（YouTube EPjj2IxRkl5bQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2523 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2523`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔December 2019 OpenZFS Leadership Meeting〕与会者口述：有人追问 FreeBSD 集成工作的最新进展，答者称进展顺利，认为内核侧改动大体已经并入，另有人说还剩四个文件待办，并称接近完成。（YouTube EPWq64VoZhDMY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2524 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2524`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔December 2019 OpenZFS Leadership Meeting〕讲者 Tom 口述：其所称的 safe send 特性可对“incomplete data set or a partially receive snapshot”执行 ZFS send，把已接收至 bookmark 之前的内容整份发出，以便把尚未接收完的数据集从濒故障节点迁往健康节点。（YouTube EPWq64VoZhDMY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2525 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2525`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔December 2019 OpenZFS Leadership Meeting〕主持人与会者口述：为使 illumos（转写作 Lumos）等其他平台知悉即将进入的新特性，OpenZFS 会议已约定新功能须先邮件通知 openzfs 开发者邮件列表；该发言并提及“less of a concern now with FreeBSD you know joining together”这一平台聚合语境。（YouTube EPWq64VoZhDMY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2601 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2601`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov〕讲者口述：去重在几乎任何存储池上都存在设计缺陷——开启去重极其简单，只需设定一个属性即可；真正难的是把它关掉，一旦已经写入了数据，去重表（DDT）缓冲区就必须继续保留，性能会随之变得极差。（YouTube EPkt91t4sBWi8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2602 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2602`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov〕讲者口述：其可扩展去重方案的做法是，去重表增长过大时直接停止新增表项（宁可以牺牲少量去重率来换性能），并把去重表缓冲区与 ARC 缓冲区隔离到不同的链表，从而对二者给出更细粒度的大小控制。（YouTube EPkt91t4sBWi8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2603 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2603`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov〕讲者口述：持久化 L2ARC 的设计思路是让 L2ARC 留在设备上，做法是在 L2ARC 里留下少量“面包屑”式元数据，仅够重建已存放于该设备上的缓冲区（L2ARC 设备本身通常是持久的）。（YouTube EPkt91t4sBWi8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2604 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2604`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov〕讲者口述：ZFS 的 trim／unmap 功能内置了两种调用方式，第一种称为自动 trim——在存储池上设一个属性即可启用，默认是关闭的。（YouTube EPkt91t4sBWi8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -84,8 +84,8 @@ FreeBSD 的经济结构从诞生起就带着一个悖论：BSDL 允许任何人�
 
 **辨析**：
 
-- 转写误植须考订：Mike Loth 应为 Michael Lauth、IAC Systems 应为 iXsystems、OpenBrowbo 应为 Openbravo、pbidur.com 应为 PBI 目录站 pbidir.com、silver samples 按语境应为厂商提供的早期工程样机；CEO 自述公司创立时“来自 BFDI”的组织名无法自转写确证。片头新闻另记 BSDCan 2009（渥太华，2009 年 5 月）开放征稿与 BSDTalk 三周年（首期 2005 年 12 月 20 日）。[存疑脚注] BFDI 组织名与公司早期沿革仅有一手口述孤证。　[存疑脚注] 公司创始人背景组织名转写不可靠，需以 iXsystems 公司史与行业报道复核。（BSDTalk EP168，[157.80-176.00]，L4）
-- 性能数字系开发者自报且合成流量占比一半，未经独立第三方复核；转写质量元数据标记存在重复段落（quality_score 70.5），数字细节宜与 Varnish 官方文献交叉核对。[存疑脚注] 700 Mbit/s、10k 与 18k req/s 等数字为单一来源自述。　[存疑脚注] 性能基准为当事开发者单方陈述，混合合成流量，未见独立验证（BSDTalk EP72，[1548.16-1595.14]，L4）
+- 转写误植须考订：Mike Loth 应为 Michael Lauth、IAC Systems 应为 iXsystems、OpenBrowbo 应为 Openbravo、pbidur.com 应为 PBI 目录站 pbidir.com、silver samples 按语境应为厂商提供的早期工程样机；CEO 自述公司创立时“来自 BFDI”的组织名无法自转写确证。片头新闻另记 BSDCan 2009（渥太华，2009 年 5 月）开放征稿与 BSDTalk 三周年（首期 2005 年 12 月 20 日）。[存疑脚注] BFDI 组织名与公司早期沿革仅有一手口述孤证。 [存疑脚注] 公司创始人背景组织名转写不可靠，需以 iXsystems 公司史与行业报道复核。（BSDTalk EP168，[157.80-176.00]，L4）
+- 性能数字系开发者自报且合成流量占比一半，未经独立第三方复核；转写质量元数据标记存在重复段落（quality_score 70.5），数字细节宜与 Varnish 官方文献交叉核对。[存疑脚注] 700 Mbit/s、10k 与 18k req/s 等数字为单一来源自述。 [存疑脚注] 性能基准为当事开发者单方陈述，混合合成流量，未见独立验证（BSDTalk EP72，[1548.16-1595.14]，L4）
 
 **文献**：
 
@@ -115,3 +115,45 @@ FreeBSD 的经济结构从诞生起就带着一个悖论：BSDL 允许任何人�
 
 据〔来源不详〕讲者口述：团队在 Azure 上支持的 FreeBSD 版本从 10 起。（YouTube EPr_u0SSUk9pM，[3517.52-3525.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1730 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1730`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B SocialBSD 演讲 Brian Callahan〕讲者口述：他援引论文统计称，过去四年 BSD 各会议所举办的演讲中只有 4.4 percent（百分之 4.4）是由非男性所作的，且其中相当多的会议根本没有女性讲者；他并认为这“不必是这样”。（YouTube EP6cYsjJkhdXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1731 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1731`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B SocialBSD 演讲 Brian Callahan〕讲者口述：他不满意 FreeBSD 的代码行为准则（code of conduct）被“14”当作一次性定案呈现，称“14”只有九名男性、没有女性、几乎肯定也没有种族少数族裔，因此这九个人“绝无可能”真正了解 FreeBSD 社区的实质。（YouTube EP6cYsjJkhdXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1732 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1732`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B SocialBSD 演讲 Brian Callahan〕讲者口述：问答环节中有人追问 FreeBSD 宪章删去“FreeBSD is a meritocracy”一语的原因，称这是其所知最早的几处修改之一；对 meritocracy 一问的答辞援引了关于“种族与性别无色盲叙事”（colorblind narrative）的讨论，认为就客观情形而言社区并不真是精英制。（YouTube EP6cYsjJkhdXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1733 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1733`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B SocialBSD 演讲 Brian Callahan〕讲者口述：就其所知 FreeBSD 已有代码行为准则（codes of conduct），而其余 BSD 项目则都没有，他认为这“大概是个问题”。（YouTube EP6cYsjJkhdXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2070 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2070`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023“Encouraging SMEs to contribute to Development of BSD”讲者 TomSmyth〕讲者口述：讲者自述其经营的是一家在爱尔兰的小型 ISP（转写音作 Wireless connect），公司以自身资源向 BSD Foundation 捐赠，金额自认微薄。（YouTube EPZF7ZVP7qX70，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2071 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2071`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023“Encouraging SMEs to contribute to Development of BSD”讲者 TomSmyth〕讲者口述：讲者举例其公司出资定制的一项特性：请 MPI 做的 bridgeports，功能是像厂商设备那样的受保护端口分组，用于把客户端彼此隔离；这项特性由该公司小额出资推动。（YouTube EPZF7ZVP7qX70，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2072 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2072`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023“Encouraging SMEs to contribute to Development of BSD”讲者 TomSmyth〕讲者口述：讲者提出多家企业联合出资的模式：例如若某项 bridge 相关特性是 ISPs 普遍需要的，可以让大约五家 ISP 一起出资完成这个小而非颠覆性的改动，这样既给开发者带来经费，也让 BSD 向其用户群体推进。（YouTube EPZF7ZVP7qX70，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2073 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2073`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023“Encouraging SMEs to contribute to Development of BSD”讲者 TomSmyth〕讲者口述：讨论转向出资带来的治理问题：应向基金会支付多大比例的款项——讲者认为应当支付一部分，因为把代码纳入各项目主干存在管理开销；向中小企业收取款项也是他提出的一个待议问题。（YouTube EPZF7ZVP7qX70，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -8,7 +8,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史料
 
-- [DB:research_notes:blocks:4490] 关键词“安全响应”命中（原文截断）　[存疑脚注] 该命中条目原文截断，回源后补全。
+- [DB:research_notes:blocks:4490] 关键词“安全响应”命中（原文截断） [存疑脚注] 该命中条目原文截断，回源后补全。
 - [DB:research_notes:blocks:17647] 关键词“安全响应”命中：[p.4] 1 绪论 .................................................…
 - [DB:research_notes:blocks:69677] 关键词“安全响应”命中：www.dragonflybsd.org；Dillon M. HAMMER File System Design[Z].…
 
@@ -35,7 +35,7 @@ volume: 第07卷-freebsd的工程体系重构
   - 文献：Kernel Newbies. *Linux Kernel Release Notes*. kernelnewb
 - 39 个 SA 的统计口径需精确说明：以 SA 公告发布日期在 **2021-04-01** 至 **2023-11-01** 之间为准；SA-23:15 至 SA-23:19（2023-11-08 至 2023-12-19）虽属 13.3-RELEASE 修复范围但发布日期超出周期边界，未计入 39 个；SA-21:07.openssl（2021-03-25）发布于 13.0-RELEASE 前
 - **需严格区分**：① 13.x 版本周期文件（2021-04 至 2023-11）查询结果中出现的 OpenSSL 3.0 commits（如 2023-08-10 `aa7957345732816fb0ba8308798d2f79f45597f9` “OpenSSL: update to 3.0.10”、2023-09-22 `315108b81694de474bbc273c0050b1950”（hash 于原文截断，对应 OpenSSL 3.0 系列更新提交，全 hash 与提交说明以 **freebsd.duckdb** commits 表复核为准）——此类 3.0 commits 属 stable/13 后期的 OpenSSL 版本升级准备，非 13.x 周期本身的 SA 修复，统计 39 个 SA 时应剔除。
-- **需精确说明**：① **SA-21:13.bhyve** 涉及 virtqueue 处理（**vq_getchain()** 函数）的多个设备模型错误，影响 bhyve 运行时设备模拟，攻击向量是恶意 guest 操作触发 host 内核漏洞；② **SA-22:05.bhyve** 涉及 e82545 网卡模拟器的校验和偏移字段验证，是单个设备模型的特定漏洞；③ **SA-23:07.bhy；③ **SA-23:07.bhyve** 的攻击向量细节以安全公告原文为准　[存疑脚注] 原文于此截断，回源补全。**
+- **需精确说明**：① **SA-21:13.bhyve** 涉及 virtqueue 处理（**vq_getchain()** 函数）的多个设备模型错误，影响 bhyve 运行时设备模拟，攻击向量是恶意 guest 操作触发 host 内核漏洞；② **SA-22:05.bhyve** 涉及 e82545 网卡模拟器的校验和偏移字段验证，是单个设备模型的特定漏洞；③ **SA-23:07.bhy；③ **SA-23:07.bhyve** 的攻击向量细节以安全公告原文为准 [存疑脚注] 原文于此截断，回源补全。**
 
 ## 文献
 
@@ -63,3 +63,20 @@ volume: 第07卷-freebsd的工程体系重构
 
 据讲者 Matthias Wolf 口述：Chromium 移植到 FreeBSD 后已能无缝进行网络会议。（YouTube EPzHKn-56nxRE，[112-117.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2327 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2327`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“Porting the Robot Operating System (ROS) to FreeBSD”讲座〕讲者口述：向 FreeBSD 移植该机器人中间件时，第一步是到 freebsd-ports查证是否已有该包，查得当时已存在一个对应版本。（YouTube EP7rqlNl416Os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2328 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2328`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“Porting the Robot Operating System (ROS) to FreeBSD”讲座〕讲者口述：该 freebsd-ports 中的包当年由 Rene 提交，其中标注为已废弃，原因是上游不再支持；标注 2015 年过期，版本号为 1.4.10，对应 2011 年发布的 Diamondback 系列。（YouTube EP7rqlNl416Os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2329 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2329`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“Porting the Robot Operating System (ROS) to FreeBSD”讲座〕讲者口述：在 FreeBSD 上搭建该机器人中间件时，FreeBSD 的 jail 被用作依赖隔离与源码编译环境，以避免大量临时依赖长期残留在主系统中。（YouTube EP7rqlNl416Os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

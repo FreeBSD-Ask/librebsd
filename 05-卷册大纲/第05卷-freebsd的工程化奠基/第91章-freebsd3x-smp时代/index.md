@@ -100,3 +100,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据 Brooks Davis 讲者口述：该千兆以太网集群目前仍运行 FreeBSD 6.0，讲者说明团队一直未做系统升级。（YouTube EPPe8LdJpBGJ4，[226.149-230.219]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2308 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2308`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell 演讲“Holding onto things in a multiprocessor world”〕讲者口述：NetBSD 网络栈是未经并行设计的大型遗留代码，而讲者团队希望在多 CPU 上并行运行以改善性能。（YouTube EPgPgy545BEPw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2309 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2309`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell 演讲“Holding onto things in a multiprocessor world”〕讲者口述：多线程争用同一资源即争用同一缓存行；讲者称原子操作并非并行扩展的万能药，相较互斥锁只是略快、略省内存而已。（YouTube EPgPgy545BEPw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2310 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2310`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell 演讲“Holding onto things in a multiprocessor world”〕讲者口述：NetBSD 的被动串行化以 RCU 为近似实现来源，讲者称其具体实现略有不同、且受制于一项美国专利，而该专利早于 RCU 专利数年到期，使该方案的法律风险明显降低。（YouTube EPgPgy545BEPw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2311 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2311`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell 演讲“Holding onto things in a multiprocessor world”〕讲者口述：持有被动引用（passive references）时线程可以睡眠，因此不必为避开网络包处理路径中的睡眠而对网络栈做大幅重构。（YouTube EPgPgy545BEPw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

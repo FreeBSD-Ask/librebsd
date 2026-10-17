@@ -91,9 +91,9 @@ volume: 第10卷-openbsd的历史
 - OpenBSD PF 邮件列表与 CVS 历史（BSD Now EP186，[3969.0-4285.88]，L1）
 - 一手史料以 Wooding 口述为主：mg 的 1986 年起源记忆、public domain 授权重构过程、theo mode 的由来、IPF 至 PF 更替的亲历叙述、OpenBSD Foundation 创始董事身份自述；开场栏目由主持人转述 netstat 命令最早出现于 4.2BSD。（BSDTalk EP200，[373.88-526.32]，L1）
 - 一手口述史料：BSDTalk 第 220 期对视障用户 Eric Oyen 的 Skype 访谈录音（2012-11-30 发布，主持人 Will Backman，存档于 bsdtalk.blogspot.com），含其 OpenBSD 使用史、防火墙实践与无障碍工具链的自述。（BSDTalk EP220，[23.02-43.68]，L2）
-- 邮件列表史料线索：受访者转述 Theo de Raadt 在 OpenBSD 邮件列表中就用户对厂商预装系统发牢骚的回应（大意“你疯了吗，那是厂商预装的，别来向我抱怨”），并描述 OpenBSD 分发材料中的免责声明与“附带源码、按原样提供”的软件包形态；该邮件未给出消息 ID，待查证。　[存疑脚注] 受访者凭记忆转述邮件列表往来，无消息 ID 与原文佐证，仅作线索。（BSDTalk EP220，[924.22-973.04]，L2）
+- 邮件列表史料线索：受访者转述 Theo de Raadt 在 OpenBSD 邮件列表中就用户对厂商预装系统发牢骚的回应（大意“你疯了吗，那是厂商预装的，别来向我抱怨”），并描述 OpenBSD 分发材料中的免责声明与“附带源码、按原样提供”的软件包形态；该邮件未给出消息 ID，待查证。 [存疑脚注] 受访者凭记忆转述邮件列表往来，无消息 ID 与原文佐证，仅作线索。（BSDTalk EP220，[924.22-973.04]，L2）
 - 当事人一手口述的 OpenBSD 入坑节点：1995 年 Theo 在 FTP 站点发布首个 SPARC 内核；同期并行接触 386BSD 与 Linux 的个人编年，可作项目早期传播路径的私人证词。（BSDTalk EP229，[101.89-135.72]，L1）
-- 当事人转述的学术证据：某届 USENIX 会议论文以自制断电电路测试闪存盘写入可靠性，得出十五盘中十三盘受损或失效的结论；论文未给出题名与作者，需回溯检索原文献。　[存疑脚注] 当事人转述未提供论文题名作者与年份，引用前须检索 USENIX 原文核验（BSDTalk EP229，[219.77-241.69]，L2）
+- 当事人转述的学术证据：某届 USENIX 会议论文以自制断电电路测试闪存盘写入可靠性，得出十五盘中十三盘受损或失效的结论；论文未给出题名与作者，需回溯检索原文献。 [存疑脚注] 当事人转述未提供论文题名作者与年份，引用前须检索 USENIX 原文核验（BSDTalk EP229，[219.77-241.69]，L2）
 - flashdist、flashboot、flashrd 三代工具的演进序列与 flashrd 2009 年发布时点，及 NSH 的 SQLite 状态库设计细节，均为开发者本人自述的一手项目史。（BSDTalk EP229，[580.65-728.39]，L1）
 
 **史观**：
@@ -110,11 +110,11 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- [存疑脚注] 访谈中 2002 年 hackathon 地点、PF 实现细节系当事人十余年后回忆，需与 OpenBSD 邮件列表与 CVS 记录核验。　[存疑脚注] 当事人回忆性细节，缺乏独立档案印证。（BSD Now EP186，[3969.0-4285.88]，L4）
-- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。　[存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
-- 无障碍需求与 OpenBSD 安装器极简主义之间的张力：受访者期望启动即朗读的安装镜像（需驱动检测），而项目现状是安装期依赖他人辅助或串口设备；他本人也承认不确定开发者是否会接受该特性，此判断仅为用户单方推测。　[存疑脚注] 对 OpenBSD 是否引入无障碍安装镜像的前景判断出自受访者个人推测，非项目方表态。（BSDTalk EP220，[178.50-211.66]，L4）
-- 受访者对“预装 OpenBSD 的第三方设备出了问题是否归责于项目”的讨论，实际触及按原样分发、免责声明与社区支持边界的问题；其所转述的 Theo 回应立场强硬，但仅凭本期转写无法还原完整语境与邮件原文。　[存疑脚注] 邮件列表回应仅经受访者转述，需检索 OpenBSD misc 邮件列表存档核实原文后再采信。（BSDTalk EP220，[941.58-973.04]，L5）
-- 转写将叔叔的机器记为 Triss 80 model 16B 并称可运行 CP/M 或 Xenix，机型拼写系转写噪音，TRS-80 Model 16B 的操作系统组合与购入年代需按机型史料核对，不得径直引用。[存疑脚注] 转写模糊，机型与操作系统组合待核。　[存疑脚注] 机型名与操作系统组合由受损转写推断，须与 Tandy 产品文献交叉核验后方可引用（BSDTalk EP229，[88.43-100.97]，L5）
+- [存疑脚注] 访谈中 2002 年 hackathon 地点、PF 实现细节系当事人十余年后回忆，需与 OpenBSD 邮件列表与 CVS 记录核验。 [存疑脚注] 当事人回忆性细节，缺乏独立档案印证。（BSD Now EP186，[3969.0-4285.88]，L4）
+- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。 [存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
+- 无障碍需求与 OpenBSD 安装器极简主义之间的张力：受访者期望启动即朗读的安装镜像（需驱动检测），而项目现状是安装期依赖他人辅助或串口设备；他本人也承认不确定开发者是否会接受该特性，此判断仅为用户单方推测。 [存疑脚注] 对 OpenBSD 是否引入无障碍安装镜像的前景判断出自受访者个人推测，非项目方表态。（BSDTalk EP220，[178.50-211.66]，L4）
+- 受访者对“预装 OpenBSD 的第三方设备出了问题是否归责于项目”的讨论，实际触及按原样分发、免责声明与社区支持边界的问题；其所转述的 Theo 回应立场强硬，但仅凭本期转写无法还原完整语境与邮件原文。 [存疑脚注] 邮件列表回应仅经受访者转述，需检索 OpenBSD misc 邮件列表存档核实原文后再采信。（BSDTalk EP220，[941.58-973.04]，L5）
+- 转写将叔叔的机器记为 Triss 80 model 16B 并称可运行 CP/M 或 Xenix，机型拼写系转写噪音，TRS-80 Model 16B 的操作系统组合与购入年代需按机型史料核对，不得径直引用。[存疑脚注] 转写模糊，机型与操作系统组合待核。 [存疑脚注] 机型名与操作系统组合由受损转写推断，须与 Tandy 产品文献交叉核验后方可引用（BSDTalk EP229，[88.43-100.97]，L5）
 
 **文献**：
 
@@ -150,3 +150,100 @@ volume: 第10卷-openbsd的历史
 
 据〔BSDCan 2018〕讲者 Aaron Poffenberger 口述：他使用跑在 OpenBSD 上的 BGPSPAMD（转写音作 BGP spam D），并信赖其默认名单条目。（YouTube EPPKY6rSpzTIQ，[1395.45-1405.73]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1616 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1616`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building The Network You Need With PF, part 2 - Peter Hansteen〕讲者口述：PF 防火墙这套软件最初就是为无线网络而编写的，这也是他本场演讲中另辟一段专门谈无线网络接入的原因。（YouTube EPspPsGpmW1Rk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1617 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1617`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building The Network You Need With PF, part 2 - Peter Hansteen〕讲者口述：PF 在接口组（interface groups）上过滤的用法，据他记忆是在 OpenBSD 上起源的，并称之为极为有用的一项机制。（YouTube EPspPsGpmW1Rk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1618 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1618`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building The Network You Need With PF, part 2 - Peter Hansteen〕讲者口述：旧的 altq 配置在 OpenBSD 5.5 上已根本无法加载，使用者手上只有一两个版本的窗口把既有配置改写成新队列语法。（YouTube EPspPsGpmW1Rk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1651 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1651`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Running an ISP on OpenBSD 演讲〕讲者口述：他所在公司最初运行 Linux，1998 或 1999 年遭遇一次拒绝服务攻击（转写音作 a night of service attack），Linux 侧处置得极差、基本不再响应，此后改用 OpenBSD。（YouTube EPCbofrUzYpOE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1652 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1652`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Running an ISP on OpenBSD 演讲〕讲者口述：有同事刚把 name service 切换到 FreeBSD 并十分满意，他因此比较 free、net、open 三者（自述未看 net），认为 open 更好。（YouTube EPCbofrUzYpOE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1653 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1653`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Running an ISP on OpenBSD 演讲〕讲者口述：因必须运行大量来路可疑的第三方软件，缓解（mitigation）技术很关键；他指出 FreeBSD 曾‘回避问题域’而不加以修复，并承认其正在改善、为此表示赞赏。（YouTube EPCbofrUzYpOE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1654 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1654`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Running an ISP on OpenBSD 演讲〕讲者口述：此类软件运行 15 年以上、数百台主机上从未有单台主机被攻陷；仅数起（转写音作 a cast couple of cases）客户自行安装并管理的应用被滥用，最典型是一些配置不当的情形。（YouTube EPCbofrUzYpOE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1905 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1905`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07C Running an ISP on OpenBSD·Henning Brauer〕讲者口述：讲者称在一次拒绝服务攻击之后，同事向他推荐了 OpenBSD，他由此开始考察并对所见非常赏识；他还录下了攻击的部分流量并加以回放测试。（YouTube EP_DUqkdtd14Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1906 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1906`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07C Running an ISP on OpenBSD·Henning Brauer〕讲者口述：在其环境中防火墙“别无选择”，始终以某种冗余方式运行；讲者称其部署与教科书描述相反——策略设在 VLAN 接口上以隔离客户，而面向外部的接口基本只做泛洪防护与保护防火墙自身。（YouTube EP_DUqkdtd14Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1907 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1907`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07C Running an ISP on OpenBSD·Henning Brauer〕讲者口述：他长期负责 OpenBSD 网络栈的性能工作，这是其核心工作领域之一；在他所说的使用中，效率几乎从未成为问题，他只记得恰好有一例性能问题可归因于 OpenBSD。（YouTube EP_DUqkdtd14Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1908 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1908`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07C Running an ISP on OpenBSD·Henning Brauer〕讲者口述：讲者称 OpenBSD 端口树维护者相当在意安全，有时会把有问题的第三方软件挡在端口树之外，为此多做额外工作，而这正是他极为看重、让他能安睡的一点；他并称自己从未遇到过一次被攻陷的情况。（YouTube EP_DUqkdtd14Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1937 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1937`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker：Using OpenBSD as Routing Platform〕讲者口述：当时很多人把 OpenBSD 当作防火墙使用，他认为是 OpenBSD 的关键优势之一，并称 PF 大概是当时可用的最好的防火墙之一；紧接其后他还提到 altq 用于实施服务质量策略。（YouTube EPARf7M8WRjxE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1938 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1938`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker：Using OpenBSD as Routing Platform〕讲者口述：数年前加入的 carp 与 pfsync 结合起来可做高可用防火墙，故障切换时甚至不丢 TCP 连接；trunk 用于捆绑以太网链路，他还指 FreeBSD 用的是名为 lacp 的 aggregate 驱动，可负载均衡也可链路故障切换。（YouTube EPARf7M8WRjxE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1939 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1939`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker：Using OpenBSD as Routing Platform〕讲者口述：OpenBSD 在路由领域最早做的是 openbgpd，出现在 3.5 版本，此后逐年累积了大量 RFC 支持。（YouTube EPARf7M8WRjxE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1940 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1940`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Claudio Jeker：Using OpenBSD as Routing Platform〕讲者口述：openbgpd 最要紧的特性之一是原子的配置重载——一切以配置文件为准，直接重载该文件；他认为这与 zebra、quagga、cisco 那种一边敲 CLI 一边即时尝试生效的做法根本不同，后者在系统重配置时容易造成困扰。（YouTube EPARf7M8WRjxE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2365 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2365`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sebastian Benoit 演讲〕讲者口述：OpenBSD 的 ripd 较新（讲者称约五年内加入），base 早前已有旧的 routed 守护进程；各项路由守护进程共享同一 heritage（同源）。（YouTube EP_af8LAeFWTQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2366 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2366`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sebastian Benoit 演讲〕讲者口述：OpenBSD 以 CARP（Common Address Redundancy Protocol）做默认网关冗余，两机一主一备、故障即接管，可下线维护升级而不中断。（YouTube EP_af8LAeFWTQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2367 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2367`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sebastian Benoit 演讲〕讲者口述：BGP 选路步骤由 BGP 标准规定、可查 bgpd(8) man page，OpenBSD 另外增加 local weight 属性参与选路决策。（YouTube EP_af8LAeFWTQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2368 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2368`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sebastian Benoit 演讲〕讲者口述：OpenBSD 开展网络栈改进、去除大内核锁（big lock）之后，转发吞吐被推到 120 万 pps。（YouTube EP_af8LAeFWTQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -68,8 +68,8 @@ volume: 第17卷-政治制度与社区治理
 
 **辨析**：
 
-- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
-- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。 [存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。 [考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
 
 **文献**：
 
@@ -122,3 +122,24 @@ Conserver 由 Thomas A. Fine 与 Steven Romig 于 1990 年 LISA IV 上作为客�
 
 2022 年 ;login: 刊文记载：FreeBSD 开发者 Robert Watson 等开发了 Capsicum 内核与库机制，允许程序精确声明自身所需能力并放弃获取新资源的权限，超过 50 个 FreeBSD 程序已改写以使用该机制；该软件能力路线与 CHERI 硬件能力架构共同构成内存安全方案谱系。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1596 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1596`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville-Neil《Security Fantasies and Realities for the BSDs》演讲〕讲者口述：他认为把所有 BSD 的开发流程与 Linux 等系统相比，BSD 对软件开发的成熟度更高，理由包括内核 ABI 与用户 API 的稳定性、发布流程与发布编号清晰、使用者能辨识自身所运行的版本。（YouTube EP7kShjboN6ek，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1597 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1597`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville-Neil《Security Fantasies and Realities for the BSDs》演讲〕讲者口述：讲者以 Miter 的 CVE 数据库做内核代码对比，指出 NetBSD 与 FreeBSD 的内核代码行数几乎完全相同，但报告的 CVE 数量却不同，由此提出 BSD 阵营至今缺乏可量化安全度量手段的问题。（YouTube EP7kShjboN6ek，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1598 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1598`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville-Neil《Security Fantasies and Realities for the BSDs》演讲〕讲者口述：讲者追溯地址空间布局随机化（ASLR）的落地次序——OpenBSD 最早发布，其后约十一年才深度嵌入各系统内核（Windows Vista、Mac OS、Linux 的 kslr、Android），而 FreeBSD 直到 2018 年才开始集成；他随即指出 Spectre 类攻击可绕过 ASLR，故安全技术必须有“保质期”。（YouTube EP7kShjboN6ek，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1599 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1599`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville-Neil《Security Fantasies and Realities for the BSDs》演讲〕讲者口述：讲者以 Heartbleed 之后各 BSD 修复发布时序参差、且与 Intel 缺乏有效沟通为例，主张 FreeBSD、NetBSD、OpenBSD 等应结成统一阵线、共同对外协调安全响应，并建议设立跨 BSD 的安全工作组，自己愿意出任协调者。（YouTube EP7kShjboN6ek，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

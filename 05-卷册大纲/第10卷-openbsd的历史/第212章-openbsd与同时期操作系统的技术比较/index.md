@@ -131,8 +131,8 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。　[存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
-- OpenBSD 体验帖的 RAM 耗尽死机成因不确定是 OpenBSD 本身还是 Vultr 虚拟化环境，作者本人未下定论。　[考据脚注] 环境变量未隔离，因果归属存疑（BSD Now EP324，[691.12-706.72]，L4）
+- Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。 [存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
+- OpenBSD 体验帖的 RAM 耗尽死机成因不确定是 OpenBSD 本身还是 Vultr 虚拟化环境，作者本人未下定论。 [考据脚注] 环境变量未隔离，因果归属存疑（BSD Now EP324，[691.12-706.72]，L4）
 
 **文献**：
 
@@ -155,3 +155,24 @@ volume: 第10卷-openbsd的历史
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1588 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1588`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10A: Comprehensive and biaised comparison of OpenBSD and FreeBSD - Baptiste Daroussin〕讲者口述：OpenBSD 方讲者把自己那套机制（转写音作“plede”）概括为“负担得起的安全”，并解释“负担得起”即简单、易实现，因而能在全系统默认启用；他还给出普及程度：上线数周即有约两成基本系统代码采用，到今天已达八成五到九成。（YouTube EPARUXE13BL6Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1589 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1589`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10A: Comprehensive and biaised comparison of OpenBSD and FreeBSD - Baptiste Daroussin〕讲者口述：FreeBSD 方讲者（自述 FreeBSD core team 成员）谈到 capsicum 时承认基本系统正被逐步改造、但远未全部完成，理由是“capsicum 的设计不允许妥协”，因此把既有软件改造成合规形式并不容易；对方随即追问：若技术对多数人过于复杂，就难以被广泛使用。（YouTube EPARUXE13BL6Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1590 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1590`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10A: Comprehensive and biaised comparison of OpenBSD and FreeBSD - Baptiste Daroussin〕讲者口述：讲者称 FreeBSD 很早就有 jail，可用它创建 FreeBSD 容器，并可在其中施加诸多限制，对网络、文件系统、CPU、内存等资源设定限额；他还指出这套机制后来才获得业界通行的“container”之名，即 jail 早于“容器”这个说法。（YouTube EPARUXE13BL6Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1591 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1591`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10A: Comprehensive and biaised comparison of OpenBSD and FreeBSD - Baptiste Daroussin〕讲者口述：他描述 FreeBSD 的原地升级：跨版本升级（如 FreeBSD 十一到十二）时先取回全部内容，装上新的内核并必须在其上重启，此时系统还运行在旧用户态里，随后再安装新的用户态才算升级完成；他认为这“非常简单也非常好”，同时承认“也非常慢”。（YouTube EPARUXE13BL6Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

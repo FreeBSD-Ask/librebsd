@@ -52,8 +52,8 @@ volume: 第09卷-netbsd的历史
 
 **辨析**：
 
-- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
-- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
+- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。 [存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
+- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。 [存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
 
 **文献**：
 
@@ -82,3 +82,45 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔来源不详〕讲者 Taylor Campbell 口述：FreeBSD 有 devfs，其工作方式与传统 Unix 及其他 BSD 不同。（YouTube EPf7Kgzd2HwD8，[2408.079-2412.79]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1502 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1502`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell，EuroBSDcon 2023《How to get started hacking NetBSD》〕讲者口述：2008 年他复现出一个 NetBSD 内核 bug 后，在 netbsd-users 邮件列表上提出一行改动，几天之内由 Christos Zoulas 合入；这是他首次向 NetBSD 内核提交修改。（YouTube EPgm-F3GnM8yM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1503 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1503`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell，EuroBSDcon 2023《How to get started hacking NetBSD》〕讲者口述：他接着尝试让 Broadcom 旧款 Wi-Fi 驱动在 PowerBook G4“Extreme”上工作，耗时约两个月，做法是把 OpenBSD 的代码抄过来，并以 DragonFly 的代码作参照，最终于 2008 年 9 月跑通。（YouTube EPgm-F3GnM8yM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1504 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1504`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell，EuroBSDcon 2023《How to get started hacking NetBSD》〕讲者口述：NetBSD 的 build.sh 先构建交叉编译工具链、再用该工具链构建目标系统，因此“每一次构建都是交叉构建”，使构建与主机环境隔离；在 macOS、OpenBSD、Linux 等任何接近 POSIX 的系统上，不必先安装 NetBSD 即可开发。（YouTube EPgm-F3GnM8yM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1505 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1505`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell，EuroBSDcon 2023《How to get started hacking NetBSD》〕讲者口述：NetBSD 的 rump 可在用户态进程中运行内核代码（线程、设备驱动、文件系统），项目的文件系统测试全部跑在 rump 内，他据此在用户态配 GDB 调试，并修好了 rename 系统调用。（YouTube EPgm-F3GnM8yM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2042 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2042`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD TV 录制 BSDCan 纽约站 Jeff Rizzo 演讲 Releasing NetBSD: So Many Targets, So Little Time〕讲者口述：NetBSD 5（2009 年发布）支持 55 个平台，NetBSD 6 约在一年零半年后发布时支持 60 个平台，开发中的 NetBSD 7 则为 66 个平台构建。（YouTube EP4bPduH6O7lI，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2043 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2043`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD TV 录制 BSDCan 纽约站 Jeff Rizzo 演讲 Releasing NetBSD: So Many Targets, So Little Time〕讲者口述：答问中有人问 NetBSD 是否为首个支持 AMD64 的平台，讲者确认是。（YouTube EP4bPduH6O7lI，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2044 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2044`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD TV 录制 BSDCan 纽约站 Jeff Rizzo 演讲 Releasing NetBSD: So Many Targets, So Little Time〕讲者口述：NetBSD 历来被呈现为“最可移植”，但讲者认为这一标签并未充分点出可移植性的具体价值，其价值主要在于支撑可移植性的稳健工程实践，例如保持代码质量。（YouTube EP4bPduH6O7lI，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2045 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2045`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD TV 录制 BSDCan 纽约站 Jeff Rizzo 演讲 Releasing NetBSD: So Many Targets, So Little Time〕讲者口述：至 2014 年 NetBSD 仍使用 CVS 作版本控制，讲者称它对一些用途而言有些年头了，但运行得很好。（YouTube EP4bPduH6O7lI，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

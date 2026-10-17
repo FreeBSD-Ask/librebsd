@@ -8,7 +8,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 要点
 
-- FreeBSD 代码仓库时间跨度（1993-06-12 至 2026-08-25），覆盖 2.x 至今 30 余年持续开发。　[存疑脚注] 仓库起点 1993-06-12 早于 FreeBSD 项目公开起点（1993 年 11 月前后），疑混入 386BSD 0.1 时点提交，以 freebsd.duckdb 首提交记录复核为准。
+- FreeBSD 代码仓库时间跨度（1993-06-12 至 2026-08-25），覆盖 2.x 至今 30 余年持续开发。 [存疑脚注] 仓库起点 1993-06-12 早于 FreeBSD 项目公开起点（1993 年 11 月前后），疑混入 386BSD 0.1 时点提交，以 freebsd.duckdb 首提交记录复核为准。
 
 - 1996 年自由 Unix 曾就“能否争夺桌面”爆发跨项目大辩论：John DiMarco 首倡 Historic Opportunity，Jordan K. Hubbard 长文回应并主张选 Motif，LessTif 的法律困境、Matrox 与 XFree86 的驱动文档之争、Lai/Baker 基准的方法论质疑同为其子题（详见 88.12）
 ## 史料
@@ -59,8 +59,8 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。　[存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
-- Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。　[存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
+- 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。 [存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
+- Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。 [存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
 
 **文献**：
 
@@ -74,3 +74,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔来源不详〕讲者口述：讲者回忆 FreeBSD 最早的 1.0 alpha 版本直到当年 12 月才被首次生成。（YouTube EPTgeUniPBQjM，[980.75-992.17]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1662 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1662`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: Intro to FreeBSD（Deb Goodkin 主讲）〕讲者口述：FreeBSD 源自 BSD，而 BSD 源自最初的 AT&T UNIX；此后由 BSD 分叉出 FreeBSD 与 NetBSD，再由 NetBSD 分叉出 OpenBSD（字幕将 NetBSD 转作 net BST、OpenBSD 转作 open BSD）。（YouTube EPh-gJePs8XDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1663 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1663`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: Intro to FreeBSD（Deb Goodkin 主讲）〕讲者口述：伯克利方面自 1974 年起开始改进与修改 UNIX，此后约二十余年持续工作，直到 1992 年 386BSD 问世——她称那是第一个没有权利负担的（unencumbered）BSD 操作系统。（YouTube EPh-gJePs8XDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1664 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1664`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: Intro to FreeBSD（Deb Goodkin 主讲）〕讲者口述：约 1992 年发生一桩诉讼（她含糊地称 ATT 一方对阵 the SDI 与 18 ski），持续约两年，因时机关系大大限制了该时期 BSD 的开发与推广。（YouTube EPh-gJePs8XDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1665 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1665`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: Intro to FreeBSD（Deb Goodkin 主讲）〕讲者口述：jails 是 FreeBSD 里最早的容器化功能，至今仍在 FreeBSD 中使用；dtrace 是一种实时调试与性能分析工具；bhyve 是 FreeBSD 自有的 hypervisor；而 tcp/ip 最初是在 BSD 中开发的，后被带入 FreeBSD。（YouTube EPh-gJePs8XDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -64,7 +64,7 @@ volume: 第17卷-政治制度与社区治理
 - FreeBSD Foundation 是依美国税法注册的 501(c)(3) 公益组织，与作为行业协会的 501(c)(6) Linux Foundation 形成对照；基金会成立于 2000 年，项目本身则是志愿者的社群，基金会使命定位为服务项目与社区，二者互不隶属。（FLOSS Weekly EP662，[710.0-769.0]，L1）
 - Goodkin 回顾 macOS 的 FreeBSD 渊源：Apple 起初从 BSD 取用组件，随后多年以 FreeBSD 组件逐步替换，因此常被视为 FreeBSD 系操作系统；她将这一底子追溯到 Apple 收购的 NeXT——收购后 Apple 以 NeXT 操作系统为 macOS 的基础。（FLOSS Weekly EP662，[576.0-609.0]，L2）
 - Goodkin 以亲历者回忆其在数据存储业界与 NeXT 的合作：NeXT 采用其雇主的磁盘驱动器，她需上门确保应用与驱动兼容；她据此强调 NeXT 属于 BSD 阵营，Apple 收购 NeXT 并以其操作系统为基础，构成 macOS 至今携带 BSD 与 FreeBSD 底层的由来。（FLOSS Weekly EP662，[3327.0-3380.0]，L1）
-- Goodkin 回顾 BSD daemon 吉祥物史：Beastie 是对 Unix 后台进程 daemon 的双关，其图形出自后来供职迪士尼的动画师（她在访谈中忆为 John Lasseter），商标由伯克利元老 Kirk McKusick 持有；因形象近于魔鬼一度引发顾虑，各 BSD 项目相继更换标识，FreeBSD 改用红色圆球造型；2005 年前后社区举办图形竞赛选出现行官方 logo 并由基金会持有，Beastie 至今仍常被误作 FreeBSD 专属标识。　[存疑脚注] 转写将动画师姓名转作 John Lazider 等多种拼法且 Goodkin 自述记忆不确定；logo 更换的年代与动因均系口述转述，需与 daemon 词源考察及基金会档案核对（FLOSS Weekly EP662，[1894.0-2078.0]，L2）
+- Goodkin 回顾 BSD daemon 吉祥物史：Beastie 是对 Unix 后台进程 daemon 的双关，其图形出自后来供职迪士尼的动画师（她在访谈中忆为 John Lasseter），商标由伯克利元老 Kirk McKusick 持有；因形象近于魔鬼一度引发顾虑，各 BSD 项目相继更换标识，FreeBSD 改用红色圆球造型；2005 年前后社区举办图形竞赛选出现行官方 logo 并由基金会持有，Beastie 至今仍常被误作 FreeBSD 专属标识。 [存疑脚注] 转写将动画师姓名转作 John Lazider 等多种拼法且 Goodkin 自述记忆不确定；logo 更换的年代与动因均系口述转述，需与 daemon 词源考察及基金会档案核对（FLOSS Weekly EP662，[1894.0-2078.0]，L2）
 
 **史料**：
 
@@ -96,3 +96,65 @@ volume: 第17卷-政治制度与社区治理
 
 据 Fall 2024 FreeBSD Summit 讲者口述：1988 年（该书）终于准备出版，但到那时版本已从 4.2 变为 4.3，因此第一本出的书对应 4.3。（YouTube EPbKAp9Wremd0，[1427.039-1435.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1600 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1600`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 演讲“The History of the BSD Daemon”〕讲者口述：BSD daemon 起初并无名字，众人不断提议，其中“Chuck”被否决——这个名字是讲者高中时期让他抓狂的人；确实做过一件印着“Chuck the daemon”的 T 恤，但该设计被叫停，讲者手中保有唯一一件。（YouTube EP7d7fwAE-2Aw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1601 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1601`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 演讲“The History of the BSD Daemon”〕讲者口述：最终讲者主张必须定名，众人决定叫 Beastie；他翻查笔记想找到当初是谁提出这个名字的邮件，却找不到，因此提议者身份无从确证。（YouTube EP7d7fwAE-2Aw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1602 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1602`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 演讲“The History of the BSD Daemon”〕讲者口述：daemon 并非 demon——demon 是邪恶之灵，daemon 拼作 D-a-e-m-o-n，定义为半人半神的受神化存在；讲者补一句，与软件打交道时你至少需要一半神站在自己这边。（YouTube EP7d7fwAE-2Aw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1603 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1603`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 演讲“The History of the BSD Daemon”〕讲者口述：在最早那幅 daemon 画面里，画者画了一批四处跑动的小人物，那些正是后台 daemon，即为使用者做活儿、在后台运行的进程。（YouTube EP7d7fwAE-2Aw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1604 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1604`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 演讲“A History of the BSD Daemon”〕讲者口述：BSD daemon 无名，只是“the BSD daemon”，但众人受不了它没有名字而不断起名；其中一个名字来自讲者高中时骚扰他的人，因此“Chuck 不能是它的名字”；几经反复，Beastie 似乎成了最终采用的名字。（YouTube EPSGC0191nDp0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1605 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1605`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 演讲“A History of the BSD Daemon”〕讲者口述：它是 daemon 而非 demon——demon 是邪恶之灵，daemon 是半人半神的受神化存在，因此每有人说到魔鬼或 demon，讲者都得重新解释一遍。（YouTube EPSGC0191nDp0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1606 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1606`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 演讲“A History of the BSD Daemon”〕讲者口述：画师以画出这幅图作为报酬；画面上是一台 PDP-11，有管道、有 dev null，四周跑动的小 daemon 就是替你干活、在后台运行的进程。（YouTube EPSGC0191nDp0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1607 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1607`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 演讲“A History of the BSD Daemon”〕讲者口述：这幅画传播最广的一次是用在该组织十周年纪念 T 恤上，而画师的署名不知何时从画面、从 T 恤上消失了。（YouTube EPSGC0191nDp0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1827 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1827`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The History of the BSD Daemon（Marshall Kirk McKusick 演讲）〕讲者口述：BSD 的吉祥物从来没有过官方名字，一直就叫 the BSD daemon，但人们接受不了它没有名字这件事，便不断替它起名；其中一度有人把名字定为 Chuck，而 Chuck 正是他高中时代最让他受不了的那个人，所以这名字绝不可能用。（YouTube EPF9mtbe9vw90，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1828 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1828`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The History of the BSD Daemon（Marshall Kirk McKusick 演讲）〕讲者口述：最终讲者下决心必须有个名字，决定叫 Beasty；他翻查笔记与邮件想弄清这个名字是谁提出的，但没能找到。（YouTube EPF9mtbe9vw90，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1829 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1829`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The History of the BSD Daemon（Marshall Kirk McKusick 演讲）〕讲者口述：它不是 demon——demon 意为恶灵——而是 daemon：讲者当场拼读 D-a-e-m-o-n，并说 daemon 的定义是“半人半神的受神格化存在（a deified being half man half god）”；做软件需要至少有一半神站在你这一边。（YouTube EPF9mtbe9vw90，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1830 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1830`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The History of the BSD Daemon（Marshall Kirk McKusick 演讲）〕讲者口述：4.2BSD 手册由 USENIX 代印，因为当时要用 UNIX 必须持有 AT&T 的许可，而 USENIX 持有该许可，才能确保手册只卖给具备相应授权的人；4.2BSD 手册封面上的 daemon 手中发光球体印着 “Unix TM”，后来这成了麻烦的根源（a bone of contention），此后的某些版本里 daemon 手中只剩一个什么都不写的发光球体。（YouTube EPF9mtbe9vw90，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

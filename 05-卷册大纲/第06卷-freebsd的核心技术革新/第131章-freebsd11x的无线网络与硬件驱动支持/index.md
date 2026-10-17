@@ -109,9 +109,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。　[存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
-- [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。　[存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
-- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
+- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。 [存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
+- [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。 [存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
+- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。 [存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
 
 **文献**：
 
@@ -147,3 +147,115 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔virtual BSDCan 2020〕讲者 Scott Long 口述：本场就 FreeBSD 上的 Thunderbolt 支持进行演讲。（YouTube EPVbAJf2PBE-M，[17.84-23.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1516 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1516`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 硬件黑客讲座〕讲者口述：树莓派多数硬件已获 FreeBSD 支持，但支持方式与 Linux 不同，跨系统移植硬件支持常有难度；当时 FreeBSD 尚不支持树莓派上的 Wi-Fi，部分原因在于 Wi-Fi 与片上系统的集成方式，且该项工作正在进行中。（YouTube EPOZKImUtlGl0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1517 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1517`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 硬件黑客讲座〕讲者口述：树莓派 3 与同年发布的树莓派 4 使用 ARM64，FreeBSD 相应提供 64 位镜像；据讲者理解 FreeBSD 是少数为树莓派提供 64 位支持的操作系统，而 Rasbian 仍发行 32 位镜像、当时正在切换。（YouTube EPOZKImUtlGl0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1518 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1518`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 硬件黑客讲座〕讲者口述：FreeBSD 项目为树莓派制作可直接写入 SD 卡的镜像并随各版发布提供，当时可取用的为 11.4、12.1、12.2（后者处于 beta 阶段）以及 current。（YouTube EPOZKImUtlGl0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1519 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1519`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 硬件黑客讲座〕讲者口述：13-current 上树莓派 4 的固件使 GPIO 引脚具备名称，且这些名称来自设备描述。（YouTube EPOZKImUtlGl0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1520 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1520`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intel QuickAssist 驱动 FreeBSD 移植讲座〕讲者口述：当时尚无可交付的 FreeBSD 内核驱动，团队改以主机跑 Linux 内核、两个客户机跑 FreeBSD 的虚拟化环境验证——由主机下载固件、建立通道，并把虚拟功能导出给客户机。（YouTube EP3NmbM5vHyGM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1521 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1521`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intel QuickAssist 驱动 FreeBSD 移植讲座〕讲者口述：上述虚拟化配置运行正常，当时已可在 FreeBSD 客户机上运行 IPSec 示例程序，经由 DPDK 的加密设备 API 直接访问 QuickAssist 设备。（YouTube EP3NmbM5vHyGM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1522 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1522`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intel QuickAssist 驱动 FreeBSD 移植讲座〕讲者口述：把驱动推向 FreeBSD 时编码规范约束更宽松——团队原本写成 camelCase 的代码、乃至形参多达 30 个的函数，在 FreeBSD 一侧无需按内核风格返工，因此移植与推送更快。（YouTube EP3NmbM5vHyGM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1562 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1562`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sam Leffler 远距离无线讲座〕讲者口述：RCP 原型平台当时选用 Linux，理由之一是彼时 FreeBSD 与其他 BSD 系统在该硬件上尚不可用；讲者并称项目若推进，未来平台可能改为 BSD。（YouTube EPWlO2rDO1zQE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1582 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1582`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Eric／Jake“Developing a FreeBSD driver using Test Driven Development”演讲〕讲者口述：Jake 此前有 Linux 经验，最近加入 Intel 的 FreeBSD 驱动团队，这是他第一次做 BSD。（YouTube EP1pwVbpijcas，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1583 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1583`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Eric／Jake“Developing a FreeBSD driver using Test Driven Development”演讲〕讲者口述：因其持续跟踪 FreeBSD head，上游一旦改动构造子函数签名他们能立即察觉，而非等在新版本上测试驱动时才发现，可加速保持驱动兼容。（YouTube EP1pwVbpijcas，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2129 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2129`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability on FreeBSD（Hiroki Sato 修订版报告）〕讲者口述：讲者自述为日本 FreeBSD 提交者，自 2000 年前后起活跃于多个领域，近期着手实现 USB 调试支持。（YouTube EPKF3k1m4dvNU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2130 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2130`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability on FreeBSD（Hiroki Sato 修订版报告）〕讲者口述：他给 USB 调试能力的一句话总结：若在某机器上启用该能力，其中一个 USB 端口将充当 USB 设备，因而不需额外硬件；前提是主机控制器为 USB 3.0，且该能力基于 XHCI 规范。（YouTube EPKF3k1m4dvNU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2131 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2131`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability on FreeBSD（Hiroki Sato 修订版报告）〕讲者口述：在目标侧启用调试能力相对简单：PCI 配置空间存在一个扩展能力寄存器，能力号为 0x0a，找到它即可访问调试能力寄存器，此项列于 XHCI 规范。（YouTube EPKF3k1m4dvNU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2132 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2132`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability on FreeBSD（Hiroki Sato 修订版报告）〕讲者口述：调试能力的控制台实现位于 UEFI 加载器内：在 struct console 中登记所有可用控制台，要增加便需在此追加条目；本次实现在此加入 udb 控制台，可用名为 udb 的控制台。（YouTube EPKF3k1m4dvNU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2288 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2288`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Wireless Fidelity with bwfm(4) 演讲〕讲者口述：OpenBSD 里负责 Wi-Fi 的只有一部分，即 net 802 11 栈，而该栈当初是照着 softmax 芯片写的，因为那时芯片算力不足以自行完成 MAC 层；正因缺了这一层抽象，让 full-MAC 芯片被本栈支持反而比软 MAC 芯片更难。（YouTube EP8N0IL8APCHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2289 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2289`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Wireless Fidelity with bwfm(4) 演讲〕讲者口述：full-MAC 芯片不向上层回报 beacons 之类信息，但既有 Wi-Fi 栈期待收到 beacons，于是必须在驱动内部伪造一个 Wi-Fi 帧、补齐栈所期望的各位后塞回栈内；association 与 authentication 的处理方式与之相同。（YouTube EP8N0IL8APCHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2290 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2290`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Wireless Fidelity with bwfm(4) 演讲〕讲者口述：有人追问“把 event 包从外部发进来会怎样”，结果这类包被直接透传给驱动去解析，等于可以从外部向驱动投递恶意分片；据此产生的 CVE 出现于 2016 年，讲者当时尚不确知修复时间。（YouTube EP8N0IL8APCHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2291 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2291`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Wireless Fidelity with bwfm(4) 演讲·答疑〕讲者口述：要使内核兼容这些 Linux 驱动，就得同时维护硬件接口与内核接口两侧，需要照料的代码量随之翻倍；而项目里负责 Wi-Fi 的仅约“两半个人”，已跟不上现有硬件设备的数量。（YouTube EP8N0IL8APCHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2624 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2624`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hans Peter Selasky "The new USB stack in FreeBSD" 演讲〕讲者口述：其多年业余时间投入改进并最终为 FreeBSD 8 与 9 写成了全新的 USB 栈。（YouTube EPQGF2FJbiJ7A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2625 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2625`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hans Peter Selasky "The new USB stack in FreeBSD" 演讲〕讲者口述：SMP 是他动手重写 FreeBSD USB 栈的动因之一——他曾写过一个依赖 SMP 使能 USB API 的驱动，而当时整个 USB 栈被一把大锁整体罩住。（YouTube EPQGF2FJbiJ7A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2626 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2626`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hans Peter Selasky "The new USB stack in FreeBSD" 演讲〕讲者口述：Linux 把 host 与 gadget 分成两套 USB 栈、传缓冲要用两套 API、内核里是重复代码，Linux 开发者也承认两栈或应合并；讲者称 FreeBSD 这次率先把二者合一。（YouTube EPQGF2FJbiJ7A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2627 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2627`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hans Peter Selasky "The new USB stack in FreeBSD" 演讲〕讲者口述：更具 BSD 特色的 libusb 2.0 直接映射新 USB 栈的内核函数，libusb 1.0 与 0.1 都构建在它之上，用户态因此能用上大部分内核功能。（YouTube EPQGF2FJbiJ7A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -63,7 +63,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **史料**：
 
-- 本期核心一手史料为 BSDCan 2016 现场录制的 Glenn Barber（FreeBSD Foundation 系统管理员，兼集群管理与发布工程）与 Peter Wemm（集群管理/发布工程成员）访谈，逐条自述集群规模、11.0 发布时间线与 freeze 机制，是发布工程制度史稀缺的口述证据；节目另提及 FreeBSD Foundation 2016 社区调查、core team 选举邮件投票、BSDCan 全量会议视频、ART 论文 PDF 与基准图表、pkgsrc 五十版维护者访谈系列（Jonathan Perkin 等，其余人名转写失真）及 Solaris 10 迁移 FreeBSD 的五篇博客连载。　[存疑脚注] 转写专名失真较重（bhyve、poudriere、code freeze、QEMU 等均拼误，主持人名亦存疑），Peter Wemm 系据 FreeBSD 社区背景对 Peter Wem 的推断，正式引用前须回听原音核对。（BSD Now EP147，[1716.60-3187.46]，L1）
+- 本期核心一手史料为 BSDCan 2016 现场录制的 Glenn Barber（FreeBSD Foundation 系统管理员，兼集群管理与发布工程）与 Peter Wemm（集群管理/发布工程成员）访谈，逐条自述集群规模、11.0 发布时间线与 freeze 机制，是发布工程制度史稀缺的口述证据；节目另提及 FreeBSD Foundation 2016 社区调查、core team 选举邮件投票、BSDCan 全量会议视频、ART 论文 PDF 与基准图表、pkgsrc 五十版维护者访谈系列（Jonathan Perkin 等，其余人名转写失真）及 Solaris 10 迁移 FreeBSD 的五篇博客连载。 [存疑脚注] 转写专名失真较重（bhyve、poudriere、code freeze、QEMU 等均拼误，主持人名亦存疑），Peter Wemm 系据 FreeBSD 社区背景对 Peter Wem 的推断，正式引用前须回听原音核对。（BSD Now EP147，[1716.60-3187.46]，L1）
 - 本期为 EuroBSDcon 2024 现场采访；Colin Percival 与 Andrew Hewus 为一手自述，Liam Proven 为 The Register 记者的一手见闻与二手综述。（BSD Now EP580，[40.2-1294.1]，L1）[订正：原 [59.28-1293.58]，2026-10-01 SenseAudio 重转核对]
 
 **史观**：
@@ -77,9 +77,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- OpenBSD 以 ART（Allotment Routing Table）取代 radix tree 的基准解读是语境化权衡：全表 BGP 场景路由表内存由约 130MB 增至约 180MB，换取 64k 目的地时略高于旧表 256 目的地的查找性能，其思路是把查找树做宽而非做深；主持人提醒家用 NAT 设备仅有一至四条路由，收益并非普适，而实现者自评（转写存 Zhao Hu 一名，待核）庆幸两年前即支持可变步长　[订正：原 转写仅存 Joe 一名，2026-09-30 SenseAudio 重转核对]——性能结论依附于硬件代际，属于注定过时的知识。（BSD Now EP147，[433.82-890.32]，L2）
-- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
-- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 以 ART（Allotment Routing Table）取代 radix tree 的基准解读是语境化权衡：全表 BGP 场景路由表内存由约 130MB 增至约 180MB，换取 64k 目的地时略高于旧表 256 目的地的查找性能，其思路是把查找树做宽而非做深；主持人提醒家用 NAT 设备仅有一至四条路由，收益并非普适，而实现者自评（转写存 Zhao Hu 一名，待核）庆幸两年前即支持可变步长 [订正：原 转写仅存 Joe 一名，2026-09-30 SenseAudio 重转核对]——性能结论依附于硬件代际，属于注定过时的知识。（BSD Now EP147，[433.82-890.32]，L2）
+- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。 [存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。 [存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -109,3 +109,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔June 2022 FreeBSD Developer Summit〕讲者口述：团队向 Google Compute Engine 申请 FreeBSD 13.1 镜像，规格为 8 核、8GB 内存。（YouTube EPf_j14OtqllE，[1382.4-1392.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2330 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2330`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit Dev Workflows 讲者 Mark Johnston〕讲者口述：本讲不打算把自制脚本打磨到生产可用，讲者认为那很难真正做到有用，故改取另一条路：展示实验性方案。（YouTube EPJViMmI_t0t4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2331 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2331`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit Dev Workflows 讲者 Mark Johnston〕讲者口述：其目标是让工具更易于共享、让新贡献者以更少摩擦入门，尽量用一个命令自动化基础事项，并充分利用 FreeBSD 的 jails、bhyve、vnet、ZFS 等特性。（YouTube EPJViMmI_t0t4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2332 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2332`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit Dev Workflows 讲者 Mark Johnston〕讲者口述：现成工具只覆盖任务子集，例如 poudriere 一条命令即可由 git 树建出 jail 并构建 VM 镜像，但随后如何引导、如何配置其自动跑回归测试套件仍是待解问题。（YouTube EPJViMmI_t0t4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2333 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2333`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit Dev Workflows 讲者 Mark Johnston〕讲者口述：内核改动须重启，但改为在虚拟机中操作、并做到快速装入新内核后，编辑-编译-测试的迭代周期可压到约 20 到 30 秒。（YouTube EPJViMmI_t0t4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

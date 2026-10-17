@@ -79,7 +79,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Drew DeVault 的文章坦诚全职自由软件工作的幸福与压力：能按自己方式写代码，但伴随技术债、过高期待与时间碎片化。（BSD Now EP337，[412.76-544.44]，L2）
 - Warner Losh 在 FOSDEM 访谈中讲述恢复 Venix、接触 Unix Heritage Society（TUHS）与早期 Unix 被遗忘的首次实践。（BSD Now EP337，[2755.62-2889.14]，L2）
 - NetBSD 9 RC1 发布，含 AArch64 支持、NVMM 硬件虚拟化、内核 ASLR 与 sanitizer 等。（BSD Now EP337，[1975.48-2102.14]，L2）
-- 受访路由工程师自述：俄亥俄州教育科研网络以 FreeBSD 承载 DNS、堡垒机、监控后端与 Juniper 设备管理，基础设施自 4.x 时代积累、历经 6 与 8 两代停留后正向 10.x 迁移；其运维哲学是裸金属单用途部署以隔离故障级联，并以串口控制台、远程电源恢复与改造自 PC-BSD 的自动化安装器保障全州分散机房的可管理性，新机交付现场或制作安装 U 盘各仅需十分钟　[存疑脚注] 转写专名失真：受访机构作 Ornette 应为 OARnet，受访人拼写 Wolf/Wolfe 不定，以当期节目页为准（BSD Now EP128，[1456.6-1663.3]，L1）[订正：原 [1463.68-1650.74]，2026-09-30 SenseAudio 重转核对]
+- 受访路由工程师自述：俄亥俄州教育科研网络以 FreeBSD 承载 DNS、堡垒机、监控后端与 Juniper 设备管理，基础设施自 4.x 时代积累、历经 6 与 8 两代停留后正向 10.x 迁移；其运维哲学是裸金属单用途部署以隔离故障级联，并以串口控制台、远程电源恢复与改造自 PC-BSD 的自动化安装器保障全州分散机房的可管理性，新机交付现场或制作安装 U 盘各仅需十分钟 [存疑脚注] 转写专名失真：受访机构作 Ornette 应为 OARnet，受访人拼写 Wolf/Wolfe 不定，以当期节目页为准（BSD Now EP128，[1456.6-1663.3]，L1）[订正：原 [1463.68-1650.74]，2026-09-30 SenseAudio 重转核对]
 - 同一访谈揭示 ISP 场景对发布工程的特殊要求：只需安全更新的运维方长期不信任二进制包，季度包分支改善局面但仍不足以建立信任，因而期待 base 系统打包化并以 Poudriere 自管包源；主持方以冻结 ports 快照重建包源、必要时整机重装包清单的做法被引为可行先例，折射 2016 年前后 FreeBSD 包管理从源码构建向二进制包信任转移的过渡态（BSD Now EP128，[2149.6-2304.1]，L1）[订正：原 [2150.86-2296.64]，2026-09-30 SenseAudio 重转核对]
 - 首届存储峰会与 USENIX FAST 会议联办并转向 hackathon 形态：CAM 工作组讨论多队列控制器与跨 CPU 争用，ZFS 工作组聚焦 OpenZFS 新增的 SHA-512 截断 256 位与 Skein 校验和；后者在 64 位 x86 上因字长匹配更快，但 FreeBSD 内核尚缺实现，且 block pointer 仅预留 256 位校验和空间，容纳更长摘要将迫使盘上格式自 V5000 升版，播客中甚至出现未来淘汰 Fletcher 4 的半玩笑预言，显示格式演进受制于设计时预留的约束（BSD Now EP128，[3099.2-3306.7]，L2）[订正：原 [3110.24-3306.50]，2026-09-30 SenseAudio 重转核对]
 
@@ -88,7 +88,7 @@ volume: 第06卷-freebsd的核心技术革新
 - CBSD 项目的 K8CBSD 模块说明及其公开仓库与演示视频。（BSD Now EP337，[1728.62-1744.86]，L2）
 - Warner Losh 的 FOSDEM 访谈与其 Unix 早期史演讲。（BSD Now EP337，[2577.96-2992.62]，L2）
 - NetBSD 9 RC1 发布博客与 OPNsense 20.1 Keen Kingfisher 发布公告。（BSD Now EP337，[1969.8-2340.46]，L2）
-- RISC-V 初始移植的一手线索：FreeBSD 基金会博客详述初始支持细节，剑桥研究工程师提交使 FreeBSD 于 Spike 模拟器可引导的系列提交，后续目标为多核与用户态支持，受英国高等教育创新基金与 DARPA CTSRD 项目资助，并被定位为免于 ARM 授权模式的低风险新指令集选项　[存疑脚注] 转写作 Ruslan Vukin，当为剑桥大学 Ruslan Bukin；基金名称与 CTSRD 展开须以基金会博客原文核验（BSD Now EP128，[299.9-398.6]，L2）[订正：原 [323.66-396.94]，2026-09-30 SenseAudio 重转核对]
+- RISC-V 初始移植的一手线索：FreeBSD 基金会博客详述初始支持细节，剑桥研究工程师提交使 FreeBSD 于 Spike 模拟器可引导的系列提交，后续目标为多核与用户态支持，受英国高等教育创新基金与 DARPA CTSRD 项目资助，并被定位为免于 ARM 授权模式的低风险新指令集选项 [存疑脚注] 转写作 Ruslan Vukin，当为剑桥大学 Ruslan Bukin；基金名称与 CTSRD 展开须以基金会博客原文核验（BSD Now EP128，[299.9-398.6]，L2）[订正：原 [323.66-396.94]，2026-09-30 SenseAudio 重转核对]
 - 纽约 Papers We Love 聚会预告构成容器史一手节点：Cantrill 借纽约容器峰会之便留驻一晚，重讲 Poul-Henning Kamp 与 Robert Watson 的论文 Jails: Confining the Omnipotent Root，以及 Dan Price 与 Andy Tucker 的 Solaris Zones 论文，主持人强调 jails 先于容器概念出现；预告附时间地点与录像计划，可回溯为 2016 年容器谱系论争的现场材料（BSD Now EP128，[2872.3-2945.2]，L2）[订正：原 [2893.92-2944.04]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
@@ -99,9 +99,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- 转写中‘K8CBSD’ 等专名与 CBSD 版本信息需以 CBSD 官方文档核验；‘Wild Nenon truce’ 等表述为语音转写噪声。　[存疑脚注] 转写专名与习语存疑（BSD Now EP337，[1540.18-1554.58]，L4）
+- 转写中‘K8CBSD’ 等专名与 CBSD 版本信息需以 CBSD 官方文档核验；‘Wild Nenon truce’ 等表述为语音转写噪声。 [存疑脚注] 转写专名与习语存疑（BSD Now EP337，[1540.18-1554.58]，L4）
 - bhyve 的 UEFI/CSM 客户机支持据称已进入 Current 并回移至 10.3 分支，Windows Server 与桌面各版本经测试可引导，无人值守安装依赖定制 ISO 与 Nahanni 预置脚本；上述论断均系口述，转写将 Peter 的人名主页、引导 ROM 改进与 userboot 路径选项混叙，具体提交号与支持矩阵须回到 commit 与移植文档复核，转写中 Beehive 通体为 bhyve 之误（BSD Now EP128，[474.7-594.1]，L2）[订正：原 [484.70-589.86]，2026-09-30 SenseAudio 重转核对]
-- 新闻段提及一款聚合多物理机为单一巨型虚拟机的商用 hyperkernel 产品，转写作 TitleScale 并称其构建于 bhyve 之上，与 2016 年 2 月 Joyent 发布 Triton 弹性计算的时间与特征近似，但产品全名、虚拟化基座与 FreeBSD 支持细节在转写中均失真，映射与引用前须以官方新闻稿核验　[存疑脚注] 转写作 TitleScale，疑为 Joyent Triton；其是否基于 bhyve 聚合多机为单一虚拟机的表述与公开史实待官方新闻稿验证（BSD Now EP128，[699.4-784.0]，L4）[订正：原 [702.44-762.26]，2026-09-30 SenseAudio 重转核对]
+- 新闻段提及一款聚合多物理机为单一巨型虚拟机的商用 hyperkernel 产品，转写作 TitleScale 并称其构建于 bhyve 之上，与 2016 年 2 月 Joyent 发布 Triton 弹性计算的时间与特征近似，但产品全名、虚拟化基座与 FreeBSD 支持细节在转写中均失真，映射与引用前须以官方新闻稿核验 [存疑脚注] 转写作 TitleScale，疑为 Joyent Triton；其是否基于 bhyve 聚合多机为单一虚拟机的表述与公开史实待官方新闻稿验证（BSD Now EP128，[699.4-784.0]，L4）[订正：原 [702.44-762.26]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -126,3 +126,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔EuroBSDCon 2024〕讲者口述：OpenBSD 技术包含 sec0（音作 SEC zero）、sect4、ospf、BGP（YouTube EPko8-nbDRiBQ，[2520.252-2525.522]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1420 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1420`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyvecon Tokyo 2018 讨论环节〕讲者口述：一位为大学硕士学生提供大数据/NoSQL 课程实验机器的用户表示，bhyve 起步快、易上手，整个学期几乎无需运维管理；其负载为三个月左右的教学用途、非生产规模，并认为若要评估 bhyve 相对裸机的性能损失，可以借助 DTrace去定位瓶颈。（YouTube EP3pXFn23T2HM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1421 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1421`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyvecon Tokyo 2018 讨论环节〕讲者口述：bhyve 网络性能测试称，采用 PT-netmap 后同一宿主机上宿主机到虚拟机的封装流量可达约 21 Gbit/s，跨网线虚拟机到虚拟机流量约 15 Gbit/s；该方案取自意大利比萨大学的 Luigi，但讲者随后表示它无法有效扩展，劝人不要走这条路。（YouTube EP3pXFn23T2HM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1422 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1422`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyvecon Tokyo 2018 讨论环节〕讲者口述：有用户只在开发场景使用 bhyve，称若像 KVM/QEMU 那样拥有合适的接口与主流框架集成就愿意投入生产；另有讲者指出，各家云实现各不相同，要为它们提供统一语义的抽象层“credibly difficult”，这正是 bhyve 难以在生产落地的生态性障碍。（YouTube EP3pXFn23T2HM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1423 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1423`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyvecon Tokyo 2018 讨论环节〕讲者口述：关于 bhyve 的在线迁移（live migration）实现，讲者介绍其做法是把虚拟机状态存到磁盘（说法与 OpenBSD 上保存虚拟机状态的方式类似），再把该状态存放在另一个虚拟机中。（YouTube EP3pXFn23T2HM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1535 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1535`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 P01A、Michael Dexter 演讲〕讲者口述：FreeBSD 自 2000 年起具备 jails、约 2014 年起具备 bhyve，二者在操作系统及其周边工具中已扮演重要角色，但尚未与操作系统充分整合以支持无摩擦使用。（YouTube EPe1B_6iGY2lU，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1536 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1536`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 P01A、Michael Dexter 演讲〕讲者口述：一例 FreeBSD 开发分支上的回归缺陷于 2017 年 6 月引入、10 月 1 日修复，暴露约三个月，历经 3710 次提交方修复；该变更本为新增功能，回归表现为内存泄漏。（YouTube EPe1B_6iGY2lU，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1537 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1537`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 P01A、Michael Dexter 演讲〕讲者口述：该回归随 FreeNAS 11.1 发布（12 月 13 日），远晚于缺陷已被发现与修复之时，其后于 36 天后的 18 日方在 FreeNAS 侧修正。（YouTube EPe1B_6iGY2lU，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1538 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1538`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 P01A、Michael Dexter 演讲〕讲者口述：当前 boot/kernel 目录布局自 FreeBSD 5 引入，而 FreeBSD 5 所引导的内核内置虚拟机监视器（bhyve）长期鲜有人尝试使用。（YouTube EPe1B_6iGY2lU，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

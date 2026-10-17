@@ -74,7 +74,7 @@ volume: 第16卷-开源运动与合规治理
 
 **辨析**：
 
-- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。　[存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
+- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。 [存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
 
 **文献**：
 
@@ -128,3 +128,15 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔FreeBSD 用户访谈〕讲者 Charlie Li 口述：讲者自 2017 年开始使用 FreeBSD，并于 2021 年成为 FreeBSD ports 提交者。（YouTube EPtdB_GBOAzKc，[10.24-19.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2195 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2195`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: How to Submit a Patch to FreeBSD〕讲者口述：据讲者介绍，Fabricator 上游社区已表明不再积极维护该项目，基本停下了对它的持续开发工作。（YouTube EP6fwfRoDt9bQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2196 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2196`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: How to Submit a Patch to FreeBSD〕讲者口述：据讲者介绍，FreeBSD 的 GitHub 镜像上的 pull request 会触发 Sphera CI，该作业先构建 world 与 kernel，再放进虚拟机里做一次启动冒烟测试。（YouTube EP6fwfRoDt9bQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

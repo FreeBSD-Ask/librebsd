@@ -91,10 +91,10 @@ volume: 第14卷-商业生态与企业案例
 - 安全启动并非万能，近期大型安全事件的根源在 EFI 固件供应链：参考固件厂商源码库中以大写标注“仅测试、勿出货”的密钥，因主板厂商用错构建标志被打包为受信密钥，源码公开后任何人都可签名可能被主板信任的二进制；FreeBSD 的签名目前仅覆盖 loader.efi，但可将内核乃至整个 /boot 文件系统作为内存盘嵌入已签名的 loader.efi，再以 verified exec 的清单哈希校验内核模块、进而要求全部用户态二进制持有效签名，使信任根从固件一路贯穿至整个 appliance。（YouTube EPDXX4HDd3vDQ，[727.2-930.399]，L1）[订正：原"签出"→"签名"（转写 "anybody can sign a binary"，[791.0-799.8]），内容复核]
 - FreeBSD 每项安全检查均留有前后挂钩，可加载 MAC 模块改写判定：内置的 mac_ntpd 使 ntpd 在历次 CVE 后能以完全无特权用户运行、仅授权单一用户改时钟；讲者为一屏 C 代码的模块实现“Web 服务用户可把上传文件 chown 给真实用户”而不打开配额作弊口子；为 node.js 托管客户按用户 ID 生成内网唯一地址并改写 5000 端口监听、以 nginx 反代化解共享主机端口冲突；mac_portacl 以端口对用户的授权表令 DNS 等服务彻底摆脱 root；net-snmpd 经 capsicum 化 upstream 后不开 /dev/kmem 即可输出全部统计；mac_bsdextended 充当文件系统防火墙，Baptiste 新写的 mac_do 更允许指定用户以另一用户身份执行命令而完全绕开 setuid。（YouTube EPDXX4HDd3vDQ，[1686.84-2081.04]，L1）
 - 面向矿底电池充电控制器、银行气隙金库等无法现场维护的部署环境，升级机制以“绝不留在坏状态”为第一原则：ZFS 引导环境加 boot once 标记使新镜像仅引导一次，掉电即回默认环境，在线脚本确认稳定运行（如十五分钟或自定义判据）后才晋升为默认；连续三次或五次未能达到在线时长则自动引导救援环境，可反向隧道供远程诊断；升级失败只需断电回滚，事后离线分析日志，生产不随排障而停摆。（YouTube EPDXX4HDd3vDQ，[1231.9-1433.159]，L1）[订正：原 [1305.0-1433.159]→[1231.9-1433.159]，银行气隙金库与矿底电池充电控制器两例出自 1254.4-1310.0 原不在区间内，"连续三次或五次……反向隧道"之述出自 [2293.5-2341.5]，内容复核]
-- FreeBSD 的开发组织呈一条代码成熟度连续谱：未经打磨的“生代码”先进入 current，约每六个月自 current 切出 stable 分支，经完整 QA 后发布 release，此后 errata 与安全修复以更严的审视回灌；理论上每 18 至 24 个月一个版本、分支活跃约两年，且因项目资源有限，同时只维护一个 stable 与一个 current，以把资源战略性地投给用户最需要的质量。（YouTube EP66enuplpZxw，[302.3-484.3]，L1）　[订正：字幕源重锚，原[止]462.24 未覆盖“约每六个月自 current 切出 stable 分支”之出处 [472.4-484.3]“we have a stable branch about every six months”，本条连续论述止于此段]
-- 现实与理论偏差显著：分支寿命差异极大，4.x 分支长年活跃获得大量关注，紧随其后的 5.x 分支却迅速失宠；5.x 试图同时完成 SMP 相关改造而“贪多嚼不烂”，分支久拖不决，6.x 的快速推出部分源于用户急于逃离 5.x，6 到 7、7 到 8 之间则间隔合理、产品质量良好；代码冻结造成需求积压，分支点之后提交量骤然上升；讲者并自认 current 在 5.x 时期非常不稳定，这正是项目另起 Perforce 侧线的由来。（YouTube EP66enuplpZxw，[494.9-658.8]，L1）　[订正：原[612.37-654.85]→[494.9-658.8]，原区间未覆盖“4.x 长寿、5.x 失宠”与“代码冻结致需求积压”两段（[516.3-535.6]、[537.8-554.5]），末句 Perforce 由来出自问答段 [2463.7-2475.4]（“very unstable especially five decks day…that's why we started perforce”），内容复核]
+- FreeBSD 的开发组织呈一条代码成熟度连续谱：未经打磨的“生代码”先进入 current，约每六个月自 current 切出 stable 分支，经完整 QA 后发布 release，此后 errata 与安全修复以更严的审视回灌；理论上每 18 至 24 个月一个版本、分支活跃约两年，且因项目资源有限，同时只维护一个 stable 与一个 current，以把资源战略性地投给用户最需要的质量。（YouTube EP66enuplpZxw，[302.3-484.3]，L1） [订正：字幕源重锚，原[止]462.24 未覆盖“约每六个月自 current 切出 stable 分支”之出处 [472.4-484.3]“we have a stable branch about every six months”，本条连续论述止于此段]
+- 现实与理论偏差显著：分支寿命差异极大，4.x 分支长年活跃获得大量关注，紧随其后的 5.x 分支却迅速失宠；5.x 试图同时完成 SMP 相关改造而“贪多嚼不烂”，分支久拖不决，6.x 的快速推出部分源于用户急于逃离 5.x，6 到 7、7 到 8 之间则间隔合理、产品质量良好；代码冻结造成需求积压，分支点之后提交量骤然上升；讲者并自认 current 在 5.x 时期非常不稳定，这正是项目另起 Perforce 侧线的由来。（YouTube EP66enuplpZxw，[494.9-658.8]，L1） [订正：原[612.37-654.85]→[494.9-658.8]，原区间未覆盖“4.x 长寿、5.x 失宠”与“代码冻结致需求积压”两段（[516.3-535.6]、[537.8-554.5]），末句 Perforce 由来出自问答段 [2463.7-2475.4]（“very unstable especially five decks day…that's why we started perforce”），内容复核]
 - 针对“曲线趋平即 FreeBSD 正在死亡”的流行解读，讲者以数据完整性反驳：仅统计 CVS 提交确见趋平，但大量开发发生在 Perforce 侧线上、其曲线仍近指数增长；迁移 Subversion 后开发者可用 svk、git-svn 或 Mercurial 网关进行与主仓库脱钩的私有工作，这部分数据无法采集，故“死亡论”是统计口径缺陷造成的误导。（YouTube EP66enuplpZxw，[654.9-726.5]，L1）
-- 商业使用 FreeBSD 的核心风险集中在升级：第一个版本怎么做都不难，唯有第一次升级时才暴露当初的取舍对错；企业需要向前移植本地修改，并区分偶发性修改（如对 libc 例程的缺陷修复）与核心性修改（如为自家应用定制的调度器）；讲者强调缺陷修复一般不构成竞争优势——修补串口例程对以转发数据包为业的设备毫无商业价值，而携带本地补丁的成本随时间累积，把每一行改动都视作竞争资产是短视管理决策的根源。（YouTube EP66enuplpZxw，[801.9-914.8]、[1034.3-1089.2]，L1）　[订正：字幕源重锚，[起]837.21→801.9——“第一个版本怎么做都不难”“唯有第一次升级时才暴露当初取舍对错”实出 [806.5-834.1] 与 [903.1-914.8]，原锚未覆盖；“缺陷修复不构成竞争优势”“修补串口例程对转发数据包的设备毫无价值”“携带本地补丁成本累积”“每一行改动都要是竞争优势”的管理者心态实出 [1034.3-1089.2]]
+- 商业使用 FreeBSD 的核心风险集中在升级：第一个版本怎么做都不难，唯有第一次升级时才暴露当初的取舍对错；企业需要向前移植本地修改，并区分偶发性修改（如对 libc 例程的缺陷修复）与核心性修改（如为自家应用定制的调度器）；讲者强调缺陷修复一般不构成竞争优势——修补串口例程对以转发数据包为业的设备毫无商业价值，而携带本地补丁的成本随时间累积，把每一行改动都视作竞争资产是短视管理决策的根源。（YouTube EP66enuplpZxw，[801.9-914.8]、[1034.3-1089.2]，L1） [订正：字幕源重锚，[起]837.21→801.9——“第一个版本怎么做都不难”“唯有第一次升级时才暴露当初取舍对错”实出 [806.5-834.1] 与 [903.1-914.8]，原锚未覆盖；“缺陷修复不构成竞争优势”“修补串口例程对转发数据包的设备毫无价值”“携带本地补丁成本累积”“每一行改动都要是竞争优势”的管理者心态实出 [1034.3-1089.2]]
 - 讲者归纳四种跟踪策略的谱系与代价：抓取即用最简单且无需社区互动，但升级痛苦、串口设备命名等 API 变更屡屡踩坑、新特性与新硬件支持进不来；跟踪 stable 分支可在分支生命周期内演进多年、借社区 QA 力量、分支早期向上游推送补丁容易，但多分支维护开销大且跨 major 移植在所难免；镜像 FreeBSD 开发流程把痛苦摊成持续小额而非跳版巨痛并可与社区互哺，却重复了 release engineering 的工作、内部切点的分支难以获得社区帮助，IronPort 曾做成此法最终亦在 7 时代放弃；三年不跟踪再做大移植则被明确指为最差实践。（YouTube EP66enuplpZxw，[1100.9-1913.2]，L1）
 
 **史料**：
@@ -113,7 +113,7 @@ volume: 第14卷-商业生态与企业案例
 - 该期留存的一手史料线索：Slony-I 复制服务器（见 postgresql.org 文档）；3-Ware 硬件 RAID 的选型测试记录——标准为双盘系统拔出任一盘保持运行且重启后可从任一盘引导，而三年前主板板载 RAID 无一能可靠从第二盘引导；FAA 数据馈送延迟五分钟加处理约一分钟的时延结构；其个人机器上保留着 Microport Unix、Bell Technologies、SCO 时代直至 BSD 的连续文件时间戳，最早可追溯至 1980 年代末。（BSDTalk EP42，[316.28-375.46]，L1）
 - 该期留存的 2006 年一手商业生态事实：免费工作站版被多个开源项目以钩子或插件方式集成但依约不可再分发；样本提交邮箱 viruslab@f-prot.com 不经自动过滤人工受理，且与多家同行厂商共享样本，新样本通常在十至十五分钟内形成跨厂商定义；当事人自述 1999 年因 NT 音频劫持事件弃用 Windows，内部首席病毒研究员家用环境仅定期扫描而非常驻防护。（BSDTalk EP71，[675.46-1017.48]，L1）
 - 该期为 Allan Jude（Klara 的 FreeBSD 与 OpenZFS 工程经理）在 EuroBSDCon 2024 的亲历陈述，可引作一手史料者包括：boot from snapshot 机制已 upstream 约两年、mac_do 已入 base 系统、net-snmpd capsicum 化 upstream 后不再丢失 MIB 统计、Poudriere 新增仓库级 package audit 可整库排查已知漏洞包，以及 Poudriere 镜像可输出 ZFS 复制流以生成全新引导环境的当前能力。（YouTube EPDXX4HDd3vDQ，[2705.04-2731.64]，L1）
-- 该演讲附有配套论文与幻灯片 PDF（讲者现场提供获取网址），构成 FreeBSD 商业使用方法论的一手文本；讲者自述长期服务于多家采用 FreeBSD 的公司，援引 IronPort 放弃镜像模式、Cisco 分支维护靠营收支撑、Solaris 专职组织维持十年稳定分支等案例，并指认 John Baldwin 所撰基于 Subversion 与 SVK 的 FreeBSD 商业跟踪指南作为工具文献。（YouTube EP66enuplpZxw，[28.0-39.8]、[93.1-130.3]、[1847.4-1864.0]、[1929.3-1948.7]、[2544.4-2600.5]、[2652.2-2668.4]，L1）　[订正：字幕源重锚，本条所述各项分处六处：自述长期承接多家 FreeBSD 集成项目 [28.0-39.8]、配套论文与幻灯片 PDF 及网址获取方式 [93.1-130.3]、IronPort 做成镜像法却在 7 时代放弃 [1847.4-1864.0]、John Baldwin 基于 Subversion 与 SVK 的 FreeBSD 商业跟踪指南 [1929.3-1948.7]、Solaris 十年期稳定分支与专职 API 测试组织 [2544.4-2600.5]、Cisco 分支维护靠营收支撑 [2652.2-2668.4]；原锚仅覆盖 PDF/论文一句]
+- 该演讲附有配套论文与幻灯片 PDF（讲者现场提供获取网址），构成 FreeBSD 商业使用方法论的一手文本；讲者自述长期服务于多家采用 FreeBSD 的公司，援引 IronPort 放弃镜像模式、Cisco 分支维护靠营收支撑、Solaris 专职组织维持十年稳定分支等案例，并指认 John Baldwin 所撰基于 Subversion 与 SVK 的 FreeBSD 商业跟踪指南作为工具文献。（YouTube EP66enuplpZxw，[28.0-39.8]、[93.1-130.3]、[1847.4-1864.0]、[1929.3-1948.7]、[2544.4-2600.5]、[2652.2-2668.4]，L1） [订正：字幕源重锚，本条所述各项分处六处：自述长期承接多家 FreeBSD 集成项目 [28.0-39.8]、配套论文与幻灯片 PDF 及网址获取方式 [93.1-130.3]、IronPort 做成镜像法却在 7 时代放弃 [1847.4-1864.0]、John Baldwin 基于 Subversion 与 SVK 的 FreeBSD 商业跟踪指南 [1929.3-1948.7]、Solaris 十年期稳定分支与专职 API 测试组织 [2544.4-2600.5]、Cisco 分支维护靠营收支撑 [2652.2-2668.4]；原锚仅覆盖 PDF/论文一句]
 
 **史观**：
 
@@ -135,27 +135,27 @@ volume: 第14卷-商业生态与企业案例
 - 总纲17 证明世界先于解释和改造世界：Lehenbauer 的可靠性主张全部建立在自设测试之上：RAID 1 使磁盘可靠性较无冗余提升千倍、ECC 内存较非 ECC 提升百万倍的判断，均以其亲手拔盘、重启、引导验证为准，而非厂商参数；这种以可重复实测证明替代宣传解释的工程取向，正是其选型纪律的核心。（BSDTalk EP42，[743.12-807.10]，L1）
 - 总纲5 没有必然性，只有偶然性：当事人给出从业者的安全判断：95% 到 98% 的感染通过不做愚蠢操作即可避免，多数感染源于用户未在正确时机做正确的事；UNIX 平台病毒稀少并非系统的必然属性，而是其在生态中居于服务器端、用户行为与市场位置等偶然条件共同造成——平台的免疫形象建立在生态偶然性之上。（BSDTalk EP71，[914.88-990.30]，L1）
 - 总纲10 动手者创造历史：讲者倡导的 fork 维护之道——从一开始就按可上游化设计改动、适度泛化、直接提交至 FreeBSD current 并从那里消费、把上游反馈吸收进最初版本而非事后重写、用 current 持续测试并在问题新鲜时上报——显示 appliance 厂商与系统演进的命运由动手者的持续合入决定：mac_do、capsicum 化的 net-snmpd 等改进皆由一线工程师直接 landed 进 base，商用 fork 的长期存续依赖这种动手者网络而非企业名分。（YouTube EPDXX4HDd3vDQ，[2544.559-2597.96]，L1）
-- 总纲9 经验优先：讲者把项目治理选择还原为资源约束下的权衡：多分支长期维护等于把同一件事做上七遍、稀释有限资源，Solaris 能以十年期稳定分支与专职 API 测试组织支撑客户，靠的是持续的大额营收，而 FreeBSD 没有那样的资金管道，故只能在分支数量与维护深度上作战略性取舍；其方法论建议多来自其亲历与所见公司的商业部署试错经验。（YouTube EP66enuplpZxw，[2232.8-2290.9]、[2554.1-2676.2]，L1）　[订正：原“其方法论的每一项建议均来自亲身商业部署的试错经验”→“其方法论建议多来自其亲历与所见公司的商业部署试错经验”，转写仅谓四种方案系“其所见公司所用”（[1113.4-1124.1]）、镜像法系转述 IronPort 案例（[1849.3-1864.0]），亲历方法仅见于问答自述（[2232.8-2290.9]），无“每一项均”之据，内容复核]
+- 总纲9 经验优先：讲者把项目治理选择还原为资源约束下的权衡：多分支长期维护等于把同一件事做上七遍、稀释有限资源，Solaris 能以十年期稳定分支与专职 API 测试组织支撑客户，靠的是持续的大额营收，而 FreeBSD 没有那样的资金管道，故只能在分支数量与维护深度上作战略性取舍；其方法论建议多来自其亲历与所见公司的商业部署试错经验。（YouTube EP66enuplpZxw，[2232.8-2290.9]、[2554.1-2676.2]，L1） [订正：原“其方法论的每一项建议均来自亲身商业部署的试错经验”→“其方法论建议多来自其亲历与所见公司的商业部署试错经验”，转写仅谓四种方案系“其所见公司所用”（[1113.4-1124.1]）、镜像法系转述 IronPort 案例（[1849.3-1864.0]），亲历方法仅见于问答自述（[2232.8-2290.9]），无“每一项均”之据，内容复核]
 
 **辨析**：
 
-- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
-- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。 [存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。 [考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
 - 当事人对 Linux 与 BSD 用户态差异的批评：这些差异多数无人能说明为何存在或是否重要，却每一个都构成迁移路障——wc 输出带前导空格而 GNU 版没有、make 与 GNU make 不兼容常使 Node 原生模块编译爆掉、GNU 工具新增旗标抢占 BSD 同字母旗标（sort 例）、cp -R 尾部斜杠语义差异曾使其从 Linux 转到 Mac 时脚本大面积失效。建议提供 GNU 工具优先的安装路径或易装的 Linux 用户态层以降低新用户门槛；bash 默认 shell 因 ports 不得触碰 base 的规则而受阻，与 illumos 社区拒绝适应导致采用度落后相对照；一切为平滑过渡做的投入都将换来更大的社区。（BSD Now EP58，[1617.26-2031.17]，L1）
 - 社区文化比较的当事人评价：BSD 邮件列表上的讨论相较 Linux 界更像严肃技术专业人士之间的理性辩论；主持人引述某调查显示 BSD 开发者平均年龄比 Linux 开发者大十岁，并认为这与讨论形态相关。George 称其习惯的 illumos 世界信息更难寻，FreeBSD 的文档与 Google 可寻性远优于 illumos 文档，“能用 Google 解决问题在这个年代至关重要”。（BSD Now EP58，[2032.53-2160.41]，L1）
 - 上游重构与下游维护成本的当期实例：OpenSSH 6.7 的代码重构破坏了 FreeBSD port 携带的大量补丁，port 维护者 Brian Drewery 表示需要数日逐一整理方可更新，宁可延迟也不发布行为不明的安全组件；同时移除 TCP wrappers 支持将波及依赖它的 denyhosts 类工具。这一案例具体呈现了大型上游重构向下游 port 体系传导的时滞与风险。（BSD Now EP58，[2691.64-2823.43]，L2）
-- Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。　[存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
-- UFS 损坏案悬而未决：FreeBSD 10.0-RELEASE-p3 32 位、OpenStack 虚拟机上的轻载系统（nginx 与 postfix 均运行于 jail）遭未知事件致文件系统不可修复损坏，loader 报 can't load kernel，/var/log 大部分丢失且无异常记录；主持人无法定位成因，倾向判定为 bug 而非被掩盖的入侵，建议核对 fsck 输出、启用 UFS journaling（10 的安装方式默认已开）与 crash dump 取证、改远程日志；该案同期未有结论，32 位 UFS 生产系统的脆弱性于此可见。　[存疑脚注] 损坏成因在该期录制时仍未确定，主持人对 bug 抑或入侵的判断仅为推测（BSD Now EP40，[2628.02-2883.82]，L2）
-- 本期转写延续双声道交错重复的缺陷；FlightAware 受访者姓名转写为 Carl Liambauer 与 Carl Lee and Bauer 等，据访谈内容（FlightAware 联合创始人、Tcl 社区背景、386BSD 补丁汇总经历）当为 Karl Lehenbauer，引用人名须核对原始音频；iX 员工姓名 Craig Rod-Reeder、Dan Langille（转写作 Danling Guilf）等亦存在转写失真。　[存疑脚注] 受访者及若干人名的转写拼写不可靠，须经原始音频与当期 show notes 复核（BSD Now EP40，[841.92-848.82]，L4）
-- White 承认与 Windows 逐 bug 兼容仅是玩笑，实际问题几乎都在 Wine 自身代码，但 DirectX 映射 OpenGL 后约七成原生性能、ATI 显卡驱动难用、BSD 市场规模不足等陈述均出自公司立场，需以 Wine Bugzilla 与兼容中心投票记录交叉验证。　[存疑脚注] 性能与市场数据为受访者商业立场陈述，需对照 Wine Bugzilla 与 CodeWeavers 兼容中心记录复核。（BSDTalk EP148，[356.60-460.00]，L1）
-- 转写存在数字与术语缺陷：温尼伯数据量先后记为 70 与 80 TB、多处专名误转（3ware、Soekris、OS X、softflowd），引用须以原始音频核对；OpenBSD 文件服务性能不足的判断出自其以 Samba 为主的特定负载，属个案经验，不宜泛化为对 OpenBSD 存储栈的整体评价。　[存疑脚注] 数据规模转写不一致，性能判断为单一个案负载经验。（BSDTalk EP151，[124.12-146.84]，L4）
-- 转写将企业操作系统多样化动机记为 have electricity in our operating systems，按上下文应为 diversity 的误识别；此句承载双栈设计动因的关键表述，引用前须以原始录音核对。[存疑脚注] 转写音误，原文待核。　[存疑脚注] electricity 系 diversity 的转写音误推断，引用该句须回溯原始音频确认（BSDTalk EP230，[251.37-262.03]，L5）
-- VeriSign 生产环境中 FreeBSD 的使用深度未经量化：访谈未给出部署规模、负载特征与 FreeBSD 版本，企业对 BSD 的实际依赖仅有双栈承诺的间接表述，任何定量引用均须另行考据。[存疑脚注] 单一来源且无系统细节。　[存疑脚注] 企业内 FreeBSD 部署规模与版本无当事方数据佐证，仅可作定性使用（BSDTalk EP230，[262.04-290.51]，L4）
-- DiBona 自承不了解 BSD 运行 Linux 二进制兼容层的实际状态，显示即便开源企业负责人对 BSD 技术生态亦存认知盲区；其“BSD 许可为全球第二大流行许可”为个人估计而非统计结论。[存疑脚注] 该排序无出处，仅作 2006 年企业认知样本记录。　[存疑脚注] BSD 许可流行度排序系 DiBona 口头估计，无统计数据佐证。（BSDTalk EP41，[646.06-668.74]，L4）
-- 对 BSD 的批评与敬意并存：Lehenbauer 抱怨会撞上奇怪内核限制（共享内存相关转换表的尺寸难觅文档），须翻检一年前的邮件列表自行揣测；承认其他发行版的安装流程更精致；但赞其发布工程从未放行早期 Linux 曾出现的卸载即毁文件系统一类的缺陷，并在 Linux 占尽 mind share 与公司投入的 2006 年，仍称许 Berkeley 阵营的强健，特别致敬 Theo de Raadt 与 NetBSD、OpenBSD 的工作。[考据脚注] 其所称早期 Linux umount 缺陷细节未经核实，系当事人回忆。　[考据脚注] 早期 Linux umount 缺陷的具体所指未核实，仅作当事人 2006 年回忆记录。（BSDTalk EP42，[943.92-1068.48]，L1）
-- 间谍软件与广告软件的检测默认关闭：当事人称 spyware 已成为法律术语，同一远程管理工具对不同主体可以是实用软件或间谍软件，故新引擎虽具备检测能力但须用户显式开启，公司规避法律风险。[存疑脚注] 此为当事企业 2006 年的商业与法律立场，属单一来源陈述，此后各国间谍软件立法与产业惯例已发生变化。　[存疑脚注] 间谍软件法律定性及默认关闭策略为当事人单方陈述，未见其他来源交叉验证（BSDTalk EP71，[771.82-820.20]，L4）
-- 滚动重叠重建后新转写已为单轨顺排，段落乱序交错缺陷不再存在，卡片时间戳均经逐段核对复原；语音转写致专有名词变形（FreeBSD、Poudriere、Klara 等被转作他形，mac_do 作者名转写不完整，一处事件类比所指无法辨识），引用时须以演讲视频与项目文档校正；Joyent 限制云内 ZFS receive 来源的先例与 CrowdStrike 引发的批量启动失败事件均为讲者转述（已获新转写逐字证实为演讲原话）；定制 immutable ZFS 模块与专用 loader 属 Klara 商业定制实现，公开文档有限。[订正：原“本转写段落乱序交错”之转写缺陷经滚动重叠重建后已不存在]　[存疑脚注] 转写专有名词多处失真（仍见于自动转写）、Joyent 与 CrowdStrike 事件为单一来源转述、商业定制实现细节未公开，均待验证。（YouTube EPDXX4HDd3vDQ，[195.159-199.0]，L4）
-- 问答环节以“一切完美，去问 Theo”调侃 OpenBSD 的单分支模型，同时承认该模型仍被抱怨 API 变更过多、偶发不稳，此类阵营内部的互相评价须与 OpenBSD 官方发布记录核对后使用；讲者对 Solaris 的转述出自竞争语境，亦需比对 Sun/Oracle 的支持政策文本。　[订正：原“转写为双轨时间戳交错”→滚动重叠重建后新转写（rev6 逐字复核）已为单轨顺排、语句连贯，双轨交错缺陷不复存在，内容复核]　[存疑脚注] 人名听写多误（Warner wash 应为 Warner Losh、food BSD 应为 FreeBSD，“food BSD”仍见于新转写 [1931.7-1941.8]），引用具体表述仍须回原视频核对。（YouTube EP66enuplpZxw，[2494.2-2557.5]，L2）
+- Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。 [存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
+- UFS 损坏案悬而未决：FreeBSD 10.0-RELEASE-p3 32 位、OpenStack 虚拟机上的轻载系统（nginx 与 postfix 均运行于 jail）遭未知事件致文件系统不可修复损坏，loader 报 can't load kernel，/var/log 大部分丢失且无异常记录；主持人无法定位成因，倾向判定为 bug 而非被掩盖的入侵，建议核对 fsck 输出、启用 UFS journaling（10 的安装方式默认已开）与 crash dump 取证、改远程日志；该案同期未有结论，32 位 UFS 生产系统的脆弱性于此可见。 [存疑脚注] 损坏成因在该期录制时仍未确定，主持人对 bug 抑或入侵的判断仅为推测（BSD Now EP40，[2628.02-2883.82]，L2）
+- 本期转写延续双声道交错重复的缺陷；FlightAware 受访者姓名转写为 Carl Liambauer 与 Carl Lee and Bauer 等，据访谈内容（FlightAware 联合创始人、Tcl 社区背景、386BSD 补丁汇总经历）当为 Karl Lehenbauer，引用人名须核对原始音频；iX 员工姓名 Craig Rod-Reeder、Dan Langille（转写作 Danling Guilf）等亦存在转写失真。 [存疑脚注] 受访者及若干人名的转写拼写不可靠，须经原始音频与当期 show notes 复核（BSD Now EP40，[841.92-848.82]，L4）
+- White 承认与 Windows 逐 bug 兼容仅是玩笑，实际问题几乎都在 Wine 自身代码，但 DirectX 映射 OpenGL 后约七成原生性能、ATI 显卡驱动难用、BSD 市场规模不足等陈述均出自公司立场，需以 Wine Bugzilla 与兼容中心投票记录交叉验证。 [存疑脚注] 性能与市场数据为受访者商业立场陈述，需对照 Wine Bugzilla 与 CodeWeavers 兼容中心记录复核。（BSDTalk EP148，[356.60-460.00]，L1）
+- 转写存在数字与术语缺陷：温尼伯数据量先后记为 70 与 80 TB、多处专名误转（3ware、Soekris、OS X、softflowd），引用须以原始音频核对；OpenBSD 文件服务性能不足的判断出自其以 Samba 为主的特定负载，属个案经验，不宜泛化为对 OpenBSD 存储栈的整体评价。 [存疑脚注] 数据规模转写不一致，性能判断为单一个案负载经验。（BSDTalk EP151，[124.12-146.84]，L4）
+- 转写将企业操作系统多样化动机记为 have electricity in our operating systems，按上下文应为 diversity 的误识别；此句承载双栈设计动因的关键表述，引用前须以原始录音核对。[存疑脚注] 转写音误，原文待核。 [存疑脚注] electricity 系 diversity 的转写音误推断，引用该句须回溯原始音频确认（BSDTalk EP230，[251.37-262.03]，L5）
+- VeriSign 生产环境中 FreeBSD 的使用深度未经量化：访谈未给出部署规模、负载特征与 FreeBSD 版本，企业对 BSD 的实际依赖仅有双栈承诺的间接表述，任何定量引用均须另行考据。[存疑脚注] 单一来源且无系统细节。 [存疑脚注] 企业内 FreeBSD 部署规模与版本无当事方数据佐证，仅可作定性使用（BSDTalk EP230，[262.04-290.51]，L4）
+- DiBona 自承不了解 BSD 运行 Linux 二进制兼容层的实际状态，显示即便开源企业负责人对 BSD 技术生态亦存认知盲区；其“BSD 许可为全球第二大流行许可”为个人估计而非统计结论。[存疑脚注] 该排序无出处，仅作 2006 年企业认知样本记录。 [存疑脚注] BSD 许可流行度排序系 DiBona 口头估计，无统计数据佐证。（BSDTalk EP41，[646.06-668.74]，L4）
+- 对 BSD 的批评与敬意并存：Lehenbauer 抱怨会撞上奇怪内核限制（共享内存相关转换表的尺寸难觅文档），须翻检一年前的邮件列表自行揣测；承认其他发行版的安装流程更精致；但赞其发布工程从未放行早期 Linux 曾出现的卸载即毁文件系统一类的缺陷，并在 Linux 占尽 mind share 与公司投入的 2006 年，仍称许 Berkeley 阵营的强健，特别致敬 Theo de Raadt 与 NetBSD、OpenBSD 的工作。[考据脚注] 其所称早期 Linux umount 缺陷细节未经核实，系当事人回忆。 [考据脚注] 早期 Linux umount 缺陷的具体所指未核实，仅作当事人 2006 年回忆记录。（BSDTalk EP42，[943.92-1068.48]，L1）
+- 间谍软件与广告软件的检测默认关闭：当事人称 spyware 已成为法律术语，同一远程管理工具对不同主体可以是实用软件或间谍软件，故新引擎虽具备检测能力但须用户显式开启，公司规避法律风险。[存疑脚注] 此为当事企业 2006 年的商业与法律立场，属单一来源陈述，此后各国间谍软件立法与产业惯例已发生变化。 [存疑脚注] 间谍软件法律定性及默认关闭策略为当事人单方陈述，未见其他来源交叉验证（BSDTalk EP71，[771.82-820.20]，L4）
+- 滚动重叠重建后新转写已为单轨顺排，段落乱序交错缺陷不再存在，卡片时间戳均经逐段核对复原；语音转写致专有名词变形（FreeBSD、Poudriere、Klara 等被转作他形，mac_do 作者名转写不完整，一处事件类比所指无法辨识），引用时须以演讲视频与项目文档校正；Joyent 限制云内 ZFS receive 来源的先例与 CrowdStrike 引发的批量启动失败事件均为讲者转述（已获新转写逐字证实为演讲原话）；定制 immutable ZFS 模块与专用 loader 属 Klara 商业定制实现，公开文档有限。[订正：原“本转写段落乱序交错”之转写缺陷经滚动重叠重建后已不存在] [存疑脚注] 转写专有名词多处失真（仍见于自动转写）、Joyent 与 CrowdStrike 事件为单一来源转述、商业定制实现细节未公开，均待验证。（YouTube EPDXX4HDd3vDQ，[195.159-199.0]，L4）
+- 问答环节以“一切完美，去问 Theo”调侃 OpenBSD 的单分支模型，同时承认该模型仍被抱怨 API 变更过多、偶发不稳，此类阵营内部的互相评价须与 OpenBSD 官方发布记录核对后使用；讲者对 Solaris 的转述出自竞争语境，亦需比对 Sun/Oracle 的支持政策文本。 [订正：原“转写为双轨时间戳交错”→滚动重叠重建后新转写（rev6 逐字复核）已为单轨顺排、语句连贯，双轨交错缺陷不复存在，内容复核] [存疑脚注] 人名听写多误（Warner wash 应为 Warner Losh、food BSD 应为 FreeBSD，“food BSD”仍见于新转写 [1931.7-1941.8]），引用具体表述仍须回原视频核对。（YouTube EP66enuplpZxw，[2494.2-2557.5]，L2）
 
 **文献**：
 
@@ -250,3 +250,265 @@ volume: 第14卷-商业生态与企业案例
 
 据〔Fall 2024 FreeBSD Summit〕讲者口述：ktls 是仅 FreeBSD 13.1 才出现的功能。（YouTube EPuFBUtgDyMvA，[1386.919-1395.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1510 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1510`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：其所在的 Netflix 把流媒体云部署在亚马逊平台上，同时另有一套自有 CDN 跑在 FreeBSD 之上；他随后要做的主要说明都基于其 Linux 云，但也同样用火焰图去分析 FreeBSD。（YouTube EPD53T1Ejig1Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1511 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1511`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：他们 CDN 组在 FreeBSD 上使用一种称为 CPI 火焰图的差分火焰图变体，用来显示每一个栈帧的每指令周期数，从而使分析者不只看到最宽的帧，还能看出该帧之所以宽是因为指令密集执行还是被周期／访存所阻滞。（YouTube EPD53T1Ejig1Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1567 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1567`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Supporting FreeBSD in the Field（讲者 Allan Jude）〕讲者口述：企业选用 FreeBSD 的首要因素是稳定性——在其上构建的服务跨版本升级后 API 与工作方式不会被换掉，与 Linux 上 API 被废弃、符号改为 GPL 专属的处境形成对照。（YouTube EPN1-sViicQvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1568 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1568`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Supporting FreeBSD in the Field（讲者 Allan Jude）〕讲者口述：一家消费电子厂商的客房视频点播设备原基于 CentOS，从 CentOS 6 迁到 CentOS 7 时须把服务与脚本全部改写以改用 systemd；此后 Red Hat 宣布 CentOS 7 将不再提供长期支持。（YouTube EPN1-sViicQvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1569 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1569`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Supporting FreeBSD in the Field（讲者 Allan Jude）〕讲者口述：为植入式医疗器械厂商在 ZFS 中加入只读（readon）标志，设定后无法关闭；该标志仅由 ZFS 内核模块强制，配合 Secure Boot 使硬件无法加载不执行该限制的 ZFS 模块，从而封死篡改路径。（YouTube EPN1-sViicQvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1570 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1570`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Supporting FreeBSD in the Field（讲者 Allan Jude）〕讲者口述：FreeBSD 的 DHCP 客户端被扩展出按接口忽略特定选项的配置项，使第二网卡只取 IP 地址而不覆盖 DNS 服务器与默认路由；该选项亦用于缓解公共 Wi-Fi 上伪 DHCP 服务器借静态路由选项劫持 VPN 流量的漏洞。（YouTube EPN1-sViicQvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1645 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1645`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Running BSD on AWS：Julien Simon 与 Nicolas David 演讲〕讲者口述：讲者判断 FreeBSD 的构建过程并行度不足，无法充分利用 128 个 CPU——大量顺序步骤只能在单核上运行，浪费了大量时间。（YouTube EP2F7XU5sMh4c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1646 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1646`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Running BSD on AWS：Julien Simon 与 Nicolas David 演讲〕讲者口述：讲者称 FreeBSD 已有改进该问题的在研工作（转写音作 "work in head"，当为 work in head/in-tree 在研代码），可使 11.1 的内核编译做到 8 分 31 秒；但他强调这是内核层面的可扩展性问题，而非仅仅构建流程的问题。（YouTube EP2F7XU5sMh4c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1684 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1684`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude 在 EuroBSDCon 2024 的演讲〕讲者口述：Poudriere 原是 FreeBSD 的套件构建工具，后因其交叉编译能力，成为构建各种整机镜像的最简便方式——无论是 Raspberry Pi、虚拟机镜像，还是 Amazon、Google、Azure 的云镜像。（YouTube EPDXX4HDd3vDQ，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1685 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1685`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude 在 EuroBSDCon 2024 的演讲〕讲者口述：FreeBSD 安全启动目前的短板是签名只覆盖 loader.efi——主板固件看到 loader.efi、确认其签名在其信任数据库中、判定该文件未被篡改后予以执行，而整机的其余部分并不在这层签名范围之内。（YouTube EPDXX4HDd3vDQ，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1686 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1686`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude 在 EuroBSDCon 2024 的演讲〕讲者口述：使用 ZFS boot once 时，会在 ZFS 池首部留下一条标记，指示引导器“仅下一次、且只此一次”改启动新的引导环境，随后引导器自行抹去该标记；一旦断电重启，系统即回落到原先那个仍正常工作的默认引导环境，从而构成一条失败可回滚的升级路径。（YouTube EPDXX4HDd3vDQ，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1687 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1687`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude 在 EuroBSDCon 2024 的演讲〕讲者口述：FreeBSD 的 mac_portacl MAC 模块允许以 sysctl 设定一份“端口—用户 ID”元组列表，使指定的非 root 用户也能绑定 53 端口，从而让 DNS 服务器不再需要 root 权限。（YouTube EPDXX4HDd3vDQ，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1765 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1765`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2024（渥太华大学）Phillip Vuchetich 演讲〕讲者口述：FreeBSD 因其拥有的结构、发布计划与基础设施，比其他不具备同样条件的操作系统更适合预期服役数十年的小型设备。（YouTube EPH-ROhtNl8v4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1766 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1766`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2024（渥太华大学）Phillip Vuchetich 演讲〕讲者口述：系统必须长期一致地工作，任何变更都须有意为之、有方向、有规划，故 API 变更这类“惊扰”对一个须支持同一批设备五至十年的操作系统而言是不受欢迎的。（YouTube EPH-ROhtNl8v4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1767 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1767`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2024（渥太华大学）Phillip Vuchetich 演讲〕讲者口述：ZFS 在他所知范围内是最便于从灾难恢复角度管理的东西：某处发生硬件故障时，可借其复制能力回到已知良好状态。（YouTube EPH-ROhtNl8v4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1768 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1768`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2024（渥太华大学）Phillip Vuchetich 演讲〕讲者口述：jails 对管理很有用，在他看来比虚拟机更适合本项目用途；PF 作为防火墙“当然来自 OpenBSD”。（YouTube EPH-ROhtNl8v4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1780 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1780`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis《FreeBSD, Building a Computing Cluster》讲者口述〕：该集群起步时选用 FreeBSD 4，此后多年一直运行于 FreeBSD 4 上，在 5.x 系列期间始终没有升级，理由是对该用户群几乎没有可获得的收益，直到 FreeBSD 6 才迁移。（YouTube EPBpsRb9fJ4Ds，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1781 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1781`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis《FreeBSD, Building a Computing Cluster》讲者口述〕：讲者口述 FreeBSD 4 在该集群上长期存在的主要问题是没有 SMP 支持与缺少 threading，使应用无法把线程用作获得更好性能的手段，并令其中一个在研应用不得不采用其不想要的计算模型。（YouTube EPBpsRb9fJ4Ds，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1782 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1782`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis《FreeBSD, Building a Computing Cluster》讲者口述〕：讲者口述集群使用相当标准的 FreeBSD 系统，唯一较大的改动是改造 Warner Wash 为嵌入式设备准备闪存磁盘所写的 disprep 脚本，增补更多分区类型与灵活性，用于集群节点的磁盘准备。（YouTube EPBpsRb9fJ4Ds，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1783 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1783`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis《FreeBSD, Building a Computing Cluster》讲者口述〕：因沿用旧脚本式升级约三四年后已无法辨识自己做过的改动，讲者口述改用 FreeBSD 6 配套的新做法——全程脚本化，每次升级都重建一份全新映像并完整重编，以把全部修改记录下来。（YouTube EPBpsRb9fJ4Ds，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1933 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1933`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NETASQ 与 BSD 成功案例分享（Yvan Vanhullebus）〕讲者口述：NETASQ 公司约有十年历史，起步时只有五个人，首款产品 F10（设备 32MB RAM）即运行整套 FreeBSD 文件系统与操作系统，首版就提供无状态分组过滤（firewall）。（YouTube EPTk6YO0eVDZo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1934 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1934`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NETASQ 与 BSD 成功案例分享（Yvan Vanhullebus）〕讲者口述：NETASQ 产品线仍运行‘相当完整’的 FreeBSD，已着手切换 FreeBSD 6、次年交付客户；上年出货量大，产品销往三十余个国家。（‘free birthday’为 FreeBSD 的 ASR 误写。）（YouTube EPTk6YO0eVDZo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1935 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1935`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NETASQ 与 BSD 成功案例分享（Yvan Vanhullebus）〕讲者口述：对 UTM 设备而言许可证至关重要——NETASQ 有时可用 GPL 风格程序（在 GPLv3 之前），但自有代码做了修改却无法回传上游，成为不采用 GPL 的理由。（‘gpl’‘version three’为 ASR 误写。）（YouTube EPTk6YO0eVDZo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1936 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1936`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NETASQ 与 BSD 成功案例分享（Yvan Vanhullebus）〕讲者口述：选择 FreeBSD 的关键理由是 FreeBSD 网络栈长期表现良好，netgraph 与 mpd 对若干协议很有价值；最初仅用 ipf 即可快速交付能做到基础防护的产品。（‘net graph’为 netgraph 的 ASR 误写。）（YouTube EPTk6YO0eVDZo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2027 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2027`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022《FreeBSD optimizations used by Netflix serving at 800Gb/s》讲者 Drew Gallatin〕讲者口述：sendfile 大约出现在 1990 年代：把文件描述符与套接字交给内核，让内核从该文件描述符经由该套接字发送指定数量的数据，好处是没有数据进入用户空间，Web 服务器甚至不必查看数据本身。（YouTube EP36qZYL5RlgY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2028 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2028`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022《FreeBSD optimizations used by Netflix serving at 800Gb/s》讲者 Drew Gallatin〕讲者口述：async sendfile 由来自 nginx、FreeBSD 与 Netflix 的人共同提出，它让 sendfile 变成‘发射后不管’（fire and forget）。（YouTube EP36qZYL5RlgY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2029 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2029`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022《FreeBSD optimizations used by Netflix serving at 800Gb/s》讲者 Drew Gallatin〕讲者口述：kernel TLS 的做法是把加密整体移入内核，这样做的全部理由是为了保全 sendfile；讲者称过去三四年每场大会都在讲这件事。（YouTube EP36qZYL5RlgY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2030 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2030`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022《FreeBSD optimizations used by Netflix serving at 800Gb/s》讲者 Drew Gallatin〕讲者口述：对 Netflix 这一负载而言，FreeBSD UMA 的每 CPU 页缓存是最重要的优化之一；讲者认为它最初构想于 Netflix，也许也在别处被独立构想过，并由 Randall Stewart 与 Scott Long 写下了这个 UMA 之前的手写版本。（YouTube EP36qZYL5RlgY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2082 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2082`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit 2014 公司闪电演讲〕讲者口述：其所在公司为硅谷最老牌初创（转写音作“the oldest start in Valley”），系 BSDI 分流出身（outgrowth of BDI），迄今仍有 1992 年前后的 BSDI 老员工在其任职；而 BSDI 曾立志成为“下一个 Sun”（the next Sun）。（YouTube EPLmbI7F7XTTc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2083 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2083`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit 2014 公司闪电演讲〕讲者口述：该硬件部门被命名为“Unix systems”，其讲者称它“大概被诉讼整垮了”（they probably got sued out of existence），此后改名，数月之后即告崩溃，一批员工以约 50 美元买下，时约 2002 年。（YouTube EPLmbI7F7XTTc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2084 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2084`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit 2014 公司闪电演讲〕讲者口述：该公司于 2010 年前后取得一个名为 freas 的存储设备项目——该项目构建于 prevc 之上、形同可安装的 Web 基存储设备，原计划转向 Linux；讲者自问“那时就有了 ZFS 支持，何时就有了 ZFS 支持”（转写音作 just got ZFS support at that point when did have ZFS support），并称社区大表反对（Community had a big outcry），项目创始人遂将其赠予该公司。（YouTube EPLmbI7F7XTTc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2085 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2085`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit 2014 公司闪电演讲〕讲者口述：该公司持续向 OpenZFS 与 iLLumos（转写音作 lumos）提交大量改动，约有 5 名开发者至少半时投入 ZFS 开发，讲者称其中多数人当天就在会场上；过去约 3 年间，该公司员工累计逾 140 次提交、约 28,000 行代码。（YouTube EPLmbI7F7XTTc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2253 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2253`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh - Using FreeBSD in a Commercial Setting 演讲〕讲者口述：讲者自陈姓名作‘Warner wash’（转写音，即标题所载 Warner Losh），本场主题为不同企业把 FreeBSD 用于其商业产品中的经验；讲者当时任职于 iXsystems（转写音作 IX systems）从事 FreeNAS 工作，此前还做过多个把 FreeBSD 整合进产品的工程。（YouTube EP66enuplpZxw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2254 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2254`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh - Using FreeBSD in a Commercial Setting 演讲〕讲者口述：讲者概述 FreeBSD 的分支与发布机制——代码先进入主干 current，经一段时间后合入稳定分支，再通过完整 QA 周期从稳定分支发布；正式版发布后 QA 仍在继续，重大错误与安全问题以补丁形式打在发布版本之上。（YouTube EP66enuplpZxw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2255 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2255`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh - Using FreeBSD in a Commercial Setting 演讲〕讲者口述：讲者给出 FreeBSD 发布节奏的理论口径——按理论每 18 至 24 个月出一个发布，每条分支的活跃期约为两年。（YouTube EP66enuplpZxw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2256 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2256`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh - Using FreeBSD in a Commercial Setting 演讲〕讲者口述：讲者在答疑环节解释为何企业跳过主版本升级只能渐进推进——两次主版本发布之间的跨度本身就是很大的一次跳跃，跨过一个主版本更是巨大的跳跃，这从本质上就极难；而过往的问题在于 current 分支非常不稳定，转写音作 five decks day（即 FreeBSD 5.x 时期），对方答“是的，正因如此我们才开始用 perforce”。（YouTube EP66enuplpZxw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2280 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2280`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD based high density filers 讲者 Bapt 口述〕讲者口述：团队为 filer 选型 FreeBSD，理由是 FreeBSD 在存储上长期声誉强、具备现代 ZFS 支持、带有 DTrace，并且自 FreeBSD 10 起内置 ctld，他认为这是一个功能完整的 iSCSI target 守护进程，且工作方式很贴近他们的需求。（YouTube EP6iDpF6Uo0RM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2281 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2281`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD based high density filers 讲者 Bapt 口述〕讲者口述：FreeBSD 没有 MDB，但在其公司实际用过的 MDB 场景大多可用 FreeBSD 的 sysctl 满足。（YouTube EP6iDpF6Uo0RM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2282 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2282`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD based high density filers 讲者 Bapt 口述〕讲者口述：他称 FreeBSD 的缺点之一是缺乏 multiboot 支持，因此无法契合其无人值守 diskless 启动方案。（YouTube EP6iDpF6Uo0RM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2283 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2283`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD based high density filers 讲者 Bapt 口述〕讲者口述：他把 multiboot 归为长期存在的规范，称 Linux、NetBSD、illumos 都遵循它，而 FreeBSD 是他所知唯一未采用的（或许可 OpenBSD 也未采用）。（YouTube EP6iDpF6Uo0RM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2401 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2401`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit〕讲者口述：FreeBSD 云化合作的时间线始于 2020 年 FreeBSD arm64 转入 tier one 支持级别，此后社区为这些镜像的生产、维护与标准化发布管线提供更强一级的支持。（YouTube EPBPc_TEiUoCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2402 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2402`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit〕讲者口述：过去几年团队推动把 FreeBSD 镜像送入云上，并于 2022 年在 Ampere A1 实例（转写音作 Imperial one）上完成验证；该年 13.1 版发布已进入 OCI marketplace。（YouTube EPBPc_TEiUoCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2403 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2403`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit〕讲者口述：Ampere 当年向 FreeBSD Foundation 捐赠了数台新平台，供 FreeBSD 开发者使用与开发。（YouTube EPBPc_TEiUoCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2404 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2404`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit〕讲者口述：FreeBSD 团队与 Dave Colbert 完成了使能工作，让 FreeBSD 实例获得与 Linux 实例同等的 cloud-init 元数据能力（首启时可调整 metadata）。（YouTube EPBPc_TEiUoCg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2420 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2420`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021年11月 FreeBSD Vendor Summit〕讲者口述：演讲者自名 Adam Stroll，为 A-Team 公司的总裁兼运营总监，并称该公司是一家“freebsd shop”（以 FreeBSD 为主业的店）。（YouTube EPE2BJ_FOJhDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2421 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2421`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021年11月 FreeBSD Vendor Summit〕讲者口述：其自述自 90 年代初即个人使用 FreeBSD，当年经 28.8 调制解调器做 FTP 安装：先下载 1.4MB 软盘镜像，再由安装程序下载其余部分。（YouTube EPE2BJ_FOJhDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2422 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2422`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021年11月 FreeBSD Vendor Summit〕讲者口述：其认为 FreeBSD 在引导与分区上相较 Linux 有清晰优势：分区并格式化（UFS／ZFS 皆可）后，直接 cp -rp 把 FreeBSD 系统拷上去即可启动；该能力被用于在云厂商 VM、jail、bhyve VM 与物理机之间经常搬移系统。（YouTube EPE2BJ_FOJhDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2423 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2423`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021年11月 FreeBSD Vendor Summit〕讲者口述：其称 FreeBSD 项目的驱动力是“稳定”，A-Team Systems 可据以构建方案并从 12.2 升级到 13 而不必重造轮子，而 Linux 的大版本升级通常牵涉大量额外工作。（YouTube EPE2BJ_FOJhDI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2428 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2428`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD Vendor Summit《FreeBSD in an Enterprise Environment》〕讲者（会中称 Jason）口述：他是用了约十五六年 FreeBSD 的老用户，2008 年（自称是另一家公司、彼时尚非其现职公司）把整个产品栈重建在 FreeBSD 之上；他称在银行监管与安全标准场景遇到的挑战是 FreeBSD 并不被许多安全标准认作“企业级操作系统”，尽管它完全具备这个能力，为此他常年花大量时间向审计方、信息安全人员、CIO 与 CISSP 做“为什么在企业环境用 FreeBSD”的业务论证。（YouTube EP7bzNAKxAeMQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2429 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2429`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD Vendor Summit《FreeBSD in an Enterprise Environment》〕讲者口述：他们的防火墙本身就是 FreeBSD，跑 PF、CARP、PF sync 与 PF log，并称这套 active-active、多宿主、anycast 的配置“几乎就是开箱即用的 FreeBSD”。同段后文补充：CARP 用于内部接口在多台防火墙间迁移 IP 地址，PF sync 保持状态同步，PF 是实际的防火墙引擎，而为达成该高可用配置唯一需要额外加入的第三方应用是用于 BGP 会话管理的 Bird。（YouTube EP7bzNAKxAeMQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2430 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2430`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD Vendor Summit《FreeBSD in an Enterprise Environment》〕讲者口述：他认为市面上若干大牌子（防火墙品牌）产品其实底层就在用开源工具、FreeBSD 与其他开源操作系统以及 PF，只是把它们包裹起来、贴上自己的 logo、做自己的界面，与他手工在做的事本质相同。此为讲者对商业设备技术来源的个人判断，非一手证据。（YouTube EP7bzNAKxAeMQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2431 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2431`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD Vendor Summit《FreeBSD in an Enterprise Environment》〕讲者口述：他们每晚做漏洞扫描，并大量使用 pkg audit（转写作 package audit）在已安装软件包中查找 CVE；他称每次出现漏洞，他们手上的补丁都比多数大牌厂商来得早——因为依赖 OpenSSL 的厂商设备要等厂商做新固件、下载再装到防火墙上。同段他还称内部架了一台每夜自动把所有已装软件包取源码重建的构建服务器（转写作 pf rear，疑为 poudriere，存疑）。（YouTube EP7bzNAKxAeMQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

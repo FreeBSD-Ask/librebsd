@@ -92,8 +92,8 @@ volume: 第15卷-许可证哲学与法律分析
 
 **辨析**：
 
-- 宽容许可证的讨论源自一篇德语科技网站争论的二手转述，博客作者身份与原始争论语境未能从转写确认，各阵营主张未经独立核验。　[存疑脚注] 博客原文语境与争论双方身份无法从转写核实（BSD Now EP232，[1493.02-1547.18]，L4）
-- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。　[存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
+- 宽容许可证的讨论源自一篇德语科技网站争论的二手转述，博客作者身份与原始争论语境未能从转写确认，各阵营主张未经独立核验。 [存疑脚注] 博客原文语境与争论双方身份无法从转写核实（BSD Now EP232，[1493.02-1547.18]，L4）
+- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。 [存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
 
 **文献**：
 
@@ -101,3 +101,20 @@ volume: 第15卷-许可证哲学与法律分析
 - [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2538 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2538`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2012 讲者 Marius Strobl〕讲者口述：这套开发板（转写音作 see sports，疑指 Ethernut 系列）最特别之处在于全部电路板布局与原理图（layout／schematics）均以 BSD 风格许可证分发，Ethernut 1（转写音作 season one）亦用同一许可；讲者本想据此自制一块 Ethernut 2（转写音作 an even or two），但该项目后被取消。（YouTube EPCqRFG0HhZmk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2539 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2539`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2012 讲者 Marius Strobl〕讲者口述：板上运行的实时操作系统 Nut/OS（转写音作 not OS／an address）本身也以 BSD 风格许可证发布，讲者本人还把一些应用程序移植上去，过程并不复杂。（YouTube EPCqRFG0HhZmk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2540 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2540`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2012 讲者 Marius Strobl〕讲者口述：让 FreeBSD（转写音作 through beastie）跑上该板第五代（转写音作 insulin 5）所需的收尾支持工作，主要是为某一系列微控制器（转写音作 some manix ii family of smaug controls）增加内核支持，这批支持将随 FreeBSD 9.1 发布。（YouTube EPCqRFG0HhZmk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

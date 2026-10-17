@@ -123,12 +123,12 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- 转写对 Windows 代码行数等数字（如‘half a billion lines’）为文章作者的估计值，未经独立核实。　[存疑脚注] Windows 代码行数为作者估计（BSD Now EP331，[503.24-515.92]，L4）
-- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。　[考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
-- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。　[存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
-- 基准测试中 DragonFly 被重复运行 15 次而其他仅 3 次，且编译选项不一，跨 OS 结论的可靠性存疑。　[存疑脚注] 运行次数与编译选项不一致，比较效度受质疑（BSD Now EP318，[196.26-524.60]，L4）[订正：原 [196.26-205.58]，2026-09-30 SenseAudio 重转核对]
-- TrueNAS 的 JFK 用例为 iXsystems 单方宣传口径，容量与文档数量宜以馆方披露为准。　[考据脚注] 数据来自厂商博客，缺馆方独立确认（BSD Now EP318，[545.22-580.72]，L4）
-- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
+- 转写对 Windows 代码行数等数字（如‘half a billion lines’）为文章作者的估计值，未经独立核实。 [存疑脚注] Windows 代码行数为作者估计（BSD Now EP331，[503.24-515.92]，L4）
+- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。 [考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
+- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。 [存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
+- 基准测试中 DragonFly 被重复运行 15 次而其他仅 3 次，且编译选项不一，跨 OS 结论的可靠性存疑。 [存疑脚注] 运行次数与编译选项不一致，比较效度受质疑（BSD Now EP318，[196.26-524.60]，L4）[订正：原 [196.26-205.58]，2026-09-30 SenseAudio 重转核对]
+- TrueNAS 的 JFK 用例为 iXsystems 单方宣传口径，容量与文档数量宜以馆方披露为准。 [考据脚注] 数据来自厂商博客，缺馆方独立确认（BSD Now EP318，[545.22-580.72]，L4）
+- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。 [存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
 
 **文献**：
 
@@ -145,3 +145,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Unbound & FreeBSD 演讲〕讲者 Pablo Carboni 口述：实测环境为 Dell PowerEdge 运行 FreeBSD 8.4 于 AMD64 架构。（YouTube EP_xCh20l-vHA，[460.92-471.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2145 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2145`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ShengYi Hung《ABI stability in FreeBSD》讲座〕讲者口述：FreeBSD 需要内核 ABI 稳定的首要理由，在于并非所有内核模块都随 FreeBSD 源码树的基础部分发布——仍有若干树外模块，讲者举 DRM 与 VirtualBox 为例，其中一些还靠 ports 系统构建；稳定分支若维持接口稳定，外部模块开发者便不必担心因改动而破损。（YouTube EPvzU6vKd1OFM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2146 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2146`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ShengYi Hung《ABI stability in FreeBSD》讲座〕讲者口述：ELF 这种二进制格式中承载 ABI 信息的格式有两类，即 DWARF 与 CTF（compact type format）；CTF 可视作 DWARF 的精简对应物，只保留类型信息而剔除 ST 信息、作用域、文件路径与行号，因为比较类型时无需这些；FreeBSD 内核之所以一直内嵌 CTF 数据，是因为存在一个具体的消费者。（YouTube EPvzU6vKd1OFM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2147 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2147`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ShengYi Hung《ABI stability in FreeBSD》讲座〕讲者口述：ctfd 链接 libctf，而 libctf 以 CDDL 授权，故工具落地 FreeBSD 树前必须先裁决许可——或改写为 BSD 许可并放进树中 user 一侧，或保留 CDDL 许可并放进树中存放 CDDL 代码的一侧；讲者称经他人提出意见后已决定保留 CDDL 授权。（YouTube EPvzU6vKd1OFM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2148 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2148`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ShengYi Hung《ABI stability in FreeBSD》讲座〕讲者口述：他提出的 CI 工作流以补丁为单位——当一个补丁从主干 current MFC 到稳定分支（例如 stable 14）时，CI 系统构建源码树并把编译产物存到 user 对象目录等处；随后下载对应版本的发布表（他举例 14.0），用 ctfd 将新的内核与内核模块逐一与之比对，最终生成 ABI 差异报告；该流程同样适用于用户态二进制。（YouTube EPvzU6vKd1OFM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2265 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2265`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2019 开发者峰会“Testing and Continuous Integration (CI)”工作小组讨论〕讲者口述：讲者介绍其 CI 环境时说 FreeBSD 的持续集成已在用 Jenkins（转写音作 drinking's），在硬件相当有限的前提下，一次全量干净构建（clean build）耗时约一小时。（YouTube EPnJP0nJM4er4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2266 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2266`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2019 开发者峰会“Testing and Continuous Integration (CI)”工作小组讨论〕讲者口述：讲者口述 FreeBSD 持续集成流水线中的一后续作业：它拉取前一阶段产出的构建产物，据此生成虚拟机镜像，并安装测试所需的依赖（原文举例处转写失真，未作补正）；随后该镜像被上传至服务器，最终由测试驱动作业下载并启动运行。（YouTube EPnJP0nJM4er4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2267 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2267`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2019 开发者峰会“Testing and Continuous Integration (CI)”工作小组讨论〕讲者口述：讲到构建产物保留时长时，讲者说有人在建议把产物永久留存、也有人主张更长期保留（半年或一年），并指出按当前做法把每个 revision 在所有架构上的产物都保存下来，约需 500 至 550 GB 空间；此前文另述实际只归档保留约一至两个月，并按周、按月各保留一个 revision。（YouTube EPnJP0nJM4er4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2268 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2268`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2019 开发者峰会“Testing and Continuous Integration (CI)”工作小组讨论〕讲者口述：讲者称 FreeBSD 的测试套件当时约有 7400 个测试用例，其中他估计约五至十个属于不稳定（flaky）用例，并说当前识别 flaky 用例的办法很原始——只能逐次收到构建失败报告后凭印象回忆、回看历史构建来比对。（YouTube EPnJP0nJM4er4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

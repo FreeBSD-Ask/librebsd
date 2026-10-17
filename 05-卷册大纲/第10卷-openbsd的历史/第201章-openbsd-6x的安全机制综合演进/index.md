@@ -129,12 +129,12 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
-- 转写对‘软件 RAID 加密卷’等术语有拼写漂移（如‘software aid crypto volumes’），引用时须回查 OpenBSD 6.7 官方变更日志。　[存疑脚注] 转写术语拼写漂移（BSD Now EP351，[514.16-524.0]，L4）
-- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。　[考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
-- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。　[存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
-- PDP-7 影片鉴定为“强烈支持而非确证”，Warner 本人承认对序列号 149 的排除仅属弱证据。　[存疑脚注] 三线证据均非决定性，结论保持开放（BSD Now EP322，[770.24-808.78]，L3）
-- GhostBSD 路线为项目方单方声明，TrueOS 后续变动可能使其再调整，不宜作长期定论。　[考据脚注] 上游 TrueOS 路线变动风险未计入（BSD Now EP322，[1802.90-1822.78]，L4）
+- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。 [存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
+- 转写对‘软件 RAID 加密卷’等术语有拼写漂移（如‘software aid crypto volumes’），引用时须回查 OpenBSD 6.7 官方变更日志。 [存疑脚注] 转写术语拼写漂移（BSD Now EP351，[514.16-524.0]，L4）
+- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。 [考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
+- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。 [存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
+- PDP-7 影片鉴定为“强烈支持而非确证”，Warner 本人承认对序列号 149 的排除仅属弱证据。 [存疑脚注] 三线证据均非决定性，结论保持开放（BSD Now EP322，[770.24-808.78]，L3）
+- GhostBSD 路线为项目方单方声明，TrueOS 后续变动可能使其再调整，不宜作长期定论。 [考据脚注] 上游 TrueOS 路线变动风险未计入（BSD Now EP322，[1802.90-1822.78]，L4）
 
 **文献**：
 
@@ -167,3 +167,25 @@ volume: 第10卷-openbsd的历史
 
 据〔Developing Software in a Hostile Environment（Ted Unangst 讲）〕讲者口述：讲者（Ted Unangst）称他们的工作是在开放 BSD 内核里完成的。（YouTube EP_q8zzWHj15Q，[2451.5-2454.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2616 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2616`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：PIE 即 position independent executable，把可执行文件本身编译成位置无关，再配合内核支持即可整体搬移，因而是一种地址空间随机化（ASLR）技术；讲者紧接称其为漏洞利用缓解特性。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2617 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2617`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：OpenBSD 当时已有基于地址的布局随机化——内核随机加载运行时链接器，并把所链接的共享库加载到随机位置，使共享库每次执行都移动，从而挡住最常见的 return-to-libc 攻击（原文转写作 return to Li／return to LIC）。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2618 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2618`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：PIE 工作在上一个版本之前就已启动，OpenBSD 4.5 将让所有动态程序都能使用 PIE，但当时还不会默认开启，最终目标是默认启用。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2619 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2619`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：PIE 并非对所有场景都有效，以 Apache 1.3 为例，守护进程 fork 出的子进程是初始程序的精确副本，随机化只对初始进程生效，攻击者可反复暴力猜测地址。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

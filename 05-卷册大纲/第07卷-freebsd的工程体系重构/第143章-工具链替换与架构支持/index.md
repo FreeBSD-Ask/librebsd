@@ -95,3 +95,342 @@ volume: 第07卷-freebsd的工程体系重构
 - [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. <https://www.bsdnow.tv/631>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-247 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-247`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan〕讲者口述：Simon Gerrity（转写音作 Simon Garrity）2014 年在 BSDCan 发表议题，2015 年合入主树。（YouTube EP4s1Mfb_w61o，[857.92-867.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-246 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-246`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan〕讲者口述：make legacy 构建兼容库，允许项目从 FreeBSD 9.1 版本开始构建。（YouTube EP4s1Mfb_w61o，[416.919-425.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-277 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-277`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者口述：讲者查到引用显示 FreeBSD 对 Linux 的支持自 1995 年起即已存在。（YouTube EP9N3NrPeCJpk，[156.22-163.05]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-423 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-423`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2009〕讲者口述：讲者指出 FreeBSD/mips 于 2006 年底的进展之后，2007 年已在数种不同的 MIPS 处理器实机上运行。（YouTube EPDF_YqNIiU-o，[784.25-793.32]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-424 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-424`；w172 YouTube 章节路由采纳）
+
+据〔AsiaBSDCon 2009〕讲者口述：RMI 拥有 FreeBSD 6.1 移植版本，正与 FreeBSD 项目组合作以期将其纳入主线。（YouTube EPDF_YqNIiU-o，[1654.44-1663.71]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-660 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-660`；w172 YouTube 章节路由采纳）
+
+据讲者口述：FreeBSD 自带的 netcat 就是 OpenBSD 版 netcat（转写音作 the OpenBSD netcat），讲者据此展示 kTLS（转写音作 lip TLS）相关工具链。（YouTube EPJGgoBQ0hVpw，[357.91-365.86]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-661 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-661`；w172 YouTube 章节路由采纳）
+
+据讲者口述：讲者按时间梳理 FreeBSD 中使用的 OpenSSL 版本谱系——0.9.8 发布于 2005 年，1.0.0 发布于 2010 年，1.0.1 发布于 2012 年（转写音作 0-9 8 / 100 / 101）。（YouTube EPJGgoBQ0hVpw，[1316.289-1324.009]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-939 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-939`；w172 YouTube 章节路由采纳）
+
+据〔会议不详（推测）〕讲者口述：FreeBSD 的 rISC-V 移植（转写音作 risk 5）在 FreeBSD Dev Summit 上有专场演讲，讲者补充其细节。（YouTube EPSR6m5gcayZs，[245.879-253.229]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1025 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1025`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Joerg Sonnenberger 口述：在 FreeBSD 上可用 chroot（转写音作“change hood”）进行批量构建，但也可使用 jail（YouTube EPV_HqMATqtlA，[137.54-141.04]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1071 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1071`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Day 2024〕讲者 Ed Maste 口述：BSD 系列会议主要包括 BSDCan、AsiaBSDCon 与 EuroBSDCon。（YouTube EPW-Xqg9e1JmU，[1178.48-1183.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-610 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-610`；w172 YouTube 章节路由采纳）
+
+据〔June 2021 FreeBSD Developer Summit〕讲者口述：目标 RISC-V 硬件支持 UEFI 规范，可加载 FreeBSD 引导加载器（YouTube EPiBy_XZPP3v0，[522.719-530.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-733 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-733`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD 非 x86 硬件性能计数器报告（来源不详）〕讲者口述：他将介绍把该机制移植到 MIPS 架构的工作。（YouTube EPlofmFRY-yjs，[59.029-59.039]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-776 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-776`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：约两年前 FreeBSD 尚不真正支持 armv8（转写音作 mv8），这得益于 Andrew Turner 的工作。（YouTube EPn9841gqgGU8，[535.6-546.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-920 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-920`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Sean Bruno 口述：QEMU 用户模式在 FreeBSD 上可模拟 mips64、arm v6 与 mips32，而 PowerPC 32、PowerPC 64 与 SPARC 60（转写音，数字按原文照录）仍在开发中。（YouTube EPruNdupZOXks，[1553.15-1565.56]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1186 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1186`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Tool Chain 分享〕讲者 Ed Maste 口述：FreeBSD 仍对 tier 2 及更低架构（MIPS、PowerPC、sparc64）使用旧版 GCC 而非 clang。（YouTube EPz04tZ_CDVMA，[580.5-586.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1187 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1187`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Tool Chain 分享〕讲者 Ed Maste 口述：32 位 arm 与 x86 在工具链分类中较接近 LD 但仍未到位，MIPS 与 PowerPC 差距更大。（YouTube EPz04tZ_CDVMA，[2257.98-2266.52]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1434 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1434`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ELF Nightmares GOTs, PLTs, and Relocations Oh My by John Baldwin〕讲者口述：他在 FreeBSD 和其他 BSD 中所见到的静态链接器，一类是 LLVM 项目里的 LLD，另一类是 GNU binutils 的 BFD 链接器。（YouTube EPTbtCwruycU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1435 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1435`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ELF Nightmares GOTs, PLTs, and Relocations Oh My by John Baldwin〕讲者口述：在 FreeBSD 上，承担 PLT 符号延迟解析的回调函数通常以汇编写成，名为 rtld_bind_start，它最终会调用以 C 编写的 rtld_bind；传入的不透明数据指针指向 ob 表项结构，也就是 FreeBSD 运行时加载器用来描述每个共享库的结构，加载器据此反查出应修补的 GOT 表项。（YouTube EPTbtCwruycU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1436 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1436`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ELF Nightmares GOTs, PLTs, and Relocations Oh My by John Baldwin〕讲者口述：他认为 MIPS 是一个特立独行的架构，其代价是这些机制上先行者的包袱——MIPS 不用 dynamic ELF relocations 来说明 GOT 该如何修补，而是改用隐含规则（单一 GOT，而非独立的 PLT GOT），因此任何新的计算需求都只能硬编码进这套规则，他说这正是自己不愿把 MIPS 留在树里的原因之一。（YouTube EPTbtCwruycU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1856 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1856`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mitchell《FreeBSD on RISC-V》FreeBSD Developer Summit 2024-05 讲者口述：）FreeBSD 在 RISC-V 上已有成熟基本系统，13 与 14 两个主版本发布时 RISC-V 为 tier two，其认为该架构基本系统已属功能完备、不再存在标记为 broken 的重大项。（YouTube EPO7zW7Z9U0ns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1857 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1857`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mitchell《FreeBSD on RISC-V》FreeBSD Developer Summit 2024-05 讲者口述：）FreeBSD RISC-V 的 native 打包尚不可行，原因是缺乏足够强的硬件；而按常理 native 构建本是最少出错的打包方式。（YouTube EPO7zW7Z9U0ns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1858 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1858`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mitchell《FreeBSD on RISC-V》FreeBSD Developer Summit 2024-05 讲者口述：）由于没有 beefy 硬件，次选方案是用 poudriere 与 QEMU user emulation 交叉编译打包，其指出此前在 ARM 与 MIPS 上曾如此操作。（YouTube EPO7zW7Z9U0ns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1859 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1859`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mitchell《FreeBSD on RISC-V》FreeBSD Developer Summit 2024-05 讲者口述：）FreeBSD 对当前 RISC-V 硬件支持滞后，演讲开始列举的 SoC 中约有七至九种尚未支持，且官方仓库已无 RISC-V 包在构建。（YouTube EPO7zW7Z9U0ns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1873 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1873`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD 供应商峰会／Warner Losh 报告〕讲者口述：FreeBSD 引导加载器中早已存在 loader.kboot，由 Nathan 在 FreeBSD 运行于 PS3 的时代为 PS3 序列写下一个驱动。（YouTube EP-4Ec2WUhK48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1874 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1874`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD 供应商峰会／Warner Losh 报告〕讲者口述：改造后的 loader.kboot 目前可在 arm 64 上工作，该公司产品已在其实验室环境中用它引导以服务客户；AMD64 约完成八成，因其由 x86 演化而来、是 FreeBSD 最古老的引导内核路径，需更多调校才能把引导环境调成内核期望的状态。（YouTube EP-4Ec2WUhK48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1875 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1875`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD 供应商峰会／Warner Losh 报告〕讲者口述：他在 FreeBSD 引导加载器中另写了一个 hostfs，形式上略仿 u-boot 的 hostfs，但为 Linux 环境专门裁剪，可读取宿主上的文件。（YouTube EP-4Ec2WUhK48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1876 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1876`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 11 月 FreeBSD 供应商峰会／Warner Losh 报告〕讲者口述：Linux 启动时内核即全部，而 FreeBSD 须经引导加载器接口向内核传入所有可加载模块、tunables 与各类内存位置表、DTB blob，全部配置妥当后才能在调用内核入口点之前完成，这也是把内核装进 Linux 环境时的主要难点。（YouTube EP-4Ec2WUhK48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1881 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1881`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin，BSDCan 2018〕讲者口述：认为 FreeBSD 的新包管理器虽不完美，但至少让维护者能简便地建立与维护自有仓库，并转述使用者反馈称它好用、命令行简单；对照旧制，他认为把二进制包搬到另一台机器复现同一套环境几乎不可能、自动化接近不可能、逐台重打包极不方便，且当时对服务器上既有程序（如 Apache、PHP）的升级没有任何机制。（YouTube EPIJeOfcXVauM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1882 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1882`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin，BSDCan 2018〕讲者口述：把 FreeBSD 基本系统几乎为全部工具、乃至驱动程序都附带内容充实的手册页，列为企业用户会感到意外的正面之处；相对地，他在 Linux 侧遇到的是常无手册页、或有则信息很少而须转到 info 页或 --help 的情况。（YouTube EPIJeOfcXVauM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1883 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1883`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin，BSDCan 2018〕讲者口述：称 FreeBSD 系统内自带的 GDB 过于陈旧，企业用户会不解为何系统里放着如此老的调试器，他只能建议对方改用 ports 中的新版 GDB 并以特定名称调用；另述其认为 FreeBSD 能同机共存三四套工具链并各自完成构建，亦为企业用户的正面惊喜。（YouTube EPIJeOfcXVauM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1884 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1884`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin，BSDCan 2018〕讲者口述：称 FreeBSD 在生产环境中最多的抱怨来自默认 shell；他观察到来自 Sun 与 AIX 者多半并不真会正确使用 csh；其立场是应保留 tcsh，但同时引入一个更接近 Bourne 兼容的交互 shell（其点名 mksh 与 oksh 两个选项）以便取悦使用者。（YouTube EPIJeOfcXVauM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2115 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2115`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03B FreeBSD on IBM PowerNV，Wojciech Macek〕讲者口述：PowerPC 64 的 TOC（table of contents，目录表）有硬性限制：不能超过 64 千字节，且必须落在同一个内存段内；FreeBSD 在 PowerNV 上的内核约 20 至 30 兆字节，因而最终拥有成千上万张 TOC 表。（YouTube EPWJMj3Ktwmig，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2116 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2116`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03B FreeBSD on IBM PowerNV，Wojciech Macek〕讲者口述：内核调度切换例程偶发恐慌的根因是 TOC 表错用——scheduler switch 与 cpu_switch 多年共用同一张 TOC 表，故障虽在却不可见；加入 PowerNV 支持后二进制变大、两函数距离过远，链接器改用两张 TOC 表，潜伏缺陷方才暴露。（YouTube EPWJMj3Ktwmig，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2117 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2117`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03B FreeBSD on IBM PowerNV，Wojciech Macek〕讲者口述：PCIe 跑通后，系统中仅有一个网卡驱动能工作，其余驱动多数无法 attach、完全不工作甚至引发系统恐慌；原因是驱动用位域抽象寄存器，这类写法不具可移植性，切换到大端后一切错乱。（YouTube EPWJMj3Ktwmig，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2118 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2118`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03B FreeBSD on IBM PowerNV，Wojciech Macek〕讲者口述：FreeBSD 在 Power8 上比 Linux 慢 8 倍的根因是空闲线程未发出让出（yield／spin）语义，被 SMT 调度器当作极为重要的任务而均分资源。（YouTube EPWJMj3Ktwmig，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2133 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2133`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔R. Jaworowski 报告 FreeBSD on hi-perf. multi-core embedded PPC〕讲者口述：移植并非从零开始：树中已有单核 e500 CPU 的基础支持，那是讲者参与过、真正从零写起的项目；因此启动双核工作时已有一份坚实的可续做代码基础。（YouTube EPLpR1BgXeKwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2134 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2134`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔R. Jaworowski 报告 FreeBSD on hi-perf. multi-core embedded PPC〕讲者口述：该项目约一年前启动，启动时所用的 FreeBSD 版本转录为“eight grand”（具体版本号转写未明确）；团队有意不使自己的工作与基线偏离过多。（YouTube EPLpR1BgXeKwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2135 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2135`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔R. Jaworowski 报告 FreeBSD on hi-perf. multi-core embedded PPC〕讲者口述：本项目的主要目标是双核运行，即让 FreeBSD 在 PowerPC 上支持 SMP；讲者称当时尚无任何 FreeBSD 运行在 SMP 机器上。（YouTube EPLpR1BgXeKwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2136 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2136`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔R. Jaworowski 报告 FreeBSD on hi-perf. multi-core embedded PPC〕讲者口述：重写 pmap 模块的主要挑战在于处理并发的 TLB miss：此时存在真正并行且异步运行的处理器，其 MMU 需被通知，并以软件页表加以记录。（YouTube EPLpR1BgXeKwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2207 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2207`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rafał Jaworowski“Embedded FreeBSD”演讲〕讲者口述：他们为嵌入式平台做的是整机移植：先把 system/world 运行环境完整建好让它能工作，再为一组组硬件模块从零开始写驱动，而不是改动既有驱动。（YouTube EP2HcIJvJX4y8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2208 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2208`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rafał Jaworowski“Embedded FreeBSD”演讲〕讲者口述：该嵌入式处理器的 MMU 模型与传统 PowerPC 完全不同，没有“shadows／段（segments）”等旧概念，因此传统 PPC 上定义的 pmap 层对它毫无用处，他为这次移植把 pmap 从零重写。（YouTube EP2HcIJvJX4y8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2209 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2209`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rafał Jaworowski“Embedded FreeBSD”演讲〕讲者口述：这个移植当时仍在进行中但已相当深入，代码放在 FreeBSD 开发者库里他自己维护的 Perforce 分支上，基准约为 FreeBSD 8.0，功能上已是可用移植，只需再做一些形式化改动；他说整合完 8 之后还可能同步整合到 FreeBSD 7。（YouTube EP2HcIJvJX4y8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2210 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2210`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rafał Jaworowski“Embedded FreeBSD”演讲〕讲者口述：PlayStation 3 这个平台对第三方软件与别的操作系统非常开放，从设计之初就打算让别的系统也能跑在它上面；不过他同时说，把系统真正跑上 PS3 是“相当大的挑战”，不可能一步完成——该机型缺少 SMP（双核），且无法直接跳到 64 位，必须先做大量底层内核层适配。（YouTube EP2HcIJvJX4y8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2269 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2269`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden 谈 FreeBSD 现代开发工具〕讲者口述：ports 里随共享库更新编译出的 sudo 链接 lib pam.so.6，而讲者下载的 11 current 虚拟机镜像只带 lib pam.so.5，导致引导时 sudo 无法执行，他最终改用符号链接绕过。（YouTube EPweUYEX9WRS4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2270 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2270`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden 谈 FreeBSD 现代开发工具〕讲者口述：他用 ZFS 根制作 FreeBSD 虚拟机镜像，并称 FreeBSD 安装程序的设计使 UFS 镜像与 ZFS 镜像在安装过程中某一步须按 "left" 而非 "Enter"，因此难以脚本化。（YouTube EPweUYEX9WRS4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2271 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2271`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden 谈 FreeBSD 现代开发工具〕讲者口述：有一位 GSoC 学生正在为 Vagrant 编写 bhyve provider，他对此持乐观态度，期待 FreeBSD 能以同一套工具在自有环境中原生运行。（YouTube EPweUYEX9WRS4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2272 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2272`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden 谈 FreeBSD 现代开发工具〕讲者口述：自己至今仍阅读 SVN digests 来跟上 FreeBSD 社区的演进、理解提交动机，称那里的提交信息很好。（YouTube EPweUYEX9WRS4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2369 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2369`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 Toshaan Bharvani〕讲者口述：FreeBSD 对 OpenPOWER 的支持自其口述中的 free bsd2 起即已存在，平台形态为小端 64 位 POWER；该端口当时在FreeBSD 的架构分级里仍属 tier two，讲者称团队正争取把它推到 tier one，尚有若干缺陷待修。（YouTube EPTj4Q-m_WEh0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2370 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2370`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 Toshaan Bharvani〕讲者口述：POWER 指令集分大端与小端两类子集，讲者称 FreeBSD 今天支持的是 powerpc64（大端）与 powerpc64le（小端）；对更小的 PC64-SFFS 子集目前只在 Linux 上做试验，待资源充裕才考虑扩展到 BSD。（YouTube EPTj4Q-m_WEh0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2371 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2371`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 Toshaan Bharvani〕讲者口述：POWER9 内的 NX 协处理器（压缩引擎）当时尚未被 FreeBSD 利用，讲者称这一压缩卸载缺位使 FreeBSD 在 POWER 上的gzip／lzma／bzip2 一类压缩得不到硬件加速，仍属待做的工作。（YouTube EPTj4Q-m_WEh0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2372 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2372`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 Toshaan Bharvani〕讲者口述：讲者自认在 FreeBSD/POWER 工作中只是倡导者，并称该项目的两名主力开发者是 Alfredo 与 Leandro，早期大部分移植工作由这二人完成。（YouTube EPTj4Q-m_WEh0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2448 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2448`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to RISC-V on FreeBSD》Mitchell Horn 讲〕讲者口述：FreeBSD 的 RISC-V 移植大约始于 2015 年，由 Ruslan Bukin 起手；按其转述，Bukin 花了约六个月全职工作，才把引导到多用户所需的一切移植过来，其中最大的一块是内核里的 PMAP 模块，负责构建与管理硬件页表。（YouTube EPQGW3l_Bz04I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2449 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2449`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to RISC-V on FreeBSD》Mitchell Horn 讲〕讲者口述：FreeBSD 历史上以 GCC 为基础编译器，GCC 更换许可证后与 FreeBSD 自身的许可证不再兼容，因此“摆脱 GCC、转向 LLVM”成为持续多年的项目。（YouTube EPQGW3l_Bz04I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2450 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2450`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to RISC-V on FreeBSD》Mitchell Horn 讲〕讲者口述：2019 年 FreeBSD 的 RISC-V 支持由外部 GCC 工具链切换到 FreeBSD 基本系统自带的 Clang/LLVM；LLVM 的 RISC-V 后端工作约从 2017 年起展开。（YouTube EPQGW3l_Bz04I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2451 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2451`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays《Introduction to RISC-V on FreeBSD》Mitchell Horn 讲〕讲者口述：为 RISC-V 实现 FreeBSD 引导加载器时，最终选择把它构建为 EFI payload，使任何支持 UEFI 规范的 RISC-V 固件都能引导，这与 ARM、ARM64、AMD64 上的做法相同。（YouTube EPQGW3l_Bz04I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2548 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2548`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Luba Tang AsiaBSDCon 2014 演讲〕讲者口述：讲者给出开发新链接器的三个理由，其一是 BSD（转写音严重失真），并称链接器是 BSD C 工具链的“最后边疆”（转写音作 the final frontier of the BD C2 TR）。（YouTube EPfWgbBUPMsVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2549 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2549`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Luba Tang AsiaBSDCon 2014 演讲〕讲者口述：讲者介绍现存最流行链接器（转写音作 G）为 GPL 许可，支持几乎所有主流设备与 a.out（转写音作 b a. out）、ELF 等格式，但代码量极大，约 50 万行。（YouTube EPfWgbBUPMsVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2550 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2550`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Luba Tang AsiaBSDCon 2014 演讲〕讲者口述：讲者称其自称曾任架构师的链接器（转写音作 En Linker）采用 BSD 许可，理由是它必须运行在所有安卓设备上，Google 必须以 BSD 许可发布它。（YouTube EPfWgbBUPMsVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2551 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2551`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Luba Tang AsiaBSDCon 2014 演讲〕讲者口述：Bold（转写音作 both，名称据视频标题）与转写音作 and slinker 的链接器不同，从零写起、不缠绕（twist）于 L VN，这可让 Fedora 或 BSD 社区等更容易把 Bold 移植到各自环境；但讲者又称其架构与后者非常相似并遵循相同编码风格。（YouTube EPfWgbBUPMsVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2556 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2556`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔《P09C: GENERIC ARM Creating a single kernel configuration for FreeBSD/armv6》演讲〕讲者口述：他在剑桥大学做兼职研究助理，在 Watson（转写音作 what Watson）手下参与 CHERI 项目（转写音作 cherry project），并称自己使用 FreeBSD（转写音作 finger stick）已有六年半（他说今年将满七年）。（YouTube EP6y1miJLbzGc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2557 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2557`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔《P09C: GENERIC ARM Creating a single kernel configuration for FreeBSD/armv6》演讲〕讲者口述：此前 FreeBSD 对每个受支持的 CPU 各带一份专属内核配置（转写音作 secret internal conflict），维护时 make universe 要把全部内核配置与模块（转写音作 criminal context）逐一构建、耗时很长，因此他希望减少需构建的内核数量，让人们真正用上 GENERIC 内核。（YouTube EP6y1miJLbzGc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2558 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2558`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔《P09C: GENERIC ARM Creating a single kernel configuration for FreeBSD/armv6》演讲〕讲者口述：对“内核被硬编码到某个物理地址、而两块板子可能没有任何共享物理加载地址”的难题，他给出的办法是在早期启动代码中设法探测内核实际加载的物理地址，再围绕该地址搭建页表并直接跳转，其余流程即可照常工作。（YouTube EP6y1miJLbzGc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2559 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2559`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔《P09C: GENERIC ARM Creating a single kernel configuration for FreeBSD/armv6》演讲〕讲者口述：他回顾 FreeBSD 对 ARMv6 的介入“很晚”，并称 ARMv7 支持始于 2011 年。（YouTube EP6y1miJLbzGc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2593 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2593`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2017 的 Work in Progress 闪电演讲环节〕讲者口述：就新链接器（转写音作 LD／health）在各架构上的进展，三六（i386）与 mips 还需要更多工作、但也已接近可用；RISC-V（转写作 risk five）当时尚无任何实现，sparc64 则完全没有支持。（YouTube EPOHApWQg7O4s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2594 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2594`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2017 的 Work in Progress 闪电演讲环节〕讲者口述：讲者报告的新特性之一是（转写作 Professor Park support）让块数据在内存缓存中保持压缩，从而在同样内存里装下更多数据；视负载不同可获二、三乃至四比一的压缩比，对数据库尤其有利，差别很大。（YouTube EPOHApWQg7O4s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2595 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2595`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2017 的 Work in Progress 闪电演讲环节〕讲者（自述名 Michael Dexter）口述：他去年宣布的以 UEFI 启动 guest（转写音作 visual booting）的支持已经入树，随后还有一些小特性；Google Summer of Code 带来了托管虚拟机的 vagrant（转写音作 vagrants）相关工作，核心开发者则忙于（音作）Madison beehive。（YouTube EPOHApWQg7O4s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2596 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2596`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2017 的 Work in Progress 闪电演讲环节〕讲者口述：几年前 NetBSD（转写音作 net BSU／net whiskey）的邮件列表上有人提议把旧的 spell 工具从 NetBSD 中移除，理由是它效果不佳、缺点很多、几乎没人用；讲者因此动手重写该工具。（YouTube EPOHApWQg7O4s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

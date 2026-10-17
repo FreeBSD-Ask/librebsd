@@ -71,8 +71,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。　[存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
-- 当期开场为愚人节玩笑，若脱离日期语境可能被误当作对Richard Stallman与GPL v4的真实报道；同时主持人转述Matt Ahrens观点属二手转述，需以原始访谈或文字记录交叉核对。　[存疑脚注] 愚人节玩笑不可作为事实；Matt Ahrens关于ZFS与ECC的表述亦为节目主持人的口头转述。（BSD Now EP31，[3.3-18.0]，L4） [订正：原 [0.0-11.80]，2026-09-30 SenseAudio 重转核对]
+- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。 [存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
+- 当期开场为愚人节玩笑，若脱离日期语境可能被误当作对Richard Stallman与GPL v4的真实报道；同时主持人转述Matt Ahrens观点属二手转述，需以原始访谈或文字记录交叉核对。 [存疑脚注] 愚人节玩笑不可作为事实；Matt Ahrens关于ZFS与ECC的表述亦为节目主持人的口头转述。（BSD Now EP31，[3.3-18.0]，L4） [订正：原 [0.0-11.80]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -202,3 +202,90 @@ volume: 第06卷-freebsd的核心技术革新
 
 据讲者口述：讲者来自 Delphix，分享在 illumos 与 Linux 上调试 ZFS 的经验。（YouTube EPuDDJnzSb-2w，[11.889-20.099]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1491 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1491`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Cross Platform Parallel Regression and Performance Testing of, and with OpenZFS, FreeBSD and bhyve〕讲者口述：讲者在“ZFS 这一维度”上列出的被测对象是——跑 ZFS 的 FreeBSD 变体如今有“出人意料地多”种，而且每个 FreeBSD 版本线（上一个版本、当前版本、开发版本）都要覆盖，此外还有 ZFS on Linux 这一支，共同构成他的跨平台回归与性能比较矩阵。（YouTube EPQmNko8GrUxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1492 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1492`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Cross Platform Parallel Regression and Performance Testing of, and with OpenZFS, FreeBSD and bhyve〕讲者口述：讲者把自由BSD（FreeBSD）上的 bhyve（转写音作 beehive）作为底层虚拟基础设施，称理论上 bhyve 可以把阵列存储经控制器直通（pass-through）到“完全同一份存储”上，从而使各平台的 OpenZFS 能在同一份介质上被同条件测试。（YouTube EPQmNko8GrUxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1493 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1493`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Cross Platform Parallel Regression and Performance Testing of, and with OpenZFS, FreeBSD and bhyve〕讲者口述：讲者讲述为做早期版本回归而回溯自由BSD 历史时的遭遇——若干关键发行版本干脆缺失（flat-out missing），还存在 md5 校验和文件与实际文件对不上的情况，他认为这不可能是正常做法。（YouTube EPQmNko8GrUxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1506 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1506`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2018 年 12 月 OpenZFS 领导层会议，ZFS on Linux 方面发言者（转写称 Brian Behlendorf，主持人称其为该平台事实上的领导）〕讲者口述：ZFS on Linux 曾长期落后于其他平台，追上它的好办法虽是“逐个提交地系统梳理”，但代价是工作量巨大、进度缓慢，且每个提交都必须另做平台特定修改。（YouTube EPTwCc9zjhRw4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1507 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1507`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2018 年 12 月 OpenZFS 领导层会议，illumos 方面发言者〕讲者口述：illumos/Joyent 的做法不是逐提交跟进，而是“diff 最小化”工程——取某一版 ZFS on Linux 状态与 illumos 的 guide 状态做一次大 diff，把相关片段挑出移植，目标是把差异缩小到还讲得通的范围。（YouTube EPTwCc9zjhRw4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1508 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1508`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2018 年 12 月 OpenZFS 领导层会议〕讲者口述：为让各平台尽早看见变更，讲者提出一种最低成本的做法是——新增命令行选项或改动用户界面时，在 open-zfs-dev 邮件列表发一条消息供各平台相关者审查；不是每个 bug 修复都要如此，但影响用户界面或磁盘格式（on-disk format）的改动应有最广泛的讨论可见性。（YouTube EPTwCc9zjhRw4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1509 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1509`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2018 年 12 月 OpenZFS 领导层会议〕讲者口述：在讨论“建池默认启用哪些特性”时，讲者反对一律默认关闭的特性集，理由是那样绝大多数人将用不上 LZ4 压缩——它是一项需手动启用的附加特性，默认压缩仍会退回旧算法；另有与会者主张默认启用全部特性，并为需跨平台迁移的池另设可移植（portable）模式。（YouTube EPTwCc9zjhRw4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2125 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2125`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2023 OpenZFS Leadership Meeting〕讲者口述：在实现面向 Linux 的 ZFS 挂载相关支持时，曾加入若干仅在 Linux 上实现、而 FreeBSD 未实现的新日志记录；当时决定不为实现而分叉，而是保持二者兼容，即允许某些操作系统（此处指 FreeBSD）出现尚未实现、不存在的日志记录。（YouTube EPLcHmXy34seA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2126 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2126`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2023 OpenZFS Leadership Meeting〕讲者口述：由于上述兼容策略，日志重放只会推进到第一条未知记录处便停止。（YouTube EPLcHmXy34seA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2127 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2127`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2023 OpenZFS Leadership Meeting〕讲者口述：若把在 Linux 上写入的池直接导入 FreeBSD，用户没有任何办法阻止该过程，被跳过的日志条目会被静默丢弃——系统只在日志里打印提示，但数据已经丢失。（YouTube EPLcHmXy34seA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2128 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2128`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2023 OpenZFS Leadership Meeting 共享 slog 提案发言〕讲者口述：其提出共享 slog（把多个池的日志写入一个独立池）的动因之一，是 ZFS 最初即通过把卷管理与文件系统集成来解决此类问题；共享 slog 相当于把卷管理思路与 slog 概念再做一层集成。（YouTube EPLcHmXy34seA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2552 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2552`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jorgen Lundman《Porting OpenZFS to OSX and Windows》演讲〕讲者口述：OS X/Windows 版 OpenZFS 移植的讲述者自名 Jorgen Lundman（转写音作 Jurgen Ludemann），任职于东京的 GMO Internet；该公司 90 年代中期以 ISP 起家，先后称 Internet Quest（转写音作 inter queue）与 Global Media Online。（YouTube EP6_8jQnJf418，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2553 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2553`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jorgen Lundman《Porting OpenZFS to OSX and Windows》演讲〕讲者口述：其 OS X 移植不允许调用苹果内核内存管理器的一半函数，故 SPL 改为直接向内核申请全部页，自带 slab 分配器、magazines 与 kmem 缓存（转写音作 came in）；既然借移植 ZFS 已引入半个 Illumos（转写音作 Loomis），索性把 kmem 也一并移植，由其团队开发者 Brendan 完成，并称这部分代码干净、移植相当容易。（YouTube EP6_8jQnJf418，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2554 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2554`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jorgen Lundman《Porting OpenZFS to OSX and Windows》演讲〕讲者口述：OpenZFS on OS X 直接与 OpenZFS 主仓库保持上游同步——只要 Matt 批准新特性、PR 或 commit，几小时后即以 cherry-pick 方式拉入，并自嘲“多亏时区，技术上我们总是最先拿到所有特性”。（YouTube EP6_8jQnJf418，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2555 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2555`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jorgen Lundman《Porting OpenZFS to OSX and Windows》演讲〕讲者口述：答问时对比两次移植耗时——OS X 移植约一年才做到第一次存储池导入，Windows 移植 2 月开始、7 月完成（转写未给出年份）；他自述 Windows 阶段之所以更快，是因为彼时已熟悉 SPL 与 ZFS，只剩 Windows 内核这块未知。（YouTube EP6_8jQnJf418，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2564 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2564`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sam Atkinson 演讲〕讲者口述：其团队在争取更多 AWS 工程师工时投入 OpenZFS 代码，跟进与自身相关的 issue 报告并上游化更多缺陷修复与改进；他坦言此事有挑战但正在推进。（YouTube EP6Jt9LQcobXM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2565 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2565`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sam Atkinson 演讲〕讲者口述：其体感 OpenZFS 上游发布速度很高、节奏快，并称 AWS 所提供的许多其他文件系统的上游发布速度远不及此。（YouTube EP6Jt9LQcobXM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

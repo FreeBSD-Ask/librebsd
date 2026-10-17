@@ -104,7 +104,7 @@ volume: 第08卷-freebsd的范式转换
 - 追查坏提交博文与 git bisect 说明。（BSD Now EP360，[65.19-460.69]，L2）
 - FreeBSD 2020 年 Core 团队选举公告，由主持人转述当选名单。（BSD Now EP360，[460.69-614.65]，L2）
 - DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[176.8-266.7]，L2）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
-- FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。　[存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
+- FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。 [存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
 - OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3828.2-3915.58]，L2）[订正：原 [3816.62-3915.58]，2026-09-30 SenseAudio 重转核对]
 - Libreboot.org 关于以开源 BIOS 引导 OpenBSD/LibertyBSD 的文档。（BSD Now EP164，[3926.18-4004.28]，L2）
 - Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[985.8-2820.6]，L1）[订正：原 [1600.0-2610.0]，2026-09-30 SenseAudio 重转核对]
@@ -123,9 +123,9 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
-- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
-- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[176.8-266.7]，L4）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
+- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。 [存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
+- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。 [存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
+- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。 [存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[176.8-266.7]，L4）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -141,3 +141,65 @@ volume: 第08卷-freebsd的范式转换
 
 据〔FreeBSD Fridays〕讲者口述：讲者指出 FreeBSD 13 的工程分支版本为 13.0 加少量增量，并伴随新的安全通告发布。（YouTube EPBRACcRqgnWQ，[2197.119-2203.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1372 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1372`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 在 FreeBSD 社区讲座《Contributing to FreeBSD via Github》讲者口述：FreeBSD 核心团队在一次评估后请他负责梳理项目 Git 流程的下一步，原因是当时涌向 GitHub 的 pull request 没人看、全部烂在那里过期，体验很差；他认为迁移到 Git 的全部意义在于能够做新的事，若沿用旧做法就是投入巨大而收益有限，虽则 Git 本身远胜 Subversion。（YouTube EPC1XwmQT55Q0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1373 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1373`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 在 FreeBSD 社区讲座《Contributing to FreeBSD via Github》讲者口述：选择 GitHub 而非 GitLab 或 Codeberg 承接贡献的理由是那里的人最多，且项目不必信任 GitHub 即可使用其服务：权威源仓库仍保存在项目内部、由项目自行维护安全，只是把变更推送至 GitHub、GitLab、Codeberg 供协作，而落 PR 只取 GitHub，因为另两站没有活跃 pull request。（YouTube EPC1XwmQT55Q0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1374 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1374`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 在 FreeBSD 社区讲座《Contributing to FreeBSD via Github》讲者口述：引入 GitHub pull request 并不改变项目的仓库架构：权威源继续置于项目内部，暂时仍用 Cgit 作为对外浏览入口，这部分不会因该实验而改变。（YouTube EPC1XwmQT55Q0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1375 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1375`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 在 FreeBSD 社区讲座《Contributing to FreeBSD via Github》讲者口述：FreeBSD 的提交风格有其谱系来源：项目已存续数十年，其代码风格发端于贝尔实验室，随后传入伯克利，再在 FreeBSD 项目中独立演化，因而形成庞大且带此风格的既有代码库，评审时会据此要求贡献者改动以符合风格。（YouTube EPC1XwmQT55Q0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1676 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1676`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 讲者 Warner Losh〕讲者口述：FreeBSD 贡献者普遍用 `git worktree` 同时检出同一仓库的多个分支，以便把不同工作流相互隔离、又共享同一个对象库，而不是每个分支各建一个仓库；讲者称自己把这套用法与 FreeBSD 项目自有的 `git-arc` 工具及 MFC 队列管理配合使用。（YouTube EPFe-dJrDMK_0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1677 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1677`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 讲者 Warner Losh〕讲者口述：MFC（merge from current）是 FreeBSD 项目术语，源自项目使用 CVS 的时代——那时开发主线就叫 current，邮件列表是 freebsd-current@freebsd.org，即便后来分支已改名为 main，MFC 这个说法仍被项目沿用。（YouTube EPFe-dJrDMK_0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1678 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1678`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 讲者 Warner Losh〕讲者口述：FreeBSD 要求全部提交构成线性历史，唯一例外是 vendor branch，因而不允许 merge commit；讲者给出的理由是线性历史让 bisect 容易得多，而他人改完直接 merge forward 而非 rebase forward 会引入环、带来各种问题。（YouTube EPFe-dJrDMK_0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1679 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1679`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 讲者 Warner Losh〕讲者口述：讲者把 vendor branch 描述为“上游仓库中那些文件原样存下来”的分支，并说明 FreeBSD 项目不使用 git submodule：理由繁多、无法逐条列出，总之 submodule 与该项目“不匹配”，是纯粹的难度来源。（YouTube EPFe-dJrDMK_0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1989 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1989`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit - Empowering FreeBSD with Azure DevOps〕讲者口述：FreeBSD 现在在 GitHub 上有一份 SRC 的镜像，他起初请人复述的是“立项之初的意图就是在 GitHub 上建立这个镜像”；该镜像目前可以创建 pull request 但并不会合并，他仍认为这是接收补丁的好途径。（YouTube EPIweYTrkCXow，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1990 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1990`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit - Empowering FreeBSD with Azure DevOps〕讲者口述：Microsoft 一方一项持续中的合作是把 FreeBSD 官方镜像发布到 Marketplace 上：想用 FreeBSD 时直接到 Marketplace 就能看到以 FreeBSD Foundation 作为发布者的官方镜像。（YouTube EPIweYTrkCXow，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1991 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1991`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit - Empowering FreeBSD with Azure DevOps〕讲者口述：讲者把两套 CI 的差异逐项对比，触发机制一项：据他所知 ci.freebsd.org 目前按特定分支或按定时间隔运行——每隔几小时跑一次构建 OS 镜像的任务；而 Azure DevOps 更接近按需请求，每个 pull request 或任意分支一键即可触发构建。（YouTube EPIweYTrkCXow，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1992 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1992`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit - Empowering FreeBSD with Azure DevOps〕讲者口述：他在幻灯片底部附上一个名为“adjustment for FreeBSD”的请求，由一位贡献者（他称“J operator”，不确定是否在座）发起；该请求大约开出来三年，Microsoft 从未合并，因为合并这类“支持 FreeBSD 系统”的请求总是需要先有商业理由。（YouTube EPIweYTrkCXow，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

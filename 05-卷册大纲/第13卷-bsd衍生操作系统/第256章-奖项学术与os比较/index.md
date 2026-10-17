@@ -112,3 +112,41 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1287 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1287`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Kim McMahon 来自 FreeBSD 基金会，他与一位数字安全设计领域的获奖者共同出席。（YouTube EP8eNDkPFRKRc，[0.6-7.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-762 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-762`；w172 YouTube 章节路由采纳）
+
+据讲者口述：FreeBSD 的功能来源颇为混合——packet filter（转写音作 pcket filter）源自 OpenBSD，DTrace 与 ZFS 则取自 Solaris，此外还包括 bhyve（转写音作 beehive）与 Zen 等自研组件。（YouTube EPMQaEUj9bDyU，[145.04-155.229]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-761 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-761`；w172 YouTube 章节路由采纳）
+
+据讲者口述：Ted Mittelstaedt（转写音作 Ted middl sets）大约在 2000 年前后撰写的 FreeBSD Corporate Networker's Guide，正值 FreeBSD 的 jail 技术刚问世之初，讲者称不少听众仍记得这本书。（YouTube EPMQaEUj9bDyU，[79.72-88.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1360 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1360`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter《Lessons from the CFT Lab》欧洲 BSD 会议演讲〕讲者口述：BSD（与 illumos 一并讨论）是能够获得完整操作系统栈的路径：可以在任意层动手改动、与同层同事协作、修复并改进，把某处小改动做成一次会议报告乃至一份职业；讲者称这“是绝对关键的”，并称这些系统的一致性、文档以及“镜头背后的 Unix”（how the system works）就是计算机本来的工作方式。（YouTube EP03hwVHqGnsw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1361 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1361`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter《Lessons from the CFT Lab》欧洲 BSD 会议演讲〕讲者口述：讲者回顾：早在 2003 年他第一次接触 FreeBSD 的 jail 时，便想到把 sendmail 可执行文件连同少量依赖抛进 jail，即可得到一个只做一件事的邮件服务器。这是他自述以 jail 作为“单一职责”容器化用法的起点；同段口述另指出 FreeBSD 的 build options 可声明“纳入什么、不要什么”，可借此做减法。（YouTube EP03hwVHqGnsw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1362 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1362`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter《Lessons from the CFT Lab》欧洲 BSD 会议演讲〕讲者口述：讲者称 FreeBSD 13 在“显而易见与非显而易见的层面”都是里程碑：它汲取上游 OpenZFS、包含可重现构建（reproducible builds）、从 git 获取，并强调它“有可用的 build options”，还重复一遍以突出此前这一能力长期不可用。（YouTube EP03hwVHqGnsw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1363 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1363`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter《Lessons from the CFT Lab》欧洲 BSD 会议演讲〕讲者口述：讲者口述：zfs set readonly=on 可让数据集免费获得不可变（immutability）属性，取代过去“卸载文件系统、再重新挂载”的旧做法，而且“随时随处、免费”。讲者把不可变与勒索软件防护挂钩，称缓解建议的首要两条是保持系统更新与让数据不可变，因为读不了的东西难以被加密。（YouTube EP03hwVHqGnsw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -100,10 +100,10 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。　[存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
-- Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
-- 演讲对 PCC 与 GCC 的评价带论战色彩，需与其他来源交叉验证：PCC 网页曾宣称 C++ 支持易于实现，而当事人指出 C++ 解析在一般情形下是不可计算问题、Clang 自举即耗时三年半并依赖 Apple 与 Google 的全职人力，故该宣称不足为凭；对 GCC 4.2.1 代码质量的贬抑亦系个人观感，其自陈因许可证原因从未阅读 GPLv3 代码，所评实为旧版。　[考据脚注] 对 PCC 与 GCC 的评价为当事人单方论战性叙述，PCC 网页宣称的具体时间与措辞、GCC 4.2.1 代码质量判断均需与两项目社区自身文献交叉核验。（BSDTalk EP233，[501.97-530.29]，L1）
-- 以 Phoronix 基准中 FreeBSD 唯一显著落后一项为例，当事人将其归因于 Clang 当时缺失 OpenMP 支持而 GCC 内置 GNU OpenMP 库，并引 Intel 向 LLVM 捐赠 OpenMP 运行时为解决路径，预计 10.1 至 10.2 具备支持；该解释属单一来源对第三方基准的归因，且 HPC 用户通常不使用系统编译器，基准对公众认知的影响大于对实际工程的影响。　[存疑脚注] FreeBSD 在该基准中落后约 8 倍的归因仅为当事人解释，需对照 Phoronix 原始测试数据与当时 Clang/GCC 的 OpenMP 支持状态独立验证。（BSDTalk EP233，[3329.75-3394.84]，L4）
+- 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。 [存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
+- Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。 [存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
+- 演讲对 PCC 与 GCC 的评价带论战色彩，需与其他来源交叉验证：PCC 网页曾宣称 C++ 支持易于实现，而当事人指出 C++ 解析在一般情形下是不可计算问题、Clang 自举即耗时三年半并依赖 Apple 与 Google 的全职人力，故该宣称不足为凭；对 GCC 4.2.1 代码质量的贬抑亦系个人观感，其自陈因许可证原因从未阅读 GPLv3 代码，所评实为旧版。 [考据脚注] 对 PCC 与 GCC 的评价为当事人单方论战性叙述，PCC 网页宣称的具体时间与措辞、GCC 4.2.1 代码质量判断均需与两项目社区自身文献交叉核验。（BSDTalk EP233，[501.97-530.29]，L1）
+- 以 Phoronix 基准中 FreeBSD 唯一显著落后一项为例，当事人将其归因于 Clang 当时缺失 OpenMP 支持而 GCC 内置 GNU OpenMP 库，并引 Intel 向 LLVM 捐赠 OpenMP 运行时为解决路径，预计 10.1 至 10.2 具备支持；该解释属单一来源对第三方基准的归因，且 HPC 用户通常不使用系统编译器，基准对公众认知的影响大于对实际工程的影响。 [存疑脚注] FreeBSD 在该基准中落后约 8 倍的归因仅为当事人解释，需对照 Phoronix 原始测试数据与当时 Clang/GCC 的 OpenMP 支持状态独立验证。（BSDTalk EP233，[3329.75-3394.84]，L4）
 
 **文献**：
 
@@ -133,3 +133,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔来源不详〕讲者口述：工程师在 2006 年前后启动了 gold（链接器）。（YouTube EPtkL88X1IPVA，[451.56-455.909]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1849 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1849`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014 David Chisnall 演讲 The Future of LLVM in the FreeBSD Toolchain〕讲者口述：FreeBSD 的许多下游消费者表示可以容忍 GPLv2 但不允许 GPLv3 进入构建，于是 FreeBSD 声明 base system 不准入 GPLv3 代码；而 GCC 与 Binutils 全部转为 GPLv3，FreeBSD 因此被旧版本困住。（YouTube EPNLqDAclXMMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1850 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1850`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014 David Chisnall 演讲 The Future of LLVM in the FreeBSD Toolchain〕讲者口述：LLVM 仓库里有一条极简的 SVN 提交信息，是 LLVM 项目带头人 Chris Lattner（用户名 saber）对全新 C 前端的初次提交；2007 年 FreeBSD 寻觅新编译器时正是这一时期。（YouTube EPNLqDAclXMMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1851 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1851`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014 David Chisnall 演讲 The Future of LLVM in the FreeBSD Toolchain〕讲者口述：到 2009 年 clang 略有成熟，Roman 与 Pavel 两人尝试用 clang 构建 FreeBSD，关掉优化即可得到能启动的内核。（YouTube EPNLqDAclXMMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1852 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1852`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014 David Chisnall 演讲 The Future of LLVM in the FreeBSD Toolchain〕讲者口述：那条追踪 FreeBSD 构建阻塞项的 meta bug 在 2011 年 5 月关闭，此后 FreeBSD 的 base system 在 x86 上完全可用 clang 编译。（YouTube EPNLqDAclXMMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

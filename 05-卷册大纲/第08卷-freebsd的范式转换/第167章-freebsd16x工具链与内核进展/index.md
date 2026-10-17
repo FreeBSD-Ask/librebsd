@@ -22,15 +22,15 @@ volume: 第08卷-freebsd的范式转换
 
 ## 史观
 
-- 总纲第 19 条——信息技术：编译器工具链从 GCC 到 Clang/LLVM 的迁移是 FreeBSD 历史上最重大的工具链变革之一，这一选择既有许可证考虑（BSD 许可的 LLVM vs GPL 许可的 GCC），也有技术考虑（模块化设计、更快的编译速度、更好的诊断信息）
+- 信息技术：编译器工具链从 GCC 到 Clang/LLVM 的迁移是 FreeBSD 历史上最重大的工具链变革之一，这一选择既有许可证考虑（BSD 许可的 LLVM vs GPL 许可的 GCC），也有技术考虑（模块化设计、更快的编译速度、更好的诊断信息）
   - 辨析：Clang/LLVM 在 16-CURRENT 中的具体版本号须以实际 RELEASE 时的版本为准，截至
 - 总纲第 6 条——技术路线分化：Rust 是否进入 base 系统的讨论反映了 FreeBSD 工程哲学中“稳定保守”与“拥抱新技术”之间的张力；Linux 选择相对激进地引入 Rust，FreeBSD 则采取更为谨慎的评估路径，这一分歧与两个项目的治理模式和用户基础差异相关
   - 辨析：截至 2026 年 7 月，Rust 尚未进入 base system，所有相关讨论均为社区讨论性质，不应表
-- 总纲第 19 条——信息技术：OpenZFS 持续作为 FreeBSD 旗舰级存储功能，其版本跟进速度反映了 FreeBSD 与 ZFS 开源社区的紧密协作关系；pkgbase 项目则是 FreeBSD 软件包管理现代化的关键一步，将 base 系统与 ports 系统统一在 pkg 软件包管理框架下
+- 信息技术：OpenZFS 持续作为 FreeBSD 旗舰级存储功能，其版本跟进速度反映了 FreeBSD 与 ZFS 开源社区的紧密协作关系；pkgbase 项目则是 FreeBSD 软件包管理现代化的关键一步，将 base 系统与 ports 系统统一在 pkg 软件包管理框架下
   - 辨析：OpenSSL 和 OpenZFS 在 16-CURRENT 中的具体版本号须以实
-- 总纲第 19 条——信息技术：64-bit time_t 的完成是 Y2038 问题 mitigation 的关键里程碑，体现了 FreeBSD 项目对长期技术债务的前瞻性处理；架构支持的调整反映了硬件生态的演变——老旧 32 位平台逐步退出历史舞台，ARM64 和 RISC-V 成为重点支持的新架构
+- 信息技术：64-bit time_t 的完成是 Y2038 问题 mitigation 的关键里程碑，体现了 FreeBSD 项目对长期技术债务的前瞻性处理；架构支持的调整反映了硬件生态的演变——老旧 32 位平台逐步退出历史舞台，ARM64 和 RISC-V 成为重点支持的新架构
   - 辨析：RISC-V 升 Tier 1 是社区期望但截至 2026 年 7 月尚未确定的事
-- 总纲第 19 条——信息技术：bhyve 作为 FreeBSD 原生虚拟化方案自 10.0 引入以来持续成熟，从最初的基础虚拟化功能发展为支持多种客户机操作系统、具备高级功能的生产级 hypervisor，是 FreeBSD 内核工程能力的重要展示
+- 信息技术：bhyve 作为 FreeBSD 原生虚拟化方案自 10.0 引入以来持续成熟，从最初的基础虚拟化功能发展为支持多种客户机操作系统、具备高级功能的生产级 hypervisor，是 FreeBSD 内核工程能力的重要展示
   - 辨析：bhyve 的各项改进在 16-CURRENT 中的合入进度和成熟度各不相同，部分可能处于实验阶段；GPU passthrough 等高
 
 ## 辨析
@@ -53,3 +53,25 @@ volume: 第08卷-freebsd的范式转换
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1889 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1889`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 年 5 月 FreeBSD Developer Summit 演讲《A Tool for Development Workflows》〕讲者口述：讲者称自己对这个问题的尝试是一个名为 bco 的脚本，取名沿用项目以法语词为工具命名的惯例，转写把这个法语词写作 R；该词是法语动词，讲者理解其意为 tinkering，即摆弄、玩耍与实验。（YouTube EPC6LC9LGV9Xg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1890 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1890`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 年 5 月 FreeBSD Developer Summit 演讲《A Tool for Development Workflows》〕讲者口述：讲者称该脚本力求依赖极少，实际上只是封装了一批系统调用与 libc 函数；此外它还调用 Kyle Evans 编写的一个库，该库提供 expect 式接口、但因以 Lua 实现而更易集成，名为 orc，讲者推测是 orchestrate 的缩写。（YouTube EPC6LC9LGV9Xg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1891 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1891`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 年 5 月 FreeBSD Developer Summit 演讲《A Tool for Development Workflows》〕讲者口述：讲者称自己有一些补丁为转写作 beehive 的 bhyve 增加了一个设备接口（a device interface），使使用者可以创建和销毁虚拟机；过去创建、销毁虚拟机需要 assist control 权限，这正是它必须使用 root 的原因。（YouTube EPC6LC9LGV9Xg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1892 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1892`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 年 5 月 FreeBSD Developer Summit 演讲《A Tool for Development Workflows》〕讲者口述：讲者称自己在过去一年里增加了一个新的网络后端，形式类似于转写作 qmu 的 QEMU 用户态网络（user networking），本质上是一个用户态网络栈，足以让使用者不必创建网络接口、不必查找 IP 地址就能用 SSH 登录虚拟机。（YouTube EPC6LC9LGV9Xg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -84,3 +84,56 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-222 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-222`；w172 YouTube 章节路由采纳）
+
+据〔BSD 快文件系统简史演讲〕讲者口述：快文件系统于 2003 年加入多 TB 容量支持，这一改动即形成 UFS2。（YouTube EP1BbMBdGPoHM，[3244.6-3250.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-997 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-997`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者 Kirk McKusick 口述：讲者将 BSD Fast Filesystem 的起点置于约 1982 年。（YouTube EPuF_J-itJDwM，[34.989-39.329]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2172 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2172`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Brief History of the BSD Fast Filesystem, Kirk McKusick 演讲〕讲者口述：伯克利快文件系统（FFS）诞生于 1982 年，创意出自时任伯克利项目主持人的 Bill Joy；讲者自述自己因暑期需要一笔额外收入被 Joy 拉到一边，Joy 提议付其当暑薪资、请他为自己的文件系统构想做出原型。（YouTube EPtzieR5MM06M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2173 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2173`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Brief History of the BSD Fast Filesystem, Kirk McKusick 演讲〕讲者口述：FFS 的基本构思是混合块大小：大文件用大块、小文件用小碎片；首次部署时大块为 1 千字节、小块为 512，分配方式从原先的自由链表改为位图（bitmap），以便在已分配块附近查找相邻块。（YouTube EPtzieR5MM06M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2174 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2174`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Brief History of the BSD Fast Filesystem, Kirk McKusick 演讲〕讲者口述：面对崩溃后 fsck 需半小时至一个半小时的问题，在 ext3 与 Solaris 版 UFS 所采的日志式（journaling）之外，BSD 选择另一种方案软更新（soft updates）：不写日志，而维持一组导入数据结构跟踪文件系统状态，确保写入顺序使文件系统始终保持正确，虽可落后至多约两分钟，但从不处于不可直接使用的状态。（YouTube EPtzieR5MM06M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2175 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2175`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Brief History of the BSD Fast Filesystem, Kirk McKusick 演讲〕讲者口述：伯克利引入文件系统状态（fs_stat）层叠概念：多个文件系统可按层插件式挂载，不再把全部功能放在单一模块内，可分模块构建，且仅在实际使用该模块时才付出其开销；讲者举例以不支持操作的空实现置于底层，其上放 UFS，导出时再叠加 NFS 服务器模块，跨 UID/GID 不一致的导出场景再叠加 UID GID 映射模块。（YouTube EPtzieR5MM06M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2503 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2503`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall “A Narrative History of BSD” 演讲〕讲者口述：为查明内核中残留的 AT&T 代码，团队的做法是先把整个内核跑一遍 CB（C beautifier），再对 32V 作同样处理，然后逐行比对；凡有两三行连续与 32V 吻合，即认定可疑、需进一步追查。（YouTube EPbVSXXeiFLgk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2504 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2504`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall “A Narrative History of BSD” 演讲〕讲者口述：逐行比对做完之后，内核里只剩六个文件仍以 AT&T 代码为主；讲者称按其意见这六个文件不如重写，而全系统发布风险大，于是考虑像 Net/1 那样只发布部分内核加若干工具。（YouTube EPbVSXXeiFLgk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2505 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2505`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall “A Narrative History of BSD” 演讲〕讲者口述：和解的最终安排是：给 70 个文件加上 USL 版权声明并声明这些并非 USL 独有；讲者称这些都是公共头文件、后来证明属公有领域，另外还须移除三个文件，而内核中其实并没有那三个文件可删。（YouTube EPbVSXXeiFLgk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2506 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2506`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall “A Narrative History of BSD” 演讲〕讲者口述：今天可用的各种 BSD，其源头是 4.4BSD。（YouTube EPbVSXXeiFLgk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

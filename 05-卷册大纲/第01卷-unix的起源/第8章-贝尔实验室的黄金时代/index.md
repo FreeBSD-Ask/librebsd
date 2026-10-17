@@ -91,11 +91,11 @@ volume: 第01卷-unix的起源
 
 **辨析**：
 
-- 新转写时间戳有序，但仍存在较多专名识别错误，如 BSD Now 被识别为“BST Now”、ddb 被识别为“GDB”、bhyve 被识别为“Beihai”或“beehive”、FreeBSD 被识别为“Freiburg's”或“FreePBX”、Walnut Creek CDROM 被识别为“Walnut Creek City ROM”、SMP 被识别为“S and P”或“SMP E G”（应为 SMP/SMPNG）、FDT 被识别为“FTT”、EuroBSDCon 被识别为“Euro BST Con”“Eurpeasticon”或“EuroVSEC Con”，引用时须回查原音频或官方文本。　[存疑脚注] 转写专名需人工复核（BSD Now EP487，[36.7-2044.0]，L4）[订正：原 “本册转写时间戳乱序，且存在多处专名识别错误，如 FreeNAS 被识别为 Freenaz、illumos 被识别为 Alumos 或 Olimo，引用时须回查原音频或官方文本。　[存疑脚注] 转写质量存疑，专名与时间戳需人工复核（BSD Now EP487，[3299.74-3425.06]，L4）”，2026-09-30 SenseAudio 重转核对]
-- 主持人只宣读 trip report 至 FreeBSD/NetBSD 峰会日与周五晚双重意外为止，对主会三天流媒体最终是否顺利未加转述，仅以“留待读者自读”收束；引用 EuroBSDCon 2022 主会流媒体成败的结论时不能以本期为据。　[存疑脚注] 主会流媒体结果不在本期宣读范围内（BSD Now EP487，[590.7-605.8]，L4）[订正：原 “OpenBSD 6.1 以 Clang 取代 GCC 的动因被表述为 GCC 的 GPLv2 版本无法支持 ARM64，此说来自主持人转述，须以 OpenBSD 官方公告或开发者邮件交叉验证。　[存疑脚注] 单一播客来源，需 OpenBSD 官方公告交叉验证（BSD Now EP487，[104.7-129.86]，L4）”，2026-09-30 SenseAudio 重转核对]
-- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。　[考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
-- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。　[存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
-- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[679.70-901.68]，L4）[订正：原 [811.82-901.68]，2026-09-30 SenseAudio 重转核对]
+- 新转写时间戳有序，但仍存在较多专名识别错误，如 BSD Now 被识别为“BST Now”、ddb 被识别为“GDB”、bhyve 被识别为“Beihai”或“beehive”、FreeBSD 被识别为“Freiburg's”或“FreePBX”、Walnut Creek CDROM 被识别为“Walnut Creek City ROM”、SMP 被识别为“S and P”或“SMP E G”（应为 SMP/SMPNG）、FDT 被识别为“FTT”、EuroBSDCon 被识别为“Euro BST Con”“Eurpeasticon”或“EuroVSEC Con”，引用时须回查原音频或官方文本。 [存疑脚注] 转写专名需人工复核（BSD Now EP487，[36.7-2044.0]，L4）[订正：原 “本册转写时间戳乱序，且存在多处专名识别错误，如 FreeNAS 被识别为 Freenaz、illumos 被识别为 Alumos 或 Olimo，引用时须回查原音频或官方文本。 [存疑脚注] 转写质量存疑，专名与时间戳需人工复核（BSD Now EP487，[3299.74-3425.06]，L4）”，2026-09-30 SenseAudio 重转核对]
+- 主持人只宣读 trip report 至 FreeBSD/NetBSD 峰会日与周五晚双重意外为止，对主会三天流媒体最终是否顺利未加转述，仅以“留待读者自读”收束；引用 EuroBSDCon 2022 主会流媒体成败的结论时不能以本期为据。 [存疑脚注] 主会流媒体结果不在本期宣读范围内（BSD Now EP487，[590.7-605.8]，L4）[订正：原 “OpenBSD 6.1 以 Clang 取代 GCC 的动因被表述为 GCC 的 GPLv2 版本无法支持 ARM64，此说来自主持人转述，须以 OpenBSD 官方公告或开发者邮件交叉验证。 [存疑脚注] 单一播客来源，需 OpenBSD 官方公告交叉验证（BSD Now EP487，[104.7-129.86]，L4）”，2026-09-30 SenseAudio 重转核对]
+- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。 [考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
+- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。 [存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
+- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。 [存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[679.70-901.68]，L4）[订正：原 [811.82-901.68]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -401,3 +401,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔来源不详〕讲者口述：其首台 Unix 主机为 1982 至 1983 年间部署于波士顿科普利广场的机器（YouTube EPYsZ-Kf3T9A0，[35.3-53.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2499 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2499`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者自述 1980 年入职贝尔实验室任 Unix 性能工程师，1980 年代中期与人合作开发了其自认为第一个通用 Unix 内核追踪软件包 Casper。（YouTube EPElGlnn1wrbQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2500 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2500`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：1988 年他在 USENIX 会议上宣读 Casper，1990 年又借助 Casper 对写时复制行为的洞察，在 USENIX 报告了为 SPR four（转写音）所作的虚存性能改进。（YouTube EPElGlnn1wrbQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2501 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2501`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：三十多年前由多家关心 Unix 的技术公司组成“性能管理工作组”（PMWG），以确保 Unix 备齐其性能管理所需之物，组内亦有贝尔实验室的代表。（YouTube EPElGlnn1wrbQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2502 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2502`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：他在贝尔实验室做出将 sar 指标经纯内存解引用只读开放给所有进程的原型接口（无系统调用），使 sar 的采集器 sadc 得以每秒百次运行而 CPU 开销不可测，所用机器即他口中说的 “three by two four hundred”。（YouTube EPElGlnn1wrbQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

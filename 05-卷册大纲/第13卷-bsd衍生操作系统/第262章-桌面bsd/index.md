@@ -91,7 +91,7 @@ volume: 第13卷-bsd衍生操作系统
 - Lumina 的创建动机是多年桌面使用挫折的积累：主流桌面环境几乎全部在 Linux 上为 Linux 而写，移植到 BSD 后以莫名方式损坏，Moore 追踪后几乎总将故障归结为渗入移植流程的 Linux-ism；加之 KDE、GNOME 等上游随时可能深度依赖 systemd 等 BSD 缺失的组件，他决意从零编写一个专为 BSD 家族、BSD 许可、稳定可靠的桌面环境，免除对 Linux 系统机制的依赖。（BSDTalk EP244，[379.14-464.76]，L1）
 - Lumina 的组件结构自下而上分为三层：Qt4 图形工具链提供跨平台一致的绘制能力；后端窗口管理器选用 Fluxbox，理由是其 MIT 许可证与 BSD 授权家族相近，保持同类后端；桌面环境本身则是窗口管理器之上的统筹层，负责任务栏、遵循 freedesktop.org 标准的应用注册与文件关联、以及统一主题外观，将各离散部件粘合为一致的用户体验。（BSDTalk EP244，[126.46-325.50]，L1）
 - Lumina 贯彻只做统筹不造应用的极简哲学：本体仅含启动二进制、文件启动器、文件管理器与 lumina-config 四件，拒绝为覆盖全部用途编写二流工具，宁可让用户自行安装第三方软件也不附赠劣质应用；文件管理器核心只依赖 Qt 与 phonon，Samba 网络浏览与 ZFS 快照恢复皆为运行时可选探测——后者源于 PC-BSD 的实际需求，且因主流文件管理器皆为 Linux 而写、彼时 Linux 缺乏良好 ZFS 支持而无先例；整套环境不使用 HAL 与 systemd，实机内存占用约一百至一百五十兆字节。（BSDTalk EP244，[553.56-886.24]，L1）
-- Moore 的个人路径始于被迫而非志向：大学必修编程课引发兴趣，本科与研究生之间在空军理工学院实习继续编程，研究生阶段又因导师项目分工而承担全部编码；读研期间其兄 Kris Moore（PC-BSD 创始人）邀其兼职维护 PBI 文件与测试应用，毕业后 iXsystems 全职雇用并迁居田纳西，Lumina 则是其数年间失眠夜晚的业余项目（部分源文件版权标记为 2012），成熟至可用状态后并入 PC-BSD 仓库并纳入其日常工作。　[存疑脚注] PC-BSD 创始人姓名转写音为 Chris Moore，据通行记载应为 Kris Moore（BSDTalk EP244，[1197.04-1335.76]，L1）
+- Moore 的个人路径始于被迫而非志向：大学必修编程课引发兴趣，本科与研究生之间在空军理工学院实习继续编程，研究生阶段又因导师项目分工而承担全部编码；读研期间其兄 Kris Moore（PC-BSD 创始人）邀其兼职维护 PBI 文件与测试应用，毕业后 iXsystems 全职雇用并迁居田纳西，Lumina 则是其数年间失眠夜晚的业余项目（部分源文件版权标记为 2012），成熟至可用状态后并入 PC-BSD 仓库并纳入其日常工作。 [存疑脚注] PC-BSD 创始人姓名转写音为 Chris Moore，据通行记载应为 Kris Moore（BSDTalk EP244，[1197.04-1335.76]，L1）
 - devio.us 是运行于 OpenBSD 的免费 Unix shell 服务，至受访时约五年历史，除 shell 托管外还提供网站、电邮与 Gopher 接入，自定位为 OpenBSD 上的社交空间；Brian Callahan 补充其教学动机：Unix 课程中学生用虚拟机只能见到自己，而在共享 shell 机器上键入 who 能看到他人在线、可共同游戏，账户的社区维度是虚拟机无法替代的。（BSDTalk EP252，[136.32-203.08]，L1）
 - devio.us 的注册模式以人工审核为核心：申请者须先到 Freenode IRC 频道自我介绍并说明用途，管理员逐条阅读每份申请并手动点击接受或拒绝，存疑者由管理团队讨论后裁定；这一流程过滤了约八成的麻烦与恶意行为，但并非完美，仍有人试图骗过审核。团队全员另有全职工作、义务兼职运营，故日常例务尽量自动化，唯注册审核坚持人工。（BSDTalk EP252，[239.46-385.98]，L1）
 - 账户制度与规模：注册即终身有效，仅违规遭封禁才注销；申请接受率约三分之一至四成，累计拒信逾万、在册账户约 5700 个；免费账户提供 100 MB 存储并可付费约每月 2 美元升级至 1 GB，付费账户另可 detached 运行进程——后台守护进程监控登录状态，免费用户 detached 超过 5 分钟即被清理进程。（BSDTalk EP252，[399.88-487.06]，L1）
@@ -179,25 +179,25 @@ volume: 第13卷-bsd衍生操作系统
 
 **辨析**：
 
-- 该 FreeBSD 历史概述为第三方博客的泛泛总结，其版本演进叙述粗糙（如版本 1 之后跳至 8），仅可作二手线索，不能作为编年依据。　[存疑脚注] 该版本史概述缺乏出处与精确年代，须以 FreeBSD 官方发布记录核验后方可用于编年。（BSD Now EP505，[952.4-1001.9]，L4）[订正：原 [964.62-1006.78]，2026-09-29 SenseAudio 重转核对]
-- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
-- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
-- 转写中 FuryBSD 与 FurryBSD 混淆，GhostBSD 的 Chrome 兼容问题被节目归因于临时打包故障，未经核实。　[存疑脚注] GhostBSD Chrome 故障原因未核实（BSD Now EP348，[687.6-695.68]，L4）
-- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
-- 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
-- Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
-- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[679.70-901.68]，L4）[订正：原 [811.82-901.68]，2026-09-30 SenseAudio 重转核对]
-- 转写专名失真集中且需核证：新闻段称 tame 由 Nicholas Marriott 编写（66.50-77.32），与 tame 主要由 Theo de Raadt 等主导开发的公开记录相悖，应以 OpenBSD 源码树提交记录核证；“Matt Aaron”应为 ZFS 共同设计者 Matthew Ahrens（4104.28-4113.14），“Ted Ewanks”应为 Ted Unangst，“Antoine Jacuto”应为 Antoine Jacoutot，“CopMast”应为 FreeBSD GNOME 团队长期维护者 Koop Mast，“IOKage”应为 iocage，“do-ass”应为 doas；访谈嘉宾 Baptiste 全名未在转写中出现。上述失真均可由上下文辨认，不影响语义判读，故整体仍判可用，但涉及人名的引用须先经邮件列表存档与源码提交记录复核。　[存疑脚注] tame 作者归属与上述专名还原均系依据上下文与公开史料的推断，尚未逐一以 OpenBSD 源码树、邮件列表存档及人物自述复核。（BSD Now EP99，[66.50-77.32]，L4）
+- 该 FreeBSD 历史概述为第三方博客的泛泛总结，其版本演进叙述粗糙（如版本 1 之后跳至 8），仅可作二手线索，不能作为编年依据。 [存疑脚注] 该版本史概述缺乏出处与精确年代，须以 FreeBSD 官方发布记录核验后方可用于编年。（BSD Now EP505，[952.4-1001.9]，L4）[订正：原 [964.62-1006.78]，2026-09-29 SenseAudio 重转核对]
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。 [考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。 [存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
+- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。 [存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
+- 转写中 FuryBSD 与 FurryBSD 混淆，GhostBSD 的 Chrome 兼容问题被节目归因于临时打包故障，未经核实。 [存疑脚注] GhostBSD Chrome 故障原因未核实（BSD Now EP348，[687.6-695.68]，L4）
+- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。 [存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
+- 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。 [存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
+- Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。 [存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
+- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。 [存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[679.70-901.68]，L4）[订正：原 [811.82-901.68]，2026-09-30 SenseAudio 重转核对]
+- 转写专名失真集中且需核证：新闻段称 tame 由 Nicholas Marriott 编写（66.50-77.32），与 tame 主要由 Theo de Raadt 等主导开发的公开记录相悖，应以 OpenBSD 源码树提交记录核证；“Matt Aaron”应为 ZFS 共同设计者 Matthew Ahrens（4104.28-4113.14），“Ted Ewanks”应为 Ted Unangst，“Antoine Jacuto”应为 Antoine Jacoutot，“CopMast”应为 FreeBSD GNOME 团队长期维护者 Koop Mast，“IOKage”应为 iocage，“do-ass”应为 doas；访谈嘉宾 Baptiste 全名未在转写中出现。上述失真均可由上下文辨认，不影响语义判读，故整体仍判可用，但涉及人名的引用须先经邮件列表存档与源码提交记录复核。 [存疑脚注] tame 作者归属与上述专名还原均系依据上下文与公开史料的推断，尚未逐一以 OpenBSD 源码树、邮件列表存档及人物自述复核。（BSD Now EP99，[66.50-77.32]，L4）
 - Ed Maste 对基金会已结项目的内部评估并不齐一：autofs 自动挂载守护进程与内核态 iSCSI 栈被引为部署反馈良好的成功案例，而 vt 控制台更新虽早已是 current 默认、其本人亦使用年余，却自认远未达预期，项目体量超出当初预估而仍在收尾——同为基金会出资，工程完成度因项目而异，资金投入与成果兑现并无必然对应。（BSD Now EP75，[1484.46-1590.74]，L1）
-- Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。　[存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
-- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
-- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
-- 转写将 Dan Langille 误记作 Langell 与 Langeo，引用须以正字为准；其口述首届参会人数先称 153 又更正为 173，精确数字应复核 BSDCan 官方存档；主持人关于 MP3 专利费率与分发禁令的断言系 2006 年时点常识，专利状态与费率随时间变动，引用时不得当作恒定事实。　[存疑脚注] 首届人数 153/173 两说并存；MP3 授权费率与分发限制为时点性口述，需以专利档案与授权条款原始文本复核。（BSDTalk EP14，[172.23-216.47]，L1）
-- Moore 将桌面环境在 BSD 上的损坏几乎全部归因于 Linux-ism 渗透，此为当事人单方归因，未排除 Qt 上游缺陷、配置差异或维护投入不足等替代解释，须以各桌面环境的移植补丁记录与缺陷追踪互证；其关于文件管理器缺乏 ZFS 集成先例的论断也基于 Linux ZFS 支持薄弱的时点判断，随着 ZFS on Linux 项目的成熟该论断的时效性有限。　[存疑脚注] Linux-ism 归因与 ZFS 先例论断均为单方陈述，缺乏系统性缺陷统计佐证（BSDTalk EP244，[391.68-464.76]，L1）
-- 性能与传播数字均为供应商自报：接近原生的性能结论由 Win4Win Pro 的既有评测类推而来，主持人亦指出 Win4BSD 当时尚缺第三方评测；网络提及量从 30 到近 30 万的口径与统计方法未说明。[存疑脚注] 两项数字均为单一来源陈述，未经独立复核。　[存疑脚注] 性能与传播数字为受访企业单方陈述，未见独立验证（BSDTalk EP75，[637.74-679.06]，L4）
-- 分叉时间的口述有两处摇摆（先称 4.5 再更正为 4.8、2003 年 6 月），且以“不喜欢 FreeBSD 5 方向”一笔带过分叉动因，未触及围绕 SMP 与缓存一致性设计的具体论争；引用分叉背景时须回查 Matt Dillon 的分叉公告原文，不可径引本视频表述。[存疑脚注] 分叉动因的完整谱系见大纲第 214 章所考公告与采访原文　[存疑脚注] 评测者凭记忆转述，版本号与动因表述均经其现场查证更正，仍属二手简化叙事（YouTube EPBPDTTqA__xM，[150.4-190.8]，L5）
-- 转写交错已在新转写（youtube_subs_20261001）中修复为单轨连续，但专名失真仍在：i915 仍被记作 enable 995 与 I 915，鼠标守护进程仍记作 Mouse D，基系统编译器版本仍仅余残缺数字（116/157，GCC 4.1 与 4.7 之辨无法确证，DragonFly 长期以 GCC 为基系统编译器，具体版本待与发布说明核证）；总体转写质量尚可辨认，不影响主题判断。　[已核备注] 交错缺陷已修复；专名失真仍存，技术细节以 DragonFly 官方发布说明与 ports 树为准（YouTube EPBPDTTqA__xM，[405.9-644.8]，L5）[订正：转写为双列交错文本→交错已修复为单轨（专名失真仍在）] [订正：原 [405.9-444.6] 仅覆盖 116/157 残数段→扩至 [405.919-644.8] 以并含 enable 995／I 915（547.8-572.9）与 Mouse D（633.2-644.8）失真段，内容复核]
+- Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。 [存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
+- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。 [存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。 [存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
+- 转写将 Dan Langille 误记作 Langell 与 Langeo，引用须以正字为准；其口述首届参会人数先称 153 又更正为 173，精确数字应复核 BSDCan 官方存档；主持人关于 MP3 专利费率与分发禁令的断言系 2006 年时点常识，专利状态与费率随时间变动，引用时不得当作恒定事实。 [存疑脚注] 首届人数 153/173 两说并存；MP3 授权费率与分发限制为时点性口述，需以专利档案与授权条款原始文本复核。（BSDTalk EP14，[172.23-216.47]，L1）
+- Moore 将桌面环境在 BSD 上的损坏几乎全部归因于 Linux-ism 渗透，此为当事人单方归因，未排除 Qt 上游缺陷、配置差异或维护投入不足等替代解释，须以各桌面环境的移植补丁记录与缺陷追踪互证；其关于文件管理器缺乏 ZFS 集成先例的论断也基于 Linux ZFS 支持薄弱的时点判断，随着 ZFS on Linux 项目的成熟该论断的时效性有限。 [存疑脚注] Linux-ism 归因与 ZFS 先例论断均为单方陈述，缺乏系统性缺陷统计佐证（BSDTalk EP244，[391.68-464.76]，L1）
+- 性能与传播数字均为供应商自报：接近原生的性能结论由 Win4Win Pro 的既有评测类推而来，主持人亦指出 Win4BSD 当时尚缺第三方评测；网络提及量从 30 到近 30 万的口径与统计方法未说明。[存疑脚注] 两项数字均为单一来源陈述，未经独立复核。 [存疑脚注] 性能与传播数字为受访企业单方陈述，未见独立验证（BSDTalk EP75，[637.74-679.06]，L4）
+- 分叉时间的口述有两处摇摆（先称 4.5 再更正为 4.8、2003 年 6 月），且以“不喜欢 FreeBSD 5 方向”一笔带过分叉动因，未触及围绕 SMP 与缓存一致性设计的具体论争；引用分叉背景时须回查 Matt Dillon 的分叉公告原文，不可径引本视频表述。[存疑脚注] 分叉动因的完整谱系见大纲第 214 章所考公告与采访原文 [存疑脚注] 评测者凭记忆转述，版本号与动因表述均经其现场查证更正，仍属二手简化叙事（YouTube EPBPDTTqA__xM，[150.4-190.8]，L5）
+- 转写交错已在新转写（youtube_subs_20261001）中修复为单轨连续，但专名失真仍在：i915 仍被记作 enable 995 与 I 915，鼠标守护进程仍记作 Mouse D，基系统编译器版本仍仅余残缺数字（116/157，GCC 4.1 与 4.7 之辨无法确证，DragonFly 长期以 GCC 为基系统编译器，具体版本待与发布说明核证）；总体转写质量尚可辨认，不影响主题判断。 [已核备注] 交错缺陷已修复；专名失真仍存，技术细节以 DragonFly 官方发布说明与 ports 树为准（YouTube EPBPDTTqA__xM，[405.9-644.8]，L5）[订正：转写为双列交错文本→交错已修复为单轨（专名失真仍在）] [订正：原 [405.9-444.6] 仅覆盖 116/157 残数段→扩至 [405.919-644.8] 以并含 enable 995／I 915（547.8-572.9）与 Mouse D（633.2-644.8）失真段，内容复核]
 
 **文献**：
 
@@ -241,3 +241,65 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔会议不详（推测）〕讲者 Andi Artz 口述：他直到 2019 年才开始使用 FreeBSD，属于较晚进入 BSD 阵营的日用桌面用户。（YouTube EPPHtipWOBbNk，[1883.559-1887.269]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1409 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1409`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者回忆其第一台笔电装的是 FreeBSD 搭配 KDE，试用很多但 KDE 升级时常出错，当时尚有时间修补那些破坏；后来在一次纽约 BSD 会议上，他人告知自己在用 Xfce，讲者试用后认为它明显更轻、在笔电上运行更好、依赖更少。这段经历构成其后续削减桌面依赖、最终转向纯文本 NetBSD 工作环境的直接动因。（YouTube EP-75TQMbar1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1410 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1410`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：被问及为何在 Pinebook 上装 NetBSD 而非其他 BSD 或其他操作系统时，讲者答称他买机后在 Google 搜“Pinebook BSD”，也看过一些论坛，知道有人在上面跑 OpenBSD、也有人跑 NetBSD，而第一条弹出结果就是“Pinebook with NetBSD”——他自陈这并非有意的技术选型理由，家里另有一张装了 OpenBSD 的 microSD 卡，只是出差时带的是 NetBSD 那张。（YouTube EP-75TQMbar1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1411 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1411`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称过去可把 sysctl 变量 vfs.generic.usermount 设为非零，使非 root 用户也能挂载任意设备；OpenBSD 方面不喜欢这种做法、已将其整体禁用；而 NetBSD 在 secure level 高于零时无法启用该 sysctl。（YouTube EP-75TQMbar1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1412 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1412`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者说无论怎么设置，mstart 都不接受他给出的电池临界值；他不确定这是 mstart 不支持 Pinebook 还是其自身缺陷，但这是他实测所得。（YouTube EP-75TQMbar1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2019 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2019`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon“Building and running a BSD homelab”圆桌（Allan Jude 主持）〕讲者口述：主持者自述为 Claranet（转写音作 clara）CTO、FreeBSD 源码与文档 committer，同时主持 BSD Now 等播客，并与 Michael W. Lucas（转写音作 michael w lucas）合著 ZFS 进阶系列书籍。（YouTube EP7AgSDB_TZW8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2020 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2020`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon“Building and running a BSD homelab”圆桌（Allan Jude 主持）〕讲者口述：（Todd Jones 自述做互联网实验与家庭电脑）讲者在数据中心机器上跑不少 bhyve（转写音作 beehive）负载，但认为“一小队”实体专用机器在做性能与时序关键测试时更有帮助，因为虚拟机内部“时间几乎不存在”。（YouTube EP7AgSDB_TZW8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2021 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2021`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon“Building and running a BSD homelab”圆桌（Allan Jude 主持）〕讲者口述：讲者称 ipfw 早年打动他的功能是可对系统上每个用户设计数规则，并据此接入计费系统、判定某用户是否正在滥用 shell 服务器的带宽。（YouTube EP7AgSDB_TZW8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2022 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2022`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon“Building and running a BSD homelab”圆桌（Allan Jude 主持）〕讲者口述：Michael Lucas 称吸引人们转向 ipfw（转写音作ibfw）的另一大功能是 dummynet，并称 Kristoff（转写音作 kristoff）近来已提交了把部分 dummynet 代码拆分成独立工具的支持，着眼未来挂接到 pf。（YouTube EP7AgSDB_TZW8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2284 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2284`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EdgeBSD, a year later - Pierre Pronchery 讲者 Corbin 口述〕讲者口述：他列举 EdgeBSD 立项原因之一是 NetBSD 仍用 CVS 开发，在去中心化的世界里难以被现代开发者接受。（YouTube EPYs-e3IxtzHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2285 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2285`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EdgeBSD, a year later - Pierre Pronchery 讲者 Corbin 口述〕讲者口述：他说 NetBSD 是最早具备（或支持）签名二进制包的重量级操作系统之一，但官方实际上从未生成过这些签名包。（YouTube EPYs-e3IxtzHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2286 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2286`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EdgeBSD, a year later - Pierre Pronchery 讲者 Corbin 口述〕讲者口述：他在投身 NetBSD 之前参加过 OpenMoko 项目，那是一款智能手机；这是他后续想把 NetBSD 跑到手机上的动机之一。（YouTube EPYs-e3IxtzHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2287 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2287`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EdgeBSD, a year later - Pierre Pronchery 讲者 Corbin 口述〕讲者口述：他在现场带到硬件做展示，主题是把 NetBSD／EdgeBSD 跑在平板等嵌入式设备上（同期段落中现场展示 wetab 平板运行 NetBSD 及他自写的桌面环境）。（YouTube EPYs-e3IxtzHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

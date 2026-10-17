@@ -81,3 +81,77 @@ volume: 第09卷-netbsd的历史
 - [BSD Now EP210] Pennington J. BSD Now: 210: Your questions, part I[EB/OL]. (2017-09-06)[2026-08-15]. <https://www.bsdnow.tv/210>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-259 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-259`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者提到曾在考虑把 Rump Kernel 移植到 MINIX 3（quote‘MINIX 3's we've been thinking about maybe porting’，语气为‘maybe’）。（YouTube EP5GdP84VqKyk，[2838.57-2844.44]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-258 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-258`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：NetBSD Rump Kernel 当时能在 DragonFly 与 Solaris 上运行。（YouTube EP5GdP84VqKyk，[820.49-828.519]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1364 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1364`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kristaps Dzonsons《Process Isolation for NetBSD and OpenBSD》演讲〕讲者口述：实现例（instance）隔离的核心思路是取消内核里唯一的全局进程表，改为每个实例各持一张进程表；进程结构体中保存一张所属表的手柄，做进程查找时先经该手柄取得本实例的表，再按 pid 定位进程结构，从而在数据结构层面保证不同实例之间无从看见彼此的进程。（YouTube EPJaVnNllZxn4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1365 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1365`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kristaps Dzonsons《Process Isolation for NetBSD and OpenBSD》演讲〕讲者口述：把 FreeBSD jail 一类做法称为功能性隔离（functional isolation）——每遇到一处进程可见性冲突点就要施加一次“我能否看见它”的检查，而检查点是否被穷尽无从确知；讲者举 compat Linux 走不同路径、以及未来版本 FreeBSD 直接读进程哈希表为例，说明遗漏一处即可被绕过。（YouTube EPJaVnNllZxn4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1366 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1366`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kristaps Dzonsons《Process Isolation for NetBSD and OpenBSD》演讲〕讲者口述：按实例拆分进程表在承载数千实例时性能急剧下降；把进程表尺寸固定变小仍未能解决，于是讲者退而只维护一张进程表、以全局哈希开关在“每实例分表”与“单表”之间取舍，自称这是权宜做法。（YouTube EPJaVnNllZxn4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1367 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1367`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kristaps Dzonsons《Process Isolation for NetBSD and OpenBSD》演讲〕讲者口述：该项目的首次公开发布在 2007 年，基于讲者本地分支上 fork 出的整个 NetBSD 3.1 内核，原型体量庞大。（YouTube EPJaVnNllZxn4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1738 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1738`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDcon 2008 Kristaps Džonsons 演讲《Logical Resource Isolation in the NetBSD Kernel》〕讲者口述：讲者介绍的项目名为 MOL，自述已开发数月（称三到六个月左右，且不确定），其做法是把用户态“复数化”——在同一台主机内并存多个用户环境。（YouTube EPc63VneyQI-k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1739 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1739`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDcon 2008 Kristaps Džonsons 演讲《Logical Resource Isolation in the NetBSD Kernel》〕讲者口述：讲者定义“操作系统实例复数化系统”（operating instance multiplicity system）的“策略”即冲突区域的处理方式；MOL 的策略是特意设计为可以证明隔离成立，而不是仅凭巧妙技巧假装存在。（YouTube EPc63VneyQI-k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1740 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1740`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDcon 2008 Kristaps Džonsons 演讲《Logical Resource Isolation in the NetBSD Kernel》〕讲者口述：讲者称 FreeBSD jail 是最知名的此类实现，并称 OpenBSD 的 zones 与之极为类似、Linux VServer 亦属此类。（YouTube EPc63VneyQI-k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1741 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1741`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDcon 2008 Kristaps Džonsons 演讲《Logical Resource Isolation in the NetBSD Kernel》〕讲者口述：讲者称 Xen 不在其讨论范围，因 Xen 复数化的是内核而非操作系统实例；而 DragonFly BSD 的 vkernel 与 Kimu 同为操作系统实例复数化。（YouTube EPc63VneyQI-k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1985 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1985`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The pivot_root system call for BSD systems (NetBSD) / Adrian Steinmann 于 EuroBSDcon 2012〕讲者口述：讲者描述 FreeBSD 实现中的差异点：FreeBSD 2 的 /dev 是 devfs，pivot 后它会随之下移，须在这个系统调用内部把 /dev 重新挂回新 root，否则紧随其后的访问都会找不到 /dev 而失败；NetBSD 因无 devfs 无需此步，但 NetBSD 另有 current dot root 只读变量需另行更新（讲者称这部分尚未做完）。（YouTube EP6itw0i2OHwM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1986 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1986`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The pivot_root system call for BSD systems (NetBSD) / Adrian Steinmann 于 EuroBSDcon 2012〕讲者口述：讲者说明 pivot_root 源自 Linux，这或许是 FreeBSD 一直没有它的部分原因；同时长期内也确实没有实际需求，因为既有 init 阶段的切换机制已足够。（YouTube EP6itw0i2OHwM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1987 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1987`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The pivot_root system call for BSD systems (NetBSD) / Adrian Steinmann 于 EuroBSDcon 2012〕讲者口述：讲者提出 FreeBSD jails 场景下 pivot_root 的可行性问题：jail 内无法直接对整个系统做 pivot_root（会把世界颠倒地让他人落到自己 root 之下），但 jail 可以在自己的小天地里做自己那份 pivot_root——这是他视为有吸引力的方向。（YouTube EP6itw0i2OHwM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1988 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1988`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The pivot_root system call for BSD systems (NetBSD) / Adrian Steinmann 于 EuroBSDcon 2012〕讲者口述：讲者说明其在 NetBSD 的实现取向：新增一个与 Linux 兼容的系统调用，并将其放入内核可加载模块（而非改动 mount 系统调用），这也是他借机学习内核可加载模块的过程。（YouTube EP6itw0i2OHwM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

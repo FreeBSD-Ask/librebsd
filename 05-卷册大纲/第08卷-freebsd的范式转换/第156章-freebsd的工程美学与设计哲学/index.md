@@ -66,7 +66,7 @@ volume: 第08卷-freebsd的范式转换
 - 受访者自述 2003 年其莫斯科家庭 ISP 的 Windows 服务器每日多次崩溃，遍试 Red Hat、SuSE、Gentoo、Slackware 均因文档不足以架设 PPPoE 而放弃，转而打印约 1300 至 1400 页的 FreeBSD Handbook，一夜读完约七成并称“看了文档大约十分钟就完全被说服”（481.96-486.94），48 小时内在原崩溃机器上架起稳定路由、PPPoE 服务器与 IPFW 实时流量统计；该叙述把 FreeBSD 的采纳动因归于文档完备与可复现的运维细节，而非性能对比。（BSD Now EP108，[426.7-599.5]，L1）[订正：原 [446.4-583.58]，2026-09-30 SenseAudio 重转核对]
 - 2010 年前后受访者出任莫斯科一家面向俄语世界的音乐流媒体初创 CTO，按其测算采用成品专有方案需 1000 万至 2000 万美元级前期资本开支，遂转向单一集成基础设施：每节点同时承担主数据、本地处理与对外流送，每盘独立 UFS、以内容哈希命名文件、以 Postgres 调度器统一管理哈希与冗余，经 Igor Sysoev 咨询在纯机械盘条件下实现单机 6 Gbit/s 饱和与数千并发流，18 个月内扩至约 2 PB 原始容量；Jails 的独立网络栈（当时仍属实验特性）为其内外网通信提供隔离边界。（BSD Now EP108，[1952.2-2269.6]，L1）[订正：原 [1954.22-2250.28]，2026-09-30 SenseAudio 重转核对]
 - 受访者称 Nginx 走向公司化后早期大客户即 Netflix，而当 Netflix 公开 OpenConnect 基础设施时，他发现“其中 90% 正是我们所做的——独立 UFS 盘、Nginx 与高速网络”（2928.86-2937.22），并将 Netflix 的采用视为其技术路线的“终极印证”（2965.14-2972.42）；此系 2015 年 9 月录制的当事人对照评价，可为 Netflix 选型 FreeBSD 的研究提供同期口述旁证，但相似度判断本身属其个人结论。（BSD Now EP108，[2885.0-2990.1]，L1）[订正：原 [2913.56-2975.48]，2026-09-30 SenseAudio 重转核对]
-- 内容摄取环节构成该期最生动的技术轶事：首批内容硬盘自中国运抵且全部为损坏的 ext4 盘，而当时 FreeBSD 仅原生支持 ext2，受访者启用此前 Google Summer of Code 学生开发的实验性 ext3 实现——因 ext3 可不挂日志读入 ext4——不仅恢复约 99% 数据，且较 Linux 读损坏盘即崩溃的表现更为稳健；其后从 FAT、NTFS 到 TrueCrypt 加密盘在 FreeBSD 下均可挂载读取，受访者据此强调 FreeBSD 文件系统层的互操作韧性。　[存疑脚注] 转写将 ext2/ext3/ext4 记作 X four/X2/X three，专名依通行拼写回写；受访者对 Linux 读盘崩溃行为的描述未附版本与复现细节。（BSD Now EP108，[3653.0-3815.0]，L1）[订正：原 [3666.18-3804.16]，转写记作 Xt2/Xt3/X4，2026-09-30 SenseAudio 重转核对]
+- 内容摄取环节构成该期最生动的技术轶事：首批内容硬盘自中国运抵且全部为损坏的 ext4 盘，而当时 FreeBSD 仅原生支持 ext2，受访者启用此前 Google Summer of Code 学生开发的实验性 ext3 实现——因 ext3 可不挂日志读入 ext4——不仅恢复约 99% 数据，且较 Linux 读损坏盘即崩溃的表现更为稳健；其后从 FAT、NTFS 到 TrueCrypt 加密盘在 FreeBSD 下均可挂载读取，受访者据此强调 FreeBSD 文件系统层的互操作韧性。 [存疑脚注] 转写将 ext2/ext3/ext4 记作 X four/X2/X three，专名依通行拼写回写；受访者对 Linux 读盘崩溃行为的描述未附版本与复现细节。（BSD Now EP108，[3653.0-3815.0]，L1）[订正：原 [3666.18-3804.16]，转写记作 Xt2/Xt3/X4，2026-09-30 SenseAudio 重转核对]
 - 受访者以企业实践量化开源协作成本：定制开发本身已耗资不菲，而“以可上游的方式去做，代价至少是两到三倍”（3976.74-3985.32），但从次年升级上游版本时自有补丁仍可存活的角度看仍然值得；他批评 Yahoo、Google 等大公司把多机管理方案作为私有轮子自我保留，主张转而充实 FreeBSD 用户态工具集（如 sysrc、硬盘串号提取、fstype 识别），使“一次 FreeBSD 安装”可以横跨集群而非局限于单机。（BSD Now EP108，[3967.7-4022.0]，L1）[订正：原 [3976.74-4012.2]，2026-09-30 SenseAudio 重转核对]
 - Varnish 源于挪威大报 VG 的委托：其内容管理系统之下 Squid 缓存集群已经力不从心，报纸约一年前找到当时自认此题与内核无关的 PHK，他随即意识到问题本质恰在内核协作并接手；项目组织上 PHK 独力写出 1.0 版，挪威软件公司 Linpro 运营 subversion 与 wiki 等项目设施并将提供商业支持合同。（BSDTalk EP72，[107.88-131.44]，L1）
 - BSD 许可证是报纸客户自始的要求，PHK 未参与细部决策但本人坚定站在 BSD 一侧；他推测理由在于 Varnish 具有进入高利润商业领域、直接与 Akamai 类内容分发网络竞争的潜力，GPL 许可会从一开始就吓退潜在商业采用者。（BSDTalk EP72，[613.10-660.62]，L1）
@@ -79,7 +79,7 @@ volume: 第08卷-freebsd的范式转换
 
 **史料**：
 
-- 该期提供的一手材料包括：受访者 Andrew 对 2003 年以来 FreeBSD 采纳、ports 维护与流媒体创业的第一人称叙述；其就 NFS 无盘启动致信 Brooks Davis（Aerospace Corporation）及 BSDCan 油气行业 HPC 报告人并获回复的邮件咨询；2007 年以学生、2009 与 2010 年以导师身份参与 Google Summer of Code（bsd.perl.mk Perl 基础设施重构）的自述；BSDCan 2012 统一配置管理报告；以及 Nginx 作者 Igor Sysoev 受聘咨询与 Rambler 此前以 FreeBSD 服务器农场试验流媒体的先例。　[存疑脚注] 受访者姓氏在转写中作 Purtushan（仅片头一处），无法自文本内部确证唯一原名；Igor Sysoev 系按通行拼写回写，转写原文作 igor sasorov（另段作 Igor Sysoev）。（BSD Now EP108，[1516.4-1656.1]，L1）[订正：原 [1517.94-1655.96]，呈 Patushan、Petrushan、Petushin 三种拼法，转写原文作 Igor Sosoyev，2026-09-30 SenseAudio 重转核对]
+- 该期提供的一手材料包括：受访者 Andrew 对 2003 年以来 FreeBSD 采纳、ports 维护与流媒体创业的第一人称叙述；其就 NFS 无盘启动致信 Brooks Davis（Aerospace Corporation）及 BSDCan 油气行业 HPC 报告人并获回复的邮件咨询；2007 年以学生、2009 与 2010 年以导师身份参与 Google Summer of Code（bsd.perl.mk Perl 基础设施重构）的自述；BSDCan 2012 统一配置管理报告；以及 Nginx 作者 Igor Sysoev 受聘咨询与 Rambler 此前以 FreeBSD 服务器农场试验流媒体的先例。 [存疑脚注] 受访者姓氏在转写中作 Purtushan（仅片头一处），无法自文本内部确证唯一原名；Igor Sysoev 系按通行拼写回写，转写原文作 igor sasorov（另段作 Igor Sysoev）。（BSD Now EP108，[1516.4-1656.1]，L1）[订正：原 [1517.94-1655.96]，呈 Patushan、Petrushan、Petushin 三种拼法，转写原文作 Igor Sosoyev，2026-09-30 SenseAudio 重转核对]
 - 该期留存的一手史料线索：Varnish 1.0 于 2006 年发布，官网为 varnish-cache.org，发布当日即由挪威 Linpro 开发者录入 FreeBSD ports（转写呈现为 Doug Erling，人名存疑）；项目基础设施为 Linpro 运营的 subversion 与 wiki；挪威某国家机构曾误配商业缓存设备、以 100 Mbit/s 持续抓取该报新闻存档，成为 VCL 按客户端 IP 限速功能的设计来源。（BSDTalk EP72，[535.66-613.10]，L1）
 
 **史观**：
@@ -91,8 +91,8 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- 受访者转述油气行业用户“跑 Linux 时约百节点每周一故障，换 FreeBSD 后一年无故障”（1606.5-1626.8），并断言多数 Linux 发行版的质量平衡“过于靠近够用”（4068.02-4085.42）；两条比较均出自单一场合口述、无仓库数据或公告可独立复核，且受访者立场明显亲 FreeBSD，书稿引用时须与 Netflix 等大规模 Linux 生产环境案例相互制衡，避免以一己对比修辞直接立论。　[存疑脚注] 故障率对比系受访者转述的第三方经验，无法独立验证；对 Linux 发行版质量的评价属当事人立场性论断。（BSD Now EP108，[1594.3-1631.6]，L4）[订正：原 [1606.5-1626.8]，2026-09-30 SenseAudio 重转核对]
-- 性能数字系开发者自报且合成流量占比一半，未经独立第三方复核；转写质量元数据标记存在重复段落（quality_score 70.5），数字细节宜与 Varnish 官方文献交叉核对。[存疑脚注] 700 Mbit/s、10k 与 18k req/s 等数字为单一来源自述。　[存疑脚注] 性能基准为当事开发者单方陈述，混合合成流量，未见独立验证（BSDTalk EP72，[1548.16-1595.14]，L4）
+- 受访者转述油气行业用户“跑 Linux 时约百节点每周一故障，换 FreeBSD 后一年无故障”（1606.5-1626.8），并断言多数 Linux 发行版的质量平衡“过于靠近够用”（4068.02-4085.42）；两条比较均出自单一场合口述、无仓库数据或公告可独立复核，且受访者立场明显亲 FreeBSD，书稿引用时须与 Netflix 等大规模 Linux 生产环境案例相互制衡，避免以一己对比修辞直接立论。 [存疑脚注] 故障率对比系受访者转述的第三方经验，无法独立验证；对 Linux 发行版质量的评价属当事人立场性论断。（BSD Now EP108，[1594.3-1631.6]，L4）[订正：原 [1606.5-1626.8]，2026-09-30 SenseAudio 重转核对]
+- 性能数字系开发者自报且合成流量占比一半，未经独立第三方复核；转写质量元数据标记存在重复段落（quality_score 70.5），数字细节宜与 Varnish 官方文献交叉核对。[存疑脚注] 700 Mbit/s、10k 与 18k req/s 等数字为单一来源自述。 [存疑脚注] 性能基准为当事开发者单方陈述，混合合成流量，未见独立验证（BSDTalk EP72，[1548.16-1595.14]，L4）
 
 **文献**：
 
@@ -100,3 +100,20 @@ volume: 第08卷-freebsd的范式转换
 - [BSDTalk EP72] Backman W. BSDTalk: 72: bsdtalk072 - Interview with Poul-Henning Kamp about Varnish[EB/OL]. (2006-10-02)[2026-08-27]. <https://archive.org/details/bsdtalk072>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1477 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1477`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber: From microservices to monoliths - BSDCan 2017〕讲者口述：讲者把生产系统从 Debian 迁到 FreeBSD，判据是“可靠、能自己构建自用的包、便于回滚”；选型判据是他想要的“reliable and custom packages”“building your own based system”“easy rollback for DBS and upgrades”；他称 ZFS 与 boot environments 让这一切“that really is cheating”“just too easy”。这是他以生产可回滚性为判据的 FreeBSD 选型自述。（YouTube EPRnubgWXOPVM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1478 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1478`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber: From microservices to monoliths - BSDCan 2017〕讲者口述：他们维护一棵自有的 FreeBSD ports tree（转写中同段另有“a custom fork at the FreeBSD ports tree”），把补丁留在自己的树上，等上游补丁一落地就移除（如 libre SSL 的补丁），并为 HAProxy 保留一个支持 libre SSL 的补丁；他们按自己方便的时间点而非上游决定的节奏拉取最近变更并 bump 版本。（YouTube EPRnubgWXOPVM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1479 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1479`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dave Cottlehuber: From microservices to monoliths - BSDCan 2017〕讲者口述：他把 FreeBSD 的部件与 Docker 的做法对照——Docker 提供了把东西打包（含网络与文件系统部分）的 API；FreeBSD 的各个部件“generally speaking far far better”，却没有这样的打包 API，使用者只能自己拼接（“you build your own Lego”）。他据此认为这个缺口正是未来 BSD 使用者与开发者缺少的 on-ramp。（YouTube EPRnubgWXOPVM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -102,7 +102,7 @@ volume: 第09卷-netbsd的历史
 - 总纲10 动手者创造历史：OpenBSD 开发者与黑客松参与者在雪山小屋中直接动手重写 X.509 代码，把验证时间压缩 20 倍，历史由动手者而非口号推进。（BSD Now EP330，[2505.66-2516.12]，L2）
 - 总纲9 经验优先：主持人从自身 24×7 使用廉价盘与 ZFS 的实际经验回答磁盘选型问题，实践知识优先于厂商宣传。（BSD Now EP330，[3813.36-3853.76]，L1）
 - 总纲8 本体论上各方平等：本期同时呈现 OpenBSD、NetBSD、FreeBSD/FreeNAS、NomadBSD，各分支被平等对待，不以规模论高下。（BSD Now EP330，[1790.46-1814.48]，L2）
-- 总纲5 没有必然性，只有偶然性：OpenBSD 罕见的远程认证漏洞出现与 40 小时修复并非必然，而是具体代码缺陷与具体响应条件的偶然叠加。　[存疑脚注] 漏洞为偶发事件这一判断系史学概括，非节目明言（BSD Now EP330，[245.98-255.10]，L4）
+- 总纲5 没有必然性，只有偶然性：OpenBSD 罕见的远程认证漏洞出现与 40 小时修复并非必然，而是具体代码缺陷与具体响应条件的偶然叠加。 [存疑脚注] 漏洞为偶发事件这一判断系史学概括，非节目明言（BSD Now EP330，[245.98-255.10]，L4）
 - 总纲3 不存在进步，只有权力再分配：NomadBSD 从 GPT 改回 MBR、UnionFS 换为 FUSE 等变化并非线性进步，而是兼容性与约束在不同硬件间的重新分配。（BSD Now EP330，[1872.70-1888.38]，L2）
 - 总纲22 知识注定过时：本期多则教程与工具（如云主机装 FreeNAS 的旧法）提醒知识会随平台与版本过期，需持续核验。（BSD Now EP330，[1482.36-1494.88]，L2）
 
@@ -111,11 +111,11 @@ volume: 第09卷-netbsd的历史
 - 新转写已正确读出 Theo de Raadt、Kamil Rytarowski、Ayush Sharma 等人名（仅一处 Kamil Rytarowski 转写作 Camille Rotarowski）；OpenBSD 包构建博文的作者在转写中仍未署名，dataswamp.org 系 OpenBSD 开发者个人站点，引用时须以原文署名核实。[考据脚注] 博文作者须以原文核对（BSD Now EP376，[1244.68-1260.16]，L4）[订正：原 转写把人名误记（Theo Durant、Kamil Ritarovsky、Ayushu Sharma），2026-09-30 SenseAudio 重转核对]
 - sys2z 的“最小化手工错误”与覆盖扩大属项目目标陈述，实际自动化程度与产出质量须以其代码库与后续维护状态核验。（BSD Now EP376，[1014.64-1024.52]，L2）
 - IPFW 转发“栈损坏导致随机端口”系主持人对 PR 的口头转述，具体根因与修复提交须回到 PR 与 12.2-p1 公告核对。（BSD Now EP376，[699.24-715.08]，L2）
-- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
-- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
-- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
-- OpenBSD 认证绕过漏洞的“远程可利用”与 sshd 免责边界需逐应用分析，实际影响应按个案评估，不能笼统宣称整个系统不安全。　[存疑脚注] 转写对漏洞细节的表述为口语转述，建议以官方 errata 与 CVE 原文核对（BSD Now EP330，[193.66-204.80]，L4）
-- NetBSD 9.0 当时尚未正式发布，RC1 特性清单可能随正式版调整，所引安全与虚拟化特性宜以正式公告为准。　[考据脚注] RC1 为发布前状态，存在后续变更可能（BSD Now EP330，[971.00-979.36]，L4）
+- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。 [存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
+- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。 [存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
+- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。 [存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
+- OpenBSD 认证绕过漏洞的“远程可利用”与 sshd 免责边界需逐应用分析，实际影响应按个案评估，不能笼统宣称整个系统不安全。 [存疑脚注] 转写对漏洞细节的表述为口语转述，建议以官方 errata 与 CVE 原文核对（BSD Now EP330，[193.66-204.80]，L4）
+- NetBSD 9.0 当时尚未正式发布，RC1 特性清单可能随正式版调整，所引安全与虚拟化特性宜以正式公告为准。 [考据脚注] RC1 为发布前状态，存在后续变更可能（BSD Now EP330，[971.00-979.36]，L4）
 
 **文献**：
 
@@ -182,3 +182,100 @@ volume: 第09卷-netbsd的历史
 
 据〔来源不详〕讲者 Taylor Campbell 口述：他因反复抓到 ZFS bug，曾向 NetBSD 提交若干 PR，怀疑这些是其 ZFS 版本的本地缺陷（YouTube EPvZmzWNcV0Q0，[141.44-147.91]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1726 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1726`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell《The new NetBSD entropy subsystem》演讲〕讲者口述：讲者说明本演讲全部主题尚未进入任何 NetBSD 发布版，将在 NetBSD 10 发布时进入，目前处于 head 开发中。（YouTube EP57z9BO95cEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1727 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1727`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell《The new NetBSD entropy subsystem》演讲〕讲者口述：讲者说明历史上一度流行的做法——他称 Linux 至今仍在用、BSD 直至第 9 版也如此——是只查看进入熵池的样本，用连续差分推算底层过程有多少熵。（YouTube EP57z9BO95cEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1728 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1728`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell《The new NetBSD entropy subsystem》演讲〕讲者口述：讲者说明这一情形在 NetBSD 10 中改变：与（他口述的 FIPS 类）新认证标准一致，系统用于判定熵是否充足的那些熵估计值，必须建立在器件实际如何工作之上。（YouTube EP57z9BO95cEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1729 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1729`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor R Campbell《The new NetBSD entropy subsystem》演讲〕讲者口述：讲者说明此前内核使用 AES 的 counter GCM 构造，直到有针对 NetBSD 的时序攻击被公开；他去年重写了 NetBSD 内核里的 AES 代码，以在所有平台上消除全部时序攻击，代价是性能损失。（YouTube EP57z9BO95cEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1769 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1769`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Nyarko 的“The NetBSD Packet Filter NPf”演讲〕讲者口述：NPf 在 IP 层支持 IPv4 与 IPv6，可用于 NAT 与端口转发（含目标地址 NAT），尤其适合路由器场景，并已支持第 2 层过滤——该部分工作已完成但尚未合入主干，正处于评审之中。（YouTube EP0E6k8fmKMtc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1770 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1770`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Nyarko 的“The NetBSD Packet Filter NPf”演讲〕讲者口述：NPf 的合成规则组在实现上其实就是一条规则，只是未挂载 BPF 过滤机制；组内规则不继承组的任何属性。（YouTube EP0E6k8fmKMtc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1771 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1771`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Nyarko 的“The NetBSD Packet Filter NPf”演讲〕讲者口述：NPf 的核心过滤逻辑是类似 BPF 的 eBPF 码，并可将其 JIT 编译为本地机器码，在内核中的 BPF 虚拟机内运行。（YouTube EP0E6k8fmKMtc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1772 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1772`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Nyarko 的“The NetBSD Packet Filter NPf”演讲〕讲者口述：按用户／组过滤的设计局限在于：以 root 绑定特权端口、再把已接受连接交接给非特权用户的 Unix 超级守护进程服务，其 socket 凭据不会改变，故把该过滤思路用于此类服务会令人困惑且不生效。（YouTube EP0E6k8fmKMtc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2183 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2183`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔JIT Code Generator for NetBSD（讲者 Alexander Nasonov）〕讲者口述：BPF 的解释器本身已相当快（小而紧凑的解释器），而 JIT 编译出的代码比解释执行快若干倍；讲者在测试的一两个短程序上观察到某一特定程序大约快四倍，并明确说没有做系统的性能测量。（YouTube EPYgUY_wPLpKw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2184 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2184`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔JIT Code Generator for NetBSD（讲者 Alexander Nasonov）〕讲者口述：BPF 没有回跳、指令总是向前跳转，因此不存在循环；这是出于安全目的的设计——不希望用户态程序把系统挂死，所以无论程序如何都应在有限步数内结束，且程序长度也有上限。（YouTube EPYgUY_wPLpKw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2185 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2185`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔JIT Code Generator for NetBSD（讲者 Alexander Nasonov）〕讲者口述：该 JIT 基于一个 JIT 编译器库（转写为 SLG/sajit），采用 BSD 许可，支持多种架构——x86 32/64、arm、PowerPC、MIPS 系列、sparc 32——但没有 sparc64 支持；该库由 zoltán 编写，讲者正与其合作改进。（YouTube EPYgUY_wPLpKw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2186 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2186`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔JIT Code Generator for NetBSD（讲者 Alexander Nasonov）〕讲者口述：讲者为 NetBSD 内核内的 BPF 增加了两项扩展，两者都带副作用，因此不再只有返回值而无其他效果——既能修改外部内存，也能调用自定义函数去修改 BPF 之外的东西；但这一能力被严格限定在内核中使用。（YouTube EPYgUY_wPLpKw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2480 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2480`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GSoC 项目汇报“P02B: Addition of Ext4 Extent and Ext3 HTree DIR Read Only Support in NetBSD”，讲者 Hrishikesh Goyal〕讲者口述：其 2016 年谷歌编程之夏项目在 NetBSD 内核中实现 ext4 文件系统，交付两项特性——ext4 扩展（extent）与 ext3 目录索引。（YouTube EPt_DaZJJjba4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2481 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2481`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔同上 NetBSD ext4/ext3 汇报〕讲者口述：ext4 extent 特性此前已在 FreeBSD 中实现，讲者动手前先查看了 FreeBSD 的移植实现，并指出该 NetBSD 移植与 FreeBSD 的主要差异在于处理双重缓存问题的思路。（YouTube EPt_DaZJJjba4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2482 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2482`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔同上 NetBSD ext4/ext3 汇报〕讲者口述：移植做法是取 FreeBSD 中基于 buffer cache 实现的 ext4 代码，将 extent 映射部分（与底层内核大体无关）复用，而把缓存接口层改挂到 NetBSD 的 UVM 子系统上。（YouTube EPt_DaZJJjba4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2659 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2659`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Grochowski〕讲者口述：NetBSD 社区的质量保证工作始于数年前安全研究者接连报出多个 bug，其中约 8080 个 netbsd 的 bug 被很快修掉，但社区由此开始思考这样的小社区要如何让质量可扩展。（YouTube EPbbNCqFdQEyk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2660 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2660`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Grochowski〕讲者口述：NetBSD 8 已有 kcov 覆盖率设备，可提供程序计数器轨迹（PC trace）与比较轨迹，内核侧另加 instrumentation，在进程执行内核代码时收集覆盖数据。（YouTube EPbbNCqFdQEyk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2661 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2661`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Grochowski〕讲者口述：讲者要给 ffs 文件系统做 fuzzing，就必须让代码在内核的文件系统栈里被执行，因此需要写 wrapper、准备块设备并借 mount 路径来收集覆盖数据。（YouTube EPbbNCqFdQEyk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2662 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2662`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Grochowski〕讲者口述：统计轨迹后发现大量底层内存操作噪声——约 20000 条条目里有 1500 条与 page fault 相关，他因此怀疑 fuzzer 面对的其实不是文件系统而是底层内存子系统。（YouTube EPbbNCqFdQEyk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

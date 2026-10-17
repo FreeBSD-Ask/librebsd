@@ -102,9 +102,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- [存疑脚注] 转写中 Cavium/ThunderX 与 Gigabyte 机型、NetBSD 版本号等专名存在 ASR 噪音，且 Tier 1/2 口径为节目转述，未与 FreeBSD 官方平台状态页核对。　[存疑脚注] 硬件专名与 Tier 口径未经官方状态页核对（BSD Now EP290，[240.06-260.5]，L4）
-- PDP-11 回顾系博客作者对贝尔论文的二手转述，且转写将“Maria Strobel”等专名误转，人名与具体数字须核对原文。　[存疑脚注] 专名与数字须以贝尔论文原文核实（BSD Now EP225，[1927.8-1965.5]，L4）
-- [存疑脚注] 转写对专名的识别可能失真，如董事会成员姓名、pkgsrc 被写作“Package Source”、GELI 被写作“Gelly”，引用时须以一手拼写为准。　[存疑脚注] 专名转写存疑，须核验一手拼写。（BSD Now EP162，[1746.36-2171.24]，L4）
+- [存疑脚注] 转写中 Cavium/ThunderX 与 Gigabyte 机型、NetBSD 版本号等专名存在 ASR 噪音，且 Tier 1/2 口径为节目转述，未与 FreeBSD 官方平台状态页核对。 [存疑脚注] 硬件专名与 Tier 口径未经官方状态页核对（BSD Now EP290，[240.06-260.5]，L4）
+- PDP-11 回顾系博客作者对贝尔论文的二手转述，且转写将“Maria Strobel”等专名误转，人名与具体数字须核对原文。 [存疑脚注] 专名与数字须以贝尔论文原文核实（BSD Now EP225，[1927.8-1965.5]，L4）
+- [存疑脚注] 转写对专名的识别可能失真，如董事会成员姓名、pkgsrc 被写作“Package Source”、GELI 被写作“Gelly”，引用时须以一手拼写为准。 [存疑脚注] 专名转写存疑，须核验一手拼写。（BSD Now EP162，[1746.36-2171.24]，L4）
 - 当事人对 Linux 与 BSD 用户态差异的批评：这些差异多数无人能说明为何存在或是否重要，却每一个都构成迁移路障——wc 输出带前导空格而 GNU 版没有、make 与 GNU make 不兼容常使 Node 原生模块编译爆掉、GNU 工具新增旗标抢占 BSD 同字母旗标（sort 例）、cp -R 尾部斜杠语义差异曾使其从 Linux 转到 Mac 时脚本大面积失效。建议提供 GNU 工具优先的安装路径或易装的 Linux 用户态层以降低新用户门槛；bash 默认 shell 因 ports 不得触碰 base 的规则而受阻，与 illumos 社区拒绝适应导致采用度落后相对照；一切为平滑过渡做的投入都将换来更大的社区。（BSD Now EP58，[1617.26-2031.17]，L1）
 - 社区文化比较的当事人评价：BSD 邮件列表上的讨论相较 Linux 界更像严肃技术专业人士之间的理性辩论；主持人引述某调查显示 BSD 开发者平均年龄比 Linux 开发者大十岁，并认为这与讨论形态相关。George 称其习惯的 illumos 世界信息更难寻，FreeBSD 的文档与 Google 可寻性远优于 illumos 文档，“能用 Google 解决问题在这个年代至关重要”。（BSD Now EP58，[2032.53-2160.41]，L1）
 - 上游重构与下游维护成本的当期实例：OpenSSH 6.7 的代码重构破坏了 FreeBSD port 携带的大量补丁，port 维护者 Brian Drewery 表示需要数日逐一整理方可更新，宁可延迟也不发布行为不明的安全组件；同时移除 TCP wrappers 支持将波及依赖它的 denyhosts 类工具。这一案例具体呈现了大型上游重构向下游 port 体系传导的时滞与风险。（BSD Now EP58，[2691.64-2823.43]，L2）
@@ -149,3 +149,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔2020 FreeBSD Vendor Summit〕讲者口述：讲者指出 GCC 9.4（转写音作 gcc and gc 9.4）已支持 outline atomics（轮廓原子操作）。（YouTube EPfmZ9o7CbIvU，[203.599-216.47]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2257 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2257`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 讲者 Andrew Turner〕讲者口述：他任 FreeBSD committer 已近七年，专注 ARM 事务、以 ARM64 为主，并称自己几乎不懂 Intel——别人请他比较两者时，他要对方先讲 Intel。（YouTube EPgkYjvrFvPJ0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2258 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2258`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 讲者 Andrew Turner〕讲者口述：ARMv6 处理器按其网站说法自 2002 年起已在市场流通，FreeBSD 对此起步偏晚；尽管 ARMv6 已经存在，当时却几乎没有可普遍获得的硬件。（YouTube EPgkYjvrFvPJ0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2259 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2259`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 讲者 Andrew Turner〕讲者口述：他验证到只需少量改动即可让同一个内核同时跑在 PandaBoard 与 Raspberry Pi 上；主要障碍在 Raspberry Pi——Pi 1 是 ARMv6、PandaBoard 是 ARMv7，且缓存处理存在差异。（YouTube EPgkYjvrFvPJ0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2260 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2260`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 讲者 Andrew Turner〕讲者口述：ARM 平台上中断仍是更棘手的单例问题——旧框架只能处理单一中断控制器，而现实中中断控制器还可能级联成链，因此必须重新设计处理方式。（YouTube EPgkYjvrFvPJ0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2651 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2651`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Czekaj〕讲者口述：他讲的是一则 FreeBSD 成功案例，FreeBSD 被用作 ARM64 上的数据科学平台，而 ARM64 是新近才成为 Tier-1 平台。（YouTube EPNxON0Fv28LE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2652 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2652`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Czekaj〕讲者口述：实验所用平台是实验室内既有的 ThunderX2 ARM v8 机器，双路、每路 28 核，该机原本就用于 FreeBSD 开发。（YouTube EPNxON0Fv28LE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2653 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2653`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Czekaj〕讲者口述：实验系统用的是 FreeBSD 12.2，存储为 ZFS 支撑的 SSD 存储。（YouTube EPNxON0Fv28LE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2654 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2654`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Maciej Czekaj〕讲者口述：部署这类数据科学栈不该用操作系统包管理器，FreeBSD ports 虽收录其中部分包但常有版本冲突，某包若不在 ports 里就几乎找不到所需版本，因此用 ports 是坏主意。（YouTube EPNxON0Fv28LE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
