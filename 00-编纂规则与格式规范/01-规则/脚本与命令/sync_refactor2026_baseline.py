@@ -70,6 +70,12 @@ PRESENT_EXTRA_RE = re.compile(r"(现行口径|现行基准|当前口径)")
 # 「另一套基准」前缀（磁盘实况/冻结基准/映射表数据基线）——同行并列出现时不属目录页口径，豁免。
 # 用于 CLAUDE.md 一行内并列 19卷355章（磁盘实况）＋12卷181章（冻结基准）＋23卷237章N节（现行目录）的情形。
 OTHER_BASE_RE = re.compile(r"(磁盘实况|冻结基准|数据基线|旧\s*\d+\s*卷|12\s*卷\s*181|19\s*卷\s*355|355\s*章口径)")
+# 维度五（2026-10-17 主理人批准批立）：doc-metrics 的**独立数字形**引用——TRIPLE_RE 要求
+# “N卷M章”连写，故“doc-metrics 26 卷”“doc-metrics 240 章”这类单单位引用完全漏检
+# （流程规则 L1630/L1631“26 卷／240 章”实报，比三连形旧值还旧两代）。本判据捕“doc-metrics
+# 附近 ≤32 字符处的单单位数字”，数值 ≠ 权威对应位且行为现在时态（PRESENT_RE／PRESENT_EXTRA）
+# 且无历史豁免标记者判 dm-stale（FAIL 级，需人工）。
+DM_STANDALONE_RE = re.compile(r"doc-metrics[^。\n]{0,32}?(?P<num>\d{1,4})\s*(?P<unit>[卷章节])")
 # 历史标记（修订记录/数据基线声明/已同步/取代/归档/演进史）——命中即豁免，属历史事实本体
 HIST_RE = re.compile(r"(修订（|已同步|数据基线|→|已归档|已被取代|取代并归档|历史记录|演进为|口径由|下称「目录页」)")
 # 维度二：指向已归档目录文件的引用（同行无归档标注即漂移）
@@ -126,10 +132,51 @@ def fmt(v: tuple[int, int, int]) -> str:
     return f"{v[0]} 卷 {v[1]} 章 {v[2]} 节"
 
 
+def classify_triple(ln: str, tm, v: tuple, in_block: bool) -> str:
+    """单个 TRIPLE 匹配的分类（可测单元；2026-10-17 抽出以支撑 --selftest）。
+
+    返回 "ok" | "drift" | "stale" | "exempt" | "blind"。
+    """
+    declared = (int(tm.group(1)), int(tm.group(2)),
+                int(tm.group(3).replace(",", "")) if tm.group(3) else None)
+    same = declared[0] == v[0] and declared[1] == v[1] and (
+        declared[2] is None or declared[2] == v[2])
+    prefix = ln[max(0, tm.start() - 48):tm.start()]
+    if in_block:
+        return "ok" if same else "drift"
+    if OTHER_BASE_RE.search(prefix):
+        return "exempt"
+    if PRESENT_RE.search(ln) and not HIST_RE.search(ln):
+        return "ok" if same else "stale"
+    if (not same) and PRESENT_EXTRA_RE.search(ln) and not HIST_RE.search(ln):
+        return "blind"
+    return "exempt"
+
+
+def classify_dm_standalone(ln: str, v: tuple) -> bool:
+    """维度五（2026-10-17 主理人批准批立）：doc-metrics **独立数字形**判定。
+
+    TRIPLE_RE 要求“N卷M章”连写，故“doc-metrics 26 卷”“doc-metrics 240 章”这类
+    单单位引用完全漏检（流程规则“26 卷／240 章”实报，比三连形旧值还旧两代）。
+    本判据捕“doc-metrics 附近 ≤32 字符处的单单位数字”，数值 ≠ 权威对应位、
+    行为现在时态（PRESENT_RE／PRESENT_EXTRA）、无历史豁免标记时为 True（FAIL 级）。
+    """
+    if TRIPLE_RE.search(ln):
+        return False
+    for dm in DM_STANDALONE_RE.finditer(ln):
+        idx = {"卷": 0, "章": 1, "节": 2}[dm.group("unit")]
+        if (int(dm.group("num")) != v[idx]
+                and (PRESENT_RE.search(ln) or PRESENT_EXTRA_RE.search(ln))
+                and not HIST_RE.search(ln)
+                and not OTHER_BASE_RE.search(ln)):
+            return True
+    return False
+
+
 def scan(v: tuple[int, int, int]):
     """返回 (marker_drift, present_stale, exempt, marker_ok, ref_stale, pending_stale,
-    present_stale_blind)。最后一项为**维度四 INFO**：现在时态词未被 PRESENT_RE 覆盖的旧口径行。"""
-    drift, stale, exempt, ok, ref_stale, pending_stale, blind = [], [], [], [], [], [], []
+    present_stale_blind, dm_stale)。末两项为 INFO 盲区与维度五独立数字形。"""
+    drift, stale, exempt, ok, ref_stale, pending_stale, blind, dm_stale = [], [], [], [], [], [], [], []
     for fp in target_files():
         text = read_text(fp)
         lines = text.split("\n")
@@ -147,24 +194,25 @@ def scan(v: tuple[int, int, int]):
             # 口径三元组判定：一行可含多个不同基准（如 CLAUDE.md 同行并列
             # 「磁盘实况 19卷355章」「冻结基准 12卷181章」「现行大纲目录 23卷237章N节」），
             # 须逐个匹配按其前缀窗口分类，不能只取首个匹配，否则误判为漂移。
+            had_triple = False
             for tm in TRIPLE_RE.finditer(ln):
+                had_triple = True
+                cat = classify_triple(ln, tm, v, in_block)
                 declared = (int(tm.group(1)), int(tm.group(2)),
                             int(tm.group(3).replace(",", "")) if tm.group(3) else None)
-                same = declared[0] == v[0] and declared[1] == v[1] and (
-                    declared[2] is None or declared[2] == v[2])
-                prefix = ln[max(0, tm.start() - 48):tm.start()]
-                if in_block:
-                    (ok if same else drift).append((fp, i, ln.strip(), declared))
-                elif OTHER_BASE_RE.search(prefix):
-                    # 磁盘实况/冻结基准/映射表数据基线等「另一套基准」，非目录页口径
-                    exempt.append((fp, i, ln.strip()[:120], declared))
-                elif PRESENT_RE.search(ln) and not HIST_RE.search(ln):
-                    (ok if same else stale).append((fp, i, ln.strip(), declared))
+                if cat == "ok":
+                    ok.append((fp, i, ln.strip(), declared))
+                elif cat == "drift":
+                    drift.append((fp, i, ln.strip(), declared))
+                elif cat == "stale":
+                    stale.append((fp, i, ln.strip(), declared))
+                elif cat == "blind":
+                    blind.append((fp, i, ln.strip()[:150], declared))
                 else:
                     exempt.append((fp, i, ln.strip()[:120], declared))
-                    # 维度四（INFO）：语义为现在时态、但 PRESENT_RE 未覆盖者
-                    if (not same) and PRESENT_EXTRA_RE.search(ln) and not HIST_RE.search(ln):
-                        blind.append((fp, i, ln.strip()[:150], declared))
+            # 维度五：doc-metrics 独立数字形旧口径（FAIL 级）
+            if classify_dm_standalone(ln, v):
+                dm_stale.append((fp, i, ln.strip()[:150]))
             # 维度二：指向已归档目录文件但同行无归档标注（带日期历史文件整体豁免）
             if ARCHIVED_REF_RE.search(ln) and not ARCHIVE_NOTED_RE.search(ln) and not hist_file:
                 ref_stale.append((fp, i, ln.strip()[:150]))
@@ -173,7 +221,61 @@ def scan(v: tuple[int, int, int]):
             plain = re.sub(r"`[^`]*`", "", ln)
             if re.search(r"\|\s*⬜\s*\|", plain) and not superseded:
                 pending_stale.append((fp, i, ln.strip()[:150]))
-    return drift, stale, exempt, ok, ref_stale, pending_stale, blind
+    return drift, stale, exempt, ok, ref_stale, pending_stale, blind, dm_stale
+
+
+def cmd_selftest() -> int:
+    """判据非空自检（2026-10-17 立，负向夹具）：合成行喂分类器，断言必须命中。
+
+    判据存在 ≠ 判据有效——本 selftest 的核心负向用例是维度五：
+    “doc-metrics 26 卷”独立数字形在旧判据（TRIPLE_RE）下完全漏检，
+    新判据必须判 dm_stale；外加 TRIPLE 三连形／豁免／盲区／一致各形。
+    """
+    v = (74, 521, 3671)
+    cases = [
+        # (说明, 行, in_block, 期望 triple 类别（无 TRIPLE 则 None）, 期望 dm_stale)
+        (u"旧三连形现在时态须判 stale",
+         u"- 现行大纲目录 `x/index.html` 的 doc-metrics 67 卷 482 章 3468 节",
+         False, "stale", False),
+        (u"新独立数字形（旧判据漏检）须判 dm_stale",
+         u"- **卷数核对**：须与现行口径一致（`x/index.html` 的 doc-metrics 26 卷；过渡期以磁盘为锚）",
+         False, None, True),
+        (u"独立数字形-章",
+         u"- **章数核对**：须与现行口径章数一致（`x/index.html` 的 doc-metrics 240 章）",
+         False, None, True),
+        (u"独立数字形-现值一致不判",
+         u"- **卷数核对**：须与现行口径卷数一致（`x/index.html` 的 doc-metrics 74 卷）",
+         False, None, False),
+        (u"历史豁免行不判 dm_stale",
+         u"- 历史记录：原现行口径 26 卷（已于 2026-09-20 取代）",
+         False, "exempt", False),
+        (u"另一套基准（磁盘实况）豁免",
+         u"当前磁盘实况 19卷355章；现行大纲目录 67 卷 482 章 3468 节",
+         False, "exempt", False),
+        (u"标记块内漂移判 drift",
+         u"- 重构2026 现行大纲目录口径：67 卷 482 章 3468 节",
+         True, "drift", False),
+        (u"标记块内一致判 ok",
+         u"- 重构2026 现行大纲目录口径：74 卷 521 章 3671 节",
+         True, "ok", False),
+        (u"历史标记（修订）豁免不判盲区",
+         u"- 现行口径 67 卷 482 章 3468 节（修订（2026-09-20）：已按 74 卷演进）",
+         False, "exempt", False),
+    ]
+    bad = 0
+    for name, ln, in_blk, want_cat, want_dm in cases:
+        got_cat, got_dm = None, False
+        tm = TRIPLE_RE.search(ln)
+        if tm:
+            got_cat = classify_triple(ln, tm, v, in_blk)
+        got_dm = classify_dm_standalone(ln, v)
+        if (got_cat != want_cat) or (got_dm != want_dm):
+            bad += 1
+            print(u"  ✗ %s：triple=%r（期望 %r）dm_stale=%r（期望 %r）"
+                  % (name, got_cat, want_cat, got_dm, want_dm))
+    print("sync_refactor2026_baseline --selftest：%d/%d %s"
+          % (len(cases) - bad, len(cases), "PASS" if not bad else "FAIL"))
+    return 0 if not bad else 1
 
 
 def cmd_list(v):
@@ -181,7 +283,7 @@ def cmd_list(v):
 
 
 def cmd_check(v, verbose: bool):
-    drift, stale, exempt, ok, ref_stale, pending_stale, blind = scan(v)
+    drift, stale, exempt, ok, ref_stale, pending_stale, blind, dm_stale = scan(v)
     print(f"权威基准：{fmt(v)}")
     print(f"标记块内声明：一致 {len(ok)} 处")
     if drift:
@@ -240,7 +342,11 @@ def cmd_check(v, verbose: bool):
     except Exception as _e:
         d92_bad = 0
         print(f"（92号文口径校验跳过：{_e}）")
-    bad = len(drift) + len(stale) + len(ref_stale) + len(pending_stale) + jsonld_bad + d92_bad
+    if dm_stale:
+        print(f"❌ dm-stale（doc-metrics 独立数字形旧口径——TRIPLE_RE 漏检形，2026-10-17 新判据，需人工）：{len(dm_stale)} 处")
+        for fp, i, ln in dm_stale[:20]:
+            print(f"  {fp.name} L{i}: {ln[:120]}")
+    bad = len(drift) + len(stale) + len(ref_stale) + len(pending_stale) + len(dm_stale) + jsonld_bad + d92_bad
     print("✅ 零未处置漂移" if bad == 0 else f"⚠️ 未处置漂移 {bad} 处")
     return 1 if bad else 0
 
@@ -289,8 +395,11 @@ def main():
     g.add_argument("--check", action="store_true", help="检测漂移（默认）")
     g.add_argument("--sync", action="store_true", help="仅同步标记块内基准行")
     g.add_argument("--list", action="store_true", help="打印权威基准")
+    g.add_argument("--selftest", action="store_true", help="判据非空自检（负向夹具）")
     ap.add_argument("--verbose", action="store_true", help="列出全部豁免命中")
     args = ap.parse_args()
+    if args.selftest:
+        return cmd_selftest()
     v = parse_authoritative()
     if args.list:
         cmd_list(v)
