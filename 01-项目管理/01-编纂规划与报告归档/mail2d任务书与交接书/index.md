@@ -32,3 +32,17 @@
 - 各线**状态机／spec／分件／判读件／叙述件**仍留在 `script/_db_row_mining/` 与本地工作区 `C:\Users\ykla\Documents\libre\`（按 `流程规则.md` 临时件规约），**不随本目录迁移**。
 - 故本目录各件内出现的裸文件名（`mail2d_read_ledger.json`、`_h1_state.json`、`_h5_state.json`、`_batch_*.json` 等）**均指 `script/_db_row_mining/` 下的件**；`_H3_PROGRESS.md` 已于 2026-09-28 并入 `_HANDOFF_H3.md` 后删除。
 - 长线登记与续跑入口的权威表述见 `01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md` §一／§三。
+
+## 三、第二批补迁（2026-10-17，主理人令“全部迁移”，共 16 件）
+
+| 文件 | 线 | 角色／状态 |
+| ---- | -- | ---------- |
+| `_HANDOFF_MAIL2D_20260917.md`／`_HANDOFF_MAIL2D_20260918.md` | mail2d | 早期交接书（已被 `_MAIL2D_PLAN_HANDOFF.md` 与 `_HANDOFF_H*.md` 接替） |
+| `_LONGTERM_PLAN_MAIL2D.md` | mail2d | 早期长期计划 |
+| `_H3_HOST_POOL.md` | H3 | 宿主池表 |
+| `_H3_REVIEW_20260918.md` | H3 | 2026-09-18 复核报告 |
+| `_DEBT_TASK_H5TP.md`／`_F15_TASK_fq_b075.md` | H5／H1 | 两笔挂账任务件——🟩 **均已清零** |
+| `_H5_REVIEW_20260918.txt`／`_H5_FRONTIER_20260918.json`／`.txt` | H5 | 收官期评审与前沿快照——🟩 H5 全库**已完成** |
+| `_历史快照/_HANDOFF_H4.pre_b004…b009_2026100X.md`（6 件） | H4 | H4 交接书在各批边界的旧版快照，仅供追溯 |
+
+> 全库任务书迁移的总口径、全量清单与状态标注见 [`../任务书迁移登记.md`](../任务书迁移登记.md)。
