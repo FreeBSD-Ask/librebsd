@@ -147,15 +147,15 @@ volume: 第13卷-bsd衍生操作系统
 
 **辨析**：
 
-- openrsync 的“净室重实现”表述来自作者与主持人转述，其兼容性目标（3.1.3 基准）与安全机制（pledge/unveil）在 2019 年初仍属进行时状态，须以项目仓库与后续发布记录核验完成度。　[存疑脚注] 项目完成度与最终进入基本系统的时点未经一手仓库核对。（BSD Now EP282，[1554.64-1695.70]，L4）
-- PDP-11 回顾系博客作者对贝尔论文的二手转述，且转写将“Maria Strobel”等专名误转，人名与具体数字须核对原文。　[存疑脚注] 专名与数字须以贝尔论文原文核实（BSD Now EP225，[1927.8-1965.5]，L4）
-- BSD Taiwan 报名人数（预期 80、注册 120 余）系主持人口述，无官方书面数字复核。　[存疑脚注] 报名数字系口述，须以会议官方记录核实（BSD Now EP221，[1772.4-1782.4]，L4）
-- 转写将多个人名与机构名误转（如“Gambold”“Nanshiao”等），人物身份须核对会议议程。　[存疑脚注] 转写人名拼写不可靠（BSD Now EP221，[1146.76-1173.16]，L4）
-- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。　[存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
-- [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。　[存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
-- [存疑脚注] FreeNAS 9.10.3 的发布时间与 MinIO、iocage 等功能的落地范围在访谈时尚属计划，须以最终发布说明为准。　[存疑脚注] 计划性披露，需与正式发布记录核验。（BSD Now EP185，[668.32-1046.98]，L4）[订正：原 [668.32-869.02]，2026-09-30 SenseAudio 重转核对]
-- Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。　[存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
-- OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。　[存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
+- openrsync 的“净室重实现”表述来自作者与主持人转述，其兼容性目标（3.1.3 基准）与安全机制（pledge/unveil）在 2019 年初仍属进行时状态，须以项目仓库与后续发布记录核验完成度。 [存疑脚注] 项目完成度与最终进入基本系统的时点未经一手仓库核对。（BSD Now EP282，[1554.64-1695.70]，L4）
+- PDP-11 回顾系博客作者对贝尔论文的二手转述，且转写将“Maria Strobel”等专名误转，人名与具体数字须核对原文。 [存疑脚注] 专名与数字须以贝尔论文原文核实（BSD Now EP225，[1927.8-1965.5]，L4）
+- BSD Taiwan 报名人数（预期 80、注册 120 余）系主持人口述，无官方书面数字复核。 [存疑脚注] 报名数字系口述，须以会议官方记录核实（BSD Now EP221，[1772.4-1782.4]，L4）
+- 转写将多个人名与机构名误转（如“Gambold”“Nanshiao”等），人物身份须核对会议议程。 [存疑脚注] 转写人名拼写不可靠（BSD Now EP221，[1146.76-1173.16]，L4）
+- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。 [存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
+- [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。 [存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
+- [存疑脚注] FreeNAS 9.10.3 的发布时间与 MinIO、iocage 等功能的落地范围在访谈时尚属计划，须以最终发布说明为准。 [存疑脚注] 计划性披露，需与正式发布记录核验。（BSD Now EP185，[668.32-1046.98]，L4）[订正：原 [668.32-869.02]，2026-09-30 SenseAudio 重转核对]
+- Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。 [存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
+- OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。 [存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
 
 **文献**：
 
@@ -226,3 +226,45 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔来源不详〕讲者口述：讲者自述名为 Chris Moore（转写音作 Chris Moore，正字为 Kris Moore），并为该组织创始人。（YouTube EPw-OoWiSldcQ，[71.15-77.51]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1523 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1523`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD 桌面化主题演讲，讲者 Kris Moore〕讲者口述：Kris Moore 自述其是 PC-BSD 项目的创立者，本场演讲主题为“让 FreeBSD 成为桌面成为现实”；他自陈 PC-BSD 并非分叉，就是把 FreeBSD 当作桌面基底来推。（YouTube EP7VYyQvzdD9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1524 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1524`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD 桌面化主题演讲，讲者 Kris Moore〕讲者口述：他判断原生 FreeBSD 在桌面上最首要的短板是缺少易用的图形化安装器，桌面用户一开机就会把它认出是问题；随后（03:23–03:31）他点名 FreeBSD 的 sysinstall“已经开始显得过时”，只是不想贬低其开发者。（YouTube EP7VYyQvzdD9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1525 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1525`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD 桌面化主题演讲，讲者 Kris Moore〕讲者口述：PC-BSD 的 PBI 以自定义 LOCALBASE 方式编译——以 Firefox 为例把 LOCALBASE 设成 programs 下带版本号的目录，使包自带全部依赖库、彼此不互相牵连，从而摆脱 ports 树的长编译与依赖链接失败。（YouTube EP7VYyQvzdD9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1526 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1526`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD 桌面化主题演讲，讲者 Kris Moore〕讲者口述：为让 PC-BSD 桌面层脱离传统 ports 树、把 /usr/local 留空（00:19:51–00:20:07 他说装完 PC-BSD 后 pkg info 显示“未安装任何包”），他必须给 FreeBSD 写补丁，因为 FreeBSD 无法良好支持多个 localbase。（YouTube EP7VYyQvzdD9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2515 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2515`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore AsiaBSDCon 2013 讲座〕讲者口述：讲者称其团队为 PC-BSD 开发了名为 pc thin client 的部署工具，预装于 PC-BSD 与 TrueOS，TrueOS 被其称为 PC-BSD 的服务器版本。（YouTube EPC7i_PJqqHlU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2516 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2516`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore AsiaBSDCon 2013 讲座〕讲者口述：讲者说明演示所用安装并非 FreeBSD 的新安装器 bsdinstall，而是其本人多年前所写、作为 PC-BSD 与 TrueOS 默认安装器的 pc sysinstall 后端，支持全部 ZFS 特性且完全可脚本化。（YouTube EPC7i_PJqqHlU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2517 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2517`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore AsiaBSDCon 2013 讲座〕讲者口述：讲者称该安装体系的每一次安装都是百分之百脚本化，GUI 里没有任何“魔法”逻辑，只负责写出配置脚本，全部安装工作由安装后端完成。（YouTube EPC7i_PJqqHlU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2518 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2518`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Moore AsiaBSDCon 2013 讲座〕讲者口述：讲者称该向导自动配好 NFS、DHCP 以及供 TFTP 等用的守护进程，约三十秒即可搭起一台 PXE 网络引导安装服务器。（YouTube EPC7i_PJqqHlU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

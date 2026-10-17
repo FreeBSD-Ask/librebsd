@@ -104,9 +104,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- [考据脚注] 转写所述 36 年 bug 与 4.1BSD 约 1982 年起源一致，但各 BSD 受影响程度不同，OpenBSD 因既有缓解不发布 errata，属节目对原始提交的转述。　[考据脚注] 各 BSD 影响面与 OpenBSD 不发布 errata 属单源转述（BSD Now EP298，[236.30-620.90]，L4）[订正：原 [339.1-415.76]，2026-09-30 SenseAudio 重转核对]
-- McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
-- McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
+- [考据脚注] 转写所述 36 年 bug 与 4.1BSD 约 1982 年起源一致，但各 BSD 受影响程度不同，OpenBSD 因既有缓解不发布 errata，属节目对原始提交的转述。 [考据脚注] 各 BSD 影响面与 OpenBSD 不发布 errata 属单源转述（BSD Now EP298，[236.30-620.90]，L4）[订正：原 [339.1-415.76]，2026-09-30 SenseAudio 重转核对]
+- McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。 [存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
+- McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。 [存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
 - 标题所称“5 亿毫不知情的 FreeBSD 用户”点出沉默使用现象：终端用户无从感知底层操作系统，自由软件的扩散依赖企业生产采用而非用户选择，当事人开场亦以现场举手调查印证知情者寥寥；此为“沉默 BSD 企业”现象的当事人自证，但亦须辨析——企业愿意公开自述者（如本场演讲）恰是沉默群体中的例外，样本代表性有限。（BSDTalk EP250，[178.32-191.12]，L1）
 
 **文献**：
@@ -158,3 +158,100 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔AsiaBSDCon 2008〕讲者 Pawel Jakub Dawidek 口述：GEOM 的 GELI 类也会使用 CPU 自带的自动加密核心（转写音作 automatic CPU cores），从而加速加密。（YouTube EPxMpmOezBJZo，[1620.88-1626.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1399 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1399`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2010 Kirk McKusick〕讲者口述：软更新机制与后台 FSCK 十余年来工作良好，但如今文件系统变得极大，FSCK 的运行时间以数小时计，而它施加给系统、尤其是 IO 子系统的负载相当可观，会让整机变慢；若 FSCK 要跑 24 小时便挤进白天的繁忙时段，用户开始反对。这正是引入日志回滚的动机。（YouTube EP_NuhRkiInvA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1400 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1400`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2010 Kirk McKusick〕讲者口述：对软更新方案要日志记录的对象，只需把这些块与 inode 记入日志，即可用日志回滚把它们放回位图，从而取代后台 FSCK；由于只涉及数量很少的事件，日志无须很大，最初主张 16 MB 后依协作开发者意见把测试值压到 1 MB，在 1 TB 文件系统上极力制造压力也难以写满。（YouTube EP_NuhRkiInvA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1401 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1401`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2010 Kirk McKusick〕讲者口述：引入日志使软更新代码量近乎翻倍，从 6500 行增至 11500 行；此外还有约 2600 行日志恢复代码并入 FSCK，接近 FSCK 原有 6000 行，合计比原先多出约 50%，因此项目规模不小。（YouTube EP_NuhRkiInvA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1680 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1680`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 技术会议讲者 Warner Losh 的 CAM 专题〕讲者口述：在其部署里 FreeBSD 能跑满所用 NVMe 卡的全部带宽；他称这主要归功于“Drew”对整个网络栈的优化，FreeBSD 的延迟已不错但仍可优化——目前约 30 微秒，再抠掉 5 到 10 微秒仍有空间。（YouTube EPeUSNea3I-hE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1681 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1681`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 技术会议讲者 Warner Losh 的 CAM 专题〕讲者口述：他把 CAM 的职责概括为三件：I/O 的排队与调度；出错时冻结队列以便做错误恢复、再恢复 I/O；以及施加规则、约束系统当前这一刻真正能发给磁盘的命令。（YouTube EPeUSNea3I-hE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1682 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1682`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 技术会议讲者 Warner Losh 的 CAM 专题〕讲者口述：他解释了 CAM 的 devq 如何限流：它保证最多只往 SIM 送 32 个 I/O、不至于灌满；一旦意外超发，或错误处理过程中积压超出承受范围，就得由 SIM 自己兜住。通常做法是主动 pacing，让盘里始终恰好有适量的请求。（YouTube EPeUSNea3I-hE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1683 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1683`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 技术会议讲者 Warner Losh 的 CAM 专题〕讲者口述：回答 DTrace 可否插桩 CAM 的提问时，他称 CAM 已有 tracing 例程，可以顺着看 CCB 上下来回；不少 CAM 调试路径都是 DTrace 的理想候选点，主要集中在 cam xpt 的 done 处理上，另外每个 transport（ATA xpt 与 nvme xpt）大概各需要一两个探针。（YouTube EPeUSNea3I-hE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2074 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2074`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 于 BSDCan 2017 演讲〕讲者口述：其展示的 FreeBSD I/O 栈层次图，是“kirk's and George's and Roberts”那本设计与实现之书内容的简化版，自顶向下依次为系统调用、文件表项、vnode、文件系统、页缓存，再向下到设备层；本讲重点放在页缓存（缓冲缓存）层。（YouTube EPyIxsm6JI_7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2075 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2075`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 于 BSDCan 2017 演讲〕讲者口述：buffer cache 的核心是 struct buff，它并非映射整个 vnode，而是映射 vnode 的特定区段，内含 offset 与 length 字段，其页通常由 VM object 支撑（讲者补充：VM object 始终存在，只是未必已填充）。（YouTube EPyIxsm6JI_7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2076 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2076`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 于 BSDCan 2017 演讲〕讲者口述：缓冲缓存对可并行的异步写入数量施加全局上限，单一磁盘时该全局上限不成问题，但慢硬盘与快 SSD 并存时，一方会饿死另一方，究竟谁被饿死取决于请求到达顺序。（YouTube EPyIxsm6JI_7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2077 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2077`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 于 BSDCan 2017 演讲〕讲者口述：其反压设计的总纲是：在最低层，每个设备发布自己认为能承担多少工作量，以及承担该工作量的时间尺度。（YouTube EPyIxsm6JI_7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2245 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2245`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Send and Receive of File System Protocols: Userspace Approach With puffs〕讲者口述：puffs 的最初工作是在 HPA risk 架构上完成的，讲者强调自己说“就是在其上完成”是字面意义上的确在此硬件上运行——当时是在家里做的开发，没有合适的办公椅可用。（YouTube EPziGeB8iRA0c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2246 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2246`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Send and Receive of File System Protocols: Userspace Approach With puffs〕讲者口述：与去年相比唯一的区别是：去年这套机制还叫 puffs，现在改叫 devpts；他说明 devpts 承担消息传递机制，使 puffs 中与文件系统相关的部分与无关的部分（把请求由内核传输到用户态）解耦。（YouTube EPziGeB8iRA0c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2247 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2247`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Send and Receive of File System Protocols: Userspace Approach With puffs〕讲者口述：他写出 SSHFS 的做法仍是协议转译：把 puffs 接口改写为 SFTP 函数调用，即把 openSSH 的 SFTP 部分链接进文件系统服务器，把请求转换为对 SFTP 例程的调用；写完当天即跑通。（YouTube EPziGeB8iRA0c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2248 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2248`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Send and Receive of File System Protocols: Userspace Approach With puffs〕讲者口述：在 9P 协议中只能在一个目录内部重命名文件——不能做跨目录重命名，也不能重命名目录；这看似荒谬的限制，但若深挖正确实现一次 rename 需要做的事，就能理解它为何如此设计。（YouTube EPziGeB8iRA0c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2541 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2541`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Attilio Rao 讲 FreeBSD VFS/vnode 接口〕讲者口述：内核同一时刻只能用一种文件系统这一难题，最重要也最知名的解法由 Sun 给出——Sun 在 FFS 问世数年之后开发了 VFS/vnode 接口，此后它基本成为整个 Unix 世界实现多文件系统支持的事实标准。（YouTube EPSpS7Ajnx9Q8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2542 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2542`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Attilio Rao 讲 FreeBSD VFS/vnode 接口〕讲者口述：1970 年代末 System V Unix 与 BSD Unix 都用 S5FS；BSD 4.2 引入时 Marshall Kirk McCusick 开发了新文件系统 FFS（fast file system），意在修复 S5 文件系统大量已知性能问题，开发于 1980 年代中期。（YouTube EPSpS7Ajnx9Q8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2543 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2543`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Attilio Rao 讲 FreeBSD VFS/vnode 接口〕讲者口述：把 1980 年代中期的最初实现与当前 FreeBSD 代码相比，VFS/vnode 代码几乎未被改动——改进固然很多，但核心思想与主体结构基本未变；他猜测 NetBSD、OpenBSD 等其他 BSD 亦然，并认为这足证 Sun 当年实现该接口的功力。（YouTube EPSpS7Ajnx9Q8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2544 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2544`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Attilio Rao 讲 FreeBSD VFS/vnode 接口〕讲者口述：FreeBSD 在 VFS 与 I/O 路径上暴露出若干弱项，其中 name cache 是大问题——它大概从未被改动过；当时有一位受 Summer of Code 资助的学生正在实现一套可能取而代之的 name cache 新模型。（YouTube EPSpS7Ajnx9Q8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

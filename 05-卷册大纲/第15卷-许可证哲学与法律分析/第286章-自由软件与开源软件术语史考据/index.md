@@ -59,3 +59,85 @@ volume: 第15卷-许可证哲学与法律分析
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-15-055 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-15-055`；login 逐条遍历判定采纳）
+
+2000年 SGI 为以 GPL 发布 XFS 文件系统，用自制工具逐行比对第三方代码以完成'产权负担解除'（encumbrance relief），并通过 linvfs 接口与 pagebuf 层将 XFS 移植到 Linux，当事人 Russell Cattelan 在 USENIX ;login: 上亲述该过程。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-3-075 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-075`；login 逐条遍历判定采纳）
+
+2022 年 ;login: 刊文记载：FreeBSD 开发者 Robert Watson 等开发了 Capsicum 内核与库机制，允许程序精确声明自身所需能力并放弃获取新资源的权限，超过 50 个 FreeBSD 程序已改写以使用该机制；该软件能力路线与 CHERI 硬件能力架构共同构成内存安全方案谱系。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2123 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2123`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Open Source - is it something new? by Gregers Petersen 演讲〕讲者口述：他把“开源是否为新事物”设为修辞问题并自答“不新”；在他看来，open source 这个术语本身可能只是被特定意图、既有关系、历史脉络以及许多个人的利益与目的共同建构出来的一个“新词”。（YouTube EPWoh2hzFh-sc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2124 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2124`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Gregers Petersen 现场问答〕讲者口述：与其他许可证相比，BSD 许可证“极为宽松”——它实际上几乎不作任何规定，唯一的约束是不得声称该代码系自己原创，且须持续保留对原作者的署名；至于使用者如何使用，则不加限制。（YouTube EPWoh2hzFh-sc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

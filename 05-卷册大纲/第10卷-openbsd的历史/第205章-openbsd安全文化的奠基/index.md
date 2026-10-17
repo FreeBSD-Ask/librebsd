@@ -115,7 +115,7 @@ volume: 第10卷-openbsd的历史
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：OpenBSD 开发者与黑客松参与者在雪山小屋中直接动手重写 X.509 代码，把验证时间压缩 20 倍，历史由动手者而非口号推进。（BSD Now EP330，[2505.66-2516.12]，L2）
 - 总纲9 经验优先：总纲9 经验优先：主持人从自身 24×7 使用廉价盘与 ZFS 的实际经验回答磁盘选型问题，实践知识优先于厂商宣传。（BSD Now EP330，[3813.36-3853.76]，L1）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：本期同时呈现 OpenBSD、NetBSD、FreeBSD/FreeNAS、NomadBSD，各分支被平等对待，不以规模论高下。（BSD Now EP330，[1790.46-1814.48]，L2）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：OpenBSD 罕见的远程认证漏洞出现与 40 小时修复并非必然，而是具体代码缺陷与具体响应条件的偶然叠加。　[存疑脚注] 漏洞为偶发事件这一判断系史学概括，非节目明言（BSD Now EP330，[245.98-255.10]，L4）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：OpenBSD 罕见的远程认证漏洞出现与 40 小时修复并非必然，而是具体代码缺陷与具体响应条件的偶然叠加。 [存疑脚注] 漏洞为偶发事件这一判断系史学概括，非节目明言（BSD Now EP330，[245.98-255.10]，L4）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：NomadBSD 从 GPT 改回 MBR、UnionFS 换为 FUSE 等变化并非线性进步，而是兼容性与约束在不同硬件间的重新分配。（BSD Now EP330，[1872.70-1888.38]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：本期多则教程与工具（如云主机装 FreeNAS 的旧法）提醒知识会随平台与版本过期，需持续核验。（BSD Now EP330，[1482.36-1494.88]，L2）
 - 总纲8 本体论上各方平等：当事人主张技术方案多元平等的市场观：不存在单一赢家或垄断者，应就具体问题审视特定系统对人的益处；企业常因流行度先采用 Linux，随后撞上流行度解决不了、须以架构处置的障碍，此时 BSD 恰好承接且两者往来迁移常见；开源对他们而言是降低工具成本的恩惠——90 年代中期半导体 CAD 工具成本已从百万美元级降至十万级，节省的资金可回流至真正设计与创造的人。（BSDTalk EP29，[1066.6-1268.46]，L1）
@@ -123,13 +123,13 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- Obser 所述 Theo 逾 26 年前重构 ping 的具体年份需与 OpenBSD 提交史核验，节目转述未给出提交编号。　[存疑脚注] ping 重构年份为口述概数，须以 OpenBSD 提交记录与变更日志核验。（BSD Now EP498，[598.70-632.26]，L4）
-- pledge 从 tame 更名的具体时间与 5.8、5.9 版本对应关系为概略叙述，需以 OpenBSD 发布说明与 man 页核验。　[存疑脚注] tame 更名 pledge 及对应版本为概略叙述，需以 pledge(2) 手册与发布说明确认。（BSD Now EP498，[861.42-931.54]，L4）
-- “默认安装仅两个远程漏洞”为 OpenBSD 项目长期自述口径，其统计口径与时间范围需与官方安全公告逐条核对。　[存疑脚注] 远程漏洞计数为项目自述，统计边界需对照 OpenBSD 官方安全公告确认。（BSD Now EP428，[138.94-145.1]，L4）
-- 转写中 FuryBSD 与 FurryBSD 混淆，GhostBSD 的 Chrome 兼容问题被节目归因于临时打包故障，未经核实。　[存疑脚注] GhostBSD Chrome 故障原因未核实（BSD Now EP348，[687.6-695.68]，L4）
-- OpenBSD 认证绕过漏洞的“远程可利用”与 sshd 免责边界需逐应用分析，实际影响应按个案评估，不能笼统宣称整个系统不安全。　[存疑脚注] 转写对漏洞细节的表述为口语转述，建议以官方 errata 与 CVE 原文核对（BSD Now EP330，[193.66-204.80]，L4）
-- NetBSD 9.0 当时尚未正式发布，RC1 特性清单可能随正式版调整，所引安全与虚拟化特性宜以正式公告为准。　[考据脚注] RC1 为发布前状态，存在后续变更可能（BSD Now EP330，[971.00-979.36]，L4）
-- 当事人回忆 80 年代参加规划 BSD 未来的架构组会议时，为尽快推出 sockets，关于 socket 安全性的讨论被推到议程末尾并最终砍掉；他认为其中许多问题正是 OpenBSD 日后聚焦的领域。该回忆将 OpenBSD 安全工程追认至早期 BSD 的结构性遗留，但口述无同期会议文献佐证，会议时间与名录未详。　[存疑脚注] 单一当事人回忆，架构组会议的具体届次、日期与出席者均未言明，须与 CSRG 会议记录及邮件档案交叉验证（BSDTalk EP29，[630.68-664.96]，L1）
+- Obser 所述 Theo 逾 26 年前重构 ping 的具体年份需与 OpenBSD 提交史核验，节目转述未给出提交编号。 [存疑脚注] ping 重构年份为口述概数，须以 OpenBSD 提交记录与变更日志核验。（BSD Now EP498，[598.70-632.26]，L4）
+- pledge 从 tame 更名的具体时间与 5.8、5.9 版本对应关系为概略叙述，需以 OpenBSD 发布说明与 man 页核验。 [存疑脚注] tame 更名 pledge 及对应版本为概略叙述，需以 pledge(2) 手册与发布说明确认。（BSD Now EP498，[861.42-931.54]，L4）
+- “默认安装仅两个远程漏洞”为 OpenBSD 项目长期自述口径，其统计口径与时间范围需与官方安全公告逐条核对。 [存疑脚注] 远程漏洞计数为项目自述，统计边界需对照 OpenBSD 官方安全公告确认。（BSD Now EP428，[138.94-145.1]，L4）
+- 转写中 FuryBSD 与 FurryBSD 混淆，GhostBSD 的 Chrome 兼容问题被节目归因于临时打包故障，未经核实。 [存疑脚注] GhostBSD Chrome 故障原因未核实（BSD Now EP348，[687.6-695.68]，L4）
+- OpenBSD 认证绕过漏洞的“远程可利用”与 sshd 免责边界需逐应用分析，实际影响应按个案评估，不能笼统宣称整个系统不安全。 [存疑脚注] 转写对漏洞细节的表述为口语转述，建议以官方 errata 与 CVE 原文核对（BSD Now EP330，[193.66-204.80]，L4）
+- NetBSD 9.0 当时尚未正式发布，RC1 特性清单可能随正式版调整，所引安全与虚拟化特性宜以正式公告为准。 [考据脚注] RC1 为发布前状态，存在后续变更可能（BSD Now EP330，[971.00-979.36]，L4）
+- 当事人回忆 80 年代参加规划 BSD 未来的架构组会议时，为尽快推出 sockets，关于 socket 安全性的讨论被推到议程末尾并最终砍掉；他认为其中许多问题正是 OpenBSD 日后聚焦的领域。该回忆将 OpenBSD 安全工程追认至早期 BSD 的结构性遗留，但口述无同期会议文献佐证，会议时间与名录未详。 [存疑脚注] 单一当事人回忆，架构组会议的具体届次、日期与出席者均未言明，须与 CSRG 会议记录及邮件档案交叉验证（BSDTalk EP29，[630.68-664.96]，L1）
 
 **文献**：
 
@@ -197,3 +197,65 @@ volume: 第10卷-openbsd的历史
 
 据〔FIDO and Webauthn on BSD 报告（来源不详）〕讲者 Taylor R Campbell 口述：他数月前列出一个 NetBSD 缺陷，他人核实 FreeBSD 同样存在。（YouTube EPmHfVwEPaDws，[2223.3-2231.569]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1623 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1623`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building a Large Scale Threat Intelligence System with OpenBSD，讲者 Lawrence Teo〕讲者口述：其自 2000 年起即为 OpenBSD 用户，并称那大约是 OpenBSD 2.5 到 2.6 的时候。（YouTube EPqQdcAn4-3CE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1624 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1624`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building a Large Scale Threat Intelligence System with OpenBSD，讲者 Lawrence Teo〕讲者口述：其自 2012 年起成为 OpenBSD 开发者，用户名 lteo；早期主要从事网络相关事务，涉及 libpcap、tcpdump、divert 等。（YouTube EPqQdcAn4-3CE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1625 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1625`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building a Large Scale Threat Intelligence System with OpenBSD，讲者 Lawrence Teo〕讲者口述：其系统以安装 pkg 包中携带的 dynamic-rules 规则文件、经 pfctl 载入 dynamic-rules 锚点的方式动态下发规则，借 pf 锚点特性在不刷新其余规则集的前提下追加规则。（YouTube EPqQdcAn4-3CE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1626 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1626`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Building a Large Scale Threat Intelligence System with OpenBSD，讲者 Lawrence Teo〕讲者口述：divert 是 OpenBSD 中在内核与用户态之间转发分组的功能，其以 IPS 模式运行的 snort 即依赖该功能；但该功能当时相当有限，在存在多个出口网卡、客户接入多条 ISP 线路等条件下工作不佳。（YouTube EPqQdcAn4-3CE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1867 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1867`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ingo Schwarze 于 BSDCan 2018 演讲〕讲者口述：他把 SQLite 从 OpenBSD 基本系统里删掉的理由是，SQLite 发版频繁，大约每月一次，且每次都有实质改动，平均每年约新增 15,000 行代码，而 OpenBSD 会对基本系统里的软件做审计，没人能每年审计这样一个工具里 15,000 行新代码。（YouTube EPN26pBxJPMxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1868 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1868`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ingo Schwarze 于 BSDCan 2018 演讲〕讲者口述：他口述删除 SQLite 的直接收益是——基本系统少维护约 200,000 行代码、每年少审 15,000 行、数据库体积减半、查找速度翻倍。（YouTube EPN26pBxJPMxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1869 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1869`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ingo Schwarze 于 BSDCan 2018 演讲〕讲者口述：他口述这个 OpenSSL 的分支是 2014 年在“hot blade”事件之后从 open SSL 分出来的，而且不只因为那一个漏洞，而是因为对基本安全实践的普遍忽视；最初的重点是删除不必要的代码。（YouTube EPN26pBxJPMxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1870 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1870`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ingo Schwarze 于 BSDCan 2018 演讲〕讲者口述：他说就文档工具而言，man doc 自大约 BSDCan 2015 以来，已成为各 BSD 命令行工具的标准文档工具包，并且正在成为面向 Web 的标准，原因在于其对语义标记的支持。（YouTube EPN26pBxJPMxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2223 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2223`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 在 BSDCan 2018 演讲〕讲者口述：飞利浦医疗 X 光机与数字荧光透视机上用于把机器内部以太网与医院外部以太网二层次隔离的小盒子，最初由 Holger Mickelan 在飞利浦的硕士论文中实现，跑了约五年前飞利浦想让部分改动进入 OpenBSD 主线，因此找来讲者接手重写。（YouTube EPDOCAYXeu5Fc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2224 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2224`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 在 BSDCan 2018 演讲〕讲者口述：该 OpenBSD 隔离盒运行自定义 RAM 盘，仅含 bridge、PF、SSH、SSHD 与少量基础工具，不是完整安装；RAM 盘无任何持久配置，采用 10.0.0.0 网段的固定"魔法 IP"，由内部管理系统连入并下发 PF 规则与桥接过滤器。（YouTube EPDOCAYXeu5Fc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2225 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2225`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 在 BSDCan 2018 演讲〕讲者口述：讲者重写桥接 ARP 过滤器时发现过滤器逻辑本身仅约 40 行，真正的工程难点在 ifconfig 桥接规则解析器——它把行拆词塞进 argc/argv，词数组上限曾限为 8，导致部分规则能工作、部分不能；含全部相关改动整个 diff 仍仅约 400 行。（YouTube EPDOCAYXeu5Fc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2226 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2226`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 在 BSDCan 2018 演讲 Q&A〕讲者口述：飞利浦对付费给讲者的代码不做限制，反而非常希望这些改动进入 OpenBSD 主线；讲者评价飞利浦真正理解开源的 give and take，愿意回馈社区。（YouTube EPDOCAYXeu5Fc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

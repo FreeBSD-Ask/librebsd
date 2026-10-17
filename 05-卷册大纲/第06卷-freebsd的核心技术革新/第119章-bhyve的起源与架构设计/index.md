@@ -99,7 +99,7 @@ volume: 第06卷-freebsd的核心技术革新
 - AsiaBSDCon 2017 演讲幻灯片与日程（BSD Now EP186，[432.94-560.68]，L1）
 - Philipp 访谈自述（BSD Now EP186，[3969.0-5733.62]，L1）
 - OpenBSD PF 邮件列表与 CVS 历史（BSD Now EP186，[3969.0-4285.88]，L1）
-- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。　[存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
+- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。 [存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
 - 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
 - 本期史料为 Neel Natu 与 Peter Grehan 访谈（当事人自述），涉及 MeetBSD 2010 演示、bhyve 项目分支、grub2-bhyve 及 FreeBSD 状态报告中的 OpenStack 合作信息。（BSD Now EP20，[1102.50-1205.18]，L1）
 
@@ -125,10 +125,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。　[存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
-- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。　[存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
-- [存疑脚注] 访谈中 2002 年 hackathon 地点、PF 实现细节系当事人十余年后回忆，需与 OpenBSD 邮件列表与 CVS 记录核验。　[存疑脚注] 当事人回忆性细节，缺乏独立档案印证。（BSD Now EP186，[3969.0-4285.88]，L4）
-- 访谈中 Illumos 支持、AMD 合并于 10.1 及 Windows 支持时间表均为当时计划，实际落地时间与 FreeBSD 版本需核对；bhyve 早期定位为 Type 2 hypervisor 的表述与后续发展存在语境差异。　[存疑脚注] 各客户机与特性落地时间以 FreeBSD 官方发布记录为准，需交叉验证。（BSD Now EP20，[1493.70-1553.78]，L4）
+- [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。 [存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
+- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。 [存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
+- [存疑脚注] 访谈中 2002 年 hackathon 地点、PF 实现细节系当事人十余年后回忆，需与 OpenBSD 邮件列表与 CVS 记录核验。 [存疑脚注] 当事人回忆性细节，缺乏独立档案印证。（BSD Now EP186，[3969.0-4285.88]，L4）
+- 访谈中 Illumos 支持、AMD 合并于 10.1 及 Windows 支持时间表均为当时计划，实际落地时间与 FreeBSD 版本需核对；bhyve 早期定位为 Type 2 hypervisor 的表述与后续发展存在语境差异。 [存疑脚注] 各客户机与特性落地时间以 FreeBSD 官方发布记录为准，需交叉验证。（BSD Now EP20，[1493.70-1553.78]，L4）
 
 **文献**：
 
@@ -232,3 +232,105 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔AsiaBSDCon 2014〕讲者 Peter Grehan 口述：讲者讨论按需分页的利弊，指出 FreeBSD 已有一个管理分页结构的模块。（YouTube EPwptkUxJSNMY，[561.11-562.8]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2241 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2241`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marcelo Araújo 演讲“bhyve and FreeNAS”〕讲者口述：FreeNAS 引入可视化／虚拟化特性的动机是构建混合存储形态——机器闲置时 CPU 空闲、内存充裕，因而可在同一台存储机上承载虚拟机。（YouTube EPfrwMWeyau_o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2242 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2242`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marcelo Araújo 演讲“bhyve and FreeNAS”〕讲者口述：FreeNAS 在 FreeNAS 11.0 中引入虚拟化特性，时间为 2017 年 2 月。（YouTube EPfrwMWeyau_o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2243 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2243`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marcelo Araújo 演讲“bhyve and FreeNAS”〕讲者口述：作者绕开 libvncserver 直接依赖而另写中间层的原因首先是许可证——其本人及许多用户都曾请求libvnc 系列双授权，但开发者答复称版权持有人过多、涉及公司和个人，且其中许多已不可联络，在未经所有人同意的情况下难以统一更换授权。（YouTube EPfrwMWeyau_o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2244 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2244`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marcelo Araújo 演讲“bhyve and FreeNAS”〕讲者口述：作者的做法是让中间库同时以 BSD 与 GPL 双授权发布——GPL 代码一方可经由该库访问 libvncserver，而 FreeBSD 系统内 BSD 授权的代码则可直接使用它；作者自陈不确定这是否最佳方案，因自己并非律师。（YouTube EPfrwMWeyau_o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2273 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2273`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 第10场·bhyve 介绍（主持人 deb goodkin）〕讲者口述：本场为 FreeBSD 基金会 FreeBSD Fridays 第 10 场活动，讲题为 bhyve 介绍；主持人介绍讲者 peter green 自 2002 年起为 FreeBSD committer，并是 FreeBSD 原生自带 hypervisor 的合著者。（YouTube EPkXi1xaUqr20，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2274 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2274`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 第10场·bhyve 介绍（讲者 peter green）〕讲者口述：bhyve 的起点是 NetApp 的一个内部项目，约始于 2010 年末。（YouTube EPkXi1xaUqr20，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2275 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2275`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 第10场·bhyve 介绍（讲者 peter green）〕讲者口述：讲者称 NetApp 未将该项目长期内部化，而是捐给了 FreeBSD，捐赠发生于 2011 年 5 月，此后开发持续推进；他举出的重要里程碑之一是 2014 年 10 月加入 AMD SVM 支持。（YouTube EPkXi1xaUqr20，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2276 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2276`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays 第10场·bhyve 介绍（讲者 peter green）〕讲者口述：内存虚拟化上，bhyve 仅对 FreeBSD 做少量修改，即复用 FreeBSD 既有虚拟内存系统来实现客户机物理地址到宿主机物理地址的转换。（YouTube EPkXi1xaUqr20，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2292 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2292`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，AsiaBSDCon 2014 演讲〕讲者口述：讲者把 pf（出自 OpenBSD）、ZFS（出自 Solaris）、bhyve（技术上出自 NetApp）称作 Unix 近年三项“惊人技术”，并称其中两项在会场即有充分代表。（YouTube EPrjNg1eQ7uAk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2293 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2293`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，AsiaBSDCon 2014 演讲〕讲者口述：为使测试对象是文件系统而非硬盘，讲者创建两块内存盘，一块分区为 UFS、一块分区为 ZFS，用 dd 命令向 2GB 目标写入约 1.9GB。（YouTube EPrjNg1eQ7uAk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2294 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2294`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，AsiaBSDCon 2014 演讲〕讲者口述：同一测试中 UFS 写入约 780（讲者称自己没有精确数字），ZFS 约 0330；讲者同时表示存在许多可以绕开这一差距的办法。（YouTube EPrjNg1eQ7uAk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2295 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2295`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，AsiaBSDCon 2014 演讲〕讲者口述：bhyve 自带调试工具可查看各虚拟机的统计，但一个只增不减的累计数字本身并不适合作图，遂换算为每秒 exits 采样，且与前述其他指标复用同几行采样代码。（YouTube EPrjNg1eQ7uAk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2460 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2460`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“bhyvearm64 CPU and Memory Virtualization on Armv8.0-A”演讲（Alexandru Elisei）〕讲者口述：bhyve arm64 是面向 FreeBSD 的 type 2 hypervisor，实现 Armv8.0-A 架构上的模型，以 bhyve 的 x86 与 ARMv7 实现为基础改造，当时尚未并入 FreeBSD 内核。（YouTube EPrh3-62HHkYY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2461 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2461`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“bhyvearm64 CPU and Memory Virtualization on Armv8.0-A”演讲（Alexandru Elisei）〕讲者口述：EL2 在硬件上是完全可选的，芯片实现者可以干脆不为特定 CPU 实现它；因此若让宿主运行于 EL2，就不得不维护两个不同的 FreeBSD 内核版本。（YouTube EPrh3-62HHkYY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2462 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2462`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“bhyvearm64 CPU and Memory Virtualization on Armv8.0-A”演讲（Alexandru Elisei）〕讲者口述：bhyve arm64 可运行于 ARM Foundation Platform Models 模拟器（ARM 官网给出链接），其虚拟机可用 memory-mapped virtio 访问多个网络与块设备，但项目仍有其局限。（YouTube EPrh3-62HHkYY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2463 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2463`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔“bhyvearm64 CPU and Memory Virtualization on Armv8.0-A”演讲（Alexandru Elisei）〕讲者口述：作者的主要目标是将 bhyve arm64 并入 FreeBSD 代码库，方向之一是把 bhyve x86 的代码拆分为机器相关与机器无关两部分，使用户态与 hypervisor 都能受益。（YouTube EPrh3-62HHkYY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2640 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2640`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，EuroBSDcon 2012〕讲者口述：bhyve（转写音作 beehive）是在 BSDCan 2011 开发者峰会上由 Neil natu 与 Peter grian 向相当意外的听众宣布的，幻灯片与录音可在 FreeBSD Wiki 上找到。（YouTube EP4d0rLrgArHw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2641 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2641`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，EuroBSDcon 2012〕讲者口述：bhyve 全部建立在 VT-x exit 之上，并借这些 exit 构建 PCI 仿真，因为 PCI 配置空间的访问由 io 指令完成。（YouTube EP4d0rLrgArHw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2642 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2642`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，EuroBSDcon 2012〕讲者口述：bhyve 需要 Intel 扩展页表（EPT），来宾从磁盘镜像引导，这与通常以文件系统为来源的 jail 不同。（YouTube EP4d0rLrgArHw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2643 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2643`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael Dexter，EuroBSDcon 2012〕讲者口述：base 内的 binutils 汇编器因 GPLv2 许可而偏旧，虽可替换为含 EPT 指令支持的 GPLv3 新版，但那样永远不会进入 base；同段讲到 John Baldwin 补齐了缺失的指令（FreeBSD 修订 238123／238167）。（YouTube EP4d0rLrgArHw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

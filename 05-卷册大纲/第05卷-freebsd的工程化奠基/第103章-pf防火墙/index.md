@@ -103,7 +103,7 @@ volume: 第05卷-freebsd的工程化奠基
 - Justin Sherrill 的 DragonFly BSD Digest。（BSD Now EP640，[1070.44-1192.64]，L1）
 - David Gwynne 的 Undeadly 文章 source and state limiters in PF。（BSD Now EP640，[1581.78-1846.92]，L1）
 - Christophe 关于 PF 缺陷修复的博客；EuroBSDCon 2017 会议议程与 FreeBSD 基金会董事会记录。（BSD Now EP213，[1331.6-1922.1]，L2）[订正：原 [1335.70-1904.14]，2026-09-30 SenseAudio 重转核对]
-- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。　[存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
+- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。 [存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
 - 本期可提炼的一手史料包括：斯洛文尼亚 OpenBSD hackathon（2014 年 7 月 8 日至 14 日）的 CVS 提交树（一周逾千次提交）与参与者分工记录、FreeBSD 邮件列表 PF 讨论串原文、BSD Router Project 公布的转发基准原始数据与运行脚本、LibreSSL tech 邮件列表的补丁流，以及安全官 Dag-Erling Smørgrav 对个人入坑与 commit bit 授予经历的亲述。（BSD Now EP47，[59.4-96.3]，L1）[订正：原 [68.2-96.2]，2026-09-30 SenseAudio 重转核对]
 - 本期经主持人提及可资查证的一手史料：FreeBSD 9.3-RELEASE 公告与 release notes（iSCSI 可加载、ARC 元数据限额运行时可调、on-if-console 便于 bhyve 直用官方镜像）、pkgng 1.3 RC2 邮件列表通告、LibreSSL 便携版 2.0.x 于 OpenBSD FTP 发布并已入 ports、2014 年 FreeBSD 核心团队九人选举名单（Gavin Atkinson、David Chisnall、Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Gleb Smirnoff、Peter Wemm、Robert Watson）、EuroBSDCon 2014 索菲亚注册页与开发者峰会邀请制说明。（BSD Now EP46，[1052.16-1090.52]，L2）
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[65.60-2456.00]，L1） [订正：原 [1059.58-1612.28]，2026-09-30 SenseAudio 重转核对]
@@ -142,20 +142,20 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
-- 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。　[存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
-- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
-- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
-- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。 [考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。 [存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
+- 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。 [存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
+- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。 [存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
+- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。 [存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
+- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。 [考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
 - PF 性能之争呈现典型的声明—质疑—实证结构：OpenBSD 的 Henning Brauer 称算法与锁的改进使其 PF 快约四倍，FreeBSD 开发者 Gleb Smirnoff 反驳该说法未经基准支撑且双方均未公布对比数据；BSD Router Project 随后在四核万兆平台公布附原始数据与脚本的可复现转发基准，显示 FreeBSD 10 明显快于受无 SMP 限制的 OpenBSD 5.4。（BSD Now EP47，[845.9-982.4]，L3）[订正：原 [857.82-980.68]，2026-09-30 SenseAudio 重转核对]
 - OTP 双因子认证进入 FreeBSD base 的争论焦点不在算法而在政策：由 root 统一管辖的可写密钥库是 HOTP/TOTP 计数与时效失效的技术前提，但放宽用户自管将招致弱化与误操作；Dag-Erling Smørgrav 断言“若在 10.1 放入半吊子方案，将被迫向后兼容五年”（2938.2-2950.76），宁可推至 11 一次做对，体现发布即承诺的工程伦理。（BSD Now EP47，[2930.2-2995.1]，L1）[订正：原 [2931.1-2957.62]，2026-09-30 SenseAudio 重转核对]
-- LibreSSL portable 版在 Linux 上暴露的伪随机数复用缺陷（特定 fork 情形可产出相同随机数）显示跨平台移植会击穿原设计假设，而 Linux 内核开发者相应推动与 OpenBSD getentropy 同构的系统调用以规避文件句柄耗尽攻击，构成 OpenSSL 分叉事件反向塑造 Linux 内核接口的互构链条。　[存疑脚注] 该段涉 Linux 侧动议，转写中人名（如 Theodore So、10Uincts）疑为语音转写失真，须回查 2014 年 7 月 OpenBSD tech 邮件列表与内核邮件列表原文方可定名。（BSD Now EP47，[1058.8-1118.2]，L2）[订正：原 [1040.0-1145.72]，2026-09-30 SenseAudio 重转核对]
-- 关于 Netflix 存储架构的孤证说法须存疑：主持人称 Netflix 以 discrete wire 将 SATA 磁盘一对一接 LSI HBA 而回避 SAS 扩展器，并自认“我不是百分百确定”（4922.54）；此说既非当事人自述亦无文档佐证，且转写将 HBA 误作 HPA，引用前应以 Netflix 工程实践一手材料核证。　[存疑脚注] 说话人自陈不确定且非当事人，属单一来源推断，Netflix 磁盘直连实践待核（BSD Now EP46，[4918.94-4944.68]，L4）
-- PF 双雄之争在节目中仅为转述层材料：OpenBSD 邮件列表风暴中社区主张与其仅 SMP 化 PF 不如做通用 SMP 改造，DragonFly 已多线程化 PF，FreeBSD 侧则有 PF 前途之问与 IPFW 复兴的杂音；“快四倍”“随核数线性”等数字均出自主持人复述，且网卡多队列等底层论断含糊，映射入史前必须回查 2014 年邮件列表原帖。　[存疑脚注] 争论细节与性能数字仅经主持人转述，须以邮件列表一手原文复核（BSD Now EP46，[668.06-893.54]，L2）
-- HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
-- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
-- Brauer 对其他 BSD 的 PF 状况评价带鲜明立场：称 NetBSD 在“自己的 PF 克隆里重复我们所有的错误”、FreeBSD 停留在 2008/2009 年版本且无人执行升级。此为单一当事人对兄弟项目的负面判断，NetBSD 侧的工程动机与 FreeBSD 邮件列表中的实际计划细节，须以各项目邮件列表与提交记录交叉验证方可采信。　[存疑脚注] 对 NetBSD 与 FreeBSD 的评价为单一当事人立场性陈述，未提供可复核依据（BSDTalk EP234，[1277.48-1324.98]，L4）
+- LibreSSL portable 版在 Linux 上暴露的伪随机数复用缺陷（特定 fork 情形可产出相同随机数）显示跨平台移植会击穿原设计假设，而 Linux 内核开发者相应推动与 OpenBSD getentropy 同构的系统调用以规避文件句柄耗尽攻击，构成 OpenSSL 分叉事件反向塑造 Linux 内核接口的互构链条。 [存疑脚注] 该段涉 Linux 侧动议，转写中人名（如 Theodore So、10Uincts）疑为语音转写失真，须回查 2014 年 7 月 OpenBSD tech 邮件列表与内核邮件列表原文方可定名。（BSD Now EP47，[1058.8-1118.2]，L2）[订正：原 [1040.0-1145.72]，2026-09-30 SenseAudio 重转核对]
+- 关于 Netflix 存储架构的孤证说法须存疑：主持人称 Netflix 以 discrete wire 将 SATA 磁盘一对一接 LSI HBA 而回避 SAS 扩展器，并自认“我不是百分百确定”（4922.54）；此说既非当事人自述亦无文档佐证，且转写将 HBA 误作 HPA，引用前应以 Netflix 工程实践一手材料核证。 [存疑脚注] 说话人自陈不确定且非当事人，属单一来源推断，Netflix 磁盘直连实践待核（BSD Now EP46，[4918.94-4944.68]，L4）
+- PF 双雄之争在节目中仅为转述层材料：OpenBSD 邮件列表风暴中社区主张与其仅 SMP 化 PF 不如做通用 SMP 改造，DragonFly 已多线程化 PF，FreeBSD 侧则有 PF 前途之问与 IPFW 复兴的杂音；“快四倍”“随核数线性”等数字均出自主持人复述，且网卡多队列等底层论断含糊，映射入史前必须回查 2014 年邮件列表原帖。 [存疑脚注] 争论细节与性能数字仅经主持人转述，须以邮件列表一手原文复核（BSD Now EP46，[668.06-893.54]，L2）
+- HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。 [存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
+- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。 [存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
+- Brauer 对其他 BSD 的 PF 状况评价带鲜明立场：称 NetBSD 在“自己的 PF 克隆里重复我们所有的错误”、FreeBSD 停留在 2008/2009 年版本且无人执行升级。此为单一当事人对兄弟项目的负面判断，NetBSD 侧的工程动机与 FreeBSD 邮件列表中的实际计划细节，须以各项目邮件列表与提交记录交叉验证方可采信。 [存疑脚注] 对 NetBSD 与 FreeBSD 的评价为单一当事人立场性陈述，未提供可复核依据（BSDTalk EP234，[1277.48-1324.98]，L4）
 
 **文献**：
 
@@ -185,3 +185,65 @@ volume: 第05卷-freebsd的工程化奠基
 
 据 AsiaBSDCon 2014 讲者口述：讲者称该包过滤器（NPF）于 2010 年加入。（YouTube EPcgBh0iC9WhM，[83.189-87.95]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1734 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1734`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ryan McBride《What’s wrong with PF》演讲〕讲者口述：PF 于 2001 年启动，起因是 OpenBSD 移除了 IPF——IPF 作者要求对代码变更保有控制权，使其不再满足 OpenBSD 的许可要求，于是被移除，而当时并没有替代方案。（YouTube EPpV1QZTzwf6c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1735 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1735`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ryan McBride《What’s wrong with PF》演讲〕讲者口述：PF 的设计目标按重要性排序，许可问题列在第一位；正因前一代包过滤器 IPF 存在许可问题，OpenBSD 才自行开发 PF——IPF 原本对用途而言已够好用，其次才是安全与健壮，性能排在最后。（YouTube EPpV1QZTzwf6c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1736 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1736`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ryan McBride《What’s wrong with PF》演讲〕讲者口述：讲者给出同一测试下的实测数字——FreeBSD 吞吐约 550 Mbit/s，OpenBSD 约 519 Mbit/s（转写处先念 520 再改为 519）；在负载下 FreeBSD 移动一个包约需 5 ms、OpenBSD 约 2.5 ms，后者时延约为前者一半。（YouTube EPpV1QZTzwf6c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1737 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1737`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ryan McBride《What’s wrong with PF》演讲〕讲者口述：OpenBSD 正把 PF 与内核其它子系统（TCP 与 UDP 栈、路由表）耦合，PF 对内核其余部分影响随之增大、移植越来越难；讲者认为这是 FreeBSD 侧 PF 长期未更新的一大原因——FreeBSD 上有锁放在何处的问题，而 OpenBSD 目前不存在此问题，因为持有覆盖整个内核的一把大锁，PF 无需关心锁。（YouTube EPpV1QZTzwf6c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1956 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1956`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：《Book of PF》第四版据称共 248 页，主题是“用 OpenBSD PF 工具集搭建你需要的网络”，适用 OpenBSD 7.8 及更新版本，或 FreeBSD 14.3 及更新版本。（YouTube EPHOCsvcCm1Ec，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1957 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1957`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：把讲稿整理成书之前，讲者曾以志愿审稿人身份协助 Greg Lehey 的《The Complete FreeBSD》第四版。（YouTube EPHOCsvcCm1Ec，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1958 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1958`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：《Book of PF》第一版内容覆盖在 OpenBSD、FreeBSD、NetBSD、DragonFly BSD 上做基础网络配置，反响不错，纸质版售出约 3800 册、电子书约 440 册。（YouTube EPHOCsvcCm1Ec，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1959 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1959`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：《Book of PF》之所以出第二版，主要是因为 OpenBSD 侧的 Hanno Börek 重写了 PF 的 NAT 部分，需要新的语法。（YouTube EPHOCsvcCm1Ec，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2632 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2632`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 演讲：Nikolay Aleksandrov〕讲者口述：其团队为保加利亚 ISP 自研的流量整形方案的实测结果显示，通用硬件（general purpose hardware）可用于承载多吉比特、每秒百万包量级的核心网络转发。（YouTube EPJ-7Llk5uOns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2633 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2633`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 演讲：Nikolay Aleksandrov〕讲者口述：他们也曾与其他操作系统做过测试比较，最终因喜欢 FreeBSD 的代码布局（code layout）与书写风格而选用 FreeBSD，并称这使他的工作更省力、更合乎逻辑。（YouTube EPJ-7Llk5uOns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2634 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2634`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 演讲：Nikolay Aleksandrov〕讲者口述：FreeBSD 既有的标准 polling 机制并不并行，只是依次调用各网卡的 polling 函数，且对该结构加锁；他因此改以内核线程绑核、网卡绑定到线程的方式并行轮询。（YouTube EPJ-7Llk5uOns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2635 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2635`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 演讲：Nikolay Aleksandrov〕讲者口述：其实现在 FreeBSD 上采用 bounded multiprocessing（而非 asymmetric multiprocessing），把内核线程绑定到各个 CPU、再把网卡绑定到这些线程，以便尽可能并行轮询接口；接收侧沿此路径去掉了驱动加锁。（YouTube EPJ-7Llk5uOns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

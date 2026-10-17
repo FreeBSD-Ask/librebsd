@@ -64,16 +64,16 @@ volume: 第07卷-freebsd的工程体系重构
 **要点**：
 
 - Jinmei Tatuya 自述其 KAME 项目共同开发者身份：项目 1998 年启动、2006 年 3 月结束；虽已不再活跃开发，其代码已成为各 BSD 变体的固有组成部分。KAME 定位为 IPv6 参考实现，以开源形态拥有庞大且能干的开发者群体，这正是 Wind River 为 VxWorks 6.0 选定 KAME 作为核心 IPv6 代码的依据。（BSDTalk EP112，[56.92-70.64, 114.76-123.0, 391.28-417.88]，L1）
-- Qing Li 完整叙述了书籍工程的起源与经过：2000 年初其在 Wind River Systems 完成 KAME 向 VxWorks 的移植（后发布于 VxWorks 6.0），积累了关于 KAME 实现、数据结构、图示与函数关系的海量笔记，遂决意为 KAME 写一部 Stevens《TCP/IP Illustrated》第二卷式的书，动机兼有自用与自我保存笔记之意；经 itojun 引荐 Jinmei、再由 Jinmei 引荐 Keiichi Shima 组成三人作者团队。项目原计划九个月，因覆盖范围不断扩展，最终耗时近三年半，单卷计划扩为两卷：《IPv6 Core Protocols Implementation》于 2006 年 10 月出版，《IPv6 Advanced Protocols Implementation》于 2007 年 4 月出版，均由 Morgan Kaufmann 发行，英文版之外日文版已在制作中。　[存疑脚注] 转写将引荐人记作“Yuto Jin”，按语境应为 itojun（Jun-ichiro Itoh Hagino）；“two bees at the time”疑为其时任职公司的误转（BSDTalk EP112，[127.66-199.16, 168.04-199.16, 254.86-283.98]，L1）
+- Qing Li 完整叙述了书籍工程的起源与经过：2000 年初其在 Wind River Systems 完成 KAME 向 VxWorks 的移植（后发布于 VxWorks 6.0），积累了关于 KAME 实现、数据结构、图示与函数关系的海量笔记，遂决意为 KAME 写一部 Stevens《TCP/IP Illustrated》第二卷式的书，动机兼有自用与自我保存笔记之意；经 itojun 引荐 Jinmei、再由 Jinmei 引荐 Keiichi Shima 组成三人作者团队。项目原计划九个月，因覆盖范围不断扩展，最终耗时近三年半，单卷计划扩为两卷：《IPv6 Core Protocols Implementation》于 2006 年 10 月出版，《IPv6 Advanced Protocols Implementation》于 2007 年 4 月出版，均由 Morgan Kaufmann 发行，英文版之外日文版已在制作中。 [存疑脚注] 转写将引荐人记作“Yuto Jin”，按语境应为 itojun（Jun-ichiro Itoh Hagino）；“two bees at the time”疑为其时任职公司的误转（BSDTalk EP112，[127.66-199.16, 168.04-199.16, 254.86-283.98]，L1）
 - 关于书籍定位，两位作者说明其差异化设计：全书面向开发者、以逐行代码注释为主体，每章固定三节——RFC 与规范摘要、带注释与图解的实现剖析（体例类比 Stevens 著作）、KAME 工具用法；成书前的市场调研发现市面已有四五种 IPv6 书均偏规范描述、仅一本偏运维，故有意放弃运维与网络管理员市场而专注开发者；卷二涵盖 DHCPv6（用户态实现并已移植 Linux）、DNS 与移动 IPv6 等 OS 无关内容，对 Linux 侧 USAGI 项目的开发者亦有价值，卷一则更专于 FreeBSD/KAME 实现。（BSDTalk EP112，[199.16-273.74, 707.08-767.72, 785.1-811.06, 925.82-991.54]，L1）
-- itojun 自述其个人史：小学时代（1980 年前后）即接触计算机，Unix 类系统之路经日本本土的 MS-DOS 系实现、CP/M、Minix 而至 4.2BSD 系（约 1988 年）；自认当时已成为日本知名的黑客与程序员。其公共身份包括：IETF 活跃成员、2003 至 2005 年任 IAB 成员——自述为继村井純（Jun Murai，1992 至 1994 在任，被称互联网武士）之后第二位亚洲 IAB 成员；受访时 36 岁。其自述现负责包括 Apple Mac OS X 与 Juniper JunOS 等商业实现在内的所有 BSD 变体的 IPv6 代码，并称这实现了他本人的梦想。　[存疑脚注] 音频为免提电话转录，转写质量低：其 BSD 初遇平台转写作“from Tony and called MuseOS”，疑为 Sony News-OS 类 4.2BSD 衍生系统的误转，待核（BSDTalk EP115，[55.68-117.4, 165.02-180.94]，L1）
-- itojun 对 IPv6 必要性的论证自成体系：IPv4 理论上限为 2 的 32 次方约四十亿地址，但因分配效率低下实际可用仅约一亿至四亿；人类人口已逾六十亿，且发达国家人均持有十台以上联网设备（手机、黑莓、带 GPS 导航并可下载地图的新车）；若要给包括中国、印度在内的所有人平等接入机会，至少需要六百亿地址，IPv6 是唯一可行方案。其预测 IPv4 将于 2009 或 2010 年终结；并自 1992 年 INET 神户会议起即投入 IPv6 工程，当年已察觉协议服务化的问题并开始动手。　[存疑脚注] 其预测依据转写作“Epinix guide”，所指预测来源无法从转写确认（BSDTalk EP115，[352.98-426.54, 436.86-463.58]，L1）
-- itojun 特别澄清 2007 年 4 月 20 日的一起安全事件：法国研究者在加拿大 CanSecWest 安全会议披露的缺陷存在于 IPv6 规范而非任何实现，被他称为整个互联网历史上最大的规范级缺陷——攻击者可借此令路由服务器完全瘫痪（届时须手工逐一录入全部 IPv4 与 IPv6 地址），并以简单的命令行工具击落传输链路。其对用户的忠告具有强制意味：无论使用何种系统，向所有厂商索要补丁并逐台部署，若厂商拒绝修补即更换厂商。　[存疑脚注] 该缺陷即 2007 年披露的 IPv6 路由头类问题之说系按事件特征推断，转写中的会议名（CanSecWest）、日期与所指网站均以原貌存疑；其建议针对的具体协议细节无法从转写确认（BSDTalk EP115，[528.74-618.58]，L1）
+- itojun 自述其个人史：小学时代（1980 年前后）即接触计算机，Unix 类系统之路经日本本土的 MS-DOS 系实现、CP/M、Minix 而至 4.2BSD 系（约 1988 年）；自认当时已成为日本知名的黑客与程序员。其公共身份包括：IETF 活跃成员、2003 至 2005 年任 IAB 成员——自述为继村井純（Jun Murai，1992 至 1994 在任，被称互联网武士）之后第二位亚洲 IAB 成员；受访时 36 岁。其自述现负责包括 Apple Mac OS X 与 Juniper JunOS 等商业实现在内的所有 BSD 变体的 IPv6 代码，并称这实现了他本人的梦想。 [存疑脚注] 音频为免提电话转录，转写质量低：其 BSD 初遇平台转写作“from Tony and called MuseOS”，疑为 Sony News-OS 类 4.2BSD 衍生系统的误转，待核（BSDTalk EP115，[55.68-117.4, 165.02-180.94]，L1）
+- itojun 对 IPv6 必要性的论证自成体系：IPv4 理论上限为 2 的 32 次方约四十亿地址，但因分配效率低下实际可用仅约一亿至四亿；人类人口已逾六十亿，且发达国家人均持有十台以上联网设备（手机、黑莓、带 GPS 导航并可下载地图的新车）；若要给包括中国、印度在内的所有人平等接入机会，至少需要六百亿地址，IPv6 是唯一可行方案。其预测 IPv4 将于 2009 或 2010 年终结；并自 1992 年 INET 神户会议起即投入 IPv6 工程，当年已察觉协议服务化的问题并开始动手。 [存疑脚注] 其预测依据转写作“Epinix guide”，所指预测来源无法从转写确认（BSDTalk EP115，[352.98-426.54, 436.86-463.58]，L1）
+- itojun 特别澄清 2007 年 4 月 20 日的一起安全事件：法国研究者在加拿大 CanSecWest 安全会议披露的缺陷存在于 IPv6 规范而非任何实现，被他称为整个互联网历史上最大的规范级缺陷——攻击者可借此令路由服务器完全瘫痪（届时须手工逐一录入全部 IPv4 与 IPv6 地址），并以简单的命令行工具击落传输链路。其对用户的忠告具有强制意味：无论使用何种系统，向所有厂商索要补丁并逐台部署，若厂商拒绝修补即更换厂商。 [存疑脚注] 该缺陷即 2007 年披露的 IPv6 路由头类问题之说系按事件特征推断，转写中的会议名（CanSecWest）、日期与所指网站均以原貌存疑；其建议针对的具体协议细节无法从转写确认（BSDTalk EP115，[528.74-618.58]，L1）
 
 **史料**：
 
-- 该期保存多条一手史料线索：Apple 高级工程师读者为两卷书撰写书评，称将书与源码对照后发现两个参考实现的不同修订间高度相似，佐证 darwin 对 KAME 代码的继承；Qing Li 自 2000 年起多次将 KAME 移植至多种平台、最后一次为 VxWorks，现于 Blue Coat Systems 从事 IPv6 代理工作；Jinmei 在 Toshiba 任职十二年，以个人 IPv6 原型实现起步，经 WIDE 项目（日本多所大学与 IT 企业组成的大型研究组织）进入 IPv6 开发圈；两位作者在 BSDCan 2007 现场受访， Qing Li 评价其共同作者是“最优秀的 IPv6 程序员”，并忆及二人近乎全天候的写作投入。　[存疑脚注] 转写将公司名记作“Tosiva”“BlueCo Systems”，按史实应为 Toshiba 与 Blue Coat Systems；人名“Jin Mei Tatsuya”应为 Jinmei Tatuya（神明達哉），“Jimmy/Jimi Song”疑为对 Jinmei 的称呼误转，均以存疑待核（BSDTalk EP112，[649.44-682.44, 93.76-118.56, 283.98-348.5, 1112.26-1144.02]，L1）
-- 该期保存数条一手生态事实：BSD 系统是当时多数商业 IPv6 实现的交付基础；Mac OS X 的 IPv6 栈源自 KAME 项目（kame.net）；itojun 保有 FreeBSD、NetBSD 与 Darwin 的提交权但平时不常用，其与 BSD 社区的广泛人脉正是修改 IPv6 问题的协作渠道；其主力开发平台与日常控制台为 Mac OS X，理由之一正是其内置 KAME 系 IPv6。　[存疑脚注] 转写作“Pamela.net”“OpenVC”，前者按语境应为 kame.net，后者所指项目无法从转写确认（BSDTalk EP115，[231.5-290.62, 254.5-287.7]，L1）
+- 该期保存多条一手史料线索：Apple 高级工程师读者为两卷书撰写书评，称将书与源码对照后发现两个参考实现的不同修订间高度相似，佐证 darwin 对 KAME 代码的继承；Qing Li 自 2000 年起多次将 KAME 移植至多种平台、最后一次为 VxWorks，现于 Blue Coat Systems 从事 IPv6 代理工作；Jinmei 在 Toshiba 任职十二年，以个人 IPv6 原型实现起步，经 WIDE 项目（日本多所大学与 IT 企业组成的大型研究组织）进入 IPv6 开发圈；两位作者在 BSDCan 2007 现场受访， Qing Li 评价其共同作者是“最优秀的 IPv6 程序员”，并忆及二人近乎全天候的写作投入。 [存疑脚注] 转写将公司名记作“Tosiva”“BlueCo Systems”，按史实应为 Toshiba 与 Blue Coat Systems；人名“Jin Mei Tatsuya”应为 Jinmei Tatuya（神明達哉），“Jimmy/Jimi Song”疑为对 Jinmei 的称呼误转，均以存疑待核（BSDTalk EP112，[649.44-682.44, 93.76-118.56, 283.98-348.5, 1112.26-1144.02]，L1）
+- 该期保存数条一手生态事实：BSD 系统是当时多数商业 IPv6 实现的交付基础；Mac OS X 的 IPv6 栈源自 KAME 项目（kame.net）；itojun 保有 FreeBSD、NetBSD 与 Darwin 的提交权但平时不常用，其与 BSD 社区的广泛人脉正是修改 IPv6 问题的协作渠道；其主力开发平台与日常控制台为 Mac OS X，理由之一正是其内置 KAME 系 IPv6。 [存疑脚注] 转写作“Pamela.net”“OpenVC”，前者按语境应为 kame.net，后者所指项目无法从转写确认（BSDTalk EP115，[231.5-290.62, 254.5-287.7]，L1）
 
 **史观**：
 
@@ -83,7 +83,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- 关于 IPv6 推广的阻碍，itojun 的判断是：厂商端已无障碍——Windows Vista、Mac OS X 与各路由器厂商均已支持 IPv6，且 Juniper 的实现即源自其阵营代码；唯一的阻碍是 IP 从业者与公众缺乏理解，而普通用户只输入 URL 与邮件地址，完全可在无感知中完成 IPv4 到 IPv6 的过渡。其本人的极端实践佐证可行性：日常完全不用 IPv4，访问 Google、Amazon 等 IPv4-only 服务时经 RFC 3142 所述的传输中继转换完成；并指出 APNIC 管辖的亚洲区域地址分配政策远较北美严苛（北美易得整段 B、C 类地址），其自费高额月费的光纤接入仍无原生 IPv6，正持续向 ISP 施压。　[存疑脚注] 其光纤资费与带宽表述转写混乱（“100 million of VPS fiber... only get just $29”），具体数字不可确证（BSDTalk EP115，[290.62-343.42, 467.42-517.22]，L1）
+- 关于 IPv6 推广的阻碍，itojun 的判断是：厂商端已无障碍——Windows Vista、Mac OS X 与各路由器厂商均已支持 IPv6，且 Juniper 的实现即源自其阵营代码；唯一的阻碍是 IP 从业者与公众缺乏理解，而普通用户只输入 URL 与邮件地址，完全可在无感知中完成 IPv4 到 IPv6 的过渡。其本人的极端实践佐证可行性：日常完全不用 IPv4，访问 Google、Amazon 等 IPv4-only 服务时经 RFC 3142 所述的传输中继转换完成；并指出 APNIC 管辖的亚洲区域地址分配政策远较北美严苛（北美易得整段 B、C 类地址），其自费高额月费的光纤接入仍无原生 IPv6，正持续向 ISP 施压。 [存疑脚注] 其光纤资费与带宽表述转写混乱（“100 million of VPS fiber... only get just $29”），具体数字不可确证（BSDTalk EP115，[290.62-343.42, 467.42-517.22]，L1）
 
 **文献**：
 
@@ -148,3 +148,150 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔BSD networking BoF〕讲者 Tom Smyth 口述：对 OpenBSD 路由器而言该议题重要，因为 OpenBSD 仍未充分利用 SMP 多核并行能力（YouTube EPupfkXx0u5WY，[779.839-784.949]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1531 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1531`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Network Transport Group 讨论会〕讲者口述：网络传输工作涉及的一组特性在 FreeBSD 11 期间属实验性质、无一达到可称正式支持的程度，到 FreeBSD 12 本应脱离实验状态转为正式特性。（YouTube EPKerJvwqOsbg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1532 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1532`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Network Transport Group 讨论会〕讲者口述：rack TCP 不覆盖全部功能，但在判定当前请求无法处理时会回退到默认 TCP 栈，因此多数部署场景相对安全；该特性当时仍被视为实验性质。（YouTube EPKerJvwqOsbg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1533 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1533`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Network Transport Group 讨论会〕讲者口述：FreeBSD 的 TCP 栈模块化方案保留一份内置于内核、不可移除的 TCP 栈作为系统启动基线，其上再以模块方式追加 TCP 栈实现。（YouTube EPKerJvwqOsbg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1534 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1534`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Network Transport Group 讨论会〕讲者口述：其既定目标是让内核同时驻留多个版本的 TCP 栈并可择一选用，难点在于 Juniper 自身是否投入工时资源，讲者自述无法确定。（YouTube EPKerJvwqOsbg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1960 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1960`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Do you remember legacy IP?  What happened to FreeBSD's IPv6?〕讲者口述：1999 年 11 月 2 日，KAME 的第一个提交进入 FreeBSD，内容基本只是头文件。（YouTube EPkTTXbZnHMFE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1961 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1961`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Do you remember legacy IP?  What happened to FreeBSD's IPv6?〕讲者口述：把 KAME 快照并入 FreeBSD 后，最早的用者请求是打开 IPv4/IPv6 双栈；讲者称那条提交说明写的是“requested by many”，而双栈至今仍是 FreeBSD 的默认配置。（YouTube EPkTTXbZnHMFE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1962 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1962`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Do you remember legacy IP?  What happened to FreeBSD's IPv6?〕讲者口述：有人注意到 IPv6 的源路由扩展头使单包能在链路两端两个路由器之间往返约 200 次，据此可放大流量做放大攻击；因此 FreeBSD 关闭了源路由的处理。（YouTube EPkTTXbZnHMFE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1963 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1963`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Do you remember legacy IP?  What happened to FreeBSD's IPv6?〕讲者口述：在 IPv6-only 试验那天的回顾里，讲者称自己与基金会都发了新闻稿，但对 FreeBSD 来说那是个相当平淡的日子，网页至今仍留有一部，而且当天运行大体正常。（YouTube EPkTTXbZnHMFE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1993 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1993`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: Through the Wire: Measurement and Improvement of IPSec - George Neville-Neil〕讲者口述：自 IPSec 引入 FreeBSD 以来，FreeBSD 一直带有一个 null（空）加密／解密方法，方法体里什么都不做；讲者要用这些 null 方法做基线，以确立“仅仅把 ipsec 框架引入系统”本身究竟带来多大开销。（YouTube EP513OLCfwJUA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1994 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1994`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: Through the Wire: Measurement and Improvement of IPSec - George Neville-Neil〕讲者口述：以千兆位每秒计跑了十组测量，讲者发现仅仅打开 ipsec 框架就会吃掉约 50% 的带宽：在 10 吉比特的链路上不再是 10 吉，而是略低于 5 吉；他说这既表明还有大量工作要做，也决定了随后重新引入加解密算法时看到的数字基准。（YouTube EP513OLCfwJUA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1995 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1995`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: Through the Wire: Measurement and Improvement of IPSec - George Neville-Neil〕讲者口述：讲者把 FreeBSD 网络栈的性能开销追溯回内核锁的演化史：这套系统承袭自单处理器内核演化出的多处理器内核，最初的做法是把一把 giant lock 整个罩在内核周围；到 FreeBSD 5 才开始把内核一点一点切开。（YouTube EP513OLCfwJUA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1996 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1996`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: Through the Wire: Measurement and Improvement of IPSec - George Neville-Neil〕讲者口述：FreeBSD 网络栈过去有两条转发路径，一条叫 fast path 且默认是关闭的，另一条是常规路径；讲者认为“快路径默认关闭”地把系统发出去不对，于是重写相关代码，使系统总是先尝试 fast path，失败才回退。（YouTube EP513OLCfwJUA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2054 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2054`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2024 讲者 Gregor Haywood《In-Kernel End-System Multihoming with ILNP》〕讲者口述：讲者在 FreeBSD 内核内推进 ILNP（标识符-定位符网络协议）端到端多归属实现时，自述 FreeBSD 的 IPv6 扩展头代码“本来都在那儿”，填入正确的头布局后会自动附加到每个发送的报文上；讲者又自述其此前曾在内核中检索过使用该功能的他处代码而未能找到，故推测该标准化能力“正好直到此前从未被使用过”（原文为‘I don't know if there was other functionality and it got removed or if this was just written into the operating system because it's standardized and it just happens to never be used until now’的不确定表述）。此系讲者单人检索内核后的推测，未与源码提交记录交叉验证，不得写作已核证结论。（YouTube EPuQ9dKbKtEaQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2137 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2137`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 于 AsiaBSDCon 2013 P7B 演讲〕讲者口述：自己已在网络栈上工作了十年，但校验和的触须纠缠之深仍超出预期，真正读代码时才发现远比想象复杂。（YouTube EPmrFud9ySkB0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2138 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2138`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 于 AsiaBSDCon 2013 P7B 演讲〕讲者口述：模板 PCB（转写音‘template PC’）在建连时复制对端信息后就地沿用原有校验和，该值只覆盖少量头部字段而不覆盖整个载荷，故称伪头校验和，实际上毫无用处。（YouTube EPmrFud9ySkB0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2139 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2139`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 于 AsiaBSDCon 2013 P7B 演讲〕讲者口述：增量子校验和更新这种 hack 也许只对那种极慢的老旧 HP 300 系统有帮助，在现代大缓存系统上反而适得其反：增量更新会打碎缓存行，而那些系统缓存都很小。（YouTube EPmrFud9ySkB0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2140 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2140`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Henning Brauer 于 AsiaBSDCon 2013 P7B 演讲〕讲者口述：为桥情形写下的校验和相关代码大多无用，这个问题十年前就该在桥代码里修掉，而不是任由各种特例判断向协议层扩散。（YouTube EPmrFud9ySkB0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2141 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2141`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：这套让内核 TCP/IP 栈跑在用户态的东西最初导入时最难的是取名，David Holland 建议叫 rum，取 runnable user space module 之意以对应 loadable module，讲者当时觉得是好主意。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2142 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2142`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：但树里已有一个同名驱动叫 rum，计划因此被打乱；讲者反复推敲后决定改以食物命名，即 rump。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2143 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2143`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：用户态里本就有现成的锁接口 pthread mutex，与内核锁接口只是名字不同、作用完全一致，因此不必自行实现一套符合内核锁语义的锁，直接借用 pthread 的锁与线程机制即可。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2144 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2144`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：理论上可以在 FreeBSD 上运行 NetBSD 的网络栈，为此需要在 FreeBSD 里补上类似支持；工作量不大但琐碎繁多，且一般情形下无法顺利对接，因为两边结构体布局不同。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2566 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2566`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ana Kukec: Native SeND kernel API for *BSD〕讲者口述：讲者自述供职于克罗地亚萨格勒布大学，本次报告主题是面向 BSD 的原生 SeND（安全邻居发现协议）内核 API，该项目是她 2009 年的谷歌编程之夏（GSoC）项目。（YouTube EP3ATCw_03jf8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2567 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2567`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ana Kukec: Native SeND kernel API for *BSD〕讲者口述：她指出既有 SeND 用户态实现的两大缺陷之一，是经由内核过滤框架加 bpf 过滤器把邻居发现消息送交用户态守护进程，IPv6 的所有报文都须经过 bpf 过滤器，开销过大。（YouTube EP3ATCw_03jf8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2568 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2568`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ana Kukec: Native SeND kernel API for *BSD〕讲者口述：除开销之外，旧实现所依赖的内核过滤框架并不被整个 BSD 家族支持，因此她希望做出可移植到其他 BSD 系的方案。（YouTube EP3ATCw_03jf8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2569 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2569`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Ana Kukec: Native SeND kernel API for *BSD〕讲者口述：截至本次报告时，她已让代码跑起来的是原生的 SeND socket，她描述其形态与 divert socket 很相似。（YouTube EP3ATCw_03jf8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2636 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2636`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲：Olivier Van Acker〕讲者口述：他选用 FreeBSD 是因为 SCTP 的参考实现主要在 FreeBSD 上完成，而他自己的服务器原本就跑该系统。（YouTube EPPLCaUtArADA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2637 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2637`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲：Olivier Van Acker〕讲者口述：论文进行到一半时，编写 SCTP 规范的人更新了 SCTP API，使他原先那套（已不再需要的）做法作废，只得把实现从头重写。（YouTube EPPLCaUtArADA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2638 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2638`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲：Olivier Van Acker〕讲者口述：SCTP 参考实现（转写作 drive，即 driver）可供取用；若要在 Mac 上运行可到参考实现处，其中有一个 Xcode 工程可直接打开编译，如今还另有安装包可装。（YouTube EPPLCaUtArADA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2639 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2639`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2013 演讲：Olivier Van Acker〕讲者口述：在 FreeBSD 的情形下，Go 的 syscall 目录里脚本会取用该系统调用号主文件（转写作 cisco master file），据此生成一圈相关的系统调用封装函数。（YouTube EPPLCaUtArADA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

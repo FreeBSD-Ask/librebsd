@@ -67,7 +67,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **史料**：
 
-- 本期一手史料包括：Brandon Mercer 关于 OpenBSD 医疗部署与 PandaBoard ARM 移植的当事人访谈；Olivier 的 BSD Router Project 基准博文及配套 USB 镜像；The Register 的 OpenBSD 5.7 邮件服务器三部曲教程与 UEFI 引导教程；netmap 作者 Luigi Rizzo 在 FreeBSD 邮件列表关于流导向工具的发言；OpenSMTPD 审计方在邮件列表与 OpenBSD Journal 的复盘；ACM 女性勇气大会开源职业面板录像与 Dan Langille 的首次贡献工作坊。　[存疑脚注] 转写人名失真：Giles Shahad 应为 OpenSMTPD 开发者 Gilles Chehade，Dan and Jill 应为 Dan Langille，Xenuous 应为 Xinuos，均据上下文与同期语境辨识，著录前须回查原链接核实（BSD Now EP111，[1240.94-3394.98]，L1）
+- 本期一手史料包括：Brandon Mercer 关于 OpenBSD 医疗部署与 PandaBoard ARM 移植的当事人访谈；Olivier 的 BSD Router Project 基准博文及配套 USB 镜像；The Register 的 OpenBSD 5.7 邮件服务器三部曲教程与 UEFI 引导教程；netmap 作者 Luigi Rizzo 在 FreeBSD 邮件列表关于流导向工具的发言；OpenSMTPD 审计方在邮件列表与 OpenBSD Journal 的复盘；ACM 女性勇气大会开源职业面板录像与 Dan Langille 的首次贡献工作坊。 [存疑脚注] 转写人名失真：Giles Shahad 应为 OpenSMTPD 开发者 Gilles Chehade，Dan and Jill 应为 Dan Langille，Xenuous 应为 Xinuos，均据上下文与同期语境辨识，著录前须回查原链接核实（BSD Now EP111，[1240.94-3394.98]，L1）
 
 **史观**：
 
@@ -76,7 +76,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- “OpenBSD 用于医疗行业”目前仅有 Mercer 单一当事人自述：涉事机构未具名，访谈只笼统提及后台敏感数据与 EDI 流程，未直接出现 HIPAA 表述；该案例与 HIPAA 合规法规语境之间尚缺文档级互证，采信前应视为单一来源推断。　[存疑脚注] 单一来源：机构匿名且无书面证据支撑，须以监管备案或行业案例文献交叉验证后方可提升证据等级（BSD Now EP111，[1956.47-2050.56]，L4）
+- “OpenBSD 用于医疗行业”目前仅有 Mercer 单一当事人自述：涉事机构未具名，访谈只笼统提及后台敏感数据与 EDI 流程，未直接出现 HIPAA 表述；该案例与 HIPAA 合规法规语境之间尚缺文档级互证，采信前应视为单一来源推断。 [存疑脚注] 单一来源：机构匿名且无书面证据支撑，须以监管备案或行业案例文献交叉验证后方可提升证据等级（BSD Now EP111，[1956.47-2050.56]，L4）
 - 学生问及开源项目为何仍用邮件列表与 IRC 而非 Slack，Dan Langille 的回答——若 Slack 更好，把它搭起来，新人自会用——将工具更迭交由可用性检验而非权威裁决；但讲解人旋即承认自己内部恰以 Slack 协作并看重其与 GitHub、Jenkins 的集成，显示社区通信形式的选择是多重实用权衡而非身份教条。（BSD Now EP111，[2787.92-2832.62]，L2）
 
 **文献**：
@@ -156,3 +156,105 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔BSDCan 2018〕讲者 Michio Honda 口述：PASTE 的 netmap 扩展最初在 Linux 上实现，如今正在移植到 FreeBSD（YouTube EPy_F-8HijfOA，[1476.32-1483.27]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1543 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1543`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Userland TCP Transport for NVME 演讲（John Baldwin）〕讲者口述：他为 FreeBSD 实现的 NVMe over Fabrics 已近期合入；该项工作他做了约一年半，本期讲其中的用户态实现部分。（YouTube EPjJn4N6AJ-9o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1544 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1544`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Userland TCP Transport for NVME 演讲（John Baldwin）〕讲者口述：他给库的中间层命名为传输抽象层，职责是把 TCP、RDMA 等具体传输的细节从库的使用者那里屏蔽掉，使用者只需面对发送命令、收到响应的抽象。（YouTube EPjJn4N6AJ-9o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1545 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1545`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Userland TCP Transport for NVME 演讲（John Baldwin）〕讲者口述：讲者称此前工作仍只留在 GitHub 分支上、内核部分尚未完成，如今已合入 FreeBSD 主干，距演讲约一个月，将进入 15.0，不会进入已发布的 14.1。（YouTube EPjJn4N6AJ-9o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1546 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1546`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Userland TCP Transport for NVME 演讲（John Baldwin）〕讲者口述：以用户态守护进程方式运行时，可创建并导出一个或多个命名空间，其底层存储可为磁盘上的普通文件、磁盘设备（如 ZFS）或内存盘——可造出合成 RAM 盘导出；讲者称此做法与 codal 的做法相似。（YouTube EPjJn4N6AJ-9o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2168 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2168`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 讲者 Olivier Cochard Labbe〕讲者口述：他介绍自己的转发性能基准测试办法——最少只需两台设备，一台用支持 netmap 的网络接口，另一台用 netmap 系列的报文注入工具发包，这些工具能以线速（line rate）数量级的报文压测被测设备。（YouTube EPSLlzep0IxVY，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2169 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2169`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 讲者 Olivier Cochard Labbe〕讲者口述：他在剖析转发性能时发现，FreeBSD 的随机数生成器会读取所有以太网报文并从中取若干字节，这略微拖累了转发性能；于是他要求随机数生成器不再使用这种采集方式，重新生成剖析数据，并在两套配置上全部硬件复测。（YouTube EPSLlzep0IxVY，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2170 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2170`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 讲者 Olivier Cochard Labbe〕讲者口述：他在对比 FreeBSD 的 ipfw 与 PF 状态机制时指出，两者行为相近，但 PF 对每个入向连接要消耗两个状态，因为它会为回程方向（return transition）额外创建一个第二个状态。（YouTube EPSLlzep0IxVY，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2171 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2171`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 讲者 Olivier Cochard Labbe〕讲者口述：他把 ipfw 随状态数增多而性能线性退化的结果发给 Yandex 的 Andrei Rusu，一周之后 Rusu 回了一个补丁，改用并发工具集（concurrency kit）来处理状态相关的问题。（YouTube EPSLlzep0IxVY，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2187 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2187`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 Sam Gwydir 演讲 Improving netdump hardware support and performance with iflib〕讲者口述：截至 2018 年 6 月，Mark Johnson 已为 FreeBSD 的 netdump 加入 iflib 支持，使原先须逐个驱动实现的 netdump 能力可由 iflib 统一覆盖一批网络驱动。（YouTube EPFuNgy8Ag4DE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2188 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2188`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 Sam Gwydir 演讲 Improving netdump hardware support and performance with iflib〕讲者口述：netdump 客户端代码运行于 panic 上下文，没有中断、不能做动态内存分配、也接不到常规 TCP/IP 协议栈，因此须改用预留内存段承载转储数据、并轮询网卡发送。（YouTube EPFuNgy8Ag4DE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2189 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2189`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 Sam Gwydir 演讲 Improving netdump hardware support and performance with iflib〕讲者口述：性能改进前，两台虚拟机经 Dummynet 网关注送 2 GB 转储需约 9 秒（0% 丢包）；丢包率升至 0.1% 时延至 131 秒，1% 丢包即无法完成，故曾把重试次数上调到 100 才能测出结果。（YouTube EPFuNgy8Ag4DE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2190 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2190`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 Sam Gwydir 演讲 Improving netdump hardware support and performance with iflib〕讲者口述：经网关转储的吞吐由 1773 兆比特每秒提升到 3022 兆比特每秒，约 1.7 倍，收益主要来自发送侧缓冲对小段的合并；抗丢包能力尚未改善，须待滑动窗口实现。（YouTube EPFuNgy8Ag4DE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2436 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2436`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Patrick M. Hausen，FreeBSD 会议线上演讲〕讲者口述：其托管产品建立在带 VIMAGE 特性的 FreeBSD jail 上，他把该特性描述为“完全虚拟化的网络栈”，使 jail 内可拥有私有接口、私有防火墙与“一切私有”，在单机上构成虚拟机的幻觉；并说相较 hypervisor，jail 的启动、销毁与供给都很轻快。（YouTube EPTqg2UH6Mvoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2437 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2437`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Patrick M. Hausen〕讲者口述：这套 jail 桥接方案当时在 FreeBSD 12 上撞到性能上限，他们所用的 bridge 接口原先只有单线程、曾是瓶颈；他当场点名感谢 Christoph 把它改成多线程，使吞吐提升“一个数量级”，他记得是五倍甚至更多。（YouTube EPTqg2UH6Mvoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2438 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2438`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Patrick M. Hausen〕讲者口述：他们遇到只在自家数据中心生产环境复现的故障——epair 接口与真实硬件网卡一样有收发队列，队列一旦被填满，该接口就停止转发；成因是 bridge 把广播包同时泛洪给桥上所有 epair；处置上有人告知可用一个文档不多的 sysctl 参数加大队列长度，他还说 epair 的整段重构是否已进源码树自己并不确定。（YouTube EPTqg2UH6Mvoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2439 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2439`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Patrick M. Hausen〕讲者口述：他向 FreeBSD 开发社区提出可否提供“点对点”式的 VNET 接口——理由是 VNET 与 jail 本身已是完全虚拟化的环境，用以太网（ethernet）语义去仿真连接 jail 并无根本必要；若能得到一条与 epair 相当的点对点链路，就可以去掉 bridge、把一切放在三层路由上做。（YouTube EPTqg2UH6Mvoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2440 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2440`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Zec 演讲：Network emulation using the virtualized network stack in FreeBSD〕讲者口述：网络栈虚拟化技术当时已并入 FreeBSD 主干（转写音作 main freebsd iii，按上下文疑指 -current），但仍被标记为实验特性，尚有若干已知缺陷。（YouTube EPwh09MirPd5Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2441 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2441`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Zec 同一演讲〕讲者口述：虚拟化网络栈的最早雏形是他本人在 2002 年“出于纯粹好奇”做的一个概念验证，做法是把与网络相关的全局变量集中搬进一个大结构体。（YouTube EPwh09MirPd5Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2442 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2442`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Zec 同一演讲〕讲者口述：在“虚拟化单个操作系统内核”这条路线上，他认为 FreeBSD 借 jails 率先开创，Solaris zones（转写音作 solari zones）与 Linux 的类似做法晚出；此系讲者当场口述的谱系判断，并非经源码与提交记录验证的技术结论。（YouTube EPwh09MirPd5Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2443 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2443`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marko Zec 同一演讲〕讲者口述：他用 FreeBSD 做网络仿真时更依赖 netgraph，并称 netgraph 是 FreeBSD 中用于任意操纵网络流量的子系统；他还说 FreeBSD 里的蓝牙相关内容重度依赖 netgraph。（YouTube EPwh09MirPd5Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

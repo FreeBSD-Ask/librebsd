@@ -82,8 +82,8 @@ volume: 第13卷-bsd衍生操作系统
 
 **辨析**：
 
-- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。　[存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
-- Next BSD 在本期播客发布时仅有网站基础信息，无公开技术细节；该项目的后续走向、技术路线及其与 FreeBSD 的关系在本期内无法确证，需另行考据。　[存疑脚注] Next BSD 项目信息在本期仅有主持人转述与网站指引，项目实质内容待外部史料验证。（BSDTalk EP255，[290.34-296.80]，L4）
+- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。 [存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
+- Next BSD 在本期播客发布时仅有网站基础信息，无公开技术细节；该项目的后续走向、技术路线及其与 FreeBSD 的关系在本期内无法确证，需另行考据。 [存疑脚注] Next BSD 项目信息在本期仅有主持人转述与网站指引，项目实质内容待外部史料验证。（BSDTalk EP255，[290.34-296.80]，L4）
 
 **文献**：
 
@@ -127,3 +127,40 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔来源不详〕讲者 Mariusz Zaborski 口述：FreeBSD 有两个主要文件系统，分别是 ZFS 与 NewFS（转写音作 new FS）。（YouTube EPry_TNXz-A2E，[466.509-473.629]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1413 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1413`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Bejtlich《用 FreeBSD 做网络安全监测》演讲〕讲者口述：其判定思路是从主机自身视角出发——在用户机上查不到 rootkit 痕迹，并不能据此认为主机安全；真正的结论来自 FreeBSD 传感器侧的独立观察，传感器所呈现的状况才足以让他断定“这里出了问题”。（YouTube EPUM4ZrsOjmNQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1414 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1414`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Bejtlich《用 FreeBSD 做网络安全监测》演讲〕讲者口述：他于 2000 年开始在单位使用 FreeBSD，起因是当时为 ASERT 编写网络监测传感器（ASERT 讲者转写作 "ASM sensors"）的开发者认为，要取得良好的网络栈，应选用 BSD 基底的系统而非 Linux。（YouTube EPUM4ZrsOjmNQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1415 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1415`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Bejtlich《用 FreeBSD 做网络安全监测》演讲〕讲者口述：其选择 FreeBSD 的操作层面理由之一是，他认识 FreeBSD 的网络栈开发者，遇到网络问题可直接与之沟通； FreeBSD 当时在研的零拷贝（zero-copy）工作对其流量采集很有助益。（YouTube EPUM4ZrsOjmNQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2385 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2385`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A 报告·Mariusz Zaborski〕讲者口述：他们在 FreeBSD 安全设备上有三种可选的加密手段——GBDE、GELI 与 ZFS 原生加密；他称截至该报告时 FreeBSD 仍没有原生 ZFS 加密，未来新建设备时可以再考虑采用。（YouTube EPp1L2oOIkNI0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2386 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2386`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A 报告·Mariusz Zaborski〕讲者口述：支持工程师要在设备上登录或改动之前，公司规定必须先创建快照，弄坏了就回滚，一切恢复正常；他称这是快照非常实用的运维用途。（YouTube EPp1L2oOIkNI0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2387 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2387`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A 报告·Mariusz Zaborski〕讲者口述：出于希望机器出问题时仍能进入、并能重置到不含客户数据状态的考虑，他们决定采用 GELI，并在其上用 UFS 存放客户数据。（YouTube EPp1L2oOIkNI0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2388 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2388`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A 报告·Mariusz Zaborski〕讲者口述：他自称 Capsicum 是自己最喜欢的话题；进程进入 capability 模式后访问不到任何全局实例——不能新建连接、不能打开文件，“干不了任何可疑的事”。（YouTube EPp1L2oOIkNI0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

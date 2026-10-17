@@ -77,7 +77,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 - stunnel 与 LibreSSL 之争的症结在于许可文本对命名的依赖：作者以具名例外把可链接的 SSL 库限定为“基础操作系统内的 OpenSSL”，并明确表示其许可“does not consider LibreSSL as OpenSSL”（音频 764.68-766.18），由此形成三重僵局——LibreSSL 仍持 OpenSSL 许可而无法重新授权，stunnel 的例外条款同样难以修改，OpenBSD 阵营则坚持视 LibreSSL 为削减后的 OpenSSL；再叠加 OpenSSL 许可禁止修改版沿用原名，OpenBSD 因随基本系统附带 LibreSSL 而合规、FreeBSD 等以 ports 安装则受限，争议表明具名例外条款在生态分叉情境下的脆弱性与解释空间之争。（BSD Now EP106，[758.90-833.28]，L2）
 - 副轨转述的构建集群排障案例包含对回退式调试的方法论批评：当事人强调回退只是“diagnostic tool, not a solution”，且“backing out could not have exposed this particular bug”（音频 391.46-396.76）——近期一次提交只是让“this one's been lurking there since 97”（音频 357.44-361.78）的内核缺陷在特定负载下显形，回滚只会使问题重新隐匿而非消失；同段以 Netflix 曾发现的长期潜伏 IPv6 缺陷为对照，指出偶发低频触发的缺陷须靠 bisect 定位后的根因修复，这一区分对考据“提交引入缺陷”与“提交暴露缺陷”两类因果表述具有直接的方法论意义。（BSD Now EP106，[352.62-400.68]，L2）
-- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
+- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。 [存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
 - 标题所称“5 亿毫不知情的 FreeBSD 用户”点出沉默使用现象：终端用户无从感知底层操作系统，自由软件的扩散依赖企业生产采用而非用户选择，当事人开场亦以现场举手调查印证知情者寥寥；此为“沉默 BSD 企业”现象的当事人自证，但亦须辨析——企业愿意公开自述者（如本场演讲）恰是沉默群体中的例外，样本代表性有限。（BSDTalk EP250，[178.32-191.12]，L1）
 
 **文献**：
@@ -114,3 +114,105 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔FreeBSD Network Stack Optimizations 报告（来源不详）〕讲者 Robert Watson 口述：某些硬件设备的事务或操作并非原子。（YouTube EPohLVNmI3lCg，[2463.829-2465.28]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1704 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1704`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Network Performance Improvement for FreeBSD Guest on Hyper V（Microsoft 技术中心 FreeBSD 团队演讲）〕讲者口述：团队对网络虚拟设备驱动做了改进；该驱动名为 hv_netvsc，在 FreeBSD 语境下常简称为 hn。（YouTube EP1zaawCkrZLI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1705 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1705`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Network Performance Improvement for FreeBSD Guest on Hyper V（Microsoft 技术中心 FreeBSD 团队演讲）〕讲者口述：FreeBSD 10 起发行版内建整合服务驱动支持，但 FreeBSD 10.0 与 10.1 仅有非常基础的支持，性能不佳；更早版本需另行安装独立包。（YouTube EP1zaawCkrZLI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1706 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1706`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Network Performance Improvement for FreeBSD Guest on Hyper V（Microsoft 技术中心 FreeBSD 团队演讲）〕讲者口述：FreeBSD 10.2 增强了该驱动的功能，启用了虚拟机多通道、校验和卸载与 TSO。（YouTube EP1zaawCkrZLI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1707 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1707`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Network Performance Improvement for FreeBSD Guest on Hyper V（Microsoft 技术中心 FreeBSD 团队演讲）〕讲者口述：为改善 FreeBSD 的 RSS／LRO，团队增强了 FreeBSD 内核 API，加入可按连接限制可聚合数据长度的可配置参数。（YouTube EP1zaawCkrZLI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2153 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2153`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Packet Pacing 报告〕讲者口述：FreeBSD 按流限速的做法是应用用 setsockopt 传入一个 32 位无符号整数的 rate limit 值，内核新增一个 socket 字段保存该速率。（YouTube EP5eCftUfj7JY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2154 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2154`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Packet Pacing 报告〕讲者口述：该实现在 INPCB 中新增三个字段，即指向 IFNET 的指针、速率与 ring ID；其中 IFNET 指针的最终用途仍待讲者报告结束后的讨论确定，但按讲者说法当前阶段认为它确实是必需的。（YouTube EP5eCftUfj7JY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2155 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2155`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Packet Pacing 报告〕讲者口述：初版实现把套接字直接连接到硬件 ring ID，但与会者一致认为这是错的，因为这让 socket 掌握了过多底层细节。（YouTube EP5eCftUfj7JY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2156 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2156`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Packet Pacing 报告〕讲者口述：为把 ring ID 传入驱动而又不给 mbuf 增加字段，实现上占用了 mbuf 中一个仅用于接收路径的 flow ID 字段；Robert Watson 及另一位与会者曾主张在 mbuf 里直接新增字段。（YouTube EP5eCftUfj7JY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2234 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2234`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 演讲，讲者 Olivier Cochard Labbé〕讲者口述：在 FreeBSD 上网卡驱动默认按每 CPU 一个的方式最多创建 16 个传输队列，但在该测试机上实际只创建出 8 个，讲者当场表示不知原因。（YouTube EPr7-dagB_r4Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2235 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2235`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 演讲，讲者 Olivier Cochard Labbé〕讲者口述：在其 FreeBSD 转发基准测试中，强制网卡队列摊到 16 个 CPU 仅有小幅提升，而直接关闭该 RSS 式多线程收发特性带来的改善最大。（YouTube EPr7-dagB_r4Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2236 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2236`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 演讲，讲者 Olivier Cochard Labbé〕讲者口述：讲者用火焰图分析 FreeBSD 转发热点，发现第一项争用集中在函数 if_presolve，而该函数仅用于把目的 MAC 地址写入待发包，却在其转发路径上成为第一处争用点。（YouTube EPr7-dagB_r4Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2237 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2237`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tuning FreeBSD for routing and firewalling 演讲，讲者 Olivier Cochard Labbé〕讲者口述：讲者发现 FreeBSD 的 IPFW 默认最多接受 16000 条状态条目，该上限取决于其状态哈希表尺寸。（YouTube EPr7-dagB_r4Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2300 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2300`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Scott Long《Improving High Bandwidth TLS in the FreeBSD kernel》演讲〕讲者口述：Netflix 对外推流的部分不走 AWS，而是自建 Open Connect 网络且全部运行在 FreeBSD 上；其视频服务器使用 FreeBSD 10.3 并做了若干修改，配合 nginx 1.9，运行状态良好。（YouTube EPDKUJLTCp7Zk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2301 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2301`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Scott Long《Improving High Bandwidth TLS in the FreeBSD kernel》演讲〕讲者口述：客户端以 HTTPS 接入时，密钥交换与握手仍在用户态完成，随后把密钥交给内核并绑定到对应套接字的文件描述符，此后全部加密都在内核中执行。（YouTube EPDKUJLTCp7Zk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2302 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2302`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Scott Long《Improving High Bandwidth TLS in the FreeBSD kernel》演讲〕讲者口述：团队此后认定 OpenCrypto 框架无法满足性能目标，主要症结在于它实质上是单线程的，除一个 dispatcher 线程与一个 return 线程外无法使用更多线程。（YouTube EPDKUJLTCp7Zk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2303 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2303`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Scott Long《Improving High Bandwidth TLS in the FreeBSD kernel》演讲〕讲者口述：接下来要把 SSL sendfile 以及相关的 socket buffer 改动上游化，目标是赶在 FreeBSD 11.0 之前完成，或至少推进到其他人可用。（YouTube EPDKUJLTCp7Zk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2468 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2468`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A 讲者 Scott Long〕讲者口述：用户一旦按下播放键、选定影片，此后其视频流量即由 FreeBSD 服务器送出。（YouTube EPye7PMmK95c4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2469 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2469`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A 讲者 Scott Long〕讲者口述：传统用户态 web 服务器模型必须在用户空间与内核之间拷贝数据，消耗 CPU 与内存带宽，这正是加密代价高昂的根因，且尚未计入加密算法本身的计算开销。（YouTube EPye7PMmK95c4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2470 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2470`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A 讲者 Scott Long〕讲者口述：其内核 TLS 方案是把批量加密移入内核，位置在 sendfile 块与网卡之间，数据自内存取出时就地完成加密。（YouTube EPye7PMmK95c4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2471 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2471`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A 讲者 Scott Long〕讲者口述：这类网络缓冲结构可以方便地在首尾拼接数据，但本质全是指针连指针的链表，在依赖缓存的 CPU 上表现很差，内存流水线很慢。（YouTube EPye7PMmK95c4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

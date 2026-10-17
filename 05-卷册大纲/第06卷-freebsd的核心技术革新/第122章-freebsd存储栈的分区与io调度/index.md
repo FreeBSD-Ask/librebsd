@@ -74,7 +74,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Warner Losh 的 2.11BSD 复原工程公开，目标是以可复现方式重建 2.11BSD 发行磁带，并生成含全部 patch 点的 Git 仓库。（BSD Now EP361，[442.48-732.66]，L2）
 - Warner Losh 的磁盘分区史文章梳理 Unix 第一至第七版从静态分区到多分区设备的演进，指出分区表曾编译进驱动而非写盘。（BSD Now EP361，[1266.82-1931.02]，L2）
 - OpenBSD 发布首个 PowerPC64 快照，在 Raptor Blackbird 与 Talos II 上开发，并计划支持 Power8 系统。（BSD Now EP361，[1075.56-1141.02]，L2）
-- 内核模块自动加载的技术路线：Losh 观察到几乎所有设备驱动都在其表中携带即插即用信息（厂商 ID 等字段），先由同事 Hans Petter Selasky 以独立 ELF 节存表并生成 devfs 脚本作为原型，其方案则改为把即插即用信息与既有模块依赖信息一并以标准化形式编码进 KLD 文件，使引导器、内核与用户态工具均可读取，配合小型匹配脚本语言在总线无匹配事件时将设备与驱动配对，并以实验代码动态生成 devd.conf；最终目标是从 generic 内核大量移除驱动（树中已有名为 Minimal 的内核模块作为工作目标），时间表指向 FreeBSD 11 分支，并预期对嵌入式环境尤为有用。　[存疑脚注] 同事名转写为 Hans Peter，据 USB 栈开发背景推断应为 Hans Petter Selasky。（BSD Now EP109，[488.14-734.96]，L1）
+- 内核模块自动加载的技术路线：Losh 观察到几乎所有设备驱动都在其表中携带即插即用信息（厂商 ID 等字段），先由同事 Hans Petter Selasky 以独立 ELF 节存表并生成 devfs 脚本作为原型，其方案则改为把即插即用信息与既有模块依赖信息一并以标准化形式编码进 KLD 文件，使引导器、内核与用户态工具均可读取，配合小型匹配脚本语言在总线无匹配事件时将设备与驱动配对，并以实验代码动态生成 devd.conf；最终目标是从 generic 内核大量移除驱动（树中已有名为 Minimal 的内核模块作为工作目标），时间表指向 FreeBSD 11 分支，并预期对嵌入式环境尤为有用。 [存疑脚注] 同事名转写为 Hans Peter，据 USB 栈开发背景推断应为 Hans Petter Selasky。（BSD Now EP109，[488.14-734.96]，L1）
 - one-wire 温度传感器项目显示开发者以手边器物解决问题的取向：其稻草 Bale 高效住宅依靠夜间引入冷空气并日间缓释蓄冷，须以数据检验各房间冷暖与通风手段的实效，遂购入 Dallas Semiconductor 设计的单总线温度传感器——既有 eBay 整件，亦有以约十分之一价格购自中国厂商的散芯片——并复用住宅既有 RJ11 电话线布线组建 one-wire 网络，代码自行完成总线设备枚举、驱动匹配与周期测温，经 sysctl 发布数据供报表或控制环使用，并在 BSDCan 展出引发兴趣。（BSD Now EP109，[2081.48-2186.52]，L1）
 - lighttpd 定位为极快、极轻量的 Web 服务器，目标是在低资源占用下维持大量并行连接，面向大量短连接的 Web 2.0 应用；与 Apache（在不使用事件 MPM 时每连接占一进程或线程）不同，lighttpd 为完全事件驱动的单进程单线程架构，无线程也无 fork，基于非阻塞 I/O——等待中的连接只是进程内的一个文件描述符加少量内存；仅受单进程文件描述符数限制且可调，可同时维持一万至两万连接；Keep-Alive 场景下等待连接近乎零成本，这对 AJAX 类低延迟小请求尤为关键。（BSDTalk EP61，[179.02-344.98]，L1）
 - 项目起源：最初是 Boa、Mathopd、thttpd、Zeus 一类擅长静态内容的小型 Web 服务器（当年常被用作 Apache 的静态卸载前端），但自始即带 FastCGI 与 PHP 支持、sendfile 等系统级优化和 kqueue 等事件接口，迅速长成全功能服务器；作者自述直接动因是读到 Dan Kegel 论 C10K 问题（单机万级并行连接）的论文，想以此做概念验证，结果一做即快。（BSDTalk EP61，[88.68-146.44]，L1）
@@ -100,10 +100,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- NetBSD 微虚拟机引导需 multiboot 内核选项，目前仅 i386 支持、AMD64 尚缺，作者假设其为近期限制。　[存疑脚注] AMD64 multiboot 支持状态待核实（BSD Now EP361，[863.18-887.58]，L4）
+- NetBSD 微虚拟机引导需 multiboot 内核选项，目前仅 i386 支持、AMD64 尚缺，作者假设其为近期限制。 [存疑脚注] AMD64 multiboot 支持状态待核实（BSD Now EP361，[863.18-887.58]，L4）
 - 主持人在访谈中提出的生态缺口：PC-BSD 使用 GRUB 引导，而 GRUB 无法自动加载模块依赖，只能在 grub.cfg 中预先逐一列全，且彼时缺乏可直接列出某模块依赖树的用户态工具——KLDXRef 虽可能有读取 linker.hints 的模式但状态不明；这一问答从使用者视角映照出自动加载工程尚未覆盖引导链的现实。（BSD Now EP109，[928.86-948.60]，L2）
 - GEOM 在内存耗尽时的回退机制构成一个由改进放大旧缺陷的案例：既有实现以分配失败计数触发退避，将系统长期压制在每秒 10 次 IOPS；Alexander Motin 的 direct dispatch 改进使并发下发的 I/O 从个位数跃升至数千，失败分配随之放大，病态退避更易触发；Losh 的权宜修复是将病态行为上限抬至每秒 1000 次 IOPS 并改为以失败是否持续为节流条件，而根本方案是预分配 I/O 事务全栈所需内存（编译期静态数组或受限的 UMA 储备池），否则当换出页所需的内存本身无法分配时理论上可构成经典死锁——其 Netflix 服务器有 256 GB 内存故罕见触发。（BSD Now EP109，[1739.60-1993.68]，L1）
-- 转写存在多处专名讹误：Mathopd 误作 Maffod、Mongrel 误作 MongoRail、Cygwin 误作 CycloN、mod_proxy_core 误作 ModFox core、Valgrind 误作 WellGriant、Kerberos 疑误作 KABROS，lighttpd 在转写中混作 Lighty、LIDI、Lys 等；作者将按 URL 哈希分配请求的首倡 RFC 归于微软，引用此说法时应核对缓存阵列路由协议一类原始文献。　[存疑脚注] 上述专名转写均存疑，以录音与 lighttpd 官方文档复核为准。（BSDTalk EP61，[1866.44-2113.54]，L5）
+- 转写存在多处专名讹误：Mathopd 误作 Maffod、Mongrel 误作 MongoRail、Cygwin 误作 CycloN、mod_proxy_core 误作 ModFox core、Valgrind 误作 WellGriant、Kerberos 疑误作 KABROS，lighttpd 在转写中混作 Lighty、LIDI、Lys 等；作者将按 URL 哈希分配请求的首倡 RFC 归于微软，引用此说法时应核对缓存阵列路由协议一类原始文献。 [存疑脚注] 上述专名转写均存疑，以录音与 lighttpd 官方文档复核为准。（BSDTalk EP61，[1866.44-2113.54]，L5）
 
 **文献**：
 
@@ -134,3 +134,85 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔FreeBSD Developer Summit, June 2021〕讲者口述：为 Wireshark 添加 CAMcorder 的自定义 pcap（custom pcaps）有多种方式，讲者希望能做到这一点。（YouTube EPrxU7HAlUchg，[986.56-996.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1921 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1921`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thomas Munro 关于 FreeBSD 上 PostgreSQL 异步与直接 I/O 的演讲〕讲者口述：FreeBSD 的 aio_waitcomplete 可像队列一样弹出完成事件，不必再逐笔调用 aio_error 或 aio_return，并会释放全部内核资源；他因此把该接口作为 FreeBSD 上的默认实现，以使系统调用率尽可能低。（YouTube EP5znybwzUZog，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1922 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1922`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thomas Munro 关于 FreeBSD 上 PostgreSQL 异步与直接 I/O 的演讲〕讲者口述：FreeBSD 13 新增了面向 scatter-gather 即向量化 I/O 的 aio_readv 与 aio_writev，他认为这是很有价值的选项，并在其实现中充分使用。（YouTube EP5znybwzUZog，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1923 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1923`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thomas Munro 关于 FreeBSD 上 PostgreSQL 异步与直接 I/O 的演讲〕讲者口述：PostgreSQL 用 posix_fadvise 与 sync_data_file 表达未来读与未来 fsync 的有限提示，但这些调用基本只在 Linux 上起作用，或许也在 NetBSD 上有效（不确定），在 FreeBSD 上肯定不起作用。（YouTube EP5znybwzUZog，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1924 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1924`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thomas Munro 关于 FreeBSD 上 PostgreSQL 异步与直接 I/O 的演讲〕讲者口述：在他需要支持的操作系统中，macOS 与 NetBSD 虽都实现了 posix aio，却都没有加入基于 kqueue 的完成通知；DragonFly 则在某个时点直接整块移除了 aio，提交说明称从来没有人调用它。（YouTube EP5znybwzUZog，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2099 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2099`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 演讲〕讲者口述：FreeBSD 缓冲池的核心结构是 struct bio，它把 vnode 映射到内存，且只映射 vnode 的某一部分，内部带有偏移量与长度；这些页通常由 VM object 支撑。（YouTube EPta_0JtTGTBg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2100 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2100`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 演讲〕讲者口述：FreeBSD 缓冲池对异步写入的数量设有一个全局上限；单盘系统下这工作得相当好，但主机上同时接有慢速硬盘与高速 SSD 时，同一个全局上限会让一类设备挤压另一类设备。（YouTube EPta_0JtTGTBg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2101 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2101`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 演讲〕讲者口述：FreeBSD 在准备写入时会限制任意时刻处于脏状态的缓冲数量，进程想写入而脏缓冲过多时便须等待缓冲被清出，而清出工作由 buffer daemon 完成。（YouTube EPta_0JtTGTBg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2102 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2102`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Warner Losh 演讲〕讲者口述：他引入的改动是让下层为每次 I/O 填入 completion 与 submission 记录，向上层报告提交之后尚余多少可用空间、该设备的工作时间尺度，以及受限因素究竟是 I/O 次数受限、带宽受限还是两者兼有。（YouTube EPta_0JtTGTBg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2397 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2397`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin 关于 FreeBSD 高密度 filer 的演讲〕讲者口述：讲者自述名叫 Betty dosa（题名给出讲者为 Baptiste Daroussin，转写音作 Betty dosa），在 Gundy 工作（转写音，题名与其后文自述的 Gandi 相符），演讲主题是所谓 high-density filers——因为他们在这批 filer（转写音作 fighters）上承载的数据集数量巨大，所以把它们视作高密度。（YouTube EPZNfImYga1AE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2398 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2398`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin 关于 FreeBSD 高密度 filer 的演讲〕讲者口述：在筛选替换方案时，讲者表示他们对 Zarafa（转写音，按存储方案上下文疑指 ZFS）非常满意，希望继续用它，因为它恰好提供他们想要的东西，足够简单、便于与自家中间件集成，且性能令人满意。（YouTube EPZNfImYga1AE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2399 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2399`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin 关于 FreeBSD 高密度 filer 的演讲〕讲者口述：FreeBSD（转写音作 previously）紧跟上游社区的进展，其 iSCSI target（转写音作 Isis target）有过此前 weaknesses 的大量改进；其中讲者最感兴趣的是 threaded board（转写音，疑指 threaded zvol），它把导入时间从 20 分钟降到约零到两分钟。（YouTube EPZNfImYga1AE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2400 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2400`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Baptiste Daroussin 关于 FreeBSD 高密度 filer 的演讲〕讲者口述：按其最后一次测试，这一套网络启动/部署流程把耗时从 45 分钟压到了两分半钟。（YouTube EPZNfImYga1AE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2507 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2507`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 · Marshall Kirk McKusick〕讲者口述：GEOM 层常被称为磁盘管理层（Disk Management layer），能做磁盘分区与磁盘聚合（镜像、RAID 之类），且由于所有 IO 都经过这一层，它也是收集 IO 统计的理想位置。（YouTube EPMfIrVtRvB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2508 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2508`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 · Marshall Kirk McKusick〕讲者口述：GEOM 最初创建于 FreeBSD 4、5、6 时代，其中 4 到 5 是从单处理器到多处理器的大迁移，意味着必须做大量加锁工作，这一过渡非常痛苦。（YouTube EPMfIrVtRvB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2509 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2509`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 · Marshall Kirk McKusick〕讲者口述：一次性给全部下层设备驱动补上多线程加锁是令人望而生畏的任务，为此早期 GEOM 把进入设备的请求单线程化——请求排队后交由所谓 G down 线程沿栈一路下行并经设备驱动执行。（YouTube EPMfIrVtRvB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2510 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2510`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon2023 · Marshall Kirk McKusick〕讲者口述：他写出 gunion 的起因是时常有人寄来能让 fsck 出错的大磁盘镜像——fsck 要么修错要么崩掉——而这些镜像动辄 4 TB，调试时每次重试都得再整盘复制一遍。（YouTube EPMfIrVtRvB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -146,13 +146,13 @@ volume: 第18卷-全球社区地区bsd史
 
 **辨析**：
 
-- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
-- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
-- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。　[存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
-- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。　[存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
-- 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。　[存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
-- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
-- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
+- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。 [存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。 [存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
+- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。 [存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
+- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。 [存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
+- 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。 [存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
+- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。 [存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
+- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。 [存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 
 **文献**：
 
@@ -170,3 +170,20 @@ volume: 第18卷-全球社区地区bsd史
 
 据 BSDCan（年份不详）讲者口述：该活动是一场 PGP 密钥签名会，属于 birds of a feather 类活动。（YouTube EPdHDQyMZPQ1M，[11.4-15.869]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2176 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2176`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Li-Wen Hsu: How to bootstrap a BSD conference -- BSDCan 2018 演讲〕讲者口述：自述自 2007 年起为 FreeBSD ports 提交者；数年前受邀加入 FreeBSD 持续集成组，并称现为 LaCrustra 的主要维护者。（YouTube EPzX2auWI1pmA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2177 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2177`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Li-Wen Hsu: How to bootstrap a BSD conference -- BSDCan 2018 演讲〕讲者口述：自述数年前在 BSDCan 上受管理层推动 FreeBSD 官方在台湾设立镜像：除 tw.fbsd.org 之外又增设 TWNFBT.org，并称其为亚洲首个官方镜像，使岛内用户不必到地球另一端抓取软件包。（YouTube EPzX2auWI1pmA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2178 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2178`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Li-Wen Hsu: How to bootstrap a BSD conference -- BSDCan 2018 演讲〕讲者口述：自述在 BSDCan 上再次见到 Satoshi-san 并受邀加入 BLDK（非 BSDCan，而是 Asia BSDCan）项目委员会，随后被推选志愿举办 BSD Taiwan，因而成为该会议主席。（YouTube EPzX2auWI1pmA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

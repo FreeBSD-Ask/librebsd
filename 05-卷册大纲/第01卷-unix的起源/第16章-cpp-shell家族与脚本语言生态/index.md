@@ -60,7 +60,7 @@ volume: 第01卷-unix的起源
 
 - Thomas Scoville《The Elements of Style: Unix as Literature》（1998 年网络文章，作者自述 1983 年起使用 Unix，时任 Expert Support Inc 工程师），为当期主持人转述的二手文本。（BSD Now EP523，[568.60-868.00]，L2）
 - OpenBSD tech 邮件列表存档中 Theo de Raadt 关于 Zenbleed 的帖子，当期节目摘录了其原文段落，属于当事人一手陈述。（BSD Now EP523，[1393.64-1582.44]，L1）
-- Steve Bourne 约 1979 年对 shell 参数展开加入 $@ 补丁的实现史线索，经节目口头转述，需以原始 shell 源码与历史手册进一步核验。　[存疑脚注] 该时间与补丁细节为单一博客转述，未见节目提供原始提交或文档编号，须交叉验证。（BSD Now EP523，[1110.76-1299.52]，L4）
+- Steve Bourne 约 1979 年对 shell 参数展开加入 $@ 补丁的实现史线索，经节目口头转述，需以原始 shell 源码与历史手册进一步核验。 [存疑脚注] 该时间与补丁细节为单一博客转述，未见节目提供原始提交或文档编号，须交叉验证。（BSD Now EP523，[1110.76-1299.52]，L4）
 - Michael W Lucas 关于 1995 年以 33.6k 拨号管理名称服务器、试用 Linux 与 Windows NT 未果、最终依赖 FreeBSD 获得稳定运行的叙述，属当事人一手口述史料。（BSD Now EP406，[1770.4-1840.3]，L1）[订正：原 [1772.42-1822.78]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 2021 年第一季度状态报告记载 doc 迁移于 2021 年 1 月 23 日完成，由 Sergio Carlavilla 等维护文档基础设施，属可核对的一手工程记录。（BSD Now EP406，[1052.4-1110.9]，L2）[订正：原 [1070.12-1096.9]，2026-09-30 SenseAudio 重转核对]
 - Trenton Schultz 本人访谈自述（Trolltech 七年与 Nokia 一年经历、ROS 移植、博士研究）。（BSD Now EP321，[105.18-1423.4]，L1）[订正：原 [105.18-119.16]，2026-09-30 SenseAudio 重转核对]
@@ -83,11 +83,11 @@ volume: 第01卷-unix的起源
 
 **辨析**：
 
-- Scoville 一文的文化判断以个人见闻为主，作者自述其证据粗略且轶事化，因此其文字文化与图像文化的概括应视为个人观察而非统计结论。　[存疑脚注] 该判断来自单一作者的事后文化观察，未见系统抽样或多源数据支撑。（BSD Now EP523，[568.60-865.28]，L4）
-- Zenbleed 影响评估来自 OpenBSD 一方，称基本系统少用 AVX，但浏览器等第三方程序仍可能触发泄漏，需结合 AMD 官方披露与独立复现实验交叉验证。　[存疑脚注] OpenBSD 视角的评估需与 AMD 官方技术通报及独立测试结果交叉验证后方可采信。（BSD Now EP523，[1393.64-1582.44]，L4）
-- 转写对 BSD grep 重写的编程之夏（GSoC）年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的编程之夏（GSoC）项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2810.8-2886.5]，L4）[订正：原 [2820.16-2879.38]，2026-09-30 SenseAudio 重转核对]
-- ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。　[存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
-- 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。　[考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
+- Scoville 一文的文化判断以个人见闻为主，作者自述其证据粗略且轶事化，因此其文字文化与图像文化的概括应视为个人观察而非统计结论。 [存疑脚注] 该判断来自单一作者的事后文化观察，未见系统抽样或多源数据支撑。（BSD Now EP523，[568.60-865.28]，L4）
+- Zenbleed 影响评估来自 OpenBSD 一方，称基本系统少用 AVX，但浏览器等第三方程序仍可能触发泄漏，需结合 AMD 官方披露与独立复现实验交叉验证。 [存疑脚注] OpenBSD 视角的评估需与 AMD 官方技术通报及独立测试结果交叉验证后方可采信。（BSD Now EP523，[1393.64-1582.44]，L4）
+- 转写对 BSD grep 重写的编程之夏（GSoC）年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。 [考据脚注] BSD grep 重写的编程之夏（GSoC）项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2810.8-2886.5]，L4）[订正：原 [2820.16-2879.38]，2026-09-30 SenseAudio 重转核对]
+- ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。 [存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
+- 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。 [考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
 
 **文献**：
 
@@ -107,3 +107,44 @@ volume: 第01卷-unix的起源
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1465 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1465`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔K01: Early days of Unix and Lessons Learned - Steve Bourne〕讲者口述：他说明自己接手修补 shell 的由来——原来的 shell 由 Ken 所写、功能简单，他被指派去把它修好；而他之所以能接手，是因为原 shell 的持有者 Ken 那一年在伯克利，用他的说法就是“趁猫不在家（while the cat's away）”。（YouTube EP7tQ2ftt3LO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1466 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1466`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔K01: Early days of Unix and Lessons Learned - Steve Bourne〕讲者口述：为使 shell 能借命令的退出值做条件判断，Bourne 称当时的程序并不表示退出码；他讲了自己的办法是在提示符处（转写音作 before the problem with a command）执行一个打印退出值的动作（转写音作 a pin exit equal number），并称这样只维持了大约三天，他自己说因此“被打了一顿”。（YouTube EP7tQ2ftt3LO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1467 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1467`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔K01: Early days of Unix and Lessons Learned - Steve Bourne〕讲者口述：他提到曾听到有人议论某个标准组织“做些荒谬的事”，但当时传达到他这里的 POSIX 立意是“把现行实践标准化”而不是发明新东西；他也承认后来确实有一批东西被加了进来。（YouTube EP7tQ2ftt3LO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1468 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1468`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔K01: Early days of Unix and Lessons Learned - Steve Bourne〕讲者口述：就原 shell 代码的许可证问题，Bourne 说这件事在“为 BSD 做开源”时他们碰到过，收到一封函件，大意是 32V 之前的东西可以按伯克利风格许可证对待；他也说一旦决定公开发布，这一点就应当认真对待。（YouTube EP7tQ2ftt3LO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1480 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1480`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael MacInnis: Oh a new Unix shell - BSDCan 2018〕讲者口述：他把这一批相当不同的 shell 分成四个主要家族，其中最成功的是 Bourne shell 家族——他称 Bourne-again shell 流行到“许多人把 the UNIX shell 叫作 bash、把 bash 叫作 the UNIX shell”。他另列了一张自 Thompson 最初的 shell 起、跨近 45 至 50 年的清单。（YouTube EPv1m-WEZz46U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1481 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1481`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael MacInnis: Oh a new Unix shell - BSDCan 2018〕讲者口述：他把 RC shell 家族列为四大家族之一，并说明 RC 与 RC shell（转写音作“RC show”）是为 Plan 9 而开发；ES shell 是 RC shell 的开源重实现；若顺着这条谱系走到 Plan 9 或它后来的形态 Inferno，就得到 Infernal shell，而那时已经算离开 UNIX 的领域了。（YouTube EPv1m-WEZz46U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1482 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1482`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael MacInnis: Oh a new Unix shell - BSDCan 2018〕讲者口述：他借 Scheme shell 作者的评语为“为什么人们不断重写 UNIX shell”作铺垫——UNIX shell 既是命令又是编程语言，是一个真正的编程语言，却是一个很糟糕的编程语言；他说自己作为 UNIX shell 的爱好者这么讲。（YouTube EPv1m-WEZz46U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1483 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1483`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael MacInnis: Oh a new Unix shell - BSDCan 2018〕讲者口述：他介绍自己设计的新 UNIX shell Oh——Oh 是块结构化语言，环境是层级化的、形成链或树；Oh 所做的一件事是把这些环境扩展出公有与私有两半，私有名字用 define 定义、公有名字用 export 定义。（YouTube EPv1m-WEZz46U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

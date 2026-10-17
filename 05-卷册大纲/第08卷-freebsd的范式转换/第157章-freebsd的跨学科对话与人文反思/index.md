@@ -72,10 +72,10 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
-- Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
-- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
-- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
+- 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。 [存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
+- Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。 [存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。 [存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。 [存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
 
 **文献**：
 
@@ -83,3 +83,45 @@ volume: 第08卷-freebsd的范式转换
 - [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. <https://www.bsdnow.tv/631>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1708 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1708`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Constantine A. Murenin 演讲《Quiet Computing with BSD》〕讲者口述：本人此前曾以“夏季代码”（Google Summer of Code）身份在 FreeBSD 参与过工作，并同时是 OpenBSD 与 DragonFly BSD 的贡献者；本次演讲题目为 Quiet Computing with BSD，内容是他在 OpenBSD 与 DragonFly BSD 上、以 cctl 配合传感器框架（sensor framework）实现的风扇控制补丁。（YouTube EP3B0SHPWaT58，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1709 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1709`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Constantine A. Murenin 演讲《Quiet Computing with BSD》〕讲者口述：他把自己这项工作的议程定位是把风扇转速降下来而不是提上去：更慢的风扇产生更少的系统噪音，噪音减少则意味着使用者的压力更小；并称已有研究显示，办公环境的噪音通常会为劳动者带来额外的压力。（YouTube EP3B0SHPWaT58，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1710 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1710`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Constantine A. Murenin 演讲《Quiet Computing with BSD》〕讲者口述：该风扇控制补丁于 2009 年 5 月发布在 OpenBSD 的邮件列表上，据该邮件地址可以取得载有这份补丁的消息。（YouTube EP3B0SHPWaT58，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1711 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1711`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Constantine A. Murenin 演讲《Quiet Computing with BSD》〕讲者口述：传感器框架（sensors framework）曾作为 Google Summer of Code 项目被移植到 FreeBSD，但由于该补丁被撤出，它并未集成进 FreeBSD。（YouTube EP3B0SHPWaT58，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2219 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2219`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Bjoern A. Zeeb 演讲〕讲者口述：把 FreeBSD 内核直接载入 gem5 是启动不起来的，因为 gem5 里的 Linux 路径把 FreeBSD 交由 loader 完成的初始化自己做完了；讲者因此必须在 gem5 内实现整段 loader 逻辑——切换长模式、建立页表——把内核交给模拟器后才跑得动。（YouTube EPsYmW_H6FrWo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2220 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2220`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Bjoern A. Zeeb 演讲〕讲者口述：在 gem5 里做 FreeBSD 性能分析的第一个发现是一位同事给出的单行改动，同一组数值下 FreeBSD 的 I-TLB 命中与 I-cache 命中下降了约 44%；讲者由此提醒，命中数下降并不一定是坏事，判断时必须同时看取指与提交指令的比例。（YouTube EPsYmW_H6FrWo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2221 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2221`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Bjoern A. Zeeb 演讲〕讲者口述：DTrace 相关论文的原初主张是“只要不使用就没有开销”，而 FreeBSD 实际有两种不使用方式——不把它编译进内核，或者像 GENERIC 那样自 FreeBSD 11 起把两处 hook 编入内核但默认不用；讲者引用他人补丁做成本分析，是为了决定能否在 GENERIC 中启用 chit。（YouTube EPsYmW_H6FrWo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2222 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2222`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Bjoern A. Zeeb 演讲〕讲者口述：gem5 上的对比实验没有显示出内核 BPF chit 的实质收益，于是结论走向能否直接移除它——因为它同时是个内核中的安全面且默认不开启，ARM 版本当时也尚未提交；其局限是只对某一类 mbuf 生效，而 FreeBSD 默认接收路径恰好不触发该问题，真实硬件上因此不明显。（YouTube EPsYmW_H6FrWo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

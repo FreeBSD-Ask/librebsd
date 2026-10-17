@@ -67,9 +67,9 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- 转写称 Multics 12.7 为最新版本，其发布时间与维护状态需与 Multics wiki 及 DPS-8/M 模拟器资料核对。　[考据脚注] Multics 12.7 的发布时间与维护主体需查 multicians.org 与相关 wiki。（BSD Now EP416，[2027.8-2123.1]，L4）[订正：原 [2030.2-2116.8]，2026-09-30 SenseAudio 重转核对]
-- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
-- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
+- 转写称 Multics 12.7 为最新版本，其发布时间与维护状态需与 Multics wiki 及 DPS-8/M 模拟器资料核对。 [考据脚注] Multics 12.7 的发布时间与维护主体需查 multicians.org 与相关 wiki。（BSD Now EP416，[2027.8-2123.1]，L4）[订正：原 [2030.2-2116.8]，2026-09-30 SenseAudio 重转核对]
+- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。 [存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。 [存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -77,3 +77,25 @@ volume: 第08卷-freebsd的范式转换
 - [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. <https://www.bsdnow.tv/580>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2464 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2464`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Benno Rice〕讲者口述：systemd 在概念上其实是 2010 年 Lennart Poettering 重做服务管理时的产物，其形态基本等同于苹果的 launchd——讲者说很多人谈 systemd 却不谈 launchd，这让他觉得好笑。（YouTube EP6AeWu1fZ7bY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2465 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2465`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Benno Rice〕讲者口述：cgroups 只是把进程分组，其功能大致相当于 FreeBSD jail 的进程分组部分，在它之上可以挂接 jail 式隔离与资源限制。（YouTube EP6AeWu1fZ7bY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2466 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2466`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Benno Rice〕讲者口述：Debian 就 systemd 的漫长争论最终以采用 systemd 收场，而围绕那次投票的争议使不少参与者辞职。（YouTube EP6AeWu1fZ7bY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2467 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2467`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2018 讲者 Benno Rice〕讲者口述：BSD 的 rc 结构把系统配置与服务引导搅在一起——配置网络接口、配置运行时链接器等被算作同一类“整理”工作，于是用同一套隐喻和进程去管两类并不相同的东西，容易造成混淆。（YouTube EP6AeWu1fZ7bY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

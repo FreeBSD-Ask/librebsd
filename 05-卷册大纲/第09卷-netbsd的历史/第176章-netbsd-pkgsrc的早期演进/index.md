@@ -32,3 +32,72 @@ volume: 第09卷-netbsd的历史
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 netbsd.duckdb
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-253 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-253`；w172 YouTube 章节路由采纳）
+
+据〔会议不详〕讲者口述：讲者指出历史上 BSD Unix 一直在自己独立的源码树内开发，涵盖内核、通用命令与配置文件。（YouTube EP5235CsD1QwQ，[199.9-210.7]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2191 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2191`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan P03B: Hardening pkgsrc - Pierre Pronchery〕讲者口述：pkgsrc 是 NetBSD 的打包软件来源，同时也运行于 SmartOS 与 MINIX（讲者表示不确定），当时共支持一万七千余个包、覆盖十余个独立平台。（YouTube EPW36UZiX4Kt0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2192 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2192`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan P03B: Hardening pkgsrc - Pierre Pronchery〕讲者口述：pkgsrc 设有两个负责团队：一个专门处理安全问题（security team），另一个是发布工程组（release engineering group）。（YouTube EPW36UZiX4Kt0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2193 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2193`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan P03B: Hardening pkgsrc - Pierre Pronchery〕讲者口述：pkgsrc 的漏洞数据库并非单一来源，而是汇集多路信息；讲者并称工单会从各来源的 RSS 与邮件列表自动创建，再由人工处理，属半自动流程。（YouTube EPW36UZiX4Kt0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2194 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2194`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan P03B: Hardening pkgsrc - Pierre Pronchery〕讲者口述：讲者介绍 RELRO 机制：在程序启动时应用重定位并将对应页设为只读，使攻击者无法覆写其中的偏移量，从而收缩攻击面；pkgsrc 现已支持该机制，讲者并称其约数年前由 OpenBSD 引入、后进到 GCC 上游。（YouTube EPW36UZiX4Kt0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2203 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2203`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者说明新版 pkg tools 把签名放在 gzip 头的注释字段里、即签名置于归档之外，使未安装 pkg tools 的一方看到的仍是完全正常的 gzip 文件。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2204 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2204`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者称 OpenBSD 不采用证书链信任机制，理由是它过于复杂且常被做错，因此只要密钥被安装在正确目录中即被视为有效密钥。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2205 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2205`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者称 OpenBSD 与其他操作系统的一大差别在于没有已安装内容的全局数据库，var/db/pkg 下每个已装包各占一个子目录，不存在全局数据库。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2206 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2206`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者表示主动破坏兼容性是有意决定——虽当时旧签名方式并无安全洞，仍决定正式弃用旧流程、只接受新签名；并称在 OpenBSD，安全与可用性必须二选一时一律偏向安全。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2452 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2452`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014《Carve your NetBSD》Pierre Pronchery、Guillaume Lasmayous 讲〕讲者口述：讲者称当时该项目同时支持两个主要发行分支，而包源码树按季度发布——即每三个月重新编译并向终端用户提供一批二进制包——下载路径中却对包树不作明示。（YouTube EPvh-TjLUj6os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2453 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2453`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014《Carve your NetBSD》Pierre Pronchery、Guillaume Lasmayous 讲〕讲者口述：讲者称在该 BSD 操作系统里安装第三方包不止一种工具、不止一种途径，多种包管理工具并存，对使用者高度令人困惑。（YouTube EPvh-TjLUj6os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2454 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2454`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014《Carve your NetBSD》Pierre Pronchery、Guillaume Lasmayous 讲〕讲者口述：讲者称包源码早在十二年前就已支持二进制包签名，但据其判断几乎从未有人使用；他一年前检查时该功能已经坏掉、完全不能工作，而这一需求仍未被修复。（YouTube EPvh-TjLUj6os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2455 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2455`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2014《Carve your NetBSD》Pierre Pronchery、Guillaume Lasmayous 讲〕讲者口述：讲者称 NetBSD 用的是 CVS——他承认这工具本身不错、自己也喜欢——但它是集中式的，厂商这类需要去中心化开发的角色很难把它当去中心化系统来用。（YouTube EPvh-TjLUj6os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

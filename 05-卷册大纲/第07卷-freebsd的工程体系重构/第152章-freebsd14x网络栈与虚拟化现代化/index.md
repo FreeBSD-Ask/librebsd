@@ -57,3 +57,162 @@ volume: 第07卷-freebsd的工程体系重构
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-219 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-219`；w172 YouTube 章节路由采纳）
+
+据〔2024 年 9 月开发者峰会〕讲者口述：在 Azure 上测得该 TLB 刷新操作平均耗时 14.7 微秒。（YouTube EP0EbGG77I3eI，[593.76-600.269]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-626 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-626`；w172 YouTube 章节路由采纳）
+
+据〔OCI Working Group - May 2024 FreeBSD Developer Summit〕讲者口述：该工作组在 OCI 基础设施内定义 FreeBSD 运行时应当做什么，以便对齐 runJ 与 oci-jail 两套运行时、确保二者不走向分歧。（YouTube EPIoRhPmB-B4g，[787.32-806.75]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-722 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-722`；w172 YouTube 章节路由采纳）
+
+据BSDCan 2018讲者口述：Chittenden 演示 FreeBSD 新 VPC 框架（转写音作 VPCI）可将虚拟机传入 jail 中，从而在 FreeBSD 直接跑 hypervisor 测试。（YouTube EPLa4ekkKbM5o，[809.57-815.906]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-764 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-764`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：讲者自 2010 年起担任 FreeBSD EC2 平台的维护者，也就是从他在 Amazon 上跑通 FreeBSD 那年开始一直维护至今。（YouTube EPMT3cdeuRTzs，[31.32-37.549]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1166 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1166`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018 Thomas Johnson 演讲〕讲者 Thomas Johnson 口述：其 FreeBSD 机器运行 BGP 表现良好（YouTube EPYMLyhmaUJI4，[2755.39-2760.73]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-570 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-570`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Slava Shwartsman 口述：讲者列举的常用存储协议包括 iSCSI、NFS、NVMe 与 Samba（转写音作 I scuzzy）（YouTube EPh1NyBaPHuyE，[1263.24-1273.399]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-569 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-569`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Slava Shwartsman 口述：tcpdump 已支持嗅探 RoCE 数据包，在 FreeBSD 上亦可工作（转写音作 rocky pockets）（YouTube EPh1NyBaPHuyE，[1196.649-1203.2]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-950 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-950`；w172 YouTube 章节路由采纳）
+
+据〔BSDCan 2018〕讲者 Florian Obser 口述：slaacd 的子进程无需 unveil，因为 pledge 已能在其试图越界访问时将其终止。（YouTube EPtBQXZYotKvI，[2282.23-2291.16]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1631 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1631`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 Tom Jones 演讲 Making FreeBSD QUIC〕讲者口述：John Baldwin 在 FreeBSD 有一个名为 packet batching 的在研工作，讲者先说明 Linux 已有 generic receive offload（LRO），随即指出 packet batching 与之相近但不同，它是面向 UDP 流量的优化，并计划扩展到其他协议，以让 FreeBSD 的接收侧跑得更快。（YouTube EPMOtsTyp9LZk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1632 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1632`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 Tom Jones 演讲 Making FreeBSD QUIC〕讲者口述（回答 FreeBSD 将来是否会把 QUIC 纳入核心系统之问）：QUIC 库要进 FreeBSD 代价高昂，协议本身复杂、需搬进大量代码；讲者认为 FreeBSD 目前并无 QUIC 内核实现，而事实上已有一个编写时即以 FreeBSD 为上游目标的内核实现，却无人愿意接手，FreeBSD 可能因此在此领域落后。（YouTube EPMOtsTyp9LZk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1633 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1633`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 Tom Jones 演讲 Making FreeBSD QUIC〕讲者口述：iperf3 在 FreeBSD 与 Linux 上存在实现差异——同一个拥塞控制算法在两侧名称字符串不一致，测试就会失败；跑 UDP 测试时 iperf3 在 Linux 上会对流量做平滑（pacing）而 FreeBSD 不会，不知道这一点就会看到奇怪的结果。（YouTube EPMOtsTyp9LZk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1634 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1634`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2022 Tom Jones 演讲 Making FreeBSD QUIC〕讲者口述：从自己绘制的 CPU 占用图中发现，FreeBSD 的调度器会把任务在各核之间频繁跳跃以求均衡，在测试床控制机上跑 OpenSSL speed 这类负载时表现为任务四处乱跳；紧邻一句讲者补充，同样的负载在 Linux 上不会如此，而是绑得很紧。（YouTube EPMOtsTyp9LZk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1647 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1647`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Making FreeBSD QUIC：Tom Jones 演讲〕讲者口述：讲者自述为 Clara Inc 的 FreeBSD 工程经理，公司从事 FreeBSD 的开发与支持工作。（YouTube EPQEKyBr1LS3s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1648 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1648`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Making FreeBSD QUIC：Tom Jones 演讲〕讲者口述：讲者指出 SCTP 的标准制定曾由电信运营商与 IETF 联合推动，而 FreeBSD 是少数现存 SCTP 栈之一的栖所。（YouTube EPQEKyBr1LS3s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1649 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1649`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Making FreeBSD QUIC：Tom Jones 演讲〕讲者口述：讲者编写了名为 commiterate 的工具，用于考察 fastly 的 QUIC 实现 quickly 随时间的演进；因需运行网络实验而做成分布式工具，可为多个提交分别创建 git work tree 并收集吞吐量与 CPU 利用率数据。（YouTube EPQEKyBr1LS3s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1650 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1650`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Making FreeBSD QUIC：Tom Jones 演讲〕讲者口述：在启用 GSO（广义分段卸载）之前，讲者的 FreeBSD 侧 quickly 发送端并不受 Linux 那一侧的限制，性能略快，且他们认为还有很大的提速空间；他同时表示已开始为 FreeBSD 做 GSO 但实现尚有问题。（YouTube EPQEKyBr1LS3s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1784 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1784`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden《Introducing FreeBSD VPC》讲者口述〕：讲者口述 FreeBSD VPC 以 bhyve 作为底层虚拟化方案，认为其表现相当良好，CPU 隔离相当好（并强调只应在 current 上启用），且内存隔离完美——因为采用的是非超卖内存模型。（YouTube EP9mOFFovdAw0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1785 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1785`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden《Introducing FreeBSD VPC》讲者口述〕：讲者口述 FreeBSD VPC 早期承接上一年 BSDCan 上的一次演讲做了原型概念，可在 tap 接口之间转发客户机流量，单实例下速率由约 1 至 2 千兆比特每秒提升至约 21 每秒。（YouTube EP9mOFFovdAw0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1786 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1786`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden《Introducing FreeBSD VPC》讲者口述〕：讲者口述 FreeBSD VPC 的新接口几乎全部构建在 if_lib 之上（仅少数例外），据此实现的交换接口可在不同客户机之间转发数据包，并可通过 uplink port 把流量送出至物理网卡。（YouTube EP9mOFFovdAw0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1787 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1787`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sean Chittenden《Introducing FreeBSD VPC》讲者口述〕：讲者口述最初本想沿用某一既有内核接口来暴露这些对象，但他判断该类接口只是状态读写的堆放地、本身就体现设计缺失，因此明确且及早地决定弃用该路线，改为自建专用接口。（YouTube EP9mOFFovdAw0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2034 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2034`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2022 FreeBSD Developer Summit: QEMU User Mode 演讲〕讲者口述：他本次讲的是 FreeBSD 用于构建软件包的 BSD user 部分，以及把这部分功能向上游（QEMU 主线）上推的进展，目的是不再需要长期把补丁留在 FreeBSD 自己的树里。（YouTube EP09DwyAIbiPs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2035 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2035`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2022 FreeBSD Developer Summit: QEMU User Mode 演讲〕讲者口述：按最近一次构建的统计，每做一次完整的软件包构建运行约可构建 32,000–33,000 个软件包（amd64），i386 略少。（YouTube EP09DwyAIbiPs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2036 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2036`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2022 FreeBSD Developer Summit: QEMU User Mode 演讲〕讲者口述：BSD user 中包含实现这一切的代码，约 45,000 行；他们也开始在 BSD user 与 Linux user 之间共享公共 user 代码，目前用于信号安全的系统调用处理等少数几处。（YouTube EP09DwyAIbiPs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2037 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2037`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2022 FreeBSD Developer Summit: QEMU User Mode 演讲〕讲者口述：QEMU BSD user 目前只有 FreeBSD 真正可用（除两个缺陷外），已相当完整，可用于为多种架构构建数万软件包，而他所做工作的绝大部分集中于此；NetBSD 与 OpenBSD 虽有对应目录，但在 BSD user 分支中已有很长时间无法构建。（YouTube EP09DwyAIbiPs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2358 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2358`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06A：Yanmin Qiao 谈 Hyper-V/Azure 上的 FreeBSD〕讲者口述：这些改动是针对 FreeBSD 本身做出的，而非仅仅是 Hyper-V（转写音作 are happy）的网络或设备驱动。（YouTube EPeKrGCSEFrBo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2359 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2359`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06A：Yanmin Qiao 谈 Hyper-V/Azure 上的 FreeBSD〕讲者口述：Hyper-V（转写音作 Harvey）并不模拟传统 PCI 总线，而是使用一种私有总线（转写音作 DVR bus）。（YouTube EPeKrGCSEFrBo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2360 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2360`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06A：Yanmin Qiao 谈 Hyper-V/Azure 上的 FreeBSD〕讲者口述：相关支持已提交进 FreeBSD current，并被回移（backport）到 FreeBSD 10。（YouTube EPeKrGCSEFrBo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2581 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2581`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Fodil-Lemelin 与 Paeps“Not simply pieces of string”讲座〕讲者口述：很多人以为 FreeBSD 的桥接驱动像一台可带任意多端口的以太网交换机，但它其实只是一段“以太网线”；把多股线缆绞接在一起，才是 FreeBSD 桥接的概念模型。（YouTube EP_3t8xFKCA48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2582 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2582`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Fodil-Lemelin 与 Paeps“Not simply pieces of string”讲座〕讲者口述：FreeBSD 桥接默认的生成树协议是 RSTP（快速生成树），若在链路上检测到对端只讲经典 STP，就会回退到经典 STP 与之互通。（YouTube EP_3t8xFKCA48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2583 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2583`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Fodil-Lemelin 与 Paeps“Not simply pieces of string”讲座〕讲者口述：生成树协议只认“线缆”本身、对 VLAN 一无所知；BPDU（桥协议数据单元）不能带 VLAN 标签、必须由接口本身发出，而 4096 个 VLAN 就要算出 4096 个生成树实例，故直接在 VLAN 上逐个跑 STP 的朴素做法行不通。（YouTube EP_3t8xFKCA48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2584 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2584`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 Fodil-Lemelin 与 Paeps“Not simply pieces of string”讲座〕讲者口述：MSTP 实现拟随 FreeBSD 12 落地；已有大体可用的原型挂在讲者名下的 GitHub MSTP 分支，但因状态迁移远多于常规 STP，暴露出桥接代码中的若干死锁。（YouTube EP_3t8xFKCA48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

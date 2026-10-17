@@ -89,7 +89,7 @@ volume: 第09卷-netbsd的历史
 
 **辨析**：
 
-- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
+- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。 [存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
 
 **文献**：
 
@@ -118,3 +118,85 @@ volume: 第09卷-netbsd的历史
 
 据〔EuroBSDCon 2022〕讲者 Nia Alarie 口述：可在 x86 机器上交叉编译 NetBSD 的 mips 与 arm 目标（YouTube EPfNlxFh43V-w，[128.58-136.49]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1512 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1512`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sleeping Beauty - NetBSD on Modern Laptops, Jörg Sonnenberger〕讲者口述：改造的首要问题是原有的 ACPI 组件架构——他说该版本自“2006 版”以来一直沿用，在新的笔电上遇到不少问题，因为那些机器的固件开始实际使用 ACPI 特性，因而必须更换 ACPI。他紧接着说明他们真正需要的是让 ACPI 在 AMD 64 与 SMP 系统上跑起来。（YouTube EPv9ygBFjGR50，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1513 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1513`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sleeping Beauty - NetBSD on Modern Laptops, Jörg Sonnenberger〕讲者口述：PMF（电源管理框架）是该系统的一枚核心组件之一，由两部分构成——设备接口与事件接口；设备电源管理在设备特定逻辑、总线特定逻辑、设备类别逻辑三层组合上完成，挂起时按类别、设备、总线依次调用。（YouTube EPv9ygBFjGR50，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1514 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1514`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sleeping Beauty - NetBSD on Modern Laptops, Jörg Sonnenberger〕讲者口述：PMF 的系统挂起函数会先检查设备树中是否存在不支持 PMF 的设备，一旦发现就报错并立刻中止整次挂起；换言之，若想拥有 ACPI 挂起，所有驱动都必须实现 PMF，否则只会被抱怨。他说明这是有意为之——宁可报设备名让人禁用，也不要系统因为某个驱动没实现必要钩子而随机崩溃。（YouTube EPv9ygBFjGR50，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1515 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1515`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Sleeping Beauty - NetBSD on Modern Laptops, Jörg Sonnenberger〕讲者口述：为了在挂起后仍能取得可用的显示与紧急控制台，他改用软模拟 VESA BIOS 的做法——取自“V2”、而该代码本身又出自“XP86”的模拟代码，数年前被人捐入，可以在内核一侧完成原本需要在用户空间用普通虚拟化能力（仅 86/86 有、64 位没有）才做得到的事。（YouTube EPv9ygBFjGR50，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1696 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1696`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD 会议讲座 BSD ARM Kernel Internals，讲者 Arun Thomas〕讲者口述：他以 BeagleBone Black 作为演示平台，称该平台便利、廉价、性能足够，“所有的 BSD”都支持它，唯独 DragonFly 彼时还没有 ARM 移植。（YouTube EP4gRKA7xoGJ8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1697 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1697`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD 会议讲座 BSD ARM Kernel Internals，讲者 Arun Thomas〕讲者口述：NetBSD 的 build.sh 允许跨操作系统构建，可在 Linux 或 macOS 等主机上构建系统；FreeBSD 则用 clang 构建系统本体，在 ARM 上亦如此。（YouTube EP4gRKA7xoGJ8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1698 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1698`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD 会议讲座 BSD ARM Kernel Internals，讲者 Arun Thomas〕讲者口述：FreeBSD 用设备树描述硬件配置，NetBSD 使用自动配置框架；FreeBSD 在 ARM 上另有一个额外的启动加载阶段——u-boot loader，NetBSD 没有这一阶段。（YouTube EP4gRKA7xoGJ8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1699 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1699`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD 会议讲座 BSD ARM Kernel Internals，讲者 Arun Thomas〕讲者口述：现场问答中他提到 BSD 无法直接沿用 Linux 设备树的障碍在于后者是 GPL 许可；他转述自己多年前与 Linux 内核开发者 Grant Likely 交谈时，对方似乎有意把该部分改为 BSD 许可，但他明言此事“也许可能”、自己并不确定，仍需 FreeBSD 官方出面与 Linux 方面商谈。（YouTube EP4gRKA7xoGJ8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1885 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1885`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pierre Pronchery，EuroBSDcon 2012〕讲者口述：自述 NetBSD 此前仅在 Sharp Zaurus 等少数机型上受支持，且现代硬件无驱动，故由其本人自行编写触摸屏驱动；讲者后续说明该触屏连在 USB HID 总线上，并主张用 HID 控制把设备强制切到只发送绝对坐标中断的 mode 2，以优于鼠标模拟模式下的相对坐标。（YouTube EPhsS6MLCMjAI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1886 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1886`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pierre Pronchery，EuroBSDcon 2012〕讲者口述：指出触屏校准相关的 wscons 校准工具尚未进入 NetBSD 基本系统，其做法是扩展 wscons 以暴露内核中原本已存在的校准值，让使用者可输入一系列采样点参与校准；他同时表示更希望有四点校准并在首次开机时自动完成。（YouTube EPhsS6MLCMjAI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1887 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1887`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pierre Pronchery，EuroBSDcon 2012〕讲者口述：盘点该 NetBSD 平板的硬件支持现状：摄像头支持、触屏支持但硬件为多点触控而驱动仅单点、调制解调器经 u3g 驱动提供 3G 但存在问题（自述诊断结果为 UDP 可过而 TCP 不通）。（YouTube EPhsS6MLCMjAI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1888 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1888`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pierre Pronchery，EuroBSDcon 2012〕讲者口述：自述其借该平板项目（含触摸屏驱动与 X11 鼠标驱动的若干补丁）的贡献成为 NetBSD 开发者，并称自己的首个提交曾短暂破坏 USB 键盘驱动、因此此后一律先询问他人。（YouTube EPhsS6MLCMjAI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1925 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1925`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zachary McGrew 关于将 NetBSD 移植到 RISC-V 的演讲〕讲者口述：在他制作这批幻灯片的两个月前核实，NetBSD 可运行在 57 个不同平台与 16 种不同 CPU 类型之上。（YouTube EP2vQXGomKoxA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1926 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1926`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zachary McGrew 关于将 NetBSD 移植到 RISC-V 的演讲〕讲者口述：NetBSD 并不持有 Unix 许可，也未通过 Unix 认证，故他坚持只称其为 Unix-like，以免招致 Unix 工作组诉讼。（YouTube EP2vQXGomKoxA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1927 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1927`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zachary McGrew 关于将 NetBSD 移植到 RISC-V 的演讲〕讲者口述：NetBSD 的 RISC-V 移植并非由他起头，而是 Matt Thomas 于 2013 年发起的，他决定接手收拾后续工作，本以为大多已完成、只需清理收尾。（YouTube EP2vQXGomKoxA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1928 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1928`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zachary McGrew 关于将 NetBSD 移植到 RISC-V 的演讲〕讲者口述：NetBSD 在 RISC-V 上最终选定 Sv39，这也正是 FreeBSD 与 Linux 当时使用的模式，对应三级页表：512 个 1G 项、512 个 2M 项、512 个 4K 项。（YouTube EP2vQXGomKoxA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

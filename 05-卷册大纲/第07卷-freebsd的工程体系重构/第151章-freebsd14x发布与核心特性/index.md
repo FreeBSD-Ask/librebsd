@@ -49,3 +49,52 @@ volume: 第07卷-freebsd的工程体系重构
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-590 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-590`；w172 YouTube 章节路由采纳）
+
+据〔June 2021 FreeBSD Developer Summit〕讲者口述：FreeBSD 部分由 FreeBSD 上游，ZFS 部分通过 OpenZFS 上游（YouTube EPhm_S0jInF6U，[662.16-668.389]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2005 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2005`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会“14.0 规划”场〕讲者口述：主讲人参照 FreeBSD 12 与 13 之间的发布间隔，个人猜测 14.0 会在 2023 年某个时候发布，或许在 10 月前后；他同时强调 14.0 尚未在任何地方定下日期。（YouTube EP7LhcQDkUHN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2006 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2006`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会“14.0 规划”场〕讲者口述：有人私下回复主讲人称 14.0 或许在 7 月至 10 月之间发布，因此本次规划会以“2023 年年中”作为功能落地的目标时间范围。（YouTube EP7LhcQDkUHN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2007 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2007`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会“14.0 规划”场〕讲者口述：bhyve 的 arm64 支持由 Andy 同时为 FreeBSD 基金会与 cambridge 两条路径推进，其分支已放在 GitHub；主讲人确认该工作已存在，并预期会在 2023 年之前合入主线。（YouTube EP7LhcQDkUHN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2008 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2008`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会“14.0 规划”场〕讲者口述：FreeBSD 的 ZFS 硬件加速摘要方案基本是用 ocf 来做摘要；主讲人当时已看过相关进展，其中大部分改动是向 OpenZFS 上游提出的合并请求，内容只是修正 ocf 自身若干错误的断言。（YouTube EP7LhcQDkUHN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2149 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2149`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD Developer Summit 14.0 Planning 第二场〕讲者口述：FireWire 支持被提议从 FreeBSD 淘汰——它有一批遗留问题，且已开始影响 CAM 层，使用人数不多，也没有人在维护，因此应当直接移除。（YouTube EPtpR0xyOPhpQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2150 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2150`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD Developer Summit 14.0 Planning 第二场〕讲者口述：非 EFI 的 x86 boot loader 有一个约 500K 的硬性容量上限，loader 里塞的东西越来越多，若要 PXE 引导往往得自行构建定制的 loader EFI。（YouTube EPtpR0xyOPhpQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2151 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2151`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD Developer Summit 14.0 Planning 第二场〕讲者口述：在讨论 FreeBSD base 是否移除 ftpd 时，转述称 Red Hat 已移除 ftpd 并且正在移除 FTP 客户端，Google 与 Mozilla 正把 FTP 协议从浏览器中移除、该协议已被弃用，至少在 Chrome 里已经没有了。（YouTube EPtpR0xyOPhpQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2152 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2152`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD Developer Summit 14.0 Planning 第二场〕讲者口述：telnetd 与 ftpd 的客户端、服务器版都已搬进 Ports，且 GitHub 仓库经压缩处理后仍保留完整提交历史、可回溯至 epoch，因此 FreeBSD 可以据需要把二者从 base 移走。（YouTube EPtpR0xyOPhpQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

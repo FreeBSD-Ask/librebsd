@@ -56,3 +56,37 @@ volume: 第08卷-freebsd的范式转换
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-244 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-244`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit〕讲者口述：讲者指出 OpenSSL 3.0（转写音作 openl 3.0）作为长期支持版本将于 2026 年停止支持。（YouTube EP4nygncVpM9o，[3683.68-3691.63]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-245 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-245`；w172 YouTube 章节路由采纳）
+
+据〔FreeBSD Developer Summit〕讲者口述：讲者主张采用 ZFS 内置加密而非 GELI（转写音作 gelly），并把把该加密支持引入引导加载器列入待办。（YouTube EP4nygncVpM9o，[4209.64-4218.149]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2373 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2373`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 闪电演讲·Adrian〕讲者口述：为把 802.11ac／ax 与 6GHz 所需的协议栈清理做完，讲者提出在 14 系列生命周期转稳之后“划一条线”，把必要的清理与 API 破坏性变更集中做进 head 上的 15，不再试图让新东西在 14 上工作，14 只保持 stable 的维护模式。（YouTube EP7XP8dJIV2xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2374 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2374`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 闪电演讲·Adrian〕讲者口述：OpenBSD 把一批无线驱动从 Linux 原生移植进 OpenBSD 并直接原生运行，不借助 Linux KPI 兼容层，因此讲者认为 OpenBSD 在 802.11ac／ax 上比 FreeBSD 领先，而这些驱动本就跑在 BSD 上，可为 FreeBSD 所用。（YouTube EP7XP8dJIV2xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2375 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2375`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 闪电演讲·G smirnov〕讲者口述：讲者一年前提出、当年三月起实施的 FreeBSD CURRENT“稳定周”做法——每月最后一周被宣布为 stabilization week，期间不要向树里提交有风险的东西，理想情况只做缺陷修正与更正；同时参与者都安装同一个稳定点，以便比对有无回归。（YouTube EP7XP8dJIV2xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2376 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2376`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fall 2024 FreeBSD Summit 闪电演讲·Warner L〕讲者口述：因一些平台的固件只引导Linux、FreeBSD 自带引导程序在那里不可用，讲者把 FreeBSD 的 bootloader 做成可编译为 Linux 二进制的形式，由它装载 FreeBSD 内核，再经 kexec load 与带特殊参数的 reboot 把内核搬到目标内存并跳转执行，从而沿 Linux 引导路径启动 FreeBSD。（YouTube EP7XP8dJIV2xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

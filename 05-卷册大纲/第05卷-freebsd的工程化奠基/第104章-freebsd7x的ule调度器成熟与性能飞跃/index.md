@@ -83,7 +83,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- 访谈嘉宾姓名在转写中为“Diomedes Spinalis”的语音转写，具体拼写须核对 FOSDEM 演讲者名单；转写亦出现“Thomas Zoom”等疑似误转的人名。　[存疑脚注] 嘉宾姓名及若干人名拼写须以会议议程核实（BSD Now EP231，[90.64-97.48]，L4）
+- 访谈嘉宾姓名在转写中为“Diomedes Spinalis”的语音转写，具体拼写须核对 FOSDEM 演讲者名单；转写亦出现“Thomas Zoom”等疑似误转的人名。 [存疑脚注] 嘉宾姓名及若干人名拼写须以会议议程核实（BSD Now EP231，[90.64-97.48]，L4）
 
 **文献**：
 
@@ -97,3 +97,55 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔EuroBSDcon 2024〕讲者 Olivier Certner 口述：FreeBSD 有两种实时优先级类型：RT_PR 是先出现的、更原生的一种，另一种为 POSIX 风格。（YouTube EPeUr4qI0nlKM，[183.84-192.67]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1488 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1488`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Kennaway 介绍 FreeBSD 7 新特性的口述〕讲者口述：FreeBSD 4 及更早版本的内核从根本上是单线程内核，对多处理器支持非常有限。（YouTube EPXUjJWhlnujQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1489 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1489`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Kennaway 介绍 FreeBSD 7 新特性的口述〕讲者口述：旧 FreeBSD 内核的术语是巨型锁（giant lock）——整个内核被一把锁锁住，任何进程欲进入内核执行都必须先取得这把锁，取得后才得以在内核中执行。（YouTube EPXUjJWhlnujQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1490 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1490`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Kris Kennaway 介绍 FreeBSD 7 新特性的口述〕讲者口述：FreeBSD 7 的内核已完全并行，在几乎所有可想象的工作负载上巨型锁都不再出现——它仍存在于代码中，但取得巨型锁的情形已相当罕见。（YouTube EPXUjJWhlnujQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1688 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1688`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 就 FreeBSD 内核调度所作的概览演讲〕讲者口述：传统的 4BSD 调度器由 Bill Joy 与他本人在 1978 年写出，本是为“日后有时间做一套正确方案”之前权宜过渡之用，实际上却一直沿用到后来的操作系统版本。（YouTube EPjHROlCZV58I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1689 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1689`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 就 FreeBSD 内核调度所作的概览演讲〕讲者口述：ULE 原本被设想为默认调度器，但因其自身存在各种问题，直到 FreeBSD 8 才真正能成为全天候的默认调度器。（YouTube EPjHROlCZV58I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1690 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1690`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 就 FreeBSD 内核调度所作的概览演讲〕讲者口述：ULE 调度器使用三组运行队列，并且每个 CPU 各有自己的一组；处理器在停止运行一件事、要挑选下一件时，不扫描全系统的所有队列，只看自己那组队列。（YouTube EPjHROlCZV58I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1691 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1691`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marshall Kirk McKusick 就 FreeBSD 内核调度所作的概览演讲〕讲者口述：ULE 判定一个线程属批次还是交互式的标准是睡眠 tick 数是否超过运行时间：睡眠多于运行即视为交互式，运行多于睡眠即视为批次。（YouTube EPjHROlCZV58I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1971 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1971`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008 Brooks Davis 演讲〕讲者口述：jails 一类机制被实现为“强化版 chroot”（转写音作 trud），实际上难以逃逸，实例与 IP 地址绑定；单机可容纳数千个，开销极低，通常只虚拟化真正需要虚拟化的部分。（YouTube EP0uBFLJm7IHc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1972 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1972`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008 Brooks Davis 演讲〕讲者口述：其 variant symlinks 实现源自 Matt Doan 在 DragonFly 中的实现，但作了较多改动：作用域优先级被反转，System Scope 始终优先，其后是一个用户无法自行修改的特权 per-process 作用域。（YouTube EP0uBFLJm7IHc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1973 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1973`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008 Brooks Davis 演讲〕讲者口述：其 CPU Set 分配器基于 Jeff Robertson 对建立 CPU 集合与 CPU 亲和的支持，可将进程绑定到特定 CPU；在 8 中还可将中断线程绑定到特定 CPU，而 John Baldwin 在 7.1 中将其回移，并增加了对“4 BSD”调度器的支持。（YouTube EP0uBFLJm7IHc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -64,7 +64,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **史料**：
 
-- 该期提示的一手与近一手材料：Leventhal 本人口述（Sun 内部 DTrace 立项、Fishworks、Delphix）；QNX 官方第三方版权声明 PDF（数百页，丰田 Highlander 车机即 QNX，其中含 OpenCrypto xforms.c 许可文本、NetBSD Foundation 与 NASA Ames 的版权转让、TrustedBSD、OpenSSH、tcpdump 许可等条目）；Chad Dougherty 发往 openbsd-misc 的车机软件信息屏帖；Theo de Raadt 的 pledge(2) 说明文章及全树铺开、征集快照 dmesg 反馈的社区动员；波兰站 Leonardo Taccari 的 NetBSD 7.0 访谈（附英译）；Brian Kernighan 谈 C 语言演化的访谈视频；OpenZFS 开发者峰会议程（Jeff Bonwick 讲 ZFS 诞生史、George Wilson 讲压缩 ARC、Nexenta 讲持久 L2ARC、OVH 讲基于 ZFS 的在线迁移等）；听众整理的 EuroBSDCon 2015 视频时间戳索引。　[存疑脚注] 以上条目名与人名经 ASR 失真（如 Theo Duratt、Christos Zalos），引用前须回查 QNX 版权 PDF、openbsd-misc 原帖与峰会日程原件（BSD Now EP112，[350.78-549.92]，L2）
+- 该期提示的一手与近一手材料：Leventhal 本人口述（Sun 内部 DTrace 立项、Fishworks、Delphix）；QNX 官方第三方版权声明 PDF（数百页，丰田 Highlander 车机即 QNX，其中含 OpenCrypto xforms.c 许可文本、NetBSD Foundation 与 NASA Ames 的版权转让、TrustedBSD、OpenSSH、tcpdump 许可等条目）；Chad Dougherty 发往 openbsd-misc 的车机软件信息屏帖；Theo de Raadt 的 pledge(2) 说明文章及全树铺开、征集快照 dmesg 反馈的社区动员；波兰站 Leonardo Taccari 的 NetBSD 7.0 访谈（附英译）；Brian Kernighan 谈 C 语言演化的访谈视频；OpenZFS 开发者峰会议程（Jeff Bonwick 讲 ZFS 诞生史、George Wilson 讲压缩 ARC、Nexenta 讲持久 L2ARC、OVH 讲基于 ZFS 的在线迁移等）；听众整理的 EuroBSDCon 2015 视频时间戳索引。 [存疑脚注] 以上条目名与人名经 ASR 失真（如 Theo Duratt、Christos Zalos），引用前须回查 QNX 版权 PDF、openbsd-misc 原帖与峰会日程原件（BSD Now EP112，[350.78-549.92]，L2）
 
 **史观**：
 
@@ -73,8 +73,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- 题名考据点：音频内报号自称“episode 112 Tracing the Source, recorded October 21st 2015”，而本卡片沿用库内元数据题名“112: Simple and Functional”，两者不一致；就全期内容（DTrace/ZFS 追踪与源码史）而言，音轨自报题名反而更贴合，入册引用前须核对节目官方存档与播客库期数元数据以定孰是。　[存疑脚注] 音轨自报题名与库内元数据冲突，属单一来源推断，须交叉验证官方存档后方可定题（BSD Now EP112，[34.14-61.26]，L4）
-- 转写为双音轨交错、时间戳乱序，但各段语义完整可读；专名 ASR 失真普遍但可辨：“chris moore”应为 Kris Moore（PC-BSD 创始人、Lumina 作者 Ken Moore 之兄，节目中自称撰写 BSD Magazine 的 PC-BSD 10.2 文章），“alan juke”应为 Allan Jude，“Brian Cantrell”应为 Bryan Cantrill，“Matt Arons”应为 Matt Ahrens，“Theo Duratt”应为 Theo de Raadt，“Christos Zalos”应为 Christos Zoulas，“Henning Brouwer”应为 Henning Brauer；唯“Patrick Folstrom”与 BSD Magazine 访谈名单（Drew Levine、Luca Fiera、Alexander Roblacco 之音）无法由上下文确证，引用前须回查原链。　[存疑脚注] 上述人名与名单为转写失真或不可确证项，须逐条回查原始节目页与 BSD Magazine 2015 年 10 月号目录（BSD Now EP112，[485.70-521.80]，L4）
+- 题名考据点：音频内报号自称“episode 112 Tracing the Source, recorded October 21st 2015”，而本卡片沿用库内元数据题名“112: Simple and Functional”，两者不一致；就全期内容（DTrace/ZFS 追踪与源码史）而言，音轨自报题名反而更贴合，入册引用前须核对节目官方存档与播客库期数元数据以定孰是。 [存疑脚注] 音轨自报题名与库内元数据冲突，属单一来源推断，须交叉验证官方存档后方可定题（BSD Now EP112，[34.14-61.26]，L4）
+- 转写为双音轨交错、时间戳乱序，但各段语义完整可读；专名 ASR 失真普遍但可辨：“chris moore”应为 Kris Moore（PC-BSD 创始人、Lumina 作者 Ken Moore 之兄，节目中自称撰写 BSD Magazine 的 PC-BSD 10.2 文章），“alan juke”应为 Allan Jude，“Brian Cantrell”应为 Bryan Cantrill，“Matt Arons”应为 Matt Ahrens，“Theo Duratt”应为 Theo de Raadt，“Christos Zalos”应为 Christos Zoulas，“Henning Brouwer”应为 Henning Brauer；唯“Patrick Folstrom”与 BSD Magazine 访谈名单（Drew Levine、Luca Fiera、Alexander Roblacco 之音）无法由上下文确证，引用前须回查原链。 [存疑脚注] 上述人名与名单为转写失真或不可确证项，须逐条回查原始节目页与 BSD Magazine 2015 年 10 月号目录（BSD Now EP112，[485.70-521.80]，L4）
 
 **文献**：
 
@@ -127,3 +127,95 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔The School of Hard Knocks - Part 1 报告（来源不详）〕讲者 Sevan Janiyan 口述：Brian Cantrell 2009 年做过一场 DTrace 早期史演讲。（YouTube EPrV-J0ITkq4g，[514.95-522.62]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1376 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1376`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mark Johnston 于 FreeBSD Friday 第12期讲座〕讲者口述：dtrace 起源于 20 世纪初期的 solaris；此后被移植到其他若干操作系统，转写作 3d net hd（即 NetBSD、OpenBSD），在 mac os 中也被大量使用。（YouTube EPE06GVdH-LX0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1377 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1377`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mark Johnston 于 FreeBSD Friday 第12期讲座〕讲者口述：讲者称自己找到的关于商品操作系统内核细粒度动态插桩的最早文献是《fine grain dynamic instrumentation of commodity operating system kernels》，该论文据其称出现在 music（即 USENIX）、1999 年发表；该论文作者基于 solaris 与 spark（SPARC）开发出一整套系统，可在内核任意位置（带少量约束）注入机器代码。（YouTube EPE06GVdH-LX0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1378 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1378`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mark Johnston 于 FreeBSD Friday 第12期讲座〕讲者口述：dtrace 逐渐长出不仅追踪内核、也追踪用户进程的能力，由 john burrell 移植到 FreeBSD；讲者不确定确切年份跨度，但称 2006 至 2018 似乎是最活跃区间，而 burrell 于 2009 年去世。（YouTube EPE06GVdH-LX0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1379 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1379`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Mark Johnston 于 FreeBSD Friday 第12期讲座〕讲者口述：但据讲者经验，amd64 移植版最稳定、经验最充分，故若要在 FreeBSD 上做大量 dtrace 实验，建议在 amd64 上进行，除非遇到例外情形。（YouTube EPE06GVdH-LX0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1428 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1428`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008 Kris Kennaway FreeBSD Profiling〕讲者口述：FreeBSD 系统中表征磁盘活动最有用的工具之一是 gstat 命令，它按每一个磁盘 provider 展开统计。（YouTube EPMfb5_uG7BCA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1429 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1429`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008 Kris Kennaway FreeBSD Profiling〕讲者口述：使用 top 的 -n 开关显示的每进程 IO 统计有一个前置条件——ZFS 未与 buffer cache 集成，这些统计来自该路径上的其它位置，因此上下文切换与换页数据仍可显示，但实际 IO 数据（讲者认为最有意思的部分）无法显示。（YouTube EPMfb5_uG7BCA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1835 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1835`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 演讲《Hardware-accelerated program tracing on FreeBSD》〕讲者口述：讲者为克罗地亚萨格勒布的 FreeBSD 源代码提交者，本职为软件工程师，自 2021—2022 年参与 FreeBSD 并获提交权限。（YouTube EPNrBGw8N4qL4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1836 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1836`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 演讲《Hardware-accelerated program tracing on FreeBSD》〕讲者口述：硬件追踪的优势在于硬件实现，故产生追踪时开销低，且无需任何插桩——只需启动设备即开始记录。（YouTube EPNrBGw8N4qL4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1837 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1837`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 演讲《Hardware-accelerated program tracing on FreeBSD》〕讲者口述：DTrace 与 eBPF 一类软件追踪系统极为灵活且广受使用，但存在不足，并非一切用况的完美适配。（YouTube EPNrBGw8N4qL4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1838 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1838`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD 演讲《Hardware-accelerated program tracing on FreeBSD》〕讲者口述：FreeBSD 硬件追踪框架以后端形式支持 ARM 的一个 独立追踪设备、ARM 统计性能扩展（该部分工作由 ARM 的 Zachary 完成），以及由讲者本人实现的 Intel Processor Trace 后端。（YouTube EPNrBGw8N4qL4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1897 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1897`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville Neil 谈 FreeBSD 上的 DTrace 现状〕讲者口述：DTrace 最初由 Sun 开发，2005 年在 Solaris 首次公开发布，此前尚有渐进式开发历程；首次移植至 FreeBSD 由 John Brezoi 于 2008 年完成。（YouTube EPj_TVpq8S2Io，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1898 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1898`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville Neil 谈 FreeBSD 上的 DTrace 现状〕讲者口述：讲者称 FreeBSD 的 audit 子系统用于记录安全相关事件，最初为美国政府 Common Criteria 安全标准而做，自 2004 年起在 FreeBSD 中为可选组件，系 Robert Watson 等人工作。（YouTube EPj_TVpq8S2Io，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1899 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1899`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville Neil 谈 FreeBSD 上的 DTrace 现状〕讲者口述：讲者为 D 语言新增读取链式 mbuf 的能力，称这对全部 BSD 衍生系统都很重要，移植 DTrace 至 NetBSD 与 FreeBSD 者宜采此法，因其不存在于原始 illumos／Solaris 代码中。（YouTube EPj_TVpq8S2Io，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1900 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1900`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔George Neville Neil 谈 FreeBSD 上的 DTrace 现状〕讲者口述：讲者指 DTrace 当前主要使用者 macOS、Illumos 与 FreeBSD 之间彼此共享代码——原初移植之后仍在继续导入，macOS 从 FreeBSD 取回内容、亦从 Illumos 取得，而 FreeBSD 亦回送补丁。（YouTube EPj_TVpq8S2Io，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1981 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1981`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DTrace - Monitoring i strojenie systemu w XXI wieku / Slawek Zak 讲座〕讲者口述：讲者说明这一动态跟踪机制“按用法在 FreeBSD 上并不可用”，但由此可以洞察应用内部如何运作；结合讲者此前点名 FreeBSD／NetBSD／Linux 与 Solaris 的比较语境，这是关于该机制跨 BSD 可用性的直接口述。（YouTube EP5VK6tV4y3r0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1982 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1982`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DTrace - Monitoring i strojenie systemu w XXI wieku / Slawek Zak 讲座〕讲者口述：讲者把该机制定性为可用于生产系统的安全工具，机制本身保证不会让使用它的人弄崩系统；仅有一组危险选项需显式开启后才可能真正损害系统。（YouTube EP5VK6tV4y3r0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1983 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1983`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DTrace - Monitoring i strojenie systemu w XXI wieku / Slawek Zak 讲座〕讲者口述：讲者把“应用与系统之间的交互”列为性能分析关注的首要领域之一，随后逐层展开应用层、内核层与设备层的可观测点。（YouTube EP5VK6tV4y3r0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1984 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1984`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DTrace - Monitoring i strojenie systemu w XXI wieku / Slawek Zak 讲座〕讲者口述：讲者将该跟踪语言定性为脚本语言而非编译语言：对用户几乎不加外部限制，不需要编辑—编译—调试这一循环，由框架在内部转换为一种字节码形式。（YouTube EP5VK6tV4y3r0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

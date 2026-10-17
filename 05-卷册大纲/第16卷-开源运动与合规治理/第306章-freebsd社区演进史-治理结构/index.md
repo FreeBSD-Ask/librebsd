@@ -104,7 +104,7 @@ volume: 第16卷-开源运动与合规治理
 - McKusick 亲述 FreeBSD 基金会起源：早期发行由 Walnut Creek CD-ROM 支撑，后依赖 Yahoo 提供基础设施十余年，Justin Gibbs 因担忧单一公司退出而发起基金会。（BSD Now EP278，[1883.72-1965.34]，L1）
 - McKusick 亲述 UFS 三十年：其保存的 1982 年磁盘镜像在当代仍可读写，UFS 适合资源受限的嵌入式设备，ZFS 适合大资源环境，二者各解决不同问题。（BSD Now EP278，[1093.34-1174.26]，L1）
 - McKusick 判断容器概念发明于 FreeBSD 却在他处获得成功，FreeBSD 常把项目推进到九成而缺最后一成产品化，恰如“先驱挨箭、定居者得地”。（BSD Now EP278，[2596.78-2625.54]，L1）
-- Benedict Reushling 自述其入会路径：EuroBSDCon Sofia（2014）会后被 Erwin Lansing 略带神秘地接洽，受邀加入 FreeBSD Foundation 董事会，动因是董事会欲在德语区（德、奥、瑞士）扩展席位；2015 年 1 月前后经正式电话面试，面试中他自陈“我是文档人，不熟悉内核”，有董事随即打断并表态“源码提交者已经够多，董事会需要多样性”（1664-1688 秒）；同年 BSDCan 前的年度董事会完成履新，受访时（AsiaBSDCon 2016 东京现场）入会约一年，其定位始终是文档与欧洲拓展而非内核开发。　[存疑脚注] 受访人姓氏在转写中作 Russeling/Herschling，按 FreeBSD Foundation 董事名录判定为 Benedict Reushling；电话面试中另一表态董事姓名转写失真（音似 Qsync），仅 Kirk 一名可辨。（BSD Now EP138，[1596.68-1694.12]，L1）
+- Benedict Reushling 自述其入会路径：EuroBSDCon Sofia（2014）会后被 Erwin Lansing 略带神秘地接洽，受邀加入 FreeBSD Foundation 董事会，动因是董事会欲在德语区（德、奥、瑞士）扩展席位；2015 年 1 月前后经正式电话面试，面试中他自陈“我是文档人，不熟悉内核”，有董事随即打断并表态“源码提交者已经够多，董事会需要多样性”（1664-1688 秒）；同年 BSDCan 前的年度董事会完成履新，受访时（AsiaBSDCon 2016 东京现场）入会约一年，其定位始终是文档与欧洲拓展而非内核开发。 [存疑脚注] 受访人姓氏在转写中作 Russeling/Herschling，按 FreeBSD Foundation 董事名录判定为 Benedict Reushling；电话面试中另一表态董事姓名转写失真（音似 Qsync），仅 Kirk 一名可辨。（BSD Now EP138，[1596.68-1694.12]，L1）
 - 基金会职能被受访者概括为“支持位”而非治理位：不向项目推送任何政策、不指定开发何种驱动，而是以资金资助开发者与发布工程师等职员、以法人实体身份签署 NDA 等法律文书、维护 FreeBSD 注册商标——freebsd.foundation 新顶级域名遭抢注者索价 8000 美元，董事会曾在付款、无视与诉诸律师之间权衡——并走访 iXsystems、Netflix 等大赞助商，维系捐赠并对接其技术需求，同时开拓欧洲赞助方与 Linux 系会议之外的布道场合（1791-1990 秒）。（BSD Now EP138，[1782.6-1992.4]，L1）[订正：原 [1789.80-1989.86]，2026-09-30 SenseAudio 重转核对]
 - Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[828.4-910.6]，L1）[订正：原 [843.16-910.40]，2026-10-01 SenseAudio 重转核对]
 - Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[935.3-1084.5]，L1）[订正：原 [942.26-1072.78]，2026-10-01 SenseAudio 重转核对]
@@ -127,7 +127,7 @@ volume: 第16卷-开源运动与合规治理
 - McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
 - 本期新闻与访谈段落提及的一手史料：Colin Percival 论 opinionated workarounds 的博文（只在需要的系统上打补丁并大声报错）；Andrew Tanenbaum 复盘 Minix 三十年经验的视频报道（324-390 秒）；NetBSD 官方安全公告（calendar(1) 以 root 执行外部命令前未剥离特权，波及几乎所有历史版本）；OpenBSD pledge 多语言绑定仓库（node、Python、Rust、Go、Lua、Erlang、Nim 等）；Michael W. Lucas《FreeBSD Mastery: Advanced ZFS》出版信息；PGCon 2016（渥太华）、EuroBSDCon 2016（贝尔格莱德）、pkgsrcCon 2016（克拉科夫）征稿公告；FreeBSD wiki 的 ARM 交叉编译指南；AsiaBSDCon 2016 现场三小时文档与翻译教程，成果为将 LeapSeconds 一文译入日语（2663-2805 秒）。（BSD Now EP138，[3326.48-4582.82]，L2）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[735.3-2775.0]，L1）[订正：原 [745.78-2774.92]，2026-10-01 SenseAudio 重转核对]
-- 该期一手史料包括：演讲者基于其 FreeBSD Journal 三十周年特刊文章所作的会议报告本身；Rodrigo（转写作 Rodrigo Assor，拼写待核）自项目起点维护的逐月提交者与提交量数据文件，覆盖 source（1993 年 6 月起）、ports（1994 年 8 月起）与 doc（1995 年 4 月起）三个分支；`calendar.freebsd` 提交者生日档案及演讲者自建的数百条私人生日档案（终身提交者中仅 18 人生日未知），共同构成其提交者年龄统计的数据基础。　[存疑脚注] 提交数据维护者人名仅依语音转写还原为 Rodrigo Assor，准确拼写与身份待考；生日档案覆盖率一说仅系演讲者自述。（YouTube EPXUj2vCKtegU，[2417.32-2699.04]，L2）
+- 该期一手史料包括：演讲者基于其 FreeBSD Journal 三十周年特刊文章所作的会议报告本身；Rodrigo（转写作 Rodrigo Assor，拼写待核）自项目起点维护的逐月提交者与提交量数据文件，覆盖 source（1993 年 6 月起）、ports（1994 年 8 月起）与 doc（1995 年 4 月起）三个分支；`calendar.freebsd` 提交者生日档案及演讲者自建的数百条私人生日档案（终身提交者中仅 18 人生日未知），共同构成其提交者年龄统计的数据基础。 [存疑脚注] 提交数据维护者人名仅依语音转写还原为 Rodrigo Assor，准确拼写与身份待考；生日档案覆盖率一说仅系演讲者自述。（YouTube EPXUj2vCKtegU，[2417.32-2699.04]，L2）
 
 **史观**：
 
@@ -151,16 +151,16 @@ volume: 第16卷-开源运动与合规治理
 
 **辨析**：
 
-- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。　[存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
-- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
-- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。　[存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
-- McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
-- McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
-- 主持人在评述 Percival 博文时即兴将 OpenSSL Heartbleed 归因于“为个别系统的慢 malloc 自建内存管理层却全局启用”，以此反证“补丁只打在需要的系统上”的局部性原则；但此归因系主持人现场发挥而非博文原文，Heartbleed 的直接根因是心跳报文边界检查缺失，与自定义内存管理器的关系须经代码与事后审计多源核对，不可直接采信。　[存疑脚注] Heartbleed 与 OpenSSL 自定义内存管理层的因果链为主持人单源现场推断，节目未给出出处，属待验证命题。（BSD Now EP138，[3530.1-3596.6]，L4）[订正：原 [3534.72-3578.44]，2026-09-30 SenseAudio 重转核对]
-- 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。　[存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.2-2657.4]，L4）[订正：原 [2437.50-2649.70]，2026-09-30 SenseAudio 重转核对]
-- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[828.4-869.3]，L4）[订正：原 [843.16-869.18]，2026-10-01 SenseAudio 重转核对]
-- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1883.2-1961.6]，L4）[订正：原 [1898.98-1948.24]，2026-10-01 SenseAudio 重转核对]
-- 许可证段落呈现鲜明的 FreeBSD 阵营立场：演讲者称企业因不愿开放内核中的知识产权（NetApp 的 WAFL 文件系统、Juniper 的路由软件）而选用 BSD 许可证，并复述 GPLv2 下企业以软件专利规避 copyleft、进而催生 GPLv3 专利授予条款的历史，以及内核维护者宣布 GPL-only 接口以迫使 Nvidia 等厂商开放代码的争议，明言该接口的法律效力“尚未经受法庭检验”（2376.76-2382.00）；上述企业选型动机均属单一来源推断，需与企业公开声明及许可证合规文献交叉验证。　[存疑脚注] NetApp 与 Juniper 因内核知识产权而选用 FreeBSD 的动机仅为演讲者推断，未见企业官方声明佐证；GPL-only 接口可执行性截至演讲时确无判例支持。（YouTube EPXUj2vCKtegU，[2190.72-2406.64]，L4）
+- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。 [存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
+- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。 [存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
+- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。 [存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
+- McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。 [存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
+- McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。 [存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
+- 主持人在评述 Percival 博文时即兴将 OpenSSL Heartbleed 归因于“为个别系统的慢 malloc 自建内存管理层却全局启用”，以此反证“补丁只打在需要的系统上”的局部性原则；但此归因系主持人现场发挥而非博文原文，Heartbleed 的直接根因是心跳报文边界检查缺失，与自定义内存管理器的关系须经代码与事后审计多源核对，不可直接采信。 [存疑脚注] Heartbleed 与 OpenSSL 自定义内存管理层的因果链为主持人单源现场推断，节目未给出出处，属待验证命题。（BSD Now EP138，[3530.1-3596.6]，L4）[订正：原 [3534.72-3578.44]，2026-09-30 SenseAudio 重转核对]
+- 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。 [存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.2-2657.4]，L4）[订正：原 [2437.50-2649.70]，2026-09-30 SenseAudio 重转核对]
+- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。 [存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[828.4-869.3]，L4）[订正：原 [843.16-869.18]，2026-10-01 SenseAudio 重转核对]
+- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。 [存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1883.2-1961.6]，L4）[订正：原 [1898.98-1948.24]，2026-10-01 SenseAudio 重转核对]
+- 许可证段落呈现鲜明的 FreeBSD 阵营立场：演讲者称企业因不愿开放内核中的知识产权（NetApp 的 WAFL 文件系统、Juniper 的路由软件）而选用 BSD 许可证，并复述 GPLv2 下企业以软件专利规避 copyleft、进而催生 GPLv3 专利授予条款的历史，以及内核维护者宣布 GPL-only 接口以迫使 Nvidia 等厂商开放代码的争议，明言该接口的法律效力“尚未经受法庭检验”（2376.76-2382.00）；上述企业选型动机均属单一来源推断，需与企业公开声明及许可证合规文献交叉验证。 [存疑脚注] NetApp 与 Juniper 因内核知识产权而选用 FreeBSD 的动机仅为演讲者推断，未见企业官方声明佐证；GPL-only 接口可执行性截至演讲时确无判例支持。（YouTube EPXUj2vCKtegU，[2190.72-2406.64]，L4）
 
 **文献**：
 
@@ -240,3 +240,170 @@ volume: 第16卷-开源运动与合规治理
 
 据〔September 2024 Developer Summit〕讲者口述：FreeBSD 拥有原生 OpenZFS 集成，据讲者称是地球上唯一如此且已运行 jails 数十年的操作系统。（YouTube EPva3HFhiDF8c，[2164.48-2172.069]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1437 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1437`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2024 FreeBSD 开发者大会核心组更新〕讲者口述：核心组在 2023 年发信说明一项计划，其中一项方面涉及开发者向自身没有 commit bit 的仓库提交、而在另一仓库持有 bit 的情形；讲者称这类提交过去被特殊对待，而这种特殊性部分是当年把仓库拆成三套独立 CVS 仓库所遗留下来的机械痕迹。（YouTube EP3jzc5e4_sZI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1438 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1438`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2024 FreeBSD 开发者大会核心组更新〕讲者口述：过去当提交者并非该仓库 committer 时，会在提交信息上加注其持有的是另一仓库的 bit；核心组已停止这一做法，以使各仓库提交外观一致、不再刻意标示此类提交。（YouTube EP3jzc5e4_sZI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1439 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1439`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2024 FreeBSD 开发者大会核心组更新〕讲者口述：核心组本任期着手设立 Source Manager 团队，作为 source 树的监督主体，把这部分责任自 core 中移出去，使 core 转而成为统筹各团队职能的机构，而非让 source 政策继续置于 core 内部。（YouTube EP3jzc5e4_sZI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1440 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1440`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2024 FreeBSD 开发者大会核心组更新〕讲者口述：讲者凭记忆估计，若回看约十届 core 选举，参选人数大体呈下降趋势，并自述记得曾有二十余人参选 core。（YouTube EP3jzc5e4_sZI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1473 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1473`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020年12月16日 bhyve 办公时间〕讲者口述：讲者称，大约在 Intel 的 Nehalem 与 AMD 的 Barcelona 出现之前的十到十二年间，硬件尚无对页表虚拟化的支持，而页表正是用于把虚拟地址翻译为主机物理地址的机制。（YouTube EPkxoRwWE_4W0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1474 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1474`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020年12月16日 bhyve 办公时间〕讲者口述：讲者指出 bhyve 此前的 TLB 失效实现不等待执行该虚拟机的宿主机 CPU 退出客户执行便继续，因此在原理上存在一个窗口——宿主机内核以为某个 IPI 或 TLB 失效已经完成，而客户其实可能仍在执行指令。（YouTube EPkxoRwWE_4W0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1475 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1475`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020年12月16日 bhyve 办公时间〕讲者口述：为修复该问题，讲者改用了 FreeBSD 中较新的同步原语 SMR，并说明 SMR 属于安全内存回收（safe memory reclamation）一类算法的一个实例，其一般图景是存在一个有大量读者做查找的共享数据结构。（YouTube EPkxoRwWE_4W0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1476 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1476`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020年12月16日 bhyve 办公时间〕讲者口述：讲者介绍 KVM 单元测试的思路：构造一个尽可能小的操作系统作为客户机运行，并在其中编写测试来验证极低层的虚拟化功能，从而为 bhyve 的低层特性开发与回归提供工具。（YouTube EPkxoRwWE_4W0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1494 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1494`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: FreeBSD Core Panel〕讲者口述：讲者正在为自由BSD 撰写 SPDX 许可更新政策，落实社区长期要求的“分离许可头”（detached licenses）——即文件头只保留版权声明与 SPDX 许可标识符表达式、不含其他内容；他已把若干配套标准一并纳入政策以求最大兼容，目标是让任何人看到某文件时都能判断其许可归属。（YouTube EPJSFQQXCB6tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1495 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1495`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: FreeBSD Core Panel〕讲者口述：讲者解释自由BSD 的 hats 与 teams 机制——“hat”是团队负责人的通俗称呼，其自嘲的定义是“当初没来得及说‘不’就被套上帽子的人”，许多 hat 是被硬安到别人头上的；自由BSD 的团队实质是 affinity groups（同类者自愿聚合），团队在限定内自定章程。（YouTube EPJSFQQXCB6tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1496 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1496`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: FreeBSD Core Panel〕讲者口述：讲者界定核心（core）与团队的关系——core 一般避免干预各团队的内部运作（inner works）；core 从其自身立场唯一在意的是各团队的负责人能达成自己的目标、并与项目其余部分协作，共同达成“做出一个优秀操作系统”这一总目标。（YouTube EPJSFQQXCB6tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1497 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1497`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: FreeBSD Core Panel〕讲者口述：讲者称从上一届核心团队交给本届 core 的主要任务就是 git 迁移（转写音作 "get transition"），该迁移实际花费的时间与精力都超出预期，原以为能在本届任期早段收尾，事实上拖到任期中段左右才完成。（YouTube EPJSFQQXCB6tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1539 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1539`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020-12-03〕讲者口述：回顾 FreeBSD 的版本控制沿革：项目“started out using cvs”于“the um 90s”，之后经由 Perforce（“transitioned using cvs and perforce as a way of making sure that the current tree was always buildable and stable enough to use”）以保证当前树始终可构建；随“a lot of the problems with cvs were becoming apparent”，由“peter wim”在 2008 年“switched us over to subversion”，主要目的“mostly to get atomic commits”。本条为该讲者口述的项目史陈述，非经源码与提交记录核验的结论。（YouTube EPAkYmdDir2Ww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1540 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1540`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020-12-03〕讲者口述：说明 2008 年 FreeBSD 当年“actually pick subversion over get”的具体缘由：“subversion worked and git didn't”——当年把仓库导入尚可，但 FreeBSD 仓库体量之下“it was too big and get fell over”（git 直接跑崩）。即 2008 年迁 git 被视为高风险举动，故先落 Subversion。此系讲者口述的历史归因。（YouTube EPAkYmdDir2Ww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1541 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1541`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020-12-03〕讲者口述：就“git 会不会进 base”这一顾虑给出立场：FreeBSD 项目自身“have a goal of having an entirely permissively licensed base system and don't want to head in the opposite direction”，因此“we're not going to import uh get into the base system”。本条涉及 BSD 许可哲学立场，但仅为讲者口头表态，尚未构成已落地的 base 系统变更结论。（YouTube EPAkYmdDir2Ww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1542 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1542`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours 2020-12-03〕讲者口述：补充 got 进入 FreeBSD 的现实路径：ports 集里已有“a freebsd port”，移植工作由“a freebsd an open bsd developer”完成（一名 FreeBSD／OpenBSD 双方开发者）；got 本身“is a get compatible vcs”，即与 git 兼容的版本控制系统。（YouTube EPAkYmdDir2Ww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1619 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1619`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Peter Grehan 主讲 FreeBSD Office Hours〕讲者口述：bhyve 最初实现时完全没有设备仿真，只提供一个半虚拟化控制台，用意正是绕开 UART 仿真——这听起来相当简单，实际上却是相当大的工作量。（YouTube EPNJMl4RFpkaQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1620 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1620`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Peter Grehan 主讲 FreeBSD Office Hours〕讲者口述：上述早期做法对 bhyve 最初跑起来极为关键，但此后已基本无人使用；配套的半虚拟化 gdb stub 同样实质上废弃，唯一的消费者是 FreeBSD 本身。（YouTube EPNJMl4RFpkaQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1621 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1621`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Peter Grehan 主讲 FreeBSD Office Hours〕讲者口述：在 bhyve 上，Linux 是最早被启动起来的非 FreeBSD 客户机，而且当时用的还是极早期的 CentOS 版本；此后每换一个版本都需要做一些小改动。（YouTube EPNJMl4RFpkaQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1622 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1622`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Peter Grehan 主讲 FreeBSD Office Hours〕讲者口述：一位 FreeBSD 贡献者已把 bhyve 的 EDK-2 构建树合入 EDK-2 上游主树，由此 bhyve 可以获得基本上保持最新状态的 EDK-2。（YouTube EPNJMl4RFpkaQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1673 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1673`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours - June 24 2020〕讲者口述：FreeBSD 的 subversion 源树已完成翻译、发现若干问题正在修复，并已发布 beta 版本，供开发者验证既有 subversion 工作流在新 git 树上是否可用。（YouTube EPaAGI-Cwyrw8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1674 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1674`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours - June 24 2020〕讲者口述：ARM 晋级 tier one 的主要阻力不在技术而在社区预期——项目成员不清楚 tier one 究竟意味着什么、项目到底要求他们做什么，因此讲者正先在项目内传阅一份说明文档以厘清期望、再做成本收益评估。（YouTube EPaAGI-Cwyrw8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1675 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1675`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours - June 24 2020〕讲者口述：ZFS 现已在多个平台并行演进，Windows、mac、Linux、FreeBSD 与 illumos 各有一份版本，直到最近仍各有不同的特性集；FreeBSD 与 Linux 两版将走向特性对齐，这对跨平台脚本探测可用特性帮助很大。（YouTube EPaAGI-Cwyrw8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1853 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1853`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours/Core Town Hall 2020-09-23〕讲者口述：上一届 FreeBSD core 依据开发者与 FreeBSD 终端用户调查所表达的压倒性偏好，决定自 subversion 迁移到“get（转写音作 get，即 git）”作为规范仓库。（YouTube EP2k0Gz3kKbbs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1854 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1854`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours/Core Town Hall 2020-09-23〕讲者口述：subversion 到 git 的切换计划为——先由 Wooly（转写音作 books）解决仓库与源数据问题，本周先做试运行，若顺利两周后正式试运行、再两周后完成切换，即万圣节前后的“flag day”。（YouTube EP2k0Gz3kKbbs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1855 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1855`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Office Hours/Core Town Hall 2020-09-23〕讲者口述：FreeBSD 文档体系仿照源树迁 git 的做法，第一阶段是用 asciidoc 重写现有 DocBook 生成的 HTML 手册，工作仓库为 github.com/freebsd/doc-ng。（YouTube EP2k0Gz3kKbbs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2086 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2086`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Certification, MeetBSD 2008〕讲者口述：BSD 认证组（BSD certification group）于 2005 年在美国新泽西州注册为非营利组织，但并非 501(c)(3)（转写音作 801c3），因而无法开具税务收据，同时仍遵守非营利组织的各项规则；该组的使命是创建并维护用以评估 BSD 系统管理员技能的认证。（YouTube EPrGQmLYplO9U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2087 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2087`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Certification, MeetBSD 2008〕讲者口述：该组设董事会，当时为 3 人，即将进入新一届选举投票期并将扩至 5 人；另有公之于网的章程（bylaws），组织内部另设核心小组（core group），该小组成员拥有表决权。（YouTube EPrGQmLYplO9U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2088 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2088`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Certification, MeetBSD 2008〕讲者口述：该组决定另设为一个专司培训与认证的独立机构，同时仍支持 FreeBSD、NetBSD、OpenBSD、DragonFly 四个 BSD 项目（转写音作 free ultimate dragonfly），其内部委员会中来自四个项目者皆有代表。（YouTube EPrGQmLYplO9U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2089 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2089`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Certification, MeetBSD 2008〕讲者口述：该级认证的面向者门槛为至少两年（转写音作 assisted men）系统管理经验，上不封顶；其设计依据 BSD Associate（BSDA）的职务实务分析（JTA）所得结论——这一层级者不愿被指定该使用哪一个 BSD，也不愿被指定该使用哪一款应用。（YouTube EPrGQmLYplO9U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2648 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2648`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis，AsiaBSDCon 2008〕讲者口述：其公司内部项目托管平台 AeroSource 的技术栈自下而上为操作系统（转写作 “3 BSD”）加 PostgreSQL、Trac、Apache 与 Subversion，讲者明言操作系统垫在最底层。（YouTube EP4lcrinKBMas，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2649 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2649`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis，AsiaBSDCon 2008〕讲者口述：AeroSource 主机就是一台标准 FreeBSD 系统，在官方 ports collection 之外把内部 ports 集合以独立目录挂在侧面，并存放适配公司 LDAP 架构的定制 PAM 模块。（YouTube EP4lcrinKBMas，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2650 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2650`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brooks Davis，AsiaBSDCon 2008〕讲者口述：团队把 Robert Watson 关于 FreeBSD 项目如何运作的演讲列为在企业内推广开源开发方法的参考材料，即把 FreeBSD 项目的组织运作方式当作可援引的范例。（YouTube EP4lcrinKBMas，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

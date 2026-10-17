@@ -111,12 +111,12 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- [存疑脚注] ino64 的 2007 年起始点与十年开发时长系播客转述，需对照 FreeBSD 提交历史核验。　[存疑脚注] 单一来源转述的时间线，缺提交记录印证。（BSD Now EP191，[2889.64-2908.0]，L4）
-- [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。　[存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）
-- PS4 越狱条目需谨慎使用：越狱者经由 WebKit 进程取得内核执行权，与 FreeBSD jail 机制无关，越狱一词仅借自 iPhone 语境；Orbis OS 基于 FreeBSD 9.0，但 Sony 版本号不披露其回移了哪些 FreeBSD 补丁，主持人的“该漏洞可能早已在 FreeBSD 修复”属无法判定的推测；开发者公开 PID 列表与根文件系统转储并声明不为盗版服务，其身份、动机与操作细节均系单一来源。　[存疑脚注] 转写将越狱开发者记作“C-Chert”（疑为 CTurt），Orbis OS 补丁回移状态无公开可核记录，主持人推断未经多源验证（BSD Now EP120，[4538.64-4651.02]，L4）
+- [存疑脚注] ino64 的 2007 年起始点与十年开发时长系播客转述，需对照 FreeBSD 提交历史核验。 [存疑脚注] 单一来源转述的时间线，缺提交记录印证。（BSD Now EP191，[2889.64-2908.0]，L4）
+- [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。 [存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）
+- PS4 越狱条目需谨慎使用：越狱者经由 WebKit 进程取得内核执行权，与 FreeBSD jail 机制无关，越狱一词仅借自 iPhone 语境；Orbis OS 基于 FreeBSD 9.0，但 Sony 版本号不披露其回移了哪些 FreeBSD 补丁，主持人的“该漏洞可能早已在 FreeBSD 修复”属无法判定的推测；开发者公开 PID 列表与根文件系统转储并声明不为盗版服务，其身份、动机与操作细节均系单一来源。 [存疑脚注] 转写将越狱开发者记作“C-Chert”（疑为 CTurt），Orbis OS 补丁回移状态无公开可核记录，主持人推断未经多源验证（BSD Now EP120，[4538.64-4651.02]，L4）
 - Zero Trust 倡议暴露开源承诺与二进制分发之间的结构性落差：发布源码无法证明用户安装的二进制由其构建——Signal 的 App Store 二进制不可验证，TrueCrypt 的重现构建需穷举编译环境且工作量浩大；嘉宾强调该倡议“不想让人们信任 zero trust initiative 本身”（3522.06-3530.33），拒绝自任受信第三方，转而设想以基于 geli 的可移植磁盘加密项目先行示范；同期听众事故（OpenSSL 升级致 openldap 二进制失配、无人可登录）与 FreeBSD 侧 Ed Maste（转写作 Ed Mass）参加可重现构建会议，说明可重现构建在 2015 年仍属前沿工程而非成熟机制。（BSD Now EP120，[2893.17-3045.95]，L2）
-- 听众来信引发的 jail 管理讨论揭示生态碎片化：官方手册仍只记录 10.x 已弃用、计划 11.x 移除的 rc.d 风格，jail.conf 采用难以解析的自创格式，easyjail 与 iocage 等框架各自为政，主持人以乐高积木作比——“我们各自拼出略不相同的飞船”（5291.44-5296.68）。这是理解容器化前夜 FreeBSD 治理困境的典型切口；但 rc.d 方式将于 11.x 移除仅系来信者与主持人的当时预期，属待核断言。　[存疑脚注] jail.conf 格式批评与 easyjail、iocage 评价仅出自本期听众来信与主持人对谈（单一对话来源）；rc.d 方式是否于 11.x 移除为当时预期，后续未如期发生，须以 FreeBSD src 与 release notes 核实。（BSD Now EP88，[5139.64-5306.40]，L2）
-- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Tegjou，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。　[存疑脚注] 转写将贡献者名失真记作 Francois Tegjou，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）[订正：原 贡献者名失真记作 Francois Toujour，2026-09-30 SenseAudio 重转核对]
+- 听众来信引发的 jail 管理讨论揭示生态碎片化：官方手册仍只记录 10.x 已弃用、计划 11.x 移除的 rc.d 风格，jail.conf 采用难以解析的自创格式，easyjail 与 iocage 等框架各自为政，主持人以乐高积木作比——“我们各自拼出略不相同的飞船”（5291.44-5296.68）。这是理解容器化前夜 FreeBSD 治理困境的典型切口；但 rc.d 方式将于 11.x 移除仅系来信者与主持人的当时预期，属待核断言。 [存疑脚注] jail.conf 格式批评与 easyjail、iocage 评价仅出自本期听众来信与主持人对谈（单一对话来源）；rc.d 方式是否于 11.x 移除为当时预期，后续未如期发生，须以 FreeBSD src 与 release notes 核实。（BSD Now EP88，[5139.64-5306.40]，L2）
+- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Tegjou，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。 [存疑脚注] 转写将贡献者名失真记作 Francois Tegjou，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）[订正：原 贡献者名失真记作 Francois Toujour，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -138,3 +138,60 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔会议不详〕讲者口述：讲者提到该可复现构建流程自干净检出起产出 FreeBSD 10.3 全部二进制构件。（YouTube EP53ZxvFiCHmU，[332.34-334.74]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1551 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1551`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible Builds in FreeBSD 演讲〕讲者口述：可复现构建（reproducible builds）在 FreeBSD 项目中自 2003 年前后即被持续考虑，相关 Wiki 页面自 2013 年起追踪 base system 中仍未解决的可复现性问题，至演讲时已接近完成。（YouTube EPMTPNB1lXKBQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1552 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1552`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible Builds in FreeBSD 演讲〕讲者口述：其近期已把 elftoolchain 提交进 FreeBSD base system，用以替换一批 GNU binutils 工具；此后 objcopy、NM、size、strings 等改由 elftoolchain 提供。（YouTube EPMTPNB1lXKBQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1553 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1553`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible Builds in FreeBSD 演讲〕讲者口述：FreeBSD 内核构建设置中的构建迭代号、时间、用户名与主机名会进入产物；NetBSD 已在 newvers-dosh 中增加选项以排除这些内核信息，讲者当时已在 FreeBSD 侧提交做同样处理的补丁。（YouTube EPMTPNB1lXKBQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1554 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1554`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible Builds in FreeBSD 演讲〕讲者口述：GCC 已支持 SOURCE_DATE_EPOCH，clang 尚未；其向 clang 引入 SOURCE_DATE_EPOCH 的补丁当时正等待于 LLVM 的代码评审流程中，该变更使 514 个包转为可复现。（YouTube EPMTPNB1lXKBQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1964 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1964`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔John Baldwin EuroBSDcon 2023〕讲者口述：FreeBSD 的 NVMe over Fabrics 先在用户态立起一层传输抽象（libnvf）：对上层暴露收发 capsule 的 API，对下层以一组函数指针接口要求传输实现方去实现；讲者当时只落地了 TCP 传输，并刻意把该库定位为便于调试而非高性能——原话称它不追求高性能，甚至不做线程安全，以便先保证实现正确可用。（YouTube EP6sSwkUZNqmc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1965 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1965`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔John Baldwin EuroBSDcon 2023〕讲者口述：内核态数据路径把所有挂到 capsule 上的 I/O 缓冲区统一收敛为 FreeBSD 内核早已存在的 mdesc 内存描述符抽象：讲者称自己近年提交过清理 mdesc 的改动，FreeBSD 基线里的 nvme 驱动（转录作 base engine the driver）也已用它简化代码；他另为 mdesc 描述的缓冲区新增了一整套收发例程，使传输层与其实现不感知 uio／bio／ccb 等具体缓冲区类型。（YouTube EP6sSwkUZNqmc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1966 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1966`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔John Baldwin EuroBSDcon 2023〕讲者口述：FreeBSD 内核态 NVMe-oF 客户端刻意不复用现有 nvme 驱动：讲者称网上另有一份 FreeBSD over RDMA 的 nvme 客户端，但它对既有 nvme 驱动做的改动“kind of gross”，而自己设计里的 I/O 路径已存在两个回调（capsule 到达与 I/O 完成），硬塞进既有驱动的复杂度过高，不如直接新写一个 CAM SIM。（YouTube EP6sSwkUZNqmc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2381 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2381`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan ’19 开发者峰会 Swap Space Management 讨论会〕讲者口述：一位发言人陈述其起因是笔记本上跑 git GC（转写作 get GC）时 thrashing、swap 不足，设想给 swap 设备加优先级——先写满高优先级设备再用低优先级设备，并称 Linux 即如此做。（YouTube EPGM-pBVFauFY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2382 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2382`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan ’19 开发者峰会 Swap Space Management 讨论会〕讲者口述：该发言人（转写称名为 Warner）提出 swap 优先级与 trim 支持的实现设想——新增一个系统调用（转写作“end swap or n swap on”，疑为 nswap 之类，类比既有的 mount/umount 做法），传入一个含优先级与 trim 支持的 struct，而非修补既有 swapon 以免与既有应用不兼容。（YouTube EPGM-pBVFauFY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2383 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2383`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan ’19 开发者峰会 Swap Space Management 讨论会〕讲者口述：讨论提到已有 Google Summer of Code 项目要做压缩交换／压缩内存——压缩内存本身也充当 swap；会上另构想把此类设备做成优先级更高的、近似缓存的交换后端。（YouTube EPGM-pBVFauFY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2384 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2384`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan ’19 开发者峰会 Swap Space Management 讨论会〕讲者口述：关于 ZFS ARC 与交换路径的协同，有发言人陈述换页决定基于从干净匿名页回收到的内存量做出，但该路径不知道有多少页是直接由 ARC 读出的，缺少信令机制。（YouTube EPGM-pBVFauFY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

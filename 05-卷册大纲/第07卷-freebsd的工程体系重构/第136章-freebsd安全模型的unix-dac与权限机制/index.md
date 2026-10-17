@@ -53,7 +53,7 @@ volume: 第07卷-freebsd的工程体系重构
 - CloudABI 被设计为一个“虚构操作系统”：Ed 向 SCO 的继任组织 The UXSG 注册了专属 ELF OSABI 编号 17，使同一二进制无需重编译即可在 FreeBSD、NetBSD 及开发中的 Linux 上运行；接口仅保留约 60 个系统调用，CloudLibc 刻意不提供 open() 等依赖全局命名空间的函数，迫使代码在编译期暴露能力不兼容问题；NetBSD 移植启动两周内 650 项单元测试约 95% 通过。（BSD Now EP88，[2810.72-2846.80]，L1）
 - 不可变与只可追加文件标志可上溯至 1980 年代 CSRG 的真实安全困境：当时具有登录权限的协作者凭证外流、木马式代码混入代码库，促使开发组将 setuid-root 二进制标记为不可变、将日志文件标记为只可追加；据 McKusick 回忆，攻入者既无法替换关键程序，也无法抹去记录其操作与来源的日志，多数人就此放弃并不再返回，他还追述了循线索追踪一名荷兰入侵者至其住所、由荷兰合作者上门探访后入侵骤然停止的轶事。（YouTube EPE04LxKiu79I，[786.67-941.12]，L1）[订正：原"木马代码险些混入代码库"→"木马式代码混入代码库"（转写为 sometimes they were like even committing stuff into the repository…because they were more or less Trojan horses，系既成混入而非未遂），内容复核]
 - jails 为一组进程提供带独立根环境与独立 IP 的受限执行世界：本质上是不可逃逸的 chroot，每个 jail 获得自己的虚拟网络栈与成对虚拟接口，从内部视角自认为独占整机；jail 内 root 可管理本 jail 的进程、文件与端口绑定，却无法看见或向 jail 外进程发信号、无法变更内核变量、无法挂卸文件系统、无法关闭物理网卡或重启系统；随着 ZFS 委派与虚拟网络栈的引入，jail 可行事项持续扩充，其资源占用远低于完整虚拟机，单台服务器可承载数以百计乃至千计的实例。（YouTube EPE04LxKiu79I，[1259.79-1550.19]，L1）[订正："其资源占用远低于完整虚拟机，单台服务器可承载数以百计乃至千计的实例"不在所引区间内，该述出自演讲开头 jails 引入段 [431.8-510.1]（转写为 the footprint…the amount of memory they consume…is far far less than a full-on virtual machine…you're not going to run hundreds or thousands of full-on virtual machines on a single box whereas you can do that with jails），内容复核]
-- 随机数体系由 Mark Murray 在 FreeBSD 5.3（2004 年）引入的 /dev/random 奠定：因中断时序、键盘节奏等熵源采集缓慢且总量稀少，系统以真实熵为种子驱动 Yarrow 密码学伪随机数发生器持续输出，并在新熵到达时重置密钥；Yarrow 由熵采集框架、熵累加器、重置密钥机制与生成机制四部分组成，刻意复用经公开文献充分检验的密码学原语而非自行设计；硬件熵源历经 VIA 专用芯片直通输出（早期嵌入式 CPU 跑 Yarrow 需占约两成算力）、Intel RdRand 直通（FreeBSD 9.2 起）到维基解密等事件后改为与其它熵源一并经 Yarrow 混合（FreeBSD 11 引入并回移植至 10.0 及以后）且可被管理员关闭的演进；McKusick 并指出 Fortuna 将以自动化的熵源估计取代 Yarrow 的固定算法，而开机与装机时最需要强随机数却熵源最少的矛盾在其看来仍无良解。　[存疑脚注] Intel RdRand 是否实际被掺假设施并无公开确证，演讲所述属防御性信任决策；Fortuna 替换在演讲时点仍是讨论中的方案而非树内现实。（YouTube EPE04LxKiu79I，[1554.43-2381.76]，L1）[订正：原"维基解密与斯诺登事件"→"维基解密等事件"（转写仅作 all of this stuff coming out with Wikileaks and so on，未提斯诺登），内容复核]
+- 随机数体系由 Mark Murray 在 FreeBSD 5.3（2004 年）引入的 /dev/random 奠定：因中断时序、键盘节奏等熵源采集缓慢且总量稀少，系统以真实熵为种子驱动 Yarrow 密码学伪随机数发生器持续输出，并在新熵到达时重置密钥；Yarrow 由熵采集框架、熵累加器、重置密钥机制与生成机制四部分组成，刻意复用经公开文献充分检验的密码学原语而非自行设计；硬件熵源历经 VIA 专用芯片直通输出（早期嵌入式 CPU 跑 Yarrow 需占约两成算力）、Intel RdRand 直通（FreeBSD 9.2 起）到维基解密等事件后改为与其它熵源一并经 Yarrow 混合（FreeBSD 11 引入并回移植至 10.0 及以后）且可被管理员关闭的演进；McKusick 并指出 Fortuna 将以自动化的熵源估计取代 Yarrow 的固定算法，而开机与装机时最需要强随机数却熵源最少的矛盾在其看来仍无良解。 [存疑脚注] Intel RdRand 是否实际被掺假设施并无公开确证，演讲所述属防御性信任决策；Fortuna 替换在演讲时点仍是讨论中的方案而非树内现实。（YouTube EPE04LxKiu79I，[1554.43-2381.76]，L1）[订正：原"维基解密与斯诺登事件"→"维基解密等事件"（转写仅作 all of this stuff coming out with Wikileaks and so on，未提斯诺登），内容复核]
 - 访问控制列表的标准史在当事人口中是一部标准政治史：POSIX 1003.1e 草案完成约九成时，委员会内反对者刻意拖延六个月令其越过十八个月的制定期限而死亡，各厂商只得自行补齐剩余一成，造成互不兼容的 ACL 实现，Windows 更另立一套；ACL 早在 1990 年代前中期即已存在，却因各系统实现各异而长期无人使用；此后厂商群体补完 POSIX 草案，另一路与 Windows 兼容的语义进入 NFSv4 规范；FreeBSD 在 UFS 上以挂载选项择一启用，两种语义共用同一套 getfacl 与 setfacl 工具，McKusick 建议新部署采用可跨 UFS、ZFS 与 NFS 且与 Windows 互通的 NFSv4 语义。（YouTube EPE04LxKiu79I，[2677.83-2905.76]，L1）
 - 审计以问责与入侵检测为目标，围绕 OpenBSM 建立记录体系，须能回答谁在何时对谁做了什么；McKusick 以美国零售商 Target 数据泄露后数周乃至数月才被发觉、四千万客户信息外流六周的事故说明无人查看的审计日志形同虚设，而 FreeBSD 每夜对全系统 setuid 程序清单做差分、只报告二十四小时内新增或变动条目的做法，被视为让报告短到有人真会去看的实践范例；auditd 守护进程负责筛收与分发审计记录，可应对以填满磁盘来压制审计的攻击手法，记录详尽程度被比作强化版 ktrace，数据亦可外送异地保存；他并透露 FreeBSD 基础设施在约一年半前遭入侵后全面重建，二十年未更新的组件被替换。（YouTube EPE04LxKiu79I，[3413.23-3868.19]，L1）
 - capsicum 被演讲者称为 FreeBSD 最新加入的安全机制，由 Robert Watson 与剑桥大学计算机实验室团队设计，大量实现工作出自此前将 ZFS 移植入 FreeBSD 的开发者 pav（Pawel Jakub Dawidek）；其思路是把不受信任的大型库从特权程序中拆出、置于能力模式的子进程中运行，仅凭主进程授予的文件描述符与能力行事——cap_enter 之后的进程如入不可逆的 chroot，无法打开绝对路径、无法访问全局名字空间、无法外联网络或落盘藏匿数据，描述符权利可细分至读、写、定位、监听等单项；名字服务器与 tcpdump 等组件已被沙箱化或在推进中，将大库整体置入能力模块只需付出边界穿越的小代价，即可对未经审计的第三方代码获得实质信心；答问中 McKusick 强调 capsicum 能力与 root 特权列表虽形似而目标迥异：前者隔离不可信组件，后者把 root 权限更精细地授予可信主体。（YouTube EPE04LxKiu79I，[3871.39-4365.60]，L1）
@@ -78,9 +78,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。　[存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
-- 听众来信引发的 jail 管理讨论揭示生态碎片化：官方手册仍只记录 10.x 已弃用、计划 11.x 移除的 rc.d 风格，jail.conf 采用难以解析的自创格式，easyjail 与 iocage 等框架各自为政，主持人以乐高积木作比——“我们各自拼出略不相同的飞船”（5291.44-5296.68）。这是理解容器化前夜 FreeBSD 治理困境的典型切口；但 rc.d 方式将于 11.x 移除仅系来信者与主持人的当时预期，属待核断言。　[存疑脚注] jail.conf 格式批评与 easyjail、iocage 评价仅出自本期听众来信与主持人对谈（单一对话来源）；rc.d 方式是否于 11.x 移除为当时预期，后续未如期发生，须以 FreeBSD src 与 release notes 核实。（BSD Now EP88，[5139.64-5306.40]，L2）
-- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Tegjou，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。　[存疑脚注] 转写将贡献者名失真记作 Francois Tegjou，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）[订正：原 贡献者名失真记作 Francois Toujour，2026-09-30 SenseAudio 重转核对]
+- [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。 [存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
+- 听众来信引发的 jail 管理讨论揭示生态碎片化：官方手册仍只记录 10.x 已弃用、计划 11.x 移除的 rc.d 风格，jail.conf 采用难以解析的自创格式，easyjail 与 iocage 等框架各自为政，主持人以乐高积木作比——“我们各自拼出略不相同的飞船”（5291.44-5296.68）。这是理解容器化前夜 FreeBSD 治理困境的典型切口；但 rc.d 方式将于 11.x 移除仅系来信者与主持人的当时预期，属待核断言。 [存疑脚注] jail.conf 格式批评与 easyjail、iocage 评价仅出自本期听众来信与主持人对谈（单一对话来源）；rc.d 方式是否于 11.x 移除为当时预期，后续未如期发生，须以 FreeBSD src 与 release notes 核实。（BSD Now EP88，[5139.64-5306.40]，L2）
+- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Tegjou，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。 [存疑脚注] 转写将贡献者名失真记作 Francois Tegjou，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）[订正：原 贡献者名失真记作 Francois Toujour，2026-09-30 SenseAudio 重转核对]
 - 该机制的强制力由系统安全级别保障：多用户模式下唯一能把级别从高调低的只有 init 进程，级别为一时不可变标志真正无法解除，同时禁止写入内核内存与已挂载磁盘的原始设备；但 McKusick 坦承其结构性缺陷在于系统启动时运行于单用户态、启动脚本可预先解除标志，攻击者只需篡改启动脚本并诱发内核恐慌重启即可绕过全部防护，而补救须锁定启动链上的全部脚本、目录、二进制与配置文件，将使系统难以使用——securelevels 因此被后续机制取代，是安全机制因偶然缺口而兴废的典型个案。（YouTube EPE04LxKiu79I，[1002.56-1259.79]，L1）[订正：原 [1142.67-1259.79]→[1002.56-1259.79]，init 调级、级别一不可变与禁写内核内存/已挂载盘原始设备诸句出自 1002.56-1142.67（转写为 the only binary…allowed to change this level from a higher to a lower level is process one…prevented from writing to Dev km or Dev M…open the raw disc），内容复核]
 
 **文献**：
@@ -127,3 +127,65 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔EuroBSDCon 2012〕讲者 Dag-Erling Smørgrav 口述：讲者展示的 login.conf 配置文件（转写音作 login.com）来自 FreeBSD 4.3，并说明这并非该功能引入之时，而是 FreeBSD 开始实际使用之时。（YouTube EPiRQvrrIhq0k，[420.319-430.11]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1383 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1383`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔马歇尔·柯克·迈库西克《An Overview of Security in the FreeBSD Kernel》〕讲者口述：UNIX 以使用者的身份为访问控制基础，据此在文件上给出读、写、执行三组权限位，分别对应文件属主、文件所属组与其余所有人。（YouTube EPE04LxKiu79I，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1384 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1384`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔马歇尔·柯克·迈库西克《An Overview of Security in the FreeBSD Kernel》〕讲者口述：其中仅 root 可设置的 immutable 标志为 set-only 类型——root 一旦设定 immutable 标志，该标志本身即为不可变，无法再被清除。（YouTube EPE04LxKiu79I，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1385 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1385`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔马歇尔·柯克·迈库西克《An Overview of Security in the FreeBSD Kernel》〕讲者口述：FreeBSD 11 中该改动首次并入，随后被回移，故 FreeBSD 10.0 起 Intel 的 RDRAND 与其余全部熵源一并经 yarrow 处理。（YouTube EPE04LxKiu79I，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1386 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1386`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔马歇尔·柯克·迈库西克《An Overview of Security in the FreeBSD Kernel》〕讲者口述：UFS 并非在开机时决定 ACL 语义，而是在挂载时由挂载方指定；NFSv4 使用可继承 ACL，而 POSIX.1e 使用默认 ACL。（YouTube EPE04LxKiu79I，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1424 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1424`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Security features tour by Robert Watson〕讲者口述：UNIX 安全模型出自 UNIX System Laboratories（贝尔实验室），此后约三十年基本未变；UNIX 是多用户系统，同一系统上运行许多彼此不同的用户。（YouTube EPj83_Ufhijso，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1425 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1425`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Security features tour by Robert Watson〕讲者口述：在 UNIX 模型中系统对象整体归某一用户所有（可能是 root 或任何其他用户），保护被划分为强制保护与自主保护两类，二者唯一的区别在于由谁设定策略。（YouTube EPj83_Ufhijso，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1426 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1426`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Security features tour by Robert Watson〕讲者口述：当时流行的访问控制列表有两类——POSIX 1e ACL 与 NTFS ACL／NFSv4 ACL，二者分属两大阵营、彼此并不真正可互译，实际只能二选一。（YouTube EPj83_Ufhijso，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1427 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1427`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Security features tour by Robert Watson〕讲者口述：安全事件审计选择实现 BSM 审计轨迹格式及其 API（这是业界两种既定做法之一，另一种为另一商业实现），因此已有的审计类应用仍然适用——例如 Solaris 自带的 SSH 审计支持在 FreeBSD 上开箱即用。（YouTube EPj83_Ufhijso，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1527 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1527`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 SysAdm 演讲，讲者 Ken Moore〕讲者口述：Kenmore（Ken Moore）自述他是 TrueOS 的资深开发者、核心团队成员，sysADM 原为 TrueOS 所写，后被移植到 FreeBSD，用途是为管理 FreeBSD 系统提供一套静态 API。（YouTube EPemWhDOAVf0Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1528 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1528`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 SysAdm 演讲，讲者 Ken Moore〕讲者口述：sysADM 不设内部数据库：它不缓存管理者的意图、也不必在下次开机时重新应用，而是直接在 FreeBSD 系统上执行系统管理员本应亲自做的动作——因此 FreeBSD 侧的真实配置始终是权威状态，不与另一份副本脱节。（YouTube EPemWhDOAVf0Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1529 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1529`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 SysAdm 演讲，讲者 Ken Moore〕讲者口述：sysADM 沿用 FreeBSD 的权限分层：登录者至少要有 operator 级别的系统访问权限才能与它对话，理由正是它承担的是网络配置、jail 之类的系统管理动作。（YouTube EPemWhDOAVf0Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1530 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1530`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 SysAdm 演讲，讲者 Ken Moore〕讲者口述：operator 只是有限访问；要取得完整访问，必须在 FreeBSD 系统上属于 wheel 组，随后才能管理其他用户、决定谁可登录、并为各系统调整 SSL 证书。（YouTube EPemWhDOAVf0Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

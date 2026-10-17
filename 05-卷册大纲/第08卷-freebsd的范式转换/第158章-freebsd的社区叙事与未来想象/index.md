@@ -68,7 +68,7 @@ volume: 第08卷-freebsd的范式转换
 - Zero Day Initiative 披露 FreeBSD Compat32 子系统 sendmsg 的 TOCTOU 竞态漏洞，可致堆溢出并进一步提权。（BSD Now EP368，[1612.45-2034.16]，L2）
 - Hubbard 回顾 FreeBSD 二十一年的生态变迁：1993 年 11 月 2 日的首版邮件与软盘分发时代（1.2 或 1.44 兆媒体、230KB 分块文件）、1600 美元一 GB 的硬盘；彼时 ISP 是头号用户群，SOHO 服务器与拼装 ISA 网卡的 DIY 防火墙遍地，Yahoo 与 Hotmail 是招牌用户而后者被收购后尽快摆脱 FreeBSD；ports 从最初 70 个增至逾 24000 个，committer 数百人；早期以学界为主、商业参与者被视作怪人，如今怪人接管，商业主导带来长期资金，Gibbs 领导的基金会使职员岗位与自由实验的资助成为可能，而他自嘲自己早年的商业化尝试彻底失败。（BSDTalk EP247，[362.44-629.08]，L1）
 - Hubbard 指出二十年前 Windows 将全胜、主流设备再见 Unix 的预言已被现实推翻：iPhone 等最大规模的 Unix 部署按台数计是手机，OS X 虽是混合技术体却默认装有终端、可作 Unix 开发机；与此同时 FreeBSD 正在隐形化——路由器、负载均衡、安全监控设备、pfSense 与 FreeNAS 等软件 appliance 重新品牌化后身份属于 appliance 而非 FreeBSD，流行游戏主机以其为基座 OS，甚至线缆两端的小型 ARM 处理器也运行完整软件栈，因为与其以 RTOS 模拟用户态不如直接放入 Unix。（BSDTalk EP247，[503.40-822.74]，L1）
-- Hubbard 描述 GPLv3 的柔道效应：业界本以为自己与 GPL 达成了交易，却被 GPLv3 掀翻在地，这一变故促使众多法务与工程部门认真重估 BSD，为 FreeBSD 带来此前未有的商业关注；他特别提及 Linus Torvalds 以充分理由拒绝 GPLv3，并以“抱歉 RMS，你成功了”作反讽式致谢。　[存疑脚注] GPLv3 驱动商业转向 BSD 的判断系 Hubbard 单方观察，未提供量化证据，亦未排除云计算兴起等同期因素（BSDTalk EP247，[641.20-694.72]，L1）
+- Hubbard 描述 GPLv3 的柔道效应：业界本以为自己与 GPL 达成了交易，却被 GPLv3 掀翻在地，这一变故促使众多法务与工程部门认真重估 BSD，为 FreeBSD 带来此前未有的商业关注；他特别提及 Linus Torvalds 以充分理由拒绝 GPLv3，并以“抱歉 RMS，你成功了”作反讽式致谢。 [存疑脚注] GPLv3 驱动商业转向 BSD 的判断系 Hubbard 单方观察，未提供量化证据，亦未排除云计算兴起等同期因素（BSDTalk EP247，[641.20-694.72]，L1）
 - Hubbard 提出乐高化处方：在自动化批量供应主机、配置集中于外部数据库的时代，操作系统的本质已是一组乐高积木，BSD 社区应改变酷的定义、享受制造积木；具体到配置问题，他主张统一配置文件格式并提供单一访问库，承认 YAML、XML、JSON 之争经年无果，务实路径是先就 API 与库达成一致、最终择一接受足够好，届时 LibC 将首次拥有读写配置数据的 API；他以 Apple 全线统一于 XML PLIST DTD 与 preferences API 的实践为可行先例。（BSDTalk EP247，[1033.88-1524.06]，L1）
 - 作为 rc.conf 的原作者，Hubbard 对该机制作了自我批评： knobs 繁多看似进步，实则依赖关系显式且静态、须一次性声明而无法让新安装的部件事后报到注册，一切只能靠人工 service 命令修补，好比反复刷漆的旧物；他主张守护进程管理应采用与 launchd、SystemD 相同的基本轮廓——经由 IPC、定时器或硬件事件按需启动、完全异步、不显式依赖他者、闲置回收，并详述 launchd 起源于合并基于 Mach IPC 的启动器与 inetd 以消除多重注册的三重四重簿记；他强调这种元层管理对功耗至关重要，因为各自轮询的劣质守护进程会成倍耗尽电池，而中央代理可以检测并终止此类行为。（BSDTalk EP247，[1716.10-1947.40]，L1）
 - Hubbard 以登山远征为喻提出社区必须挑选新的大挑战：远征聚焦努力、给所有人可见的目标，二十一年前的山是进入服务器机房成为后端方案首选，如今山有多座而须至少选定少数几座并达成共同去向，否则项目只是为乐趣而黑客的业余活动，无法聚焦下一代工程师；吸引高中生一代进入项目需要性感的目标或一系列性感目标，正如当年被前辈引领的高中生如今已成为项目负责人。（BSDTalk EP247，[1245.38-1397.44]，L1）
@@ -87,7 +87,7 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
+- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。 [存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -156,3 +156,60 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔FreeBSD Panel〕讲者口述：自 2000 年加入 netscaler 起负责 FreeBSD，版本从 2.2.5 移植至 4.4、4.9、6.3、8.4（YouTube EPiLYjZ6Ad9TQ，[270.56-282.35]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1641 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1641`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD at 30 Years: Its Secrets to Success 主题演讲〕讲者口述：FreeBSD 早期完全且彻底依赖 Yahoo：若 Yahoo 决定 FreeBSD 结束，项目就此终结，因为已无处存放这些资料。Justin Gibbs 意识到必须防范 Yahoo 不会永远支持、或转而改用 Linux 之类的情形，于是创立 FreeBSD 基金会。（YouTube EPXUj2vCKtegU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1642 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1642`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD at 30 Years: Its Secrets to Success 主题演讲〕讲者口述：FreeBSD 的发行模式承袭伯克利 BSD 的模式，其基础是“完整发行”这一概念；讲者对比 Linux：Linux 本身只是操作系统，由其他公司往里添加工具与一切，人们常说只有一个真正的 Linux，而各发行版大体也认可 Linux 是什么、只是各自有些小加添，因此从某个 Linux 发行版换到另一个，手上那套组件就不会相同。（YouTube EPXUj2vCKtegU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1643 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1643`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD at 30 Years: Its Secrets to Success 主题演讲〕讲者口述：当 FreeBSD 决定除 PC 之外还想支持其他设备时，大量借用了 NetBSD 的设计。OpenBSD 则以安全著称，FreeBSD 持续跟踪它的改动，因为它总能找出极细微的错误；Open Solaris 则是 ZFS 与 DTrace 的来源，如今 FreeBSD 安装环境里使用 ZFS 已远多于 UFS。（YouTube EPXUj2vCKtegU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1644 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1644`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD at 30 Years: Its Secrets to Success 主题演讲〕讲者口述：伯克利许可证是 FreeBSD 成功的关键之一：在 GPL 之下，拥有知识产权的公司理论上须把其公开，这使 FreeBSD 对知识产权落在内核里的公司格外有吸引力——放进 Linux 理论上就得无偿交出。讲者举 Network Appliance 为例：其 WAFL 文件系统属于操作系统的一部分、是其主要收入来源，因此不愿分享，这正是它使用 FreeBSD 的原因；Juniper 亦然，许多公司的核心资产都落在操作系统本身。（YouTube EPXUj2vCKtegU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1666 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1666`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：‘自行车棚效应’（bikeshedding）这一概念进入技术圈，出处是她数周前才得知的一段 FreeBSD 邮件列表讨论串，时间为 1999 年。（YouTube EPHzpaAUELXv4，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1667 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1667`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：FreeBSD 是自由开源的 Unix 操作系统，其社区有一种工程哲学——从一开始就把工程做对（engineering it to be right from the start），而不是任其自然生长（grow organically）；1999 年社区内部曾就 sleep 命令的行为发生过一场大争论。（YouTube EPHzpaAUELXv4，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1668 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1668`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：该讨论串中 Paul Hanning Camp 发了一封邮件，全文可于 bike-shed.com 读到；讲者说那只是一项让 sleep 在非整数参数下行为正确（make sleep do the right thing, if given a non-integer argument）的提案，却由此引燃了一场大火。（YouTube EPHzpaAUELXv4，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2491 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2491`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2024 Kim McMahon 讲 FreeBSD 倡导〕讲者口述：FreeBSD 基金会是一家美国境内的非营利组织，宗旨为公益与支持 FreeBSD 项目及社区，服务对象是项目与社区而非会员，支持方式包括资助开发项目。（YouTube EPMsPaSC0x4jY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2492 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2492`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2024 Kim McMahon 讲 FreeBSD 倡导〕讲者口述：基金会充当 FreeBSD 项目的法律实体，负责合同、许可及其他法律事务。（YouTube EPMsPaSC0x4jY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2493 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2493`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2024 Kim McMahon 讲 FreeBSD 倡导〕讲者口述：基金会新近获得一笔来自 Sovereign Tech Fund 的对 FreeBSD 的投资，另有一项称为 Alpha Omega 的资助；讲者在同场稍后称该项目为 Linux 基金会旗下、资助改进安全的开源项目者。（YouTube EPMsPaSC0x4jY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2494 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2494`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2024 演讲中播放的用户访谈视频（受访者 Daniel）〕讲者口述：其原为多年 Windows 用户，因看到一段 70 年代 Brian Kernighan 把脚搁在桌上演示命令行的视频而被吸引进入命令行世界，随后厌倦微软生态而转向 FreeBSD 等替代操作系统。（YouTube EPMsPaSC0x4jY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

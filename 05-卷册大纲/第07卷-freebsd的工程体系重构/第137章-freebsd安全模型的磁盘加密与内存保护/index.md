@@ -71,9 +71,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- PS4 越狱条目需谨慎使用：越狱者经由 WebKit 进程取得内核执行权，与 FreeBSD jail 机制无关，越狱一词仅借自 iPhone 语境；Orbis OS 基于 FreeBSD 9.0，但 Sony 版本号不披露其回移了哪些 FreeBSD 补丁，主持人的“该漏洞可能早已在 FreeBSD 修复”属无法判定的推测；开发者公开 PID 列表与根文件系统转储并声明不为盗版服务，其身份、动机与操作细节均系单一来源。　[存疑脚注] 转写将越狱开发者记作“C-Chert”（疑为 CTurt），Orbis OS 补丁回移状态无公开可核记录，主持人推断未经多源验证（BSD Now EP120，[4538.64-4651.02]，L4）
+- PS4 越狱条目需谨慎使用：越狱者经由 WebKit 进程取得内核执行权，与 FreeBSD jail 机制无关，越狱一词仅借自 iPhone 语境；Orbis OS 基于 FreeBSD 9.0，但 Sony 版本号不披露其回移了哪些 FreeBSD 补丁，主持人的“该漏洞可能早已在 FreeBSD 修复”属无法判定的推测；开发者公开 PID 列表与根文件系统转储并声明不为盗版服务，其身份、动机与操作细节均系单一来源。 [存疑脚注] 转写将越狱开发者记作“C-Chert”（疑为 CTurt），Orbis OS 补丁回移状态无公开可核记录，主持人推断未经多源验证（BSD Now EP120，[4538.64-4651.02]，L4）
 - Zero Trust 倡议暴露开源承诺与二进制分发之间的结构性落差：发布源码无法证明用户安装的二进制由其构建——Signal 的 App Store 二进制不可验证，TrueCrypt 的重现构建需穷举编译环境且工作量浩大；嘉宾强调该倡议“不想让人们信任 zero trust initiative 本身”（3522.06-3530.33），拒绝自任受信第三方，转而设想以基于 geli 的可移植磁盘加密项目先行示范；同期听众事故（OpenSSL 升级致 openldap 二进制失配、无人可登录）与 FreeBSD 侧 Ed Maste（转写作 Ed Mass）参加可重现构建会议，说明可重现构建在 2015 年仍属前沿工程而非成熟机制。（BSD Now EP120，[2893.17-3045.95]，L2）
-- Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
+- Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。 [存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
 
 **文献**：
 
@@ -138,3 +138,45 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔来源不详〕讲者口述：约两年前在保加利亚举行的 EuroBSDCon 期间，Colin 与 Chris Moore 曾合作完成相关工作。（YouTube EPp_rsW88FA54，[2380.16-2392.19]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1967 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1967`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude EuroBSDcon 2023〕讲者口述：FreeBSD 的 GPT 引导入口是保护性 MBR 里那 512 字节的小汇编程序，由 John Baldwin 编写（转录作 tiara，即 FreeBSD 源码中的 tgboot.c）：它解析 GPT 分区表、找出类型为 freebsd-boot 的分区，读取并执行其中的引导码，读取长度上限是 545 字节——讲者称这是个“非常随机”的数字，猜测只是能塞进那段极紧空间的可用最小值。（YouTube EPzgLwll0abJs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1968 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1968`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude EuroBSDcon 2023〕讲者口述：geli 加密引导之所以无法一次做通，根子在这段实模式装配代码上：它运行在 16 位实模式，只把引导码的前 64KB 拷到目标内存位置；讲者称引入加密后引导码涨到约 92KB，只拷到前 64KB 就发生 triple fault 而直接重启。他同时追溯了约束的历史尺度：UFS 那套引导码本只有 15–16KB，ZFS 那份也仅约 42KB，都远低于 64KB 上限。（YouTube EPzgLwll0abJs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1969 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1969`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude EuroBSDcon 2023〕讲者口述：64KB 实模式拷贝上限最终以一段 21 行新装配代码解决：把单次拷贝改为 32KB 分块。讲者讲述这段求助过程——先在开发者峰会现场请人改，连续几晚收到改稿仍不通（他一度以为“永远解决不了这个问题”），两三天后收到按 32KB 分块的补丁当晚即通，10 月 8 日拿到最终版，改成分块后成功引导。（YouTube EPzgLwll0abJs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1970 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1970`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude EuroBSDcon 2023〕讲者口述：FreeBSD 的 geli 引导之所以能做成，靠的是 geli 的内核读盘回调设计：geli 不直接读盘，而是接收一个读盘用的函数指针（转录作 probe／command 回调）；于是只需把传入的回调换成一个会先把数据块解密再上递的版本，引导码与引导加载器就能透明读取 geli 加密分区。讲者说这一点让他“很惊喜”，因为它避免了在两套引导码里各自重写 geli。（YouTube EPzgLwll0abJs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2078 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2078`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philip Paeps 于 AsiaBSDCon 2009 演讲〕讲者口述：FreeBSD 所用的 open crypto 框架最初是为 OpenBSD 开发的，开发者是讲者称不确定其名字发音的人（转写音作 anos）；他既提供了用户态一致接口，也在内核中提供了软件与硬件加密一致、且相当可扩展、模块化的接口。（YouTube EPuwtxaCdqwb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2079 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2079`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philip Paeps 于 AsiaBSDCon 2009 演讲〕讲者口述：此人 2002 年发现该 crypto 层并尝试移植到 FreeBSD，发现 OpenBSD 内核与 FreeBSD 内核在多处理器及其他性能方面有所不同。（YouTube EPuwtxaCdqwb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2080 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2080`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philip Paeps 于 AsiaBSDCon 2009 演讲〕讲者口述：原 OpenBSD 代码如今所剩无几，其中大部分已被重写；目前仍保留与 OpenBSD 接口的“伪兼容”，讲者希望将其移除，因为它正阻碍进展。（YouTube EPuwtxaCdqwb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2081 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2081`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philip Paeps 于 AsiaBSDCon 2009 演讲〕讲者口述：FreeBSD 内核有多处子系统使用加密，最主要且对性能极为敏感的是 IPSec，此外还有 GBDE 与 jelly 等块设备，近期又加上 ZFS；直到不久前它们各自重复实现自己的加密，造成大量代码重复等问题。（YouTube EPuwtxaCdqwb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

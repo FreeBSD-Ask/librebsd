@@ -79,3 +79,35 @@ volume: 第05卷-freebsd的工程化奠基
 文献 (37R5uB, 年份不详) 记录 2010：2010 年 6 月相关技术文献发布。
 文献 (Beckhoff-CASE-STUDY-5, 年份不详) 记录 1980：Beckhoff 公司成立于 1980 年，致力于开放式自动化系统的开发。
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-5-114 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-114`；login 逐条遍历判定采纳）
+
+2000年春，Bob Gray 在科罗拉多大学本科操作系统课程中弃用基于 binary-only Windows NT 的 userland 作业，改用源码可得的 production UNIX（FreeBSD）让学生直接修改内核（如实现 undelete），95名三年级学生参与，作者主张真实内核实践优于模拟器教学。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-5-114 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-114`；login 逐条遍历判定采纳）
+
+2000年春，Bob Gray 在科罗拉多大学本科操作系统课程中弃用基于 binary-only Windows NT 的 userland 作业，改用源码可得的 production UNIX（FreeBSD）让学生直接修改内核（如实现 undelete），95名三年级学生参与，作者主张真实内核实践优于模拟器教学。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: login-zazhi.articles.CL-2-058 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-058`；login 逐条遍历判定采纳）
+
+2021 年 Roscoe 在 OSDI/ATC 主题演讲中指出：操作系统研究已被 Linux 主导，OSDI 两年间仅三篇 OS 设计论文且全部基于 Linux 改进，OSDI'21 中 OS 设计仅占 6%；;login: 编辑 Farrow 认同并补充 OS 还应向用户提供熟悉 API 的观点。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2157 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2157`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie，EuroBSDcon 2022 演讲“Architectures vs the ports tree: a losing battle ?”〕讲者口述：OpenBSD 很早就采用了二进制软件包，主要原因是其领导者决定只发布二进制包——理由是开发者人数太少，无法支撑每台机器各自重新编译。（YouTube EPKw2_RWku-co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2158 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2158`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie，EuroBSDcon 2022 演讲“Architectures vs the ports tree: a losing battle ?”〕讲者口述：OpenBSD 为多数架构设有专用构建农场，但这些农场因其领导者的谨慎行事作风全部部署在自家地下室，对某些不够稳定的架构是个隐患。（YouTube EPKw2_RWku-co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2159 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2159`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie，EuroBSDcon 2022 演讲“Architectures vs the ports tree: a losing battle ?”〕讲者口述：32 位架构在主流通用系统上已不再有意义；团队早该在大型语言与放不下小机器的组件进入之前高声反对，但那是五到十年前的事，如今已无可挽回。（YouTube EPKw2_RWku-co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

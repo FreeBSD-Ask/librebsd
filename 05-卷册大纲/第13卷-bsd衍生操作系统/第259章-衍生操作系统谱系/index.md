@@ -64,8 +64,8 @@ volume: 第13卷-bsd衍生操作系统
 
 **辨析**：
 
-- [存疑脚注] 转写中 Cavium/ThunderX 与 Gigabyte 机型、NetBSD 版本号等专名存在 ASR 噪音，且 Tier 1/2 口径为节目转述，未与 FreeBSD 官方平台状态页核对。　[存疑脚注] 硬件专名与 Tier 口径未经官方状态页核对（BSD Now EP290，[240.06-260.5]，L4）
-- Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
+- [存疑脚注] 转写中 Cavium/ThunderX 与 Gigabyte 机型、NetBSD 版本号等专名存在 ASR 噪音，且 Tier 1/2 口径为节目转述，未与 FreeBSD 官方平台状态页核对。 [存疑脚注] 硬件专名与 Tier 口径未经官方状态页核对（BSD Now EP290，[240.06-260.5]，L4）
+- Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。 [存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
 
 **文献**：
 
@@ -73,3 +73,45 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. <https://www.bsdnow.tv/52>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2377 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2377`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 会议报告（题名署讲者 Ghislain）讲者口述：其为一个基于 FreeBSD 的发行版（题名作 SmartixOS）改造 bootloader 显示——FreeBSD 虽有源码可以改动，但改 bootloader 涉及机械性工作、须设置特定字符串才能得到特定结果。（YouTube EPdONM39Dj_2A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2378 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2378`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 会议报告（题名署讲者 Ghislain）讲者口述：其讲解 FreeBSD 启动程序——BIOS 之后找到含分区表的 MBR，控制权经 boot manager（转写作 bootier）、boot one，再交给 boot 2，而 boot2 是一个 btx client。（YouTube EPdONM39Dj_2A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2379 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2379`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 会议报告（题名署讲者 Ghislain）讲者口述：其介绍 FreeBSD 以两种语言实现 bootloader，旧一代（legacy）以 Forth 写就。（YouTube EPdONM39Dj_2A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2380 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2380`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 会议报告（题名署讲者 Ghislain）讲者口述：FreeBSD 新一代 bootloader 的实现语言是 Lua——它可编译，故既可算脚本语言也可算编程语言；控制显示的脚本多以 Lua 写成。（YouTube EPdONM39Dj_2A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2663 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2663`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Martin Matuska 讲 mfsBSD〕讲者口述：mfsBSD 是一套 BSD 许可证授权的脚本集（讲者原话 “a BSD license set of scripts”），用它生成一个可运行的 FreeBSD 发行版，体积很小——在使用新近引入的 xz 压缩（转写音作 “X exet”）时，实作体积不足 30 MB。（YouTube EPebhxZt7BbbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2664 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2664`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Martin Matuska 讲 mfsBSD〕讲者口述：mfsBSD 的构想源自 depenguinator 项目、出自 Colin Percival（转写音作 Colin pival），该项目（讲者转写音作 “deing G”）的目标正是让 FreeBSD 能装到那些只提供 Linux 服务器的独立服务器上。（YouTube EPebhxZt7BbbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2665 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2665`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Martin Matuska 讲 mfsBSD〕讲者口述：mfsBSD 于 2008 年启动（第一个 changelog 条目即 2008 年）；2009 年讲者放弃 FreeBSD 6 支持（转写音作 “prsd 6”）并加入 zfs-install 脚本，起因是 depenguinator 未能满足他要的全部功能。（YouTube EPebhxZt7BbbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2666 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2666`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Martin Matuska 讲 mfsBSD〕讲者口述：德国一家大批量销售独立服务器的提供商（转写音作 “hner”，即 Hetzner）的管理员已把 mfsBSD 纳入其系统；讲者在该提供商的救援系统列表里认出了是自己的方案。（YouTube EPebhxZt7BbbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -52,3 +52,32 @@ volume: 第09卷-netbsd的历史
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
 > 1993-2026 年间：1,999,408 次提交。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1075 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1075`；w172 YouTube 章节路由采纳）
+
+据〔Hardening pkgsrc 演讲〕讲者口述：该机制（SSP，转写音作 Stax machine protection）在 NetBSD 上支持几乎每种架构；讲者还在 pkgsrc（转写音作 package shows）中为其添加了 Linux x86 与 FreeBSD 支持。（YouTube EPw9h0sqiq0sk，[999-1006.01]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2393 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2393`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor Campbell pkgsrc 交叉编译讲座〕讲者口述：pkgsrc 内部有大量机制来设置工具链包装器——它为交叉工具链（cc、ld 等，以及读 ELF 目标文件类工具）创建符号链接农场并放进 PATH，还会预置 GCC 平台三元组之类的别名（autoconf 会去找的那种），使 pkgsrc 在上游包源码树里运行 make 时，所见到的 cc 即交叉编译器。（YouTube EPAdhweLSoxug，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2394 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2394`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor Campbell pkgsrc 交叉编译讲座〕讲者口述：pkgsrc 可以以非特权身份在用户家目录里构建，但产出的包能够之后安装到系统级的 user package 路径（转写音，按讲者上下文指 /usr/pkg）。（YouTube EPAdhweLSoxug，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2395 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2395`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor Campbell pkgsrc 交叉编译讲座〕讲者口述：pkgsrc 的跨操作系统（cross OS）交叉构建目前只支持从其他系统构建到 NetBSD，且有限制；其诀窍是在 mk.com（转写音，疑即 mk.conf）里同时设置交叉机器架构与交叉操作系统两类变量，但有一个令人烦恼的细节待修。（YouTube EPAdhweLSoxug，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2396 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2396`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Taylor Campbell pkgsrc 交叉编译讲座〕讲者口述：pkgsrc 提供名为 nativecc 的变量，指向构建那些只需在宿主机上运行的程序所需的 C 编译器。（YouTube EPAdhweLSoxug，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

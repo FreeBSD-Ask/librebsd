@@ -42,8 +42,8 @@ volume: 第10卷-openbsd的历史
 - Matthew Dillon 修复 DragonFly 内核 MMC/SD 读写的 AB_RID 未清零导致的短读写，并将首次超时后的等待从 10 秒降为 1 秒，减少死端口引导延迟。（BSD Now EP166，[2108.32-2152.92]，L2）
 - FreeBSD 大版本约每两到三年一次、次版本约每年一次并并行维护两个支持分支，发版节奏的最大瓶颈不在技术而在安全团队负担：维护中的旧版本越多，补丁构建与支援矩阵越大，历史上甚至出现 9.1 因长支持周期而晚于 9.2 终止支持的倒挂乱象。以 11 起启用的新支持模型依托 ABI 兼容承诺，令 11.1 发布数周后即终止 11.0 支持，以此压缩旧版本数量、换取更快的安全更新与更密的发版；9.3 之后不再有 9.4，改以分支末期汇总发布延长迁移窗口。讲述者还援引 9.1 时期 NFS 内存泄漏的亲历痛感：修复早已入库却不存在含修复的可下载版本，自行编译即意味着脱离 freebsd-update 支援体系。“我们目前不做更多 FreeBSD 发布的最大原因，基本就是安全团队不得不一直支援的版本更多了”（5312.08-5319.42）。（BSD Now EP86，[4447.40-4701.78]，L1）
 - OpenBSD 严守每年五月与十一月各一次的发布节律，不区分大小版本，安全与重大缺陷修复回移至最近版本后即止，仅支援上一版，形成约三个月开发加三个月冻结的双窗口节奏。其收益是新代码最迟约两个月内即可抵达用户、安全团队得以保持精简，代价是对需要长期支持的企业不友好，且冻结期对 SMP 等大型改造构成节律性拖累；评论者认为 CVS 缺乏开发者侧分支的合并能力放大了这一结构性紧张，开发者遂以补丁集流转工作，形成与其余分支不同的协作形态。（BSD Now EP86，[4736.32-4886.76]，L2）
-- M:Tier 的核心业务是为一家业务遍及一百五十余国、IT 部门规模超越其所在国任何本土集成商的蓝筹客户，在从边缘防火墙与路由器、FTP、Kerberos、LDAP、DNS、NTP、VPN 等服务到普通员工工作站的全栈上部署自管理 OpenBSD，公司内部约九成系统为 OpenBSD；选型动机受保密协议所限只能概括为法律与安全两条。为应对当地普遍缺乏 Unix 与 BSD 经验、多来自 Windows 背景的用户，方案以 PXE 安装服务器加一键引导实现全基础设施的自动分区、装包与配置，并围绕 GNOME 桌面补齐 Windows 用户预期（U 盘自动挂载、无线漫游图形工具），GNOME 3 所需 KMS 支持由公司出资赞助。　[存疑脚注] 嘉宾姓名转写作 Anton Jakuto（通行拼法为 Antoine Jacoutot），公司名转写存在 m-tier、m-chair、mtr 等变体，均按上下文校准为 M:Tier。（BSD Now EP86，[1200.02-1495.06]，L1）
-- 针对 OpenBSD stable 分支不提供二进制安全更新、需自行重制版本或手工打补丁的现状，BinPatchNG 以一组 makefile 将 base 系统安全修复构建为可用包管理器安装的补丁包并支持回滚，OpenUp 则负责扫描仓库、自动安装缺失补丁并更新全部软件包；该工具链由 Gerardo Santana 首创，后经前 OpenBSD 开发者接手更名并搁置，M:Tier 维护至今。其外围效应是社区对 stable 的关注度上升，开发者开始更多向 stable 回移包级修复——“如今我们可以看到大量提交进入 stable，这在以前是不存在的”（2231.90-2236.62）。　[存疑脚注] BinPatchNG 的接手者姓名转写作 Felix Rolager，拼写待核。（BSD Now EP86，[1953.22-2244.60]，L1）
+- M:Tier 的核心业务是为一家业务遍及一百五十余国、IT 部门规模超越其所在国任何本土集成商的蓝筹客户，在从边缘防火墙与路由器、FTP、Kerberos、LDAP、DNS、NTP、VPN 等服务到普通员工工作站的全栈上部署自管理 OpenBSD，公司内部约九成系统为 OpenBSD；选型动机受保密协议所限只能概括为法律与安全两条。为应对当地普遍缺乏 Unix 与 BSD 经验、多来自 Windows 背景的用户，方案以 PXE 安装服务器加一键引导实现全基础设施的自动分区、装包与配置，并围绕 GNOME 桌面补齐 Windows 用户预期（U 盘自动挂载、无线漫游图形工具），GNOME 3 所需 KMS 支持由公司出资赞助。 [存疑脚注] 嘉宾姓名转写作 Anton Jakuto（通行拼法为 Antoine Jacoutot），公司名转写存在 m-tier、m-chair、mtr 等变体，均按上下文校准为 M:Tier。（BSD Now EP86，[1200.02-1495.06]，L1）
+- 针对 OpenBSD stable 分支不提供二进制安全更新、需自行重制版本或手工打补丁的现状，BinPatchNG 以一组 makefile 将 base 系统安全修复构建为可用包管理器安装的补丁包并支持回滚，OpenUp 则负责扫描仓库、自动安装缺失补丁并更新全部软件包；该工具链由 Gerardo Santana 首创，后经前 OpenBSD 开发者接手更名并搁置，M:Tier 维护至今。其外围效应是社区对 stable 的关注度上升，开发者开始更多向 stable 回移包级修复——“如今我们可以看到大量提交进入 stable，这在以前是不存在的”（2231.90-2236.62）。 [存疑脚注] BinPatchNG 的接手者姓名转写作 Felix Rolager，拼写待核。（BSD Now EP86，[1953.22-2244.60]，L1）
 - HAMMER 是 Matthew Dillon 为 DragonFly BSD 设计的 64 位文件系统，以事务组实现逐文件历史、快照、镜像流与删除后恢复。（BSD Now EP53，[3556.02-3609.18]，L2）
 - HAMMER 的镜像流模式类似持续运行的 ZFS send，可不断向备份目标复制数据；其快照被视为可访问的实时数据而非只读副本。（BSD Now EP53，[3978.66-4095.18]，L2）
 - Reyk Floeter 在卢布尔雅那 OpenBSD hackathon 当天以 relayd 源码为基础拆出基本可用的 httpd，随后在 Bob Beck 与 Theo de Raadt 推动下提交进树，十四天后达到可接受状态。（BSD Now EP53，[945.18-1035.58]，L1）
@@ -80,7 +80,7 @@ volume: 第10卷-openbsd的历史
 - NCC Group 开源的 TriforceAFL 与 flashrd 工具链（GitHub 仓库），用于 OpenBSD 系统调用模糊测试。（BSD Now EP166，[122.62-224.46]，L2）
 - Mark Schilder 关于在 FreeBSD 上加速 MySQL 导入的博客文章，列出 InnoDB 与 ZFS 调优清单。（BSD Now EP166，[566.72-1010.56]，L2）
 - Keith Burnett 的 OpenBSD 6.0 笔记本安装教程（ThinkPad X60 上配置 XFCE、doas 与 USB 挂载）。（BSD Now EP166，[1802.96-1947.44]，L2）
-- 本期直接援引的一手材料包括：Netflix OpenConnect 团队在 Asia BSDCon 发表的内核态 sendfile 加密路线论文，说明 40Gb 级全 TLS 加密流量的工程实现（约 245.92-281.70）；OpenBSD 邮件列表帖与 David Gwynne 的提交，为 ping 时间戳载荷加入默认以 ChaCha 流填充的报文认证码，用于侦测链路篡改与故障设备（约 400.00-451.00）；Matthew Dillon 关于 DragonFly 开发者私有 Git 仓库工作流的书面陈述，由主持人逐字宣读（4993.02-5033.58）；DragonFly wiki 上由 Matt Dillon 维护的 Broadwell 硬件支持状态页（约 499.14-529.04）；哈佛团队基于 Capsicum 的最小特权脚本语言论文与 USENIX 演示视频（约 3415.52-3435.40）；以及 tubsta.com 发布的将 DigitalOcean FreeBSD 实例改写为 OpenBSD 的操作指南，讲述者将其与 Colin Percival 早年的 depenguinator 相类比（约 3020.82-3100.96）。　[存疑脚注] 转写将上述脚本语言记作 chill（通行拼法为 shill）、提交者记作 david gwen（通行拼法为 David Gwynne），专名以通行拼写为准。（BSD Now EP86，[4993.02-5033.58]，L2）　[订正：原 ping/ChaCha 引用段（约 378.32-381.08、4907.02-4939.88），2026-09-30 SenseAudio 重转核对——新转写中该提交位于（400.00-451.00），原 4907.02-4939.88 处为 NetBSD 发布讨论，非 ping 载荷]
+- 本期直接援引的一手材料包括：Netflix OpenConnect 团队在 Asia BSDCon 发表的内核态 sendfile 加密路线论文，说明 40Gb 级全 TLS 加密流量的工程实现（约 245.92-281.70）；OpenBSD 邮件列表帖与 David Gwynne 的提交，为 ping 时间戳载荷加入默认以 ChaCha 流填充的报文认证码，用于侦测链路篡改与故障设备（约 400.00-451.00）；Matthew Dillon 关于 DragonFly 开发者私有 Git 仓库工作流的书面陈述，由主持人逐字宣读（4993.02-5033.58）；DragonFly wiki 上由 Matt Dillon 维护的 Broadwell 硬件支持状态页（约 499.14-529.04）；哈佛团队基于 Capsicum 的最小特权脚本语言论文与 USENIX 演示视频（约 3415.52-3435.40）；以及 tubsta.com 发布的将 DigitalOcean FreeBSD 实例改写为 OpenBSD 的操作指南，讲述者将其与 Colin Percival 早年的 depenguinator 相类比（约 3020.82-3100.96）。 [存疑脚注] 转写将上述脚本语言记作 chill（通行拼法为 shill）、提交者记作 david gwen（通行拼法为 David Gwynne），专名以通行拼写为准。（BSD Now EP86，[4993.02-5033.58]，L2） [订正：原 ping/ChaCha 引用段（约 378.32-381.08、4907.02-4939.88），2026-09-30 SenseAudio 重转核对——新转写中该提交位于（400.00-451.00），原 4907.02-4939.88 处为 NetBSD 发布讨论，非 ping 载荷]
 - Reyk Floeter 访谈（OpenBSD httpd 作者当事人自述）。（BSD Now EP53，[540.14-1854.84]，L1）
 - Sean Webb（Laddera）访谈（ASLR/PIE 实现者当事人自述）。（BSD Now EP52，[933.90-2162.30]，L1）
 - 当期教程演示了OpenBSD 5.5的autoinstall配置过程，包括DHCP、TFTP、pxeboot、bsd.rd、nginx与install.conf的完整步骤。（BSD Now EP32，[1978.08-2602.24]，L2）
@@ -120,15 +120,15 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。　[存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
-- [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。　[存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
-- 听众质疑 pkg-ng 以二进制包取代源码编译是否为针对 Unix 传统的一次 systemd 式反叛，主持人澄清 ports 树相对于 Linux 的历史价值在于提供可定制编译的框架而非拒绝二进制（如自打补丁限定运行时长的 rsync），pkg-ng 的每周构建化解了旧时代 ports 与冻结二进制包不可混用的痛点，同规模部署的安装时间从约四十五分钟的编译压缩至三分钟装包；进一步的可复现构建愿景是自编译结果与官方包逐位一致以供安全验证。嘉宾以 OpenBSD 的 Flavor 变体包机制（如带 LDAP 支持的 Dovecot 独立包名）反衬 FreeBSD options 变更导致的重编译痛点（Bacula 默认绑定 PostgreSQL 而其自用 MySQL，每次升级被要求重装），并期待 ports 树本身可作为包安装、与官方包的构建基线保持同步。　[存疑脚注] 转写将 Dovecot 记作 Bacode，Bacula 数据库选项对话以听写近似呈现，专名以通行拼写为准。（BSD Now EP86，[4173.42-4411.42]，L2）
-- HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。　[存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
-- Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
-- 关于IronPort设备的FreeBSD版本已较旧的说法，主持人明确表示不十分确定，属于口头估计而非可核验的版本信息。　[存疑脚注] Cisco IronPort设备所采用的FreeBSD版本属主持人口头估计，需以设备文档或官方信息核实。（BSD Now EP32，[3903.66-3907.06]，L4）
-- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
-- 约九成八的 SSH 实现为 OpenSSH 且其余多为改名或混淆版本，系当事人无统计来源的口头估计，仅可作为生态集中度的印象性证据。[存疑脚注] 九成八占比为访谈口述估计，未经审计数据交叉验证。　[存疑脚注] OpenSSH 市场占比为当事人口头估计，无第三方统计佐证，引用时须标注为印象性判断（BSDTalk EP228，[432.11-448.88]，L4）
-- GoDaddy 已支持 DS 记录与 IPv6 但 Dxtr 等注册商十年未跟进互联网标准，注册商技术能力与 DNSSEC 普及之间的瓶颈关系为当事人单方观察，缺 注册商市场份额数据支撑。[存疑脚注] 单一来源推断。　[存疑脚注] 注册商支持度的判断仅来自当事人个人转商经历，未与行业统计交叉验证（BSDTalk EP228，[1066.29-1116.19]，L4）
+- [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。 [存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
+- [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。 [存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
+- 听众质疑 pkg-ng 以二进制包取代源码编译是否为针对 Unix 传统的一次 systemd 式反叛，主持人澄清 ports 树相对于 Linux 的历史价值在于提供可定制编译的框架而非拒绝二进制（如自打补丁限定运行时长的 rsync），pkg-ng 的每周构建化解了旧时代 ports 与冻结二进制包不可混用的痛点，同规模部署的安装时间从约四十五分钟的编译压缩至三分钟装包；进一步的可复现构建愿景是自编译结果与官方包逐位一致以供安全验证。嘉宾以 OpenBSD 的 Flavor 变体包机制（如带 LDAP 支持的 Dovecot 独立包名）反衬 FreeBSD options 变更导致的重编译痛点（Bacula 默认绑定 PostgreSQL 而其自用 MySQL，每次升级被要求重装），并期待 ports 树本身可作为包安装、与官方包的构建基线保持同步。 [存疑脚注] 转写将 Dovecot 记作 Bacode，Bacula 数据库选项对话以听写近似呈现，专名以通行拼写为准。（BSD Now EP86，[4173.42-4411.42]，L2）
+- HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。 [存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
+- Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。 [存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
+- 关于IronPort设备的FreeBSD版本已较旧的说法，主持人明确表示不十分确定，属于口头估计而非可核验的版本信息。 [存疑脚注] Cisco IronPort设备所采用的FreeBSD版本属主持人口头估计，需以设备文档或官方信息核实。（BSD Now EP32，[3903.66-3907.06]，L4）
+- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。 [存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
+- 约九成八的 SSH 实现为 OpenSSH 且其余多为改名或混淆版本，系当事人无统计来源的口头估计，仅可作为生态集中度的印象性证据。[存疑脚注] 九成八占比为访谈口述估计，未经审计数据交叉验证。 [存疑脚注] OpenSSH 市场占比为当事人口头估计，无第三方统计佐证，引用时须标注为印象性判断（BSDTalk EP228，[432.11-448.88]，L4）
+- GoDaddy 已支持 DS 记录与 IPv6 但 Dxtr 等注册商十年未跟进互联网标准，注册商技术能力与 DNSSEC 普及之间的瓶颈关系为当事人单方观察，缺 注册商市场份额数据支撑。[存疑脚注] 单一来源推断。 [存疑脚注] 注册商支持度的判断仅来自当事人个人转商经历，未与行业统计交叉验证（BSDTalk EP228，[1066.29-1116.19]，L4）
 
 **文献**：
 
@@ -164,3 +164,145 @@ volume: 第10卷-openbsd的历史
 
 据〔来源不详〕讲者 Peter Hansteen 口述：zlib 被加入 OpenBSD，但他认为它非标准，且相关问题在 OpenSSL 中普遍出现。（YouTube EPnxZ7EGT1POI，[4261.9-4269.72]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1700 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1700`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Landry Breuil〈7 years of maintaining firefox, and still looking ahead〉访谈〕讲者口述：谈者自称几乎不在工作中做 BSD，但已是 OpenBSD 开发者约十年，距满十年仅剩一周左右。（YouTube EPBmz9SpQe5Tg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1701 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1701`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Landry Breuil〈7 years of maintaining firefox, and still looking ahead〉访谈〕讲者口述：OpenBSD 可直接用作桌面／笔记本日常系统，安装 current 与二进制包即拥有完整桌面环境，若想要小型窗口管理器也可自行选用，无需顾虑。（YouTube EPBmz9SpQe5Tg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1702 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1702`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Landry Breuil〈7 years of maintaining firefox, and still looking ahead〉访谈〕讲者口述：在 Firefox 3 向 3.5／3.6 演进、Firefox 4 尚处发布前夕的那段迁移期，OpenBSD 上 Firefox 的当时维护者不回复其升级邮件、响应缓慢且无暇处理，谈者遂以此为挑战接手该移植的升级工作。（YouTube EPBmz9SpQe5Tg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1703 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1703`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Landry Breuil〈7 years of maintaining firefox, and still looking ahead〉访谈〕讲者口述：OpenBSD 移植树中的 Firefox ESR 版本为 5257，于 11 月发布，因此对 OpenBSD 6.2 而言来得太晚，赶不上其发布窗口；同期主线版本为 55.0.3，将于次周发布。（YouTube EPBmz9SpQe5Tg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1893 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1893`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Stefan Sperling《Game of Tree》演讲〕讲者口述：讲者称 OpenBSD 不打算采用 Linux 在使用的那种“合并者模型”（merge master model）；讲者描述该模式为：各处仓库之间持续向上推送变更，而总有一个专人负责把变更合并进该仓库。（YouTube EPPRIgeouw7-4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1894 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1894`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Stefan Sperling《Game of Tree》演讲〕讲者口述：讲者称那不是项目应当运作的样子——OpenBSD 应当作为一个平等的伙伴群体（equal collection of peers）运作，人人都有整棵源码树的访问权，只要获得足够的 review 或遵循社区流程，任何人就被允许去改任何地方，没有任何人阻拦讲者去动 utf-8 或 Wireless 之类的部分。（YouTube EPPRIgeouw7-4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1895 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1895`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Stefan Sperling《Game of Tree》演讲〕讲者口述：讲者称 OpenBSD 在此的做法是：在发布前夕把 head 的用途切换到 release 模式，这也可以看作一种分支，只是它在同一套文件上进行、只是宣告该分支的用途已经改变；此外项目仍保有 stable 分支，并在源码树里留有一些 vendor 分支，用于导入 LVM 之类的外部项目。（YouTube EPPRIgeouw7-4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1896 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1896`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Stefan Sperling《Game of Tree》演讲〕讲者口述：就该工具能否用于 base 的一般开发这一问，讲者称自己已经在考虑把这个工具的开发搬进 base，但这里有点鸡生蛋的问题——一旦有了服务器，讲者希望用那个服务器来承载本项目，而那样就需要从 CVS 转回转写作 gate 的 git，这做得到，但相当繁琐。（YouTube EPPRIgeouw7-4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2215 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2215`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Marc Espie 演讲〕讲者口述：OpenBSD 的包系统在设计之初就采用即时更新方式，不是先下载整份包清单，而是逐个打开候选包、只读其元信息来判断是否要升级；好处是一次不占多少内存或磁盘空间、几乎不会失败，代价是包被改名时可能找不到更新。（YouTube EP9b8B7bJT2y0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2216 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2216`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Marc Espie 演讲〕讲者口述：OpenBSD 升级包的顺序是先把新包完整解出、再删除旧包、最后真正安装，与多数采用“先试装、不行就回退”的系统相反；目的是在安装过程中几乎任何时刻都不出现坏掉的安装状态。（YouTube EP9b8B7bJT2y0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2217 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2217`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Marc Espie 演讲〕讲者口述：OpenBSD 基本系统里没有可用的数据库工具，想为约一万个包缓存更新信息没有现成方案；系统里曾放过 sqlite，后来被以讲者所说的“非充分理由”移除，因而改为把更新信息塞进 locate 索引当数据库用。（YouTube EP9b8B7bJT2y0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2218 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2218`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Marc Espie 演讲〕讲者口述：OpenBSD 有一个名为 quirks 的特殊包，专门容纳例外情况——包被改名、包消失、基础发行版里的顽固缺陷，pkg 每次更新都会先看它，并且每次基本系统更新时它都会被一起更新；讲者正是借这个机制把包更新缓存随快照一同分发，才使缓存真正可用。（YouTube EP9b8B7bJT2y0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2444 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2444`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲：Debug packages in OpenBSD〕讲者口述：OpenBSD 的 debug 包机制是他做的、自述“已经算旧活”的工作，原应在前一年的 EuroBSDcon（转写音作 eurobase decon）报告，因该会未办而推迟到本次线上场合。（YouTube EPpcHn4dl-K5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2445 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2445`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 同一演讲〕讲者口述：软件包与 ports 事务大体由 stuart anderson（转写音作此，人名照抄不改）负责，两人评估后认为 debug 包会使镜像体积大幅增长，因此决定 debug 包采取 opt-in（按需开启）而非全量生成。（YouTube EPpcHn4dl-K5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2446 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2446`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 同一演讲〕讲者口述：OpenBSD 为 amd64（转写音作 md64）每隔几天就出新快照，约两三天一次，每次须向各镜像铺送大量文件并占用带宽，故仓库（含 debug 包）体积过大会拖慢软件包抵达镜像的速度。（YouTube EPpcHn4dl-K5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2447 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2447`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 同一演讲〕讲者口述：该项工作约两年后他统计数字，OpenBSD 当时约有 700 个 debug 包，说明重要软件确有 debug 包；因为是 opt-in，其余多为小包与解释型软件没有，无人觉得需要。（YouTube EPpcHn4dl-K5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2495 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2495`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Irofti 演讲〕讲者口述：Paul Irofti 自述其一年半来在 Octeon 机器上为 OpenBSD 移植开发各驱动、历数其间障碍，并预告后续将进入 OpenBSD port 的内容。（YouTube EPEj4AR5dnfDQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2496 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2496`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Irofti 演讲〕讲者口述：Cavium 出品的 Octeon 虽开放了全套 SDK 驱动源码，但其许可近乎 BSD 许可证却附加美国出口条款，而 OpenBSD 项目不采用此类许可，故讲者无法使用该 SDK。（YouTube EPEj4AR5dnfDQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2497 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2497`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Irofti 演讲〕讲者口述：日本 IIJ 基于 OpenBSD 提供面向 Octeon 的商业支持，并开源了其交换机框架方案。（YouTube EPEj4AR5dnfDQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2498 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2498`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Paul Irofti 演讲〕讲者口述：他最初接触 Octeon 是在多伦多 hackathon 上——邻座 Jasper 正为一台 Octeon 小机器开发 bootloader，由此引发兴趣。（YouTube EPEj4AR5dnfDQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2519 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2519`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie EuroBSDcon 2012 讲座〕讲者口述：讲者介绍 OpenBSD 的分布式端口构建器 DPB 到当时已投入生产使用约两年半，OpenBSD 内为几乎每一种架构构建软件包一事都在使用它。（YouTube EPsNNHt3oQ-d0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2520 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2520`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie EuroBSDcon 2012 讲座〕讲者口述：讲者讲解 DPB 的调度思路：每次构建整棵 ports 树时记录每个组件的构建耗时，下一次构建即用这些耗时把 DPB 引向正确方向，从而让最大的依赖先行开工。（YouTube EPsNNHt3oQ-d0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2521 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2521`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie EuroBSDcon 2012 讲座〕讲者口述：讲者称其反思 make 的做法“完全错了、过于复杂”，改为像 DPB 那样对每条待运行命令只用单一进程，而不再为每个目标分叉一个进程，从而获得好得多的控制。（YouTube EPsNNHt3oQ-d0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2522 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2522`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie EuroBSDcon 2012 讲座〕讲者口述：讲者称 OpenBSD 的快照几乎随时都有、几乎覆盖全部架构，amd64 快照按其估计每天或每两天构建一次。（YouTube EPsNNHt3oQ-d0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2585 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2585`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2009“The OpenBSD Release Process: A Success Story”讲座〕讲者口述：OpenBSD 的正式发布日固定为每六个月的同一时点、从不动摇；但何时放慢开发、进入发布节奏，取决于项目对源码树状态的放心程度。（YouTube EPi7pkyDUX5uM，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2586 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2586`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2009“The OpenBSD Release Process: A Success Story”讲座〕讲者口述：他会随机挑一天突然宣布各接口之间的 API 与 ABI 全部锁定，树上很大一部分区段从此不得再改；锁定当天即通知 ports 与包体系的人开始构建。（YouTube EPi7pkyDUX5uM，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2587 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2587`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2009“The OpenBSD Release Process: A Success Story”讲座〕讲者口述：OpenBSD 曾实行“惩罚周期”——凡未在测试参与名单中被点名的人，在源码树为其他人解锁之后仍被禁止提交两周；此举把人心拉回，此后测试参与近乎全员。（YouTube EPi7pkyDUX5uM，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2588 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2588`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2009“The OpenBSD Release Process: A Success Story”讲座〕讲者口述：他的笔记本始终运行 -current，源码树的改动两三天内他就会把机器重启到新内核，团队把这叫做“吃自己的狗粮”；宁可趁改动记忆犹新时立刻撞上错误，也不愿拖到以后。（YouTube EPi7pkyDUX5uM，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -70,7 +70,7 @@ volume: 第10卷-openbsd的历史
 - FreeBSD 11.0 发布前夜的两项工程经主持人详述：bhyve 在项目分支 projects/bhyve-graphics 获得 UEFI GOP 支持，用户态虚拟显卡把画面送进内建 VNC 服务器，辅以 XHCI（USB 3 仿真）与平板定位实现精准鼠标、PS2 键鼠兜底、可选等待连接后再启动，并已在 Windows 7/8/8.1/10、Server 2012/2016、Ubuntu 15.10、FreeBSD 10.3/11 上验证，grub-bhyve 被定性为权宜之计、单命令 EFI 启动才是长期目标；zfsd 则补齐内核之外的 ZFS 故障管理，监听 devctl 事件自动激活热备，按 zfs 标签与物理路径处置盘位插拔，60 秒内 50 次 IO 或校验和错误即标记故障并换盘，管理员仅经池属性 autoreplace 间接控制，默认未启用。（BSD Now EP144，[240.1-1002.4]，L2）[订正：原 [243.24-975.32]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 图形栈跟进：Linux 4.6 DRM 更新需要用户测试，bsddesktop.com/images 提供 USB 启动测试镜像，非安装器、不改动既有系统；开发者 Matt Macy 经 IRC 转达 AMD/ATI 支持将至，且此项工作主要目标本是 AMD 而非 Intel，Intel 只是副产品；同期 head 的 C++ 变更致 VLC 等断裂，使 11 中 KDE、GNOME 3、XFCE、MATE 的桌面包暂缺——约 300 个包失败、600 个被阻断，占 26000 个包不足 2%，却几乎覆盖桌面所需，Warren Block 的 notebook-stats 脚本用于收集硬件细节以定位问题配置；主持人计划携镜像赴 BSDCan 分发。（BSD Now EP144，[2928.0-3204.4]，L2）[订正：原 [2932.90-3198.18]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 6.0 移除 systrace 的论证被归纳为模型错位：程序常需在启动期执行特殊系统调用而后不再需要，静态全局限制要么过松要么令程序失效，而 pledge 与 Capsicum 式“启动完成后降权”更贴合实际故而更严格；主持人并以旁证收束——NetBSD 早在 2007 年移除，Linux 最后版本止于 2.6.1，保留旧有冗余已无意义。（BSD Now EP140，[3242.2-3317.7]，L2）[订正：原 [3249.92-3322.20]，2026-09-30 SenseAudio 重转核对]
-- Backtrace 创始人 Samy Al Bahra（转写作 Sammy）主张符号调试自 Steve Bourne 的 adb 以来停滞约二十年，其平台以高性能调试器提取故障时刻状态、以调用栈签名聚合同类故障入集中对象存储并自动分派（建 JIRA 工单、通报安全团队），并与 FreeBSD 内核 UMA 分配器集成以自动标注悬空指针与双重释放；其宣称 libkvm 优化使简单回溯从两分钟级降至一秒内，GDB 在五万线程、500GB RSS 的客户负载上二十分钟的回溯缩至二至三秒。　[存疑脚注] 全部性能数字与产品能力均为创始人单方陈述，未经独立验证；专名 PT Malak（2191.54-2199.06）疑为 ptmalloc 之转写失真（BSD Now EP140，[2012.7-2098.1]，L1）[订正：原 [2012.24-2062.24]，2026-09-30 SenseAudio 重转核对]
+- Backtrace 创始人 Samy Al Bahra（转写作 Sammy）主张符号调试自 Steve Bourne 的 adb 以来停滞约二十年，其平台以高性能调试器提取故障时刻状态、以调用栈签名聚合同类故障入集中对象存储并自动分派（建 JIRA 工单、通报安全团队），并与 FreeBSD 内核 UMA 分配器集成以自动标注悬空指针与双重释放；其宣称 libkvm 优化使简单回溯从两分钟级降至一秒内，GDB 在五万线程、500GB RSS 的客户负载上二十分钟的回溯缩至二至三秒。 [存疑脚注] 全部性能数字与产品能力均为创始人单方陈述，未经独立验证；专名 PT Malak（2191.54-2199.06）疑为 ptmalloc 之转写失真（BSD Now EP140，[2012.7-2098.1]，L1）[订正：原 [2012.24-2062.24]，2026-09-30 SenseAudio 重转核对]
 - Ted Unangst 的程序命名考揭示 argv[0] 的多重身份——文件系统名、调用名与程序自认名可彼此背离，grep/egrep、md5/sha2 家族与 test/[ 均有意利用之；但 syslog 默认采用 progname，使特权工具可被改名以规避日志监控，doas 已修复此面而 sudo 的部分配置仍受其扰，作者由此提出 progname 是有用的抽象、却正缓慢退化为货物崇拜式惯例。（BSD Now EP140，[817.4-1239.7]，L2）[订正：原 [849.42-1226.70]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
@@ -78,7 +78,7 @@ volume: 第10卷-openbsd的历史
 - Florian Obser《Privilege drop, privilege separation and restricted service operating mode in OpenBSD》（sha256.net 博客），为 OpenBSD 开发者本人的一手技术文章，经节目转述。（BSD Now EP498，[508.82-1144.64]，L1）
 - OpenBSD tech 邮件列表中 Theo de Raadt 关于 pinsyscall 的帖子，涉及 ExecVE 与 ROP pivot，为当事人一手陈述，经节目转述。（BSD Now EP498，[2272.22-2304.38]，L1）
 - Game of Trees 0.81 发布与 Stefan Sperling 在 FOSDEM 2023 的演讲及幻灯片，为官方发布线索，经节目转述。（BSD Now EP498，[1823.68-1923.94]，L2）
-- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。　[存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
+- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。 [存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
 - 该期可辨识的一手与当事人材料包括：FreeBSD 2016 年第一季度核心团队季度报告（ASLR 进展、Ceph 移植与 pNFS 支持为要点）、FreeBSD 10.3 的 errata notice（解释 PKG 1.7.0 性能回退根因）、Ted Unangst 关于程序命名的技术文章、LibreSSL 路线讨论文章、Backtrace 创始人调取客户生产故障数据的现场演示、Allan Jude 对欧洲黑客松与开源数据中心会议的亲历叙述，以及 Linux Fest Northwest 演讲视频存档；主持人转述 Ceph 移植动机时引述“Ceph has this concept called like RDB, which is kind of Ceph's version of a Zvol”（386.00-391.20）。（BSD Now EP140，[338.5-452.6]，L2）[订正：原 [347.76-445.20]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
@@ -93,10 +93,10 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- Obser 所述 Theo 逾 26 年前重构 ping 的具体年份需与 OpenBSD 提交史核验，节目转述未给出提交编号。　[存疑脚注] ping 重构年份为口述概数，须以 OpenBSD 提交记录与变更日志核验。（BSD Now EP498，[598.70-632.26]，L4）
-- pledge 从 tame 更名的具体时间与 5.8、5.9 版本对应关系为概略叙述，需以 OpenBSD 发布说明与 man 页核验。　[存疑脚注] tame 更名 pledge 及对应版本为概略叙述，需以 pledge(2) 手册与发布说明确认。（BSD Now EP498，[861.42-931.54]，L4）
+- Obser 所述 Theo 逾 26 年前重构 ping 的具体年份需与 OpenBSD 提交史核验，节目转述未给出提交编号。 [存疑脚注] ping 重构年份为口述概数，须以 OpenBSD 提交记录与变更日志核验。（BSD Now EP498，[598.70-632.26]，L4）
+- pledge 从 tame 更名的具体时间与 5.8、5.9 版本对应关系为概略叙述，需以 OpenBSD 发布说明与 man 页核验。 [存疑脚注] tame 更名 pledge 及对应版本为概略叙述，需以 pledge(2) 手册与发布说明确认。（BSD Now EP498，[861.42-931.54]，L4）
 - 听众 Bill 的安装失败归因存在可考辨的争议：其归咎 ZFS 默认文件系统与 legacy MS-DOS 分区不兼容，主持人则把故障机制改判为 GPT 分区表使部分主板（Lenovo）拒绝引导，且 PC-BSD/GhostBSD 强制 ZFS 属发行版选择而非 ZFS 缺陷；主持人“ZFS will change your life”（5271.86-5275.90）式的布道话语亦应视为社区推广文化的一部分，而非中立技术评估。（BSD Now EP140，[5140.0-5302.6]，L2）[订正：原 [5155.90-5303.58]，2026-09-30 SenseAudio 重转核对]
-- 本期标题所示“DDoS for the People”文章在转写中并无对应讨论段落，其内容无法由本转写证实；SenseAudio 重转写为单轨有序，专名失真仍频——Sammy、Larry Kuffirau、Olivier Pagenet、Phosphorus、Zedex/Zed Sphere 等均未经核对，涉及具体人名与工具名的引用前必须核对原始 show notes。　[存疑脚注] 标题文章内容未见于转写；Sammy、Larry Kuffirau、Olivier Pagenet、Phosphorus、Zedex 等疑为转写失真，待核 show notes；旧转写之 PT Malak（2191.54-2199.06）在新转写中已辨为 ptmalloc（[2176.7-2194.5]）（BSD Now EP140，[2176.7-2194.5]，L4）[订正：原 [2191.54-2199.06] 并 旧转写“双音轨交错、时间戳乱序”及 Olivier Cognet、Larry Kofiro、ZX Backup、AfriBIC 名录表述，2026-09-30 SenseAudio 重转核对]
+- 本期标题所示“DDoS for the People”文章在转写中并无对应讨论段落，其内容无法由本转写证实；SenseAudio 重转写为单轨有序，专名失真仍频——Sammy、Larry Kuffirau、Olivier Pagenet、Phosphorus、Zedex/Zed Sphere 等均未经核对，涉及具体人名与工具名的引用前必须核对原始 show notes。 [存疑脚注] 标题文章内容未见于转写；Sammy、Larry Kuffirau、Olivier Pagenet、Phosphorus、Zedex 等疑为转写失真，待核 show notes；旧转写之 PT Malak（2191.54-2199.06）在新转写中已辨为 ptmalloc（[2176.7-2194.5]）（BSD Now EP140，[2176.7-2194.5]，L4）[订正：原 [2191.54-2199.06] 并 旧转写“双音轨交错、时间戳乱序”及 Olivier Cognet、Larry Kofiro、ZX Backup、AfriBIC 名录表述，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -132,3 +132,25 @@ volume: 第10卷-openbsd的历史
 
 据〔BSDCan 2018〕讲者 Bob Beck 口述：Robert Nagy 与 ports 团队为 OpenBSD 的 Chrome 准备好了 pledge 补丁。（YouTube EPbXO6nelFt-E，[1350.8-1359.03]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1941 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1941`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Bjorn Gohla：A Haskell Binding for OpenBSD Pledge（EuroBSDcon 2023）〕讲者口述：OpenBSD 的 pledge 是内核 API 的一部分，用意是限制某个进程可访问的内核 API；讲者说其动机是：长期对网络暴露的服务即使被注入代码而遭接管，也应尽可能锁死其可能行为，从反面看则是抛弃已知不会用到的内核 API 部分并关闭其访问。（YouTube EPoO3HvRSg86Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1942 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1942`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Bjorn Gohla：A Haskell Binding for OpenBSD Pledge（EuroBSDcon 2023）〕讲者口述：pledge 的第一个参数由称作 promises 的元素构成，大约 20 个；其中 rpath、wpath、cpath、dpath 对应各类文件系统操作，inet 对应打开网络套接字。（YouTube EPoO3HvRSg86Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1943 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1943`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Bjorn Gohla：A Haskell Binding for OpenBSD Pledge（EuroBSDcon 2023）〕讲者口述：第二次以空参数调用 pledge 意味着除了 exit 以外抛弃全部内核访问权（exit 永远可以调用）；此后程序若再发起别的系统调用，限制立刻生效，进程被直接终止。（YouTube EPoO3HvRSg86Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1944 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1944`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Bjorn Gohla：A Haskell Binding for OpenBSD Pledge（EuroBSDcon 2023）〕讲者口述：该 Haskell 绑定显然完全不具可移植性，因为用的是 OpenBSD 专有的内核 API；不过他提到有人写了一个适配层，能把 pledge 的 promises 翻译成 seccomp，从而在 Linux 上也能工作，但可能仍有大量细节问题。（YouTube EPoO3HvRSg86Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

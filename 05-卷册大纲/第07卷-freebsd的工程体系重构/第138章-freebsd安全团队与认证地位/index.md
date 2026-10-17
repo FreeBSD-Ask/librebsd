@@ -75,3 +75,32 @@ volume: 第07卷-freebsd的工程体系重构
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-507 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-507`；w172 YouTube 章节路由采纳）
+
+据〔Fall 2024 FreeBSD Summit〕讲者口述：即便算法闭源，仍可用 FreeBSD 的 capsicum 沙箱机制限制其对外暴露面，以此部分维持可审计性。（YouTube EPFiWk41xBju4，[1645.679-1653.83]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2570 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2570`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: An Introduction to FreeBSD Security〕讲者口述：本期开场由主持人（FreeBSD 基金会执行主任 Deb Goodkin 自述身份）介绍讲者 Antranig Basmanian，曾任亚美尼亚国家计算机应急响应小组安全运营负责人，时任 Luria Security 公司 CEO，该公司以 FreeBSD 为核心。（YouTube EPN-7xZB0afyA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2571 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2571`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: An Introduction to FreeBSD Security〕讲者口述：讲者介绍 IPFW 是为 FreeBSD 编写的有状态防火墙，支持 IPv4 与 IPv6，同时充当流量整形器与数据包调度器，并支持内核内 NAT。（YouTube EPN-7xZB0afyA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2572 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2572`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: An Introduction to FreeBSD Security〕讲者口述：讲者称 pf 是为 OpenBSD 开发的 BSD 许可证有状态包过滤器，自 FreeBSD 5.3 起被移植到 FreeBSD，也被移植到 NetBSD、Mac OS（现代 macOS 机器亦带 pf）、DragonFly BSD、QNX 等；其后自述移植清单属个人观点。（YouTube EPN-7xZB0afyA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2573 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2573`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Fridays: An Introduction to FreeBSD Security〕讲者口述：讲者追述 FreeBSD 安全事件审计（auditd）的来历——最初由 McAfee Research 为苹果的 Mac OS X 开发（约 2003—2004 年），后经 Trusted BSD 项目移植到 FreeBSD，其文件格式与输出均基于 Sun Microsystems 的 Basic Security Module。（YouTube EPN-7xZB0afyA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

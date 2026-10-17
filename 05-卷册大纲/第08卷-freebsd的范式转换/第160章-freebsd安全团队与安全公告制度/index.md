@@ -76,10 +76,10 @@ volume: 第08卷-freebsd的范式转换
 - bsdiff 与 bspatch 是 Colin Percival 2003 年在牛津攻读博士学位期间提出的二进制差分算法，当前实现已演进至 4.3 版。（BSD Now EP171，[1303.36-1644.9]，L2）
 - Android 官方开发者博客公布采用 bsdiff 做文件级增量更新，应用更新体积平均缩小 65%、部分缩小超过 90%，每日节省约 6 PB 的应用下载流量。（BSD Now EP171，[1243.48-1529.34]，L2）
 - bsdiff 的 BSD 许可代码被 Firefox、Chrome、Chrome OS 与 Android 广泛采用，Colin Percival 观察到如今仅 bsdiff 节省的带宽已相当于他 2003 年写下该算法时的全网流量。（BSD Now EP171，[1556.66-1747.34]，L2）
-- 主持人转述 Android 的 libc 部分源自 OpenBSD，并指出 Android 生态使用了相当数量的 BSD 组件。　[存疑脚注] Android Bionic 的 BSD 派生关系须核验一手来源。（BSD Now EP171，[1233.08-1243.48]，L2）
+- 主持人转述 Android 的 libc 部分源自 OpenBSD，并指出 Android 生态使用了相当数量的 BSD 组件。 [存疑脚注] Android Bionic 的 BSD 派生关系须核验一手来源。（BSD Now EP171，[1233.08-1243.48]，L2）
 - Ken Thompson 在 1984 年 8 月《Communications of the ACM》第 27 卷第 8 期发表《Reflections on Trusting Trust》，叙述其在 C 编译器中对 login 植入后门，并再植入第二重木马使编译 CC 时自我复制。（BSD Now EP171，[2926.58-3007.3]，L2）
 - 该编译器木马使 login 与 CC 的源代码均保持干净，后门仅在二进制层面存在，并随每次自举编译持续传播，源代码审计无法发现。（BSD Now EP171，[3137.62-3360.8]，L2）
-- Ken Thompson 表示这类木马的可能性最早见于美国空军对 Multics 早期实现安全性的批评，但他无法找到该具体引用并公开征集线索。　[考据脚注] Thompson 所引 Multics 批评文献待核验。（BSD Now EP171，[3470.46-3493.62]，L2）
+- Ken Thompson 表示这类木马的可能性最早见于美国空军对 Multics 早期实现安全性的批评，但他无法找到该具体引用并公开征集线索。 [考据脚注] Thompson 所引 Multics 批评文献待核验。（BSD Now EP171，[3470.46-3493.62]，L2）
 - 主持人由编译器信任问题引申出可复现构建的价值：从可信编译器出发重建相同二进制，才能对产物建立有限信任。（BSD Now EP171，[3539.9-3563.62]，L2）
 - FreeBSD libc 的 link_ntoa 函数存在约 26 年、可追溯至原始 BSD 的静态缓冲区溢出，特制参数可改写相邻静态缓冲区；HardenedBSD 复核发现补丁对剩余空间的计算方向有误。（BSD Now EP171，[3896.24-3998.72]，L2）
 - Ansible playbook 可自动创建 FreeBSD jail 服务器，以 jump jail 作为唯一 SSH 入口，用 iocage 创建各服务 jail，并可在 AWS 或 VirtualBox 上部署，配合 Travis 测试。（BSD Now EP171，[1048.16-1230.52]，L2）
@@ -140,13 +140,13 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
-- 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。　[存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
-- Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。　[存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
-- [存疑脚注] 主持人称 Android libc 来自 OpenBSD，此为主持人转述；Android Bionic 的 BSD 派生来源与比例须核验官方源码与历史记录。　[存疑脚注] Bionic 的 BSD 来源须核验。（BSD Now EP171，[1237.6-1243.48]，L4）
-- [考据脚注] Thompson 本人表示未能找到其所述 Multics 安全批评的引用，节目也未给出该文献，属待考据项。　[考据脚注] Multics 批评文献待考据。（BSD Now EP171，[3470.46-3493.62]，L4）
-- 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。　[存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
-- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。　[存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
+- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。 [存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
+- 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。 [存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
+- Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。 [存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
+- [存疑脚注] 主持人称 Android libc 来自 OpenBSD，此为主持人转述；Android Bionic 的 BSD 派生来源与比例须核验官方源码与历史记录。 [存疑脚注] Bionic 的 BSD 来源须核验。（BSD Now EP171，[1237.6-1243.48]，L4）
+- [考据脚注] Thompson 本人表示未能找到其所述 Multics 安全批评的引用，节目也未给出该文献，属待考据项。 [考据脚注] Multics 批评文献待考据。（BSD Now EP171，[3470.46-3493.62]，L4）
+- 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。 [存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
+- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。 [存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
 
 **文献**：
 
@@ -270,3 +270,24 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 2022 年 ;login: 刊文记载：FreeBSD 开发者 Robert Watson 等开发了 Capsicum 内核与库机制，允许程序精确声明自身所需能力并放弃获取新资源的权限，超过 50 个 FreeBSD 程序已改写以使用该机制；该软件能力路线与 CHERI 硬件能力架构共同构成内存安全方案谱系。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1773 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1773`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会安全专题小组〕讲者口述：现任 head security officer Gordon 在任期内将安全缺陷的修复与处置责任从 sec team 收拢，改由掌握该功能领域知识的个人开发者社群承担。（YouTube EP-4dBn8_dvKQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1774 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1774`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会安全专题小组〕讲者口述：Gordon 已使每一位 FreeBSD 开发者都在缺陷追踪系统（debug tracker）上拥有账号，从而可被抄送到其专业领域内的安全相关缺陷上，就近处置。（YouTube EP-4dBn8_dvKQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1775 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1775`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会安全专题小组〕讲者口述：该覆盖率导向的内核模糊测试器（syzkaller）所生成的程序由系统调用链构成，唯一目标是让内核崩溃；它最初为 Linux 开发，后被扩展为可模糊测试全部 BSD 以及相当数量的其他操作系统。（YouTube EP-4dBn8_dvKQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1776 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1776`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2022 年 6 月 FreeBSD 开发者峰会安全专题小组〕讲者口述：讲者称前一年花费时间将内核地址消毒器与内核内存消毒器从 NetBSD 移植过来，两者对缓冲区溢出、use-after-free 一类极易被转化为安全利用的缺陷非常有效。（YouTube EP-4dBn8_dvKQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

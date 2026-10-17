@@ -71,8 +71,8 @@ volume: 第16卷-开源运动与合规治理
 
 **辨析**：
 
-- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
-- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
+- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。 [存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。 [存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -88,3 +88,20 @@ volume: 第16卷-开源运动与合规治理
 - Common. Criteria Publications [EB/OL]. <https://www.commoncriteriaportal.org/cc/> (2026-07-22 访问)[EB/OL]. 2026. ［DKC-0588→fulltext:5565］
 - NIST. SP 800-218 Secure Software Development Framework (SSDF) Version 1.1 [S/OL]. Souppaya M, Scarfone K, Dodson D. National Institute of Standards and Technology, 2022-02. <https://csrc.nist.gov/pubs/sp/800/218/final> (2026-07-22 访问). DOI: 10.6028/NIST.SP.800-218[EB/OL]. 2022. ［DKC-0589→fulltext:5566］
 <!-- /dangan-20260908 -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2031 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2031`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD and the absurdities of security compliance 演讲〕讲者口述：支付行业合规要求规定必须在 root 账号上设置强密码、不能把 root 账号整个禁用掉，且该密码须切成两半分给两个人；讲者称公司实际上从未给 root 设过密码。（YouTube EPI2rhwnY6Bg4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2032 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2032`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD and the absurdities of security compliance 演讲〕讲者口述：合规标准要求保存每位系统用户最近 10 次历史密码，讲者称在 FreeBSD 上不知道如何实现这一点，“15 年之后我仍然不知道”，这是审计中反复出现的 FreeBSD 相关难题。（YouTube EPI2rhwnY6Bg4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2033 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2033`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD and the absurdities of security compliance 演讲〕讲者口述：其认为能够合规的最重要基础是出事时能提供取证数据，而这正是 FreeBSD 内核审计日志（kernel audit logs）发挥作用之处；它非常容易开启，但要基于它做出有用的事却很难。（YouTube EPI2rhwnY6Bg4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

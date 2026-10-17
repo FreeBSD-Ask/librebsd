@@ -64,7 +64,7 @@ volume: 第14卷-商业生态与企业案例
 - Xinuos 以 BSD 许可证允许转售商与客户开发专有环境为关键考量，并计划对 FreeBSD 稳定分支提供最长十五年的支持与回溯移植。（BSD Now EP51，[1163.86-1335.46]，L1）
 - Xinuos 计划将 OpenServer 与 UnixWare 等遗留应用运行于 bhyve 虚拟化之上，以迁移无源码的旧应用。（BSD Now EP51，[1465.72-1508.64]，L1）
 - 主持人讨论 Apple 在 1990 年代中后期濒临破产的处境：旧版 Mac OS 的 Copland 项目曾缩减至约三名开发者，BeOS 虽被视作备选平台，但事后被评价为尚非稳定的 Unix 系统。（BSD Now EP591，[426.6-493.8]，L2）[订正：原 [429.12-479.48]，2026-10-01 SenseAudio 重转核对]
-- 主持人认为 Apple 通过收购 NeXT 继承了 Mach 与 BSD 的既有成果，从而以较低成本获得 Unix 平台的稳定性；并由此讨论若 NeXT 独立成功或 Apple 破产，个人计算机与开源生态的历史可能完全改写。　[存疑脚注] Apple 收购 NeXT 继承 Mach/BSD 成果并降低成本的因果概括系主持人单方推断，未经 Apple/NeXT 财务与工程档案核实。（BSD Now EP591，[477.6-522.5]，L4）[订正：原 [479.48-518.82]，2026-09-30 SenseAudio 重转核对]
+- 主持人认为 Apple 通过收购 NeXT 继承了 Mach 与 BSD 的既有成果，从而以较低成本获得 Unix 平台的稳定性；并由此讨论若 NeXT 独立成功或 Apple 破产，个人计算机与开源生态的历史可能完全改写。 [存疑脚注] Apple 收购 NeXT 继承 Mach/BSD 成果并降低成本的因果概括系主持人单方推断，未经 Apple/NeXT 财务与工程档案核实。（BSD Now EP591，[477.6-522.5]，L4）[订正：原 [479.48-518.82]，2026-09-30 SenseAudio 重转核对]
 - 主持人就专有 Unix 的衰落展开讨论：昂贵的专有 Unix 平台因创新迟缓与封闭生态而让位于廉价开放架构，PC 以低价与现成部件取胜，ARM 亦因低价而崛起。（BSD Now EP591，[561.6-672.6]，L2）[订正：原 [562.28-665.06]，2026-10-01 SenseAudio 重转核对]
 - 三位主持人自述各自的 BSD 入门史：Benedikt 以 FreeBSD 5.2.1 入门，Jason 经 OpenBSD 2.8 与 OpenBSD 文档接触 BSD，Tom 在 PowerPC iBook G4 上尝试 OpenBSD 4.1 与 FreeBSD 7-current。（BSD Now EP591，[2101.6-2502.2]，L1）[订正：原 [2115.96-2492.78]，2026-10-01 SenseAudio 重转核对]
 
@@ -78,13 +78,13 @@ volume: 第14卷-商业生态与企业案例
 - 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：Xinuos 选择 BSD 许可证的本质是转售商与专有业务利益的分配安排。（BSD Now EP51，[1163.86-1179.76]，L1）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：Xinuos 由专有 System V 转向参与 FreeBSD，是商业权力格局的再分配而非线性技术进步。（BSD Now EP51，[1014.92-1128.06]，L1）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：访谈将操作系统视为可支持、可转售的商品，并以支持周期与许可证作为商品属性展开叙述。（BSD Now EP51，[1322.60-1363.72]，L1）
-- 总纲5 没有必然性，只有偶然性：主持人关于 Apple 破产、NeXT 成功、IBM 收购 Sun 的反事实讨论，强调技术史由具体事件与偶然条件塑造，而非某种必然规律。　[存疑脚注] Apple 破产、NeXT 成功、IBM 收购 Sun 等反事实讨论为主持人现场发挥，无一手文献支撑，仅作口述史观点记录。（BSD Now EP591，[361.1-522.5]，L4）[订正：原 [373.70-518.82]，2026-10-01 SenseAudio 重转核对]
+- 总纲5 没有必然性，只有偶然性：主持人关于 Apple 破产、NeXT 成功、IBM 收购 Sun 的反事实讨论，强调技术史由具体事件与偶然条件塑造，而非某种必然规律。 [存疑脚注] Apple 破产、NeXT 成功、IBM 收购 Sun 等反事实讨论为主持人现场发挥，无一手文献支撑，仅作口述史观点记录。（BSD Now EP591，[361.1-522.5]，L4）[订正：原 [373.70-518.82]，2026-10-01 SenseAudio 重转核对]
 - 总纲22 知识注定过时：主持人从 Amiga、286、Z80 到专有 Unix 的淘汰中，呈现旧技术平台与其知识的持续更替，而非单纯的代际进步。（BSD Now EP591，[561.6-672.6]，L2）[订正：原 [562.28-665.06]，2026-10-01 SenseAudio 重转核对]
 
 **辨析**：
 
-- Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。　[存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
-- Copland 缩减至约三名开发者、Gassée 对 BeOS 的评价等说法均为主持人转述，缺乏当期一手档案佐证，应作存疑处理。　[存疑脚注] 相关数字与评价为主持人转述，未经 Apple 或计算机历史博物馆一手档案核实。（BSD Now EP591，[426.6-475.7]，L4）[订正：原 [429.12-471.38]，2026-09-30 SenseAudio 重转核对]
+- Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。 [存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
+- Copland 缩减至约三名开发者、Gassée 对 BeOS 的评价等说法均为主持人转述，缺乏当期一手档案佐证，应作存疑处理。 [存疑脚注] 相关数字与评价为主持人转述，未经 Apple 或计算机历史博物馆一手档案核实。（BSD Now EP591，[426.6-475.7]，L4）[订正：原 [429.12-471.38]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 
@@ -123,3 +123,24 @@ volume: 第14卷-商业生态与企业案例
 
 Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2628 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2628`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki "What ideas can FreeBSD borrow from AIX?" 演讲〕讲者口述：AIX 是 IBM 专有的闭源 UNIX、握有大量专利，无法从 AIX 直接移植到 FreeBSD 或其他 BSD，能借鉴的只有其中的思想。（YouTube EPQmm7z7MSqho，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2629 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2629`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki "What ideas can FreeBSD borrow from AIX?" 演讲〕讲者口述：AIX 设备可处于 defined 态：设备当下不在系统里但系统记得它，设备重现时多半会被识别并重新指派同一个设备号。（YouTube EPQmm7z7MSqho，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2630 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2630`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki "What ideas can FreeBSD borrow from AIX?" 演讲〕讲者口述：SMIT 下几乎每一类管理任务都能完成，它构建在普通命令之上、可以查看其依赖的底层命令，还带一个他从未见人用过的图形界面。（YouTube EPQmm7z7MSqho，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2631 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2631`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki "What ideas can FreeBSD borrow from AIX?" 演讲〕讲者口述：FreeBSD 可以用 ZFS 提供与 AIX 类似的 LVM 式机制和脚本，实现在线升级并在必要时回滚改动。（YouTube EPQmm7z7MSqho，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
