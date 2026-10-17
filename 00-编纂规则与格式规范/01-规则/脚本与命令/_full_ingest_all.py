@@ -211,9 +211,12 @@ def main():
             existing_shas.add(s)
 
         files = []
-        # file_path 与活库现行值保持同形（如 dvd6/Website/...）：默认库内存的是相对
-        # 03-文献下载 的路径，故基准取 base_dir；_fill_fulltext_final.resolve() 亦按
-        # 该约定双路径解析。沙箱验收时 base_dir 不在仓库内，此基准同样成立。
+        # 活库 file_path 现行值以**仓库根**为基准（实测 5786 条有值中 4953 条以
+        # `04-现代研究文献` 起首、5067 条按仓库根可解析、0 条仅按 03-文献下载 可解析），
+        # 故 rel 一律相对仓库根计算，保持与既有行同形；沙箱目录不在仓库内时回退相对
+        # CWD（与旧版一致）。
+        base_ref = ROOT if base_dir.startswith(os.path.normpath(ROOT) + os.sep) \
+            else os.getcwd()
         for root, _, fs in os.walk(base_dir):
             parts = root.split(os.sep)
             if "ocr" in parts or "00-临时放置" in parts or "10-无关文件" in parts:
@@ -225,7 +228,7 @@ def main():
                 if not low.endswith((".pdf", ".html", ".htm", ".md", ".txt", ".srt",
                                      ".vtt", ".epub")):
                     continue
-                rel = os.path.relpath(os.path.join(root, fn), base_dir).replace("\\", "/")
+                rel = os.path.relpath(os.path.join(root, fn), base_ref).replace("\\", "/")
                 if fn in existing_fns or rel in existing_paths:
                     continue
                 files.append((os.path.join(root, fn), fn, rel))
