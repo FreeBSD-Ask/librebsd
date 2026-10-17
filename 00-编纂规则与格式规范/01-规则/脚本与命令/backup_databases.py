@@ -2,7 +2,9 @@
 """数据库常设备份与轮换脚本（固定脚本）——DuckDB 适配版（2026-08-25 修订）
 
 规则来源：00-编纂规则与格式规范/01-规则/流程规则.md“数据库备份保留规则（2026-08-18 新增）”
-用途：对范围内 DuckDB 数据库执行导出备份，并按“当次/1日/2日/3日/7日”5 槽轮换保留。
+用途：对范围内 DuckDB 数据库执行导出备份并轮换保留。现行策略为「密槽＋日槽」
+（DEFAULT_DENSE / DENSE_POLICY，见下方常量块）；原「当次/1日/2日/3日/7日」5 槽
+已于 2026-10-14 废止（见本文件「②二次令」与常量块注释）。
 
 2026-08-25 修订：全项目已升格为 DuckDB 主存储层，SQLite 原库以 ARCHIVE_FINAL 归档。
 本脚本从 SQLite 在线备份（sqlite3.backup()）改为 DuckDB 导出备份（EXPORT DATABASE 到 Parquet）。
@@ -27,6 +29,9 @@ std 流为空时自动重定向至 `12-数据库备份/backup_console.log`。
 ⑤五次令（2026-10-14）：**桌面执行日志**——每次运行向 `桌面/数据库备份.txt` 追加一行成功/失败记录
 （`record_run_log`），滚动保留 15 日、超期自动清除；写入失败不影响主流程。
 
+2026-10-15 修订（主理人令）：三任务触发频次由每 30 分钟统一调整为每 5 小时（任务名、错峰相位、轮换与日志机制均不变；调度频次以本行为最新基准）。
+⑥六次令（2026-10-15，主理人授权）：**归档体级完整性校验**——`backup_one()` 走 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 存成 `<stamp>.duckdb.gz`，归档体并非 DuckDB 文件，而旧 `integrity` 只比对「导出 parquet 件数 vs 源表数」、**从不打开归档体**，传输截断／写盘中断一律记 `ok`（2026-10-14 实测 16 槽整数 MiB 截断、sidecar 全记 ok）。现补 `verify_archive()` 三段校验（解 gzip 读到 EOF 触发 CRC → 读 tar 核表数 → 逐个 parquet 用 DuckDB 加载并计数），失败即把 `integrity` 改判为 `archive_open_failed`／`archive_incomplete`／`archive_unreadable` 并随 `record_run_log` 落到桌面执行日志；manifest 另记 `archive_format`、`archive_verified`、`archive_detail`。备份格式／`BASE`／调度／轮换均未改。差分对照 6/6 命中：同流程合成好档 PASS；gzip-非-tar、表数错配、**真实归档件截到整数 MiB 边界**、尾删 1 字节全部 FAIL。2026-10-15 实查 `historical_claims/` 25 份归档**全部 PASS**（179.0～210.6 MB／34 表），10-14「备份槽全坏」系当时所见、无法复盘。
+
 用法：
   python backup_databases.py --all          # 全量备份 + 轮换
   python backup_databases.py --db cross_indexes   # 单库备份 + 轮换
@@ -50,13 +55,38 @@ except ImportError:
     print("错误：需要安装 duckdb（pip install duckdb）")
     sys.exit(1)
 
-BASE = r"d:\librebsd"
-BACKUP_ROOT = os.path.join(BASE, "12-数据库备份")
-LOG_JSONL = os.path.join(BACKUP_ROOT, "backup_log.jsonl")
-PRUNE_PREVIEW = os.path.join(BACKUP_ROOT, "prune_preview_latest.json")
+BASE_CANDIDATES = (r"D:\librebsd", r"\\DESKTOP-M5P610N\d\librebsd")
+
+
+def _resolve_base():
+    """仓库根解析：D: 盘符优先，UNC 别名回落；两者皆不可达则回 None。
+
+    教训（2026-10-15 复核坐实）：原先硬编码 d:\\librebsd，盘符未映射时下方
+    makedirs(BACKUP_ROOT) 抛 FileNotFoundError，计划任务（pythonw.exe 无窗口）
+    不留任何痕迹——备份静默停摆。
+    """
+    for c in BASE_CANDIDATES:
+        if os.path.isdir(c):
+            return c
+    return None
+
+
+BASE = _resolve_base()
+BACKUP_ROOT = os.path.join(BASE, "12-数据库备份") if BASE else None
+LOG_JSONL = os.path.join(BACKUP_ROOT, "backup_log.jsonl") if BASE else None
+PRUNE_PREVIEW = os.path.join(BACKUP_ROOT, "prune_preview_latest.json") if BASE else None
+
+
+def set_base(path):
+    """显式指定仓库根（--base）。"""
+    g = globals()
+    g["BASE"] = path
+    g["BACKUP_ROOT"] = os.path.join(path, "12-数据库备份")
+    g["LOG_JSONL"] = os.path.join(g["BACKUP_ROOT"], "backup_log.jsonl")
+    g["PRUNE_PREVIEW"] = os.path.join(g["BACKUP_ROOT"], "prune_preview_latest.json")
 
 # 2026-10-14：适配计划任务无窗口后台运行（pythonw.exe）——std 流为空时重定向至控制台日志
-if sys.stdout is None or sys.stderr is None:
+if (sys.stdout is None or sys.stderr is None) and BASE:
     os.makedirs(BACKUP_ROOT, exist_ok=True)
     _con = open(os.path.join(BACKUP_ROOT, "backup_console.log"), "a", encoding="utf-8", buffering=1)
     if sys.stdout is None:
@@ -176,6 +206,65 @@ def sha256_of(path):
     return h.hexdigest()
 
 
+def verify_archive(gz_path, expect_tables):
+    """校验归档体本身（对的是档，不是源库）。
+
+    2026-10-14 实测：historical_claims 的 16 个备份槽解包后全部为整数 MiB
+    截断、非有效内容，而 sidecar 一律记 integrity: ok——旧判定只覆盖
+    「源库导出是否完整」，从不打开归档体，传输截断／写盘中断因此静默放行。
+
+    归档体是 EXPORT DATABASE 的 Parquet 集打包（gzip + tar），并非 DuckDB
+    文件，故按「解 gzip 读到 EOF（CRC 校验）→ 读 tar 成员 → 逐个 parquet
+    用 DuckDB 加载并计数」三段校验，任一环节失败即判 archive_* 失败。
+
+    返回 (ok, detail)。
+    """
+    tmpdir = tempfile.mkdtemp(prefix="duckdb_archchk_")
+    try:
+        # 阶段一：解 gzip 直到流末尾——截断件在此因 EOF/CRC 报错
+        tmp_tar = os.path.join(tmpdir, "members.tar")
+        with gzip.open(gz_path, "rb") as gz, open(tmp_tar, "wb") as out:
+            shutil.copyfileobj(gz, out, 1 << 20)
+
+        # 阶段二：读 tar 成员，核对表数
+        with tarfile.open(tmp_tar, "r:") as tar:
+            members = tar.getmembers()
+        pq = [m for m in members if m.name.endswith(".parquet") and m.isfile()]
+        if len(pq) < expect_tables:
+            return False, "archive_incomplete: {}/{} tables".format(len(pq), expect_tables)
+
+        # 阶段三：逐个 parquet 用 DuckDB 只读加载并计数
+        dst = os.path.join(tmpdir, "out")
+        os.makedirs(dst, exist_ok=True)
+        with tarfile.open(tmp_tar, "r:") as tar:
+            tar.extractall(dst)
+        # 只读连接不能以无路径形式启动内存库，此处只计数、不落文件
+        con = duckdb.connect()
+        total, bad = 0, 0
+        try:
+            for root, dirs, files in os.walk(dst):
+                for fn in files:
+                    if not fn.endswith(".parquet"):
+                        continue
+                    fp = os.path.join(root, fn).replace("\\", "/")
+                    try:
+                        total += con.execute(
+                            "SELECT COUNT(*) FROM read_parquet('{0}')".format(
+                                fp.replace("'", "''"))
+                        ).fetchone()[0]
+                    except Exception:
+                        bad += 1
+        finally:
+            con.close()
+        if bad:
+            return False, "archive_unreadable: {} parquet".format(bad)
+        return True, "verified: {} tables / {} rows".format(len(pq), total)
+    except Exception as e:
+        return False, "archive_open_failed: {}".format(str(e)[:80])
+    finally:
+        shutil.rmtree(tmpdir, ignore_errors=True)
+
+
 def backup_one(name, rel_path):
     src_path = os.path.join(BASE, rel_path)
     if not os.path.exists(src_path):
@@ -228,8 +317,17 @@ def backup_one(name, rel_path):
             "compressed_size_bytes": os.path.getsize(gz_path),
             "table_count": table_count,
             "sha256": sha256_of(src_path),
+            "archive_format": "parquet-tar-gz",
             "integrity": integrity,
         }
+        # 归档体级校验（2026-10-15 补）：旧判定只验源库导出完整性，
+        # 从不打开归档体——传输截断／写盘中断曾被记成 integrity: ok
+        ok_a, detail_a = verify_archive(gz_path, table_count)
+        manifest["archive_verified"] = ok_a
+        manifest["archive_detail"] = detail_a
+        if not ok_a:
+            integrity = detail_a
+            manifest["integrity"] = integrity
     except Exception as e:
         integrity = "export_failed: {}".format(str(e)[:100])
         manifest = {
@@ -345,13 +443,27 @@ def cmd_list():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="数据库常设备份与轮换（5 槽：当次/1日/2日/3日/7日）——DuckDB 适配版")
+    # 轮换参数已随 2026-10-14 令改走 DEFAULT_DENSE / DENSE_POLICY（密槽＋日槽），
+    # 原「5 槽」表述废止——帮助文本随之更正，勿再标已废止策略。
+    ap = argparse.ArgumentParser(description="数据库常设备份与轮换（密槽＋日槽，2026-10-14 起；原 5 槽已废止）——DuckDB 适配版")
+    ap.add_argument("--base", metavar="<仓库根>",
+                    help="显式指定仓库根（默认 D:\\librebsd，回落 UNC 别名；不可达即退出码 2）")
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--all", action="store_true", help="全范围备份 + 轮换（跳过 ALL_SKIP：historical_claims 由专项任务独担）")
     g.add_argument("--db", metavar="<db_name>", help="单库备份 + 轮换")
     g.add_argument("--prune-only", action="store_true", help="仅轮换清理，不新增备份")
     g.add_argument("--list", action="store_true", help="查看各库备份现状")
     args = ap.parse_args()
+
+    if args.base:
+        if not os.path.isdir(args.base):
+            print("[FAIL] --base 不存在：{}".format(args.base))
+            return 2
+        set_base(args.base)
+    if not BASE:
+        print("[FAIL] 仓库根不可解析：{} 均不可达".format("、".join(BASE_CANDIDATES)))
+        print("       备份禁静默停摆；请先挂载盘符，或用 --base <仓库根> 显式指定。")
+        return 2
 
     os.makedirs(BACKUP_ROOT, exist_ok=True)
     now = datetime.datetime.now()

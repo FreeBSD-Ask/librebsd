@@ -32,9 +32,35 @@ import json
 import os
 import sys
 
-BASE = r"d:\librebsd"
-BACKUP_ROOT = os.path.join(BASE, "12-数据库备份")
-STATE = os.path.join(BACKUP_ROOT, "claimdb_guard_state.json")
+BASE_CANDIDATES = (r"D:\librebsd", r"\\DESKTOP-M5P610N\d\librebsd")
+
+
+def _resolve_base():
+    """仓库根解析：D: 盘符优先，UNC 别名回落；两者皆不可达则回 None。
+
+    教训（2026-10-15 复核坐实）：原先硬编码 d:\\librebsd，盘符未映射时 --all 逐库
+    连接失败记 SKIP 而整体仍可能 PASS，save_state 还会对不存在目录 makedirs 抛异常
+    ——门禁静默空转比报错更危险，哨兵不能无声失效。
+    """
+    for c in BASE_CANDIDATES:
+        if os.path.isdir(c):
+            return c
+    return None
+
+
+BASE = _resolve_base()
+BASE_OK = BASE is not None
+BACKUP_ROOT = os.path.join(BASE, "12-数据库备份") if BASE else None
+STATE = os.path.join(BACKUP_ROOT, "claimdb_guard_state.json") if BASE else None
+
+
+def set_base(path):
+    """显式指定仓库根（--base）。"""
+    g = globals()
+    g["BASE"] = path
+    g["BASE_OK"] = True
+    g["BACKUP_ROOT"] = os.path.join(path, "12-数据库备份")
+    g["STATE"] = os.path.join(g["BACKUP_ROOT"], "claimdb_guard_state.json")
 
 # 阈值（2026-10-14 定：现状实测远离阈值，见 --db 输出的「现状值」）
 S1_FAIL, S1_WARN = 0.25, 0.05
@@ -323,7 +349,9 @@ def show():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="写库门禁与全库健康哨兵（2026-10-14 立）")
+    ap = argparse.ArgumentParser(description="写库门禁与全库健康哨兵（2026-10-14 立；2026-10-16 补仓库根解析）")
+    ap.add_argument("--base", metavar="<仓库根>",
+                    help="显式指定仓库根（默认 D:\\librebsd，回落 UNC 别名；不可达即报错退出码 2）")
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--db", metavar="<库名>", help="单库门禁检查（historical_claims 为深度哨兵 S1–S4）")
     g.add_argument("--path", metavar="<库文件>", help="对任意 duckdb 文件做只读检查（测试备份库；不写快照）")
@@ -331,6 +359,20 @@ def main():
     g.add_argument("--selftest", action="store_true", help="自检（四用例）")
     g.add_argument("--show", action="store_true", help="查看快照")
     args = ap.parse_args()
+
+    # 仓库根不可达时禁止静默空转：能自持内存库自证的就跑（--selftest），
+    # 其余一律显式退出码 2——哨兵空转比报错危险。
+    if args.base:
+        if not os.path.isdir(args.base):
+            print("[FAIL] --base 不存在：{}".format(args.base))
+            return 2
+        set_base(args.base)
+    elif not BASE_OK and not args.selftest:
+        print("[FAIL] 仓库根不可解析：{} 均不可达".format("、".join(BASE_CANDIDATES)))
+        print("       门禁禁静默空转（--all 会把逐库 SKIP 报成 PASS）；")
+        print("       请先挂载盘符，或用 --base <仓库根> 显式指定。")
+        return 2
+
     if args.selftest:
         return selftest()
     if args.show:
