@@ -271,8 +271,9 @@ def selftest():
         ok = p.returncode == expect
         results.append((name, expect, p.returncode, ok))
         if not ok:
-            print("  ✗ %s（期望 %d 实得 %d）%s" % (name, expect, p.returncode,
-                  (p.stdout + p.stderr).decode("utf-8", "replace").strip()[:160]))
+            print("  ✗ %s（期望 %d 实得 %d）" % (name, expect, p.returncode))
+            print("    stdout:", (p.stdout).decode("utf-8", "replace").strip())
+            print("    stderr:", (p.stderr).decode("utf-8", "replace").strip()[:300])
 
     # F1/F2/F3：自动改正（pre-commit 不拒收，文件被改 + re-add）
     repo, g = newrepo("t_fix")
@@ -299,7 +300,8 @@ def selftest():
     g("reset", "-q", "secret.txt")
     check("G1_撤回后放行", 0, run_gate(repo, "commit-msg", "m\n"))
     repo, g = newrepo("t_g2")
-    open(os.path.join(repo, "big.bin"), "wb").write(b"x" * (THRESHOLD + 1))
+    os.makedirs(os.path.join(repo, "data"))
+    open(os.path.join(repo, "data", "big.bin"), "wb").write(b"x" * (THRESHOLD + 1))
     g("add", "-A")
     check("G2_大文件拒", 1, run_gate(repo, "commit-msg", "m\n"))
     check("G2_批准放行", 0, run_gate(repo, "commit-msg", TAG_BIGFILE + " m\n"))
@@ -354,7 +356,13 @@ def main(argv):
             if len(argv) < 4:
                 print("commit-msg 形态需要 <commit-msg-path>", file=sys.stderr)
                 return 2
-            return stage_commitmsg(argv[3])
+            try:
+                with open(argv[3], "rb") as f:
+                    msg = f.read().decode("utf-8", errors="replace")
+            except OSError as e:
+                print("git_commit_gate：无法读提交说明 %r：%s" % (argv[3], e), file=sys.stderr)
+                return 2
+            return stage_commitmsg(msg)
         print("未知阶段 %r" % stage, file=sys.stderr)
         return 2
     # 兼容旧调用形态（无 --stage，传 msg 路径）
