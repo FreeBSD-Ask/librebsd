@@ -8,7 +8,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- 综合项目史观总纲审视，DragonFly BSD 习俗特殊文化呈现“fork 哲学”与“单一架构师传统”的双重结构——fork 哲学维度：2003 年 fork 周年纪念传统、Dillon 邮件长文传统皆是 Dillon 选择 fork（革命）而非留在 FreeBSD 推动改革的具体显现，与 FreeBSD 5.x 内部改革路线形成对照；单一架构师传统维度：Dillon 邮件长文传统、HAMMER/HAMMER2 设计讨论与“单开发者”定性皆是 Dillon 个人主导项目演进的习俗化显现。　[存疑脚注] 原文此处机械截断，截断后文本按辨析 1 所列互证案例回源补全。
+- 综合项目史观总纲审视，DragonFly BSD 习俗特殊文化呈现“fork 哲学”与“单一架构师传统”的双重结构——fork 哲学维度：2003 年 fork 周年纪念传统、Dillon 邮件长文传统皆是 Dillon 选择 fork（革命）而非留在 FreeBSD 推动改革的具体显现，与 FreeBSD 5.x 内部改革路线形成对照；单一架构师传统维度：Dillon 邮件长文传统、HAMMER/HAMMER2 设计讨论与“单开发者”定性皆是 Dillon 个人主导项目演进的习俗化显现。 [存疑脚注] 原文此处机械截断，截断后文本按辨析 1 所列互证案例回源补全。
 - 4 条 DragonFly BSD 相关键传言自 2003-07 fork 事件起，至 2026 年 GitHub 仓库多开发者活动核验止，覆盖 fork 起因（与核心团队冲突）、技术生态（HAMMER 与 ZFS 关系、HAMMER2 高可用状态）、治理模式（单开发者项目定性）三大维度，构成 DragonFly BSD 传言生态从工程事实到社区叙事的形式主义化骨架；考证结论分布为真伪混杂 1 条
 
 ## 史料

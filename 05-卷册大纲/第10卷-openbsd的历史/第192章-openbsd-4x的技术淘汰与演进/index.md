@@ -91,7 +91,7 @@ OpenBSD 4.x 时期是项目统摄史观中 “形式主义化” 与 “修道�
 
 **辨析**：
 
-- mandoc 起始时间的口述在对话中经两人反复修正（2008 年 11 月、2009 年、春季），精确时间线须以仓库提交历史为准；转写人名与术语音误密集——Kristaps Dzonsons 误作 Chris Stapps、groff 音化作 grof 或 grow、apropos 误作 up-hopal、base 误作 Bayes、ports tree 误作 POTS tree——引用前须回查原音频与项目存档。　[存疑脚注] 时间线系口述回忆且对话中自我修正，须以版本库提交记录复核；转写音误密集，术语引用须校正（BSDTalk EP204，[134.60-210.74]，L4）
+- mandoc 起始时间的口述在对话中经两人反复修正（2008 年 11 月、2009 年、春季），精确时间线须以仓库提交历史为准；转写人名与术语音误密集——Kristaps Dzonsons 误作 Chris Stapps、groff 音化作 grof 或 grow、apropos 误作 up-hopal、base 误作 Bayes、ports tree 误作 POTS tree——引用前须回查原音频与项目存档。 [存疑脚注] 时间线系口述回忆且对话中自我修正，须以版本库提交记录复核；转写音误密集，术语引用须校正（BSDTalk EP204，[134.60-210.74]，L4）
 
 **文献**：
 

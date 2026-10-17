@@ -87,8 +87,8 @@ Pike 在这篇广为流传的演讲中萧瑟地指出，系统软件研究已经
 
 **辨析**：
 
-- Rob Pike 所述 Berkeley 夺走功劳属单方回忆，Regents 注释替换的时间与动机需与 Berkeley 侧史料交叉验证。　[存疑脚注] 该段为 Rob Pike 单方自述，需比对伯克利 CSRG 源码与邮件记录。（BSD Now EP478，[1175.84-1203.44]，L4）
-- 转写称 rc 工具首现于 4.0BSD（1980 年），具体出处与版本沿革需查证 FreeBSD 手册页原文。　[考据脚注] rc 首现版本与 4.0BSD 对应关系需查手册页 HISTORY 节与 4BSD 源码。（BSD Now EP478，[808.44-815.08]，L4）
+- Rob Pike 所述 Berkeley 夺走功劳属单方回忆，Regents 注释替换的时间与动机需与 Berkeley 侧史料交叉验证。 [存疑脚注] 该段为 Rob Pike 单方自述，需比对伯克利 CSRG 源码与邮件记录。（BSD Now EP478，[1175.84-1203.44]，L4）
+- 转写称 rc 工具首现于 4.0BSD（1980 年），具体出处与版本沿革需查证 FreeBSD 手册页原文。 [考据脚注] rc 首现版本与 4.0BSD 对应关系需查手册页 HISTORY 节与 4BSD 源码。（BSD Now EP478，[808.44-815.08]，L4）
 
 **文献**：
 

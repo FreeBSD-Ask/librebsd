@@ -90,7 +90,7 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 
 - Peter Hansteen 的 What every IT person needs to know about OpenBSD 系列文章，作为本期 OpenBSD 历史叙述的主要二手来源。（BSD Now EP428，[70.74-76.44]，L2）
 - DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[176.8-266.7]，L2）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
-- FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。　[存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
+- FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。 [存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
 - OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3828.2-3915.58]，L2）[订正：原 [3816.62-3915.58]，2026-09-30 SenseAudio 重转核对]
 - Libreboot.org 关于以开源 BIOS 引导 OpenBSD/LibertyBSD 的文档。（BSD Now EP164，[3926.18-4004.28]，L2）
 - Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[985.8-2820.6]，L1）[订正：原 [1600.0-2610.0]，2026-09-30 SenseAudio 重转核对]
@@ -112,10 +112,10 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 
 **辨析**：
 
-- “默认安装仅两个远程漏洞”为 OpenBSD 项目长期自述口径，其统计口径与时间范围需与官方安全公告逐条核对。　[存疑脚注] 远程漏洞计数为项目自述，统计边界需对照 OpenBSD 官方安全公告确认。（BSD Now EP428，[138.94-145.1]，L4）
-- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[176.8-266.7]，L4）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
+- “默认安装仅两个远程漏洞”为 OpenBSD 项目长期自述口径，其统计口径与时间范围需与官方安全公告逐条核对。 [存疑脚注] 远程漏洞计数为项目自述，统计边界需对照 OpenBSD 官方安全公告确认。（BSD Now EP428，[138.94-145.1]，L4）
+- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。 [存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[176.8-266.7]，L4）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 - 教程中的加密安装步骤由主持人演示并录制，涉及 FreeBSD 9.2/10 与 OpenBSD 特定版本的实现细节，属于演示与转述而非当事人一手史料。（BSD Now EP16，[3.7-27.0]，L2）[订正：原 [0.0-10.2]，2026-09-30 SenseAudio 重转核对]
-- E15K 接近启动、受害机五天六十次上电循环、Intel 网络组前后行为等细节均为当事人口述、无独立佐证；Cassini 所在的具体机型他本人亦不能确指，仅以 Solaris 下的 CE 网卡机型圈定范围；转写术语与人名多处失真（UltraSPARC、Schizo、Tomatillo、IOMMU、Xastir、Baudot 等按通行拼写校正）。[存疑脚注] 硬件细节与厂商行为均为单一来源陈述。　[存疑脚注] 机型与厂商行为细节无第三方佐证（BSDTalk EP82，[481.06-514.18]，L4）
+- E15K 接近启动、受害机五天六十次上电循环、Intel 网络组前后行为等细节均为当事人口述、无独立佐证；Cassini 所在的具体机型他本人亦不能确指，仅以 Solaris 下的 CE 网卡机型圈定范围；转写术语与人名多处失真（UltraSPARC、Schizo、Tomatillo、IOMMU、Xastir、Baudot 等按通行拼写校正）。[存疑脚注] 硬件细节与厂商行为均为单一来源陈述。 [存疑脚注] 机型与厂商行为细节无第三方佐证（BSDTalk EP82，[481.06-514.18]，L4）
 
 **文献**：
 

@@ -79,11 +79,11 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 
 **辨析**：
 
-- OpenBSD Webzine 创办始末及加入团队细节仅来自当事人自述，需与网站存档、邮件列表记录交叉验证。　[存疑脚注] 加入团队与 Webzine 创办细节为单一当事人自述，尚需邮件列表与站点存档旁证。（BSD Now EP435，[1483.2-1522.08]，L4）
-- NYC*BUG 的成立年份与“最古老用户组之一”的说法为当事人估计，需与用户组档案及其他 BSD 用户组成立记录交叉核对。　[存疑脚注] 用户组成立年份为当事人记忆性表述，宜与其他地区 BSD 用户组史料比对。（BSD Now EP422，[2090.4-2120.4]，L4）[订正：原 [2090.58-2102.08]，2026-09-30 SenseAudio 重转核对]
-- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
-- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
-- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。　[存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
+- OpenBSD Webzine 创办始末及加入团队细节仅来自当事人自述，需与网站存档、邮件列表记录交叉验证。 [存疑脚注] 加入团队与 Webzine 创办细节为单一当事人自述，尚需邮件列表与站点存档旁证。（BSD Now EP435，[1483.2-1522.08]，L4）
+- NYC*BUG 的成立年份与“最古老用户组之一”的说法为当事人估计，需与用户组档案及其他 BSD 用户组成立记录交叉核对。 [存疑脚注] 用户组成立年份为当事人记忆性表述，宜与其他地区 BSD 用户组史料比对。（BSD Now EP422，[2090.4-2120.4]，L4）[订正：原 [2090.58-2102.08]，2026-09-30 SenseAudio 重转核对]
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。 [存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。 [考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
+- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。 [存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
 
 **文献**：
 

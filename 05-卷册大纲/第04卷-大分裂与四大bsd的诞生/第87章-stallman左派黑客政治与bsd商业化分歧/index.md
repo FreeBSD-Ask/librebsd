@@ -50,7 +50,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **史料**：
 
-- 本期可入档的一手与准一手材料包括：AsiaBSDCon 2015 现场见闻（Dev Summit 与 vendor Summit、NetBSD Developer Summit、运行 NetBSD 的 Dreamcast 展台）；Lawrence Teo 专访（Calyptix 自 2006 年起每周向客户设备自动推送升级，含 LibreSSL 替换与 OpenBSD 本体整版升级）；Miod Vallat 将 OpenBSD versions 文件改回 -current 的提交日志（附仿《回到未来》的提交信息）；OpenSSH 6.8 发布公告；FreeBSD Foundation“FreeBSD from the Trenches”系列 AutoFS 博文；OpenBSD 澳洲 hackathon 报告（Jonathan Gray 的 AMD GPU 与图形工作、Ted Unangst 的虚拟内存层 SMP 工作）；OpenBSD 邮件列表经 SNDIO 与 SSH 端口转发跨网络播放音频 CD 的帖子；openBGPD 分发 PF 表更新的操作文章；GNU IceCat 31.5.0（Firefox 自由软件版）缺 BSD 移植的邮件列表问询帖；以及 Glenn Barber 关于 ZFS 旧池残留致启动挂起的博文。（BSD Now EP81，[4728.66-5006.99]，L2）　[订正：原 “Tor Browser Bundle 缺 BSD 版本的移植笔记”（新转写为 GNU IceCat 31.5.0 移植问询帖），2026-09-30 SenseAudio 重转核对]
+- 本期可入档的一手与准一手材料包括：AsiaBSDCon 2015 现场见闻（Dev Summit 与 vendor Summit、NetBSD Developer Summit、运行 NetBSD 的 Dreamcast 展台）；Lawrence Teo 专访（Calyptix 自 2006 年起每周向客户设备自动推送升级，含 LibreSSL 替换与 OpenBSD 本体整版升级）；Miod Vallat 将 OpenBSD versions 文件改回 -current 的提交日志（附仿《回到未来》的提交信息）；OpenSSH 6.8 发布公告；FreeBSD Foundation“FreeBSD from the Trenches”系列 AutoFS 博文；OpenBSD 澳洲 hackathon 报告（Jonathan Gray 的 AMD GPU 与图形工作、Ted Unangst 的虚拟内存层 SMP 工作）；OpenBSD 邮件列表经 SNDIO 与 SSH 端口转发跨网络播放音频 CD 的帖子；openBGPD 分发 PF 表更新的操作文章；GNU IceCat 31.5.0（Firefox 自由软件版）缺 BSD 移植的邮件列表问询帖；以及 Glenn Barber 关于 ZFS 旧池残留致启动挂起的博文。（BSD Now EP81，[4728.66-5006.99]，L2） [订正：原 “Tor Browser Bundle 缺 BSD 版本的移植笔记”（新转写为 GNU IceCat 31.5.0 移植问询帖），2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 
@@ -58,8 +58,8 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **辨析**：
 
-- 安全叙事存在单源与转写双重风险：Teo 以 Michal Zalewski 对各操作系统随机性的可视化研究作为其选择 OpenBSD 的关键论据，属当事人回忆中的单一二手引用（1693.70-1715.22）；HardenedBSD 的完整性强制机制仅有主持人转述，其与 NetBSD Veriexec 的类比、SHA-1/SHA-256 哈希清单机制及未来 X.509 ELF 签名计划均未经他源核证，细节可信度有限。　[存疑脚注] 本次转写专名拼写正确（IntegriForce、Veriexec、Michal Zalewski），但机制描述均为主持人单一转述，待与 HardenedBSD 官方公告核证（BSD Now EP81，[3070.24-3159.92]，L4）　[订正：原 失真对照“IntegraForce/VeraExec/Zalewski 姓名拼写存疑”，2026-09-30 SenseAudio 重转核对]
-- 听众 Robert 的迁移个案为 2015 年 BSD 桌面生态提供正反两面当事人证词：因 PulseAudio 整合混乱与对 systemd 缺乏信心而离开 Linux，PC-BSD 10.1.1 实现硬件即插即用并带来“回到有理智 shell 的类 UNIX 环境”的体验（3817.50-3847.50）；但无线网卡仅 a/b/g 模式、可查文档仅有三年前 wiki 清单，以及大文件拷贝时的内存占用观感问题（后被澄清为 inactive memory 误读），暴露无线驱动支持与内存统计认知层面的生态短板。（BSD Now EP81，[3772.80-3856.78]，L1）　[订正：原 引文段（3793.64-3835.46）及范围起点 [3793.64]，2026-09-30 SenseAudio 重转核对]
+- 安全叙事存在单源与转写双重风险：Teo 以 Michal Zalewski 对各操作系统随机性的可视化研究作为其选择 OpenBSD 的关键论据，属当事人回忆中的单一二手引用（1693.70-1715.22）；HardenedBSD 的完整性强制机制仅有主持人转述，其与 NetBSD Veriexec 的类比、SHA-1/SHA-256 哈希清单机制及未来 X.509 ELF 签名计划均未经他源核证，细节可信度有限。 [存疑脚注] 本次转写专名拼写正确（IntegriForce、Veriexec、Michal Zalewski），但机制描述均为主持人单一转述，待与 HardenedBSD 官方公告核证（BSD Now EP81，[3070.24-3159.92]，L4） [订正：原 失真对照“IntegraForce/VeraExec/Zalewski 姓名拼写存疑”，2026-09-30 SenseAudio 重转核对]
+- 听众 Robert 的迁移个案为 2015 年 BSD 桌面生态提供正反两面当事人证词：因 PulseAudio 整合混乱与对 systemd 缺乏信心而离开 Linux，PC-BSD 10.1.1 实现硬件即插即用并带来“回到有理智 shell 的类 UNIX 环境”的体验（3817.50-3847.50）；但无线网卡仅 a/b/g 模式、可查文档仅有三年前 wiki 清单，以及大文件拷贝时的内存占用观感问题（后被澄清为 inactive memory 误读），暴露无线驱动支持与内存统计认知层面的生态短板。（BSD Now EP81，[3772.80-3856.78]，L1） [订正：原 引文段（3793.64-3835.46）及范围起点 [3793.64]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

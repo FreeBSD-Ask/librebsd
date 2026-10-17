@@ -58,11 +58,11 @@ volume: 第10卷-openbsd的历史
 
 **要点**：
 
-- 2015 年 1 月，荷兰 Deciso 公司工程师 Jos Schellevis 以 OPNsense 核心团队身份受访，说明该项目从 pfSense 分叉的缘由：公司商业产品原以 pfSense 为基础，曾尝试改用 Linux 开发新品线，最终认定 BSD 在既有功能与系统稳定性上更具优势，遂回归 FreeBSD 基座另立门户；项目名取“Open Makes Sense”之意，主张技术结构、社区协作与透明三项原则，认为多数开源项目欠缺工程化的结构约束，单靠个人难以长期维系。　[存疑脚注] 转写将受访者记作 Joss Shellevis、项目记作 OpenSense，当为 Jos Schellevis 与 OPNsense，系依 2015 年 1 月 pfSense 分叉事件链推断（BSD Now EP72，[1395.70-1479.82]，L1）
+- 2015 年 1 月，荷兰 Deciso 公司工程师 Jos Schellevis 以 OPNsense 核心团队身份受访，说明该项目从 pfSense 分叉的缘由：公司商业产品原以 pfSense 为基础，曾尝试改用 Linux 开发新品线，最终认定 BSD 在既有功能与系统稳定性上更具优势，遂回归 FreeBSD 基座另立门户；项目名取“Open Makes Sense”之意，主张技术结构、社区协作与透明三项原则，认为多数开源项目欠缺工程化的结构约束，单靠个人难以长期维系。 [存疑脚注] 转写将受访者记作 Joss Shellevis、项目记作 OpenSense，当为 Jos Schellevis 与 OPNsense，系依 2015 年 1 月 pfSense 分叉事件链推断（BSD Now EP72，[1395.70-1479.82]，L1）
 - OPNsense 的工程路线呈现为对继承物的系统性重构：Captive Portal 已整体重写以摆脱 pfSense 遗留补丁，其余特性逐个迁移；架构上把需要 root 权限的功能移入基于 Phalcon 框架的后端守护进程，PHP 仅保留给无需特权的 Web 前端；发布采取半年周期并配日期版本号与大鸟代号（现版 Ascending Albatross，下一版预告 Rocketing Robin），并强调代号仅为便于用户记忆的参照。（BSD Now EP72，[1767.94-2041.20]，L1）
 - 基座维护策略揭示了分叉项目的上游同步难题：OPNsense 15.1 基于 FreeBSD 10.0，而后者 2015 年 2 月即终止支持，下一代 15.7 却要等到 7 月，期间依靠安全补丁回移维持；系统内建升级走 FreeBSD pkg 包系统，计划结合 pkg audit 实现安全更新的定向强制升级，且明确将快速发布周期置于长期支持方案之前。（BSD Now EP72，[1523.22-1679.90]，L1）
 - 本期新闻记录了 OpenBSD 安全机制的演进节点：将 W^X（同一内存页不可同时可写与可执行）从用户态扩展至内核，使注入代码无法执行而只能触发崩溃，既阻断利用又暴露异常；内核态实现容错空间远小于用户态、调试更难，AMD64 与 SPARC64 因 MMU 硬件支持获得额外优势，技术细节见 CVS 提交。（BSD Now EP72，[515.52-616.44]，L2）
-- 听众问及经多国运输的商业 CD 套装是否可能被情报机构截获篡改，节目转引 OpenBSD 邮件列表回复：常规做法并不拦截替换 CD，且可用 signify 工具校验镜像完整性；Theo de Raadt 戏称 CD 标签以“放射性颜料”印刷、在全球邮政系统中更易寻获（4675.76-4683.92），以反讽回应阴谋式担忧。　[存疑脚注] 转写将校验工具记作 Sinify，当为 signify（OpenBSD 5.5 起引入的签名校验工具），系上下文推断（BSD Now EP72，[4592.50-4692.86]，L2）
+- 听众问及经多国运输的商业 CD 套装是否可能被情报机构截获篡改，节目转引 OpenBSD 邮件列表回复：常规做法并不拦截替换 CD，且可用 signify 工具校验镜像完整性；Theo de Raadt 戏称 CD 标签以“放射性颜料”印刷、在全球邮政系统中更易寻获（4675.76-4683.92），以反讽回应阴谋式担忧。 [存疑脚注] 转写将校验工具记作 Sinify，当为 signify（OpenBSD 5.5 起引入的签名校验工具），系上下文推断（BSD Now EP72，[4592.50-4692.86]，L2）
 - Michael W. Lucas 自述 FreeBSD Mastery: Storage Essentials 的成书动机：自 Absolute FreeBSD 之后，FreeBSD 存储栈经历了 CAM 层接管设备命名、默认分区方案转向 GPT 等重大变化，需要一次自底向上的连贯文档更新；该书从 CAM 与 GEOM 的 provider/consumer 堆叠讲起，对 UFS/FFS 做深度剖析，并论证 UFS 在许多场景仍是恰当工具，而体量庞大的 ZFS 留待单独成书。（BSD Now EP68，[1803.65-1936.66]，L1）
 - 本期新闻聚合呈现 2014 年末 BSD 生态的多线动态：OpenSMTPD 自 OpenBSD 5.6 起成为默认邮件传输代理，sendmail 将于 5.7 完全移除，并发布邮件过滤 API 草案；OpenBSD 自研 httpd 于 5.6 首秀，以特权分离、默认 chroot 与近乎自然语言的配置语法获得早期用户好评；FreeBSD 的 opencrypto 框架在 FreeBSD Foundation 与 Netgate 赞助下加入 AES-ICM/GCM 模式与 AES-NI 支持，修复了一处可伪造消息的时序信息泄露，部分代码借自 OpenBSD 与 NetBSD。（BSD Now EP68，[3695.95-4047.35]，L2）
 - Ted Unangst 自述约 2000 年接触 OpenBSD 并因其稳定性成为用户，此后 11 年担任 OpenBSD 开发者，因提交大规模 VFS 锁修复 diff 而获得 commit 权限。（BSD Now EP23，[728.56-800.12]，L1）
@@ -109,10 +109,10 @@ volume: 第10卷-openbsd的历史
 **辨析**：
 
 - 对比文的定位被主持人辨析为方法论示范：作者声称只列事实、不替读者下结论；主持人补充逐项解读的必要性——FreeBSD 默认关闭项看似更多，但其中不少与具体硬件或使用场景无关（如 SPARC64 相关项），LibreSSL 虽不在 base 却可经 ports 安装，ASLR 等缺口由 HardenedBSD 推进，提醒读者警惕把默认差异直接读成安全优劣。（BSD Now EP68，[899.75-972.29]，L2）
-- 多数开发者在 macOS 虚拟机里跑 FreeBSD、不吃自家狗粮的说法被现场辨析为以偏概全：回答者称因人而异，会议上密集出现的 MacBook 多是随身笔记本而非主力开发机，内核开发者用虚拟机是为了崩溃不伤及工作环境，且 pkg 二进制包与 PC-BSD 月度快照正在改变桌面化程度；此说仅有与会者个体见闻支撑，宜存疑对待。　[存疑脚注] 开发者主力系统构成仅有节目参与者个体见闻支撑，无统计来源；转写专名多处失真（如 Henning Brauer 作 Brower、Kirk McKusick 作 McCuse/McKenzie、Poul-Henning Kamp 作 Paul Henning Kamp），语义尚可辨识。（BSD Now EP68，[4993.72-5073.89]，L4）
-- 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。　[存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1312.30-1659.90]，L4） [订正：原 [1615.30-1651.60]，2026-09-30 SenseAudio 重转核对]
-- FreeBSD Journal 创刊号当时尚待 Apple 应用商店审批；编委会名单与创刊内容为当事人及主持人转述，需与创刊号目录核对。　[存疑脚注] 创刊号上线时间与目录以出版方最终发布为准，需交叉验证。（BSD Now EP22，[1790.86-1816.90]，L4）
-- OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。　[存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
+- 多数开发者在 macOS 虚拟机里跑 FreeBSD、不吃自家狗粮的说法被现场辨析为以偏概全：回答者称因人而异，会议上密集出现的 MacBook 多是随身笔记本而非主力开发机，内核开发者用虚拟机是为了崩溃不伤及工作环境，且 pkg 二进制包与 PC-BSD 月度快照正在改变桌面化程度；此说仅有与会者个体见闻支撑，宜存疑对待。 [存疑脚注] 开发者主力系统构成仅有节目参与者个体见闻支撑，无统计来源；转写专名多处失真（如 Henning Brauer 作 Brower、Kirk McKusick 作 McCuse/McKenzie、Poul-Henning Kamp 作 Paul Henning Kamp），语义尚可辨识。（BSD Now EP68，[4993.72-5073.89]，L4）
+- 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。 [存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1312.30-1659.90]，L4） [订正：原 [1615.30-1651.60]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD Journal 创刊号当时尚待 Apple 应用商店审批；编委会名单与创刊内容为当事人及主持人转述，需与创刊号目录核对。 [存疑脚注] 创刊号上线时间与目录以出版方最终发布为准，需交叉验证。（BSD Now EP22，[1790.86-1816.90]，L4）
+- OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。 [存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
 
 **文献**：
 

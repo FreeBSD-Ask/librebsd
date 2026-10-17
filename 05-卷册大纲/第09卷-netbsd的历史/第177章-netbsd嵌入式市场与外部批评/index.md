@@ -69,7 +69,7 @@ volume: 第09卷-netbsd的历史
 
 **史料**：
 
-- 本期为 BSDCan 2026 周六流的多场一手口述：Allan Jude 报告 anyRAID 设计并致谢 Klara 团队成员 Paul 的实现，及 Brian Behlendorf、Alexander Motin、Tony Hutter、Alec Pinchek 等评审，提及上年十月 ZFS 开发者峰会上的早期报告与 Seagate 就元件级故障盘用例的接洽；Brooks Davis 给出 CHERI 研究中心站点、IEEE 安全与隐私杂志特刊获奖综述、CHERI ISA v9 技术报告与 RISC-V Y 架构批准草案等文献线索；Kirk McKusick 以 mmap 系统调用系列用例演示扩展错误并指向第九节手册页 xerror；Warner 自述 FreeBSD 15.0 RC 阶段引导挂起的定位过程，称在晚餐前的 LLM 会话中发现引导装载器 staging 区域地址被编码进页表，移动四十行代码即修复；另有 FreeBSD Foundation 实习生报告 AMD ROCm 原生移植的 LLVM 改动上游化与 KFD 移植进展，以及一位开发者报告其树莓派公共 NTP 服务每秒 213 次请求、日均约 1800 万客户端。　[考据脚注] 本流转写为多场演讲音频交错合并，企业与项目名存在系统性音变（如 Klara、CHERI、Acorn 等拼写），人名多为转写音变形态；引用名单、数字前须与会议官方议程、OpenZFS 代码评审记录交叉核对。（YouTube EPmZ-dhntnkCQ，[3235.2-3259.52]，L3）
+- 本期为 BSDCan 2026 周六流的多场一手口述：Allan Jude 报告 anyRAID 设计并致谢 Klara 团队成员 Paul 的实现，及 Brian Behlendorf、Alexander Motin、Tony Hutter、Alec Pinchek 等评审，提及上年十月 ZFS 开发者峰会上的早期报告与 Seagate 就元件级故障盘用例的接洽；Brooks Davis 给出 CHERI 研究中心站点、IEEE 安全与隐私杂志特刊获奖综述、CHERI ISA v9 技术报告与 RISC-V Y 架构批准草案等文献线索；Kirk McKusick 以 mmap 系统调用系列用例演示扩展错误并指向第九节手册页 xerror；Warner 自述 FreeBSD 15.0 RC 阶段引导挂起的定位过程，称在晚餐前的 LLM 会话中发现引导装载器 staging 区域地址被编码进页表，移动四十行代码即修复；另有 FreeBSD Foundation 实习生报告 AMD ROCm 原生移植的 LLVM 改动上游化与 KFD 移植进展，以及一位开发者报告其树莓派公共 NTP 服务每秒 213 次请求、日均约 1800 万客户端。 [考据脚注] 本流转写为多场演讲音频交错合并，企业与项目名存在系统性音变（如 Klara、CHERI、Acorn 等拼写），人名多为转写音变形态；引用名单、数字前须与会议官方议程、OpenZFS 代码评审记录交叉核对。（YouTube EPmZ-dhntnkCQ，[3235.2-3259.52]，L3）
 
 **史观**：
 
@@ -77,7 +77,7 @@ volume: 第09卷-netbsd的历史
 
 **辨析**：
 
-- Brooks Davis 自认 RISC-V Y 架构批准时点“我们已经说了好一阵子”，提示其 FreeBSD 16 时间表属目标性陈述而非承诺，引用时不宜当作既成事实；另据 Warner 自述，RC 阶段引导问题的 LLM 辅助调试“省下约一周、成本三美元”系个人估计，无独立记录可验。　[存疑脚注] LLM 辅助调试所省时间与成本为讲者单方估计；RISC-V Y 批准时点为目标性陈述，转写中 15.0 RC 版本号写作 150.1 RC3，精确版本待核官方发布记录。（YouTube EPmZ-dhntnkCQ，[18894.56-18907.04]，L4）
+- Brooks Davis 自认 RISC-V Y 架构批准时点“我们已经说了好一阵子”，提示其 FreeBSD 16 时间表属目标性陈述而非承诺，引用时不宜当作既成事实；另据 Warner 自述，RC 阶段引导问题的 LLM 辅助调试“省下约一周、成本三美元”系个人估计，无独立记录可验。 [存疑脚注] LLM 辅助调试所省时间与成本为讲者单方估计；RISC-V Y 批准时点为目标性陈述，转写中 15.0 RC 版本号写作 150.1 RC3，精确版本待核官方发布记录。（YouTube EPmZ-dhntnkCQ，[18894.56-18907.04]，L4）
 
 **文献**：
 

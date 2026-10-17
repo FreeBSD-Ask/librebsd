@@ -152,7 +152,7 @@ volume: 第18卷-全球社区地区bsd史
 - Sedlacik 阐明会议的社交功能：把名字对应到面孔以提升日后邮件与讨论的沟通效率，让开发者偶尔从用户视角审视系统；并明确欢迎 FreeBSD、OpenBSD 乃至 OpenSolaris 与 Linux 开发者分享经验，往届已有 FreeBSD ports 开发者与会，跨阵营互鉴被列为会议目标。（BSDTalk EP100，[126.92-284.2]，L1）
 - 其个人路径完全由动手实践铺就：约 2000 年为替代手头打包方案而在同事的旧工作站上接触 NetBSD 并喜欢 pkgsrc；为加密会议软件 SILC 创建其首批 pkgsrc 包；继而在 Solaris 平台使用 pkgsrc 并做通用缺陷修复，2002 年因持续提交缺陷报告与补丁被开发者接纳转正。（BSDTalk EP100，[504.36-591.88]，L1）
 - 其现职揭示 pkgsrc 制度化运作的两翼：release engineering 负责维护稳定分支，安全团队负责修复已知漏洞并逐一通知维护者更新包，加之个人维护数十个包；2008 年会址柏林仅为暂定，取决于本地开发者能否落实场地。（BSDTalk EP100，[591.88-646.2]，L1）
-- OpenCon 是全球唯一专门面向 OpenBSD 的会议，2007 年在威尼斯机场附近酒店举行（与上年同址）；本届首次增设周五教程日，设 packet filter、OpenBSD ports 与 OpenBSD 可用 VPN 技术三场教程，讲者多为 OpenBSD 开发者；周六周日为多主题演讲马拉松。（BSDTalk EP133，[52.34-112.8]，L1）　[订正：原 52.34-104.13，2026-09-29 SenseAudio 重转核对]
+- OpenCon 是全球唯一专门面向 OpenBSD 的会议，2007 年在威尼斯机场附近酒店举行（与上年同址）；本届首次增设周五教程日，设 packet filter、OpenBSD ports 与 OpenBSD 可用 VPN 技术三场教程，讲者多为 OpenBSD 开发者；周六周日为多主题演讲马拉松。（BSDTalk EP133，[52.34-112.8]，L1） [订正：原 52.34-104.13，2026-09-29 SenseAudio 重转核对]
 - 会议日程与发布节奏耦合：OpenBSD 4.2 定于 2007 年 11 月 1 日发布，OpenCon 于 12 月首个周末举行，届时与会者多已用上 4.2，现场可购 CD-ROM，讲者可将 4.2 新特性纳入演讲；发布切分在会前数月已完成，开发已转入 -current，因而演讲更多面向更新的事物。（BSDTalk EP133，[132.66-179.11]，L1）
 - 预告的技术演讲包括：瑞士 OpenBSD 开发者 Claudio Jeker 讲 OSPF6 守护进程（IPv6 的 OSPF 路由协议），以及关于 OpenBSD 4.2 缓冲区缓存改进的演讲等。（BSDTalk EP133，[179.58-217.60]，L1）
 - 社区庆典与经济安排：周六晚举办 OpenSSH 八周年生日派对（OpenSSH 生于 1999 年 10 月，2007 年满八岁），周五晚设酒吧非正式聚会以促进与会者与开发者交流构想；会议与教程全免费、无入场费，成本由组织者承担，午餐需自购、派对收少量费用；会议不做录像录音，理由是人们应当亲临现场。（BSDTalk EP133，[226.47-315.13]，L1）
@@ -211,7 +211,7 @@ volume: 第18卷-全球社区地区bsd史
 - 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[735.3-2775.0]，L1）[订正：原 [745.78-2774.92]，2026-10-01 SenseAudio 重转核对]
 - 本期指向的一手材料包括 pkgsrccon.org 网站与历届演讲幻灯片存档、pkgsrcCon 2007 的注册与日程记录，以及 SILC 客户端与服务器在 pkgsrc 中的首批打包成果，后者可作 pkgsrc 跨平台打包实践的实物证据。（BSDTalk EP100，[504.36-710.16]，L1）
-- OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-196.4]，L1）　[订正：原 122.61-179.11，2026-09-29 SenseAudio 重转核对]
+- OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-196.4]，L1） [订正：原 122.61-179.11，2026-09-29 SenseAudio 重转核对]
 - OpenSSH 诞生时间线的社区纪念证据：2007 年 10 月前后社区庆祝其八周岁生日，与 1999 年 10 月首次发布相互印证。（BSDTalk EP133，[226.47-238.75]，L1）
 - Wireless Leiden 全城 FreeBSD 无线社区网络及其节点工厂实践；Open Community Camp 2008（2008-08-10 至 17，荷兰）与 opencommunitycamp.org；Cobalt RaQ 2 硬件、Sun 收购停产背景与 NetBSD cobalt 移植及 restore CD netboot 流程。（BSDTalk EP137，[34.27-760.35]，L1）
 - 该期提及的一手线索包括：Internet Watch Foundation 提供的匿名下架数据；多家下架公司向研究者共享的钓鱼站数据；AA419 与 CastleCops 骗局举报库；WikiLeaks 发布的英国邮编表；escrow.com 真实托管公司的宣传文本；Light Blue Touchpaper 博客与 Clayton 个人网页所载论文原始版本；本场 EuroBSDCon 2009 演讲幻灯片与现场演示站点（K1D1NX.eu、lof80.info、Alice.it、T35.com 等）。（BSDTalk EP178，[86.2-4104.2]，L1）[订正：原 [3974.7-3983.7]，2026-09-29 SenseAudio 重转核对]
@@ -256,24 +256,24 @@ volume: 第18卷-全球社区地区bsd史
 
 **辨析**：
 
-- 转写将受访者姓名记为 Niklas Seising 与 Nicholas Seizing 两种拼法，且分段时间戳明显乱序；依据上下文应为 FreeBSD 图形团队成员 Niclas Zeising，但本卡片保留转写原拼写。　[存疑脚注] 受访者姓名拼写未经一手核对，且该期转写质量较差、时间戳乱序。（BSD Now EP283，[52.96-57.04]，L4）
-- 受访者关于图形栈“基本可用”的自我评估带有当事人立场，且其承认与 Windows、macOS 存在差距、挂起与交换分区交互存在偶发冻结，须与版本发布记录与社区测试报告交叉验证。　[存疑脚注] 具体故障复现与修复状态未能从本期转写确认。（BSD Now EP283，[451.52-557.74]，L3）
-- 主持人称微软的 DTrace 移植“未从 illumos 上游起步而是自 FreeBSD 版本开始”，此谱系判断须以微软官方实现与代码署名核实。　[存疑脚注] DTrace Windows 移植的具体代码来源未经一手仓库核对。（BSD Now EP269，[3451.40-3460.96]，L4）
-- [存疑脚注] ZFS 原生加密的 scrub 无需密钥、校验和字段拆分等技术细节来自主持人对移植工作的转述，须对照 OpenZFS 官方设计与 ZFS on Linux 提交说明核验。　[存疑脚注] ZFS 加密细节须对照 OpenZFS 设计说明核验。（BSD Now EP260，[1295.22-1330.54]，L4）
-- [考据脚注] 本期为旅行纪实，Essen 至剑桥的行程与时间线由主持人口述，可能与实际日程存在记忆偏差；具体活动日期须以活动公告与会议记录核对。　[考据脚注] 行程时间线须与活动公告核对。（BSD Now EP260，[679.06-741.34]，L4）
-- [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。　[存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
-- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
-- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
-- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[828.4-869.3]，L4）[订正：原 [843.16-869.18]，2026-10-01 SenseAudio 重转核对]
-- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1883.2-1961.6]，L4）[订正：原 [1898.98-1948.24]，2026-10-01 SenseAudio 重转核对]
-- 转写将讲者姓名识别为 Lubimir Sidlogic，应为 NetBSD/pkgsrc 开发者 Lubomir Sedlacik；“第四届”与“四年前始于维也纳”系约数表述，历届城市序列与首办年份须以 pkgsrccon.org 存档核对；另有若干设备与软件名因语音识别损坏无法复原。　[存疑脚注] 讲者姓名与历届会议序列均系 ASR 转写产物，存在识别损坏，采用前须以官方存档交叉核验（BSDTalk EP100，[286.8-304.04]，L4）
-- 转写人名讹误集中且部分不可辨识：Mark Balmer 应为 Marc Balmer，Peter Hanschke 应为 Peter Hansteen，Bernd Edler 疑为 Bernd Ahlers，Felix Krullinger 应为 Felix Kronlage，Claudio Jäger 应为 Claudio Jeker，缓冲区缓存讲者讹作 Miki Shalev 无法辨识，soft raid 讲者转写作 Teju（拼写存疑）；上述均须以 OpenCon 2007 官方日程核证。　[存疑脚注] 人名与讲题经上下文推断校正或无法辨识，须回溯会议官方日程（BSDTalk EP133，[38.1-215.9]，L4）　[订正：原 79.69-217.60，2026-09-29 SenseAudio 重转核对]
-- 转写称 OpenCon 已“第四次在威尼斯举办”且本届“与上年同址”，两种表述一致，OpenCon 2006 等历届会址仍无法由本期单独确证，须以历届 OpenCon 会址记录核证。　[存疑脚注] 会址沿革待历届会议记录核证（BSDTalk EP133，[59.2-129.4]，L4）　[订正：原 59.18-118.05，2026-09-29 SenseAudio 重转核对]
-- 转写讹误较多：Martin Feen 应为 Marten Vijn，wireless lighting 应为 Wireless Leiden，free B C 应为 FreeBSD，lag 应为 lagg(4)，Cobalt Rack Two 应为 Cobalt RaQ 2，OP Community Camp 应为 Open Community Camp，alpha.communitycamp.org 应为 opencommunitycamp.org，higher scouting camp 应为 scouting camp（童军营地）之讹，组织基金会名 wireshark dot org foundation 仍不可辨。　[存疑脚注] 人名、项目名与地点经上下文推断校正，部分无法辨识，须以 OCC 与 Wireless Leiden 官方存档核证（BSDTalk EP137，[213.0-742.5]，L4）[订正：原 [211.22-736.35]，讹误清单依重转更新（Ust-East、Gen2、OpenOSPS 等重转已辨明为 Utrecht、Gentoo、openospfd），2026-09-29 SenseAudio 重转核对]
-- 历届出席人数（首届约 50 人、上届约 40 人）为组织者记忆性陈述，无独立佐证，须与 OCC 历届站点或报告核证。　[存疑脚注] 记忆性数字，待外部核证（BSDTalk EP137，[704.55-722.63]，L4）
-- 2026-09-29 SenseAudio 重转为线性完整叙事，原转写段序“两路交错”问题已消解；专名重辨：money mule 与 Westwood Freight Limited in Dartford in Kent（Dartford, Kent）均已明确，声誉站名 LuxCup 与假托管站名拼写仍未经原始幻灯片核对；Rockphish 现行名演讲者自述谨慎使用；涉及第三方犯罪行为的指控（假货运克隆真公司、假银行抄袭东亚银行文本等）均为演讲者现场演示所见，引用时应以存档网页为准。　[存疑脚注] 上述专名复原与涉案网站事实均无法在本期转写内独立验证，须对照演讲幻灯片与研究者论文。（BSDTalk EP178，[0.0-40.0]，L4）[订正：原 “转写段序呈两路交错、money email 应为 money mule、Dart and Fiddling Kent 疑为 Dartford, Kent”等说明，2026-09-29 SenseAudio 重转核对]
-- 本集为会前预告性质访谈，所列平行会议（FreeBSD summit、PC-BSD 开发峰会、release engineering 正式会议）均属计划性陈述，其实际召开情况与议程落实须以会后存档、会议纪要等独立材料交叉验证。　[存疑脚注] 预告性陈述而非既成事实，采信须待会后材料印证（BSDTalk EP198，[552.46-588.46]，L5）
-- 转写人名严重失真：受访者姓名在转写中呈现多种变体，Claudio Jeker、Henning Brauer 等开发者名均被误转；开场关于 PC-BSD 被收购的新闻仅一句且转写破损，本卡片未采信该事件。[存疑脚注] 本卡片人名均已按公开通行拼写修正，引用时需与原始音频核对。　[存疑脚注] 转写人名失真，开发者合作者拼写依据公开资料推定（BSDTalk EP76，[53.86-60.86]，L4）
+- 转写将受访者姓名记为 Niklas Seising 与 Nicholas Seizing 两种拼法，且分段时间戳明显乱序；依据上下文应为 FreeBSD 图形团队成员 Niclas Zeising，但本卡片保留转写原拼写。 [存疑脚注] 受访者姓名拼写未经一手核对，且该期转写质量较差、时间戳乱序。（BSD Now EP283，[52.96-57.04]，L4）
+- 受访者关于图形栈“基本可用”的自我评估带有当事人立场，且其承认与 Windows、macOS 存在差距、挂起与交换分区交互存在偶发冻结，须与版本发布记录与社区测试报告交叉验证。 [存疑脚注] 具体故障复现与修复状态未能从本期转写确认。（BSD Now EP283，[451.52-557.74]，L3）
+- 主持人称微软的 DTrace 移植“未从 illumos 上游起步而是自 FreeBSD 版本开始”，此谱系判断须以微软官方实现与代码署名核实。 [存疑脚注] DTrace Windows 移植的具体代码来源未经一手仓库核对。（BSD Now EP269，[3451.40-3460.96]，L4）
+- [存疑脚注] ZFS 原生加密的 scrub 无需密钥、校验和字段拆分等技术细节来自主持人对移植工作的转述，须对照 OpenZFS 官方设计与 ZFS on Linux 提交说明核验。 [存疑脚注] ZFS 加密细节须对照 OpenZFS 设计说明核验。（BSD Now EP260，[1295.22-1330.54]，L4）
+- [考据脚注] 本期为旅行纪实，Essen 至剑桥的行程与时间线由主持人口述，可能与实际日程存在记忆偏差；具体活动日期须以活动公告与会议记录核对。 [考据脚注] 行程时间线须与活动公告核对。（BSD Now EP260，[679.06-741.34]，L4）
+- [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。 [存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
+- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。 [存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
+- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。 [存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
+- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。 [存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[828.4-869.3]，L4）[订正：原 [843.16-869.18]，2026-10-01 SenseAudio 重转核对]
+- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。 [存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1883.2-1961.6]，L4）[订正：原 [1898.98-1948.24]，2026-10-01 SenseAudio 重转核对]
+- 转写将讲者姓名识别为 Lubimir Sidlogic，应为 NetBSD/pkgsrc 开发者 Lubomir Sedlacik；“第四届”与“四年前始于维也纳”系约数表述，历届城市序列与首办年份须以 pkgsrccon.org 存档核对；另有若干设备与软件名因语音识别损坏无法复原。 [存疑脚注] 讲者姓名与历届会议序列均系 ASR 转写产物，存在识别损坏，采用前须以官方存档交叉核验（BSDTalk EP100，[286.8-304.04]，L4）
+- 转写人名讹误集中且部分不可辨识：Mark Balmer 应为 Marc Balmer，Peter Hanschke 应为 Peter Hansteen，Bernd Edler 疑为 Bernd Ahlers，Felix Krullinger 应为 Felix Kronlage，Claudio Jäger 应为 Claudio Jeker，缓冲区缓存讲者讹作 Miki Shalev 无法辨识，soft raid 讲者转写作 Teju（拼写存疑）；上述均须以 OpenCon 2007 官方日程核证。 [存疑脚注] 人名与讲题经上下文推断校正或无法辨识，须回溯会议官方日程（BSDTalk EP133，[38.1-215.9]，L4） [订正：原 79.69-217.60，2026-09-29 SenseAudio 重转核对]
+- 转写称 OpenCon 已“第四次在威尼斯举办”且本届“与上年同址”，两种表述一致，OpenCon 2006 等历届会址仍无法由本期单独确证，须以历届 OpenCon 会址记录核证。 [存疑脚注] 会址沿革待历届会议记录核证（BSDTalk EP133，[59.2-129.4]，L4） [订正：原 59.18-118.05，2026-09-29 SenseAudio 重转核对]
+- 转写讹误较多：Martin Feen 应为 Marten Vijn，wireless lighting 应为 Wireless Leiden，free B C 应为 FreeBSD，lag 应为 lagg(4)，Cobalt Rack Two 应为 Cobalt RaQ 2，OP Community Camp 应为 Open Community Camp，alpha.communitycamp.org 应为 opencommunitycamp.org，higher scouting camp 应为 scouting camp（童军营地）之讹，组织基金会名 wireshark dot org foundation 仍不可辨。 [存疑脚注] 人名、项目名与地点经上下文推断校正，部分无法辨识，须以 OCC 与 Wireless Leiden 官方存档核证（BSDTalk EP137，[213.0-742.5]，L4）[订正：原 [211.22-736.35]，讹误清单依重转更新（Ust-East、Gen2、OpenOSPS 等重转已辨明为 Utrecht、Gentoo、openospfd），2026-09-29 SenseAudio 重转核对]
+- 历届出席人数（首届约 50 人、上届约 40 人）为组织者记忆性陈述，无独立佐证，须与 OCC 历届站点或报告核证。 [存疑脚注] 记忆性数字，待外部核证（BSDTalk EP137，[704.55-722.63]，L4）
+- 2026-09-29 SenseAudio 重转为线性完整叙事，原转写段序“两路交错”问题已消解；专名重辨：money mule 与 Westwood Freight Limited in Dartford in Kent（Dartford, Kent）均已明确，声誉站名 LuxCup 与假托管站名拼写仍未经原始幻灯片核对；Rockphish 现行名演讲者自述谨慎使用；涉及第三方犯罪行为的指控（假货运克隆真公司、假银行抄袭东亚银行文本等）均为演讲者现场演示所见，引用时应以存档网页为准。 [存疑脚注] 上述专名复原与涉案网站事实均无法在本期转写内独立验证，须对照演讲幻灯片与研究者论文。（BSDTalk EP178，[0.0-40.0]，L4）[订正：原 “转写段序呈两路交错、money email 应为 money mule、Dart and Fiddling Kent 疑为 Dartford, Kent”等说明，2026-09-29 SenseAudio 重转核对]
+- 本集为会前预告性质访谈，所列平行会议（FreeBSD summit、PC-BSD 开发峰会、release engineering 正式会议）均属计划性陈述，其实际召开情况与议程落实须以会后存档、会议纪要等独立材料交叉验证。 [存疑脚注] 预告性陈述而非既成事实，采信须待会后材料印证（BSDTalk EP198，[552.46-588.46]，L5）
+- 转写人名严重失真：受访者姓名在转写中呈现多种变体，Claudio Jeker、Henning Brauer 等开发者名均被误转；开场关于 PC-BSD 被收购的新闻仅一句且转写破损，本卡片未采信该事件。[存疑脚注] 本卡片人名均已按公开通行拼写修正，引用时需与原始音频核对。 [存疑脚注] 转写人名失真，开发者合作者拼写依据公开资料推定（BSDTalk EP76，[53.86-60.86]，L4）
 
 **文献**：
 

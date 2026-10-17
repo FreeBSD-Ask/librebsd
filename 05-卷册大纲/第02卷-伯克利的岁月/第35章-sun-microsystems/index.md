@@ -82,8 +82,8 @@ volume: 第02卷-伯克利的岁月
 
 **辨析**：
 
-- Hacker News 评论为匿名用户自述，Ford Aerospace、3Com UNET 与 Nagle 算法的具体关联须以更多独立来源交叉验证。　[存疑脚注] 早期 TCP/IP 口述为匿名评论经节目转述，未经多源交叉验证。（BSD Now EP552，[2710.40-2874.60]，L4）
-- iXsystems 转向 Linux 的时间线与版本计划来自记者报道与 Reddit 上 Chris Moore 的帖子，须以官方公告核实。　[存疑脚注] TrueNAS 路线信息来自记者报道与社区帖文，未经官方公告核实。（BSD Now EP552，[948.50-1000.66]，L4）
+- Hacker News 评论为匿名用户自述，Ford Aerospace、3Com UNET 与 Nagle 算法的具体关联须以更多独立来源交叉验证。 [存疑脚注] 早期 TCP/IP 口述为匿名评论经节目转述，未经多源交叉验证。（BSD Now EP552，[2710.40-2874.60]，L4）
+- iXsystems 转向 Linux 的时间线与版本计划来自记者报道与 Reddit 上 Chris Moore 的帖子，须以官方公告核实。 [存疑脚注] TrueNAS 路线信息来自记者报道与社区帖文，未经官方公告核实。（BSD Now EP552，[948.50-1000.66]，L4）
 
 **文献**：
 

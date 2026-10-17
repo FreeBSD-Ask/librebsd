@@ -51,7 +51,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **史料**：
 
-- 本期可取证的一手材料包括：OpenBSD c2k15 卡尔加里黑客松与会者亲笔汇报（含 Jasper 的 OpenBSD sed -I 旗标落地与 ports 清理、Anton 的 rcctl ls 子命令与 rc.d 多实例改写、Stefan Sperling 的无线驱动调试与 tcpdump 802.11 元数据解析、Ken Westerback 的 4K 扇区代码合入与触控板修复、Jonathan Gray 的 Mesa 与 libDRM 更新及后台模糊测试）、FreeBSD 2015 年 4 至 6 月季度状态报告（SVN 镜像 GeoDNS 化、Phabricator 评审系统、Linux 模拟层 64 位支持、多路径 TCP 与斯威本科技大学合作、ZFS UEFI 引导补丁）、第十届 pkgsrcCon 柏林会议视频记录，以及 Kevin、Logan、Peter、Randy 四封听众来信。　[存疑脚注] 个别人名经语音转写失真（如 DragonFly ACPI 开发者记为“Sefi”、NetBSD 新晋提交者记为“refowls alamona”、Linux 模拟层贡献者记为“Dshengen”），引用具体人名前须对照 BSD Now 第 100 期官网 shownotes 或原始汇报核对（BSD Now EP100，[543.78-1755.32]，L1）
+- 本期可取证的一手材料包括：OpenBSD c2k15 卡尔加里黑客松与会者亲笔汇报（含 Jasper 的 OpenBSD sed -I 旗标落地与 ports 清理、Anton 的 rcctl ls 子命令与 rc.d 多实例改写、Stefan Sperling 的无线驱动调试与 tcpdump 802.11 元数据解析、Ken Westerback 的 4K 扇区代码合入与触控板修复、Jonathan Gray 的 Mesa 与 libDRM 更新及后台模糊测试）、FreeBSD 2015 年 4 至 6 月季度状态报告（SVN 镜像 GeoDNS 化、Phabricator 评审系统、Linux 模拟层 64 位支持、多路径 TCP 与斯威本科技大学合作、ZFS UEFI 引导补丁）、第十届 pkgsrcCon 柏林会议视频记录，以及 Kevin、Logan、Peter、Randy 四封听众来信。 [存疑脚注] 个别人名经语音转写失真（如 DragonFly ACPI 开发者记为“Sefi”、NetBSD 新晋提交者记为“refowls alamona”、Linux 模拟层贡献者记为“Dshengen”），引用具体人名前须对照 BSD Now 第 100 期官网 shownotes 或原始汇报核对（BSD Now EP100，[543.78-1755.32]，L1）
 - 本期对 Antti Kantee 的当事人访谈自述，他是 NetBSD 开发者、puffs 与 rump kernel 的亲历者。（BSD Now EP8，[820.66-2627.78]，L1）
 - puffs 用户态文件系统框架与 rump kernel 源码仓库及其一键脚本，是验证其设计演化的直接来源。（BSD Now EP8，[2532.42-2567.18]，L3）
 - NetBSD 项目在多架构上运行的持续自动化测试体系，是 rump kernel 项目内用途的交叉验证来源。（BSD Now EP8，[2432.80-2518.18]，L3）
@@ -69,9 +69,9 @@ volume: 第04卷-大分裂与四大bsd的诞生
 **辨析**：
 
 - 所谓“OpenSSH 允许放大密码爆破次数且不留异常日志”的传闻，经排查定位于 PAM 而非 OpenSSH 本体：OpenSSH 开发者声明其实现无此问题，FreeBSD 因默认配置启用 PAM 成为唯一已知受影响系统并先行修补，其余 BSD 不受影响，OpenSSH 随后在 7.0 加入防护，临时缓解只需在 sshd 配置中关闭密码认证。安全事件中的归因常被外围叙事倒置，须以源社区声明与补丁投放记录为准。（BSD Now EP100，[1785.52-1929.64]，L2）
-- [存疑脚注] 新转写已将人名正确写作 Antti Kantee，但 rump kernel 仍被转写为 Ramp kernel；本卡片据 NetBSD 史实判定为 Antti Kantee 与 rump kernel。　[存疑脚注] 人名与技术术语转写错误（BSD Now EP8，[3.00-31.20]，L4）[订正：原 转写变体 Antti Conte、auntie conty 已不出现且 [1.00-8.96]，2026-09-30 SenseAudio 重转核对]
-- [存疑脚注] 转写将发生在用户态的事留在用户态一语归于 Todd McWilling，说话者姓名可能失真，须以原始音频核实出处。　[存疑脚注] 引用归属转写可能失真（BSD Now EP8，[1717.76-1726.04]，L4）
-- [存疑脚注] 每实例数 MB、启动低于 100 毫秒等开销数字为当事人估计值而非基准测试结果，引用时须标注其估算性质。　[存疑脚注] 开销数字为当事人估计值（BSD Now EP8，[1869.28-1963.48]，L4）
+- [存疑脚注] 新转写已将人名正确写作 Antti Kantee，但 rump kernel 仍被转写为 Ramp kernel；本卡片据 NetBSD 史实判定为 Antti Kantee 与 rump kernel。 [存疑脚注] 人名与技术术语转写错误（BSD Now EP8，[3.00-31.20]，L4）[订正：原 转写变体 Antti Conte、auntie conty 已不出现且 [1.00-8.96]，2026-09-30 SenseAudio 重转核对]
+- [存疑脚注] 转写将发生在用户态的事留在用户态一语归于 Todd McWilling，说话者姓名可能失真，须以原始音频核实出处。 [存疑脚注] 引用归属转写可能失真（BSD Now EP8，[1717.76-1726.04]，L4）
+- [存疑脚注] 每实例数 MB、启动低于 100 毫秒等开销数字为当事人估计值而非基准测试结果，引用时须标注其估算性质。 [存疑脚注] 开销数字为当事人估计值（BSD Now EP8，[1869.28-1963.48]，L4）
 
 **文献**：
 

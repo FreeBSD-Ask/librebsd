@@ -36,7 +36,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 98.10 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）（2026-09-11 整改按磁盘实况 98.10 归位，三次重复合并为一节）
 
-- 要点：【批评层】Linus Torvalds 曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 “incompetent idiots”（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 “Alan Cox” 实〔存疑：原文截断，待考；2026-09-11 联网核验：语录一手出处为 Torvalds 2006-04-20 致 LKML 邮件 “Re: Linux 2.6.17-rc2”（针对 FreeBSD zero-copy COW 页表方案的批评），帖内未见 Alan Cox 参与〕　[存疑脚注] “incompetent idiots” 语录原文经 comp.unix.bsd.freebsd.misc 新闻组存档转载（含邮件头 From: Linus Torvalds, Subject: Re: Linux 2.6.17-rc2, Date: 2006-04-20）与 LWN 2008-02-12 报道转引双重核验，LKML 官方存档原始链接待补。（2026-09-11 整改补标）
+- 要点：【批评层】Linus Torvalds 曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 “incompetent idiots”（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 “Alan Cox” 实〔存疑：原文截断，待考；2026-09-11 联网核验：语录一手出处为 Torvalds 2006-04-20 致 LKML 邮件 “Re: Linux 2.6.17-rc2”（针对 FreeBSD zero-copy COW 页表方案的批评），帖内未见 Alan Cox 参与〕 [存疑脚注] “incompetent idiots” 语录原文经 comp.unix.bsd.freebsd.misc 新闻组存档转载（含邮件头 From: Linus Torvalds, Subject: Re: Linux 2.6.17-rc2, Date: 2006-04-20）与 LWN 2008-02-12 报道转引双重核验，LKML 官方存档原始链接待补。（2026-09-11 整改补标）
 - 总纲第 3 条——不存在进步，只有权力再分配，性能回撤为可扩展性的代价。
   - 文献：SMPng 文档 ［A］；KSE 文档；7.0 发行说明 ［A］；Roberson 2003; 基准测试 ［A］
 

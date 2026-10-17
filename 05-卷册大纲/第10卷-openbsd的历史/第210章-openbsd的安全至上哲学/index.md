@@ -118,7 +118,7 @@ volume: 第10卷-openbsd的历史
 - Wendell 访谈自述（BSD Now EP189，[4340.92-6064.62]，L1）
 - Ted Unangst 的 YubiKey 使用博客（BSD Now EP189，[6182.44-6225.48]，L1）
 - 当事人一手口述的 OpenBSD 入坑节点：1995 年 Theo 在 FTP 站点发布首个 SPARC 内核；同期并行接触 386BSD 与 Linux 的个人编年，可作项目早期传播路径的私人证词。（BSDTalk EP229，[101.89-135.72]，L1）
-- 当事人转述的学术证据：某届 USENIX 会议论文以自制断电电路测试闪存盘写入可靠性，得出十五盘中十三盘受损或失效的结论；论文未给出题名与作者，需回溯检索原文献。　[存疑脚注] 当事人转述未提供论文题名作者与年份，引用前须检索 USENIX 原文核验（BSDTalk EP229，[219.77-241.69]，L2）
+- 当事人转述的学术证据：某届 USENIX 会议论文以自制断电电路测试闪存盘写入可靠性，得出十五盘中十三盘受损或失效的结论；论文未给出题名与作者，需回溯检索原文献。 [存疑脚注] 当事人转述未提供论文题名作者与年份，引用前须检索 USENIX 原文核验（BSDTalk EP229，[219.77-241.69]，L2）
 - flashdist、flashboot、flashrd 三代工具的演进序列与 flashrd 2009 年发布时点，及 NSH 的 SQLite 状态库设计细节，均为开发者本人自述的一手项目史。（BSDTalk EP229，[580.65-728.39]，L1）
 - 本期可作为 SysJail 早期史的一手物证：项目版本 SysJail 1.03、以 sysjail 隔离 Apache 的 BSD.LV 自用站点（2006 年 8 月约四万次点击）、提交 Freshmeat 的公告被拒、Daemon News 刊出的测试征集、德国媒体的报道、OpenBSD 3.9 磁盘镜像高负载内核 panic 的补丁记录，以及节目开头播报的 BSD 认证组织社区调查结果发布与 OpenBSD 4.0 预购开放。（BSDTalk EP66，[981.34-1404.24]，L1）
 
@@ -135,10 +135,10 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- 转写对 Windows 代码行数等数字（如‘half a billion lines’）为文章作者的估计值，未经独立核实。　[存疑脚注] Windows 代码行数为作者估计（BSD Now EP331，[503.24-515.92]，L4）
-- [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。　[存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
-- 转写将叔叔的机器记为 Triss 80 model 16B 并称可运行 CP/M 或 Xenix，机型拼写系转写噪音，TRS-80 Model 16B 的操作系统组合与购入年代需按机型史料核对，不得径直引用。[存疑脚注] 转写模糊，机型与操作系统组合待核。　[存疑脚注] 机型名与操作系统组合由受损转写推断，须与 Tandy 产品文献交叉核验后方可引用（BSDTalk EP229，[88.43-100.97]，L5）
-- 受访者对 1995 年前后盒装 UNIX 时代的回顾（UNIXware、盒装 OpenStep、更早的 Coherent）带有明显个人立场：称彼时桌面与服务器 UNIX 应用尽有却全为闭源、闭源模式终究失配而大多退场，UNIXware 这类相对廉价的“真 UNIX”被“当时远逊但免费”的 Linux 击败——此为亲历者的单方回望，且转写专名普遍失真（CISJail 应为 SysJail，CISTrace/Cistrays 应为 Systrace，MirrorOS 应为 MirOS，MeSQL 应为 MySQL，flash.post 应为 Freshmeat，MonoWall 应为 m0n0wall，Soakris 应为 Soekris，altrix 应为 Ultrix，deck 应为 DEC，Viya 应为 VIA，Mike Gunncar 应为 Mike Gancarz），引用前均须回核音频。　[存疑脚注] 对 1990 年代闭源 UNIX 兴衰与 Linux 取代的因果判断为当事人单方回顾，须与比较史文献互证；转写专名失真清单如上（BSDTalk EP66，[1947.26-2003.88]，L4）
+- 转写对 Windows 代码行数等数字（如‘half a billion lines’）为文章作者的估计值，未经独立核实。 [存疑脚注] Windows 代码行数为作者估计（BSD Now EP331，[503.24-515.92]，L4）
+- [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。 [存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
+- 转写将叔叔的机器记为 Triss 80 model 16B 并称可运行 CP/M 或 Xenix，机型拼写系转写噪音，TRS-80 Model 16B 的操作系统组合与购入年代需按机型史料核对，不得径直引用。[存疑脚注] 转写模糊，机型与操作系统组合待核。 [存疑脚注] 机型名与操作系统组合由受损转写推断，须与 Tandy 产品文献交叉核验后方可引用（BSDTalk EP229，[88.43-100.97]，L5）
+- 受访者对 1995 年前后盒装 UNIX 时代的回顾（UNIXware、盒装 OpenStep、更早的 Coherent）带有明显个人立场：称彼时桌面与服务器 UNIX 应用尽有却全为闭源、闭源模式终究失配而大多退场，UNIXware 这类相对廉价的“真 UNIX”被“当时远逊但免费”的 Linux 击败——此为亲历者的单方回望，且转写专名普遍失真（CISJail 应为 SysJail，CISTrace/Cistrays 应为 Systrace，MirrorOS 应为 MirOS，MeSQL 应为 MySQL，flash.post 应为 Freshmeat，MonoWall 应为 m0n0wall，Soakris 应为 Soekris，altrix 应为 Ultrix，deck 应为 DEC，Viya 应为 VIA，Mike Gunncar 应为 Mike Gancarz），引用前均须回核音频。 [存疑脚注] 对 1990 年代闭源 UNIX 兴衰与 Linux 取代的因果判断为当事人单方回顾，须与比较史文献互证；转写专名失真清单如上（BSDTalk EP66，[1947.26-2003.88]，L4）
 
 **文献**：
 

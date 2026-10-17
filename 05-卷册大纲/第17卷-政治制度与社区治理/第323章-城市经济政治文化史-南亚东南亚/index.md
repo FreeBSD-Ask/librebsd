@@ -33,7 +33,7 @@ volume: 第17卷-政治制度与社区治理
 - 辨析：本章辨析的核心张力在于“形式主义：政治制度与社区治理结构是‘权力’这一形式主义概念的物质化”的边界条件，各子节辨析字段已展开，卷面综合辨析在正文撰写阶段横向汇总（据本章概述史观整理）
   - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 - 部分二手资料称 “AUUG 1975 年成立”，部分称 “1976 年” 或 “1977 年”；考据结论：AUUG（最初为 Sydney Unix Users Group）于 1975 年成立，1980 年代改名为 Australian Unix Users Group。本子节采用 “AUUG 1975 年成立” 的限定性表述。
-- 部分二手资料称 “DEMOS 1985 年开发”，部分称 “1986 年” 或 “1987 年”；考据结论：DEMOS（Dialogovaya Edinaya Mobilnaya Operatsionnaya Sistema）开发始于 1983 年，1985 年首次在 Kurchatov Institute 运行，1986-1987 年在苏联学术机构传播。　[存疑脚注] DEMOS 年表（1983 年开发启动、1985 年 Kurchatov Institute 首次运行、1986-1987 年学术机构传播）依二手资料整理，原始档案回源核验未完成，确切年份以原始档案与当事人回忆为准。
+- 部分二手资料称 “DEMOS 1985 年开发”，部分称 “1986 年” 或 “1987 年”；考据结论：DEMOS（Dialogovaya Edinaya Mobilnaya Operatsionnaya Sistema）开发始于 1983 年，1985 年首次在 Kurchatov Institute 运行，1986-1987 年在苏联学术机构传播。 [存疑脚注] DEMOS 年表（1983 年开发启动、1985 年 Kurchatov Institute 首次运行、1986-1987 年学术机构传播）依二手资料整理，原始档案回源核验未完成，确切年份以原始档案与当事人回忆为准。
 
 ## 文献
 
