@@ -385,6 +385,8 @@ _backup/disk_layer_pre_p211_20261002.tar
 *.prebak-*
 *.bak-2026*
 04-现代研究文献/06-存疑数据库/doubts_standalone.duckdb
+# historical_claims 写前快照目录（2026-10-17 不入库；磁盘保留，两文件合计约 950MB）
+04-现代研究文献/_bak_hc_ddj_20261011/
 03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/02-遍历留痕/claim_fp_baseline_*.json
 /dvd6
 /login-db/online
