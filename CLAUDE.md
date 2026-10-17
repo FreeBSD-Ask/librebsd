@@ -158,7 +158,7 @@
 
 ### 二、每批必跑门禁
 
-**门禁链（改装配源后，缺一不可）**：装配 → 目录页九件门禁 → 三套浏览器回归（`visual_regression.mjs`／`full_matrix_regression.mjs`／`fullsize_regression.mjs`）；触及文档格式闸面文件加跑第十件。**禁止以「改动很小」为由豁免或只跑子集**（`流程规则.md`「目录页更新总则」）。
+**门禁链（改装配源后，缺一不可）**：装配 → 目录页九件门禁 → 三套浏览器回归（`visual_regression.mjs`／`full_matrix_regression.mjs`／`fullsize_regression.mjs`）；触及文档格式闸面文件加跑第十件。**禁止以「改动很小」为由豁免或只跑子集**。
 
 | 触发面 | 门禁与脚本 | 判据要点 | 件次 |
 | ------ | ---------- | -------- | ---- |
