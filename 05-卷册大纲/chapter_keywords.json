@@ -308,26 +308,16 @@
       "11.12 关键词行级挖掘素材线索"
     ],
     "keywords": [
-      "bell",
       "bell-labs",
       "compiler",
       "copyright-act-1976",
       "cpm",
-      "file-formats",
       "ieee",
       "informix",
-      "labs",
-      "man2",
-      "man5",
-      "pcc",
       "pwb",
-      "reference-guide",
-      "release-4.0",
       "salus",
       "sccs",
-      "std",
       "std-unix",
-      "system-calls",
       "system-iii",
       "system-v",
       "trsdos",
@@ -374,14 +364,11 @@
     ],
     "keywords": [
       "beastie",
-      "bell",
       "bell-labs",
       "garfinkel",
       "kernighan",
-      "labs",
       "lisp-machine",
       "multics",
-      "plan",
       "plan9",
       "ritchie",
       "thompson",
@@ -400,11 +387,8 @@
     "keywords": [
       "2.9bsd",
       "4.2bsd",
-      "bell",
       "consent-decree",
       "jargon-file",
-      "laboratories",
-      "labs",
       "mcilroy",
       "mckusick",
       "minix",
@@ -432,14 +416,12 @@
       "fortran",
       "gcc",
       "gnu",
-      "language",
       "lisp",
       "llvm",
       "mccarthy",
       "modula2",
       "pascal",
       "pcc",
-      "programming",
       "ritchie",
       "wirth"
     ]
@@ -910,8 +892,7 @@
       "karels",
       "kenarnold",
       "mckusick",
-      "tcp",
-      "twenty"
+      "tcp"
     ]
   },
   "33": {
@@ -966,7 +947,6 @@
       "rfc",
       "tcp",
       "uchanges",
-      "usr",
       "uucp",
       "xenix"
     ]
@@ -1452,7 +1432,6 @@
       "cra",
       "csab",
       "csrg",
-      "orders",
       "regents",
       "standing",
       "uc-code",
@@ -1733,7 +1712,6 @@
       "franklin",
       "genesis",
       "groklaw",
-      "inc",
       "jolitz",
       "lotus",
       "minix",
@@ -1836,7 +1814,6 @@
       "foundation",
       "glass",
       "hannum",
-      "initial",
       "netbsd",
       "netbsd-src",
       "netbsd08",
@@ -1859,7 +1836,6 @@
     ],
     "keywords": [
       "bind",
-      "de",
       "deraadt",
       "espie",
       "netbsd",
@@ -1885,7 +1861,6 @@
     "keywords": [
       "anoncvs",
       "cranor",
-      "de",
       "deraadt",
       "glass",
       "hannum",
@@ -1993,7 +1968,6 @@
       "beck",
       "brauer",
       "core-team",
-      "de",
       "demetriou",
       "deraadt",
       "friedl",
@@ -2078,7 +2052,6 @@
       "bsdcan",
       "commits",
       "core-team",
-      "december",
       "devnull",
       "eurobsdcon",
       "freebsd-hackers",
@@ -2253,7 +2226,6 @@
       "csrg",
       "freebsd20",
       "karels",
-      "lite",
       "mckusick",
       "netbsd",
       "usl"
@@ -2329,7 +2301,6 @@
       "csrg",
       "drdobbs",
       "freebsd",
-      "hall",
       "inktomi",
       "mckusick",
       "netbsd",
@@ -3624,7 +3595,6 @@
       "geli",
       "geom",
       "kamp",
-      "olivier",
       "olivier-certner",
       "openssh",
       "random",
@@ -4116,7 +4086,6 @@
       "158.13 freebsd相关键传言与都市传说考据"
     ],
     "keywords": [
-      "bit",
       "bsdcan",
       "commitbit",
       "daemon",
@@ -4184,9 +4153,7 @@
       "openssh",
       "patchtuesday",
       "pledge",
-      "security",
       "selinux",
-      "sys",
       "trustedbsd",
       "unveil",
       "windows"
@@ -4767,7 +4734,6 @@
       "reports",
       "sack",
       "smp",
-      "welcome",
       "xen",
       "xen3"
     ]
@@ -4912,7 +4878,6 @@
       "pkgin",
       "pkgsrc",
       "riastradh",
-      "silicon",
       "skrll",
       "tainted",
       "utmp_update"
@@ -5056,7 +5021,6 @@
       "ktrace",
       "lite2",
       "miller",
-      "nen",
       "netbsd",
       "openbsd-src",
       "openssh",
@@ -5106,7 +5070,6 @@
     "keywords": [
       "cvs",
       "darpa",
-      "darren",
       "darrenreed",
       "etoh",
       "fork",
@@ -5117,7 +5080,6 @@
       "posse",
       "propolice",
       "provos",
-      "reed",
       "song",
       "ssp",
       "wx"
@@ -5143,7 +5105,6 @@
       "hackathon",
       "ldapd",
       "libressl",
-      "misc",
       "openbsd-misc",
       "openbsd-src",
       "puffy",
@@ -6029,7 +5990,6 @@
       "hammer2",
       "lockmgr",
       "lwkt",
-      "lwkthammer",
       "mapvpagetable",
       "pfs",
       "vkernel",
@@ -6507,7 +6467,6 @@
       "desktopbsd",
       "fork",
       "ghostbsd",
-      "hat",
       "ibm",
       "ixsystems",
       "lumina",
@@ -6515,7 +6474,6 @@
       "moore",
       "pbi",
       "pc-bsd",
-      "red",
       "redhat",
       "trueos",
       "warden"
@@ -6536,11 +6494,9 @@
       "bsdi",
       "coreteam",
       "gpl",
-      "hat",
       "linuxulator",
       "lkml",
       "minix",
-      "red",
       "redhat",
       "sony",
       "tanenbaum",
@@ -6562,15 +6518,11 @@
       "distrowatch",
       "eurobsdcon",
       "fedora",
-      "hat",
       "jails",
       "kqueue",
-      "red",
       "redhat",
       "sage",
-      "sovereign",
       "sovereign-tech-fund",
-      "tech",
       "ubuntu",
       "usenix",
       "wiki",
@@ -6891,7 +6843,6 @@
       "moore",
       "openrc",
       "pbi",
-      "pc",
       "pc-bsd",
       "sysadm",
       "trident",
@@ -7054,8 +7005,6 @@
       "eurobsdcon",
       "evans",
       "evans-hall",
-      "hall",
-      "hill",
       "murray",
       "murray-hill",
       "ottawa",
@@ -7110,14 +7059,12 @@
       "ixsystems",
       "jails",
       "juniper",
-      "list",
       "lxc",
       "maintainer",
       "maintainers",
       "netflix",
       "qemu",
       "rdma",
-      "rules",
       "truenas"
     ]
   },
@@ -7183,12 +7130,10 @@
       "eghbal",
       "ghostbsd",
       "gpl",
-      "hat",
       "juniper",
       "netapp",
       "netflix",
       "pine64",
-      "red",
       "redhat",
       "sony",
       "suse"
@@ -7432,10 +7377,7 @@
     ],
     "keywords": [
       "capsicum",
-      "corporate",
-      "documents",
       "dragonfly",
-      "eclipse",
       "eclipse-foundation",
       "ffs",
       "google",
@@ -7446,7 +7388,6 @@
       "netbsd",
       "openbsd",
       "perforce",
-      "sha-256",
       "waterloo"
     ]
   },
@@ -7702,7 +7643,6 @@
     "keywords": [
       "cddl",
       "dtrace",
-      "illumosopensolaris",
       "omnios",
       "openindiana",
       "opensolaris",
@@ -7972,7 +7912,6 @@
       "307.27 外部批评与反对者linux治理模式与coc争议"
     ],
     "keywords": [
-      "comitter",
       "commitbit",
       "committer",
       "coreteam",
@@ -8001,7 +7940,6 @@
       "coc",
       "committer",
       "csrg",
-      "dss",
       "duckdb",
       "fips",
       "freebsdfoundation",
@@ -8025,13 +7963,11 @@
       "csrg",
       "freebsd-announce",
       "git",
-      "income",
       "karels",
       "koum",
       "linuxfoundation",
       "lkml",
       "lwn",
-      "now",
       "schulze",
       "torvalds"
     ]
@@ -8057,14 +7993,12 @@
       "fda",
       "fermilab",
       "gemini",
-      "hat",
       "hmmer",
       "iec",
       "iso",
       "keck",
       "mri",
       "nasa",
-      "red",
       "redhat",
       "slac"
     ]
@@ -8130,12 +8064,10 @@
       "coreteam",
       "foundation",
       "freebsd",
-      "hat",
       "ibm",
       "mentor",
       "openssf",
       "python",
-      "red",
       "red-hat",
       "torvalds",
       "utils"
@@ -8160,8 +8092,6 @@
       "pmc",
       "sovereigntechfund",
       "sprind",
-      "utils",
-      "works",
       "xz-utils"
     ]
   },
@@ -8338,7 +8268,6 @@
       "gpl",
       "hubbard",
       "license",
-      "licenses",
       "mckusick",
       "netbsd",
       "openssh",
@@ -8386,12 +8315,9 @@
       "bell",
       "bell-labs",
       "berkeley",
-      "hill",
       "joy",
-      "labs",
       "lions",
       "microsoft",
-      "murray",
       "murray-hill",
       "princeton",
       "sarnoff",
@@ -8453,9 +8379,7 @@
       "openbsd",
       "oreilly",
       "providence",
-      "states",
       "sun",
-      "united",
       "united-states"
     ]
   },
@@ -8477,14 +8401,12 @@
       "confederation",
       "congress",
       "constitution",
-      "court",
       "federalist",
       "judicial-review",
       "madison",
       "marbury",
       "scotus",
       "states",
-      "supreme",
       "united",
       "united-states-supreme-court"
     ]
@@ -8682,11 +8604,9 @@
     "keywords": [
       "cernet",
       "cnfug",
-      "cra",
       "cuhk",
       "dancefire",
       "delphij",
-      "fedramp",
       "gb18030",
       "huawei",
       "hubbard",
@@ -8781,14 +8701,12 @@
     ],
     "keywords": [
       "demos",
-      "fips",
       "freebsd-russian",
       "git",
       "habr",
       "kolisnichenko",
       "mipt",
       "msu",
-      "openssl",
       "rambler",
       "simbol-plus",
       "spbpu",
@@ -8816,8 +8734,6 @@
       "bacula",
       "bsdcan",
       "freshports",
-      "iec",
-      "iso",
       "isp",
       "langille",
       "lucas",
@@ -8892,17 +8808,13 @@
       "cd-rom",
       "foss",
       "fossfa",
-      "hhs",
-      "hipaa",
       "isp",
       "kenic",
       "mtn",
       "mweb",
-      "sector",
       "standardbank",
       "stellenbosch",
       "uct",
-      "user",
       "wits"
     ]
   },
@@ -8934,11 +8846,9 @@
       "law82of2002",
       "linuxchix",
       "popia",
-      "protection",
       "regasek",
       "shuttleworth",
-      "ubuntu",
-      "user"
+      "ubuntu"
     ]
   },
   "339": {
@@ -8967,11 +8877,8 @@
       "metu",
       "mosix",
       "ofac",
-      "point",
-      "sox",
       "technion",
-      "turktelekom",
-      "user"
+      "turktelekom"
     ]
   },
   "340": {
@@ -8995,11 +8902,9 @@
       "israel",
       "mckusick",
       "ofac",
-      "point",
       "saudi",
       "turkey",
       "uae",
-      "user",
       "wipo2199"
     ]
   },
@@ -9029,9 +8934,7 @@
       "meetbsd",
       "ofac",
       "pardus",
-      "point",
-      "tubitak",
-      "user"
+      "tubitak"
     ]
   },
   "342": {
@@ -9084,8 +8987,6 @@
     "keywords": [
       "archive",
       "asiabdsdcon",
-      "ccpa",
-      "cpra",
       "fossasia",
       "id-bsd",
       "isp",
@@ -9125,7 +9026,6 @@
       "mbug",
       "newzealand",
       "nzfug",
-      "pipl",
       "sbug",
       "sydney",
       "unsw",
@@ -9148,7 +9048,6 @@
       "345.9 南亚与同时期操作系统的比较"
     ],
     "keywords": [
-      "deb",
       "ernet",
       "eurobsdcon",
       "goodkin",
@@ -9366,7 +9265,6 @@
       "mckusick",
       "netbsd",
       "netbsdfoundation",
-      "netbsf",
       "openbsd",
       "shigang"
     ]
