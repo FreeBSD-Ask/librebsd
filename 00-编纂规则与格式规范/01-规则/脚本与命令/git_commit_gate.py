@@ -309,7 +309,7 @@ def stage_commitmsg(msg):
 
 
 def selftest():
-    """隔离临时仓库全用例：F 区改正 6＋内容钉死 2＋阻断类 13＝21 用例。"""
+    """隔离临时仓库全用例：改正区 9（F 区 4＋链路 2＋排除边界 3）＋阻断与既有 11＝20 用例。"""
     import shutil
     import tempfile
 
@@ -389,17 +389,19 @@ def selftest():
 
     # B4 与 pre-commit 链路一致性：自动改正后 B4 不再触发
     repo, g = newrepo("t_b4chain")
-    with open(os.path.join(repo, "note.md"), "w", encoding="utf-8") as f:
-        f.write("甲\u3000乙\n")
+    os.makedirs(os.path.join(repo, "docs"))
+    with open(os.path.join(repo, "docs", "note.md"), "wb") as f:
+        f.write("甲\u3000乙\n".encode("utf-8"))
     g("add", "-A")
     check("B4_链路改正放行", 0, run_gate(repo, "pre-commit"))
     check("B4_链路复检放行", 0, run_gate(repo, "commit-msg", "m\n"))
 
-    # FIX_EXCLUDE 边界：内容层文件不自动改正，由 B4 拦截／批准标记放行
+    # FIX_EXCLUDE 边界：内容层文件连 B4 也不在对象面（既定契约：fix 与 B4 同为
+    # is_doc_fixable；内容层/逐字保真档案两阶段均不涉，存量由 scan/fix 批量工具覆盖）
     repo, g = newrepo("t_b4excl")
     os.makedirs(os.path.join(repo, "05-卷册大纲"))
-    with open(os.path.join(repo, "05-卷册大纲", "x.md"), "w", encoding="utf-8") as f:
-        f.write("甲\u3000乙\n")
+    with open(os.path.join(repo, "05-卷册大纲", "x.md"), "wb") as f:
+        f.write("甲\u3000乙\n".encode("utf-8"))
     g("add", "-A")
     check("EXCL_precommit跳过", 0, run_gate(repo, "pre-commit"))
     kept = open(os.path.join(repo, "05-卷册大纲", "x.md"), "rb").read().decode("utf-8")
@@ -407,8 +409,7 @@ def selftest():
     results.append(("EXCL_内容原样", 1, 0 if okk else 1, okk))
     if not okk:
         print("  ✗ EXCL_内容被改动 " + repr(kept))
-    check("EXCL_B4拒", 1, run_gate(repo, "commit-msg", "m\n"))
-    check("EXCL_B4批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
+    check("EXCL_提交放行", 0, run_gate(repo, "commit-msg", "m\n"))
 
     # G1/G2 既有
     repo, g = newrepo("t_g1")
