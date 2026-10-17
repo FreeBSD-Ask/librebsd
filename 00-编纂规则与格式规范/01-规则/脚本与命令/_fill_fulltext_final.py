@@ -69,13 +69,17 @@ sys.stdout.write("TEXT_END")
 """
 
 
-def resolve(fp):
-    """把库内相对路径解析为磁盘绝对路径。"""
+def resolve(fp, root=ROOT):
+    """把库内相对 file_path 解析为磁盘绝对路径。
+
+    活库现行值以仓库根为基准（实测 5786 条有值中 5067 条按仓库根可解析、0 条仅按
+    03-文献下载 可解析），故先试仓库根，再试直接挂到 03-文献下载 下的旧形制。
+    """
     if not fp:
         return None
     p = fp.replace("\\", "/")
-    for cand in (os.path.join(ROOT, p),
-                 os.path.join(ROOT, "04-现代研究文献/03-文献下载", p)):
+    for cand in (os.path.join(root, p),
+                 os.path.join(root, "04-现代研究文献/03-文献下载", p)):
         if os.path.exists(cand):
             return cand
     return None
