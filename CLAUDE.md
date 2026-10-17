@@ -47,7 +47,7 @@
 | 00 | `00-编纂规则与格式规范/` | 规则唯一真相源 `01-规则/`（`README.md` 为索引入口）＋`02-操作手册/`（模板 A/B/C、体例参照）＋`03-叙事参照/`＋`04-史学方法论/`（G1；禁止把项目统摄史观与西方流派并列） |
 | 01 | `01-项目管理/` | `00-变更记录/changelog.duckdb`（修改记录唯一载体，`index.md` 为使用说明）＋`01-编纂规划与报告归档/`（含长线任务总登记表与正文层规划报告类文档） |
 | 02 | `02-sacred源材料/` | 编纂指导思想源材料＋`sacred_sources.duckdb`（29 章 191 子节原文）；核心文件 `shigang.md`／`lishidagang.md`／`dagang.md` 在此；子目录内容存于 `sacred_sources.duckdb` |
-| 03 | `03-原始史料库/` | 一手史料：`original_sources.duckdb`（含 G4 硬件史料）＋`01-代码仓库史料/`（含 `01-数据库本体/资料数据库.duckdb`，Schema v1.4；10 个项目级 DuckDB）＋`02-man源与posix仓库/`（8 个稀疏检出，**不可拆散**）＋`06-考据记录/`＋`10-技术器物史料/`（G4，7 个技术域文件）＋`11-邮件列表史料/`（4 大 BSD＋Linux kernel 全量存档）＋`12-multics史料/`＋`13-44doc文档史料/`（papers／psd／smm／usd／IPv6，240 文件）＋`14-播客史料/`（10 个独立库，待转写清单见该目录）＋`15-login杂志史料/` |
+| 03 | `03-原始史料库/` | 一手史料：`original_sources.duckdb`（含 G4 硬件史料）＋`01-代码仓库史料/`（14 个 DuckDB：9 项目库＋4 专题库＋本体 `资料数据库.duckdb`，Schema v1.4）＋`02-man源与posix仓库/`（15 个仓库目录，7 个带 sparse-checkout 清单，**不可拆散**）＋`06-考据记录/`＋`10-技术器物史料/`（G4，7 个技术域文件）＋`11-邮件列表史料/`（4 大 BSD＋Linux kernel 全量存档）＋`12-multics史料/`＋`13-44doc文档史料/`（papers／psd／smm／usd／IPv6，240 文件）＋`14-播客史料/`（10 个独立库，待转写清单见该目录）＋`15-login杂志史料/` |
 | 04 | `04-现代研究文献/` | 研究产出：`research_notes.duckdb`＋**`historical_claims.duckdb`（claim 唯一真值）**＋`05-参考文献全文数据库/`＋`06-存疑数据库/`（`doubts_standalone.duckdb`）＋`01-参考文献总目/`（30 个分类子文件）＋`02-卷级文献综述/`＋`03-文献下载/`（pdf／epub／ocr）＋`11-翻译与多语种史料/`（G12） |
 | 05 | `05-卷册大纲/` | 磁盘层大纲（实存第01–第24卷，现行口径见上方标记块）＋`SUMMARY.md`（GitBook 总导航，由 `sync_gitbook_summary.py` 生成；`index.md` 磁盘未建，**不是**索引载体）＋`.writing_rules.md`（WO-007 幂等约束） |
 | 07 | `07-事实核查记录/` | 单条核查原子记录＋`fact_checks.duckdb`；汇总报告归 `08-核查报告与多轮复核/` |
@@ -168,13 +168,13 @@
 | 注文、分工注、`catalog.json` 的 refs | `audit_note_xref.py`、`xref_audit.py` | 引号节名、章节号存在、ref 著录完备、悬空引用 | 第十四／五件 |
 | 向 `05-卷册大纲/` 写回证据等级标注块 | `audit_evidence_level_labels.py` | 块头标注须与库中 `evidence_level` 一致，禁写死字面量 | 第六件 |
 | 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | JSON 残片与内部标识串判错；邮箱仅提示不删 | DATA 门禁 |
-| 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | 源有而子集缺者即回归；零外链；品牌件逐字节一致 | 第九件 |
+| 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | A 装配源清单／B 字体子集覆盖度与源字体基准／C 品牌派生件形制／D 自包含性与 SRI／E 夹具口径 | 第九件 |
 | 涉页面变更的每批收口 | `audit_page_version_bump.py` | 口径或注数变而版本号未刷新即 FAIL | 第十八件 |
 | 改内容源或测试夹具 | `audit_fixture_freshness.py` | 夹具口径与注数须等于内容源派生值；豁免须仍有效 | 第十三件 |
 | 改 `serve_refactor2026.py` 及服务行为 | `audit_server_contract.py` | 八项契约全走真实 HTTP；一律绑 `127.0.0.1` | 第十一件 |
 | 改装配源或模板后（常备） | `audit_a11y.py` | axe-core 四组合 critical／serious＝0；键盘契约 | 第二十二件 |
 | 改 `src/js` 行为源或 `doc.js`（常备） | `audit_js_blockscope.py` | 块内具名函数被块外引用即 FAIL | 第二十三件 |
-| 人物库任何写入 | `audit_person_bio_integrity.py` | P1–P4：JSON 合法、`check_date` 非空、priority 域内 | 第十五件 |
+| 人物库任何写入 | `audit_person_bio_integrity.py` | P0–P3：`sources`／`doubt_flags` 须 JSON 数组、`check_date` 非空、`priority` 域内 | 第十五件 |
 | `provenance_history` 任何写入 | `audit_provenance_dupes.py` | D1–D5；只判真重复，三元组判重会误报 | 数据库类 |
 | 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | 单值>25%／distinct 骤降／同刻>50%／行数骤降 | 写库门禁 |
 | register 写库 | `register_waterlock.py probe → acquire → register → release` | 无主键约束，撞号静默成功；水位每次重取 | 写库门禁 |
