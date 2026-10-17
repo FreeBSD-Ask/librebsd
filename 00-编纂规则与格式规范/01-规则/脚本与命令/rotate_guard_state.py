@@ -289,6 +289,22 @@ def cmd_restore(args):
                           "hint": "污染／可疑槽会污染门禁基线；确认无误后加 --force"},
                          ensure_ascii=False, indent=1))
         return 1
+    if args.dry_run:
+        sp = state_path(base)
+        cur = row_for(sp, "live") if os.path.isfile(sp) else None
+        print(json.dumps({"ok": True, "dry_run": True,
+                          "would_restore": t["name"], "verdict": t["verdict"],
+                          "slot_at": t.get("at"),
+                          "slot_distinct_ratio": t["distinct_ratio"],
+                          "current": None if cur is None else {
+                              "md5": cur["md5"], "at": cur.get("at"),
+                              "verdict": cur["verdict"],
+                              "distinct_ratio": cur["distinct_ratio"]},
+                          "changed": bool(cur and cur.get("md5") != t.get("md5")),
+                          "into": sp,
+                          "note": "未写入。去掉 --dry-run 执行真实替换"},
+                         ensure_ascii=False, indent=1))
+        return 0
     sp = state_path(base)
     if os.path.isfile(sp):
         pre = os.path.join(backup_root(base), STATE_NAME + ".pre_restore")
@@ -436,6 +452,17 @@ def selftest():
         rc3, j3, _ = run("restore", "--slot", poison_name, "--force", "--base", b1)
         chk("T11 --force 放行", rc3 == 0 and j3["verdict"] == "poisoned", j3)
 
+        # T16 --dry-run 只报不换：此刻 live 被 T11 换成污染态，dry-run 后仍须如此
+        rc4, j4, _ = run("restore", "--best", "--dry-run", "--base", b1)
+        with io.open(os.path.join(b1, "12-数据库备份", STATE_NAME), encoding="utf-8") as fh:
+            after = json.load(fh)["claims"]
+        chk("T16a dry-run 不写入（live 仍为污染态）",
+            rc4 == 0 and j4["dry_run"] is True and j4["verdict"] == "healthy"
+            and after.get("fact_distinct") == poisoned["fact_distinct"], j4)
+        chk("T16b dry-run 报出当前态与待换槽",
+            j4["changed"] is True and j4["current"]["verdict"] == "poisoned"
+            and j4["would_restore"] != STATE_NAME, j4)
+
         # T12 prune --keep 1 不得删掉最近的健康槽
         b2 = mk("r2", healthy)
         run("pre", "--base", b2)
@@ -485,6 +512,7 @@ def main(argv=None):
     p.add_argument("--slot", metavar="<槽名>")
     p.add_argument("--best", action="store_true", help="取最近的健康槽（默认）")
     p.add_argument("--force", action="store_true", help="允许恢复污染／可疑槽")
+    p.add_argument("--dry-run", action="store_true", help="只打印将替换的槽，不写入")
     p = sub.add_parser("prune", help="保留最近 N 个槽（健康槽兜底保留 1 个）")
     p.add_argument("--base", metavar="<仓库根>")
     p.add_argument("--keep", type=int, default=DEFAULT_KEEP)
