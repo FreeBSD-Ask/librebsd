@@ -94,7 +94,7 @@ def parse_existing(cur):
     return titles, order
 
 
-def build_body(titles, order, tail_vols):
+def build_body(titles, order, tail_vols, regen=False):
     out = []
     vols = sorted([d for d in os.listdir(OUTLINE)
                    if os.path.isdir(os.path.join(OUTLINE, d)) and d.startswith("第")], key=vol_no)
@@ -102,7 +102,8 @@ def build_body(titles, order, tail_vols):
         vdir = os.path.join(OUTLINE, v)
         if v in tail_vols:
             continue
-        vt = titles.get(v + "/00-总览.md") or h1(os.path.join(vdir, "00-总览.md")) or v
+        vt = (h1(os.path.join(vdir, "00-总览.md")) if regen else None) \
+            or titles.get(v + "/00-总览.md") or h1(os.path.join(vdir, "00-总览.md")) or v
         out += ["### " + vt, "", "- [%s](./%s/00-总览.md)" % (vt, v)]
         vroot = sorted([f for f in os.listdir(vdir)
                         if f.endswith(".md") and f != "00-总览.md" and not f.startswith("卷末")
@@ -111,7 +112,8 @@ def build_body(titles, order, tail_vols):
         vroot.sort(key=lambda f: (prevv.index(f) if f in prevv else 10 ** 6, f))
         for f in vroot:
             fp = "%s/%s" % (v, f)
-            tt = titles.get(fp) or h1(os.path.join(vdir, f)) or f[:-3]
+            tt = (h1(os.path.join(vdir, f)) if regen else None) \
+                or titles.get(fp) or h1(os.path.join(vdir, f)) or f[:-3]
             out.append("- [%s](./%s)" % (tt, fp))
 
         out.append("")
