@@ -1,0 +1,88 @@
+==============================================================================
+H5 交接书复核报告  生成 2026-09-18
+==============================================================================
+
+【A】H1-H5 库清单互斥性与合计
+  _HANDOFF_H1.md: 解析到 1 库，剩余合计 472,235
+  _HANDOFF_H2.md: 解析到 4 库，剩余合计 501,834
+  _HANDOFF_H3.md: 解析到 4 库，剩余合计 551,317
+  _HANDOFF_H4.md: 解析到 5 库，剩余合计 459,135
+  _HANDOFF_H5.md: 解析到 28 库，剩余合计 541,789
+  并集库数：42（声明 42）
+  并集剩余合计：2,526,310（声明 2,526,310）
+
+【E】全局口径复核（257 库 / 已闭环 215 / 已覆盖 418,796）
+  catalog 全部条目：275；范围内（排除 linux-kernel/usenet）：257
+  范围内全库封数合计：2,945,106（声明 2,945,106）
+  台账判定已闭环库数：215（声明 215）
+  台账 read_effective 合计（已覆盖）：418,796（声明 418,796）
+
+【B/C/D】H5 逐库核验（全库封数 / 剩余 / 起点 offset）
+  库                          H5封数    CAT真值     H5剩余     账推剩余  H5off 账read_eff  判定
+  H5 解析库数：28（声明 28）
+  freebsd-alpha             16943    16943    16943    16943      0         0  OK
+  freebsd-amd64             19709    19709    19709    19709      0         0  OK
+  freebsd-arm               30113    30113    30113    30113      0         0  OK
+  freebsd-scsi              19851    19851    19851    19851      0         0  OK
+  freebsd-sparc64           12560    12560    11560    11560   1000      1000  OK
+  freebsd-ppc               13291    13291    12291    12291   1000      1000  OK
+  freebsd-acpi              10203    10203     9203     9203   1000      1000  OK
+  freebsd-i386              12231    12231    11231    11231   1000      1000  OK
+  freebsd-smp               10013    10013    10013    10013      0         0  OK
+  freebsd-elastic            5315     5315     4315     4315   2500      1000  offset>read_eff(1000)
+  freebsd-x11                8152     8152     7152     7152   1000      1000  OK
+  freebsd-gecko             14991    14991    13991    13991   1000      1000  OK
+  freebsd-perl              14437    14437    13437    13437   1000      1000  OK
+  tech-pkg                  13931    13931    13931    13931      0         0  OK
+  pkgsrc-users              32475    32475    32475    32475      0         0  OK
+  freebsd-python            22701    22701    22701    22701      0         0  OK
+  freebsd-ipfw               9388     9388     8388     8388   1000      1000  OK
+  cu                        10064    10064     9064     9064   1000      1000  OK
+  freebsd-fs                38710    38710    38710    38710      0         0  OK
+  freebsd-multimedia        36779    36779    36779    36779      0         0  OK
+  freebsd-security          37939    37939    37939    37939      0         0  OK
+  freebsd-desktop            9545     9545     9545     9545      0         0  OK
+  freebsd-emulation         25791    25791    25791    25791      0         0  OK
+  freebsd-java              21280    21280    21280    21280      0         0  OK
+  freebsd-hardware          22679    22679    22679    22679      0         0  OK
+  freebsd-mobile            33435    33435    33435    33435      0         0  OK
+  freebsd-arch              35166    35166    35166    35166      0         0  OK
+  freebsd-advocacy          15097    15097    14097    14097   1000      1000  OK
+  H5 剩余合计：541,789（声明 541,789）
+  异常库数：1
+
+【A2】H5 与他书重叠检查
+  重叠库：无
+
+【F】H5 库中是否存在‘台账已判闭环’的库（应无）
+  无
+
+【G】建议执行序（剩余封数升序）
+   1. freebsd-elastic        剩余   4,315  建议offset  2500  宿主预判 892/894/895
+   2. freebsd-x11            剩余   7,152  建议offset  1000  宿主预判 892/894/895
+   3. freebsd-ipfw           剩余   8,388  建议offset  1000  宿主预判 1032/10017
+   4. cu                     剩余   9,064  建议offset  1000  宿主预判 1481/1483/1495/1511
+   5. freebsd-acpi           剩余   9,203  建议offset  1000  宿主预判 10611/1067/1069
+   6. freebsd-desktop        剩余   9,545  建议offset     0  宿主预判 待定（桌面章
+   7. freebsd-smp            剩余  10,013  建议offset     0  宿主预判 1618
+   8. freebsd-i386           剩余  11,231  建议offset  1000  宿主预判 10611/1067/1069
+   9. freebsd-sparc64        剩余  11,560  建议offset  1000  宿主预判 981/982/986
+  10. freebsd-ppc            剩余  12,291  建议offset  1000  宿主预判 981/982/986
+  11. freebsd-perl           剩余  13,437  建议offset  1000  宿主预判 168/906/907/3066
+  12. tech-pkg               剩余  13,931  建议offset     0  宿主预判 1792
+  13. freebsd-gecko          剩余  13,991  建议offset  1000  宿主预判 906/907/3066
+  14. freebsd-advocacy       剩余  14,097  建议offset  1000  宿主预判 10015/10017/10018/10019
+  15. freebsd-alpha          剩余  16,943  建议offset     0  宿主预判 1059
+  16. freebsd-amd64          剩余  19,709  建议offset     0  宿主预判 1614
+  17. freebsd-scsi           剩余  19,851  建议offset     0  宿主预判 912/1213/1226
+  18. freebsd-java           剩余  21,280  建议offset     0  宿主预判 167/1712
+  19. freebsd-hardware       剩余  22,679  建议offset     0  宿主预判 待定（硬件章，待实判
+  20. freebsd-python         剩余  22,701  建议offset     0  宿主预判 168/227
+  21. freebsd-emulation      剩余  25,791  建议offset     0  宿主预判 1348
+  22. freebsd-arm            剩余  30,113  建议offset     0  宿主预判 1013/1289/1335
+  23. pkgsrc-users           剩余  32,475  建议offset     0  宿主预判 1731/1761/1792/1892
+  24. freebsd-mobile         剩余  33,435  建议offset     0  宿主预判 待定（PCCARD，大纲无对应节
+  25. freebsd-arch           剩余  35,166  建议offset     0  宿主预判 待定（架构/设计章
+  26. freebsd-multimedia     剩余  36,779  建议offset     0  宿主预判 待定（多媒体章
+  27. freebsd-security       剩余  37,939  建议offset     0  宿主预判 待定（安全章，待实判
+  28. freebsd-fs             剩余  38,710  建议offset     0  宿主预判 10016/1064/1091

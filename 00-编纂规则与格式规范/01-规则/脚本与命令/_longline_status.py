@@ -655,7 +655,7 @@ def probe_doc_resilient(rel, note, last):
 # ---------------------------------------------------------------- 线定义
 LINES = [
     dict(id="usenet7", name="usenet 行级挖掘（7 组）", probe=probe_usenet7,
-         resume="读 `script/_db_row_mining/_RESUME.md` → `_resume.py`",
+         resume="读 `01-项目管理/01-编纂规划与报告归档/usenet任务书与交接书/_RESUME.md` → `script/_db_row_mining/_resume.py`",
          health="`script/_db_row_mining/_progress_audit_7groups.py --check-state`",
          deep=[PY, os.path.join(DRM, "_progress_audit_7groups.py"), "--check-state"]),
     dict(id="mail2d", name="mail2d 邮件列表挖掘（257 库）", probe=probe_mail2d,
@@ -679,10 +679,10 @@ LINES = [
          health="`_h5_state.json`",
          deep=[PY, os.path.join(DRM, "_h5_resume.py"), "--status"]),
     dict(id="T1", name="事件窗线 T1（九窗）", probe=probe_t1,
-         resume="读 `script/_db_row_mining/_HANDOFF_EVENTWINDOW_20260913.md`",
+         resume="读 `01-项目管理/01-编纂规划与报告归档/事件窗T1与dragonflyT2任务书/_HANDOFF_EVENTWINDOW_20260913.md`",
          health="`rowmine_traversal.duckdb` 表 `event_window`", deep=None),
     dict(id="T2", name="dragonfly 邮件窗口 T2", probe=probe_t2,
-         resume="读 `R2_TASK_dragonfly_eBgBqB.md`",
+         resume="读 `01-项目管理/01-编纂规划与报告归档/事件窗T1与dragonflyT2任务书/R2_TASK_dragonfly_eBgBqB.md`",
          health="`rowmine_traversal.duckdb` 视图 `db_progress`", deep=None),
     dict(id="s64", name="重构2026 目录页", probe=probe_s64,
          resume="`00-编纂规则与格式规范/01-规则/脚本与命令/assemble_index.py`",
