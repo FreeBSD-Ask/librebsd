@@ -141,10 +141,13 @@ def selftest():
             f.write("\n".join(ignore_lines) + "\n")
         for fn, data in files.items():
             fp = os.path.join(repo, fn)
-            os.makedirs(os.path.dirname(fp), exist_ok=True) if os.path.dirname(fn) else None
+            if os.path.dirname(fn):
+                os.makedirs(os.path.dirname(fp), exist_ok=True)
             with open(fp, "wb") as f:
                 f.write(data)
         g("add", "-A")
+        # 正常 add 不会收录被忽略文件——须显式 -f 才构成「忽略条目入库」场景
+        g("add", "-f", "secret.txt")
         mp = os.path.join(repo, "MSG")
         with open(mp, "w", encoding="utf-8") as f:
             f.write(msg)
