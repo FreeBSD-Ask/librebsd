@@ -145,6 +145,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="只判定，不写库")
     ap.add_argument("--limit", type=int, default=0, help="本批最多处理件数，0＝不限")
     ap.add_argument("--timeout", type=int, default=30, help="单件 PDF 提取超时秒数")
+    ap.add_argument("--resolve-root", default=ROOT, help="库内相对 file_path 的解析根")
     args = ap.parse_args()
 
     db = os.path.abspath(args.db)
@@ -169,7 +170,7 @@ def main():
 
         done = no_file = no_text = fail = 0
         for i, (rid, fn, fp) in enumerate(rows, 1):
-            real = resolve(fp)
+            real = resolve(fp, args.resolve_root)
             if not real:
                 no_file += 1
                 continue
