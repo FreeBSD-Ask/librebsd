@@ -2,7 +2,7 @@
 
 本文件是项目根目录协作指南，记录 12 一级文件夹布局（编号 00-12，含编号缺口 09；缺口 12 由“12-数据库备份”补位）、规则调用入口与扩展接口。详细规则集中于 `00-编纂规则与格式规范/01-规则/` 目录，本文件仅提供高层概览与索引。
 
-AGENTS.md 是本文件（CLAUDE.md）的别名副本，必须一模一样，任何修改都必须先修改 CLAUDE.md，然后使用 CLAUDE.md 直接覆盖 AGENTS.md。
+AGENTS.md 是 CLAUDE.md 的别名副本，二者必须一模一样，任何修改都必须先修改 CLAUDE.md，然后使用 CLAUDE.md 直接覆盖 AGENTS.md。
 
 ## 项目背景
 
@@ -55,7 +55,7 @@ AGENTS.md 是本文件（CLAUDE.md）的别名副本，必须一模一样，任�
   - **12-multics史料/** —— Multics 相关史料（01-multicians-org/、02-mit-saltzer/）
   - **13-44doc文档史料/** —— 4.4BSD Documents 官方文档快照全量镜像（papers/psd/smm/usd/IPv6，240 文件）
   - **14-播客史料/** —— 播客史料（原 `bsdnow_podcast.db` / `bsd_podcasts_external.db` 已升格 DuckDB 并按播客实际名拆分为 10 个独立库：`bsd-now.duckdb`、`bsdtalk.duckdb`、`youtube.duckdb`、`software-engineering-daily.duckdb`、`the-changelog.duckdb`、`floss-weekly.duckdb`、`nerding-out-with-victor.duckdb` 及 3 个空源 `freebsd-fridays.duckdb`、`bsd-conferences-youtube.duckdb`、`freebsd-office-hours.duckdb`；含期数元数据/语音转写文本/大纲映射/GB/T 7714 著录。SQLite 原库已归档 `12-数据库备份/`（ARCHIVE_FINAL）。待转写清单见本目录 `待转录清单.md`）
-- **04-现代研究文献/** —— 研究产出（按主题细分 12 个子目录，其中 04-12 研究主题子目录已清理，内容入库 `research_notes.duckdb`） —— 含 `research_notes.duckdb` 文件夹级数据库（详见同上；源文件已清理，数据库为唯一内容载体，README.md/index.md 保留）
+- **04-现代研究文献/** —— 研究产出（按主题细分 12 个子目录，其中 04-12 研究主题子目录已清理，内容入库 `research_notes.duckdb`） —— 含 `research_notes.duckdb` 文件夹级数据库（详见同上；源文件已清理，数据库为唯一内容载体，README.md/index.md 保留）——**claim 库唯一真值在本文件夹**：`04-现代研究文献/historical_claims.duckdb`（实测 claim 472188 行，34 表），大纲 ROW_MINE 块与目录溯源注中的 `historical_claims.duckdb` 均指此库；同名空壳已于 2026-10-16 清理，真值路径登记见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md)「功能数据库唯一真值路径与空壳防治」节
   - **01-参考文献总目/** —— 完整文献总目（按类别拆分 60+ 子文件）
   - **02-卷级文献综述/** —— 大纲级文献综述（各卷子文件，卷数随现行口径 67 卷 482 章 3468 节；原冻结基准 12 卷 181 章〔01b R47/R48/R49〕已退役，仅作沿革）
   - **03-文献下载/** —— 含 01-pdf/、02-epub/、03-ocr/（用于安娜的档案下载 PDF/EPUB 后 OCR 存储）
@@ -176,7 +176,7 @@ AGENTS.md 是本文件（CLAUDE.md）的别名副本，必须一模一样，任�
 
 ### 脚本
 
-- **目录路径**：临时脚本仅放 `script/`（根目录下原位置保留，可随时删除、不长期留存）；固定脚本/规则引用脚本须放 `00-编纂规则与格式规范/01-规则/脚本与命令/`（与规则文件形成"规则 + 可执行资源"自洽单元）
+- **目录路径**：1、临时脚本仅放 `script/`（根目录下原位置保留，可随时删除、不长期留存）；固定脚本/规则引用脚本须放 `00-编纂规则与格式规范/01-规则/脚本与命令/`（与规则文件形成"规则 + 可执行资源"自洽单元）；2、未经批准，禁止在 librebsd 的根目录下随意创建任何文件
 - **命名约定**：见名知义的 .py 文件名（如 `validate_structure.py`、`implement_gaps.py`）
 - **文件格式**：Python 脚本，文件头含 docstring 说明用途
 - **新增流程**：临时脚本直接在 `script/` 下创建 .py 文件；固定脚本须在 `00-编纂规则与格式规范/01-规则/脚本与命令/` 创建并由规则文件引用，同时在 `00-编纂规则与格式规范/01-规则/README.md` 索引登记（详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 临时文件规则、规则引用脚本与命令独立存储规则小节）
@@ -321,6 +321,8 @@ AGENTS.md 是本文件（CLAUDE.md）的别名副本，必须一模一样，任�
 当前项目布局以本文件（根目录 CLAUDE.md）为唯一来源真相，详细规则以 `00-编纂规则与格式规范/01-规则/` 目录为唯一来源真相。
 
 **bsd_commits.db 引用说明**：全项目大纲（`05-卷册大纲/`）中大量引用 `bsd_commits.db` 作为考据来源。该数据库已拆分为 10 个独立项目数据库（freebsd、netbsd、openbsd 等），并全部转为 DuckDB 格式。大纲中的 `bsd_commits.db` 引用为概念性标识（指代 BSD 仓库提交数据集），实际查询应指向具体项目 DuckDB 库（如 `freebsd.duckdb`、`netbsd.duckdb`）。
+
+**historical_claims.duckdb 真值路径说明**：大纲 ROW_MINE 块头（`来源：historical_claims.duckdb.claim.CL-RM-NNNNNN`）与目录溯源注中的 `historical_claims.duckdb` 为逻辑名，**唯一真值物理路径是 `04-现代研究文献/historical_claims.duckdb`**（2026-10-16 实测 claim 472188 行、evidence 498454 行、raw_source 499418 行，34 表），与 `folder_db_registry.csv`、`backup_databases.py` SCOPE、`audit_databases.py`、`analyze_all_databases.py`、`audit_anchor_resolution.py` 五处一致。同日按"复核—零引用—备份—删除—复验"链清理 4 处 0 表空壳（根目录与 `03-原始史料库/11-邮件列表史料/`、`…/07-usenet/duckdb/` 下的同名库、`04-现代研究文献/changelog.duckdb`；四件 sha256 相同，均为误创建路径产出的头页文件），备份存于库外 `prebak-librebsd/20261016-empty-db-shells/`；另 2 个 0 表但 git 跟踪中的挖掘库（`linux-api.duckdb`、`05b-lkml专题/05-数据库/freebsd-hackers.duckdb`）未删，留待版本控制处置。判据、流程与防再生要求见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md)「功能数据库唯一真值路径与空壳防治」节。
 
 ## Lint 配置
 
