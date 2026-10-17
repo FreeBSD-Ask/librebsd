@@ -95,33 +95,57 @@ M2_SCOPE = ("01-freebsd", "02-netbsd", "03-openbsd", "04-dragonfly", "06-other-b
 
 
 def probe_mail2d():
-    """mail2d 探针：读**机读 catalog**（`mail2d_catalog_by_size.json`），不解析人手 markdown。
+    """mail2d 探针：读**机读台账** `mail2d_read_ledger.json`（登记表 §一 指定的唯一权威）。
 
     🔴 教训（2026-09-19）：原实现解析 `_MAIL2D_PLAN_HANDOFF.md` 的正则——而该文档由
     `_gen_plan_handoff_merged.py` 生成、自述「可反复重跑刷新」，实际停在 2026-09-17。
     实测其「已覆盖 268,724（9.1%）／闭环库 205/257」已滞后于真值
     （`_report_today_total.py`：已覆盖 512,611（17.4%）／闭环库 215/257）。
-    根因＝**把「人手生成的文档」当机读源**。现改为读 catalog（与脚本逐值一致）。
+    根因＝**把「人手生成的文档」当机读源**。当时改读 catalog（与脚本逐值一致）。
+
+    🔴 教训（2026-10-17 复核）：改读 catalog 后**仍然失真**——`mail2d_catalog_by_size.json`
+    的 `generated` 停在 **2026-09-30**，其 `traversal_status` 记 completed 216／in_progress 35／
+    pending 6，而台账实况为 completed **246**／in_progress 8／pending 3、已判读
+    **2,026,394/2,945,106（68.81%）**。后果＝同一张登记表两处口径互斥（§一 散文行按台账记
+    246/257，机读块按 catalog 记 216/257），且 `--write-block` 只会把过期值原样重写一遍。
+    根因同前一次：**下界对照源被当成权威源**。登记表 §一 的「权威源」列与 AGENTS.md 均已明记
+    「`mail2d_read_ledger.json` 机读台账，唯一权威；`mail2d_catalog_by_size.json` 仅作下界对照」，
+    故本探针一律从台账派生，catalog 只作下界附注写在进度串内、不再参与判据。
     """
-    p = os.path.join(DRM, "mail2d_catalog_by_size.json")
+    p = os.path.join(DRM, "mail2d_read_ledger.json")
     if not os.path.exists(p):
         return None
-    items = [x for x in json.loads(_read(p)).get("items", [])
-             if any(s in (x.get("path") or "") for s in M2_SCOPE)]
-    tot = sum(x.get("messages", 0) for x in items)
-    cnt = collections.Counter(x.get("traversal_status") for x in items)
+    items = json.loads(_read(p)).get("items", {})
+    vals = list(items.values()) if isinstance(items, dict) else list(items)
+    n = len(vals)
+    tot = sum(int(v.get("messages") or 0) for v in vals)
+    read = sum(int(v.get("read_effective") or 0) for v in vals)
+    cnt = collections.Counter(v.get("status") for v in vals)
     comp = cnt.get("completed", 0)
-    n = len(items)
+    # catalog 下界对照（天然陈旧，仅附注，不参与判据）
+    cp = os.path.join(DRM, "mail2d_catalog_by_size.json")
+    note = ""
+    srcs = [p]
+    if os.path.exists(cp):
+        citems = [x for x in json.loads(_read(cp)).get("items", [])
+                  if any(s in (x.get("path") or "") for s in M2_SCOPE)]
+        ccomp = sum(1 for x in citems if x.get("traversal_status") == "completed")
+        note = "｜catalog 下界 %d/%d" % (ccomp, len(citems))
+        srcs.append(cp)
     return {
         "status": "ACTIVE" if comp < n else "CLOSED",
-        "progress": "闭环库 %d/%d（%.1f%%）｜全库 %s 封｜completed %d／in_progress %d／pending %d"
+        "progress": "闭环库 %d/%d（%.2f%%）｜全库 %s 封｜已判读 %s（%.2f%%）｜"
+                    "completed %d／in_progress %d／pending %d%s"
                     % (comp, n, comp / n * 100 if n else 0, "{:,}".format(tot),
-                       cnt.get("completed", 0), cnt.get("in_progress", 0), cnt.get("pending", 0)),
+                       "{:,}".format(read), read / tot * 100 if tot else 0,
+                       cnt.get("completed", 0), cnt.get("in_progress", 0),
+                       cnt.get("pending", 0), note),
         "values": {"libs": n, "closed_libs": comp, "total_msgs": tot,
+                   "read_effective": read,
                    "in_progress": cnt.get("in_progress", 0), "pending": cnt.get("pending", 0),
-                   "completed_msgs": sum(x.get("messages", 0) for x in items
-                                         if x.get("traversal_status") == "completed")},
-        "sources": [p],
+                   "completed_msgs": sum(int(v.get("messages") or 0) for v in vals
+                                         if v.get("status") == "completed")},
+        "sources": srcs,
     }
 
 

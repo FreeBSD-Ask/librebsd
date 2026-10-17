@@ -1,0 +1,1530 @@
+# 193.4 OpenBSD 2.6-2.9 的加密与安全（1999-2001）——2.6 引入集成加密支持、2.7 改进 IPsec 并引入 OpenSSH 2.0、2.8-2.9 持续演进（防火墙仍为 IPFilter，pf 首现于 3.0）
+
+**OpenBSD 2.6-2.9 版本发布时间线**：
+
+| 版本 | 发布日期 | 主要特性 | 标注 |
+| --- | --- | --- | --- |
+| **2.6** | 1999-12 | 集成加密支持（**Kerberos IV**、IPsec、OpenSSL 0.9.4、OpenSSH 1.2.2 整合） | 首个将加密作为基本系统组件的 BSD 发行版 |
+| **2.7** | 2000-06 | 改进 IPsec 实现（由 Angelos Keromytis 主导）；引入 OpenSSH 2.0（2000-06-15） | 最早的开源 IPsec 实现之一 |
+| **2.8** | 2000 | 搭载 OpenSSH 2.3.0 世代（SSH 协议 2 支持自 2.7 起） | 与 IETF secsh 工作组协作 |
+| **2.9** | 2001 | 防火墙仍为 IPFilter | IPFilter 2001-05-30 因许可证问题移出 CVS，pf 系从头重写、首随 3.0（2001-12-01）发布 |
+
+## 193.4.1 2.6 集成加密支持的工程效应
+
+**要点**：OpenBSD 2.6（1999-12）引入集成加密支持，包括 Kerberos IV（KTH kth-krb，仅支持 DES；Kerberos V 迟至 2001-2003 年经 Heimdal 迁移方引入）、IPsec、OpenSSL 0.9.4、OpenSSH 1.2.2 的整合；2.6 是首个将加密作为基本系统组件的 BSD 发行版；其全球部署能力的关键在加拿大起源不受美国出口管制约束（USENIX 1999 论文载“unaffected by export restriction laws”）与 RSA 专利期内的双区分发技巧，美国管制（如 BXA/EAR）放松仅为外部条件之一
+
+**史料**：OpenBSD 2.6 Release Notes；CVS commit log；BXA/EAR 出口管制文档 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：出口管制法律框架的松紧直接改变加密软件的利益分配格局，管制的放松是 OpenBSD 集成加密得以全球部署的法律条件之一
+
+**辨析**：美国出口管制对 OpenBSD 加密集成的具体影响在不同叙事中存在差异——需对照 BXA/EAR 文档核验；2.6 集成加密的具体组件列表需考据
+
+**文献**：OpenBSD 2.6 Release Notes；BXA/EAR 出口管制文档；OpenBSD 加密历史文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 193.4.2 IPsec 的改进与部署
+
+**要点**：OpenBSD 2.7（2000.6）改进 IPsec 实现，由 Angelos Keromytis 主导；OpenBSD IPsec 是最早的开源 IPsec 实现之一；IPsec 改进让 OpenBSD 在 VPN 与企业网络安全市场获得部署
+
+**史料**：OpenBSD 2.7 Release Notes；Keromytis IPsec 设计文档；CVS commit log ［A］
+
+**史观**：总纲第 10 条——动手者创造历史：Keromytis 作为希腊裔动手者主导 IPsec 实现与后续演进
+
+**辨析**：OpenBSD IPsec 与 KAME 项目（日本）IPsec 实现的关系存在叙事分歧——两者是否有代码共享需考据；OpenBSD IPsec 在企业 VPN 市场的部署规模缺乏权威统计
+
+**文献**：OpenBSD 2.7 Release Notes；Keromytis IPsec 文档；KAME 项目文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 193.4.3 OpenSSH 2.0 的协议升级
+
+**要点**：OpenSSH 2.0 于 2000-06-15 随 OpenBSD 2.7 发布，支持 SSH 协议 2（协议 2 支持由 Markus Friedl 实现、约 2000-05 达到可用），引入 DSA 公钥认证与三重 DES 加密（AES 套件系约 2.9/3.x 世代后续引入）；OpenSSH 2.0 与 IETF secsh 工作组协作；SSH 协议 2 解决了协议 1 的安全缺陷（如插入攻击）
+
+**史料**：OpenSSH 2.0 Release Notes；IETF secsh 工作组档案；OpenBSD CVS commit log ［A］
+
+**史观**：专题语（不设总纲条号）——协议规范与实现的辩证：SSH 协议 2 作为“形式”（协议规范）改变 OpenSSH“内容”（实现）的安全能力
+
+**辨析**：OpenSSH 2.0 的具体发布日期在不同来源中存在差异——需对照 OpenBSD 官方公告核验；SSH 协议 2 与协议 1 的兼容性策略需考据
+
+**文献**：OpenSSH 2.0 Release Notes；IETF secsh 档案；OpenBSD CVS 仓库［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 193.4.4 发布说明与 commit 记录考据
+
+**要点**：OpenBSD 2.6-2.9 的 Release Notes 与 CVS commit log 是研究此时期 OpenBSD 加密与安全发展的核心史料；Release Notes 详细记录加密集成、IPsec 改进、OpenSSH 升级等
+
+**史料**：OpenBSD 2.6-2.9 Release Notes；OpenBSD CVS commit log；OpenBSD 邮件列表 ［A］
+
+**史观**：总纲第 9 条——经验优先：Release Notes 与 commit log 作为一手经验记录，其考据先于任何二手转述
+
+**辨析**：Release Notes 的完整性需考据——部分细节可能滞后于实际代码；commit log 中的加密相关 commit 需对照 export 控制合规性核验
+
+**文献**：OpenBSD 2.6-2.9 Release Notes；OpenBSD CVS 仓库［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1999-2001 年间：43,038 次提交。
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+<!-- ROW_MINE: usenet_mail.messages.186543 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-021269`；2026-09-14 ng43 全库行级遍历考据采纳）
+
+2000 年 Insulander 澄清 OpenBSD 的 KerberosIV 实现基于 KTH 版本、不受 MIT 实现新近缓冲区溢出影响——KTH 与 MIT 两条 Kerberos 谱系的分野在安全事件中的显影引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.144733 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-026735`；2026-09-13 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 称 OpenBSD 内置 KTH Kerberos 已近两年,正融入最新 KTH KerberosIV 并回馈修正引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.145906 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-028349`；2026-09-13 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 说明 ITAR 只约束经美国的加密技术，OpenBSD 从加拿大出口故不受其限引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+
+
+
+
+<!-- ROW_MINE: usenet_mail.messages.200107 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091544`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Hugo Villeneuve 述 OpenBSD 不支持打印机口 PLIP，串口虽支持 SLIP、PPP 与直连但安装介质不提供。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201846 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092144`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户据 3.3 更新日志指出 route-to 不再接受 lo0 以免成环，改指向内网口后触发内核崩溃，升级前需改规则。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203742 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092373`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Måns Nilsson 报告 3.2 的 linux 模拟下 Netscape 7 连接全被拒，并提及 RFORK_FDSHARE 改动引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206055 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092606`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户报告 RAIDframe 镜像根分区时开机出现 raidX 设备已配置提示，功能正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208412 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094927`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Gilbert Fernandes 给出 Eden VIA C3 800MHz 小板装 OpenBSD 3.1 的完整启动记录引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210003 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095953`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Kurt B. Kaiser 详述 2.9 升 3.1 的步骤，先装二进制 snapshot 再重编内核与系统并用 mergemaster 合并 etc引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212006 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097087`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Darren Reed 长文讨论信任与中间人攻击，认为除非有预共享秘密，任何获取 OpenBSD 的途径都可能被篡改，但实际概率很低引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213953 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098736`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出该 arp 报错出自 netinet/if_ether.c，说明 ISP 用了被保留作多播的管理位以太网地址，并请对方跑 tcpdump -e引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.215947 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098947`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+u n d e r a c h i e v e r 自称懒管理员，喜欢 OpenBSD 因它做了大量杂活，如精简安装与每日提醒邮件引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234695 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104757`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Phillip F Knaack 指导把 OpenBSD 根分区设到 sd1：内核配置写 root on sd1，或引导时加 -a 指定根设备引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217568 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-105772`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marc Espie 承认 psql 链接 readline 崩溃是自己 2.9 之后引入、随即修复的 tsort 缺陷，并反问对方是否确实在跑 2.9引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230939 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106257`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dennis Davis 建议改用 FAQ 中 RAID 方案替代 ccd，并引 openbsd-misc 上的四盘条带实例引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232275 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106442`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Tobias Weingartner 称 Adaptec 迟迟不给文档，无文档则移植 AIC7890 毫无意义引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228946 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107055`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Seagate ST1144A 旧盘在 2.6 下被按 LBA 误报扇区数，fdisk 与 disklabel 均无法写入分区表引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218829 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107251`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marc Espie 解释 OPENBSD_#_BASE 标签只为制作 CD 而设，真正要紧的只有代表稳定版的 OPENBSD_# 与开发版 HEAD引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220498 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107426`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Kristoff Bonne 指出各 BSD 内核独立开发，与共用内核的 Linux 发行版不同引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226981 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107918`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+bob johnson 称在 Compaq Presario 上加 option EXTMEM_SIZE 后 OpenBSD 可认到 48MB 内存引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221312 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108101`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖者怀疑 OpenBSD 2.7 主机被入侵，贴出 netstat 与 ps 输出请求判断引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222926 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108315`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+vkd 主张 OpenBSD 安装程序的分区工具应支持按 KB 或 MB 输入并交互显示分区结果引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224523 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108499`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Steven Smolinski 反映 2.7 只认约 56M 内存，NetBSD 的 EXTMEM_SIZE 办法在 OpenBSD 不适用引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202074 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422475`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 17 日，Bob Beck 分析 ssleay 在美国受 RSA 专利约束、不用 RSAREF 授权即属违法，随后指出最新 TLS 规范已经允许无专利加密路径，即 TLSv1 配 EDH-DSA-3DES 密码套件用临时 Diffie Helman 交换密钥、DSA 签名、3DES 对称加密，但所有美国浏览器厂商都使用 RSA 加密套件做初始密钥交换，因此无 RSA 的服务器目前无法与主流浏览器互通。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202164 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422523`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 11 月 1 日，Dug Song 提交 ssh-1.2.26 log_msg 溢出修复补丁，依据 IBM 应急安全公告 ERS-SVA-E01-1998:005.1 及 rootshell 安全公告第 25 号，把 log-server.c 中三处 vsprintf 改为 vsnprintf，并在 Makefile.in 的 OBJ 与 HEADERS 列表加入 snprintf.o 与 snprintf.h。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203044 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-423026`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 3 月 22 日，Niels Provos 回应关于减少 blowfish 轮数以加快登录的提议，指出以 2 的幂计的轮数下限为 4、当前上限为 31，每一轮基本都用 Blowfish 完全重新加密 S-Boxes，由于并未改动 Blowfish 密码体制本身，减少轮数只会让口令验证更快，也就相当于让口令破解者在单位时间内尝试更多口令。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203280 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425334`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 4 月 30 日，Theo de Raadt指出 cheapbytes 的 CD 因按美国加密法删掉 kerberos 程序而残缺且因加密出口限制不能寄往美加以外并称官方订购系统可寄全球多国。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203356 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425368`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 6 月 10 日，Trevor Schroeder称不可执行栈可消除经典教科书式栈破坏其他溢出攻击更难但仍可能附原始补丁地址false.com与两篇绕过分析geek-girl和w00w00链接。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203375 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425377`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 6 月 13 日，Brian Somers就 Paolo 追问 PPP 拨入用 ppp 还是 pppd 表示两者随意 ppp 功能更多文档更完善 pppd 开销更小因多数实现在内核内并指出 ppp 手册只描述 ppp 程序 pppd 需另查自身文档。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203402 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425388`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 6 月 16 日，Christopher R. Hertel 就 ppp 支持 M$CHAP 版本追问回复称 MS-CHAP V1 去年被 Schneier 与 Mudge 拆解 Microsoft 回应推出 V2 仍在被分析中并附 counterpane 的 pptp 分析链接。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203403 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425389`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 6 月 16 日，Christopher R. Hertel 给出 MS-CHAP V2 的两份 IETF 草案 draft-ietf-pppext-mschap-v2-03 与 draft-ietf-pppext-mschapv2-keys-02 指其仍然现行与已过期未续的 CIFS 规范不同并自承基于微软协议的草案各人结果可能不同。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203462 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425433`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 6 月 28 日，Adrian Close回应Josh Pennell说2.5里option Gateway不再开启ip转发须改sysctl.conf并补充IPSEC头也会注意到ESP与AH默认不在sysctl.conf启用属另一处2.5缺陷。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203527 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425476`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 7 月 5 日，Denis Ustimenko 报告从 2.4 升 2.5 后运行 ipsecadm new esp 建立 esp 时提示 pfkey: Operation not supported 参数含 -enc 3des -auth sha1 -spi 1001 求协助。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203538 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425484`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 7 月 7 日，Håkan Olsson 判断 PGP 6.5.1 应与 OpenBSD 上的 isakmpd 兼容 因为 beta 版能跑 只是那个 PGP beta 不处理 PFS。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203656 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425538`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 7 月 23 日，Chris Cappuccio 提交 -current 的 /usr/share/ipsec/rc.vpn 修正，旧版把 etc/hostname 中接口地址当名字查 etc/hosts 新版按数字处理，接口由 ep0 ep1 换 xl0 xl1 加密由 des 换 cast。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203660 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425540`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 7 月 23 日，Chris Cappuccio 报告两台 i386 路由器上 IPSec 不稳定，P-2 300MHz 的 agave 大文件传输即重启或 ftp systat 因 Alarm clock 死亡，P-3 450MHz 的 mr-t 稳定，仅走 IPSec 隧道时出问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203678 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425549`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 7 月 27 日，Niels Provos 转引 Schroeter 问 adduser 为何用外部 encrypt 而非 perl 直接链 libc crypt()，因 encrypt 对不同哈希生成正确 salt，举例 $2a$12$ 前缀后接 128 位 salt 段。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203781 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425604`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 8 月 12 日，Trevor Schroeder 两侧 Suites 改为 QM-ESP-3DES-SHA-TRP 交换改 TUNNEL_MODE 仍报 224518.333076 Default exchange_run: doi->initiator (0xa4f00) failed。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203847 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425641`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 8 月 20 日，Rob Pickering 解读 VPN 抓包中 ip-proto-50 是 AH 认证报文 92 表示包长 Firewall B 回包正常 Firewall A 发未封装包说明缺少匹配的 SA 应在 A 端检查配置才能建立正常流。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203862 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425652`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 8 月 23 日，Marko Lamminen 建议 OpenBSD 机器用捆绑的 IPSec 配置 VPN 指出旧版手册很差 建议参考 codetalker.com 的 2.4 VPN 简答 并提到 FreeBSD 侧可去 r4k.net 找 OpenBSD IPSec 的移植。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203866 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425655`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 8 月 24 日，Brian Mitchell就 posix.1e 与基于角色的安全之争回应称两者皆有可取之处但对 OpenBSD 而言审计记录远比基于角色的安全有用转引 Theo de Raadt 认为 1e 是不值得写的非标。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203932 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425696`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 1 日，Richard Johnson 指出 ssh 客户端绑特权源端口出自 sshconnect.c 的 ssh_create_socket 用 ssh -P 选项可关这是源自 rsh 与 .rhosts hosts.equiv 认证的传统源端口非特权会使 .rhosts 认证失败。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203936 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425698`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 2 日，Steve Mynott 在 src 树提问是否有人考虑把 openssl 导入 OpenBSD 源码树并指出 openssl 是 ssleay 更现代的替代希望有人推动。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203944 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425703`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 3 日，John Wright 就 ssh 卡住回复 Emre 指其 ssh 1.2.27 在 openbsd2.5 上被分到本地端口 884 而某些防火墙会拦低于 1024 的本地端口可改用 ssh -P 让它分配 1023 以上的端口。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203977 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425725`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 7 日，Aaron Jackson建议在 rc.conf 的 httpd_flags 行下补一条注释说明可用 httpd_flags=-DSSL 走安全连接并提示先读 ssl(8) 再使用此参数。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203984 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425731`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 8 日，CyberPsychotic回应开放区域传送安全隐患指出开放的 zone transfer 通常用来测绘对方网络拓扑从而让网络探测省去大量模糊与试错。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203993 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425736`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 7 日，CyberPsychotic偏好 PAM 可插拔模块以免整库重编也提到沿用 /etc/login.conf 保持 BSD 风格主张先定认证机制再动手并邀人成组合作。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204024 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425753`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 12 日，CyberPsychotic 转贴他人判断称 POP 无法真正安全 唯一办法是用 ssh 端口转发 110 但那要给用户在 master.passwd 里设密码 本人补充 ssl 亦可选。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204026 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425754`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 12 日，Rick Ballard 说明 APOP 用共享密钥加服务端时间戳做 MD5 哈希认证 可避免明文传输 POP 密码但不加密邮件本身 Eudora 与 Pegasus 支持 Qpopper 与 Pop3d 可用 依据 RFC1939 且为 POP 协议可选命令。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204146 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425815`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 23 日，Bob Beck回答 ipnet ipf 性能询问说自己防火墙多 VPN 节点接百兆全双工网复杂 ipf 规则几乎无损耗加密隧道实测 15 至 20 Mb/s 两端 Pentium II 400 配 Intel 10 100 Pro 网卡。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204164 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425823`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 24 日，Tor Houghton 指出 IPSec 走 IP 协议号 50 与 51 可用 tcpdump -x proto 50 or proto 51 抓包并转引 Jonas Eriksson 提到 2.5-current 下 tcpdump 已有 print-ipsec.c。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204169 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425826`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 24 日，Deepak Vaidya 转引 Matthew Patton 称其先前贴出的允许 active FTP 经 ipfilter 的规则并不安全因为任何源自 20 端口的连接都能访问其机器请读者自行权衡。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204173 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425828`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 24 日，Richard Johnson 反馈 2.5 上 ipfilter keep state 让 DNS 查询 HTTP 下载与 rsync 间歇失败 ipf 误丢 TCP ACK 与 UDP 应答怀疑状态表提前遗忘在 19990918 与 19990831 快照均见并向社区询问。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204209 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425847`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 29 日，Theo de Raadt 通知 libssl26.tar.gz 安装后 libssl.so.2.1 与 libcrypto.so.2.1 位于 /usr/lib 需移到 /usr/local/lib 下次快照即将更改 需保持与所用快照匹配。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204215 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425851`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 29 日，Bob Beck 建议在 conf 文件中加入 option KEY 一行然后重新编译内核以使 ipsecadm 支持新 esp。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204238 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-425863`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 1 日，Håkan Olsson 表示本周早些时候参与过 OpenBSD-current 与 Cisco IOS 的 IPSEC 互操作性测试使用 isakmpd 仅用预共享密钥未及证书。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204333 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425901`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 10 日，Brahm Windeler 转引 Peter Galbavy 关于 xdm 登录错误码的讨论后以伪代码指出当前实现一律回 ERR_INCORRECT_LOGIN 若按用户不存在与密码错分别返回会泄露账号存在性故建议仅对 root 返回 ERR_ROOT_CANNOT_AUTH。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204338 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425902`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 10 日，Jon Ribbens 转引 Aaron Jackson 读 passwd 手册与 FAQ 后询问如何用 crack 之类程序校验新老用户密码后答需 libcrack 并自述早先提议将其纳入 OpenBSD 未果 Theo 不喜欢这个主意。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204362 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-425915`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 12 日，Markus Friedl告知树内ssh已加入skey支持建议用cvs get src/usr.bin/ssh或采用近期快照并把问题报给他客户端必须用ssh -v才能在输出中看见skey挑战。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204363 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425916`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 12 日，Markus Friedl请社区将树内OpenSSH缺失的功能点无论有无补丁都直接发邮件给他以配合Theo de Raadt在2.6发布前完成ssh的加密与非加密开发的号召。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204392 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425931`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 14 日，Joe Price转引 Tyler Frederick 关于用 IPsec 隧道在家网与工作网之间组 VPN 的提问称该问题至今未获回复自身也对访问远端网络存疑并请求他人就 vpn 与 ipsecadm 文档未能覆盖的场景作答。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204427 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425947`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 17 日，Aaron Jackson 已使 sslwrap 与 stunnel 编译运行二者功能相近自己非 C 程序员无法判断安全性请求有使用经验者评估二者安全性与稳定性另附 netpipes ssl wrapper 编译失败与三工具链接。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204475 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425979`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 20 日，Rob Pickering 判定经防火墙映射地址互通的 IPSec 拓扑不可行指出 VPN2 的报文会在 VPN1 侧包头认证失败被丢弃因外部 IP 在防火墙上被改写即便防火墙能透传 IPPROTO_AH 也无法以此方式借 NAT 转发 IPSec AH 加 ESP。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204484 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-425984`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 21 日，Håkan Olsson 说明为何杀掉 isakmpd 后 encap 路由不消失指出 route flush -encap 清理不完整会遗留 SA 与内核内 flow 应改用 ipsecadm flush 才能正确清除全部 SA 与 flow 及路由表条目。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204486 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425985`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 21 日，Tor Houghton 转引 richard airlie 问即时加解密文件系统称当年在 RH5.1 用过 Linux 方案不需 NFS 也不用 CFS 安装时需给 mount 与内核打补丁资源为 coli.uni-sb.de 的 theiling 发布 crypto 目录。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204497 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425994`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 21 日，Niels Provos 转引 Matt Patton 询问能否在 enc0 上放过滤规则以及如何实时查看解密后的 VPN 流量答复应查 vpn(8) 手册执行 ifconfig enc0 之后 tcpdump 才有机会抓到流量同时指出 enc0 不会显示全部流量。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204505 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426001`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 10 月 22 日，Steve Mynott 转引 Bob Beck 称 Security Dynamics 使用专有算法且已被 RSA Inc 收购故无法开源自己则指早期 SecureID 并不安全并附 DIMACS 论文称 CryptoCard 作硬件令牌更开放。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204651 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-426069`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 1 日，Bob Beck声明ssl26发行版在加拿大由/pub/OpenBSD/extra/ssl目录下的源码构建细节可能调整sslUSA发行版在美国构建。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204675 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426078`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 3 日，Bob Beck在httpd -DSSL与Netscape和MSIE讨论中倾向Netscape装证书不宜过于便捷但应有让用户思考的操作路径并判断新版IE在证书操作上更差。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204686 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426084`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 4 日，Jason Wright就IPsec桥接场景说明machine1经bridge到machine2的研究方向为在两端之间透明协商IPSec会话并称Angelos是该设计的主脑。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204703 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426094`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 6 日，Matt Patton 回应 OpenBSD 作 VPN 终端设备之问指出 isakmpd 配置管理将是一大麻烦CPU 加密开销会限制连接数量与速率自述正设计装有 IKE 加速器芯片的整机可跑 3DES 流量并认为 ipf 对 enc 接口几乎无从过滤。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204720 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426105`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 7 日，Toomas Kiisk 反驳线程里 3DES 性能不稳的说法，指出相关数字并非机密，给出 KULeuven fast.html、home.cyber.ee helger fastidea 与 Counterpane AES-performance 三处参考。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204752 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426135`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 9 日，chuck回复Mauricio Martins的附件发送问题建议改问metamail并称其可在命令行完成编码随后介绍曾用应用发送PGP加密封装的MIME邮件由接收端校验签名后解码入库从而免去铺设300条拨号线。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204768 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426141`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 10 日，eric jackson回复Russell T Hunt询问RSA版ssl库去向说明手册页按2.6发布编写故暂不在其标注位置实际位于pub/OpenBSD/snapshots/$arch/构建源码存放于pub/OpenBSD/extra/ssl。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204805 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426162`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 13 日，Toomas Kiisk建议仅需加密时改用匿名加密套件可将 SSL 握手加快 5 到 10 倍需从 SSL_DEFAULT_CIPHER_LIST 去掉 !ADH 并用 -DSSL_ALLOW_ADH 重新编译 ssl 目录匿名套件易受中间人攻击不建议使用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204834 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426184`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 15 日，Angelos D. Keromytis 说明多路 VPN 隧道须按 IKE 协议逐个建立并澄清这不是 OpenBSD isakmpd 的缺陷而是协议本身的限制。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204835 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426185`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 15 日，Jon Ribbens 就 ssh 缓冲区溢出转引 Dug Song 称 -current ssh 端口已打补丁并在 pkg/SECURITY 文件加注后追问是否仅 USA_RESIDENT=YES 编译时受影响。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204874 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426202`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 18 日，Angelos D. Keromytis 回答 ISAKMPD x509 证书生成问题指 openssl 可生成并指路 /usr/src/sbin/isakmpd/README.PKI 与 /usr/src/lib/libkeynote/Makefile.in 内有创建证书示例。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204879 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426206`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 19 日，Håkan Olsson 回应 IPSEC 报 GETSPI: Operation not supported 建议两端 /etc/sysctl.conf 加 net.inet.esp.enable=1 与 net.inet.ah.enable=1。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204956 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426243`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 25 日，Trevor Schroeder转引Nino Margetic称欲启用IPsec重编内核在5000/133上约需24小时且srcsys.tar.gz的2.6版尚未发布需等，自己回应正编译current愿把rz4上编译了全部选项的现成内核寄去。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204974 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-426250`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 28 日，Håkan Olsson 指出 Default attribute_unacceptable 提示 BLOWFISH_CBC 疑为配置笔误并解释 DELETE No such process 源于内核 SPI 定时器先于 isakmpd 移除 KLIPS 无此机制。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205016 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426264`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 30 日，Patrick Ethier 翻 man 页后配 ISAKMPD 以 isakmpd -DA=99 启动 tcpdump 见 cookie 交换 netstat 见 Encap 路由 但 FTP 数据仅现于 rl1 而 rl0 与 enc0 均无 且未建 X.509 证书。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205138 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426325`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 6 日，Theo de Raadt 答 2.6 上 SecureCRT 以 ssh 登录提示 Server does not support setting max packet size 的问题指出 ssh jumbo patch 第 2 版已修正并上传预计两到三小时传到 FTP 镜像。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205167 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426332`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 8 日，Trevor Schroeder 提出功能请求询问是否有人考虑把示例程序纳入 /usr/share 以示范如何 kerberize 应用并举 eBones-src/appl/sample 为例。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205196 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426353`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 9 日，Nino Margetic就005_sshjumbo.patch v3报错确认有问题改用同一2.6.tar.gz内的v2版本并强调先cd /usr/src/usr.bin/ssh再应用补丁推测很快会重生成v3。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205283 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-426401`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 14 日，naddy 转引 Xavier Beaudouin 问 2.6 alpha 版为何没有 ssl26.tar.gz 说明 alpha 无共享库支持 故无预打包 需自装源树把 src-patent2-6.tar.gz 解到 libssl 下 make install 再重建 ssh。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205298 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428830`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 15 日，Patrick Ethier 回复 Keromytis 称今晨已与 CheckPoint 人员通话并让其发信说明该侧做法自述把 CheckPoint 盒换成 OBSD 网关后无需改动配置即连通会贴出 encap 表并提对方回报 REQUEST_REMOTE_SUBNET 不支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205323 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428834`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 16 日，Angelos D. Keromytis 回应 Mauricio Martins 关于 policy 文件与 x509 证书配置说明不清晰的困惑反询其意是否指 isakmpd.policy(5) 手册末尾使用 X509 证书的示例策略不够清晰。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205328 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428835`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 17 日，Toomas Kiisk 反驳 Schroeder 称 OpenBSD 中了 RSAREF2 溢出一说指 openssl 不受影响向 rsa 例程传超 RSAref_MAX_LEN 即 1024 的密钥返回 RSAREF_R_LEN ssleay 0.8.1a 起同样如此。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205349 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428850`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 19 日，Mohammad Rizal Othman 转贴 Angelos D. Keromytis 关于 Phase 1 配置的答复后自述改 isakmpd.conf 并用 PGPNet 6.5.2 连接仍报 phase is not 1 与期望 3DES_CBC。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205377 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-428867`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 21 日，Håkan Olsson 评阅 ISAKMP 文档时指出第 2.3 节阶段一建立的是两个 IKE 守护进程之间的 VPN 阶段二才是主机实际使用的 VPN 并解释 DELETE no such process 源于内核与 isakmpd 竞争删除同一 SA。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205418 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428882`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 23 日，Steve Mynott 称最早版本 PGPlib-0.0 运行在 SSLeay 或 OpenSSL 之上且以 BSD 许可发布认为可较容易改造为至少能校验 PGP 2.x 签名文件的工具自称曾找到一个旧归档包但弄丢了并提议把 gnupg 纳入基础发行版。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205479 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428917`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 29 日，Mohammad Rizal Othman 转贴 Patrick Ethier 关于 PGPNet 拨号 VPN 端配置建议含共享密钥回退证书与 Shared key SHA 3DES 1024 的 IKE 提案及 PFS 1024。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205523 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428935`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 31 日，Niels Provos回应 Reinoud Koornstra 关于 GENERIC 配置中 UVM_SWAP_ENCRYPT 内核选项启用价值的追问该选项标注用途为加密即将写入交换分区的页面属页面交换加密实现。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205546 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428950`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 3 日，Brad 指出运行 2.6 的机器无需安装 Datafellows SSH 端口只有困在 Alpha 平台的用户才受限且即便如此重编 OpenSSL 与 OpenSSH 也能让 OpenSSH 正常工作并认为这条路优于装该端口。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205547 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428951`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 3 日，John Ladwig 报告运行于 2.1 的 Kerberos IV KDC 在合规测试中漏检的 Y2K 问题称翻年前数小时仍可取长效票据但本地翻转前不久 kinit jladwig 即返回 Principal expired 追问新版是否真有修复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205583 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428971`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 5 日，Theo de Raadt答复 kerberos 票据过期者指出其仍在跑 2.5 应改用 2.6，该 bug 已在 2.5 与 2.6 之间修复且他前一日已发布公告，可自行检索那篇文章找出补丁尝试套用到自己的系统。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205626 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428997`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 7 日，Dennis Davis 转引 Theo de Raadt 说明确认该修正源于 GNATS 866 由 Art Grabowski 装入述 OpenBSD 现用 krb4-0.9.8 至 2.5 均硬编码 Y2K 到期日2.6 起修好。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205643 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429006`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 9 日，Patrick Ethier回复 Evan Champion 询问 Nortel Contivity 配置指出 OpenBSD 的 isakmpd 不支持 ISAKMP 中的用户名密码与组建议在 Contivity 侧加装 permit no username/password。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205645 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429007`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 9 日，Chris Cappuccio 说明 OpenBSD 上 IPSec 处理先于 NAT 因此可把私网 IP 封装进 IPSEC 隧道再经 IPNAT 转发到外网 未走 IPSec 处理的数据仍照常做地址转换 故两者可在同一台防火墙上共存。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205668 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429013`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 11 日，kwooding 评价 smtpd 小而聚焦 类似 TIS 防火墙工具包 smap 的做法 比 sendmail 更可证明安全 并指出源码一天内即可读完 建议直接读源码判断。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205711 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429027`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 13 日，Diana Eichert就美国加密政策转向发表个人意见转引David Terrell称此举至少意味着非美国用户从美国服务器下载OpenBSD的限制结束且居民可自由发布加密代码只须报备她则认为美国政府的法规细看不自洽很多条款彼此抵牾。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205770 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429051`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 18 日，Angelos D. Keromytis 答两台 OpenBSD IPsec 后 ping 由 110ms 升至 210ms 称每次 ping 需加密两次解密 3DES 或 Blowfish 加 SHA1 延迟升高正常低MTU下 IPsec 头部致分片重组影响 TCP 与FTP。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205784 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429060`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 19 日，Chris D. Faulhaber 转引 Richard King 反馈 OpenBSD-current 下 sshd 启动报 QuietMode 与 FascistLogging 为无效配置项致 sshd 终止建议直接删除这两个已被移除的过时选项。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205789 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429065`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 19 日，Chris Cappuccio 就 Tucson 与 Atlanta 两地 aDSL 与 ISDN 之间架设 VPN 的方案指引查阅 faq13.html 与 faq6.html 并称 isakmpd 相关文档目前较为粗糙需参照 Secureops VPN 的说明。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205793 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429068`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 19 日，dorqus 转引 Sue Bauer-Lee 反馈 Alpha 平台缺少 ssl 库导致预装 OpenSSH 无法运行建议自行从 ftp.openssl.org 取 openssl-0.9.4.tar.gz 编译安装以补齐缺失的库。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205810 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429079`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 21 日，John Ladwig 转引 ipfilter 内核与用户层须同步更新的讨论并提及 anoncvs 服务器因打标过快压力过重自述愿以 current 内核配 release 用户层换取 current ipf 并称 IPSec 亦应获同类支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205880 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429114`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 26 日，Chris Goellner 报告用静态 NAT 打通 NAT 之后机器上的 IPSec 隧道称把配置全部指向 NAT 的公网地址即可工作并希望弄清多条网络能否共用一条隧道。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205919 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-429143`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 28 日，Theo de Raadt 确认 OpenSSH 库不供美国境内商业实体使用并指向 zdnet 报道末段作依据建议不满者联系美国专利局或等待数月。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205943 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429159`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 31 日，Jorgen Granstam 报告 isakmpd 证书配置按预期工作尚未测全打算按承诺补写文档并致谢 Niklas Hallqvist 与 Angelos Keromytis 周末修复了最后缺陷。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205979 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429183`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 5 日，Nicholas Lee 报告 ssh 仅从 openbsd 机器单向到 linux 机器失败而其他方向正常，并贴出 OpenSSH-1.2 的 -v 调试输出显示连到 192.168.9.16 端口 22 建链后返回 read No such file or directory。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206006 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429204`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 8 日，Patrick Ethier 判断商业 VPN 若支持标准 IPSec 与 ISAKMP 即 IKE 或 OAKLEY 则 OpenBSD 侧可通建议照 Jorgen 的 ISAKMP x509 文档配置对方 IKE 变量并称连过 Checkpoint 与 Gauntlet。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206008 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429206`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 8 日，Jorgen Granstam 回应 Patrick Ethier 称崩溃不在 libcrypto 或 libssl 本身而在 isakmpd 调用两库的方式须先装 RSA 版 libcrypto 再重编 isakmpd 因与 libkeynote 用法冲突。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206043 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429236`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 11 日，Jorgen Granstam就 Angelos D. Keromytis 讲 isakmpd aggressive mode 与证书授权回帖称 Phase 1 用 AGGRESSIVE 而非 IDPROT Address tag 应留空并打算补入 howto。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206177 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429326`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 21 日，Sam Stern 承认备份 RH 6.1 配置时漏存 ipmasq 与 ipchains 及 X 配置文件，建议以 SSH 作 X 入口时放行 TCP 22，另在 sshd_config 设 X11Forwarding 为 True 并把服务器密钥位数由 768 提到 1024。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206197 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429342`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 22 日，Markus Friedl 回应 Sam Stern 关于 Using ssh-agent 的提问指出运行 1999 年 11 月之后发布的 OpenSSH 可把 eval ssh-agent 写入 .profile 即可启用密钥代理。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206201 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429345`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 22 日，Jorgen Granstam 回应称当年为实验室系统配置 isakmpd 使用共享密钥时未遇明显困难目前已改用证书认证但那要求从 CVS 把 isakmpd 升级到 current 并给出 hem.passagen.se 上使用 X.509 证书的页面邀请指正错误。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206236 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429370`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 24 日，Angelos D. Keromytis就隧道模式 IPsec 提问回指对方没说清第一个与第二个 ipsecadm new esp 分别指什么并指出 A 侧 SA 的源地址直接写 0.0.0.0 即可。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206242 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429375`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 24 日，Nino Margetic给出 VPN 隧道可用的最小 ipf.rules 先 block in 与 out on enc0 再对 ep0 放行端口 isakmp 的 udp 与 esp 最后对 enc0 放行 ipencap 及两端 VPN 子网流量。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206244 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429377`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 24 日，Ray L就 VPN 隧道中本地地址选择作补充认可 ping -I 指定内部接口走隧道有效追问未绑定 socket 在multihomed 主机上源地址如何挑选以及该逻辑在何处有规定。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206245 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-429378`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 24 日，Angelos D. Keromytis预告 sysctl net.inet.ip.ipsec-acl 默认值约一周内由 0 改为 1 用 photurisd 或手工 SA 又不符 vpn(8) 示例者受影响一月内的 rc.vpn 与 isakmpd 不受影响。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206251 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429383`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 25 日，jameso说明 IPSec 出现 TTL exceeded 的根因是其 flow 语句写错经 Angelos 指出并重读手册后重写 flow 语句后一切恢复正常并致谢。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206258 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429388`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 25 日，Yozo TODA答复 S/MIME 加解密支持称听说 smime-0.7.tgz 将并入 OpenSSL-0.9.5 且 0.9.5beta1 已可取得其 NEWS 载明新增 smime 命令支持 S/MIME 但他自己尚未试编。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206329 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429447`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 1 日，Theo de Raadt 回应关于 Intel Pro 100S 板载 ipsec 协处理器能否在 OpenBSD 上运行的提问对预计从 Intel 拿资料很困难的顾虑直接答复去找他们索取文档试试。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206364 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429476`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 3 日，Chuck 转引 Matthieu Herrb 询问除 Netscape 外支持 S/MIME 签名与加密的 Unix 邮件代理后答称 Mutt 有望不久支持相关实现已开始出现在其开发树其余不知。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206397 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429502`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 6 日，Ray L 就 isakmpd 无法建立连接建议删除 isakmpd.policy 中 Licensees 值里的 passphrase 段称 2.6 未在比较前去除该段而 -current 已修复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206407 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429510`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 6 日，Patrick Ethier 确认 isakmpd 建立 VPN 的目的正是让两个私网互通，因此 10.0.0/24 与 10.1.0/24 两台网关建隧道后，可从 10.1.0.10 直接访问对端 10.0.0.3。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206408 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429511`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 6 日，Patrick Ethier 建议贴出两端 netstat -rn，用 ping -I 内部接口 IP 打远端内网地址，再用 tcpdump -i 外接口 proto esp 抓 ESP 包，若通则执行 ipf -Fa 清空防火墙规则重试以判断是否规则拦截。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206415 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429518`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 6 日，Chris Cappuccio 征集配合 Win32 ipsec 客户端使用的 isakmpd.conf 示例，点名 PGP 与 Cisco/IRE，要求注明所用 Win 客户端及版本与 OpenBSD isakmpd 版本，用于补充 IPSec FAQ。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206452 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429547`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 9 日，Austin Godber 提交关于 S/KEY 在 ssh 与 telnet 中集成与使用的意见涵盖互操作性、secret password 与 pass-phrase 措辞、skeyinit 提示下条密码为 99 及 man 页关于 otp 的补充并自述不确定应发给哪几方。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206457 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429550`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 9 日，Aaron Jackson 建议以 stunnel 为 POP 加 SSL 但指出支持 SSL 的 POP 客户端很少或需改用 imap 另称还有至少两个其他程序可实现却一时想不起名字建议自己搜邮件列表。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206538 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429613`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 15 日，Luke Tymowski 在 Qube 经 IPSec 接 OpenBSD 讨论中称自己刚用 OpenBSD 替换 NT Proxy Server，理由 Qube 内核止于 Linux 2.0.x 且 Cobalt 将弃用 MIPS 改用 AMD，称防火墙配置仅花 30 分钟。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206540 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429614`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 16 日，Jeff Bachtel 就 shell server 认证方案建议直接用 Kerberos 以规避 NIS 缺少加密的问题，用户较多时另可引入 LDAP 处理 shell 等远程查询，并反问是否有人在 OpenBSD 上用 LDAP 做登录信息。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206541 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429615`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 16 日，Jeff Bachtel 回忆数月前去校园谈 Compatible Systems 时对方只肯配置 IntraPort 与 OpenBSD 的预共享 IPSec 连接却拒绝公开客户端工作原理，认为 x509 变动后或许可用 isakmp 登录，或直接找 Cisco 抱怨。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206557 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429625`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 17 日，Bob Beck 承认 mod_ssl 报无法生成 512 位临时 RSA 私钥属其在 mod-ssl 引入的变更所致，称在无 RSA 支持的 openbsd 下这种情况本是正常且原补丁显然未生效。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206558 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429626`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 17 日，Trevor Schroeder 因受够 IntraPort 改走纯 OpenBSD 方案，设想中心 VPN 服务器接入动态宽带后端，peer 配置 Authentication 字段可防静态网被冒用，但服务器只能设一条 Default peer 故追问能否遍历多个 peer。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206588 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429650`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 21 日，Grant Bayley 就 3 月 17 日 sys/netinet/ip_ipsp.h 541 行提交问题说明 IPSec 选项位于 /usr/src/sys/conf/GENERIC 但被注释并建议自行测试。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206594 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429655`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 21 日，Dug Song 就 KerberosIV 安全性讨论建议弃用 rsh 改用 ssh 并提供 telnetrc 启用 KERBEROS_V4 加密的示例配置说明 Kerberos 与 SSH 各司其职非竞争协议。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206620 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429666`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 23 日，Bob Beck 回应 libssl 打包困惑称因 RSA 在美国的专利 libssl 与 libcrypto 至 9 月 21 日前不入树他将从 ports 打包外置并给出手工还原 rsa_eay.c 中 RSA 实现的补丁步骤。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206631 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429671`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 23 日，Chris Cappuccio 就 IPSec 远端 DHCP 客户端作答称手工密钥下不可能但 isakmpd 可以关键在 Phase 2 把 Connections 改为 Passive-connections 使 isakmpd 不主动外联。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206650 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429684`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 24 日，Theo de Raadt 就 3Com Secure NIC 议题回应称让对方自行去找相关程序文档并转引早前关于厂商未提供文档前该项目无法推进的说法。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206653 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429687`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 25 日，Martin Portmann 在 OpenSSH 美国许可证讨论中指出 Diffie-Hellman 是 1976 年首创的公钥算法只能用来生成密钥而无法用来加密或解密消息。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206677 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429703`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 27 日，Denis A. Doroshenko 就 Brian Poole 提议给 OpenSSH 加类似 ftp telnet open host 隐藏手段一事回应称 ftp 遮蔽不多查 netstat 仍会暴露并自述惯用 command open 包裹 telnet 与 ftp。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206696 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-429708`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 28 日，Marco S Hyman为美国 -current 用户构建含 RSAREF ssl 端口并邀试用给出 ftp://ftp.snafu.org/pub/sslUSA-port.tar.gz 需自备未改动 libssl 源码与 rsaref 补丁产出 ssl-2.6-USA.tgz。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206705 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429709`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 28 日，Russell T Hunt指 sha rmd160 与 mdX MD5Transform 与 SHA1Transform 操作前先拷贝数据 rmd160 不拷贝字节序变换只在 MD5Transform 内做 sha 与 rmd160 由调用处处理建议字节序与拷贝可选。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206714 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429714`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 29 日，Todd T. Fries 说明 lib/libssl 为专利段编 stub,sslUSA26.tgz 与 ssl26.tgz 小版本号抬高一档以便动态库随 CD 发行,加密库由用户下载,ports/security/ssl26 为非美国版。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206716 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429716`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 29 日，vajdaij 就美国境内非商业目的使用非美国加密移植包追问危害所在,自述以为美国禁令仅针对出口强加密而非进口,并非严重误解。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206717 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429717`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 29 日，Theo de Raadt 就美国境内使用非美国加密移植包的合规性质疑回应称该看 ssl(8) 手册,在美国使用非 RSAREF 加密库后果自负,RSA Security 有很多律师。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206727 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429722`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 30 日，Joe Nall 就 IPSec 节点由 2.6 升至 -current 后与 VPN 其余节点互不相通回应称 sysctl -w net.inet.ip.ipsec-acl=0 修好,将修 VPN 脚本设对此项。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206778 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429755`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 3 日，Jean-Jacques Bernard转引 oliver.haeuser 问带 mod_ssl 的安全 apache 如何部署时说明 OpenBSD 已整合 Apache mod_ssl 与 openssl 见 ssl(8) 并把 httpd_flags 设为 -DSSL。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206804 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429772`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 5 日，Nicholas Lee 比较 2.6-stable 与 2 月 22 日 -current 快照的 IPSec 差异 主防火墙 NAT 仍跑 2.6-stable 而在节点安装 -current 首个差异是 ipsecadm 新增 -ingress 选项 询问还有需要注意之处。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206807 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429773`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 5 日，Nicholas Lee 分析主机经网关到网络的 ESP 流不通 推测网关作 ip forwarder 而主机不作 觉得方向可能错倾向先把网关升级 -current 以匹配主机 并指出 IPSec 自 -stable 以来变动使文档不同步混乱。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206808 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429774`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 5 日，Bruno Rohee 转引 Lars Hecking 反馈 NetBSD 编译 OpenSSH 后调用 ssh 或 sshd 会让机器冻结约 25 秒而 ssh1 立刻起来 猜测与 OpenSSL 读取整块 stdio buffer 的熵而非只取所需有关 称两三个月前已修复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206809 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429775`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 5 日，Patrick Ethier 澄清 AH 只在 IP 头做 checksum 认证 ESP 才加密载荷二者不等价 指向 man ipsec 用 isakmpd 指定方案 公网 filter 只见源目 IP 与协议号 enc0 才看端到端端口 AH 在 NAT 之后不工作。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206820 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-429781`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 6 日，Markus Friedl 在 Hannah Schroeter 转贴 source-changes 的 ssh2 客户端提交后请众人测试客户端与服务器互操作并把报告发到 markus@openbsd.org。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206863 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429809`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 8 日，Horia Georgescu 报告 VPN 原本可用改动 isakmpd.conf 认证串后忘记同步策略以致 IPSEC 再也拉不起且原配置未保存日志反复出现 invalid next payload type 102 与 132。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206864 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429810`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 8 日，Jonathon Fletcher 询问在 OpenBSD-current 执行 make build 后 libcrypto 与 libssl 从 2.1 升到 2.2 使 ssh 与 sshd 失去 RSA 支持只剩 stub 如何构建真正含 RSA 代码的这两个库。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206866 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429812`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 9 日，Joe Sunday 询问如何用两台 Sparc 在 129.21.60.0/24 两侧搭完全透明的 VPN 桥让机器从家庭网搬到 VPN 侧无需改配置就能工作说明家庭侧 Sparc 只有一块网卡远端侧有两块。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206890 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429831`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 10 日，Patrick Ethier 就 Isakmpd 建 VPN 不通回应建议核对 /etc/sysctl.conf 里 net.inet.ip.forwarding 与 net.inet.esp.enable 是否为 1 并在两侧网关抓 tcpdump 定位阻塞点。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206892 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429833`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 10 日，Johan Danielsson 就 Kerberos IV 是否保护 rsh 命令回应转引 Marco S Hyman 称命令在网络上是明文传输指出 Kerberos 4 不保护而 Kerberos 5 有保护并认为 rsh 本就是问题极大的协议。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206905 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429844`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 11 日，Joe Nall 就硬件加密议题回应转引 Theo 称 -current 已可用 HiFn 7751 芯片做 IPSEC 加速该芯片是面向 IPSEC 的 DES/3DES 与 SHA1/MD5 hmac 引擎仅有对称加密并建议请厂商把 OpenBSD 加入支持系统列表。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206907 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429846`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 11 日，Lars Hecking 就 ISAKMP 错误线程回复指出来信体积过大 13kB 邮件含 6.7kB Windows ms-tnef 冗余而有效内容仅五行并转引 Horia Georgescu 表示将照升级建议再试。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206912 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429850`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 11 日，David Terrell 就 OpenBSD 是否使用 tcpd 的议题回应转引 Sunder 主张 tcp wrappers 能做 ipf 做不到的 identd 与 finger 校验后按用户身份放行并指出这属于策略而非安全且 RFC931 远端用户识别并不可靠。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206914 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429852`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 11 日，Bob Beck 就 -current 快照缺失问题简短回应指出 ssl27.tgz 尚未放入镜像并说明当夜稍后会补齐供使用者继续下载。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206916 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-429854`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 12 日，Theo de Raadt 转引提问者问 ssl27.tgz 从何取得以及 2.7 非美国二进制缺失时是否该用 ssl26.tgz 并答复可以改用 ssl26.tgz 次日会补入一对正式 ssl27 库编号其实与上一快照一致。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206955 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429876`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 14 日，Jason Wright 转引关于 hifn 7901 没有 PCI 接口需先找能启动 OpenBSD 载板的问讯后表示翻过 7811 文档但认为 Hi/Fn 仍想垄断硬件加密市场芯片定价过高并庆幸还有其他厂商。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207011 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429918`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 18 日，Hakan Olsson反对三节点VPN按1到2再到3串链以致每包加解密四次的方案建议直接配置主机1 2 3两两SA不论实际布线如何只要具备IP连通性即可即使1到3的路径经2也可建1到3的SA中间节点按普通IP转发无需再解密加密除非策略要求中间段SA额外加解密。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207012 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429919`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 18 日，Sam Stern询问OpenBSD telnet的DES加密能否不经Kerberos票据启用其在.telnetrc设set autoencrypt on与autodecrypt on后执行encrypt start但status未加密抓包全为明文求无Kerberos域的加密方法。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207017 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429923`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 18 日，Angelos D. Keromytis澄清GRE手册中etherif并非greN接口而是主机A与X之间的接口地址Y须与X按netmask tunnelX划定的网络同网并反问对方提到的TCP从何而来。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207023 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429928`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 19 日，Rafael Coninck Teigao建议在sysctl.conf启用net.inet.ah.enable=1以ipsecadm为同一SA同时配置ESP与AH并引述FAQ说明一个SA可含ESP与AH两表头。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207030 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429935`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 19 日，Nicholas Lee报告ADSL调制解调器可IPNAT转发ESP改用纯IPNAT的IPSec VPN弃GRE隧道两台OpenBSD主机配Nokia M10互ping可通尚未贯通。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207038 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429943`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 20 日，Nicholas Lee贴出ipsecadm配置片段以delspi加new esp的SPI 2000与2001配置火山Nokia M10转发ESP后两端互ping可通但外层目的IP被改写不匹配入站SA。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207078 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429968`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 24 日，Nicholas Lee 报告 vtund 走非 ipsec 直连路由可用而承载 IPSec 后边界主机互 ping 通但两侧网段主机互 ping 全丢包并附 netstat -rn -f encap 与 tcpdump -i tun0 日志疑为 tun 或 ipsec 代码出错。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207103 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429984`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 25 日，Tenacious Mind 询问 ISAKMPD 能否同时使用 AH 与 ESP 称有人建议用 ipsecadm 以相同 SPI 建 esp 与 ah 改 qm-esp-des-md5-ah-md5-suite 后每种协议只在一个方向生效请人分享同时启用两协议的成功配置。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207124 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429998`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 26 日，Markus Friedl 就 OpenBSD 与 Windows2000 的 ISAKMP 互通指向其 ipsec-win2k 页面称内含英文配置文件与示例但截图为德文。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207145 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430012`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 28 日，Jonathan Fortin 用自制 rc.east 与 rc.west 脚本按 2.7 faq 配置主机到主机 IPSEC VPN 后即使 esp 已运行且 ipf 全放行仍无法 ping 通也无法建立 tcp 与 udp 连接其运行 2.7 快照。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207146 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430013`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 28 日，Jonathan Fortin 回复 Patrick Ethier 关于 isakmpd.policy 的追问澄清脚本非调用 isakmpd 而用 userland 的 ipsecadm 并称运行 2.7-beta APR17 用 blf 加密无错而 des 或 des3 报错。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207152 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430018`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 28 日，matthew patton 就 hifn 卡缺货称因五美分元件缺货三周以上暂时无法供货恢复后有意少量提供并倾向改用约为三分之一的 Broadcom 芯片以支持加速 SSL 同时报价低于其他渠道。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207156 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430021`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 4 月 29 日，Hakan Olsson澄清 VPN 是虚拟私有网缩写可经 ipsec GRE 等实现ISAKMP 是密钥管理协议isakmpd 实现自动密钥管理需为 NAT 两端配齐 netA-netB 等 ID 而 ipnat 只有源地址选择器须靠路由绕行。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207210 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430049`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 3 日，Nicholas Lee 称摸通 net to host 的 isakmpd 配置 附 Phase 2 Connections 与两端地址 BAG-Host 203.79.92.50 与 WATER-Host 203.96.144.127。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207211 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430050`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 3 日，op21 称自建的 m68k sslUSA27.tgz 包已放至 ftp.squish.org/misc/OpenBSD.m68k 目录 构建自最近一份 mac68k 快照 供他人下载。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207214 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430053`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 3 日，Tenacious Mind 实测 2.6-release 双 NAT 网关 isakmpd host 到对端 nat 及 ssh http 皆通 但两网关互 ping 即令 VPN 断连 恢复需 ipnat -CF -f 或重启两机。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207228 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-430057`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 4 日，Markus Friedl 指出 -g 无效因问题在服务端一侧已为 OpenBSD-current 的 ssh 加入 GatewayPorts 选项使 -R 远程转发可监听非回环地址。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207235 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430063`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 4 日，David Terrell 转引 Paolo Supino 称用 skey 认证 ftp 与 telnet 正常但 ssh 里不生效只有普通口令可用并答复需以 ssh -v 走 ssh1 而 ssh2 尚未具备对 skey 的更好支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207239 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430067`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 4 日，Chris Cappuccio 转引 Wizard 关于 Debian 的 SSL 版 telnet 客户端与守护程序的说法并回应称把 ssh 收进发行版正是为了取代这类加 SSL 的 telnet。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207247 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430071`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 5 日，Matt Behrens 补发 RSA Laboratories RSAREF 2.0 程序许可协议全文并说明其中授予非独占不可转让永久许可允许为移植或性能改进目的修改但禁止直接用于营利性目的。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207252 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430076`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 5 日，dreamwvr 就 pop3 与 ssh 配合认证提出两条走法一是借 ssh-agent 把证书带过去用于认证二是把 pop 账户口令留空并另起 X 转发在另一台机器能正常抓取 x 应用而本机却失败的疑问。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207319 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430129`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 10 日，Niels Provos 回应 Rick Pettit 询问启用 swapencrypt 是否必须重启而不能仅用 sysctl 后确认无需重启通过 sysctl 使能即可。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207320 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430130`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 10 日，Niels Provos 回应 Trevor Schroeder 关于磁盘残留数据可被拷走后暴力搜索钥空间的担心称对密钥空间的暴力搜索不可行并回答实现未使用任何硬件加速软件加密对 swap 带宽的影响分析见其 swapencryption 论文。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207347 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437528`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 12 日，Nathan Binkert 认为禁止 root 登录的理由在配合 sudo 使用时并不充分指出允许 root 登录的主要用意是应对无法用普通用户登录的紧急情况并称只要 root 口令得当且 OpenBSD 的 hash 较安全破解不成问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207363 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437540`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 12 日，Theo de Raadt 说明 DSA 与 RSA 密钥接连生成共用熵池安装期收集的熵重启并入系统池故不会耗尽并指 DSA 比 RSA 慢。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207380 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437553`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 14 日，Todd T Fries 建议限制 scp 可把账号 shell 换为仿 anoncvs.shar 的脚本并只放行 sftpserv 该端口。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207388 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437558`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 15 日，Tom DeSot转发 CERT 通告 CA-2000-05 指 Netscape Navigator 对 SSL 会话校验存在缺陷并影响 4.72 4.61 4.07，说明 Communicator 4.73 已修复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207424 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437584`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 17 日，Kenneth Ingham 更正前帖笔误指 Bradbury 侧列的 IKE Shared key auth MD5 3DES 1024bit DH 只是可选项之一他想的应是 Shared key auth SHA 3DES 与 ESP 侧 SHA 加 3DES 配 PFS。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207426 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437585`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 17 日，Jonathan Fortin 自述两套各 20 台主机经两台 OpenBSD 2.7-beta 网关建好 vpn 但 192.168.0 段默认路由指向 10.0.0.1 而非 10.0.0.2 故访问不到 10.0.0.1/24 问用 /usr/bin/route 加什么命令。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207428 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437587`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 17 日，Patrick Ethier 就 PGPnet 与 OpenBSD 互通问题说据以往经验把 PGPnet 里时间戳区域的勾去掉后它会自动接受 OpenBSD 侧提出的提案。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207434 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437592`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 17 日，Kenneth Ingham 续报 PGPnet 与 OpenBSD 2.6 仍不通两侧 lifetime 均设 8 小时提案中唯一匹配项与 OpenBSD 侧一致 Mac 反复报 Invalid exchange notification sent 日志挂在 i-pi.com。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207456 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-437605`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 19 日，Michael Shalayeff 称即将发布的 2.7 已具备基于主板周边热波动的真随机数生成驱动请 Intel 820 与 840 芯片组主板持有者用软驱引导实测并运行 sysctl kern.random 回帖结果该驱动尚未在 -current 上验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207464 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437611`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 19 日，Scott Saad 提出用 ipsecadm 手工建 SA 的非传统方案让 Client A 与运行 OpenBSD 2.6 的防火墙 B 走加密隧道之后防火墙把明文包路由上互联网指出 VPN 只覆盖私有侧并不觉显而易见请人支招。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207467 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437614`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 19 日，Angelos D. Keromytis 回应 isakmpd 配合 x509 证书的问题称 2.6 的 isakmpd 本应支持公钥加密认证但此后修过若干缺陷转引 Alejandro Rusell 询问能否只升级 isakmpd 子系统而不把内核与用户态升到 2.7。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207495 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437626`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 21 日，naddy 依 SPEC 基准页称 SS IPC 的 SPECint92 为 13.8 P5-100 为 118 承认 IPC 本来就慢速但 SSH2 的 DSA 观察结果仍让他震惊。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207500 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437630`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 21 日，Angelos D. Keromytis 就 isakmpd 移动连接无法硬编码客户端 IP 的疑问指出在 Phase 1 指定 Default 条目即可作为兜底 并给出 VPN-peer-client-default 完整配置。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207501 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437631`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 21 日，Angelos D. Keromytis 说明 IPF 规则中对 enc0 使用 pass in 则 IPsec 完全绕过 IPFilter 手动 SA 通过 ipsecadm -ingress 指定否则 isakmpd 按 Phase 2 ID 自动安装。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207504 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437633`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 22 日，Chris Cappuccio 就 isakmpd.policy 2.7 与 Licensees 条目不匹配的讨论指出 IPSec FAQ 一份标记 2.6 另一份标记 2.7 请自行选择合适版本。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207521 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437647`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 22 日，kzm提议用 IPSec 隧道把 NetBIOS 广播转发到八个站点以让 Windows 网络邻域用户互访并追问 x86 平台 3DES 加密速度。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207540 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437659`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 23 日，Patrick Ethier称 PGPVPN 6.5.2 不支持主机到局域网配置且 isakmpd 自 2.6 后改动很大建议装新快照。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207564 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437673`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 24 日，Wes Peters 转引 Jorgen Granstam 关于 Schnorr 专利的关切称 Schnorr 专利 4,995,082 在美国只主张与处理器芯片卡配合的数据交换系统据做专利检索的朋友意见不适用于不涉及芯片卡的机间通信。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207594 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437699`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 26 日，Patrick Ethier 说明与 Axent Raptor 的 IPSec 互通仍须在其侧配置 ISAKMP 与 IPsec SA 与 Quick-Mode 套件与转换与重密钥时间并提到反向用 RaptorMobile Client 到 OpenBSD 已工作良好。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207600 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437704`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 27 日，Kenneth Ingham 自写 perl 生成 isakmpd.conf 用于搭建两台机器 Tesla 与 StPete 的 IPsec 连接并附出 Tesla 端完整配置含 3DES-SHA 与 MODP_1024 群组描述。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207635 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-437728`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 30 日，Angelos D. Keromytis称2.6内核调用的isakmpd会执行PFS2.7新增的ip ipsec-pfs是为全自动密钥管理预留并给管理员一个旋钮可用TDBF_PFS验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207644 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437734`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 30 日，Patrick Ethier 说明 NO_PROPOSAL_CHOSEN 表示 Phase 1 或 2 属性不匹配 配置要 TUNNEL 而 Win2K 默认 ENCAPSULATION_MODE=TRANSPORT 须把 Win2K 变成网关 建议先改 OpenBSD 侧。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207649 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437739`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 30 日，Angelos D. Keromytis 转引 Patrick Ethier 称 2.6 版 isakmpd 不做主机到局域网后指出这仅在 Phase 1 共享密钥认证时成立 改用证书即可 aggressive mode 共享密钥对移动客户端理论也行 建议升级 isakmpd。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207700 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437777`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 6 月 28 日，David Terrell询问 IPsec 隧道穿过 NAT 需关闭 AH 仅用 ESP 是否已知有问题希望评估是否可在 ESP only 配置下运行 ipsec 隧道而 IPSEC 通过 NAT 的边界情况尚未知问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207716 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437788`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 6 月 29 日，Matthew C. Weigel回应加密邮件软件选择议题指出 GnuPG 与 PGP 编码邮件可互读并认为非 root 运行不开网络端口的程序漏洞面小若仍担忧可自行做一次代码审计。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207721 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437793`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 6 月 29 日，Josh Archambault回应 ISAKMPD 异常退出议题指出隧道能够传递数据并不排除同时存在 ISAKMP 密钥交换问题但此类条件不可能长期存在以致足以造成所观察到的故障。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207743 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437807`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 6 月 30 日，Niels Provos 澄清 Art 只是打趣，mfs 适合 /tmp 与 /usr/include 这类读写频繁的场景，为它添加加密只会拖慢速度。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207746 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437808`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 6 月 30 日，Niels Provos 建议将 isakmpd 加调试符号重新编译以取得有效 coredump，或在终端用 -DA=99 -d 参数直接运行以排查其运行约十小时后停止的成因。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207760 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437815`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 14 日，Bill Hutchison 回应 Grant Bayley 的 mac68k keygen 失败问题，自述须先在 /dev 执行 MAKEDEV all 生成 /dev/arandom 后 keygen 才可用，此为凭记忆所述。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207795 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437839`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 17 日，Roger Walkup自述在 SS2 四十兆赫兹 64MB 内存机器上生成 DSA 密钥需泡一壶咖啡的工夫两百兆赫兹 PC 更快但仍耗时转引 Cameron Schaus 关于 2.7 上 ssh-dsa 密钥生成十分钟未完的疑问。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207799 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437842`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 17 日，Wes Peters 就 Orange Book 说明它是 Trusted 系统标准而非 SECURE 标准指出政府评级针对共享数据审计而非服务器安全并给出 Robert Watson 的 TrustedBSD 站点入口。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207801 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437844`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 17 日，Chris Cappuccio 追问对方是否在跑快照版本或 2.7 并建议执行 ldconfig -m /usr/local/lib 又称装好相应软件包后 SSL 在 OpenBSD 上工作正常。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207806 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437846`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 17 日，Hakan Olsson 指出 isakmpd 报 policy check failed 因策略同时要求 ESP 与 AH 而快速模式只定义 ESP 建议去掉 ah_present 条件或改为 esp_present OR ah_present。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207834 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437855`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 18 日，Niels Provos 就加密交换分区开销答称视工作负载而定自述全系统启用交换加密未察觉影响并称其论文含相应性能测量章节。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207852 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437860`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 19 日，Nicholas Lee 自述曾用 2.7-beta 配 Nokia M10 DSL 调制解调器作为 NAT 设备尝试 IPSec ESP 不确定问题在调制解调器还是 tun 设备其后改用 ssh 隧道方案。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207887 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437877`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 20 日，Lennart Bang 报告在 RTOS 上开发 IPsec 用 openbsd 2.7 CD 作对端测试发现升级后旧 AH 带 keyed MD5 SHA1 测试失败而 2.6 正常请求复核 openbsd 2.7 与外部目标的旧 AH keyed MD5 SHA1 兼容性。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207888 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437878`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 20 日，Lennart Bang 自述已定位并修复旧 AH keyed MD5 SHA1 在 openbsd 2.7 上的缺陷并向 OpenBSD 提交 cryptosoft.c 补丁说明其 RTOS 的 IPsec 互操作性测试在 pentium openbsd2.7 上恢复通过。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207892 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437881`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 20 日，Michael Shalayeff 就 Yarrow PRNG 议题质疑现有 random 实现有什么问题 yarrow 能改进并质疑引入 triple-DES 与 SHA-1 会让系统把全部时间花在 rng 上询问必要性。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207903 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437888`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 20 日，Clay Dowling 自述在 Apache 中同时启用 SSL 与 PHP4 成功说明系统同时存在 libcrypto.so.2.0 与 2.1 需重命名 /usr/lib 下的库文件并在编译 httpd 时以 LDFLAGS 指向 /usr/local/lib。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207909 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437893`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 21 日，Michael Shalayeff 追问 Yarrow-160 相比现有内核 random 实现在何处更好称基本问题至今未获回答要求给出明确理由方可评估是否值得实现。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207911 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437894`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 21 日，eric jackson 解释 ssl26.tar.gz 无 alpha 版是因 alpha 平台无共享库建议自行静态编译 ssh 以满足 OpenBSD 2.6 在 Alpha AXPpci 上的安装需求。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207926 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437904`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 22 日，Joerg Bornschein 描述以 10.0.0.0/8 大网经 IPsec 连接三个 10.0.x.0/24 小网的 VPN 结构说明小网无需互连但小网一侧误将全部 10.0.0.0/8 流量加密请求配置方案。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207932 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437909`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 22 日，Adam Thompson 建议查 passwd.conf 把 localcipher 设为 md5 匹配 Linux 若 Debian 不认 md5 则用 old 也提到要在 Debian 侧启用 Blowfish 需给 pam-0.72-6 打补丁。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207979 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437934`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 24 日，David Terrell 就 ports 中 sslUSA 授权问题建议读 openssh.com 的 FAQ 弄清授权并反问装 KDM 是否有 xdm 未提供的功能需求。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207996 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437947`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 25 日，Antoine Reid 就 VPN 与隧道方案建议改用 https 或参考 ssl(8) 的设置提到 128 位密钥与按用户发证书认证并附言 IPSec 也可作选项。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208026 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437969`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 26 日，Jason 在构建 apache 1.3.12 与 apache-ssl 1.41 时 make 报 _RAND_egd_bytes 未定义符号而他 configure 只给了 --prefix=/usr/local/apache 请指出问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208030 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437971`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 26 日，Anil Madhavapeddy 就 HTTP PHP SSL 建议从 CVS 取 PHP4 用 ./configure --with-apxs=/usr/sbin/apxs 以 DSO 方式安装并称在 OpenBSD 2.7-STABLE 上可用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208045 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437984`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 26 日，Peter Runestig 发布基于 OpenBSD 2.7 ftpd 的 SSL/TLS 移植版称 Linux 上补影子口令支持但无 PAM 并加入 x509_to_user 定制函数与 .tlslogin 客户端证书校验。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208047 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437985`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 27 日，Chris the Young One 说明自己靠精确错误串在源码 grep 定位问题并贴出依 isakmpd 手册样例 openssl genrsa req -new 成功生成证书的完整会话。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208067 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437997`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 27 日，Nicholas Lee 转引 Nate Puri 提出 imap-uw 或 courier-imap 配 stunnel 后指出最新版 courier-imap 自带 SSL 封装工具无需另配。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208081 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438005`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 28 日，Niels Provos 转引 Madalina Baltatu 问 isakmpd 报错是代码问题还是 libcrypto 问题答应先确认所链 libcrypto 含 RSA 支持此现象像库只有 RSA 子函数导致 isakmpd 无法解密。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208094 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438011`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 29 日，Nate Puri 报用 stunnel 3.8 包 imapd 后 Messenger 无法连接日志出现 bind Address already in use 与 execvp No such file or directory 及连接关闭 0 字节。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208105 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438019`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 29 日，Trevor Schroeder 答 sshd 已链接 tcpd 可查 hosts_access 并建议改用 ipf 而非 libwrap 因 ipf 在连接建立前即施加访问控制且不必依赖 inetd 启动或编译 libwrap 支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208122 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438029`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 31 日，Pablo Bucich 就硬盘加密求助回应称不存在通用简单答案也无魔术守护进程 cfsd 未必对症须先界定数据可用时间保护范围关注点失守代价与关键期再建成本收益图选方案并指出误用加密比不加密更糟。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208136 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438041`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 31 日，Nick Holland询问为何 DSA 密钥生成不能在首次启动时后台进行称在缓存良好的 486/66 上要耗时近五分钟 486/25 与 486/33 上更久建议后台生成以便在生成期间同步开始配置系统。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208145 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-438049`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 31 日，Theo de Raadt 称经 Jason 修补后 Broadcom ubsec 已可用至少支持 ESP 3DES 可能还有其他模式但 netperf 测 CPU 占用 90% 需调优而 hifn 无此问题用其新型号原型芯片测得 270Mbit/sec。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208149 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438052`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 31 日，dgjs 给出用 stunnel 把 IMAP 与 POP3 代理到 SSL 的 rc.local 片段在 /etc/services 增列 imaps 993 与 pop3s 995 两端口并建议用 TCP wrappers 或 ipf 限制本机 143 与 110 端口。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208180 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438073`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 1 日，dreamwvr 自述用 stunnel 以 localhost 993 端口承载 imaps 已确认可用即启动命令加 c 参数监听 993 转发到本机 imap 服务再询问哪些 Windows 客户端能透明使用 stunnel 因自己只熟悉 BSD 与 Linux。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208192 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438082`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 2 日，Felix Kronlage 就 Chris 关于 Windows SSH 客户端能否接 CVS 一事答说 WinCVS 作为 GNU CVS 的移植版本自带经 ssh 连接的选项并自述当晚在办公室自行搭建后再回帖自己全部开发工作都跑在 Windows 2000 上。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208227 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438106`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 3 日，tomd 在 i386 上跑 2.7 与 PgPNet 6.5 商业版自述按 Angelos K 建议为 ipsec_input.c 打补丁分别用 stable 分支与源码树重编均未解决且换过网卡未设 IPF 规则仍不通。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208229 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438107`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 3 日，dreamwvr 更正 stunnel 参数方向称 -c 是客户端 -d 是服务端给出正确写法 stunnel -d imap -l /usr/sbin/imapd imapd 并提醒默认证书是 RSA 而非 DH 同样会出错另提 -n imap 无效。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208233 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438111`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 3 日，dreamwvr 用 netscape mail 测 stunnel 握手失败报 SSL23_GET_CLIENT_HELLO:unknown protocol 称 FAQ 把此归为 outlook 错误但 netscape 亦然请人解决。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208238 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438113`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 3 日，Jack Culpepper 自述 VPN mesh 中心节点以 isakmpd 与预共享密钥连四张网络运行数日后隧道全断 netstat -rnf encap 无输出重启 isakmpd -d 只见 invalid cookie 报错疑高流量触发内核 bug。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208244 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438116`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 4 日，Jack Culpepper 自述其节点运行 2.7-release 时若长时间挂起全部 VPN 会被断开且 isakmpd 陷入不可杀状态发 kill 信号无反应询问是否有人遇到过同样问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208247 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438118`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 4 日，Claudio Jeker 回应 dreamwvr 称自己已搭好 imaps 服务器与 Netscape 兼容用 stunnel -d imaps -r imap 因 courier-imap 不能直接挂 stunnel 下缺 TCPREMOTEIP 环境变量。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208298 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438151`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 7 日，Hakan Olsson推测ipsec的RSA报错源于未装启用RSA的ssl包建议用pkg_info -Ia输出经grep ssl查验并指2.7 i386可从ftp.openbsd.org的2.7 i386目录取ssl27.tgz。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208303 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438154`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 7 日，Murat Balaban称两台2.7机器改配VPN-east.conf与VPN-west.conf后以isakmpd自动建立keyings且netstat -rn已有192.168.1/24到172.16/16的SA但内网仍互ping不通。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208311 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438159`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 7 日，Tom DeSot报2.7 i386机器打完errata中两项isakmpd补丁后IKE交换虽通过却报pf_key_v2_get_spi的GETSPI Operation not supported自承是sysctl.conf漏配了一行。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208320 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438166`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 8 日，Chris Cappuccio指openbsd.org的faq13页面收录了Jorgen Granstam编写的使用isakmpd配合证书的较新配置说明供IPSEC配RSA或DSS的提问者参考。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208335 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438177`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 8 日，Philipp Buehler给出SSLRequire %{SSL_CIPHER_USEKEYSIZE} >= 128 条件，并举例Opera等浏览器还支持168位。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208347 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438187`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 9 日，Angelos D. Keromytis建议改用-current，称2.7稳定分支确立以来已提交大量稳定性修复多归功于Niels Provos。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208352 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438190`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 9 日，METEOR报告OpenBSD 2.7配ssl intl版用RSA_SIG时isakmd报rsa_sig_encode_hash RSA_private_encrypt failed Undefined error 0，疑DLOPEN问题2.6无此现象。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208371 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438201`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 10 日，Theo de Raadt 指加密卡常被忽视的一点是 IPSEC 打满带宽时仍耗约 6% CPU PC 可撑住 T1 但开销仍然吃 CPU。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208435 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438238`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 14 日，jchshin 就 isakmpd x509 证书故障回帖称先前遇到过相同 x509_generate_kn failed 报错建议删除此前生成的密钥按 README.PKI 重走一遍自陈此法已解决。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208533 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438298`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 17 日，Christopher Johnson 推荐 OpenSSL 作为 SSL 实现称其与 mod_ssl 同包且仍在积极维护胜过自造轮子另附一篇讲解 SSL 工作原理的 wwwj 文章其中 SSLeay 为 OpenSSL 前身。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208535 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438300`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 17 日，Thomas Jørgensen 列出从家用 PC 经 OpenBSD 家庭防火墙与 Cisco 677 ADSL 路由器穿透到 FreeBSD 公司防火墙下的办公网拓扑指出只有一个公网 IP 时 IPsec 头与 IP 头不一致询问能否在报头改写下使 IPsec 工作。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208537 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438302`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 17 日，Angelos Keromytis 解释 tcpdump 只见网关地址因报文抵达 IPsec 时已是 IP 套 IP 载荷被外层遮蔽回应 Vlach Moucha 关于 enc0 只抓到隧道网关 IP 而未看到被保护网络载荷的疑问称并无异常。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208550 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438313`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 18 日，John Wright转引Moucha Václav称PGPnet与OpenBSD 2.7间证书认证失败而预共享密钥正常，推测需给isamkpd打补丁，称友人加补丁后成功。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208597 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438348`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 21 日，Richard Najdecki报告其在 OpenBSD 2.6 上用 isakmpd 与 Cisco PIX 建立的 ipsec 隧道两阶段 SA 协商正常，但由 openbsd 端发起 telnet 穿越隧道时 isakmpd 因 invalid cookie 丢弃回程包。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208599 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438349`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 21 日，John Wright回应询问如何在默认安装上加密硬盘文件以防介质被物理窃取造成数据泄露，指出用 ed 的 x 命令即可实现加密。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208600 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438350`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 21 日，Sam Stern为撰写雇主用 IPSEC 文档分享可用于测试 OpenBSD IPSEC 实现的在线服务，含 NIST 手工密钥与 IKE 测试站点及 SSH 提供的 isakmp ike 测试页，并声明自己尚未实测。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208615 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438358`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 21 日，David Terrell补充说明 TLS 与 POP 可共同工作现代客户端多已支持，引用 RFC 2595 作为依据，回应关于 SMTP 与 POP3 加密认证的询问。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208643 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438377`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 23 日，Al Lipscomb 回应 Jason Hunt 在 OpenBSD 2.7 替 Slackware 7.1 防火墙时问 PortSentry 能否跑 stcp 与 sdup 模式，建议改用 2.7 内置 ipsec。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208686 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438406`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 24 日，Mohd Andri Bin Baharudin 两台 OpenBSD 2.7 建 X509 CA 配 isakmpd 后重启报 x509_read_from_dir 的 PEM_read_bio_X509 failed for ca.crt netstat -rn 互达却不通。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208690 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438407`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 24 日，Niels Provos 应 Evan Champion 自 2.7-current 升到前一日 current 后 telnetd 报登录失败而 kerberos 日志显示认证通过 ssh 却正常的提问追问目标机是否装了 kerberos srvtab 称没有则登录理应失败。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208691 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438408`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 24 日，Andrew Falanga 称从 bugtraq 得悉 4.74 之前所有 Netscape 版本的 ssl 密钥认证方式存在缺陷询问 2.7 ports 收录的 Netscape 是否属这些版本并问该缺陷是否适用于 UNIX 及其衍生版的 Netscape。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208692 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438409`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 24 日，Moucha Václav 报告两台 OpenBSD 2.7 作 IPsec 网关启用证书认证时微调 FAQ 示例配置即失败仅预共享密钥可用报 rsa_sig_encode_hash 中 RSA_private_encrypt failed Undefined error 0。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208793 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438479`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 29 日，Chris, the Young One 答 Wozz 称已把 OpenBSD 的 S/Key 库与客户端初步移植到 Debian 无 PAM 支持假挑战需自备 512 字节随机数据。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208798 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438483`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 29 日，dgjs 介绍 Berkeley SafeTP 作为透明代理加固任意 Windows FTP 客户端出站连接使用公开钥认证但代码未经审计成熟度不足。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208936 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438562`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 4 日，Dmitry Petrakoff 报告莫斯科到哈巴罗夫斯克 IPSec 链路因哈巴罗夫斯克 ip-link 丢包 30% 至 40% 使 isakmpd 时陷僵局并令所有 IPsec 链路下断尝试切换传输到 tcp 发现 isakmpd 不支持 tcp 请稳定建议。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208979 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438587`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 6 日，Ullrich Haag 在 2.7-stable 自编译环境复现 isakmpd 运行一两天后崩溃并见 syslog 出现 write to log file failed errno 5 转而输出到 syslog 但难辨崩溃前后。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208994 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438594`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 6 日，Christopher S. Turan回复Marco S Hyman在RSA公钥算法进入公有领域后不再需要sslintl与sslusa端口的提议，表示无异议请直接执行移除。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209007 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438601`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 7 日，Andrew Falanga转引Theo de Raadt称可以并建议安装非美国版ssl，请教是否只需pkg_delete现有包后pkg_add ssl27 tgz，承认自己尚不熟悉UNIX体系。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209023 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438612`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 8 日，chuck yerkes 称 BIND 8 与 BIND 9 都支持区域传输加密资料见 isc.org 表示不担心 zone xfer 但对 DDNS 要求认证。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209056 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438637`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 9 日，Angelos D. Keromytis 说明 ipsecadm group 用于使 AH 与 ESP 同时生效按 -proto esp 与 -proto2 ah 分组后报文呈 IP-AH-ESP-original 只需一条 flow 指向 ESP SA。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209126 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438677`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 13 日，Andrew Shugg判断 Solaris 上 ssh-keygen 与 ssh 客户端挂起是因为 Solaris 默认没有 /dev/random 设备建议从 Solaris CD 安装 SKI 包或用 Perl 脚本以守护进程配合命名管道运行的 EGD 提供哈希随机池。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209215 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438738`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 17 日，Rémi Guyomarch 询问两台 2.7-stable 主机间建立 IPsec 应选 photuris 还是 isakmp 称其已有打补丁的 vtun 构成的 ip-ip 隧道无需 isakmp 的隧道特性只想把既有隧道再封装进 ipsec。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209241 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438752`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 18 日，Jeff Bachtel 报告 current 快照上普通用户 ssh 报 no RSA support in libssl and libcrypto 库皆 current 快照的 但 root 运行 ssh 正常 文件皆 world readable。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209255 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438759`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 19 日，Jack Culpepper 问 IPSEC 网桥重用 enc 设备之法 x y z 三机 mesh 在 enc2 桥接 x 与 y 改用 x 与 z 时 ifconfig enc2 dstsa 报 SIOCSENCDSTSA File exists clearsa 无效。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209304 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438780`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 20 日，Theo de Raadt 就 IPsec 千兆链路作技术评估，提出让 crypto 卡以 mbuf 为源并把结果直接写进 tigon 私有内存，减少 PCI 总线内存移动次数。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。

@@ -35,7 +35,7 @@
 | 1 | 标记行 | `<!-- ROW_MINE: usenet_mail.messages.<pk> -->`，`<pk>` 为源库 `messages.id` |
 | 2 | **抬头** | **须与等级匹配**，见第四节映射表 |
 | 2 | 等级 | `L1`／`L2`／`L3`／`L4`，**须取自 DB 真值**（`claim.evidence_level`），严禁写死字面 |
-| 2 | 来源 | `historical_claims.duckdb.claim.<CID>`，`<CID>` 为 `claim.claim_id` |
+| 2 | 来源 | `historical_claims.duckdb.claim.<CID>`，`<CID>` 为 `claim.claim_id`；该库名为**逻辑名**，唯一真值物理路径为 `04-现代研究文献/historical_claims.duckdb`（详见流程规则「功能数据库唯一真值路径与空壳防治」节），2026-10-16 已删除三处同名 0 表空壳 |
 | 2 | 采纳批次 | 形如 `2026-09-16 list11 comp.sys.sun 续读考据采纳` |
 | 4 | 日期前缀 | 源帖日期，格式 `<YYYY 年 M 月 D 日，>`；**可省**（省时摘要直接起始） |
 | 4 | 摘要 | **30–80 字**；忠实源帖原文；**不得**取自被引帖（`>` 引用块）或编者按（`[[ ]]`） |

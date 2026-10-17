@@ -1,0 +1,189 @@
+# 205.1 代码审计方法论的建立
+
+**要点**：OpenBSD 代码审计方法论由 de Raadt 主导自 1996 年 fork 后逐步建立，核心实践为逐行审查基本系统源码，重点关注缓冲区溢出与格式化字符串漏洞、信任边界与权限提升；审计流程为发现问题 → 修复 →commit log 详细记录 →security advisory；OpenBSD Security Advisories 自 1996 年起在 <www.openbsd.org/security.html> 持续发布，每条 advisory 记录漏洞技术细节、影响范围、修复 commit hash 与对应 CVS 修订版本
+
+**史料**：OpenBSD Security Advisories 1996-2000（<https://www.openbsd.org/security.html>）；OpenBSD CVS commit log 中 audit 相关 tag（<https://cvsweb.openbsd.org/>）；OpenBSD 手册页 **security(8)**（<https://man.openbsd.org/security.8>）与 **afterboot(8)**（<https://man.openbsd.org/afterboot.8>）〔L1 代码/构建产物/L3 官方文档与公告〕
+
+**史观**：总纲第 8 条——社区文化即技术资产：代码审计作为社区文化资产是 OpenBSD 区别于其他 BSD 的核心——de Raadt 在 1996 年 fork 后将 “逐行审查基本系统源码” 确立为社区共识，这一共识通过 commit log 中的详细记录与 security advisory 的持续发布物化为可追溯的技术资产，任何贡献者提交的代码均须经审计流程检验方可入树；组织结构塑造技术路径：OpenBSD 的扁平化组织结构（de Raadt 作为 BDFL + 核心开发者小组）使审计决策无需经过委员会审批即可执行，与 FreeBSD Core Team 投票决策模式相比审计响应更快
+
+**辨析**：审计方法论在不同叙事中存在差异——部分资料强调 “逐行审查”（de Raadt 在 misc@ 邮件列表多次提及 “audit every line”），部分强调 “分类审查”（按漏洞类型如 buffer overflow、format string、integer overflow 分类扫描），二者非互斥而是互补——逐行审查是方法论基础，分类审查是针对特定漏洞类型的专项扫描；审计范围限定为基本系统（src/ 与 sys/ 目录），ports 树（ports/ 目录）由各 port 维护者自行负责，OpenBSD 核心团队不系统性审计 ports；openbsd.duckdb 查询 L3.1.1.audit 在深层信息挖掘报告中不存在（报告仅含 L3.1.1.MFC、L3.1.1.Fix、L3.1.1.Add、L3.1.1.Refactor 等跨 22 仓库关键词分析，未覆盖 “audit” 关键词的 commit 模式挖掘），审计相关 commit 模式数据须以 openbsd.duckdb 直接查询 message_subject/message_body 含 “audit”、“security”、“fix” 等关键词补全，并须与 OpenBSD Security Advisories 页面（<https://www.openbsd.org/security.html>）的 commit hash 交叉验证
+
+**文献**：OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD **security(8)** 手册页 [EB/OL]. <https://man.openbsd.org/security.8>；OpenBSD **afterboot(8)** 手册页 [EB/OL]. <https://man.openbsd.org/afterboot.8>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；openbsd.duckdb 查询 L3.1.1.audit（来源：原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.1.1，数据缺口） ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+
+<!-- ROW_MINE: usenet_mail.messages.200951 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091640`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Dave Uhring 实测 Ultra 1/170E 上 OpenBSD 网络仅 1.9MB/s，同机 Solaris 9 达 9.5MB/s。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202962 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092276`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 解释 softdep 并非不能用于根分区，而是延迟释放空间导致删文件后空间不立即回收引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204873 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092496`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 指 OpenBSD 没有 LINT 那样的全选项内核配置，GENERIC 已含比 FreeBSD 更高比例的选项引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207316 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094802`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+peter 称把 login.conf 中的内存上限从 64MB 提到 128MB 后程序才能运行，尽管进程实际占用远不到 64MB引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209413 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095866`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 判断 Opera 启动即 Abort 是因为内核缺少 linux 兼容层引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210945 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-096043`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+从 RedHat 迁移到 3.0，服务器为 Promise Ultra 控制卡上 8 块 120GB IDE 盘，重置 5 次后文件系统损坏引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.213105 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097218`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖称据其理解 IPF 当初被移出 OpenBSD 树是因当时许可可能妨碍他人做 Darren 所做的事，如今可随意修改分发引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214777 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098837`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Barry Kort 报告 3.0 在 SS2 上 X11 正常，而在两台 IPX 上启动 X11 会 panic引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.233419 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104646`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Lars Josephsen 给出新旧两个 OpenBSD FAQ 网址，并说明该新闻组本身没有独立 FAQ引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216542 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105667`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+发帖报告 2.8 的 ipf 状态表数日内被重复条目塞满，同一地址对重复上千条，附出站规则引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218225 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105854`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+dimitri 报告 mvme167 从 SCSI 盘引导时抛 Address Error 异常并附寄存器现场，此前走 NFS 一直正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.231635 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106353`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Intrepid| 列 501(c)(3) 免税资格的申报要点、引 IRS 网站并区分免税与非营利引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232853 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106525`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Theo de Raadt 回应驱动默认 irq9 之疑，指出自 PC/AT 以来 irq 9 一直等同于 irq 2引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.229992 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107156`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Artur Grabowski 表示 options 手册页本应涵盖全部内核选项，发现遗漏应当报 bug引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.219674 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107332`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+内网机器用域名访问自家对外的 WWW 服务器总是失败，从外网访问同一地址却正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.226225 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107822`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Timothy J. Lee 建议改 /usr/src/distrib/simpleroot 与 $ARCH 下脚本自制启动软盘以预设答案引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.227793 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108005`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+John C. Hollemans 介绍 KBackup 等备份脚本，称其全用 sh 写成并以 afio 取代 cpio、tar、dump 与 pax引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222069 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108202`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+答复称可用 boot.conf 的 machine mem 参数为内核追加内存，并给出 +0x4000000@0x1000000 示例引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.223390 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108384`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Hung Hin Lik, Shell 报告 rl8139 在 2.8 上显示 No Carrier，而 2.7 下正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.225687 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108610`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Turtle Beach Montego II 被识别为 Monster MX300 却无声，拟提交 dmesg引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP166（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 管道概念由 Doug McIlroy 在 Unix 早期提出，1969 年 Ritchie、Thompson 等人围绕文件系统设想时已在黑板讨论，但因当时被认为缺乏想象力而搁置，直到 1972 年才实际实现。（BSD Now EP166，[233.7-308.86]，L2）
+- McIlroy 将管道与过滤器描述为连接程序与数据、消解组合程序时“意外困难”的概念结构，使可互相调用的程序在实践上能够真正连接。（BSD Now EP166，[398.14-414.98]，L2）
+- NCC Group 以 AFL 加 QEMU 组成 TriforceAFL，并借助 flashrd 生成的 OpenBSD 系统对系统调用进行模糊测试，工具已开源，节目主持人提出可将同类方法转向 FreeBSD 系统调用。（BSD Now EP166，[122.62-224.46]，L2）
+- Mark Schilder 的 FreeBSD MySQL 导入记录显示，通过关闭 sync_binlog、InnoDB flush log at commit 与 doublewrite，并将 ZFS sync 设为 disabled，导入速度从每分钟数十 MB 提升至数 GB。（BSD Now EP166，[566.72-824.56]，L2）
+- MySQL 数据库在 ZFS 上宜将 record size 设为 16K 以匹配 InnoDB 页大小、减少写放大，并可设 redundant_metadata=most 与 logbias=throughput 降低元数据写与 ZIL 开销。（BSD Now EP166，[838.88-1004.52]，L2）
+- OpenBSD VMM 的 vmctl 命令行与配置文件风格接近 bhyve 管理框架，配置可被 UCL 解析，但当时仅支持运行 OpenBSD 客户机，且只在 2016 年 10 月 22 日以后的最新 snapshot 中提供。（BSD Now EP166，[1128.68-1256.52]，L2）
+- Adhoku 以 Ansible 和 FreeBSD Jails 复刻 Docker 式部署，每个应用创建独立 jail 并由宿主机 nginx 反向代理按域名分发，使单个 IP 可承载多站点，宣称无需 FreeBSD 专门知识。（BSD Now EP166，[1636.04-1775.64]，L2）
+- FreeBSD Foundation 2016 年 10 月更新预告 developer summit 与 MeetBSD，并强调年末小额捐赠的数量关系到基金会维持公共慈善地位，而非仅依赖少数大额捐赠。（BSD Now EP166，[1259.92-1293.08]，L2）
+- NetBSD 7.0.2 为小型安全更新，修复 mail.local 竞态、更新 OpenSSL 与 NTP/BIND，并修复 UFS1 外来文件系统、MIPS pmap 与 SPARC64 问题。（BSD Now EP166，[2064.56-2101.88]，L2）
+- Matthew Dillon 修复 DragonFly 内核 MMC/SD 读写的 AB_RID 未清零导致的短读写，并将首次超时后的等待从 10 秒降为 1 秒，减少死端口引导延迟。（BSD Now EP166，[2108.32-2152.92]，L2）
+
+**史料**：
+
+- Rhonda Hauben 撰写的 Unix 管道历史文章，引用 Doug McIlroy、Dennis Ritchie 与 Ken Thompson 的记述，主持人逐段转述。（BSD Now EP166，[233.7-422.96]，L2）
+- NCC Group 开源的 TriforceAFL 与 flashrd 工具链（GitHub 仓库），用于 OpenBSD 系统调用模糊测试。（BSD Now EP166，[122.62-224.46]，L2）
+- Mark Schilder 关于在 FreeBSD 上加速 MySQL 导入的博客文章，列出 InnoDB 与 ZFS 调优清单。（BSD Now EP166，[566.72-1010.56]，L2）
+- Keith Burnett 的 OpenBSD 6.0 笔记本安装教程（ThinkPad X60 上配置 XFCE、doas 与 USB 挂载）。（BSD Now EP166，[1802.96-1947.44]，L2）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：管道从 1969 年提议到 1972 年实现，其间经历了被质疑“缺乏想象”的搁置，具体技术路径由当时的人与偶然条件决定，而非线性必然。（BSD Now EP166，[233.7-308.86]，L3）
+- 总纲9 经验优先：McIlroy 以“简单管线连接程序与数据”的经验表述总结工程实践，Unix 的哲学原则从具体动手经验中凝结而成。（BSD Now EP166，[398.14-414.98]，L3）
+- 总纲1 一切真历史都是古代史：主持人感叹管道今日被当作理所当然，而忽略其曾有“没有管道的时代”，历史书写把建构产物自然化为恒常存在。（BSD Now EP166，[239.06-247.66]，L3）
+- 总纲4 分离聚合是永恒规律：Adhoku 以 jail 做应用级分离、以反向代理做流量聚合，呈现分离与聚合的交替结构，而非单一集中或单一分散。（BSD Now EP166，[1636.04-1775.64]，L3）
+- 总纲10 动手者创造历史：MySQL 与 ZFS 的优化均来自动手部署者的具体记录，性能改进由实际操作者而非抽象方案推动。（BSD Now EP166，[566.72-1010.56]，L3）
+
+**辨析**：
+
+- [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。　[存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
+- [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。　[存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
+
+**文献**：
+
+- [BSD Now EP166] Pennington J. BSD Now: 166: Pass that UNIX Pipe[EB/OL]. (2016-11-02)[2026-08-15]. <https://www.bsdnow.tv/166>.
+
+<!-- /PODCAST_REVIEW -->
+<!-- ROW_MINE: usenet_mail.messages.182290 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-055684`；ng41_s25 全库行级遍历考据采纳）
+
+Theo de Raadt 指任何要起子进程的安全程序都须清理子进程的能力，包括环境变量、uid、gid、组表与已打开文件引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.182450 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-055701`；ng41_s25 全库行级遍历考据采纳）
+
+OpenBSD 创始人 Theo de Raadt 答 BSD 安全渠道：OpenBSD 不设此类邮件列表，因为项目直接修补漏洞而非议论漏洞引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.182975 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-056121`；ng41_s27 全库行级遍历考据采纳）
+
+Theo de Raadt 述 OpenBSD 安全方法：六名硬核安全人员逐区修缺陷，并预告即将提供 IPsec引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202480 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422721`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 12 月 18 日，Kjell Wooding 认为提问者或许该换个邮件传输代理，如果 Exim 的作者并不在乎安全，那么一次性做安全审计也解决不了什么，并补充说明这里的安全审计实质上是源码审计，从用 grep 搜索常见危险写法开始只是起步，例如 strcpy 与 scanf，但远不是全部流程。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205432 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-428889`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 24 日，kwooding 答询问者关于 OpenBSD 团队源码审计是靠肉眼还是自动化工具以及审计流程是否公开的问题直言靠肉眼读代码理解接口发现 bug 就在各处修掉并记录一切然后循环往复。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206192 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429340`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 22 日，Marco S Hyman 介绍 rstcorp 的 ITS4 命令行静态扫描工具可检查 C 与 C++ 源码中的安全漏洞，转述其作者在 risks 摘要中的说法称该工具带处理程序可查文件访问竞态条件并相比 [BD96] 原型工具支持过程间与模块间分析，询问是否有人试用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208853 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438518`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 31 日，Jason Allen回应Clay Dowling关于源代码审计必要性的IIS global.asa论断指出问题在于公司webmaster未跟进安全补丁而非微软软件质量低劣。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。

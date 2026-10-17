@@ -1,0 +1,527 @@
+# 195.4 committer 权限记录（1996-2004）——本时期 OpenBSD 的 committer 权限模型，de Raadt 作为“benign dictator”的权限管理实践
+
+## 195.4.1 de Raadt 主导的权限模型
+
+**要点**：OpenBSD committer 权限由 de Raadt 单方面决定——新 committer 由 de Raadt 邀请，无正式提名流程；committer 可被 de Raadt 单方面撤权；权限模型与 NetBSD/FreeBSD 的“Core Team 集体决策”形成对比；de Raadt 主导的权限模型效率高但争议大
+
+**史料**：OpenBSD CVS commit log author 列表；de Raadt 邮件列表帖关于 committer 权限；OpenBSD committer 自述 ［A］
+
+**史观**：组织结构塑造技术路径：de Raadt 个人主导的权限模型决定 OpenBSD committer 群体的演进路径
+
+**辨析**：de Raadt 单方面撤权的具体案例需考据——部分撤权可能因个人争议而非技术原因；权限模型的“严厉”程度在不同参与者叙事中存在差异
+
+**文献**：OpenBSD CVS 仓库；de Raadt 邮件列表帖；OpenBSD committer 自述 ［A］
+
+## 195.4.2 committer 加入与退出记录
+
+**要点**：OpenBSD 1996-2004 年间 committer 加入由 de Raadt 邀请；退出分为自愿退役与强制撤权；committer 数量从 1996 年约 10-20 人增至 2004 年约 40-50 人；主要加入者包括 Provos、Keromytis、Hartmeier、Beck 等
+
+**史料**：OpenBSD CVS author 列表历年统计；OpenBSD 邮件列表新 committer 公告 ［A］
+
+**史观**：偶然性改写历史：具体 committer 加入与退出是具体的人的具体决定，但连锁影响 OpenBSD 工程进展
+
+**辨析**：committer 数量统计在不同工具中差异较大——CVS 转 Git 过程中部分作者可能丢失；强制撤权的具体案例需考据
+
+**文献**：OpenBSD CVS author 统计；OpenBSD 邮件列表 ［A］
+
+## 195.4.3 与 FreeBSD/NetBSD 权限模型的比较
+
+**要点**：FreeBSD 与 NetBSD 采用 Core Team 集体决策的权限模型，OpenBSD 采用 de Raadt 个人主导模型；FreeBSD/NetBSD 的“自动退休”制度在 OpenBSD 中不存在；OpenBSD 的权限模型更高效但争议大，FreeBSD/NetBSD 更民主但决策慢
+
+**史料**：FreeBSD Committer‘s Guide；NetBSD developer’s guide；OpenBSD committer 自述 ［A］
+
+**史观**：社区文化即技术资产：三 BSD 的权限模型反映各自社区文化——OpenBSD 个人化、NetBSD 集体协商、FreeBSD 介于两者之间
+
+**辨析**：三 BSD 权限模型的“效率”对比缺乏权威评估——需对照实际决策案例核验；OpenBSD 是否引入过类似“自动退休”的制度需考据
+
+**文献**：FreeBSD Committer‘s Guide；NetBSD developer’s guide；OpenBSD committer 自述 ［A］
+
+## 195.4.4 权限相关邮件记录考据
+
+**要点**：OpenBSD 1996-2004 年间权限相关邮件记录是研究 committer 权限模型的核心史料；de Raadt 在 <misc@openbsd.org> 与 <tech@openbsd.org> 等邮件列表公开权限决定；考据需对照公开邮件列表存档
+
+**史料**：OpenBSD 邮件列表存档；OpenBSD CVS author 列表；de Raadt 个人网站 ［A］
+
+**史观**：0 信任原则：权限邮件需考据——部分早期邮件在存档迁移中可能丢失
+
+**辨析**：权限决定的私密性使部分案例难以考据——需对照 CVS author 变化推断
+
+**文献**：OpenBSD 邮件列表存档；OpenBSD CVS 仓库 ［A］
+
+## 195.4.5 批评层——de Raadt 单方面撤权与 PF 移植的批评
+
+**要点**：对 de Raadt 单方面撤权与 PF 移植到 FreeBSD 的批评集中于四点——其一，de Raadt 个人主导的权限模型缺乏程序正义，新 committer 由 de Raadt 邀请无正式提名流程，撤权由 de Raadt 单方面决定无申诉机制，对比 FreeBSD Core Team 集体决策与 NetBSD Foundation 董事会审议的“程序正义”，OpenBSD 的“个人独裁”在治理合法性上受质疑；其二，PF 移植到 FreeBSD 与 NetBSD 导致 OpenBSD 失去对 PF 代码演进的主导权——FreeBSD 在移植后对 PF 进行 FreeBSD 特定的修改（如 anchor 机制扩展、FreeBSD 风格的配置语法），OpenBSD 上游与 FreeBSD 下游的 PF 代码逐步分化，OpenBSD 作为 PF 原作者的“话语权”被 FreeBSD 移植维护者稀释；其三，de Raadt 在 IPFilter 许可证变更（2001.5.30）后选择 fork 而非与 Darren Reed（达伦·里德） 协商的“对抗性路径”被批评为意识形态优先于工程实用——IPFilter 在许可证变更后仍被 Linux/Solaris 等系统使用，OpenBSD 的 fork 是否真正解决了 IPFilter 的工程问题存疑；其四，PF 与 FreeBSD IPFW、Linux iptables 的“性能对比”中 PF 不占优势——FreeBSD IPFW 在原生性能测试中领先，Linux iptables 在灵活性上领先，PF 的状态跟踪与简洁语法是其优势但在性能与灵活性上不构成对其他防火墙的压倒性优势
+
+**史料**：OpenBSD CVS commit log（PF 移植相关 commit）；FreeBSD CVS/Git commit log（FreeBSD 移植 PF 相关 commit，2003 年起）；OpenBSD 邮件列表 de Raadt 关于 committer 权限的发言（<misc@openbsd.org> 与 <tech@openbsd.org> 存档，marc.info 第三方归档）；Darren Reed 与 de Raadt 邮件列表争论（2001 年 5 月 IPFilter 许可证变更期间）；Daniel Hartmeier（丹尼尔·哈特迈尔） 个人 pf 历史文章；IPFilter 3.4.31 LICENSE 文件原始文本（须对照核验）；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 8 条原文）
+
+**史观**：总纲第 8 条——本体论上各方平等：de Raadt 与被撤权者、OpenBSD 阵营与 FreeBSD PF 移植维护者、Darren Reed 与 de Raadt 在本体论上地位平等——撤权与 fork 的争议是平等主体间的分歧，不构成任何一方的本体论优越或劣等；商业与社区的张力：PF 移植至 FreeBSD 后 FreeBSD 维护者对 PF 的修改反映商业社区（FreeBSD 因企业部署需求驱动 PF 演进）与原社区（OpenBSD 因安全审计需求驱动 PF 演进）的张力
+
+**辨析**：【0 信任原则·程序正义批评的语境性】“个人独裁缺乏程序正义”的批评须以 OpenBSD 项目目标语境评估——OpenBSD 的“安全至上”目标与 de Raadt 个人主导的“快速决策”模式存在工程效率上的契合，程序正义的缺失不等于工程效率的失败；【PF 移植主导权稀释的实证】FreeBSD 对 PF 的具体修改清单须以 freebsd.duckdb freebsd-src 仓库 sys/netpfil/pf/ 目录 commit 历史核验，不得仅凭推测；【IPFilter fork 必要性的辨析】Darren Reed 在 IPFilter 3.4.31 许可证变更后的具体条款须对照原始 LICENSE 文件核验，“不得修改或重新分发”的条款是否实质影响 OpenBSD 的 BSD 许可证传统须具体分析；【性能对比的方法论】PF 与 IPFW/iptables 的性能对比须以同硬件同负载的第三方 benchmark（如 Phoronix）为准，不得仅凭单方面声明；【多源交叉验证不可靠性规则】多个 Linux 社区批评者在“PF 性能不占优势”上的一致可能源于 Linux 阵营的共同立场而非独立验证
+
+**文献**：OpenBSD CVS 仓库；FreeBSD CVS/Git 仓库（sys/netpfil/pf/）；de Raadt 邮件列表发言 [EB/OL]. marc.info/?l = openbsd-misc；Hartmeier D. pf design history [EB/OL]. Daniel Hartmeier 个人网站；IPFilter LICENSE 文件 ［A］
+
+## 195.4.6 反批评层——OpenBSD 阵营的回应
+
+**要点**：OpenBSD 阵营对撤权批评与 PF 移植批评的回应集中于四点——其一，de Raadt 主导的权限模型在工程效率上具优势，OpenBSD 1996-2004 年间以 6 个月固定发布周期持续输出 release（OpenBSD 3.0-3.6 共 7 个 release，2001.12-2004.11 间平均 6 个月一次），证明个人主导模型在特定工程目标下可持续；其二，PF 移植至 FreeBSD/NetBSD 是 BSD 许可证自由的体现——OpenBSD 选择 BSD 许可证即允许下游自由修改与再分发，FreeBSD 对 PF 的修改是许可证自由的具体显现，OpenBSD 不应亦未试图垄断 PF 代码主导权；其三，IPFilter fork 是工程必要而非意识形态选择——Darren Reed 在 IPFilter 3.4.31 中加入的“不得修改或重新分发”条款与 OpenBSD 的 BSD 许可证传统直接冲突，OpenBSD 无法在保持 BSD 许可证纯洁性的同时继续使用 IPFilter，fork 是许可证冲突下的工程必要；其四，PF 的设计目标是“简洁可审计”而非“性能优先”——OpenBSD 以“代码可审计为可信来源”为预设选择 PF 的简洁语法与状态跟踪，与 FreeBSD IPFW 的“性能优先”和 Linux iptables 的“灵活性优先”是不同工程哲学的平等选择，性能不占优势不等于设计失败
+
+**史料**：OpenBSD 3.0-3.6 Release Notes（release 节奏证据）；OpenBSD CVS commit log（PF 相关 commit）；FreeBSD 4.x-5.x Release Notes（PF 移植时间）；IPFilter 3.4.31 LICENSE 文件原文；Hartmeier pf 设计文档；de Raadt 在 misc@ 与 tech@ 关于 PF 设计哲学的发言；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 17 条与第 24 条原文）〔L1 代码/构建产物/L2 即时通讯记录/L3 官方文档与公告〕
+
+**史观**：总纲第 17 条——软件工程：de Raadt 主导的权限模型与 PF 设计均体现“工程效率优先”的工程哲学——个人主导的快速决策与 6 个月发布周期在 OpenBSD 的“安全至上”目标下具工程效率优势；法律结构：BSD 许可证的自由允许下游修改与再分发，PF 移植至 FreeBSD 是许可证自由的具体显现，OpenBSD 不试图垄断 PF 代码主导权是许可证哲学的实践；总纲第 8 条——本体论上各方平等：PF 与 IPFW/iptables 的设计哲学平等，性能不占优势不等于设计失败
+
+**辨析**：【0 信任原则·工程效率优势的实证】“6 个月发布周期”的工程效率优势须以 OpenBSD 3.0-3.6 的实际 release 日期核验——OpenBSD 3.0 = 2001-12-01、3.1 = 2002-05-19、3.2 = 2002-11-01、3.3 = 2003-05-01、3.4 = 2003-11-01、3.5 = 2004-05-19、3.6 = 2004-11-01，平均间隔约 6 个月，证据可访问；【BSD 许可证自由的引用边界】BSD 许可证的自由允许下游修改但不等于 OpenBSD 不在意下游修改方向——OpenBSD 在 PF 上游与 FreeBSD 下游的代码分化中仍维护“OpenBSD 上游权威”，但该权威是技术信誉而非法律强制；【IPFilter fork 必要性的实证】IPFilter 3.4.31 LICENSE 文件原文须对照核验，“不得修改或重新分发”的具体条款措辞在不同叙事中存在差异，部分资料称“不得用于商业用途”，部分称“不得修改”；【PF 设计哲学的“简洁可审计”实证】PF 的代码行数与 IPFilter 的代码行数对比须以 openbsd.duckdb openbsd-src 仓库 sys/net/pf*.c 与 freebsd-src 仓库 sys/contrib/ipfilter/ 目录代码统计核验
+
+**文献**：OpenBSD 3.0-3.6 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库；FreeBSD Release Notes [EB/OL]. <https://www.freebsd.org/releases/>；IPFilter LICENSE 文件；Hartmeier pf 设计文档 ［A］
+
+## 195.4.7 再批评层——对反批评的再回应
+
+**要点**：对 OpenBSD 阵营反批评的再回应集中于三点——其一，“6 个月发布周期”的工程效率优势不否定权限模型的程序正义缺失——OpenBSD 6 个月发布周期是 release engineering 的工程效率，与 committer 权限模型的程序正义是不同维度，工程效率的优势不构成对程序正义缺失的辩护；其二，“BSD 许可证自由允许下游修改”的反批评者指出，OpenBSD 在 PF 移植至 FreeBSD 后事实上失去了对 PF 演进方向的部分影响力——FreeBSD PF 维护者（如 Max Laier、Cyrille Bergeron 等）在 FreeBSD 5.x-6.x 期间对 PF 的修改（如 PF halo 调度算法、FreeBSD 特定的 ifconfig 集成）部分未回移至 OpenBSD 上游，OpenBSD 上游与 FreeBSD 下游的 PF 代码分化是事实而非“许可证自由的理想实践”；其三，“IPFilter fork 是工程必要”的反批评者指出，Darren Reed 在 IPFilter 后续版本中事实上修改了许可证条款以解决 OpenBSD 的关切，OpenBSD 的 fork 是否在许可证问题解决后仍属必要存疑——IPFilter 在 2003 年后的许可证演化须对照核验
+
+**史料**：OpenBSD 3.0-3.6 Release Notes；FreeBSD 5.x-6.x Release Notes（PF 移植相关）；FreeBSD CVS/Git commit log（PF 相关 commit，2003-2010 年间）；IPFilter 后续版本 LICENSE 文件（2003 年后）；OpenBSD 邮件列表 de Raadt 关于 IPFilter fork 的后续发言；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 8 条与第 13 条原文）
+
+**史观**：总纲第 8 条——本体论上各方平等：OpenBSD 阵营与反批评者在 PF 演进主导权争议上地位平等，反批评不构成对 OpenBSD 阵营反批评的否定，而是辩证链中的再回应环节；总纲第 13 条——法律与道德是利益分配：IPFilter fork 必要性的争议实质是 OpenBSD 与 Darren Reed 在许可证纯洁性利益分配上的冲突，“工程必要”与“意识形态选择”的判断服务于不同的利益分配诉求
+
+**辨析**：【工程效率 vs 程序正义的维度区分】“6 个月发布周期”的工程效率优势与 committer 权限模型的程序正义是不同维度，须分别评估——工程效率的优势不否定程序正义的缺失，程序正义的缺失亦不否定工程效率的优势；【PF 上游下游分化的实证】FreeBSD PF 维护者对 PF 的具体修改清单须以 freebsd.duckdb freebsd-src 仓库 sys/netpfil/pf/ 目录 commit 历史核验，OpenBSD 上游与 FreeBSD 下游的代码分化须以两仓库 PF 相关文件 diff 量化；【IPFilter 许可证演化的考据】IPFilter 2003 年后的许可证条款演化须对照 Darren Reed 后续发布版本的 LICENSE 文件核验，“许可证问题解决后 fork 是否仍属必要”的判断须以 IPFilter 实际许可证演化为准，不得臆测；【多源交叉验证不可靠性规则】多个 FreeBSD 阵营批评者在“OpenBSD 失去 PF 演进主导权”上的一致可能源于 FreeBSD 阵营的共同立场而非独立验证
+
+**文献**：OpenBSD Release Notes；FreeBSD CVS/Git 仓库（sys/netpfil/pf/）；IPFilter 后续版本 LICENSE 文件；OpenBSD 邮件列表存档 ［A］
+
+## 195.4.8 合图层——项目史观总纲第 6 条与第 8 条审视撤权与 PF 移植争议
+
+**要点**：以项目史观总纲第 6 条（和解优于斗争）与第 8 条（本体论上各方平等）审视撤权与 PF 移植争议——de Raadt 单方面撤权、Darren Reed 与 de Raadt 的 IPFilter 许可证争论、OpenBSD 上游与 FreeBSD 下游的 PF 代码分化，各方在本体论上地位平等，争议本身是 BSD 阵营内部对许可证纯洁性、工程效率、程序正义等多元议题的多元判断的具体显现，无须以“对错”二元裁决；以“和解优于斗争”的史观审视，撤权与 fork 的对抗性路径（de Raadt 对被撤权者、de Raadt 对 Darren Reed）并非唯一可能——若 OpenBSD 早期存在集体审议机制或申诉机制，部分撤权争议或可通过协商解决；但“和解优于斗争”不等于“斗争无意义”——撤权与 fork 的对抗性路径在 OpenBSD 的“安全至上”目标下具有工程效率优势，和解史观要求承认多元立场的合理性但亦要求承认争议本身的历史意义
+
+**史料**：原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6 条与第 8 条原文）；OpenBSD CVS commit log（撤权相关 committer 变化）；FreeBSD CVS/Git commit log（PF 移植相关）；de Raadt 与 Darren Reed 邮件列表争论存档（2001 年 5 月 IPFilter 许可证变更期间）；OpenBSD 3.0-3.6 Release Notes
+
+**史观**：总纲第 6 条——和解优于斗争：撤权与 PF 移植争议无须以“对错”二元裁决，各方立场均有其历史语境与合理性，和解史观要求承认多元立场的并存而非强制统一；总纲第 8 条——本体论上各方平等：de Raadt 与被撤权者、OpenBSD 阵营与 FreeBSD PF 移植维护者、Darren Reed 与 de Raadt 在本体论上地位平等，争议是平等主体间的分歧
+
+**辨析**：【和解史观的边界】“和解优于斗争”不等于“斗争无意义”——撤权与 fork 的对抗性路径在 OpenBSD 的“安全至上”目标下具有工程效率优势，和解史观要求承认多元立场的合理性但亦要求承认争议本身的历史意义，不得以“和解”为名取消对争议的考据与分析；【本体论平等的引用边界】“本体论上各方平等”不等于“各方立场无差异”——de Raadt 的“安全至上”立场与 Darren Reed 的“许可证自由”立场在工程哲学上有差异，本体论平等不否定工程哲学差异；【项目史观总纲第 6 条与第 8 条的引用边界】总纲第 6 条与第 8 条的引用须对照原材料/哲学/项目统摄史观/第 25 章.md 原文核验，避免断章取义——第 6 条“和解优于斗争”不等于“无斗争”，第 8 条“本体论上各方平等”不等于“各方立场无差异”
+
+**文献**：原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6 条与第 8 条原文）；OpenBSD CVS 仓库；FreeBSD CVS/Git 仓库（PF 相关）；OpenBSD 邮件列表存档 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1996-2004 年间：112,478 次提交。
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+<!-- ROW_MINE: usenet_mail.messages.194282 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076148`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+jpd阐述单机是否需防火墙的思考，称正常配置系统未必需要本地防火墙，论及信息泄露与防DDoS，属OpenBSD安全实践讨论。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194590 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076194`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ben给出用hostname.if alias给单网卡配多IP并以pf rdr按目标IP分流到不同服务器的完整配置，属pf多IP防火墙方案。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.193700 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076216`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+询问spamd与carp高可用下spamdb同步问题，若MFG崩溃会重新灰名单延迟邮件，涉OpenBSD特有spamd机制。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.193952 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076242`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+对OpenBSD做大型生产路由防火墙持谨慎态度，担忧zebra/quagga稳定性与交换机备件延续，强调IO优化与冗余引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194750 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076270`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Christopher 详记 OpenBSD 3.1 双口 fxp 网卡收不到 ARP 应答，附完整 pf.conf 与 pfctl 计数，疑 ARP 未上送。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.194850 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076282`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Nino Margetic 重贴 2004 年 1 月旧线程，含 authpf 按登录计时限流与用 pf 表加 cron 定时增删地址两方案。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195225 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-076338`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Daniel Hartmeier 称 PPPoE 在 OpenBSD 上出了名地糟，建议先关 pf 对比再判断瓶颈所在。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195358 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-076357`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+sam 的 PF spamd 表已匹配到 266 个包，但进出阻断与通过计数均为零，规则实际未生效。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195482 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-090554`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Daniel Hartmeier 说明把带 Windows 指纹的 SMTP 连接重定向到 spamd，可拦掉蠕虫自带的发信引擎。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195923 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090598`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出 ALTQ 只整形出接口流量，因此自外网流入邮件服务器的流量不受限速约束。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.196034 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090613`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告基于 DHCP 的接口地址续租后，pf 中引用该接口的宏未随之刷新，属 pf 宏展开机制的限制。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.196339 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090631`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Scoobynux 报告以 carp 加 pfsync 加 vlan 组建防火墙集群，称在正式版发布前运行已相当稳定。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.196774 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090675`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Randal L. Schwartz 用 pf 的 os 指纹匹配与 ALTQ 队列，把 Windows 来信限速到 56Kb 压制 MyDoom。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197051 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091207`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+解释 ALTQ 对入向流量的控制有限：包到达接口时已占用带宽，故只能有限度地整形。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197086 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091219`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+给出为 120 个用户各建 CBQ 队列以均分入向带宽的完整 pf 配置，反映该用法失效的现象。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197200 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091232`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者指出所有接口方向均相对防火墙而言，故应写 block in，并说明 tagging 需 3.4。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197489 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091266`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marco S Hyman 指出 BSD 路由代码不支持多条默认路由，建议用 pf 的 reply-to 保证回包走原接口，属实现限制的权威说明。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197612 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091280`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 VIA ME6000 上启用 PF 后 starting network 阶段耗时五分钟、关闭后仅二十秒，以秒表多次实测，属第一手性能数据。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197793 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091310`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Daniel Hartmeier 解释 pf 规则中接口与源地址并非冗余，二者约束不同的包流向关系，属机制层面解释。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197959 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091327`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出 pf.conf 格式自 3.2 到 3.3 有过改动，主要是各段落顺序，而 3.3 到 3.4 可原样沿用。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198271 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091363`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Hartmeier 指出在花括号列表中使用取反项会逐项展开从而匹配全部源地址，应改用 no nat 规则，并提示用 pfctl -sn 核对展开结果。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198650 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091398`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Hartmeier 指出 tcpdump 显示的是解封后的内外层地址，而 pf 判定依据最外层地址，故 enc 接口上仍见封装包属须绕过的固有行为。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.198730 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091407`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Hartmeier 纠正对称理解，给出路径顺序为入接口、nat、规则、路由、nat、规则、出接口，转换始终在过滤之前。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199186 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091447`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Daniel Hartmeier 指出 snort 的传统用法是置于防火墙之后，对意图拦截的流量告警，并提醒应验证防火墙是否真在拦。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199423 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091478`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 的 rdr 先于过滤生效，故放行须针对转换后的目标端口而非外部端口。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.199718 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091509`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者指出地址转换先于过滤发生，放行规则应写转换后的目标主机与端口，以免暴露原端口。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200224 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091558`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Konfuzius 指出 ftp-proxy 与 pf 是两个独立程序，代理不会自动开放端口，主动模式数据连接须自行放行。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200428 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091587`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 补充说最后匹配更灵活，把 pf 规则集比作按序执行的指令，逐条给出示例。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200698 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091618`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+erik 建议在内核编译时去掉 gre，并指出 PPTP 场景并不需要 binat 规则。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200969 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091644`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+erik 引 lo0 吞吐数据反驳 486 可跑线速防火墙，指出内存带宽才是瓶颈。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201002 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091650`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户给出双 ADSL 的 pf 配置，用 route-to round-robin 在两条外线间做出口负载均衡。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201412 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091698`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+描述 pfctl 二进制与内核版本不匹配，导致快照版报错的现象与排查。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.201689 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091729`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+桥接防火墙讨论中，关于是否应当给桥接口配置 IP 地址的争论与理由说明。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202028 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092158`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者 Daniel Hartmeier 给出双出口方案：ADSL 作默认网关，SDSL 入站连接用 reply-to 让回程走原链路。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202213 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092178`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+sam 报 3.3-current 回归：10-Mar 快照下 pf 不开放部分 rdr 端口，退回 18-Feb 源码后消失，属版本行为差异。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202408 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092201`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Atle Kristensen 主张用 cron 与 pftop、pflogd 等 UNIX 工具自行组合监控，认为商业防火墙只图用户的钱。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202526 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092213`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Atle Kristensen 表态钟爱 pf 甚于 ipf，认为不愿学习的人才会嫌配置麻烦，称 pf 实现正确。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202574 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092220`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Philipp Buehler 说明 pf 状态按方向即按接口建立、不会复制到其他接口，故需在第二接口另写 keep state。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202674 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092230`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Jim Faulkner 指出 3.2 尚无法做上传限速，须等 3.3 版把 ALTQ 整合进 PF 之后才行引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202786 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092248`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Jose Nazario 批评那本防火墙书内容过时只讲 2.5 与 ipf，建议直接读 pf howto 与安装文档引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202954 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092274`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+erik 说明 ppp 接口未配置时 pf 会拒绝启动，因此须准备开机与拨号两套规则集引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203164 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092297`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ian Northeast 以自身体验比较 OpenBSD 与 Linux：安装更简、无 SysV 运行级、内核单块无模块、root 用 csh、pf 更好配引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203554 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092346`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Noel 贴出 3.1 三腿防火墙路由表，指出某台工作站的目的地竟指向 link#2 而非其网卡地址引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203781 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092383`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+teksimian 补出完整拓扑：外层 3.0 防火墙用 binat 给内层让路，并贴出两台机器的路由表引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204097 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092418`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted Unangst 指 pf 无法直接按 MAC 限速，只能按 IP，可让 DHCP 固定把同一 IP 分给同一 MAC引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204410 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092442`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+以 pf 规则 block in log quick 配 flags FUP/FUP 丢弃带 FIN/URG/PSH 的扫描包，降低被 nmap 识别的概率引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.204596 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092463`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Wally Bedford 指两网关做 VPN 时不需端口转发与 NAT，只要 pf 放行 500 与 encap，WINS 可穿隧道而广播不能引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.205562 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092523`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Hartmeier 说明 2.9 及更早随系统附带 IPFilter，3.0 起改用 pf，要 pf 只能升到 3.1 或 3.2引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.205031 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092545`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+讨论 PicoBSD 与 emBSD 等嵌入式 BSD 防火墙项目，并指出 emBSD 未含 pf引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.205844 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092588`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Thierry 自述改用 OpenBSD 做防火墙但未找到 FreeBSD 没有的特性引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206032 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092605`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+厂商副总裁在讨论串中回应质疑，介绍其基于 OpenBSD 的防火墙产品与定价引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206299 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092752`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户报告 pf 在多网关下同时使用 rdr 与 route-to 的异常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206317 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092757`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者指出 block in all 会波及 lo0 造成本地 DNS 与邮件异常引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206347 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092763`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+tedu 转述 Henning Brauer 在 misc 列表发布的 pf 成功案例与性能数字引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206433 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-092774`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+tedu 说明 pf 状态按接口维护，多腿防火墙应在阻断所在接口上建立状态引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206953 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094751`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Daniel Hartmeier 逐项解释 pfctl 的 vss 输出，含 TCP 序列号窗口与状态表超时语义引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207206 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094788`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Steph 解释 IRC 服务器回查 113 端口时 NAT 无法路由该入站包导致连接被拒，可把 auth 端口重定向到唯一使用 IRC 的工作站引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207433 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094810`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Philipp Buehler 说明 pf 不必记录每包载荷长度，改用 label 配合 pfctl -sl 即可得到规则匹配次数与包字节数引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207647 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094832`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+JohnnyS 说明 pf 的桥接规则在 3.0 与 3.1 双向生效，而 2.9 及更早的 ipf 只对入向生效引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207840 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094864`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+C. Tran 介绍 fwanalog 脚本可解析并汇总 OpenBSD 3.0 的 pf 日志，并问 ports 里的 analog 是否支持 pf引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.207949 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094875`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Daniel Hartmeier 引 nat.conf 手册指出 pf 的 rdr 无法把包从进入的同一接口反射回去引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208087 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-094889`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+clvrmnky 给出 OpenBSD 3.0 上用 binat 让 PPTP 与 GRE 穿过 pf 的可用 nat.conf 与 pf.conf 配置引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208320 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094918`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Greg Steuck 引 dhcpd 手册与 socket.c 源码指出其绑定 INADDR_ANY，故必须靠 pf 保护引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208557 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094941`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+zby 指出 IPFilter 一年前已从 OpenBSD 移除，3.0 起过滤系统为 Packet Filter引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208822 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094964`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 解释 pf 回 FILTER 会暴露有机器被放行，回标准无端口响应则让对方不知有服务，取舍在于混淆引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209106 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095825`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Philipp Buehler 指出刷新 pf 规则应用 pfctl -F rules，避免 -F all 清空状态表中断连接引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.209423 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095868`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Berk S. Daemon 转述有人用 H323 代理在 NAT 后运行 Netmeeting，虽在 FreeBSD 上引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210020 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-095955`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Stephen Marley 称升到 3.0 后 NAT 未正确处理包尾分片，在 pf.conf 加上 scrub in all 即修复引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210327 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-095976`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Grt 证实注释掉 pf.conf 里的 scrub 后网桥恢复，此前机器曾内核 panic，trace 指向内网口 fxp0引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210895 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-096039`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+评价在 3MB 内存机器上跑 OpenBSD 需老手精简内核，勉强可做家庭防火墙引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211255 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-096071`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+对 pf 状态跟随与 ftp-proxy 的设计提出疑问，涉及 NAT 下十个内部主机的场景引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211408 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097011`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Tony Cosimano 指出 pf 能为 DNS 请求保持状态，而 ipf 做不到，因此无需为 DNS 回复开端口引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211690 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097045`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+FM 贴出多段 pf 日志，询问其中字段含义与为何 ISP 的 DNS 会来探测随机端口引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.211965 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097084`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+mips 提醒该 ISO 非官方、不受团队支持，且其中的包过滤器被换成了 ipfilter，使用有风险引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212212 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097117`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户报告 pf 3.0-stable 的 rdr 重定向使包 TCP 校验和恒为 48e5，2.8 无此问题，附 tcpdump 前后对比引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212394 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097135`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 说明 pf 有意不支持主机组取反，因逻辑展开常与用户本意不符，该取舍此前在邮件列表中讨论定案引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212498 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097145`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者回应 Darren 的缺陷指责，称若这些就是最严重的问题，他对 pf 相当满意引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212565 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097153`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户给出桥防火墙的极简 pf 规则集与测试拓扑，仅放行三台 web 服务器与 DNS，用于验证分片穿越问题引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212667 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097162`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+pf 作者说明 pf 会重组分片，成功重组后按普通包走状态表与规则集，超时未能重组的缓存分片被丢弃而非放行引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212736 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-097172`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户描述在调制解调器与网关之间架桥防火墙时扫描可见分片穿桥，改用 IPF 后扫描干净，遂报告此现象引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203094 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-423056`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 3 月 29 日，Marco S Hyman 向 ports 维护者宣布封版，影响 distfiles 的任何改动最后一天是 3 月 31 日星期三，从 4 月 1 日起只允许修改打包清单与端口 Makefile，觉得必须改其他东西的来找他，任何改动的最后期限暂定 4 月 14 日且可能双向变动。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
