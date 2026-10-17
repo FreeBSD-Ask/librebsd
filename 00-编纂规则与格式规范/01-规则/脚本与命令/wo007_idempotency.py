@@ -6,17 +6,23 @@ COL_SCAN / DEEP_ANALYSIS / PODCAST_REVIEW / ROW_MINE 等）的脚本，写入前
 另提供 normalize_dbnames()：写盘前把旧库名（*.db）统一为现行 .duckdb（防再生）。
 另提供 normalize_terms()：写盘前全书体例用词规范化（如「基础系统」→「基本系统」，防旧词再生）。
 
+⚠️ 换行（2026-10-17）：Windows 下 `open(path, 'w', encoding='utf-8')` 默认把 `\n` 翻成 `\r\n`，
+而 `core.autocrlf=true` ＋ `.gitattributes` `text=auto` 会让这类 CRLF 在 `git status`／`git diff`
+中**完全隐形**（提交时被规范化、工作树仍留 CR）。故：向 `05-卷册大纲/` 写 `.md` 一律走
+write_guard()；不需库名／术语归一化的场合用 write_text_lf()。兜底判据见
+`audit_disk_terminology.py` T2（按字节判在效面 CRLF = 0）。
+
 用法（生成器脚本内）：
-    import sys; sys.path.insert(0, r'd:\\librebsd\\script\\_outline_audit_20260906')
-    from wo007_idempotency import has_block, ensure_absent, normalize_dbnames
+    import sys; sys.path.insert(0, r'd:\\librebsd\\00-编纂规则与格式规范\\01-规则\\脚本与命令')
+    from wo007_idempotency import has_block, ensure_absent, normalize_dbnames, write_guard
 
     t = open(path, encoding='utf-8').read()
     if has_block(t, 'DATA_VERIFY_BLOCK'):
         pass  # 已存在：跳过或走更新逻辑
     else:
         t = t + build_dvb_block(...)
-    t = normalize_dbnames(t)
-    open(path, 'w', encoding='utf-8', newline='\\n').write(t)
+    write_guard(path, t)          # 推荐：库名＋术语＋LF 三归一
+    # 或：write_text_lf(path, t)  # 仅强制 LF
 """
 import re
 
@@ -104,6 +110,21 @@ def normalize_dbnames(text: str, repo: str = None) -> str:
     return text
 
 
+def write_text_lf(path: str, text: str, encoding: str = "utf-8"):
+    """LF 安全写盘：二进制写入，彻底绕开文本模式的换行翻译。
+
+    用于不需库名／术语归一化的场合；写入前把 CRLF 与孤立 CR 一并归一为 LF。
+    返回 (True, applied_desc)。
+    """
+    applied = []
+    if "\r" in text:
+        text = text.replace("\r\n", "\n").replace("\r", "\n")
+        applied.append("crlf")
+    with open(path, "wb") as f:
+        f.write(text.encode(encoding))
+    return True, applied
+
+
 def write_guard(path: str, new_text: str, repo: str = None):
     """写盘统一入口：normalize 库名 + 术语 + 强制 UTF-8 无 BOM + LF。
     返回 (written_bool, guards_applied_desc)。"""
@@ -115,9 +136,8 @@ def write_guard(path: str, new_text: str, repo: str = None):
     if nt != new_text:
         new_text = nt
         applied.append("terms")
-    raw = new_text.encode("utf-8")
-    if b"\r\n" in raw:
-        new_text = new_text.replace("\r\n", "\n")
+    if "\r" in new_text:
+        new_text = new_text.replace("\r\n", "\n").replace("\r", "\n")
         applied.append("crlf")
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(new_text)
