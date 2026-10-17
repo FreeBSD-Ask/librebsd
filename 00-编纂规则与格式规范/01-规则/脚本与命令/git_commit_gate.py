@@ -39,6 +39,11 @@
   B2  根目录新增一级条目不在白名单 → 拒；`APPROVED-BY-OWNER:` 放行
   B3  删除 `12-数据库备份/**` → 拒；`APPROVED-BY-OWNER:` 放行
   B4  文档类文件含全角空格 U+3000 → 拒；`APPROVED-BY-OWNER:` 放行
+  H3  暂存 `.md` 含直角引号六码位（U+300C/300D/300E/300F/FF62/FF63）→ 拒；
+      `APPROVED-BY-OWNER:` 放行。对象面＝**全部暂存 .md**（含内容层/逐字保真档案与
+      代码上下文），与第二十四件 `audit_md_quote_glyphs.py` 的全库 T1 判据同一口径；
+      F1 不自动改正代码上下文与内容层（逐字保真），此两类面的残留由本判据兜底阻断——
+      pre-commit 自动改正 + commit-msg 阻断由此闭环。
   H1  提交说明质量（2026-10-17 主理人批准批，无放行标记）：首行非空、≥8 字符、
       非纯数字／标点占位、消息不以 BOM 起始 → 违者拒（改写消息零成本，不设 bypass）
   H2  CLAUDE.md↔AGENTS.md **提交后**逐字节一致（单方暂存者以 HEAD 内容计）→
@@ -64,7 +69,9 @@ TAG_IGNORED = "APPROVED-IGNORED:"
 TAG_BIGFILE = "APPROVED-BIGFILE:"
 TAG_OWNER = "APPROVED-BY-OWNER:"
 
-ANGLE_MAP = {"\u300c": "\u201c", "\u300d": "\u201d", "\u300e": "\u2018", "\u300f": "\u2019"}
+ANGLE_MAP = {"\u300c": "\u201c", "\u300d": "\u201d", "\u300e": "\u2018", "\u300f": "\u2019",
+             "\uff62": "\u201c", "\uff63": "\u201d"}
+CORNER_ALL = "\u300c\u300d\u300e\u300f\uff62\uff63"  # 与第二十四件 audit_md_quote_glyphs 同一六码位
 ZERO_WIDTH = "\u200b\u200c\u200d\u2060\ufeff"
 IDEOGRAPHIC_SPACE = "\u3000"
 
@@ -275,6 +282,14 @@ def blob_has_ideographic_space(path):
     return IDEOGRAPHIC_SPACE in p.stdout.decode("utf-8", errors="replace")
 
 
+def blob_corner_hits(path):
+    """H3：暂存 blob 中六码位直角引号计数（对象面＝全部暂存 .md，与第二十四件一致）。"""
+    p = run_git(["cat-file", "-p", ":%s" % path])
+    if p.returncode != 0:
+        return 0
+    return sum(p.stdout.count(ch.encode("utf-8")) for ch in CORNER_ALL)
+
+
 def blob_size(path):
     p = run_git(["cat-file", "-s", ":%s" % path])
     if p.returncode != 0:
@@ -347,7 +362,7 @@ def stage_commitmsg(msg):
     if items is None:
         print("git_commit_gate：无法读取暂存区（git 失败）", file=sys.stderr)
         return 2
-    bad_ignored, bad_big, bad_root, bad_bakdel, bad_space = [], [], [], [], []
+    bad_ignored, bad_big, bad_root, bad_bakdel, bad_space, bad_corner = [], [], [], [], [], []
     for st, path in items:
         if not path:
             continue
@@ -361,6 +376,10 @@ def stage_commitmsg(msg):
             bad_root.append(path)
         if is_doc_fixable(path) and blob_has_ideographic_space(path):
             bad_space.append(path)
+        if path.lower().endswith(".md"):
+            n_corner = blob_corner_hits(path)
+            if n_corner:
+                bad_corner.append("%s（%d 处）" % (path, n_corner))
         sz = blob_size(path)
         if sz > THRESHOLD:
             bad_big.append("%s（%d 字节）" % (path, sz))
@@ -375,6 +394,9 @@ def stage_commitmsg(msg):
         errs.append("B3 暂存区包含 12-数据库备份/ 的删除：\n  " + "\n  ".join(bad_bakdel))
     if bad_space:
         errs.append("B4 文档类文件含全角空格 U+3000（禁 AI 不可见字符）：\n  " + "\n  ".join(bad_space))
+    if bad_corner:
+        errs.append("H3 暂存 .md 含直角引号六码位（第二十四件全库清零不变量的提交期兜底；"
+                    "F1 不自动改正代码上下文与内容层/逐字保真面，故此处阻断）：\n  " + "\n  ".join(bad_corner))
     bad_pair = check_alias_pair(items)
     if bad_pair:
         errs.append("H2 CLAUDE.md↔AGENTS.md 提交后将不一致：\n  " + "\n  ".join(bad_pair))
@@ -384,7 +406,7 @@ def stage_commitmsg(msg):
     errs = [e for e in errs if not (
         (e.startswith("G1") and TAG_IGNORED in msg) or
         (e.startswith("G2") and TAG_BIGFILE in msg) or
-        (e.startswith(("B2", "B3", "B4", "H2")) and TAG_OWNER in msg))]
+        (e.startswith(("B2", "B3", "B4", "H2", "H3")) and TAG_OWNER in msg))]
     if errs:
         print("git_commit_gate 拒收（流程规则「Git 暂存规则」；批准标记：%s／%s／%s）：" % (TAG_IGNORED, TAG_BIGFILE, TAG_OWNER))
         for e in errs:
@@ -399,6 +421,8 @@ def stage_commitmsg(msg):
         notes.append("B×%d" % (len(bad_root) + len(bad_bakdel) + len(bad_space)))
     if bad_pair:
         notes.append("H2×%d" % len(bad_pair))
+    if bad_corner:
+        notes.append("H3×%d" % len(bad_corner))
     if notes:
         print("git_commit_gate：检测到批准标记，放行（%s）——请确认 changelog 已留痕批准记录。" % "、".join(notes))
     return 0
@@ -575,7 +599,7 @@ def selftest():
     g("add", "-A")
     check("H1_占位拒", 1, run_gate(repo, "commit-msg", "1\n"))
     check("H1_过短拒", 1, run_gate(repo, "commit-msg", "fix\n"))
-    check("H1_BOM拒", 1, run_gate(repo, "commit-msg", "正常的提交说明文本\n"))
+    check("H1_BOM拒", 1, run_gate(repo, "commit-msg", "\\ufeff正常的提交说明文本\n"))
     check("H1_合规放行", 0, run_gate(repo, "commit-msg", "正常提交说明\n"))
 
     # H2 成对一致性阻断
