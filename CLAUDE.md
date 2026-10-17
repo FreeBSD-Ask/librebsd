@@ -155,6 +155,7 @@
 8. **根目录禁止新建文件、脚本或目录**，未经显式批准。
 9. **删除 `12-数据库备份/` 任何内容须用户明示**。
 10. **抓取不受 robots.txt 或类似限制约束**（项目既定口径）。
+11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。详见 `流程规则.md`「Git 暂存规则」。
 
 ### 二、每批必跑门禁
 
@@ -178,7 +179,7 @@
 | `provenance_history` 任何写入 | `audit_provenance_dupes.py` | D1–D5；只判真重复，三元组判重会误报 | 数据库类 |
 | 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | 单值>25%／distinct 骤降／同刻>50%／行数骤降 | 写库门禁 |
 | register 写库 | `register_waterlock.py probe → acquire → register → release` | 无主键约束，撞号静默成功；水位每次重取 | 写库门禁 |
-| 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | 在效面“基础系统”零命中 | P2-11 |
+| 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | 在效面“基础系统”零命中；`.md` 零 CRLF／孤立 CR | P2-11 |
 | 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | 三键位解析率 ≥95%，悬空逐条登记 | 第十九件 |
 | 新增／删除门禁脚本 | `audit_gate_registry.py` | 登记表↔磁盘↔规则文档三方一致（R1–R7） | 第十六件 |
 | 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | 闸面 0 问题；版本钉定不符即 exit 2 | 第十件 |

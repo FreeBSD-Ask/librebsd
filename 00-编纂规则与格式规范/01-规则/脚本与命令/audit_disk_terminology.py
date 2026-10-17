@@ -98,7 +98,9 @@ def run_eol(root: pathlib.Path):
     exempt = {}
     for dirpath, _, files in os.walk(root):
         for f in files:
-            if not f.lower().endswith(".md"):
+            low = f.lower()
+            # 文档面＝`.md` 及其快照改名形（`x.md.bak_t1` 等）；快照由 E1 计 INFO
+            if not (low.endswith(".md") or ".md." in low):
                 continue
             fp = os.path.join(dirpath, f)
             try:
@@ -162,7 +164,10 @@ def _report(root, hits, exempt, eol_hits, eol_exempt):
 
 
 def cmd_selftest():
-    """判据非空：造「在效面含旧词」与「仅备份件含旧词」两夹具，须分别 FAIL / PASS。"""
+    """判据非空：术语与换行各造「在效面缺陷」与「仅豁免件缺陷」两夹具。
+
+    预期：A（在效面术语）FAIL、C（在效面 CRLF）FAIL；B／D（豁免件）不计 FAIL。
+    """
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="diskterm_"))
     try:
         # 夹具A：在效面含旧词（须 FAIL）
@@ -177,13 +182,30 @@ def cmd_selftest():
         (b / "目录审阅复核纠正对照表-2026-09-23.md").write_text("基础系统\n", encoding="utf-8")
         (b / "clean.md").write_text("基本系统\n", encoding="utf-8")
         hb, eb = run(b)
+        # 夹具C：在效面 CRLF（须 FAIL）
+        c = tmp / "C"
+        c.mkdir()
+        (c / "第02章-概述.md").write_bytes(b"line1\r\nline2\r\n")
+        (c / "ok.md").write_bytes(b"line1\nline2\n")
+        hc, _ = run_eol(c)
+        # 夹具D：仅豁免件含 CRLF（须 PASS，豁免 2 类）
+        d = tmp / "D"
+        d.mkdir()
+        (d / "x.md.pre-20261001").write_bytes(b"a\r\nb\r\n")
+        (d / "目录审阅复核纠正对照表-2026-09-23.md").write_bytes(b"a\r\nb\r\n")
+        (d / "doc.md").write_bytes(b"a\nb\n")
+        hd, ed = run_eol(d)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
-    ok = bool(ha) and not hb and set(eb) == {"E1-backup", "E2-review-record"}
-    print("夹具A（在效面含旧词）命中 %d 处（须 >0）" % sum(n for _, n in ha))
-    print("夹具B（仅豁免件含旧词）命中 %d 处（须 =0）；豁免类 %s" % (sum(n for _, n in hb), sorted(eb)))
+    ok = (bool(ha) and not hb and set(eb) == {"E1-backup", "E2-review-record"}
+          and bool(hc) and not hd and set(ed) == {"E1-backup", "E2-review-record"})
+    print("T1 夹具A（在效面含旧词）命中 %d 处（须 >0）" % sum(n for _, n in ha))
+    print("T1 夹具B（仅豁免件含旧词）命中 %d 处（须 =0）；豁免类 %s"
+          % (sum(n for _, n in hb), sorted(eb)))
+    print("T2 夹具C（在效面 CRLF）命中 %d 文件（须 >0）" % len(hc))
+    print("T2 夹具D（仅豁免件 CRLF）命中 %d 文件（须 =0）；豁免类 %s" % (len(hd), sorted(ed)))
     if ok:
-        print("  ✅ 判据非空：缺陷命中、豁免正确")
+        print("  ✅ 判据非空：两类缺陷均命中、两类豁免均正确")
         return 0
     print("  ❌ 判据可能为空", file=sys.stderr)
     return 1
@@ -202,7 +224,7 @@ def main():
     root = pathlib.Path(args.root)
     if args.list:
         print("对象：%s" % root)
-        print("判据：在效面「%s」= 0" % TARGET)
+        print("判据：T1 在效面「%s」= 0；T2 在效面 .md 含 CRLF/孤立 CR = 0" % TARGET)
         print("豁免：E1 备份件（.preback/.bak/.pre-/.pre_b）｜E2 历史复核登记件（目录审阅复核纠正对照表-*.md）")
         return 0
 
@@ -210,7 +232,8 @@ def main():
         print("依赖缺失：%s" % root, file=sys.stderr)
         return 2
     hits, exempt = run(root)
-    return _report(root, hits, exempt)
+    eol_hits, eol_exempt = run_eol(root)
+    return _report(root, hits, exempt, eol_hits, eol_exempt)
 
 
 if __name__ == "__main__":

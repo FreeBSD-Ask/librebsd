@@ -120,7 +120,7 @@ REGISTRY = [
          trigger="任一批次改 outline 章结构后（88 号文三时点比对法固化，C-12 批 T1.3 残余，2026-10-09 立）",
          selftest=None, in_tests_readme=False),
     dict(no="磁盘层·术语件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_disk_terminology.py",
-         kind="门禁（磁盘层，独立计数）", object="05-卷册大纲/ 在效面术语（精确词“基础系统”命中=0）",
+         kind="门禁（磁盘层，独立计数）", object="05-卷册大纲/ 在效面：T1 精确词“基础系统”命中=0；T2 .md（含 .md.<后缀>）含 CRLF/孤立 CR 的文件=0（按字节判，git 面因 autocrlf 隐形）",
          trigger="任一批次改动 05-卷册大纲 后",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第十六件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_gate_registry.py",
