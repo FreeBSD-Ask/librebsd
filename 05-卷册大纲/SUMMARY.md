@@ -4041,7 +4041,8 @@
   - [217 【Linux社区】BSD 安全创新反向输出专题（kqueue/Capsicum/Pledge/strlcpy）](./第20卷-linux社区史与比较研究/217-bsd安全创新反向输出专题.md)
   - [218 【Linux社区】netdev 中的 BSD 网络张力与 BSD 许可证落地](./第20卷-linux社区史与比较研究/218-netdev中的bsd网络张力与bsd许可证落地.md)
   - [219 【Linux社区】linux-api 中的 BSD 安全模型承袭链（Capsicum → O_BENEATH → CLONE_FD → Landlock → openat2）](./第20卷-linux社区史与比较研究/219-linux-api中的bsd安全模型承袭链.md)
-  <!-- 待补：第20卷卷末书目述评（磁盘无对应文件；第20卷升格处置裁决后统一处理） -->
+
+- [卷末书目述评](./第20卷-linux社区史与比较研究/卷末书目述评.md)
 
 ## 读者指引（大纲侧）
 

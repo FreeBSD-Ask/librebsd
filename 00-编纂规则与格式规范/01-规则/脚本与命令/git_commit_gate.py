@@ -138,7 +138,7 @@ def fix_text(text):
     F1（直角引号）仍仅处理围栏代码块与行内代码段之外的文本。
     """
     changes = []
-    if text.startswith("\ufeff"):
+    if text.startswith("﻿"):
         text = text[1:]
         changes.append("剥离 UTF-8 BOM")
     if "\r" in text:
@@ -313,7 +313,7 @@ def check_msg_quality(msg):
     ④首行非纯数字／标点占位（"1/2/！"式整索引提交当日 ≥7 件的教训）。
     """
     bad = []
-    if msg.startswith("\ufeff"):
+    if msg.startswith("﻿"):
         bad.append("提交说明以 BOM 起始——将消息文件重写为 UTF-8 无 BOM 再提交"
                    "（PowerShell 用 -Encoding utf8NoBOM 或经 Python 落盘）")
     first = msg.split("\n", 1)[0].strip()
@@ -514,7 +514,7 @@ def selftest():
         f.write("甲\u3000乙\n".encode("utf-8"))
     g("add", "-A")
     check("B4_链路改正放行", 0, run_gate(repo, "pre-commit"))
-    check("B4_链路复检放行", 0, run_gate(repo, "commit-msg", "m\n"))
+    check("B4_链路复检放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
 
     # FIX_EXCLUDE 边界：内容层文件连 B4 也不在对象面（既定契约：fix 与 B4 同为
     # is_doc_fixable；内容层/逐字保真档案两阶段均不涉，存量由 scan/fix 批量工具覆盖）
@@ -529,7 +529,7 @@ def selftest():
     results.append(("EXCL_内容原样", 1, 0 if okk else 1, okk))
     if not okk:
         print("  ✗ EXCL_内容被改动 " + repr(kept))
-    check("EXCL_提交放行", 0, run_gate(repo, "commit-msg", "m\n"))
+    check("EXCL_提交放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
 
     # G1/G2 既有
     repo, g = newrepo("t_g1")
@@ -538,26 +538,26 @@ def selftest():
     open(os.path.join(repo, "secret.txt"), "wb").write(b"s")
     g("add", "-A")
     g("add", "-f", "secret.txt")
-    check("G1_忽略拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("G1_忽略拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     g("reset", "-q", "secret.txt")
-    check("G1_撤回后放行", 0, run_gate(repo, "commit-msg", "m\n"))
+    check("G1_撤回后放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     repo, g = newrepo("t_g2")
     os.makedirs(os.path.join(repo, "data"))
     open(os.path.join(repo, "data", "big.bin"), "wb").write(b"x" * (THRESHOLD + 1))
     g("add", "-A")
-    check("G2_大文件拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("G2_大文件拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("G2_批准放行", 0, run_gate(repo, "commit-msg", TAG_BIGFILE + " m\n"))
 
     # B2 根目录新条目
     repo, g = newrepo("t_b2")
     open(os.path.join(repo, "mystery.bin"), "wb").write(b"z")
     g("add", "-A")
-    check("B2_根目录新条目拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("B2_根目录新条目拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("B2_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
     repo, g = newrepo("t_b2b")
     open(os.path.join(repo, ".autocorrectrc"), "w").write("rules: {}\n")
     g("add", "-A")
-    check("B2_白名单放行", 0, run_gate(repo, "commit-msg", "m\n"))
+    check("B2_白名单放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
 
     # B3 备份删除
     repo, g = newrepo("t_b3")
@@ -567,7 +567,7 @@ def selftest():
     g("commit", "-q", "-m", "init")
     os.remove(os.path.join(repo, "12-数据库备份", "x", "a.gz"))
     g("add", "-A")
-    check("B3_备份删除拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("B3_备份删除拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("B3_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
 
     # B4 全角空格
@@ -575,7 +575,7 @@ def selftest():
     with open(os.path.join(repo, "note.md"), "w", encoding="utf-8") as f:
         f.write("甲\u3000乙\n")
     g("add", "-A")
-    check("B4_全角空格拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("B4_全角空格拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("B4_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
 
     # F4 别名成对自动 cp（2026-10-17 主理人批准批）
@@ -595,12 +595,13 @@ def selftest():
 
     # H1 提交说明质量（无放行标记）
     repo, g = newrepo("t_h1")
-    open(os.path.join(repo, "a.md"), "w", encoding="utf-8").write("x\n")
+    os.makedirs(os.path.join(repo, "docs"))
+    open(os.path.join(repo, "docs", "note.md"), "w", encoding="utf-8").write("x\n")
     g("add", "-A")
     check("H1_占位拒", 1, run_gate(repo, "commit-msg", "1\n"))
     check("H1_过短拒", 1, run_gate(repo, "commit-msg", "fix\n"))
-    check("H1_BOM拒", 1, run_gate(repo, "commit-msg", "\\ufeff正常的提交说明文本\n"))
-    check("H1_合规放行", 0, run_gate(repo, "commit-msg", "正常提交说明\n"))
+    check("H1_BOM拒", 1, run_gate(repo, "commit-msg", "\ufeff正常的提交说明文本\n"))
+    check("H1_合规放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
 
     # H2 成对一致性阻断
     repo, g = newrepo("t_h2")
@@ -615,11 +616,42 @@ def selftest():
     with open(os.path.join(repo, "AGENTS.md"), "w", encoding="utf-8") as f:
         f.write("v2 新内容\n")
     g("add", "AGENTS.md")                       # 只暂存 AGENTS.md（改序违规）
-    check("H2_分叉拒", 1, run_gate(repo, "commit-msg", "正常提交说明\n"))
+    check("H2_分叉拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     g("add", "CLAUDE.md")                       # 成对暂存后
-    check("H2_成对放行", 0, run_gate(repo, "commit-msg", "正常提交说明\n"))
+    check("H2_成对放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     g("reset", "-q", "CLAUDE.md")               # 再造单方暂存分叉
     check("H2_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " 有意单改别名件\n"))
+
+    # H3 直角引号六码位（提交期兜底阻断；直接跑 commit-msg 模拟 rebase/漏跑 pre-commit 路径）
+    repo, g = newrepo("t_h3prose")
+    with open(os.path.join(repo, "doc.md"), "w", encoding="utf-8") as f:
+        f.write("正文\u300c甲\u300d\n")
+    g("add", "-A")
+    check("H3_散文直角引号拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    check("H3_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " 有意保留直角引号\n"))
+    repo, g = newrepo("t_h3excl")
+    os.makedirs(os.path.join(repo, "05-卷册大纲"))
+    with open(os.path.join(repo, "05-卷册大纲", "x.md"), "w", encoding="utf-8") as f:
+        f.write("内容层\u300c甲\u300d\n")
+    g("add", "-A")
+    check("H3_内容层面拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    repo, g = newrepo("t_h3code")
+    with open(os.path.join(repo, "doc.md"), "w", encoding="utf-8") as f:
+        f.write("```text\n代码内\u300c不动\u300d\n```\n")
+    g("add", "-A")
+    check("H3_代码上下文拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+
+    # F1 半角形 ｢｣（U+FF62/FF63）自动改正
+    repo, g = newrepo("t_fh")
+    with open(os.path.join(repo, "doc.md"), "w", encoding="utf-8") as f:
+        f.write("半角｢甲｣与正文\n")
+    g("add", "-A")
+    check("F1_半角形放行", 0, run_gate(repo, "pre-commit"))
+    fixed = open(os.path.join(repo, "doc.md"), "rb").read().decode("utf-8")
+    okf = "“甲”" in fixed and "\uff62" not in fixed
+    results.append(("F1_半角形改正正确", 1, 0 if okf else 1, okf))
+    if not okf:
+        print("  ✗ F1_半角形改正正确 " + repr(fixed[:120]))
 
     shutil.rmtree(base, ignore_errors=True)
     bad = [r for r in results if not r[3]]
