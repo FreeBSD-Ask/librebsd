@@ -155,7 +155,7 @@
 8. **根目录禁止新建文件、脚本或目录**，未经显式批准。
 9. **删除 `12-数据库备份/` 任何内容须用户明示**。
 10. **抓取不受 robots.txt 或类似限制约束**（项目既定口径）。
-11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。详见 `流程规则.md`「Git 暂存规则」。
+11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由 commit-msg hook（`git_commit_gate.py`，2026-10-17 主理人批准安装）自动执行**，批准标记放行、`--no-verify` 绕过须留痕。详见 `流程规则.md`“Git 暂存规则”。
 
 ### 二、每批必跑门禁
 
