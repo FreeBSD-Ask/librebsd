@@ -1,29 +1,40 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Git 提交门禁（commit-msg 薄壳后端；2026-10-17 立，固定脚本）
+"""Git 提交门禁（双阶段统一后端；2026-10-17 立，2026-10-17 主理人批准扩展，固定脚本）
 
-由 `.git/hooks/commit-msg` 薄壳调用（hook 本身不入库，本件为权威实现）：
+由两个 hook 薄壳调用（薄壳位于 `.git/hooks/`，不入库，本件为权威实现）：
 
-    exec python "00-编纂规则与格式规范/01-规则/脚本与命令/git_commit_gate.py" "$@"
+    .git/hooks/pre-commit   → exec python …/git_commit_gate.py --stage pre-commit
+    .git/hooks/commit-msg   → exec python …/git_commit_gate.py --stage commit-msg "$@"
 
-对应 `流程规则.md`「Git 暂存规则（.gitignore 与体积门槛；2026-10-17 立）」两条硬规则，
-除非提交说明含批准标记，否则拒收（exit 1）：
+对应 `流程规则.md`「Git 暂存规则（.gitignore 与体积门槛；2026-10-17 立）」。
 
-  G1  新增（A）路径命中 `.gitignore`（`git check-ignore`）——被忽略条目不得入库；
-  G2  暂存 blob 单个 > 5 MB（5,242,880 字节）——大件不得入库。
+── pre-commit 阶段（自动改正，永不拒收）──
+对暂存区中的文档类文件（.md／.txt，排除内容层与逐字保真档案，见 FIX_EXCLUDE_PREFIX）：
 
-批准标记（在提交说明全文中检索，规范要求标注于首行）：
-  `APPROVED-IGNORED:` 放行 G1；`APPROVED-BIGFILE:` 放行 G2。
-含 `--no-verify` 时本 hook 不被 git 调用；绕过须主理人显式指示并留痕 changelog。
+  F1  直角引号「」『』 → 弯引号 “”‘’（开闭字符一一映射；围栏代码块与行内代码段内不动）
+  F2  零宽字符（U+200B/200C/200D/2060/FEFF）→ 删除（同上范围）
+  F3  CRLF → LF；剥离 UTF-8 BOM
 
-为什么用 commit-msg 而非 pre-commit：pre-commit 阶段提交说明尚未定稿，无法核对
-批准标记；commit-msg 运行时暂存区与说明均已固定。
+改后写回工作树并 `git add`，打印改动清单；无源文件级语义变化。
+
+── commit-msg 阶段（阻断，除非提交说明含批准标记）──
+
+  G1  新增（A）路径命中 `.gitignore`（`git check-ignore --no-index`）→ 拒；`APPROVED-IGNORED:` 放行
+  G2  暂存 blob 单个 > 5 MB（5,242,880 字节）→ 拒；`APPROVED-BIGFILE:` 放行
+  B2  根目录新增一级条目不在白名单 → 拒；`APPROVED-BY-OWNER:` 放行
+  B3  删除 `12-数据库备份/**` → 拒；`APPROVED-BY-OWNER:` 放行
+  B4  文档类文件含全角空格 U+3000 → 拒；`APPROVED-BY-OWNER:` 放行
+
+含 `--no-verify` 时 hook 不被 git 调用；绕过须主理人显式指示并留痕 changelog。
+为什么阻断类放 commit-msg：pre-commit 阶段提交说明尚未定稿，无法核对批准标记。
 
 用法：
-  git_commit_gate.py <commit-msg-path>   # commit-msg 调用形态（CWD＝仓库根）
-  git_commit_gate.py --selftest          # 隔离临时仓库五用例负向自检
+  git_commit_gate.py --stage pre-commit            # pre-commit 调用形态（CWD＝仓库根）
+  git_commit_gate.py --stage commit-msg <msgpath>  # commit-msg 调用形态
+  git_commit_gate.py --selftest                    # 隔离临时仓库全用例自检
 
-退出码：0 放行；1 拒收（stdout 列违规件）；2 依赖缺失（git 不可用）。
+退出码：0 放行；1 拒收（stdout 列违规件）；2 依赖缺失或运行错误。
 """
 import os
 import subprocess
@@ -32,6 +43,23 @@ import sys
 THRESHOLD = 5242880  # 5 MB
 TAG_IGNORED = "APPROVED-IGNORED:"
 TAG_BIGFILE = "APPROVED-BIGFILE:"
+TAG_OWNER = "APPROVED-BY-OWNER:"
+
+ANGLE_MAP = {"\u300c": "\u201c", "\u300d": "\u201d", "\u300e": "\u2018", "\u300f": "\u2019"}
+ZERO_WIDTH = "\u200b\u200c\u200d\u2060\ufeff"
+IDEOGRAPHIC_SPACE = "\u3000"
+
+FIXABLE_EXTS = (".md", ".txt")
+# 内容层、逐字保真档案、史料与档案不入自动改正面（逐字保真优先）
+FIX_EXCLUDE_PREFIX = (
+    "05-卷册大纲/", "02-sacred源材料/", "03-原始史料库/", "12-数据库备份/",
+    "08-核查报告与多轮复核/重构2026/data/", "08-核查报告与多轮复核/12-重构大纲书目述评/",
+)
+ROOT_FILE_WHITELIST = {
+    ".autocorrectrc", ".gitattributes", ".gitignore", ".markdownlint.json",
+    ".textlintrc", ".textlintrc.json", "LICENSE", "CLAUDE.md", "AGENTS.md",
+    "favicon.ico", "logo.svg", "README.md",
+}
 
 
 def run_git(args, cwd=None):
@@ -39,7 +67,7 @@ def run_git(args, cwd=None):
 
 
 def staged_items():
-    """返回 [(状态, 新路径), ...]；R/C 取新路径，D 跳过。"""
+    """返回 [(状态, 新路径), ...]；R/C 取新路径，D 跳过（另由删除检查处理）。"""
     p = run_git(["diff", "--cached", "--name-status", "-z"])
     if p.returncode != 0:
         return None
@@ -56,13 +84,98 @@ def staged_items():
         if st.startswith("R") or st.startswith("C"):
             i += 1  # 跳过原路径
         if st == "D":
+            items.append(("D", path))
             continue
         items.append((st, path))
     return items
 
 
-def blob_size(path, cwd=None):
-    p = run_git(["cat-file", "-s", ":%s" % path], cwd=cwd)
+def is_doc_fixable(path):
+    return (path.lower().endswith(FIXABLE_EXTS)
+            and not path.startswith(FIX_EXCLUDE_PREFIX))
+
+
+def fix_text(text):
+    """返回 (新文本, 改动说明列表)。仅处理围栏代码块与行内代码段之外的文本。"""
+    changes = []
+    if text.startswith("\ufeff"):
+        text = text[1:]
+        changes.append("剥离 UTF-8 BOM")
+    if "\r" in text:
+        text = text.replace("\r\n", "\n").replace("\r", "\n")
+        changes.append("CRLF/CR → LF")
+    out_lines, fence = [], False
+    n_angle, n_zero = 0, 0
+    for line in text.split("\n"):
+        if line.lstrip().startswith("```") or line.lstrip().startswith("~~~"):
+            fence = not fence
+            out_lines.append(line)
+            continue
+        if fence:
+            out_lines.append(line)
+            continue
+        parts = line.split("`")
+        if len(parts) % 2 == 0:  # 行内代码不配对，整行按文本处理（语法本身已坏）
+            parts = [line]
+        buf = []
+        for idx, seg in enumerate(parts):
+            if idx % 2 == 1:  # 行内代码段原样保留
+                buf.append(seg)
+                continue
+            for k, v in ANGLE_MAP.items():
+                if k in seg:
+                    n_angle += seg.count(k)
+                    seg = seg.replace(k, v)
+            for ch in ZERO_WIDTH:
+                if ch in seg:
+                    n_zero += seg.count(ch)
+                    seg = seg.replace(ch, "")
+            buf.append(seg)
+        out_lines.append("`".join(buf))
+    if n_angle:
+        changes.append("直角引号 → 弯引号 %d 处" % n_angle)
+    if n_zero:
+        changes.append("删除零宽字符 %d 处" % n_zero)
+    return "\n".join(out_lines), changes
+
+
+def stage_precommit():
+    """自动改正暂存文档类文件；永不拒收。"""
+    items = staged_items()
+    if items is None:
+        print("git_commit_gate：无法读取暂存区（git 失败）", file=sys.stderr)
+        return 2
+    touched = 0
+    for st, path in items:
+        if st == "D" or not is_doc_fixable(path):
+            continue
+        wt = os.path.join(os.getcwd(), path)
+        if not os.path.isfile(wt):
+            continue
+        raw = open(wt, "rb").read()
+        if b"\0" in raw[:8000]:
+            continue  # 二进制跳过
+        new, changes = fix_text(raw.decode("utf-8", errors="replace"))
+        if not changes:
+            continue
+        open(wt, "wb").write(new.encode("utf-8"))
+        run_git(["add", "--", path])
+        touched += 1
+        print("git_commit_gate 自动改正：%s（%s）" % (path, "；".join(changes)))
+    if touched:
+        print("git_commit_gate：共自动改正 %d 个文件（已重新暂存），请复核 diff。" % touched)
+    return 0
+
+
+def blob_has_ideographic_space(path):
+    p = run_git(["cat-file", "-p", ":%s" % path])
+    if p.returncode != 0:
+        return False
+    return IDEOGRAPHIC_SPACE in p.stdout.decode("utf-8", errors="replace")
+
+
+def blob_size(path):
+    p = run_git(["cat-file", "-s", ":%s" % path])
     if p.returncode != 0:
         return -1
     try:
@@ -71,66 +184,70 @@ def blob_size(path, cwd=None):
         return -1
 
 
-def gate(cwd=None):
+def stage_commitmsg(msg):
+    """阻断检查；批准标记放行。"""
     items = staged_items()
     if items is None:
         print("git_commit_gate：无法读取暂存区（git 失败）", file=sys.stderr)
         return 2
-    if not items:
-        return 0  # 无暂存内容（如空提交检查），放行由 git 自行裁决
-    bad_ignored, bad_big = [], []
+    bad_ignored, bad_big, bad_root, bad_bakdel, bad_space = [], [], [], [], []
     for st, path in items:
         if not path:
             continue
-        # --no-index：暂存区中的路径默认不按 ignore 规则评估，须强制按规则匹配
-        if run_git(["check-ignore", "--no-index", "-q", "--", path], cwd=cwd).returncode == 0:
+        if st == "D":
+            if path.startswith("12-数据库备份/"):
+                bad_bakdel.append(path)
+            continue
+        if st == "A" and run_git(["check-ignore", "--no-index", "-q", "--", path]).returncode == 0:
             bad_ignored.append(path)
-        sz = blob_size(path, cwd=cwd)
+        if st == "A" and "/" not in path and path not in ROOT_FILE_WHITELIST:
+            bad_root.append(path)
+        if is_doc_fixable(path) and blob_has_ideographic_space(path):
+            bad_space.append(path)
+        sz = blob_size(path)
         if sz > THRESHOLD:
             bad_big.append("%s（%d 字节）" % (path, sz))
-    return (bad_ignored, bad_big)
-
-
-def main(argv):
-    if len(argv) == 2 and argv[1] == "--selftest":
-        return selftest()
-    if len(argv) < 2:
-        print("用法：git_commit_gate.py <commit-msg-path> | --selftest", file=sys.stderr)
-        return 2
-    msg_path = argv[1]
-    try:
-        with open(msg_path, "rb") as f:
-            msg = f.read().decode("utf-8", errors="replace")
-    except OSError as e:
-        print("git_commit_gate：无法读提交说明 %r：%s" % (msg_path, e), file=sys.stderr)
-        return 2
-    bad_ignored, bad_big = gate()
-    ok_i = TAG_IGNORED in msg
-    ok_b = TAG_BIGFILE in msg
     errs = []
-    if bad_ignored and not ok_i:
+    if bad_ignored:
         errs.append("G1 被 .gitignore 排除的条目进入了暂存区：\n  " + "\n  ".join(bad_ignored))
-    if bad_big and not ok_b:
+    if bad_big:
         errs.append("G2 单个文件超过 5 MB（%d 字节）进入了暂存区：\n  " % THRESHOLD + "\n  ".join(bad_big))
+    if bad_root:
+        errs.append("B2 根目录新增一级条目不在白名单：\n  " + "\n  ".join(bad_root))
+    if bad_bakdel:
+        errs.append("B3 暂存区包含 12-数据库备份/ 的删除：\n  " + "\n  ".join(bad_bakdel))
+    if bad_space:
+        errs.append("B4 文档类文件含全角空格 U+3000（禁 AI 不可见字符）：\n  " + "\n  ".join(bad_space))
+    errs = [e for e in errs if not (
+        (e.startswith("G1") and TAG_IGNORED in msg) or
+        (e.startswith("G2") and TAG_BIGFILE in msg) or
+        (e.startswith(("B2", "B3", "B4")) and TAG_OWNER in msg))]
     if errs:
-        print("git_commit_gate 拒收（流程规则「Git 暂存规则」；主理人批准须在提交说明标注 %s / %s）：" % (TAG_IGNORED, TAG_BIGFILE))
+        print("git_commit_gate 拒收（流程规则「Git 暂存规则」；批准标记：%s／%s／%s）：" % (TAG_IGNORED, TAG_BIGFILE, TAG_OWNER))
         for e in errs:
             print(e)
         return 1
-    if (bad_ignored and ok_i) or (bad_big and ok_b):
-        print("git_commit_gate：检测到批准标记，放行（G1×%d 件被忽略条目、G2×%d 件大文件）——请确认 changelog 已留痕批准记录。" % (len(bad_ignored), len(bad_big)))
+    notes = []
+    if bad_ignored:
+        notes.append("G1×%d" % len(bad_ignored))
+    if bad_big:
+        notes.append("G2×%d" % len(bad_big))
+    if bad_root or bad_bakdel or bad_space:
+        notes.append("B×%d" % (len(bad_root) + len(bad_bakdel) + len(bad_space)))
+    if notes:
+        print("git_commit_gate：检测到批准标记，放行（%s）——请确认 changelog 已留痕批准记录。" % "、".join(notes))
     return 0
 
 
 def selftest():
-    """隔离临时仓库五用例：G1 拒／G1 放／G2 拒／G2 放／正常放。"""
-    import tempfile
+    """隔离临时仓库全用例：改正 4 + 阻断 5 + 既有 5。"""
     import shutil
+    import tempfile
 
     base = tempfile.mkdtemp(prefix="git_gate_selftest_")
     results = []
 
-    def case(name, files, ignore_lines, msg, expect):
+    def newrepo(name):
         repo = os.path.join(base, name)
         os.makedirs(repo)
         def g(*a):
@@ -138,38 +255,113 @@ def selftest():
         g("init", "-q")
         g("config", "user.email", "gate@test")
         g("config", "user.name", "gate")
-        with open(os.path.join(repo, ".gitignore"), "w", encoding="utf-8") as f:
-            f.write("\n".join(ignore_lines) + "\n")
-        for fn, data in files.items():
-            fp = os.path.join(repo, fn)
-            if os.path.dirname(fn):
-                os.makedirs(os.path.dirname(fp), exist_ok=True)
-            with open(fp, "wb") as f:
-                f.write(data)
-        g("add", "-A")
-        # 正常 add 不会收录被忽略文件——须显式 -f 才构成「忽略条目入库」场景
-        g("add", "-f", "secret.txt")
-        mp = os.path.join(repo, "MSG")
-        with open(mp, "w", encoding="utf-8") as f:
-            f.write(msg)
-        p = subprocess.run([sys.executable, os.path.abspath(__file__), mp], cwd=repo, capture_output=True)
-        got = p.returncode
-        ok = got == expect
-        results.append((name, expect, got, ok, p.stdout.decode("utf-8", "replace").strip()[:120]))
+        return repo, g
 
-    big = b"x" * (THRESHOLD + 1024)
-    case("t1_ignored_reject", {"secret.txt": b"s"}, ["secret*.txt"], "test\n", 1)
-    case("t2_ignored_allow", {"secret.txt": b"s"}, ["secret*.txt"], "APPROVED-IGNORED: test\n", 0)
-    case("t3_big_reject", {"big.bin": big}, [], "test\n", 1)
-    case("t4_big_allow", {"big.bin": big}, [], "APPROVED-BIGFILE: test\n", 0)
-    case("t5_normal", {"ok.txt": b"hello"}, ["secret*.txt"], "normal commit\n", 0)
+    def run_gate(repo, stage, msg=None):
+        mp = None
+        args = [sys.executable, os.path.abspath(__file__), "--stage", stage]
+        if stage == "commit-msg":
+            mp = os.path.join(repo, "MSG")
+            with open(mp, "w", encoding="utf-8") as f:
+                f.write(msg)
+            args.append(mp)
+        return subprocess.run(args, cwd=repo, capture_output=True)
+
+    def check(name, expect, p, extra=""):
+        ok = p.returncode == expect
+        results.append((name, expect, p.returncode, ok))
+        if not ok:
+            print("  ✗ %s（期望 %d 实得 %d）%s" % (name, expect, p.returncode,
+                  (p.stdout + p.stderr).decode("utf-8", "replace").strip()[:160]))
+
+    # F1/F2/F3：自动改正（pre-commit 不拒收，文件被改 + re-add）
+    repo, g = newrepo("t_fix")
+    doc = "标题「甲」与『乙』\n\n```text\n代码内「不动」\n```\n\n行内 `代码「不动」` 结尾\u200b混入\n"
+    with open(os.path.join(repo, "doc.md"), "wb") as f:
+        f.write(doc.replace("\n", "\r\n").encode("utf-8-sig"))
+    g("add", "-A")
+    check("F_自动改正放行", 0, run_gate(repo, "pre-commit"))
+    fixed = open(os.path.join(repo, "doc.md"), "rb").read().decode("utf-8")
+    ok = ("“甲”" in fixed and "‘乙’" in fixed and "代码内「不动」" in fixed
+          and "代码「不动」" in fixed and "\u200b" not in fixed and "\r" not in fixed)
+    results.append(("F_改正内容正确", 1, 0 if ok else 1, ok))
+    if not ok:
+        print("  ✗ F_改正内容正确 " + repr(fixed[:160]))
+
+    # G1/G2 既有
+    repo, g = newrepo("t_g1")
+    with open(os.path.join(repo, ".gitignore"), "w") as f:
+        f.write("secret*.txt\n")
+    open(os.path.join(repo, "secret.txt"), "wb").write(b"s")
+    g("add", "-A")
+    g("add", "-f", "secret.txt")
+    check("G1_忽略拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    g("reset", "-q", "secret.txt")
+    check("G1_撤回后放行", 0, run_gate(repo, "commit-msg", "m\n"))
+    repo, g = newrepo("t_g2")
+    open(os.path.join(repo, "big.bin"), "wb").write(b"x" * (THRESHOLD + 1))
+    g("add", "-A")
+    check("G2_大文件拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("G2_批准放行", 0, run_gate(repo, "commit-msg", TAG_BIGFILE + " m\n"))
+
+    # B2 根目录新条目
+    repo, g = newrepo("t_b2")
+    open(os.path.join(repo, "mystery.bin"), "wb").write(b"z")
+    g("add", "-A")
+    check("B2_根目录新条目拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("B2_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
+    repo, g = newrepo("t_b2b")
+    open(os.path.join(repo, ".autocorrectrc"), "w").write("rules: {}\n")
+    g("add", "-A")
+    check("B2_白名单放行", 0, run_gate(repo, "commit-msg", "m\n"))
+
+    # B3 备份删除
+    repo, g = newrepo("t_b3")
+    os.makedirs(os.path.join(repo, "12-数据库备份", "x"))
+    open(os.path.join(repo, "12-数据库备份", "x", "a.gz"), "wb").write(b"b")
+    g("add", "-A")
+    g("commit", "-q", "-m", "init")
+    os.remove(os.path.join(repo, "12-数据库备份", "x", "a.gz"))
+    g("add", "-A")
+    check("B3_备份删除拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("B3_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
+
+    # B4 全角空格
+    repo, g = newrepo("t_b4")
+    with open(os.path.join(repo, "note.md"), "w", encoding="utf-8") as f:
+        f.write("甲\u3000乙\n")
+    g("add", "-A")
+    check("B4_全角空格拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("B4_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
 
     shutil.rmtree(base, ignore_errors=True)
-    all_ok = all(r[3] for r in results)
-    for name, expect, got, ok, out in results:
-        print("  %s %s（期望 %d 实得 %d）%s" % ("✓" if ok else "✗", name, expect, got, out if not ok else ""))
-    print("git_commit_gate --selftest：%d/5 %s" % (sum(1 for r in results if r[3]), "PASS" if all_ok else "FAIL"))
-    return 0 if all_ok else 1
+    bad = [r for r in results if not r[3]]
+    for name, expect, got, ok in results:
+        if ok:
+            print("  ✓ %s" % name)
+    print("git_commit_gate --selftest：%d/%d %s" % (len(results) - len(bad), len(results), "PASS" if not bad else "FAIL"))
+    return 0 if not bad else 1
+
+
+def main(argv):
+    if "--selftest" in argv:
+        return selftest()
+    if len(argv) >= 3 and argv[1] == "--stage":
+        stage = argv[2]
+        if stage == "pre-commit":
+            return stage_precommit()
+        if stage == "commit-msg":
+            if len(argv) < 4:
+                print("commit-msg 形态需要 <commit-msg-path>", file=sys.stderr)
+                return 2
+            return stage_commitmsg(argv[3])
+        print("未知阶段 %r" % stage, file=sys.stderr)
+        return 2
+    # 兼容旧调用形态（无 --stage，传 msg 路径）
+    if len(argv) == 2:
+        return stage_commitmsg(argv[1])
+    print("用法：git_commit_gate.py --stage pre-commit | --stage commit-msg <msg> | --selftest", file=sys.stderr)
+    return 2
 
 
 if __name__ == "__main__":
