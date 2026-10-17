@@ -283,7 +283,7 @@
     - [27.9 1BSD 时期的外部批评与 BSD 初期的争议](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/27.9-1bsd时期的外部批评与bsd初期的争议.md)
     - [27.10 1BSD 时期的技术淘汰——ed→ex 行编辑器演化、Thompson Pascal→Berkeley Pascal 与终端硬件迁移（1976-1978）](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/27.10-1bsd时期的技术淘汰edex行编辑器演化thompsonpascalberke.md)
     - [27.11 与同时期操作系统的比较：1978 年同期 DEC VMS V1.0、IBM OS/VS1、Tandy TRSDOS 的发行渠道与定价](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/27.11-与同时期操作系统的比较1978年同期decvmsv10ibmosvs1.md)
-    - [第 27 章 ](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/媒体反响与社区舆论.md)
+    - [第 27 章 ](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/媒体反响与社区舆论.md)
     - [采访录](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/采访录.md)
     - [本章索引](./第02卷-伯克利的岁月/第27章-billjoy与1bsd/index.md)
 
@@ -293,7 +293,7 @@
     - [28.3 PDP-11 上的最后 BSD 版本——技术约束的极限](./第02卷-伯克利的岁月/第28章-vi与cshell的诞生/28.3-pdp11上的最后bsd版本技术约束的极限.md)
     - [28.4 vi 的模态设计哲学——经验优先的体现](./第02卷-伯克利的岁月/第28章-vi与cshell的诞生/28.4-vi的模态设计哲学经验优先的体现.md)
     - [28.5 csh 与 sh 的竞争——man page 版本对照与归档](./第02卷-伯克利的岁月/第28章-vi与cshell的诞生/28.5-csh与sh的竞争manpage版本对照与归档.md)
-    - [第 28 章 ](./第02卷-伯克利的岁月/第28章-vi与cshell的诞生/媒体反响与社区舆论.md)
+    - [第 28 章 ](./第02卷-伯克利的岁月/第28章-vi与cshell的诞生/媒体反响与社区舆论.md)
     - [本章索引](./第02卷-伯克利的岁月/第28章-vi与cshell的诞生/index.md)
 
   - [第 29 章 对 vi 与 C Shell 的批评](./第02卷-伯克利的岁月/第29章-对vi与cshell的批评/概述.md)
@@ -319,7 +319,7 @@
     - [30.9 DARPA 资助下 BSD 的关键技术产出物（1980-1983）](./第02卷-伯克利的岁月/第30章-darpa的选择/30.9-darpa资助下bsd的关键技术产出物19801983.md)
     - [30.10 DARPA 选择时期的技术淘汰——VMS 商业路线弃用、Joy 个人模式 →CSRG 机构化、4BSD→4.1BSD 性能调优与 reliable signals 引入（1980-1983）](./第02卷-伯克利的岁月/第30章-darpa的选择/30.10-darpa选择时期的技术淘汰vms商业路线弃用joy个人模式csrg机构化4.md)
     - [30.11 与同时期操作系统的比较：DARPA 同时资助的 CMU Mach 项目、MIT Athena 项目](./第02卷-伯克利的岁月/第30章-darpa的选择/30.11-与同时期操作系统的比较darpa同时资助的cmumach项目mitathena.md)
-    - [第 30 章 ](./第02卷-伯克利的岁月/第30章-darpa的选择/媒体反响与社区舆论.md)
+    - [第 30 章 ](./第02卷-伯克利的岁月/第30章-darpa的选择/媒体反响与社区舆论.md)
     - [本章索引](./第02卷-伯克利的岁月/第30章-darpa的选择/index.md)
 
   - [第 31 章 3BSD 与 VAX](./第02卷-伯克利的岁月/第31章-3bsd与vax/概述.md)
@@ -335,7 +335,7 @@
     - [31.10 3BSD 时期的技术淘汰——PDP-11→VAX 平台迁移、32V 简单换页 →3BSD 请求调页式虚拟内存与 3BSD 内核改造（1979）](./第02卷-伯克利的岁月/第31章-3bsd与vax/31.10-3bsd时期的技术淘汰pdp11vax平台迁移32v简单换页3bsd.md)
     - [31.11 与同时期操作系统的比较：1979-1980 年同期 DEC VMS V1.0（1977.10.25 与 VAX-11/780 同步宣布，1978.2 首次出货，VAX-11/780 原生系统，段页式虚拟内存四级保护环、Records Management Services 文件系统 RMS、DECnet 网络栈）、IBM MVS/XA（1983，System/370-XA 31 位寻址，地址空间从 16 MB 扩到 2 GB，VSAM 文件系统，SNA 网络体系）、TOPS-20（1976 DEC 出货，前身 TENEX 由 BBN 1969 年起开发于 PDP-10，分时系统，继承 TENEX 的请求调页）、CDC NOS/VE（1984-1985 随 Cyber 180 系列发布，1985 年仍未生产就绪，分段式虚拟内存 8.8 TB 虚拟空间）——3BSD 的技术路线分化：① 虚拟内存——3BSD 首次在 VAX 上实现完整分页式虚拟内存，与 VMS 的段页式同为先进设计，而 MVS/XA 依赖地址空间隔离](./第02卷-伯克利的岁月/第31章-3bsd与vax/31.11-与同时期操作系统的比较19791980年同期decvmsv1019771025与.md)
     - [31.12 关键词行级挖掘素材线索](./第02卷-伯克利的岁月/第31章-3bsd与vax/31.12-关键词行级挖掘素材线索.md)
-    - [第 31 章 ](./第02卷-伯克利的岁月/第31章-3bsd与vax/媒体反响与社区舆论.md)
+    - [第 31 章 ](./第02卷-伯克利的岁月/第31章-3bsd与vax/媒体反响与社区舆论.md)
     - [采访录](./第02卷-伯克利的岁月/第31章-3bsd与vax/采访录.md)
     - [本章索引](./第02卷-伯克利的岁月/第31章-3bsd与vax/index.md)
 
@@ -353,7 +353,7 @@
     - [32.11 与同时期操作系统的比较：1981-1983 年同期操作系统](./第02卷-伯克利的岁月/第32章-4.1bsd/32.11-与同时期操作系统的比较19811983年同期操作系统.md)
     - [32.12 4.1BSD 安全机制继承——chroot(2) 系统调用的早期定型与原始动机辨析（1981）](./第02卷-伯克利的岁月/第32章-4.1bsd/32.12-41bsd安全机制继承chroot2系统调用的早期定型与原始动机辨析1981.md)
     - [32.13 关键词行级挖掘素材线索](./第02卷-伯克利的岁月/第32章-4.1bsd/32.13-关键词行级挖掘素材线索.md)
-    - [第 32 章 ](./第02卷-伯克利的岁月/第32章-4.1bsd/媒体反响与社区舆论.md)
+    - [第 32 章 ](./第02卷-伯克利的岁月/第32章-4.1bsd/媒体反响与社区舆论.md)
     - [采访录](./第02卷-伯克利的岁月/第32章-4.1bsd/采访录.md)
     - [本章索引](./第02卷-伯克利的岁月/第32章-4.1bsd/index.md)
 
@@ -365,7 +365,7 @@
     - [33.5 对 4.2BSD 的批评：性能问题与功能复杂度——4.2BSD 发布后的实际批评与后续修正](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/33.5-对42bsd的批评性能问题与功能复杂度42bsd发布后的实际批评与后续修正.md)
     - [33.6 重要贡献者与边缘者：Leffler 与被遗忘的 CSRG 成员——Sam Leffler 等被遗忘的 CSRG 成员](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/33.6-重要贡献者与边缘者leffler与被遗忘的csrg成员samleffler.md)
     - [33.7 关键词行级挖掘素材线索](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/33.7-关键词行级挖掘素材线索.md)
-    - [第 33 章 ](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/媒体反响与社区舆论.md)
+    - [第 33 章 ](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/媒体反响与社区舆论.md)
     - [采访录](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/采访录.md)
     - [本章索引](./第02卷-伯克利的岁月/第33章-4.2bsd革命与三件套/index.md)
 
@@ -407,7 +407,7 @@
     - [36.10 4.3BSD 时期的技术淘汰——Morris 蠕虫后 sendmail 调试模式后门弃用、fingerd/rshd 漏洞修复与隐式信任安全模型向显式审计迁移（1986-1989）](./第02卷-伯克利的岁月/第36章-4.3bsd/36.10-43bsd时期的技术淘汰morris蠕虫后sendmail调试模式后门弃用.md)
     - [36.11 Morris 蠕虫后 CSRG 安全响应文化转型与 BSD 安全响应机制的奠基（1988-1990）](./第02卷-伯克利的岁月/第36章-4.3bsd/36.11-morris蠕虫后csrg安全响应文化转型与bsd安全响应机制的奠基.md)
     - [36.12 关键词行级挖掘素材线索](./第02卷-伯克利的岁月/第36章-4.3bsd/36.12-关键词行级挖掘素材线索.md)
-    - [第 36 章 ](./第02卷-伯克利的岁月/第36章-4.3bsd/媒体反响与社区舆论.md)
+    - [第 36 章 ](./第02卷-伯克利的岁月/第36章-4.3bsd/媒体反响与社区舆论.md)
     - [采访录：Kirk McKusick](./第02卷-伯克利的岁月/第36章-4.3bsd/采访录：Kirk McKusick.md)
     - [本章索引](./第02卷-伯克利的岁月/第36章-4.3bsd/index.md)
 
@@ -424,7 +424,7 @@
     - [37.10 4.3BSD-Tahoe 时期的技术淘汰——4.2BSD 混杂代码 → 机器相关/无关分离架构、VAX 单平台 → 多平台支持与早期 BSD 网络栈 →Net/1 自由网络代码（1988-1989）](./第02卷-伯克利的岁月/第37章-4.3bsd-tahoe/37.10-43bsdtahoe时期的技术淘汰42bsd混杂代码机器相关无关分离架构vax.md)
     - [37.11 与同时期操作系统的比较：1988 年同期操作系统](./第02卷-伯克利的岁月/第37章-4.3bsd-tahoe/37.11-与同时期操作系统的比较1988年同期操作系统attunixsvr3sunos40.md)
     - [37.12 4.3BSD-Tahoe 安全机制继承与多平台抽象层的安全含义——Tahoe 安全模型仍以 4.3BSD 为基础，Morris 蠕虫发生在 Tahoe 发布后（1988）](./第02卷-伯克利的岁月/第37章-4.3bsd-tahoe/37.12-43bsdtahoe安全机制继承与多平台抽象层的安全含义tahoe安全模型仍以.md)
-    - [第 37 章 ](./第02卷-伯克利的岁月/第37章-4.3bsd-tahoe/媒体反响与社区舆论.md)
+    - [第 37 章 ](./第02卷-伯克利的岁月/第37章-4.3bsd-tahoe/媒体反响与社区舆论.md)
     - [本章索引](./第02卷-伯克利的岁月/第37章-4.3bsd-tahoe/index.md)
 
   - [第 38 章 4.3BSD-Reno](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/概述.md)
@@ -435,7 +435,7 @@
     - [38.5 与同时期操作系统的比较：同期 DEC Ultrix、HP-UX、AIX 的网络栈成熟度](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/38.5-与同时期操作系统的比较同期decultrixhpuxaix的网络栈成熟度.md)
     - [38.6 Kerberos v4 集成争议与 BSD 认证体系分歧——4.3BSD-Reno 首次引入第三方网络认证的争议焦点与长期边缘化（1990）](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/38.6-kerberosv4集成争议与bsd认证体系分歧43bsdreno.md)
     - [38.7 关键词行级挖掘素材线索](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/38.7-关键词行级挖掘素材线索.md)
-    - [第 38 章 ](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/媒体反响与社区舆论.md)
+    - [第 38 章 ](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/媒体反响与社区舆论.md)
     - [采访录：Keith Bostic（基思·博斯蒂克）](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/采访录：Keith Bostic.md)
     - [本章索引](./第02卷-伯克利的岁月/第38章-4.3bsd-reno/index.md)
 
@@ -447,7 +447,7 @@
     - [39.5 Net/2 的发行——1991 年 6 月磁带发行、$1,000 许可证费、UUNET 匿名 FTP 分发与全球“数百家”组织购买](./第02卷-伯克利的岁月/第39章-bostic发起重写att代码运动/39.5-net2的发行1991年6月磁带发行1000许可证费uunet匿名ftp.md)
     - [39.6 对 Net/2 重写运动的批评：法律冒险与版权模糊——对 Net/2 重写运动法律冒险与版权模糊的批评](./第02卷-伯克利的岁月/第39章-bostic发起重写att代码运动/39.6-对net2重写运动的批评法律冒险与版权模糊对net2.md)
     - [39.7 关键词行级挖掘素材线索](./第02卷-伯克利的岁月/第39章-bostic发起重写att代码运动/39.7-关键词行级挖掘素材线索.md)
-    - [第 39 章 ](./第02卷-伯克利的岁月/第39章-bostic发起重写att代码运动/媒体反响与社区舆论.md)
+    - [第 39 章 ](./第02卷-伯克利的岁月/第39章-bostic发起重写att代码运动/媒体反响与社区舆论.md)
     - [本章索引](./第02卷-伯克利的岁月/第39章-bostic发起重写att代码运动/index.md)
 
   - [第 40 章 Net/2 重写运动的贡献者与边缘者](./第02卷-伯克利的岁月/第40章-net2重写运动的贡献者与边缘者/概述.md)
@@ -465,7 +465,7 @@
     - [41.1 1992 年 4 月 USL 起诉 BSDi 和伯克利——案件号与起诉书要点](./第02卷-伯克利的岁月/第41章-usl起诉bsdi与伯克利/41.1-1992年4月usl起诉bsdi和伯克利案件号与起诉书要点.md)
     - [41.2 初步禁令争议与 1993 年 3 月裁决](./第02卷-伯克利的岁月/第41章-usl起诉bsdi与伯克利/41.2-初步禁令争议与1993年3月裁决.md)
     - [41.3 1994 年和解协议的具体条款与原文翻译——1993 年 7 月 Novell 收购 USL 后，CEO Ray Noorda 倾向和解](./第02卷-伯克利的岁月/第41章-usl起诉bsdi与伯克利/41.3-1994年和解协议的具体条款与原文翻译1993年7月novell收购usl后.md)
-    - [第 41 章 ](./第02卷-伯克利的岁月/第41章-usl起诉bsdi与伯克利/媒体反响与社区舆论.md)
+    - [第 41 章 ](./第02卷-伯克利的岁月/第41章-usl起诉bsdi与伯克利/媒体反响与社区舆论.md)
     - [本章索引](./第02卷-伯克利的岁月/第41章-usl起诉bsdi与伯克利/index.md)
 
   - [第 42 章 AT&T 同意令与诉讼的深远影响](./第02卷-伯克利的岁月/第42章-att同意令与诉讼的深远影响/概述.md)
@@ -485,7 +485,7 @@
     - [43.1 案件背景与诉讼进程（1992-1993）](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/43.1-案件背景与诉讼进程19921993.md)
     - [43.2 和解协议关键条款与法律意义（1994）](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/43.2-和解协议关键条款与法律意义1994.md)
     - [43.3 和解协议的后续影响与 BSD 法律基石的奠定（1994-2026）](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/43.3-和解协议的后续影响与BSD法律基石的奠定19942026.md)
-    - [第 43 章 ](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/媒体反响与社区舆论.md)
+    - [第 43 章 ](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/媒体反响与社区舆论.md)
     - [采访录](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/采访录.md)
     - [本章索引](./第02卷-伯克利的岁月/第43章-usl-v-bsdi和解协议原文翻译/index.md)
 
@@ -568,7 +568,7 @@
 
   - [第 56 章 伯克利市并行发展与采访媒体](./第03卷-伯克利学术文化外溢影响/第56章-伯克利市并行发展与采访媒体/概述.md)
     - [56.33 伯克利市在 CSRG 时期的平行内容（1978-1992）：市政府与市议会、市章程与市-校关系、市监察机制、市-校关系（人民公园事件后续）、市与中国的关系、市发展史——CSRG 生长的市政制度土壤](./第03卷-伯克利学术文化外溢影响/第56章-伯克利市并行发展与采访媒体/56.33-伯克利市在csrg时期的平行内容1978.md)
-    - [第 56 章 ](./第03卷-伯克利学术文化外溢影响/第56章-伯克利市并行发展与采访媒体/媒体反响与社区舆论.md)
+    - [第 56 章 ](./第03卷-伯克利学术文化外溢影响/第56章-伯克利市并行发展与采访媒体/媒体反响与社区舆论.md)
     - [本章索引](./第03卷-伯克利学术文化外溢影响/第56章-伯克利市并行发展与采访媒体/index.md)
 
   - [第 57 章 ARPANET 到 NSFNET 的前 BSD 时代](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/概述.md)
@@ -576,7 +576,7 @@
     - [57.2 IETF 与 RFC 制度：互联网标准的形成机制——IETF 1986 年成立，RFC 系列从 1969 年 Steve Crocker 的 RFC 1 开始，互联网标准的 “rough consensus and running code” 哲学与 BSD 工程传统的共鸣](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/57.2-ietf与rfc制度.md)
     - [57.3 BIND 与 DNS：伯克利命名系统的全球统治——BIND 由伯克利 CSRG 的四名研究生开发，DNS 协议 1983 年 RFC 882/883 定义，BIND 成为全球互联网 DNS 服务器的实际标准，BIND 4/8/9 的版本演进](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/57.3-bind与dns.md)
     - [57.4 Sendmail：Allman 的邮件传输革命——Eric Allman（埃里克·奥尔曼） 1979 年在伯克利 INGRES 项目中开发 delivermail，1981-1982 年在 4.1cBSD 中重写为 Sendmail，1983 年随 4.2BSD 正式发布，Sendmail 的 M4 宏配置系统与安全漏洞史，Sendmail 的全球部署与替代品（Postfix、Qmail）的挑战](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/57.4-sendmail.md)
-    - [第 57 章 ](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/媒体反响与社区舆论.md)
+    - [第 57 章 ](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/媒体反响与社区舆论.md)
     - [本章索引](./第03卷-伯克利学术文化外溢影响/第57章-arpanet到nsfnet的前bsd时代/index.md)
 
   - [第 58 章 BSD 作为 TCP/IP 参考实现](./第03卷-伯克利学术文化外溢影响/第58章-bsd作为tcpip参考实现/概述.md)
@@ -599,7 +599,7 @@
     - [60.2 Postgres 的诞生：从 Ingres 到 Postgres 的演化——Stonebraker 1986 年启动 POSTGRES 项目，Postgres 的对象关系模型创新，Postgres95 的 SQL 转型，PostgreSQL 开源社区的接管与 BSD 许可证的延续](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.2-postgres的诞生.md)
     - [60.3 MySQL 与 BSD：开源数据库的 FreeBSD 生态——MySQL 1995 年 Monty Widenius 发布，MySQL 在 FreeBSD 上的部署与优化，MySQL AB 的商业化与 Sun/Oracle 收购，MySQL 与 FreeBSD Ports 的共生关系](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.3-mysql与bsd.md)
     - [60.4 SQLite 与嵌入式数据库的 BSD 部署——SQLite 2000 年 D. Richard Hipp 开发，SQLite 作为嵌入式数据库的 BSD 系统部署，SQLite 在 FreeBSD 基本系统中的使用，SQLite 与 BSD 的“做一件事并做好”哲学共鸣](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.4-sqlite与嵌入式数据库的bsd部署.md)
-    - [第 60 章 ](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/媒体反响与社区舆论.md)
+    - [第 60 章 ](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/媒体反响与社区舆论.md)
     - [采访录：Michael Stonebraker](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/采访录：Michael Stonebraker.md)
     - [本章索引](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/index.md)
 
@@ -631,7 +631,7 @@
     - [62.7 386BSD 与 Linux 在 1991-1992 年的时间窗口竞争](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/62.7-386bsd与linux在1991年的短暂时间窗口竞争.md)
     - [62.8 对 386BSD 的批评：个人英雄主义与社区失责——对 Jolitz 个人英雄主义与社区失责的批评](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/62.8-对386bsd的批评.md)
     - [62.9 重要贡献者与边缘者：Jolitz 之外的无名助手](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/62.9-重要贡献者与边缘者.md)
-    - [第 62 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/媒体反响与社区舆论.md)
+    - [第 62 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/媒体反响与社区舆论.md)
     - [分叉的逻辑形式分析](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/V4-Ch61-新增-分叉的逻辑形式分析.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第62章-386bsd的诞生与bill-jolitz的移植工程/index.md)
 
@@ -662,7 +662,7 @@
     - [65.8 重要贡献者与边缘者：早期核心团队之外的贡献者](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/65.8-重要贡献者与边缘者.md)
     - [65.9 FreeBSD 诞生时期的技术淘汰——386BSD 单人维护 →FreeBSD Core Team 集体治理、磁带/FTP 分发 →Walnut Creek CDROM 商业发行、补丁包维护 →CVS 版本控制系统与 FreeBSD Net/2 → 4.4BSD-Lite 迁移（1993-1995）](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/65.9-freebsd诞生时期的技术淘汰.md)
     - [65.10 与同时期操作系统的比较：1993 年同期 Slackware 1.0、Debian 0.01、NetBSD 0.8、386BSD 1.0](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/65.10-与同时期操作系统的比较.md)
-    - [第 65 章 媒体反响与社区舆论（FreeBSD 的创建与 patchkit 协调人）](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/媒体反响与社区舆论.md)
+    - [第 65 章 媒体反响与社区舆论（FreeBSD 的创建与 patchkit 协调人）](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/媒体反响与社区舆论.md)
     - [采访录](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/采访录.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第65章-freebsd的创建与patchkit协调人/index.md)
 
@@ -683,7 +683,7 @@
     - [67.7 NetBSD Foundation 内部张力——Foundation 董事会与 Core Team 的权力分配长期不清——董事会掌握资金与法律实体，Core Team 主张技术决策自主权，两者在会议赞助、商标授权、committer 权限争议等问题上屡有摩擦](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/67.7-netbsdfoundation内部张力.md)
     - [67.8 NetBSD 可移植性承诺与早期架构师的技术遗产](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/67.8-netbsd可移植性承诺与早期架构师的技术遗产.md)
     - [67.9 对 NetBSD 可移植理想的批评：广度与深度的矛盾——对 NetBSD 广度优先导致深度不足的批评](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/67.9-对netbsd可移植理想的批评.md)
-    - [第 67 章 ](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/媒体反响与社区舆论.md)
+    - [第 67 章 ](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/媒体反响与社区舆论.md)
     - [采访录](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/采访录.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/index.md)
 
@@ -703,7 +703,7 @@
     - [69.4 Linus Torvalds 形容 de Raadt 难相处](./第04卷-大分裂与四大bsd的诞生/第69章-openbsd的起源与de-raadt被netbsd逐出/69.4-linustorvalds形容deraadt难相处.md)
     - [69.5 Peter Wayner《Free for All》中的记述](./第04卷-大分裂与四大bsd的诞生/第69章-openbsd的起源与de-raadt被netbsd逐出/69.5-peterwaynerfreeforall中的记述.md)
     - [69.6 de Raadt 与 Chuck Cranor 建立匿名 CVS（anoncvs）服务器——两人 1999 年合著论文称此举使用户得以“在调试与开发中扮演更积极的角色”（take a more active role）](./第04卷-大分裂与四大bsd的诞生/第69章-openbsd的起源与de-raadt被netbsd逐出/69.6-deraadt与chuckcranor建立匿名版本控制服务器.md)
-    - [第 69 章 媒体反响与社区舆论（OpenBSD 的起源与 de Raadt 被 NetBSD 逐出）](./第04卷-大分裂与四大bsd的诞生/第69章-openbsd的起源与de-raadt被netbsd逐出/媒体反响与社区舆论.md)
+    - [第 69 章 媒体反响与社区舆论（OpenBSD 的起源与 de Raadt 被 NetBSD 逐出）](./第04卷-大分裂与四大bsd的诞生/第69章-openbsd的起源与de-raadt被netbsd逐出/媒体反响与社区舆论.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第69章-openbsd的起源与de-raadt被netbsd逐出/index.md)
 
   - [第 70 章 基石与声名：丹尼斯·里奇与史蒂夫·乔布斯的对照](./第04卷-大分裂与四大bsd的诞生/第70章-基石与声名里奇与乔布斯对照/概述.md)
@@ -737,7 +737,7 @@
   - [第 73 章 OpenBSD 的 de Raadt 独裁治理模式](./第04卷-大分裂与四大bsd的诞生/第73章-openbsd的de-raadt独裁治理模式/概述.md)
     - [73.1 OpenBSD 的 de Raadt 独裁模式——OpenBSD 长期由 Theo de Raadt（西奥·德·若特） 个人主导，无 Core Team 选举、无 Foundation 董事会干预，所有重大决策由 de Raadt 最终拍板；开发者圈层分明——核心开发者（如 Henning Brauer（亨宁·布劳尔）、Bob Beck、Markus Friedl（马库斯·弗里德尔）、Alexander von Gernler 等）与边缘贡献者之间的鸿沟巨大，核心开发者通过私人 IRC 频道与 de Raadt 沟通，公开邮件列表仅承担 “通知” 功能而非 “讨论” 功能；“de Raadt 不喜欢就改不了”——任何不符合 de Raadt 审美的提议都易被直接拒绝，开发者须学会 “以 de Raadt 的语言” 重新表述提案；OpenBSD 的 “精英主义文化”——开发者被期望 “提交高质量补丁而非提问”，新人提问常被回应 “先读源码”](./第04卷-大分裂与四大bsd的诞生/第73章-openbsd的de-raadt独裁治理模式/73.1-openbsd的deraadt独裁模式.md)
     - [73.2 OpenBSD 与 FreeBSD/NetBSD 社区的隔阂——de Raadt 被逐出 NetBSD 后长期对 NetBSD Core Team（特别是 Hannum、Demetriou）持公开敌意，OpenBSD 邮件列表中 “NetBSD 是笑话” 的话语时有出现](./第04卷-大分裂与四大bsd的诞生/第73章-openbsd的de-raadt独裁治理模式/73.2-openbsd与freebsdnetbsd社区的隔阂.md)
-    - [第 73 章 OpenBSD 的 de-raadt 独裁治理模式——媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第73章-openbsd的de-raadt独裁治理模式/媒体反响与社区舆论.md)
+    - [第 73 章 OpenBSD 的 de-raadt 独裁治理模式——媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第73章-openbsd的de-raadt独裁治理模式/媒体反响与社区舆论.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第73章-openbsd的de-raadt独裁治理模式/index.md)
 
   - [第 74 章 OpenBSD 的邮件列表与社区文化](./第04卷-大分裂与四大bsd的诞生/第74章-openbsd的邮件列表与社区文化/概述.md)
@@ -765,7 +765,7 @@
     - [76.3 三项目的治理结构对比——Core Team 选举制、NetBSD Foundation 董事会制、OpenBSD 个体主导制](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.3-三项目的治理结构对比.md)
     - [76.4 BSD 三项目安全文化比较——安全叙事的形成](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.4-bsd三项目安全文化比较与安全叙事的形成.md)
     - [76.5 BSD 三项目的排外性与小团体文化——三项目共享的精英主义排外传统与内部小团体现象：Bill Joy 精英主义源头（“大多数人都是糟糕的程序员”——二手引述［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］)、McKusick“90% 的 committers 所贡献的代码都不能用”、FreeBSD Core Team 封闭决策与开发者被排斥（Jordan Hubbard 2001 年辞职信“核心团队实在太‘反应迟钝’了”、2025 年 12 月 trasz@/Edward Tomasz Napierała 公开邮件批评 Core Team“无视开发者社区”“假装民主”、devnull@ 回应“缺乏沟通与透明度导致我们失去伟大而有价值的成员”——freebsd-hackers 邮件列表 2025.12.30-31）、FreeBSD 开发者峰会邀请制与信息不对称（jmmv 2013 EuroBSDCon 报道：“invite-only events gather together FreeBSD committers”）、OpenBSD de Raadt 独裁式排外（“与 Theo 意见不合就是与上帝不合”——LWN 2007 年 Jonathan Corbet 报道 the case of the unwelcome attribution、misc@ 邮件列表对新手敌意、IRC don’t ask to ask 文化作为排外的非故意机制）、OpenBSD hackathon 邀请制与元老网络（详见 25.14 节）、NetBSD 开发者社区极度萎缩（BSDCan 2011 峰会仅 3 人到场——jmmv 2013 EuroBSDCon 报道"compared to the last effort in BSDCan 2011 that only gathered... three people"](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.5-bsd三项目的排外性与小团体文化.md)
-    - [第 76 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/媒体反响与社区舆论.md)
+    - [第 76 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/媒体反响与社区舆论.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/index.md)
 
   - [第 77 章 BSD 项目的战略方向缺失与治理困境](./第04卷-大分裂与四大bsd的诞生/第77章-bsd项目的战略方向缺失与治理困境/概述.md)
@@ -784,7 +784,7 @@
     - [78.5 USL 诉讼的后果——诉讼给予 Linux 约 18 个月无竞争窗口期，BSD 阵营在此期间被法律不确定性拖累](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/78.5-usl诉讼的后果.md)
     - [78.6 市场份额差异的复合原因——RedHat 商业模式、IBM 背书、风险资本偏好的叠加作用](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/78.6-市场份额差异的复合原因.md)
     - [78.7 关键词行级挖掘素材线索](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/78.7-关键词行级挖掘素材线索.md)
-    - [第 78 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/媒体反响与社区舆论.md)
+    - [第 78 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/媒体反响与社区舆论.md)
     - [采访录](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/采访录.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/index.md)
 
@@ -824,7 +824,7 @@
     - [82.6 对 4.4BSD-Lite 的批评：法律妥协与技术遗留——对 4.4BSD-Lite 法律妥协与技术遗留问题的批评](./第04卷-大分裂与四大bsd的诞生/第82章-44bsd-lite的发布与法律清白基础/82.6-对44bsd.md)
     - [82.7 重要贡献者与边缘者：CSRG 末期的无名成员——CSRG 末期的无名成员](./第04卷-大分裂与四大bsd的诞生/第82章-44bsd-lite的发布与法律清白基础/82.7-重要贡献者与边缘者.md)
     - [82.8 关键词行级挖掘素材线索](./第04卷-大分裂与四大bsd的诞生/第82章-44bsd-lite的发布与法律清白基础/82.8-关键词行级挖掘素材线索.md)
-    - [第 82 章 4.4BSD-Lite 的发布与法律清白基础——媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第82章-44bsd-lite的发布与法律清白基础/媒体反响与社区舆论.md)
+    - [第 82 章 4.4BSD-Lite 的发布与法律清白基础——媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第82章-44bsd-lite的发布与法律清白基础/媒体反响与社区舆论.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第82章-44bsd-lite的发布与法律清白基础/index.md)
 
   - [第 83 章 UNIX 版权归属争议与 Novell 卖 SCO](./第04卷-大分裂与四大bsd的诞生/第83章-unix版权归属争议与novell卖sco/概述.md)
@@ -839,7 +839,7 @@
     - [84.1 1992-1996 年的文化图景——分裂时期 BSD 社区的文化特征，从 CSRG 单一中心向 FreeBSD/NetBSD/OpenBSD 三足鼎立的文化分化，三项目的文化基因差异（FreeBSD 的务实商业绑定、NetBSD 的可移植精英主义、OpenBSD 的安全审计独裁）在分裂初期的形成](./第04卷-大分裂与四大bsd的诞生/第84章-分裂时期的文化图景与三项目基因分化/84.1-1992.md)
     - [84.2 黑客文化与分裂——1990 年代初黑客伦理在 BSD 分裂中的体现，Jolitz 夫妇对 FreeBSD 起源叙事的指控反映的文化张力，de Raadt 被逐出 NetBSD 事件对黑客社区 “信息自由” 理念的冲击，Steven Levy《Hackers》所载黑客伦理在分裂时期的延续与变迁](./第04卷-大分裂与四大bsd的诞生/第84章-分裂时期的文化图景与三项目基因分化/84.2-黑客文化与分裂.md)
     - [84.3 BSD 符号与图腾的分裂时期演变——BSD Daemon（John Lasseter 1988 年创作、Marshall Kirk McKusick 委托并持有版权）在分裂时期作为三项目共享图腾的文化意义，Beastie 视觉符号在 FreeBSD/NetBSD/OpenBSD 各自社区中的差异化使用，1992-1996 年间 Daemon 作为社区认同建构的形式主义化，符号作为社区认同的形式主义建构](./第04卷-大分裂与四大bsd的诞生/第84章-分裂时期的文化图景与三项目基因分化/84.3-bsd符号与图腾的分裂时期演变.md)
-    - [第 84 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第84章-分裂时期的文化图景与三项目基因分化/媒体反响与社区舆论.md)
+    - [第 84 章 媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第84章-分裂时期的文化图景与三项目基因分化/媒体反响与社区舆论.md)
     - [本章索引](./第04卷-大分裂与四大bsd的诞生/第84章-分裂时期的文化图景与三项目基因分化/index.md)
 
   - [第 85 章 分裂时期的流行文化呈现](./第04卷-大分裂与四大bsd的诞生/第85章-分裂时期的流行文化呈现/概述.md)
@@ -882,7 +882,7 @@
     - [88.10 与同时期操作系统的比较：1994-1998 年同期 Linux 2.0-2.2 内核开发、Windows NT 4.0、Solaris 2.4-2.6 的网络栈成熟度](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/88.10-与同时期操作系统的比较-1994-1998-年同期-Linux-2-0-2-2.md)
     - [88.11 漏洞与安全响应：FreeBSD 2.x 时期的 LAND/smurf/F00F/suidperl 漏洞群与 MFC 安全回溯模型（1995-1998）](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/88.11-漏洞与安全响应-FreeBSD-2-x-时期的-LAND-smurf-F00.md)
     - [88.12 自由 Unix 的桌面化之争（1996）](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/88.12-自由unix的桌面化之争1996.md)
-    - [第 88 章 ](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/媒体反响与社区舆论.md)
+    - [第 88 章 ](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/媒体反响与社区舆论.md)
     - [第 88 章 不同时期人员的采访录](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第88章-freebsd2x站稳脚跟/index.md)
 
@@ -892,7 +892,7 @@
     - [89.3 cvsup 同步机制——John Polstra 的设计与版权（CVSup 是 John D. Polstra（约翰·D·波尔斯特拉） 的注册商标）](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/89.3-cvsup-同步机制-John-Polstra-的设计与版权-CVSup-是.md)
     - [89.4 源码编译 vs 二进制软件包的哲学分歧——为后续 pkgng 争议埋下伏笔](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/89.4-源码编译-vs-二进制软件包的哲学分歧-为后续-pkgng-争议埋下伏笔.md)
     - [89.5 pkgng 争议的四层辩证链——pkgng 替代 pkg_install 的批评、反批评、再回应与合图](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/89.5-pkgng-争议的四层辩证链-pkgng-替代-pkg_install-的批评.md)
-    - [第 89 章 ](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/媒体反响与社区舆论.md)
+    - [第 89 章 ](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/媒体反响与社区舆论.md)
     - [Ports的伦理结构](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/V5-Ch88-新增-Ports的伦理结构.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第89章-freebsd-ports系统的起源与jordan-hubbard谱系/index.md)
 
@@ -918,7 +918,7 @@
     - [91.11 多元群体贡献：FreeBSD 1998–2000 时期的贡献者多样性——企业、地域与志愿者的协同生态](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/91.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业.md)
     - [91.12 与同时期操作系统的比较：1998-2000 年同期 Linux 2.2（1999.1，SMP 支持大幅改进，引入 spinlock 优化，但仍保留大内核锁 BKL，调度器仍为 O(n)）、Windows 2000（2000.2，NT 5.0，微内核混合架构，调度器优先级驱动 32 级，NTFS 日志文件系统，Active Directory 域目录服务）、Solaris 8（2000.2，SVR4，完全抢占式内核，细粒度锁，Solaris Threads/UltraSPARC 多线程优化，UFS Logging + VxFS 可选，ZFS 尚未出现）——FreeBSD 3.x 的技术路线分化：①SMP 架构——FreeBSD 3.x 仍依赖 Giant Lock 粗粒度锁，Linux 2.2 也保留 BKL 但已开始细粒度化，Solaris 8 已实现完全抢占式内核与细粒度锁，FreeBSD 在 SMP 成熟度上明显落后于 Solaris、略落后于 Linux](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/91.12-与同时期操作系统的比较-1998-2000-年同期-Linux-2-2-1999.md)
     - [91.13 漏洞与安全响应：FreeBSD 3.x 时期的 chflags/telnet/FTP bounce 漏洞群与 SMP 过渡期安全基线（1998-2000）](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/91.13-漏洞与安全响应-FreeBSD-3-x-时期的-chflags-telnet-F.md)
-    - [第 91 章 ](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/媒体反响与社区舆论.md)
+    - [第 91 章 ](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/媒体反响与社区舆论.md)
     - [第 91 章 不同时期人员的采访录](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第91章-freebsd3x-smp时代/index.md)
 
@@ -932,7 +932,7 @@
     - [92.7 FreeBSD 商标与 Daemon 版权——4.x 时期的品牌资产](./第05卷-freebsd的工程化奠基/第92章-freebsd4x的jails与黄金时代开端/92.7-FreeBSD-商标与-Daemon-版权-4-x-时期的品牌资产.md)
     - [92.8 Matt Dillon 在 4.x 时期的贡献与争议——Dillon 1998-08-26 起活跃于 FreeBSD 提交（freebsd-src 首 commit 1998-08-26），重写虚拟内存子系统](./第05卷-freebsd的工程化奠基/第92章-freebsd4x的jails与黄金时代开端/92.8-Matt-Dillon-在-4-x-时期的贡献与争议-Dillon-1998.md)
     - [92.9 Dillon 撤权与 DragonFly fork 的辩证链——四层辩证（批评—反批评—再批评—合图）](./第05卷-freebsd的工程化奠基/第92章-freebsd4x的jails与黄金时代开端/92.9-Dillon-撤权与-DragonFly-fork-的辩证链-四层辩证-批评.md)
-    - [第 92 章 ](./第05卷-freebsd的工程化奠基/第92章-freebsd4x的jails与黄金时代开端/媒体反响与社区舆论.md)
+    - [第 92 章 ](./第05卷-freebsd的工程化奠基/第92章-freebsd4x的jails与黄金时代开端/媒体反响与社区舆论.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第92章-freebsd4x的jails与黄金时代开端/index.md)
 
   - [第 93 章 FreeBSD 4.x 末期的 DragonFly fork 与史观审视](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/概述.md)
@@ -942,7 +942,7 @@
     - [93.13 与同时期操作系统的比较——4.x 时期的技术定位](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/93.13-与同时期操作系统的比较-4-x-时期的技术定位.md)
     - [93.14 漏洞与安全响应：FreeBSD 4.x 时期的 execve 竞态/CVS 双重释放/setproctitle 漏洞群与 Jails/kqueue 架构关联（2000-2003）](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/93.14-漏洞与安全响应-FreeBSD-4-x-时期的-execve-竞态-CVS.md)
     - [93.15 FreeBSD 4.x 时代争议的四层辩证链——SMP 支持滞后与市场份额下滑](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/93.15-FreeBSD-4-x-时代争议的四层辩证链-SMP-支持滞后与市场份额下滑.md)
-    - [第 93 章 ](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/媒体反响与社区舆论.md)
+    - [第 93 章 ](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/媒体反响与社区舆论.md)
     - [采访录](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第93章-freebsd4x末期的dragonfly-fork与史观审视/index.md)
 
@@ -965,7 +965,7 @@
     - [95.1 Jonathan Lemon 设计 kqueue/kevent](./第05卷-freebsd的工程化奠基/第95章-kqueue的设计与jonathan-lemon工程贡献/95.1-Jonathan-Lemon-设计-kqueue-kevent.md)
     - [95.2 select/poll 替代——性能与可扩展性优势](./第05卷-freebsd的工程化奠基/第95章-kqueue的设计与jonathan-lemon工程贡献/95.2-select-poll-替代-性能与可扩展性优势.md)
     - [95.3 Linux epoll 灵感来源——epoll 在 2002 年 Linux 2.5.44 引入](./第05卷-freebsd的工程化奠基/第95章-kqueue的设计与jonathan-lemon工程贡献/95.3-Linux-epoll-灵感来源-epoll-在-2002-年-Linux-2.md)
-    - [第 95 章 ](./第05卷-freebsd的工程化奠基/第95章-kqueue的设计与jonathan-lemon工程贡献/媒体反响与社区舆论.md)
+    - [第 95 章 ](./第05卷-freebsd的工程化奠基/第95章-kqueue的设计与jonathan-lemon工程贡献/媒体反响与社区舆论.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第95章-kqueue的设计与jonathan-lemon工程贡献/index.md)
 
   - [第 96 章 kqueue 在 macOS 与其他系统的继承](./第05卷-freebsd的工程化奠基/第96章-kqueue在macos与其他系统的继承/概述.md)
@@ -995,7 +995,7 @@
     - [97.13 与 Linux Foundation 的对比——治理模式差异](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/97.13-与-Linux-Foundation-的对比-治理模式差异.md)
     - [97.14 边缘者——早期无名志愿者](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/97.14-边缘者-早期无名志愿者.md)
     - [97.15 与同时期操作系统的比较：2000 年同期开源/类 UNIX 治理格局——Linux 2.4、NetBSD 1.5、OpenBSD 2.8、Windows 2000、Darwin——FreeBSD Foundation 成立时的治理坐标](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/97.15-与同时期操作系统的比较-2000-年同期开源-类-UNIX-治理格局.md)
-    - [第 97 章 ](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/媒体反响与社区舆论.md)
+    - [第 97 章 ](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/媒体反响与社区舆论.md)
     - [第 97 章 不同时期人员的采访录](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第97章-freebsd-foundation/index.md)
 
@@ -1011,7 +1011,7 @@
     - [98.9 FreeBSD 5.x 的技术淘汰——废弃的过渡性特性](./第05卷-freebsd的工程化奠基/第98章-freebsd50的开发挑战与工程困境/98.9-freebsd5x时期的技术淘汰与废弃特性.md)
     - [98.10 外部批评与反对者 ：（1） EPFL 与 Sorbonne/Inria 团队（USENIX ATC '18）对 ULE 饥饿问题的学术批评——Justinien Bouron、Sébastien Chevalley、Baptiste Lepers、Willy Zwaenepoel（EPFL）与 Redha Gouicem、Julia Lawall、Gilles Muller、Julien Sopena（Sorbonne University/Inria/LIP6）在 USENIX ATC 2018 论文 “The Battle of the Schedulers: FreeBSD ULE vs. Linux CFS” 中将 ULE 移植到 Linux 内核以隔离调度器差异进行苹果对苹果的比较，论文明确指出 "Unlike CFS, ULE may starve threads that it deems non-interactive for an unbounded amount of time. Surprisingly, starvation may also occur when the system executes only a single application consisting of identical threads"——即 ULE 可能对被视为非交互式的线程造成无界饥饿，即使在单应用同质线程场景下亦然](./第05卷-freebsd的工程化奠基/第98章-freebsd50的开发挑战与工程困境/98.10-外部批评与反对者-1-EPFL-与-Sorbonne-Inria-团队.md)
     - [98.11 关键词行级挖掘素材线索](./第05卷-freebsd的工程化奠基/第98章-freebsd50的开发挑战与工程困境/98.11-关键词行级挖掘素材线索.md)
-    - [第 98 章 ](./第05卷-freebsd的工程化奠基/第98章-freebsd50的开发挑战与工程困境/媒体反响与社区舆论.md)
+    - [第 98 章 ](./第05卷-freebsd的工程化奠基/第98章-freebsd50的开发挑战与工程困境/媒体反响与社区舆论.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第98章-freebsd50的开发挑战与工程困境/index.md)
 
   - [第 99 章 FreeBSD 5.x 转型期的史观审视](./第05卷-freebsd的工程化奠基/第99章-freebsd5x转型期的史观审视/概述.md)
@@ -1056,7 +1056,7 @@
     - [102.7 对 jemalloc 的批评：tcmalloc/ptmalloc 与 glibc](./第05卷-freebsd的工程化奠基/第102章-jemalloc/102.7-对-jemalloc-的批评-tcmalloc-ptmalloc-与-glibc.md)
     - [102.8 重要贡献者与边缘者：jemalloc 早期采用者与边缘贡献者](./第05卷-freebsd的工程化奠基/第102章-jemalloc/102.8-重要贡献者与边缘者-jemalloc-早期采用者与边缘贡献者.md)
     - [102.9 与同时期操作系统的比较](./第05卷-freebsd的工程化奠基/第102章-jemalloc/102.9-与同时期操作系统的比较.md)
-    - [第 102 章 ](./第05卷-freebsd的工程化奠基/第102章-jemalloc/媒体反响与社区舆论.md)
+    - [第 102 章 ](./第05卷-freebsd的工程化奠基/第102章-jemalloc/媒体反响与社区舆论.md)
     - [采访录](./第05卷-freebsd的工程化奠基/第102章-jemalloc/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第102章-jemalloc/index.md)
 
@@ -1071,7 +1071,7 @@
     - [103.8 对 PF 路线的批评：iptables/nftables 与 Linux 防火墙——对 PF 路线在 iptables/nftables 与 Linux 防火墙竞争下被工程否定的批评](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/103.8-对-PF-路线的批评-iptables-nftables-与-Linux-防火墙.md)
     - [103.9 重要贡献者与边缘者：PF 移植的无名工程师与 IPF 作者——PF 移植的无名工程师与 IPF 作者 Darren Reed（达伦·里德）](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/103.9-重要贡献者与边缘者-PF-移植的无名工程师与-IPF-作者-PF.md)
     - [103.10 与同时期操作系统的比较：2006 年同期 Linux iptables/nftables、Windows Firewall、Solaris IP Filter 的防火墙路径](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/103.10-与同时期操作系统的比较-2006-年同期-Linux-iptables-nfta.md)
-    - [第 103 章 ](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/媒体反响与社区舆论.md)
+    - [第 103 章 ](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/媒体反响与社区舆论.md)
     - [采访录](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第103章-pf防火墙/index.md)
 
@@ -1080,7 +1080,7 @@
     - [104.2 SMP 性能提升的基准测试](./第05卷-freebsd的工程化奠基/第104章-freebsd7x的ule调度器成熟与性能飞跃/104.2-SMP-性能提升的基准测试.md)
     - [104.3 SUPERPAGE 大页支持](./第05卷-freebsd的工程化奠基/第104章-freebsd7x的ule调度器成熟与性能飞跃/104.3-SUPERPAGE-大页支持.md)
     - [104.4 PS3 OtherOS 支持——Sony 允许 Linux/BSD 安装](./第05卷-freebsd的工程化奠基/第104章-freebsd7x的ule调度器成熟与性能飞跃/104.4-PS3-OtherOS-支持-Sony-允许-Linux-BSD-安装.md)
-    - [第 104 章 ](./第05卷-freebsd的工程化奠基/第104章-freebsd7x的ule调度器成熟与性能飞跃/媒体反响与社区舆论.md)
+    - [第 104 章 ](./第05卷-freebsd的工程化奠基/第104章-freebsd7x的ule调度器成熟与性能飞跃/媒体反响与社区舆论.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第104章-freebsd7x的ule调度器成熟与性能飞跃/index.md)
 
   - [第 105 章 FreeBSD 7.x 同期的 DragonFly HAMMER 与 OS 比较](./第05卷-freebsd的工程化奠基/第105章-freebsd7x同期的dragonfly-hammer与os比较/概述.md)
@@ -1106,7 +1106,7 @@
     - [106.9 重要贡献者与边缘者：8.x 时期 XEN/VNET 移植的无名工程师——8.x 时期 XEN/VNET 移植的无名工程师](./第05卷-freebsd的工程化奠基/第106章-freebsd8x的虚拟化与网络栈演进/106.9-重要贡献者与边缘者-8-x-时期-XEN-VNET-移植的无名工程师-8-x.md)
     - [106.10 2010 SCO v. Novell 陪审团判决与 UNIX 版权终局——2009.8 美国第十巡回上诉法院推翻 Kimball 即决判决（认定 UNIX 版权归属属陪审团事实问题），案件发回重审；2010.6.10 Stewart 法官签发 Final Judgment，依据 APA §4.16(b) 宣告 Novell 有权豁免 SCO 对 IBM/Sequent/SVRX 被许可方的索赔、SCO 须承认 Novell 的豁免](./第05卷-freebsd的工程化奠基/第106章-freebsd8x的虚拟化与网络栈演进/106.10-2010-SCO-v-Novell-陪审团判决与-UNIX-版权终局-2009.md)
     - [106.11 FreeBSD 8.x 时期的技术淘汰——4BSD 调度器 →ULE 默认化与持续优化、KSE M: N→libthr 1:1 彻底确立、ZFS 实验性 → 一等文件系统、DTrace 用户态移植 → 内核原生支持、旧 ATA 驱动栈 →CAM SCSI 子系统整合（2009-2011）](./第05卷-freebsd的工程化奠基/第106章-freebsd8x的虚拟化与网络栈演进/106.11-FreeBSD-8-x-时期的技术淘汰-4BSD-调度器-→ULE.md)
-    - [第 106 章 ](./第05卷-freebsd的工程化奠基/第106章-freebsd8x的虚拟化与网络栈演进/媒体反响与社区舆论.md)
+    - [第 106 章 ](./第05卷-freebsd的工程化奠基/第106章-freebsd8x的虚拟化与网络栈演进/媒体反响与社区舆论.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第106章-freebsd8x的虚拟化与网络栈演进/index.md)
 
   - [第 107 章 FreeBSD 8.x 与同期操作系统的虚拟化比较](./第05卷-freebsd的工程化奠基/第107章-freebsd8x与同期操作系统的虚拟化比较/概述.md)
@@ -1124,7 +1124,7 @@
     - [108.6 对 SVN 迁移的批评：Git/Mercurial 竞争者与决策滞后——对 SVN 迁移决策滞后于 Git/Mercurial 竞争者且 8 年争论反映决策机制低效的批评](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/108.6-对-SVN-迁移的批评-Git-Mercurial-竞争者与决策滞后-对.md)
     - [108.7 重要贡献者与边缘者：迁移工作组与反对者——迁移工作组与反对者](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/108.7-重要贡献者与边缘者-迁移工作组与反对者-迁移工作组与反对者.md)
     - [108.8 与同时期操作系统的比较：2008 年同期 Linux 内核仍用 BitKeeper 后转 Git（2005）、NetBSD 2008 年迁往 CVS Mirrors、OpenBSD 仍用 CVS 的版本控制路径](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/108.8-与同时期操作系统的比较-2008-年同期-Linux-内核仍用.md)
-    - [第 108 章 ](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/媒体反响与社区舆论.md)
+    - [第 108 章 ](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/媒体反响与社区舆论.md)
     - [第 108 章 不同时期人员的采访录](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/采访录.md)
     - [本章索引](./第05卷-freebsd的工程化奠基/第108章-cvs到subversion/index.md)
 
@@ -1163,7 +1163,7 @@
   - [第 113 章 ZFS 的 OS 比较、贡献者与媒体反响](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/概述.md)
     - [113.13 与同时期操作系统的比较：2005-2026 年同期 Linux Btrfs（Chris Mason 2007 年发布，Oracle 资助，受 R Reiser4 启发，但 Btrfs 长期未达 ZFS 的稳定性声誉）、Linux ext4（Theodore Ts'o 2008 年稳定）、Linux XFS（SGI IRIX 移植，Red Hat 主导维护）、Solaris ZFS 原版（Oracle 闭源后社区被剥夺）、OpenZFS on Linux/illumos/macOS、Windows ReFS（Microsoft 2012 年发布但限制于 Server 版）、Apple APFS（2017 年发布，Docker 与 Time Machine 整合）——FreeBSD ZFS 的稳定性与法律确定性独树一帜](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/113.13-与同时期操作系统的比较-2005-2026-年同期-Linux-Btrfs-Ch.md)
     - [113.14 重要贡献者与边缘者：ZFS 早期移植者与 OpenZFS 协调者](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/113.14-重要贡献者与边缘者-ZFS-早期移植者与-OpenZFS-协调者.md)
-    - [第 113 章 ](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/媒体反响与社区舆论.md)
+    - [第 113 章 ](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/媒体反响与社区舆论.md)
     - [采访录](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/采访录.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第113章-zfs的os比较贡献者与媒体反响/index.md)
 
@@ -1173,7 +1173,7 @@
     - [114.3 DTrace 的 CDDL 许可证——与 ZFS 同为 Sun 2004 年开源成果，受同样的 CDDL 1.0 条款约束](./第06卷-freebsd的核心技术革新/第114章-dtrace的设计与solaris起源/114.3-DTrace-的-CDDL-许可证-与-ZFS-同为-Sun-2004.md)
     - [114.4 2007-2008 年 Mac OS X 集成 DTrace——Apple 在 Mac OS X 10.5 Leopard 中集成 DTrace 并推出 Instruments GUI，但修改了部分探针行为，Cantrill 与 Leventhal 公开批评](./第06卷-freebsd的核心技术革新/第114章-dtrace的设计与solaris起源/114.4-2007-2008-年-Mac-OS-X-集成-DTrace-Apple-在.md)
     - [114.5 John Birrell 发起移植与 George Neville-Neil 等后续完善——FreeBSD 7.1 首次包含 DTrace，后续版本逐步成熟](./第06卷-freebsd的核心技术革新/第114章-dtrace的设计与solaris起源/114.5-John-Birrell-发起移植与-George-Neville-Neil.md)
-    - [第 114 章 ](./第06卷-freebsd的核心技术革新/第114章-dtrace的设计与solaris起源/媒体反响与社区舆论.md)
+    - [第 114 章 ](./第06卷-freebsd的核心技术革新/第114章-dtrace的设计与solaris起源/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第114章-dtrace的设计与solaris起源/index.md)
 
   - [第 115 章 DTrace 对 eBPF 的影响与跨系统传承](./第06卷-freebsd的核心技术革新/第115章-dtrace对ebpf的影响与跨系统传承/概述.md)
@@ -1191,7 +1191,7 @@
     - [116.1 罗伯特·N. M. 沃森（Robert Watson）团队设计 Capsicum——论文“Capsicum: Practical Capabilities for UNIX”（USENIX Security 2010，Watson、Anderson、Laurie、Kennaway）的核心贡献](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.1-罗伯特-N-M-沃森-Robert-Watson-团队设计-Capsicum.md)
     - [116.2 能力（capability）与沙箱（sandbox）的设计哲学——以进程级 capability 替代全局 UID/GID 权限模型，每个进程只能访问其被授予的能力句柄](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.2-能力-capability-与沙箱-sandbox-的设计哲学-以进程级.md)
     - [116.3 Capsicum 的 BSD 许可证——剑桥大学以 BSD 2-Clause 许可证发布，与 FreeBSD 基本系统完全兼容](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.3-Capsicum-的-BSD-许可证-剑桥大学以-BSD-2-Clause.md)
-    - [第 116 章 ](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/媒体反响与社区舆论.md)
+    - [第 116 章 ](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/index.md)
 
   - [第 117 章 Capsicum 在 FreeBSD 的集成与演进](./第06卷-freebsd的核心技术革新/第117章-capsicum在freebsd的集成与演进/概述.md)
@@ -1228,7 +1228,7 @@
     - [120.11 committer 权限记录](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/120.11-committer-权限记录.md)
     - [120.12 与同时期虚拟化技术的比较](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/120.12-与同时期虚拟化技术的比较.md)
     - [120.13 重要贡献者与相关项目](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/120.13-重要贡献者与相关项目.md)
-    - [第 120 章 ](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/媒体反响与社区舆论.md)
+    - [第 120 章 ](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/媒体反响与社区舆论.md)
     - [采访录](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/采访录.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第120章-bhyve的生态分化与市场困境/index.md)
 
@@ -1238,7 +1238,7 @@
     - [121.3 CAM SCSI/ATA/NVMe 子系统——从 Justin Gibbs 的 CAM 到现代存储控制器](./第06卷-freebsd的核心技术革新/第121章-freebsd存储栈的ffs与ufs演进/121.3-CAM-SCSI-ATA-NVMe-子系统-从-Justin-Gibbs-的.md)
     - [121.4 其他存储栈组件：devfs、mdconfig、tmpfs、sendfile、VFS](./第06卷-freebsd的核心技术革新/第121章-freebsd存储栈的ffs与ufs演进/121.4-其他存储栈组件-devfs-mdconfig-tmpfs-sendfile-VF.md)
     - [121.5 关键词行级挖掘素材线索](./第06卷-freebsd的核心技术革新/第121章-freebsd存储栈的ffs与ufs演进/121.5-关键词行级挖掘素材线索.md)
-    - [第 121 章 ](./第06卷-freebsd的核心技术革新/第121章-freebsd存储栈的ffs与ufs演进/媒体反响与社区舆论.md)
+    - [第 121 章 ](./第06卷-freebsd的核心技术革新/第121章-freebsd存储栈的ffs与ufs演进/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第121章-freebsd存储栈的ffs与ufs演进/index.md)
 
   - [第 122 章 FreeBSD 存储栈的分区与 I/O 调度](./第06卷-freebsd的核心技术革新/第122章-freebsd存储栈的分区与io调度/概述.md)
@@ -1294,7 +1294,7 @@
     - [127.3 2015.8.13 FreeBSD 10.2-RELEASE——云镜像与 DRM 更新](./第06卷-freebsd的核心技术革新/第127章-freebsd100的发布与大整合开端/127.3-2015-8-13-FreeBSD-10-2-RELEASE-云镜像与-DRM.md)
     - [127.4 2016.4.4 FreeBSD 10.3-RELEASE——UEFI 成熟与 Linux 兼容层 64 位](./第06卷-freebsd的核心技术革新/第127章-freebsd100的发布与大整合开端/127.4-2016-4-4-FreeBSD-10-3-RELEASE-UEFI-成熟与.md)
     - [127.5 2017.10.3 FreeBSD 10.4-RELEASE——10.x 系列终章](./第06卷-freebsd的核心技术革新/第127章-freebsd100的发布与大整合开端/127.5-2017-10-3-FreeBSD-10-4-RELEASE-10-x-系列终章.md)
-    - [第 127 章 ](./第06卷-freebsd的核心技术革新/第127章-freebsd100的发布与大整合开端/媒体反响与社区舆论.md)
+    - [第 127 章 ](./第06卷-freebsd的核心技术革新/第127章-freebsd100的发布与大整合开端/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第127章-freebsd100的发布与大整合开端/index.md)
 
   - [第 128 章 FreeBSD 10.x 的 pkg 软件包管理器](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/概述.md)
@@ -1318,7 +1318,7 @@
     - [130.1 2016.10.10 FreeBSD 11.0-RELEASE——stable/11 分支起点与 arm64 引入](./第06卷-freebsd的核心技术革新/第130章-freebsd110的发布与arm64架构引入/130.1-2016-10-10-FreeBSD-11-0-RELEASE-stable.md)
     - [130.2 11.1-11.4 RELEASE——次版本迭代与 11.x 系列演进](./第06卷-freebsd的核心技术革新/第130章-freebsd110的发布与arm64架构引入/130.2-11-1-11-4-RELEASE-次版本迭代与-11-x-系列演进.md)
     - [130.3 11.x 关键基础设施——bhyve、网络栈与存储改进](./第06卷-freebsd的核心技术革新/第130章-freebsd110的发布与arm64架构引入/130.3-11-x-关键基础设施-bhyve-网络栈与存储改进.md)
-    - [第 130 章 ](./第06卷-freebsd的核心技术革新/第130章-freebsd110的发布与arm64架构引入/媒体反响与社区舆论.md)
+    - [第 130 章 ](./第06卷-freebsd的核心技术革新/第130章-freebsd110的发布与arm64架构引入/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第130章-freebsd110的发布与arm64架构引入/index.md)
 
   - [第 131 章 FreeBSD 11.x 的无线网络与硬件驱动支持](./第06卷-freebsd的核心技术革新/第131章-freebsd11x的无线网络与硬件驱动支持/概述.md)
@@ -1341,7 +1341,7 @@
     - [133.3 虚拟化、bhyve 改进与 jail 增强](./第06卷-freebsd的核心技术革新/第133章-freebsd120的发布与基础设施革新/133.3-虚拟化-bhyve-改进与-jail-增强.md)
     - [133.4 12.1-12.4 RELEASE——次版本迭代与 12.x 系列演进](./第06卷-freebsd的核心技术革新/第133章-freebsd120的发布与基础设施革新/133.4-12-1-12-4-RELEASE-次版本迭代与-12-x-系列演进.md)
     - [133.5 架构支持变化——RISC-V 引入、sparc64 退役与 ARM64 成熟](./第06卷-freebsd的核心技术革新/第133章-freebsd120的发布与基础设施革新/133.5-架构支持变化-RISC-V-引入-sparc64-退役与-ARM64-成熟.md)
-    - [第 133 章 ](./第06卷-freebsd的核心技术革新/第133章-freebsd120的发布与基础设施革新/媒体反响与社区舆论.md)
+    - [第 133 章 ](./第06卷-freebsd的核心技术革新/第133章-freebsd120的发布与基础设施革新/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第133章-freebsd120的发布与基础设施革新/index.md)
 
   - [第 134 章 FreeBSD 12.x 的工具链与存储栈改进](./第06卷-freebsd的核心技术革新/第134章-freebsd12x的工具链与存储栈改进/概述.md)
@@ -1378,7 +1378,7 @@
     - [136.2 Jails、Capsicum、CHERI 的三阶段演进——从进程隔离到能力模型到硬件强制的安全范式转换](./第07卷-freebsd的工程体系重构/第136章-freebsd安全模型的unix-dac与权限机制/136.2-Jails-Capsicum-CHERI-的三阶段演进.md)
     - [136.3 MAC（Mandatory Access Control）框架——BSD 框架下的 Biba、MLS、LOMAC、BSE、UGIDFW 等策略模块的设计与使用场景](./第07卷-freebsd的工程体系重构/第136章-freebsd安全模型的unix-dac与权限机制/136.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的.md)
     - [136.4 audit 子系统——OpenBSM 与 FreeBSD audit 的整合历史](./第07卷-freebsd的工程体系重构/第136章-freebsd安全模型的unix-dac与权限机制/136.4-audit-子系统-OpenBSM-与-FreeBSD-audit-的整合历史.md)
-    - [第 136 章 ](./第07卷-freebsd的工程体系重构/第136章-freebsd安全模型的unix-dac与权限机制/媒体反响与社区舆论.md)
+    - [第 136 章 ](./第07卷-freebsd的工程体系重构/第136章-freebsd安全模型的unix-dac与权限机制/媒体反响与社区舆论.md)
     - [本章索引](./第07卷-freebsd的工程体系重构/第136章-freebsd安全模型的unix-dac与权限机制/index.md)
 
   - [第 137 章 FreeBSD 安全模型的磁盘加密与内存保护](./第07卷-freebsd的工程体系重构/第137章-freebsd安全模型的磁盘加密与内存保护/概述.md)
@@ -1453,7 +1453,7 @@
     - [146.1 2007-2014 年 GCC → Clang/LLVM 迁移的工程语境——FreeBSD 10.0 默认 Clang](./第07卷-freebsd的工程体系重构/第146章-clang-llvm迁移背景与法律基础/146.1-2007-2014-年-GCC-→-Clang-LLVM-迁移的工程语境.md)
     - [146.2 GPLv3 担忧的法律基础——Free Software Foundation 2007.6.29 发布 GPLv3](./第07卷-freebsd的工程体系重构/第146章-clang-llvm迁移背景与法律基础/146.2-GPLv3-担忧的法律基础-Free-Software-Foundation.md)
     - [146.3 BSD 许可证编译器的法律选择——Clang/LLVM 以 UIUC/NCSA 许可证（BSD-like）发布](./第07卷-freebsd的工程体系重构/第146章-clang-llvm迁移背景与法律基础/146.3-BSD-许可证编译器的法律选择-Clang-LLVM-以-UIUC-NCSA.md)
-    - [第 146 章 ](./第07卷-freebsd的工程体系重构/第146章-clang-llvm迁移背景与法律基础/媒体反响与社区舆论.md)
+    - [第 146 章 ](./第07卷-freebsd的工程体系重构/第146章-clang-llvm迁移背景与法律基础/媒体反响与社区舆论.md)
     - [本章索引](./第07卷-freebsd的工程体系重构/第146章-clang-llvm迁移背景与法律基础/index.md)
 
   - [第 147 章 许可证纯洁化工程与开发者立场](./第07卷-freebsd的工程体系重构/第147章-许可证纯洁化工程与开发者立场/概述.md)
@@ -1467,7 +1467,7 @@
     - [148.2 Kernel TLS offload（KTLS）——Netflix 贡献的零拷贝 TLS 卸载支持 TLS 1.3](./第07卷-freebsd的工程体系重构/第148章-freebsd13x发布与核心特性/148.2-Kernel-TLS-offload-KTLS-Netflix-贡献的零拷贝.md)
     - [148.3 Git 迁移完成（2021.4.6）——Subversion 到 Git 的迁移（详见相关章节）](./第07卷-freebsd的工程体系重构/第148章-freebsd13x发布与核心特性/148.3-Git-迁移完成-2021-4-6-Subversion-到-Git-的迁移.md)
     - [148.4 WireGuard if_wg 争议（2020.12-2021.03）——代码质量争议、revert 与重构](./第07卷-freebsd的工程体系重构/第148章-freebsd13x发布与核心特性/148.4-WireGuard-if_wg-争议-2020-12-2021-03.md)
-    - [第 148 章 ](./第07卷-freebsd的工程体系重构/第148章-freebsd13x发布与核心特性/媒体反响与社区舆论.md)
+    - [第 148 章 ](./第07卷-freebsd的工程体系重构/第148章-freebsd13x发布与核心特性/媒体反响与社区舆论.md)
     - [本章索引](./第07卷-freebsd的工程体系重构/第148章-freebsd13x发布与核心特性/index.md)
 
   - [第 149 章 FreeBSD 13.x 社区治理与技术演进](./第07卷-freebsd的工程体系重构/第149章-freebsd13x社区治理与技术演进/概述.md)
@@ -1493,7 +1493,7 @@
     - [151.2 dma(8) 替代 sendmail——默认 MTA 更替争议与 BSD mail 系统演进](./第07卷-freebsd的工程体系重构/第151章-freebsd14x发布与核心特性/151.2-dma-8-替代-sendmail-默认-MTA-更替争议与-BSD-mail.md)
     - [151.3 OpenSSL 3.0 升级——加密栈许可证变更与 FIPS 现代化](./第07卷-freebsd的工程体系重构/第151章-freebsd14x发布与核心特性/151.3-OpenSSL-3-0-升级-加密栈许可证变更与-FIPS-现代化.md)
     - [151.4 OpenZFS 2.2——block cloning、zstd 与文件系统现代化](./第07卷-freebsd的工程体系重构/第151章-freebsd14x发布与核心特性/151.4-OpenZFS-2-2-block-cloning-zstd-与文件系统现代化.md)
-    - [第 151 章 ](./第07卷-freebsd的工程体系重构/第151章-freebsd14x发布与核心特性/媒体反响与社区舆论.md)
+    - [第 151 章 ](./第07卷-freebsd的工程体系重构/第151章-freebsd14x发布与核心特性/媒体反响与社区舆论.md)
     - [本章索引](./第07卷-freebsd的工程体系重构/第151章-freebsd14x发布与核心特性/index.md)
 
   - [第 152 章 FreeBSD 14.x 网络栈与虚拟化现代化](./第07卷-freebsd的工程体系重构/第152章-freebsd14x网络栈与虚拟化现代化/概述.md)
@@ -1537,7 +1537,7 @@
     - [156.3 FreeBSD 与学术研究：从实验室到生产系统](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/156.3-FreeBSD-与学术研究-从实验室到生产系统.md)
     - [156.4 FreeBSD 与流行文化：隐形的基础设施](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/156.4-FreeBSD-与流行文化-隐形的基础设施.md)
     - [156.5 社区文化与名人名言：幽默、哲学与身份认同](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/156.5-社区文化与名人名言-幽默-哲学与身份认同.md)
-    - [第 156 章 ](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/媒体反响与社区舆论.md)
+    - [第 156 章 ](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/媒体反响与社区舆论.md)
     - [采访录](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/采访录.md)
     - [代码之美的消解——当 KISS 成为形式主义](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/V8-Ch155-新增-代码之美的消解.md)
     - [本章索引](./第08卷-freebsd的范式转换/第156章-freebsd的工程美学与设计哲学/index.md)
@@ -1587,7 +1587,7 @@
     - [161.10 外部贡献者](./第08卷-freebsd的范式转换/第161章-技术瓶颈/161.10-外部贡献者.md)
     - [161.11 重要贡献者与边缘者](./第08卷-freebsd的范式转换/第161章-技术瓶颈/161.11-重要贡献者与边缘者.md)
     - [161.12 与同时期操作系统的比较](./第08卷-freebsd的范式转换/第161章-技术瓶颈/161.12-与同时期操作系统的比较.md)
-    - [第 161 章 ](./第08卷-freebsd的范式转换/第161章-技术瓶颈/媒体反响与社区舆论.md)
+    - [第 161 章 ](./第08卷-freebsd的范式转换/第161章-技术瓶颈/媒体反响与社区舆论.md)
     - [采访录](./第08卷-freebsd的范式转换/第161章-技术瓶颈/采访录.md)
     - [本章索引](./第08卷-freebsd的范式转换/第161章-技术瓶颈/index.md)
 
@@ -1595,7 +1595,7 @@
     - [162.1 2025.12 FreeBSD 15.0 发布——pkgbase 技术预览、原生 inotify 与 32 位平台正式退役](./第08卷-freebsd的范式转换/第162章-freebsd15x发布与技术特性/162.1-2025-12-FreeBSD-15-0-发布-pkgbase-技术预览-原生.md)
     - [162.2 2026.6 FreeBSD 15.1 发布——调度器选择、C23 进展与 Linux 7.0 WiFi 驱动基线](./第08卷-freebsd的范式转换/第162章-freebsd15x发布与技术特性/162.2-2026-6-FreeBSD-15-1-发布-调度器选择-C23-进展与.md)
     - [162.3 AI 辅助开发与社区争论——Varankin BCM4350 驱动、NetBSD AI 禁令与 FreeBSD AI 政策](./第08卷-freebsd的范式转换/第162章-freebsd15x发布与技术特性/162.3-AI-辅助开发与社区争论-Varankin-BCM4350-驱动.md)
-    - [第 162 章 ](./第08卷-freebsd的范式转换/第162章-freebsd15x发布与技术特性/媒体反响与社区舆论.md)
+    - [第 162 章 ](./第08卷-freebsd的范式转换/第162章-freebsd15x发布与技术特性/媒体反响与社区舆论.md)
     - [本章索引](./第08卷-freebsd的范式转换/第162章-freebsd15x发布与技术特性/index.md)
 
   - [第 163 章 FreeBSD 15.x 的 Rust 集成争论](./第08卷-freebsd的范式转换/第163章-freebsd15x的rust集成争论/概述.md)
@@ -1646,7 +1646,7 @@
     - [169.4 基础设施与开发模式变革](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/169.4-基础设施与开发模式变革.md)
     - [169.5 社区争议与跨项目比较](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/169.5-社区争议与跨项目比较.md)
     - [169.6 关键贡献者与迁移后效应](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/169.6-关键贡献者与迁移后效应.md)
-    - [第 169 章 媒体反响与社区舆论](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/媒体反响与社区舆论.md)
+    - [第 169 章 媒体反响与社区舆论](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/媒体反响与社区舆论.md)
     - [采访录](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/采访录.md)
     - [本章索引](./第08卷-freebsd的范式转换/第169章-从subversion到git的迁移历程/index.md)
 
@@ -1679,7 +1679,7 @@
     - [172.2 多平台移植的工程架构（1995-1998）——NetBSD 1.2（1996.10）支持 12 种硬件平台，1.3（1998.1）扩展至 21 种〔原稿 14 种与通行记载 21 种不一，按 1.3 Release Notes 口径统一待回源核准〕，建立 machine 与 port 二级架构，MI（Machine-Independent）与 MD（Machine-Dependent）代码分层](./第09卷-netbsd的历史/第172章-netbsd的诞生与早期版本/172.2-多平台移植的工程架构19951998netbsd12199610支持12.md)
     - [172.3 Theo de Raadt（西奥·德·若特） 与 Core Team 冲突（1994-1996）——de Raadt 1994 年 12 月 23 日被 NetBSD Core Team 撤销 commit 权限，1995 年下半年开始筹备 fork，1996 年 7 月正式发布 OpenBSD 1.2，冲突根源涉及沟通风格与项目治理分歧](./第09卷-netbsd的历史/第172章-netbsd的诞生与早期版本/172.3-theoderaadt与coreteam冲突19941996deraadt.md)
     - [第 172 章 史观映射](./第09卷-netbsd的历史/第172章-netbsd的诞生与早期版本/史观映射.md)
-    - [第 172 章 ](./第09卷-netbsd的历史/第172章-netbsd的诞生与早期版本/媒体反响与社区舆论.md)
+    - [第 172 章 ](./第09卷-netbsd的历史/第172章-netbsd的诞生与早期版本/媒体反响与社区舆论.md)
     - [本章索引](./第09卷-netbsd的历史/第172章-netbsd的诞生与早期版本/index.md)
 
   - [第 173 章 NetBSD 1.x 的成熟期与 pkgsrc 引入](./第09卷-netbsd的历史/第173章-netbsd-1x的成熟期与pkgsrc引入/概述.md)
@@ -1707,7 +1707,7 @@
     - [176.2 NetBSD pkgsrc 早期演进时期的技术淘汰——FreeBSD Ports 单平台 →pkgsrc 跨平台、单平台软件包管理 → 多平台软件包管理系统、源码编译 → 二进制软件包支持、pkgsrc 与 OpenBSD Ports 分化（1996-2004）](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/176.2-netbsdpkgsrc早期演进时期的技术淘汰freebsdports单平台.md)
     - [176.3 与同时期操作系统的比较：NetBSD pkgsrc 早期发展时期（1997-2004）——与 FreeBSD Ports（起源）、OpenBSD Ports（分化）、Linux 发行版包管理（RPM/DEB/APT）、Slackware tgz / Gentoo Portage 的对照](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/176.3-与同时期操作系统的比较netbsdpkgsrc早期发展时期19972004与.md)
     - [176.4 NetBSD 2.x 周期漏洞与安全响应综览——CVE 编号体系普及初期与 IPsec/PPP/OpenSSL 漏洞群（2004-2006）](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/176.4-netbsd2x周期漏洞与安全响应综览cve编号体系普及初期与.md)
-    - [第 176 章 媒体反响与社区舆论](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/媒体反响与社区舆论.md)
+    - [第 176 章 媒体反响与社区舆论](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/媒体反响与社区舆论.md)
     - [第 176 章 不同时期人员的采访录](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/采访录.md)
     - [本章索引](./第09卷-netbsd的历史/第176章-netbsd-pkgsrc的早期演进/index.md)
 
@@ -1729,7 +1729,7 @@
     - [178.5 NetBSD 4.0 时期的技术淘汰——粗粒度 SMP 锁 → 细粒度 SMP 锁、用户态线程 → 原生线程支持、约 2 年发布周期 → 后续节奏改进、GPIO 框架引入（2007-2009）](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/178.5-netbsd40时期的技术淘汰粗粒度smp锁细粒度smp.md)
     - [178.6 与同时期操作系统的比较：NetBSD 4.0 发布与嵌入式生态时期（2005-2009）——与 FreeBSD 6.x/7.x、OpenBSD 4.x、Linux 2.6、Windows Embedded/CE 的对照](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/178.6-与同时期操作系统的比较netbsd40发布与嵌入式生态时期20052009与.md)
     - [178.7 NetBSD 3.x-4.x 周期漏洞与安全响应综览——DNS 缓存中毒危机与 OpenSSL/TLS 前缀注入群（2006-2011）](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/178.7-netbsd3x4x周期漏洞与安全响应综览dns缓存中毒危机与.md)
-    - [第 178 章 ](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/媒体反响与社区舆论.md)
+    - [第 178 章 ](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/媒体反响与社区舆论.md)
     - [采访录](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/采访录.md)
     - [本章索引](./第09卷-netbsd的历史/第178章-netbsd-4.0的发布与嵌入式生态/index.md)
 
@@ -1761,7 +1761,7 @@
     - [181.2 NetBSD 8.0 时期的技术淘汰——旧 ARM 多核→aarch64 改进、旧 SMP→改进 SMP、旧内核无 KASLR→KASLR 引入（2016-2018）](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/181.2-netbsd80时期的技术淘汰旧arm多核aarch64改进旧smp改进smp.md)
     - [181.3 与同时期操作系统的比较：NetBSD 8.0 与 64 位 ARM 虚拟化时期（2018）——与 FreeBSD 11.x/12、OpenBSD 6.3、Linux 4.1x、Windows 10/Server 2016 的对照](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/181.3-与同时期操作系统的比较netbsd80与64位arm虚拟化时期2018与.md)
     - [181.4 NetBSD 8.x 周期漏洞与安全响应综览——kernel ASLR 实验性引入与可移植性内核的攻击面清算](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/181.4-netbsd8x周期漏洞与安全响应综览kernelaslr.md)
-    - [第 181 章 ](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/媒体反响与社区舆论.md)
+    - [第 181 章 ](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/媒体反响与社区舆论.md)
     - [采访录](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/采访录.md)
     - [本章索引](./第09卷-netbsd的历史/第181章-netbsd-8.0与64位arm虚拟化/index.md)
 
@@ -1770,7 +1770,7 @@
     - [182.2 NetBSD 9.0 时期的技术淘汰——旧 USB 栈 → 新 USB 栈、旧无 GPU 支持 →GPU 支持、旧文件系统 →F2FS/ext2fs 改进（2018-2020）](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/182.2-netbsd90时期的技术淘汰旧usb栈新usb栈旧无gpu支持gpu.md)
     - [182.3 **与同时期操作系统的比较**：NetBSD 9.0 发布与 ZFS 集成时期（2020）——与 FreeBSD 12/13、OpenBSD 6.6、Linux 5.x（ZFS on Linux）、Windows Server 2019/ReFS 的对照](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/182.3-与同时期操作系统的比较netbsd90发布与zfs集成时期2020与.md)
     - [182.4 NetBSD 9.x 周期漏洞与安全响应综览——ASLR 默认启用与可移植性的安全代价](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/182.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价.md)
-    - [第 182 章 ](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/媒体反响与社区舆论.md)
+    - [第 182 章 ](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/媒体反响与社区舆论.md)
     - [采访录](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/采访录.md)
     - [本章索引](./第09卷-netbsd的历史/第182章-netbsd-9.0的发布与zfs集成/index.md)
 
@@ -1779,7 +1779,7 @@
     - [183.2 SMP 性能基准与硬件支持广度](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/183.2-smp性能基准与硬件支持广度.md)
     - [183.3 与 FreeBSD SMP 路线的比较](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/183.3-与freebsdsmp路线的比较.md)
     - [183.4 与 Linux/Solaris 同期 SMP 实现的对比](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/183.4-与linuxsolaris同期smp实现的对比.md)
-    - [第 183 章 NetBSD 2.0 的 SMP 与多平台扩展——媒体反响与社区舆论 ](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/媒体反响与社区舆论.md)
+    - [第 183 章 NetBSD 2.0 的 SMP 与多平台扩展——媒体反响与社区舆论 ](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/媒体反响与社区舆论.md)
     - [采访录](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/采访录.md)
     - [本章索引](./第09卷-netbsd的历史/第183章-netbsd-2-0的smp与多平台扩展/index.md)
 
@@ -1802,7 +1802,7 @@
     - [186.1 与 FreeBSD/OpenBSD 社区文化的对照](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/186.1-与freebsdopenbsd社区文化的对照.md)
     - [186.2 NetBSD Foundation 公告与治理考据（1993-2026）——501(c)(3) 免税地位、董事会选举、Tainted Code 政策存疑](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/186.2-netbsdfoundation公告与治理考据19932026501c3.md)
     - [186.3 NetBSD 重大事件公告与文化里程碑（1994-2026）——Theo de Raadt（西奥·德·若特） 离开、CVS-Mercurial 迁移、10/20/30 周年](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/186.3-netbsd重大事件公告与文化里程碑19942026theoderaadt离开.md)
-    - [第 186 章 ](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/媒体反响与社区舆论.md)
+    - [第 186 章 ](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/媒体反响与社区舆论.md)
     - [采访录](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/采访录.md)
     - [本章索引](./第09卷-netbsd的历史/第186章-netbsd社区治理与事件考据/index.md)
 
@@ -1860,7 +1860,7 @@
     - [191.4 OpenBSD 的 6 个月发布周期文化——OpenBSD 坚持 6 个月固定发布周期，是 BSD 世界中最严格的发布节奏，确保稳定性与可预测性](./第10卷-openbsd的历史/第191章-openbsd-4x的安全工程改进/191.4-openbsd的6个月发布周期文化openbsd坚持6个月固定发布周期是bsd.md)
     - [191.5 OpenBSD Foundation 的正式成立（2007）——2007 年 OpenBSD Foundation 在加拿大注册为非营利组织，为项目提供资金与法律支持](./第10卷-openbsd的历史/第191章-openbsd-4x的安全工程改进/191.5-openbsdfoundation的正式成立20072007年.md)
     - [191.6 多元群体贡献：OpenBSD 4.x 时期的贡献者多样性——核心团队、基金会与全球志愿者](./第10卷-openbsd的历史/第191章-openbsd-4x的安全工程改进/191.6-多元群体贡献openbsd4x时期的贡献者多样性核心团队基金会与全球志愿者.md)
-    - [第 191 章 OpenBSD 4.x 的安全工程改进——媒体反响与社区舆论](./第10卷-openbsd的历史/第191章-openbsd-4x的安全工程改进/媒体反响与社区舆论.md)
+    - [第 191 章 OpenBSD 4.x 的安全工程改进——媒体反响与社区舆论](./第10卷-openbsd的历史/第191章-openbsd-4x的安全工程改进/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第191章-openbsd-4x的安全工程改进/index.md)
 
   - [第 192 章 OpenBSD 4.x 的技术淘汰与 gcc GPLv3 争议](./第10卷-openbsd的历史/第192章-openbsd-4x的技术淘汰与演进/概述.md)
@@ -1904,7 +1904,7 @@
     - [195.3 OpenBSD Foundation 的早期治理（1996-2004）——OpenBSD 早期无正式 Foundation，de Raadt 个人主导项目，2003 年起讨论成立 Foundation 的必要性](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/195.3-openbsdfoundation的早期治理19962004openbsd.md)
     - [195.4 committer 权限记录（1996-2004）——本时期 OpenBSD 的 committer 权限模型，de Raadt 作为“benign dictator”的权限管理实践](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/195.4-committer权限记录19962004本时期openbsd的.md)
     - [195.5 pf 防火墙移植“代码掠夺”批评与安全审计文化排他性批评的四层辩证链——FreeBSD 移植 pf 后未充分回移上游的伦理批评、OpenBSD 安全审计文化的排他性指控](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/195.5-pf防火墙移植代码掠夺批评与安全审计文化排他性批评的四层辩证链freebsd移植.md)
-    - [第 195 章 OpenBSD 3.x 的 pf 防火墙引入——媒体反响与社区舆论](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/媒体反响与社区舆论.md)
+    - [第 195 章 OpenBSD 3.x 的 pf 防火墙引入——媒体反响与社区舆论](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/index.md)
 
   - [第 196 章 OpenBSD 3.x 的持续安全改进](./第10卷-openbsd的历史/第196章-openbsd-3x的持续安全改进/概述.md)
@@ -1925,7 +1925,7 @@
     - [197.4 外部批评与反对者：OpenBSD 硬件支持与社区规模批评——Linux 社区对 OpenBSD“硬件支持滞后”的批评、FreeBSD 社区对 OpenBSD“社区规模过小”的质疑、用户对 OpenBSD“SMP 性能不足”的抱怨](./第10卷-openbsd的历史/第197章-openbsd-5x的发布周期文化/197.4-外部批评与反对者openbsd硬件支持与社区规模批评linux社区对.md)
     - [197.5 重要贡献者与边缘者：OpenBSD 5.x 时期的核心团队——Theo de Raadt（创始人）、Henning Brauer（pf 维护）、Markus Friedl（马库斯·弗里德尔）（OpenSSH）、Bob Beck（OpenSSH/ OpenSSL）、Reyk Flöter（relayd/ldapd）等](./第10卷-openbsd的历史/第197章-openbsd-5x的发布周期文化/197.5-重要贡献者与边缘者openbsd5x时期的核心团队theoderaadt创始人.md)
     - [197.6 OpenBSD 5.x 时期的技术淘汰——多项旧技术 → 新技术交替演进（2011-2016）](./第10卷-openbsd的历史/第197章-openbsd-5x的发布周期文化/197.6-openbsd5x时期的技术淘汰多项旧技术新技术交替演进20112016.md)
-    - [第 197 章 OpenBSD 5.x 的发布周期文化——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第197章-openbsd-5x的发布周期文化/媒体反响与社区舆论.md)
+    - [第 197 章 OpenBSD 5.x 的发布周期文化——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第197章-openbsd-5x的发布周期文化/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第197章-openbsd-5x的发布周期文化/index.md)
 
   - [第 198 章 OpenBSD 5.x 的安全机制演进](./第10卷-openbsd的历史/第198章-openbsd-5x的安全机制演进/概述.md)
@@ -1940,7 +1940,7 @@
     - [199.1 OpenBSD 5.8-5.9 的 pledge 雏形（2015-2016）——5.8 开发周期引入 tame(2) 子系统，2015-10-09 重命名为 pledge(2)，5.8 中禁用，5.9 正式启用](./第10卷-openbsd的历史/第199章-openbsd-6x的pledge安全机制/199.1-openbsd5859的pledge雏形2015201658开发周期引入tame.md)
     - [199.2 OpenBSD 5.6 与 LibreSSL fork（2014.4 Heartbleed 后启动，5.6 于 2014.11.1 默认）——OpenBSD 2014 年 4 月因 Heartbleed 漏洞（2014.4.7 披露）fork OpenSSL 为 LibreSSL，5.6（2014.11.1 发布）作为默认 TLS 库](./第10卷-openbsd的历史/第199章-openbsd-6x的pledge安全机制/199.2-openbsd56与libresslfork20144heartbleed后启动.md)
     - [199.3 OpenBSD 6.4 与 unveil（2018.10）——6.4 引入 unveil(2) 系统调用，实现文件系统访问的路径级限制，与 pledge 配合形成双重沙箱](./第10卷-openbsd的历史/第199章-openbsd-6x的pledge安全机制/199.3-openbsd64与unveil20181064引入unveil2.md)
-    - [第 199 章 OpenBSD 6.x 的 pledge 安全机制——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第199章-openbsd-6x的pledge安全机制/媒体反响与社区舆论.md)
+    - [第 199 章 OpenBSD 6.x 的 pledge 安全机制——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第199章-openbsd-6x的pledge安全机制/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第199章-openbsd-6x的pledge安全机制/index.md)
 
   - [第 200 章 OpenBSD 6.x 的 unveil 与文件系统沙箱](./第10卷-openbsd的历史/第200章-openbsd-6x的unveil与文件系统沙箱/概述.md)
@@ -1966,7 +1966,7 @@
     - [202.4 外部批评与反对者：OpenBSD 现代化滞后与生态萎缩批评——Linux 社区对 OpenBSD “硬件支持滞后” 的批评、FreeBSD 社区对 OpenBSD “SMP 性能不足” 的质疑、用户对 OpenBSD “Docker/容器支持不足” 的抱怨](./第10卷-openbsd的历史/第202章-openbsd-7x的现代化进程/202.4-外部批评与反对者openbsd现代化滞后与生态萎缩批评linux社区对.md)
     - [202.5 重要贡献者与边缘者：OpenBSD 7.x 时期的核心团队——Theo de Raadt（创始人）、Bob Beck（LibreSSL）、Markus Friedl（马库斯·弗里德尔）（OpenSSH）、Ingo Schwarze（英戈·施瓦茨）（mandoc）、Anton Lindqvist（网络栈）等](./第10卷-openbsd的历史/第202章-openbsd-7x的现代化进程/202.5-重要贡献者与边缘者openbsd7x时期的核心团队theoderaadt创始人.md)
     - [202.6 OpenBSD 7.x 时期的技术淘汰——多项旧技术 → 新技术交替演进（2020-2026）](./第10卷-openbsd的历史/第202章-openbsd-7x的现代化进程/202.6-openbsd7x时期的技术淘汰多项旧技术新技术交替演进20202026.md)
-    - [第 202 章 OpenBSD 7.x 的现代化进程——媒体反响与社区舆论](./第10卷-openbsd的历史/第202章-openbsd-7x的现代化进程/媒体反响与社区舆论.md)
+    - [第 202 章 OpenBSD 7.x 的现代化进程——媒体反响与社区舆论](./第10卷-openbsd的历史/第202章-openbsd-7x的现代化进程/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第202章-openbsd-7x的现代化进程/index.md)
 
   - [第 203 章 OpenBSD 7.x 的 AI 代码政策](./第10卷-openbsd的历史/第203章-openbsd-7x的ai代码政策/概述.md)
@@ -1992,7 +1992,7 @@
     - [204.11 批评层——de Raadt 被逐过程的程序正义批评](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.11-批评层deraadt被逐过程的程序正义批评.md)
     - [204.12 再回应层——批评方对 Core Team 程序性辩护的再回应](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.12-再回应层批评方对coreteam程序性辩护的再回应.md)
     - [204.13 项目统摄史观审视（扩展）——许可证哲学、解释学循环与革命改革](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.13-项目统摄史观审视扩展许可证哲学解释学循环与革命改革.md)
-    - [第 204 章 ](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/媒体反响与社区舆论.md)
+    - [第 204 章 ](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/媒体反响与社区舆论.md)
     - [采访录](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/采访录.md)
     - [本章索引](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/index.md)
 
@@ -2003,7 +2003,7 @@
     - [205.4 审计成果向其他 BSD/Linux 的扩散](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/205.4-审计成果向其他bsdlinux的扩散.md)
     - [205.5 与 FreeBSD/Linux 安全实践的对照](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/205.5-与freebsdlinux安全实践的对照.md)
     - [205.6 审计记录考据方法论](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/205.6-审计记录考据方法论.md)
-    - [第 205 章 ](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/媒体反响与社区舆论.md)
+    - [第 205 章 ](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/媒体反响与社区舆论.md)
     - [采访录](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/采访录.md)
     - [本章索引](./第10卷-openbsd的历史/第205章-openbsd安全文化的奠基/index.md)
 
@@ -2018,7 +2018,7 @@
     - [206.8 辩证第二层：OpenBSD 阵营的反批评](./第10卷-openbsd的历史/第206章-openssh的诞生与早期发展/206.8-辩证第二层openbsd阵营的反批评.md)
     - [206.9 辩证第三层：对 OpenBSD 反批评的再批评](./第10卷-openbsd的历史/第206章-openssh的诞生与早期发展/206.9-辩证第三层对openbsd反批评的再批评.md)
     - [206.10 辩证第四层：合图](./第10卷-openbsd的历史/第206章-openssh的诞生与早期发展/206.10-辩证第四层合图.md)
-    - [第 206 章 OpenSSH 的诞生与早期发展——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第206章-openssh的诞生与早期发展/媒体反响与社区舆论.md)
+    - [第 206 章 OpenSSH 的诞生与早期发展——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第206章-openssh的诞生与早期发展/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第206章-openssh的诞生与早期发展/index.md)
 
   - [第 207 章 OpenSSH 的全球采纳与影响](./第10卷-openbsd的历史/第207章-openssh的全球采纳与影响/概述.md)
@@ -2062,7 +2062,7 @@
     - [210.5 与同时期操作系统的比较](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/210.5-与同时期操作系统的比较.md)
     - [210.6 批评层——BDFL 模式、安全至上文化、排外性与商业支持缺位的批评](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/210.6-批评层bdfl模式安全至上文化排外性与商业支持缺位的批评.md)
     - [210.7 反批评层——OpenBSD 阵营对批评的正当性论证](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/210.7-反批评层openbsd阵营对批评的正当性论证.md)
-    - [第 210 章 ](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/媒体反响与社区舆论.md)
+    - [第 210 章 ](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/媒体反响与社区舆论.md)
     - [RTFM作为技术成年礼](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/V10-Ch209-新增-RTFM作为技术成年礼.md)
     - [本章索引](./第10卷-openbsd的历史/第210章-openbsd的安全至上哲学/index.md)
 
@@ -2080,7 +2080,7 @@
     - [212.4 与 macOS/Darwin 安全机制的对照](./第10卷-openbsd的历史/第212章-openbsd与同时期操作系统的技术比较/212.4-与macosdarwin安全机制的对照.md)
     - [212.5 pf 与 IPFW/iptables/nftables 的防火墙对照](./第10卷-openbsd的历史/第212章-openbsd与同时期操作系统的技术比较/212.5-pf与ipfwiptablesnftables的防火墙对照.md)
     - [212.6 综合评价：OpenBSD 安全路线的得失](./第10卷-openbsd的历史/第212章-openbsd与同时期操作系统的技术比较/212.6-综合评价openbsd安全路线的得失.md)
-    - [第 212 章 OpenBSD 与同时期操作系统的技术比较——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第212章-openbsd与同时期操作系统的技术比较/媒体反响与社区舆论.md)
+    - [第 212 章 OpenBSD 与同时期操作系统的技术比较——媒体反响与社区舆论 ](./第10卷-openbsd的历史/第212章-openbsd与同时期操作系统的技术比较/媒体反响与社区舆论.md)
     - [本章索引](./第10卷-openbsd的历史/第212章-openbsd与同时期操作系统的技术比较/index.md)
 
   - [第 213 章 OpenBSD 的相关传言与都市传说考据](./第10卷-openbsd的历史/第213章-openbsd的相关传言与都市传说考据/概述.md)
@@ -2100,7 +2100,7 @@
     - [214.1 Matt Dillon 发布 DragonFly BSD 公告——“我考虑过以 5.x 为基础，但它被互斥锁覆盖得太重了，从 4.x 开始向前推进比从 5.x 开始向后倒退实际上更快”（it is simply too heavily mutexed）](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/214.1-mattdillon发布dragonflybsd公告我考虑过以5x.md)
     - [214.2 2004 年 ONLamp 采访](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/214.2-2004年onlamp采访.md)
     - [214.3 Dillon 谈与 FreeBSD 社区的关系](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/214.3-dillon谈与freebsd社区的关系.md)
-    - [第 214 章 ](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/媒体反响与社区舆论.md)
+    - [第 214 章 ](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/媒体反响与社区舆论.md)
     - [采访录](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/采访录.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第214章-dragonflybsd的诞生fork公告与启动/index.md)
 
@@ -2119,7 +2119,7 @@
     - [216.1 DragonFly 的现状——社区规模小但持续维护](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/216.1-dragonfly的现状社区规模小但持续维护.md)
     - [216.2 DragonFly 项目内部的 Dillon 个人主导模式——DragonFly 长期由 Matt Dillon 个人主导，所有重大架构决策由 Dillon 拍板，无 Core Team 选举、无 Foundation 治理，与 OpenBSD 的 de Raadt 模式形成对照](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/216.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由.md)
     - [216.3 DragonFly 与 FreeBSD 的分裂后紧张——Dillon 被撤销提交权限后与 FreeBSD Core Team 长期交恶，DragonFly 邮件列表中“FreeBSD 5.x 是错误”的话语长期存在](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/216.3-dragonfly与freebsd的分裂后紧张dillon被撤销提交权限后与.md)
-    - [第 216 章 ](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/媒体反响与社区舆论.md)
+    - [第 216 章 ](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/媒体反响与社区舆论.md)
     - [采访录](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/采访录.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第216章-dragonflybsd早期演进现状与维护/index.md)
 
@@ -2146,7 +2146,7 @@
     - [219.5 DragonFly 与 FreeBSD 4.x 的关系演变（2003-2010）——DragonFly 早期 fork 自 FreeBSD 4.x，但随时间推移共享代码越来越少，最终几乎完全独立](./第11卷-dragonflybsd的历史/第219章-dragonfly1x的10发布与lwkt子系统/219.5-dragonfly与freebsd4x的关系演变20032010.md)
     - [219.6 DragonFly 的治理结构（2003-2010）——Dillon 个人主导的治理模式，无 Core Team 选举、无 Foundation 治理](./第11卷-dragonflybsd的历史/第219章-dragonfly1x的10发布与lwkt子系统/219.6-dragonfly的治理结构20032010.md)
     - [219.7 DragonFly BSD 1.x 时期的技术淘汰——FreeBSD 4.x→DragonFly fork、SMPng 细粒度锁 →LWKT 消息传递、传统 mutex/BGL→token、FreeBSD 4.x VM→DragonFly 早期 VM 改造（2003-2008）](./第11卷-dragonflybsd的历史/第219章-dragonfly1x的10发布与lwkt子系统/219.7-dragonflybsd1x时期的技术淘汰.md)
-    - [第 219 章 媒体反响与社区舆论](./第11卷-dragonflybsd的历史/第219章-dragonfly1x的10发布与lwkt子系统/媒体反响与社区舆论.md)
+    - [第 219 章 媒体反响与社区舆论](./第11卷-dragonflybsd的历史/第219章-dragonfly1x的10发布与lwkt子系统/媒体反响与社区舆论.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第219章-dragonfly1x的10发布与lwkt子系统/index.md)
 
   - [第 220 章 DragonFly 1.x 时代与同时期 OS 比较](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/概述.md)
@@ -2165,7 +2165,7 @@
     - [221.1 DragonFly 2.0-2.2 的 HAMMER 1.0（2008-2009）——2.0 引入 HAMMER 1.0 文件系统，自研的 B-tree 写时复制文件系统，与 ZFS 形成对照](./第11卷-dragonflybsd的历史/第221章-dragonfly2x的hammer1设计与实现/221.1-dragonfly2022的hammer1020082009.md)
     - [221.2 DragonFly 2.4-2.6 的持续演进（2009-2010）——2.4 引入 devfs 改进、2.6 引入 SMP 可扩展性改进](./第11卷-dragonflybsd的历史/第221章-dragonfly2x的hammer1设计与实现/221.2-dragonfly2426的持续演进20092010.md)
     - [221.3 committer 权限记录（2003-2010）——本时期 DragonFly 的 committer 权限模型，Dillon 主导的权限管理实践](./第11卷-dragonflybsd的历史/第221章-dragonfly2x的hammer1设计与实现/221.3-committer权限记录20032010.md)
-    - [第 221 章 ](./第11卷-dragonflybsd的历史/第221章-dragonfly2x的hammer1设计与实现/媒体反响与社区舆论.md)
+    - [第 221 章 ](./第11卷-dragonflybsd的历史/第221章-dragonfly2x的hammer1设计与实现/媒体反响与社区舆论.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第221章-dragonfly2x的hammer1设计与实现/index.md)
 
   - [第 222 章 DragonFly 2.x 时代 fork 必要性的外部批评](./第11卷-dragonflybsd的历史/第222章-dragonfly2x时代fork必要性的外部批评/概述.md)
@@ -2186,7 +2186,7 @@
     - [224.2 DragonFly 3.4-3.6 的 SMP 可扩展性（2013-2014）——3.4 引入多核调度改进、3.6 改进 LWKT 性能](./第11卷-dragonflybsd的历史/第224章-dragonfly3x的hammer2雏形设计/224.2-dragonfly3436的smp可扩展性20132014.md)
     - [224.3 DragonFly 3.8-4.0 的 HAMMER 2 发布（2014-2015）——HAMMER2 首次随 3.8（2014-06-04）进入系统（非生产可用），4.0（2014-11-23）正式发布，支持多卷、快照、去重等特性[存疑脚注：经 DragonFly 官方 release 页核验，3.8.0=June 4, 2014 含 HAMMER2]](./第11卷-dragonflybsd的历史/第224章-dragonfly3x的hammer2雏形设计/224.3-dragonfly3840的hammer2发布20142015.md)
     - [224.4 DragonFly 与 FreeBSD 的代码共享现状（2011-2018）——DragonFly 与 FreeBSD 在 VM 子系统、VFS 层等共享代码几乎完全独立，偶尔从 FreeBSD 移植驱动或工具](./第11卷-dragonflybsd的历史/第224章-dragonfly3x的hammer2雏形设计/224.4-dragonfly与freebsd的代码共享现状20112018.md)
-    - [第 224 章 媒体反响与社区舆论](./第11卷-dragonflybsd的历史/第224章-dragonfly3x的hammer2雏形设计/媒体反响与社区舆论.md)
+    - [第 224 章 媒体反响与社区舆论](./第11卷-dragonflybsd的历史/第224章-dragonfly3x的hammer2雏形设计/媒体反响与社区舆论.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第224章-dragonfly3x的hammer2雏形设计/index.md)
 
   - [第 225 章 DragonFly 3.x 时代的治理与 Dillon 个人主导](./第11卷-dragonflybsd的历史/第225章-dragonfly3x时代的治理与dillon主导/概述.md)
@@ -2207,7 +2207,7 @@
     - [227.3 committer 权限记录（2014-2017）——本时期 DragonFly 的 committer 权限模型，Dillon 主导的权限管理实践](./第11卷-dragonflybsd的历史/第227章-dragonfly4x的持续改进与现代化/227.3-committer权限记录20142017.md)
     - [227.4 外部批评与反对者：DragonFly 社区萎缩与生态边缘化批评——Linux 社区对 DragonFly “社区规模过小” 的批评、FreeBSD 社区对 DragonFly “生态边缘化” 的质疑、用户对 DragonFly “硬件支持不足” 的抱怨](./第11卷-dragonflybsd的历史/第227章-dragonfly4x的持续改进与现代化/227.4-外部批评与反对者dragonfly社区萎缩与生态边缘化批评.md)
     - [227.5 重要贡献者与边缘者：DragonFly 3.x-4.x 时期的核心团队——Matt Dillon（创始人）、Sascha Wildner（release engineer 与 i386 移除主导者）、zrj/Rimvydas Jasinskas（核心开发者）、Tomohiro Kusumi（HAMMER/File-System 贡献者）、Imre Vadász（虚拟化贡献者）等](./第11卷-dragonflybsd的历史/第227章-dragonfly4x的持续改进与现代化/227.5-重要贡献者与边缘者dragonfly3x4x时期的核心团队.md)
-    - [第 227 章 ](./第11卷-dragonflybsd的历史/第227章-dragonfly4x的持续改进与现代化/媒体反响与社区舆论.md)
+    - [第 227 章 ](./第11卷-dragonflybsd的历史/第227章-dragonfly4x的持续改进与现代化/媒体反响与社区舆论.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第227章-dragonfly4x的持续改进与现代化/index.md)
 
   - [第 228 章 DragonFly 4.x 时期的架构与驱动技术淘汰](./第11卷-dragonflybsd的历史/第228章-dragonfly4x时期的架构与驱动技术淘汰/概述.md)
@@ -2238,7 +2238,7 @@
     - [231.3 committer 权限记录（2019-2026）——本时期 DragonFly 的 committer 权限模型，Dillon 主导的权限管理实践](./第11卷-dragonflybsd的历史/第231章-dragonfly6x的现代化与持续维护/231.3-committer权限记录20192026.md)
     - [231.4 DragonFly 的现状与未来（2026）——DragonFly 社区规模小但持续维护，Dillon 个人主导模式的可持续性问题](./第11卷-dragonflybsd的历史/第231章-dragonfly6x的现代化与持续维护/231.4-dragonfly的现状与未来2026.md)
     - [231.5 DragonFly BSD 6.x 周期漏洞与安全响应综览——16 个 CVE commit 背后的工程伦理](./第11卷-dragonflybsd的历史/第231章-dragonfly6x的现代化与持续维护/231.5-dragonflybsd6x周期漏洞与安全响应综览.md)
-    - [第 231 章 媒体反响与社区舆论 ](./第11卷-dragonflybsd的历史/第231章-dragonfly6x的现代化与持续维护/媒体反响与社区舆论.md)
+    - [第 231 章 媒体反响与社区舆论 ](./第11卷-dragonflybsd的历史/第231章-dragonfly6x的现代化与持续维护/媒体反响与社区舆论.md)
     - [本章索引](./第11卷-dragonflybsd的历史/第231章-dragonfly6x的现代化与持续维护/index.md)
 
   - [第 232 章 DragonFly 6.x 时代的可持续性外部批评](./第11卷-dragonflybsd的历史/第232章-dragonfly6x时代的可持续性外部批评/概述.md)
@@ -2307,7 +2307,7 @@
     - [238.3 NeXT 的衰落与 Apple 收购前夜（1996）](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/238.3-next的衰落与apple收购前夜1996.md)
     - [238.4 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/238.4-与同时期操作系统的比较.md)
     - [238.5 关键词行级挖掘素材线索](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/238.5-关键词行级挖掘素材线索.md)
-    - [第 238 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/媒体反响与社区舆论.md)
+    - [第 238 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/媒体反响与社区舆论.md)
     - [采访录](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/采访录.md)
     - [本章索引](./第12卷-macos的bsd遗产/第238章-openstep与跨平台bsd/index.md)
 
@@ -2316,7 +2316,7 @@
     - [239.2 Rhapsody 与 XNU 内核的成形（1997-1998）](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/239.2-rhapsody与xnu内核的成形19971998.md)
     - [239.3 Mac OS X Server 1.0：BSD 层首次商用落地（1999.3）](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/239.3-macosxserver10bsd层首次商用落地19993.md)
     - [239.4 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/239.4-与同时期操作系统的比较.md)
-    - [第 239 章 ](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/媒体反响与社区舆论.md)
+    - [第 239 章 ](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/媒体反响与社区舆论.md)
     - [采访录](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/采访录.md)
     - [本章索引](./第12卷-macos的bsd遗产/第239章-apple收购next与rhapsody/index.md)
 
@@ -2325,7 +2325,7 @@
     - [240.2 Darwin 社区与 BSD 代码同步（2001-2003）](./第12卷-macos的bsd遗产/第240章-darwin的开放核心apsl许可证与开源/240.2-darwin社区与bsd代码同步20012003.md)
     - [240.3 Darwin 开源社区与 APSL 2.0（2001-2003）](./第12卷-macos的bsd遗产/第240章-darwin的开放核心apsl许可证与开源/240.3-darwin开源社区与apsl2020012003.md)
     - [240.4 关键词行级挖掘素材线索](./第12卷-macos的bsd遗产/第240章-darwin的开放核心apsl许可证与开源/240.4-关键词行级挖掘素材线索.md)
-    - [第 240 章 ](./第12卷-macos的bsd遗产/第240章-darwin的开放核心apsl许可证与开源/媒体反响与社区舆论.md)
+    - [第 240 章 ](./第12卷-macos的bsd遗产/第240章-darwin的开放核心apsl许可证与开源/媒体反响与社区舆论.md)
     - [本章索引](./第12卷-macos的bsd遗产/第240章-darwin的开放核心apsl许可证与开源/index.md)
 
   - [第 241 章 Darwin：BSD 的开放核心——与同时期 OS 比较](./第12卷-macos的bsd遗产/第241章-darwin的开放核心与同时期os比较/概述.md)
@@ -2360,7 +2360,7 @@
     - [244.2 认证的边界：macOS 持证 vs FreeBSD 不持证](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/244.2-认证的边界macos持证vsfreebsd不持证.md)
     - [244.3 Leopard 的 BSD 技术其他进展（2007）](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/244.3-leopard的bsd技术其他进展2007.md)
     - [244.4 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/244.4-与同时期操作系统的比较.md)
-    - [第 244 章 ](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/媒体反响与社区舆论.md)
+    - [第 244 章 ](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/媒体反响与社区舆论.md)
     - [采访录：史蒂夫·乔布斯](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/采访录：史蒂夫·乔布斯.md)
     - [本章索引](./第12卷-macos的bsd遗产/第244章-macosx-105-leopard正式获得unix03认证/index.md)
 
@@ -2369,7 +2369,7 @@
     - [245.2 Snow Leopard 的 BSD 性能工程（2009）](./第12卷-macos的bsd遗产/第245章-snowleopard的gcd与libdispatch集成/245.2-snowleopard的bsd性能工程2009.md)
     - [245.3 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第245章-snowleopard的gcd与libdispatch集成/245.3-与同时期操作系统的比较.md)
     - [245.4 Apple→FreeBSD libdispatch 代码流动的辩证链（2009-2013）](./第12卷-macos的bsd遗产/第245章-snowleopard的gcd与libdispatch集成/245.4-applefreebsdlibdispatch代码流动的辩证链20092013.md)
-    - [第 245 章 ](./第12卷-macos的bsd遗产/第245章-snowleopard的gcd与libdispatch集成/媒体反响与社区舆论.md)
+    - [第 245 章 ](./第12卷-macos的bsd遗产/第245章-snowleopard的gcd与libdispatch集成/媒体反响与社区舆论.md)
     - [本章索引](./第12卷-macos的bsd遗产/第245章-snowleopard的gcd与libdispatch集成/index.md)
 
   - [第 246 章 Snow Leopard 的 BSD 代码流动与回馈争议](./第12卷-macos的bsd遗产/第246章-snowleopard的libdispatch史观审视/概述.md)
@@ -2396,7 +2396,7 @@
     - [248.4 代码交流争议辩证链：Apple 与 FreeBSD 的低密度回流（2016-2019）](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/248.4-代码交流争议辩证链apple与freebsd的低密度回流20162019.md)
     - [248.5 项目统摄史观审视](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/248.5-项目统摄史观审视.md)
     - [248.6 项目统摄史观审视续：许可证哲学、权力知识共谋与革命改革方法论](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/248.6-项目统摄史观审视续许可证哲学权力知识共谋与革命改革方法论.md)
-    - [第 248 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/媒体反响与社区舆论.md)
+    - [第 248 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/媒体反响与社区舆论.md)
     - [采访录：Craig Federighi](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/采访录：Craig Federighi.md)
     - [本章索引](./第12卷-macos的bsd遗产/第248章-macos-1012-1015从sierra到catalina/index.md)
 
@@ -2405,7 +2405,7 @@
     - [249.2 Monterey 至 Sequoia 的 BSD 层演进（2021-2024）](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/249.2-monterey至sequoia的bsd层演进20212024.md)
     - [249.3 2025-2026：BSD 层的演进](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/249.3-20252026bsd层的演进.md)
     - [249.4 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/249.4-与同时期操作系统的比较.md)
-    - [第 249 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/媒体反响与社区舆论.md)
+    - [第 249 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/媒体反响与社区舆论.md)
     - [采访录：Craig Federighi](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/采访录：Craig Federighi.md)
     - [本章索引](./第12卷-macos的bsd遗产/第249章-macos-11-15-applesilicon与bsd层演进/index.md)
 
@@ -2413,7 +2413,7 @@
     - [250.1 iPhone OS/iOS 的 Darwin 根基（2007-2010）](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/250.1-iphoneosios的darwin根基20072010.md)
     - [250.2 iPadOS/watchOS/tvOS/visionOS 的 Darwin 延续（2010-2024）](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/250.2-ipadoswatchostvosvisionos的darwin延续201020.md)
     - [250.3 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/250.3-与同时期操作系统的比较.md)
-    - [第 250 章 ](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/媒体反响与社区舆论.md)
+    - [第 250 章 ](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/媒体反响与社区舆论.md)
     - [采访录：Stuart Cheshire](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/采访录：Stuart Cheshire.md)
     - [本章索引](./第12卷-macos的bsd遗产/第250章-嵌入式darwin扩散/index.md)
 
@@ -2434,7 +2434,7 @@
     - [252.4 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第252章-macos的bsd层技术哲学与同时期比较/252.4-与同时期操作系统的比较.md)
     - [252.5 macOS BSD 哲学文化影响的批评-反批评-再批评-合图四层辩证链](./第12卷-macos的bsd遗产/第252章-macos的bsd层技术哲学与同时期比较/252.5-macosbsd哲学文化影响的批评反批评再批评合图四层辩证链.md)
     - [252.6 关键词行级挖掘素材线索](./第12卷-macos的bsd遗产/第252章-macos的bsd层技术哲学与同时期比较/252.6-关键词行级挖掘素材线索.md)
-    - [第 252 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第252章-macos的bsd层技术哲学与同时期比较/媒体反响与社区舆论.md)
+    - [第 252 章 媒体反响与社区舆论](./第12卷-macos的bsd遗产/第252章-macos的bsd层技术哲学与同时期比较/媒体反响与社区舆论.md)
     - [本章索引](./第12卷-macos的bsd遗产/第252章-macos的bsd层技术哲学与同时期比较/index.md)
 
   - [第 253 章 macOS 的 BSD 哲学史观审视](./第12卷-macos的bsd遗产/第253章-macos的bsd哲学史观审视/概述.md)
@@ -2479,7 +2479,7 @@
   - [第 258 章 史观审视、采访与媒体——失败 BSD 衍生版本争议的辩证链、史观审视与采访复核](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/概述.md)
     - [258.19 失败 BSD 衍生版本与开源治理批评争议的四层辩证链](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/258.19-失败-BSD-衍生版本与开源治理批评争议的四层辩证链.md)
     - [258.20 项目统摄史观审视——失败 BSD 衍生版本争议中的许可证哲学、解释学循环与革命改革方法论](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/258.20-项目统摄史观审视-失败-BSD-衍生版本争议中的许可证哲学.md)
-    - [第 258 章 ](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/媒体反响与社区舆论.md)
+    - [第 258 章 ](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/媒体反响与社区舆论.md)
     - [采访录](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/采访录.md)
     - [本章索引](./第13卷-bsd衍生操作系统/第258章-史观审视采访与媒体/index.md)
 
@@ -2489,7 +2489,7 @@
     - [259.3 与同时期操作系统的比较](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/259.3-与同时期操作系统的比较.md)
     - [259.4 HardenedBSD 漏洞史与 hardened 编译标志、ASLR、flashpowder 缓解机制](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/259.4-HardenedBSD-漏洞史与-hardened-编译标志.md)
     - [259.5 关键词行级挖掘素材线索](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/259.5-关键词行级挖掘素材线索.md)
-    - [第 259 章 ](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/媒体反响与社区舆论.md)
+    - [第 259 章 ](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/媒体反响与社区舆论.md)
     - [采访录](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/采访录.md)
     - [本章索引](./第13卷-bsd衍生操作系统/第259章-衍生操作系统谱系/index.md)
 
@@ -2516,7 +2516,7 @@
     - [262.2 MidnightBSD、NomadBSD 与 helloSystem（2007-2026）](./第13卷-bsd衍生操作系统/第262章-桌面bsd/262.2-MidnightBSD-NomadBSD-与-helloSystem-2007.md)
     - [262.3 与同时期操作系统的比较](./第13卷-bsd衍生操作系统/第262章-桌面bsd/262.3-与同时期操作系统的比较.md)
     - [262.4 GhostBSD 与 MidnightBSD 漏洞史与上游 FreeBSD 漏洞处置差异](./第13卷-bsd衍生操作系统/第262章-桌面bsd/262.4-GhostBSD-与-MidnightBSD-漏洞史与上游-FreeBSD.md)
-    - [第 262 章 ](./第13卷-bsd衍生操作系统/第262章-桌面bsd/媒体反响与社区舆论.md)
+    - [第 262 章 ](./第13卷-bsd衍生操作系统/第262章-桌面bsd/媒体反响与社区舆论.md)
     - [采访录](./第13卷-bsd衍生操作系统/第262章-桌面bsd/采访录.md)
     - [本章索引](./第13卷-bsd衍生操作系统/第262章-桌面bsd/index.md)
 
@@ -2552,7 +2552,7 @@
     - [267.1 Netflix 的 FreeBSD 选型（2011-2015）](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/267.1-Netflix-的-FreeBSD-选型-2011-2015.md)
     - [267.2 Open Connect 的 FreeBSD 规模运维（2015-2026）](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/267.2-Open-Connect-的-FreeBSD-规模运维-2015-2026.md)
     - [267.3 与同时期操作系统的比较](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/267.3-与同时期操作系统的比较.md)
-    - [第 267 章 ](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/媒体反响与社区舆论.md)
+    - [第 267 章 ](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/媒体反响与社区舆论.md)
     - [采访录](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/采访录.md)
     - [本章索引](./第13卷-bsd衍生操作系统/第267章-netflix-open-connect/index.md)
 
@@ -2592,7 +2592,7 @@
     - [271.4 志愿者劳动的经济结构——FreeBSD 开发者无偿劳动的经济价值估算（须谨慎，避免机械量化），志愿社区与商业公司的劳动力交换——开发者获得声誉与就业机会，公司获得免费代码维护，这一“声誉经济”的形式主义化](./第14卷-商业生态与企业案例/第271章-经济生态与foundation资助模式/271.4-志愿者劳动的经济结构-FreeBSD-开发者无偿劳动的经济价值估算-须谨慎.md)
     - [271.5 FreeBSD 在高校教学中的应用——作为操作系统课程教学平台的角色，BSD 源代码作为教学案例的优势（生产级代码 vs 教学简化版），与 MIT xv6、斯坦福 Pintos 的教学定位差异](./第14卷-商业生态与企业案例/第271章-经济生态与foundation资助模式/271.5-FreeBSD-在高校教学中的应用-作为操作系统课程教学平台的角色-BSD.md)
     - [附录：原文件嵌入的 68.x 系列 BSD 化工程内容](./第14卷-商业生态与企业案例/第271章-经济生态与foundation资助模式/bsd化工程内容.md)
-    - [第 271 章 ](./第14卷-商业生态与企业案例/第271章-经济生态与foundation资助模式/媒体反响与社区舆论.md)
+    - [第 271 章 ](./第14卷-商业生态与企业案例/第271章-经济生态与foundation资助模式/媒体反响与社区舆论.md)
     - [本章索引](./第14卷-商业生态与企业案例/第271章-经济生态与foundation资助模式/index.md)
 
   - [第 272 章 FreeBSD 多元群体贡献——企业、地域与志愿者的协同生态](./第14卷-商业生态与企业案例/第272章-多元群体贡献与企业协同/概述.md)
@@ -2615,7 +2615,7 @@
     - [273.9 外部贡献者](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/273.9-外部贡献者.md)
     - [273.10 重要贡献者与边缘者](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/273.10-重要贡献者与边缘者.md)
     - [273.11 与同时期操作系统的比较——疫情对各 OS 社区的效应](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/273.11-与同时期操作系统的比较-疫情对各-OS-社区的效应.md)
-    - [第 273 章 ](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/媒体反响与社区舆论.md)
+    - [第 273 章 ](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/媒体反响与社区舆论.md)
     - [采访录](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/采访录.md)
     - [本章索引](./第14卷-商业生态与企业案例/第273章-人类瘟疫流行病对技术社区的影响/index.md)
 
@@ -2627,7 +2627,7 @@
     - [274.5 元哲学自反——项目统摄史观在 BSD 史学中的八项追问](./第14卷-商业生态与企业案例/第274章-回顾与展望/274.5-元哲学自反-项目统摄史观在-BSD-史学中的八项追问.md)
     - [274.6 重要贡献者与边缘者——三十年 FreeBSD 历史的人物群像](./第14卷-商业生态与企业案例/第274章-回顾与展望/274.6-重要贡献者与边缘者-三十年-FreeBSD-历史的人物群像.md)
     - [274.7 与同时期操作系统的比较](./第14卷-商业生态与企业案例/第274章-回顾与展望/274.7-与同时期操作系统的比较.md)
-    - [第 274 章 ](./第14卷-商业生态与企业案例/第274章-回顾与展望/媒体反响与社区舆论.md)
+    - [第 274 章 ](./第14卷-商业生态与企业案例/第274章-回顾与展望/媒体反响与社区舆论.md)
     - [采访录](./第14卷-商业生态与企业案例/第274章-回顾与展望/采访录.md)
     - [本章索引](./第14卷-商业生态与企业案例/第274章-回顾与展望/index.md)
 
@@ -2649,7 +2649,7 @@
     - [275.15 重要贡献者与边缘者：被遗忘的地区社区组织者——非洲 BSD 用户组组织者、南美 BSD 社区推动者、中东与东南亚地区的 BSD 倡导者、非英语母语社区的新闻通讯维护者](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.15-重要贡献者与边缘者-被遗忘的地区社区组织者-非洲-BSD-用户组组织者-南美.md)
     - [275.16 BSD 假日与旅游相关网络文化考据](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.16-bsd在假日与旅游相关的网络文化考据.md)
     - [275.17 与同时期操作系统的比较：Linux 全球地理分布（Linus 移居美国后的地理中心转移）、Windows 全球地理（Microsoft 的全球化战略）、Solaris 地理（Sun/Oracle 的企业地理）、Ubuntu 地理（Mark Shuttleworth 南非-英国-Isle of Man 的地理路径）——BSD 地理以 “学术中心-全球边缘” 为特征](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.17-与同时期操作系统的比较-Linux-全球地理分布-Linus.md)
-    - [第 275 章 ](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/媒体反响与社区舆论.md)
+    - [第 275 章 ](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/媒体反响与社区舆论.md)
     - [采访录](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/采访录.md)
     - [本章索引](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/index.md)
 
@@ -2718,7 +2718,7 @@
     - [281.43 商业 Unix 谱系中的 OS 比较与当代竞争者](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/281.43-商业unix谱系中的os比较与当代竞争者.md)
     - [281.44 商业 Unix 赞助提交复核与采访/媒体](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/281.44-商业unix的赞助提交复核与采访媒体.md)
     - [281.45 商业赞助提交数据库全面复核](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/281.45-商业赞助提交数据库全面复核.md)
-    - [第 281 章 贡献者、OS 比较、赞助复核与采访/媒体——商业 Unix 谱系的边缘者与当代生态](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/媒体反响与社区舆论.md)
+    - [第 281 章 贡献者、OS 比较、赞助复核与采访/媒体——商业 Unix 谱系的边缘者与当代生态](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/媒体反响与社区舆论.md)
     - [采访录](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/采访录.md)
     - [本章索引](./第14卷-商业生态与企业案例/第281章-贡献者os比较赞助复核与采访媒体/index.md)
 
@@ -2812,7 +2812,7 @@
     - [291.12 项目统摄史观审视](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/291.12-项目统摄史观审视.md)
     - [291.13 BSD 与 Linux 关键子系统差异化演进](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/291.13-跨项目效应对比bsd与linux在关键子系统的差异化演进.md)
     - [291.14 跨项目赞助提交复核](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/291.14-跨项目赞助提交复核.md)
-    - [第 291 章 ](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/媒体反响与社区舆论.md)
+    - [第 291 章 ](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/媒体反响与社区舆论.md)
     - [第 291 章 OS 比较史观审视与采访复核——不同时期人员的采访录](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/采访录.md)
     - [本章索引](./第15卷-许可证哲学与法律分析/第291章-os比较史观审视与采访复核/index.md)
 
@@ -2828,7 +2828,7 @@
     - [292.9 对 FreeBSD 文档生态的批评：Linux 与商业出版竞争者——Linux 文档项目（LDP）与 Arch Wiki 对 FreeBSD Handbook 的对比批评、商业出版商（O'Reilly、Apress）放弃 BSD 图书市场的市场反馈、Linux 培训生态对 BSD 教育资源的挤压](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/292.9-对-FreeBSD-文档生态的批评-Linux-与商业出版竞争者-Linux.md)
     - [292.10 重要贡献者与边缘者：被遗忘的翻译者与社区文档维护者——中文 FreeBSD 文档翻译者群体（含 FreeBSD 中国社区）、日文 AsiaBSDCon 文档翻译者、俄文/西班牙文/葡文等小语种翻译者、Wiki 碎片化文档的匿名维护者](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/292.10-重要贡献者与边缘者-被遗忘的翻译者与社区文档维护者-中文-FreeBSD.md)
     - [292.11 与同时期操作系统的比较：FreeBSD 图书·视频与在线资源史时期（1990s-2020s）——与 Linux 文档生态（LDP/Wiki/书籍）、OpenBSD（man/FAQ）、NetBSD（man/Guide）、Windows（MSDN/书籍）的对照](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/292.11-与同时期操作系统的比较-FreeBSD-图书·视频与在线资源史时期-1990s.md)
-    - [第 292 章 ](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/媒体反响与社区舆论.md)
+    - [第 292 章 ](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/媒体反响与社区舆论.md)
     - [采访录](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/采访录.md)
     - [本章索引](./第15卷-许可证哲学与法律分析/第292章-freebsd图书视频与在线资源史/index.md)
 
@@ -2912,7 +2912,7 @@
     - [300.1 GNU 项目与 FSF：Stallman 的自由软件运动——Richard Stallman 1983 年发布 GNU 宣言，1985 年成立自由软件基金会（FSF），GNU 项目与 BSD 的哲学分歧，GPL 与 BSDL 作为两种自由观的张力](./第16卷-开源运动与合规治理/第300章-开源运动与bsd-gnu与fsf/300.1-GNU-项目与-FSF-Stallman-的自由软件运动.md)
     - [300.2 OSI 与 Open Source 一词的诞生——Peterson 1998 年的提议](./第16卷-开源运动与合规治理/第300章-开源运动与bsd-gnu与fsf/300.2-OSI-与-Open-Source-一词的诞生-Peterson-1998.md)
     - [300.3 Raymond 与 Perens——OSI 的成立与分裂](./第16卷-开源运动与合规治理/第300章-开源运动与bsd-gnu与fsf/300.3-Raymond-与-Perens-OSI-的成立与分裂.md)
-    - [第 300 章 ](./第16卷-开源运动与合规治理/第300章-开源运动与bsd-gnu与fsf/媒体反响与社区舆论.md)
+    - [第 300 章 ](./第16卷-开源运动与合规治理/第300章-开源运动与bsd-gnu与fsf/媒体反响与社区舆论.md)
     - [本章索引](./第16卷-开源运动与合规治理/第300章-开源运动与bsd-gnu与fsf/index.md)
 
   - [第 301 章 开源运动与 BSD——Apache 软件基金会与 BSD 许可证的 Apache 谱系](./第16卷-开源运动与合规治理/第301章-开源运动与bsd-apache谱系/概述.md)
@@ -2939,7 +2939,7 @@
     - [303.4 LSB（Linux Standard Base）兼容性史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.4-LSB-Linux-Standard-Base-兼容性史.md)
     - [303.5 UNIX 03 认证与 FreeBSD 的关系](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.5-UNIX-03-认证与-FreeBSD-的关系.md)
     - [303.6 FIPS 140 密码模块认证史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.6-FIPS-140-密码模块认证史.md)
-    - [第 303 章 ](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/媒体反响与社区舆论.md)
+    - [第 303 章 ](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/媒体反响与社区舆论.md)
     - [本章索引](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/index.md)
 
   - [第 304 章 FreeBSD 合规、认证与标准遵守史——Common Criteria、TrustedBSD 与 POSIX/RFC 标准](./第16卷-开源运动与合规治理/第304章-合规认证与标准遵守-commoncriteria/概述.md)
@@ -2977,7 +2977,7 @@
     - [306.12 Gamergate 事件与 Randi Harper](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.12-Gamergate-事件与-Randi-Harper.md)
     - [306.13 自动化测试滞后](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.13-自动化测试滞后.md)
     - [306.14 Usenet 新闻组治理与 comp.* 层级重组](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.14-usenet新闻组治理与comp层级重组.md)
-    - [第 306 章 ](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/媒体反响与社区舆论.md)
+    - [第 306 章 ](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/媒体反响与社区舆论.md)
     - [本章索引](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/index.md)
 
   - [第 307 章 FreeBSD 社区演进史——comitter 疲惫、开发者留存与社区活力](./第16卷-开源运动与合规治理/第307章-freebsd社区演进史-comitter留存/概述.md)
@@ -3020,7 +3020,7 @@
     - [310.6 BSD 与人文学科：数字人文、文本挖掘（1993-2026）——BSD 在数字人文项目中的部署历史、BSD 与文本挖掘工具链的关系、BSD 在历史档案数字化项目中的角色、BSD 与人文学科计算基础设施的关系](./第16卷-开源运动与合规治理/第310章-全球社区时期的其他科学-物理天文/310.6-BSD-与人文学科-数字人文-文本挖掘-1993-2026-BSD.md)
     - [310.7 BSD 科学应用的形式主义：工具即权力——科学即形式主义在 BSD 科学应用中的体现、科学工具的选择本身即权力运作、BSD 作为科学基础设施的隐性权力、BSD 科学应用的认识论困境——工具的选择如何塑造科学发现本身](./第16卷-开源运动与合规治理/第310章-全球社区时期的其他科学-物理天文/310.7-BSD-科学应用的形式主义-工具即权力-科学即形式主义在-BSD.md)
     - [310.8 BSD 与元哲学：以哲学为底色书写技术史又以技术史检验哲学——BSD 史书写的元哲学维度、BSD 作为形式主义化的非存在的哲学本体论地位、“一切真历史都是古代史” 在 BSD 史中的体现、BSD 史书写本身即形式主义化的非存在](./第16卷-开源运动与合规治理/第310章-全球社区时期的其他科学-物理天文/310.8-BSD-与元哲学-以哲学为底色书写技术史又以技术史检验哲学-BSD.md)
-    - [第 310 章 ](./第16卷-开源运动与合规治理/第310章-全球社区时期的其他科学-物理天文/媒体反响与社区舆论.md)
+    - [第 310 章 ](./第16卷-开源运动与合规治理/第310章-全球社区时期的其他科学-物理天文/媒体反响与社区舆论.md)
     - [本章索引](./第16卷-开源运动与合规治理/第310章-全球社区时期的其他科学-物理天文/index.md)
 
   - [第 311 章 全球社区时期的其他科学——BSD 与自反性、自反悖论与书写本身的非存在](./第16卷-开源运动与合规治理/第311章-全球社区时期的其他科学-自反性/概述.md)
@@ -3052,7 +3052,7 @@
     - [312.11 重要贡献者与边缘者](./第16卷-开源运动与合规治理/第312章-管理学问题-治理历史演变/312.11-重要贡献者与边缘者.md)
     - [312.12 与同时期操作系统的比较](./第16卷-开源运动与合规治理/第312章-管理学问题-治理历史演变/312.12-与同时期操作系统的比较.md)
     - [312.13 开源项目治理与挑战的辩证链——BDFL 模式、Core Team 选举、商业公司影响、社区可持续性、贡献者流失](./第16卷-开源运动与合规治理/第312章-管理学问题-治理历史演变/312.13-开源项目治理与挑战的辩证链-BDFL-模式-Core-Team-选举.md)
-    - [第 312 章 ](./第16卷-开源运动与合规治理/第312章-管理学问题-治理历史演变/媒体反响与社区舆论.md)
+    - [第 312 章 ](./第16卷-开源运动与合规治理/第312章-管理学问题-治理历史演变/媒体反响与社区舆论.md)
     - [本章索引](./第16卷-开源运动与合规治理/第312章-管理学问题-治理历史演变/index.md)
 
   - [第 313 章 管理学问题：开源项目的治理与挑战——志愿者模式、决策权集中与资金透明度的辩证链](./第16卷-开源运动与合规治理/第313章-管理学问题-辩证链与治理挑战/概述.md)
@@ -3074,7 +3074,7 @@
     - [314.4 FreeBSD 文档项目（doc project）的事实搁置](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/314.4-FreeBSD-文档项目-doc-project-的事实搁置.md)
     - [314.5 三大 BSD 对外部贡献者的轻视](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/314.5-三大-BSD-对外部贡献者的轻视.md)
     - [314.6 FreeBSD 项目对中国大陆的忽视：镜像站缺位与区域战略失衡](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/314.6-FreeBSD-项目对中国大陆的忽视-镜像站缺位与区域战略失衡.md)
-    - [第 314 章 ](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/媒体反响与社区舆论.md)
+    - [第 314 章 ](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/媒体反响与社区舆论.md)
     - [采访录：麦库西克](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/采访录：麦库西克.md)
     - [本章索引](./第17卷-政治制度与社区治理/第314章-bsd-daemon词源与名称溯源/index.md)
 
@@ -3192,7 +3192,7 @@
     - [328.20 外部批评与反对者：美国 BSD 中心主义与边缘声音](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.20-外部批评与反对者-美国-BSD-中心主义与边缘声音.md)
     - [328.21 重要贡献者与边缘者：被忽视的美国地区社区维护者](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.21-重要贡献者与边缘者-被忽视的美国地区社区维护者.md)
     - [328.22 与同时期操作系统的比较（美国地区）](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.22-与同时期操作系统的比较-美国地区.md)
-    - [第 328 章 ](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/媒体反响与社区舆论.md)
+    - [第 328 章 ](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/媒体反响与社区舆论.md)
     - [采访录](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/采访录.md)
     - [采访录：Allan Jude（艾伦·裘德）](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/采访录：Allan Jude.md)
     - [本章索引](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/index.md)
@@ -3393,7 +3393,7 @@
     - [342.7 重要贡献者与边缘者](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/342.7-重要贡献者与边缘者.md)
     - [342.8 多元群体贡献](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/342.8-多元群体贡献.md)
     - [342.9 中亚与同时期操作系统的比较](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/342.9-中亚与同时期操作系统的比较.md)
-    - [第 342 章 ](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/媒体反响与社区舆论.md)
+    - [第 342 章 ](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/媒体反响与社区舆论.md)
     - [采访录](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/采访录.md)
     - [本章索引](./第18卷-全球社区地区bsd史/第342章-中亚bsd社区/index.md)
 
