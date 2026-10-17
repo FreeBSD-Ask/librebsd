@@ -57,7 +57,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 受访者转述 DTrace 的技术特性：可对系统中任意函数（库或可执行文件内）单独画像、聚合函数调用次数与耗时、语言支持线程局部存储以设条件变量；与 FreeBSD 的 ktrace、truss 等须持续读取内核内存并拖慢全局的工具不同，DTrace 关闭时零开销——它在内核中内置反汇编器、启用时改写指令、只影响被跟踪程序的运行性能；并转述 Bryan Cantrill 的演示：GNOME Terminal 打开一个新窗口竟发起约两千次系统调用。（BSDTalk EP30，[944.34-1076.12]，L1）
 - 2006 年 BSD 阵营对脱离 GCC 的可能路径已有零星讨论：受访者借 OpenBSD 3.9 发布与 Theo 不妥协立场的调侃承认当下编译仍离不开 GPL 编译器这一妥协，随即列举替代选项——TinyCC、Intel C 编译器、以 MIT 许可开源的 Plan 9 C 编译器（Ken Thompson 作品，DragonFly 开发者一度关注但须改动内核以支持其目标格式）、以及在研的 TenDRA——结论是未来存在希望。（BSDTalk EP30，[1156.1-1245.58]，L1）
 - LinuxWorld 2006 波士顿展会的 BSD 生态见闻：参观者普遍认知匮乏，有人径直询问“这是哪个版本的 Linux”，同时也有大量老用户与挑战者；BitDefender 起初称支持 OpenBSD 随即改口只有 FreeBSD；Coyote Point 为其网络负载均衡设备招募 FreeBSD 开发者；Cluster Resources 的开源自动部署软件希望支持 BSD；嵌入式方向对 NetBSD 兴趣可观。（BSDTalk EP30，[195.34-395.6]，L1）
-- 受访者回忆在 Skycache（卫星 Usenet 服务商）的生产部署史：公司先以 NetBSD on SPARC 为上游，经由卫星每日吞吐约 250GB Usenet 流量，其后迁移到 Alpha DS10 上的 FreeBSD，原因是其 TCP 栈在当时表现卓越；受访者本人由此接触 BSD，并因转向安全领域而自然迁移至 OpenBSD。　[存疑脚注] 该段说话人因转写混叠难以确定归属 Dixon 或 O'Dell，公司部署事实本身为受访者一手自述（BSDTalk EP30，[778.04-815.88]，L1）
+- 受访者回忆在 Skycache（卫星 Usenet 服务商）的生产部署史：公司先以 NetBSD on SPARC 为上游，经由卫星每日吞吐约 250GB Usenet 流量，其后迁移到 Alpha DS10 上的 FreeBSD，原因是其 TCP 栈在当时表现卓越；受访者本人由此接触 BSD，并因转向安全领域而自然迁移至 OpenBSD。 [存疑脚注] 该段说话人因转写混叠难以确定归属 Dixon 或 O'Dell，公司部署事实本身为受访者一手自述（BSDTalk EP30，[778.04-815.88]，L1）
 - Jude 将三大 BSD 与 Linux 发行版的根本差异概括为操作系统边界之争：BSD 把内核、基础工具与驱动同置单一源码树，系统本体与第三方包二分，Linux 则连内核在内一切皆包；FreeBSD 以 ports 树的 Makefile 描述取源、校验、打补丁、构建与卸载全流程，自 FreeBSD 8 起以集群工具每三四日全量重编二进制包，再叠加每三月才升大版本的季度分支兼顾新鲜与稳定，至 13.3 操作系统已可实现可复现构建。（Nerding Out with Victor EPS01E25，[837.0-1180.0]，L1）
 - Netflix 案例构成 FreeBSD 工程优势的完整链条：其选型的决定性因素是变更数周即入 mainline 的上游速度而非许可证本身；sendfile 系统调用消除内核与用户态间文件发送的反复拷贝，HTTPS 普及后内核 TLS 让 sendfile 在加密时代复活并在 Spectre 与 Meltdown 加剧越界成本后愈发关键，Netflix 再将批量加密密钥下放网卡专用芯片实现硬件卸载，单路服务器由 100 Gbps 推至 800 Gbps；Comcast 全量切换 IPv6 后的流量规模暴露出四字节计数器回绕溢出，数小时一崩的规律使缺陷迅速定位并经 errata 通知全网上游修复。（Nerding Out with Victor EPS01E25，[1204.0-1702.0]，L2）
 - Jude 以 OpenZFS 开发者身份拆解其数据模型：vdev 层承载镜像或 RAID-Z 变换并各自负责完整性，pool 汇聚全部可用容量，dataset 动态共享剩余空间并逐集设定压缩与加密；RAID-Z 借事务性写入从结构上消除 RAID-5 写洞，奇偶校验分布于全组盘而非专用盘，RAID-Z3 为硬件 RAID 所无；LZ4 每核压缩数 GB/s 使透明压缩自 OpenZFS 2.2 起默认开启，早停机制对不可压数据及时放弃，高层级 Zstandard 先以 LZ4 试探再决定是否重压；原生加密采用 AES-GCM 逐数据集加钥，校验和前半与消息认证码后半拆分存储，使加密数据可无密钥完成校验、修复与重建，密钥卸载后数据静态受保护。（Nerding Out with Victor EPS01E25，[2683.0-3597.0]，L1）
@@ -65,20 +65,20 @@ volume: 第06卷-freebsd的核心技术革新
 **史料**：
 
 - Devon O'Dell 一手自述 DTrace 移植 FreeBSD 的缘起：2005 年 OSCON 上经 Santa Clara OpenSolaris 用户组结识的 Sun 内核工程师 Bryan Cantrill 与 Keith Wesolowski 午餐相劝，他先以移植步骤复杂为由拒绝，后于会后聚会上见到 DTrace 经 PHP 扩展挂钩 PHP 脚本、从函数调用一路追踪进内核再返回的演示，遂动心启动移植；此为 FreeBSD 集成 DTrace 之前最早的移植意向口述之一。（BSDTalk EP30，[851.38-920.82]，L1）
-- Jason Dixon 一手自述 OSCON 演示与 Jordan Hubbard 轶事：其防火墙故障切换演讲配三台 Dell 与大屏液晶做 PF 加 CARP 拔线演示，观众惊讶、有风险投资人当场递名片，Astaro 等 iptables 方案因无对应故障切换能力无可竞争；交谈 CARP 与 PF 时发现听众多为 Jordan Hubbard 本人，后者透露 Apple 正尝试将 CARP 集成进 OS X，此后未见后续结果。　[存疑脚注] Apple 集成 CARP 一说系 Dixon 转述 Hubbard 口述，仅此一处，须与 Apple/FreeBSD 邮件档案交叉验证（BSDTalk EP30，[420.8-572.88]，L1）
+- Jason Dixon 一手自述 OSCON 演示与 Jordan Hubbard 轶事：其防火墙故障切换演讲配三台 Dell 与大屏液晶做 PF 加 CARP 拔线演示，观众惊讶、有风险投资人当场递名片，Astaro 等 iptables 方案因无对应故障切换能力无可竞争；交谈 CARP 与 PF 时发现听众多为 Jordan Hubbard 本人，后者透露 Apple 正尝试将 CARP 集成进 OS X，此后未见后续结果。 [存疑脚注] Apple 集成 CARP 一说系 Dixon 转述 Hubbard 口述，仅此一处，须与 Apple/FreeBSD 邮件档案交叉验证（BSDTalk EP30，[420.8-572.88]，L1）
 - 主持人开场转述的新闻：FreeBSD 已与 Sun Microsystems 达成协议获准再分发 Java 1.5，此前用户须到 Sun 网站接受许可条款后另行下载安装，此后可如常规软件包一样直接安装，降低 FreeBSD 用户使用门槛。（BSDTalk EP30，[88.5-115.3]，L2）
 - 访谈提供的一手史料线索：Kirk McKusick 关于 BSD 文件系统与 TCP/IP 发明的系列历史讲座（DVD 与会议版本可获取）；BSDI 采用 1-800-ITS-UNIX 订购电话引燃 AT&T 商标与版权主张，USL 诉讼和解据称涉及约七个文件重写且细节从未完全披露；Berkeley 早期以磁带寄送修改并回收补丁的协作形态先于许可证概念出现。（Nerding Out with Victor EPS01E25，[131.0-372.0]，L2）
 - OpenZFS 侧一手工程记录：Jude 自述 2018 年创立 Klara 提供 FreeBSD 与 ZFS 开发支持服务，为客户在 Ubuntu 的 LXD 容器中委托 ZFS 数据集以运行非特权 Docker 的特性由其团队开发并上游 OpenZFS，随后随 Ubuntu 22.04 进入生产环境，体现商业委托开发经上游回馈转化为发行版默认能力的路径。（Nerding Out with Victor EPS01E25，[2530.0-2652.0]，L1）
 
 **史观**：
 
-- 总纲5 没有必然性，只有偶然性：Jude 复述并认同的历史反事实：USL 诉讼恰在 386 普及窗口冻结 BSD 采用，芬兰学生 Linus 因 BSD 不可用转而自写内核，Jude 以其口吻称“若非 AT&T 诉讼，我根本不会费劲去写 Linux”（397.0）——Linux 的诞生由法律时序的偶然而非技术优劣决定，许可证纠纷改写了其后数十年的操作系统格局。　[存疑脚注] 该归因系访谈内反事实因果推断，Linus Torvalds 本人对开发动机的一手自述（1991 年 comp.os.minix 发布帖及自传）未被引证，回写大纲时须与一手材料交叉验证。（Nerding Out with Victor EPS01E25，[373.0-413.0]，L2）
+- 总纲5 没有必然性，只有偶然性：Jude 复述并认同的历史反事实：USL 诉讼恰在 386 普及窗口冻结 BSD 采用，芬兰学生 Linus 因 BSD 不可用转而自写内核，Jude 以其口吻称“若非 AT&T 诉讼，我根本不会费劲去写 Linux”（397.0）——Linux 的诞生由法律时序的偶然而非技术优劣决定，许可证纠纷改写了其后数十年的操作系统格局。 [存疑脚注] 该归因系访谈内反事实因果推断，Linus Torvalds 本人对开发动机的一手自述（1991 年 comp.os.minix 发布帖及自传）未被引证，回写大纲时须与一手材料交叉验证。（Nerding Out with Victor EPS01E25，[373.0-413.0]，L2）
 - 总纲3 不存在进步，只有权力再分配：治理结构被 Jude 呈现为权力组织方案而非演进等级：Linux 集中于 Linus 与十余名副官的合并权，FreeBSD 则由约 250 名直接提交者每两年选举九人 core team，选举日前 365 天有提交记录者方可投票——两种共同体契约之间不存在谁更先进叙事，只呈现同一开源生产在权力分配上的不同解法。（Nerding Out with Victor EPS01E25，[1727.0-1783.0]，L1）
 
 **辨析**：
 
-- 受访者对 CDDL 的专利条款作三层风险评估：顶层是两名贡献代码的开发者，中层是接受 CDDL 并对部分代码主张专利的厂商，底层是运行该厂商 OpenSolaris 的客户；一旦厂商起诉贡献者，贡献者有六十天通知期撤销其许可，厂商客户随即陷入危险；由此判断 CDDL 从 BSD 许可证立场并不友好，DTrace 不会进入 FreeBSD base 系统，只能作为后启用组件。　[存疑脚注] 对 CDDL 专利终止机制的六十天期限与后果系受访者口头解读，须对照 CDDL 原文条文核验（BSDTalk EP30，[1078.7-1156.1]，L1）
-- ZFS 入 Linux 的法律争议在访谈中被简化为实践事实：CDDL 与 GPL 的链接不兼容使 ZFS 长期被 mainline 拒之门外，而 Ubuntu 转为自行编译随发行版提供，Jude 称“结果证明没人起诉他们”（2428.0）——但未被起诉不等于合法性确认，软件自由保护组织等机构 2016 年前后的公开质疑并无司法结论，回写大纲时应作为未决争议点而非定论。　[存疑脚注] 无人起诉即安全的说法为访谈中的实践性推断，CDDL 模块与 GPL 内核合体发行的效力无判例支撑，须对照软件自由保护组织 2016 年公开信等一手文献核实。（Nerding Out with Victor EPS01E25，[2331.0-2428.0]，L2）
+- 受访者对 CDDL 的专利条款作三层风险评估：顶层是两名贡献代码的开发者，中层是接受 CDDL 并对部分代码主张专利的厂商，底层是运行该厂商 OpenSolaris 的客户；一旦厂商起诉贡献者，贡献者有六十天通知期撤销其许可，厂商客户随即陷入危险；由此判断 CDDL 从 BSD 许可证立场并不友好，DTrace 不会进入 FreeBSD base 系统，只能作为后启用组件。 [存疑脚注] 对 CDDL 专利终止机制的六十天期限与后果系受访者口头解读，须对照 CDDL 原文条文核验（BSDTalk EP30，[1078.7-1156.1]，L1）
+- ZFS 入 Linux 的法律争议在访谈中被简化为实践事实：CDDL 与 GPL 的链接不兼容使 ZFS 长期被 mainline 拒之门外，而 Ubuntu 转为自行编译随发行版提供，Jude 称“结果证明没人起诉他们”（2428.0）——但未被起诉不等于合法性确认，软件自由保护组织等机构 2016 年前后的公开质疑并无司法结论，回写大纲时应作为未决争议点而非定论。 [存疑脚注] 无人起诉即安全的说法为访谈中的实践性推断，CDDL 模块与 GPL 内核合体发行的效力无判例支撑，须对照软件自由保护组织 2016 年公开信等一手文献核实。（Nerding Out with Victor EPS01E25，[2331.0-2428.0]，L2）
 
 **文献**：
 

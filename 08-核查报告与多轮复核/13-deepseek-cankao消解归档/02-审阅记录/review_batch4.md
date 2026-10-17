@@ -1,0 +1,20 @@
+# 批4审阅摘要（6篇）
+
+## [1] 1985_Stallman_GNU_Emacs_Manual.md
+- 内容: --- title: "1985_Stallman_GNU_Emacs_Manual" source_url: https://www.gnu.org/software/emacs/manual/emacs.html download_date: 2026-09-07 note: gnu_manual --- # 1985_Stallman_GNU_Emacs_Manual 来源: https://www.gnu.org/software/emacs/manual/emacs.html GNU Emacs manual - GNU Project - Free Software Foundation (FSF) GNU Emacs manual The GNU Emacs manual is available in the following formats: HTML - with one page per node. HTML - entirely on one page. HTML compressed - with one page per node. Info document . Main PostScript file , extra PostScript file . Main PDF file , extra PDF file . Texinfo source . (Note that in
+
+## [2] 2015_Internet_Archive_1BSD_tarball_metadata_archiveorgdetails1bsdtar_201503.md
+- 内容: --- title: "2015_Internet_Archive_1BSD_tarball_metadata_archiveorgdetails1bsdtar_201503" source_url: https://archive.org/details/1bsd.tar_201503 download_date: 2026-09-07 note: ia_metadata --- # 2015_Internet_Archive_1BSD_tarball_metadata_archiveorgdetails1bsdtar_201503 来源: https://archive.org/details/1bsd.tar_201503 1BSD : Bill Joy : Free Download, Borrow, and Streaming : Internet Archive Skip to main content Keep the news in the Wayback Machine. Sign Fight for the Future's letter . Hamburger icon An icon used to represent a menu that can be toggled by interacting with this icon. Internet Archive
+
+## [3] 1979_DEC_EK-11780-UG-001_VAX-11780_Hardware_Users_Guide.pdf
+- 内容: ~VAX-11 /780 Hardvvare User's Guide EK-1I780-UG-OO 1 digital equipment c.orporation • maynard, massachuse~ts Copyright © 1979 by Digital Equipment Corporation The material in this manual is for informational purposes and is subject to change without notice. Digital Equipment Corporation assumes no re sponsibility for any errors which may appear in this manual. Printed in U.S.A. This document was set on DIGIT AL's DECset-8000 computerized typesetting sy~1tem. The following are trademarks of Digital Equipment Corporation, Maynard, Massachusetts: DIGITAL DEC PDP DEC US UNIBUS D ECsystem-10 DECSYSTEM-20 DIBOL EDUSYSTEM VAX VMS MASSBUS OMNIBUS OS/8 RSTS RSX IAS Fi
+
+## [4] 1978_DEC_EK-MM780-TD-001_Translation_Buffer_and_Cache_and_SBI_Control_Technical.pdf
+- 内容: Translation Buffer, Cache and SBI Control Technical Description (V AX-11 /780 Implementation) EK-MM780-TD-001 digital equipment corporation • maynard, massachusetts First Edition, April 1978 Copyright © 1978 by Digital Equipment Corporation The material in this manual is for informational purposes and is subject to change without notice. Digital Equipment Corporation assumes no responsibility for any errors which may appear in this manual. Printed in U.S.A. This document was set on DIGITAL's DECset-8000 computerized typesetting system. The following are trademarks of Digital Equipment Corporation, Maynard, Massachusetts: DIGITAL DEC PDP DEC US UNIBUS D ECsystem-10 DEC
+
+## [5] 2008_FreeBSD_Experimental_support_for_Suns_ZFS_filesystem.md
+- 内容: --- title: "2008_FreeBSD_Experimental_support_for_Suns_ZFS_filesystem" source_url: https://www.freebsd.org/releases/7.0R/announce/ download_date: 2026-09-07 note: freebsd_70_announce --- # 2008_FreeBSD_Experimental_support_for_Suns_ZFS_filesystem 来源: https://www.freebsd.org/releases/7.0R/announce/ FreeBSD 7.0-RELEASE Announcement | The FreeBSD Project About About Introduction Features Privacy Policy Projects Get FreeBSD Get FreeBSD Release Information Release Engineering Ported Applications
+
+## [6] nd_Solaris_CDDL_与_BSD_兼容使_FreeBSD_成为_Solaris_代码的主要开源继承者CDDL_与_GPLv2_不兼容阻碍其进入_Linu.md
+- 内容: --- title: "nd_Solaris_CDDL_与_BSD_兼容使_FreeBSD_成为_Solaris_代码的主要开源继承者CDDL_与_GPLv2_不兼容阻碍其进入_Linu" source_url: https://www.freebsd.org/releases/7.0R/announce/ download_date: 2026-09-07 note: freebsd_70_announce --- # nd_Solaris_CDDL_与_BSD_兼容使_FreeBSD_成为_Solaris_代码的主要开源继承者CDDL_与_GPLv2_不兼容阻碍其进入_Linu 来源: https://www.freebsd.org/releases/7.0R/announce/ FreeBSD 7.0-RELEASE Announcement | The FreeBSD Project About About Introduction Features Privacy Policy Projects Get FreeBSD Get FreeBSD Release Information Release Engineeri
+

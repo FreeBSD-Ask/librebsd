@@ -69,7 +69,7 @@ volume: 第15卷-许可证哲学与法律分析
 **辨析**：
 
 - Toomey 对 Unix 历史保存困境的归因集中于版权，但软件格式老化、磁带读取设备稀缺等物质条件同样是关键因素，需多源对照。（BSD Now EP476，[1691.42-1974.38]，L3）
-- 转写中关于 1994 年创办 Unix Heritage Society 与更早 PDP Unix Preservation Society 的时间细节，需与该组织档案及网站历史核对。　[考据脚注] TUHS 前身更名时间与 1994 年创办说需查 tuhs.org 与早期邮件列表档案。（BSD Now EP476，[1414.3-1471.42]，L4）
+- 转写中关于 1994 年创办 Unix Heritage Society 与更早 PDP Unix Preservation Society 的时间细节，需与该组织档案及网站历史核对。 [考据脚注] TUHS 前身更名时间与 1994 年创办说需查 tuhs.org 与早期邮件列表档案。（BSD Now EP476，[1414.3-1471.42]，L4）
 
 **文献**：
 

@@ -99,12 +99,12 @@ volume: 第11卷-dragonflybsd的历史
 
 **辨析**：
 
-- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
-- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
-- 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。　[存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
-- Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
-- HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。　[存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
-- 转写专名存在系统性误差：线程库名转写作 LibCR 与 LibThreadZoo（通行作 libc_r 与 libthread_xu），pkgsrc 转写作 package source，userland 转写作 user LAN 与 Usulam，sysctl 转写作 SysControls，ATA 驱动转写作 DATA driver；另新文件系统“与 Linux 竞争”的定位系 Dillon 单方目标陈述，其对复制文件系统优于队列复制的论证亦属设计意图而非实测结论，采用时须与 HAMMER 后续实现及性能文献对勘。　[存疑脚注] 转写专名 LibCR、LibThreadZoo、package source、user LAN、Usulam、SysControls、DATA driver 均疑为语音识别误差；文件系统性能主张为设计意图陈述，未经实测验证。（BSDTalk EP125，[111.08-126.68]，L4）
+- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。 [存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
+- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。 [考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
+- 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。 [存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
+- Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。 [存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
+- HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。 [存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
+- 转写专名存在系统性误差：线程库名转写作 LibCR 与 LibThreadZoo（通行作 libc_r 与 libthread_xu），pkgsrc 转写作 package source，userland 转写作 user LAN 与 Usulam，sysctl 转写作 SysControls，ATA 驱动转写作 DATA driver；另新文件系统“与 Linux 竞争”的定位系 Dillon 单方目标陈述，其对复制文件系统优于队列复制的论证亦属设计意图而非实测结论，采用时须与 HAMMER 后续实现及性能文献对勘。 [存疑脚注] 转写专名 LibCR、LibThreadZoo、package source、user LAN、Usulam、SysControls、DATA driver 均疑为语音识别误差；文件系统性能主张为设计意图陈述，未经实测验证。（BSDTalk EP125，[111.08-126.68]，L4）
 
 **文献**：
 

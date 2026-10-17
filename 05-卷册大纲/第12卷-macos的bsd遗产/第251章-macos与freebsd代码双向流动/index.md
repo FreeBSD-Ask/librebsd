@@ -51,7 +51,7 @@ volume: 第12卷-macos的bsd遗产
 
 **辨析**：
 
-- 转写专名失真须校核：Walnut Creek CDROM 被记作 Wallet Creek；SGI IRIX 被记作 IRX；窗口管理器缩写 FBWM 疑为 Fluxbox；Unix 谱系图作者 Eric Levenez 的拼写以其网站 levenez.com 为准；受访者口述的 NCSA Mosaic 不支持 JPEG 细节、PC-BSD 分出时间均为 2006 年时点记忆，引用时以原始发行记录复核。　[存疑脚注] Walnut Creek、IRIX、Fluxbox 拼写以公开记录为准；PC-BSD 首发时间线须对照其官方发布档案。（BSDTalk EP19，[277.83-290.17]，L1）
+- 转写专名失真须校核：Walnut Creek CDROM 被记作 Wallet Creek；SGI IRIX 被记作 IRX；窗口管理器缩写 FBWM 疑为 Fluxbox；Unix 谱系图作者 Eric Levenez 的拼写以其网站 levenez.com 为准；受访者口述的 NCSA Mosaic 不支持 JPEG 细节、PC-BSD 分出时间均为 2006 年时点记忆，引用时以原始发行记录复核。 [存疑脚注] Walnut Creek、IRIX、Fluxbox 拼写以公开记录为准；PC-BSD 首发时间线须对照其官方发布档案。（BSDTalk EP19，[277.83-290.17]，L1）
 
 **文献**：
 

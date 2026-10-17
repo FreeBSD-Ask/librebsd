@@ -144,10 +144,10 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
+- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。 [存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
 - 标题“System Disaster”与本期主体形成互文：2015 年初 systemd 争议已从 init 层蔓延至桌面依赖链（GNOME 3 硬依赖、Debian 用户请求反向移植、Arch 用户出走），但 Ian 澄清其项目并非把 systemd 移植到 OpenBSD，舆论“把 systemd 带上 BSD”的解读与工程事实有出入，引用时应区分依赖兼容与本体移植。（BSD Now EP71，[824.40-915.16]，L2）
-- 该转写为双音轨交错且时间戳乱序，专名失真密集（bhyve 被转写为 Beehive、LibreSSL 为 Libra SSL、GSoC 为 G-Sog、Baptiste Daroussin 为 Baptiste Darosun、Antoine Jacoutot 为 Antoine Jacuto 等），语义虽可由语境恢复，但引用具体专名、数字与版本前须回查邮件列表原文、演讲录像与代码仓库记录。　[存疑脚注] 专名与数字均出自失真转写且未经原始史料核验；Beehive 疑为 bhyve，Libra SSL 疑为 LibreSSL，G-Sog 疑为 GSoC（BSD Now EP71，[3123.46-3135.96]，L4）
-- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
+- 该转写为双音轨交错且时间戳乱序，专名失真密集（bhyve 被转写为 Beehive、LibreSSL 为 Libra SSL、GSoC 为 G-Sog、Baptiste Daroussin 为 Baptiste Darosun、Antoine Jacoutot 为 Antoine Jacuto 等），语义虽可由语境恢复，但引用具体专名、数字与版本前须回查邮件列表原文、演讲录像与代码仓库记录。 [存疑脚注] 专名与数字均出自失真转写且未经原始史料核验；Beehive 疑为 bhyve，Libra SSL 疑为 LibreSSL，G-Sog 疑为 GSoC（BSD Now EP71，[3123.46-3135.96]，L4）
+- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。 [存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
 
 **文献**：
 

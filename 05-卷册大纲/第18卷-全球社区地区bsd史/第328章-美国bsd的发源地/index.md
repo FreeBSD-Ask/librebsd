@@ -121,9 +121,9 @@ volume: 第18卷-全球社区地区bsd史
 **辨析**：
 
 - 本期对 OpenBSD 6.4 特性的转述与章节考据的发布时间（2018-10-25）一致，但 unveil 与 RETGUARD 的提交细节须以 OpenBSD commit log 与 Release Notes 交叉核实。（BSD Now EP270，[175.16-212.76]，L3）
-- [存疑脚注] Hotmail 约 2000 台 FreeBSD 机器与 Yahoo 数百台机器系 1999 年会议报道数据，距今久远且 Hotmail 后被微软收购，须标注时代语境，不宜当作现时部署规模。　[存疑脚注] 部署数字为 1999 年报道，须标注年代语境。（BSD Now EP261，[1743.82-1765.02]，L4）
-- [考据脚注] FreeBSDCon 1999 的日期、人数与分轨细节来自当期所引的旧会议报道，未与一手会议档案交叉核验；TrueOS 拆分时间线须以项目公告为准。　[考据脚注] 会议细节与 TrueOS 时间线须核验一手档案。（BSD Now EP261，[1372.50-1422.58]，L4）
-- 转写专名失真密集，引用前须全面校核：创始人被记作 Ted Uhligman（旧转写作 Ted Uelman），拼写须以 SDF 官方史料复核；Texas Minitel 应为 Texas Metronet；pwmake db 应为 pwd_mkdb；Telnet 地址 sdf.loenstar.org 应为 sdf.lonestar.org；所谓由 Kodak Interactive 打包的 System V 来源存疑，疑为转写失真；Minix system five 疑为 System V 之转写噪音；游戏条目 MDG 与 moo 疑指多人 Rogue 类游戏与 MUD；受访者所说 BSD version 1.1 的具体所指亦待核。　[存疑脚注] 创始人拼写、System V 打包来源、BSD 1.1 所指均须以 SDF fact file 与 Usenet/Google Groups 存档复核。（BSDTalk EP21，[226.33-249.93]，L1）　[订正：原 Ted Uelman；Texas Mitronet；PWMICDB 与 PWMakeDB；sdf.loanstar.org；System 5 Genics；MDG 与 MOU，2026-09-29 SenseAudio 重转核对]
+- [存疑脚注] Hotmail 约 2000 台 FreeBSD 机器与 Yahoo 数百台机器系 1999 年会议报道数据，距今久远且 Hotmail 后被微软收购，须标注时代语境，不宜当作现时部署规模。 [存疑脚注] 部署数字为 1999 年报道，须标注年代语境。（BSD Now EP261，[1743.82-1765.02]，L4）
+- [考据脚注] FreeBSDCon 1999 的日期、人数与分轨细节来自当期所引的旧会议报道，未与一手会议档案交叉核验；TrueOS 拆分时间线须以项目公告为准。 [考据脚注] 会议细节与 TrueOS 时间线须核验一手档案。（BSD Now EP261，[1372.50-1422.58]，L4）
+- 转写专名失真密集，引用前须全面校核：创始人被记作 Ted Uhligman（旧转写作 Ted Uelman），拼写须以 SDF 官方史料复核；Texas Minitel 应为 Texas Metronet；pwmake db 应为 pwd_mkdb；Telnet 地址 sdf.loenstar.org 应为 sdf.lonestar.org；所谓由 Kodak Interactive 打包的 System V 来源存疑，疑为转写失真；Minix system five 疑为 System V 之转写噪音；游戏条目 MDG 与 moo 疑指多人 Rogue 类游戏与 MUD；受访者所说 BSD version 1.1 的具体所指亦待核。 [存疑脚注] 创始人拼写、System V 打包来源、BSD 1.1 所指均须以 SDF fact file 与 Usenet/Google Groups 存档复核。（BSDTalk EP21，[226.33-249.93]，L1） [订正：原 Ted Uelman；Texas Mitronet；PWMICDB 与 PWMakeDB；sdf.loanstar.org；System 5 Genics；MDG 与 MOU，2026-09-29 SenseAudio 重转核对]
 
 **文献**：
 

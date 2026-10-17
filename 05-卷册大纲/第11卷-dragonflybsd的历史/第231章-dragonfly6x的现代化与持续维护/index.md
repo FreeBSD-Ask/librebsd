@@ -8,11 +8,11 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- dragonfly.duckdb dragonfly-src 仓库 commits 表提供 v6.2/v6.4 系列 GPU 与驱动支持改进的具体 commit。v6.2 系列（2022-01-09 至 2022-06-09）期间 sys/dev/drm/ 目录 commit 集中于 Linux DRM 回移；v6.4 系列（2022-12-30 起）期间 sys/dev/netif/ 与 sys/dev/disk/ 等目录的 commit 集中于硬件驱动支持改进——按 commit_files 统计，v6.4 系列期间 sys/dev/disk/ 26 条、sys/dev/virtual/ 16 条、sys/dev/netif/ 14 条，sys/dev/drm/ 仅 3 条。　[存疑脚注] 原文此处机械截断，截断点后的目录名无法回溯，本条按 dragonfly.duckdb commit_files 2026-09-13 查询回源补全。
+- dragonfly.duckdb dragonfly-src 仓库 commits 表提供 v6.2/v6.4 系列 GPU 与驱动支持改进的具体 commit。v6.2 系列（2022-01-09 至 2022-06-09）期间 sys/dev/drm/ 目录 commit 集中于 Linux DRM 回移；v6.4 系列（2022-12-30 起）期间 sys/dev/netif/ 与 sys/dev/disk/ 等目录的 commit 集中于硬件驱动支持改进——按 commit_files 统计，v6.4 系列期间 sys/dev/disk/ 26 条、sys/dev/virtual/ 16 条、sys/dev/netif/ 14 条，sys/dev/drm/ 仅 3 条。 [存疑脚注] 原文此处机械截断，截断点后的目录名无法回溯，本条按 dragonfly.duckdb commit_files 2026-09-13 查询回源补全。
 - dragonfly.duckdb dragonfly-src 仓库 commits 表提供 v6.4.1/v6.4.2 发布说明的 commit 级核验——v6.4.1 target_commit_hash = 9408681d90f4953a150a1682b6413610234981fa（2025-04-29）、v6.4.2 target_commit_hash = 54d7118100cb99b741fe92cfd8d542c623b6f8d0（2025-05-09），两发布锚点均可在 tags 表复现。
 - dragonfly.duckdb 不直接记录 commit 权限变动，权限授予与撤销须以 DragonFly 邮件列表（lists.dragonflybsd.org）中 Dillon 或 kernel@ 的公告为准。lists.dragonflybsd.org 完整归档 2003-2026 年间 kernel@、commits@、users@、bugs@ 等邮件列表，未发生类似 FreeBSD 2012 年 mailman 迁移丢失事件；权限相关邮件记录的考据须交叉对照 commit log 中新 author_email 首次出现时间与邮件列表公告时间。
-- dragonfly.duckdb dragonfly-src 仓库 tags 表共 131 个 tag，按 tagger_date 升序首 tag 为 v2.1.1（2008-12-03），末 tag 为 v6.4.2（2025-05-09）。2019-2026 年间发布记录：v6.0.0（2021-05-07）、v6.0.1（2021-10-11）、v6.2.1（2022-01-09）、v6.2.2（2022-06-09）、v6.4.0（2022-12-30）、v6.4.1（2025-04-29）、v6.4.2（2025-05-09）。　[存疑脚注] 原文此处机械截断，发布序列按 dragonfly.duckdb tags 表 2026-09-13 查询回源补全，稳定版序列续至 v6.4.2；开发中 tag（v6.1.0、v6.3.0、v6.5.0 等）与 rc tag 未列入本列表。
-- DragonFly BSD 无正式 Security Advisory（SA）系统，安全修复通过 commit message 与 kernel@ 邮件列表通知用户——这与 FreeBSD SA（14.x 周期 80 个 PGP 签名 SA）、OpenBSD errata（逐版本发布 errata patches）形成鲜明对比；6.x 周期 16 条 CVE commit 中，仅 CVE-2023-3107 与 CVE-2024-6387 为提交当年新披露 CVE 的修复，其余均为历史 CVE 的回移修复或随版本升级并入。　[存疑脚注] 原文此处机械截断；“6.x 周期 16 条 CVE commit”计数未能以当前 dragonfly.duckdb 复现（2021-05-07 起 message 含 CVE 字样的 commit 现查得 8 条），计数口径待回溯核验；补全部分按 2026-09-13 查询。
+- dragonfly.duckdb dragonfly-src 仓库 tags 表共 131 个 tag，按 tagger_date 升序首 tag 为 v2.1.1（2008-12-03），末 tag 为 v6.4.2（2025-05-09）。2019-2026 年间发布记录：v6.0.0（2021-05-07）、v6.0.1（2021-10-11）、v6.2.1（2022-01-09）、v6.2.2（2022-06-09）、v6.4.0（2022-12-30）、v6.4.1（2025-04-29）、v6.4.2（2025-05-09）。 [存疑脚注] 原文此处机械截断，发布序列按 dragonfly.duckdb tags 表 2026-09-13 查询回源补全，稳定版序列续至 v6.4.2；开发中 tag（v6.1.0、v6.3.0、v6.5.0 等）与 rc tag 未列入本列表。
+- DragonFly BSD 无正式 Security Advisory（SA）系统，安全修复通过 commit message 与 kernel@ 邮件列表通知用户——这与 FreeBSD SA（14.x 周期 80 个 PGP 签名 SA）、OpenBSD errata（逐版本发布 errata patches）形成鲜明对比；6.x 周期 16 条 CVE commit 中，仅 CVE-2023-3107 与 CVE-2024-6387 为提交当年新披露 CVE 的修复，其余均为历史 CVE 的回移修复或随版本升级并入。 [存疑脚注] 原文此处机械截断；“6.x 周期 16 条 CVE commit”计数未能以当前 dragonfly.duckdb 复现（2021-05-07 起 message 含 CVE 字样的 commit 现查得 8 条），计数口径待回溯核验；补全部分按 2026-09-13 查询。
 
 ## 史料
 
@@ -79,8 +79,8 @@ volume: 第11卷-dragonflybsd的历史
 
 **辨析**：
 
-- DragonFly 6.4 的具体内核修复与特性为发布说明转述，其中 GCC 默认版本与 HAMMER2 远程挂载状态需以官方发布说明与提交核验。　[存疑脚注] 版本细节为节目转述，须以 DragonFly 官方发布说明与提交记录核验。（BSD Now EP491，[188.06-530.00]，L4）
-- OpenZFS 统一时间为 2020 年 12 月的表述为节目转述，需以 OpenZFS 官方公告核验。　[存疑脚注] 代码库统一的具体时间需以 OpenZFS 项目公告与提交记录确认。（BSD Now EP491，[562.70-573.74]，L4）
+- DragonFly 6.4 的具体内核修复与特性为发布说明转述，其中 GCC 默认版本与 HAMMER2 远程挂载状态需以官方发布说明与提交核验。 [存疑脚注] 版本细节为节目转述，须以 DragonFly 官方发布说明与提交记录核验。（BSD Now EP491，[188.06-530.00]，L4）
+- OpenZFS 统一时间为 2020 年 12 月的表述为节目转述，需以 OpenZFS 官方公告核验。 [存疑脚注] 代码库统一的具体时间需以 OpenZFS 项目公告与提交记录确认。（BSD Now EP491，[562.70-573.74]，L4）
 
 **文献**：
 

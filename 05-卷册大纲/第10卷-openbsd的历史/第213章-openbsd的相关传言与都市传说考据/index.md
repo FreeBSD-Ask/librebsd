@@ -68,7 +68,7 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- airport(7) 规则在转写中被归于 OpenBSD hackathon 写入，但具体是哪一次 hackathon 及成文时间需查手册页修订记录与邮件列表。　[考据脚注] airport(7) 手册页引入的具体时间与 hackathon 场次需查 OpenBSD CVS 与 Undeadly 记录。（BSD Now EP460，[1173.42-1184.7]，L4）
+- airport(7) 规则在转写中被归于 OpenBSD hackathon 写入，但具体是哪一次 hackathon 及成文时间需查手册页修订记录与邮件列表。 [考据脚注] airport(7) 手册页引入的具体时间与 hackathon 场次需查 OpenBSD CVS 与 Undeadly 记录。（BSD Now EP460，[1173.42-1184.7]，L4）
 - 对 OpenBSD 传言的辨析与个人实践：关于黑客检测到 OpenBSD 便退走的说法，Spitzner 的观测结论是并非因其强而退，而是因其非所期——坏人只携带已知平台（Linux、Windows）的 exploit 与恶意软件，遇到预期之外的系统便径直跳过，近乎借助隐蔽求安全；其个人规则为凡联互联网的机器必用 OpenBSD，理由是其安全与他对 de Raadt 安全狂热的个人信任，私人桌面则选 Mac OS 纯为易用；另据 NetCraft 观察该组织网站多年托管于 OpenBSD 或 NetBSD、近期转 Linux，他解释纯因 HoneyWall CD-ROM 基于 RPM、网站需承担自建 RPM 的构建与分发，就 web 平台而言仍偏好 OpenBSD。（BSDTalk EP49，[1282.50-1519.84]，L1）
 
 **文献**：

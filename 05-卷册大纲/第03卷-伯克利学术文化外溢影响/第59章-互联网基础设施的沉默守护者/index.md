@@ -55,7 +55,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - ARIN 候选人页面提供每位候选人的背景、简历与对特定问题的回答；选举于本周早些时候开始、周五截止，持有 ARIN netblock 或 AS 号的联系人可投票。（BSD Now EP165，[190.58-250.16]，L2）
 - OpenBGPD 新增对 draft RFC Large Communities 的支持，以三个 32 位值表达命名空间所有者与两个不透明值，解决 16 位 AS 号时代 communities 字段编码能力不足的问题。（BSD Now EP165，[1396.16-1609.12]，L2）
 - 节目回顾早期互联网以 16 位 AS 号与 32 位“us+them”社区字段编码路由信息，32 位 AS 号普及后无法在单一 32 位值中表达两个 32 位 AS 号，遂需 Large Communities。（BSD Now EP165，[1406.5-1504.98]，L2）
-- OpenBSD-current 已支持 Large Communities，预计随 OpenBSD 6.1 发布，部分基于 Job Snijders 的补丁。　[存疑脚注] 补丁作者姓名转写须核验。（BSD Now EP165，[1577.06-1615.68]，L2）
+- OpenBSD-current 已支持 Large Communities，预计随 OpenBSD 6.1 发布，部分基于 Job Snijders 的补丁。 [存疑脚注] 补丁作者姓名转写须核验。（BSD Now EP165，[1577.06-1615.68]，L2）
 - CTL HA 由 Alexander Motin 与 iXsystems 完成并于约一年前提交，实现 ALUA，使主机可同时经两个控制器访问同一 LUN；Mikhail Zakharov 正将 Beast 存储设备从自定义仲裁器切换到 CTL HA。（BSD Now EP165，[1929.08-2090.68]，L2）
 - CTL HA 提供 active/standby 与 active/active 模式，可按 LUN 指定主控节点，使多个 LUN 在两个控制器间分摊流量以获取更高带宽。（BSD Now EP165，[2121.16-2170.54]，L2）
 - GSoC 学生 Abdali Kaltai 撰写首个 FreeBSD 内核模块教程，讲解模块事件处理、DECLARE_MODULE 宏与 bsd.kmod.mk 构建流程。（BSD Now EP165，[623.7-912.64]，L2）
@@ -123,18 +123,18 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **辨析**：
 
-- 转写把书名记作 Network-Nomecon、Networkonomicon 等多种形态，标准拼写应以 Lucas 本人发布为准；“Get Sank Murder”疑为转写噪声，可能指其 git 主题书，不宜据此引用。[考据脚注] 书名以 Lucas 官方书目为准　[考据脚注] Networknomicon 及 Get Sank Murder 书名拼写系转写噪声，须以作者官方书目核对（BSD Now EP378，[341.6-343.36]，L4）
+- 转写把书名记作 Network-Nomecon、Networkonomicon 等多种形态，标准拼写应以 Lucas 本人发布为准；“Get Sank Murder”疑为转写噪声，可能指其 git 主题书，不宜据此引用。[考据脚注] 书名以 Lucas 官方书目为准 [考据脚注] Networknomicon 及 Get Sank Murder 书名拼写系转写噪声，须以作者官方书目核对（BSD Now EP378，[341.6-343.36]，L4）
 - CN 字段“1995-2000 有效五年、2011 年停用”的时间线系 Lucas 口述概括，具体标准号（X.509/各 RFC）与废止过程须以标准文本核验。（BSD Now EP378，[1087.6-1149.1]，L2）[订正：原 [1095.58-1148.44]，2026-09-30 SenseAudio 重转核对]
 - “银行签发不足 24 小时的证书”为 Lucas 观察到的个案，未经系统统计，引用时不宜推广为行业普遍实践。（BSD Now EP378，[1948.22-1964.54]，L2）
-- OpenBSD 的 40 万提交仅为一种测量口径，仓库历史久、有缺失 changelog 与不可转换分支，任何计数都可能高估或低估。　[考据脚注] Theo 本人与主持人双重提示计数不可靠（BSD Now EP323，[1131.88-1154.46]，L3）
-- PDP-7 源码断代“1970 至 1971 初”依赖两位早期贡献者与馆方编目，属多源交叉但仍非绝对定年。　[存疑脚注] 定年证据链为多源交叉，非单一权威结论（BSD Now EP323，[167.90-193.82]，L3）
-- [存疑脚注] 转写将选举机构记作“Aaron Advisory Council”，应为 ARIN Advisory Council 的误转；候选人“Ike”的全名须核验。　[存疑脚注] ARIN 与候选人姓名须核验。（BSD Now EP165，[99.14-250.16]，L4）
-- [存疑脚注] 转写将补丁作者记作“job schneider”，应为 Job Snijders 的误转，须核验。　[存疑脚注] Job Snijders 姓名须核验。（BSD Now EP165，[1595.0-1609.12]，L4）
+- OpenBSD 的 40 万提交仅为一种测量口径，仓库历史久、有缺失 changelog 与不可转换分支，任何计数都可能高估或低估。 [考据脚注] Theo 本人与主持人双重提示计数不可靠（BSD Now EP323，[1131.88-1154.46]，L3）
+- PDP-7 源码断代“1970 至 1971 初”依赖两位早期贡献者与馆方编目，属多源交叉但仍非绝对定年。 [存疑脚注] 定年证据链为多源交叉，非单一权威结论（BSD Now EP323，[167.90-193.82]，L3）
+- [存疑脚注] 转写将选举机构记作“Aaron Advisory Council”，应为 ARIN Advisory Council 的误转；候选人“Ike”的全名须核验。 [存疑脚注] ARIN 与候选人姓名须核验。（BSD Now EP165，[99.14-250.16]，L4）
+- [存疑脚注] 转写将补丁作者记作“job schneider”，应为 Job Snijders 的误转，须核验。 [存疑脚注] Job Snijders 姓名须核验。（BSD Now EP165，[1595.0-1609.12]，L4）
 - 本期最具考据价值的片段是当事人自纠：听众 Mason 来信指认主持人在上期约 1 小时 56 分钟处声称 X 进入基本系统的最大障碍是许可证不利于 BSD，并指出 X 许可证与 BSD 许可证几乎无异、NetBSD 与 OpenBSD 携带 X 已近二十年；Allan Jude 随即更正，澄清真正的障碍并非许可证，而是 FreeBSD 项目不愿为跨 FreeBSD 10 的五年生命周期维持 ABI 稳定而在基本系统内维护 X 的分支，X 的定位始终是 port；他同时透露 FreeBSD 正延续将组件移出基本系统的路线——Perl 自 FreeBSD 4 起已移除，OpenSSL 拟改为仅内部私用、用户态依赖自 ports 获取以加快补丁节奏。（BSD Now EP105，[3272.78-3362.70]，L1）
 - 围绕 NextBSD 移植 LaunchD 的争议呈现流言与澄清的典型结构：一篇评论文章主张 FreeBSD 不应采用 LaunchD，Reddit 上正反意见交锋并引来大量社区邮件；Allan Jude 澄清所谓 XML 配置的恐惧源自过去某设备厂商对 launchd2 的 FreeBSD 移植，而 NextBSD 实际使用的版本改用 JSON 且更为精简，提醒听众核对正确版本再作评判；工程层面，Kip Macy 正在修复安装器以便发布可试用的 NextBSD ISO，Jordan Hubbard 与 Kip Macy 均已同意接受访谈但需待 EuroBSDCon 之后，PC-BSD 下一版将基于 FreeBSD 11 CURRENT 与 NextBSD 构建并集成 launchd，且计划按月发布镜像、或与 HardenedBSD 合流。（BSD Now EP105，[589.64-628.86]，L2）
-- 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。　[存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
-- VeriSign 同时使用 BSD、Linux、Solaris 等操作系统作多样性冗余的说法为主持人转述，其根服务器内部各系统的具体比例未获官方资料核验。　[存疑脚注] VeriSign 各操作系统在根服务器中的具体占比属单一播客转述，须以官方资料交叉验证。（BSD Now EP1，[460.01-478.53]，L4）
-- 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。　[存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2299.0-2366.3]，L4）[订正：原 [2346.319-2397.079]→[2299.0-2366.3]，内容复核；Pushover 段位于 1904.5-1913.0，不在此区间]
+- 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。 [存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
+- VeriSign 同时使用 BSD、Linux、Solaris 等操作系统作多样性冗余的说法为主持人转述，其根服务器内部各系统的具体比例未获官方资料核验。 [存疑脚注] VeriSign 各操作系统在根服务器中的具体占比属单一播客转述，须以官方资料交叉验证。（BSD Now EP1，[460.01-478.53]，L4）
+- 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。 [存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2299.0-2366.3]，L4）[订正：原 [2346.319-2397.079]→[2299.0-2366.3]，内容复核；Pushover 段位于 1904.5-1913.0，不在此区间]
 
 **文献**：
 

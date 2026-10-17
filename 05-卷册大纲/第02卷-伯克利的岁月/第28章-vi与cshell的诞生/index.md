@@ -68,8 +68,8 @@ volume: 第02卷-伯克利的岁月
 
 **辨析**：
 
-- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
-- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
+- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。 [存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
+- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。 [存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
 
 **文献**：
 
