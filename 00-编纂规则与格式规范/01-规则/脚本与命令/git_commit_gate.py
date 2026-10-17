@@ -24,6 +24,10 @@
       fix_md_invisible 缺失时降级为窄口径（仅删 U+200B/200C/200D/2060/FEFF）并在改动
       说明中标注「降级窄口径」。
   F3  CRLF → LF；剥离 UTF-8 BOM
+  F4  别名成对自动 cp（2026-10-17 主理人批准批）：暂存区含 CLAUDE.md 且工作树
+      AGENTS.md 与其逐字节不一致时，以工作树 CLAUDE.md 覆写 AGENTS.md 并重新暂存
+      （依据：CLAUDE.md 唯一真相、AGENTS.md 逐字节别名副本）；仅暂存 AGENTS.md 而
+      CLAUDE.md 未暂存者**不自动改正**（改序违规），交 commit-msg H2 阻断。
   另：非 UTF-8 文件整体跳过不改正（旧实现 errors="replace" 会把坏字节写成 U+FFFD 回盘，已废）。
 
 改后写回工作树并 `git add`，打印改动清单；无源文件级语义变化。
@@ -35,6 +39,10 @@
   B2  根目录新增一级条目不在白名单 → 拒；`APPROVED-BY-OWNER:` 放行
   B3  删除 `12-数据库备份/**` → 拒；`APPROVED-BY-OWNER:` 放行
   B4  文档类文件含全角空格 U+3000 → 拒；`APPROVED-BY-OWNER:` 放行
+  H1  提交说明质量（2026-10-17 主理人批准批，无放行标记）：首行非空、≥8 字符、
+      非纯数字／标点占位、消息不以 BOM 起始 → 违者拒（改写消息零成本，不设 bypass）
+  H2  CLAUDE.md↔AGENTS.md **提交后**逐字节一致（单方暂存者以 HEAD 内容计）→
+      不一致拒；`APPROVED-BY-OWNER:` 放行
 
 含 `--no-verify` 时 hook 不被 git 调用；绕过须主理人显式指示并留痕 changelog。
 为什么阻断类放 commit-msg：pre-commit 阶段提交说明尚未定稿，无法核对批准标记。
@@ -47,6 +55,7 @@
 退出码：0 放行；1 拒收（stdout 列违规件）；2 依赖缺失或运行错误。
 """
 import os
+import re
 import subprocess
 import sys
 
@@ -233,6 +242,29 @@ def stage_precommit():
         print("git_commit_gate 自动改正：%s（%s）" % (path, "；".join(changes)))
     if touched:
         print("git_commit_gate：共自动改正 %d 个文件（已重新暂存），请复核 diff。" % touched)
+    # F4 别名成对自动 cp（2026-10-17 主理人批准批）：工作树 CLAUDE.md 为唯一真相
+    st_map = {path: st for st, path in items if path}
+    if st_map.get("CLAUDE.md") not in (None, "D"):
+        wt_c = os.path.join(os.getcwd(), "CLAUDE.md")
+        wt_a = os.path.join(os.getcwd(), "AGENTS.md")
+        if os.path.isfile(wt_c):
+            try:
+                cb = open(wt_c, "rb").read()
+                ab = open(wt_a, "rb").read() if os.path.isfile(wt_a) else None
+            except OSError:
+                cb = ab = None
+            if cb is not None and ab != cb:
+                try:
+                    open(wt_a, "wb").write(cb)
+                    run_git(["add", "--", "AGENTS.md"])
+                    touched += 1
+                    print("git_commit_gate 自动改正：AGENTS.md（F4 别名成对 cp ← CLAUDE.md）")
+                except OSError as e:
+                    print("git_commit_gate F4 cp 失败（%s）；如强提交将被 commit-msg H2 阻断。" % e,
+                          file=sys.stderr)
+    elif "AGENTS.md" in st_map and "CLAUDE.md" not in st_map:
+        print("git_commit_gate 提示：AGENTS.md 单独暂存而 CLAUDE.md 未暂存——若内容不一致将被 "
+              "commit-msg H2 阻断（规则：先改 CLAUDE.md，再 cp 覆盖 AGENTS.md）。")
     return 0
 
 
@@ -251,6 +283,62 @@ def blob_size(path):
         return int(p.stdout.strip())
     except ValueError:
         return -1
+
+
+def _blob_bytes(rev_path):
+    p = run_git(["cat-file", "-p", rev_path])
+    return p.stdout if p.returncode == 0 else None
+
+
+def check_msg_quality(msg):
+    """H1：提交说明质量（2026-10-17 主理人批准批；无放行标记——改写消息零成本）。
+
+    判据：①消息不以 BOM 起始（PowerShell Set-Content -Encoding UTF8 带 BOM 会污染
+    消息首字符——2026-10-17 ca3134a07 实例）；②首行非空；③首行 ≥8 字符；
+    ④首行非纯数字／标点占位（"1/2/！"式整索引提交当日 ≥7 件的教训）。
+    """
+    bad = []
+    if msg.startswith("\ufeff"):
+        bad.append("提交说明以 BOM 起始——将消息文件重写为 UTF-8 无 BOM 再提交"
+                   "（PowerShell 用 -Encoding utf8NoBOM 或经 Python 落盘）")
+    first = msg.split("\n", 1)[0].strip()
+    if not first:
+        bad.append("提交说明首行为空")
+        return bad
+    if len(first) < 8:
+        bad.append("首行过短（%d 字符）：%r" % (len(first), first[:40]))
+    if re.fullmatch(r"[0-9!\"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~\s]+", first):
+        bad.append("首行为纯数字／标点占位（无实质词句）：%r" % first[:40])
+    return bad
+
+
+def check_alias_pair(items):
+    """H2：CLAUDE.md↔AGENTS.md 逐字节一致（以本提交落定后的内容为准）。
+
+    单方暂存时，另一方按 HEAD 内容计（未暂存＝本次不动它，提交后仍是 HEAD 版）；
+    一方暂存删除按空内容计。仓库尚无 HEAD 且两文件均未暂存 → 跳过（首次提交场景）。
+    """
+    staged = {path: st for st, path in items if path}
+    sa, sb = staged.get("CLAUDE.md"), staged.get("AGENTS.md")
+    if sa is None and sb is None:
+        return []
+
+    def post(path, st):
+        if st == "D":
+            return b""
+        if st is not None:
+            return _blob_bytes(":%s" % path)
+        return _blob_bytes("HEAD:%s" % path)
+
+    ca, cb = post("CLAUDE.md", sa), post("AGENTS.md", sb)
+    if ca is None and cb is None:
+        return []
+    if ca != cb:
+        return ["CLAUDE.md 提交后 %s ≠ AGENTS.md 提交后 %s（逐字节）——先改 CLAUDE.md，"
+                "再 cp CLAUDE.md AGENTS.md；确属有意单改别名件，用 APPROVED-BY-OWNER: 放行"
+                % ("缺失" if ca is None else "%d 字节" % len(ca),
+                   "缺失" if cb is None else "%d 字节" % len(cb))]
+    return []
 
 
 def stage_commitmsg(msg):
@@ -287,10 +375,16 @@ def stage_commitmsg(msg):
         errs.append("B3 暂存区包含 12-数据库备份/ 的删除：\n  " + "\n  ".join(bad_bakdel))
     if bad_space:
         errs.append("B4 文档类文件含全角空格 U+3000（禁 AI 不可见字符）：\n  " + "\n  ".join(bad_space))
+    bad_pair = check_alias_pair(items)
+    if bad_pair:
+        errs.append("H2 CLAUDE.md↔AGENTS.md 提交后将不一致：\n  " + "\n  ".join(bad_pair))
+    h1 = check_msg_quality(msg)
+    if h1:
+        errs.append("H1 提交说明不满足质量判据（无放行标记，改写即可）：\n  " + "\n  ".join(h1))
     errs = [e for e in errs if not (
         (e.startswith("G1") and TAG_IGNORED in msg) or
         (e.startswith("G2") and TAG_BIGFILE in msg) or
-        (e.startswith(("B2", "B3", "B4")) and TAG_OWNER in msg))]
+        (e.startswith(("B2", "B3", "B4", "H2")) and TAG_OWNER in msg))]
     if errs:
         print("git_commit_gate 拒收（流程规则「Git 暂存规则」；批准标记：%s／%s／%s）：" % (TAG_IGNORED, TAG_BIGFILE, TAG_OWNER))
         for e in errs:
@@ -303,13 +397,15 @@ def stage_commitmsg(msg):
         notes.append("G2×%d" % len(bad_big))
     if bad_root or bad_bakdel or bad_space:
         notes.append("B×%d" % (len(bad_root) + len(bad_bakdel) + len(bad_space)))
+    if bad_pair:
+        notes.append("H2×%d" % len(bad_pair))
     if notes:
         print("git_commit_gate：检测到批准标记，放行（%s）——请确认 changelog 已留痕批准记录。" % "、".join(notes))
     return 0
 
 
 def selftest():
-    """隔离临时仓库全用例：改正区 9（F 区 4＋链路 2＋排除边界 3）＋阻断与既有 11＝20 用例。"""
+    """隔离临时仓库全用例：改正区 12（F 区 5＋链路 2＋排除边界 3＋别名 2）＋阻断与既有 18＝30 用例。"""
     import shutil
     import tempfile
 
@@ -457,6 +553,49 @@ def selftest():
     g("add", "-A")
     check("B4_全角空格拒", 1, run_gate(repo, "commit-msg", "m\n"))
     check("B4_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
+
+    # F4 别名成对自动 cp（2026-10-17 主理人批准批）
+    repo, g = newrepo("t_f4")
+    with open(os.path.join(repo, "CLAUDE.md"), "w", encoding="utf-8") as f:
+        f.write("v1 正文\n")
+    with open(os.path.join(repo, "AGENTS.md"), "w", encoding="utf-8") as f:
+        f.write("过期副本\n")
+    g("add", "CLAUDE.md")                       # 只暂存 CLAUDE.md
+    check("F4_precommit放行", 0, run_gate(repo, "pre-commit"))
+    fixed_a = open(os.path.join(repo, "AGENTS.md"), encoding="utf-8").read()
+    okf4 = fixed_a == "v1 正文\n"
+    results.append(("F4_别名自动cp", 1, 0 if okf4 else 1, okf4))
+    if not okf4:
+        print("  ✗ F4_AGENTS 未同步 " + repr(fixed_a))
+    check("F4_成对后commit-msg放行", 0, run_gate(repo, "commit-msg", "shenyue 线归档处置批\n"))
+
+    # H1 提交说明质量（无放行标记）
+    repo, g = newrepo("t_h1")
+    open(os.path.join(repo, "a.md"), "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    check("H1_占位拒", 1, run_gate(repo, "commit-msg", "1\n"))
+    check("H1_过短拒", 1, run_gate(repo, "commit-msg", "fix\n"))
+    check("H1_BOM拒", 1, run_gate(repo, "commit-msg", "正常的提交说明文本\n"))
+    check("H1_合规放行", 0, run_gate(repo, "commit-msg", "正常提交说明\n"))
+
+    # H2 成对一致性阻断
+    repo, g = newrepo("t_h2")
+    with open(os.path.join(repo, "CLAUDE.md"), "w", encoding="utf-8") as f:
+        f.write("v1\n")
+    with open(os.path.join(repo, "AGENTS.md"), "w", encoding="utf-8") as f:
+        f.write("v1\n")
+    g("add", "-A")
+    g("commit", "-q", "-m", "初始基线提交")
+    with open(os.path.join(repo, "CLAUDE.md"), "w", encoding="utf-8") as f:
+        f.write("v2 新内容\n")
+    with open(os.path.join(repo, "AGENTS.md"), "w", encoding="utf-8") as f:
+        f.write("v2 新内容\n")
+    g("add", "AGENTS.md")                       # 只暂存 AGENTS.md（改序违规）
+    check("H2_分叉拒", 1, run_gate(repo, "commit-msg", "正常提交说明\n"))
+    g("add", "CLAUDE.md")                       # 成对暂存后
+    check("H2_成对放行", 0, run_gate(repo, "commit-msg", "正常提交说明\n"))
+    g("reset", "-q", "CLAUDE.md")               # 再造单方暂存分叉
+    check("H2_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " 有意单改别名件\n"))
 
     shutil.rmtree(base, ignore_errors=True)
     bad = [r for r in results if not r[3]]
