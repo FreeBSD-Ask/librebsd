@@ -9,12 +9,22 @@
 
 对应 `流程规则.md`「Git 暂存规则（.gitignore 与体积门槛；2026-10-17 立）」。
 
-── pre-commit 阶段（自动改正，永不拒收）──
+── pre-commit 阶段（自动改正，永不拒收；2026-10-17 薄壳安装，清理批合入）──
 对暂存区中的文档类文件（.md／.txt，排除内容层与逐字保真档案，见 FIX_EXCLUDE_PREFIX）：
 
   F1  直角引号「」『』 → 弯引号 “”‘’（开闭字符一一映射；围栏代码块与行内代码段内不动）
-  F2  零宽字符（U+200B/200C/200D/2060/FEFF）→ 删除（同上范围）
+  F2  不可见字符全口径清理（2026-10-17 主理人裁定，算法单一来源＝fix_md_invisible.py 的
+      norm_body／canon；整文件范围、含围栏与行内代码——与 commit-msg B4 对象面一致）：
+      ①Cf 格式符／填充符（U+200B–200F、U+202A–202E、U+2060–206F、U+FEFF、U+00AD、
+        U+0601、U+034F 等）一律删除；
+      ②Zs 空格类（U+3000、U+00A0、U+202F 等，除 U+0020）一律归一为 1 个半角空格，
+        含此类字符的极大空白串合并为 1 个半角空格，行首／行尾整段删除；
+      ③U+FFFD 不改正，逐件打印披露（编码损坏标记，处置另案）；
+      ④改写前后以 canon 内容指纹断言（去空白与目标字符后逐字相同），不符即回退本件。
+      fix_md_invisible 缺失时降级为窄口径（仅删 U+200B/200C/200D/2060/FEFF）并在改动
+      说明中标注「降级窄口径」。
   F3  CRLF → LF；剥离 UTF-8 BOM
+  另：非 UTF-8 文件整体跳过不改正（旧实现 errors="replace" 会把坏字节写成 U+FFFD 回盘，已废）。
 
 改后写回工作树并 `git add`，打印改动清单；无源文件级语义变化。
 
@@ -48,6 +58,14 @@ TAG_OWNER = "APPROVED-BY-OWNER:"
 ANGLE_MAP = {"\u300c": "\u201c", "\u300d": "\u201d", "\u300e": "\u2018", "\u300f": "\u2019"}
 ZERO_WIDTH = "\u200b\u200c\u200d\u2060\ufeff"
 IDEOGRAPHIC_SPACE = "\u3000"
+
+# F2 全口径清理的算法单一来源＝fix_md_invisible（同目录固定脚本，清理批执行器）。
+# 缺失时降级窄口径（仅 5 码位零宽删除），保提交通道可用。
+try:
+    from fix_md_invisible import canon as _inv_canon, norm_body as _inv_norm_body
+    _INV_CORE = True
+except Exception:
+    _INV_CORE = False
 
 FIXABLE_EXTS = (".md", ".txt")
 # 内容层、逐字保真档案、史料与档案不入自动改正面（逐字保真优先）
@@ -96,7 +114,13 @@ def is_doc_fixable(path):
 
 
 def fix_text(text):
-    """返回 (新文本, 改动说明列表)。仅处理围栏代码块与行内代码段之外的文本。"""
+    """返回 (新文本, 改动说明列表)。
+
+    F2（不可见字符清理，2026-10-17 裁定全口径）先于 F1 执行：整文件范围、
+    含围栏代码块与行内代码段——与 commit-msg B4 的对象面一致，否则 pre-commit
+    漏改而 B4 拒收会互相矛盾。算法单一来源＝fix_md_invisible.norm_body／canon。
+    F1（直角引号）仍仅处理围栏代码块与行内代码段之外的文本。
+    """
     changes = []
     if text.startswith("\ufeff"):
         text = text[1:]
@@ -104,8 +128,51 @@ def fix_text(text):
     if "\r" in text:
         text = text.replace("\r\n", "\n").replace("\r", "\n")
         changes.append("CRLF/CR → LF")
-    out_lines, fence = [], False
-    n_angle, n_zero = 0, 0
+    if _INV_CORE:
+        canon_before = _inv_canon(text)
+        out_lines, n_del, n_run = [], 0, 0
+        for line in text.split("\n"):
+            nb, a, b = _inv_norm_body(line)
+            n_del += a
+            n_run += b
+            out_lines.append(nb)
+        cand = "\n".join(out_lines)
+        if _inv_canon(cand) == canon_before:
+            text = cand
+            if n_del:
+                changes.append("删除 Cf 格式符/填充符 %d 处" % n_del)
+            if n_run:
+                changes.append("空格类归一半角空格（合并空白串）%d 处" % n_run)
+        else:
+            changes.append("F2 内容指纹校验异常，本件跳过清理（已回退）")
+    else:
+        out_lines, fence, n_zero = [], False, 0
+        for line in text.split("\n"):
+            if line.lstrip().startswith("```") or line.lstrip().startswith("~~~"):
+                fence = not fence
+                out_lines.append(line)
+                continue
+            if fence:
+                out_lines.append(line)
+                continue
+            parts = line.split("`")
+            if len(parts) % 2 == 0:  # 行内代码不配对，整行按文本处理（语法本身已坏）
+                parts = [line]
+            buf = []
+            for idx, seg in enumerate(parts):
+                if idx % 2 == 1:  # 行内代码段原样保留
+                    buf.append(seg)
+                    continue
+                for ch in ZERO_WIDTH:
+                    if ch in seg:
+                        n_zero += seg.count(ch)
+                        seg = seg.replace(ch, "")
+                buf.append(seg)
+            out_lines.append("`".join(buf))
+        text = "\n".join(out_lines)
+        if n_zero:
+            changes.append("删除零宽字符 %d 处（降级窄口径）" % n_zero)
+    out_lines, fence, n_angle = [], False, 0
     for line in text.split("\n"):
         if line.lstrip().startswith("```") or line.lstrip().startswith("~~~"):
             fence = not fence
@@ -126,17 +193,12 @@ def fix_text(text):
                 if k in seg:
                     n_angle += seg.count(k)
                     seg = seg.replace(k, v)
-            for ch in ZERO_WIDTH:
-                if ch in seg:
-                    n_zero += seg.count(ch)
-                    seg = seg.replace(ch, "")
             buf.append(seg)
         out_lines.append("`".join(buf))
+    text = "\n".join(out_lines)
     if n_angle:
         changes.append("直角引号 → 弯引号 %d 处" % n_angle)
-    if n_zero:
-        changes.append("删除零宽字符 %d 处" % n_zero)
-    return "\n".join(out_lines), changes
+    return text, changes
 
 
 def stage_precommit():
@@ -155,7 +217,14 @@ def stage_precommit():
         raw = open(wt, "rb").read()
         if b"\0" in raw[:8000]:
             continue  # 二进制跳过
-        new, changes = fix_text(raw.decode("utf-8", errors="replace"))
+        try:
+            text = raw.decode("utf-8")
+        except UnicodeDecodeError:
+            print("git_commit_gate 跳过（非 UTF-8，不改正）：%s" % path)
+            continue
+        if "\ufffd" in text:
+            print("git_commit_gate 披露（含 U+FFFD 替换字符，不改正、另行报告）：%s" % path)
+        new, changes = fix_text(text)
         if not changes:
             continue
         open(wt, "wb").write(new.encode("utf-8"))
@@ -240,7 +309,7 @@ def stage_commitmsg(msg):
 
 
 def selftest():
-    """隔离临时仓库全用例：改正 4 + 阻断 5 + 既有 5。"""
+    """隔离临时仓库全用例：F 区改正 6＋内容钉死 2＋阻断类 13＝21 用例。"""
     import shutil
     import tempfile
 
@@ -289,6 +358,57 @@ def selftest():
     results.append(("F_改正内容正确", 1, 0 if ok else 1, ok))
     if not ok:
         print("  ✗ F_改正内容正确 " + repr(fixed[:160]))
+
+    # F2 全口径：Cf 全删／Zs 归一半角空格／行首行尾删除／围栏行内一并清理／U+FFFD 保留
+    repo, g = newrepo("t_f2full")
+    src = ("甲\u3000乙\n"
+           "a \u3000\u3000 b\n"
+           "\u3000行首缩进\n"
+           "行尾\u3000\n"
+           "Poul\u00adHenning\u200eX\u2060Y\n"
+           "```text\n栅内\u3000也清\u3000理\n```\n"
+           "行内 `代\u3000码` 尾\n"
+           "坏点\ufffd保留\n")
+    with open(os.path.join(repo, "f2.md"), "wb") as f:
+        f.write(src.encode("utf-8"))
+    g("add", "-A")
+    check("F2_全口径放行", 0, run_gate(repo, "pre-commit"))
+    want = ("甲 乙\n"
+            "a b\n"
+            "行首缩进\n"
+            "行尾\n"
+            "PoulHenningXY\n"
+            "```text\n栅内 也清 理\n```\n"
+            "行内 `代 码` 尾\n"
+            "坏点\ufffd保留\n")
+    fixed = open(os.path.join(repo, "f2.md"), "rb").read().decode("utf-8")
+    ok2 = fixed == want
+    results.append(("F2_全口径内容钉死", 1, 0 if ok2 else 1, ok2))
+    if not ok2:
+        print("  ✗ F2_全口径内容不符 " + repr(fixed))
+
+    # B4 与 pre-commit 链路一致性：自动改正后 B4 不再触发
+    repo, g = newrepo("t_b4chain")
+    with open(os.path.join(repo, "note.md"), "w", encoding="utf-8") as f:
+        f.write("甲\u3000乙\n")
+    g("add", "-A")
+    check("B4_链路改正放行", 0, run_gate(repo, "pre-commit"))
+    check("B4_链路复检放行", 0, run_gate(repo, "commit-msg", "m\n"))
+
+    # FIX_EXCLUDE 边界：内容层文件不自动改正，由 B4 拦截／批准标记放行
+    repo, g = newrepo("t_b4excl")
+    os.makedirs(os.path.join(repo, "05-卷册大纲"))
+    with open(os.path.join(repo, "05-卷册大纲", "x.md"), "w", encoding="utf-8") as f:
+        f.write("甲\u3000乙\n")
+    g("add", "-A")
+    check("EXCL_precommit跳过", 0, run_gate(repo, "pre-commit"))
+    kept = open(os.path.join(repo, "05-卷册大纲", "x.md"), "rb").read().decode("utf-8")
+    okk = kept == "甲\u3000乙\n"
+    results.append(("EXCL_内容原样", 1, 0 if okk else 1, okk))
+    if not okk:
+        print("  ✗ EXCL_内容被改动 " + repr(kept))
+    check("EXCL_B4拒", 1, run_gate(repo, "commit-msg", "m\n"))
+    check("EXCL_B4批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
 
     # G1/G2 既有
     repo, g = newrepo("t_g1")

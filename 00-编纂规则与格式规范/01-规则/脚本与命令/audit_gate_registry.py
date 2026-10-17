@@ -144,7 +144,7 @@ REGISTRY = [
          selftest="--selftest", in_tests_readme=False),
     dict(no="Git 暂存门禁", script="00-编纂规则与格式规范/01-规则/脚本与命令/git_commit_gate.py",
          kind="门禁", object="Git 暂存区：新增路径命中 .gitignore（含 -f 强加）与单个 >5 MB blob（5,242,880 字节）；批准标记 APPROVED-IGNORED:／APPROVED-BIGFILE: 放行",
-         trigger="每次 git commit（.git/hooks/commit-msg 薄壳自动调用；hook 不入库，重建后须重装，见流程规则「Git 暂存规则」）",
+         trigger="每次 git commit：pre-commit 薄壳自动改正（直角引号弯化／零宽删除／CRLF→LF，仅文档类）；commit-msg 薄壳阻断核对（G1/G2/B2/B3/B4 + 批准标记）；hook 不入库，重建后须重装，见流程规则「Git 暂存规则」",
          selftest="--selftest", in_tests_readme=False),
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/embed.py",
          kind="门禁", object="catalog 与内嵌数据块一致性", trigger="改 catalog 或数据块后",
