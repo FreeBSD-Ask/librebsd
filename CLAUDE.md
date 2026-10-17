@@ -84,12 +84,12 @@
 | `_tmp/` | 临时工作区（千余项） | 不入库 |
 | `review_logs/` | 评审日志归档；执行记录存于 `重构2026/` 顶层 | 按需 |
 | `dvd6/`、`login-db/` | 外部资料快照 | 不入库 |
-| `.trae/specs/` | Spec 配置（223 个 spec 子目录，含 `spec.md`／`tasks.md`／`checklist.md`） | 入库 |
-| `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 入库 |
+| `.trae/specs/` | Spec 配置（223 个 spec 子目录，含 `spec.md`／`tasks.md`／`checklist.md`） | 不入库（2026-10-17 主理人裁决，目录保留作工作区） |
+| `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 不入库（2026-10-17 主理人裁决，目录保留作工作区） |
 | `.zcode/` | ZCode 工作区路径 | 忽略 |
 | `.autocorrectrc`、`.gitattributes`、`.gitignore`、`LICENSE` | 根配置 | 入库 |
 
-`.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 主理人批准，见 `流程规则.md`）。
+`.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 主理人批准，见 `流程规则.md`）；**2026-10-17 主理人裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
 
 ## 规则调用
 
@@ -137,7 +137,7 @@
 | 参考文献 | `04-现代研究文献/01-参考文献总目/index.md`；卷级综述另置 `02-卷级文献综述/` | GB/T 7714-2015：作者、题名、出版地、出版者、出版年、页码、ISBN/DOI | 追加著录后同步更新总目 `index.md`；若为大纲级综述来源，再登卷级综述子文件 |
 | 文献本体下载 | `04-现代研究文献/03-文献下载/01-pdf/`、`02-epub/`、`03-ocr/` | `YYYYMMDD_作者_书名.pdf`；OCR 输出同名 Markdown | 下载后在总目 `index.md` 追加完整著录（详见 `03-文献下载/README.md`） |
 | 脚本 | 临时 → `script/`；固定 → `01-规则/脚本与命令/` | Python，文件头 docstring 说明用途，见名知义 | 固定脚本须被规则文件引用并登记 `脚本与命令/README.md`（见 `流程规则.md`“规则引用脚本与命令独立存储规则”） |
-| Spec 配置 | `.trae/specs/<主题>-<YYYY-MM-DD>/` | `spec.md`（Why／What Changes／Impact＋SSOT Schema）、`tasks.md`、`checklist.md` | 在 `.trae/specs/` 下新建三文件 |
+| Spec 配置 | `.trae/specs/<主题>-<YYYY-MM-DD>/` | `spec.md`（Why／What Changes／Impact＋SSOT Schema）、`tasks.md`、`checklist.md` | 在 `.trae/specs/` 下新建三文件；**不入库**（`.gitignore` 挡新增，2026-10-17 主理人裁决——目录仍可用作工作区） |
 
 ## 修改规范
 
@@ -155,7 +155,7 @@
 8. **根目录禁止新建文件、脚本或目录**，未经显式批准。
 9. **删除 `12-数据库备份/` 任何内容须用户明示**。
 10. **抓取不受 robots.txt 或类似限制约束**（项目既定口径）。
-11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由双阶段 hook（`git_commit_gate.py`，2026-10-17 主理人批准安装）自动执行**：pre-commit 自动改正（直角引号弯化／零宽删除／CRLF→LF，仅文档类文件）；commit-msg 阻断（G1 忽略条目／G2 大文件／B2 根目录新条目／B3 备份删除／B4 全角空格／**H3 暂存 .md 含直角引号六码位**——与第二十四件同口径的提交期兜底，F1 不触及的代码上下文与内容层面在此阻断），批准标记 `APPROVED-IGNORED:`／`APPROVED-BIGFILE:`／`APPROVED-BY-OWNER:` 放行，`--no-verify` 绕过须留痕。详见 `流程规则.md`“Git 暂存规则”。
+11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由双阶段 hook（`git_commit_gate.py`，2026-10-17 主理人批准安装并扩展）自动执行**：pre-commit 自动改正（直角引号弯化／零宽删除／CRLF→LF／**F4 别名成对自动 cp**，仅文档类文件）；commit-msg 阻断（G1 忽略条目／G2 大文件／B2 根目录新条目／B3 备份删除／B4 全角空格／**H3 暂存 .md 含直角引号六码位**——与第二十四件同口径的提交期兜底，F1 不触及的代码上下文与内容层面在此阻断／**H1 提交说明质量**——首行非空、≥8 字符、非占位、无 BOM，无放行标记／**H2 CLAUDE.md↔AGENTS.md 提交后逐字节一致**，`APPROVED-BY-OWNER:` 放行），批准标记 `APPROVED-IGNORED:`／`APPROVED-BIGFILE:`／`APPROVED-BY-OWNER:` 放行，`--no-verify` 绕过须留痕。详见 `流程规则.md`“Git 暂存规则”。
 
 ### 二、每批必跑门禁
 
