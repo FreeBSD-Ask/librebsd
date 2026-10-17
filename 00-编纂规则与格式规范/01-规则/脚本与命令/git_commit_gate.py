@@ -255,6 +255,7 @@ def selftest():
         g("init", "-q")
         g("config", "user.email", "gate@test")
         g("config", "user.name", "gate")
+        g("config", "commit.gpgsign", "false")  # 全局 commit.gpgsign=true 会让临时仓库签名失败（No secret key）
         return repo, g
 
     def run_gate(repo, stage, msg=None):
