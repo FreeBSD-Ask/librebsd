@@ -48,12 +48,12 @@
 | 01 | `01-项目管理/` | `00-变更记录/changelog.duckdb`（修改记录唯一载体，`index.md` 为使用说明）＋`01-编纂规划与报告归档/`（含长线任务总登记表与正文层规划报告类文档） |
 | 02 | `02-sacred源材料/` | 编纂指导思想源材料＋`sacred_sources.duckdb`（29 章 191 子节原文）；核心文件 `shigang.md`／`lishidagang.md`／`dagang.md` 在此；子目录内容存于 `sacred_sources.duckdb` |
 | 03 | `03-原始史料库/` | 一手史料：`original_sources.duckdb`（含 G4 硬件史料）＋`01-代码仓库史料/`（含 `01-数据库本体/资料数据库.duckdb`，Schema v1.4；10 个项目级 DuckDB）＋`02-man源与posix仓库/`（8 个稀疏检出，**不可拆散**）＋`06-考据记录/`＋`10-技术器物史料/`（G4，7 个技术域文件）＋`11-邮件列表史料/`（4 大 BSD＋Linux kernel 全量存档）＋`12-multics史料/`＋`13-44doc文档史料/`（papers／psd／smm／usd／IPv6，240 文件）＋`14-播客史料/`（10 个独立库，待转写清单见该目录）＋`15-login杂志史料/` |
-| 04 | `04-现代研究文献/` | 研究产出：`research_notes.duckdb`＋**`historical_claims.duckdb`（claim 唯一真值）**＋`05-参考文献全文数据库/`＋`06-存疑数据库/`（`doubts_standalone.duckdb`）＋`01-参考文献总目/`（60+ 子文件）＋`02-卷级文献综述/`＋`03-文献下载/`（pdf／epub／ocr）＋`11-翻译与多语种史料/`（G12） |
+| 04 | `04-现代研究文献/` | 研究产出：`research_notes.duckdb`＋**`historical_claims.duckdb`（claim 唯一真值）**＋`05-参考文献全文数据库/`＋`06-存疑数据库/`（`doubts_standalone.duckdb`）＋`01-参考文献总目/`（30 个分类子文件）＋`02-卷级文献综述/`＋`03-文献下载/`（pdf／epub／ocr）＋`11-翻译与多语种史料/`（G12） |
 | 05 | `05-卷册大纲/` | 磁盘层大纲（实存第01–第24卷，现行口径见上方标记块）＋`SUMMARY.md`（GitBook 总导航，由 `sync_gitbook_summary.py` 生成；`index.md` 磁盘未建，**不是**索引载体）＋`.writing_rules.md`（WO-007 幂等约束） |
 | 07 | `07-事实核查记录/` | 单条核查原子记录＋`fact_checks.duckdb`；汇总报告归 `08-核查报告与多轮复核/` |
-| 08 | `08-核查报告与多轮复核/` | 汇总报告／多轮复核／目录审计＋`review_reports.duckdb`；**`重构2026/`**（现行目录页、号文与执行记录、`data/`、`assets/`、`tests/`）＋`12-重构大纲书目述评/`（20 卷分卷＋`index.md`，无块卷不建文件）＋`06-全书综合核查/`＋`07-目录审计/`＋G5 历史争议图谱（`index.md`＋8 争议文件）／G6 比较史／G8 同行评议／G11 可复现性（各有 `index.md`）＋`13-deepseek-cankao消解归档/` |
-| 10 | `10-交叉索引/` | 人名／主题／命令／术语／年代（G9）／组织机构（G10）／概念史与思想谱系（G2）／人物传记与学术谱系（G3）八类索引＋`cross_indexes.duckdb` |
-| 11 | `11-元数据接口/` | `01-章节元数据/chapter_index.json`、`02-交叉引用/cross_reference_map.csv`、`08-引文网络/`（G7）、`09-文件夹数据库索引/`（`folder_db_registry.csv`＋`cross_db_references.csv`）＋`metadata_interfaces.duckdb` |
+| 08 | `08-核查报告与多轮复核/` | 汇总报告／多轮复核／目录审计＋`review_reports.duckdb`；**`重构2026/`**（现行目录页、号文与执行记录、`data/`、`assets/`、`tests/`）＋`12-重构大纲书目述评/`（25 卷分卷＋`index.md`，无块卷不建文件）＋`06-全书综合核查/`＋`07-目录审计/`＋G5 历史争议图谱／G6 比较史／G8 同行评议／G11 可复现性（各目录仅存 `index.md`，内容在库）＋`13-deepseek-cankao消解归档/` |
+| 10 | `10-交叉索引/` | 八类索引（人名／主题／命令／术语／年代 G9／组织机构 G10／概念史 G2／人物传记 G3）已入 `cross_indexes.duckdb`（10 表）；顶层存 `S03-历史对象登记表.md` 与 `S03-historical_objects.json` |
+| 11 | `11-元数据接口/` | `01-章节元数据/chapter_index.json`、`02-交叉引用/cross_reference_map.csv`、`09-文件夹数据库索引/`（`folder_db_registry.csv`＋`cross_db_references.csv`＋`dashboard.md`）＋`metadata_interfaces.duckdb`（含 `build_citation_records` 引文记录＝G7／`timeline_records`）＋`ndb构建脚本-20260922/` |
 | 12 | `12-数据库备份/` | 备份与归档层（补编号缺口 12）；`backup_databases.py`（SCOPE 26 库＝14 功能/史料库＋12 代码仓库库；`--all` 实轮 25 库，historical_claims 由 hc 专项独担）＋`backup_outline.py`（`05-卷册大纲/` tar.gz）；运行日志 `backup_log.jsonl`；**删除本目录任何内容须用户明示** |
 
 **编号缺口 06、09**：06 为正文层停用后的空号，09 为保留空号；两号不得复用。
@@ -65,13 +65,13 @@
 - **03-原始史料库**：`06-考据记录/` 按 `YYYYMMDD_<主题>.md` 命名。
 - **04-现代研究文献**：`13-临时放置文献处理20260806/` 为临时收件区；12 个研究主题的内容存于 `research_notes.duckdb`。
 - **08-核查报告与多轮复核**：`06-全书综合核查/`、`07-目录审计/`（`directory-audit-report.md`、`nonstandard-naming-report.md`）。
-- **10-交叉索引**：`07-`／`08-` 的 `index.md` 保留。
-- **11-元数据接口**：`01-`／`02-`／`09-` 保留关键索引文件。
+- **10-交叉索引**：八类索引已入 `cross_indexes.duckdb`；`S03-历史对象登记表.md`／`S03-historical_objects.json` 为顶层载体。
+- **11-元数据接口**：`01-`／`02-`／`09-` 存关键索引文件；引文与时间线记录在 `metadata_interfaces.duckdb`。
 
 ### 数据库五条通则
 
 1. **DuckDB 为唯一工作副本**（可写）；SQLite 原库以 `ARCHIVE_FINAL_*.db.gz` 永久归档于 `12-数据库备份/` 各库子目录（prune 豁免）。细则见 `流程规则.md`「DuckDB 分析层与主存储层规则」。
-2. **claim 库唯一真值**：`04-现代研究文献/historical_claims.duckdb`（实测 claim 472,188 行、evidence 498,454 行、raw_source 499,418 行，34 表）。大纲 ROW_MINE 块头与目录溯源注中的 `historical_claims.duckdb` 均为**逻辑名**，物理路径唯一；同名空壳已清除，防再生见 `流程规则.md`「功能数据库唯一真值路径与空壳防治」。
+2. **claim 库唯一真值**：`04-现代研究文献/historical_claims.duckdb`（34 表；行数随批次增长，以库为准）。大纲 ROW_MINE 块头与目录溯源注中的 `historical_claims.duckdb` 均为**逻辑名**，物理路径唯一；同名空壳已清除，防再生见 `流程规则.md`「功能数据库唯一真值路径与空壳防治」。
 3. **数据库备份保留规则（系统化，2026-10-14 起）**：三计划任务（`librebsd-dball-backup-30min`／`librebsd-hc-backup-30min`／`librebsd-outline-backup-30min`，均以 pythonw 无窗口后台运行；频次每 5 小时，2026-10-15 主理人令），常规备份**不再是人工义务**，重大施工前仍须专项 prebak；槽位＝**24 小时密槽（30 分钟粒度，频次调整后 24h 内实际 ≤5 份/库）＋1/2/3/4/7/15 日槽**（historical_claims 滚动预算约 2.3GB）；播客 10 库／邮件列表库／新闻组库明确不备份，`references_fulltext` 保留；桌面《数据库备份.txt》记成功/失败（滚动 15 日）。**归档体是 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 的逻辑导出**（34 parquet ＋ `schema.sql` ＋ `load.sql`）——**恢复须跑档内 `load.sql`，不是单文件拷贝**；完整性由 `verify_archive()` 三段校验，判据不得用「档内前 6 字节 == DUCK 魔数」。
 4. **写库门禁**：任何批量写库（受控修库／register／批量导入）前必跑 `claimdb_guard.py --db <库名>`（PASS 才写、FAIL 即停）；register 另须 `register_waterlock.py` 水位锁，写前写后各落 `rotate_guard_state.py` 一槽。详见 `流程规则.md`「写库门禁与全库健康哨兵」。
 5. **文件夹级数据库**：`*.duckdb` 不入库；新表须两处登记＋`schema_meta`；`files` 行随源文件级联刷新；转库、源文件清理与交叉引用同步见 `流程规则.md`「其他文件夹转数据库规则」。
