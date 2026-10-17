@@ -281,8 +281,10 @@ def main():
 
             rid = next_ids(con, "references", 1)[0]
             title = os.path.splitext(fn)[0].replace("_", " ").replace("-", " ")
-            fmt = ("html" if low.endswith((".html", ".htm")) else
-                   ("epub" if low.endswith(".epub") else "txt"))
+            # 活库 format 词表区分 md（654 行）与 txt（222 行）；旧版把一切非 html／epub
+            # 的扩展名都写成 txt，会把 .md 误标为 txt。字幕等词表无对应值者仍归 txt。
+            ext = os.path.splitext(low)[1].lstrip(".")
+            fmt = {"html": "html", "htm": "html", "md": "md", "epub": "epub"}.get(ext, "txt")
             con.execute(
                 'INSERT INTO "references" (id, title, author, year, format, file_path, '
                 "filename, sha256, file_size, source_tier, created_at, updated_at, "
