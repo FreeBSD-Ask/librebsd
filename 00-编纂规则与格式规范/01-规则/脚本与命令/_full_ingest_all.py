@@ -199,16 +199,18 @@ def main():
     try:
         now = datetime.now(TZ).strftime("%Y-%m-%dT%H:%M:%S+08:00")
 
+        # DuckDB 的 con.execute() 返回连接本身而非 cursor，**不可迭代**
+        # （TypeError: 'DuckDBPyConnection' object is not iterable），一律用 .fetchall()。
         existing_fns, existing_paths, existing_shas = set(), set(), set()
-        for (fn,) in con.execute('SELECT filename FROM "references" WHERE filename IS NOT NULL '
-                                 "AND filename <> ''"):
-            existing_fns.add(fn)
-        for (fp,) in con.execute('SELECT file_path FROM "references" WHERE file_path IS NOT NULL '
-                                 "AND file_path <> ''"):
-            existing_paths.add(fp.replace("\\", "/"))
-        for (s,) in con.execute('SELECT sha256 FROM "references" WHERE sha256 IS NOT NULL '
-                                "AND sha256 <> ''"):
-            existing_shas.add(s)
+        existing_fns.update(r[0] for r in con.execute(
+            'SELECT filename FROM "references" WHERE filename IS NOT NULL '
+            "AND filename <> ''").fetchall())
+        existing_paths.update(r[0].replace("\\", "/") for r in con.execute(
+            'SELECT file_path FROM "references" WHERE file_path IS NOT NULL '
+            "AND file_path <> ''").fetchall())
+        existing_shas.update(r[0] for r in con.execute(
+            'SELECT sha256 FROM "references" WHERE sha256 IS NOT NULL '
+            "AND sha256 <> ''").fetchall())
 
         files = []
         # 活库 file_path 现行值以**仓库根**为基准（实测 5786 条有值中 4953 条以
