@@ -10,13 +10,13 @@
 
 ## 209.1 【Linux社区】BSD 谱系（ZFS 交叉验证与 NFSv4 ACL 参照）
 
-- 【Linux社区】2019年2月 Martin Cracauer(cracauer@cons.org) 在「Possibe NFS mm problem: client page-in errors with ZFS Linux server」串中报告 ZFS on Linux NFS 客户端页错误问题，「cross-checked with a FreeBSD server with very similar ZFS code」，是 FreeBSD 作为 ZFS on Linux 调试对照基准的具体用例。 `<!-- ROW_MINE: lkml.messages.6803041 -->`
-- 【Linux社区】2023年5月 Ondrej Valousek(ondrej.valousek.xm@renesas.com) 在「RE: A pass-through support for NFSv4 style ACL」串中列举 FreeBSD、OmniOS、Solaris 作为 NFSv4 ACL 参照，「a clean NFSv4 acls implemented - just like Netapp, OmniOS, Solaris or FreeBSD」，是 BSD 血统系统作为 ZFS ACL 方案参照的具象化。 `<!-- ROW_MINE: lkml.messages.3534781 -->`
+- 【Linux社区】2019年2月 Martin Cracauer(cracauer@cons.org) 在“Possibe NFS mm problem: client page-in errors with ZFS Linux server”串中报告 ZFS on Linux NFS 客户端页错误问题，“cross-checked with a FreeBSD server with very similar ZFS code”，是 FreeBSD 作为 ZFS on Linux 调试对照基准的具体用例。 `<!-- ROW_MINE: lkml.messages.6803041 -->`
+- 【Linux社区】2023年5月 Ondrej Valousek(ondrej.valousek.xm@renesas.com) 在“RE: A pass-through support for NFSv4 style ACL”串中列举 FreeBSD、OmniOS、Solaris 作为 NFSv4 ACL 参照，“a clean NFSv4 acls implemented - just like Netapp, OmniOS, Solaris or FreeBSD”，是 BSD 血统系统作为 ZFS ACL 方案参照的具象化。 `<!-- ROW_MINE: lkml.messages.3534781 -->`
 
 ## 209.2 【Linux社区】许可证张力（GPL-only 阻碍与 FreeBSD 转向）
 
-- 【Linux社区】2017年12月 Boris Lukashev(blukashev@sempervictus.com) 在「Re: [kernel-hardening] [PATCH 5/5] docs: add dmesg encryption doc」串中质疑 GPL-only 设施对非 GPL 模块的阻碍，「Tom Caputi of Datto had to port over a ton of Illumos crypto code for ZFS」，是 GPL 与 BSD 血统冲突在 ZFS on Linux 上的具体印证。 `<!-- ROW_MINE: lkml.messages.6734892 -->`
-- 【Linux社区】2019年1月 Rene Schickbauer(cavac@cavac.at) 在「Re: x86/fpu: Don't export __kernel_fpu_{begin,end}()」串中反驳 GPL-only 立场并表态宁可转向 FreeBSD 也不换文件系统，「i'm more inclined to switching to FreeBSD than to switch to another filesystem」，是 GPL 与 BSD 血统冲突在 ZFS 问题上最直白的表态。 `<!-- ROW_MINE: lkml.messages.6975317 -->`
+- 【Linux社区】2017年12月 Boris Lukashev(blukashev@sempervictus.com) 在“Re: [kernel-hardening] [PATCH 5/5] docs: add dmesg encryption doc”串中质疑 GPL-only 设施对非 GPL 模块的阻碍，“Tom Caputi of Datto had to port over a ton of Illumos crypto code for ZFS”，是 GPL 与 BSD 血统冲突在 ZFS on Linux 上的具体印证。 `<!-- ROW_MINE: lkml.messages.6734892 -->`
+- 【Linux社区】2019年1月 Rene Schickbauer(cavac@cavac.at) 在“Re: x86/fpu: Don't export __kernel_fpu_{begin,end}()”串中反驳 GPL-only 立场并表态宁可转向 FreeBSD 也不换文件系统，“i'm more inclined to switching to FreeBSD than to switch to another filesystem”，是 GPL 与 BSD 血统冲突在 ZFS 问题上最直白的表态。 `<!-- ROW_MINE: lkml.messages.6975317 -->`
 
 ## 209.3 【Linux社区】附录：筛查与去重情况
 

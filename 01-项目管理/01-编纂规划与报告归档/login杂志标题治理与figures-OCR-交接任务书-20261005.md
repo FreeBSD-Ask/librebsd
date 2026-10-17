@@ -3,8 +3,8 @@
 - **编号**：login杂志交接任务书-20261005
 - **日期**：2026-10-05
 - **状态**：**全链闭环（2026-10-06）：T1–T7 七项任务全部完成并终检通过**
-- **修订（2026-10-05 主理人复核反馈）**：执行架构定案——**全部 OCR/抽取/复核由 Python 引擎直调 API（≤120 路、KeyPool 轮替存储 key、复用既有 T1 线路），不派子代理**；spec v3「40 路子代理轮询池」作废（spec 已加 v3.1 注记）
-- **修订（2026-10-06 执行实况）**：主理人令「不修 sensenova lib，复用旧线路」——实际采用**旧线路** `api.senseaudio.cn/v1 + glm-5.3-flash + 存储 key 池轮替`（`script\_glm_line_20261006.py`，两引擎各换 import 一行，sensenova lib 一字未动）；探针实测文本抽取 4.1s、视觉转写 200，56 枚存储 key 中 30 枚活；T2 全链当日闭环（详见 §三）
+- **修订（2026-10-05 主理人复核反馈）**：执行架构定案——**全部 OCR/抽取/复核由 Python 引擎直调 API（≤120 路、KeyPool 轮替存储 key、复用既有 T1 线路），不派子代理**；spec v3“40 路子代理轮询池”作废（spec 已加 v3.1 注记）
+- **修订（2026-10-06 执行实况）**：主理人令“不修 sensenova lib，复用旧线路”——实际采用**旧线路** `api.senseaudio.cn/v1 + glm-5.3-flash + 存储 key 池轮替`（`script\_glm_line_20261006.py`，两引擎各换 import 一行，sensenova lib 一字未动）；探针实测文本抽取 4.1s、视觉转写 200，56 枚存储 key 中 30 枚活；T2 全链当日闭环（详见 §三）
 - **权威源**：`d:\librebsd\.trae\specs\execute-login-title-fix-and-figures-ocr\`（spec.md v3 已批准 / tasks.md / checklist.md）
 - **本任务书性质**：磁盘实况快照 + 接手操作指引（2026-10-05 23:30 盘查）；与 spec 冲突时以 spec 为准，数字以本任务书核验值为准
 
@@ -38,11 +38,11 @@
 
 **执行架构（主理人 2026-10-05 复核定案：单 Python 并发池，子代理退场）**：
 1. **复用既有 OCR 线路**：全部 LLM/OCR 调用一律 import 已建成并冒烟验证的 T1 客户端（`script\_sensenova_lib_20261005.py`：KeyPool 轮替 + `chat()` 文本/图像 + `extract_json` + 共享日志），复用 T2 已验证的 staging/单写者模式；**不另建客户端、不另立 key 池文件**。
-2. **Python 直跑，不派子代理**：OCR/抽取/复核全由 Python 引擎（ThreadPool 直调 API）执行，主会话只负责起停进程与排障；**禁止用子代理做任何 OCR/抽取/复核**（历史战役教训：子代理臆造页、误报自身处置、终止即丢工作）。spec v3「40 路子代理轮询池」作废。
+2. **Python 直跑，不派子代理**：OCR/抽取/复核全由 Python 引擎（ThreadPool 直调 API）执行，主会话只负责起停进程与排障；**禁止用子代理做任何 OCR/抽取/复核**（历史战役教训：子代理臆造页、误报自身处置、终止即丢工作）。spec v3“40 路子代理轮询池”作废。
 3. **并发 ≤120 路**：全局并发上限 120 路（cfg `pools.global_max_routes=120`），期级/项级并发由引擎 `--workers` 控制，可自 40 起步视 429 频率上调。
 4. **轮替存储的 key**：唯一 key 入口 = `KeyPool`（round-robin 轮替存储池 `script\_sensenova_keys_20261005.json` 11 枚 + 429 共享冷却文件 `script\_sensenova_cooldown_20261005.json`）；引擎禁止硬编码或旁路读取 key。限流吃紧时可切 cfg 接入既有存储池 `C:/Users/ykla/.sensenova/senseaudio_keys.json`（48 枚，api.senseaudio.cn/glm-5.3-flash 线路，须同步改 base_url/model），切换属线路级变更、先小批试点再全量。
 
-> 注：spec 文本中「5,510 篇 / 221+ 期」为 eraB-print 口径笔误；实测全口径为 **5,680 篇 / 236 期**（含 unix_news 169 篇）。
+> 注：spec 文本中“5,510 篇 / 221+ 期”为 eraB-print 口径笔误；实测全口径为 **5,680 篇 / 236 期**（含 unix_news 169 篇）。
 
 ---
 
@@ -84,7 +84,7 @@
 
 **执行实况（关键经验，T4 直接复用）**：
 1. **旧线路**＝`script\_glm_line_20261006.py`（api.senseaudio.cn + glm-5.3-flash + 存储 key 池轮替 + 429 冷却 + billing/invalid 冻结 24h + `extract_json` 含 `strict=False` 容错）；key 池 56 枚存储、30 枚活（`_glm_line_alive_keys_20261006.txt`）；**sensenova lib 未修未用**。
-2. **DuckDB 1.5.5 FK 限制（联网证实：duckdb#20246/#8988/#13819，无修复版）**：articles 被 4 表 FK 引用，对被引用行 UPDATE 含 LIST 列（authors）触发行重写并按**已提交状态**重查 FK——同事务删子行不可见、DROP CONSTRAINT 未实现。writer 已改造为**差量 UPDATE（未变字段剔除）＋ authors 变更走「子表存档落盘→删→改→回插」autocommit 三步回路 + 启动恢复协议**（`_title_fix_childcycle_20261006.jsonl`）；标量列 UPDATE 不触发、T4 的 figures 更新（无子表引用、ocr_text 为标量）**不受影响**。
+2. **DuckDB 1.5.5 FK 限制（联网证实：duckdb#20246/#8988/#13819，无修复版）**：articles 被 4 表 FK 引用，对被引用行 UPDATE 含 LIST 列（authors）触发行重写并按**已提交状态**重查 FK——同事务删子行不可见、DROP CONSTRAINT 未实现。writer 已改造为**差量 UPDATE（未变字段剔除）＋ authors 变更走“子表存档落盘→删→改→回插”autocommit 三步回路 + 启动恢复协议**（`_title_fix_childcycle_20261006.jsonl`）；标量列 UPDATE 不触发、T4 的 figures 更新（无子表引用、ocr_text 为标量）**不受影响**。
 3. Windows 下 `os.replace` 游标文件会被并发读取占用——writer save_cursor 已带 5 次重试；监控时**勿在读游标的同时跑写者**。
 4. glm-5.3-flash 抽取大期时串值可能含裸换行（strict=False 解决）与未转义内嵌引号（偶发，重试或按原判恢复）。
 
@@ -160,7 +160,7 @@
   4. 若仍失败：窗口 12,000 → 6,000–8,000 字符降推理负担；必要时探索文档中的思考开关参数（以 platform.sensenova.cn/docs 现行版为准）。
 - **附带证据**：另有一次 `RemoteDisconnected` 连接错误 + 429 冷却（`qbyr1Z`，已按机制换 key），属网络偶发，机制已覆盖，无需改。
 
-### 5.2 issue 25「窗口成功但条目 0」待判定
+### 5.2 issue 25“窗口成功但条目 0”待判定
 - 可能与 5.1 同因（空 content 被“成功解析为空数组”），也可能该期确实无正文条目。**修复后重跑即可判定**。
 
 ### 5.3 重复行（无害）
