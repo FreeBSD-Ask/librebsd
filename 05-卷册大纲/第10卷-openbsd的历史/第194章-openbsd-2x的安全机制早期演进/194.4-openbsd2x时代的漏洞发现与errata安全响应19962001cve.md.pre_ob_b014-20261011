@@ -1,0 +1,510 @@
+# 194.4 OpenBSD 2.x 时代的漏洞发现与 errata 安全响应（1996-2001）——CVE 编号体系尚未普及，OpenBSD 以 errata patches 存档为漏洞跟踪主轴，代码审计驱动的“发现漏洞—快速修复—加固重构”循环在 2.x 时期奠基
+
+## 194.4.1 CVE 编号缺位与 errata patches 存档体系（1996-2001）
+
+**要点**：openbsd.duckdb openbsd-src 仓库在 1996-10-01 至 2001-06-01 期间的 CVE 相关 commit 数为零，去重 CVE 数为零，但 Security fix commit（无 CVE 编号）有 5 条，早期漏洞补遗条目 19 条；这一数据格局并非意味着 OpenBSD 2.x 时期无漏洞，而是反映 CVE 编号体系在 1999-2001 年间尚未被 OpenBSD 社区系统性地引用——OpenBSD 以自有的 errata patches 存档作为漏洞跟踪与修复公告的主轴，errata 原文通常不引用 CVE 编号，仅标注 SECURITY FIX 与受影响版本；5 条 Security fix commit 涵盖 1998 年 8 月 deraadt 恢复被 downsj 误删的安全修复、2000 年 5 月 itojun 修复 NetBSD 安全公告涉及的选项长度下溢、2001 年 3-4 月 fgsch 修复 timed 协议短包处理；19 条早期漏洞补遗覆盖 OpenBSD 2.0 至 2.9 全部次版本，涉及 BIND DNS、**cron(8)**、IP 源路由、NFS 文件句柄可预测性、Kerberos V5、**procfs(5)**、**rfork(2)**、**vacation(1)**、**lpd(8)**、**tgetent(3)**、**xterm(1)**、`USER_LDT` 内核选项、**rm(1)** 等组件。
+
+  **Security fix commit 列表（1998-2001）**：
+
+  | commit hash | 日期 | 作者 | 说明 |
+  | --- | --- | --- | --- |
+  | `e9c24f64af83b204d7a1ae324638873d6e4d6a03` | 1998-08-31 | deraadt | 恢复被 downsj 误删的安全修复 |
+  | `b1847376027c1fcbf7570b990861ab21508d188c` | 2000-05-06 | itojun | 修复 NetBSD 安全公告涉及的选项长度下溢 |
+  | `2a6be46ef2855608aed33bee9976d282e2b4c62c` | 2001-03-31 | fgsch | timed 检查短包与错误类型（check for short packets and bad types） |
+  | `db6846956ee03c261001da9491a0f4b981fbf02f` | 2001-03/04 | fgsch | timed 丢弃短包（discard short packets） |
+  | `28c97ceb003a0200c7b12d005359e580282886e2` | 2001-03/04 | fgsch | timed 在用作 tsptype 索引前先检查类型（check type before using it as tsptype index） |
+
+**史料**：openbsd.duckdb openbsd-src 仓库（CVE commit 数 = 0，Security fix commit 数 = 5，早期漏洞补遗 = 19）；OpenBSD errata patches 存档（2.0-2.9 各版本）；commit `e9c24f64af83b204d7a1ae324638873d6e4d6a03`（1998-08-31 deraadt）、`b1847376027c1fcbf7570b990861ab21508d188c`（2000-05-06 itojun）、`2a6be46ef2855608aed33bee9976d282e2b4c62c`（2001-03-31 fgsch）［A］
+
+**史观**：总纲第 2 条——历史是形式主义化的非存在（存疑）：OpenBSD errata 体系将漏洞跟踪形式主义化为“SECURITY FIX + 受影响版本 + 补丁”的三元结构，早于 CVE 编号的普及〔订正注：原挂“总纲第 17 条——形式主义化”系自撰描述符，权威第 17 条为“证明世界先于解释和改造世界”；按论旨改挂第 2 条〕；总纲第 10 条——动手者创造历史：deraadt 个人恢复被误删的安全修复体现“动手者”的安全责任感〔订正注：原描述符“边缘者贡献”系变体，权威第 10 条为“动手者创造历史”，编号不变〕
+
+**辨析**：CVE 编号缺位不等于无漏洞——19 条早期漏洞补遗证明 OpenBSD 2.x 时期漏洞发现活跃，仅因 CVE 体系尚未普及而未被编号；errata 原文多未注明具体日期与 CVE 编号，考据须以版本发布时间窗与 commit hash 交叉验证；“put back a security fix downsj removed ages ago”的“ages ago”措辞模糊，具体删除时间与原因须考据 downsj 的 commit 历史
+
+**文献**：openbsd.duckdb openbsd-src 仓库；OpenBSD errata patches 存档 [EB/OL]. **<https://www.openbsd.org/errata.html>** ［A］
+
+## 194.4.2 内核与网络栈漏洞群——procfs/rfork/源路由/NFS 文件句柄（1996-1998）
+
+**要点**：OpenBSD 2.0-2.2 时期的内核与网络栈漏洞集中在继承自 4.4BSD 的代码缺陷——2.0 的 BIND 4.9.x 缓存中毒与 NXT 记录处理缺陷可被远程攻击者利用伪造 DNS 响应污染缓存；2.0 的 IP 源路由默认接受缺陷允许攻击者构造带源路由选项的 IP 包绕过地址验证实现 TCP 连接劫持；2.0 的 4.4BSD NFS 文件句柄可预测性使攻击者可猜测文件句柄绕过 NFS 导出限制；2.0 的 Kerberos V5 实现存在可伪造的票据授予票据与密钥分发中心缺陷；2.1 的 **procfs(5)** 挂载后进程内存映射对其他用户可读，本地用户可借 **`/proc/[pid]/mem`** 读取其他用户进程内存；2.1 的 **rfork(2)** 系统调用存在文件描述符表与信号处理表共享逻辑缺陷；2.2 的内核 IP 源路由处理逻辑在 `net.inet.ip.forwarding` 启用且 `net.inet.ip.sourceroute` 禁用时存在缺陷；这些漏洞的共性是继承自 4.4BSD 的“信任默认配置”假设——OpenBSD 2.x 时期的代码审计正是对这些继承缺陷的系统性清理。
+
+**史料**：OpenBSD 2.0/2.1/2.2 errata patches；早期漏洞补遗条目（BIND/cron/源路由/NFS/Kerberos/procfs/rfork）；openbsd.duckdb openbsd-src 仓库 ［A］
+
+**史观**：（存疑·原伪标签“总纲第 7 条——技术选择即政治选择”已去号，权威第 7 条为“理论必须自反”，所述默认拒绝源路由对照无总纲对位）：OpenBSD 选择“默认拒绝源路由”作为安全策略，与 4.4BSD 的“默认接受”形成对照；总纲第 2 条——历史是形式主义化的非存在（存疑）：procfs 权限收紧是从“信任继承”到“默认最小权限”的形式主义化重构〔订正注：原挂“总纲第 17 条——形式主义化”系自撰描述符，权威第 17 条为“证明世界先于解释和改造世界”；按论旨改挂第 2 条〕
+
+**辨析**：4.4BSD NFS 文件句柄可预测性的具体随机化修复方案须考据 OpenBSD 源码 commit；IP 源路由默认禁用的具体 sysctl 变量名与默认值变更时间须对照源码核验；Kerberos V5 的“可伪造票据授予票据”缺陷涉及 MIT Kerberos V5 上游还是 OpenBSD 本地实现须区分
+
+**文献**：OpenBSD 2.0-2.2 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>**；4.4BSD-Lite 源码；openbsd.duckdb openbsd-src 仓库 ［A］
+
+## 194.4.3 用户态服务漏洞群——lpd/vacation/cron/tgetent/xterm（1997-1999）
+
+**要点**：OpenBSD 2.0-2.2 时期的用户态服务漏洞集中于继承自 4.4BSD 的传统 Unix 工具——2.1 的 **lpd(8)** 在处理远程打印请求时缺乏充分的输入验证与地址认证，远程攻击者可发送特制打印请求触发缓冲区溢出或未授权打印；2.1 的 **vacation(1)** 自动回复程序在处理邮件头字段时存在输入验证缺陷，可被构造的邮件头触发缓冲区溢出或命令注入；2.0 的 Vixie **cron(8)** 4.1 存在权限检查缺陷，本地用户可借由 **crontab(1)** 提交特制 crontab 文件提升权限；2.1 的 **tgetent(3)** termcap 数据库读取函数在读取超长 termcap 条目至固定大小缓冲区时缺乏边界检查；2.2 的 **xterm(1)** 与 Xaw 库在处理 `inputMethod`、`preeditType`、`*Keymap` 资源时存在缓冲区溢出（含 XFree86 3.3.x）；这些漏洞的修复体现了 OpenBSD“修复即加固”的循环——不仅修补具体缺陷，早在 2.4（1998-11）即由 Todd Miller 与 Theo de Raadt（西奥·德·若特）设计 strlcpy/strlcat 安全字符串 API 替代 strcpy/strcat（strlcpy(3) 手册页载 first appeared in OpenBSD 2.4），将边界检查从开发者手动责任提升为 API 级别的强制约束。
+
+**史料**：OpenBSD 2.0-2.2 errata patches；早期漏洞补遗条目（lpd/vacation/cron/tgetent/xterm）；openbsd.duckdb openbsd-src 仓库 strlcpy/strlcat 引入 commit；Miller C, de Raadt T. strlcpy and strlcat — Consistent, Safe, String Copy and Concatenation [C]//USENIX Annual Technical Conference. 1999 ［A］
+
+**史观**：总纲第 2 条——历史是形式主义化的非存在（存疑）：strlcpy/strlcat 的设计是将“边界检查”从开发者手动责任形式主义化为 API 级别的强制约束〔订正注：原挂“总纲第 17 条——形式主义化”系自撰描述符，权威第 17 条为“证明世界先于解释和改造世界”；按论旨改挂第 2 条〕；总纲第 10 条——动手者创造历史：传统 Unix 工具的安全加固由 OpenBSD 小团队而非上游原始维护者推动〔订正注：原描述符“边缘者贡献”系变体，权威第 10 条为“动手者创造历史”，编号不变〕
+
+**辨析**：strlcpy/strlcat 具体首次引入 commit 仍须考据——strlcpy(3) 手册页载 first appeared in OpenBSD 2.4（1998-11），早于原记“2.x 末期至 3.x 初期”窗口，引入 commit 历史仍须对照源码核验；Vixie cron 4.1 的权限检查缺陷具体为 crontab 文件解析还是权限验证须对照源码核验；XFree86 3.3.x 的 xterm 溢出是否为上游已修复缺陷的 OpenBSD 同步须区分
+
+**文献**：OpenBSD 2.0-2.2 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>**；Miller C, de Raadt T. strlcpy and strlcat [C]//USENIX ATC. 1999；openbsd.duckdb openbsd-src 仓库 ［A］
+
+## 194.4.4 OpenSSH 与加密栈早期漏洞——isakmpd/sslUSA26/USER_LDT/rm(1)（1999-2001）
+
+**要点**：OpenBSD 2.6-2.9 时期的加密栈与安全工具漏洞标志着“安全操作系统”自身安全组件的信任危机——2.6 的 `sslUSA26` 软件包（美国版 SSL 库，内含 RSAREF）存在缓冲区溢出，在 **isakmpd(8)** 启用 SSL/RSA 特性时可被利用，errata #016（1999-12-02）建议美国用户删除并重装更新后的 `sslUSA26` 软件包，国际版 `ssl26` 用户不受影响；2.7 的 **`/etc/sshd_config`** 配置文件存在缺陷“不应被使用”（2000-06-06），此时 OpenSSH 刚于 1999 年 10 月 fork 自 SSH 1.2.12 不久；2.7 的 X11 服务器安全认证模块 `xc/programs/Xserver/os/secauth.c` 与 Xlib 存在多处漏洞（2000-07-14）；2.8 的 `USER_LDT` 内核选项允许攻击者访问内核内存特权区域，为 i386 架构特有的本地权限提升漏洞（2001-03-02，默认未启用）；2.8 的 **rm(1)** 带 `-R` 选项递归删除时存在竞态条件，当父目录在其下方被更改时 **rm(1)** 可被骗入错误目录（2001-05-30，与旧 fts 库漏洞相关）；2.9 的最后一条 errata（第 027 条，2002-06-25）仅标注 SECURITY FIX 未附技术描述；这些漏洞反映 OpenBSD 2.x 时期“安全组件自身也可能成为攻击面”的工程认知，为 3.x 时期引入 W^X 与权限分离奠定了需求基础。
+
+**史料**：OpenBSD 2.6-2.9 errata patches；早期漏洞补遗条目（sslUSA26/sshd_config/X11/USER_LDT/rm）；openbsd.duckdb openbsd-src 仓库 ［A］
+
+**史观**：总纲第 2 条——历史是形式主义化的非存在（存疑）：W^X 与权限分离的引入是对 2.x 时期“安全组件自身有漏洞”认知的形式主义化回应——将“信任”从组件级降级为机制级〔订正注：原挂“总纲第 17 条——形式主义化”系自撰描述符，权威第 17 条为“证明世界先于解释和改造世界”；按论旨改挂第 2 条〕；sslUSA26 与 isakmpd 的漏洞反映 1990 年代末加密库实现质量参差不齐〔订正注：原挂“总纲第 21 条——密码学”系自撰名目，权威第 21 条为“革命与改革是历史方法论的分歧”，所述加密库质量评价无总纲对位，去号存疑〕
+
+**辨析**：`sslUSA26` 的美国版与国际版具体差异须考据——涉及 RSA 专利与美国出口管制；`USER_LDT` 漏洞的具体利用路径（LDT 操纵如何访问内核内存）须对照 i386 架构手册核验；**rm(1)** 竞态条件与 fts 库漏洞的关联须考据 fts 库 commit 历史
+
+**文献**：OpenBSD 2.6-2.9 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>**；openbsd.duckdb openbsd-src 仓库；i386 LDT 架构手册 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1996-2001 年间：63,666 次提交。
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- ROW_MINE: usenet_mail.messages.146807 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-037027`；2026-09-14 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 给出 OpenBSD 源码树修复 ntalkd 缓冲区溢出的提交记录，revision 1.4 日期为 1996 年 7 月 17 日引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.181349 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-055501`；ng41_s23 全库行级遍历考据采纳）
+
+OpenBSD 公告：4.4BSD VM 把字符设备私有映射强改为共享，kmem 组可写 /dev/mem 提权并降 securelevel，OpenBSD 2.2 与 FreeBSD 2.2.5、BSDI 3.0 均中招引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.181685 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-055537`；ng41_s23 全库行级遍历考据采纳）
+
+OpenBSD 公告：4.4BSD 内核设 I/O 信号接收者时不校验凭证，可向任意进程发 SIGIO 与 SIGURG，杀 NFS 端口进程窃取文件句柄，补丁由 deraadt 写引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.181859 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-055566`；ng41_s24 全库行级遍历考据采纳）
+
+OpenBSD 安全公告：4.4BSD procfs 漏洞可令任意进程降低 securelevel，危及不可变标志并可能改写运行中内核引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.182253 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-055678`；ng41_s25 全库行级遍历考据采纳）
+
+J Wunsch 指早期 SVR4 曾对 setuid 程序放行 LD_LIBRARY_PATH，漏洞面不亚于 FreeBSD，并提醒 OpenBSD 晚于 FreeBSD 2.1 起步故可借鉴前车引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.182462 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-055703`；ng41_s25 全库行级遍历考据采纳）
+
+Theo de Raadt 讥 FreeBSD 是 Unix 史上首个在 crt0 的 start 函数出现公开安全漏洞的系统引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.183035 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-056131`；ng41_s27 全库行级遍历考据采纳）
+
+Thomas Ptacek 详析 FreeBSD 2.1.5 crt0 的 PATH_LOCALE 栈溢出，指 2.2-BETA 与 OpenBSD 已修引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.183037 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-056132`；ng41_s27 全库行级遍历考据采纳）
+
+Theo de Raadt 讽 FreeBSD 应对迟缓，指该漏洞一周前已由 Ptacek 在多处公开报告引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.183662 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-056217`；ng41_s28 全库行级遍历考据采纳）
+
+OpenBSD 创始人 Theo de Raadt 析 2.0 虚存竞态两处缺陷：0xdeadbeef 告警与释放后引用，相隔一月修毕引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.145856 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-028346`；2026-09-13 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 称 OpenBSD 已修 ftpd 多处缺陷，而 NetBSD 的 ftpd 仍无针对 ftp bounce 攻击的检查引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: usenet_mail.messages.145865 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-028347`；2026-09-13 list38 bsdi.misc 全库行级遍历考据采纳）
+
+1997 年 1 月 01 日，Theo de Raadt 自述 8 月与 Todd 修好 lpr.c 的缓冲溢出并随 2.0 发布，另称 mktemp 一类问题约 500 处引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+
+
+
+
+
+<!-- ROW_MINE: usenet_mail.messages.216010 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098956`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Gilbert Fernandes 称除一台 NetBSD 外全用 OpenBSD，Thinkpad 上 KDE2、声卡与 DVD 均正常引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234822 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104768`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Longi 说明在 Amiga 1200 上跑 OpenBSD 需 68881 浮点与 68851 内存管理单元，建议用 030 或 060引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217712 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105779`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Alfred Breull 称 OpenBSD 2.9 对硬盘比 2.8 挑剔，在老 Maxtor 盘上报 fsbn 错误并拒绝继续安装引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.230979 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106262`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Theo de Raadt 讥讽对方因项目未提供订阅便宣称失去兴趣，语气尖锐引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232326 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-106452`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+John Irish 报告 AHA-1542CP 在 2.5 下经 isapnp 重配后 aha2 探测失败并 panic引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.228990 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107063`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Bill Woodford 解释 OpenBSD 与 Linux 负载均值差异源于内核处理睡眠进程方式不同，建议不必在意引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218951 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107259`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marc Espie 指出此类程序应以 shell 包装脚本调用，须用 exec 传参以免多出进程并保留选项传递引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220618 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107435`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+netstat 的 -b 选项为较新加入，运行 2.8 者须先升级 netstat 才能读字节计数引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.227037 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107924`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+James J. Lippard 补充 2.7 的 ftpd 崩溃会在根目录留下全局可读的 ftpd.core，内含 shadow 口令片段引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221387 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108112`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回帖称 OpenBSD 可设置永久 ARP 表项，这是其所知唯一具备该能力的系统引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.222996 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108323`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+vkd 澄清只请求改进 fdisk，不赞成引入类似 sysinstall 的整体安装器引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224597 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108511`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖主询问 2.7 已含 softupdates 代码却无法用 option SOFTDEP 与 tunefs -s 启用引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201282 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422093`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 6 月 21 日，Todd Miller 判定 2.2 与 2.3 之间 boot 时设备发现消息未写入 /var/log/messages 属 syslogd 的 bug，当前开发树中的 syslogd 已经修正该问题，引文中 Austin Hook 询问该行为在 2.2 到 2.3 changes 网页中未见提及，这部分属于引文中Hook的说法。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201349 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422119`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 7 月 1 日，Todd C. Miller 说明 pcvt 即 i386 默认控制台存在 LED 更新相关缺陷，他前一日已提交修复，并附上相对 2.3 的补丁，涉及 pcvt_conf.h 与 pcvt_kbd.c 两处注释措辞调整，新增 LEDSTATE_UPDATE_PENDING 标志并用 spltty 保护 LED 状态更新。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201352 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422120`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 7 月 2 日，Todd C. Miller 说明 securelevel 下仍可写入的情形：挂载分区中的 /dev/sd0a 不能写入，但 c 分区仍可使用，installboot 早期作用于 a 分区、如今改为打开 c 并定位到 a 的开头，他把这归为让 securelevel 显得用处有限的因素之一，并承诺更新 installboot(8) 手册页。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201443 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422171`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 7 月 16 日，Chris Cappuccio 回应 Mark Castillo 转发 rootshell.com 上一篇帖子，该帖描述普通用户如何占用 OpenBSD 系统上的进程资源、也提到为子进程设置某种内核选项，并问如何防范这类攻击，答说取自己架构的最新 snapshot 即可，它修掉了 2.3 的一批安全问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201535 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422227`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 7 月 29 日，Matthew Patton 自述独立把 ipfilter v3.2.9 移入 OpenBSD 内核，不用基于 3.2.3 的 diff 而直接修 Darren 代码以贴近真实工作文件，构建 ip_fil.c 时在 sys/conf.h:447 遭遇 iplopen、iplclose、iplioctl 三处 conflicting types，进一步发现 iplioctl 原型仅四参而 dev_type_ioctl 需 struct proc 尾参。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201560 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422238`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 8 月 1 日，Brian Somers 判定 OpenBSD 内核把 ppp 写入 /dev 侧的 tun 设备包大小限制在 MTU 值属多余检查，因 ppp 中 MTU 与 MRU 相互独立，/sys/net/if_tun.c 中返回 EMSGSIZE 的这段检查本应直接移除，加之 OpenBSD 下 ppp 还需把地址族前缀加到写入 /dev/tunX 的数据前，该额外长度也受同一误检限制，从而引发 IpInput: wrote 1504 报错。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201633 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422272`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 8 月 11 日，Felix Schroeter 复现中断冲突 指 pcic1 与 pcic3 同占 irq 12 时触发 isa_intr_establish cant share level-triggered with edge-triggered panic 定位 deraadt 于 1998/07/17 提交的 isa_machdep.c revision 1.31 修复。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201753 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422319`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 8 月 28 日，Kai 在重新编译库文件与头文件之后重装 inetd 与 identd，ident 端口的答复恢复了；但他仍在进程列表里看到一个僵尸 identd 挂在那里一直留到父 identd 退出，与 inetd.conf 那一行的 -w 与 -tNN 选项有关，重编前他跑的还是 -current 内核，所以现在剩下的行为仍不那么理想。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201756 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422321`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 8 月 28 日，Kai 说 ipsec 包在他机器上编译得非常干净，但整树重建对他不现实，磁盘装不下全部源码，Sparc-2 40MHz 的 CPU 也在这一周内跑不完；他转而读 photurisd 的 config.c，在 init_attributes 里看到一段判断内核不支持某属性的调试报错，那段并没有触发，真正命中的是再往下约 20 行 cfgattrib 为空的分支，他不熟悉这部分代码看不出问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201760 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422324`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 8 月 29 日，Kai 说 photurisd 在远端发起密钥交换时崩溃，他把 /etc/photurisd 下的配置更新到 -current 后错误信息消失了，但守护进程依旧崩溃；他完整重编过库、头文件与内核，编译过程中没有报任何错误，却仍看不到崩溃消失，因此发帖问能否有人复现这一现象以及所用版本。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201784 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422335`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 9 月 2 日，Aaron Jackson 在 FreeBSD 邮件列表上看到 procmail 缓冲区溢出被提及，用 gdb 以 perl 生成长字符串触发后分别在 malloc 与 strncmp 处收到 SIGSEGV，程序信息为 procmail v3.10，他询问这是否为所有类 Unix 系统共有的问题。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.201792 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422338`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 9 月 3 日，Todd C. Miller 认为 S/Key 漏洞很可能源自早期 Bellcore 的 skeyinit 实现，他提到有一报道声称利用 S/Key 漏洞在 3 秒内攻陷某系统，但他不知道究竟是哪一家的实现失效。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202069 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422472`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 16 日，Theo de Raadt 在识别人工报上来的 identd 进程累计 256.3 小时、CPU 占用 98.93% 之后判断这属于一个陈旧且罕见的 bug，他已经在 2.3 发布之后修掉了这个 bug，直接让对方把该进程杀掉。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202094 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422485`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 21 日，Alejo Sanchez 说 Baker Hamilton 让他改用 sendbug 并尽量详尽准确，可 manpage 没读懂、不知 submitter-id 填什么，还是照发并希望送到；Alejo 认为症结不在 W95 那个 fl00d-w4re2 工具，而在攻击确实发出分片，他手上握着 tcpdump、存在另一个人电脑上，机器规格见上一条；另认为可从外部复现，前提是有内网主机正经 ipnat 向外，只是要更久。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202155 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422521`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 30 日，chuck 转发 Marc Slemko 反驳 rootshell.com 借 ssh 漏洞被黑传言的来信，并追加自己看法，认为 ssh 被当作廉价 VPN 工具本身就能造成相当大的漏洞，企业必须同时保证两端安全，随后拿 Apache 与 Linux 各开了几句玩笑。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202248 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422577`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 11 月 16 日，承认 resolver.patch 已随 2.3 补丁包 ftp://ftp.openbsd.org/pub/OpenBSD/patches/2.3.tar.gz 发布，却遗漏未写入 errata23.html 页面，自认犯了一个不该外传的错误，并表示已把该补丁的信息补进 security.html 与 errata23.html。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202465 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422716`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 12 月 17 日，Ejovi Nuwere 回复说 Dug Song 已经为这份讨论中提到的缓冲区溢出写了补丁，位置在 patches/patch-ai，引文中 Julian Fondren 提到 ssh 1.2.26 存在缓冲区溢出，该问题由 SSH 方面发布并在 rootshell.com 页面公开，但 ports/security/ssh 仍在使用那一版本。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202540 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422750`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 12 月 31 日，Theo de Raadt 就引文中 Henning Koester 报告的 lilo 提示 hdc2 首扇区无有效 boot signature 回应，确认 hdc2 起点在 4GB 或更高即命中 installboot 缺陷，认为这条理应成为 FAQ，为避免问题应确保根文件系统位于 4GB 分界线以下，承认团队在 2.4 发布前未发现此缺陷且他本人没有 4GB 以上硬盘做测试安装，已在 plus.html 与 errata.html#installboot 补录并在 errata 写明 INSTALL BELOW 4GB。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202563 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422765`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 4 日，Luis Cerdas 在引文中转发一则 BugTraq 消息并询问该补丁问题是否适用于 OpenBSD 或早已处理，Artur Grabowski 回称补丁中的问题除一处拼写错误外从未在 OpenBSD 出现过，它们要么在代码导入前、要么就在导入后不久即已修复，包括那处 argc 检查。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202564 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422766`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 4 日，引文中有人询问 2.4 随附的 apache 是否默认未启用 UserDir 编译选项，Theo de Raadt 回答这一状态纯属偶然，并提供位于 errata.html 下 userdir 条目的补丁作为修复途径。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202595 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422787`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 7 日，Kjell Wooding 发现手上 2.4 CD 与 FTP 站上拿到的 os-bs 都疑似损坏，写信请别人帮忙复核，但他把这件事明确定性为观察而非关键问题，并交代自己手头还有别的副本可用，所以不影响他继续干活。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202596 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422788`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 7 日，Kjell Rune Glaerum 对 Kjell Wooding 关于 2.4 os-bs 损坏的观察给出相反结果，他说自己从 FTP 站下载下来的 os-bs 在自己的机器上工作正常，并原样贴回 Wooding 那段关于手边还有别的副本的话作为所回应的对象。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202601 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422789`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 8 日，Niklas Hallqvist 指出 files 不只指 /etc/hosts，也涵盖 /etc/networks，route(8) 查符号先 gethostbyname(3) 再 getnetbyname(3)，file bind 下顺序为 /etc/hosts DNS /etc/networks DNS，地址在 /etc/networks 就超时，他主张改写 route(8) 按 -host 与 -net 走接口，不给时保留旧语义。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202603 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422791`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 8 日，Louis Bertrand 报告 2.4 CD-ROM 装的 tetris(6) 输出默认 XX 而非反白方块，LCD 与 video 两台机器、xterm 与 vt100 两种终端均可重现，他定位到 screen.c 用 tgetstr(3) 从 termcap 取 SO 串拿到空串，加 <curses.h> 又与 <ncurses.h> 重复声明冲突，遂问 tetris 还能救还是改用 terminfo。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202607 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422794`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 8 日，Carlos Horowicz 在 OpenBSD 2.4 i386 上自编译 SSLeay-0.9.0b 装到 /usr/local/ssl，跑 ssleay genrsa -des3 -out server.key 1024 报 10204:error:04068003:rsa routines:RSA_generate_key:BN，推测链到 2.4 自带 libssl.so，藏起它重编即恢复，并追问该库该用在哪些场合。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202697 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422832`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 20 日，Luke Mewburn 转发 NetBSD 安全通告 1999-001，指 select 2 与 accept 2 race condition 让 TCP 服务器在客户端 RST 后 accept 挂起拒绝其他端口连接，影响 4.4BSD 派生含 X 与 inetd 服务，漏洞由 Fyodor 用 nmap 发现，补丁由 Charles M Hannum 提供。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202746 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-422855`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 27 日，Niels Provos 说明目前还不能把私有网络透过两台拥有真实地址的网关做隧道，因为两台安全网关必须都在受保护网络内，即网关 IP 加网络掩码等于网络本身，他随后在 vpn(8) 手册页加了 BUGS 段记录此事，并说修复应当很简单、修好就会同步更新手册页，另外为回复过晚致歉因为生病还在清理积压邮件。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202779 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422868`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 1 月 31 日，Todd C. Miller 判断对方碰到的现象像是最近已经修掉的旧 SACK/FACK bug，让他确认树里 /sys/netinet/tcp_input.c 是 1.28 版、/sys/netinet/tcp_timer.c 是 1.11 版，以此核对是否已经拿到那次修复，这条回帖落在讨论 current 里 SACK/FACK 行为的串中。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202802 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422884`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 2 月 3 日，Xavier Beaudouin 说前一天他们十分钟内出了三次 panic，都是因为内核 FTP 代理，无奈只好把 /etc/ipnat.rules 里 IP FTP 代理那一行删掉，并问有没有修复办法、或者能不能改用用户空间的 ftp 代理；引文中 Kjell Wooding 说他也只好移除 nat 表里的代理功能才恢复，另有一段话称最简单的修复是重写 FTP 代理、已在写下那句话的人的清单上。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202882 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422941`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 2 月 16 日，Jon Ribbens 指正引文中 Marco S Hyman 关于 ports 中 ProFTPd 版本可能含最近安全问题的判断方向反了 应写不含才对 因为安全问题在最近一周才曝光 ports 版本最后更新在 98 年 10 月更早 又说他看过那个补丁基本是把成堆不安全的 strcat 与 strcpy 一次性补齐 之后便把它从空闲时看一遍的列表里划掉。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202890 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422948`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 2 月 18 日，Pablo Luis Bucich 报告自己曾在 3c905B 网卡挂起时遇到过同样的崩溃 复现路径是先启 Windows 98 再重启到 OpenBSD xl0 驱动报 non ready 之类错误 随后启动到 isadma 阶段即崩溃 建议引文中要求者查看启动早期日志里是否有同类错误。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202891 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422949`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 2 月 18 日，Niklas Hallqvist 追问报告崩溃者 pc 与 ra 在多次崩溃之间是否保持一致 若是则请对方私下发送 nm -n /bsd 的输出 好让他据此定位 machine check 发生在哪个例程中。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202892 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422950`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 2 月 18 日，Pablo Luis Bucich 报告手上 Ensoniq SoundBlaster 64 PCI 卡芯片为 1571 但 eap 驱动只支持 Ensoniq Audio 即芯片 1570 曾尝试改内核强制启用 eap 结果在 iomap 阶段崩溃 询问是否有人在做支持工作 或能否配置 eap 驱动识别 1571 及两者差异。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203051 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-423031`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 3 月 23 日，Richard Trott 通报 1999 年 3 月 22 日与 21 日在 http://www.openbsd.org/security.html#24 增补的两条 2.4 安全补丁：poll(2) 的 nfds 参数需加限制以免 kvm 饥饿，TSS 处理的一处改动可阻止 crashme 触发的另一类内核崩溃，两个补丁都已随文附上。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203087 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-423053`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 3 月 27 日，chuck 预警名为 Melissa 的恶性蠕虫会感染 MS-Word 与 MS-Exchange，特征是邮件主题行以 Subject: Important Message From 开头，指出 Sendmail 8.9.x 与 Pro 可通过检查主题行拦截，虽有性能开销但好过关停被保护的 Exchange 服务器，规则见 sendmail.com 的 blockmelissa 页面，并强调 Sendmail 本身不受害而是在拦截它。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203161 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-423084`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 4 月 9 日，Angelos D Keromytis 就 tcp_input.c 构建警告回信，确认 TCPCOOKIE 是实验代码、不在 GENERIC 中、本应删除却迟迟未删，并直言这是他本人的责任；至于该选项随哪一版发布以及发布后是否删除的说法出自引文中的 Theo de Raadt，并非 Keromytis 自述。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203172 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-423087`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 4 月 13 日，Federico G Schwindt 就 syslogd 解释称即使未带 -u 启动，finet 仍会监听并在 netstat 里显示，但读循环里 SecureMode 为真时只做静默丢弃，代码里先判 SecureMode 就 silently drop it，否则才把 recvfrom 读到的内容交给 printline，而 SecureMode 除非指定 -u 否则恒为 1。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203208 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-423104`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 4 月 19 日，Tomasz Bojakowski 就 Steve Mynott 在 OpenBSD/sparc 2.4 上三次执行 ln -s ./ test 使系统挂死、以及 Maxim V. Tsyplakov 在 i386 2.4 上一次尝试却正常的现象补充，指出必须敲两次 ln -s ./ test 再跑 ls -l 才会挂死，自己在 i386 上复现并崩溃，Trevor Clark 帖中的补丁可修复但需手工把代码贴进 vfs_lookup.c。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203240 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-423113`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 4 月 23 日，Bob Beck 针对一封质疑 ftp 数据通道时序竞争的来信回应，那种情形是客户端发出 STOR 命令之后尚未调用 accept、而服务器已经尝试在数据端口连入，结果服务器在控制通道报出错误信息，他说自己只在自己写的 ftp 代理代码里遇到过，起因是忘记在发送 PORT 命令之前先 listen，一旦意识到错在哪里通常很快能修好。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203937 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425699`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 2 日，Evan Champion 报告 passwd 密码为星号只走 Kerberos 认证的用户仍被 /etc/security 判定有有效 shell 且家目录访问文件可读指出判定代码在第 52 行并质疑 cut -b 2-10 是否应为 cut -b 5-10。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203979 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425727`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 9 月 7 日，George Dodd解释程序 core dump 会把内存内容写进转储故把 ypserv 的 core 发出去等于把内存内容交给收件人可用 zcat 解压后 grep root 取出密码。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204721 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-426106`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 7 日，Theo de Raadt 转引他人称自己回退了破坏时间轮转的变更并提交一批修复既覆盖 rev 1.21 想解决的问题又含若干次要修正，要求把此项列为 2.6 之后的勘误条目。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.204928 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-426235`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 11 月 23 日，Theo de Raadt就006_locore补丁与errata页RELIABILITY条目定性为可靠性bug称本机用户可致机器崩溃者皆非远程，回应转引Nick Maniscalco称errata描述过于简略令其以为可DoS多台OpenBSD系统。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205345 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428847`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 12 月 18 日，n3v 转贴 Emre Yildirim 称 /pub/OpenBSD/2.6/i386 的包与 CD 相同仍需自己打补丁而 /pub/OpenBSD/snapshots/i386 已应用补丁且属 -current 后表示抓一份补丁核对是否已打上并称已下完 release。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205537 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-428944`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 1 月 2 日，Ricky Pettit就 Y2K 双启动主机由 OpenBSD 重启后 BIOS 日期重置为 1-1-96 或 1-1-98 回应称自己笔电与桌面均跑 openbsd 2.6 日期时间完全正常建议以 anoncvs 保持系统较新而非只打 errata 补丁。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205991 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429194`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 7 日，kwooding 判断该查询源 IP 分布相当随机疑似拒绝服务攻击认为此类问题应转到 incidents 邮件列表处理并提示可到 securityfocus 了解详情。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.205994 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429197`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 7 日，Russell Frame 自述用 OpenBSD 2.6 NAT 除邮件重定向外不开放入站服务 SSH 只听内网为约 250 台内机出网问 /etc/security 是否足以充当主机级 IDS 并询社区另跑哪些系统。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206575 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429639`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 3 月 19 日，Luke Bakken 回应 adduser 的 Y2K 日期问题告知其在 www.openbsd.org/errata.html 找到 newsyslog 补丁并看到 adduser Y2K 补丁推测即对方所需。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207229 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-430058`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 4 日，Hannah Schroeter 在 kernel/1227 线程中说明该内核资源限制缺陷最初由 Denis A. Doroshenko 发现并指出它使文件大小限额形同虚设建议补一条 errata 或明显告警。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207343 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437525`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 11 日，kwooding 说明 IPFilter 3.3.14 将随 OpenBSD 2.7 提供以修复非对齐时间戳问题并指出该问题在 2.7 仅对桥接 IPF 安装有影响另计划为 2.6 及更早版本用户编写 errata 补丁。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207396 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437565`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 15 日，kwooding回复确认 IPFilter 3.3.14 中修复的 IPFilter 安全问题会以 errata 形式发布到 2.6，不只停留在 current 中。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207442 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-437596`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 18 日，Theo de Raadt 就 CERT Advisory CA-2000-06 宣布 OpenBSD 使用 KTH kerberos 故不受该缓冲区溢出影响通告 5 月 17 日发布涉及 Kerberos 4 与部分 Kerberos 5 及 krshd ksu v4rcp。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207640 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437731`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 5 月 30 日，andy lowton回复称在2.7 snapshot上从外部shell运行nmap时遇到m_copydata内核恐慌归因于P60低配资源未再复现l8z。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207918 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437898`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 21 日，Eric Zylstra 感谢 Theo 指出 errata 已记入 mac68k_arandom 并致意 Bob Beck 与 Gustav 建议 errata 页补入该故障对应的 dmesg 特征串以便日后搜索直接命中。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.207975 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-437931`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 7 月 24 日，Marco S Hyman 说明该报错是 make build 末步可忽略Makewhatis 由 /etc/weekly 运行建议改用 make DESTDIR=/ build 并自述已更新 errata 页。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208506 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438284`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 16 日，Wozz 指出 openbsd.org plus.html 每日变更日志约三个月未更新页内载有 xlock(1) 格式字符串本地 root 漏洞补丁待合入稳定分支而追问是否计划补齐并自述订阅 cvs-log 邮件列表未获响应。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208549 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438312`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 18 日，Willem Brown判断ipmon日志中111端口为sunrpc，转引Stan Brown所贴24.6.61.166向24.6.61.255广播的udp条目，推断有外部主机在探测本机portmap服务。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208702 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438414`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 24 日，Jill Lundquist 称已订阅 announce 与 security-announce 两列表却在 xlock 本地提权漏洞上未收到通告系逛 openbsd.org 首页见 only one local exploit 才转查 errata.html 并质疑该列表用途。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208778 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438469`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 28 日，chuck yerkes 转贴 FreeBSD-SA-00:39.netscape 称 netscape 在 OpenBSD ports 目录故该通告同样相关通告列出两个漏洞影响 4.74 前与 4.75 前。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208811 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438492`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 30 日，Federico G. Schwindt 就 ipsecadm -delete 报错回复指出 net/pfkeyv2.c 已在上周提交修复补丁并承诺尽快并入 RELEASE 标签。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208821 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438498`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 8 月 30 日，Sebastian Stark 就 exim 近期是否经人审阅的提问指向 exim 用户列表上关于该项的讨论线程供提问者查阅。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.208975 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438586`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 6 日，Ivan Kolemanov 续贴 Odysee 系列给出 Snort 日志显示 211.34.121.57 对其 21 端口发起 SYN 与 10.0.0.1 发起 SYNFIN 扫描并附 ipmon 转发记录询问如何判定互联网接口上 10.0.0.1 的来处。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.209071 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-438648`；2026-10-10 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 9 月 10 日，d neal wise 转引 gnats 中 Chris Cappuccio 说法称 ipfilter 3.2.10 是 2.5 与 2.6 都带的 bug current 起改 3.3.4 已修复并贴 2.5 与 2.6 ident 标识自述改用 2.7 快照部署。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。

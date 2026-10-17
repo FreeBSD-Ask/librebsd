@@ -1,0 +1,162 @@
+# 194.7 OpenBSD 从 4.4BSD-Lite2 继承的 ktrace（跨 BSD/UNIX/macOS 扩展）
+
+## 194.7.1 ktrace 的继承与 systrace 协同
+
+**要点**：OpenBSD 自 fork 自 NetBSD 1.0（**1996 年 10 月**）起继承 ktrace 子系统，提供 **ktrace(1)** 命令与 **ktrace(2)** 系统调用——其实现路径与 NetBSD ktrace 在 fork 时刻同源，但 OpenBSD 在 2.x 时期（1996-2002）对其进行了安全审计与代码清理。man page 见 **man.openbsd.org/ktrace.1**。OpenBSD ktrace 的关键演化是在 3.0（2001）引入 systrace 时与之协同——systrace 提供系统调用拦截与策略决策，ktrace 提供系统调用记录，二者构成 OpenBSD 系统调用观测的完整工具链。
+
+**史料**：OpenBSD 2.0 Release Notes（**1996-10-18**）；**ktrace(1)** man page（man.openbsd.org/ktrace.1）；OpenBSD src 仓库 **sys/kern/kern_ktrace.c** 源码；Provos, N. (2002). *Improving Host Security with System Call Policies*. USENIX Security 2002——systrace 设计论文。〔L1 代码/构建产物/L3 官方文档与公告/L5 二手研究〕
+
+**史观**：总纲第 1 条——源头时刻：OpenBSD fork 时“冻结”了 ktrace 的 NetBSD 实现，此即 fork 时刻的“源头定格”；总纲第 4 条——分离聚合是永恒规律：OpenBSD 从 NetBSD 分离时聚合了 ktrace 子系统，是分离时刻的聚合事件；技术选择的代价：OpenBSD 选择保留 ktrace 并引入 systrace 协同，付出维护两套观测机制的代价，但获得审计与策略决策的双重能力；边缘者贡献：ktrace 的最初设计者姓名被遮蔽，systrace 的设计者 Niels Provos（尼尔斯·普罗沃斯） 在 OpenBSD 社区获得署名；总纲第 17 条——形式与内容：ktrace 与 systrace 共同构成“形式”（观测+策略），覆盖了系统调用的“内容”（行为）；自反性声明：本释读不预设“OpenBSD 中心论”——ktrace 在 NetBSD、FreeBSD、DragonFly BSD 均有保留，systrace 是 OpenBSD 独有扩展。
+
+**辨析**：OpenBSD ktrace 与 NetBSD ktrace 在 fork 时刻同源，分叉发生在 OpenBSD 3.0（2001）引入 systrace 后；systrace 在 OpenBSD 5.4（2013）后被弃用并移除，ktrace 保留至今。与 Linux strace 无代码共享。
+
+**文献**：OpenBSD Project. *OpenBSD 2.0 Release Notes*[EB/OL]. (1996-10-18). <https://www.openbsd.org/>; OpenBSD Project. *ktrace(1) Manual Page*[EB/OL]. <https://man.openbsd.org/ktrace.1>; Provos, N. (2002). *Improving Host Security with System Call Policies*. USENIX Security 2002.
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+## 文献
+
+- Giovanni Bechis. Linux seccomp(2) vs OpenBSD pledge(2)[EB/OL]. Open Source Summit Europe, Prague, 2017. <https://www.paclan.it/events/seccomp-pledge-oss2017.pdf>.
+
+<!-- ROW_MINE: usenet_mail.messages.194378 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-076160`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+OpenBSD开发者tedu确认mount_union有已知问题并劝告暂勿使用，属开发者对union文件系统缺陷的直接表态。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.195779 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-090581`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告用 md5、sha1、rmd160 计时做跨机对比，以旧机 3.2 为基准。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.197996 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-091335`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Espie 回应称 OpenBSD 开发者人数很少，大家只做自己愿做的事，写文档很费时，呼吁批评者直接提交补丁。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.200194 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-091553`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+帖述 OpenBSD 以 Blowfish 存口令、apache chroot 到 /var/www，附 john 破解速率对比 DES 与 Blowfish。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.202162 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092170`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+注意到 OpenBSD 的 OpenLDAP 默认完全不监听，与部分 Linux 发行版默认监听本机不同，安全但未见文档。引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.203905 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092391`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+回复称按记忆 3ware Escalade 系列应能在 OpenBSD 3.2 上正常工作，可作 IDE RAID 选型参考引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.206332 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-092758`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+用户实测 3.1 发行版不支持 Ultra 60 而快照版启动十余秒后仍 panic引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.208634 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-094947`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Philipp Buehler 反驳称 OpenBSD 升级其实更直接，正因如此才不必多年回移补丁，指责对方未看清这点引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.210223 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-095964`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ted U 称 3.0 稳定分支已打约 18 个补丁，改动量约千分之一，而 current 已是 3.1-beta，与 3.0 差异约两成引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.212089 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-097101`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Mathias Schmocker 指出主板 Promise PDC 阵列控制器可能有缺陷，给出内核 flags 0x0ffc 强制 PIO 模式 4引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.214093 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098750`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+指出 3.0 中 xterm 的默认值有变，给出 xterm 的 -ie 选项可恢复原先的退格删除键行为引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.216045 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-098959`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Peter Strömberg 称 BSD 的 FFS 早已是 64 位，他只知道 FAT32 有 2Gb 文件大小限制引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.234909 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-104783`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Jason Downs 强调 OpenBSD 的仿真相当好用，不会为迎合 glibc 式标准而大改 libc引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.217752 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-105783`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+walt 指出 OpenBSD 与 FreeBSD 的 disklabel 格式不同不可交叉编辑，且命名与挂载非 BSD 分区的方式也大异引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.231036 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106268`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+jose 说明升级 2.6 应选 Upgrade 而非 Install，逐集升级并跳过 etc26 另行挑选合并引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.232366 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-106455`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Marek Blaszkowski 称链 libc.so.21.1 偶发出错，链 23.0 则必错，疑为 libc 问题引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.229004 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-107068`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Theo 判定该 panic 源于内存过大，-current 已修复但 2.6 尚无补丁可用引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.218964 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107262`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+同帖续称这些内核参数或已不必再设，并指出所引书中章节表明作者当年用的是 OpenBSD 2.5引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.220637 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107438`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+报告 VIA Apollo133A 主板配 ATA-100 硬盘在 2.9 快照下 DMA 报错、设备超时，连 ATA-33 模式也无法工作引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.227081 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-107930`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+nospam 报告 OpenBSD 在 Compaq Prosignia 与 SystemPro/LT 上无法访问 16MB 以上内存，属长期问题引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.221427 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108116`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Ian Linwood 称赞 OpenBSD 团队，抱怨 ports 需联网取源码、希望出 ports 源码光盘，并称项目缺少 IBM 这类支持会落后引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.223008 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108327`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+vkd 主张改进 OpenBSD 安装时的分区工具，认为按块数输入分区大小对新用户很不友好引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.224648 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-108519`；2026-09-17 list44 unix.bsd.openbsd.misc 续读考据采纳）
+
+Loic Tortay 就 RND ioctl 线程回帖，说明相关内核接口的调用约定引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202001 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422440`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 6 日，Bengt Kleberg 说明自己只能启动一次 x，第二次即硬挂整机，借 NFS 与 ktrace 回读：失败那次 xinit 连上 /tmp/.X11-unix/X0 后，读 socket 返回 errno 35 Resource temporarily unavailable，成功那次改用 poll 后读入 8 字节；他推断超时无限的 poll 未返回也未写入 ktrace 日志，追问 xinit 在跟谁对话。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.202008 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-422444`；2026-10-08 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1998 年 10 月 7 日，Bengt Kleberg 在 Jonathan Katz 建议下推进 OpenBSD 2.3 上的 x 崩溃问题：服务器确实启动却在一系列 break() 调用附近突然停下，也可能是 nanosleep()；因靠 NFS 才能写盘，他怀疑并非所有 ktrace 输出都真正落盘；失败追踪停在 break(0x2cd000)，而正常启动会继续到 gettimeofday 与 nanosleep。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.203460 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-425431`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+1999 年 6 月 28 日，Chris Cappuccio就Solaris二进制总线错建议对二进制跑ktrace生成ktrace.out再用kdump输出到tmp.txt逐条查看看不懂就把末尾二三十行回信给他帮助排查。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+
+<!-- ROW_MINE: openbsd_mail.messages.206239 -->
+**当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-429372`；2026-10-09 openbsd_mail 战线 全库行级遍历考据采纳）
+
+2000 年 2 月 24 日，Matthieu Herrb更正先前 ktrace 只追到执行 startx 的 shell 要求 root 直接 ktrace XF86_SVGA 指出正确 kdump 中同样的 mmap 调用在对方机上得 errno 22 在其机上返回 0x40388000。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
