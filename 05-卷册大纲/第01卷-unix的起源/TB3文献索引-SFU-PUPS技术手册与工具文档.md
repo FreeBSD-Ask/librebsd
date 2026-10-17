@@ -3,12 +3,12 @@
 > **转录批次**：TB3（GLM 视觉重 OCR，2026-09-29）
 > **覆盖范围**：ref 3666–3718（共 53 件，1246 页）
 > **转录方法**：GLM-4.6V 视觉逐页转录，替代原 rapidocr_onnx
-> **数据库状态**：**53/53 件入库**，`fulltext.extraction_method='glm_vision_20260924'`（2026-09-30 09:24 补齐余下 9 件，见「数据库留痕」）
+> **数据库状态**：**53/53 件入库**，`fulltext.extraction_method='glm_vision_20260924'`（2026-09-30 09:24 补齐余下 9 件，见“数据库留痕”）
 > **key_facts**：**349 条**（id 前缀 `kf-tb3-`；technology 317 + person 32；`confidence='0.7'`；`related_chapter='第01卷-unix的起源'`）
 
 本文件为**卷级文献索引**，按 TB4 先例（`TB4文献索引-早期UNIX文档与工具.md`）体例。
 不改动任何章节正文、不引入新锚点格式、不修改 `SUMMARY.md` 与 `chapter_keywords.json`。
-每条「说明」均依已入 `key_facts` 的逐字可回验引文撰写（`source_quote` 全为转录页原文精确子串）。
+每条“说明”均依已入 `key_facts` 的逐字可回验引文撰写（`source_quote` 全为转录页原文精确子串）。
 
 > **与 TB2+TB3 首批接线的关系**：3693、3698、3699、3707 四件已先期收入同卷
 > `TB2+TB3文献索引-早期UNIX手册与516-TSS技术文档.md`（该文件主体为 TB2 的 516-TSS 文档）。
@@ -113,7 +113,7 @@
 - **第 7 章 UNIX 的传播**：3690–3695（RJE／VPM／UUCP 网络化）、3696／3697（LP）
 - **第 8 章 贝尔实验室的黄金时代**：3693–3707 全部为 Bell Labs 内部技术备忘录
 - **安全主题（尚无独立章节）**：3710《On the Security of UNIX》与 3711《Password Security — A Case History》是本批最高价值的 L1 一手安全文献
-- **AUUGN 通讯（3712–3718，共 572 页，2026-09-30 已入库）**拟落**第 18 卷**「大洋洲 BSD 社区」，见该卷「SFU PUPS 存档增补清单（待迁移）」
+- **AUUGN 通讯（3712–3718，共 572 页，2026-09-30 已入库）**拟落**第 18 卷**“大洋洲 BSD 社区”，见该卷“SFU PUPS 存档增补清单（待迁移）”
 
 ## 转录质量说明
 
@@ -121,7 +121,7 @@
 - 全部 349 条 `source_quote` 已逐条程序回验为所引页 `.txt` 的**精确子串**（库内行与磁盘转录逐字节一致）
 - 原印件笔误照录未修（如 3670 `followes`、3671 `for various stupid reasons!`、3673 `niggleing restrictions`、3680 `GCOGS`、3685 `designed for used by`）
 - 转录件在图元处插入 `[图：…]` 行内描述，属转录层附注、不属原始文档内容
-- **⚠ 同卷 `TB2+TB3…md` 的 `key_facts` 计数已过期**：该文件记「154 条 `fact_category='periodical_primary'`、`confidence='2'`」，
+- **⚠ 同卷 `TB2+TB3…md` 的 `key_facts` 计数已过期**：该文件记“154 条 `fact_category='periodical_primary'`、`confidence='2'`”，
   但活库实测 `periodical_primary` 全库仅 58 行、涉 TB3 **0 行**——原行已被 2026-09-29 19:45–19:47 的批量写入替换。
 
 ## 数据库留痕
@@ -140,8 +140,8 @@
 2. **⚠ 词频垃圾行并置**：同一批 ref 另存 735 条 `kf-batch-` 行（`fact_text` 形如 `file mentioned (30 times)`，
    `related_chapter` 全 NULL），实测 **645/735 的 `source_quote` 不是任何一页原文的精确子串**（固定字符窗从关键词首现处硬切，
    跨页窗必然落空，且窗内为半截词）。未经主理人裁决未删除。
-3. **⚠ 作者署名与通行史实不符（照录未改）**：3710 转录署「Dennis M. Ritchie」，而《On the Security of UNIX》通行作者为 Morris 与 Kleiner；
-   3711 转录署「Robert Morris; Ken Thompson」，而通行作者为 Thompson 与 Ritchie。转录照录所见、**未按常识改字**，待回原图裁定。
+3. **⚠ 作者署名与通行史实不符（照录未改）**：3710 转录署“Dennis M. Ritchie”，而《On the Security of UNIX》通行作者为 Morris 与 Kleiner；
+   3711 转录署“Robert Morris; Ken Thompson”，而通行作者为 Thompson 与 Ritchie。转录照录所见、**未按常识改字**，待回原图裁定。
 4. **转录待裁定积压**：3703 `8FD00CA1` vs `9FD00CA1`、3704 p0005 多处 hyphen、3707 p0011 `sist`／`strt`、3699 选项 hyphen vs em dash、
    3700 p0015 `pwba`／`pwn` 与 MINUTES 列求和差 1、3702 p0003 `i_flygs`、3698 p0021／22 破折号字形、3693 花括号、3695 `●` vs `*`
 5. **6 处 `BLANKRUN4+`（3 空行）未闭合**：`3699_p0020`、`3701_p0008`、`3708_p0001`、`3709_p0001`、`3714_p0001`、`3715_p0001`
