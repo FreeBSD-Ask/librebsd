@@ -5,7 +5,6 @@
     "subs": [],
     "keywords": [
       "atlas-supervisor",
-      "batch",
       "corbato",
       "ctss",
       "dijkstra",
@@ -13,8 +12,7 @@
       "multics",
       "project-mac",
       "saltzer",
-      "time-sharing",
-      "timesharing"
+      "time-sharing"
     ]
   },
   "2": {
@@ -83,27 +81,17 @@
       "4.7 重要贡献者与边缘者pdp7时代的无名助手被遗忘的早期贡献者"
     ],
     "keywords": [
-      "1979",
-      "1980",
-      "1981",
-      "australian-unix",
-      "auugn",
-      "bell",
       "bell-labs",
       "bltj",
       "csrc",
       "kernighan",
-      "labs",
       "murray-hill",
       "ossanna",
       "pdp-11",
       "pdp-7",
-      "quick-guide",
-      "reference-card",
       "ritchie",
       "thompson",
-      "unics",
-      "users-group"
+      "unics"
     ]
   },
   "5": {
@@ -142,48 +130,22 @@
       "6.8 与同时期操作系统的比较同时期pascal1970smalltalk1972prolog1972的设计哲学对照"
     ],
     "keywords": [
-      "adb",
       "ansi-c",
-      "backup",
       "bcpl",
-      "bell",
-      "chr",
       "compiler",
-      "cplot",
-      "debugger",
-      "dump",
-      "eqn",
-      "equation",
-      "file-formats",
-      "fsnap",
-      "gp",
       "grammar",
-      "graph",
-      "hopl",
       "kernighan",
       "kristol",
-      "language",
       "lex",
       "lions",
-      "macros",
-      "man1",
-      "man2",
-      "man5",
-      "manual",
-      "math",
-      "memo",
-      "mm",
       "nroff",
       "parser",
       "pascal",
       "pass2",
       "pcc",
       "pdp-11",
-      "plot",
       "portable-c",
       "prolog",
-      "reference-guide",
-      "release-4.0",
       "richards",
       "ritchie",
       "roff",
@@ -191,8 +153,6 @@
       "system-calls",
       "thompson",
       "troff",
-      "tuning",
-      "typesetting",
       "yacc"
     ]
   },
@@ -233,11 +193,9 @@
       "salus",
       "salz",
       "sosp",
-      "talk",
       "technology-advisor",
       "unix-technology",
-      "unixreview",
-      "users"
+      "unixreview"
     ]
   },
   "8": {
@@ -257,20 +215,11 @@
       "8.11 安全机制起源setuidsetgid机制引入与文件权限模型定型19731975"
     ],
     "keywords": [
-      "adb",
-      "australian",
-      "auugn",
       "awk",
-      "bell",
       "bourne-shell",
-      "compiler",
       "cp-67",
-      "dump",
-      "fsnap",
-      "gp",
       "grep",
       "kernighan",
-      "labs",
       "lions",
       "man1",
       "man2",
@@ -281,8 +230,6 @@
       "nroff",
       "pass2",
       "pcc",
-      "plot",
-      "roff",
       "sed",
       "setuid",
       "tenex",
@@ -291,7 +238,6 @@
       "tuhs",
       "unix-v6",
       "unix-v7",
-      "users-group",
       "yacc"
     ]
   },
@@ -308,7 +254,7 @@
       "9.7 对unix哲学的批评教条化与适用边界对unix哲学教条化与适用范围局限的批评"
     ],
     "keywords": [
-      "bell",
+      "bell-labs",
       "cat",
       "cat-v",
       "do-one-thing-well",
@@ -316,7 +262,6 @@
       "mcilroy",
       "pike",
       "plan9",
-      "programming",
       "raymond",
       "system-v",
       "usenix"
@@ -331,7 +276,7 @@
       "10.10 安全机制起源root二元特权模型与密码散列演化19731979"
     ],
     "keywords": [
-      "bell",
+      "bell-labs",
       "crypt",
       "jargon-file",
       "lisp-machine",
@@ -381,6 +326,7 @@
       "salus",
       "sccs",
       "std",
+      "std-unix",
       "system-calls",
       "system-iii",
       "system-v",
@@ -511,29 +457,22 @@
       "adb",
       "bash",
       "bourne-shell",
-      "chr",
       "cplot",
       "cpp",
       "csh",
-      "dump",
       "eqn",
       "fsnap",
       "gp",
       "graph",
       "java",
       "ksh",
-      "macros",
-      "man1",
-      "man5",
       "mm",
       "nroff",
       "openjdk",
       "perl",
       "plot",
       "python",
-      "roff",
       "ruby",
-      "shell",
       "stroustrup",
       "tcsh",
       "troff",
@@ -816,7 +755,6 @@
       "1bsd",
       "berkeleypascal",
       "billjoy",
-      "bsd",
       "fabry",
       "haley",
       "mckusick",
@@ -929,7 +867,6 @@
       "32v",
       "3bsd",
       "babaoglu",
-      "bsd",
       "mckusick",
       "mvsxa",
       "pdp11",
@@ -1630,7 +1567,6 @@
       "allman",
       "arpanet",
       "bind",
-      "bsd",
       "crocker",
       "delivermail",
       "dns",
@@ -1656,7 +1592,6 @@
       "4.2bsd",
       "apache",
       "bbn",
-      "bsd",
       "cern",
       "joy",
       "leffler",
@@ -1682,7 +1617,6 @@
       "delivermail",
       "httpd",
       "iis",
-      "internet",
       "ncp",
       "ncsa",
       "netscape",
@@ -2316,7 +2250,6 @@
     "keywords": [
       "44bsdlite",
       "bostic",
-      "bsd",
       "csrg",
       "freebsd20",
       "karels",
@@ -2343,7 +2276,6 @@
       "spec1170",
       "svr4",
       "univel",
-      "unix",
       "unixware",
       "usl",
       "xopen"
@@ -2392,6 +2324,7 @@
       "bsdi",
       "calgary",
       "concord",
+      "cory-hall",
       "creek",
       "csrg",
       "drdobbs",
@@ -2441,7 +2374,6 @@
       "87.14 与同时期操作系统的比较19921996年同期linux文化linustorvalds的赫尔辛基硅谷地理路径lkml的对抗性文化windowsnt文化microsoft企业文化solaris文化sun工作站黄金时代gnuhurd文化fsf的先知文化分裂时期bsd文化以三足鼎立的务实分裂为底色地理以美国主体加拿大边缘全球散点为特征"
     ],
     "keywords": [
-      "bsd",
       "copyleft",
       "fsf",
       "gnu",
@@ -2937,7 +2869,6 @@
       "hammer",
       "hammer2",
       "ip6fw",
-      "os",
       "snapshot"
     ]
   },
@@ -3122,7 +3053,6 @@
       "illumos",
       "netflix",
       "opensolaris",
-      "os",
       "refs",
       "xfs",
       "zfs",
@@ -3646,7 +3576,6 @@
       "lld",
       "numa",
       "octoverse",
-      "os",
       "sparc64",
       "svn",
       "uefi"
@@ -3696,6 +3625,7 @@
       "geom",
       "kamp",
       "olivier",
+      "olivier-certner",
       "openssh",
       "random",
       "security",
@@ -4116,7 +4046,6 @@
       "openbsd",
       "openssl3",
       "openzfs22",
-      "os",
       "sendmail",
       "windows"
     ]
@@ -4172,7 +4101,6 @@
       "philosophy",
       "pike",
       "stanford",
-      "technology",
       "trusttheuser"
     ]
   },
@@ -4444,8 +4372,7 @@
       "linux",
       "millard",
       "netbsd",
-      "openbsd",
-      "os"
+      "openbsd"
     ]
   },
   "169": {
@@ -4507,7 +4434,6 @@
       "171.10 freebsdsrc趋势统计与bsdinit工程演进的定量印证"
     ],
     "keywords": [
-      "bsd",
       "daemontools",
       "init",
       "launchd",
@@ -4974,6 +4900,7 @@
     ],
     "keywords": [
       "apple",
+      "applesilicon",
       "commits",
       "cve-2024-6387",
       "docker",
@@ -5180,6 +5107,7 @@
       "cvs",
       "darpa",
       "darren",
+      "darrenreed",
       "etoh",
       "fork",
       "hartmeier",
@@ -5829,7 +5757,6 @@
       "nullfs",
       "openbsd",
       "openssl",
-      "os",
       "pcm"
     ]
   },
@@ -5888,7 +5815,6 @@
       "freebsd5",
       "lwkt",
       "netbsd1.6",
-      "os",
       "pf",
       "smpng",
       "ule"
@@ -6191,7 +6117,6 @@
       "4.3bsd",
       "4.4bsd",
       "appkit",
-      "bsd",
       "jobs",
       "mach",
       "mach2.5",
@@ -6213,7 +6138,6 @@
       "238.5 关键词行级挖掘素材线索"
     ],
     "keywords": [
-      "bsd",
       "cocoa",
       "gnustep",
       "mach",
@@ -6286,7 +6210,6 @@
       "mach",
       "mckusick",
       "opendarwin",
-      "os",
       "tanenbaum-torvalds",
       "xnu"
     ]
@@ -6468,7 +6391,6 @@
       "applesilicon",
       "arm64",
       "bigsur",
-      "bsd",
       "kip",
       "macos",
       "monterey",
@@ -6540,7 +6462,6 @@
       "252.6 关键词行级挖掘素材线索"
     ],
     "keywords": [
-      "bsd",
       "homebrew",
       "iokit",
       "junos",
@@ -6560,7 +6481,6 @@
     ],
     "keywords": [
       "aux",
-      "bsd",
       "darwin",
       "hubbard",
       "jobs",
@@ -6646,8 +6566,10 @@
       "jails",
       "kqueue",
       "red",
+      "redhat",
       "sage",
       "sovereign",
+      "sovereign-tech-fund",
       "tech",
       "ubuntu",
       "usenix",
@@ -6900,7 +6822,6 @@
       "looney",
       "netflix",
       "oca",
-      "open",
       "openconnect"
     ]
   },
@@ -6965,7 +6886,6 @@
     ],
     "keywords": [
       "appcafe",
-      "bsd",
       "ixsystems",
       "lumina",
       "moore",
@@ -7133,9 +7053,11 @@
       "csrg",
       "eurobsdcon",
       "evans",
+      "evans-hall",
       "hall",
       "hill",
       "murray",
+      "murray-hill",
       "ottawa",
       "robertwatson",
       "smithsonian"
@@ -7180,6 +7102,7 @@
       "277.13 企业参与freebsd治理的历史商业贡献者统计coreteam选举中的企业影响与基金会治理结构承接13312committer权限平等原则的治理层面展开过渡至13314起各具体企业的商业史叙事"
     ],
     "keywords": [
+      "committers-big-list-of-rules",
       "coreteam",
       "fangtooth",
       "incus",
@@ -7439,7 +7362,6 @@
       "linux",
       "mit",
       "openbsd",
-      "os",
       "posix",
       "windows"
     ]
@@ -7458,14 +7380,12 @@
     "keywords": [
       "debian",
       "dfsg",
-      "free",
       "freedom",
       "fsf",
       "gnu",
       "gpl",
       "libre",
       "netscape",
-      "open",
       "osd",
       "osi",
       "perens",
@@ -7516,6 +7436,7 @@
       "documents",
       "dragonfly",
       "eclipse",
+      "eclipse-foundation",
       "ffs",
       "google",
       "gsoc",
@@ -7729,7 +7650,6 @@
       "bsdi",
       "ibm",
       "novell",
-      "open",
       "opengroup",
       "oracle",
       "sco",
@@ -7759,7 +7679,6 @@
       "itanium",
       "k-ux",
       "novell",
-      "open",
       "opengroup",
       "oracle",
       "pa-risc",
@@ -7790,7 +7709,6 @@
       "oracle",
       "smartos",
       "sun",
-      "unix",
       "zfs",
       "zones"
     ]
@@ -7854,7 +7772,6 @@
       "300.3 raymond与perensosi的成立与分裂"
     ],
     "keywords": [
-      "bsd",
       "catb",
       "emacs",
       "fsf",
@@ -7936,7 +7853,6 @@
       "iso",
       "iso9945",
       "lsb",
-      "open",
       "posix",
       "rfc",
       "theopengroup",
@@ -8103,10 +8019,10 @@
       "309.35 项目统摄史观审视社区发展争议的许可证哲学解释学循环与革命改革"
     ],
     "keywords": [
+      "bsdnow",
       "bylaws",
       "coreteam",
       "csrg",
-      "development",
       "freebsd-announce",
       "git",
       "income",
@@ -8149,6 +8065,7 @@
       "mri",
       "nasa",
       "red",
+      "redhat",
       "slac"
     ]
   },
@@ -8219,6 +8136,7 @@
       "openssf",
       "python",
       "red",
+      "red-hat",
       "torvalds",
       "utils"
     ]
@@ -8243,7 +8161,8 @@
       "sovereigntechfund",
       "sprind",
       "utils",
-      "works"
+      "works",
+      "xz-utils"
     ]
   },
   "314": {
@@ -8259,7 +8178,6 @@
     ],
     "keywords": [
       "beastie",
-      "bsd",
       "corbato",
       "daemon",
       "daimon",
@@ -8466,6 +8384,7 @@
       "apple",
       "att",
       "bell",
+      "bell-labs",
       "berkeley",
       "hill",
       "joy",
@@ -8473,6 +8392,7 @@
       "lions",
       "microsoft",
       "murray",
+      "murray-hill",
       "princeton",
       "sarnoff",
       "shebang",
@@ -8535,7 +8455,8 @@
       "providence",
       "states",
       "sun",
-      "united"
+      "united",
+      "united-states"
     ]
   },
   "325": {
@@ -8564,7 +8485,8 @@
       "scotus",
       "states",
       "supreme",
-      "united"
+      "united",
+      "united-states-supreme-court"
     ]
   },
   "326": {
@@ -9273,7 +9195,6 @@
       "git",
       "mckusick",
       "netbsdfoundation",
-      "open",
       "openbsd",
       "pgp",
       "pledge",
@@ -9444,6 +9365,7 @@
       "freebsd",
       "mckusick",
       "netbsd",
+      "netbsdfoundation",
       "netbsf",
       "openbsd",
       "shigang"
