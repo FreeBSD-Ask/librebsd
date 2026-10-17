@@ -711,11 +711,12 @@ LINES = [
     dict(id="linux3", name="Linux 战线 Phase 3", probe=lambda: probe_manual(
         "无机器可读源；已由主理人移出长线范围"),
         resume="见 `01-项目管理/` 下 Linux 遗留事项计划", health="人工判读", deep=None),
-    dict(id="shenyue", name="shenyue 目录复核（3412 条）", probe=probe_shenyue,
-         resume="读 `shenyue/review/_交接书.md` ＋ `shenyue/review/_HANDOFF.md`",
-         health="`shenyue/_s25_ledger.py verify`（须 fails=0）",
-         deep=[PY, os.path.join(ROOT, "shenyue", "_s25_ledger.py"), "verify"],
-         cwd=os.path.join(ROOT, "shenyue")),
+    dict(id="shenyue", name="shenyue 目录复核（3412 条）",
+         probe=lambda: (probe_shenyue() or probe_manual(
+             "已收官归档（CLOSED 3,412/3,412，2026-10-17 实测台账全读）；工程目录已由主理人 "
+             "2026-10-17 裁决删除（提交 6db290d99），终态凭证＝changelog＋该提交；数字以登记表为准")),
+         resume="（归档线）历史件见提交 6db290d99 与登记表 §十七；如目录重建则探针自动回到台账口径",
+         health="归档线（源已删，仅核登记存在性）", deep=None),
 ]
 
 
