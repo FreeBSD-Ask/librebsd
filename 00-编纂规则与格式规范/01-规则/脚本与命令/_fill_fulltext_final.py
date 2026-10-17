@@ -30,8 +30,10 @@
 
 用法：
     python _fill_fulltext_final.py [--dry-run] [--limit N] [--db PATH] [--timeout S]
+                                   [--resolve-root DIR]
 
---db 指向其他 DuckDB 文件（验收请指向临时副本，禁止默认对主库跑）。
+--db 指向其他 DuckDB 文件（验收请指向临时副本，禁止默认对主库跑）；
+--resolve-root 改库内相对 file_path 的解析根（默认仓库根，与活库现行值同形）。
 """
 import argparse
 import os
