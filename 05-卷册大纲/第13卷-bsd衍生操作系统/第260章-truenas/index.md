@@ -152,3 +152,30 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔November 2021 FreeBSD Vendor Summit〕讲者口述：FreeBSD 以自定义端口形式获得 ZFS（转写音作 cfs）支持；2010 年起转写音作 finance 的一方切换使用 ZFS。（YouTube EPjeKLvleCQ9w，[298-308.07]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2762 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2762`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Directory Services on FreeNAS（John Hixson，iXsystems）讲者口述：NSS（转写音作 xs/s）生成器与文件、用户组解析用 NSS（转写音作 midline）完成，其中 LDAP 与 Active Directory 的路由都可配置。（YouTube EPojL_vsCetec，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2763 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2763`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Directory Services on FreeNAS（John Hixson）讲者口述：目录服务配置生成器会出外网查询（转写音含混），查 SRV 记录、识别 AD 环境（含 LDAP 环境），并生成最终配置文件。（YouTube EPojL_vsCetec，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2767 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2767`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DRAID Performance（Carles Mateo）讲者口述：其测试用四太字节希捷 SAS 盘，单盘约 200 IOPS。（YouTube EPCVST0t0X9YU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2768 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2768`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DRAID Performance（Carles Mateo）讲者口述：重建须从全部存活盘读出信息、算出丢失的校验块，再写到新盘——全盘整读整写；盘越多重建越快，但也受 I/O 性能与盘数约束。（YouTube EPCVST0t0X9YU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2769 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2769`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DRAID Performance（Carles Mateo）讲者口述：其 DRAID 配置为 2 数据条带＋1 校验条带＋3 个分布式热备，填充至 70%（实测 73%）；有趣的是此配置下填充比前一配置快得多。（YouTube EPCVST0t0X9YU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
