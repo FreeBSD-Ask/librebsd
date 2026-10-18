@@ -179,3 +179,20 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔DRAID Performance（Carles Mateo）讲者口述：其 DRAID 配置为 2 数据条带＋1 校验条带＋3 个分布式热备，填充至 70%（实测 73%）；有趣的是此配置下填充比前一配置快得多。（YouTube EPCVST0t0X9YU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2772 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2772`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS Plugins everything you ever wanted to know（John Hixson，iXsystems，AsiaBSDCon 2013）讲者口述：iXsystems 是 PC-BSD 的企业赞助方，也向 FreeBSD 贡献了大量代码。（YouTube EP1NC0lQMWHoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2773 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2773`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS Plugins everything you ever wanted to know（John Hixson）讲者口述：当时已有三个官方插件、另有少数社区自制。（YouTube EP1NC0lQMWHoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2774 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2774`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS Plugins everything you ever wanted to know（John Hixson）讲者口述：FreeNAS 的插件架构彼时已上线约一年。（YouTube EP1NC0lQMWHoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
