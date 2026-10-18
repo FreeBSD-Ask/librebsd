@@ -175,3 +175,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔会议不详〕讲者口述：按他所述谱系，2005 年 Sun 发布具备静态与动态追踪、用户级与内核级、生产可用且易用的 DTrace 之后，Linux 于 2008 年有 ftrace、2009 年有 perf，而最新加入内核的是 eBPF，能做自定义内核内聚合且为 JIT 插桩、速度快。（YouTube EPR4IKeMQhM0Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2800 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2800`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔eBPF Implementation for FreeBSD（Yutaro Hayakawa，庆应义塾大学）讲者口述：eBPF 即扩展伯克利包过滤器——经典 BPF 是写汇编码的包过滤框架（tcpdump/Wireshark 用）。（YouTube EP4vGZm2qlEBY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2801 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2801`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔eBPF Implementation for FreeBSD（Yutaro Hayakawa）讲者口述：Linux 近年扩展了 eBPF 规范与指令集，使其更通用、指令集更接近现代 CPU 的指令集架构。（YouTube EP4vGZm2qlEBY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

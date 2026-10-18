@@ -198,3 +198,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔BSDCan '19 Dev Summit pkgbase 分场讲者口述〕讲者口述：新基包方案有意不把内核设为 userland 包的依赖，安装器改为把 userland 与 kernel 作为两个独立包安装（都置 vital 标志），由更新器负责先更新内核；起因是一次讨论中提到依赖关系会让内核被意外装进 jail。（YouTube EPKxhRrvdaSIM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2794 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2794`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔portmgr: behind the scenes（René Ladan，ports 管理团队）讲者口述：2014 年引入 quarterly 分支——每季度初从 main 复制一份，安全与关键修复进该分支。（YouTube EPZhPvCc3wpvE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2795 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2795`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔portmgr: behind the scenes（René Ladan）讲者口述：portmgr 有由 core team 管辖的章程，ports 管理团队再把它落成一组操作政策。（YouTube EPZhPvCc3wpvE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
