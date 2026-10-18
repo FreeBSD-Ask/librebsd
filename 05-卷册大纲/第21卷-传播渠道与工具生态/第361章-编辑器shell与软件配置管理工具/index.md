@@ -186,3 +186,20 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔EuroBSDcon 2023 Walter Belgers 报告〕讲者口述：xlockmore 手册页写明可用用户密码或 root 密码解锁终端；因其系统 root 密码为空，他误连按两次回车便被解锁，旁人只要在该终端按回车同样能解锁。（YouTube EPahbu5CwqwDE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2741 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2741`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Modern Replacement for BSD spell(1)（Abhinav Upadhyay）讲者口述：旧 spell 的做法是先查词典，不在则剥掉词缀（前缀与后缀表）再查剩下部分是否成词。（YouTube EP3aMLmLmSjcg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2742 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2742`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Modern Replacement for BSD spell(1)（Abhinav Upadhyay）讲者口述：该词缀法挺方便但很不准——给任何词加后缀都会被判为合法，因为剥掉后缀的剩余部分本就是有效词。（YouTube EP3aMLmLmSjcg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2743 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2743`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Modern Replacement for BSD spell(1)（Abhinav Upadhyay）讲者口述：旧 spell 的另一大缺点是这些规则只贴合英语——用到别的语言上多半不行。（YouTube EP3aMLmLmSjcg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -129,3 +129,20 @@ volume: 第09卷-netbsd的历史
 
 据〔Alistair Crooks 讲可移植 iSCSI initiator〕讲者口述：RumpFS（转写音作 refuse）构建在 puffs 之上，提供与 FUSE 相同的用户态文件系统 API，且自 2007 年起与 FUSE 编译兼容，任何 FUSE 文件系统重新编译后都可在 RumpFS 下运行。（YouTube EPMiZY7PMu7Ic，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2723 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2723`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alamosa: A Tiered Disk Block Cache for NetBSD（Kira Ash）讲者口述：动机很直白——如今三百五十美元就能买二十太字节硬盘，但它每秒只做约四十次（走运也就一百次）I/O；另一边是快得惊人的闪存与非易失存储。（YouTube EPlI7PddqLGwI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2724 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2724`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alamosa: A Tiered Disk Block Cache for NetBSD（Kira Ash）讲者口述：设计上参照 ZFS ARC 的思路——在最常用与最近用两条队列之间做平衡，把两个列表插在一起、近乎二维。（YouTube EPlI7PddqLGwI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2725 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2725`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alamosa: A Tiered Disk Block Cache for NetBSD（Kira Ash）讲者口述：倾向不给每条缓存线记使用频度，而把频度统计收敛到每个集合一级。（YouTube EPlI7PddqLGwI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

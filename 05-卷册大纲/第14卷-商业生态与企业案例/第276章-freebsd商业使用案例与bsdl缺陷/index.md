@@ -512,3 +512,20 @@ volume: 第14卷-商业生态与企业案例
 
 据〔2022 年 11 月 FreeBSD Vendor Summit《FreeBSD in an Enterprise Environment》〕讲者口述：他们每晚做漏洞扫描，并大量使用 pkg audit（转写作 package audit）在已安装软件包中查找 CVE；他称每次出现漏洞，他们手上的补丁都比多数大牌厂商来得早——因为依赖 OpenSSL 的厂商设备要等厂商做新固件、下载再装到防火墙上。同段他还称内部架了一台每夜自动把所有已装软件包取源码重建的构建服务器（转写作 pf rear，疑为 poudriere，存疑）。（YouTube EP7bzNAKxAeMQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2736 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2736`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD, Protecting Privacy with Tor（Christian Brüffer）讲者口述：代理简单又快，却是单点故障——执法或其他想要你的人只要拿一张传票、或闯进机房，就能知道你在跟谁通信。（YouTube EPOwBh8ro7xHQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2737 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2737`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD, Protecting Privacy with Tor（Christian Brüffer）讲者口述：另一个匿名概念 MIX 很老，1981 年就有了——可见该领域研究由来已久。（YouTube EPOwBh8ro7xHQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2738 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2738`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD, Protecting Privacy with Tor（Christian Brüffer）讲者口述：Tor 即 The Onion Router，概念上同时建在 MIX 与代理两者之上；它是 TCP 覆盖网络，理论上可把任意 TCP 连接导过去。（YouTube EPOwBh8ro7xHQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

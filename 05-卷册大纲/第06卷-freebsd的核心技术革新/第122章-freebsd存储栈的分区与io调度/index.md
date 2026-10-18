@@ -216,3 +216,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔EuroBSDcon2023 · Marshall Kirk McKusick〕讲者口述：他写出 gunion 的起因是时常有人寄来能让 fsck 出错的大磁盘镜像——fsck 要么修错要么崩掉——而这些镜像动辄 4 TB，调试时每次重试都得再整盘复制一遍。（YouTube EPMfIrVtRvB4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2733 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2733`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔porch(1): it's not what you expect(1)（Kyle Evans，FreeBSD 工程经理）讲者口述：porch 是其业余项目，用于给 FreeBSD 的 TTY 功能做测试；不用 Tcl 而以 Lua 写脚本，更友好、也与 base 系统其他部分更一致。（YouTube EPDrbk4rEH1sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2734 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2734`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔porch(1): it's not what you expect(1)（Kyle Evans）讲者口述：expect 的自我定位是‘与交互程序编程对话’，以 Tcl 写就——他一年用不了一次、不想每次翻手册，这是自造工具的动机之一。（YouTube EPDrbk4rEH1sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2735 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2735`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔porch(1): it's not what you expect(1)（Kyle Evans）讲者口述：porch 有脚本模式与库直调两种用法；要求 Lua 5.3+（FreeBSD base 自带 5.4，恰合），CI 实测于 FreeBSD、macOS 与 Linux。（YouTube EPDrbk4rEH1sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

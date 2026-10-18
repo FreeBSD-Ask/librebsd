@@ -119,3 +119,25 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 据〔BSD 4 Linux Users (October 2009)〕讲者口述：ZFS 与 DTrace 已内建 FreeBSD；OpenBSD 提出了开放冗余协议 CARP。（YouTube EPxk6ouxX51NI，[1194.1-1209.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2729 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2729`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD from a Linux developer's perspective（D Scott Phillips，Intel）讲者口述：其笔电上 FreeBSD 的空闲功耗比 Linux 高 50–100%，等于损失四分之一到一半的电池续航；元凶是若干设备始终停在最高功耗状态。（YouTube EPml8vo1FWT1I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2730 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2730`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD from a Linux developer's perspective（D Scott Phillips）讲者口述：Wi-Fi 稳定性很好、吞吐却低；他把差异归因于 Linux 得到厂商第一方驱动（自启自家芯片），而 FreeBSD 没有同等待遇。（YouTube EPml8vo1FWT1I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2731 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2731`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD from a Linux developer's perspective（D Scott Phillips）讲者口述：文档上 FreeBSD 领先 Linux——一处集中生长的文档使内容更一致、更有信息量；对照 Linux 侧只有企业发行版零散的手册。（YouTube EPml8vo1FWT1I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2732 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2732`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD from a Linux developer's perspective（D Scott Phillips）讲者口述：补丁尺寸分布上两个项目几乎一样——一半的改动约六行、四分之三在约 25 行内；差别全在顶部 1% 的大改动上。（YouTube EPml8vo1FWT1I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

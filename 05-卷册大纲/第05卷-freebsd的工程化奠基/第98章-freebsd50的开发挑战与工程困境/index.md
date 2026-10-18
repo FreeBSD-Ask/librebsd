@@ -60,3 +60,15 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史料
 
 - [DB:historical_claims:claim] 关键词行级挖掘素材线索 98.11-关键词行级挖掘素材线索（1 条，CL-RM 段，见 98.11-关键词行级挖掘素材线索.md）
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2739 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2739`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Dev Summit: NetApp: Testing and CI〕讲者口述：其内建看板（转写音作 glance）里每个方块代表一次 CI 运行，顶端绿色的表示已通过、已生成 nightly；把光标悬停还能看到该问题牵连的所有 bug。（YouTube EPnQhhA9bnGJU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2740 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2740`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Dev Summit: NetApp: Testing and CI〕讲者口述：他们把 Jenkins 当作信息集散地（clearinghouse）来用，与多数人的用法不同——中间充当胶水，把既有流程跑出来的作业与结果汇进来并做分诊。（YouTube EPnQhhA9bnGJU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

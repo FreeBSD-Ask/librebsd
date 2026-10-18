@@ -216,3 +216,20 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔P08A 讲者 Scott Long〕讲者口述：这类网络缓冲结构可以方便地在首尾拼接数据，但本质全是指针连指针的链表，在依赖缓存的 CPU 上表现很差，内存流水线很慢。（YouTube EPye7PMmK95c4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2720 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2720`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reducing Lock Contention in a Multi-Core System（Randall Stewart，Cisco，AsiaBSDCon 2008）讲者口述：多核时代必须加锁——现场有双核笔记本、家里八核服务器、桌上还有十六核原型板。（YouTube EPOQOMva1SmbY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2721 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2721`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reducing Lock Contention in a Multi-Core System（Randall Stewart）讲者口述：FreeBSD 内核的 mutex（转写音作 MTS）与 pthread mutex 几乎一样、只是内核专用；用法是声明结构、先初始化再 lock/unlock。（YouTube EPOQOMva1SmbY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2722 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2722`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reducing Lock Contention in a Multi-Core System（Randall Stewart）讲者口述：SCTP 的实现选定读写锁路线，为的是让多个核能同时在同一数据结构上工作。（YouTube EPOQOMva1SmbY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
