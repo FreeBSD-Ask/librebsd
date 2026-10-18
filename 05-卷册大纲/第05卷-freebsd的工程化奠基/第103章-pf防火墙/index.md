@@ -247,3 +247,20 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔MeetBSD 演讲：Nikolay Aleksandrov〕讲者口述：其实现在 FreeBSD 上采用 bounded multiprocessing（而非 asymmetric multiprocessing），把内核线程绑定到各个 CPU、再把网卡绑定到这些线程，以便尽可能并行轮询接口；接收侧沿此路径去掉了驱动加锁。（YouTube EPJ-7Llk5uOns，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2744 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2744`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Active-Active — high performance firewalling with PF〕讲者口述：PF 在状态表里查不到时改走规则集求值，这是慢路径——规则在内存里是顺序表，必须逐条走下来才知道匹不匹配。（YouTube EPXvJAV9qI14Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2745 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2745`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Active-Active — high performance firewalling with PF〕讲者口述：pfsync 是很简单的 IP 协议——PF 状态表发生变化时把这些变更序列化成网络消息、打包发出去，默认走组播组，于是同网段的防火墙都能收到更新。（YouTube EPXvJAV9qI14Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2746 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2746`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Active-Active — high performance firewalling with PF〕讲者口述：active-active 的定义是两台 PF 防火墙同时处理同一条连接的包——请求走一台、回包落到另一台。（YouTube EPXvJAV9qI14Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -259,3 +259,20 @@ volume: 第10卷-openbsd的历史
 
 据〔Henning Brauer 在 BSDCan 2018 演讲 Q&A〕讲者口述：飞利浦对付费给讲者的代码不做限制，反而非常希望这些改动进入 OpenBSD 主线；讲者评价飞利浦真正理解开源的 give and take，愿意回馈社区。（YouTube EPDOCAYXeu5Fc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2726 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2726`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hack the Puffy: OpenBSD advocacy through CTF（Jason Testart）讲者口述：讲题真身是 CTF 而非段子；他自述安全背景（早年玩 honeynet project 的扫描月赛之类），做完公开挑战后意犹未尽，2018 年起了自己做挑战的念头。（YouTube EPh5uUEJDqtaE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2727 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2727`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hack the Puffy: OpenBSD advocacy through CTF（Jason Testart）讲者口述：其 OpenBSD 挑战设两面旗——先拿到 user 权限，再提权（转写作 group）。（YouTube EPh5uUEJDqtaE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2728 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2728`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hack the Puffy: OpenBSD advocacy through CTF（Jason Testart）讲者口述：做完一批挑战后的观察之一是没有任何涉及 LDAP 的题目——而这恰是他日常工作里用得多的东西。（YouTube EPh5uUEJDqtaE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

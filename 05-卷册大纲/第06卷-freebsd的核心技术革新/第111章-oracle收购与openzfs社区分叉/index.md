@@ -1224,3 +1224,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔November 2018 OpenZFS Leadership Meeting〕与会者口述：只挑想要的特性而不跟进其依赖（含加密等连带），本质是标准的技术债问题——而多家公司各自投入，难以协调。（YouTube EPoV58X-z8xVU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2718 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2718`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2020 OpenZFS Leadership Meeting〕与会者口述：OpenZFS 2.0 已切出五个 RC 候选，社区测试揪出几个小问题、无大碍，正准备打最终版 tag，希望当月早些时候发布。（YouTube EPS-SAfg1Awos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2719 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2719`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2020 OpenZFS Leadership Meeting〕与会者口述：2.0 发布冻结纪律——只从 master 最后 cherry-pick 低风险项（一些 FreeBSD 相关内容、文档清理之类），更大改动不再进。（YouTube EPS-SAfg1Awos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
