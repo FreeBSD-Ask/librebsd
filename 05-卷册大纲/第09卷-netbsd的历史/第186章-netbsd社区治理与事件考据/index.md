@@ -124,3 +124,15 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔BSD TV 录制 BSDCan 纽约站 Jeff Rizzo 演讲 Releasing NetBSD: So Many Targets, So Little Time〕讲者口述：至 2014 年 NetBSD 仍使用 CVS 作版本控制，讲者称它对一些用途而言有些年头了，但运行得很好。（YouTube EP4bPduH6O7lI，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2786 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2786`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NetBSD and Mercurial: The challenges of a long history〕讲者口述：NetBSD 是现存最大最老的 CVS 仓库之一，迁到现代版本控制系统的动机由此而来。（YouTube EP6i6CirmO0Gs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2787 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2787`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NetBSD and Mercurial: The challenges of a long history〕讲者口述：讲者回望自 CVS 起步的二十五年，并讲 NetBSD 与 Mercurial 的现状——与 Mercurial 开发者协作修问题、以及将来可能的走向；其经验对想摆脱 subversion 的其他大项目（如 FreeBSD）同样适用。（YouTube EP6i6CirmO0Gs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
