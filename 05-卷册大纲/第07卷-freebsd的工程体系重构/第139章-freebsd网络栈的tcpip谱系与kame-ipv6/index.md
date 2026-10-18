@@ -295,3 +295,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔AsiaBSDCon 2013 演讲：Olivier Van Acker〕讲者口述：在 FreeBSD 的情形下，Go 的 syscall 目录里脚本会取用该系统调用号主文件（转写作 cisco master file），据此生成一圈相关的系统调用封装函数。（YouTube EPPLCaUtArADA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2671 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2671`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Calling the BATMAN: Free Networks on FreeBSD（Aymeric Wibo）讲者口述：LinuxKPI 是一组把 Linux 内核函数映射到 FreeBSD 内核函数的头文件，位于 sys/compat/linuxkpi/common/include，处理的都是内核内部函数。（YouTube EPBAVogweBQ8M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2672 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2672`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Calling the BATMAN: Free Networks on FreeBSD（Aymeric Wibo）讲者口述：LinuxKPI 目前被用于运行完整的网络驱动（最大例子是来自 Linux 的 iwlwifi）以及图形驱动的内核侧——AMD 与 Intel 的 i915、radeon。（YouTube EPBAVogweBQ8M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2673 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2673`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Calling the BATMAN: Free Networks on FreeBSD（Aymeric Wibo）讲者口述：在 FreeBSD 上搭 batman-adv 网络，把硬接口 MTU 设为 1532，因为 batman 给每个包加了 32 字节的开销。（YouTube EPBAVogweBQ8M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2674 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2674`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Calling the BATMAN: Free Networks on FreeBSD（Aymeric Wibo）讲者口述：开发时发现不把 sk_buff 结构正确backing 到 mbuf 上更容易，于是当前数据在 mbuf 与 sk_buff 之间来回复制——他承认这不理想，打算后续改正。（YouTube EPBAVogweBQ8M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

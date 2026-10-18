@@ -289,3 +289,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Sam Atkinson 演讲〕讲者口述：其体感 OpenZFS 上游发布速度很高、节奏快，并称 AWS 所提供的许多其他文件系统的上游发布速度远不及此。（YouTube EP6Jt9LQcobXM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2698 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2698`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2020 OpenZFS Leadership Meeting〕与会者口述：illumos 与 Linux 上 ZFS send 相关线程都以最低可用优先级创建，但 illumos 上所有内核线程优先级都高于所有用户态线程，Linux 则共享同一优先级空间——同一代码在 Linux 上实际优先级低得多。（YouTube EPupUOXBhx-us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2699 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2699`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2020 OpenZFS Leadership Meeting〕与会者口述：就线程优先级行为而言，三大平台中 Linux 是异类； FreeBSD（转写音含混）更接近 illumos——内核线程不走分时、实际上是固定优先级。（YouTube EPupUOXBhx-us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2700 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2700`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2020 OpenZFS Leadership Meeting〕与会者口述：对旧版写入、新版不认识的属性值，新版 ZFS 可以逐类消化——见到不认识的属性值时显示 unknown 并回落默认值，避免属性集合把新版搞糊涂。（YouTube EPupUOXBhx-us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

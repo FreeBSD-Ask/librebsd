@@ -547,3 +547,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔“2020 FreeBSD Vendor Summit - Container Based Service Mesh”演讲〕讲者口述：jail 以 prison 形式存在于内核之内，内核外对其生命周期几乎没有可见性；若要在 FreeBSD 上原生实现成熟的容器环境，需要一个 runtime supervisor 来克服 jails 目前的限制。（YouTube EP0JNWNtJh0v0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2694 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2694`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The iocage FreeBSD Jail management tool（Conor Beh，vBSDCon 2020）讲者口述：iocage 于 2014 年年中首入 FreeBSD ports 树，最初与 ezjail 一样用 shell 写成。（YouTube EPHaYArIBQNao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2695 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2695`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The iocage FreeBSD Jail management tool（Conor Beh）讲者口述：iocage 2017 年起完全用 Python 重写，自 FreeNAS 11.1 起被广泛使用、取代 Warden。（YouTube EPHaYArIBQNao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2696 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2696`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The iocage FreeBSD Jail management tool（Conor Beh）讲者口述：ezjail 是第一个流行的 jail 管理工具，2005 年首现，2015 年起弃维。（YouTube EPHaYArIBQNao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2697 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2697`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The iocage FreeBSD Jail management tool（Conor Beh）讲者口述：Warden 出自 PC-BSD 项目、2010 年发布，是最早利用 ZFS 的通用 jail 管理器之一，并带早期插件系统。（YouTube EPHaYArIBQNao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

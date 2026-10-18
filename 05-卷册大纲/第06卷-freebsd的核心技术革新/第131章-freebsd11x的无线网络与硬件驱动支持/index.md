@@ -259,3 +259,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Hans Peter Selasky "The new USB stack in FreeBSD" 演讲〕讲者口述：更具 BSD 特色的 libusb 2.0 直接映射新 USB 栈的内核函数，libusb 1.0 与 0.1 都构建在它之上，用户态因此能用上大部分内核功能。（YouTube EPQGF2FJbiJ7A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2703 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2703`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability (DbC) Support on FreeBSD（Hiroki Sato，Tokyo Tech，EuroBSDcon 2023）讲者口述：USB 调试能力（DbC）一句话概括，是把 USB 主机上的一个端口变作 USB 设备端口。（YouTube EP7Xe-_t5CUc0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2704 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2704`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability (DbC) Support on FreeBSD（Hiroki Sato）讲者口述：现代硬件已没有串口——串口被视为遗留接口；服务器侧的 BMC/IPMI 能把串行控制台重定向到以太网，但消费级硬件没有这种功能。（YouTube EP7Xe-_t5CUc0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2705 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2705`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability (DbC) Support on FreeBSD（Hiroki Sato）讲者口述：内核侧（host/client 驱动）实现几近完成；所有 Intel USB3 控制器的设备 ID 已加入，AMD 及其他厂商还缺——请非 Intel 平台者提供设备 ID 并用调试线实测。（YouTube EP7Xe-_t5CUc0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2706 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2706`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔USB Debug Capability (DbC) Support on FreeBSD（Hiroki Sato）讲者口述：未来工作之一是 target disk mode——loader 跑起来后，把块设备经 USB DbC 导出，可用于装系统或诊断。（YouTube EP7Xe-_t5CUc0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
