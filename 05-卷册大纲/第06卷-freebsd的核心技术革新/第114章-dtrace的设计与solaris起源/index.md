@@ -219,3 +219,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔DTrace - Monitoring i strojenie systemu w XXI wieku / Slawek Zak 讲座〕讲者口述：讲者将该跟踪语言定性为脚本语言而非编译语言：对用户几乎不加外部限制，不需要编辑—编译—调试这一循环，由框架在内部转换为一种字节码形式。（YouTube EP5VK6tV4y3r0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2778 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2778`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hardware Trace Framework for FreeBSD（剑桥大学计算机实验室，ARM 相关工作）讲者口述：2024 年初清点 ARM 平台外设支持时，发现 FreeBSD 缺 ARM 硬件跟踪单元的支持。（YouTube EPvCHqUZxhZ-I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2779 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2779`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hardware Trace Framework for FreeBSD（同上）讲者口述：当时 BSD 树里没有任何能覆盖硬件跟踪这类技术的框架。（YouTube EPvCHqUZxhZ-I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2780 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2780`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Hardware Trace Framework for FreeBSD（同上）讲者口述：其此前已为该平台做过基础支持（转写作 IU 与 SCMI），并写过显示控制器驱动与 ARM Mali GPU 驱动。（YouTube EPvCHqUZxhZ-I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

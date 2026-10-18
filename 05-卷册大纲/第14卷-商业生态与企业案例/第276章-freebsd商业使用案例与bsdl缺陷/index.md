@@ -568,3 +568,15 @@ volume: 第14卷-商业生态与企业案例
 
 据〔Tracking FreeBSD in a Commercial Setting（M. Warner Losh）讲者口述：讲题即如何在商用产品里跟上 FreeBSD 的演进——讲者当时供职 Cisco、做 FreeBSD 与其他操作系统技术，演讲内容为可选策略。（YouTube EPVaZ9Ef04bJg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2784 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2784`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Smartcom's control plane software（Boris Astardzhiev）讲者口述：Smartcom（保加利亚）1991 年入行，现有约百名员工，分三个主要部门。（YouTube EPszMedjgLQN8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2785 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2785`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Smartcom's control plane software（Boris Astardzhiev）讲者口述：其所展示的控制面软件是一份定制化的 FreeBSD。（YouTube EPszMedjgLQN8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
