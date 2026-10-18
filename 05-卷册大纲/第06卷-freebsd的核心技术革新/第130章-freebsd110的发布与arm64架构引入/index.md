@@ -191,3 +191,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Maciej Czekaj〕讲者口述：部署这类数据科学栈不该用操作系统包管理器，FreeBSD ports 虽收录其中部分包但常有版本冲突，某包若不在 ports 里就几乎找不到所需版本，因此用 ports 是坏主意。（YouTube EPNxON0Fv28LE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2747 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2747`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Panel - FreeBSD Arm64 Flexibility（Arm/Ampere/Klara）与会者口述：ARM 授权厂商多已转向，Amazon（转写音含混）以自研芯片做得极好，在既有架构之上获得了显著的性能收益。（YouTube EPUDYmJ83xhxI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2748 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2748`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Panel - FreeBSD Arm64 Flexibility〕与会者口述：如今接力的是一批成为独立芯片厂商的玩家，他们在既有架构上同样看到了显著的性能收益。（YouTube EPUDYmJ83xhxI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2749 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2749`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Panel - FreeBSD Arm64 Flexibility〕与会者口述：ARM 的优势之一是厂商容易按需定制处理器（为最重要负载加专用 offload），而 FreeBSD 有大量组件能吃上这些平台特性——把 FreeBSD 独有的东西尽早带给这些平台是机会所在。（YouTube EPUDYmJ83xhxI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

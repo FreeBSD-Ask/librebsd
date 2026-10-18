@@ -281,3 +281,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔USB Debug Capability (DbC) Support on FreeBSD（Hiroki Sato）讲者口述：未来工作之一是 target disk mode——loader 跑起来后，把块设备经 USB DbC 导出，可用于装系统或诊断。（YouTube EP7Xe-_t5CUc0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2750 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2750`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD audio in amateur and professional setups（Goran Mekić，EuroBSDcon 2022）讲者口述：virtual OSS 由 Hans Petter Selasky 写成，扩展了内核内建 OSS 能力。（YouTube EP9xIGfs6Bqpo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2751 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2751`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD audio in amateur and professional setups（Goran Mekić）讲者口述：JACK 是音频服务器之一，但特殊之处在于它就是为录音棚而设计的。（YouTube EP9xIGfs6Bqpo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2752 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2752`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD audio in amateur and professional setups（Goran Mekić）讲者口述：混音与重采样在用户态更快——声道数大时（他有 18 路、Selasky 有 32 路）由内核来做就会发卡。（YouTube EP9xIGfs6Bqpo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
