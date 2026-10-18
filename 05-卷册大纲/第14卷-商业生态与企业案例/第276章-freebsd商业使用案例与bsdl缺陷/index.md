@@ -529,3 +529,25 @@ volume: 第14卷-商业生态与企业案例
 
 据〔FreeBSD, Protecting Privacy with Tor（Christian Brüffer）讲者口述：Tor 即 The Onion Router，概念上同时建在 MIX 与代理两者之上；它是 TCP 覆盖网络，理论上可把任意 TCP 连接导过去。（YouTube EPOwBh8ro7xHQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2755 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2755`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Own The Stack: FreeBSD from a Vendor's Perspective（Antranig Vartanian）讲者口述：他是（网络安全公司，转写音作 philoria）的联合创始人兼 CEO，同时运营亚美尼亚 BSD 用户组。（YouTube EPoI-TNjdQVxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2756 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2756`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Own The Stack: FreeBSD from a Vendor's Perspective（Antranig Vartanian）讲者口述：公司业务是网络欺骗/蜜罐——在基础设施内部布设虚拟雷区，用诱饵与引子打断攻击者的决策循环、迫其现身。（YouTube EPoI-TNjdQVxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2757 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2757`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Own The Stack: FreeBSD from a Vendor's Perspective（Antranig Vartanian）讲者口述：FreeBSD 侧用 poudriere 打包软件，另有一批脚本用于发布基础设施。（YouTube EPoI-TNjdQVxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2758 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2758`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Own The Stack: FreeBSD from a Vendor's Perspective（Antranig Vartanian）讲者口述：宿主机全用 FreeBSD，一切组件都关进 jail 里跑。（YouTube EPoI-TNjdQVxA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

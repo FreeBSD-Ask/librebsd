@@ -203,3 +203,15 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔A Modern Replacement for BSD spell(1)（Abhinav Upadhyay）讲者口述：旧 spell 的另一大缺点是这些规则只贴合英语——用到别的语言上多半不行。（YouTube EP3aMLmLmSjcg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2753 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2753`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：其在 GSoC 项目里为新实现（转写作 APOPOS，即 apropos）——用 SQLite 全文检索模块作后端，替换了旧实现。（YouTube EPxREdxsnOM00，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2754 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2754`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：其后一年拿到了（man 页相关项目的）提交权限，并建了网站 man-k.org 作为开源的在线版本。（YouTube EPxREdxsnOM00，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
