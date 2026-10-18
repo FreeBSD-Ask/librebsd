@@ -8040,3 +8040,59 @@ N7 tar／gzip 完好但**单个 parquet 内容损坏** ⇒ `archive_unreadable`�
   别人的 WIP 快照写进了共享 index**。
 * v42 提交索引：`d80e703f3`（4 件 718+/1−）→ `c0eef0dc9`（CLAUDE.md／AGENTS.md 2 件，各 +1/−1）。
   其余他会话提交（`3553e4774`…`ba19aa1e2`）不属本线。
+### v43-（2026-10-18，fhk_b082 全链闭环，885 单宿主 570 块）
+
+* **批 spec**：`fhk_b082`，offset **162,000**、n **2,000**，pk **2620463~2622463**；
+  源库 `03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hackers.duckdb`。
+  全窗 1999 年 ⇒ 宿主裁定为 **88.5 单宿主**，叙述列一律 885。
+* **读手 40 片**：40/40 落盘 577 条（p14／p15 读手 ECONNRESET，验盘确认零落盘后重派成功）。
+* **候选层自扫＋定点修正 → 570 条**：撇号人名冲突（禁撇号 vs 禁改人名）按本线既有裁定
+  **一律整条删除**；BLIND 行臆造断言删除；禁字符改写；超 80 字缩写；人名改写回正。
+  终态 L4=**437**／L3=**133**，合并源库存在性 570/570、结构违规 0。
+* **register 全链**：水位锁 `show → acquire → 锁内实测水位 483,148 → register → release`；
+  claim 号段 **CL-RM-483149~483718**（连续 570），rows==distinct==claim_count==**570**，
+  quote 570/570，四表 join **570**；`claimdb_guard.py --db historical_claims` **前后均 PASS**
+  （claim 表 506,828→507,405，最大单值占比恒 **0.0168%**）；
+  `release --rows 570 --distinct 570` 退出 0。专项 prebak
+  `12-数据库备份/historical_claims/historical_claims_before_fhk_b082_20261018_103454.duckdb`
+  （643,837,952 B，md5 `ddb8c021175b6d76de1ae2c65d1abf65`，与活库一致）。
+* **叙述 40 片**：p1-p10 各 15 行、p11-p40 各 14 行，合并 **570 行**、host 全 885；
+  长度 min/max/avg **60/140/94.4**；`_chk_mount_narr.py` 门禁违规 **0**
+  （BOM False、CRLF False、升序 True、与候选清单一致 True）。各片回报了摘要与正文不符的 pk、
+  关键字 0 命中被删的断言、按转载或转述处理的 pk，属下游门禁须知的判读留痕。
+* **outline 回写**：前置门宿主三把尺子 19,265,646 B / 156,113 行 / ROW_MINE **31,176**
+  （与 b081 收口值一致，工作树==HEAD）；写后 19,609,471 B / 158,963 行 / ROW_MINE
+  **31,746**，total_refs 31,176→31,746；`git diff --numstat` = **2850/0**（＝570 块 × 5 行）；
+  **幂等二跑 +0**、拟插 0 块。写前备份 `review_logs/88.5-开发者群体core-team.prebak-fhk_b082`
+  （19,265,646 B，md5 `3f192e165e43938f728ae8d3a704e79e`，与写前宿主逐字节一致）。
+  本批新增区（末 2850 行）六码位直角引号 0、全角空格 U+3000 0、CRLF 0。
+* 🔴🔴 **outline 改动被并发会话提交吸收**：写盘后 `git add` 返回空、`git diff --cached` 为空、
+  工作树转干净——本批 570 块已随并发会话提交 **`5f2ba2659`**（说明“正常提交”）一并入库，
+  `git show HEAD:<宿主> | grep -c ROW_MINE` = **31,746** 与工作树一致，内容零丢失但提交归属非本线。
+  v42 记过的 plumbing＋共享 index 陷阱仍在；本轮未走 plumbing 是因为写盘到提交之间存在他会话
+  抢先提交窗口，而非主动选择。
+* **bookkeep 核验全 PASS**（`_bookkeep_wave_fhk_b082.py`，由 b075 版机械克隆、
+  `rows_read` 回填 2000）：三零＝缺块 0 / claim_id 不符 0 / 重复 0；格式违规宿主 0；
+  叙述回源不一致 0；等级对账与 DB 真值不符 0。
+* **记账**：`progress.jsonl +1`（`2026-10-18T19:13:47`，db freebsd-hackers，batch fhk_b082，
+  rows_read 2000）；`changelog.duckdb entries +1`（summary 前缀 `H3 fhk_b082`，
+  幂等判据 `LIKE 'H3 fhk_b082%'`）。
+* **台账**：`mail2d_read_ledger.json` 外科替换 `items["freebsd-hackers"]` 对象——
+  read_spec / read_judged / read_effective / records[0].hi 均 **162,000 → 164,000**，
+  tags 81 → **82**（末位 `fhk_b082`），queued_spec 0、queued_records 空；顶层 updated 打
+  `2026-10-18T20:07`。写前备份 `.bak-fhk_b082-20261018`（144,825 B）；写后断言：其余
+  **256 库逐字节不变**、顶层与 items 键序不变、read_spec==read_judged==read_effective==hi。
+  ⚠️ **教训：台账是 pretty-printed JSON 且字符串值内含 `}` 字面**——纯大括号计数会把对象边界
+  算错（首跑把 `end` 算到别处、连带断言尾串恒不等）；正解是**字符串感知**的括号平衡
+  （遇 `"` 跳到越过闭引号、识别反斜杠转义），改完再用 `json.loads` 回读断言。
+  ⚠️ 台账 `note` 字段本批**未追加**（b080／b081 亦未追加；changelog.duckdb 已记），如需补录
+  须另行定点插入（note 现为 33,016 字符单串）。
+* **活库水位实测（收口后）**：`register_waterlock.py probe` → `max_claim_id` **486,107**、
+  `next_available` **486,108**。本批止于 483,718 ⇒ 期间他会话又推进 **2,389** 条。
+  ⚠️ 结论同 v42：**水位每次开窗必须重测，禁复用**（两日内累计推进约 5,400）。
+* **下一站 `fhk_b083`**：offset **164,000**、n **2,000**；开窗前须 ①重测水位与 `probe`；
+  ②裁定宿主（本批全窗 1999 年单宿主 885，下一窗是否跨界需按日期实测）；③台账
+  read_spec 已在 164,000，queued_spec 0、无残留窗口。freebsd-hackers 全库 messages
+  **201,463** ⇒ 余 37,463 封（约 18 批）。
+* **本批未提交内容**：除 `_HANDOFF_H3.md` 本节外无本线待提交件；`script/` 全目录被
+  `.gitignore` 第 40 行挡住（`git check-ignore -v` 确认），review_logs 全部产物按约定不入库。
