@@ -44,7 +44,7 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 6.6 为第 47 个发布，unveil 已用于 77 个用户态程序，移除 bridge 输出快速路径内核锁，加入 Intel MDS 缓解与 malloc 隐蔽/清零 API，并更新 VMM 以透传 MSR 缓解位。（BSD Now EP322，[1059.96-1598.48]，L2）
 - OpenSSH 8.1 修复 XMSS 私钥解析整数溢出，并在 RAM 中加密静态私钥以防 Spectre/Meltdown 类侧信道；RSA 证书签名默认改用 SHA2-512，不兼容 7.2 之前的客户端。（BSD Now EP322，[2107.02-2265.46]，L2）
 - GhostBSD 澄清其基于 TrueOS/FreeBSD 12 stable，官方桌面为 MATE，其他桌面以社区版本维护，项目提供构建与托管支持并欢迎贡献。（BSD Now EP322，[1778.00-1862.98]，L2）
-- SmallWall 的诞生系于一次突然的项目终结：2015 年 2 月 monoWall 作者 Manuel Kasper 以一封邮件宣布项目停止开发，长期依赖该精简防火墙的咨询者与用户在震惊中几乎同时注册域名、搭建基础设施，Lee Sharp 以连续的 beta 发布承接社区，并因 Slashdot 报道获得爆发性下载，项目由此复活。　[存疑脚注] 转写将发件人误作 a manual，依 monoWall 项目史推断为作者 Manuel Kasper（BSD Now EP97，[1031.14-1112.33]，L1）
+- SmallWall 的诞生系于一次突然的项目终结：2015 年 2 月 monoWall 作者 Manuel Kasper 以一封邮件宣布项目停止开发，长期依赖该精简防火墙的咨询者与用户在震惊中几乎同时注册域名、搭建基础设施，Lee Sharp 以连续的 beta 发布承接社区，并因 Slashdot 报道获得爆发性下载，项目由此复活。 [存疑脚注] 转写将发件人误作 a manual，依 monoWall 项目史推断为作者 Manuel Kasper（BSD Now EP97，[1031.14-1112.33]，L1）
 - SmallWall 的产品立场是刻意求小：Lee Sharp 明言遵循 “do one thing and do it well”（1149.05-1153.09）的旧 Unix 哲学，拒绝大而全防火墙，专注低功耗嵌入式与虚拟化场景（早期即加入 VirtIO 驱动以适配 KVM 等开源虚拟机）；管理面以 Web 界面防呆、把多网段等危险操作刻意变难，配置为可任意编辑的扁平 XML 文件（1514.23-1539.05），固件更新经 RAM disk 中转以保护 CF 卡与 U 盘的写入寿命。（BSD Now EP97，[1144.38-1194.77]，L1）
 - Docker 登陆 FreeBSD ports tree 由当期主持人亲自提交 port（其自述移植主体另有其人、自己只补 port 打包），实测 FreeBSD 容器原生运行于 Jail 子系统与 ZFS 之上、近全部子命令可用，在 -CURRENT 的 64 位 Linuxulator 上亦可尝试运行 Linux 容器；遗留缺口包括 resolv.conf 未自动复制与依赖 PF 做 NAT 转发的临时胶水，期望日后由 port 内部接管。（BSD Now EP97，[3383.60-3518.65]，L1）[订正：原 [3375.71-3518.65]，2026-09-30 SenseAudio 重转核对]
 - 2015 年的两个外部靠拢信号由主持人转述：微软因决定在 Windows 中集成 OpenSSH 而向 OpenBSD 基金会捐赠、成为金牌赞助商，并在 OpenSSH 邮件列表发出合同工作邀约、承诺变更酌情上游回馈；同期 Oracle 的 Solaris 计划以原生 OpenSSH 取代 Sun SSH 分叉，并自 OpenBSD 借入 getentropy、将 arc4random 并入 libc（2545.47-2576.31）。（BSD Now EP97，[3630.00-3658.04]，L2）[订正：原 [3615.63-3658.04]，2026-09-30 SenseAudio 重转核对]
@@ -60,7 +60,7 @@ volume: 第10卷-openbsd的历史
 - DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[545.0-707.24]，L2）[订正：原 [685.26-707.24]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1528.5]，L2）[订正：原 [1063.56-1068.82]，2026-09-30 SenseAudio 重转核对]
 - OpenSSH 8.1 发布公告，含 Adam Zabrocki 报告的 XMSS 私钥解析漏洞。（BSD Now EP322，[2125.36-2172.60]，L2）
-- 该期提及的一手史料包括：BSDCan 2015 演讲视频（Stephen Bourne 关于 UNIX 早期岁月与 shell 设计的主旨报告、Nigel Williams 之 FreeBSD 多路径 TCP、John Criswell 之安全虚拟架构、John-Mark Gurney 之 AES-ICM/GCM 加入 open crypto、会议闭幕实录）；EuroBSDCon 2015 瑞典会议初步议程与四场教程（含 Kirk McKusick 的 BSD 快速文件系统简史与 FreeBSD 导论、mandoc 教程、Peter Hansteen 的 PF 教程）；2015 冲绳开源会议之 NetBSD 展示；monoWall 停更邮件与 SmallWall 文件系统 tarball；Oracle 开发者关于 Sun SSH 的系列博文。　[存疑脚注] 人名与专名多依音近转写辨识（如 Steve born、Ted Uninks、Ed Shoutman、Peter Handstein、Poojrear 分别推断为 Stephen Bourne、Ted Unangst、Ed Schouten、Peter Hansteen、poudriere），拼写待与会议议程原件核对（BSD Now EP97，[71.91-122.18]，L2）
+- 该期提及的一手史料包括：BSDCan 2015 演讲视频（Stephen Bourne 关于 UNIX 早期岁月与 shell 设计的主旨报告、Nigel Williams 之 FreeBSD 多路径 TCP、John Criswell 之安全虚拟架构、John-Mark Gurney 之 AES-ICM/GCM 加入 open crypto、会议闭幕实录）；EuroBSDCon 2015 瑞典会议初步议程与四场教程（含 Kirk McKusick 的 BSD 快速文件系统简史与 FreeBSD 导论、mandoc 教程、Peter Hansteen 的 PF 教程）；2015 冲绳开源会议之 NetBSD 展示；monoWall 停更邮件与 SmallWall 文件系统 tarball；Oracle 开发者关于 Sun SSH 的系列博文。 [存疑脚注] 人名与专名多依音近转写辨识（如 Steve born、Ted Uninks、Ed Shoutman、Peter Handstein、Poojrear 分别推断为 Stephen Bourne、Ted Unangst、Ed Schouten、Peter Hansteen、poudriere），拼写待与会议议程原件核对（BSD Now EP97，[71.91-122.18]，L2）
 - OpenBSD 开发者 Marco Peereboom 一手访谈：存储与 SCSI 中间层工作、IPMI 传感器框架实现、个人多平台部署（工作站、web 服务器、HPPA 防火墙）、项目亏损与基础设施成本结构（网络费用、全平台本地原生构建的电费）、hackathon 年会与威尼斯定向 ports hackathon、no nonsense 开发哲学与许可证不妥协、对 apt-get 与 OpenBSD 升级流程的对比评价、ports 升级替换功能的时间点（3.8-3.9 之间）、ACPI 重写与 Jordan Hargrave 合作、SAS 驱动计划、bioctl 通用 RAID 工具理念、桌面环境（Ion/Ratpoison、screen、vi）、OpenSSH 使用广度与零收入的悖论陈述。（BSDTalk EP27，[35.96-1001.24]，L1）
 
 **史观**：
@@ -71,16 +71,16 @@ volume: 第10卷-openbsd的历史
 - 总纲22 知识注定过时：SSH 旧客户端与 RSA-SHA1 证书兼容性被新默认淘汰，知识随版本更替失效。（BSD Now EP322，[2236.64-2265.46]，L2）
 - 总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1905.7]，L2）[订正：原 [1608.32-1616.96]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1165.6]，L2）[订正：原 [982.99-1036.46]，2026-09-30 SenseAudio 重转核对]
-- 总纲10 动手者创造历史：SmallWall 的谱系由动手者而非明星人物书写：Lee Sharp 自述当年受教于 monoWall 周边的实践者——Chris 后执掌 pfSense 与 BSD Perimeter，写文档者独立门户，做网络架构者遍及全球——如今他刻意降低开发门槛、把工具与文档摆出来，请有想法的人跳进来，以日常劳动的传递续写项目，而非依赖英雄叙事。　[存疑脚注] 转写将相关人名误作 Michael Adema、Escozia、Jonathan DeGraves 等，准确拼写待核（BSD Now EP97，[1986.33-2023.69]，L1）
+- 总纲10 动手者创造历史：SmallWall 的谱系由动手者而非明星人物书写：Lee Sharp 自述当年受教于 monoWall 周边的实践者——Chris 后执掌 pfSense 与 BSD Perimeter，写文档者独立门户，做网络架构者遍及全球——如今他刻意降低开发门槛、把工具与文档摆出来，请有想法的人跳进来，以日常劳动的传递续写项目，而非依赖英雄叙事。 [存疑脚注] 转写将相关人名误作 Michael Adema、Escozia、Jonathan DeGraves 等，准确拼写待核（BSD Now EP97，[1986.33-2023.69]，L1）
 - 总纲5 没有必然性，只有偶然性：项目的存在本身即偶然性的产物：没有那份宣布停更的邮件便没有 SmallWall，Lee Sharp 强调少数人 “had the same idea at the same time”（1078.33-1083.33），复活不是历史必然，而是几个用户在同一周内的应急反应；其早期声势亦系于 Slashdot 曝光这类无法规划的事件。（BSD Now EP97，[1031.14-1090.33]，L1）
 - 总纲13 法律与道德是利益分配：OpenSSH 悖论呈现了价值创造与利益分配的错位：OpenSSH 内置于 Cisco 交换机、AIX、OS X 等无处不在的平台，使用者以百万计，却无一分收入回流项目，连自身运转账单都难以支付；企业把公共品内化为基础设施而不承担其维护成本，公共品的存续被迫仰赖个人捐赠与偶发的企业善举——技术上的巨大成功与经济上的悬空并存。（BSDTalk EP27，[945.60-998.24]，L1）
 
 **辨析**：
 
-- PDP-7 影片鉴定为“强烈支持而非确证”，Warner 本人承认对序列号 149 的排除仅属弱证据。　[存疑脚注] 三线证据均非决定性，结论保持开放（BSD Now EP322，[770.24-808.78]，L3）
-- GhostBSD 路线为项目方单方声明，TrueOS 后续变动可能使其再调整，不宜作长期定论。　[考据脚注] 上游 TrueOS 路线变动风险未计入（BSD Now EP322，[1802.90-1822.78]，L4）
+- PDP-7 影片鉴定为“强烈支持而非确证”，Warner 本人承认对序列号 149 的排除仅属弱证据。 [存疑脚注] 三线证据均非决定性，结论保持开放（BSD Now EP322，[770.24-808.78]，L3）
+- GhostBSD 路线为项目方单方声明，TrueOS 后续变动可能使其再调整，不宜作长期定论。 [考据脚注] 上游 TrueOS 路线变动风险未计入（BSD Now EP322，[1802.90-1822.78]，L4）
 - 旧基线之辩是本期最有张力的技术判断：SmallWall 坚守 FreeBSD 8.4，主张 “Old is good”（1380.53-1383.13）——基线更久经测试，因 Shellshock 与 Heartbleed 均未波及（无 shell、无受影响特性），但 8.4 安全支持数月内终止，向 FreeBSD 10 迁移牵动大量代码；且历史上 monoWall 曾因 FreeBSD 6 网络性能不济而自 4 直接跳 8——稳定与前沿的取舍并非单向进步，而是按自身负载场景的权衡。（BSD Now EP97，[1374.01-1478.79]，L1）
-- 转写讹误提示（该期质量标记为重复检测，经通读主线完整但专名讹误多）：受访者名讹作 Perebum（通行拼写为 Marco Peereboom），bioctl 讹作 BioCuttle，apt-get 讹作 AppGet，OpenSSH 讹作 OpenXSage，ports 讹作 porch，Ratpoison 讹作 Redpoison，Jordan Hargrave 讹作 Jordan Hardraith，SAS 讹作 SaaS，AMD64 讹作 A&B64，mpi 驱动讹作 empty key driver，Calgary 一处转写含混；引用本访谈的专名、地名与人名前须逐一对音核实。[存疑脚注] 专名讹误密集，需系统核对。　[存疑脚注] 人名、工具名与术语讹误密集，引用前需系统对音核实。（BSDTalk EP27，[35.96-1001.24]，L5）
+- 转写讹误提示（该期质量标记为重复检测，经通读主线完整但专名讹误多）：受访者名讹作 Perebum（通行拼写为 Marco Peereboom），bioctl 讹作 BioCuttle，apt-get 讹作 AppGet，OpenSSH 讹作 OpenXSage，ports 讹作 porch，Ratpoison 讹作 Redpoison，Jordan Hargrave 讹作 Jordan Hardraith，SAS 讹作 SaaS，AMD64 讹作 A&B64，mpi 驱动讹作 empty key driver，Calgary 一处转写含混；引用本访谈的专名、地名与人名前须逐一对音核实。[存疑脚注] 专名讹误密集，需系统核对。 [存疑脚注] 人名、工具名与术语讹误密集，引用前需系统对音核实。（BSDTalk EP27，[35.96-1001.24]，L5）
 
 **文献**：
 
@@ -116,3 +116,25 @@ volume: 第10卷-openbsd的历史
 
 据〔来源不详〕讲者 Christian 口述：全球运行 SSH 服务器的机器已有超过 4000 万台。（YouTube EPvNAth4yOdJ4，[41.3-58.1]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2675 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2675`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intercom 生产 SSH 访问管理改用 OpenSSH 证书（Niall Sheridan，SREcon）讲者口述：因为证书由一把中心密钥签发，分发到所有实例上的唯一东西就是证书颁发机构的公钥——用证书登录时，服务器校验你证书上的签名，信任即放行。（YouTube EPNCEQj27A3XA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2676 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2676`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intercom 生产 SSH 访问管理改用 OpenSSH 证书（Niall Sheridan，SREcon）讲者口述：启用证书所需改动极其简单，唯一条件是用一版权限起始时间晚于七年的 OpenSSH。（YouTube EPNCEQj27A3XA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2677 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2677`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intercom 生产 SSH 访问管理改用 OpenSSH 证书（Niall Sheridan，SREcon）讲者口述：证书可设有效期，超出有效期使用时服务器会拒收；但这不会终止已建立的会话，只在认证环节决定放行与否。（YouTube EPNCEQj27A3XA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2678 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2678`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Intercom 生产 SSH 访问管理改用 OpenSSH 证书（Niall Sheridan，SREcon）讲者口述：不推荐使用 GPG agent，尽管它带 SSH agent 支持，但完全不支持证书（讲者称为 bug 且对方无修复计划）。（YouTube EPNCEQj27A3XA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -200,3 +200,25 @@ volume: 第09卷-netbsd的历史
 
 据〔Zachary McGrew 关于将 NetBSD 移植到 RISC-V 的演讲〕讲者口述：NetBSD 在 RISC-V 上最终选定 Sv39，这也正是 FreeBSD 与 Linux 当时使用的模式，对应三级页表：512 个 1G 项、512 个 2M 项、512 个 4K 项。（YouTube EP2vQXGomKoxA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2683 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2683`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Advances in Embedded ARM processors（Dmitri Epshtein，Marvell 软件团队）讲者口述：Marvell 每年出货逾两百万颗跑着 FreeBSD/NetBSD 的芯片，供 Apple、Cisco 等公司使用。（YouTube EPJ-FLykTaHRo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2684 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2684`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Advances in Embedded ARM processors（Dmitri Epshtein，Marvell）讲者口述：Marvell 的开发套件与参考设计板支持若干流行操作系统——FreeBSD、NetBSD、Linux 与 VxWorks，并支持大端与小端。（YouTube EPJ-FLykTaHRo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2685 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2685`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Advances in Embedded ARM processors（Dmitri Epshtein，Marvell）讲者口述：Marvell 不打算只把 plug computer 卖给大客户，而想把它提供给开放社区——Linux 与 NetBSD 开发者，由他们去发现这台机器上能跑什么应用。（YouTube EPJ-FLykTaHRo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2686 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2686`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Advances in Embedded ARM processors（Dmitri Epshtein，Marvell）讲者口述：近年很多公司从 VxWorks 这类老操作系统迁到 BSD 或 Linux；讲者自述五六年前自己的活多在 VxWorks，如今多在 Linux 或 BSD 上。（YouTube EPJ-FLykTaHRo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

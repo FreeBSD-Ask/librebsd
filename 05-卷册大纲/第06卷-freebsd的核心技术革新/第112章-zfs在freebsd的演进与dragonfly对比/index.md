@@ -1192,3 +1192,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Saso Kiselkov〕讲者口述：ZFS 的 trim／unmap 功能内置了两种调用方式，第一种称为自动 trim——在存储池上设一个属性即可启用，默认是关闭的。（YouTube EPkt91t4sBWi8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2690 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2690`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 黑客松项目串场（Chris Webb）讲者口述：其黑客松项目是给 ZDB 命令加 JSON 输出，沿 ZFS/ZED 已有做法以 ZFS 内置的 nvlist 转 JSON 能力实现，先打印单个对象的头信息与对象条目。（YouTube EPYTL3mqV-wEA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2691 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2691`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 黑客松项目串场（讲者自述负结果）口述：把 ZFS list 从百万次逐数据集 ioctl 改为单次 ioctl 全量返回，实测只差约 5%——耗时本就被打开数据集、取统计、找下一个快照支配；新实现代码更多且更脆弱，结论是现有实现已足够好。（YouTube EPYTL3mqV-wEA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2692 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2692`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 黑客松项目串场（讲者口述原型）口述：其 embedded special class 原型走 pool comment 通道——comment 字符串恰为 embedded special 时，内部管道便识别并设置专用 metaslab（转写音作 metal slab）。（YouTube EPYTL3mqV-wEA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2693 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2693`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 黑客松项目串场（讲者口述缺陷）口述：对目录型扩展属性设值后立即 fsync，属性值在崩溃后并不落盘——因为目录型 xattr 的值是另一 inode，不在本次 zil commit 的同步事务列表上。（YouTube EPYTL3mqV-wEA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

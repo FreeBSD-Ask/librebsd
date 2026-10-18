@@ -334,3 +334,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Michael Dexter，EuroBSDcon 2012〕讲者口述：base 内的 binutils 汇编器因 GPLv2 许可而偏旧，虽可替换为含 EPT 指令支持的 GPLv3 新版，但那样永远不会进入 base；同段讲到 John Baldwin 补齐了缺失的指令（FreeBSD 修订 238123／238167）。（YouTube EP4d0rLrgArHw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2687 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2687`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Implementing a Virtual Interrupt Controller for the FreeBSD Hypervisor（Mihai Carabas）讲者口述：其团队为 bhyve 的 ARM 侧实现了中断控制器与定时器的虚拟化——上一届他报告时还只是能引导并拿到控制台。（YouTube EP23m4ABopd9k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2688 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2688`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Implementing a Virtual Interrupt Controller for the FreeBSD Hypervisor（Mihai Carabas）讲者口述：ARM 硬件不提供distributor（GIC 分发器）的透传能力，因此只能捕获来宾对它的访问、在内核中代为模拟执行。（YouTube EP23m4ABopd9k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2689 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2689`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Implementing a Virtual Interrupt Controller for the FreeBSD Hypervisor（Mihai Carabas）讲者口述：相关代码正在 Phabricator 上评审（部分补丁已被 Andrew 看过），但因补丁很大、还牵动 bhyve 的 x86 侧，仍在等待评审。（YouTube EP23m4ABopd9k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

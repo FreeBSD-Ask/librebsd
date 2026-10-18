@@ -41,3 +41,25 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔Philipp Buehler EuroBSDcon 2022《Puffy presents video conferencing (jitsi)》演讲〕讲者口述：讲者另备一页内容，说明如何把 jitsi-web 与 jicofo、jvb 三个端口从 current 回移到 OpenBSD 7.1。（YouTube EPDoLGyp17y3c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2679 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2679`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DJ-BSD: DJing and music production in FreeBSD（Charlie Li，FreeBSD ports 提交者）讲者口述：FreeBSD 暴露 OSS API，尽管底层实现是自研的；只要它暴露 OSS API，一切就能工作。（YouTube EPEdf80gLVL3A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2680 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2680`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DJ-BSD: DJing and music production in FreeBSD（Charlie Li）讲者口述：开源数字音频工作站（DAW）很多是为 Linux 设计的，但在 FreeBSD 上同样工作得很好。（YouTube EPEdf80gLVL3A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2681 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2681`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DJ-BSD: DJing and music production in FreeBSD（Charlie Li）讲者口述：黑胶时间码控制时延要尽量低，可接受的上限是 10.7 毫秒，再高（例如 21 毫秒）操作就会感觉不对劲。（YouTube EPEdf80gLVL3A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2682 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2682`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DJ-BSD: DJing and music production in FreeBSD（Charlie Li）讲者口述：只要 USB 设备以标准 USB 音频接口身份出现，能干的事就很多——从一般扬声器与麦克风的基本用法到更花哨的玩法都可以。（YouTube EPEdf80gLVL3A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -109,11 +109,23 @@ DragonFly 5.x 时代体现了项目统摄史观中“会者定离”与“在虚
 
 **辨析**：
 
-- Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。　[存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
-- OpenBSD 体验帖的 RAM 耗尽死机成因不确定是 OpenBSD 本身还是 Vultr 虚拟化环境，作者本人未下定论。　[考据脚注] 环境变量未隔离，因果归属存疑（BSD Now EP324，[691.12-706.72]，L4）
+- Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。 [存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
+- OpenBSD 体验帖的 RAM 耗尽死机成因不确定是 OpenBSD 本身还是 Vultr 虚拟化环境，作者本人未下定论。 [考据脚注] 环境变量未隔离，因果归属存疑（BSD Now EP324，[691.12-706.72]，L4）
 
 **文献**：
 
 - [BSD Now EP324] Pennington J. BSD Now: 324: Emergency Space Mode[EB/OL]. (2019-11-14)[2026-08-15]. <https://www.bsdnow.tv/324>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2701 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2701`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Multi-Actuator HDDs（Muhammad Ahmad & James Borden，Seagate）讲者口述：双执行器硬盘叫 Mach 2，两个主动执行器、两个主动磁头，相当于把硬盘吞吐翻倍；当前配置为双臂（dual lun）。（YouTube EPIpIzKmnvktU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2702 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2702`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Multi-Actuator HDDs（Muhammad Ahmad & James Borden，Seagate）讲者口述：两个执行器各有独立读写通道、共享缓存；读时可接近两倍，但不是恒定两倍——取决于负载与两执行器的耦合。（YouTube EPIpIzKmnvktU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
