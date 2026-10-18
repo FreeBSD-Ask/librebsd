@@ -303,3 +303,20 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔EdgeBSD, a year later - Pierre Pronchery 讲者 Corbin 口述〕讲者口述：他在现场带到硬件做展示，主题是把 NetBSD／EdgeBSD 跑在平板等嵌入式设备上（同期段落中现场展示 wetab 平板运行 NetBSD 及他自写的桌面环境）。（YouTube EPYs-e3IxtzHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2764 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2764`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔HardenedBSD 2024 State of the Hardened Union（Shawn Webb）讲者口述：HardenedBSD 正式满十周年，工作 2013 年即已开始。（YouTube EPifAH1i92poQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2765 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2765`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔HardenedBSD 2024 State of the Hardened Union（Shawn Webb）讲者口述：HardenedBSD 是 FreeBSD 的软分叉，目标是为整个 BSD 社区提供一份以人文关怀与人权为焦点、对 grsecurity 补丁集（Linux）公开文档部分的净室重实现。（YouTube EPifAH1i92poQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2766 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2766`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔HardenedBSD 2024 State of the Hardened Union（Shawn Webb）讲者口述：其奠基性的漏洞缓解机制是 ASLR——没有 ASLR 时程序必须确定性地载入内存，函数、符号、全局变量都要求落在特定地址。（YouTube EPifAH1i92poQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

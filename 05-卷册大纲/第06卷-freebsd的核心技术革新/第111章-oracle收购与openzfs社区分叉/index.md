@@ -1236,3 +1236,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔November 2020 OpenZFS Leadership Meeting〕与会者口述：2.0 发布冻结纪律——只从 master 最后 cherry-pick 低风险项（一些 FreeBSD 相关内容、文档清理之类），更大改动不再进。（YouTube EPS-SAfg1Awos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2759 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2759`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔September 2020 OpenZFS Leadership Meeting〕讲者口述：本届黑客松已有认领人——Josh 领跑 pool 兼容特性项目。（YouTube EPfVcNnFHDwHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2760 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2760`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔September 2020 OpenZFS Leadership Meeting〕讲者口述：Serafim 领跑面向开发新手的新人场。（YouTube EPfVcNnFHDwHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2761 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2761`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔September 2020 OpenZFS Leadership Meeting〕讲者口述：Muhammad（上届黑客松做多执行器硬盘者）正把 ZFS 与 minio 对接，想为此开一场黑客松专场。（YouTube EPfVcNnFHDwHY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
