@@ -1,0 +1,37 @@
+---
+chapter: 第 54 章
+id: CH54
+volume: 第03卷-伯克利学术文化外溢影响
+---
+
+# 第 54 章 伯克利计算机学科建制与教研体系
+
+## 要点
+
+- （一）DARPA 资助：DARPA（Defense Advanced Research Projects Agency）是 CSRG 的主要资金来源，1970-1980 年代持续资助 BSD 项目，DARPA 合同的具体编号与金额演化需通过 FOIA 申请或联邦机构档案核实；（二）NSF 资助：NSF（National Science Foundation）对伯克利 CS 的资助（含 CISE directorate 系列合同）的具体编号与金额同样待 FOIA/NSF Award Search 核实〔2026-09-12 整改：截断收束转存疑口径，与辨析字段一致——批次 C020 问题 1〕
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_645] 卷“第03卷-伯克利学术文化外溢影响”第 54 章，匹配置信度 0.8，原因：关键词重合 1 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_683] 卷“第03卷-伯克利学术文化外溢影响”第 54 章，匹配置信度 0.8，原因：关键词重合 1 项 + 加分 1
+
+## 史观
+
+（章级史观/辨析按子节字段聚合回填——本卷 54 章；2026-09-11 整改将占位改为编排说明，完整聚合随正文阶段逐章完成。子节级映射详见各节史观字段。）
+
+总纲第 3 条——不存在进步，只有权力再分配：CSRG 的学科建制地位由 DARPA/NSF 资助结构塑造——经费流向即研究权力的分配；总纲第 20 条——历史地理塑造思想土壤：伯克利的学科建制（EECS 系、CSRG、ICSI 驻地）构成 BSD 生长的地理与制度土壤；总纲第 10 条——动手者创造历史：建制内的教学与劳动分工由具体研究者承担；总纲第 13 条——法律与道德是利益分配：联邦合同条款（FOIA 可查的合同编号与金额）即资助方与受助方利益分配的法律形式；总纲第 22 条——知识注定过时：ICSI 租赁期（2008-2016）等当代建制事实亦在持续演化。（2026-09-12 整改：史观字段按批次 C020 回填 5 条，映射依 25 条权威表）
+
+## 辨析
+
+- DARPA 资助 CSRG 的合同编号与金额演化——DARPA 合同档案未能在 2026-07-25 获取，需通过 FOIA 申请或联邦机构档案核实，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；NSF 资助伯克利 CS 的具体合同编号——NSF Award Search 未能直接核查，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；Roland, A. (2002) Strategic Computing: DARPA and the New Technological Vision. Cambridge, MA: MIT Press ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Office of Research. Federal Funding Statistics, 1978-1992 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；U.S. Department of Defense. DARPA Historical Records ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］---## 史料增补（2026-08-06 · 伯克利市 OnBase 公共记录档案 · ICSI 租赁系列）> 来源：伯克利市 OnBase 公共记录检索系统全文检索，关键词“International Computer Science Institute”（2026-09-12 整改：直引号改弯引号——批次 C020 问题 6）。
+> 数据库：**references_fulltext.duckdb** ref 2742-2751；本地存档：**04-现代研究文献/03-文献下载/01-pdf/_onbase_berkeley/**（2026-09-12 整改：库名与路径加粗——批次 C020 问题 7）。
+
+### 增补：国际计算机科学研究所（ICSI）与伯克利市的租赁关系（2008-2016）
+
+（2026-09-12 整改：原增补块仅存标题无正文（生成期截断），悬空标题保留占位待回源，正文补录登记待办——批次 C020 问题 4/5：分隔线/标题/引用块/子标题已还原独立行。）
+
+<!-- ROW_MINE: login-zazhi.articles.CL-1-128 -->
+**一手刊文**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-128`；login 逐条遍历判定采纳）
+
+Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期维护 vi；她发明 uuencode/uudecode 以解决电子邮件仅能传输 7 位字符时二进制文件的发送问题；后在 Bell Labs 合著 RFC 976（UUCP 邮件格式）与 RFC 1036（Usenet 消息格式）。。引用时按 L4 纪律：以上为 ;login: 一手发表文本，属一手出版物证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+

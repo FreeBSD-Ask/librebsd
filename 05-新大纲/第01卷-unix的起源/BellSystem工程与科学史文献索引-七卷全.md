@@ -1,0 +1,44 @@
+# Bell System 工程与科学史文献索引——七卷全（自有 OCR 战役转录）
+
+> **转录批次**：自有 OCR 战役（sensenova-6.8-flash-lite 视觉，Python 240 路并发 + xian key 轮询，2026-10-02）
+> **覆盖范围**：ref 10018–10024（共 7 卷，5004 页）
+> **转录方法**：sensenova-6.8-flash-lite 视觉逐页转录（页图经 fitz 渲染 zoom 1.5，超 413 上限自动降采样；思考泄漏 4 轮重跑清零）
+> **数据库状态**：全部入库，`references`/`fulltext`/`fulltext_blocks` id 10018–10024，`extraction_method='sensenova-6.8-flash-lite vision OCR (240-thread, xian key rotation, 2026-10-02)'`，`ocr_status='done'`；`fulltext_blocks` 5,004 块（`block_type='ocr_sensenova_vision'`，每页一块）
+> **审计**：0 fail；思考泄漏 0 页（终扫）；[此处不可辨] 17/5004（极淡/手写页，诚实标记）
+> **key_facts**：8,572 条（technology 5,092 / person 1,118 / event 2,362；语义抽取＋英文原文引证，id `kf-bell-10018…10024`）
+> **来源**：Internet Archive 集合条目 `bell-system-science-history`（archive.org 自带 OCR 衍生仅作对照，不作正本）
+
+## 文献清单
+
+### 机构史卷
+
+| Ref | 标题 | 页数 | 版年 | 说明 |
+|-----|------|------|------|------|
+| 10018 | A History of Engineering and Science in the Bell System: The Early Years (1875–1925) | 1084 | 1975 | M. D. Fagen 主编；Bell 发明（1875/1876 专利）、早期电话工程、早期 AT&T 制度 |
+| 10019 | A History of Engineering and Science in the Bell System: National Service in War and Peace (1925–1975) | 769 | 1978 | M. D. Fagen 主编；两次大战国家服务、1956 授权令前后 AT&T–政府关系、贝尔实验室正式成立（1925） |
+
+### 技术史卷
+
+| Ref | 标题 | 页数 | 版年 | 说明 |
+|-----|------|------|------|------|
+| 10020 | A History of Engineering and Science in the Bell System: Switching Technology (1925–1975) | 664 | 1982 | Amos E. Joel, Jr. 主编；纵横制（No. 5 Crossbar）、No. 1/4 ESS 电子交换、信令系统 |
+| 10021 | A History of Engineering and Science in the Bell System: Physical Sciences (1925–1980) | 712 | 1983 | 物理科学卷；晶体管材料物理、冶金、声学 |
+| 10022 | A History of Engineering and Science in the Bell System: Communication Sciences (1925–1980) | 552 | 1984 | E. F. O'Neill 主编；Shannon 信息论、通信理论、计算与数据通信科学 |
+| 10023 | A History of Engineering and Science in the Bell System: Electronics Technology (1925–1975) | 383 | 1985 | 电子技术卷；真空管、晶体管器件、集成电路 |
+| 10024 | A History of Engineering and Science in the Bell System: Transmission Technology (1925–1975) | 840 | 1985 | 传输技术卷；同轴电缆、微波中继、卫星与光通信前史 |
+
+### 版年说明
+
+版年以各卷版权页原印为准（Copyright © 实测：1975/1978/1982/1983/1984/1985/1985）。本套为 Bell Labs 制度史与技术史唯一系统性多卷本，正本 PDF 与逐页 OCR 文本见 `04-现代研究文献/03-文献下载/01-pdf/13-BellSystem工程与科学史/`（考据注 `_考据注_20261002.md`）。
+
+### 关联建议（按卷）
+
+| Ref | 卷 | 关联章节 |
+|-----|-----|---------|
+| 10018 | 第01卷-unix的起源 | 第4章-贝尔实验室的文化土壤、第20章-大型机的史前史与真空管时代 |
+| 10019 | 第01卷-unix的起源 | 第8章-贝尔实验室的黄金时代、第5章-法律环境与源代码散逸（1956 授权令制度侧） |
+| 10020 | 第01卷-unix的起源 | 第8章-贝尔实验室的黄金时代 |
+| 10021 | 第01卷-unix的起源 | 第4章-贝尔实验室的文化土壤 |
+| 10022 | 第01卷-unix的起源 | 第4章-贝尔实验室的文化土壤、第23章-计算机科学学科的形成（信息论线） |
+| 10023 | 第01卷-unix的起源 | 第8章-贝尔实验室的黄金时代 |
+| 10024 | 第01卷-unix的起源 | 第8章-贝尔实验室的黄金时代 |
