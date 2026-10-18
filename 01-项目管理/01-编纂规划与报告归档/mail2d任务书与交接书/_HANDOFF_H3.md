@@ -8094,5 +8094,9 @@ N7 tar／gzip 完好但**单个 parquet 内容损坏** ⇒ `archive_unreadable`�
   ②裁定宿主（本批全窗 1999 年单宿主 885，下一窗是否跨界需按日期实测）；③台账
   read_spec 已在 164,000，queued_spec 0、无残留窗口。freebsd-hackers 全库 messages
   **201,463** ⇒ 余 37,463 封（约 18 批）。
+* 🔴🔴 **本节自身亦被吸收**：v43 写盘后 1 分钟内被并发会话提交 **`7f33c231e`**（说明“Update _HANDOFF_H3.md”）一并入库——本批入 05-大纲改动（`5f2ba2659`）与交接书 v43（`7f33c231e`）**两次均为他会话无 pathspec 全量提交挂带**，本会话两次 `git add`（均确认 `git diff --cached` 仅含目标件、且仅含本件）之间会话争先 `commit -a`。内容零丢失（HEAD 与工作树三方齐），但两件的提交说明均不描述本线内容。
+  ⚠️ 结论：**入 05-大纲的提交节奏必须抢在写盘后同一命令块内完成**，或改用 v42 的 plumbing＋私有 index 路径；仅“写盘后尽快 add”不足以与他会话抢窗口。
+* 🔴 **pre-commit hook 依赖 PATH 上的 python**：本会话 Git Bash PATH 无 `python`（报 “Python was not found”，Windows Store 档），须 `export PATH=/c/Python314:...` 后 hook 才跑；否则会话可能直接 `--no-verify` 绕过门禁（本轮两次挂带提交即可能经此路径）。
+
 * **本批未提交内容**：除 `_HANDOFF_H3.md` 本节外无本线待提交件；`script/` 全目录被
   `.gitignore` 第 40 行挡住（`git check-ignore -v` 确认），review_logs 全部产物按约定不入库。
