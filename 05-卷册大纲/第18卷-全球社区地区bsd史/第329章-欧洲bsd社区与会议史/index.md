@@ -306,3 +306,20 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔EuroBSDCon Recap〕讲者 Patrick McEvoy 口述：某设备目前在 Mauser 上标价约八百美元，而 DCH 正推动社区定价（YouTube EPg9cfKXRkCkw，[1263.7-1288.6]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2781 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2781`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔History: 20+ Years of EuroBSDCon（Philipp Bühler，EuroBSDCon 2023）讲者口述：EuroBSDCon 二十年间共办 18 届、足迹遍及 15 个国家。（YouTube EP734C850Whtw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2782 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2782`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔History: 20+ Years of EuroBSDCon（Philipp Bühler）讲者口述：二十年参会者总计估计约三千人（无正式数字）。（YouTube EP734C850Whtw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2783 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2783`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔History: 20+ Years of EuroBSDCon（Philipp Bühler）讲者口述：其清点得 577 场报告与 105 场教程，除教程多为重复外基本都是不重复的。（YouTube EP734C850Whtw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
