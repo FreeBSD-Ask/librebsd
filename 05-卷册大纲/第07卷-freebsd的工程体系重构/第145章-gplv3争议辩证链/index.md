@@ -120,3 +120,15 @@ volume: 第07卷-freebsd的工程体系重构
 - [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=XUj2vCKtegU>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2790 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2790`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD from scratch（Sevan Janiyan，BSDCan 2018）讲者口述：讲题为从源码到操作系统——用 NetBSD 讲一门入门课。（YouTube EPqHxsy_q96qk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2791 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2791`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD from scratch（Sevan Janiyan）讲者口述：覆盖多个操作系统太多，故选定 NetBSD 作为入门操作系统来讲——项目由此而来。（YouTube EPqHxsy_q96qk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

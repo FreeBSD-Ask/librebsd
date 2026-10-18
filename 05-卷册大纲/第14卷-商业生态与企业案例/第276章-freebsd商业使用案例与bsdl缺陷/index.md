@@ -580,3 +580,15 @@ volume: 第14卷-商业生态与企业案例
 
 据〔Smartcom's control plane software（Boris Astardzhiev）讲者口述：其所展示的控制面软件是一份定制化的 FreeBSD。（YouTube EPszMedjgLQN8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2788 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2788`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 FreeBSD Vendor Summit - NetApp〕讲者口述：讲者在 NetApp 十余年（先做 ONTAP 性能、后在操作系统组），现正领导 FreeBSD 相关项目。（YouTube EPEi6brWgr5N8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2789 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2789`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 FreeBSD Vendor Summit - NetApp〕讲者口述：其演进起于一个存储服务器/文件服务的底子（转写作 storage server basic）。（YouTube EPEi6brWgr5N8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
