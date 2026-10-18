@@ -101,3 +101,15 @@ volume: 第11卷-dragonflybsd的历史
 
 据〔来源不详〕讲者 Francois Tigeot 口述：DragonFly BSD 由 Matthew Dillon 于 2003 年自 FreeBSD 4 分叉（YouTube EPjLMeK-sTymM，[74.21-84.52]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2798 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2798`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improve the DragonFlyBSD network stack（Yanmin Qiao）讲者口述：基准用双客户端对打——单客户端功率不够、压不满服务器，测的是 HTTP 1.1 极短连接的最坏负载。（YouTube EPqQ8V3nzKys4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2799 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2799`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improve the DragonFlyBSD network stack（Yanmin Qiao）讲者口述：动此工作前先稳住网络栈——改栈时必须确保没有额外段流量挤占（转写严重走形），以免死锁。（YouTube EPqQ8V3nzKys4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

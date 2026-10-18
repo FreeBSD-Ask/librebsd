@@ -275,3 +275,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Prakash Surya〕讲者口述：被问及原先批量机制（转写音作 backing mechanism）的设计动机时，讲者称其远早于自己参与之前、无法置评，或需 Mark、Matt、George 等人来说明。（YouTube EPRUb8svObroE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2796 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2796`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Run ZFS in Userland（Ping Huang）讲者口述：另提供名为 ucfs 的独立库，为应用暴露 API（转写音含混，疑为 fuse 类接口），使其易于集成。（YouTube EP_mZArwN_eBk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2797 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2797`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Run ZFS in Userland（Ping Huang）讲者口述：把 ZFS 核心功能对接到不同系统——如接进 FUSE 获得 fuse 功能，也可与其他服务集成。（YouTube EP_mZArwN_eBk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
