@@ -1212,3 +1212,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔2022 OpenZFS 开发者峰会黑客松〕讲者口述：讲者称与 Madden 讨论并检索网络后复现了问题，并复活了来自 illumos 的若干补丁请求（转写音作 multiple requests），使 Zap 条目被删除时逐步收缩 Zap（转写音作 this app），并以火焰图展示修补后明显提速。（YouTube EPS-0b0V07G2Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2714 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2714`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2018 OpenZFS Leadership Meeting〕与会者口述：跨平台特性同步的策略，仍是选定一条大版本线后整体拉平，以此覆盖特性矩阵中未逐一认领的其余条目。（YouTube EPoV58X-z8xVU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2715 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2715`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2018 OpenZFS Leadership Meeting〕与会者口述：只挑想要的特性而不跟进其依赖（含加密等连带），本质是标准的技术债问题——而多家公司各自投入，难以协调。（YouTube EPoV58X-z8xVU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
