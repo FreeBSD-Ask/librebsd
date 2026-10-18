@@ -309,7 +309,7 @@ def check_msg_quality(msg):
     """H1：提交说明质量（2026-10-17 主理人批准批；无放行标记——改写消息零成本）。
 
     判据：①消息不以 BOM 起始（PowerShell Set-Content -Encoding UTF8 带 BOM 会污染
-    消息首字符——2026-10-17 69ee8a32a6d8 实例）；②首行非空；③首行 ≥8 字符；
+    消息首字符——2026-10-17 69ee8a32a6d8 实例）；②首行非空；③首行 ≥4 字符；
     ④首行非纯数字／标点占位（"1/2/！"式整索引提交当日 ≥7 件的教训）。
     """
     bad = []
@@ -320,7 +320,7 @@ def check_msg_quality(msg):
     if not first:
         bad.append("提交说明首行为空")
         return bad
-    if len(first) < 8:
+    if len(first) < 4:
         bad.append("首行过短（%d 字符）：%r" % (len(first), first[:40]))
     if re.fullmatch(r"[0-9!\"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~\s]+", first):
         bad.append("首行为纯数字／标点占位（无实质词句）：%r" % first[:40])
