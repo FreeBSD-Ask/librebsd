@@ -104,3 +104,15 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：其邮件系统跑在 FreeBSD 上并使用 ZFS，但尚不愿把 ZFS 用到此类生产场景；UFS 2 在大文件系统上有扩展性问题，fsck 要跑很久。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2770 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2770`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Managing Jails with Ansible（FreeBSD 容器基础设施展示）讲者口述：其工作流是先建几个需要的文件、对 jail.conf 写一个模板，随后启动 jail 并把 ansible 装进去、让 jail 之后能自我管理。（YouTube EPFUxdm4rdrf8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2771 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2771`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Managing Jails with Ansible〕讲者口述：曾有人以 ansible 引入依赖为由反对——他不以为然，因为他本来就在多数机器上跑 ansible，这层依赖早已存在。（YouTube EPFUxdm4rdrf8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
