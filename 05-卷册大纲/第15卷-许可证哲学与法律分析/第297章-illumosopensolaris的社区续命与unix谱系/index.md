@@ -47,3 +47,57 @@ volume: 第15卷-许可证哲学与法律分析
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- W172-YT-ROUTE:BEGIN 2026-10-15 YouTube 章节路由注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-759 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-759`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：Alex Aizman 来自 Nexenta 公司，由主持人在开场介绍，他接下来要讲的报告主题是 ZFS 写回缓存（write-back caching）。（YouTube EPMkdrnG7GwdE，[53.72-59.39]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-760 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-760`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：实现上没有改动 ZFS 的代码，而是直接复用了 ZFS 自身的逻辑来做写回缓存（write cache）。（YouTube EPMkdrnG7GwdE，[1875.2-1879.99]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-330 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-330`；w172 YouTube 章节路由采纳）
+
+据〔Matt Ahrens 主旨演讲〕讲者 Matt Ahrens 口述：ZFS 于 2005 年 10 月 31 日开源，本场演讲距该日期恰约十年。（YouTube EPaV276yUfgK4，[10.32-21.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-929 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-929`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：AMD 于二〇〇三年四月推出首颗 x86-64 处理器，该架构到二〇一三年四月才满十年。（YouTube EPs8VUMBzKaFA，[1560.2-1577.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-928 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-928`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：其内核源自 Solaris 11 Nevada 构建 33，起始于约六年前，因此其中带有 ZFS 与 DTrace。（YouTube EPs8VUMBzKaFA，[2727.2-2763.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-930 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-930`；w172 YouTube 章节路由采纳）
+
+据〔来源不详〕讲者口述：直到二〇〇九年 Intel 与 AMD 才分别推出同时含 VT-x 与 EPT（转写音作 V T X and E P T）的处理器，从而实现全硬件辅助虚拟化。（YouTube EPs8VUMBzKaFA，[1578-1614.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2710 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2710`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Story Time (Q&A) with Matt and Jeff（ZFS 两位创始人）讲者口述：一桩心愿未了之事是真虚拟块寻址——它本可让数据压实与碎片整理简单得多，但在成本与事务语义两方面都找不到可处理的方案，终究没做成。（YouTube EPyNKZQBsTX08，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2711 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2711`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Story Time (Q&A) with Matt and Jeff（ZFS 两位创始人）讲者口述：ZFS 设计期回望 1992–2000 的摩尔定律趋势：存储快了约十倍（吞吐）、内存约百倍、CPU 约千倍。（YouTube EPyNKZQBsTX08，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2712 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2712`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Story Time (Q&A) with Matt and Jeff（ZFS 两位创始人）讲者口述：闪存把读延迟压到 50–100 微秒量级，颠覆了原设计假设——在其 DSSD 盒子上，每 I/O 留给代码与缓存缺失的 CPU 预算只有约 3 微秒，ZFS 现有全部工作塞不进去。（YouTube EPyNKZQBsTX08，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2713 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2713`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Story Time (Q&A) with Matt and Jeff（ZFS 两位创始人）讲者口述：为让 ztest 能在工作站上跑，模拟设备文件放在 /tmp、仅约 64 兆——这迫使每个事务的空间记账必须精确到不差分毫，否则测试会人为失败；讲者后悔没把模拟文件设成接近真实磁盘的量级。（YouTube EPyNKZQBsTX08，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

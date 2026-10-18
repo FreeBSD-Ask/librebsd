@@ -155,3 +155,20 @@ volume: 第09卷-netbsd的历史
 
 据〔The pivot_root system call for BSD systems (NetBSD) / Adrian Steinmann 于 EuroBSDcon 2012〕讲者口述：讲者说明其在 NetBSD 的实现取向：新增一个与 Linux 兼容的系统调用，并将其放入内核可加载模块（而非改动 mount 系统调用），这也是他借机学习内核可加载模块的过程。（YouTube EP6itw0i2OHwM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2707 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2707`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to break long term compatibility in NetBSD（Joerg Sonnenberger）讲者口述：NetBSD 在兼容性上迄今只有一次有意的 ABI 破坏——废除调度器激活（scheduler activation，曾用于线程实现）；因问题太多且修不完而退役并给程序提供了替代。（YouTube EPQ7QhD8XryKY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2708 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2708`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to break long term compatibility in NetBSD（Joerg Sonnenberger）讲者口述：最后一次 libc 大版本跳变发生在 NetBSD 1.4，距今已逾十年；此后的 ABI 变更持续累积，好在可以显式定义——头文件里有各版结构体与原型。（YouTube EPQ7QhD8XryKY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2709 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2709`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to break long term compatibility in NetBSD（Joerg Sonnenberger）讲者口述：为直接创建带版本的符号，需扩展链接器使其能直接指定符号可见性，而不必借 assembler 名与宏间接命名。（YouTube EPQ7QhD8XryKY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
