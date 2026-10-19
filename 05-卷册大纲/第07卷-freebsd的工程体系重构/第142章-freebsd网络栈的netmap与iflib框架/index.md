@@ -258,3 +258,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔Marko Zec 同一演讲〕讲者口述：他用 FreeBSD 做网络仿真时更依赖 netgraph，并称 netgraph 是 FreeBSD 中用于任意操纵网络流量的子系统；他还说 FreeBSD 里的蓝牙相关内容重度依赖 netgraph。（YouTube EPwh09MirPd5Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2834 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2834`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A: Improving netdump hardware support and performance with iflib（Sam Gwydir）讲者口述：讲者为解决无小分区场景下的 core dump 问题而系统考察各种做法，发现彼时 FreeBSD 二者皆无：既无简单做法，也无 netdump（转写音作 net them）。（YouTube EPbBLSvTQY7xw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2835 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2835`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A: Improving netdump hardware support and performance with iflib（Sam Gwydir）讲者口述：早期 netdump 补丁太旧，须移植到 FreeBSD 11（转写音作 previously 11）才能跟上；Isilon 的 Mark Johnson 基于更新的补丁集放出一套补丁供讲者使用。（YouTube EPbBLSvTQY7xw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2836 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2836`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A: Improving netdump hardware support and performance with iflib（Sam Gwydir）讲者口述：截至 2017 年 4 月，netdump 所支持的驱动数量有限，且每一种驱动都要单独编写支持代码。（YouTube EPbBLSvTQY7xw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2837 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2837`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08A: Improving netdump hardware support and performance with iflib（Sam Gwydir）讲者口述：把既有驱动移植到 iflib 大致不难——iflib 的函数名与接口大体与既有驱动相对应、易于逐一对译；但文档不完整，讲者须与人协作才弄清，其中一度因某个函数缺失而白查约一至两周。（YouTube EPbBLSvTQY7xw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

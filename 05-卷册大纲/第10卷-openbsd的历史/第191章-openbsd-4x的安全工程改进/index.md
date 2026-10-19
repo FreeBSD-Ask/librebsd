@@ -71,3 +71,25 @@ volume: 第10卷-openbsd的历史
 - [BSDTalk EP97] Backman W. BSDTalk: 97: bsdtalk097 - OpenBSD Developer Pierre-Yves Ritschard[EB/OL]. (2007-02-01)[2026-08-27]. <https://archive.org/details/bsdtalk097>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2898 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2898`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008《Hardware Crypto Suport》讲者口述：FreeBSD 于 2002 年从 OpenBSD 借用 open_crypto 框架，由转写音作 Sam leer 者最初导入，用途是为密码系统提供一致的硬件与软件接口；讲者说明其原本主要面向 IPC，但 OpenBSD 的实现同时支持把该接口导出到用户态，并做成可插拔多算法的模块化结构。（YouTube EP2oV2ZGXO33o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2899 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2899`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008《Hardware Crypto Suport》讲者口述：open_crypto 为会话式接口，使用者声明所需算法与密钥长度后把数据流持续送入同一会话；接口是异步的，调用方不在密码操作上阻塞，而是把操作发出去、等回一条完成消息后再取回加密或解密的块。（YouTube EP2oV2ZGXO33o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2900 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2900`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008《Hardware Crypto Suport》讲者口述：多数内核子系统已改用 crypto 框架，但讲者发现 gbde 是个例外——它不使用该框架，因此即使硬件里插着加密加速器，用 gbde 做块设备加密也不会更快。（YouTube EP2oV2ZGXO33o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2901 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2901`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔MeetBSD 2008《Hardware Crypto Suport》讲者口述：在一台 3.8 GHz 的 AMD 系统上，开启硬件加速反而更慢——1K 块上数字约减半甚至慢到五倍，讲者据此说在这些快系统上不要开加速。（YouTube EP2oV2ZGXO33o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

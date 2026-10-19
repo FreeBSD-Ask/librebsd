@@ -208,3 +208,65 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔November 2021 FreeBSD Vendor Summit: Panel - FreeBSD Arm64 Flexibility〕与会者口述：ARM 的优势之一是厂商容易按需定制处理器（为最重要负载加专用 offload），而 FreeBSD 有大量组件能吃上这些平台特性——把 FreeBSD 独有的东西尽早带给这些平台是机会所在。（YouTube EPUDYmJ83xhxI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2842 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2842`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Transparent Superpages for FreeBSD on ARM（AsiaBSDCon 2014）讲者口述：讲者（转写音 V bodk）任职于波兰克拉科夫一家单位（转写音 semal），报告一项刚完成的项目，即在 FreeBSD 的 ARM 架构上实现透明大页（super pages）支持。（YouTube EP2KLXcyLZ_RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2843 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2843`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Transparent Superpages for FreeBSD on ARM（AsiaBSDCon 2014）讲者口述：讲者指出，透明大页这一机制在 FreeBSD 中早已成熟，此前运行于 32 位 Intel 与 amd64 架构。（YouTube EP2KLXcyLZ_RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2844 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2844`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Transparent Superpages for FreeBSD on ARM（AsiaBSDCon 2014）讲者口述：该实现支持两种页大小——1 MB 段作为大页、4 KB 小页作为基本页；一个大页对应一条 TLB 表项（相当于 256 个基本页），翻译表只需走第一层。（YouTube EP2KLXcyLZ_RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2845 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2845`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Transparent Superpages for FreeBSD on ARM（AsiaBSDCon 2014）讲者口述：验证平台为 Marvell Armada XP（四核 ARMv7）；开启大页后，gig-updates-per-second 基准的 CPU 时间下降约 30%，单位时间更新数增加约 30%。（YouTube EP2KLXcyLZ_RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2854 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2854`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Vadot: FreeBSD ARM : Before Kernel（BSDCan 2017）讲者口述：FreeBSD 在 u-boot 上的启动链为 u-boot 加载 u-boot loader（转写音 you be LDR），后者调用 u-boot API 装载 GTB——即 DTS 的编译形态，描述 SoC 与板上全部外设——随后加载并执行内核。（YouTube EPMZrbKjcYkvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2855 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2855`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017 同场问答（Emmanuel Vadot）讲者口述：FreeBSD 不用 u-boot image 格式装载 loader 或内核，原因是该格式须为每块板指定加载地址与执行地址，等于每支持一块板就要单独编一次镜像。（YouTube EPMZrbKjcYkvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2856 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2856`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017（Emmanuel Vadot）讲者口述：改用 EFI 的理由之一是 FreeBSD 在 ARM（转写音 ham Bob）上缺少较好的视频输出支持，u-boot 只有相对正确的帧缓冲支持；u-boot 在多数板上支持 EFI 及其图形输出协议，从而可直接使用 FreeBSD 的 EFI 帧缓冲驱动。（YouTube EPMZrbKjcYkvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2857 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2857`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan 2017（Emmanuel Vadot）讲者口述：讲者纠偏“Linux 与 u-boot 都不在乎 FreeBSD”的说法——并不如此：Linux 会接纳 FreeBSD 相关的 DTS 改动（讲者举例提交说明 FreeBSD 用某属性、Linux 驱动用另一属性因而需新增），u-boot 一侧同样关心 FreeBSD 的问题。（YouTube EPMZrbKjcYkvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2858 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2858`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Vadot: FreeBSD ARM : Before Kernel（BSDCan 2017）讲者口述：u-boot（转写音作 you boot）意为 universal boot roller（转写音，通用引导加载器），是嵌入式领域的事实标准（转写音作 de facto stoner），并支持 x86 等架构，在嵌入式世界被大量使用。（YouTube EPn-ewQ_WZAP4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2859 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2859`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Vadot: FreeBSD ARM : Before Kernel（BSDCan 2017）讲者口述：u-boot API（转写音作 u-boot appeai）是讲者口述为 C 基础（转写音作 cisco base）的 API，最初开发者讲者口述作 Sammy Alf，此人从事大量 FreeBSD 嵌入式相关工作。（YouTube EPn-ewQ_WZAP4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2860 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2860`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Vadot: FreeBSD ARM : Before Kernel（BSDCan 2017）讲者口述：FreeBSD base 内（转写音作 in base）带有 GTC（转写音，疑为设备树编译器 DTC），版本口述作 one-pot 4.3，并支持 overlays。（YouTube EPn-ewQ_WZAP4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2861 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2861`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Emmanuel Vadot: FreeBSD ARM : Before Kernel（BSDCan 2017）讲者口述：要把这件事做通，须先完成 EFI（转写音作 TFI），再让 FreeBSD 12 current 与 v6（读法存疑）改用 EFI、不再使用 u-boot loader（转写音作 you'll be earlier）。（YouTube EPn-ewQ_WZAP4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

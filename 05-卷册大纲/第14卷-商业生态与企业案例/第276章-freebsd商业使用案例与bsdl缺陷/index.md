@@ -609,3 +609,25 @@ volume: 第14卷-商业生态与企业案例
 
 据〔2020 Vendor Summit - Axiado〕讲者口述：产品侧至少用 FreeBSD 内核——因其 SoC 上的加速器不便公开，需在内核层做对接。（YouTube EPkSInbK3HXFg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2838 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2838`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Isilon and FreeBSD（Zach Loafman, MeetBSD 2008）讲者口述：Isilon 的集群网络存储可扩展至 96 节点、每节点 24 TB，合计约 2.3 PB，且属于单一文件系统。（YouTube EPOlMocIwM5QU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2839 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2839`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Isilon and FreeBSD（Zach Loafman, MeetBSD 2008）讲者口述：Isilon 选择 FreeBSD 的首要原因是 BSD 许可证——可把大部分自有 IP 藏在内核模块之内；此外看重 FreeBSD 久经验证的可靠记录与相对稳定的内核及用户态 API（转写音作 loser land=userland）。（YouTube EPOlMocIwM5QU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2840 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2840`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Isilon and FreeBSD（Zach Loafman, MeetBSD 2008）讲者口述：讲题时 Isilon 运行的是 FreeBSD 6.1（转写音作 previous d61），讲者承认版本很旧，因有诸多改进待取而希望升级。（YouTube EPOlMocIwM5QU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2841 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2841`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Isilon and FreeBSD（Zach Loafman, MeetBSD 2008）讲者口述：Isilon 赞助社区合作者重写 NFS 锁服务（另有 Alfred 协助协调），方案是把整个服务移入内核——理由是欲在用户态取得锁可用性的异步事件通知极其棘手。（YouTube EPOlMocIwM5QU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
