@@ -434,3 +434,15 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔AsiaBSDCon 2017 的 Work in Progress 闪电演讲环节〕讲者口述：几年前 NetBSD（转写音作 net BSU／net whiskey）的邮件列表上有人提议把旧的 spell 工具从 NetBSD 中移除，理由是它效果不佳、缺点很多、几乎没人用；讲者因此动手重写该工具。（YouTube EPOHApWQg7O4s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2805 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2805`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tool chaining the Hydra: The ongoing quest for modern toolchains in NetBSD（Martin Husemann & Jörg Sonnenberger）讲者口述：这场现代工具链的长征里最近一段约始一年前。（YouTube EPPwTcc-MGD2Q，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2806 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2806`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Tool chaining the Hydra（NetBSD 两位老开发者 Martin Husemann 与 Jörg Sonnenberger）讲者口述：二人自述为 NetBSD 长期开发者，正续追 NetBSD 的现代工具链。（YouTube EPPwTcc-MGD2Q，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
