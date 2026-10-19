@@ -306,3 +306,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔February 2020 OpenZFS Leadership Meeting〕与会者口述：对旧版写入、新版不认识的属性值，新版 ZFS 可以逐类消化——见到不认识的属性值时显示 unknown 并回落默认值，避免属性集合把新版搞糊涂。（YouTube EPupUOXBhx-us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2814 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2814`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔SPA Metadata Allocation Classes and Ztour（Don Brady）讲者口述：其讲两题——zour（转写作 zour，ZFS 用户态调试工具）与 SPA 元数据分配类。（YouTube EP28fKiTWb2oM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

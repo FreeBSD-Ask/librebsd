@@ -592,3 +592,20 @@ volume: 第14卷-商业生态与企业案例
 
 据〔2020 FreeBSD Vendor Summit - NetApp〕讲者口述：其演进起于一个存储服务器/文件服务的底子（转写作 storage server basic）。（YouTube EPEi6brWgr5N8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2823 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2823`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 Vendor Summit - Axiado〕讲者口述：其在 Axiado 之前的公司长期用 FreeBSD，对其健壮性、速度与性能体验极好，故选它也就顺理成章。（YouTube EPkSInbK3HXFg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2824 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2824`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 Vendor Summit - Axiado〕讲者口述：公司内部文件服务器、备份服务器等一切文件服务均基于 FreeBSD，连（转写音含混的一类设施）也是 FreeBSD 底；当时用 pfSense（同样基于 FreeBSD）。（YouTube EPkSInbK3HXFg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2825 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2825`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 Vendor Summit - Axiado〕讲者口述：产品侧至少用 FreeBSD 内核——因其 SoC 上的加速器不便公开，需在内核层做对接。（YouTube EPkSInbK3HXFg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
