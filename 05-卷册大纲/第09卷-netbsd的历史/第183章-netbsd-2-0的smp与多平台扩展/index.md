@@ -153,3 +153,25 @@ volume: 第09卷-netbsd的历史
 
 据〔Porting Valgrind to NetBSD and OpenBSD（Masao Uebayashi，EuroBSDCon 2014）讲者口述：讲者自述来自日本、自营公司（转写作 ESD，疑为 BSD 一类）做开发。（YouTube EPPEPo0PJteaA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2882 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2882`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving modularity of NetBSD’s compat code（讲者仅自报姓名 Paul）讲者口述：NetBSD 一向以能与旧版本兼容自许——据其口述，内核若含 compat 代码，NetBSD 0.9 的映像今天仍能运行，凡在该 bsd 上运行过的程序基本都能跑。（YouTube EPTarGM0f3_x0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2883 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2883`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving modularity of NetBSD’s compat code（讲者仅自报姓名 Paul）讲者口述：重构前的 compat 代码由一大片 IFDEF 意大利面控制——NetBSD 历史上发布的每一个版本都有一个 COMPAT_xxxx 宏，且时常彼此嵌套，极其混乱。（YouTube EPTarGM0f3_x0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2884 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2884`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving modularity of NetBSD’s compat code（讲者仅自报姓名 Paul）讲者口述：他与 Taylor Campbell 共同定义了一套模块钩（module hook）机制——compat 模块被加载时在内核某已知位置装入一个钩，调用方经该钩做间接调用。（YouTube EPTarGM0f3_x0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2885 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2885`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving modularity of NetBSD’s compat code（讲者仅自报姓名 Paul）讲者口述：第二步是把 compat 代码拆成按版本分立的模块（compat_5.0、compat_6.0、compat_7.0 之类），从而可逐步回退更多版本，并在不再需要时只卸掉那一段，而不必整体卸载。（YouTube EPTarGM0f3_x0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

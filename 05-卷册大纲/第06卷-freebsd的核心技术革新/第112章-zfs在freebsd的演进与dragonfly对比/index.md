@@ -1231,3 +1231,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Fast Clone Deletion（Sara Hartse，Delphix）讲者口述：克隆是既有数据集的**可变副本**——先对数据集做快照（冻结版本），再据以建克隆，因而可改动。（YouTube EPGLABJRWwGMk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2850 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2850`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2024 OpenZFS Leadership Meeting〕讲者口述：ZSD 是 FreeBSD 专属的 Zed 等价物（ZFS 故障管理守护进程），由 Alex Pinchuk 与 Alan Sommers 于 Axent 提出的一组提交，让它能用属性（转写音 perv，疑为按 vdev）调节触发换盘的读／写 IO 错误计数与慢 IO 判定。（YouTube EPGhSNdTg8RiE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2851 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2851`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2024 OpenZFS Leadership Meeting〕讲者口述：快速去重（fast dedup）工作以 7 个顺序依赖的 PR 栈形式公开，第一个（内容为文档更新与接口整理，属 Rob Norris 的预备工作）已由 Brian 评审并合入。（YouTube EPGhSNdTg8RiE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2852 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2852`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2024 OpenZFS Leadership Meeting〕讲者口述：Don Brady 在做的 MMP（多重写指针）线程议题——慢 IO 与 IO 错误混在一起时，会在 MMP 线程内外做 VDEV 探测，持锁期间探测导致 MMP 超时，使存储池挂起、必须重启才能恢复。（YouTube EPGhSNdTg8RiE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2853 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2853`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔February 2024 OpenZFS Leadership Meeting〕讲者口述：ARC 大规模内存系统适配议题——正在让 ARC 各子列表可并行逐出，动因是在数 TB（转写音 four or six terabytes）RAM 的大内存系统上出现瓶颈。（YouTube EPGhSNdTg8RiE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2894 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2894`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔iFlash Dynamic Adaptive L2ARC Caching（Shailendra Tripathi）讲者口述：约 2013 年起，讲者团队从 illumos（转写音 illness）取得 ZFS（转写音 GFS），此后各版本一直独立开发特性。（YouTube EPoAjMr5IES2w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2895 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2895`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔iFlash Dynamic Adaptive L2ARC Caching（Shailendra Tripathi）讲者口述：把设备整块划给 log、L2ARC、metadata 等专用类的做法很快被判定不可行——团队希望把性能更高、时延更低的 SSD 在多个数据类之间共享，而不是让少数类独占。（YouTube EPoAjMr5IES2w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2896 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2896`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔iFlash Dynamic Adaptive L2ARC Caching（Shailendra Tripathi）讲者口述：方案是把所有设备共享并完全虚拟化，把各类（log、L2ARC、meta、data）服务都实现在其之上，由此容量、时延与带宽全部共享。（YouTube EPoAjMr5IES2w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2897 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2897`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔iFlash Dynamic Adaptive L2ARC Caching（Shailendra Tripathi）讲者口述：L2ARC 之所以不并入 meta 的正常分配语义、而保留滚动日志模型并始终顺序写，是为了极快的分配性能——换成任何定位式结构模型都要为 L2 缓存的分配付出代价，而在滚动模型下分配近乎一条原子指令。（YouTube EPoAjMr5IES2w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

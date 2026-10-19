@@ -363,3 +363,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Implements BIOS emulation support for BHyVe（Takuya ASADA）讲者口述：VT-x 把模式一分为二——root 模式（hypervisor）与非 root 模式（guest），模式间不能互访；来宾触发需陷入的事件时 VM exit 到 hypervisor，处理完再 VM entry，如此循环。（YouTube EPrT0mbX6r-vI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2902 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2902`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve WIP: suspend and resume, ARMv8 Update 讲者口述：讲者 2012 年先做 DragonFly BSD 的调度器，2014 年起转向内核中的虚拟化——周末开发、形似 jail、把仿真留在用户态以隔离 guest 对 host 的危害，并打算把仿真部分从 base 里挪出。（YouTube EPX0V4Z_VDG1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2903 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2903`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve WIP: suspend and resume, ARMv8 Update 讲者口述：bhyve 在 ARM 架构上的移植（转写音作 artistic or）当前状态为——项目基于 bhyve 的 ARMv7 版本，并落在 2017 年的 FreeBSD current 代码基上。（YouTube EPX0V4Z_VDG1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2904 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2904`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve WIP: suspend and resume, ARMv8 Update 讲者口述：host 内核跑在异常级 1，而该级对硬件有完全控制权，因此为使 host 能控制 guest，改用第三个异常级；讲者说明该异常级是 ARMv8 的可选架构扩展。（YouTube EPX0V4Z_VDG1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2905 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2905`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve WIP: suspend and resume, ARMv8 Update 讲者口述：ARMv8 上 stage-1 与 stage-2 转换表结构不同——stage-2 表深三层而非四层、表项也不同；讲者为此在内核中实现了一种新的转换表类型，该类型只供 bhyve 做虚拟化使用。（YouTube EPX0V4Z_VDG1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

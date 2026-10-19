@@ -233,3 +233,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔porch(1): it's not what you expect(1)（Kyle Evans）讲者口述：porch 有脚本模式与库直调两种用法；要求 Lua 5.3+（FreeBSD base 自带 5.4，恰合），CI 实测于 FreeBSD、macOS 与 Linux。（YouTube EPDrbk4rEH1sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2886 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2886`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021 FreeBSD 虚拟供应商峰会 Dell EMC 讲者（Open Channel SSD）〕讲者口述：讲者称自己对 flash translation layer 与 SSD 内部机理有接触，认为切入 FreeBSD 的最好方式之一，就是直接深入 Linux 中已实现的 lightnvm，并据此决定把 lightnvm 实现到 FreeBSD。（YouTube EPK2_bASDxtE0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2887 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2887`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021 FreeBSD 虚拟供应商峰会 Dell EMC 讲者（Open Channel SSD）〕讲者口述：建 target 时的 -b 与 -e 两个参数基本就是 PU 的数量；讲者示例配置为两组通道、每组接四个 PU，编号自 0 至 7 共八个，并从中切分出一个 target。（YouTube EPK2_bASDxtE0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2888 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2888`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021 FreeBSD 虚拟供应商峰会 Dell EMC 讲者（Open Channel SSD）〕讲者口述：其 FreeBSD 实现中各模块间的通信全部经由 bio 进行，这正是与 Linux 实现的重大差异所在——Linux 侧 bio 与 block-mq 之间来回传递、抵达对方 FTL，而 FreeBSD 侧基本是单向流动。（YouTube EPK2_bASDxtE0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2889 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2889`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2021 FreeBSD 虚拟供应商峰会 Dell EMC 讲者（Open Channel SSD）〕讲者口述：当一次读取同时落在主机侧缓存与 NAND 上时，其做法是拆出子 bio——缓存部分只需一次内存拷贝，NAND 部分须经 NVMe 下发到下层设备并等待完成，数据就绪后才完成该 bio。（YouTube EPK2_bASDxtE0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2890 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2890`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔logstor: A Log structured user level GEOM layer（Wuyang Chung）讲者口述：log store 沿用日志结构文件系统的同一思路，把更新造成的随机写转为顺序写；又因其是复制写存储，实现检查点与快照较为容易。（YouTube EPPoJXDeX9K-E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2891 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2891`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔logstor: A Log structured user level GEOM layer（Wuyang Chung）讲者口述：FreeBSD 的 GEOM 层里，psdjug 支持 BSD 分区——收到上层请求后把分区起始地址加到 offset 上，再把改写后的请求下发到下一层；讲者紧接说明 mbrjug 对 MBR 分片做同样的偏移处理。（YouTube EPPoJXDeX9K-E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2892 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2892`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔logstor: A Log structured user level GEOM layer（Wuyang Chung）讲者口述：log store 的垃圾回收采用热冷分离（转写音作hard core separation）加老化（aging）算法，老化部分用于磨损平衡；讲者设计时假设下层存储是闪存盘。（YouTube EPPoJXDeX9K-E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2893 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2893`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔logstor: A Log structured user level GEOM layer（Wuyang Chung）讲者口述：log store 目前实现在用户层，理由是便于测试与调试，未来应移入内核层；又因其是复制写存储，还可用于支持磁盘级增量备份。（YouTube EPPoJXDeX9K-E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

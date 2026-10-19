@@ -63,3 +63,25 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔DJ-BSD: DJing and music production in FreeBSD（Charlie Li）讲者口述：只要 USB 设备以标准 USB 音频接口身份出现，能干的事就很多——从一般扬声器与麦克风的基本用法到更花哨的玩法都可以。（YouTube EPEdf80gLVL3A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2862 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2862`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philipp Buehler: Puffy presents video conferencing (jitsi) Part II（EuroBSDcon 2022）讲者口述：实现方式是一台裸金属机（转写音作 open BC）加上 vmm 配置，用四个虚拟机承载提供一次基本视频会议所需的四个基本组件。（YouTube EPLJOpSDcwWIA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2863 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2863`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philipp Buehler: Puffy presents video conferencing (jitsi) Part II（EuroBSDcon 2022）讲者口述：防火墙侧的配置在两个方向上都做成同一形态，PF 默认阻断，只放通真正需要的通信信道（inbound and outbound）。（YouTube EPLJOpSDcwWIA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2864 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2864`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philipp Buehler: Puffy presents video conferencing (jitsi) Part II（EuroBSDcon 2022）讲者口述：相关包可回移（转写音作 backboard）到 7.1，7.0 上应亦可工作，只需整体重新编译或重新打包，慢机上大约二十分钟。（YouTube EPLJOpSDcwWIA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2865 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2865`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philipp Buehler: Puffy presents video conferencing (jitsi) Part II（EuroBSDcon 2022）讲者口述：在 OpenBSD 或任何非 Linux 机器上必须关闭 sctp，讲者称这更多是为完整性而保留的现状，未来版本会被取代掉。（YouTube EPLJOpSDcwWIA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

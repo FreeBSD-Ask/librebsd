@@ -317,3 +317,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔Calling the BATMAN: Free Networks on FreeBSD（Aymeric Wibo）讲者口述：开发时发现不把 sk_buff 结构正确backing 到 mbuf 上更容易，于是当前数据在 mbuf 与 sk_buff 之间来回复制——他承认这不理想，打算后续改正。（YouTube EPBAVogweBQ8M，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2866 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2866`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IPv6（Hiroki Sato）讲者口述：讲者描述 FreeBSD 在接口上启用接收 RA 标志之后的行为——接口 em 收到 RA 报文（转写音作 ira）即自动配置地址与默认路由器，全程无需用户干预；讲者同时提醒这个标志“有点危险”：若网段里漂着伪造或恶意的 RA 报文，FreeBSD 会在不作任何校验的情况下接受任何配置。（YouTube EPI-LAmzufsOc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2867 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2867`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IPv6（Hiroki Sato）讲者口述：讲者说明 FreeBSD（转写音作 usb basics）对 DHCPv6（转写音作 dhcp physics）的调用（invocation）支持，并指出 FreeBSD 另具备配置 IPv6 路由器（前缀）的能力，讲者称之为 dcv6pd。（YouTube EPI-LAmzufsOc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2868 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2868`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IPv6（Hiroki Sato）讲者口述：讲者指出现有 FreeBSD 实现不支持接收 RA 报文（转写音作 receiving array）——而讲者前文已说明接收 RA 需在接口上置那个标志（转写音作 accept already out of）；一旦 FreeBSD 机器启用了数据包转发（packet forwarding），接收 RA 即被关闭。（YouTube EPI-LAmzufsOc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2869 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2869`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IPv6（Hiroki Sato）讲者口述：讲者就 IPv6 地址隐私指出，仅建立一次 TCP 连接就会把该地址披露出去；讲者称近期（转写音作 a recent receives）建议实现“稳定地址”——地址被随机化，但重启后仍沿用同一地址；讲者表示自己已有实现，并打算提交对该稳定地址的支持。（YouTube EPI-LAmzufsOc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

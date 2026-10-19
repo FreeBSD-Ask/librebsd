@@ -115,3 +115,25 @@ volume: 第15卷-许可证哲学与法律分析
 
 据〔Michael Dexter 会议场次 P05B《A permissively licensed SMART and raw disk command utility framework》〕讲者口述：讲者指出 smartmontools 的许可证构成实际障碍——其 GPL v2 许可使其无法进入本次会议上讨论的 BSD 系 base 操作系统；他另称宽松许可（BSD、MIT、ISC 一类）是该项工具框架的硬性要求，并把可扩展输出、可作库调用列为首要设计目标。（YouTube EPRHvATmJMe7E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2878 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2878`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔diskctl a permissively licensed smart and raw disk command utility framework（转述 Michael Dexter 于 AsiaBSDCon 之作，转述者姓名不详）讲者口述：该提案缘起于开发者 Summit 上的一次议题——FreeBSD 正试图摆脱 GPL 代码，讲者认为清除 base 中的 GPL 代码是 FreeBSD 12 的目标，而 smartmontools（转写音作 “smartw tools”）是 GPL 工具，故不予引入。（YouTube EPuAyepRtVbxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2879 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2879`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔diskctl a permissively licensed smart and raw disk command utility framework（转述 Michael Dexter 于 AsiaBSDCon 之作，转述者姓名不详）讲者口述：向社区征询需求时最先出现的条件之一，是必须有一个许可宽松的开源工具，以便摆脱对 smartmontools（转写音作 “smart lawn”）的依赖。（YouTube EPuAyepRtVbxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2880 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2880`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔diskctl a permissively licensed smart and raw disk command utility framework（转述 Michael Dexter 于 AsiaBSDCon 之作，转述者姓名不详）讲者口述：其他 BSD（前文点名 openbsd 与 netbsd）中所存在的 ATA control 工具本自带 BSD 许可，因而可直接取用。（YouTube EPuAyepRtVbxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2881 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2881`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔diskctl a permissively licensed smart and raw disk command utility framework（转述 Michael Dexter 于 AsiaBSDCon 之作，转述者姓名不详）讲者口述：该 ATA control 工具曾被 FreeBSD 系统移除并废弃，因 CAM 迁移期间 ATA control 所做之事与 CAM 的运作方式不相容，致使该代码难以向前推进。（YouTube EPuAyepRtVbxs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

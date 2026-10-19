@@ -313,3 +313,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔SPA Metadata Allocation Classes and Ztour（Don Brady）讲者口述：其讲两题——zour（转写作 zour，ZFS 用户态调试工具）与 SPA 元数据分配类。（YouTube EP28fKiTWb2oM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2846 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2846`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Performance（George Wilson，OpenZFS Dev Summit 2014）讲者口述：讲者所在团队（转写音 delphics）已就块分配性能做了较长时间的尝试与调查。（YouTube EPdeJc0EMKrM4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2847 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2847`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Performance（George Wilson，OpenZFS Dev Summit 2014）讲者口述：metaslab（转写音 medicine lab）的权重以可用空间为首要依据，并考察若干因素决定加权或降权；其中碎片度高的 metaslab 被降权，理由是它的空闲空间很可能由大量小段组成。（YouTube EPdeJc0EMKrM4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2848 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2848`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Performance（George Wilson，OpenZFS Dev Summit 2014）讲者口述：团队引入了 space map 直方图（space map histogram）这一带 feature flag 的改动，目的是取得更多信息；讲者当时认为 Linux 尚无此特性。（YouTube EPdeJc0EMKrM4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2849 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2849`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Performance（George Wilson，OpenZFS Dev Summit 2014）讲者口述：新算法（绿色曲线）使曲线趋于平缓，在 80% 容量处不再出现断崖式下跌，相对去年的数值约有 73 的改进。（YouTube EPdeJc0EMKrM4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

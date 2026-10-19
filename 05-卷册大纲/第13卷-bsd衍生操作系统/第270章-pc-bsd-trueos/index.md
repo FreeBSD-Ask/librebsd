@@ -268,3 +268,25 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔Kris Moore AsiaBSDCon 2013 讲座〕讲者口述：讲者称该向导自动配好 NFS、DHCP 以及供 TFTP 等用的守护进程，约三十秒即可搭起一台 PXE 网络引导安装服务器。（YouTube EPC7i_PJqqHlU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2874 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2874`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD: FreeBSD on the Desktop（Matt Olander）讲者口述：讲者 Matt Olander 任职 IX Systems（转写音作 “I ex systems”），已长期支持并协助 FreeBSD 开发；更早任职 Walnut Creek CD-ROM（即 cd.com），该公司于 1990 年代被 BSDi 收购。（YouTube EPoC4gsipGfQU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2875 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2875`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD: FreeBSD on the Desktop（Matt Olander）讲者口述：PC-BSD 自诩最大卖点为 PBI，即 push button installer；做法是取任意程序连同其全部库与依赖，整体装入一个独立容器。（YouTube EPoC4gsipGfQU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2876 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2876`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD: FreeBSD on the Desktop（Matt Olander）讲者口述：PBI 当时与 FreeBSD 其余部分互不相认——用户先装 Firefox 及其数 GB 依赖，再想 build 一个 port 时，ports 并不知道自己已装过该软件，还会再从 port 下载另一份 GB 级依赖。（YouTube EPoC4gsipGfQU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2877 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2877`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔PC-BSD: FreeBSD on the Desktop（Matt Olander）讲者口述：PC-BSD 一定会纳入 ZFS——待 ZFS 稍具生产可用性即可面向终端用户纳入，而此刻 ZFS 已作为安装器的一部分存在；讲者并称 FreeBSD 终将跟进。（YouTube EPoC4gsipGfQU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
