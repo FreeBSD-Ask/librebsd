@@ -151,3 +151,15 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔November 2022 FreeBSD Vendor Summit〕讲者口述：到 2000 年时，日本产业界的大型电子设备制造商（多家，讲者以 they 泛称）已不再对工作站产业、操作系统销售及自研实现感兴趣。（YouTube EPJLkLsAiaY1w，[1273.5-1289.21]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2832 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2832`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2008 Keynote: 25 years with BSD（Hideki Sunahara）讲者口述：讲者回顾与 BSD 的关系，并提到 1985 年（转写音含混的）一本（BSD/UNIX 相关）书——书稿 1983 年起笔、写了两年。（YouTube EPbrYdkQ120Do，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2833 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2833`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2008 Keynote: 25 years with BSD（Hideki Sunahara）讲者口述：该书 1983 年起笔、历时两年写成。（YouTube EPbrYdkQ120Do，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
