@@ -2772,3 +2772,52 @@ b067 正向——**不可假设**）→ 建批即派读手。
   ⇒**totals 四个计数字段须整组同步**。④ `--mark` 只记 tag/offset/n/cands/claims/commit，
   `parts`／`hosts`／`note` 须收口时一并补齐，且 **`--mark` 不可传 `--hosts`**
   （会污染 lib 级 `hosts_final`、进而污染 `--next` 输出）。
+
+## fq_b117 全链闭环（2026-10-19，offset 232,000，提交 `<待补>`）
+
+- **窗口**：库内序 seq 232,000–233,999（2,000 封）；候选 pk **2402905–2404897**
+  （值跨 1,993／实存 274）；前批 `fq_b116` 收口 2402899，本批首封 2402905 与之间隔 5 封非候选。
+- **候选**：**274 条**（L4=250／L3=24，收率 **13.70%**）。
+- **候选复核**：81 条 `narrnotes` 披露逐条回源裁定 **20 KEEP／61 FIX**，改写全部落回候选清单；
+  🔴 **摘要长度带无人把关**——`_mail2d_run_batch.py check` 只卡 pk 与等级、不卡长度，
+  首轮 61 条改写把长度带推到 21–102（本线风格带 29–80）⇒第二轮再裁 11 条压回，
+  终态 **25–80／均 64.3**（余 2404033、2403939 两条短而准确，忠实优先、不注水）。
+- 🔴🔴 **两处摘要越界实锤（与长度无关）**：2404010 原摘要称“给出 GRUB 补丁”——own-text 全篇无 GRUB
+  字样，该补丁只在引用块里由转述者提及，非发件人主张；2403786 原摘要署名“Douglas Denault”——
+  FROM 只有 `doug@safeport.com`，**人名被杜撰**。两条均已按 own-text 逐字回写。
+- 🔴🔴 **摘要层立起第一道机器防线**：新增 `_crosscheck_verdicts_b117.py`——把每条 FIX 摘要中的
+  拉丁 token 逐一到 own-text（已剥引用块）做 `casefold`＋去标点归一化比对，
+  首轮 **80 OK／1 SUSPECT**（2404010 的“ASCII”：own-text 只有 ASCII 艺术图、无该词，属解读性标签），
+  修正后 **81 OK／0 SUSPECT**。此前 61 条改写全凭人工复读，无自动判据可拦。
+- **叙述层**：40 路叙述手（p1–p34 各 7 行／p35–p40 各 6 行＝34×7＋6×6＝274），
+  叙述长度 **61–140（均值 110.4）**；`fq_b117_mount_narr.tsv` **274 行全三列（822 字段）**、
+  无 BOM／无 CRLF／尾 0x0A。
+- **register**：CL-RM-**487032–487305** 连续 274 条**无洞**（写前实测 `MAX(claim_id)`＝487031，
+  恰为 H3 `fhk_b083` 的收尾号 487,031，**本批与之零重叠**；较 b116 停点 483,148 前进 3,883 号）；
+  写后反查 quote **274/274**、四表 join **274**、`claim_text`==`fact_text`==候选摘要 **274/274**、
+  证据等级 L4 250／L3 24 与候选逐项一致、`claim_id` 形制 `^CL-RM-\d{6}$` 全合规。
+- 🔴 **水位锁本轮走通完整闭环**：`register_waterlock acquire --count 274 --max-claim-id 487031`
+  取锁得段 487032–487305（与 register 实写段逐号一致）→ release（rows==distinct==274）；
+  **release 的属主校验是 `host:pid` 而非仅 host**——跨进程调用必带 `--session DESKTOP-RLOEIG9:<pid>`
+  显式传入，否则一律 `not_owner` 拒放（本机主机名 `DESKTOP-RLOEIG9`、SMB 共享名 `DESKTOP-M5P610N`，
+  二者不是同一标识，勿混用）。
+- **outline**：**274 块**（921=210／10016=30／10017=28／924=5／923=1）、**922 族本批为零**；
+  写前五宿主已存 prebak（合计 17,869,844 B）；outline 幂等二跑 5 宿主全 **+0 块**；
+  `_drift_check` **缺块 0／漂移 0 零漂移**。
+- **门禁**：`_chk_narr_all_b117`（结构违规 0、元描述硬命中 0、软词 3 条全已回源留证）／
+  `_asm_mount_fq_b117`（40 分件 274 条、宿主分布与候选一致）／`_vn_narr.py` PASS 全绿／
+  `_mail2d_run_batch.py check`（274 条唯一升序、越界 pk 0、违规 0）／`_drift_check` 零漂移／
+  `_chk_verdicts_b117.py` pre 与 post 双模 **错误 0**／`_crosscheck_verdicts_b117.py` **81 OK 0 SUSPECT**，
+  **七项退出码全部为 0**。
+- **claimdb_guard**：写前 **PASS**（rows 511,174／distinct 508,045／单值 0.0166%／updated_at 5.0949%）→
+  **专项 prebak 643,837,952 B**（`_bak_hc_fqb117register_20261019_093927.duckdb`，md5 `29c0a20d…`，
+  与活库逐字节相同）→ 写后 **PASS**（rows 511,448／distinct 508,319，**＋274／＋274 与本批逐行吻合**，
+  单值 0.0166%）；`rotate_guard_state` pre／post 两槽均 healthy、post 未与既有槽重复。
+- 🔴🔴 **门禁数值不是缺陷数（本线第四次坐实）**——backref 门报 **17 条**（token 0＋连名带姓 4＋单姓名 13），
+  逐条回源后**真缺陷 0**：13 条单姓名全是产品或工具名（NDIS／zfs／sed／USB／tmux／CURRENT／
+  AutoSense／ETS／OpenIndiana／LBA／Asus／fsck），另 1 条 Polytropon 是当事人自述中致谢的第三人、
+  非归属错误。命中数仍不可当缺陷数，须逐条回源。
+- **落账**：指针 232,000→**234,000**、done_batches 116→**117**、remaining 240,235→**238,235**、
+  remaining_batches 121→**120**（校验 117+120=237、234,000=117×2000）。
+  **下一站 fq_b118 @ offset 234,000**。
+
