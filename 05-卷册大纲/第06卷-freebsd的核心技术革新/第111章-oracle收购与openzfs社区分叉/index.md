@@ -1265,3 +1265,30 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔December 2023 OpenZFS Leadership Meeting〕与会者口述：修复以非理论的实用方案（solid fix）发布，OpenZFS 2.2 与 2.1 的新版及 FreeBSD 12/13/14 全部支持版本都收到该补丁。（YouTube EPOnuaWyt8QZo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2802 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2802`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2025 OpenZFS Leadership Meeting〕与会者口述：Alexander 的 PR 把 O_DIRECT 接入无缓 IO 机制（约一年前实现的 uncached IO），并允许预取在主缓存关闭时仍然工作。（YouTube EP7g5yfugIKnA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2803 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2803`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2025 OpenZFS Leadership Meeting〕与会者口述：该 PR 主体是 API 改造——给各接口加标志参数、把缓存/预取决策信息沿栈下传，故补丁显得很大。（YouTube EP7g5yfugIKnA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2804 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2804`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2025 OpenZFS Leadership Meeting〕与会者口述：其试图避免对缓冲区未对齐的直读报错——Linux 侧多处（含 systemd 扩展）就是这么干的，别人能用而 ZFS 不能用一直是痛点；此改动被 Brian Atkins 反对。（YouTube EP7g5yfugIKnA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2809 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2809`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔March 2026 OpenZFS Leadership Meeting〕与会者口述：预取改进设想——顺序读对象时让 ZFS 猜后续读取，但不必全进 ARC、限制预读距离，对 ARC 与池都更友好。（YouTube EPFiCra6J7YnI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2810 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2810`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔March 2026 OpenZFS Leadership Meeting〕与会者口述：分配器改进陆续落地——近两周恰有 FreeBSD 与 Linux 两个客户都撞上此问题。（YouTube EPFiCra6J7YnI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

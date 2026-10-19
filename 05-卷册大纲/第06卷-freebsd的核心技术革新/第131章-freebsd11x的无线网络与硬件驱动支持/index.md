@@ -298,3 +298,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔FreeBSD audio in amateur and professional setups（Goran Mekić）讲者口述：混音与重采样在用户态更快——声道数大时（他有 18 路、Selasky 有 32 路）由内核来做就会发卡。（YouTube EP9xIGfs6Bqpo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2807 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2807`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD, BeagleBone Black and Robotics〕讲者口述：讲题为 FreeBSD＋BeagleBone Black＋机器人（两人团队）。（YouTube EPkasQ0rLN2NM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2808 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2808`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD, BeagleBone Black and Robotics〕讲者口述：机器人基本功能就是行走——但为达此目标走过了漫长的路。（YouTube EPkasQ0rLN2NM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
