@@ -98,3 +98,20 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔来源不详〕讲者 Colin Percival 口述：他现任 FreeBSD 发行工程负责人，已推出 13.3 版本，14.1 即将发布（YouTube EPwrlCxwH6MsA，[2223.52-2233.55]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2829 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2829`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Routing stack changes in FreeBSD 13（Alexander Chernikov）讲者口述：讲题为 FreeBSD 13 落地的路由栈改动，涉 next-hop/next-hop 对象的实现细节与内核编程接口。（YouTube EP6SRGxvFL-kk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2830 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2830`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Routing stack changes in FreeBSD 13（Alexander Chernikov）讲者口述：改动动机之一是终于要有可用的多路径路由——尤其是宽多路径组。（YouTube EP6SRGxvFL-kk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2831 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2831`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Routing stack changes in FreeBSD 13（Alexander Chernikov）讲者口述：另一动机是亟需简化对路由子系统的改动（hack）成本。（YouTube EP6SRGxvFL-kk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

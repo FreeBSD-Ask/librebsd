@@ -141,3 +141,10 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 据〔FreeBSD from a Linux developer's perspective（D Scott Phillips）讲者口述：补丁尺寸分布上两个项目几乎一样——一半的改动约六行、四分之三在约 25 行内；差别全在顶部 1% 的大改动上。（YouTube EPml8vo1FWT1I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2826 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2826`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD coming from a Linux user（Toshaan Bharvani，EuroBSDcon 2022）讲者口述：其作为 Linux 用户进入 BSD 社区时受到相当容易的接纳，讲题意在点出差异与可改进之处。（YouTube EPs1FLwHpiufA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
