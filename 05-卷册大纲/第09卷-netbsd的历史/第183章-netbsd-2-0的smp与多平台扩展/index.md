@@ -146,3 +146,10 @@ volume: 第09卷-netbsd的历史
 
 据〔Alamosa: A Tiered Disk Block Cache for NetBSD（Kira Ash）讲者口述：倾向不给每条缓存线记使用频度，而把频度统计收敛到每个集合一级。（YouTube EPlI7PddqLGwI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2819 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2819`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting Valgrind to NetBSD and OpenBSD（Masao Uebayashi，EuroBSDCon 2014）讲者口述：讲者自述来自日本、自营公司（转写作 ESD，疑为 BSD 一类）做开发。（YouTube EPPEPo0PJteaA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

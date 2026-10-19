@@ -236,3 +236,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Hardware Trace Framework for FreeBSD（同上）讲者口述：其此前已为该平台做过基础支持（转写作 IU 与 SCMI），并写过显示控制器驱动与 ARM Mali GPU 驱动。（YouTube EPvCHqUZxhZ-I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2817 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2817`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲题为利用延迟分布与微基准（micro benchmarks）探测内核热点（Bloomberg 交易解决方案 SRA 团队）。（YouTube EP1StRbwHUcFU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2818 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2818`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：某些场景要么需要本地 IPC 的低延迟、要么需要对写入持久性的更高保证——这就是其部门仍跑大型裸机（转写音作 large bare me）的缘由。（YouTube EP1StRbwHUcFU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

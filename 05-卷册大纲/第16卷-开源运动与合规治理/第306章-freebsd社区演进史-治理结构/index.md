@@ -407,3 +407,10 @@ volume: 第16卷-开源运动与合规治理
 
 据〔Brooks Davis，AsiaBSDCon 2008〕讲者口述：团队把 Robert Watson 关于 FreeBSD 项目如何运作的演讲列为在企业内推广开源开发方法的参考材料，即把 FreeBSD 项目的组织运作方式当作可援引的范例。（YouTube EP4lcrinKBMas，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2813 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2813`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Using FreeBSD to Promote Open Source Development Methods（Brooks Davis）讲者口述：讲题不是技术演讲，而是推动公司内部文化变革、鼓励更开放的内源软件；公司约有两千五百名工程师。（YouTube EPd0sE-5Dnqjs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

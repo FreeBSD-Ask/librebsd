@@ -1214,3 +1214,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔OpenZFS 黑客松项目串场（讲者口述缺陷）口述：对目录型扩展属性设值后立即 fsync，属性值在崩溃后并不落盘——因为目录型 xattr 的值是另一 inode，不在本次 zil commit 的同步事务列表上。（YouTube EPYTL3mqV-wEA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2820 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2820`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fast Clone Deletion（Sara Hartse，Delphix）讲者口述：旧算法下——造若干太字节数据、做克隆、改几处小地方再删，要花四十五分钟，确是问题。（YouTube EPGLABJRWwGMk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2821 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2821`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fast Clone Deletion（Sara Hartse，Delphix）讲者口述：新算法用子列表（sublist）机制——删除时不再把大量内容载入内存（旧 livelist 算法的问题），并可增量删除、异步销毁子列表。（YouTube EPGLABJRWwGMk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2822 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2822`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fast Clone Deletion（Sara Hartse，Delphix）讲者口述：克隆是既有数据集的**可变副本**——先对数据集做快照（冻结版本），再据以建克隆，因而可改动。（YouTube EPGLABJRWwGMk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

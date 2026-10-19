@@ -1292,3 +1292,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔March 2026 OpenZFS Leadership Meeting〕与会者口述：分配器改进陆续落地——近两周恰有 FreeBSD 与 Linux 两个客户都撞上此问题。（YouTube EPFiCra6J7YnI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-19 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2811 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2811`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2023 OpenZFS Leadership Meeting〕与会者口述：块克隆的禁用开关在 FreeBSD 侧实现为 sysctl（转写作 BSD to assist control）、已提交 FreeBSD；Linux 侧另有等价配置、尚未送 PR。（YouTube EPsZJMFvjqXvE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2812 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2812`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2023 OpenZFS Leadership Meeting〕与会者口述：层级限速演示——顶层配 10 MB 读带宽，其下各层配不同读写限额（转写含混），并称限额调到极高时对性能无碍。（YouTube EPsZJMFvjqXvE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2815 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2815`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 2021 Hackathon Presentations〕主持人口述：黑客松成果分两类——开放类与主题类，2021 年的主题是质量（quality）。（YouTube EPAkWVDs5VZIY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2816 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2816`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 2021 Hackathon Presentations〕讲者口述：BRT（块引用表，转写作 brt）上一次汇报时悬着一个大问题（转写截断于 how we can avoid）。（YouTube EPAkWVDs5VZIY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
