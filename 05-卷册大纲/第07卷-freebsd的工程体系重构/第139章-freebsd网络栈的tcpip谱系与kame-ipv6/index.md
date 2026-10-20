@@ -339,3 +339,15 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔June 2021 FreeBSD Developer Summit: IPv6（Hiroki Sato）讲者口述：讲者就 IPv6 地址隐私指出，仅建立一次 TCP 连接就会把该地址披露出去；讲者称近期（转写音作 a recent receives）建议实现“稳定地址”——地址被随机化，但重启后仍沿用同一地址；讲者表示自己已有实现，并打算提交对该稳定地址的支持。（YouTube EPI-LAmzufsOc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3270 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3270`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：该 TCP 网络函数框架 HATCP 构建于 FreeBSD 13.1 内核与转写作 F stack 的用户态栈之上，其性能目标是支持 100G 链路。（YouTube EPmGShHvA5OJw，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3271 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3271`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称把该框架构建于生产级网络栈之上之所以困难，是因为 FreeBSD 网络栈由超过 15 万行代码组成，而 HATCP 自身逾 1 万行，甚至比某些研究性 TCP 栈更大。（YouTube EPmGShHvA5OJw，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

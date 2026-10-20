@@ -218,3 +218,25 @@ volume: 第01卷-unix的起源
 
 据〔会议不详〕讲者口述：AT&T 起诉后 BSD 未能干净发布，这场官司让所有人回避 BSD 整整两年，Linux 便长进这个空档。（YouTube EPIt5Nb03YmoU，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3299 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3299`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：旁白称 1969 年 Bell Labs 的两位计算机科学家开始开发自己所需的程序，Ken Thompson 与 Dennis Ritchie 当时开始的那个工作，此后演变为在世界范围内被广泛使用的 Unix 操作系统。（YouTube EPO-ddUItBk1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3300 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3300`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：旁白引 Ken Thompson 之言：十九六十年代末他与 Dennis Ritchie 认为当时的操作系统过于复杂，他们试图通过在一台小型机（mini）上构建一个小而简单的操作系统来扭转这一趋势。（YouTube EPO-ddUItBk1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3301 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3301`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：旁白引 Thompson 之言：他们想要保留的不只是一个适合做编程的好环境，而是一个能够围绕它形成共同体的系统。（YouTube EPO-ddUItBk1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3302 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3302`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：旁白描述 Unix 的三部分构成：内核（操作系统本身）管理机器控制与调度；被称为命令解释器的部分照看用户与系统之间的交流；第三部分是各类实用程序。（YouTube EPO-ddUItBk1Y，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

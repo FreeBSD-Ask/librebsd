@@ -1477,3 +1477,105 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Securing the Cloud with ZFS Encryption（Jason King）〕讲者口述：恢复机制采用密钥托管：密钥以 Shamir 秘密共享（转写音作 samir）拆分，讲者举例称若分成十份、阈值为五，则只持有四份也得不到最终密钥的任何信息，另可把份额交给持有个人 YubiKey 的人员，经质询—应答流程恢复。（YouTube EPkFuo5bDj8C0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3169 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3169`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔VDEV Properties by Allan Jude〕讲者口述：去年开发者峰会上，一群人在小办公室里勾勒出按 vdev 设属性的构想，目标是让使用者对系统有更多控制、并能以程序方式取回信息。（YouTube EPEVgupW8T1RI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3170 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3170`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔VDEV Properties by Allan Jude〕讲者口述：zpool status 面向人不面向脚本，校验和与 vdev 错误计数没有便捷的提取途径送入监控图表；zpool list -v 的列按池设计、面对盘常为空，二者并不匹配。（YouTube EPEVgupW8T1RI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3171 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3171`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔VDEV Properties by Allan Jude〕讲者口述：设备移除的使用场景需要表达管理意图：对尚未移除的另一块盘先声明“我打算移除但还没移”，请其不要再被写入，以便数据正从另一块盘上搬走。（YouTube EPEVgupW8T1RI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3172 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3172`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔VDEV Properties by Allan Jude〕讲者口述：设备疏散工作此前为追踪扫描进度加入了 vdev props 应用，由此每个 vdev 已自带 zap 键值存储可直接复用，且对顶层 vdev 与 raidz 等变换类、叶 vdev 均适用。（YouTube EPEVgupW8T1RI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3212 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3212`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Shared L2ARC（Christian Schwarz）讲者口述：Nutanix Files 是软件定义的横向扩展文件存储方案，对用户提供的核心功能是由客户端访问的 NFS、SMB 与多协议共享；这些共享在底层映射为 ZFS 数据集，散布在转写音作 zipwoods 的多个存储池之上。（YouTube EPMuifVTAQ6RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3213 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3213`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Shared L2ARC（Christian Schwarz）讲者口述：讲者称更严重的问题是 L2ARC 是“按池”的属性：在他们的产品里无法预先判断哪个共享或转写音作 Zippy 的存储池最需要加速，因此只能把本地盘切分后逐一分配给当下导入的每个池。（YouTube EPMuifVTAQ6RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3214 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3214`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Shared L2ARC（Christian Schwarz）讲者口述：L2ARC 的填充由内核线程完成：转写音作 Edge Rock feed thread 的线程遍历 L1ARC 的逐出候选（即位于最近最少使用或最不常用链表尾部者），并按规则处理——候选缓冲若来自已附加缓存设备的存储池，就把它写入该缓存设备。（YouTube EPMuifVTAQ6RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3215 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3215`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Shared L2ARC（Christian Schwarz）讲者口述：共享 L2ARC 的做法：把上述 L2ARC 填充线程改掉，使其不再按池划分缓冲，而是把系统中任意存储池的缓冲喂入专用于 L2ARC 的那个池的缓存设备，于是缓冲得以跨多个缓存设备铺开；该专用池在实现中以硬编码名字标识，讲者自承名字有待评审。（YouTube EPMuifVTAQ6RE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3228 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3228`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Vdev Properties（Allan Jude）讲者口述：讲者指出当时 ZFS 的多数可调参数是全区（系统级）的，而他们希望按池设置：自己有很多服务器上同时有 SSD 池与转盘池，两者并不需要同样的调参。（YouTube EPhD0uJOOCDb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3229 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3229`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Vdev Properties（Allan Jude）讲者口述：讲者称 zpool status 大概是转写音作 Zetas fest 里唯一没有机器可读版本输出的命令，因此他把 vdev 的一些变量与成员暴露为只读属性。（YouTube EPhD0uJOOCDb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3230 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3230`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Vdev Properties（Allan Jude）讲者口述：提案源自与 Matt 的讨论：设备移除已引入按 vdev 的转写音作 SAP 存储，讲者据此加了一个 comment 键，可写入一段文本、之后再取回。（YouTube EPhD0uJOOCDb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3231 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3231`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Vdev Properties（Allan Jude）讲者口述：就线上观众问及的转写音作 Z standards（zstd）支持进展，讲者答当日早上与 George、Brian 已做处理，希望代码冻结结束后在十月或十一月落入 FreeBSD，随后再着手移植。（YouTube EPhD0uJOOCDb0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3250 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3250`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving “zfs diff” performance with reverse-name lookup by Sanjeev Bagewadi & David Chen 讲者口述：讲者举例：两快照之间有约一百万个变更文件时，zfs diff 耗时约一小时。（YouTube EPFjMdn4IXKXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3251 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3251`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving “zfs diff” performance with reverse-name lookup by Sanjeev Bagewadi & David Chen 讲者口述：dnode 本身不存文件名、只存父 id，因此路径翻译须进入父目录做线性搜索，以找到匹配的对象 id。（YouTube EPFjMdn4IXKXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3252 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3252`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving “zfs diff” performance with reverse-name lookup by Sanjeev Bagewadi & David Chen 讲者口述：现行代码在建立硬链接时总把 dnode 存的父 id 改成新链接的父目录；删除该硬链接后父 id 仍指向旧处，导致找不到真实父目录，路径翻译因此出错。（YouTube EPFjMdn4IXKXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3253 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3253`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving “zfs diff” performance with reverse-name lookup by Sanjeev Bagewadi & David Chen 讲者口述：对策是把 zap 条目加入时算得的 64 位哈希存入 dnode，新增转写音作 hash value 的系统属性。（YouTube EPFjMdn4IXKXE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3262 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3262`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Adding Logical Quotas to ZFS by Sanjeev Bagewadi 讲者口述：讲者称现行 ZFS 默认实现对配额按压缩后大小计：以实际写入磁盘的块计，而非压缩之前的大小。（YouTube EP7dG9QPG7RoA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3263 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3263`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Adding Logical Quotas to ZFS by Sanjeev Bagewadi 讲者口述：dnode 上并不必然保有逻辑大小，只有磁盘上的物理占用，这是实现逻辑配额须补齐的短板。（YouTube EP7dG9QPG7RoA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3264 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3264`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Adding Logical Quotas to ZFS by Sanjeev Bagewadi 讲者口述：新增数据集级属性 logical quota 作为二元开关：开启时，在转写音作 dm utx assign（dmu_tx_assign）处检查配额的强制代码改用逻辑配额。（YouTube EP7dG9QPG7RoA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3265 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3265`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Adding Logical Quotas to ZFS by Sanjeev Bagewadi 讲者口述：用户接近配额时性能明显变差，原因是分配时的过度估算：讲者称其膨胀比达逻辑大小的转写作 24x，认为过高，已有候选补丁改进。（YouTube EP7dG9QPG7RoA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -34,3 +34,25 @@ volume: 第09卷-netbsd的历史
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 netbsd.duckdb
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3303 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3303`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The history of NetBSD.〕讲者口述：旁白称 NetBSD 是一个基于伯克利软件发行版（BSD）的自由开源类 Unix 操作系统，于 1993 年 3 月由 Chris Demetriou、Theo de Raadt、Adam Glass 与 Charles M Hannum 创立。（YouTube EPgiceCouM3F8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3304 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3304`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The history of NetBSD.〕讲者口述：旁白给出的时间线称：1994 年 NetBSD 发布首个版本；1995 年它成为首个支持 64 位 Alpha 处理器的操作系统；1999 年成为首个支持 PowerPC 架构的操作系统。（YouTube EPgiceCouM3F8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3305 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3305`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The history of NetBSD.〕讲者口述：旁白续称：2000 年 NetBSD 成为首个支持 ARM 架构的操作系统，2006 年成为首个支持 64 位 Intel x86-64 架构的操作系统，2012 年成为首个支持 64 位 ARM 架构的操作系统。（YouTube EPgiceCouM3F8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3306 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3306`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The history of NetBSD.〕讲者口述：旁白称 NetBSD 以其可移植性与对广泛硬件平台的支持著称，也以高质量与稳定性著称，并被个人、企业与政府等各类用户使用，用于服务器、桌面与嵌入式设备。（YouTube EPgiceCouM3F8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

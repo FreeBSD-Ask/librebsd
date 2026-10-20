@@ -489,3 +489,75 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔How to SETUP and configure BHYVE in FREEBSD (Step-by-Step)（Tech mimic 频道）〕讲者口述：尽管 bhyve 本身随 FreeBSD 捆绑提供，实际管理虚拟机用的是第三方 vm-bhyve 管理系统（命令行/终端工具）。（YouTube EPE47Pd0P58Co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3185 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3185`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P01B: bhyve ATA emulation（Mihai Carabas）〕讲者口述：既然 bhyve 已有 AHCI 接口，为何还要做 ATA 模拟：其他客户机操作系统（讲者举出 Windows XP、Server 2003 与 2008 一类旧系统）默认不带 AHCI 支持。（YouTube EPsK7JvbT4zAU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3186 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3186`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P01B: bhyve ATA emulation（Mihai Carabas）〕讲者口述：该实现走 ISA/LPC 附件而非 PCI，讲者称评审中 Peter 被明确问及此点，Peter 答这不是最佳做法，但并非所有客户机都提供 PCI 支持。（YouTube EPsK7JvbT4zAU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3187 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3187`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P01B: bhyve ATA emulation（Mihai Carabas）〕讲者口述：性能测试中 ATA 模拟约为每秒 100 MB，而既有的 AHCI 模拟约每秒 300 MB；讲者把差距归因于 LBA 寻址（该 ATA 模拟止于 LBA28，AHCI 可到 LBA48）。（YouTube EPsK7JvbT4zAU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3188 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3188`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P01B: bhyve ATA emulation（Mihai Carabas）〕讲者口述：测试办法是先建读写自动化测试：用 dd 从任意偏移读取磁盘，再把结果与初始数据比对；讲者称过程中在模拟代码里查出若干 bug。（YouTube EPsK7JvbT4zAU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3246 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3246`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2023 讲者口述：就 FreeBSD 14 上的支持范围，讲者答支持 AMD 与 Intel 显卡直通，但暂不支持 Nvidia 显卡。（YouTube EPeurBCPj65oI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3247 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3247`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2023 讲者口述：GPU 直通在 FreeBSD 14 上尚未完全可用，还须更新 bhyve 的固件；该固件位于 ports 树的 utils/edk2 之下，讲者在其 git 仓库提供公开分支以便获取并构建。（YouTube EPeurBCPj65oI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3248 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3248`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2023 讲者口述：许多 Nvidia 显卡存在无法正确重置的硬件问题：虚拟机首次启动可正常工作，但重启 VM 之后便无法正常工作。（YouTube EPeurBCPj65oI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3249 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3249`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2023 讲者口述：在 Intel 系统上 GPU 总是接在 slot 2，部分驱动据此预期设备位置，因此必须把设备分配到 slot 2，否则某些驱动会拒绝工作。（YouTube EPeurBCPj65oI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3254 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3254`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Testing and profiling warm and live migration in bhyve: Elena Mihailescu 讲者口述：bhyve 由以下组件构成：转写音作 kum module 的内核模块（与硬件及处理器虚拟化扩展交互）、VMM 库，以及以转写音作 O controls（ioctl）把状态从用户态转入内核态的 VMM API。（YouTube EPOKuPOzZYr3g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3255 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3255`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Testing and profiling warm and live migration in bhyve: Elena Mihailescu 讲者口述：迁移分为冷、暖与热三类：冷迁移须关闭虚拟机、把镜像复制到目的地，再在目的主机上启动虚拟机，讲者称这是代价最高的一种迁移方式。（YouTube EPOKuPOzZYr3g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3256 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3256`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Testing and profiling warm and live migration in bhyve: Elena Mihailescu 讲者口述：热迁移按轮次进行：第一轮迁移客户机全部内存，此后各轮只迁自上次复制后被修改的页，最终轮停机并复制所有剩余页。（YouTube EPOKuPOzZYr3g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3257 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3257`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Testing and profiling warm and live migration in bhyve: Elena Mihailescu 讲者口述：bhyve 的暖迁移函数实现为转写音作 seven restore（save/restore）函数的封装：机制上改为经 socket 发送数据，而不是把数据存入快照文件。（YouTube EPOKuPOzZYr3g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3276 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3276`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to run a WINDOWS virtual machine on FREEBSD with BHYVE (Step-by-Step)〕讲者口述：讲者演示在 FreeBSD 上用 bhyve 运行 Windows 虚拟机：bhyve 以 VNC 协议（Virtual Network Computing）提供虚拟机的图形输出，本地或经由网络皆可连接。（YouTube EPRDjj5g9rzx8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3277 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3277`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to run a WINDOWS virtual machine on FREEBSD with BHYVE (Step-by-Step)〕讲者口述：讲者称运行 Windows 10 这类基于 UEFI 的虚拟机需要 bhyve 固件包（转写音作 Beehive dash firmware），以 pkg 安装；本次因先前已装而跳过。（YouTube EPRDjj5g9rzx8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -379,3 +379,40 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Raphael Carvalho - ZFS on OSv - OpenZFS Dev Summit 2014〕讲者口述：移植的下一步是把转写所称 adjustable replacement cache（即 ZFS 的主缓存 ARC）接进 OSv 自己的内存回收基础设施：当 ARC 占用内存过多时，须把内存归还给操作系统。（YouTube EPTJLOBLSRoHE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3208 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3208`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Persistent L2ARC by George Amanakis〕讲者口述：在持久化 L2ARC（转写音作 torque／eldwark／l2）这一项目合入之前，该缓存的内容并不跨重启保留：一旦导出存储池或重启机器，L2 上的 buffers 就会丢失。（YouTube EPe_vVy_3HgVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3209 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3209`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Persistent L2ARC by George Amanakis〕讲者口述：为实现持久化，讲者称团队在盘上实现了名为 l2 arc log blocks（转写音作 lock blocks）的结构，它其实是存放 buffer header 条目的元数据：带一个用于判定转写所称 indians 的 magic 值，以及指向前一个 log block 的指针，以及重建时会被恢复到 ARC 的 header 条目。（YouTube EPe_vVy_3HgVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3210 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3210`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Persistent L2ARC by George Amanakis〕讲者口述：讲者称在消费级 SATA SSD（转写称按如今标准已属低端）上，恢复一台转写音作 64 giga python 的 L2ARC 设备——折合约 100 GB 逻辑大小的 buffers——若只有一条 log block 链需约 3 秒，用当前设计约 2 秒，性能提升约 30%。（YouTube EPe_vVy_3HgVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3211 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3211`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Persistent L2ARC by George Amanakis〕讲者口述：讲者强调这是团队协作：持久化 L2ARC 的实现约五年前始于 illumos，转写所称 shas 做了原始工作，其后被移植到转写所称 cfs 与 Linux，而讲者本人接手的则是转写所称 jorgen 留在代码库（转写作 cougar）里的代码。（YouTube EPe_vVy_3HgVw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3286 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3286`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS for OSX announcement by Jorgen Lundman〕讲者口述：讲者称 macOS 上的 OpenZFS 移植（转写所称 Port of open the rest of the DFS）目前与上游 1.6 齐平，并已为此提交 PR。（YouTube EPTCQ66Vkzcmc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3287 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3287`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS for OSX announcement by Jorgen Lundman〕讲者口述：讲者称 Apple 新芯片 M1 的版本曾因（转写所称）authenticated pointers 等问题受阻，现已能工作；但在内存超过 16 GB 的机器（如 128 GB）上，若以 16 GB 为单位分配就会不稳定，原因尚不清楚。（YouTube EPTCQ66Vkzcmc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3288 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3288`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS for OSX announcement by Jorgen Lundman〕讲者口述：讲者称对 Apple 的走向并不确定：Apple 已表明想移除外延内核（kernel extensions）机制，若届时提供不同的接口，移植方会再评估能否重新导入。（YouTube EPTCQ66Vkzcmc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

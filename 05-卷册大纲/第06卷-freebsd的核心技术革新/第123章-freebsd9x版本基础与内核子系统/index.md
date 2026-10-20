@@ -467,3 +467,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Philip Paeps - FreeBSD, Detangling and debugging〕讲者口述：讲者举 gdb 宏为例：他说在转写所称 freebsd sorcery 里有一份极佳的 gdb 初始化文件例子，他记得是 John Baldwin 写的，内置 ps、net stats 等宏，可把内核 core 丢进 gdb 后直接列进程。（YouTube EPG8Fm8mgPyDc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3204 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3204`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者（开场自述为 FreeBSD 贡献者与 FreeBSD 笔记本用户 Alfonso Siciliano，讲题为转写所称 CCTL——即 sysctl——for BSD）把 sysctl 系统调用界定为前提条件：它可不重编译内核就取改系统状态，例如设置最大套接字数或读取当前已打开套接字数；内核把 sysctl 参数作为管理信息库（MIB）的对象暴露，对象 ID 是以点号分隔的整数序列。（YouTube EP_eAgYJ8JS9U，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3205 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3205`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称该 MIB 由一组树实现：每个节点是转写所称 simple list 的一项并代表一个对象，即对象实现为树的一个节点；sysctl 沿树按对象 ID 找到对象后调用其 handler，handler 再读新缓冲或写缓冲。（YouTube EP_eAgYJ8JS9U，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3206 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3206`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称 FreeBSD 另提供与系统调用同名的 sysctl 命令行工具（转写音作 CCTL utility），它包住系统调用、手册第 8 节有其文档；用转写所称 DA 选项可列出每个对象，如今该 MIB 已有数千个对象，但该细节只显示叶子、不显示内部节点。（YouTube EP_eAgYJ8JS9U，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3207 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3207`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称现有接口不满足其需求，故自写转写所称 CCTL IN（sysctlinfo）：主要需求是让 Python、Haskell 等各种语言的库、工具与包装层都能用现接口，因此两套接口必须共存；他称幸而接口是只读的，共存是容易的任务。（YouTube EP_eAgYJ8JS9U，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -309,3 +309,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Pavel Zakharov - Fast File Cloning - OpenZFS Dev Summit 2014 讲者口述：克隆的块回收法则：改写私有块时予以释放；改写共享块时因不知其是否仍被转写音作 electrons 的引用者使用，故保留不动。（YouTube EP_lGOAZFXra8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3216 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3216`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Device By Any Other Name（Sara Hartse & Don Brady）讲者口述：要解决的第一个概念是转写音作 CFS（zpool）的设备标识：池必须能唯一且一致地识别设备，以便导出后重建同一个池，因此池需要知道哪个设备是哪个、以及导出后如何再找到它。（YouTube EPjFdeRGUczZg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3217 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3217`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Device By Any Other Name（Sara Hartse & Don Brady）讲者口述：illumos 上 c0t0d0 这样的名字其实是指向底层总线位置的链接名，另有转写音作 device ID 唯一标识磁盘，池据此打开设备，因此磁盘挪位仍能打开正确设备；这与 Linux 的情形形成对照。（YouTube EPjFdeRGUczZg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3218 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3218`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Device By Any Other Name（Sara Hartse & Don Brady）讲者口述：Linux 的设备命名分两个组件：内核侧的东西（转写音作 Sisyphus）发布设备信息，可用于查设备的序号等信息，也可用于控制状态（例如重扫总线）。（YouTube EPjFdeRGUczZg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3219 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3219`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Device By Any Other Name（Sara Hartse & Don Brady）讲者口述：讲者一度打算统一用 by-id 引用，但实测发现：在 Azure 上调整设备尺寸后该引用就会失效，讲者转述这一现象为令人困扰。（YouTube EPjFdeRGUczZg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3266 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3266`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Compression - OpenZFS Dev Summit 2014 讲者口述：压缩算法大体分两类：存档派追求最高压缩率、愿意以 CPU 性能换取；实时派只求够用但足够快。（YouTube EPTZF92taa_us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3267 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3267`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Compression - OpenZFS Dev Summit 2014 讲者口述：讲者称当时 ZFS 的默认压缩算法是转写音作 LGB 的算法，lz4 是希望很快成为默认的候选。（YouTube EPTZF92taa_us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3268 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3268`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Compression - OpenZFS Dev Summit 2014 讲者口述：对策是让文件系统自己记住过去的压缩表现：扩展若干内存结构、不改盘上格式，由 ZFS 依历史表现自行决定是否压缩。（YouTube EPTZF92taa_us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3269 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3269`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Compression - OpenZFS Dev Summit 2014 讲者口述：简单启发式：检查压缩成功率，屡不成功则一段时间不再尝试、之后重试，整体表现为退避或变得迟疑。（YouTube EPTZF92taa_us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

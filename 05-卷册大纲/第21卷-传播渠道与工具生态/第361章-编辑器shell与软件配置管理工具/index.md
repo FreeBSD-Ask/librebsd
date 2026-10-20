@@ -215,3 +215,25 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔会议不详〕讲者口述：其后一年拿到了（man 页相关项目的）提交权限，并建了网站 man-k.org 作为开源的在线版本。（YouTube EPxREdxsnOM00，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3242 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3242`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD System Administration Using SysAdm - Dru Lavigne 讲者口述：讲者称一些管理工具常绕过系统配置文件、以配置变量为优先，该工具不愿如此：保留用户编辑转写音作 rcrc.com 的配置文件的能力，另提供可脚本化机制来增补其功能。（YouTube EPzzYv6GGtHQE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3243 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3243`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD System Administration Using SysAdm - Dru Lavigne 讲者口述：该管理框架自身由三个组件构成：服务器、客户端与桥接。（YouTube EPzzYv6GGtHQE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3244 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3244`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD System Administration Using SysAdm - Dru Lavigne 讲者口述：服务器除单次请求外还支持 websocket 长连接（同样要求认证、可配置超时），且无论连接类型一律使用 TLS 加密。（YouTube EPzzYv6GGtHQE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3245 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3245`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD System Administration Using SysAdm - Dru Lavigne 讲者口述：就 TLS 安全连接可否改用 LibreSSL 一问，讲者答：TrueOS 已把基本系统与其全部实用工具都切换到 LibreSSL，因此现在只用 LibreSSL。（YouTube EPzzYv6GGtHQE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

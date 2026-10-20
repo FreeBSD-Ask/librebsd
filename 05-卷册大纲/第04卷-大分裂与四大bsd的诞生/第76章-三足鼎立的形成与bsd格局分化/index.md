@@ -128,3 +128,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔AsiaBSDCon 2016 Project Updates Session 项目更新会议〕讲者口述：讲者说明其中间件 API 有几点不同：期望直接跑在原版 FreeBSD 之上——不向 base 系统打补丁，不装数据库之类的东西去接管系统，目标是与既有环境并存；若用户习惯用 SSH 手工调整配置，该中间件不会妨碍其手工操作，只做补充而不取代。（YouTube EPOfuYo_oCasA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3234 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3234`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Quick and Dirty History of UNIX, BSD, and FreeBSD（Kevin Sweeney）讲者口述：讲者称转写作 Net Two 的 Net/2 虽仍有缺件、尚不能自成完整系统，但它是向 Intel 386 架构两个移植的基础：自由开源的 FreeBSD 与 Berkeley Software Design（BSDi）的专有 BSD/386。（YouTube EPY0ixYwLd9Pg，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3235 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3235`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Quick and Dirty History of UNIX, BSD, and FreeBSD（Kevin Sweeney）讲者口述：386BSD 的补丁包日渐庞大难于处置后，三位补丁协调人 Nate Williams、Rod Grimes 与 Jordan Hubbard 向 Bill Jolitz 提出项目计划：取 386BSD 快照、应用相关补丁并清理代码，以独立版本发布；计划因 Jolitz 撤回支持而中断，维护者决定以新名继续，最终定名 FreeBSD。（YouTube EPY0ixYwLd9Pg，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3236 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3236`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Quick and Dirty History of UNIX, BSD, and FreeBSD（Kevin Sweeney）讲者口述：讲者称 BSD/386 那个转写所称 100 H Unix 的电话号码触怒了握有 Unix 名称版权的 AT&T Unix System Laboratories，导致 1991 年诉讼，使所有 BSD 的合法性成疑，并给 Linux 小优势，直至 1994 年和解；作为和解的一部分，发布了去除争议文件的 4.4 BSD Lite。（YouTube EPY0ixYwLd9Pg，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3237 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3237`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Quick and Dirty History of UNIX, BSD, and FreeBSD（Kevin Sweeney）讲者口述：讲者称 TCP/IP 落入第四系列 BSD 是现代互联网史上的重大里程碑：Berkeley 开发的网络栈一度被几乎所有现代操作系统采用，包括 Windows。（YouTube EPY0ixYwLd9Pg，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -144,3 +144,45 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 据〔Allan Jude“P06C: SSH Performance”演讲〕讲者口述：加上“nuts acre”（转写音，即 no-MAC／不加 MAC 与加密的选项）后，他做到 13 Gbit/s，有把握跑满自己到服务器的 10 Gbit 链路；上游 OpenSSH 对此态度明确不予接受，他于是在 FreeBSD ports 中一直把它作为选项提供，并保留“不得用于交互会话或 shell”等保护。（YouTube EP-ORSp9HBERc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3173 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3173`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A personal FreeBSD deployment: Dhananjay Balan〕讲者口述：“jails 像 Docker”的说法无助于上手：两种工具起作用的抽象层完全不同，jail 并非孤立特性而是拼图一角，须与操作系统的其余部件配合才能搭出可用服务；这种整体思路让学习曲线非常陡。（YouTube EPQfgoz3SQ_hY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3174 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3174`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A personal FreeBSD deployment: Dhananjay Balan〕讲者口述：讲者 2017 年前后启动部署时可找到的 jail 文档欠佳：手册的 jail 一节含过时内容且覆盖不全；其后对照 archive.org 存档与现状，jail 文档已大幅改进。（YouTube EPQfgoz3SQ_hY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3175 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3175`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A personal FreeBSD deployment: Dhananjay Balan〕讲者口述：Hetzner 从二手市场提供约 30 欧元/月的物理机，性能强且支持 FreeBSD，为讲者最终所选；其云上 FreeBSD 则属“二等公民”——须先启动 Linux 再换 FreeBSD 引导镜像安装，不经大量工作难以用作云优先平台。（YouTube EPQfgoz3SQ_hY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3176 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3176`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A personal FreeBSD deployment: Dhananjay Balan〕讲者口述：无带外访问时全盘加密无法部署；讲者采用的方案是把双盘 RAID 1 的盘各分两分区——一为不加密的 root 供引导，其余数据放 geli 加密分区，配 init 脚本等待解密后继续引导。（YouTube EPQfgoz3SQ_hY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3224 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3224`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Untold History of FreeBSD: From Berkeley to the Modern Internet's Backbone 节目讲者口述：讲者把 FreeBSD 的特点归纳为“完整系统”：内核、驱动、实用工具与文档一起开发，打包成一个紧密集成的整体。（YouTube EPrXmWXIDsxig，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3225 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3225`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Untold History of FreeBSD: From Berkeley to the Modern Internet's Backbone 节目讲者口述：讲到九十年代那场围绕 Unix 代码的诉讼（讲者称与 AT&T）：讲者称它迫使 FreeBSD 重新塑造自身、大幅从零重写代码基，最终反而强化了项目对开源原则的坚持。（YouTube EPrXmWXIDsxig，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3226 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3226`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Untold History of FreeBSD: From Berkeley to the Modern Internet's Backbone 节目讲者口述：讲者称 FreeBSD 以所谓宽松的 BSD 许可证发布，可以随意修改与使用代码，包括用于商业产品，不像某些其他开源许可证那样带限制。（YouTube EPrXmWXIDsxig，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3227 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3227`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Untold History of FreeBSD: From Berkeley to the Modern Internet's Backbone 节目讲者口述：讲者援引 Wikipedia 条目称 Netflix 与 WhatsApp 等公司依赖 FreeBSD，并强调这些公司用户规模巨大、容不得停机。（YouTube EPrXmWXIDsxig，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -38,3 +38,24 @@ Plan 9 是 Bell Labs 在 UNIX 之后对分布式操作系统的激进实验—�
 - [DB:references_fulltext:chapter_matches:chmatch_1540]
 - [DB:bsdnow_podcast] BSD Now 第 275/424/448/463/535 期（outline_mappings om_12862/om_12452/om_12165/om_12055/om_11449）
 
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3278 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3278`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：NetSurf 是一个小而简单的网页浏览器，主要以 C89（转写作 C eighty nine）写成——这一点适合 Plan 9——另用少量 C99 特性与若干处 GCC 扩展；它开源、GPLv2，自带渲染引擎。（YouTube EPSn1_afvWohs，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3279 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3279`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：移植上游代码的挑战分三类：一是编译器差异——Plan 9 的编译器（转写作 Ken C C，疑指 Ken Thompson 一系的 C 编译器）与 GCC 及标准在某些方面不同；二是平台差异——Plan 9 与多数 POSIX 或类 POSIX 平台颇不相同；三是构建系统。（YouTube EPSn1_afvWohs，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3280 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3280`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：帧缓冲前端已从当前 NetSurf 仓库弃用，原因是转写音作 Philip Meche 的开发者所做的 Plan 9 原生前端功能更多。（YouTube EPSn1_afvWohs，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3281 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3281`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：APE 环境缺失 POSIX 函数的一例：p read 与 p write 在 Plan 9 的 libc（非 APE 的标准 C 库）中可用，但未进入 APE 接口；现以调用 Plan 9 底层函数的桩函数补足。（YouTube EPSn1_afvWohs，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

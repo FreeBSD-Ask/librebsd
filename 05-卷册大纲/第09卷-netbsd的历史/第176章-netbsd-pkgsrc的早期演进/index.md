@@ -123,3 +123,25 @@ volume: 第09卷-netbsd的历史
 
 据〔devsetup local development environment based on pkgsrc（Pierre Pronchery, EuroBSDcon 2022）讲者口述：讲者自建的 devsetup 把 pkgsrc 的所有包收进单一脚本管理，借 pkgsrc 约三个月一次的发布节奏（转写音作 really cycle，疑为 release cycle）获得持续更新。（YouTube EPR_gQ44lDlEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3238 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3238`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06B: Maintain the NetBSD Base System Using pkg Tools - Yuuki Enomoto 讲者口述：在以 Debian、FreeBSD、OpenBSD 为案例的基本系统管理考察中，讲者称 FreeBSD 自 11 起具备基于包机制管理基本系统的能力，但仍存在尚待解决的理解层面问题。（YouTube EPxkV1Jey0f_o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3239 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3239`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06B: Maintain the NetBSD Base System Using pkg Tools - Yuuki Enomoto 讲者口述：转写音作 compulsory packages 的空包及同类条目，实为 set 文件中对已不属于系统的遗留文件的标记，供 postinstall 清理安装之用，并非真正意义上的包。（YouTube EPxkV1Jey0f_o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3240 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3240`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06B: Maintain the NetBSD Base System Using pkg Tools - Yuuki Enomoto 讲者口述：就包的粒度，讲者称把基本系统拆成大量小包的想法从未落地：部分原因是从未有清晰概念说明这样做有何用处，且没有任何东西会在包之间创建依赖。（YouTube EPxkV1Jey0f_o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3241 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3241`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P06B: Maintain the NetBSD Base System Using pkg Tools - Yuuki Enomoto 讲者口述：配置文件的处理办法：安装时把配置装进包的 examples 目录，若用户 etc 下对应文件（转写音作 EDC）已存在则保持不动，不存在则从 examples 复制模板。（YouTube EPxkV1Jey0f_o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

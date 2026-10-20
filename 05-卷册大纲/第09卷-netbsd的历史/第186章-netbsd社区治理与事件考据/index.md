@@ -136,3 +136,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔NetBSD and Mercurial: The challenges of a long history〕讲者口述：讲者回望自 CVS 起步的二十五年，并讲 NetBSD 与 Mercurial 的现状——与 Mercurial 开发者协作修问题、以及将来可能的走向；其经验对想摆脱 subversion 的其他大项目（如 FreeBSD）同样适用。（YouTube EP6i6CirmO0Gs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3258 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3258`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2019 - Core Team March Report 讲者口述：项目长期设有工作组：早年由成员自我组织，TCP 传输工作组与 Capsicum 工作组多年前即已组建，各领域成员以定期电话会议相互协调。（YouTube EPieLN_5j7G1g，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3259 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3259`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2019 - Core Team March Report 讲者口述：本任 core 团队着力提升透明度：不少成员是打着透明旗号当选的，团队从与上一任 core 的交接会议做起，公开会议记录并发布月度报告。（YouTube EPieLN_5j7G1g，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3260 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3260`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2019 - Core Team March Report 讲者口述：行为准则更新上，团队认为不必从零重写，转而参考转写音作 GoLang 与 LLVM 的行为准则，由讲者裁剪出一个适合本项目的版本，自去年 10 月或 11 月起停留于此；讲者坦言进展不如预期。（YouTube EPieLN_5j7G1g，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3261 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3261`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2019 - Core Team March Report 讲者口述：core 报告称当周刚发出开发者版问卷，其起点是转写音作 Eurovison Econ 2018 的一次聚会，与会者当时拟出了问卷初稿。（YouTube EPieLN_5j7G1g，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

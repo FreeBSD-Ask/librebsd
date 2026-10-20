@@ -140,3 +140,60 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔FreeBSD Fridays: How to Submit a Patch to FreeBSD〕讲者口述：据讲者介绍，FreeBSD 的 GitHub 镜像上的 pull request 会触发 Sphera CI，该作业先构建 world 与 kernel，再放进虚拟机里做一次启动冒烟测试。（YouTube EP6fwfRoDt9bQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3293 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3293`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview - Alex Pshenichkin〕讲者口述：讲者称他第一次使用 FreeBSD 就是为他现在所在的项目；团队拿 FreeBSD 自带的bhyve hypervisor（转写音作 Beehive）做了大幅改造，做成自己的软件产品。（YouTube EPYTjVZp0cQeI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3294 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3294`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview - Alex Pshenichkin〕讲者口述：讲者称选择 FreeBSD 的动机是：该 hypervisor 已相当成熟、软件的组织方式使其易于开发，且 BSD 许可证让他们能使用 BSD 许可的开源代码、不必一开始就担心使用软件所涉许可证的种种复杂性，保有对其用途与结构的灵活性。（YouTube EPYTjVZp0cQeI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3295 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3295`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview - Alex Pshenichkin〕讲者口述：讲者称这是他第一次参加 BSDcan，感觉议题非常务实——人们讲内核与 release engineering 之类的东西，而不是空谈理论。（YouTube EPYTjVZp0cQeI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3296 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3296`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Tiago Gasiba - Apr 2024〕讲者口述：讲者自述约从 1997 年起时断时续使用 FreeBSD 至今，最早记得的版本是转写所称的3bs 4.something 或 version five；在使用 FreeBSD 之前他用的是 Linux，约 1992—1993 年起用 Slackware。（YouTube EPDavHoXOrrz4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3297 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3297`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Tiago Gasiba - Apr 2024〕讲者口述：讲者称他尤其欣赏 FreeBSD 的 Detra 技术（转写音作，疑指 DTrace），它使他得以调试系统上若干相当困难的问题，他认为这是一项非常好的技术。（YouTube EPDavHoXOrrz4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3298 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3298`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Tiago Gasiba - Apr 2024〕讲者口述：就未来两年 FreeBSD 的发展，讲者称 ARM64 即 ARM 平台的支持对他非常重要，他期待 FreeBSD 对各平台的支持能更好、更广泛。（YouTube EPDavHoXOrrz4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3310 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3310`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Story: Amy Vargas〕讲者口述：讲者自述在 NetApp 工作逾二十年、历任多种岗位；约两年前转入本公司的网络组时首次接触 FreeBSD。（YouTube EP9KJndgUF4Ho，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3311 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3311`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Story: Amy Vargas〕讲者口述：讲者称她更期待的是让所在团队对 FreeBSD 更熟悉、更深入参与：他们虽在使用 FreeBSD，但在 FreeBSD 社区里存在感不强，例如少有提交。（YouTube EP9KJndgUF4Ho，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3312 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3312`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Story - Aymeric Wibo〕讲者口述：讲者称他当初在找一个“可以与之一起思考”的系统：他试过 Linux、但觉得它相当复杂、有太多活动部件；而 FreeBSD 的一切都在同一个代码库里，在他看来源码看护得也更好。（YouTube EPlS3MoRCb5Y8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3313 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3313`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Story - Aymeric Wibo〕讲者口述：讲者称留住他的是能理解这个系统：出问题时他在 FreeBSD 上通常很快就能找到问题，而在 Linux 上（据其自述）会牵涉更多进程。（YouTube EPlS3MoRCb5Y8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3314 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3314`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Story - Aymeric Wibo〕讲者口述：讲者希望 FreeBSD 更着力于把它交到更多人手里，因为当时在某些系统上把 FreeBSD 当桌面操作系统运行仍相当困难。（YouTube EPlS3MoRCb5Y8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -255,3 +255,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔Virtualized Network Infrastrukture for VM Clusters - Albert Dengg - EuroBSDcon 2022〕讲者口述：讲者指出 carp 与 vrrp 使用同一个协议 ID（转写作 carp、vrrp）。（YouTube EP3dM5P0wC16k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3181 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3181`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B: FreeBSD VirtIO devices on ARM systems（Darius Mihai）〕讲者口述：bhyve 是 type-2 虚拟化系统，如此设计是为了更小的代码足迹，并能复用 FreeBSD 操作系统提供的机制（如内存管理）。（YouTube EPnS-C0t2vk_k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3182 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3182`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B: FreeBSD VirtIO devices on ARM systems（Darius Mihai）〕讲者口述：bhyve 的保护机制分四个特权级：PL0 用户态、PL1 内核态、PL2 相当于异常级 2 即虚拟机监视器级；虚拟机监视器专用代码插在内核模块（即 PL2）中。（YouTube EPnS-C0t2vk_k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3183 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3183`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B: FreeBSD VirtIO devices on ARM systems（Darius Mihai）〕讲者口述：开发平台经历一次迁移：最初在开发板上实现并测试 VirtIO 设备，但中断无法送达、其余设备做不了；改用 ARM Fast Models 加虚拟平台模拟器后中断正确送达，才完成其余设备（console、net 等）。（YouTube EPnS-C0t2vk_k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3184 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3184`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08B: FreeBSD VirtIO devices on ARM systems（Darius Mihai）〕讲者口述：文件系统不支持 UNIX 套接字时并不报错，而是静默落成普通文件：讲者预期创建失败，实际却生成了普通文件而非套接字，事后才排查出文件系统问题。（YouTube EPnS-C0t2vk_k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
