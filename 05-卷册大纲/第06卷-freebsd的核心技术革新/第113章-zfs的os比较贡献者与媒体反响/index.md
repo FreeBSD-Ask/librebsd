@@ -357,3 +357,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔First December 2025 OpenZFS Leadership Meeting〕讲者口述：生产团队上月发现自动挂载快照的死锁（共三个独立问题、两个已合并）：两个进程竞态自动挂载时都往 AVL 添加条目，后者触发“条目非唯一”断言。（YouTube EP_iOiAbq_hJw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3090 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3090`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Raphael Carvalho - ZFS on OSv - OpenZFS Dev Summit 2014〕讲者口述：讲者称其云操作系统以 BSD 许可发布，因此须为自己这一侧另做一个 ZFS（转写音作 CFS），区别于 Linux 内核所用的那个实现。（YouTube EPTJLOBLSRoHE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3091 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3091`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Raphael Carvalho - ZFS on OSv - OpenZFS Dev Summit 2014〕讲者口述：讲者称 OSv 版 ZFS 是从 FreeBSD（转写音作 PBS T／previous three）移植而来，须把 FreeBSD 的许多工具搬过来集成进自己这边。（YouTube EPTJLOBLSRoHE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3092 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3092`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Raphael Carvalho - ZFS on OSv - OpenZFS Dev Summit 2014〕讲者口述：讲者称他们也曾可选 UFS（并称 UFS 确实是很好的文件系统），但就他们的云部署模型而言 ZFS 合适得多。（YouTube EPTJLOBLSRoHE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3093 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3093`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Raphael Carvalho - ZFS on OSv - OpenZFS Dev Summit 2014〕讲者口述：移植的下一步是把转写所称 adjustable replacement cache（即 ZFS 的主缓存 ARC）接进 OSv 自己的内存回收基础设施：当 ARC 占用内存过多时，须把内存归还给操作系统。（YouTube EPTJLOBLSRoHE，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

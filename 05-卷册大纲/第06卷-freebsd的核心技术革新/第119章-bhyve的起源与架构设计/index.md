@@ -447,3 +447,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2022〕讲者口述：Intel 核显直通须挂在 PCI slot 2：核显总是位于 slot 2，许多驱动把该位置写死、不扫描总线上的其他位置。（YouTube EPvnicQZvW0vs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3120 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3120`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021: FreeBSD Vendor Summit: GPU and TPM2 Passthrough with bhyve, Beckoff〕讲者口述：AMD 显卡走的是标准 PCI 直通（转写音作 password=passthrough），bhyve 已支持；但因 PCI 直通尚有若干小问题，该支持要到 FreeBSD 14 才提供，且仅对 Windows 客户机可用，Linux 客户机还须先提取显卡的 video BIOS。（YouTube EP5wDs1K5ppbQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3121 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3121`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021: FreeBSD Vendor Summit: GPU and TPM2 Passthrough with bhyve, Beckoff〕讲者口述：Intel 集成显卡虽同样基于标准 PCI 直通，但 Intel 有大量必须传给客户机的 PCI 资源，当时尚无法做到；又因 Intel 系统上 GPU 恒在 PCI slot 2，直通时必须把 GPU 定位在该槽位。（YouTube EP5wDs1K5ppbQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3122 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3122`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021: FreeBSD Vendor Summit: GPU and TPM2 Passthrough with bhyve, Beckoff〕讲者口述：TPM2 直通的做法是：先读出 TPM 设备占用的物理资源，把它们一对一映射进客户机（沿用相同地址），再为客户机生成 ACPI 表，使其识别出 TPM。（YouTube EP5wDs1K5ppbQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3123 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3123`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021: FreeBSD Vendor Summit: GPU and TPM2 Passthrough with bhyve, Beckoff〕讲者口述：NVIDIA 显卡的直通仍在进行中：卡会把自身 PCI 配置空间镜像到 MMIO 寄存器上，bhyve 必须截获并模拟；此外 MTRR（转写音作 memory type range）也须由 bhyve 模拟，显驱才能正常工作。（YouTube EP5wDs1K5ppbQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3127 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3127`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to SETUP and configure BHYVE in FREEBSD (Step-by-Step)（Tech mimic 频道）〕讲者口述：bhyve 虚拟机监控器已随系统一并提供，因为它自 FreeBSD 10 起就是基本系统（base system）的一部分。（YouTube EPE47Pd0P58Co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3128 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3128`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to SETUP and configure BHYVE in FREEBSD (Step-by-Step)（Tech mimic 频道）〕讲者口述：bhyve 支持多种客户机操作系统，包括 FreeBSD 自身、OpenBSD、多种 Linux 发行版与 Microsoft Windows。（YouTube EPE47Pd0P58Co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3129 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3129`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to SETUP and configure BHYVE in FREEBSD (Step-by-Step)（Tech mimic 频道）〕讲者口述：bhyve 默认只提供控制台访问，并不模拟图形控制台；图形客户机需借助 VNC 技术连接。（YouTube EPE47Pd0P58Co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3130 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3130`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to SETUP and configure BHYVE in FREEBSD (Step-by-Step)（Tech mimic 频道）〕讲者口述：尽管 bhyve 本身随 FreeBSD 捆绑提供，实际管理虚拟机用的是第三方 vm-bhyve 管理系统（命令行/终端工具）。（YouTube EPE47Pd0P58Co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

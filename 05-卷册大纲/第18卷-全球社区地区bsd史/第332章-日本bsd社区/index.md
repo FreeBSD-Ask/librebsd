@@ -163,3 +163,25 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔AsiaBSDCon 2008 Keynote: 25 years with BSD（Hideki Sunahara）讲者口述：该书 1983 年起笔、历时两年写成。（YouTube EPbrYdkQ120Do，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3098 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3098`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2018 Work in Progress Session and Closing〕讲者口述：自称 Michael Dexter 的讲者称其与所有主要 BSD 都打过交道，近期寻找一些旧版本时，对历史被保存之少感到惊讶乃至震惊。（YouTube EPlcrnXQ7xp7k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3099 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3099`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2018 Work in Progress Session and Closing〕讲者口述：讲者称寻找 FreeBSD 3.0 发布版这类旧版本出奇地困难，虽有一个存档但质量并不好。（YouTube EPlcrnXQ7xp7k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3100 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3100`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2018 Work in Progress Session and Closing〕讲者口述：自称基金会理事（转写作 Matthew）的讲者称，FreeBSD Foundation 出资为项目中没人愿意做的岗位设置付费职位，如安全官与发布工程。（YouTube EPlcrnXQ7xp7k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3101 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3101`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2018 Work in Progress Session and Closing〕讲者口述：讲者称基金会自去年起与滑铁卢大学（University of Waterloo）达成协议，由两名该校学生以实习生身份为基金会工作。（YouTube EPlcrnXQ7xp7k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

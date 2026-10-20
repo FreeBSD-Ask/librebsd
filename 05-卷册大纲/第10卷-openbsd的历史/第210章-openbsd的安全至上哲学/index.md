@@ -155,3 +155,15 @@ volume: 第10卷-openbsd的历史
 
 据〔会议不详〕讲者口述：Stuart Henderson（stn@openbsd）与 Omar Polo（op@openbsd）关注了相关作品。（YouTube EP9uTBkdQpxZo，[2654.319-2659.349]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3102 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3102`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fighting "Technical Fires" by Sam Smith〕讲者口述：讲者称管道（pipes）让人把工具彼此连接起来的能力在其他系统中并不存在，这一概念在其他地方没有对应物。（YouTube EPRSqs6NAsmiY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3103 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3103`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Fighting "Technical Fires" by Sam Smith〕讲者口述：讲者称拥有相应仓库便可获得变更通知——每当有人向 FreeBSD 仓库（转写作 FreeBSD depository）提交，消息就会发出。（YouTube EPRSqs6NAsmiY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

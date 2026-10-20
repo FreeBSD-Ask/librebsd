@@ -693,3 +693,20 @@ volume: 第14卷-商业生态与企业案例
 
 据〔Arm and the Daemon: FreeBSD's Value Realized in the Real World（Andy Waer）讲者口述：Arm 的 Andrew Turner 近月把 bhyve 的核心部分上游化，并推动可伸缩向量扩展（SVE）支持落地，以便充分发挥 Graviton 3。（YouTube EPejCQebr7H0A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3124 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3124`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: FreeBSD powered LCD Advertising Displays - Xiao Li〕讲者口述：回顾 2011 年的情形时讲者称：以太网与音频（转写音作 internet、audio travels）已获该操作系统（转写音作 three PC）完整支持，而显示相关环节仍是短板（原句此处转写断续，未采其细节）。（YouTube EPTLjCbUyFCFk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3125 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3125`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: FreeBSD powered LCD Advertising Displays - Xiao Li〕讲者口述：开发者在 FreeBSD（转写音作 freakiest OS）之下定制硬件，并自行开发运行于 FreeBSD 上的应用来播放商业广告。（YouTube EPTLjCbUyFCFk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3126 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3126`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P07A: FreeBSD powered LCD Advertising Displays - Xiao Li〕讲者口述：该广告屏方案的运行镜像用 NanoBSD（转写音作 no BSD）制作——它是 FreeBSD 上一组用于生成可运行镜像的工具。（YouTube EPTLjCbUyFCFk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -580,3 +580,45 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 据〔Greg 谈 FreeBSD Foundation 合作与研究七个月心得〕讲者口述：他以开放治理为例说明 FreeBSD 的贡献：如今进入任何开源基金会，人们都会期待技术决策者由开发社区选举产生；但 1993 年 FreeBSD 起步时这绝非惯例。（YouTube EPNYfBYLz93QQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3104 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3104`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Welcome/FreeBSD Foundation Update〕讲者口述：讲者（转写作 warner）通报社区成员转写作 ian lapore 者于上周末去世，起因是家中发生的意外，并称其为该项目贡献了多年。（YouTube EPgAG1jTA43oc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3105 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3105`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Welcome/FreeBSD Foundation Update〕讲者口述：讲者称转写作 ian 的这位贡献者主要着力于嵌入式平台：ARM 处理器支持以及随之而来的一批辅助功能，并在嵌入式世界各式各样的总线与设备上写了多个驱动程序。（YouTube EPgAG1jTA43oc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3106 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3106`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Welcome/FreeBSD Foundation Update〕讲者口述：自称基金会执行总监的讲者称，该会成立于 2000 年 3 月，属美国的 501(c)(3) 分类（转写作 501c3），是为公共利益服务的公共慈善机构。（YouTube EPgAG1jTA43oc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3107 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3107`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: Welcome/FreeBSD Foundation Update〕讲者口述：讲者称前一夜获知基金会得到一笔 75 万美元（转写作 750 000）的匿名拨款。（YouTube EPgAG1jTA43oc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3143 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3143`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Tara Stella〕讲者口述：主持人 Kim McMahon 是 FreeBSD 基金会的宣传与社区负责人（head of advocacy and community）；在 FreeBSD Day 当天，基金会以多场直播访谈社区成员。（YouTube EPGjyzPxC6qWc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3144 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3144`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Tara Stella〕讲者口述：讲者称自己所属的社区 BSD Cafe 是始于意大利的小型社区，由 Stefano 与 Florian 创办，是讲者所看重的纯粹社区精神所在。（YouTube EPGjyzPxC6qWc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3145 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3145`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Tara Stella〕讲者口述：嘉宾 Tara 自称在开源领域已近三十年，1995 年从 Linux 起步，长期在 Sun、IBM 等大公司的企业级项目中工作；后经朋友介绍接触 FreeBSD，看重其简洁（讲者自述遵循 KISS 原则）与稳定而转向 FreeBSD。（YouTube EPGjyzPxC6qWc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3146 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3146`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Tara Stella〕讲者口述：讲到把 podman（转写音作 hodman）移植到 FreeBSD 的人时，讲者称其工作出色；讲者认为 FreeBSD 自有 jail 等容器手段，但在与企业客户沟通时 OCI 容器支持更能说明问题。（YouTube EPGjyzPxC6qWc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

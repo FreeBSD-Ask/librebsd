@@ -275,3 +275,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔logstor: A Log structured user level GEOM layer（Wuyang Chung）讲者口述：log store 目前实现在用户层，理由是便于测试与调试，未来应移入内核层；又因其是复制写存储，还可用于支持磁盘级增量备份。（YouTube EPPoJXDeX9K-E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3077 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3077`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Responsible Replication with Zetla Roundtable（OpenZFS 圆桌）〕讲者口述：为不销毁尚未复制的数据集，一位与会者提议给 ZFS destroy 增加一项要求：目标必须存在 hold、快照或 bookmark 之一，且该标记只在源端复制完成后才创建。（YouTube EPFgGmLBc_WrM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3078 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3078`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Responsible Replication with Zetla Roundtable（OpenZFS 圆桌）〕讲者口述：讲者认为更合理的做法是给 snapshot 命令增加一个额外标志，让创建快照时自动同时创建一个具名 hold，复制确认后由复制工具（Zelta）将其移除。（YouTube EPFgGmLBc_WrM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3079 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3079`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Responsible Replication with Zetla Roundtable（OpenZFS 圆桌）〕讲者口述：对于“数据集已复制到哪里”的记账，讲者建议把目的地存进 ZFS 的 user property，并让一个 channel program 在删除前先读取该属性再决定是否删除。（YouTube EPFgGmLBc_WrM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3080 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3080`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Responsible Replication with Zetla Roundtable（OpenZFS 圆桌）〕讲者口述：就“把 ZFS 复制流直接写到磁带”的设想，讲者指出复制流过于深入 ZFS 内部，接收端必须基本具备完整的 ZFS 实现才能理解流中的内容。（YouTube EPFgGmLBc_WrM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

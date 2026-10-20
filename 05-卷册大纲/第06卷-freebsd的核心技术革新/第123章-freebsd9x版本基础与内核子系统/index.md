@@ -460,3 +460,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Daniel Lovasko〕讲者口述：这套方法并不限于 FreeBSD——按 CTF 数据对照，OS X 内核里也有非常相似的对应物，只是 CTF 目前看来更像 FreeBSD 特有的东西。（YouTube EP4-zPra5hK3E，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3089 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3089`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Philip Paeps - FreeBSD, Detangling and debugging〕讲者口述：讲者举 gdb 宏为例：他说在转写所称 freebsd sorcery 里有一份极佳的 gdb 初始化文件例子，他记得是 John Baldwin 写的，内置 ps、net stats 等宏，可把内核 core 丢进 gdb 后直接列进程。（YouTube EPG8Fm8mgPyDc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -302,3 +302,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔会议不详〕讲者口述：优化之一：以 VALE 交换机（转写音作 valid switch／value switch）替换 Open vSwitch——它是两年前于 CoNEXT（转写音作 connex，存疑）推出的高速软件交换机，可在虚拟端口间转发 1800 万 pps；因其基于 netmap，还顺带免除了包元数据结构的开销。（YouTube EP0HDxmLaW9EU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3069 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3069`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IFLIB（NetApp 讲者 Sai）〕讲者口述：iflib 是 FreeBSD 所有网络驱动的框架，把驱动中大量样板代码集中到一处，使驱动只需处理或关注硬件本身。（YouTube EPOyHxs_EAc6A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3070 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3070`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IFLIB（NetApp 讲者 Sai）〕讲者口述：NetApp 原有驱动功能完备且稳定，服务了约六到七个版本；切到该 iflib 修订时只剩基本功能集，须额外追赶才能恢复特性与稳定性。（YouTube EPOyHxs_EAc6A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3071 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3071`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IFLIB（NetApp 讲者 Sai）〕讲者口述：采用 iflib 后，一项软件数据路径性能测试出现相对基线的巨大延迟尖峰；团队由此开始追查原因。（YouTube EPOyHxs_EAc6A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3072 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3072`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: IFLIB（NetApp 讲者 Sai）〕讲者口述：改动后，从 if_transmit 入队到 iflib 完成 TX 回收，mbuf 生命周期落在 10–100 微秒，最迟约 1 毫秒。（YouTube EPOyHxs_EAc6A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
