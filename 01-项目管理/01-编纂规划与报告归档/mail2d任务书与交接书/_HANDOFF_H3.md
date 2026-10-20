@@ -9,6 +9,7 @@
 > **版本**：2026-09-25 v8（波次 b035/b014 四批全链闭环 768 块入 6 宿主，§〇.0-E 新建，台账
 > 154000/551317＝27.93%，下一波 b036/b015；本波 8 路回源复核抓出 12 处叙述/宿主缺陷并外科改写，
 > 弱锚条列 11 条已全部回源闭环；叙述句尾禁标点已固化进波次任务书，见 0.0-E）；
+> **v46＝2026-10-21（**fhk_b083 claim 层叙述回填闭环 463 条**（A 事实更正 32／B 升级对齐 431），扩至全 anchor：实测 fhk_b083 全 463 条`claim.claim_text` 与 `evidence.fact_text` **无一**等于合并叙述 ⇒ 同类缺陷实为全批、非仅 v44 挂账的 32 条；大纲 ≡ 合并叙述 **463/463**、库内两列≠叙述 **463/463** ⇒ 真待改集全 463；号段 **486,569~487,029** 不变、`evidence.quote` 逐字节不动、不 INSERT 不重编号；前置 guard PASS＋rotate pre＋专项 prebak `historical_claims.pre_fhk_b083_debtfix_20261021_020735.duckdb`（**643,837,952 B**，回读 claim 490,839／evidence 517,103／max claim_id**492,079**＝水位已由 490,452 被推 **+1,627 号**）；写库单事务 UPDATE 463条两列同步、COMMIT；后置 guard PASS（rows 517,103 未变）＋rotate post＋**verify 13/13 PASS 含两条负向对照**（污染期望值命中 463→462、污染基线守恒转 False ⇒ 断言非空转）；claim 490,839→490,839、evidence 517,103→517,103、anchor 463→463 三守恒；🔴🔴 **v45 三处记载实测回正**——偏差③（register 无专项 prebak＋无 rotate 槽）三条子断言全错（b084 register prebak**存在**于 `12-数据库备份/` 顶层、回读 claim 487,319／max id 489,186／b084 号段命中 0、槽 12:30＋12:45 夹住、claim 487,319→487,812 恰 +493；查不到只因**按 tag 在错目录搜**）、“末件 register 型备份 pre_fhk_b083_register” **系臆造文件名**、BLIND 裁决件**已在盘**（`_blind_fhk_b084.py`7,040 B＋`_blind_fhk_b084.txt` 4,230 B，独立复点 330/62/392 交集 0 与声明全等）；🟡 **收窄后真欠账**＝b084 post 槽夹入写前状态、偏差①**无磁盘依据可证**、`_blind_*.py` 系 TAG 参数化单件未通用化＋62 条 BLIND-wide 待裁定；🔴 **自捕两静默缺陷**（大纲日期 `1999 年` 夹半角空格致正则零命中⇒32 条全误判、`local_pk` 回传 VARCHAR 致 int 成员判断静默落空⇒`assert a==32` 拦下未写成库）；🔴 **水位锁本次有意未持**（纯 UPDATE 不分配 claim_id、持锁会阻断在途他线 register，依 AGENTS.md 限域表述；已记录理由）；🔴 **register 前置四件立为强制口径**（guard→acquire --tag→顶层 prebak 回读断言→rotate pre 紧跟guard，缺一即停）；台账口径不变 168,000/201,463＝83.39%；下一站 **fhk_b085@168,000**；详见 §十三 v46 节）；
 > **v45＝2026-10-20（**fhk_b084 全链闭环**：493 条候选（L4 381／L3 112）→ register **CL-RM-489187~489679 连续 493 条 0 洞**、单 anchor、quote 回查 493/493、四表 join 493、guard PASS（水位重测 489,186，v44 记 487,031 已过期 2,155 号）；叙述 40 片 G1–G7 全 0、长度 61/140/98.5（p18 补派、p29 一条 141 字外科、`cand_p` 与 `mount_narr_p` 两组均 p1–p9 未补零双形读入）；**claim 层叙述回填 493 条两列同步**（`claim.claim_text`＋`evidence.fact_text`，quote 逐字节不动）verify 10/10 PASS，回填时刻基线 claim 488,951／evidence 515,215 守恒、专项 prebak 643,837,952 B；outline **+493 块入 88.5**（+2,465 行＝493×5、161,278→163,743 行、19,888,698→20,192,944 B、total_refs 32,209→32,702、freebsd-hackers 块 28,675→29,168、幂等二跑 +0）；bookkeep 四组全 PASS；台账 166,000→**168,000**（**83.39%**）、tags 83→**84**、147,243→147,264（+21）；**b078–b084 连续七批全绿**；🔴🔴 **BLIND 判据对撞坐实**——生成器对引用块密集行内联全文不截断，而分类器仍按固定 420 字窗 ⇒ 392 条 BLIND 中 **62 条误报**、仅 330 真盲，正确判据是**自有文字在折行正文中的首偏移量**（>420 才算盲），截断本身才是臆造根因；🔴🔴 **偏差① 水位锁从未持有**——`acquire` 漏传 `--tag` 报错退出，493 行在**无锁状态**写入（号段连续 0 洞、单 anchor、全库 0 重复为缓解证据，但流程违反成立）；🔴🔴 **偏差② 本批未做逐封回源语义复核**，四道格式门禁无一验语义归属；🔴🔴 **偏差③ register 阶段无专项 prebak、亦无 rotate pre/post 槽**（仅 claimbackfill 阶段有）⇒ **v44 欠账第 ③ 项未闭合、本批同型欠账**；🔴 **门禁判据笔误一次**（显示串用 `nue`、布尔用 `nu` ⇒ `515215 -> 515215` 仍判 FAIL），先做负向对照验断言真会转 False 再改，不靠显示放行；下一站 **fhk_b085@168,000**（前置六项见 §十三 v45 节）；详见 §十三 v45 节）；
 > **v32＝2026-10-12（**fhk_b078 全链闭环**：🟢 **并发门放行**——88.5 三把尺子复测全过（`git status --short --<宿主>` 空、工作树 **17,680,937 B == HEAD blob 17,680,937 B**、143,933 行），对方那 66 行 L3↔L4 重判已自提交 `5cf072dc5` ⇒ v23“对方是否已持有旧快照”第一项不成立；🟢 **register**——水位**重测 453102**（记忆值 449207 已过期 3,895 号，坐实“每波 register 前必实测”），起始 453103，**477 条 COMMITTED**、source_id/content_hash 双去重跳过 0、写后 quote 源库反查 **477/477**、四表 join 477、**号段连续无洞**、`claim.claim_text==evidence.fact_text==候选摘要 477/477`、claim_evidence 全 1:1、词表仅两组（L4 463 / L3 14，均 attribution_allowed＋supported＋strong＋accept）；`_sync_clamtext_b009.py` **0 更新**（三处自始同值＝13 条回改在 register 前完成）；🟢 **outline**——前置门 0 判脏两尺子相等＋备份 md5 **e091c75aeecd4130** 与工作树逐字节同 → **477 块入 88.5 单宿主**（**+2385 行＝477×5、+305,210 B、143,933→146,318 行、total_refs 28,740→29,217、纯 append-only 0 删除**）→ 立即提交 `79b972683` → 幂等二跑 **+0**；🟢 **bookkeep 三零 PASS**（缺块 0／claim_id 不符 0／重复 0）＋**本批段结构复核全绿**（段长 2385＝477×5、锚点 477 无重复、pk 集合==claim_map、L4 尾句 463／L3 尾句 14、块结构缺项 0）；🔴 **格式门禁报宿主 1 处非本批**——溯源角括号 6 字（3＋3）落在行 12581／20061／48346、**本批净增 0**（备份与写后计数完全相等）⇒ 宿主既有遗留、本线不动；🟢 **台账落账**——freebsd-hackers 154000→**156000**（156000/201463＝77.43%）、tags 77→**78**、read_spec／read_judged／read_effective 同步、note +655 字、span 外 119,692 字节逐字节不动、他库 256 个逐键相等、字节预算断言全过，提交 `0c89ee08d`；**b043–b078 连续三十六批全绿**；🔴🔴 **四处工具／环境坑**：① **heredoc 内 `\f` 被解成 form feed**（`"\\fhk_b078_claim_map.json"` → `...\x0chk_b078...`、`OSError: [Errno 22] Invalid argument`）⇒ 跨目录路径一律 `os.path.join` 或落盘成脚本，禁在 heredoc 拼字面量反斜杠路径；② **`_sync_clamtext_b009.py` 撞 claim 库写锁 10 连败**（他会话持持久写连接、水位一天前进 3,895 佐证）⇒ **库写锁与宿主脏是两条独立判据**，本批靠三处同值读-only 已证实 0 更新故跳过无损；③ **claim_map 写成“对象套对象”是非法 JSON**（`{ {k:v}, {k:v} }` → `JSONDecodeError: Expecting property name`）⇒ 扁平键值对；④ **自家校验器正则 `\w+` 跨不了 `CL-RM-` 连字符** ⇒ 块结构误报 477 条“缺项”纯假阳，改 `[^`]+` 后归零——**门禁绿≠校验器对**，探针自身也要被验；🔴🔴 **台账 tags 缩进形态已漂移**（b077 版脚本硬编码 6 空格，实测条目 12 空格／`]` 10 空格）⇒ **缩进一律实测不硬编码**，断言在写盘前拦下、未误改台账；详见 §十三 v32 节）；
 > **v31＝2026-10-12（**fhk_b078 叙述波收口＋作者归属漂移 13 条勘误；并发门仍未放行**：
@@ -8281,3 +8282,120 @@ N7 tar／gzip 完好但**单个 parquet 内容损坏** ⇒ `archive_unreadable`�
   probe`＋`acquire --tag fhk_b085`（**先补偏差①，禁再现无锁写入**）；②重测水位；
   ③按日期实测裁定宿主是否仍 88.5；④BLIND 一律按**自有文字首偏移量**判盲，勿再按正文长度；
   ⑤register 阶段补偏差③（专项 prebak＋rotate 两槽）；⑥把 BLIND 二分裁决落成独立件。
+
+### v46（2026-10-21，fhk_b083 claim 层叙述回填闭环＋v45 三处记载实测回正）
+
+* **回填范围（463 条，由 32 条扩至全 anchor）**：v44 挂账记的 32 条只是**事实错标子集**。
+  实测 `fhk_b083` 全 **463** 条 `claim.claim_text` 与 `evidence.fact_text` **无一**等于
+  合并叙述 ⇒ 同类缺陷实为全批，而 fhk_b084 已对全部 493 条做过同类回填。按主理人
+  “批准所有遗留问题” 批准执行全 463 条，消除 H3 线批间口径分叉。分两类如实记账：
+  * **A 类 32 条（v44 挂账，事实更正）**：候选摘要与正文实况不符（读手误读该封），
+    叙述已回源外科改写。例：pk 2622465 原摘要 “Matthew Dillon：NFS 上删除运行中可执行
+    文件引发 vm_fault pager read error，一小时 184888 条” 与正文（dillon 否决 david 的
+    sendsig 改动、追问 NFS panic 属客户端还是服务端）整段无关；pk 2623952 原摘要 “NFSv3
+    下 Solaris 读目录异常仍未处理，可选方案是不遵守规范或改写读目录方式，后者改动很大”
+    与正文（dillon 怀疑 NFSERR_BAD_COOKIE 系服务端对 va_filerev 校验过严、贴以 #if 0
+    关闭 nfs_serv.c 该判断的补丁）不同形。
+  * **B 类 431 条（升级对齐）**：候选摘要判为准确但从未升级为叙述，与大纲 88.5 **已
+    发布**的叙述不同形。回填＝把 claim 层对齐到已发布的入书稿文本。
+    ⚠️ 两类风险不同：A 类回填是**事实更正**，B 类回填是**同义换形**——若某条叙述本身
+    有误，B 类会把旧的正确摘要换成该误述。但大纲 88.5 已发布同一文本，claim 层与
+    书稿不一致才是更要修的缺陷，故对齐。
+* **三方比对（写前取证，全 463 条）**：合并叙述 vs 大纲 88.5 块内正文 vs 库内当前值。
+  大纲 ≡ 合并叙述 **463/463**（零缺零差）；库内两列 ≠ 合并叙述 **463/463** ⇒ 真待改集
+  ＝全 463 条，无 “已对齐” 侥幸。状态分布 supported＋L3/L4＋`attribution_allowed`
+  463 条，`rejected` 0，pk 单射。
+* **口径（F2 b07，零新造内容）**：`claim.claim_text` := `evidence.fact_text` := 该 pk
+  在 `review_logs/fhk_b083_mount_narr.tsv` 第 3 列；`evidence.quote` **逐字节不动**；
+  **不 INSERT、不重编号**——anchor／宿主／pk／claim_id／evidence_level／wording_gate／
+  status 及 claim／evidence 其余列一律不动。叙述长度 min/max/avg **60/140/96.7**
+  （G3 窗口内）。claim_id 号段 **486,569~487,029**。
+* **前置四件（本次实际执行，实测）**：
+  ① `claimdb_guard.py --db historical_claims` **PASS**（rows 517,103／distinct 513,970／
+   单值占比 0.0164%）；
+  ② `rotate_guard_state.py pre` 存档，verdict healthy；
+  ③ 专项 prebak `12-数据库备份/historical_claims.pre_fhk_b083_debtfix_20261021_
+     020735.duckdb`（**643,837,952 B**），回读实测 claim **490,839**／evidence
+     **517,103**／max claim_id **492,079** ⇒ 确为写前真快照，且与本批 486,569~487,029
+     号段无重叠；
+  ④ **水位锁未持有——有意为之，非遗漏**：`register_waterlock` 护的是 claim_id **分配**
+     （register 的 INSERT），本批纯 UPDATE 两列、不分配任何号；且持锁会阻断在途他线
+     register（水位此刻正以每数十分钟千号速度被推）。依 AGENTS.md “register 另须
+     register_waterlock” 的限域表述，纯回填不属其适用范围。实测
+     `12-数据库备份/waterlock/` 为空、`show` 返回空数组。
+* **水位重测**：v45 记 CL-RM-490,452 已过期 **+1,627 号** ⇒ 实测 max claim_id
+  **492,079**（claim 全表 490,839 ⇒ 号段算术留 1,240 空洞）。本批不分配号，水位仅记录。
+* **写库**：单事务，`UPDATE 463 条（两列同步）／合规跳过 0 条／COMMIT 成功`；
+  `provenance_history` claim_backfill **463** 行、`update_log` debt_claim_backfill
+  **1** 条（operator `h3-fhk-b083-narrative-backfill`）。脚本
+  `script/_db_row_mining/_patch_claim_fhk_b083.py`（prep／apply／verify 三态断言＋
+  负向对照）。
+* **后置**：`claimdb_guard` 再跑 **PASS**（rows 517,103 未变 ⇒ 无 INSERT／DELETE）→
+  `rotate_guard_state.py post` 存档 healthy（槽 `claimdb_guard_state.slot-20261021T
+  022400280509`，`at=02:23:17`、claim 490,839 ⇒ **post 槽取自写后 guard 实测**）。
+* **verify 13/13 PASS（含两条负向对照）**：断言 1–10 全 PASS——两列同串 463/463、
+  离开改前值 463/463、quote 长度 463/463 未变、status 463/463 仍 supported、
+  wording_gate 463/463 在域内、updated_at 463/463 一致、provenance 463/463、
+  claim **490,839→490,839** 守恒、evidence **517,103→517,103** 守恒、anchor
+  **463→463** 守恒；负向对照①把首条期望值污染一个字后命中数 463→**462**（证明断言 1
+  不是空转）；负向对照②把基线加 1 后守恒判据转 **False**（证明断言 8 不是空转）。
+  产物 `H3_fhk_b083_claim_{patchset,before,apply_state,verify}_20261021.json`。
+* 🔴🔴 **v45 三处记载被实测推翻（如实回正）**：
+  ① **偏差③（register 无专项 prebak＋无 rotate 槽）——三条子断言全错**。实测
+   `12-数据库备份/historical_claims.pre_fhk_b084_register_20261019_124142.duckdb`
+   **存在**（643,837,952 B），回读 claim **487,319**／evidence **513,583**／
+   max claim_id **489,186**／CL-RM-489187~489679 命中 **0** 行 ⇒ 确为写前真快照；
+   rotate 槽 `claimdb_guard_state.slot-20261020T123004339577`（at 12:30:03）与
+   `…T124546875666`（at 12:34:10）夹住该 12:41 prebak；claim 行数 487,319→487,812
+   **恰 +493**，与本批 493 条互证。v45 查不到的根因：**register 型 prebak 落在
+   `12-数据库备份/` 顶层而非 `12-数据库备份/historical_claims/` 子目录**，且
+   **rotate 槽按时间戳＋哈希命名、槽名不携带 tag** ⇒ v45 按 tag 在错目录里搜，
+   把 “不存在” 误读成 “未做”。
+  ② **“末件 register 型备份仍是 pre_fhk_b083_register_20261019_115206”——该文件不存在**
+   （`12-数据库备份/` 全层级无此件）。该句系臆造文件名。
+  ③ **“BLIND 裁决未落独立件（review_logs 内无 fhk_b084_blind_* 产物）”——错**。实测
+   存在 `_blind_fhk_b084.py`（7,040 B，判据已改）与 `review_logs/_blind_fhk_b084.txt`
+   （4,230 B，含逐片明细）。独立复点：BLIND-kept **330**、BLIND-wide **62**、合计
+   **392**、交集 **0**，与件内声明值全等。⚠️ 件内另有一处待澄清：第 2 行写
+   “生成器内联全文 141 行，其中固定 420 判据误报 BLIND 62 行” ⇒ 141 与 62 非同一集合
+   （内联 141 行中仅 62 行越过 BLIND 分类阈值），本批裁决只涉及那 62 行。
+* 🟡 **回正后仍真实存在的欠账（收窄版，不作扩大化）**：
+  * b084 register 的 `rotate post`（槽 at 12:34:10）**夹入的是写前状态**——写后 guard
+    实跑 13:14:26 才落槽 ⇒ 该 post 槽当时并未见证写后健康。本次已按正确顺序执行
+    （guard 02:23:17 → post 02:24:00）。**纪律更正**：`rotate pre` 须紧跟其 guard
+    运行（本次 pre 槽 at 01:36、rotate 在 02:07，相隔 30 分钟，因期间无人写库而无害，
+    但不该有这 30 分钟）。
+  * 偏差①（b084 `acquire` 漏 `--tag` ⇒ 锁从未持有）**无法由磁盘证实或证伪**：
+    `register_waterlock` 不留历史日志、`12-数据库备份/waterlock/` 现为空、`show`
+    返回空数组 ⇒ 该条只有会话内自述为据，**不作盘面结论**。
+  * BLIND 判据已改（`_blind_fhk_b084.py` 第 105 行 `if is_own(ln) and off < TRIM` 即
+    自有文字首偏移量口径）但它是 **TAG 参数化单件**，未固化为跨批通用工具；裁决件在
+    gitignore 的 `script/` 内、**未进版本控制**；**62 条 BLIND-wide 仍待主代理逐条
+    裁定**（件内已列全 pk）。
+* 🔴 **本次自捕两个静默缺陷（判据非空的价值）**：
+  ① 取证探针的大纲抽取正则写 `\d{4}年`，而大纲实际是 `1999 年 8 月 24 日`（CJK 与
+   数字间夹半角空格）⇒ 日期前缀一次都没剥掉，**32 条全误判 “叙述≠大纲”**；改正则容
+   `\s*` 后 32/32 转 `大纲一致=True`。教训：**先拿已知应当相等的样本验探针，再信探针
+   报出的差异**——探针错比没有探针更危险。
+  ② `raw_source.local_pk` 回传 **VARCHAR**，`pk in P32`（P32 为 int）静默全不命中 ⇒
+   A 类计数 0、B 类 463。是本脚本自带断言 `assert a == 32` 拦下的，**未写成库**。
+   教训同 F3 三处测量脚本静默假结论：**集合成员判断前先统一类型**。
+* **register 前置四件（自本批起为强制口径，缺一即停）**：
+  ① `claimdb_guard.py --db historical_claims` **PASS**；
+  ② `register_waterlock.py probe` → `acquire --db historical_claims --tag <batch>`
+   （**`--tag` 必传**，漏传报错退出即视为未持锁、不得继续写）；
+  ③ 专项 prebak `12-数据库备份/historical_claims.pre_<tag>_<date>.duckdb`（**落顶层，
+   不是 historical_claims/ 子目录**），**回读断言** claim／evidence 行数与 max
+   claim_id 等于写前实测；
+  ④ `rotate_guard_state.py pre`（**紧跟其 guard 运行，间隔不得跨写库窗口**）。
+  写完：guard **PASS** → `rotate post` → verify 三态断言 **＋负向对照**。
+  纯回填（不分配 claim_id）可跳过②但须在记录中写明理由；其余三件无豁免。
+* **台账口径不变**：本次只动 claim 库两列，不涉大纲、不涉台账 ⇒
+  freebsd-hackers **168,000/201,463＝83.39%**、H3 四库 **264,000/551,317＝47.89%**
+  维持不变。
+* **下一站 `fhk_b085`**：offset **168,000**、n **2,000**；开窗前六件不变——
+  ①水位重测（禁复用 492,079）；②`probe`＋`acquire --tag fhk_b085`；
+  ③按日期实测裁定宿主是否仍 88.5；④BLIND 一律按**自有文字首偏移量**判盲；
+  ⑤register 前置四件（含顶层专项 prebak 回读断言＋rotate 紧跟 guard）；
+  ⑥BLIND 62 条裁定＋判据通用化。freebsd-hackers 全库 201,463 ⇒ 余
+  **33,463 封≈16.7 批**。
