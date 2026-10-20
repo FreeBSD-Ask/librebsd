@@ -351,3 +351,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Saso Kiselkov - Compression - OpenZFS Dev Summit 2014 讲者口述：简单启发式：检查压缩成功率，屡不成功则一段时间不再尝试、之后重试，整体表现为退避或变得迟疑。（YouTube EPTZF92taa_us，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3382 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3382`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Yao - libzfs_core and ioctls - OpenZFS Dev Summit 2014〕讲者口述：交互式命令行工具（转写作 command line fors，即 zfs/zpool）对人的日常管理很好用，但在其上写脚本时并没有稳定接口：新特性可随时加入、随时变更，难以追踪与预期，故障可能以意想不到的方式发生。（YouTube EPPIC0dwLRBZU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3383 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3383`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Yao - libzfs_core and ioctls - OpenZFS Dev Summit 2014〕讲者口述：一次重大变更后用户系统无法启动（转写作 noning systems = non-booting），讲者为此损失了大量开发时间帮助用户修复系统。（YouTube EPPIC0dwLRBZU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3384 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3384`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Yao - libzfs_core and ioctls - OpenZFS Dev Summit 2014〕讲者口述：设立中央库（libzfs_core）的真实理由是削减重复劳动：让 Python、Rust、Java（转写作 Google pro Java）等语言绑定都基于同一个中央库实现，而非各语言各自为政、彼此难以复用。（YouTube EPPIC0dwLRBZU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3385 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3385`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Richard Yao - libzfs_core and ioctls - OpenZFS Dev Summit 2014〕讲者口述：简单接口（如逐个取下一个数据集的列举方式）出错途径少、利于安全；更复杂的接口性能更好，但出错途径也更多（转写作 M up = mess up），因内核与用户态间交换空间固定所致。（YouTube EPPIC0dwLRBZU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

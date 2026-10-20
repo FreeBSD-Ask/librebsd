@@ -324,3 +324,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔June 2021 FreeBSD Developer Summit: IFLIB（NetApp 讲者 Sai）〕讲者口述：改动后，从 if_transmit 入队到 iflib 完成 TX 回收，mbuf 生命周期落在 10–100 微秒，最迟约 1 毫秒。（YouTube EPOyHxs_EAc6A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3333 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3333`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nanako Momiyama: IP Forwarding Fastpath - BSDCan 2017〕讲者口述：讲者称其转发快速路径补丁原为 FreeBSD 8 编写、已过于陈旧，故将原补丁移植进 FreeBSD 12，并以转写音作 Excel v lookup 的函数取代转写音作 IP found 的查找调用。（YouTube EPFigtcfcTGRI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3334 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3334`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nanako Momiyama: IP Forwarding Fastpath - BSDCan 2017〕讲者口述：讲者称吞吐随转写音作 bad side 的增大而上升，在 256 或 512 处达到峰值后不再变化，其曲线形状与转写音作 MCS 论文中所展示的几乎相同。（YouTube EPFigtcfcTGRI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3335 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3335`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nanako Momiyama: IP Forwarding Fastpath - BSDCan 2017〕讲者口述：讲者称新实现把 L2 输入与 L2 输出例程的开销削减了八成以上，并使 FreeBSD 的 IPv4 转发提速约 3.8 倍。（YouTube EPFigtcfcTGRI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3336 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3336`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Nanako Momiyama: IP Forwarding Fastpath - BSDCan 2017〕讲者口述：回答 IPv6 提问时，讲者称该实现只针对 IPv4：所提的数据包 I/O 方案即便对 IPv6 也能提升速率，但查找部分对 IPv6 并不高效。（YouTube EPFigtcfcTGRI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

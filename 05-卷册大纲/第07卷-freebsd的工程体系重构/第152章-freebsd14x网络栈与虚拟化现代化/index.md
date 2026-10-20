@@ -277,3 +277,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔P08B: FreeBSD VirtIO devices on ARM systems（Darius Mihai）〕讲者口述：文件系统不支持 UNIX 套接字时并不报错，而是静默落成普通文件：讲者预期创建失败，实际却生成了普通文件而非套接字，事后才排查出文件系统问题。（YouTube EPnS-C0t2vk_k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3352 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3352`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Schizophrenic Firewalls - virtualized network stack and other crazyness in OpenBSD〕讲者口述：讲者称网络栈虚拟化的用意在于，可以在单台机器上把同一套网络配置配置多次，从而把若干防火墙集中到一台机器上。（YouTube EPNfyyBI7JHQI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3353 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3353`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Schizophrenic Firewalls - virtualized network stack and other crazyness in OpenBSD〕讲者口述：讲者列出两条路线：一是把网络栈复制多份，甚或在系统里跑多个转写音作 qm 的实例，更为沉重；二是把网络栈的所有全局量装进一个容器带着走，从而同时拥有多套彼此完全独立的网络栈。（YouTube EPNfyyBI7JHQI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3354 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3354`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Schizophrenic Firewalls - virtualized network stack and other crazyness in OpenBSD〕讲者口述：讲者称 OpenBSD 支持多张路由表已有一段时间（转写作约两年），其把第三层与第二层的转发信息分别存放在各张路由表里。（YouTube EPNfyyBI7JHQI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3355 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3355`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: Schizophrenic Firewalls - virtualized network stack and other crazyness in OpenBSD〕讲者口述：回答是否嵌入作业时，讲者称远期或可在其上实现某种 jail 式系统，比 FreeBSD 现行的做法干净得多，因为 FreeBSD 目前在 IP 地址上用的是转写音作 magic crazy hack，其网络栈在 jail 中完全混乱。（YouTube EPNfyyBI7JHQI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

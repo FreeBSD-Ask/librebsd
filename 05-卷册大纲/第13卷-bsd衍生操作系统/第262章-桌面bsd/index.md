@@ -327,3 +327,45 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔Installing GhostBSD〕讲者口述：GhostBSD 是一个简单、友好的、基于 FreeBSD 的操作系统，该项目的目标是降低在个人桌面或笔记本上使用 BSD 的入门门槛。（YouTube EPYukS88sRq_o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3386 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3386`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing every window manager on FreeBSD〕讲者口述：频道上一期预览了计划作为普通 FreeBSD 安装器附加项的 KDE 安装器（转写作 install to eat = installer）。（YouTube EPq4PNSeNXEww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3387 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3387`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing every window manager on FreeBSD〕讲者口述：软件仓库中的 desktop installer 是一组脚本，便于装 X11 的窗口管理器与桌面环境；它不支持 Wayland。（YouTube EPq4PNSeNXEww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3388 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3388`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing every window manager on FreeBSD〕讲者口述：Wayland 桌面反而更简单：pkg install Sway 会带入运行所需的全部依赖，Wayland 设置在其测试机上开箱即用。（YouTube EPq4PNSeNXEww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3389 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3389`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing every window manager on FreeBSD〕讲者口述：直到 FreeBSD 15，freebsd-update 命令都会自动保存升级前后的引导环境（言下之意此后不再自动）。（YouTube EPq4PNSeNXEww，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3390 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3390`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Trying Dragonfly BSD With XFCE Was Surprising!〕讲者口述：讲者凭记忆介绍 DragonFly BSD 的来历：它是 FreeBSD 的分支，起因是有些 BSD 开发者不喜欢 FreeBSD 5 的方向，于是从 FreeBSD 分了出去；他自陈版本细节只是大致记得。（YouTube EPBPDTTqA__xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3391 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3391`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Trying Dragonfly BSD With XFCE Was Surprising!〕讲者口述：DragonFly 安装器以 HAMMER2（转写作 Hammer 2）作为其文件系统格式，讲者称此前从未用过它。（YouTube EPBPDTTqA__xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3392 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3392`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Trying Dragonfly BSD With XFCE Was Surprising!〕讲者口述：讲者不复述 Xorg 与转写作 X Libra 的 XLibre 之争，只指出 DragonFly 这一侧仍在用 Xorg，因为 XLibre 似乎尚未移植过来。（YouTube EPBPDTTqA__xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3393 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3393`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Trying Dragonfly BSD With XFCE Was Surprising!〕讲者口述：装好 X 后讲者判断 XDM 不会随开机启动，因为 rc.conf（转写作 RC.com）里没有相应配置；实测果然没起来。（YouTube EPBPDTTqA__xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

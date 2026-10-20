@@ -172,3 +172,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔会议不详〕讲者口述：在案例评估中，讲者用 find 找出 BSD 源码树里的全部 C 文件，再对每个文件在各自独立的基于能力的沙箱里运行 grep。（YouTube EPBlu8Gl47TBQ，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3340 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3340`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P04A: Capsicum and Casper: a fairy tale about solving security problems - Mariusz Zaborski〕讲者口述：讲者称 Capsicum 于 2010 年由转写音作 Henry 的研究者提出，把进程能力拆成两部分，其中一重是极紧的沙箱：进入后无法访问任何全局命名空间、不能打开文件、不能发套接字，但仍可使用此前已经拿到的能力，例如进入沙箱前打开的文件描述符。（YouTube EPKwce64dqY1w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3341 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3341`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P04A: Capsicum and Casper: a fairy tale about solving security problems - Mariusz Zaborski〕讲者口述：讲者称 Casper 把沙箱内程序常需的能力做成一族服务，随操作系统启动，例如 DNS 服务，为沙箱内进程提供便捷的 DNS 访问。（YouTube EPKwce64dqY1w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3342 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3342`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P04A: Capsicum and Casper: a fairy tale about solving security problems - Mariusz Zaborski〕讲者口述：讲者称新版 Casper 架构决定脱离原先进程（即被 fork 的子进程）的做法，由此解决大部分问题：不再需要操心转写音作 credit cards，服务与进程拥有相同的路由表和相同的工作目录。（YouTube EPKwce64dqY1w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

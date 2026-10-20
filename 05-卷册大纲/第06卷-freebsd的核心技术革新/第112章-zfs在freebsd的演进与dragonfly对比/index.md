@@ -1579,3 +1579,110 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Adding Logical Quotas to ZFS by Sanjeev Bagewadi 讲者口述：用户接近配额时性能明显变差，原因是分配时的过度估算：讲者称其膨胀比达逻辑大小的转写作 24x，认为过高，已有候选补丁改进。（YouTube EP7dG9QPG7RoA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3315 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3315`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔August 2021 OpenZFS Leadership Meeting〕讲者口述：讲者手上挂着一个加速 zfs list 列快照的 PR：这是在 FreeBSD 中约十年前一个补丁的基础上做的扩展，让它支持按名称以外的更多属性排序；该 PR 当时还挂着、因触发一个测试而未及深挖。（YouTube EPD56PfP7KSCs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3316 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3316`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔August 2021 OpenZFS Leadership Meeting〕讲者口述：vdev 属性这项工作的时间线：2018 年还只是一个想法，2019 年有了原型，如今已过 work-in-progress 阶段，希望能赶在大会前合入。（YouTube EPD56PfP7KSCs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3317 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3317`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔August 2021 OpenZFS Leadership Meeting〕讲者口述：有提交者称刚有六个补丁被合入，但为此 ping 了评审者与维护者近两个月；流程虽有改善、仍算慢。（YouTube EPD56PfP7KSCs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3318 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3318`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔August 2021 OpenZFS Leadership Meeting〕讲者口述：会上重提改默认值的旧账：在新池上默认启用 lz4 压缩，约两年前的会上就已同意，却始终无人为此开 PR。（YouTube EPD56PfP7KSCs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3370 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3370`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Healing With ZFS Receive by Alek Pinchuk〕讲者口述：讲者介绍其为 ZFS receive 实现的新特性，可借远端副本的 send 流修复本端已损坏的数据。（YouTube EPJldbtDATrOo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3371 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3371`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Healing With ZFS Receive by Alek Pinchuk〕讲者口述：该特性最终命名为 corrective receive、选项写作 receive - c：因 receive - h 已被他人占用而改用 c，代码注释中保留了 healing receive 的称法。（YouTube EPJldbtDATrOo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3372 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3372`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Healing With ZFS Receive by Alek Pinchuk〕讲者口述：healing receive 的修复路径：直接用 send 流（转写作 centrum）中的数据重建磁盘上损坏的块，必要时按磁盘侧的压缩方式重新压缩以匹配。（YouTube EPJldbtDATrOo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3373 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3373`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Healing With ZFS Receive by Alek Pinchuk〕讲者口述：重写完成后先从磁盘读回该块确认已修复，确认无误才把它从 zpool status - v （转写作 zequals status a - V）的持久错误列表中移除。（YouTube EPJldbtDATrOo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3394 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3394`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving Resilver: operational results by Saso Kiselkov〕讲者口述：提升 resilver（转写作 silver／scrub）性能的做法是在内存中引入重排序队列，把元数据遍历与实际下发到磁盘的数据块读取完全解耦。（YouTube EPHnTYCjSo6ic，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3395 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3395`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving Resilver: operational results by Saso Kiselkov〕讲者口述：到当年二月，该改动已随转写作 our necks and store 的 NexentaStor 交付，其后的版本把它作为新的默认算法，同时保留切回旧算法的途径。（YouTube EPHnTYCjSo6ic，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3396 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3396`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving Resilver: operational results by Saso Kiselkov〕讲者口述：讲者称磁盘数据格式得以保持不变，因此在新旧算法之间来回切换基本没有代价。（YouTube EPHnTYCjSo6ic，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3397 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3397`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Improving Resilver: operational results by Saso Kiselkov〕讲者口述：讲者给出更贴近实际的改善数字：约 3 倍（转写作 3x ruffle），因为真实部署的系统并不会像测试池那样极度随机化。（YouTube EPHnTYCjSo6ic，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3418 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3418`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Let's take a look into ZFS and zpools on FreeBSD〕讲者口述：演示机的启动盘 ada0（转写音作 ADA zero）被配置为 ZFS 根，另有 ada1、ada2 两块盘用于演示加密、去重与快照。（YouTube EP2ON_yeNfO7Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3419 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3419`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Let's take a look into ZFS and zpools on FreeBSD〕讲者口述：讲者称演示机只有两块盘，故无法做 RAIDZ：转写音作 raid z 二（raidz2）至少需三块盘，raidz3 至少需四块盘。（YouTube EP2ON_yeNfO7Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3420 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3420`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Let's take a look into ZFS and zpools on FreeBSD〕讲者口述：讲者查看加密数据集的属性，显示其加密算法为 AES-256-GCM（转写音作 AES two five six GCM）。（YouTube EP2ON_yeNfO7Y，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3425 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3425`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD ZFS Learning Curve #3 - Snapping Snapshots〕讲者口述：讲者解释 ZFS 快照基于写时复制（copy-on-write）：并不复制全部数据，只保存发生的变化，因此占用空间很小。（YouTube EPrUgp0jmkktc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3426 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3426`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD ZFS Learning Curve #3 - Snapping Snapshots〕讲者口述：讲者用转写音作 a switch（-r，recursive）创建递归快照，一次对 zroot 池中所有内容拍照，而非逐个数据集操作。（YouTube EPrUgp0jmkktc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3427 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3427`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD ZFS Learning Curve #3 - Snapping Snapshots〕讲者口述：讲者演示误删文件后的恢复：对被删文件先前的快照执行 zfs rollback，即可把转写音作 VAR temp 目录中的 password 文件找回。（YouTube EPrUgp0jmkktc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3428 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3428`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔This Web Tool Makes ZFS on FreeBSD STUPIDLY EASY!〕讲者口述：讲者称 WebZFS 这款 ZFS 管理界面当时尚未进入 FreeBSD ports、也不是现成的包，只能克隆其 Git 仓库并自行安装。（YouTube EPS0ePkpVMHu8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3429 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3429`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔This Web Tool Makes ZFS on FreeBSD STUPIDLY EASY!〕讲者口述：讲者称 WebZFS 采用 PAM 认证，且不允许直接以 root 登录。（YouTube EPS0ePkpVMHu8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3430 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3430`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔This Web Tool Makes ZFS on FreeBSD STUPIDLY EASY!〕讲者口述：讲者称 WebZFS 依赖 Python 3.11（较旧），而 FreeBSD 当时已把 Python 3.12／3.13 设为默认版本。（YouTube EPS0ePkpVMHu8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -148,3 +148,15 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔Michael MacInnis: Oh a new Unix shell - BSDCan 2018〕讲者口述：他介绍自己设计的新 UNIX shell Oh——Oh 是块结构化语言，环境是层级化的、形成链或树；Oh 所做的一件事是把这些环境扩展出公有与私有两半，私有名字用 define 定义、公有名字用 export 定义。（YouTube EPv1m-WEZz46U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3327 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3327`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者作正确性评估时称 BASH 测试套件是逾一万个测试用例的大集合，覆盖 Bash 的全部行为，包括其对 POSIX shell 标准的实现以及在此之上的诸多扩展。（YouTube EPuTWQckVHFg8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3328 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3328`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称 shell 这一环境具有极高的动态性，可任意与系统环境的其余部分交互，并能编排以任何语言写成的组件。（YouTube EPuTWQckVHFg8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

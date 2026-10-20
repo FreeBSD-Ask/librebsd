@@ -94,3 +94,25 @@ volume: 第02卷-伯克利的岁月
 <!-- dangan-20260908 消解回写 -->
 - PACER. Public Access to Court Electronic Records [EB/OL]. 美国联邦法院行政办公室。<https://pacer.uscourts.gov/>[EB/OL]. 2026. ［待核·needs_fix］［DKC-1287→fulltext:5856］
 <!-- /dangan-20260908 -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3329 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3329`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Making of BSD: The ACTUAL World's First Open-Source Operating System?〕讲者口述：讲者称 1992 年 USL 诉 BSDI 的诉讼提起，导致对 Net 2 发行的禁令，直至 USL 对源代码版权主张的有效性得以判定为止。（YouTube EPtuI2wX3ol2o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3330 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3330`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Making of BSD: The ACTUAL World's First Open-Source Operating System?〕讲者口述：讲者称该诉讼因法律地位的不确定性，使 BSD 自由软件后代的发展意外放缓了近两年；在此间歇中，不受此类法律纠纷困扰、基于 Linux 内核的系统获得了更广用户群的认同。（YouTube EPtuI2wX3ol2o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3331 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3331`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Making of BSD: The ACTUAL World's First Open-Source Operating System?〕讲者口述：讲者称诉讼最终于 1994 年 1 月和解、大体偏向伯克利：伯克利发行版的 18,000 个文件中仅 3 个须移除，另有 70 个经修改以加入 USL 版权注记。（YouTube EPtuI2wX3ol2o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3332 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3332`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The Making of BSD: The ACTUAL World's First Open-Source Operating System?〕讲者口述：讲者称和解的一个关键条款确保 USL 不得再对伯克利自有代码的用户或发行方提起诉讼，尤其涉及即将推出的 4.4BSD。（YouTube EPtuI2wX3ol2o，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

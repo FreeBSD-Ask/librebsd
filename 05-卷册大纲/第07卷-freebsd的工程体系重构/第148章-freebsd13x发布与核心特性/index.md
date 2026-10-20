@@ -137,3 +137,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔BSDCan '19 Dev Summit: Have, Need, Want: FreeBSD 13〕讲者口述：讲者提出其代码可按 jail 设置进程类资源限制；Brian 表示想要 jail 范围的限额——把某个 jail 的用量封顶。（YouTube EPmBJNLkMmb48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3409 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3409`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔What's New in FreeBSD 13.0〕讲者口述：讲者称其把源自 Netflix 的内核 TLS 卸载工作加以扩展，使其配合转写音作 Chelsea 的网卡在 NIC 内做 TLS 卸载。（YouTube EP2ZDD-ENdJgg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3410 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3410`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔What's New in FreeBSD 13.0〕讲者口述：讲者参与把各架构默认工具链迁到 clang 与 LLVM，这助推 FreeBSD 终于退役古老的 GPLv2 工具链——转写音作 benutels（binutils）与 gcc。（YouTube EP2ZDD-ENdJgg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3411 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3411`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔What's New in FreeBSD 13.0〕讲者口述：由 FreeBSD 基金会资助的转写音作 iaf bridge（if_bridge）改进，在特定测试配置中带来约 450% 的性能提升。（YouTube EP2ZDD-ENdJgg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3412 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3412`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔What's New in FreeBSD 13.0〕讲者口述：讲者称 FreeBSD 13 基本是首个对 RISC-V 系统（转写音作 risk five）提供重要支持的版本。（YouTube EP2ZDD-ENdJgg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
