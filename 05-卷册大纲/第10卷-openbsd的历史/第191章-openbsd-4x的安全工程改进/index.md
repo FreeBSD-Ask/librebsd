@@ -92,4 +92,23 @@ volume: 第10卷-openbsd的历史
 **存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2901`；2026-10-18 缺口A 662 期战役逐条判定采纳）
 
 据〔MeetBSD 2008《Hardware Crypto Suport》讲者口述：在一台 3.8 GHz 的 AMD 系统上，开启硬件加速反而更慢——1K 块上数字约减半甚至慢到五倍，讲者据此说在这些快系统上不要开加速。（YouTube EP2oV2ZGXO33o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- ROW_MINE: youtube.episodes.CL-15-2616 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2616`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：PIE 即 position independent executable，把可执行文件本身编译成位置无关，再配合内核支持即可整体搬移，因而是一种地址空间随机化（ASLR）技术；讲者紧接称其为漏洞利用缓解特性。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2617 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2617`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：OpenBSD 当时已有基于地址的布局随机化——内核随机加载运行时链接器，并把所链接的共享库加载到随机位置，使共享库每次执行都移动，从而挡住最常见的 return-to-libc 攻击（原文转写作 return to Li／return to LIC）。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2618 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2618`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：PIE 工作在上一个版本之前就已启动，OpenBSD 4.5 将让所有动态程序都能使用 PIE，但当时还不会默认开启，最终目标是默认启用。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2619 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2619`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔DCBSDCon 2009 Kurt Miller 报告〕讲者口述：PIE 并非对所有场景都有效，以 Apache 1.3 为例，守护进程 fork 出的子进程是初始程序的精确副本，随机化只对初始进程生效，攻击者可反复暴力猜测地址。（YouTube EPSPMWH367u6I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
