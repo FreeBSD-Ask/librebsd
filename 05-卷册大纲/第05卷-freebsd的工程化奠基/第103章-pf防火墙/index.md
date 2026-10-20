@@ -286,3 +286,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔Can you fit 500M of rules into a firewall?（Boris Lytochkin, EuroBSDcon 2024）〕讲者口述：讲者提交的差分补丁把 IPFW 规则号扩到 32 位，以缓解 6.5 万条规则号上限；但他指出逐条顺序求值仍然太慢，不能作为大规模规则集的方案。（YouTube EPyYxlVthhCpc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3438 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3438`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lighting Talk High rate filtering with IPFW by Olivier Cochard Labbé 讲者口述：讲者从提交说明里读出如何在高速场景用防火墙做极早期丢包：借由转写音作 tune driver 的驱动在很早的阶段丢弃报文，并称这正是 Netflix 在其 OCA 上使用的特性。（YouTube EPfypU0nuZ8Fk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3439 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3439`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lighting Talk High rate filtering with IPFW by Olivier Cochard Labbé 讲者口述：基准曲线中蓝线是标准 IPFW 软件过滤，红线表现最好的一条对应“在网卡层极早期过滤”的方案。（YouTube EPfypU0nuZ8Fk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3440 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3440`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lighting Talk High rate filtering with IPFW by Olivier Cochard Labbé 讲者口述：讲者自测结果：可在每秒丢弃四千万报文的同时仍保持可用接收，单机每秒收四千万报文即已如此，而这台服务器相当旧、只有 16 核。（YouTube EPfypU0nuZ8Fk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3441 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3441`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lighting Talk High rate filtering with IPFW by Olivier Cochard Labbé 讲者口述：转写音作 Chelseio 的网卡可用工具配置 TCAM，借强大 ASIC 达到同样线速过滤；但讲者称这会把自己绑定在该厂商上，正因不愿如此才力推纯软件的通用方案。（YouTube EPfypU0nuZ8Fk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -351,3 +351,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔会议不详〕讲者口述：讲者称把该框架构建于生产级网络栈之上之所以困难，是因为 FreeBSD 网络栈由超过 15 万行代码组成，而 HATCP 自身逾 1 万行，甚至比某些研究性 TCP 栈更大。（YouTube EPmGShHvA5OJw，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3496 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3496`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Do you have a Red Pill by Andrew Cagney Libreswan〕讲者口述：各 BSD 都有自己的 IPsec 接口：转写称 FreeBSD 或 NetBSD 先有、其后 FreeBSD，OpenBSD 很近期才加入其接口；三者互不相同，讲者称按此顺序可见演进轨迹，且它们都能工作，又像普通接口一样可配置、可写路由规则。（YouTube EPvC7GITOi1P0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3497 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3497`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Do you have a Red Pill by Andrew Cagney Libreswan〕讲者口述：转写音作 LibreOffice 的软件（讲者出自 Libreswan，疑即 Libreswan）在 5.2 版中悄悄加入了对全部三个 BSD 的支持，该版数月前发布。（YouTube EPvC7GITOi1P0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3498 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3498`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Do you have a Red Pill by Andrew Cagney Libreswan〕讲者口述：讲者吃下 red pill 后发现那个 IPsec 接口并不真在那里：是守护进程创建了命名空间（namespace，Linux 术语）并把 IPsec 接口推入其中；程序在命名空间内运行，而 IKE 等守护进程运行在命名空间之外，关键的正是容器的安全落在容器之外，程序只以为自己有个接口。（YouTube EPvC7GITOi1P0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3499 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3499`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Do you have a Red Pill by Andrew Cagney Libreswan〕讲者口述：就“在 BSD 上如何做到同样的事”，讲者答应先查 FreeBSD 上转写作 V nets 的机制（vnet）并称“有希望”；听众又提出另一个缩写 VRF，讲者笑称要把它也加进来。（YouTube EPvC7GITOi1P0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

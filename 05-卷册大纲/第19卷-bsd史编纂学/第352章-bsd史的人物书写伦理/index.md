@@ -35,3 +35,25 @@ shigang §13 社会哲学——“草台班子论”，决定世界的不是天�
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3431 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3431`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan Interviews 讲者口述：讲者称多数软件寿命只有三到五年，而自己四十年前写的软件至今仍运行强劲、在全球范围内为 Netflix 交付影片，自认此事非常惊人。（YouTube EP2eKLIgWuWkA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3432 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3432`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan Interviews 讲者口述：讲者自述当年在 FreeBSD Foundation 工作时的目标，是建立起一套能比自己更长久存续的组织结构，使自己不在场时它仍能继续运转。（YouTube EP2eKLIgWuWkA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3433 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3433`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan Interviews 讲者口述：一位工程管理者自述九十年代末转做系统管理员时改用 FreeBSD，认为其更合用：文档充足、上手更明确，学会的知识二十多年后仍然适用。（YouTube EP2eKLIgWuWkA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3434 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3434`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan Interviews 讲者口述：讲者自述约 1995 年在互联网服务提供商工作时入坑 FreeBSD：当时唯有 FreeBSD 扛住了负载，此后用它运行 Web 服务器与数据库服务器，评价是“它就是能跑”。（YouTube EP2eKLIgWuWkA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

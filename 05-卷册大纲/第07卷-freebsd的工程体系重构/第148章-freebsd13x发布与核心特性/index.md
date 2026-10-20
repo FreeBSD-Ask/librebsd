@@ -159,3 +159,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔What's New in FreeBSD 13.0〕讲者口述：讲者称 FreeBSD 13 基本是首个对 RISC-V 系统（转写音作 risk five）提供重要支持的版本。（YouTube EP2ZDD-ENdJgg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3492 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3492`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Run Linux containers on FreeBSD!〕讲者口述：FreeBSD 现已成为开放容器倡议（Open Container Initiative，OCI）的参与方。（YouTube EPHV-wUUzRCMo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3493 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3493`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Run Linux containers on FreeBSD!〕讲者口述：片内在 15.0 beta（转写作 150 beta 3）上演示 Podman，并称该流程在 14.3（转写作 143）上已充分测试、过程完全相同；讲者留在 15.0 beta 是为测试新的桌面安装器。（YouTube EPHV-wUUzRCMo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3494 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3494`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Run Linux containers on FreeBSD!〕讲者口述：以 root 安装转写作 podman suite 的元包即可使用 Podman；要访问容器内服务则需 pf 防火墙，podman 包自带一份 pf 配置样例，复制到 /etc/pf 后按本机实际接口改写并启用 PF 服务。（YouTube EPHV-wUUzRCMo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3495 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3495`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Run Linux containers on FreeBSD!〕讲者口述：FreeBSD 容器简单易用，而要使用 Linux 容器还须额外启用并启动转写作 Linux 的服务（Linux service）。（YouTube EPHV-wUUzRCMo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

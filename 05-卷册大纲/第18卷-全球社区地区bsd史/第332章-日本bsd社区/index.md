@@ -185,3 +185,65 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔AsiaBSDCon 2018 Work in Progress Session and Closing〕讲者口述：讲者称基金会自去年起与滑铁卢大学（University of Waterloo）达成协议，由两名该校学生以实习生身份为基金会工作。（YouTube EPlcrnXQ7xp7k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3456 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3456`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2017 Opening - Hiroki Sato 讲者口述：开场致辞称本届恰逢十周年：会议在同一栋楼里已连续使用了十年。（YouTube EP9zyF7Kbxj3o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3457 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3457`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2017 Opening - Hiroki Sato 讲者口述：开场致辞称本系列会议的第一届于 2007 年举行。（YouTube EP9zyF7Kbxj3o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3462 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3462`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2018 Opening 讲者口述：开场致辞提醒：日本不实行夏令时，因此与会者次日不必调整钟表。（YouTube EPNMDIMjFm_9Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3463 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3463`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2018 Opening 讲者口述：致辞称会议正在征集议题：有题目者把姓名、题目与幻灯片（或视频）按要求投到指定邮箱，每个讲者能讲几分钟视投稿数量而定。（YouTube EPNMDIMjFm_9Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3472 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3472`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Introduction bhyveCon Tokyo Japan 2018 -- Michael Dexter〕讲者口述：本届 bhyveCon 改为全天活动，只因去年现场对话质量之好，到点收束令讲者颇为懊恼，故本年鼓励听众充分参与、不拘议程切换。（YouTube EP3HTprohXe18，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3473 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3473`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Introduction bhyveCon Tokyo Japan 2018 -- Michael Dexter〕讲者口述：讲者致谢 Takuya Asada：在其注册域名后仅一两周，Asada 也提出了原初的 bhyveCon（转写作 beehive Kong），两人不谋而合遂共同创办；讲者并期待此类会议走向世界各地。（YouTube EP3HTprohXe18，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3474 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3474`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Introduction bhyveCon Tokyo Japan 2018 -- Michael Dexter〕讲者口述：开场公布当日议程：先由转写音作 Sean and Sam 的两位讲者介绍其新工作，随后由多年忠实演讲者 Mike Larkin介绍转写音作 Oakland via Stevens VMM 的新进展，午餐时段开放讨论与分组。（YouTube EP3HTprohXe18，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3475 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3475`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Introduction bhyveCon Tokyo Japan 2018 -- Michael Dexter〕讲者口述：致谢本届场地赞助商转写音作 iij 的厂商，称其为本届 bhyveCon 提供了优质会场设施。（YouTube EP3HTprohXe18，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3476 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3476`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2016 Opening - Hiroki Sato〕讲者口述：自称转写音作 Hiro Sato 者为大会总主席（general chair），宣布本届会议开幕；论文议程已在两天前开始，本日才是开幕。（YouTube EP92F5JaQsFqI，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3477 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3477`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2016 Opening - Hiroki Sato〕讲者口述：致谢本年度三家赞助商：转写音作 BBC Foundation 的基金会、Google，以及 IIJ（转写作 I I J Internet Initiative Japan），称其为会议的主要赞助方。（YouTube EP92F5JaQsFqI，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3478 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3478`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2016 Opening - Hiroki Sato〕讲者口述：转写音作 scale engine 的公司提供会场视频直播，画质优良，届时把三个并行分会场全程直播至会议结束。（YouTube EP92F5JaQsFqI，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3479 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3479`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔AsiaBSDCon 2016 Opening - Hiroki Sato〕讲者口述：会议设工作进展（working progress）环节：定于闭幕式前的周日举行，欲作简短发布者把姓名、题目与幻灯片发至转写作 WIP@ABC.com 的地址或现场报名，具体场次视投稿数而定。（YouTube EP92F5JaQsFqI，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

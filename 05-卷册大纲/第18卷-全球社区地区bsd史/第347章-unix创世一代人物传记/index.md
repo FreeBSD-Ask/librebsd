@@ -222,3 +222,25 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔Ken Thompson 于计算机历史博物馆访谈〕讲者口述：他进入贝尔实验室后被安排参加 Multics 项目，该项目由 GE、贝尔实验室与 MIT 三方合作，定位为一套旨在终结一切分时系统的分时系统。（YouTube EPwqI7MrtxPnk，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3484 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3484`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jeremy Singer 2024 Beacon Award winner〕讲者口述：受访者 Jeremy Singer 是苏格兰格拉斯哥大学计算科学学院讲师，为 digital security by Design Beacon 奖获奖者之一。（YouTube EPFEa1HT0ZmCY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3485 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3485`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jeremy Singer 2024 Beacon Award winner〕讲者口述：团队把转写音作 micropython 的 Python 精简实现移植到转写音作 the secure Mel platform、运行转写音作 cherry BSD 的平台上，讲者称这可能是首个面向该平台的安全 Python 解释器。（YouTube EPFEa1HT0ZmCY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3486 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3486`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jeremy Singer 2024 Beacon Award winner〕讲者口述：该 Python 移植已在 GitHub 发布，并将进入转写作 cherry BSD 的包管理系统：届时执行转写作 package 64c install micro Python 即自动装上相关组件；团队还期望把 MicroPython 跑在即将推出的 CHERI 嵌入式/IoT 设备上，让初学者更易为 IoT 写 Python。（YouTube EPFEa1HT0ZmCY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3487 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3487`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jeremy Singer 2024 Beacon Award winner〕讲者口述：讲者自称此前是 Linux 用户、如今仍偶尔使用 Linux，并称转到转写作 Cherry 的 BSD 生态后觉得是很好的开发平台，代码可跑在安全且良好的环境中，团队很享受与其合作。（YouTube EPFEa1HT0ZmCY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
