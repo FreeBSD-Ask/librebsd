@@ -183,3 +183,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔#CheriABI: Hardware enforced memory safety for #FreeBSD，Brooks Davis 演讲〕讲者口述：由于在该系统中所有用户态访问都经由能力，讲者指出 FreeBSD 内核原有的 copyin／copyout 系列函数需要对应的能力感知版本；在非能力型进程中调用普通版本会直接报错。（YouTube EPR4iTt6rYwHM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3196 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3196`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FOSDEM 2022 - More on CHERI / CheriBSD / Morello：SRI International 的 Brooks Davis 讲者口述：CHERI 最初选定 MIPS 为目标架构——那是十年前唯一可用的开放性 64 位架构；团队把 FreeBSD 移植到该架构上，即 CheriBSD（转写音作 cherryvsd）。这项工作由 DARPA 出资，在转写所称 crash 与 mrc 两个计划下推进，其设想是做“推倒重来”式的干净安全改造。（YouTube EPrTnBrQh9odw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3197 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3197`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FOSDEM 2022 - More on CHERI / CheriBSD / Morello：SRI International 的 Brooks Davis 讲者口述：讲者称约一年前才得以公开：团队自 2014 年起实际一直在与 Arm 合作，把 CHERI 移植到 Arm v8 架构；其成果形态即 Morello，且讲者在录制前一两周刚宣布推出实体板卡。（YouTube EPrTnBrQh9odw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3198 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3198`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FOSDEM 2022 - More on CHERI / CheriBSD / Morello：SRI International 的 Brooks Davis 讲者口述：Morello 项目由英国政府出资，目的是打破新硬件特性上的僵局——软件方不愿为不存在的硬件投入大量工作、硬件方在未获软件方承诺前也不愿大改；英国政府与 Arm 共同资助了这颗测试芯片，Morello 取 Arm 的转写所称 n1 CPU 设计（即 Graviton 或 Oracle 计算云上可见的那类核心）并加入 CHERI。（YouTube EPrTnBrQh9odw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3199 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3199`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FOSDEM 2022 - More on CHERI / CheriBSD / Morello：SRI International 的 Brooks Davis 讲者口述：讲者称近期一项令人振奋的进展是 Andrew Turner 让 CheriBSD 以纯能力内核与纯能力用户空间在转写音作 beehive 的环境里成功启动，因此今后可以提供虚拟访问途径；他并称 FreeBSD 基金会预计会拿到几块 Morello 板卡。（YouTube EPrTnBrQh9odw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

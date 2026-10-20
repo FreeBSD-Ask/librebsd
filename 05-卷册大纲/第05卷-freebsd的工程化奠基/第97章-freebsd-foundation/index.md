@@ -622,3 +622,40 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 据〔FreeBSD Day 2024 - Tara Stella〕讲者口述：讲到把 podman（转写音作 hodman）移植到 FreeBSD 的人时，讲者称其工作出色；讲者认为 FreeBSD 自有 jail 等容器手段，但在与企业客户沟通时 OCI 容器支持更能说明问题。（YouTube EPGjyzPxC6qWc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3200 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3200`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Mitchell Horne：FreeBSD Foundation 的 Kim McMahon 主持访谈〕讲者口述：Mitchell 自述是 FreeBSD 源码 committer，同时以 FreeBSD Foundation 承包人（contractor）身份在职业化岗位上从事 FreeBSD 工作；他并称自己是住在东海岸的加拿大人。（YouTube EPQclaD7kTo48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3201 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3201`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Mitchell Horne：FreeBSD Foundation 的 Kim McMahon 主持访谈〕讲者口述：讲者自述大学 co-op 项目里做过两期实习，本想进入开源与类 Linux 操作系统方向，看到 FreeBSD Foundation 本地发布的实习帖后入选，四个月里在转写所称 EDM 的指导下进办公室学习这个项目。（YouTube EPQclaD7kTo48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3202 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3202`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Mitchell Horne：FreeBSD Foundation 的 Kim McMahon 主持访谈〕讲者口述：讲者把转写所称 risk five（RISC-V）定位为需要移植支持的新 CPU 架构，并从 FreeBSD 这类操作系统的视角界定该移植工程：把现有能工作的内核与其上运行的全部程序搬到这套新指令集架构上。（YouTube EPQclaD7kTo48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3203 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3203`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day 2024 - Mitchell Horne：FreeBSD Foundation 的 Kim McMahon 主持访谈〕讲者口述：谈新手入门资源时，讲者称 FreeBSD Handbook 是第一位的、维护得很好且覆盖面广的文档；纸质书 Absolute FreeBSD（Michael W Lucas 著）读来几乎像 Handbook 的扩展版，从管理员视角逐块讲系统的不同使用方面。（YouTube EPQclaD7kTo48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3307 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3307`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thank You FreeBSD Community（FreeBSD Foundation 年终致谢）〕讲者口述：讲话者称 FreeBSD Foundation 的整个宗旨就是支持社区与项目、补位承担项目的关键需求。（YouTube EPOrWAGWKE3-Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3308 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3308`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thank You FreeBSD Community（FreeBSD Foundation 年终致谢）〕讲者口述：讲话者称 2019 年基金会得以快速补位：实现硬件绕行方案、修 bug、评审大量代码改动、实现新功能，并改进测试覆盖。（YouTube EPOrWAGWKE3-Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3309 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3309`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Thank You FreeBSD Community（FreeBSD Foundation 年终致谢）〕讲者口述：讲话者称 2019 年基金会在全球举办 FreeBSD 入门与进阶工作坊、制作 FreeBSD 宣传材料，并与科技记者合作促成更多关于 FreeBSD 的文章；他并称 FreeBSD Journal 现在已免费。（YouTube EPOrWAGWKE3-Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

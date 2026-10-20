@@ -72,3 +72,25 @@ volume: 第01卷-unix的起源
 - [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. <https://www.bsdnow.tv/523>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3177 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3177`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：Unix 与 Linux 这类操作系统在访问控制上以简单性优先于灵活性：建立在用户与组这类简单概念之上，并有一个集中式的管理员（root）。（YouTube EPR7hV9patAc8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3178 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3178`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：该模型过于僵硬、人们需要更多灵活性，于是 setuid 二进制被纳入机制；它确实使机制更灵活，但也使事情变得棘手——例如 Apache 的 suexec 以 setuid 二进制用不同 UID 跑 CGI/SSI 程序，而文档本身警告不熟者勿用。（YouTube EPR7hV9patAc8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3179 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3179`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：OS 级机制无法替服务器应用实施访问控制的原因之一：平铺命名空间里的数字标识符——Linux 的 UID/GID 是 32 位整数，服务器若用 UID 表示自己的用户，就无法单独管理自有主体，还须在两者间做映射。（YouTube EPR7hV9patAc8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3180 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3180`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：OS 机制虽不灵活却比应用自造逻辑更稳健，故若干场景仍采用它：sshd 以特权分离让不同组件跑在不同 UID 下；Android 给每个应用唯一 UID 以隔离；Mac OS X 有名为 seatbelt 的应用沙箱。（YouTube EPR7hV9patAc8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

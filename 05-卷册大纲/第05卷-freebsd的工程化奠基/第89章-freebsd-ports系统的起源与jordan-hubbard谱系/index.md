@@ -193,3 +193,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔EuroBSDCon（正文开场语所示）〕讲者口述：他决定最终替换承自 FreeBSD 的旧包工具，主要是出于安全原因——让本应保证安全的操作去处理大量字符串近乎疯狂。（YouTube EPaw2Gezj-Nkw，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3272 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3272`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Portmgr behind the scenes René Ladan〕讲者口述：ports 现约 4 万个；讲者称它始于 1994 年、由 Jordan（即 Jordan Hubbard）以极小规模起步，当初仅 27 项——该数字在转写中损作 27 kilometers，疑为 ports 之误，存疑。（YouTube EPifmZiI6ohTs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3273 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3273`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Portmgr behind the scenes René Ladan〕讲者口述：ports 源码起初与其余 FreeBSD 源码同样保存在 CVS（转写音作 captain cps，即并发版本系统）中，CVS 是 Subversion 的前身；讲者指出这两者都是中心化版本系统，与其当前使用的 git 相对。（YouTube EPifmZiI6ohTs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3274 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3274`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Portmgr behind the scenes René Ladan〕讲者口述：早期 ports 没有 staging 支持：今天的路径是代码编译后先装入 staging 目录，再由构建框架查看究竟装入了哪些文件，而当年尚无此机制。（YouTube EPifmZiI6ohTs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3275 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3275`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Portmgr behind the scenes René Ladan〕讲者口述：讲者举一个公开决策的例子：不再让每个 port 都间接依赖 python 2.7；python 2.7 那个 port 在 2020 年到期，因为上游支持已经结束。（YouTube EPifmZiI6ohTs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -81,3 +81,30 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔improving the FreeBSD Translation Tools 讲者 Warren Block〕讲者口述：他指出 FreeBSD 文档当时大体还不是 UTF-8——只有少数已翻译语种在用，英文原文也不用，需要着手转换；在 XML 技术上，引入外部文件的现代做法是 xinclude，而 FreeBSD 文档不用它，因为在 FreeBSD 文档起步时它还不存在。（YouTube EPGoPa2PdALPI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3282 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3282`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Increasing Consistency in man4（Alex Ziaee）〕讲者口述：讲者称 FreeBSD 手册第 4 章（驱动与内核接口）共有 740 页手册，其中大约 20 页采用了（他主张的）统一格式，其余则格式各异。（YouTube EPRthIOXpwwsM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3283 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3283`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Increasing Consistency in man4（Alex Ziaee）〕讲者口述：讲者称 netstat 手册页实际上需要九个不同的 synopsis，因为它以不同模式工作；并称 netstat 的 man page 令人望而生畏，需要更好的描述方式。（YouTube EPRthIOXpwwsM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3284 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3284`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talk: Increasing Consistency in man4（Alex Ziaee）〕讲者口述：讲者称他正在改写这些手册页以统一 synopsis，但不指望很快有结果；他并指出这些页面的开头只讲如何把驱动加入内核，而 rc.conf、loader.conf、sysctl 等处的选项并未写出。（YouTube EPRthIOXpwwsM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3289 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3289`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to install FreeBSD on Hetzner〕讲者口述：讲者在演示开头称，2025 年 FreeBSD 社区调查中“用于运行 FreeBSD 的主机商”前三名依次为AWS、Vultr 与德国主机商 Hetzner。（YouTube EP8RGbstrTWUo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3290 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3290`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to install FreeBSD on Hetzner〕讲者口述：讲者称经社区成员 Wolf（转写音作 Wolf from Schneider）的努力，FreeBSD 启动 ISO 现已在 Hetzner 提供，在其上安装 FreeBSD 因此变得相当容易。（YouTube EP8RGbstrTWUo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

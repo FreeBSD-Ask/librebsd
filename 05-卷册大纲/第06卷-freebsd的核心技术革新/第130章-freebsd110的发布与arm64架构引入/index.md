@@ -270,3 +270,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Emmanuel Vadot: FreeBSD ARM : Before Kernel（BSDCan 2017）讲者口述：要把这件事做通，须先完成 EFI（转写音作 TFI），再让 FreeBSD 12 current 与 v6（读法存疑）改用 EFI、不再使用 u-boot loader（转写音作 you'll be earlier）。（YouTube EPn-ewQ_WZAP4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3189 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3189`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit: FreeBSD on ARM64 Hyper-V〕讲者口述：起步阶段最大的难关是如何与 Hyper-V 做 hypercall：x86 有 WRMSR/RDMSR，ARM64 没有，须改用 set VP registers 与 get VP registers 两类 hypercall 来读写 MSR，而这要经 ARM SMC/HVC 完成。（YouTube EPrbWvHzgjFiM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3190 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3190`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit: FreeBSD on ARM64 Hyper-V〕讲者口述：x86 靠 CPUID 判别是否跑在 Hyper-V 上，ARM64 没有 CPUID，改取 ACPI FADT 表——ACPI 6 起其中带 hypervisor ID 属性，据此读出 hypervisor 标识（本例为 MS HypV）。（YouTube EPrbWvHzgjFiM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3191 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3191`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit: FreeBSD on ARM64 Hyper-V〕讲者口述：x86 上用 Hyper-V 的合成定时器，而 ARM 上的 hypervisor 不提供合成定时器，host 实际让客户机使用架构定时器计数，遂改用 FreeBSD 的通用计数器实现定时事件，并把 Hyper-V 时间同步代码从 hyperv.c 移入 x86 目录。（YouTube EPrbWvHzgjFiM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3192 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3192`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2022 FreeBSD Vendor Summit: FreeBSD on ARM64 Hyper-V〕讲者口述：VMBus 中断的来源随架构改变：x86 经 LAPIC 找一个空闲 IDT 向量（该值为 0x5），ARM64 则用 ACPI DSDT 里 VMBus _CRS 声明的中断号 0x12（十进制 18）。（YouTube EPrbWvHzgjFiM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -323,3 +323,15 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔History: 20+ Years of EuroBSDCon（Philipp Bühler）讲者口述：其清点得 577 场报告与 105 场教程，除教程多为重复外基本都是不重复的。（YouTube EP734C850Whtw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3291 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3291`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Closing session EuroBSDcon 2012〕讲者口述：在 EuroBSDcon 2012 闭幕会上，主持人称要再次感谢全体赞助方（“没有它们这场会议会昂贵得多”），并感谢协办方电气工程学院（faculty of electrical engineering）承办本届会议。（YouTube EPI1oVpstnXEM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3292 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3292`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Closing session EuroBSDcon 2012〕讲者口述：主持人另就下一届 EuroBSDcon（转写音作 EUR BSD conon／EUR Deon）说明地点与时间尚未确定、已有若干候选，并请有意承办者联系主办方。（YouTube EPI1oVpstnXEM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
