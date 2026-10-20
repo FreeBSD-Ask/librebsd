@@ -1314,3 +1314,125 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔OpenZFS 2021 Hackathon Presentations〕讲者口述：BRT（块引用表，转写作 brt）上一次汇报时悬着一个大问题（转写截断于 how we can avoid）。（YouTube EPAkWVDs5VZIY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2917 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2917`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2022 OpenZFS Leadership Meeting 讲者口述：主持者呼吁为 Blake3 校验算法的变更再增补几位评审：自己已过一遍、认为状态良好，希望当周合并；有异议者请去看 PR 并留言。（YouTube EPDLUIAn2jL9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2918 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2918`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2022 OpenZFS Leadership Meeting 讲者口述：Blake3 的 aarch64（转写音作 arch 64）与 PowerPC 汇编实现并非取自上游，而是由 x86 intrinsics 程序化生成——因为上游没有更快的实现；讲者提交了修复，并称至少在 ppc64 小端上修复后可用。（YouTube EPDLUIAn2jL9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2919 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2919`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2022 OpenZFS Leadership Meeting 讲者口述：与会者总结一桩待解之谜：系统脏数据达到 100 后延迟变得极长，会卡在该状态直到 txg（转写音作 txt）结束。（YouTube EPDLUIAn2jL9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2920 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2920`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔May 2022 OpenZFS Leadership Meeting 讲者口述：一位与会有者介绍：正把多加密密钥的实现作为本科研究项目推进——现有已包装（wrapped）的主密钥，要做的是多种包装方式、相应接口与存放位置，预计没有太多意外之处。（YouTube EPDLUIAn2jL9g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2937 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2937`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alex Reece - Device Removal - OpenZFS Dev Summit 2014 讲者口述：device removal 特性的目标是从 ZFS 存储池中移除顶层存储（转写音作 highle storage，疑为 top-level storage）；并非去做去 RAID-Z 或从镜像中摘盘——后者已有现成办法，本特性纯粹针对顶层设备。（YouTube EPXs6MsJ9kKKE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2938 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2938`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alex Reece - Device Removal - OpenZFS Dev Summit 2014 讲者口述：关键洞见（转写音作 key inside，疑为 key insight）：不做块到块的映射，而做磁盘段到段的映射——旧盘上一段连续分配区域整体映射到新盘上的新段；相邻的一批写可合并为单条映射项，从而大量省空间。（YouTube EPXs6MsJ9kKKE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2939 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2939`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alex Reece - Device Removal - OpenZFS Dev Summit 2014 讲者口述：后台复制采用单独线程在 open context 里做大部分 I/O，另一线程（转写音作 syn thread，疑为 sync thread）随进度更新映射——不同于 scrub 那种 scrub I/O 与普通异步写时间片互抢、谁也跑不满的做法，性能因此更好推演。（YouTube EPXs6MsJ9kKKE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2940 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2940`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Alex Reece - Device Removal - OpenZFS Dev Summit 2014 讲者口述：映射的内存开销相当可观：考察若干客户存储池的碎片程度后估计，约每 1 TB 存储需要约 1 GB 内存来放映射。（YouTube EPXs6MsJ9kKKE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2949 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2949`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详（ZFS channel programs 演讲，讲者自称 Chris）讲者口述：ZFS 管理操作（建快照、克隆、改名等）经 ioctl 下发内核，内核把一切放进事务组（transaction group）处理——在飞的既有写入与管理操作都在其中。（YouTube EPRMTxyqcomPA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2950 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2950`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详（ZFS channel programs 演讲，讲者自称 Chris）讲者口述：管理操作串行依赖的实际代价：其内部流程（先建快照、再克隆快照、再在克隆上设一串属性）要花整整一分钟才能把带全部正确属性的克隆立起来。（YouTube EPRMTxyqcomPA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2951 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2951`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详（ZFS channel programs 演讲，讲者自称 Chris）讲者口述：channel program 的想法：不再为每种排列各发一条专用 ioctl，而是下发内核异步上下文可解释的指令，让内核把任意一组核心操作（建一个快照／文件系统、销毁一个文件系统、设一个属性等）组合起来执行。（YouTube EPRMTxyqcomPA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2952 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2952`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详（ZFS channel programs 演讲，讲者自称 Chris）讲者口述：示例程序把 promote 与 destroy 合进同一事务：欲销毁文件系统时，先找其最新快照、再找该快照的最新克隆并提升（promote）它，然后销毁原文件系统——本须两条命令、中间夹竞态窗口，如今一次完成。（YouTube EPRMTxyqcomPA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2977 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2977`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Dev Summit hackathon presentations〕讲者口述：黑客松首日着重讨论 dRAID 扩容的议题与可能方案，并把既有的 RAIDZ 扩容设计文档改写成 dRAID 扩容设计文档。（YouTube EPyMwvJW3RE1A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2978 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2978`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Dev Summit hackathon presentations〕讲者口述：组内已决定为 dRAID 扩容预留空间：两行约合盘数乘 32 兆，即每块盘预留 32 兆，并认为这是不算过分的预留量。（YouTube EPyMwvJW3RE1A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2979 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2979`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Dev Summit hackathon presentations〕讲者口述：计划向 ZFS 内核模块加入 Rust 代码，或在 ZFS 树内以 Rust 单独编写一个内核模块，并自陈动机之一是他觉得 Rust 有意思。（YouTube EPyMwvJW3RE1A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2980 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2980`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Dev Summit hackathon presentations〕讲者口述：OpenZFS 文档站的 github.io 页面加入了 FreeBSD 安装说明。（YouTube EPyMwvJW3RE1A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2981 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2981`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2025 OpenZFS Leadership Meeting〕讲者口述：Tony 的 PR 吸收了 Alan Somers 关于 zpool status -v 加第二个 -v 的改动：不仅列出哪些文件有不可纠正错误，还指出错误在文件内的位置，便于针对性修复。（YouTube EPgJ_PJkfKnNA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2982 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2982`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2025 OpenZFS Leadership Meeting〕讲者口述：会中转述 Paul 的设想：导入时只读约 8 个 uberblock 组成的小环以减少读取量，同时每第 8 个 uberblock 写入大环，使最近约千个 uberblock 中每 8 个保留一个。（YouTube EPgJ_PJkfKnNA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2983 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2983`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2025 OpenZFS Leadership Meeting〕讲者口述：有用户积极使用块克隆后发现：重启后若未大量触及 BRT，因其块小，拉入极慢，而预取能显著改善，故请众人关注把 BRT 纳入 prefetch 命令的 PR。（YouTube EPgJ_PJkfKnNA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2984 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2984`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2025 OpenZFS Leadership Meeting〕讲者口述：忆及 Matt 约五六年前的旧 PR 发现：读两段数据之间夹着的空块或校验块、凑成一次大顺序读，有时反而快于隔着洞发出的两次独立 IO。（YouTube EPgJ_PJkfKnNA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3029 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3029`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2020 OpenZFS Leadership Meeting〕讲者口述：本届 hackathon 有一项目为 zpool 的 feature set（功能集）定默认集合：可按 compat 2019 之类创建池，仅启用全部一线平台在 2019 年 1 月 1 日即已支持的功能。（YouTube EPKzdgeBFmLl8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3030 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3030`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2020 OpenZFS Leadership Meeting〕讲者口述：dRAID 代码量很大，逐行详审工作量太大，讲者不苛求；欢迎众人拉取代码实测，确保其可用、文档不致令人困惑。（YouTube EPKzdgeBFmLl8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3031 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3031`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2020 OpenZFS Leadership Meeting〕讲者口述：在 hackathon 颁奖环节宣布：Alan 凭 zdb -cp 的工作获得本届第一名。（YouTube EPKzdgeBFmLl8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3032 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3032`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2020 OpenZFS Leadership Meeting〕讲者口述：force export 特性原为 0.7 所做、已 rebase 到 master：在 FreeBSD 上可把数据集强制导出、运行很好；在 Linux 上文件系统则会停在仍挂载却挂起的状态。（YouTube EPKzdgeBFmLl8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -33,3 +33,25 @@ volume: 第10卷-openbsd的历史
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2989 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2989`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Massimiliano Stucchi: BSD in the routing industry〕讲者口述：OpenBGPD 是 OpenBSD 项目的一部分，是讲者所能找到的最灵活方案，已在多个 IXP 使用；修改配置文件后即可加载并按变更更新。（YouTube EP34l1-YQvoos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2990 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2990`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Massimiliano Stucchi: BSD in the routing industry〕讲者口述：OpenBGPD 亦可用于 FreeBSD，但有限制：OpenBSD 网络栈具备 FreeBSD 缺少的路由特性，例如使用多张路由表。（YouTube EP34l1-YQvoos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2991 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2991`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Massimiliano Stucchi: BSD in the routing industry〕讲者口述：看过算数对比后，约九成客户把方案从基于 Cisco 换成基于 BSD——因为他们用不到 Cisco 设备里的那些东西，照讲者的思路能省下大笔钱。（YouTube EP34l1-YQvoos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2992 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2992`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Massimiliano Stucchi: BSD in the routing industry〕讲者口述：LINX 路由服务器故障频发的根因在 Quagga 架构——恢复时不允许 peers 一次性全部连上，管理员须到数据中心逐个手工拉起 250 个会话、等前缀加载完才能处理下一个。（YouTube EP34l1-YQvoos，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

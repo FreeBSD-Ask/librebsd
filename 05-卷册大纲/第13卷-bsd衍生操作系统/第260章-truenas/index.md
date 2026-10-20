@@ -196,3 +196,25 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔FreeNAS Plugins everything you ever wanted to know（John Hixson）讲者口述：FreeNAS 的插件架构彼时已上线约一年。（YouTube EP1NC0lQMWHoc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2965 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2965`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS system architecture（John Hixson, EuroBSDcon 2012）〕讲者口述：FreeNAS 以 NanoBSD 为基底，构建脚本在 NanoBSD 基础上大幅改造，加入 PBI 与其他扩展。（YouTube EPfw6g_R8SM4U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2966 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2966`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS system architecture（John Hixson, EuroBSDcon 2012）〕讲者口述：FreeNAS 插件沿用与 PC-BSD 相同的 PBI 格式。（YouTube EPfw6g_R8SM4U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2967 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2967`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS system architecture（John Hixson, EuroBSDcon 2012）〕讲者口述：FreeNAS 的许多配置文件不能手改：配置全部存于数据库，每次重启服务或开机都会按库重写这些文件。（YouTube EPfw6g_R8SM4U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2968 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2968`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeNAS system architecture（John Hixson, EuroBSDcon 2012）〕讲者口述：团队删减了卷的附加元数据、只保留路径与挂载点等最小信息，目的是让用户直接在命令行操作 ZFS 后，界面能如实反映改动。（YouTube EPfw6g_R8SM4U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

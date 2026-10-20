@@ -291,3 +291,20 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔2022 年 6 月 FreeBSD 开发者峰会安全专题小组〕讲者口述：讲者称前一年花费时间将内核地址消毒器与内核内存消毒器从 NetBSD 移植过来，两者对缓冲区溢出、use-after-free 一类极易被转化为安全利用的缺陷非常有效。（YouTube EP-4dBn8_dvKQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2906 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2906`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The FreeBSD Security Officer Function（Simon L. Nielsen）讲者口述：安全官（Security Officer）在安全事务上拥有最终决定权，其职位由上级任命（转写音作 postponed，疑为 appointed），理论上亦可被替换。（YouTube EPjfe43i0rz5g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2907 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2907`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The FreeBSD Security Officer Function（Simon L. Nielsen）讲者口述：安全支持期为自发布日起一年，部分分支则为两年。（YouTube EPjfe43i0rz5g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2908 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2908`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔The FreeBSD Security Officer Function（Simon L. Nielsen）讲者口述：安全团队曾多次推迟发布以处置严重安全问题——发布前夕爆出严重安全问题时会造成很大痛苦。（YouTube EPjfe43i0rz5g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

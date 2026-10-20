@@ -446,3 +446,65 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔Tool chaining the Hydra（NetBSD 两位老开发者 Martin Husemann 与 Jörg Sonnenberger）讲者口述：二人自述为 NetBSD 长期开发者，正续追 NetBSD 的现代工具链。（YouTube EPPwTcc-MGD2Q，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2993 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2993`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08C: Writing a FreeBSD IR driver for small ARM boards using evdev interface〕讲者口述：FreeBSD 的 evdev 支持始于 2014 年，后经他人续完，至本讲约两个月前由 Alexander 提交进树。（YouTube EPYUJdf-kioHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2994 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2994`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08C: Writing a FreeBSD IR driver for small ARM boards using evdev interface〕讲者口述：A10/A20 SoC 的 CIR 控制器支持红外遥控与无线键盘，带双 16×8 位 FIFO 数据缓冲、可编程 FIFO 阈值，并支持中断与 DMA。（YouTube EPYUJdf-kioHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2995 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2995`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08C: Writing a FreeBSD IR driver for small ARM boards using evdev interface〕讲者口述：已有转储输入事件的简单测试工具（evtest 类），并已由 Alexander 移植到 FreeBSD。（YouTube EPYUJdf-kioHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2996 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2996`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P08C: Writing a FreeBSD IR driver for small ARM boards using evdev interface〕讲者口述：LIRC 生态下有两个工具：irrecord 用来录制按键，irexec 用来执行命令。（YouTube EPYUJdf-kioHg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2997 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2997`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to put FreeBSD power into small MIPS switch/router（Aleksandr Rybalko, EuroBSDcon 2012）〕讲者口述：多数设备出厂已内置 bootloader，常见者有 RedBoot、U-Boot，以及 Broadcom 为众多路由器制作的 CFE（Common Firmware Environment）。（YouTube EPMcT41WH1ouA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2998 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2998`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to put FreeBSD power into small MIPS switch/router（Aleksandr Rybalko, EuroBSDcon 2012）〕讲者口述：枚举设备地址与中断号的技术里，hints 文件简单但不够灵活，更现代的方式是 FDT（扁平设备树）。（YouTube EPMcT41WH1ouA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2999 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2999`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to put FreeBSD power into small MIPS switch/router（Aleksandr Rybalko, EuroBSDcon 2012）〕讲者口述：watchdog 是一个简单计数器：装载某个值后倒数到 0，软件必须不断把该值改大（即“喂狗”）。（YouTube EPMcT41WH1ouA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3000 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3000`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔How to put FreeBSD power into small MIPS switch/router（Aleksandr Rybalko, EuroBSDcon 2012）〕讲者口述：同一 IP 核常被跨厂商复用——某个由一家设计的核心，既用在 Broadcom 芯片（如树莓派）上，也出现在 Cavium Octeon MIPS64 上，因此写新驱动应做到系统与架构无关。（YouTube EPMcT41WH1ouA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3057 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3057`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Joerg Sonnenberger: MCLinker: the final toolchain frontier（P2A, AsiaBSDCon 2013）讲者口述：MCLinker 采用与转写音作 llb and pizza 的组件相同的许可证，讲者称这有助于 BSD 清掉工具链中最后几块 GPLv3 代码之一。（YouTube EPGJyHlpJ5uN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3058 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3058`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Joerg Sonnenberger: MCLinker: the final toolchain frontier（P2A, AsiaBSDCon 2013）讲者口述：就“是否已用 LLVM”之间，讲者答尚未进入主流：相关基础设施已完整集成，只需用 Subversion 检出仓库；当时仅支持 x86 平台，其余平台尚未抽时间推进。（YouTube EPGJyHlpJ5uN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3059 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3059`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Joerg Sonnenberger: MCLinker: the final toolchain frontier（P2A, AsiaBSDCon 2013）讲者口述：在两项大型半静态二进制的链接对比中，new ld 的耗时至少是 gold 与 MCLinker 的两倍，而 gold 仍略快于 MCLinker，讲者认为后续需要细致的性能剖析。（YouTube EPGJyHlpJ5uN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3060 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3060`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Joerg Sonnenberger: MCLinker: the final toolchain frontier（P2A, AsiaBSDCon 2013）讲者口述：链接器是当时无法以可接受开发量替换掉的最后一块；讲者希望来年 NetBSD 能在不依赖转写所称 new dependency 的前提下构建，至少在现代架构上做到。（YouTube EPGJyHlpJ5uN4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

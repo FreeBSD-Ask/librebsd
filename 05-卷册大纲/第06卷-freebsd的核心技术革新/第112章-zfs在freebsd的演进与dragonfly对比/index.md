@@ -1273,3 +1273,125 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔iFlash Dynamic Adaptive L2ARC Caching（Shailendra Tripathi）讲者口述：L2ARC 之所以不并入 meta 的正常分配语义、而保留滚动日志模型并始终顺序写，是为了极快的分配性能——换成任何定位式结构模型都要为 L2 缓存的分配付出代价，而在滚动模型下分配近乎一条原子指令。（YouTube EPoAjMr5IES2w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2953 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2953`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZVOL Performance（Tony Hutter）讲者口述：2021 年 8 月起，劳伦斯利弗莫尔国家实验室（LLNL）档案团队在基准测试 ZVOL 时发现：并行 DD 常规写约 1.7 GB/s，而加 O_DIRECT 重跑同一测试可得 2.9 GB/s（讲者称基本线速），由此引出讲者的追查。（YouTube EPEt75DPokvI4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2954 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2954`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZVOL Performance（Tony Hutter）讲者口述：锁竞争机理：常规写经页缓存拆成 4K 小块 I/O，1 MB 写即 256 个小块争同一块上的锁；ZVOL 驱动把每个块 I/O 派给线程（如 16 CPU 16 线程），所有线程同抢同一把锁——这就是 dbuf_find（转写音作 debuff find）巨量锁竞争的由来。（YouTube EPEt75DPokvI4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2955 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2955`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZVOL Performance（Tony Hutter）讲者口述：解法是 Linux 内核较新的 block multi-queue（blk-mq）接口：不再从页缓存收零散小块 I/O，而是一次拿到指向多个块 I/O 的大 struct request，按大请求而非小块加锁。（YouTube EPEt75DPokvI4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2956 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2956`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZVOL Performance（Tony Hutter）讲者口述：并行写基准（16 个 DD 并行写 16 个 ZVOL）是 blk-mq 的最佳情形：视块大小可获得 2 到 4 倍加速。（YouTube EPEt75DPokvI4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2961 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2961`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔RAIDZ Expansion（Matt Ahrens）〕讲者口述：RAIDZ 扩容的核心做法是重排全部数据，而重排可以不理会校验块原先落在何处——真正要紧的是数据块的边界，不是校验的位置。（YouTube EPZF8V7Tc9G28，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2962 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2962`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔RAIDZ Expansion（Matt Ahrens）〕讲者口述：扩容不能覆盖任何仍在使用中的数据，因此无法把整段内容先读入内存再整体倒写到新位置；若搬移的数据取自中段，这样做不可行。（YouTube EPZF8V7Tc9G28，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2963 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2963`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔RAIDZ Expansion（Matt Ahrens）〕讲者口述：扩容必须记录搬移进度，以便崩溃后仍能判断某个数据块应读自旧位置还是新位置，而不是误读已改写的区域。（YouTube EPZF8V7Tc9G28，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2964 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2964`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔RAIDZ Expansion（Matt Ahrens）〕讲者口述：把 raidz1 转为 raidz2／raidz3（增加校验）不在本项目范围内，但讲者认为这是很自然的后续扩展。（YouTube EPZF8V7Tc9G28，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3013 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3013`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zpool Checkpoint（Serapheim Dimitropoulos）〕讲者口述：Delphix 向客户交付 VM 形态的产品，升级脚本操纵各 ZFS 数据集及其属性（重命名、销毁数据集），且每个升级脚本都配有一个对应的回滚脚本。（YouTube EPfPQA8K40jAM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3014 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3014`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zpool Checkpoint（Serapheim Dimitropoulos）〕讲者口述：checkpoint 本质是全池快照，涵盖全部状态——包括池配置、数据集属性与任何既有数据集结构；用户可先打 checkpoint 再做改动，之后回卷。（YouTube EPfPQA8K40jAM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3015 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3015`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zpool Checkpoint（Serapheim Dimitropoulos）〕讲者口述：实现上，checkpoint 即抓取当时的 uberblock 存到他处（讲者称写在 MOS 中），使其不被后续 txg 覆盖。（YouTube EPfPQA8K40jAM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3016 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3016`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Zpool Checkpoint（Serapheim Dimitropoulos）〕讲者口述：一旦打上 checkpoint，涉及池配置的操作即被禁止——例如移除设备或更改池 GUID。（YouTube EPfPQA8K40jAM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3049 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3049`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens - OpenZFS Q&A - OpenZFS European Conference 2015〕讲者口述：无专用 ZIL 设备时，同步写数据会先写到盘上的 ZIL 区、再写到最终存放位置——提问者算例：300 次写 I/O 实际要发 600 次同步操作，Matt Ahrens 确认大致如此。（YouTube EPI6fXZ_6OT5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3050 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3050`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens - OpenZFS Q&A - OpenZFS European Conference 2015〕讲者口述：Matt Ahrens 强调：在不使用 ECC 内存的前提下，ZFS 并不比其他文件系统更可靠——任何文件系统的关键元数据（如超级块）都可能因内存位翻转而写坏落盘。（YouTube EPI6fXZ_6OT5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3051 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3051`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens - OpenZFS Q&A - OpenZFS European Conference 2015〕讲者口述：问及数据恢复：若整个 pool 丢失，没有第三方工具能遍历 ZFS 的池结构去枚举数据——传统文件系统那套恢复工具思路对 ZFS 不适用。（YouTube EPI6fXZ_6OT5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3052 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3052`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Matt Ahrens - OpenZFS Q&A - OpenZFS European Conference 2015〕讲者口述：营销参考案例之问：Delphix 方面称美国 500 强中约 100 家是其客户，这些公司在 IT 核心依赖 ZFS——且多半并不自知，因为 ZFS 被内嵌在其产品里。（YouTube EPI6fXZ_6OT5c，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3053 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3053`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Dedup and L2ARC - OpenZFS European Conference 2015〕讲者口述：ZFS 去重（dedup）的根本问题：开启极易——设一个属性即继承到所有数据集；关闭却难——dedup 极吃内存，拿不到便把系统拖入“sad place”。（YouTube EP5ciV4z7WWmo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3054 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3054`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Dedup and L2ARC - OpenZFS European Conference 2015〕讲者口述：DDT 是均匀随机分布的哈希表（甚至用密码学哈希），没有“热点段”可供缓存——一旦溢出内存便落入慢区，读写更新 DDT 都要付出巨大性能代价。（YouTube EP5ciV4z7WWmo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3055 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3055`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Dedup and L2ARC - OpenZFS European Conference 2015〕讲者口述：持久化 L2ARC 的重建性能：500 GB 设备重建约需 5–10 秒；重建期间允许读取该设备（已重建的缓冲可直接取用），写则暂停一段时间以免破坏结构。（YouTube EP5ciV4z7WWmo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3056 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3056`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Saso Kiselkov - Dedup and L2ARC - OpenZFS European Conference 2015〕讲者口述：新增的 vdev 属性机制可把一块 L2ARC 设备专用于 DDT；此时 DD throttle 会自动把 DDT 表大小选定为专用 L2ARC 的容量，免去手工估算。（YouTube EP5ciV4z7WWmo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3061 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3061`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Why libshare? WHY!（George Wilson）讲者口述：illumos 的 libshare 内建锁机制：产品中数百个线程同时导出不同文件系统时仍能正常处理，而同一套逻辑在 Linux 实现上完全崩溃。（YouTube EP33ZNeLO4zO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3062 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3062`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Why libshare? WHY!（George Wilson）讲者口述：并发导出会丢失本已导出的共享，原因是实现要同时更新转写音作 Etsy DFS 下的 sharetab 文件；该文件是 illumos 实现的遗留，Linux 实现除代码仍试图使用它之外并不需要它。（YouTube EP33ZNeLO4zO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3063 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3063`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Why libshare? WHY!（George Wilson）讲者口述：在 6 万个文件系统的系统上，zfs share -a 的耗时被转写作 six thousand nine seconds，讲者称近两小时；同样操作改用 zfs share -g 约 3 分钟。（YouTube EP33ZNeLO4zO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3064 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3064`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Why libshare? WHY!（George Wilson）讲者口述：讲者就 FreeBSD 平台是否存在同样的缺口——客户端在共享服务尚未跑完时挂载而拿到过期文件句柄——向听众征询，并自承调查不足、希望进一步了解。（YouTube EP33ZNeLO4zO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

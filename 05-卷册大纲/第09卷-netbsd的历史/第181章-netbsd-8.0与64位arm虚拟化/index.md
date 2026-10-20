@@ -112,3 +112,25 @@ volume: 第09卷-netbsd的历史
 
 据〔NetBSD 8.0 前瞻（会议不详，推测）〕讲者口述：讲者明确表示并未纳入 HAMMER 文件系统，其中一个原因是它涉及 VFS 层的改动。（YouTube EPG9tqr9LlnHY，[996.579-1009.079]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3021 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3021`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtual Host Swapping: David Gilbert〕讲者口述：以 FreeBSD 为宿主、Windows 10 为客体的 bhyve 方案尚不完全适合生产，只能应急使用；讲者听说 FreeBSD 13 会带来更好的 bhyve 磁盘性能。（YouTube EPAt6vmxbi2co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3022 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3022`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtual Host Swapping: David Gilbert〕讲者口述：在 Windows 宿主的 Hyper-V 下，虚拟化层只支持整块裸盘而不支持分区，因此 FreeBSD 安装必须占用一块单独的磁盘。（YouTube EPAt6vmxbi2co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3023 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3023`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtual Host Swapping: David Gilbert〕讲者口述：Hyper-V 的 TRIM 并未直通到宿主磁盘硬件——文档写作 supported，实际仅指以磁盘文件模拟时的块回收，并非把 TRIM 传给物理盘。（YouTube EPAt6vmxbi2co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3024 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3024`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtual Host Swapping: David Gilbert〕讲者口述：在 FreeBSD 12.1 上以 bhyve 运行 Windows，即便宿主空闲，启动也明显更慢；讲者怀疑虚拟磁盘设备层尚有改进空间。（YouTube EPAt6vmxbi2co，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

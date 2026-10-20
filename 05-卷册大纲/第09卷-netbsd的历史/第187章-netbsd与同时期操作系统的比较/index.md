@@ -57,3 +57,25 @@ volume: 第09卷-netbsd的历史
 
 据〔My BSD Sucks Less Than Yours 演讲〕讲者口述：多年前 FreeBSD 曾有一个名为 sisjail（转写音作 sis jail）的 import 概念但因内在设计问题被放弃（YouTube EPcc54e2G9qDM，[2143.569-2149.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2969 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2969`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔My BSD sucks less than yours, Act II（Antoine Jacoutot、Baptiste Daroussin 对谈）〕讲者口述：FreeBSD 基本系统自带的 jail 管理工具已经够用——灵活、简单；外部工具多半只是补自动开通之类的附加功能，而这类功能不应当进 base。（YouTube EP4K7h-U9KeiQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2970 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2970`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔My BSD sucks less than yours, Act II（Antoine Jacoutot、Baptiste Daroussin 对谈）〕讲者口述：FreeBSD 的 pf 已有数年未与 OpenBSD 同步，但仍被积极维护，且带有 OpenBSD 尚未提供的特性，例如 SMP 支持与 VNET。（YouTube EP4K7h-U9KeiQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2971 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2971`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔My BSD sucks less than yours, Act II（Antoine Jacoutot、Baptiste Daroussin 对谈）〕讲者口述：FreeBSD 提供原生虚拟化 bhyve，具备 netmap 接口、VNC、EFI 与近乎任意类型的客户机，并以 Capsicum 做沙箱隔离。（YouTube EP4K7h-U9KeiQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2972 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2972`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔My BSD sucks less than yours, Act II（Antoine Jacoutot、Baptiste Daroussin 对谈）〕讲者口述：讲者把 OpenBSD 视为开源生态的孵化器：最著名者为 OpenSSH，另有 OpenSMTPD、tmux、mandoc、sndio 等，均由 OpenBSD 开发后对外开放。（YouTube EP4K7h-U9KeiQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

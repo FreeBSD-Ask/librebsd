@@ -310,3 +310,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔FreeBSD, BeagleBone Black and Robotics〕讲者口述：机器人基本功能就是行走——但为达此目标走过了漫长的路。（YouTube EPkasQ0rLN2NM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2985 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2985`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rui Paulo: Wireless Mesh Networks under FreeBSD〕讲者口述：802.11s 的特别之处是工作在第二层，而其他 mesh 产品通常工作在第三层。（YouTube EPZL30z1uI-JI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2986 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2986`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rui Paulo: Wireless Mesh Networks under FreeBSD〕讲者口述：HWMP 是专为 802.11s 制定的路由协议，非常基于 AODV。（YouTube EPZL30z1uI-JI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2987 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2987`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rui Paulo: Wireless Mesh Networks under FreeBSD〕讲者口述：2009 年 7 月 FreeBSD 的 802.11s 无法与 Linux 机器互通，因 Linux 当时仍在遵循另一版草案规范、报文格式略异；2009 年 10 月 Linux 代码改为遵循最终标准，互通得以恢复。（YouTube EPZL30z1uI-JI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2988 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2988`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rui Paulo: Wireless Mesh Networks under FreeBSD〕讲者口述：DragonFly BSD 正把无线网络栈同步回去，很快也将获得 mesh 网络支持。（YouTube EPZL30z1uI-JI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3017 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3017`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Tale of six motherboards, three BSDs and coreboot（Piotr Kubaj & Katarzyna Kubaj）〕讲者口述：有人说 coreboot 只配得上 Linux 系统，而讲者是 BSD 系统拥趸，因此特意检验六块主板配三大 BSD 与 coreboot 的组合。（YouTube EP_9xI3L3_vUc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3018 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3018`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Tale of six motherboards, three BSDs and coreboot（Piotr Kubaj & Katarzyna Kubaj）〕讲者口述：主要问题是 FreeBSD 缺风扇控制：风扇非全速（100%）运行，就是照 coreboot 初始化的值（有时仅 20%）运行，高负载下机器可能直接关机。（YouTube EP_9xI3L3_vUc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3019 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3019`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Tale of six motherboards, three BSDs and coreboot（Piotr Kubaj & Katarzyna Kubaj）〕讲者口述：约十年前曾有学生把 OpenBSD 硬件传感器移植到（转写音作 CBS d，疑为 FreeBSD），代码曾提交入库，一天后即被回退——因 PHK（Poul-Henning Kamp，转写音作 Paul honey camp）反对。（YouTube EP_9xI3L3_vUc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3020 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3020`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔A Tale of six motherboards, three BSDs and coreboot（Piotr Kubaj & Katarzyna Kubaj）〕讲者口述：Talos 板配 IBM POWER9 CPU，被视为当下唯一现代的完全开放方案（预售中）；已有 BSD 开发者买板，准备把 FreeBSD 移植上去做成工作站／服务器。（YouTube EP_9xI3L3_vUc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

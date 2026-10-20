@@ -125,3 +125,25 @@ volume: 第15卷-许可证哲学与法律分析
 
 据来源不详讲者口述：Eric Allman 于 1998 年创立了 Sendmail Inc.。（YouTube EPo2dmreSy76Q，[135.8-136.9]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2925 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2925`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Foundation Update & Recognition, MeetBSD 2008 讲者口述：基金会初建时之所以刻意与项目相互独立，是因为当时不清楚非营利组织与开源项目的关系——非营利实体会不会被起诉？若被起诉而垮掉，是否就意味着项目终结？讲者认为这一分立模式运行得很好。（YouTube EPsNQ2d41Vn2A，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2926 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2926`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Foundation Update & Recognition, MeetBSD 2008 讲者口述：基金会为项目提供许可证分析支持（各许可证之间的相互作用）、谈判 NDA，并数度以组织名义与硬件公司签协，从而为项目拿到规格文档。（YouTube EPsNQ2d41Vn2A，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2927 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2927`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Foundation Update & Recognition, MeetBSD 2008 讲者口述：基金会帮助管理并出资运行 Netperf 集群，托管于加拿大 Sentex（转写音作 Syntax），是全部网络性能工作的场所；讲者近期募得两台 32 核系统之一放入该集群，另有 Cisco 等公司捐赠硬件搭起的 10 Gbit/s 测试床。（YouTube EPsNQ2d41Vn2A，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2928 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2928`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Foundation Update & Recognition, MeetBSD 2008 讲者口述：基金会多年参与资助的开发项目之一是虚拟化网络栈——可在单一操作系统实例里创建网络栈的多个实例；讲者称其正在进入 FreeBSD（转写作 FreeBSD 18，版本号系转写音，存疑）。（YouTube EPsNQ2d41Vn2A，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

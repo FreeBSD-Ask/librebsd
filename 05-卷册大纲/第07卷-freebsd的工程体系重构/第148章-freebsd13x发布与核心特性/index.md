@@ -115,3 +115,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔Routing stack changes in FreeBSD 13（Alexander Chernikov）讲者口述：另一动机是亟需简化对路由子系统的改动（hack）成本。（YouTube EP6SRGxvFL-kk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3037 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3037`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Dev Summit: Have, Need, Want: FreeBSD 13〕讲者口述：为让最新 Intel 硬件运行最新版 BSD，讲者一方决定开设若干职位（主要在 Portland 的 Hillsboro 办公室），招募 FreeBSD 或其他 BSD 专家。（YouTube EPmBJNLkMmb48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3038 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3038`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Dev Summit: Have, Need, Want: FreeBSD 13〕讲者口述：会中盘点两组 NUMA 相关改动：一组出自 Drew、偏网络方向、部分已入树；另一组出自 Jeffr、更侵入内核（如内核统计类改动）。（YouTube EPmBJNLkMmb48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3039 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3039`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Dev Summit: Have, Need, Want: FreeBSD 13〕讲者口述：在调试器能力对比（如 GDB 单步与 ptrace 的拆分）讨论中，讲者提及 FreeBSD 已放弃 sparc64。（YouTube EPmBJNLkMmb48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3040 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3040`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSDCan '19 Dev Summit: Have, Need, Want: FreeBSD 13〕讲者口述：讲者提出其代码可按 jail 设置进程类资源限制；Brian 表示想要 jail 范围的限额——把某个 jail 的用量封顶。（YouTube EPmBJNLkMmb48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

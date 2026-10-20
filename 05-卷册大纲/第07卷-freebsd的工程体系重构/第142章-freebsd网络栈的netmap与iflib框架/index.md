@@ -280,3 +280,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔P08A: Improving netdump hardware support and performance with iflib（Sam Gwydir）讲者口述：把既有驱动移植到 iflib 大致不难——iflib 的函数名与接口大体与既有驱动相对应、易于逐一对译；但文档不完整，讲者须与人协作才弄清，其中一度因某个函数缺失而白查约一至两周。（YouTube EPbBLSvTQY7xw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2933 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2933`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：ClickOS 一言以蔽之是极小的专用虚拟机（转写音作 tiny design based，疑为 MiniOS-based），其上运行 Click 模块化路由器软件；目标是既灵活又高性能的虚拟化软件平台。（YouTube EP0HDxmLaW9EU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2934 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2934`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：ClickOS 剔除常规操作系统的累赘，改用 MiniOS（转写音作 minoas）——单地址空间操作系统、无抢占式调度器、只跑在单核上且只跑单个应用（即 Click 模块化路由器），本质上是一台只为处理包而生的虚拟机。（YouTube EP0HDxmLaW9EU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2935 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2935`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：Xen 默认 I/O 路径的瓶颈实测：Open vSwitch（转写音作 opened the switch）单独转发不超过 30 万 pps，只留 netback 也不超过 35 万 pps，整条管线合起来对最大尺寸包只能转发 22.5 万 pps。（YouTube EP0HDxmLaW9EU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2936 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2936`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：优化之一：以 VALE 交换机（转写音作 valid switch／value switch）替换 Open vSwitch——它是两年前于 CoNEXT（转写音作 connex，存疑）推出的高速软件交换机，可在虚拟端口间转发 1800 万 pps；因其基于 netmap，还顺带免除了包元数据结构的开销。（YouTube EP0HDxmLaW9EU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

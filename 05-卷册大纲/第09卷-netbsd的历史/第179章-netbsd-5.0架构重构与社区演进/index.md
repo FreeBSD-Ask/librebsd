@@ -172,3 +172,25 @@ volume: 第09卷-netbsd的历史
 
 据〔How to break long term compatibility in NetBSD（Joerg Sonnenberger）讲者口述：为直接创建带版本的符号，需扩展链接器使其能直接指定符号可见性，而不必借 assembler 名与宏间接命名。（YouTube EPQ7QhD8XryKY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3005 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3005`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NFS scripting with Lua（Lourival Viera Neto）〕讲者口述：让操作系统可脚本化的动机：给操作系统更多灵活性、帮助用户满足新需求并配置内核子系统、允许非内核开发者改变内核行为，还能用脚本语言原型化新特性。（YouTube EPLoJ4Bg2P0nc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3006 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3006`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NFS scripting with Lua（Lourival Viera Neto）〕讲者口述：讲者自 2008 年起做内核脚本环境（先在 Linux 上，后经 Google Summer of Code 项目移植到 NetBSD），其后由（转写音作 mark Palmer）者在 Lua 之上为 NetBSD 建了新基础设施；今年开始做 NPF Lua。（YouTube EPLoJ4Bg2P0nc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3007 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3007`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NFS scripting with Lua（Lourival Viera Neto）〕讲者口述：选 Lua 作内核脚本语言：它生来既是可嵌入又是可扩展语言，只是一个 ISO C 库、几乎 freestanding、极易移植、不依赖操作系统，内核内占用极小。（YouTube EPLoJ4Bg2P0nc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3008 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3008`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔NFS scripting with Lua（Lourival Viera Neto）〕讲者口述：SSH 版本检测示例只有 12 行 Lua 代码，在 100 兆网络接口上实测开与不开脚本吞吐都约 96 兆，无可感开销。（YouTube EPLoJ4Bg2P0nc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

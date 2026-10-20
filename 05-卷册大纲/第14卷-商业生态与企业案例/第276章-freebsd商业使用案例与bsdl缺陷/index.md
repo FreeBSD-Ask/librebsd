@@ -631,3 +631,65 @@ volume: 第14卷-商业生态与企业案例
 
 据〔Isilon and FreeBSD（Zach Loafman, MeetBSD 2008）讲者口述：Isilon 赞助社区合作者重写 NFS 锁服务（另有 Alfred 协助协调），方案是把整个服务移入内核——理由是欲在用户态取得锁可用性的异步事件通知极其棘手。（YouTube EPOlMocIwM5QU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2941 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2941`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 FreeBSD Vendor Summit - Seagate 讲者口述：容量增长之下执行器成为瓶颈：希捷已发布 9 碟片 18 磁头的 18 TB 盘，但盘内数据管线与数年前相同，IOPS 每况愈下——去年发布的 Mach.2 即为双执行器（dual actuator）产品。（YouTube EPPcxRA2Yc9Tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2942 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2942`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 FreeBSD Vendor Summit - Seagate 讲者口述：希捷正大力推动 HDD 原生采用 NVMe（转写音作 miami），并与存储栈内其他厂商合作以简化栈——愿景是结束 SATA／SAS／NVMe 多套存储与计算栈并存的局面。（YouTube EPPcxRA2Yc9Tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2943 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2943`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 FreeBSD Vendor Summit - Seagate 讲者口述：希捷有名为 FARM log 的盘内可靠性管理日志，原属保密（转写音作 under mda，疑为 under NDA），经清理后规范已发布在其 GitHub；配套工具与解析器也可在 FreeBSD 上运行，可解析近线高端盘输出的负载与磁头级统计。（YouTube EPPcxRA2Yc9Tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2944 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2944`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2020 FreeBSD Vendor Summit - Seagate 讲者口述：去年 OpenZFS hackathon 上用 Mach.2 服务器发现：对同一设备两个 LUN 跑 I/O 时 LUN 0 比 LUN 1 快（转写音作 limb number one，即 LUN 1）；研发团队解释这是单端口架构所致——命令先到 LUN 0 再跳到 LUN 1，并称开写缓存后该偏差应显著缓解。（YouTube EPPcxRA2Yc9Tc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2945 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2945`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rodney W. Grimes: FreeBSD as a Service（BSDCan 2017）讲者口述：FreeBSD 源码树规模变迁：第一版代码不到 32 MB，如今大了约一个半数量级，约 700 MB（转写音作 FreeBSD 100，疑为 FreeBSD 10.0）。（YouTube EPZf9tDJhoVbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2946 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2946`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rodney W. Grimes: FreeBSD as a Service（BSDCan 2017）讲者口述：把 GPL 从基本系统清除出去的目标已追求约 25 年（转写音作 GPM，即 GPL），CSRG 当年也有同样愿望。（YouTube EPZf9tDJhoVbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2947 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2947`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rodney W. Grimes: FreeBSD as a Service（BSDCan 2017）讲者口述：测试工具现状：系统里随附的 OpenZFS ztest 没有手册页；ZFS 测试套件据信被搁在分支里、脱钩未接上，讲者甚至不确定它能否在 FreeBSD 上编译——正呼吁志愿者把它接起来。（YouTube EPZf9tDJhoVbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2948 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2948`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Rodney W. Grimes: FreeBSD as a Service（BSDCan 2017）讲者口述：以 Walnut Creek CDROM 为例说明厂商关系随时间演变、难以归类：起初只是想把 OS 放上 CD 出售（讲者称其为项目第一批硬件的支持者，转写含混），后来发现 FreeBSD 可作很好的服务器。（YouTube EPZf9tDJhoVbA，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3025 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3025`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Arm and the Daemon: FreeBSD's Value Realized in the Real World（Andy Waer）讲者口述：Arm 为让 ARMv8 获得良好支持，与 Cavium 的 ThunderX 平台合作，并出资赞助 FreeBSD 基金会协同社区把 ARMv8 支持做进 FreeBSD。（YouTube EPejCQebr7H0A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3026 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3026`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Arm and the Daemon: FreeBSD's Value Realized in the Real World（Andy Waer）讲者口述：Arm 的新特性先在 FreeBSD 落地、验证后再移植到 Linux，原因是在 FreeBSD 中落码容易，且不能反向操作——受许可证限制。（YouTube EPejCQebr7H0A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3027 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3027`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Arm and the Daemon: FreeBSD's Value Realized in the Real World（Andy Waer）讲者口述：Arm 的基础设施大量使用 NetApp 存储设备，而讲者称许多 NetApp 平台由 FreeBSD 驱动，故 Arm 亦以这种方式成为 FreeBSD 用户。（YouTube EPejCQebr7H0A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3028 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3028`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Arm and the Daemon: FreeBSD's Value Realized in the Real World（Andy Waer）讲者口述：Arm 的 Andrew Turner 近月把 bhyve 的核心部分上游化，并推动可伸缩向量扩展（SVE）支持落地，以便充分发挥 Graviton 3。（YouTube EPejCQebr7H0A，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
