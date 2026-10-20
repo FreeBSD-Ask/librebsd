@@ -287,3 +287,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Run ZFS in Userland（Ping Huang）讲者口述：把 ZFS 核心功能对接到不同系统——如接进 FUSE 获得 fuse 功能，也可与其他服务集成。（YouTube EP_mZArwN_eBk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3154 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3154`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pavel Zakharov - Fast File Cloning - OpenZFS Dev Summit 2014 讲者口述：该克隆特性的一大动机是支持 VMware 的 VAAI（转写音作 ai）：它是 VMware 设计的 API，旨在借助硬件加速、把部分操作从 VMware卸载（转写作 upload）到实际存储阵列上。（YouTube EP_lGOAZFXra8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3155 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3155`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pavel Zakharov - Fast File Cloning - OpenZFS Dev Summit 2014 讲者口述：讲者先概述 ZFS 的对象结构：每个文件有一个 dnode（转写作 demo），其下是间接块（转写作 internet），再其下才是数据。（YouTube EP_lGOAZFXra8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3156 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3156`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pavel Zakharov - Fast File Cloning - OpenZFS Dev Summit 2014 讲者口述：文件克隆特性的核心概念是引用节点（reference node）：克隆时除为克隆出的文件建一个 dnode（转写作 denote）外，还建一个隐藏的引用节点，同样指向原文件。（YouTube EP_lGOAZFXra8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3157 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3157`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Pavel Zakharov - Fast File Cloning - OpenZFS Dev Summit 2014 讲者口述：克隆的块回收法则：改写私有块时予以释放；改写共享块时因不知其是否仍被转写音作 electrons 的引用者使用，故保留不动。（YouTube EP_lGOAZFXra8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -97,3 +97,25 @@ volume: 第03卷-伯克利学术文化外溢影响
 <!-- dangan-20260908 消解回写 -->
 - Jacobson. Congestion Avoidance and Control[C]. 1988. ［DKC-1059→fulltext:5783］
 <!-- /dangan-20260908 -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3165 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3165`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet 讲者口述：BSD 是原始 Unix 最直接的后裔之一；在很多意义上，正是这套 Unix 系统帮助造就了今天我们所知的互联网。（YouTube EP3u8zKO8VTD0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3166 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3166`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet 讲者口述：BSD 所做的是实现 TCP/IP——日后成为全球互联网基础的核心网络协议；该协议栈整洁、可靠，且开放供研究者研读与改进。（YouTube EP3u8zKO8VTD0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3167 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3167`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet 讲者口述：互联网开始越出研究实验室与军事网络向外扩张时，BSD 的网络代码无处不在；早期互联网使用者几乎必然在协议栈的某处依赖 BSD 代码。（YouTube EP3u8zKO8VTD0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3168 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3168`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet 讲者口述：许多早期商业 Unix 系统、乃至早期版本的 Windows 网络功能，都大量借鉴了 BSD 的 TCP/IP 实现。（YouTube EP3u8zKO8VTD0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

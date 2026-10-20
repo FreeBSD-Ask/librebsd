@@ -1436,3 +1436,45 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔October 2020 OpenZFS Leadership Meeting〕讲者口述：force export 特性原为 0.7 所做、已 rebase 到 master：在 FreeBSD 上可把数据集强制导出、运行很好；在 Linux 上文件系统则会停在仍挂载却挂起的状态。（YouTube EPKzdgeBFmLl8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3147 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3147`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 2020 Hackathon Presentations 讲者口述：本届黑客松上团队在做把 zfs on linux 替换为 OpenZFS 的工作，GitHub 页面上已有若干相关 PR 打开，同时重排了站点首页。（YouTube EPSjlQAqwLAOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3148 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3148`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 2020 Hackathon Presentations 讲者口述：讲者补充提到已把 FreeBSD 安装说明放进该项目的 github.io 页面，系黑客松期间的社区文档工作成果。（YouTube EPSjlQAqwLAOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3149 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3149`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 2020 Hackathon Presentations 讲者口述：讲者展示为各相关系统整理的功能兼容清单电子表格，覆盖 FreeBSD 各主要发行版、转写音作 volumas vfs on linux 的一栏（未敢补名）、OpenZFS 2.0 及转写作 ubuntu rel、truenas、freenas 的发行版。（YouTube EPSjlQAqwLAOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3150 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3150`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS 2020 Hackathon Presentations 讲者口述：黑客松以投票揭晓获奖名次：第一名 Allan 的 zdb.copy（转写作 zdb.cp）得 28% 票，第二与第三名并列——转写所称 alakan 团队（网站与文档组）与 Paul 的内核内 Rust 模块组。（YouTube EPSjlQAqwLAOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3158 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3158`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 OpenZFS User Summit Welcome 讲者口述：办会发起于开发者清单：讲者称去年 Matt 在开发者清单上挂了“想办法把会议办得更容易”的最高优先级待办项，于是他自告奋勇接手筹办，并把这场活动定位为 Summit 而非 conference。（YouTube EPIV43dr6vkbM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3159 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3159`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 OpenZFS User Summit Welcome 讲者口述：本届峰会受 OpenZFS 行为准则约束；讲者称该准则张贴于门口、相当合理，主体大体是“尊重与耐心”。（YouTube EPIV43dr6vkbM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3160 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3160`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 OpenZFS User Summit Welcome 讲者口述：讲者致谢钻石赞助商 Delphix（现属 Perforce），称其自这场活动第一天起便是宝贵支持者，该开发者峰会已被转写称为办到第 14 年。（YouTube EPIV43dr6vkbM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3161 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3161`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2024 OpenZFS User Summit Welcome 讲者口述：社区通话会机制的演化：因 bhyve 用户几乎都是 ZFS 用户，开发者的 bhyve 通话会最终发展为 bhyve、jail 与容器以及 illumos zone 的“生产用户”通话会。（YouTube EPIV43dr6vkbM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -1395,3 +1395,85 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Why libshare? WHY!（George Wilson）讲者口述：讲者就 FreeBSD 平台是否存在同样的缺口——客户端在共享服务尚未跑完时挂载而拿到过期文件句柄——向听众征询，并自承调查不足、希望进一步了解。（YouTube EP33ZNeLO4zO8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3065 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3065`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Storage Configurator（Steven Umbehocker，OpenZFS 开发者峰会）〕讲者口述：该工具旨在把机架规模 ZFS 方案设计从 Visio 绘图中解放出来，做成可分享的 Web 应用，使方案在数分钟内成形，而不必依赖绘图工具。（YouTube EPR8hZBnCkvMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3066 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3066`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Storage Configurator（Steven Umbehocker，OpenZFS 开发者峰会）〕讲者口述：设计器的硬件兼容列表覆盖 Dell、HP、Western Digital 等主要厂商；团队以 ZFS 构建认证 QuantaStor，并完成 HA 故障切换认证测试。（YouTube EPR8hZBnCkvMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3067 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3067`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Storage Configurator（Steven Umbehocker，OpenZFS 开发者峰会）〕讲者口述：设计器会依据输入的服务器或磁盘单价自动计算硬件每 TB 成本，便于在随容量调整方案时比较成本。（YouTube EPR8hZBnCkvMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3068 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3068`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Storage Configurator（Steven Umbehocker，OpenZFS 开发者峰会）〕讲者口述：讲者计划将该工具开源并放到 GitHub；当时尚未发布，因自认代码不够整洁，正在重构后再公开。（YouTube EPR8hZBnCkvMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3111 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3111`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZFS & Containers by Michael Crogan〕讲者口述：讲者称其初衷是找不到好用的 ZFS 同步工具，也缺少把 ZFS 后端与 OpenVZ 结合起来的通行做法，于是自行处理 ZFS 同步。（YouTube EPHOCihVmsbwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3112 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3112`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZFS & Containers by Michael Crogan〕讲者口述：讲者把这项工作定位为 ZFS 去重（转写作 dee doop）的一种替代，理由是 ZFS 去重以昂贵著称。（YouTube EPHOCihVmsbwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3113 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3113`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZFS & Containers by Michael Crogan〕讲者口述：讲者称在 OpenVZ 中为整个系统镜像做检查点效率很高：若应用只占 200 MB，就写出一个 200 MB 的镜像代表整个系统状态；相比之下发送整台虚拟机可能要 8 GB 或 16 GB。（YouTube EPHOCihVmsbwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3114 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3114`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ZFS & Containers by Michael Crogan〕讲者口述：讲者提出一项 ZFS 上游增强设想：当时无法事后开启加密；若可以，就能用一个工作密钥把对公开数据集所做的私有专有改动加密起来。（YouTube EPHOCihVmsbwQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3115 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3115`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude: ZFS BoF - BSDCan 2017〕讲者口述：讲者称其已接近完成把 Zstandard（转写作 Zed standard，即 Facebook 为 ZFS 提出的新压缩算法）做进 ZFS；按默认设置，FreeBSD 基本系统压缩比为 2.65:1，源码树为 2.82:1。（YouTube EPAFiH42nbcU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3116 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3116`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude: ZFS BoF - BSDCan 2017〕讲者口述：讲者以自家约 60 TB 写入量的大视频负载为例：改用 1 MB 块而非 128 KB 块，可省下约 6 TB 空间，因为元数据写少了约 7 倍。（YouTube EPAFiH42nbcU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3117 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3117`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude: ZFS BoF - BSDCan 2017〕讲者口述：讲者称进入 OpenZFS（转写作 opens NFS）的东西几乎都在约 30 天内进了FreeBSD（转写作 previously had），最快一例是 OpenZFS 提交到 FreeBSD 提交之间只隔 14 小时。（YouTube EPAFiH42nbcU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3118 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3118`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Allan Jude: ZFS BoF - BSDCan 2017〕讲者口述：讲者称 ZFS 加密提供两种密码可选，AES-GCM 或 AES-CCM，而 OpenCrypto 框架当时还没有 CCM 的实现，并称已在为此催办。（YouTube EPAFiH42nbcU4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3135 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3135`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Securing the Cloud with ZFS Encryption（Jason King）〕讲者口述：每台计算节点只用一把密钥加密整个 zpool；因容器与虚拟机的镜像全都是 ZFS 快照与克隆的产物，更细粒度的密钥既不带来收益，管理上又极为复杂。（YouTube EPkFuo5bDj8C0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3136 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3136`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Securing the Cloud with ZFS Encryption（Jason King）〕讲者口述：保护 zpool 密钥用的是 PIV token（转写音作 pivot oaken's），主要是 YubiKey（转写音作 ub keys），凡实现 PIV 标准（转写音作 pip）者皆可使用。（YouTube EPkFuo5bDj8C0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3137 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3137`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Securing the Cloud with ZFS Encryption（Jason King）〕讲者口述：选择 YubiKey（转写音作 UV keys）而非 HSM 的理由是便宜一个数量级：YubiKey 约 40–50 美元，HSM 每台约 500 美元；按数千台机器计成本会累积，故头节点与计算节点可考虑不同方案。（YouTube EPkFuo5bDj8C0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3138 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3138`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Securing the Cloud with ZFS Encryption（Jason King）〕讲者口述：恢复机制采用密钥托管：密钥以 Shamir 秘密共享（转写音作 samir）拆分，讲者举例称若分成十份、阈值为五，则只持有四份也得不到最终密钥的任何信息，另可把份额交给持有个人 YubiKey 的人员，经质询—应答流程恢复。（YouTube EPkFuo5bDj8C0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

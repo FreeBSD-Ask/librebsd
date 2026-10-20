@@ -187,3 +187,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔BSDCan 2019 开发者峰会“Testing and Continuous Integration (CI)”工作小组讨论〕讲者口述：讲者称 FreeBSD 的测试套件当时约有 7400 个测试用例，其中他估计约五至十个属于不稳定（flaky）用例，并说当前识别 flaky 用例的办法很原始——只能逐次收到构建失败报告后凭印象回忆、回看历史构建来比对。（YouTube EPnJP0nJM4er4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3131 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3131`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05A: Continuous Integration of The FreeBSD Project - Li Wen Hsu〕讲者口述：CI 的测试环境以 bhyve（转写音作 beehive/behaved/behave）作虚拟机监控器：amd64 与 i386 的测试用 bhyve，其他架构则改用 QEMU（转写音作 Q gesture）。（YouTube EPF8i_GYDmvgQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3132 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3132`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05A: Continuous Integration of The FreeBSD Project - Li Wen Hsu〕讲者口述：该持续集成构建并测试源码树与文档树，按多个架构分支分别进行，测试中也包含 GCC 相关的构建。（YouTube EPF8i_GYDmvgQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3133 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3133`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05A: Continuous Integration of The FreeBSD Project - Li Wen Hsu〕讲者口述：除测试外项目还产出虚拟机镜像，以与其对外提供产物相同的方式发布，使任何人都能取到测试所用镜像自行复现结果。（YouTube EPF8i_GYDmvgQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3134 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3134`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05A: Continuous Integration of The FreeBSD Project - Li Wen Hsu〕讲者口述：构建失败或不稳定时，CI 用邮件扩展发出通知（邮件正文按转写所称方式生成）。（YouTube EPF8i_GYDmvgQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

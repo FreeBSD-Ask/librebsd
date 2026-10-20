@@ -175,3 +175,25 @@ volume: 第09卷-netbsd的历史
 
 据〔Improving modularity of NetBSD’s compat code（讲者仅自报姓名 Paul）讲者口述：第二步是把 compat 代码拆成按版本分立的模块（compat_5.0、compat_6.0、compat_7.0 之类），从而可逐步回退更多版本，并在不再需要时只卸掉那一段，而不必整体卸载。（YouTube EPTarGM0f3_x0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3081 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3081`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting GNOME to NetBSD by Dan Cirnat〕讲者口述：讲者称 Pax 最初是 Linux 内核的一个补丁，搁置多年、从未被上游接受；NetBSD 集成了其中部分安全特性（转写所称 including and protect，即 mprotect 一类）。（YouTube EPAGwaT5rQML0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3082 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3082`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting GNOME to NetBSD by Dan Cirnat〕讲者口述：讲者称他为支持这项内存保护，花时间修改了 SpiderMonkey（Mozilla 的 JavaScript 引擎），因为 GNOME Shell 会动态加载它。（YouTube EPAGwaT5rQML0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3083 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3083`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting GNOME to NetBSD by Dan Cirnat〕讲者口述：讲者称 GDM 存在循环依赖：GDM 显示登录界面需要 gnome-shell 包来渲染 UI（含日历等控件），而若要构建 gnome-shell 又必须先装上 gdm。（YouTube EPAGwaT5rQML0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3084 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3084`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting GNOME to NetBSD by Dan Cirnat〕讲者口述：讲者称 GNOME 对 logind 是硬依赖：GNOME 至少数年前已移除 console-kit 等其他 seat 管理支持，因此他们从 OpenBSD 导入的补丁大多是为了重新引入 console-kit 支持。（YouTube EPAGwaT5rQML0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

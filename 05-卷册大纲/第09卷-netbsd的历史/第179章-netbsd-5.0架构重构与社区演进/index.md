@@ -194,3 +194,25 @@ volume: 第09卷-netbsd的历史
 
 据〔NFS scripting with Lua（Lourival Viera Neto）〕讲者口述：SSH 版本检测示例只有 12 行 Lua 代码，在 100 兆网络接口上实测开与不开脚本吞吐都约 96 兆，无可感开销。（YouTube EPLoJ4Bg2P0nc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3094 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3094`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible builds on NetBSD - Christos Zoulas〕讲者口述：讲者界定可重现构建（转写音作 revolution build）关乎：确保从源码树／仓库一路到分发介质的路径产生完全相同的结果。（YouTube EP7nlJboDPMe4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3095 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3095`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible builds on NetBSD - Christos Zoulas〕讲者口述：讲者称自当年二月起，NetBSD 在转写所称 spartax before 与 x86 64 两种架构上已达成可再现，并在 Debian 的基础设施上每周构建。（YouTube EP7nlJboDPMe4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3096 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3096`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible builds on NetBSD - Christos Zoulas〕讲者口述：讲者承认 NetBSD 仍在用 CVS，称 CVS 只有逐文件（转写所称 five by five）视角、没有全局视图，且 update 与 checkout 语义不同——update 会把文件时间戳置为当前时间。（YouTube EP7nlJboDPMe4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3097 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3097`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Reproducible builds on NetBSD - Christos Zoulas〕讲者口述：讲者称其做法是把目标文件的权限追加进转写所称 metal of／metal log 记录，构建文件系统时让工具从该记录查阅这些路径的权限并写入产物，从而无需 root 也能构建出相同结果。（YouTube EP7nlJboDPMe4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -238,3 +238,20 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔P03A: Xen HVMlite and FreeBSD（Roger Pau Monné）讲者口述：动态 ACPI 表无法直接修改：要改就得先解码表、修改后再编译回去（转写音作 from pile them again，疑为 compile them again），然后放进客户机（转写音作 gas）内存空间。（YouTube EPYVHBWeomuak，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3108 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3108`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtualized Network Infrastrukture for VM Clusters - Albert Dengg - EuroBSDcon 2022〕讲者口述：讲者称在虚拟机内关闭 offloading 特性后，若干严重问题随之消失。（YouTube EP3dM5P0wC16k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3109 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3109`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtualized Network Infrastrukture for VM Clusters - Albert Dengg - EuroBSDcon 2022〕讲者口述：讲者称源自防火墙自身的流量一切正常，但大多数只是穿过这台路由器的流量其包被处理得失真（转写作 enveloped had invalid），因而在中途被丢弃。（YouTube EP3dM5P0wC16k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3110 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3110`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Virtualized Network Infrastrukture for VM Clusters - Albert Dengg - EuroBSDcon 2022〕讲者口述：讲者指出 carp 与 vrrp 使用同一个协议 ID（转写作 carp、vrrp）。（YouTube EP3dM5P0wC16k，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -233,3 +233,10 @@ volume: 第10卷-openbsd的历史
 
 据〔Michael W. Lucas 讲者〕讲者口述：OpenBSD 内置面向 ACME（自动证书管理环境）的 acme 客户端，讲者称这是他所见过最简洁好用的 ACME 客户端，签发的证书有效期为九十天。（YouTube EPu-62QXjhLxk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3119 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3119`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：自称 Nadav Varel、任职 Claudio Systems 的讲者介绍其面向云虚拟机的操作系统 OSv 时称，该项目复用既有代码，其中包括取自 FreeBSD 的 ZFS 文件系统；网络栈也是以 FreeBSD 网络栈为起点，再改成 Van Jacobson 的 network channels 设计。（YouTube EPKN2m2ToxlMM，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

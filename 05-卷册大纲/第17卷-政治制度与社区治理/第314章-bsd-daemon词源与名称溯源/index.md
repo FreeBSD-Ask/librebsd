@@ -158,3 +158,20 @@ volume: 第17卷-政治制度与社区治理
 
 据〔The History of the BSD Daemon（Marshall Kirk McKusick 演讲）〕讲者口述：4.2BSD 手册由 USENIX 代印，因为当时要用 UNIX 必须持有 AT&T 的许可，而 USENIX 持有该许可，才能确保手册只卖给具备相应授权的人；4.2BSD 手册封面上的 daemon 手中发光球体印着 “Unix TM”，后来这成了麻烦的根源（a bone of contention），此后的某些版本里 daemon 手中只剩一个什么都不写的发光球体。（YouTube EPF9mtbe9vw90，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3162 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3162`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day: Interview with Beastie, the BSD Daemon 讲者口述：FreeBSD Day 直播访谈中，BSD daemon 吉祥物 Beastie 自述其最重要角色是“带一点淘气的终极啦啦队长”——在编码会与通宵调试中维持士气，领导力则体现为做个 stylish demon。（YouTube EPZwlUjDBp5-Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3163 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3163`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day: Interview with Beastie, the BSD Daemon 讲者口述：主持人称吉祥物以贴纸形式“在精神上”出席基金会的活动，且人们很喜欢它们——揭示 BSD daemon 符号在社区活动中的实物载体与传播方式。（YouTube EPZwlUjDBp5-Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3164 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3164`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Day: Interview with Beastie, the BSD Daemon 讲者口述：访谈以吉祥物对答呈现 BSD 与 Linux 的竞争叙事：转写音作 Tux 的企鹅吉祥物吹嘘 Linux 从手机到飞船无处不在，Beastie 回应 FreeBSD 也运行在很酷的地方，如承载其流媒体节目的 Netflix 服务器。（YouTube EPZwlUjDBp5-Y，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

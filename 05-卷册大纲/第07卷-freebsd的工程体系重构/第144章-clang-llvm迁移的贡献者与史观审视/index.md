@@ -155,3 +155,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔AsiaBSDCon 2014 David Chisnall 演讲 The Future of LLVM in the FreeBSD Toolchain〕讲者口述：那条追踪 FreeBSD 构建阻塞项的 meta bug 在 2011 年 5 月关闭，此后 FreeBSD 的 base system 在 x86 上完全可用 clang 编译。（YouTube EPNLqDAclXMMU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3139 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3139`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: LLDB on FreeBSD, Moritz Systems〕讲者口述：与 FreeBSD 基金会的第一份合约在 2020 年开始并完成，为期三个月，主要做 LLDB 调试改进（转写音作 lgbt），目标是让 FreeBSD 相关代码更现代，在代码库层面追上 Linux 与 NetBSD。（YouTube EPE3-lDo2ftAo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3140 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3140`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: LLDB on FreeBSD, Moritz Systems〕讲者口述：第二份合约在该年（2021）年初开始，主题是 LLDB 的 CPU target 支持与用户态调试改进，按四个月四个里程碑推进，并确保 FreeBSD 的 LLDB 特性在非 x86 平台上得到恰当支持。（YouTube EPE3-lDo2ftAo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3141 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3141`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: LLDB on FreeBSD, Moritz Systems〕讲者口述：讲者称其工作的目标是替代 GDB 调试栈——该栈由自由软件基金会以 GPL 第 3 版发布（转写音作 gnome utils 的 GDB、gps version 3）；而 LLDB 以可复用许可发布，现为 Apache 2.0，这更符合 BSD 与 FreeBSD 的精神。（YouTube EPE3-lDo2ftAo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3142 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3142`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔November 2021 FreeBSD Vendor Summit: LLDB on FreeBSD, Moritz Systems〕讲者口述：为去掉 FreeBSD 项目对旧版调试器的依赖，2004 年的 GDB 6.1.1（转写音作 gdp）在第一份合约之后的去年被移除，最终移除由转写音作 atmast 者完成。（YouTube EPE3-lDo2ftAo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

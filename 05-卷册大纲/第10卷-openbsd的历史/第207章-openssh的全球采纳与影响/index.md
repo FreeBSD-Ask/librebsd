@@ -138,3 +138,25 @@ volume: 第10卷-openbsd的历史
 
 据〔Intercom 生产 SSH 访问管理改用 OpenSSH 证书（Niall Sheridan，SREcon）讲者口述：不推荐使用 GPG agent，尽管它带 SSH agent 支持，但完全不支持证书（讲者称为 bug 且对方无修复计划）。（YouTube EPNCEQj27A3XA，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3073 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3073`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者回顾公钥密码缓存时序攻击史，称其始于 2005 年前后 Colin Percival 对 RSA 的一次缓存攻击：用 evict plus reload 攻击 L1 数据缓存恢复秘密指数，针对的是 OpenSSH 1.97 版本。（YouTube EPAvsNSRPtmG8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3074 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3074`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称因这些攻击，OpenSSL 于 2005 年引入转写所称的 DN flag exponential const time 标志，并让执行模幂的方法走恒定时间实现，该改动被明确归于 Colin Percival 的工作，使 RSA 指数得以保护。（YouTube EPAvsNSRPtmG8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3075 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3075`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者读源码后指出一处具体缺陷：ECDSA 签名对随机数 k 求模逆时，本应在标志置位时转入无分支的恒定时间安全版本，但该标志并未置位，代码从不进入安全分支，而是继续走普通的二进制扩展欧几里得算法；该算法已被证明高度依赖其输入。（YouTube EPAvsNSRPtmG8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3076 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3076`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：关于补丁去向，讲者称他们向各密码库提交了补丁：转写所称 OpenSSH 1.01 在其当年年初已达生命周期终点，对方因此未收补丁并称不再提供支持；boringness 在 2015 年有过该问题、被发现时已不存在；libreSSL 则迅速应用了该补丁。（YouTube EPAvsNSRPtmG8，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
