@@ -55,3 +55,25 @@ volume: 第09卷-netbsd的历史
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2909 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2909`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔S.P.Zeidler: NPF in NetBSD 6（P2B, AsiaBSDCon 2013）讲者口述：NPF 的全部目的在于设计并验证能在多个 CPU 上同时做包过滤的方案；讲者称 IP Filter 与 PF 都不做多处理器处理（原话带“若我说错请纠正”的保留，转写音作 to our budget processing）。（YouTube EPl9i016yBwxU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2910 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2910`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔S.P.Zeidler: NPF in NetBSD 6（P2B, AsiaBSDCon 2013）讲者口述：为使状态存储利于按 CPU 扩展，NPF 采用多棵红黑树：树数当前硬编码为 1024（计划改为可配置），每树各有一把锁（转写音作 retried lock），并按源／目的地址、接口与协议哈希选树。（YouTube EPl9i016yBwxU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2911 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2911`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔S.P.Zeidler: NPF in NetBSD 6（P2B, AsiaBSDCon 2013）讲者口述：NPF 核心在 6.0 与 6.1 之间有重大改动：其 SMP 处理路径在 6.0 中尚属未经测试，到 6.1 团队认为已足够稳定，遂启用该部分。（YouTube EPl9i016yBwxU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2912 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2912`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔S.P.Zeidler: NPF in NetBSD 6（P2B, AsiaBSDCon 2013）讲者口述：讲者解释 NetBSD 已有 IP Filter 与 PF 仍另建 NPF 的理由：要试验新算法与新基础设计，从零开始更容易，不必顾及既有配置、既有用户与既有框架（转写音作 IP to，疑指 IPF）。（YouTube EPl9i016yBwxU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

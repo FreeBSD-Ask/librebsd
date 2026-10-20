@@ -222,3 +222,25 @@ volume: 第09卷-netbsd的历史
 
 据〔Advances in Embedded ARM processors（Dmitri Epshtein，Marvell）讲者口述：近年很多公司从 VxWorks 这类老操作系统迁到 BSD 或 Linux；讲者自述五六年前自己的活多在 VxWorks，如今多在 Linux 或 BSD 上。（YouTube EPJ-FLykTaHRo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3001 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3001`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05C Peripheral side USB support for NetBSD（Hiroyuki Bessho）〕讲者口述：设备可不经重启变换 USB 形态——如手机先作 USB 摄像头连到 PC，再变成 USB 大容量存储乃至打印机；USB 规范并未定义这类转变，故需要为此设计的框架。（YouTube EPlleYSD3defE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3002 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3002`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05C Peripheral side USB support for NetBSD（Hiroyuki Bessho）〕讲者口述：OpenBSD 多年前即有 USB 外设侧支持，但只有一个单一接口的设备接口（转写音作 XI D，疑为 HID），系 OpenBSD 开发者为特定用途所写。（YouTube EPlleYSD3defE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3003 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3003`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05C Peripheral side USB support for NetBSD（Hiroyuki Bessho）〕讲者口述：另一系统（疑为 Linux）多年前已有 USB 外设侧支持，其框架提供的特性与讲者的设计目标非常相似。（YouTube EPlleYSD3defE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3004 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3004`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P05C Peripheral side USB support for NetBSD（Hiroyuki Bessho）〕讲者口述：框架按“控制管道能否共享”约束接口组合：FTDI 模拟驱动要独占控制管道，导致 CDC 驱动无法与之组合进同一设备。（YouTube EPlleYSD3defE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

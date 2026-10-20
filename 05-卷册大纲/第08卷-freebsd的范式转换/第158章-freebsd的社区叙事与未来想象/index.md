@@ -213,3 +213,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔EuroBSDcon 2024 演讲中播放的用户访谈视频（受访者 Daniel）〕讲者口述：其原为多年 Windows 用户，因看到一段 70 年代 Brian Kernighan 把脚搁在桌上演示命令行的视频而被吸引进入命令行世界，随后厌倦微软生态而转向 FreeBSD 等替代操作系统。（YouTube EPMsPaSC0x4jY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3041 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3041`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: Awards and FreeBSD Trivia〕讲者口述：Deb（FreeBSD 基金会）致闭幕辞：本场开发者峰会议题之多样令她惊讶，效果更像一届 FreeBSD 会议，逾 260 人注册观看并参与。（YouTube EP-fs3XG3_nGY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3042 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3042`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: Awards and FreeBSD Trivia〕讲者口述：为表彰 John Baldwin，Ed Maste 现场查 git：其可考首个提交在 1999 年 9 月 25 日，src/doc 中共 6888 次提交、另有 162 次 import；其工作遍及 FreeBSD 各领域、尤以内核的深度技术工作最为知名。（YouTube EP-fs3XG3_nGY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3043 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3043`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: Awards and FreeBSD Trivia〕讲者口述：trivia 环节：因 USL 诉讼从 4.4BSD NET/2（network release 2）中移除的文件是 3 个——而就这 3 个文件，工作量已如一座小山。（YouTube EP-fs3XG3_nGY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3044 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3044`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔June 2021 FreeBSD Developer Summit: Awards and FreeBSD Trivia〕讲者口述：trivia 环节：已从 FreeBSD 源码树移除的架构共 4 个，现场由 John Baldwin 逐一报出：alpha、pc98、ia64、sparc64。（YouTube EP-fs3XG3_nGY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

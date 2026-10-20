@@ -335,3 +335,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Performance（George Wilson，OpenZFS Dev Summit 2014）讲者口述：新算法（绿色曲线）使曲线趋于平缓，在 80% 容量处不再出现断崖式下跌，相对去年的数值约有 73 的改进。（YouTube EPdeJc0EMKrM4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3009 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3009`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔First December 2025 OpenZFS Leadership Meeting〕讲者口述：PR 17970 提高并行驱逐，使 ARC 驱逐在大块场景下快得多；旧代码每线程要排队等待 10 个 ARC 头的任务队列完成，代价很高。（YouTube EP_iOiAbq_hJw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3010 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3010`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔First December 2025 OpenZFS Leadership Meeting〕讲者口述：改进 metaslab 排序以更可靠地选中更好的 metaslab，实测 gang block 明显减少——因为能找到现成空间，不必过早降级到 ganging。（YouTube EP_iOiAbq_hJw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3011 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3011`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔First December 2025 OpenZFS Leadership Meeting〕讲者口述：AnyRAID 的首个 PR 只做镜像；团队正做 RAID-Z 版本，希望在大规模铺开前收到对总体设计、尤其是盘上格式（tile 映射）的反馈。（YouTube EP_iOiAbq_hJw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3012 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3012`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔First December 2025 OpenZFS Leadership Meeting〕讲者口述：生产团队上月发现自动挂载快照的死锁（共三个独立问题、两个已合并）：两个进程竞态自动挂载时都往 AVL 添加条目，后者触发“条目非唯一”断言。（YouTube EP_iOiAbq_hJw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

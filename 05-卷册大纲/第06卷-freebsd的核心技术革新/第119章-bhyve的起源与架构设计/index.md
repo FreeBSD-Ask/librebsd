@@ -385,3 +385,65 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔bhyve WIP: suspend and resume, ARMv8 Update 讲者口述：ARMv8 上 stage-1 与 stage-2 转换表结构不同——stage-2 表深三层而非四层、表项也不同；讲者为此在内核中实现了一种新的转换表类型，该类型只供 bhyve 做虚拟化使用。（YouTube EPX0V4Z_VDG1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2913 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2913`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD VPC（Sean Chittenden）讲者口述：为承载 GPU 工作负载，团队需要实现设备直通（转写音作 device pastor's，即 device passthrough），把 GPGPU 卡直通给客户机及其工作负载。（YouTube EPOd4FjS022xc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2914 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2914`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD VPC（Sean Chittenden）讲者口述：bhyve（转写音作 beehive／behind）整体专注于计算隔离，对网络隔离没有理解——这不是它的缺陷，其专注点正是提供一层很好的硬件虚拟化（转写音作 harbor virtualization）。（YouTube EPOd4FjS022xc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2915 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2915`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD VPC（Sean Chittenden）讲者口述：把客户机接进 bridge 虽有某种网络隔离、能通，但性能糟糕——团队实测大概只能跑到 8 Gbit/s（转写音作 eight gigabit source of a second，疑为 eight gigabits per second），因此 bridge 在一般情形下不可用。（YouTube EPOd4FjS022xc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2916 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2916`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD VPC（Sean Chittenden）讲者口述：VXLAN（转写音作 excellent）实质上是 VLAN 标签的 IP 版本：标签不放以太网帧头而放进 IP，整个以太网帧被封装进去，因此 VLAN 标签还可以再运行于 VXLAN 封装包之内。（YouTube EPOd4FjS022xc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3033 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3033`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10C: bhyve ARM: Current State Analysis and An Overview of the Porting Process - Mihai Carabas〕讲者口述：Xen 写于裸机之上，是只支持运行操作系统的 type 1 hypervisor；而 bhyve 选择做 type 2，为的是利用 FreeBSD 的内存管理、进程管理等整套管理机制，不必从零写一个 hypervisor。（YouTube EPxnEiL_Buqf0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3034 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3034`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10C: bhyve ARM: Current State Analysis and An Overview of the Porting Process - Mihai Carabas〕讲者口述：移植没有沿用 x86 的 vmm 接口，而是新建了一个内核模块，负责管理 hypervisor 状态、宿主与客体操作系统间的上下文切换、客体物理内存等事务。（YouTube EPxnEiL_Buqf0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3035 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3035`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10C: bhyve ARM: Current State Analysis and An Overview of the Porting Process - Mihai Carabas〕讲者口述：为实现虚拟化，ARM 引入 stage 2 地址翻译：在原有（虚拟地址→物理地址）映射之外新增一层，把虚拟机的物理地址再映射到真实物理地址。（YouTube EPxnEiL_Buqf0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3036 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3036`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P10C: bhyve ARM: Current State Analysis and An Overview of the Porting Process - Mihai Carabas〕讲者口述：ARM 硬件提供的接口可由 VMM 直接使用：中断控制器的 CPU interface 一侧已有硬件虚拟化，只需把该虚拟接口映射给客体；而 distributor 一侧则必须在 VMM 中模拟。（YouTube EPxnEiL_Buqf0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3045 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3045`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2022〕讲者口述：讲者所在公司（转写音 backup Automation）客户熟悉并要求 Windows 界面，故以 bhyve 启动 Windows 虚拟机，把一台外观是 Windows 机器的设备交给用户，而其底层是运行 hypervisor 的 FreeBSD；公司自身软件的集成则已决定从 Windows 转向 FreeBSD。（YouTube EPvnicQZvW0vs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3046 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3046`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2022〕讲者口述：AMD 独显直通的障碍在固件侧：固件须先 shadow（复制）video BIOS，客户机操作系统会去找这份拷贝；OVMF 若不做，客户 VM 便找不到 video BIOS 而无法使用——bhyve 侧的 video BIOS 支持已实现并上游化，客户侧（OVMF）尚缺。（YouTube EPvnicQZvW0vs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3047 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3047`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2022〕讲者口述：Intel 核显直通难打通，因其带有非标准 PCI 资源：其一是 graphics stolen memory（转写音 graphic store），须保证这块内存被分配并以某种方式指派给设备；其二是 OpRegion，除分配指派外还须与宿主配置匹配。（YouTube EPvnicQZvW0vs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3048 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3048`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔GPU passthrough with bhyve - Corvin Köhne - EuroBSDcon 2022〕讲者口述：Intel 核显直通须挂在 PCI slot 2：核显总是位于 slot 2，许多驱动把该位置写死、不扫描总线上的其他位置。（YouTube EPvnicQZvW0vs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

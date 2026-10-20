@@ -264,3 +264,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔Slackathon 2009: Active-Active — high performance firewalling with PF〕讲者口述：active-active 的定义是两台 PF 防火墙同时处理同一条连接的包——请求走一台、回包落到另一台。（YouTube EPXvJAV9qI14Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2973 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2973`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Can you fit 500M of rules into a firewall?（Boris Lytochkin, EuroBSDcon 2024）〕讲者口述：讲者所在机构约有 400 台负责路由与过滤的路由器，全部运行 FreeBSD；讲题即建立在这批服务器上的动态防火墙。（YouTube EPyYxlVthhCpc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2974 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2974`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Can you fit 500M of rules into a firewall?（Boris Lytochkin, EuroBSDcon 2024）〕讲者口述：该防火墙在内核中运行约 5 万条规则、覆盖约 6.5 万用户；把单用户账户与目的 IP 展开后，规则集规模达约 5.7 亿条表项。（YouTube EPyYxlVthhCpc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2975 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2975`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Can you fit 500M of rules into a firewall?（Boris Lytochkin, EuroBSDcon 2024）〕讲者口述：FreeBSD 内核数年前集成了 mark 机制，用法类似 Linux 的 fwmark；它是 32 位无符号数，可存入报文的标签并配合 IPFW 的 set mark／mark 动作与查表。（YouTube EPyYxlVthhCpc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2976 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2976`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Can you fit 500M of rules into a firewall?（Boris Lytochkin, EuroBSDcon 2024）〕讲者口述：讲者提交的差分补丁把 IPFW 规则号扩到 32 位，以缓解 6.5 万条规则号上限；但他指出逐条顺序求值仍然太慢，不能作为大规模规则集的方案。（YouTube EPyYxlVthhCpc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

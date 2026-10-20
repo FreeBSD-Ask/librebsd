@@ -113,3 +113,25 @@ volume: 第10卷-openbsd的历史
 <!-- dangan-20260908 消解回写 -->
 - SSH Communications Security 1999 商业许可证声明 [EB/OL]. 1999. <https://www.ssh.com/>
 <!-- /dangan-20260908 -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2957 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2957`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W Lucas: SSH Key Management（BSDCan 2018）讲者口述：SSH 证书体系只需加密与签名两种技术特性，而两者都在常规 SSH 密钥里——所谓 SSH 证书颁发机构（CA）就是你决定拿来当 CA 用的那把 SSH 密钥；这与 Web 的 TLS X.509 体系很不同。（YouTube EPFVT7sepck68，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2958 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2958`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W Lucas: SSH Key Management（BSDCan 2018）讲者口述：讲者自述：其旧授权文件里还留着他有史以来创建的第一把 SSH v1 用户认证公钥——直到 FreeBSD 集群禁用 SSH v1、他突然登不上 freefall 才注意到。（YouTube EPFVT7sepck68，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2959 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2959`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W Lucas: SSH Key Management（BSDCan 2018）讲者口述：大机构（UID 超过六万五千、不愿人人直连 LDAP）需要 principals（转写音作 principles）——不绑定主机名或 UID 的命名实体，可任意结构化，并被授权经 SSH 登录；例如可授权某 principal 以 root 登录。（YouTube EPFVT7sepck68，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2960 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2960`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Michael W Lucas: SSH Key Management（BSDCan 2018）讲者口述：与 Kerberos 对比，讲者主张工具而非政策：证书的优点是网络可以宕机而多数情况下仍能登录——只要 authorized_principals 已分发，即便 Kerberos 控制器化为焦土也照样能登录。（YouTube EPFVT7sepck68，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

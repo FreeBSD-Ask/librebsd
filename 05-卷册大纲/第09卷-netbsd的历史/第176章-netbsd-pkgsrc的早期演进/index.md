@@ -101,3 +101,25 @@ volume: 第09卷-netbsd的历史
 
 据〔AsiaBSDCon 2014《Carve your NetBSD》Pierre Pronchery、Guillaume Lasmayous 讲〕讲者口述：讲者称 NetBSD 用的是 CVS——他承认这工具本身不错、自己也喜欢——但它是集中式的，厂商这类需要去中心化开发的角色很难把它当去中心化系统来用。（YouTube EPvh-TjLUj6os，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2929 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2929`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔devsetup local development environment based on pkgsrc（Pierre Pronchery, EuroBSDcon 2022）讲者口述：pkgsrc（转写音作 package shows／packet Source）是 NetBSD 的官方软件包来源，也可用于其他操作系统：NetBSD 支持 16 种架构，pkgsrc 同样覆盖，此外还支持 23 种其他操作系统（Linux 只是其中之一）。（YouTube EPR_gQ44lDlEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2930 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2930`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔devsetup local development environment based on pkgsrc（Pierre Pronchery, EuroBSDcon 2022）讲者口述：pkgsrc 无特权（unprivileged）模式由若干变量驱动：UNPRIVILEGED 以 yes／no 开启，写进 pkgsrc 的 make 配置；UNPRIVILEGED_USER 默认为当前用户，组与所属组同理。（YouTube EPR_gQ44lDlEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2931 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2931`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔devsetup local development environment based on pkgsrc（Pierre Pronchery, EuroBSDcon 2022）讲者口述：pkgtools 中的 rc.d server 包源自 NetBSD——本是其 init 系统中负责运行服务的部分，打包后可在任何地方利用 NetBSD 的 rc.d 系统（转写音作 net DSD）；讲者发现其在无特权模式下不受支持，遂动手修补。（YouTube EPR_gQ44lDlEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2932 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2932`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔devsetup local development environment based on pkgsrc（Pierre Pronchery, EuroBSDcon 2022）讲者口述：讲者自建的 devsetup 把 pkgsrc 的所有包收进单一脚本管理，借 pkgsrc 约三个月一次的发布节奏（转写音作 really cycle，疑为 release cycle）获得持续更新。（YouTube EPR_gQ44lDlEc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

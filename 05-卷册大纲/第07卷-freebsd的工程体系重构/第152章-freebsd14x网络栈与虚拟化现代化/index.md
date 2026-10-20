@@ -216,3 +216,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔BSDCan 2017 Fodil-Lemelin 与 Paeps“Not simply pieces of string”讲座〕讲者口述：MSTP 实现拟随 FreeBSD 12 落地；已有大体可用的原型挂在讲者名下的 GitHub MSTP 分支，但因状态迁移远多于常规 STP，暴露出桥接代码中的若干死锁。（YouTube EP_3t8xFKCA48，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2921 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2921`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A: Xen HVMlite and FreeBSD（Roger Pau Monné）讲者口述：设计目标之一：尽可能使用硬件扩展（转写音作 hardwire extensions）以提升虚拟化速度，并尽量减少暴露给客户机（转写音作 gas）的设备数量。（YouTube EPYVHBWeomuak，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2922 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2922`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A: Xen HVMlite and FreeBSD（Roger Pau Monné）讲者口述：讲者小结特征目标：尽可能使用虚拟化扩展（转写音作 visualization extensions）、摆脱 QEMU（转写音作 p.m.），并限制为提供设备服务所需的代码行数。（YouTube EPYVHBWeomuak，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2923 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2923`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A: Xen HVMlite and FreeBSD（Roger Pau Monné）讲者口述：以 FreeBSD 内核编译（转写音作 government，疑为 compilation）为基准的比较中，性能也完全相同。（YouTube EPYVHBWeomuak，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2924 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2924`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P03A: Xen HVMlite and FreeBSD（Roger Pau Monné）讲者口述：动态 ACPI 表无法直接修改：要改就得先解码表、修改后再编译回去（转写音作 from pile them again，疑为 compile them again），然后放进客户机（转写音作 gas）内存空间。（YouTube EPYVHBWeomuak，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
