@@ -240,3 +240,25 @@ volume: 第10卷-openbsd的历史
 
 据〔会议不详〕讲者口述：自称 Nadav Varel、任职 Claudio Systems 的讲者介绍其面向云虚拟机的操作系统 OSv 时称，该项目复用既有代码，其中包括取自 FreeBSD 的 ZFS 文件系统；网络栈也是以 FreeBSD 网络栈为起点，再改成 Van Jacobson 的 network channels 设计。（YouTube EPKN2m2ToxlMM，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3085 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3085`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting an OpenBSD daemon and its security concepts from C to Rust by Reyk Floeter〕讲者口述：讲者自述该项目有“著名的多次更名史”：由转写所称 post city 改为 host state d，其后再改名为 relayd；后一次更名发生在意大利的 open corn（转写音作）。（YouTube EPgShrmAvYmec，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3086 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3086`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting an OpenBSD daemon and its security concepts from C to Rust by Reyk Floeter〕讲者口述：relayd 不实现任何线程：即使在 layer 7 模式下也只是 fork 出若干工作进程，每个进程各自使用转写音作 lip event 的库与异步 IO。（YouTube EPgShrmAvYmec，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3087 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3087`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting an OpenBSD daemon and its security concepts from C to Rust by Reyk Floeter〕讲者口述：把 relayd 改写为 Rust 的首要设计目标是保留特权分离：宁可维持多进程隔离任务，也不要只把一个胖二进制丢进 docker 容器了事；讲者称这在 Rust 中要像原先在 C 里那样做。（YouTube EPgShrmAvYmec，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3088 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3088`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Porting an OpenBSD daemon and its security concepts from C to Rust by Reyk Floeter〕讲者口述：讲者称 BSD 上对 Rust 的支持很好，有人在努力把 Rust 弄进 OpenBSD，也听到有人在用 Rust重写东西，但这一切目前都不是官方支持；他不认为转写所称 leo 有意让 Rust 进入 OpenBSD。（YouTube EPgShrmAvYmec，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
