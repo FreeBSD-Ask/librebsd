@@ -203,3 +203,25 @@ volume: 第08卷-freebsd的范式转换
 
 据〔Fall 2024 FreeBSD Summit - Empowering FreeBSD with Azure DevOps〕讲者口述：他在幻灯片底部附上一个名为“adjustment for FreeBSD”的请求，由一位贡献者（他称“J operator”，不确定是否在座）发起；该请求大约开出来三年，Microsoft 从未合并，因为合并这类“支持 FreeBSD 系统”的请求总是需要先有商业理由。（YouTube EPIweYTrkCXow，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3343 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3343`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD: why migrate to git?〕讲者口述：讲者称 Apache 基金会已强烈鼓动其全部成员转向 Git，并新近与 GitHub 达成多项提供 Git 服务的协议；由于 Apache 基金会正是 Subversion 的主要看护者，这令 Subversion 的前景存疑。（YouTube EPuj1Ricrq0bs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3344 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3344`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD: why migrate to git?〕讲者口述：讲者称 Git 具备更强的完整性保证：在转向 Git 的转换中，项目在前一Subversion 仓库的各镜像里发现了一批错误，经彻查发现错误只存在于元数据，即关于提交何时发生、由谁作出的数据。（YouTube EPuj1Ricrq0bs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3345 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3345`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD: why migrate to git?〕讲者口述：讲者称此前一直没有以 C 写成、采用 BSD 许可证的 Git 客户端；去年在 EuroBSDCon 上，转写音作 Stefan Sterling 介绍了 Game of Trees，它是用 Git 后端重写的 CVS 客户端。（YouTube EPuj1Ricrq0bs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3346 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3346`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD: why migrate to git?〕讲者口述：讲者把关键字列为主要代价之一：在 Subversion 与 CVS 下，项目习惯每个文件里都有关键字，其元数据在检出时由 Subversion 填入，用户据此追查所取文件；Git 不支持这一点。（YouTube EPuj1Ricrq0bs，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

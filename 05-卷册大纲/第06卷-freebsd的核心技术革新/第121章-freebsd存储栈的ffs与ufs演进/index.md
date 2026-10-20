@@ -255,3 +255,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Attilio Rao 讲 FreeBSD VFS/vnode 接口〕讲者口述：FreeBSD 在 VFS 与 I/O 路径上暴露出若干弱项，其中 name cache 是大问题——它大概从未被改动过；当时有一位受 Summer of Code 资助的学生正在实现一套可能取而代之的 name cache 新模型。（YouTube EPSpS7Ajnx9Q8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3319 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3319`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ReFUSE: Userspace FUSE Reimplementation Using puffs（Antti Kantee、Alistair Crooks）〕讲者口述：puffs 是用户态文件系统框架，替实现者包办绝大部分事务；ReFUSE 则是架在 puffs 之上的 FUSE 接口实现。（YouTube EPBrMlk3--YrI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3320 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3320`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ReFUSE: Userspace FUSE Reimplementation Using puffs（Antti Kantee、Alistair Crooks）〕讲者口述：许可证对比：FreeBSD 的许可证宽松，OpenSolaris 的 CDDL 明显更具限制性；ReFUSE 采用三条款 BSD 许可证。（YouTube EPBrMlk3--YrI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3321 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3321`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ReFUSE: Userspace FUSE Reimplementation Using puffs（Antti Kantee、Alistair Crooks）〕讲者口述：FUSE 内核接口存在多个版本且相当混乱，主要使用的是 2.6；该版本号与内核版本号没有任何对应关系。（YouTube EPBrMlk3--YrI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3322 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3322`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔ReFUSE: Userspace FUSE Reimplementation Using puffs（Antti Kantee、Alistair Crooks）〕讲者口述：两者取向不同：FUSE 走内核缓冲区、偏内核侧；puffs 面向用户态。（YouTube EPBrMlk3--YrI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

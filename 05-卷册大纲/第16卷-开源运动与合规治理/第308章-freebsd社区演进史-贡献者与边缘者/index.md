@@ -197,3 +197,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔FreeBSD User Story - Aymeric Wibo〕讲者口述：讲者希望 FreeBSD 更着力于把它交到更多人手里，因为当时在某些系统上把 FreeBSD 当桌面操作系统运行仍相当困难。（YouTube EPlS3MoRCb5Y8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3374 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3374`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview Kevin Sweeney - April 2024〕讲者口述：讲者入坑 FreeBSD 5.0：当时他在一所学校工作，机器跑着转写作 netar five or 51 的系统；因彼时很多软件按版本号依赖，他在某个报道里看到 FreeBSD 5 字样而起了兴趣。（YouTube EPS3f0-WCgqR0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3375 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3375`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview Kevin Sweeney - April 2024〕讲者口述：当时 FreeBSD 还没有二进制包，一切软件都得经 ports 树编译；讲者回忆即便对一个点零版本（转写作 po0 release）而言，系统也相当稳定、表现如宣传所说。（YouTube EPS3f0-WCgqR0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3376 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3376`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview Kevin Sweeney - April 2024〕讲者口述：在 NAS 上讲者从零安装 FreeBSD 并搭起转写作 sber 的服务：起因是转写作 tras 的 TrueNAS 当时还停在 12 而他想用 13；且如今 TrueNAS 正在离开 FreeBSD，他自认不必再受此牵动。（YouTube EPS3f0-WCgqR0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3377 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3377`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Interview Kevin Sweeney - April 2024〕讲者口述：FreeBSD 论坛对承认从零起步的新用户更愿意伸手相助，讲者称这比一些其他项目好得多；他并回忆当年 Linux 论坛对新手公开敌视。（YouTube EPS3f0-WCgqR0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

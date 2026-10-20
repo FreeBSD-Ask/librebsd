@@ -494,3 +494,20 @@ volume: 第10卷-openbsd的历史
 
 据〔Alexandre Ratchov〕讲者口述：该项目的目的之一，是让若干小工具能够协同工作，而不是依赖大而单一的程序（Unix 哲学）。（YouTube EPWcro3UliMZ4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3367 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3367`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔WIP vmm and Vagrant -- Philipp Buehler〕讲者口述：转写作 way rent 的 Vagrant 把虚拟机配置抽象成简单声明：用户只需写明两 GB 内存与网卡等需求，无需理解底层 hypervisor 或 provider 的配置，无论 provider 是 VirtualBox、转写损毁未敢补名的后端、还是转写作 Penniston cloud 的云上服务，都没有差别。（YouTube EPUI8TtQ6zowE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3368 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3368`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔WIP vmm and Vagrant -- Philipp Buehler〕讲者口述：讲者写了一个 Vagrant 插件：让 Vagrant 感知自己正运行在 OpenBSD 之下，并教会它如何与转写作 right out 的 hypervisor（vmm）及其配套组件打交道——即用转写作 we have CTL 的 vmctl 以适当选项，达到 Vagrantfile 中定义的期望状态。（YouTube EPUI8TtQ6zowE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3369 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3369`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔WIP vmm and Vagrant -- Philipp Buehler〕讲者口述：在 OpenBSD 上定义一台安装服务器：走典型 OpenBSD 安装器、大约按七次回车，再设置 FTP／HTTP 等服务即可开跑。（YouTube EPUI8TtQ6zowE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

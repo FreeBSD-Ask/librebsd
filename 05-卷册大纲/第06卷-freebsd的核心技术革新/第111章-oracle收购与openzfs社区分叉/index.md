@@ -1478,3 +1478,105 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔2024 OpenZFS User Summit Welcome 讲者口述：社区通话会机制的演化：因 bhyve 用户几乎都是 ZFS 用户，开发者的 bhyve 通话会最终发展为 bhyve、jail 与容器以及 illumos zone 的“生产用户”通话会。（YouTube EPIV43dr6vkbM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3323 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3323`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Discontiguous Caching with ABD by David Chen〕讲者口述：ZFS 当时的内存模型：线性空间过一段时间就会碎片化，而 ZFS 需要 128K 乃至更大的缓冲区，线性空间难以满足该要求，故须转向虚拟地址。（YouTube EPjTZ3SL9XV0o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3324 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3324`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Discontiguous Caching with ABD by David Chen〕讲者口述：讲者称当时有两个问题：一是内存映射造成双重缓存——Linux 以页缓存做内存映射而 ZFS 自有的缓存完全独立；二是额外的 slab 层既浪费内存，又使内存回收变得困难。（YouTube EPjTZ3SL9XV0o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3325 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3325`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Discontiguous Caching with ABD by David Chen〕讲者口述：illumos 一侧讲者指出：用于在 ARC 中缓存数据的内核虚拟地址空间 Zio Arena 会碎片化，而且当时没有真正可以整理它的办法。（YouTube EPjTZ3SL9XV0o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3326 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3326`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Discontiguous Caching with ABD by David Chen〕讲者口述：illumos 一侧的计划是把 David 的代码从 Linux 移植到 illumos，正与 Delphix 及转写作 accenta 的一方合作、并在 David 参与下推进。（YouTube EPjTZ3SL9XV0o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3350 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3350`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2025 OpenZFS User Summit Welcome〕讲者口述：讲者回忆多年前有一个关于 Beehive 虚拟机监控器的电话会议，当时仅限开发者、近乎闭门；维护者更替后由他接手，并逐步开放、邀请更多人参加，会上谈论的就是 Beehive 虚拟机监控器。（YouTube EPpUcYRmJB1j8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3351 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3351`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔2025 OpenZFS User Summit Welcome〕讲者口述：讲者称后来发现几乎所有人都在用 ZFS，于是会上又花 90 分钟谈 ZFS，由此意识到存在这样的需求，遂决定开设每周一次的 OpenZFS 电话会议，并称这一通话已持续数年。（YouTube EPpUcYRmJB1j8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3356 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3356`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2023 OpenZFS Leadership Meeting〕讲者口述：讲者称就转写音作 big transactions for small record sizes 的改动，在间接写与复制写之间来回切换导致了性能回退。（YouTube EP7WtPHzPEcx4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3357 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3357`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2023 OpenZFS Leadership Meeting〕讲者口述：讲者主张间接写与转写音作 normal/copy 写之间的取舍不应在写阶段决定，而应推迟到提交阶段，因为在写阶段往往信息不足，而提交时已知整批数据量，可以把一批小块一次性按间接写处理。（YouTube EP7WtPHzPEcx4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3358 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3358`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔October 2023 OpenZFS Leadership Meeting〕讲者口述：讲者称近日写了补丁为 ZIL 写入引入逻辑，重构目的是避免不必要地在sync 与 async 之间频繁切换，只在文件以 O_SYNC 打开时才同步，因为频繁切换可能造成写重排并损坏数据。（YouTube EP7WtPHzPEcx4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3359 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3359`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔State of OpenZFS 2020 by Matt Ahrens〕讲者口述：讲者回顾去年预告后宣布，OpenZFS 已把 Linux 与 FreeBSD 两侧的源码合并为同一份代码库，称这是项目当年的头等大事。（YouTube EPna3wwRPUamk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3360 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3360`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔State of OpenZFS 2020 by Matt Ahrens〕讲者口述：OpenZFS 2.0 仍按原定计划在 2020 年内推出：项目推进已相当靠前，当时累计产出三个候选版本、正处在 2.0 RC3（上周刚发布），正式版仍以年底前发布为目标。（YouTube EPna3wwRPUamk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3361 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3361`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔State of OpenZFS 2020 by Matt Ahrens〕讲者口述：项目规划大致每年发布一个主版本，故讲者预期 2021 年底可望见到 OpenZFS 3.0，并称其中将包含多项新特性。（YouTube EPna3wwRPUamk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3362 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3362`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔State of OpenZFS 2020 by Matt Ahrens〕讲者口述：讲者转述 Jorgen Lundman 正埋头把 OS X／macOS 支持加入这份共同代码库，期望次年谈 OpenZFS 3.0 时能覆盖 Linux、FreeBSD 与 macOS。（YouTube EPna3wwRPUamk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3378 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3378`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit Introduction, by Matt Ahrens〕讲者口述：转写作 Lumos 的 illumos 是 ZFS 的记录仓库：大量变更先进入 OpenZFS illumos，再被下拉到 FreeBSD、Linux、OS X 等其他仓库。（YouTube EP1LkHsofR_kc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3379 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3379`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit Introduction, by Matt Ahrens〕讲者口述：为让贡献更容易，OpenZFS 建立自动化系统：每次收到 pull request 就创建虚拟机、编译并安装变更、然后跑完整 ZFS 测试套件与 ztest。（YouTube EP1LkHsofR_kc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3380 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3380`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit Introduction, by Matt Ahrens〕讲者口述：这套 PR 自动化测试已整体迁到 AWS 上公开运行；约一年前这类工作还跑在转写作 Dell fixes 的 Delphix 内部基础设施上。（YouTube EP1LkHsofR_kc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3381 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3381`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔OpenZFS Developer Summit Introduction, by Matt Ahrens〕讲者口述：OpenZFS 是软件公共利益协会（SPI）的关联项目：财务由 SPI 代管，SPI 是 501c3 非营利组织，故捐赠可抵税。（YouTube EP1LkHsofR_kc，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3398 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3398`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2026 OpenZFS Leadership Meeting〕讲者口述：在 RAIDZ 中若个别磁盘在写入过程中失败、且失败盘数少于该 vdev 的校验盘数，当前实现会静默继续、不向用户报告任何错误，只把该 vdev 记入事务组的 DTL，粒度粗且不体现 vdev 降级；这正是本轮 sub-parity failure 补丁要处理的情形。（YouTube EPtJAC2RId6MM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3399 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3399`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2026 OpenZFS Leadership Meeting〕讲者口述：会上介绍为 dRAID 引入 failure domains 的补丁：若系统有 n 个机箱，可按机箱划分阵列，使整个机箱失效时池仍能继续运行，并允许比 dRAID 常规情形更多的故障数。（YouTube EPtJAC2RId6MM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3400 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3400`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔April 2026 OpenZFS Leadership Meeting〕讲者口述：会上宣布将打包新的 2.3 与 2.4 版本，主要用于支持 7.0 内核；随后需更新 CI，并验证可对新内核构建及打包。（YouTube EPtJAC2RId6MM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

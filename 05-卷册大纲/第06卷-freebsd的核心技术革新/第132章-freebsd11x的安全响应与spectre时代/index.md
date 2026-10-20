@@ -114,3 +114,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔EuroBSD〕讲者Steven Murdoch口述：OpenBSD 的初始序列号几乎是完全随机的；FreeBSD 采用的方案受贝尔实验室（Bell Labs）生成序列号的方案启发，但并不与之完全相同，因而无法据此给出 10 秒量级的时间界限。（YouTube EPUYrKLvW3RKg，[299.7-317]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3347 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3347`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称其攻击 Inception 最初发现能在 Zen 1 与 Zen 2 上生效，稍后又意识到它在 Zen 3 与 Zen 4 上同样有效，因此过去五年间几乎所有 AMD CPU 都受此问题影响。（YouTube EPcHiLVYsVeB4，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3348 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3348`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称该问题曾被禁运约六个月；其分析表明要缓解 Inception，需在特权级提升时刷新整个分支预测器状态，但代价极高。（YouTube EPcHiLVYsVeB4，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3349 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3349`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔会议不详〕讲者口述：讲者称 Zen 3 与 Zen 4 原本缺乏刷新整个分支预测器状态的硬件支持，AMD 因此发布微码更新以启用该能力。（YouTube EPcHiLVYsVeB4，ASR）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

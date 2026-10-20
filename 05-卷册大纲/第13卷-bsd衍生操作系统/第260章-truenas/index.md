@@ -218,3 +218,25 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔FreeNAS system architecture（John Hixson, EuroBSDcon 2012）〕讲者口述：团队删减了卷的附加元数据、只保留路径与挂载点等最小信息，目的是让用户直接在命令行操作 ZFS 后，界面能如实反映改动。（YouTube EPfw6g_R8SM4U，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3363 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3363`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Live Migration with Zmotion by Francois Lesage〕讲者口述：OVH 当时运营 17 座数据中心，多数位于欧洲、并在北美加拿大设有站点，单站物理服务器容量可达 36 万台。（YouTube EPmURQFCuvGtk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3364 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3364`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Live Migration with Zmotion by Francois Lesage〕讲者口述：OVH 几乎用遍了 ZFS 的每一种形态，承载数十 PB 数据，其中以 illumos 上的 OpenZFS 为主。（YouTube EPmURQFCuvGtk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3365 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3365`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Live Migration with Zmotion by Francois Lesage〕讲者口述：第一轮迁移中所有 NFS 客户端一并崩溃于 stale NFS file handle 错误，根因是服务 IP 迁移后 NFS 服务器对外暴露的 NFS ID 发生变化，客户端无法再识别该服务器。（YouTube EPmURQFCuvGtk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3366 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3366`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Live Migration with Zmotion by Francois Lesage〕讲者口述：第三套方案在深挖 ZFS 源码后成形：借由转写作 jasp yet another zdfs 的新属性，可从命令行读出指定数据集的 fsid guid，并能以自定义 fsid guid 创建新数据集，讲者称其比在内存里改值更安全。（YouTube EPmURQFCuvGtk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

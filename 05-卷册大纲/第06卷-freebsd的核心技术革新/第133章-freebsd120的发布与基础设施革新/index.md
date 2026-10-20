@@ -209,3 +209,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔P05A: Continuous Integration of The FreeBSD Project - Li Wen Hsu〕讲者口述：构建失败或不稳定时，CI 用邮件扩展发出通知（邮件正文按转写所称方式生成）。（YouTube EPF8i_GYDmvgQ，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3337 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3337`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD Test Cluster Automation -- Kamil Czekirda〕讲者口述：讲者称这套 FreeBSD 测试集群自动化源自 2015 年 Summer of Code 的FreeBSD 项目，目标是建立一套自动完成测试构建、安装与首次启动此前所建操作系统的测试基础设施。（YouTube EPFXE9zMVmU1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3338 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3338`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD Test Cluster Automation -- Kamil Czekirda〕讲者口述：讲者称本项目最重要的需求是人工干预尽可能少，另有一条要求是尽可能廉价。（YouTube EPFXE9zMVmU1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3339 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3339`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔P02A: FreeBSD Test Cluster Automation -- Kamil Czekirda〕讲者口述：讲者描述节点启动流程：节点从网络接口做 PXE 启动、发出 DHCP 发现与请求，服务器以携有服务器名与启动文件信息的 DHCP 包应答。（YouTube EPFXE9zMVmU1o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

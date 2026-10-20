@@ -215,3 +215,10 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔Portmgr behind the scenes René Ladan〕讲者口述：讲者举一个公开决策的例子：不再让每个 port 都间接依赖 python 2.7；python 2.7 那个 port 在 2020 年到期，因为上游支持已经结束。（YouTube EPifmZiI6ohTs，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3417 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3417`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Lightning Talks: I fight bots in my free time Xe Iaso   CEO @ Techaro〕讲者口述：讲者称其反机器人工具 Anubis 已进入 BSD 的软件仓库：转写音作 FreeBSD 的 ports 与 NetBSD 的 package source 均已收录，并请 BSD 打包维护者更新当前版本。（YouTube EPH5zsHq76jgY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

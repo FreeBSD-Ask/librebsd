@@ -168,3 +168,25 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔BSDCan '19 P01A、Michael Dexter 演讲〕讲者口述：当前 boot/kernel 目录布局自 FreeBSD 5 引入，而 FreeBSD 5 所引导的内核内置虚拟机监视器（bhyve）长期鲜有人尝试使用。（YouTube EPe1B_6iGY2lU，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3413 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3413`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve zones in SmartOS -- Sam Gwydir〕讲者口述：讲者回顾 illumos/SmartOS 原先的硬件虚拟化方案是从 Linux 引入的转写音作 KVM，但因网络性能与直通（pass through）不达标而弃用，转而移植 bhyve。（YouTube EP90ihmO281GE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3414 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3414`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve zones in SmartOS -- Sam Gwydir〕讲者口述：讲者指当时的 bhyve 仅支持 16 个 vCPU，改宏定义可到 32，但相关结构为静态分配、且需为每个 VM 各自分配，想扩到 64 乃至 128 时体积会变得很大，故宜改为动态分配。（YouTube EP90ihmO281GE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3415 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3415`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve zones in SmartOS -- Sam Gwydir〕讲者口述：讲者转述移植者的担心：bhyve 的粘合层（glue layer）将不得不随时间增长，阻抗失配会让它越来越难以支撑。（YouTube EP90ihmO281GE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3416 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3416`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔bhyve zones in SmartOS -- Sam Gwydir〕讲者口述：为 illumos 移植新增的一项特性是注册外部驱动的 API：可注册回调用于通知，从而无需陷入内核或依赖系统调用，并可改善性能。（YouTube EP90ihmO281GE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

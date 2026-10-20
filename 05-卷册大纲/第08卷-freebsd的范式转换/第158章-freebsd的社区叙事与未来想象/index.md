@@ -235,3 +235,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔June 2021 FreeBSD Developer Summit: Awards and FreeBSD Trivia〕讲者口述：trivia 环节：已从 FreeBSD 源码树移除的架构共 4 个，现场由 John Baldwin 逐一报出：alpha、pc98、ia64、sparc64。（YouTube EP-fs3XG3_nGY，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3421 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3421`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Video from FOSDEM 2022  - What's Ahead in 2022 for FreeBSD - Coming Up Next〕讲者口述：讲者解释 CHERI（转写音作 cherry）的 capability 是一种不可伪造的令牌，可理解为带长度与边界信息的指针，只能访问其引用的内存，从而提供空间内存安全。（YouTube EPwLliKz8S2Gg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3422 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3422`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Video from FOSDEM 2022  - What's Ahead in 2022 for FreeBSD - Coming Up Next〕讲者口述：讲者称 Morello 项目由 Arm 自己实施，用 arm64 上实验性的 CHERI capability 实现，真正流片出带 capability 寄存器扩展的 64 位 ARM CPU。（YouTube EPwLliKz8S2Gg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3423 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3423`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Video from FOSDEM 2022  - What's Ahead in 2022 for FreeBSD - Coming Up Next〕讲者口述：讲者称剑桥一方做出的 FreeBSD 衍生版 CheriBSD（转写音作 cherry bsd）提供完全 capability 化的内核，Morello 系统已开始发往研究者，首批已交付剑桥。（YouTube EPwLliKz8S2Gg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3424 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3424`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Video from FOSDEM 2022  - What's Ahead in 2022 for FreeBSD - Coming Up Next〕讲者口述：讲者举例 GhostBSD、helloSystem 等项目：它们基于 FreeBSD 构建桌面环境、打包成开箱即用的桌面系统，近似 FreeBSD 世界里的“发行版”。（YouTube EPwLliKz8S2Gg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -335,3 +335,25 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔Closing session EuroBSDcon 2012〕讲者口述：主持人另就下一届 EuroBSDcon（转写音作 EUR BSD conon／EUR Deon）说明地点与时间尚未确定、已有若干候选，并请有意承办者联系主办方。（YouTube EPI1oVpstnXEM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3405 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3405`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Closing〕讲者口述：EuroBSDcon 设有以转写音作 Paul shankel 命名的旅行资助，每年选出理应参会却因经济原因无法负担的一人，由会议支付旅费、住宿与注册费。（YouTube EPoenTrBlj4Sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3406 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3406`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Closing〕讲者口述：会上宣布下届转写音作 agbc 的会议（AsiaBSDCon）将移出台北以外，讲者回顾首届于 2004 年在台湾举办，自己 2007 年接手主办、此后在东京连办十五年。（YouTube EPoenTrBlj4Sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3407 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3407`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Closing〕讲者口述：讲者称 2024 年是该会议（AsiaBSDCon）二十周年，因此决定走出东京、改在台北举办。（YouTube EPoenTrBlj4Sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3408 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3408`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Closing〕讲者口述：EuroBSDcon 2023 闭幕时宣布下届移师都柏林（Dublin），讲者以“更冷、无蛋挞、被大洋环绕、啤酒更贵”等预告收尾。（YouTube EPoenTrBlj4Sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
