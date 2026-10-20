@@ -369,3 +369,45 @@ volume: 第13卷-bsd衍生操作系统
 
 据〔Trying Dragonfly BSD With XFCE Was Surprising!〕讲者口述：装好 X 后讲者判断 XDM 不会随开机启动，因为 rc.conf（转写作 RC.com）里没有相应配置；实测果然没起来。（YouTube EPBPDTTqA__xM，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3458 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3458`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing HelloSystem 讲者口述：讲者介绍 helloSystem 是一套以简洁、易用与优雅为设计目标的桌面 OS，它基于 FreeBSD 核心系统，只做了少量改动，让从 mac 迁移过来的用户更易上手。（YouTube EPHXOTCJItFeo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3459 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3459`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing HelloSystem 讲者口述：讲者称 helloSystem 当时仍在开发中，仅提供 pre-alpha 镜像。（YouTube EPHXOTCJItFeo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3460 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3460`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing HelloSystem 讲者口述：讲者说明 helloSystem 使用 live ISO，发布在 GitHub 仓库的 continuous build 区，同页另有供开发者取用的实验版，会标为 pre-release。（YouTube EPHXOTCJItFeo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3461 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3461`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing HelloSystem 讲者口述：讲者称 helloSystem 的终端应用提供 FreeBSD shell，让开发者与用户能像在 FreeBSD 系统上那样做更多个性化定制。（YouTube EPHXOTCJItFeo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3480 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3480`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Desktop Installer Tech Preview〕讲者口述：作为基金会改善 FreeBSD 笔记本支持的大型项目的一部分，Alfonso Siciliano 一直在为标准安装器加入桌面设置选项（desktop setup option）。（YouTube EPvbWOLzGDa4I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3481 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3481`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Desktop Installer Tech Preview〕讲者口述：该桌面设置选项不会随 15.0 版（转写作 the dot zero release of 15）一同发布，故片内以 15 beta 4 的技术预览先行演示，并请试者把反馈投至 FreeBSD 桌面邮件列表。（YouTube EPvbWOLzGDa4I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3482 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3482`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Desktop Installer Tech Preview〕讲者口述：讲者实测从空白笔记本到可用图形桌面耗时不到 10 分钟；片内以 DVD ISO 的离线包安装、文件系统选 ZFS root、并保留默认服务与键位映射。（YouTube EPvbWOLzGDa4I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3483 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3483`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD Desktop Installer Tech Preview〕讲者口述：该桌面安装器按“并入标准安装器流程中的一步”来设计：例程结束后只需把用户加入 video 组即可获得桌面访问权限，随后退回提示符、全部完成。（YouTube EPvbWOLzGDa4I，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

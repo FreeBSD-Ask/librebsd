@@ -108,3 +108,15 @@ volume: 第21卷-传播渠道与工具生态
 
 据〔How to install FreeBSD on Hetzner〕讲者口述：讲者称经社区成员 Wolf（转写音作 Wolf from Schneider）的努力，FreeBSD 启动 ISO 现已在 Hetzner 提供，在其上安装 FreeBSD 因此变得相当容易。（YouTube EP8RGbstrTWUo，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3450 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3450`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing FreeBSD with VirtualBox - 2022 讲者口述：视频指引观众到官方 FreeBSD 发布页取盘：镜像按发布日期排列、最新版列在最上，64 位机选 amd64、32 位机选 i386，并须选 installer 镜像而非虚拟机镜像。（YouTube EPwGL3KiakMX8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3451 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3451`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Installing FreeBSD with VirtualBox - 2022 讲者口述：视频称 VirtualBox 自带的音频与图形驱动 FreeBSD 可能识别困难，须先做配置，做法是安装 virtualbox-ose-additions 并编辑系统配置文件。（YouTube EPwGL3KiakMX8，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

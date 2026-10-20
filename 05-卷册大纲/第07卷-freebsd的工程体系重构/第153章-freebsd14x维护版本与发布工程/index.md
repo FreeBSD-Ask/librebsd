@@ -131,3 +131,25 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔June 2021 FreeBSD Developer Summit Dev Workflows 讲者 Mark Johnston〕讲者口述：内核改动须重启，但改为在虚拟机中操作、并做到快速装入新内核后，编辑-编译-测试的迭代周期可压到约 20 到 30 秒。（YouTube EPJViMmI_t0t4，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3446 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3446`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Worry Free Upgrades with FreeBSD 讲者口述：讲者称该系统已改为 package system：更新操作系统本身要用 package 命令，而不是 FreeBSD 14 用户熟悉的 freebsd-update 命令。（YouTube EPMfHCXEzRfao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3447 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3447`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Worry Free Upgrades with FreeBSD 讲者口述：讲者称 freebsd-update 的便利之处在于会自动创建 boot environment，而经 pkg 更新 base system 时须在真正动手前自行处理 BE。（YouTube EPMfHCXEzRfao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3448 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3448`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Worry Free Upgrades with FreeBSD 讲者口述：讲者以系统版本 15.0 做演示，并称就完整 OS 升级而言，其做法与 FreeBSD 14 略有不同，稍后会讲到。（YouTube EPMfHCXEzRfao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3449 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3449`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Worry Free Upgrades with FreeBSD 讲者口述：讲者演示回退路径：若升级完全失败，只需在引导菜单里选回升级前那个可用的系统版本。（YouTube EPMfHCXEzRfao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

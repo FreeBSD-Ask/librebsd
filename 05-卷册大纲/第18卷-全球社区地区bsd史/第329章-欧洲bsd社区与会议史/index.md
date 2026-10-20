@@ -357,3 +357,25 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔EuroBSDcon 2023 Closing〕讲者口述：EuroBSDcon 2023 闭幕时宣布下届移师都柏林（Dublin），讲者以“更冷、无蛋挞、被大洋环绕、啤酒更贵”等预告收尾。（YouTube EPoenTrBlj4Sk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3500 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3500`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Opening Session - Henning Brauer - EuroBSDcon 2023〕讲者口述：EuroBSDcon 2023 开幕先谢赞助商：转写作 modern 与 his arm 的两家白金赞助商、转写作 genets 者，以及金牌赞助商——幻灯片上未署名号，讲者当场认出并道谢 Apple。（YouTube EPqlJwgYYpO7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3501 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3501`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Opening Session - Henning Brauer - EuroBSDcon 2023〕讲者口述：服务（service）赞助商为转写作 open sense 的 OPNsense 与转写作 the previously Foundation 的基金会（疑指 The FreeBSD Foundation）；铜牌（转写作 broad）赞助商为 genua、转写作 ha proxy 的 HAProxy 与转写作 netpsd 的 NetBSD。（YouTube EPqlJwgYYpO7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3502 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3502`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Opening Session - Henning Brauer - EuroBSDcon 2023〕讲者口述：会议设有转写作 Paul Shankar Falls travel grounds 的差旅资助：本届已有一名要求匿名的受助者，下一届仍将继续设立该资助，讲者并请与会者转告应到者去申请。（YouTube EPqlJwgYYpO7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3503 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3503`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Opening Session - Henning Brauer - EuroBSDcon 2023〕讲者口述：讲者称对他而言 EuroBSDCon 就像家庭聚会，且是所能想到的最积极意义上的那种；会议因此邀全体一点钟到门外合拍一张全家福。（YouTube EPqlJwgYYpO7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

@@ -276,3 +276,25 @@ volume: 第10卷-openbsd的历史
 
 据〔Hack the Puffy: OpenBSD advocacy through CTF（Jason Testart）讲者口述：做完一批挑战后的观察之一是没有任何涉及 LDAP 的题目——而这恰是他日常工作里用得多的东西。（YouTube EPh5uUEJDqtaE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3442 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3442`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: A quick show of things that make Bob scream 讲者口述：在 OpenBSD 里每次 I/O 都要经过 vnode 与 VFS；讲者称当下并未重构 vnode，但 Bob 正在做这件事。（YouTube EPHTD9Gow1wTU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3443 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3443`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: A quick show of things that make Bob scream 讲者口述：讲者自述一项工作因 C2K9 灾难而取消，即缓冲区的磁盘排序：每次把 buffer 交给 SCSI 或 SD 并落到转写音作 BD 之处时，该函数本应靠排序 I/O 操作来提速。（YouTube EPHTD9Gow1wTU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3444 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3444`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: A quick show of things that make Bob scream 讲者口述：一位 OpenBSD 开发者建议其什么排序都别做，只把请求留在队列里加一点延迟；讲者改用简单 tail Q 加 delay 后，自测磁盘 I/O 速度最多快 15%。（YouTube EPHTD9Gow1wTU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3445 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3445`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Slackathon 2009: A quick show of things that make Bob scream 讲者口述：讲者自述在地下室实验后断言转写音作 Disord 的磁盘排序很蠢、改为排队即可，并发现逆序取用仍更快，把这一堆逻辑称作八十年代遗物。（YouTube EPHTD9Gow1wTU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

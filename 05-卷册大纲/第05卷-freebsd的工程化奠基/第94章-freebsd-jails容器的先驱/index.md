@@ -569,3 +569,45 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔The iocage FreeBSD Jail management tool（Conor Beh）讲者口述：Warden 出自 PC-BSD 项目、2010 年发布，是最早利用 ZFS 的通用 jail 管理器之一，并带早期插件系统。（YouTube EPHaYArIBQNao，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3452 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3452`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Build Secure FreeBSD Containers in 5 Minutes 讲者口述：讲者称早在 Docker 走红之前很久，FreeBSD 就已有 jails——一种更轻量、更简单的把进程安全隔离开的答案。（YouTube EPvVpd34bWCJA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3453 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3453`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Build Secure FreeBSD Containers in 5 Minutes 讲者口述：讲者采用比手册更简的做法：只建一个 base／template 文件系统，再以快照派生各个新 jail。（YouTube EPvVpd34bWCJA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3454 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3454`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Build Secure FreeBSD Containers in 5 Minutes 讲者口述：讲者在 jail 内 bootstrap package system：其实可从宿主系统直接向 jail 装包而不必在 jail 里装 package，但讲者日后打算用 Ansible 管理 jail，故需要在 jail 内有 package 系统。（YouTube EPvVpd34bWCJA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3455 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3455`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Build Secure FreeBSD Containers in 5 Minutes 讲者口述：讲者推荐现任 core 成员兼社区贡献者 Dave Cottlehuber 的 Ansible playbook，用于大规模运行 jails；并称规模再大就该换专门工具而非简单脚本。（YouTube EPvVpd34bWCJA，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3488 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3488`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to FreeBSD Jails - How to get started!〕讲者口述：创建 FreeBSD jail 的途径不止一种——亦可从源码构建——但片内采用转写作 BSD install 的安装器之 jail 命令，讲者称其为最简单、最快捷的办法。（YouTube EPFI5mzC4CMvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3489 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3489`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to FreeBSD Jails - How to get started!〕讲者口述：安装 jail 时需选择所需发行套件，其内容来自官方 FreeBSD 镜像，耗时不久。（YouTube EPFI5mzC4CMvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3490 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3490`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to FreeBSD Jails - How to get started!〕讲者口述：jail 配置项包括主机名、IP 地址、路径与 devfs 挂载等，配置齐备即可启动；其后段明言用 service jail start 加 jail 名（片内为 www）启动。（YouTube EPFI5mzC4CMvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3491 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3491`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to FreeBSD Jails - How to get started!〕讲者口述：讲者总结：jail（转写作 prisons，并称 probationary prison 一类残句）里几乎想做什么都可以，它们就是 FreeBSD 环境；这虽非全貌，却是最易理解的入门说法。（YouTube EPFI5mzC4CMvU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

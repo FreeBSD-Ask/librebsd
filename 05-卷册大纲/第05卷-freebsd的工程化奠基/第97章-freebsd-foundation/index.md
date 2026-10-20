@@ -659,3 +659,20 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 据〔Thank You FreeBSD Community（FreeBSD Foundation 年终致谢）〕讲者口述：讲话者称 2019 年基金会在全球举办 FreeBSD 入门与进阶工作坊、制作 FreeBSD 宣传材料，并与科技记者合作促成更多关于 FreeBSD 的文章；他并称 FreeBSD Journal 现在已免费。（YouTube EPOrWAGWKE3-Q，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3435 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3435`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille: BSDCan 2018 Opening -- BSDCan 2018 讲者口述：开幕致辞称各公司清楚 BSD 前景、愿意赞助会议，并点名转写音作 ioud systems 的厂商（疑指 iXsystems）与 Apple、Verisign 为赞助商。（YouTube EPSeQ345njH1s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3436 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3436`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille: BSDCan 2018 Opening -- BSDCan 2018 讲者口述：开幕致辞称会议长期运转离不开赞助：赞助提供门票收入之外的资金，并感谢 Tarsnap 与 FreeBSD Foundation。（YouTube EPSeQ345njH1s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3437 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3437`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Dan Langille: BSDCan 2018 Opening -- BSDCan 2018 讲者口述：开幕致辞称操作系统本身出面赞助会议尤为难得，感谢 FreeBSD Foundation，并感谢转写音作 harden Busey 与 net BST 的两个 BSD 项目（HardenedBSD 与 NetBSD）。（YouTube EPSeQ345njH1s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

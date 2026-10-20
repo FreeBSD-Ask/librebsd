@@ -219,3 +219,25 @@ Mary Ann Horton 作为原 BSD Unix 团队成员，在 Bill Joy 离开后长期�
 
 据〔FreeBSD User Interview Kevin Sweeney - April 2024〕讲者口述：FreeBSD 论坛对承认从零起步的新用户更愿意伸手相助，讲者称这比一些其他项目好得多；他并回忆当年 Linux 论坛对新手公开敌视。（YouTube EPS3f0-WCgqR0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3468 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3468`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Kyle Taylor - Apr 2024（Kyle Taylor）讲者口述：受访者在堪萨斯城一家精准农业机构任软件工程师，团队以 FreeBSD 管理机器学习流水线——影像处理与数据分析工作流，并借 Python ports 与 jails 容器化其数据科学作业。（YouTube EPJ9EJ6VBRgOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3469 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3469`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Kyle Taylor - Apr 2024（Kyle Taylor）讲者口述：谈从 Linux 转向 FreeBSD 的动因：Linux 硬件支持广但管理 systemd 与内核本身复杂，而 FreeBSD 基本上只是配置文件，用 ports 时开箱即用，迁移负担轻。（YouTube EPJ9EJ6VBRgOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3470 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3470`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Kyle Taylor - Apr 2024（Kyle Taylor）讲者口述：其对企业工作组（Enterprise Working Group）最期待的是硬件支持：机器学习工作流依赖 PyTorch 与转写音作 Puda 的 NVIDIA 栈，以及 OpenCL 与转写音作 rock M 的 AMD 栈；其后讲者明言希望 FreeBSD 对显卡与 GPU 的支持更好并接入其工作流。（YouTube EPJ9EJ6VBRgOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3471 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3471`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔FreeBSD User Kyle Taylor - Apr 2024（Kyle Taylor）讲者口述：数据科学界共享模型时惯于钉定依赖版本：构建时有一份由转写音作 cond 的工具管理的清单（manifest），记录所用软件的版本；讲者认为 FreeBSD ports 的 Python 包可做同类维护，但与协作者精确对齐版本仍很棘手。（YouTube EPJ9EJ6VBRgOg，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

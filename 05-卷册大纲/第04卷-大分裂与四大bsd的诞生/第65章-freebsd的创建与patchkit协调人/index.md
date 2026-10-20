@@ -186,3 +186,25 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 据〔The Untold History of FreeBSD: From Berkeley to the Modern Internet's Backbone 节目讲者口述：讲者援引 Wikipedia 条目称 Netflix 与 WhatsApp 等公司依赖 FreeBSD，并强调这些公司用户规模巨大、容不得停机。（YouTube EPrXmWXIDsxig，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-20 缺口A 662 期战役注入 -->
+<!-- ROW_MINE: youtube.episodes.CL-15-3464 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3464`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to the FreeBSD Operating System〕讲者口述：虚拟控制台可营造多屏并用的体验，且在一个控制台输入的命令在用户切换到另一控制台后仍会继续运行。（YouTube EPfrBzlP6t9Gw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3465 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3465`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to the FreeBSD Operating System〕讲者口述：以转写音作 s view 的命令模拟超级用户（转写作 route），所需口令为安装系统时所设。（YouTube EPfrBzlP6t9Gw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3466 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3466`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to the FreeBSD Operating System〕讲者口述：FreeBSD 自带简单而功能有限的文本编辑器 ee（easy editor）；同场另演示更高级的 vi 编辑器与 man、man -k 手册页查询。（YouTube EPfrBzlP6t9Gw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-3467 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3467`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔An Introduction to the FreeBSD Operating System〕讲者口述：/etc/rc.conf 决定开机启动哪些服务：片内以 vi 追加 sshd_enable=yes 与 apache24_enable=yes 等行。（YouTube EPfrBzlP6t9Gw，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
