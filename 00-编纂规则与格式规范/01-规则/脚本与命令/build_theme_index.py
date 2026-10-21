@@ -62,6 +62,13 @@ MAX_PROJ = 3
 MAX_BODY_COUNT = 10
 TRIM_RATIO = 0.12
 META_DOMAIN = "TH-HIS-000"
+HIS_TITLE_RE = re.compile("史料|证据|叙事|采访|编纂|书目|索引|元数据|方法论|史学|哲学|反思|形式主义|辩证|自反|争议|传说")
+DEFAULT_LABELS = {
+    "TH-OS-000": "进程管理", "TH-FS-000": "虚拟文件系统", "TH-NET-000": "TCP/IP 网络协议栈",
+    "TH-SEC-000": "访问控制", "TH-HW-000": "设备驱动", "TH-VM-000": "虚拟机",
+    "TH-LANG-000": "编译器", "TH-REL-000": "版本发布", "TH-LAW-000": "BSD 许可证",
+    "TH-GOV-000": "治理模式", "TH-BIZ-000": "商业模式", "TH-HIS-000": "编纂体例",
+}
 
 
 class Fatal(Exception):
@@ -242,26 +249,38 @@ def label_of(cid, by_id):
     return (by_id.get(cid) or {}).get("prefLabel", cid)
 
 
-def pick_themes(cands, kmin, kmax, by_id):
+def pick_themes(cands, kmin, kmax, by_id, mandatory=None, his_cap=None):
+    """按分数选题；题面命中词必选；史学域词受 his_cap 限制；不做低分兜底填充。"""
     arr = sorted(cands.items(), key=lambda kv: (-kv[1], kv[0]))
     if not arr:
         return []
     top = arr[0][1]
+    mand = set(mandatory or ())
     out = []
+
+    def take(cid):
+        lab = label_of(cid, by_id)
+        if any(lab in label_of(o, by_id) or label_of(o, by_id) in lab for o in out):
+            return False
+        out.append(cid)
+        return True
+
+    for cid, _score in arr:
+        if cid in mand and len(out) < kmax:
+            take(cid)
     for cid, score in arr:
         if len(out) >= kmax:
             break
-        if len(out) >= kmin and score < top * TRIM_RATIO:
-            break
-        lab = label_of(cid, by_id)
-        if any(lab in label_of(o, by_id) or label_of(o, by_id) in lab for o in out):
+        if cid in out:
             continue
-        out.append(cid)
-    for cid, _s in arr:
-        if len(out) >= kmin:
-            break
-        if cid not in out:
-            out.append(cid)
+        if score < top * TRIM_RATIO:
+            continue
+        if (his_cap is not None and domain_of(cid, by_id) == META_DOMAIN
+                and cid not in mand):
+            n_his = sum(1 for o in out if domain_of(o, by_id) == META_DOMAIN)
+            if n_his >= his_cap:
+                continue
+        take(cid)
     return out
 
 
@@ -312,7 +331,7 @@ def doc_counts(path, title, trie, latin):
     merged = {}
     for cid in set(t) | set(y) | set(b):
         merged[cid] = 3 * t.get(cid, 0) + b.get(cid, 0) + y.get(cid, 0)
-    return merged
+    return merged, set(t)
 
 
 # ---------------------------------------------------------------- 索引构建
@@ -332,13 +351,14 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
     banned = set(vocab.get("banned") or [])
     vocab_labels = {c["prefLabel"] for c in vocab["concepts"]}
 
-    sub_docs, df = [], {}
+    sub_docs, df, title_ids = [], {}, {}
     for v in volumes:
         for c in v["chapters"]:
             for s in c["sections"]:
                 for x in s["subs"]:
-                    raw = doc_counts(x["path"], x["title"], trie, latin)
+                    raw, tids = doc_counts(x["path"], x["title"], trie, latin)
                     raw = {cid: n for cid, n in raw.items() if n > 0}
+                    title_ids[x["id"]] = tids
                     for cid in raw:
                         df[cid] = df.get(cid, 0) + 1
                     sub_docs.append((v, c, s, x, raw))
@@ -357,7 +377,9 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                      if domain_of(cid, by_id) == META_DOMAIN}
             pick = pick_themes(cands, META_MIN, META_MAX, by_id)
         else:
-            pick = pick_themes(cands, MIN_T, MAX_T, by_id)
+            cap = 3 if HIS_TITLE_RE.search(x["title"]) else 1
+            pick = pick_themes(cands, MIN_T, MAX_T, by_id,
+                               mandatory=title_ids.get(x["id"]), his_cap=cap)
         sub_pick[x["id"]] = pick
 
     sections_out, chapters_out = {}, {}
@@ -370,6 +392,9 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                         sec_df[cid] = sec_df.get(cid, 0) + 1
                         sec_score[cid] = sec_score.get(cid, 0.0) + weights[x["id"]].get(cid, 0.0)
                 cands = {cid: sec_df[cid] * 1e6 + sec_score[cid] for cid in sec_df}
+                sec_tids = set(scan_text(s["slug"], trie, latin))
+                for cid in sec_tids:
+                    cands[cid] = max(cands.get(cid, 0.0), 1e9)
                 meta = is_meta(c, s)
                 if meta:
                     cands = {cid: sc for cid, sc in cands.items()
@@ -378,7 +403,9 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                     if not themes:
                         themes = _default_meta(by_id)
                 else:
-                    themes = pick_themes(cands, MIN_T, MAX_T, by_id)
+                    cap = 3 if HIS_TITLE_RE.search(s["slug"]) else 1
+                    themes = pick_themes(cands, MIN_T, MAX_T, by_id,
+                                         mandatory=sec_tids, his_cap=cap)
                 proj_n, tech_n = {}, {}
                 for x in s["subs"]:
                     for p in extract_projects(x["title"], vocab):
@@ -419,7 +446,13 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 "sections": len(c["sections"]),
             }
 
-    # 第二遍：节级补位（继承章级→标题自动词）
+    default_ids = {}
+    for d, lab in DEFAULT_LABELS.items():
+        for cid, cc in by_id.items():
+            if cc["prefLabel"] == lab:
+                default_ids[d] = [cid]
+                break
+    # 第二遍：节级补位（继承章级→卷级→域默认→标题自动词）
     vol_themes = {}
     for v in volumes:
         agg = {}
@@ -433,16 +466,45 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
             for s in c["sections"]:
                 row = sections_out[s["id"]]
                 need = META_MIN if row["meta"] else MIN_T
+                allow_his = bool(HIS_TITLE_RE.search(row["title"])) or row["meta"]
+                his_n = sum(1 for cid in row["themes"]
+                            if domain_of(cid, by_id) == META_DOMAIN)
                 if len(row["themes"]) < need:
                     for cid in chapters_out[c["num"]]["themes"]:
-                        if cid not in row["themes"]:
-                            row["themes"].append(cid)
+                        if cid in row["themes"]:
+                            continue
+                        if domain_of(cid, by_id) == META_DOMAIN and not allow_his and his_n >= 1:
+                            continue
+                        row["themes"].append(cid)
+                        if domain_of(cid, by_id) == META_DOMAIN:
+                            his_n += 1
                         if len(row["themes"]) >= need:
                             break
                 if len(row["themes"]) < need:
                     for cid in vol_themes[v["name"]]:
-                        if cid not in row["themes"]:
-                            row["themes"].append(cid)
+                        if cid in row["themes"]:
+                            continue
+                        if domain_of(cid, by_id) == META_DOMAIN and not allow_his and his_n >= 1:
+                            continue
+                        row["themes"].append(cid)
+                        if domain_of(cid, by_id) == META_DOMAIN:
+                            his_n += 1
+                        if len(row["themes"]) >= need:
+                            break
+                doms = []
+                for cid in row["themes"]:
+                    d = domain_of(cid, by_id)
+                    if d and d not in doms:
+                        doms.append(d)
+                if not doms:
+                    doms = chapters_out[c["num"]]["domains"][:3]
+                if len(row["themes"]) < need:
+                    for d in doms:
+                        for cid in default_ids.get(d, []):
+                            if cid not in row["themes"]:
+                                row["themes"].append(cid)
+                            if len(row["themes"]) >= need:
+                                break
                         if len(row["themes"]) >= need:
                             break
                 auto = []
@@ -457,13 +519,8 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                             row["themes"].append(cid)
                         if len(row["themes"]) + len(row.get("auto") or []) >= need:
                             break
-                doms = []
-                for cid in row["themes"]:
-                    d = domain_of(cid, by_id)
-                    if d and d not in doms:
-                        doms.append(d)
-                row["domains"] = doms[:3] or (chapters_out[c["num"]]["domains"][:3]
-                                              if not row["meta"] else [META_DOMAIN])
+                row["themes"] = row["themes"][:(META_MAX if row["meta"] else MAX_T)]
+                row["domains"] = doms[:3] or ([META_DOMAIN] if row["meta"] else [])
 
     # 小节差分
     delta = {}
@@ -557,6 +614,10 @@ def reverse_index(kw_doc, by_id, used):
 
 def dumps(doc):
     return json.dumps(doc, ensure_ascii=False, indent=1) + "\n"
+
+
+def dumps_rev(doc):
+    return json.dumps(doc, ensure_ascii=False, indent=0) + "\n"
 
 
 def strip_ts(doc):
@@ -677,7 +738,7 @@ def write_all(out_dir=TREE, quiet=False):
         _atomic(os.path.join(out_dir, KW), kw_text)
         written.append(KW)
     if rev_changed:
-        _atomic(os.path.join(out_dir, REV), dumps(rev_new))
+        _atomic(os.path.join(out_dir, REV), dumps_rev(rev_new))
         written.append(REV)
     if not quiet:
         if written:
