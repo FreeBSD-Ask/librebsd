@@ -4,13 +4,13 @@
 
 设立缘由
 --------
-`CLAUDE.md` 的「Lint 配置」章节长期把 `markdownlint-cli2` 列为本地 lint 工具并给出
+`AGENTS.md` 的「Lint 配置」章节长期把 `markdownlint-cli2` 列为本地 lint 工具并给出
 运行命令，但**门禁套件中无一件调用它** → lint 缺陷无人自动发现，静默累积
 （2026-09-20 实测：审计面内 89 文件 5,487 条）。教训：**「工具已文档化」≠「工具已生效」**。
 
 对象面（闸面＝活动文件，显式清单）
 --------------------------------
-1. `CLAUDE.md`（协作指南）
+1. `AGENTS.md`（协作指南）
 2. `00-编纂规则与格式规范/01-规则/*.md`（**现行规则全部在效**）
 3. `00-编纂规则与格式规范/01-规则/脚本与命令/*.md`
 4. `08-核查报告与多轮复核/重构2026/` 现行号文与执行记录——**全域号段模式**：
@@ -21,7 +21,7 @@
 6. `08-核查报告与多轮复核/12-重构大纲书目述评/index.md`（现行外迁目录索引）
 7. `01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md`（现行共享登记表；2026-09-20 起纳入）
 
-**豁免**（不属闸面，理由见 CLAUDE.md「Lint 配置」）：
+**豁免**（不属闸面，理由见 AGENTS.md「Lint 配置」）：
 - `01-项目管理/**` 历史规划与报告归档（一次性产物，已冻结）；
 - `08-核查报告与多轮复核/重构2026/` 下 70 号以前的**历史规划/映射/审计类文档**
   （一次性分析产物，对应既有「历史快照豁免」概念）；
@@ -77,7 +77,7 @@ ROOT = Path(os.path.abspath(__file__)).parents[3]
 PINNED = ("0.22.1", "0.40.0")  # markdownlint-cli2 / markdownlint
 
 MANIFEST = [
-    "CLAUDE.md",
+    "AGENTS.md",
     "00-编纂规则与格式规范/01-规则/*.md",
     "00-编纂规则与格式规范/01-规则/脚本与命令/*.md",
     "08-核查报告与多轮复核/重构2026/[7-9][0-9]-*.md",
@@ -104,7 +104,7 @@ AUDIT_SCOPE = [
     "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
     "00-编纂规则与格式规范/01-规则/*.md",
     "01-项目管理/**/*.md",
-    "CLAUDE.md",
+    "AGENTS.md",
     "spec/*.md",
 ]
 
@@ -157,7 +157,7 @@ def run_lint(exe, files):
 
 # 自检夹具：覆盖 MANIFEST 全部模式（T0 断言覆盖，防夹具与闸面脱钩）
 SELFTEST_FIXTURE = [
-    "CLAUDE.md",
+    "AGENTS.md",
     "00-编纂规则与格式规范/01-规则/README.md",
     "00-编纂规则与格式规范/01-规则/脚本与命令/README.md",
     "08-核查报告与多轮复核/重构2026/75-x.md",
@@ -247,7 +247,7 @@ def selftest():
     cases.append(("T5 依赖缺失 → exit 2", run([], isolate_path=True), 2))
     cases.append(("T6 --list", run(["--list"]), 0))
 
-    (tmp / "CLAUDE.md").write_text("# t\n| a|b |\n|---|---|\n", encoding="utf-8")
+    (tmp / "AGENTS.md").write_text("# t\n| a|b |\n|---|---|\n", encoding="utf-8")
     cases.append(("T7 闸面内注入缺陷 → exit 1", run([]), 1))
 
     ok = True
@@ -319,7 +319,7 @@ def main():
             print(f"         {o}", file=sys.stderr)
         print("         闸面号段模式＝[7-9][0-9]-／1[0-9][0-9]-／1[0-9][0-9][a-z]-"
               "（70–199 系，含单字母变体）；新形态按同法补一行模式"
-              "（并同步 CLAUDE.md／流程规则.md 闸面清单）。", file=sys.stderr)
+              "（并同步 AGENTS.md／流程规则.md 闸面清单）。", file=sys.stderr)
         return 1
     band = [p.name for p in (ROOT / HAOWEN_DIR).glob("*.md")
             if (mm := HAOWEN_NUM_RE.match(p.name)) and int(mm.group(1)) >= HAOWEN_MIN_NUM]

@@ -140,7 +140,7 @@
   - 四版前言：和解与等待（草稿）（原文 file_id=41, block_id=1456）
 - **入库脚本**：`script/_ingest_analysis.py`
 - **验证脚本**：`script/_verify_analysis_ingest.py`
-- **物理文件**：`script/_analysis_5_paragraphs.md`（按 CLAUDE.md 规则保留在 script/）
+- **物理文件**：`script/_analysis_5_paragraphs.md`（按 AGENTS.md 规则保留在 script/）
 - **integrity_check**：ok
 
 ## 存疑数据库迁移记录（2026-08-01）
@@ -217,7 +217,7 @@
 
 - [考据规则.md](../../00-编纂规则与格式规范/01-规则/考据规则.md) 新增“存疑数据库位置与使用规范”小节
 - [流程规则.md](../../00-编纂规则与格式规范/01-规则/流程规则.md) “模块化分层设计规范”登记存疑数据库
-- [CLAUDE.md](../../CLAUDE.md) 项目布局登记 `06-存疑数据库/` 文件夹
+- [AGENTS.md](../../AGENTS.md) 项目布局登记 `06-存疑数据库/` 文件夹
 - [04-现代研究文献/05-参考文献全文数据库/index.md](../../04-现代研究文献/05-参考文献全文数据库/index.md) 表数声明从 18 张更正为 16 张
 - [04-现代研究文献/06-存疑数据库/index.md](../../04-现代研究文献/06-存疑数据库/index.md) 新建数据库结构说明文档
 
@@ -227,7 +227,7 @@
 - `script/_doubt_check_current_state.py`（源数据库状态检查）
 - `script/_doubt_check_schema_meta.py`（schema_meta 表检查）
 - `script/_doubt_verify_final.py`（最终状态核验）
-- 上述脚本按 CLAUDE.md 规则保留在 script/ 目录
+- 上述脚本按 AGENTS.md 规则保留在 script/ 目录
 
 ## 交叉引用同步记录（2026-08-01）
 
@@ -286,7 +286,7 @@
 - `script/_xref_sync_05_folder_db_registry.py`（任务 31）
 - `script/_xref_sync_06_cross_db_references.py`（任务 32）
 - `script/_xref_sync_07_db_cross_references.py`（任务 33）
-- 上述脚本按 CLAUDE.md 规则保留在 script/ 目录
+- 上述脚本按 AGENTS.md 规则保留在 script/ 目录
 
 ## 数据库全面优化记录（2026-08-04）
 

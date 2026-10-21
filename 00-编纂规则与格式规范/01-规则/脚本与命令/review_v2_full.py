@@ -974,7 +974,7 @@ chk("I1 audit_index_structure.py 含 A2 空格形制判据并并入总判定",
 chk("I2 audit_index_structure.py 十一项判据 A／A2／B–J 齐备",
     all(k in a2 for k in ("A 编码", "A2 空格形制")) and "I doc-metrics" in a2)
 docs10 = {
-    "CLAUDE.md": rd(ROOT + "/CLAUDE.md"),
+    "AGENTS.md": rd(ROOT + "/AGENTS.md"),
     "流程规则.md": rd(ROOT + "/00-编纂规则与格式规范/01-规则/流程规则.md"),
     "脚本与命令/README.md": rd(ROOT + "/00-编纂规则与格式规范/01-规则/脚本与命令/README.md"),
     "tests/README.md": rd(ROOT + "/08-核查报告与多轮复核/重构2026/tests/README.md"),

@@ -6,7 +6,7 @@
 ----------------------
 本项目反复出现同一失效模式：**“工具已文档化 ≠ 工具已生效”**。
 
-- `markdownlint-cli2` 在 `CLAUDE.md` 里写了运行命令、给了配置，却**长期未接入任何门禁**
+- `markdownlint-cli2` 在 `AGENTS.md` 里写了运行命令、给了配置，却**长期未接入任何门禁**
   → 缺陷静默累积（2026-09-20 实测审计面 89 文件 5,487 条）。
 - `_scan_blockfn_scope.py` 曾写出并解决了真实缺陷（严格模式致三个功能失效），却**未升格为门禁**，
   随 `script/` 临时目录一并消失。
@@ -20,8 +20,8 @@
 R1 **存在性**：登记表内每个脚本在磁盘上存在
 R2 **可编译性**：登记的 `.py` 可 `py_compile`；`.mjs` 跳过（需 node，本件不引入依赖）
 R3 **无漏接线**：`脚本与命令/audit_*.py` 全部已登记（防“写了门禁忘了登记”）
-R4 **有规则引用**：每个登记脚本名至少出现在 `流程规则.md`／`CLAUDE.md`／
-   `脚本与命令/README.md`／`重构2026/tests/README.md` 之一（CLAUDE.md 要求固定脚本须由规则文件引用）
+R4 **有规则引用**：每个登记脚本名至少出现在 `流程规则.md`／`AGENTS.md`／
+   `脚本与命令/README.md`／`重构2026/tests/README.md` 之一（AGENTS.md 要求固定脚本须由规则文件引用）
 R5 **套件清单一致**：标记 `in_tests_readme` 的登记件，其文件名须出现在 `tests/README.md`
 
 用法
@@ -47,7 +47,7 @@ CMD = REPO / "00-编纂规则与格式规范" / "01-规则" / "脚本与命令"
 TESTS = REPO / "08-核查报告与多轮复核" / "重构2026" / "tests"
 RULE_DOCS = [
     REPO / "00-编纂规则与格式规范" / "01-规则" / "流程规则.md",
-    REPO / "CLAUDE.md",
+    REPO / "AGENTS.md",
     CMD / "README.md",
     TESTS / "README.md",
 ]
@@ -60,7 +60,7 @@ REGISTRY = [
          kind="门禁", object="目录页 DATA 段", trigger="改 DATA 段后",
          selftest="--selftest", in_tests_readme=True),
     dict(no="第二件", script="00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py",
-         kind="门禁", object="口径声明（重构2026/*.md + CLAUDE.md + 规则目录）", trigger="目录页结构或计数变动后",
+         kind="门禁", object="口径声明（重构2026/*.md + AGENTS.md + 规则目录）", trigger="目录页结构或计数变动后",
          selftest="--check", in_tests_readme=True),
     dict(no="第三件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_sequence_continuity.py",
          kind="门禁", object="节号／章号连续性 + 述评恒末", trigger="结构变动后",
@@ -158,8 +158,8 @@ REGISTRY = [
          trigger="新增或改动 05-新大纲/ 树内 .md 后（常备，随批实跑；2026-10-21 立）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="Git 暂存门禁", script="00-编纂规则与格式规范/01-规则/脚本与命令/git_commit_gate.py",
-         kind="门禁", object="Git 暂存区与提交说明：G1 新增路径命中 .gitignore（含 -f 强加）／G2 单个 >5 MB blob（5,242,880 字节）／B2 根目录新条目不在白名单／B3 备份删除／B4 文档含 U+3000／H3 直角引号六码位／H1 提交说明质量（无放行）／H2 CLAUDE.md↔AGENTS.md 提交后逐字节一致；批准标记 APPROVED-IGNORED:／APPROVED-BIGFILE:／APPROVED-BY-OWNER: 放行（H1 无放行）",
-         trigger="每次 git commit：pre-commit 薄壳自动改正（F1 直角引号弯化／F2 不可见字符全口径／F3 CRLF→LF·BOM／F4 别名成对 cp，仅文档类）；commit-msg 薄壳阻断核对（G1/G2/B2/B3/B4/H3/H1/H2 + 批准标记）；hook 不入库，重建后须重装，见流程规则「Git 暂存规则」",
+         kind="门禁", object="Git 暂存区与提交说明：G1 新增路径命中 .gitignore（含 -f 强加）／G2 单个 >5 MB blob（5,242,880 字节）／B2 根目录新条目不在白名单／B3 备份删除／B4 文档含 U+3000／H3 直角引号六码位／H1 提交说明质量（无放行）；批准标记 APPROVED-IGNORED:／APPROVED-BIGFILE:／APPROVED-BY-OWNER: 放行（H1 无放行）",
+         trigger="每次 git commit：pre-commit 薄壳自动改正（F1 直角引号弯化／F2 不可见字符全口径／F3 CRLF→LF·BOM，仅文档类）；commit-msg 薄壳阻断核对（G1/G2/B2/B3/B4/H3/H1 + 批准标记）；hook 不入库，重建后须重装，见流程规则「Git 暂存规则」",
          selftest="--selftest", in_tests_readme=False),
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/embed.py",
          kind="门禁", object="catalog 与内嵌数据块一致性", trigger="改 catalog 或数据块后",
