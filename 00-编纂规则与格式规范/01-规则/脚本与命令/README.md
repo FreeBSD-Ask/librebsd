@@ -149,6 +149,7 @@
 | `_gen_catalog_30_categories.py` | 参考文献总目 30 类别导出 | 流程规则.md “参考文献总目与数据库同步回填” |
 | `_fix_from_catalog.py` | 总目→数据库字段回填 | 流程规则.md “参考文献总目与数据库同步回填” |
 | `_scan_banned_outline_20260805.py` / `_tier_banned_refs_20260805.py` / `_mark_ref1592_banned_20260805.py` / `_reg_official_refs_2511_2515_20260805.py` / `_reg_official_refs_2516_2519_20260805.py` | 2026-08-05 禁引来源清理首轮执行脚本 | 考据规则.md “文献分级 source_tier 与禁引来源清理规则”→“四、2026-08-05 首轮执行结果” |
+| `_sfu_dl_mert_full.py` / `_sfu_ocr_parallel.py` / `_sfu_file_ingest_v5.py` / `_sfu_outline_backfill.py` / `_wait_ocr_done.py` / `_ocr_worker_fill.py` / `_44doc_fulltext.py` | 2026-08 SFU PUPS 执行期脚本组，当前未留存 | 镜像站挖掘与OCR流水线规则.md §5“留存状态” |
 
 ### C. 副本源文件缺失（历史状态；2026-09-18 起不再具实质影响）
 
