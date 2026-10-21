@@ -23,12 +23,15 @@ R3 **无漏接线**：`脚本与命令/audit_*.py` 全部已登记（防“写�
 R4 **有规则引用**：每个登记脚本名至少出现在 `流程规则.md`／`AGENTS.md`／
    `脚本与命令/README.md`／`重构2026/tests/README.md` 之一（AGENTS.md 要求固定脚本须由规则文件引用）
 R5 **套件清单一致**：标记 `in_tests_readme` 的登记件，其文件名须出现在 `tests/README.md`
+R6 **自检覆盖**（仅报告）：无判据非空自检的登记件
+R7 **未登记脚本**（仅报告）：规则目录内既不在登记表、也未在 README 索引的 `.py`
+R8 **阶段映射**：每个登记件须在 `STAGE_MAP` 有合法 G0–G5 阶段；映射无悬空键；阶段覆盖仅报告
 
 用法
 ----
     python audit_gate_registry.py                 # 0 一致 / 1 不一致 / 2 依赖缺失
-    python audit_gate_registry.py --list          # 打印登记表
-    python audit_gate_registry.py --selftest      # 判据非空：造“漏登记 + 缺文件”夹具，须 FAIL
+    python audit_gate_registry.py --list          # 打印登记表（含阶段列）
+    python audit_gate_registry.py --selftest      # 判据非空：造“漏登记 + 缺文件 + 缺阶段”夹具，须 FAIL
 
 依赖：仅标准库。
 """
@@ -157,6 +160,11 @@ REGISTRY = [
          kind="门禁", object="05-卷册大纲/ 树内 .md 加粗定界符外侧空格（T1 左边界／T2 右边界；段首行尾例外、P*/S* 标点豁免；畸形星号同修复器口径豁免）",
          trigger="新增或改动 05-卷册大纲/ 树内 .md 后（常备，随批实跑；2026-10-21 立）",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="第二十九件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_engineering_practice.py",
+         kind="门禁（工程实践基线，独立计数）",
+         object="ADR 必填字段／ADR 索引与编号／技术债字段／模板接线／规则登记／复审日期",
+         trigger="新增或修改 ADR、技术债、工程实践规则或模板后；工程类批次收口（2026-10-22 立）",
+         selftest="--selftest", in_tests_readme=False),
     dict(no="Git 暂存门禁", script="00-编纂规则与格式规范/01-规则/脚本与命令/git_commit_gate.py",
          kind="门禁", object="Git 暂存区与提交说明：G1 新增路径命中 .gitignore（含 -f 强加）／G2 单个 >5 MB blob（5,242,880 字节）／B2 根目录新条目不在白名单／B3 备份删除／B4 文档含 U+3000／H3 直角引号六码位／H1 提交说明质量（无放行）；批准标记 APPROVED-IGNORED:／APPROVED-BIGFILE:／APPROVED-BY-OWNER: 放行（H1 无放行）",
          trigger="每次 git commit：pre-commit 薄壳自动改正（F1 直角引号弯化／F2 不可见字符全口径／F3 CRLF→LF·BOM，仅文档类）；commit-msg 薄壳阻断核对（G1/G2/B2/B3/B4/H3/H1 + 批准标记）；hook 不入库，重建后须重装，见流程规则「Git 暂存规则」",
@@ -190,6 +198,52 @@ REGISTRY = [
          selftest="selftest", in_tests_readme=False),
 ]
 
+# ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
+# 允许单阶段或逗号分隔多阶段；阶段集合固定为 G0–G5。
+# 本表由 2026-10-22 工程实践基线批首次建立；阶段归属按门禁对象面判断，
+# 逐件核实进度见 01-项目管理/02-工程决策与技术债/技术债登记.md TD-005。
+ALL_STAGES = {"G0", "G1", "G2", "G3", "G4", "G5"}
+STAGE_MAP = {
+    "audit_data_integrity.py": "G4",
+    "sync_refactor2026_baseline.py": "G5",
+    "audit_sequence_continuity.py": "G3",
+    "visual_regression.mjs": "G4",
+    "xref_audit.py": "G3",
+    "audit_evidence_level_labels.py": "G4",
+    "audit_index_structure.py": "G3",
+    "assemble_index.py": "G3",
+    "audit_page_assets.py": "G4",
+    "audit_markdown_lint.py": "G3",
+    "audit_server_contract.py": "G4",
+    "tri_structure_negtest.py": "G3",
+    "audit_fixture_freshness.py": "G3",
+    "audit_note_xref.py": "G3",
+    "audit_person_bio_integrity.py": "G4",
+    "audit_renumber_guard.py": "G3",
+    "audit_page_version_bump.py": "G5",
+    "audit_anchor_resolution.py": "G4",
+    "audit_silent_loss_guard.py": "G3",
+    "audit_disk_terminology.py": "G3",
+    "audit_gate_registry.py": "G5",
+    "outline_selfcheck.py": "G4",
+    "audit_a11y.py": "G4",
+    "audit_js_blockscope.py": "G3",
+    "audit_md_quote_glyphs.py": "G3",
+    "audit_mirror_ingest.py": "G5",
+    "sync_outline_mirror.py": "G3",
+    "audit_keyword_index.py": "G4",
+    "audit_md_bold_spacing.py": "G3",
+    "audit_engineering_practice.py": "G2,G5",
+    "git_commit_gate.py": "G5",
+    "embed.py": "G3",
+    "guard_source_chars.py": "G3",
+    "audit_databases.py": "G3",
+    "audit_folder_db_integrity.py": "G4",
+    "audit_provenance_dupes.py": "G4",
+    "register_waterlock.py": "G3",
+    "rotate_guard_state.py": "G3",
+}
+
 
 def _read(p):
     try:
@@ -198,7 +252,7 @@ def _read(p):
         return ""
 
 
-def run(cmd_dir: pathlib.Path, tests_dir: pathlib.Path, registry):
+def run(cmd_dir: pathlib.Path, tests_dir: pathlib.Path, registry, check_extra=True):
     rows = []
 
     # R1 存在性
@@ -255,6 +309,26 @@ def run(cmd_dir: pathlib.Path, tests_dir: pathlib.Path, registry):
                    if p.name not in registered and p.name not in readme)
     rows.append(("R7", "（仅报告）规则目录内既未入登记表、也未入 README 索引的 .py", True,
                  "共 %d 件：%s" % (len(loose), "、".join(loose) if loose else "无")))
+
+    # R8 阶段映射（2026-10-22 立）：登记件须有合法 G0–G5 阶段；映射无悬空键
+    reg_names = {pathlib.Path(e["script"]).name for e in registry}
+    missing_stage = sorted(n for n in reg_names if n not in STAGE_MAP)
+    extra_stage = sorted(k for k in STAGE_MAP if k not in reg_names) if check_extra else []
+    bad_stage = sorted(
+        "%s=%s" % (k, STAGE_MAP[k])
+        for k in reg_names & set(STAGE_MAP)
+        if not set(STAGE_MAP[k].split(",")) <= ALL_STAGES
+    )
+    coverage = []
+    for st in sorted(ALL_STAGES):
+        count = sum(1 for n in reg_names if st in STAGE_MAP.get(n, "").split(","))
+        coverage.append("%s:%d" % (st, count))
+    rows.append(("R8", "每个登记件有合法 G0–G5 阶段归属", not (missing_stage or extra_stage or bad_stage),
+                 "缺阶段 %s；悬空键 %s；非法值 %s；覆盖 %s"
+                 % (", ".join(missing_stage) or "无",
+                    ", ".join(extra_stage) or "无",
+                    ", ".join(bad_stage) or "无",
+                    "／".join(coverage))))
     return rows
 
 
@@ -274,7 +348,7 @@ def _report(rows, title):
 
 
 def cmd_selftest():
-    """判据非空：造“登记了但文件不存在”＋“磁盘有 audit_*.py 未登记”两类缺陷，须 FAIL。"""
+    """判据非空：造“登记了但文件不存在”＋“磁盘有 audit_*.py 未登记”＋“缺阶段”三类缺陷，须 FAIL。"""
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="gatereg_"))
     try:
         cmd = tmp / "cmd"
@@ -291,15 +365,15 @@ def cmd_selftest():
                  kind="t", object="t", trigger="t", selftest=None,
                  in_tests_readme=False),
         ]
-        rows = run(cmd, tmp, reg)
+        rows = run(cmd, tmp, reg, check_extra=False)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
-    fails = _report(rows, "判据非空自检：登记缺失 + 磁盘漏登记（预期 R1/R3 FAIL）")
+    fails = _report(rows, "判据非空自检：登记缺失 + 磁盘漏登记 + 缺阶段（预期 R1/R3/R8 FAIL）")
     got = {c for c, _n, ok, _d in rows if not ok}
-    if {"R1", "R3"} <= got:
-        print("  ✅ 判据非空：R1（文件缺失）与 R3（漏登记）均命中")
+    if {"R1", "R3", "R8"} <= got:
+        print("  ✅ 判据非空：R1（文件缺失）、R3（漏登记）与 R8（缺阶段）均命中")
         return 0
-    print("  ❌ 判据可能为空：未同时命中 R1/R3（实际 %s）" % (sorted(got) or "空"),
+    print("  ❌ 判据可能为空：未同时命中 R1/R3/R8（实际 %s）" % (sorted(got) or "空"),
           file=sys.stderr)
     return 1
 
@@ -314,10 +388,12 @@ def main():
         return cmd_selftest()
 
     if args.list:
-        print("%-8s %-44s %-14s %s" % ("编号", "脚本", "类别", "对象面"))
+        print("%-8s %-42s %-10s %-14s %s" % ("编号", "脚本", "阶段", "类别", "对象面"))
         for e in REGISTRY:
-            print("%-8s %-44s %-14s %s" % (e["no"], pathlib.Path(e["script"]).name,
-                                           e["kind"], e["object"]))
+            name = pathlib.Path(e["script"]).name
+            print("%-8s %-42s %-10s %-14s %s" % (e["no"], name,
+                                                 STAGE_MAP.get(name, "?"),
+                                                 e["kind"], e["object"]))
         print("\n合计 %d 件（其中 %d 件未提供判据非空自检）"
               % (len(REGISTRY), sum(1 for e in REGISTRY if not e["selftest"])))
         return 0
