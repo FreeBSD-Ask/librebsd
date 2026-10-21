@@ -5,9 +5,9 @@
 
 对象
 ----
-大纲树（默认 `05-新大纲/`，`--root` 可覆盖）四层：卷 `第NNN卷-slug`／章 `第NNN章-slug`
+大纲树（默认 `05-卷册大纲/`，`--root` 可覆盖）四层：卷 `第NNN卷-slug`／章 `第NNN章-slug`
 （章号 001..449，不得 000／900–910）／节 `NNN.M-slug`／小节 `NNN.M.P-slug.md`。
-产物写 `05-新大纲/` 根级（`--out` 可覆盖）：
+产物写 `05-卷册大纲/` 根级（`--out` 可覆盖）：
 
   * `SUMMARY.md`：`# Summary` 后逐条列表；缩进四层（卷 0／章 2／节 4／小节 6）；
     目录用带尾斜杠的相对链接，小节用 `.md` 相对链接；标题与磁盘目录／文件名**逐字一致**，
@@ -58,8 +58,8 @@ try:
     import build_theme_index as bti
 except Exception:  # 主题索引生成器缺失时，SUMMARY 功能仍可独立运行
     bti = None
-DEFAULT_ROOT = os.path.join(REPO, "05-新大纲")
-DEFAULT_OUT = os.path.join(REPO, "05-新大纲")
+DEFAULT_ROOT = os.path.join(REPO, "05-卷册大纲")
+DEFAULT_OUT = os.path.join(REPO, "05-卷册大纲")
 DEFAULT_MAPPING = os.path.join(REPO, "script", "_b7_mapping.json")
 SELFTEST_REL = os.path.join("script", "_mirror_selftest")
 

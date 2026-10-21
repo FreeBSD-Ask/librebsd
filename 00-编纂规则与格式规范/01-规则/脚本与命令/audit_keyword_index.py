@@ -30,7 +30,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
 sys.path.insert(0, HERE)
 import build_theme_index as bti  # noqa: E402
 
-ROOT = os.path.join(REPO, "05-新大纲")
+ROOT = os.path.join(REPO, "05-卷册大纲")
 KW = bti.KW
 REV = bti.REV
 SELFTEST_REL = os.path.join("script", "_keyword_index_selftest")

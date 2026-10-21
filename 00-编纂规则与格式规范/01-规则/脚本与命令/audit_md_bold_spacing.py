@@ -20,9 +20,9 @@ T2 **右边界**：尾 `**` 后为行尾、恰好一个半角空格、或标点/
 
 判据面与豁免
 ------------
-- 只扫 `*.md`；默认根为 `05-新大纲/`（新大纲树）。`--root` 可指定子树，
+- 只扫 `*.md`；默认根为 `05-卷册大纲/`（新大纲树）。`--root` 可指定子树，
   `--all` 扫全库并跳过本件豁免面。
-- **原大纲豁免**：`05-卷册大纲/` 冻结，不在判据面（2026-10-21 主理人令）。
+- **原大纲冻结豁免终止**：标准化树已于 2026-10-21 就地替换为 `05-卷册大纲/`，该目录不再豁免。
 - **逐字保真档案豁免**：`04-现代研究文献/03-文献下载/**`（OCR 原文）。
 - 不入库工作区一律跳过：顶层 `script/`、`_tmp/`、`specs/`、`.trae/`、
   `.zcode/`、`.workbuddy/`、`.workbuddy-ai/`、`review_logs/`。
@@ -42,7 +42,7 @@ T2 **右边界**：尾 `**` 后为行尾、恰好一个半角空格、或标点/
 
 用法
 ----
-    python audit_md_bold_spacing.py                 # 扫 05-新大纲（0=PASS/1=FAIL）
+    python audit_md_bold_spacing.py                 # 扫 05-卷册大纲（0=PASS/1=FAIL）
     python audit_md_bold_spacing.py --all           # 扫全库（豁免面见上）
     python audit_md_bold_spacing.py --root <目录>   # 限定子树
     python audit_md_bold_spacing.py --json
@@ -67,7 +67,7 @@ INLINE_CODE_RE = re.compile(r"(`+)(?!`)(.+?)\1")
 BOLD_RE = re.compile(r"(?<!\*)\*\*(?!\*)(.+?)(?<!\*)\*\*(?!\*)")
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-DEFAULT_ROOT = os.path.join(REPO, "05-新大纲")
+DEFAULT_ROOT = os.path.join(REPO, "05-卷册大纲")
 
 SKIP_DIRS = {
     ".git", "node_modules", ".venv", "__pycache__", ".workbuddy", ".workbuddy-ai",
@@ -76,7 +76,6 @@ SKIP_DIRS = {
 SKIP_TOPLEVEL_ONLY = {"script"}
 # --all 时的额外豁免面（按相对仓库根的前缀）
 ALL_EXEMPT_PREFIXES = (
-    "05-卷册大纲/",                       # 原大纲冻结（2026-10-21 主理人令）
     "04-现代研究文献/03-文献下载/",       # OCR 逐字保真档案
 )
 
@@ -275,8 +274,7 @@ def main() -> int:
         "samples": samples,
         "rule": "首 ** 前恰好一个半角空格（段落行首例外）；尾 ** 后恰好一个半角空格"
                 "（行尾例外）；P*/S* 标点符号紧邻豁免",
-        "exempt": "--all 时豁免 05-卷册大纲/（原大纲冻结）与 "
-                  "04-现代研究文献/03-文献下载/（OCR 逐字保真）",
+        "exempt": "--all 时豁免 04-现代研究文献/03-文献下载/（OCR 逐字保真）",
     }
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=1))

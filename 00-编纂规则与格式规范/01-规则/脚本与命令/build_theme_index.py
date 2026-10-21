@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """build_theme_index.py —— 大纲主题词索引生成器（固定脚本，2026-10-21 立）。
 
-职责：扫描 `05-新大纲/` 四层树，按受控词表 `主题词表.json` 为题面与正文取词，
+职责：扫描 `05-卷册大纲/` 四层树，按受控词表 `主题词表.json` 为题面与正文取词，
 生成两件派生权威件（均写大纲树根级）：
 
   * `chapter_keywords.json`：schema `theme-index/3`
@@ -39,7 +39,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
 sys.path.insert(0, HERE)
 from wo007_idempotency import write_text_lf  # noqa: E402
 
-TREE = os.path.join(REPO, "05-新大纲")
+TREE = os.path.join(REPO, "05-卷册大纲")
 VOCAB = os.path.join(HERE, "主题词表.json")
 KW = "chapter_keywords.json"
 REV = "theme_index.json"
@@ -551,7 +551,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
         used.update(row.get("add") or [])
     kw_doc = {
         "meta": {
-            "schema": SCHEMA_KW, "tree": "05-新大纲",
+            "schema": SCHEMA_KW, "tree": "05-卷册大纲",
             "volumes": len(volumes), "chapters": len(chapters_out),
             "sections": len(sections_out), "subsections": len(sub_docs),
             "vocab_sha256": vocab_sha, "content_sha256": content_hash,

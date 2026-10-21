@@ -4,7 +4,7 @@
 
 设立缘由
 --------
-`05-新大纲/` 根级的 `SUMMARY.md`、`chapter_keywords.json`、`theme_index.json` 是
+`05-卷册大纲/` 根级的 `SUMMARY.md`、`chapter_keywords.json`、`theme_index.json` 是
 大纲树的结构镜像与主题索引（规则见 `大纲层级与目录规则.md` §四），属**派生权威件**，
 须随大纲树一同进入版本管理。但根 `.gitignore` 有全局 `*.json` 规则，镜像 JSON 一旦
 被再生（删除后重写即变为未跟踪件）就会被静默忽略——此后 `git add` 不收、`git status`
@@ -40,7 +40,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
-ROOT_DIR = "05-新大纲"
+ROOT_DIR = "05-卷册大纲"
 TARGETS = ("SUMMARY.md", "chapter_keywords.json", "theme_index.json")
 SELFTEST_REL = "script/_mirror_ingest_selftest"
 
