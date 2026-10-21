@@ -57,18 +57,12 @@ cnki*
 !00-编纂规则与格式规范/01-规则/脚本与命令/*.py
 # 受控主题词表（固定输入，随生成器入库；2026-10-21 立）
 !00-编纂规则与格式规范/01-规则/脚本与命令/主题词表.json
-# 章节检索关键词库例外（2026-10-17 立）：05-卷册大纲/chapter_keywords.json 是
-# SUMMARY.md 的结构镜像与逐章检索索引（键＝全局章号），由固定脚本
-# sync_chapter_keywords.py 维护；SUMMARY 每次更新须同批同步本文件，故纳入版本管理。
-!05-卷册大纲/chapter_keywords.json
-# 大纲目录镜像已废除（2026-10-21 主理人裁定）：11-元数据接口/03-大纲目录镜像/ 的
-# 两件派生件删除，统一只保留 05-新大纲/ 根级；上一条 05-卷册大纲/chapter_keywords.json
-# 为旧树兼容豁免，暂作过渡保留。
-# 新大纲根级四件入库豁免（2026-10-21 主理人令）：SUMMARY.md／chapter_keywords.json／
-# theme_index.json／前后差异细粒度比较表-20261021.md 须随 05-新大纲 一并入库；
+# 标准化树根级四件入库豁免（2026-10-21 主理人令）：SUMMARY.md／chapter_keywords.json／
+# theme_index.json／前后差异细粒度比较表-20261021.md 须随 05-卷册大纲 一并入库；
 # JSON 需绕开全局 *.json 规则。入库状态由 audit_mirror_ingest.py（第二十五件）校验。
-!05-新大纲/chapter_keywords.json
-!05-新大纲/theme_index.json
+# 2026-10-21 就地替换后，05-卷册大纲 即标准化树本体，原“旧树兼容豁免”随之归一。
+!05-卷册大纲/chapter_keywords.json
+!05-卷册大纲/theme_index.json
 # 根目录临时工作文件（并发会话的路径清单等，不入版本库）
 /_*.txt
 # 目录页测试套件例外（2026-09-11 固化，须随 index.html 一起纳入版本管理）

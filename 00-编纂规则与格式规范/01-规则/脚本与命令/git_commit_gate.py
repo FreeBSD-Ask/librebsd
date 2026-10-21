@@ -95,27 +95,34 @@ def run_git(args, cwd=None):
 
 
 def staged_items():
-    """返回 [(状态, 新路径), ...]；R/C 取新路径，D 跳过（另由删除检查处理）。"""
+    """返回 [(状态, 新路径, 旧路径), ...]；R/C 解析双路径，D 保留路径。
+
+    注意 `git diff --cached --name-status -z` 的重命名形态为
+    `R100\0旧路径\0新路径\0`：旧实现把旧路径当成结果路径，导致重命名批
+    全部落到不存在的路径上（2026-10-21 优化时修正）。
+    """
     p = run_git(["diff", "--cached", "--name-status", "-z"])
     if p.returncode != 0:
         return None
-    tok = p.stdout.decode("utf-8", errors="replace").split("\0")
+    tok = p.stdout.decode("utf-8", errors="surrogateescape").split("\0")
     items, i = [], 0
-    while i < len(tok) - 1:
+    while i < len(tok):
         st = tok[i]
         if not st:
             i += 1
             continue
         i += 1
-        path = tok[i] if i < len(tok) else ""
-        i += 1
-        if st.startswith("R") or st.startswith("C"):
-            i += 1  # 跳过原路径
-        if st == "D":
-            items.append(("D", path))
-            continue
-        items.append((st, path))
+        if st[:1] in ("R", "C"):
+            old = tok[i] if i < len(tok) else ""
+            new = tok[i + 1] if i + 1 < len(tok) else ""
+            i += 2
+            items.append((st, new, old))
+        else:
+            path = tok[i] if i < len(tok) else ""
+            i += 1
+            items.append((st, path, ""))
     return items
+
 
 
 def is_doc_fixable(path):
@@ -212,63 +219,96 @@ def fix_text(text):
 
 
 def stage_precommit():
-    """自动改正暂存文档类文件；永不拒收。"""
+    """自动改正暂存文档类文件；永不拒收。R100 重命名无内容变化，直接跳过。"""
     items = staged_items()
     if items is None:
         print("git_commit_gate：无法读取暂存区（git 失败）", file=sys.stderr)
         return 2
-    touched = 0
-    for st, path in items:
-        if st == "D" or not is_doc_fixable(path):
-            continue
+    todo = [(st, path) for st, path, old in items
+            if st != "D" and not st.startswith("R100") and is_doc_fixable(path)]
+    print("[gate] pre-commit：暂存 %d 项，文档候选 %d 项" % (len(items), len(todo)), flush=True)
+    touched = []
+    for idx, (st, path) in enumerate(todo, 1):
         wt = os.path.join(os.getcwd(), path)
-        if not os.path.isfile(wt):
-            continue
-        raw = open(wt, "rb").read()
-        if b"\0" in raw[:8000]:
-            continue  # 二进制跳过
-        try:
-            text = raw.decode("utf-8")
-        except UnicodeDecodeError:
-            print("git_commit_gate 跳过（非 UTF-8，不改正）：%s" % path)
-            continue
-        if "\ufffd" in text:
-            print("git_commit_gate 披露（含 U+FFFD 替换字符，不改正、另行报告）：%s" % path)
-        new, changes = fix_text(text)
-        if not changes:
-            continue
-        open(wt, "wb").write(new.encode("utf-8"))
-        run_git(["add", "--", path])
-        touched += 1
-        print("git_commit_gate 自动改正：%s（%s）" % (path, "；".join(changes)))
+        if os.path.isfile(wt):
+            raw = open(wt, "rb").read()
+            if b"\0" not in raw[:8000]:
+                try:
+                    text = raw.decode("utf-8")
+                except UnicodeDecodeError:
+                    print("git_commit_gate 跳过（非 UTF-8，不改正）：%s" % path, flush=True)
+                    text = None
+                if text is not None:
+                    if "\ufffd" in text:
+                        print("git_commit_gate 披露（含 U+FFFD 替换字符，不改正、另行报告）：%s" % path, flush=True)
+                    new, changes = fix_text(text)
+                    if changes:
+                        open(wt, "wb").write(new.encode("utf-8"))
+                        touched.append(path)
+                        print("git_commit_gate 自动改正：%s（%s）" % (path, "；".join(changes)), flush=True)
+        if idx % 500 == 0 or idx == len(todo):
+            print("[gate] pre-commit 进度 %d/%d" % (idx, len(todo)), flush=True)
     if touched:
-        print("git_commit_gate：共自动改正 %d 个文件（已重新暂存），请复核 diff。" % touched)
+        for i in range(0, len(touched), 500):
+            run_git(["add", "--"] + touched[i:i + 500])
+        print("git_commit_gate：共自动改正 %d 个文件（已重新暂存），请复核 diff。" % len(touched), flush=True)
     return 0
 
 
-def blob_has_ideographic_space(path):
-    p = run_git(["cat-file", "-p", ":%s" % path])
-    if p.returncode != 0:
-        return False
-    return IDEOGRAPHIC_SPACE in p.stdout.decode("utf-8", errors="replace")
+
+def _git_batch_check(paths):
+    """一次 `git cat-file --batch-check` 取索引 blob 大小；返回 {路径: 字节数}。"""
+    res = {}
+    for i in range(0, len(paths), 5000):
+        chunk = paths[i:i + 5000]
+        inp = "".join(":%s\n" % p for p in chunk).encode("utf-8", "surrogateescape")
+        p = subprocess.run(["git", "cat-file", "--batch-check"], input=inp,
+                           capture_output=True, cwd=os.getcwd())
+        for path, line in zip(chunk, p.stdout.split(b"\n")):
+            parts = line.split()
+            if len(parts) == 3 and parts[1] == b"blob":
+                try:
+                    res[path] = int(parts[2])
+                except ValueError:
+                    pass
+    return res
 
 
-def blob_corner_hits(path):
-    """H3：暂存 blob 中六码位直角引号计数（对象面＝全部暂存 .md，与第二十四件一致）。"""
-    p = run_git(["cat-file", "-p", ":%s" % path])
-    if p.returncode != 0:
-        return 0
-    return sum(p.stdout.count(ch.encode("utf-8")) for ch in CORNER_ALL)
+def _git_batch_blobs(paths):
+    """一次 `git cat-file --batch` 读取索引 blob 内容；按 2,000 件分块控制内存。"""
+    res = {}
+    for i in range(0, len(paths), 2000):
+        chunk = paths[i:i + 2000]
+        inp = "".join(":%s\n" % p for p in chunk).encode("utf-8", "surrogateescape")
+        proc = subprocess.Popen(["git", "cat-file", "--batch"], stdin=subprocess.PIPE,
+                                stdout=subprocess.PIPE, cwd=os.getcwd())
+        out, _ = proc.communicate(inp)
+        pos = 0
+        for path in chunk:
+            nl = out.find(b"\n", pos)
+            if nl < 0:
+                break
+            header = out[pos:nl].split()
+            pos = nl + 1
+            if len(header) == 3 and header[1] == b"blob":
+                size = int(header[2])
+                res[path] = out[pos:pos + size]
+                pos += size + 1
+        print("[gate] 内容批读 %d/%d" % (min(i + 2000, len(paths)), len(paths)), flush=True)
+    return res
 
 
-def blob_size(path):
-    p = run_git(["cat-file", "-s", ":%s" % path])
-    if p.returncode != 0:
-        return -1
-    try:
-        return int(p.stdout.strip())
-    except ValueError:
-        return -1
+def _batch_ignored(paths):
+    """一次 `git check-ignore --stdin -z --no-index` 返回被忽略路径集合。"""
+    if not paths:
+        return set()
+    inp = b"".join(p.encode("utf-8", "surrogateescape") + b"\0" for p in paths)
+    p = subprocess.run(["git", "check-ignore", "--stdin", "-z", "--no-index"],
+                       input=inp, capture_output=True, cwd=os.getcwd())
+    if p.returncode not in (0, 1):
+        return set()
+    return {x.decode("utf-8", "surrogateescape") for x in p.stdout.split(b"\0") if x}
+
 
 
 def check_msg_quality(msg):
@@ -294,32 +334,37 @@ def check_msg_quality(msg):
 
 
 def stage_commitmsg(msg):
-    """阻断检查；批准标记放行。"""
+    """阻断检查；批准标记放行。批量读 blob，R100 重命名免检。"""
     items = staged_items()
     if items is None:
         print("git_commit_gate：无法读取暂存区（git 失败）", file=sys.stderr)
         return 2
+    adds = [(st, path) for st, path, old in items if st != "D" and not st.startswith("R100")]
+    print("[gate] commit-msg：暂存 %d 项，内容待检 %d 项" % (len(items), len(adds)), flush=True)
     bad_ignored, bad_big, bad_root, bad_bakdel, bad_space, bad_corner = [], [], [], [], [], []
-    for st, path in items:
-        if not path:
+    bad_bakdel = [path for st, path, old in items
+                  if st == "D" and path.startswith("12-数据库备份/")]
+    new_paths = [path for st, path, old in items
+                 if st == "A" and not st.startswith("R100")]
+    ignored = _batch_ignored(new_paths)
+    bad_ignored = [p for p in new_paths if p in ignored]
+    bad_root = [p for p in new_paths if "/" not in p and p not in ROOT_FILE_WHITELIST]
+    sizes = _git_batch_check([p for st, p in adds])
+    bad_big = ["%s（%d 字节）" % (p, sizes[p]) for st, p in adds
+               if sizes.get(p, -1) > THRESHOLD]
+    scan = sorted({p for st, p in adds
+                   if is_doc_fixable(p) or p.lower().endswith(".md")})
+    blobs = _git_batch_blobs(scan)
+    for path in scan:
+        data = blobs.get(path)
+        if data is None:
             continue
-        if st == "D":
-            if path.startswith("12-数据库备份/"):
-                bad_bakdel.append(path)
-            continue
-        if st == "A" and run_git(["check-ignore", "--no-index", "-q", "--", path]).returncode == 0:
-            bad_ignored.append(path)
-        if st == "A" and "/" not in path and path not in ROOT_FILE_WHITELIST:
-            bad_root.append(path)
-        if is_doc_fixable(path) and blob_has_ideographic_space(path):
+        if is_doc_fixable(path) and IDEOGRAPHIC_SPACE.encode("utf-8") in data:
             bad_space.append(path)
-        if path.lower().endswith(".md"):
-            n_corner = blob_corner_hits(path)
-            if n_corner:
-                bad_corner.append("%s（%d 处）" % (path, n_corner))
-        sz = blob_size(path)
-        if sz > THRESHOLD:
-            bad_big.append("%s（%d 字节）" % (path, sz))
+        if path.lower().endswith(".md") and any(
+                data.count(ch.encode("utf-8")) for ch in CORNER_ALL):
+            n = sum(data.count(ch.encode("utf-8")) for ch in CORNER_ALL)
+            bad_corner.append("%s（%d 处）" % (path, n))
     errs = []
     if bad_ignored:
         errs.append("G1 被 .gitignore 排除的条目进入了暂存区：\n  " + "\n  ".join(bad_ignored))
@@ -342,9 +387,9 @@ def stage_commitmsg(msg):
         (e.startswith("G2") and TAG_BIGFILE in msg) or
         (e.startswith(("B2", "B3", "B4", "H3")) and TAG_OWNER in msg))]
     if errs:
-        print("git_commit_gate 拒收（流程规则「Git 暂存规则」；批准标记：%s／%s／%s）：" % (TAG_IGNORED, TAG_BIGFILE, TAG_OWNER))
+        print("git_commit_gate 拒收（流程规则「Git 暂存规则」；批准标记：%s／%s／%s）：" % (TAG_IGNORED, TAG_BIGFILE, TAG_OWNER), flush=True)
         for e in errs:
-            print(e)
+            print(e, flush=True)
         return 1
     notes = []
     if bad_ignored:
@@ -356,8 +401,11 @@ def stage_commitmsg(msg):
     if bad_corner:
         notes.append("H3×%d" % len(bad_corner))
     if notes:
-        print("git_commit_gate：检测到批准标记，放行（%s）——请确认 changelog 已留痕批准记录。" % "、".join(notes))
+        print("git_commit_gate：检测到批准标记，放行（%s）——请确认 changelog 已留痕批准记录。" % "、".join(notes), flush=True)
+    else:
+        print("[gate] commit-msg：PASS", flush=True)
     return 0
+
 
 
 def selftest():
