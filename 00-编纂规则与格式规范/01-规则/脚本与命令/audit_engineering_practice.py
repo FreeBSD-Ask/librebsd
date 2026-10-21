@@ -17,11 +17,12 @@ E3 技术债表字段、承担者与状态
 E4 模板存在且被规则或模板说明引用；规则引用的模板存在
 E5 规则登记与门禁接线
 E6 复审日期存在；过期仅 WARN，不判 FAIL
+E7 `流程规则.md` 二级索引与全部 H2 标题严格一致
 
 用法
 ----
     python audit_engineering_practice.py            # 0 通过 / 1 不通过
-    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 六类负向夹具）
+    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 七类负向夹具）
     python audit_engineering_practice.py --list     # 打印检查对象
 
 依赖：仅标准库。
@@ -48,6 +49,8 @@ DEBT_COLUMNS = ["ID", "描述", "来源", "影响", "承担者", "偿还条件",
 DEBT_STATUS = {"未偿还", "偿还中", "已偿还", "条件失效"}
 BAD_OWNERS = {"", "待定", "后续补", "TBD", "无", "项目组", "以后"}
 DATE_RE = re.compile(r"复审日期(?:\*\*)?\s*[：:]\s*(\d{4}-\d{2}-\d{2})")
+INDEX_BEGIN = "<!-- FLOW_INDEX_BEGIN -->"
+INDEX_END = "<!-- FLOW_INDEX_END -->"
 
 
 def _paths(root: pathlib.Path):
@@ -116,6 +119,19 @@ def _parse_debt(text: str):
 def _review_date(text: str):
     m = DATE_RE.search(text)
     return m.group(1) if m else None
+
+
+def _flow_index_check(text: str):
+    h2 = [m.group(1).strip() for m in re.finditer(r"(?m)^##\s+(.+?)\s*$", text)]
+    if INDEX_BEGIN not in text or INDEX_END not in text:
+        return False, "缺 FLOW_INDEX_BEGIN／FLOW_INDEX_END 标记"
+    block = text.split(INDEX_BEGIN, 1)[1].split(INDEX_END, 1)[0]
+    entries = [line[2:].strip() for line in block.splitlines() if line.startswith("- ")]
+    missing = [t for t in h2 if t not in entries]
+    extra = [e for e in entries if e not in h2]
+    if missing or extra:
+        return False, "缺条目 %s；多条目 %s" % ("、".join(missing) or "无", "、".join(extra) or "无")
+    return True, "H2 %d 条与索引一致" % len(h2)
 
 
 def run_checks(root: pathlib.Path):
@@ -235,6 +251,10 @@ def run_checks(root: pathlib.Path):
     rows.append(("E6", "复审日期存在", not e6_bad,
                  "；".join(e6_bad) if e6_bad else "规则 %s；ADR %d 件有复审日期"
                  % (rule_date or "未填", len(adr_dates))))
+
+    # E7 流程规则二级索引与 H2 标题一致
+    e7_ok, e7_detail = _flow_index_check(_read(p["flow"]))
+    rows.append(("E7", "流程规则二级索引与 H2 标题一致", e7_ok, e7_detail))
     return rows, rule_date
 
 
@@ -290,7 +310,14 @@ def _write_fixture(root: pathlib.Path):
     )
     p["rule_readme"].write_text("工程实践规则.md\n", encoding="utf-8")
     p["agents"].write_text("工程实践规则.md\n", encoding="utf-8")
-    p["flow"].write_text("## 工程实践生命周期与阶段门禁（G0–G5）\n", encoding="utf-8")
+    p["flow"].write_text(
+        "## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
+        "**二级索引（按域）**\n\n"
+        "<!-- FLOW_INDEX_BEGIN -->\n"
+        "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+        "<!-- FLOW_INDEX_END -->\n",
+        encoding="utf-8",
+    )
     p["cmd_readme"].write_text("audit_engineering_practice.py\n", encoding="utf-8")
     p["registry"].write_text("audit_engineering_practice.py\n", encoding="utf-8")
 
@@ -323,6 +350,12 @@ def cmd_selftest():
              .write_text("无\n", encoding="utf-8")),
             ("E6", lambda: (tmp / "00-编纂规则与格式规范/01-规则/工程实践规则.md")
              .write_text("# 工程实践规则\n\n模板G-架构决策记录.md\n", encoding="utf-8")),
+            ("E7", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则.md")
+             .write_text("## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
+                         "**二级索引（按域）**\n\n"
+                         "<!-- FLOW_INDEX_BEGIN -->\n"
+                         "- 别的标题\n"
+                         "<!-- FLOW_INDEX_END -->\n", encoding="utf-8")),
         ]
         for code, mutate in cases:
             _write_fixture(tmp)
@@ -338,7 +371,7 @@ def cmd_selftest():
         for f in failures:
             print("     - %s" % f)
         return 1
-    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E6 六类负向夹具均命中")
+    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E7 七类负向夹具均命中")
     return 0
 
 
