@@ -23,7 +23,7 @@ D 目录列表：`/data/`、`/tests/`、`/script/` → **非 200**
 E 白名单：`/index.html.bak-20260917`、`/data/outline.txt.bak83`、
   `/data/catalog.json`、`/_prep_20260915/` → **404**
 F 安全头：`X-Content-Type-Options`、`Referrer-Policy`、`X-Frame-Options` 三者齐备
-G 穿越：`/../CLAUDE.md`、`/%2e%2e%2fCLAUDE.md` → **404**
+G 穿越：`/../AGENTS.md`、`/%2e%2e%2fAGENTS.md` → **404**
 
 用法
 ----
@@ -181,7 +181,7 @@ def run_contract(port):
 
     # G 路径穿越
     bad = []
-    for p in ("/../CLAUDE.md", "/%2e%2e%2fCLAUDE.md", "/..%2fCLAUDE.md"):
+    for p in ("/../AGENTS.md", "/%2e%2e%2fAGENTS.md", "/..%2fAGENTS.md"):
         try:
             st, _, _ = _req(port, p)
         except OSError as e:

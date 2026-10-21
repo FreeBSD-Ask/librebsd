@@ -3,7 +3,7 @@
 
 背景：`.markdownlint.json` 对 MD060 启用 `style=compact` + `aligned_delimiter=true`。
 后者要求**表格分隔行的管道符位置与表头行按显示宽度逐一对齐**（CJK 记 2 宽），
-`markdownlint --fix` **不会**自动修复此项（CLAUDE.md 已注明），人工逐表算宽度代价极高。
+`markdownlint --fix` **不会**自动修复此项（AGENTS.md 已注明），人工逐表算宽度代价极高。
 2026-09-20 lint 债务审计实测：全审计面 5,487 条问题中 MD060 占 4,859 条（88.6%），
 全部为分隔行形制问题，是本工具的直接治理对象。
 
