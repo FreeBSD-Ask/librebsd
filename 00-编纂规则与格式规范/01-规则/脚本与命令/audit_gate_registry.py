@@ -206,9 +206,9 @@ ALL_STAGES = {"G0", "G1", "G2", "G3", "G4", "G5"}
 STAGE_MAP = {
     "audit_data_integrity.py": "G4",
     "sync_refactor2026_baseline.py": "G5",
-    "audit_sequence_continuity.py": "G3",
+    "audit_sequence_continuity.py": "G4",
     "visual_regression.mjs": "G4",
-    "xref_audit.py": "G3",
+    "xref_audit.py": "G4",
     "audit_evidence_level_labels.py": "G4",
     "audit_index_structure.py": "G4",
     "assemble_index.py": "G3,G4",

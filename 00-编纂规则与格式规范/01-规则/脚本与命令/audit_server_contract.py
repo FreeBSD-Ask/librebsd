@@ -32,13 +32,17 @@ G 穿越：`/../AGENTS.md`、`/%2e%2e%2fAGENTS.md` → **404**
     python audit_server_contract.py --selftest      # 判据非空自检：对内置缺陷服务器跑，
                                                     # 须 ≥4 项 FAIL（否则判据无判别力）
     python audit_server_contract.py --base URL      # 对已在跑的服务跑（不启子进程）
+    python audit_server_contract.py --record PATH   # 追加一行 JSONL 门禁记录（TD-003 试点）
 
 依赖：仅标准库。**门禁一律绑 127.0.0.1，不得绑 0.0.0.0**（避免测试期暴露工作树）。
 """
 import argparse
+import datetime
 import gzip
+import hashlib
 import http.client
 import http.server
+import json
 import os
 import pathlib
 import socket
@@ -265,6 +269,45 @@ def _start_defective(port):
 
 
 # ── 主流程 ───────────────────────────────────────────────────────────────
+def _file_info(path):
+    """输入版本指纹；文件不存在时只记 exists=False，不阻断记录。"""
+    if not path.is_file():
+        return {"path": str(path), "exists": False}
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return {"path": str(path), "exists": True,
+            "bytes": path.stat().st_size, "sha256": h.hexdigest()}
+
+
+def _write_record(path, rows, title, exit_code):
+    """TD-003 试点：追加一行 JSONL 门禁记录（schema_version=gate-record-v1）。"""
+    record = {
+        "schema_version": "gate-record-v1",
+        "gate": {"id": "第十一件", "script": "audit_server_contract.py", "stage": "G4"},
+        "increment": title,
+        "input_version": {"index": _file_info(INDEX), "server": _file_info(SERVER)},
+        "role": {"author": "gate", "reviewer": "未指派", "approver": "未指派"},
+        "criteria": [
+            {"id": c, "name": n, "result": "PASS" if ok else "FAIL", "detail": d}
+            for c, n, ok, d in rows
+        ],
+        "verdict": "PASS" if exit_code == 0 else "FAIL",
+        "evidence": {"command": " ".join(sys.argv), "exit_code": exit_code, "title": title},
+        "failures": [
+            {"check_id": c, "reason": d} for c, _n, ok, d in rows if not ok
+        ],
+        "formal_review": "未指派",
+        "time_basis": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+    }
+    p = pathlib.Path(path)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open("a", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    print("  record: %s" % p)
+
+
 def _report(rows, title):
     print("=" * 72)
     print(title)
@@ -309,6 +352,7 @@ def main():
     ap.add_argument("--base", default="")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--keep", action="store_true", help="跑完不杀子进程（调试用）")
+    ap.add_argument("--record", default="", help="追加一行 JSONL 门禁记录到指定路径（TD-003 试点）")
     args = ap.parse_args()
 
     if args.selftest:
@@ -317,7 +361,11 @@ def main():
     if args.base:
         port = int(args.base.rsplit(":", 1)[-1].rstrip("/"))
         rows = run_contract(port)
-        return 1 if _report(rows, "服务器契约门禁（外部目标 %s）" % args.base) else 0
+        title = "服务器契约门禁（外部目标 %s）" % args.base
+        fails = _report(rows, title)
+        if args.record:
+            _write_record(args.record, rows, title, 1 if fails else 0)
+        return 1 if fails else 0
 
     if not SERVER.is_file():
         print("依赖缺失：找不到 %s" % SERVER, file=sys.stderr)
@@ -327,6 +375,7 @@ def main():
         return 2
 
     port = args.port or free_port()
+    title = "服务器契约门禁（第十一件）：127.0.0.1:%d" % port
     proc = subprocess.Popen(
         [sys.executable, str(SERVER), "--bind", HOST, "--port", str(port),
          "--no-pidfile"],
@@ -337,7 +386,7 @@ def main():
             print("服务器未就绪（port=%d）：\n%s" % (port, err), file=sys.stderr)
             return 2
         rows = run_contract(port)
-        fails = _report(rows, "服务器契约门禁（第十一件）：127.0.0.1:%d" % port)
+        fails = _report(rows, title)
     finally:
         if not args.keep:
             proc.terminate()
@@ -345,6 +394,8 @@ def main():
                 proc.wait(timeout=5)
             except subprocess.TimeoutExpired:
                 proc.kill()
+    if args.record:
+        _write_record(args.record, rows, title, 1 if fails else 0)
     return 1 if fails else 0
 
 
