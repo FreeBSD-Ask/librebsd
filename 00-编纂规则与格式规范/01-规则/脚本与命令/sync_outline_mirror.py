@@ -60,7 +60,7 @@ SELFTEST_REL = os.path.join("script", "_mirror_selftest")
 VOL_RE = re.compile(r"^第(\d{1,3})卷(?:-(?P<slug>.+))?$")
 CH_RE = re.compile(r"^第(\d{1,3})章(?:-(?P<slug>.+))?$")
 SEC_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})-(?P<slug>.+)$")
-SUB_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,2})-(?P<slug>.+)\.md$")
+SUB_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,4})-(?P<slug>.+)\.md$")
 KEY3_RE = re.compile(r"^\d{3}$")
 KEYN_RE = re.compile(r"^\d{1,3}$")
 LINE_RE = re.compile(r"^(?P<indent> *)- \[(?P<title>.+?)\]\((?P<target>.+)\)$")
@@ -358,7 +358,9 @@ def load_legacy_keywords(out_dir):
         return doc, "new"
     if len(legacy) == len(doc):
         return doc, "legacy"
-    raise Fatal("现有 chapter_keywords.json 键形态混杂（三位 %d 个／旧键 %d 个），拒判"
+    if three and legacy:
+        return doc, "mixed"
+    raise Fatal("现有 chapter_keywords.json 键形态无法判定（三位 %d 个／旧键 %d 个），拒判"
                 % (len(three), len(legacy)))
 
 
@@ -394,14 +396,51 @@ def build_keywords(tree, legacy, mode, old2new, root):
     prev = {}
     if mode == "new":
         prev = dict(legacy)
-    elif mode == "legacy":
+    elif mode in ("legacy", "mixed"):
+        title_map = {}
+
+        def _norm_title(s):
+            return (s or "").replace("-", "").replace("_", "").replace(" ", "")
+
+        for vol in tree["volumes"]:
+            for chap in vol["chapters"]:
+                t = chapter_title(root, chap)
+                key3 = "%03d" % chap["num"]
+                title_map[(vol["name"], t)] = key3
+                title_map[(vol["name"], _norm_title(t))] = key3
         for key, value in legacy.items():
-            old = int(key)
-            if old not in old2new:
-                notes["unmapped"].append(key)
-                continue
-            nk = "%03d" % old2new[old]
+            if mode == "mixed" and KEY3_RE.match(key):
+                nk = key
+            else:
+                nk = None
+                try:
+                    old = int(key)
+                except ValueError:
+                    old = None
+                if old is not None and old in old2new:
+                    nk = "%03d" % old2new[old]
+                # 旧号映射可能因中途局部改名而失真；以 (volume,title) 为准
+                tm = title_map.get((value.get("volume"), value.get("title")))
+                if not tm:
+                    vt = (value.get("title") or "").replace("-", "").replace("_", "").replace(" ", "")
+                    tm = title_map.get((value.get("volume"), vt))
+                if tm:
+                    nk = tm
+                if nk is None:
+                    notes["unmapped"].append(key)
+                    continue
             if nk in prev:
+                # 混态下同章可能同时存在三位新键与旧键：词表取并集，只增不删
+                a = [str(x) for x in (prev[nk].get("keywords") or []) if isinstance(x, str)]
+                b = [str(x) for x in (value.get("keywords") or []) if isinstance(x, str)]
+                seen = set()
+                merged = []
+                for x in a + b:
+                    if x and x not in seen:
+                        seen.add(x)
+                        merged.append(x)
+                prev[nk] = dict(prev[nk])
+                prev[nk]["keywords"] = merged
                 continue
             prev[nk] = value
             notes["mapped_from_legacy"] += 1
@@ -753,7 +792,7 @@ def _build_all(root, out_dir, mapping_path):
     summary_text = render_summary(tree)
     legacy, mode = load_legacy_keywords(out_dir)
     old2new = {}
-    if mode == "legacy":
+    if mode in ("legacy", "mixed"):
         old2new = load_mapping(mapping_path)
     keywords_doc, notes = build_keywords(tree, legacy, mode, old2new, root)
     if notes["unmapped"]:
