@@ -29,8 +29,10 @@ T2 **右边界**：尾 `**` 后为行尾、恰好一个半角空格、或标点/
 - 围栏代码块（``` / ~~~）与行内代码段内的 `**` 不判。
 - **畸形星号豁免**（与修复器 `_fix_bold_spacing.py` 同口径，避免“永远修不完
   的 FAIL”）：行内 `**` 计数为奇数、出现 `***`、内容含 `*`、含 `…` 或半角
-  双引号、含“词> 空格/汉字”、以开括号结尾、ASCII 词内伪标记（`a**b**c`、
+  双引号、含“词> 空格”、以开括号结尾、ASCII 词内伪标记（`a**b**c`、
   `U**X`）均不作判据。这些形态属历史 OCR/跨对畸形，须另案人工处置。
+  **完整引文除外**：以 `“”` 或 `""` 成对起止的引文（含引文内单星号斜体）
+  属真加粗，纳入判据并只修外侧空格。
 
 规则衔接
 --------
@@ -92,8 +94,10 @@ def mask_inline_code(line: str) -> str:
 
 
 def skip_span(inner: str, pre_ch: str, post_ch: str, line: str, s: int, e: int) -> bool:
-    """与修复器同口径的畸形星号豁免。"""
-    if "*" in inner:
+    """与修复器同口径的畸形星号豁免；完整引文（含单星号斜体）不豁免。"""
+    is_full_quote = ((inner.startswith("\u201c") and inner.endswith("\u201d"))
+                     or (inner.startswith('"') and inner.endswith('"')))
+    if "*" in inner and not (is_full_quote and "**" not in inner):
         return True
     if s >= 2 and line[s - 2:s] == "**":
         return True
@@ -101,7 +105,7 @@ def skip_span(inner: str, pre_ch: str, post_ch: str, line: str, s: int, e: int) 
         return True
     if re.search(r">[ \u4e00-\u9fff]", inner):
         return True
-    if "\u2026" in inner or '"' in inner:
+    if ("\u2026" in inner or '"' in inner) and not is_full_quote:
         return True
     if inner[-1] in "（([【《{<":
         return True
@@ -110,7 +114,7 @@ def skip_span(inner: str, pre_ch: str, post_ch: str, line: str, s: int, e: int) 
     if (not opener_ok and pre_ch and pre_ch.isascii() and is_ascii_word(pre_ch)
             and inner and inner[0].isascii() and is_ascii_word(inner[0])):
         return True
-    if not opener_ok and inner and is_punct_or_symbol(inner[0]):
+    if not opener_ok and inner and is_punct_or_symbol(inner[0]) and not is_full_quote:
         return True
     if (pre_ch and post_ch and is_ascii_word(pre_ch) and is_ascii_word(post_ch)
             and inner and re.fullmatch(r"[A-Za-z0-9_]+", inner)):

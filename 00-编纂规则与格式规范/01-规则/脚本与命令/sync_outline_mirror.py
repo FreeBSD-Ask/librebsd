@@ -7,7 +7,7 @@
 ----
 大纲树（默认 `05-新大纲/`，`--root` 可覆盖）四层：卷 `第NNN卷-slug`／章 `第NNN章-slug`
 （章号 001..449，不得 000／900–910）／节 `NNN.M-slug`／小节 `NNN.M.P-slug.md`。
-产物两件，写 `11-元数据接口/03-大纲目录镜像/`（`--out` 可覆盖）：
+产物写 `05-新大纲/` 根级（`--out` 可覆盖）：
 
   * `SUMMARY.md`：`# Summary` 后逐条列表；缩进四层（卷 0／章 2／节 4／小节 6）；
     目录用带尾斜杠的相对链接，小节用 `.md` 相对链接；标题与磁盘目录／文件名**逐字一致**，
@@ -34,7 +34,7 @@
 用法
 ----
     C:/Python314/python.exe sync_outline_mirror.py --check     # 缺省：漂移报告，漂移 exit 1
-    C:/Python314/python.exe sync_outline_mirror.py --write     # 生成并原子写盘两件
+    C:/Python314/python.exe sync_outline_mirror.py --write     # 生成并原子写盘根级三件
     C:/Python314/python.exe sync_outline_mirror.py --list      # 计数统计
     C:/Python314/python.exe sync_outline_mirror.py --selftest  # 合成夹具自检（保留不清理）
 
@@ -289,7 +289,7 @@ def iter_entities(tree):
                     yield 6, sub["name"], _rel_join(spath, sub["name"])
 
 
-# ---------------------------------------------------------------- 生成两件产物
+# ---------------------------------------------------------------- 生成产物
 
 def render_summary(tree):
     """生成 SUMMARY.md 全文（LF 结尾）。"""
@@ -816,7 +816,7 @@ def _build_all(root, out_dir, mapping_path):
 
 def _print_targets(root, out_dir):
     print("  大纲树根：%s" % root)
-    print("  镜像目录：%s" % out_dir)
+    print("  输出目录：%s" % out_dir)
 
 
 def _print_counts(tree, summary_text, keywords_doc):
@@ -848,7 +848,7 @@ def _print_problems(problems, limit=80):
 def cmd_list(root, out_dir, mapping_path):
     tree, summary_text, keywords_doc, notes = _build_all(root, out_dir, mapping_path)
     print("=" * 72)
-    print("大纲目录镜像计数统计")
+    print("大纲根级派生件计数统计")
     print("=" * 72)
     _print_targets(root, out_dir)
     entries, empty_subs = _print_counts(tree, summary_text, keywords_doc)
@@ -871,7 +871,7 @@ def cmd_list(root, out_dir, mapping_path):
 
 def cmd_check(root, out_dir, mapping_path, verbose=False):
     print("=" * 72)
-    print("大纲目录镜像双射校验")
+    print("大纲根级派生件双射校验")
     print("=" * 72)
     tree, summary_text, keywords_doc, notes = _build_all(root, out_dir, mapping_path)
     _print_targets(root, out_dir)
@@ -911,7 +911,7 @@ def cmd_check(root, out_dir, mapping_path, verbose=False):
 
 def cmd_write(root, out_dir, mapping_path):
     print("=" * 72)
-    print("大纲目录镜像再生写盘")
+    print("大纲根级派生件再生写盘")
     print("=" * 72)
     tree, summary_text, keywords_doc, notes = _build_all(root, out_dir, mapping_path)
     _print_targets(root, out_dir)
@@ -995,7 +995,7 @@ def selftest():
     out_dir = os.path.join(fix, "out")
     legacy_dir = os.path.join(fix, "out_legacy")
     print("=" * 72)
-    print("大纲目录镜像自检（合成夹具，保留于 %s）" % SELFTEST_REL)
+    print("大纲根级派生件自检（合成夹具，保留于 %s）" % SELFTEST_REL)
     print("=" * 72)
     ok = True
     n_chk = [0]
@@ -1103,7 +1103,7 @@ def selftest():
 
         print("-" * 72)
         if ok:
-            print("  ✅ selftest PASS：自检 %d 项，负向夹具 5 类全部命中" % n_chk[0])
+            print("  ✅ selftest PASS：自检 %d 项，负向夹具 4 类全部命中" % n_chk[0])
             return 0
         print("  ❌ selftest FAIL", file=sys.stderr)
         return 1
@@ -1122,10 +1122,10 @@ def main():
         description="大纲目录镜像全量再生与双射校验（SUMMARY.md；主题索引由 build_theme_index.py 再生）")
     ap.add_argument("--check", action="store_true", help="缺省：漂移报告（漂移 exit 1）")
     ap.add_argument("--write", action="store_true", help="生成并原子写盘根级三件（SUMMARY／keywords／theme_index）")
-    ap.add_argument("--list", action="store_true", help="打印层级计数与镜像统计")
+    ap.add_argument("--list", action="store_true", help="打印层级计数与派生件统计")
     ap.add_argument("--selftest", action="store_true", help="合成夹具自检（script/_mirror_selftest）")
     ap.add_argument("--root", default=None, help="大纲树根（默认 %s）" % DEFAULT_ROOT)
-    ap.add_argument("--out", default=None, help="镜像目录（默认 %s）" % DEFAULT_OUT)
+    ap.add_argument("--out", default=None, help="输出目录（默认 %s）" % DEFAULT_OUT)
     ap.add_argument("--mapping", default=None, help="章号映射表（默认 %s）" % DEFAULT_MAPPING)
     ap.add_argument("--verbose", action="store_true", help="附加明细")
     args = ap.parse_args()
