@@ -1,5 +1,7 @@
 # HANDOFF: dvd6 期刊四库战役 — 交接台账（2026-10-05 会话末）
 
+> **历史件（2026-10-05 停更）**：本件数字与任务口径已过期，现行入口为 `002-dvd6-journal-db-任务书-20260929.md` 的 2026-10-22 对盘块；本件仅作批次史留痕。
+
 **Spec**: specs/002-dvd6-journal-db（含主理人三修正案）｜**库**: `C:\ddj_stage\{ddj,cuj,sa,tpj}.duckdb`（本地暂存）｜**最终推送**: `\\DESKTOP-M5P610N\d\librebsd\dvd6\Website\ddj\`（T038）
 
 ## 已完成（全部门禁绿）
