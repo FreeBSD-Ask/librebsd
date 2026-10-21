@@ -58,6 +58,9 @@ DEFAULT_MAPPING = os.path.join(REPO, "script", "_b7_mapping.json")
 SELFTEST_REL = os.path.join("script", "_mirror_selftest")
 
 VOL_RE = re.compile(r"^第(\d{1,3})卷(?:-(?P<slug>.+))?$")
+# 根级白名单（2026-10-21 主理人令）：三件随树入库，不判为树外散件
+ROOT_ALLOWED_FILES = frozenset({"SUMMARY.md", "chapter_keywords.json",
+                                "前后差异细粒度比较表-20261021.md"})
 CH_RE = re.compile(r"^第(\d{1,3})章(?:-(?P<slug>.+))?$")
 SEC_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})-(?P<slug>.+)$")
 SUB_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,4})-(?P<slug>.+)\.md$")
@@ -149,6 +152,8 @@ def scan_tree(root):
     for vname in sorted(os.listdir(root)):
         vfull = os.path.join(root, vname)
         if not os.path.isdir(vfull):
+            if vname in ROOT_ALLOWED_FILES:
+                continue
             tree["anomalies"].append(("stray_file_at_root", vname,
                                       "大纲树根级只允许卷目录"))
             continue
