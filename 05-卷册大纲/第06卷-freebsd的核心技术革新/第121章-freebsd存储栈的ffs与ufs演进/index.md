@@ -277,3 +277,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔ReFUSE: Userspace FUSE Reimplementation Using puffs（Antti Kantee、Alistair Crooks）〕讲者口述：两者取向不同：FUSE 走内核缓冲区、偏内核侧；puffs 面向用户态。（YouTube EPBrMlk3--YrI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1580 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1580`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：Linux 的集群实现更多，其中 DRBD 可把同一数据放到多块设备上提供存储冗余，而 BSD 系统没有类似方案。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-1581 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1581`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：其邮件系统跑在 FreeBSD 上并使用 ZFS，但尚不愿把 ZFS 用到此类生产场景；UFS 2 在大文件系统上有扩展性问题，fsck 要跑很久。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

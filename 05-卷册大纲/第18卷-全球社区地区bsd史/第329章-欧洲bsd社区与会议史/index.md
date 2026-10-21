@@ -379,3 +379,25 @@ volume: 第18卷-全球社区地区bsd史
 
 据〔Opening Session - Henning Brauer - EuroBSDcon 2023〕讲者口述：讲者称对他而言 EuroBSDCon 就像家庭聚会，且是所能想到的最积极意义上的那种；会议因此邀全体一点钟到门外合拍一张全家福。（YouTube EPqlJwgYYpO7w，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2620 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2620`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Walter Belgers 报告〕讲者口述：他曾任荷兰 UNIX 用户组 NLUUG 主席，并任当时称为 BSDCon Europe 的组织委员会成员（与 hido 一起），且担任该会议的程序委员会主席。（YouTube EPahbu5CwqwDE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2621 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2621`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Walter Belgers 报告〕讲者口述：他自述当时已活跃于 386 BSD 场景，此后攒钱买下 XT PC，却发现该机性能不足以运行 386 BSD。（YouTube EPahbu5CwqwDE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2622 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2622`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Walter Belgers 报告〕讲者口述：他事先开启系统记账并以 lastcomm 一类命令回溯，看到一行 setuid perl 记录，据此查明入侵手法；他称 keto 是当时 FreeBSD 的安全官，并称这是 setuid perl 的零日漏洞。（YouTube EPahbu5CwqwDE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2623 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2623`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔EuroBSDcon 2023 Walter Belgers 报告〕讲者口述：xlockmore 手册页写明可用用户密码或 root 密码解锁终端；因其系统 root 密码为空，他误连按两次回车便被解锁，旁人只要在该终端按回车同样能解锁。（YouTube EPahbu5CwqwDE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

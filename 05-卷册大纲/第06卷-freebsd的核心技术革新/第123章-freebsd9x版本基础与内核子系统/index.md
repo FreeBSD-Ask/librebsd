@@ -370,26 +370,6 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔Fuzzing the kernel - Porting the Clang Sanitizers to FreeBSD 演讲〕讲者口述：freebsd 例如已有查找 use after free（释放后使用）问题的工具；但他指出问题在于：你察觉到发生了解放后使用，是在尝试进行下一次分配的那一刻，而不是在释放发生的那一刻。（YouTube EP1tYtT8Jk21c，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
-<!-- ROW_MINE: youtube.episodes.CL-15-2015 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2015`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Christos Margiolis 演讲“How sound4 works”〕讲者口述：本人自述为 FreeBSD committer，年份自述记不清（转写为 2023），目前以承包（contract）方式与 Foundation 合作从事音频开发。（YouTube EP77STLO_9h14，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2016 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2016`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Christos Margiolis 演讲“How sound4 works”〕讲者口述：FreeBSD 音频内核代码常被称作 PCM，主要是出于历史原因，也因存放代码的目录就叫 PCM；该层是为设备驱动接入而设的通用层。（YouTube EP77STLO_9h14，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2017 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2017`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Christos Margiolis 演讲“How sound4 works”〕讲者口述：FreeBSD 用户态经由 Open Sound System（OSS）API 访问音频，这是一套较老的 API，但稳定、可用，虽有问题，讲者称与另一套或 Windows 的 API 相比更显优雅。（YouTube EP77STLO_9h14，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2018 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2018`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Christos Margiolis 演讲“How sound4 works”〕讲者口述：音频内核模块此前没有任何测试，讲者向测试套件写入了简单测试；另新增浮点采样格式支持，动因之一是 Wine 移植的部分功能因缺少浮点支持而无法工作。（YouTube EP77STLO_9h14，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
 <!-- ROW_MINE: youtube.episodes.CL-15-2160 -->
 **存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2160`；2026-10-18 缺口A 662 期战役逐条判定采纳）
 

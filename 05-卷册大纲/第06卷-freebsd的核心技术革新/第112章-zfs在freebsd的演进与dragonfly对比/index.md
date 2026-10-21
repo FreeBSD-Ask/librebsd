@@ -1686,3 +1686,20 @@ volume: 第06卷-freebsd的核心技术革新
 
 据〔This Web Tool Makes ZFS on FreeBSD STUPIDLY EASY!〕讲者口述：讲者称 WebZFS 依赖 Python 3.11（较旧），而 FreeBSD 当时已把 Python 3.12／3.13 设为默认版本。（YouTube EPS0ePkpVMHu8，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2012 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2012`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brian Behlendorf 演讲“Lustre ZFS & Supercomputers”〕讲者口述：ZFS 源码于 2005 年发布；Livermore 大约自 2008–2009 年前后开始评估把 ZFS 用作 Lustre 的后端，当时 ZFS 已在真实生产系统上得到验证。（YouTube EPRoyrIocAByU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2013 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2013`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brian Behlendorf 演讲“Lustre ZFS & Supercomputers”〕讲者口述：该站点的负载大量是写检查点，写入来自众多随机进程；ZFS 的写时复制把这些写入序列化为顺序写，讲者称性能因此表现良好。（YouTube EPRoyrIocAByU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2014 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2014`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Brian Behlendorf 演讲“Lustre ZFS & Supercomputers”〕讲者口述：Lustre 并非叠在 ZFS 的 POSIX 层或卷管理器之上，而是直接对接 ZFS 的 DMU 层并作为其第一类消费者（first class consumer）；把 ZFS 移植到 Linux 的工作由 Livermore 完成。（YouTube EPRoyrIocAByU，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

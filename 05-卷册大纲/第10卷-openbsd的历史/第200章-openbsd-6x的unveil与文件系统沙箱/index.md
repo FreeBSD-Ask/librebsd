@@ -95,3 +95,20 @@ volume: 第10卷-openbsd的历史
 
 据〔来源不详〕讲者口述：OpenBSD 存在一个针对 unveil 的特殊 pledge（YouTube EPgvmGfpMgny4，[174.099-176.399]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2417 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2417`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：该期演讲者自述其为 OpenBSD 开发者（2012 年入行），平日工作以撰写、产出与运维守护进程（demons）为主，也琢磨内核与网络栈，并靠运维自己的服务器谋生。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2418 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2418`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：该特权分离的校验型递归名字服务器在其各进程上使用 pledge 机制限制能力：进程自己不能向互联网打开 socket，须由父进程代为执行（如打开 53 端口），父进程也负责打开文件读句柄并在进程间传递。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2419 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2419`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：解析子进程不欲其纵览整个文件系统，仅以 unveil 放开 DNS over TLS 校验所需的证书包一个文件，使其“只能看见这一个文件”。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

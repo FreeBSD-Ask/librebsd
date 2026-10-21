@@ -235,26 +235,6 @@ volume: 第07卷-freebsd的工程体系重构
 
 据〔Henning Brauer 于 AsiaBSDCon 2013 P7B 演讲〕讲者口述：为桥情形写下的校验和相关代码大多无用，这个问题十年前就该在桥代码里修掉，而不是任由各种特例判断向协议层扩散。（YouTube EPmrFud9ySkB0，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
-<!-- ROW_MINE: youtube.episodes.CL-15-2141 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2141`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：这套让内核 TCP/IP 栈跑在用户态的东西最初导入时最难的是取名，David Holland 建议叫 rum，取 runnable user space module 之意以对应 loadable module，讲者当时觉得是好主意。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2142 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2142`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：但树里已有一个同名驱动叫 rum，计划因此被打乱；讲者反复推敲后决定改以食物命名，即 rump。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2143 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2143`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：用户态里本就有现成的锁接口 pthread mutex，与内核锁接口只是名字不同、作用完全一致，因此不必自行实现一套符合内核锁语义的锁，直接借用 pthread 的锁与线程机制即可。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2144 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2144`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔A. Kantee“Environmental Independence: BSD Kernel TCP/IP”演讲〕讲者口述：理论上可以在 FreeBSD 上运行 NetBSD 的网络栈，为此需要在 FreeBSD 里补上类似支持；工作量不大但琐碎繁多，且一般情形下无法顺利对接，因为两边结构体布局不同。（YouTube EPRxFctq8A0WI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
 <!-- ROW_MINE: youtube.episodes.CL-15-2566 -->
 **存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2566`；2026-10-18 缺口A 662 期战役逐条判定采纳）
 
@@ -372,4 +352,11 @@ volume: 第07卷-freebsd的工程体系重构
 **存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-3499`；2026-10-18 缺口A 662 期战役逐条判定采纳）
 
 据〔Lightning Talk: Do you have a Red Pill by Andrew Cagney Libreswan〕讲者口述：就“在 BSD 上如何做到同样的事”，讲者答应先查 FreeBSD 上转写作 V nets 的机制（vnet）并称“有希望”；听众又提出另一个缩写 VRF，讲者笑称要把它也加进来。（YouTube EPvC7GITOi1P0，dual）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1578 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1578`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：BSD 家族可实现 IP 号共享，讲者称用 KARP 机制实现得相当优雅，与 Cisco 的 VRP 方案相当。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
