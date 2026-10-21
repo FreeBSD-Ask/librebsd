@@ -1,0 +1,7506 @@
+{
+  "schema": "theme-vocab/1",
+  "updated": "2026-10-21",
+  "domains": [
+    {
+      "id": "TH-OS-000",
+      "label": "内核与调度",
+      "ccs": "Computer systems organization~Operating systems",
+      "clc": "TP316"
+    },
+    {
+      "id": "TH-FS-000",
+      "label": "文件系统与存储",
+      "ccs": "Information systems~Data management systems~Storage management",
+      "clc": "TP333"
+    },
+    {
+      "id": "TH-NET-000",
+      "label": "网络与协议",
+      "ccs": "Networks",
+      "clc": "TP393"
+    },
+    {
+      "id": "TH-SEC-000",
+      "label": "安全与密码学",
+      "ccs": "Security and privacy",
+      "clc": "TP309"
+    },
+    {
+      "id": "TH-HW-000",
+      "label": "硬件架构与驱动",
+      "ccs": "Hardware",
+      "clc": "TP303"
+    },
+    {
+      "id": "TH-VM-000",
+      "label": "虚拟化与云",
+      "ccs": "Computer systems organization~Cloud computing",
+      "clc": ""
+    },
+    {
+      "id": "TH-LANG-000",
+      "label": "语言与工具链",
+      "ccs": "Software and its engineering~Software notations and tools",
+      "clc": "TP312"
+    },
+    {
+      "id": "TH-REL-000",
+      "label": "发行工程与打包",
+      "ccs": "Software and its engineering~Software creation and management",
+      "clc": "TP311.5"
+    },
+    {
+      "id": "TH-LAW-000",
+      "label": "许可证与法律",
+      "ccs": "Social and professional topics~Computing / technology policy~Legal aspects of computing",
+      "clc": "D923.4"
+    },
+    {
+      "id": "TH-GOV-000",
+      "label": "治理与社区",
+      "ccs": "Social and professional topics~Computing / technology policy",
+      "clc": ""
+    },
+    {
+      "id": "TH-BIZ-000",
+      "label": "商业、教育与媒体",
+      "ccs": "Social and professional topics~Professional topics~Computing industry",
+      "clc": "F49"
+    },
+    {
+      "id": "TH-HIS-000",
+      "label": "史学方法与编纂",
+      "ccs": "Social and professional topics~History of computing",
+      "clc": "TP3-09"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "TH-OS-000",
+      "prefLabel": "内核与调度",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Computer systems organization~Operating systems",
+      "clc": "TP316",
+      "techTerms": []
+    },
+    {
+      "id": "TH-OS-001",
+      "prefLabel": "进程管理",
+      "altLabels": [
+        "进程调度",
+        "进程模型"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "进程生命周期与调度实体",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "fork",
+        "exec",
+        "wait",
+        "zombie"
+      ]
+    },
+    {
+      "id": "TH-OS-002",
+      "prefLabel": "线程模型",
+      "altLabels": [
+        "内核线程",
+        "用户线程"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "线程与执行流",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pthread",
+        "kthread"
+      ]
+    },
+    {
+      "id": "TH-OS-003",
+      "prefLabel": "调度器",
+      "altLabels": [
+        "调度算法",
+        "CPU 调度"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "CPU 时间分配策略",
+      "ccs": "Computer systems organization~Operating systems~Process management",
+      "clc": "TP316",
+      "techTerms": [
+        "scheduler",
+        "ule",
+        "cfs",
+        "round-robin"
+      ]
+    },
+    {
+      "id": "TH-OS-004",
+      "prefLabel": "内核抢占",
+      "altLabels": [
+        "抢占式内核"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核态可抢占性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "preemption"
+      ]
+    },
+    {
+      "id": "TH-OS-005",
+      "prefLabel": "对称多处理",
+      "altLabels": [
+        "多处理器"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "多核并行执行",
+      "ccs": "Computer systems organization~Parallel architectures",
+      "clc": "",
+      "techTerms": [
+        "smp",
+        "multicore"
+      ]
+    },
+    {
+      "id": "TH-OS-006",
+      "prefLabel": "内核锁",
+      "altLabels": [
+        "自旋锁",
+        "互斥锁"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核同步原语",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mutex",
+        "spinlock",
+        "rwlock"
+      ]
+    },
+    {
+      "id": "TH-OS-007",
+      "prefLabel": "原子操作",
+      "altLabels": [
+        "原子变量"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "不可分割的读改写",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "atomic"
+      ]
+    },
+    {
+      "id": "TH-OS-008",
+      "prefLabel": "无锁数据结构",
+      "altLabels": [
+        "免锁结构"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "无阻塞并发结构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lock-free",
+        "rcu"
+      ]
+    },
+    {
+      "id": "TH-OS-009",
+      "prefLabel": "虚拟内存",
+      "altLabels": [
+        "地址空间"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "进程地址空间抽象",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mmu",
+        "page table",
+        "vm"
+      ]
+    },
+    {
+      "id": "TH-OS-010",
+      "prefLabel": "分页与页表",
+      "altLabels": [
+        "页表",
+        "分页"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "页级内存映射",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "paging",
+        "pmap"
+      ]
+    },
+    {
+      "id": "TH-OS-011",
+      "prefLabel": "内存分配器",
+      "altLabels": [
+        "分配器",
+        "堆分配"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "动态内存分配实现",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "malloc",
+        "jemalloc",
+        "phkmalloc",
+        "slab"
+      ]
+    },
+    {
+      "id": "TH-OS-012",
+      "prefLabel": "交换与换页",
+      "altLabels": [
+        "交换空间"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内存页换出与回收",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "swap",
+        "pager"
+      ]
+    },
+    {
+      "id": "TH-OS-013",
+      "prefLabel": "系统调用",
+      "altLabels": [
+        "系统调用接口"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "用户态进入内核的接口",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "syscall"
+      ]
+    },
+    {
+      "id": "TH-OS-014",
+      "prefLabel": "内核接口",
+      "altLabels": [
+        "内核编程接口",
+        "内核二进制接口"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核模块可用的接口",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "kpi",
+        "kbi"
+      ]
+    },
+    {
+      "id": "TH-OS-015",
+      "prefLabel": "内核模块",
+      "altLabels": [
+        "可加载模块"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "运行时加载的内核代码",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "kmod",
+        "kernel module"
+      ]
+    },
+    {
+      "id": "TH-OS-016",
+      "prefLabel": "设备文件",
+      "altLabels": [
+        "字符设备",
+        "块设备"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "设备访问节点",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "devfs",
+        "cdev",
+        "bdev"
+      ]
+    },
+    {
+      "id": "TH-OS-017",
+      "prefLabel": "中断处理",
+      "altLabels": [
+        "中断",
+        "中断线程"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "硬件中断与处理线程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "interrupt",
+        "ithread"
+      ]
+    },
+    {
+      "id": "TH-OS-018",
+      "prefLabel": "时钟与定时器",
+      "altLabels": [
+        "时间管理"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核计时设施",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "timer",
+        "callout",
+        "hz"
+      ]
+    },
+    {
+      "id": "TH-OS-019",
+      "prefLabel": "内核跟踪",
+      "altLabels": [
+        "动态跟踪"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "运行时行为观测",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dtrace",
+        "ktrace",
+        "bpf"
+      ]
+    },
+    {
+      "id": "TH-OS-020",
+      "prefLabel": "内核调试",
+      "altLabels": [
+        "内核调试器"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核缺陷定位",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ddb",
+        "gdb",
+        "kgdb"
+      ]
+    },
+    {
+      "id": "TH-OS-021",
+      "prefLabel": "崩溃转储",
+      "altLabels": [
+        "核心转储"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "崩溃现场保存",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "crashdump",
+        "savecore"
+      ]
+    },
+    {
+      "id": "TH-OS-022",
+      "prefLabel": "内核配置",
+      "altLabels": [
+        "内核选项"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核编译配置",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "kernel config",
+        "generic"
+      ]
+    },
+    {
+      "id": "TH-OS-023",
+      "prefLabel": "启动加载",
+      "altLabels": [
+        "引导程序"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "引导与加载内核",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "bootloader",
+        "loader",
+        "uefi"
+      ]
+    },
+    {
+      "id": "TH-OS-024",
+      "prefLabel": "内核启动",
+      "altLabels": [
+        "初始化"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "内核入口与初始化",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "init",
+        "kernel entry"
+      ]
+    },
+    {
+      "id": "TH-OS-025",
+      "prefLabel": "进程间通信",
+      "altLabels": [
+        "IPC"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "进程间数据交换",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pipe",
+        "socketpair",
+        "shm"
+      ]
+    },
+    {
+      "id": "TH-OS-026",
+      "prefLabel": "信号",
+      "altLabels": [
+        "信号处理"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "异步事件通知",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "signal",
+        "sigaction"
+      ]
+    },
+    {
+      "id": "TH-OS-027",
+      "prefLabel": "事件通知",
+      "altLabels": [
+        "事件队列"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "就绪事件通知机制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "kqueue",
+        "kevent",
+        "epoll"
+      ]
+    },
+    {
+      "id": "TH-OS-028",
+      "prefLabel": "文件描述符",
+      "altLabels": [
+        "描述符"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "打开对象的句柄",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "file descriptor",
+        "fd"
+      ]
+    },
+    {
+      "id": "TH-OS-029",
+      "prefLabel": "资源限制",
+      "altLabels": [
+        "资源配额"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "进程资源上限",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "rlimit",
+        "ulimit"
+      ]
+    },
+    {
+      "id": "TH-OS-030",
+      "prefLabel": "命名空间",
+      "altLabels": [
+        "隔离域"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "资源视图隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "namespace",
+        "jail"
+      ]
+    },
+    {
+      "id": "TH-OS-031",
+      "prefLabel": "容器化",
+      "altLabels": [
+        "容器"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "进程级隔离运行环境",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "container",
+        "docker"
+      ]
+    },
+    {
+      "id": "TH-OS-032",
+      "prefLabel": "实时调度",
+      "altLabels": [
+        "实时优先级"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "时限敏感的调度",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "realtime",
+        "priority"
+      ]
+    },
+    {
+      "id": "TH-OS-033",
+      "prefLabel": "能效与电源管理",
+      "altLabels": [
+        "电源管理"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "功耗与电源状态",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cpufreq",
+        "acpi",
+        "apm"
+      ]
+    },
+    {
+      "id": "TH-OS-034",
+      "prefLabel": "性能分析",
+      "altLabels": [
+        "剖析"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "性能瓶颈测量",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "profiler",
+        "pmc",
+        "hwpmc"
+      ]
+    },
+    {
+      "id": "TH-OS-035",
+      "prefLabel": "基准测试",
+      "altLabels": [
+        "性能基准"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "可比较的性能测量",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "benchmark",
+        "lmbench"
+      ]
+    },
+    {
+      "id": "TH-OS-036",
+      "prefLabel": "可扩展性",
+      "altLabels": [
+        "并发扩展"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "负载增长下的性能保持",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "scalability"
+      ]
+    },
+    {
+      "id": "TH-OS-037",
+      "prefLabel": "微内核",
+      "altLabels": [
+        "微内核架构"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "最小内核加服务进程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "microkernel",
+        "mach"
+      ]
+    },
+    {
+      "id": "TH-OS-038",
+      "prefLabel": "单体内核",
+      "altLabels": [
+        "宏内核"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "单地址空间内核",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "monolithic"
+      ]
+    },
+    {
+      "id": "TH-OS-039",
+      "prefLabel": "混合内核",
+      "altLabels": [
+        "混合架构"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "单体与微内核折中",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hybrid kernel"
+      ]
+    },
+    {
+      "id": "TH-OS-040",
+      "prefLabel": "引导环境",
+      "altLabels": [
+        "启动环境",
+        "引导环境管理"
+      ],
+      "broader": "TH-OS-000",
+      "level": "narrow",
+      "scopeNote": "可回滚的启动环境",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "boot environment",
+        "bectl",
+        "be"
+      ]
+    },
+    {
+      "id": "TH-FS-000",
+      "prefLabel": "文件系统与存储",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Information systems~Data management systems~Storage management",
+      "clc": "TP333",
+      "techTerms": []
+    },
+    {
+      "id": "TH-FS-001",
+      "prefLabel": "虚拟文件系统",
+      "altLabels": [
+        "VFS"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "文件系统统一抽象层",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vfs"
+      ]
+    },
+    {
+      "id": "TH-FS-002",
+      "prefLabel": "UFS 文件系统",
+      "altLabels": [
+        "FFS",
+        "伯克利快速文件系统"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "传统 BSD 文件系统",
+      "ccs": "Information systems~Data management systems~Storage management",
+      "clc": "TP333",
+      "techTerms": [
+        "ufs",
+        "ffs"
+      ]
+    },
+    {
+      "id": "TH-FS-003",
+      "prefLabel": "ZFS 文件系统",
+      "altLabels": [
+        "ZFS"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "写时复制与池化存储",
+      "ccs": "Information systems~Data management systems~Storage management",
+      "clc": "",
+      "techTerms": [
+        "zfs",
+        "openzfs"
+      ]
+    },
+    {
+      "id": "TH-FS-004",
+      "prefLabel": "HAMMER 集群文件系统",
+      "altLabels": [
+        "HAMMER 文件系统",
+        "HAMMER2"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "DragonFly 集群文件系统",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hammer",
+        "hammer2"
+      ]
+    },
+    {
+      "id": "TH-FS-005",
+      "prefLabel": "日志文件系统",
+      "altLabels": [
+        "日志"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "元数据一致性机制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "journaling",
+        "soft updates"
+      ]
+    },
+    {
+      "id": "TH-FS-006",
+      "prefLabel": "写时复制",
+      "altLabels": [
+        "COW"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "块级写时复制",
+      "ccs": "Information systems~Data management systems~Storage management",
+      "clc": "TP333",
+      "techTerms": [
+        "cow",
+        "copy-on-write"
+      ]
+    },
+    {
+      "id": "TH-FS-007",
+      "prefLabel": "文件系统快照",
+      "altLabels": [
+        "快照"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "只读时点副本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "snapshot",
+        "zfs snapshot"
+      ]
+    },
+    {
+      "id": "TH-FS-008",
+      "prefLabel": "磁盘配额",
+      "altLabels": [
+        "配额"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "用户与组用量上限",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "quota"
+      ]
+    },
+    {
+      "id": "TH-FS-009",
+      "prefLabel": "磁盘分区",
+      "altLabels": [
+        "分区表"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "磁盘空间划分",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "gpart",
+        "partition"
+      ]
+    },
+    {
+      "id": "TH-FS-010",
+      "prefLabel": "磁盘标签",
+      "altLabels": [
+        "卷标"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "分区命名与标识",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "disklabel",
+        "gpt"
+      ]
+    },
+    {
+      "id": "TH-FS-011",
+      "prefLabel": "逻辑卷管理",
+      "altLabels": [
+        "卷管理"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "逻辑卷聚合",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lvm",
+        "vinum"
+      ]
+    },
+    {
+      "id": "TH-FS-012",
+      "prefLabel": "软磁盘阵列",
+      "altLabels": [
+        "软 RAID",
+        "磁盘阵列"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "冗余磁盘阵列",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "raid",
+        "graid",
+        "geom"
+      ]
+    },
+    {
+      "id": "TH-FS-013",
+      "prefLabel": "GEOM 存储框架",
+      "altLabels": [
+        "GEOM 框架",
+        "GEOM"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "存储转换框架",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-FS-014",
+      "prefLabel": "I/O 调度",
+      "altLabels": [
+        "磁盘调度"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "块请求排序",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "io scheduler",
+        "elevator"
+      ]
+    },
+    {
+      "id": "TH-FS-015",
+      "prefLabel": "块缓存",
+      "altLabels": [
+        "缓冲区缓存"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "块设备缓存",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "buffer cache",
+        "bcache"
+      ]
+    },
+    {
+      "id": "TH-FS-016",
+      "prefLabel": "页缓存",
+      "altLabels": [
+        "文件缓存"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "文件页驻留内存",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "page cache"
+      ]
+    },
+    {
+      "id": "TH-FS-017",
+      "prefLabel": "文件系统一致性",
+      "altLabels": [
+        "一致性检查"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "损坏检测与修复",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "fsck"
+      ]
+    },
+    {
+      "id": "TH-FS-018",
+      "prefLabel": "崩溃一致性",
+      "altLabels": [
+        "掉电一致性"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "崩溃后的数据可恢复性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "crash consistency"
+      ]
+    },
+    {
+      "id": "TH-FS-019",
+      "prefLabel": "存储加密",
+      "altLabels": [
+        "磁盘加密",
+        "全盘加密"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "静态数据加密",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "geli",
+        "fde"
+      ]
+    },
+    {
+      "id": "TH-FS-020",
+      "prefLabel": "存储压缩",
+      "altLabels": [
+        "透明压缩"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "块级压缩",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "zstd",
+        "lz4",
+        "gzip"
+      ]
+    },
+    {
+      "id": "TH-FS-021",
+      "prefLabel": "数据去重",
+      "altLabels": [
+        "去重"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "重复块消除",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dedup",
+        "deduplication"
+      ]
+    },
+    {
+      "id": "TH-FS-022",
+      "prefLabel": "数据校验",
+      "altLabels": [
+        "校验和"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "完整性校验",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "checksum",
+        "zfs checksum"
+      ]
+    },
+    {
+      "id": "TH-FS-023",
+      "prefLabel": "网络文件系统",
+      "altLabels": [
+        "NFS"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "远程文件访问",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "nfs",
+        "nfsv4"
+      ]
+    },
+    {
+      "id": "TH-FS-024",
+      "prefLabel": "分布式文件系统",
+      "altLabels": [
+        "集群文件系统"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "跨节点文件系统",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "distributed fs",
+        "ceph"
+      ]
+    },
+    {
+      "id": "TH-FS-025",
+      "prefLabel": "对象存储",
+      "altLabels": [
+        "对象存储服务"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "对象粒度的存储服务",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "object storage",
+        "s3"
+      ]
+    },
+    {
+      "id": "TH-FS-026",
+      "prefLabel": "内存文件系统",
+      "altLabels": [
+        "tmpfs"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "驻留内存的文件系统",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tmpfs",
+        "mfs"
+      ]
+    },
+    {
+      "id": "TH-FS-027",
+      "prefLabel": "伪文件系统",
+      "altLabels": [
+        "procfs",
+        "sysfs"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "内核视图文件系统",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "procfs",
+        "sysfs"
+      ]
+    },
+    {
+      "id": "TH-FS-028",
+      "prefLabel": "文件锁",
+      "altLabels": [
+        "记录锁"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "并发访问互斥",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "flock",
+        "fcntl"
+      ]
+    },
+    {
+      "id": "TH-FS-029",
+      "prefLabel": "扩展属性",
+      "altLabels": [
+        "xattr"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "文件附加元数据",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "xattr"
+      ]
+    },
+    {
+      "id": "TH-FS-030",
+      "prefLabel": "访问控制列表",
+      "altLabels": [
+        "ACL"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "细粒度权限条目",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "acl"
+      ]
+    },
+    {
+      "id": "TH-FS-031",
+      "prefLabel": "目录服务",
+      "altLabels": [
+        "命名服务"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "集中账户与目录",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ldap",
+        "nis"
+      ]
+    },
+    {
+      "id": "TH-FS-032",
+      "prefLabel": "存储协议",
+      "altLabels": [
+        "块协议"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "远程块访问协议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "iscsi",
+        "fibre channel",
+        "nvme"
+      ]
+    },
+    {
+      "id": "TH-FS-033",
+      "prefLabel": "NVMe 固态存储",
+      "altLabels": [
+        "NVMe 存储",
+        "NVMe"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "高速固态存储协议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-FS-034",
+      "prefLabel": "固态存储",
+      "altLabels": [
+        "SSD"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "闪存存储介质",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ssd",
+        "trim"
+      ]
+    },
+    {
+      "id": "TH-FS-035",
+      "prefLabel": "存储分层",
+      "altLabels": [
+        "分级存储"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "按热度分层放置",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tiering"
+      ]
+    },
+    {
+      "id": "TH-FS-036",
+      "prefLabel": "备份与恢复",
+      "altLabels": [
+        "备份"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "数据副本与还原",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "backup",
+        "dump",
+        "restore"
+      ]
+    },
+    {
+      "id": "TH-FS-037",
+      "prefLabel": "归档格式",
+      "altLabels": [
+        "打包格式"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "长期保存的打包格式",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tar",
+        "cpio",
+        "pax"
+      ]
+    },
+    {
+      "id": "TH-FS-038",
+      "prefLabel": "磁盘映像",
+      "altLabels": [
+        "映像文件"
+      ],
+      "broader": "TH-FS-000",
+      "level": "narrow",
+      "scopeNote": "整盘或卷的副本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "img",
+        "iso",
+        "vmdk"
+      ]
+    },
+    {
+      "id": "TH-NET-000",
+      "prefLabel": "网络与协议",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Networks",
+      "clc": "TP393",
+      "techTerms": []
+    },
+    {
+      "id": "TH-NET-001",
+      "prefLabel": "TCP/IP 网络协议栈",
+      "altLabels": [
+        "TCP/IP 协议栈",
+        "TCP/IP"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "互联网协议族实现",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tcp",
+        "ip",
+        "udp"
+      ]
+    },
+    {
+      "id": "TH-NET-002",
+      "prefLabel": "第四版互联网协议",
+      "altLabels": [
+        "IPv4"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "32 位地址协议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ipv4"
+      ]
+    },
+    {
+      "id": "TH-NET-003",
+      "prefLabel": "第六版互联网协议",
+      "altLabels": [
+        "IPv6"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "128 位地址协议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ipv6",
+        "kame"
+      ]
+    },
+    {
+      "id": "TH-NET-004",
+      "prefLabel": "TCP 拥塞控制",
+      "altLabels": [
+        "拥塞控制"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "网络拥塞响应",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "congestion control",
+        "cubic",
+        "newreno"
+      ]
+    },
+    {
+      "id": "TH-NET-005",
+      "prefLabel": "TCP 选择确认",
+      "altLabels": [
+        "选择确认",
+        "TCP SACK"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "选择性重传确认",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sack"
+      ]
+    },
+    {
+      "id": "TH-NET-006",
+      "prefLabel": "网络栈性能",
+      "altLabels": [
+        "网络性能"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "协议栈吞吐与延迟",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "network stack",
+        "smpng"
+      ]
+    },
+    {
+      "id": "TH-NET-007",
+      "prefLabel": "网络缓冲区",
+      "altLabels": [
+        "mbuf"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "报文缓冲管理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mbuf"
+      ]
+    },
+    {
+      "id": "TH-NET-008",
+      "prefLabel": "套接字",
+      "altLabels": [
+        "socket"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "网络通信端点",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "socket",
+        "bsd socket"
+      ]
+    },
+    {
+      "id": "TH-NET-009",
+      "prefLabel": "路由",
+      "altLabels": [
+        "路由表"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "报文转发路径选择",
+      "ccs": "Networks~Network routing",
+      "clc": "TP393",
+      "techTerms": [
+        "routing",
+        "rib"
+      ]
+    },
+    {
+      "id": "TH-NET-010",
+      "prefLabel": "防火墙",
+      "altLabels": [
+        "包过滤防火墙"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "网络访问控制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pf",
+        "ipfw",
+        "ipfilter"
+      ]
+    },
+    {
+      "id": "TH-NET-011",
+      "prefLabel": "包捕获",
+      "altLabels": [
+        "抓包"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "链路层报文捕获",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pcap"
+      ]
+    },
+    {
+      "id": "TH-NET-012",
+      "prefLabel": "网络地址转换",
+      "altLabels": [
+        "NAT"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "地址与端口映射",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "nat"
+      ]
+    },
+    {
+      "id": "TH-NET-013",
+      "prefLabel": "虚拟专用网",
+      "altLabels": [
+        "VPN"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "加密隧道网络",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vpn",
+        "ipsec",
+        "wireguard"
+      ]
+    },
+    {
+      "id": "TH-NET-014",
+      "prefLabel": "无线网络",
+      "altLabels": [
+        "WiFi"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "无线局域网",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "wifi",
+        "802.11"
+      ]
+    },
+    {
+      "id": "TH-NET-015",
+      "prefLabel": "蓝牙",
+      "altLabels": [
+        "蓝牙协议"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "短距无线通信",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "bluetooth"
+      ]
+    },
+    {
+      "id": "TH-NET-016",
+      "prefLabel": "以太网",
+      "altLabels": [
+        "Ethernet"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "有线局域网",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ethernet"
+      ]
+    },
+    {
+      "id": "TH-NET-017",
+      "prefLabel": "网络驱动",
+      "altLabels": [
+        "网卡驱动"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "网络接口设备驱动",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "nic",
+        "iflib"
+      ]
+    },
+    {
+      "id": "TH-NET-018",
+      "prefLabel": "netmap 高性能报文框架",
+      "altLabels": [
+        "netmap 框架",
+        "netmap"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "高性能报文收发框架",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "netmap"
+      ]
+    },
+    {
+      "id": "TH-NET-019",
+      "prefLabel": "零拷贝",
+      "altLabels": [
+        "zero-copy"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "避免数据复制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "zero-copy"
+      ]
+    },
+    {
+      "id": "TH-NET-020",
+      "prefLabel": "网络虚拟化",
+      "altLabels": [
+        "VLAN"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "逻辑网络隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vlan",
+        "vxlan"
+      ]
+    },
+    {
+      "id": "TH-NET-021",
+      "prefLabel": "软件定义网络",
+      "altLabels": [
+        "SDN"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "控制与转发分离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sdn",
+        "openflow"
+      ]
+    },
+    {
+      "id": "TH-NET-022",
+      "prefLabel": "域名系统",
+      "altLabels": [
+        "DNS"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "名称解析",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dns",
+        "bind",
+        "unbound"
+      ]
+    },
+    {
+      "id": "TH-NET-023",
+      "prefLabel": "动态主机配置",
+      "altLabels": [
+        "DHCP"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "地址自动分配",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dhcp"
+      ]
+    },
+    {
+      "id": "TH-NET-024",
+      "prefLabel": "邮件协议",
+      "altLabels": [
+        "SMTP"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "邮件传输协议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "smtp",
+        "sendmail",
+        "postfix",
+        "dma"
+      ]
+    },
+    {
+      "id": "TH-NET-025",
+      "prefLabel": "文件传输协议",
+      "altLabels": [
+        "FTP"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "文件传输",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ftp",
+        "tftp"
+      ]
+    },
+    {
+      "id": "TH-NET-026",
+      "prefLabel": "远程登录",
+      "altLabels": [
+        "SSH"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "加密远程会话",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ssh",
+        "openssh",
+        "telnet"
+      ]
+    },
+    {
+      "id": "TH-NET-027",
+      "prefLabel": "Web 服务器",
+      "altLabels": [
+        "HTTP 服务器"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "网页内容服务",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "http",
+        "apache",
+        "nginx"
+      ]
+    },
+    {
+      "id": "TH-NET-028",
+      "prefLabel": "代理与缓存",
+      "altLabels": [
+        "代理服务器"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "中间转发与缓存",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "proxy",
+        "squid"
+      ]
+    },
+    {
+      "id": "TH-NET-029",
+      "prefLabel": "时间同步",
+      "altLabels": [
+        "NTP"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "时钟校准",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ntp",
+        "openntpd"
+      ]
+    },
+    {
+      "id": "TH-NET-030",
+      "prefLabel": "网络测量",
+      "altLabels": [
+        "网络诊断"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "连通性与路径测量",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ping",
+        "traceroute",
+        "netstat"
+      ]
+    },
+    {
+      "id": "TH-NET-031",
+      "prefLabel": "流量整形",
+      "altLabels": [
+        "QoS"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "带宽与优先级控制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dummynet",
+        "altq",
+        "qos"
+      ]
+    },
+    {
+      "id": "TH-NET-032",
+      "prefLabel": "负载均衡",
+      "altLabels": [
+        "LB"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "请求分发",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "load balancer",
+        "carp"
+      ]
+    },
+    {
+      "id": "TH-NET-033",
+      "prefLabel": "高可用",
+      "altLabels": [
+        "HA"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "故障切换",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vrrp"
+      ]
+    },
+    {
+      "id": "TH-NET-034",
+      "prefLabel": "网络命名空间",
+      "altLabels": [
+        "vnet"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "协议栈实例隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vnet",
+        "netns"
+      ]
+    },
+    {
+      "id": "TH-NET-035",
+      "prefLabel": "协议设计",
+      "altLabels": [
+        "网络协议设计"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "报文与时序设计",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "protocol design"
+      ]
+    },
+    {
+      "id": "TH-NET-036",
+      "prefLabel": "端到端原则",
+      "altLabels": [
+        "端到端"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "网络分层职责",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "end-to-end"
+      ]
+    },
+    {
+      "id": "TH-NET-037",
+      "prefLabel": "网络中立",
+      "altLabels": [
+        "中立性"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "流量差别对待争议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "net neutrality"
+      ]
+    },
+    {
+      "id": "TH-NET-038",
+      "prefLabel": "互联网治理",
+      "altLabels": [
+        "IETF",
+        "ICANN"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "互联网标准与地址治理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ietf",
+        "icann"
+      ]
+    },
+    {
+      "id": "TH-NET-039",
+      "prefLabel": "网络性能基准",
+      "altLabels": [
+        "网络基准"
+      ],
+      "broader": "TH-NET-000",
+      "level": "narrow",
+      "scopeNote": "吞吐与延迟基准",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "netperf",
+        "iperf"
+      ]
+    },
+    {
+      "id": "TH-SEC-000",
+      "prefLabel": "安全与密码学",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Security and privacy",
+      "clc": "TP309",
+      "techTerms": []
+    },
+    {
+      "id": "TH-SEC-001",
+      "prefLabel": "访问控制",
+      "altLabels": [
+        "权限控制"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "主体对客体权限",
+      "ccs": "Security and privacy~Access control",
+      "clc": "TP309",
+      "techTerms": [
+        "dac",
+        "mac"
+      ]
+    },
+    {
+      "id": "TH-SEC-002",
+      "prefLabel": "特权分离",
+      "altLabels": [
+        "权限分离"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "最小权限拆分",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "privilege separation"
+      ]
+    },
+    {
+      "id": "TH-SEC-003",
+      "prefLabel": "沙箱",
+      "altLabels": [
+        "沙盒"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "受限执行环境",
+      "ccs": "Security and privacy~Software and application security",
+      "clc": "TP309",
+      "techTerms": [
+        "sandbox",
+        "capsicum",
+        "pledge",
+        "unveil"
+      ]
+    },
+    {
+      "id": "TH-SEC-004",
+      "prefLabel": "能力模型",
+      "altLabels": [
+        "capability"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "不可伪造的权限令牌",
+      "ccs": "Security and privacy~Access control",
+      "clc": "TP309",
+      "techTerms": [
+        "capability"
+      ]
+    },
+    {
+      "id": "TH-SEC-005",
+      "prefLabel": "安全审计",
+      "altLabels": [
+        "审计日志"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "安全事件记录",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "audit",
+        "auditd"
+      ]
+    },
+    {
+      "id": "TH-SEC-006",
+      "prefLabel": "漏洞管理",
+      "altLabels": [
+        "漏洞"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "缺陷发现与跟踪",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cve",
+        "vulnerability"
+      ]
+    },
+    {
+      "id": "TH-SEC-007",
+      "prefLabel": "安全响应",
+      "altLabels": [
+        "事件响应"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "漏洞处置流程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "security team",
+        "incident response"
+      ]
+    },
+    {
+      "id": "TH-SEC-008",
+      "prefLabel": "安全公告",
+      "altLabels": [
+        "安全通知"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "漏洞披露文本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "advisory",
+        "errata"
+      ]
+    },
+    {
+      "id": "TH-SEC-009",
+      "prefLabel": "加密算法",
+      "altLabels": [
+        "密码算法"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "对称与非对称加密",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "aes",
+        "rsa",
+        "elliptic curve"
+      ]
+    },
+    {
+      "id": "TH-SEC-010",
+      "prefLabel": "哈希算法",
+      "altLabels": [
+        "散列算法"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "摘要与完整性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sha",
+        "md5"
+      ]
+    },
+    {
+      "id": "TH-SEC-011",
+      "prefLabel": "密钥管理",
+      "altLabels": [
+        "密钥"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "密钥生成与保管",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "key management",
+        "pki"
+      ]
+    },
+    {
+      "id": "TH-SEC-012",
+      "prefLabel": "证书体系",
+      "altLabels": [
+        "PKI"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "公钥信任链",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "x509",
+        "certificate"
+      ]
+    },
+    {
+      "id": "TH-SEC-013",
+      "prefLabel": "TLS 加密协议",
+      "altLabels": [
+        "TLS 协议",
+        "TLS",
+        "SSL"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "传输层加密",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tls",
+        "ssl",
+        "openssl",
+        "libressl"
+      ]
+    },
+    {
+      "id": "TH-SEC-014",
+      "prefLabel": "随机数",
+      "altLabels": [
+        "随机数生成"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "熵源与伪随机",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "rng",
+        "urandom"
+      ]
+    },
+    {
+      "id": "TH-SEC-015",
+      "prefLabel": "内存保护",
+      "altLabels": [
+        "内存防护"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "地址与执行保护",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "aslr",
+        "w^x",
+        "nx"
+      ]
+    },
+    {
+      "id": "TH-SEC-016",
+      "prefLabel": "栈保护",
+      "altLabels": [
+        "栈溢出防护"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "栈破坏检测",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "stack protector",
+        "canary"
+      ]
+    },
+    {
+      "id": "TH-SEC-017",
+      "prefLabel": "控制流完整性",
+      "altLabels": [
+        "CFI"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "间接跳转约束",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cfi"
+      ]
+    },
+    {
+      "id": "TH-SEC-018",
+      "prefLabel": "硬件安全",
+      "altLabels": [
+        "硬件信任根"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "硬件信任机制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tpm",
+        "secure boot"
+      ]
+    },
+    {
+      "id": "TH-SEC-019",
+      "prefLabel": "可信执行",
+      "altLabels": [
+        "TEE"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "隔离执行环境",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tee",
+        "sgx",
+        "cheri"
+      ]
+    },
+    {
+      "id": "TH-SEC-020",
+      "prefLabel": "形式化验证",
+      "altLabels": [
+        "形式验证"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "数学化正确性证明",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "formal methods",
+        "verification"
+      ]
+    },
+    {
+      "id": "TH-SEC-021",
+      "prefLabel": "代码审计",
+      "altLabels": [
+        "源码审计"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "逐行安全审查",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "code audit"
+      ]
+    },
+    {
+      "id": "TH-SEC-022",
+      "prefLabel": "模糊测试",
+      "altLabels": [
+        "Fuzzing"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "随机输入缺陷发现",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "fuzz",
+        "afl",
+        "syzkaller"
+      ]
+    },
+    {
+      "id": "TH-SEC-023",
+      "prefLabel": "渗透测试",
+      "altLabels": [
+        "渗透"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "攻击者视角测试",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pentest"
+      ]
+    },
+    {
+      "id": "TH-SEC-024",
+      "prefLabel": "恶意软件",
+      "altLabels": [
+        "恶意程序"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "有害代码",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "malware",
+        "worm",
+        "virus"
+      ]
+    },
+    {
+      "id": "TH-SEC-025",
+      "prefLabel": "蠕虫事件",
+      "altLabels": [
+        "Morris 蠕虫"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "早期网络蠕虫事件",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "morris worm"
+      ]
+    },
+    {
+      "id": "TH-SEC-026",
+      "prefLabel": "后门",
+      "altLabels": [
+        "植入后门"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "隐蔽未授权访问",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "backdoor",
+        "xz"
+      ]
+    },
+    {
+      "id": "TH-SEC-027",
+      "prefLabel": "供应链安全",
+      "altLabels": [
+        "供应链"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "上游依赖风险",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "supply chain"
+      ]
+    },
+    {
+      "id": "TH-SEC-028",
+      "prefLabel": "加密出口管制",
+      "altLabels": [
+        "出口管制"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "密码技术出口限制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "crypto export"
+      ]
+    },
+    {
+      "id": "TH-SEC-029",
+      "prefLabel": "安全认证",
+      "altLabels": [
+        "安全标准认证"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "第三方安全评估",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "common criteria",
+        "fips"
+      ]
+    },
+    {
+      "id": "TH-SEC-030",
+      "prefLabel": "安全基线",
+      "altLabels": [
+        "加固基线"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "最低安全配置",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hardening",
+        "baseline"
+      ]
+    },
+    {
+      "id": "TH-SEC-031",
+      "prefLabel": "入侵检测",
+      "altLabels": [
+        "IDS"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "异常与攻击发现",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ids",
+        "snort"
+      ]
+    },
+    {
+      "id": "TH-SEC-032",
+      "prefLabel": "日志与取证",
+      "altLabels": [
+        "取证"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "事后证据分析",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "forensics",
+        "log"
+      ]
+    },
+    {
+      "id": "TH-SEC-033",
+      "prefLabel": "隐私保护",
+      "altLabels": [
+        "隐私"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "个人数据保护",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "privacy",
+        "gdpr"
+      ]
+    },
+    {
+      "id": "TH-SEC-034",
+      "prefLabel": "匿名与混同",
+      "altLabels": [
+        "匿名网络"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "身份隐藏",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tor",
+        "mixnet"
+      ]
+    },
+    {
+      "id": "TH-SEC-035",
+      "prefLabel": "安全文化",
+      "altLabels": [
+        "安全至上"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "组织安全观念",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "security culture"
+      ]
+    },
+    {
+      "id": "TH-SEC-036",
+      "prefLabel": "威胁模型",
+      "altLabels": [
+        "威胁分析"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "对手与攻击面假设",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "threat model"
+      ]
+    },
+    {
+      "id": "TH-SEC-037",
+      "prefLabel": "零信任",
+      "altLabels": [
+        "零信任模型"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "持续验证的访问",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "zero trust"
+      ]
+    },
+    {
+      "id": "TH-SEC-038",
+      "prefLabel": "密码学协议",
+      "altLabels": [
+        "安全协议"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "密钥交换与认证流程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "handshake",
+        "crypto protocol"
+      ]
+    },
+    {
+      "id": "TH-SEC-039",
+      "prefLabel": "安全更新",
+      "altLabels": [
+        "补丁更新"
+      ],
+      "broader": "TH-SEC-000",
+      "level": "narrow",
+      "scopeNote": "漏洞修复分发",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "security update",
+        "patch"
+      ]
+    },
+    {
+      "id": "TH-HW-000",
+      "prefLabel": "硬件架构与驱动",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Hardware",
+      "clc": "TP303",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HW-001",
+      "prefLabel": "处理器架构",
+      "altLabels": [
+        "CPU 架构"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "指令集与微架构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cpu",
+        "isa"
+      ]
+    },
+    {
+      "id": "TH-HW-002",
+      "prefLabel": "x86 处理器架构",
+      "altLabels": [
+        "x86 架构",
+        "x86"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "英特尔与兼容架构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "i386",
+        "amd64"
+      ]
+    },
+    {
+      "id": "TH-HW-003",
+      "prefLabel": "ARM 处理器架构",
+      "altLabels": [
+        "ARM 架构",
+        "ARM64"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "低功耗精简指令集",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "arm",
+        "arm64",
+        "aarch64"
+      ]
+    },
+    {
+      "id": "TH-HW-004",
+      "prefLabel": "RISC-V 开放处理器架构",
+      "altLabels": [
+        "RISC-V 架构",
+        "RISC-V"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "开放指令集",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "riscv"
+      ]
+    },
+    {
+      "id": "TH-HW-005",
+      "prefLabel": "PowerPC 高性能处理器架构",
+      "altLabels": [
+        "PowerPC 架构",
+        "PowerPC"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "Power 系列处理器",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "powerpc"
+      ]
+    },
+    {
+      "id": "TH-HW-006",
+      "prefLabel": "MIPS 处理器架构",
+      "altLabels": [
+        "MIPS 架构",
+        "MIPS"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "早期 RISC 架构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mips"
+      ]
+    },
+    {
+      "id": "TH-HW-007",
+      "prefLabel": "SPARC 工作站处理器架构",
+      "altLabels": [
+        "SPARC 架构",
+        "SPARC"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "Sun 工作站架构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sparc"
+      ]
+    },
+    {
+      "id": "TH-HW-008",
+      "prefLabel": "指令集",
+      "altLabels": [
+        "ISA"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "机器指令规范",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "risc",
+        "cisc"
+      ]
+    },
+    {
+      "id": "TH-HW-009",
+      "prefLabel": "流水线与超标量",
+      "altLabels": [
+        "流水线"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "指令并行执行",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pipeline",
+        "superscalar"
+      ]
+    },
+    {
+      "id": "TH-HW-010",
+      "prefLabel": "缓存层次",
+      "altLabels": [
+        "CPU 缓存"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "多级高速缓存",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "l1",
+        "l2",
+        "l3"
+      ]
+    },
+    {
+      "id": "TH-HW-011",
+      "prefLabel": "内存一致性",
+      "altLabels": [
+        "内存模型"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "多核可见性规则",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "memory model",
+        "consistency"
+      ]
+    },
+    {
+      "id": "TH-HW-012",
+      "prefLabel": "总线",
+      "altLabels": [
+        "系统总线"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "设备互连通道",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pci",
+        "pcie",
+        "usb"
+      ]
+    },
+    {
+      "id": "TH-HW-013",
+      "prefLabel": "设备驱动",
+      "altLabels": [
+        "驱动程序"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "硬件控制软件",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "driver",
+        "ahci",
+        "virtio"
+      ]
+    },
+    {
+      "id": "TH-HW-014",
+      "prefLabel": "驱动模型",
+      "altLabels": [
+        "newbus"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "设备发现与绑定",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "newbus"
+      ]
+    },
+    {
+      "id": "TH-HW-015",
+      "prefLabel": "固件",
+      "altLabels": [
+        "BIOS",
+        "UEFI"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "平台初始化代码",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "bios",
+        "firmware"
+      ]
+    },
+    {
+      "id": "TH-HW-016",
+      "prefLabel": "主板与芯片组",
+      "altLabels": [
+        "芯片组"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "平台核心电路",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "chipset",
+        "motherboard"
+      ]
+    },
+    {
+      "id": "TH-HW-017",
+      "prefLabel": "小型机",
+      "altLabels": [
+        "minicomputer"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "中型计算平台",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pdp",
+        "vax"
+      ]
+    },
+    {
+      "id": "TH-HW-018",
+      "prefLabel": "大型机",
+      "altLabels": [
+        "mainframe"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "高可靠大型平台",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ibm z",
+        "mainframe"
+      ]
+    },
+    {
+      "id": "TH-HW-019",
+      "prefLabel": "工作站",
+      "altLabels": [
+        "workstation"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "专业桌面平台",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "workstation"
+      ]
+    },
+    {
+      "id": "TH-HW-020",
+      "prefLabel": "个人计算机",
+      "altLabels": [
+        "PC"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "个人计算平台",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pc",
+        "ibm pc"
+      ]
+    },
+    {
+      "id": "TH-HW-021",
+      "prefLabel": "移动设备",
+      "altLabels": [
+        "移动终端"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "便携计算设备",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mobile",
+        "phone"
+      ]
+    },
+    {
+      "id": "TH-HW-022",
+      "prefLabel": "嵌入式系统",
+      "altLabels": [
+        "嵌入式"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "专用计算系统",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "embedded"
+      ]
+    },
+    {
+      "id": "TH-HW-023",
+      "prefLabel": "游戏主机",
+      "altLabels": [
+        "游戏机"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "家用游戏平台",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "playstation",
+        "console"
+      ]
+    },
+    {
+      "id": "TH-HW-024",
+      "prefLabel": "存储硬件",
+      "altLabels": [
+        "磁盘",
+        "固态盘"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "持久存储介质",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hdd"
+      ]
+    },
+    {
+      "id": "TH-HW-025",
+      "prefLabel": "图形硬件",
+      "altLabels": [
+        "GPU"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "图形与并行计算",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "gpu",
+        "graphics"
+      ]
+    },
+    {
+      "id": "TH-HW-026",
+      "prefLabel": "显示与桌面",
+      "altLabels": [
+        "桌面环境"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "图形显示栈",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "x11",
+        "wayland"
+      ]
+    },
+    {
+      "id": "TH-HW-027",
+      "prefLabel": "音频硬件",
+      "altLabels": [
+        "声卡"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "声音输入输出",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "audio"
+      ]
+    },
+    {
+      "id": "TH-HW-028",
+      "prefLabel": "输入设备",
+      "altLabels": [
+        "键鼠"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "人机输入",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "keyboard",
+        "mouse"
+      ]
+    },
+    {
+      "id": "TH-HW-029",
+      "prefLabel": "电源管理",
+      "altLabels": [
+        "ACPI"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "电源与休眠",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HW-030",
+      "prefLabel": "热管理",
+      "altLabels": [
+        "散热"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "温度控制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "thermal"
+      ]
+    },
+    {
+      "id": "TH-HW-031",
+      "prefLabel": "硬件虚拟化",
+      "altLabels": [
+        "VT-x",
+        "AMD-V"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "CPU 虚拟化扩展",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vt-x",
+        "amd-v"
+      ]
+    },
+    {
+      "id": "TH-HW-032",
+      "prefLabel": "输入输出内存管理单元",
+      "altLabels": [
+        "IOMMU"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "设备地址转换",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "iommu"
+      ]
+    },
+    {
+      "id": "TH-HW-033",
+      "prefLabel": "设备树",
+      "altLabels": [
+        "device tree"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "硬件描述数据",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "fdt",
+        "device tree"
+      ]
+    },
+    {
+      "id": "TH-HW-034",
+      "prefLabel": "硬件兼容性",
+      "altLabels": [
+        "兼容性列表"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "平台支持范围",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hcl",
+        "compatibility"
+      ]
+    },
+    {
+      "id": "TH-HW-035",
+      "prefLabel": "硬件抽象层",
+      "altLabels": [
+        "HAL"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "硬件差异封装",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hal"
+      ]
+    },
+    {
+      "id": "TH-HW-036",
+      "prefLabel": "体系结构移植",
+      "altLabels": [
+        "移植"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "跨平台适配",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "port",
+        "arch"
+      ]
+    },
+    {
+      "id": "TH-HW-037",
+      "prefLabel": "二进制兼容",
+      "altLabels": [
+        "ABI"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "二进制接口稳定性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "abi"
+      ]
+    },
+    {
+      "id": "TH-HW-038",
+      "prefLabel": "仿真与模拟",
+      "altLabels": [
+        "模拟器"
+      ],
+      "broader": "TH-HW-000",
+      "level": "narrow",
+      "scopeNote": "异构执行环境",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "emulator",
+        "qemu"
+      ]
+    },
+    {
+      "id": "TH-VM-000",
+      "prefLabel": "虚拟化与云",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Computer systems organization~Cloud computing",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-VM-001",
+      "prefLabel": "虚拟机",
+      "altLabels": [
+        "VM"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "虚拟硬件执行环境",
+      "ccs": "Computer systems organization~Cloud computing",
+      "clc": "",
+      "techTerms": [
+        "virtual machine"
+      ]
+    },
+    {
+      "id": "TH-VM-002",
+      "prefLabel": "管理程序",
+      "altLabels": [
+        "Hypervisor"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "虚拟机监控层",
+      "ccs": "Computer systems organization~Cloud computing",
+      "clc": "",
+      "techTerms": [
+        "hypervisor"
+      ]
+    },
+    {
+      "id": "TH-VM-003",
+      "prefLabel": "半虚拟化",
+      "altLabels": [
+        "准虚拟化"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "协作式虚拟化",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "paravirtualization"
+      ]
+    },
+    {
+      "id": "TH-VM-004",
+      "prefLabel": "硬件辅助虚拟化",
+      "altLabels": [],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "CPU 虚拟化指令",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-VM-005",
+      "prefLabel": "虚拟内核",
+      "altLabels": [
+        "vkernel"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "DragonFly 虚拟内核",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vkernel"
+      ]
+    },
+    {
+      "id": "TH-VM-006",
+      "prefLabel": "bhyve 虚拟化管理程序",
+      "altLabels": [
+        "bhyve 管理程序",
+        "bhyve"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "FreeBSD 原生虚拟化",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "bhyve"
+      ]
+    },
+    {
+      "id": "TH-VM-007",
+      "prefLabel": "Xen 管理程序",
+      "altLabels": [
+        "Xen"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "开源管理程序",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "xen"
+      ]
+    },
+    {
+      "id": "TH-VM-008",
+      "prefLabel": "KVM 虚拟化",
+      "altLabels": [
+        "KVM"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "Linux 内核虚拟化",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "kvm"
+      ]
+    },
+    {
+      "id": "TH-VM-009",
+      "prefLabel": "jail 隔离容器",
+      "altLabels": [
+        "jail 容器",
+        "jail"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "FreeBSD 隔离环境",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-VM-010",
+      "prefLabel": "轻量虚拟化",
+      "altLabels": [
+        "轻量隔离"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "低开销隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lightweight virtualization"
+      ]
+    },
+    {
+      "id": "TH-VM-011",
+      "prefLabel": "云平台",
+      "altLabels": [
+        "云计算平台"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "按需计算资源",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cloud",
+        "iaas"
+      ]
+    },
+    {
+      "id": "TH-VM-012",
+      "prefLabel": "云原生",
+      "altLabels": [
+        "cloud native"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "面向云的架构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cloud native"
+      ]
+    },
+    {
+      "id": "TH-VM-013",
+      "prefLabel": "基础设施即代码",
+      "altLabels": [
+        "IaC"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "声明式基础设施",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "iac",
+        "terraform"
+      ]
+    },
+    {
+      "id": "TH-VM-014",
+      "prefLabel": "编排",
+      "altLabels": [
+        "容器编排"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "资源调度与编排",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "kubernetes",
+        "orchestration"
+      ]
+    },
+    {
+      "id": "TH-VM-015",
+      "prefLabel": "虚拟机镜像",
+      "altLabels": [
+        "镜像"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "可启动磁盘副本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vm image",
+        "qcow2"
+      ]
+    },
+    {
+      "id": "TH-VM-016",
+      "prefLabel": "在线迁移",
+      "altLabels": [
+        "热迁移"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "运行中迁移",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "live migration"
+      ]
+    },
+    {
+      "id": "TH-VM-017",
+      "prefLabel": "资源调度",
+      "altLabels": [
+        "集群调度"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "算力与存储分配",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "resource scheduling"
+      ]
+    },
+    {
+      "id": "TH-VM-018",
+      "prefLabel": "多租户",
+      "altLabels": [
+        "多租户隔离"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "共享平台隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "multi-tenant"
+      ]
+    },
+    {
+      "id": "TH-VM-019",
+      "prefLabel": "计费与配额",
+      "altLabels": [
+        "计量计费",
+        "计费"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "资源使用计量",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "billing",
+        "metering"
+      ]
+    },
+    {
+      "id": "TH-VM-020",
+      "prefLabel": "边缘计算",
+      "altLabels": [
+        "edge"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "近端计算",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "edge computing"
+      ]
+    },
+    {
+      "id": "TH-VM-021",
+      "prefLabel": "混合云",
+      "altLabels": [
+        "hybrid cloud"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "私有与公有组合",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hybrid cloud"
+      ]
+    },
+    {
+      "id": "TH-VM-022",
+      "prefLabel": "私有云",
+      "altLabels": [
+        "private cloud"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "专有云环境",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "private cloud"
+      ]
+    },
+    {
+      "id": "TH-VM-023",
+      "prefLabel": "公有云",
+      "altLabels": [
+        "public cloud"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "共享云服务",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "public cloud"
+      ]
+    },
+    {
+      "id": "TH-VM-024",
+      "prefLabel": "虚拟网络",
+      "altLabels": [
+        "overlay"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "软件定义网络实例",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "overlay"
+      ]
+    },
+    {
+      "id": "TH-VM-025",
+      "prefLabel": "虚拟存储",
+      "altLabels": [
+        "虚拟磁盘"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "存储资源抽象",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vdisk"
+      ]
+    },
+    {
+      "id": "TH-VM-026",
+      "prefLabel": "虚拟桌面",
+      "altLabels": [
+        "VDI"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "远程桌面交付",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vdi"
+      ]
+    },
+    {
+      "id": "TH-VM-027",
+      "prefLabel": "应用容器化",
+      "altLabels": [
+        "容器打包"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "应用及其依赖封装",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "podman"
+      ]
+    },
+    {
+      "id": "TH-VM-028",
+      "prefLabel": "无服务器",
+      "altLabels": [
+        "Serverless"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "事件驱动按需执行",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "serverless"
+      ]
+    },
+    {
+      "id": "TH-VM-029",
+      "prefLabel": "云安全",
+      "altLabels": [
+        "cloud security"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "云环境安全控制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cloud security"
+      ]
+    },
+    {
+      "id": "TH-VM-030",
+      "prefLabel": "虚拟化性能",
+      "altLabels": [
+        "虚拟化开销"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "虚拟层性能损耗",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "virtualization overhead"
+      ]
+    },
+    {
+      "id": "TH-VM-031",
+      "prefLabel": "嵌套虚拟化",
+      "altLabels": [
+        "nested"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "虚拟机内再虚拟化",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "nested virtualization"
+      ]
+    },
+    {
+      "id": "TH-VM-032",
+      "prefLabel": "虚拟机监控",
+      "altLabels": [
+        "VMI"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "虚拟环境观测",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vmi"
+      ]
+    },
+    {
+      "id": "TH-VM-033",
+      "prefLabel": "资源隔离",
+      "altLabels": [
+        "隔离"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "CPU 内存 IO 隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "isolation",
+        "cgroup"
+      ]
+    },
+    {
+      "id": "TH-VM-034",
+      "prefLabel": "快照与克隆",
+      "altLabels": [
+        "克隆"
+      ],
+      "broader": "TH-VM-000",
+      "level": "narrow",
+      "scopeNote": "虚拟机副本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "clone"
+      ]
+    },
+    {
+      "id": "TH-LANG-000",
+      "prefLabel": "语言与工具链",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Software and its engineering~Software notations and tools",
+      "clc": "TP312",
+      "techTerms": []
+    },
+    {
+      "id": "TH-LANG-001",
+      "prefLabel": "C 编程语言",
+      "altLabels": [
+        "C 语言"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "系统编程主语言",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "c89",
+        "c99",
+        "c11"
+      ]
+    },
+    {
+      "id": "TH-LANG-002",
+      "prefLabel": "C++ 编程语言",
+      "altLabels": [
+        "C++ 语言",
+        "C++"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "多范式编译语言",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cpp",
+        "c++"
+      ]
+    },
+    {
+      "id": "TH-LANG-003",
+      "prefLabel": "Rust 系统编程语言",
+      "altLabels": [
+        "Rust 语言",
+        "Rust"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "内存安全系统语言",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "rust"
+      ]
+    },
+    {
+      "id": "TH-LANG-004",
+      "prefLabel": "Go 编程语言",
+      "altLabels": [
+        "Go 语言",
+        "Golang"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "并发友好的编译语言",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "golang"
+      ]
+    },
+    {
+      "id": "TH-LANG-005",
+      "prefLabel": "Python 通用编程语言",
+      "altLabels": [
+        "Python 语言",
+        "Python"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "通用脚本语言",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "python"
+      ]
+    },
+    {
+      "id": "TH-LANG-006",
+      "prefLabel": "Perl 脚本语言",
+      "altLabels": [
+        "Perl 语言",
+        "Perl"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "文本处理语言",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "perl"
+      ]
+    },
+    {
+      "id": "TH-LANG-007",
+      "prefLabel": "Shell 命令解释脚本",
+      "altLabels": [
+        "Shell 脚本",
+        "shell"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "命令解释器脚本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sh",
+        "bash",
+        "csh",
+        "ksh"
+      ]
+    },
+    {
+      "id": "TH-LANG-008",
+      "prefLabel": "Awk 文本处理工具",
+      "altLabels": [
+        "Awk 工具",
+        "awk"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "文本流处理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "awk"
+      ]
+    },
+    {
+      "id": "TH-LANG-009",
+      "prefLabel": "Sed 流编辑器",
+      "altLabels": [
+        "Sed 工具",
+        "sed"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "流编辑器",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sed"
+      ]
+    },
+    {
+      "id": "TH-LANG-010",
+      "prefLabel": "编译器",
+      "altLabels": [
+        "编译程序"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "源码到机器码",
+      "ccs": "Software and its engineering~Compilers",
+      "clc": "TP314",
+      "techTerms": [
+        "gcc",
+        "clang",
+        "llvm"
+      ]
+    },
+    {
+      "id": "TH-LANG-011",
+      "prefLabel": "汇编器",
+      "altLabels": [
+        "assembler"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "汇编到机器码",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "nasm"
+      ]
+    },
+    {
+      "id": "TH-LANG-012",
+      "prefLabel": "链接器",
+      "altLabels": [
+        "linker"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "目标文件合并",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lld"
+      ]
+    },
+    {
+      "id": "TH-LANG-013",
+      "prefLabel": "预处理器",
+      "altLabels": [
+        "preprocessor"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "编译前文本处理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-LANG-014",
+      "prefLabel": "调试器",
+      "altLabels": [
+        "debugger"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "运行时缺陷定位",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lldb"
+      ]
+    },
+    {
+      "id": "TH-LANG-015",
+      "prefLabel": "构建系统",
+      "altLabels": [
+        "build system"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "编译流程编排",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "make",
+        "cmake",
+        "ninja"
+      ]
+    },
+    {
+      "id": "TH-LANG-016",
+      "prefLabel": "ports 源码包构建",
+      "altLabels": [
+        "ports 构建",
+        "ports"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "从源码构建软件",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ports",
+        "pkgsrc"
+      ]
+    },
+    {
+      "id": "TH-LANG-017",
+      "prefLabel": "版本控制",
+      "altLabels": [
+        "VCS"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "源码历史管理",
+      "ccs": "Software and its engineering~Software configuration management and version control systems",
+      "clc": "TP311.5",
+      "techTerms": [
+        "cvs",
+        "svn",
+        "git"
+      ]
+    },
+    {
+      "id": "TH-LANG-018",
+      "prefLabel": "代码评审",
+      "altLabels": [
+        "评审"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "变更审查",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "code review",
+        "phabricator"
+      ]
+    },
+    {
+      "id": "TH-LANG-019",
+      "prefLabel": "静态分析",
+      "altLabels": [
+        "静态检查"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "不执行代码的检查",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "static analyzer",
+        "clang-tidy"
+      ]
+    },
+    {
+      "id": "TH-LANG-020",
+      "prefLabel": "动态分析",
+      "altLabels": [
+        "运行时分析"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "执行期检查",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dynamic analysis"
+      ]
+    },
+    {
+      "id": "TH-LANG-021",
+      "prefLabel": "测试框架",
+      "altLabels": [
+        "测试"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "自动化测试组织",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "test",
+        "atf"
+      ]
+    },
+    {
+      "id": "TH-LANG-022",
+      "prefLabel": "持续集成",
+      "altLabels": [
+        "CI"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "变更自动构建与测试",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ci",
+        "jenkins"
+      ]
+    },
+    {
+      "id": "TH-LANG-023",
+      "prefLabel": "交叉编译",
+      "altLabels": [
+        "cross compile"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "异构目标构建",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cross compile"
+      ]
+    },
+    {
+      "id": "TH-LANG-024",
+      "prefLabel": "工具链",
+      "altLabels": [
+        "toolchain"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "编译链接工具集合",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "toolchain",
+        "binutils"
+      ]
+    },
+    {
+      "id": "TH-LANG-025",
+      "prefLabel": "C 标准库",
+      "altLabels": [
+        "libc"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "语言运行时基础库",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "libc",
+        "libc++"
+      ]
+    },
+    {
+      "id": "TH-LANG-026",
+      "prefLabel": "运行时",
+      "altLabels": [
+        "runtime"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "程序执行支撑",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "runtime"
+      ]
+    },
+    {
+      "id": "TH-LANG-027",
+      "prefLabel": "编程范式",
+      "altLabels": [
+        "paradigm"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "程序设计风格",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "paradigm"
+      ]
+    },
+    {
+      "id": "TH-LANG-028",
+      "prefLabel": "系统编程",
+      "altLabels": [
+        "systems programming"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "贴近硬件的编程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "systems programming"
+      ]
+    },
+    {
+      "id": "TH-LANG-029",
+      "prefLabel": "脚本语言生态",
+      "altLabels": [
+        "脚本生态"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "解释型语言与工具",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "scripting"
+      ]
+    },
+    {
+      "id": "TH-LANG-030",
+      "prefLabel": "语言标准化",
+      "altLabels": [
+        "标准化"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "语言与接口标准",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "posix",
+        "iso c"
+      ]
+    },
+    {
+      "id": "TH-LANG-031",
+      "prefLabel": "语言设计",
+      "altLabels": [
+        "language design"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "语法与语义设计",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "language design"
+      ]
+    },
+    {
+      "id": "TH-LANG-032",
+      "prefLabel": "内存安全",
+      "altLabels": [
+        "memory safety"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "越界与悬垂防护",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "memory safety"
+      ]
+    },
+    {
+      "id": "TH-LANG-033",
+      "prefLabel": "并发编程",
+      "altLabels": [
+        "并发"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "多执行流编程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "concurrency",
+        "thread"
+      ]
+    },
+    {
+      "id": "TH-LANG-034",
+      "prefLabel": "垃圾回收",
+      "altLabels": [
+        "GC"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "自动内存回收",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "gc"
+      ]
+    },
+    {
+      "id": "TH-LANG-035",
+      "prefLabel": "元编程",
+      "altLabels": [
+        "宏与模板"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "生成代码的代码",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "macro",
+        "template"
+      ]
+    },
+    {
+      "id": "TH-LANG-036",
+      "prefLabel": "代码可移植性",
+      "altLabels": [
+        "可移植性"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "跨平台构建",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "portability"
+      ]
+    },
+    {
+      "id": "TH-LANG-037",
+      "prefLabel": "代码美学",
+      "altLabels": [
+        "代码风格"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "可读性与一致性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "style"
+      ]
+    },
+    {
+      "id": "TH-LANG-038",
+      "prefLabel": "文档生成",
+      "altLabels": [
+        "docgen"
+      ],
+      "broader": "TH-LANG-000",
+      "level": "narrow",
+      "scopeNote": "从源码生成文档",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "doxygen",
+        "mdoc"
+      ]
+    },
+    {
+      "id": "TH-REL-000",
+      "prefLabel": "发行工程与打包",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Software and its engineering~Software creation and management",
+      "clc": "TP311.5",
+      "techTerms": []
+    },
+    {
+      "id": "TH-REL-001",
+      "prefLabel": "版本发布",
+      "altLabels": [
+        "发布"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "对外提供的版本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "release"
+      ]
+    },
+    {
+      "id": "TH-REL-002",
+      "prefLabel": "发布工程",
+      "altLabels": [
+        "releng"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "发布流程与责任",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "releng",
+        "release engineering"
+      ]
+    },
+    {
+      "id": "TH-REL-003",
+      "prefLabel": "发布分支",
+      "altLabels": [
+        "稳定分支"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "维护分支",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "branch",
+        "stable"
+      ]
+    },
+    {
+      "id": "TH-REL-004",
+      "prefLabel": "版本号",
+      "altLabels": [
+        "版本命名"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "版本标识规则",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "version",
+        "semver"
+      ]
+    },
+    {
+      "id": "TH-REL-005",
+      "prefLabel": "发布周期",
+      "altLabels": [
+        "release cycle"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "版本节奏",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "release cycle"
+      ]
+    },
+    {
+      "id": "TH-REL-006",
+      "prefLabel": "长期支持",
+      "altLabels": [
+        "LTS"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "长期维护版本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lts"
+      ]
+    },
+    {
+      "id": "TH-REL-007",
+      "prefLabel": "二进制包",
+      "altLabels": [
+        "软件包"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "预编译软件单元",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "pkg",
+        "package"
+      ]
+    },
+    {
+      "id": "TH-REL-008",
+      "prefLabel": "包管理器",
+      "altLabels": [
+        "package manager"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "软件安装与升级",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "apt",
+        "rpm"
+      ]
+    },
+    {
+      "id": "TH-REL-009",
+      "prefLabel": "依赖解析",
+      "altLabels": [
+        "依赖"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "包间依赖求解",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dependency"
+      ]
+    },
+    {
+      "id": "TH-REL-010",
+      "prefLabel": "软件仓库",
+      "altLabels": [
+        "仓库"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "包集合与分发点",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "repo",
+        "mirror"
+      ]
+    },
+    {
+      "id": "TH-REL-011",
+      "prefLabel": "构建农场",
+      "altLabels": [
+        "tinderbox"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "多平台持续构建",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "build farm",
+        "tinderbox"
+      ]
+    },
+    {
+      "id": "TH-REL-012",
+      "prefLabel": "可复现构建",
+      "altLabels": [
+        "reproducible build"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "同源同果构建",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "reproducible"
+      ]
+    },
+    {
+      "id": "TH-REL-013",
+      "prefLabel": "交叉构建",
+      "altLabels": [
+        "cross build"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "异构目标打包",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cross build"
+      ]
+    },
+    {
+      "id": "TH-REL-014",
+      "prefLabel": "安装器",
+      "altLabels": [
+        "bsdinstall"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "系统安装程序",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "installer",
+        "bsdinstall"
+      ]
+    },
+    {
+      "id": "TH-REL-015",
+      "prefLabel": "系统升级",
+      "altLabels": [
+        "升级"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "版本内与跨版本更新",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "upgrade",
+        "freebsd-update"
+      ]
+    },
+    {
+      "id": "TH-REL-016",
+      "prefLabel": "补丁管理",
+      "altLabels": [
+        "errata"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "缺陷修复分发",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-REL-017",
+      "prefLabel": "软件包签名",
+      "altLabels": [
+        "签名"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "包来源与完整性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "signature"
+      ]
+    },
+    {
+      "id": "TH-REL-018",
+      "prefLabel": "打包规范",
+      "altLabels": [
+        "packaging"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "包内容与元数据规则",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "packaging"
+      ]
+    },
+    {
+      "id": "TH-REL-019",
+      "prefLabel": "端口树",
+      "altLabels": [
+        "ports tree"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "源码包构建配方集合",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-REL-020",
+      "prefLabel": "包格式",
+      "altLabels": [
+        "package format"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "包文件结构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "txz"
+      ]
+    },
+    {
+      "id": "TH-REL-021",
+      "prefLabel": "镜像站",
+      "altLabels": [
+        "mirror"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "分发副本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-REL-022",
+      "prefLabel": "持续交付",
+      "altLabels": [
+        "CD"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "持续可交付",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "continuous delivery"
+      ]
+    },
+    {
+      "id": "TH-REL-023",
+      "prefLabel": "灰度发布",
+      "altLabels": [
+        "canary"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "分阶段放量",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-REL-024",
+      "prefLabel": "回滚",
+      "altLabels": [
+        "rollback"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "退回旧版本",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "rollback"
+      ]
+    },
+    {
+      "id": "TH-REL-025",
+      "prefLabel": "配置管理",
+      "altLabels": [
+        "config mgmt"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "系统配置自动化",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "config",
+        "ansible"
+      ]
+    },
+    {
+      "id": "TH-REL-026",
+      "prefLabel": "初始化系统",
+      "altLabels": [
+        "init"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "系统启动与服务编排",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "systemd"
+      ]
+    },
+    {
+      "id": "TH-REL-027",
+      "prefLabel": "服务管理",
+      "altLabels": [
+        "rc.d"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "后台服务控制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "rc.d",
+        "service"
+      ]
+    },
+    {
+      "id": "TH-REL-028",
+      "prefLabel": "系统镜像",
+      "altLabels": [
+        "镜像构建"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "可安装介质",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "image"
+      ]
+    },
+    {
+      "id": "TH-REL-029",
+      "prefLabel": "嵌入式构建",
+      "altLabels": [
+        "嵌入式打包"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "裁剪系统构建",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "buildroot"
+      ]
+    },
+    {
+      "id": "TH-REL-030",
+      "prefLabel": "发行版",
+      "altLabels": [
+        "distribution"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "完整软件集合",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "distribution",
+        "distro"
+      ]
+    },
+    {
+      "id": "TH-REL-031",
+      "prefLabel": "衍生发行版",
+      "altLabels": [
+        "derivative"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "基于上游的再分发",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "derivative"
+      ]
+    },
+    {
+      "id": "TH-REL-032",
+      "prefLabel": "打包者",
+      "altLabels": [
+        "maintainer"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "包维护责任",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "packager",
+        "maintainer"
+      ]
+    },
+    {
+      "id": "TH-REL-033",
+      "prefLabel": "构建封闭性",
+      "altLabels": [
+        "hermetic build"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "构建环境隔离",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "hermetic"
+      ]
+    },
+    {
+      "id": "TH-REL-034",
+      "prefLabel": "制品管理",
+      "altLabels": [
+        "artifact"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "构建产物管理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "artifact"
+      ]
+    },
+    {
+      "id": "TH-REL-035",
+      "prefLabel": "供应链完整性",
+      "altLabels": [
+        "supply chain"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "构建来源可信",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-REL-036",
+      "prefLabel": "版本冻结",
+      "altLabels": [
+        "freeze"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "停止功能变更",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "TH-REL-037",
+      "prefLabel": "发布说明",
+      "altLabels": [
+        "release notes"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "版本变更说明",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "release notes"
+      ]
+    },
+    {
+      "id": "TH-REL-038",
+      "prefLabel": "质量保证",
+      "altLabels": [
+        "QA"
+      ],
+      "broader": "TH-REL-000",
+      "level": "narrow",
+      "scopeNote": "发布前质量验证",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "qa"
+      ]
+    },
+    {
+      "id": "TH-LAW-000",
+      "prefLabel": "许可证与法律",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Social and professional topics~Computing / technology policy~Legal aspects of computing",
+      "clc": "D923.4",
+      "techTerms": []
+    },
+    {
+      "id": "TH-LAW-001",
+      "prefLabel": "BSD 许可证",
+      "altLabels": [
+        "BSD License"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "伯克利风格宽松许可",
+      "ccs": "Social and professional topics~Computing / technology policy~Legal aspects of computing",
+      "clc": "D923.4",
+      "techTerms": [
+        "bsd license"
+      ]
+    },
+    {
+      "id": "TH-LAW-002",
+      "prefLabel": "MIT 许可证",
+      "altLabels": [
+        "MIT License"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "极简宽松许可",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mit"
+      ]
+    },
+    {
+      "id": "TH-LAW-003",
+      "prefLabel": "GPL 许可证",
+      "altLabels": [
+        "GNU 通用公共许可证"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "强 copyleft 许可",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "gpl",
+        "gplv2",
+        "gplv3"
+      ]
+    },
+    {
+      "id": "TH-LAW-004",
+      "prefLabel": "LGPL 通用公共许可证",
+      "altLabels": [
+        "LGPL 许可证",
+        "LGPL"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "弱 copyleft 许可",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lgpl"
+      ]
+    },
+    {
+      "id": "TH-LAW-005",
+      "prefLabel": "阿帕奇许可证",
+      "altLabels": [
+        "Apache 许可证",
+        "Apache License"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "专利授权宽松许可",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "apache license"
+      ]
+    },
+    {
+      "id": "TH-LAW-006",
+      "prefLabel": "CDDL 开源许可证",
+      "altLabels": [
+        "CDDL 许可证",
+        "CDDL"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "CDDL 文件级 copyleft",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cddl"
+      ]
+    },
+    {
+      "id": "TH-LAW-007",
+      "prefLabel": "MPL 许可证",
+      "altLabels": [
+        "MPL"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "文件级 copyleft",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mpl"
+      ]
+    },
+    {
+      "id": "TH-LAW-008",
+      "prefLabel": "许可证兼容性",
+      "altLabels": [
+        "兼容性"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "多许可组合可行性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "license compatibility"
+      ]
+    },
+    {
+      "id": "TH-LAW-009",
+      "prefLabel": "许可证扩散",
+      "altLabels": [
+        "proliferation"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "许可种类膨胀",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "license proliferation"
+      ]
+    },
+    {
+      "id": "TH-LAW-010",
+      "prefLabel": "版权",
+      "altLabels": [
+        "著作权"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "作品复制与改编权",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "copyright"
+      ]
+    },
+    {
+      "id": "TH-LAW-011",
+      "prefLabel": "著作权归属",
+      "altLabels": [
+        "作者身份"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "创作主体认定",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "authorship"
+      ]
+    },
+    {
+      "id": "TH-LAW-012",
+      "prefLabel": "专利",
+      "altLabels": [
+        "软件专利"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "技术方案独占权",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "patent"
+      ]
+    },
+    {
+      "id": "TH-LAW-013",
+      "prefLabel": "商标",
+      "altLabels": [
+        "trademark"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "标识来源保护",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "trademark"
+      ]
+    },
+    {
+      "id": "TH-LAW-014",
+      "prefLabel": "商业秘密",
+      "altLabels": [
+        "trade secret"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "未公开信息保护",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "trade secret"
+      ]
+    },
+    {
+      "id": "TH-LAW-015",
+      "prefLabel": "版权诉讼",
+      "altLabels": [
+        "诉讼"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "侵权司法程序",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lawsuit",
+        "litigation"
+      ]
+    },
+    {
+      "id": "TH-LAW-016",
+      "prefLabel": "和解协议",
+      "altLabels": [
+        "和解"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "诉讼双方协议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "settlement"
+      ]
+    },
+    {
+      "id": "TH-LAW-017",
+      "prefLabel": "同意令",
+      "altLabels": [
+        "consent decree"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "法院监督的承诺",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "consent decree"
+      ]
+    },
+    {
+      "id": "TH-LAW-018",
+      "prefLabel": "反向工程",
+      "altLabels": [
+        "reverse engineering"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "逆向分析兼容性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "reverse engineering"
+      ]
+    },
+    {
+      "id": "TH-LAW-019",
+      "prefLabel": "出口管制",
+      "altLabels": [
+        "export control"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "技术与密码出口限制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "export control"
+      ]
+    },
+    {
+      "id": "TH-LAW-020",
+      "prefLabel": "加密政策",
+      "altLabels": [
+        "crypto policy"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "密码技术管制",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "crypto policy"
+      ]
+    },
+    {
+      "id": "TH-LAW-021",
+      "prefLabel": "开源合规",
+      "altLabels": [
+        "合规"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "许可证义务履行",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "compliance",
+        "spdx"
+      ]
+    },
+    {
+      "id": "TH-LAW-022",
+      "prefLabel": "合规认证",
+      "altLabels": [
+        "certification"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "标准符合性认定",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "certification"
+      ]
+    },
+    {
+      "id": "TH-LAW-023",
+      "prefLabel": "标准与法规",
+      "altLabels": [
+        "standard"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "技术标准与法规",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-LAW-024",
+      "prefLabel": "数据保护",
+      "altLabels": [
+        "数据隐私"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "个人数据处理规则",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-LAW-025",
+      "prefLabel": "软件自由",
+      "altLabels": [
+        "freedom"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "用户使用与修改自由",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "software freedom"
+      ]
+    },
+    {
+      "id": "TH-LAW-026",
+      "prefLabel": "开源定义",
+      "altLabels": [
+        "OSD"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "开源许可判据",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "osd",
+        "osi"
+      ]
+    },
+    {
+      "id": "TH-LAW-027",
+      "prefLabel": "自由软件定义",
+      "altLabels": [
+        "FSD"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "自由软件四项自由",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "free software"
+      ]
+    },
+    {
+      "id": "TH-LAW-028",
+      "prefLabel": "许可证执行",
+      "altLabels": [
+        "enforcement"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "违约救济",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "enforcement"
+      ]
+    },
+    {
+      "id": "TH-LAW-029",
+      "prefLabel": "法律实体",
+      "altLabels": [
+        "legal entity"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "承担责任的机构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "foundation",
+        "nonprofit"
+      ]
+    },
+    {
+      "id": "TH-LAW-030",
+      "prefLabel": "非营利组织",
+      "altLabels": [
+        "nonprofit"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "非分配利润组织",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "501c3"
+      ]
+    },
+    {
+      "id": "TH-LAW-031",
+      "prefLabel": "基金会治理",
+      "altLabels": [
+        "foundation"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "基金会决策结构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-LAW-032",
+      "prefLabel": "贡献者协议",
+      "altLabels": [
+        "CLA",
+        "DCO"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "贡献授权声明",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cla",
+        "dco"
+      ]
+    },
+    {
+      "id": "TH-LAW-033",
+      "prefLabel": "版权声明",
+      "altLabels": [
+        "copyright notice"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "版权归属标识",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "copyright notice"
+      ]
+    },
+    {
+      "id": "TH-LAW-034",
+      "prefLabel": "许可证文本",
+      "altLabels": [
+        "license text"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "许可条款原文",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "license text"
+      ]
+    },
+    {
+      "id": "TH-LAW-035",
+      "prefLabel": "法律意见",
+      "altLabels": [
+        "legal opinion"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "律师专业判断",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "legal opinion"
+      ]
+    },
+    {
+      "id": "TH-LAW-036",
+      "prefLabel": "司法管辖",
+      "altLabels": [
+        "jurisdiction"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "法院与法律适用范围",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "jurisdiction"
+      ]
+    },
+    {
+      "id": "TH-LAW-037",
+      "prefLabel": "判例",
+      "altLabels": [
+        "precedent"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "先例约束",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "precedent"
+      ]
+    },
+    {
+      "id": "TH-LAW-038",
+      "prefLabel": "开源法律援助",
+      "altLabels": [
+        "legal aid"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "公益法律服务",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "legal aid"
+      ]
+    },
+    {
+      "id": "TH-LAW-039",
+      "prefLabel": "法律事件",
+      "altLabels": [
+        "法律纠纷",
+        "法律争议"
+      ],
+      "broader": "TH-LAW-000",
+      "level": "narrow",
+      "scopeNote": "进入司法或公共争议的事件",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "legal dispute",
+        "legal case"
+      ]
+    },
+    {
+      "id": "TH-GOV-000",
+      "prefLabel": "治理与社区",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Social and professional topics~Computing / technology policy",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-GOV-001",
+      "prefLabel": "治理模式",
+      "altLabels": [
+        "governance"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "项目决策结构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "governance"
+      ]
+    },
+    {
+      "id": "TH-GOV-002",
+      "prefLabel": "仁慈独裁者",
+      "altLabels": [
+        "BDFL"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "单人最终裁决",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "bdfl"
+      ]
+    },
+    {
+      "id": "TH-GOV-003",
+      "prefLabel": "核心团队",
+      "altLabels": [
+        "core team"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "核心决策小组",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "core team"
+      ]
+    },
+    {
+      "id": "TH-GOV-004",
+      "prefLabel": "提交者",
+      "altLabels": [
+        "committer"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "拥有提交权限者",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "committer"
+      ]
+    },
+    {
+      "id": "TH-GOV-005",
+      "prefLabel": "贡献者",
+      "altLabels": [
+        "contributor",
+        "边缘贡献者"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "代码与文档贡献者",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "contributor"
+      ]
+    },
+    {
+      "id": "TH-GOV-006",
+      "prefLabel": "维护者",
+      "altLabels": [],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "模块负责人",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-GOV-007",
+      "prefLabel": "代码所有权",
+      "altLabels": [
+        "ownership"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "模块归属与责任",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ownership"
+      ]
+    },
+    {
+      "id": "TH-GOV-008",
+      "prefLabel": "提交权限",
+      "altLabels": [
+        "commit bit"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "仓库写权限",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "commit bit"
+      ]
+    },
+    {
+      "id": "TH-GOV-009",
+      "prefLabel": "选举",
+      "altLabels": [
+        "election"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "任期与投票",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "election"
+      ]
+    },
+    {
+      "id": "TH-GOV-010",
+      "prefLabel": "投票",
+      "altLabels": [
+        "voting"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "集体决策方式",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vote"
+      ]
+    },
+    {
+      "id": "TH-GOV-011",
+      "prefLabel": "共识决策",
+      "altLabels": [
+        "consensus"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "无反对或广泛同意",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "consensus"
+      ]
+    },
+    {
+      "id": "TH-GOV-012",
+      "prefLabel": "行为准则",
+      "altLabels": [
+        "CoC"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "社区行为规范",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "coc"
+      ]
+    },
+    {
+      "id": "TH-GOV-013",
+      "prefLabel": "社区冲突",
+      "altLabels": [
+        "conflict"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "成员与路线争议",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "conflict"
+      ]
+    },
+    {
+      "id": "TH-GOV-014",
+      "prefLabel": "邮件列表",
+      "altLabels": [
+        "mailing list"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "异步公共讨论",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mailing list"
+      ]
+    },
+    {
+      "id": "TH-GOV-015",
+      "prefLabel": "新闻组",
+      "altLabels": [
+        "Usenet"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "分布式讨论系统",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "usenet",
+        "forum"
+      ]
+    },
+    {
+      "id": "TH-GOV-016",
+      "prefLabel": "IRC 实时频道",
+      "altLabels": [
+        "IRC 频道",
+        "IRC"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "实时文字讨论",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "irc"
+      ]
+    },
+    {
+      "id": "TH-GOV-017",
+      "prefLabel": "技术会议",
+      "altLabels": [
+        "conference"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "面对面交流",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "conference",
+        "bsdcan"
+      ]
+    },
+    {
+      "id": "TH-GOV-018",
+      "prefLabel": "本地用户组",
+      "altLabels": [
+        "LUG"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "地区性用户社群",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lug"
+      ]
+    },
+    {
+      "id": "TH-GOV-019",
+      "prefLabel": "社区宣传",
+      "altLabels": [
+        "advocacy"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "对外推广",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "advocacy"
+      ]
+    },
+    {
+      "id": "TH-GOV-020",
+      "prefLabel": "社区健康",
+      "altLabels": [
+        "community health"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "参与度与氛围",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "community"
+      ]
+    },
+    {
+      "id": "TH-GOV-021",
+      "prefLabel": "贡献者留存",
+      "altLabels": [
+        "retention"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "长期参与",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "retention"
+      ]
+    },
+    {
+      "id": "TH-GOV-022",
+      "prefLabel": "多元化",
+      "altLabels": [
+        "diversity"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "群体构成多样性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "diversity"
+      ]
+    },
+    {
+      "id": "TH-GOV-023",
+      "prefLabel": "新人引导",
+      "altLabels": [
+        "onboarding"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "新成员上手",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "onboarding"
+      ]
+    },
+    {
+      "id": "TH-GOV-024",
+      "prefLabel": "导师制",
+      "altLabels": [
+        "mentorship"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "经验传递",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "mentor"
+      ]
+    },
+    {
+      "id": "TH-GOV-025",
+      "prefLabel": "实习项目",
+      "altLabels": [
+        "internship"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "学生参与开源",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "gsoc",
+        "outreachy"
+      ]
+    },
+    {
+      "id": "TH-GOV-026",
+      "prefLabel": "分叉",
+      "altLabels": [
+        "fork"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "从既有项目分裂",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-GOV-027",
+      "prefLabel": "项目分裂",
+      "altLabels": [
+        "split"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "路线不可调和",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "split"
+      ]
+    },
+    {
+      "id": "TH-GOV-028",
+      "prefLabel": "项目合并",
+      "altLabels": [
+        "merge"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "代码与社区整合",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "merge"
+      ]
+    },
+    {
+      "id": "TH-GOV-029",
+      "prefLabel": "跨项目协作",
+      "altLabels": [
+        "collaboration"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "多项目共同开发",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "collaboration"
+      ]
+    },
+    {
+      "id": "TH-GOV-030",
+      "prefLabel": "上游与下游",
+      "altLabels": [
+        "upstream"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "依赖流向",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "upstream",
+        "downstream"
+      ]
+    },
+    {
+      "id": "TH-GOV-031",
+      "prefLabel": "社区规范",
+      "altLabels": [
+        "norms"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "未成文惯例",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "norms"
+      ]
+    },
+    {
+      "id": "TH-GOV-032",
+      "prefLabel": "声誉与信任",
+      "altLabels": [
+        "reputation"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "长期行为积累",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "reputation"
+      ]
+    },
+    {
+      "id": "TH-GOV-033",
+      "prefLabel": "透明度",
+      "altLabels": [
+        "transparency"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "决策可见性",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "transparency"
+      ]
+    },
+    {
+      "id": "TH-GOV-034",
+      "prefLabel": "问责",
+      "altLabels": [
+        "accountability"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "责任追究",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "accountability"
+      ]
+    },
+    {
+      "id": "TH-GOV-035",
+      "prefLabel": "去中心化",
+      "altLabels": [
+        "decentralization"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "权力分散",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "decentralization"
+      ]
+    },
+    {
+      "id": "TH-GOV-036",
+      "prefLabel": "精英治理",
+      "altLabels": [
+        "meritocracy"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "贡献决定话语权",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "meritocracy"
+      ]
+    },
+    {
+      "id": "TH-GOV-037",
+      "prefLabel": "社区记忆",
+      "altLabels": [
+        "archive"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "历史记录保存",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "memory",
+        "archive"
+      ]
+    },
+    {
+      "id": "TH-GOV-038",
+      "prefLabel": "社区史",
+      "altLabels": [
+        "community history"
+      ],
+      "broader": "TH-GOV-000",
+      "level": "narrow",
+      "scopeNote": "群体历程书写",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "community history"
+      ]
+    },
+    {
+      "id": "TH-BIZ-000",
+      "prefLabel": "商业、教育与媒体",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Social and professional topics~Professional topics~Computing industry",
+      "clc": "F49",
+      "techTerms": []
+    },
+    {
+      "id": "TH-BIZ-001",
+      "prefLabel": "商业模式",
+      "altLabels": [
+        "business model"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "持续经营的收入结构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "business"
+      ]
+    },
+    {
+      "id": "TH-BIZ-002",
+      "prefLabel": "硬件厂商",
+      "altLabels": [
+        "vendor"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "设备供应企业",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "TH-BIZ-003",
+      "prefLabel": "操作系统厂商",
+      "altLabels": [
+        "OS vendor"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "系统供应企业",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "os vendor"
+      ]
+    },
+    {
+      "id": "TH-BIZ-004",
+      "prefLabel": "创业公司",
+      "altLabels": [
+        "startup"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "早期高风险企业",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "startup"
+      ]
+    },
+    {
+      "id": "TH-BIZ-005",
+      "prefLabel": "企业采用",
+      "altLabels": [
+        "enterprise adoption"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "组织级部署",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "enterprise"
+      ]
+    },
+    {
+      "id": "TH-BIZ-006",
+      "prefLabel": "技术支持",
+      "altLabels": [
+        "support"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "商业技术服务",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "support"
+      ]
+    },
+    {
+      "id": "TH-BIZ-007",
+      "prefLabel": "咨询与服务",
+      "altLabels": [
+        "consulting"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "专业服务",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "consulting"
+      ]
+    },
+    {
+      "id": "TH-BIZ-008",
+      "prefLabel": "系统集成",
+      "altLabels": [
+        "SI"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "方案整合交付",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "integration"
+      ]
+    },
+    {
+      "id": "TH-BIZ-009",
+      "prefLabel": "认证与培训",
+      "altLabels": [
+        "training"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "技能认证",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "training"
+      ]
+    },
+    {
+      "id": "TH-BIZ-010",
+      "prefLabel": "教育模式",
+      "altLabels": [
+        "education"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "人才培养方式",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "education"
+      ]
+    },
+    {
+      "id": "TH-BIZ-011",
+      "prefLabel": "课程与教材",
+      "altLabels": [
+        "curriculum"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "教学内容",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "curriculum"
+      ]
+    },
+    {
+      "id": "TH-BIZ-012",
+      "prefLabel": "学术研究",
+      "altLabels": [
+        "research"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "知识生产",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "research"
+      ]
+    },
+    {
+      "id": "TH-BIZ-013",
+      "prefLabel": "学位项目",
+      "altLabels": [
+        "degree"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "高等教育项目",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "degree"
+      ]
+    },
+    {
+      "id": "TH-BIZ-014",
+      "prefLabel": "实验室",
+      "altLabels": [
+        "lab"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "研究组织单元",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "lab"
+      ]
+    },
+    {
+      "id": "TH-BIZ-015",
+      "prefLabel": "学术出版",
+      "altLabels": [
+        "论文发表"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "同行评议出版",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "paper",
+        "journal"
+      ]
+    },
+    {
+      "id": "TH-BIZ-016",
+      "prefLabel": "会议论文",
+      "altLabels": [
+        "conference paper"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "会议发表成果",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-BIZ-017",
+      "prefLabel": "技术报告",
+      "altLabels": [
+        "tech report"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "机构技术文档",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "tech report"
+      ]
+    },
+    {
+      "id": "TH-BIZ-018",
+      "prefLabel": "手册与文档",
+      "altLabels": [
+        "documentation"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "使用与开发文档",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "handbook",
+        "manual"
+      ]
+    },
+    {
+      "id": "TH-BIZ-019",
+      "prefLabel": "手册页",
+      "altLabels": [
+        "man page"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "命令参考页",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "man page"
+      ]
+    },
+    {
+      "id": "TH-BIZ-020",
+      "prefLabel": "图书",
+      "altLabels": [
+        "book"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "长篇出版物",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "book"
+      ]
+    },
+    {
+      "id": "TH-BIZ-021",
+      "prefLabel": "视频与课程",
+      "altLabels": [
+        "video"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "影音教学材料",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "video",
+        "course"
+      ]
+    },
+    {
+      "id": "TH-BIZ-022",
+      "prefLabel": "在线资源",
+      "altLabels": [
+        "website"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "网络知识资源",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "website",
+        "wiki"
+      ]
+    },
+    {
+      "id": "TH-BIZ-023",
+      "prefLabel": "技术媒体",
+      "altLabels": [
+        "tech media",
+        "媒体反响"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "专业报道机构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "media",
+        "press"
+      ]
+    },
+    {
+      "id": "TH-BIZ-024",
+      "prefLabel": "新闻报道",
+      "altLabels": [
+        "news"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "时事报道",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "news"
+      ]
+    },
+    {
+      "id": "TH-BIZ-025",
+      "prefLabel": "采访",
+      "altLabels": [
+        "interview"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "当事人问答记录",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "interview"
+      ]
+    },
+    {
+      "id": "TH-BIZ-026",
+      "prefLabel": "口述史",
+      "altLabels": [
+        "oral history"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "亲历者叙述",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "oral history"
+      ]
+    },
+    {
+      "id": "TH-BIZ-027",
+      "prefLabel": "博客",
+      "altLabels": [
+        "blog"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "个人或组织日志",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "blog"
+      ]
+    },
+    {
+      "id": "TH-BIZ-028",
+      "prefLabel": "社区媒体",
+      "altLabels": [
+        "forum"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "社区内容平台",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "reddit"
+      ]
+    },
+    {
+      "id": "TH-BIZ-029",
+      "prefLabel": "营销与公关",
+      "altLabels": [
+        "marketing"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "市场传播",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "marketing",
+        "pr"
+      ]
+    },
+    {
+      "id": "TH-BIZ-030",
+      "prefLabel": "品牌",
+      "altLabels": [
+        "brand"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "名称与形象资产",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "brand"
+      ]
+    },
+    {
+      "id": "TH-BIZ-031",
+      "prefLabel": "奖项",
+      "altLabels": [
+        "award"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "荣誉认定",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "award"
+      ]
+    },
+    {
+      "id": "TH-BIZ-032",
+      "prefLabel": "竞赛",
+      "altLabels": [
+        "contest"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "评比活动",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "contest"
+      ]
+    },
+    {
+      "id": "TH-BIZ-033",
+      "prefLabel": "赞助",
+      "altLabels": [
+        "sponsorship"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "资金与资源支持",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "sponsorship"
+      ]
+    },
+    {
+      "id": "TH-BIZ-034",
+      "prefLabel": "经济生态",
+      "altLabels": [
+        "economy"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "产业与资金循环",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "economy"
+      ]
+    },
+    {
+      "id": "TH-BIZ-035",
+      "prefLabel": "市场格局",
+      "altLabels": [
+        "market"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "份额与参与者",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "market"
+      ]
+    },
+    {
+      "id": "TH-BIZ-036",
+      "prefLabel": "竞争与替代",
+      "altLabels": [
+        "competition"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "同类方案竞争",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "competition"
+      ]
+    },
+    {
+      "id": "TH-BIZ-037",
+      "prefLabel": "自助出版",
+      "altLabels": [
+        "自出版",
+        "独立出版"
+      ],
+      "broader": "TH-BIZ-000",
+      "level": "narrow",
+      "scopeNote": "作者自行出版发行",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "self-publishing"
+      ]
+    },
+    {
+      "id": "TH-HIS-000",
+      "prefLabel": "史学方法与编纂",
+      "altLabels": [],
+      "broader": null,
+      "level": "domain",
+      "scopeNote": "主题域根",
+      "ccs": "Social and professional topics~History of computing",
+      "clc": "TP3-09",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HIS-001",
+      "prefLabel": "史料等级",
+      "altLabels": [
+        "证据等级"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "史料可信度分级",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "evidence level"
+      ]
+    },
+    {
+      "id": "TH-HIS-002",
+      "prefLabel": "一手史料",
+      "altLabels": [
+        "primary source"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "直接来源材料",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "primary source"
+      ]
+    },
+    {
+      "id": "TH-HIS-003",
+      "prefLabel": "二手转述",
+      "altLabels": [
+        "secondary source"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "转引与综述",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "secondary source"
+      ]
+    },
+    {
+      "id": "TH-HIS-004",
+      "prefLabel": "当事人自述",
+      "altLabels": [
+        "self-account"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "亲历者陈述",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "memoir",
+        "self-account"
+      ]
+    },
+    {
+      "id": "TH-HIS-005",
+      "prefLabel": "口述史方法",
+      "altLabels": [
+        "oral history method"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "访谈采集与整理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HIS-006",
+      "prefLabel": "邮件列表史料",
+      "altLabels": [
+        "mailing list source"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "公共讨论存档",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HIS-007",
+      "prefLabel": "代码仓库史料",
+      "altLabels": [
+        "repository source"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "提交历史证据",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "repository",
+        "commit"
+      ]
+    },
+    {
+      "id": "TH-HIS-008",
+      "prefLabel": "档案学",
+      "altLabels": [],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "档案整理与鉴定",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HIS-009",
+      "prefLabel": "考据方法",
+      "altLabels": [
+        "textual criticism"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "文本溯源与辨伪",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "criticism"
+      ]
+    },
+    {
+      "id": "TH-HIS-010",
+      "prefLabel": "交叉验证",
+      "altLabels": [
+        "triangulation"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "多源互证",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "triangulation"
+      ]
+    },
+    {
+      "id": "TH-HIS-011",
+      "prefLabel": "存疑处理",
+      "altLabels": [
+        "doubt"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "未确证事项标记",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "doubt"
+      ]
+    },
+    {
+      "id": "TH-HIS-012",
+      "prefLabel": "零信任原则",
+      "altLabels": [
+        "zero trust"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "默认不采信",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HIS-013",
+      "prefLabel": "三次复查",
+      "altLabels": [
+        "triple review"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "多轮独立复核",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "review"
+      ]
+    },
+    {
+      "id": "TH-HIS-014",
+      "prefLabel": "证据链",
+      "altLabels": [
+        "evidence chain"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "事实到结论的链条",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "chain of evidence"
+      ]
+    },
+    {
+      "id": "TH-HIS-015",
+      "prefLabel": "历史分期",
+      "altLabels": [
+        "periodization"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "时代划分",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "periodization"
+      ]
+    },
+    {
+      "id": "TH-HIS-016",
+      "prefLabel": "年代学",
+      "altLabels": [
+        "chronology"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "时间标定",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "chronology"
+      ]
+    },
+    {
+      "id": "TH-HIS-017",
+      "prefLabel": "历史叙事",
+      "altLabels": [
+        "narrative"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "史实组织方式",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "narrative"
+      ]
+    },
+    {
+      "id": "TH-HIS-018",
+      "prefLabel": "叙事结构",
+      "altLabels": [
+        "narrative structure"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "章节与线索安排",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "structure"
+      ]
+    },
+    {
+      "id": "TH-HIS-019",
+      "prefLabel": "反进步叙事",
+      "altLabels": [
+        "anti-progress"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "拒绝线性进步观",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "progress"
+      ]
+    },
+    {
+      "id": "TH-HIS-020",
+      "prefLabel": "循环史观",
+      "altLabels": [
+        "cyclical"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "周期往复的历史理解",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "cyclical"
+      ]
+    },
+    {
+      "id": "TH-HIS-021",
+      "prefLabel": "偶然性",
+      "altLabels": [
+        "contingency"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "非必然路径",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "contingency"
+      ]
+    },
+    {
+      "id": "TH-HIS-022",
+      "prefLabel": "多方平等",
+      "altLabels": [
+        "polyvocality"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "多主体并列",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "polyvocal"
+      ]
+    },
+    {
+      "id": "TH-HIS-023",
+      "prefLabel": "自反性",
+      "altLabels": [
+        "reflexivity"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "对书写位置的反思",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "reflexivity"
+      ]
+    },
+    {
+      "id": "TH-HIS-024",
+      "prefLabel": "形式主义",
+      "altLabels": [
+        "formalism"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "形式化重构",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "formalism"
+      ]
+    },
+    {
+      "id": "TH-HIS-025",
+      "prefLabel": "辩证构造",
+      "altLabels": [
+        "辩证链",
+        "正反合"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "正反合的构造",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "dialectic"
+      ]
+    },
+    {
+      "id": "TH-HIS-026",
+      "prefLabel": "非存在",
+      "altLabels": [
+        "absence"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "未发生路径的意义",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "absence"
+      ]
+    },
+    {
+      "id": "TH-HIS-027",
+      "prefLabel": "历史争议",
+      "altLabels": [
+        "controversy"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "解释分歧",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "controversy"
+      ]
+    },
+    {
+      "id": "TH-HIS-028",
+      "prefLabel": "都市传说",
+      "altLabels": [
+        "urban legend"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "流传但未证实的故事",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "legend",
+        "myth"
+      ]
+    },
+    {
+      "id": "TH-HIS-029",
+      "prefLabel": "比较史学",
+      "altLabels": [
+        "comparative history"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "跨对象对照",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "comparative"
+      ]
+    },
+    {
+      "id": "TH-HIS-030",
+      "prefLabel": "技术史",
+      "altLabels": [
+        "history of technology"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "技术变迁研究",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "history of tech"
+      ]
+    },
+    {
+      "id": "TH-HIS-031",
+      "prefLabel": "科学史",
+      "altLabels": [
+        "history of science"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "科学知识变迁",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "history of science"
+      ]
+    },
+    {
+      "id": "TH-HIS-032",
+      "prefLabel": "计算史",
+      "altLabels": [
+        "history of computing"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "计算技术历程",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "history of computing"
+      ]
+    },
+    {
+      "id": "TH-HIS-033",
+      "prefLabel": "人物传记",
+      "altLabels": [
+        "biography"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "个人生平书写",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "biography"
+      ]
+    },
+    {
+      "id": "TH-HIS-034",
+      "prefLabel": "群体传记",
+      "altLabels": [
+        "prosopography"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "群体特征统计",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "prosopography"
+      ]
+    },
+    {
+      "id": "TH-HIS-035",
+      "prefLabel": "概念史",
+      "altLabels": [
+        "conceptual history"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "术语与观念变迁",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "conceptual history"
+      ]
+    },
+    {
+      "id": "TH-HIS-036",
+      "prefLabel": "机构史",
+      "altLabels": [
+        "institutional history"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "组织制度变迁",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "institutional"
+      ]
+    },
+    {
+      "id": "TH-HIS-037",
+      "prefLabel": "编纂体例",
+      "altLabels": [
+        "editorial style"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "写作与格式规范",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "style guide"
+      ]
+    },
+    {
+      "id": "TH-HIS-038",
+      "prefLabel": "文献综述",
+      "altLabels": [
+        "literature review"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "研究现状梳理",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "bibliography"
+      ]
+    },
+    {
+      "id": "TH-HIS-039",
+      "prefLabel": "书目述评",
+      "altLabels": [
+        "bibliographic review"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "文献评价",
+      "ccs": "",
+      "clc": "",
+      "techTerms": []
+    },
+    {
+      "id": "TH-HIS-040",
+      "prefLabel": "索引与元数据",
+      "altLabels": [
+        "metadata"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "检索信息组织",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "index",
+        "metadata"
+      ]
+    },
+    {
+      "id": "TH-HIS-041",
+      "prefLabel": "可复现性",
+      "altLabels": [
+        "reproducibility"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "结果可重验",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "reproducibility"
+      ]
+    },
+    {
+      "id": "TH-HIS-042",
+      "prefLabel": "同行评议",
+      "altLabels": [
+        "peer review"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "专家评审",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "peer review"
+      ]
+    },
+    {
+      "id": "TH-HIS-043",
+      "prefLabel": "版本留痕",
+      "altLabels": [
+        "provenance"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "改动来源记录",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "provenance"
+      ]
+    },
+    {
+      "id": "TH-HIS-044",
+      "prefLabel": "翻译与术语",
+      "altLabels": [
+        "translation"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "跨语言表述",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "translation",
+        "terminology"
+      ]
+    },
+    {
+      "id": "TH-HIS-045",
+      "prefLabel": "采访伦理",
+      "altLabels": [
+        "interview ethics"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "受访者权益",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "ethics"
+      ]
+    },
+    {
+      "id": "TH-HIS-046",
+      "prefLabel": "院校史",
+      "altLabels": [
+        "伯克利",
+        "大学制度",
+        "校史"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "大学与学术机构史",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "university history"
+      ]
+    },
+    {
+      "id": "TH-HIS-047",
+      "prefLabel": "哲学反思",
+      "altLabels": [
+        "存在主义",
+        "人文反思"
+      ],
+      "broader": "TH-HIS-000",
+      "level": "narrow",
+      "scopeNote": "技术史的人文与哲学反思",
+      "ccs": "",
+      "clc": "",
+      "techTerms": [
+        "philosophy",
+        "existentialism"
+      ]
+    }
+  ],
+  "banned": [
+    "bsd",
+    "unix",
+    "linux",
+    "freebsd",
+    "netbsd",
+    "openbsd",
+    "dragonfly",
+    "dragonflybsd",
+    "macos",
+    "darwin",
+    "历史",
+    "发展",
+    "演进",
+    "综述",
+    "综合",
+    "概述",
+    "影响",
+    "问题",
+    "研究",
+    "分析",
+    "系统",
+    "技术",
+    "软件",
+    "项目",
+    "社区",
+    "其他",
+    "相关",
+    "比较"
+  ],
+  "projects": {
+    "freebsd": [
+      "FreeBSD",
+      "freebsd",
+      "FreeBSD Project"
+    ],
+    "netbsd": [
+      "NetBSD",
+      "netbsd",
+      "NetBSD Project"
+    ],
+    "openbsd": [
+      "OpenBSD",
+      "openbsd",
+      "OpenBSD Project"
+    ],
+    "dragonflybsd": [
+      "DragonFly",
+      "DragonFly BSD",
+      "dragonflybsd"
+    ],
+    "macos": [
+      "macOS",
+      "Mac OS X",
+      "OS X",
+      "Darwin"
+    ]
+  }
+}
