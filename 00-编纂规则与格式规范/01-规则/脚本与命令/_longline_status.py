@@ -183,8 +183,9 @@ def probe_h1():
     batches = [b for lib in d.get("libs", []) for b in lib.get("batches", [])]
     done = sum(1 for b in batches if b.get("state") == "committed")
     inprog = sum(1 for b in batches if b.get("state") in ("dumped", "split", "cand", "registered"))
+    # `split` 只是窗口已切分、尚未判读，不计入已读（2026-10-22 实测 fq_b120 因此虚增 2,000 行）
     read_rows = sum(b.get("n", 0) for b in batches
-                    if b.get("state") in ("committed", "dumped", "split", "cand",
+                    if b.get("state") in ("committed", "dumped", "cand",
                                           "registered", "narrated", "outlined"))
     tot = len(batches) or t.get("batches")
     stale = []
