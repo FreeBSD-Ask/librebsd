@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """播客两库 SQLite → DuckDB 收尾脚本（2026-08-26 登记，流程规则.md“播客库收尾流程”执行工具）
 
-触发条件：转录进程（script/_bsdnow_igpu_transcribe.py，含 --both 模式）已退出，
+历史状态（2026-10-22）：两库布局已由 2026-10-15 per-show 拆分取代，本脚本保留供归档回溯。
+
+触发条件：转录进程（脚本与命令/bsdnow_igpu_transcribe.py，含 --both 模式）已退出，
 bsdnow_podcast.db 与 bsd_podcasts_external.db 不再被写入（mtime 稳定）。
 
 流程（对应规则五步）：
@@ -10,7 +12,7 @@ bsdnow_podcast.db 与 bsd_podcasts_external.db 不再被写入（mtime 稳定）
   3. 行数校验：逐表比对 SQLite 源与 DuckDB 行数，全部一致方可归档（不一致则中止，不删除源）；
   4. 归档：.db 以 ARCHIVE_FINAL_<ts>.db.gz 归档至 12-数据库备份/<name>/（含 SHA-256 清单，
      校验回读 CRC），归档成功后删除工作区 .db 及 -wal/-shm/-journal 伴生文件；
-  5. 收尾提示：输出"重启转录须使用改造后写 DuckDB 的 _bsdnow_igpu_transcribe.py"警示。
+  5. 收尾提示：输出"重启转录须使用写 DuckDB 的 bsdnow_igpu_transcribe.py"警示。
 
 用法：
   python podcast_db_final_sync.py            # 完整收尾（同步+校验+归档+删除）
@@ -217,7 +219,7 @@ def main():
 
     print("收尾结果：{}".format(json.dumps(results, ensure_ascii=False)))
     if not args.check and not args.sync_only:
-        print("警示：此后重启转录任务必须使用改造后写入 DuckDB 的 _bsdnow_igpu_transcribe.py，"
+        print("警示：此后重启转录任务必须使用写入 DuckDB 的 bsdnow_igpu_transcribe.py，"
               "禁止使用写 SQLite 的旧版（会在原路径重建 .db 造成数据分裂）。")
     return 0
 
