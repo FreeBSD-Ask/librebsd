@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""audit_mirror_ingest.py —— 第二十五件门禁：大纲目录镜像派生件入库白名单校验。
+"""audit_mirror_ingest.py —— 第二十五件门禁：大纲树根级派生件入库白名单校验。
 
 设立缘由
 --------
-`11-元数据接口/03-大纲目录镜像/` 下的 `SUMMARY.md` 与 `chapter_keywords.json` 是
-大纲树的结构镜像与逐章检索索引（规则见 `大纲层级与目录规则.md` §四），属**派生权威件**，
+`05-新大纲/` 根级的 `SUMMARY.md`、`chapter_keywords.json`、`theme_index.json` 是
+大纲树的结构镜像与主题索引（规则见 `大纲层级与目录规则.md` §四），属**派生权威件**，
 须随大纲树一同进入版本管理。但根 `.gitignore` 有全局 `*.json` 规则，镜像 JSON 一旦
 被再生（删除后重写即变为未跟踪件）就会被静默忽略——此后 `git add` 不收、`git status`
-不报，提交里少一件而无人察觉。本件把“两件镜像的入库状态”变成可机检的不变量。
+不报，提交里少一件而无人察觉。本件把“根级三件派生件的入库状态”变成可机检的不变量（2026-10-21 镜像目录废除后改指根级）。
 
 判据
 ----
@@ -26,7 +26,7 @@ E4 **不在忽略清单**：`git status --porcelain --ignored` 中该路径不�
 用法
 ----
     python audit_mirror_ingest.py                # 默认 --check（0 通过 / 1 失败 / 2 依赖缺失）
-    python audit_mirror_ingest.py --list         # 打印两件镜像的四项状态
+    python audit_mirror_ingest.py --list         # 打印根级三件的四项状态
     python audit_mirror_ingest.py --selftest     # 判据非空：夹具须命中 E1／E2／E3／E4
 
 依赖：仅标准库。路径一律相对仓库根解析（由本文件位置上行推导，不写死绝对路径）。
@@ -40,8 +40,8 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
-MIRROR_DIR = "11-元数据接口/03-大纲目录镜像"
-TARGETS = ("SUMMARY.md", "chapter_keywords.json")
+ROOT_DIR = "05-新大纲"
+TARGETS = ("SUMMARY.md", "chapter_keywords.json", "theme_index.json")
 SELFTEST_REL = "script/_mirror_ingest_selftest"
 
 CODES = {
@@ -112,12 +112,12 @@ def _line(st):
 
 
 def targets(root=REPO):
-    return [inspect(root, "%s/%s" % (MIRROR_DIR, name)) for name in TARGETS]
+    return [inspect(root, "%s/%s" % (ROOT_DIR, name)) for name in TARGETS]
 
 
 def cmd_check():
     print("=" * 72)
-    print("大纲目录镜像派生件入库白名单校验（第二十五件）")
+    print("大纲树根级派生件入库白名单校验（第二十五件）")
     print("=" * 72)
     fails = 0
     for st in targets():
@@ -128,8 +128,9 @@ def cmd_check():
     print("-" * 72)
     print("  合计 %d 件，失败判据 %d 项" % (len(TARGETS), fails))
     if fails:
-        print("  处置：镜像 JSON 须保留 `.gitignore` 白名单 `!%s/chapter_keywords.json`；"
-              "重生成后未跟进者以 `git add -f` 补入并跑本件复核" % MIRROR_DIR)
+        print("  处置：根级 JSON 须保留 `.gitignore` 白名单 "
+              "`!%s/chapter_keywords.json` 与 `!%s/theme_index.json`；"
+              "重生成后未跟进者以 `git add -f` 补入并跑本件复核" % (ROOT_DIR, ROOT_DIR))
         return 1
     return 0
 
@@ -168,7 +169,7 @@ def cmd_selftest():
             print("           规则 %s" % st["ignore_rule"])
 
     print("-" * 72)
-    print("正常仓库：两件镜像须四项全过（预期 PASS）")
+    print("正常仓库：根级三件须四项全过（预期 PASS）")
     clean = True
     for st in targets():
         print(_line(st))
@@ -177,16 +178,16 @@ def cmd_selftest():
 
     print("-" * 72)
     if ok:
-        print("  ✅ 判据非空：E1／E2／E3／E4 均被夹具实测命中，真实镜像全过")
+        print("  ✅ 判据非空：E1／E2／E3／E4 均被夹具实测命中，根级三件全过")
         return 0
     print("  ❌ 判据可能为空或镜像未达标", file=sys.stderr)
     return 1
 
 
 def main():
-    ap = argparse.ArgumentParser(description="大纲目录镜像派生件入库白名单校验（第二十五件）")
-    ap.add_argument("--check", action="store_true", help="默认模式：四项判据校验两件镜像")
-    ap.add_argument("--list", action="store_true", help="打印两件镜像的四项状态")
+    ap = argparse.ArgumentParser(description="大纲树根级派生件入库白名单校验（第二十五件）")
+    ap.add_argument("--check", action="store_true", help="默认模式：四项判据校验根级三件")
+    ap.add_argument("--list", action="store_true", help="打印根级三件的四项状态")
     ap.add_argument("--selftest", action="store_true", help="判据非空自检（script/ 下夹具）")
     args = ap.parse_args()
 
