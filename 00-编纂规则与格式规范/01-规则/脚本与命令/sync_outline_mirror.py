@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""sync_outline_mirror.py —— 大纲目录镜像全量再生与双射校验（固定脚本，批 8 立）。
+"""sync_outline_mirror.py —— 大纲目录镜像全量再生与双射校验（固定脚本，批 8 立；
+2026-10-21 起主题索引委派 build_theme_index.py）。
 
 对象
 ----
@@ -52,14 +53,20 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
+sys.path.insert(0, HERE)
+try:
+    import build_theme_index as bti
+except Exception:  # 主题索引生成器缺失时，SUMMARY 功能仍可独立运行
+    bti = None
 DEFAULT_ROOT = os.path.join(REPO, "05-新大纲")
-DEFAULT_OUT = os.path.join(REPO, "11-元数据接口", "03-大纲目录镜像")
+DEFAULT_OUT = os.path.join(REPO, "05-新大纲")
 DEFAULT_MAPPING = os.path.join(REPO, "script", "_b7_mapping.json")
 SELFTEST_REL = os.path.join("script", "_mirror_selftest")
 
 VOL_RE = re.compile(r"^第(\d{1,3})卷(?:-(?P<slug>.+))?$")
 # 根级白名单（2026-10-21 主理人令）：三件随树入库，不判为树外散件
 ROOT_ALLOWED_FILES = frozenset({"SUMMARY.md", "chapter_keywords.json",
+                                "theme_index.json",
                                 "前后差异细粒度比较表-20261021.md"})
 CH_RE = re.compile(r"^第(\d{1,3})章(?:-(?P<slug>.+))?$")
 SEC_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})-(?P<slug>.+)$")
@@ -503,7 +510,7 @@ def parse_summary(text):
     return entries, problems
 
 
-def validate(tree, summary_text, keywords_doc):
+def validate(tree, summary_text, keywords_doc=None):
     """独立校验器：树 ↔ 镜像逐条双射 ＋ 章关键词库逐键核对。
 
     返回 problems 列表，元素为 (判据码, 说明)。零元素即 PASS。
@@ -581,8 +588,9 @@ def validate(tree, summary_text, keywords_doc):
                                  % (i + 1, want, got)))
                 break
 
-    # 三、chapter_keywords.json 逐键核对
-    problems.extend(validate_keywords(tree, keywords_doc))
+    # 三、chapter_keywords.json 逐键核对（2026-10-21 起由 build_theme_index.py 独立校验）
+    if keywords_doc is not None:
+        problems.extend(validate_keywords(tree, keywords_doc))
     return problems
 
 
@@ -648,7 +656,7 @@ def _read_text(path):
         return fh.read()
 
 
-def compare_disk(out_dir, summary_text, keywords_doc):
+def compare_disk(out_dir, summary_text, keywords_doc=None):
     """与磁盘逐字节（SUMMARY）／逐键（JSON）比对，返回 problems。"""
     problems = []
     spath = os.path.join(out_dir, "SUMMARY.md")
@@ -661,6 +669,8 @@ def compare_disk(out_dir, summary_text, keywords_doc):
             detail = _first_diff(disk, want)
             problems.append(("D_DRIFT_TEXT", detail))
 
+    if keywords_doc is None:
+        return problems
     jpath = os.path.join(out_dir, "chapter_keywords.json")
     if not os.path.isfile(jpath):
         problems.append(("D_MISSING_JSON", "缺 %s" % jpath))
@@ -791,19 +801,17 @@ def atomic_write(path, text):
 # ---------------------------------------------------------------- 命令实现
 
 def _build_all(root, out_dir, mapping_path):
-    """扫描＋生成，返回 (tree, summary_text, keywords_doc, notes)。"""
+    """扫描＋生成 SUMMARY，返回 (tree, summary_text, None, notes)。
+
+    chapter_keywords.json／theme_index.json 自 2026-10-21 起由
+    `build_theme_index.py` 独立再生与校验，本脚本不再派生关键词。
+    """
     tree = scan_tree(root)
     tree["_root"] = root
     summary_text = render_summary(tree)
-    legacy, mode = load_legacy_keywords(out_dir)
-    old2new = {}
-    if mode in ("legacy", "mixed"):
-        old2new = load_mapping(mapping_path)
-    keywords_doc, notes = build_keywords(tree, legacy, mode, old2new, root)
-    if notes["unmapped"]:
-        raise Fatal("旧库章键缺 old→new 映射（关键词将丢失，拒判）：%s"
-                    % "、".join(notes["unmapped"][:20]))
-    return tree, summary_text, keywords_doc, notes
+    notes = {"mode": "theme-index", "kept": 0, "derived": 0,
+             "unmapped": [], "retitled": [], "mapped_from_legacy": 0}
+    return tree, summary_text, None, notes
 
 
 def _print_targets(root, out_dir):
@@ -814,9 +822,13 @@ def _print_targets(root, out_dir):
 def _print_counts(tree, summary_text, keywords_doc):
     nv, nc, ns, nb, total = tree_counts(tree)
     entries, _ = parse_summary(summary_text)
-    empty_subs = [k for k, v in keywords_doc.items() if not v.get("subs")]
     print("  树：%d 卷 / %d 章 / %d 节 / %d 小节（实体合计 %d）"
           % (nv, nc, ns, nb, total))
+    if keywords_doc is None:
+        print("  镜像条目：%d；主题索引由 build_theme_index.py 独立再生"
+              % len(entries))
+        return entries, []
+    empty_subs = [k for k, v in keywords_doc.items() if not v.get("subs")]
     print("  镜像条目：%d；章键：%d；subs 空键：%d"
           % (len(entries), len(keywords_doc), len(empty_subs)))
     return entries, empty_subs
@@ -865,9 +877,14 @@ def cmd_check(root, out_dir, mapping_path, verbose=False):
     _print_targets(root, out_dir)
     entries, empty_subs = _print_counts(tree, summary_text, keywords_doc)
 
-    self_problems = validate(tree, summary_text, keywords_doc)
-    disk_problems = compare_disk(out_dir, summary_text, keywords_doc)
-    problems = self_problems + disk_problems
+    self_problems = validate(tree, summary_text)
+    disk_problems = compare_disk(out_dir, summary_text)
+    theme_problems = []
+    if bti is None:
+        theme_problems.append(("THEME", "缺 build_theme_index.py，无法校验主题索引"))
+    else:
+        theme_problems = [("THEME", x) for x in bti.check_all(out_dir)]
+    problems = self_problems + disk_problems + theme_problems
 
     missing = sum(1 for c, _ in problems if c == "S_MISSING")
     extra = sum(1 for c, _ in problems if c == "S_EXTRA")
@@ -912,12 +929,19 @@ def cmd_write(root, out_dir, mapping_path):
         return 1
 
     summary_path = os.path.join(out_dir, "SUMMARY.md")
-    keywords_path = os.path.join(out_dir, "chapter_keywords.json")
     atomic_write(summary_path, summary_text)
-    atomic_write(keywords_path, render_keywords(keywords_doc))
     print("  [written] %s（%d 条）" % (summary_path, len(entries)))
-    print("  [written] %s（%d 键，subs 空键 %d）"
-          % (keywords_path, len(keywords_doc), len(empty_subs)))
+    if bti is None:
+        print("  [FATAL] 缺 build_theme_index.py，主题索引未再生")
+        return 1
+    written = bti.write_all(out_dir)
+    problems = bti.check_all(out_dir)
+    if problems:
+        print("  主题索引写后复核 FAIL %d 项：" % len(problems))
+        for x in problems[:20]:
+            print("    · " + x)
+        return 1
+    print("  [theme] %s；复核 PASS" % ("、".join(written) if written else "内容未变"))
     if notes["mode"] == "legacy":
         print("  旧键已按 old→new 映射迁移为三位新键，旧键未残留")
     return 0
@@ -1014,66 +1038,21 @@ def selftest():
         empty_listed = any(e["target"].endswith("001.1.2-空件.md") for e in entries)
         chk("空小节文件照列", empty_listed)
 
-        keywords_doc, notes = build_keywords(tree, {}, "absent", {}, tree_dir)
-        probs_self = validate(tree, summary_text, keywords_doc)
+        probs_self = validate(tree, summary_text)
         chk("自校验 PASS（零判据命中）", not probs_self, str(probs_self[:3]))
-        chk("章键为三位且 3 个", list(keywords_doc) == ["001", "002", "003"],
-            str(list(keywords_doc)))
-        chk("subs 非空", all(keywords_doc[k]["subs"] for k in keywords_doc))
-        chk("新章按章题／节题派生拉丁词元（无拉丁词元的章为空数组）",
-            keywords_doc["001"]["keywords"] == []
-            and keywords_doc["002"]["keywords"] == ["alpha", "beta"]
-            and keywords_doc["003"]["keywords"] == ["delta"],
-            str([keywords_doc[k]["keywords"] for k in keywords_doc]))
-        chk("派生词元 ≤8 且小写去重",
-            all(len(keywords_doc[k]["keywords"]) <= MAX_KW
-                and len(set(keywords_doc[k]["keywords"])) == len(keywords_doc[k]["keywords"])
-                and all(x == x.lower() for x in keywords_doc[k]["keywords"])
-                for k in keywords_doc))
 
         chk("再生幂等（二次渲染逐字节相同）",
-            render_summary(tree) == summary_text
-            and render_keywords(keywords_doc) == render_keywords(keywords_doc))
+            render_summary(tree) == summary_text)
 
-        # 写盘 → 与磁盘逐字节／逐键比对
+        # 写盘 → 与磁盘逐字节比对
         shutil.rmtree(out_dir, ignore_errors=True)
         atomic_write(os.path.join(out_dir, "SUMMARY.md"), summary_text)
-        atomic_write(os.path.join(out_dir, "chapter_keywords.json"),
-                     render_keywords(keywords_doc))
-        chk("写盘后磁盘比对零漂移",
-            not compare_disk(out_dir, summary_text, keywords_doc),
-            str(compare_disk(out_dir, summary_text, keywords_doc)[:3]))
+        chk("写盘后磁盘比对零漂移", not compare_disk(out_dir, summary_text),
+            str(compare_disk(out_dir, summary_text)[:3]))
         raw = _read_text(os.path.join(out_dir, "SUMMARY.md"))
         chk("写盘 LF 且无 BOM", b"\r" not in raw and not raw.startswith(b"\xef\xbb\xbf"))
 
-        # 旧键映射（old 1→new 3、old 2→new 1）
-        shutil.rmtree(legacy_dir, ignore_errors=True)
-        os.makedirs(legacy_dir, exist_ok=True)
-        legacy = {
-            "1": {"volume": "第00卷-旧", "title": "旧题一",
-                  "subs": ["旧节"], "keywords": ["legacykw"]},
-            "2": {"volume": "第00卷-旧", "title": "旧题二",
-                  "subs": ["旧节"], "keywords": []},
-        }
-        _mk(os.path.join(legacy_dir, "chapter_keywords.json"),
-            json.dumps(legacy, ensure_ascii=False, indent=2) + "\n")
-        mapping_path = os.path.join(fix, "mapping.json")
-        _mk(mapping_path, json.dumps(
-            {"chapter_map": [{"old_num": 1, "new_num": 3},
-                             {"old_num": 2, "new_num": 1}]},
-            ensure_ascii=False, indent=2) + "\n")
-        legacy_doc, mode = load_legacy_keywords(legacy_dir)
-        mapped, mnotes = build_keywords(tree, legacy_doc, mode, load_mapping(mapping_path),
-                                        tree_dir)
-        chk("旧键形态判定为 legacy", mode == "legacy", mode)
-        chk("旧词表按旧章身份保留到新键 003",
-            mapped.get("003", {}).get("keywords") == ["legacykw"],
-            str(mapped.get("003")))
-        chk("旧键不残留", not any(KEYN_RE.match(k) and not KEY3_RE.match(k) for k in mapped))
-        chk("无旧身份的章已派生词元", bool(mapped["002"]["keywords"]),
-            str(mapped["002"]["keywords"]))
-        chk("映射说明记录来源（2 键）", mnotes["mapped_from_legacy"] == 2,
-            str(mnotes["mapped_from_legacy"]))
+        chk("主题索引生成器 selftest", bti is not None and bti.selftest() == 0)
 
         # 负向夹具（校验器须判 FAIL；题面改字而计数不变亦须 FAIL）
         lines = summary_text.split("\n")
@@ -1102,21 +1081,15 @@ def selftest():
                 "[002.2.1-beta小节.md]", "[002.2.1-beta小節.md]")
             return buf
 
-        def empty_subs(mutate_doc):
-            for key in mutate_doc:
-                mutate_doc[key]["subs"] = []
-            return mutate_doc
-
         cases = [
-            ("缺条", drop_entry, "S_MISSING", keywords_doc),
-            ("树外条", add_extra, "S_EXTRA", keywords_doc),
-            ("死链", dead_link, "S_DEAD", keywords_doc),
-            ("题面改字（计数不变）", retitle, "S_TITLE", keywords_doc),
-            ("subs 恒空", None, "K_SUBS_EMPTY", empty_subs(json.loads(json.dumps(keywords_doc)))),
+            ("缺条", drop_entry, "S_MISSING"),
+            ("树外条", add_extra, "S_EXTRA"),
+            ("死链", dead_link, "S_DEAD"),
+            ("题面改字（计数不变）", retitle, "S_TITLE"),
         ]
-        for name, mutator, expect, kw_doc in cases:
-            text = summary_text if mutator is None else mutated(mutator)
-            probs = validate(tree, text, kw_doc)
+        for name, mutator, expect in cases:
+            text = mutated(mutator)
+            probs = validate(tree, text)
             codes = _codes(probs)
             hit = expect in codes
             chk("负向夹具 %s 命中 %s" % (name, expect), hit, "实得 %s" % sorted(set(codes)))
@@ -1146,9 +1119,9 @@ def selftest():
 
 def main():
     ap = argparse.ArgumentParser(
-        description="大纲目录镜像全量再生与双射校验（SUMMARY.md／chapter_keywords.json）")
+        description="大纲目录镜像全量再生与双射校验（SUMMARY.md；主题索引由 build_theme_index.py 再生）")
     ap.add_argument("--check", action="store_true", help="缺省：漂移报告（漂移 exit 1）")
-    ap.add_argument("--write", action="store_true", help="生成并原子写盘两件镜像")
+    ap.add_argument("--write", action="store_true", help="生成并原子写盘根级三件（SUMMARY／keywords／theme_index）")
     ap.add_argument("--list", action="store_true", help="打印层级计数与镜像统计")
     ap.add_argument("--selftest", action="store_true", help="合成夹具自检（script/_mirror_selftest）")
     ap.add_argument("--root", default=None, help="大纲树根（默认 %s）" % DEFAULT_ROOT)
