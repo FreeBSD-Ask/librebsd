@@ -168,5 +168,3 @@ volume: 第10卷-openbsd的历史
 据〔Developing Software in a Hostile Environment（Ted Unangst 讲）〕讲者口述：讲者（Ted Unangst）称他们的工作是在开放 BSD 内核里完成的。（YouTube EP_q8zzWHj15Q，[2451.5-2454.4]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
 
-<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
-<!-- GAP-A-YT:END -->
