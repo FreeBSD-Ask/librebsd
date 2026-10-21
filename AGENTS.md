@@ -49,7 +49,7 @@
 | 02 | `02-sacred源材料/` | 编纂指导思想源材料＋`sacred_sources.duckdb`（29 章 191 子节原文）；核心文件 `shigang.md`／`lishidagang.md`／`dagang.md` 在此；子目录内容存于 `sacred_sources.duckdb` |
 | 03 | `03-原始史料库/` | 一手史料：`original_sources.duckdb`（含 G4 硬件史料）＋`01-代码仓库史料/`（14 个 DuckDB：9 项目库＋4 专题库＋本体 `资料数据库.duckdb`，Schema v1.4）＋`02-man源与posix仓库/`（15 个仓库目录，7 个带 sparse-checkout 清单，**不可拆散**）＋`06-考据记录/`＋`10-技术器物史料/`（G4，7 个技术域文件）＋`11-邮件列表史料/`（4 大 BSD＋Linux kernel 全量存档）＋`12-multics史料/`＋`13-44doc文档史料/`（papers／psd／smm／usd／IPv6，240 文件）＋`14-播客史料/`（10 个独立库，待转写清单见该目录）＋`15-login杂志史料/` |
 | 04 | `04-现代研究文献/` | 研究产出：`research_notes.duckdb`＋**`historical_claims.duckdb`（claim 唯一真值）**＋`05-参考文献全文数据库/`＋`06-存疑数据库/`（`doubts_standalone.duckdb`）＋`01-参考文献总目/`（30 个分类子文件）＋`02-卷级文献综述/`＋`03-文献下载/`（pdf／epub／ocr）＋`11-翻译与多语种史料/`（G12） |
-| 05 | `05-卷册大纲/` | 磁盘层大纲（实存第01–第24卷，现行口径见上方标记块）＋`SUMMARY.md`（GitBook 总导航，由 `sync_gitbook_summary.py` 生成；`index.md` 磁盘未建，**不是**索引载体）＋`.writing_rules.md`（WO-007 幂等约束） |
+| 05 | `05-卷册大纲/` | 磁盘层大纲（实存第01–第24卷，现行口径见上方标记块）＋`SUMMARY.md`（GitBook 总导航，由 `sync_outline_mirror.py` 生成（旧 `sync_gitbook_summary.py` 仅作旧树兼容）；`index.md` 磁盘未建，**不是**索引载体）＋`.writing_rules.md`（WO-007 幂等约束） |
 | 07 | `07-事实核查记录/` | 单条核查原子记录＋`fact_checks.duckdb`；汇总报告归 `08-核查报告与多轮复核/` |
 | 08 | `08-核查报告与多轮复核/` | 汇总报告／多轮复核／目录审计＋`review_reports.duckdb`；**`重构2026/`**（现行目录页、号文与执行记录、`data/`、`assets/`、`tests/`）＋`12-重构大纲书目述评/`（25 卷分卷＋`index.md`，无块卷不建文件）＋`06-全书综合核查/`＋`07-目录审计/`＋G5 历史争议图谱／G6 比较史／G8 同行评议／G11 可复现性（各目录仅存 `index.md`，内容在库）＋`13-deepseek-cankao消解归档/` |
 | 10 | `10-交叉索引/` | 八类索引（人名／主题／命令／术语／年代 G9／组织机构 G10／概念史 G2／人物传记 G3）已入 `cross_indexes.duckdb`（10 表）；顶层存 `S03-历史对象登记表.md` 与 `S03-historical_objects.json` |
