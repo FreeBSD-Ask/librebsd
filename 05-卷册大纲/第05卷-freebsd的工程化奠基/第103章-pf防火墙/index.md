@@ -308,3 +308,10 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔Lighting Talk High rate filtering with IPFW by Olivier Cochard Labbé 讲者口述：转写音作 Chelseio 的网卡可用工具配置 TCAM，借强大 ASIC 达到同样线速过滤；但讲者称这会把自己绑定在该厂商上，正因不愿如此才力推纯软件的通用方案。（YouTube EPfypU0nuZ8Fk，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-1579 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1579`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：讲者认为用 PF 做动态查询表是个好办法，并称此类表可被动态改写。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->

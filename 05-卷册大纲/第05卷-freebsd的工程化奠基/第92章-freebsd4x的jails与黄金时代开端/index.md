@@ -82,29 +82,6 @@ volume: 第05卷-freebsd的工程化奠基
 
 据〔会议不详（推测）〕讲者口述：Warden 与 iocage（转写音作 io cage）这类 jail 管理工具提供模板 jail（template jail）概念——先基于某一 FreeBSD 发行版本（例如 11.1）创建 jail 并安装所需软件；讲者对 ez_jail 是否如此表示不确定。（YouTube EPRHLRW88AJLE，[1266.92-1277.89]）引用时按 L1 纪律：以上为视频或播客转写存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- W172-YT-ROUTE:END -->
-
-<!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
-<!-- ROW_MINE: youtube.episodes.CL-15-1578 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1578`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：BSD 家族可实现 IP 号共享，讲者称用 KARP 机制实现得相当优雅，与 Cisco 的 VRP 方案相当。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-1579 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1579`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：讲者认为用 PF 做动态查询表是个好办法，并称此类表可被动态改写。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-1580 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1580`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：Linux 的集群实现更多，其中 DRBD 可把同一数据放到多块设备上提供存储冗余，而 BSD 系统没有类似方案。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-1581 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-1581`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔Jan Srzednicki“FreeBSD, mail cluster”演讲〕讲者口述：其邮件系统跑在 FreeBSD 上并使用 ZFS，但尚不愿把 ZFS 用到此类生产场景；UFS 2 在大文件系统上有扩展性问题，fsck 要跑很久。（YouTube EP9B8MDy-37TI，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-<!-- GAP-A-YT:END -->
-
 <!-- GAP-A-YT:BEGIN 2026-10-18 缺口A 662 期战役注入 -->
 <!-- ROW_MINE: youtube.episodes.CL-15-2770 -->
 **存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2770`；2026-10-18 缺口A 662 期战役逐条判定采纳）

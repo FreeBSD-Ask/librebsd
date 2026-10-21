@@ -198,21 +198,6 @@ volume: 第10卷-openbsd的历史
 
 据〔BSDCan 2016“OpenPAM and BSD”演讲〕讲者口述：PAM 真正恼人之处是没有一份获得认可的正式标准，只有一份 1997 年的 X/Open 文档被普遍视为定义性标准，而没有任何认证机构出面宣布“这才是官方做法”；其后果是 PAM 规则的各个组成部分没有官方语言，同一要素有人叫 type、有人叫 facility，网络上各家自造术语，因此讲者在书中自行择词。（YouTube EP-CXp3byvI1g，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
-<!-- ROW_MINE: youtube.episodes.CL-15-2417 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2417`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：该期演讲者自述其为 OpenBSD 开发者（2012 年入行），平日工作以撰写、产出与运维守护进程（demons）为主，也琢磨内核与网络栈，并靠运维自己的服务器谋生。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2418 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2418`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：该特权分离的校验型递归名字服务器在其各进程上使用 pledge 机制限制能力：进程自己不能向互联网打开 socket，须由父进程代为执行（如打开 53 端口），父进程也负责打开文件读句柄并在进程间传递。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
-<!-- ROW_MINE: youtube.episodes.CL-15-2419 -->
-**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2419`；2026-10-18 缺口A 662 期战役逐条判定采纳）
-
-据〔unwind(8)：A privilege-separated, validating DNS recursive nameserver for every laptop（BSD 会议演讲，讲者自述为 OpenBSD 开发者）〕讲者口述：解析子进程不欲其纵览整个文件系统，仅以 unveil 放开 DNS over TLS 校验所需的证书包一个文件，使其“只能看见这一个文件”。（YouTube EP88SoI49nO4o，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
-
 <!-- ROW_MINE: youtube.episodes.CL-15-2612 -->
 **存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2612`；2026-10-18 缺口A 662 期战役逐条判定采纳）
 

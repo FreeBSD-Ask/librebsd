@@ -511,3 +511,25 @@ volume: 第10卷-openbsd的历史
 
 据〔WIP vmm and Vagrant -- Philipp Buehler〕讲者口述：在 OpenBSD 上定义一台安装服务器：走典型 OpenBSD 安装器、大约按七次回车，再设置 FTP／HTTP 等服务即可开跑。（YouTube EPUI8TtQ6zowE，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 <!-- GAP-A-YT:END -->
+
+<!-- GAP-A-YT:BEGIN 2026-10-21 路由错位裁决补注入（§A2） -->
+<!-- ROW_MINE: youtube.episodes.CL-15-2203 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2203`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者说明新版 pkg tools 把签名放在 gzip 头的注释字段里、即签名置于归档之外，使未安装 pkg tools 的一方看到的仍是完全正常的 gzip 文件。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2204 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2204`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者称 OpenBSD 不采用证书链信任机制，理由是它过于复杂且常被做错，因此只要密钥被安装在正确目录中即被视为有效密钥。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2205 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2205`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者称 OpenBSD 与其他操作系统的一大差别在于没有已安装内容的全局数据库，var/db/pkg 下每个已装包各占一个子目录，不存在全局数据库。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: youtube.episodes.CL-15-2206 -->
+**存疑材料**（证据等级：L1，来源：`historical_claims.duckdb.claim.CL-15-2206`；2026-10-18 缺口A 662 期战役逐条判定采纳）
+
+据〔Marc Espie 演讲“Is it done yet：The never ending story of pkg tools”〕讲者口述：讲者表示主动破坏兼容性是有意决定——虽当时旧签名方式并无安全洞，仍决定正式弃用旧流程、只接受新签名；并称在 OpenBSD，安全与可用性必须二选一时一律偏向安全。（YouTube EP7hmBgniE00s，SUB）引用时按 L1 纪律：以上为存疑材料，采信前须另行考据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+<!-- GAP-A-YT:END -->
