@@ -163,41 +163,37 @@
 
 **门禁链（改装配源后，缺一不可）**：装配 → 目录页九件门禁 → 三套浏览器回归（`visual_regression.mjs`／`full_matrix_regression.mjs`／`fullsize_regression.mjs`）；触及文档格式闸面文件加跑第十件。**禁止以“改动很小”为由豁免或只跑子集**。
 
-| 触发面 | 门禁与脚本 | 判据要点 | 件次 |
+| 触发面 | 门禁与脚本 | 判据正文 | 件次 |
 | ------ | ---------- | -------- | ---- |
-| 改任一装配源／模板／行为层 | `assemble_index.py --check` → 九件 → 三套浏览器回归 | 重装到内存与磁盘逐字节比对，漂移即 FAIL | 第八件 |
-| 装配产物结构（增删卷章、改口径、改述评挂靠、重编号） | `audit_index_structure.py` | A 编码／A2 空格形制／B–Q 共十八组静态自检 | 第七件 |
-| 内容源 `outline.txt` 章结构或改号 | `audit_renumber_guard.py`、`audit_silent_loss_guard.py` | 章题号↔节号同源；曾为章者题面零残留即 FAIL | 第十七／二十件 |
-| 注文、分工注、`catalog.json` 的 refs | `audit_note_xref.py`、`xref_audit.py` | 引号节名、章节号存在、ref 著录完备、悬空引用 | 第十四／五件 |
-| 向 `05-卷册大纲/` 写回证据等级标注块 | `audit_evidence_level_labels.py` | 块头标注须与库中 `evidence_level` 一致，禁写死字面量 | 第六件 |
-| 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | JSON 残片与内部标识串判错；邮箱仅提示不删 | DATA 门禁 |
-| 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | A 装配源清单／B 字体子集覆盖度与源字体基准／C 品牌派生件形制／D 自包含性与 SRI／E 夹具口径 | 第九件 |
-| 涉页面变更的每批收口 | `audit_page_version_bump.py` | 口径或注数变而版本号未刷新即 FAIL | 第十八件 |
-| 改内容源或测试夹具 | `audit_fixture_freshness.py` | 夹具口径与注数须等于内容源派生值；豁免须仍有效 | 第十三件 |
-| 改 `serve_refactor2026.py` 及服务行为 | `audit_server_contract.py` | 八项契约全走真实 HTTP；一律绑 `127.0.0.1` | 第十一件 |
-| 改装配源或模板后（常备） | `audit_a11y.py` | axe-core 四组合 critical／serious＝0；键盘契约 | 第二十二件 |
-| 改 `src/js` 行为源或 `doc.js`（常备） | `audit_js_blockscope.py` | 块内具名函数被块外引用即 FAIL | 第二十三件 |
-| 新增／改动任何 `.md`（常备） | `audit_md_quote_glyphs.py` | 全库 Markdown 直角引号六码位出现即 FAIL；弯引号净差仅 INFO 披露 | 第二十四件 |
-| 新增／改动 `05-新大纲/` 树内 `.md`（常备） | `audit_md_bold_spacing.py` | 首 `**` 前、尾 `**` 后各恰好一个半角空格；段首／行尾例外，P*／S* 标点紧邻豁免；原大纲与 OCR 档案豁免 | 第二十八件 |
-| 人物库任何写入 | `audit_person_bio_integrity.py` | P0–P3：`sources`／`doubt_flags` 须 JSON 数组、`check_date` 非空、`priority` 域内 | 第十五件 |
-| `provenance_history` 任何写入 | `audit_provenance_dupes.py` | D1–D5；只判真重复，三元组判重会误报 | 数据库类 |
-| 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | 单值>25%／distinct 骤降／同刻>50%／行数骤降 | 写库门禁 |
-| register 写库 | `register_waterlock.py probe → acquire → register → release` | 无主键约束，撞号静默成功；水位每次重取 | 写库门禁 |
-| 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | 在效面“基础系统”零命中；`.md` 零 CRLF／孤立 CR | P2-11 |
-| 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | 三键位解析率 ≥95%，悬空逐条登记 | 第十九件 |
-| 新增／删除门禁脚本 | `audit_gate_registry.py` | 登记表↔磁盘↔规则文档三方一致（R1–R8）；每件须有 G0–G5 阶段归属 | 第十六件 |
-| 新增／修改 ADR、技术债、工程实践规则或模板 | `audit_engineering_practice.py` | E1–E6：ADR 必填字段、ADR 索引与编号、技术债字段、模板接线、规则登记、复审日期 | 第二十九件 |
-| 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | 闸面 0 问题；版本钉定不符即 exit 2 | 第十件 |
-| 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | 标记块外现在时态旧口径即 stale | 口径同步 |
-| **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py` | 口径零漂移／17 条长线一致／R1–R8 全 PASS（2026-10-17 主理人批准批 R-5：三件只读校验常备化，批内即时暴露口径与登记漂移） | 口径同步·长线·元门禁 |
+| 改任一装配源／模板／行为层 | `assemble_index.py --check` → 九件 → 三套浏览器回归 | `流程规则.md`“重构大纲目录四层解耦与装配规则”“目录页与文档门禁判据索引” | 第八件 |
+| 装配产物结构（增删卷章、改口径、改述评挂靠、重编号） | `audit_index_structure.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第七件 |
+| 内容源 `outline.txt` 章结构或改号 | `audit_renumber_guard.py`、`audit_silent_loss_guard.py` | `流程规则.md`“改号同源守卫”“重构静默丢失守卫” | 第十七／二十件 |
+| 注文、分工注、`catalog.json` 的 refs | `audit_note_xref.py`、`xref_audit.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第十四／五件 |
+| 向 `05-卷册大纲/` 写回证据等级标注块 | `audit_evidence_level_labels.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第六件 |
+| 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | `流程规则.md`“DATA 数据完整性门禁” | DATA 门禁 |
+| 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | `流程规则.md`“重构大纲目录页面资产层完整性门禁” | 第九件 |
+| 涉页面变更的每批收口 | `audit_page_version_bump.py` | `流程规则.md`“页面版本号递增兜底门禁” | 第十八件 |
+| 改内容源或测试夹具 | `audit_fixture_freshness.py` | `流程规则.md`“夹具新鲜度门禁” | 第十三件 |
+| 改 `serve_refactor2026.py` 及服务行为 | `audit_server_contract.py` | `流程规则.md`“重构2026 目录页服务器” | 第十一件 |
+| 改装配源或模板后（常备） | `audit_a11y.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第二十二件 |
+| 改 `src/js` 行为源或 `doc.js`（常备） | `audit_js_blockscope.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第二十三件 |
+| 新增／改动任何 `.md`（常备） | `audit_md_quote_glyphs.py` | `流程规则.md`“直角引号清零门禁” | 第二十四件 |
+| 新增／改动 `05-卷册大纲/` 树内 `.md`（常备） | `audit_md_bold_spacing.py` | `流程规则.md`“Markdown 加粗空格门禁” | 第二十八件 |
+| 人物库任何写入 | `audit_person_bio_integrity.py` | `流程规则.md`“人物库语义完整性门禁” | 第十五件 |
+| `provenance_history` 任何写入 | `audit_provenance_dupes.py` | `流程规则.md`“审计表完整性门禁” | 数据库类 |
+| 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
+| register 写库 | `register_waterlock.py probe → acquire → register → release` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
+| 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | `流程规则.md`“目录页与文档门禁判据索引” | P2-11 |
+| 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | `流程规则.md`“锚解析审计门禁” | 第十九件 |
+| 新增／删除门禁脚本 | `audit_gate_registry.py` | `流程规则.md`“门禁体系元门禁” | 第十六件 |
+| 新增／修改 ADR、技术债、工程实践规则或模板 | `audit_engineering_practice.py` | `工程实践规则.md`“门禁与模板接线”（E1–E7） | 第二十九件 |
+| 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | `流程规则.md`“文档格式门禁” | 第十件 |
+| 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | `流程规则.md`“重构大纲目录口径同步规则” | 口径同步 |
+| **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py` | `流程规则.md`“重构大纲目录口径同步规则”“门禁体系元门禁”；`长线任务归档规则.md` | 口径同步·长线·元门禁 |
 
 **件次索引**（判据正文见 `流程规则.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）。
 
-**门禁三条纪律**：
-
-- **判据非空**：新判据须以负向夹具实测命中后方可采信——“判据存在 ≠ 判据有效”，计数级判据尤须逐条级验证（题面改字而计数不变即假绿）。
-- **自检须连跑数次**：时序／异步类判据（槽名排序、异步渲染窗口）单点 FAIL 先单跑复归再归因。
-- **门禁自身也会失效**：新增或修改判据时须确认“拦下原因正是本组判据”，并跑第十二件 `tests/tri_structure_negtest.py`；判据副作用（如量测前置改变页面状态致判据空转）须同批修正。
+**门禁纪律**：判据非空、自检连跑、门禁自身会失效三条见 `流程规则.md`“目录页与文档门禁判据索引”→“门禁纪律”。
 
 ### 三、常触及的规则与运维要点
 
