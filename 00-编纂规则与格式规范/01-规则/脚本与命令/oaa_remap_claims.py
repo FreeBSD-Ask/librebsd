@@ -14,14 +14,15 @@
      无章级段的清单（卷下直属宿主）退回按“卷号＋节题”在整卷内找唯一候选；
   3) 输出“原路径 → EXISTS / 候选 / AMBIGUOUS(n) / UNMATCHED”，统计
      存在率、可唯一回映数、歧义数、未匹配数。
-  exit 0 仅当存在率或唯一回映率（存在∪唯一 / 总数）为 100%，否则 1。
+  exit 0 仅当存在率或唯一回映率（存在∪唯一 / 总数）为 100%，否则 1（**检查侧**语义：不足 100% 即 FAIL；空清单亦判 FAIL=exit 1）；**写模式**对不可写情形一律 exit 2（口径不同属设计：1＝判据 FAIL，2＝拒绝写盘）。
 
 **写模式（2026-10-22 立，TD-015 偿还）**：`--write` 把可唯一回映的行**就地改写**为现行路径
 （默认 dry-run；ADR-0008 §1.3 CLI 安全默认）。安全轨：
   - 任一条 AMBIGUOUS／UNMATCHED → 拒绝写盘（exit 2，零写入）；
   - 写前 prebak `<file>.prebak-<stamp>`（**已存在即拒写**，防同 stamp 覆盖唯一原始备份）；行数与无用行（空行／# 注）原样保留；UTF-8 无 BOM＋LF；
   - 写后断言：回读逐行校验**每条路径在盘上存在**（目录或 .md），行数不变；
-  - 幂等：二跑应 0 条改写（全部 EXISTS）；文件末尾确保恰一个 LF（**路径行计数**不变）。
+  - 幂等：二跑应 0 条改写（全部 EXISTS）；文件末尾确保恰一个 LF（**路径行计数**不变）；
+  路径行首尾空白会被剥除（写前剥白，属规范化，不计入“回映”计数）。
   - 另三项 fail-closed：`--apply` 须与 `--write` 同用（禁静默退化为检查）；`--stamp` 禁路径分隔符与空值；**空清单（0 条）拒写**。
 回映目标可能是**节目录**（目录化后节＝目录，其下诸小节 .md 由 F 线自行展开）或单个 `.md`。
 
@@ -52,6 +53,14 @@ def _utf8_stdout():
             st.reconfigure(encoding="utf-8", newline="\n")
         except Exception:
             pass
+
+
+def _rel_for_display(path):
+    """显示用相对路径；跨盘（relpath 抛 ValueError）回退绝对路径（2026-10-22 复核 2）。"""
+    try:
+        return os.path.relpath(path, ROOT).replace(chr(92), "/")
+    except ValueError:
+        return os.path.abspath(path).replace(chr(92), "/")
 
 
 def vol_no(name):
@@ -110,7 +119,7 @@ def build_index(root_dir):
                     st = strip_num(ent[:-3])
                 else:
                     continue
-                relp = os.path.relpath(ep, ROOT).replace("\\", "/")
+                relp = _rel_for_display(ep)
                 sec.setdefault((v, ct, st), []).append(relp)
                 volidx.setdefault((v, st), []).append(relp)
     return sec, volidx
@@ -265,7 +274,7 @@ def check(claims_file, root_name):
     ok = bool(total) and (n_exist == total or resolved == total)
     lines += [
         "",
-        f"清单：{os.path.relpath(claims_file, ROOT).replace(chr(92), '/')}",
+        "清单：%s" % _rel_for_display(claims_file),
         f"根目录：{root_name}",
         f"总条数：{total}",
         f"存在：{n_exist}（存在率 {exist_rate:.2%}）",
@@ -324,6 +333,24 @@ def selftest():
         print("[selftest] S4 同 stamp 拒写（rc=%d，prebak 未被覆盖）%s"
               % (rc4, "PASS" if keep else "FAIL"))
         ok &= keep
+        # S5/S6/S7 fail-closed 三例：--apply 无 --write／非法 stamp／空清单
+        old_argv = sys.argv[:]
+        try:
+            sys.argv = ["oaa_remap_claims.py", "--claims", claims, "--apply"]
+            rc5 = main()
+            sys.argv = ["oaa_remap_claims.py", "--claims", claims, "--write", "--apply",
+                        "--stamp", "bad/stamp"]
+            rc6 = main()
+            empty = os.path.join(tmp, "empty.txt")
+            open(empty, "w", encoding="utf-8", newline=chr(10)).write("")
+            sys.argv = ["oaa_remap_claims.py", "--claims", empty, "--write", "--apply"]
+            rc7 = main()
+        finally:
+            sys.argv = old_argv
+        trio = (rc5 == 2 and rc6 == 2 and rc7 == 2 and not os.path.exists(empty + ".prebak-bad"))
+        print("[selftest] S5/S6/S7 fail-closed（apply无write=%d／非法stamp=%d／空清单=%d）%s"
+              % (rc5, rc6, rc7, "PASS" if trio else "FAIL"))
+        ok &= trio
         print("[selftest] 合计 %s" % ("PASS" if ok else "FAIL"))
         return 0 if ok else 1
     finally:
@@ -354,6 +381,9 @@ def main():
         claims = os.path.join(BEACON, f"claims_{args.group}.txt")
     if not os.path.exists(claims):
         print(f"错误：claims 文件不存在 {claims}", file=sys.stderr)
+        return 2
+    if not os.path.isfile(claims):
+        print(f"错误：--claims 须为文件（当前为目录或非文件）：{claims}", file=sys.stderr)
         return 2
     if args.apply and not args.write:
         print("[check] --apply 须与 --write 同用（禁止静默退化为 --check）", file=sys.stderr)
