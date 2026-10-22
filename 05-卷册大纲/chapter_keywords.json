@@ -7,9 +7,9 @@
   "sections": 3274,
   "subsections": 37484,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "a2ad2d800fde44eae0e7a603d7d12a76fa1e10248f3cff50923c37eb6945d769",
+  "content_sha256": "e091800e51dc814b51ef099430142524348202ac019df867f4d67d82b0bc1ef2",
   "extract": "title+body",
-  "generated_at": "2026-10-22T21:25:29+08:00"
+  "generated_at": "2026-10-22T22:19:57+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -255068,10 +255068,10 @@
   "266.6.1": {
    "add": [
     "TH-HIS-040",
-    "TH-HIS-024",
-    "TH-HW-037",
     "TH-SEC-001",
-    "TH-GOV-037"
+    "TH-GOV-037",
+    "TH-HW-037",
+    "TH-HIS-013"
    ]
   },
   "266.6.2": {
