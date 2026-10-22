@@ -14,11 +14,15 @@
   b21 65.9 各中招一次，均由差分门禁 G_D0 的 EOF 字节级断言查出）
 用法：python apply_fixes.py <host1相对路径> <host2相对路径> ...
 """
+import contextlib
 import glob
+import io
 import json
 import os
 import re
+import shutil
 import sys
+import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 JUD = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "judgements")
@@ -101,10 +105,11 @@ def load_over22():
     return over22
 
 
-def main(hosts):
+def main(hosts, dry_run=False):
     jud = load_judgements()
     fetch = load_fetch()
     over22 = load_over22()
+    tot_apply = tot_skip = tot_abandon = 0
     for rel in hosts:
         path = os.path.join(ROOT, rel)
         # 先记原文件的尾换行状态：splitlines 会丢掉它，写回时必须按原样恢复
@@ -263,7 +268,17 @@ def main(hosts):
             lines[si] = new_line
             n_apply += 1
         if n_err:
-            print(f"{rel}: 有 {n_err} 处错误，放弃写盘", file=sys.stderr)
+            tot_abandon += 1
+            if dry_run:
+                print(f"{rel}: 有 {n_err} 处错误，放弃宿主（dry-run 未写盘）", file=sys.stderr)
+            else:
+                print(f"{rel}: 有 {n_err} 处错误，放弃写盘", file=sys.stderr)
+            continue
+        tot_apply += n_apply
+        tot_skip += n_skip
+        if dry_run:
+            print(f"{rel}: 将写入 {n_apply} 条（dry-run 未写盘）｜ 幂等跳过 {n_skip} 条"
+                  f"｜ 行数守恒 {orig_n}")
             continue
         if n_apply == 0:
             # 零写入不重写盘：无条件补尾换行会给不带尾换行的宿主加 1 字节，
@@ -275,10 +290,131 @@ def main(hosts):
         assert len(lines) == orig_n, f"{rel} 行数漂移 {orig_n}->{len(lines)}"
         print(f"{rel}: 应用 {n_apply} ｜ 幂等跳过 {n_skip} ｜ 行数守恒 {orig_n}"
               f"｜尾换行={'保留' if had_lf else '去除'}")
+    if dry_run:
+        print(f"将写入 {tot_apply} 条／幂等跳过 {tot_skip} 条／放弃宿主 {tot_abandon} 个"
+              f"（dry-run 未写盘）")
+    return tot_apply, tot_skip, tot_abandon
+
+
+# ---------------- --selftest：系统临时目录夹具 ----------------
+HOST_REL = "05-卷册大纲/sub/host.md"
+ANCHOR_LINE = "<!-- ROW_MINE: freebsd.misc.100 -->"
+OLD_SUMM = "原摘要正文，用于自测校验定位路径。引用时按原文核对。"
+NEW_SUMM = "改写后的摘要正文，用于自测校验替换路径。引用时按原文核对。"
+HOST_TEXT = "\n".join([ANCHOR_LINE, "**证据等级：L3**", "（占位过渡行一）", OLD_SUMM,
+                       "（占位过渡行二）"]) + "\n"
+
+
+def _put(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if isinstance(data, str):
+        data = data.encode("utf-8")
+    with open(path, "wb") as fh:
+        fh.write(data)
+
+
+def _read(path):
+    with open(path, "rb") as fh:
+        return fh.read()
+
+
+def _make_fixture(jud_rows, fetch=True, text=HOST_TEXT):
+    root = tempfile.mkdtemp(prefix="oaa_apply_selftest_")
+    aud = os.path.join(root, "script", "_db_row_mining", "audit_outline")
+    jud_dir, work = os.path.join(aud, "judgements"), os.path.join(aud, "work")
+    _put(os.path.join(root, HOST_REL), text)
+    _put(os.path.join(jud_dir, "batch_test.jsonl"),
+         "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in jud_rows))
+    if fetch:
+        fb = {"key": f"freebsd|100|{HOST_REL}", "block_type": "block", "level": "L3",
+              "line": 1, "anchor_line": ANCHOR_LINE, "summ_line": OLD_SUMM}
+        _put(os.path.join(work, "t1.fetch.jsonl"), json.dumps(fb, ensure_ascii=False) + "\n")
+    return root
+
+
+def _run_fixture(root, dry_run=False):
+    global ROOT, JUD, WORK, OVER22
+    saved = (ROOT, JUD, WORK, OVER22)
+    buf = io.StringIO()
+    try:
+        ROOT = root
+        JUD = os.path.join(root, "script", "_db_row_mining", "audit_outline", "judgements")
+        WORK = os.path.join(root, "script", "_db_row_mining", "audit_outline", "work")
+        OVER22 = os.path.join(WORK, "_over22_fix.json")
+        with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+            main([HOST_REL], dry_run)
+    finally:
+        ROOT, JUD, WORK, OVER22 = saved
+    return buf.getvalue()
+
+
+def selftest():
+    print("== apply_fixes --selftest（系统临时目录夹具）==")
+    cases = []
+
+    good = [{"key": f"freebsd|100|{HOST_REL}", "判定": "fix-text", "新摘要句": NEW_SUMM}]
+    root = _make_fixture(good)
+    try:
+        host = os.path.join(root, HOST_REL)
+        before = _read(host)
+        out1 = _run_fixture(root)
+        after1 = _read(host)
+        lines = after1.decode("utf-8").splitlines()
+        ok = ("应用 1" in out1) and after1 != before and len(lines) == 5 and lines[3] == NEW_SUMM
+        cases.append(("正常替换（单行换单行、行数守恒）", ok, out1.strip().splitlines()[-1]))
+        out2 = _run_fixture(root)
+        after2 = _read(host)
+        ok2 = ("幂等跳过 1" in out2) and ("未写盘" in out2) and after2 == after1
+        cases.append(("幂等跳过（二次运行不重写盘）", ok2, out2.strip().splitlines()[-1]))
+    finally:
+        shutil.rmtree(root, ignore_errors=True)
+
+    bad = [{"key": f"freebsd|999|{HOST_REL}", "判定": "fix-text", "新摘要句": NEW_SUMM}]
+    root = _make_fixture(bad)
+    try:
+        host = os.path.join(root, HOST_REL)
+        before = _read(host)
+        out = _run_fixture(root)
+        ok = ("无 fetch 档案" in out) and ("放弃写盘" in out) and _read(host) == before
+        cases.append(("坏 key（无 fetch 档案）→ 整宿主放弃、零写盘", ok,
+                      [l for l in out.splitlines() if "放弃" in l][0]))
+    finally:
+        shutil.rmtree(root, ignore_errors=True)
+
+    root = _make_fixture(good)
+    try:
+        host = os.path.join(root, HOST_REL)
+        before = _read(host)
+        out = _run_fixture(root, dry_run=True)
+        ok = ("将写入 1 条" in out) and ("放弃宿主 0 个" in out) and _read(host) == before
+        cases.append(("--dry-run（计数但不写盘）", ok,
+                      [l for l in out.splitlines() if l.startswith("将写入")][0]))
+    finally:
+        shutil.rmtree(root, ignore_errors=True)
+
+    bad_n = 0
+    for title, ok, detail in cases:
+        if not ok:
+            bad_n += 1
+        print(f"[{'PASS' if ok else 'FAIL'}] {title}｜ {detail}")
+    print("覆盖：正常替换、幂等跳过、坏 key 整宿主放弃、--dry-run 零写盘")
+    print("未覆盖（分支级）：inline 整行替换与尾锚保留、块内双重摘要拦截、纪律串重复拦截")
+    print("——三类须更复杂宿主夹具，未纳入；本次三项目标路径均已断言")
+    print(f"== selftest {'PASS' if bad_n == 0 else 'FAIL'}：{len(cases) - bad_n}/{len(cases)} 用例通过 ==")
+    return 0 if bad_n == 0 else 1
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    argv = sys.argv[1:]
+    if "--selftest" in argv:
+        sys.exit(selftest())
+    if not argv:
         print(__doc__)
         sys.exit(2)
-    main(sys.argv[1:])
+    # 只识别已定义开关，其余参数一律按宿主路径处理（与旧解析一致，不误判组合）
+    dry = "--dry-run" in argv
+    hosts = [a for a in argv if a != "--dry-run"]
+    if not hosts:
+        print(__doc__)
+        sys.exit(2)
+    main(hosts, dry)
