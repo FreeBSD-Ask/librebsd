@@ -37,6 +37,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import pathlib
 import re
 import sys
@@ -48,7 +49,7 @@ REPO = pathlib.Path(__file__).resolve().parents[3]
 
 EFFECTIVE = dt.date(2026, 10, 22)
 AUDIT_COLS = [
-    "任务 ID", "任务名", "类型", "风险级别", "起算日", "准入结论", "准入证据",
+    "任务 ID", "任务名", "类型", "风险级别", "承担者", "起算日", "准入结论", "准入证据",
     "复核轮次", "最新复核 ID", "理论适用性", "收口结论", "收口证据",
     "changelog", "复审触发",
 ]
@@ -109,13 +110,19 @@ def _parse_table(path: pathlib.Path, required: list[str], exact: list[str] | Non
                     continue
                 if len(cells2) < len(cells):
                     cells2 = cells2 + [""] * (len(cells) - len(cells2))
-                rows.append(dict(zip(cells, cells2)))
+                row = dict(zip(cells, cells2))
+                row["__raw__"] = line2.strip()
+                rows.append(row)
             return cells, rows, None
     return None, [], "未找到含 %s 的表" % "／".join(required)
 
 
 def _parse_rotation(path: pathlib.Path):
-    return _parse_table(path, ["轮替日期", "归档指针"], None)
+    return _parse_table(path, ["轮替日期", "归档指针", "源行哈希"], None)
+
+
+def _quarter(d: dt.date) -> str:
+    return "%d-Q%d" % (d.year, (d.month - 1) // 3 + 1)
 
 
 def _parse_date(value: str):
@@ -255,7 +262,7 @@ def run_checks(root: pathlib.Path):
                  "；".join(close_bad) if close_bad else "已勾选任务均有 PASS 收口行"))
 
     # L4 字段齐全、起算日不早于生效日
-    required = ["任务 ID", "任务名", "类型", "风险级别", "起算日", "准入结论",
+    required = ["任务 ID", "任务名", "类型", "风险级别", "承担者", "起算日", "准入结论",
                 "准入证据", "复核轮次", "最新复核 ID", "理论适用性", "收口结论", "复审触发"]
     field_bad = []
     for r in audit:
@@ -275,9 +282,14 @@ def run_checks(root: pathlib.Path):
                 field_bad.append("%s 复核轮次非正" % tid)
         except ValueError:
             field_bad.append("%s 复核轮次非整数" % tid)
-        if r.get("收口结论", "").strip() == "PASS":
-            if _is_placeholder(r.get("收口证据", "")) or _is_placeholder(r.get("changelog", "")):
+        if r.get("收口结论", "").strip() in {"PASS", "不适用"}:
+            ev = r.get("收口证据", "")
+            if _is_placeholder(ev) or _is_placeholder(r.get("changelog", "")):
                 field_bad.append("%s 收口 PASS 但缺收口证据或 changelog" % tid)
+            else:
+                for token in ("prebak=", "已知限制=", "轮替=", "归档="):
+                    if token not in ev:
+                        field_bad.append("%s 收口证据缺 %s" % (tid, token))
     rows.append(("L4", "字段齐全、起算日合规", not field_bad,
                  "；".join(field_bad) if field_bad else "%d 行字段齐全" % len(audit)))
 
@@ -321,13 +333,17 @@ def run_checks(root: pathlib.Path):
         tid = r.get("任务 ID", "")
         rs = review_by_task.get(tid, [])
         declared = int(r.get("复核轮次", "0") or "0")
+        risk = r.get("风险级别")
+        need = 3 if risk == "高风险" else 2
+        if declared < need:
+            role_bad.append("%s 声明 %d 轮、%s 至少 %d 轮" % (tid, declared, risk, need))
         if len(rs) < declared:
             role_bad.append("%s 声明 %d 轮、实有 %d 轮" % (tid, declared, len(rs)))
-        if r.get("风险级别") == "高风险" and len(rs) < 3:
-            role_bad.append("%s 高风险但复核 <3 轮" % tid)
+        if len(rs) < need:
+            role_bad.append("%s %s 实有 %d 轮、至少 %d 轮" % (tid, risk, len(rs), need))
         if any(x.get("角色") == "作者" for x in rs):
             role_bad.append("%s 存在作者自批" % tid)
-        if r.get("风险级别") == "高风险" and not any(x.get("角色") == "主理人" for x in rs):
+        if risk == "高风险" and not any(x.get("角色") == "主理人" for x in rs):
             role_bad.append("%s 高风险缺主理人签收" % tid)
         nums = []
         for x in rs:
@@ -375,10 +391,23 @@ def run_checks(root: pathlib.Path):
                     rot_bad.append("轮替行缺归档指针")
                 elif not (root / ptr).exists():
                     rot_bad.append("归档指针不存在：%s" % ptr)
+    quarter_warn = ""
+    if not rot_bad:
+        current_q = _quarter(dt.date.today())
+        closed = [r for r in audit if r.get("收口结论") in {"PASS", "不适用"}]
+        covered = {r.get("覆盖季度", "").strip() for r in rotation}
+        old_closed = []
+        for r in closed:
+            d = _parse_date(r.get("起算日", ""))
+            if d and _quarter(d) < current_q and _quarter(d) not in covered:
+                old_closed.append(r.get("任务 ID", ""))
+        if old_closed:
+            quarter_warn = "WARN 跨季度未轮替：%s" % "、".join(old_closed)
     rows.append(("L9", "轮替阈值与指针", not rot_bad,
-                 "；".join(rot_bad) if rot_bad
-                 else ("已超阈值，轮替指针有效" if over else
-                       "未超阈值（行 %d／字节 %d／%d）" % (len(audit), audit_bytes, review_bytes))))
+                 "；".join(rot_bad) if rot_bad else
+                 (quarter_warn if quarter_warn else
+                  ("已超阈值，轮替指针有效" if over else
+                   "未超阈值（行 %d／字节 %d／%d）" % (len(audit), audit_bytes, review_bytes)))))
 
     # L10 轮替件逐字、主表无全文、未收口任务未迁出
     rot_bad2 = []
@@ -403,8 +432,14 @@ def run_checks(root: pathlib.Path):
                 if _is_placeholder(tid):
                     continue
                 archived_ids.add(tid)
-                if a.get("收口结论", "") != "PASS":
+                if a.get("收口结论", "") not in {"PASS", "不适用"}:
                     rot_bad2.append("%s 收录未收口任务 %s" % (ptr, tid))
+                expected = r.get("源行哈希", "").strip()
+                raw = a.get("__raw__", "")
+                if _is_placeholder(expected):
+                    rot_bad2.append("%s 轮替行缺源行哈希" % ptr)
+                elif hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16] != expected:
+                    rot_bad2.append("%s 归档行哈希不符：%s" % (ptr, tid))
         both = sorted(archived_ids & audit_ids)
         if both:
             rot_bad2.append("主表与轮替件双源：%s" % "、".join(both))
@@ -471,8 +506,8 @@ def _write(path: pathlib.Path, text: str):
 
 
 def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=True,
-             duplicate=False, author=False, rounds=3, dangling_review=False,
-             rotation_double=False, rotation_open=False, dangling_tg=False):
+             duplicate=False, author=False, rounds=3, risk="高风险", dangling_review=False,
+             rotation_double=False, rotation_open=False, bad_hash=False, dangling_tg=False):
     p = _paths(root)
     _write(p["rule"], "任务强制审计、复核与轮替\n")
     _write(p["flow"], "任务准入审计\n任务收口审计\n独立复核\n")
@@ -486,24 +521,25 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
     tid = "fixture-task-20261022"
     theory = "TG-999" if dangling_tg else "TG-001"
     close_v = "PASS" if close else "未收口"
-    evidence = "门禁输出：PASS；路径：fixture" if close else "—"
+    evidence = ("prebak=fixture；已知限制=无；轮替=未触发；归档=fixture"
+                if close else "—")
     changelog = "id=1" if close else "—"
     name = "" if not field else "夹具任务"
     type_v = "杂项" if not enum else "需求／范围"
     audit_rows = []
     if intake:
         audit_rows.append(
-            "| %s | %s | %s | 高风险 | 2026-10-22 | PASS | spec.md | %d | RV-1 | %s | %s | %s | %s | 2027-01-22 |"
-            % (tid, name, type_v, rounds, theory, close_v, evidence, changelog))
+            "| %s | %s | %s | %s | 主代理 | 2026-10-22 | PASS | spec.md | %d | RV-1 | %s | %s | %s | %s | 2027-01-22 |"
+            % (tid, name, type_v, risk, rounds, theory, close_v, evidence, changelog))
     if duplicate:
         audit_rows.append(
-            "| %s | 重复 | 需求／范围 | 普通 | 2026-10-22 | PASS | spec.md | 2 | RV-2 | 适用 | 未收口 | — | — | 2027-01-22 |"
+            "| %s | 重复 | 需求／范围 | 普通 | 复核子代理 | 2026-10-22 | PASS | spec.md | 2 | RV-2 | 适用 | 未收口 | — | — | 2027-01-22 |"
             % tid)
     header = "| " + " | ".join(AUDIT_COLS) + " |\n| " + " | ".join(["---"] * len(AUDIT_COLS)) + " |\n"
     body = "\n".join(audit_rows)
     _write(p["audit"], "# 任务审计台账\n\n" + header + (body + "\n" if body else "") +
-           "\n## 轮替记录\n\n| 轮替日期 | 覆盖季度 | 迁出任务数 | 归档指针 | changelog |\n"
-           "| --- | --- | --- | --- | --- |\n| — | — | — | — | — |\n")
+           "\n## 轮替记录\n\n| 轮替日期 | 覆盖季度 | 迁出任务数 | 归档指针 | 源行哈希 | changelog |\n"
+           "| --- | --- | --- | --- | --- | --- |\n| — | — | — | — | — | — |\n")
 
     review_rows = []
     for i in range(1, rounds + 1):
@@ -528,13 +564,16 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
     if rotation_double or rotation_open:
         arch_dir = p["archive"] / "2026-Q4"
         _write(arch_dir / "index.md", "# archive\n")
-        arch_row = "| %s | 归档 | 需求／范围 | 高风险 | 2026-10-22 | PASS | spec | 3 | RV-1 | 适用 | %s | 证据 | id=1 | 2027-01-22 |" % (
-            tid, "未收口" if rotation_open else "PASS")
+        arch_row = (
+            "| %s | 归档 | 需求／范围 | 高风险 | 主代理 | 2026-10-22 | PASS | spec | 3 | RV-1 | 适用 | %s | "
+            "prebak=fixture；已知限制=无；轮替=未触发；归档=fixture | id=1 | 2027-01-22 |"
+            % (tid, "未收口" if rotation_open else "PASS"))
+        row_hash = "0" * 16 if bad_hash else hashlib.sha256(arch_row.encode("utf-8")).hexdigest()[:16]
         _write(arch_dir / "任务审计台账.md",
                "# 归档\n\n" + header + arch_row + "\n")
         _write(p["audit"], _read(p["audit"]).replace(
-            "| — | — | — | — | — |",
-            "| 2026-10-22 | 2026-Q4 | 1 | 01-项目管理/01-编纂规划与报告归档/长线任务归档总登记表/13-任务审计与复核轮替/2026-Q4 | id=2 |"))
+            "| — | — | — | — | — | — |",
+            "| 2026-10-22 | 2026-Q4 | 1 | 01-项目管理/01-编纂规划与报告归档/长线任务归档总登记表/13-任务审计与复核轮替/2026-Q4 | %s | id=2 |" % row_hash))
 
 
 def _selftest():
@@ -548,9 +587,11 @@ def _selftest():
         ("duplicate-id", {"duplicate": True}, "L6"),
         ("author-self-review", {"author": True}, "L7"),
         ("insufficient-rounds", {"rounds": 2}, "L7"),
+        ("ordinary-insufficient-rounds", {"risk": "普通", "rounds": 1}, "L7"),
         ("dangling-review", {"dangling_review": True}, "L8"),
         ("rotation-double", {"rotation_double": True}, "L10"),
         ("rotation-open", {"rotation_open": True}, "L10"),
+        ("rotation-hash-mismatch", {"rotation_double": True, "bad_hash": True}, "L10"),
         ("dangling-tg", {"dangling_tg": True}, "L12"),
     ]
     ok_all = True
