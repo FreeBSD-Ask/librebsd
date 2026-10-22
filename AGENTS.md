@@ -15,7 +15,7 @@
 - **范围**：**禁止编纂正文**；工作范围限于大纲、考据、数据库与目录页。
 
 <!-- BEGIN 口径基准（脚本自动维护，勿手改数字，最后同步 2026-10-22） -->
-- **重构2026 现行大纲目录口径：73 卷 524 章 3701 节**（src 标注见 index.html doc-metrics；本行由 `00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --sync` 自动维护）。
+- **重构2026 现行大纲目录口径：75 卷 523 章 3701 节**（src 标注见 index.html doc-metrics；本行由 `00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --sync` 自动维护）。
 <!-- END 口径基准（脚本自动维护） -->
 
 卷章数只在标记块与 `重构2026/index.html` 的 `doc-metrics` 维护，别处不得手写。
@@ -183,6 +183,7 @@
 | `provenance_history` 任何写入 | `audit_provenance_dupes.py` | `流程规则.md`“审计表完整性门禁” | 数据库类 |
 | 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
 | register 写库 | `register_waterlock.py probe → acquire → register → release` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
+| 向 `05-卷册大纲/` 写 ROW_MINE 块（mail2d／OAA 入纲） | `outline_writer.py --selftest` → `--check-only` → `--write`（须配 `--anchor`；dry-run 默认） | `流程规则.md`“入纲写入器规则”；`ADR-0010` | —（写入器，非门禁） |
 | 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | `流程规则.md`“目录页与文档门禁判据索引” | P2-11 |
 | 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | `流程规则.md`“锚解析审计门禁” | 第十九件 |
 | 新增／删除门禁脚本 | `audit_gate_registry.py` | `流程规则.md`“门禁体系元门禁” | 第十六件 |
