@@ -11,8 +11,9 @@
    命中即跳过，并在既有锚点的 `claim_id` 不符时可见告警。文件级判据废止
    （目录化宿主上会重复插入，ADR-0010 §2 实测 +16/20）。
 3. **路径覆盖**：显式 `--root`／`--host`／`--claim-map`／`--outline-map`／`--work`／`--ledger`；
-   全部经 `commonpath` 断言落在 `--allow-root`（默认仓库根）内；启动打印生效绝对路径；
-   沙箱路径不得逃逸。
+   **写点**（root／ledger／host／work／scan-root）经 `commonpath` 断言落在 `--allow-root` 内，
+   **读点**（narr／claim-map／outline-map／host-map／candidates／db）落在 `--input-root` 内；
+   启动打印两组生效绝对路径（防静默读生产）；沙箱路径不得逃逸。
 
 写盘契约
 --------
@@ -264,12 +265,23 @@ def _must_exist(path: str, what: str) -> str:
 
 
 def build_plan(a):
-    allow = os.path.abspath(a.allow_root)
-    root = under(allow, a.root, "--root")
-    work = under(allow, a.work, "--work")
-    ledger = under(allow, a.ledger, "--ledger") if a.ledger else None
-    scan_root_fixed = under(allow, a.scan_root, "--scan-root") if a.scan_root else None
-    input_root = os.path.abspath(a.input_root)
+    def abs_work(p):
+        """顶层路径：相对路径以仓库根为基准。"""
+        return os.path.abspath(p if os.path.isabs(p) else os.path.join(REPO, p))
+
+    allow = abs_work(a.allow_root)
+    input_root = abs_work(a.input_root)
+    work = abs_work(a.work)
+    under(input_root, work, "--work")
+
+    def write_path(p, what):
+        """写点：相对路径以 --work 为基准，须落在 --allow-root 内。"""
+        full = p if os.path.isabs(p) else os.path.join(work, p)
+        return under(allow, full, what)
+
+    root = write_path(a.root, "--root")
+    ledger = write_path(a.ledger, "--ledger") if a.ledger else None
+    scan_root_fixed = write_path(a.scan_root, "--scan-root") if a.scan_root else None
 
     def inp(p, what):
         """只读输入：相对 --work 解析；须存在且落在 --input-root（默认仓库根）内。"""
@@ -443,10 +455,14 @@ def build_plan(a):
             k = (it["lib"], it["pk"])
             if k in counts:
                 have += 1
-                if it["claim_id"] not in cids.get(k, []):
+                seen = cids.get(k, [])
+                if not seen:
+                    print("[warn] 已存在锚点但锚点后 300 字内未见 claim 引用（A 型块或格式差异）："
+                          "%s.messages.%s" % (it["lib"], it["pk"]))
+                elif it["claim_id"] not in seen:
                     mismatch += 1
                     print("[warn] 已存在锚点 claim_id 不符：%s.messages.%s 现存 %s／本批 %s"
-                          % (it["lib"], it["pk"], cids.get(k), it["claim_id"]))
+                          % (it["lib"], it["pk"], seen, it["claim_id"]))
             else:
                 keep.append(it)
         by_host[host] = keep
@@ -613,7 +629,8 @@ def selftest():
                     "--candidates", os.path.join(inp, "candidates.txt"),
                     "--lib", "stlib", "--root", outs, "--work", allow,
                     "--ledger", os.path.join(allow, "ledger.jsonl"),
-                    "--allow-root", allow, "--anchor", "st_b001", "--ts", "2026-10-22"]
+                    "--allow-root", allow, "--input-root", allow,
+                    "--anchor", "st_b001", "--ts", "2026-10-22"]
             base += list(extra or [])
             for k, v in kw.items():
                 base += ["--" + k.replace("_", "-"), v]
@@ -712,7 +729,9 @@ def parse(argv=None):
     ap.add_argument("--ledger",
                     default=os.path.join(REPO, "script", "_db_row_mining", "supplement_log.jsonl"),
                     help="台账 JSONL（默认生产 supplement_log）")
-    ap.add_argument("--allow-root", default=REPO, help="允许根（commonpath 断言；默认仓库根）")
+    ap.add_argument("--allow-root", default=REPO, help="写点允许根（commonpath 断言；默认仓库根）")
+    ap.add_argument("--input-root", default=REPO,
+                    help="读点允许根（--narr/--claim-map/--db 等只读输入；默认仓库根）")
     ap.add_argument("--scan-root", help="幂等扫描面（默认各宿主所在章节目录）")
     ap.add_argument("--host", help="只写该宿主（大纲根相对路径）")
     ap.add_argument("--anchor", help="批标识（台账 batch 字段；--write 必填）")
