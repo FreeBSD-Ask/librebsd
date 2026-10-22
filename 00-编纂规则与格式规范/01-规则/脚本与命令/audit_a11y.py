@@ -11,7 +11,7 @@
 
 判据
 ----
-A **axe 扫描**：四组合（1920×1080 / 390×844 × light/dark）`violations` 中
+A **axe 扫描**：四组合（1920×1080 / 390×844 × light/oled 纯黑）`violations` 中
   `impact ∈ {critical, serious}` 数 = 0；moderate 记 INFO 不 FAIL（方案裁定，避免噪声）。
 B **键盘契约**（E4-②，2026-09-19 审计处置项的回归守护）：`#exportMenu` 打开后
   聚焦首项按 ArrowDown/ArrowUp 焦点移动、Escape 关闭并归还焦点至触发钮、
@@ -53,9 +53,9 @@ const AXE = readFileSync(AXE_PATH, 'utf8');
 const FILE_URL = 'file:///' + INDEX.replace(/\\/g, '/');
 const combos = [
   { w: 1920, h: 1080, theme: 'light' },
-  { w: 1920, h: 1080, theme: 'dark' },
+  { w: 1920, h: 1080, theme: 'oled' },
   { w: 390, h: 844, theme: 'light' },
-  { w: 390, h: 844, theme: 'dark' },
+  { w: 390, h: 844, theme: 'oled' },
 ];
 const out = { combos: [], keyboard: null, media: null, errors: [] };
 const browser = await chromium.launch({ headless: true });
@@ -72,8 +72,8 @@ async function newPage(w, h) {
 
 for (const c of combos) {
   const page = await newPage(c.w, c.h);
-  if (c.theme === 'dark') {
-    await page.evaluate(() => document.documentElement.setAttribute('data-theme', 'dark'));
+  if (c.theme === 'oled') {
+    await page.evaluate(() => document.documentElement.setAttribute('data-theme', 'oled'));
   } else {
     await page.evaluate(() => document.documentElement.removeAttribute('data-theme'));
   }
