@@ -16469,8 +16469,6 @@
             - [130.0.17-GAPAYTBEGIN20261018缺口A662期战役注入.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.0-章级综合/130.0.17-GAPAYTBEGIN20261018缺口A662期战役注入.md)
             - [130.0.18-youtubeepisodesCL152902.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.0-章级综合/130.0.18-youtubeepisodesCL152902.md)
             - [130.0.19-youtubeepisodesCL153185.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.0-章级综合/130.0.19-youtubeepisodesCL153185.md)
-            - [130.0.20-GAPAYTBEGIN20261020缺口A662期战役注入.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.0-章级综合/130.0.20-GAPAYTBEGIN20261020缺口A662期战役注入.md)
-            - [130.0.21-GAPAYTBEGIN20261020缺口A662期战役注入-2.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.0-章级综合/130.0.21-GAPAYTBEGIN20261020缺口A662期战役注入-2.md)
         - [130.1-Neel-Natu-与-Peter-Grehan-bhyve-的起源](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.1-Neel-Natu-与-Peter-Grehan-bhyve-的起源/)
             - [130.1.1-bhyve启动的工程语境.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.1-Neel-Natu-与-Peter-Grehan-bhyve-的起源/130.1.1-bhyve启动的工程语境.md)
             - [130.1.2-要点在bhyve出现之前FreeBSD平台的硬件虚拟化方案主要依赖三条路径第一是.md](第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.1-Neel-Natu-与-Peter-Grehan-bhyve-的起源/130.1.2-要点在bhyve出现之前FreeBSD平台的硬件虚拟化方案主要依赖三条路径第一是.md)

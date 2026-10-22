@@ -5,11 +5,11 @@
   "volumes": 24,
   "chapters": 449,
   "sections": 3274,
-  "subsections": 37486,
+  "subsections": 37484,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "50b7fae34b9f664434f055f235cc9fc0a7fd36d8644110c7d1b6e5e5165a650b",
+  "content_sha256": "7a162f98885a07d705b55ebc25c26ad739fb3f0f3a65b4b3a0096791a49abc9e",
   "extract": "title+body",
-  "generated_at": "2026-10-22T17:00:48+08:00"
+  "generated_at": "2026-10-22T19:14:01+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -31757,8 +31757,8 @@
     "freebsd"
    ],
    "technical_terms": [],
-   "subs": 21,
-   "subs_sha1": "c72c0999432ef5dd84d1b0e9fdc665ca2bddeade"
+   "subs": 19,
+   "subs_sha1": "794d009dc2851f95ec1dcfcf0a4859b12f89b70a"
   },
   "130.1": {
    "chapter": "130",
@@ -109985,8 +109985,8 @@
   "085.6.14": {
    "add": [
     "TH-HW-019",
-    "TH-SEC-001",
     "TH-LAW-012",
+    "TH-SEC-001",
     "TH-NET-001",
     "TH-NET-027"
    ]
