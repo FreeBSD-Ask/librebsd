@@ -14,11 +14,15 @@
         host1.md host2.md ...
 """
 import argparse
+import contextlib
 import glob
+import io
 import json
 import os
 import re
+import shutil
 import sys
+import tempfile
 
 import duckdb
 
@@ -131,8 +135,18 @@ def main():
                          "长度超限清单（不 FAIL，批次报告备案）——F2 任务书 §六 字数门禁"
                          "仅设下限、§一体例注明 tech-kern 摘要偏长，且 87,665 块中 993/1000 本就 ≤200/80，"
                          "超限者为技术密集长帖（2026-09-29 实测口径）")
-    ap.add_argument("hosts", nargs="+")
+    ap.add_argument("--max-fails", type=int, default=30,
+                    help="失败列表最多打印条数（默认 30，保持旧行为）")
+    ap.add_argument("--full-dump", action="store_true",
+                    help="失败列表全量输出（覆盖 --max-fails）")
+    ap.add_argument("--selftest", action="store_true",
+                    help="在系统临时目录跑 G1–G6 夹具自测，退出码 0/1；不读生产库")
+    ap.add_argument("hosts", nargs="*")
     args = ap.parse_args()
+    if args.selftest:
+        sys.exit(selftest())
+    if not args.hosts:
+        ap.error("至少需要一个宿主路径（或用 --selftest）")
 
     fails = []
     # G1 processed 覆盖（合并集：基线 ∪ 四组分片台账）
@@ -211,10 +225,140 @@ def main():
     print("----")
     if fails:
         print(f"FAIL {len(fails)} 项:")
-        for x in fails[:30]:
+        lim = None if args.full_dump else max(0, args.max_fails)
+        for x in (fails if lim is None else fails[:lim]):
             print("  !", x)
+        if lim is not None and len(fails) > lim:
+            print(f"  ……其余 {len(fails) - lim} 项已省略（--full-dump 或 --max-fails N）")
         sys.exit(1)
     print("全部门禁通过（G1–G6）")
+
+
+# ---------------- --selftest：系统临时目录最小夹具（不读生产库） ----------------
+ANCHOR_LINE = "<!-- ROW_MINE: freebsd.misc.100 -->"
+HOST_REL = "05-卷册大纲/sub/host.md"
+SUMMARY_OK = ("本块摘要正文用于自测校验，叙述完整且不含禁用符号，末尾收束于纪律串。"
+              "引用时按原文核对。")
+SUMMARY_SHORT = "本块摘要过短。引用时按原文核对。"
+
+
+def _put(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if isinstance(data, str):
+        data = data.encode("utf-8")
+    with open(path, "wb") as fh:
+        fh.write(data)
+
+
+def _host_text(summary=SUMMARY_OK, crlf=False, n_blocks=1):
+    nl = "\r\n" if crlf else "\n"
+    blocks = [nl.join([ANCHOR_LINE, "**证据等级：L3**", "（占位过渡行一）", summary,
+                       "（占位过渡行二）"]) for _ in range(n_blocks)]
+    return nl.join(blocks) + nl
+
+
+def _make_fixture(summary=SUMMARY_OK, register=True, fetch_level="L3",
+                  host_bytes=None, crlf=False, db_counts=(1, 0, 0),
+                  baseline=1, db_expect=None, n_blocks=1, extra_argv=()):
+    """构造最小夹具：宿主 md（5 行块）＋ processed.jsonl ＋ fetch 档案 ＋ 临时 duckdb。
+    返回 (夹具根目录, main 的 argv)。"""
+    root = tempfile.mkdtemp(prefix="oaa_verify_selftest_")
+    aud = os.path.join(root, "script", "_db_row_mining", "audit_outline")
+    work = os.path.join(aud, "work")
+    rel = HOST_REL
+    if host_bytes is None:
+        host_bytes = _host_text(summary, crlf=crlf, n_blocks=n_blocks).encode("utf-8")
+    _put(os.path.join(root, rel), host_bytes)
+    if register:
+        _put(os.path.join(aud, "processed.jsonl"),
+             json.dumps({"key": f"freebsd|100|{rel}"}, ensure_ascii=False) + "\n")
+    fb = {"key": f"freebsd|100|{rel}", "block_type": "block", "level": fetch_level,
+          "line": 1, "anchor_line": ANCHOR_LINE, "summ_line": summary}
+    _put(os.path.join(work, "t1.fetch.jsonl"), json.dumps(fb, ensure_ascii=False) + "\n")
+    dbp = os.path.join(root, "04-现代研究文献", "historical_claims.duckdb")
+    os.makedirs(os.path.dirname(dbp), exist_ok=True)
+    con = duckdb.connect(dbp)
+    for t in ("claim", "claim_evidence", "evidence"):
+        con.execute(f"CREATE TABLE {t}(i BIGINT)")
+    for t, n in zip(("claim", "claim_evidence", "evidence"), db_counts):
+        if n:
+            con.execute(f"INSERT INTO {t} SELECT * FROM range({n})")
+    con.close()
+    exp = db_counts if db_expect is None else db_expect
+    argv = ["--baseline", str(baseline), "--db-claim", str(exp[0]),
+            "--db-ce", str(exp[1]), "--db-ev", str(exp[2])] + list(extra_argv) + [rel]
+    return root, argv
+
+
+def _run_in_fixture(root, argv):
+    """把模块级路径全局量临时指向夹具，再跑一次 main()，返回 (退出码, 合并输出)。"""
+    global ROOT, OUTLINE, WORK, AUD, MAIN_DB
+    saved = (ROOT, OUTLINE, WORK, AUD, MAIN_DB)
+    buf = io.StringIO()
+    code = 0
+    try:
+        ROOT = root
+        OUTLINE = os.path.join(root, "05-卷册大纲")
+        AUD = os.path.join(root, "script", "_db_row_mining", "audit_outline")
+        WORK = os.path.join(AUD, "work")
+        MAIN_DB = os.path.join(root, "04-现代研究文献", "historical_claims.duckdb")
+        old = sys.argv
+        sys.argv = ["oaa_verify.py"] + argv
+        try:
+            with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+                main()
+        except SystemExit as e:
+            code = e.code if isinstance(e.code, int) else (1 if e.code else 0)
+        finally:
+            sys.argv = old
+    finally:
+        ROOT, OUTLINE, WORK, AUD, MAIN_DB = saved
+    return code, buf.getvalue()
+
+
+def selftest():
+    cases = [
+        ("正常路径（G1–G6 全通）", dict(), 0, [], None),
+        ("缺块（G1 未登记判定）", dict(register=False), 1, ["G1"], None),
+        ("块数不符（G2 基线漂移）", dict(baseline=2), 1, ["G2"], None),
+        ("字数不足（G3）", dict(summary=SUMMARY_SHORT), 1, ["G3"], None),
+        ("等级不符（G4）", dict(fetch_level="L2"), 1, ["G4"], None),
+        ("DB 行数漂移（G5）", dict(db_expect=(2, 0, 0)), 1, ["G5"], None),
+        ("BOM（G6）", dict(host_bytes=b"\xef\xbb\xbf" + _host_text().encode("utf-8")), 1, ["G6"], None),
+        ("CRLF（G6）", dict(crlf=True), 1, ["G6"], None),
+        ("失败列表默认截断 30 条＋省略提示",
+         dict(register=False, n_blocks=35, baseline=35), 1, ["G1"],
+         lambda o: o.count("  ! ") == 30 and "其余 5 项已省略" in o),
+        ("--max-fails 5 生效",
+         dict(register=False, n_blocks=35, baseline=35, extra_argv=("--max-fails", "5")),
+         1, ["G1"], lambda o: o.count("  ! ") == 5 and "其余 30 项已省略" in o),
+        ("--full-dump 全量 35 条",
+         dict(register=False, n_blocks=35, baseline=35, extra_argv=("--full-dump",)),
+         1, ["G1"], lambda o: o.count("  ! ") == 35 and "已省略" not in o),
+    ]
+    print("== oaa_verify --selftest（系统临时目录夹具，不读生产库）==")
+    bad = 0
+    for title, kw, want, marks, check in cases:
+        root, argv = _make_fixture(**kw)
+        try:
+            code, out = _run_in_fixture(root, argv)
+        finally:
+            shutil.rmtree(root, ignore_errors=True)
+        hit = [l.strip() for l in out.splitlines() if l.strip().startswith("!")]
+        ok = (code == want) and all(mk in out for mk in marks) \
+            and (check is None or check(out))
+        if not ok:
+            bad += 1
+        detail = "；".join(hit[:2]) if hit else "；".join(
+            l for l in out.splitlines() if l.startswith(("G2 ", "G5 ", "全部门禁")))[:120]
+        print(f"[{'PASS' if ok else 'FAIL'}] {title}：退出码 {code}（期望 {want}）｜ {detail}")
+    print("覆盖：G1 正/负（未登记）、G2 正/负（基线漂移）、G3 正/负（字数不足）、"
+          "G4 正/负（等级不符）、G5 正/负（计数漂移）、G6 正/负（BOM、CRLF）、"
+          "失败列表截断/--max-fails/--full-dump")
+    print("未覆盖（分支级，G1–G6 判据本身均已独立复现）：G3 禁字符／纪律串缺失／"
+          "inline 禁字符、G4 缺“证据等级”行分支；判据阈值与语义未改动")
+    print(f"== selftest {'PASS' if bad == 0 else 'FAIL'}：{len(cases) - bad}/{len(cases)} 用例通过 ==")
+    return 0 if bad == 0 else 1
 
 
 if __name__ == "__main__":
