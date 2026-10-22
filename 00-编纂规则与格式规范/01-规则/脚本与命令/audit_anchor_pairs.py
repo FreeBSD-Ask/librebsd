@@ -1,23 +1,24 @@
 # -*- coding: utf-8 -*-
 """成对锚配平审计（TD-022 固化件；ADR-0011 成对不变量的门禁实现）。
 
-对象：05-卷册大纲/ 树内 .md 的 HTML 注释锚（多行感知）。家族模式（TD-022 判据书 §三裁定）：
-  block     : open/close 成对，可跨文件；全树 open==close 为 PASS
-  single    : 只有单标记（open 即完整标记，标记头＋引用块）；close 出现即孤儿
-  begin_end : BEGIN/END 成对，可跨文件；全树 begin==end 为 PASS
-默认 single。ROW_MINE／DEEP_ANALYSIS 单锚不参与。
+对象：05-卷册大纲/ 树内 .md 的 HTML 注释锚（多行感知）。家族模式按 TD-022
+判据书 §三／§七 裁定，由全树 kinds 数据驱动：
+  block     : 家族出现 close → open/close 成对（可跨文件）；全树 open==close 为 PASS（G1）
+  begin_end : 家族无 close 但出现 BEGIN/END → 全树 begin==end 为 PASS（G2）；
+              同族单标记（如 REVIEW-ANNOT 的 702 处批注头）按裁定 4 豁免
+  single    : 只有 open 单标记（如 DB_REF 裁定 1 后、NEWREF 等原生单标记）→ 不判平
+单锚 ROW_MINE／DEEP_ANALYSIS 不参与。
 
 判据：
-  T1 有开无闭（block，文件级 INFO）
-  T2 有闭无开（block，文件级 INFO）
   T4 未闭合注释（全局 FAIL）
-  G1 全树 block 家族 open!=close → FAIL
-  G2 single 家族出现 close → FAIL（唯一补对侧例外：MAIL_INSIGHT_SECTION 若有 open 同卷则补 close，见判据书 §六）
---check 仅在 T4 或 G1／G2 命中时 exit 1；文件级异常只作 INFO 与清单。
-不修改任何文件。--csv／--json 落文件级明细；--selftest 判据非空。
+  G1 block 家族全树 open!=close → FAIL
+  G2 begin_end 家族全树 begin!=end → FAIL
+文件级一律 INFO（跨文件块合法，文件级失衡不判罚）。
+--check 仅在 T4／G1／G2 命中时 exit 1。--csv／--json 落文件级明细。--selftest 判据非空。
 """
 import argparse
 import csv
+import json
 import re
 import sys
 from collections import Counter, defaultdict
@@ -27,11 +28,11 @@ REPO = Path(__file__).resolve().parents[3]
 DEFAULT_ROOT = REPO / "05-卷册大纲"
 
 COMMENT_RE = re.compile(r"<!--(.*?)-->", re.S)
-UNCLOSED_RE = re.compile(r"<!--(?!.*?-->)", re.S)
 SINGLE_ANCHOR = ("ROW_MINE", "DEEP_ANALYSIS")
 
 
 def family_of(body: str):
+    """返回 (family, kind)；kind ∈ open/close/begin/end/other。"""
     b = body.strip()
     if not b:
         return None, "other"
@@ -41,10 +42,25 @@ def family_of(body: str):
         if fam in SINGLE_ANCHOR or not fam:
             return None, "other"
         return fam, "close"
+    if first.endswith("BEGIN") or ":BEGIN" in first:
+        fam = first.split(":")[0]
+        if fam in SINGLE_ANCHOR or not fam:
+            return None, "other"
+        return fam, "begin"
+    if first.endswith("END") or ":END" in first:
+        fam = first.split(":")[0]
+        if fam in SINGLE_ANCHOR or not fam:
+            return None, "other"
+        return fam, "end"
     fam = first.split(":")[0]
     if fam in SINGLE_ANCHOR or not fam or not re.fullmatch(r"[A-Za-z0-9_\-]+", fam):
         return None, "other"
     return fam, "open"
+
+
+def has_unclosed(text: str) -> bool:
+    """剥离全部完整注释后若残留 <!-- 即存在未闭合。"""
+    return "<!--" in COMMENT_RE.sub("", text)
 
 
 def read_text(p: Path) -> str:
@@ -54,8 +70,10 @@ def read_text(p: Path) -> str:
         return p.read_text(encoding="utf-8", errors="replace")
 
 
-def collect_families(root: Path):
+def collect(root: Path):
+    """返回 (n_files, kinds{fam→kind集合}, totals{(fam,kind)→n})。"""
     kinds = defaultdict(set)
+    totals = Counter()
     n_files = 0
     for p in sorted(root.rglob("*.md")):
         n_files += 1
@@ -63,85 +81,119 @@ def collect_families(root: Path):
             fam, kind = family_of(m.group(1))
             if fam:
                 kinds[fam].add(kind)
-    return n_files, kinds
+                totals[(fam, kind)] += 1
+    return n_files, kinds, totals
 
 
-def file_report(text: str, paired=None):
+def mode_of(fam: str, kinds) -> str:
+    ks = kinds.get(fam, set())
+    if "close" in ks:
+        return "block"
+    if "begin" in ks or "end" in ks:
+        return "begin_end"
+    return "single"
+
+
+def global_verdicts(kinds, totals):
+    """全树判据：G1 block 家族 open==close；G2 begin_end 家族 begin==end。"""
+    fails = []
+    for fam in sorted(kinds):
+        mode = mode_of(fam, kinds)
+        o, c = totals.get((fam, "open"), 0), totals.get((fam, "close"), 0)
+        b, e = totals.get((fam, "begin"), 0), totals.get((fam, "end"), 0)
+        if mode == "block" and o != c:
+            fails.append(("G1", fam, "open=%d != close=%d" % (o, c)))
+        if mode == "begin_end" and b != e:
+            fails.append(("G2", fam, "BEGIN=%d != END=%d" % (b, e)))
+    return fails
+
+
+def file_report(text: str):
+    """文件级 INFO 明细：各家族计数＋T4；不作文件级判罚。"""
     counts, anomalies = Counter(), []
     for m in COMMENT_RE.finditer(text):
         fam, kind = family_of(m.group(1))
-        if not fam or (paired is not None and fam not in paired):
-            continue
-        counts[(fam, kind)] += 1
-    if UNCLOSED_RE.search(text):
+        if fam:
+            counts[(fam, kind)] += 1
+    if has_unclosed(text):
         anomalies.append(("T4", "", "存在未闭合的 <!-- 注释"))
-    for fam in sorted({k[0] for k in counts}):
-        if fam == "block":
-            o, c = counts.get((fam, "open"), 0), counts.get((fam, "close"), 0)
-            if o > c:
-                anomalies.append(("T1", fam, "open=%d > close=%d" % (o, c)))
-            elif c > o:
-                anomalies.append(("T2", fam, "close=%d > open=%d" % (c, o)))
     return counts, anomalies
 
 
 def scan(root: Path):
-    n_files, kinds = collect_families(root)
+    n_files, kinds, totals = collect(root)
     files_bad, rows = 0, []
-    fam_totals, type_totals, fam_bad = Counter(), Counter(), Counter()
+    type_totals = Counter()
     for p in sorted(root.rglob("*.md")):
-        counts, anomalies = file_report(read_text(p), None)
-        fam_totals.update(counts)
+        _counts, anomalies = file_report(read_text(p))
         rel = p.relative_to(root).as_posix()
         for (code, fam, detail) in anomalies:
             type_totals[code] += 1
-            if fam:
-                fam_bad[fam] += 1
             rows.append({"code": code, "family": fam, "file": rel, "detail": detail})
         if anomalies:
             files_bad += 1
-
-    global_fail = []
-    for fam, ks in sorted(kinds.items()):
-        if "close" not in ks:
-            continue  # single 家族
-        o, c = fam_totals.get((fam, "open"), 0), fam_totals.get((fam, "close"), 0)
-        if o != c:
-            global_fail.append(("G1", fam, "open=%d != close=%d" % (o, c)))
+    gfails = global_verdicts(kinds, totals)
     t4 = type_totals.get("T4", 0)
-    return n_files, files_bad, rows, fam_totals, type_totals, fam_bad, global_fail, t4, kinds
+    return n_files, kinds, totals, files_bad, rows, type_totals, gfails, t4
 
 
 def cmd_selftest() -> int:
-    cases = [
-        ("balanced", "<!-- PODCAST_REVIEW -->\n内容\n<!-- /PODCAST_REVIEW -->\n", 0),
-        ("T1-block", "<!-- PODCAST_REVIEW -->\n内容\n", 1),
-        ("T2-block", "<!-- /MAIL_INSIGHT -->\n内容\n", 1),
-        ("T4", "<!-- PODCAST_REVIEW\n内容无闭合\n", 1),
-        ("single-anchor-ignored", "<!-- ROW_MINE: a.b.1 -->\n<!-- DEEP_ANALYSIS: c.d -->\n", 0),
-        ("multiline-pair", "<!--\nMAIL_MINE:x -->\n正文\n<!--\n /MAIL_MINE -->\n", 0),
-        ("single-mode-open-only", "<!-- DB_REF:x.duckdb -->\n> 引用\n", 0),
-        ("unpaired-family-ignored", "<!-- FINE_SP_linux_114 -->\n", 0),
-    ]
     bad = []
-    for name, text, expect in cases:
-        paired = {"PODCAST_REVIEW"} if name == "unpaired-family-ignored" else None
-        _counts, anomalies = file_report(text, paired)
-        if len(anomalies) != expect:
-            bad.append(f"{name}: 期望 {expect} 命中 {len(anomalies)}（{anomalies}）")
+
+    def fam_case(name, body, want_fam, want_kind):
+        got = family_of(body)
+        if got != (want_fam, want_kind):
+            bad.append(f"{name}: family_of 期望 {want_fam}/{want_kind} 实得 {got}")
+
+    fam_case("close", "/FAM", "FAM", "close")
+    fam_case("close-arg", "/DB_REF:x", "DB_REF", "close")
+    fam_case("begin", "REVIEW-ANNOT:BEGIN 2026-10-14 x", "REVIEW-ANNOT", "begin")
+    fam_case("end", "W172-YT-ROUTE:END", "W172-YT-ROUTE", "end")
+    fam_case("open", "COL_SCAN v20260914-lit", "COL_SCAN", "open")
+    fam_case("open-arg", "MAIL_INSIGHT: marc:123", "MAIL_INSIGHT", "open")
+    fam_case("single-anchor", "ROW_MINE: a.b.1", None, "other")
+    fam_case("empty", "", None, "other")
+
+    def t4_case(name, text, want):
+        got = has_unclosed(text)
+        if got != want:
+            bad.append(f"{name}: has_unclosed 期望 {want} 实得 {got}")
+
+    t4_case("closed-only", "<!-- A -->\n正文\n", False)
+    t4_case("unclosed", "<!-- A\n正文", True)
+    t4_case("closed-then-unclosed", "<!-- A -->\n<!-- B\n", True)
+
+    def g_case(name, kinds, totals, want_codes):
+        got = global_verdicts(kinds, totals)
+        codes = sorted(x[0] for x in got)
+        if codes != sorted(want_codes):
+            bad.append(f"{name}: global_verdicts 期望 {sorted(want_codes)} 实得 {got}")
+
+    g_case("block-ok", {"F": {"open", "close"}},
+           {("F", "open"): 2, ("F", "close"): 2}, [])
+    g_case("block-fail", {"F": {"open", "close"}},
+           {("F", "open"): 2, ("F", "close"): 1}, ["G1"])
+    g_case("be-ok", {"F": {"begin", "end"}},
+           {("F", "begin"): 3, ("F", "end"): 3}, [])
+    g_case("be-fail", {"F": {"begin", "end"}},
+           {("F", "begin"): 3, ("F", "end"): 2}, ["G2"])
+    g_case("mixed-opens-exempt", {"F": {"open", "begin", "end"}},
+           {("F", "open"): 702, ("F", "begin"): 1, ("F", "end"): 1}, [])
+    g_case("single-exempt", {"F": {"open"}}, {("F", "open"): 99}, [])
+
     if bad:
         print("判据非空自检 FAIL：", file=sys.stderr)
         for b in bad:
             print("  " + b, file=sys.stderr)
         return 1
-    print("判据非空自检 PASS：8 例（block／single 两模式、多行配对、单锚豁免、一次性标记豁免、T1/T2/T4 各命中）")
+    print("判据非空自检 PASS：16 例（family_of 七形态、T4 三态、global_verdicts 六判据含混合家族豁免）")
     return 0
 
 
 def main():
     ap = argparse.ArgumentParser(description="成对锚配平审计（第三十三件）")
     ap.add_argument("--root", default=str(DEFAULT_ROOT))
-    ap.add_argument("--check", action="store_true", help="T4 或 G1 命中即 exit 1")
+    ap.add_argument("--check", action="store_true", help="T4／G1／G2 命中即 exit 1")
     ap.add_argument("--json", help="明细 JSON 落盘路径")
     ap.add_argument("--csv", help="文件级 INFO 清单 CSV 落盘路径")
     ap.add_argument("--selftest", action="store_true")
@@ -154,27 +206,26 @@ def main():
     if not root.exists():
         print("根目录不存在：%s" % root, file=sys.stderr)
         return 2
-    n_files, files_bad, rows, fam_totals, type_totals, fam_bad, global_fail, t4, kinds = scan(root)
+    n_files, kinds, totals, files_bad, rows, type_totals, gfails, t4 = scan(root)
 
     print("=" * 72)
     print("成对锚配平审计（根：%s）" % root)
     print("=" * 72)
-    print("  扫描 .md：%d；文件级 INFO 异常：%d（%.2f%%）" % (n_files, files_bad, files_bad / max(1, n_files) * 100))
-    block_fams = [f for f, ks in sorted(kinds.items()) if "close" in ks]
-    print("  block 家族（全树判据 G1）：%s" % ("、".join(block_fams) or "无"))
+    print("  扫描 .md：%d；T4 文件：%d；文件级 INFO 明细 %d 行" % (n_files, files_bad, len(rows)))
     print("  文件级类型（INFO）：" + ("；".join(f"{k}={v}" for k, v in sorted(type_totals.items())) or "无"))
-    print("  按家族（仅异常）：" + ("；".join(f"{k}={v}" for k, v in fam_bad.most_common()) or "无"))
     print()
-    print("  家族全树配平（模式｜open/close｜判定）：")
-    for fam, ks in sorted(kinds.items()):
-        o, c = fam_totals.get((fam, "open"), 0), fam_totals.get((fam, "close"), 0)
-        mode = "block" if "close" in ks else "single"
-        ok = (o == c) if mode == "block" else True
-        print("    %-22s %-7s %5d/%-5d %s" % (fam, mode, o, c, "PASS" if ok else "FAIL"))
+    print("  家族模式与全树配平（模式｜open/close｜begin/end｜判定）：")
+    for fam in sorted(kinds):
+        mode = mode_of(fam, kinds)
+        o, c = totals.get((fam, "open"), 0), totals.get((fam, "close"), 0)
+        b, e = totals.get((fam, "begin"), 0), totals.get((fam, "end"), 0)
+        ok = (o == c) if mode == "block" else (b == e if mode == "begin_end" else True)
+        print("    %-22s %-9s %5d/%-5d %5d/%-5d %s"
+              % (fam, mode, o, c, b, e, "PASS" if ok else "FAIL"))
     print()
-    print("  全局判据：T4=%d；G1 失败 %d 项%s"
-          % (t4, len(global_fail),
-             "：" + "；".join("%s %s %s" % x for x in global_fail) if global_fail else ""))
+    print("  全局判据：T4=%d；G1/G2 失败 %d 项%s"
+          % (t4, len(gfails),
+             "：" + "；".join("%s %s %s" % x for x in gfails) if gfails else ""))
 
     if args.csv and rows:
         with open(args.csv, "w", encoding="utf-8", newline="") as f:
@@ -183,16 +234,16 @@ def main():
             w.writerows(rows)
         print("  文件级清单：%s（%d 行）" % (args.csv, len(rows)))
     if args.json:
-        import json
         Path(args.json).write_text(json.dumps({
-            "root": str(root), "files": n_files, "files_bad": files_bad,
-            "fam_totals": {"%s|%s" % k: v for k, v in fam_totals.items()},
+            "root": str(root), "files": n_files,
+            "family_mode": {f: mode_of(f, kinds) for f in sorted(kinds)},
+            "fam_totals": {"%s|%s" % k: v for k, v in sorted(totals.items())},
             "type_totals": dict(type_totals),
-            "global_fail": global_fail,
+            "global_fail": gfails,
             "file_level_anomalies": rows,
         }, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
         print("  明细 JSON：%s" % args.json)
-    fails = len(global_fail) + (1 if t4 else 0)
+    fails = len(gfails) + (1 if t4 else 0)
     print("-" * 72)
     print("  结论：%s" % ("PASS（全树差值归零）" if fails == 0 else "FAIL（%d 项全局判据）" % fails))
     return 1 if (args.check and fails) else 0
