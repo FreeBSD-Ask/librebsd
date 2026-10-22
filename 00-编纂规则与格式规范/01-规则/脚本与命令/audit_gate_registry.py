@@ -223,6 +223,10 @@ REGISTRY = [
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/build_theme_index.py",
          kind="生成器/门禁", object="chapter_keywords.json／theme_index.json", trigger="大纲结构变动后",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="第三十二件", script="00-编纂规则与格式规范/01-规则/脚本与命令/outline_writer.py",
+         kind="入纲写入器（唯一实现）", object="mail2d／OAA 入纲宿主写入：宿主＝小节 .md（claim_map hosts／outline_map 权威，不猜文件名）、块级锚点幂等（ROW_MINE: lib.messages.pk）、路径 commonpath 断言、临时件→fsync→os.replace、写后断言增量＝计划数",
+         trigger="每批 mail2d／OAA 入纲（2026-10-22 立，替代 _outline_<tag>.py 批内一次性脚本，ADR-0010）",
+         selftest=None, in_tests_readme=False),
 ]
 
 # ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
