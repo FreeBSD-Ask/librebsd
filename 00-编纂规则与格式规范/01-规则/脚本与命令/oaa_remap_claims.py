@@ -21,7 +21,8 @@
   - 任一条 AMBIGUOUS／UNMATCHED → 拒绝写盘（exit 2，零写入）；
   - 写前 prebak `<file>.prebak-<stamp>`（**已存在即拒写**，防同 stamp 覆盖唯一原始备份）；行数与无用行（空行／# 注）原样保留；UTF-8 无 BOM＋LF；
   - 写后断言：回读逐行校验**每条路径在盘上存在**（目录或 .md），行数不变；
-  - 幂等：二跑应 0 条改写（全部 EXISTS）。
+  - 幂等：二跑应 0 条改写（全部 EXISTS）；文件末尾确保恰一个 LF（**路径行计数**不变）。
+  - 另三项 fail-closed：`--apply` 须与 `--write` 同用（禁静默退化为检查）；`--stamp` 禁路径分隔符与空值；**空清单（0 条）拒写**。
 回映目标可能是**节目录**（目录化后节＝目录，其下诸小节 .md 由 F 线自行展开）或单个 `.md`。
 
 用法：
@@ -162,6 +163,9 @@ def rewrite(claims_file, root_name, apply=False, stamp="20261022"):
     results, st = resolve_all(claims_file, root_name)
     if results is None:
         return 2
+    if not stamp or any(c in stamp for c in "/\:"):
+        print("[check] 非法 --stamp：%r（禁路径分隔符与空值）" % stamp, file=sys.stderr)
+        return 2
     if st["amb"] or st["unmatch"]:
         print("[check] 存在歧义 %d／未匹配 %d —— 拒绝写盘（零写入）"
               % (st["amb"], st["unmatch"]))
@@ -171,6 +175,9 @@ def rewrite(claims_file, root_name, apply=False, stamp="20261022"):
     total = st["total"]
     print("[plan] 总条数 %d | 已存在 %d | 回映 %d | 改写 %d | 歧义 0 | 未匹配 0"
           % (total, st["exist"], st["unique"], changed))
+    if total == 0:
+        print("[check] 清单为空（0 条路径）——拒绝写盘（零写入）", file=sys.stderr)
+        return 2
     if not apply:
         print("[dry] 未写盘（加 --apply 执行）")
         return 0
@@ -347,6 +354,9 @@ def main():
         claims = os.path.join(BEACON, f"claims_{args.group}.txt")
     if not os.path.exists(claims):
         print(f"错误：claims 文件不存在 {claims}", file=sys.stderr)
+        return 2
+    if args.apply and not args.write:
+        print("[check] --apply 须与 --write 同用（禁止静默退化为 --check）", file=sys.stderr)
         return 2
     if args.write:
         return rewrite(claims, args.root, apply=args.apply, stamp=args.stamp)
