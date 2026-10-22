@@ -44,12 +44,12 @@
 | ---- | ---- | -------- | ------ | -------- |
 | — | — | — | — | — |
 
-## 二之二、工程批次规格归档（12 槽，当前 1 条）
+## 二之二、工程批次规格归档（12 槽，当前 3 条）
 
 > 口径见规则 §三之五。闭口批次**复制** `spec.md`／`tasks.md`／`checklist.md` 与闭口说明至
 > [`12-工程批次规格归档/`](12-工程批次规格归档/index.md)；原 `.trae/specs/<slug>/` 保持原位。
 > 本规则生效前的 226 个旧批次不追溯迁移（2026-10-22 主理人裁定）。
-> 当前 1 条：[001-standardize-uncovered-engineering-lines-20261022](12-工程批次规格归档/001-standardize-uncovered-engineering-lines-20261022/闭口说明.md)（2026-10-22，PASS 待主理人最终验收）。
+> 当前 3 条：[001-standardize-uncovered-engineering-lines-20261022](12-工程批次规格归档/001-standardize-uncovered-engineering-lines-20261022/闭口说明.md)（2026-10-22，PASS 待主理人最终验收）、[002-adr0010-outline-writer-20261022](12-工程批次规格归档/002-adr0010-outline-writer-20261022/闭口说明.md)（2026-10-22，PASS）、[003-td022-crossvol-review-20261022](12-工程批次规格归档/003-td022-crossvol-review-20261022/闭口说明.md)（2026-10-22，PASS）。
 
 ## 二之三、任务审计与复核轮替（13 槽，当前 0 条）
 
