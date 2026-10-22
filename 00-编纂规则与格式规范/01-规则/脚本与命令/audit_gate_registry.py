@@ -182,7 +182,7 @@ REGISTRY = [
          selftest="--selftest", in_tests_readme=False),
     dict(no="第三十三件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_anchor_pairs.py",
          kind="门禁（成对锚配平，独立计数）",
-         object="05-卷册大纲/ 树内 .md 成对锚（DB_POINTS／MAIL_INSIGHT／PODCAST_REVIEW／DB_REF／REVIEW-ANNOT／W172-YT-ROUTE／dangan-*）多行注释感知配平：T1 有开无闭／T2 有闭无开／T3 BEGIN≠END／T4 未闭合注释；ROW_MINE／DEEP_ANALYSIS 单锚豁免",
+         object="05-卷册大纲/ 树内 .md 注释锚多行感知配平：数据驱动家族模式 block（G1 全树 open==close）／begin_end（G2 全树 BEGIN==END，单标记豁免）／single（只判单标记）；T4 未闭合注释；文件级仅 INFO，ROW_MINE／DEEP_ANALYSIS 单锚豁免",
          trigger="任一批次改动 05-卷册大纲 内容后；清理批次前后差分（2026-10-22 立，ADR-0011／TD-022）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="Git 暂存门禁", script="00-编纂规则与格式规范/01-规则/脚本与命令/git_commit_gate.py",
