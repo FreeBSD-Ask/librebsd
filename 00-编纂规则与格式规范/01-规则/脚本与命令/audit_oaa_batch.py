@@ -13,11 +13,12 @@ S1 分片目录与判读目录均存在；给 `--batch` 时批次内两侧均不
 S2 每个分片有同名判读件——按文件名 stem 严格匹配，不做模糊猜测
 S3 每个分片**都**有同名判读件，且判读件非空行数＝分片非空行数
    （分片按扩展名读 JSONL 或 TSV；TSV 首行为表头，不计入行数）
-S4 判读件 key 集合＝分片 key 集合。key 字段须显式或唯一：
-   给 `--key-field` 时按指定字段（须为双方全体共有）；
-   未给时仅当双方只有一个共同候选（`pk`／`id`／`key`）才自动采用，
-   多候选即 FAIL 并列候选，不得静默按 `pk→id→key` 切换；
-   零候选时退到双方共同首列
+S4 判读件 key 集合＝分片 key 集合。key 字段须显式或可自动判定：
+   给 `--key-field` 时严格按该字段（须为双方全体共有）；
+   未给时逐一遍历候选字段（`pk`／`id`／`key`），分别计算两侧 key 集合，
+   只要有任一字段使两侧集合相等即 PASS 并注明所用字段；
+   候选字段全不相等才 FAIL，并列出各字段的缺／多差异计数；
+   零候选时退到双方共同首列。不得静默按 `pk→id→key` 切换。
 S5 每个分片**都**有同名判读件，且判读 JSON 全合法、同一判读件内无重复 key
 S6 若给 `--ledger`：台账 key 总量 ≥ 判读 key 总量，且台账内无重复 key；
    key 字段未定时无法比对，判 FAIL（不空转 PASS）
@@ -118,8 +119,12 @@ def _first_field(records):
     return next(iter(records[0]))
 
 
-def _resolve_key_field(a_records, b_records, explicit=None):
-    """返回 (字段名, 说明)。字段未定返回 (None, 原因)。"""
+def _candidate_key_fields(a_records, b_records, explicit=None):
+    """返回 (候选字段列表, 说明, 分片候选, 判读候选)。
+
+    explicit 给定时候选即该字段；未给定时取 KEY_PRIORITY 中双方共有者；
+    零候选退到双方共同首列；仍无则候选为空、说明为失败原因。
+    """
     a_fields = _committed_fields(a_records)
     b_fields = _committed_fields(b_records)
     if explicit:
@@ -129,23 +134,43 @@ def _resolve_key_field(a_records, b_records, explicit=None):
         if explicit not in b_fields:
             lack.append("判读")
         if lack:
-            return None, ("显式 key 字段“%s”在%s侧非全体共有（分片候选 %s；判读候选 %s）"
-                          % (explicit, "、".join(lack),
-                             "、".join(a_fields) or "无", "、".join(b_fields) or "无"))
-        return explicit, "显式指定“%s”" % explicit
+            return [], ("显式 key 字段“%s”在%s侧非全体共有（分片候选 %s；判读候选 %s）"
+                        % (explicit, "、".join(lack),
+                           "、".join(a_fields) or "无", "、".join(b_fields) or "无")), \
+                   a_fields, b_fields
+        return [explicit], "显式指定“%s”" % explicit, a_fields, b_fields
     common = [c for c in KEY_PRIORITY if c in a_fields and c in b_fields]
-    if len(common) > 1:
-        return None, ("key 字段歧义：双方共有多个候选 %s，须以 --key-field 显式指定"
-                      "（分片候选 %s；判读候选 %s）"
-                      % ("、".join(common), "、".join(a_fields) or "无",
-                         "、".join(b_fields) or "无"))
     if len(common) == 1:
-        return common[0], "唯一共同候选“%s”" % common[0]
+        return common, "唯一共同候选“%s”" % common[0], a_fields, b_fields
+    if common:
+        return common, "", a_fields, b_fields
     a_first, b_first = _first_field(a_records), _first_field(b_records)
     if a_first and a_first == b_first:
-        return a_first, "共同首列“%s”" % a_first
-    return None, ("探测不到双方共有的 key 字段（分片候选 %s；判读候选 %s）"
-                  % ("、".join(a_fields) or "无", "、".join(b_fields) or "无"))
+        return [a_first], "共同首列“%s”" % a_first, a_fields, b_fields
+    return [], ("探测不到双方共有的 key 字段（分片候选 %s；判读候选 %s）"
+                % ("、".join(a_fields) or "无", "、".join(b_fields) or "无")), \
+           a_fields, b_fields
+
+
+def _key_set_diff(shard_data, judg_data, pairs, field):
+    """按 field 逐配对比较 key 集合。
+
+    返回 (全配对两侧相等且无空值, lack 列表, extra 列表, 两侧空值数)。
+    """
+    lack, extra, null_s, null_j = [], [], 0, 0
+    equal = True
+    for shard, mate in pairs:
+        srecs = shard_data[shard][0]
+        jrecs = judg_data[mate][0]
+        s_keys = {r.get(field) for r in srecs}
+        j_keys = {r.get(field) for r in jrecs}
+        null_s += sum(1 for r in srecs if r.get(field) is None)
+        null_j += sum(1 for r in jrecs if r.get(field) is None)
+        lack += sorted(map(str, s_keys - j_keys))
+        extra += sorted(map(str, j_keys - s_keys))
+        if s_keys != j_keys:
+            equal = False
+    return (equal and not null_s and not null_j), lack, extra, null_s, null_j
 
 
 def _ledger_key(record, key_field=None):
@@ -257,34 +282,48 @@ def audit(shards_dir: pathlib.Path, judgements_dir: pathlib.Path,
                  else "配对 %d 组，分片 %d 行＝判读 %d 行"
                       % (len(pairs), stats["shard_rows"], stats["judg_rows"])))
 
-    # S4 key 集合
+    # S4 key 集合：显式字段严格；未显式时逐候选字段试算，任一字段两侧集合相等即 PASS
     all_srecs = [r for s, _m in pairs for r in shard_data[s][0]]
     all_jrecs = [r for _s, m in pairs for r in judg_data[m][0]]
-    key_used, key_note = _resolve_key_field(all_srecs, all_jrecs, key_field)
+    cands, cand_note, _a_fields, _b_fields = _candidate_key_fields(
+        all_srecs, all_jrecs, key_field)
+    key_used, key_note = None, cand_note
     s4_bad = []
     if not shard_files:
         s4_bad.append("批次内无分片，判据无法执行（不得空转）")
-    if key_used is None:
-        s4_bad.append(key_note)
-    else:
-        for shard, mate in pairs:
-            srecs = shard_data[shard][0]
-            jrecs = judg_data[mate][0]
-            s_keys = {r.get(key_used) for r in srecs}
-            j_keys = {r.get(key_used) for r in jrecs}
-            null_s = sum(1 for r in srecs if r.get(key_used) is None)
-            null_j = sum(1 for r in jrecs if r.get(key_used) is None)
-            lack = sorted(map(str, s_keys - j_keys))
-            extra = sorted(map(str, j_keys - s_keys))
+    if not cands:
+        s4_bad.append(cand_note)
+    elif key_field is not None:
+        key_used = cands[0]
+        ok, lack, extra, null_s, null_j = _key_set_diff(
+            shard_data, judg_data, pairs, key_used)
+        if not ok:
             if null_s or null_j:
-                s4_bad.append("%s／%s 缺“%s”字段 %d／%d 行"
-                              % (shard.name, mate.name, key_used, null_s, null_j))
+                s4_bad.append("缺“%s”字段 %d／%d 行" % (key_used, null_s, null_j))
             if lack:
-                s4_bad.append("%s 判读缺 key %d 条：%s"
-                              % (shard.stem, len(lack), "、".join(lack)))
+                s4_bad.append("判读缺 key %d 条：%s" % (len(lack), "、".join(lack)))
             if extra:
-                s4_bad.append("%s 判读多 key %d 条：%s"
-                              % (shard.stem, len(extra), "、".join(extra)))
+                s4_bad.append("判读多 key %d 条：%s" % (len(extra), "、".join(extra)))
+    else:
+        chosen, diffs = None, []
+        for f in cands:
+            ok, lack, extra, null_s, null_j = _key_set_diff(
+                shard_data, judg_data, pairs, f)
+            diffs.append((f, ok, len(lack), len(extra), null_s, null_j))
+            if ok and chosen is None:
+                chosen = f
+        if chosen is not None:
+            key_used = chosen
+            key_note = (("多候选 %s 中“%s”两侧集合相等，自动采用"
+                         % ("、".join(cands), chosen)) if len(cands) > 1 else cand_note)
+        else:
+            # 全部不等：S4 FAIL；S5／S6 仍取最高优先候选作字段，
+            # 以免重复 key／台账比对因字段缺失而空转（不放宽 S4 判据）。
+            key_used = cands[0]
+            s4_bad.append("候选字段无一使两侧集合相等：%s"
+                          % "；".join("%s 缺 %d／多 %d（空值 %d／%d）"
+                                      % (f, lk, ex, ns, nj)
+                                      for f, _ok, lk, ex, ns, nj in diffs))
     rows.append(("S4", "判读件 key 集合＝分片 key 集合", not s4_bad,
                  "；".join(s4_bad) if s4_bad
                  else "key 字段＝%s（%s）；配对 %d 组集合相等"
@@ -459,7 +498,10 @@ def _mutate_dup_key(shards, judg):
 
 
 def _mutate_key_ambiguous(shards, judg):
-    """双方同时具备 pk／id／key 三候选，未给 --key-field 时必须 FAIL。"""
+    """双方同时具备 pk／id／key 三候选；pk 与 id 两侧集合相等。
+
+    未给 --key-field 时应自动采用 pk（或 id）并 PASS，而非因多候选直接 FAIL。
+    """
     for name in (_SHARD_NAME, _SHARD_NAME2):
         p = shards / name
         recs = [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines()
@@ -481,6 +523,39 @@ def _mutate_key_ambiguous(shards, judg):
         encoding="utf-8").splitlines() if l.strip()]
     for rec in a + b:
         assert {"pk", "id", "key"} <= set(rec), "回读：key 歧义夹具未落盘"
+
+
+def _mutate_key_all_mismatch(shards, judg):
+    """双方同含 pk／id／key 三候选，但三字段两侧集合两两皆不等。
+
+    未给 --key-field 时应 FAIL，并列出各字段缺／多差异计数。
+    """
+    for name in (_SHARD_NAME, _SHARD_NAME2):
+        p = shards / name
+        recs = [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines()
+                if l.strip()]
+        p.write_text("\n".join(
+            json.dumps(dict(r, id=1000 + int(r["pk"])), ensure_ascii=False)
+            for r in recs) + "\n", encoding="utf-8")
+        q = judg / name
+        jrecs = [json.loads(l) for l in q.read_text(encoding="utf-8").splitlines()
+                 if l.strip()]
+        q.write_text("\n".join(
+            json.dumps(dict(
+                r,
+                key="host-a|%d|05-卷册大纲/x.md" % (int(r["key"].split("|")[1]) + 500),
+                pk=int(r["key"].split("|")[1]) + 100,
+                id=2000 + int(r["key"].split("|")[1])), ensure_ascii=False)
+            for r in jrecs) + "\n", encoding="utf-8")
+    a = [json.loads(l) for l in (shards / _SHARD_NAME).read_text(
+        encoding="utf-8").splitlines() if l.strip()]
+    b = [json.loads(l) for l in (judg / _SHARD_NAME).read_text(
+        encoding="utf-8").splitlines() if l.strip()]
+    for rec in a + b:
+        assert {"pk", "id", "key"} <= set(rec), "回读：全不等夹具未落盘"
+    for f in KEY_PRIORITY:
+        assert {r[f] for r in a} != {r[f] for r in b}, \
+            "回读：全不等夹具字段“%s”竟两侧相等" % f
 
 
 def _mutate_synthetic(shards, judg):
@@ -595,15 +670,21 @@ def cmd_selftest():
             failures.append("批外判读件未被过滤：S1 未显示判读 2／3")
         _expect("批外件（不过滤即 FAIL）", tmp / "case_06b", failures,
                 batch=None, want_exit=1, want_fail=("S2", "S3", "S5"))
-        # key 字段歧义：未显式指定须 FAIL 并提示 --key-field
+        # pk 与 key 同存且 pk 集合相等：默认按 pk 自动采用并 PASS（注明字段）
         _sh, _j, _c, _m, out = _expect(
-            "key 字段歧义", tmp / "case_07", failures,
-            mutate=_mutate_key_ambiguous, ledger=False,
-            want_exit=1, want_fail=("S4",))
-        if "--key-field" not in out:
-            failures.append("key 字段歧义未提示 --key-field（提示失效）")
+            "pk/key 同存自动采用", tmp / "case_07", failures,
+            mutate=_mutate_key_ambiguous, ledger=False)
+        if "key 字段＝pk" not in out:
+            failures.append("pk/key 同存未注明采用字段 pk（自动采用失效）")
         _expect("key 字段显式 pk", tmp / "case_07b", failures,
                 mutate=_mutate_key_ambiguous, key_field="pk")
+        # 所有候选字段皆不等：必须 FAIL 并列出各字段差异计数
+        _sh, _j, _c, _m, out = _expect(
+            "候选字段皆不等", tmp / "case_07c", failures,
+            mutate=_mutate_key_all_mismatch, ledger=False,
+            want_exit=1, want_fail=("S4",))
+        if "无一使两侧集合相等" not in out:
+            failures.append("候选字段皆不等未列出各字段差异计数")
         # 合成件：默认放行，启用 --reject-synthetic 须 FAIL
         _expect("synthetic 默认放行", tmp / "case_08", failures,
                 mutate=_mutate_synthetic)
@@ -619,8 +700,8 @@ def cmd_selftest():
             print("     - %s" % f)
         return 1
     print("  ✅ 判据非空自检通过：正样本 0 FAIL；缺判读件不得空转／批外件过滤／"
-          "key 字段歧义／synthetic 拒绝四类新夹具与行数不符／坏 JSON／重复 key "
-          "既有夹具均命中，退出码 0／1 正确")
+          "pk/key 同存自动采用／候选字段皆不等／synthetic 拒绝五类新夹具与行数不符／"
+          "坏 JSON／重复 key 既有夹具均命中，退出码 0／1 正确")
     return 0
 
 
@@ -632,7 +713,8 @@ def main():
     ap.add_argument("--batch", metavar="TAG",
                     help="批次标签：按“文件名含 TAG”同时过滤分片与判读件（可选）")
     ap.add_argument("--key-field", choices=KEY_PRIORITY, dest="key_field",
-                    help="显式指定 key 字段；不给时仅唯一共同候选可自动采用")
+                    help="显式指定 key 字段；不给时逐候选字段试算，"
+                         "任一字段两侧集合相等即自动采用")
     ap.add_argument("--reject-synthetic", action="store_true",
                     help="判读行含 pilot-synthetic 或文件名含 pilot 即 FAIL"
                          "（默认关闭，生产收口建议开启）")

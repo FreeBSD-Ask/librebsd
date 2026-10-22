@@ -36,7 +36,9 @@ MAIN_DB = os.path.join(ROOT, "04-现代研究文献", "historical_claims.duckdb"
 REG_CSV = os.path.join(ROOT, "11-元数据接口", "09-文件夹数据库索引", "folder_db_registry.csv")
 WORK = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "work")
 
-ROW_MINE = re.compile(r"<!--\s*ROW_MINE:\s*([\w-]+)\.([\w.]+)\.(\d+)\s*-->")
+# pk 允许字母数字连字符形态（如 CL-15-3303），不仅是纯数字；
+# 旧式 (\d+) 会静默漏掉 CL-<任意>-<数字> 一类 pk，令宿主提取块数为 0。
+ROW_MINE = re.compile(r"<!--\s*ROW_MINE:\s*([\w-]+)\.([\w.]+)\.([\w-]+)\s*-->")
 MAIL_INS = re.compile(r"<!--\s*MAIL_INSIGHT:\s*([^>]+?)\s*-->")
 
 
@@ -213,13 +215,28 @@ def fetch_src_meta(reg, blocks):
     return src
 
 
+def count_row_mine(path):
+    """统计宿主内 ROW_MINE 字面出现次数（含未识别形态），用于零块告警。"""
+    with open(path, encoding="utf-8", newline="") as fh:
+        return fh.read().count("ROW_MINE")
+
+
 def run_host(rel, out_path=None):
     path = os.path.join(ROOT, rel)
     if not os.path.exists(path):
         print(f"宿主不存在: {path}", file=sys.stderr)
-        return 1
+        return 1, False, False
     blocks = extract_blocks(path)
     print(f"{rel}: 提取 {len(blocks)} 块")
+    # 零块宿主检测：块数=0 但文中确有 ROW_MINE，说明 pk 形态未被识别（静默漏块）。
+    zero_block = len(blocks) == 0
+    zero_with_rowmine = False
+    if zero_block:
+        hits = count_row_mine(path)
+        if hits:
+            zero_with_rowmine = True
+            print(f"  ! 警告：{rel} 提取 0 块，但 ROW_MINE 出现 {hits} 次"
+                  f"（疑似 pk 形态未识别，未入 fetch.jsonl）", file=sys.stderr)
     try:
         con = duckdb.connect(MAIN_DB, read_only=True)
         meta = fetch_db_meta(con, blocks)
@@ -253,7 +270,7 @@ def run_host(rel, out_path=None):
     n_mi = sum(1 for b in blocks if b["db"] == "MAIL_INSIGHT")
     print(f"  → {out_path} ｜ claim 缺 {miss_claim} ｜ src 缺 {miss_src}"
           f" ｜ MAIL_INSIGHT {n_mi}")
-    return 0
+    return 0, zero_block, zero_with_rowmine
 
 
 def out_for(host, out_path=None, workdir=None):
@@ -287,14 +304,21 @@ def main():
     if args.hosts_file:
         with open(args.hosts_file, encoding="utf-8") as fh:
             hosts = [l.strip() for l in fh if l.strip() and not l.startswith("#")]
-        fails = 0
+        fails = zero_hosts = zero_rowmine = 0
         for h in hosts:
-            fails += 1 if run_host(h, out_for(h, workdir=args.workdir)) != 0 else 0
-        print(f"批量完成：{len(hosts)} 个宿主｜失败 {fails}")
+            rc, zb, zw = run_host(h, out_for(h, workdir=args.workdir))
+            if rc != 0:
+                fails += 1
+            zero_hosts += 1 if zb else 0
+            zero_rowmine += 1 if zw else 0
+        print(f"批量完成：{len(hosts)} 个宿主｜失败 {fails}"
+              f"｜zero_block_hosts {zero_hosts}"
+              f"｜zero_block_with_rowmine {zero_rowmine}")
         return 1 if fails else 0
     if not args.host:
         ap.error("需要 --host 或 --hosts-file")
-    return run_host(args.host, out_for(args.host, args.out, args.workdir))
+    rc, _zb, _zw = run_host(args.host, out_for(args.host, args.out, args.workdir))
+    return rc
 
 
 if __name__ == "__main__":
