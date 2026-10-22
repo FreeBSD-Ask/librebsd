@@ -7,9 +7,9 @@
   "sections": 3274,
   "subsections": 37484,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "7a162f98885a07d705b55ebc25c26ad739fb3f0f3a65b4b3a0096791a49abc9e",
+  "content_sha256": "2b8378ea0834b0720730c89b4ed96cbc20d0e23152830d21771bcf91457db1f7",
   "extract": "title+body",
-  "generated_at": "2026-10-22T19:14:01+08:00"
+  "generated_at": "2026-10-22T20:26:34+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -4260,8 +4260,8 @@
     "TH-BIZ-014",
     "TH-BIZ-031",
     "TH-GOV-017",
-    "TH-HIS-001",
     "TH-HIS-011",
+    "TH-HIS-021",
     "TH-HIS-038",
     "TH-HW-036"
    ],
@@ -4882,7 +4882,7 @@
     "TH-BIZ-010",
     "TH-BIZ-012",
     "TH-GOV-001",
-    "TH-HIS-001",
+    "TH-HIS-002",
     "TH-HIS-024",
     "TH-LANG-009",
     "TH-LAW-032"
@@ -4933,7 +4933,7 @@
    "themes": [
     "TH-HIS-046",
     "TH-BIZ-023",
-    "TH-HIS-001",
+    "TH-HIS-011",
     "TH-HIS-024"
    ],
    "sections": 3
@@ -13465,8 +13465,8 @@
    ],
    "themes": [
     "TH-HIS-011",
-    "TH-HIS-001",
-    "TH-HIS-038"
+    "TH-HIS-038",
+    "TH-HIS-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -14480,8 +14480,8 @@
    ],
    "themes": [
     "TH-HIS-011",
-    "TH-HIS-001",
-    "TH-HIS-039"
+    "TH-HIS-039",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -20025,7 +20025,7 @@
    "themes": [
     "TH-HIS-046",
     "TH-HIS-024",
-    "TH-HIS-001"
+    "TH-HIS-002"
    ],
    "projects": [],
    "technical_terms": [],
@@ -20180,7 +20180,7 @@
    "themes": [
     "TH-HIS-046",
     "TH-HIS-024",
-    "TH-HIS-001"
+    "TH-HIS-011"
    ],
    "projects": [],
    "technical_terms": [],
@@ -25054,8 +25054,8 @@
    ],
    "themes": [
     "TH-HIS-031",
-    "TH-HIS-001",
-    "TH-HIS-010"
+    "TH-HIS-010",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -65413,8 +65413,8 @@
    ],
    "themes": [
     "TH-HIS-011",
-    "TH-HIS-001",
-    "TH-HIS-038"
+    "TH-HIS-038",
+    "TH-HIS-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -87664,11 +87664,6 @@
     "TH-HW-010"
    ]
   },
-  "016.0.3": {
-   "add": [
-    "TH-HIS-021"
-   ]
-  },
   "016.0.4": {
    "add": [
     "TH-HIS-007"
@@ -87676,6 +87671,7 @@
   },
   "016.0.5": {
    "add": [
+    "TH-HIS-001",
     "TH-HIS-004"
    ]
   },
@@ -104287,6 +104283,11 @@
     "TH-LAW-006"
    ]
   },
+  "057.0.5": {
+   "add": [
+    "TH-HIS-001"
+   ]
+  },
   "057.0.8": {
    "add": [
     "TH-HIS-011",
@@ -104295,7 +104296,6 @@
   },
   "057.0.10": {
    "add": [
-    "TH-HIS-002",
     "TH-HIS-031"
    ]
   },
@@ -104497,9 +104497,9 @@
     "TH-LANG-007"
    ]
   },
-  "061.0.6": {
+  "061.0.3": {
    "add": [
-    "TH-HIS-011"
+    "TH-HIS-021"
    ]
   },
   "061.0.7": {
@@ -105455,7 +105455,7 @@
   },
   "066.0.5": {
    "add": [
-    "TH-HIS-001"
+    "TH-HIS-039"
    ]
   },
   "066.0.8": {
@@ -274963,8 +274963,12 @@
   },
   "360.0.3": {
    "add": [
-    "TH-HIS-021",
     "TH-HIS-024"
+   ]
+  },
+  "360.0.5": {
+   "add": [
+    "TH-HIS-001"
    ]
   },
   "360.1.2": {
@@ -277989,8 +277993,7 @@
   },
   "384.0.6": {
    "add": [
-    "TH-HIS-024",
-    "TH-HIS-001"
+    "TH-HIS-024"
    ]
   },
   "384.0.7": {
