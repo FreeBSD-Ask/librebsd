@@ -22,7 +22,7 @@
 | ---- | ---- | -------- | -------- | ---- |
 | 001 | [standardize-uncovered-engineering-lines-20261022](001-standardize-uncovered-engineering-lines-20261022/闭口说明.md) | 2026-10-22 | PASS（待主理人最终验收） | 未提交 |
 | 003 | [td022-crossvol-review-20261022](003-td022-crossvol-review-20261022/闭口说明.md) | 2026-10-22 | PASS（3 轮复核：主理人签收＋子代理方案复算＋子代理应用后回验） | `c63f1a323`、`9c6b086d7` |
-| 004 | [td023-p1-1-semantic-review-20261022](004-td023-p1-1-semantic-review-20261022/闭口说明.md) | 2026-10-22 | PASS（2 轮复核：分片 1–5 复核子代理＋分片 6 主代理独立实现；只读判定） | 待提交 |
+| 004 | [td023-p1-1-semantic-review-20261022](004-td023-p1-1-semantic-review-20261022/闭口说明.md) | 2026-10-22 | PASS（2 轮复核：分片 1–5 复核子代理＋分片 6 主代理独立实现；只读判定） | `8caab407b` |
 
 > 002（`adr0010-outline-writer-20261022`）目录已在盘、索引行由 adr0010 线随其收口登记；本表不代其登记。
 
