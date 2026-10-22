@@ -1,20 +1,24 @@
 # H 线核心驱动清单（mail2d）
 
-本目录 7 件 `mail2d_*.py` 副本为版本化参考件；`script/_db_row_mining/` 原件在在途批次收口前继续作为运行件；路径切换另批执行（`ADR-0006` §1.2；验收判据见 `H1-H4-全链路规格.md` FR-H14）。副本按 SHA-256 **逐字节复制**，不改一个字节（含 BOM 与换行形态），`script/` 原件零改动。
+本目录 7 件 `mail2d_*.py` 副本为版本化参考件；`script/_db_row_mining/` 原件在在途批次收口前继续作为运行件；路径切换另批执行（`ADR-0006` §1.2；验收判据见 `H1-H4-全链路规格.md` FR-H14）。副本按 SHA-256 **逐字节复制**，不改一个字节（含 BOM 与换行形态），`script/` 原件零改动（**唯一后续偏离**见“运行状态”节与表下说明）。
+
+## 运行状态（2026-10-22 声明）
+
+本目录 7 件 `mail2d_*.py` 为**版本化参考件**，依赖（如 `_git_lsfiles.py`）未随件复制，**不得直接运行**；运行一律用 `script/_db_row_mining/` 原件。`--help` 行为**不代表原件行为**——烟测实测：`mail2d_run_batch.py --help` 因缺 `_git_lsfiles` 依赖报 `ModuleNotFoundError: No module named '_git_lsfiles'`；`mail2d_prep_batches.py --help` 空跑并打印“完成。”后 exit 0；`mail2d_batch_dump.py --help` 报 `IndexError`。逐件“可直接运行”栏见下表。
 
 ## 核心驱动（7 件）
 
-| 源路径 | 副本 | 字节 | SHA-256 | 职能 | 运行状态 |
-| ------ | ---- | ---: | ------- | ---- | -------- |
-| `script/_db_row_mining/_prep_batches.py` | `mail2d_prep_batches.py` | 4778 | `4047b37136a11fe110dd36a09a1bf7160305b12de6e6a9dc7fa6a663e0705add` | 批量预建批次：建 spec → dump → 补 `pk_range` → 容器行清单 → 拆 digest，供读手到即派（FR-H01） | 原件运行；副本未启用 |
-| `script/_db_row_mining/_mail2d_run_batch.py` | `mail2d_run_batch.py` | 26635 | `f91f0934078e7212bf276a8429f5bf86410e063167275bdadf99486cf5d2bae1` | 单批运行器（`new`／`dump`／`body`／`check`／`register`／`outline`／`bookkeep` 子命令），批内编排与入库、入纲写盘（FR-H01、FR-H07–FR-H10） | 原件运行；副本未启用 |
-| `script/_db_row_mining/_mail2d_batch_dump.py` | `mail2d_batch_dump.py` | 5354 | `9efe78538719e0e6fa0d3b7d4a4d91fb277b21ade2e3f6111455f6bda3685a94` | 通用批 dump：全文 dump／`review_logs` digest（pk\|date\|from\|subject\|正文前 420 字）／heads 头表，只读源库（FR-H01） | 原件运行；副本未启用 |
-| `script/_db_row_mining/_build_read_ledger.py` | `mail2d_build_read_ledger.py` | 6185 | `b71a431dd3fcd6d5ace7ad5b55ab6b464ca22d7d1ad448f65d587f5b1a75c7bd` | 重建已读区间台账 `mail2d_read_ledger.json`：`records`／`read_judged`／`read_effective`／`queued_records`，预建 spec 不计已读（FR-H11） | 原件运行；副本未启用 |
-| `script/_db_row_mining/_merge_cand.py` | `mail2d_merge_cand.py` | 6225 | `3c70664275a7ddec7fa477871c607ebd3571f5e735ab30559cf51a038187cbf5` | 候选分件合并：字段数与等级／长度／越界／重复／禁字符校验，`--srcdb` 回库验存在性剔幽灵 pk（FR-H03、FR-H04） | 原件运行；副本未启用 |
-| `script/_db_row_mining/_merge_narr.py` | `mail2d_merge_narr.py` | 3481 | `b9ff2b3e989f18cb903a10e9c2b547d7cac19b778d4407c3bc830639475a15c5` | 叙述分件合并：三列 TSV 汇总，阻断集为缺文件与 CRLF，pk 集合与候选全集对齐（FR-H05） | 原件运行；副本未启用 |
-| `script/_db_row_mining/_vn_narr.py` | `mail2d_vn_narr.py` | 6714 | `9763bcfb0c697fb7b3c73cb120b369a4a53f31e0f002e6c575195efae9ce3b4f` | 叙述硬门禁：存在性与 pk 全等、3 个 TAB 字段、长度 60–140、尾标点、禁字符、宿主逐 pk 一致，违规 exit 1（FR-H06） | 原件运行；副本未启用 |
+| 源路径 | 副本 | 字节 | SHA-256 | 职能 | 运行状态 | 可直接运行 |
+| ------ | ---- | ---: | ------- | ---- | -------- | ---------- |
+| `script/_db_row_mining/_prep_batches.py` | `mail2d_prep_batches.py` | 4778 | `4047b37136a11fe110dd36a09a1bf7160305b12de6e6a9dc7fa6a663e0705add` | 批量预建批次：建 spec → dump → 补 `pk_range` → 容器行清单 → 拆 digest，供读手到即派（FR-H01） | 原件运行；副本未启用 | 否 |
+| `script/_db_row_mining/_mail2d_run_batch.py` | `mail2d_run_batch.py` | 27001 | `2718e42b902e15798243185bf6620510ce5936a553986fec66dbe114cbaf6d7a` | 单批运行器（`new`／`dump`／`body`／`check`／`register`／`outline`／`bookkeep` 子命令），批内编排与入库、入纲写盘（FR-H01、FR-H07–FR-H10） | 原件运行；副本未启用 | 否 |
+| `script/_db_row_mining/_mail2d_batch_dump.py` | `mail2d_batch_dump.py` | 5354 | `9efe78538719e0e6fa0d3b7d4a4d91fb277b21ade2e3f6111455f6bda3685a94` | 通用批 dump：全文 dump／`review_logs` digest（pk\|date\|from\|subject\|正文前 420 字）／heads 头表，只读源库（FR-H01） | 原件运行；副本未启用 | 否 |
+| `script/_db_row_mining/_build_read_ledger.py` | `mail2d_build_read_ledger.py` | 6185 | `b71a431dd3fcd6d5ace7ad5b55ab6b464ca22d7d1ad448f65d587f5b1a75c7bd` | 重建已读区间台账 `mail2d_read_ledger.json`：`records`／`read_judged`／`read_effective`／`queued_records`，预建 spec 不计已读（FR-H11） | 原件运行；副本未启用 | 否 |
+| `script/_db_row_mining/_merge_cand.py` | `mail2d_merge_cand.py` | 6225 | `3c70664275a7ddec7fa477871c607ebd3571f5e735ab30559cf51a038187cbf5` | 候选分件合并：字段数与等级／长度／越界／重复／禁字符校验，`--srcdb` 回库验存在性剔幽灵 pk（FR-H03、FR-H04） | 原件运行；副本未启用 | 否 |
+| `script/_db_row_mining/_merge_narr.py` | `mail2d_merge_narr.py` | 3481 | `b9ff2b3e989f18cb903a10e9c2b547d7cac19b778d4407c3bc830639475a15c5` | 叙述分件合并：三列 TSV 汇总，阻断集为缺文件与 CRLF，pk 集合与候选全集对齐（FR-H05） | 原件运行；副本未启用 | 否 |
+| `script/_db_row_mining/_vn_narr.py` | `mail2d_vn_narr.py` | 6714 | `9763bcfb0c697fb7b3c73cb120b369a4a53f31e0f002e6c575195efae9ce3b4f` | 叙述硬门禁：存在性与 pk 全等、3 个 TAB 字段、长度 60–140、尾标点、禁字符、宿主逐 pk 一致，违规 exit 1（FR-H06） | 原件运行；副本未启用 | 否 |
 
-上表字节数与 SHA-256 为 2026-10-22 复制时实测，复制前后逐件相等；7 件均无 BOM、无 CRLF（纯 LF）。复核方式：`script/_p2_mail2d_promote.py`（复制与比对一次完成）、`Get-FileHash -Algorithm SHA256`。
+上表字节数与 SHA-256 为 2026-10-22 实测；7 件均无 BOM、无 CRLF（纯 LF）。**复制件保持逐字节一致**，仅 `mail2d_run_batch.py` 件在文件头加注释（声明本目录为参考件、缺 `_git_lsfiles` 依赖、运行用原件），故**本件哈希与原件不同，属有意识偏离**——原件与复制时副本同为 `f91f0934078e7212bf276a8429f5bf86410e063167275bdadf99486cf5d2bae1`（26635 字节），加注释后副本为 `2718e42b902e15798243185bf6620510ce5936a553986fec66dbe114cbaf6d7a`（27001 字节）；其余 6 件副本哈希仍与原件逐字节相等。复核方式：`script/_p2_mail2d_promote.py`（复制与比对一次完成）、`Get-FileHash -Algorithm SHA256`。
 
 ## 未入库的批内一次性脚本
 

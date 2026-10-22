@@ -10,19 +10,25 @@
 - 候选表：`review_logs/<tag>_candidates.txt`（`pk|等级|摘要` 或 TSV／JSONL）
 - 叙述总表：`review_logs/<tag>_mount_narr.tsv`（`pk\\thost\\t叙述`）
 - 认领映射：`review_logs/<tag>_claim_map.json`（扁平 `{pk: CL-RM-NNNNNN}`）
-- 库／宿主：`historical_claims.duckdb` 与 `05-卷册大纲/` 宿主 `.md`
+- 库／宿主：`historical_claims.duckdb`、源消息库与 `05-卷册大纲/` 宿主 `.md`
 
 判据（逐条独立打印；任一 FAIL 退出码 1）
 ----
 B1 spec 存在，`pk_range` 非空且 `lo <= hi`，`n` 与区间跨度自洽
    （`n <= 跨度`；若 spec 声明 `pk_missing_count`，则 `n + 缺号数 == 跨度`）
-B2 候选 pk 唯一、全在 `pk_range` 内，且候选数 `<= n`（判读后子集允许少于 n）
-B3 `--narr` 行数等于候选行数，且 pk 集合等于候选 pk 集合
+B2 候选 pk 唯一、全在 `pk_range` 内，且候选数 `<= n`（判读后子集允许少于 n）；
+   给 `--srcdb` 时逐 pk 回查源库 `messages(id)`，幽灵 pk 即 FAIL；
+   未给 `--srcdb` 时本项标注 SKIP（源库存在性未核，不得视为 PASS）
+B3 `--narr` 行数等于候选行数，pk 集合等于候选 pk 集合；
+   另按 H 线口径校验叙述语义：每行叙述 60–140 字且句末不带标点
+   （`--narr-min`／`--narr-max` 可调；`--no-narr-semantics` 可关闭）
 B4 `--claim-map` 键集合等于候选 pk 集合
 B5 `--db`：claim_map 的 claim_id 全部在库内存在；本批 min–max 号段连续无洞
    （跨线共享号段只按本批 min/max 检查，不要求全局连续）
 B6 `--outline-host`：宿主内本批候选 pk 的 `ROW_MINE` 块数等于候选行数
    （按 `ROW_MINE:` 标记字符串计数，不解析块体全文；可重复给出多个宿主，按合计判）
+B7 `--reject-synthetic`：候选表／叙述表／claim_map 内容含 `pilot-synthetic`
+   或文件名含 `pilot` 即 FAIL（默认关闭；生产收口建议开启）
 
 退出码
 ------
@@ -36,10 +42,11 @@ B6 `--outline-host`：宿主内本批候选 pk 的 `ROW_MINE` 块数等于候选
         --narr review_logs/fhk_b085_mount_narr.tsv \\
         --claim-map review_logs/fhk_b085_claim_map.json \\
         --db 04-现代研究文献/historical_claims.duckdb \\
+        --srcdb 04-现代研究文献/messages.duckdb \\
         --outline-host 05-卷册大纲/第05卷-.../097.1-....md
     python audit_mail2d_batch.py --selftest
 
-依赖：仅标准库；`--db` 时另需 `duckdb`。
+依赖：仅标准库；`--db`／`--srcdb` 时另需 `duckdb`。
 """
 import argparse
 import json
@@ -55,6 +62,10 @@ REPO = pathlib.Path(__file__).resolve().parents[3]
 
 PK_RE = re.compile(r"^CL-RM-(\d{6})$")
 MARK_RE = re.compile(r"ROW_MINE:\s*([^\s]+?)\.messages\.(\d+)")
+SYNTH_MARK = "pilot-synthetic"
+# 叙述句末不得出现的标点（对齐 `_vn_narr.py` 的 TAIL 集：，；：。！？ 与空格）
+NARR_TAIL = {chr(0xFF0C), chr(0xFF1B), chr(0xFF1A), chr(0x3002),
+             chr(0xFF01), chr(0xFF1F), " "}
 
 
 def _norm_pk(value):
@@ -169,7 +180,7 @@ def parse_candidates(path):
 
 
 def parse_narr(path):
-    """返回 (pk 列表, 错误文本)。mount_narr 为 TAB 三列，取第一列。"""
+    """返回 ([(pk, 叙述文本)], 错误文本)。mount_narr 为 TAB 三列。"""
     p = pathlib.Path(path)
     if not p.exists():
         return None, "叙述总表不存在：%s" % p
@@ -177,7 +188,10 @@ def parse_narr(path):
     for line in p.read_text(encoding="utf-8", errors="replace").splitlines():
         if not line.strip():
             continue
-        out.append(_norm_pk(line.split("\t", 1)[0]))
+        parts = line.split("\t")
+        pk = _norm_pk(parts[0])
+        text = parts[2] if len(parts) >= 3 else ""
+        out.append((pk, text))
     return out, None
 
 
@@ -250,16 +264,17 @@ def check_b1(tag, spec_path):
     return "B1", "PASS", detail
 
 
-def check_b2(spec_path, cand_path):
+def check_b2(spec_path, cand_path, srcdb_path=None):
+    """返回 (code, status, detail, dep)。不给 --srcdb 时标注 SKIP（非 PASS）。"""
     cands, err = parse_candidates(cand_path)
     if err:
-        return "B2", "FAIL", err
+        return "B2", "FAIL", err, False
     spec, spec_err = parse_spec(spec_path)
     if spec_err:
-        return "B2", "FAIL", "无法取得 pk_range：%s" % spec_err
+        return "B2", "FAIL", "无法取得 pk_range：%s" % spec_err, False
     lo, hi, rng_err = parse_range(spec)
     if rng_err:
-        return "B2", "FAIL", "无法取得 pk_range：%s" % rng_err
+        return "B2", "FAIL", "无法取得 pk_range：%s" % rng_err, False
     try:
         n = int(spec.get("n"))
     except (TypeError, ValueError):
@@ -279,20 +294,58 @@ def check_b2(spec_path, cand_path):
     if n is not None and n > 0 and len(cands) > n:
         bad.append("候选 %d 行 > n=%d" % (len(cands), n))
     if bad:
-        return "B2", "FAIL", "；".join(bad)
-    detail = "候选 %d 行；pk 唯一；全在 %d–%d 内；候选数 ≤ n" % (len(cands), lo, hi)
+        return "B2", "FAIL", "；".join(bad), False
+
+    static = "候选 %d 行；pk 唯一、全在 %d–%d 内、候选数 ≤ n" % (len(cands), lo, hi)
     if n is not None and len(cands) < n:
-        detail += "（判读后子集：%d < %d）" % (len(cands), n)
-    return "B2", "PASS", detail
+        static += "（判读后子集：%d < %d）" % (len(cands), n)
+
+    # 源库存在性：未给 --srcdb 时不得冒充 PASS（幽灵 pk 曾全绿放行）
+    if not srcdb_path:
+        return ("B2", "SKIP",
+                "%s；未提供 --srcdb，源库存在性未核（SKIP，不得视为 PASS）" % static,
+                False)
+    db = pathlib.Path(srcdb_path)
+    if not db.exists():
+        return "B2", "SKIP", "依赖缺失：源库文件不存在 %s" % db, True
+    try:
+        import duckdb
+    except ImportError as ex:
+        return "B2", "SKIP", "依赖缺失：duckdb 模块不可用（%s）" % ex, True
+    try:
+        con = duckdb.connect(str(db), read_only=True)
+    except Exception as ex:  # 库被写锁／路径不可达均属依赖不可用
+        return "B2", "SKIP", "依赖缺失：源库连接失败（%s）" % ex, True
+    try:
+        ghost = []
+        for pk in sorted(set(cands)):
+            row = con.execute("SELECT 1 FROM messages WHERE id=? LIMIT 1",
+                              [int(pk)]).fetchone()
+            if row is None:
+                ghost.append(pk)
+    except Exception as ex:
+        con.close()
+        name = type(ex).__name__
+        text = str(ex)
+        if "Catalog" in name or "Binder" in name or "messages" in text:
+            return "B2", "FAIL", "源库 messages 表缺失或不可查询：%s" % text, False
+        return "B2", "SKIP", "依赖缺失：源库查询失败（%s）" % text, True
+    con.close()
+    if ghost:
+        return ("B2", "FAIL",
+                "幽灵 pk（源库 messages 表不存在）：%s" % _fmt_set(ghost), False)
+    return ("B2", "PASS",
+            "%s；源库 messages 逐 pk 命中 %d 个" % (static, len(set(cands))), False)
 
 
-def check_b3(cand_path, narr_path):
+def check_b3(cand_path, narr_path, narr_min=60, narr_max=140, semantics=True):
     cands, err = parse_candidates(cand_path)
     if err:
         return "B3", "FAIL", "无法取得候选集：%s" % err
-    narr, err = parse_narr(narr_path)
+    nrows, err = parse_narr(narr_path)
     if err:
         return "B3", "FAIL", err
+    narr = [pk for pk, _t in nrows]
     cand_set, narr_set = set(cands), set(narr)
     bad = []
     if len(narr) != len(cands):
@@ -302,9 +355,28 @@ def check_b3(cand_path, narr_path):
         only_n = narr_set - cand_set
         bad.append("pk 集合不符：候选独有 %s；narr 独有 %s"
                    % (_fmt_set(only_c), _fmt_set(only_n)))
+    if semantics:
+        short, over, tail = [], [], []
+        for pk, text in nrows:
+            ln = len(text)
+            if ln < narr_min:
+                short.append("%s(%d)" % (pk, ln))
+            elif ln > narr_max:
+                over.append("%s(%d)" % (pk, ln))
+            if text and text[-1] in NARR_TAIL:
+                tail.append("%s(%r)" % (pk, text[-1]))
+        if short:
+            bad.append("叙述过短 < %d：%s" % (narr_min, _fmt_set(short)))
+        if over:
+            bad.append("叙述过长 > %d：%s" % (narr_max, _fmt_set(over)))
+        if tail:
+            bad.append("叙述句末带标点（H 线口径：句末不加标点）：%s" % _fmt_set(tail))
     if bad:
         return "B3", "FAIL", "；".join(bad)
-    return "B3", "PASS", "narr %d 行；pk 集合与候选一致" % len(narr)
+    detail = "narr %d 行；pk 集合与候选一致" % len(narr)
+    if semantics:
+        detail += "；长度 %d–%d 合规、句末无标点" % (narr_min, narr_max)
+    return "B3", "PASS", detail
 
 
 def check_b4(cand_path, map_path):
@@ -415,15 +487,38 @@ def check_b6(spec_path, cand_path, host_paths):
             % (sum(matched.values()), len(cands), total_marks))
 
 
-def run_checks(tag, spec_path, cand_path, narr_path, map_path, db_path, host_paths):
+def check_b7_synthetic(cand_path, narr_path, map_path):
+    """候选／narr／claim_map 内容含 pilot-synthetic 或文件名含 pilot 即 FAIL。"""
+    bad = []
+    for label, path in (("候选表", cand_path), ("叙述表", narr_path),
+                        ("claim_map", map_path)):
+        if not path:
+            continue
+        p = pathlib.Path(path)
+        if "pilot" in p.name.lower():
+            bad.append("%s 文件名含 pilot：%s" % (label, p.name))
+        if p.exists():
+            text = p.read_text(encoding="utf-8", errors="replace")
+            if SYNTH_MARK in text:
+                bad.append("%s 内容含 %s" % (label, SYNTH_MARK))
+    if bad:
+        return "B7", "FAIL", "；".join(bad)
+    return "B7", "PASS", "候选／叙述／claim_map 无 pilot 文件名或 pilot-synthetic 标记"
+
+
+def run_checks(tag, spec_path, cand_path, narr_path, map_path, db_path, host_paths,
+               srcdb_path=None, narr_min=60, narr_max=140, narr_semantics=True,
+               reject_synthetic=False):
     """返回 (rows, dep_missing)；rows 为 (code, status, detail) 三元组。"""
     rows = []
     dep = False
 
     rows.append(check_b1(tag, spec_path))
-    rows.append(check_b2(spec_path, cand_path))
+    code, status, detail, d = check_b2(spec_path, cand_path, srcdb_path)
+    rows.append((code, status, detail))
+    dep = dep or d
     if narr_path:
-        rows.append(check_b3(cand_path, narr_path))
+        rows.append(check_b3(cand_path, narr_path, narr_min, narr_max, narr_semantics))
     else:
         rows.append(("B3", "SKIP", "未提供 --narr"))
     if map_path:
@@ -442,6 +537,10 @@ def run_checks(tag, spec_path, cand_path, narr_path, map_path, db_path, host_pat
         rows.append(check_b6(spec_path, cand_path, host_paths))
     else:
         rows.append(("B6", "SKIP", "未提供 --outline-host"))
+    if reject_synthetic:
+        rows.append(check_b7_synthetic(cand_path, narr_path, map_path))
+    else:
+        rows.append(("B7", "PASS", "未启用 --reject-synthetic，跳过（默认关闭）"))
     return rows, dep
 
 
@@ -467,6 +566,14 @@ POS_PKS = ["100", "101", "102", "103"]
 POS_IDS = ["CL-RM-000101", "CL-RM-000102", "CL-RM-000103", "CL-RM-000104"]
 
 
+def _narr_text(pk):
+    """合成叙述：长度固定 80 字、句末不带标点（贴合 `_vn_narr.py` 口径）。"""
+    head = "合成叙述占位（%s）：用于校验批次收口门禁的 pk 对账与叙述长度尾标点判据" % pk
+    text = (head + "述" * 90)[:80]
+    assert len(text) == 80 and text[-1] not in NARR_TAIL, "合成叙述违反夹具前提"
+    return text
+
+
 def _write_fixture(root, with_db=False):
     root.mkdir(parents=True, exist_ok=True)
     spec = {
@@ -481,7 +588,8 @@ def _write_fixture(root, with_db=False):
     (root / "cand.tsv").write_text(
         "".join("%s\tL4\t摘要%s\n" % (pk, pk) for pk in POS_PKS), encoding="utf-8")
     (root / "narr.tsv").write_text(
-        "".join("%s\t881\t叙述%s\n" % (pk, pk) for pk in POS_PKS), encoding="utf-8")
+        "".join("%s\t881\t%s\n" % (pk, _narr_text(pk)) for pk in POS_PKS),
+        encoding="utf-8")
     (root / "map.json").write_text(
         json.dumps(dict(zip(POS_PKS, POS_IDS)), ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8")
@@ -497,6 +605,8 @@ def _write_fixture(root, with_db=False):
         con = duckdb.connect(str(db))
         con.execute("CREATE TABLE claim(claim_id VARCHAR)")
         con.executemany("INSERT INTO claim VALUES (?)", [(cid,) for cid in POS_IDS])
+        con.execute("CREATE TABLE messages(id BIGINT)")
+        con.executemany("INSERT INTO messages VALUES (?)", [(int(pk),) for pk in POS_PKS])
         con.close()
         return root / "spec.json", root / "cand.tsv", root / "narr.tsv", \
             root / "map.json", db, [root / "host.md"]
@@ -506,6 +616,23 @@ def _write_fixture(root, with_db=False):
 
 def _status_map(rows):
     return {code: status for code, status, _d in rows}
+
+
+def _readback_positive(paths):
+    """回读断言：夹具确实落盘、规模与叙述语义前提一致（自检不得空转）。"""
+    spec_back = json.loads(paths[0].read_text(encoding="utf-8"))
+    cand_back = [ln for ln in paths[1].read_text(encoding="utf-8").splitlines() if ln.strip()]
+    narr_lines = [ln for ln in paths[2].read_text(encoding="utf-8").splitlines() if ln.strip()]
+    map_back = json.loads(paths[3].read_text(encoding="utf-8"))
+    mark_back = MARK_RE.findall(paths[5][0].read_text(encoding="utf-8"))
+    assert spec_back["n"] == 4 and spec_back["pk_range"] == [100, 103], "正样本 spec 回读不符"
+    assert len(cand_back) == 4 and len(narr_lines) == 4 and len(map_back) == 4, \
+        "正样本行数回读不符"
+    assert len(mark_back) == 4, "正样本宿主块数回读不符"
+    for ln in narr_lines:
+        text = ln.split("\t")[2]
+        assert 60 <= len(text) <= 140, "正样本叙述长度越界：%d" % len(text)
+        assert text[-1] not in NARR_TAIL, "正样本叙述句末带标点"
 
 
 def cmd_selftest():
@@ -520,34 +647,36 @@ def cmd_selftest():
 
         base = tmp / "base"
         paths = _write_fixture(base, with_db=has_db)
+        _readback_positive(paths)
 
-        # 回读断言：夹具确实落盘且规模与预期一致（自检不得空转）
-        spec_back = json.loads(paths[0].read_text(encoding="utf-8"))
-        cand_back = [ln for ln in paths[1].read_text(encoding="utf-8").splitlines() if ln.strip()]
-        narr_back = [ln for ln in paths[2].read_text(encoding="utf-8").splitlines() if ln.strip()]
-        map_back = json.loads(paths[3].read_text(encoding="utf-8"))
-        mark_back = MARK_RE.findall(paths[5][0].read_text(encoding="utf-8"))
-        assert spec_back["n"] == 4 and spec_back["pk_range"] == [100, 103], "正样本 spec 回读不符"
-        assert len(cand_back) == 4 and len(narr_back) == 4 and len(map_back) == 4, \
-            "正样本行数回读不符"
-        assert len(mark_back) == 4, "正样本宿主块数回读不符"
-
-        rows, dep = run_checks("tst_b001", *paths)
+        # 正样本（给 --srcdb：B2 应 PASS 而非 SKIP）
+        rows, dep = run_checks("tst_b001", *paths, srcdb_path=paths[4])
         status = _status_map(rows)
         bad = [c for c, s in status.items() if s == "FAIL"]
         if bad:
             failures.append("正样本应 0 FAIL，实际 %s" % bad)
         if has_db:
+            if status.get("B2") != "PASS":
+                failures.append("有 srcdb 时正样本 B2 应 PASS，实际 %s" % status.get("B2"))
             if status.get("B5") != "PASS":
                 failures.append("正样本 B5 应 PASS，实际 %s" % status.get("B5"))
-        elif status.get("B5") != "SKIP":
-            failures.append("无 duckdb 时 B5 应 SKIP，实际 %s" % status.get("B5"))
+        else:
+            if status.get("B2") != "SKIP":
+                failures.append("无 duckdb 时正样本 B2 应 SKIP，实际 %s" % status.get("B2"))
+            if status.get("B5") != "SKIP":
+                failures.append("无 duckdb 时正样本 B5 应 SKIP，实际 %s" % status.get("B5"))
+        if status.get("B3") != "PASS":
+            failures.append("正样本 B3 应 PASS，实际 %s" % status.get("B3"))
         if status.get("B6") != "PASS":
             failures.append("正样本 B6 应 PASS，实际 %s" % status.get("B6"))
         if dep:
             failures.append("正样本不应报依赖缺失")
 
-        cases = []
+        # 无 --srcdb：B2 须 SKIP（不得冒充 PASS）
+        rows_no, _d = run_checks("tst_b001", *paths, srcdb_path=None)
+        if _status_map(rows_no).get("B2") != "SKIP":
+            failures.append("无 --srcdb 时 B2 应 SKIP，实际 %s"
+                            % _status_map(rows_no).get("B2"))
 
         def case_b1(d):
             (d / "spec.json").write_text(
@@ -563,6 +692,14 @@ def cmd_selftest():
             pks = [ln.split("\t")[0] for ln in text.splitlines() if ln.strip()]
             assert len(pks) == 4 and "104" in pks and "103" not in pks, "B2 夹具回读不符"
 
+        def case_b2_ghost(d):
+            import duckdb
+            con = duckdb.connect(str(d / "t.duckdb"))
+            con.execute("DELETE FROM messages WHERE id=103")
+            left = [r[0] for r in con.execute("SELECT id FROM messages ORDER BY id").fetchall()]
+            con.close()
+            assert left == [100, 101, 102], "幽灵 pk 夹具回读不符：%s" % left
+
         def case_b3(d):
             lines = [ln for ln in (d / "narr.tsv").read_text(encoding="utf-8").splitlines()
                      if ln.strip()]
@@ -570,6 +707,23 @@ def cmd_selftest():
             back = [ln for ln in (d / "narr.tsv").read_text(encoding="utf-8").splitlines()
                     if ln.strip()]
             assert len(back) == 3, "B3 夹具回读不符"
+
+        def case_b3_short(d):
+            lines = (d / "narr.tsv").read_text(encoding="utf-8").splitlines()
+            parts = lines[0].split("\t")
+            lines[0] = "%s\t%s\t短句" % (parts[0], parts[1])
+            (d / "narr.tsv").write_text("\n".join(lines) + "\n", encoding="utf-8")
+            text = lines[0].split("\t")[2]
+            assert len(text) < 60, "narr 过短夹具回读不符"
+
+        def case_b3_tail(d):
+            lines = (d / "narr.tsv").read_text(encoding="utf-8").splitlines()
+            parts = lines[0].split("\t")
+            long_tail = ("尾标点探针" + "述" * 90)[:80] + "。"
+            lines[0] = "%s\t%s\t%s" % (parts[0], parts[1], long_tail)
+            (d / "narr.tsv").write_text("\n".join(lines) + "\n", encoding="utf-8")
+            text = lines[0].split("\t")[2]
+            assert text[-1] in NARR_TAIL and len(text) >= 60, "尾标点夹具回读不符"
 
         def case_b4(d):
             data = json.loads((d / "map.json").read_text(encoding="utf-8"))
@@ -586,23 +740,47 @@ def cmd_selftest():
             back = MARK_RE.findall((d / "host.md").read_text(encoding="utf-8"))
             assert len(back) == 3, "B6 夹具回读不符"
 
-        cases = [("B1", case_b1), ("B2", case_b2), ("B3", case_b3),
-                 ("B4", case_b4), ("B6", case_b6)]
+        def case_b7(d):
+            text = (d / "cand.tsv").read_text(encoding="utf-8").replace(
+                "摘要100", "%s 摘要" % SYNTH_MARK)
+            (d / "cand.tsv").write_text(text, encoding="utf-8")
+            assert SYNTH_MARK in (d / "cand.tsv").read_text(encoding="utf-8"), \
+                "synthetic 夹具回读不符"
 
-        for code, mutate in cases:
-            d = tmp / ("neg_" + code.lower())
+        # (判据码, 变异, 是否需 --srcdb, 是否启用 --reject-synthetic)
+        cases = [
+            ("B1", case_b1, False, False),
+            ("B2", case_b2, True, False),
+            ("B3", case_b3, False, False),
+            ("B3", case_b3_short, False, False),
+            ("B3", case_b3_tail, False, False),
+            ("B4", case_b4, False, False),
+            ("B6", case_b6, False, False),
+            ("B7", case_b7, False, True),
+        ]
+        if has_db:
+            cases.append(("B2", case_b2_ghost, True, False))
+        else:
+            print("· 跳过幽灵 pk 夹具（无 duckdb 模块）")
+
+        for idx, (code, mutate, need_src, rej) in enumerate(cases, 1):
+            d = tmp / ("neg_%02d_%s" % (idx, code.lower()))
             shutil.copytree(base, d)
             mutate(d)
             npaths = (d / "spec.json", d / "cand.tsv", d / "narr.tsv", d / "map.json",
                       (d / "t.duckdb") if has_db else None, [d / "host.md"])
-            nrows, ndep = run_checks("tst_b001", *npaths)
+            src = npaths[4] if (need_src and has_db) else None
+            nrows, ndep = run_checks("tst_b001", *npaths, srcdb_path=src,
+                                     reject_synthetic=rej)
             nstatus = _status_map(nrows)
             if nstatus.get(code) != "FAIL":
-                failures.append("%s 负向夹具未命中（实际 %s）" % (code, nstatus.get(code)))
+                failures.append("%s 负向夹具（%s）未命中（实际 %s）"
+                                % (code, mutate.__name__, nstatus.get(code)))
             fails = sum(1 for _c, s, _d in nrows if s == "FAIL")
             rc = 2 if ndep else (1 if fails else 0)
             if rc != 1:
-                failures.append("%s 负向夹具退出码应为 1，实际 %d" % (code, rc))
+                failures.append("%s 负向夹具（%s）退出码应为 1，实际 %d"
+                                % (code, mutate.__name__, rc))
             if code != "B1" and nstatus.get("B1") != "PASS":
                 failures.append("%s 负向夹具不应连带 B1（实际 %s）"
                                 % (code, nstatus.get("B1")))
@@ -614,7 +792,11 @@ def cmd_selftest():
         for item in failures:
             print("     - %s" % item)
         return 1
-    print("  ✅ 判据非空自检通过：正样本全 PASS；B1／B2／B3／B4／B6 五类负向夹具均命中且退出码 1")
+    print("  ✅ 判据非空自检通过：正样本全 PASS；" + (
+        "B1／B2／B2幽灵 pk／B3／B3过短／B3尾标点／B4／B6／B7 负向夹具均命中且退出码 1"
+        if has_db else
+        "B1／B2／B3／B3过短／B3尾标点／B4／B6／B7 负向夹具均命中且退出码 1"
+        "（无 duckdb，幽灵 pk 与 B2 存在性未核）"))
     return 0
 
 
@@ -627,6 +809,16 @@ def main():
     ap.add_argument("--claim-map", metavar="JSON", dest="claim_map",
                     help="<tag>_claim_map.json")
     ap.add_argument("--db", metavar="DUCKDB", help="historical_claims.duckdb（可选）")
+    ap.add_argument("--srcdb", metavar="DUCKDB",
+                    help="源消息库：B2 逐 pk 回查 messages 存在性（可选）")
+    ap.add_argument("--narr-min", type=int, default=60, dest="narr_min",
+                    help="叙述长度下限（默认 60，H 线口径）")
+    ap.add_argument("--narr-max", type=int, default=140, dest="narr_max",
+                    help="叙述长度上限（默认 140，H 线口径）")
+    ap.add_argument("--no-narr-semantics", action="store_true", dest="no_narr_semantics",
+                    help="关闭叙述长度与尾标点判据")
+    ap.add_argument("--reject-synthetic", action="store_true", dest="reject_synthetic",
+                    help="候选／narr／claim_map 含 pilot-synthetic 或文件名含 pilot 即 FAIL")
     ap.add_argument("--outline-host", metavar="MD", action="append", dest="outline_hosts",
                     help="宿主 .md（可选，可重复）")
     ap.add_argument("--selftest", action="store_true", help="判据非空自检")
@@ -637,8 +829,11 @@ def main():
     if not args.tag or not args.spec or not args.candidates:
         ap.error("需要 --tag／--spec／--candidates（或使用 --selftest）")
 
-    rows, dep = run_checks(args.tag, args.spec, args.candidates, args.narr,
-                           args.claim_map, args.db, args.outline_hosts)
+    rows, dep = run_checks(
+        args.tag, args.spec, args.candidates, args.narr, args.claim_map, args.db,
+        args.outline_hosts, srcdb_path=args.srcdb, narr_min=args.narr_min,
+        narr_max=args.narr_max, narr_semantics=not args.no_narr_semantics,
+        reject_synthetic=args.reject_synthetic)
     fails = _report(rows, args.tag)
     if dep:
         print("  依赖缺失：退出码 2")

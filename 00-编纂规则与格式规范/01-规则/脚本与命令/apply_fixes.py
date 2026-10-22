@@ -406,6 +406,12 @@ def selftest():
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
+    # --help/-h 最先处理：打印用法后即退，不读 judgements、不写盘（零副作用）
+    if "--help" in argv or "-h" in argv:
+        print(__doc__)
+        print("说明：本工具默认直接写盘（无 --apply 开关）；加 --dry-run 只计数不写盘；"
+              "--selftest 跑内置系统临时目录夹具。")
+        sys.exit(0)
     if "--selftest" in argv:
         sys.exit(selftest())
     if not argv:
