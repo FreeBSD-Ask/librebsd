@@ -2,16 +2,21 @@
 # -*- coding: utf-8 -*-
 """oaa_register.py — 把判定 JSONL 批量登记进 processed.jsonl（幂等，同 key 覆盖）
 
-用法：python oaa_register.py <judgement.jsonl> [more.jsonl ...]
+用法：python oaa_register.py <judgement.jsonl> [more.jsonl ...] [--ledger 台账名]
 每行格式：{"key": ..., "判定": keep|fix-format|fix-text|remap|fix-db|存疑,
           "问题": [...], "备注": ..., "新摘要": ...（可选）}
+
+--ledger 只接受 audit_outline/ 内的相对文件名；绝对路径、带盘符路径、含 .. 或
+解析后越出 audit_outline/ 者一律拒绝（打印原因并 exit 2，零写入）。
 """
 import contextlib
 import datetime
+import hashlib
 import io
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 
@@ -37,8 +42,50 @@ def _atomic_write(proc, by_key):
         raise
 
 
+def _now():
+    """登记时间戳：单列成函数，便于 --selftest 注入可控时钟。"""
+    return datetime.datetime.now().isoformat(timespec="seconds")
+
+
+def _resolve_ledger(ledger):
+    """把 --ledger 解析为 audit_outline/ 内的台账绝对路径。
+    越界（绝对路径／带盘符路径／含 .. ／解析后不在 audit_outline/ 内）一律打印原因并 exit 2。"""
+    aud = os.path.realpath(os.path.join(ROOT, "script", "_db_row_mining", "audit_outline"))
+    name = ledger if ledger is not None else "processed.jsonl"
+    if not name.strip():
+        print("--ledger 为空，拒绝登记")
+        sys.exit(2)
+    # 绝对路径会令 os.path.join 丢弃前缀；带盘符路径（C:x）同样跳出 ROOT
+    if os.path.isabs(name) or os.path.splitdrive(name)[0]:
+        print(f"--ledger 拒绝绝对路径／带盘符路径：{name}")
+        sys.exit(2)
+    if ".." in name.replace("\\", "/").split("/"):
+        print(f"--ledger 拒绝含 .. 的路径：{name}")
+        sys.exit(2)
+    target = os.path.realpath(os.path.join(aud, name))
+    try:
+        inside = os.path.normcase(os.path.commonpath([aud, target])) == os.path.normcase(aud)
+    except ValueError:  # 不同盘符，无公共前缀
+        inside = False
+    if not inside or os.path.normcase(target) == os.path.normcase(aud):
+        print(f"--ledger 解析后不在 audit_outline/ 内：{name}")
+        sys.exit(2)
+    return target
+
+
+def _same_except_time(old_line, r):
+    """旧行与新判读行在“时间”之外逐字段相同则视为内容未变（用于字节级幂等）。"""
+    try:
+        old = json.loads(old_line)
+    except ValueError:
+        return False
+    a = dict(old); a.pop("时间", None)
+    b = dict(r); b.pop("时间", None)
+    return a == b
+
+
 def main(paths, ledger=None, dry_run=False):
-    proc = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", ledger or "processed.jsonl")
+    proc = _resolve_ledger(ledger)
     if not dry_run:
         os.makedirs(os.path.dirname(proc), exist_ok=True)
     lines = []
@@ -67,9 +114,13 @@ def main(paths, ledger=None, dry_run=False):
                 assert jd in ("keep", "fix-format", "fix-text", "remap",
                               "fix-db", "存疑"), f"非法判定 {key}"
                 r["判定"] = jd
-                r.setdefault("时间", datetime.datetime.now().isoformat(timespec="seconds"))
                 r.setdefault("批次", os.path.basename(p).rsplit(".", 1)[0])
-                by_key[key] = json.dumps(r, ensure_ascii=False)
+                old = by_key.get(key)
+                if old is not None and _same_except_time(old, r):
+                    by_key[key] = old          # 内容未变：沿用旧行原文，不刷新“时间”
+                else:
+                    r.setdefault("时间", _now())
+                    by_key[key] = json.dumps(r, ensure_ascii=False)
                 touched.add(key)
                 n_in += 1
     n_new = len(touched - orig_keys)
@@ -128,6 +179,7 @@ def _batch(root, name, rows):
 
 
 def selftest():
+    global _now
     print("== oaa_register --selftest（系统临时目录夹具）==")
     cases = []
     root, aud = _mkroot()
@@ -183,13 +235,74 @@ def selftest():
     finally:
         shutil.rmtree(root, ignore_errors=True)
 
+    # 用例 6：绝对路径 --ledger 必须被拒（子进程实测 CLI 出口码 2 + 台账零改动 + 越界文件未生成）
+    root_e, aud_e = _mkroot()
+    esc_dir = tempfile.mkdtemp(prefix="oaa_escape_")
+    try:
+        copydir = os.path.join(root_e, "00-编纂规则与格式规范", "01-规则", "脚本与命令")
+        os.makedirs(copydir, exist_ok=True)
+        script_copy = os.path.join(copydir, "oaa_register.py")
+        shutil.copyfile(os.path.abspath(__file__), script_copy)
+        escape = os.path.join(esc_dir, "x.jsonl")
+        be = _batch(root_e, "in_e.jsonl", [{"key": "e|1|h.md", "判定": "keep"}])
+        before_e = _ledger_bytes(aud_e)
+        pr = subprocess.run([sys.executable, script_copy, be, "--ledger", escape],
+                            capture_output=True, text=True, encoding="utf-8", errors="replace")
+        ok6 = (pr.returncode == 2 and not os.path.exists(escape)
+               and _ledger_bytes(aud_e) == before_e and "拒绝绝对路径" in (pr.stdout or ""))
+        cases.append(("绝对路径 --ledger 拒绝（exit 2，台账与越界文件零改动）", ok6,
+                      f"exit={pr.returncode}｜stdout={((pr.stdout or '').strip().splitlines() or [''])[-1]}"))
+    finally:
+        shutil.rmtree(root_e, ignore_errors=True)
+        shutil.rmtree(esc_dir, ignore_errors=True)
+
+    # 用例 7：同一输入二跑台账 SHA-256 逐字节一致（注入递增时钟，跨秒亦不得刷新“时间”）
+    root_t, aud_t = _mkroot()
+    saved_now = _now
+    tick = [0]
+
+    def _fake_now():
+        tick[0] += 1
+        return "2026-10-22T00:00:%02d" % tick[0]
+
+    try:
+        _now = _fake_now
+
+        def _row_time(raw, key):
+            for line in raw.decode("utf-8").splitlines():
+                row = json.loads(line)
+                if row.get("key") == key:
+                    return row.get("时间")
+            return None
+        bt = _batch(root_t, "same.jsonl", [{"key": "t|9|h.md", "判定": "keep"}])
+        _run_fixture(root_t, [bt])
+        raw_a = _ledger_bytes(aud_t)
+        t_a = _row_time(raw_a, "t|9|h.md")
+        _run_fixture(root_t, [bt])
+        raw_b = _ledger_bytes(aud_t)
+        t_b = _row_time(raw_b, "t|9|h.md")
+        bt2 = _batch(root_t, "changed.jsonl", [
+            {"key": "t|9|h.md", "判定": "fix-text", "新摘要句": "改后"}])
+        _run_fixture(root_t, [bt2])
+        raw_c = _ledger_bytes(aud_t)
+        t_c = _row_time(raw_c, "t|9|h.md")
+        sha_a = hashlib.sha256(raw_a).hexdigest()
+        sha_b = hashlib.sha256(raw_b).hexdigest()
+        ok7 = (sha_a == sha_b and t_a == t_b and t_a == "2026-10-22T00:00:01" and t_c != t_b)
+        cases.append(("同输入二跑字节幂等（时间不刷新；内容变更才刷新）", ok7,
+                      f"SHA-256 {sha_a[:16]} = {sha_b[:16]}｜时间 {t_a}→{t_b}｜改后 {t_c}"))
+    finally:
+        _now = saved_now
+        shutil.rmtree(root_t, ignore_errors=True)
+
     bad_n = 0
     for title, ok, detail in cases:
         if not ok:
             bad_n += 1
         print(f"[{'PASS' if ok else 'FAIL'}] {title}｜ {detail}")
-    print("覆盖：key 去重、坏行拒绝（非法 JSON／非法判定）、写入后行数守恒、原子写、--dry-run")
-    print("未覆盖：--ledger 自定义台账名未单列用例（与默认名共用同一原子写实现）")
+    print("覆盖：key 去重、坏行拒绝（非法 JSON／非法判定）、写入后行数守恒、原子写、--dry-run、")
+    print("      --ledger 越界拒绝（绝对路径）、同输入二跑字节幂等（SHA-256 一致）")
+    print("未覆盖：--ledger 含 .. 与子目录名（与绝对路径共用同一 commonpath 落点校验）")
     print(f"== selftest {'PASS' if bad_n == 0 else 'FAIL'}：{len(cases) - bad_n}/{len(cases)} 用例通过 ==")
     return 0 if bad_n == 0 else 1
 
@@ -210,7 +323,11 @@ if __name__ == "__main__":
         sys.exit(2)
     ledger = None
     if "--ledger" in args:
-        i = args.index("--ledger"); ledger = args[i+1]; del args[i:i+2]
+        i = args.index("--ledger")
+        if i + 1 >= len(args):
+            print("--ledger 缺少参数值")
+            sys.exit(2)
+        ledger = args[i+1]; del args[i:i+2]
     if not args:
         print(__doc__); sys.exit(2)
     main(args, ledger, dry)

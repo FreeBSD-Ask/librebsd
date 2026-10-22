@@ -26,8 +26,8 @@
   `assemble_index.py`（读内容/格式/现代化/行为/数据/页壳六类源，口径由内容源派生）。
   本脚本保留为**数据层序列化模块 ＋ 门禁**——供装配器复用其
   `encode_blob()`／`integrity_of()`／`serialize_content()`；`--check` 三项检测照旧。
-  直接运行本脚本（无参）仍可单独重装数据块，但随后须跑 `assemble_index.py --check`
-  确认无漂移（否则下次装配会覆盖）。
+  直接运行本脚本（无参）仍可单独重装数据块，写盘（或无变更判定）后**自动**调用
+  `assemble_index.py --check` 复核有无漂移；校验失败即 exit 3（TD-018／ADR-0012）。
 
 用法：
   python embed.py              # 装配（默认）
@@ -43,6 +43,7 @@ import io
 import json
 import pathlib
 import re
+import subprocess
 import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
@@ -50,6 +51,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 REPO = pathlib.Path(__file__).resolve().parents[3]
 CATALOG = REPO / "08-核查报告与多轮复核" / "重构2026" / "data" / "catalog.json"
 INDEX = REPO / "08-核查报告与多轮复核" / "重构2026" / "index.html"
+# 装配器（同目录）：写盘后强制复核，防止绕过唯一写者（TD-018／ADR-0012）
+ASSEMBLE = pathlib.Path(__file__).resolve().with_name("assemble_index.py")
 
 # 压缩数据块标记（2026-09-13 O-2 起；历史载体 var DATA 字面量已废弃）
 BLOB_RE = re.compile(
@@ -200,6 +203,25 @@ def cmd_check():
     return 0 if (same and meta_ok and sri_ok) else 1
 
 
+def run_assembly_check():
+    """写盘后强制跑 `assemble_index.py --check`（唯一写者原则，TD-018／ADR-0012）。
+
+    本脚本可直写装配产物，但写后必须由装配器复核无漂移；失败即视为唯一写者被绕过，
+    由调用处以 exit 3 中止批次。`--check` 分支（纯检测）不得调用本函数，避免嵌套。
+    """
+    proc = subprocess.run(
+        [sys.executable, str(ASSEMBLE), "--check"],
+        cwd=str(REPO), capture_output=True, text=True,
+        encoding="utf-8", errors="replace")
+    if proc.returncode != 0:
+        print("[assembly] FAIL（assemble_index.py --check exit %d）" % proc.returncode)
+        for line in (proc.stdout + proc.stderr).strip().splitlines()[-20:]:
+            print("  " + line)
+        return False
+    print("[assembly] PASS")
+    return True
+
+
 def cmd_embed():
     data = load_catalog()
     # 内嵌数据只承载内容字段（$schema/version 为源元数据）
@@ -222,6 +244,9 @@ def cmd_embed():
         print(f"embed：已装配（数据块正文 {len(m.group(2))} → {len(body_new)} 字符）")
     digest = hashlib.sha256(serialized.encode("utf-8")).hexdigest()
     print(f"SHA-256（序列化 DATA）：{digest[:16]}…")
+    # 写盘后（含幂等无变更）强制复核装配无漂移；失败 exit 3（TD-018／ADR-0012）
+    if not run_assembly_check():
+        sys.exit(3)
     return 0
 
 

@@ -482,7 +482,9 @@ def cmd_probe(a: argparse.Namespace) -> int:
     base = Path(a.base) if a.base else repo_root()
     db_file = resolve_db(a.db, a.db_path)
     m = probe_max_claim_id(db_file)
-    print(json.dumps({"db": a.db, "db_file": str(db_file), "max_claim_id": m,
+    # tag 只作回显：probe 是只读模式，不取锁、不改锁文件，故不参与锁路径计算
+    print(json.dumps({"db": a.db, "db_file": str(db_file), "tag": a.tag,
+                      "max_claim_id": m,
                       "sql": PROBE_SQL,
                       "next_available": (m + 1) if m is not None else None},
                      ensure_ascii=False, indent=1))
@@ -644,6 +646,32 @@ def selftest() -> int:
                            capture_output=True, text=True)
         chk("T10 show exit 0", r.returncode == 0, (r.stdout + r.stderr)[:200])
 
+        # T12 CLI 自身：probe --tag 原样回显，未传 tag 时回显 null（只读，不涉锁）
+        adb = tmp / "probe_t.duckdb"
+        try:
+            import duckdb  # type: ignore
+            con = duckdb.connect(str(adb))
+            try:
+                con.execute("CREATE TABLE claim (claim_id VARCHAR)")
+                con.execute("INSERT INTO claim VALUES ('CL-RM-000042')")
+            finally:
+                con.close()
+        except Exception:  # noqa: BLE001
+            adb.write_bytes(b"x")  # 无 duckdb 时退化为只验 tag 回显
+        wdir = b / "12-数据库备份" / "waterlock"
+        before = sorted(x.name for x in wdir.glob("register__*.lock")) if wdir.is_dir() else []
+        r = subprocess.run([sys.executable, str(Path(__file__).resolve()),
+                            "probe", "--db", "t", "--db-path", str(adb),
+                            "--tag", "T1"],
+                           capture_output=True, text=True)
+        chk("T12 probe tag 回显", '"tag": "T1"' in r.stdout, (r.stdout + r.stderr)[:200])
+        r = subprocess.run([sys.executable, str(Path(__file__).resolve()),
+                            "probe", "--db", "t", "--db-path", str(adb)],
+                           capture_output=True, text=True)
+        chk("T12 probe 无 tag 为 null", '"tag": null' in r.stdout, (r.stdout + r.stderr)[:200])
+        after = sorted(x.name for x in wdir.glob("register__*.lock")) if wdir.is_dir() else []
+        chk("T12 probe 不改锁文件", before == after, f"before={before} after={after}")
+
         print("PASS" if not fails else "FAIL")
         for f in fails:
             print("  FAIL |", f)
@@ -675,6 +703,7 @@ def build_parser() -> argparse.ArgumentParser:
         p.add_argument("--distinct", type=int)
     p = sub.add_parser("probe")
     p.add_argument("--db", required=True)
+    p.add_argument("--tag")  # 仅回显用，可选；未传则 JSON 中为 null
     p.add_argument("--base")
     p.add_argument("--db-path", dest="db_path")
     p = sub.add_parser("show")
