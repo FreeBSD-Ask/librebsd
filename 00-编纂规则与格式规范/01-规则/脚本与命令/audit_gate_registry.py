@@ -61,7 +61,7 @@ RULE_DOCS = [
 REGISTRY = [
     dict(no="第一件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_data_integrity.py",
          kind="门禁", object="目录页 DATA 段", trigger="改 DATA 段后",
-         selftest="--selftest", in_tests_readme=True),
+         selftest=None, in_tests_readme=True),
     dict(no="第二件", script="00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py",
          kind="门禁", object="口径声明（重构2026/*.md + AGENTS.md + 规则目录）", trigger="目录页结构或计数变动后",
          selftest="--check", in_tests_readme=True),
@@ -73,7 +73,7 @@ REGISTRY = [
          selftest=None, in_tests_readme=True),
     dict(no="第五件", script="00-编纂规则与格式规范/01-规则/脚本与命令/xref_audit.py",
          kind="门禁", object="分工注交叉引用悬空", trigger="结构重编号后",
-         selftest=None, in_tests_readme=True),
+         selftest="--selftest", in_tests_readme=True),
     dict(no="第六件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_evidence_level_labels.py",
          kind="门禁", object="大纲注入块证据等级", trigger="向 05-卷册大纲 写回带等级块后",
          selftest=None, in_tests_readme=False),
@@ -196,6 +196,18 @@ REGISTRY = [
          object="claimdb_guard 快照多槽轮换：单槽 12-数据库备份/claimdb_guard_state.json 被每次非 FAIL 运行就地覆盖 ⇒ 污染态（2026-10-13 广播事故）被记成基线、S2/S4 从此对假水位比对。健康判定只读快照自带指标（不碰库）：fact_max_pct>0.25 或 upd_max_pct>0.50 ⇒ poisoned（＝S1/S3 FAIL 阈值），>0.05 或 distinct/rows<0.90 ⇒ suspect；实测健康 0.994/0.00017 vs 污染 0.025/0.975，差两个数量级。restore --best 取**最近的健康槽**（不是「最近槽」）、--dry-run 只报不换、prune 健康槽至少留 1",
          trigger="register／claimdb_guard 前后（2026-10-17 立；BASE 走 D:/UNC 双候选＋--base，不可解析 exit 2 不静默空转）",
          selftest="selftest", in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/font_subset_rebuild.py",
+         kind="重建器（字体子集）", object="内嵌字体子集／源字体覆盖", trigger="大纲增字、改字体源或重建字体后",
+         selftest=None, in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/review_v2_full.py",
+         kind="复算套件（独立复算）", object="产物 index.html 与内容源", trigger="每批目录重构后",
+         selftest=None, in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/serve_refactor2026.py",
+         kind="服务器（固定脚本）", object="服务器白名单／压缩／缓存／安全头", trigger="服务器改动或启动前",
+         selftest=None, in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/build_theme_index.py",
+         kind="生成器/门禁", object="chapter_keywords.json／theme_index.json", trigger="大纲结构变动后",
+         selftest="--selftest", in_tests_readme=False),
 ]
 
 # ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
@@ -242,6 +254,10 @@ STAGE_MAP = {
     "audit_provenance_dupes.py": "G4",
     "register_waterlock.py": "G3",
     "rotate_guard_state.py": "G3",
+    "font_subset_rebuild.py": "G3",
+    "review_v2_full.py": "G4",
+    "serve_refactor2026.py": "G4",
+    "build_theme_index.py": "G3",
 }
 
 
