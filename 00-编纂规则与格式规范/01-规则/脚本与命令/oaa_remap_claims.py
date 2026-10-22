@@ -163,7 +163,7 @@ def rewrite(claims_file, root_name, apply=False, stamp="20261022"):
     results, st = resolve_all(claims_file, root_name)
     if results is None:
         return 2
-    if not stamp or any(c in stamp for c in "/\:"):
+    if not stamp or any(c in stamp for c in ("/", chr(92), ":")):
         print("[check] 非法 --stamp：%r（禁路径分隔符与空值）" % stamp, file=sys.stderr)
         return 2
     if st["amb"] or st["unmatch"]:
