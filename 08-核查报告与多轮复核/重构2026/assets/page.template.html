@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="{{FAVICON}}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{TOUCH_ICON}}" />
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'nonce-Zk8rN2fT9qPm5vLx1wJh'; worker-src blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta property="og:type" content="book">
+<meta property="og:title" content="{{UI:shell.book_title}}">
+<meta property="og:description" content="{{UI:shell.og_description}}">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="给我自由——一部 BSD 的历史">
+<meta property="og:image" content="{{TOUCH_ICON}}">
+<meta property="og:image:width" content="180">
+<meta property="og:image:height" content="180">
+<meta property="og:image:alt" content="给我自由——一部 BSD 的历史（书名标志）">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#F9F5F0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="{{UI:shell.app_title}}">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+<meta name="description" content="{{UI:shell.meta_description}}">
+<title>{{UI:shell.book_title}}</title>
+<script nonce="Zk8rN2fT9qPm5vLx1wJh">
+{{THEME_JS}}
+</script>
+
+<style id="format-layer">
+{{CSS_FORMAT}}
+</style>
+<style id="modern-layer">
+{{CSS_MODERN}}
+</style>
+<script type="application/ld+json" nonce="Zk8rN2fT9qPm5vLx1wJh">{{JSONLD}}</script>
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">{{UI:shell.skip_link}}</a>
+<noscript><p class="noscript-note">{{UI:shell.noscript_note}}</p></noscript>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="{{UI:shell.btn.theme.aria}}">☾</button>
+<button class="toc-toggle" id="tocToggle" type="button" aria-label="{{UI:shell.btn.toc.aria}}" aria-controls="tocDrawer" aria-expanded="false">☰</button>
+<button class="back-to-top" id="backToTop" type="button" aria-label="{{UI:shell.btn.top.aria}}">↑</button>
+<aside aria-label="{{UI:shell.toolbar_label}}">
+<div class="opt-tools" role="toolbar" aria-label="{{UI:shell.toolbar_label}}" aria-orientation="vertical">
+
+<button class="opt-tools-toggle" id="optToolsToggle" type="button" title="{{UI:shell.btn.tools_toggle.title}}" aria-label="{{UI:shell.btn.tools_toggle.aria}}" aria-expanded="false">⚙</button>
+<button id="optSearch" type="button" title="{{UI:shell.btn.search.title}}" aria-label="{{UI:shell.btn.search.aria}}" aria-controls="optPanelSearch">⌕</button>
+<button id="optNotes" type="button" title="{{UI:shell.btn.notes.title}}" aria-label="{{UI:shell.btn.notes.aria}}">注</button>
+<button id="optExport" type="button" title="{{UI:shell.btn.export.title}}" aria-label="{{UI:shell.btn.export.aria}}" aria-haspopup="true" aria-expanded="false" aria-controls="exportMenu">⇩</button>
+<button id="optMode" type="button" title="{{UI:shell.btn.mode.title}}" aria-label="{{UI:shell.btn.mode.aria}}">研</button>
+<button id="optTl" type="button" title="{{UI:shell.btn.timeline.title}}" aria-label="{{UI:shell.btn.timeline.aria}}" aria-controls="optPanelTl">⏱</button>
+<button id="optRev" type="button" title="{{UI:shell.btn.revisions.title}}" aria-label="{{UI:shell.btn.revisions.aria}}" aria-controls="optPanelRev">⎌</button>
+<button id="optGraphBtn" type="button" title="{{UI:shell.btn.graph.title}}" aria-label="{{UI:shell.btn.graph.aria}}" aria-controls="optPanelGraph">◎</button>
+<button id="fontSizeToggle" type="button" title="{{UI:shell.btn.font.title}}" aria-label="{{UI:shell.btn.font.aria}}" aria-expanded="false" aria-controls="fontMenu">Aa</button>
+</div>
+</aside>
+<div class="toc-scrim" id="tocScrim" aria-hidden="true"></div>
+<div class="toc-drawer" id="tocDrawer">
+<nav class="toc-left" role="doc-toc" aria-label="{{UI:shell.nav_chapters}}"></nav>
+<nav class="toc-right" role="doc-toc" aria-label="{{UI:shell.nav_sections}}"></nav>
+<noscript>
+<nav class="toc-static" role="doc-toc" aria-label="{{UI:shell.nav_noscript}}">
+<div class="toc-left">{{TOC_STATIC_LEFT}}</div>
+<div class="toc-right">{{TOC_STATIC_RIGHT}}</div>
+</nav>
+</noscript>
+</div>
+<main class="doc-page" id="main-content">
+<div class="doc-title">
+<h1><img class="doc-logo" src="{{LOGO}}" width="1336" height="1336" alt="" decoding="async">{{UI:shell.book_title}}<span class="page-version" title="{{UI:shell.page_version.title}}">{{UI:shell.page_version}}</span></h1>
+</div>
+<div class="doc-metrics">
+<div class="doc-metric"><span>{{UI:shell.metric.vol.label}}</span><strong>{{N_VOL}}</strong><small>{{UI:shell.metric.vol.note}}</small></div>
+<div class="doc-metric"><span>{{UI:shell.metric.ch.label}}</span><strong>{{N_CH}}</strong><small>{{UI:shell.metric.ch.note}}</small></div>
+<div class="doc-metric"><span>{{UI:shell.metric.sec.label}}</span><strong>{{N_SEC}}</strong><small>{{UI:shell.metric.sec.note}}</small></div>
+<div class="doc-metric"><span>{{UI:shell.metric.src.label}}</span><strong>{{N_SRC}}</strong><small>{{UI:shell.metric.src.note}}</small></div>
+{{IF:N_PENDING}}<div class="doc-metric"><span>{{UI:shell.metric.pending.label}}</span><strong>{{N_PENDING}}</strong><small>{{UI:shell.metric.pending.note}}</small></div>{{ENDIF}}
+<div class="selfcheck" id="selfcheck"><span class="sc-sum">{{UI:shell.selfcheck.placeholder}}</span></div>
+</div>
+
+{{OUTLINE}}
+<footer><p class="doc-foot">{{UI:shell.footer.catalog}}</p><p class="doc-authority">{{UI:shell.footer.authority}}</p></footer>
+
+</main>
+
+<script type="application/gzip+base64" id="opt-data-blob" nonce="Zk8rN2fT9qPm5vLx1wJh" data-integrity="{{SRI}}">
+{{BLOB}}
+</script>
+<script type="application/json" id="ui-strings" nonce="Zk8rN2fT9qPm5vLx1wJh">{{UI_JSON}}</script>
+<script nonce="Zk8rN2fT9qPm5vLx1wJh" id="behavior-layer">
+{{JS_BEHAVIOR}}
+</script>
+
+</body>
+</html>
