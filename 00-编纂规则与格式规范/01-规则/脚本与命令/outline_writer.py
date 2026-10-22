@@ -286,6 +286,9 @@ def build_plan(a):
 
     print("[paths] root=%s work=%s ledger=%s scan-root=%s allow-root=%s write=%s"
           % (root, work, ledger or "-", scan_root_fixed or "(per-host chapter)", allow, bool(a.write)))
+    print("[inputs] narr=%s claim-map=%s outline-map=%s host-map=%s candidates=%s db=%s"
+          % (narr_path, cmap_path or "-", omap_path or "-", hmap_path or "-",
+             cand_path or "-", db_path or "-"))
 
     labels = {k: dict(v) for k, v in LABELS[a.labels].items()}
     if a.label_map:
