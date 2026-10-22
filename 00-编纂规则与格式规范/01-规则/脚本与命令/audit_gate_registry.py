@@ -185,6 +185,11 @@ REGISTRY = [
          object="05-卷册大纲/ 树内 .md 注释锚多行感知配平：数据驱动家族模式 block（G1 全树 open==close）／begin_end（G2 全树 BEGIN==END，单标记豁免）／single（只判单标记）；T4 未闭合注释；文件级仅 INFO，ROW_MINE／DEEP_ANALYSIS 单锚豁免",
          trigger="任一批次改动 05-卷册大纲 内容后；清理批次前后差分（2026-10-22 立，ADR-0011／TD-022）",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="第三十四件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_anchor_pair_order.py",
+         kind="门禁（BEGIN/END 章内配对，独立计数）",
+         object="05-卷册大纲/ 树内 BEGIN/END 成对锚按**章**配对：排序键＝目录名／文件名节号数值序（禁相对路径字典序，`.10` 不得排在 `.9` 前）；形态覆盖 `FAM:BEGIN`／`FAM:END` 与中文 `FAM:开始`／`FAM:结束`；P1 孤儿 END／P2 未配 BEGIN／P4 未闭合注释；跨章配对拆记为一孤一未配；block 家族（含 close）交由第三十三件判平；ROW_MINE／DEEP_ANALYSIS 不参与",
+         trigger="任一批次改动 05-卷册大纲 的 BEGIN/END 标记后；大纲清理批次收口（2026-10-22 立，TD-022 裁定 6 复核）",
+         selftest="--selftest", in_tests_readme=False),
     dict(no="Git 暂存门禁", script="00-编纂规则与格式规范/01-规则/脚本与命令/git_commit_gate.py",
          kind="门禁", object="Git 暂存区与提交说明：G1 新增路径命中 .gitignore（含 -f 强加）／G2 单个 >5 MB blob（5,242,880 字节）／B2 根目录新条目不在白名单／B3 备份删除／B4 文档含 U+3000／H3 直角引号六码位／H1 提交说明质量（无放行）；批准标记 APPROVED-IGNORED:／APPROVED-BIGFILE:／APPROVED-BY-OWNER: 放行（H1 无放行）",
          trigger="每次 git commit：pre-commit 薄壳自动改正（F1 直角引号弯化／F2 不可见字符全口径／F3 CRLF→LF·BOM，仅文档类）；commit-msg 薄壳阻断核对（G1/G2/B2/B3/B4/H3/H1 + 批准标记）；hook 不入库，重建后须重装，见流程规则“Git 暂存规则”",
@@ -236,8 +241,12 @@ REGISTRY = [
 
 # ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
 # 允许单阶段或逗号分隔多阶段；阶段集合固定为 G0–G5。
-# 本表由 2026-10-22 工程实践基线批首次建立；阶段归属按门禁对象面判断，
-# 逐件核实进度见 01-项目管理/02-工程决策与技术债/技术债登记.md TD-005。
+# 本表由 2026-10-22 工程实践基线批首次建立（按门禁对象面判断）。
+# 2026-10-22 TD-005 批逐件核实 47 件（脚本 docstring／主要判据／实际触发点），
+# 修订 5 处：audit_evidence_level_labels、audit_anchor_resolution（产物→源级，G3）、
+# audit_mail2d_batch、audit_oaa_batch（源级→收口对账，G5）、embed（G3→G3,G4）。
+# 逐件证据见 script/_td005_verify_20261022.md，差异记录见
+# 01-项目管理/02-工程决策与技术债/工程实践复审台账.md “TD-005 逐件核实（2026-10-22）”。
 ALL_STAGES = {"G0", "G1", "G2", "G3", "G4", "G5"}
 STAGE_MAP = {
     "audit_data_integrity.py": "G4",
@@ -245,7 +254,7 @@ STAGE_MAP = {
     "audit_sequence_continuity.py": "G4",
     "visual_regression.mjs": "G4",
     "xref_audit.py": "G4",
-    "audit_evidence_level_labels.py": "G4",
+    "audit_evidence_level_labels.py": "G3",
     "audit_index_structure.py": "G4",
     "assemble_index.py": "G3,G4",
     "outline_writer.py": "G3,G4",
@@ -258,7 +267,7 @@ STAGE_MAP = {
     "audit_person_bio_integrity.py": "G4",
     "audit_renumber_guard.py": "G3",
     "audit_page_version_bump.py": "G5",
-    "audit_anchor_resolution.py": "G4",
+    "audit_anchor_resolution.py": "G3",
     "audit_silent_loss_guard.py": "G3",
     "audit_disk_terminology.py": "G3",
     "audit_gate_registry.py": "G5",
@@ -273,10 +282,11 @@ STAGE_MAP = {
     "audit_engineering_practice.py": "G2,G5",
     "audit_task_lifecycle.py": "G1,G4,G5",
     "audit_anchor_pairs.py": "G3",
-    "audit_mail2d_batch.py": "G3",
-    "audit_oaa_batch.py": "G3",
+    "audit_anchor_pair_order.py": "G3,G4",
+    "audit_mail2d_batch.py": "G5",
+    "audit_oaa_batch.py": "G5",
     "git_commit_gate.py": "G5",
-    "embed.py": "G3",
+    "embed.py": "G3,G4",
     "guard_source_chars.py": "G3",
     "audit_databases.py": "G3",
     "audit_folder_db_integrity.py": "G4",
