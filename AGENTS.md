@@ -187,6 +187,7 @@
 | `provenance_history` 任何写入 | `audit_provenance_dupes.py` | `流程规则.md`“审计表完整性门禁” | 数据库类 |
 | 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
 | register 写库 | `register_waterlock.py probe → acquire → register → release` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
+| F 线开批前（认领清单新鲜度） | `oaa_remap_claims.py --group Fn --check`（存在率／唯一回映率 100% 方可开批；回映用 `--write --apply`） | `F1-F4-全链路规格.md` FR-F13；`ADR-0008` §1.1 | —（回映器，非门禁） |
 | 向 `05-卷册大纲/` 写 ROW_MINE 块（mail2d／OAA 入纲） | `outline_writer.py --selftest` → `--check-only` → `--write`（须配 `--anchor`；dry-run 默认） | `流程规则.md`“入纲写入器规则”；`ADR-0010` | —（写入器，非门禁） |
 | 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | `流程规则.md`“目录页与文档门禁判据索引” | P2-11 |
 | 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | `流程规则.md`“锚解析审计门禁” | 第十九件 |

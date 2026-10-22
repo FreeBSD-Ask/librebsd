@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""apply_fixes.py — 大纲邮件素材审计·把 fix 类判定原地应用到宿主 .md（第4行摘要行替换）
+r"""apply_fixes.py — 大纲邮件素材审计·把 fix 类判定原地应用到宿主 .md（第4行摘要行替换）
 
 原则：
 - 只改 fix-format / fix-text 且给了「新摘要句」的条目；keep/remap/存疑/fix-db 不动文件
@@ -12,6 +12,8 @@
   无条件 `+ "\n"` 会给原本不带尾换行的宿主补 1 字节，而本函数的行数守恒断言
   用 splitlines 计数会把那 1 字节掩盖掉（2026-10-12 b20 65.1、2026-10-13
   b21 65.9 各中招一次，均由差分门禁 G_D0 的 EOF 字节级断言查出）
+- 写回走同目录临时件 + `os.replace` 原子替换（TD-016 D3）；放弃宿主行同时写
+  stdout 与 stderr，函数末尾恒打印“写入／幂等跳过／放弃宿主”总计数（TD-016 D5）
 用法：python apply_fixes.py <host1相对路径> <host2相对路径> ...
 """
 import contextlib
@@ -23,6 +25,10 @@ import re
 import shutil
 import sys
 import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from wo007_idempotency import atomic_write_bytes  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 JUD = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "judgements")
@@ -65,7 +71,7 @@ def load_judgements():
     fix_first = [f for f in filenames if "b1fix_" in os.path.basename(f)]
     rest = [f for f in filenames if "b1fix_" not in os.path.basename(f)]
     for f in rest + fix_first:
-        for l in open(f, encoding="utf-8"):
+        for l in open(f, encoding="utf-8-sig"):
             if l.strip():
                 try:
                     r = json.loads(l)
@@ -81,7 +87,7 @@ def load_judgements():
 def load_fetch():
     fetch = {}
     for f in glob.glob(os.path.join(WORK, "*.fetch.jsonl")):
-        for l in open(f, encoding="utf-8"):
+        for l in open(f, encoding="utf-8-sig"):
             if l.strip():
                 try:
                     r = json.loads(l)
@@ -103,6 +109,18 @@ def load_over22():
             else:
                 print(f"  ! over22 裸 pk 键已忽略（须 db|pk 复合键）: {k}", file=sys.stderr)
     return over22
+
+
+def _emit(line):
+    """双流输出：同一句同时进 stdout 与 stderr（TD-016 D5，2026-10-22）。
+
+    旧实现只在 `file=sys.stderr` 打印放弃宿主行，收口时按 stdout 采集的批次报告
+    因而漏读整宿主停摆（H 线 30 单位“整宿主停摆”被漏报即此机制；工况见
+    `script/_pilot_20261022/theory_pilot_h/PILOT.md` A5 与 F 线 PILOT §九）。
+    两流内容一致：stderr 留明细、stdout 留可计数结论，管道分流采集亦不丢。
+    """
+    print(line)
+    print(line, file=sys.stderr)
 
 
 def main(hosts, dry_run=False):
@@ -270,9 +288,9 @@ def main(hosts, dry_run=False):
         if n_err:
             tot_abandon += 1
             if dry_run:
-                print(f"{rel}: 有 {n_err} 处错误，放弃宿主（dry-run 未写盘）", file=sys.stderr)
+                _emit(f"{rel}: 有 {n_err} 处错误，放弃宿主（dry-run 未写盘）")
             else:
-                print(f"{rel}: 有 {n_err} 处错误，放弃写盘", file=sys.stderr)
+                _emit(f"{rel}: 有 {n_err} 处错误，放弃写盘")
             continue
         tot_apply += n_apply
         tot_skip += n_skip
@@ -285,14 +303,16 @@ def main(hosts, dry_run=False):
             # 且幂等空跑也会凭空产生 diff（b20 65.1／b21 65.9 各中招一次）
             print(f"{rel}: 应用 {n_apply} ｜ 幂等跳过 {n_skip} ｜ 未写盘（行数守恒 {orig_n}）")
             continue
-        with open(path, "w", encoding="utf-8", newline="") as fh:
-            fh.write("\n".join(lines) + ("\n" if had_lf else ""))
+        atomic_write_bytes(path, ("\n".join(lines) + ("\n" if had_lf else "")).encode("utf-8"))
         assert len(lines) == orig_n, f"{rel} 行数漂移 {orig_n}->{len(lines)}"
         print(f"{rel}: 应用 {n_apply} ｜ 幂等跳过 {n_skip} ｜ 行数守恒 {orig_n}"
               f"｜尾换行={'保留' if had_lf else '去除'}")
     if dry_run:
         print(f"将写入 {tot_apply} 条／幂等跳过 {tot_skip} 条／放弃宿主 {tot_abandon} 个"
               f"（dry-run 未写盘）")
+    else:
+        # 总计数恒落 stdout：收口只读 stdout 时也不会漏掉整宿主停摆（TD-016 D5）
+        print(f"写入 {tot_apply} 条／幂等跳过 {tot_skip} 条／放弃宿主 {tot_abandon} 个")
     return tot_apply, tot_skip, tot_abandon
 
 
@@ -303,6 +323,8 @@ OLD_SUMM = "原摘要正文，用于自测校验定位路径。引用时按原�
 NEW_SUMM = "改写后的摘要正文，用于自测校验替换路径。引用时按原文核对。"
 HOST_TEXT = "\n".join([ANCHOR_LINE, "**证据等级：L3**", "（占位过渡行一）", OLD_SUMM,
                        "（占位过渡行二）"]) + "\n"
+# 锚点漂移夹具：fetch 档案记的锚点行与宿主第 1 行不符 → 走 n_err／放弃宿主分支
+DRIFT_ANCHOR = "<!-- ROW_MINE: freebsd.misc.999 -->"
 
 
 def _put(path, data):
@@ -318,7 +340,7 @@ def _read(path):
         return fh.read()
 
 
-def _make_fixture(jud_rows, fetch=True, text=HOST_TEXT):
+def _make_fixture(jud_rows, fetch=True, text=HOST_TEXT, anchor_line=ANCHOR_LINE):
     root = tempfile.mkdtemp(prefix="oaa_apply_selftest_")
     aud = os.path.join(root, "script", "_db_row_mining", "audit_outline")
     jud_dir, work = os.path.join(aud, "judgements"), os.path.join(aud, "work")
@@ -327,25 +349,40 @@ def _make_fixture(jud_rows, fetch=True, text=HOST_TEXT):
          "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in jud_rows))
     if fetch:
         fb = {"key": f"freebsd|100|{HOST_REL}", "block_type": "block", "level": "L3",
-              "line": 1, "anchor_line": ANCHOR_LINE, "summ_line": OLD_SUMM}
+              "line": 1, "anchor_line": anchor_line, "summ_line": OLD_SUMM}
         _put(os.path.join(work, "t1.fetch.jsonl"), json.dumps(fb, ensure_ascii=False) + "\n")
     return root
 
 
 def _run_fixture(root, dry_run=False):
+    """跑一次 main()，**分别**捕获 stdout 与 stderr，返回 (stdout, stderr)。
+
+    旧实现把两个流重定向进同一个 StringIO，结构上不可能检出“只进 stderr”的
+    静默失败（TD-017 §九）；TD-016 D5 的放弃宿主漏读正是此类缺陷，故必须双缓。
+    """
     global ROOT, JUD, WORK, OVER22
     saved = (ROOT, JUD, WORK, OVER22)
-    buf = io.StringIO()
+    out_buf, err_buf = io.StringIO(), io.StringIO()
     try:
         ROOT = root
         JUD = os.path.join(root, "script", "_db_row_mining", "audit_outline", "judgements")
         WORK = os.path.join(root, "script", "_db_row_mining", "audit_outline", "work")
         OVER22 = os.path.join(WORK, "_over22_fix.json")
-        with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+        with contextlib.redirect_stdout(out_buf), contextlib.redirect_stderr(err_buf):
             main([HOST_REL], dry_run)
     finally:
         ROOT, JUD, WORK, OVER22 = saved
-    return buf.getvalue()
+    return out_buf.getvalue(), err_buf.getvalue()
+
+
+def _abandon_on_stdout(stdout_text, k):
+    """双流判据：stdout 须有宿主级放弃句，且末尾总计恰为“放弃宿主 k 个”。
+
+    这是本 selftest 的核心断言函数——正例用它判 PASS，负例用它判“回退实现须被
+    识破”，故它对“放弃行只进 stderr”必须返回 False（不得写宽）。
+    """
+    host_line = ("放弃写盘" in stdout_text) or ("放弃宿主（dry-run 未写盘）" in stdout_text)
+    return host_line and (f"放弃宿主 {k} 个" in stdout_text)
 
 
 def selftest():
@@ -357,12 +394,12 @@ def selftest():
     try:
         host = os.path.join(root, HOST_REL)
         before = _read(host)
-        out1 = _run_fixture(root)
+        out1, _err1 = _run_fixture(root)
         after1 = _read(host)
         lines = after1.decode("utf-8").splitlines()
         ok = ("应用 1" in out1) and after1 != before and len(lines) == 5 and lines[3] == NEW_SUMM
         cases.append(("正常替换（单行换单行、行数守恒）", ok, out1.strip().splitlines()[-1]))
-        out2 = _run_fixture(root)
+        out2, _err2 = _run_fixture(root)
         after2 = _read(host)
         ok2 = ("幂等跳过 1" in out2) and ("未写盘" in out2) and after2 == after1
         cases.append(("幂等跳过（二次运行不重写盘）", ok2, out2.strip().splitlines()[-1]))
@@ -374,8 +411,8 @@ def selftest():
     try:
         host = os.path.join(root, HOST_REL)
         before = _read(host)
-        out = _run_fixture(root)
-        ok = ("无 fetch 档案" in out) and ("放弃写盘" in out) and _read(host) == before
+        out, err = _run_fixture(root)
+        ok = ("无 fetch 档案" in err) and _abandon_on_stdout(out, 1) and _read(host) == before
         cases.append(("坏 key（无 fetch 档案）→ 整宿主放弃、零写盘", ok,
                       [l for l in out.splitlines() if "放弃" in l][0]))
     finally:
@@ -385,10 +422,43 @@ def selftest():
     try:
         host = os.path.join(root, HOST_REL)
         before = _read(host)
-        out = _run_fixture(root, dry_run=True)
+        out, _err = _run_fixture(root, dry_run=True)
         ok = ("将写入 1 条" in out) and ("放弃宿主 0 个" in out) and _read(host) == before
         cases.append(("--dry-run（计数但不写盘）", ok,
                       [l for l in out.splitlines() if l.startswith("将写入")][0]))
+    finally:
+        shutil.rmtree(root, ignore_errors=True)
+
+    # 正例（双流）：锚点行与 fetch 档案不符 → 整宿主放弃，数量须在 stdout 可见
+    drift = [{"key": f"freebsd|100|{HOST_REL}", "判定": "fix-text", "新摘要句": NEW_SUMM}]
+    root = _make_fixture(drift, anchor_line=DRIFT_ANCHOR)
+    try:
+        host = os.path.join(root, HOST_REL)
+        before = _read(host)
+        out, err = _run_fixture(root)
+        ok = _abandon_on_stdout(out, 1) and ("锚点行不匹配" in err) and _read(host) == before
+        cases.append(("双流：锚点漂移→放弃宿主，stdout 可见计数、stderr 留明细", ok,
+                      [l for l in out.splitlines() if "放弃" in l][0]))
+    finally:
+        shutil.rmtree(root, ignore_errors=True)
+
+    # 负例（双流）：把 _emit 换成“只写 stderr”的替身，模拟实现回退；
+    # 此时上面的判据必须判 FAIL —— 否则本组用例恒 PASS、测不出 TD-016 D5。
+    root = _make_fixture(drift, anchor_line=DRIFT_ANCHOR)
+    try:
+        def _stderr_only(line):
+            print(line, file=sys.stderr)
+
+        saved_emit = globals()["_emit"]
+        globals()["_emit"] = _stderr_only
+        try:
+            out_s, err_s = _run_fixture(root)
+        finally:
+            globals()["_emit"] = saved_emit
+        ok = (not _abandon_on_stdout(out_s, 1)) and ("放弃写盘" in err_s)
+        cases.append(("负例：回退为只写 stderr → stdout 判据须判 FAIL", ok,
+                      "stdout 无放弃行 → 判据 FAIL（符合预期）" if ok else
+                      "判据未识破只进 stderr 的实现（用例失效）"))
     finally:
         shutil.rmtree(root, ignore_errors=True)
 
@@ -397,7 +467,8 @@ def selftest():
         if not ok:
             bad_n += 1
         print(f"[{'PASS' if ok else 'FAIL'}] {title}｜ {detail}")
-    print("覆盖：正常替换、幂等跳过、坏 key 整宿主放弃、--dry-run 零写盘")
+    print("覆盖：正常替换、幂等跳过、坏 key 整宿主放弃、--dry-run 零写盘、"
+          "锚点漂移双流可见、只写 stderr 的回退实现被双流判据判 FAIL")
     print("未覆盖（分支级）：inline 整行替换与尾锚保留、块内双重摘要拦截、纪律串重复拦截")
     print("——三类须更复杂宿主夹具，未纳入；本次三项目标路径均已断言")
     print(f"== selftest {'PASS' if bad_n == 0 else 'FAIL'}：{len(cases) - bad_n}/{len(cases)} 用例通过 ==")

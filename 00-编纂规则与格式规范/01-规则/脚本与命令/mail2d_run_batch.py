@@ -9,7 +9,9 @@
   dump      调 _mail2d_batch_dump.py
   body      抽候选正文（调 _extract_cands_body.py，含截断）
   check     候选/叙述校验（调 _chk_mail2d_cand.py / _chk_mount_narr.py）
-  register  落库：由模板生成并执行（dry → apply），产出 claim_map
+  register  落库：由模板生成并执行（dry → apply），产出 claim_map；
+            `--dry-run` 为严格零写入：只做模板替换与残留计数，**不落生成件**、不执行；
+            不带旗标＝生成并只读演练（历史行为），`--apply` 须门禁（不可与 `--dry-run` 并用）
   outline   大纲回写（**阶段二 2026-10-22 起**）：改调固定脚本 `脚本与命令/outline_writer.py`
             （ADR-0010 执行件；宿主权威＝claim_map.hosts，块级锚点幂等，写点/读点 commonpath 断言，
             全或无回滚），dry → write → 二跑 0。旧模板生成链（gen_outline → _outline_<tag>.py）
@@ -147,7 +149,12 @@ def cmd_check(a):
     return rc
 
 
-def gen_register(sp):
+def gen_register(sp, write=True):
+    """模板替换生成 `_register_<tag>.py`，返回（目标路径, 旧值残留数）。
+
+    `write=False`（`register --dry-run`）只做替换与残留计数、**不落盘**，
+    使 dry-run 保持零写入（模板替换本身不依赖磁盘，故残留判据完全等价）。
+    """
     s = io.open(REG_TPL, encoding="utf-8").read()
     s = s.replace('"review_logs", "fe_b051_candidates.txt"',
                   '"review_logs", "%s_candidates.txt"' % sp["tag"])
@@ -186,7 +193,8 @@ def gen_register(sp):
                   '    _row = m3.execute("SELECT body, subject FROM messages WHERE CAST(id AS BIGINT)=?", [p]).fetchone()\n'
                   '    body = ((_row[0] or "") + "\\n" + (_row[1] or "")) if _row else ""')
     out = os.path.join(HERE, "_register_%s.py" % sp["tag"])
-    io.open(out, "w", encoding="utf-8", newline="\n").write(s)
+    if write:
+        io.open(out, "w", encoding="utf-8", newline="\n").write(s)
     # 残留检查：只看功能常量行，且**仅当本批的库/批号与模板不同**时才算残留
     # （本批库恰为 freebsd-elastic 时，SRCDB 保持原值是正确的，不应误判）
     func = "\n".join(l for l in s.split("\n")
@@ -201,10 +209,19 @@ def gen_register(sp):
 
 def cmd_register(a):
     sp = load(a.tag)
-    out, resid = gen_register(sp)
-    print("[gen] %s（旧值残留 %d）" % (os.path.basename(out), resid))
+    dry = bool(getattr(a, "dry_run", False))
+    if dry and a.apply:
+        raise SystemExit("--dry-run 与 --apply 互斥：dry-run 为零写入，写库须单独跑 --apply")
+    out, resid = gen_register(sp, write=not dry)
+    if dry:
+        print("[gen] （dry-run 未落盘）%s（旧值残留 %d）" % (os.path.basename(out), resid))
+    else:
+        print("[gen] %s（旧值残留 %d）" % (os.path.basename(out), resid))
     if resid:
         raise SystemExit("模板替换有残留，已中止")
+    if dry:
+        # 零写入：无生成件可执行，到此返回（不落文件、不落 _reg_*_out.txt、不写 claim_map）
+        return 0
     cmd = [PY_SYS, out] + (["--apply"] if a.apply else [])
     rc = run(cmd, save="_reg_%s_out.txt" % sp["tag"])
     if a.apply:
@@ -654,6 +671,7 @@ def main():
     q = sub.add_parser("register")
     q.add_argument("--tag", required=True)
     q.add_argument("--apply", action="store_true")
+    q.add_argument("--dry-run", action="store_true")
     q.set_defaults(fn=cmd_register)
     q = sub.add_parser("outline")
     q.add_argument("--tag", required=True)

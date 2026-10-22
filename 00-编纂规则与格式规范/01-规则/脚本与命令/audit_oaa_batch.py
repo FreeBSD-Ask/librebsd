@@ -34,12 +34,42 @@ S3–S5 的作用面＝与分片配对的判读件 ＋ 缺配对的那些分片�
     python audit_oaa_batch.py --shards DIR --judgements DIR [--ledger FILE]
         [--batch TAG] [--key-field pk|id|key] [--reject-synthetic]
     python audit_oaa_batch.py --selftest
+    python audit_oaa_batch.py --reconcile-ledger [--ledger-dir DIR]
+        [--beacon-dir DIR] [--anchors FILE|--snapshot-rev REV|--outline DIR]
+        [--csv PATH] [--fail-on-other]
+
+台账对账（TD-012／FR-11，`--reconcile-ledger`）
+--------------------------------------------
+对“台账合并集”与“四组浮标已审合计”逐条对账（F1–F4 的 317,895 对 318,541 一类
+的 646 条差）。四组浮标只存**宿主级**计数（`beacon.json` 的 `progress`），
+不含被计入的 key 清单，故“已审侧”须由**锚点清单**重建：
+
+* `--anchors FILE`：JSON 数组，元素为 `"<库>|<pk>|<宿主相对路径>"`（与台账同形），
+  即浮标计数当刻的锚点清单；
+* `--snapshot-rev REV`：以 `git grep -o` 只读重建该提交下 `05-卷册大纲/` 的锚点清单
+  （提交须与浮标刷新同刻；给了 `--beacon-dir/tree_prev.json` 时逐宿主校验 n／h，
+  一致率不足即判 FAIL，防止拿错提交当快照）；
+* `--outline DIR`：直接扫现行大纲树（默认口径，路径漂移时仅供诊断）。
+
+差异分类（每类逐条列 key，证据列写 CSV）：
+
+R1 `mail-insight-invisible`  `MAIL_INSIGHT` 块，浮标扫描器只认 `ROW_MINE`，永不计入
+R2 `baseline-unassigned`     key 的宿主不在任何一份认领清单（含路径改名／笔误）
+R3 `orphan-key`              宿主已认领，但该锚点不在快照宿主内（已移除／已迁走）
+R4 `other`                   key 形制异常（无“库|pk|路径”三段），须人工裁
+
+结算式：`净差 = 合并集 − 浮标已审合计`，`未计入 key 数 − 浮标重复计 = 净差`。
+浮标按锚点**出现次数**计数，同一宿主内重复出现的同名锚点会被多计，故两条口径
+相差“重复计”条数——该条数由本命令显式给出，不得拿来凑数。
 
 退出码：0 全 PASS／1 任一 FAIL／2 依赖缺失（目录不存在，或未给必需参数）
 
-依赖：仅标准库。只读，不写任何受审文件。
+依赖：仅标准库（`--snapshot-rev` 另需本机 git）。只读，不写任何受审文件。
 """
 import argparse
+import collections
+import csv
+import hashlib
 import json
 import pathlib
 import re
@@ -53,6 +83,15 @@ sys.stdout.reconfigure(encoding="utf-8")
 EXTS = {".jsonl", ".json", ".tsv"}
 KEY_PRIORITY = ("pk", "id", "key")
 SYNTH_MARK = "pilot-synthetic"
+
+# 台账对账口径
+LEDGER_FILES = ("processed.jsonl", "processed_f1.jsonl", "processed_f2.jsonl",
+                "processed_f3.jsonl", "processed_f4.jsonl")
+CLAIM_GROUPS = ("F1", "F2", "F3", "F4")
+RM_PAT = re.compile(r"ROW_MINE:\s*([\w-]+)\.([\w.]+)\.(\d+)")
+MI_PAT = re.compile(r"<!--\s*MAIL_INSIGHT:\s*([^>]+?)\s*-->")
+CAT_ORDER = ("mail-insight-invisible", "baseline-unassigned", "orphan-key", "other")
+CSV_HEADER = ("key", "category", "group", "ledger_files", "verdict", "batch", "evidence")
 
 
 def _data_files(directory: pathlib.Path):
@@ -408,6 +447,329 @@ def audit(shards_dir: pathlib.Path, judgements_dir: pathlib.Path,
     return rows, stats
 
 
+# ── 台账对账（--reconcile-ledger，TD-012／FR-11）────────────────────────
+def _ledger_index(directory: pathlib.Path):
+    """读合并台账 → ({key: [(件名, 判定, 批次)]}, 各件非空行数, 异常列表)。"""
+    index, rows, errors = {}, {}, []
+    for name in LEDGER_FILES:
+        path = directory / name
+        if not path.is_file():
+            errors.append("%s 不存在" % name)
+            continue
+        records, n_lines, bad = _read_jsonl(path)
+        rows[name] = n_lines
+        for lineno, msg in bad:
+            errors.append("%s:%d %s" % (name, lineno, msg))
+        for rec in records:
+            key = rec.get("key")
+            if not isinstance(key, str):
+                errors.append("%s 有记录缺 key 字段" % name)
+                continue
+            index.setdefault(key, []).append(
+                (name, str(rec.get("判定", "")), str(rec.get("批次", ""))))
+    return index, rows, errors
+
+
+def _host_list(path: pathlib.Path):
+    if not path.is_file():
+        return []
+    return [ln.strip() for ln in path.read_text(encoding="utf-8").splitlines() if ln.strip()]
+
+
+def _anchor_key(db, pk, rel):
+    return "%s|%s|%s" % (db, pk, rel)
+
+
+def _anchors_from_outline(directory: pathlib.Path):
+    """扫大纲树 → (全部出现计数, ROW_MINE 每宿主计数, MAIL_INSIGHT key 集, 异常)。
+
+    只读。`per_host` 只计 `ROW_MINE`（浮标 scan_outline 同口径），`MAIL_INSIGHT`
+    另存，故能同时给出“块仍在盘”与“浮标可见锚点数”两件事。
+    """
+    occ = collections.Counter()
+    per_host = collections.Counter()
+    mi_keys = set()
+    if not directory.is_dir():
+        return occ, per_host, mi_keys, ["大纲目录不存在：%s" % directory]
+    for path in sorted(directory.rglob("*.md")):
+        try:
+            txt = path.read_text(encoding="utf-8", errors="replace")
+        except OSError as ex:
+            return occ, per_host, mi_keys, ["读取失败 %s：%s" % (path, ex)]
+        rel = path.relative_to(directory.parent).as_posix()
+        for m in RM_PAT.finditer(txt):
+            occ[_anchor_key(m.group(1), m.group(3), rel)] += 1
+            per_host[rel] += 1
+        for m in MI_PAT.finditer(txt):
+            key = _anchor_key("MAIL_INSIGHT", m.group(1).strip(), rel)
+            occ[key] += 1
+            mi_keys.add(key)
+    return occ, per_host, mi_keys, []
+
+
+def _anchors_from_file(path: pathlib.Path):
+    """读锚点清单 JSON（数组，元素形如 `<库>|<pk>|<宿主>`）→ 同 outline 口径。"""
+    occ, per_host, mi_keys = collections.Counter(), collections.Counter(), set()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as ex:
+        return occ, per_host, mi_keys, ["锚点清单读取失败：%s" % ex]
+    if not isinstance(data, list):
+        return occ, per_host, mi_keys, ["锚点清单须为 JSON 数组"]
+    for key in data:
+        if not isinstance(key, str) or key.count("|") < 2:
+            return occ, per_host, mi_keys, ["锚点清单有非“库|pk|宿主”元素：%r" % (key,)]
+        occ[key] += 1
+        if key.startswith("MAIL_INSIGHT|"):
+            mi_keys.add(key)
+        else:
+            per_host[key.split("|", 2)[2]] += 1
+    return occ, per_host, mi_keys, []
+
+
+def _anchors_from_git(rev: str, repo_root: pathlib.Path):
+    """以 git grep -o 只读重建某提交下 `05-卷册大纲/` 的锚点清单。"""
+    occ, per_host, mi_keys = collections.Counter(), collections.Counter(), set()
+    for pat, kind in ((r"ROW_MINE:[^>]*", "rm"), (r"MAIL_INSIGHT:[^>]*", "mi")):
+        proc = subprocess.run(["git", "grep", "-o", "-E", pat, rev, "--", "05-卷册大纲"],
+                              cwd=str(repo_root), capture_output=True)
+        if proc.returncode not in (0, 1):
+            return occ, per_host, mi_keys, ["git grep 失败（rev=%s）：%s"
+                                            % (rev, proc.stderr.decode("utf-8",
+                                                                       "replace").strip())]
+        for line in proc.stdout.decode("utf-8", "replace").splitlines():
+            _rev, sep, rest = line.partition(":")
+            if not sep or not rest:
+                continue
+            idx = rest.find("ROW_MINE:" if kind == "rm" else "MAIL_INSIGHT:")
+            if idx <= 0:
+                continue
+            rel, match = rest[:idx].rstrip(":"), rest[idx:]
+            if kind == "rm":
+                m = RM_PAT.search(match)
+                if not m:
+                    continue
+                key = _anchor_key(m.group(1), m.group(3), rel)
+                per_host[rel] += 1
+            else:
+                mid = match.split("MAIL_INSIGHT:", 1)[1].strip().rstrip("-").strip()
+                if not mid:
+                    continue
+                key = _anchor_key("MAIL_INSIGHT", mid, rel)
+                mi_keys.add(key)
+            occ[key] += 1
+    return occ, per_host, mi_keys, []
+
+
+def _tree_prev_check(beacon_dir: pathlib.Path):
+    """读 tree_prev.json（浮标刷新当刻的逐宿主 n／h 指纹）；无则 None。"""
+    path = beacon_dir / "tree_prev.json"
+    if not path.is_file():
+        return None
+    try:
+        prev = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    if not isinstance(prev, dict) or not prev:
+        return None
+    return prev
+
+
+def _anchor_hashes(occ, mi_keys=()):
+    """→ ({宿主: (n, h)})，只计 ROW_MINE；h 与 oaa_beacon.scan_outline 同法。"""
+    per = collections.defaultdict(list)
+    for key, n in occ.items():
+        if key in mi_keys:
+            continue
+        db_pk, rel = key.rsplit("|", 1)
+        per[rel].extend([db_pk] * n)
+    out = {}
+    for rel, anchors in per.items():
+        anchors.sort()
+        out[rel] = (len(anchors),
+                    hashlib.sha1(",".join(anchors).encode("utf-8")).hexdigest()[:12])
+    return out
+
+
+def _classify_key(key, claims, unclaimed, occ, per_host, host_keys):
+    """→ (类别, 组, 证据)。判定顺序：形制 → MAIL_INSIGHT → 认领 → 锚点。"""
+    parts = key.split("|", 2)
+    if (len(parts) != 3 or not all(parts) or not re.match(r"^[A-Za-z0-9_-]+\|", key)
+            or not parts[2].startswith("05-卷册大纲/")):
+        return "other", "", "key 形制异常（无“库|pk|05-卷册大纲/路径”三段形制，须人工裁）"
+    db, _pk, rel = parts
+    group = ""
+    for g in CLAIM_GROUPS:
+        if rel in claims.get(g, ()):
+            group = g
+            break
+    if db == "MAIL_INSIGHT":
+        return ("mail-insight-invisible", group,
+                "MAIL_INSIGHT 块：浮标扫描器只认 ROW_MINE，块永不计入已审；"
+                + ("宿主组=%s；块仍在快照宿主内" % group if occ.get(key, 0)
+                   else "宿主组=%s；块已不在快照宿主内" % group if group
+                   else "宿主亦未归组"))
+    if not group:
+        return ("baseline-unassigned", "",
+                "宿主不在任何认领清单（claims_F1..F4 与 UNCLAIMED 均无）；"
+                + ("该路径不在快照大纲树内" if rel not in per_host else "该路径在快照树内但未被认领"))
+    if occ.get(key, 0) == 0:
+        n = per_host.get(rel, 0)
+        return ("orphan-key", group,
+                "宿主组=%s；快照宿主锚点 n=%d；台账该宿主 key M=%d；M−n=%+d"
+                % (group, n, host_keys[rel], host_keys[rel] - n))
+    return ("other", group, "锚点在快照宿主内却未计入（计数逻辑不一致，须人工核）")
+
+
+def cmd_reconcile(ledger_dir: pathlib.Path, beacon_dir: pathlib.Path,
+                  anchors: pathlib.Path = None, snapshot_rev: str = None,
+                  outline: pathlib.Path = None, csv_path: pathlib.Path = None,
+                  fail_on_other: bool = False):
+    """对账主流程。返回退出码（0 结算闭合／1 FAIL／2 依赖缺失）。"""
+    import collections
+    fails = []
+    print("=" * 72)
+    print("OAA 台账对账（--reconcile-ledger，TD-012／FR-11）")
+    print("=" * 72)
+
+    if not ledger_dir.is_dir():
+        print("  依赖缺失：台账目录不存在 %s" % ledger_dir)
+        return 2
+    index, row_counts, ledger_errors = _ledger_index(ledger_dir)
+    merged = set(index)
+    print("  台账件行数：%s" % "｜".join("%s %d" % (n, row_counts[n]) for n in LEDGER_FILES
+                                       if n in row_counts))
+    print("  台账合并集（去重 key）：%d" % len(merged))
+    for msg in ledger_errors:
+        fails.append("台账读取异常：%s" % msg)
+
+    beacon_json = beacon_dir / "beacon.json"
+    if not beacon_json.is_file():
+        print("  依赖缺失：浮标不存在 %s" % beacon_json)
+        return 2
+    try:
+        beacon = json.loads(beacon_json.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as ex:
+        print("  依赖缺失：浮标读取失败 %s" % ex)
+        return 2
+    progress = beacon.get("progress", {})
+    report = {g: int((progress.get(g) or {}).get("done", 0)) for g in CLAIM_GROUPS}
+    report_total = sum(report.values())
+    print("  浮标已审合计（四组）：%d（%s）｜beacon.totals.done %s"
+          % (report_total, "｜".join("%s %d" % (g, report[g]) for g in CLAIM_GROUPS),
+             beacon.get("totals", {}).get("done")))
+
+    claims, unclaimed = {}, set()
+    for g in CLAIM_GROUPS:
+        claims[g] = set(_host_list(beacon_dir / ("claims_%s.txt" % g)))
+    unclaimed = set(_host_list(beacon_dir / "claims_UNCLAIMED.txt"))
+    print("  认领清单宿主：%s｜未归组 %d"
+          % ("｜".join("%s %d" % (g, len(claims[g])) for g in CLAIM_GROUPS), len(unclaimed)))
+
+    if anchors is None and not snapshot_rev and outline is None:
+        print("  依赖缺失：须给 --anchors／--snapshot-rev／--outline 之一（三选一）")
+        return 2
+    if anchors is not None:
+        occ, per_host, mi_keys, err = _anchors_from_file(anchors)
+        src = "锚点清单 %s" % anchors
+    elif snapshot_rev:
+        occ, per_host, mi_keys, err = _anchors_from_git(snapshot_rev, pathlib.Path.cwd())
+        src = "git %s @ 05-卷册大纲" % snapshot_rev[:9]
+    else:
+        occ, per_host, mi_keys, err = _anchors_from_outline(outline)
+        src = "现行大纲树 %s（路径漂移时仅供诊断）" % outline
+    if err:
+        fails += err
+        print("  锚点清单不可用：%s" % "；".join(err))
+        return 2
+    print("  锚点清单：%s｜宿主 %d｜ROW_MINE %d ｜MAIL_INSIGHT %d"
+          % (src, len(per_host), sum(per_host.values()), len(mi_keys)))
+
+    prev = _tree_prev_check(beacon_dir)
+    if snapshot_rev and prev:
+        mine = _anchor_hashes(occ, mi_keys)
+        n_ok = sum(1 for r, v in prev.items() if mine.get(r, (None,))[0] == v.get("n"))
+        h_ok = sum(1 for r, v in prev.items() if mine.get(r, (None, None))[1] == v.get("h"))
+        print("  tree_prev 校验：n 一致 %d／%d，h 一致 %d／%d"
+              % (n_ok, len(prev), h_ok, len(prev)))
+        if n_ok != len(prev) or h_ok != len(prev):
+            fails.append("tree_prev 校验不一致：锚点清单与浮标刷新当刻不同源"
+                         "（n %d／%d，h %d／%d）" % (n_ok, len(prev), h_ok, len(prev)))
+
+    # 复原已审侧：逐个 ROW_MINE 锚点出现，key ∈ 合并集即计入（MAIL_INSIGHT 不计）
+    occ_done = collections.Counter()
+    counted = set()
+    dup_keys = []
+    for key, n in occ.items():
+        if key in mi_keys or key not in merged:
+            continue
+        counted.add(key)
+        rel = key.split("|", 2)[2]
+        for g in CLAIM_GROUPS:
+            if rel in claims[g]:
+                occ_done[g] += n
+                break
+        if n > 1:
+            dup_keys.append((key, n))
+    print("  重建已审合计（出现次）：%d（%s）"
+          % (sum(occ_done.values()),
+             "｜".join("%s %d" % (g, occ_done[g]) for g in CLAIM_GROUPS)))
+    print("  重建已审（去重 key）：%d｜浮标重复计：%d"
+          % (len(counted), sum(occ_done.values()) - len(counted)))
+    if sum(occ_done.values()) != report_total:
+        fails.append("重建已审 %d ≠ 浮标 %d（锚点清单非同刻或浮标已陈旧）"
+                     % (sum(occ_done.values()), report_total))
+
+    uncounted = merged - counted
+    host_keys = collections.Counter(k.split("|", 2)[2] for k in merged if k.count("|") >= 2)
+    rows, cat = [], collections.Counter()
+    for key in sorted(uncounted):
+        category, group, evidence = _classify_key(
+            key, claims, unclaimed, occ, per_host, host_keys)
+        rec = index.get(key) or [("", "", "")]
+        cat[category] += 1
+        rows.append((key, category, group, ";".join(sorted({r[0] for r in rec if r[0]})),
+                     rec[0][1], rec[0][2], evidence))
+
+    if csv_path is not None:
+        csv_path.parent.mkdir(parents=True, exist_ok=True)
+        with csv_path.open("w", encoding="utf-8", newline="") as fh:
+            w = csv.writer(fh, lineterminator="\n")
+            w.writerow(CSV_HEADER)
+            w.writerows(rows)
+        print("  逐条差异已落：%s（%d 行＋表头）" % (csv_path, len(rows)))
+
+    print("-" * 72)
+    for category in CAT_ORDER:
+        print("  [%-23s] %6d 条" % (category, cat[category]))
+    net = len(merged) - report_total
+    dup = sum(occ_done.values()) - len(counted)
+    print("  未计入 key 合计 %d ＝ %s" % (len(rows),
+                                       "＋".join(str(cat[c]) for c in CAT_ORDER)))
+    print("  净差（合并集 − 浮标已审）%d ＝ 未计入 %d − 浮标重复计 %d"
+          % (net, len(rows), dup))
+    for key, n in dup_keys:
+        print("  重复计明细：%s 在宿主内出现 %d 次" % (key, n))
+
+    if len(rows) - dup != net:
+        fails.append("结算不闭合：未计入 %d − 重复计 %d ≠ 净差 %d"
+                     % (len(rows), dup, net))
+    else:
+        print("  结算闭合：未计入 %d − 重复计 %d ＝ 净差 %d ✅" % (len(rows), dup, net))
+    if fails:
+        print("-" * 72)
+        for msg in fails:
+            print("  [FAIL] %s" % msg)
+    other = cat["other"]
+    if other:
+        print("  ⚠ other %d 条须人工裁（逐条见 %s）"
+              % (other, csv_path or "未给 --csv，故未落盘"))
+        if fail_on_other:
+            fails.append("other %d 条（--fail-on-other）" % other)
+    print("=" * 72)
+    return 1 if fails else 0
+
+
 def _report(rows, title):
     print("=" * 72)
     print(title)
@@ -649,6 +1011,86 @@ def _expect(title, case_dir, failures, mutate=None, ledger=True, batch="f1_b12",
     return shards, judg, code, marks, out
 
 
+def _write_reconcile_fixture(root: pathlib.Path):
+    """造台账对账夹具：六条 key 覆盖四类差异 ＋ 一处宿主内重复锚点（重复计 1）。"""
+    ledger = root / "ledger"
+    beacon = root / "beacon"
+    ledger.mkdir(parents=True, exist_ok=True)
+    beacon.mkdir(parents=True, exist_ok=True)
+    host = "05-卷册大纲/f1_host.md"
+    other = "05-卷册大纲/unclaimed_host.md"
+    base = [{"key": "db1|1|" + host, "判定": "keep", "批次": "b01"},
+            {"key": "db1|9|" + host, "判定": "remap-removed", "批次": "b02"},
+            {"key": "NOTAKEY", "判定": "存疑", "批次": "b03"}]
+    f1 = [{"key": "db1|2|" + host, "判定": "fix-text", "批次": "f1b01"},
+          {"key": "dbX|7|" + other, "判定": "keep", "批次": "f1b01"},
+          {"key": "MAIL_INSIGHT|m1|" + host, "判定": "keep", "批次": "f1b01"}]
+    for name, recs in (("processed.jsonl", base), ("processed_f1.jsonl", f1),
+                       ("processed_f2.jsonl", []), ("processed_f3.jsonl", []),
+                       ("processed_f4.jsonl", [])):
+        (ledger / name).write_text(
+            "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
+    (beacon / "claims_F1.txt").write_text(host + "\n", encoding="utf-8")
+    for g in ("F2", "F3", "F4"):
+        (beacon / ("claims_%s.txt" % g)).write_text("", encoding="utf-8")
+    (beacon / "claims_UNCLAIMED.txt").write_text("", encoding="utf-8")
+    beacon_obj = {"progress": {"F1": {"done": 3}, "F2": {"done": 0},
+                               "F3": {"done": 0}, "F4": {"done": 0}},
+                  "totals": {"done": 6, "pending": 0, "anchors_total": 3}}
+    (beacon / "beacon.json").write_text(
+        json.dumps(beacon_obj, ensure_ascii=False, indent=1), encoding="utf-8")
+    # 锚点清单：db1|1 与 db1|2 已审；db1|2 在宿主内出现两次 → 浮标重复计 1
+    anchors = ["db1|1|" + host, "db1|2|" + host, "db1|2|" + host]
+    (root / "anchors.json").write_text(
+        json.dumps(anchors, ensure_ascii=False), encoding="utf-8")
+    return ledger, beacon, root / "anchors.json"
+
+
+def _run_reconcile(ledger, beacon, anchors, csv_path, extra=()):
+    cmd = [sys.executable, str(pathlib.Path(__file__).resolve()),
+           "--reconcile-ledger", "--ledger-dir", str(ledger),
+           "--beacon-dir", str(beacon), "--anchors", str(anchors),
+           "--csv", str(csv_path)] + list(extra)
+    proc = subprocess.run(cmd, capture_output=True, text=True,
+                          encoding="utf-8", errors="replace")
+    return proc.returncode, proc.stdout + proc.stderr
+
+
+def _expect_reconcile(title, case_dir, failures):
+    """一枚夹具：四类各 1 条、重复计 1 条、结算闭合，并逐项校验 CSV。"""
+    ledger, beacon, anchors = _write_reconcile_fixture(case_dir)
+    csv_path = case_dir / "diff.csv"
+    code, out = _run_reconcile(ledger, beacon, anchors, csv_path)
+    print("· %-22s 退出码 %d" % (title, code))
+    if code != 0:
+        failures.append("%s 退出码 %d≠0（%s）" % (title, code, out.strip()[-200:]))
+    want = {"mail-insight-invisible": 1, "baseline-unassigned": 1,
+            "orphan-key": 1, "other": 1}
+    for category, n in want.items():
+        if not re.search(r"\[\s*%s\s*\]\s+%d 条" % (re.escape(category), n), out):
+            failures.append("%s 未命中类别 %s（判据失效或计数≠%d）"
+                            % (title, category, n))
+    if "结算闭合" not in out:
+        failures.append("%s 结算未闭合（未计入 − 重复计 ≠ 净差）" % title)
+    if not csv_path.is_file():
+        failures.append("%s 未落 CSV" % title)
+        return code, out, csv_path
+    rows = list(csv.reader(csv_path.read_text(encoding="utf-8").splitlines()))
+    if rows[0] != list(CSV_HEADER):
+        failures.append("%s CSV 表头不符：%s" % (title, rows[0]))
+    body = rows[1:]
+    if len(body) != 4:
+        failures.append("%s CSV 应为 4 行，实为 %d" % (title, len(body)))
+    cats = collections.Counter(r[1] for r in body if len(r) > 1)
+    for category, n in want.items():
+        if cats[category] != n:
+            failures.append("%s CSV 类别 %s 计数 %d≠%d"
+                            % (title, category, cats[category], n))
+    if not all(r[6] for r in body if len(r) > 6):
+        failures.append("%s CSV 有证据列为空的行" % title)
+    return code, out, csv_path
+
+
 def cmd_selftest():
     failures = []
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="oaabatch_"))
@@ -691,6 +1133,24 @@ def cmd_selftest():
         _expect("synthetic 拒绝", tmp / "case_08b", failures,
                 mutate=_mutate_synthetic, reject_synthetic=True,
                 want_exit=1, want_fail=("S7",))
+        # 台账对账：四类差异各 1 条 ＋ 宿主内重复锚点 1，结算须闭合且 CSV 逐项对上
+        _expect_reconcile("台账对账四类命中", tmp / "rec_01", failures)
+        # 负向一：浮标已审与重建不符须 FAIL（不得空转 PASS）
+        _l, _b, _a = _write_reconcile_fixture(tmp / "rec_02")
+        bj = json.loads((_b / "beacon.json").read_text(encoding="utf-8"))
+        bj["progress"]["F1"]["done"] = 99
+        (_b / "beacon.json").write_text(json.dumps(bj, ensure_ascii=False), encoding="utf-8")
+        code, out = _run_reconcile(_l, _b, _a, tmp / "rec_02" / "d.csv")
+        print("· %-22s 退出码 %d" % ("台账对账浮标不符", code))
+        if code != 1 or "重建已审" not in out:
+            failures.append("台账对账浮标不符未判 FAIL（退出码 %d）" % code)
+        # 负向二：--fail-on-other 时 other 非空即 FAIL
+        _l2, _b2, _a2 = _write_reconcile_fixture(tmp / "rec_03")
+        code, out = _run_reconcile(_l2, _b2, _a2, tmp / "rec_03" / "d.csv",
+                                   ("--fail-on-other",))
+        print("· %-22s 退出码 %d" % ("台账对账 other 即 FAIL", code))
+        if code != 1 or "other" not in out:
+            failures.append("--fail-on-other 未判 FAIL（退出码 %d）" % code)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
@@ -701,7 +1161,8 @@ def cmd_selftest():
         return 1
     print("  ✅ 判据非空自检通过：正样本 0 FAIL；缺判读件不得空转／批外件过滤／"
           "pk/key 同存自动采用／候选字段皆不等／synthetic 拒绝五类新夹具与行数不符／"
-          "坏 JSON／重复 key 既有夹具均命中，退出码 0／1 正确")
+          "坏 JSON／重复 key 既有夹具均命中；台账对账四类差异＋重复计结算闭合、"
+          "浮标不符与 --fail-on-other 双双判红，退出码 0／1 正确")
     return 0
 
 
@@ -719,14 +1180,42 @@ def main():
                     help="判读行含 pilot-synthetic 或文件名含 pilot 即 FAIL"
                          "（默认关闭，生产收口建议开启）")
     ap.add_argument("--selftest", action="store_true", help="判据非空自检")
+    ap.add_argument("--reconcile-ledger", action="store_true", dest="reconcile",
+                    help="台账合并集与四组浮标已审逐条对账（TD-012／FR-11）")
+    ap.add_argument("--ledger-dir", metavar="DIR",
+                    help="台账目录（默认 script/_db_row_mining/audit_outline）")
+    ap.add_argument("--beacon-dir", metavar="DIR", help="浮标目录（默认 <台账目录>/beacon）")
+    ap.add_argument("--anchors", metavar="FILE",
+                    help="锚点清单 JSON（元素形如“库|pk|宿主”，浮标计数当刻）")
+    ap.add_argument("--snapshot-rev", metavar="REV",
+                    help="以 git 重建该提交下 05-卷册大纲/ 的锚点清单（须与浮标同刻）")
+    ap.add_argument("--outline", metavar="DIR",
+                    help="现行大纲目录（仅在既无 --anchors 亦无 --snapshot-rev 时使用）")
+    ap.add_argument("--csv", metavar="PATH", help="逐条差异落 CSV 的路径")
+    ap.add_argument("--fail-on-other", action="store_true",
+                    help="other 类非空即判 FAIL（默认只告警，因 other 须人工裁）")
     args = ap.parse_args()
 
     if args.selftest:
         return cmd_selftest()
+    if args.reconcile:
+        root = pathlib.Path(__file__).resolve().parents[3]
+        ledger_dir = (pathlib.Path(args.ledger_dir) if args.ledger_dir
+                      else root / "script" / "_db_row_mining" / "audit_outline")
+        beacon_dir = (pathlib.Path(args.beacon_dir) if args.beacon_dir
+                      else ledger_dir / "beacon")
+        return cmd_reconcile(
+            ledger_dir, beacon_dir,
+            anchors=pathlib.Path(args.anchors) if args.anchors else None,
+            snapshot_rev=args.snapshot_rev,
+            outline=pathlib.Path(args.outline) if args.outline else None,
+            csv_path=pathlib.Path(args.csv) if args.csv else None,
+            fail_on_other=args.fail_on_other)
     if not args.shards or not args.judgements:
         print("用法：audit_oaa_batch.py --shards DIR --judgements DIR "
               "[--ledger FILE] [--batch TAG] [--key-field pk|id|key] "
-              "[--reject-synthetic]｜--selftest", file=sys.stderr)
+              "[--reject-synthetic]｜--selftest｜--reconcile-ledger "
+              "[--snapshot-rev REV] [--csv PATH]", file=sys.stderr)
         return 2
 
     shards = pathlib.Path(args.shards)

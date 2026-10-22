@@ -24,7 +24,9 @@ write_guard()；不需库名／术语归一化的场合用 write_text_lf()。兜
     write_guard(path, t)          # 推荐：库名＋术语＋LF 三归一
     # 或：write_text_lf(path, t)  # 仅强制 LF
 """
+import os
 import re
+import tempfile
 
 # 全部自动增补块的标记模式
 BLOCK_MARKS = [
@@ -77,8 +79,13 @@ def existing_pks(text: str, mark: str, source_prefix: str) -> set:
 
     例：existing_pks(t, "ROW_MINE", r"freebsd-hubs\.messages\.")
     供写回脚本过滤待写批次（已存在跳过、仅写缺失），实现真幂等。
+
+    ⚠️ 非数字 pk 教训（2026-10-22，TD-023 抽审）：旧实现把尾部捕获写死为 `(\d+)`，
+    对 `login-zazhi.articles.CL-1-128` 一类“前缀后接非数字键”的锚恒返回空集，
+    令批内 login 入纲脚本每跑必重复追加（82 组高频重复的直接成因）。
+    现改为捕获 `[\w.\-]+`，数字键行为不变，非数字键不再漏判。
     """
-    pat = r"<!--\s*/?\s*" + re.escape(mark) + r"\s*:\s*" + source_prefix + r"(\d+)\s*-->"
+    pat = r"<!--\s*/?\s*" + re.escape(mark) + r"\s*:\s*" + source_prefix + r"([\w.\-]+)\s*-->"
     return set(re.findall(pat, text))
 
 
@@ -110,23 +117,61 @@ def normalize_dbnames(text: str, repo: str = None) -> str:
     return text
 
 
+def atomic_write_bytes(path: str, data: bytes):
+    """原子写盘：同目录临时件 → 写入 → flush + fsync → os.replace，异常即清理临时件。
+
+    TD-016 D3（2026-10-22）：旧实现直接 `open(path, "w")` 覆写目标件，写入中途
+    异常（磁盘满、进程被杀、编码错）会在目标路径留下半制品；原子替换保证目标件
+    要么是旧全文、要么是新全文，不存在半写状态。
+    本函数**不改动任何字节**：编码与 CRLF／库名／术语归一由调用方（write_guard／
+    write_text_lf）先做好，此处只负责把给定字节整体落盘。
+    """
+    directory = os.path.dirname(os.path.abspath(path))
+    fd, tmp = tempfile.mkstemp(dir=directory, prefix=".wo007_", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "wb") as f:
+            f.write(data)
+            f.flush()
+            os.fsync(f.fileno())
+        if os.path.exists(path):
+            # mkstemp 建的临时件是 0600：沿用原权限位，免替换后权限收窄
+            try:
+                os.chmod(tmp, os.stat(path).st_mode & 0o777)
+            except OSError:
+                pass
+        os.replace(tmp, path)
+    except BaseException:
+        # 临时件若被上面的 chmod 复制成只读，Windows 上 unlink 会被拒；先复位可写位
+        try:
+            os.chmod(tmp, 0o600)
+        except OSError:
+            pass
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+        raise
+
+
 def write_text_lf(path: str, text: str, encoding: str = "utf-8"):
     """LF 安全写盘：二进制写入，彻底绕开文本模式的换行翻译。
 
     用于不需库名／术语归一化的场合；写入前把 CRLF 与孤立 CR 一并归一为 LF。
+    落盘走 atomic_write_bytes()（TD-016 D3），字节结果与旧实现逐字节相同。
     返回 (True, applied_desc)。
     """
     applied = []
     if "\r" in text:
         text = text.replace("\r\n", "\n").replace("\r", "\n")
         applied.append("crlf")
-    with open(path, "wb") as f:
-        f.write(text.encode(encoding))
+    atomic_write_bytes(path, text.encode(encoding))
     return True, applied
 
 
 def write_guard(path: str, new_text: str, repo: str = None):
     """写盘统一入口：normalize 库名 + 术语 + 强制 UTF-8 无 BOM + LF。
+
+    落盘走 atomic_write_bytes()（TD-016 D3），字节结果与旧实现逐字节相同。
     返回 (written_bool, guards_applied_desc)。"""
     applied = []
     if normalize_needed(new_text):
@@ -139,8 +184,7 @@ def write_guard(path: str, new_text: str, repo: str = None):
     if "\r" in new_text:
         new_text = new_text.replace("\r\n", "\n").replace("\r", "\n")
         applied.append("crlf")
-    with open(path, "w", encoding="utf-8", newline="\n") as f:
-        f.write(new_text)
+    atomic_write_bytes(path, new_text.encode("utf-8"))
     return True, applied
 
 

@@ -527,9 +527,11 @@ def build_plan(a):
         return counts, cids, where
 
     have, mismatch, new_total, crossfile = 0, 0, 0, 0
+    seen_keys = set()
     for host in sorted(by_host):
         items = by_host[host]
         counts, cids, where = anchors_for(host)
+        seen_keys |= set(counts)
         keep = []
         for it in items:
             k = (it["lib"], it["pk"])
@@ -557,10 +559,19 @@ def build_plan(a):
     print("[plan] 计划 %d | 已存在 %d（claim_id 不符 %d；非权威文件命中 %d）| 新增 %d | "
           "判据=块级锚点(扫描面∪权威宿主)"
           % (len(plan), have, mismatch, crossfile, new_total))
-    distinct_all = sum(len(c) for c, _i, _w in scan_cache.values())
+    distinct_all = len(seen_keys)          # 有效判重集合规模（扫描面 ∪ 权威宿主自身文件）
     if distinct_all == 0 and new_total > 0:
-        print("[warn] 扫描面内 0 个既有锚点而本批新增 %d——幂等判据无对照（首写章节目录属正常；"
-              "若该章已有块，请检查 --scan-root 指向）" % new_total)
+        msg = ("[warn] 有效判重集合内 0 个既有锚点而本批新增 %d——幂等判据无对照"
+               "（首写章节目录属正常；若该章已有块，请检查 --scan-root 指向）" % new_total)
+        if scan_root_fixed and not a.allow_empty_scan:
+            if a.write:
+                raise Abort("[check] --scan-root 扫描面内 0 个既有锚点（含权威宿主自身）而本批新增 %d："
+                            "显式扫描面无对照，拒绝写入（如确属首写章节目录，加 --allow-empty-scan）"
+                            % new_total)
+            print(msg)
+            print("[info] 该配置下 --write 将拒写（加 --allow-empty-scan 放行）")
+        else:
+            print(msg)
 
     if a.host:
         host_rel_want = norm_host(a.host)
@@ -589,6 +600,7 @@ def do_write(st, a):
     originals, written, log_rows = {}, [], []
     ledger_fh = None
     ledger_existed = os.path.exists(st["ledger"])
+    ledger_size_before = os.path.getsize(st["ledger"]) if ledger_existed else 0
     if a.write:
         # 台账可写性前置：打不开即停（零写入，不进入宿主写入环）
         try:
@@ -596,8 +608,10 @@ def do_write(st, a):
         except OSError as ex:
             raise Abort("[check] 台账不可写：%s（%s）——零写入" % (st["ledger"], ex))
 
-    def _close_ledger():
-        """关台账；失败路径不得留下本次新建的空台账（R2：零写入须字面成立）。"""
+    def _close_ledger(failed=False):
+        """关台账；失败路径不得留下本次新建的空台账（R2：零写入须字面成立）。
+        措辞按路径区分（N-b）：失败路径标「（失败路径）」且该行先于 [abort] 出现；
+        成功零行场景报中性文案。"""
         nonlocal ledger_fh
         if ledger_fh is not None:
             ledger_fh.close()
@@ -606,7 +620,8 @@ def do_write(st, a):
             try:
                 if os.path.exists(st["ledger"]) and os.path.getsize(st["ledger"]) == 0:
                     os.remove(st["ledger"])
-                    print("[cleanup] 已删除本次新建的空台账：%s" % st["ledger"])
+                    print("[cleanup]%s 已删除本次运行新建且无记录的空台账：%s"
+                          % ("（失败路径）" if failed else "", st["ledger"]))
             except OSError:
                 pass
 
@@ -644,11 +659,11 @@ def do_write(st, a):
                                  "note": it["nar"].strip()[:80]})
     except Abort:
         _rollback(originals, written, st["root"])
-        _close_ledger()
+        _close_ledger(failed=True)
         raise
     except OSError as ex:
         _rollback(originals, written, st["root"])
-        _close_ledger()
+        _close_ledger(failed=True)
         raise Abort("[check] 写盘 IO 失败并已回滚：%s" % ex)
     print("[assert] 新增锚点 %d／计划 %d" % (total, st["new_total"]))
     print("[done] 写入 %d 块／%d 宿主%s" % (total, hosts, "" if a.write else "（dry-run 未写盘）"))
@@ -660,7 +675,26 @@ def do_write(st, a):
             os.fsync(ledger_fh.fileno())
         except OSError as ex:
             _rollback(originals, written, st["root"])
-            _close_ledger()
+            size_now = os.path.getsize(st["ledger"]) if os.path.exists(st["ledger"]) else -1
+            _close_ledger(failed=True)
+            # N-c：截断回本次写前基线，杜绝半截台账行
+            if os.path.exists(st["ledger"]) and 0 <= ledger_size_before <= size_now:
+                try:
+                    with io.open(st["ledger"], "r+b") as fh:
+                        fh.truncate(ledger_size_before)
+                    print("[rollback] 台账已截断回写前基线 %d B：%s"
+                          % (ledger_size_before, st["ledger"]))
+                except OSError as e2:
+                    print("[warn] 台账截断失败，请人工核对：%s" % e2)
+            if not ledger_existed:
+                # E-c：新建台账被截成 0 字节时，仍须清理（R2 契约：失败路径不留空台账）
+                try:
+                    if os.path.exists(st["ledger"]) and os.path.getsize(st["ledger"]) == 0:
+                        os.remove(st["ledger"])
+                        print("[cleanup]（失败路径）已删除被截断为空的本次新建台账：%s"
+                              % st["ledger"])
+                except OSError:
+                    pass
             raise Abort("[check] 台账写入失败并已回滚宿主：%s（%s）" % (st["ledger"], ex))
         _close_ledger()
         if log_rows:
@@ -930,12 +964,88 @@ def selftest():
         else:
             ok = False
             print("[selftest] T19b 新建空台账已清理 FAIL")
-        # T20 扫描面无既有锚而新增>0 → 可见 warn（R6）
+        # T20 默认扫描面内零既有锚且新增>0 → 可见 warn（R6；显式 --scan-root 场景见 T21 拒写）
+        d2 = os.path.join(outs, "第02卷-x", "第002章-z", "002.1-w")
+        os.makedirs(d2, exist_ok=True)
+        host3 = os.path.join(d2, "002.1.1-c.md")
+        host3rel = "05-卷册大纲/第02卷-x/第002章-z/002.1-w/002.1.1-c.md"
+        io.open(host3, "w", encoding="utf-8", newline="\n").write("正文 C（空扫描面）。\n")
+        io.open(os.path.join(inp, "claim_map_ch2.json"), "w", encoding="utf-8",
+                newline="\n").write(json.dumps(
+                    {"2001": {"claim_id": "CL-RM-902001", "hosts": [host3rel], "lib": "stlib"}},
+                    ensure_ascii=False, indent=1))
+        io.open(os.path.join(inp, "narr_ch2.tsv"), "w", encoding="utf-8", newline="\n").write(
+            "2001\t%s\t空扫描面夹具叙述。\n" % host3rel)
+        io.open(os.path.join(inp, "candidates_ch2.txt"), "w", encoding="utf-8",
+                newline="\n").write("2001|L4|空扫描面夹具候选。\n")
+        run_case("T20 默认扫描面零锚 → warn",
+                 argv(["--narr", os.path.join(inp, "narr_ch2.tsv"),
+                       "--claim-map", os.path.join(inp, "claim_map_ch2.json"),
+                       "--candidates", os.path.join(inp, "candidates_ch2.txt")]), 0,
+                 ["[warn] 有效判重集合内 0 个既有锚点而本批新增"])
+        # T19 后 host_a 为 CRLF，T21 前复原为 LF
         io.open(host_a, "w", encoding="utf-8", newline="\n").write("正文 A。\n")
         empty_scan = os.path.join(allow, "_empty_scan")
         os.makedirs(empty_scan, exist_ok=True)
-        run_case("T20 扫描面无既有锚 → warn", argv(["--scan-root", empty_scan]), 0,
-                 ["[warn] 扫描面内 0 个既有锚点而本批新增"])
+        # T21 显式 --scan-root 且扫描面零锚 → 拒写（R6 收紧）；--allow-empty-scan 放行
+        before_t21 = io.open(host_a, encoding="utf-8").read()
+        run_case("T21 显式空扫描面 → exit 2", argv(["--scan-root", empty_scan, "--write"]), 2,
+                 ["显式扫描面无对照，拒绝写入"])
+        if io.open(host_a, encoding="utf-8").read() == before_t21:
+            print("[selftest] T21b 拒写零写入 PASS")
+        else:
+            ok = False
+            print("[selftest] T21b 拒写零写入 FAIL")
+        run_case("T21c --allow-empty-scan 放行", argv(["--scan-root", empty_scan,
+                                                     "--allow-empty-scan"]), 0,
+                 ["[warn] 有效判重集合内 0 个既有锚点而本批新增"])
+        # T22 台账写入中途失败 → 宿主回滚＋台账截断回写前基线（N-c）
+        io.open(host_a, "w", encoding="utf-8", newline="\n").write("正文 A。\n")
+        led_partial = os.path.join(allow, "ledger_partial.jsonl")
+        io.open(led_partial, "w", encoding="utf-8", newline="\n").write('{"pre": 1}\n')
+        size_before = os.path.getsize(led_partial)
+        before_t22 = io.open(host_a, "rb").read()
+        orig_dumps = json.dumps
+        state = {"n": 0}
+
+        def flaky_dumps(obj, **kw):
+            if isinstance(obj, dict) and "row_id" in obj:
+                state["n"] += 1
+                if state["n"] == 2:
+                    raise OSError("injected ledger failure")
+            return orig_dumps(obj, **kw)
+
+        json.dumps = flaky_dumps
+        try:
+            run_case("T22 台账中途失败 → exit 2", argv(["--write", "--ledger", led_partial]), 2,
+                     ["台账写入失败并已回滚宿主", "台账已截断回写前基线"])
+        finally:
+            json.dumps = orig_dumps
+        led_ok = (os.path.getsize(led_partial) == size_before
+                  and io.open(led_partial, encoding="utf-8").read() == '{"pre": 1}\n')
+        host_ok = io.open(host_a, "rb").read() == before_t22
+        print("[selftest] T22b 台账截断＋宿主回滚 %s" % ("PASS" if (led_ok and host_ok) else "FAIL"))
+        if not (led_ok and host_ok):
+            ok = False
+        # T23 新建台账＋中途失败 → 不留 0 字节台账（E-c：R2 契约在截断路径同样成立）
+        io.open(host_a, "w", encoding="utf-8", newline=chr(10)).write("正文 A。" + chr(10))
+        fresh2 = os.path.join(allow, "ledger_fresh2.jsonl")
+        if os.path.exists(fresh2):
+            os.remove(fresh2)
+        before_t23 = io.open(host_a, "rb").read()
+        state["n"] = 0
+        json.dumps = flaky_dumps
+        try:
+            run_case("T23 新建台账中途失败 → exit 2", argv(["--write", "--ledger", fresh2]), 2,
+                     ["台账写入失败并已回滚宿主"])
+        finally:
+            json.dumps = orig_dumps
+        gone = not os.path.exists(fresh2)
+        host_ok23 = io.open(host_a, "rb").read() == before_t23
+        print("[selftest] T23b 新建空台账已清理＋宿主回滚 %s"
+              % ("PASS" if (gone and host_ok23) else "FAIL"))
+        if not (gone and host_ok23):
+            ok = False
         print("[selftest] 合计 %s" % ("PASS" if ok else "FAIL"))
         return 0 if ok else 1
     finally:
@@ -962,6 +1072,9 @@ def parse(argv=None):
     ap.add_argument("--input-root", default=REPO,
                     help="读点允许根（--narr/--claim-map/--db 等只读输入；默认仓库根）")
     ap.add_argument("--scan-root", help="幂等扫描面（默认各宿主所在章节目录）")
+    ap.add_argument("--allow-empty-scan", action="store_true",
+                    help="显式 --scan-root 内无既有锚点时仍允许写入（首写章节目录场景；"
+                         "缺省拒绝——防扫描面指偏致跨文件重复）")
     ap.add_argument("--host", help="只写该宿主（大纲根相对路径）")
     ap.add_argument("--anchor", help="批标识（台账 batch 字段；--write 必填）")
     ap.add_argument("--tag", help="块头采纳批次（默认 '<ts> <lib> 战线'）")

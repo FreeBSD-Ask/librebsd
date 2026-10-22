@@ -25,10 +25,13 @@
 > `tech-kern` **81,326 / 81,326 ＝ 100.00%**，status `completed`。
 > **H4 合计 127,326 / 459,135 ＝ 27.73%**，剩余 **331,809 封**
 > （openbsd_mail 余 108,119＋netbsd-bugs 98,119＋pkgsrc-bugs 58,998＋freebsd-gnome 66,573）。
-> **下一站 `ob_b024` @ offset 125,000（n 2000）**（未开窗，待 `_prep_batches.py` 续建）。
+> 🔴 **`ob_b024` @ offset 125,000（n 2000）已施工，非“未开窗”**（2026-10-22 磁盘与库实测）：候选 2,000 条（`review_logs/ob_b024_candidates.txt`）→ `review_logs/ob_b024_mount_narr.tsv` **1,653 行全三列**（无 BOM／无 CRLF）→ `ob_b024_claim_map.json` **1,643 键**、`CL-RM-492080–493722` 连续，库内 `MAX(claim_id)`＝**CL-RM-493722**（与号段尾部逐号吻合）、`register_waterlock.py probe` 实测 `next_available`＝493723 ⇒ **register 已落库**；大纲侧 pk 229881／231880 均已入 `第216章`（216.5.33／216.5.72）⇒ **outline 已写**。
+> 🔴 **该批三项契约缺口（待主理人裁定，本线不改）**：① **无 `_batch_ob_b024.json`**——H4 自 `ob_b023` 起走 `_open_ob_b024.py`，`_prep_batches.py` 不适用，故 `audit_mail2d_batch.py`／`_mail2d_run_batch.py check` 对 H4 新批**均不可判**；② `ob_b024_claim_map.json` 的 value 为**对象**（含 `claim_id`／`host_source: outline_scan_v3_20261022`／`hosts`），**非扁平 `{pk: CL-RM-NNNNNN}`**，违反 `ADR-0006` §4 零契约变更与 `FR-H08`，且 `host_source` 表明该件被 register 之外的件改写（`NFR-H02` 第二写入口）；③ `mount_narr` 有 **10 个 pk**（230340／230617／230915／230965／231235／231440／231461／231535／231536／231573）不在 `claim_map` 内，`mount_narr 行数≠claim_map 键数`。
+> 🔴 **未闭环**：台账 `openbsd_mail` 仍 46,000（records 至 `ob_b023`，updated 2026-10-21T07:07），`_ledger_append_ob_b024.py` 已备未跑 ⇒ 按 §六 步骤 9“台账未推进不算闭环”判**未闭环**；沙箱追加演练预测落账后 `read_effective` 46,000→**48,000**（records 79000–127000 合成一段）。
 > **三库仍 0 启动**：`netbsd-bugs` 0 / 98,119、`pkgsrc-bugs` 0 / 58,998、`freebsd-gnome` 0 / 66,573，均 `pending`。
-> 🟢 **现行大纲目录口径**：**74 卷 / 521 章 / 3,691 节**（`重构2026/index.html` 的 `doc-metrics` 与 `sync_refactor2026_baseline.py --list` 一致）。
+> 🟢 **现行大纲目录口径**：**75 卷 / 523 章 / 3,705 节**（`重构2026/index.html` 的 `doc-metrics` 与 `sync_refactor2026_baseline.py --check` 一致；本行 2026-10-22 复核批由 74／521／3,691 更正）。
 > 本块仅刷新游标与口径，未执行批次；下方 2026-10-20 块为上一版留痕。
+> - 2026-10-22 复核批：四库合计与台账一致（127,326／459,135＝27.73%，tech-kern 81,326 已 `completed`，openbsd_mail 46,000／154,119＝29.85%）；`ob_b024` 表述由“未开窗、待 `_prep_batches.py` 续建”更正为**已 register／已 outline、台账未落账 ⇒ 未闭环**，并列三项契约缺口；大纲口径 74／521／3,691→75／523／3,705（见 script/_review_chain_20261022/H_REVIEW.md）；register --dry-run 已改零落盘（2026-10-22，见 H_REVIEW 补记；改动前备份 `script/_bak/20261022_review/`）
 > 🟡 **2026-10-20 主会话按台账刷新（上一版，2026-10-20；已被上方 10-22 块取代，留痕）**：`openbsd_mail` 真值＝**46,000 / 154,119 ＝ 29.85%**
 > （records **23 段** `ob_b001`…`ob_b023`，区间之和；`ob_b023` 已全链闭环＝1,416 块入 24 宿主、台账 44,000→46,000）；
 > `tech-kern` 81,326／81,326 已 `completed`；**H4 合计 127,326 / 459,135 ＝ 27.73%**，剩余 **331,809 封**

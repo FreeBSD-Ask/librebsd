@@ -13,13 +13,15 @@ font_subset_rebuild.py — 目录页字体子集重建与 cmap 审计（重构20
       浮层数据已不再内联为页面里的 `var DATA`）；
     - 新 `@font-face` **写回格式层** `assets/doc.css`——`index.html` 是装配产物，
       唯一写者为 `assemble_index.py`，**直接写 index.html 会被下次装配回退**。
-      故本脚本写回后**必须再跑一次** `python assemble_index.py`。
+      故本脚本写回后**自动**跑一次 `assemble_index.py`（重新装配）再跑
+      `assemble_index.py --check`；任一步非零即 exit 3（TD-018／ADR-0012）。
 
 流程（改后必跑）：
     1. 扫描 index.html 可见文本 ＋ data/catalog.json 字符串值，提取字符集；
     2. 从完整字体源（LXGW WenKai Screen webfont tgz）合并全部子集分片；
     3. 按页面字符集子集化（fonttools），输出单片 woff2；
-    4. 写回 `assets/doc.css`（替换现有 @font-face 块；40 片 → 1 片，font-display:swap）；
+    4. 写回 `assets/doc.css`（替换现有 @font-face 块；40 片 → 1 片，font-display:swap），
+       随即自动重新装配 `index.html` 并跑 `assemble_index.py --check`；
     5. cmap 审计：报告「页面用字中字体缺失」清单，逐字区分
        「源字体本无（系统 fallback，允许）」与「源字体有但重建丢失（回归，禁止）」。
 
@@ -29,8 +31,8 @@ font_subset_rebuild.py — 目录页字体子集重建与 cmap 审计（重构20
       （若缺失，从 git 历史或字体包重新获取，路径常量在本文件顶部）
 
 用法：
-    python font_subset_rebuild.py            # 重建并写回 assets/doc.css（随后须重新装配）
-    python font_subset_rebuild.py --check    # 仅审计，不写回
+    python font_subset_rebuild.py            # 重建并写回 assets/doc.css（写后自动重装配＋--check）
+    python font_subset_rebuild.py --check    # 仅审计，不写回（也不触发装配）
 
 规则索引：本脚本登记于 01-规则/README.md（固定脚本）。
 """
@@ -39,6 +41,7 @@ import base64
 import io
 import os
 import re
+import subprocess
 import sys
 import tarfile
 import tempfile
@@ -51,6 +54,11 @@ THEME_JS = r'D:/librebsd/08-核查报告与多轮复核/重构2026/assets/theme-
 CATALOG_JSON = r'D:/librebsd/08-核查报告与多轮复核/重构2026/data/catalog.json'
 FONT_SOURCE_TGZ = r'D:/librebsd/script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz'
 FONT_FAMILY = 'LXGW WenKai Screen'
+# 装配器与仓库根（写回 doc.css 后强制装配，TD-018／ADR-0012）
+REPO = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                     '..', '..', '..'))
+ASSEMBLE = os.path.join(REPO, '00-编纂规则与格式规范', '01-规则', '脚本与命令',
+                        'assemble_index.py')
 
 from fontTools.merge import Merger
 from fontTools.subset import Subsetter, Options
@@ -170,6 +178,27 @@ def audit_cmap(new_font_bytes, chars, orig_cmap):
     return missing, regress, fallback_ok
 
 
+def run_assembly(check):
+    """写回 doc.css 后强制装配（唯一写者原则，TD-018／ADR-0012）。
+
+    check=False → 跑 `assemble_index.py` 重新装配 index.html；
+    check=True  → 跑 `assemble_index.py --check` 漂移检测。
+    非零退出即打印 [assembly] FAIL 与子进程末尾 20 行输出，返回 False。
+    `--check`（只审计）分支不得调用本函数，避免只读路径触发写盘。
+    """
+    cmd = [sys.executable, ASSEMBLE] + (['--check'] if check else [])
+    proc = subprocess.run(cmd, cwd=REPO, capture_output=True, text=True,
+                          encoding='utf-8', errors='replace')
+    if proc.returncode != 0:
+        print('[assembly] FAIL（assemble_index.py%s exit %d）'
+              % (' --check' if check else '', proc.returncode))
+        for line in (proc.stdout + proc.stderr).strip().splitlines()[-20:]:
+            print('  ' + line)
+        return False
+    print('[assembly] PASS%s' % ('（--check）' if check else '（重新装配）'))
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true', help='仅审计不写回')
@@ -246,7 +275,12 @@ def main():
     print('已写回 assets/doc.css：%d 个 face → 1 个；%d → %d 字节（−%.2f MB）'
           % (n_old, len(css.encode('utf-8')), len(out.encode('utf-8')),
              (len(css) - len(out)) / 1048576))
-    print('  下一步：python assemble_index.py 重新装配 index.html')
+    # 写后强制装配：先重新装配 index.html，再跑 --check；任一步非零即 exit 3
+    # （TD-018／ADR-0012：doc.css 是格式层源，改后不重装配则产物与源不一致）
+    if not run_assembly(check=False):
+        sys.exit(3)
+    if not run_assembly(check=True):
+        sys.exit(3)
 
 
 if __name__ == '__main__':

@@ -12,12 +12,17 @@
 判据
 ----
 L1 台账存在与表头
-L2 生效后新任务有准入行
+L2 已启动的新任务有准入行（以“已启动”为界；未启动 spec 免准入并计入 SKIP，
+   见 ADR-0013 与《工程实践规则》§0.1 第 1 条）
 L3 已收口任务有收口行
 L4 字段齐全、起算日不早于生效日
 L5 枚举合法
 L6 任务 ID 唯一
-L7 复核轮次与角色合规（普通 ≥2、高风险 ≥3；作者不得自批；高风险须主理人签收）
+L7 复核轮次与角色合规（普通 ≥2、高风险 ≥3；作者不得自批；高风险须主理人签收）。
+   轮次充足性（实有 ≥ 声明 ≥ 最低）、轮次编号连续性与主理人签收以“收口”为界
+   （收口结论 ∈ {PASS, 不适用}）：已收口行不足即 FAIL，未收口（在途）行不足只记
+   WARN、不影响退出码；声明轮次 < 最低轮次对全部行 FAIL（声明即最低义务）；轮次非
+   整数、作者自批、轮次编号重复对全部行判 FAIL（见 ADR-0014）
 L8 复核记录字段与引用一致
 L9 轮替阈值与指针
 L10 轮替件逐字、主表无全文、未收口任务未迁出
@@ -27,7 +32,7 @@ L12 理论适用性非空且引用的 TG 在缺口登记中存在并有采纳状
 用法
 ----
     python audit_task_lifecycle.py                 # 0 通过 / 1 不通过 / 2 台账或扫描面缺失
-    python audit_task_lifecycle.py --selftest      # 判据非空自检（正样本 + 十一类负向夹具）
+    python audit_task_lifecycle.py --selftest      # 判据非空自检（十九例：3 正样本 + 15 负向夹具 + 1 口径边界例）
     python audit_task_lifecycle.py --list          # 打印检查对象与表头
 
 依赖：仅标准库。
@@ -71,7 +76,7 @@ CLOSE = {"PASS", "FAIL", "未收口", "不适用"}
 REVIEW_VERDICT = {"PASS", "FAIL", "不适用"}
 ROLES = {"作者", "复核子代理", "独立复核", "主理人"}
 TG_STATUS = {"采纳", "部分采纳", "不采纳", "待定"}
-PLACEHOLDER = {"", "—", "-", "／", "/"}
+PLACEHOLDER = {"", "—", "-", "／", "/", "待复核", "复核中"}
 
 
 def _read(path: pathlib.Path) -> str:
@@ -190,6 +195,12 @@ def _tasks_state(path: pathlib.Path):
     return total, done
 
 
+def _has_checked_box(path: pathlib.Path) -> bool:
+    """tasks.md 是否已有已勾选任务（`- [x]`／`- [X]`），即开工信号。"""
+    state = _tasks_state(path)
+    return state is not None and state[1] > 0
+
+
 def _paths(root: pathlib.Path):
     rule_dir = root / "00-编纂规则与格式规范" / "01-规则"
     gov = root / "01-项目管理" / "02-工程决策与技术债"
@@ -233,13 +244,25 @@ def run_checks(root: pathlib.Path):
     review = [r for r in review_rows if not _is_placeholder(r.get("复核 ID", ""))]
     tg = [r for r in tg_rows if not _is_placeholder(r.get("编号", ""))]
 
-    # L2 生效后新任务有准入行
+    # L2 已启动的新任务有准入行（ADR-0013：以已启动为界，未启动 spec 免准入并计入 SKIP）
     audit_ids = {r.get("任务 ID", "").strip() for r in audit}
+    review_task_ids = {r.get("任务 ID", "").strip() for r in review}
     specs = _spec_slugs(root)
-    missing_intake = [s for s in specs if s not in audit_ids]
-    rows.append(("L2", "生效后新任务有准入行", not missing_intake,
-                 "缺准入行：%s" % "、".join(missing_intake) if missing_intake
-                 else "扫描 %d 个生效后 spec，均有准入行" % len(specs)))
+    started = [
+        s for s in specs
+        if _has_checked_box(p["specs"] / s / "tasks.md")
+        or s in audit_ids or s in review_task_ids
+    ]
+    skipped = [s for s in specs if s not in started]
+    missing_intake = [s for s in started if s not in audit_ids]
+    skip_note = ""
+    if skipped:
+        skip_note = "；未启动 %d 个计入 SKIP：%s%s" % (
+            len(skipped), "、".join(skipped[:10]),
+            "…（截断，共 %d 个）" % len(skipped) if len(skipped) > 10 else "")
+    head = ("缺准入行：%s" % "、".join(missing_intake) if missing_intake
+            else "扫描 %d 个生效后 spec，已启动 %d 个均有准入行" % (len(specs), len(started)))
+    rows.append(("L2", "生效后新任务有准入行", not missing_intake, head + skip_note))
 
     # L3 已收口任务有收口行
     close_bad = []
@@ -267,7 +290,10 @@ def run_checks(root: pathlib.Path):
     field_bad = []
     for r in audit:
         tid = r.get("任务 ID", "")
-        miss = [k for k in required if _is_placeholder(r.get(k, ""))]
+        # ADR-0014：最新复核 ID 属收口期字段——未收口行允许空值，收口行必须可解析
+        open_row = r.get("收口结论", "").strip() not in {"PASS", "不适用"}
+        need = [k for k in required if not (k == "最新复核 ID" and open_row)]
+        miss = [k for k in need if _is_placeholder(r.get(k, ""))]
         if miss:
             field_bad.append("%s 缺 %s" % (tid, "、".join(miss)))
             continue
@@ -324,37 +350,52 @@ def run_checks(root: pathlib.Path):
     rows.append(("L6", "任务 ID 唯一", not dup,
                  "重复：%s" % "、".join(sorted(set(dup))) if dup else "无重复"))
 
-    # L7 复核轮次与角色合规
+    # L7 复核轮次与角色合规（ADR-0014：轮次义务在收口时结算，在途不足只记 WARN）
     review_by_task = {}
     for r in review:
         review_by_task.setdefault(r.get("任务 ID", ""), []).append(r)
     role_bad = []
+    role_warn = []
     for r in audit:
         tid = r.get("任务 ID", "")
         rs = review_by_task.get(tid, [])
-        declared = int(r.get("复核轮次", "0") or "0")
+        try:
+            declared = int(r.get("复核轮次", "0") or "0")
+        except ValueError:
+            declared = None  # 非整数轮次由 L4 判 FAIL，此处不重复计
         risk = r.get("风险级别")
         need = 3 if risk == "高风险" else 2
-        if declared < need:
+        settled = r.get("收口结论", "").strip() in {"PASS", "不适用"}
+        gate = role_bad if settled else role_warn
+        if declared is not None and declared < need:
             role_bad.append("%s 声明 %d 轮、%s 至少 %d 轮" % (tid, declared, risk, need))
-        if len(rs) < declared:
-            role_bad.append("%s 声明 %d 轮、实有 %d 轮" % (tid, declared, len(rs)))
+        if declared is not None and len(rs) < declared:
+            gate.append("%s 声明 %d 轮、实有 %d 轮" % (tid, declared, len(rs)))
         if len(rs) < need:
-            role_bad.append("%s %s 实有 %d 轮、至少 %d 轮" % (tid, risk, len(rs), need))
+            gate.append("%s %s 实有 %d 轮、至少 %d 轮" % (tid, risk, len(rs), need))
         if any(x.get("角色") == "作者" for x in rs):
             role_bad.append("%s 存在作者自批" % tid)
         if risk == "高风险" and not any(x.get("角色") == "主理人" for x in rs):
-            role_bad.append("%s 高风险缺主理人签收" % tid)
+            gate.append("%s 高风险缺主理人签收" % tid)
         nums = []
         for x in rs:
             try:
                 nums.append(int(x.get("轮次", "0")))
             except ValueError:
                 role_bad.append("%s 轮次非整数" % tid)
-        if nums and sorted(nums) != list(range(1, len(nums) + 1)):
-            role_bad.append("%s 轮次不连续 %s" % (tid, nums))
-    rows.append(("L7", "复核轮次与角色合规", not role_bad,
-                 "；".join(role_bad) if role_bad else "轮次与角色合规"))
+        if len(set(nums)) != len(nums):
+            role_bad.append("%s 轮次编号重复 %s" % (tid, nums))
+        elif nums and sorted(nums) != list(range(1, len(nums) + 1)):
+            gate.append("%s 轮次不连续 %s" % (tid, nums))
+    if role_bad:
+        detail = "；".join(role_bad)
+        if role_warn:
+            detail += "｜WARN 在途未足（不判 FAIL）：" + "；".join(role_warn)
+    elif role_warn:
+        detail = "WARN 在途未足（不判 FAIL）：" + "；".join(role_warn)
+    else:
+        detail = "轮次与角色合规"
+    rows.append(("L7", "复核轮次与角色合规", not role_bad, detail))
 
     # L8 复核记录字段与引用一致
     ref_bad = []
@@ -506,8 +547,10 @@ def _write(path: pathlib.Path, text: str):
 
 
 def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=True,
-             duplicate=False, author=False, rounds=3, risk="高风险", dangling_review=False,
-             rotation_double=False, rotation_open=False, bad_hash=False, dangling_tg=False):
+             duplicate=False, author=False, rounds=3, declared=None, risk="高风险",
+             dangling_review=False, rotation_double=False, rotation_open=False,
+             bad_hash=False, dangling_tg=False, draft=False, review_skip=False,
+             open_tasks=False):
     p = _paths(root)
     _write(p["rule"], "任务强制审计、复核与轮替\n")
     _write(p["flow"], "任务准入审计\n任务收口审计\n独立复核\n")
@@ -521,6 +564,8 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
     tid = "fixture-task-20261022"
     theory = "TG-999" if dangling_tg else "TG-001"
     close_v = "PASS" if close else "未收口"
+    declared_n = rounds if declared is None else declared
+    latest_id = "RV-1" if rounds > 0 else "—"
     evidence = ("prebak=fixture；已知限制=无；轮替=未触发；归档=fixture"
                 if close else "—")
     changelog = "id=1" if close else "—"
@@ -529,8 +574,9 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
     audit_rows = []
     if intake:
         audit_rows.append(
-            "| %s | %s | %s | %s | 主代理 | 2026-10-22 | PASS | spec.md | %d | RV-1 | %s | %s | %s | %s | 2027-01-22 |"
-            % (tid, name, type_v, risk, rounds, theory, close_v, evidence, changelog))
+            "| %s | %s | %s | %s | 主代理 | 2026-10-22 | PASS | spec.md | %d | %s | %s | %s | %s | %s | 2027-01-22 |"
+            % (tid, name, type_v, risk, declared_n, latest_id, theory, close_v,
+               evidence, changelog))
     if duplicate:
         audit_rows.append(
             "| %s | 重复 | 需求／范围 | 普通 | 复核子代理 | 2026-10-22 | PASS | spec.md | 2 | RV-2 | 适用 | 未收口 | — | — | 2027-01-22 |"
@@ -550,6 +596,8 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
             % (rid, tid, i, role, i))
     if dangling_review:
         review_rows = [r.replace("RV-1", "RV-X") for r in review_rows]
+    if review_skip:
+        review_rows = []
     rheader = "| " + " | ".join(REVIEW_COLS) + " |\n| " + " | ".join(["---"] * len(REVIEW_COLS)) + " |\n"
     _write(p["review"], "# 任务复核台账\n\n" + rheader + "\n".join(review_rows) + "\n")
 
@@ -557,9 +605,17 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
     tg_body = "| TG-001 | G0–G5 | 缺口 | 证据 | 建议 | 规则 | P0 | 采纳 | 失效 | 2027-01-22 |\n"
     _write(p["tg"], "# TG\n\n" + theader + tg_body)
 
-    spec_dir = p["specs"] / tid
+    # draft=True：另造一个“未启动”spec（任务全未勾选、无审计行、无复核行）
+    # open_tasks=True：本任务 spec 只勾首条（在途未收口）
+    spec_dir = p["specs"] / ("fixture-draft-20261022" if draft else tid)
     _write(spec_dir / "spec.md", "# fixture\n")
-    _write(spec_dir / "tasks.md", "- [x] Task 1\n")
+    if draft:
+        tasks_body = "- [ ] Task 1\n"
+    elif open_tasks:
+        tasks_body = "- [x] Task 1\n- [ ] Task 2\n"
+    else:
+        tasks_body = "- [x] Task 1\n"
+    _write(spec_dir / "tasks.md", tasks_body)
 
     if rotation_double or rotation_open:
         arch_dir = p["archive"] / "2026-Q4"
@@ -581,6 +637,8 @@ def _selftest():
     cases = [
         ("positive", {}, None),
         ("missing-intake", {"intake": False}, "L2"),
+        ("started-without-intake", {"intake": False, "review_skip": True}, "L2"),
+        ("unstarted-without-intake", {"draft": True}, None),
         ("missing-close", {"close": False}, "L3"),
         ("missing-field", {"field": False}, "L4"),
         ("bad-enum", {"enum": False}, "L5"),
@@ -588,6 +646,10 @@ def _selftest():
         ("author-self-review", {"author": True}, "L7"),
         ("insufficient-rounds", {"rounds": 2}, "L7"),
         ("ordinary-insufficient-rounds", {"risk": "普通", "rounds": 1}, "L7"),
+        ("in-flight-zero-review-warn", {"close": False, "rounds": 0, "declared": 3,
+                                        "open_tasks": True}, "!L7"),
+        ("closed-highrisk-two-rounds", {"close": True, "rounds": 2, "declared": 3}, "L7"),
+        ("closed-highrisk-three-rounds", {"close": True, "rounds": 3, "declared": 3}, None),
         ("dangling-review", {"dangling_review": True}, "L8"),
         ("rotation-double", {"rotation_double": True}, "L10"),
         ("rotation-open", {"rotation_open": True}, "L10"),
@@ -603,10 +665,16 @@ def _selftest():
             fails = {rid for rid, _, ok, _ in rows if not ok}
             if expect is None:
                 passed = not fails
+            elif expect.startswith("!"):
+                passed = expect[1:] not in fails
             else:
                 passed = expect in fails
-            print("%-22s %s%s" % (name, "PASS" if passed else "FAIL",
-                                 "" if passed else "（期望 %s，实际 %s）" % (expect, sorted(fails))))
+            note = ""
+            if passed and expect and expect.startswith("!") and fails:
+                note = "（%s 未判 FAIL；同夹具另有 %s，非本判据口径）" % (
+                    expect[1:], "、".join(sorted(fails)))
+            print("%-30s %s%s%s" % (name, "PASS" if passed else "FAIL", note,
+                                   "" if passed else "（期望 %s，实际 %s）" % (expect, sorted(fails))))
             ok_all = ok_all and passed
     print("-- 自检：%d/%d --" % (len(cases) - (0 if ok_all else 1), len(cases)))
     return 0 if ok_all else 1
