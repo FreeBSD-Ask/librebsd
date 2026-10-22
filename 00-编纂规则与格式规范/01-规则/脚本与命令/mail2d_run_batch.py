@@ -10,8 +10,10 @@
   body      抽候选正文（调 _extract_cands_body.py，含截断）
   check     候选/叙述校验（调 _chk_mail2d_cand.py / _chk_mount_narr.py）
   register  落库：由模板生成并执行（dry → apply），产出 claim_map
-  outline   大纲回写：由模板生成（TARGET_REL 由本工具用 Python 直写，避开 bash 八进制陷阱），
-            dry → write → 二跑 0
+  outline   大纲回写（**阶段二 2026-10-22 起**）：改调固定脚本 `脚本与命令/outline_writer.py`
+            （ADR-0010 执行件；宿主权威＝claim_map.hosts，块级锚点幂等，写点/读点 commonpath 断言，
+            全或无回滚），dry → write → 二跑 0。旧模板生成链（gen_outline → _outline_<tag>.py）
+            已退役——其 TARGET_REL／键空间按扁平布局硬编码，155 批重编号与目录化后失效
   bookkeep  落地核验 + progress + changelog（dry → write，changelog 幂等）
   commit    原子提交：同一次调用内 `git diff HEAD --numstat` 核对 + `git commit -- <paths>`
   status    打印该批当前状态
@@ -22,11 +24,6 @@
   C:/Python314/python.exe _mail2d_run_batch.py dump --tag fe_b063
   C:/Python314/python.exe _mail2d_run_batch.py register --tag fe_b063 --apply
 """
-# 参考件声明（2026-10-22）：本件为版本化参考件，非运行件。
-# 运行一律用 script/_db_row_mining/_mail2d_run_batch.py 原件；
-# 依赖（_git_lsfiles.py 等）未随件复制到本目录，直接运行（含 `--help`）
-# 会报 ModuleNotFoundError: No module named '_git_lsfiles'，
-# 故本件的 `--help` 行为不代表原件行为。
 import argparse
 import glob
 import io
@@ -53,6 +50,7 @@ PY_MGD = os.path.join(os.path.expanduser("~"), ".workbuddy-ai", "binaries", "pyt
 REG_TPL = os.path.join(HERE, "_register_fe_b051_20260915.py")
 TPL_LIB, TPL_ANCHOR = "freebsd-elastic", "fe_b051"
 OUT_TPL = os.path.join(HERE, "_outline_fe_b051_20260915.py")
+BOSS_WRITER = os.path.join(ROOT, "00-编纂规则与格式规范", "01-规则", "脚本与命令", "outline_writer.py")
 
 
 def spec_path(tag):
@@ -270,7 +268,8 @@ HOSTREL = {}
 
 
 def load_hosts(sp=None):
-    """host_key -> 章节相对路径。
+    """host_key -> 章节相对路径（**进程内单例**：模块级 HOSTREL 缓存，重复调用忽略参数变化；
+    返回副本，调用方改动不影响缓存）。
 
     两源合并（后者优先，更权威）：
       ① 既有 `_*_mount.json` 的 target 字段；
@@ -278,12 +277,13 @@ def load_hosts(sp=None):
     """
     global HOSTREL
     if HOSTREL:
-        return HOSTREL
+        return dict(HOSTREL)
     # 🔴 豁免，刻意不用 git ls-files：`_*_mount.json` 在 /script 忽略树内且
     # 从未 git add -f（实测 git ls-files 命中 0 条），改走 git ls-files 会让这
     # 一路映射整体消失。热目录枚举风险由下面「直接遍历 05-卷册大纲」那一路
     # （已改 git ls-files）兜住：即便这里漏读个别 mount.json，大纲直扫的 key
     # 也会覆盖同名宿主。
+    dropped, dropped_keys = 0, set()
     for f in glob.glob(os.path.join(HERE, "_*_mount.json")):
         try:
             d = json.load(io.open(f, encoding="utf-8"))
@@ -293,10 +293,23 @@ def load_hosts(sp=None):
             continue
         for x in d:
             t, tf = x.get("target"), x.get("target_final")
-            if t and tf:
-                HOSTREL[os.path.basename(tf).split("-", 1)[0].replace(".", "")] = t
+            if not (t and tf):
+                continue
+            # F2：mount 源为旧扁平布局（节文件），目录化后大量目标已不存在——须与
+            # git 源同样做落盘校验，宁缺勿错（键缺席会在 bookkeep/commit 处可见失败）
+            cand = [os.path.join(VAULT, *t.replace("\\", "/").split("/")),
+                    os.path.join(ROOT, *t.replace("\\", "/").split("/"))]
+            if not any(os.path.isfile(c) for c in cand):
+                dropped += 1
+                dropped_keys.add(os.path.basename(tf).split("-", 1)[0])
+                continue
+            HOSTREL[os.path.basename(tf).split("-", 1)[0]] = t
+    if dropped:
+        print("[warn] load_hosts：mount 源 %d 条目标不在盘（旧扁平布局残留；去重后 %d 键），已剔除"
+              % (dropped, len(dropped_keys)))
     # UNC 上 os.listdir 扫热目录会静默漏项（同目录两次调用回 16 与 8 项）且超时，
     # 改用一次 git ls-files 取全量已跟踪 .md（宿主全在版本控制内），再按路径段拆分。
+    stale, dup, poisoned = [], {}, set()
     try:
         vrel = os.path.relpath(VAULT, _git_lsfiles.repo_root()).replace(os.sep, "/")
     except ValueError:
@@ -307,16 +320,39 @@ def load_hosts(sp=None):
         vrel = os.path.basename(os.path.normpath(VAULT))
     for rel in _git_lsfiles.tracked(vrel + "/"):
         parts = rel[len(vrel) + 1:].split("/")
-        if len(parts) != 3:
+        if len(parts) not in (3, 4):
+            # 3 段＝扁平布局（卷/章/文件）；4 段＝现行目录化（卷/章/节目录/小节）
             continue
-        vol, chap, fn = parts
-        m = re.match(r"^(\d+)\.(\d+)-", fn)
-        if m and fn.endswith(".md"):
-            HOSTREL[m.group(1) + m.group(2)] = os.path.join(vol, chap, fn)
-    return HOSTREL
+        fn = parts[-1]
+        m = re.match(r"^(\d+(?:\.\d+)*)-", fn)
+        if not (m and fn.endswith(".md")):
+            continue
+        relp = os.path.join(*parts)
+        if not os.path.isfile(os.path.join(VAULT, *parts)):
+            stale.append(relp)          # 重编号／改版在途：索引路径尚未落盘
+            continue
+        key = m.group(1)
+        if key in poisoned:
+            continue
+        if key in HOSTREL and os.path.normcase(HOSTREL[key]) != os.path.normcase(relp):
+            dup[key] = (HOSTREL[key], relp)
+            HOSTREL.pop(key, None)      # 多义键剔除，宁可缺不宁可错
+            poisoned.add(key)           # F3：剔除后不再被后续同键路径静默写回
+            continue
+        HOSTREL[key] = relp
+    if stale:
+        print("[warn] load_hosts：%d 条索引路径不在工作树（改版／重编号在途），已跳过；例：%s"
+              % (len(stale), stale[:3]))
+    if dup:
+        print("[warn] load_hosts：%d 个键多义（同章号多路径），已从映射剔除并列候选：%s"
+              % (len(dup), list(dup.items())[:3]))
+    return dict(HOSTREL)
 
 
 def gen_outline(sp):
+    """【已退役 2026-10-22 阶段二】旧模板生成链：仅保留供考古／紧急回退参考，
+    不再由 cmd_outline 调用（其 TARGET_REL＝host_index() 与 narr 键空间按扁平布局，
+    155 批重编号与目录化后失效，详见 _outline_common 头部）。"""
     s = io.open(OUT_TPL, encoding="utf-8").read()
     s = s.replace("freebsd-elastic b051 大纲写回（Phase 3）：95 条 → 目标宿主三段式幂等块。",
                   "%s 大纲写回（Phase 3）" % sp["tag"])
@@ -362,15 +398,77 @@ def gen_outline(sp):
     return out
 
 
+def outline_bans_preflight(sp):
+    """承重冻结前置：显式禁写名单（_outline_common.BANS_PATHS）按 claim_map.hosts 路径比对；
+    并打印承重参考（refs ≥ 阈值的节，仅提示不拦截）。"""
+    sys.path.insert(0, HERE)
+    import _outline_common as C
+    rl = os.path.join(HERE, "review_logs", "%s_claim_map.json" % sp["tag"])
+    cmap = json.load(io.open(rl, encoding="utf-8"))
+    frozen = set(C.BANS_PATHS)
+    hits = []
+    if frozen:
+        for pk, v in cmap.items():
+            for h in ((v.get("hosts") if isinstance(v, dict) else None) or []):
+                hn = h.replace("\\", "/")
+                if hn.startswith("05-卷册大纲/"):
+                    hn = hn[len("05-卷册大纲/"):]
+                if any(hn == p or hn.startswith(p + "/") for p in frozen):
+                    hits.append((pk, hn))
+    if hits:
+        raise SystemExit("禁写宿主命中 %d 条（BANS_PATHS）：%s" % (len(hits), hits[:5]))
+    heavy = C.frozen_sections()
+    if heavy:
+        print("[承重参考] refs ≥ %d 的节 %d 个（仅提示，不拦截）：%s"
+              % (C.FROZEN_MIN_REFS, len(heavy), "；".join(heavy[:4])))
+
+
+def outline_argv(sp, write=False):
+    """阶段二：大纲回写改调 outline_writer.py（ADR-0010 执行件）。"""
+    rl = os.path.join(HERE, "review_logs")
+    line_date = sp.get("line_date") or __import__("datetime").date.today().isoformat()
+    argv = [PY_SYS, BOSS_WRITER,
+            "--narr", os.path.join(rl, "%s_mount_narr.tsv" % sp["tag"]),
+            "--claim-map", os.path.join(rl, "%s_claim_map.json" % sp["tag"]),
+            "--candidates", os.path.join(rl, "%s_candidates.txt" % sp["tag"]),
+            "--lib", sp["lib"],
+            "--root", VAULT,
+            "--work", ROOT,
+            "--ledger", os.path.join(HERE, "supplement_log.jsonl"),
+            "--anchor", sp["anchor"],
+            "--ts", line_date,
+            "--tag", "%s %s 战线" % (line_date, sp["lib"])]
+    if write:
+        argv.append("--write")
+    return argv
+
+
 def cmd_outline(a):
+    """大纲回写（阶段二 2026-10-22 起）：改调 `脚本与命令/outline_writer.py`。
+
+    旧模板生成链（gen_outline → _outline_<tag>.py）已退役（TARGET_REL／键空间按扁平
+    布局硬编码，155 批重编号与目录化后失效）；历史生成件保留可读，不再新生成。
+    退出码语义：任一步非零即**短路返回该码**（不进入 --write／二跑），与 writer 的
+    「坏件停摆、exit 2、零写入」一致（复核 F1）。
+    """
     sp = load(a.tag)
-    out = gen_outline(sp)
-    print("[gen] %s" % os.path.basename(out))
-    run([PY_SYS, out])
+    outline_bans_preflight(sp)
+    base = outline_argv(sp)
+    print("[gen] 调 outline_writer.py（dry-run；写盘须 --write）")
+    rc = run(base)
+    if rc != 0:
+        print("[outline] dry-run 非零（%d）——已停手，不进入 --write／二跑（零写入）" % rc)
+        return rc
     if a.write:
-        run([PY_SYS, out, "--write"])
+        rc = run(base + ["--write"])
+        if rc != 0:
+            print("[outline] 写入非零（%d）——已停手，不进入二跑（writer 内建回滚）" % rc)
+            return rc
         print("=== 幂等二跑 ===")
-        run([PY_SYS, out, "--write"])
+        rc = run(base + ["--write"])
+        if rc != 0:
+            print("[outline] 二跑非零（%d）" % rc)
+            return rc
     return 0
 
 
