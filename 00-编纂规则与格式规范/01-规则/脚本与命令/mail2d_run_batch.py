@@ -22,6 +22,11 @@
   C:/Python314/python.exe _mail2d_run_batch.py dump --tag fe_b063
   C:/Python314/python.exe _mail2d_run_batch.py register --tag fe_b063 --apply
 """
+# 参考件声明（2026-10-22）：本件为版本化参考件，非运行件。
+# 运行一律用 script/_db_row_mining/_mail2d_run_batch.py 原件；
+# 依赖（_git_lsfiles.py 等）未随件复制到本目录，直接运行（含 `--help`）
+# 会报 ModuleNotFoundError: No module named '_git_lsfiles'，
+# 故本件的 `--help` 行为不代表原件行为。
 import argparse
 import glob
 import io

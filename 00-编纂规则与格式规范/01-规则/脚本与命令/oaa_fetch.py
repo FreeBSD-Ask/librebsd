@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*-
 """oaa_fetch.py — 大纲邮件素材审计·块提取与数据库反查工具（只读）
 
-用法：
-  python oaa_fetch.py --host <大纲文件相对路径> [--out <输出jsonl>]
-  python oaa_fetch.py --workdir          # 对 audit_outline/work/ 下的 host 清单逐个跑
+用法（写盘须显式给出输出位置，防误写生产 audit_outline/work/）：
+  python oaa_fetch.py --host <大纲文件相对路径> --workdir <输出目录>
+  python oaa_fetch.py --host <大纲文件相对路径> --out <输出jsonl>
+  python oaa_fetch.py --hosts-file <宿主清单> --workdir <输出目录>   # 一行一个宿主，串行
+
+未显式给出 --workdir 时拒绝写生产 script/_db_row_mining/audit_outline/work/ 并
+以 exit 2 退出。所有文本输出统一 UTF-8 无 BOM、LF。
 
 对宿主内每个 ROW_MINE / MAIL_INSIGHT 块输出一行 JSON 档案：
   key / line / db / pk / anchor_line / head_line / summ_line
@@ -34,6 +38,15 @@ WORK = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "work")
 
 ROW_MINE = re.compile(r"<!--\s*ROW_MINE:\s*([\w-]+)\.([\w.]+)\.(\d+)\s*-->")
 MAIL_INS = re.compile(r"<!--\s*MAIL_INSIGHT:\s*([^>]+?)\s*-->")
+
+
+def _utf8_stdout():
+    """统一文本输出为 UTF-8 无 BOM、LF（Windows 控制台默认 cp936 且换行为 CRLF）。"""
+    for st in (sys.stdout, sys.stderr):
+        try:
+            st.reconfigure(encoding="utf-8", newline="\n")
+        except Exception:
+            pass
 
 
 def load_registry():
@@ -219,7 +232,7 @@ def run_host(rel, out_path=None):
     src = fetch_src_meta(reg, blocks)
     miss_claim = miss_src = 0
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    with open(out_path, "w", encoding="utf-8") as fh:
+    with open(out_path, "w", encoding="utf-8", newline="\n") as fh:
         for b in blocks:
             db, pk = b["db"], b["pk"]
             m = meta.get(db, {}).get(pk, {})
@@ -243,27 +256,45 @@ def run_host(rel, out_path=None):
     return 0
 
 
+def out_for(host, out_path=None, workdir=None):
+    """输出路径：显式 --out 优先，否则 --workdir/<宿主名>.fetch.jsonl。"""
+    if out_path:
+        return out_path
+    name = os.path.basename(host).replace(".md", "")
+    return os.path.join(workdir, f"{name}.fetch.jsonl")
+
+
 def main():
-    ap = argparse.ArgumentParser(description="大纲邮件素材审计·反查工具")
+    _utf8_stdout()
+    ap = argparse.ArgumentParser(
+        description="大纲邮件素材审计·反查工具（写盘位置须显式给出）",
+        epilog="未显式给出 --out 或 --workdir 时拒绝写生产 "
+               "script/_db_row_mining/audit_outline/work/，并以 exit 2 退出。")
     ap.add_argument("--host", help="宿主文件相对仓库根路径")
-    ap.add_argument("--out", help="输出 JSONL 路径（默认 audit_outline/work/<宿主名>.fetch.jsonl）")
-    ap.add_argument("--workdir", action="store_true",
-                    help="对 audit_outline/work/hosts.txt 清单批量跑")
+    ap.add_argument("--out", help="输出 JSONL 路径（显式指定，单宿主用）")
+    ap.add_argument("--workdir", metavar="DIR",
+                    help="输出目录；输出文件名为 <宿主名>.fetch.jsonl")
+    ap.add_argument("--hosts-file", metavar="FILE",
+                    help="批量入口：一行一个宿主相对路径（# 开头为注释），串行不做并发")
     args = ap.parse_args()
-    if args.workdir:
-        lst = os.path.join(WORK, "hosts.txt")
-        with open(lst, encoding="utf-8") as fh:
+    if not (args.out or args.workdir):
+        print("错误：未显式给出输出位置（--out 或 --workdir DIR）。\n"
+              "拒绝写入生产 script/_db_row_mining/audit_outline/work/。",
+              file=sys.stderr)
+        return 2
+    if args.hosts_file and args.host:
+        ap.error("--hosts-file 与 --host 互斥")
+    if args.hosts_file:
+        with open(args.hosts_file, encoding="utf-8") as fh:
             hosts = [l.strip() for l in fh if l.strip() and not l.startswith("#")]
+        fails = 0
         for h in hosts:
-            name = os.path.basename(h).replace(".md", "")
-            out = os.path.join(WORK, f"{name}.fetch.jsonl")
-            run_host(h, out)
-        return 0
+            fails += 1 if run_host(h, out_for(h, workdir=args.workdir)) != 0 else 0
+        print(f"批量完成：{len(hosts)} 个宿主｜失败 {fails}")
+        return 1 if fails else 0
     if not args.host:
-        ap.error("需要 --host 或 --workdir")
-    name = os.path.basename(args.host).replace(".md", "")
-    out = args.out or os.path.join(WORK, f"{name}.fetch.jsonl")
-    return run_host(args.host, out)
+        ap.error("需要 --host 或 --hosts-file")
+    return run_host(args.host, out_for(args.host, args.out, args.workdir))
 
 
 if __name__ == "__main__":
