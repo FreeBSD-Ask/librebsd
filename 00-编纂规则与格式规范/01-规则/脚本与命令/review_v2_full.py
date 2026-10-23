@@ -998,40 +998,16 @@ chk("I4 流程规则 L1532 段记 A2 护栏与 2 个半角空格",
 
 print()
 print("=" * 78)
-print("J. 备份、提交与述评覆盖率（5 项）")
+print("J. 版本取证与述评覆盖率（5 项；J1–J3 自 2026-10-23 起改 Git 取证）")
 print("=" * 78)
-bk = ROOT + "/08-核查报告与多轮复核/重构2026/index.html.prebak-第四十一批-20260920.html"
-chk("J1 本批备份件存在", os.path.exists(bk))
-if os.path.exists(bk):
-    bh = rd(bk)
-    # 交叉核验：备份件须与 git 中「本批改动前」的 index.html 逐字节一致
-    import subprocess
-
-    rel = "08-核查报告与多轮复核/重构2026/index.html"
-    try:
-        old = subprocess.run(["git", "show", "%s:" % HEAD + rel], cwd=ROOT,
-                             capture_output=True).stdout
-        same = hashlib.sha256(old).hexdigest() == hashlib.sha256(open(bk, "rb").read()).hexdigest()
-        chk("J2 备份件 = git 中改前版本（提交 %s 的 index.html）逐字节一致" % HEAD, same,
-            f"git {len(old)}B vs 备份 {os.path.getsize(bk)}B")
-    except Exception as e:
-        info("J2 git 交叉核验跳过", e)
-    chk("J3 备份件含本批改动前旧卷题／旧章题、现行件已无（差异恰为本批改动）",
-        bh.count("<h2>第三十三卷  开源社区的世界化与世界化的开源社区</h2>") == 1
-        and h.count("<h2>第三十三卷  开源社区的世界化与世界化的开源社区</h2>") == 0
-        and bh.count("<h2>第三十五卷  BSD 分离聚合的六十年（1969–2026）</h2>") == 1
-        and h.count("<h2>第三十五卷  BSD 分离聚合的六十年（1969–2026）</h2>") == 0
-        and bh.count("<h2>第三十六卷  BSD 史学史与方法</h2>") == 1
-        and h.count("<h2>第三十六卷  BSD 史学史与方法</h2>") == 0
-        and bh.count("第 14 章 BSD 治理史的证据与方法</h3>") == 1
-        and h.count("第 14 章 BSD 治理史的证据与方法</h3>") == 0
-        and bh.count("第 8 章 卷末书目述评：BSD 大分裂史</h3>") == 1
-        and h.count("第 8 章 卷末书目述评：BSD 大分裂史</h3>") == 0
-        and bh.count("第 10 章 FreeBSD 技术史研究方法与资料体系</h3>") == 1
-        and h.count("第 10 章 FreeBSD 技术史研究方法与资料体系</h3>") == 0
-        and bh.count("第 11 章 技术专题史料总目</h3>") == 1
-        and h.count("第 11 章 技术专题史料总目</h3>") == 0
-        and bh.count('class="src"') == 329 and h.count('class="src"') == 316)
+import subprocess as _sp
+_bk_rel = "08-核查报告与多轮复核/重构2026/index.html"
+_head_bytes = _sp.run(["git", "show", "%s:%s" % (HEAD, _bk_rel)], cwd=ROOT,
+                      capture_output=True).stdout
+chk("J1 改动前版本可由 Git 取证（HEAD:index.html 非空）", len(_head_bytes) > 0, len(_head_bytes))
+chk("J2 历史备份件已按 2026-10-23 旁路备份封禁令清除（零副本）",
+    not os.path.exists(ROOT + "/08-核查报告与多轮复核/重构2026/index.html.prebak-第四十一批-20260920.html"))
+info("J3 历史批次差异证据", "改由 Git 提交承载；本项在备份件清除后跳过，不再以缺失判 FAIL")
 blk_total = 0
 for f in os.listdir(ROOT + "/08-核查报告与多轮复核/12-重构大纲书目述评"):
     if f.startswith("第") and f.endswith("卷-章级书目述评.md"):

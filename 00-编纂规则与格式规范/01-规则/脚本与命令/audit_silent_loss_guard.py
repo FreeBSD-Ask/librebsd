@@ -9,8 +9,9 @@
   内容源残留，或在豁免登记表中有登记（合法改题／主题归并／待裁定），否则 FAIL。
 
 三时点载体：
-  T1（最早）：index.html.prebak-卷20至卷22全卷替换-202609191220.html（2026-09-19 12:20，
-             36 卷 321 章口径；88 号文抓出 4 丢失章的基点；同点 outline.txt 备份已不在盘）
+  T1（最早）：Git 提交 305b320（2026-09-18 22:57）的 `data/outline.txt`——36 卷 321 章口径，
+             与 88 号文基点（2026-09-19 12:20 的 HTML 快照）逐章一致；原 HTML prebak 快照
+             已按 2026-10-23 旁路备份封禁令清除，改以 Git 提交为唯一可长期取证载体。
   T3（现行）：data/outline.txt
   （T2 中间时点 09-20 prebak 亦已不在盘；本件以 T1↔T3 两端比对承载 88 判据——判据实质
     为“曾为章、现为零承接”。初版实跑 326 章得候选 34，逐条语义甄别（2026-10-09）：
@@ -21,17 +22,20 @@
   改题/归并类：watch 键为现行承接章题或其区分词；watch 键在现行 outline 消失 → 豁免腐烂。
   F 组待裁定类：无 watch 键（尚未回写，92 号文 L608 登记在案；回写落卷后应改判并删豁免）。
 
-用法：python audit_silent_loss_guard.py [--early PATH] [--outline PATH]
+用法：python audit_silent_loss_guard.py [--early PATH|GIT:<commit>:<path>] [--outline PATH]
 退出码：0=PASS，1=FAIL。
 """
 import argparse
 import io
 import os
 import re
+import subprocess
 import sys
 
-DEFAULT_EARLY = r"d:\librebsd\08-核查报告与多轮复核\重构2026\index.html.prebak-卷20至卷22全卷替换-202609191220.html"
+DEFAULT_EARLY_COMMIT = "305b3202822ad89a6f511cf93c0474e8b1649f1d"
+DEFAULT_EARLY_PATH = "08-核查报告与多轮复核/重构2026/data/outline.txt"
 DEFAULT_OUTLINE = r"d:\librebsd\08-核查报告与多轮复核\重构2026\data\outline.txt"
+REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 # index.html 工具面板 h3（非章，判据过滤；面板标题变化不影响判定）
 UI_PANELS = ("跨卷关联图谱", "时间线视图", "结构修订史")
@@ -106,19 +110,45 @@ def core_words(title):
     return [s for s in segs if len(s) >= 2]
 
 
+def extract_chapter_titles_outline(text):
+    return [STOP_PREFIX.sub("", m).strip()
+            for m in re.findall(r"^##\s*第\s*\d+\s*章\s*(.+?)\s*$", text, re.M)
+            if m.strip()]
+
+
+def load_early(spec):
+    if spec.startswith("GIT:"):
+        parts = spec[4:].split(":", 1)
+        if len(parts) != 2:
+            raise SystemExit("--early GIT:<commit>:<path> 形制错误")
+        commit, path = parts
+        r = subprocess.run(["git", "show", "%s:%s" % (commit, path)],
+                           cwd=REPO, capture_output=True)
+        if r.returncode != 0:
+            raise SystemExit("git show 失败：%s" % r.stderr.decode("utf-8", "replace")[:300])
+        return r.stdout.decode("utf-8", "replace")
+    if not os.path.isfile(spec):
+        raise SystemExit("T1 载体缺失：%s（旁路副本已按 2026-10-23 封禁令清除，"
+                         "请用 --early GIT:<commit>:<path> 指向 Git 历史）" % spec)
+    return io.open(spec, encoding="utf-8").read()
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--early", default=DEFAULT_EARLY)
+    ap.add_argument("--early", default="GIT:%s:%s" % (DEFAULT_EARLY_COMMIT, DEFAULT_EARLY_PATH))
     ap.add_argument("--outline", default=DEFAULT_OUTLINE)
     args = ap.parse_args()
 
-    early_html = io.open(args.early, encoding="utf-8").read()
+    early_text = load_early(args.early)
     outline = io.open(args.outline, encoding="utf-8").read()
-    titles = extract_chapter_titles_early(early_html)
+    if "<h3" in early_text:
+        titles = extract_chapter_titles_early(early_text)
+    else:
+        titles = extract_chapter_titles_outline(early_text)
 
     print("=" * 72)
     print("第二十件：重构静默丢失守卫（88 号文三时点比对法固化）")
-    print(f"  T1 早期载体：{os.path.basename(args.early)}（章 {len(titles)}）")
+    print(f"  T1 早期载体：{DEFAULT_EARLY_COMMIT[:7]}:data/outline.txt（章 {len(titles)}）")
     print(f"  T3 现行内容源：{os.path.basename(args.outline)}")
     print("-" * 72)
 

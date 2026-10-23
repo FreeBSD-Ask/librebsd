@@ -841,7 +841,7 @@ def write_block(res):
 
     安全保证（缺一不可）：
       ① 仅触碰 REGISTRY 一个文件，且只在 BEGIN…END 之间替换；
-      ② 写前备份为 `<registry>.prebak-block-<ts>`；
+      ② 写前打印 SHA-256 与字节数（**零副本**；回滚由 Git 承担，2026-10-23 旁路备份封禁令）；
       ③ 断言 BEGIN/END 各恰 1 处；
       ④ 写后断言「块外内容」与写前**逐字节相同**；
       ⑤ 断言新块可被 json.loads 解析；
@@ -851,7 +851,6 @@ def write_block(res):
          非原子，写中途失败会留下半份／空文件，且 ④ 无法检测半写（2026-10-15 实测）。
     """
     import datetime
-    import shutil
     if not os.path.exists(REGISTRY):
         print("✗ 登记表不存在：%s" % REGISTRY)
         return 1
@@ -880,15 +879,11 @@ def write_block(res):
     if old[:i] + old[j:] != new[:i] + new[new.find(BLOCK_END):]:
         print("✗ 块外内容自检失败，拒绝写入")
         return 1
-    # 备份落到 `script/`（已 gitignore），避免污染受控目录
-    _bd = os.path.join(ROOT, "script", "_backup_longline")
-    os.makedirs(_bd, exist_ok=True)
-    _bn = "长线任务总登记表.md.prebak-block-"
-    bak = os.path.join(_bd, _bn + datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
-    shutil.copy2(REGISTRY, bak)                         # ②
-    # 保留策略：仅留最近 3 个（防累积）
-    for _o in sorted(g for g in os.listdir(_bd) if g.startswith(_bn))[:-3]:
-        os.remove(os.path.join(_bd, _o))
+    # 零副本：写前打印 SHA-256 与字节数；回滚由 Git 承担（2026-10-23 旁路备份封禁令）
+    import hashlib
+    _raw = old.encode("utf-8")
+    print("  [write-block] sha-before %s（%d 字节，零副本）"
+          % (hashlib.sha256(_raw).hexdigest(), len(_raw)))
     # 原子替换：先写同目录临时件，校验后再 os.replace。
     # 教训（2026-10-15 实测）：原实现在 REGISTRY 上直接 open("w") 截断写——非原子，
     # 写中途失败即留下半份／空文件，且 ④ 的「写后断言块外未变」无法检测半写。
