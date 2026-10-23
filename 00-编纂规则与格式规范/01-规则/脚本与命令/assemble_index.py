@@ -377,7 +377,7 @@ def assemble():
     met["HAS_PART"] = derive_has_part(vols)
     # 模板条件区块（2026-10-04 立）：`{{IF:<度量键>}}…{{ENDIF}}` 同行包裹；
     #   键值为 0 或缺省时整行剔除、为正时保留内层内容（行结构不变）。
-    #   当前用途：未决项 N_PENDING＝0 时隐藏该指标瓦片（主理人 2026-10-04 令）。
+    #   当前用途：未决项 N_PENDING＝0 时隐藏该指标瓦片（ykla 2026-10-04 令）。
     def _if_drop(m: re.Match) -> str:
         return (m.group(2) + "\n") if met.get(m.group(1)) else ""
     tpl, _n_if = re.subn(r"[ \t]*\{\{IF:(\w+)\}\}(.*?)\{\{ENDIF\}\}[ \t]*\n?", _if_drop, tpl, flags=re.S)

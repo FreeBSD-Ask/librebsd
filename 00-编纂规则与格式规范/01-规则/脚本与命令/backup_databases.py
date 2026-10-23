@@ -11,7 +11,7 @@
 2026-08-26 修订：播客两库（bsdnow_podcast/bsd_podcasts_external）拆分为 10 个按播客实际名独立的 DuckDB
 （bsd-now/bsdtalk/youtube/software-engineering-daily/the-changelog/floss-weekly/nerding-out-with-victor/
 freebsd-fridays/bsd-conferences-youtube/freebsd-office-hours），SCOPE 相应更新，库计数由 16 调至 24。
-2026-10-14 修订（主理人令，historical_claims 广播事故次日）：启用**强化策略**——
+2026-10-14 修订（ykla 令，historical_claims 广播事故次日）：启用**强化策略**——
 ①historical_claims 专项（任务 `librebsd-hc-backup-30min` 每 30 分钟触发）；
 ②二次令：**全部库统一并入强化策略**（密槽＝最近 24 小时按 30 分钟粒度逐份保留 ≤48 份；
 日槽＝1/2/3/4/7/15 日各保留最新一份 ≤6 份；合计 ≤54 份），由任务 `librebsd-dball-backup-30min`
@@ -22,15 +22,15 @@ historical_claims 单份约 210.6MB。
 无需常备防护）；**邮件列表库（261 分库）与新闻组库（usenet_mail）确认排除**（本不在范围）；
 **references_fulltext 全文数据库保留常备**。裁剪后范围＝14 功能/史料库 + 12 代码仓库库 = 26 库。
 详见流程规则「数据库备份保留规则」小节。
-④四次裁定（2026-10-14，主理人令「A」）：**historical_claims 由专项任务独担**——`--all` 备份循环
+④四次裁定（2026-10-14，ykla 令「A」）：**historical_claims 由专项任务独担**——`--all` 备份循环
 跳过该库（`ALL_SKIP`），消除与 `librebsd-hc-backup-30min` 的重复备份；dball 实轮转 25 库 + hc 专项 1 库；
-轮换（prune）维持全库收尾（幂等）。另：三任务执行程序已改 **pythonw.exe**（无窗口后台，2026-10-14 主理人令）——
+轮换（prune）维持全库收尾（幂等）。另：三任务执行程序已改 **pythonw.exe**（无窗口后台，2026-10-14 ykla 令）——
 std 流为空时自动重定向至 `12-数据库备份/backup_console.log`。
 ⑤五次令（2026-10-14）：**桌面执行日志**——每次运行向 `桌面/数据库备份.txt` 追加一行成功/失败记录
 （`record_run_log`），滚动保留 15 日、超期自动清除；写入失败不影响主流程。
 
-2026-10-15 修订（主理人令）：三任务触发频次由每 30 分钟统一调整为每 5 小时（任务名、错峰相位、轮换与日志机制均不变；调度频次以本行为最新基准）。
-⑥六次令（2026-10-15，主理人授权）：**归档体级完整性校验**——`backup_one()` 走 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 存成 `<stamp>.duckdb.gz`，归档体并非 DuckDB 文件，而旧 `integrity` 只比对「导出 parquet 件数 vs 源表数」、**从不打开归档体**，传输截断／写盘中断一律记 `ok`（2026-10-14 实测 16 槽整数 MiB 截断、sidecar 全记 ok）。现补 `verify_archive()` 三段校验（解 gzip 读到 EOF 触发 CRC → 读 tar 核表数 → 逐个 parquet 用 DuckDB 加载并计数），失败即把 `integrity` 改判为 `archive_open_failed`／`archive_incomplete`／`archive_unreadable` 并随 `record_run_log` 落到桌面执行日志；manifest 另记 `archive_format`、`archive_verified`、`archive_detail`。备份格式／`BASE`／调度／轮换均未改。差分对照 6/6 命中：同流程合成好档 PASS；gzip-非-tar、表数错配、**真实归档件截到整数 MiB 边界**、尾删 1 字节全部 FAIL。2026-10-15 实查 `historical_claims/` 25 份归档**全部 PASS**（179.0～210.6 MB／34 表），10-14「备份槽全坏」系当时所见、无法复盘。
+2026-10-15 修订（ykla 令）：三任务触发频次由每 30 分钟统一调整为每 5 小时（任务名、错峰相位、轮换与日志机制均不变；调度频次以本行为最新基准）。
+⑥六次令（2026-10-15，ykla 授权）：**归档体级完整性校验**——`backup_one()` 走 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 存成 `<stamp>.duckdb.gz`，归档体并非 DuckDB 文件，而旧 `integrity` 只比对「导出 parquet 件数 vs 源表数」、**从不打开归档体**，传输截断／写盘中断一律记 `ok`（2026-10-14 实测 16 槽整数 MiB 截断、sidecar 全记 ok）。现补 `verify_archive()` 三段校验（解 gzip 读到 EOF 触发 CRC → 读 tar 核表数 → 逐个 parquet 用 DuckDB 加载并计数），失败即把 `integrity` 改判为 `archive_open_failed`／`archive_incomplete`／`archive_unreadable` 并随 `record_run_log` 落到桌面执行日志；manifest 另记 `archive_format`、`archive_verified`、`archive_detail`。备份格式／`BASE`／调度／轮换均未改。差分对照 6/6 命中：同流程合成好档 PASS；gzip-非-tar、表数错配、**真实归档件截到整数 MiB 边界**、尾删 1 字节全部 FAIL。2026-10-15 实查 `historical_claims/` 25 份归档**全部 PASS**（179.0～210.6 MB／34 表），10-14「备份槽全坏」系当时所见、无法复盘。
 
 用法：
   python backup_databases.py --all          # 全量备份 + 轮换
@@ -104,7 +104,7 @@ SCOPE = {
     "资料数据库": r"03-原始史料库\01-代码仓库史料\01-数据库本体\资料数据库.duckdb",
     # 播客史料 10 库（bsd-now/bsdtalk/software-engineering-daily/the-changelog/floss-weekly/
     # nerding-out-with-victor/freebsd-fridays/bsd-conferences-youtube/freebsd-office-hours/youtube）
-    # ——2026-10-14 主理人令（三次令）：**不纳入备份范围**，自 SCOPE 移除（原 2026-08-26 拆分并入）。
+    # ——2026-10-14 ykla 令（三次令）：**不纳入备份范围**，自 SCOPE 移除（原 2026-08-26 拆分并入）。
     # 同步排除（确认）：邮件列表库（261 分库）与新闻组库 usenet_mail 本不在范围；references_fulltext 保留。
     "original_sources": r"03-原始史料库\original_sources.duckdb",
     "research_notes": r"04-现代研究文献\research_notes.duckdb",
@@ -133,7 +133,7 @@ SCOPE = {
 
 # 原 5 槽参数（SLOT_DAYS）已于 2026-10-14 废止——全库改走 DEFAULT_DENSE / DENSE_POLICY（密槽＋日槽）
 
-# 强化策略（2026-10-14 主理人令）：全库统一走 DEFAULT_DENSE；DENSE_POLICY 保留库级覆盖位
+# 强化策略（2026-10-14 ykla 令）：全库统一走 DEFAULT_DENSE；DENSE_POLICY 保留库级覆盖位
 # 密槽：dense_window_hours 小时内按 dense_minutes 分钟粒度逐份保留；
 # 日槽：daily_slots 列出的每个时点各保留「距今 ≥ N 日中的最新一份」；
 # 2026-10-14 二次令：全部库并入定时任务（librebsd-dball-backup-30min，每 30 分钟 --all）。
@@ -154,7 +154,7 @@ for _k in ("freebsd", "netbsd", "openbsd", "dragonfly", "openzfs", "bsd-derivati
            "cross_source_identity", "illumos-gate", "openssh-apple", "openssh", "darwin", "linux-kernel"):
     DENSE_POLICY[_k] = {"dense_minutes": 30, "dense_window_hours": 0, "daily_slots": [1, 2, 3, 4, 7, 15]}
 
-# 2026-10-14 主理人裁定 A：historical_claims 由专项任务 librebsd-hc-backup-30min 独担——
+# 2026-10-14 ykla 裁定 A：historical_claims 由专项任务 librebsd-hc-backup-30min 独担——
 # --all 备份循环跳过该库（消除重复备份：此前该库每 ~15 分钟被双任务各备一份）；
 # 轮换（prune）维持全库收尾（幂等、按库名取策略，不受本表影响）；--db historical_claims 不受影响。
 ALL_SKIP = {"historical_claims"}
@@ -171,7 +171,7 @@ def _desktop_log_path():
 
 def record_run_log(ok, text):
     """向桌面《数据库备份.txt》追加一条 成功/失败 记录；自动清除超过 15 日的旧记录。
-    2026-10-14 主理人令；本函数任何失败均不影响备份主流程。"""
+    2026-10-14 ykla 令；本函数任何失败均不影响备份主流程。"""
     try:
         p = _desktop_log_path()
         now = datetime.datetime.now()

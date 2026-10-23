@@ -27,7 +27,7 @@
   （自动冻结会误挡 ob_b024 式合法专题路由，如 216.5／210.1）。
 - **承重参考**：`section_refs()`／`frozen_sections(min_refs)` 现取各节 refs（节＝承重口径，
   与旧冻结点同层）；`承重参考阈值` 默认 2000，仅用于报告与人工决策，不进 whitelist。
-- 主理人如要求恢复硬冻结：把目标节路径写入 `BANS_PATHS` 即可（`whitelist()` 自动扣除）。
+- ykla 如要求恢复硬冻结：把目标节路径写入 `BANS_PATHS` 即可（`whitelist()` 自动扣除）。
 """
 import os
 import re

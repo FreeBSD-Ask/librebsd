@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""claimdb_guard.py —— 写库门禁与全库健康哨兵（固定脚本；2026-10-14 立，主理人令）
+"""claimdb_guard.py —— 写库门禁与全库健康哨兵（固定脚本；2026-10-14 立，ykla 令）
 
 教训：2026-10-13 单条缺关联 UPDATE 将 historical_claims.evidence.fact_text 全表
 472,510 行覆盖为同一句（广播事故）——此前写库流程无“写前哨兵”。本脚本为

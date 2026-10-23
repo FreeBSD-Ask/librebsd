@@ -57,6 +57,12 @@ cnki*
 !00-编纂规则与格式规范/01-规则/脚本与命令/*.py
 # 受控主题词表（固定输入，随生成器入库；2026-10-21 立）
 !00-编纂规则与格式规范/01-规则/脚本与命令/主题词表.json
+# 目录页数据层例外（2026-10-23 复核整改）：装配器读入的活动源，不入库则全新克隆
+# 无法重装配（assemble_index.py 会因缺 catalog.json／ui-strings.json 直接失败）。
+!05-卷册大纲/目录/data/catalog.json
+!05-卷册大纲/目录/data/catalog.schema.json
+!05-卷册大纲/目录/data/domains-skeleton.json
+!05-卷册大纲/目录/data/ui-strings.json
 # 标准化树／旧树根级四件入库豁免（2026-10-21 立；2026-10-23 旧树改名同步）：
 # SUMMARY.md／chapter_keywords.json／theme_index.json／前后差异细粒度比较表-20261021.md
 # 须随所在树一并入库；JSON 需绕开全局 *.json 规则。入库状态由 audit_mirror_ingest.py（第二十五件）校验。
@@ -98,7 +104,9 @@ cnki*
 04-现代研究文献/_bak_hc_ddj_20261011/
 03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/02-遍历留痕/claim_fp_baseline_*.json
 
-# 目录页装配源与 IDE 工作区
+# 目录页装配源与 IDE 工作区（2026-10-23 随目录源迁入新 05 改指；旧 08 路径保留挡归档）
+/05-卷册大纲/目录/script
+/05-卷册大纲/目录/.mimosa
 /08-核查报告与多轮复核/重构2026/script
 /08-核查报告与多轮复核/重构2026/.mimosa
 /.trae
@@ -131,6 +139,8 @@ cnki*
 *.orig
 *.rej
 *~
+/05-卷册大纲/目录/_tmp_*
+/05-卷册大纲/目录/script/_snapshot_*
 /08-核查报告与多轮复核/重构2026/_tmp_*
 /08-核查报告与多轮复核/重构2026/script/_snapshot_*
 

@@ -1,0 +1,38 @@
+{
+  "$schema": "catalog.schema.json",
+  "version": "2026-09-11",
+  "domains": {
+    "entity": {
+      "persons": {
+        "count": 2238,
+        "key": "id",
+        "subdomains": [
+          "names",
+          "accounts",
+          "affiliations",
+          "status"
+        ]
+      },
+      "orgs": {
+        "status": "pending",
+        "baseline": "org-map-baseline-2026-09-11.md"
+      },
+      "artifacts": {
+        "status": "pending",
+        "note": "版本/发行版/程序/服务，尚未抽取"
+      }
+    },
+    "proposition": {
+      "claims": {
+        "status": "pending",
+        "note": "史学主张与总纲映射，库内以「总纲-N」编号行文"
+      }
+    },
+    "bibliography": {
+      "refs": {
+        "count": 5567,
+        "standard": "GB/T 7714-2015"
+      }
+    }
+  }
+}

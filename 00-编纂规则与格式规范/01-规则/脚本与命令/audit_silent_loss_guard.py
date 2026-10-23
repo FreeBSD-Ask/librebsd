@@ -33,7 +33,10 @@ import subprocess
 import sys
 
 DEFAULT_EARLY_COMMIT = "305b3202822ad89a6f511cf93c0474e8b1649f1d"
-DEFAULT_EARLY_PATH = "05-卷册大纲/目录/data/outline.txt"
+# T1 是**历史提交**内的路径，须按当时布局写死：305b320（2026-09-18）时内容源在
+# `08-核查报告与多轮复核/重构2026/data/outline.txt`；2026-10-23 搬迁批把它移到
+# `05-卷册大纲/目录/data/outline.txt`。机械改名不得波及此处（改则 `git show` 找不到文件）。
+DEFAULT_EARLY_PATH = "08-核查报告与多轮复核/重构2026/data/outline.txt"
 DEFAULT_OUTLINE = r"d:\librebsd\05-卷册大纲/目录\data\outline.txt"
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 

@@ -182,7 +182,7 @@
     if (bcParts.vol.textContent !== pv) bcParts.vol.textContent = pv;
     if (bcParts.ch.textContent !== pc) bcParts.ch.textContent = pc;
     if (bcParts.sec.textContent !== psec) bcParts.sec.textContent = psec;
-    /* 2026-09-26 主理人裁定：面包屑只展示卷 */
+    /* 2026-09-26 ykla 裁定：面包屑只展示卷 */
     bcParts.vol.style.display = pv ? "" : "none";
     bcParts.sep1.style.display = "none";
     bcParts.ch.style.display = "none";
@@ -236,7 +236,7 @@
   window.addEventListener("hashchange", jump);
   window.addEventListener("load", jump);
 
-  /* ---------- 6a. 页内锚点历史中性化（2026-10-14 主理人令） ----------
+  /* ---------- 6a. 页内锚点历史中性化（2026-10-14 ykla 令） ----------
      无论怎样点击都不产生浏览器历史条目（本页始终只占载入时的那一条）。
      默认锚点导航每点一次即 push 一条同文档记录；滚动智能同步只 replace 当前条目，
      两者叠加使后退键要逐条“页内滑动”方能离开。现将全部页内 `#` 链接统一接管：
@@ -409,7 +409,7 @@
     document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
   }
   /* ---------- 8a. 导出文件名（2026-10-14，145 批） ----------
-     主理人令：导出文件名＝“目录-版本.后缀名”。版本取页面 .page-version
+     ykla 令：导出文件名＝“目录-版本.后缀名”。版本取页面 .page-version
      （UTC+8，形制 YYYY.MM.DD-HH:MM）；冒号在 Windows 下载文件名中不合法，
      统一净化为“-”。页面元素不存在时回退取文案层 shell.page_version（同形制）。 */
   function pageVersionSafe() {
@@ -589,7 +589,7 @@
     H.push('li .note{ color:#666; font-size:9px; }');
     H.push('</style></head><body>');
     H.push('<h1>' + U("shell.book_title") + ' <sup style="font-size:.34em;opacity:.55;font-weight:400;letter-spacing:.03em">' + U("shell.page_version") + '</sup></h1>');
-    H.push('<p class="sub">' + nv + ' 卷 · ' + nc + ' 章 · ' + ns + ' 节 · 重构2026 现行大纲目录 · ' + new Date().toISOString().slice(0,10) + '</p>');
+    H.push('<p class="sub">' + nv + ' 卷 · ' + nc + ' 章 · ' + ns + ' 节 · 现行大纲目录 · ' + new Date().toISOString().slice(0,10) + '</p>');
     st.forEach(function (v) {
       H.push('<h2>' + es(v.title) + '</h2>');
       v.chapters.forEach(function (c) {

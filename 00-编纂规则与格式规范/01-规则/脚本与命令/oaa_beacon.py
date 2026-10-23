@@ -21,7 +21,7 @@
   python oaa_beacon.py --status          # 打印浮标状态
   python oaa_beacon.py --pending F1 [N]  # 打印 F1 未处理条目（前 N 条，默认 20）
 
-目录变动路由（2026-10-03 主理人令，F1–F4 同文）：
+目录变动路由（2026-10-03 ykla 令，F1–F4 同文）：
   05-卷册大纲 目录树随时新增/减少/变动，--refresh 以 tree_prev.json 快照差分识别：
   新增（新目录/新文件）        → 一律计入 F4（claims_F4.txt，持久化 routed_F4.json）
   减少（文件/目录删除）        → 一律交 F3（beacon/changes_F3.txt ＋ 孤儿台账 key 数）
@@ -129,7 +129,7 @@ def scan_outline():
 
 
 def load_routed():
-    """持久化路由表：新增目录一律计入 F4（2026-10-03 主理人令）。"""
+    """持久化路由表：新增目录一律计入 F4（2026-10-03 ykla 令）。"""
     if not os.path.exists(ROUTED_F4):
         return []
     try:
@@ -175,7 +175,7 @@ def orphan_counts(done, rels):
 
 
 def route_changes(added, removed, moved, changed_n, done, now):
-    """按主理人令路由：新增→F4（持久化）、减少/变动→F3（changes_F3.txt）。返回路由集与变动摘要。"""
+    """按 ykla 令路由：新增→F4（持久化）、减少/变动→F3（changes_F3.txt）。返回路由集与变动摘要。"""
     routed = sorted(set(load_routed()) | set(added))
     with open(ROUTED_F4, "w", encoding="utf-8", newline="") as fh:
         json.dump(routed, fh, ensure_ascii=False, indent=1)
@@ -257,7 +257,7 @@ def refresh():
     per_host, tree = scan_outline()
     now = datetime.datetime.now().isoformat(timespec="seconds")
 
-    # 目录树变动差分（2026-10-03 主理人令：新增→F4、减少/变动→F3；首次运行只建基线快照）
+    # 目录树变动差分（2026-10-03 ykla 令：新增→F4、减少/变动→F3；首次运行只建基线快照）
     routed_set = set(load_routed())
     if os.path.exists(TREE_PREV):
         try:
@@ -382,7 +382,7 @@ def refresh():
         "",
         f"**全局**：锚点总数 {anchors_total}｜待处理 {pend_total}｜台账合并集 {len(done)} 条｜未归组宿主 {len(unclaimed)}",
     ]
-    # 目录变动段（2026-10-03 主理人令：新增→F4、减少/变动→F3）
+    # 目录变动段（2026-10-03 ykla 令：新增→F4、减少/变动→F3）
     lines += [
         "",
         "## 目录变动路由（新增→F4，减少/变动→F3）",

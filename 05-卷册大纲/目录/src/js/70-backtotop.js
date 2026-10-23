@@ -52,7 +52,7 @@
   btn.addEventListener("click", function (e) {
 
     if (longPressed) { longPressed = false; return; }
-    /* 2026-10-10（128 号文批 5，主理人报障：向下的按钮失效）：原实现恒调 scrollToTop()——
+    /* 2026-10-10（128 号文批 5，ykla 报障：向下的按钮失效）：原实现恒调 scrollToTop()——
        而顶部附近字形为 ↓（语义即到底部），点击仍回顶（原地不动），表现为失效。
        现按字形状态分派：顶部附近（scrollY 不超 400）回到底部，否则回顶部。 */
     if (nearTop()) { scrollToBottom(); } else { scrollToTop(); }

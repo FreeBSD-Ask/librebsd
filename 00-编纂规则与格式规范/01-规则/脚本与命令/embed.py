@@ -126,7 +126,7 @@ def load_catalog():
 
 def sync_meta_triple(html: str) -> str:
     """同步 og:description / meta description / JSON-LD additionalProperty 三处口径
-    至当前 HTML 的 doc-metrics 三元组（权威口径）。2026-09-11 主理人指示接入。"""
+    至当前 HTML 的 doc-metrics 三元组（权威口径）。2026-09-11 ykla 指示接入。"""
     m = re.search(r"总卷数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
     n = re.search(r"总章数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
     s = re.search(r"总节数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)

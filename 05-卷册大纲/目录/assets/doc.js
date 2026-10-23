@@ -2,7 +2,7 @@
 /* 非正文文案层（2026-09-30 立）：装配器在行为脚本之前注入
    （装配器在行为脚本之前注入的 id 为 ui-strings 的 application/json 脚本），此处解析为 __UI；
    U(键[, 默认]) 取文案、F(键, 对象) 做 {n} 式插值。
-   文案的**唯一真相源**＝ `重构2026/data/ui-strings.json`（改文案只改该文件后重装）。 */
+   文案的**唯一真相源**＝ `05-卷册大纲/目录/data/ui-strings.json`（改文案只改该文件后重装）。 */
 var __UI = (function () {
   try { return JSON.parse(document.getElementById("ui-strings").textContent); } catch (e) { return {}; }
 })();
@@ -699,7 +699,7 @@ function F(k, o) {
   btn.addEventListener("click", function (e) {
 
     if (longPressed) { longPressed = false; return; }
-    /* 2026-10-10（128 号文批 5，主理人报障：向下的按钮失效）：原实现恒调 scrollToTop()——
+    /* 2026-10-10（128 号文批 5，ykla 报障：向下的按钮失效）：原实现恒调 scrollToTop()——
        而顶部附近字形为 ↓（语义即到底部），点击仍回顶（原地不动），表现为失效。
        现按字形状态分派：顶部附近（scrollY 不超 400）回到底部，否则回顶部。 */
     if (nearTop()) { scrollToBottom(); } else { scrollToTop(); }
@@ -893,7 +893,7 @@ function F(k, o) {
     if (bcParts.vol.textContent !== pv) bcParts.vol.textContent = pv;
     if (bcParts.ch.textContent !== pc) bcParts.ch.textContent = pc;
     if (bcParts.sec.textContent !== psec) bcParts.sec.textContent = psec;
-    /* 2026-09-26 主理人裁定：面包屑只展示卷 */
+    /* 2026-09-26 ykla 裁定：面包屑只展示卷 */
     bcParts.vol.style.display = pv ? "" : "none";
     bcParts.sep1.style.display = "none";
     bcParts.ch.style.display = "none";
@@ -947,7 +947,7 @@ function F(k, o) {
   window.addEventListener("hashchange", jump);
   window.addEventListener("load", jump);
 
-  /* ---------- 6a. 页内锚点历史中性化（2026-10-14 主理人令） ----------
+  /* ---------- 6a. 页内锚点历史中性化（2026-10-14 ykla 令） ----------
      无论怎样点击都不产生浏览器历史条目（本页始终只占载入时的那一条）。
      默认锚点导航每点一次即 push 一条同文档记录；滚动智能同步只 replace 当前条目，
      两者叠加使后退键要逐条“页内滑动”方能离开。现将全部页内 `#` 链接统一接管：
@@ -1120,7 +1120,7 @@ function F(k, o) {
     document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
   }
   /* ---------- 8a. 导出文件名（2026-10-14，145 批） ----------
-     主理人令：导出文件名＝“目录-版本.后缀名”。版本取页面 .page-version
+     ykla 令：导出文件名＝“目录-版本.后缀名”。版本取页面 .page-version
      （UTC+8，形制 YYYY.MM.DD-HH:MM）；冒号在 Windows 下载文件名中不合法，
      统一净化为“-”。页面元素不存在时回退取文案层 shell.page_version（同形制）。 */
   function pageVersionSafe() {
@@ -1300,7 +1300,7 @@ function F(k, o) {
     H.push('li .note{ color:#666; font-size:9px; }');
     H.push('</style></head><body>');
     H.push('<h1>' + U("shell.book_title") + ' <sup style="font-size:.34em;opacity:.55;font-weight:400;letter-spacing:.03em">' + U("shell.page_version") + '</sup></h1>');
-    H.push('<p class="sub">' + nv + ' 卷 · ' + nc + ' 章 · ' + ns + ' 节 · 重构2026 现行大纲目录 · ' + new Date().toISOString().slice(0,10) + '</p>');
+    H.push('<p class="sub">' + nv + ' 卷 · ' + nc + ' 章 · ' + ns + ' 节 · 现行大纲目录 · ' + new Date().toISOString().slice(0,10) + '</p>');
     st.forEach(function (v) {
       H.push('<h2>' + es(v.title) + '</h2>');
       v.chapters.forEach(function (c) {
@@ -2339,8 +2339,8 @@ function F(k, o) {
   });
 })();
 
-/* ========== 卷/章折叠（2026-09-26 主理人要求） ==========
-   2026-09-27 修正（主理人报障“章卷文字在网页上无法选中”）：题面文字须可选中，故
+/* ========== 卷/章折叠（2026-09-26 ykla 要求） ==========
+   2026-09-27 修正（ykla 报障“章卷文字在网页上无法选中”）：题面文字须可选中，故
    ①modern.css 撤去 h2／h3.chapter 本体上的 user-select:none（仅装饰箭头仍不可选）；
    ②本处补“选择判据”——纯点题才是折叠手势，凡带选择语义的手势一律不折：
       a. 拖选：down→up 位移 > 4px 的 click 非折叠手势（含拖选出界后仍落在题面的收尾 click）；

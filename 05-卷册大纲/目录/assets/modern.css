@@ -198,7 +198,7 @@ body { -webkit-tap-highlight-color: transparent; }
      `body.read-mode ul.sections > li > .sec-num { display: inline-block !important; }`，
      与格式层 `body.read-mode … .sec-num { display: none !important; }`（doc.css）直接对冲，
      致阅读版宽屏隐藏节号、窄屏显示节号，同一语义自相矛盾；且美化层覆写功能层判据，
-     违反四层解耦分工。经主理人 2026-09-30 裁定“阅读版本保留节号”：格式层已把
+     违反四层解耦分工。经 ykla 2026-09-30 裁定“阅读版本保留节号”：格式层已把
      `.sec-num` 移出隐藏清单（阅读版一律显示节号），两层方向一致，
      此处覆写**永久不再需要**，故删除（不复建）。 */
 
@@ -254,7 +254,7 @@ body { -webkit-tap-highlight-color: transparent; }
 }
 
 /* ========== 卷/章折叠（2026-09-26） ==========
-   2026-09-27 修正（主理人报障“章卷文字在网页上无法选中”）：题面文字必须可选，
+   2026-09-27 修正（ykla 报障“章卷文字在网页上无法选中”）：题面文字必须可选，
    故 h2／h3.chapter 本体不再设 user-select:none；仅把装饰箭头排除在选区之外
    ——箭头是折叠指示符而非目录内容，选中复制时不应随之带出“▾”。 */
 .doc-block > h2 { cursor: pointer; }

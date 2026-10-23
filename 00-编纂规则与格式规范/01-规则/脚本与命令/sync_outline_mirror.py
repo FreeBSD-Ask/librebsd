@@ -65,7 +65,7 @@ DEFAULT_MAPPING = os.path.join(REPO, "script", "_b7_mapping.json")
 SELFTEST_REL = os.path.join("script", "_mirror_selftest")
 
 VOL_RE = re.compile(r"^第(\d{1,3})卷(?:-(?P<slug>.+))?$")
-# 根级白名单（2026-10-21 主理人令）：三件随树入库，不判为树外散件
+# 根级白名单（2026-10-21 ykla 令）：三件随树入库，不判为树外散件
 ROOT_ALLOWED_FILES = frozenset({"SUMMARY.md", "chapter_keywords.json",
                                 "theme_index.json",
                                 "前后差异细粒度比较表-20261021.md"})

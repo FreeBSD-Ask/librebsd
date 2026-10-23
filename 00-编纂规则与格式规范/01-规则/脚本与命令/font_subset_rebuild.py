@@ -250,7 +250,7 @@ def main():
     # 写回格式层（2026-09-18 四层解耦后：@font-face 块位于 assets/doc.css；
     # 不再写 index.html——index.html 是装配产物，唯一写者为 assemble_index.py）
     new_b64 = base64.b64encode(new_bytes).decode('ascii')
-    # 2026-09-12 主理人裁定：font-display 固定 swap——文字立即以系统字体可见，
+    # 2026-09-12 ykla 裁定：font-display 固定 swap——文字立即以系统字体可见，
     # 字体就绪后必须切换为霞鹜文楷（optional 会在 100ms 窗口后永久回退系统
     # 字体，不符合「最终必须加载新字体」要求）
     new_face = ('@font-face{font-family:"%s";font-style:normal;font-weight:400;'

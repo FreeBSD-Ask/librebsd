@@ -2,7 +2,7 @@
 /* 非正文文案层（2026-09-30 立）：装配器在行为脚本之前注入
    （装配器在行为脚本之前注入的 id 为 ui-strings 的 application/json 脚本），此处解析为 __UI；
    U(键[, 默认]) 取文案、F(键, 对象) 做 {n} 式插值。
-   文案的**唯一真相源**＝ `重构2026/data/ui-strings.json`（改文案只改该文件后重装）。 */
+   文案的**唯一真相源**＝ `05-卷册大纲/目录/data/ui-strings.json`（改文案只改该文件后重装）。 */
 var __UI = (function () {
   try { return JSON.parse(document.getElementById("ui-strings").textContent); } catch (e) { return {}; }
 })();
