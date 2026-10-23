@@ -1,0 +1,50 @@
+# 05-卷册大纲/映射 —— 映射层说明
+
+本目录是《重构2026 目录落地 05-卷册大纲》战役的**映射层**：承载旧树到新树的清点台账、目标注册表、映射台账、布局清单、交叉对照与复核工作包。本批 spec 见 `.trae/specs/migrate-refactor2026-into-outline-20261023/`。
+
+## 一、旧树快照性质
+
+`旧大纲-20261023/`（仓库根级）是**迁移前旧 `05-卷册大纲/` 的全文快照**：24 个卷目录 + 4 个根级文件，共 37,486 个 `.md`（37,484 个小节 `.md` + 2 个根级 `.md`）与 2 个根级 JSON。
+
+- **逐件取证入口**：Git 标签 `outline-pre-landing-20261023` 指向改名前的提交，可用 `git show outline-pre-landing-20261023:<旧路径>` 逐件取证原始全文。
+- **消化口径**：按“最终只保留未迁移件”逐批消化——已映射（`CONFIRMED`）文件用 `git mv` 迁入新树，迁出即从旧树消失；`UNMAPPED`／`DISPUTED`／`TARGET_LOST`／`DUPLICATE`／`DISCARDED` 与空目录骨架留在旧树，待后续裁决。
+- **只读纪律**：新树建设期间任何脚本或评审只读取旧树，不得改写内容或“顺手修正”；除已确认映射文件的迁出、以及 `TARGET_LOST`／`REMAP` 文件的回迁外，不得改名、删除或新增。
+- **旧树派生件**：旧树 `SUMMARY.md`、`chapter_keywords.json`、`theme_index.json` 为**历史快照、非现行索引**，迁移开始后不再随迁出再生；不得以旧树索引校验新树。
+
+## 二、映射层结构
+
+| 路径 | 性质 | 产出任务 |
+| ---- | ---- | -------- |
+| `targets.tsv` | **目标注册表**（稳定节点 ID，改号/重排不换 ID） | Task 3 |
+| `targets.prev.tsv` | 每次应用前的注册表快照 | Task 3／7 |
+| `mapping.tsv` | **旧→新映射台账**（37,484 行，一文件一行） | Task 4 |
+| `layout.tsv` | 目标路径与 P 序布局清单 | Task 7 |
+| `crosswalk-section.tsv`／`crosswalk-chapter.tsv`／`crosswalk-volume.tsv`／`crosswalk-subsection.tsv` | 旧→新交叉对照（含多数映射与歧义标记） | Task 7 |
+| `ref-rewrite.tsv`／`ref-unresolved.tsv`／`ref-sync.tsv` | 引用改写台账／未决挂账／同步留痕 | Task 7／11 |
+| `review/` | 复核工作包（`packs/<旧卷>.tsv`、`disputes.tsv`） | Task 4／5 |
+| `reference/` | 18 件历史映射表（章级/节级映射表、关键词/文献/人物/时间线-章节映射表等），只作候选生成参考 | Task 2.5 |
+| `drift/` | 目录变动漂移报告 | Task 3 |
+| `title-standardization.tsv`／`title-review.tsv`／`path-overlong.tsv` | 标题标准化台账／杂质名待裁决／超长路径裁决 | Task 2 |
+| `target-lost.tsv`／`remap.tsv` | 目标退役回迁挂账／拆分合并重映射挂账 | Task 13 |
+
+## 三、清点台账三件（Task 1 产出）
+
+| 文件 | 口径 |
+| ---- | ---- |
+| `inventory.tsv` | 旧树全部 `.md` 逐文件清单。列：`relpath`（相对仓库根）、`bytes`、`sha256`、`is_empty`（0 字节为 1）、`has_special_structure`（含 ROW_MINE 块／成对锚 BEGIN-END 注释／Markdown 表格则记类型，否则空）。37,486 数据行。 |
+| `path-coupling.tsv` | 全库受 Git 跟踪文本文件（`.py`／`.md`／`.json`／`.js`／`.ts`／`.tsv`／`.html`／`.jsonld`／`.css`／`.mjs`／`.txt`）中含路径字面量 `重构2026` 或 `05-卷册大纲` 的行。列：`file`、`line_no`、`matched_text`（截断至 200 字符）、`category`（脚本／规则／号文／夹具／其他）。**排除** `旧大纲-20261023/` 与 `08-核查报告与多轮复核/重构2026/` 下的历史归档。 |
+| `old-tree-normalization.tsv` | 旧树机械门禁违规逐文件登记。列：`relpath`、`violation_type`、`count`、`sample`。检查项：直角引号（U+300C／U+300D／U+300E／U+300F）、AI 不可见字符（Unicode Cf 全体 + Zs 除 U+0020）、CRLF 换行、Markdown 加粗空格、成对锚配平、重复锚。某类全 0 时留一行 `(全库)` 说明。 |
+
+三件均为**只读扫描旧树**所得，不修改旧树任何文件；写盘 UTF-8 无 BOM、LF。
+
+## 四、真值声明
+
+- **映射真值**：`targets.tsv`（目标注册表）与 `mapping.tsv`（旧→新映射台账）是映射的**唯一真值**，均为纯文本 TSV。
+- **派生副本**：`mapping.duckdb` 为**只读派生**，可随时从 TSV 重建，不作真值；若写入生产路径须走写库门禁（`claimdb_guard.py`＋`rotate_guard_state.py`）并在 `folder_db_registry.csv` 与 `schema_meta` 两处登记。
+- **结构真值**：卷/章/节结构以 `05-卷册大纲/目录/data/outline.txt` 为唯一真值，新树是派生结果。
+
+## 五、后续入口
+
+- 本批 spec：`.trae/specs/migrate-refactor2026-into-outline-20261023/`（`spec.md`／`tasks.md`／`checklist.md`）。
+- 施工计划：`01-项目管理/01-编纂规划与报告归档/05-大纲落地生产搬迁批计划-20261023.md`。
+- 长线登记：`01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md` 第 5 条。

@@ -252,6 +252,11 @@ REGISTRY = [
          kind="入纲写入器（唯一实现）", object="mail2d／OAA 入纲宿主写入（块追加面）：宿主＝小节 .md（claim_map hosts／outline_map 权威，不猜文件名；multi 由 narr 宿主列消歧）、块级锚点幂等（ROW_MINE: lib.messages.pk；扫描面默认宿主所在章节目录）、路径 commonpath 断言（写点 allow-root／读点 input-root 分层＋启动打印生效路径）、临时件→fsync→os.replace＋全或无回滚、写后断言增量＝计划数；--check-only 供 F／OAA 线核查认领清单可解析率。F 线块内整行替换仍属 apply_fixes.py（TD-016／TD-017）",
          trigger="每批 mail2d／OAA 入纲（2026-10-22 立，替代 _outline_<tag>.py 批内一次性脚本，ADR-0010；生产切换为准阶段二）",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/outline_registry.py",
+         kind="目标注册表与漂移机制（执行器）",
+         object="由 `05-卷册大纲/目录/data/outline.txt` 派生稳定节点 ID（V-001／C-0001／S-000001）并生成 `05-卷册大纲/映射/targets.tsv`；漂移算法（同父同题→同层同题→模糊改题≥0.86→新增，未匹配旧节点退役）落 `05-卷册大纲/映射/drift/drift-report.tsv`；`--write` 生成（默认 dry-run）／`--check` 只读检测／`--sync [--write]` 同步／`--selftest` 六类场景自证",
+         trigger="大纲结构变动后（改号／重排／改题／增删）；Task 3 生产版（2026-10-23 立）",
+         selftest="--selftest", in_tests_readme=False),
 ]
 
 # ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
@@ -273,6 +278,7 @@ STAGE_MAP = {
     "audit_index_structure.py": "G4",
     "assemble_index.py": "G3,G4",
     "outline_writer.py": "G3,G4",
+    "outline_registry.py": "G3",
     "oaa_remap_claims.py": "G3",
     "audit_page_assets.py": "G4",
     "audit_markdown_lint.py": "G3",
