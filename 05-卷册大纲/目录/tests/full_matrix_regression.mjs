@@ -21,7 +21,8 @@ if (!__CHROME_EXE) { console.error('未找到可用 Chromium（ms-playwright）'
  *   字号滑杆交互、暗色下 plink/reflink 浮层。
  * 失败退出码 1。
  * ========================================================================== */
-const URL = 'file:///D:/librebsd/05-卷册大纲/目录/index.html';
+// 路径由本件位置推导（2026-10-23）：tests/ 的上一级即 `05-卷册大纲/目录`（变量不取名 URL，免遮蔽全局 URL 构造器）
+const PAGE_URL = new URL('../index.html', import.meta.url).href;
 const HEADLESS = process.argv.includes('--headless');
 
 /* ── 夹具真值：**唯一来源** ──────────────────────────────────────────────
@@ -60,7 +61,7 @@ async function combo(name, { w, h, dpr, theme, scheme, fs, touch, deep }) {
   const page = await ctx.newPage();
   const errs = [];
   page.on('pageerror', e => errs.push(String(e).slice(0, 120)));
-  await page.goto(URL, { waitUntil: 'load' });
+  await page.goto(PAGE_URL, { waitUntil: 'load' });
   /* O-2（2026-09-13）数据层异步装配：等待 data-opt-ready 哨兵（数据联动初始化完成），
      降级态（哨兵=0 或缺失）按原 2.2s 落定继续，保证降级路径可测 */
   const ready = await page.waitForFunction(

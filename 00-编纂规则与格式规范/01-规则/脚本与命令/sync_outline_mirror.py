@@ -96,9 +96,9 @@ CODE_TEXT = {
     "T_VOL_NUM_BAD": "卷号小于 1",
     "T_VOL_SEQ": "卷号非 1..N 连续",
     "T_CHAPTER_NAME_BAD": "章目录名不合命名法",
-    "T_CHAPTER_NUM_RANGE": "章号越界（须 ≥ 001，且不超过目录页口径章数）",
-    "T_CHAPTER_NUM_DUP": "章号重复",
-    "T_CHAPTER_SEQ": "章号非 001..N 连续（全书连续编号）",
+    "T_CHAPTER_NUM_RANGE": "章号越界（须 ≥ 1，且不超过目录页口径章数）",
+    "T_CHAPTER_NUM_DUP": "卷内章号重复",
+    "T_CHAPTER_SEQ": "卷内章号非 1..K 连续（每卷以第一章开始）",
     "T_SECTION_NAME_BAD": "节目录名不合命名法",
     "T_SECTION_PREFIX_MISMATCH": "节号前缀与卷内章号不符",
     "T_SECTION_SEQ": "章内节号非 1..K 连续",
@@ -199,7 +199,6 @@ def scan_tree(root):
         raise ScanError("大纲树根不存在或不是目录：%s" % root)
     tree = {"volumes": [], "anomalies": [], "_root": root,
             "metrics": load_doc_metrics(root)}
-    ch_seen = {}
     for vname in sorted(os.listdir(root)):
         vfull = os.path.join(root, vname)
         if not os.path.isdir(vfull):
@@ -218,7 +217,7 @@ def scan_tree(root):
         if vnum < 1:
             tree["anomalies"].append(("vol_num_bad", vname, "卷号须 ≥ 1"))
         vol = {"name": vname, "num": vnum, "slug": vm.group("slug") or "", "chapters": []}
-        _scan_chapters(root, vol, tree, ch_seen)
+        _scan_chapters(root, vol, tree)
         tree["volumes"].append(vol)
     for d in ROOT_ALLOWED_DIRS:
         if not os.path.isdir(os.path.join(root, d)):
@@ -228,9 +227,17 @@ def scan_tree(root):
     return tree
 
 
-def _scan_chapters(root, vol, tree, ch_seen):
+def _scan_chapters(root, vol, tree):
+    """扫描卷内章目录。
+
+    章号口径（2026-10-23 ykla 裁定）：每卷永远以第一章开始，即卷内 1..K
+    连续，与目录页 ``## 第 N 章`` 语义一致；全书连续性不再作为判据（全书
+    连续仅存于 ``映射/targets.tsv`` 的稳定 ID）。
+    """
     vpath = _under(root, vol["name"])
-    ch_max = (tree.get("metrics") or (0, 0, 0))[1] or None
+    ch_seen = {}
+    ch_max = (tree.get("metrics") or (0, 0, 0))[1] or None   # 全书章数，仅作宽松上限
+    items = []
     for cname in sorted(os.listdir(vpath)):
         cfull = os.path.join(vpath, cname)
         rel = _rel_join(vol["name"], cname)
@@ -239,21 +246,24 @@ def _scan_chapters(root, vol, tree, ch_seen):
             continue
         cm = CH_RE.match(cname)
         if not cm:
-            tree["anomalies"].append(("chapter_name_bad", rel, "须为 第NNN章-slug"))
+            tree["anomalies"].append(("chapter_name_bad", rel, "须为 第N章-slug（卷内编号）"))
             continue
         cnum = int(cm.group(1))
         if cnum < CH_NUM_MIN or (ch_max and cnum > ch_max):
             tree["anomalies"].append(("chapter_num_range", rel,
-                                      "章号 %d 越界（须 ≥ 001%s）"
+                                      "章号 %d 越界（须 ≥ 1%s）"
                                       % (cnum, "，且 ≤ %d" % ch_max if ch_max else "")))
         if cnum in ch_seen:
             tree["anomalies"].append(("chapter_num_dup", rel,
-                                      "章号与 %s 重复" % ch_seen[cnum]))
+                                      "卷内章号与 %s 重复" % ch_seen[cnum]))
         else:
             ch_seen[cnum] = rel
-        chap = {"name": cname, "num": cnum, "slug": cm.group("slug") or "",
-                "volume": vol["name"], "ord": len(vol["chapters"]) + 1,
-                "sections": []}
+        items.append((cnum, cname, cm.group("slug") or ""))
+    # 卷内章序按**数字**排序（字符串序会把 第10章 排在 第2章 前）
+    items.sort(key=lambda t: t[0])
+    for cnum, cname, slug in items:
+        chap = {"name": cname, "num": cnum, "slug": slug,
+                "volume": vol["name"], "ord": cnum, "sections": []}
         _scan_sections(root, vol, chap, tree)
         vol["chapters"].append(chap)
     vol["chapters"].sort(key=lambda c: (c["num"], c["name"]))
@@ -588,16 +598,17 @@ def validate(tree, summary_text, keywords_doc=None):
     for kind, rel, detail in tree["anomalies"]:
         problems.append(("T_" + kind.upper(), "%s：%s" % (rel, detail)))
 
-    # 一之一、序号连续与目录页口径锚（2026-10-23 搬迁批）
+    # 一之一、序号连续与目录页口径锚（2026-10-23 搬迁批；章号卷内连续）
     vnums = [v["num"] for v in tree["volumes"]]
     if vnums and vnums != list(range(1, len(vnums) + 1)):
         problems.append(("T_VOL_SEQ", "卷号非 1..%d 连续：%s" % (len(vnums), vnums[:12])))
-    cnums = [c["num"] for v in tree["volumes"] for c in v["chapters"]]
-    if cnums and cnums != list(range(1, len(cnums) + 1)):
-        first = next(i + 1 for i, n in enumerate(cnums) if n != i + 1)
-        problems.append(("T_CHAPTER_SEQ",
-                         "章号非 001..%d 连续；首个失配序位 %d（实为 %d）"
-                         % (len(cnums), first, cnums[first - 1])))
+    for v in tree["volumes"]:
+        cnums = sorted(c["num"] for c in v["chapters"])
+        if cnums and cnums != list(range(1, len(cnums) + 1)):
+            first = next(i + 1 for i, n in enumerate(cnums) if n != i + 1)
+            problems.append(("T_CHAPTER_SEQ",
+                             "%s 卷内章号非 1..%d 连续；首个失配序位 %d（实为 %d）"
+                             % (v["name"], len(cnums), first, cnums[first - 1])))
     metrics = tree.get("metrics")
     if metrics:
         nv, nc, ns = tree_counts(tree)[:3]
@@ -1043,33 +1054,34 @@ def _mk(path, text=""):
 def build_fixture_tree(tree_dir):
     """合成树：2 卷、3 章、4 节、6 小节（含 1 个空小节文件）。
 
-    新树 schema（2026-10-23）：卷 `第NN卷-slug`、章 `第NNN章-slug`（全书连续）、
-    节 `M.N-slug`（M＝**卷内章号**）、小节 `M.N.P-slug.md`；根级另有 目录／映射 两子树。
+    新树 schema（2026-10-23）：卷 `第NN卷-slug`、章 `第N章-slug`（**卷内连续**，
+    每卷永远以第一章开始）、节 `M.N-slug`（M＝**卷内章号**）、小节
+    `M.N.P-slug.md`；根级另有 目录／映射 两子树。
     """
     shutil.rmtree(tree_dir, ignore_errors=True)
     v1 = os.path.join(tree_dir, "第01卷-合成甲")
     v2 = os.path.join(tree_dir, "第02卷-合成乙")
     entries = [
-        (os.path.join(v1, "第001章-卷总览", "1.1-章级综合", "1.1.1-概述.md"),
+        (os.path.join(v1, "第1章-卷总览", "1.1-章级综合", "1.1.1-概述.md"),
          "# 1.1.1 概述\n"),
-        (os.path.join(v1, "第001章-卷总览", "1.1-章级综合", "1.1.2-空件.md"), ""),
-        (os.path.join(v1, "第002章-alpha起点", "2.1-章级综合", "2.1.1-alpha小节.md"),
+        (os.path.join(v1, "第1章-卷总览", "1.1-章级综合", "1.1.2-空件.md"), ""),
+        (os.path.join(v1, "第2章-alpha起点", "2.1-章级综合", "2.1.1-alpha小节.md"),
          "# 2.1.1 alpha\n"),
-        (os.path.join(v1, "第002章-alpha起点", "2.2-beta路径", "2.2.1-beta小节.md"),
+        (os.path.join(v1, "第2章-alpha起点", "2.2-beta路径", "2.2.1-beta小节.md"),
          "# 2.2.1 beta\n"),
-        (os.path.join(v1, "第002章-alpha起点", "2.2-beta路径", "2.2.2-gamma小节.md"),
+        (os.path.join(v1, "第2章-alpha起点", "2.2-beta路径", "2.2.2-gamma小节.md"),
          "# 2.2.2 gamma\n"),
-        (os.path.join(v2, "第003章-delta收束", "1.1-章级综合", "1.1.1-delta小节.md"),
+        (os.path.join(v2, "第1章-delta收束", "1.1-章级综合", "1.1.1-delta小节.md"),
          "# 1.1.1 delta\n"),
     ]
     for path, text in entries:
         _mk(path, text)
     # 保障四个节目录齐备（含空节目录也须照列）
     for path in (
-        os.path.join(v1, "第001章-卷总览", "1.1-章级综合"),
-        os.path.join(v1, "第002章-alpha起点", "2.1-章级综合"),
-        os.path.join(v1, "第002章-alpha起点", "2.2-beta路径"),
-        os.path.join(v2, "第003章-delta收束", "1.1-章级综合"),
+        os.path.join(v1, "第1章-卷总览", "1.1-章级综合"),
+        os.path.join(v1, "第2章-alpha起点", "2.1-章级综合"),
+        os.path.join(v1, "第2章-alpha起点", "2.2-beta路径"),
+        os.path.join(v2, "第1章-delta收束", "1.1-章级综合"),
     ):
         os.makedirs(path, exist_ok=True)
     # 根级非内容子树（装配源／映射参考占位；空目录即满足存在性判据）
@@ -1160,7 +1172,7 @@ def selftest():
             return buf
 
         def add_extra(buf):
-            buf.append("- [第004章-树外](第02卷-合成乙/第004章-树外/)")
+            buf.append("- [第3章-树外](第02卷-合成乙/第3章-树外/)")
             return buf
 
         def dead_link(buf):
@@ -1168,7 +1180,7 @@ def selftest():
             ln = buf[target_line]
             cut = ln.rindex("](")
             buf[target_line] = ln[:cut] + "](" + _quote(
-                "第01卷-合成甲/第002章-alpha起点/2.2-beta路径/2.2.9-不存在.md") + ")"
+                "第01卷-合成甲/第2章-alpha起点/2.2-beta路径/2.2.9-不存在.md") + ")"
             return buf
 
         def retitle(buf):

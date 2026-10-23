@@ -20,7 +20,7 @@ Q 种「可见标记泄漏」加粗与章题 @@ 两形态、2026-10-10 补入的
 
 用法：python tests/tri_structure_negtest.py
 
-2026-09-27 主理人裁定：**节题长度阈值为软限制**（逾限只示 WARN、不判 FAIL）；长度计数
+2026-09-27 ykla 裁定：**节题长度阈值为软限制**（逾限只示 WARN、不判 FAIL）；长度计数
 口径＝英语单词整体算 1 字。故 N-f 一条改为软限断言（须 WARN 且不得阻断）。
 ⚠ 夹具必须以 LF 写出（write_text 须显式指定 LF 换行）：Windows 默认 CRLF 会先被 A 组「含 CRLF」拦下，
    判据是否有效被掩盖——2026-09-27 实测 N 组夹具全组曾因此「假拦下」。
@@ -30,9 +30,13 @@ import subprocess
 import sys
 from pathlib import Path
 
-BASE = Path(r"d:\librebsd\05-卷册大纲\目录")
+# 路径一律由本件位置推导（2026-10-23 修：原写死 `d:\librebsd\...` 绝对路径）：
+# parents[1] ＝ `05-卷册大纲/目录`（本件在 tests/ 内）；其 parents[1] ＝ 仓库根。
+BASE = Path(__file__).resolve().parents[1]
+REPO = BASE.parents[1]
 SRC = BASE / "index.html"
-AUDIT = Path(r"d:\librebsd\00-编纂规则与格式规范\01-规则\脚本与命令\audit_index_structure.py")
+AUDIT = REPO / "00-编纂规则与格式规范" / "01-规则" / "脚本与命令" / "audit_index_structure.py"
+# 历史归档引用，勿改：夹具副本目录留在 script 归档区（README 第十二件注明“保留不清理”）。
 OUT = Path(r"d:\librebsd\script\_vol_adjust_20260927\negfix")
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -166,7 +170,7 @@ p10 = OUT / 'n_e_year_regress.html'
 assert 'Berkeley Pascal（1975–1976）' in h, 'N-e 夹具无法定位'
 p10.write_text(h.replace('Berkeley Pascal（1975–1976）', 'Berkeley Pascal（1970–1976）', 1), encoding='utf-8', newline='\n')
 
-# N-f 节题长度（**软限**，2026-09-27 主理人裁定）：把卷 3 ch1 1.2 节题拉长到新计数口径下逾 60 字（不含注）。
+# N-f 节题长度（**软限**，2026-09-27 ykla 裁定）：把卷 3 ch1 1.2 节题拉长到新计数口径下逾 60 字（不含注）。
 #   该条**不在**「拦下」式 cases 内（软限不阻断），另以软限断言核验：须报 WARN 且门禁 exit 0。
 p11 = OUT / "n_f_long_sec.html"
 old_12 = "进程模型：fork、exec 与 wait"
@@ -282,7 +286,7 @@ _LB, _RB = chr(0x27E6), chr(0x27E7)
 p_qlang = OUT / "_neg_q_lang_mark.html"
 p_qlang.write_text(h[:m_qc.start(1)] + m_qc.group(1) + _LB + "en:test" + _RB
                    + m_qc.group(2) + h[m_qc.end(2):], encoding="utf-8", newline="\n")
-#   ④「谱系」残留（2026-10-08 追加，125 号文 阶段 F）：主理人硬令「标题＋注文一并清理」，
+#   ④「谱系」残留（2026-10-08 追加，125 号文 阶段 F）：ykla 硬令「标题＋注文一并清理」，
 #     全库禁用「谱系」二字。注入卷 1 ch1 章题文本，确认 Q2 判据能判为 FAIL。
 p_q2 = OUT / "_neg_q2_puxi.html"
 p_q2.write_text(h[:m_qc.start(1)] + m_qc.group(1) + "谱系" + m_qc.group(2) + h[m_qc.end(2):],
@@ -316,7 +320,7 @@ cases += [
 
 results = [run(p, tag, grp) for p, tag, grp in cases]
 
-# N-f 软限断言（2026-09-27 主理人裁定：节题长度阈值是**软限制**，逾限只示 WARN）：
+# N-f 软限断言（2026-09-27 ykla 裁定：节题长度阈值是**软限制**，逾限只示 WARN）：
 #   须报 N-f WARN，且门禁 exit 0（不得判 FAIL、不得阻断）。夹具须 LF 写出，否则先被 A 组
 #   「含 CRLF」拦下，本判据被掩盖——2026-09-27 实测该坑曾令 N 组全部夹具「假拦下」。
 r_nf = subprocess.run([sys.executable, str(AUDIT), "--path", str(p11)],

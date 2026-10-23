@@ -200,6 +200,7 @@ def scan_tree(root=TREE):
                 })
             chapters.append({
                 "num": "%03d" % chnum,
+                "key": "V%02d-C%03d" % (vnum, chnum),
                 "slug": m.group("slug") or "",
                 "first": ci == 0,
                 "last": ci == len(chs) - 1,
@@ -342,6 +343,14 @@ def doc_counts(path, title, trie, latin):
 
 # ---------------------------------------------------------------- 索引构建
 
+def _ch_key(cid):
+    """章键排序键：复合式 V%02d-C%03d → (卷号, 卷内章号)。"""
+    m = re.match(r"^V(\d+)-C(\d+)$", cid)
+    if not m:
+        raise Fatal("非法章键：%s" % cid)
+    return tuple(int(x) for x in m.groups())
+
+
 def _sec_key(sid):
     m = re.match(r"^V(\d+)-C(\d+)-(\d+)\.(\d+)$", sid)
     if not m:
@@ -423,7 +432,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                     for t in extract_tech(x["title"], sub_pick.get(x["key"], []), by_id):
                         tech_n[t] = tech_n.get(t, 0) + 1
                 sections_out[s["key"]] = {
-                    "chapter": c["num"],
+                    "chapter": c["key"],
                     "title": s["slug"],
                     "meta": meta,
                     "domains": [],
@@ -448,9 +457,9 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 themes.items(), key=lambda kv: (-kv[1], kv[0]))[:8]]
             ch_domains = [d for d, _n in sorted(
                 doms.items(), key=lambda kv: (-kv[1], kv[0]))[:3]]
-            chapters_out[c["num"]] = {
+            chapters_out[c["key"]] = {
                 "volume": v["name"],
-                "title": c["slug"] or c["num"],
+                "title": c["slug"] or c["key"],
                 "domains": ch_domains,
                 "themes": ch_themes,
                 "sections": len(c["sections"]),
@@ -467,7 +476,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
     for v in volumes:
         agg = {}
         for c in v["chapters"]:
-            for cid in chapters_out[c["num"]]["themes"]:
+            for cid in chapters_out[c["key"]]["themes"]:
                 agg[cid] = agg.get(cid, 0) + 1
         vol_themes[v["name"]] = [cid for cid, _n in sorted(
             agg.items(), key=lambda kv: (-kv[1], kv[0]))[:8]]
@@ -480,7 +489,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 his_n = sum(1 for cid in row["themes"]
                             if domain_of(cid, by_id) == META_DOMAIN)
                 if len(row["themes"]) < need:
-                    for cid in chapters_out[c["num"]]["themes"]:
+                    for cid in chapters_out[c["key"]]["themes"]:
                         if cid in row["themes"]:
                             continue
                         if domain_of(cid, by_id) == META_DOMAIN and not allow_his and his_n >= 1:
@@ -507,7 +516,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                     if d and d not in doms:
                         doms.append(d)
                 if not doms:
-                    doms = chapters_out[c["num"]]["domains"][:3]
+                    doms = chapters_out[c["key"]]["domains"][:3]
                 if len(row["themes"]) < need:
                     for d in doms:
                         for cid in default_ids.get(d, []):
@@ -524,7 +533,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                     row["auto"] = auto
                 total = len(row["themes"]) + len(row.get("auto") or [])
                 if total < need:
-                    for cid in chapters_out[c["num"]]["themes"]:
+                    for cid in chapters_out[c["key"]]["themes"]:
                         if cid not in row["themes"]:
                             row["themes"].append(cid)
                         if len(row["themes"]) + len(row.get("auto") or []) >= need:
@@ -571,7 +580,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                          "broader": by_id[cid]["broader"],
                          "tech": list(by_id[cid].get("techTerms") or [])}
                    for cid in sorted(used)},
-        "chapters": dict(sorted(chapters_out.items(), key=lambda kv: int(kv[0]))),
+        "chapters": dict(sorted(chapters_out.items(), key=lambda kv: _ch_key(kv[0]))),
         "sections": dict(sorted(sections_out.items(), key=lambda kv: _sec_key(kv[0]))),
         "subsection_delta": dict(sorted(delta.items(), key=lambda kv: _sub_key(kv[0]))),
     }
@@ -672,7 +681,7 @@ def check_all(out_dir=TREE, deep=False):
     if meta.get("content_sha256") != csha:
         problems.append("content_sha256 不符（树内容已变）")
     disk_ch = set(kw.get("chapters") or {})
-    tree_ch = {"%03d" % int(c["num"]) for v in volumes for c in v["chapters"]}
+    tree_ch = {c["key"] for v in volumes for c in v["chapters"]}
     if disk_ch != tree_ch:
         problems.append("章键不符：缺 %s／多 %s"
                         % (sorted(tree_ch - disk_ch)[:3], sorted(disk_ch - tree_ch)[:3]))

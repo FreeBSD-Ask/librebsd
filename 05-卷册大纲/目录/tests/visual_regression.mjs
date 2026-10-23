@@ -1,6 +1,7 @@
 import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
 import http from 'node:http';
 import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 // Chromium 可执行路径解析（2026-10-04 立）：钉定修订版优先，环境更新后自动回落现存最高修订版。
 const __PW_DIR = 'C:/Users/ykla/AppData/Local/ms-playwright';
 const __PINNED = __PW_DIR + '/chromium-1200/chrome-win64/chrome.exe';
@@ -20,8 +21,12 @@ import fs from 'node:fs';
  * 断言：17 项视觉几何 + 功能断言（TOC 跟随可见性、浮层、折叠、图谱、进度条、
  *       键盘、抽屉、SUMMARY 导出）。失败退出码 1，供 CI/本地“改后必跑”使用。
  * ========================================================================== */
-const URL = 'file:///D:/librebsd/05-卷册大纲/目录/index.html';
-const SHOT = 'D:/librebsd/script/_staging/polsplit/';
+/* 路径推导（2026-10-23）：一律由本件位置求仓库内路径，不再写死盘符与绝对路径。
+   tests/ → 目录/ → 05-卷册大纲/ → 仓库根。 */
+const __HERE = path.dirname(fileURLToPath(import.meta.url));   // tests/
+const __DOC = path.resolve(__HERE, '..');                       // 05-卷册大纲/目录/
+const URL = pathToFileURL(path.join(__DOC, 'index.html')).href;
+const SHOT = 'D:/librebsd/script/_staging/polsplit/';   // 历史归档引用，勿改（批计划 §九披露）
 const HEADLESS = process.argv.includes('--headless');   // 默认有头；--headless 用于静默回归
 const browser = await chromium.launch({
   executablePath: __CHROME_EXE,
@@ -39,9 +44,9 @@ function record(name, pass, detail) {
  * 真值取**内容源** data/outline.txt（装配产物 index.html 的上游），不取页面 DOM——
  * 页面 DOM 是运行时装饰（计数徽标/溯源注徽标/长节名折叠）的宿主，即被测对象，自证无效。
  * ------------------------------------------------------------------------- */
-const OUTLINE_PATH = 'D:/librebsd/05-卷册大纲/目录/data/outline.txt';
+const OUTLINE_PATH = path.join(__DOC, 'data', 'outline.txt');
 /* HTML 本体导出比对基准（T20，2026-10-14）：磁盘装配产物 index.html。 */
-const INDEX_PATH = 'D:/librebsd/05-卷册大纲/目录/index.html';
+const INDEX_PATH = path.join(__DOC, 'index.html');
 /* 语言标记剥离（2026-10-12，136 批）：内容源 ⟦lang:文本⟧ 于装配期被 esc() 消费，
    DOM 导出为纯文本「文本」；本夹具基准自内容源直读，须同口径剥离，否则 T13/T17
    题面比对恒失败（README 夹具同步纪律⑥「改语法时须同步该常量」）。 */
@@ -335,7 +340,7 @@ function linkVisible(link) {
   const jY = await page.evaluate(() => Math.round(window.scrollY));
   record('T10 键盘 j 跳下一章', jY > 10000, 'y=' + jY);
 
-  /* T21：页内导航历史中性（数据／回归）——主理人令「无论怎样点击都不应当产生
+  /* T21：页内导航历史中性（数据／回归）——ykla 令「无论怎样点击都不应当产生
      历史记录（应仅有一个）」。判据＝ history.length 差量恒 0：①点卷链接、
      ②点章链接、③按 n、④按 p、⑤滚轮增量滑动，逐步记 len；全部等于初始值；
      同时以滚动位置变化与片段非空确证操作已生效（防「全拦死」假绿）。 */
@@ -428,7 +433,7 @@ function linkVisible(link) {
   }
 
   /* T16：面包屑可见态下两角浮动按钮中心可点（2026-09-26 立，2026-10-14 重写）
-     主理人 2026-10-14 报障「左侧边栏按钮与面包屑存在干涉」，处置＝同右侧按钮
+     ykla 2026-10-14 报障「左侧边栏按钮与面包屑存在干涉」，处置＝同右侧按钮
      （按钮浮于面包屑之上、中心可点）。判据：滚动态（scrollY>120，面包屑须为
      visible）下，左上「目录」与右上「设置」两按钮**中心**的 elementFromPoint
      须命中按钮自身；并以 visibility 断言锚定「可见态」，防隐藏态量测恒真空转
@@ -593,7 +598,7 @@ function linkVisible(link) {
      防“计数同而内容错”的静默假绿）。逐字节保真仅 http 通道承诺。 */
 {
   const { page, errs } = await newPage(1200, 900, 1);
-  const T20DIR = 'D:/librebsd/script/_staging/export_html_t20/';
+  const T20DIR = 'D:/librebsd/script/_staging/export_html_t20/';   // 历史归档引用，勿改（批计划 §九披露）
   let ok20 = false;
   const det20 = { mode: 'http+file' };
   try {
@@ -606,7 +611,7 @@ function linkVisible(link) {
 
     /* —— Part 1：http 通道逐字节 —— */
     /* ROOT 以 normalize＋sep 收口，与 path.join 产物分隔符一致（否则 startsWith 守卫恒假 → 403）。 */
-    const ROOT = path.normalize('D:/librebsd/05-卷册大纲/目录') + path.sep;
+    const ROOT = path.normalize(__DOC) + path.sep;
     const srv = http.createServer((req, res) => {
       const rel = decodeURIComponent((req.url || '/').split('?')[0].split('#')[0]);
       const p = path.join(ROOT, rel === '/' ? 'index.html' : rel);
@@ -781,7 +786,7 @@ function linkVisible(link) {
 
 /* ============ 视口 F：章卷题面可选性（T19，2026-09-27 增） ============
    缘由：2026-09-26 的「卷/章折叠」给 h2／h3.chapter 加了 user-select:none，致**题面
-   文字整块不可选**（主理人报障“章卷文字在网页上无法选中”）；且同一手势收尾的 click
+   文字整块不可选**（ykla 报障“章卷文字在网页上无法选中”）；且同一手势收尾的 click
    还会顺手把整卷折起（拖选一无所获、卷却折了）。
    本项锁五条：①题面本体可选；②装饰箭头仍不入选区（判据取 ::after 伪元素计算值，
    不取选区文本——否则“选区里没有 ▾”可由选择失败被动满足，属空转判据）；③拖选只做

@@ -116,6 +116,7 @@ def scan(out_dir=None):
             title = re.sub(r"^第\s*%d\s*章\s*" % gn, "", ch_h1).strip()
             rows.append({
                 "ch": gn,
+                "vn": int(VOLNO.match(v).group(1)),
                 "volume": v,
                 "title": norm(title),
                 "subs": sub_rows,
@@ -129,22 +130,31 @@ def load_current(path=None):
     if not os.path.exists(path):
         return {}
     try:
-        return json.load(io.open(path, encoding="utf-8"))
+        doc = json.load(io.open(path, encoding="utf-8"))
     except Exception as exc:  # 损坏即停，禁覆盖
         print("FATAL 现有 chapter_keywords.json 无法解析：%s" % exc)
         raise SystemExit(2)
+    if isinstance(doc, dict) and "chapters" in doc:
+        # 2026-10-23 实测：磁盘件已是 sync_outline_mirror.py --write 生成的
+        # 结构化文档（meta/themes/chapters/sections/subsection_delta），与本器
+        # 期望的平铺章键字典不同构。写者冲突未裁定前 fail-closed，禁写盘。
+        print("FATAL chapter_keywords.json 为结构化文档（含 meta/chapters 等顶层键），"
+              "现由 sync_outline_mirror.py --write 生成；本器与之写者冲突待裁定，"
+              "拒绝继续（不写盘）。")
+        raise SystemExit(2)
+    return doc
 
 
 def build(rows, cur):
     out = {}
     derived = []
     for r in rows:
-        key = str(r["ch"])
+        key = "V%02d-C%03d" % (r["vn"], r["ch"])
         prev = cur.get(key) or {}
         kws = [k for k in (prev.get("keywords") or []) if TERM.match(str(k))]
         if not kws:
             kws = derive(r["h1"], r["ch"], r["subs"])
-            derived.append(r["ch"])
+            derived.append(key)
         out[key] = {
             "volume": r["volume"],
             "title": r["title"],
@@ -154,9 +164,15 @@ def build(rows, cur):
     return out, derived
 
 
+def _ch_key(k):
+    """复合章键 V%02d-C%03d → (卷号, 卷内章号) 排序键。"""
+    m = re.match(r"^V(\d+)-C(\d+)$", k)
+    return tuple(int(x) for x in m.groups()) if m else (0, int(k) if str(k).isdigit() else 0)
+
+
 def diff(cur, new):
     d = []
-    for key in sorted(new, key=int):
+    for key in sorted(new, key=_ch_key):
         if key not in cur:
             d.append("新增章 %s（%s）" % (key, new[key]["title"]))
             continue
@@ -176,7 +192,7 @@ def diff(cur, new):
         if old.get("keywords") != new[key]["keywords"]:
             d.append("章 %s 词表漂移（%d → %d）" % (
                 key, len(old.get("keywords") or []), len(new[key]["keywords"])))
-    for key in sorted(set(cur) - set(new), key=int):
+    for key in sorted(set(cur) - set(new), key=_ch_key):
         d.append("消失章 %s（库中存在、磁盘已无）" % key)
     return d
 

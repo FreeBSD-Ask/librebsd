@@ -1,8 +1,9 @@
 import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
-const URL = 'file:///D:/librebsd/05-卷册大纲/目录/index.html';
+// 路径由本件位置推导（2026-10-23）：tests/ 的上一级即 `05-卷册大纲/目录`
+const PAGE_URL = new URL('../index.html', import.meta.url).href;
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-await page.goto(URL, { waitUntil: 'load' });
+await page.goto(PAGE_URL, { waitUntil: 'load' });
 await page.waitForTimeout(1500);
 const r = await page.evaluate(() => {
   const t = document.body.textContent;

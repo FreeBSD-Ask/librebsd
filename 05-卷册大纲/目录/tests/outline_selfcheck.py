@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """目录自检（outline self-check）——重构2026 目录批次的**收口复核**。
 
-来源：101 号文 §九 P3-12（2026-10-02 主理人「复核后全面批准」）。
+来源：101 号文 §九 P3-12（2026-10-02 ykla「复核后全面批准」）。
 定位：本件**不是**第九件门禁的替代，而是**独立复核**——九件门禁与三套回归**均未捕获**
       本轮两处缺口（卷 9 时段不自洽、迁移留痕 127 处残留），本件是唯一拦截通道。
 
@@ -22,8 +22,11 @@ import sys
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
-O = Path(r"D:/librebsd/05-卷册大纲/目录/data/outline.txt")
-I = Path(r"D:/librebsd/05-卷册大纲/目录/index.html")
+# 路径一律由本件位置推导（2026-10-23 修：原写死 `D:/librebsd/...` 绝对路径）：
+# parents[1] ＝ `05-卷册大纲/目录`（本件在 tests/ 内）。
+DOC = Path(__file__).resolve().parents[1]
+O = DOC / "data" / "outline.txt"
+I = DOC / "index.html"
 L = O.read_text(encoding="utf-8").splitlines()
 H = I.read_text(encoding="utf-8")
 CN = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
@@ -47,14 +50,30 @@ for i, n in heads:
 # ---- 约束验算（按内容识别，不按设计表） ----
 def find(sub):
     return next((n for n, t in titles.items() if sub in t), None)
+
+def find_in_volume(sub):
+    """按**卷块内容**（卷题＋章题＋节题）定位首个含该关键词的卷号（2026-10-23 增）。
+
+    用于“作为卷已消解、内容并入他卷”的主题：如“传言”——旧第 43 卷
+    “BSD 的传言、都市传说、俚语与习俗”已消解，最早落位现为第二十九卷第 7 章。
+    仍按内容动态识别，不写死卷号；全库无命中返回 None（走 C 组锚点失效自报）。
+    """
+    for k, (i, n) in enumerate(heads):
+        e = heads[k + 1][0] if k + 1 < len(heads) else len(L)
+        if any(sub in x for x in L[i:e]):
+            return n
+    return None
+
 pos = {n: k for k, (_, n) in enumerate(heads, 1)}
 # 2026-10-05 修 C1 锚点：原用旧卷题「386BSD 与 BSD 大分裂」（112/113 拆卷前之临时合并卷名，
 # 拆分后该题面已不存在 → find() 返回 None、本件抛 KeyError 静默失效）。改锚现行卷 16
 # 「BSD UNIX 大分裂」，并以题面（而非卷号）锚定，免于历次重编号崩坏。
 chk = [
  ("C1 UNIX 战争 < BSD UNIX 大分裂", lambda: pos[find("UNIX 战争")] < pos[find("BSD UNIX 大分裂")]),
- ("R2 BSD UNIX 文化与哲学 < BSD UNIX 技术专题史", lambda: pos[find("BSD UNIX 文化与哲学")] < pos[find("BSD UNIX 技术专题史")]),
- # 2026-10-15 修 R4 锚点：149 批人物专卷 #48（BSD 社区与相关领域人物志）经主理人批准插于旧 42 卷（社会与哲学横向）之前——技术横向（现 47）与社哲横向（现 49）之间隔人物专卷一卷，相邻关系不复成立 → 循 R7 先例（2026-10-05／10-11）改取严格序。
+ # 2026-10-23 四修 R2 锚点：原锚“BSD UNIX 文化与哲学”系旧卷题子串，现行卷 29 题面为
+ # “BSD UNIX 文化、社会与哲学”→ find() 返回 None、本件第四次因锚腐失效。改锚现行题面全串。
+ ("R2 BSD UNIX 文化、社会与哲学 < BSD UNIX 技术专题史", lambda: pos[find("BSD UNIX 文化、社会与哲学")] < pos[find("BSD UNIX 技术专题史")]),
+ # 2026-10-15 修 R4 锚点：149 批人物专卷 #48（BSD 社区与相关领域人物志）经 ykla 批准插于旧 42 卷（社会与哲学横向）之前——技术横向（现 47）与社哲横向（现 49）之间隔人物专卷一卷，相邻关系不复成立 → 循 R7 先例（2026-10-05／10-11）改取严格序。
  ("R4 技术横向比较卷 位次早于 文化哲学横向比较卷（间隔人物专卷 #48）", lambda: pos[find("技术发展史的横向比较")] < pos[find("社会与哲学的横向比较")]),
  # 2026-10-10 修 R4 锚点：原锚「文化与哲学的横向比较」系旧卷题子串，卷 40 题面已改为
  # 「文化、社会与哲学的横向比较」（原锚不再命中 → find() 返回 None、KeyError 失效）。
@@ -66,8 +85,15 @@ chk = [
  # 原锚不再命中 → KeyError（本件第三次因该锚静默失效）。按设计语义（macOS 卷居 BSD 技术
  # 扩散与商业化卷之后）改锚现行第四十四卷题面子串「技术的扩散与商业化」。
  ("R7 macOS 在「扩散与商业化」卷（原「沉默的基石」卷）之后", lambda: pos[find("macOS")] > pos[find("技术的扩散与商业化")]),
- ("R10 传言卷 < 史学史卷", lambda: pos[find("传言")] < pos[find("史学史与方法")]),
- ("C2 传言卷 = 会者定离 − 2", lambda: pos[find("传言")] == pos[find("会者定离")] - 2),
+ # 2026-10-23 修 R10／C2 锚点：“传言”已不作卷题——旧第 43 卷“BSD 的传言、都市传说、俚语
+ # 与习俗（1969–2026）”消解，内容并入各期文化卷（最早落位现第二十九卷第 7 章），两个原锚点
+ # 同时失效（KeyError(None)）。改以 find_in_volume() 按**卷块内容**定位，并按现行真值改写判据：
+ #   R10 → 传言所在卷早于史学史卷（原链：旧 43 早于旧 42“史学史与方法”；该卷现分列 73／74／75，
+ #         取首卷“BSD 史学史”）；
+ #   C2  → 原“传言卷 ＝ 会者定离 − 2”等式随旧 43 卷消解而无可比对象，降为严格先序判据
+ #         （传言所在卷早于会者定离卷）；相邻关系由 C3（传播载体 ＝ 会者定离 − 1）继续守。
+ ("R10 传言所在卷 < 史学史卷", lambda: pos[find_in_volume("传言")] < pos[find("BSD 史学史")]),
+ ("C2 传言所在卷 早于 会者定离卷（原“= 会者定离 − 2”等式随旧 43 卷消解改判先序）", lambda: pos[find_in_volume("传言")] < pos[find("会者定离")]),
  ("C3 传播载体卷 = 会者定离 − 1", lambda: pos[find("传播载体与公众记忆")] == pos[find("会者定离")] - 1),
 ]
 print("\n[C] 卷序约束（按内容识别，独立于设计表；锚点失效时逐项自报、不再整件中断）")
@@ -150,6 +176,7 @@ hist = sum(1 for l in L if re.search(r'(旧|原)第' + N + r'卷', l))
 print(f"   历史层引用（旧/原 第X卷）保留 {hist} 处（应保留）")
 
 # ---- 台账 ----
+# 历史归档引用，勿改：台账留在 review_logs 历史归档，不随夹具迁移（批计划 §九披露）。
 T = Path(r"D:/librebsd/08-核查报告与多轮复核/重构2026/review_logs/迁移留痕台账-20261002.tsv")
 if T.exists():
     rows = T.read_text(encoding="utf-8").splitlines()

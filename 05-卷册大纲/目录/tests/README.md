@@ -17,7 +17,7 @@ node visual_regression.mjs --headless # 无头模式（静默回归，失败退�
 - 本机 playwright：借道 `@executeautomation/playwright-mcp-server` 树内安装（`C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright`）；
 - Chromium：钉定修订版 `C:/Users/ykla/AppData/Local/ms-playwright/chromium-1200/chrome-win64/chrome.exe`；**2026-10-04 起夹具内置解析器**——钉定路径存在则用之，否则自动回落至 `ms-playwright/` 下现存最高 `chromium-<rev>` 修订版（环境更新浏览器集后无须逐文件改路径）。
 
-路径为机器固定值；迁移机器时须同步更新脚本头常量与 `URL`（解析器常量 `__PW_DIR`／`__PINNED` 同样适用）。
+页面与内容源路径自 2026-10-23 起由夹具自身位置推导（`import.meta.url`／`__file__` 向上求 `05-卷册大纲/目录` 与仓库根），迁移机器无须改；仍为机器固定值者仅 Playwright 安装路径与 Chromium 解析器常量 `__PW_DIR`／`__PINNED`，以及指向 `script/`、`review_logs/` 历史归档的引用（各件已就地注明“历史归档引用，勿改”）。
 
 ## 断言清单（25 项）
 
@@ -74,16 +74,18 @@ node visual_regression.mjs --headless # 无头模式（静默回归，失败退�
 
 ## outline_selfcheck 锚点登记（2026-10-11 入常备面同步登记）
 
-`tests/outline_selfcheck.py` 的 C／J 两组以**卷题关键词**为锚（真值源＝`data/outline.txt` 卷题，按内容识别、不读设计表）。**改对应卷题前须同步本件**，否则报“锚点失效”自报行；锚腐已三度发生（C1 于 10-05、R4 于 10-10、R7 于 10-11）——本清单即此类改动的同步面：
+`tests/outline_selfcheck.py` 的 C／J 两组以**卷题关键词**为锚（真值源＝`data/outline.txt` 卷题，按内容识别、不读设计表）。**改对应卷题前须同步本件**，否则报“锚点失效”自报行；锚腐已四度发生（C1 于 10-05、R4 于 10-10、R7 于 10-11、R2／R10／C2 于 10-23）——本清单即此类改动的同步面：
 
 - **C1**：`UNIX 战争` 位次早于 `BSD UNIX 大分裂`
-- **R2**：`BSD UNIX 文化与哲学` 位次早于 `BSD UNIX 技术专题史`
+- **R2**：`BSD UNIX 文化、社会与哲学` 位次早于 `BSD UNIX 技术专题史`
 - **R4**：`技术发展史的横向比较` 位次早于 `社会与哲学的横向比较`（149 批起间隔人物专卷 #48）
 - **R7**：`技术的扩散与商业化` 位次早于 `macOS` 卷
-- **R10**：`传言` 位次早于 `史学史与方法`
-- **C2**：`传言` ＝ `会者定离` − 2
+- **R10**：`传言所在卷`（按**卷块内容**定位，见下）位次早于 `BSD 史学史`
+- **C2**：`传言所在卷` 位次早于 `会者定离`（原“＝ 会者定离 − 2”等式随旧 43 卷消解改判先序）
 - **C3**：`传播载体与公众记忆` ＝ `会者定离` − 1
 - **J**（抽查列示，软示面）：`UNIX 战争`／`BSD–Linux 关系史`／`编程之夏`／`BSD UNIX 技术专题史`／`技术发展史的横向比较`
+
+> 2026-10-23 修锚说明：旧第 43 卷“BSD 的传言、都市传说、俚语与习俗”已消解，内容并入各期文化卷（最早落位现第二十九卷第 7 章），“传言”不再作卷题。R10／C2 改由 `find_in_volume()` 按**卷块内容**（卷题＋章题＋节题）动态定位，并按其现行真值改写判据（C2 由等式降为严格先序）。
 
 > D 组另读 `index.html` 现行口径串（六处）作独立计数比对；脚本无参数、无判负退出码——收口时全输出目检。
 

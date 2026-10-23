@@ -18,7 +18,8 @@ for (const w of [...new Set(SIZES)]) {
   const page = await browser.newPage({ viewport: { width: w, height: 900, deviceScaleFactor: w < 500 ? 3 : 1 }, hasTouch: w < 500 });
   const errs = [];
   page.on('pageerror', e => errs.push(String(e).slice(0, 80)));
-  await page.goto('file:///D:/librebsd/05-卷册大纲/目录/index.html', { waitUntil: 'load' });
+  // 路径由本件位置推导（2026-10-23）：tests/ 的上一级即 `05-卷册大纲/目录`
+  await page.goto(new URL('../index.html', import.meta.url).href, { waitUntil: 'load' });
   await page.waitForTimeout(1700);
   const r = await page.evaluate(() => {
     const vw = window.innerWidth;

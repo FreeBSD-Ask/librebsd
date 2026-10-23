@@ -131,7 +131,7 @@ def looks_path(s: str) -> bool:
 
 
 def chapter_dir_of(host_path: str) -> str:
-    """宿主所属章节目录（最小含 '第NNN章' 的祖先）；找不到则取宿主所在目录。"""
+    """宿主所属章节目录（最小含 '第N章' 的祖先）；找不到则取宿主所在目录。"""
     d = os.path.dirname(os.path.abspath(host_path))
     cur = d
     while True:

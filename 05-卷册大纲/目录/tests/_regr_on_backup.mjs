@@ -18,6 +18,8 @@ if (!__CHROME_EXE) { console.error('未找到可用 Chromium（ms-playwright）'
  * 断言：17 项视觉几何 + 功能断言（TOC 跟随可见性、浮层、折叠、图谱、进度条、
  *       键盘、抽屉、SUMMARY 导出）。失败退出码 1，供 CI/本地「改后必跑」使用。
  * ========================================================================== */
+// 历史归档引用，勿改（批计划 §九披露）：本件按设计绑定 script 下的历史备份快照，
+// 真值取自该快照而非现行目录页（第十三件门禁对该件设专项豁免），故两个常量均保留原指向。
 const URL = 'file:///D:/librebsd/script/_bak_index_before_batch1_20260912.html';
 const SHOT = 'D:/librebsd/script/_staging/polsplit/';
 const HEADLESS = process.argv.includes('--headless');   // 默认有头；--headless 用于静默回归
