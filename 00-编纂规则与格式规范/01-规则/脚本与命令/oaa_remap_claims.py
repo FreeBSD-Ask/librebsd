@@ -168,8 +168,7 @@ def resolve_all(claims_file, root_name):
 
 
 def rewrite(claims_file, root_name, apply=False, stamp="20261022"):
-    """写模式：可唯一回映的行就地改写为现行路径（默认 dry-run；含 prebak 与写后断言）。"""
-    import shutil
+    """写模式：可唯一回映的行就地改写为现行路径（默认 dry-run；写前零副本＋写后断言）。"""
     results, st = resolve_all(claims_file, root_name)
     if results is None:
         return 2
@@ -365,7 +364,7 @@ def main():
     ap.add_argument("--check", action="store_true", help="执行只读检查（默认动作）")
     ap.add_argument("--write", action="store_true", help="写模式：可唯一回映的行就地改写（默认 dry-run）")
     ap.add_argument("--apply", action="store_true", help="写模式落盘（须与 --write 同用）")
-    ap.add_argument("--stamp", default="20261022", help="prebak 时间戳（默认 20261022）")
+    ap.add_argument("--stamp", default="20261022", help="批次戳（仅作日志标记，默认 20261022）")
     ap.add_argument("--report", help="报告输出文件（UTF-8 无 BOM / LF）")
     ap.add_argument("--selftest", action="store_true", help="判据非空自检（临时树）")
     args = ap.parse_args()

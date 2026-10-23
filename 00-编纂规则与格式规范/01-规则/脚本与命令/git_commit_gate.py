@@ -35,6 +35,9 @@
   B2  根目录新增一级条目不在白名单 → 拒；`APPROVED-BY-OWNER:` 放行
   B3  删除 `12-数据库备份/**` → 拒；`APPROVED-BY-OWNER:` 放行
   B4  文档类文件含全角空格 U+3000 → 拒；`APPROVED-BY-OWNER:` 放行
+  B5  暂存路径为旁路备份副本（`.bak`／`.bak-*`／`.bak_*`／`.bak.<数字>`／`.prebak*`／
+      `.orig`／`.rej`／`~` 结尾，或任一路径段含 `prebak`）→ 拒，**无放行标记**
+      （2026-10-23 用户令：全库禁止旁路备份副本；留痕与回滚唯一靠 Git）
   H3  暂存 `.md` 含直角引号六码位（U+300C/300D/300E/300F/FF62/FF63）→ 拒；
       `APPROVED-BY-OWNER:` 放行。对象面＝**全部暂存 .md**（含内容层/逐字保真档案与
       代码上下文），与第二十四件 `audit_md_quote_glyphs.py` 的全库 T1 判据同一口径；
@@ -68,6 +71,29 @@ ANGLE_MAP = {"\u300c": "\u201c", "\u300d": "\u201d", "\u300e": "\u2018", "\u300f
 CORNER_ALL = "\u300c\u300d\u300e\u300f\uff62\uff63"  # 与第二十四件 audit_md_quote_glyphs 同一六码位
 ZERO_WIDTH = "\u200b\u200c\u200d\u2060\ufeff"
 IDEOGRAPHIC_SPACE = "\u3000"
+
+# B5：旁路备份副本（2026-10-23 用户令；全库禁止，无放行标记）
+# 变体口径与 .gitignore 封禁段一致：prebak 之外，preback／pre_／pre-／_pre_ 一类
+# “写前快照”命名同判（复核发现磁盘存在 .pre_*／.pre-*／.preback* 存量，须同堵入口）
+SIDECAR_NAME_RE = (
+    re.compile(r"(?i)\.prebak"),
+    re.compile(r"(?i)\.preback"),
+    re.compile(r"(?i)\.pre[-_]"),
+    re.compile(r"(?i)[._-]pre[-_]"),
+    re.compile(r"(?i)[._-]bak($|[-_.0-9])"),
+    re.compile(r"(?i)\.bak($|[-_.0-9])"),
+    re.compile(r"(?i)\.orig($|[0-9])"),
+    re.compile(r"(?i)\.rej$"),
+    re.compile(r"~$"),
+)
+
+
+def is_sidecar(path):
+    low = path.lower()
+    if "prebak" in low or "preback" in low:
+        return True
+    name = low.rsplit("/", 1)[-1]
+    return any(p.search(name) for p in SIDECAR_NAME_RE)
 
 # F2 全口径清理的算法单一来源＝fix_md_invisible（同目录固定脚本，清理批执行器）。
 # 缺失时降级窄口径（仅 5 码位零宽删除），保提交通道可用。
@@ -342,6 +368,8 @@ def stage_commitmsg(msg):
     adds = [(st, path) for st, path, old in items if st != "D" and not st.startswith("R100")]
     print("[gate] commit-msg：暂存 %d 项，内容待检 %d 项" % (len(items), len(adds)), flush=True)
     bad_ignored, bad_big, bad_root, bad_bakdel, bad_space, bad_corner = [], [], [], [], [], []
+    # B5 只拦“新增／修改”旁路副本；D（删除）是整改通道本身，不得阻断（否则遗留副本无法清除）
+    bad_sidecar = [path for st, path, old in items if st != "D" and is_sidecar(path)]
     bad_bakdel = [path for st, path, old in items
                   if st == "D" and path.startswith("12-数据库备份/")]
     new_paths = [path for st, path, old in items
@@ -376,6 +404,9 @@ def stage_commitmsg(msg):
         errs.append("B3 暂存区包含 12-数据库备份/ 的删除：\n  " + "\n  ".join(bad_bakdel))
     if bad_space:
         errs.append("B4 文档类文件含全角空格 U+3000（禁 AI 不可见字符）：\n  " + "\n  ".join(bad_space))
+    if bad_sidecar:
+        errs.append("B5 暂存区含旁路备份副本（全库禁止，无放行标记；回滚靠 Git）：\n  "
+                    + "\n  ".join(bad_sidecar))
     if bad_corner:
         errs.append("H3 暂存 .md 含直角引号六码位（第二十四件全库清零不变量的提交期兜底；"
                     "F1 不自动改正代码上下文与内容层/逐字保真面，故此处阻断）：\n  " + "\n  ".join(bad_corner))
@@ -396,8 +427,8 @@ def stage_commitmsg(msg):
         notes.append("G1×%d" % len(bad_ignored))
     if bad_big:
         notes.append("G2×%d" % len(bad_big))
-    if bad_root or bad_bakdel or bad_space:
-        notes.append("B×%d" % (len(bad_root) + len(bad_bakdel) + len(bad_space)))
+    if bad_root or bad_bakdel or bad_space or bad_sidecar:
+        notes.append("B×%d" % (len(bad_root) + len(bad_bakdel) + len(bad_space) + len(bad_sidecar)))
     if bad_corner:
         notes.append("H3×%d" % len(bad_corner))
     if notes:
@@ -557,6 +588,44 @@ def selftest():
     g("add", "-A")
     check("B4_全角空格拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("B4_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
+
+    # B5 旁路备份副本（无放行标记）
+    repo, g = newrepo("t_b5")
+    os.makedirs(os.path.join(repo, "docs"))
+    open(os.path.join(repo, "docs", "note.md.prebak-20261023"), "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    check("B5_prebak拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    check("B5_prebak无放行", 1, run_gate(repo, "commit-msg", TAG_OWNER + " 有意添加\n"))
+    repo, g = newrepo("t_b5bak")
+    open(os.path.join(repo, "note.md.bak_20261023"), "w", encoding="utf-8").write("x\n")
+    os.makedirs(os.path.join(repo, "sub"))
+    open(os.path.join(repo, "sub", "x.orig"), "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    check("B5_bak与orig拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    # B5 变体命名（写前快照 .pre_*／.preback*／-bak-）同拒
+    repo, g = newrepo("t_b5var")
+    os.makedirs(os.path.join(repo, "docs"))
+    open(os.path.join(repo, "docs", "a.md.pre_b004_20261005"), "w", encoding="utf-8").write("x\n")
+    open(os.path.join(repo, "docs", "b.txt.preback-t1"), "w", encoding="utf-8").write("x\n")
+    open(os.path.join(repo, "docs", "c.md-bak-20261001"), "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    check("B5_变体命名拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    # B5 整改通道：删除遗留副本（状态 D）必须放行，否则违规件永远清不掉
+    repo, g = newrepo("t_b5del")
+    os.makedirs(os.path.join(repo, "docs"))
+    legacy = os.path.join(repo, "docs", "legacy.md.bak")
+    open(legacy, "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    subprocess.run(["git", "commit", "-q", "--no-verify", "-m", "基线：遗留旁路副本"],
+                   cwd=repo, capture_output=True)
+    os.remove(legacy)
+    g("add", "-A")
+    check("B5_删遗留副本放行", 0, run_gate(repo, "commit-msg", "清除遗留旁路备份副本\n"))
+    repo, g = newrepo("t_b5ok")
+    os.makedirs(os.path.join(repo, "docs"))
+    open(os.path.join(repo, "docs", "note.md"), "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    check("B5_正常件放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
 
     # H1 提交说明质量（无放行标记）
     repo, g = newrepo("t_h1")

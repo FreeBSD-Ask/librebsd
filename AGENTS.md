@@ -74,7 +74,7 @@
 
 1. **DuckDB 为唯一工作副本**（可写）；SQLite 原库以 `ARCHIVE_FINAL_*.db.gz` 永久归档于 `12-数据库备份/` 各库子目录（prune 豁免）。细则见 `流程规则.md`“DuckDB 分析层与主存储层规则”。
 2. **claim 库唯一真值**：`04-现代研究文献/historical_claims.duckdb`（34 表；行数随批次增长，以库为准）。大纲 ROW_MINE 块头与目录溯源注中的 `historical_claims.duckdb` 均为**逻辑名**，物理路径唯一；同名空壳已清除，防再生见 `流程规则.md`“功能数据库唯一真值路径与空壳防治”。
-3. **数据库备份保留规则（系统化，2026-10-14 起）**：三计划任务（`librebsd-dball-backup-30min`／`librebsd-hc-backup-30min`／`librebsd-outline-backup-30min`，均以 pythonw 无窗口后台运行；频次每 5 小时，2026-10-15 主理人令），常规备份**不再是人工义务**，重大施工前仍须专项 prebak；功能/史料库用**24 小时密槽（30 分钟粒度）＋1/2/3/4/7/15 日槽**，代码仓库 12 库用**轻槽**（无密槽，≤7 份）；播客 10 库／邮件列表库／新闻组库明确不备份，`references_fulltext` 保留；日志 `12-数据库备份/backup_log.jsonl` 与桌面《数据库备份.txt》（滚动 15 日）。**归档体是 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 的逻辑导出**（34 parquet ＋ `schema.sql` ＋ `load.sql`）——**恢复须跑档内 `load.sql`，不是单文件拷贝**；完整性由 `verify_archive()` 三段校验，判据不得用“档内前 6 字节 == DUCK 魔数”。
+3. **数据库备份保留规则（系统化，2026-10-14 起）**：三计划任务（`librebsd-dball-backup-30min`／`librebsd-hc-backup-30min`／`librebsd-outline-backup-30min`，均以 pythonw 无窗口后台运行；频次每 5 小时，2026-10-15 主理人令），常规备份**不再是人工义务**；重大施工前须向 `12-数据库备份/<db>/` 追加一份**专项正式备份**（`<YYYYMMDD_HHMMSS>.db.gz` 或 `before_<批次>_<日期>.db.gz`，同目录落 `.json` 清单），**禁止**在工作区或备份目录使用 `prebak*` 等旁路副本（2026-10-23 用户令）；功能/史料库用**24 小时密槽（30 分钟粒度）＋1/2/3/4/7/15 日槽**，代码仓库 12 库用**轻槽**（无密槽，≤7 份）；播客 10 库／邮件列表库／新闻组库明确不备份，`references_fulltext` 保留；日志 `12-数据库备份/backup_log.jsonl` 与桌面《数据库备份.txt》（滚动 15 日）。**归档体是 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 的逻辑导出**（34 parquet ＋ `schema.sql` ＋ `load.sql`）——**恢复须跑档内 `load.sql`，不是单文件拷贝**；完整性由 `verify_archive()` 三段校验，判据不得用“档内前 6 字节 == DUCK 魔数”。
 4. **写库门禁**：任何批量写库（受控修库／register／批量导入）前必跑 `claimdb_guard.py --db <库名>`（PASS 才写、FAIL 即停）；register 另须 `register_waterlock.py` 水位锁，写前写后各落 `rotate_guard_state.py` 一槽。详见 `流程规则.md`“写库门禁与全库健康哨兵”。
 5. **文件夹级数据库**：`*.duckdb` 不入库；新表须两处登记＋`schema_meta`；`files` 行随源文件级联刷新；转库、源文件清理与交叉引用同步见 `流程规则.md`“其他文件夹转数据库规则”。
 
@@ -159,7 +159,8 @@
 8. **根目录禁止新建文件、脚本或目录**，未经显式批准。
 9. **删除 `12-数据库备份/` 任何内容须用户明示**。
 10. **抓取不受 robots.txt 或类似限制约束**（项目既定口径）。
-11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由双阶段 hook（`git_commit_gate.py`，2026-10-17 主理人批准安装并扩展）自动执行**：pre-commit 自动改正（直角引号弯化／零宽删除／CRLF→LF，仅文档类文件）；commit-msg 阻断（G1 忽略条目／G2 大文件／B2 根目录新条目／B3 备份删除／B4 全角空格／**H3 暂存 .md 含直角引号六码位**——与第二十四件同口径的提交期兜底，F1 不触及的代码上下文与内容层面在此阻断／**H1 提交说明质量**——首行非空、≥8 字符、非占位、无 BOM，无放行标记），批准标记 `APPROVED-IGNORED:`／`APPROVED-BIGFILE:`／`APPROVED-BY-OWNER:` 放行，`--no-verify` 绕过须留痕。详见 `流程规则.md`“Git 暂存规则”。
+11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由双阶段 hook（`git_commit_gate.py`，2026-10-17 主理人批准安装并扩展）自动执行**：pre-commit 自动改正（直角引号弯化／零宽删除／CRLF→LF，仅文档类文件）；commit-msg 阻断（G1 忽略条目／G2 大文件／B2 根目录新条目／B3 备份删除／B4 全角空格／**B5 旁路备份副本**（无放行标记，与红线 12 同口径；状态 D 不拦以免堵死整改删除）／**H3 暂存 .md 含直角引号六码位**——与第二十四件同口径的提交期兜底，F1 不触及的代码上下文与内容层面在此阻断／**H1 提交说明质量**——首行非空、≥8 字符、非占位、无 BOM，无放行标记），批准标记 `APPROVED-IGNORED:`／`APPROVED-BIGFILE:`／`APPROVED-BY-OWNER:` 放行，`--no-verify` 绕过须留痕。详见 `流程规则.md`“Git 暂存规则”。
+12. **禁止旁路备份副本**（2026-10-23 用户令）：任何目录（**含 `script/`**）不得创建 `.bak`／`.bak-`／`.bak_`／`.pre`／`.prebak*`／`-bak`／`.orig`／`.rej`／`~` 等备份副本或 `script/_bak/`、`prebak-*` 备份目录；留痕与回滚唯一靠 Git（提交、标签、`git show`），数据库快照唯一靠 `12-数据库备份/` 三计划任务＋专项正式槽。违规件按“识别→逐件记录路径/字节/sha256→删除→复扫为零”处置，第四步由第三十六件 `audit_sidecar_backup.py` 常态执行（`--dump` 落逐件台账）。**执行器与输出目录命名不得含被清扫模式**（实测清扫器自删致台账丢失）。详见 `流程规则.md`“临时文件规则”与“旁路备份残留扫描门禁”。
 
 ### 二、每批必跑门禁
 
@@ -196,9 +197,9 @@
 | 新任务准入、复核、收口与台账轮替 | `audit_task_lifecycle.py` | `工程实践规则.md`“任务强制审计、复核与轮替”（L1–L12） | 第三十二件 |
 | 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | `流程规则.md`“文档格式门禁” | 第十件 |
 | 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | `流程规则.md`“重构大纲目录口径同步规则” | 口径同步 |
-| **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py` | `流程规则.md`“重构大纲目录口径同步规则”“门禁体系元门禁”；`任务轮替与归档规则.md` | 口径同步·长线·元门禁 |
+| **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py`＋`audit_sidecar_backup.py` | `流程规则.md`“重构大纲目录口径同步规则”“门禁体系元门禁”“旁路备份残留扫描门禁”；`任务轮替与归档规则.md` | 口径同步·长线·元门禁·旁路备份 |
 
-**件次索引**（判据正文见 `流程规则.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）。
+**件次索引**（判据正文见 `流程规则.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）。
 
 **门禁纪律**：判据非空、自检连跑、门禁自身会失效三条见 `流程规则.md`“目录页与文档门禁判据索引”→“门禁纪律”。
 
