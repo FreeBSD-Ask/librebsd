@@ -18,8 +18,8 @@ L3 已收口任务有收口行
 L4 字段齐全、起算日不早于生效日
 L5 枚举合法
 L6 任务 ID 唯一
-L7 复核轮次与角色合规（普通 ≥2、高风险 ≥3；作者不得自批；高风险须主理人签收）。
-   轮次充足性（实有 ≥ 声明 ≥ 最低）、轮次编号连续性与主理人签收以“收口”为界
+L7 复核轮次与角色合规（普通 ≥2、高风险 ≥3；作者不得自批；高风险须 ykla 签收）。
+   轮次充足性（实有 ≥ 声明 ≥ 最低）、轮次编号连续性与 ykla 签收以“收口”为界
    （收口结论 ∈ {PASS, 不适用}）：已收口行不足即 FAIL，未收口（在途）行不足只记
    WARN、不影响退出码；声明轮次 < 最低轮次对全部行 FAIL（声明即最低义务）；轮次非
    整数、作者自批、轮次编号重复对全部行判 FAIL（见 ADR-0014）
@@ -74,7 +74,10 @@ RISKS = {"普通", "高风险"}
 ADMIT = {"PASS", "FAIL"}
 CLOSE = {"PASS", "FAIL", "未收口", "不适用"}
 REVIEW_VERDICT = {"PASS", "FAIL", "不适用"}
-ROLES = {"作者", "复核子代理", "独立复核", "主理人"}
+ROLES = {"作者", "复核子代理", "独立复核", "ykla"}
+# 称呼规范（2026-10-23 用户令）：角色令牌统一写 ykla；历史行仍用旧称，读入时等价归一，
+# 只影响判据、不回写台账（回写属称呼批的另一步，不得在此隐式改数据）。
+ROLE_ALIAS = {"主理人": "ykla"}
 TG_STATUS = {"采纳", "部分采纳", "不采纳", "待定"}
 PLACEHOLDER = {"", "—", "-", "／", "/", "待复核", "复核中"}
 
@@ -242,6 +245,10 @@ def run_checks(root: pathlib.Path):
 
     audit = [r for r in audit_rows if not _is_placeholder(r.get("任务 ID", ""))]
     review = [r for r in review_rows if not _is_placeholder(r.get("复核 ID", ""))]
+    for _r in review:
+        _role = (_r.get("角色") or "").strip()
+        if _role in ROLE_ALIAS:
+            _r["角色"] = ROLE_ALIAS[_role]
     tg = [r for r in tg_rows if not _is_placeholder(r.get("编号", ""))]
 
     # L2 已启动的新任务有准入行（ADR-0013：以已启动为界，未启动 spec 免准入并计入 SKIP）
@@ -377,8 +384,8 @@ def run_checks(root: pathlib.Path):
             gate.append("%s %s 实有 %d 轮、至少 %d 轮" % (tid, risk, len(rs), need))
         if any(x.get("角色") == "作者" for x in rs):
             role_bad.append("%s 存在作者自批" % tid)
-        if risk == "高风险" and not any(x.get("角色") == "主理人" for x in rs):
-            gate.append("%s 高风险缺主理人签收" % tid)
+        if risk == "高风险" and not any(x.get("角色") == "ykla" for x in rs):
+            gate.append("%s 高风险缺 ykla 签收" % tid)
         nums = []
         for x in rs:
             try:
@@ -591,7 +598,7 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
 
     review_rows = []
     for i in range(1, rounds + 1):
-        role = "作者" if author and i == 1 else "主理人"
+        role = "作者" if author and i == 1 else "ykla"
         rid = "RV-1" if i == 1 else "RV-%d" % i
         review_rows.append(
             "| %s | %s | %d | %s | 2026-10-22 | v%d | 判据 | PASS | 无 | 无 | 证据 |"
