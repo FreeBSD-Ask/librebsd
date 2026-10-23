@@ -344,7 +344,7 @@ def selftest():
             rc7 = main()
         finally:
             sys.argv = old_argv
-        trio = (rc5 == 2 and rc6 == 2 and rc7 == 2 and not os.path.exists(empty + ".prebak-bad"))
+        trio = (rc5 == 2 and rc6 == 2 and rc7 == 2 and open(empty, encoding="utf-8").read() == "")
         print("[selftest] S5/S6/S7 fail-closed（apply无write=%d／非法stamp=%d／空清单=%d）%s"
               % (rc5, rc6, rc7, "PASS" if trio else "FAIL"))
         ok &= trio

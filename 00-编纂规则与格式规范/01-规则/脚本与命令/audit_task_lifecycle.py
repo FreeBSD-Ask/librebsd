@@ -313,9 +313,11 @@ def run_checks(root: pathlib.Path):
             if _is_placeholder(ev) or _is_placeholder(r.get("changelog", "")):
                 field_bad.append("%s 收口 PASS 但缺收口证据或 changelog" % tid)
             else:
-                for token in ("prebak=", "已知限制=", "轮替=", "归档="):
+                for token in ("已知限制=", "轮替=", "归档="):
                     if token not in ev:
                         field_bad.append("%s 收口证据缺 %s" % (tid, token))
+                if not any(t in ev for t in ("git=", "备份=", "prebak=")):
+                    field_bad.append("%s 收口证据缺 git=／备份=（历史 prebak= 仍认）" % tid)
     rows.append(("L4", "字段齐全、起算日合规", not field_bad,
                  "；".join(field_bad) if field_bad else "%d 行字段齐全" % len(audit)))
 
@@ -566,7 +568,7 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
     close_v = "PASS" if close else "未收口"
     declared_n = rounds if declared is None else declared
     latest_id = "RV-1" if rounds > 0 else "—"
-    evidence = ("prebak=fixture；已知限制=无；轮替=未触发；归档=fixture"
+    evidence = ("git=fixture；已知限制=无；轮替=未触发；归档=fixture"
                 if close else "—")
     changelog = "id=1" if close else "—"
     name = "" if not field else "夹具任务"
@@ -622,7 +624,7 @@ def _fixture(root: pathlib.Path, *, intake=True, close=True, field=True, enum=Tr
         _write(arch_dir / "index.md", "# archive\n")
         arch_row = (
             "| %s | 归档 | 需求／范围 | 高风险 | 主代理 | 2026-10-22 | PASS | spec | 3 | RV-1 | 适用 | %s | "
-            "prebak=fixture；已知限制=无；轮替=未触发；归档=fixture | id=1 | 2027-01-22 |"
+            "git=fixture；已知限制=无；轮替=未触发；归档=fixture | id=1 | 2027-01-22 |"
             % (tid, "未收口" if rotation_open else "PASS"))
         row_hash = "0" * 16 if bad_hash else hashlib.sha256(arch_row.encode("utf-8")).hexdigest()[:16]
         _write(arch_dir / "任务审计台账.md",

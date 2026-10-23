@@ -2,7 +2,6 @@
 # 用法: --apply | --verify-idempotent | --rollback --ids 1,2 | --restore-file <相对路径>
 import csv
 import json
-import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -17,7 +16,6 @@ OUTLINE = ROOT / "05-卷册大纲"
 MANIFEST = STG / "landed_manifest.json"
 REVIEW_ACTION = "pilot_dual_marker_20260930"
 REVIEWER = "main-agent+先导样本执行"
-BAK_DB = ROOT / "12-数据库备份/doubts_standalone.prebak-pilot-20260930.duckdb"
 
 
 def load_manifest():
@@ -25,15 +23,11 @@ def load_manifest():
 
 
 def backup(con):
-    if not BAK_DB.exists():
-        con.close()
-        shutil.copy2(DB, BAK_DB)
-        print(f"文件级备份: {BAK_DB.name} ({BAK_DB.stat().st_size} 字节)")
-        con = duckdb.connect(str(DB))
+    # 文件级旁路备份已禁止（2026-10-23 令）；文件快照请走 `12-数据库备份/<db>/` 正式槽
     con.execute("""CREATE TABLE IF NOT EXISTS doubts_to_resolve_bak_20260930
                    AS SELECT * FROM doubts_to_resolve""")
     n = con.execute("SELECT count(*) FROM doubts_to_resolve_bak_20260930").fetchone()[0]
-    print(f"表级备份: doubts_to_resolve_bak_20260930（{n} 行）")
+    print(f"表级备份: doubts_to_resolve_bak_20260930（{n} 行）；文件级副本不再产生（Git 与正式备份槽承担）")
     return con
 
 
