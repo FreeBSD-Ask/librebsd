@@ -1,9 +1,0 @@
-1129849	1229	回应 Johan 关于 glob 替换示例的请求，给出 TLIST 存放带空格绝对路径的样本，用 .for 循环配合 :tW 修饰符把空格换成问号再去引号，实测无法作为目标使用，把问号改成句点虽可构建但无实用价值
-1129851	1229	就 docs/183333 说明 bpf(4) 文档称示例取自 Reverse ARP Daemon，rarpd 与 BPF 紧密耦合，该宏在那里映射为 ARPOP_REVREQUEST，示例从 rarpd 视角正确却需补映射才能编译
-1129858	1229	提交修正 freebsd-xhtml-common.xsl 的补丁，指出该 XSL 模板存在多余字符，generate.citerefentry.link 模板里把 sektion 查询参数的实体写成转义后的双写形式，改回单一实体即可
-1129861	1229	说明已提交 docs/182872 补充 FreeBSD 10 中 iconv 针对 ports 树变化的章节，希望能在 10.0 发布前并入文档，请求有人评审并批准该补丁，并表示随时可参与讨论或按文档项目要求修改补丁内容
-1129863	1229	认为 :tW 变量修饰符属 pmake 或 fmake 语法，在自己的 Make 9201120530 即 FreeBSD 9.1 RELEASE 上不生效，询问 FreeBSD Make 是否有未记录的等价修饰符，并指出含空格目标只能落成 .PHONY 导致反复重建
-1129864	1229	澄清 :tW 是 bmake 即 NetBSD make 专属修饰符，作用是让 make 把变量值当作一个整体，免去借助外部命令改写空格的做法，:tw 可撤销其效果，并明确 FreeBSD Make 没有等价修饰符
-1129867	1229	为 zfsupdate-201307 项目分支提交补丁，内容是 vBSDCon 文档冲刺期间撰写的 ZFS 章节更新，补充作者署名与创建和销毁存储池一节，说明建池决策相对永久、关键在于把物理磁盘归入何种 vdev，并预告后续还有更多
-1129870	1229	指出网站上 developers-handbook 页面的版权声明只到 2010 年，且最后修改标注为 2000 年 8 月、作者位置为空，认为这明显不对
-1129871	1229	回应 Warren Block 关于最后修改标注为空的质疑，认为可直接改修，给出 book.xml 补丁把 developers-handbook 的 pubdate 由 2000 年 8 月改为 $FreeBSD$ 占位符

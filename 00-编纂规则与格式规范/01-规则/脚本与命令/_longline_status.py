@@ -10,8 +10,8 @@ r"""全项目长线任务状态聚合器（**只读**）。
 不写任何文件；其唯一用途是「人在场时一条命令看清全局」。
 
 🔴 本文件真身路径：`01-项目管理/01-编纂规划与报告归档/_longline_status.py`，**不在 `script/`**。
-登记表头部旧记 `script/_longline_status.py`（查无此文件），2026-10-09 已订正；备份目录
-`script/_backup_longline/` 仍属 `script/`（gitignore），不变。
+登记表头部旧记 `script/_longline_status.py`（查无此文件），2026-10-09 已订正；旧备份目录
+`script/_backup_longline/` 已于 2026-10-23 旁路备份封禁令下清除，不再重建。
 
 用法（cwd 任意，路径为仓库根相对）：
   C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py              # 快档总表
@@ -25,7 +25,7 @@ r"""全项目长线任务状态聚合器（**只读**）。
 
 只读保证：仅以 read_only=True 开库；子进程白名单见 DEEP_ALLOW；**默认与 --check/--json/--emit-block
 均不写任何文件**。唯一例外是 `--write-block`：它只重写登记表 `BEGIN…END` 之间的机读块，
-写前备份、写后断言「块外内容逐字节未变」（见 write_block 的安全保证五条）。
+**写前零副本**（只打印 SHA-256 与字节数）、写后断言「块外内容逐字节未变」（见 write_block 的安全保证五条）。
 """
 import collections
 import datetime
@@ -920,8 +920,8 @@ def write_block(res):
     chk = io.open(REGISTRY, encoding="utf-8").read()
     assert chk[:i] + chk[chk.find(BLOCK_END):] == old[:i] + old[j:], "块外内容被改动"   # ④
     assert chk.count(BLOCK_BEGIN) == 1 and chk.count(BLOCK_END) == 1
-    print("  [write-block] 已刷新机读块（%d 条线，generated=%s）；备份 -> %s"
-          % (len(res), blk["generated"], os.path.basename(bak)))
+    print("  [write-block] 已刷新机读块（%d 条线，generated=%s）；零副本，回滚见写前打印的 SHA-256／Git 提交"
+          % (len(res), blk["generated"]))
     print("  [write-block] 块外内容逐字节未变 ✓")
     return 0
 

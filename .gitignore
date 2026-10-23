@@ -110,6 +110,14 @@ cnki*
 # 17.7 GB 已清除）；留痕与回滚由 Git 承担，数据库快照由 `12-数据库备份/`
 # 三计划任务承担。下列 glob 覆盖全部现存与变体形态，只挡新增。
 *.prebak*
+*.preback*
+*.pre
+*.pre-*
+*.pre_*
+*-bak
+*-bak-*
+*_bak
+*_bak_*
 *.bak
 *.bak-*
 *.bak_*
