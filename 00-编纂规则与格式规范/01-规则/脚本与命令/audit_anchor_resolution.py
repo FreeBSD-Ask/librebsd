@@ -24,7 +24,7 @@ import sys
 
 import duckdb
 
-DEFAULT_OUTLINE = r"d:\librebsd\08-核查报告与多轮复核\重构2026\data\outline.txt"
+DEFAULT_OUTLINE = r"d:\librebsd\05-卷册大纲/目录\data\outline.txt"
 DEFAULT_DB = r"d:\librebsd\04-现代研究文献\historical_claims.duckdb"
 THRESHOLD = 95  # 解析率阈值（%）
 

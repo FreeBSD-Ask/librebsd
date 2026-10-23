@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""audit_server_contract.py —— 第十一件门禁：重构2026 目录页服务器契约。
+"""audit_server_contract.py —— 第十一件门禁：05-卷册大纲/目录服务器契约。
 
 设立缘由（2026-09-28）
 ----------------------
-重构2026 目录页的服务器层长期**无任何护栏**：两份实现并存（`serve_refactor2026.py`
-8090 多线程 / `重构2026/server/serve_index.py` 80 单线程），二者**均缺传输压缩、
+05-卷册大纲/目录的服务器层长期**无任何护栏**：两份实现并存（`serve_refactor2026.py`
+8090 多线程 / `05-卷册大纲/目录/server/serve_index.py` 80 单线程），二者**均缺传输压缩、
 均缺安全响应头、均开启目录列表**，且 README 声称“不给目录列表”而实况相反。
 页面本体的九件门禁全部以**产物**为对象，服务器**不在任何门禁的对象面内**。
 
@@ -55,7 +55,7 @@ import time
 sys.stdout.reconfigure(encoding="utf-8")
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
-BASE = REPO / "08-核查报告与多轮复核" / "重构2026"
+BASE = REPO / "05-卷册大纲" / "目录"
 SERVER = pathlib.Path(__file__).with_name("serve_refactor2026.py")
 INDEX = BASE / "index.html"
 
@@ -347,7 +347,7 @@ def cmd_selftest():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="重构2026 服务器契约门禁（第十一件）")
+    ap = argparse.ArgumentParser(description="05-卷册大纲/目录 服务器契约门禁（第十一件）")
     ap.add_argument("--port", type=int, default=0)
     ap.add_argument("--base", default="")
     ap.add_argument("--selftest", action="store_true")

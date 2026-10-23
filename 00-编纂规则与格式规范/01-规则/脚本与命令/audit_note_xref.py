@@ -3,8 +3,8 @@
 
 依据：`92-目录内容调整建议书` §四 P0-1 护栏＝85 号文 §一·3 三判据脚本化；87 号文 R-3；
       98 号文 §11.4 P0-3（新增 P4「ref 著录完备性」）。
-对象：内容层 `重构2026/data/outline.txt`（卷／章／节题与 `@@` 注的唯一编辑入口）；
-      P4 另读页面数据层 `重构2026/data/catalog.json` 的 `refs`。
+对象：内容层 `05-卷册大纲/目录/data/outline.txt`（卷／章／节题与 `@@` 注的唯一编辑入口）；
+      P4 另读页面数据层 `05-卷册大纲/目录/data/catalog.json` 的 `refs`。
 
 四判据
 ------
@@ -40,8 +40,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTLINE = ROOT / "08-核查报告与多轮复核" / "重构2026" / "data" / "outline.txt"
-CATALOG = ROOT / "08-核查报告与多轮复核" / "重构2026" / "data" / "catalog.json"
+OUTLINE = ROOT / "05-卷册大纲" / "目录" / "data" / "outline.txt"
+CATALOG = ROOT / "05-卷册大纲" / "目录" / "data" / "catalog.json"
 REF_RE = re.compile(r"\bref\s?(\d{1,5})")
 
 CN = {"〇": 0, "一": 1, "二": 2, "三": 3, "四": 4, "五": 5,

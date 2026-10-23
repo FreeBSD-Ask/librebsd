@@ -1,4 +1,4 @@
-r"""Comprehensive database audit for 重构2026 plan enhancement.
+r"""Comprehensive database audit for 05-卷册大纲/目录 plan enhancement.
 
 Audits all 12 functional DuckDBs + 15 code repo DuckDBs + 4 mail merge DuckDBs.
 Reports: table counts, row counts, schema alignment with 06号文 design.

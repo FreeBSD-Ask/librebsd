@@ -25,7 +25,7 @@ import re
 import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", newline="\n")
-ROOT = r"D:/librebsd/08-核查报告与多轮复核/重构2026"
+ROOT = r"D:/librebsd/05-卷册大纲/目录"
 SRC_JS = ROOT + "/src/js"
 MANIFEST = SRC_JS + "/manifest.txt"
 DOC_JS = ROOT + "/assets/doc.js"

@@ -6,7 +6,7 @@
 **四层口径**：
 - **R**＝`shenyue/jianyi_by_volume2/` 建议号（本库 `doubt_text` 内 `R-####`）；**O**＝`shenyue/out10/outline_index.jsonl` 新层 OID（与 R **同号 1:1**）。
 - **磁盘 05**＝`shenyue/_disk_map_final.json` 的 `chapter_map`／`section_map`（O→磁盘章／节，带 method 与 score）。
-- **现行**＝`08-核查报告与多轮复核/重构2026/data/outline.txt`（43 卷 412 章）。
+- **现行**＝`05-卷册大纲/目录/data/outline.txt`（43 卷 412 章）。
 
 **现行层采信分级**（由强到弱）：`R 锚点`＝outline.txt 原文出现该 R 号（强，可直接采信）；`题名`＝O 层题名与现行节题规范化后相等（中，候选，须人工确认）；`泛题不采信`＝命中通用节名（本章书目述评／本卷总评一类，在现行层多处重复，**不足以定位**）；`未命中`＝须人工改指。
 

@@ -107,7 +107,7 @@ FIXABLE_EXTS = (".md", ".txt")
 # 内容层、逐字保真档案、史料与档案不入自动改正面（逐字保真优先）
 FIX_EXCLUDE_PREFIX = (
     "05-卷册大纲/", "02-sacred源材料/", "03-原始史料库/", "12-数据库备份/",
-    "08-核查报告与多轮复核/重构2026/data/", "08-核查报告与多轮复核/12-重构大纲书目述评/",
+    "05-卷册大纲/目录/data/", "08-核查报告与多轮复核/12-重构大纲书目述评/",
 )
 ROOT_FILE_WHITELIST = {
     ".autocorrectrc", ".gitattributes", ".gitignore", ".markdownlint.json",

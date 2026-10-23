@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""重构2026 页面资产层完整性门禁（固定脚本，2026-09-18 立，第九件改后必跑门禁）。
+"""05-卷册大纲/目录 页面资产层完整性门禁（固定脚本，2026-09-18 立，第九件改后必跑门禁）。
 
-用途：对 `08-核查报告与多轮复核/重构2026/` 的**页面级附加件**做完整性自检，
+用途：对 `05-卷册大纲/目录/` 的**页面级附加件**做完整性自检，
 补足既有八件门禁共同未覆盖的维度。
 
-既有八件（见 `重构2026/tests/README.md` 配套门禁清单）：
+既有八件（见 `05-卷册大纲/目录/tests/README.md` 配套门禁清单）：
   一 目录页 DATA 数据完整性    audit_data_integrity.py
   二 口径漂移检测              sync_refactor2026_baseline.py --check
   三 节号／章号连续性          audit_sequence_continuity.py
@@ -64,7 +64,7 @@
 用法（解释器须含 fontTools＋brotli，任选其一）：
   <fontTools+brotli-python> audit_page_assets.py                        # 常规审计
   <fontTools+brotli-python> audit_page_assets.py --root <dir>           # 审计指定树根（备份件／快照交叉验证、
-                                                                        # 负向测试；默认 重构2026/）
+                                                                        # 负向测试；默认 05-卷册大纲/目录/）
   <fontTools+brotli-python> audit_page_assets.py --refresh-source-cmap  # 从字体源 tgz 重建 B4 基准清单
   <fontTools+brotli-python> audit_page_assets.py --selftest               # 判据非空自检（E4 双向四用例，临时树）
 
@@ -84,7 +84,7 @@ import tarfile
 import tempfile
 
 # ===== 路径常量（机器固定值，迁移时同步更新）=====
-DEFAULT_ROOT = r"D:/librebsd/08-核查报告与多轮复核/重构2026"
+DEFAULT_ROOT = r"D:/librebsd/05-卷册大纲/目录"
 ROOT = DEFAULT_ROOT
 ASSETS = ROOT + "/assets"
 DATA = ROOT + "/data"
@@ -236,7 +236,7 @@ def refresh_source_cmap():
     sha = hashlib.sha256(open(FONT_SOURCE_TGZ, "rb").read()).hexdigest()
     head = (
         "# 霞鹜文楷屏幕版（LXGW WenKai Screen）源字体字符覆盖清单\n"
-        "# 用途：重构2026 第九件门禁 audit_page_assets.py 的 B4 判据基准\n"
+        "# 用途：05-卷册大纲/目录 第九件门禁 audit_page_assets.py 的 B4 判据基准\n"
         "# 生成：python audit_page_assets.py --refresh-source-cmap\n"
         "# 字体源：script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz\n"
         "#   字体源 sha256：%s\n"
@@ -257,7 +257,7 @@ def refresh_source_cmap():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=DEFAULT_ROOT,
-                    help="被审计树根（默认 重构2026/；备份件／快照交叉验证与负向测试用）")
+                    help="被审计树根（默认 05-卷册大纲/目录/；备份件／快照交叉验证与负向测试用）")
     ap.add_argument("--refresh-source-cmap", action="store_true",
                     help="从字体源 tgz 重建 data/font-source-cmap.txt 后退出")
     ap.add_argument("--selftest", action="store_true",
@@ -291,7 +291,7 @@ def main():
     from fontTools.ttLib import TTFont
 
     print("=" * 68)
-    print("重构2026 页面资产层完整性门禁（第九件）")
+    print("05-卷册大纲/目录 页面资产层完整性门禁（第九件）")
     print("=" * 68)
 
     # ---- A 装配源清单 ----

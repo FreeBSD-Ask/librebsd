@@ -15,7 +15,7 @@
 
 NAME = "第四十一批：11 卷替换 ＋ 位置插卷"
 COMMENT = "第四十一批：11 卷替换 ＋ 插卷（2026-09-20 主理人清单 ＋ 溯源注语义迁移）"
-OLD_REF = "22889c9ea:08-核查报告与多轮复核/重构2026/data/outline.txt"   # 第三十二批提交
+OLD_REF = "22889c9ea:05-卷册大纲/目录/data/outline.txt"   # 第三十二批提交
 HEAD = "22889c9ea"          # J2 交叉核验用：本批改动前的 index.html
 
 # ── 全局串替换（旧, 新, 期望命中数）───────────────────────────────────────
@@ -75,16 +75,16 @@ GLOBAL = [
 ]
 
 # ── J 段整体重写（备份件换本批、覆盖率阈值随换稿卷述评撤去而重算）──────────
-J_OLD_START = 'bk = ROOT + "/08-核查报告与多轮复核/重构2026/index.html.prebak-卷20至卷22全卷替换-202609191220.html"'
+J_OLD_START = 'bk = ROOT + "/05-卷册大纲/目录/index.html.prebak-卷20至卷22全卷替换-202609191220.html"'
 J_OLD_END = 'chk("J5 覆盖率约 22%（与文档「约四分之一」声明一致）", 0.15 < blk_total / n_chbiblio < 0.30)'
-J_NEW = '''bk = ROOT + "/08-核查报告与多轮复核/重构2026/index.html.prebak-第四十一批-20260920.html"
+J_NEW = '''bk = ROOT + "/05-卷册大纲/目录/index.html.prebak-第四十一批-20260920.html"
 chk("J1 本批备份件存在", os.path.exists(bk))
 if os.path.exists(bk):
     bh = rd(bk)
     # 交叉核验：备份件须与 git 中「本批改动前」的 index.html 逐字节一致
     import subprocess
 
-    rel = "08-核查报告与多轮复核/重构2026/index.html"
+    rel = "05-卷册大纲/目录/index.html"
     try:
         old = subprocess.run(["git", "show", "%s:" % HEAD + rel], cwd=ROOT,
                              capture_output=True).stdout

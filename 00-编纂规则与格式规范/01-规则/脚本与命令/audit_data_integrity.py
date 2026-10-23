@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""audit_data_integrity.py — 重构2026 目录页 DATA 数据完整性审计（固定脚本，规则引用）。
+"""audit_data_integrity.py — 05-卷册大纲/目录 DATA 数据完整性审计（固定脚本，规则引用）。
 
 用途：
   目录页 `index.html` 内嵌压缩数据块 `opt-data-blob`（2026-09-13 O-2 起，gzip+base64 载体；
@@ -28,7 +28,7 @@ import re
 import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-DEFAULT = pathlib.Path(r"D:/librebsd/08-核查报告与多轮复核/重构2026/index.html")
+DEFAULT = pathlib.Path(r"D:/librebsd/05-卷册大纲/目录/index.html")
 path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT
 html = path.read_text(encoding="utf-8")
 # 常量：

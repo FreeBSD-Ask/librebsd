@@ -4,7 +4,7 @@
 
 设立缘由（2026-09-28）
 ----------------------
-`重构2026/tests/` 的浏览器套件里**写死**了若干随目录变动的数值，最典型是口径串
+`05-卷册大纲/目录/tests/` 的浏览器套件里**写死**了若干随目录变动的数值，最典型是口径串
 `43 卷 412 章 3435 节`（`full_matrix_regression.mjs` 两处、`visual_regression.mjs` 一处）
 与溯源注计数 `注 537`（一处）。`tests/README.md` 已列明“夹具同步纪律”八条，但**同步靠人记**。
 
@@ -22,7 +22,7 @@
 H 线判据（2026-10-22 新增，技术债 TD-020／规格 NFR-H06）
 --------------------------------------------------------
 H1–H4 是 mail2d 邮件列表判读线，其判据材料分散在批 spec、`claim_map` 与核心驱动副本清单中，
-此前本件只覆盖重构2026，H 线随大纲变动而陈旧时无人机检。新增三条并列判据（**仅在
+此前本件只覆盖05-卷册大纲/目录，H 线随大纲变动而陈旧时无人机检。新增三条并列判据（**仅在
 `--h-line` 时运行，不改变无开关时的既有行为**）：
 
 - **宿主存在率**：读 `script/_db_row_mining/_batch_<tag>.json` 的 `hosts` 字段（实测为
@@ -53,12 +53,12 @@ H1–H4 是 mail2d 邮件列表判读线，其判据材料分散在批 spec、`c
     python audit_fixture_freshness.py                 # 0 通过 / 1 陈旧 / 2 依赖缺失
     python audit_fixture_freshness.py --tests-dir D   # 指定夹具目录（自检用）
     python audit_fixture_freshness.py --selftest      # 判据非空自检（造陈旧夹具，须 FAIL）
-    python audit_fixture_freshness.py --h-line        # 只跑 H 线三判据（重构2026 不跑）
+    python audit_fixture_freshness.py --h-line        # 只跑 H 线三判据（05-卷册大纲/目录 不跑）
     python audit_fixture_freshness.py --h-line --h-tags fq_b120,fhk_b085  # 限定批次
     python audit_fixture_freshness.py --h-line --host-map PATH  # 指定重映射表（缺省 TD-020 表）
     python audit_fixture_freshness.py --selftest-h    # H 线三判据自检（新鲜件 PASS／坏件 FAIL）
 
-依赖：重构2026 判据仅标准库；H 线 claim 判据另需 `duckdb`（缺失则该判据 SKIP）。
+依赖：05-卷册大纲/目录 判据仅标准库；H 线 claim 判据另需 `duckdb`（缺失则该判据 SKIP）。
 """
 import argparse
 import hashlib
@@ -72,7 +72,7 @@ import tempfile
 sys.stdout.reconfigure(encoding="utf-8")
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
-BASE = REPO / "08-核查报告与多轮复核" / "重构2026"
+BASE = REPO / "05-卷册大纲" / "目录"
 OUTLINE = BASE / "data" / "outline.txt"
 TESTS = BASE / "tests"
 
@@ -267,7 +267,7 @@ def cmd_selftest():
 
 
 # ── H 线（mail2d 邮件列表判读线，H1–H4）判据 ─────────────────────────────
-# 三条判据与重构2026 判据并列、互不影响：无 --h-line 时一行不跑，避免改变既有批次行为。
+# 三条判据与05-卷册大纲/目录 判据并列、互不影响：无 --h-line 时一行不跑，避免改变既有批次行为。
 
 
 def h_context(**over):
@@ -898,7 +898,7 @@ def main():
     ap.add_argument("--selftest-h", action="store_true",
                     help="H 线三判据自检：逐判据造新鲜件（PASS）与坏件（FAIL）")
     ap.add_argument("--h-line", action="store_true",
-                    help="只跑 H 线（mail2d）三判据，不跑重构2026 判据")
+                    help="只跑 H 线（mail2d）三判据，不跑05-卷册大纲/目录 判据")
     ap.add_argument("--h-tags", default="",
                     help="限定 H 线批次（逗号分隔 tag），缺省全部批 spec")
     ap.add_argument("--host-map", default=str(HOST_MAP),

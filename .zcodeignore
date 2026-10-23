@@ -259,8 +259,8 @@ _consistency_check.py
 # 根目录临时工作文件（并发会话的路径清单等，不入版本库）
 /_*.txt
 # 目录页测试套件例外（2026-09-11 固化，须随 index.html 一起纳入版本管理）
-!08-核查报告与多轮复核/重构2026/tests/*.mjs
-!08-核查报告与多轮复核/重构2026/tests/README.md
+!05-卷册大纲/目录/tests/*.mjs
+!05-卷册大纲/目录/tests/README.md
 /04-现代研究文献/03-文献下载/07-网页参考/还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？ - OSCHINA - 开源 × AI · 开发者生态社区_files
 /04-现代研究文献/03-文献下载/07-网页参考/FreeBSD 大败局 - 知乎_files
 /03-原始史料库/11-邮件列表史料
@@ -299,12 +299,12 @@ _consistency_check.py
 *.bak_fm_b024_20260911
 /12-数据库备份
 /.mimosa
-/08-核查报告与多轮复核/重构2026/script
+/05-卷册大纲/目录/script
 *.bak_p4_20260910
 /script/_db_row_mining/dslinux/05-数据库
 08-核查报告与多轮复核/_backup_报告体例归一_20260911/
 /script
-/08-核查报告与多轮复核/重构2026/.mimosa
+/05-卷册大纲/目录/.mimosa
 /script
 /04-现代研究文献/historical_claims.duckdb.tmp
 /script

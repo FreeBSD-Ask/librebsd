@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""embed.py — 重构2026 目录页数据装配脚本（固定脚本，规则引用）。
+"""embed.py — 05-卷册大纲/目录数据装配脚本（固定脚本，规则引用）。
 
 用途：
-  把 `重构2026/data/catalog.json`（语义数据中枢）序列化后重写
-  `重构2026/index.html` 的压缩数据块 `<script type="application/gzip+base64" id="opt-data-blob">`（发布态装配）。
+  把 `05-卷册大纲/目录/data/catalog.json`（语义数据中枢）序列化后重写
+  `05-卷册大纲/目录/index.html` 的压缩数据块 `<script type="application/gzip+base64" id="opt-data-blob">`（发布态装配）。
   单体 HTML 交付物不变：除数据块内容外其余位零改动。
   构建幂等：同一 catalog 两次运行产物位相同（diff 为空；gzip 头 mtime 固定为 0）。
 
@@ -49,8 +49,8 @@ import sys
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 # 脚本位于 00-编纂规则与格式规范/01-规则/脚本与命令/embed.py
 REPO = pathlib.Path(__file__).resolve().parents[3]
-CATALOG = REPO / "08-核查报告与多轮复核" / "重构2026" / "data" / "catalog.json"
-INDEX = REPO / "08-核查报告与多轮复核" / "重构2026" / "index.html"
+CATALOG = REPO / "05-卷册大纲" / "目录" / "data" / "catalog.json"
+INDEX = REPO / "05-卷册大纲" / "目录" / "index.html"
 # 装配器（同目录）：写盘后强制复核，防止绕过唯一写者（TD-018／ADR-0012）
 ASSEMBLE = pathlib.Path(__file__).resolve().with_name("assemble_index.py")
 

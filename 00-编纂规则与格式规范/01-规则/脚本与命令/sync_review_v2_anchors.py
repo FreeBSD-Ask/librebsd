@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""重构2026 加强复核套件**锚点同步器**（固定脚本，2026-09-20 第四十一批立）
+"""05-卷册大纲/目录 加强复核套件**锚点同步器**（固定脚本，2026-09-20 第四十一批立）
 
 **用途**：全卷替换／插卷批次之后，把 `review_v2_full.py` 的**六族锚点**同步到新结构。
 原为批次内一次性脚本（`script/_r66/patch_review_v2_41.py`）。提升缘由：该套件**跨批静默失效**
@@ -44,7 +44,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = "D:/librebsd"
 SUITE = os.path.join(HERE, "review_v2_full.py")
-OUTLINE = "08-核查报告与多轮复核/重构2026/data/outline.txt"
+OUTLINE = "05-卷册大纲/目录/data/outline.txt"
 
 JOB_FILES = {"r41": "review_v2_job_r41.py"}
 

@@ -2,7 +2,7 @@
 """目录页节号/章号连续性审计（固定脚本，规则引用）。v2：h3 锚点切章 + 述评恒末检查。
 
 用法：python audit_sequence_continuity.py [index.html 路径]
-默认路径：重构2026/index.html。
+默认路径：05-卷册大纲/目录/index.html。
 
 审计维度（按 h3 章锚点切章，至下一章锚点/文末）：
 1) 章内节号：每章节号须为 N.1…N.k 且按文档序严格递增；
@@ -14,7 +14,7 @@
 import re, sys, io, pathlib
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-DEFAULT = pathlib.Path(r"D:/librebsd/08-核查报告与多轮复核/重构2026/index.html")
+DEFAULT = pathlib.Path(r"D:/librebsd/05-卷册大纲/目录/index.html")
 path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT
 html = path.read_text(encoding="utf-8")
 issues = []

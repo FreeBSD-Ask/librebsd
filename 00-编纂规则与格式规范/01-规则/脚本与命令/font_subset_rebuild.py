@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-font_subset_rebuild.py — 目录页字体子集重建与 cmap 审计（重构2026）
+font_subset_rebuild.py — 目录页字体子集重建与 cmap 审计（05-卷册大纲/目录）
 
 用途：
-    目录页 `08-核查报告与多轮复核/重构2026/index.html` 内嵌霞鹜文楷字体按
+    目录页 `05-卷册大纲/目录/index.html` 内嵌霞鹜文楷字体按
     「页面可见字符集」精确子集化（2026-09-12 起）。大纲内容增改引入新汉字后，
     新字将回退系统字体（渲染不破但字体不齐）。本脚本从完整字体源重建子集并写回。
 
@@ -47,11 +47,11 @@ import tarfile
 import tempfile
 
 # ===== 路径常量（机器固定值，迁移时同步更新）=====
-INDEX_HTML = r'D:/librebsd/08-核查报告与多轮复核/重构2026/index.html'
-DOC_CSS = r'D:/librebsd/08-核查报告与多轮复核/重构2026/assets/doc.css'
-DOC_JS = r'D:/librebsd/08-核查报告与多轮复核/重构2026/assets/doc.js'
-THEME_JS = r'D:/librebsd/08-核查报告与多轮复核/重构2026/assets/theme-preset.js'
-CATALOG_JSON = r'D:/librebsd/08-核查报告与多轮复核/重构2026/data/catalog.json'
+INDEX_HTML = r'D:/librebsd/05-卷册大纲/目录/index.html'
+DOC_CSS = r'D:/librebsd/05-卷册大纲/目录/assets/doc.css'
+DOC_JS = r'D:/librebsd/05-卷册大纲/目录/assets/doc.js'
+THEME_JS = r'D:/librebsd/05-卷册大纲/目录/assets/theme-preset.js'
+CATALOG_JSON = r'D:/librebsd/05-卷册大纲/目录/data/catalog.json'
 FONT_SOURCE_TGZ = r'D:/librebsd/script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz'
 FONT_FAMILY = 'LXGW WenKai Screen'
 # 装配器与仓库根（写回 doc.css 后强制装配，TD-018／ADR-0012）

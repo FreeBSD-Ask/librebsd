@@ -25,7 +25,7 @@ import os
 import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", newline="\n")
-ROOT = r"D:/librebsd/08-核查报告与多轮复核/重构2026/"
+ROOT = r"D:/librebsd/05-卷册大纲/目录/"
 FILES = [
     "data/outline.txt",          # 内容源（唯一真身）——2026-09-20 第四十一批补入：
                                  #   此前未覆盖，致「改注时误用直角引号」只能在装配后由套件 A4/E4/K5 抓出

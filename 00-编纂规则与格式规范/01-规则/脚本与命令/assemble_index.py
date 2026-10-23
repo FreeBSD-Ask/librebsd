@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""assemble_index.py — 重构2026 目录页装配器（四层解耦，2026-09-18 立）。
+"""assemble_index.py — 05-卷册大纲/目录装配器（四层解耦，2026-09-18 立）。
 
-**唯一写者**：`重构2026/index.html` 自此为**装配产物**，一切修改走本器。
+**唯一写者**：`05-卷册大纲/目录/index.html` 自此为**装配产物**，一切修改走本器。
 
 四层源 → 单文件交付物：
 
@@ -53,7 +53,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")   # 勿用 io.TextIOWrapper 包装：会让先前的包装器被回收而关闭共享缓冲区
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
-BASE = REPO / "08-核查报告与多轮复核" / "重构2026"
+BASE = REPO / "05-卷册大纲" / "目录"
 INDEX = BASE / "index.html"
 TPL = BASE / "assets" / "page.template.html"
 DOC_CSS = BASE / "assets" / "doc.css"
@@ -464,7 +464,7 @@ def cmd_check():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="重构2026 目录页装配器（四层解耦）")
+    ap = argparse.ArgumentParser(description="05-卷册大纲/目录装配器（四层解耦）")
     ap.add_argument("--check", action="store_true", help="漂移检测（重装到内存与磁盘比对）")
     args = ap.parse_args()
     global CHECK_MODE

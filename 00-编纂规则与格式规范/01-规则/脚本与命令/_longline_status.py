@@ -40,7 +40,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = r"D:\librebsd"
 DRM = os.path.join(ROOT, "script", "_db_row_mining")
-S64 = os.path.join(ROOT, "08-核查报告与多轮复核", "重构2026", "data", "outline.txt")
+S64 = os.path.join(ROOT, "08-核查报告与多轮复核", "05-卷册大纲/目录", "data", "outline.txt")
 TRAV = os.path.join(ROOT, "04-现代研究文献", "rowmine_traversal.duckdb")
 PY = r"C:/Python314/python.exe"
 REGISTRY = os.path.join(ROOT, "01-项目管理", "01-编纂规划与报告归档",
@@ -685,9 +685,9 @@ LINES = [
     dict(id="T2", name="dragonfly 邮件窗口 T2", probe=probe_t2,
          resume="读 `01-项目管理/01-编纂规划与报告归档/事件窗T1与dragonflyT2任务书/R2_TASK_dragonfly_eBgBqB.md`",
          health="`rowmine_traversal.duckdb` 视图 `db_progress`", deep=None),
-    dict(id="s64", name="重构2026 目录页", probe=probe_s64,
+    dict(id="s64", name="05-卷册大纲/目录", probe=probe_s64,
          resume="`00-编纂规则与格式规范/01-规则/脚本与命令/assemble_index.py`",
-         health="`08-核查报告与多轮复核/重构2026/data/outline.txt` 口径", deep=None),
+         health="`05-卷册大纲/目录/data/outline.txt` 口径", deep=None),
     dict(id="aline", name="A 线 大纲逐文件核查报告", probe=lambda: probe_doc_resilient(
         ("script", "_outline_audit_20260906"), "见该目录 PROGRESS/HANDOFF",
         "97.87%（3,215/3,285 权威覆盖率）"),
@@ -1040,7 +1040,7 @@ def progress_report(res):
         rat.append(r)
         print("%-46s %12s %12s %9.2f%%" % ("T1 事件窗线（九窗）", t1["done"], t1["windows"], r))
     s64 = res["s64"]["values"]
-    print("%-46s %12s" % ("重构2026 目录页", "不可计量（目录已装配：%d 卷 %d 章 %d 节；余为述评撰写，无既定完成率）"
+    print("%-46s %12s" % ("05-卷册大纲/目录", "不可计量（目录已装配：%d 卷 %d 章 %d 节；余为述评撰写，无既定完成率）"
                                              % (s64["volumes"], s64["chapters"], s64["sections"])))
     print("%-46s %12s" % ("T2 dragonfly 窗口线", "不可计量（窗口级进度仅存于 R2_TASK 文档）"))
     print("%-46s %12s" % ("迁移准备层 T1–T10", "人工维护（约 4.5/10，见长线任务交接书 §十二）"))
@@ -1052,7 +1052,7 @@ def progress_report(res):
     print("-" * 118)
     if rat:
         print("  可计量 %d 条 → 等权平均 **%.2f%%**" % (len(rat), sum(rat) / len(rat)))
-    print("  不可计量 %d 条：重构2026／T2／迁移／播客／三方／H2／H3（无既定完成率或已收官）"
+    print("  不可计量 %d 条：05-卷册大纲/目录／T2／迁移／播客／三方／H2／H3（无既定完成率或已收官）"
           % 7)
     print()
     print("=" * 118)

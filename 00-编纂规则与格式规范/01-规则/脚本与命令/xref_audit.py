@@ -26,7 +26,7 @@ import sys
 
 SELFTEST = '--selftest' in sys.argv
 
-TARGET = sys.argv[1] if len(sys.argv) > 1 else r'D:/librebsd/08-核查报告与多轮复核/重构2026/index.html'
+TARGET = sys.argv[1] if len(sys.argv) > 1 else r'D:/librebsd/05-卷册大纲/目录/index.html'
 if SELFTEST:
     # 负向夹具（2026-10-03 第六批）：「冻结基准语境豁免」判据的双向验证。
     #  夹具1（须豁免）：引用紧邻「冻结基准」，且为叙述性历史旧号；

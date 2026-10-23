@@ -21,7 +21,7 @@ R1 **存在性**：登记表内每个脚本在磁盘上存在
 R2 **可编译性**：登记的 `.py` 可 `py_compile`；`.mjs` 跳过（需 node，本件不引入依赖）
 R3 **无漏接线**：`脚本与命令/audit_*.py` 全部已登记（防“写了门禁忘了登记”）
 R4 **有规则引用**：每个登记脚本名至少出现在 `流程规则.md`／`AGENTS.md`／
-   `脚本与命令/README.md`／`重构2026/tests/README.md` 之一（AGENTS.md 要求固定脚本须由规则文件引用）
+   `脚本与命令/README.md`／`05-卷册大纲/目录/tests/README.md` 之一（AGENTS.md 要求固定脚本须由规则文件引用）
 R5 **套件清单一致**：标记 `in_tests_readme` 的登记件，其文件名须出现在 `tests/README.md`
 R6 **自检覆盖**（仅报告）：无判据非空自检的登记件
 R7 **未登记脚本**（仅报告）：规则目录内既不在登记表、也未在 README 索引的 `.py`
@@ -47,7 +47,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
 CMD = REPO / "00-编纂规则与格式规范" / "01-规则" / "脚本与命令"
-TESTS = REPO / "08-核查报告与多轮复核" / "重构2026" / "tests"
+TESTS = REPO / "05-卷册大纲" / "目录" / "tests"
 RULE_DOCS = [
     REPO / "00-编纂规则与格式规范" / "01-规则" / "流程规则.md",
     REPO / "AGENTS.md",
@@ -63,12 +63,12 @@ REGISTRY = [
          kind="门禁", object="目录页 DATA 段", trigger="改 DATA 段后",
          selftest=None, in_tests_readme=True),
     dict(no="第二件", script="00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py",
-         kind="门禁", object="口径声明（重构2026/*.md + AGENTS.md + 规则目录）", trigger="目录页结构或计数变动后",
+         kind="门禁", object="口径声明（05-卷册大纲/目录/*.md + AGENTS.md + 规则目录）", trigger="目录页结构或计数变动后",
          selftest="--check", in_tests_readme=True),
     dict(no="第三件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_sequence_continuity.py",
          kind="门禁", object="节号／章号连续性 + 述评恒末", trigger="结构变动后",
          selftest=None, in_tests_readme=True),
-    dict(no="第四件", script="08-核查报告与多轮复核/重构2026/tests/visual_regression.mjs",
+    dict(no="第四件", script="05-卷册大纲/目录/tests/visual_regression.mjs",
          kind="浏览器套件", object="目录页视觉几何与功能（21 项）", trigger="改装配源后",
          selftest=None, in_tests_readme=True),
     dict(no="第五件", script="00-编纂规则与格式规范/01-规则/脚本与命令/xref_audit.py",
@@ -92,7 +92,7 @@ REGISTRY = [
     dict(no="第十一件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_server_contract.py",
          kind="门禁（服务器，独立计数）", object="运行中的目录页服务器（8 项 HTTP 契约）", trigger="改服务器脚本后",
          selftest="--selftest", in_tests_readme=False),
-    dict(no="第十二件", script="08-核查报告与多轮复核/重构2026/tests/tri_structure_negtest.py",
+    dict(no="第十二件", script="05-卷册大纲/目录/tests/tri_structure_negtest.py",
          kind="负向自检", object="第七件结构判据的有效性（九种缺陷副本）", trigger="改第七件判据后",
          selftest=None, in_tests_readme=True),
     dict(no="第十三件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_fixture_freshness.py",
@@ -129,7 +129,7 @@ REGISTRY = [
     dict(no="第十六件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_gate_registry.py",
          kind="门禁（元门禁，独立计数）", object="门禁体系自身：登记表 ↔ 磁盘 ↔ 规则文档三方一致", trigger="新增/删除门禁脚本后",
          selftest="--selftest", in_tests_readme=False),
-    dict(no="第二十一件", script="08-核查报告与多轮复核/重构2026/tests/outline_selfcheck.py",
+    dict(no="第二十一件", script="05-卷册大纲/目录/tests/outline_selfcheck.py",
          kind="自检（目录收口复核）", object="目录结构独立复核（A–J：卷序 7 锚／口径四源／章节号／迁移留痕；锚点失效逐项自报不中断）",
          trigger="目录批次收口后（另：改卷题后抽查；只读、秒级）",
          selftest=None, in_tests_readme=True),

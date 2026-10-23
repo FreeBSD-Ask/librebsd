@@ -20,7 +20,7 @@ import tempfile
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[3]  # d:/librebsd
-REL = "08-核查报告与多轮复核/重构2026/index.html"
+REL = "05-卷册大纲/目录/index.html"
 FULL = BASE / REL
 
 VER_RE = re.compile(

@@ -33,8 +33,8 @@ import subprocess
 import sys
 
 DEFAULT_EARLY_COMMIT = "305b3202822ad89a6f511cf93c0474e8b1649f1d"
-DEFAULT_EARLY_PATH = "08-核查报告与多轮复核/重构2026/data/outline.txt"
-DEFAULT_OUTLINE = r"d:\librebsd\08-核查报告与多轮复核\重构2026\data\outline.txt"
+DEFAULT_EARLY_PATH = "05-卷册大纲/目录/data/outline.txt"
+DEFAULT_OUTLINE = r"d:\librebsd\05-卷册大纲/目录\data\outline.txt"
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 # index.html 工具面板 h3（非章，判据过滤；面板标题变化不影响判定）

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""sync_refactor2026_baseline.py — 重构2026 大纲目录口径同步脚本（2026-09-08 新增固定脚本）
+"""sync_refactor2026_baseline.py — 05-卷册大纲/目录口径同步脚本（2026-09-08 新增固定脚本）
 
 用途：
-  `08-核查报告与多轮复核/重构2026/index.html` 是重构2026 现行大纲目录（唯一权威口径来源），
+  `05-卷册大纲/目录/index.html` 是现行大纲目录（唯一权威口径来源），
   其页首 `doc-metrics` 块（总卷数/总章数/总节数）为机器可读基准。本脚本检测口径声明是否与
   权威基准漂移，并仅同步「机器维护标记块」内的基准行。
-  扫描范围（2026-09-08 扩展）：`重构2026/*.md` ＋ 根 `AGENTS.md` ＋ `00-编纂规则与格式规范/01-规则/*.md`
-  ——后两者同样手写现行口径，仅扫 重构2026 会漏检并在每次目录变更后重新漂移。
+  扫描范围（2026-09-08 扩展）：`05-卷册大纲/目录/*.md` ＋ 根 `AGENTS.md` ＋ `00-编纂规则与格式规范/01-规则/*.md`
+  ——后两者同样手写现行口径，仅扫 05-卷册大纲/目录 会漏检并在每次目录变更后重新漂移。
 
 规则依据：
   `00-编纂规则与格式规范/01-规则/流程规则.md`「重构大纲目录口径同步规则（2026-09-08 新增）」小节。
@@ -43,10 +43,10 @@ from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
-INDEX_HTML = REPO / "08-核查报告与多轮复核" / "重构2026" / "index.html"
-TARGET_DIR = REPO / "08-核查报告与多轮复核" / "重构2026"
+INDEX_HTML = REPO / "05-卷册大纲" / "目录" / "index.html"
+TARGET_DIR = REPO / "05-卷册大纲" / "目录"
 # 口径声明外溢位置（2026-09-08 扩展）：根协作指南与规则目录同样手写现行口径，
-# 仅扫 重构2026/*.md 会漏检，导致每次目录变更后这两处重新漂移。
+# 仅扫 05-卷册大纲/目录/*.md 会漏检，导致每次目录变更后这两处重新漂移。
 EXTRA_TARGETS = [REPO / "AGENTS.md"] + sorted(
     (REPO / "00-编纂规则与格式规范" / "01-规则").glob("*.md"))
 
@@ -253,10 +253,10 @@ def cmd_selftest() -> int:
          u"当前磁盘实况 19卷355章；现行大纲目录 67 卷 482 章 3468 节",
          False, "exempt", False),
         (u"标记块内漂移判 drift",
-         u"- 重构2026 现行大纲目录口径：67 卷 482 章 3468 节",
+         u"- 05-卷册大纲/目录口径：67 卷 482 章 3468 节",
          True, "drift", False),
         (u"标记块内一致判 ok",
-         u"- 重构2026 现行大纲目录口径：74 卷 521 章 3691 节",
+         u"- 05-卷册大纲/目录口径：74 卷 521 章 3691 节",
          True, "ok", False),
         (u"历史标记（修订）豁免不判盲区",
          u"- 现行口径 67 卷 482 章 3468 节（修订（2026-09-20）：已按 74 卷演进）",
@@ -329,7 +329,7 @@ def cmd_check(v, verbose: bool):
         jsonld_bad = 0
     # D9：92 号文 frontmatter「现行口径（唯一权威）」行须与权威基准一致（2026-09-29 加，防施工后累积漂移）
     try:
-        _f92 = (Path(__file__).resolve().parents[3] / "08-核查报告与多轮复核" / "重构2026" /
+        _f92 = (Path(__file__).resolve().parents[3] / "05-卷册大纲" / "目录" /
                 "92-目录内容调整建议书-综合释疑库与未实施建议.md")
         _head = "\n".join(_f92.read_text(encoding="utf-8").split("\n")[:10])
         _m92 = re.search(r"(\d+) 卷 (\d+) 章 (\d+) 节", _head)
@@ -390,7 +390,7 @@ def cmd_sync(v):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="重构2026 大纲目录口径同步")
+    ap = argparse.ArgumentParser(description="05-卷册大纲/目录口径同步")
     g = ap.add_mutually_exclusive_group()
     g.add_argument("--check", action="store_true", help="检测漂移（默认）")
     g.add_argument("--sync", action="store_true", help="仅同步标记块内基准行")

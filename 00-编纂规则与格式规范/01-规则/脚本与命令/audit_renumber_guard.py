@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """第十七件·改号同源守卫（2026-10-07 立，丁-1；87 号文 R-3 的工程化）。
 
-对象：`重构2026/data/outline.txt`（**内容源**级——不等装配，改后立即回路）。
+对象：`05-卷册大纲/目录/data/outline.txt`（**内容源**级——不等装配，改后立即回路）。
 
 三种模式：
   A) 静态自检（默认）：逐卷核「章题号 ↔ 节号前缀」同源一致——
@@ -26,7 +26,7 @@ import tempfile
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[3]  # d:/librebsd
-SRC = BASE / "08-核查报告与多轮复核" / "重构2026" / "data" / "outline.txt"
+SRC = BASE / "05-卷册大纲" / "目录" / "data" / "outline.txt"
 
 CN = "零一二三四五六七八九十百"
 def cn2int(x):

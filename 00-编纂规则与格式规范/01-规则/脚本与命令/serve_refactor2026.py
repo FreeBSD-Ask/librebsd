@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""重构2026 目录页局域网服务器（固定脚本，规则引用资源）—— **唯一实现**。
+"""05-卷册大纲/目录局域网服务器（固定脚本，规则引用资源）—— **唯一实现**。
 
-2026-09-28 归一重写：本脚本是重构2026 目录页的**唯一服务器实现**。
-此前并存两份（本脚本旧版 0.0.0.0:8090 多线程；`08-核查报告与多轮复核/重构2026/
+2026-09-28 归一重写：本脚本是05-卷册大纲/目录的**唯一服务器实现**。
+此前并存两份（本脚本旧版 0.0.0.0:8090 多线程；`05-卷册大纲/目录/
 server/serve_index.py` 0.0.0.0:80 单线程），二者**语义分叉**且**均缺压缩、均缺安全
 响应头、均开启目录列表**。旧 `serve_index.py` 已归档至 `script/_archive/`。
 
@@ -52,7 +52,7 @@ import time
 os.environ.setdefault("PYTHONDONTWRITEBYTECODE", "1")
 os.environ.setdefault("PYTHONNOUSERSITE", "1")
 
-DEFAULT_ROOT = r"D:\librebsd\08-核查报告与多轮复核\重构2026"
+DEFAULT_ROOT = r"D:\librebsd\05-卷册大纲\目录"
 DEFAULT_PORT = 8090
 DEFAULT_BIND = "0.0.0.0"
 
@@ -269,8 +269,8 @@ def report_failure(exc: BaseException) -> None:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
-        description="重构2026 目录页局域网服务器（唯一实现）")
-    ap.add_argument("--root", default=DEFAULT_ROOT, help="docroot（默认仓库内 重构2026）")
+        description="05-卷册大纲/目录局域网服务器（唯一实现）")
+    ap.add_argument("--root", default=DEFAULT_ROOT, help="docroot（默认仓库内 05-卷册大纲/目录）")
     ap.add_argument("--port", type=int, default=DEFAULT_PORT)
     ap.add_argument("--bind", default=DEFAULT_BIND,
                     help="监听地址；局域网用 0.0.0.0，门禁/本机用 127.0.0.1")

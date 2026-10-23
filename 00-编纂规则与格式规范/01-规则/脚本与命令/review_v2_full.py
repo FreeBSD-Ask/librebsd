@@ -28,7 +28,7 @@ import re
 import sys
 
 ROOT = "D:/librebsd"
-IDX = ROOT + "/08-核查报告与多轮复核/重构2026/index.html"
+IDX = ROOT + "/05-卷册大纲/目录/index.html"
 OK, BAD, INFO = [], [], []
 
 # 执行入口警告（本件为顶层脚本、无 main()；此处在首次读取产物前打印）：锚点陈旧只披露，
@@ -920,8 +920,8 @@ print("=" * 78)
 vol_name2no = {t.split("  ", 1)[1]: v for v, t, _ in vols}
 # 56 表《章题》不含「第 M 章 」前缀，须剥离后比对
 ch2title = {(v, m): t[len("第 %d 章 " % m):] for v, _, chs in vols for m, t, _ in chs}
-s56 = rd(ROOT + "/08-核查报告与多轮复核/重构2026/56-二次映射表-355到240.md")
-c56 = rd(ROOT + "/08-核查报告与多轮复核/重构2026/56-二次映射表-355到240.csv")
+s56 = rd(ROOT + "/05-卷册大纲/映射/reference/56-二次映射表-355到240.md")
+c56 = rd(ROOT + "/05-卷册大纲/映射/reference/56-二次映射表-355到240.csv")
 pat56 = re.compile(r"^第([一二三四五六七八九十百]+)卷 (.+?)｜第(\d+)章(?:《(.+)》)?(.*)$")
 
 
@@ -958,7 +958,7 @@ chk("H2 56 表目标列章号全部存在于页面", not noch, noch[:3])
 chk("H3 56 表目标列章题**全表逐条**与页面一致（实体归一后）", not mism,
     mism[:2] or f"{parsed}/{parsed}")
 chk("H4 56 表 MD／CSV 均无 BOM",
-    not rd(ROOT + "/08-核查报告与多轮复核/重构2026/56-二次映射表-355到240.md").startswith("\ufeff")
+    not rd(ROOT + "/05-卷册大纲/映射/reference/56-二次映射表-355到240.md").startswith("\ufeff")
     and not c56.startswith("\ufeff"))
 chk("H5 56 表含第三批／第二批／第八批／第九批／第十批同步说明",
     "第三批目录重构同步" in s56 and "第二批目录重构同步" in s56
@@ -989,7 +989,7 @@ docs10 = {
     "AGENTS.md": rd(ROOT + "/AGENTS.md"),
     "流程规则.md": rd(ROOT + "/00-编纂规则与格式规范/01-规则/流程规则.md"),
     "脚本与命令/README.md": rd(ROOT + "/00-编纂规则与格式规范/01-规则/脚本与命令/README.md"),
-    "tests/README.md": rd(ROOT + "/08-核查报告与多轮复核/重构2026/tests/README.md"),
+    "tests/README.md": rd(ROOT + "/05-卷册大纲/目录/tests/README.md"),
 }
 bad10 = [k for k, v in docs10.items() if "十一项静态自检" not in v]
 chk("I3 四处现行文档均记「十一项静态自检」", not bad10, bad10)
@@ -1001,12 +1001,12 @@ print("=" * 78)
 print("J. 版本取证与述评覆盖率（5 项；J1–J3 自 2026-10-23 起改 Git 取证）")
 print("=" * 78)
 import subprocess as _sp
-_bk_rel = "08-核查报告与多轮复核/重构2026/index.html"
+_bk_rel = "05-卷册大纲/目录/index.html"
 _head_bytes = _sp.run(["git", "show", "%s:%s" % (HEAD, _bk_rel)], cwd=ROOT,
                       capture_output=True).stdout
 chk("J1 改动前版本可由 Git 取证（HEAD:index.html 非空）", len(_head_bytes) > 0, len(_head_bytes))
 chk("J2 历史备份件已按 2026-10-23 旁路备份封禁令清除（零副本）",
-    not os.path.exists(ROOT + "/08-核查报告与多轮复核/重构2026/index.html.prebak-第四十一批-20260920.html"))
+    not os.path.exists(ROOT + "/05-卷册大纲/目录/index.html.prebak-第四十一批-20260920.html"))
 info("J3 历史批次差异证据", "改由 Git 提交承载；本项在备份件清除后跳过，不再以缺失判 FAIL")
 blk_total = 0
 for f in os.listdir(ROOT + "/08-核查报告与多轮复核/12-重构大纲书目述评"):
@@ -1022,7 +1022,7 @@ print()
 print("=" * 78)
 print("K. 四层解耦一致性（源 ↔ 产物，独立复算）")
 print("=" * 78)
-BASE = ROOT + "/08-核查报告与多轮复核/重构2026"
+BASE = ROOT + "/05-卷册大纲/目录"
 SRC = {
     "内容层 outline.txt": BASE + "/data/outline.txt",
     "数据层 schema.jsonld": BASE + "/data/schema.jsonld",
