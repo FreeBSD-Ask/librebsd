@@ -19,20 +19,21 @@
 **写模式（2026-10-22 立，TD-015 偿还）**：`--write` 把可唯一回映的行**就地改写**为现行路径
 （默认 dry-run；ADR-0008 §1.3 CLI 安全默认）。安全轨：
   - 任一条 AMBIGUOUS／UNMATCHED → 拒绝写盘（exit 2，零写入）；
-  - 写前 prebak `<file>.prebak-<stamp>`（**已存在即拒写**，防同 stamp 覆盖唯一原始备份）；行数与无用行（空行／# 注）原样保留；UTF-8 无 BOM＋LF；
+  - 写前打印原文件 SHA-256 与行数（**零副本**；留痕与回滚由 Git 承担，2026-10-23 旁路备份封禁令）；行数与无用行（空行／# 注）原样保留；UTF-8 无 BOM＋LF；
   - 写后断言：回读逐行校验**每条路径在盘上存在**（目录或 .md），行数不变；
   - 幂等：二跑应 0 条改写（全部 EXISTS）；文件末尾确保恰一个 LF（**路径行计数**不变）；
   路径行首尾空白会被剥除（写前剥白，属规范化，不计入“回映”计数）。
-  - 另三项 fail-closed：`--apply` 须与 `--write` 同用（禁静默退化为检查）；`--stamp` 禁路径分隔符与空值；**空清单（0 条）拒写**。
+  - 另三项 fail-closed：`--apply` 须与 `--write` 同用（禁静默退化为检查）；`--stamp` 仅作日志标记、禁路径分隔符与空值；**空清单（0 条）拒写**。
 回映目标可能是**节目录**（目录化后节＝目录，其下诸小节 .md 由 F 线自行展开）或单个 `.md`。
 
 用法：
   python oaa_remap_claims.py --group F1 --check
   python oaa_remap_claims.py --group F1 --write          # dry-run 计划
-  python oaa_remap_claims.py --group F1 --write --apply  # 落盘（含 prebak）
+  python oaa_remap_claims.py --group F1 --write --apply  # 落盘（零副本，Git 留痕）
   python oaa_remap_claims.py --claims <FILE> --root 05-卷册大纲 --report <FILE>
 """
 import argparse
+import hashlib
 import os
 import re
 import sys
@@ -196,19 +197,15 @@ def rewrite(claims_file, root_name, apply=False, stamp="20261022"):
     if chr(0xFEFF) in body or chr(13) in body:
         print("[check] 产物编码违规（BOM／CRLF）——零写入", file=sys.stderr)
         return 2
-    bak = claims_file + ".prebak-" + stamp
-    if os.path.exists(bak):
-        print("[check] prebak 已存在：%s —— 拒绝覆盖（请改用 --stamp <新时间戳>）"
-              % os.path.relpath(bak, ROOT).replace(chr(92), "/"))
-        return 2
-    shutil.copy2(claims_file, bak)
-    print("[prebak] %s" % os.path.relpath(bak, ROOT).replace(chr(92), "/"))
+    old_lines = raw_lines_of(claims_file)
+    old_sha = hashlib.sha256(open(claims_file, "rb").read()).hexdigest()
+    print("[sha-before] %s（零副本；留痕与回滚由 Git 承担，2026-10-23 旁路备份封禁令）" % old_sha)
     with open(claims_file, "w", encoding="utf-8", newline=chr(10)) as fh:
         fh.write(body)
     # 写后断言：行数不变＋每条路径在盘存在（目录或 .md）
     with open(claims_file, encoding="utf-8") as fh:
         again = fh.read().split(chr(10))
-    n_old = len([1 for l in raw_lines_of(bak) if l.strip() and not l.strip().startswith("#")])
+    n_old = len([1 for l in old_lines if l.strip() and not l.strip().startswith("#")])
     n_new = len([1 for l in again if l.strip() and not l.strip().startswith("#")])
     missing = []
     for l in again:
@@ -306,8 +303,8 @@ def selftest():
         rc = rewrite(claims, "05-卷册大纲", apply=True, stamp="selftest")
         body = open(claims, encoding="utf-8").read().strip()
         good = (rc == 0 and os.path.isdir(os.path.join(tmp, body))
-                and os.path.exists(claims + ".prebak-selftest"))
-        print("[selftest] S1 旧式清单回映落盘＋prebak %s（rc=%d, %s）"
+                and not os.path.exists(claims + ".prebak-selftest"))
+        print("[selftest] S1 旧式清单回映落盘＋零副本 %s（rc=%d, %s）"
               % ("PASS" if good else "FAIL", rc, body))
         ok &= good
         # 二跑幂等
@@ -322,16 +319,16 @@ def selftest():
         open(claims2, "w", encoding="utf-8", newline=chr(10)).write(
             "05-卷册大纲/第05卷-x/第050章-y/050.1-旧.md" + chr(10))
         rc3 = rewrite(claims2, "05-卷册大纲", apply=True, stamp="selftest3")
-        amb = (rc3 == 2 and not os.path.exists(claims2 + ".prebak-selftest3"))
+        amb = (rc3 == 2 and open(claims2, encoding="utf-8").read()
+               == "05-卷册大纲/第05卷-x/第050章-y/050.1-旧.md" + chr(10))
         print("[selftest] S3 不可解析（未匹配／歧义）拒写（rc=%d，零写入）%s" % (rc3, "PASS" if amb else "FAIL"))
         ok &= amb
-        # S4：同 stamp 二跑 → prebak 已存在则拒写（防覆盖唯一原始备份）
-        bak_keep = open(claims + ".prebak-selftest2", encoding="utf-8").read()
+        # S4：重复 apply 不产生任何旁路副本（2026-10-23 封禁令）
+        before4 = open(claims, encoding="utf-8").read()
         rc4 = rewrite(claims, "05-卷册大纲", apply=True, stamp="selftest2")
-        keep = (rc4 == 2
-                and open(claims + ".prebak-selftest2", encoding="utf-8").read() == bak_keep)
-        print("[selftest] S4 同 stamp 拒写（rc=%d，prebak 未被覆盖）%s"
-              % (rc4, "PASS" if keep else "FAIL"))
+        keep = (rc4 == 0 and open(claims, encoding="utf-8").read() == before4
+                and not os.path.exists(claims + ".prebak-selftest2"))
+        print("[selftest] S4 重复 apply 零副本（rc=%d）%s" % (rc4, "PASS" if keep else "FAIL"))
         ok &= keep
         # S5/S6/S7 fail-closed 三例：--apply 无 --write／非法 stamp／空清单
         old_argv = sys.argv[:]
