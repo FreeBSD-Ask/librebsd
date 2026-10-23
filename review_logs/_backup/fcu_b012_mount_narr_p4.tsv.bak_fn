@@ -1,0 +1,5 @@
+1046278	1067	Dimity Andric 回复 Alex Kuster 的 clang buildworld 报障，指出链接 libc.so.7 时报 relocation R_X86_64_32S 不能用于共享对象并提示重编 -fPIC
+1046279	1067	Andrey Smagin 报告 Asus EEE PC 900 工作约一小时后整机挂死，排查发现所有 mbuf 都已在用；接 X 时即挂，插 USB 无线同样挂死，改走有线 ae0 后系统稳定
+1046282	1067	Test Rat 报告 clang 下 (gpt)zfsboot 损坏，zfs_alloc() 与 zfs_free() 不匹配，trunk r136607 仍可复现；boot 与 gptboot 不受影响，早期 clang 导入时期表现为启动期间卡住而无任何报错
+1046283	1067	Andriy Gapon 进一步排查后发现 sched_pickcpu() 对用完时间片且不做自愿切换的 CPU 密集线程从不调用，线程会一直留在初始 CPU 直到 rebalance 机制介入；单 socket 系统的拓扑代码还会构建出一层冗余层次
+1046284	1067	Andrew Thompson 质疑 static struct mtx lagg_list_mtx 这类 static 存储期全局变量是否保证为零内存，Andriy Gapon 答复确认静态存储期变量确实被初始化为全零内存
