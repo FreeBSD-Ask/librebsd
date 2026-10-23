@@ -450,6 +450,45 @@ def probe_s64():
     }
 
 
+def probe_landing05():
+    """05 大纲落地（旧树→新树迁移施工）探针（2026-10-24 立线）。
+
+    真值＝`05-卷册大纲/映射/mapping.tsv`（Task 4 生成后为唯一权威）；
+    **未生成＝合法状态**（Task 4 未开工），进度按 0/旧树子节总数报，分母由
+    `inventory.tsv` 派生（relpath 含 ≥3 个“/”＝旧大纲/卷/章/子节四段，
+    根级 SUMMARY.md 等两个非子节 .md 不入映射——spec Task 1.1 口径）。
+    sources 只列**当前存在**的文件（缺源会令 --check 恒 FAIL）；
+    mapping.tsv 生成后自动纳入，届时按 status 列逐状态计数。
+    """
+    mp = _p("05-卷册大纲", "映射", "mapping.tsv")
+    inv = _p("05-卷册大纲", "映射", "inventory.tsv")
+    total = sum(1 for ln in _read(inv).splitlines()[1:] if ln.count("/") >= 3)
+    srcs = [inv]
+    if os.path.exists(mp):
+        counts, hdr = {}, None
+        for ln in _read(mp).splitlines():
+            cols = ln.split("\t")
+            if hdr is None:
+                hdr = cols
+                continue
+            if len(cols) == len(hdr) and "status" in hdr:
+                k = cols[hdr.index("status")]
+                counts[k] = counts.get(k, 0) + 1
+        srcs.append(mp)
+        done = counts.get("CONFIRMED", 0)
+        return {"status": "ACTIVE",
+                "progress": "映射 %d/%d（%s）" % (
+                    done, total,
+                    "／".join("%s %d" % kv for kv in sorted(counts.items()))),
+                "values": dict(counts, total=total),
+                "sources": srcs}
+    return {"status": "ACTIVE",
+            "progress": "Task 4 未开工：mapping.tsv 未生成（映射 0/%d；"
+                        "沙箱第一卷 1,934 子节全链试毕）" % total,
+            "values": {"total": total},
+            "sources": srcs}
+
+
 def probe_bline():
     """B 线探针：**按队列口径**（`queue.tsv` 的单元中有 `progress.tsv` DONE 事件者）。
 
@@ -688,6 +727,11 @@ LINES = [
     dict(id="s64", name="05-卷册大纲/目录", probe=probe_s64,
          resume="`00-编纂规则与格式规范/01-规则/脚本与命令/assemble_index.py`",
          health="`05-卷册大纲/目录/data/outline.txt` 口径", deep=None),
+    dict(id="landing05", name="05 大纲落地（旧树→新树迁移施工）", probe=probe_landing05,
+         resume="读 `.trae/specs/migrate-refactor2026-into-outline-20261023/tasks.md`＋"
+                "`01-项目管理/01-编纂规划与报告归档/05-大纲落地Task1-2-4-5任务书-20261023.md`",
+         health="`00-编纂规则与格式规范/01-规则/脚本与命令/audit_outline_landing.py --check`（L1–L17）",
+         deep=None),
     dict(id="aline", name="A 线 大纲逐文件核查报告", probe=lambda: probe_doc_resilient(
         ("script", "_outline_audit_20260906"), "见该目录 PROGRESS/HANDOFF",
         "97.87%（3,215/3,285 权威覆盖率）"),
