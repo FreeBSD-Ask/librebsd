@@ -21,7 +21,7 @@ if (!__CHROME_EXE) { console.error('未找到可用 Chromium（ms-playwright）'
  *   字号滑杆交互、暗色下 plink/reflink 浮层。
  * 失败退出码 1。
  * ========================================================================== */
-const URL = 'file:///D:/librebsd/08-核查报告与多轮复核/重构2026/index.html';
+const URL = 'file:///D:/librebsd/05-卷册大纲/目录/index.html';
 const HEADLESS = process.argv.includes('--headless');
 
 /* ── 夹具真值：**唯一来源** ──────────────────────────────────────────────

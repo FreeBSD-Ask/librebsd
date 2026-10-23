@@ -40,7 +40,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = r"D:\librebsd"
 DRM = os.path.join(ROOT, "script", "_db_row_mining")
-S64 = os.path.join(ROOT, "08-核查报告与多轮复核", "05-卷册大纲/目录", "data", "outline.txt")
+S64 = os.path.join(ROOT, "05-卷册大纲", "目录", "data", "outline.txt")
 TRAV = os.path.join(ROOT, "04-现代研究文献", "rowmine_traversal.duckdb")
 PY = r"C:/Python314/python.exe"
 REGISTRY = os.path.join(ROOT, "01-项目管理", "01-编纂规划与报告归档",

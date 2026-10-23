@@ -1,5 +1,5 @@
 import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
-const URL = 'file:///D:/librebsd/08-核查报告与多轮复核/重构2026/index.html';
+const URL = 'file:///D:/librebsd/05-卷册大纲/目录/index.html';
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 await page.goto(URL, { waitUntil: 'load' });

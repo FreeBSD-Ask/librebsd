@@ -39,6 +39,9 @@ def scan(root):
 
     for p in sorted(root.rglob("*.md")):
         rel = p.relative_to(root).as_posix()
+        # 2026-10-23 搬迁批：目录源（号文）与历史映射参考不是大纲内容树，不进本门禁面。
+        if rel.split("/")[0] in ("目录", "映射"):
+            continue
         if "/" not in rel:            # 根级总览等不计
             continue
         files += 1

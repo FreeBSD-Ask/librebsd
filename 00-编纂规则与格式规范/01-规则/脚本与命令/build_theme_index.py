@@ -4,11 +4,12 @@
 职责：扫描 `05-卷册大纲/` 四层树，按受控词表 `主题词表.json` 为题面与正文取词，
 生成两件派生权威件（均写大纲树根级）：
 
-  * `chapter_keywords.json`：schema `theme-index/3`
-      章（449）／节（3274）全覆盖；普通节 3–6 词、元节 1–3 词；
+  * `chapter_keywords.json`：schema `theme-index/4`
+      章（523）／节（3,705）全覆盖；普通节 3–6 词、元节 1–3 词；
       小节只存与所属节的差分；附 `technical_terms`／`projects`／`subs_sha1`。
-  * `theme_index.json`：schema `theme-reverse/1`
+  * `theme_index.json`：schema `theme-reverse/2`
       主题→章／节／小节反查，供 claim 库与大纲库按主题分流与上卷。
+      节键为“卷／章／节”复合键 `V01-C001-1.1`，避免 `N.M` 跨章碰撞。
 
 取词：题面 ×3、要点段 ×2、正文 ×1；idf 按小节文档频率；最长匹配优先；
 `bsd`／`freebsd`／`linux`／`历史` 等无区分度泛词由词表 `banned` 强制排除。
@@ -43,8 +44,8 @@ TREE = os.path.join(REPO, "05-卷册大纲")
 VOCAB = os.path.join(HERE, "主题词表.json")
 KW = "chapter_keywords.json"
 REV = "theme_index.json"
-SCHEMA_KW = "theme-index/3"
-SCHEMA_REV = "theme-reverse/1"
+SCHEMA_KW = "theme-index/4"
+SCHEMA_REV = "theme-reverse/2"
 
 VOL_RE = re.compile(r"^第(\d{1,3})卷")
 CH_RE = re.compile(r"^第(\d{1,3})章(?:-(?P<slug>.+))?$")
@@ -158,12 +159,14 @@ def scan_tree(root=TREE):
         vdir = os.path.join(root, vname)
         if not os.path.isdir(vdir) or not VOL_RE.match(vname):
             continue
+        vnum = int(VOL_RE.match(vname).group(1))
         chapters = []
         chs = sorted([d for d in os.listdir(vdir)
                       if os.path.isdir(os.path.join(vdir, d)) and CH_RE.match(d)],
                      key=lambda x: int(CH_RE.match(x).group(1)))
         for ci, cname in enumerate(chs):
             m = CH_RE.match(cname)
+            chnum = int(m.group(1))
             cdir = os.path.join(vdir, cname)
             sections = []
             secs = sorted([d for d in os.listdir(cdir)
@@ -173,6 +176,7 @@ def scan_tree(root=TREE):
             for sname in secs:
                 sm = SEC_RE.match(sname)
                 sdir = os.path.join(cdir, sname)
+                sec_key = "V%02d-C%03d-%d.%d" % (vnum, chnum, int(sm.group(1)), int(sm.group(2)))
                 subs = []
                 for f in sorted(os.listdir(sdir)):
                     if not SUB_RE.match(f):
@@ -181,6 +185,7 @@ def scan_tree(root=TREE):
                     path = os.path.join(sdir, f)
                     subs.append({
                         "id": "%s.%s.%s" % fm.group(1, 2, 3),
+                        "key": "%s.%d" % (sec_key, int(fm.group(3))),
                         "slug": fm.group("slug"),
                         "file": f,
                         "path": path,
@@ -188,18 +193,19 @@ def scan_tree(root=TREE):
                     })
                 sections.append({
                     "id": "%s.%s" % (sm.group(1), sm.group(2)),
+                    "key": sec_key,
                     "m": int(sm.group(2)),
                     "slug": sm.group("slug"),
                     "subs": subs,
                 })
             chapters.append({
-                "num": "%03d" % int(m.group(1)),
+                "num": "%03d" % chnum,
                 "slug": m.group("slug") or "",
                 "first": ci == 0,
                 "last": ci == len(chs) - 1,
                 "sections": sections,
             })
-        volumes.append({"name": vname, "chapters": chapters})
+        volumes.append({"name": vname, "num": vnum, "chapters": chapters})
     return volumes
 
 
@@ -210,14 +216,14 @@ def tree_stats(volumes):
     return len(volumes), ch, sec, sub
 
 
-def content_sha(volumes):
+def content_sha(volumes, root=TREE):
     h = hashlib.sha256()
     rows = []
     for v in volumes:
         for c in v["chapters"]:
             for s in c["sections"]:
                 for x in s["subs"]:
-                    rows.append((os.path.relpath(x["path"], TREE).replace("\\", "/"),
+                    rows.append((os.path.relpath(x["path"], root).replace("\\", "/"),
                                  hashlib.sha256(open(x["path"], "rb").read()).hexdigest()))
     for rel, sha in sorted(rows):
         h.update(rel.encode("utf-8"))
@@ -230,7 +236,7 @@ def content_sha(volumes):
 def subs_sha1(section):
     h = hashlib.sha1()
     for x in section["subs"]:
-        h.update(("%s-%s-%s\n" % (x["id"], x["slug"], x["title"])).encode("utf-8"))
+        h.update(("%s-%s-%s\n" % (x.get("key") or x["id"], x["slug"], x["title"])).encode("utf-8"))
     return h.hexdigest()
 
 
@@ -337,13 +343,17 @@ def doc_counts(path, title, trie, latin):
 # ---------------------------------------------------------------- 索引构建
 
 def _sec_key(sid):
-    a, b = sid.split(".")
-    return int(a), int(b)
+    m = re.match(r"^V(\d+)-C(\d+)-(\d+)\.(\d+)$", sid)
+    if not m:
+        raise Fatal("非法节键：%s" % sid)
+    return tuple(int(x) for x in m.groups())
 
 
 def _sub_key(sid):
-    a, b, c = sid.split(".")
-    return int(a), int(b), int(c)
+    m = re.match(r"^V(\d+)-C(\d+)-(\d+)\.(\d+)\.(\d+)$", sid)
+    if not m:
+        raise Fatal("非法小节键：%s" % sid)
+    return tuple(int(x) for x in m.groups())
 
 
 def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
@@ -358,20 +368,20 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 for x in s["subs"]:
                     raw, tids = doc_counts(x["path"], x["title"], trie, latin)
                     raw = {cid: n for cid, n in raw.items() if n > 0}
-                    title_ids[x["id"]] = tids
+                    title_ids[x["key"]] = tids
                     for cid in raw:
                         df[cid] = df.get(cid, 0) + 1
                     sub_docs.append((v, c, s, x, raw))
     n_docs = max(len(sub_docs), 1)
     weights = {}
     for _v, _c, _s, x, raw in sub_docs:
-        weights[x["id"]] = {
+        weights[x["key"]] = {
             cid: n * (math.log((n_docs + 1.0) / (df.get(cid, 1) + 0.5)) + 1.0)
             for cid, n in raw.items()
         }
     sub_pick = {}
     for v, c, s, x, _raw in sub_docs:
-        cands = weights[x["id"]]
+        cands = weights[x["key"]]
         if is_meta(c, s):
             cands = {cid: sc for cid, sc in cands.items()
                      if domain_of(cid, by_id) == META_DOMAIN}
@@ -380,7 +390,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
             cap = 3 if HIS_TITLE_RE.search(x["title"]) else 1
             pick = pick_themes(cands, MIN_T, MAX_T, by_id,
                                mandatory=title_ids.get(x["id"]), his_cap=cap)
-        sub_pick[x["id"]] = pick
+        sub_pick[x["key"]] = pick
 
     sections_out, chapters_out = {}, {}
     for v in volumes:
@@ -388,9 +398,9 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
             for s in c["sections"]:
                 sec_df, sec_score = {}, {}
                 for x in s["subs"]:
-                    for cid in sub_pick.get(x["id"], []):
+                    for cid in sub_pick.get(x["key"], []):
                         sec_df[cid] = sec_df.get(cid, 0) + 1
-                        sec_score[cid] = sec_score.get(cid, 0.0) + weights[x["id"]].get(cid, 0.0)
+                        sec_score[cid] = sec_score.get(cid, 0.0) + weights[x["key"]].get(cid, 0.0)
                 cands = {cid: sec_df[cid] * 1e6 + sec_score[cid] for cid in sec_df}
                 sec_tids = set(scan_text(s["slug"], trie, latin))
                 for cid in sec_tids:
@@ -410,9 +420,9 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 for x in s["subs"]:
                     for p in extract_projects(x["title"], vocab):
                         proj_n[p] = proj_n.get(p, 0) + 1
-                    for t in extract_tech(x["title"], sub_pick.get(x["id"], []), by_id):
+                    for t in extract_tech(x["title"], sub_pick.get(x["key"], []), by_id):
                         tech_n[t] = tech_n.get(t, 0) + 1
-                sections_out[s["id"]] = {
+                sections_out[s["key"]] = {
                     "chapter": c["num"],
                     "title": s["slug"],
                     "meta": meta,
@@ -427,7 +437,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 }
             themes, doms, proj = {}, {}, {}
             for s in c["sections"]:
-                row = sections_out[s["id"]]
+                row = sections_out[s["key"]]
                 for cid in row["themes"]:
                     themes[cid] = themes.get(cid, 0) + 1
                 for d in row["domains"]:
@@ -464,7 +474,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
     for v in volumes:
         for c in v["chapters"]:
             for s in c["sections"]:
-                row = sections_out[s["id"]]
+                row = sections_out[s["key"]]
                 need = META_MIN if row["meta"] else MIN_T
                 allow_his = bool(HIS_TITLE_RE.search(row["title"])) or row["meta"]
                 his_n = sum(1 for cid in row["themes"]
@@ -525,8 +535,8 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
     # 小节差分
     delta = {}
     for v, c, s, x, _raw in sub_docs:
-        own = sub_pick.get(x["id"], [])
-        sec = sections_out[s["id"]]
+        own = sub_pick.get(x["key"], [])
+        sec = sections_out[s["key"]]
         add = [cid for cid in own if cid not in sec["themes"]]
         own_p = extract_projects(x["title"], vocab)
         dp = [p for p in own_p if p not in sec["projects"]]
@@ -540,7 +550,7 @@ def build_docs(volumes, vocab, vocab_sha, content_hash, tree_root=TREE):
                 row["projects"] = dp
             if dt:
                 row["technical_terms"] = dt
-            delta[x["id"]] = row
+            delta[x["key"]] = row
 
     generated = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
     used = set()
@@ -648,7 +658,7 @@ def check_all(out_dir=TREE, deep=False):
     if problems:
         return problems
     vocab, vsha = load_vocab()
-    volumes = scan_tree(TREE)
+    volumes = scan_tree(out_dir)
     vols, chs, secs, subs = tree_stats(volumes)
     meta = kw.get("meta") or {}
     if meta.get("schema") != SCHEMA_KW:
@@ -658,7 +668,7 @@ def check_all(out_dir=TREE, deep=False):
             problems.append("meta.%s=%r，树实况 %d" % (k, meta.get(k), v))
     if meta.get("vocab_sha256") != vsha:
         problems.append("vocab_sha256 不符")
-    csha = content_sha(volumes)
+    csha = content_sha(volumes, out_dir)
     if meta.get("content_sha256") != csha:
         problems.append("content_sha256 不符（树内容已变）")
     disk_ch = set(kw.get("chapters") or {})
@@ -667,22 +677,22 @@ def check_all(out_dir=TREE, deep=False):
         problems.append("章键不符：缺 %s／多 %s"
                         % (sorted(tree_ch - disk_ch)[:3], sorted(disk_ch - tree_ch)[:3]))
     disk_sec = set(kw.get("sections") or {})
-    tree_sec = {s["id"] for v in volumes for c in v["chapters"] for s in c["sections"]}
+    tree_sec = {s["key"] for v in volumes for c in v["chapters"] for s in c["sections"]}
     if disk_sec != tree_sec:
         problems.append("节键不符：缺 %s／多 %s"
                         % (sorted(tree_sec - disk_sec)[:3], sorted(disk_sec - tree_sec)[:3]))
     for v in volumes:
         for c in v["chapters"]:
             for s in c["sections"]:
-                row = (kw.get("sections") or {}).get(s["id"]) or {}
+                row = (kw.get("sections") or {}).get(s["key"]) or {}
                 if row.get("title") != s["slug"]:
-                    problems.append("节 %s 题面不符" % s["id"])
+                    problems.append("节 %s 题面不符" % s["key"])
                     break
                 if row.get("subs") != len(s["subs"]):
-                    problems.append("节 %s 小节数不符" % s["id"])
+                    problems.append("节 %s 小节数不符" % s["key"])
                     break
                 if row.get("subs_sha1") != subs_sha1(s):
-                    problems.append("节 %s subs_sha1 不符" % s["id"])
+                    problems.append("节 %s subs_sha1 不符" % s["key"])
                     break
     if rev.get("meta", {}).get("schema") != SCHEMA_REV:
         problems.append("theme_index schema 不符")
@@ -723,8 +733,8 @@ def check_all(out_dir=TREE, deep=False):
 
 def write_all(out_dir=TREE, quiet=False):
     vocab, vsha = load_vocab()
-    volumes = scan_tree(TREE)
-    csha = content_sha(volumes)
+    volumes = scan_tree(out_dir)
+    csha = content_sha(volumes, out_dir)
     kw_new, rev_new = build_docs(volumes, vocab, vsha, csha)
     kw_disk = load_disk(out_dir, KW)
     rev_disk = load_disk(out_dir, REV)
@@ -820,9 +830,9 @@ def selftest():
         kw, rev = build_docs(volumes, vocab, vsha, content_sha(volumes), tmp)
         assert kw["meta"]["schema"] == SCHEMA_KW
         assert len(kw["chapters"]) == 3 and len(kw["sections"]) == 3
-        assert kw["sections"]["001.0"]["meta"] is True
-        assert kw["sections"]["002.1"]["meta"] is False
-        assert 3 <= len(kw["sections"]["002.1"]["themes"]) + len(kw["sections"]["002.1"].get("auto") or []) <= 6
+        assert kw["sections"]["V01-C001-1.0"]["meta"] is True
+        assert kw["sections"]["V01-C002-2.1"]["meta"] is False
+        assert 3 <= len(kw["sections"]["V01-C002-2.1"]["themes"]) + len(kw["sections"]["V01-C002-2.1"].get("auto") or []) <= 6
         assert rev["themes"], "反查为空"
         # 负向：题面改字而计数不变
         p = os.path.join(tmp, "第01卷-测试卷", "第002章-进程与文件系统", "002.1-进程管理",
@@ -830,7 +840,7 @@ def selftest():
         _w(p, "# 002.1.1 进程调度与fork 改\n\n**要点**：进程管理中的调度器与 fork 系统调用。\n")
         volumes2 = scan_tree(tmp)
         kw2, _ = build_docs(volumes2, vocab, vsha, content_sha(volumes2), tmp)
-        assert kw2["sections"]["002.1"]["subs_sha1"] != kw["sections"]["002.1"]["subs_sha1"]
+        assert kw2["sections"]["V01-C002-2.1"]["subs_sha1"] != kw["sections"]["V01-C002-2.1"]["subs_sha1"]
         print("selftest: PASS（结构／元节／词数／反查／题面漂移均命中）")
         return 0
     except AssertionError as exc:
@@ -846,7 +856,7 @@ def _w(path, text):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="大纲主题词索引生成器（theme-index/3）")
+    ap = argparse.ArgumentParser(description="大纲主题词索引生成器（theme-index/4）")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--deep", action="store_true")
     ap.add_argument("--write", action="store_true")

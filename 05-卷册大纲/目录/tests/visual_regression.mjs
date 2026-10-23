@@ -20,7 +20,7 @@ import fs from 'node:fs';
  * 断言：17 项视觉几何 + 功能断言（TOC 跟随可见性、浮层、折叠、图谱、进度条、
  *       键盘、抽屉、SUMMARY 导出）。失败退出码 1，供 CI/本地“改后必跑”使用。
  * ========================================================================== */
-const URL = 'file:///D:/librebsd/08-核查报告与多轮复核/重构2026/index.html';
+const URL = 'file:///D:/librebsd/05-卷册大纲/目录/index.html';
 const SHOT = 'D:/librebsd/script/_staging/polsplit/';
 const HEADLESS = process.argv.includes('--headless');   // 默认有头；--headless 用于静默回归
 const browser = await chromium.launch({
@@ -39,9 +39,9 @@ function record(name, pass, detail) {
  * 真值取**内容源** data/outline.txt（装配产物 index.html 的上游），不取页面 DOM——
  * 页面 DOM 是运行时装饰（计数徽标/溯源注徽标/长节名折叠）的宿主，即被测对象，自证无效。
  * ------------------------------------------------------------------------- */
-const OUTLINE_PATH = 'D:/librebsd/08-核查报告与多轮复核/重构2026/data/outline.txt';
+const OUTLINE_PATH = 'D:/librebsd/05-卷册大纲/目录/data/outline.txt';
 /* HTML 本体导出比对基准（T20，2026-10-14）：磁盘装配产物 index.html。 */
-const INDEX_PATH = 'D:/librebsd/08-核查报告与多轮复核/重构2026/index.html';
+const INDEX_PATH = 'D:/librebsd/05-卷册大纲/目录/index.html';
 /* 语言标记剥离（2026-10-12，136 批）：内容源 ⟦lang:文本⟧ 于装配期被 esc() 消费，
    DOM 导出为纯文本「文本」；本夹具基准自内容源直读，须同口径剥离，否则 T13/T17
    题面比对恒失败（README 夹具同步纪律⑥「改语法时须同步该常量」）。 */
@@ -606,7 +606,7 @@ function linkVisible(link) {
 
     /* —— Part 1：http 通道逐字节 —— */
     /* ROOT 以 normalize＋sep 收口，与 path.join 产物分隔符一致（否则 startsWith 守卫恒假 → 403）。 */
-    const ROOT = path.normalize('D:/librebsd/08-核查报告与多轮复核/重构2026') + path.sep;
+    const ROOT = path.normalize('D:/librebsd/05-卷册大纲/目录') + path.sep;
     const srv = http.createServer((req, res) => {
       const rel = decodeURIComponent((req.url || '/').split('?')[0].split('#')[0]);
       const p = path.join(ROOT, rel === '/' ? 'index.html' : rel);

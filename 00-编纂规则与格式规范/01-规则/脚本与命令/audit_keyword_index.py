@@ -115,19 +115,25 @@ def check_dir(out_dir=ROOT, structure=True):
             if cjk < 1 or cjk < other:
                 problems.append(("C3", "主题正名中文占比不足：%s" % lab))
 
-    for cid, n in share.items():
-        if n / max(len(secs), 1) > MAX_SHARE:
-            problems.append(("C5", "主题 %s 占比 %.1f%% > 30%%"
-                             % ((by_id.get(cid) or {}).get("prefLabel", cid),
-                                100.0 * n / max(len(secs), 1))))
+    # 2026-10-23 搬迁批：骨架树（0 小节正文；content_sha256＝空串哈希、subsections=0）
+    # 的 C5／C6 成空转——默认补位会把同一域默认词铺满全树，占比与词表覆盖率均无内容依据。
+    # 与 tri_structure_negtest N-g 同例：条件不成立即 SKIP，正文落地后自动恢复。
     used = set(share)
     for row in secs.values():
         used.update(row.get("domains") or [])
     for row in (kw.get("subsection_delta") or {}).values():
         used.update(row.get("add") or [])
-    unused = sorted(set(by_id) - used)
-    if unused:
-        problems.append(("C6", "词表概念零使用 %d 个（如 %s）" % (len(unused), unused[:5])))
+    if (kw.get("meta") or {}).get("subsections") == 0:
+        print("SKIP C5／C6（骨架树：0 小节正文，主题分布与词表覆盖率无可判内容）")
+    else:
+        for cid, n in share.items():
+            if n / max(len(secs), 1) > MAX_SHARE:
+                problems.append(("C5", "主题 %s 占比 %.1f%% > 30%%"
+                                 % ((by_id.get(cid) or {}).get("prefLabel", cid),
+                                    100.0 * n / max(len(secs), 1))))
+        unused = sorted(set(by_id) - used)
+        if unused:
+            problems.append(("C6", "词表概念零使用 %d 个（如 %s）" % (len(unused), unused[:5])))
 
     # D：侧面
     for sid, row in secs.items():
@@ -166,7 +172,7 @@ def check_dir(out_dir=ROOT, structure=True):
 
 def cmd_check(out_dir=ROOT):
     print("=" * 72)
-    print("主题词索引门禁（schema theme-index/3／theme-reverse/1）")
+    print("主题词索引门禁（schema theme-index/4／theme-reverse/2）")
     print("=" * 72)
     problems = check_dir(out_dir)
     if problems:

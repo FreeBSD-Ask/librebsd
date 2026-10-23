@@ -18,7 +18,7 @@ for (const w of [...new Set(SIZES)]) {
   const page = await browser.newPage({ viewport: { width: w, height: 900, deviceScaleFactor: w < 500 ? 3 : 1 }, hasTouch: w < 500 });
   const errs = [];
   page.on('pageerror', e => errs.push(String(e).slice(0, 80)));
-  await page.goto('file:///D:/librebsd/08-核查报告与多轮复核/重构2026/index.html', { waitUntil: 'load' });
+  await page.goto('file:///D:/librebsd/05-卷册大纲/目录/index.html', { waitUntil: 'load' });
   await page.waitForTimeout(1700);
   const r = await page.evaluate(() => {
     const vw = window.innerWidth;

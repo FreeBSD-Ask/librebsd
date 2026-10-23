@@ -72,6 +72,10 @@ def run(root: pathlib.Path):
     for dirpath, _, files in os.walk(root):
         for f in files:
             fp = os.path.join(dirpath, f)
+            # 2026-10-23 搬迁批：目录源（号文／装配源）与历史映射参考不是磁盘层内容面，
+            # 其旧术语属历史记录，不进在效面（与 audit_md_bold_spacing 同口径）。
+            if os.path.relpath(fp, root).replace("\\", "/").split("/")[0] in ("目录", "映射"):
+                continue
             try:
                 text = pathlib.Path(fp).read_text(encoding="utf-8", errors="replace")
             except OSError:
@@ -99,6 +103,9 @@ def run_eol(root: pathlib.Path):
     for dirpath, _, files in os.walk(root):
         for f in files:
             low = f.lower()
+            # 同上：目录源与映射参考不在换行判据的在效面。
+            if os.path.relpath(os.path.join(dirpath, f), root).replace("\\", "/").split("/")[0] in ("目录", "映射"):
+                continue
             # 文档面＝`.md` 及其快照改名形（`x.md.bak_t1` 等）；快照由 E1 计 INFO
             if not (low.endswith(".md") or ".md." in low):
                 continue

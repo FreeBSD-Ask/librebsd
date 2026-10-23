@@ -72,6 +72,9 @@ DEFAULT_ROOT = os.path.join(REPO, "05-卷册大纲")
 SKIP_DIRS = {
     ".git", "node_modules", ".venv", "__pycache__", ".workbuddy", ".workbuddy-ai",
     ".trae", ".zcode", ".github", ".gitbook", "_tmp", "specs", "review_logs",
+    # 2026-10-23 搬迁批：目录源（号文／装配源）与历史映射参考不是大纲内容树，
+    # 其 .md 属历史记录，不进本门禁的在效面（判别口径同 audit_disk_terminology）。
+    "目录", "映射",
 }
 SKIP_TOPLEVEL_ONLY = {"script"}
 # --all 时的额外豁免面（按相对仓库根的前缀）

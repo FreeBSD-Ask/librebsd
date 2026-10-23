@@ -76,6 +76,10 @@ def collect(root: Path):
     totals = Counter()
     n_files = 0
     for p in sorted(root.rglob("*.md")):
+        rel = p.relative_to(root)
+        # 2026-10-23 搬迁批：目录源（号文）与历史映射参考不是大纲内容树，锚族不在本门禁面。
+        if rel.parts and rel.parts[0] in ("目录", "映射"):
+            continue
         n_files += 1
         for m in COMMENT_RE.finditer(read_text(p)):
             fam, kind = family_of(m.group(1))
