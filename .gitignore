@@ -57,10 +57,11 @@ cnki*
 !00-编纂规则与格式规范/01-规则/脚本与命令/*.py
 # 受控主题词表（固定输入，随生成器入库；2026-10-21 立）
 !00-编纂规则与格式规范/01-规则/脚本与命令/主题词表.json
-# 标准化树根级四件入库豁免（2026-10-21 主理人令）：SUMMARY.md／chapter_keywords.json／
-# theme_index.json／前后差异细粒度比较表-20261021.md 须随 05-卷册大纲 一并入库；
-# JSON 需绕开全局 *.json 规则。入库状态由 audit_mirror_ingest.py（第二十五件）校验。
-# 2026-10-21 就地替换后，05-卷册大纲 即标准化树本体，原“旧树兼容豁免”随之归一。
+# 标准化树／旧树根级四件入库豁免（2026-10-21 立；2026-10-23 旧树改名同步）：
+# SUMMARY.md／chapter_keywords.json／theme_index.json／前后差异细粒度比较表-20261021.md
+# 须随所在树一并入库；JSON 需绕开全局 *.json 规则。入库状态由 audit_mirror_ingest.py（第二十五件）校验。
+!旧大纲-20261023/chapter_keywords.json
+!旧大纲-20261023/theme_index.json
 !05-卷册大纲/chapter_keywords.json
 !05-卷册大纲/theme_index.json
 # 根目录临时工作文件（并发会话的路径清单等，不入版本库）
