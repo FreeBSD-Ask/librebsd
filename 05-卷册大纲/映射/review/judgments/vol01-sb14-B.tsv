@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-000015		内容为 516-TSS 文档索引，文献索引层
+S-000095	V01-6.2	内容主题词“Corbató 1962 AFIPS CTSS 论文／Multics 六篇设计论文”命中第一卷 6.2“Corbató 的分时思想与 1962 年论文”
+S-000175		内容为章节索引留痕，编纂元数据
+S-000255	V08-6.1	内容主题词“NB 到 C 类型逐步演化／Ritchie 1975 C Reference Manual”命中第八卷 6.1 语言前史线
+S-000335	V01-9.6	内容主题词“Berkeley 1974 Bob Fabry 引进 V4 磁带／Columbia Princeton Harvard 建站”命中第一卷 9.6 大学传播
+S-000415		内容关键词“SVr3 Microport cpp 演示”零命中（细节级）
+S-000495		内容主题词“System V IPC／STREAMS／SVID 事实标准”——第十九卷第 1 章题域命中但节级无从
+S-000575		内容为来源库 SQL 聚合方法注，编纂元数据
+S-000655		内容关键词“csh 进程组终端停止”零命中（细节级）
+S-000735		内容关键词“System V ld／COFF 映像”零命中（细节级）
+S-000815		内容关键词“dump 与 restore 移植”零命中（细节级）
+S-000895		内容关键词“S5R3 poll 可用性”零命中（细节级）
+S-000975		内容关键词“atrun.c setuid 补丁”零命中（细节级）
+S-001055		内容关键词“sendmail 零长文件恢复”零命中（细节级）
+S-001135		内容为 claim 承载层（nroff 手册页对齐考据），挂靠层无叙事节点
+S-001215		内容关键词“GCC／Clang 默认编译器切换”零命中——编译器生态无节（缺口③邻）
+S-001295		内容为 Java 战线邮件，零命中（Java 缺口）
+S-001375		内容为 Java 战线邮件，零命中（Java 缺口）
+S-001455		内容关键词“shell 编译器构件转 C”零命中（细节级）
+S-001535		内容关键词“python27 沙箱编译失败”零命中（ports 细节）
+S-001615	V03-1.3	内容主题词“VAX-11/780 1977 公布／Gordon Bell 与 Strecker 32 位架构”命中第三卷 1.3“VAX 架构与 32 位计算”
+S-001695	V01-3.2	内容主题词“S/360 1964 发布／Learson 授权／Brooks OS/360”命中第一卷 3.2“IBM 的大型机事业：从制表机到 System／360”
+S-001775		内容关键词“vaxuba dmf.c 语法错误”零命中（细节级）
+S-001855	V04-3.4	内容主题词“LISA V 程序主席／USENIX 相机就绪宏与排版工作流”命中第四卷 3.4“USENIX 早期与用户组组织者”
