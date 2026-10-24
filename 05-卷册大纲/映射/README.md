@@ -11,6 +11,22 @@
 - **只读纪律**：新树建设期间任何脚本或评审只读取旧树，不得改写内容或“顺手修正”；除已确认映射文件的迁出、以及 `TARGET_LOST`／`REMAP` 文件的回迁外，不得改名、删除或新增。**唯一既有例外**：spec SubTask 2.1b 已批准的机械标准化改名——2026-10-24 执行 6,291 件（6,118 反引号剥离＋173 模板名→H1 名），逐件 SHA 前后相等，台账见 `title-standardization.tsv`。
 - **旧树派生件**：旧树 `SUMMARY.md`、`chapter_keywords.json`、`theme_index.json` 为**历史快照、非现行索引**，迁移开始后不再随迁出再生；不得以旧树索引校验新树。**冻结声明（2026-10-24，2.1a）**：快照时点＝2.1b 改名**前**——再生尝试因 `sync_outline_mirror.py` 自校验拒绝写入（415 项 `T_SECTION_SEQ`：旧树“N.0 章级综合”0 起编号约定与工具 1..K 期望不兼容，工具为新树设计）；改名前后对照以 `title-standardization.tsv` 为准（旧名可经 Git 标签 `outline-pre-landing-20261023` 取证）。是否补做兼容版再生，待 ykla 裁决。
 
+## 一之二、状态机（2026-10-24 修订，强制，选项 B）
+
+**Task 5 期间 `status` 禁止写 `CONFIRMED`**，只允许 `PENDING`／`DISPUTED`／`UNMAPPED`／`DUPLICATE`。
+
+判定结论一律写入 `review_a`／`review_b`／`review_c`／`review_state=JUDGED`／`target_id`（作**候选**目标）。
+`CONFIRMED` 只能由 Task 8 在**落盘成功后**置位（目标节 `.md` 存在且 `layout.tsv` 有该行）。
+
+| 阶段 | status 允许值 | `audit_outline_landing.py --check` 期望 |
+| ---- | ---- | ---- |
+| Task 5 判定中 | PENDING／DISPUTED／UNMAPPED／DUPLICATE | 17/17 PASS（L2、L7 必须 PASS） |
+| Task 8 落盘后 | CONFIRMED（仅落盘成功者） | L2 无缺、L7 emptydest 0 |
+
+**原因**：Task 5 若直接写 `CONFIRMED`，该行在 `layout.tsv`（当前为空表）与目标节（当前 0 件）都无对应，
+L2／L7 必然 FAIL。2026-10-24 已回退 53 条 `CONFIRMED` → `PENDING`（`review_state=JUDGED`，判定证据全部保留）。
+回退后 `--check` 为 17/17 PASS。
+
 ## 二、映射层结构
 
 | 路径 | 性质 | 产出任务 |
