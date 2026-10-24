@@ -8,6 +8,8 @@
 口径：
 - 命中族（文件名大小写不敏感）：`.prebak*`／`.preback*`／`.pre`／`.pre-*`／`.pre_*`／
   `-bak`／`-bak-*`／`_bak`／`_bak_*`／`.bak*`／`.orig*`／`.rej`／结尾 `~`，
+  **数据文件复合后缀**（`.<duckdb|db|parquet|tar.gz>.<词尾>bak`，如 `.closurebak`／`.driftbak`，2026-10-24 补；
+  限数据文件前缀，`_tmp/` 等临时区的 `*.json.failbak` 不属本族），
   以及备份目录名 `prebak-*`／`_bak*`／`*_备份*` 之下的一切内容。
 - 豁免（须在该小节登记理由，本脚本 `EXEMPT_PREFIXES` 为唯一实现）：
   ①`script/_bak/20261017/`——`AGENTS.md` 记载的“重写前全史备份”镜像与随附归档，
@@ -37,6 +39,12 @@ NAME_RES = [
     ("pre-mid", re.compile(r"(?i)[._-]pre[-_]")),
     ("bak-suffix", re.compile(r"(?i)\.bak($|[-_.0-9])")),
     ("bak-mid", re.compile(r"(?i)[._-]bak($|[-_.0-9])")),
+    # 复合后缀（2026-10-24 补）：`references_fulltext.duckdb.closurebak`／`.driftbak` 一类
+    # “数据文件 + 词尾 bak”的形态。原 bak-mid 要求 `[._-]bak` 边界，故这类文件长期漏检
+    # （实测两件各 1.55 GB）。**限定数据文件前缀**，避免把 `_tmp/` 等临时区的
+    # `*.json.failbak`（流水线失败留件、非项目数据备份）计入本族。
+    ("bak-data-compound",
+     re.compile(r"(?i)\.(duckdb|db|parquet|tar\.gz)\.[a-z0-9_-]*bak$")),
     ("orig", re.compile(r"(?i)\.orig")),
     ("rej", re.compile(r"(?i)\.rej$")),
     ("tilde", re.compile(r"~$")),
@@ -162,7 +170,9 @@ def selftest():
                 "docs/c.md.pre_b004_20261005", "docs/d.txt.preback-t1",
                 "docs/e.md.orig", "docs/f.patch.rej", "docs/g.htm~",
                 "docs/h.duckdb.pre_fixdb", "docs/i-bak-20261001.md",
-                "docs/j.md.pre"]
+                "docs/j.md.pre",
+                # 复合后缀（2026-10-24 补）：实测曾长期漏检的两件形态
+                "docs/k.duckdb.closurebak", "docs/l.duckdb.driftbak"]
         for rel in viol:
             p = os.path.join(tmp, rel.replace("/", os.sep))
             os.makedirs(os.path.dirname(p), exist_ok=True)
@@ -187,7 +197,7 @@ def selftest():
         paths = {h["path"] for h in hits}
         ex_paths = {r["path"] for r in exempted}
         checks = [
-            ("T1 十个违规族全命中", all(v in paths for v in viol), True),
+            ("T1 违规族全命中", all(v in paths for v in viol), True),
             ("T2 备份目录内容计入", "docs/_bak20261023/plain.md" in paths, True),
             ("T3 数据库目录内旁路件不豁免",
              "12-数据库备份/historical_claims/historical_claims.pre_f4_20261016.duckdb" in paths, True),
