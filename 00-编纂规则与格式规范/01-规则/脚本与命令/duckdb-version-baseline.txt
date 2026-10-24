@@ -5,5 +5,6 @@
 版本锁定：duckdb==2.0.0
 Python 版本：3.14.2
 记录日期：2026-10-24
-迁移状态：运行时已切换至 2.0.0（2026-10-24 18:55）；25 个正式库已完成迁移至新存储格式（v64→v999），`changelog.duckdb` 暂缓仍为 v64
+迁移状态：运行时已切换至 2.0.0（2026-10-24 18:55）；25 个正式库已完成迁移至 v2.0.0 存储格式（编号 69，旧库为 64），`changelog.duckdb` 暂缓仍为 v64
+存储版本读法：SELECT tags FROM duckdb_databases() 取 storage_version 键；禁读文件头偏移 12（2.0.0 起固定为弃用哨兵 999）
 回退方法：库回退用 `12-数据库备份/<库>/` 既有归档 `IMPORT DATABASE` 重灌；运行时可执行 pip install --proxy "" -i https://pypi.tuna.tsinghua.edu.cn/simple duckdb==1.5.5（但 1.5.5 无法读已迁移库）

@@ -1,5 +1,12 @@
 # DuckDB 2.0.0 只读兼容性与零改动验证
 
+> **2026-10-24 更正（存储版本号口径）**：本报告正文关于“2.0.0 新库文件头为 999”“2.0.0 没有可返回存储版本的 SQL 接口”
+> 等表述系误读。DuckDB 2.0.0 的 `MainHeader.version_number` 已弃用、固定写 `StorageVersion::DEPRECATED = 999`
+> （源码 `src/include/duckdb/storage/storage_info.hpp`），真实存储版本存于 `DatabaseHeader.storage_compatibility`，
+> 官方编号为 **69（v2.0.0）**。正确读法是 `SELECT tags FROM duckdb_databases()` 取 `storage_version` 键；
+> 实测复核 26 个正式库：25 个 `v2.0.0+`、`changelog` 为 `v1.0.0+`，与官方 64／69 完全吻合，无异常。
+> **正文保留原始记录不作改写；与本节冲突处以本节为准。** 详见 `ADR-0017` §15 与 `流程规则.md`“存储版本的读取口径”。
+
 - 执行日期：2026-10-24
 - 依据：`.trae/specs/upgrade-duckdb-to-2-0-0-20261024/spec.md` → `Requirement: 双版本只读验证`
 - 执行者：工程执行会话（AI）
