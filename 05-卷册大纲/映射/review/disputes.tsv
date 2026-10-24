@@ -1,0 +1,14 @@
+source_id	pass_a	pass_b	pass_c	diff_summary	subtype
+S-000081	∅	∅	V01-1.4	三趟不一致	adjacent
+S-000401	V05-1.5	V05-1.5	V01-9.2	三趟不一致	empty-vs-value
+S-000481	V04-1.5	V05-1.7	V05-2.6	三趟不一致	generic
+S-000561	∅	V08-7.2	∅	三趟不一致	adjacent
+S-000641	∅	∅	V06-2.3	三趟不一致	adjacent
+S-000721	∅	∅	V06-2.3	三趟不一致	adjacent
+S-000801	∅	∅	V06-2.3	三趟不一致	adjacent
+S-000961	∅	V61-1.7	V06-2.3	三趟不一致	empty-vs-value
+S-001041	∅	V64-1.9	V64-1.9	三趟不一致	adjacent
+S-001121	∅	V07-2.5	∅	三趟不一致	adjacent
+S-001601	∅	V05-3.3	∅	三趟不一致	adjacent
+S-001681	∅	V01-8.2	V03-1.1	三趟不一致	empty-vs-value
+S-001761	∅	∅	V13-1.1	三趟不一致	adjacent
