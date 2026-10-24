@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
 S-030735	V69-7.5	内容「KAIST（韩国科学技术院）、首尔大学、浦项工科大学（POSTECH）、延世大学、高丽大学等高校」落 V69-7.5	CONTENT	sb18
-S-030736		内容属该地区社区史，但新目录无承载节（结构性缺口，待 Task 6 处置）	B	sb18
-S-030737		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb18
-S-030738		内容属该地区社区史，但新目录无承载节（结构性缺口，待 Task 6 处置）	B	sb18
+S-030736	V66-1.5	内容「韩国 BSD 用户组（Korea BSD Users Group，한국 BSD 사용자 그룹）1」落 V66-1.5	CONTENT	sb18
+S-030737	V75-11.8	内容「韩国 BSD 早期部署记录与高校档案是评估韩国 BSD 社区起源的关键史料，需交叉验证 ISP 」落 V75-11.8	CONTENT	sb18
+S-030738	V66-1.5	内容「韩国 BSD 用户组从 1990 年代末的在线社区（Daum Cafe）逐步演变为线下定期聚会，」落 V66-1.5	CONTENT	sb18
 S-030739	V67-4.1	内容「韩国 BSD 社区自 2007 年 AsiaBSDCon（东京 BSD Research 运营委」落 V67-4.1	CONTENT	sb18
 S-030740	V67-6.1	内容「韩国开源社区会议（如 KOSSCON、FOSS Asia 韩国站、Open Source Sum」落 V67-6.1	CONTENT	sb18
-S-030741		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb18
+S-030741	V75-11.2	内容「韩国 BSD 会议与活动记录是评估韩国 BSD 社区凝聚力的关键史料，但早期记录保存不完整 ／ 」落 V75-11.2	CONTENT	sb18
 S-030742	V54-5.1	内容「韩国 BSD 贡献者与 committer 包括 Hye-Shik Chang（FreeBSD 」落 V54-5.1	CONTENT	sb18
 S-030743	V54-5.1	内容「Hye-Shik Chang（perky）是 FreeBSD Port 树中 Python 相关」落 V54-5.1	CONTENT	sb18
 S-030744	V54-5.1	内容「韩国 BSD 社区在 NetBSD 项目中有少量贡献者（如部分 NetBSD 内核驱动开发者），」落 V54-5.1	CONTENT	sb18
-S-030745		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb18
-S-030746		内容属该地区社区史，但新目录无承载节（结构性缺口，待 Task 6 处置）	B	sb18
+S-030745	V75-5.4	内容「韩国 committer 的贡献记录与社区参与是评估韩国 BSD 贡献的关键史料，但部分贡献者的」落 V75-5.4	CONTENT	sb18
+S-030746	V71-3.1	内容「109.4 韩国企业与学术界的 BSD 部署———韩国 ISP 的 FreeBSD 使用、Nav」落 V71-3.1	CONTENT	sb18
 S-030747		内容属该地区社区史，但新目录无承载节（结构性缺口，待 Task 6 处置）	B	sb18
 S-030748	V69-7.5	内容「KAIST 与 POSTECH 在操作系统研究、网络安全研究、高性能计算等领域使用 BSD 系统」落 V69-7.5	CONTENT	sb18
-S-030749		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb18
+S-030749	V75-11.8	内容「韩国企业 BSD 部署记录与学术研究文献是评估韩国 BSD 采用的关键史料，但企业部署信息部分保」落 V75-11.8	CONTENT	sb18
 S-030750	V69-2.5	内容「109.5 韩国 BSD 出版物与翻译———韩国 BSD 出版物与翻译包括《FreeBSD 完全」落 V69-2.5	CONTENT	sb18
 S-030751	V69-2.5	内容「FreeBSD 手册（FreeBSD Handbook）的韩文翻译由韩国 BSD 社区志愿者完成」落 V69-2.5	CONTENT	sb18
 S-030752	V69-8.6	内容「韩国 BSD 技术博客主要分布在 Naver Blog、Tistory、Velog 等平台，韩国」落 V69-8.6	CONTENT	sb18
-S-030753		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb18
-S-030754		内容属该地区社区史，但新目录无承载节（结构性缺口，待 Task 6 处置）	B	sb18
+S-030753	V75-6.5	内容「韩国 BSD 出版物与翻译记录是评估韩国 BSD 文化传播的关键史料，需交叉验证出版商书目与社区」落 V75-6.5	CONTENT	sb18
+S-030754	V71-3.1	内容「1990s-2000s 主要 ISP 使用 BSD 邮件/DNS 系统。用户组活动频率低于日本但」落 V71-3.1	CONTENT	sb18
 S-030755	V54-5.5	内容「109.7 重要贡献者与边缘者：被忽视的韩国 BSD 社区维护者———非首尔/大田圈层的韩国 B」落 V54-5.5	CONTENT	sb18
 S-030756	V54-5.5	内容「韩国 BSD 社区中女性贡献者的可见度极低，韩国 IT 产业中女性工程师的比例低于日本，BSD 」落 V54-5.5	CONTENT	sb18
 S-030757	V69-2.9	内容「韩国 BSD 社区中早期翻译者（2000 年代将 FreeBSD 手册与 FAQ 翻译为韩文的志」落 V69-2.9	CONTENT	sb18
-S-030758		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb18
+S-030758	V75-11.8	内容「边缘贡献者档案与口述历史是评估韩国 BSD 社区多元性的关键史料，但部分档案不完整 ／ 辨析：口」落 V75-11.8	CONTENT	sb18

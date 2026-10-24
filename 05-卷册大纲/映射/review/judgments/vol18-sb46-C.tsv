@@ -1,6 +1,6 @@
 source_id	target_id	reason	strategy	pass_id
 S-031407	V75-10.12	结构位（380.9 节）落 V75-10.12	STRUCT	sb46
-S-031408		结构位为章级综合层，新目录无对应节点	C	sb46
+S-031408	V75-6.10	结构位（380.9 节）落 V75-6.10	STRUCT	sb46
 S-031409	V69-8.2	结构位（380.10 节）落 V69-8.2	STRUCT	sb46
 S-031410	V69-8.2	结构位（380.10 节）落 V69-8.2	STRUCT	sb46
 S-031411	V69-8.2	结构位（380.10 节）落 V69-8.2	STRUCT	sb46
