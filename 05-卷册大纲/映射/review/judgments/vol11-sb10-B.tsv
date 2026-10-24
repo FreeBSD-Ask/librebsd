@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025636	V52-2.5	内容为自旋锁与可抢占 token 的机制对照	THREE_PASS	B
+S-025637	V48-2.6	内容为 1.12 token 优化与调度扩展	THREE_PASS	B
+S-025638	V75-2.5	内容为 token commit log 与设计文档出处	THREE_PASS	B
+S-025639		内容为 LAPIC 与 IOAPIC 机制细节	THREE_PASS	B
+S-025640	V48-1.8	内容为 VFS 网络栈 userland 继承面	THREE_PASS	B
+S-025641	V27-4.5	内容为自有创新与 4.x EOL 后分化	THREE_PASS	B
+S-025642	V27-5.5	内容为 OpenBSD-NetBSD 独立路径对照	THREE_PASS	B
+S-025643	V75-2.5	内容为源码 diff 分化轨迹方法	THREE_PASS	B
+S-025644	V64-9.12	内容为 1.x 时代 bus factor 集中实测	THREE_PASS	B
+S-025645	V64-9.8	内容为三种个人主导模式特征对照	THREE_PASS	B
+S-025646	V64-9.12	内容为 bus factor 与决策效率权衡	THREE_PASS	B
+S-025647	V75-2.6	内容为 kernel/users/bugs 发言梳理	THREE_PASS	B
+S-025648	V48-1.4	内容为 2003-07-16 公告原文要点	THREE_PASS	B
+S-025649	V48-1.3	内容为锁路径否定与 LWKT 主张	THREE_PASS	B
+S-025650	V49-2.2	内容为 BGL 移除与 token 引入序列	THREE_PASS	B
+S-025651	V52-7.6	内容为四条 SMP 同步机制路径辨析	THREE_PASS	B
+S-025652	V48-1.7	内容为 committer 跟帖质疑三层面	THREE_PASS	B
+S-025653	V75-2.4	内容为自否弃声明与 commit 统计	THREE_PASS	B
+S-025654		内容为编纂新闻聚合说明	THREE_PASS	B
+S-025655	V48-1.4	内容为 2003-07-16 公告邮件原件	THREE_PASS	B
+S-025656		内容为 DaemonNews 月刊条目	THREE_PASS	B
+S-025657		内容为 FireFlyBSD 公开条目	THREE_PASS	B
+S-025658		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-025659		内容为编纂元数据层，无叙事节点	THREE_PASS	B
