@@ -27,6 +27,10 @@
 L2／L7 必然 FAIL。2026-10-24 已回退 53 条 `CONFIRMED` → `PENDING`（`review_state=JUDGED`，判定证据全部保留）。
 回退后 `--check` 为 17/17 PASS。
 
+**`review_state` 取值归一**：规范值为 `JUDGED`。执行方历史值 `merged` 视为同义（读入归一到 `JUDGED`），
+不因取值差异判 FAIL；新写入一律用 `JUDGED`。`DISPUTED` 行须在 `review/disputes.tsv` 有对应行
+（2026-10-24 实测：disputes 160 条 ↔ mapping DISPUTED 160 条，双向差集 0）。
+
 ## 二、映射层结构
 
 | 路径 | 性质 | 产出任务 |
