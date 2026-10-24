@@ -1,0 +1,425 @@
+relpath	bytes	category	scope_match	note
+01-项目管理\00-变更记录\changelog.duckdb	40644608	OFFICIAL	path	SCOPE:changelog
+02-sacred源材料\sacred_sources.duckdb	4730880	OFFICIAL	path	SCOPE:sacred_sources
+03-原始史料库\01-代码仓库史料\01-数据库本体\phoronix_news.duckdb	1847296	OFFICIAL	path	SCOPE:phoronix_news
+03-原始史料库\01-代码仓库史料\01-数据库本体\资料数据库.duckdb	16789504	OFFICIAL	path	SCOPE:资料数据库
+03-原始史料库\01-代码仓库史料\02-FreeBSD\db\duckdb\freebsd.duckdb	1125134336	OFFICIAL	path	SCOPE:freebsd
+03-原始史料库\01-代码仓库史料\03-NetBSD\db\duckdb\netbsd.duckdb	2446602240	OFFICIAL	path	SCOPE:netbsd
+03-原始史料库\01-代码仓库史料\04-OpenBSD\db\duckdb\openbsd.duckdb	321662976	OFFICIAL	path	SCOPE:openbsd
+03-原始史料库\01-代码仓库史料\05-DragonFlyBSD\db\duckdb\dragonfly.duckdb	300167168	OFFICIAL	path	SCOPE:dragonfly
+03-原始史料库\01-代码仓库史料\06-OpenZFS\db\duckdb\openzfs.duckdb	51916800	OFFICIAL	path	SCOPE:openzfs
+03-原始史料库\01-代码仓库史料\07-BSD衍生项目\db\duckdb\bsd-derivatives.duckdb	1306537984	OFFICIAL	path	SCOPE:bsd-derivatives
+03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\cross_source_identity.duckdb	1323008	OFFICIAL	path	SCOPE:cross_source_identity
+03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\illumos-gate.duckdb	35926016	OFFICIAL	path	SCOPE:illumos-gate
+03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\openssh-apple.duckdb	2895872	OFFICIAL	path	SCOPE:openssh-apple
+03-原始史料库\01-代码仓库史料\08-跨项目对比\db\duckdb\openssh.duckdb	12857344	OFFICIAL	path	SCOPE:openssh
+03-原始史料库\01-代码仓库史料\09-Darwin\db\duckdb\darwin.duckdb	16003072	OFFICIAL	path	SCOPE:darwin
+03-原始史料库\01-代码仓库史料\10-LinuxKernel\db\duckdb\linux-kernel.duckdb	2137534464	OFFICIAL	path	SCOPE:linux-kernel
+03-原始史料库\original_sources.duckdb	11546624	OFFICIAL	path	SCOPE:original_sources
+04-现代研究文献\05-参考文献全文数据库\references_fulltext.duckdb	1547448320	OFFICIAL	path	SCOPE:references_fulltext
+04-现代研究文献\06-存疑数据库\doubts_standalone.duckdb	349974528	OFFICIAL	path	SCOPE:doubts_standalone
+04-现代研究文献\causal_graph.duckdb	2371584	OFFICIAL	path	SCOPE:causal_graph
+04-现代研究文献\historical_claims.duckdb	643837952	OFFICIAL	path	SCOPE:historical_claims
+04-现代研究文献\research_notes.duckdb	156774400	OFFICIAL	path	SCOPE:research_notes
+07-事实核查记录\fact_checks.duckdb	1847296	OFFICIAL	path	SCOPE:fact_checks
+08-核查报告与多轮复核\review_reports.duckdb	5255168	OFFICIAL	path	SCOPE:review_reports
+10-交叉索引\cross_indexes.duckdb	9449472	OFFICIAL	path	SCOPE:cross_indexes
+11-元数据接口\metadata_interfaces.duckdb	2633728	OFFICIAL	path	SCOPE:metadata_interfaces
+03-原始史料库\11-邮件列表史料\01-freebsd\db\aic7xxx.duckdb	18100224	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\archbsd-hackers.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\ctm-announce.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\ctm-users.duckdb	6303744	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\cu.duckdb	44052480	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\dev-reviews.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-accessibility.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-acpi.duckdb	55586816	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ada.duckdb	5255168	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-advocacy.duckdb	74723328	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-afs.duckdb	5779456	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-alpha.duckdb	79966208	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-amd64.duckdb	81276928	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-announce.duckdb	33566720	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-apache.duckdb	58470400	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-arch.duckdb	173813760	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-arm.duckdb	166998016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-atm.duckdb	9187328	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-audit.duckdb	16789504	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-binup.duckdb	4993024	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-bluetooth.duckdb	14430208	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-bugbusters.duckdb	7876608	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-bugs.duckdb	1024471040	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-chat.duckdb	226504704	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-chromium.duckdb	161755136	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-cloud.duckdb	4730880	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-cluster.duckdb	8663040	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-config.duckdb	8138752	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-current.duckdb	1174679552	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-database.duckdb	12070912	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-desktop.duckdb	30683136	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-doc.duckdb	348925952	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-drivers.duckdb	14692352	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-dtrace.duckdb	7090176	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-eclipse.duckdb	13381632	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-elastic.duckdb	101199872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-embedded.duckdb	15478784	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-emulation.duckdb	158871552	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-enlightenment.duckdb	31731712	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-enterprisewg.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-eol.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-errata-notifications.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-fcp-editors.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-fcp.duckdb	4730880	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-firewire.duckdb	14168064	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-fortran.duckdb	7876608	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-fs.duckdb	195309568	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-games.duckdb	4993024	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-gecko.duckdb	217329664	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-geom.duckdb	34353152	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-git.duckdb	7876608	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-gnome.duckdb	944517120	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-go.duckdb	10235904	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-hackers.duckdb	1004810240	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-hardware.duckdb	123744256	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-hpc.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-hubs.duckdb	31731712	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-i18n.duckdb	8400896	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-i386.duckdb	87306240	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ia32.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ia64.duckdb	33042432	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-infiniband.duckdb	5255168	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-install.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ipfw.duckdb	43528192	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-isdn.duckdb	31469568	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-isp.duckdb	158347264	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-jail.duckdb	20197376	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-java.duckdb	114307072	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-jobs.duckdb	12595200	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-lfs.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-libh.duckdb	14430208	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-lite.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-mips.duckdb	38809600	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-mobile.duckdb	139210752	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-mono.duckdb	58470400	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-mozilla.duckdb	7352320	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-multimedia.duckdb	235417600	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-net.duckdb	333459456	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-new-bus.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-newbies.duckdb	71839744	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-numerics.duckdb	7876608	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ocaml.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-office.duckdb	41955328	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-openoffice.duckdb	32256000	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ops-announce.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-performance.duckdb	22818816	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-perl.duckdb	82063360	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-pf.duckdb	40644608	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-pkg.duckdb	29896704	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-pkgbase.duckdb	5517312	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-platforms.duckdb	6041600	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-policy.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ports-announce.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ports.duckdb	838086656	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-ppc.duckdb	72364032	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-proliant.duckdb	5517312	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-python.duckdb	101199872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-qa.duckdb	14430208	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-questions.duckdb	1568944128	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-rc.duckdb	18624512	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-realtime.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-reproducibility.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-riscv.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-scsi.duckdb	95170560	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-security-notifications.duckdb	10498048	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-security.duckdb	155987968	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-small.duckdb	17575936	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-smp.duckdb	55062528	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-snapshots.duckdb	41693184	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-sparc64.duckdb	56373248	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-stable.duckdb	308555776	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-standards.duckdb	14954496	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-stats.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-sysinstall.duckdb	4730880	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-tcltk.duckdb	7090176	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-teaching.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-test.duckdb	7090176	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-testing.duckdb	6565888	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-tex.duckdb	4730880	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-threads.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-tinderbox.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-tokenring.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-toolchain.duckdb	20721664	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-translators.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-transport.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-uboot.duckdb	9711616	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-usb.duckdb	15216640	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-user-groups.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-users-jp.duckdb	10235904	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-vendors.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-virtualization.duckdb	24129536	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-wireless.duckdb	15216640	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-women.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-www.duckdb	33304576	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-x11.duckdb	55062528	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-xen.duckdb	5517312	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\freebsd-xfce.duckdb	7614464	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\oi-users.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\p4-projects.duckdb	12333056	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\01-freebsd\db\p4-releng.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\atf-devel.duckdb	5255168	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\current-users.duckdb	16527360	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\ietf-ssh.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-advocacy.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-announce.duckdb	9711616	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-bugs.duckdb	331624448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-desktop.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-docs.duckdb	20721664	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-java.duckdb	4730880	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-jobs.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-news.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-ports.duckdb	13643776	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-syzbot.duckdb	74723328	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\netbsd-users.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\pkgsrc-bugs.duckdb	163328000	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\pkgsrc-users.duckdb	90451968	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\pkgsrc-wip-discuss.duckdb	12595200	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\pkgsrc-wip-review.duckdb	6828032	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-acorn26.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-acorn32.duckdb	6041600	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-algor.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-alpha.duckdb	50343936	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-amd64.duckdb	10760192	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-amiga.duckdb	6041600	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-amigappc.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-arc.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-arm.duckdb	25964544	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-atari.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-avr32.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-bebox.duckdb	4993024	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-cats.duckdb	5517312	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-cobalt.duckdb	35401728	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-dreamcast.duckdb	26750976	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-evbmips.duckdb	8663040	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-evbsh5.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-ews4800mips.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-hp300.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-hp700.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-hpcarm.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-hpcmips.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-hpcsh.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-hppa.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-i386.duckdb	10235904	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-ia64.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-ibmnws.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-iyonix.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-luna68k.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-m68k.duckdb	13643776	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-m88k.duckdb	5517312	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-mac68k.duckdb	15740928	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-macppc.duckdb	9973760	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-mips.duckdb	7352320	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-mipsco.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-mvme68k.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-mvmeppc.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-news68k.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-newsmips.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-next68k.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-ofppc.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-pc532.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-pdp10.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-playstation2.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-pmax.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-powerpc.duckdb	10760192	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-prep.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-riscv.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-s390.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sandpoint.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sbmips.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sgimips.duckdb	19935232	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sh3.duckdb	9711616	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sh5.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sparc.duckdb	28061696	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sparc64.duckdb	9973760	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sun2.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-sun3.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-vax.duckdb	12857344	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-x68k.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-xen.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\port-zaurus.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-au.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-boston.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-ca.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-ch.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-cs.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-de.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-fr.duckdb	6828032	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-helsinki.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-it.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-jp.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-london.duckdb	5517312	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-nordic.duckdb	3944448	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-nyc.duckdb	8138752	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-pl.duckdb	7090176	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-pt.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\regional-sfba.duckdb	4993024	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\security-announce.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-cluster.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-crypto.duckdb	6828032	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-embed.duckdb	2895872	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-install.duckdb	20721664	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-kern.duckdb	210776064	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-misc.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-multimedia.duckdb	3682304	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-net.duckdb	25702400	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-perform.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-pkg.duckdb	51392512	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-ports.duckdb	3420160	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-repository.duckdb	5255168	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-security.duckdb	6565888	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-smp.duckdb	3158016	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-toolchain.duckdb	14692352	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-userlevel.duckdb	39071744	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\02-netbsd\db\tech-x11.duckdb	13381632	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\03-openbsd\duckdb\openbsd_mail.duckdb	785133568	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\04-dragonfly\duckdb\dragonfly_mail.duckdb	215756800	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\ksummit-discuss.duckdb	32780288	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\ksummit.duckdb	46149632	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-api.duckdb	508833792	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-arch.duckdb	838873088	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-cve-announce.duckdb	96219136	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-fsdevel.duckdb	3465555968	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-kernel-announce.duckdb	64237568	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-mail-core-figures.duckdb	26488832	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-mail-keyword-hits.duckdb	926953472	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-man.duckdb	151531520	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-mm.duckdb	3882364928	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-scsi.duckdb	1508651008	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\linux-smp.duckdb	11546624	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\lkml.duckdb	33845424128	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\netdev.duckdb	7912304640	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\rust-for-linux.duckdb	325070848	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\sparclinux.duckdb	278409216	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\systemd-devel.duckdb	295448576	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\db\tech-board-discuss.duckdb	6303744	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\02-遍历留痕\traversal_trail.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\04-脚本\_work_core.duckdb	24129536	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\04-脚本\_work_kw.duckdb	274432	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05-数据库\dslinux_changelog.duckdb	1060864	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05-数据库\dslinux_claims.duckdb	220213248	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05-数据库\dslinux_doubts.duckdb	798720	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05-数据库\dslinux_keywords.duckdb	1060864	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05-数据库\dslinux_persons.duckdb	1060864	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05-数据库\linux-api.duckdb	12288	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\freebsd-hackers.duckdb	12288	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\fsdevel_val.duckdb	1434464256	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\hackers_val.duckdb	403189760	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\ksummit_val.duckdb	38023168	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\lkml_value_scores.duckdb	2228760576	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\netdev_val.duckdb	3678679040	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\05b-lkml专题\05-数据库\sysd_val.duckdb	173551616	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\05-linux-kernel\mining\outline_orphans.duckdb	9449472	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\06-other-bsd\duckdb\other-bsd_mail.duckdb	45101056	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\11-邮件列表史料\07-usenet\duckdb\usenet_mail.duckdb	800862208	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:mail-list 分库（明确排除备份范围）
+03-原始史料库\14-播客史料\bsd-conferences-youtube.duckdb	1323008	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\bsd-now.duckdb	173289472	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\bsdtalk.duckdb	29634560	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\floss-weekly.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\freebsd-fridays.duckdb	1585152	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\freebsd-office-hours.duckdb	1323008	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\nerding-out-with-victor.duckdb	4206592	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\software-engineering-daily.duckdb	4468736	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\the-changelog.duckdb	4730880	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\14-播客史料\youtube.duckdb	288108544	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:播客库（2026-10-14 三次令移出 SCOPE）
+03-原始史料库\15-login杂志史料\login-zazhi.duckdb	504115200	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:login 杂志库
+04-现代研究文献\rowmine_traversal.duckdb	27275264	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:ROW_MINE 遍历派生物
+08-核查报告与多轮复核\13-deepseek-cankao消解归档\cankao_refs.duckdb	13381632	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:消解归档派生库
+08-核查报告与多轮复核\重构2026\_prep_20260915\mapping_unresolved.duckdb	536576	TEMP_SANDBOX	none	NON_SCOPE_CONTENT:历史预备归档派生库
+12-数据库备份\04-现代研究文献\pre_f2b25_claim_historical_claims_20261018_144833.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\04-现代研究文献\pre_f2b25_evidence_historical_claims_20261018_144845.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F1_b06_20261005_000834.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b01_dbfix_20261002_161214.duckdb	358100992	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b01_dbfix_20261002_161353.duckdb	358100992	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b01_dbfix_20261002_162900.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b01_dbfix_20261002_165558.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b10_dbfix_20261011_204332.duckdb	499658752	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b10_lvfix_20261012_005003.duckdb	499658752	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F2_b10_x1fix_20261011_211203.duckdb	499658752	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F3-05_dbfix_20261004_065210.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F3-06_dbfix_20261003_021622.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F4_b11_20261006_20261006_185837.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F4_b11_20261006_20261006_190204.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_F4_b11y_20261006_20261006_223105.duckdb	366489600	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b001_20261018_020406.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b002_20261018_054250.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b003_20261018_055409.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b004_20261018_060516.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b005_20261018_061245.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b006_20261018_102058.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b007_20261018_103437.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b008_20261018_105207.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b009_20261018_112410.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b010_20261018_113102.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b011_20261018_115149.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b012_20261018_123339.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b013_20261018_140835.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b014_20261018_151702.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b015_20261018_173447.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b016_20261018_234009.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b017_20261019_020034.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b018_20261019_025041.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b018_20261020_043015.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b019_20261019_032702.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b019_20261020_105255.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b020_20261019_110136.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b020_20261020_131420.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b021_20261019_122234.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b022_20261020_010116.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b023_20261020_145130.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b024_20261020_162900.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_gapa662_b025_20261020_170333.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\OAA_w172_rv415_20261015_203717.duckdb	644624384	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\f2_b10_lvfix_20261012_010106.duckdb	499658752	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\OAA_F1_b12_202610201036.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\OAA_F1_b12_preb12fix2_202610202214.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\OAA_F1_b12_preb12x3_202610210209.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\before_fq_b115_register_20261015.duckdb	500445184	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_f1b10s02_fixdb_20261013_080829.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_f1b10s04_sync_20261013.duckdb	516960256	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b057_20261003.duckdb	223096832	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b058_.duckdb	228864000	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b059_.duckdb	221786112	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b060_.duckdb	229650432	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b060_summfix_20261003_225155.duckdb	357576704	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b061_20261004.duckdb	228601856	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b062_.duckdb	227291136	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fhk_b082_20261018_103454.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fq_b106_20261007_2031.duckdb	447754240	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fq_b108_20261009_085247.duckdb	448802816	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fq_b109_20261009_231816.duckdb	448802816	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fq_b110_20261011_010404.duckdb	470298624	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fq_b111_20261011_202402.duckdb	499658752	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_fq_b116_20261018_093828.duckdb	445132800	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_ob_b001_claim_20261004_0408.duckdb	228601856	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_ob_b010_20261008.duckdb	447754240	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\historical_claims_before_ob_b011_20261008.duckdb	461647872	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\pre_f2b25_evcorrect_historical_claims_20261018_151000.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\historical_claims\pre_patch_claim_fpo_b214_20261018.duckdb	643837952	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmp6egf30_h\pre_dbfix_hc_selftest_20261014_145747.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmp_c3v_3ox\pre_dbfix_hc_selftest_20261014_164656.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmpat76uaja\pre_dbfix_hc_selftest_20261014_152114.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmpi0e0nij7\pre_dbfix_hc_selftest_20261014_165102.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmpopu9dbix\pre_dbfix_hc_selftest_20261014_164156.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmpv5xaf7bu\pre_dbfix_hc_selftest_20261014_164035.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmpwrwatn4u\pre_dbfix_hc_selftest_20261014_163943.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+12-数据库备份\tmpxskge_ga\pre_dbfix_hc_selftest_20261014_150643.duckdb	495988736	TEMP_SANDBOX	none	BACKUP_LAYER:备份层快照件（不迁移，删除须 ykla 明示）
+_tmp\_execck\ch_cur.duckdb	40644608	TEMP_SANDBOX	none	TEMP:_tmp 临时工作区
+_tmp\_execck\ch_git.duckdb	40644608	TEMP_SANDBOX	none	TEMP:_tmp 临时工作区
+script\_outline_mirror_20261022.duckdb	661139456	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\H1\claims_tmp.duckdb	536576	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\H2\claims_synth.duckdb	536576	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\H3\claims_tmp.duckdb	536576	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\H4\claims_tmp.duckdb	536576	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\drill_h\claims_drill.duckdb	1323008	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\theory_pilot_f\sandbox_db\claims.duckdb	1323008	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_pilot_20261022\theory_pilot_h\sandbox_db\claims.duckdb	1060864	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_td009_test.duckdb	174600192	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件
+script\_td016_verify_20261022\path20_verify.duckdb	798720	TEMP_SANDBOX	none	TEMP:script 沙箱/试验件

@@ -7,8 +7,52 @@ import duckdb
 import os
 import json
 import csv
+import sys
 
 BASE = r"d:\librebsd"
+
+# ---- 启动版本探测（版本基线文件为唯一声明源，见 ADR-0017）----
+BASELINE_NAME = "duckdb-version-baseline.txt"
+
+
+def _baseline_path():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), BASELINE_NAME)
+
+
+def baseline_expected_version():
+    """读取版本基线的期望 duckdb 版本（`版本锁定：duckdb==<版本>`）；不可读返 None。"""
+    try:
+        with open(_baseline_path(), encoding="utf-8") as f:
+            for line in f:
+                s = line.strip()
+                if s.startswith("版本锁定"):
+                    idx = s.find("duckdb==")
+                    if idx < 0:
+                        return None
+                    return s[idx + len("duckdb=="):].strip() or None
+    except OSError:
+        return None
+    return None
+
+
+def require_duckdb_version(skip=False):
+    """启动版本探测：与基线一致方继续；不一致返回 2（--skip-version-check 放行）。"""
+    if skip:
+        print("[INFO] duckdb 版本探测已跳过（--skip-version-check）")
+        return 0
+    actual = getattr(duckdb, "__version__", "unknown")
+    expected = baseline_expected_version()
+    fp = _baseline_path()
+    if not expected:
+        print("[FAIL] 版本基线不可读或缺“版本锁定：duckdb==<版本>”行：{}".format(fp))
+        print("       实际 duckdb=={}；基线修复前如需继续，用 --skip-version-check。".format(actual))
+        return 2
+    if actual != expected:
+        print("[FAIL] duckdb 版本不一致：实际 {}／期望 {}（基线 {}）".format(actual, expected, fp))
+        print("       混版本会使存储格式（v64／v69）与判据假设分裂；确认后重装或经 ADR 变更基线。")
+        return 2
+    print("[INFO] duckdb 版本 {} 与基线一致（{}）".format(actual, fp))
+    return 0
 
 # 12 functional DBs from folder_db_registry.csv
 FUNCTIONAL_DBS = [
@@ -93,6 +137,9 @@ def audit_db(name, rel_path, label):
 
 
 # Audit all
+_rc = require_duckdb_version("--skip-version-check" in sys.argv)
+if _rc:
+    sys.exit(_rc)
 results = []
 for name, path in FUNCTIONAL_DBS:
     results.append(audit_db(name, path, "functional"))

@@ -27,7 +27,9 @@ PASS 才准写；FAIL 必须停止并排查。
   生产快照 12-数据库备份/claimdb_guard_state.json（--db／--all 使用；每次非 FAIL 运行后合并刷新）
   --path 绑定快照 script/_claimdb_guard_path_state/（键＝被检文件绝对路径＋内容 SHA-256；
     只读写该目录，绝不读写生产快照；目录不可写时降级为“无基线，仅执行绝对判据”）
-退出码：0＝PASS（含 WARN）；1＝FAIL
+退出码：0＝PASS（含 WARN）；1＝FAIL；2＝无法判定（仓库根不可解析／duckdb 版本与基线不一致）
+版本探测：启动即比对 duckdb-version-baseline.txt（同目录），不一致退出码 2；
+  --skip-version-check 为逃生参数（基线修复或已知混版本排查时显式放行）。
 """
 import argparse
 import datetime
@@ -36,6 +38,51 @@ import importlib.util
 import json
 import os
 import sys
+
+# ---- 启动版本探测（版本基线文件为唯一声明源，见 ADR-0017）----
+BASELINE_NAME = "duckdb-version-baseline.txt"
+
+
+def _baseline_path():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), BASELINE_NAME)
+
+
+def baseline_expected_version():
+    """读取版本基线的期望 duckdb 版本（`版本锁定：duckdb==<版本>`）；不可读返 None。"""
+    try:
+        with open(_baseline_path(), encoding="utf-8") as f:
+            for line in f:
+                s = line.strip()
+                if s.startswith("版本锁定"):
+                    idx = s.find("duckdb==")
+                    if idx < 0:
+                        return None
+                    return s[idx + len("duckdb=="):].strip() or None
+    except OSError:
+        return None
+    return None
+
+
+def require_duckdb_version(skip=False):
+    """启动版本探测：与基线一致方继续；不一致返回 2（--skip-version-check 放行）。"""
+    if skip:
+        print("[INFO] duckdb 版本探测已跳过（--skip-version-check）")
+        return 0
+    import duckdb
+    actual = getattr(duckdb, "__version__", "unknown")
+    expected = baseline_expected_version()
+    fp = _baseline_path()
+    if not expected:
+        print("[FAIL] 版本基线不可读或缺“版本锁定：duckdb==<版本>”行：{}".format(fp))
+        print("       实际 duckdb=={}；基线修复前如需继续，用 --skip-version-check。".format(actual))
+        return 2
+    if actual != expected:
+        print("[FAIL] duckdb 版本不一致：实际 {}／期望 {}（基线 {}）".format(actual, expected, fp))
+        print("       混版本会使存储格式（v64／v69）与判据假设分裂；确认后重装或经 ADR 变更基线。")
+        return 2
+    print("[INFO] duckdb 版本 {} 与基线一致（{}）".format(actual, fp))
+    return 0
+
 
 BASE_CANDIDATES = (r"D:\librebsd", r"\\DESKTOP-M5P610N\d\librebsd")
 
@@ -547,7 +594,13 @@ def main():
     g.add_argument("--show", action="store_true", help="查看快照")
     ap.add_argument("--path-state-dir", metavar="<目录>", default=None,
                     help="--path 绑定快照目录（默认 script/_claimdb_guard_path_state）")
+    ap.add_argument("--skip-version-check", action="store_true",
+                    help="跳过 duckdb 版本基线探测（逃生参数；基线修复或已知混版本排查时用）")
     args = ap.parse_args()
+
+    rc = require_duckdb_version(args.skip_version_check)
+    if rc:
+        return rc
 
     # 仓库根不可达时禁止静默空转：能自持内存库自证的就跑（--selftest），
     # 其余一律显式退出码 2——哨兵空转比报错危险。
