@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025612	V49-1.2	题面 LWKT 设计原则命中 49 卷 1.2 设计目标与思想	THREE_PASS	A
+S-025613	V48-2.4	题面 LWKT 与 SMPng 比较命中 48 卷 2.4 模型比较	THREE_PASS	A
+S-025614	V49-1.5	题面 LWKT 工程效应命中 49 卷 1.5 架构位置	THREE_PASS	A
+S-025615	V75-2.7	题面设计文档源码考据命中 75 卷 2.7 设计文档资料	THREE_PASS	A
+S-025616		题面为 dated smbfs 补丁邮件细节	THREE_PASS	A
+S-025617		题面为 dated token 进展邮件细节	THREE_PASS	A
+S-025618		题面为证据等级来源模板，零语义	THREE_PASS	A
+S-025619		题面为 dated 回归报障邮件细节	THREE_PASS	A
+S-025620		题面为 dated 兼容选项邮件细节	THREE_PASS	A
+S-025621	V48-3.2	题面 HAMMER 雏形设计命中 48 卷 3.2 设计目标	THREE_PASS	A
+S-025622	V48-2.6	题面 SMP 性能改进命中 48 卷 2.6 技术路线调整	THREE_PASS	A
+S-025623	V48-2.6	题面网络栈 VFS 改进命中 48 卷 2.6 技术路线调整	THREE_PASS	A
+S-025624	V75-2.8	题面 Release Notes 考据命中 75 卷 2.8 Release Notes 资料	THREE_PASS	A
+S-025625		题面为总纲第 13 条史观映射层	THREE_PASS	A
+S-025626		题面为 dated jail 报障邮件细节	THREE_PASS	A
+S-025627		题面为文献著录行	THREE_PASS	A
+S-025628		题面为 dated NAT panic 邮件细节	THREE_PASS	A
+S-025629		题面为证据等级来源模板，零语义	THREE_PASS	A
+S-025630		题面为文献著录行	THREE_PASS	A
+S-025631		题面为 dated 负载诊断邮件细节	THREE_PASS	A
+S-025632		题面为 dated 升级报障邮件细节	THREE_PASS	A
+S-025633		题面为文献著录行	THREE_PASS	A
+S-025634		题面为 dated POSIX 规范邮件细节	THREE_PASS	A
+S-025635	V49-2.2	题面 token 机制命中 49 卷 2.2 1.x 内核重构	THREE_PASS	A

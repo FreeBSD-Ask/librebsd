@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025612	V49-1.2	结构线索：LWKT 设计层在 49 卷 1.2	THREE_PASS	C
+S-025613	V52-2.5	结构线索：并发取舍专节在 52 卷 2.5	THREE_PASS	C
+S-025614	V49-1.5	结构线索：架构位置层在 49 卷 1.5	THREE_PASS	C
+S-025615		结构线索：设计文档资料层在 75 卷 2.7	THREE_PASS	C
+S-025616		结构线索：VFS 细节无对应	THREE_PASS	C
+S-025617		结构线索：token 细节无对应	THREE_PASS	C
+S-025618		模板层无结构对应	THREE_PASS	C
+S-025619		结构线索：回归细节无对应	THREE_PASS	C
+S-025620		结构线索：兼容细节无对应	THREE_PASS	C
+S-025621		结构线索：HAMMER 设计层在 48 卷 3.2	THREE_PASS	C
+S-025622		结构线索：1.x 改进面在 48 卷 2.6	THREE_PASS	C
+S-025623		结构线索：1.x 改进面在 48 卷 2.6	THREE_PASS	C
+S-025624	V75-2.8	结构线索：版本资料层在 75 卷 2.8	THREE_PASS	C
+S-025625		结构线索：史观映射层无对应	THREE_PASS	C
+S-025626		结构线索：jail 细节无对应	THREE_PASS	C
+S-025627		结构线索：文献行无对应	THREE_PASS	C
+S-025628		结构线索：网络调试细节无对应	THREE_PASS	C
+S-025629		模板层无结构对应	THREE_PASS	C
+S-025630		结构线索：文献行无对应	THREE_PASS	C
+S-025631		结构线索：诊断细节无对应	THREE_PASS	C
+S-025632		结构线索：桌面细节无对应	THREE_PASS	C
+S-025633		结构线索：文献行无对应	THREE_PASS	C
+S-025634		结构线索：API 细节无对应	THREE_PASS	C
+S-025635		结构线索：1.x 重构层在 49 卷 2.2	THREE_PASS	C

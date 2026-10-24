@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025612	V49-1.2	内容为消息传递替代锁的设计原则	THREE_PASS	B
+S-025613	V48-2.4	内容为锁路径与消息传递路径取舍	THREE_PASS	B
+S-025614	V49-1.5	内容为 HAMMER 网络栈 VFS 基于 LWKT	THREE_PASS	B
+S-025615	V75-2.7	内容为 LWKT 文档与源码文件出处	THREE_PASS	B
+S-025616		内容为凭据缓存与纯线程 VFS 细节	THREE_PASS	B
+S-025617		内容为接口重设计过程件	THREE_PASS	B
+S-025618		内容为模板头 claim 载体，叙事主题零命中	THREE_PASS	B
+S-025619		内容为启动断言回归细节	THREE_PASS	B
+S-025620		内容为 COMPAT_DF12 语义反转件	THREE_PASS	B
+S-025621	V48-3.2	内容为 B-tree COW 雏形与版本时间线	THREE_PASS	B
+S-025622	V48-2.6	内容为 1.4 调度器与 MPSAFE 改进	THREE_PASS	B
+S-025623	V48-2.6	内容为每 CPU 网络栈与 VFS 消息传递	THREE_PASS	B
+S-025624	V75-2.8	内容为 1.2-1.8 Notes 与 CVS log 核验	THREE_PASS	B
+S-025625		内容为 GPLv3 与 BSD 许可哲学审视	THREE_PASS	B
+S-025626		内容为 less 会话中断细节	THREE_PASS	B
+S-025627		内容为邮件档案库 claim 载体	THREE_PASS	B
+S-025628		内容为 ip 转发回溯细节	THREE_PASS	B
+S-025629		内容为模板头 claim 载体，叙事主题零命中	THREE_PASS	B
+S-025630		内容为邮件档案库 claim 载体	THREE_PASS	B
+S-025631		内容为 cache_lock 阻塞诊断细节	THREE_PASS	B
+S-025632		内容为 KDE 启动冻结细节	THREE_PASS	B
+S-025633		内容为邮件档案库 claim 载体	THREE_PASS	B
+S-025634		内容为 confstr 返回值规范细节	THREE_PASS	B
+S-025635	V49-2.2	内容为 1.10 token 轻量同步原语引入	THREE_PASS	B
