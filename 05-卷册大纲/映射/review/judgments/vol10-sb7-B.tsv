@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023650	V45-12.3	内容网卡驱动 TX 维护落 硬件文档开放度与驱动可维护性	B	sb7
+S-023651	V45-14.8	内容 man 页修订流程落 文档工程 man 页体例	B	sb7
+S-023652	V45-4.6	内容 pfsync nexthop 状态同步落 pfsync 与状态同步	B	sb7
+S-023653	V45-4.2	内容 pf 规则集排障落 pf 的状态检测与规则处理架构	B	sb7
+S-023654		内容为接口配置问答零命中	B	sb7
+S-023655	V45-14.8	内容 man 页条文修订落 文档工程 man 页体例	B	sb7
+S-023656	V45-4.2	内容 pfctl 控制工具演进落 pf 的状态检测与规则处理架构	B	sb7
+S-023657	V45-4.2	内容 pf 设计讨论落 pf 的状态检测与规则处理架构	B	sb7
+S-023658	V45-4.2	内容 pf_purge_rule ruleset 清理落 pf 的状态检测与规则处理架构	B	sb7
+S-023659		内容为无题模板件零主题	B	sb7
+S-023660		内容为 ROW_MINE claim 载体零主题	B	sb7
+S-023661	V45-6.12	内容加密作为基本系统核心组件落 密码基础设施与基本系统安全边界	B	sb7
+S-023662	V45-6.12	内容 svnd 磁盘加密组件落 密码基础设施与基本系统安全边界	B	sb7
+S-023663	V45-5.4	内容 IPsec 栈与 isakmpd IKE 协商落 OpenIKED 与 IKE/IPsec 实现	B	sb7
+S-023664		内容为加密 commit 史料综述重复件	B	sb7
+S-023665	V44-3.1	内容 3.0 发布初期成熟度反馈落 3.x 发布史	B	sb7
+S-023666		内容为 IPFilter 时代缺陷零命中	B	sb7
+S-023667		内容为 ROW_MINE claim 载体零主题	B	sb7
+S-023668		内容为 ROW_MINE claim 载体零主题	B	sb7
+S-023669	V45-9.4	内容 httpd Web 认证明文口令风险落 httpd 与基础 Web 服务	B	sb7
+S-023670	V45-9.3	内容 relayd TLS 报错语义落 relayd 与代理、负载均衡	B	sb7
+S-023671		内容为 ROW_MINE claim 载体零主题	B	sb7
+S-023672		内容为工具参数提议零命中	B	sb7
+S-023673		内容为 ROW_MINE claim 载体零主题	B	sb7
