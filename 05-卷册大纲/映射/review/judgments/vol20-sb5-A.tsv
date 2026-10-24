@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-031718	V63-1.12	题面「Linux社区DougMcNaught指出Stevens教材描述的是44」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031719	V63-1.12	题面「Linux社区VladYasevich讨论组播自收行为差异时说明客户正从」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031720	V63-1.12	题面「Linux社区PekkaSavola转发默认地址选择性能顾虑称所引顾虑出」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031721	V63-1.1	题面「Linux社区EricDumazet在tcp多端口bind修复的问题讨论」落 BSD 软件进入 Linux 系统	A	sb5
+S-031722	V63-1.12	题面「Linux社区讨论IPv6UDP绑定语义时面对为何保留这一反直觉行为的提」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031723	V63-1.1	题面「Linux社区VegardNossum质疑CONFIG_NET_KEY帮」落 BSD 软件进入 Linux 系统	A	sb5
+S-031724	V63-1.12	题面「Linux社区StephenHemminger用jhash2替换ipv6」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031725	V63-1.1	题面「Linux社区MichaelSTsirkin在流量控制与端口镜像测试讨论」落 BSD 软件进入 Linux 系统	A	sb5
+S-031726	V63-1.12	题面「Linux社区TomaszTorcz在netdev转发FreeBSD53」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031727	V63-1.12	题面「Linux社区Davem以BSDAPI兼容性为由否决了一个DiffSer」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031728	V18-4.3	题面「Linux社区IPv6流标签补丁评审中FlorentFourcot反对该」落内核治理：Linus 决策、维护者层级与版本节律	A	sb5
+S-031729	V18-4.3	题面「Linux社区虚拟CAN网络设备驱动补丁入树vcanc的模块许可证声明为」落内核治理：Linus 决策、维护者层级与版本节律	A	sb5
+S-031730	V63-1.12	题面「Linux社区EvgeniyPolyakov为把CARP放进内核而非用户」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031731	V63-1.12	题面「Linux社区jamal转发LennertBuytenhek关于ethe」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031732	V63-1.3	题面「Linux社区关于内核层socket包装符是否该用EXPORT_SYMB」落 BSD 许可证软件在 Linux 生态中的使用	A	sb5
+S-031733	V18-4.3	题面「Linux社区TCPBIC11讨论中提出是否考虑YeeTingLi的AB」落内核治理：Linus 决策、维护者层级与版本节律	A	sb5
+S-031734	V63-1.1	题面「Linux社区i40e驱动故障讨论中引用FreeBSD侧修复并被Inte」落 BSD 软件进入 Linux 系统	A	sb5
+S-031735	V63-1.12	题面「Linux社区XDP讨论中ThomasGraf引述FlorianWest」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031736	V18-4.3	题面「Linux社区RolandDreier的InfiniBandMAD补丁与」落内核治理：Linus 决策、维护者层级与版本节律	A	sb5
+S-031737	V63-1.1	题面「Linux社区MichaelWu梳理Linux80211现状时指出Mad」落 BSD 软件进入 Linux 系统	A	sb5
+S-031738	V63-1.12	题面「Linux社区Linux挪用BSD代码指控的争论中AdrianBunk澄」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031739	V63-1.1	题面「Linux社区IPsec在2561的讨论中USAGI的KazunoriM」落 BSD 软件进入 Linux 系统	A	sb5
+S-031740	V63-1.12	题面「Linux社区IPv6隧道链路本地地址自动配置讨论中PekkaSavol」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5
+S-031741	V63-1.12	题面「Linux社区VladYasevich接续FreeBSD客户机导致skb」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb5

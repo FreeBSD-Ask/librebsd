@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-031670	V63-1.12	内容「- 【Linux社区】Al Viro 在 POSIX 分歧讨论中把 BS」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb3
+S-031671	V63-1.1	内容「- 【Linux社区】fuse uapi 类型补丁引发 BSD 可移植性」落 BSD 软件进入 Linux 系统	B	sb3
+S-031672	V63-1.1	内容「- 【Linux社区】在用户命名空间补丁讨论中, Trond Mykle」落 BSD 软件进入 Linux 系统	B	sb3
+S-031673	V18-4.3	内容「- 【Linux社区】LSF 与 MM 大会参会意向登记中，Anton 」落内核治理：Linus 决策、维护者层级与版本节律	B	sb3
+S-031674	V63-1.1	内容「- 【Linux社区】在 store-free 路径遍历的性能讨论中，C」落 BSD 软件进入 Linux 系统	B	sb3
+S-031675	V18-4.3	内容「- 【Linux社区】Al Viro 提交 vfs.git 分支 wor」落内核治理：Linus 决策、维护者层级与版本节律	B	sb3
+S-031676	V63-1.12	内容「- 【Linux社区】Jonathan Kowalski 评审 pidf」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb3
+S-031677	V63-1.1	内容「- 【Linux社区】utimensat 写权限检查修复补丁的评审回帖中」落 BSD 软件进入 Linux 系统	B	sb3
+S-031678	V63-1.12	内容「- 【Linux社区】Michael Kerrisk 在 linux-f」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb3
+S-031679	V18-4.3	内容「- 【Linux社区】Linus Torvalds 在 fs/ufs 挂」落内核治理：Linus 决策、维护者层级与版本节律	B	sb3
+S-031680		内容无 BSD 关联与治理主题，无可落节点	B	sb3
+S-031681	V63-1.1	内容「- 【Linux社区】2005 年 Serge E. Hallyn 在命」落 BSD 软件进入 Linux 系统	B	sb3
+S-031682	V63-1.3	内容「- 【Linux社区】Thomas Gleixner 就 selftes」落 BSD 许可证软件在 Linux 生态中的使用	B	sb3
+S-031683	V63-1.1	内容「- 【Linux社区】EricBiederman在无mntput发生I/」落 BSD 软件进入 Linux 系统	B	sb3
+S-031684	V63-1.1	内容「- 【Linux社区】Phillip Potter 向 fs/ufs 提」落 BSD 软件进入 Linux 系统	B	sb3
+S-031685	V63-1.12	内容「- 【Linux社区】Matthew Wilcox 在 iomap_wr」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb3
+S-031686	V63-1.1	内容「- 【Linux社区】Jan Blunck 为联合文件系统新增 whit」落 BSD 软件进入 Linux 系统	B	sb3
+S-031687	V63-1.1	内容「- 【Linux社区】2025 年 Christian Brauner 」落 BSD 软件进入 Linux 系统	B	sb3
+S-031688	V63-1.12	内容「- 【Linux社区】在 FUSE 于 close() 返回 EBADF」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb3
+S-031689	V63-1.12	内容「- 【Linux社区】Amir Goldstein 在原子文件数据替换接」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb3
+S-031690	V63-1.1	内容「- 【Linux社区】fs/ufs 挂载几何校验补丁论证圆柱摘要缓冲区需」落 BSD 软件进入 Linux 系统	B	sb3
+S-031691	V63-1.1	内容「- 【Linux社区】Al Viro 回应 UFS 的 UBSAN 移位」落 BSD 软件进入 Linux 系统	B	sb3
+S-031692	V63-1.1	内容「- 【Linux社区】Christian Brauner 在文件系统信任」落 BSD 软件进入 Linux 系统	B	sb3
+S-031693		内容为挖掘管线元数据（来源／判定／体例），叙事主题零命中	B	sb3

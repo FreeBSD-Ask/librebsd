@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-031646		内容无 BSD 关联与治理主题，无可落节点	B	sb2
+S-031647	V63-1.3	内容「- 【Linux社区】Alan Cox回应链接器表系列关于模块许可标记的」落 BSD 许可证软件在 Linux 生态中的使用	B	sb2
+S-031648	V63-1.1	内容「- 【Linux社区】Nate Karstens 在 close-on-」落 BSD 软件进入 Linux 系统	B	sb2
+S-031649	V18-4.3	内容「- 【Linux社区】akpm 转发的 Create arch/Kcon」落内核治理：Linus 决策、维护者层级与版本节律	B	sb2
+S-031650	V63-1.3	内容「- 【Linux社区】Peter Zijlstra 就 freelist」落 BSD 许可证软件在 Linux 生态中的使用	B	sb2
+S-031651		内容为挖掘管线元数据（来源／判定／体例），叙事主题零命中	B	sb2
+S-031652	V63-1.1	内容「- 【Linux社区】Sun-3x 平台的 ESP SCSI 驱动清理补」落 BSD 软件进入 Linux 系统	B	sb2
+S-031653	V63-1.3	内容「- 【Linux社区】补丁清理 aic79xx 与 aic7xxx 驱动」落 BSD 许可证软件在 Linux 生态中的使用	B	sb2
+S-031654	V63-1.1	内容「- 【Linux社区】Mark Fortescue 在 sparc32 」落 BSD 软件进入 Linux 系统	B	sb2
+S-031655	V63-1.12	内容「- 【Linux社区】用户态 iSCSI target 库选型讨论中，J」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031656	V63-1.1	内容「- 【Linux社区】针对 aic7xxx 语法文件缺分号的小补丁，Gi」落 BSD 软件进入 Linux 系统	B	sb2
+S-031657		内容无 BSD 关联与治理主题，无可落节点	B	sb2
+S-031658	V63-1.1	内容「- 【Linux社区】MODULE_VERSION 补丁的 diff 暴」落 BSD 软件进入 Linux 系统	B	sb2
+S-031659	V63-1.12	内容「- 【Linux社区】2002年5月Douglas Gilbert 回应」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031660	V63-1.1	内容「- 【Linux社区】Douglas Gilbert发布sg3_util」落 BSD 软件进入 Linux 系统	B	sb2
+S-031661	V63-1.12	内容「- 【Linux社区】磁带 st ioctl 文档 MT_ST_SYSV」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031662	V63-1.12	内容「- 【Linux社区】kernel bugzilla 80711 关于 」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031663	V63-1.12	内容「- 【Linux社区】Andre Hedrick 转发 Linus To」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031664	V63-1.1	内容「- 【Linux社区】Douglas Gilbert 发布 ddpt 0」落 BSD 软件进入 Linux 系统	B	sb2
+S-031665		内容为挖掘管线元数据（来源／判定／体例），叙事主题零命中	B	sb2
+S-031666	V63-1.12	内容「- 【Linux社区】AmeerHamza提议为openat增加O_EM」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031667	V63-1.12	内容「- 【Linux社区】fsync_range 与 fsync 语义讨论中」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031668	V63-1.12	内容「- 【Linux社区】David Drysdale 在 CLONE_FD」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2
+S-031669	V63-1.12	内容「- 【Linux社区】David Miller 在 BTRFS 分区起始」落 BSD 与 Linux 在实际开发中的长期交汇	B	sb2

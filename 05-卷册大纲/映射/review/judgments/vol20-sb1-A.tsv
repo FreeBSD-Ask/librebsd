@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-031622	V63-1.1	题面「Linux社区ChrisNewport就内核崩溃转储设计建议在SPARC」落 BSD 软件进入 Linux 系统	A	sb1
+S-031623	V18-4.3	题面「Linux社区在讨论允许sparc64sbus建立大于1MB映射的补丁时」落内核治理：Linus 决策、维护者层级与版本节律	A	sb1
+S-031624	V18-4.3	题面「Linux社区LudwigRydberg提交为SPARC架构增加clon」落内核治理：Linus 决策、维护者层级与版本节律	A	sb1
+S-031625	V63-1.12	题面「Linux社区SergeiTrofimovich指出glibc手册把O_」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb1
+S-031626		题面无对应节点（无 BSD 关联亦非内核治理主题）	A	sb1
+S-031627	V18-4.3	题面「155.3 治理」落内核治理：Linus 决策、维护者层级与版本节律	A	sb1
+S-031628		题面无对应节点（无 BSD 关联亦非内核治理主题）	A	sb1
+S-031629		题面为编纂装置（导言），无独立叙事节点	A	sb1
+S-031630		题面为编纂装置（156.1 BSD谱系），无独立叙事节点	A	sb1
+S-031631	V63-1.1	题面「Linux社区AndyLutomirski在linuxapi上与Eric」落 BSD 软件进入 Linux 系统	A	sb1
+S-031632	V63-1.1	题面「Linux社区AndyLutomirski在openat2OPENAT2」落 BSD 软件进入 Linux 系统	A	sb1
+S-031633		题面无对应节点（无 BSD 关联亦非内核治理主题）	A	sb1
+S-031634		题面为编纂装置（156.3 人物），无独立叙事节点	A	sb1
+S-031635	V18-4.3	题面「Linux社区SukadevBhattiprolu发布clone3系统调」落内核治理：Linus 决策、维护者层级与版本节律	A	sb1
+S-031636	V63-1.12	题面「Linux社区MADV_FREE提案引用jemalloc实践指出该能力在」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb1
+S-031637	V63-1.1	题面「Linux社区PaoloBonzini在评论FreeBSDCapsicu」落 BSD 软件进入 Linux 系统	A	sb1
+S-031638	V63-1.1	题面「Linux社区ChristianBrauner在close_range系」落 BSD 软件进入 Linux 系统	A	sb1
+S-031639	V63-1.1	题面「Linux社区LinusTorvalds在mincore特权化讨论中转引」落 BSD 软件进入 Linux 系统	A	sb1
+S-031640	V63-1.12	题面「Linux社区CambdaZhu发现Linux的kill允许把线程ID当」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb1
+S-031641	V18-4.3	题面「Linux社区JoshTriplett在CLONE_FD补丁讨论中回应D」落内核治理：Linus 决策、维护者层级与版本节律	A	sb1
+S-031642		题面为编纂装置（导言），无独立叙事节点	A	sb1
+S-031643	V63-1.12	题面「157.1 杂项」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb1
+S-031644	V63-1.12	题面「157.2 BSD谱系」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb1
+S-031645		题面为编纂装置（157.3 许可证），无独立叙事节点	A	sb1

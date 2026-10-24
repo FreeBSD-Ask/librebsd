@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-031694	V18-4.3	题面「Linux社区AndrewMorton汇总2559mm1补丁时BillD」落内核治理：Linus 决策、维护者层级与版本节律	A	sb4
+S-031695	V63-1.12	题面「Linux社区Linux地址空间随机化RFC讨论中作者以OpenBSD的」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031696	V63-1.1	题面「Linux社区ChristophHellwig于2002年提交的BKch」落 BSD 软件进入 Linux 系统	A	sb4
+S-031697	V63-1.12	题面「Linux社区24内核reversemapping之争中Biederma」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031698	V63-1.12	题面「Linux社区2000年7月17日VM替换算法讨论中AlanCox以Fr」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031699	V63-1.3	题面「Linux社区2004年2月18日invalidate_mmap_ran」落 BSD 许可证软件在 Linux 生态中的使用	A	sb4
+S-031700	V63-1.12	题面「Linux社区2021年8月移除MAP_DENYWRITE讨论中Davi」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031701	V63-1.1	题面「Linux社区BenjaminCRLaHaise在本封中引用Rikvan」落 BSD 软件进入 Linux 系统	A	sb4
+S-031702	V63-1.12	题面「Linux社区同一mincore线程延续VlastimilBabka在权」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031703	V18-4.3	题面「Linux社区getrusageru_maxrss补丁的变更日志记录旧测」落内核治理：Linus 决策、维护者层级与版本节律	A	sb4
+S-031704	V63-1.12	题面「Linux社区2001年AlanCox在无盘节点swap讨论的回复帖中引」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031705	V63-1.12	题面「Linux社区2019年6月TejunHeo就memcg的get_mem」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031706	V63-1.12	题面「Linux社区MAP_FIXED_SAFE命名争论中EdwardNapi」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031707	V18-4.3	题面「Linux社区LinusTorvalds就x86模块依赖外部PAGE_K」落内核治理：Linus 决策、维护者层级与版本节律	A	sb4
+S-031708	V63-1.12	题面「Linux社区FreeBSDpageoutdaemon算法讨论Danie」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031709	V63-1.12	题面「Linux社区khugepagedmTHP讨论中KirylShutsem」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031710	V63-1.12	题面「Linux社区PedroFalcato在msealRFC讨论中以Open」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031711		题面无对应节点（无 BSD 关联亦非内核治理主题）	A	sb4
+S-031712	V63-1.1	题面「Linux社区20000524linuxmm讨论234版VM队列重构RF」落 BSD 软件进入 Linux 系统	A	sb4
+S-031713	V63-1.12	题面「Linux社区讨论kmalloc_obj类型化slab缓存时引用iOS与」落 BSD 与 Linux 在实际开发中的长期交汇	A	sb4
+S-031714		题面为编纂装置（本节收录netdev邮件列表中涉及BSD谱系许可），无独立叙事节点	A	sb4
+S-031715	V63-1.1	题面「Linux社区AlanCox对BSDJailLSM补丁提出接口设计意见认」落 BSD 软件进入 Linux 系统	A	sb4
+S-031716	V18-4.3	题面「Linux社区perskb控制消息补丁讨论中DavidMiller在St」落内核治理：Linus 决策、维护者层级与版本节律	A	sb4
+S-031717	V63-1.1	题面「Linux社区TIME_WAIT状态行为讨论中参与者追问Linux为何在」落 BSD 软件进入 Linux 系统	A	sb4
