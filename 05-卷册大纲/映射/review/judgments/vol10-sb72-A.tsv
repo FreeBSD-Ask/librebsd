@@ -1,7 +1,7 @@
 source_id	target_id	reason	strategy	pass_id
 S-025210	V47-2.3	题面“特性即缺陷论”命中第四十七卷 2.3	A	sb72
 S-025211	V45-6.7	题面“pem_lib 变量初始化修复”命中第四十五卷 6.7	A	sb72
-S-025212		题面为证据等级来源模板	A	sb72
+S-025212	V45-6.7	题面“libssl BUF_strlcpy bounded 注解”命中第四十五卷 6.7	A	sb72
 S-025213	V45-6.11	题面“LibreSSL 2.1.1 禁用 SSLv3”命中第四十五卷 6.11	A	sb72
 S-025214	V45-6.7	题面“ASN1 宏拼写检索”命中第四十五卷 6.7	A	sb72
 S-025215	V45-5.2	题面“OpenNTPD 综述”命中第四十五卷 5.2	A	sb72

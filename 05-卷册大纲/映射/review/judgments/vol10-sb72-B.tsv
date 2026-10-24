@@ -1,7 +1,7 @@
 source_id	target_id	reason	strategy	pass_id
 S-025210	V47-2.3	内容安全价值观陈述落 正确性优先的技术价值观	B	sb72
 S-025211	V45-6.7	内容 TLS 库缺陷修复落 LibreSSL 的代码重构	B	sb72
-S-025212		内容为 ROW_MINE claim 载体零主题	B	sb72
+S-025212	V45-6.7	内容 TLS 库注解加固落 LibreSSL 的代码重构	B	sb72
 S-025213	V45-6.11	内容 POODLE 响应发布落 OpenSSH 与 LibreSSL 的维护模式	B	sb72
 S-025214	V45-6.7	内容库代码清理落 LibreSSL 的代码重构	B	sb72
 S-025215	V45-5.2	内容 OpenNTPD 开发与集成落 OpenNTPD 与时间同步安全	B	sb72
