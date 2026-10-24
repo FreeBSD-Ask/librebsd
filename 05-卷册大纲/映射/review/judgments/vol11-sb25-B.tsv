@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025996	V64-9.12	内容为 18.3% 占比集中实测	THREE_PASS	B
+S-025997	V64-8.11	内容为 TOP2 75.8% 集中实测	THREE_PASS	B
+S-025998	V64-9.8	内容为三项目主导模式对照	THREE_PASS	B
+S-025999	V75-2.6	内容为首 commit 与公告交叉验证	THREE_PASS	B
+S-026000	V48-6.2	内容为 EXPERIMENTAL 到默认序列	THREE_PASS	B
+S-026001	V48-6.2	内容为并行阶段与功能对照	THREE_PASS	B
+S-026002	V48-4.10	内容为 1.8 稳定到 6.0 移除序列	THREE_PASS	B
+S-026003	V48-4.10	内容为 HVM 路径 Submit 3389	THREE_PASS	B
+S-026004	V52-7.6	内容为渐进退役与被迫移除辨析	THREE_PASS	B
+S-026005	V48-6.8	内容为 8 倍规模与 ZFS 路线	THREE_PASS	B
+S-026006	V48-6.8	内容为 OpenZFS 集成对照	THREE_PASS	B
+S-026007	V48-6.8	内容为安全机制路线对照	THREE_PASS	B
+S-026008	V48-6.8	内容为 ext4 btrfs 与树外 ZFS	THREE_PASS	B
+S-026009	V49-3.7	内容为四库 FS commit 对照	THREE_PASS	B
+S-026010		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026011		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026012		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026013		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026014		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026015		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026016		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026017		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026018		内容为邮件蒸馏观点 V2 格式	THREE_PASS	B
+S-026019		内容为编纂元数据层，无叙事节点	THREE_PASS	B

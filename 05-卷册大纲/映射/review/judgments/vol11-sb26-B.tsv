@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-026020		内容为编纂元数据层，无叙事节点	THREE_PASS	B
+S-026021	V48-7.5	内容为 6.2 DRM 回移节点	THREE_PASS	B
+S-026022	V48-7.6	内容为网卡存储 USB 兼容扩展	THREE_PASS	B
+S-026023	V48-7.11	内容为移植滞后与规模对照	THREE_PASS	B
+S-026024		内容为 DRM netif 目录统计	THREE_PASS	B
+S-026025	V48-7.1	内容为两枚点版本 tag 序列	THREE_PASS	B
+S-026026	V48-7.10	内容为无新 major 版本与 commit 谷值	THREE_PASS	B
+S-026027	V48-7.11	内容为现代化推进差距对照	THREE_PASS	B
+S-026028		内容为两 tag target hash 核验	THREE_PASS	B
+S-026029	V64-9.12	内容为 committer 数与最终决定权	THREE_PASS	B
+S-026030	V48-7.9	内容为 Tigeot 退出与降幅统计	THREE_PASS	B
+S-026031	V53-6.5	内容为双重与单一模型对照	THREE_PASS	B
+S-026032	V75-2.6	内容为公告归档完整 2003-2026	THREE_PASS	B
+S-026033	V48-7.1	内容为 v6.4.2 止的 tag 序列	THREE_PASS	B
+S-026034	V48-7.9	内容为降幅 33.3% 与核心留存	THREE_PASS	B
+S-026035	V48-7.11	内容为 2024-2026 四库对照	THREE_PASS	B
+S-026036		内容为 131 tag 与年度发布序列	THREE_PASS	B
+S-026037	V48-7.10	内容为 16 CVE commit 数据切片	THREE_PASS	B
+S-026038	V48-7.10	内容为文件系统零 CVE 对照	THREE_PASS	B
+S-026039	V48-7.10	内容为 OpenSSH 漏洞三天快速响应	THREE_PASS	B
+S-026040	V48-7.10	内容为 FreeBSD 补丁单向回溯	THREE_PASS	B
+S-026041	V48-7.10	内容为 expat 等升级链	THREE_PASS	B
+S-026042	V48-7.10	内容为 MPSAFE-TTY 时代节点	THREE_PASS	B
+S-026043	V48-7.10	内容为个人主导响应模式辨析	THREE_PASS	B

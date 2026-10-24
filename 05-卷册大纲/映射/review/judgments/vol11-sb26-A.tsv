@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-026020		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-026021	V48-7.5	题面 GPU 改进命中 48 卷 7.5 amdgpu 与现代图形	THREE_PASS	A
+S-026022	V48-7.6	题面驱动支持改进命中 48 卷 7.6 服务器硬件与固件支持	THREE_PASS	A
+S-026023	V48-7.11	题面与 Linux 硬件比较命中 48 卷 7.11 同时期比较	THREE_PASS	A
+S-026024		题面为 commit 记录考据统计层	THREE_PASS	A
+S-026025	V48-7.1	题面 6.4.1/6.4.2 发布记录命中 48 卷 7.1 6.x 发布历史	THREE_PASS	A
+S-026026	V48-7.10	题面维护停滞命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026027	V48-7.11	题面与 FreeBSD 14/15 比较命中 48 卷 7.11 同时期比较	THREE_PASS	A
+S-026028		题面为发布说明考据统计层	THREE_PASS	A
+S-026029	V64-9.12	题面权限管理命中 64 卷 9.12 领导结构长期变化	THREE_PASS	A
+S-026030	V48-7.9	题面加入退出记录命中 48 卷 7.9 贡献者与 committer 变迁	THREE_PASS	A
+S-026031	V53-6.5	题面权限模型比较命中 53 卷 6.5 个人主导开发模式	THREE_PASS	A
+S-026032	V75-2.6	题面权限邮件考据命中 75 卷 2.6 邮件列表资料	THREE_PASS	A
+S-026033	V48-7.1	题面维护与发布记录命中 48 卷 7.1 6.x 发布历史	THREE_PASS	A
+S-026034	V48-7.9	题面社区萎缩留存命中 48 卷 7.9 贡献者与 committer 变迁	THREE_PASS	A
+S-026035	V48-7.11	题面现状比较命中 48 卷 7.11 同时期比较	THREE_PASS	A
+S-026036		题面为发布统计考据层	THREE_PASS	A
+S-026037	V48-7.10	题面安全态势总览命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026038	V48-7.10	题面 HAMMER2 漏洞史命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026039	V48-7.10	题面 regreSSHion 响应命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026040	V48-7.10	题面 MFC 回溯命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026041	V48-7.10	题面组件漏洞清算命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026042	V48-7.10	题面 MP-safe 演化命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
+S-026043	V48-7.10	题面无 SA 响应文化命中 48 卷 7.10 漏洞响应综览与长期维护	THREE_PASS	A
