@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014793		题面为章级综合/留痕/文献层泛型	A	sb4
+S-014873		题面“核心要点”为章级综合层	A	sb4
+S-014953		题面“专名识别错误”为考据层	A	sb4
+S-015033		题面“zpool split”零命中（细节级）	A	sb4
+S-015113		题面“KVM 复现 zfs”零命中（细节级）	A	sb4
+S-015193	V56-2.9	题面“Mac OS X 集成事件史料”命中第五十六卷 2.9 邻	A	sb4
+S-015273	V59-5.6	题面“BSD 与 CDDL/GPL 兼容比较”命中第五十九卷 5.6	A	sb4
+S-015353		题面“2012 起点 DragonFly 口述”为口述承载层	A	sb4
+S-015433		题面“birthtime linuxfsdevel”零命中（Linux 侧无节）	A	sb4
+S-015513		题面为证据等级来源模板，零语义	A	sb4
+S-015593		题面“裸设备块大小吞吐”零命中（细节级）	A	sb4
+S-015673		题面“ZFS NFS4 导出 Linux”零命中（细节级）	A	sb4
+S-015753		题面“bru 备份 SGI”零命中（细节级）	A	sb4
+S-015833		题面“dtrace rtwn ko”零命中（细节级）	A	sb4
+S-015913		题面“WITHOUT_SSP 构建”零命中（细节级）	A	sb4
+S-015993		题面“110 CURRENT Mouse”零命中（细节级）	A	sb4
+S-016073		题面为证据等级来源模板，零语义	A	sb4
+S-016153		题面“双 Seagate 1T”零命中（细节级）	A	sb4
+S-016233		题面为证据等级来源模板，零语义	A	sb4
+S-016313		题面为章级综合/留痕/文献层泛型	A	sb4
+S-016393		题面“tuning(7) 补丁”零命中（细节级）	A	sb4
+S-016473	V36-11.3	题面“vt(4) Newcons 控制台”命中第三十六卷 11.x 特性族（节级无从）	A	sb4
+S-016553		题面“BIND→Unbound”零命中（DNS 服务无节）	A	sb4
+S-016633		题面“syscons 无 NVI”零命中（细节级）	A	sb4
