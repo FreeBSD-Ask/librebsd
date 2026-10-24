@@ -1,6 +1,6 @@
 source_id	target_id	reason	strategy	pass_id
 S-023674		题面“kjs pthreads 非 posix 扩展”零命中	A	sb8
-S-023675		题面“powernow-k7 setperf”零命中	A	sb8
+S-023675	V45-11.1	正文题旨“dmesg 缓冲补丁扩展 amd64”命中第四十五卷 11.1	A	sb8
 S-023676		题面“rusers authunix 空指针”零命中	A	sb8
 S-023677		题面为证据等级来源模板	A	sb8
 S-023678		题面“loader 加载自定义 DSDT ACPI”零命中	A	sb8

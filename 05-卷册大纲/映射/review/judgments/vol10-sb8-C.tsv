@@ -1,6 +1,6 @@
 source_id	target_id	reason	strategy	pass_id
 S-023674		层级线索：线程接口无对应	C	sb8
-S-023675		层级线索：CPU 频率驱动无对应	C	sb8
+S-023675	V45-11.1	结构线索：架构移植就近（V45-11.1）	C	sb8
 S-023676		层级线索：RPC 工具无对应	C	sb8
 S-023677		模板层无结构对应	C	sb8
 S-023678		层级线索：ACPI 启动无对应	C	sb8

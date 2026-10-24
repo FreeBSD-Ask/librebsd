@@ -1,6 +1,6 @@
 source_id	target_id	reason	strategy	pass_id
 S-023674		内容为线程接口兼容讨论零命中	B	sb8
-S-023675		内容为 CPU 频率驱动排障零命中	B	sb8
+S-023675	V45-11.1	内容 dmesg 补丁跨架构合并落 从 i386 到 amd64	B	sb8
 S-023676		内容为 RPC 工具补丁零命中	B	sb8
 S-023677		内容为 ROW_MINE claim 载体零主题	B	sb8
 S-023678		内容为 ACPI 启动问答零命中	B	sb8
