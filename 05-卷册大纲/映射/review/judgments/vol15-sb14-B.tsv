@@ -1,0 +1,25 @@
+﻿source_id	target_id	reason	strategy	pass_id
+S-028227		内容为 libarchive 多格式归档库，无节点	B	sb14
+S-028228	V49-5.3	内容述 DragonFly 2004 采用 pkgsrc 软件生态	B	sb14
+S-028229	V59-5.1	内容比 BSD、MIT 与 Apache 宽松许可扩散	B	sb14
+S-028230	V63-1.7	内容述 FreeBSD 9.0 起采用 LLVM/Clang 工具链	B	sb14
+S-028231		内容为方法论自反声明	B	sb14
+S-028232		内容为按主题拆分说明	B	sb14
+S-028233		内容为章节索引	B	sb14
+S-028234		内容为数据库统计	B	sb14
+S-028235		内容为关联文献清单	B	sb14
+S-028236		内容为映射式批注	B	sb14
+S-028237		内容为证据复核登记	B	sb14
+S-028238	V44-2.3	内容述 1999-09-26 由 OSSH fork 出 OpenSSH	B	sb14
+S-028239	V44-5.3	内容述 2014 Heartbleed 后 LibreSSL fork	B	sb14
+S-028240	V53-7.6	内容述 pf 由 OpenBSD 原创并跨项目移植	B	sb14
+S-028241	V60-11.1	内容述 mandoc 由 Dzonsons 孵化为独立工具	B	sb14
+S-028242	V45-2.2	内容述 W^X 内存页不可兼可写可执行	B	sb14
+S-028243	V60-11.1	内容述 mandoc 需覆盖 groff 宏层特性	B	sb14
+S-028244	V60-9.2	内容为 OpenSSH 协议弃用公告一手材料	B	sb14
+S-028245		内容为总纲 10 与英雄史观批评	B	sb14
+S-028246		内容为 pkg install 上手体验批评	B	sb14
+S-028247		内容为 Varnish Cache 与 phk，无节点	B	sb14
+S-028248		内容为 libarchive 创建者与格式支持	B	sb14
+S-028249	V37-5.4	内容述 Capsicum 能力安全与 CHERI	B	sb14
+S-028250	V37-3.5	内容述 bhyve 随 FreeBSD 10 发布	B	sb14

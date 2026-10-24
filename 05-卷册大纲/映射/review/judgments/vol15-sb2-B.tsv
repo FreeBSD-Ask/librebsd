@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-027939		内容为转写噪声与署名核对，属考据附注	B	sb2
+S-027940	V63-1.3	内容为内核宏层 BSD/LGPL 授权与 klibc 先例	B	sb2
+S-027941	V63-1.3	内容为 aic7xxx 驱动 Dual BSD/GPL 标注	B	sb2
+S-027942	V63-1.3	内容为 Oracle 库双许可合规否决与跨项目共享	B	sb2
+S-027943	V63-1.3	内容为 iputils 调 OpenSSL 后的许可归属	B	sb2
+S-027944	V63-1.3	内容为网卡驱动中断合并补丁的双许可声明	B	sb2
+S-027945	V63-1.3	内容为 nes 驱动 GPL v2 与 OpenIB BSD 二选一	B	sb2
+S-027946	V63-1.3	内容为 Hyper-V 模块许可由 MIT/GPL 改 BSD/GPL	B	sb2
+S-027947	V63-1.3	内容为 IPoIB 补丁写入双许可选择条款	B	sb2
+S-027948	V63-1.3	内容为 IPoIB 头文件双许可声明与条款位置	B	sb2
+S-027949	V63-1.3	内容为 libbpf 双许可决定不复用 GPL 头文件	B	sb2
+S-027950	V72-4.6	内容为 GPL 执行需集中权力与否的治理辩论	B	sb2
+S-027951	V63-1.3	内容为双许可工程实践源头与规模化质疑机制	B	sb2
+S-027952	V72-4.6	内容为 GPL 执法立场与 SFC 共识动员	B	sb2
+S-027953	V59-7.4	内容列 Apple、Sony、Juniper、NetApp、Netflix 采用	B	sb2
+S-027954	V59-7.1	内容述嵌入式与网络设备采用及商业闭环难成	B	sb2
+S-027955	V59-7.10	内容述亿级设备采用而上游未获等比例回馈	B	sb2
+S-027956	V59-9.12	内容述 SEC 文件与拆解报告多源交叉取用	B	sb2
+S-027957		内容为 TiddlyWiki 单文件架构描述	B	sb2
+S-027958	V59-8.1	内容为 CC 非商业转 BSD 的完整决策链	B	sb2
+S-027959	V32-3.6	内容为 Torvalds／Stallman／BSD 社区三层立场	B	sb2
+S-027960	V32-3.6	内容述争议跨三十年影响社区关系与企业决策	B	sb2
+S-027961	V59-9.9	内容辨不回馈与要求回馈的机制性对立	B	sb2
+S-027962	V59-9.12	内容述一手论辩存档与媒体转述分层	B	sb2

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-027987	V63-1.3	题面仅“linux 邮件提取”，内核许可群	A	sb4
+S-027988	V63-1.3	题面“libbpf 双许可改 BSD-2”	A	sb4
+S-027989	V63-1.3	题面“linux 邮件提取”内核许可群	A	sb4
+S-027990	V63-1.3	题面为模板残句，内核许可群	A	sb4
+S-027991	V63-1.3	题面“linux 邮件提取”内核许可群	A	sb4
+S-027992	V63-1.3	题面为模板残句，内核许可群	A	sb4
+S-027993	V32-4.1	题面“GPL-1.0 copyleft 诞生”归 GPL 法律结构	A	sb4
+S-027994	V16-5.1	题面“GPL-2.0 聚合豁免”归 GPL v2 定型	A	sb4
+S-027995	V16-5.3	题面“GPL-3.0 反 Tivoization”归 GPL v3 修订	A	sb4
+S-027996	V32-4.1	题面“GPL 全系与 BSD 史关系”归 GPL 结构	A	sb4
+S-027997	V32-4.1	题面“GPL-1.0 起草与 copyleft”归 GPL 结构	A	sb4
+S-027998	V63-1.3	题面“copyleft-next 标记与 GPL 兼容”内核许可	A	sb4
+S-027999	V63-1.3	题面“linux 邮件提取”内核许可群	A	sb4
+S-028000	V63-1.3	题面“linux 邮件提取”内核许可群	A	sb4
+S-028001	V63-1.3	题面“linux 邮件提取”内核许可群	A	sb4
+S-028002	V63-1.3	题面“EXPORT_SYMBOL_GPL 之争”归许可入 Linux	A	sb4
+S-028003	V72-4.6	题面“GPL 执法之争与 SFC 类比”归执行机制	A	sb4
+S-028004	V72-4.6	题面“linux 邮件提取”，ksummit 执法群	A	sb4
+S-028005	V62-1.2	题面“SPDX 标注混乱与内核边界”归 SPDX 标识	A	sb4
+S-028006	V32-4.1	题面“GPL 实证链时间总叙”归 GPL 结构	A	sb4
+S-028007	V63-1.3	题面“公有领域放弃与头文件导出”内核证据	A	sb4
+S-028008	V16-5.2	题面“LGPL-2.0”归 LGPL 与库边界	A	sb4
+S-028009	V16-5.2	题面“LGPL-2.1 可重新许可”归 LGPL	A	sb4
+S-028010	V16-5.2	题面“LGPL-3.0 附带软件例外”归 LGPL	A	sb4

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015341	V45-1.5	题面 seccomp seccomp-bpf命中 45 卷 Capsicum 族	A	sb23
+S-015342	V45-1.5	题面 SELinux LSM 框架命中 45 卷 Capsicum 族	A	sb23
+S-015343	V45-1.5	题面 OpenBSD systrace pledge unveil命中 45 卷	A	sb23
+S-015344	V45-1.5	题面 Windows AppContainer命中 45 卷	A	sb23
+S-015345	V45-1.5	题面 macOS Sandbox Seatbelt命中 45 卷	A	sb23
+S-015346		题面 配套采访录为口述承载层	A	sb23
+S-015347		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015348		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015349		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015350		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015351		题面 自反性声明为方法层	A	sb23
+S-015352		题面 总纲10 动手者为总纲参照层	A	sb23
+S-015353		题面 DragonFly 起点口述为口述承载层	A	sb23
+S-015354		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015355		题面 章节概述为章级综合层	A	sb23
+S-015356		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015357		题面 Git 仓库分析为统计层	A	sb23
+S-015358		题面 Git 仓库分析为统计层	A	sb23
+S-015359		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015360		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015361		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015362		题面为章级综合/留痕/文献层泛型	A	sb23
+S-015363		题面 bhyve FreeNAS 口述为口述承载层	A	sb23
+S-015364		题面 bhyve suspend resume 口述为口述承载层	A	sb23
