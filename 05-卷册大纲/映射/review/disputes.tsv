@@ -2438,6 +2438,24 @@ S-016394	∅	∅	V06-2.3	三趟不一致	adjacent
 S-016395	∅	∅	V06-2.3	三趟不一致	adjacent
 S-016396	∅	∅	V06-2.3	三趟不一致	adjacent
 S-016552	V36-11.3	V36-11.3	∅	三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）	adjacent
+S-016906	V37-5.7	V37-5.7	V37-5.7	hard-stuff-suspect	generic
+S-016907	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016908	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016909	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016910	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016911	V37-5.4	∅	V06-2.3	三趟不一致	empty-vs-value
+S-016912	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016913	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016914	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-016915	V37-5.4	V37-5.4	V37-5.4	hard-stuff-suspect	generic
+S-017446	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017454	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017637	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017686	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017697	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017706	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017849	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
+S-017901	V37-7.6	V37-7.6	V37-7.6	hard-stuff-suspect	generic
 S-019429	V40-1.2	V40-1.4	V41-11.6	三趟不一致	generic
 S-019430	V40-1.4	V40-1.5	V40-1.4	三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）	adjacent
 S-019432	V43-2.1	V41-12.2	∅	三趟不一致	empty-vs-value
