@@ -19,7 +19,9 @@
    旧版依赖 `cur.lastrowid` 自增取号会写入 NULL id；`INSERT OR IGNORE` 在 DuckDB 无
    约束表上直接抛 Binder Error（要求显式 ON CONFLICT 列）。现改：
    ① 显式取号——各表纯数字 id 当前上限 +1 起；
-   ② 去重改用 `WHERE NOT EXISTS` 显式判重，语义等价于旧版 INSERT OR IGNORE。
+   ② 去重改用 `WHERE NOT EXISTS` 显式判重，语义等价于旧版 INSERT OR IGNORE；
+   ③ `reference_duplicates` 的「先查后插」两步写法已合并为单条 `MERGE INTO`（ON 条件
+   保证同键二跑幂等，不依赖唯一约束，理由见写入处注释）。
    **DuckDB 2.0.0 复核（2026-10-24）**：2.0.0 已支持 `ALTER TABLE … ADD UNIQUE`，但
    `reference_duplicates` 实测约束数为 0（`duckdb_constraints()` 无行），故 `INSERT OR IGNORE`
    仍不可用；给活库加唯一约束属 schema 变更（须先测存量重复、走 ADR 与两处登记），
@@ -51,8 +53,10 @@ from datetime import datetime, timedelta, timezone
 
 import duckdb
 
-# 脚本位于 00-编纂规则与格式规范/01-规则/脚本与命令/，上溯 3 级为仓库根
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# 脚本位于 00-编纂规则与格式规范/01-规则/脚本与命令/，上溯 4 级为仓库根
+# 本件原在 script/（自该处上溯 3 级即仓库根），迁入本目录后层数多一层，故须上溯 4 级
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
 DB_REL = os.path.join("04-现代研究文献", "05-参考文献全文数据库",
                       "references_fulltext.duckdb")
 BASE_DIR_REL = os.path.join("04-现代研究文献", "03-文献下载")
@@ -159,13 +163,6 @@ def next_ids(con, table, n):
     return [str(top + i) for i in range(1, n + 1)]
 
 
-def dup_exists(con, primary_id, dup_type):
-    """该主记录是否已登记过此类型的重复项——等价于旧版 INSERT OR IGNORE 的去重语义。"""
-    return con.execute(
-        "SELECT COUNT(*) FROM reference_duplicates WHERE primary_reference_id = ? "
-        "AND duplicate_type = ?", [primary_id, dup_type]).fetchone()[0] > 0
-
-
 def dep_report():
     miss = []
     for mod, why in (("fitz", "PDF 文本层"), ("ebooklib", "EPUB")):
@@ -257,12 +254,24 @@ def main():
                     row = con.execute(
                         'SELECT id FROM "references" WHERE sha256 = ? LIMIT 1',
                         [sha]).fetchone()
-                    if row and not args.dry_run and not dup_exists(con, row[0], "sha256"):
+                    if row and not args.dry_run:
+                        # 「查重＋插入」合并为单条 MERGE（2026-10-24）：① 不用 INSERT OR
+                        # IGNORE——本表 duckdb_constraints() 实测为空（无主键／唯一约束），
+                        # 即无冲突目标，OR IGNORE 会抛 Binder Error；② MERGE 不依赖唯一约束，
+                        # 只按 ON 条件匹配；③ 幂等由 ON 条件（primary／dup／type 三元组）保证，
+                        # 同键二跑命中 MATCHED、不再插入。
                         con.execute(
-                            "INSERT INTO reference_duplicates (id, primary_reference_id, "
+                            "MERGE INTO reference_duplicates AS t USING (SELECT ? AS id, "
+                            "? AS primary_id, ? AS dup_id, ? AS dup_type, ? AS match_score, "
+                            "? AS match_fields, ? AS merged_at, ? AS merged_by, ? AS note) "
+                            "AS s ON t.primary_reference_id = s.primary_id "
+                            "AND t.duplicate_reference_id = s.dup_id "
+                            "AND t.duplicate_type = s.dup_type "
+                            "WHEN NOT MATCHED THEN INSERT (id, primary_reference_id, "
                             "duplicate_reference_id, duplicate_type, match_score, "
                             "match_fields, merged_at, merged_by, merge_notes) VALUES "
-                            "(?,?,?,?,?,?,?,?,?)",
+                            "(s.id, s.primary_id, s.dup_id, s.dup_type, s.match_score, "
+                            "s.match_fields, s.merged_at, s.merged_by, s.note)",
                             next_ids(con, "reference_duplicates", 1) + [
                                 row[0], "0", "sha256", "1.0", "sha256",
                                 now, MERGED_BY, "sha256 dup for " + fn])

@@ -13,6 +13,9 @@
    实测无唯一约束，`INSERT OR IGNORE` 无冲突目标可用，改为 `WHERE NOT EXISTS` 判重。
 4. 补 `--db`、`--selftest`：后者以两份临时库夹具断言“零重复”与“有重复＋错误文件”两类。
 5. 默认只识别并生成清单；`--execute` 才删文件（不可逆），删前仍做四项核验。
+6. 删除与台账写入合并为**一条**数据修改 CTE（DuckDB 2.0）：`UPDATE ... RETURNING`
+   供 `INSERT` 承接，语句返回 `(updated, inserted)` 真实计数；单语句原子性杜绝
+   “已改状态、未写台账”的半完成态（原为两条独立语句）。
 
 用法：
     python cleanup_duplicates_and_errors.py                # 仅识别，生成清单
@@ -226,13 +229,32 @@ def generate_pending_list(duplicates: List[Dict], errors: List[Dict]) -> Tuple[i
     return len(auto_delete), len(review_only)
 
 
-def _dup_row_exists(con, primary_id, ref_id, dup_type) -> bool:
-    """等价的 INSERT OR IGNORE 判重（该表无唯一约束，不能靠冲突忽略）。"""
-    n = con.execute(
-        "SELECT count(*) FROM reference_duplicates "
-        "WHERE primary_reference_id = ? AND duplicate_reference_id = ? AND duplicate_type = ?",
-        [str(primary_id), str(ref_id), dup_type]).fetchone()[0]
-    return n > 0
+# 删除＋台账写成**一条**数据修改 CTE（DuckDB 2.0）：`upd` 先行 RETURNING id，
+# `ins` 以 `FROM upd` 承接同一行，再以 `WHERE NOT EXISTS` 复刻原 `INSERT OR IGNORE`
+# 语义（该表无唯一约束）。非五类 reason 时令台账开关为 0（`WHERE ? = 1` 永假），
+# 仍走同一条语句——单语句原子性保证不会出现“已改状态、未写台账”的半完成态。
+_DELETE_CTE_SQL = """
+WITH upd AS (
+    UPDATE "references" SET status = 'deleted', file_path = ?
+     WHERE id = ?
+    RETURNING id
+)
+, ins AS (
+    INSERT INTO reference_duplicates (
+        primary_reference_id, duplicate_reference_id, duplicate_type,
+        match_score, match_fields, merged_at, merged_by, merge_notes)
+    SELECT ?, ?, ?, '1.0', ?, ?, 'cleanup_script', ?
+      FROM upd
+     WHERE ? = 1
+       AND NOT EXISTS (
+           SELECT 1 FROM reference_duplicates d
+            WHERE d.primary_reference_id = ?
+              AND d.duplicate_reference_id = ?
+              AND d.duplicate_type = ?)
+    RETURNING duplicate_reference_id
+)
+SELECT (SELECT count(*) FROM upd) AS updated, (SELECT count(*) FROM ins) AS inserted
+"""
 
 
 def pre_deletion_checks(con, item: Dict) -> Tuple[bool, str]:
@@ -278,9 +300,6 @@ def execute_deletion(con, item: Dict) -> Tuple[bool, str]:
             return False, "文件删除失败: {}".format(e)
 
     now = datetime.now().strftime("%Y-%m-%d")
-    con.execute('UPDATE "references" SET status = ?, file_path = ? WHERE id = ?',
-                ["deleted", "[DELETED {}] {}".format(now, fp), ref_id])
-
     dup_type = None
     note = ""
     if item["reason"] in ("exact_duplicate", "fuzzy_duplicate"):
@@ -289,15 +308,31 @@ def execute_deletion(con, item: Dict) -> Tuple[bool, str]:
     elif item["reason"] in ("corrupted", "unreadable", "missing_file"):
         dup_type = item["reason"]
         note = "清理脚本删除错误文件({}): {}".format(item["reason"], item.get("title", ""))
-    if dup_type and not _dup_row_exists(con, item.get("primary_reference_id", 0), ref_id, dup_type):
-        con.execute(
-            "INSERT INTO reference_duplicates (primary_reference_id, duplicate_reference_id, "
-            "duplicate_type, match_score, match_fields, merged_at, merged_by, merge_notes) "
-            "VALUES (?, ?, ?, '1.0', ?, ?, 'cleanup_script', ?)",
-            [str(item.get("primary_reference_id", 0)), str(ref_id), dup_type,
-             "file_path={}".format(fp), datetime.now().strftime("%Y-%m-%d %H:%M:%S"), note])
 
-    return True, "已删除 file_deleted={}".format(file_deleted)
+    primary_id = str(item.get("primary_reference_id", 0))
+    dup_type_val = dup_type or ""
+    params = [
+        "[DELETED {}] {}".format(now, fp),      # 新 file_path
+        ref_id,                                 # UPDATE 目标 id
+        primary_id,                             # primary_reference_id
+        str(ref_id),                            # duplicate_reference_id
+        dup_type_val,                           # duplicate_type
+        "file_path={}".format(fp),              # match_fields
+        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),  # merged_at
+        note,                                   # merge_notes
+        1 if dup_type else 0,                   # 台账开关（非五类 reason 时为 0，永不插）
+        primary_id,                             # NOT EXISTS 判重主键
+        str(ref_id),
+        dup_type_val,
+    ]
+    try:
+        row = con.execute(_DELETE_CTE_SQL, params).fetchone()
+    except Exception as e:
+        return False, "数据库写入失败: {}".format(e)
+    updated, inserted = int(row[0]), int(row[1])
+
+    return True, "已删除 file_deleted={} updated={} inserted={}".format(
+        file_deleted, updated, inserted)
 
 
 def log_deletion(item: Dict, success: bool, msg: str):
@@ -410,11 +445,54 @@ def _selftest_case(tmp: Path, with_dups: bool) -> Dict[str, int]:
     }
 
 
+def _selftest_s9(tmp: Path) -> Dict[str, Any]:
+    """S9：合并后的单语句 CTE——状态更新、台账写入与同键幂等重跑。"""
+    dbp = tmp / "s9.duckdb"
+    if dbp.exists():
+        dbp.unlink()
+    data = tmp / "s9files"
+    data.mkdir(exist_ok=True)
+    body = b"%PDF-1.4\n" + b"S" * 20000
+    (data / "p.pdf").write_bytes(body)
+    (data / "q.pdf").write_bytes(body)          # 与 p 同内容 → exact_duplicate
+    sha = compute_sha256(data / "q.pdf")
+
+    con = duckdb.connect(str(dbp))
+    try:
+        for ddl in FIXTURE_DDL:
+            con.execute(ddl)
+        con.executemany('INSERT INTO "references" VALUES (?,?,?,?,?,?,?,?,?,?)', [
+            ("1", str(data / "p.pdf"), "p.pdf", "pdf", "Book", "Author", "2000", "active", "20009", sha),
+            ("10", str(data / "q.pdf"), "q.pdf", "pdf", "Book", "Author", "2000", "active", "20009", sha),
+        ])
+        item = [d for d in identify_duplicates(con) if d["reason"] == "exact_duplicate"][0]
+
+        ok1, msg1 = execute_deletion(con, item)
+        status, fp_new = con.execute(
+            'SELECT status, file_path FROM "references" WHERE id = ?', ["10"]).fetchone()
+        n1 = con.execute("SELECT count(*) FROM reference_duplicates").fetchone()[0]
+
+        ok2, msg2 = execute_deletion(con, item)   # 同键二跑：文件已删，台账不重复
+        n2 = con.execute("SELECT count(*) FROM reference_duplicates").fetchone()[0]
+    finally:
+        con.close()
+
+    return {
+        "status": status,
+        "prefix_ok": str(fp_new).startswith("[DELETED "),
+        "dup_first": n1,
+        "msg1_ok": ok1 and "updated=1" in msg1 and "inserted=1" in msg1,
+        "dup_second": n2,
+        "msg2_ok": ok2 and "updated=1" in msg2 and "inserted=0" in msg2,
+    }
+
+
 def selftest() -> int:
     tmp = Path(tempfile.mkdtemp(prefix="cleanup_selftest_"))
     try:
         clean = _selftest_case(tmp, with_dups=False)
         dup = _selftest_case(tmp, with_dups=True)
+        s9 = _selftest_s9(tmp)
         checks = [
             ("S1 无重复时零误报", (clean["exact"], clean["fuzzy"]), (0, 0)),
             ("S2 精确重复命中 2 组（a/b、d/e）", dup["exact"], 2),
@@ -424,6 +502,10 @@ def selftest() -> int:
             ("S6 损坏文件命中 1", clean["corrupted"], 1),
             ("S7 过小仅标记复核 1", clean["small"], 1),
             ("S8 .md 摘要不被判坏（format 标 pdf 亦不误判）", clean["md_corrupted"], 0),
+            ("S9 单语句 CTE：删后状态/台账/同键幂等重跑",
+             (s9["status"], s9["prefix_ok"], s9["dup_first"], s9["msg1_ok"],
+              s9["dup_second"], s9["msg2_ok"]),
+             ("deleted", True, 1, True, 1, True)),
         ]
         bad = 0
         for name, got, want in checks:
