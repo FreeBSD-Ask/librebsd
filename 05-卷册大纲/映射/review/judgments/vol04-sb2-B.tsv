@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-004129	V21-3.2	单一维护者局限	B	sb2
+S-004130	V27-1.6	先驱与局限	B	sb2
+S-004131	V64-1.9	386bsd 投票	B	sb2
+S-004132		fnmatch	B	sb2
+S-004133	V28-1.1	386BSD 可用	B	sb2
+S-004134	V21-2.3	Bastille Day	B	sb2
+S-004135	V27-1.4	FreeBSD 1.0	B	sb2
+S-004136	V28-1.2	马太效应	B	sb2
+S-004137		内容关键词“cpio 映像”零命中（细节级）	B	sb2
+S-004138		内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb2
+S-004139	V28-1.1	内容主题词“GPL vs BSDL 协作”命中 V28-1.1	B	sb2
+S-004140	V64-1.9	内容主题词“六组征票”命中 V64-1.9	B	sb2
+S-004141		内容关键词“芯片组内存”零命中（细节级）	B	sb2
+S-004142	V21-3.5	内容主题词“不可持续”命中 V21-3.5	B	sb2
+S-004143	V27-1.2	内容主题词“fork 协作失败”命中 V27-1.2	B	sb2
+S-004144	V21-3.5	内容主题词“二元遮蔽”命中 V21-3.5	B	sb2
+S-004145	V21-3.5	内容主题词“史料不平衡”命中 V21-3.5	B	sb2
+S-004146		内容关键词“agate”零命中（细节级）	B	sb2
+S-004147		内容关键词“mkmanifest”零命中（细节级）	B	sb2
+S-004148	V21-3.4	内容主题词“Terry Lambert FAQ/Nate Williams”命中 V21-3.4	B	sb2
+S-004149	V21-3.4	内容主题词“驱动移植/文件系统/网络栈修复→patchkit→FreeBSD NetBSD”命中 V21-3.4	B	sb2
+S-004150	V01-8.5	内容主题词“边缘化遗忘/形式主义化”命中第一卷 8.5	B	sb2
+S-004151	V01-8.5	内容主题词“CVS commit/archive.org 交叉”命中第一卷 8.5	B	sb2
+S-004152		内容关键词“QIC 缩写规格”零命中（细节级）	B	sb2
