@@ -20,6 +20,10 @@
    约束表上直接抛 Binder Error（要求显式 ON CONFLICT 列）。现改：
    ① 显式取号——各表纯数字 id 当前上限 +1 起；
    ② 去重改用 `WHERE NOT EXISTS` 显式判重，语义等价于旧版 INSERT OR IGNORE。
+   **DuckDB 2.0.0 复核（2026-10-24）**：2.0.0 已支持 `ALTER TABLE … ADD UNIQUE`，但
+   `reference_duplicates` 实测约束数为 0（`duckdb_constraints()` 无行），故 `INSERT OR IGNORE`
+   仍不可用；给活库加唯一约束属 schema 变更（须先测存量重复、走 ADR 与两处登记），
+   本件维持应用层判重，不改约束。
 3. 取值口径对齐活库现行词表：extraction_method 用 `pymupdf_textlayer`／`native_text`
    （活库实测各 1702／971 行），弃用旧版发明的 `pymupdf/ebooklib/mobi/xparse-ocr`
    （活库 0 行）；source_tier `primary`（2113 行）、ocr_status `verified`（2190 行）、

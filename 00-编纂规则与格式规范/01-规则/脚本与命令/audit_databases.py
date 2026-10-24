@@ -120,6 +120,16 @@ def audit_db(name, rel_path, label):
             except Exception:
                 table_details.append({"table": tname, "rows": "error"})
 
+        # 存储版本：唯一合法读法是 duckdb_databases().tags（2.0.0 起文件头偏移 12 为弃用哨兵 999，
+        # 见流程规则“存储版本的读取口径”）。读不到时记 unknown，不臆测。
+        try:
+            _tags = con.execute(
+                "SELECT tags FROM duckdb_databases() WHERE database_name = current_database()"
+            ).fetchone()[0]
+            storage_version = dict(_tags).get("storage_version") if _tags else "unknown"
+        except Exception:
+            storage_version = "unknown"
+
         size = os.path.getsize(full_path)
         con.close()
 
@@ -128,6 +138,7 @@ def audit_db(name, rel_path, label):
             "label": label,
             "exists": True,
             "size_mb": round(size / 1048576, 1),
+            "storage_version": storage_version,
             "table_count": len(table_names),
             "total_rows": total_rows,
             "tables": table_details,
@@ -156,13 +167,22 @@ print("=" * 80)
 for label, title in [("functional", "12+ Functional DBs"), ("code_repo", "11 Code Repo DBs"), ("mail_merge", "4 Mail Merge DBs")]:
     group = [r for r in results if r["label"] == label]
     print(f"\n--- {title} ({len(group)} total) ---")
-    print(f"{'Name':<25} {'Exists':<7} {'Size(MB)':<10} {'Tables':<8} {'Rows':<15} {'Error' if any('error' in r for r in group) else ''}")
-    print("-" * 80)
+    print(f"{'Name':<25} {'Exists':<7} {'Size(MB)':<10} {'StorVer':<12} {'Tables':<8} {'Rows':<15}")
+    print("-" * 90)
     for r in group:
         if r.get("error"):
-            print(f"{r['name']:<25} {'YES' if r['exists'] else 'NO':<7} {'N/A':<10} {'N/A':<8} {'N/A':<15} {r['error'][:50]}")
+            print(f"{r['name']:<25} {'YES' if r['exists'] else 'NO':<7} {'N/A':<10} {'N/A':<12} {'N/A':<8} {'N/A':<15} {r['error'][:50]}")
         else:
-            print(f"{r['name']:<25} {'YES':<7} {r['size_mb']:<10} {r['table_count']:<8} {r['total_rows']:<15}")
+            print(f"{r['name']:<25} {'YES':<7} {r['size_mb']:<10} {r['storage_version']:<12} {r['table_count']:<8} {r['total_rows']:<15}")
+
+# 存储版本分布：用于巡检“库是否被静默升级/漏迁”（口径见流程规则“存储版本的读取口径”）
+_buckets = {}
+for r in results:
+    if r.get("exists") and not r.get("error"):
+        _buckets.setdefault(r["storage_version"], []).append(r["name"])
+print("\n--- Storage Version Distribution ---")
+for _v, _names in sorted(_buckets.items()):
+    print(f"  {_v:<14} {len(_names):>3} 库  {', '.join(sorted(_names))[:100]}")
 
 # Detailed table listing for key DBs
 key_dbs = ["historical_claims", "causal_graph", "original_sources", "research_notes", "cross_indexes", "metadata_interfaces", "review_reports", "fact_checks", "doubts_standalone", "references_fulltext", "sacred_sources", "changelog"]

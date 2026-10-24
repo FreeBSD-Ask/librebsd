@@ -356,12 +356,21 @@ def _check_file(path, label, snap, write_state, state_writer=None, state_target=
         print("[FAIL-open] 无法连接 {}：{}".format(label, str(e)[:120]))
         print("提示：目标被写连接占用时属正常操作态——待其结束后重试；门禁未通过前禁写。")
         return 1
+    # 存储版本：唯一合法读法是 duckdb_databases().tags（2.0.0 起文件头偏移 12 为弃用哨兵 999，
+    # 见流程规则“存储版本的读取口径”）；读不到记 unknown，不臆测、不影响裁决。
+    try:
+        _tags = con.execute(
+            "SELECT tags FROM duckdb_databases() WHERE database_name = current_database()").fetchone()[0]
+        storage_version = dict(_tags).get("storage_version", "unknown") if _tags else "unknown"
+    except Exception:
+        storage_version = "unknown"
     tables = collect_db_stats(con)
     has_claims = False
     if "evidence" in tables:
         cols = [c[0] for c in con.execute("DESCRIBE main.evidence").fetchall()]
         has_claims = "fact_text" in cols
     print("== claimdb_guard · {} ==".format(label))
+    print("  存储版本={}  引擎={}".format(storage_version, __import__("duckdb").__version__))
     for line in (header_lines or []):
         print("  {}".format(line))
     if has_claims:

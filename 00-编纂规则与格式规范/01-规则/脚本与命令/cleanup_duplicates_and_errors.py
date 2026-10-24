@@ -402,6 +402,16 @@ def main():
     args = parser.parse_args()
 
     ensure_log_dir()
+
+    # 硬闸：references_fulltext 已于 2026-10-14 升格 DuckDB 主存储层，SQLite 侧为 0 字节空壳；
+    # sqlite3.connect 会静默新建空库，后续读写全部落空壳。本脚本尚未完成 DuckDB 化（TD-029），
+    # 在改造完成前 fail-closed，不允许对空壳“跑一遍”。
+    if (not DB_PATH.exists()) or DB_PATH.stat().st_size == 0:
+        print("[ABORT] 目标 SQLite 库不存在或为 0 字节空壳：{}".format(DB_PATH))
+        print("        主存储层已为 DuckDB（references_fulltext.duckdb）；本脚本的 DuckDB 化未完成（TD-029）。")
+        print("        继续运行只会对空壳读写、零实际效果，且退出码仍可能为 0——故此处中止。")
+        sys.exit(2)
+
     conn = sqlite3.connect(str(DB_PATH))
 
     print("=" * 70)

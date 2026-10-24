@@ -702,6 +702,16 @@ def main() -> int:
 
     ensure_log_dir()
 
+    # 硬闸：SQLite 侧已于 2026-10-14 升格 DuckDB 主存储层，references_fulltext.db 为 0 字节空壳。
+    # sqlite3.connect 对 0 字节文件会静默新建空库并把全部写入丢进空壳（退出码 0、主库零增量），
+    # 故此处 fail-closed，并指向 DuckDB 版承接件 _full_ingest_all.py。
+    if (not DB_PATH.exists()) or DB_PATH.stat().st_size == 0:
+        print("[ABORT] 目标 SQLite 库不存在或为 0 字节空壳：{}".format(DB_PATH))
+        print("        继续运行会把全部写入丢进空库（主库零增量、退出码仍为 0）。")
+        print("        本脚本已退役，入库请改用同一目录的 _full_ingest_all.py（DuckDB 主存储层）：")
+        print("        python 00-编纂规则与格式规范/01-规则/脚本与命令/_full_ingest_all.py --dry-run")
+        sys.exit(2)
+
     # 连接数据库
     conn = sqlite3.connect(str(DB_PATH))
 
