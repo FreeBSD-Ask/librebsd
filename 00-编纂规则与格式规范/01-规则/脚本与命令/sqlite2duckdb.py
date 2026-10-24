@@ -116,7 +116,7 @@ def optimize_one(db_name):
            "size_before_mb": round(os.path.getsize(dst) / 1048576, 1), "indexes": {}}
     try:
         t1 = time.time()
-        # DuckDB 1.5.5 无 OPTIMIZE 语句；新建库无碎片，压实由 CHECKPOINT 完成（行组定稿 + WAL 收敛）
+        # DuckDB 无 OPTIMIZE 语句（1.5.5 与 2.0.0 实测均不支持）；新建库无碎片，压实由 CHECKPOINT 完成（行组定稿 + WAL 收敛）
         dk.execute("CHECKPOINT")
         rec["optimize_sec"] = round(time.time() - t1, 1)
         tables = [r[0] for r in dk.execute(

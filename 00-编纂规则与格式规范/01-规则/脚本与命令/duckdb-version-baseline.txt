@@ -2,7 +2,8 @@
 # 锁定由本文件持有，变更须走 ADR（现行：ADR-0017-DuckDB-2.0.0迁移采用逻辑导出导入与既有归档回退.md）。
 # 任何 pip install -U／依赖解析导致的隐式升级均视为违规；脚本启动时按本文件比对 duckdb.__version__。
 
-版本锁定：duckdb==1.5.5
+版本锁定：duckdb==2.0.0
 Python 版本：3.14.2
 记录日期：2026-10-24
-迁移目标：2.0.0（未执行）
+迁移状态：运行时已切换至 2.0.0（2026-10-24 18:55，ykla 令“现在就切换”）；逐库迁移进行中
+回退方法：pip install --proxy "" -i https://pypi.tuna.tsinghua.edu.cn/simple duckdb==1.5.5
