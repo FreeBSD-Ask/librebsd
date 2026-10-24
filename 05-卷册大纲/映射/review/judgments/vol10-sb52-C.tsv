@@ -1,5 +1,5 @@
 source_id	target_id	reason	strategy	pass_id
-S-024730		层级线索：API 惯用法无对应	C	sb52
+S-024730	V45-5.3	结构线索：路由守护进程就近（V45-5.3）	C	sb52
 S-024731		层级线索：守护进程清理无对应	C	sb52
 S-024732		层级线索：平台排障无对应	C	sb52
 S-024733	V45-6.7	结构线索：LibreSSL 重构就近（V45-6.7）	C	sb52

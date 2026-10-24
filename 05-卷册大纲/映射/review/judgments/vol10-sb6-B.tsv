@@ -1,6 +1,6 @@
 source_id	target_id	reason	strategy	pass_id
 S-023626	V45-5.3	内容 ospfd ECMP 多路径转发落 OpenBGPD 与路由协议工程	B	sb6
-S-023627		内容为 ROW_MINE claim 载体零主题	B	sb6
+S-023627	V45-4.2	内容状态跟踪使用条件落 pf 的状态检测与规则处理架构	B	sb6
 S-023628	V45-4.2	内容 pf 规则统计与性能排障落 pf 的状态检测与规则处理架构	B	sb6
 S-023629	V45-4.3	内容 rdr 反射 NAT 场景落 pf 地址转换与状态表	B	sb6
 S-023630	V45-5.3	内容 router-id 环回分发落 OpenBGPD 与路由协议工程	B	sb6
@@ -16,10 +16,10 @@ S-023639	V45-9.3	内容 relayd 预设目标行为落 relayd 与代理、负载�
 S-023640	V45-5.4	内容 IPsec flow 路由优先级落 OpenIKED 与 IKE/IPsec 实现	B	sb6
 S-023641	V44-4.5	内容 carp 防火墙稳定性与 mbuf 上限落 pf、CARP、网络工具生态发展	B	sb6
 S-023642	V44-4.5	内容 altq 流量整形开销讨论落 pf、CARP、网络工具生态发展	B	sb6
-S-023643		内容为硬件基准测试零命中	B	sb6
+S-023643	V45-11.1	内容 2004年10月30日，用户报告Adaptec2 落 从 i386 到 amd64	B	sb6
 S-023644		内容为 USB 调制解调器缺陷零命中	B	sb6
 S-023645		内容为 VFS 语义讨论零命中	B	sb6
 S-023646	V45-6.10	内容内核随机源池设计落 随机数、密钥处理与系统安全	B	sb6
-S-023647		内容为 ROW_MINE claim 载体零主题	B	sb6
+S-023647	V45-11.1	内容 2006年5月9日，MarkKettenis将a 落 从 i386 到 amd64	B	sb6
 S-023648		内容为栈查找结构讨论零命中	B	sb6
 S-023649		内容为网卡缺陷报告零命中	B	sb6

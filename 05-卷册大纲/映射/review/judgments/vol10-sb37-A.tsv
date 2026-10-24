@@ -2,7 +2,7 @@ source_id	target_id	reason	strategy	pass_id
 S-024370	V45-14.3	题面“2.8-release 升 stable 实测”命中第四十五卷 14.3	A	sb37
 S-024371	V37-12.12	题面“XFree86 4 回退失步”命中第三十七卷 12.12	A	sb37
 S-024372		题面为证据等级来源模板	A	sb37
-S-024373		题面“i-opener biosboot 补丁”零命中	A	sb37
+S-024373	V37-12.12	正文题旨“2001年4月24日，AlfredBreull在2.9快照上以xf86cfg”命中第三十七卷 12.12	A	sb37
 S-024374	V45-14.3	题面“cvs 沿 patch 分支更新”命中第四十五卷 14.3	A	sb37
 S-024375		题面为证据等级来源模板	A	sb37
 S-024376		题面“vim 端口 sparc 编译”零命中	A	sb37
@@ -17,9 +17,9 @@ S-024384		题面“SiS900 MAC 全零”零命中	A	sb37
 S-024385		题面为证据等级来源模板	A	sb37
 S-024386	V37-12.12	正文题旨“xf86cfg 与 XFree86 -configure”命中第三十七卷 12.12	A	sb37
 S-024387		题面为证据等级来源模板	A	sb37
-S-024388		题面“sendmail IPv4-only 内核”零命中	A	sb37
+S-024388	V37-12.12	正文题旨“2001年5月29日，JacobMeuser称自己用XFree86-conf”命中第三十七卷 12.12	A	sb37
 S-024389		题面为证据等级来源模板	A	sb37
-S-024390		题面“硬盘 zoned 转速”零命中	A	sb37
+S-024390	V37-12.12	正文题旨“2001年6月3日，MatthieuHerrb指XFree864.x多个驱动”命中第三十七卷 12.12	A	sb37
 S-024391		题面“Hauppauge BT878 PAL”零命中	A	sb37
 S-024392		题面“别名掩码选择”零命中	A	sb37
 S-024393		题面“ipnat 变慢重启恢复”零命中	A	sb37

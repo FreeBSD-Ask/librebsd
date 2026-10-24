@@ -1,6 +1,6 @@
 source_id	target_id	reason	strategy	pass_id
 S-023626	V45-5.3	题面“ECMP ospfd 多路径”命中第四十五卷 5.3	A	sb6
-S-023627		题面为证据等级来源模板	A	sb6
+S-023627	V45-4.2	正文题旨“pf 松散状态跟踪两条规则与语义”命中第四十五卷 4.2	A	sb6
 S-023628	V45-4.2	题面“pfr_update_stats 断言失败”命中第四十五卷 4.2	A	sb6
 S-023629	V45-4.3	题面“pf 手册 rdr reflect”命中第四十五卷 4.3	A	sb6
 S-023630	V45-5.3	正文题旨“lo1 环回 /32 作 bgpd ospfd router-id”命中第四十五卷 5.3	A	sb6
@@ -16,10 +16,10 @@ S-023639	V45-9.3	题面“rdr-to divert-to relayd”命中第四十五卷 9.3	A	
 S-023640	V45-5.4	题面“IPsec flow 优先级 carp”命中第四十五卷 5.4	A	sb6
 S-023641	V44-4.5	正文题旨“pf 加 carp 触及 mbuf cluster 上限”命中第四十四卷 4.5	A	sb6
 S-023642	V44-4.5	题面“prio 不限带宽 altq 开销”命中第四十四卷 4.5	A	sb6
-S-023643		题面“Via mini-itx MP 编译耗时”零命中	A	sb6
+S-023643	V45-11.1	正文题旨“2004年10月30日，用户报告Adaptec2400A在i386可用但am”命中第四十五卷 11.1	A	sb6
 S-023644		题面“Vodafone 3G modem page fault”零命中	A	sb6
 S-023645		题面“ftruncate 回滚”零命中	A	sb6
 S-023646	V45-6.10	题面“/dev/random 与 hifn 集成”命中第四十五卷 6.10	A	sb6
-S-023647		题面为证据等级来源模板	A	sb6
+S-023647	V45-11.1	正文题旨“2006年5月9日，MarkKettenis将amd64平台MPBIOSwo”命中第四十五卷 11.1	A	sb6
 S-023648		题面“ip_input radix 树哈希”零命中	A	sb6
 S-023649		题面“bnx0 TCP 校验和”零命中	A	sb6

@@ -1,5 +1,5 @@
 source_id	target_id	reason	strategy	pass_id
-S-024730		题面“malloc memset 合为 calloc”零命中	A	sb52
+S-024730	V45-5.3	正文题旨“2014年5月14日，ClaudioJeker回应询问，指出radix树存在”命中第四十五卷 5.3	A	sb52
 S-024731		题面“wsmoused 清理补丁”零命中	A	sb52
 S-024732		题面“sparc64 陷阱表崩溃”零命中	A	sb52
 S-024733	V45-6.7	题面“dtls1h pqueue 补丁集”命中第四十五卷 6.7	A	sb52

@@ -2,14 +2,14 @@ source_id	target_id	reason	strategy	pass_id
 S-024154		内容为 PnP 排障零命中	B	sb28
 S-024155		内容为拨号排障零命中	B	sb28
 S-024156		内容为 ROW_MINE claim 载体零主题	B	sb28
-S-024157		内容为内核调试零命中	B	sb28
+S-024157	V37-12.12	内容 1999年12月7日，MatthieuHerrb 落 BSD 桌面图形栈	B	sb28
 S-024158	V45-10.3	内容二进制包与源码编译比较落 pkg 工具与二进制软件包	B	sb28
 S-024159		内容为 ROW_MINE claim 载体零主题	B	sb28
 S-024160	V37-12.12	内容 aperture 驱动答疑落 BSD 桌面图形栈	B	sb28
 S-024161		内容为安装排障零命中	B	sb28
 S-024162	V45-3.1	内容 chroot 登录依赖文件落 chroot 遗产与隔离机制	B	sb28
-S-024163		内容为交叉编译配置零命中	B	sb28
-S-024164		内容为 ROW_MINE claim 载体零主题	B	sb28
+S-024163	V37-12.12	内容 1999年12月30日，MatthieuHerr 落 BSD 桌面图形栈	B	sb28
+S-024164	V37-12.12	内容 2000年1月3日，JasonIsh将linux 落 BSD 桌面图形栈	B	sb28
 S-024165		内容为 ROW_MINE claim 载体零主题	B	sb28
 S-024166		内容为安装排障零命中	B	sb28
 S-024167		内容为第三方模块构建零命中	B	sb28

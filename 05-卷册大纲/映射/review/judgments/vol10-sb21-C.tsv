@@ -1,7 +1,7 @@
 source_id	target_id	reason	strategy	pass_id
 S-023986		模板层无结构对应	C	sb21
 S-023987		模板层无结构对应	C	sb21
-S-023988		层级线索：mobileip 无对应	C	sb21
+S-023988	V45-4.3	结构线索：NAT 规则就近（V45-4.3）	C	sb21
 S-023989		模板层无结构对应	C	sb21
 S-023990		模板层无结构对应	C	sb21
 S-023991	V61-6.5	结构线索：协议漏洞就近（V61-6.5）	C	sb21
