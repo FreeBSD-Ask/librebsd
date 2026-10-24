@@ -1,5 +1,5 @@
 source_id	target_id	reason	strategy	pass_id
-S-023722		内容为 IPFilter 用法问答零命中	B	sb10
+S-023722	V45-4.3	内容 rdr 重定向与地址转换规则写法落 pf 地址转换与状态表	B	sb10
 S-023723	V45-5.2	内容 ntpd 时间同步实测落 OpenNTPD 与时间同步安全	B	sb10
 S-023724	V45-12.3	内容 RAID 控制器驱动性能落 硬件文档开放度与驱动可维护性	B	sb10
 S-023725	V45-12.3	内容跨系驱动移植校验落 硬件文档开放度与驱动可维护性	B	sb10

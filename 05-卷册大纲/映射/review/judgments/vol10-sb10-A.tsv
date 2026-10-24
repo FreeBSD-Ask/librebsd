@@ -1,5 +1,5 @@
 source_id	target_id	reason	strategy	pass_id
-S-023722		题面“ipnat rdr 写法”零命中	A	sb10
+S-023722	V45-4.3	题面“ipnat rdr 重定向写法”命中第四十五卷 4.3	A	sb10
 S-023723	V45-5.2	题面“ntpd adjtime drift 测量”命中第四十五卷 5.2	A	sb10
 S-023724	V45-12.3	题面“ciss 驱动写性能下降”命中第四十五卷 12.3	A	sb10
 S-023725	V45-12.3	题面“移植 FreeBSD yongari sk(4) 补丁”命中第四十五卷 12.3	A	sb10
