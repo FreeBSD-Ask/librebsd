@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-030471	V38-3.2	内容「Varnish HTTP Accelerator 2006 年开源基于 FreeBSD，phkm」落 V38-3.2	CONTENT	sb7
+S-030472	V54-5.1	内容「Poul-Henning Kamp 以直言不讳著称，长期维护丹麦独立开发者身份，对商业化与官僚主义持批评态度 ／ 辨析：ph」落 V54-5.1	CONTENT	sb7
+S-030473	V75-5.4	内容「Poul-Henning Kamp 贡献记录分散在 commit log、邮件列表、演讲中，须交叉验证 ／ 辨析：贡献的完整」落 V75-5.4	CONTENT	sb7
+S-030474	V66-3.8	内容「荷兰 SURFnet、德国 DFN、法国 RENATER、英国 JANET、瑞典 SUNET 等」落 V66-3.8	CONTENT	sb7
+S-030475	V66-3.7	内容「欧洲学术机构从 1990 年代 FreeBSD 的主流部署到 2000 年代后部分迁移至 Lin」落 V66-3.7	CONTENT	sb7
+S-030476	V66-3.12	内容「欧洲学术 ISP 部署模式与北美（如 ESnet、Internet2）存在差异，欧洲更注重多语言」落 V66-3.12	CONTENT	sb7
+S-030477	V75-11.8	内容「部署记录分散在各 ISP 档案中，完整性因机构而异；本书须明确——329.4.1 的 17 国名」落 V75-11.8	CONTENT	sb7
+S-030478	V66-3.12	内容「欧洲开源社区文化特征包括学术传统、多语言协作、对自由软件理念的重视 ／ 辨析：文化特征的具体表现」落 V66-3.12	CONTENT	sb7
+S-030479	V69-2.9	内容「德语、法语、意大利语、西班牙语等多语言文档翻译项目反映欧洲多语言协作实践 ／ 辨析：各语言翻译的」落 V69-2.9	CONTENT	sb7
+S-030480	V66-3.12	内容「欧洲开源文化更注重自由软件理念与学术传统，美国更注重商业实用主义 ／ 辨析：差异的具体表现需考据」落 V66-3.12	CONTENT	sb7
+S-030481	V75-11.5	内容「社区文化记录分散在邮件列表、论坛、会议演讲中，须交叉验证 ／ 辨析：记录的完整性需评估；非英语记」落 V75-11.5	CONTENT	sb7
+S-030482	V66-3.7	内容「欧盟 Framework Programme 自 FP5（1998-2002）起持续资助 BSD」落 V66-3.7	CONTENT	sb7
+S-030483	V65-2.4	内容「欧盟资助推动 Capsicum、CHERI、RUMP/原生 Xen dom0 等学术研究方向，但」落 V65-2.4	CONTENT	sb7
+S-030484	V65-2.4	内容「美国 NSF 资助以学术研究为导向，申请流程相对简洁；欧盟 Framework Programm」落 V65-2.4	CONTENT	sb7
+S-030485	V75-5.6	内容「资助记录分散在 CORDIS、NSF、基金会年报、邮件列表公告中，须交叉验证；部分早期 FP5 」落 V75-5.6	CONTENT	sb7
+S-030486	V66-1.5	内容「德国 GUUG 1984 年成立为欧洲最早 Unix 用户组之一，荷兰 NLnet Founda」落 V66-1.5	CONTENT	sb7
+S-030487	V66-3.12	内容「1990 年代用户组以本地会议、邮件列表为主，2000 年代后随互联网普及逐渐式微，部分用户组转」落 V66-3.12	CONTENT	sb7
+S-030488	V66-3.12	内容「欧洲 Linux 用户组（如德国 LinuxTag 1996 年首届、法国 Solution L」落 V66-3.12	CONTENT	sb7
+S-030489		内容为编纂元数据（要点/史料/文献层），叙事主题零命中	B	sb7
+S-030490	V67-3.4	内容「- 本期一手史料包括：受访者 Sidsel Jensen 以 EuroBSDCon 2007 组」落 V67-3.4	CONTENT	sb7
+S-030491	V32-3.2	内容「欧洲自由软件概念受 Stallman 1996 年欧洲巡回演讲推动，FSFE 2001 年于德国」落 V32-3.2	CONTENT	sb7
+S-030492	V32-3.5	内容「FSFE 主推 GPL 法律框架，与 BSD 社区的 permissive license 路线」落 V32-3.5	CONTENT	sb7
+S-030493	V32-3.4	内容「美国自由软件观念受 FSF 主导，强调 copyleft 强制性；欧洲自由软件观念更注重法律可执」落 V32-3.4	CONTENT	sb7
+S-030494	V75-3.6	内容「自由软件话语分散在立场文件、演讲、邮件列表、媒体报道中，须区分官方立场与个人观点；翻译文本的失真」落 V75-3.6	CONTENT	sb7
