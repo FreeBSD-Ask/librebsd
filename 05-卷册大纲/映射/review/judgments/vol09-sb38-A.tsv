@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020322		题面为文件系统显式 barrier 与 SYNCHRONIZE CACHE 之争，无对应节	A	sb38
+S-020323		题面为 tagged queuing 完成与落盘之辨，无对应节	A	sb38
+S-020324		题面为证据等级来源模板，零语义	A	sb38
+S-020325		题面为证据等级来源模板，零语义	A	sb38
+S-020326		题面为虚拟用户方案与 sshd 缺位，无对应节	A	sb38
+S-020327		题面为持 vnode 锁短睡与 SVR4 风格锁，无对应节	A	sb38
+S-020328		题面为证据等级来源模板，零语义	A	sb38
+S-020329		题面为 Veritas 与 IBM LVM 布局质疑，无对应节	A	sb38
+S-020330		题面为 kqueue 大规模非线程化应用价值，无对应节	A	sb38
+S-020331		题面为 struct emul 的 e_init 字段主张，无对应节	A	sb38
+S-020332		题面为证据等级来源模板，零语义	A	sb38
+S-020333		题面为入口指针先指初始化函数的方案，无对应节	A	sb38
+S-020334		题面为 inet_makeaddr 的 ABI 与 POSIX 分析，无对应节	A	sb38
+S-020335		题面为 NPTL 十万线程数据缺对照之疑，无对应节	A	sb38
+S-020336		题面为 1:1 线程模型与 Sun/NT 论文引证，无对应节	A	sb38
+S-020337		题面为证据等级来源模板，零语义	A	sb38
+S-020338		题面为证据等级来源模板，零语义	A	sb38
+S-020339		题面为 COMPAT_DARWIN 构建失败与选项依赖，无对应节	A	sb38
+S-020340		题面为证据等级来源模板，零语义	A	sb38
+S-020341		题面为证据等级来源模板，零语义	A	sb38
+S-020342		题面为 chroot 不完美降权与 setuid 危险，无直接节	A	sb38
+S-020343		题面为 SOCK_RAW 搭配 ISO 套接字损坏报告，无对应节	A	sb38
+S-020344		题面为 daddr_t 恒为 typedef 的方案认可，无对应节	A	sb38
+S-020345		题面为证据等级来源模板，零语义	A	sb38

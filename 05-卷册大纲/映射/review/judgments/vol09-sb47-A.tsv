@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020538	V40-2.9	题面为 Linux 1.2–2.4 同期演进对照，落同期 OS 比较节	A	sb47
+S-020539	V40-2.9	题面为 Windows 95/98/NT/2000 同期对照，落同期 OS 比较节	A	sb47
+S-020540	V40-2.9	题面为 BSD 复兴与 Linux 崛起重叠期总括，落同期 OS 比较节	A	sb47
+S-020541		题面为更多 NetBSD 机器与名字好听的偏好表态，无对应节	A	sb47
+S-020542	V41-1.5	题面为 FreeBSD DPT 驱动移植 NetBSD 含 EISA，落驱动模型节	A	sb47
+S-020543		题面为 KGDB 以 NetBSD 支持为基础与 sparc 移植，无对应节	A	sb47
+S-020544		题面为证据等级来源模板，零语义	A	sb47
+S-020545		题面为证据等级来源模板，零语义	A	sb47
+S-020546		题面为证据等级来源模板，零语义	A	sb47
+S-020547		题面为 McKusick 是否在为 FreeBSD 工作的追问，无对应节	A	sb47
+S-020548		题面为 OpenBSD 仅做 fdalloc 跳过 select 改进之辨，无对应节	A	sb47
+S-020549		题面为证据等级来源模板，零语义	A	sb47
+S-020550		题面为路径尾斜杠 BSD 与 SysV 差异及仿真取舍，无对应节	A	sb47
+S-020551		题面为 K6-3 与 486 跨系统 rm -rf 对比测试，无直接节	A	sb47
+S-020552		题面为证据等级来源模板，零语义	A	sb47
+S-020553		题面为证据等级来源模板，零语义	A	sb47
+S-020554		题面为 PostgreSQL 服务器自 FreeBSD 迁移与 SHM 重配求助，无对应节	A	sb47
+S-020555	V41-9.1	题面为 NetBSD-SA 公告体系建立与早期安全治理，落 BSD 安全传统节	A	sb47
+S-020556	V41-9.1	题面为 BIND 漏洞群与 DNS 安全持续修补，落 BSD 安全传统节	A	sb47
+S-020557	V41-9.1	题面为远程守护进程溢出群与 OpenSSH 集成安全，落 BSD 安全传统节	A	sb47
+S-020558	V41-9.1	题面为内核安全与权限模型缺陷类别，落 BSD 安全传统节	A	sb47
+S-020559	V41-9.1	题面为 OpenSSL 集成加密库漏洞群显现，落 BSD 安全传统节	A	sb47
+S-020560		题面为 core dump 不覆盖既有文件的立场，无对应节	A	sb47
+S-020561		题面为放宽 mount 权限挂可移动介质的提议，无直接节	A	sb47

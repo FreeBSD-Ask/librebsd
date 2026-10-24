@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021210		题面为证据等级来源模板，零语义	A	sb75
+S-021211		题面为证据等级来源模板，零语义	A	sb75
+S-021212	V41-8.6	题面为 Firefox/Thunderbird 更新验证与 enigmail 选项疑坏，落 pkgsrc 长期维护模式节	A	sb75
+S-021213	V41-8.6	题面为 wip/muttprint 功能缺陷与上游跟进计划，落 pkgsrc 长期维护模式节	A	sb75
+S-021214	V41-8.6	题面为 pkgsrc-2012Q1 分支完成通报，落 pkgsrc 长期维护模式节	A	sb75
+S-021215		题面为 clang 编译异常对象码与 gcc 4.6 替代，无直接节	A	sb75
+S-021216		题面为证据等级来源模板，零语义	A	sb75
+S-021217		题面为 Joyent 不加前缀安装与 pkg_alternatives 布局之辨，无直接节	A	sb75
+S-021218	V41-8.6	题面为新增 modular-xorg hacks.mk 免打补丁机制，落 pkgsrc 长期维护模式节	A	sb75
+S-021219	V41-8.6	题面为 swig 1.3.40 更新与 gnuradio 影响提醒，落 pkgsrc 长期维护模式节	A	sb75
+S-021220		题面为 suck 包 WWW 失效链接的修正建议，无直接节	A	sb75
+S-021221		题面为证据等级来源模板，零语义	A	sb75
+S-021222		题面为证据等级来源模板，零语义	A	sb75
+S-021223	V41-8.4	题面为 Slackware 上构建 VLC 的 SDL 依赖与 PREFER_NATIVE，落 pkgsrc bootstrap 与跨平台构建节	A	sb75
+S-021224	V41-8.6	题面为移除 stlport 等多年不可编译包的提议，落 pkgsrc 长期维护模式节	A	sb75
+S-021225	V41-8.6	题面为 cairo 1.12.4 出问题回退的决定，落 pkgsrc 长期维护模式节	A	sb75
+S-021226	V41-8.6	题面为 bmake update 大量重建不警告与改用 rolling-replace，落 pkgsrc 长期维护模式节	A	sb75
+S-021227	V41-8.6	题面为点补丁修好崩溃并拉回 2012Q3 与历史未记录之疑，落 pkgsrc 长期维护模式节	A	sb75
+S-021228		题面为 NetBSD 6 构建 mysql 的 execv 内存分配失败求助，无直接节	A	sb75
+S-021229		题面为 flash 配 firefox 与 nspluginwapper 能否跑起之问，无对应节	A	sb75
+S-021230		题面为 freeciv-client 选项失败与 pkg_create 报错，无直接节	A	sb75
+S-021231		题面为 pkg_chk 十二包需替换未安装与 py26 转 py27 之问，无直接节	A	sb75
+S-021232		题面为 libffi 在 solaris x64 配 gcc 的上游补丁指路，无直接节	A	sb75
+S-021233	V41-8.4	题面为 TeX Live 停发 NetBSD/i386 后源码编译自用，落 pkgsrc bootstrap 与跨平台构建节	A	sb75

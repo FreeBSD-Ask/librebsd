@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020850		题面为 UTF-8 non-US locale 之 LC_TIME 实用问答，无对应节	A	sb60
+S-020851		题面为 tmux 与 window 多窗口重叠能力之问，无对应节	A	sb60
+S-020852		题面为证据等级来源模板，零语义	A	sb60
+S-020853		题面为脚本语言三要件与 Lua/Python 入 base 披露，无对应节	A	sb60
+S-020854		题面为证据等级来源模板，零语义	A	sb60
+S-020855		题面为最小符号库设计应动态链接器之辩，无对应节	A	sb60
+S-020856		题面为弃运 libgnumalloc 的废立之问，无对应节	A	sb60
+S-020857		题面为 libcodecs take3 删 EBCDIC 的退让，无对应节	A	sb60
+S-020858		题面为并发 getenv 之树与读写锁可扩展性之难，无对应节	A	sb60
+S-020859		题面为 proplib 之 syscall 通道为 quotactl 评估，无对应节	A	sb60
+S-020860		题面为证据等级来源模板，零语义	A	sb60
+S-020861		题面为证据等级来源模板，零语义	A	sb60
+S-020862		题面为 getlabelusesmbr 接口与 kern sysctl 提案，无对应节	A	sb60
+S-020863		题面为 dd 补丁评审与 dd_snprintf 体积之问，无对应节	A	sb60
+S-020864		题面为 make 对 -j 与否保留 cd 之异，无对应节	A	sb60
+S-020865		题面为 fsck 超级块备份与 scan_ffs 线索，无直接节	A	sb60
+S-020866		题面为 3TB 盘 32 位截断的 disklabel 之症，无对应节	A	sb60
+S-020867		题面为 mtree 增 FreeBSD 兼容与导入提议，无对应节	A	sb60
+S-020868		题面为 fork 后 exec 的 malloc 锁死报告，无对应节	A	sb60
+S-020869		题面为 __strong_alias 与 dlopen 交互之问，无对应节	A	sb60
+S-020870		题面为 makefs 得 RT-11 支持与 SIMH 验证，无对应节	A	sb60
+S-020871		题面为 mtree 双补丁与 regular file size 语义，无对应节	A	sb60
+S-020872		题面为 init 管护之议与 rc.d monitor 方法，无对应节	A	sb60
+S-020873		题面为 proplib 格式效率与 sysctl 轮询之答，无对应节	A	sb60

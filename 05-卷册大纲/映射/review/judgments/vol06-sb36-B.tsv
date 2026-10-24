@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015653		全节为 tmpfs／sendfile／VFS，新纲无对应节	B	sb36
+S-015654		NFS 与 aio 历史，新纲无 NFS 专节	B	sb36
+S-015655		unionfs／mdmfs 故障，新纲无对应节	B	sb36
+S-015656		XTAF 第三方文件系统，新纲无对应节	B	sb36
+S-015657	V37-5.3	MAC 框架头文件误删修复	B	sb36
+S-015658	V37-1.4	GEOM 致同设备只读多重挂载失效	B	sb36
+S-015659		挂载点数量上限，新纲无 VFS 节	B	sb36
+S-015660	V37-1.4	gpart 改写保护性 MBR 影响引导	B	sb36
+S-015661		flock 与 close 原子性，新纲无 VFS 节	B	sb36
+S-015662		内核锁补丁反馈，主题不明且无对应节	B	sb36
+S-015663		extattr 错误码讨论，新纲无对应节	B	sb36
+S-015664		NFS 客户端死锁修复，新纲无 NFS 节	B	sb36
+S-015665		ZFS 导出管理故障，主线为 NFS 无节	B	sb36
+S-015666		NFSv2 panic 修复，新纲无 NFS 节	B	sb36
+S-015667		NFS 挂载选项 mtime，新纲无 NFS 节	B	sb36
+S-015668		UDF 读写支持，新纲无 UDF 节	B	sb36
+S-015669		sendfile 性能实测，新纲无对应节	B	sb36
+S-015670		FUSE direct-io，新纲无 FUSE 节	B	sb36
+S-015671		NFS exports V4 行，新纲无 NFS 节	B	sb36
+S-015672		NFS 路径与 statfs ABI，无对应节	B	sb36
+S-015673		NFS4／NIS 死锁，新纲无 NFS 节	B	sb36
+S-015674	V37-1.8	ZFS ARC 内存行为属 OpenZFS 内核	B	sb36
+S-015675		NFS 客户端 fifo 异常，无 NFS 节	B	sb36
+S-015676		NFSv4 与 rpcbind 注册，无 NFS 节	B	sb36

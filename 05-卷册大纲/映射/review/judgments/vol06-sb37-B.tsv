@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015677		EXT4／ext2fs 挂载与稀疏文件，目标卷无外部文件系统节	B	sb37
+S-015678		nullfs 下删大文件空间不释放，无 VFS 叠层节	B	sb37
+S-015679		sys/fs/fuse 客户端替换 ports 版，无 FUSE 节	B	sb37
+S-015680		UFS 目录页队列损坏，非 UFS1／2 或软更新主题	B	sb37
+S-015681		find -x 在失效 NFS 挂载上卡住，无 NFS 客户端节	B	sb37
+S-015682		nfsuserd -domain 选项移除，无 NFS 客户端节	B	sb37
+S-015683		评审与测试收尾片段，技术对象不明且无对应节	B	sb37
+S-015684		mountcheckdirs 挂载语义与 devfs 取代，无对应节	B	sb37
+S-015685		vfs.timestamp 与 FAT32 时间戳，无对应节	B	sb37
+S-015686		RPCSEC_GSS 内核代码与 GSS QOP，无 NFS 节	B	sb37
+S-015687	V36-11.3	EFI boot1.efifat 写入 ada0p1，属 UEFI 启动支持	B	sb37
+S-015688		fcntl 释放块与 BIO_DELETE 语义混杂，无对应节	B	sb37
+S-015689		fusefs 属性缓存超时，目标卷无 FUSE 节	B	sb37
+S-015690		gss_export_name 名称映射，无 NFS GSS 节	B	sb37
+S-015691		NFS 服务器以 curthread 替代 td，无对应节	B	sb37
+S-015692	V37-3.2	ZFS 经 nullfs 入 jail 删文件不释放，属 jail 文件系统隔离	B	sb37
+S-015693	V37-1.4	mdconfig 以文件造设备供块缓存，属 GEOM 抽象层	B	sb37
+S-015694	V37-1.4	geom 识别设备后发 GEOM 事件驱动挂载	B	sb37
+S-015695		fusefs-libs3 数据缓存模式，无 FUSE 节	B	sb37
+S-015696		MooseFS 调 FUSE 失效通知，无 FUSE 节	B	sb37
+S-015697		mountd 返回 EINVAL／EPERM 行为，无 NFS 节	B	sb37
+S-015698	V37-1.6	SMART 日志判定供电故障，属存储可靠性	B	sb37
+S-015699	V37-1.6	geli resize 先于 zpool online，属 GELI 操作	B	sb37
+S-015700		NFS 无缓存一致性协议，无 NFS 客户端节	B	sb37

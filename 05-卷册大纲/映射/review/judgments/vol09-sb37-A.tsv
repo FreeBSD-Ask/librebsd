@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020298		题面为接口保持 up 时 mbuf 缓存追问，无对应节	A	sb37
+S-020299	V41-7.6	题面为 pf 移植与 IPFilter 规范化之争，落包过滤节	A	sb37
+S-020300		题面为 SYSCALL_DEBUG 被 ktrace 替代的移除主张，无对应节	A	sb37
+S-020301		题面为用户态改表后缓存失效之辨，无对应节	A	sb37
+S-020302		题面为 COMPAT_DARWIN 受影响面列举，无对应节	A	sb37
+S-020303		题面为 matcd 版权条款与重复驱动之问，无对应节	A	sb37
+S-020304		题面为证据等级来源模板，零语义	A	sb37
+S-020305		题面为 struct inode 的 i_ino 移除提议，无对应节	A	sb37
+S-020306		题面为 NEW_BUFQ_STRATEGY 三台机器列举，无对应节	A	sb37
+S-020307		题面为嵌入式 INSTALL_TINY 与 1.4X/1.6 差距，无对应节	A	sb37
+S-020308		题面为代码清晰度值几条指令与 gcc 折叠建议，无对应节	A	sb37
+S-020309		题面为证据等级来源模板，零语义	A	sb37
+S-020310		题面为 write_protect 打印与 Linux 处理方式，无对应节	A	sb37
+S-020311	V41-9.7	题面为 cgd(4) 关闭时自动解配机制讨论，落 CGD 磁盘加密节	A	sb37
+S-020312		题面为生日悖论与 CRC 类伪随机散列建议，无对应节	A	sb37
+S-020313		题面为 i830 与 i845G 的 AGP 驱动补丁，无对应节	A	sb37
+S-020314		题面为 RelCache 与 prelink 方案之争，无对应节	A	sb37
+S-020315		题面为 twe 驱动复位失败与 RAIDframe 存疑，无直接节	A	sb37
+S-020316		题面为 fork 炸弹清理竞态与管道串杀，无对应节	A	sb37
+S-020317		题面为 fork 炸弹论战与退出线程声明，无对应节	A	sb37
+S-020318	V41-9.1	题面为被根 SIGSTOP 进程只许根恢复的加固，落 BSD 安全传统节	A	sb37
+S-020319		题面为证据等级来源模板，零语义	A	sb37
+S-020320		题面为 fork 延迟改动直接回退主张，无对应节	A	sb37
+S-020321		题面为软中断返回值与硬件一致的统一主张，无对应节	A	sb37

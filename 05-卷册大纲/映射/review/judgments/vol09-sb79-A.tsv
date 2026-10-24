@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021306	V41-8.6	题面为 claws-mail-vcalendar 升级需 libical 2.0 与 110 包清单，落 pkgsrc 长期维护模式节	A	sb79
+S-021307		题面为证据等级来源模板，零语义	A	sb79
+S-021308		题面为证据等级来源模板，零语义	A	sb79
+S-021309		题面为证据等级来源模板，零语义	A	sb79
+S-021310		题面为 xlockmore 配置目录与 OWN_DIRS 写法之问，无直接节	A	sb79
+S-021311		题面为证据等级来源模板，零语义	A	sb79
+S-021312	V41-8.6	题面为 g95 默认来由与有人反对时怎么办之问，落 pkgsrc 长期维护模式节	A	sb79
+S-021313		题面为证据等级来源模板，零语义	A	sb79
+S-021314		题面为 xf86-video-ati 7.9.0 起构建失败的报告，无直接节	A	sb79
+S-021315		题面为 rtorrent 默认 xmlrpc 选项配置即失败，无直接节	A	sb79
+S-021316		题面为 lang/rust 无法构建与 miniz-sys 失败日志，无直接节	A	sb79
+S-021317		题面为 pkgsrc 路径符号链接与 cd pwd -P 的常见成因，无直接节	A	sb79
+S-021318	V41-8.6	题面为 p5 系列依赖闭环 circular dependency 的提出，落 pkgsrc 长期维护模式节	A	sb79
+S-021319		题面为 kde3 迁 kde4 历年不稳与 current 更差的抱怨，无直接节	A	sb79
+S-021320		题面为 PKG_OPTIONS.ffmpeg010 变量名写错与 x264 默认项指正，无直接节	A	sb79
+S-021321	V41-8.6	题面为 swi-prolog-lite 瘦身移除三依赖的请求，落 pkgsrc 长期维护模式节	A	sb79
+S-021322		题面为 libsecret 升级后在 8.0_RC1 无法构建，无直接节	A	sb79
+S-021323		题面为证据等级来源模板，零语义	A	sb79
+S-021324	V41-8.4	题面为 RPI2 armv7 构建 nss 至 shlibsign 报错，落 pkgsrc bootstrap 与跨平台构建节	A	sb79
+S-021325		题面为 ImageMagick 升级后分发包取不到的困境，无直接节	A	sb79
+S-021326		题面为三年未动说与 gcc 更新归因的猜测自注，无直接节	A	sb79
+S-021327		题面为 ccmake 在 PLIST 有而 destdir 缺的错误，无直接节	A	sb79
+S-021328		题面为证据等级来源模板，零语义	A	sb79
+S-021329		题面为 fontconfig 构建失败 .x11-buildlink 无法切换与 tmpfs 怀疑，无直接节	A	sb79

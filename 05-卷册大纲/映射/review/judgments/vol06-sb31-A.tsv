@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015533	V37-1.5	lun_id_t 变更属 CAM 设备标识与访问模型演进	A	sb31
+S-015534	V37-1.5	WRITE SAME 固件缺陷涉 SCSI 设备命令与硬件可靠性	A	sb31
+S-015535	V37-1.5	WRITE SAME 损坏争议属 SCSI 存储硬件缺陷考据	A	sb31
+S-015536	V37-1.5	Bugzilla 票据关闭过程属 SCSI 缺陷处置记录	A	sb31
+S-015537	V37-1.5	scsi_scan_bus 锁序崩溃属 CAM 设备扫描路径	A	sb31
+S-015538	V37-1.5	M1015 固件版本选择属 SCSI 控制器兼容性	A	sb31
+S-015539	V37-1.5	SES 设备未生成涉 SCSI 背板与控制器兼容	A	sb31
+S-015540	V37-1.5	LSI 3008 缺盘属 SCSI 控制器与设备枚举	A	sb31
+S-015541	V37-1.5	ESB2 仅 SATA HBA 属 ATA 与 SAS 接口分野	A	sb31
+S-015542	V37-1.5	音频 CD 扇区数差异属 scsi_cd 设备模型	A	sb31
+S-015543	V37-1.5	磁带序列号取回路径属 CAM 外设驱动	A	sb31
+S-015544	V37-1.5	设备列表为空属 CAM 设备枚举查询	A	sb31
+S-015545	V37-1.5	cam iosched 的 TRIM 统计修复属 CAM 调度层	A	sb31
+S-015546	V37-1.5	scsi_cd 编译告警与补丁测试属 CD 设备驱动	A	sb31
+S-015547	V37-1.5	da 设备拔线后不消失属 CAM 磁盘热插拔	A	sb31
+S-015548	V37-1.5	CAM 与 USB 行为差异追问属设备访问模型	A	sb31
+S-015549	V37-1.5	hw.ata.ata_dma 改 PIO 属 ATA 传输模式	A	sb31
+S-015550	V37-1.5	FreeBSD 12 识别读卡器属 SCSI 设备识别	A	sb31
+S-015551	V37-1.5	bhyve NVMe 仿真合规测试属 NVMe 设备模型	A	sb31
+S-015552	V37-1.5	关闭 DMA fifo 卡死属 SCSI 适配器故障	A	sb31
+S-015553	V37-1.5	2940uw 断连协商属 SCSI 控制器参数	A	sb31
+S-015554	V37-1.5	双控制器刻录机对比属 SCSI 控制器差异	A	sb31
+S-015555	V37-1.5	旧驱动向 CAM 移植与带标签排队属 CAM 模型	A	sb31
+S-015556	V37-1.5	光驱 LUN 0 与非法请求属 CAM 设备枚举	A	sb31

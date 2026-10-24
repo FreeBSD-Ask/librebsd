@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021162	V41-8.5	题面为二进制包压缩算法选择机制与 PKG_SUFX 局限，落二进制软件包体系节	A	sb73
+S-021163		题面为证据等级来源模板，零语义	A	sb73
+S-021164		题面为证据等级来源模板，零语义	A	sb73
+S-021165	V41-8.6	题面为未经测试即提交的批评与 osabi 依赖质疑，落 pkgsrc 长期维护模式节	A	sb73
+S-021166	V41-8.6	题面为 xorg 库主版本跳变的 pullup 求助，落 pkgsrc 长期维护模式节	A	sb73
+S-021167		题面为证据等级来源模板，零语义	A	sb73
+S-021168		题面为证据等级来源模板，零语义	A	sb73
+S-021169		题面为证据等级来源模板，零语义	A	sb73
+S-021170		题面为证据等级来源模板，零语义	A	sb73
+S-021171		题面为证据等级来源模板，零语义	A	sb73
+S-021172	V41-8.4	题面为 ffmpeg-devel 在 Solaris 10 Sparc 的构建问题，落 pkgsrc bootstrap 与跨平台构建节	A	sb73
+S-021173		题面为 amd64 CDEFS 修正与 openoffice2 确认，无直接节	A	sb73
+S-021174		题面为证据等级来源模板，零语义	A	sb73
+S-021175		题面为 privoxy 补丁漏一个 & 的补发，无对应节	A	sb73
+S-021176	V41-8.5	题面为 pkg_delete 在 Linux amd64 段错误与 pkg_admin 建议，落二进制软件包体系节	A	sb73
+S-021177	V41-8.4	题面为 ONLY_FOR_PLATFORM 补 Linux x86_64 已提交，落 pkgsrc bootstrap 与跨平台构建节	A	sb73
+S-021178		题面为证据等级来源模板，零语义	A	sb73
+S-021179		题面为证据等级来源模板，零语义	A	sb73
+S-021180	V41-12.6	题面为 sparc64 5.0 上 2009Q3 批量构建 7120 包，落 pkgsrc 批量构建与平台矩阵节	A	sb73
+S-021181		题面为证据等级来源模板，零语义	A	sb73
+S-021182		题面为 calibre 在 pkg_comp 外构建与 NFS work 目录之疑，无对应节	A	sb73
+S-021183		题面为证据等级来源模板，零语义	A	sb73
+S-021184	V41-8.6	题面为不做单一 texlive 包的原因解释，落 pkgsrc 长期维护模式节	A	sb73
+S-021185		题面为 xf86vidmodeproto.pc buildlink 漏条目之辨，无直接节	A	sb73

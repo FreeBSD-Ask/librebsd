@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021066		题面为证据等级来源模板，零语义	A	sb69
+S-021067		题面为证据等级来源模板，零语义	A	sb69
+S-021068		题面为 re(4) 线程 iommu 之反问与 4.0.1 未见崩溃，无直接节	A	sb69
+S-021069		题面为 dk 挂 raid 重启触发 mutex_destroy 断言，无对应节	A	sb69
+S-021070		题面为 mutex(9) 阅读片面与 mutex_owned 不安全之指，无对应节	A	sb69
+S-021071		题面为模块与设备配置加锁串的空帖，无对应节	A	sb69
+S-021072		题面为证据等级来源模板，零语义	A	sb69
+S-021073		题面为 softc 无锁存储的屏障与刷新开销质疑，无对应节	A	sb69
+S-021074		题面为证据等级来源模板，零语义	A	sb69
+S-021075		题面为 IPv4 非连续掩码无助稀缺与连续转换之论，无对应节	A	sb69
+S-021076		题面为 ltsleep/tsleep/wakeup 过期改 cv_wait 之主张，无对应节	A	sb69
+S-021077		题面为 BCM5701 开发服务器可测试 bge 的提议，无直接节	A	sb69
+S-021078		题面为 Capsicum 沙箱命名空间与 systrace 属 MAC 之辨，无对应节	A	sb69
+S-021079		题面为证据等级来源模板，零语义	A	sb69
+S-021080		题面为 Lunatik Lua 内核脚本崩溃责任之问，无对应节	A	sb69
+S-021081		题面为证据等级来源模板，零语义	A	sb69
+S-021082		题面为 options INSECURE 是否自动加载所必需的反问，无对应节	A	sb69
+S-021083		题面为模块使用户态可改运行内核的安全疑虑，无直接节	A	sb69
+S-021084		题面为 soft 与 hard memorylocked 与 RLIMIT_MEMLOCK 缺位，无对应节	A	sb69
+S-021085		题面为 uebayasi-xip 分支须补详尽摘要之要求，无对应节	A	sb69
+S-021086		题面为证据等级来源模板，零语义	A	sb69
+S-021087		题面为 FlashROM 共享执行页应写 PV 非 VA 的更正，无对应节	A	sb69
+S-021088		题面为 pmap_extract(9) 与 UVM 不知 I/O 页映射之辨，无对应节	A	sb69
+S-021089		题面为证据等级来源模板，零语义	A	sb69

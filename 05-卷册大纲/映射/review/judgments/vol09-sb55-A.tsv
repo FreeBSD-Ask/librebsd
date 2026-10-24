@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020730		题面为 MODULE_CLASS_DRIVER 成员不放 modinfo 的建议，无对应节	A	sb55
+S-020731	V43-5.5	题面为追加许可证与 GPL 传染性兼顾之辨，落与 GPL 路线的历史比较节	A	sb55
+S-020732	V43-5.5	题面为绝不接受 GPLv3 的立场声明，落与 GPL 路线的历史比较节	A	sb55
+S-020733		题面为证据等级来源模板，零语义	A	sb55
+S-020734		题面为证据等级来源模板，零语义	A	sb55
+S-020735		题面为证据等级来源模板，零语义	A	sb55
+S-020736		题面为证据等级来源模板，零语义	A	sb55
+S-020737		题面为 compat 层替换 getsock/getvnode 引用，无对应节	A	sb55
+S-020738		题面为 mremap 对齐与 mmap 文件尾 SEGV/BUS 之辨，无对应节	A	sb55
+S-020739	V41-2.4	题面为 ARM32 sshd panic 与 PVF_KENTRY 断言，落 ARM 平台支持的发展节	A	sb55
+S-020740		题面为证据等级来源模板，零语义	A	sb55
+S-020741		题面为证据等级来源模板，零语义	A	sb55
+S-020742		题面为证据等级来源模板，零语义	A	sb55
+S-020743		题面为 rw_vector_exit 缺陷与 vnode 锁竞争分析，无对应节	A	sb55
+S-020744	V41-5.2	题面为 dirhash 代码应归 sys/kern 而非 sys/fs，落源代码树组织节	A	sb55
+S-020745	V41-1.5	题面为 ld(4) raw 设备经 physio 转 strategy 的确认，落驱动模型节	A	sb55
+S-020746	V41-7.3	题面为第三次独立移植 bwi(4) 无线驱动用于 PowerBook G4，落网络设备抽象与驱动体系节	A	sb55
+S-020747	V41-1.5	题面为 GSoC UVC 驱动 uvideo 进展与 V4L2 API，落驱动模型节	A	sb55
+S-020748		题面为反驳 SA 代码阻塞 6.0 SMP 的疑虑列举，无对应节	A	sb55
+S-020749		题面为 revivesa 讨论中管理员保守性之争，无对应节	A	sb55
+S-020750		题面为 revivesa 分支构建启动与验证方法之问，无对应节	A	sb55
+S-020751		题面为 libpthread 兼容性破坏发现速度的反驳，无对应节	A	sb55
+S-020752		题面为 revivesa 内核测试立即 panic 的转述与复现，无对应节	A	sb55
+S-020753		题面为证据等级来源模板，零语义	A	sb55

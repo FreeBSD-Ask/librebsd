@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015509	V37-1.5	U320 盘 WRITE(06) 报 ABORTED，属 CAM 排障	B	sb30
+S-015510	V37-1.5	关闭 packetized 协议解决故障，属 CAM 传输层问题	B	sb30
+S-015511	V37-1.5	cam_ccb.h 的 PATH_INQ 标记控制 6 字节命令门控	B	sb30
+S-015512	V37-1.5	ServeRAID 4Lx 的 ips 探测失败属存储驱动支持	B	sb30
+S-015513	V37-1.5	2003–2004 年 ahd 与 SCSI 故障及补丁汇编	B	sb30
+S-015514	V37-1.5	2004 年 SCSI 驱动故障与补丁讨论汇编	B	sb30
+S-015515	V37-1.5	aacp 作为 CAM 透传别名用于固件升级与监控	B	sb30
+S-015516	V37-1.5	XPT_SCAN_BUS 触发扫描属 CAM 总线探测机制	B	sb30
+S-015517	V37-1.5	超过 2TB 的 SCSI 设备访问与驱动排障记录	B	sb30
+S-015518	V37-1.5	Qlogic WWN 与 SAS 支持等 CAM/SCSI 驱动记录	B	sb30
+S-015519	V37-1.5	ciss 与 mfi 的 CAM 状态查询能力差异	B	sb30
+S-015520	V37-4.8	targclose 挂起随内核加锁改造失效，属存储并发	B	sb30
+S-015521	V37-1.5	SCSI 终端匹配与 CAM 驱动诊断记录	B	sb30
+S-015522	V37-1.5	Intel SRCZCR 的 CAM inquiry 数据比较失败	B	sb30
+S-015523	V37-1.5	da 驱动 WCE 写缓存位默认值随探测能力而异	B	sb30
+S-015524	V37-1.5	为 ciss 增加 HP Smartarray P410 支持的补丁	B	sb30
+S-015525	V37-1.5	isp 驱动大改写修复问题并关闭 kern/126866	B	sb30
+S-015526	V37-1.5	isp_2300 载入后虚假中断的 CAM 排障	B	sb30
+S-015527	V37-1.5	CAM 与 mps 增加 SMP 透传及 camcontrol 命令	B	sb30
+S-015528	V37-4.8	xpt 引用计数与 SIM 卸载加锁属存储并发优化	B	sb30
+S-015529	V37-1.5	xpt 队列释放计数异常与 sa 驱动排查	B	sb30
+S-015530	V37-11.9	kern/169801 在 GNATS 中转移责任人并关闭	B	sb30
+S-015531	V37-1.5	IBM M1015 的 LSI SAS2008 由 mps 驱动支持	B	sb30
+S-015532	V37-1.5	mps 循环复位 HBA 后报 softc 分配失败	B	sb30

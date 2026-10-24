@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021018		题面为 modular framework 示例与 malloc 空包装之请，无对应节	A	sb67
+S-021019		题面为证据等级来源模板，零语义	A	sb67
+S-021020		题面为 gdb 在崩溃转储加载 lkm 符号之问，无对应节	A	sb67
+S-021021		题面为 sh-script 借 gdb 读 core 与 ld 重定位方案，无对应节	A	sb67
+S-021022		题面为 FreeBSD 512 字节块与 sd/mmc 层边界之论，无对应节	A	sb67
+S-021023		题面为证据等级来源模板，零语义	A	sb67
+S-021024		题面为证据等级来源模板，零语义	A	sb67
+S-021025		题面为 128GB 钳制跳线与 ATA-5 容量判据之议，无对应节	A	sb67
+S-021026		题面为 4K 扇区并非都呈现 512 逻辑扇区之驳，无对应节	A	sb67
+S-021027		题面为证据等级来源模板，零语义	A	sb67
+S-021028		题面为 Fileassoc locking 线程的空帖，无对应节	A	sb67
+S-021029		题面为证据等级来源模板，零语义	A	sb67
+S-021030		题面为 socket 重用策略适配 kauth 的无正文开题帖，无对应节	A	sb67
+S-021031		题面为 ACPI 电池与 TZ 轮询报错的 BIOS 缺陷怀疑，无对应节	A	sb67
+S-021032		题面为 mixerctl 输出实证与 /dev/mixer 不配置报错，无对应节	A	sb67
+S-021033		题面为异步 savecore 被 swap 覆盖风险与选项化主张，无对应节	A	sb67
+S-021034	V41-1.5	题面为 usbd_abort_pipe 移出 splusb 的安全性质疑，落驱动模型节	A	sb67
+S-021035		题面为 wsevent MP-safe 补丁的功能与装饰未分离批评，无对应节	A	sb67
+S-021036		题面为证据等级来源模板，零语义	A	sb67
+S-021037		题面为 acpibat 电量 30 秒更新与 5 秒缓存之矛盾，无对应节	A	sb67
+S-021038		题面为 lfs 解耦需复制 18 文件 9067 行的规模测算，无对应节	A	sb67
+S-021039		题面为 lfs 与 ffs 共享包装层损害事务模型之论，无对应节	A	sb67
+S-021040	V41-1.5	题面为 uthum(4) 温湿度计纳入 GENERIC 的提议，落驱动模型节	A	sb67
+S-021041		题面为 apm(4) 修复线程中 pmf 处理器问题追问，无对应节	A	sb67

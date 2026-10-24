@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021354		题面为 firefox 在 8.0 构建失败讨论与 current 顺利的反例，无直接节	A	sb81
+S-021355		题面为本地构建清单与 pkg_info -S 体积及 pkgin 归属之问，无直接节	A	sb81
+S-021356		题面为 rolling-replace 后 gobject-introspection 的 cpp 段错误，无直接节	A	sb81
+S-021357	V41-8.6	题面为 go114 补丁降级 distfile 与 version.mk 同步提醒，落 pkgsrc 长期维护模式节	A	sb81
+S-021358		题面为证据等级来源模板，零语义	A	sb81
+S-021359		题面为 9.0 KASLR 系统上 pkgin 安装问题与附证，无直接节	A	sb81
+S-021360	V41-8.6	题面为 kde4 meta-pkg 卡 kinit reinstall 循环依赖，落 pkgsrc 长期维护模式节	A	sb81
+S-021361	V41-8.4	题面为 Linux 上 PREFER_PKGSRC 时 ghostscript 链接错误，落 pkgsrc bootstrap 与跨平台构建节	A	sb81
+S-021362		题面为证据等级来源模板，零语义	A	sb81
+S-021363	V41-8.5	题面为 pkg_install 用 base 库与 RPATH 暴露构建机之析，落二进制软件包体系节	A	sb81
+S-021364		题面为 embed-bitcode 与 lto 选项冲突的对应 bug，无直接节	A	sb81
+S-021365	V41-8.6	题面为 harfbuzz 修复确认与 PLIST 改动有误之指，落 pkgsrc 长期维护模式节	A	sb81
+S-021366		题面为证据等级来源模板，零语义	A	sb81
+S-021367		题面为外部 rust 编译器可行性与错架构包换二进制之答，无直接节	A	sb81
+S-021368		题面为 rolling-replace 卡 py27-setuptools 与 awk 未知选项，无直接节	A	sb81
+S-021369	V41-8.6	题面为 wip/freecad 需 vtk≥6 而树内仅 4.2.6 的差距，落 pkgsrc 长期维护模式节	A	sb81
+S-021370		题面为证据等级来源模板，零语义	A	sb81
+S-021371		题面为证据等级来源模板，零语义	A	sb81
+S-021372	V41-8.4	题面为 unprivileged 引导与 $HOME/pkg 环境细节补充，落 pkgsrc bootstrap 与跨平台构建节	A	sb81
+S-021373		题面为证据等级来源模板，零语义	A	sb81
+S-021374	V41-8.6	题面为变更搞坏干净 9.1 系统的 pkgsrc 依赖环报告，落 pkgsrc 长期维护模式节	A	sb81
+S-021375		题面为证据等级来源模板，零语义	A	sb81
+S-021376	V41-8.4	题面为 OS_VARIANT 判定 SmartOS/OmniOS/Debian 的插入位置，落 pkgsrc bootstrap 与跨平台构建节	A	sb81
+S-021377		题面为证据等级来源模板，零语义	A	sb81

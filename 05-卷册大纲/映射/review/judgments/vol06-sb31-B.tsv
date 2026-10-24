@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015533	V37-1.5	CAM 的 LUN 标识类型讨论，属 CAM 设备访问模型	B	sb31
+S-015534	V37-1.5	WRITE SAME 固件致数据损坏，属 CAM 存储硬件问题	B	sb31
+S-015535	V37-1.5	WRITE SAME 损坏成因与现场追问，归 CAM 硬件	B	sb31
+S-015536	V37-1.5	SCSI 缺陷票据关闭与 SMART 复现，归 CAM	B	sb31
+S-015537	V37-1.5	mps 驱动 xpt_action 锁序崩溃，属 CAM 驱动	B	sb31
+S-015538	V37-1.5	M1015 卡 P20 固件兼容性求证，归 CAM	B	sb31
+S-015539	V37-1.5	SAS 背板 ses 设备缺失，属 CAM 存储硬件	B	sb31
+S-015540	V37-1.5	LSI 3008 HBA 少识别盘位，归 CAM 硬件	B	sb31
+S-015541	V37-1.5	ESB2 仅含 SATA HBA 的兼容说明，归 CAM	B	sb31
+S-015542	V37-1.5	scsi_cd 音频 CD 扇区计数异常，归 CAM 外设	B	sb31
+S-015543	V37-1.5	CAM 磁带驱动持锁内存分配修复，归 CAM	B	sb31
+S-015544	V37-1.5	camcontrol devlist 无设备条目，属 CAM 工具	B	sb31
+S-015545	V37-1.5	cam_iosched 的 TRIM 统计修复，归 CAM	B	sb31
+S-015546	V37-1.5	scsi_cd 补丁编译告警，属 CAM 光驱驱动	B	sb31
+S-015547	V37-1.5	断线后 da 设备残留与 rescan，归 CAM	B	sb31
+S-015548	V37-1.5	VirtualBox 下 CAM 与 USB 探测异常，归 CAM	B	sb31
+S-015549	V37-1.5	ATA DMA 失效改 PIO 的排查，归 CAM/ATA	B	sb31
+S-015550	V37-1.5	CAM/ATA 杂项批次含 sdhci 读卡器个案，归 CAM	B	sb31
+S-015551	V37-1.5	CAM/SCSI 杂项批次含 bhyve NVMe 个案，归 CAM	B	sb31
+S-015552	V37-1.5	1998 年 SCSI 控制器 DMA fifo 卡死，归 CAM	B	sb31
+S-015553	V37-1.5	2940UW 断连协商与 SCSI 报错，归 CAM	B	sb31
+S-015554	V37-1.5	刻录机跨控制器对比，属 CAM 存储硬件	B	sb31
+S-015555	V37-1.5	驱动向 CAM 移植与标签排队，归 CAM	B	sb31
+S-015556	V37-1.5	光驱 LUN 不支持致挂载失败，归 CAM	B	sb31

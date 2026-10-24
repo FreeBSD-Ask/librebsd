@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020706		题面为证据等级来源模板，零语义	A	sb54
+S-020707		题面为 schedctl 的 CPU affinity 与停调询问，无对应节	A	sb54
+S-020708		题面为 yamt-lazymbuf 分支合并与 mbuf 外部存储，无对应节	A	sb54
+S-020709		题面为 mutex_enter 提前与 uvm_pglistalloc panic，无对应节	A	sb54
+S-020710		题面为证据等级来源模板，零语义	A	sb54
+S-020711		题面为证据等级来源模板，零语义	A	sb54
+S-020712		题面为 accept filters 与 STREAMS 类比之辨，无对应节	A	sb54
+S-020713		题面为 opencrypto 补丁的 tsleep 换自旋锁问题，无对应节	A	sb54
+S-020714		题面为证据等级来源模板，零语义	A	sb54
+S-020715		题面为证据等级来源模板，零语义	A	sb54
+S-020716	V41-9.7	题面为 cgd 参数文件写入 boot.cfg 的建议，落 CGD 磁盘加密节	A	sb54
+S-020717		题面为证据等级来源模板，零语义	A	sb54
+S-020718		题面为证据等级来源模板，零语义	A	sb54
+S-020719		题面为 Intel 82965PM 在 netbsd-4 的支持提供，无直接节	A	sb54
+S-020720	V41-10.1	题面为多个 Xen dom0 上 callout_softclock panic 报告，落 Xen 支持节	A	sb54
+S-020721		题面为 mount_devfs 自定义文件系统与 NUL 填充，无对应节	A	sb54
+S-020722	V41-9.2	题面为 kill pid 1 与重启权限的 kauth 处理建议，落 kauth 权限框架节	A	sb54
+S-020723		题面为证据等级来源模板，零语义	A	sb54
+S-020724		题面为证据等级来源模板，零语义	A	sb54
+S-020725	V41-1.4	题面为 pmap 与 bus_dma 须尊重物理区域属性之论，落 bus_space 与 bus_dma 节	A	sb54
+S-020726		题面为 CPU 选择算法对 NUMA 的处理说明，无对应节	A	sb54
+S-020727		题面为弃用 crash dump 与 GDB 脚本保持功能之问，无对应节	A	sb54
+S-020728	V41-6.3	题面为 wapbl_ufs_rename 路径的 panic 与 ufsdirhash，落 WAPBL 日志文件系统节	A	sb54
+S-020729		题面为证据等级来源模板，零语义	A	sb54

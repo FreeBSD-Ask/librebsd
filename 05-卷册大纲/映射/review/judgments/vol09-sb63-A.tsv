@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020922		题面为证据等级来源模板，零语义	A	sb63
+S-020923		题面为证据等级来源模板，零语义	A	sb63
+S-020924		题面为证据等级来源模板，零语义	A	sb63
+S-020925	V41-1.5	题面为 wd.c 异常摆弄 buffer 与 MOD15_WRITE quirk，落驱动模型节	A	sb63
+S-020926		题面为证据等级来源模板，零语义	A	sb63
+S-020927	V41-1.4	题面为 bus_dmamap_sync 非空操作与缓存失效刷新之正，落 bus_space 与 bus_dma 节	A	sb63
+S-020928		题面为 azalia 麦克风无声与 Sigmatel codec 识别，无对应节	A	sb63
+S-020929	V41-1.5	题面为 MCP65/MCP67 SATA 补丁重做与映射策略，落驱动模型节	A	sb63
+S-020930	V41-1.3	题面为以外接设备类比讲清 interface attribute，落 autoconf 与设备抽象节	A	sb63
+S-020931		题面为 struct ptimer 联合体与 CLOCK_REALTIME 删除错乱，无对应节	A	sb63
+S-020932	V41-6.4	题面为 rraid0a 校验报未知文件类型与内存损坏怀疑，落 RAIDframe 节	A	sb63
+S-020933		题面为 arm32 性能收益传闻无公开测试之驳，无对应节	A	sb63
+S-020934		题面为基准测试只宜二选一与 SA、1:1 并存主张，无对应节	A	sb63
+S-020935		题面为 timespec.diff 无法套 HEAD 与 TV2TS 改名意见，无对应节	A	sb63
+S-020936	V41-6.3	题面为非 WAPBL 工具修补 WAPBL 卷的数据丢失风险，落 WAPBL 日志文件系统节	A	sb63
+S-020937		题面为证据等级来源模板，零语义	A	sb63
+S-020938	V41-6.1	题面为类 HFS+ 大小写无关与 FFS 大小写保留叠加设想，落 FFS 与 BSD 文件系统传统节	A	sb63
+S-020939		题面为证据等级来源模板，零语义	A	sb63
+S-020940		题面为证据等级来源模板，零语义	A	sb63
+S-020941		题面为 sysctl_createv 用法与 curtain 实例之问，无对应节	A	sb63
+S-020942		题面为销毁地址空间才有效与持锁死锁纠正，无对应节	A	sb63
+S-020943	V41-7.3	题面为 iwn 纳入通用内核与 iwi 固件先例论证，落网络设备抽象与驱动体系节	A	sb63
+S-020944		题面为证据等级来源模板，零语义	A	sb63
+S-020945		题面为 SiS 7012 auich0 探测正常而 mixerctl 无效，无对应节	A	sb63

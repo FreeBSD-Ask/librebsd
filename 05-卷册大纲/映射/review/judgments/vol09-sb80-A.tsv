@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021330	V41-8.4	题面为 Solaris 古老 /bin/sh 与 bootstrap 改用 xpg4 shell 的建议，落 pkgsrc bootstrap 与跨平台构建节	A	sb80
+S-021331	V41-12.6	题面为 pbulk.conf 中 make 路径应与常规构建相同的确认，落 pkgsrc 批量构建与平台矩阵节	A	sb80
+S-021332		题面为 ping 模块测试一台成一台败与 /usr/bin/python 缺失，无直接节	A	sb80
+S-021333	V41-8.4	题面为 net/liblive 在 Linux 构建解决的 Makefile 补丁，落 pkgsrc bootstrap 与跨平台构建节	A	sb80
+S-021334		题面为 2018Q4 冻结前 pingus 配置期找不到 boost_system，无直接节	A	sb80
+S-021335	V41-8.6	题面为混合 GCC 版本效果不好与统一要求的方案，落 pkgsrc 长期维护模式节	A	sb80
+S-021336		题面为 eeePC 装 firefox 因 rust 无 i386 二进制失败，无直接节	A	sb80
+S-021337		题面为证据等级来源模板，零语义	A	sb80
+S-021338	V41-8.5	题面为 Linux 上 pkg_add 平台名 x86_64 与 amd64 不符而失败，落二进制软件包体系节	A	sb80
+S-021339	V41-8.6	题面为 pkglint 旧实现移除打算与征询仍在用者，落 pkgsrc 长期维护模式节	A	sb80
+S-021340		题面为证据等级来源模板，零语义	A	sb80
+S-021341		题面为 qemu 按 PKG_OPTIONS 构建至 pkg_create 报错，无直接节	A	sb80
+S-021342		题面为证据等级来源模板，零语义	A	sb80
+S-021343		题面为证据等级来源模板，零语义	A	sb80
+S-021344		题面为 gnucash 构建成功但运行即 SIGABRT 的回溯，无直接节	A	sb80
+S-021345		题面为证据等级来源模板，零语义	A	sb80
+S-021346	V41-8.6	题面为 lightspark 入 pkgsrc 与 gnash 无法构建的去留之议，落 pkgsrc 长期维护模式节	A	sb80
+S-021347		题面为注释 errors.c 调试代码后崩溃移入 _mesa_error，无直接节	A	sb80
+S-021348		题面为证据等级来源模板，零语义	A	sb80
+S-021349	V41-8.6	题面为 wxmaxima 混入 wxGTK28 部件与建议冲突标记，落 pkgsrc 长期维护模式节	A	sb80
+S-021350		题面为证据等级来源模板，零语义	A	sb80
+S-021351		题面为证据等级来源模板，零语义	A	sb80
+S-021352		题面为 comm 比对 gcr 与 gnome-keyring 的 PLIST 同名之疑，无直接节	A	sb80
+S-021353		题面为 pkgsrc-current 下 libreoffice 链接失败与规避设置，无直接节	A	sb80

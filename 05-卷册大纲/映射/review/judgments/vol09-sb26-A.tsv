@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020034		题面为 VOP_LEASE 支持 Samba oplocks 的提示，无对应节	A	sb26
+S-020035		题面为页扫描器扫海量页的冻结推测，无对应节	A	sb26
+S-020036		题面为 Symphony 卡支持询问，无对应节	A	sb26
+S-020037	V41-1.5	题面为并行口与 USB lpt 复位打断打印问题，落驱动模型节	A	sb26
+S-020038		题面为证据等级来源模板，零语义	A	sb26
+S-020039		题面为探测排序数组与 -1 约定之辨，无直接节	A	sb26
+S-020040		题面为 ioctl 例程 curproc 与 pty 克隆挑刺，无对应节	A	sb26
+S-020041	V41-1.3	题面为属性容器链上溯与 propdev 假设备，落 autoconf 与设备抽象节	A	sb26
+S-020042	V41-1.3	题面为 GENERIC 公共配置文件与配置系统整顿，落 autoconf 与设备抽象节	A	sb26
+S-020043		题面为极简内核预期用途的好奇，无对应节	A	sb26
+S-020044	V41-2.4	题面为 SA11x0 片上外设与 Footbridge 归属主张，落 ARM 平台支持的发展节	A	sb26
+S-020045	V41-1.2	题面为 cache 例程通用桩与预留填充方案，落 MI/MD 分层节	A	sb26
+S-020046	V41-2.4	题面为 iomd 与 Footbridge 职责重叠及目录归属，落 ARM 平台支持的发展节	A	sb26
+S-020047		题面为 Solaris pty 用法指正的引述致谢，无对应节	A	sb26
+S-020048	V41-1.3	题面为 dv_children 暂不加入 device 结构的主张，落 autoconf 与设备抽象节	A	sb26
+S-020049	V41-1.3	题面为反对把属性查找称作 inheritance，落 autoconf 与设备抽象节	A	sb26
+S-020050		题面为 time_t 32 位约定与 sparc64 违反之辨，无对应节	A	sb26
+S-020051		题面为证据等级来源模板，零语义	A	sb26
+S-020052		题面为 OpenFirmware 属性直通提案，无直接节	A	sb26
+S-020053		题面为 cninit 机制与 zbus 子设备查找复制，无直接节	A	sb26
+S-020054	V41-1.4	题面为 bus_dmamem_alloc 须返回 DMA 一致内存，落 bus_space 与 bus_dma 节	A	sb26
+S-020055		题面为处理器种类趋同论断的质疑，无对应节	A	sb26
+S-020056	V41-9.1	题面为 ACL 太专用应清理与互操作条件，落 BSD 安全传统节	A	sb26
+S-020057	V41-6.1	题面为 ACL 化 FFS 与无 ACL 内核互操作的空间难题，落 FFS 与 BSD 文件系统传统节	A	sb26

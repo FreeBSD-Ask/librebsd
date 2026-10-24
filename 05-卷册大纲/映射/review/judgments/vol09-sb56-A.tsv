@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020754		题面为 IDE DMA 排查与 bus_space_barrier 验证待试，无直接节	A	sb56
+S-020755		题面为 init 找不到置 RB_ASKNAME 的行为沿革，无对应节	A	sb56
+S-020756		题面为 malloclog 邻接分配与 freelist 排查，无对应节	A	sb56
+S-020757		题面为寄存器大小即原生定义之辨，无对应节	A	sb56
+S-020758		题面为 64 位平台 32 位 int 的 LP64 现状，无对应节	A	sb56
+S-020759		题面为系统调用路由在 libc 桩的实现之问，无对应节	A	sb56
+S-020760		题面为 -current 上 sigaction 失效的处理中答复，无对应节	A	sb56
+S-020761		题面为不反对移除 sh5 与 pc532 的原因自述，无对应节	A	sb56
+S-020762		题面为证据等级来源模板，零语义	A	sb56
+S-020763		题面为证据等级来源模板，零语义	A	sb56
+S-020764		题面为内核高分辨率定时器第一步的定位，无对应节	A	sb56
+S-020765		题面为证据等级来源模板，零语义	A	sb56
+S-020766		题面为证据等级来源模板，零语义	A	sb56
+S-020767		题面为 TSC 时钟回退的 skew 与 drift 阈值解释，无对应节	A	sb56
+S-020768		题面为自动调优 kern.ipc.shmmaxpgs 的补丁，无对应节	A	sb56
+S-020769		题面为证据等级来源模板，零语义	A	sb56
+S-020770		题面为证据等级来源模板，零语义	A	sb56
+S-020771		题面为证据等级来源模板，零语义	A	sb56
+S-020772	V41-1.5	题面为 mvsata 可用性与 ATAPI、RAID 不支持确认，落驱动模型节	A	sb56
+S-020773		题面为 ioctl-only 节点用例说服反对者之争，无对应节	A	sb56
+S-020774	V40-4.4	题面为 Thecus/Synology NAS 的 4.x 部署案例表，落嵌入式市场中的 NetBSD 节	A	sb56
+S-020775	V40-4.4	题面为 Cisco 等网络设备基于 NetBSD 定制，落嵌入式市场中的 NetBSD 节	A	sb56
+S-020776	V40-4.4	题面为与 VxWorks/Linux 嵌入式市场竞争定位，落嵌入式市场中的 NetBSD 节	A	sb56
+S-020777		题面为嵌入式部署完整记录与考据口径的史料注，无对应节	A	sb56

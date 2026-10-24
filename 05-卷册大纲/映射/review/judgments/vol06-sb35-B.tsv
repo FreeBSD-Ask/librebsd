@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015629	V37-1.5	camcontrol 查询 CRW2100S，CAM 设备访问	B	sb35
+S-015630	V37-1.5	4.3 eotmodel 与 SL 磁带，SCSI／CAM 设备	B	sb35
+S-015631	V37-1.5	Dell PE2550 与 4.2／4.3 不兼容，SCSI 硬件	B	sb35
+S-015632	V37-1.5	CAM_NEW_TRAN_CODE 切换时限与改造	B	sb35
+S-015633	V37-1.5	USB 读卡器缺驱动，SCSI 外设支持	B	sb35
+S-015634	V37-1.5	PERC3 RAID5 识别为 aacd0，CAM 控制器	B	sb35
+S-015635	V37-1.5	HP C1533 磁带补丁测试，SCSI 设备	B	sb35
+S-015636	V37-1.5	rcd0c 镜像 CD 的 I／O 错误，SCSI 光盘	B	sb35
+S-015637	V37-1.5	aic7892 突发长度对比，SCSI 控制器	B	sb35
+S-015638	V37-1.5	控制器致内核缺页恐慌，SCSI 驱动	B	sb35
+S-015639	V37-1.5	升级后磁带机失效，rsa 查询挂起	B	sb35
+S-015640	V37-1.5	SCSI-2 刻录机与 ATAPI／CAM 补丁	B	sb35
+S-015641	V37-1.5	Sun 硬盘接 SYM 控制器，SCSI 兼容	B	sb35
+S-015642	V37-1.5	用户态 SCSI 目标模式 scsi_target 失败	B	sb35
+S-015643	V37-1.5	CAM sim 冻结未解冻，修复补丁	B	sb35
+S-015644	V37-1.5	OpenBSD PERC3Di 锁死，问 4.5 安全性	B	sb35
+S-015645	V37-1.5	PCI 奇偶校验错误，sym 与 ncr 驱动	B	sb35
+S-015646	V37-1.5	SCSI 固件更新 Write Buffer 与总线监视	B	sb35
+S-015647	V37-1.5	Adaptec 7880 六盘阵列柜访问异常	B	sb35
+S-015648	V37-1.5	aic7892 高强度访问卡住，SCB 超时	B	sb35
+S-015649	V37-1.5	mode sense／select 调试与 CAM CDB	B	sb35
+S-015650	V37-1.5	Mylex 阵列卡安装失败，PCI ID 未知	B	sb35
+S-015651		无 devfs／设备文件系统节点，零落点	B	sb35
+S-015652	V37-1.4	md(4) 虚拟盘与 GEOM provider 整合	B	sb35

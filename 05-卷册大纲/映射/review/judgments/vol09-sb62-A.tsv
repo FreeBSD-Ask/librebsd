@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020898		题面为证据等级来源模板，零语义	A	sb62
+S-020899		题面为证据等级来源模板，零语义	A	sb62
+S-020900		题面为 panic 后 PMF 挂起函数与 atabus/ahd 轮询挂死，无对应节	A	sb62
+S-020901		题面为保留 PRCO_ 请求参数与蓝牙上层匿名之辩，无对应节	A	sb62
+S-020902		题面为证据等级来源模板，零语义	A	sb62
+S-020903		题面为 vmstat -e 的 pic0 pin 计数观察，无对应节	A	sb62
+S-020904		题面为 posix_fadvise 改 nullop 别名与回合 netbsd-4，无对应节	A	sb62
+S-020905		题面为证据等级来源模板，零语义	A	sb62
+S-020906		题面为 VIA 82C505 桥接芯片资料求源，无对应节	A	sb62
+S-020907		题面为重启未断电磁盘仍下电与驱动知停机类型之需，无对应节	A	sb62
+S-020908		题面为证据等级来源模板，零语义	A	sb62
+S-020909	V41-1.5	题面为 pcidevs 弄坏自认与 i965 补丁重传，落驱动模型节	A	sb62
+S-020910		题面为 msgbuf 中 SPL 未降记录与 DDB 陷阱复现，无对应节	A	sb62
+S-020911		题面为 reboot 的 uid 检查可去除与 SIGTSTP 语义，无对应节	A	sb62
+S-020912		题面为 select/poll 优化的 percpu 与 combined 补丁基准，无对应节	A	sb62
+S-020913		题面为证据等级来源模板，零语义	A	sb62
+S-020914		题面为大内存 i386 KVA 饥饿与 KERNBASE 重建计划，无对应节	A	sb62
+S-020915		题面为 cache_lookup 改缓存与垃圾收集成批移除，无对应节	A	sb62
+S-020916	V41-1.5	题面为驱动开发答疑弃 spl 用 mutex/rwlock/softint，落驱动模型节	A	sb62
+S-020917	V41-6.3	题面为八核 WAPBL 稳定性测试与 UFS_DIRHASH 挂起，落 WAPBL 日志文件系统节	A	sb62
+S-020918		题面为 socket 锁补丁与 kernel_lock 移入协议自身，无对应节	A	sb62
+S-020919		题面为退役 PCIVERBOSE 交 pcictl 的提议，无对应节	A	sb62
+S-020920		题面为日志定位与 generation count 合并以察挂起写入，无对应节	A	sb62
+S-020921		题面为证据等级来源模板，零语义	A	sb62

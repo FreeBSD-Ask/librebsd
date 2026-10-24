@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015701	V08-9.5	内容主题词“NFS 缓冲写入页脏位／copy_file_range”命中第八卷 9.5 NFS 线	A	sb38
+S-015702	V08-7.4	内容主题词“AESNI 禁用”命中第八卷 7.4 crypt 加密族…（硬件加速就近）	A	sb38
+S-015703		题面为证据等级来源模板，零语义	A	sb38
+S-015704		题面“poudriere vnode 锁卡住”零命中（细节级）	A	sb38
+S-015705	V08-9.5	内容主题词“copy_file_range 未被调用／O_PATH”命中第八卷 9.5	A	sb38
+S-015706	V37-1.3	内容主题词“msdosfs 分配释放追踪 usemap_free”命中第三十七卷 1.3 一致性族	A	sb38
+S-015707	V37-1.4	内容主题词“vfs.nfs.use_buf_pager 缓冲映射整页验证”命中第三十七卷 1.4 存储抽象族	A	sb38
+S-015708	V37-1.6	内容主题词“swap 分区对齐”命中第三十七卷 1.6 可靠性族	A	sb38
+S-015709	V08-9.5	内容主题词“NFS 抓包 owner nobody”命中第八卷 9.5	A	sb38
+S-015710		题面为证据等级来源模板，零语义	A	sb38
+S-015711	V37-1.4	内容主题词“nfscl_openrelease 崩溃”命中第三十七卷 1.4	A	sb38
+S-015712		题面“autofs mount_on_stat 性能”零命中（细节级）	A	sb38
+S-015713	V08-9.5	内容主题词“NFS 导出挂载表”命中第八卷 9.5	A	sb38
+S-015714	V08-9.5	内容主题词“jail 内 nfsd 导出 ZFS 挂起”命中第八卷 9.5	A	sb38
+S-015715	V08-9.5	内容主题词“automounter 断开警告”命中第八卷 9.5	A	sb38
+S-015716		题面“poudriere NFS 挂载超时”零命中（细节级）	A	sb38
+S-015717		题面为证据等级来源模板，零语义	A	sb38
+S-015718		题面为证据等级来源模板，零语义	A	sb38
+S-015719	V08-9.5	内容主题词“chflags EIO 服务器能力”命中第八卷 9.5	A	sb38
+S-015720		题面为证据等级来源模板，零语义	A	sb38
+S-015721	V37-1.4	内容主题词“cluster read-ahead 多进程干扰”命中第三十七卷 1.4	A	sb38
+S-015722		题面为证据等级来源模板，零语义	A	sb38
+S-015723		题面为证据等级来源模板，零语义	A	sb38
+S-015724		题面为证据等级来源模板，零语义	A	sb38

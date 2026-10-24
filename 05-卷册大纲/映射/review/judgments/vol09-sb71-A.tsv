@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021114		题面为证据等级来源模板，零语义	A	sb71
+S-021115		题面为 access 拆分 diff 与 vnode 作用域前置重构，无直接节	A	sb71
+S-021116		题面为 chroot 公共代码抽 change_root 并移出头文件，无对应节	A	sb71
+S-021117		题面为 turnstile_block 不释放 cur->l_mutex 修法与测试，无对应节	A	sb71
+S-021118		题面为 pci0 list -b 2 与 pci2 list 等效之问与 alpha 反证，无对应节	A	sb71
+S-021119		题面为向用户态导出 pci domain 的补丁与字段新增，无对应节	A	sb71
+S-021120		题面为 sys/gpio.h 移正确目录与兼容头保留之议，无直接节	A	sb71
+S-021121		题面为 solocked2 恒真后的断言 panic 与崩溃栈，无对应节	A	sb71
+S-021122		题面为 UVM 结构体 typedef 利于正确使用之辨，无对应节	A	sb71
+S-021123		题面为 uds_rename 锁补丁跨目录与同目录并发之问，无对应节	A	sb71
+S-021124		题面为中断处理器无法获取互斥锁与 IPL 变更之问，无对应节	A	sb71
+S-021125		题面为 NFS 目录损坏与缓冲区缓存串 inode 之发现，无对应节	A	sb71
+S-021126		题面为证据等级来源模板，零语义	A	sb71
+S-021127		题面为证据等级来源模板，零语义	A	sb71
+S-021128		题面为证据等级来源模板，零语义	A	sb71
+S-021129		题面为证据等级来源模板，零语义	A	sb71
+S-021130		题面为新增 MI 变量 pci_use_64bit_addressing 的提案，无直接节	A	sb71
+S-021131		题面为 btuart 探针读取 com 内部结构之反对与行规程主张，无对应节	A	sb71
+S-021132		题面为 32 位随机数幂次表哈希的碰撞统计，无对应节	A	sb71
+S-021133		题面为挂载期缓存配额文件与无法集成 WAPBL 之驳，无直接节	A	sb71
+S-021134		题面为证据等级来源模板，零语义	A	sb71
+S-021135		题面为证据等级来源模板，零语义	A	sb71
+S-021136		题面为证据等级来源模板，零语义	A	sb71
+S-021137		题面为重写 md(4) XIP 内存盘与 mdpgno 无反向 API，无对应节	A	sb71

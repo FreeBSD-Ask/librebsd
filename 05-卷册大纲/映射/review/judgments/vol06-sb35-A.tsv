@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015629		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015630		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015631		Dell 服务器整机兼容问题，非存储设备访问	A	sb35
+S-015632	V37-1.5	CAM_NEW_TRAN_CODE 传输层改动，属 CAM 范围	A	sb35
+S-015633		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015634		PERC 硬件阵列启动故障，非 CAM 访问模型	A	sb35
+S-015635	V37-1.5	DDS-2 磁带机补丁测试，属 CAM/SCSI 外设	A	sb35
+S-015636		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015637	V37-1.5	aic7892 突发长度对比，属 SCSI 控制器驱动	A	sb35
+S-015638		题面为内核缺页与计时器问题，非存储主题	A	sb35
+S-015639	V37-1.5	磁带机失效排查，属 CAM/SCSI 外设设备	A	sb35
+S-015640		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015641		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015642	V37-1.5	SCSI 目标模式与 xpt_transport，属 CAM	A	sb35
+S-015643	V37-1.5	CAM sim 冻结修复补丁，主题明确为 CAM	A	sb35
+S-015644		OpenBSD PERC 卡锁死，非 CAM 访问模型	A	sb35
+S-015645	V37-1.5	sym/ncr SCSI 驱动奇偶校验，属 CAM 驱动	A	sb35
+S-015646	V37-1.5	SCSI 固件更新与双发起器，属 CAM 总线	A	sb35
+S-015647		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015648	V37-1.5	aic7892 高强度访问卡住，属 SCSI 控制器	A	sb35
+S-015649	V37-1.5	mode sense/select 与 CDB，属 CAM/SCSI	A	sb35
+S-015650		题面仅证据等级元信息，无存储技术主题	A	sb35
+S-015651		新节无 devfs 专节，与文件系统各节无交集	A	sb35
+S-015652		新节无内存盘专节，与 GEOM 等无实质交集	A	sb35

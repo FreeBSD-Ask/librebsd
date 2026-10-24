@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021378		题面为 gcc10 首次 make 失败重试即成功的不明原因，无直接节	A	sb82
+S-021379		题面为证据等级来源模板，零语义	A	sb82
+S-021380		题面为 cinepaint 适配 glib2 2.68 的补丁与 extern C 去除，无直接节	A	sb82
+S-021381	V41-8.6	题面为分支前把 Ruby 默认从 2.6 换 2.7 的宣布，落 pkgsrc 长期维护模式节	A	sb82
+S-021382		题面为定位编译期空转的三步法与最小自包含示例，无直接节	A	sb82
+S-021383		题面为 freecad 1.0 在 NetBSD-10 跑通附截图的报告，无直接节	A	sb82
+S-021384	V41-8.4	题面为测 rust 用 pkgsrc LLVM 在 i386 PAE 先编不过的试验，落 pkgsrc bootstrap 与跨平台构建节	A	sb82
+S-021385		题面为 pkgsrc 更新后 openpyxl 坏与 site-packages 逐层展开，无直接节	A	sb82
+S-021386	V41-8.4	题面为 current 上构建 xentools420 停在 qemu-xen ui/sdl，落 pkgsrc bootstrap 与跨平台构建节	A	sb82
+S-021387		题面为 Helix 25.07.1 的 wip 包求评审与 tree-sitter 目录名之问，无直接节	A	sb82
+S-021388		题面为 mk.conf 设 RUST_TYPE=bin 的答复指引，无直接节	A	sb82
+S-021389		题面为 bob 支持命令行覆盖 pkgpath 与解析 pkgchk.conf 的建议，无直接节	A	sb82
+S-021390		题面为证据等级来源模板，零语义	A	sb82
+S-021391	V41-8.5	题面为 uv 装 cffi 时 amd64 与 wheel x86_64 判不兼容，落二进制软件包体系节	A	sb82
+S-021392		题面为 misc/window 更新交 pkgsrc 补丁抑或改基础源之问，无直接节	A	sb82
+S-021393		题面为自 10.0_STABLE 未升级却自称 10.1 与 numpy 构建失败，无直接节	A	sb82
+S-021394		题面为证据等级来源模板，零语义	A	sb82
+S-021395		题面为证据等级来源模板，零语义	A	sb82
+S-021396		题面为证据等级来源模板，零语义	A	sb82
+S-021397		题面为证据等级来源模板，零语义	A	sb82
+S-021398		题面为证据等级来源模板，零语义	A	sb82
+S-021399		题面为 python39 适配 3.10 工程量大改直接 configure 的实验，无直接节	A	sb82
+S-021400	V41-8.4	题面为 heimdal 构建失败判为竞态与已推补丁修复，落 pkgsrc bootstrap 与跨平台构建节	A	sb82
+S-021401	V41-8.6	题面为 nextcloud 不必拆版本化包而保留迁移代码之见，落 pkgsrc 长期维护模式节	A	sb82

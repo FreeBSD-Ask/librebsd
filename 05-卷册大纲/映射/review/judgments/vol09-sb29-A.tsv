@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020106		题面为证据等级来源模板，零语义	A	sb29
+S-020107		题面为铝热剂物理销毁磁盘的偏执设想，无对应节	A	sb29
+S-020108		题面为 mount_nfs 端口选项写法认同，无对应节	A	sb29
+S-020109		题面为标记队列注释后改善与坏扇区 reassign，无对应节	A	sb29
+S-020110		题面为 com_kgdb 的 dev_t 空值采纳，无对应节	A	sb29
+S-020111		题面为 8259 定位纠正与中断掩码接口缺失，无对应节	A	sb29
+S-020112		题面为证据等级来源模板，零语义	A	sb29
+S-020113		题面为 ESS 688/1688 与 esl 驱动 DMA 适用提醒，无对应节	A	sb29
+S-020114		题面为 mountcompatnames 折中保留提案，无对应节	A	sb29
+S-020115		题面为每架构 devsw 文件与主号之问，无对应节	A	sb29
+S-020116		题面为证据等级来源模板，零语义	A	sb29
+S-020117		题面为连接吞吐重算与多线程无益论，无对应节	A	sb29
+S-020118		题面为 VIA 主板 UVM_FAULT 复现报告，无对应节	A	sb29
+S-020119	V41-2.4	题面为 arm 头文件目录重组拖延与共识缺失，落 ARM 平台支持的发展节	A	sb29
+S-020120		题面为 scsictl 增加分离设备功能请求，无直接节	A	sb29
+S-020121		题面为证据等级来源模板，零语义	A	sb29
+S-020122		题面为 LFS symlink 返回值判断与三种修法，无对应节	A	sb29
+S-020123		题面为 gcc 内建与 -ffreestanding 适用面，无对应节	A	sb29
+S-020124		题面为 pckbc/pccons 中断与 spltty 屏蔽，无对应节	A	sb29
+S-020125		题面为 GENERIC/INSTALL 变体机制与顶层包含，无直接节	A	sb29
+S-020126		题面为 ps -u 不再显示启动时间的退化，无对应节	A	sb29
+S-020127		题面为证据等级来源模板，零语义	A	sb29
+S-020128		题面为 ntpd 禁回拨与 SLEW_ALWAYS 澄清，无对应节	A	sb29
+S-020129		题面为池分配器 subpage 化与 arm26 实测，无对应节	A	sb29

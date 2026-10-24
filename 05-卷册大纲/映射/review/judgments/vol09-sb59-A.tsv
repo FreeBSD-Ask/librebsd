@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020826		题面为证据等级来源模板，零语义	A	sb59
+S-020827		题面为证据等级来源模板，零语义	A	sb59
+S-020828		题面为同族地址隧道配置参数无效求助，无对应节	A	sb59
+S-020829	V41-7.1	题面为 5.2 上 TCP 挂起与 SACK 空洞观察，落 BSD TCP/IP 栈节	A	sb59
+S-020830	V41-7.1	题面为 IP_PKTINFO 发送侧缺失的长文论证，落 BSD TCP/IP 栈节	A	sb59
+S-020831	V41-7.2	题面为 bind IPv6 链路本地组播 EADDRNOTAVAIL 报告，落 KAME 与 IPv6/IPsec 节	A	sb59
+S-020832	V41-7.3	题面为移除 if_vlan 死分支改善可读性，落网络设备抽象与驱动体系节	A	sb59
+S-020833		题面为 arp(8) pub 与 pub proxy 语义之问，无对应节	A	sb59
+S-020834		题面为证据等级来源模板，零语义	A	sb59
+S-020835		题面为证据等级来源模板，零语义	A	sb59
+S-020836	V41-7.2	题面为默认启用 IPv6 SLAAC 临时地址提议，落 KAME 与 IPv6/IPsec 节	A	sb59
+S-020837	V41-7.3	题面为接口描述支持与重复描述禁止规则，落网络设备抽象与驱动体系节	A	sb59
+S-020838	V41-7.2	题面为 RA 移除补丁与双轨自动配置之见，落 KAME 与 IPv6/IPsec 节	A	sb59
+S-020839	V41-7.3	题面为异步组播过滤更新打破 usbnet 死锁，落网络设备抽象与驱动体系节	A	sb59
+S-020840		题面为 NFS root 在 next68k 因 randomid 失效，无对应节	A	sb59
+S-020841	V41-7.2	题面为 happy eyeballs 补丁加快双栈收敛，落 KAME 与 IPv6/IPsec 节	A	sb59
+S-020842		题面为 ndp/arp 脚本友好化与前缀委托提案，无对应节	A	sb59
+S-020843		题面为证据等级来源模板，零语义	A	sb59
+S-020844	V41-6.4	题面为 swap 置 raid0b 遭 parity 脏重写分析，落 RAIDframe 节	A	sb59
+S-020845		题面为 libc constification 与 dirname/basename 兼容之问，无对应节	A	sb59
+S-020846		题面为 locale LC_CTYPE 缺位与 citrus_db 渊源长答，无对应节	A	sb59
+S-020847		题面为 rcorder 重写稿与重复文件判重方案，无对应节	A	sb59
+S-020848		题面为证据等级来源模板，零语义	A	sb59
+S-020849		题面为证据等级来源模板，零语义	A	sb59

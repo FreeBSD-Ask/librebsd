@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021354		结构线索：firefox 构建件，无直接节	C	sb81
+S-021355		结构线索：pkgin 归属件，无直接节	C	sb81
+S-021356		结构线索：cpp 段错误件，无直接节	C	sb81
+S-021357	V41-8.6	结构线索：distfile 版本线→V41 长期维护节	C	sb81
+S-021358		模板层无结构对应	C	sb81
+S-021359		结构线索：KASLR pkgin 件，无直接节	C	sb81
+S-021360	V41-8.6	结构线索：meta-pkg 依赖线→V41 长期维护节	C	sb81
+S-021361	V41-8.4	结构线索：Linux 链接线→V41 bootstrap 节	C	sb81
+S-021362		模板层无结构对应	C	sb81
+S-021363	V41-8.5	结构线索：pkg_install 库线→V41 二进制包体系节	C	sb81
+S-021364		结构线索：lto 冲突件，无直接节	C	sb81
+S-021365	V41-8.6	结构线索：修复确认线→V41 长期维护节	C	sb81
+S-021366		模板层无结构对应	C	sb81
+S-021367		结构线索：外部 rust 件，无直接节	C	sb81
+S-021368		结构线索：rolling-replace 件，无直接节	C	sb81
+S-021369	V41-8.6	结构线索：vtk 版本线→V41 长期维护节	C	sb81
+S-021370		模板层无结构对应	C	sb81
+S-021371		模板层无结构对应	C	sb81
+S-021372	V41-8.4	结构线索：unprivileged 线→V41 bootstrap 节	C	sb81
+S-021373		模板层无结构对应	C	sb81
+S-021374	V41-8.6	结构线索：基建破坏线→V41 长期维护节	C	sb81
+S-021375		模板层无结构对应	C	sb81
+S-021376	V41-8.4	结构线索：OS_VARIANT 线→V41 bootstrap 节	C	sb81
+S-021377		模板层无结构对应	C	sb81

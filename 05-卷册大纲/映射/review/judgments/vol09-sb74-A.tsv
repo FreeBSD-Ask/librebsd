@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021186		题面为 kdelibs4 找不到 DocBook 的 cmake 机制分析，无直接节	A	sb74
+S-021187		题面为证据等级来源模板，零语义	A	sb74
+S-021188		题面为 kdegraphics3 经 kuickshow 牵出 imlib/gtk1 的依赖追查，无直接节	A	sb74
+S-021189		题面为 texlive 内建探测的 ENOPATCH 不表态，无直接节	A	sb74
+S-021190		题面为 openoffice3 编译不过与 quota.h inline 声明报错，无直接节	A	sb74
+S-021191		题面为 qemu 升级 0.14 与去 SDL 依赖建议，无直接节	A	sb74
+S-021192		题面为证据等级来源模板，零语义	A	sb74
+S-021193		题面为 xulrunner 主动建 tcp6 连接的 fstat 观察，无直接节	A	sb74
+S-021194		题面为 USE_DESTDIR 安装位置表述的纠正，无直接节	A	sb74
+S-021195		题面为证据等级来源模板，零语义	A	sb74
+S-021196		题面为证据等级来源模板，零语义	A	sb74
+S-021197		题面为 pkg_chk -l 全报 Unable to extract pkgname，无直接节	A	sb74
+S-021198		题面为证据等级来源模板，零语义	A	sb74
+S-021199	V41-8.6	题面为 HEADS UP 预告移除过时包并征询反对，落 pkgsrc 长期维护模式节	A	sb74
+S-021200		题面为只有问候语的空内容投稿，无对应节	A	sb74
+S-021201	V41-8.7	题面为 pkg-vulnerabilities 条目处理的请示，落 pkgsrc 软件安全维护节	A	sb74
+S-021202		题面为 X11_TYPE=native 仅限 X11R7 的解释，无直接节	A	sb74
+S-021203		题面为证据等级来源模板，零语义	A	sb74
+S-021204		题面为证据等级来源模板，零语义	A	sb74
+S-021205		题面为证据等级来源模板，零语义	A	sb74
+S-021206		题面为 krita 启动十分钟耗于 _rtld_sym 的排查，无对应节	A	sb74
+S-021207	V41-8.5	题面为 pkg_add 报由更新 pkg_install 构建而失败，落二进制软件包体系节	A	sb74
+S-021208		题面为证据等级来源模板，零语义	A	sb74
+S-021209		题面为 fpos_t 应作不透明类型处理的一般性建议，无对应节	A	sb74

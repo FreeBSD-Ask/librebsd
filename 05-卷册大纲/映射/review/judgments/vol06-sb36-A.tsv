@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-015653		无 FreeBSD tmpfs／sendfile／VFS 落点节	A	sb36
+S-015654		新大纲无 NFS 节点；题面为 NFS 版本史	A	sb36
+S-015655		新大纲无 unionfs 节点；题面为联合文件系统回归	A	sb36
+S-015656		新大纲无 xtaf／Xbox 文件系统节点	A	sb36
+S-015657		题面为 mac.h 头文件误删，非 MAC 体系节	A	sb36
+S-015658	V37-1.4	GEOM 层缓冲区接口缺陷致只读多挂载失效	A	sb36
+S-015659		题面为挂载点数量上限，无对应存储节	A	sb36
+S-015660		题面无主题词，仅注来源与日期	A	sb36
+S-015661		题面为 flock／close 原子性，无 VFS 锁节	A	sb36
+S-015662		题面仅报崩溃修复，非内核锁重构节	A	sb36
+S-015663		题面为 ENOENT／ENOATTR 报错，无扩展属性节	A	sb36
+S-015664		题面无主题词，仅注来源与日期	A	sb36
+S-015665		题面为 NFS mountd 导出报错，无 NFS 节	A	sb36
+S-015666		题面为 NFS panic 修复，无 NFS 节	A	sb36
+S-015667		题面为 NFS 挂载选项提议，无 NFS 节	A	sb36
+S-015668		题面为 UDF 读写确认，无 UDF 节点	A	sb36
+S-015669		题面无主题词，仅注来源与日期	A	sb36
+S-015670		题面无主题词，仅注来源与日期	A	sb36
+S-015671		题面为 NFS exports V4／V3，无 NFS 节	A	sb36
+S-015672		题面为 MNAMELEN／statfs 接口，无 VFS 节	A	sb36
+S-015673		题面为 ZFS NFS4 导出死锁，无 NFS 节	A	sb36
+S-015674		题面为 mmap 与 ZFS ARC 疑问，非 ZFS 引入节	A	sb36
+S-015675		题面为 NFS 上 fifo 阻塞，无 NFS 节	A	sb36
+S-015676		题面为 NFSv4 rpcbind 注册，无 NFS 节	A	sb36

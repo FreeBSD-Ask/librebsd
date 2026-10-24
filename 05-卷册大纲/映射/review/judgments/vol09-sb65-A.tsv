@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-020970		题面为 uvm_km_alloc 修法与 pipe_create KASSERT 建议，无对应节	A	sb65
+S-020971		题面为证据等级来源模板，零语义	A	sb65
+S-020972		题面为 TSC skew 与 drift 术语注释之议，无对应节	A	sb65
+S-020973		题面为 kmem 池缓存 KASSERT 与 vmem 量子缓存页大小，无对应节	A	sb65
+S-020974		题面为照建议简化但暂留 SHMMAX 判定，无对应节	A	sb65
+S-020975		题面为证据等级来源模板，零语义	A	sb65
+S-020976		题面为证据等级来源模板，零语义	A	sb65
+S-020977		题面为移除 COMPAT_50 的担忧与模块化权衡，无对应节	A	sb65
+S-020978		题面为证据等级来源模板，零语义	A	sb65
+S-020979	V41-1.5	题面为 USB 读卡器升级后 SD 卡 sd2 报错回归，落驱动模型节	A	sb65
+S-020980		题面为 cpuctl identify 输出与 EST 位，无对应节	A	sb65
+S-020981		题面为证据等级来源模板，零语义	A	sb65
+S-020982		题面为 PR 40933 tmpfs chown 补丁与回溯 netbsd-5，无对应节	A	sb65
+S-020983	V41-2.4	题面为 evbarm 内核构建失败与 device.h 包含链次序，落 ARM 平台支持的发展节	A	sb65
+S-020984		题面为证据等级来源模板，零语义	A	sb65
+S-020985		题面为 genfs 是文件系统层非杂物堆的定位主张，无对应节	A	sb65
+S-020986		题面为证据等级来源模板，零语义	A	sb65
+S-020987		题面为 device_register 设 bootdev 与 attach 失败不列入提示，无对应节	A	sb65
+S-020988		题面为 PPP 链路恢复难与 slip(4) 增 ipv6 之由，无直接节	A	sb65
+S-020989		题面为 module prop 路径处理移位与 NOCHR 遗漏，无对应节	A	sb65
+S-020990		题面为 netbsd-5 内核工作正常的确认致谢，无对应节	A	sb65
+S-020991		题面为 MODULAR 阶段一点五的选项与属性文件合并，无对应节	A	sb65
+S-020992		题面为实现已需设备文件系统与开发分支集成之议，无直接节	A	sb65
+S-020993		题面为 mknod 举证反驳挂载说与自动建节点难关，无对应节	A	sb65

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021282	V41-8.6	题面为 GraphicsMagick 跳过 webp 测试与补 buildlink3.mk，落 pkgsrc 长期维护模式节	A	sb78
+S-021283		题面为证据等级来源模板，零语义	A	sb78
+S-021284	V41-8.6	题面为 pkg_alternatives 语义之答与命名清理欢迎，落 pkgsrc 长期维护模式节	A	sb78
+S-021285		题面为 firefox 2015Q4 在 i386 构建失败与上游 bug 对照，无直接节	A	sb78
+S-021286		题面为证据等级来源模板，零语义	A	sb78
+S-021287		题面为 Debian 上 nbpatch 缺 nbcompat.h 的报错，无直接节	A	sb78
+S-021288		题面为 base Xorg 跑 meld 找不到 libGL.so 的 ktruss 排查，无直接节	A	sb78
+S-021289		题面为 firefox24 捡系统 java 而非 pkgsrc 的修正，无直接节	A	sb78
+S-021290	V41-8.6	题面为 perl 5.24.0 升级后 revbump 漏 glib2 等之指，落 pkgsrc 长期维护模式节	A	sb78
+S-021291		题面为 python35 构建报错 __pycache__ 未列入 PLIST，无直接节	A	sb78
+S-021292		题面为证据等级来源模板，零语义	A	sb78
+S-021293		题面为 loudmouth 配置失败检测不到 BIO_f_base64，无直接节	A	sb78
+S-021294		题面为证据等级来源模板，零语义	A	sb78
+S-021295	V41-8.4	题面为三平台默认启用 cwrappers 的通告与反馈征集，落 pkgsrc bootstrap 与跨平台构建节	A	sb78
+S-021296		题面为证据等级来源模板，零语义	A	sb78
+S-021297		题面为证据等级来源模板，零语义	A	sb78
+S-021298	V41-8.6	题面为自述维护 Xen 4.2 不维护 4.5 与 xm/xl 栈取舍，落 pkgsrc 长期维护模式节	A	sb78
+S-021299		题面为证据等级来源模板，零语义	A	sb78
+S-021300	V41-8.6	题面为 sablotron 上游消失与删除不当之辨，落 pkgsrc 长期维护模式节	A	sb78
+S-021301		题面为 gdk-pixbuf-query 回溯与出名 PR 的转述，无直接节	A	sb78
+S-021302		题面为 autogen 构建失败归因 bash 脚本的引文回信，无直接节	A	sb78
+S-021303		题面为 gmplayer 构建失败 _oss_ioctl 未定义，无直接节	A	sb78
+S-021304	V41-8.6	题面为 libLLVM 双份 44MB 冗余与删除主张，落 pkgsrc 长期维护模式节	A	sb78
+S-021305	V41-8.7	题面为反对 pkgsrc openssl 读系统级 CA 的理由，落 pkgsrc 软件安全维护节	A	sb78

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021402		题面为 pam-af 失败真因在 /usr/pkg/lib 权限与模块缺符号，无直接节	A	sb83
+S-021403		题面为 Python 3.10 构建 mozc-server 报 collections.MutableSet 缺失，无直接节	A	sb83
+S-021404		题面为 show-depends-pkgpaths 用法指引与缩进期望，无直接节	A	sb83
+S-021405	V41-8.6	题面为升级可行性与 wip 抄入丢 SunOS 赋值之辨，落 pkgsrc 长期维护模式节	A	sb83
+S-021406	V41-8.6	题面为 libreoffice 根因 zxing-cpp 1.4.0 并回退与删二进制包提示，落 pkgsrc 长期维护模式节	A	sb83
+S-021407		题面为 libstdc++ 与 libc++ 头之辨及 CXXFLAGS 建议，无直接节	A	sb83
+S-021408		题面为 java-swt wiki 项目页与 oracle-jdk17 试跑报告，无直接节	A	sb83
+S-021409		题面为 fvwm3 补丁改手动套用后重建正常，无直接节	A	sb83
+S-021410		题面为 npm 构建 resetdeps 访问 registry 报 EHOSTUNREACH，无直接节	A	sb83
+S-021411		题面为 2022Q4 上 gobject-introspection 构建失败卡 g-ir-scanner，无直接节	A	sb83
+S-021412		题面为按建议提交 PR 57190 并称赞 Tahoe LAFS，无直接节	A	sb83
+S-021413	V41-8.6	题面为 2023Q1 分支建立与 cdn 包符号链接变更通告，落 pkgsrc 长期维护模式节	A	sb83
+S-021414	V41-8.4	题面为 RHEL7 非特权构建 py-sqlite3 的 C99 报错与 mk.conf 处理，落 pkgsrc bootstrap 与跨平台构建节	A	sb83
+S-021415		题面为证据等级来源模板，零语义	A	sb83
+S-021416	V41-8.6	题面为 PADL nss_ldap 上游已死与恢复 RFC2307bis 之求，落 pkgsrc 长期维护模式节	A	sb83
+S-021417		题面为证据等级来源模板，零语义	A	sb83
+S-021418		题面为关掉 cups 后 qt6-qtbase 构建失败与 PLIST 校验，无直接节	A	sb83
+S-021419		题面为内树 GCC 强制 DWARF 4 与 ctfconvert 不支持 DWARF 5，无直接节	A	sb83
+S-021420	V41-8.5	题面为 10 amd64/i386 二进制包可得性与 bulk 构建进度之答，落二进制软件包体系节	A	sb83
+S-021421		题面为 wip/qemacs 评审求入库与 options.mk 初次配方，无直接节	A	sb83
+S-021422		题面为栈重对齐选项规避与 Firefox i386 缺 CFLAGS 之指，无直接节	A	sb83
+S-021423		题面为证据等级来源模板，零语义	A	sb83
+S-021424		题面为证据等级来源模板，零语义	A	sb83
+S-021425		题面为 py-scipy 构建失败缺 BLAS_C_INTERFACE 声明的确认，无直接节	A	sb83
