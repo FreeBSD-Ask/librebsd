@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-024874	V45-3.6	内容 exec promise 语义落 pledge 权限集合与系统调用限制	B	sb58
+S-024875	V45-6.6	内容 Heartbleed 事件落 Heartbleed 与 LibreSSL 的产生	B	sb58
+S-024876	V45-6.6	内容 fork 启动过程落 Heartbleed 与 LibreSSL 的产生	B	sb58
+S-024877	V44-5.3	内容 fork 后分化对照落 LibreSSL 的工程目标与争议	B	sb58
+S-024878		内容为公告与 commit 考据元数据	B	sb58
+S-024879	V44-5.3	内容碎片化批评落 LibreSSL 的工程目标与争议	B	sb58
+S-024880	V44-5.3	内容代码质量回应落 LibreSSL 的工程目标与争议	B	sb58
+S-024881	V44-5.3	内容合作可能性之辩落 LibreSSL 的工程目标与争议	B	sb58
+S-024882		内容为合图综述重复件	B	sb58
+S-024883		内容为人物接触史零命中	B	sb58
+S-024884	V45-3.7	内容 unveil 机制设计落 unveil 文件系统视图限制	B	sb58
+S-024885	V45-3.8	内容双机制配合落 pledge 与 unveil 的联合使用	B	sb58
+S-024886	V45-3.8	内容隔离机制对照落 pledge 与 unveil 的联合使用	B	sb58
+S-024887		内容为 commit 与手册考据元数据	B	sb58
+S-024888	V44-6.7	内容可移植性与粒度批评落 外部批评：兼容性与运维负担	B	sb58
+S-024889	V44-6.7	内容粗粒度有意选择回应落 外部批评：兼容性与运维负担	B	sb58
+S-024890	V44-6.7	内容复杂应用需求之辩落 外部批评：兼容性与运维负担	B	sb58
+S-024891	V44-6.7	内容争议综合落 外部批评：兼容性与运维负担	B	sb58
+S-024892		内容为总纲审视重复件	B	sb58
+S-024893		内容为工具限制零命中	B	sb58
+S-024894		内容为冲突类新闻汇编元数据	B	sb58
+S-024895		内容为里程碑新闻汇编元数据	B	sb58
+S-024896		内容为 Release Notes 综述元数据	B	sb58
+S-024897		内容为文献匹配 dump 元数据	B	sb58
