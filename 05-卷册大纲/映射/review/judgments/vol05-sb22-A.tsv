@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-005863	V37-6.3	题面“2.2 make world 失败”命中第三十七卷 6.3	A	sb22
+S-005864	V39-6.1	题面“4 台 2.1.7 在线机不升级”命中第三十九卷 6.1	A	sb22
+S-005865	V37-6.3	题面“cvsup 升 2.2 缺源码”命中第三十七卷 6.3	A	sb22
+S-005866		题面为证据等级来源模板，零语义	A	sb22
+S-005867	V37-6.3	题面“RELENG_2_2 unistd.h”命中第三十七卷 6.3	A	sb22
+S-005868		题面为证据等级来源模板，零语义	A	sb22
+S-005869	V37-6.3	题面“makeworld install 自动装 package”命中第三十七卷 6.3	A	sb22
+S-005870		题面“Linux 兼容 LKM”零命中	A	sb22
+S-005871		题面为证据等级来源模板，零语义	A	sb22
+S-005872		题面“Seagate Barr…”零命中	A	sb22
+S-005873		题面为证据等级来源模板，零语义	A	sb22
+S-005874	V37-6.3	题面“makeworld 失败 cvsup”命中第三十七卷 6.3	A	sb22
+S-005875		题面为证据等级来源模板，零语义	A	sb22
+S-005876	V36-2.7	题面“2.2.5 随附 BIND 4.9.6”命中第三十六卷 2.7	A	sb22
+S-005877	V37-6.3	题面“cvsup 2.2-Stable make”命中第三十七卷 6.3	A	sb22
+S-005878		题面为证据等级来源模板，零语义	A	sb22
+S-005879	V37-6.3	题面“make world 中断 install”命中第三十七卷 6.3	A	sb22
+S-005880		题面为证据等级来源模板，零语义	A	sb22
+S-005881	V37-6.4	题面“make kernel pid”命中第三十七卷 6.4 buildkernel	A	sb22
+S-005882	V37-6.3	题面“-stable buildworld /mnt”命中第三十七卷 6.3	A	sb22
+S-005883	V37-6.3	题面“控制台三重复消息”命中第三十七卷 6.3	A	sb22
+S-005884		题面“SMC de0 链路灯”零命中	A	sb22
+S-005885		题面“de0 co-ax 切换”零命中	A	sb22
+S-005886		题面“telnet SunOS”零命中	A	sb22
