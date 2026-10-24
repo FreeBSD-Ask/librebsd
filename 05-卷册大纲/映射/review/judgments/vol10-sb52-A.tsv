@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-024730		题面“malloc memset 合为 calloc”零命中	A	sb52
+S-024731		题面“wsmoused 清理补丁”零命中	A	sb52
+S-024732		题面“sparc64 陷阱表崩溃”零命中	A	sb52
+S-024733	V45-6.7	题面“dtls1h pqueue 补丁集”命中第四十五卷 6.7	A	sb52
+S-024734		题面“mg 恒真比较清理”零命中	A	sb52
+S-024735		题面“in_pcb 哈希扩缩”零命中	A	sb52
+S-024736	V45-6.7	题面“libssl 判空删除补丁”命中第四十五卷 6.7	A	sb52
+S-024737		题面“调度器审阅”零命中	A	sb52
+S-024738	V45-8.5	题面“rc 中 kbd ldconfig 测试改写”命中第四十五卷 8.5	A	sb52
+S-024739		题面“dd 溢出处理补丁”零命中	A	sb52
+S-024740		题面“insque remque 合入”零命中	A	sb52
+S-024741		题面“netbsd 与 freebsd 比对”零命中	A	sb52
+S-024742		题面“VPLS mpe 伪设备补丁集”零命中	A	sb52
+S-024743		题面“openrcs strtonum 防溢出”零命中	A	sb52
+S-024744		题面“acpithinkpad 休眠键”零命中	A	sb52
+S-024745		题面“crypto_taskq 中断级别”零命中	A	sb52
+S-024746	V45-14.4	题面“bulk build 验证 event.h”命中第四十五卷 14.4	A	sb52
+S-024747		题面“PCI ROM 冲突检查”零命中	A	sb52
+S-024748		题面为证据等级来源模板	A	sb52
+S-024749		题面“locate 补丁与 limits”零命中	A	sb52
+S-024750		题面“in6_purgeaddr rdomain”零命中	A	sb52
+S-024751	V45-12.3	题面“skgpio 启动崩溃修复实测”命中第四十五卷 12.3	A	sb52
+S-024752	V45-6.10	题面“arc4random 注释措辞”命中第四十五卷 6.10	A	sb52
+S-024753		题面“logstash 远程日志”零命中	A	sb52
