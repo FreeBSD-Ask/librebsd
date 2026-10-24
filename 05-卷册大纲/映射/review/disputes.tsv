@@ -1,6 +1,6 @@
 source_id	pass_a	pass_b	pass_c	diff_summary	subtype	resolution
 S-000002	∅	V16-1.6	∅	三趟不一致	adjacent	待裁决
-S-000037	∅	V06-2.3	V06-2.3	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V06-2.3（选项 B：判定已存待落盘）
+S-000037	∅	V06-2.3	V06-2.3	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V06-2.3（选项 B：判定已存待落盘）
 S-000081	∅	∅	V01-1.4	三趟不一致	adjacent	待裁决
 S-000082	∅	V01-1.4	V01-1.4	三趟不一致（规则恢复）	r2_anchor	restored:r2_anchor→（2026-10-24 批准重放）
 S-000083	V01-2.2	V01-2.2	V01-2.1	三趟不一致（规则恢复）	r1_adjacent	restored:r1_adjacent→V01-2.2（2026-10-24 批准重放）
@@ -14,9 +14,9 @@ S-000094	∅	V01-4.2	V01-1.3	三趟不一致	empty-vs-value	待裁决
 S-000095	V01-8.6	V01-6.2	V01-8.6	三趟不一致	empty-vs-value	待裁决
 S-000096	V01-8.6	V01-8.6	V06-2	三趟不一致	empty-vs-value	待裁决
 S-000103	V05-2.2	V05-3.3	V05-3.3	三趟不一致	empty-vs-value	待裁决
-S-000108	V01-7.3	V01-7.2	V01-7.2	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-7.2（选项 B：判定已存待落盘）
-S-000123	V01-7.2	V01-7.3	V01-7.3	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-7.3（选项 B：判定已存待落盘）
-S-000128	V02-2.2	V02-2.1	V02-2.1	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V02-2.1（选项 B：判定已存待落盘）
+S-000108	V01-7.3	V01-7.2	V01-7.2	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-7.2（选项 B：判定已存待落盘）
+S-000123	V01-7.2	V01-7.3	V01-7.3	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-7.3（选项 B：判定已存待落盘）
+S-000128	V02-2.2	V02-2.1	V02-2.1	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V02-2.1（选项 B：判定已存待落盘）
 S-000139	V01-1.5	V01-8.6	V01-8.6	三趟不一致	empty-vs-value	待裁决
 S-000162	V08-1.4	V08-1.4	V06-2.3	三趟不一致	empty-vs-value	待裁决
 S-000164	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
@@ -26,9 +26,9 @@ S-000168	∅	V31-2.1	V05-2.3	三趟不一致	empty-vs-value	待裁决
 S-000169	∅	V01-5.3	V01-5.2	三趟不一致	adjacent	待裁决
 S-000170	∅	V01-5.3	V01-5.2	三趟不一致	adjacent	待裁决
 S-000171	∅	V01-5.3	V01-5.2	三趟不一致	adjacent	待裁决
-S-000182	V01-5.3	V01-5.3	V01-5.2	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-5.3（选项 B：判定已存待落盘）
-S-000189	V04-1.1	V04-1.2	V04-1.2	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V04-1.2（选项 B：判定已存待落盘）
-S-000196	V01-9.2	V01-9.4	V01-9.4	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-9.4（选项 B：判定已存待落盘）
+S-000182	V01-5.3	V01-5.3	V01-5.2	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-5.3（选项 B：判定已存待落盘）
+S-000189	V04-1.1	V04-1.2	V04-1.2	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V04-1.2（选项 B：判定已存待落盘）
+S-000196	V01-9.2	V01-9.4	V01-9.4	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-9.4（选项 B：判定已存待落盘）
 S-000201	V01-8.5	V01-8.5	V01-8.5	三趟不一致	adjacent	待裁决
 S-000202	V01-8.5	V01-8.5	V01-8.5	三趟不一致	adjacent	待裁决
 S-000216	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
@@ -42,7 +42,7 @@ S-000253	V08-6.1	V08-6.1	V08-6.1	三趟不一致	adjacent	待裁决
 S-000259	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000262	V02-1.3	V01-9.4	V02-1.3	三趟不一致	empty-vs-value	待裁决
 S-000273	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
-S-000280	V08-6	V08-6.2	V08-6.2	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V08-6.2（选项 B：判定已存待落盘）
+S-000280	V08-6	V08-6.2	V08-6.2	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V08-6.2（选项 B：判定已存待落盘）
 S-000281	V01-8.5	V01-8.5	V01-8.5	三趟不一致	adjacent	待裁决
 S-000288	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000299	V05-2.6	V05-2.6	V05-2.6	三趟不一致	adjacent	待裁决
@@ -52,10 +52,10 @@ S-000305	V05-2.6	V05-2.6	V05-2.6	三趟不一致	adjacent	待裁决
 S-000315	V01-8.6	V01-8.6	V01-8.6	三趟不一致	adjacent	待裁决
 S-000318	V01-8.6	V01-8.6	V01-8.6	三趟不一致	adjacent	待裁决
 S-000324	V02-1.5	V02-1.6	V02-1.6	三趟不一致（规则恢复）	r1_adjacent	restored:r1_adjacent→V02-1.5（2026-10-24 批准重放）
-S-000343	∅	V01-8.9	V01-8.9	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-8.9（选项 B：判定已存待落盘）
-S-000344	∅	V01-8.9	V01-8.9	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-8.9（选项 B：判定已存待落盘）
-S-000345	∅	V01-8.9	V01-8.9	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-8.9（选项 B：判定已存待落盘）
-S-000367	V01-9.5	V01-9.5	V01-9.6	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V01-9.5（选项 B：判定已存待落盘）
+S-000343	∅	V01-8.9	V01-8.9	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-8.9（选项 B：判定已存待落盘）
+S-000344	∅	V01-8.9	V01-8.9	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-8.9（选项 B：判定已存待落盘）
+S-000345	∅	V01-8.9	V01-8.9	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-8.9（选项 B：判定已存待落盘）
+S-000367	V01-9.5	V01-9.5	V01-9.6	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V01-9.5（选项 B：判定已存待落盘）
 S-000373	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000376	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000382	V01-8.6	V01-9.3	V01-9.3	三趟不一致	empty-vs-value	待裁决
@@ -75,7 +75,7 @@ S-000404	V04-4.2	V04-4.2	V04-1.3	三趟不一致	empty-vs-value	待裁决
 S-000405	V04-1.3	V04-1.3	V04-1.3	三趟不一致（规则恢复）	r3_domain	restored:r3_domain→V04-1.3（2026-10-24 批准重放）
 S-000407	V04-1.3	V01-9.8	V04-1.3	三趟不一致	empty-vs-value	待裁决
 S-000409	V01-9.7	V01-9.6	V01-9.7	三趟不一致（规则恢复）	r1_adjacent	restored:r1_adjacent→V01-9.7（2026-10-24 批准重放）
-S-000414	V05-3.1	V05-3.3	V05-3.1	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V05-3.1（选项 B：判定已存待落盘）
+S-000414	V05-3.1	V05-3.3	V05-3.1	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V05-3.1（选项 B：判定已存待落盘）
 S-000415	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000416	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000417	V01-8.5	V04-4.2	V01-8.5	三趟不一致	empty-vs-value	待裁决
@@ -104,7 +104,7 @@ S-000492	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000493	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000494	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000495	∅	∅	V05-2.2	三趟不一致	adjacent	待裁决
-S-000496	∅	V15-1.2	V15-1.2	三趟不一致（规则通过留 DISPUTED）	adjacent	ruled:adjacent→V15-1.2（选项 B：判定已存待落盘）
+S-000496	∅	V15-1.2	V15-1.2	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.2（选项 B：判定已存待落盘）
 S-000497	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000498	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
 S-000508	V61-1.5	V61-1.5	V61-1.5	三趟不一致	adjacent	待裁决
@@ -621,265 +621,654 @@ S-001855	∅	V04-3.4	V06-2.3	三趟不一致	empty-vs-value	待裁决
 S-001856	V08-9.5	V08-9.5	V06-2.3	三趟不一致	empty-vs-value	待裁决
 S-001860	V01-8.7	V01-8.7	V04-3.4	三趟不一致	empty-vs-value	待裁决
 S-001874	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
-S-001957	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001958	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001963	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001967	∅	∅	V06-2.3	三趟不一致	adjacent
-S-001968	V21-1	V21-1	V21-1	hard-stuff-suspect	generic
-S-001975	V12-3.7	V12-3.7	V12-3.7	hard-stuff-suspect	generic
-S-001976	V12-3.7	V12-3.7	V12-3.7	hard-stuff-suspect	generic
-S-001977	V12-3.7	V12-3.7	V12-3.7	hard-stuff-suspect	generic
-S-001979	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001984	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001985	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001986	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001989	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001991	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-001992	V12-2.6	V12-2.6	V12-2.6	hard-stuff-suspect	generic
-S-001997	V12-2.5	V12-2.5	V12-2.5	hard-stuff-suspect	generic
-S-002019	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002021	V12-3.3	V12-3.3	V12-3.3	hard-stuff-suspect	generic
-S-002029	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002030	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002031	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002033	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002034	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002035	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002036	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002037	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002038	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002039	V12-3.3	V12-3.3	V12-3.3	hard-stuff-suspect	generic
-S-002041	V12-3.3	V12-3.3	V12-3.3	hard-stuff-suspect	generic
-S-002043	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002045	V12-3.5	V12-3.5	V12-3.5	hard-stuff-suspect	generic
-S-002046	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002062	V05-2.6	V05-2.6	V05-2.6	hard-stuff-suspect	generic
-S-002064	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002065	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002067	V12-3.3	V12-3.3	V12-3.3	hard-stuff-suspect	generic
-S-002068	V12-3.3	V12-3.3	V12-3.3	hard-stuff-suspect	generic
-S-002069	V12-3.3	V12-3.3	V12-3.3	hard-stuff-suspect	generic
-S-002081	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002083	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002085	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002087	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002092	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002093	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002094	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002107	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002108	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002109	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002110	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002111	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002113	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002114	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002115	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002123	V13-3.10	V13-3.10	V13-3.10	hard-stuff-suspect	generic
-S-002126	V02-2.6	V02-2.6	V02-2.6	hard-stuff-suspect	generic
-S-002127	V13-3.10	V13-3.10	V13-3.10	hard-stuff-suspect	generic
-S-002128	V13-3.10	V13-3.10	V13-3.10	hard-stuff-suspect	generic
-S-002129	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002130	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002131	V05-2.6	V05-2.6	V05-2.6	hard-stuff-suspect	generic
-S-002132	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002134	V13-3.10	V13-3.10	V13-3.10	hard-stuff-suspect	generic
-S-002136	V13-3.10	V13-3.10	V13-3.10	hard-stuff-suspect	generic
-S-002137	V02-2.6	V02-2.6	V02-2.6	hard-stuff-suspect	generic
-S-002138	V02-2.6	V02-2.6	V02-2.6	hard-stuff-suspect	generic
-S-002139	V02-2.6	V02-2.6	V02-2.6	hard-stuff-suspect	generic
-S-002140	V02-2.6	V02-2.6	V02-2.6	hard-stuff-suspect	generic
-S-002146	V13-2	V13-2	V13-2	hard-stuff-suspect	generic
-S-002154	V13-4.11	V13-4.11	V13-4.11	hard-stuff-suspect	generic
-S-002171	V12-4.6	V12-4.6	V12-4.6	hard-stuff-suspect	generic
-S-002172	V12-4.6	V12-4.6	V12-4.6	hard-stuff-suspect	generic
-S-002173	V12-4.6	V12-4.6	V12-4.6	hard-stuff-suspect	generic
-S-002176	V01-3.4	V03-1.3	V03-1.3	三趟不一致	empty-vs-value
-S-002180	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002181	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002182	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002184	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002185	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002188	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002190	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002191	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002192	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002194	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002199	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002200	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002202	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002203	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002205	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002207	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002208	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002209	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002210	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002211	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002215	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002216	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002217	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002218	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002219	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002220	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002221	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002222	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002223	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002224	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002230	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002231	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002232	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002234	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002235	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002236	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002237	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002238	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002242	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002244	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002245	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002247	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002249	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002250	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002251	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002252	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002254	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002255	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002256	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002257	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002261	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002262	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002263	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002266	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002267	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002268	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002270	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002271	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002272	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002273	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002274	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002275	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002276	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002277	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002278	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002281	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002282	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002283	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002284	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002286	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002287	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002291	V12-4.6	V12-4.6	V12-4.6	hard-stuff-suspect	generic
-S-002292	V05-2.6	V05-2.6	V05-2.6	hard-stuff-suspect	generic
-S-002296	V12-4.6	V12-4.6	V12-4.6	hard-stuff-suspect	generic
-S-002297	V12-4.6	V12-4.6	V12-4.6	hard-stuff-suspect	generic
-S-002301	V12-2.6	V12-2.6	V12-2.6	hard-stuff-suspect	generic
-S-002330	V13-1.1	V13-1.1	V13-1.1	hard-stuff-suspect	generic
-S-002333	V13-1.1	∅	V06-2.3	三趟不一致	empty-vs-value
-S-002334	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002337	V13-1.1	V13-1.1	V13-1.1	hard-stuff-suspect	generic
-S-002339	V12-3	V12-3	V12-3	hard-stuff-suspect	generic
-S-002340	V72-5	V72-5	V72-5	hard-stuff-suspect	generic
-S-002341	V72-5	V72-5	V72-5	hard-stuff-suspect	generic
-S-002342	V72-5	V72-5	V72-5	hard-stuff-suspect	generic
-S-002343	V72-5	V72-5	V72-5	hard-stuff-suspect	generic
-S-002344	V72-5	V72-5	V72-5	hard-stuff-suspect	generic
-S-002346	V13-1.1	V13-1.1	V13-1.1	hard-stuff-suspect	generic
-S-002348	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002349	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002351	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002353	V13-1.1	V13-1.1	V13-1.1	hard-stuff-suspect	generic
-S-002356	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002357	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002358	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002364	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002366	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002367	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002369	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002371	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002372	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002373	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002376	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002378	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002379	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002380	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002381	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002382	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002383	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002386	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002387	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002388	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002390	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002391	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002392	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002394	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002397	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002398	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002399	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002400	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002408	V13-1.1	V13-1.1	V13-1.1	hard-stuff-suspect	generic
-S-002440	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002442	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002444	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002446	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002448	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002450	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002452	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002453	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002454	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002457	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002459	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002467	V02-2.6	V02-2.6	V02-2.6	hard-stuff-suspect	generic
-S-002469	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002471	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002475	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002476	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002477	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002478	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002479	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002480	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002481	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002484	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002485	V12-3.7	V12-3.7	V12-3.7	hard-stuff-suspect	generic
-S-002486	V12-3.7	V12-3.7	V12-3.7	hard-stuff-suspect	generic
-S-002487	V12-3.7	V12-3.7	V12-3.7	hard-stuff-suspect	generic
-S-002489	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002492	V05-4.2	V05-4.2	V05-4.2	hard-stuff-suspect	generic
-S-002494	V05-4.2	V05-4.2	V05-4.2	hard-stuff-suspect	generic
-S-002498	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002499	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002501	V13-2	V13-2	V13-2	hard-stuff-suspect	generic
-S-002502	V13-2	V13-2	V13-2	hard-stuff-suspect	generic
-S-002504	V13-2	V13-2	V13-2	hard-stuff-suspect	generic
-S-002507	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002508	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002509	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002511	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002513	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002519	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002522	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002524	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002527	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002528	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002530	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002533	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002535	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002536	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002537	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002538	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002539	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002541	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002542	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002544	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002546	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002547	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002550	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002552	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002555	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002557	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002558	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002560	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002561	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002564	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002565	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002566	∅	∅	V06-2.3	三趟不一致	adjacent
-S-002567	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002569	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002570	V15-1.1	V15-1.1	V15-1.1	hard-stuff-suspect	generic
-S-002575	∅	∅	V06-2.3	三趟不一致	adjacent
+S-001957	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001958	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001963	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001967	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-001968	V21-1	V21-1	V21-1	三趟不一致	adjacent	待裁决
+S-001975	V12-3.7	V12-3.7	V12-3.7	三趟不一致	adjacent	待裁决
+S-001976	V12-3.7	V12-3.7	V12-3.7	三趟不一致	adjacent	待裁决
+S-001977	V12-3.7	V12-3.7	V12-3.7	三趟不一致	adjacent	待裁决
+S-001979	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001984	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001985	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001986	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001989	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001991	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-001992	V12-2.6	V12-2.6	V12-2.6	三趟不一致	adjacent	待裁决
+S-001997	V12-2.5	V12-2.5	V12-2.5	三趟不一致	adjacent	待裁决
+S-002019	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002021	V12-3.3	V12-3.3	V12-3.3	三趟不一致	adjacent	待裁决
+S-002029	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002030	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002031	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002033	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002034	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002035	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002036	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002037	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002038	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002039	V12-3.3	V12-3.3	V12-3.3	三趟不一致	adjacent	待裁决
+S-002041	V12-3.3	V12-3.3	V12-3.3	三趟不一致	adjacent	待裁决
+S-002043	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002045	V12-3.5	V12-3.5	V12-3.5	三趟不一致	adjacent	待裁决
+S-002046	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002062	V05-2.6	V05-2.6	V05-2.6	三趟不一致	adjacent	待裁决
+S-002064	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002065	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002067	V12-3.3	V12-3.3	V12-3.3	三趟不一致	adjacent	待裁决
+S-002068	V12-3.3	V12-3.3	V12-3.3	三趟不一致	adjacent	待裁决
+S-002069	V12-3.3	V12-3.3	V12-3.3	三趟不一致	adjacent	待裁决
+S-002081	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002083	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002085	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002087	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002092	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002093	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002094	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002107	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002108	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002109	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002110	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002111	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002113	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002114	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002115	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002123	V13-3.10	V13-3.10	V13-3.10	三趟不一致	adjacent	待裁决
+S-002126	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
+S-002127	V13-3.10	V13-3.10	V13-3.10	三趟不一致	adjacent	待裁决
+S-002128	V13-3.10	V13-3.10	V13-3.10	三趟不一致	adjacent	待裁决
+S-002129	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002130	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002131	V05-2.6	V05-2.6	V05-2.6	三趟不一致	adjacent	待裁决
+S-002132	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002134	V13-3.10	V13-3.10	V13-3.10	三趟不一致	adjacent	待裁决
+S-002136	V13-3.10	V13-3.10	V13-3.10	三趟不一致	adjacent	待裁决
+S-002137	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
+S-002138	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
+S-002139	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
+S-002140	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
+S-002146	V13-2	V13-2	V13-2	三趟不一致	adjacent	待裁决
+S-002154	V13-4.11	V13-4.11	V13-4.11	三趟不一致	adjacent	待裁决
+S-002171	V12-4.6	V12-4.6	V12-4.6	三趟不一致	adjacent	待裁决
+S-002172	V12-4.6	V12-4.6	V12-4.6	三趟不一致	adjacent	待裁决
+S-002173	V12-4.6	V12-4.6	V12-4.6	三趟不一致	adjacent	待裁决
+S-002176	V01-3.4	V03-1.3	V03-1.3	三趟不一致	empty-vs-value	待裁决
+S-002180	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002181	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002182	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002184	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002185	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002188	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002190	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002191	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002192	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002194	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002199	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002200	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002202	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002203	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002205	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002207	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002208	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002209	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002210	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002211	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002215	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002216	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002217	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002218	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002219	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002220	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002221	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002222	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002223	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002224	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002230	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002231	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002232	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002234	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002235	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002236	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002237	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002238	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002242	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002244	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002245	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002247	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002249	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002250	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002251	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002252	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002254	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002255	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002256	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002257	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002261	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002262	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002263	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002266	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002267	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002268	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002270	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002271	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002272	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002273	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002274	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002275	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002276	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002277	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002278	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002281	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002282	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002283	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002284	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002286	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002287	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002291	V12-4.6	V12-4.6	V12-4.6	三趟不一致	adjacent	待裁决
+S-002292	V05-2.6	V05-2.6	V05-2.6	三趟不一致	adjacent	待裁决
+S-002296	V12-4.6	V12-4.6	V12-4.6	三趟不一致	adjacent	待裁决
+S-002297	V12-4.6	V12-4.6	V12-4.6	三趟不一致	adjacent	待裁决
+S-002301	V12-2.6	V12-2.6	V12-2.6	三趟不一致	adjacent	待裁决
+S-002330	V13-1.1	V13-1.1	V13-1.1	三趟不一致	adjacent	待裁决
+S-002333	V13-1.1	∅	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002334	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002337	V13-1.1	V13-1.1	V13-1.1	三趟不一致	adjacent	待裁决
+S-002339	V12-3	V12-3	V12-3	三趟不一致	adjacent	待裁决
+S-002340	V72-5	V72-5	V72-5	三趟不一致	adjacent	待裁决
+S-002341	V72-5	V72-5	V72-5	三趟不一致	adjacent	待裁决
+S-002342	V72-5	V72-5	V72-5	三趟不一致	adjacent	待裁决
+S-002343	V72-5	V72-5	V72-5	三趟不一致	adjacent	待裁决
+S-002344	V72-5	V72-5	V72-5	三趟不一致	adjacent	待裁决
+S-002346	V13-1.1	V13-1.1	V13-1.1	三趟不一致	adjacent	待裁决
+S-002348	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002349	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002351	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002353	V13-1.1	V13-1.1	V13-1.1	三趟不一致	adjacent	待裁决
+S-002356	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002357	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002358	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002364	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002366	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002367	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002369	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002371	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002372	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002373	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002376	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002378	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002379	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002380	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002381	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002382	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002383	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002386	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002387	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002388	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002390	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002391	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002392	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002394	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002397	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002398	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002399	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002400	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002408	V13-1.1	V13-1.1	V13-1.1	三趟不一致	adjacent	待裁决
+S-002440	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002442	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002444	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002446	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002448	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002450	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002452	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002453	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002454	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002457	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002459	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002467	V02-2.6	V02-2.6	V02-2.6	三趟不一致	adjacent	待裁决
+S-002469	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002471	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002475	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002476	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002477	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002478	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002479	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002480	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002481	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002484	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002485	V12-3.7	V12-3.7	V12-3.7	三趟不一致	adjacent	待裁决
+S-002486	V12-3.7	V12-3.7	V12-3.7	三趟不一致	adjacent	待裁决
+S-002487	V12-3.7	V12-3.7	V12-3.7	三趟不一致	adjacent	待裁决
+S-002489	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002492	V05-4.2	V05-4.2	V05-4.2	三趟不一致	adjacent	待裁决
+S-002494	V05-4.2	V05-4.2	V05-4.2	三趟不一致	adjacent	待裁决
+S-002498	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002499	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002501	V13-2	V13-2	V13-2	三趟不一致	adjacent	待裁决
+S-002502	V13-2	V13-2	V13-2	三趟不一致	adjacent	待裁决
+S-002504	V13-2	V13-2	V13-2	三趟不一致	adjacent	待裁决
+S-002507	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002508	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002509	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002511	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002513	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002519	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002522	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002524	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002527	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002528	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002530	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002533	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002535	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002536	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002537	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002538	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002539	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002541	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002542	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002544	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002546	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002547	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002550	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002552	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002555	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002557	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002558	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002560	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002561	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002564	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002565	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002566	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002567	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002569	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002570	V15-1.1	V15-1.1	V15-1.1	三趟不一致	adjacent	待裁决
+S-002575	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002590	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002591	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002592	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002593	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002594	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002598	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002599	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002600	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002601	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002602	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002604	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002605	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002606	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002607	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002610	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002611	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002612	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002613	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002614	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002615	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002616	V13-3.10	V13-3.10	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002623	V37-5.1	V37-5.1	∅	三趟不一致	adjacent	待裁决
+S-002624	V37-5.1	V37-5.1	∅	三趟不一致	adjacent	待裁决
+S-002625	V37-5.1	V37-5.1	∅	三趟不一致	adjacent	待裁决
+S-002626	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002638	V12-3.7	V12-3.7	∅	三趟不一致	adjacent	待裁决
+S-002639	V12-3.7	V12-3.7	∅	三趟不一致	adjacent	待裁决
+S-002640	V12-3.7	V12-3.7	∅	三趟不一致	adjacent	待裁决
+S-002641	V12-3.7	V12-3.7	∅	三趟不一致	adjacent	待裁决
+S-002642	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002643	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002644	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002645	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002646	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002647	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002648	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002649	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002650	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002651	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002653	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002656	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002657	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002658	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002659	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002660	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002661	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002665	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002666	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002667	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002668	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002669	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002674	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002675	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002677	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002680	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002684	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002686	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002687	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002690	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002692	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002693	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002695	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002696	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002697	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002702	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002703	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002704	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002706	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002707	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002710	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002712	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002713	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002714	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002715	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002716	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002717	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002718	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002719	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002720	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002721	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002722	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002723	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002724	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002725	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002726	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002727	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002728	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002729	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002730	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002731	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002732	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002733	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002734	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002735	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002736	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002737	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002738	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002739	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002740	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002741	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002742	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002743	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002744	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002745	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002746	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002747	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002748	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002749	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002750	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002751	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002752	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002753	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002754	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002755	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002756	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002757	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002758	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002759	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002760	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002761	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002762	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002763	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002764	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002765	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002766	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002767	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002768	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002769	V19-1.7	V19-1.7	∅	三趟不一致	adjacent	待裁决
+S-002770	V19-1.7	V19-1.7	∅	三趟不一致	adjacent	待裁决
+S-002771	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002772	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002776	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002780	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002781	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002782	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002783	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002784	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002785	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002786	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002787	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002788	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002792	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002794	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002795	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002796	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002797	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002798	V19-1	V19-1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002799	V19-1.7	V19-1.7	∅	三趟不一致	adjacent	待裁决
+S-002800	V19-1.7	V19-1.7	∅	三趟不一致	adjacent	待裁决
+S-002801	V19-1.7	V19-1.7	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V19-1.7（选项 B：判定已存待落盘）
+S-002802	V19-1.7	V19-1.7	∅	三趟不一致	adjacent	待裁决
+S-002803	V13-1.1	V13-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V13-1.1（选项 B：判定已存待落盘）
+S-002804	V13-1.1	V13-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V13-1.1（选项 B：判定已存待落盘）
+S-002805	V05-2.6	V05-2.6	∅	三趟不一致	adjacent	待裁决
+S-002806	V05-2.6	V05-2.6	∅	三趟不一致	adjacent	待裁决
+S-002807	V05-2.6	V05-2.6	∅	三趟不一致	adjacent	待裁决
+S-002808	V05-2.6	V05-2.6	∅	三趟不一致	adjacent	待裁决
+S-002809	V05-2.6	V05-2.6	∅	三趟不一致	adjacent	待裁决
+S-002810	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002811	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002812	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002813	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002814	V02-1.5	V02-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V02-1.5（选项 B：判定已存待落盘）
+S-002815	V02-1.5	V02-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V02-1.5（选项 B：判定已存待落盘）
+S-002816	V02-1.5	V02-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V02-1.5（选项 B：判定已存待落盘）
+S-002817	V02-1.5	V02-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V02-1.5（选项 B：判定已存待落盘）
+S-002818	V19-1	V19-1	∅	三趟不一致	adjacent	待裁决
+S-002819	V19-1	V19-1	∅	三趟不一致	adjacent	待裁决
+S-002820	V19-1	V19-1	∅	三趟不一致	adjacent	待裁决
+S-002821	V19-1	V19-1	∅	三趟不一致	adjacent	待裁决
+S-002836	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002847	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002848	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002849	V15-1.1	V15-1.1	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V15-1.1（选项 B：判定已存待落盘）
+S-002851	V61-1.4	V61-1.4	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.4（选项 B：判定已存待落盘）
+S-002852	V61-1.4	V61-1.4	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.4（选项 B：判定已存待落盘）
+S-002853	V61-1.4	V61-1.4	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.4（选项 B：判定已存待落盘）
+S-002854	V61-1.4	V61-1.4	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.4（选项 B：判定已存待落盘）
+S-002855	V61-1.5	V61-1.5	∅	三趟不一致	adjacent	待裁决
+S-002856	V61-1.5	V61-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.5（选项 B：判定已存待落盘）
+S-002857	V61-1.5	V61-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.5（选项 B：判定已存待落盘）
+S-002858	V61-1.5	V61-1.5	∅	三趟不一致（规则通过留账）	adjacent	ruled:adjacent→V61-1.5（选项 B：判定已存待落盘）
+S-002859	V61-1.5	V61-1.5	∅	三趟不一致	adjacent	待裁决
+S-002860	V13-1.1	V13-1.1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002861	V13-1.1	V13-1.1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002862	V13-1.1	V13-1.1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002863	V13-1.1	V13-1.1	V06-2.3	三趟不一致	empty-vs-value	待裁决
+S-002865	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002866	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002869	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002870	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002871	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002872	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002873	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002876	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002877	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002879	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002880	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002881	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002882	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002884	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002885	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002886	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002887	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002888	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002890	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002891	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002893	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002895	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002898	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002899	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002900	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002901	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002904	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002905	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002906	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002907	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002908	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002909	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002911	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002912	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002913	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002914	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002915	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002916	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002918	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002919	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002921	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002922	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002923	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002924	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002925	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002927	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002929	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002931	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002932	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002933	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002935	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002937	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002938	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002941	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002943	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002944	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002946	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002947	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002948	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002949	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002950	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002951	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002952	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002955	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002956	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002957	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002959	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002961	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002962	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002965	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002966	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002967	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002969	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002971	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002972	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002973	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002974	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002975	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002976	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002977	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002980	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002981	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002982	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002984	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002985	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002986	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002987	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002988	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002989	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002991	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002992	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002993	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002994	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002995	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002997	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-002998	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003000	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003002	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003003	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003004	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003005	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003006	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003012	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003013	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003014	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003016	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003018	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003019	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003021	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003023	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003024	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003025	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003026	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003028	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003029	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003031	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003035	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003036	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003039	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003041	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003047	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003048	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003049	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003050	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003052	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003054	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003055	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003056	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003057	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003058	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003060	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003061	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003063	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003064	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003066	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003067	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003068	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003069	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003073	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003075	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003077	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003080	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003081	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003084	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003085	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003087	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003088	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003089	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003091	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003092	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003094	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003095	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003096	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003097	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003099	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003101	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003102	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003103	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003104	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003105	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003106	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003107	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003108	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003109	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003110	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003112	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003113	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003114	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003115	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003116	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003117	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003118	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003119	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003122	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003123	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003124	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003125	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003128	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003129	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003130	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003132	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003133	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003136	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003137	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003138	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003140	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003141	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003144	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003145	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003147	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003148	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003149	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003151	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003152	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003154	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003157	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003159	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003160	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003180	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003187	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003255	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
+S-003308	∅	∅	V06-2.3	三趟不一致	adjacent	待裁决
