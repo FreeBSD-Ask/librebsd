@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023866	V44-4.9	内容 ZFS 纳入基底跨系对照落 4.x 与同时期操作系统的比较	B	sb16
+S-023867	V45-8.2	内容 ksh 命令替换语义落 ksh 与命令解释环境	B	sb16
+S-023868	V45-10.6	内容第三方浏览器补丁维护落 第三方软件安全维护	B	sb16
+S-023869		内容为 anoncvs 服务脚本零命中	B	sb16
+S-023870	V45-10.3	内容 pkg 打包工具测试落 pkg 工具与二进制软件包	B	sb16
+S-023871		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023872		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023873	V45-14.1	内容补丁审查与语义风险取舍落 CVS 流程与提交纪律	B	sb16
+S-023874		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023875		内容为 libc 函数补丁零命中	B	sb16
+S-023876		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023877		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023878		内容为 libc 修复零命中	B	sb16
+S-023879		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023880		内容为线程语义问答零命中	B	sb16
+S-023881		内容为内核补丁回退零命中	B	sb16
+S-023882		内容为 VM 清理零命中	B	sb16
+S-023883		内容为 libkvm 接口零命中	B	sb16
+S-023884		内容为 C 方言细节零命中	B	sb16
+S-023885		内容为总纲映射元数据	B	sb16
+S-023886		内容为编纂指导思想插入段零命中	B	sb16
+S-023887		内容为 NetBIOS 命名方案零命中	B	sb16
+S-023888		内容为 ROW_MINE claim 载体零主题	B	sb16
+S-023889		内容为 C 标准细节零命中	B	sb16

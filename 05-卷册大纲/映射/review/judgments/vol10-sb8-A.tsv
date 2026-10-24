@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023674		题面“kjs pthreads 非 posix 扩展”零命中	A	sb8
+S-023675		题面“powernow-k7 setperf”零命中	A	sb8
+S-023676		题面“rusers authunix 空指针”零命中	A	sb8
+S-023677		题面为证据等级来源模板	A	sb8
+S-023678		题面“loader 加载自定义 DSDT ACPI”零命中	A	sb8
+S-023679		题面为证据等级来源模板	A	sb8
+S-023680	V45-12.3	题面“bge(4) 统计补丁测试”命中第四十五卷 12.3	A	sb8
+S-023681		题面“uberry 驱动与用户态分工”零命中	A	sb8
+S-023682		题面“intel 驱动面板参数”零命中	A	sb8
+S-023683		题面“acpi _aml_setvalue 清理”零命中	A	sb8
+S-023684		题面为证据等级来源模板	A	sb8
+S-023685		题面“uaudio 自适应输入端点”零命中	A	sb8
+S-023686		题面为证据等级来源模板	A	sb8
+S-023687		题面“azalia NVIDIA HD 音频”零命中	A	sb8
+S-023688	V45-7.10	题面“ypldap Makefile YP 条件编译”命中第四十五卷 7.10	A	sb8
+S-023689	V45-12.3	题面“em(4) 82575 补丁征求测试”命中第四十五卷 12.3	A	sb8
+S-023690		题面为证据等级来源模板	A	sb8
+S-023691		题面为证据等级来源模板	A	sb8
+S-023692		题面“acpiec ECDT 早期初始化”零命中	A	sb8
+S-023693		题面“usbdevs 新增厂商表”零命中	A	sb8
+S-023694	V45-12.3	题面“re 网卡 MCLGETI 死循环修复验证”命中第四十五卷 12.3	A	sb8
+S-023695	V45-6.10	题面“tarsnap scrypt 讨论”命中第四十五卷 6.10	A	sb8
+S-023696	V45-9.4	题面“httpd ECDHE SSLECDHCurve 补丁”命中第四十五卷 9.4	A	sb8
+S-023697	V45-5.3	题面“ospfd 与 ospf6d 共享补丁”命中第四十五卷 5.3	A	sb8

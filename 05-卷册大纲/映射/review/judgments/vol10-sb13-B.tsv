@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023794	V45-12.1	内容 WWAN 无线卡拨号支持落 无线网络硬件与驱动支持	B	sb13
+S-023795	V45-12.3	内容网卡 EEPROM 校验排障落 硬件文档开放度与驱动可维护性	B	sb13
+S-023796		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023797	V45-12.3	内容 SCSI 控制器驱动回滚落 硬件文档开放度与驱动可维护性	B	sb13
+S-023798		内容为 X 工具排障零命中	B	sb13
+S-023799		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023800		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023801		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023802		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023803		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023804		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023805		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023806		内容为平台升级故障零命中	B	sb13
+S-023807		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023808		内容为存储拼接替代方案，新树无 softraid 节点	B	sb13
+S-023809		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023810		内容为第三方邮件工具零命中	B	sb13
+S-023811		内容为 ROW_MINE claim 载体零主题	B	sb13
+S-023812		内容为工具缺陷复现零命中	B	sb13
+S-023813	V45-9.3	内容 relayd 缺陷修复落 relayd 与代理、负载均衡	B	sb13
+S-023814		内容为内核 USB 稳定性补丁零命中	B	sb13
+S-023815		内容为 VM 内核补丁零命中	B	sb13
+S-023816	V45-10.3	内容 pkg 工具功能提议落 pkg 工具与二进制软件包	B	sb13
+S-023817		内容为隧道运维零命中	B	sb13

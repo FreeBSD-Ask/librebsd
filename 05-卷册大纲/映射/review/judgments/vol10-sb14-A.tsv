@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023818	V45-8.2	题面“ksh set 修改环境”命中第四十五卷 8.2	A	sb14
+S-023819	V45-8.2	题面“ksh add_glob 补全补丁”命中第四十五卷 8.2	A	sb14
+S-023820	V45-12.3	题面“mfi 驱动 64 位帧”命中第四十五卷 12.3	A	sb14
+S-023821		题面“if_gre 直连相邻主机”零命中	A	sb14
+S-023822		题面“radix.c 旧宏清理”零命中	A	sb14
+S-023823		题面“file_mbswidth wcwidth”零命中	A	sb14
+S-023824	V45-12.3	题面“gdt(4) raw_scsi 框架移除”命中第四十五卷 12.3	A	sb14
+S-023825		题面“asa(1) 返回值跨系对照”零命中	A	sb14
+S-023826		题面“uvm_page_freelist 删除”零命中	A	sb14
+S-023827	V45-10.3	题面“pkg_add 交互提示设计”命中第四十五卷 10.3	A	sb14
+S-023828		题面“LIST_PREV 宏提议拒绝”零命中	A	sb14
+S-023829		题面“xlint %m 格式”零命中	A	sb14
+S-023830		题面“uvm 页面去活清理”零命中	A	sb14
+S-023831		题面“specfs d_kqfilter”零命中	A	sb14
+S-023832		题面“USB 树挑剔项清理”零命中	A	sb14
+S-023833	V45-10.6	题面“ncurses 补丁 termios 连锁”命中第四十五卷 10.6	A	sb14
+S-023834		题面“FreeBSD 移植改动删除”零命中	A	sb14
+S-023835	V45-12.3	题面“sd(4) 只读开关补丁”命中第四十五卷 12.3	A	sb14
+S-023836		题面为证据等级来源模板	A	sb14
+S-023837		题面为纯 ROW_MINE 编号模板	A	sb14
+S-023838		题面为证据等级来源模板	A	sb14
+S-023839		题面为证据等级来源模板	A	sb14
+S-023840		题面为证据等级来源模板	A	sb14
+S-023841	V45-12.1	题面“USB 挂载 athn(4) 补丁”命中第四十五卷 12.1	A	sb14
