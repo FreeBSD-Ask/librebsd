@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025876	V48-4.11	题面 NetBSD 6 对照命中 48 卷 4.11 同时期比较	THREE_PASS	A
+S-025877	V48-4.11	题面 OpenBSD 5.x 对照命中 48 卷 4.11 同时期比较	THREE_PASS	A
+S-025878	V48-4.11	题面 Linux 3.x btrfs 命中 48 卷 4.11 同时期比较	THREE_PASS	A
+S-025879	V49-3.7	题面 CoW 总览命中 49 卷 3.7 HAMMER2 与 ZFS 设计比较	THREE_PASS	A
+S-025880	V48-3.9	题面 CVE 密度增长命中 48 卷 3.9 漏洞响应与安全实践	THREE_PASS	A
+S-025881	V48-3.9	题面 OpenSSL 漏洞群命中 48 卷 3.9 漏洞响应与安全实践	THREE_PASS	A
+S-025882	V48-3.9	题面 telnetd 等漏洞命中 48 卷 3.9 漏洞响应与安全实践	THREE_PASS	A
+S-025883	V48-3.9	题面 HAMMER2 开发期安全命中 48 卷 3.9 漏洞响应与安全实践	THREE_PASS	A
+S-025884		题面为总纲第 5 条史观审视层	THREE_PASS	A
+S-025885		题面为总纲第 8 条史观审视层	THREE_PASS	A
+S-025886		题面为总纲第 19 条史观审视层	THREE_PASS	A
+S-025887		题面为总纲第 21 条史观审视层	THREE_PASS	A
+S-025888		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025889		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025890		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025891		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025892		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025893		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025894		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025895		题面为邮件分析自动增补层	THREE_PASS	A
+S-025896		题面为复核交付映射链层	THREE_PASS	A
+S-025897		题面为复核标注块层	THREE_PASS	A
+S-025898		题面为章级综合/留痕/文献层泛型	THREE_PASS	A
+S-025899	V48-5.3	题面 GPU 改进命中 48 卷 5.3 DRM 转换完成与遗留	THREE_PASS	A

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025900		结构线索：硬件适配面在 48 卷 5.2	THREE_PASS	C
+S-025901	V48-5.8	结构线索：同期比较层在 48 卷 5.8	THREE_PASS	C
+S-025902		结构线索：数据统计层无对应	THREE_PASS	C
+S-025903		结构线索：调试细节无对应	THREE_PASS	C
+S-025904		结构线索：加密细节无对应	THREE_PASS	C
+S-025905	V48-5.2	结构线索：NVMe 适配层在 48 卷 5.2	THREE_PASS	C
+S-025906		结构线索：vkernel 层在 48 卷 4.6	THREE_PASS	C
+S-025907		结构线索：同期比较层在 48 卷 5.8	THREE_PASS	C
+S-025908		结构线索：数据统计层无对应	THREE_PASS	C
+S-025909		结构线索：领导结构层在 64 卷 9.12	THREE_PASS	C
+S-025910	V48-4.8	结构线索：贡献者层在 48 卷 4.8	THREE_PASS	C
+S-025911		结构线索：治理比较面在 53 卷 6.5	THREE_PASS	C
+S-025912		结构线索：邮件档案层在 75 卷 2.6	THREE_PASS	C
+S-025913	V48-5.6	结构线索：同期批评层在 48 卷 5.6	THREE_PASS	C
+S-025914		结构线索：同期批评层在 48 卷 5.6	THREE_PASS	C
+S-025915		结构线索：同期批评层在 48 卷 5.6	THREE_PASS	C
+S-025916		结构线索：邮件档案层在 75 卷 2.6	THREE_PASS	C
+S-025917		结构线索：领导结构层在 64 卷 9.12	THREE_PASS	C
+S-025918	V48-5.4	结构线索：贡献模式层在 48 卷 5.4	THREE_PASS	C
+S-025919		结构线索：共同体流失面在 53 卷 4.4	THREE_PASS	C
+S-025920		结构线索：提交记录资料层在 75 卷 2.5	THREE_PASS	C
+S-025921		结构线索：新闻件附于比较面	THREE_PASS	C
+S-025922		结构线索：新闻件附于发布面	THREE_PASS	C
+S-025923		层级线索：章级综合层，无对应	THREE_PASS	C

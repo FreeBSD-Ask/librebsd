@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-025900	V48-5.2	内容为 4.4 网络栈与驱动节点	THREE_PASS	B
+S-025901	V48-5.8	内容为两仓库 commit 量对照	THREE_PASS	B
+S-025902		内容为两 tag 字段序列统计	THREE_PASS	B
+S-025903		内容为 volume 功能竞态定位件	THREE_PASS	B
+S-025904		内容为 dm_crypt 崩溃修复件	THREE_PASS	B
+S-025905	V48-5.2	内容为 4.6 NVMe 节点	THREE_PASS	B
+S-025906	V48-4.6	内容为 4.8 vkernel 与虚拟化节点	THREE_PASS	B
+S-025907	V48-5.8	内容为 NVMe 与 vkernel 投入对照	THREE_PASS	B
+S-025908		内容为 NVMe vkernel commit 统计	THREE_PASS	B
+S-025909	V64-9.12	内容为最终决定权与无选举机制	THREE_PASS	B
+S-025910	V48-4.8	内容为 Aaron LI 加入等事件	THREE_PASS	B
+S-025911	V53-6.5	内容为四仓库治理规模对照	THREE_PASS	B
+S-025912	V75-2.6	内容为授予撤销公告归档	THREE_PASS	B
+S-025913	V48-5.6	内容为规模过小批评量化	THREE_PASS	B
+S-025914	V48-5.6	内容为 OpenZFS 生态对照质疑	THREE_PASS	B
+S-025915	V48-5.6	内容为 NVMe UEFI Wi-Fi 落后抱怨	THREE_PASS	B
+S-025916	V75-2.6	内容为三库归档交叉方法	THREE_PASS	B
+S-025917	V64-9.12	内容为 Dillon commit 占位统计	THREE_PASS	B
+S-025918	V48-5.4	内容为 TOP 5 贡献者统计	THREE_PASS	B
+S-025919	V53-4.4	内容为活跃 committer 降幅统计	THREE_PASS	B
+S-025920	V75-2.5	内容为 TOP 10 量化数据	THREE_PASS	B
+S-025921	V52-7.6	内容为 3.2 与 Ubuntu 基准条目	THREE_PASS	B
+S-025922	V48-4.1	内容为 2012-02-22 发布条目	THREE_PASS	B
+S-025923		内容为编纂元数据层，无叙事节点	THREE_PASS	B
