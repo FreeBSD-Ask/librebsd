@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012823		内容主题词“Wine／ldd／Abort”零命中（细节级邮件）	B	sb312
+S-012824		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012825		内容主题词“NDISulator／if_ndis”零命中，“ndis”唯一命中为 V49-6.2 DragonFly 说明注，与 FreeBSD 个案不符（细节级邮件）	B	sb312
+S-012826		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012827		内容主题词“select／管道线程”多候选（V08-1.5、V31-1.3 等）无主导（细节级邮件）	B	sb312
+S-012828		内容主题词“服务器选型／负载测试”零命中（细节级邮件）	B	sb312
+S-012829		内容主题词“sysinstall”双候选无主导，“passwd”唯一命中为 V08-7.4 UNIX 身份认证机制叙述，与个案不符（细节级邮件）	B	sb312
+S-012830		内容主题词“IBM Aptiva／udma／sysctl”零命中（细节级邮件）	B	sb312
+S-012831		内容主题词“XFree86”唯一命中为 V37-12.12 桌面图形栈节，“ports”命中多条无主导，个案为 OpenOffice 应用故障（细节级邮件）	B	sb312
+S-012832		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012833		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012834		内容主题词“USB20／ehci”零命中（细节级邮件）	B	sb312
+S-012835	V37-6.3	内容主题词“make buildworld”唯一命中 V37-6.3，与 buildworld 用户空间构建锚一致	B	sb312
+S-012836		内容主题词“nessus”零命中，“SSL／密钥”命中多条无主导（细节级邮件）	B	sb312
+S-012837		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012838		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012839		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012840		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012841		内容为模板头 claim 载体，叙事主题零命中	B	sb312
+S-012842	V37-1.6	内容主题词“mpt／raid0／RAID 缺陷”与 V37-1.6 RAID 存储可靠性锚一致（V41-6.4 为 NetBSD RAIDframe，主导归 FreeBSD 卷）	B	sb312
+S-012843		内容主题词“puc／ppc／并口”零命中，“补丁／驱动”命中多条无主导（细节级邮件）	B	sb312
+S-012844		内容主题词“burncd／DVDRW／刻录”零命中（细节级邮件）	B	sb312
+S-012845	V37-1.6	内容主题词“3ware／重建中断／RAID”与 V37-1.6 RAID 存储可靠性锚一致（V41-6.4 为 NetBSD RAIDframe，主导归 FreeBSD 卷）	B	sb312
+S-012846		内容为模板头 claim 载体，叙事主题零命中	B	sb312

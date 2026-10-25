@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012871		内容“5.4p1 升级挂载 panic”系个案故障，主题词零精确命中（细节级邮件）	B	sb314
+S-012872		内容“DNS 服务器承载中断”系个案故障，BIND 节为软件史主题无对应（细节级邮件）	B	sb314
+S-012873	V37-1.6	内容 RocketRaid 阵列无法重建属 RAID 存储可靠性主题	B	sb314
+S-012874		内容“SCSI 磁带机读写故障”系个案驱动缺陷，无设备驱动对应节（细节级邮件）	B	sb314
+S-012875	V37-1.6	内容 gmirror 拔盘引导实测属 RAID1 镜像可靠性主题	B	sb314
+S-012876		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012877		内容 Bochs/VMware 引导测试系个案缺陷报告，虚拟化节均为 Xen/bhyve 实现主题（细节级邮件）	B	sb314
+S-012878		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012879	V37-1.5	内容 camq_init 无法分配数组直指 CAM 队列，属 CAM 设备访问层	B	sb314
+S-012880	V37-6.3	内容 make installworld 只读根故障属用户空间构建与安装主题	B	sb314
+S-012881	V37-5.3	内容 mac_policy_modevent 与 mac_lomac 加载错误属 MAC 框架主题	B	sb314
+S-012882		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012883	V37-11.8	内容硬件支持页与 isp man 页不同步属文档工程同步主题	B	sb314
+S-012884		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012885	V37-6.4	内容 kernel.debug 构建产物缺失属内核构建主题	B	sb314
+S-012886		内容主题词零命中（细节级邮件）	B	sb314
+S-012887		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012888	V37-1.6	内容 vinum 卷损坏挂载 panic 属卷管理可靠性主题	B	sb314
+S-012889	V52-6.3	内容 if_bridge 网桥桥接两卡属桥接与链路聚合主题（题面仅旁证）	B	sb314
+S-012890		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012891		内容 mount_udf/newfs_udf 零命中，UDF 无专设节（细节级邮件）	B	sb314
+S-012892		内容为模板头 claim 载体，叙事主题零命中	B	sb314
+S-012893		内容“HDA 声卡无 FreeBSD 支持”系个案，音频节为 OpenBSD sndio 主题无对应（细节级邮件）	B	sb314
+S-012894		内容为模板头 claim 载体，叙事主题零命中	B	sb314

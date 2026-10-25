@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012991		题面 RAID5／内存压测仅宽匹配 RAID 两节（V37-1.6 与 V41-6.4），双候选无主导，留空	A	sb319
+S-012992		题面 var 已满／df／dh／dmesg 零命中，留空	A	sb319
+S-012993		题面为证据等级来源模板，零语义	A	sb319
+S-012994		题面为邮件考古细节，零命中（细节级）	A	sb319
+S-012995		题面为证据等级来源模板，零语义	A	sb319
+S-012996		题面为证据等级来源模板，零语义	A	sb319
+S-012997		题面 installworld／crt1o 零命中，升级一词泛命中多处无主导，留空	A	sb319
+S-012998		题面 Xorg 零命中，端口泛命中 Ports 诸节、GIANT 仅注记级命中，无主导留空	A	sb319
+S-012999		题面 sata raid 芯片组／3ware／hipoint 零命中，RAID 宽匹配两节无主导，留空	A	sb319
+S-013000		题面为证据等级来源模板，零语义	A	sb319
+S-013001		题面 KVM 命中虚拟化路线比较节（V37-3.7），语义为 KVM 切换器硬件个案不符；KDE／黑屏零命中，留空	A	sb319
+S-013002		题面为证据等级来源模板，零语义	A	sb319
+S-013003		题面 grub 自编安装零命中，留空	A	sb319
+S-013004		题面 mfi 仅命中 DragonFly 驱动注记语义不符，mount／sysctl 泛命中无主导，留空	A	sb319
+S-013005		题面为证据等级来源模板，零语义	A	sb319
+S-013006		题面 newfs 默认保留 8%／tunefs 零命中，留空	A	sb319
+S-013007		题面 串口安装 CD／mkisofs 零命中，控制台命中两节无主导，留空	A	sb319
+S-013008		题面为证据等级来源模板，零语义	A	sb319
+S-013009		题面 BIOS／USB Legacy Support 零命中，留空	A	sb319
+S-013010		题面 SCSI／Adaptec／da0 零命中，留空	A	sb319
+S-013011		题面为证据等级来源模板，零语义	A	sb319
+S-013012		题面为证据等级来源模板，零语义	A	sb319
+S-013013		题面 jails／installworld 零命中，jail 宽匹配四节无主导，留空	A	sb319
+S-013014		题面 UHCI／SATA／四核零命中，中断命中为网络子系统注记非个案承载，留空	A	sb319
