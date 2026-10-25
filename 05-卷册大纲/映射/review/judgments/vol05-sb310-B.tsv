@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012775	V37-4.6	内容主题词 ULE 调度器引入与 4BSD 退役落于调度器历史节（V37-4.6 主载调度器演进，题面仅旁证）	B	sb310
+S-012776	V36-5.6	内容载 5.x 批量引入与旧组件退役长期并存、兼容性代价，对应新旧并存代价节	B	sb310
+S-012777	V37-1.6	内容 vinuminterrupt.c RAID5 接力为存储 RAID 可靠性主题	B	sb310
+S-012778	V37-1.6	内容 gmirror 硬编码 provider 名解镜像元数据错位，属 GEOM RAID 可靠性类	B	sb310
+S-012779	V37-1.4	内容 PHK 就 GEOM viewer 之问指人脉指引，属 GEOM 抽象层本体话题	B	sb310
+S-012780		内容为模板头 claim 载体，叙事主题零命中	B	sb310
+S-012781	V37-1.6	内容 gmirror 重建失败系 sysinstall offset 0 分区，属 gmirror 镜像类	B	sb310
+S-012782		内容为模板头 claim 载体，叙事主题零命中	B	sb310
+S-012783	V37-1.6	内容 gmultipath 多路径用户与 glabel 标签脏办法，属 GEOM 可靠性类邮件	B	sb310
+S-012784	V37-1.4	内容 GEOM_PART 改名后切片错乱，属 GEOM 类基础设施迁移话题（无专设分区节）	B	sb310
+S-012785	V37-1.4	内容 MBR 与 BSD 冲突修复未及 7.1，属 GEOM_PART 分区命名话题	B	sb310
+S-012786		内容为模板头 claim 载体，叙事主题零命中	B	sb310
+S-012787		内容为模板头 claim 载体，叙事主题零命中	B	sb310
+S-012788	V37-1.4	内容 gpart wipe 动词与 GPT 覆 MBR 清旧元数据，属 GEOM_PART 工具话题	B	sb310
+S-012789		内容为模板头 claim 载体，叙事主题零命中	B	sb310
+S-012790	V37-1.6	内容 gmirror 叠 GPT 叠 gjournal 存储蓝图，属镜像与日志 RAID 类	B	sb310
+S-012791	V37-1.6	内容 geom class clear 与 gmirror remove 清元数据之器械单，属 gmirror 类	B	sb310
+S-012792		内容为模板头 claim 载体，叙事主题零命中	B	sb310
+S-012793	V37-1.4	内容 GEOM_PART 探不到 PMBR 签名即弃 GPT 的检测补丁，属 GEOM 探测基础设施	B	sb310
+S-012794	V37-1.4	内容 g_part_gpt_probe 撞 wrong offset 的扇区时序缺口，属 GEOM 探测层	B	sb310
+S-012795	V37-1.6	内容 raidz1 叠 GELI、zfsd 与 resilver 工作流，属 RAID/GELI 可靠性体系	B	sb310
+S-012796		内容主题词零命中（细节级邮件）	B	sb310
+S-012797	V37-1.4	内容 GEOM attributes 配 ioctl 与 SES 双灯 RFC，属 GEOM 框架扩展话题	B	sb310
+S-012798	V37-1.4	内容 GEOM 探测与 withering 竞态 KASSERT 修复，属 GEOM 探测层	B	sb310

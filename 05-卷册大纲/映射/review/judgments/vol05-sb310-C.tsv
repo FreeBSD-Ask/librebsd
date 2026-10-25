@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012775	V37-4.6	旧 109.2 技术淘汰层之 ULE 主题经编号线索对应新 V37-4.6 调度器节	C	sb310
+S-012776	V36-5.6	旧 109.2 技术淘汰总论对应新 V36 第 5 章 5.6 新旧长期并存代价节	C	sb310
+S-012777	V37-1.6	旧 109.2 邮件考古之 vinum/RAID 主题锚 V37-1.6 RAID 可靠性节	C	sb310
+S-012778	V37-1.6	旧 109.2 gmirror 邮件锚 V37-1.6 存储可靠性节（与相邻 gmirror 件同层）	C	sb310
+S-012779	V37-1.4	旧 109.2 GEOM 框架邮件锚 V37-1.4 GEOM 抽象层节（层级锚定）	C	sb310
+S-012780		模板层无结构对应	C	sb310
+S-012781	V37-1.6	旧 109.2 gmirror 邮件锚 V37-1.6，与相邻 gmirror 件同层	C	sb310
+S-012782		模板层无结构对应	C	sb310
+S-012783	V37-1.6	旧 109.2 gmultipath/glabel 邮件锚 V37-1.6 存储可靠性节	C	sb310
+S-012784	V37-1.4	旧 109.2 GEOM_PART 改名邮件锚 V37-1.4，与相邻 GEOM_PART 件同层	C	sb310
+S-012785	V37-1.4	旧 109.2 GEOM_PART 分区命名邮件锚 V37-1.4	C	sb310
+S-012786		模板层无结构对应	C	sb310
+S-012787		模板层无结构对应	C	sb310
+S-012788	V37-1.4	旧 109.2 gpart/GPT 邮件锚 V37-1.4 GEOM 抽象层节	C	sb310
+S-012789		模板层无结构对应	C	sb310
+S-012790	V37-1.6	旧 109.2 gmirror/gjournal 邮件锚 V37-1.6 存储可靠性节	C	sb310
+S-012791	V37-1.6	旧 109.2 gmirror 清元数据邮件锚 V37-1.6	C	sb310
+S-012792		模板层无结构对应	C	sb310
+S-012793	V37-1.4	旧 109.2 GEOM_PART PMBR 邮件锚 V37-1.4，与相邻 GEOM_PART 件同层	C	sb310
+S-012794	V37-1.4	旧 109.2 GEOM 探测时序邮件锚 V37-1.4 GEOM 抽象层节	C	sb310
+S-012795	V37-1.6	旧 109.2 raidz/GELI 邮件锚 V37-1.6 RAID/GELI 可靠性节	C	sb310
+S-012796	V06-2.3	邮件考古层稳定锚，target 必填	C	sb310
+S-012797	V37-1.4	旧 109.2 GEOM attributes RFC 邮件锚 V37-1.4 GEOM 抽象层节	C	sb310
+S-012798	V37-1.4	旧 109.2 GEOM withering 邮件锚 V37-1.4 GEOM 抽象层节	C	sb310

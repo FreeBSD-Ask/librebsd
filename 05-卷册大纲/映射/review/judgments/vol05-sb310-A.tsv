@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012775	V37-4.6	题面“ULE 调度器／4BSD”与 V37-4.6 节题“调度器历史：4BSD 到 ULE”双词全中，主导明确	A	sb310
+S-012776		题面“批量引入与渐进退役并行”零语义命中，“退役”散见架构退役等异域节，无主导	A	sb310
+S-012777		题面“vinum／RAID”仅 V41-6.4 RAIDframe（NetBSD 卷）单域候选，无主导留空	A	sb310
+S-012778		题面“镜像”仅命中 TUHS 镜像类节，gmirror 镜像卷语境不合，无主导	A	sb310
+S-012779		题面“GEOM”双候选（V36-6.4 并发负载／V37-1.4 存储抽象层），无主导留空	A	sb310
+S-012780		题面为证据等级来源模板，零语义	A	sb310
+S-012781		题面“镜像”仅命中 TUHS 镜像类节，gmirror 语境不合，无主导	A	sb310
+S-012782		题面为证据等级来源模板，零语义	A	sb310
+S-012783		题面“多路径／panic／glabel”零命中	A	sb310
+S-012784		题面“GEOM_PART／改名／ad0s”零命中	A	sb310
+S-012785		题面“MBR／7.1”零主导命中	A	sb310
+S-012786		题面为证据等级来源模板，零语义	A	sb310
+S-012787		题面为证据等级来源模板，零语义	A	sb310
+S-012788		题面“gpart／GPT”仅 V49-6.5（DragonFly UEFI）单点且语境不合	A	sb310
+S-012789		题面为证据等级来源模板，零语义	A	sb310
+S-012790		题面“gjournal／GPT”仅 V49-6.5（DragonFly UEFI）单点且语境不合	A	sb310
+S-012791		题面“元数据”命中 soft updates 等异域节，无主导	A	sb310
+S-012792		题面为证据等级来源模板，零语义	A	sb310
+S-012793		题面“PMBR／GEOM_PART”零命中	A	sb310
+S-012794		题面“换盘／2352 扇区／provider”零主导命中	A	sb310
+S-012795	V37-1.6	题面“raidz1 叠 GELI”与 V37-1.6 节题“RAID、GELI 与存储可靠性体系”双词主导命中	A	sb310
+S-012796		题面为邮件考古细节，零命中（细节级）	A	sb310
+S-012797		题面“SES／指示灯／fault”零主导命中	A	sb310
+S-012798		题面“withering／KASSERT”零主导命中	A	sb310
