@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012247		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012248		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012249	V37-10.2	内容 sparc64 线程库测试套件（sigwait 失败）主题命中 V37-10.2 历史架构节（FreeBSD 语境）	B	sb288
+S-012250	V37-10.2	内容 sparc64 VNC／Xvnc 移植补丁主题命中 V37-10.2	B	sb288
+S-012251	V37-10.2	内容 sparc64 CMD646 ATA DMA 挂起主题命中 V37-10.2	B	sb288
+S-012252	V37-10.2	内容 sparc64 syscons／Open Firmware 控制台主题命中 V37-10.2	B	sb288
+S-012253		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012254		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012255		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012256		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012257		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012258		内容 PPC 移植调试（long double、elf_machdep.c、内核无法引导），ppc 仅命中 NetBSD 节 V40-4.3／V41-2.2（异系统），FreeBSD 无 PPC 专节，留空	B	sb288
+S-012259		内容 PPC 模块 rs6000.c 补丁与 gcc 缺陷 12769，ppc 仅命中 NetBSD 节（异系统），FreeBSD 无 PPC 专节，留空	B	sb288
+S-012260		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012261	V37-10.2	内容 Alpha 平台 crtfastmath.o 工具链修复主题命中 V37-10.2（FreeBSD 语境）	B	sb288
+S-012262	V37-10.2	内容 Alpha Miata／Monet SCSI 硬件主题命中 V37-10.2	B	sb288
+S-012263	V37-12.12	内容 XFree86 4.3 与 Matrox 显卡识别主题命中 V37-12.12 BSD 桌面图形栈（alpha 平台为旁证）	B	sb288
+S-012264	V37-10.2	内容 Alpha SRM 控制台与引导输出主题命中 V37-10.2	B	sb288
+S-012265	V37-10.2	内容 Alpha AS4100 崩溃与调试跟踪主题命中 V37-10.2	B	sb288
+S-012266		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012267	V37-10.2	内容 Alpha bsdlabel 后安装流程主题命中 V37-10.2	B	sb288
+S-012268	V37-10.2	内容 Alpha 软盘／bootkit 安装介质主题命中 V37-10.2	B	sb288
+S-012269		内容为模板头 claim 载体，叙事主题零命中	B	sb288
+S-012270	V37-10.2	内容 Alpha 2100 安装 5.2.1 分区不可见主题命中 V37-10.2	B	sb288

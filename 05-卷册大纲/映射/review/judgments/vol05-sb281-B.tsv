@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012079	V58-7.1	内容主题 kqueue 经 Apple 采纳入 macOS 10.3/10.4（Darwin 7/8）版本线与 iOS 1.0 继承争议，对应 V58-7.1 Apple 平台中的 BSD 代码	B	sb281
+S-012080	V37-2.5	内容主题 kqueue filter 中心化与 epoll composable 设计批评对照，epoll 新目录零命中，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012081	V37-2.5	内容主题 Libenzi epoll composable 与 Lemon kqueue filter 2002 路线分野，epoll 零命中，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012082	V37-2.5	内容主题 FreeBSD 引入 eventfd 系 Linux 兼容层服务与 kqueue/eventfd 路线话语之争，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012083	V37-2.5	内容主题 Conill 批评技术细节与 freebsd-hackers 回应属 kqueue 外部批评线，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012084	V37-2.5	内容主题 kqueue 2000 年引入 FreeBSD 4.1、事件通知内核原语开发历程与 USENIX 论文陈述，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012085	V37-2.5	内容主题 epoll composable 路线胜出与 nginx/lighttpd 优先支持 epoll、kqueue 沦为 BSD 专属，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012086	V37-2.5	内容主题 io_uring 与 kqueue 异步通知竞争，io_uring 新目录零命中，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012087	V37-2.5	内容主题 libuv/libevent 抽象层需同时支持 kqueue/epoll/io_uring 三套 API 的跨平台张力，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012088	V37-2.5	内容主题 Conill 批评预示 io_uring 时代 kqueue 衰落与 freebsd-hackers 讨论，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012089	V37-2.5	内容主题 nginx/lighttpd/memcached 早期采用 kqueue 谱系，对应 kqueue 高并发网络服务器应用节点 V37-2.5	B	sb281
+S-012090	V37-2.5	内容主题 kqueue(2) 手册页与 Handbook 事件通知文档贡献，属 kqueue 机制技术线，落 V37-2.5	B	sb281
+S-012091	V37-2.5	内容主题 kqueue 移植 NetBSD/DragonFly 与多核竞争报告，跨 BSD 移植无独立节点，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012092	V37-2.5	内容主题边缘者史料辨析（commit log 记录与移植归属）属 kqueue 技术线，落 V37-2.5	B	sb281
+S-012093	V37-2.5	内容主题 PostgreSQL 13 以 kqueue(2) 替代 poll(2) 的跨项目采用实证，与 nginx/Redis 服务器采用同类，落 kqueue 应用节点 V37-2.5	B	sb281
+S-012094	V37-2.5	内容主题 select/poll O(N) 与 kqueue O(1) 复杂度、FD_SETSIZE 限制等机制比较，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012095	V37-2.5	内容主题 Windows IOCP 与 Solaris /dev/poll 同期竞争机制比较，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012096	V37-2.5	内容主题同步异步、水平边沿触发、filter 与 composable 跨机制对比，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012097	V37-2.5	内容主题 Lemon 与 Provos 论文测试环境的机制比较史料辨析，属 kqueue 技术线，落 V37-2.5	B	sb281
+S-012098	V37-2.5	内容主题 kqueue/epoll 历史的偶然性审视（Lemon 2000 提交、Libenzi /dev/epoll 原型），落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012099	V37-2.5	内容主题 LKML 2003.3.14 kqueue 与 epoll 辩论的史观审视，落唯一 kqueue 技术节点 V37-2.5	B	sb281
+S-012100	V55-5.1	内容为纯指针（详见采访录），采访主题对应 FreeBSD 时代核心开发者口述与访谈文献 V55-5.1	B	sb281
+S-012101		内容为 FreeBSD 5.x roadmap 与 FreeBSD 7.0 SMPng 史料考据补充，V39-8.2（5.x 工程文化冲突）与 V52-2.2（SMPng 重构）双候选无主导，留空	B	sb281
+S-012102	V55-5.1	内容为 Jonathan Lemon 采访元数据与 USENIX 会议论文口述文献，对应核心开发者口述与访谈文献 V55-5.1	B	sb281

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012223	V37-1.4	内容为 phk 设计 GEOM 模块化存储框架、class 链 transformation、替代 4.x 静态磁盘子系统，对应 V37-1.4	B	sb287
+S-012224	V37-1.4	内容为 geom class／provider／consumer 抽象与 g_access 接口（CAM 协同为旁支 V37-1.5），GEOM 架构主体对应 V37-1.4	B	sb287
+S-012225	V37-1.4	内容为 class 链抽象权衡与性能开销辨析（ZFS vdev 关系为旁支），对应 V37-1.4	B	sb287
+S-012226	V37-1.4	内容为 phk 独立设计与 Vinum 关系考辨，Vinum 全目录零命中，GEOM 主体对应 V37-1.4	B	sb287
+S-012227	V37-4.6	内容为 Roberson BSDCon 2003 论文批评 4BSD 调度器 O(n) 与 CPU 亲和性缺失，对应 V37-4.6	B	sb287
+S-012228	V37-4.6	内容为 ULE 双队列设计、O(1) 目标与首次 commit（2003-01），对应 V37-4.6	B	sb287
+S-012229	V37-4.6	内容为 ULE 5.x 默认禁用、7.1 起默认的演进线，对应 V37-4.6	B	sb287
+S-012230	V37-4.6	内容为 ULE 名称来源与 Linux O(1) 参考考辨（EPFL 2018 批评为旁支 V55-13.1 溯源注），ULE 史料主体对应 V37-4.6	B	sb287
+S-012231		内容主题词 libarchive／liblzma／gcc 链接错误零命中（构建链接细节级），留空	B	sb287
+S-012232		内容主题词 kld／link_elf／EXPORT_SYMS 零命中（kld 链接细节级），留空	B	sb287
+S-012233	V37-10.2	内容为 MIPS32 评估板移植进展（TLB／陷阱／中断处理移植、内核可引导），对应 FreeBSD 历史架构节点 V37-10.2	B	sb287
+S-012234		内容主题词 i4b／ISDN／Euro-ISDN 全目录零命中，留空	B	sb287
+S-012235		内容为模板头 claim 载体，叙事主题零命中	B	sb287
+S-012236		内容主题词 epc_syscall／flushrs／NaT collection 零命中，留空	B	sb287
+S-012237		内容主题词 gcc43／gcc44／crtfastmath.o 零命中；gcc 词命中 V37-8.2 系工具链转型叙事，与本件 ia64 构建失败细节不符，留空	B	sb287
+S-012238		内容主题词 gnustep-base／libobjc 零命中，留空	B	sb287
+S-012239		内容主题词 epiphany／firefox／javascript 零命中，留空	B	sb287
+S-012240		内容主题词 libstdc++／-j48 高并行 make 零命中，留空	B	sb287
+S-012241		内容为模板头 claim 载体，叙事主题零命中	B	sb287
+S-012242		内容主题词 cvsup 二进制包／基础设施缺口零命中，留空	B	sb287
+S-012243		内容主题词 PR ia64／串口控制台／hw.uart.console 零命中，留空	B	sb287
+S-012244		内容主题词 isdn4bsd／SVN 收录零命中，留空	B	sb287
+S-012245		内容主题词 Ultra AXmp／bootp／Adaptec 2940 零命中，留空	B	sb287
+S-012246		内容主题词 ipfw_ctl／getsockopt／未对齐陷阱零命中，留空	B	sb287
