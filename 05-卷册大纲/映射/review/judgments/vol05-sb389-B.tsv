@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014671		内容主题 pccard-test 包／PC 卡以太网调制解调器零命中，无落点	B	sb389
+S-014672		内容主题 Ultrastor 12F／Micropolis ESDI 控制器兼容零命中（磁盘节题为文件系统与加密语境），无落点	B	sb389
+S-014673		内容主题 Tadpole 笔记本 PCI 探测零命中（笔记本仅 V37-10.8 ACPI 语境，config 主题非其内容），无落点	B	sb389
+S-014674		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014675		内容主题 asmc／atp MacBook 型号判断零命中（acpi 转储仅为诊断附件，V37-10.8 为电源管理专节非其内容），无落点	B	sb389
+S-014676		内容主题 RTL8111E 网卡驱动手册误判零命中（网卡节题命中 V36-6.5 为并发承载语境非主导），无落点	B	sb389
+S-014677		内容主题 uhci 中断过滤器／eventtimer 零命中（中断节题命中 V36-6.5 为网络并发语境非主导），无落点	B	sb389
+S-014678		内容主题 UKBD 键盘宏与 usbconfig 描述符转储零命中，无落点	B	sb389
+S-014679		内容主题 uart 设备提示与 kldload 路线零命中，无落点	B	sb389
+S-014680		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014681		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014682		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014683		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014684	V37-9.3	内容证据：dtrace 内核模块命名（dtnfsclient.ko／dtnfscl.ko）主题命中 V37-9.3“DTrace：动态追踪体系”（sb345 DTrace 件群同锚）；NFS 命中 V08-9.5 为 1980s RPC 语境非主导	B	sb389
+S-014685		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014686		内容主题 attimer timecounter hint 与 i8254 单发定时器零命中（定时器节题命中 V08-1.4 为 1970s UNIX 时间系统非主导），无落点	B	sb389
+S-014687		内容主题 readahead 关闭与磁盘 I/O 屏蔽中断零命中（磁盘节题皆为文件系统／加密语境），无落点	B	sb389
+S-014688		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014689		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014690	V37-10.9	内容证据：drm-kmod 图形驱动支持主题命中 V37-10.9“GPU 与无线设备支持”（sb320 GPU 驱动个案、sb370 GPU-DRM 件群同锚）；DragonFly drm 节为异战线排除	B	sb389
+S-014691		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014692		内容为模板头 claim 载体，叙事主题零命中	B	sb389
+S-014693		内容主题 Intel C230 芯片组 I2C／SMBus 控制器识别零命中，无落点	B	sb389
+S-014694	V37-3.5	内容证据：vmm.ko／VM_MAXCPU 虚拟机监控器核数上限主题命中 V37-3.5“bhyve：FreeBSD 原生虚拟机监控器”（sb345 bhyve 件群、vol06-sb24 vmm 件群同锚）；V61-6.9 为安全攻击面、V68-8.7 为 QEMU GSoC 非主导	B	sb389

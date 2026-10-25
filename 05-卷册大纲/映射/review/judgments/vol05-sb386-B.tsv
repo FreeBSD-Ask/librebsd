@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014599	V37-3.5	内容证据：bhyve 前端（emulators/PetiteCloud 0.2）发布主题命中 V37-3.5“bhyve：FreeBSD 原生虚拟机监控器”（前端工具属 bhyve 生态）；V37-3.8 云计算为泛语境、V68-8 为 GSoC 战线，前者主导	B	sb386
+S-014600		内容证据：fsyscall／系统调用转发／安卓零命中，系统调用命中均为 1969–1980 UNIX 本体语境（V08-2.1／2.2），跨机转发项目无落点	B	sb386
+S-014601		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014602		内容证据：IPMI／smbios／KCS 状态机零命中，无落点	B	sb386
+S-014603		内容证据：puc／Exar／MSI 中断零命中，串口卡驱动补丁无专节	B	sb386
+S-014604	V37-10.9	内容证据：蓝牙（ng_ubt）与手册 Wireless Networking 章节编排主题命中 V37-10.9“GPU 与无线设备支持（2000s–2026）”（蓝牙属无线硬件支持面，无蓝牙专节）；手册翻页为次	B	sb386
+S-014605	V37-10.9	内容证据：ath（Atheros）无线驱动编译失败主题命中 V37-10.9“GPU 与无线设备支持”（无线驱动工程面，无 ath 专节）；内核配置零专节	B	sb386
+S-014606		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014607		内容证据：em 网卡驱动零专节（V37-2.7 Iflib 为驱动模型重构非 em 本体），watchdog 零命中（sb316 S-012935 同判）	B	sb386
+S-014608		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014609		内容证据：3C589D／PCMCIA／ep 驱动零命中，4.0-STABLE 网卡问题无专节	B	sb386
+S-014610		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014611		内容证据：pcm／Yamaha／MAKEDEV snd0 零命中，FreeBSD 音频驱动无对应节	B	sb386
+S-014612		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014613		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014614	V37-10.8	内容证据：功耗管理驱动（est、ichss、smist、acpi_perf）与 powerd 主题唯一命中 V37-10.8“ACPI 与电源管理”（全目录唯一 ACPI 电源管理节，sb301／sb316 同锚）	B	sb386
+S-014615		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014616		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014617	V37-10.9	内容证据：bluetooth／ng_h4 驱动弃用与 USB dongle 主题命中 V37-10.9“GPU 与无线设备支持”（无线硬件支持面）；TTY 唯一命中 V08-8.3 为 UNIX 期终端语境非主导	B	sb386
+S-014618		内容证据：libusbhid／HID_COMPAT7 零命中，USB 驱动补丁无专节	B	sb386
+S-014619		内容为模板头 claim 载体，叙事主题零命中	B	sb386
+S-014620		内容证据：bus_set_resource／rid／IOPORT 零命中，PCI-ISA 桥资源分配无落点	B	sb386
+S-014621	V36-11.3	内容证据：已安装 ZFS 系统迁移 EFI 引导主题命中 V36-11.3“UEFI 启动支持”（10.x–11.x UEFI 启动线，sb37 S-015687 同锚）；V37-1.7 为 ZFS 存储本体非引导面，前者主导	B	sb386
+S-014622		内容主题词零命中（细节级邮件）	B	sb386

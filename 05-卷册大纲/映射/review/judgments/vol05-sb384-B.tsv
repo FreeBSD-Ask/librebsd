@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014551		内容证据：opencrypto／rmd160／xform／MYHASHUpdate 零命中（V41-7.2 为 NetBSD fast_ipsec 语境）	B	sb384
+S-014552		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014553		内容证据：stdbuf／libstdbuf／STDIO_IOLBF 零命中，stdio 缓冲仅 V08-8.3／V37-9.8 泛语境无主导	B	sb384
+S-014554		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014555		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014556		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014557		内容证据：buf_ring／写内存屏障零命中	B	sb384
+S-014558	V37-1.5	内容证据：CAMIOCOMMAND 设备访问主题命中 V37-1.5“CAM：设备访问模型与存储硬件现代化”（sb23 S-005891 SCSI 件群同锚）	B	sb384
+S-014559		内容证据：cd9660／Rock Ridge／extents 零命中，V37 第1章无 ISO9660 节点	B	sb384
+S-014560		内容证据：mime／globs2／text/plain 零命中	B	sb384
+S-014561	V05-1.5	内容证据：标准 lex 接口主题命中 V05-1.5“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”	B	sb384
+S-014562		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014563		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014564		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014565		内容证据：kqueue 补丁与 V37-2.5（网络服务器限缩）／V67-2.3（设计文档发表）语义不符，klog／auditpipe 零命中	B	sb384
+S-014566		内容证据：xargs／shmux 零命中	B	sb384
+S-014567		内容证据：TFTP／pxeboot／tsize 零命中，无盘启动无对应节点	B	sb384
+S-014568		内容证据：eSATA／SATA 零命中	B	sb384
+S-014569		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014570		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014571		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014572	V37-6.2	内容证据：定制 KERNCONF 主题命中 V37-6.2“内核配置：config 与 KERNCONF”（sb183 S-009741 内核配置件群同锚）	B	sb384
+S-014573		内容为模板头 claim 载体，叙事主题零命中	B	sb384
+S-014574	V37-8.2	内容证据：clang 3.1 编译／链接警告主题命中 V37-8.2“GCC 到 Clang／LLVM 的转型”（sb10／sb27 工具链件群同锚）	B	sb384

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014551		题面证据：opencrypto 唯一命中 V41-7.2 为 NetBSD KAME／IPsec 语境，FreeBSD 侧零命中，语义不符无主导	A	sb384
+S-014552		题面为证据等级来源模板，零语义	A	sb384
+S-014553		题面证据：stdbuf／STDIO_IOLBF 零命中	A	sb384
+S-014554		题面为证据等级来源模板，零语义	A	sb384
+S-014555		题面为证据等级来源模板，零语义	A	sb384
+S-014556		题面为证据等级来源模板，零语义	A	sb384
+S-014557		题面证据：buf_ring／内存屏障零命中	A	sb384
+S-014558		题面证据：xfburn／光驱／CAMIOCOMMAND 零命中	A	sb384
+S-014559		题面证据：cd9660／Rock Ridge 零命中	A	sb384
+S-014560		题面证据：chromium 多节命中（V10-5.3／V61-4.13／V68-7.3）皆 Capsicum 安全语境，mime／globs2 语义不符无主导	A	sb384
+S-014561	V05-1.5	题面证据：lex 唯一节题命中 V05-1.5“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”	A	sb384
+S-014562		题面为证据等级来源模板，零语义	A	sb384
+S-014563		题面为证据等级来源模板，零语义	A	sb384
+S-014564		题面为证据等级来源模板，零语义	A	sb384
+S-014565		题面证据：kqueue 双候选（V37-2.5 网络服务器限缩／V67-2.3 设计文档发表）与 /dev/klog 补丁语义不符无主导	A	sb384
+S-014566		题面证据：xargs／shmux 零命中	A	sb384
+S-014567		题面证据：TFTP／pxeboot／无盘 零命中	A	sb384
+S-014568		题面证据：eSATA／SATA 零命中	A	sb384
+S-014569		题面为证据等级来源模板，零语义	A	sb384
+S-014570		题面为证据等级来源模板，零语义	A	sb384
+S-014571		题面为证据等级来源模板，零语义	A	sb384
+S-014572		题面证据：启动停顿／主分支零命中（KERNCONF 仅见于摘录非题面）	A	sb384
+S-014573		题面为证据等级来源模板，零语义	A	sb384
+S-014574		题面证据：clang 多节命中（V37-8.2／8.3／8.4 等）皆泛语境，链接警告细节无主导	A	sb384

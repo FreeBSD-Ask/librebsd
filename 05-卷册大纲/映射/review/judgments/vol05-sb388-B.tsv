@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014647		内容主题词 SCSI 控制器／53c810／芯片组零精确命中（NCR 命中为 USL 分拆节词面）	B	sb388
+S-014648		内容主题词零命中（细节级邮件）	B	sb388
+S-014649		内容主题词 cups／扫描仪／ulpt／设备节点零精确命中（V37 无外设支持节点）	B	sb388
+S-014650		内容主题词 psm／moused／触摸板零精确命中（ums 命中为词面误配）	B	sb388
+S-014651	V37-10.8	内容证据：acpi 列表／ASL 编译器主题命中 V37-10.8 ACPI 与电源管理主导（ASL 词面命中皆 ASLR 非对应）	B	sb388
+S-014652		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014653		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014654		内容主题词 wcd／cd9660／IDE 控制器零精确命中（IDE 命中为 WIDE Project 词面）	B	sb388
+S-014655		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014656		内容主题词零命中（细节级邮件）	B	sb388
+S-014657		内容主题词 ath0 stuck beacon／hostap／bmiss 零精确命中（net80211 命中为 NetBSD 语境非对应）	B	sb388
+S-014658		内容主题词逻辑扇区／分区方案零精确命中（分区命中为磁盘标签节词面）	B	sb388
+S-014659		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014660		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014661		内容主题词 ASPEED／ASTGetDRAMInfo／MMIO／BMC 零精确命中（无显卡驱动个案节点）	B	sb388
+S-014662		内容主题词 CGA／硬重置／板卡零精确命中	B	sb388
+S-014663		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014664		内容主题词 bge ASF／allow_asf／BCM575X 零精确命中（bge 命中为 NetBSD 网络栈传统节非对应）	B	sb388
+S-014665		内容主题词 EISA／内存识别／X-Windows checksum 零精确命中（光盘命中为发行介质节非对应）	B	sb388
+S-014666		内容主题词 atm 卡／用户态组包／1.2 Gbps 零精确命中（用户态命中皆泛化词面）	B	sb388
+S-014667		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014668		内容主题词音频块大小／rad()／重定向零精确命中（音频命中为 OpenBSD sndio 与记录者节非 FreeBSD 音频驱动）	B	sb388
+S-014669		内容为模板头 claim 载体，叙事主题零命中	B	sb388
+S-014670		内容为模板头 claim 载体，叙事主题零命中	B	sb388

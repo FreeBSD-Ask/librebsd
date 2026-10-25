@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014719	V36-8.9	内容关键词“Solaris 11 Express”“Hyper-V”唯一命中 V36-8.9（比较维度 2009-2011 同域）	B	sb391
+S-014720	V36-8.9	内容为 2009-2011 四系统虚拟化路线对照，“Hyper-V”“Solaris 11 Express”唯一命中 V36-8.9	B	sb391
+S-014721	V37-3.7	内容 FreeBSD 是否落后／jails 轻量化／VNET 竞争，“Jail”加路线比较命中 V37-3.7（FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较）	B	sb391
+S-014722	V37-3.7	内容含 KVM 论文线索（Kivity 2007），“KVM”唯一命中 V37-3.7	B	sb391
+S-014723		内容为“详见采访录”单句指针，主题词零命中	B	sb391
+S-014724		内容为 DB_REF 指针与提交统计（102,147 次提交），叙事主题词零命中	B	sb391
+S-014725		内容 FreeBSD 8.x OpenSSL 7 CVE，“OpenSSL”3 命中均非 8.x FreeBSD 漏洞节点无主导	B	sb391
+S-014726		内容 BIND DNS 拒绝服务 CVE 群，“DNS”“BIND”多命中均为软件形成史域无主导	B	sb391
+S-014727		内容 GNU cpio rmt 堆溢出与 IPComp DoS，主题词零命中	B	sb391
+S-014728		内容 base system 工具与库中低级别漏洞，主题词零命中	B	sb391
+S-014729		内容“月均”“XEN domU”“CAM ATA”“安全响应峰值”零命中，“安全响应”3 命中分属三卷无主导	B	sb391
+S-014730		内容 BSDCan 演讲录像（Zeeb 等），“BSDCan”19 命中无主导，“Zeeb”零命中	B	sb391
+S-014731	V52-6.4	内容主题词 SCTP 唯一命中 V52-6.4（netmap、iflib、SCTP 与高性能网络）	B	sb391
+S-014732		内容为编纂元数据层，无叙事节点	B	sb391
+S-014733		内容为编纂元数据层，无叙事节点	B	sb391
+S-014734		内容为编纂元数据层，无叙事节点	B	sb391
+S-014735		内容为编纂元数据层，无叙事节点	B	sb391
+S-014736		内容为编纂元数据层，无叙事节点	B	sb391
+S-014737	V37-6.10	内容 CVS 使用期 1993-2012 与 SVN 分批接管（src 2008-05-31 等），CVS→SVN 迁移命中 V37-6.10	B	sb391
+S-014738		内容为子节链接索引清单（108.1-108.3 链接），主题词零精确命中	B	sb391
+S-014739		内容为“详见采访录”单句指针，主题词零命中	B	sb391
+S-014740		内容为文献缺口提示与 DATA_VERIFY_BLOCK，主题词零命中	B	sb391
+S-014741		内容为编纂元数据层，无叙事节点	B	sb391
+S-014742		内容为编纂元数据层，无叙事节点	B	sb391

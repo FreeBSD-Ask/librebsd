@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014623		题面 tty_ttydisc／panic 零命中	A	sb387
+S-014624		题面 ulpt／注释掉 ulpt_reset 零命中	A	sb387
+S-014625		题面 USB polling／支持代码零命中	A	sb387
+S-014626		题面 ndis 命中为第五十卷 DragonFly 驱动节注释非 FreeBSD 语境，无主导	A	sb387
+S-014627		题面 PowerPC 命中为 NetBSD 平台节（V40-4.3／V41-2.2）非 FreeBSD 语境，无主导	A	sb387
+S-014628		题面为证据等级来源模板，零语义	A	sb387
+S-014629		题面 KVM／虚拟机命中散布（V37-3.7 路线比较／V36-8.2 等）非 KVM 宿主个案语境，无主导	A	sb387
+S-014630		题面为证据等级来源模板，零语义	A	sb387
+S-014631		题面 devd／脚本／基准亮度零命中	A	sb387
+S-014632		题面 loader.conf／hw.pci.enable_msi／zroot 零命中	A	sb387
+S-014633		题面为邮件考古细节，零命中（细节级）	A	sb387
+S-014634		题面 xpt_config／VPS 零命中	A	sb387
+S-014635		题面为证据等级来源模板，零语义	A	sb387
+S-014636		题面为证据等级来源模板，零语义	A	sb387
+S-014637		题面 Jetway／VIA C7／cpufreq 零命中	A	sb387
+S-014638		题面 相机／umass／USB 零命中	A	sb387
+S-014639		题面为证据等级来源模板，零语义	A	sb387
+S-014640		题面 ISDN／PCI 枚举／显示设备零命中	A	sb387
+S-014641		题面为证据等级来源模板，零语义	A	sb387
+S-014642		题面 Pine64／taskqgroup／pmap 零命中	A	sb387
+S-014643		题面 eMMC／HS400／HS200 零命中	A	sb387
+S-014644		题面为证据等级来源模板，零语义	A	sb387
+S-014645		题面 软驱／Mitsumi／USB 零命中	A	sb387
+S-014646		题面 tcpdump／uath 零命中	A	sb387

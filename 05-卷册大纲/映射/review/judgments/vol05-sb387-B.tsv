@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014623		内容主题词 ttydisc／ubt／db_readline 零精确命中（DDB 命中为内核调试器节词面误配）	B	sb387
+S-014624		内容主题词 ulpt_reset／cups／PCL 零精确命中（V37 无 USB 外设支持节点）	B	sb387
+S-014625		内容主题词 USB polling／root mount／DDB 零精确命中（无 USB 栈专节）	B	sb387
+S-014626		内容主题词 ndisX／vap／if_ndis.c 零精确命中（ndis 命中为 DragonFly 驱动节非对应）	B	sb387
+S-014627		内容主题词 PowerPC 命中为 NetBSD 平台节非对应；SMP／altivec 命中为并发体系泛化词面，无主导	B	sb387
+S-014628		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014629	V37-1.5	内容证据：CAM 命令超时重试／bad reselection 主题直配 V37-1.5 CAM：设备访问模型（全目录唯一 CAM 专节）	B	sb387
+S-014630		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014631	V37-10.8	内容证据：ACPI 背光／devd 脚本主题直配 V37-10.8 ACPI 与电源管理（全目录唯一 ACPI 专节）	B	sb387
+S-014632		内容主题词 hw.pci.enable_msi／zroot 零精确命中（ZFS 命中散布 V36-8.5／V37-1.7–1.9 无主导）	B	sb387
+S-014633		内容主题词零命中（细节级邮件）	B	sb387
+S-014634		内容主题词 xpt_config／VPS／qemu 零精确命中（qemu 命中为第六十九卷 GSoC 节词面误配）	B	sb387
+S-014635		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014636		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014637	V37-10.8	内容证据：cpufreq／freq_levels 电源管理主题直配 V37-10.8 ACPI 与电源管理（全目录唯一电源管理专节）	B	sb387
+S-014638		内容主题词 umass／相机／USB 设备枚举零精确命中（V37 无 USB 外设支持节点）	B	sb387
+S-014639		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014640		内容主题词 ISDN／HFC-S／vgapci 零精确命中（显卡命中 V37-10.9 为词面误配，卡非 GPU）	B	sb387
+S-014641		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014642		内容主题词 Pine64／pmap／taskqgroup 零精确命中（AArch64 命中散布 V36-11.1／V37-10.6 无主导）	B	sb387
+S-014643		内容主题词 eMMC／HS400／调谐零精确命中（无 mmc 存储控制器节点）	B	sb387
+S-014644		内容为模板头 claim 载体，叙事主题零命中	B	sb387
+S-014645		内容主题词 Mitsumi／软驱／uhub_reattach_port 零精确命中（软盘命中为 386BSD 发行介质节词面误配）	B	sb387
+S-014646		内容主题词 uath0／bpf_detachd／taskqueue_drain 零精确命中（bpf 命中为 eBPF 节词面误配）	B	sb387
