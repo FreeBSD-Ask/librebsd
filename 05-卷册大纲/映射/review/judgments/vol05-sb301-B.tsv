@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012559	V31-1.3	内容主题 SysV IPC 消息队列默认值，全目录唯一 IPC 机制节为 1.3“管道、共享内存与进程间通信”（BSD 内核 IPC）	B	sb301
+S-012560	V37-4.6	内容主题 sched_ule 调度器交互式 KSE 时间片，ULE 直配 4.6“调度器历史：4BSD 到 ULE”（KSE 线程模型节 4.5 为旁支，调度器主题主导）	B	sb301
+S-012561		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012562		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012563		内容主题词崩溃、vm_fault、panic 零命中（细节级 4.9 期 panic 报告）	B	sb301
+S-012564		内容主题词 vfs_cache、panic、硬件故障零命中（细节级 panic 诊断邮件）	B	sb301
+S-012565		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012566		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012567	V60-3.5	内容主题 tcsh 先装 /bin/tcsh 再装 /bin/csh 的兼容模式安装史，直配“tcsh 继承”	B	sb301
+S-012568		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012569		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012570		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012571		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012572	V37-1.3	内容主题崩溃后 fsck 报不一致与 sync 写盘保证，正对 Soft Updates 一致性设计主题（fsck 另命中 1974–1995 卷 2.4，FreeBSD 存储工程语境主导）	B	sb301
+S-012573		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012574	V37-1.7	内容主题 ZFS 继承 geom 与 softupdates 思路、Sun 淘汰 UFS，直配“ZFS 引入 FreeBSD”	B	sb301
+S-012575	V37-10.8	内容主题 ACPI S3 挂起启动 panic，直配唯一 ACPI 专节“ACPI 与电源管理”	B	sb301
+S-012576	V37-10.8	内容主题 ACPI 总线上声卡 sbc 设备识别补丁，ACPI 直配唯一专节	B	sb301
+S-012577	V37-10.8	内容主题 ACPI CMBAT 电池低电 notify 与 devd 调用脚本，直配“ACPI 与电源管理”	B	sb301
+S-012578	V37-10.8	内容主题 acpi_throttle／acpi_perf／powernow CPU 电源驱动分工，直配“ACPI 与电源管理”	B	sb301
+S-012579	V37-10.8	内容主题 ACPI 命名空间扫描与 _SB／_TZ 类型判定，直配唯一 ACPI 专节	B	sb301
+S-012580		内容为模板头 claim 载体，叙事主题零命中	B	sb301
+S-012581	V37-10.8	内容主题 ACPI pci_link 链路设备总线号宏缺陷，pci_link 属 ACPI 子系统，直配唯一 ACPI 专节	B	sb301
+S-012582	V37-10.8	内容主题 p4tcc 温控 MSR 与超线程双逻辑 CPU 写协同，属 CPU 电源温控管理，归“ACPI 与电源管理”节	B	sb301

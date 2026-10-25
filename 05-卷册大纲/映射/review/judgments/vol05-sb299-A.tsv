@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012511		题面为证据等级来源模板，零语义	A	sb299
+S-012512		题面“es137x 声卡 SB 128”零节题命中（细节级），留空	A	sb299
+S-012513		题面“USB 主机互联线”零节题命中，USB 唯一命中 V52-6.2 系网络设备驱动体系异题，留空	A	sb299
+S-012514		题面“cache_purge namecache 崩溃”零节题命中（细节级），留空	A	sb299
+S-012515		题面为证据等级来源模板，零语义	A	sb299
+S-012516	V36-4.3	题面“jail”主导命中 V36-4.3（traceroute 命中 V60-5.5 系 1987 工具本体异题、ocijail 系 OCI 异题排除）	A	sb299
+S-012517		题面“FreePascal ports”零节题命中，Pascal 四处命中均系 Berkeley Pascal（1975 起）异题，留空	A	sb299
+S-012518		题面“kqueue poll”kqueue 唯一命中 V67-2.3 系设计文档 BSDCon 2000 发表异题、poll 命中 Apollo 异题，留空	A	sb299
+S-012519		题面“unlink 删除语义”零节题命中（细节级），留空	A	sb299
+S-012520		题面“DragonFly ATA M_NOWAIT malloc”零节题命中，malloc 五处命中均系 jemalloc／OpenBSD 随机化异题，留空	A	sb299
+S-012521		题面“services cadlock IANA”零节题命中（细节级），留空	A	sb299
+S-012522		题面“KVM 切换 PS/2 鼠标”零节题命中，KVM 唯一命中 V37-3.7 系虚拟机路线比较异题，留空	A	sb299
+S-012523		题面“amd 挂载 pcfs floppy”零节题命中，amd 命中均系 amd64／spamd／amdgpu 异题，留空	A	sb299
+S-012524		题面“命名空间 PID 文件”零节题命中，命名空间唯一命中 V05-4.3 系 Plan 9 异题，留空	A	sb299
+S-012525		题面为证据等级来源模板，零语义	A	sb299
+S-012526		题面“malloc 性能指控”零节题命中，malloc 命中均系 jemalloc／OpenBSD 异题（邮件为 2003 phkmalloc 时代），留空	A	sb299
+S-012527		题面为证据等级来源模板，零语义	A	sb299
+S-012528		题面“daemon(3) TIOCSCTTY 时序”零节题命中，tty 全库零命中，留空	A	sb299
+S-012529		题面“mbuf mh_data”零节题命中（细节级），留空	A	sb299
+S-012530		题面“5.1-RELEASE mmap 只读映射”零节题命中，mmap 命中均系 V31-3.3（至 1995）与 OpenBSD 随机化异题，留空	A	sb299
+S-012531		题面“ntop ports Invalid shared object”零节题命中（细节级），留空	A	sb299
+S-012532		题面“msync MS_INVALIDATE 缺陷”零节题命中（细节级），留空	A	sb299
+S-012533		题面“lpt0 ppi avrdude”零节题命中，打印唯一命中系伯克利计算环境异题，留空	A	sb299
+S-012534		题面“Samsung PS/2 无线鼠标侧键”零节题命中（细节级），留空	A	sb299

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012439		题面关键词 spl 与 4x 零命中，多处理器仅两候选且年代窗口不符无主导，target 留空	A	sb296
+S-012440		题面关键词 Pentium 与服务器零命中或泛化多候选，无主导，target 留空	A	sb296
+S-012441		题面为证据等级来源模板，零语义	A	sb296
+S-012442	V37-4.4	题面关键词 Giant 全目录唯一命中 Giant 锁拆除与细粒度并发节	A	sb296
+S-012443		题面关键词 Perlstein、Matsuda、锁序反转均零命中，target 留空	A	sb296
+S-012444		题面为证据等级来源模板，零语义	A	sb296
+S-012445		题面关键词 HLT、IPI、空闲 CPU 均零命中，target 留空	A	sb296
+S-012446		题面为证据等级来源模板，零语义	A	sb296
+S-012447		题面关键词 Duron 与 Janelle 均零命中，target 留空	A	sb296
+S-012448		题面关键词 Duncan 与 Baldwin 均零命中，target 留空	A	sb296
+S-012449		题面关键词 ia64 与缺陷单均零命中，target 留空	A	sb296
+S-012450		题面关键词 MySQL 双候选（V60-13.7 与 V60-13.10）无主导，target 留空	A	sb296
+S-012451		题面关键词 E4500 零命中，target 留空	A	sb296
+S-012452		题面关键词 sx、rwlock、回移均零命中，target 留空	A	sb296
+S-012453		题面关键词 KSE 零命中，target 留空	A	sb296
+S-012454	V37-4.6	题面关键词 ULE 全目录唯一命中调度器历史 4BSD 到 ULE 节	A	sb296
+S-012455		题面关键词超线程零命中，HTT 仅误中 httpd 非真命中，target 留空	A	sb296
+S-012456		题面关键词 SMP 多候选（18 节）无主导，target 留空	A	sb296
+S-012457		题面为证据等级来源模板，零语义	A	sb296
+S-012458		题面关键词 5.x 多候选（V36-5.7、V36-6.1、V39-8.2、V48-1.3 等）无主导，target 留空	A	sb296
+S-012459		题面关键词 Dillon 多候选（人物志与技术观点多节）无主导，target 留空	A	sb296
+S-012460		题面关键词 M N 模型零命中，target 留空	A	sb296
+S-012461	V37-5.3	题面关键词强制访问控制命中三节，FreeBSD 语境下 MAC Framework 节主导	A	sb296
+S-012462		题面关键词锁竞争与过渡期均零命中，target 留空	A	sb296

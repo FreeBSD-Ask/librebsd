@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012535		内容为模板头 claim 载体，叙事主题零命中	B	sb300
+S-012536		内容主题为 libc resolver（getaddrinfo/res_send）延迟 bug 报告，细节级邮件零节题命中，留空	B	sb300
+S-012537		内容主题为 iSCSI 握手用户态/内核归属争论，新目录零 iSCSI 节，零命中留空	B	sb300
+S-012538		内容主题为 squid/wccp2 载荷 panic 过程报告，细节级邮件零命中，留空	B	sb300
+S-012539		内容为模板头 claim 载体，叙事主题零命中	B	sb300
+S-012540		内容主题为 4.9-RELEASE 重复崩溃归因内核内存不足，细节级邮件零命中，留空	B	sb300
+S-012541		内容为模板头 claim 载体，叙事主题零命中	B	sb300
+S-012542	V37-6.10	内容 Subversion 仓库升级 dump/reload 兼容性告诫（2004 SCM 讨论）命中 V37-6.10 CVS 至 SVN 至 Git 档案迁移节	B	sb300
+S-012543		内容主题为 gcc33 快照修复 kern_exec 临时改动议题，GCC 节题均为转型/许可异题，零主导留空	B	sb300
+S-012544		内容主题为 NIS 口令文件致 getpwent 段错误，细节级邮件零命中，留空	B	sb300
+S-012545	V36-5.8	内容 RELENG_5 死路之争与 5.3 成 5-STABLE 信誉押注主题命中 V36-5.8 多年重建过程中的弯路与代价（同型件 S-012216 先例）	B	sb300
+S-012546	V37-11.7	内容 ports 树冻结时长争议与文档改进要求主题命中 V37-11.7 Ports 工程节	B	sb300
+S-012547	V37-6.10	内容 SCM 对比链接与 Subversion 试用、迁移循序渐进主题命中 V37-6.10 档案迁移节	B	sb300
+S-012548	V65-1.9	内容有薪与自由软件工程惯例之辨、部件需最低开发者规模（vinum）主题命中 V65-1.9 志愿者与受雇开发者节	B	sb300
+S-012549		内容为模板头 claim 载体，叙事主题零命中	B	sb300
+S-012550	V37-2.4	内容 ipfw 管道 kbytes/kbits 单位敏感性与配置变更主题命中 V37-2.4 Dummynet 节（ipfw pipe 即 dummynet）	B	sb300
+S-012551		内容为模板头 claim 载体，叙事主题零命中	B	sb300
+S-012552		内容主题为 FFS 快照触发 lockmgr/ffs_copyonwrite panic，存储章节题无快照对应，零主导留空	B	sb300
+S-012553		内容主题为手动更新 ports 的 expat 库版本冲突，细节级邮件零命中，留空	B	sb300
+S-012554		内容为模板头 claim 载体，叙事主题零命中	B	sb300
+S-012555		内容主题为 TLS（线程局部存储）仅限 i386 与 gdb 6.1 导入意见，TLS 节题为传输层异题、gdb 为次要，零主导留空	B	sb300
+S-012556		内容主题为 contigmalloc 接口重写与连续物理内存分配策略，零节题命中，留空	B	sb300
+S-012557	V37-5.1	内容 suid/sgid 位修改清除与 BSD 早年安全加固传统主题命中 V37-5.1 UNIX DAC 权限模型节	B	sb300
+S-012558	V58-3.6	内容 Apple 聘 FreeBSD 核心开发者打造 Mac OS X BSD 部分与 NetBSD 基础困惑主题命中 V58-3.6 Darwin 与 BSD 社区关系节	B	sb300

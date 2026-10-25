@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012439	V36-3.6	内容主题词多处理器命中 FreeBSD 多处理器与统一内核接口起步节，2001 年 4.x 语境对应，另一候选为 1986 至 1989 窗口外早期 UNIX 节	B	sb296
+S-012440	V37-4.2	内容主题 SMP 多候选中 FreeBSD 4.x 期使用体验对应 FreeBSD SMP 初期实现节	B	sb296
+S-012441		内容为模板头 claim 载体，叙事主题零命中	B	sb296
+S-012442	V37-4.4	内容主题词 Giant 插桩与系统调用临时代码唯一命中 Giant 锁拆除与细粒度并发节	B	sb296
+S-012443	V37-4.4	内容主题词 pipe mutex 与 Giant 锁序反转命中 Giant 锁拆除节	B	sb296
+S-012444		内容为模板头 claim 载体，叙事主题零命中	B	sb296
+S-012445		内容主题词 HLT、IPI、运行队列、缓存行均零命中，target 留空	B	sb296
+S-012446		内容为模板头 claim 载体，叙事主题零命中	B	sb296
+S-012447		内容主题词 Duron、K7、芯片均零命中，target 留空	B	sb296
+S-012448	V67-2.2	内容主题词 BSDCon 论文命中会议网络卷 FreeBSDCon 与 BSDCon 的论文节	B	sb296
+S-012449		内容主题词缺陷、pthread、多处理器零命中或双候选无主导，target 留空	B	sb296
+S-012450		内容主题词 MySQL 双候选（V60-13.7 与 V60-13.10）均不载死锁排查细节无主导，target 留空	B	sb296
+S-012451	V37-4.4	内容主题词自旋锁持有过久之锁主题在 FreeBSD 并发锁诸节中 Giant 锁拆除节主导	B	sb296
+S-012452		内容主题词 sx、rwlock、回移均零命中，target 留空	B	sb296
+S-012453	V37-4.5	内容主题词 M:N 与 1:1 线程模型命中 FreeBSD 内核线程模型演进节	B	sb296
+S-012454	V37-4.6	内容主题词 ULE 与调度命中调度器历史 4BSD 到 ULE 节	B	sb296
+S-012455		内容主题词超线程、HTT、双核均零命中，target 留空	B	sb296
+S-012456	V37-4.2	内容主题词 4.0-STABLE 编译 SMP 内核对应 FreeBSD SMP 初期实现节	B	sb296
+S-012457		内容为模板头 claim 载体，叙事主题零命中	B	sb296
+S-012458	V36-5.7	内容主题词 5.0 至 5.2 不稳定与技术发布对应 5.x 内核与用户空间并行系统重建节	B	sb296
+S-012459	V39-8.2	内容主题词技术风格冲突与 5.x 转型对应 FreeBSD 5.x 转型中的工程文化冲突节	B	sb296
+S-012460	V37-4.5	内容主题词 KSE 与 M:N 模型对应 FreeBSD 内核线程模型演进节	B	sb296
+S-012461	V37-5.3	内容主题词 MAC、mac_biba、Watson 对应 MAC Framework 强制访问控制体系节	B	sb296
+S-012462	V37-4.4	内容主题词 Giant Lock 与 SMPng 锁竞争对应 Giant 锁拆除与细粒度并发节	B	sb296

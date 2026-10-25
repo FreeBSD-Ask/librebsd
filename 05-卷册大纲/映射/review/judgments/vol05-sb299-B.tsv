@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012511		内容为模板头 claim 载体，叙事主题零命中	B	sb299
+S-012512		内容主题词 es137x／SB 128／声卡／xmms 零命中（细节级邮件）	B	sb299
+S-012513		内容主题词 USB 互联线／设备识别零命中，USB 命中系网络驱动异题（细节级邮件）	B	sb299
+S-012514		内容主题词 malloc 堆／namecache 结点零命中，malloc 命中均系 jemalloc／OpenBSD 异题	B	sb299
+S-012515		内容为模板头 claim 载体，叙事主题零命中	B	sb299
+S-012516	V36-4.3	内容主题词 jail（原始套接字权限）命中 V36-4.3，ipfw 命中均系过滤框架异题，题面旁证	B	sb299
+S-012517		内容主题词 FreePascal ports／FPC FTP 零命中，Pascal 命中均系 Berkeley Pascal 异题	B	sb299
+S-012518		内容主题词 poll 规范／tail -f／文件描述符零命中，命中处均系异题（细节级邮件）	B	sb299
+S-012519		内容主题词 unlink／链接数／vnode 零命中（细节级邮件）	B	sb299
+S-012520		内容主题词 M_NOWAIT／ATA 驱动零命中，malloc 命中均系 jemalloc／OpenBSD 异题	B	sb299
+S-012521		内容主题词 services cadlock／IANA 零命中（细节级邮件）	B	sb299
+S-012522		内容主题词 KVM 切换／psm 补丁／鼠标零命中，KVM 命中系虚拟机异题	B	sb299
+S-012523		内容主题词 automount pcfs floppy／EFAULT 零命中，amd 命中均系 amd64 等异题	B	sb299
+S-012524		内容主题词 命名空间／PID 文件零命中，命名空间命中系 Plan 9 异题	B	sb299
+S-012525		内容为模板头 claim 载体，叙事主题零命中	B	sb299
+S-012526		内容主题词 malloc 性能零命中，malloc 命中均系 jemalloc／OpenBSD 异题（细节级邮件）	B	sb299
+S-012527		内容为模板头 claim 载体，叙事主题零命中	B	sb299
+S-012528		内容主题词 TIOCSCTTY／ttybg／时序零命中，时序命中均系异题（细节级邮件）	B	sb299
+S-012529		内容主题词 mbuf／M_EXT／mh_data 零命中（细节级邮件）	B	sb299
+S-012530		内容主题词 mmap 磁盘缓存零命中，mmap 命中均系至 1995 期与 OpenBSD 异题	B	sb299
+S-012531		内容主题词 ntop 插件／共享对象句柄零命中（细节级邮件）	B	sb299
+S-012532		内容主题词 msync／MS_INVALIDATE 零命中（细节级邮件）	B	sb299
+S-012533		内容主题词 lpt0／ppi(4)／avrdude 零命中（细节级邮件）	B	sb299
+S-012534		内容主题词 PS/2 无线鼠标侧键／初始化序列零命中（细节级邮件）	B	sb299
