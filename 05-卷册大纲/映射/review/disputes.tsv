@@ -2967,6 +2967,7 @@ S-019708	V41-5.4	V41-11.6	V41-5.4	三趟不一致	empty-vs-value
 S-019714	V40-2.1	V41-5.4	V40-2.1	三趟不一致	empty-vs-value	
 S-019724	∅	V41-8.4	∅	三趟不一致	adjacent	
 S-019736	V41-9.1	V41-9.1	V41-1.5	三趟不一致	empty-vs-value	
+S-019745	V41-1.3	V41-1.3	∅	三趟不一致	adjacent	ruled:V41-1.3（选项 B 留账补登）
 S-019749	V41-1.5	V41-7.3	V41-1.5	三趟不一致	empty-vs-value	
 S-019763	∅	V41-7.6	∅	三趟不一致	adjacent	
 S-019773	∅	V41-12.7	∅	三趟不一致	adjacent	
@@ -2976,6 +2977,7 @@ S-019867	∅	V41-1.1	∅	三趟不一致	adjacent
 S-019868	V41-2.1	V41-1.4	V41-2.1	三趟不一致	empty-vs-value	
 S-019871	V41-1.2	V41-1.2	V41-2.1	三趟不一致	empty-vs-value	
 S-019892	∅	V41-1.5	∅	三趟不一致	adjacent	
+S-019917	V41-9.1	V41-9.1	∅	三趟不一致	adjacent	ruled:V41-9.1（选项 B 留账补登）
 S-019926	∅	V41-12.7	∅	三趟不一致	adjacent	
 S-019945	∅	V41-1.5	∅	三趟不一致	adjacent	
 S-019951	∅	V41-2.1	∅	三趟不一致	adjacent	
@@ -2997,6 +2999,7 @@ S-020125	∅	V41-5.1	∅	三趟不一致	adjacent
 S-020138	∅	V41-7.3	∅	三趟不一致	adjacent	
 S-020144	∅	V41-1.5	∅	三趟不一致	adjacent	
 S-020158	∅	V41-1.3	∅	三趟不一致	adjacent	
+S-020161	V41-9.4	V41-9.4	∅	三趟不一致	adjacent	ruled:V41-9.4（选项 B 留账补登）
 S-020175	∅	V41-1.5	∅	三趟不一致	adjacent	
 S-020224	∅	V41-2.1	∅	三趟不一致	adjacent	
 S-020227	∅	V41-1.1	∅	三趟不一致	adjacent	
@@ -3017,6 +3020,7 @@ S-020425	∅	V41-9.1	∅	三趟不一致	adjacent
 S-020432	∅	V43-1.5	∅	三趟不一致	adjacent	
 S-020437	∅	V42-4.4	∅	三趟不一致	adjacent	
 S-020441	V42-5.1	V42-3.1	V42-5.1	三趟不一致	empty-vs-value	
+S-020442	V42-2.3	V42-2.3	V42-2.4	三趟不一致	adjacent	ruled:V42-2.3（选项 B 留账补登）
 S-020454	∅	V42-2.4	∅	三趟不一致	adjacent	
 S-020471	V43-6.5	V43-1.5	V43-6.5	三趟不一致	empty-vs-value	
 S-020477	∅	V41-1.5	∅	三趟不一致	adjacent	
@@ -3026,6 +3030,7 @@ S-020516	V41-1.1	V40-1.5	V41-1.1	三趟不一致	empty-vs-value
 S-020537	V40-2.9	V44-2.1	V40-2.9	三趟不一致	empty-vs-value	
 S-020561	∅	V41-9.1	∅	三趟不一致	adjacent	
 S-020573	∅	V43-1.5	∅	三趟不一致	adjacent	
+S-020590	V41-8.1	V41-8.2	V41-8.1	三趟不一致	adjacent	ruled:V41-8.1（选项 B 留账补登）
 S-020594	∅	V41-8.4	∅	三趟不一致	adjacent	
 S-020601	∅	V41-8.1	∅	三趟不一致	adjacent	
 S-020602	∅	V41-8.1	∅	三趟不一致	adjacent	
@@ -3146,6 +3151,7 @@ S-021409	∅	V41-8.4	∅	三趟不一致	adjacent
 S-021410	∅	V41-8.4	∅	三趟不一致	adjacent	
 S-021411	∅	V41-8.4	∅	三趟不一致	adjacent	
 S-021412	∅	V41-8.6	∅	三趟不一致	adjacent	
+S-021413	V41-8.6	V41-8.5	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
 S-021418	∅	V41-8.4	∅	三趟不一致	adjacent	
 S-021419	∅	V41-8.4	∅	三趟不一致	adjacent	
 S-021421	∅	V41-8.6	∅	三趟不一致	adjacent	
@@ -3217,6 +3223,8 @@ S-022031	∅	V41-5.2	∅	三趟不一致	adjacent
 S-022045	∅	V40-8.1	∅	三趟不一致	adjacent	
 S-022046	∅	V40-8.1	∅	三趟不一致	adjacent	
 S-022047	∅	V41-2.5	∅	三趟不一致	adjacent	
+S-022056	∅	∅	∅	三趟不一致	generic	ruled:V41-9.3（选项 B 留账补登）
+S-022058	∅	∅	∅	三趟不一致	generic	ruled:V41-7.5（选项 B 留账补登）
 S-022080	∅	V41-9.4	∅	三趟不一致	adjacent	
 S-022082	∅	V41-4.2	∅	三趟不一致	adjacent	
 S-022095	∅	V40-3.3	∅	三趟不一致	adjacent	
@@ -3353,7 +3361,19 @@ S-022550	∅	V41-1.3	V40-4.1	三趟不一致	empty-vs-value
 S-022551	∅	∅	V40-4.1	三趟不一致	adjacent	
 S-022552	∅	V41-1.3	V40-4.1	三趟不一致	empty-vs-value	
 S-022553	∅	V41-2.1	V40-4.1	三趟不一致	empty-vs-value	
+S-022560	∅	V41-1.3	V41-1.3	三趟不一致	adjacent	ruled:V41-1.3（选项 B 留账补登）
+S-022562	∅	V41-12.1	V41-12.1	三趟不一致	adjacent	ruled:V41-12.1（选项 B 留账补登）
+S-022567	∅	V41-1.4	V41-1.4	三趟不一致	adjacent	ruled:V41-1.4（选项 B 留账补登）
+S-022576	∅	V41-6.4	V41-6.4	三趟不一致	adjacent	ruled:V41-6.4（选项 B 留账补登）
+S-022581	∅	V41-2.1	V41-2.1	三趟不一致	adjacent	ruled:V41-2.1（选项 B 留账补登）
+S-022592	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
 S-022597	V61-2.3	V41-9.2	V41-9.2	三趟不一致	empty-vs-value	
+S-022650	∅	V41-6.1	V41-6.1	三趟不一致	adjacent	ruled:V41-6.1（选项 B 留账补登）
+S-022661	∅	V41-6.5	V41-6.5	三趟不一致	adjacent	ruled:V41-6.5（选项 B 留账补登）
+S-022674	∅	V41-4.4	V41-4.4	三趟不一致	adjacent	ruled:V41-4.4（选项 B 留账补登）
+S-022682	∅	V41-9.2	V41-9.2	三趟不一致	adjacent	ruled:V41-9.2（选项 B 留账补登）
+S-022685	∅	V41-4.4	V41-4.4	三趟不一致	adjacent	ruled:V41-4.4（选项 B 留账补登）
+S-022692	∅	V41-9.3	V41-9.3	三趟不一致	adjacent	ruled:V41-9.3（选项 B 留账补登）
 S-022698	∅	∅	V40-4.1	三趟不一致	adjacent	
 S-022699	∅	∅	V40-4.1	三趟不一致	adjacent	
 S-022702	∅	∅	V40-4.1	三趟不一致	adjacent	
@@ -3478,6 +3498,7 @@ S-022876	∅	V41-12.3	V43-8.2	三趟不一致	empty-vs-value
 S-022877	V41-12.3	V41-12.3	V43-8.2	三趟不一致	empty-vs-value	
 S-022878	∅	V43-2.1	V43-8.2	三趟不一致	empty-vs-value	
 S-022884	∅	V43-2.1	V43-8.2	三趟不一致	empty-vs-value	
+S-022885	∅	V43-8.2	V43-8.2	三趟不一致	adjacent	ruled:V43-8.2（选项 B 留账补登）
 S-022887	∅	V41-12.3	V43-8.2	三趟不一致	empty-vs-value	
 S-022888	∅	V41-2.1	V43-8.2	三趟不一致	empty-vs-value	
 S-022890	∅	∅	V43-8.2	三趟不一致	adjacent	
@@ -3512,33 +3533,52 @@ S-022936	∅	V41-7.3	V43-3.4	三趟不一致	empty-vs-value
 S-022937	∅	V43-5.1	V43-3.4	三趟不一致	empty-vs-value	
 S-022938	∅	V69-3.7	V43-3.4	三趟不一致	empty-vs-value	
 S-022939	∅	∅	V43-3.4	三趟不一致	adjacent	
+S-022940	V66-1.1	V66-1.11	V66-1.11	三趟不一致	adjacent	ruled:V66-1.11（选项 B 留账补登）
 S-022941	V69-2.7	V69-2.7	V66-3.3	三趟不一致	empty-vs-value	
 S-022942	∅	V69-2.7	V66-3.3	三趟不一致	empty-vs-value	
 S-022943	V41-8.6	V43-7.2	V43-7.2	三趟不一致	empty-vs-value	
 S-022944	V43-4.4	V64-4.2	V43-7.2	三趟不一致	generic	
 S-022945	V41-12.3	V41-12.3	V43-7.2	三趟不一致	empty-vs-value	
 S-022946	∅	V41-2.7	V43-7.2	三趟不一致	empty-vs-value	
+S-022947	∅	V43-7.2	V43-7.2	三趟不一致	adjacent	ruled:V43-7.2（选项 B 留账补登）
 S-022948	∅	V41-2.3	∅	三趟不一致	adjacent	
+S-022962	∅	V53-6.9	V53-6.9	三趟不一致	adjacent	ruled:V53-6.9（选项 B 留账补登）
 S-022963	V55-6.2	V64-4.3	V64-4.3	三趟不一致	empty-vs-value	
 S-022964	V43-4.4	V64-4.6	V64-4.6	三趟不一致	empty-vs-value	
 S-022965	V41-12.3	V41-12.3	V64-4.14	三趟不一致	empty-vs-value	
 S-022966	∅	V69-8.8	V64-4.14	三趟不一致	empty-vs-value	
+S-022967	∅	V75-4.3	V75-4.3	三趟不一致	adjacent	ruled:V75-4.3（选项 B 留账补登）
 S-022969	∅	V75-4.1	V41-12.2	三趟不一致	empty-vs-value	
+S-022971	∅	V69-3.10	V69-3.10	三趟不一致	adjacent	ruled:V69-3.10（选项 B 留账补登）
+S-022972	∅	V42-4.4	V42-4.4	三趟不一致	adjacent	ruled:V42-4.4（选项 B 留账补登）
+S-022973	V20-1.7	V20-1.7	∅	三趟不一致	adjacent	ruled:V20-1.7（选项 B 留账补登）
+S-022976	∅	V69-8.7	V69-8.7	三趟不一致	adjacent	ruled:V69-8.7（选项 B 留账补登）
 S-022990	∅	∅	V52-5.1	三趟不一致	adjacent	
+S-022991	∅	V41-6.1	V41-6.1	三趟不一致	adjacent	ruled:V41-6.1（选项 B 留账补登）
 S-022993	V63-7.2	V63-4.5	V63-4.5	三趟不一致	empty-vs-value	
 S-022994	∅	∅	V63-1.9	三趟不一致	adjacent	
 S-022997	∅	∅	V63-1.9	三趟不一致	adjacent	
 S-022999	V58-3.3	V53-8.5	V53-8.5	三趟不一致	empty-vs-value	
 S-023001	V43-5.5	V53-7.4	V43-5.5	三趟不一致	empty-vs-value	
 S-023002	V59-7.8	V59-7.8	V43-5.5	三趟不一致	empty-vs-value	
+S-023006	∅	V69-8.2	V69-8.2	三趟不一致	adjacent	ruled:V69-8.2（选项 B 留账补登）
 S-023007	∅	V58-3.1	V69-8.2	三趟不一致	empty-vs-value	
 S-023008	∅	V57-1.2	V69-8.2	三趟不一致	empty-vs-value	
 S-023009	∅	∅	V42-5.1	三趟不一致	adjacent	
+S-023023	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
+S-023027	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
+S-023029	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
 S-023030	∅	V61-2.3	V40-6.4	三趟不一致	empty-vs-value	
 S-023031	∅	∅	V40-6.4	三趟不一致	adjacent	
 S-023032	∅	V41-5.1	V40-6.4	三趟不一致	empty-vs-value	
+S-023034	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
 S-023035	∅	V41-5.1	V40-6.4	三趟不一致	empty-vs-value	
+S-023036	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
+S-023037	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
+S-023039	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
+S-023040	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
 S-023041	∅	∅	V40-6.4	三趟不一致	adjacent	
+S-023042	∅	V40-6.4	V40-6.4	三趟不一致	adjacent	ruled:V40-6.4（选项 B 留账补登）
 S-023044	∅	V41-5.4	V40-6.4	三趟不一致	empty-vs-value	
 S-023046	∅	∅	V40-6.2	三趟不一致	adjacent	
 S-023047	∅	∅	V40-6.2	三趟不一致	adjacent	
@@ -3600,48 +3640,168 @@ S-023118	∅	V41-1.3	V40-6.2	三趟不一致	empty-vs-value
 S-023123	∅	V41-6.1	V40-6.2	三趟不一致	empty-vs-value	
 S-023126	∅	∅	V40-6.2	三趟不一致	adjacent	
 S-023129	∅	V53-6.7	V40-6.2	三趟不一致	empty-vs-value	
+S-023130	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
+S-023131	∅	V41-7.1	V41-7.1	三趟不一致	adjacent	ruled:V41-7.1（选项 B 留账补登）
+S-023133	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
 S-023134	∅	∅	V41-4.6	三趟不一致	adjacent	
+S-023136	∅	V41-1.3	V41-1.3	三趟不一致	adjacent	ruled:V41-1.3（选项 B 留账补登）
 S-023143	∅	∅	V41-4.6	三趟不一致	adjacent	
+S-023144	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
 S-023146	∅	V41-4.5	V41-4.6	三趟不一致	adjacent	
 S-023147	∅	V41-1.3	V41-4.6	三趟不一致	empty-vs-value	
 S-023148	V41-7.1	V41-7.1	V41-4.6	三趟不一致	empty-vs-value	
+S-023149	∅	V41-6.7	V41-6.7	三趟不一致	adjacent	ruled:V41-6.7（选项 B 留账补登）
+S-023154	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
 S-023155	∅	∅	V41-4.6	三趟不一致	adjacent	
 S-023161	V61-1.10	V61-7.2	V61-1.10	三趟不一致	empty-vs-value	
+S-023163	∅	V61-6.5	V61-6.5	三趟不一致	adjacent	ruled:V61-6.5（选项 B 留账补登）
+S-023164	∅	V61-6.5	V61-6.5	三趟不一致	adjacent	ruled:V61-6.5（选项 B 留账补登）
+S-023168	∅	V40-6.5	V40-6.5	三趟不一致	adjacent	ruled:V40-6.5（选项 B 留账补登）
+S-023184	∅	V40-9.3	V40-9.3	三趟不一致	adjacent	ruled:V40-9.3（选项 B 留账补登）
+S-023185	∅	V40-9.3	V40-9.3	三趟不一致	adjacent	ruled:V40-9.3（选项 B 留账补登）
 S-023189	V41-1.3	V41-2.4	V41-2.4	三趟不一致	empty-vs-value	
+S-023190	∅	V41-2.4	V41-2.4	三趟不一致	adjacent	ruled:V41-2.4（选项 B 留账补登）
 S-023191	∅	∅	V41-2.4	三趟不一致	adjacent	
+S-023193	∅	V41-2.4	V41-2.4	三趟不一致	adjacent	ruled:V41-2.4（选项 B 留账补登）
+S-023195	∅	V41-2.4	V41-2.4	三趟不一致	adjacent	ruled:V41-2.4（选项 B 留账补登）
+S-023196	∅	V41-5.4	V41-5.4	三趟不一致	adjacent	ruled:V41-5.4（选项 B 留账补登）
+S-023198	∅	V41-2.4	V41-2.4	三趟不一致	adjacent	ruled:V41-2.4（选项 B 留账补登）
+S-023199	∅	V41-2.4	V41-2.4	三趟不一致	adjacent	ruled:V41-2.4（选项 B 留账补登）
 S-023202	∅	V8-8.3	V8-8.3	三趟不一致	adjacent	
+S-023203	∅	V41-1.5	V41-1.5	三趟不一致	adjacent	ruled:V41-1.5（选项 B 留账补登）
+S-023207	∅	V61-2.11	V61-2.11	三趟不一致	adjacent	ruled:V61-2.11（选项 B 留账补登）
+S-023209	∅	V41-1.3	V41-1.3	三趟不一致	adjacent	ruled:V41-1.3（选项 B 留账补登）
+S-023210	∅	V41-1.3	V41-1.3	三趟不一致	adjacent	ruled:V41-1.3（选项 B 留账补登）
 S-023212	∅	∅	V41-4.6	三趟不一致	adjacent	
 S-023213	∅	∅	V41-4.6	三趟不一致	adjacent	
 S-023214	∅	V41-1.5	V41-4.6	三趟不一致	empty-vs-value	
 S-023217	∅	∅	V41-4.6	三趟不一致	adjacent	
+S-023222	∅	V41-1.5	V41-1.5	三趟不一致	adjacent	ruled:V41-1.5（选项 B 留账补登）
 S-023223	∅	∅	V41-4.6	三趟不一致	adjacent	
 S-023224	∅	∅	V41-4.6	三趟不一致	adjacent	
 S-023225	∅	V41-1.5	V41-4.6	三趟不一致	empty-vs-value	
+S-023232	∅	V41-2.1	V41-2.1	三趟不一致	adjacent	ruled:V41-2.1（选项 B 留账补登）
+S-023234	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
+S-023235	∅	V41-1.4	V41-1.4	三趟不一致	adjacent	ruled:V41-1.4（选项 B 留账补登）
 S-023237	∅	V41-2.2	V41-2.4	三趟不一致	adjacent	
+S-023238	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
 S-023241	∅	V8-8.3	V8-8.3	三趟不一致	adjacent	
 S-023242	∅	V41-9.9	V41-4.6	三趟不一致	empty-vs-value	
+S-023249	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
 S-023252	∅	V41-5.6	V41-4.6	三趟不一致	empty-vs-value	
+S-023255	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
+S-023256	∅	V41-4.6	V41-4.6	三趟不一致	adjacent	ruled:V41-4.6（选项 B 留账补登）
+S-023257	∅	V41-5.3	V41-5.3	三趟不一致	adjacent	ruled:V41-5.3（选项 B 留账补登）
+S-023258	∅	V52-7.6	V52-7.6	三趟不一致	adjacent	ruled:V52-7.6（选项 B 留账补登）
 S-023261	∅	∅	V41-2.4	三趟不一致	adjacent	
+S-023263	∅	V41-1.4	V41-1.4	三趟不一致	adjacent	ruled:V41-1.4（选项 B 留账补登）
 S-023266	∅	V41-1.5	V41-2.4	三趟不一致	empty-vs-value	
 S-023268	∅	V41-1.5	V41-2.4	三趟不一致	empty-vs-value	
 S-023273	∅	V41-1.5	V41-4.6	三趟不一致	empty-vs-value	
+S-023274	∅	V41-5.1	V41-5.1	三趟不一致	adjacent	ruled:V41-5.1（选项 B 留账补登）
+S-023275	∅	V40-9.3	V40-9.3	三趟不一致	adjacent	ruled:V40-9.3（选项 B 留账补登）
+S-023276	∅	V41-10.1	V41-10.1	三趟不一致	adjacent	ruled:V41-10.1（选项 B 留账补登）
+S-023280	∅	V41-10.5	V41-10.5	三趟不一致	adjacent	ruled:V41-10.5（选项 B 留账补登）
+S-023282	∅	V41-1.5	V41-1.5	三趟不一致	adjacent	ruled:V41-1.5（选项 B 留账补登）
+S-023285	∅	V41-4.7	V41-4.7	三趟不一致	adjacent	ruled:V41-4.7（选项 B 留账补登）
+S-023287	∅	V41-10.1	V41-10.1	三趟不一致	adjacent	ruled:V41-10.1（选项 B 留账补登）
+S-023289	∅	V41-6.1	V41-6.1	三趟不一致	adjacent	ruled:V41-6.1（选项 B 留账补登）
+S-023290	∅	V41-6.1	V41-6.1	三趟不一致	adjacent	ruled:V41-6.1（选项 B 留账补登）
+S-023292	∅	V41-7.6	V41-7.6	三趟不一致	adjacent	ruled:V41-7.6（选项 B 留账补登）
+S-023296	∅	V41-10.1	V41-10.1	三趟不一致	adjacent	ruled:V41-10.1（选项 B 留账补登）
+S-023297	∅	V41-1.5	V41-1.5	三趟不一致	adjacent	ruled:V41-1.5（选项 B 留账补登）
+S-023300	∅	V41-1.5	V41-1.5	三趟不一致	adjacent	ruled:V41-1.5（选项 B 留账补登）
+S-023307	∅	V41-1.5	V41-1.5	三趟不一致	adjacent	ruled:V41-1.5（选项 B 留账补登）
+S-023308	∅	V41-6.1	V41-6.1	三趟不一致	adjacent	ruled:V41-6.1（选项 B 留账补登）
+S-023309	∅	V41-12.7	V41-12.7	三趟不一致	adjacent	ruled:V41-12.7（选项 B 留账补登）
+S-023314	∅	V41-4.5	V41-4.5	三趟不一致	adjacent	ruled:V41-4.5（选项 B 留账补登）
+S-023320	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023321	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023322	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023323	∅	V41-8.5	V41-8.5	三趟不一致	adjacent	ruled:V41-8.5（选项 B 留账补登）
 S-023324	V41-8.5	V41-12.6	V41-12.6	三趟不一致	empty-vs-value	
 S-023330	V41-2.4	V41-8.4	V41-8.4	三趟不一致	empty-vs-value	
+S-023331	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023332	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023333	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023340	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023342	∅	V41-8.7	V41-8.7	三趟不一致	adjacent	ruled:V41-8.7（选项 B 留账补登）
+S-023346	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023347	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023350	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023351	∅	V41-12.6	V41-12.6	三趟不一致	adjacent	ruled:V41-12.6（选项 B 留账补登）
+S-023353	∅	V41-12.6	V41-12.6	三趟不一致	adjacent	ruled:V41-12.6（选项 B 留账补登）
+S-023354	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023355	∅	V41-8.7	V41-8.7	三趟不一致	adjacent	ruled:V41-8.7（选项 B 留账补登）
+S-023358	∅	V41-8.7	V41-8.7	三趟不一致	adjacent	ruled:V41-8.7（选项 B 留账补登）
+S-023360	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023362	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023364	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023367	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023369	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023370	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023371	∅	V41-8.7	V41-8.7	三趟不一致	adjacent	ruled:V41-8.7（选项 B 留账补登）
+S-023373	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023374	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023375	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023380	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023382	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023384	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023387	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023388	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023390	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023391	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023394	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023395	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023396	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023397	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023398	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023400	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023401	∅	V41-12.6	V41-12.6	三趟不一致	adjacent	ruled:V41-12.6（选项 B 留账补登）
+S-023402	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023403	∅	V41-8.5	V41-8.5	三趟不一致	adjacent	ruled:V41-8.5（选项 B 留账补登）
+S-023404	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023407	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023411	∅	V41-12.6	V41-12.6	三趟不一致	adjacent	ruled:V41-12.6（选项 B 留账补登）
+S-023412	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
+S-023415	∅	V41-8.5	V41-8.5	三趟不一致	adjacent	ruled:V41-8.5（选项 B 留账补登）
+S-023416	∅	V41-8.4	V41-8.4	三趟不一致	adjacent	ruled:V41-8.4（选项 B 留账补登）
+S-023417	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
 S-023419	∅	V42-3.3	V41-8.6	三趟不一致	empty-vs-value	
 S-023420	V41-12.3	V44-7.6	V41-12.3	三趟不一致	empty-vs-value	
+S-023421	∅	V41-12.3	V41-12.3	三趟不一致	adjacent	ruled:V41-12.3（选项 B 留账补登）
+S-023423	∅	V64-3.8	V64-3.8	三趟不一致	adjacent	ruled:V64-3.8（选项 B 留账补登）
 S-023425	V43-4.4	V64-3.11	V64-3.11	三趟不一致	empty-vs-value	
 S-023426	∅	∅	V64-4.14	三趟不一致	adjacent	
 S-023427	V55-7.4	V64-4.12	V64-4.12	三趟不一致	empty-vs-value	
 S-023428	∅	V42-5.2	V64-3.6	三趟不一致	empty-vs-value	
 S-023429	∅	V42-4.4	V65-1.6	三趟不一致	empty-vs-value	
+S-023430	∅	V65-1.12	V65-1.12	三趟不一致	adjacent	ruled:V65-1.12（选项 B 留账补登）
+S-023431	∅	V64-3.8	V64-3.8	三趟不一致	adjacent	ruled:V64-3.8（选项 B 留账补登）
+S-023433	∅	V43-6.4	V43-6.4	三趟不一致	adjacent	ruled:V43-6.4（选项 B 留账补登）
 S-023435	V69-8.4	V55-3.2	V69-8.4	三趟不一致	empty-vs-value	
+S-023436	∅	V40-9.2	V40-9.2	三趟不一致	adjacent	ruled:V40-9.2（选项 B 留账补登）
+S-023439	∅	V42-2.6	V42-2.6	三趟不一致	adjacent	ruled:V42-2.6（选项 B 留账补登）
 S-023440	V40-9.5	V42-5.1	V42-5.1	三趟不一致	empty-vs-value	
+S-023443	∅	V41-9.8	V41-9.8	三趟不一致	adjacent	ruled:V41-9.8（选项 B 留账补登）
+S-023444	∅	V40-9.3	V40-9.3	三趟不一致	adjacent	ruled:V40-9.3（选项 B 留账补登）
+S-023446	∅	V69-8.8	V69-8.8	三趟不一致	adjacent	ruled:V69-8.8（选项 B 留账补登）
 S-023459	∅	V44-7.10	V52-7.6	三趟不一致	empty-vs-value	
+S-023460	V61-5.17	V61-5.10	V61-5.17	三趟不一致	adjacent	ruled:V61-5.17（选项 B 留账补登）
 S-023462	V39-8.4	V63-4.5	V63-4.5	三趟不一致	empty-vs-value	
+S-023463	∅	V61-6.13	V61-6.13	三趟不一致	adjacent	ruled:V61-6.13（选项 B 留账补登）
 S-023464	∅	V61-6.11	V61-6.14	三趟不一致	adjacent	
+S-023465	∅	V61-6.3	V61-6.3	三趟不一致	adjacent	ruled:V61-6.3（选项 B 留账补登）
 S-023466	∅	V61-6.5	V61-6.6	三趟不一致	adjacent	
+S-023467	V60-7.4	V60-7.5	V60-7.4	三趟不一致	adjacent	ruled:V60-7.4（选项 B 留账补登）
+S-023468	∅	V61-6.14	V61-6.14	三趟不一致	adjacent	ruled:V61-6.14（选项 B 留账补登）
+S-023470	∅	V41-11.6	V41-11.6	三趟不一致	adjacent	ruled:V41-11.6（选项 B 留账补登）
+S-023471	∅	V40-9.7	V40-9.7	三趟不一致	adjacent	ruled:V40-9.7（选项 B 留账补登）
+S-023472	∅	V41-8.6	V41-8.6	三趟不一致	adjacent	ruled:V41-8.6（选项 B 留账补登）
 S-023476	∅	V27-2.3	V55-10.1	三趟不一致	empty-vs-value	
+S-023477	∅	V55-1.3	V55-1.3	三趟不一致	adjacent	ruled:V55-1.3（选项 B 留账补登）
 S-023478	∅	V37-6.10	V55-11.3	三趟不一致	empty-vs-value	
+S-023479	∅	V69-7.4	V69-7.4	三趟不一致	adjacent	ruled:V69-7.4（选项 B 留账补登）
 S-025419	V48-1.4	V48-1.4	∅	三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）	adjacent	
 S-025425	V53-1.7	V53-1.7	∅	三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）	adjacent	
 S-025429	V05-5.5	V53-1.7	∅	三趟不一致	empty-vs-value	
