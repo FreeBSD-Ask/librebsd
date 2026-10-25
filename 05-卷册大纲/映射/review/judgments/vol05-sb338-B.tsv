@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013447		内容 linuxulator/rawdisk 零命中（细节级邮件）	B	sb338
+S-013448		内容时间同步命中 OpenNTPD 节为 NTPD 本体异指，vmware 时钟漂移零命中	B	sb338
+S-013449		内容 vmware2/端口补丁零命中	B	sb338
+S-013450		内容 vmware.4th/loader 配置零命中	B	sb338
+S-013451		内容 ext2fs 命中为 claim 库元数据异指，ls 残缺个案零命中	B	sb338
+S-013452		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013453		内容 disk.mbr/死循环零命中（细节级邮件）	B	sb338
+S-013454		内容 truss 命中调试工具节为本体异指，vmware 锁死个案零命中	B	sb338
+S-013455		内容 revision 命中 pf/CoC 节异指，端口版本个案零命中	B	sb338
+S-013456		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013457		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013458		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013459		内容 Crossover/linux_base/MS Office 零命中	B	sb338
+S-013460		内容 doscmd/qbasic/int10 零命中	B	sb338
+S-013461		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013462		内容文件描述符命中 V31-2.3 为内核接口本体异指，linprocfs 个案零命中	B	sb338
+S-013463		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013464		内容为模板头 claim 载体，叙事主题零命中	B	sb338
+S-013465		内容 linsysfs/Nvidia 零命中	B	sb338
+S-013466		内容 Mathematica/CentOS/alma9 零命中	B	sb338
+S-013467		内容 linux_pipe/线程示例零命中	B	sb338
+S-013468		内容 semctl/内核模块匹配零命中	B	sb338
+S-013469		内容 libNoVersion/Rollemup/mtv 零命中	B	sb338
+S-013470		内容 sigaltstack/MINSIGSTKSZ 零命中	B	sb338

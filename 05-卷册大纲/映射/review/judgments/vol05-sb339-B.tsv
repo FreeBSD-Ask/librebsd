@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013471		内容为模板头 claim 载体，叙事主题零命中	B	sb339
+S-013472		内容为模板头 claim 载体，叙事主题零命中	B	sb339
+S-013473	V63-2.3	内容主题“Linux 二进制内核对象无法加载、用户态方案可用”属 FreeBSD 内核与非 BSD 用户空间组合边界，命中 V63-2.3	B	sb339
+S-013474		内容为模板头 claim 载体，叙事主题零命中	B	sb339
+S-013475	V36-6.10	内容主题“Linux 2.6 成熟期对 FreeBSD 6.x 的压力”命中 V36-6.10 同时期操作系统比较节	B	sb339
+S-013476	V36-6.10	内容“OpenSolaris 2005 开源、Mac OS X 10.4、Linux 市场份额”属 FreeBSD 6.x 同期竞争者，命中 V36-6.10（Solaris 10 比较锚）	B	sb339
+S-013477	V39-8.9	内容“批评是否公平比较、是否促进改革”属 FreeBSD 文化卷批评链主题，命中 V39-8.9	B	sb339
+S-013478	V39-8.8	内容“批评者代表性、批评时间点、FreeBSD 回应辨析”命中 V39-8.8 批评靶面节	B	sb339
+S-013479	V38-5.1	内容“ports 系无名贡献者、McLaughlin BSD#、Macy committer”命中 V38-5.1 Ports 维护者与提交者群体	B	sb339
+S-013480	V38-2.5	内容“committer 就任即承认门槛、提交权限分界”命中 V38-2.5 commit bit 授予人群统计节	B	sb339
+S-013481	V53-6.2	内容“Core Team 至 port 维护者的谱系”命中 V53-6.2 FreeBSD Core Team 从自设团队到 committer 直连	B	sb339
+S-013482	V38-6.4	内容“contributors 名录止于 committer 层、无名贡献难回溯”命中 V38-6.4 未及收录者收束节	B	sb339
+S-013483	V37-1.6	内容“ata 驱动 SATA RAID 支持状况、软 RAID 元数据格式”命中 V37-1.6 RAID 存储可靠性节	B	sb339
+S-013484	V37-11.9	内容“send-pr 提交内核转储、GNATS 走邮件压垮服务器”命中 V37-11.9 缺陷跟踪平台节	B	sb339
+S-013485		内容主题“k3b/DVD 区码/刻录”全库零命中，留空	B	sb339
+S-013486	V37-12.12	内容“X 窗口系统与桌面管理器、5.4 桌面安装碰壁”命中 V37-12.12 BSD 桌面图形栈节	B	sb339
+S-013487		内容为模板头 claim 载体，叙事主题零命中	B	sb339
+S-013488		内容为模板头 claim 载体，叙事主题零命中	B	sb339
+S-013489	V37-9.5	内容“gdb 无法进内核、询问 ddb 之外调试手段”命中 V37-9.5 ddb/kgdb 内核调试节	B	sb339
+S-013490		内容为模板头 claim 载体，叙事主题零命中	B	sb339
+S-013491	V60-10.1	内容“altq/pf 规则遗留致 CPU 占满”属 FreeBSD pf 使用叙述，命中 V60-10.1 pf 作品史节（FreeBSD pf 无专节）	B	sb339
+S-013492	V37-11.6	内容“6.1 冻结前发布愿望清单（kbdmux、安装盘 UP 与 SMP 内核）”命中 V37-11.6 发布工程节	B	sb339
+S-013493	V37-10.9	内容“PRISM2 无线网卡 hostap、wi(4) 驱动速率”命中 V37-10.9 GPU 与无线设备支持节	B	sb339
+S-013494		内容为模板头 claim 载体，叙事主题零命中	B	sb339
