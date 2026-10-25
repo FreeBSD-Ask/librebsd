@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023274	V41-5.1	内容为 evbarm 交叉编译类型冲突，落交叉构建体系节	B	sb136
+S-023275	V40-9.3	内容为 JMicron SATA 控制器判定，落新硬件支持节	B	sb136
+S-023276	V41-10.1	内容为 xennet 池扩页恐慌，落 Xen 支持节	B	sb136
+S-023277		内容为模板头 claim 载体	B	sb136
+S-023278		内容为模板头 claim 载体	B	sb136
+S-023279		内容为模板头 claim 载体	B	sb136
+S-023280	V41-10.5	内容为 virtio_mmio x86 专有与 MICROVM，落微型虚拟机节	B	sb136
+S-023281		内容为模板头 claim 载体	B	sb136
+S-023282	V41-1.5	内容为 SATA 中断路由排查，落驱动模型节	B	sb136
+S-023283		内容为模板头 claim 载体	B	sb136
+S-023284		内容为模板头 claim 载体	B	sb136
+S-023285	V41-4.7	内容为 kern_timeout 呼叫轮与高分辨率计时，落调度优化节	B	sb136
+S-023286		内容为模板头 claim 载体	B	sb136
+S-023287	V41-10.1	内容为 dom0/domU 时钟同步与 ntpd，落 Xen 支持节	B	sb136
+S-023288		内容为模板头 claim 载体	B	sb136
+S-023289	V41-6.1	内容为 FFS 碎片四种定义与统计口径，落 FFS 传统节	B	sb136
+S-023290	V41-6.1	内容为 vnode/FFS 层与 RAIDframe 时间归属，落 FFS 节	B	sb136
+S-023291		内容为 crash8 转储分析，无 NetBSD 对应节	B	sb136
+S-023292	V41-7.6	内容为按 uid 套接字过滤规则，落包过滤演进节	B	sb136
+S-023293		内容为 UEFI 引导与控制台输出，无 NetBSD 对应节	B	sb136
+S-023294		内容为模板头 claim 载体	B	sb136
+S-023295		内容为模板头 claim 载体	B	sb136
+S-023296	V41-10.1	内容为 xen 虚拟机进程卡死与 fstrans_dump，落 Xen 节	B	sb136
+S-023297	V41-1.5	内容为 cn_getc 轮询与 USB 中断端点，落驱动模型节	B	sb136

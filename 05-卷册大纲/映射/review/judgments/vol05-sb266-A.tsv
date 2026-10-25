@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-011719		题面仅日期与人名动作叙述，关键词零语义命中，无候选	A	sb266
+S-011720		题面命中仅泛词“之后”，无主导候选	A	sb266
+S-011721		题面 CDROM 命中 Walnut Creek 分销节，与 HP 打印机假 CD-ROM 无涉，无主导	A	sb266
+S-011722		题面 perl／SpamAssassin 关键词零命中，无候选	A	sb266
+S-011723		题面 FreeBS 前缀泛命中三节，无 OCR 相关节，无主导	A	sb266
+S-011724		题面 i386 泛命中三节，无 TeX Live 相关节，无主导	A	sb266
+S-011725		题面 mps 系 Thompson 子串巧合，无 mps(4) RAID 相关节，无主导	A	sb266
+S-011726		题面 mysql_connect 关键词零命中，无候选	A	sb266
+S-011727		题面命中仅泛词“新增”，sofia-sip 零命中，无主导	A	sb266
+S-011728		题面 sleep 单点命中 UNIX 时间系统节，题面主体为 dtrace 实验，语义不对应，不作候选	A	sb266
+S-011729		题面单用户升级叙述关键词零语义命中，无候选	A	sb266
+S-011730		题面 PYTHON_VERSION 关键词零命中，无候选	A	sb266
+S-011731		题面 amd64 泛命中，无 php-fpm 相关节，无主导	A	sb266
+S-011732		题面 php 转引叙述关键词零语义命中，无候选	A	sb266
+S-011733		题面 tar 泛命中 UNIX 文档节，与 pkgdb 清理无涉，无主导	A	sb266
+S-011734		题面命中仅泛词“判断”，无主导	A	sb266
+S-011735	V37-3.3	题面关键词 VIMAGE 全目录唯一命中 V37-3.3“VIMAGE／VNET：网络虚拟化”，主导候选成立	A	sb266
+S-011736		题面 Apache 命中均为许可证与治理节，题面为重音文件名 404 问题，无主导	A	sb266
+S-011737		题面 i586／npx 关键词零命中，无候选	A	sb266
+S-011738		题面 ntpdate／ntpd 关键词零命中，无候选	A	sb266
+S-011739		题面命中仅泛词“自述”，KDE／Opera 零语义命中，无主导	A	sb266
+S-011740		题面 amd 系子串巧合（spamd 等），无 CPU 温度节，无主导	A	sb266
+S-011741		题面 tar tvf 计数叙述关键词零语义命中，无候选	A	sb266
+S-011742		题面 STABLE 泛命中版本语言节，题面主体为 buildworld 卡 texinfo，无主导	A	sb266

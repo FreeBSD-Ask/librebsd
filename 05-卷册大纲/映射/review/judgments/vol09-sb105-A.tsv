@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-021930		题面为仅含 ROW_MINE 指针的无题行，编纂元数据层	A	sb105
-S-021931		题面为 xhci 断言线程中反驳 boot 设备判定分析，无对应节	A	sb105
-S-021932	V41-10.1	题面为 Xen 不用 softint_dispatch 故空闲 CPU 永不触发的查明，落 Xen 支持节	A	sb105
-S-021933	V41-10.1	题面为 domU 挂 psrlz 与 pserialize_switchpoint 未调用之发现，落 Xen 支持节	A	sb105
-S-021934	V41-10.1	题面为 HEAD 在 Xen 上 anita 装不上且 sysinst 结尾挂起，落 Xen 支持节	A	sb105
-S-021935		题面为 8.0 构建集群变慢与 kernel_lock 唯一热锁的定位，无对应节	A	sb105
-S-021936	V41-6.4	题面为 raidframe 调试插桩补丁与 KASSERT 收益之辩，落 RAIDframe 节	A	sb105
-S-021937		题面为 pkgsrc firefox-65 加补丁测试正常与 kern 路径引用，无直接节	A	sb105
-S-021938		题面为 proplib 三项追问的 ROW_MINE 载体行，无对应节	A	sb105
-S-021939		题面为 nouveau 在 NVIDIA GeForce 上的问题跟进，无对应节	A	sb105
-S-021940		题面为仅含 ROW_MINE 指针的无题行，编纂元数据层	A	sb105
-S-021941		题面为 32 位平台不能用大值的人为限制批评与 HZ=1000 实例，无对应节	A	sb105
-S-021942	V40-7.2	题面为 8.0 引入 aarch64 与内核 ABI、GICv3 涉及面，落 ARM64 支持的发展节	A	sb105
-S-021943		题面为 8.0 改进 SMP 与锁竞争缓存一致性优化之述，无直接节	A	sb105
-S-021944	V41-9.5	题面为 8.0 引入 KASLR 与固定布局攻击面之对照，落 ASLR 与 KASLR 节	A	sb105
-S-021945		题面为仍在用 coda 与内核驱动靠 upcall 交守护进程之述，无对应节	A	sb105
-S-021946		题面为对仍在用古老 a.out 二进制的同情与追问，无对应节	A	sb105
-S-021947		题面为网站宣传与现实不符批评与 strdup 十九年之辩，无直接节	A	sb105
-S-021948		题面为以 v0.9 资历回敬与请求回归建设性讨论，无对应节	A	sb105
-S-021949		题面为 npf 功能缺口追问与整体引用他人长篇，无直接节	A	sb105
-S-021950	V41-7.5	题面为用户因 npf 不支持现有 pf/ipf 用法而弃用之陈述，落 NPF 防火墙设计节	A	sb105
-S-021951		题面为援引 npfctl(8) EXAMPLE 段回应找不到文档之说，无直接节	A	sb105
-S-021952		题面为 ls -lSr 识别大对象与激进排除模块化主张，无对应节	A	sb105
-S-021953		题面为仅含 ROW_MINE 指针的无题行，编纂元数据层	A	sb105
+S-022530		题面 mclpl 挂起无目录词面命中	A	sb105
+S-022531		题面 X86_MAXPROCS 无目录词面命中	A	sb105
+S-022532		题面卡型清单无目录词面命中	A	sb105
+S-022533		题面为证据等级来源模板零语义	A	sb105
+S-022534		题面 vnode_if 标注无目录词面命中	A	sb105
+S-022535		题面 compat_30 命中系他卷语境不符	A	sb105
+S-022536		题面 com_pcmcia 修复无目录词面命中	A	sb105
+S-022537		题面为证据等级来源模板零语义	A	sb105
+S-022538		题面 PCI 外部 ROM 命中系他卷语境不符	A	sb105
+S-022539		题面 B_NESTED 无目录词面命中	A	sb105
+S-022540		题面 Solaris DDI 无目录词面命中	A	sb105
+S-022541		题面为证据等级来源模板零语义	A	sb105
+S-022542		题面 AGE 列表命中系 FreeBSD 语境不符	A	sb105
+S-022543		题面为证据等级来源模板零语义	A	sb105
+S-022544		题面调度器锁冲突无目录词面命中	A	sb105
+S-022545		题面为证据等级来源模板零语义	A	sb105
+S-022546	V41-12.2	题面 cvs update 命中版本控制节	A	sb105
+S-022547		题面为证据等级来源模板零语义	A	sb105
+S-022548		题面 defcorename 无目录词面命中	A	sb105
+S-022549		题面 ptrace／TCB 无目录词面命中	A	sb105
+S-022550		题面 CIS 异常无目录词面命中	A	sb105
+S-022551		题面 ddb 命中系 FreeBSD 语境不符	A	sb105
+S-022552		题面引导顺序命中系 386BSD 语境不符	A	sb105
+S-022553		题面 eventhandler 无目录词面命中	A	sb105

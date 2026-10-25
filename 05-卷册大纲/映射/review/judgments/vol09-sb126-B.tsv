@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023034	V40-6.4	RPI GPIO 与 ACT LED 主题命中平台扩展节	B	sb126
+S-023035	V41-5.1	mk.conf 构建标志主题命中构建体系节	B	sb126
+S-023036	V40-6.4	odroid ARM 平台 NFS 主题命中平台扩展节	B	sb126
+S-023037	V40-6.4	earmv6hf 用户态崩溃主题命中平台扩展节	B	sb126
+S-023038		内容为模板头 claim 载体	B	sb126
+S-023039	V40-6.4	USB 启动固件主题命中 ARM 与 MIPS 平台扩展节	B	sb126
+S-023040	V40-6.4	RPi2 内核镜像修复主题命中平台扩展节	B	sb126
+S-023041		USB 鼠标行为无目录对应节	B	sb126
+S-023042	V40-6.4	epoc32 ARM 平台启动主题命中平台扩展节	B	sb126
+S-023043		内容为模板头 claim 载体	B	sb126
+S-023044	V41-5.4	发行构建与安装镜像主题命中 Release Engineering 节	B	sb126
+S-023045		内容为模板头 claim 载体	B	sb126
+S-023046		工作队列语义无目录对应节	B	sb126
+S-023047		profiling 与 mcount 无目录命中	B	sb126
+S-023048		vnd 伪盘参数无目录对应节	B	sb126
+S-023049	V41-10.1	Xen 脚本与块设备主题命中 Xen 支持节	B	sb126
+S-023050		内容为模板头 claim 载体	B	sb126
+S-023051		过热与低功率模式无目录命中	B	sb126
+S-023052		psref 被动引用无目录命中	B	sb126
+S-023053		内容为模板头 claim 载体	B	sb126
+S-023054		dtrace 仅系测量手段语境不符	B	sb126
+S-023055		ALTQ caller 重构无目录命中	B	sb126
+S-023056		内容为模板头 claim 载体	B	sb126
+S-023057		内容为模板头 claim 载体	B	sb126

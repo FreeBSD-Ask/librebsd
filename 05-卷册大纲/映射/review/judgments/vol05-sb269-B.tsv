@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-011791		源文仅 ROW_MINE 存根，内容主题词零命中	B	sb269
+S-011792		源文仅 ROW_MINE 存根，内容主题词零命中	B	sb269
+S-011793		内容为模板头 claim 载体，叙事主题零命中	B	sb269
+S-011794	V08-8.4	内容主题词 sed/perl 正则同指 V08-8.4 技术机制节	B	sb269
+S-011795	V60-8.1	内容主题词 cron/crontab/EDITOR 同指 V60-8.1 系统管理工具 cron 节	B	sb269
+S-011796	V37-2.5	内容主题词 kqueue 统一 filter 接口与事件通知，V37-2.5 系 FreeBSD 唯一 kqueue 节	B	sb269
+S-011797	V37-2.5	内容主题词 kqueue/kevent 替代 select/poll，V37-2.5 事件通知机制节同指	B	sb269
+S-011798	V52-4.5	内容主题词 kqueue 对 Linux/macOS/libevent 的跨系统影响，与 V52-4.5 跨项目技术传播节同指	B	sb269
+S-011799	V67-2.3	内容主题词 Lemon 的 BSDCon 2000 论文与设计文档，V67-2.3 同指	B	sb269
+S-011800		内容主题词 select 可写/write 阻塞语义零命中	B	sb269
+S-011801	V37-2.2	内容主题词 KAME IPv6 与 FreeBSD 4.x 集成，V37-2.2 进入面同指	B	sb269
+S-011802	V66-2.8	内容主题词 IPsec AH/ESP 与 KAME，V66-2.8 KAME 与 IPsec 节同指（FreeBSD 无 IPsec 专节）	B	sb269
+S-011803	V37-2.2	内容主题词 IPv6/IPsec 集成使 FreeBSD 成早期部署首选平台，与 V37-2.2 进入面同指	B	sb269
+S-011804	V37-2.2	内容主题词 KAME 与 FreeBSD 集成决策过程，与 V37-2.2 进入面同指	B	sb269
+S-011805		内容主题词 gif/tun 隧道性能零命中	B	sb269
+S-011806		内容主题词 tinydns/djbdns 零命中（BIND 各节不载 tinydns）	B	sb269
+S-011807		内容主题词 dig/AAAA/权威服务器零命中	B	sb269
+S-011808		内容为模板头 claim 载体，叙事主题零命中	B	sb269
+S-011809	V52-4.5	内容主题词 OpenSSH 由 OpenBSD 开发并 FreeBSD 默认集成的跨项目代码流动，与 V52-4.5 跨项目技术传播同指	B	sb269
+S-011810	V52-4.5	内容主题词 OpenSSH 默认集成与 BSD 许可证促成的跨项目传播，与 V52-4.5 同指	B	sb269
+S-011811	V60-9.7	内容主题词 SSH 普及与 telnet/rsh 废弃，与 V60-9.7 OpenSSH 在现代系统中的传播同指	B	sb269
+S-011812	V45-6.4	内容主题词 FreeBSD 与 OpenBSD 代码同步机制，与 V45-6.4 Portable OpenSSH 跨平台维护同指	B	sb269
+S-011813		内容主题词 PAM 配置/rc 初始化异常零命中	B	sb269
+S-011814	V45-6.3	内容主题词 sshd_config PermitRootLogin 认证边界，与 V45-6.3 sshd 权限边界同指	B	sb269

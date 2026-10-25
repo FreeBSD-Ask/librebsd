@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-011743	V37-6.2	内容主题词 device／options 内核配置写反，同指 V37-6.2 内核配置：config 与 KERNCONF 节	B	sb267
+S-011744		内容主题词 BIOS silent boot 引导循环零命中（唯一 BIOS 命中为 V49 DragonFly 卷），target 留空	B	sb267
+S-011745	V37-6.3	内容主题词 buildworld 失败于 libmagic，同指 V37-6.3 buildworld 与用户空间构建节	B	sb267
+S-011746		内容主题词 samba／raid1／zfs 阵列，RAID 与 ZFS 双候选无主导，target 留空	B	sb267
+S-011747	V60-4.6	内容主题词 ncurses.h KEY_F 宏，同指 V60-4.6 ncurses 与 Linux 时代的传播节	B	sb267
+S-011748	V60-8.1	内容主题词 batch／at 与 cron 作业选择，cron 唯一内容命中同指 V60-8.1 系统管理工具 cron 节	B	sb267
+S-011749		内容主题词 burncd／cdrecord 刻录零命中，target 留空	B	sb267
+S-011750		内容主题词 dhcpd 配置语法测试零命中，target 留空	B	sb267
+S-011751		内容主题词 cd0 SCSI sense 故障与自编内核无直接对应节，target 留空	B	sb267
+S-011752		内容主题词 ssh 端口与密钥策略，SSH 多候选无主导，target 留空	B	sb267
+S-011753		内容主题词 CD 播放抓取失效与 if_tun 重复注册零命中，target 留空	B	sb267
+S-011754		内容主题词 ahcich／JMB363 超时零命中，target 留空	B	sb267
+S-011755	V37-1.6	内容主题词 LSI／PERC RAID 控制器与 mfi 驱动，同指 V37-1.6 RAID、GELI 与存储可靠性体系节（RAIDframe 属 NetBSD 卷除外）	B	sb267
+S-011756		内容主题词 bsd-family-tree 家族树多候选无主导，target 留空	B	sb267
+S-011757	V60-8.1	内容主题词 crontab MAILTO 关闭 cron 发信，同指 V60-8.1 系统管理工具 cron 节	B	sb267
+S-011758	V37-10.9	内容主题词 ath0 无线驱动反复重置，同指 V37-10.9 GPU 与无线设备支持节	B	sb267
+S-011759		内容主题词 panic 崩溃与 swap 耗尽零命中，target 留空	B	sb267
+S-011760		内容主题词 KVM 切换器显示器仿真，KVM 命中为虚拟化词义属伪命中，target 留空	B	sb267
+S-011761		内容主题词 FreeBSD 9 新计时代码与备选定时器，定时器唯一命中 V08-1.4 为 UNIX 期时代错位无主导，target 留空	B	sb267
+S-011762		内容主题词 引导扇区／SCSI 连接器／PATA 盘零命中，target 留空	B	sb267
+S-011763	V36-9.1	内容主题词 bsdinstall 键盘本地化步骤，同指 V36-9.1 bsdinstall 对 sysinstall 的取代节	B	sb267
+S-011764		内容主题词 port knocking 偏转破解零命中，target 留空	B	sb267
+S-011765		内容主题词 libmysqlclient／ldconfig 共享库路径零命中，target 留空	B	sb267
+S-011766		内容主题词 gtar／bsdtar 软链零命中，target 留空	B	sb267

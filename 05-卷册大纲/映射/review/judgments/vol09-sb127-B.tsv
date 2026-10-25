@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023058		内容为模板头 claim 载体	B	sb127
+S-023059		pslist 与 membar 无目录命中	B	sb127
+S-023060		内容为模板头 claim 载体	B	sb127
+S-023061		内容为模板头 claim 载体	B	sb127
+S-023062		内容为模板头 claim 载体	B	sb127
+S-023063		DDB 与 Forth 无目录命中	B	sb127
+S-023064	V41-6.3	WAPBL 主题词命中 WAPBL 日志文件系统节	B	sb127
+S-023065		内核 FPU 无目录命中	B	sb127
+S-023066		luactl 与 Lua 无目录命中	B	sb127
+S-023067		gets 与 kgets 命名无目录命中	B	sb127
+S-023068		内容为模板头 claim 载体	B	sb127
+S-023069		curlwp_bind 无目录命中	B	sb127
+S-023070	V41-6.5	cgd 主题词命中 CGD 加密磁盘框架节	B	sb127
+S-023071		tar 管道失效无目录命中	B	sb127
+S-023072		内容为模板头 claim 载体	B	sb127
+S-023073		内容为模板头 claim 载体	B	sb127
+S-023074		内容为模板头 claim 载体	B	sb127
+S-023075		VM_MIN_ADDRESS 无目录命中	B	sb127
+S-023076		crc32c 与内核镜像寻址无目录命中	B	sb127
+S-023077	V41-12.4	测试用例失败主题命中 atf 测试框架节	B	sb127
+S-023078	V41-6.4	RAIDframe 写洞主题命中 RAIDframe 节	B	sb127
+S-023079	V41-6.5	cgdstrategy 主题命中 CGD 加密磁盘框架节	B	sb127
+S-023080	V41-6.3	FUA 与写缓存主题命中 WAPBL 节	B	sb127
+S-023081		gcc 反汇编无目录命中	B	sb127

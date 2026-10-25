@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023322	V41-8.6	结构线索：pkgsrc 变量线→V41 长期维护节	C	sb138
+S-023323	V41-8.5	结构线索：二进制仓库线→V41 二进制包节	C	sb138
+S-023324	V41-12.6	结构线索：批量构建线→V41 工程过程节	C	sb138
+S-023325		模板层无结构对应	C	sb138
+S-023326		模板层无结构对应	C	sb138
+S-023327		模板层无结构对应	C	sb138
+S-023328	V41-8.5	结构线索：pkg_add 依赖线→V41 二进制包节	C	sb138
+S-023329	V41-8.6	结构线索：pkgsrc 线→V41 长期维护节	C	sb138
+S-023330	V41-8.4	结构线索：pkgsrc 跨平台线→V41 bootstrap 节	C	sb138
+S-023331	V41-8.4	结构线索：DESTDIR 线→V41 bootstrap 节	C	sb138
+S-023332	V41-8.6	结构线索：distfiles 线→V41 长期维护节	C	sb138
+S-023333	V41-8.4	结构线索：pkgsrc 引导线→V41 bootstrap 节	C	sb138
+S-023334		模板层无结构对应	C	sb138
+S-023335		模板层无结构对应	C	sb138
+S-023336		模板层无结构对应	C	sb138
+S-023337		模板层无结构对应	C	sb138
+S-023338	V41-8.5	结构线索：二进制包线→V41 二进制包节	C	sb138
+S-023339		模板层无结构对应	C	sb138
+S-023340	V41-8.4	结构线索：pkgsrc 跨平台线→V41 bootstrap 节	C	sb138
+S-023341		模板层无结构对应	C	sb138
+S-023342	V41-8.7	结构线索：pkgsrc 安全线→V41 安全维护节	C	sb138
+S-023343		模板层无结构对应	C	sb138
+S-023344	V41-8.4	结构线索：pkgsrc bootstrap 线→V41 bootstrap 节	C	sb138
+S-023345		模板层无结构对应	C	sb138
