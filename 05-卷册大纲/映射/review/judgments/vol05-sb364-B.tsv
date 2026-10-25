@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014071		内容主题词“ALTQ/tcp_info/tcp_usrreq”零命中	B	sb364
+S-014072		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014073		内容主题词“GPL 污染/auglx”零命中，GPL 泛命中无主导，sndio 命中语义不符	B	sb364
+S-014074		内容主题词“备份/Time Machine/rsync”零命中，ZFS 命中 V36-8.5 与 V37-1.7 双候选无主导	B	sb364
+S-014075		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014076		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014077		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014078		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014079		内容主题词“中断风暴/atapci/uhci”零命中，中断处理命中为网络面语义不符	B	sb364
+S-014080	V37-4.6	内容主题词“ULE 调度器补丁/thr_kern”对应 FreeBSD 侧唯一调度器节 V37-4.6 调度器历史：4BSD 到 ULE	B	sb364
+S-014081		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014082		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014083		内容主题词“resync/rsync/单用户”零命中，镜像泛命中（44 处）无主导	B	sb364
+S-014084	V37-11.8	内容主题词“handbook 文档更新/hardware-amd64 补丁”对应 FreeBSD 侧唯一文档工程节 V37-11.8	B	sb364
+S-014085		内容主题词“setkey/racoon”零命中，IPsec 命中均为 NetBSD／OpenBSD／区域史卷节，VPN 命中 WireGuard 语义不符	B	sb364
+S-014086		内容主题词“Flash 9/linux-firefox/Opera/Linuxulator”零命中	B	sb364
+S-014087		内容主题词“WPA/wpa_supplicant/WEP”零命中，无线命中 V36-11.5／V41-7.4／V57-10.9 多节无主导	B	sb364
+S-014088		内容主题词“Documentation License/文档许可”零命中，许可泛命中（44 处）无主导	B	sb364
+S-014089		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014090	V37-11.8	内容主题词“man 页指向 sample 配置”对应 FreeBSD 侧唯一文档工程节 V37-11.8（Handbook、man 页与 release notes 同步）	B	sb364
+S-014091		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014092	V37-9.5	内容主题词“开发者手册内核调试章/dumpon”对应 FreeBSD 侧唯一内核调试节 V37-9.5 ddb、kgdb 与内核调试	B	sb364
+S-014093		内容为模板头 claim 载体，叙事主题零命中	B	sb364
+S-014094		内容为模板头 claim 载体，叙事主题零命中	B	sb364

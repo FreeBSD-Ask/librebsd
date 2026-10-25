@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014047		题面为证据等级来源模板，零语义	A	sb363
+S-014048		题面 OpenBSD/sparc64/sun4v 多候选散布（V37-10.2/V45-11.2 双域等），无主导	A	sb363
+S-014049		题面 vm_map_submap/kmem_suballoc 零命中	A	sb363
+S-014050		题面 NFS/ZFS 双域候选（V37-1.7 类 ZFS 节/V08-9.5 NFS 节），无主导	A	sb363
+S-014051		题面 lzo2 零命中，回归测试多候选（V37-11.4/V41-12.4/V45-14.5），无主导	A	sb363
+S-014052		题面为证据等级来源模板，零语义	A	sb363
+S-014053		题面 bufcache/getblk 零命中	A	sb363
+S-014054		题面 ath 零命中，无线双 FreeBSD 候选（V36-11.5/V37-10.9），无主导	A	sb363
+S-014055		题面 dump/管道命中皆 IPC 概念域，语境不合	A	sb363
+S-014056		题面 fixtags/Polstra 零命中	A	sb363
+S-014057		题面 Coverity 零命中	A	sb363
+S-014058		题面 boot2/引导器/符号链接零命中	A	sb363
+S-014059	V37-10.8	题面 ACPI 温度单一命中 V37-10.8 ACPI 与电源管理，主导明确	A	sb363
+S-014060		题面为证据等级来源模板，零语义	A	sb363
+S-014061		题面为证据等级来源模板，零语义	A	sb363
+S-014062		题面为证据等级来源模板，零语义	A	sb363
+S-014063		题面为证据等级来源模板，零语义	A	sb363
+S-014064		题面 portmaster 命中 V42-2.2/2.3 属 NetBSD 人物志（维护者群体），grep 命中文本处理史域，语境不合无主导	A	sb363
+S-014065		题面为证据等级来源模板，零语义	A	sb363
+S-014066		题面 Synaptics/触控板/psm 零命中	A	sb363
+S-014067		题面为证据等级来源模板，零语义	A	sb363
+S-014068		题面 netisr/netgraph 双候选（V37-2.3/V52-6.3），无主导	A	sb363
+S-014069		题面为证据等级来源模板，零语义	A	sb363
+S-014070		题面 SSP 单候选 V44-3.7 属 OpenBSD 卷，FreeBSD rtld 语境不合	A	sb363

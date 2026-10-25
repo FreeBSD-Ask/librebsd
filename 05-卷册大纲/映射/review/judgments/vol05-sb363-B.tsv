@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014047		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014048		内容 sun4v/UltraSPARC 支持现状，sparc64 双域候选（V37-10.2 FreeBSD/V45-11.2 OpenBSD），无主导	B	sb363
+S-014049		内容 vm_map_submap 内核提问个案，VM 子系统无对应节点	B	sb363
+S-014050	V37-1.7	内容为 7.1 时期 NFS 导出 zfs 恐慌报告，属 ZFS 引入 FreeBSD 时期问题记录（ZFS 节主导，NFS 无专节）	B	sb363
+S-014051		内容 lzo2 ports 回归测试跨平台个案，多候选无主导，ports 包无专节	B	sb363
+S-014052		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014053	V37-1.2	内容为 buf-cache 512 字节单位与 getblk/dbtob 计算错误，属 FreeBSD UFS/存储缓存话题	B	sb363
+S-014054	V37-10.9	内容为 ath 无线网卡关联故障与 wlandebug 调试，属 FreeBSD 无线设备支持话题	B	sb363
+S-014055		内容 dump -P 管道 EOM 个案，无对应节点	B	sb363
+S-014056		内容 fixtags.pl ports 脚本个案，无对应节点	B	sb363
+S-014057		内容 FreeBSD 自用 Coverity 服务器使用情况，静态分析候选 V41-9.9 属 NetBSD 卷，无主导	B	sb363
+S-014058		内容 boot2 引导器符号链接个案，无引导器对应节点	B	sb363
+S-014059	V37-10.8	内容 ACPI 温度传感器异常报告，属 FreeBSD ACPI 与电源管理话题	B	sb363
+S-014060		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014061		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014062		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014063		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014064	V37-7.5	内容为 portmaster 匹配 +CONTENTS 与 bsd grep 报错，属 pkg_install 时代软件包工具话题	B	sb363
+S-014065		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014066		内容 psm(4) Synaptics 触控板个案，输入设备驱动无对应节点	B	sb363
+S-014067		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014068	V37-2.3	内容为 netisr 多线程并行与 netgraph 直接函数调用讨论，属 FreeBSD Netgraph 可组合网络架构话题	B	sb363
+S-014069		内容为模板头 claim 载体，叙事主题零命中	B	sb363
+S-014070	V37-8.4	内容为 SSP 全量编译致 rtld 运行时链接失效，属 FreeBSD 链接环境话题	B	sb363

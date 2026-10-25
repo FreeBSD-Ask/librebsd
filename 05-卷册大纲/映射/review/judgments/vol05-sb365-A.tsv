@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014095		题面“报Port”关键词过泛，Ports 章多候选无主导	A	sb365
+S-014096		题面 hackbench／上下文切换目录零命中	A	sb365
+S-014097		题面为证据等级来源模板，零语义	A	sb365
+S-014098		题面 wireless／hostap／WPA 零语义命中（WPA 命中 V57-8.1 系 MirOS 异指）	A	sb365
+S-014099		题面为证据等级来源模板，零语义	A	sb365
+S-014100		题面 bus_dma 命中 V41-1.4 系 NetBSD 卷语义不符，无 FreeBSD 落点	A	sb365
+S-014101		题面 syncookies 目录零命中	A	sb365
+S-014102		题面 handbook 多候选（V37-11.8／V39-2.3／V39-6.2）无主导	A	sb365
+S-014103		题面 amd64 双候选（V36-6.6／V37-10.4）无主导，“该选项”零语义	A	sb365
+S-014104		题面 IPSEC 命中均为 NetBSD／OpenBSD／KAME 卷异指，FreeBSD 无 IPsec 专节	A	sb365
+S-014105		题面 fdisk／pc98 目录零命中	A	sb365
+S-014106		题面 文档质量／PPP 目录零命中	A	sb365
+S-014107		题面 snd_hda／NOTES 目录零命中	A	sb365
+S-014108		题面 newsyslog／UF_NODUMP 目录零命中	A	sb365
+S-014109		题面 过时／手册页过时目录零命中	A	sb365
+S-014110		题面为证据等级来源模板，零语义	A	sb365
+S-014111		题面 dbus／hald／policykit 目录零命中	A	sb365
+S-014112	V37-4.6	题面 ULE 调度器命中 V37-4.6 调度器历史：4BSD 到 ULE	A	sb365
+S-014113	V37-10.2	题面 Alpha 架构命中 V37-10.2 Alpha、MIPS、SPARC64 历史架构	A	sb365
+S-014114		题面 ip6fw 零命中，防火墙多候选（NPF／m0n0wall／macOS pf）均异指无主导	A	sb365
+S-014115	V37-4.6	题面 ULE 取代 4BSD／调度器命中 V37-4.6 调度器历史：4BSD 到 ULE（淘汰命中 V60-14.8 系软件作品史语义不符）	A	sb365
+S-014116		题面 Ardelean／packages 目录零命中	A	sb365
+S-014117		题面为证据等级来源模板，零语义	A	sb365
+S-014118		题面 性能路径零命中；同期比较节 V36 内十余处无主导	A	sb365
