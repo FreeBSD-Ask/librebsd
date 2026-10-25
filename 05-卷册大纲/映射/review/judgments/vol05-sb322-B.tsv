@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013063		内容为 make.conf 给出 SUP 取 csup 并拷示例 supfile 个案（细节级邮件），cvsup／make.conf 零节题命中	B	sb322
+S-013064		内容为模板头 claim 载体，叙事主题零命中	B	sb322
+S-013065		内容为 ports 新装后 Command not found 个案（细节级邮件），“ports”仅命中 OpenBSD ports 诸节，语义不符，留空	B	sb322
+S-013066		内容为 FreeBSD 5.3 导入 OpenBSD PF（Max Laier 移植、ALTQ、pfsync），FreeBSD 侧无防火墙专节，“IPFilter／pf”命中 OpenBSD 侧形成节（V45-4.1），归卷不符，留空	B	sb322
+S-013067		内容为 FreeBSD 5.x sendmail 默认 MTA 延续与 Postfix 未入 base，“sendmail／Postfix”命中作品史多节（V60-6.3–6.7），默认 MTA 无专节，留空	B	sb322
+S-013068		内容为 5.x 第三方软件“引入而非替换”特征综述（要点层），“IPFilter”命中多节无主导，留空	B	sb322
+S-013069		内容为模板头 claim 载体，叙事主题零命中	B	sb322
+S-013070		内容为南非 ISP 用 FreeBSD 做防火墙与按用户统计流量个案（细节级邮件），“流量”仅命中流量控制类节，语义不符，留空	B	sb322
+S-013071		内容为模板头 claim 载体，叙事主题零命中	B	sb322
+S-013072		内容为 SysKonnect SK-9843 网卡分组缓存自述（细节级邮件），网卡零节题级语义命中，留空	B	sb322
+S-013073		内容为双网卡桥接流量整形与透明 squid 代理个案（细节级邮件），squid 零节题命中，留空	B	sb322
+S-013074		内容为模板头 claim 载体，叙事主题零命中	B	sb322
+S-013075		内容为 FreeBSD 4.10 四盘 CCD 条带 RAID-0 个案（细节级邮件），“RAID”仅命中存储可靠性节（V37-1.6），语义不符，留空	B	sb322
+S-013076		内容为日志保留政策在诉讼中的作用转述（细节级邮件），日志保留零命中，留空	B	sb322
+S-013077		内容为模板头 claim 载体，叙事主题零命中	B	sb322
+S-013078		内容为 PPPoE 服务器 Radius 预付费 Session-Timeout 个案（细节级邮件），PPPoE／Radius 零命中，留空	B	sb322
+S-013079		内容为 Qmail 补丁负担过重改用 Exim 个案（细节级邮件），Qmail／Exim 零节题命中，留空	B	sb322
+S-013080		内容为 whodid 脚本改用 Subversion 个案（细节级邮件），Subversion 零节题命中，留空	B	sb322
+S-013081		内容为 NAT 网关 ipnat rdr 重定向 SMTP 个案（细节级邮件），ipnat 零命中，留空	B	sb322
+S-013082		内容为 2003 导入 openssl 0.9.7c 与 SA 节奏追问（细节级邮件），“OpenSSL”仅命中 LibreSSL 分叉诸节，语义不符，留空	B	sb322
+S-013083		内容为 jail 与 chroot 之选答复（Apache 1.3.29 个案，细节级邮件），“jail”命中多候选，无单主导，留空	B	sb322
+S-013084		内容为模板头 claim 载体，叙事主题零命中	B	sb322
+S-013085		内容为 Outlook 2000 不识别 STARTTLS 改用 smtps 465 个案（细节级邮件），STARTTLS／smtps 零命中，留空	B	sb322
+S-013086		内容为 pf 括号接口名自动跟踪拨号地址个案（细节级邮件），“pf”命中多候选，无单主导，留空	B	sb322

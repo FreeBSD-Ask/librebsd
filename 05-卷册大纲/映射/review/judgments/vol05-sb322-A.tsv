@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013063		题面“makeconf中给出SUP取usrbincsup”零命中	A	sb322
+S-013064		题面为证据等级来源模板，零语义	A	sb322
+S-013065		题面“ports新装后Commandnot”命中仅 OpenBSD ports 诸节（V45-8.8 等），语义不符，留空	A	sb322
+S-013066		题面“PF 防火墙从 OpenBSD 引入”命中 pf 形成面多候选（V45-4.1、V31-5.1 等），无单主导，留空	A	sb322
+S-013067		题面“sendmail 作为默认 MTA”命中 sendmail 多节（V31-8.1、V60-6.3–6.7），无单主导，留空	A	sb322
+S-013068		题面“第三方软件变更核心特征”零节题命中（“IPFilter”命中 4 节无主导），留空	A	sb322
+S-013069		题面为证据等级来源模板，零语义	A	sb322
+S-013070		题面“ISP 防火墙 流量”零命中	A	sb322
+S-013071		题面为证据等级来源模板，零语义	A	sb322
+S-013072		题面“SysKonnect SK9843 网卡”零命中	A	sb322
+S-013073		题面“桥接 流量整形 squid”零命中	A	sb322
+S-013074		题面为证据等级来源模板，零语义	A	sb322
+S-013075		题面“Usenet Diablo CCD RAID”零命中	A	sb322
+S-013076		题面“USENIX 日志课程 诉讼”零命中	A	sb322
+S-013077		题面为证据等级来源模板，零语义	A	sb322
+S-013078		题面“PPPoE Radius Session-Timeout”零命中	A	sb322
+S-013079		题面“Qmail 补丁 Exim”零命中	A	sb322
+S-013080		题面“committersguide whodid”零命中	A	sb322
+S-013081		题面“NAT ipnat rdr”零命中	A	sb322
+S-013082		题面“openssl 097c 导入”零命中（“OpenSSL”命中 LibreSSL 分叉诸节，语义不符）	A	sb322
+S-013083		题面“jail 与 chroot 之选”命中多候选（V08-7.5、V31-5.2、V36-4.3 等），无单主导，留空	A	sb322
+S-013084		题面为证据等级来源模板，零语义	A	sb322
+S-013085		题面“Outlook smtps STARTTLS”零命中	A	sb322
+S-013086		题面“pf tun0 拨号跟踪”命中多候选（V45-4.1、V61-5.4 等），无单主导，留空	A	sb322

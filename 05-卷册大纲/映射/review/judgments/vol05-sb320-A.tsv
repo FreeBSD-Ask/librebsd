@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013015		题面 nVidia 零命中，OpenGL 仅命中 DragonFly 图形节（V49-6.4）等域不符候选，无主导	A	sb320
+S-013016		题面 mergemaster 全目录节题零命中	A	sb320
+S-013017		题面为证据等级来源模板，零语义	A	sb320
+S-013018		题面为邮件考古细节，零命中（细节级）	A	sb320
+S-013019		题面 FFS／UFS 宽命中约五十节（V31-2.2、V37-1.1／1.2 等），多候选无主导，留空	A	sb320
+S-013020		题面 光盘引导／BIOS 零精确命中，引导宽命中引导器史诸节无主导（细节级），留空	A	sb320
+S-013021		题面 ndisgen 零命中，ndis 仅命中 DragonFly 驱动注记（V49-6.2）域不符，留空	A	sb320
+S-013022		题面为证据等级来源模板，零语义	A	sb320
+S-013023	V37-6.4	题面 makeinstallkernel 对位第三十七卷 6.4“buildkernel 与内核构建”（installkernel 唯一对应，sb317 installworld→6.3 先例）	A	sb320
+S-013024		题面 g+s／suiddir 零精确命中，UFS／ZFS 泛命中多节无主导，留空	A	sb320
+S-013025		题面 VirtualBox／PCnet 零精确命中，虚拟化命中均为宿主能力诸节（bhyve／Xen／NVMM），与 7.1 客户机个案不符，无主导，留空	A	sb320
+S-013026		题面 devfs 全目录零命中，cups 仅命中 V09-3.2（伯克利早期环境）域不符，留空	A	sb320
+S-013027		题面为邮件考古细节，零命中（细节级）	A	sb320
+S-013028		题面为邮件考古细节，零命中（细节级）	A	sb320
+S-013029		题面 OpenVPN／if_tun 零精确命中，tun 仅命中 V37-2.9 WireGuard 节语义不符，留空	A	sb320
+S-013030		题面为证据等级来源模板，零语义	A	sb320
+S-013031	V37-6.3	题面 clangbsd／G4 iBook 零命中，buildworld 唯一对应第三十七卷 6.3“buildworld 与用户空间构建”	A	sb320
+S-013032		题面为证据等级来源模板，零语义	A	sb320
+S-013033		题面 SiI3114／SATA 零命中，RAID 宽匹配 V37-1.6 与 V41-6.4 双候选无主导，留空	A	sb320
+S-013034		题面为证据等级来源模板，零语义	A	sb320
+S-013035		题面 gmirror／devd 全目录节题零命中，RAID／镜像宽命中多节无主导，留空	A	sb320
+S-013036		题面 USB 硬盘并发零命中，USB 仅命中 DragonFly 驱动注记（V49-6.2）域不符，留空	A	sb320
+S-013037		题面为证据等级来源模板，零语义	A	sb320
+S-013038		题面为证据等级来源模板，零语义	A	sb320

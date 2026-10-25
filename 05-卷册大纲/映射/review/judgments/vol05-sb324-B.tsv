@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013111		内容主题词 rc.conf、dovecot、saslauthd、端口绑定 零命中，sendmail 8 处均为作品史语境不符（细节级邮件）	B	sb324
+S-013112		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013113		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013114		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013115		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013116		内容主题词 natd、网络地址转换 零命中，ipfw 2 处均为 1995 前形成史与横向比较语境，与本个案 ipfw nat 配置不符	B	sb324
+S-013117		内容主题词 pipe、table、tablearg、限速、白名单 零命中（细节级邮件）	B	sb324
+S-013118		内容主题词 VMware、VMnet8、DHCP 零命中（细节级邮件）	B	sb324
+S-013119		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013120		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013121		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013122		内容主题词零命中（细节级邮件）	B	sb324
+S-013123		内容主题词 portsentry、端口扫描防御 零命中，pf 命中 10 处均为 pf 本体各节，与本个案 portsentry 阻断不符	B	sb324
+S-013124		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013125		内容主题词 抓包、TCP 重传、ICMP、IGMP 零命中（细节级邮件）	B	sb324
+S-013126		内容主题词 authdaemond、sasl、sysusername 零命中，Postfix 命中 V60-6.7 为 MTA 竞争史语境，与本个案 SASL 配置故障不符	B	sb324
+S-013127		内容主题词 NanoBSD、PicoBSD 零命中，软盘 命中 V21-2.8 为 386BSD 期发行介质语境不符	B	sb324
+S-013128		内容主题词 spam-milter、spamassassin、maillog 零命中，DCC 命中 V45-5.7 为反垃圾战争语境，与本个案 milter 故障不符	B	sb324
+S-013129		内容主题词 ipnat、延迟池、squid 零命中（细节级邮件）	B	sb324
+S-013130		内容主题词 掩码、子网 零命中，网关 命中 V31-7.4 为 1995 前路由语境不符	B	sb324
+S-013131		内容为模板头 claim 载体，叙事主题零命中	B	sb324
+S-013132	V45-4.3	内容主题词 pf 状态表暴涨与 DNS 服务器场景与 V45-4.3 锚一致	B	sb324
+S-013133		内容主题词 nat_new、mbuf、backtrace 零命中，IPFilter 5 处均为 1995 前形成史或许可证争议语境，与本个案 NAT 崩溃不符	B	sb324
+S-013134		内容主题词 软链接、packages 坏链接场景零命中，FTP 命中 V21-2.8 为 386BSD 期发行介质语境不符（细节级邮件）	B	sb324

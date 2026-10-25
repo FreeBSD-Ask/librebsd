@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013087		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013088		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013089		内容为 ipf 规则行位加 @ 前缀插入个案（细节级邮件），ipf.conf(5) 零节题命中（IPFilter 命中 OpenBSD 侧诸节，语义不符），留空	B	sb323
+S-013090		内容为 sendmail 8.13.3 编为适配 BerkeleyDB 后 pophash 不再读取、drac 编译求助个案（细节级邮件），pophash/drac 零命中，sendmail 多节无单主导，留空	B	sb323
+S-013091		内容为 IPF 禁用后 FTP No route to host 消失、清空 ipnat 表个案（细节级邮件），ipnat 零命中，IPFilter 命中 OpenBSD 侧诸节归卷不符，留空	B	sb323
+S-013092		内容为 sendmail SASLv2 认证 unknown verifier 个案（细节级邮件），SASL 零命中，sendmail 多节无单主导，留空	B	sb323
+S-013093		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013094	内容为容纳 PF 重建内核劝别改 GENERIC、kern.conf 常放 /root/kernconf/ 软链进源树建议个案，主题词 KERNCONF 命中 V37-6.2 内核配置节，为核心语义	B	sb323
+S-013095		内容为 PF 规则 nat on ed0 多别名地址转换个案（细节级邮件），地址转换仅命中 V45-4.3（OpenBSD 技术专题卷），FreeBSD 侧 pf 使用无专节，归卷不符，留空	B	sb323
+S-013096		内容为 pfctl -ss 打印 state table 与 ipfw -d 对照个案（细节级邮件），pfctl 零命中，ipfw 命中 V31-5.1（限缩至 1995）与 V61-5.4，无单主导，留空	B	sb323
+S-013097		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013098		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013099		内容为启动慢头号元凶是 SendMail、rc.conf 设 sendmail_enable=NONE 个案（细节级邮件），sendmail_enable 零命中，sendmail 多节无单主导，留空	B	sb323
+S-013100		内容为 sr 驱动配 netgraph mpd 与 pf altq 做 voip 优先路由 T1 停流个案（细节级邮件），netgraph 仅命中 V52-6.3 比较节组件语境，题问为 T1 驱动稳定性，语义不符，留空	B	sb323
+S-013101		内容为 sockets 用尽从 5.4 重建内核到 5.5 STABLE、mergemaster 报错个案（细节级邮件），mergemaster/ipnat 零命中，socket 仅命中 4.2BSD 抽象诸节，语义不符，留空	B	sb323
+S-013102		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013103		内容为 pf 规则集统计连接次数、频繁者入 doghouse 地址表个案（细节级邮件），bruteforce/doghouse/连接次数 零命中，留空	B	sb323
+S-013104		内容为 re(4) 网卡 mbufs 只增不降个案（细节级邮件），mbufs 零命中，网络缓冲仅命中 V37-9.8 内核调优节，语义不符，留空	B	sb323
+S-013105		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013106		内容主题词零命中（细节级邮件）	B	sb323
+S-013107		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013108		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013109		内容为模板头 claim 载体，叙事主题零命中	B	sb323
+S-013110		内容为 ipfw 配合别名地址使用定位 arp 条目异常个案（细节级邮件），arp/别名地址零命中，ipfw 命中 V31-5.1（限缩至 1995）与 V61-5.4 无单主导，留空	B	sb323

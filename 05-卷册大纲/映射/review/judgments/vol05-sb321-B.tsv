@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013039		内容为 mergemaster 后 installworld 报根分区满个案（细节级邮件），mergemaster／根分区零命中	B	sb321
+S-013040		内容为 loader.conf 添加 kern.maxfiles 一万六千余并重启个案（细节级邮件），maxfiles／rlimit 零命中	B	sb321
+S-013041		内容为 linux_base-f10 报 compat.linux.osrelease 不被支持个案（细节级邮件），零命中	B	sb321
+S-013042		内容为 8.0 不支持旧 USB 硬件退回 7.2 个案（细节级邮件），USB／回退零命中	B	sb321
+S-013043		内容为模板头 claim 载体，叙事主题零命中	B	sb321
+S-013044		内容为 ZFS 预取默认禁用与版本号显示疑问（细节级邮件），“ZFS”仅命中集成史节（V37-8.2 等），语义不符，留空	B	sb321
+S-013045		内容为模板头 claim 载体，叙事主题零命中	B	sb321
+S-013046		内容为 gmirror 权限来自 operator 组默认读权（细节级邮件），gmirror／GEOM 零命中	B	sb321
+S-013047		内容为 uart 对 sio 的功能覆盖之辨（细节级邮件），NS8250／16550 零命中	B	sb321
+S-013048		内容为 8.2-RC3 光盘 BIOS 启动进 PC-DOS（细节级邮件），引导零命中	B	sb321
+S-013049		内容为 ZFS 根文件系统源升级故障个案（细节级邮件），“ZFS”仅命中集成史节，语义不符，留空	B	sb321
+S-013050		内容为 httpd.conf LoadModule 后注释破坏解析个案（细节级邮件），Apache 仅命中会议史节 V67-6.4，语义不符，留空	B	sb321
+S-013051		内容为 openoffice 编译锁死与 ZFS scrub 报数据错误个案（细节级邮件），scrub 零命中	B	sb321
+S-013052		内容为 debugflags 纠正与 gpart 抢救 CF 卡（细节级邮件），gpart 零命中	B	sb321
+S-013053		内容为 svnadmin dump 迁移 SVN 仓库个案（细节级邮件），SVN 仅命中 V37-6.10 FreeBSD VCS 档案迁移史，语义不符，留空	B	sb321
+S-013054		内容为 portsnap fetch 报 tINDEX.new File too large 个案（细节级邮件），portsnap 零命中	B	sb321
+S-013055		内容为 portupgrade batch/portmaster 升级个案（细节级邮件），portmaster 仅命中 V36-2.2/2.3 Livingstone PortMaster 群体，语义不符，留空	B	sb321
+S-013056		内容为补充版本信息 FreeBSD 8.2-STABLE 与 ZFS 版本（细节级邮件），存储池零命中	B	sb321
+S-013057	V60-6.7	内容为荐用 ssmtp 取代 sendmail、DragonFly 已改用 DMA，直接命中第六十卷软件作品史“sendmail 的替代软件”节 V60-6.7	B	sb321
+S-013058		内容为 fdisk 激活分区后设备节点不出现个案（细节级邮件），fdisk／geom 零命中	B	sb321
+S-013059		内容为 tcsh 下 rehash 个案（细节级邮件），rehash／tcsh 零命中	B	sb321
+S-013060		内容为 df -h 与 dump/restore 迁移 /usr 故障个案（细节级邮件），迁移仅命中 VCS／发行版类节，语义不符，留空	B	sb321
+S-013061		内容为挂载中文件系统无法运行 fsck 一句判断（细节级邮件），fsck 零命中	B	sb321
+S-013062		内容为模板头 claim 载体，叙事主题零命中	B	sb321
