@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014311		题面为证据等级来源模板，零语义	A	sb374
+S-014312	V56-2.9	题面“Illumos”唯一命中 V56-2.9“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；“zfs”二十处候选无主导	A	sb374
+S-014313		题面为证据等级来源模板，零语义	A	sb374
+S-014314		题面为证据等级来源模板，零语义	A	sb374
+S-014315	V37-11.4	题面“tinderbox”唯一命中 V37-11.4“测试：Kyua、CI 与 tinderbox”；“ptrace／COMPAT_IA32”零命中	A	sb374
+S-014316		题面“锁序反转／bge／WITNESS／if_afdata”全目录零命中	A	sb374
+S-014317		题面为邮件考古细节，零命中（细节级）	A	sb374
+S-014318		题面“VirtualBox／vboxvideo／客户机”全目录零命中	A	sb374
+S-014319		题面为证据等级来源模板，零语义	A	sb374
+S-014320		题面“pwc／webcam／摄像头／snd_uaudio”全目录零命中	A	sb374
+S-014321		题面“timecounter／HPET／lapic”零命中，“TSC”命中均为 Netscape 类无效候选	A	sb374
+S-014322		题面“MC950D／u3g／ugen／USB”全目录零命中	A	sb374
+S-014323		题面“Xen”三处候选（V37-3.4／V41-10.1／V49-7.1）无主导，“timecounter／时钟”零命中或时代不符	A	sb374
+S-014324		题面“IEEE802.11／ieee80211／panic”零命中，“rum”命中均为 rump kernel 类无效候选	A	sb374
+S-014325		题面“amd64”三候选（V36-6.6／V37-10.4／V45-11.1）无主导，“双核”零命中	A	sb374
+S-014326	V37-10.2	题面“sparc64”唯一命中 V37-10.2“Alpha、MIPS、SPARC64 历史架构”；“ZFS”二十处候选无主导	A	sb374
+S-014327		题面为证据等级来源模板，零语义	A	sb374
+S-014328		题面为邮件考古细节，零命中（细节级）	A	sb374
+S-014329		题面为证据等级来源模板，零语义	A	sb374
+S-014330		题面为证据等级来源模板，零语义	A	sb374
+S-014331		题面“make obj／makedepend／svn status／构建对象”全目录零命中	A	sb374
+S-014332		题面“i386／amd64”三候选无主导，“virtualbox-ose”零命中	A	sb374
+S-014333		题面“补丁”十一处候选无主导，“gzip／xz／压缩”零命中	A	sb374
+S-014334		题面为证据等级来源模板，零语义	A	sb374

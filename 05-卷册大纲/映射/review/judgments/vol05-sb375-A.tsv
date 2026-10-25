@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014335		题面证据：ZFS／用户组配额仅命中 V36-8.5、V37-1.7、V37-1.8 多候选无主导	A	sb375
+S-014336		题面证据：mailwrapper／whateverwrapper 改名主题零命中	A	sb375
+S-014337		题面证据：BSDL iconv／交叉编译 installworld 零命中	A	sb375
+S-014338		题面证据：thunderbird302 崩溃题面词零命中，jemalloc 线索入 B 趟	A	sb375
+S-014339		题面为证据等级来源模板，零语义	A	sb375
+S-014340		题面为证据等级来源模板，零语义	A	sb375
+S-014341		题面证据：newfs_msdos／DVD-RAM 挂载 panic 零命中	A	sb375
+S-014342		题面为证据等级来源模板，零语义	A	sb375
+S-014343		题面为证据等级来源模板，零语义	A	sb375
+S-014344		题面证据：DavidWolfskill／r207911 零命中，ddb 线索入 B 趟	A	sb375
+S-014345		题面证据：NO_WERROR／WERROR 构建旗标零命中	A	sb375
+S-014346		题面为证据等级来源模板，零语义	A	sb375
+S-014347		题面为证据等级来源模板，零语义	A	sb375
+S-014348		题面证据：clang 命中 V44-4.4、V44-5.4、V47-2.4、V55-11.2 多候选无主导	A	sb375
+S-014349		题面为证据等级来源模板，零语义	A	sb375
+S-014350		题面证据：512GB 内存／vmparam 零命中	A	sb375
+S-014351		题面为证据等级来源模板，零语义	A	sb375
+S-014352		题面证据：RELENG／主版本升级路径零命中	A	sb375
+S-014353		题面证据：tq_name／taskqueue 仅命中 V49-6.2 附注（DragonFly）非题面主词	A	sb375
+S-014354		题面为邮件考古细节，零命中（细节级）	A	sb375
+S-014355		题面证据：pthread／_POSIX_THREAD_PROCESS_SHARED 零命中	A	sb375
+S-014356		题面为证据等级来源模板，零语义	A	sb375
+S-014357	V08-2.5	题面证据：fcntl(2) 命中 V08-2.5 ioctl、fcntl 与文件对象控制，为唯一节题命中	A	sb375
+S-014358		题面为证据等级来源模板，零语义	A	sb375

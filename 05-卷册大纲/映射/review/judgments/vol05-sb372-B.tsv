@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014263		内容主题词恐慌／空间映射／ddb 回溯零命中，留空	B	B
+S-014264		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014265		内容主题词 zfs send -R -I／libzfs_sendrecv 零精确命中，ZFS 泛词多候选无主导，留空	B	B
+S-014266	V37-3.4	内容主题词 Xen（坏合并回退、FreeBSD-current）主导命中第三十七卷 3.4	B	B
+S-014267		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014268	V37-3.3	内容主题词 VIMAGE_GLOBALS 主导命中第三十七卷 3.3；KGSSAPI／hostname 零命中旁证	B	B
+S-014269	V37-6.3	内容主题词 make -j4 buildworld 唯一命中第三十七卷 6.3；arc 调参旁证 ZFS 域	B	B
+S-014270		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014271		内容 msdosfs 零命中，ZFS／文件系统工作／SMP 多候选无主导，留空	B	B
+S-014272		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014273		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014274		内容 sysinstall 安装中止双候选无主导，8.0-RC3 公告旁证不足，留空	B	B
+S-014275		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014276		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014277		内容“数据包”仅命中 Netmap 语义不符，网络栈／重传多候选或零命中，留空	B	B
+S-014278		内容 IGMPv3／多播／igmp_v3_merge_state_changes 零命中，SMPng 多候选无主导，留空	B	B
+S-014279		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014280		内容 krb5-config／cyrus-sasl2／gssapi 客户端认证零命中，留空	B	B
+S-014281		内容 lib32／ccache／mkdep 汇编错误零命中（“汇编”候选仅 UNIX 期），留空	B	B
+S-014282		B“内容为模板头 claim 载体，叙事主题零命中”	B	B
+S-014283		B“内容主题词零命中（细节级邮件）”	B	B
+S-014284		内容 GPT／raidz1／boot slice／ROOT MOUNT ERROR 零命中，留空	B	B
+S-014285	V37-1.5	内容主题词 CAM pass-through 唯一命中第三十七卷 1.5；physio／BUSDMA 零命中旁证	B	B
+S-014286		内容 igmpproxy／多播／general protection fault 零命中，留空	B	B

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014215		题面为邮件考古细节，零命中（细节级）	A	sb370
+S-014216		题面为证据等级来源模板，零语义	A	sb370
+S-014217		题面“umass／busdma”零命中，留空	A	sb370
+S-014218		题面“xorg／gconf”零命中，留空	A	sb370
+S-014219		题面“lock order reversal／WITNESS”零命中，留空	A	sb370
+S-014220		题面为证据等级来源模板，零语义	A	sb370
+S-014221		题面“pf”零相关命中（pf 节点仅 V58-7.7 OpenBSD／macOS 域），留空	A	sb370
+S-014222		题面为证据等级来源模板，零语义	A	sb370
+S-014223		题面为证据等级来源模板，零语义	A	sb370
+S-014224		题面“i915”零相关命中（仅 DragonFly DRM 注文），“i386”命中非主导，留空	A	sb370
+S-014225		题面为邮件考古细节，零命中（细节级）	A	sb370
+S-014226		题面“linux_futex／WITNESS”零命中，留空	A	sb370
+S-014227		题面“rc.d／keywords”零命中（rc.d 节点属 OpenBSD V45-8.5 与 V63-8.3 关系史域，无主导），留空	A	sb370
+S-014228		题面“freebsd-update／chflags”零命中，留空	A	sb370
+S-014229		题面“80BETA3／HTTP／tcpinp”零命中，留空	A	sb370
+S-014230		题面“ahci0”零相关命中（仅 V68-8.3 bhyve GSoC 域），留空	A	sb370
+S-014231	V37-1.5	题面 ATA_CAM 之“CAM”命中第三十七卷 1.5“CAM：设备访问模型与存储硬件现代化”（其余 cam 命中为 CHERI／UCAM 误匹配）	A	sb370
+S-014232		题面“witness／linux_futex”零命中，留空	A	sb370
+S-014233		题面“RootOnZFS／livefs／memstick”零命中，留空	A	sb370
+S-014234		题面为证据等级来源模板，零语义	A	sb370
+S-014235		题面“libfprint／libusb／libmap”零命中，留空	A	sb370
+S-014236		题面“man 页面”多卷候选无主导（V06／V08／V37／V41／V45／V49／V60 均有 man 页节点），留空	A	sb370
+S-014237		题面为证据等级来源模板，零语义	A	sb370
+S-014238		题面“OpenSolaris／追踪”零命中（perforce 节点属 V68 GSoC 域，零相关），留空	A	sb370

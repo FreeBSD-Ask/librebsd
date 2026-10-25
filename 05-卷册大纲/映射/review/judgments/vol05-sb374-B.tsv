@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014311		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014312	V56-2.9	内容主题词“Illumos”唯一命中 V56-2.9“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；“ZFS 移植”主题多候选无主导	B	sb374
+S-014313		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014314		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014315	V37-11.4	内容主题词“tinderbox”唯一命中 V37-11.4“测试：Kyua、CI 与 tinderbox”；ptrace／COMPAT_IA32 零命中	B	sb374
+S-014316		内容主题词“锁序反转／WITNESS／bge／if_afdata”零命中，“锁”六候选（含 V37-4.3／4.4）无主导	B	sb374
+S-014317		内容主题词零命中（细节级邮件）	B	sb374
+S-014318		内容主题词“VirtualBox／vboxvideo／客户机”零命中，“虚拟机”九候选无主导	B	sb374
+S-014319		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014320		内容主题词“pwc／webcam／摄像头／snd_uaudio／麦克风”零命中，“设备”泛型无主导	B	sb374
+S-014321	V37-10.8	内容主题词“ACPI-fast”之 ACPI 唯一命中 V37-10.8“ACPI 与电源管理”；timecounter／HPET 零命中	B	sb374
+S-014322		内容主题词“MC950D／u3g／usb_alloc_device／ugen”零命中	B	sb374
+S-014323	V37-3.4	内容 freebsd-current 语境下“Xen”唯一主导命中 V37-3.4“Xen 支持与早期虚拟化探索”（V41-10.1／V49-7.1 为他系卷）	B	sb374
+S-014324		内容主题词“IEEE802.11／ieee80211／panic／引用计数”零命中，“无线”五候选（V36-11.5／V37-10.9 等）无主导	B	sb374
+S-014325		内容主题词“SMP”多候选、“多核”十候选、“性能”二十三候选均无主导，“双核”零命中	B	sb374
+S-014326	V37-10.2	内容主题词“sparc64”唯一命中 V37-10.2“Alpha、MIPS、SPARC64 历史架构”；ZFS／镜像多候选无主导	B	sb374
+S-014327		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014328		内容主题词零命中（细节级邮件）	B	sb374
+S-014329		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014330		内容为模板头 claim 载体，叙事主题零命中	B	sb374
+S-014331		内容主题词“make obj／makedepend／构建对象”零命中，“svn”唯一命中为 V37-6.10 版本控制迁移节、与构建流程主题不符	B	sb374
+S-014332		内容主题词“i386／amd64”各三候选无主导，“virtualbox-ose”零命中	B	sb374
+S-014333		内容主题词“补丁”十二候选、“发布”五十七候选无主导，“压缩／gzip／xz”零命中	B	sb374
+S-014334		内容为模板头 claim 载体，叙事主题零命中	B	sb374

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014239		内容主题词 sched_bind／sched_pin／device.hints／线程绑定零节名命中	B	sb371
+S-014240		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014241		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014242		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014243		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014244		内容主题词零命中（细节级邮件）	B	sb371
+S-014245		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014246		内容主题词 VIMAGE 系否定性提及（内核不含 VIMAGE），DTrace／CTF 零主导，zfs.ko 加载断言无专节对应	B	sb371
+S-014247		内容主题词零命中（细节级邮件）	B	sb371
+S-014248		内容主题词 nfsproto／IPPROTO_UDP／挂载协议零节名命中，RPC 命中 V08-9.5 时序语义不符	B	sb371
+S-014249		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014250		内容主题词零命中（细节级邮件）	B	sb371
+S-014251		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014252	V37-1.7	内容主题词 ZFS v13 导入与 scrub 报错命中 V37-1.7“ZFS 引入 FreeBSD”（ZFS 多节命中以 v13 导入线为主导）	B	sb371
+S-014253		内容主题词 SET_FOREACH／KDB 零节名命中，SMP 多节命中无主导	B	sb371
+S-014254	V37-1.5	内容主题词 AHCI CAM 补丁命中 V37-1.5 CAM 设备访问模型与存储硬件现代化（唯一 CAM 节题）	B	sb371
+S-014255		内容主题词 vrele／getcwd／VOP_VPTOCNP／null_nodeget 零节名命中，nullfs 唯一命中 V48-2.8 为 DragonFly 侧语义不符	B	sb371
+S-014256		内容主题词 ums／usb2／buttons／滚轮零节名命中	B	sb371
+S-014257		内容主题词 compat.linux.osrelease／libGL／linuxulator 零节名命中（Linux 兼容层无专节）	B	sb371
+S-014258		内容主题词 wlan／ifnet 零精确节名命中，“无线”命中 V10-6.4／V36-11.5／V37-10.9／V41-7.4／V45-12.1 五节无主导	B	sb371
+S-014259		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014260		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014261		内容为模板头 claim 载体，叙事主题零命中	B	sb371
+S-014262		内容主题词 local_apic／KASSERT／Thinkpad／zero divisor 零节名命中	B	sb371

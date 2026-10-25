@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014287		题面为证据等级来源模板，零语义	A	sb373
+S-014288		题面 kldload／atapicam／coredump 目录零命中，留空	A	sb373
+S-014289		题面为证据等级来源模板，零语义	A	sb373
+S-014290		题面 MAP_FIXED／9head 零命中，mmap 命中 V31-3.3（至 1995）与 V45-2.x 异题，留空	A	sb373
+S-014291		题面为证据等级来源模板，零语义	A	sb373
+S-014292		题面 ports 多节命中无主导，PBI／makepbi 零命中，PC-BSD 节为桌面产品化异题，留空	A	sb373
+S-014293		题面为证据等级来源模板，零语义	A	sb373
+S-014294		题面为证据等级来源模板，零语义	A	sb373
+S-014295		题面 PowerMac／Open Firmware／dirhash／bufwait 零命中，PowerPC 两节均他系语义不符，留空	A	sb373
+S-014296		题面 apache／httpd 零命中，模块仅命中 V36-3.5 内核模块化异题，留空	A	sb373
+S-014297		题面 usr/local／包含路径零命中，编译器六节均通史与他系异题，无主导，留空	A	sb373
+S-014298		题面 libc.so.6／docs132005 零命中，共享库仅通史 V08-4.6 异题，留空	A	sb373
+S-014299		题面 gjournal／sysctl 零命中，手册页四节均通史与人物层异题，留空	A	sb373
+S-014300		题面 gnop／failure probability 零命中，留空	A	sb373
+S-014301	V37-11.8	题面 Handbook B.8 链接修复命中第三十七卷 11.8 文档工程（FreeBSD Handbook 主导，V07／V39 节语义不符）	A	sb373
+S-014302		题面为证据等级来源模板，零语义	A	sb373
+S-014303		题面 ISO-IMAGES／ftp-archive 零命中，ftp 两节均他卷网络工具异题，留空	A	sb373
+S-014304		题面为证据等级来源模板，零语义	A	sb373
+S-014305	V37-5.5	题面 jail 更安全架设架构多节命中中“Jail 的安全设计”主导	A	sb373
+S-014306		题面为证据等级来源模板，零语义	A	sb373
+S-014307		题面 boot(8)／uart(4)／sio(4) 目录零有效命中，留空	A	sb373
+S-014308		题面为证据等级来源模板，零语义	A	sb373
+S-014309		题面 ack 零有效命中，grep 三节均通史与人物层异题，留空	A	sb373
+S-014310		题面为证据等级来源模板，零语义	A	sb373
