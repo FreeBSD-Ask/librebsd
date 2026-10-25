@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012055	V60-11.1	内容为 Ingo Schwarze mandoc 系列文献著录，mandoc 作品史对应 V60-11.1	B	sb280
+S-012056	V37-2.5	内容主题为 kqueue 与 Linux epoll、Solaris event ports 事件接口对照，epoll 在新目录零命中，落唯一 kqueue 应用节点 V37-2.5	B	sb280
+S-012057	V67-2.3	内容为 Jonathan Lemon 设计 kqueue/kevent 的里程碑事件，对应 V67-2.3 kqueue 设计文档 BSDCon 2000 首次公开发表	B	sb280
+S-012058	V37-2.5	内容主题为 kqueue 使 BSD 成为高性能网络早期选择（Nginx/Redis 等服务器采用），对应 V37-2.5	B	sb280
+S-012059		内容为编纂元数据层，无叙事节点	B	sb280
+S-012060		内容为编号缺口登记与拆分沿革元数据，主题词在新目录零命中，留空	B	sb280
+S-012061	V58-7.1	内容索引 96.4 起各节，主题为 kqueue 经 Apple 采纳进入 macOS/iOS，对应 V58-7.1 Apple 平台中的 BSD 代码	B	sb280
+S-012062		内容为编纂元数据层，无叙事节点	B	sb280
+S-012063		内容为编纂元数据层，无叙事节点	B	sb280
+S-012064		内容为编纂元数据层，无叙事节点	B	sb280
+S-012065		内容为编纂元数据层，无叙事节点	B	sb280
+S-012066		内容为编纂元数据层，无叙事节点	B	sb280
+S-012067		内容为编纂元数据层，无叙事节点	B	sb280
+S-012068	V58-7.1	内容索引 96.4 起各节，主题为 kqueue 经 Apple 采纳进入 macOS/iOS，对应 V58-7.1 Apple 平台中的 BSD 代码	B	sb280
+S-012069	V55-5.1	内容为纯指针（详见采访录），采访主题对应 FreeBSD 时代核心开发者访谈文献 V55-5.1	B	sb280
+S-012070		内容为空指针件（仅分隔线），无主题词可提炼，留空	B	sb280
+S-012071		内容为编纂元数据层，无叙事节点	B	sb280
+S-012072		内容为编纂元数据层，无叙事节点	B	sb280
+S-012073		内容为编纂元数据层，无叙事节点	B	sb280
+S-012074		内容为编纂元数据层，无叙事节点	B	sb280
+S-012075		内容为编纂元数据层，无叙事节点	B	sb280
+S-012076	V58-7.1	内容为 Apple 将 kqueue（BSD 代码）移植入 Darwin 的版本线（10.3 Panther 至 10.5 EVFILT 扩展），对应 V58-7.1	B	sb280
+S-012077	V58-5.1	内容主题为 iOS 自 1.0 经 Darwin/XNU 一并继承 BSD 子系统（kqueue），对应 V58-5.1 iPhone OS 与 Darwin/XNU	B	sb280
+S-012078	V58-6.4	内容为 Apple 采纳 kqueue 的遗产转化效应面（进入消费市场、GCD 间接使用、回馈上游），对应 V58-6.4 BSD 遗产在商业操作系统中的转化	B	sb280

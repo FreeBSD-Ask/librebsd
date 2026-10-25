@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-011911	V36-4.8	内容主题词 Linux 2.4 与 FreeBSD 4.x SMP 对比（Giant lock、O(n) 调度器）落“与同时期操作系统的比较：Linux 2.4…（FreeBSD 4.x 时期）”比较节	B	sb274
+S-011912	V36-4.1	内容主题词 4.x 稳定性优势与 ISP/Web 托管黄金时代（Yahoo!、Hotmail）落“4.x 的长支持周期与稳定形态”节	B	sb274
+S-011913	V36-5.9	内容主题词 Linux 2.6 O(1) 调度器与内核抢占追平落“与同时期操作系统的比较：Linux 2.6…（2003–2005）”比较节	B	sb274
+S-011914	V39-8.1	内容主题词 4.x 时代市场成功评判与生产稳定性评判的张力落“FreeBSD 4.x 时代的成功叙事”节	B	sb274
+S-011915	V36-4.7	内容主题词 4.x 技术清单与时间不奖励技术清单的成熟期反思落“4.x：传统 BSD Unix 系统形态的成熟期”节	B	sb274
+S-011916	V69-8.2	内容主题词 新闻报道与社区舆论汇总（Jails 安全增强条目）落“计算机杂志与行业新闻”新闻节	B	sb274
+S-011917	V37-3.1	内容主题词 4.0-RELEASE 引入 Jails 容器虚拟化落 Jail 本体节（隔离传统与 FreeBSD Jail）	B	sb274
+S-011918	V36-4.3	内容主题词 FreeBSD Mall 与教程推广 Jails 商业应用落“jail 与主机隔离对服务承载方式的改变”节	B	sb274
+S-011919	V38-3.2	内容主题词 phk 采访（Jails 共同作者、phkmalloc）落 Kamp 人物节	B	sb274
+S-011920	V38-3.2	内容主题词 Kamp 描述 Varnish web 缓存项目，Varnish 主题词零命中，落 Kamp 人物节	B	sb274
+S-011921		内容为编纂元数据层，无叙事节点	B	sb274
+S-011922		内容为编纂元数据层，无叙事节点	B	sb274
+S-011923	V37-3.1	内容主题词 phk 于 1999-04-28 提交 jail(2)、chroot 不够用落“UNIX 隔离传统与 FreeBSD Jail”本体节	B	sb274
+S-011924	V37-3.7	内容主题词 Jails 与 Docker/Zones/LXC 时间与市场认可对比落容器路线比较节	B	sb274
+S-011925		内容为编纂元数据层，无叙事节点	B	sb274
+S-011926	V37-3.2	内容主题词 jail(2) 结构（hostname、path、ip4addr）与网络绑定、进程可见性隔离落“Jail 的进程、文件系统与网络隔离”节	B	sb274
+S-011927	V37-3.7	内容主题词 Jails 与 Docker/Zones/LXC 时间对比落容器路线比较节	B	sb274
+S-011928		内容为编纂元数据层，无叙事节点	B	sb274
+S-011929	V37-3.1	内容主题词 2000 年 ISP 托管需求与 chroot 局限催生 Jails 落 Jail 本体节	B	sb274
+S-011930	V37-3.7	内容主题词 Rutgers 批评 Jails 资源管理并以 Docker 官方文档为证据落“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较”节	B	sb274
+S-011931	V55-10.1	内容主题词 容器传统在叙事中被遮蔽与重构（chroot→jail→Zones→Docker）落“比较叙事中的遮蔽争议”节	B	sb274
+S-011932	V37-3.2	内容主题词 jail(2)／jail_set(2) 手册页与 kern_jail.c 实现落隔离机制节	B	sb274
+S-011933	V37-3.7	内容主题词 Docker 镜像编排生态使市场认可远超 Jails 落容器路线比较节	B	sb274
+S-011934	V37-5.5	内容主题词 早期 Jails 特权分离粗、root in jail 与 mac_jail(4) 细化落“Jail 的安全设计”节	B	sb274

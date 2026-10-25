@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-011959	V37-3.1	内容主线为 2000 年托管需求催生 Jails 的起源语境，归 37-3.1“UNIX 隔离传统与 FreeBSD Jail”	B	sb276
+S-011960	V37-5.5	内容为 jail(2) 限制 root 权限的安全设计动机（禁网络配置、禁加载内核模块），归 37-5.5“Jail 的安全设计”	B	sb276
+S-011961	V37-3.1	内容为 phk 的 Jails 史料保存与辨析（BSDCon 论文、commit log），主题归 Jail 起源节 37-3.1	B	sb276
+S-011962	V61-2.2	内容为 chroot 仅隔离文件系统、root 可逃逸、设计初衷系测试构建环境的早期隔离思想，归 61-2.2“chroot 与早期隔离思想”	B	sb276
+S-011963	V37-3.2	内容为 jail(2) 系统调用与 jail_set(2) 隔离机制本体，归 37-3.2“Jail 的进程、文件系统与网络隔离”	B	sb276
+S-011964	V37-3.2	内容为 Jails 从文件隔离跃迁至 OS 级虚拟化（独立 IP、hostname、进程列表）的隔离机制本体，归 37-3.2	B	sb276
+S-011965	V37-3.1	内容为 chroot 到 jail 进化史料保存与 chroot 安全分析文献散落的谱系层，归 37-3.1	B	sb276
+S-011966	V37-3.1	内容主线为 jails 考古与起源（chroot 起源交锋、1975–1979 类 jail 代码窗口、jails 1998 起源），归 37-3.1	B	sb276
+S-011967	V13-3.5	内容主线为 chroot 起源之争（SCCS 日志解读对 V7 源码证据并置裁决），13-3.5 载 chroot(2) 发行史并带 V7（1979）时间注	B	sb276
+S-011968	V37-3.1	内容为 OS 级虚拟化概念起源（chroot 1979 至 Jails 2000 首次生产级隔离），归 37-3.1	B	sb276
+S-011969	V37-3.7	内容为 Jails 与 Docker／Solaris Zones／LXC 的时间差与生态比较，归 37-3.7 路线比较节（2000–2020）	B	sb276
+S-011970	V37-3.7	内容为 Jails 概念对后续容器技术的影响与 Docker 一脉相承的比较，归 37-3.7	B	sb276
+S-011971	V37-3.1	内容为 OS 级虚拟化概念建立史料的系统梳理需求，主题归概念起源节 37-3.1	B	sb276
+S-011972	V37-3.2	内容主线为 iocage（ZFS 数据集、VNet、rctl 聚合为管理界面）与 sysjail 等 Jail 隔离工具，归 37-3.2 机制节	B	sb276
+S-011973	V37-3.3	内容为早期 Jails 共享主机网络栈、单 IPv4、VNET(8.0) 后方完全虚拟化的网络栈局限，归 37-3.3“VIMAGE／VNET：网络虚拟化”	B	sb276
+S-011974	V37-5.5	内容为 Jail 特权分离不足与 mac_jail(4)、jail_set(2) 参数细化的安全机制，归 37-5.5	B	sb276
+S-011975	V37-3.7	内容为 Jails 被 Solaris Zones 与 Docker 超越而轻量场景保持优势的场景比较，归 37-3.7	B	sb276
+S-011976	V37-3.2	内容为 Jails 局限性史料散落于批评文章与课程笔记的辨析，主题归隔离机制节 37-3.2	B	sb276
+S-011977	V37-5.5	内容为 SANE 2000 论文列举 jailed root 八项限制的安全边界，归 37-5.5“Jail 的安全设计”	B	sb276
+S-011978	V37-11.7	内容主线为 ports 树移除 EOL 兼容垫片、移植者验证矩阵由五版本缩至两版本的 ports 工程与 QA，归 37-11.7“Ports 工程”	B	sb276
+S-011979	V37-3.2	内容主线为 jail 实例资源划分三阶段（进程表、文件描述符、设备逐实例分配）的隔离机制，归 37-3.2	B	sb276
+S-011980	V37-3.2	内容为 jails 独立根、独立 IP、虚拟网络栈与 jail 内 root 权限边界的隔离本体定义，归 37-3.2	B	sb276
+S-011981		内容为混合史料清单（ports EOL、traceroute、tmux、TTY、BSD Router、UEFI、Computer Chronicles 等），无主导叙事节点	B	sb276
+S-011982	V37-6.8	内容主线为 FreeBSD 11 发布节奏改革（支持边界重划、限期升级）的发布机制本体，归 37-6.8“Release Branch、RC 与版本发布”	B	sb276

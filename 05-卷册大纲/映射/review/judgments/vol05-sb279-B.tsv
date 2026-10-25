@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012031		内容为编纂元数据层，无叙事节点	B	sb279
+S-012032		内容为编纂元数据层，无叙事节点	B	sb279
+S-012033		内容为编纂元数据层，无叙事节点	B	sb279
+S-012034		内容为编纂元数据层，无叙事节点	B	sb279
+S-012035		内容为编纂元数据层，无叙事节点	B	sb279
+S-012037		内容为编纂元数据层，无叙事节点	B	sb279
+S-012038		内容为编纂元数据层，无叙事节点	B	sb279
+S-012036	V60-11.1	内容为 Ingo Schwarze mandoc／BSDCan 文献著录，mandoc 主题词直指第六十卷 11.1	B	sb279
+S-012039	V37-2.5	内容主题词 kqueue／高并发／事件驱动服务器／kernel event notification 直指第三十七卷 2.5（唯一 kqueue 技术节点）	B	sb279
+S-012040	V37-2.5	内容主题词 kevent 结构体／EVFILT filter／一次性注册属 kqueue 机制本体，归第三十七卷 2.5	B	sb279
+S-012041	V37-2.5	内容主题词 kqueue 事件通知先发优势（早于 epoll／Solaris event ports）归第三十七卷 2.5 kqueue 节点	B	sb279
+S-012042	V37-2.5	内容主题词 kqueue 设计史料争议（commit 时间／Banga／dev-poll／BSDCon 论文）归第三十七卷 2.5 kqueue 节点	B	sb279
+S-012043	V37-4.5	内容主题词 KSE／libc_r／AIO／线程库工程需求指向第三十七卷 4.5 内核线程模型演进	B	sb279
+S-012044	V37-9.8	内容主题词 FD_SETSIZE／10K+ 并发连接／文件描述符指向第三十七卷 9.8 大规模并发连接下的内核调优	B	sb279
+S-012045	V37-2.5	内容主题词 kqueue O(1)／就绪事件列表／EV_CLEAR／LT-ET 主题归第三十七卷 2.5 kqueue 节点	B	sb279
+S-012046	V37-2.5	内容主题词 kqueue 可扩展性（万级 fd／filter 扩展／AIO 集成／nginx）归第三十七卷 2.5 kqueue 节点	B	sb279
+S-012047	V37-2.5	内容主题词 Lemon BSDCon 2000 基准测试争议／Banga 数据引用归第三十七卷 2.5 kqueue 节点	B	sb279
+S-012048	V63-1.9	内容主题词 epoll／Libenzi／Linux 2.5.44／系统接口指向第六十三卷 1.9 网络协议、系统接口与工具的共同实现	B	sb279
+S-012049	V63-1.9	内容主题词 kqueue→epoll 跨系统接口效应（stateful／composable）指向第六十三卷 1.9	B	sb279
+S-012050	V63-1.10	内容主题词衍生 vs 平行发明（代码共享与独立实现之辨）指向第六十三卷 1.10	B	sb279
+S-012051	V63-1.11	内容主题词引用缺失与历史来源争议（kqueue 对 epoll 影响的来源判定）指向第六十三卷 1.11 技术交流与历史来源的区别	B	sb279
+S-012052	V63-1.9	内容主题词 LKML lt-epoll／kqueue man page 批评邮件链指向第六十三卷 1.9	B	sb279
+S-012053	V63-1.9	内容主题词 LKML 2003 辩论链 FreeBSD 阵营与 Libenzi 对辩指向第六十三卷 1.9	B	sb279
+S-012054	V63-1.11	内容为 epoll 与 kqueue 关系的史学综合（历史来源与偶然性问题），指向第六十三卷 1.11 技术交流与历史来源的区别	B	sb279
