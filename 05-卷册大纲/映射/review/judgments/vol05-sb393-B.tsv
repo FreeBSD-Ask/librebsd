@@ -1,0 +1,23 @@
+source_id	target_id	reason	strategy	pass_id
+S-014767	V37-6.10	内容为 CVS→SVN 迁移工作组成员（Wemm／Konovalov／Andrews／Core Team）与 commit 验证，属 FreeBSD 档案迁移面（C-49）	B	sb393
+S-014768	V37-6.10	内容为 SVN 迁移反对者（Git 一步到位派 vs CVS 保守派）与边缘者，属 FreeBSD 档案迁移面	B	sb393
+S-014769	V37-6.10	内容为迁移中边缘贡献者角色辨析（ports 镜像／文档团队／镜像站点／csup-svnup），属 FreeBSD 档案迁移面	B	sb393
+S-014770	V37-6.10	内容为迁移边缘者史料疑点（csup／svnup 开发者归属，freebsd.duckdb 验证），属 FreeBSD 档案迁移面	B	sb393
+S-014771	V52-5.1	内容为 2008 年同期 Linux／NetBSD／OpenBSD／Darwin 版本控制路径对比，属四系横向比较版本控制分流节	B	sb393
+S-014772	V52-5.1	内容为分布式 vs 集中式、性能、工具链生态与学习曲线的选择比较，属四系横向比较卷	B	sb393
+S-014773	V52-5.1	内容为四系路径得失辨析（Linux 早迁 Git／OpenBSD 坚守 CVS／FreeBSD 选 SVN），属四系横向比较卷	B	sb393
+S-014774	V52-5.1	内容为跨项目比较史料 0 信任辨析（NetBSD 迁移、OpenBSD CVS 范围、Mac OS X 时间），属四系横向比较卷	B	sb393
+S-014775	V55-5.1	内容为采访录指针，主题为迁移时期人员口述访谈，对应当代核心开发者的口述与访谈文献层	B	sb393
+S-014776	V69-8.8	内容为媒体反响指针（freebsd.duckdb 2008 提交统计），媒体舆论条目属项目自我叙述与新闻叙述层	B	sb393
+S-014777	V69-8.8	内容为 Brooks Davis 与 CVS-SVN 迁移工程新闻条目（故障类），属项目自我叙述与新闻叙述层	B	sb393
+S-014778	V69-8.8	内容为 FreeBSD 官方公告与 freebsd-hackers 邮件迁移计划新闻（冲突类），属项目自我叙述与新闻叙述层	B	sb393
+S-014779	V69-8.8	内容为 src 仓库完成 SVN 迁移官方公告（里程碑事件类），属项目自我叙述与新闻叙述层	B	sb393
+S-014780	V37-6.10	内容为 2008–2009 仓库迁移时期 2 位关键人员邮件列表采访录，属 FreeBSD 档案迁移面	B	sb393
+S-014781		内容为编纂元数据层，无叙事节点	B	sb393
+S-014782		内容为编纂元数据层，无叙事节点	B	sb393
+S-014783		内容为编纂元数据层，无叙事节点	B	sb393
+S-014784		内容为编纂元数据层，无叙事节点	B	sb393
+S-014785		内容为编纂元数据层，无叙事节点	B	sb393
+S-014786		内容为编纂元数据层，无叙事节点	B	sb393
+S-014787	V55-5.1	内容为 McKusick“25 years of FreeBSD”BSDCan 2018 播客访谈当事人自述，对应该节 BSD Now 与 FreeBSD Foundation 访谈文献层	B	sb393
+S-014788		内容为编纂元数据层，无叙事节点	B	sb393
