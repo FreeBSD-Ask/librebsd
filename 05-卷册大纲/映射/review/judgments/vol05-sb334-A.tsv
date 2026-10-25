@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013351		题面关键词证据：移植工作、FreeBSD 新版发布仅泛命中移植类节、无 linuxulator 语境，双候选无主导	A	sb334
+S-013352		题面关键词证据：题面关键词 LTP、amd64 零命中或仅异系统节，无主导候选	A	sb334
+S-013353		题面关键词证据：题面关键词 linux_base、chroot 零命中	A	sb334
+S-013354		题面关键词证据：题面关键词 TLS、amd64 仅命中跨时代内核 TLS 节（V37-2.8 等），双候选无主导	A	sb334
+S-013355		题面关键词证据：题面关键词 VMware 零命中	A	sb334
+S-013356		题面为证据等级来源模板，零语义	A	sb334
+S-013357		题面关键词证据：题面关键词 ldd、DSO 零命中	A	sb334
+S-013358		题面为证据等级来源模板，零语义	A	sb334
+S-013359		题面为证据等级来源模板，零语义	A	sb334
+S-013360		题面关键词证据：题面关键词 %fs %gs、MSR 零命中	A	sb334
+S-013361		题面关键词证据：题面关键词 truncate64、googleearth 零命中	A	sb334
+S-013362		题面关键词证据：题面关键词 vmware3、vm_asm 零命中	A	sb334
+S-013363		题面关键词证据：题面关键词 wine、openssl 零命中	A	sb334
+S-013364		题面关键词证据：题面关键词 kqemu 零命中	A	sb334
+S-013365		题面为证据等级来源模板，零语义	A	sb334
+S-013366		题面关键词证据：题面关键词 Steam、wine 零命中	A	sb334
+S-013367		题面关键词证据：题面关键词 VirtualBox 零命中	A	sb334
+S-013368		题面关键词证据：题面关键词 vm.pmap、panic 零命中	A	sb334
+S-013369		题面为证据等级来源模板，零语义	A	sb334
+S-013370		题面为证据等级来源模板，零语义	A	sb334
+S-013371		题面关键词证据：题面关键词 bsdportmk、USE_LINUX 零命中	A	sb334
+S-013372		题面关键词证据：题面关键词 VDI、vboxdrv 零命中	A	sb334
+S-013373		题面关键词证据：题面关键词 linux-libxml、gdk-pixbuf 零命中	A	sb334
+S-013374		题面关键词证据：题面关键词 Radeon、X1550 零命中	A	sb334

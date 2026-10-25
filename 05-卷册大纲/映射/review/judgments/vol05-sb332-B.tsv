@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013303		内容为模板头 claim 载体，叙事主题零命中	B	sb332
+S-013304	V37-4.5	内容 libthr 1:1 取代 KSE M:N 决策、与 NPTL 一致，属线程模型演进节点	B	sb332
+S-013305	V37-4.5	内容 libthr 1:1 工程实现（rfork/kse(2)、NPTL 相似），线程模型节点	B	sb332
+S-013306	V37-4.5	内容 1:1 vs M:N 权衡与 Solaris 放弃 M:N 对照，线程模型节点	B	sb332
+S-013307	V37-4.5	内容 libthr 角色、NPTL 借鉴与 KSE 移除疑点，线程模型节点	B	sb332
+S-013308	V37-4.4	内容非 MPSAFE TTY 驱动断开属 Giant 锁拆除与细粒度并发语境	B	sb332
+S-013309	V37-4.6	内容 ULE 与 4BSD 同内核编译启动选择补丁，调度器历史节点	B	sb332
+S-013310	V37-4.5	内容 getcontext 保存 FP 上下文的 KSE 争论，线程上下文主题	B	sb332
+S-013311	V37-10.5	内容 FreeBSD/arm 2004 起移植、6.0 首支持 ARMv4/v5，ARM 移植节点	B	sb332
+S-013312	V37-10.5	内容 RouterBoard、Linkstation 等嵌入式部署与 NetBSD/arm 竞争	B	sb332
+S-013313	V37-10.5	内容 ARM 优先级与 NetBSD/arm 差距辨析，ARM 支持节点	B	sb332
+S-013314	V37-10.5	内容 ARM 移植起始时间与贡献者疑点，freebsd-arm/SVN 语境	B	sb332
+S-013315	V37-10.5	内容 freebsd-arm 邮件问嵌入式最小内核与 4.5/5.1 源码选择	B	sb332
+S-013316		内容为模板头 claim 载体，叙事主题零命中	B	sb332
+S-013317	V37-10.5	内容 ate(4) miibus PHY 读取问题，ARM 板卡驱动调试邮件	B	sb332
+S-013318	V37-10.5	内容 ARM 内核起始物理地址与 r9 崩溃，ARM 启动调试邮件	B	sb332
+S-013319		内容为模板头 claim 载体，叙事主题零命中	B	sb332
+S-013320	V37-10.5	内容 WinCE 引导 FreeBSD/NetBSD 内核，ARM 手持设备启动	B	sb332
+S-013321	V37-10.6	内容 RPi5 上 FreeBSD 运行状态问询，属 AArch64 现代平台	B	sb332
+S-013322	V37-10.9	内容 net80211 重写与 ath(4)/iwi(4) 驱动，无线设备支持节点	B	sb332
+S-013323	V37-10.9	内容笔记本可用性与嵌入式 WiFi、mac80211 对比	B	sb332
+S-013324	V37-10.9	内容 net80211 设计辨析、OpenBSD 关系与 802.11n 支持	B	sb332
+S-013325	V37-10.9	内容 Sam Leffler 在 net80211 角色与 ath(4) 来源疑点	B	sb332
+S-013326		内容为模板头 claim 载体，叙事主题零命中	B	sb332

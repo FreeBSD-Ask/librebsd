@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013207		内容主题词 dev-auto.sgml、man2hwnotes、下划线、实体名 零命中	B	sb328
+S-013208		内容主题词 网站搜索、sunmanagers、总结帖 零命中，Mark 命中为 Markus Friedl 误中	B	sb328
+S-013209		内容主题词 CSS、Epiphany、XHTML、验证器、首页 零命中	B	sb328
+S-013210	V37-7.4	内容主题词 提案新端口类别、Committer's Guide 段落拆分，V37-7.4 Porter's Handbook 与维护者制度题面兼内容双重命中主导	B	sb328
+S-013211		内容主题词 rsync、freebsd-core 零命中，镜像 命中分散（V38-5.4／V69-6.2／V69-6.4 多类候选）无主导	B	sb328
+S-013212		内容主题词 5.2.1-RC2、pam.conf 零命中，pam 命中为 spamd 误中，手册页泛化	B	sb328
+S-013213		内容主题词 西班牙语、翻译对齐 命中分散（V66-6.9 区域共同体与 V69-2.9／2.10／2.12 翻译面）无唯一语言归属节	B	sb328
+S-013214		内容主题词 intro(6)、apropos、扩展正则 零命中，游戏 命中 V71-4.7 语境不符，手册页泛化	B	sb328
+S-013215		内容主题词 USB Storage Devices、CF 卡 零命中，整合 命中均为其他技术语境	B	sb328
+S-013216		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013217		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013218		内容主题词 Make 教程、DocBook、PR docs/62116 零命中，make 命中均为工具链语境不符	B	sb328
+S-013219		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013220		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013221		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013222		内容主题词 make.conf、5.X 新位置 零命中，手册、FreeBSD 泛化无主导	B	sb328
+S-013223		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013224		内容主题词 atacontrol addspare、MISSING 零命中，手册泛化 10 余处无主导	B	sb328
+S-013225		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013226		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013227		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013228		内容主题词 GEOM class 教程、DocBook 转换 命中 V36-6.4 与 V37-1.4 双候选，独立文章归属面无主导	B	sb328
+S-013229		内容为模板头 claim 载体，叙事主题零命中	B	sb328
+S-013230		内容主题词 teTeX、jadetex、pdfetex、FORMATS 零命中，ps 命中均为子串误中	B	sb328
