@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013615		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013616		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013617	V37-10.2	内容主题词“sparc64 待办清单与可运行机型／10.2-PRERELEASE 构建机”对应 FreeBSD 卷 Alpha、MIPS、SPARC64 历史架构（V37-10.2）	B	sb345
+S-013618		内容主题词零命中（细节级邮件）	B	sb345
+S-013619		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013620	V37-11.4	内容主题词“tinderbox 三版本构建通过”唯一命中第三十七卷 11.4 测试：Kyua、CI 与 tinderbox	B	sb345
+S-013621	V37-10.9	内容主题词“R128 显示驱动／fbdevhw 模块／屏幕无可用配置”对应 FreeBSD 卷 GPU 与无线设备支持（V37-10.9）	B	sb345
+S-013622		内容主题词“WDMA2／GEOM 释放后仍被使用 panic”零节级命中（GEOM 命中为存储抽象形成层，个案细节级不符，同 sb344 S-013600 先例）	B	sb345
+S-013623	V37-9.5	内容主题词“火线 dcons 调试通道”对应 FreeBSD 卷 ddb、kgdb 与内核调试（V37-9.5）	B	sb345
+S-013624	V37-8.6	内容主题词“gdb6 移植补丁测试／info threads 失效”对应 FreeBSD 卷开发者工具与用户态调试（V37-8.6）	B	sb345
+S-013625		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013626	V37-1.4	内容主题词“g_part_apm 分区表条目数／三十二扇区／4K 对齐”对应 FreeBSD 卷 GEOM：存储抽象层的形成（V37-1.4）	B	sb345
+S-013627		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013628		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013629	V37-9.3	内容主题词“DTrace 补丁重发供测试（ppc 移植线）”对应 FreeBSD 卷 DTrace：动态追踪体系（V37-9.3）	B	sb345
+S-013630		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013631	V37-3.5	内容主题词“bhyve 的 FreeBSD 10 相关工作”对应 FreeBSD 卷 bhyve：FreeBSD 原生虚拟机监控器（V37-3.5）	B	sb345
+S-013632	V37-9.8	内容主题词“mbuf 资源耗尽／netstat -m／T1 线并发客户”对应 FreeBSD 卷大规模并发连接下的内核调优：文件描述符、网络缓冲与调度（V37-9.8）	B	sb345
+S-013633		内容主题词“ata_command timeout／ata-all.c 1.50.2.7”零节级命中（细节级回归个案，同 sb344 S-013603 先例）	B	sb345
+S-013634		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013635	V37-2.1	内容主题词“in_cksum.c／tcp_output.c 校验和补码和”对应 FreeBSD 卷 TCP／IP 网络栈基础（V37-2.1）	B	sb345
+S-013636		内容为模板头 claim 载体，叙事主题零命中	B	sb345
+S-013637		内容主题词“periodic ＄_localbase 初始化／dirlist 重复执行”零节级命中（细节级邮件）	B	sb345
+S-013638		内容为模板头 claim 载体，叙事主题零命中	B	sb345

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013687		模板层无结构对应	C	sb348
+S-013688	V37-10.2	结构线索：sparc64 平台邮件层锚 V37-10.2（Alpha、MIPS、SPARC64 历史架构）	C	sb348
+S-013689		模板层无结构对应	C	sb348
+S-013690	V37-8.2	结构线索：clang/llvm 内核适配属工具链战线，对应 V37-8.2（GCC 到 Clang／LLVM 的转型）	C	sb348
+S-013691	V37-10.2	结构线索：sparc64 平台邮件层锚 V37-10.2（Alpha、MIPS、SPARC64 历史架构）	C	sb348
+S-013692	V37-8.2	结构线索：clang 段错误属工具链战线，对应 V37-8.2（GCC 到 Clang／LLVM 的转型）	C	sb348
+S-013693		模板层无结构对应	C	sb348
+S-013694		模板层无结构对应	C	sb348
+S-013695		模板层无结构对应	C	sb348
+S-013696	V37-6.7	结构线索：mkisofs 发布脚本属发布工程，对应 V37-6.7（Release Engineering 的形成）	C	sb348
+S-013697		模板层无结构对应	C	sb348
+S-013698		模板层无结构对应	C	sb348
+S-013699		结构线索：freebsd-update 平台适用性话题，PowerPC 平台层新目录无节点	C	sb348
+S-013700		结构线索：Cell/PS3 移植层新目录无节点	C	sb348
+S-013701		结构线索：pmap/SDR1 页表机制无对应节点	C	sb348
+S-013702		结构线索：Altivec 内核实现层新目录无节点	C	sb348
+S-013703	V06-2.3	结构线索：邮件考古层稳定锚 V06-2.3（当事人自述邮件细节件）	C	sb348
+S-013704		模板层无结构对应	C	sb348
+S-013705		结构线索：PowerMac 引导调试层新目录无节点	C	sb348
+S-013706	V37-4.2	结构线索：SMP 内核选项调试属并发战线，对应 V37-4.2（FreeBSD SMP 初期实现）	C	sb348
+S-013707		结构线索：声音驱动/dsp.c 层新目录无节点	C	sb348
+S-013708		模板层无结构对应	C	sb348
+S-013709		模板层无结构对应	C	sb348
+S-013710		结构线索：PowerPC 安装说明层新目录无节点	C	sb348
