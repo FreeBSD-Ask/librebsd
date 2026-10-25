@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014527		内容为模板头 claim 载体，叙事主题零命中	B	sb383
+S-014528		内容证据：引导／模拟命中均为异期异题（V21-4.2 Reference CD-ROM、V68-8.5 bhyve 模拟），boot0 观察主题零命中	B	sb383
+S-014529		内容为模板头 claim 载体，叙事主题零命中	B	sb383
+S-014530		内容为模板头 claim 载体，叙事主题零命中	B	sb383
+S-014531	V37-3.3	内容证据：V_ifnet／ifnet 虚拟化主题命中 V37-3.3“VIMAGE，VNET：网络虚拟化”（sb372 VIMAGE 件群同锚）；V36-3.5 为内核模块化泛语境，前者主导	B	sb383
+S-014532		内容证据：binutils 命中 V63-1.5／V63-1.6／V16-3.3 多候选无主导，ffserver／libavcodec 零命中	B	sb383
+S-014533		内容证据：虚拟内存命中均为 1995 前语境（V12 卷为 1973–1981、V31-3.4 限缩至 1995 年前、V8-5.2 为 3BSD–4.2BSD），2011 年 8.x 换页记账无落点	B	sb383
+S-014534	V37-1.2	内容证据：UFS1／dumpfs 主题命中 V37-1.2“UFS1 与 UFS2：文件系统扩展与大容量存储”	B	sb383
+S-014535		内容为模板头 claim 载体，叙事主题零命中	B	sb383
+S-014536		内容证据：DMA／IDE 命中皆系人名与 Guide 等伪命中，基址寄存器主题零命中	B	sb383
+S-014537		内容为模板头 claim 载体，叙事主题零命中	B	sb383
+S-014538		内容证据：kFreeBSD 命中均为 Debian GNU/kFreeBSD 移植生命周期节（V63-2.2／2.4／2.5／2.6），宏统一主题非其内容，多候选无主导	B	sb383
+S-014539		内容证据：系统调用／fork 命中均为 1995 前语境（V8-2.1／2.2、V26-1.3），2011 年 rfork 补丁无落点	B	sb383
+S-014540	V37-9.7	内容证据：UMA 分配器性能主题命中 V37-9.7（内存管理，sb375 jemalloc 件群同锚）；V38-3.5 为人物传次之，前者主导	B	sb383
+S-014541		内容证据：编程器／Galep／fdopendir 段错误零命中	B	sb383
+S-014542		内容证据：elftoolchain／libdwarf／日历零命中	B	sb383
+S-014543	V60-5.5	内容证据：traceroute 路径探测工具主题命中 V60-5.5，64 字符上限属该工具史	B	sb383
+S-014544		内容证据：pthread 零命中，线程命中均为内核线程模型（V37-4.5 等）非用户态 ps／pthread 语境，多候选无主导	B	sb383
+S-014545		内容证据：声音／dsp／键盘命中皆非按键回馈工具语境	B	sb383
+S-014546		内容证据：devstat／loader.conf／引导菜单／崩溃零命中	B	sb383
+S-014547	V08-2.5	内容证据：fcntl（F_RDADVISE）文件控制语义命中 V08-2.5“ioctl、fcntl 与文件对象控制”（sb375 fcntl 件群同锚）	B	sb383
+S-014548	V37-2.7	内容证据：ixgbe 网卡驱动工程（probe／attach／模块命名）主题命中 V37-2.7“Iflib：网络驱动模型重构”（FreeBSD 战线）；V36-6.5 为并发负载语境，前者主导	B	sb383
+S-014549	V37-10.9	内容证据：ndis 无线驱动与 wpa_supplicant 主题命中 V37-10.9“GPU 与无线设备支持”（sb370 GPU/DRM 件群同锚）；V41-7.4／V45-12.1 为 NetBSD／OpenBSD 战线、V49-6.2 为 DragonFly，前者主导	B	sb383
+S-014550	V37-9.5	内容证据：kgdb 调用回溯与 panic 调试主题命中 V37-9.5“ddb、kgdb 与内核调试”（sb370 S-014229 同锚）；V49-7.8 为实验教育语境，前者主导	B	sb383

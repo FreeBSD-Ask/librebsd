@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014359		题面为证据等级来源模板，零语义	A	sb376
+S-014364		题面为证据等级来源模板，零语义	A	sb376
+S-014369		题面为证据等级来源模板，零语义	A	sb376
+S-014372		题面为证据等级来源模板，零语义	A	sb376
+S-014378		题面为证据等级来源模板，零语义	A	sb376
+S-014379		题面为证据等级来源模板，零语义	A	sb376
+S-014381		题面为证据等级来源模板，零语义	A	sb376
+S-014382		题面为证据等级来源模板，零语义	A	sb376
+S-014360		题面 libcompiler_rt／ports x11 零有效命中，x11 命中 V59-5.1 系许可证节非 ports 类目语境	A	sb376
+S-014361		题面 VirtualBox 全目录零命中，虚拟机十处候选无主导	A	sb376
+S-014362		题面 bootblock 零命中，loader 命中 V51-7.4 系 dloader 吉祥物注记无效，32 位三候选（V03-1.3／V36-13.4／V36-15.7）时代不符无主导	A	sb376
+S-014363		题面 amd64 多候选无主导，WITNESS／mysql 零节题命中	A	sb376
+S-014365		题面 loopback／延迟确认全目录零命中	A	sb376
+S-014366		题面 kqueue 三候选（V37-2.5／V49-6.2／V67-2.3）无主导，EVFILT_FS 零命中	A	sb376
+S-014367		题面 doc／tag 命中均系无效候选（Tague 等人名），docrele／8.4.0 零命中	A	sb376
+S-014368		题面 panic／i386 多候选无主导，r213139 零命中	A	sb376
+S-014370		题面 trgt_amd64c／trgt_i386c／帧判断全目录零命中	A	sb376
+S-014371	V60-5.7	题面 ifconfig(8) 节题命中 V60-5.7「netstat、ifconfig 与网络管理工具」，V31-7.4 仅溯源注非节题，前者主导	A	sb376
+S-014373		题面 NX 仅命中 V57-5.2 系 QNX 子串无效，nxstack 零命中，amd64／PowerPC 多候选无主导	A	sb376
+S-014374		题面 NFS 六处候选无主导，无 FreeBSD 新 NFS 客户端节题命中	A	sb376
+S-014375		题面 nvidia／9500GT 零命中，显卡命中 V68-11.3 系 OpenBSD GSoC 无效候选	A	sb376
+S-014376		题面 SIGILL／Signal 4／非法指令全目录零命中	A	sb376
+S-014377		题面 addonics／端口倍增器／Sil3124 全目录零命中	A	sb376
+S-014380		题面 devstdout 零命中，cat 链接泛型多候选	A	sb376

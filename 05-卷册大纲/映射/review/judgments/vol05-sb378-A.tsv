@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014407		题面证据：双启／MBR 零命中，GPT 仅命中 V49-6.5 DragonFly UEFI 注释非主导	A	sb378
+S-014408		题面为证据等级来源模板，零语义	A	sb378
+S-014409		题面为证据等级来源模板，零语义	A	sb378
+S-014410		题面证据：affinity 零命中，调优命中 V01-1.4／V37-9.8 多候选非主导	A	sb378
+S-014411		题面证据：公开审查零命中	A	sb378
+S-014412		题面为证据等级来源模板，零语义	A	sb378
+S-014413		题面证据：realfspath／vfs_mount_alloc 零命中	A	sb378
+S-014414		题面证据：__builtin_ia32／xmmintrin 零命中，SSE 为 POSSE 子串伪命中	A	sb378
+S-014415		题面证据：ccb_scan／cd0 探测零命中	A	sb378
+S-014416		题面为证据等级来源模板，零语义	A	sb378
+S-014417		题面证据：graid／gmirror 零命中	A	sb378
+S-014418		题面为证据等级来源模板，零语义	A	sb378
+S-014419		题面证据：GPTZFSBoot／RootOnZFS 零命中	A	sb378
+S-014420		题面为证据等级来源模板，零语义	A	sb378
+S-014421		题面证据：kFreeBSD 命中 Debian GNU／kFreeBSD 发行形态多节，内核头宏主题非主导	A	sb378
+S-014422		题面证据：svnversion／Subversion 零命中	A	sb378
+S-014423		题面证据：zfs i/o hang／pf 零命中	A	sb378
+S-014424		题面证据：groff 零命中	A	sb378
+S-014425		题面为证据等级来源模板，零语义	A	sb378
+S-014426		题面证据：pf 状态不回收零命中	A	sb378
+S-014427		题面证据：svnversion／返回码零命中	A	sb378
+S-014428		题面为证据等级来源模板，零语义	A	sb378
+S-014429		题面为证据等级来源模板，零语义	A	sb378
+S-014430		题面证据：DEVICE_SUSPEND／计时器零命中	A	sb378

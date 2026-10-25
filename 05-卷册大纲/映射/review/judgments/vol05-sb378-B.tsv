@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014407		内容证据：安装器 GPT／MBR 双启默认主题零命中，TrueOS／DragonFly 安装器节非对应	B	sb378
+S-014408		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014409		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014410		内容证据：调优旋钮／howto 零命中，多方平等主题无节点	B	sb378
+S-014411		内容证据：强制公开审查命中 V64-5.6、V64-6.8、V37-11.3 多候选无主导	B	sb378
+S-014412		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014413		内容证据：f_mntonname／mount_alloc 零命中	B	sb378
+S-014414		内容证据：xmmintrin／SSE 内联函数零命中，clang 多候选（OpenBSD 转换节等）非主导	B	sb378
+S-014415	V37-1.5	内容证据：CAM cd0 探测主题命中 V37-1.5（CAM：设备访问模型与存储硬件现代化）主导；V37-1.4 GEOM 为对照面	B	sb378
+S-014416		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014417	V37-1.6	内容证据：graid／gmirror RAID 主题命中 V37-1.6（RAID、GELI 与存储可靠性体系）主导；RAIDframe 节为 NetBSD 非对应	B	sb378
+S-014418		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014419		内容证据：freebsd_dist／安装介质零命中，RootOnZFS wiki 文档失效无节点	B	sb378
+S-014420		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014421		内容证据：__FreeBSD_kernel__ 内核头宏零命中，kFreeBSD 多候选为 Debian 发行形态非对应	B	sb378
+S-014422		内容证据：svn NFS E200030 零命中，NFS 命中为 UNIX 历史节非对应	B	sb378
+S-014423		内容证据：zfs i/o hang／pf 排查零命中	B	sb378
+S-014424		内容证据：groff -c 行为零命中	B	sb378
+S-014425		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014426		内容证据：pf 状态不回收零命中	B	sb378
+S-014427		内容证据：svnversion 返回码零命中	B	sb378
+S-014428		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014429		内容为模板头 claim 载体，叙事主题零命中	B	sb378
+S-014430		内容证据：计时器 suspend/resume DELAY 零命中	B	sb378

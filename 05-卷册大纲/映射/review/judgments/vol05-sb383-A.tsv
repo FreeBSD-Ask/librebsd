@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014527		题面为证据等级来源模板，零语义	A	sb383
+S-014528		题面证据：qemu 唯一命中 V68-8.7 为 2025 GSoC 语境，boot0／Gapon／Richardson 零命中，语义不符无主导	A	sb383
+S-014529		题面为证据等级来源模板，零语义	A	sb383
+S-014530		题面为证据等级来源模板，零语义	A	sb383
+S-014531		题面证据：DECLARE_MODULE／ifnet／Monthadar 零命中	A	sb383
+S-014532		题面证据：ffserver／libavcodec 零命中，“编译”15 处泛命中无主导	A	sb383
+S-014533		题面证据：换出内存／vm object／换页零命中	A	sb383
+S-014534	V37-1.2	题面证据：UFS1 唯一节题命中 V37-1.2“UFS1 与 UFS2”，dumpfs／memstick 零命中旁证	A	sb383
+S-014535		题面为证据等级来源模板，零语义	A	sb383
+S-014536		题面证据：PCI IDE／基址寄存器零命中	A	sb383
+S-014537		题面为证据等级来源模板，零语义	A	sb383
+S-014538		题面证据：aicasm／libbsd／sys/queue 零命中	A	sb383
+S-014539		题面证据：rfork／RFTSIGZMB 零命中	A	sb383
+S-014540		题面证据：Silicon Image／数据手册／原理图零命中	A	sb383
+S-014541		题面证据：编程器／Galep／烧录零命中	A	sb383
+S-014542		题面证据：calendar／假日／british 零命中	A	sb383
+S-014543	V60-5.5	题面证据：traceroute 唯一节题命中 V60-5.5，RFC2181／主机名零命中旁证	A	sb383
+S-014544		题面证据：ps 补丁零命中（“问题报告”泛命中无主导）	A	sb383
+S-014545		题面证据：键盘发声／keymon 零命中，SunOS 命中均为 OS 本体语境非键盘工具	A	sb383
+S-014546		题面证据：devstat／buildmatch／iostat 零命中	A	sb383
+S-014547		题面证据：题面无 fcntl 词，专有调用零命中	A	sb383
+S-014548		题面证据：IXGBE／ixgbe／万兆零命中	A	sb383
+S-014549		题面证据：ndis 唯一命中 V49-6.2 属 DragonFly 战线，无线网络多候选（V36-11.5／V37-10.9／V41-7.4／V45-12.1）无主导	A	sb383
+S-014550	V37-4.4	题面证据：Giant 命中 V37-4.4“Giant 锁拆除与细粒度并发”，V55-10.2 为 5.x 学术记述非技术本体，前者主导	A	sb383

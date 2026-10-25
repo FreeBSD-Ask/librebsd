@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-014431		内容证据：softc／device_busy／DS_ATTACHED 主题零命中	B	sb379
+S-014432		内容证据：gstat／r234107 主题零命中	B	sb379
+S-014433		内容证据：pf 状态错配／state-mismatch 零 FreeBSD 侧命中（pf 章节皆 OpenBSD 语境）	B	sb379
+S-014434	V37-3.7	内容证据：KVM／虚拟化市场份额主题命中 V37-3.7 Jail／bhyve 与 Linux 容器／KVM 路线比较主导；dom0 零命中；V37-3.4 为对照面	B	sb379
+S-014435		内容证据：dom0／KVM／jails 主题分指 V37-3.4／3.7／3.6 多候选无主导	B	sb379
+S-014436		内容证据：批评公平／社区回应主题零命中，批评命中过散	B	sb379
+S-014437		内容证据：厂商背景主题零命中，批评来源命中过散	B	sb379
+S-014438		内容证据：Rabson／Zec／Selasky 零命中，XEN／VNET 分指 V37-3.4 与 V37-3.3 多候选无主导	B	sb379
+S-014439		内容证据：测试者／Bug 报告者／contributors 主题零命中，边缘者无 FreeBSD 8.x 侧节点	B	sb379
+S-014440		内容证据：边缘者被记录／核心工程师认可主题零命中	B	sb379
+S-014441		内容证据：官方认可／commit log 主题零命中	B	sb379
+S-014442		内容证据：Asterisk／hangup_what 主题零命中	B	sb379
+S-014443		内容为模板头 claim 载体，叙事主题零命中	B	sb379
+S-014444		内容证据：ISDN4BSD／HFC／回声消除器主题零命中（ISDN 缺口）	B	sb379
+S-014445	V68-5.1	内容证据：Google Summer of Code／学生项目主题命中 V68-5.1 FreeBSD 与 GSoC 长程参与主导；i4b 零命中（ISDN 缺口）	B	sb379
+S-014446	V37-10.8	内容证据：电源管理／CPU 频率／DSDT 主题命中 V37-10.8 ACPI 与电源管理主导	B	sb379
+S-014447	V37-10.8	内容证据：acpi_panasonic／厂商驱动锁主题命中 V37-10.8 ACPI 与电源管理主导	B	sb379
+S-014448		内容为模板头 claim 载体，叙事主题零命中	B	sb379
+S-014449	V37-10.8	内容证据：ACPI／中断路由主题命中 V37-10.8 ACPI 与电源管理主导；watchdog 零命中	B	sb379
+S-014450		内容为模板头 claim 载体，叙事主题零命中	B	sb379
+S-014451	V37-10.8	内容证据：关闭 ACPI 可避开／电源管理主题命中 V37-10.8 ACPI 与电源管理主导	B	sb379
+S-014452	V37-10.8	内容证据：debug.suspend_power／ACPI 挂起电源主题命中 V37-10.8 ACPI 与电源管理主导	B	sb379
+S-014453		内容证据：ICH5／RAID／SATA／芯片组主题零命中	B	sb379
+S-014454		内容证据：reboot 停机／固件主题零命中，IBM 命中为商业 UNIX 节非对应	B	sb379
