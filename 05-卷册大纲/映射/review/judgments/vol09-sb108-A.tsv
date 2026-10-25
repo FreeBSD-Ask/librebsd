@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-022002		题面为博通固件加载发生在 config 线程与 AIO 线程更晚的时序解释，无对应节	A	sb108
+S-022003		题面为 nss 插 .arch armv8-a+crypto 的构建变通与不愿提交立场，无直接节	A	sb108
+S-022004	V41-2.4	题面为 RPI earmv6hf 镜像多快照无法启动的回归报告，落 ARM 平台支持的发展节	A	sb108
+S-022005		题面为证据等级来源模板，零语义	A	sb108
+S-022006		题面为 RPi4 8GB UEFI/ACPI 固件 SD 干扰 USB 启动的版本对照，无直接节	A	sb108
+S-022007		题面为证据等级来源模板，零语义	A	sb108
+S-022008		题面为证据等级来源模板，零语义	A	sb108
+S-022009		题面为依据 DNARD 手册实现 shark bit-bang I2C 与 LED 补丁，无直接节	A	sb108
+S-022010	V41-2.4	题面为 Banana Pi 清空 SD 卡让 U-Boot 自动转向 AHCI 启动的方法，落 ARM 平台支持的发展节	A	sb108
+S-022011		题面为 vm.bufmem_hiwater 等 sysctl 调低无效与 tmpfs 不增缓存页，无对应节	A	sb108
+S-022012		题面为证据等级来源模板，零语义	A	sb108
+S-022013		题面为 ahcisata sysctl -w 参数含义与 MIB 来源说明缺失，无对应节	A	sb108
+S-022014		题面为 ahcisata0 软错误与 860 EVO 控制器侧禁用之议转述，无直接节	A	sb108
+S-022015		题面为熵重构补丁重建后 amd64 早期启动仍崩溃的报告，无对应节	A	sb108
+S-022016		题面为谨慎删除 acpiec 与 DSDT 间接引用 EC 为关键设施之提醒，无对应节	A	sb108
+S-022017		题面为 MKLIBCSANITIZER 下 ATF 大量 NULL 指针算术 UB 的报告，无对应节	A	sb108
+S-022018		题面为证据等级来源模板，零语义	A	sb108
+S-022019		题面为证据等级来源模板，零语义	A	sb108
+S-022020		题面为查找变更性能收益归因细粒度锁而非 rbtree 之说，无对应节	A	sb108
+S-022021		题面为证据等级来源模板，零语义	A	sb108
+S-022022		题面为 ioctl 名称映射实现与数值碰撞取舍之回应，无对应节	A	sb108
+S-022023		题面为文件描述符数量差异可解释测试从不失败之认同，无对应节	A	sb108
+S-022024		题面为显示器热插拔应向用户空间报事件与交 powerd/pmf 之议，无对应节	A	sb108
+S-022025		题面为对缓冲轮询而非等中断与 bounce 缓冲使用之答，无对应节	A	sb108

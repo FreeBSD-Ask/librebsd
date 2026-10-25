@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-022170		结构线索：VOP_STRATEGY 件，无结构对应	C	sb115
+S-022171		结构线索：附件损坏件，无结构对应	C	sb115
+S-022172		模板层无结构对应	C	sb115
+S-022173		结构线索：buf 合并件，无结构对应	C	sb115
+S-022174		模板层无结构对应	C	sb115
+S-022175		结构线索：activate/detach 件，无直接节	C	sb115
+S-022176		模板层无结构对应	C	sb115
+S-022177		结构线索：pckbport 件，无直接节	C	sb115
+S-022178		结构线索：module 前缀件，无结构对应	C	sb115
+S-022179		模板层无结构对应	C	sb115
+S-022180	V41-1.4	结构线索：bus_space 线→V41 bus_space 节	C	sb115
+S-022181		模板层无结构对应	C	sb115
+S-022182		模板层无结构对应	C	sb115
+S-022183		模板层无结构对应	C	sb115
+S-022184		结构线索：pmap 学习件，无结构对应	C	sb115
+S-022185		模板层无结构对应	C	sb115
+S-022186		结构线索：ath sysctl 件，无直接节	C	sb115
+S-022187		结构线索：bufq 策略件，无结构对应	C	sb115
+S-022188		结构线索：bge 阈值件，无直接节	C	sb115
+S-022189		结构线索：nfsv4 服务器件，无结构对应	C	sb115
+S-022190		结构线索：mbuf 宏线→V41 TCP/IP 栈节	C	sb115
+S-022191		结构线索：SCSI sense 件，无结构对应	C	sb115
+S-022192		结构线索：mac68k NFS 件，无直接节	C	sb115
+S-022193		结构线索：VOP_REMOVE 件，无结构对应	C	sb115

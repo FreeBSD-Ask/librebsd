@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-010903		Jackson 76 天庭审	B	sb232
-S-010904		IE 绑定 Netscape	B	sb232
-S-010905	V08-4.2	3.0-RELEASE 1998.10.16 默认 ELF	B	sb232
-S-010906	V08-4.7	3.0 首个非 x86 平台	B	sb232
-S-010907		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010908	V08-4.2	a.out→ELF/soft updates/Alpha	B	sb232
-S-010909		1.1.38 版本号	B	sb232
-S-010910		内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb232
-S-010911		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010912		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010913		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010914		内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb232
-S-010915		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010916		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010917		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010918		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010919		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010920		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010921		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010922		内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb232
-S-010923		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010924		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010925		内容为 ports/系统工程细节，零命中（细节级，vol05 后半主体稳定类）	B	sb232
-S-010926		内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb232
+S-010903		内容主题词（DOJ／Judge Jackson／事实认定书／拆分令）目录零命中，反垄断命中属 AT&T／IBM 语境	B	sb232
+S-010904		内容主题词 Netscape 多节点命中（V32／V33／V60），浏览器战争与 IE 份额本体无对应，无主导	B	sb232
+S-010905	V36-3.4	内容主题词“ELF 默认可执行格式／a.out”主导命中 V36-3.4（FreeBSD 3.0 ELF 切换）	B	sb232
+S-010906	V37-10.2	内容主题词“Alpha 架构支持／非 x86 平台”主导命中 V37-10.2	B	sb232
+S-010907	V31-2.3	内容主题词“soft updates／McKusick／fsck”唯一命中 V31-2.3	B	sb232
+S-010908		内容主题词“工程驱动／技术淘汰”零命中，Reno 命中属 4.3BSD-Reno 语境语义不合	B	sb232
+S-010909		内容主题词（Telford／缺乏结构／1.1.38）目录零命中	B	sb232
+S-010910		内容为模板头 claim 载体，叙事主题零命中	B	sb232
+S-010911		内容主题词（OpenBoot ROM／SCSI 适配卡／NCR 卡）目录零命中	B	sb232
+S-010912		内容主题词（UltraSPARC PCI／主桥／SBus）目录零命中	B	sb232
+S-010913		内容主题词（Sun 资助移植机器／Jason Evans）零命中，Hubbard 多节点命中无主导	B	sb232
+S-010914		内容为模板头 claim 载体，叙事主题零命中	B	sb232
+S-010915		内容主题词“MIPS／PowerPC”多卷命中（V37／V40／V41），StrongARM 零命中，无主导	B	sb232
+S-010916		内容主题词（asmacros.h／DATA 宏名／sym 驱动）目录零命中	B	sb232
+S-010917		内容主题词（cvsup／supfile／源码树分支）零命中，Perforce 命中属 GSoC 语境语义不合	B	sb232
+S-010918	V31-2.3	内容主题词“soft updates（软更新）”命中 V31-2.3（软更新问题个案，题面零命中介入）	B	sb232
+S-010919		内容主题词（Solaris 磁盘标签／vtoc／disklabel／坏魔数）目录零命中	B	sb232
+S-010920		内容主题词（dhclient／hme0／isr 号／receive_packet）目录零命中	B	sb232
+S-010921		内容主题词（time_t／struct timeval／大端／boottime）目录零命中	B	sb232
+S-010922		内容为模板头 claim 载体，叙事主题零命中	B	sb232
+S-010923		内容主题词（mountroot／cd9660／acd0a）目录零命中，sparc 命中属 NetBSD portmaster 语境	B	sb232
+S-010924		内容主题词（Ultra 2／SCSI 控制器未获支持）目录零命中	B	sb232
+S-010925		内容主题词“termcap”命中终端文化多节点，Sun 控制台条目语境无主导	B	sb232
+S-010926		内容为模板头 claim 载体，叙事主题零命中	B	sb232

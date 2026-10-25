@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021498		题面为证据等级来源模板，零语义	A	sb87
+S-021499	V41-2.4	题面为 OVERO sdmmc 位宽与卡检测引脚状态补充，落 ARM 平台支持的发展节	A	sb87
+S-021500	V41-2.4	题面为 TI_DM37XX 与 OMAP_3530 差异回应，落 ARM 平台支持的发展节	A	sb87
+S-021501	V41-2.4	题面为 Go 移植 NetBSD/arm 与 setcontext EINVAL 定位，落 ARM 平台支持的发展节	A	sb87
+S-021502	V41-2.4	题面为树莓派上内核原生构建成功的报告，落 ARM 平台支持的发展节	A	sb87
+S-021503	V41-2.4	题面为 Thumb 模式 SVC 编码保留与系统调用号传递，落 ARM 平台支持的发展节	A	sb87
+S-021504		题面为证据等级来源模板，零语义	A	sb87
+S-021505		题面为证据等级来源模板，零语义	A	sb87
+S-021506		题面为乘法指令与位移掩码取舍及 MD 指令要求，无对应节	A	sb87
+S-021507		题面为 crash(8) 的 amd64 支持补丁，无对应节	A	sb87
+S-021508		题面为 mandoc AST 变换后美观输出的期望，无对应节	A	sb87
+S-021509		题面为证据等级来源模板，零语义	A	sb87
+S-021510	V41-6.1	题面为 ffs snapshots 补丁提交与反对清除旧快照，落 FFS 与 BSD 文件系统传统节	A	sb87
+S-021511	V41-6.1	题面为 ffs fsync 补丁与 ffs_spec_fsync 提议，落 FFS 与 BSD 文件系统传统节	A	sb87
+S-021512	V41-6.4	题面为 RAID5 写性能 raw 与块设备悬殊实测，落 RAIDframe 节	A	sb87
+S-021513		题面为 pmf/powerd 主题下的空白短帖，无对应节	A	sb87
+S-021514		题面为证据等级来源模板，零语义	A	sb87
+S-021515		题面为证据等级来源模板，零语义	A	sb87
+S-021516		题面为 linux fadvise64 兼容实现补丁，无对应节	A	sb87
+S-021517		题面为 CFDRIVER_DECL 模块条件编译写法与 ehci 归属，无直接节	A	sb87
+S-021518		题面为 bufq_priocscan 改进与 rbtree 偏好之答，无对应节	A	sb87
+S-021519		题面为 root vnode 属性设置进入 extattr 自动建的死锁承认，无对应节	A	sb87
+S-021520		题面为 uvm 锁不一致线程的附件递交短帖，无对应节	A	sb87
+S-021521		题面为根 fs 扩展属性 fsck 后重挂的崩溃追问，无对应节	A	sb87

@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-010903		无对应	C	sb232
-S-010904		无对应	C	sb232
-S-010905	V08-4.2	4.2	C	sb232
-S-010906	V08-4.7	4.7 邻	C	sb232
-S-010907		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010908	V08-4.2	4.2	C	sb232
-S-010909		无对应	C	sb232
+S-010903		结构线索：旧 100.9 三大法律事件对应 V72 ch5，DMCA 落 5.5，微软反垄断案无对应节	C	sb232
+S-010904		结构线索：旧章法律事件／微软公司史层对应 V72 ch5，浏览器战争与公司史无对应节	C	sb232
+S-010905	V36-3.4	结构线索：旧章 FreeBSD 3.x SMP 时代对应新 V36 ch3，ELF 节直接对应	C	sb232
+S-010906	V37-10.2	结构线索：FreeBSD 硬件架构章历史架构节层级锚定（Alpha 为 FreeBSD 首个非 x86 架构）	C	sb232
+S-010907	V31-2.3	结构线索：soft updates 唯一结构节点 V31-2.3（BSD UNIX 技术专题卷）	C	sb232
+S-010908	V36-3.7	结构线索：旧 100.10 章级综述对应新 V36-3.7 FreeBSD 3.x 定位综合节	C	sb232
+S-010909	V63-3.4	结构线索：Linux 内核开发批评属 1990 年代 Linux 与 BSD 技术路线之争层，锚 V63-3.4	C	sb232
 S-010910		模板层无结构对应	C	sb232
-S-010911		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010912		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010913		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
+S-010911	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010912	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010913	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
 S-010914		模板层无结构对应	C	sb232
-S-010915		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010916		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010917		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010918		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010919		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010920		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010921		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
+S-010915	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010916	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010917	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010918	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010919	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010920	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010921	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
 S-010922		模板层无结构对应	C	sb232
-S-010923		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010924		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
-S-010925		层级线索：系统邮件考古件，无叙事节点对应	C	sb232
+S-010923	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010924	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
+S-010925	V37-10.2	结构线索：freebsd-sparc64 移植邮件层锚定 V37-10.2“Alpha、MIPS、SPARC64 历史架构”（新目录唯一 FreeBSD sparc64 节点）	C	sb232
 S-010926		模板层无结构对应	C	sb232

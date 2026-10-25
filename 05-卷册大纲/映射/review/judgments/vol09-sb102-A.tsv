@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-021858		题面为 USB 描述符不可变的文档依据与伪造值来源，无对应节	A	sb102
+S-021859		题面为 kcov(4) 作 /dev 模块的 mmap 函数卡点求助，无对应节	A	sb102
+S-021860		题面为 XEN 上 CLKF 宏忽略 frame 参数与每 CPU 缓存的建议，无直接节	A	sb102
+S-021861		题面为证据等级来源模板，零语义	A	sb102
+S-021862	V41-9.2	题面为审出补丁缺陷 PK_KMEM 标志位与 kauth 回调覆盖面，落 kauth 权限框架节	A	sb102
+S-021863		题面为证据等级来源模板，零语义	A	sb102
+S-021864		题面为勿随意改结构体与外部 64 位接口之提醒，无对应节	A	sb102
+S-021865		题面为证据等级来源模板，零语义	A	sb102
+S-021866		题面为证据等级来源模板，零语义	A	sb102
+S-021867		题面为证据等级来源模板，零语义	A	sb102
+S-021868		题面为证据等级来源模板，零语义	A	sb102
+S-021869		题面为证据等级来源模板，零语义	A	sb102
+S-021870		题面为证据等级来源模板，零语义	A	sb102
+S-021871		题面为 futex 进展与 robust pthread、pshared 支持清单，无对应节	A	sb102
+S-021872		题面为线程内 fork 后 execve 与 sem_init 返回错误之疑，无对应节	A	sb102
+S-021873		题面为证据等级来源模板，零语义	A	sb102
+S-021874		题面为 GSoC 2019 申请人指引与 DRM2 显卡确认，无直接节	A	sb102
+S-021875		题面为 pool 移除 ioff 参数提案与 SLAB cache coloring 确认，无对应节	A	sb102
+S-021876		题面为 evbarm 挂起 LOCKDEBUG 未触发与 comintr 竞争路径，无直接节	A	sb102
+S-021877		题面为证据等级来源模板，零语义	A	sb102
+S-021878		题面为新增 x86_xsave_offsets/sizes 数组与 CPUID 查询补丁，无对应节	A	sb102
+S-021879		题面为 ehci 附件分离不对称已知缺陷与 cardbus 未反初始化，无直接节	A	sb102
+S-021880		题面为 if_description 移位保持非内核偏移一致的补丁，无直接节	A	sb102
+S-021881		题面为证据等级来源模板，零语义	A	sb102
