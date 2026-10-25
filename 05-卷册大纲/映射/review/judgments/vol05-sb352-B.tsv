@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013783	V37-9.7	内容为 jemalloc arena 算法创新辨析（Hoard／libumem 对比词全零命中），以“分配器/内存管理”主题锚技术节 V37-9.7	B	sb352
+S-013784	V37-9.7	内容为 Evans 是否参考 Hoard 的算法溯源疑点，主题词“分配器/内存管理”命中锚 V37-9.7	B	sb352
+S-013785	V37-9.7	内容载 jemalloc 集成为默认 libc 内存分配器并替代 phk malloc，“jemalloc”命中且集成主题主导 V37-9.7	B	sb352
+S-013786	V37-9.7	内容为集成工程过程与 libc malloc/free 接口修改，主题词“jemalloc/内存”锚 V37-9.7	B	sb352
+S-013787	V37-9.7	内容为集成决策辨析（phk malloc 去留、兼容性），主题词“jemalloc”命中锚 V37-9.7	B	sb352
+S-013788	V37-9.7	内容为集成史料疑点（commit log、phk 反应），主题词“jemalloc”命中锚 V37-9.7	B	sb352
+S-013789	V37-9.7	内容载 Firefox 3 采纳 jemalloc 为默认分配器（Mozilla 首个大规模部署），“jemalloc”命中锚 V37-9.7	B	sb352
+S-013790	V37-9.7	内容载 Facebook 服务器采用 jemalloc（Redis/Twitter 跟进），“jemalloc”主题命中锚 V37-9.7	B	sb352
+S-013791	V56-1.4	内容为 BSD 许可证允许代码散逸的话语辨析，主题词“包含 BSD 代码”命中 V56-1.4	B	sb352
+S-013792	V56-1.7	内容为散逸史料疑点（用于哪些项目、是否回流、补丁贡献），主题词对应“BSD 扩散史的史料层级” V56-1.7	B	sb352
+S-013793	V38-3.5	内容为 Evans 文档自我限定跨平台价值，主题词“Evans”命中人物传记节 V38-3.5	B	sb352
+S-013794	V37-11.9	内容为 Bugzilla 缺陷记录与缺陷跟踪平台，主题词“Bugzilla/缺陷”命中 V37-11.9	B	sb352
+S-013795	V37-9.7	内容含“jemalloc 改进记录”且为对 jemalloc 的批评分析，“jemalloc”命中锚 V37-9.7	B	sb352
+S-013796	V37-9.7	内容含“freebsd-hackers jemalloc criticism threads”，“jemalloc”命中锚 V37-9.7	B	sb352
+S-013797	V38-3.5	内容为 Evans 从 FreeBSD 到 Facebook 的工程传记（arena-based、工业级蜕变），主题词“Evans”命中 V38-3.5	B	sb352
+S-013798	V37-9.7	内容为 glibc 未集成 jemalloc 与 Drepper 反对，“jemalloc”命中且未采纳史属分配器技术节 V37-9.7	B	sb352
+S-013799	V37-9.7	内容为 tcmalloc 与 jemalloc 竞争比较，“jemalloc”命中锚 V37-9.7	B	sb352
+S-013800	V37-9.7	内容含“glibc mailing list jemalloc discussions”，“jemalloc”命中锚 V37-9.7	B	sb352
+S-013801	V37-9.7	内容为 Drepper 反对理由与“jemalloc 在 Linux 是否真失败”疑点，“jemalloc”命中锚 V37-9.7	B	sb352
+S-013802	V37-9.7	内容为 jemalloc 早期采用者年表（Firefox/FreeBSD/Facebook/Redis/Rust），“jemalloc”命中且技术节主导 V37-9.7	B	sb352
+S-013803	V39-5.7	内容为 Bug 报告者/平台移植者/文档翻译者等边缘贡献层，主题词对应“非 committer 贡献者的历史位置” V39-5.7	B	sb352
+S-013804	V38-3.5	内容为贡献者谱系梳理（Evans 主创居首，Mozilla/FreeBSD/Facebook/Rust 工程师），“Evans”命中 V38-3.5	B	sb352
+S-013805	V39-5.7	内容为边缘者是否被记录的史料疑点（contributors 列表、commit log），主题词“贡献者”命中 V39-5.7	B	sb352
+S-013806	V37-9.7	内容为 Linux ptmalloc 与 Solaris libumem 分配器比较（ptmalloc/libumem/Bonwick 全零命中），以“内存”主题锚 V37-9.7	B	sb352

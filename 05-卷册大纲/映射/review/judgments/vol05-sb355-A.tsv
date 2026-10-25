@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-013855		题面“proftpd PassivePorts”零命中，FTP 命中均为分发镜像面非主导	A	sb355
+S-013856	V52-6.3	题面“三向桥接防火墙”命中 V52-6.3 netgraph、桥接节，唯一候选	A	sb355
+S-013857		题面“dummynet/if_bridge 链路仿真”零命中，链路聚合非链路仿真，无主导	A	sb355
+S-013858		题面“IPFIREWALL_DEFAULT_TO_ACCEPT/check-state”零命中	A	sb355
+S-013859		题面“畸形花括号解析”零命中	A	sb355
+S-013860		题面为证据等级来源模板，零语义	A	sb355
+S-013861		题面为证据等级来源模板，零语义	A	sb355
+S-013862		题面为证据等级来源模板，零语义	A	sb355
+S-013863		题面“established 规则顺序”零命中	A	sb355
+S-013864		题面为证据等级来源模板，零语义	A	sb355
+S-013865		题面“00000 规则/8-STABLE”零命中（00000 命中 V07-10.1 为编号字符串非实义）	A	sb355
+S-013866		题面“missing action/ipfw2.c”零命中	A	sb355
+S-013867		题面“防火墙性能/1.1mpps/10Gbit”零命中，防火墙三候选无主导	A	sb355
+S-013868		题面为证据等级来源模板，零语义	A	sb355
+S-013869		题面为证据等级来源模板，零语义	A	sb355
+S-013870		题面为证据等级来源模板，零语义	A	sb355
+S-013871		题面“MAC any any 计数”命中均为 MAC 强制访问控制面，非主导	A	sb355
+S-013872		题面“ipfw_chk/5% CPU”零命中	A	sb355
+S-013873		题面“有状态内核 NAT/hairpin”零命中（NAT 命中为 GNATS 字符串非实义）	A	sb355
+S-013874		题面为证据等级来源模板，零语义	A	sb355
+S-013875		题面为证据等级来源模板，零语义	A	sb355
+S-013876		题面“flow 表项 ip:mask/哈希”零命中	A	sb355
+S-013877		题面“255.255.255.255/32 表/BAD_ADDR_TBL”零命中	A	sb355
+S-013878		题面“set disable/enable 规则集切换”零命中	A	sb355
