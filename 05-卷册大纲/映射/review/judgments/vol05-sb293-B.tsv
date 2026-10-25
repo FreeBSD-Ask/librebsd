@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012367	V37-10.2	内容主题词 alpha 架构软驱 hint 补丁命中 FreeBSD 硬件架构支持章 Alpha 历史架构节	B	sb293
+S-012368	V37-10.2	内容为 alpha 平台 mozilla 降级后运行稳定报告，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012369	V37-10.2	内容为 AS4100 四核 5.1-RELEASE 编译失败报告，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012370	V37-10.2	内容主题词 alpha 构建因 rman.h 回退中断，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012371	V37-10.2	内容为 compaq-cc 同一 ld.so 问题补丁自陈，alpha 工具链主题命中 Alpha 历史架构节	B	sb293
+S-012372	V37-10.2	内容为 Miata GL 5.4-RC2 不启动报告，alpha 硬件启动主题命中 Alpha 历史架构节	B	sb293
+S-012373	V37-10.2	内容为 AS4100 dc 卡 autoselect 与线路速率讨论，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012374		内容 time_t／ITU-R TF.460-6 主题词在新大纲节题零有效命中，无落点	B	sb293
+S-012375	V37-10.2	内容为 PC164 二进制安装 5.4 后 mozilla 转储崩溃报告，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012376		内容 Vinum／dev_t 尺寸主题词在新大纲节题零命中，稳定分支线索弱于主旨，无落点	B	sb293
+S-012377		内容为模板头 claim 载体，叙事主题零命中	B	sb293
+S-012378	V37-10.2	内容为 Compaq C 编译器编译 ksh 报告，alpha 工具链主题命中 Alpha 历史架构节	B	sb293
+S-012379	V37-10.2	内容为 Linuxulator 2.4.2 在 compaq-cc（alpha）上验证报告，alpha 平台语境命中 Alpha 历史架构节	B	sb293
+S-012380		内容为模板头 claim 载体，叙事主题零命中	B	sb293
+S-012381	V37-6.3	内容主题词 make world 问题命中 V37-6.3 buildworld 与用户空间构建	B	sb293
+S-012382	V61-2.3	内容 sysctl MIB 扩展后 top 不再依赖 kmem 的权限边界主题命中 V61-2.3 securelevel 与 BSD 权限边界	B	sb293
+S-012383	V61-2.3	内容含 securelevel 为 2 时 top 验证，命中 V61-2.3 securelevel 与 BSD 权限边界	B	sb293
+S-012384	V37-10.2	内容为 DS10 4.5-PRERELEASE 上确认 ifconfig unaligned 问题，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012385	V37-1.4	内容 GEOM 补丁可用性询问主题命中 V37-1.4 GEOM 存储抽象层的形成	B	sb293
+S-012386	V37-1.4	内容为 XP1000 验证 GEOM 语境与 ATA 芯片问题，命中 V37-1.4 GEOM 存储抽象层的形成	B	sb293
+S-012387		内容仅 ROW_MINE 块头无叙事主题词，零命中	B	sb293
+S-012388	V37-10.2	内容为 FreeBSD/Alpha 4.5-RELEASE 上 cvsup 核心转储 PR，alpha 平台主题命中 Alpha 历史架构节	B	sb293
+S-012389		内容 cvsup 源码树更新与构建报错双候选（V69-4.1／V37-6.3）无主导	B	sb293
+S-012390	V37-10.2	内容为 Alphastation 250 安装 4.5-RELEASE 后 agp 模块构建报错，alpha 平台主题命中 Alpha 历史架构节	B	sb293

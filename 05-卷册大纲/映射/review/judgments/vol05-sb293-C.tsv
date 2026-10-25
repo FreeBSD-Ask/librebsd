@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012367	V37-10.2	结构线索：freebsd-alpha 战线平台配置邮件，新目录设 FreeBSD 硬件架构支持章 Alpha 历史架构专节	C	sb293
+S-012368	V37-10.2	结构线索：freebsd-alpha 战线平台运行邮件，对应 Alpha 历史架构专节	C	sb293
+S-012369	V37-10.2	结构线索：freebsd-alpha 战线平台编译邮件，对应 Alpha 历史架构专节	C	sb293
+S-012370	V37-10.2	结构线索：freebsd-alpha 战线构建中断邮件，对应 Alpha 历史架构专节	C	sb293
+S-012371	V37-10.2	结构线索：freebsd-alpha 战线 compaq-cc 工具链邮件，对应 Alpha 历史架构专节	C	sb293
+S-012372	V37-10.2	结构线索：freebsd-alpha 战线硬件启动邮件，对应 Alpha 历史架构专节	C	sb293
+S-012373	V37-10.2	结构线索：freebsd-alpha 战线 AS4100 网卡邮件，对应 Alpha 历史架构专节	C	sb293
+S-012374	V36-5.1	结构线索：time_t 议题属 5.x 内核基础设施重建，对应 V36 第 5 章 5.1 从增量开发转向内核基础设施重建	C	sb293
+S-012375	V37-10.2	结构线索：freebsd-alpha 战线平台安装邮件，对应 Alpha 历史架构专节	C	sb293
+S-012376	V36-5.1	结构线索：dev_t 尺寸修正属 5.x 内核基础设施重建，对应 V36 第 5 章 5.1	C	sb293
+S-012377		模板层无结构对应	C	sb293
+S-012378	V37-10.2	结构线索：freebsd-alpha 战线工具链编译邮件，对应 Alpha 历史架构专节	C	sb293
+S-012379	V37-10.2	结构线索：freebsd-alpha 战线 compaq-cc 验证邮件，对应 Alpha 历史架构专节	C	sb293
+S-012380		模板层无结构对应	C	sb293
+S-012381	V37-6.3	结构线索：makeworld 问题属基本系统构建专题，对应 V37 第 6 章 6.3 buildworld 与用户空间构建	C	sb293
+S-012382	V61-2.3	结构线索：sysctl MIB 扩展与 top 权限边界属安全工程专题，对应 V61-2.3 securelevel 与 BSD 权限边界	C	sb293
+S-012383	V61-2.3	结构线索：securelevel 验证与 top 权限边界邮件，对应专节 V61-2.3	C	sb293
+S-012384	V37-10.2	结构线索：freebsd-alpha 战线 DS10 平台确认邮件，对应 Alpha 历史架构专节	C	sb293
+S-012385	V37-1.4	结构线索：GEOM 补丁邮件属存储体系专题，对应 V37-1.4 GEOM 存储抽象层的形成	C	sb293
+S-012386	V37-1.4	结构线索：GEOM 验证与 ATA 硬件邮件属存储体系专题，对应 V37-1.4	C	sb293
+S-012387	V37-1.4	结构线索：相邻件 107.1.172 为同日 GEOM 验证同串邮件，层级锚定 V37-1.4	C	sb293
+S-012388	V37-10.2	结构线索：FreeBSD/Alpha 4.5-RELEASE 平台缺陷邮件，对应 Alpha 历史架构专节	C	sb293
+S-012389	V37-6.1	结构线索：cvsup 抓取 RELENG_4_5 重建源码树邮件，对应 V37-6.1 FreeBSD 源代码树结构	C	sb293
+S-012390	V37-10.2	结构线索：Alphastation 250 平台安装构建邮件，对应 Alpha 历史架构专节	C	sb293

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012415	V37-10.2	内容 Alpha 平台 gif0 tunnel／freenet6 配置主题命中 V37-10.2 历史架构节	B	sb295
+S-012416	V37-10.2	内容 Alpha 4.7 gifconfig 与 x86 行为差异主题命中 V37-10.2 历史架构节	B	sb295
+S-012417	V37-10.2	内容 Alpha 平台 vr NIC 驱动崩溃与 miibus 主题命中 V37-10.2	B	sb295
+S-012418	V37-10.2	内容 Alpha 平台 pccard_kmem 与 bus_alloc_resource 映射类型主题命中 V37-10.2	B	sb295
+S-012419	V37-10.2	内容 Alpha 内核启动 panic 与调试跟踪主题命中 V37-10.2（同型件 S-012265 先例）	B	sb295
+S-012420		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012421	V37-10.2	内容 Alpha 战线编译器对齐与结构打包原语（-zp）主题命中 V37-10.2（同型件 crtfastmath.o 先例）	B	sb295
+S-012422	V37-10.2	内容 Alpha 平台 SRM 控制台 SET CONSOLE 主题命中 V37-10.2（同型件 S-012264 先例）	B	sb295
+S-012423	V37-10.2	内容 Alpha 内核栈回溯与软更新恐慌调试主题命中 V37-10.2	B	sb295
+S-012424	V37-4.4	内容 Giant Lock 分解约 400 细粒度锁与锁封装策略，对应“Giant 锁拆除与细粒度并发”	B	sb295
+S-012425		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012426		内容主题词 uma_zfree／savecore 零命中；ddb 词命中 V37-9.5 系调试体系叙事，与本件取证失灵细节不符，留空	B	sb295
+S-012427		内容主题词 libc_r／libunwind／EPC 零命中；“线程”命中 V37-4.5 系内核线程模型叙事，与本件栈展开抉择细节不符，留空	B	sb295
+S-012428		内容 PowerPC 词仅命中 NetBSD 语境两节（V40-4.3／V41-2.2），与本件 FreeBSD ppc 战线语义不符，留空（同型件 S-012258／259 先例）	B	sb295
+S-012429	V37-4.2	内容 APIC_ID_MASK 扩展修复 SW7500CW2 主板 SMP 问题主题命中 V37-4.2“FreeBSD SMP 初期实现”（NetBSD 语境异题排除）	B	sb295
+S-012430		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012431		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012432		内容 6.x／7.0 SMP 稳定性报告命中“稳定”多节（V36-6.9／V37-12.3）且虚拟化语境异题，无主导，留空	B	sb295
+S-012433	V37-4.4	内容 rwlock 等待者饥饿与 sx 锁做法移植主题命中 V37-4.4“Giant 锁拆除与细粒度并发”（同型件 S-012220 先例）	B	sb295
+S-012434		内容主题词原子读写／内存屏障零命中；IA-64 词命中 V37-10.3 系平台支持生命周期叙事，与本件 SMP 原子原语语义辨析不符，留空	B	sb295
+S-012435		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012436		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012437		内容为模板头 claim 载体，叙事主题零命中	B	sb295
+S-012438		内容主题词 isp／kern_sig／递归互斥锁 panic 零节题命中（“互斥”命中系 W^X 异题），细节级留空	B	sb295

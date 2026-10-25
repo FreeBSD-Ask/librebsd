@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012391	V37-10.2	内容为 Alpha 工作站机型识别（UW 533au 即 Ultimate Workstation、与 AS 1200 几乎相同），alpha 平台硬件主题命中 V37-10.2	B	sb294
+S-012392	V37-10.2	内容为 TGA 显示驱动合入构建流程与 syscons 架构（alpha 战线补丁，alpha 与 x86 均试过），alpha 平台主题命中 V37-10.2	B	sb294
+S-012393		内容为模板头 claim 载体，叙事主题零命中	B	sb294
+S-012394	V37-10.2	内容为 TGA framebuffer 支持合入与串口控制台轻量测试（alpha 平台驱动线，望进 4.6-RELEASE），主题命中 V37-10.2	B	sb294
+S-012395		内容为模板头 claim 载体，叙事主题零命中	B	sb294
+S-012396		内容仅存档行注标记，叙事主题零命中（细节级邮件）	B	sb294
+S-012397	V37-10.2	内容为 alpha 磁盘分区布局（根分区须在 a 分区、swap 前置效果不佳），alpha 平台主题命中 V37-10.2	B	sb294
+S-012398	V37-10.2	内容为 alpha 根分区须在 a 分区与 boot dkc100 引导失败（分区纪律），alpha 平台主题命中 V37-10.2	B	sb294
+S-012399	V37-10.2	内容为 4.5-RELEASE 光盘安装与 bash／XFree86-4／cvsup 包安装（alpha 平台安装经历），主题命中 V37-10.2	B	sb294
+S-012400	V37-10.2	内容为 alpha pws 500au 双盘布局与 SRM 引导失败（与 Tru64 5.1a 共存），alpha 平台主题命中 V37-10.2	B	sb294
+S-012401	V37-10.2	内容为 UP1000／UP2000 克隆机可运行性讨论（alpha 平台机型），主题命中 V37-10.2	B	sb294
+S-012402	V37-10.2	内容为 DCG 机箱属 Alpha 克隆机（3U／5U 机架式、UP1000／UP2000 基），alpha 平台机型主题命中 V37-10.2	B	sb294
+S-012403		内容仅存档行注标记，叙事主题零命中（细节级邮件）	B	sb294
+S-012404	V37-10.2	内容为 ksh93-20020317 在 alpha 工作正常并提供二进制包（alpha 平台可用性），主题命中 V37-10.2	B	sb294
+S-012405		内容为模板头 claim 载体，叙事主题零命中	B	sb294
+S-012406	V37-10.2	内容为 4.6.1-RC1 disc1 ISO 发布至 alpha FTP 目录并征集测试（alpha 平台发行测试），平台词主导命中 V37-10.2（发布工程 V37-6.8 为次候选）	B	sb294
+S-012407		内容为模板头 claim 载体，叙事主题零命中	B	sb294
+S-012408		内容为模板头 claim 载体，叙事主题零命中	B	sb294
+S-012409	V37-10.2	内容为 164LX／AlphaStation 200 上用 Compaq 编译器／CPML／GCC 3.x 构建世界与内核的可行性（alpha 平台工具链），平台词主导命中 V37-10.2（工具链 V37-8.2 为次候选）	B	sb294
+S-012410		内容为 AS 200 4/166 上浏览器可用性问题（网景通讯者 4.78 频繁崩溃），Netscape 仅命中开源运动浏览器战争语境（V32／V33）非本件事，alpha 应用可用性无对应节点，留空	B	sb294
+S-012411	V37-10.2	内容为 5.0-CURRENT Alpha 平台 strtod 浮点异常缺陷报告（PR alpha/43567），alpha 平台主题命中 V37-10.2	B	sb294
+S-012412	V37-10.2	内容为请 alpha 当前版用户协助测试 /usr/src/lib/libdisk（alpha 平台磁盘基础设施测试），主题命中 V37-10.2	B	sb294
+S-012413	V37-10.2	内容为 PR alpha/43567 浮点异常重复性讨论（与 12623／17032 对比，alpha 平台缺陷线），主题命中 V37-10.2	B	sb294
+S-012414	V37-10.2	内容为 Matrox Millennium II 卡 X Video 扩展（Alpha Linux 上开发）询问 FreeBSD 可行性（alpha 平台图形支持），平台词主导命中 V37-10.2（XFree86 图形栈 V37-12.12 为次候选）	B	sb294

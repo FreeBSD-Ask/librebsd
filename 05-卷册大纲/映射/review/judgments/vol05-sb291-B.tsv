@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012319		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012320		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012321		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012322	V37-1.4	内容 ATA RAID 探测代码在部分 i386 机器同样崩溃（GEOM 问题），主题命中 V37-1.4 GEOM 存储抽象层（同型件 107.1.10 先例）	B	sb291
+S-012323		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012324	V37-10.2	内容 GCC 3.1 CPP 把 =op( 当作单一 token 与 tsunami_pci.c 预处理改动，alpha 平台工具链问题命中 V37-10.2（同型件 crtfastmath.o 工具链先例）	B	sb291
+S-012325		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012326	V37-10.2	内容 Gnome 在 alpha PWS 500au 编不通过，alpha 平台 ports 构建失败命中 V37-10.2	B	sb291
+S-012327	V37-10.2	内容 alpha 平台 Netscape 安装话题与 Miata ports 测试机，alpha 平台 ports 安装语境命中 V37-10.2	B	sb291
+S-012328		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012329	V37-10.2	内容新编译器 atomic 内联处理与启动期崩溃（alpha 平台引导线程），alpha 工具链问题命中 V37-10.2	B	sb291
+S-012330		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012331	V37-9.5	内容对 alpha 主机内核调试镜像运行调试器并列出命令，kgdb 调试主题命中 V37-9.5“ddb、kgdb 与内核调试”	B	sb291
+S-012332	V37-10.2	内容 -current 上 libc_r 需 C++ 支持库、libc 需 libgcc 的链接依赖（alpha 平台线程），命中 V37-10.2（工具链链接为次候选 V37-8.4）	B	sb291
+S-012333		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012334	V37-10.2	内容 DCG（Alpha 硬件厂商）官网 URL 与“Neat boxes”赞语，alpha 历史硬件语境命中 V37-10.2	B	sb291
+S-012335	V37-9.5	内容 unexpected machine check 诊断与 gdb 加符号打断点定位，内核调试主题命中 V37-9.5（XFree86 为触发进程，图形栈 V37-12.12 为次候选）	B	sb291
+S-012336	V37-10.2	内容 alpha 上 mozilla 包构建段错误（do-build 目标），alpha 平台构建失败命中 V37-10.2	B	sb291
+S-012337		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012338	V37-10.2	内容 wi 驱动补丁修 alpha／sparc64 逐字节比较 MAC 避免未对齐访问（PR alpha/39560），平台架构问题命中 V37-10.2（无线驱动 V37-10.9 为次候选）	B	sb291
+S-012339	V37-10.2	内容 164LX EB164 装 3DLabs GVX1 显卡无法开机与 SRM 升级，alpha 历史硬件语境命中 V37-10.2（GPU 支持 V37-10.9 为次候选，同型件 SRM 控制台先例）	B	sb291
+S-012340		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012341		内容为模板头 claim 载体，叙事主题零命中	B	sb291
+S-012342	V37-10.2	内容 PREFER_COMPAQ_CC=yes 用 ccc 构建 www/mmosaic，alpha 平台工具链构建命中 V37-10.2（同型件 crtfastmath.o 工具链先例）	B	sb291

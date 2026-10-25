@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012343	V37-10.2	内容 alpha 平台（PWS 500au）xdm/kdm 启动与 getty 细节，平台主题命中 V37-10.2 历史架构节（FreeBSD 语境）	B	sb292
+S-012344		内容为模板头 claim 载体，叙事主题零命中	B	sb292
+S-012345		内容为模板头 claim 载体，叙事主题零命中	B	sb292
+S-012346		内容为模板头 claim 载体，叙事主题零命中	B	sb292
+S-012347	V37-1.5	内容 ispfw.ko 加载后 isp0／da 设备分配不变（got_bus、transport error），SCSI 设备访问主题对应 V37-1.5 CAM 节	B	sb292
+S-012348	V37-6.4	内容 make.conf CPUTYPE=ev6 致内核编译中断而 buildworld 正常，内核构建主题对应 V37-6.4 buildkernel 节	B	sb292
+S-012349	V37-6.3	内容 make buildworld 时 pmap_remove_pages 恐慌，buildworld 主题唯一命中 V37-6.3	B	sb292
+S-012350		内容为模板头 claim 载体，叙事主题零命中	B	sb292
+S-012351	V37-10.2	内容 PC164／SRM／dqa0 的 alpha 平台 IDE 引导 Machine Check，平台主题命中 V37-10.2（FreeBSD 语境）	B	sb292
+S-012352	V37-10.2	内容软盘引导 /boot/loader 崩溃（题面旁证 Alpha 平台），平台主题命中 V37-10.2	B	sb292
+S-012353		内容为模板头 claim 载体，叙事主题零命中	B	sb292
+S-012354	V37-4.2	内容 5.0-CURRENT SMP 下时钟偏差 2 倍（sleep 10 耗时 20 秒、interrupt.c 补丁），SMP 主题命中 V37-4.2 FreeBSD SMP 初期实现	B	sb292
+S-012355	V36-3.5	内容 linux 依赖 osf1、osf1 依赖 sysv 模块组的依赖加载机制（4.x 无好办法），内核模块主题对应 V36-3.5 内核模块化与运行时系统扩展	B	sb292
+S-012356	V37-9.7	内容 UMA panic（Duplicate free 于 VMSPACE 分区、uma_dbg_free 到 swapout_procs），内存分配主题对应 V37-9.7 内存管理（alpha 平台为旁支 V37-10.2）	B	sb292
+S-012357		内容 boot1 引导算法与串口线路噪声分析，boot1／引导块零节题命中，平台线索不足，留空	B	sb292
+S-012358	V37-11.4	内容 bento（tinderbox 包构建）alpha-5 gdm2 错误日志可复现，包构建测试主题对应 V37-11.4（alpha 平台为旁支）	B	sb292
+S-012359		内容为模板头 claim 载体，叙事主题零命中	B	sb292
+S-012360	V37-10.2	内容 AlphaServer 800 5/333 与 Pentium Pro 200 整树编译速度对比，alpha 平台主题命中 V37-10.2	B	sb292
+S-012361	V37-9.7	内容 fatal kernel trap 0x2 内存管理错误，“内存管理”唯一命中 V37-9.7（Miata 为 alpha 机种旁证）	B	sb292
+S-012362	V37-10.2	内容 alpha 平台 gcc -mieee 浮点选项默认化提议（gcc 类节散见多卷异语境），平台主题主导 V37-10.2	B	sb292
+S-012363	V37-10.2	内容 4.8-STABLE 上 Alpha 平台 Snort 段错误运行问题，平台主题命中 V37-10.2	B	sb292
+S-012364		内容仅模板头 claim 载体，叙事主题零命中	B	sb292
+S-012365	V37-10.2	内容 JPSNAP cdboot 镜像经 SRM（dka400）引导失败，alpha 平台主题命中 V37-10.2	B	sb292
+S-012366	V37-10.2	内容 pandora.alpha.box（alpha 机）5.1 测试版 gcc genattrtab 构建失败，平台主题命中 V37-10.2	B	sb292

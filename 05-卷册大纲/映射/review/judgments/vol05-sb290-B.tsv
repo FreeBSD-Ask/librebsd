@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-012295	V37-10.2	内容 Alpha pmap_ts_referenced 补丁（pv_list 遍历、PG_FOR pte 检查）主题命中 V37-10.2 历史架构节（FreeBSD 语境，同型件 sb288 Alpha 工具链修复先例）	B	sb290
+S-012296		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012297	V37-10.2	内容 PWS 500a 装 4.3 RELEASE 与 ports INDEX／/stand/sysinstall 安装流程主题命中 V37-10.2（同型件 sb288 Alpha bsdlabel 安装流程先例）	B	sb290
+S-012298		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012299		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012300	V37-10.2	内容 AlphaServer 8400 引导日志与 loader 找不到可引导内核主题命中 V37-10.2（同型件 sb288 Alpha SRM 控制台与引导输出先例）	B	sb290
+S-012301	V37-12.12	内容 XFree86 xf86pciBus.c ValidatePci 与 mga_driver.c MMIO 显卡识别调试主题命中 V37-12.12 BSD 桌面图形栈（同型件 sb288 S-012263 XFree86+Matrox 先例，alpha 平台为旁证）	B	sb290
+S-012302	V37-10.2	内容 Miata GL 上 4.3-Release 重编内核 make depend 软链报错主题命中 V37-10.2（alpha 平台内核构建，Miata 硬件先例 sb288 S-012262）	B	sb290
+S-012303	V37-10.2	内容 SRM 认不出 IDE 光驱与 Miata 500a 4.4 CD 无盘引导安装主题命中 V37-10.2（同型件 sb288 Alpha SRM 控制台与安装介质先例）	B	sb290
+S-012304		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012305		内容主题词 glib／POSIX threads 用户态应用构建失败零命中（应用构建细节级），留空	B	sb290
+S-012306		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012307	V37-10.2	内容 alpha mprotect 慢定位 rtld_elf relocate_objects 与 Doug Rabson 修 rtld bug 主题命中 V37-10.2（alpha 平台运行时调试，同型件 sb288 Alpha 崩溃调试先例）	B	sb290
+S-012308		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012309	V37-10.2	内容 21066 rev2 主板只装 Windows NT 引导菜单无法进 SRM 主题命中 V37-10.2（alpha 固件与 SRM 提示符，同型件 sb288 Alpha SRM 控制台先例）	B	sb290
+S-012310		内容主题词 ppp／libalias 用户态网络崩溃细节零命中（用户态网络细节级），留空	B	sb290
+S-012311		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012312	V37-10.2	内容 jdk-1.1.8 仅 i386 无法用于 alpha 致 cocoon 安装失败主题命中 V37-10.2（alpha 平台包可得性缺失叙事）	B	sb290
+S-012313	V37-10.2	内容 getcontext LEAF 定义调用他函数破坏 ra 寄存器主题命中 V37-10.2（alpha ABI 修补，同型件 sb288 Alpha crtfastmath.o 工具链修复先例）	B	sb290
+S-012314		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012315	V37-10.2	内容 freebsd-alpha 战线 binutils 更改回退建议主题命中 V37-10.2（alpha 工具链修复，同型件 sb288 Alpha 工具链修复先例；binutils 词命中 V16/V63 皆异题）	B	sb290
+S-012316		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012317		内容为模板头 claim 载体，叙事主题零命中	B	sb290
+S-012318	V37-10.2	内容 PC164 上 -CURRENT 引导与 ko 模块预加载触发未对齐访问陷阱停在 sysctl_find_oidname 主题命中 V37-10.2（alpha 内核调试，同型件 sb288 Alpha 崩溃调试先例）	B	sb290
