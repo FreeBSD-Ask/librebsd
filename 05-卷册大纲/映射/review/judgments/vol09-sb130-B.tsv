@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-023130	V41-4.6	主题词 proc_lock mutex 内核锁维护面	B	sb130
-S-023131	V41-7.1	主题词 sctp socket 协议栈面	B	sb130
-S-023132		内容为模板头 claim 载体	B	sb130
-S-023133	V41-4.6	主题词内核机制维护同域内核维护面	B	sb130
-S-023134		主题词信号投递无对应节零命中	B	sb130
-S-023135	V41-6.5	主题词 cgd 块大小缺陷同域 CGD 框架	B	sb130
-S-023136	V41-1.3	主题词磁盘标签 wedge 同域设备抽象面	B	sb130
-S-023137	V41-5.1	主题词 build.sh makefs 同域交叉构建	B	sb130
-S-023138		内容为模板头 claim 载体	B	sb130
-S-023139	V41-12.6	主题词 pkgsrc MFS 批量构建面	B	sb130
-S-023140		内容为模板头 claim 载体	B	sb130
-S-023141		内容为模板头 claim 载体	B	sb130
-S-023142	V41-6.3	主题词 WAPBL NCQ 同域 WAPBL 日志	B	sb130
-S-023143		主题词页面缓存 fsync 无对应节	B	sb130
-S-023144	V41-4.6	主题词内存屏障原子操作同域内核维护	B	sb130
-S-023145		内容为模板头 claim 载体	B	sb130
-S-023146	V41-4.5	主题词 page 写 I/O 同域 VFS 驱动面	B	sb130
-S-023147	V41-1.3	主题词 dump 设备 bdevsw 同域设备抽象	B	sb130
-S-023148	V41-7.1	主题词 pktq 网络队列同域网络栈	B	sb130
-S-023149	V41-6.7	主题词 ext2fs 互操作同域外部文件系统生态	B	sb130
-S-023150	V40-6.4	主题词 ARM 多核同域 ARM 平台扩展	B	sb130
-S-023151	V41-9.7	主题词 CGD 加密算法同域磁盘加密	B	sb130
-S-023152		主题词 time_t 2038 无对应节	B	sb130
-S-023153	V41-8.6	主题词 pkgsrc 分支移除同域长期维护	B	sb130
+S-022530	V41-4.3	内容 mclpl 挂起与 kva 回收落 SMP 架构节	B	sb130
+S-022531	V41-4.3	内容最大 CPU 数与位掩码落 SMP 架构节	B	sb130
+S-022532	V41-1.5	内容 PCMCIA 逐卡实测属驱动支持面	B	sb130
+S-022533		｜内容为模板头 claim 载体	B	sb130
+S-022534	V41-4.5	内容 vnode 操作锁标注落 VFS MP-safe 节	B	sb130
+S-022535	V41-6.7	内容 UDF 下 getdents 缺陷落外部文件系统节	B	sb130
+S-022536	V41-1.5	内容 PCMCIA 串口驱动修复落驱动模型节	B	sb130
+S-022537		｜内容为模板头 claim 载体	B	sb130
+S-022538	V41-1.3	内容 PCI 扩展 ROM 访问落设备抽象节	B	sb130
+S-022539	V41-6.1	内容缓冲嵌套标志与缓冲缓存线同域	B	sb130
+S-022540	V41-1.4	内容 bus_space 取值设计落 bus_dma 节	B	sb130
+S-022541		｜内容为模板头 claim 载体	B	sb130
+S-022542	V41-6.1	内容缓冲缓存 AGE 列表落 FFS 传统节	B	sb130
+S-022543		｜内容为模板头 claim 载体	B	sb130
+S-022544	V41-4.7	内容调度器锁冲突落调度器节	B	sb130
+S-022545		｜内容为模板头 claim 载体	B	sb130
+S-022546	V41-12.2	内容 CVS 检出与 sysvbfs 同域	B	sb130
+S-022547		｜内容为模板头 claim 载体	B	sb130
+S-022548	V41-9.1	内容 security 节点命名之辩落安全设计节	B	sb130
+S-022549	V41-9.1	内容 securelevel 保护逻辑落安全设计节	B	sb130
+S-022550	V41-1.3	内容 PCMCIA CIS 解析失败落设备抽象节	B	sb130
+S-022551		｜内容 ddb 可用性取舍无本卷专节可落	B	sb130
+S-022552	V41-1.3	内容设备编号与初始化顺序落设备抽象节	B	sb130
+S-022553	V41-2.1	内容 gcc 2/3 与 VAX 平台线同域	B	sb130

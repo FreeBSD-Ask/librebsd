@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-023370	V41-8.6	内容为 libdrm buildlink3 与 PLIST 检查，落长期维护节	B	sb140
-S-023371	V41-8.7	内容为 ca-certificates 覆盖范围与证书，落安全维护节	B	sb140
-S-023372		内容为模板头 claim 载体	B	sb140
-S-023373	V41-8.6	内容为 stdlib++-isystem 选项取舍，落长期维护节	B	sb140
-S-023374	V41-8.6	内容为发行需求与 pkgsrc 依赖政策，落长期维护节	B	sb140
-S-023375	V41-8.6	内容为条件编译缺括号与回报上游，落长期维护节	B	sb140
-S-023376		内容为模板头 claim 载体	B	sb140
-S-023377		内容为模板头 claim 载体	B	sb140
-S-023378		内容为模板头 claim 载体	B	sb140
-S-023379		内容为模板头 claim 载体	B	sb140
-S-023380	V41-8.6	内容为 setuptools 缺陷与 distutils 退场，落长期维护节	B	sb140
-S-023381		内容为模板头 claim 载体	B	sb140
-S-023382	V41-8.4	内容为 macOS configure 误选 cocoa 与 PLIST，落跨平台构建节	B	sb140
-S-023383		内容为模板头 claim 载体	B	sb140
-S-023384	V41-8.4	内容为 Bazel 移植与 mozc 构建，落跨平台构建节	B	sb140
-S-023385		内容为模板头 claim 载体	B	sb140
-S-023386		内容为模板头 claim 载体	B	sb140
-S-023387	V41-8.6	内容为 ufunc_api 生成阶段构建失败，落长期维护节	B	sb140
-S-023388	V41-8.6	内容为新编译器标准与旧代码应对，落长期维护节	B	sb140
-S-023389		内容为模板头 claim 载体	B	sb140
-S-023390	V41-8.6	内容为 nls 选项化与 PLIST 取向，落长期维护节	B	sb140
-S-023391	V41-8.6	内容为 buildlink 引入顺序与 -lterminfo，落长期维护节	B	sb140
-S-023392	V41-8.6	内容为 PEP 668 外部管理与 pip 引导，落长期维护节	B	sb140
-S-023393	V41-12.6	内容为批量输出平台命名与 Description，落工程过程节	B	sb140
+S-022770	V41-6.7	内容 ZFS 移植提案属 ZFS 源流线	B	sb140
+S-022771		｜内容 src/doc/TODO 加注零交集	B	sb140
+S-022772		｜内容 i2c 设备机器无关零交集	B	sb140
+S-022773		｜内容 cpu_set_curlwp 宏建议零交集	B	sb140
+S-022774	V41-9.3	内容 veriexec 词命中 Veriexec 节	B	sb140
+S-022775		｜内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb140
+S-022776		｜内容 azalia 音频缺陷零交集	B	sb140
+S-022777		｜内容查找 raw 分区例程零交集	B	sb140
+S-022778		｜内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb140
+S-022779		｜内容 usbhid 实例挂载零交集	B	sb140
+S-022780	V40-3.3	内容另起内核线程属内核线程模型线	B	sb140
+S-022781		｜内容 spl 兼指令屏障零交集	B	sb140
+S-022782		｜内容 envstat 轮询脚本零交集	B	sb140
+S-022783		｜内容 page trip 吞吐与延迟零交集	B	sb140
+S-022784		｜内容 TFTPROOT 根挂载补丁零交集	B	sb140
+S-022785		｜内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb140
+S-022786		｜内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb140
+S-022787	V41-9.1	内容 systrace 修复移除属安全机制线	B	sb140
+S-022788		｜内容为模板头 claim 载体，叙事主题零命中（稳定类）	B	sb140
+S-022789	V41-7.1	内容 bge 驱动缺文档属网络驱动线	B	sb140
+S-022790		｜内容 BCOPYIN 别名之辨零交集	B	sb140
+S-022791		｜内容 dk wedge 固定偏移零交集	B	sb140
+S-022792		｜内容 disklabel wedge 与 GPT 零交集	B	sb140
+S-022793	V41-1.3	内容设备树遍历属设备抽象线	B	sb140

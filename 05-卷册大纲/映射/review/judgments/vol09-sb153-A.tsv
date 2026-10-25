@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023082		｜LAPIC vaddr_t 题面零有效命中	A	sb153
+S-023083		｜题面为证据等级来源模板零语义	A	sb153
+S-023084		｜内核音频混音题面零有效命中	A	sb153
+S-023085		｜EFI 原生支持题面零有效命中	A	sb153
+S-023086		｜spkr 挂接题面零有效目录命中	A	sb153
+S-023087		｜取模运算加速题面零有效命中	A	sb153
+S-023088		｜i386 栈溢出题面零有效目录命中	A	sb153
+S-023089		｜sysctl 取代 kvm 题面零有效命中	A	sb153
+S-023090		｜timeval 对齐题面零有效命中	A	sb153
+S-023091		｜bpf_mtap_softint 题面零有效命中	A	sb153
+S-023092		｜pr_input workqueue 题面零有效命中	A	sb153
+S-023093		｜题面为证据等级来源模板零语义	A	sb153
+S-023094	V41-9.4	题面 PAX mprotect 命中 W^X 与 PaX MPROTECT 节	A	sb153
+S-023095		｜WAPBL 与 FUA 题面零有效命中	A	sb153
+S-023096		｜kqueue 与 aio 题面零有效命中	A	sb153
+S-023097		｜rdtsc 限制题面零有效目录命中	A	sb153
+S-023098	V41-9.5	题面 ASLR 命中 ASLR 与 KASLR 节	A	sb153
+S-023099		｜FUA 与 QAM 题面零有效命中	A	sb153
+S-023100		｜MKDEBUG 命名题面零有效命中	A	sb153
+S-023101		｜lwp_create 题面零有效目录命中	A	sb153
+S-023102		｜IvyBridge 启动失败题面零有效命中	A	sb153
+S-023103		｜ppb1 PCI 配置题面零有效命中	A	sb153
+S-023104		｜题面为证据等级来源模板零语义	A	sb153
+S-023105		｜Go 兼容性题面零有效目录命中	A	sb153

@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023322	V41-8.6	内容为 LUA_ROOT 与冒号修饰符变量，落长期维护节	B	sb163
+S-023323	V41-8.5	内容为 pkgnih 处理二进制仓库包，落二进制包节	B	sb163
+S-023324	V41-12.6	内容为批量构建二进制包缺失与平台矩阵，落工程过程节	B	sb163
+S-023325		｜内容为模板头 claim 载体	B	sb163
+S-023326		｜内容为模板头 claim 载体	B	sb163
+S-023327		｜内容为模板头 claim 载体	B	sb163
+S-023328	V41-8.5	内容为 pkg_add 未装 gsed 依赖缺陷，落二进制包节	B	sb163
+S-023329	V41-8.6	内容为 pkgsrc 冻结与遗留清理，落长期维护节	B	sb163
+S-023330	V41-8.4	内容为 ocaml ARM 原生编译与 unison，落跨平台构建节	B	sb163
+S-023331	V41-8.4	内容为 DESTDIR 移植与 INSTALL_MAKE_FLAGS，落跨平台构建节	B	sb163
+S-023332	V41-8.6	内容为 distfiles 每周拉取与手工处理，落长期维护节	B	sb163
+S-023333	V41-8.4	内容为 pkg_install 移除与 pkg_setup 引导，落 bootstrap 节	B	sb163
+S-023334		｜内容为模板头 claim 载体	B	sb163
+S-023335		｜内容为模板头 claim 载体	B	sb163
+S-023336		｜内容为模板头 claim 载体	B	sb163
+S-023337		｜内容为模板头 claim 载体	B	sb163
+S-023338	V41-8.5	内容为二进制包供给与标准化构建策略，落二进制包节	B	sb163
+S-023339		｜内容为模板头 claim 载体	B	sb163
+S-023340	V41-8.4	内容为 SCO OpenServer 引导 pkgsrc，落跨平台构建节	B	sb163
+S-023341		｜内容为模板头 claim 载体	B	sb163
+S-023342	V41-8.7	内容为 emul 安全报告与漏洞库核验，落软件安全维护节	B	sb163
+S-023343		｜内容为模板头 claim 载体	B	sb163
+S-023344	V41-8.4	内容为 FreePascal 官方 bootstrap kit 构建，落 bootstrap 节	B	sb163
+S-023345		｜内容为模板头 claim 载体	B	sb163

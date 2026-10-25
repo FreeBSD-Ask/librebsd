@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-023370		题面 qt5 与 Linux 词面泛命中，语境不符	A	sb140
-S-023371		题面 cacertificates 无目录命中	A	sb140
-S-023372		题面为证据等级来源模板，零语义	A	sb140
-S-023373		题面 Makefile 与 clang 选项无目录命中	A	sb140
-S-023374		题面依赖词面命中 2024 时段节，语境不符	A	sb140
-S-023375		题面 boost predef 无目录命中	A	sb140
-S-023376		题面为证据等级来源模板，零语义	A	sb140
-S-023377		题面为证据等级来源模板，零语义	A	sb140
-S-023378		题面为证据等级来源模板，零语义	A	sb140
-S-023379		题面为证据等级来源模板，零语义	A	sb140
-S-023380		题面 setuptools 无目录命中	A	sb140
-S-023381		题面为证据等级来源模板，零语义	A	sb140
-S-023382		题面 emacs28nox11 无目录命中	A	sb140
-S-023383		题面为证据等级来源模板，零语义	A	sb140
-S-023384		题面 Bazel 无目录命中	A	sb140
-S-023385		题面为证据等级来源模板，零语义	A	sb140
-S-023386		题面为证据等级来源模板，零语义	A	sb140
-S-023387		题面 py312-numpy 无目录命中	A	sb140
-S-023388		题面 Wnoerror 与 c90 无目录命中	A	sb140
-S-023389		题面为证据等级来源模板，零语义	A	sb140
-S-023390		题面 nls 词面命中本地化卷，语境不符	A	sb140
-S-023391		题面 lterminfo 无目录命中	A	sb140
-S-023392	V41-8.6	题面 pkgsrc 与 Python 语义落长期维护节	A	sb140
-S-023393	V41-12.6	题面批量构建词面命中工程过程节	A	sb140
+S-022770	V41-6.7	题面 ZFS 词命中 ZFS 与外部文件系统生态节	A	sb140
+S-022771		｜题面 Solaris 命中系他卷语境不符	A	sb140
+S-022772		｜题面 envctrl／i2c 无目录词面命中	A	sb140
+S-022773		｜题面 curlwp／curpcb 无目录词面命中	A	sb140
+S-022774		｜题面 fileassoc 无目录词面命中	A	sb140
+S-022775		｜题面为证据等级来源模板零语义	A	sb140
+S-022776		｜题面 azalia／codec 无目录词面命中	A	sb140
+S-022777		｜题面 RAW_PART 无目录词面命中	A	sb140
+S-022778		｜题面为证据等级来源模板零语义	A	sb140
+S-022779		｜题面 apcusbd／uhid 无目录词面命中	A	sb140
+S-022780		｜题面 pthread 无目录词面命中	A	sb140
+S-022781		｜题面 volatile／spl 无目录有效命中	A	sb140
+S-022782		｜题面 INTEL_ONDEMAND 无目录词面命中	A	sb140
+S-022783		｜题面 LFS 命中系 DragonFly 语境不符	A	sb140
+S-022784		｜题面 TFTP 无目录词面命中	A	sb140
+S-022785		｜题面为证据等级来源模板零语义	A	sb140
+S-022786		｜题面为证据等级来源模板零语义	A	sb140
+S-022787		｜题面 systrace 无目录词面命中	A	sb140
+S-022788		｜题面为证据等级来源模板零语义	A	sb140
+S-022789	V41-7.1	题面 bge 词命中网络栈节（同 bge 域）	A	sb140
+S-022790		｜题面 COPYIN 无目录词面命中	A	sb140
+S-022791		｜题面 wedges 无目录词面命中	A	sb140
+S-022792		｜题面 GPT 命中系 DragonFly 语境不符	A	sb140
+S-022793		｜题面 device_t／proplib 无目录词面命中	A	sb140

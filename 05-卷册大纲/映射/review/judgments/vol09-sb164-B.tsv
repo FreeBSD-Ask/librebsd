@@ -1,0 +1,25 @@
+source_id	target_id	reason	strategy	pass_id
+S-023346	V41-8.6	内容为 libfetch 代理支持修复合入，落长期维护节	B	sb164
+S-023347	V41-8.6	内容为 BUILDLINK_CONTENTS_FILTER 补丁，落长期维护节	B	sb164
+S-023348		｜内容为模板头 claim 载体	B	sb164
+S-023349		｜内容为模板头 claim 载体	B	sb164
+S-023350	V41-8.6	内容为 C++ 析构语义与 libstdc++ ABI，落长期维护节	B	sb164
+S-023351	V41-12.6	内容为 make 与 ninja 并行度取舍，落批量构建工程节	B	sb164
+S-023352		｜内容为模板头 claim 载体	B	sb164
+S-023353	V41-12.6	内容为目录更名须经 bulk build 测试，落工程过程节	B	sb164
+S-023354	V41-8.6	内容为 readline libtool tag 推断失败，落长期维护节	B	sb164
+S-023355	V41-8.7	内容为 jail 内 SSL 证书未填充，落软件安全维护节	B	sb164
+S-023356		｜内容为模板头 claim 载体	B	sb164
+S-023357		｜内容为模板头 claim 载体	B	sb164
+S-023358	V41-8.7	内容为 openssl-compat 兼容旧版本包，落软件安全维护节	B	sb164
+S-023359		｜内容为模板头 claim 载体	B	sb164
+S-023360	V41-8.6	内容为 graphics/gle configure 阶段失败，落长期维护节	B	sb164
+S-023361		｜内容为模板头 claim 载体	B	sb164
+S-023362	V41-8.6	内容为 gtk3 cups 依赖权衡，落长期维护节	B	sb164
+S-023363		｜内容为模板头 claim 载体	B	sb164
+S-023364	V41-8.6	内容为 libuuid 覆盖 libc 与依赖影响面，落长期维护节	B	sb164
+S-023365		｜内容为模板头 claim 载体	B	sb164
+S-023366		｜内容为模板头 claim 载体	B	sb164
+S-023367	V41-8.6	内容为 MesaLib18 默认选项损坏，落长期维护节	B	sb164
+S-023368		｜内容为模板头 claim 载体	B	sb164
+S-023369	V41-8.6	内容为 PYTHON_VERSION_REQD 构建语义，落长期维护节	B	sb164

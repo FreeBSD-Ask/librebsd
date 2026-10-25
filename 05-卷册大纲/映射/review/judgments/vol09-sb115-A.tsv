@@ -1,25 +1,25 @@
 source_id	target_id	reason	strategy	pass_id
-S-022770	V41-6.7	题面 ZFS 词命中 ZFS 与外部文件系统生态节	A	sb115
-S-022771		题面 Solaris 命中系他卷语境不符	A	sb115
-S-022772		题面 envctrl／i2c 无目录词面命中	A	sb115
-S-022773		题面 curlwp／curpcb 无目录词面命中	A	sb115
-S-022774		题面 fileassoc 无目录词面命中	A	sb115
-S-022775		题面为证据等级来源模板零语义	A	sb115
-S-022776		题面 azalia／codec 无目录词面命中	A	sb115
-S-022777		题面 RAW_PART 无目录词面命中	A	sb115
-S-022778		题面为证据等级来源模板零语义	A	sb115
-S-022779		题面 apcusbd／uhid 无目录词面命中	A	sb115
-S-022780		题面 pthread 无目录词面命中	A	sb115
-S-022781		题面 volatile／spl 无目录有效命中	A	sb115
-S-022782		题面 INTEL_ONDEMAND 无目录词面命中	A	sb115
-S-022783		题面 LFS 命中系 DragonFly 语境不符	A	sb115
-S-022784		题面 TFTP 无目录词面命中	A	sb115
-S-022785		题面为证据等级来源模板零语义	A	sb115
-S-022786		题面为证据等级来源模板零语义	A	sb115
-S-022787		题面 systrace 无目录词面命中	A	sb115
-S-022788		题面为证据等级来源模板零语义	A	sb115
-S-022789	V41-7.1	题面 bge 词命中网络栈节（同 bge 域）	A	sb115
-S-022790		题面 COPYIN 无目录词面命中	A	sb115
-S-022791		题面 wedges 无目录词面命中	A	sb115
-S-022792		题面 GPT 命中系 DragonFly 语境不符	A	sb115
-S-022793		题面 device_t／proplib 无目录词面命中	A	sb115
+S-022170		｜题面为 VOP_STRATEGY 提案回复与 VOP_STRATEGY(vp, bp) 方案讨论，无对应节	A	sb115
+S-022171		｜题面为 uuencode 附件经网页界面损坏与改传 ftp.netbsd.org 的处理，无对应节	A	sb115
+S-022172		｜题面为证据等级来源模板，零语义	A	sb115
+S-022173		｜题面为五年内 SCSI 盘 strategy buf 约百分之五可合并与吞吐同幅提升的实测，无对应节	A	sb115
+S-022174		｜题面为证据等级来源模板，零语义	A	sb115
+S-022175		｜题面为 activate 在中断上下文调用、detach 由线程执行的机制说明，无直接节	A	sb115
+S-022176		｜题面为证据等级来源模板，零语义	A	sb115
+S-022177		｜题面为 pckbc 抽象层 pckbport.c 中层与 acorn32 移植不便的说明，无直接节	A	sb115
+S-022178		｜题面为实例行加 module 前缀同时生成两模块与 need-count 不适合 LKM 之确认，无对应节	A	sb115
+S-022179		｜题面为证据等级来源模板，零语义	A	sb115
+S-022180	V41-1.4	题面为反对绕过 bus_space 标签与用移植实现更快更清楚之论，落 bus_space 与 bus_dma 节	A	sb115
+S-022181		｜题面为证据等级来源模板，零语义	A	sb115
+S-022182		｜题面为证据等级来源模板，零语义	A	sb115
+S-022183		｜题面为证据等级来源模板，零语义	A	sb115
+S-022184		｜题面为 pmap_enter、pmap_kernel 与 pmap_update 作用的前置知识之问，无对应节	A	sb115
+S-022185		｜题面为证据等级来源模板，零语义	A	sb115
+S-022186		｜题面为 ath 驱动 sysctl 归属与 sysctl/ioctl 冗余之疑，无直接节	A	sb115
+S-022187		｜题面为确认启用 NEW_BUFQ_STRATEGY 与可关掉对照的答复，无对应节	A	sb115
+S-022188		｜题面为 bge 动态接收中断阈值补丁与 sysctl 开关粒度之问，无直接节	A	sb115
+S-022189		｜题面为自研 nfsv4 服务器 beta 放匿名 FTP 并移植两系统的通报，无对应节	A	sb115
+S-022190		｜题面为 mbuf 宏改真函数使 GENERIC 缩 37KB 与 DragonFly 提速引证，无直接节	A	sb115
+S-022191		｜题面为请懂 SCSI 规范者翻译 SONY CDL1100 换盘机 Check Condition 的求助，无对应节	A	sb115
+S-022192		｜题面为 current 的 mac68k 构建期反复 NFS uvm_fault 恐慌与两种内核配置，无直接节	A	sb115
+S-022193		｜题面为 VOP_REMOVE 变更方案中删除 vnode 是否常见与远端文件系统不可行之辩，无对应节	A	sb115
