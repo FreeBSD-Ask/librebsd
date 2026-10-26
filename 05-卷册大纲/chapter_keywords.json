@@ -2,14 +2,14 @@
  "meta": {
   "schema": "theme-index/4",
   "tree": "05-卷册大纲",
-  "volumes": 75,
-  "chapters": 523,
-  "sections": 3705,
+  "volumes": 76,
+  "chapters": 537,
+  "sections": 3900,
   "subsections": 0,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "extract": "title+body",
-  "generated_at": "2026-10-23T21:44:22+08:00"
+  "generated_at": "2026-10-26T16:43:37+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -495,6 +495,14 @@
     "diversity"
    ]
   },
+  "TH-GOV-023": {
+   "label": "新人引导",
+   "level": "narrow",
+   "broader": "TH-GOV-000",
+   "tech": [
+    "onboarding"
+   ]
+  },
   "TH-GOV-024": {
    "label": "导师制",
    "level": "narrow",
@@ -941,6 +949,14 @@
     "rust"
    ]
   },
+  "TH-LANG-005": {
+   "label": "Python 通用编程语言",
+   "level": "narrow",
+   "broader": "TH-LANG-000",
+   "tech": [
+    "python"
+   ]
+  },
   "TH-LANG-006": {
    "label": "Perl 脚本语言",
    "level": "narrow",
@@ -1320,6 +1336,15 @@
    "level": "narrow",
    "broader": "TH-LAW-000",
    "tech": []
+  },
+  "TH-LAW-032": {
+   "label": "贡献者协议",
+   "level": "narrow",
+   "broader": "TH-LAW-000",
+   "tech": [
+    "cla",
+    "dco"
+   ]
   },
   "TH-LAW-034": {
    "label": "许可证文本",
@@ -1947,6 +1972,12 @@
     "freebsd-update"
    ]
   },
+  "TH-REL-016": {
+   "label": "补丁管理",
+   "level": "narrow",
+   "broader": "TH-REL-000",
+   "tech": []
+  },
   "TH-REL-017": {
    "label": "软件包签名",
    "level": "narrow",
@@ -2225,6 +2256,15 @@
     "syzkaller"
    ]
   },
+  "TH-SEC-026": {
+   "label": "后门",
+   "level": "narrow",
+   "broader": "TH-SEC-000",
+   "tech": [
+    "backdoor",
+    "xz"
+   ]
+  },
   "TH-SEC-027": {
    "label": "供应链安全",
    "level": "narrow",
@@ -2240,6 +2280,15 @@
    "tech": [
     "common criteria",
     "fips"
+   ]
+  },
+  "TH-SEC-032": {
+   "label": "日志与取证",
+   "level": "narrow",
+   "broader": "TH-SEC-000",
+   "tech": [
+    "forensics",
+    "log"
    ]
   },
   "TH-SEC-035": {
@@ -2404,7 +2453,7 @@
    "title": "电子计算机的诞生",
    "domains": [],
    "themes": [],
-   "sections": 2
+   "sections": 3
   },
   "V01-C003": {
    "volume": "第01卷-自由与必然：从图灵机到 UNIX（1830s–1989）",
@@ -2423,7 +2472,7 @@
    "themes": [
     "TH-HW-018"
    ],
-   "sections": 4
+   "sections": 5
   },
   "V01-C005": {
    "volume": "第01卷-自由与必然：从图灵机到 UNIX（1830s–1989）",
@@ -2663,7 +2712,7 @@
     "TH-BIZ-016",
     "TH-GOV-015"
    ],
-   "sections": 5
+   "sections": 6
   },
   "V06-C003": {
    "volume": "第06卷-UNIX 共同体、传播与教学（1975–1995）",
@@ -2884,10 +2933,16 @@
    "title": "Shell、终端与文本工具",
    "domains": [],
    "themes": [
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006",
+    "TH-LANG-007",
     "TH-LANG-008",
-    "TH-LANG-009"
+    "TH-LANG-009",
+    "TH-LANG-016",
+    "TH-LAW-010"
    ],
-   "sections": 5
+   "sections": 11
   },
   "V08-C009": {
    "volume": "第08卷-UNIX 技术专题史（1969–1989）",
@@ -2907,6 +2962,16 @@
   "V08-C010": {
    "volume": "第08卷-UNIX 技术专题史（1969–1989）",
    "title": "ARPANET、网络研究共同体与 Internetting（1969–1983）",
+   "domains": [],
+   "themes": [
+    "TH-LAW-032",
+    "TH-NET-001"
+   ],
+   "sections": 6
+  },
+  "V08-C011": {
+   "volume": "第08卷-UNIX 技术专题史（1969–1989）",
+   "title": "UNIX 世界的语言生态（1969–1989）",
    "domains": [],
    "themes": [
     "TH-HIS-001",
@@ -2955,7 +3020,7 @@
    "themes": [
     "TH-HIS-046"
    ],
-   "sections": 5
+   "sections": 6
   },
   "V09-C005": {
    "volume": "第09卷-通往西部的帝国之路：从贝克莱到伯克利（1868–1995）",
@@ -3116,9 +3181,10 @@
    "themes": [
     "TH-HW-017",
     "TH-OS-009",
-    "TH-OS-010"
+    "TH-OS-010",
+    "TH-VM-001"
    ],
-   "sections": 8
+   "sections": 9
   },
   "V12-C005": {
    "volume": "第12卷-BSD 伊始与早期发行（1973–1981）",
@@ -3151,7 +3217,7 @@
     "TH-NET-008",
     "TH-REL-001"
    ],
-   "sections": 10
+   "sections": 11
   },
   "V13-C003": {
    "volume": "第13卷-从 4.1BSD 到 4.3BSD 的 CSRG 时代（1981–1986）",
@@ -3381,7 +3447,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 4
+   "sections": 7
   },
   "V18-C002": {
    "volume": "第18卷-Linux：独立操作系统的形成与发展（1991–2026）",
@@ -3409,11 +3475,68 @@
    "title": "Linux 的发展与共同体（1991–2026）",
    "domains": [],
    "themes": [
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-023",
+    "TH-HW-022",
+    "TH-LANG-021",
+    "TH-LANG-030"
+   ],
+   "sections": 18
+  },
+  "V18-C005": {
+   "volume": "第18卷-Linux：独立操作系统的形成与发展（1991–2026）",
+   "title": "补丁工作流的基础设施：邮件归档与缺陷跟踪",
+   "domains": [],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "sections": 18
+  },
+  "V18-C006": {
+   "volume": "第18卷-Linux：独立操作系统的形成与发展（1991–2026）",
+   "title": "维护者峰会与 TAB 选举制度（2006—2025）",
+   "domains": [],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010",
+    "TH-LANG-005",
+    "TH-LAW-026",
+    "TH-LAW-032",
+    "TH-SEC-026"
+   ],
+   "sections": 18
+  },
+  "V18-C007": {
+   "volume": "第18卷-Linux：独立操作系统的形成与发展（1991–2026）",
+   "title": "AI 内容治理、代码评审与子系统档案",
+   "domains": [],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023",
+    "TH-GOV-009",
+    "TH-LAW-010",
+    "TH-LAW-015",
+    "TH-REL-032"
+   ],
+   "sections": 18
+  },
+  "V18-C008": {
+   "volume": "第18卷-Linux：独立操作系统的形成与发展（1991–2026）",
+   "title": "Linux 的语言生态与准入争论",
+   "domains": [],
+   "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 5
+   "sections": 2
   },
   "V19-C001": {
    "volume": "第19卷-UNIX 战争：阵营、联盟与体系整合（1982–1995）",
@@ -4294,12 +4417,13 @@
    "title": "FreeBSD 3.x：4.4BSD-Lite2 合流与现代 FreeBSD 基线（1998–2000）",
    "domains": [],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
     "TH-OS-005",
     "TH-OS-014",
     "TH-OS-015"
    ],
-   "sections": 9
+   "sections": 11
   },
   "V36-C004": {
    "volume": "第36卷-从大教堂到集市：FreeBSD 操作系统的历史（1993–2026）",
@@ -4319,10 +4443,16 @@
    "title": "FreeBSD 5.x：一场持续数年的操作系统重建（2003–2005）",
    "domains": [],
    "themes": [
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005",
+    "TH-HIS-046",
     "TH-HW-002",
+    "TH-NET-010",
+    "TH-OS-003",
     "TH-OS-005"
    ],
-   "sections": 9
+   "sections": 13
   },
   "V36-C006": {
    "volume": "第36卷-从大教堂到集市：FreeBSD 操作系统的历史（1993–2026）",
@@ -4459,7 +4589,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 9
+   "sections": 13
   },
   "V37-C002": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4484,29 +4614,30 @@
    "themes": [
     "TH-OS-030",
     "TH-VM-001",
-    "TH-VM-006",
-    "TH-VM-033",
-    "TH-NET-020",
     "TH-NET-034",
-    "TH-OS-031",
-    "TH-VM-007"
+    "TH-VM-006",
+    "TH-VM-007",
+    "TH-VM-033",
+    "TH-HW-036",
+    "TH-NET-020"
    ],
-   "sections": 8
+   "sections": 10
   },
   "V37-C004": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
    "title": "FreeBSD 内核并发体系：SMPng 与多核时代",
    "domains": [],
    "themes": [
+    "TH-OS-005",
     "TH-LANG-033",
+    "TH-BIZ-008",
     "TH-NET-006",
     "TH-OS-002",
     "TH-OS-003",
-    "TH-OS-005",
     "TH-OS-006",
     "TH-OS-036"
    ],
-   "sections": 8
+   "sections": 14
   },
   "V37-C005": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4520,7 +4651,7 @@
     "TH-SEC-003",
     "TH-SEC-019"
    ],
-   "sections": 10
+   "sections": 11
   },
   "V37-C006": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4529,13 +4660,14 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
+    "TH-GOV-003",
+    "TH-GOV-006",
     "TH-LANG-017",
+    "TH-OS-005",
     "TH-OS-022",
-    "TH-REL-003",
-    "TH-REL-013",
-    "TH-REL-025"
+    "TH-REL-003"
    ],
-   "sections": 10
+   "sections": 15
   },
   "V37-C007": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4587,14 +4719,14 @@
    "themes": [
     "TH-HW-002",
     "TH-HW-003",
+    "TH-FS-001",
+    "TH-GOV-005",
     "TH-HW-004",
     "TH-HW-006",
     "TH-HW-007",
-    "TH-HW-022",
-    "TH-HW-025",
-    "TH-HW-029"
+    "TH-HW-022"
    ],
-   "sections": 9
+   "sections": 12
   },
   "V37-C011": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4602,26 +4734,38 @@
    "domains": [],
    "themes": [
     "TH-REL-001",
+    "TH-REL-003",
     "TH-BIZ-018",
     "TH-BIZ-020",
     "TH-GOV-004",
     "TH-HIS-007",
     "TH-HW-036",
-    "TH-LANG-016",
-    "TH-LANG-018"
+    "TH-LANG-016"
    ],
-   "sections": 9
+   "sections": 10
   },
   "V37-C012": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
    "title": "FreeBSD 技术路线与应用领域综合：系统工程与长期演进",
    "domains": [],
    "themes": [
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026",
+    "TH-LAW-008"
+   ],
+   "sections": 13
+  },
+  "V37-C013": {
+   "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
+   "title": "FreeBSD 的语言生态与 Rust 准入",
+   "domains": [],
+   "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 12
+   "sections": 4
   },
   "V38-C001": {
    "volume": "第38卷-FreeBSD 人物志：从创始成员到全球维护者（1993–2026）",
@@ -4844,22 +4988,23 @@
     "TH-OS-002",
     "TH-REL-001"
    ],
-   "sections": 8
+   "sections": 9
   },
   "V40-C004": {
    "volume": "第40卷-可移植的执念：NetBSD 操作系统的历史（1993–2026）",
    "title": "NetBSD 3.x–4.x：多平台系统的成熟与嵌入式扩展（2005–2009）",
    "domains": [],
    "themes": [
+    "TH-OS-005",
     "TH-HW-003",
     "TH-HW-005",
     "TH-HW-006",
     "TH-HW-020",
     "TH-HW-022",
-    "TH-LANG-016",
-    "TH-OS-005"
+    "TH-HW-036",
+    "TH-LANG-016"
    ],
-   "sections": 8
+   "sections": 10
   },
   "V40-C005": {
    "volume": "第40卷-可移植的执念：NetBSD 操作系统的历史（1993–2026）",
@@ -4877,10 +5022,11 @@
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
+    "TH-HW-036",
     "TH-REL-001",
     "TH-REL-002"
    ],
-   "sections": 8
+   "sections": 9
   },
   "V40-C007": {
    "volume": "第40卷-可移植的执念：NetBSD 操作系统的历史（1993–2026）",
@@ -4890,7 +5036,7 @@
     "TH-HW-003",
     "TH-VM-000"
    ],
-   "sections": 6
+   "sections": 7
   },
   "V40-C008": {
    "volume": "第40卷-可移植的执念：NetBSD 操作系统的历史（1993–2026）",
@@ -4898,10 +5044,10 @@
    "domains": [],
    "themes": [
     "TH-FS-003",
-    "TH-HW-003",
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-HW-003"
    ],
-   "sections": 7
+   "sections": 8
   },
   "V40-C009": {
    "volume": "第40卷-可移植的执念：NetBSD 操作系统的历史（1993–2026）",
@@ -4912,7 +5058,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 8
+   "sections": 10
   },
   "V41-C001": {
    "volume": "第41卷-NetBSD 技术专题史（1993–2026）",
@@ -4923,7 +5069,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 6
+   "sections": 7
   },
   "V41-C002": {
    "volume": "第41卷-NetBSD 技术专题史（1993–2026）",
@@ -5052,11 +5198,27 @@
    "title": "NetBSD 软件工程文化与协作规范",
    "domains": [],
    "themes": [
+    "TH-HW-036",
+    "TH-LANG-016",
+    "TH-LANG-017",
+    "TH-LANG-021",
+    "TH-LANG-037",
+    "TH-REL-001",
+    "TH-REL-002",
+    "TH-REL-013"
+   ],
+   "sections": 9
+  },
+  "V41-C013": {
+   "volume": "第41卷-NetBSD 技术专题史（1993–2026）",
+   "title": "NetBSD 的语言生态与 pkgsrc",
+   "domains": [],
+   "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 8
+   "sections": 3
   },
   "V42-C001": {
    "volume": "第42卷-NetBSD 人物：可移植路线的参与者（1993–2026）",
@@ -5228,7 +5390,7 @@
     "TH-REL-001",
     "TH-SEC-021"
    ],
-   "sections": 9
+   "sections": 10
   },
   "V44-C003": {
    "volume": "第44卷-世界上最安全的操作系统：OpenBSD 操作系统的历史（1995–2026）",
@@ -5242,7 +5404,7 @@
     "TH-LANG-036",
     "TH-REL-001"
    ],
-   "sections": 10
+   "sections": 11
   },
   "V44-C004": {
    "volume": "第44卷-世界上最安全的操作系统：OpenBSD 操作系统的历史（1995–2026）",
@@ -5250,15 +5412,15 @@
    "domains": [],
    "themes": [
     "TH-LANG-010",
+    "TH-NET-010",
+    "TH-OS-011",
     "TH-GOV-005",
     "TH-GOV-006",
     "TH-LANG-024",
     "TH-LANG-032",
-    "TH-LAW-003",
-    "TH-NET-010",
-    "TH-NET-032"
+    "TH-LAW-003"
    ],
-   "sections": 9
+   "sections": 13
   },
   "V44-C005": {
    "volume": "第44卷-世界上最安全的操作系统：OpenBSD 操作系统的历史（1995–2026）",
@@ -5310,7 +5472,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 8
+   "sections": 11
   },
   "V45-C002": {
    "volume": "第45卷-OpenBSD 技术专题史（1995–2026）",
@@ -5470,12 +5632,27 @@
    "title": "软件工程：提交纪律、构建验证与发布流程",
    "domains": [],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037",
-    "TH-HIS-040",
-    "TH-HIS-007"
+    "TH-REL-001",
+    "TH-FS-007",
+    "TH-HIS-007",
+    "TH-LANG-016",
+    "TH-LANG-017",
+    "TH-LANG-021",
+    "TH-LANG-037",
+    "TH-REL-016"
    ],
    "sections": 8
+  },
+  "V45-C015": {
+   "volume": "第45卷-OpenBSD 技术专题史（1995–2026）",
+   "title": "OpenBSD 的语言与安全工具链",
+   "domains": [],
+   "themes": [
+    "TH-HIS-001",
+    "TH-HIS-037",
+    "TH-HIS-040"
+   ],
+   "sections": 2
   },
   "V46-C001": {
    "volume": "第46卷-OpenBSD 人物志：安全路线的维护者（1995–2026）",
@@ -5486,7 +5663,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 5
+   "sections": 7
   },
   "V46-C002": {
    "volume": "第46卷-OpenBSD 人物志：安全路线的维护者（1995–2026）",
@@ -6401,7 +6578,7 @@
    "themes": [
     "TH-HW-020"
    ],
-   "sections": 3
+   "sections": 4
   },
   "V57-C003": {
    "volume": "第57卷-BSD 的衍生与分叉：主干诸系的分岔与扩散（1995–2026）",
@@ -6542,11 +6719,21 @@
    "title": "Apple 操作系统家族的衍生扩张（2007–2026）",
    "domains": [],
    "themes": [
+    "TH-HW-015",
+    "TH-HW-022"
+   ],
+   "sections": 9
+  },
+  "V58-C009": {
+   "volume": "第58卷-macOS 历史：作为经过认证的 UNIX 发行版（1976–2026）",
+   "title": "macOS 的语言世界：Objective-C 与 Swift",
+   "domains": [],
+   "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 9
+   "sections": 1
   },
   "V59-C001": {
    "volume": "第59卷-BSD 许可证与法律（1977–2026）",
@@ -6900,12 +7087,12 @@
    "domains": [],
    "themes": [
     "TH-LANG-030",
-    "TH-NET-038",
     "TH-BIZ-008",
-    "TH-LAW-013",
-    "TH-LAW-021"
+    "TH-LAW-021",
+    "TH-NET-038",
+    "TH-LAW-013"
    ],
-   "sections": 7
+   "sections": 8
   },
   "V62-C003": {
    "volume": "第62卷-BSD 合规、标准与供应链（1998–2026）",
@@ -7200,7 +7387,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 12
+   "sections": 13
   },
   "V66-C002": {
    "volume": "第66卷-BSD 社区的世界化：区域史（1980–2026）",
@@ -7211,7 +7398,7 @@
     "TH-HW-021",
     "TH-NET-013"
    ],
-   "sections": 12
+   "sections": 14
   },
   "V66-C003": {
    "volume": "第66卷-BSD 社区的世界化：区域史（1980–2026）",
@@ -7560,7 +7747,7 @@
    "themes": [
     "TH-GOV-006"
    ],
-   "sections": 13
+   "sections": 14
   },
   "V69-C003": {
    "volume": "第69卷-BSD 的传播载体与公众记忆（1975–2026）",
@@ -7758,7 +7945,7 @@
     "TH-BIZ-030",
     "TH-LAW-010"
    ],
-   "sections": 7
+   "sections": 8
   },
   "V72-C003": {
    "volume": "第72卷-BSD 法律实务：版权、专利、商标与诉讼（1973–2026）",
@@ -7790,11 +7977,12 @@
    "domains": [],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
     "TH-LAW-010",
+    "TH-LAW-003",
+    "TH-LAW-005",
     "TH-NET-027"
    ],
-   "sections": 9
+   "sections": 11
   },
   "V72-C006": {
    "volume": "第72卷-BSD 法律实务：版权、专利、商标与诉讼（1973–2026）",
@@ -8070,6 +8258,65 @@
     "TH-HIS-002"
    ],
    "sections": 6
+  },
+  "V76-C001": {
+   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "title": "Rust 入核争议",
+   "domains": [],
+   "themes": [
+    "TH-HIS-001",
+    "TH-HIS-037",
+    "TH-HIS-040"
+   ],
+   "sections": 4
+  },
+  "V76-C002": {
+   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "title": "文件系统与内存管理",
+   "domains": [],
+   "themes": [
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-LANG-022",
+    "TH-REL-003"
+   ],
+   "sections": 8
+  },
+  "V76-C003": {
+   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "title": "硬件平台与警告治理",
+   "domains": [],
+   "themes": [],
+   "sections": 3
+  },
+  "V76-C004": {
+   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "title": "早期内核史料与邮件考古",
+   "domains": [],
+   "themes": [
+    "TH-BIZ-023",
+    "TH-GOV-006",
+    "TH-GOV-009",
+    "TH-HW-037",
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-LAW-003",
+    "TH-OS-011"
+   ],
+   "sections": 12
+  },
+  "V76-C005": {
+   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "title": "BSD–Linux 技术承袭",
+   "domains": [],
+   "themes": [
+    "TH-HIS-001",
+    "TH-HIS-037",
+    "TH-HIS-040"
+   ],
+   "sections": 9
   }
  },
  "sections": {
@@ -8189,6 +8436,25 @@
     "TH-BIZ-014",
     "TH-HIS-001",
     "TH-HIS-037"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.3": {
+   "chapter": "V01-C002",
+   "title": "ACM、IEEE 计算机学会与 USENIX 的学术组织活动",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-HIS-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-BIZ-014",
+    "TH-HIS-001",
+    "TH-HW-018"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8327,6 +8593,25 @@
   "V01-C004-4.4": {
    "chapter": "V01-C004",
    "title": "UNIX 的前夜：分时计算与操作系统传统的汇聚",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-BIZ-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HW-018",
+    "TH-BIZ-014",
+    "TH-HIS-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C004-4.5": {
+   "chapter": "V01-C004",
+   "title": "微机操作系统的早期分化：CP／M、Apple DOS 与 XENIX",
    "meta": false,
    "domains": [
     "TH-HW-000",
@@ -10776,6 +11061,24 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V06-C002-2.6": {
+   "chapter": "V06-C002",
+   "title": "SunOS 基于 BSD 的具体版本源流",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-BIZ-016",
+    "TH-GOV-015"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V06-C003-3.1": {
    "chapter": "V06-C003",
    "title": "UNIX 进入大学课程：从研究工具到教学系统",
@@ -12253,12 +12556,13 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-OS-009",
     "TH-HIS-001",
-    "TH-OS-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12271,12 +12575,13 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-OS-009",
     "TH-HIS-001",
-    "TH-OS-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12402,12 +12707,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-OS-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-OS-001",
-    "TH-OS-009"
+    "TH-HW-036",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12420,12 +12726,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-OS-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-OS-001",
-    "TH-OS-009"
+    "TH-HW-036",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12438,12 +12745,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-OS-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-OS-001",
-    "TH-OS-009"
+    "TH-HW-036",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12456,12 +12764,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-OS-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-OS-001",
-    "TH-OS-009"
+    "TH-HW-036",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12474,12 +12783,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-OS-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-OS-001",
-    "TH-OS-009"
+    "TH-HW-036",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12492,12 +12802,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-OS-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-OS-001",
-    "TH-OS-009"
+    "TH-HW-036",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12509,13 +12820,13 @@
    "title": "Thompson Shell 与 Bourne Shell：命令解释器的形成",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-008",
-    "TH-LANG-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12527,13 +12838,13 @@
    "title": "Shell 语法：展开、重定向、管道与命令替换",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-008",
-    "TH-LANG-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12545,13 +12856,13 @@
    "title": "TTY、线路规程与 UNIX 终端模型",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-008",
-    "TH-LANG-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12564,12 +12875,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-LANG-008",
     "TH-LANG-009",
-    "TH-HIS-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12581,13 +12892,122 @@
    "title": "Shell 环境：变量、退出状态与脚本执行",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-008",
-    "TH-LANG-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C008-8.6": {
+   "chapter": "V08-C008",
+   "title": "Java 与虚拟机革命：FreeBSD 的 JDK 移植史（1995 年）",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-VM-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-VM-001",
+    "TH-LANG-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C008-8.7": {
+   "chapter": "V08-C008",
+   "title": "BSD 的 shell 家族：Thompson、Bourne 与 C shell",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-LANG-007",
+    "TH-HW-036",
+    "TH-LANG-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C008-8.8": {
+   "chapter": "V08-C008",
+   "title": "UNIX 厂商版本的不兼容与 Informix 的多版本适配",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C008-8.9": {
+   "chapter": "V08-C008",
+   "title": "UNIX 版本的考古学方法：源码考古、版权归属与版本命名",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-REL-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-LAW-010",
+    "TH-REL-004",
+    "TH-HW-036"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C008-8.10": {
+   "chapter": "V08-C008",
+   "title": "PWB／UNIX 运维安全实践与商用分支的分野（1973—1980 年代）",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-LANG-005",
+    "TH-LANG-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C008-8.11": {
+   "chapter": "V08-C008",
+   "title": "Perl、Python、Ruby 与 Ports 的共生生态（1987 年）",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LANG-005",
+    "TH-LANG-006",
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12710,14 +13130,16 @@
   "V08-C010-10.1": {
    "chapter": "V08-C010",
    "title": "ARPANET 的四节点：UCLA、SRI、UCSB 与 Utah（1969）",
-   "meta": true,
+   "meta": false,
    "domains": [
+    "TH-LAW-000",
+    "TH-NET-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-032",
+    "TH-NET-001",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12727,14 +13149,16 @@
   "V08-C010-10.2": {
    "chapter": "V08-C010",
    "title": "Interface Message Processor 与 BBN 的工程实现（1969）",
-   "meta": true,
+   "meta": false,
    "domains": [
+    "TH-LAW-000",
+    "TH-NET-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-032",
+    "TH-NET-001",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12744,14 +13168,16 @@
   "V08-C010-10.3": {
    "chapter": "V08-C010",
    "title": "1972 年 ARPANET 公共展示与网络研究共同体",
-   "meta": true,
+   "meta": false,
    "domains": [
+    "TH-LAW-000",
+    "TH-NET-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-032",
+    "TH-NET-001",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12761,14 +13187,16 @@
   "V08-C010-10.4": {
    "chapter": "V08-C010",
    "title": "Packet Radio 与 SATNET：异构网络研究（1972–1983）",
-   "meta": true,
+   "meta": false,
    "domains": [
+    "TH-LAW-000",
+    "TH-NET-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-032",
+    "TH-NET-001",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -12778,6 +13206,44 @@
   "V08-C010-10.5": {
    "chapter": "V08-C010",
    "title": "Internetting 研究：Kahn 与 Cerf 的问题设定（1973–1974）",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-NET-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-LAW-032",
+    "TH-NET-001",
+    "TH-HIS-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C010-10.6": {
+   "chapter": "V08-C010",
+   "title": "1983 年 TCP／IP 转换与研究网络环境",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-LAW-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-NET-001",
+    "TH-LAW-032",
+    "TH-HIS-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C011-11.1": {
+   "chapter": "V08-C011",
+   "title": "Fortran、ALGOL 与科学计算传统的诞生",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -12792,9 +13258,77 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V08-C010-10.6": {
-   "chapter": "V08-C010",
-   "title": "1983 年 TCP／IP 转换与研究网络环境",
+  "V08-C011-11.2": {
+   "chapter": "V08-C011",
+   "title": "Lisp、AI 实验室与 Lisp 机",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C011-11.3": {
+   "chapter": "V08-C011",
+   "title": "Wirth 学派：Pascal、Modula-2 与结构化编程",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C011-11.4": {
+   "chapter": "V08-C011",
+   "title": "C++ 争论：从 Stroustrup 到内核拒绝",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C011-11.5": {
+   "chapter": "V08-C011",
+   "title": "Java 与脚本语言生态",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V08-C011-11.6": {
+   "chapter": "V08-C011",
+   "title": "语言保守主义与新语言准入",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -13153,6 +13687,25 @@
   "V09-C004-4.5": {
    "chapter": "V09-C004",
    "title": "DARPA 与 CSRG：合同关系与资助方式",
+   "meta": false,
+   "domains": [
+    "TH-HIS-000",
+    "TH-BIZ-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-HIS-046",
+    "TH-BIZ-014",
+    "TH-HW-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V09-C004-4.6": {
+   "chapter": "V09-C004",
+   "title": "学生组织、校园媒体与环境史",
    "meta": false,
    "domains": [
     "TH-HIS-000",
@@ -15415,6 +15968,25 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V12-C004-4.9": {
+   "chapter": "V12-C004",
+   "title": "VAX 硬件与 BSD 的协同演化：DEC VMS 的资源竞争",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-VM-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-HW-017",
+    "TH-VM-001",
+    "TH-OS-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V12-C005-5.1": {
    "chapter": "V12-C005",
    "title": "4BSD 的系统扩展：Job Control、可靠信号与 curses",
@@ -15869,6 +16441,24 @@
   "V13-C002-2.10": {
    "chapter": "V13-C002",
    "title": "过渡版本的史学定位：4.1 系列与 CSRG 工程制度",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-NET-001",
+    "TH-NET-008",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V13-C002-2.11": {
+   "chapter": "V13-C002",
+   "title": "1988 年同期操作系统对照：AT&T UNIX SVR3 与 SunOS 4.0",
    "meta": false,
    "domains": [
     "TH-NET-000",
@@ -18464,19 +19054,69 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V18-C001-1.5": {
+   "chapter": "V18-C001",
+   "title": "Newspeak 之喻与术语 v2 的流转",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C001-1.6": {
+   "chapter": "V18-C001",
+   "title": "包容术语 v3 定稿与 graylist 去留",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C001-1.7": {
+   "chapter": "V18-C001",
+   "title": "包容术语论战的爆发",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V18-C002-2.1": {
    "chapter": "V18-C002",
    "title": "Linux 早期邮件列表与协作开发",
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-HIS-000",
     "TH-LANG-000"
    ],
    "themes": [
     "TH-GOV-014",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-009",
+    "TH-LANG-018"
    ],
    "projects": [],
    "technical_terms": [],
@@ -18489,13 +19129,12 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-HIS-000",
     "TH-LANG-000"
    ],
    "themes": [
     "TH-GOV-014",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-009",
+    "TH-LANG-018"
    ],
    "projects": [],
    "technical_terms": [],
@@ -18685,14 +19324,15 @@
   "V18-C004-4.1": {
    "chapter": "V18-C004",
    "title": "内核的 GPL 化（1992-02）：从自订许可到 GPL v2",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LAW-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-003",
+    "TH-GOV-012",
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -18702,14 +19342,14 @@
   "V18-C004-4.2": {
    "chapter": "V18-C004",
    "title": "从 0.95 到 1.0（1994）：可用系统的临界点",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -18719,14 +19359,14 @@
   "V18-C004-4.3": {
    "chapter": "V18-C004",
    "title": "内核治理：Linus 决策、维护者层级与版本节律",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-GOV-006",
+    "TH-GOV-012",
+    "TH-GOV-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -18736,6 +19376,1241 @@
   "V18-C004-4.4": {
    "chapter": "V18-C004",
    "title": "发行版生态与共同体媒体",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-REL-030",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.5": {
+   "chapter": "V18-C004",
+   "title": "Android（2008）与设备规模的商品化：Linux 与 BSD 的嵌入式路径分化",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-HW-022",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.6": {
+   "chapter": "V18-C004",
+   "title": "Acked-by 语义与 LTP 入树之争",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.7": {
+   "chapter": "V18-C004",
+   "title": "评审标签改革与 Link 标签溯源",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.8": {
+   "chapter": "V18-C004",
+   "title": "评审者稀缺与 Acked-by 论战收束",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.9": {
+   "chapter": "V18-C004",
+   "title": "测试标准化与评审付费之辩",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-LANG-021",
+    "TH-LANG-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.10": {
+   "chapter": "V18-C004",
+   "title": "上游激励论述与 TAB 选举量化",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.11": {
+   "chapter": "V18-C004",
+   "title": "TAB 候选人陈述与 CoC 报告",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.12": {
+   "chapter": "V18-C004",
+   "title": "参选宣言与 CoC 半年报",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.13": {
+   "chapter": "V18-C004",
+   "title": "TAB 自荐系列与 CoC 拒补丁争议",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.14": {
+   "chapter": "V18-C004",
+   "title": "TAB 选举与 CoC 私下征询争议",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.15": {
+   "chapter": "V18-C004",
+   "title": "TAB 选举、包容术语与维护者支持",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
+    "TH-GOV-009",
+    "TH-GOV-012"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.16": {
+   "chapter": "V18-C004",
+   "title": "停办峰会与维护者支持小组",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
+    "TH-GOV-012",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.17": {
+   "chapter": "V18-C004",
+   "title": "峰会出席率重算与新人引导",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-023",
+    "TH-GOV-012",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C004-4.18": {
+   "chapter": "V18-C004",
+   "title": "峰会存废之问与 ACK 权力边界",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-GOV-012",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.1": {
+   "chapter": "V18-C005",
+   "title": "提交版本史与 lore 归档之争",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.2": {
+   "chapter": "V18-C005",
+   "title": "强制 Link 标签与 git 元数据方案",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-017",
+    "TH-GOV-014",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.3": {
+   "chapter": "V18-C005",
+   "title": "Change-Id 之争与 Linus 的表态",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.4": {
+   "chapter": "V18-C005",
+   "title": "mb2q 工具与 Link 标签定型",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.5": {
+   "chapter": "V18-C005",
+   "title": "Link 尾注立场声明与 Smatch 停摆",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.6": {
+   "chapter": "V18-C005",
+   "title": "l2md 工具链、TAB 章程与疫情前瞻",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-024",
+    "TH-GOV-014",
+    "TH-LANG-017"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.7": {
+   "chapter": "V18-C005",
+   "title": "lore 链接定型与 KS2019 筹备",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.8": {
+   "chapter": "V18-C005",
+   "title": "MS2019 议程与 lore 客户端工具构想",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.9": {
+   "chapter": "V18-C005",
+   "title": "MEP 定稿与工作流列表创建",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.10": {
+   "chapter": "V18-C005",
+   "title": "Bugzilla 迁移与 AI 标注规则",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.11": {
+   "chapter": "V18-C005",
+   "title": "Bugzilla 存废与加速器用户态之争",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.12": {
+   "chapter": "V18-C005",
+   "title": "linux-next 流程与 Bugzilla 存废",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.13": {
+   "chapter": "V18-C005",
+   "title": "linux-issues 列表与问题报告转正",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.14": {
+   "chapter": "V18-C005",
+   "title": "linus-next 树创建与 trivial 政策",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.15": {
+   "chapter": "V18-C005",
+   "title": "Cc 标签去留与 AUTOSEL 稳定树定义之争",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.16": {
+   "chapter": "V18-C005",
+   "title": "MS2019 文档与补丁接受一致性",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.17": {
+   "chapter": "V18-C005",
+   "title": "邮件列表中的 BSD 与 Linux 议题（一）",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C005-5.18": {
+   "chapter": "V18-C005",
+   "title": "邮件列表中的 BSD 与 Linux 议题（二）",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-LANG-017",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.1": {
+   "chapter": "V18-C006",
+   "title": "KS2018 会前议程与 TAB 竞选",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.2": {
+   "chapter": "V18-C006",
+   "title": "KS2019 筹备与子系统档案评审",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-GOV-009",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.3": {
+   "chapter": "V18-C006",
+   "title": "KS2019 议题征集与缺陷跟踪讨论",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.4": {
+   "chapter": "V18-C006",
+   "title": "OSDL 首届选举与术语 v2",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LAW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LAW-026",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.5": {
+   "chapter": "V18-C006",
+   "title": "Python 实测与 2.2 TAB 结果",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-005",
+    "TH-GOV-009",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.6": {
+   "chapter": "V18-C006",
+   "title": "Rice 定理与东京峰会征文",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.7": {
+   "chapter": "V18-C006",
+   "title": "TAB 2020 选举与代码退役提案",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.8": {
+   "chapter": "V18-C006",
+   "title": "TAB 2025 结果与 DCO 冲突",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LAW-032",
+    "TH-GOV-009",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.9": {
+   "chapter": "V18-C006",
+   "title": "TAB 纪要、术语 v3 与选举资格",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.10": {
+   "chapter": "V18-C006",
+   "title": "TAB 组成公告与闭门会议预案",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.11": {
+   "chapter": "V18-C006",
+   "title": "TAB 选举章程与术语正反",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.12": {
+   "chapter": "V18-C006",
+   "title": "unwind 导出与闭门会议评审",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-GOV-009",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.13": {
+   "chapter": "V18-C006",
+   "title": "术语讨论与 TAB 自荐",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.14": {
+   "chapter": "V18-C006",
+   "title": "术语论战与历届选举",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.15": {
+   "chapter": "V18-C006",
+   "title": "章程史与 SPI 代跑投票",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-010",
+    "TH-GOV-009",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.16": {
+   "chapter": "V18-C006",
+   "title": "自荐与 Fixes 补丁",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.17": {
+   "chapter": "V18-C006",
+   "title": "自荐系列与 xz 攻击向量",
+   "meta": false,
+   "domains": [
+    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-SEC-026",
+    "TH-GOV-009",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C006-6.18": {
+   "chapter": "V18-C006",
+   "title": "选举结果与 kernel.org 资格",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-018",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.1": {
+   "chapter": "V18-C007",
+   "title": "AI 内容指南与 Folio 进化论",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.2": {
+   "chapter": "V18-C007",
+   "title": "AI 内容政策与 highmem 路线图",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.3": {
+   "chapter": "V18-C007",
+   "title": "AI 指南定稿与源码为人而写",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.4": {
+   "chapter": "V18-C007",
+   "title": "AI 流程落地与 Rust 稳定性反驳",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.5": {
+   "chapter": "V18-C007",
+   "title": "AI 版权与 API 弃用定调",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LAW-010",
+    "TH-LANG-003",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.6": {
+   "chapter": "V18-C007",
+   "title": "AI 缺陷分诊与特性准入",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.7": {
+   "chapter": "V18-C007",
+   "title": "GKI 争议与 AI 政策共识梳理",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.8": {
+   "chapter": "V18-C007",
+   "title": "Linus 表态与 AI 诉讼进行时",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LAW-015",
+    "TH-LANG-003",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.9": {
+   "chapter": "V18-C007",
+   "title": "Rust 抽象与 AI 评审推进",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.10": {
+   "chapter": "V18-C007",
+   "title": "Rust 聚合论战与 AI 审查",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.11": {
+   "chapter": "V18-C007",
+   "title": "Sashiko 实证与 Folios 之争",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.12": {
+   "chapter": "V18-C007",
+   "title": "TAB 选举与 AI 标注验证门",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-LANG-003",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.13": {
+   "chapter": "V18-C007",
+   "title": "THE REST 与 AI 内容高标准之争",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.14": {
+   "chapter": "V18-C007",
+   "title": "THE REST 分流与生成内容",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.15": {
+   "chapter": "V18-C007",
+   "title": "保护墙定调与 AI 审查红线",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.16": {
+   "chapter": "V18-C007",
+   "title": "拒收拉取请求标准与 AI 文档争议",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-018",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.17": {
+   "chapter": "V18-C007",
+   "title": "media 档案定稿与 getmaintainer 之争",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-REL-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-BIZ-023",
+    "TH-REL-032",
+    "TH-LANG-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C007-7.18": {
+   "chapter": "V18-C007",
+   "title": "子系统档案评审与可信名单之争",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-LANG-003",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C008-8.1": {
+   "chapter": "V18-C008",
+   "title": "C++ 与 Rust 的准入争论：接纳结果与生态影响",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -18750,9 +20625,9 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V18-C004-4.5": {
-   "chapter": "V18-C004",
-   "title": "Android（2008）与设备规模的商品化：Linux 与 BSD 的嵌入式路径分化",
+  "V18-C008-8.2": {
+   "chapter": "V18-C008",
+   "title": "用户态语言生态：发行版打包与脚本语言",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -26882,12 +28757,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26901,12 +28776,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26920,12 +28795,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26939,12 +28814,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26958,12 +28833,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26977,12 +28852,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26996,12 +28871,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27015,12 +28890,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27034,12 +28909,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27055,9 +28930,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27073,9 +28948,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27091,9 +28966,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27109,9 +28984,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27129,7 +29004,7 @@
    "themes": [
     "TH-LANG-026",
     "TH-OS-015",
-    "TH-OS-005"
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27147,7 +29022,7 @@
    "themes": [
     "TH-OS-005",
     "TH-OS-014",
-    "TH-LANG-026"
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27163,9 +29038,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27181,9 +29056,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27192,6 +29067,42 @@
   },
   "V36-C003-3.9": {
    "chapter": "V36-C003",
+   "title": "Jordan Hubbard 与 Ports 构建宏的源流",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-LANG-016",
+    "TH-LANG-026",
+    "TH-OS-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C003-3.10": {
+   "chapter": "V36-C003",
+   "title": "Ports 数量的增长曲线与社区贡献模式",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-LANG-016",
+    "TH-LANG-026",
+    "TH-OS-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C003-3.11": {
+   "chapter": "V36-C003",
    "title": "与同时期操作系统的比较：Linux 2.2、Windows 2000、Solaris 8",
    "meta": false,
    "domains": [
@@ -27199,9 +29110,9 @@
     "TH-OS-000"
    ],
    "themes": [
+    "TH-LANG-016",
     "TH-LANG-026",
-    "TH-OS-005",
-    "TH-OS-014"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27357,13 +29268,13 @@
    "title": "从增量开发转向内核基础设施重建",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27376,12 +29287,12 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-HW-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-OS-005",
-    "TH-HW-002",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27393,13 +29304,13 @@
    "title": "文件系统开始脱离传统 Unix 的容量尺度",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27411,13 +29322,13 @@
    "title": "安全模型从固定机制走向可扩展体系",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27430,12 +29341,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27447,13 +29358,13 @@
    "title": "新旧内核、新旧用户空间长期并存的代价",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27465,13 +29376,13 @@
    "title": "5.x：内核与用户空间并行的系统重建（2003–2005）",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27483,13 +29394,13 @@
    "title": "多年重建过程中的弯路与代价",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27498,16 +29409,88 @@
   },
   "V36-C005-5.9": {
    "chapter": "V36-C005",
-   "title": "与同时期操作系统的比较：Linux 2.6、Windows Server 2003、Solaris 9／10（2003–2005）",
+   "title": "FreeBSD 5.x 时期的技术淘汰：GEOM、UFS2、rcNG 与 ULE",
    "meta": false,
    "domains": [
-    "TH-HW-000",
+    "TH-FS-000",
     "TH-OS-000"
    ],
    "themes": [
-    "TH-HW-002",
-    "TH-OS-005",
-    "TH-HW-015"
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-OS-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C005-5.10": {
+   "chapter": "V36-C005",
+   "title": "FreeBSD 5.x 时期的贡献者多样性与企业参与",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-GOV-005",
+    "TH-FS-012",
+    "TH-FS-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C005-5.11": {
+   "chapter": "V36-C005",
+   "title": "1996—2010 年的时代语境：科技政策、伯克利校园、集成电路与英美哲学",
+   "meta": false,
+   "domains": [
+    "TH-HIS-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-HIS-046",
+    "TH-FS-012",
+    "TH-FS-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C005-5.12": {
+   "chapter": "V36-C005",
+   "title": "第三方软件变更：PF 防火墙的引入与 MTA 格局",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-FS-012",
+    "TH-FS-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C005-5.13": {
+   "chapter": "V36-C005",
+   "title": "与同时期操作系统的比较：Linux 2.6、Windows Server 2003、Solaris 9／10（2003–2005）",
+   "meta": false,
+   "domains": [
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-FS-012",
+    "TH-FS-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27704,12 +29687,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27723,12 +29706,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27742,12 +29725,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27761,12 +29744,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27780,12 +29763,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27799,12 +29782,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27818,12 +29801,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27837,12 +29820,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27856,12 +29839,12 @@
    "domains": [
     "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-REL-015",
     "TH-HW-015",
-    "TH-HIS-001"
+    "TH-FS-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28847,12 +30830,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28865,12 +30848,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28883,12 +30866,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28901,12 +30884,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28919,12 +30902,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28937,12 +30920,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28955,12 +30938,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28973,12 +30956,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28991,12 +30974,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HIS-001",
-    "TH-HW-002"
+    "TH-FS-012",
+    "TH-FS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29563,6 +31546,74 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V37-C001-1.10": {
+   "chapter": "V37-C001",
+   "title": "Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C001-1.11": {
+   "chapter": "V37-C001",
+   "title": "FreeBSD 13.x 时期的技术淘汰与架构支持变动",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C001-1.12": {
+   "chapter": "V37-C001",
+   "title": "其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C001-1.13": {
+   "chapter": "V37-C001",
+   "title": "FreeBSD 2008—2018 年的贡献者多样性与企业参与",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V37-C002-2.1": {
    "chapter": "V37-C002",
    "title": "TCP／IP 网络栈基础：从 4.2BSD 到 4.4BSD",
@@ -29830,12 +31881,13 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-VM-000"
+    "TH-VM-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-OS-030",
     "TH-VM-001",
-    "TH-VM-006"
+    "TH-NET-034"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29868,12 +31920,51 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-VM-000"
+    "TH-VM-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-OS-030",
     "TH-VM-001",
-    "TH-VM-006"
+    "TH-NET-034"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C003-3.9": {
+   "chapter": "V37-C003",
+   "title": "FreeBSD 8.x 的开发者群体与虚拟化团队",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-VM-000",
+    "TH-NET-000"
+   ],
+   "themes": [
+    "TH-OS-030",
+    "TH-VM-001",
+    "TH-NET-034"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C003-3.10": {
+   "chapter": "V37-C003",
+   "title": "FreeBSD 8.x 时期 XEN／VNET 移植的无名工程师",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-NET-000",
+    "TH-VM-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-NET-034",
+    "TH-VM-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29885,14 +31976,14 @@
    "title": "4.4BSD 单处理器内核模型",
    "meta": false,
    "domains": [
+    "TH-OS-000",
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-OS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
+    "TH-OS-005",
     "TH-LANG-033",
-    "TH-NET-006",
-    "TH-OS-002"
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29906,12 +31997,12 @@
    "domains": [
     "TH-OS-000",
     "TH-LANG-000",
-    "TH-NET-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-OS-005",
     "TH-LANG-033",
-    "TH-NET-006"
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29924,13 +32015,12 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-OS-000",
-    "TH-LANG-000"
+    "TH-OS-000"
    ],
    "themes": [
     "TH-NET-006",
     "TH-OS-006",
-    "TH-LANG-033"
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29943,13 +32033,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-OS-000"
+    "TH-OS-000",
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-LANG-033",
-    "TH-NET-006",
-    "TH-OS-002"
+    "TH-OS-005",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29962,13 +32052,12 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-OS-002",
-    "TH-LANG-033",
-    "TH-NET-006"
+    "TH-OS-005",
+    "TH-LANG-033"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29981,13 +32070,12 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-OS-003",
-    "TH-LANG-033",
-    "TH-NET-006"
+    "TH-OS-005",
+    "TH-LANG-033"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30000,13 +32088,12 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-OS-036",
-    "TH-LANG-033",
-    "TH-NET-006"
+    "TH-OS-005",
+    "TH-LANG-033"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30019,13 +32106,127 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-OS-000"
+    "TH-OS-000",
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-LANG-033",
-    "TH-NET-006",
-    "TH-OS-002"
+    "TH-OS-005",
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C004-4.9": {
+   "chapter": "V37-C004",
+   "title": "FreeBSD 3.0 引入初步 SMP 的工程挑战（1998—2000）",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-LANG-033",
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C004-4.10": {
+   "chapter": "V37-C004",
+   "title": "FreeBSD 5.0 三年开发周期的工程挑战（2003—2006）",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-LANG-033",
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C004-4.11": {
+   "chapter": "V37-C004",
+   "title": "CAM 与 SCSI 子系统",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-OS-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-OS-005",
+    "TH-LANG-033"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C004-4.12": {
+   "chapter": "V37-C004",
+   "title": "FreeBSD 3.x 的开发者群体与 SMP 团队组织",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-LANG-033",
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C004-4.13": {
+   "chapter": "V37-C004",
+   "title": "FreeBSD 5.x 时期的技术淘汰与废弃特性",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-LANG-033",
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C004-4.14": {
+   "chapter": "V37-C004",
+   "title": "FreeBSD 5.x 的开发者群体与工程组织",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-LANG-033",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30220,6 +32421,25 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V37-C005-5.11": {
+   "chapter": "V37-C005",
+   "title": "FreeBSD 9.x 系列总览与工程语境（2010—2014）",
+   "meta": false,
+   "domains": [
+    "TH-SEC-000",
+    "TH-FS-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-SEC-001",
+    "TH-FS-019",
+    "TH-LANG-025"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V37-C006-6.1": {
    "chapter": "V37-C006",
    "title": "FreeBSD 源代码树结构",
@@ -30227,12 +32447,12 @@
    "domains": [
     "TH-REL-000",
     "TH-FS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-LANG-017"
+    "TH-GOV-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30264,12 +32484,12 @@
    "domains": [
     "TH-REL-000",
     "TH-FS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-LANG-017"
+    "TH-GOV-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30283,12 +32503,12 @@
    "domains": [
     "TH-REL-000",
     "TH-FS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-LANG-017"
+    "TH-GOV-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30320,12 +32540,12 @@
    "domains": [
     "TH-REL-000",
     "TH-FS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-LANG-017"
+    "TH-GOV-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30339,12 +32559,12 @@
    "domains": [
     "TH-REL-000",
     "TH-FS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-LANG-017"
+    "TH-GOV-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30376,12 +32596,12 @@
    "domains": [
     "TH-FS-000",
     "TH-REL-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-FS-007",
     "TH-REL-001",
-    "TH-LANG-017"
+    "TH-GOV-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30399,6 +32619,101 @@
    ],
    "themes": [
     "TH-LANG-017",
+    "TH-REL-001",
+    "TH-FS-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C006-6.11": {
+   "chapter": "V37-C006",
+   "title": "FreeBSD 2.0 的发布与 2.x 演进（1994—1998）",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-FS-007",
+    "TH-GOV-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C006-6.12": {
+   "chapter": "V37-C006",
+   "title": "FreeBSD 4.0 的发布与 Jails 引入（2000—2003）",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-FS-007",
+    "TH-GOV-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C006-6.13": {
+   "chapter": "V37-C006",
+   "title": "FreeBSD 2.x 的开发者群体与核心团队代际更替",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-GOV-003",
+    "TH-REL-001",
+    "TH-FS-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C006-6.14": {
+   "chapter": "V37-C006",
+   "title": "对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-REL-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-REL-001",
+    "TH-FS-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C006-6.15": {
+   "chapter": "V37-C006",
+   "title": "FreeBSD 2.x 时期被遗忘的驱动维护者",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
     "TH-REL-001",
     "TH-FS-007"
    ],
@@ -30887,12 +33202,13 @@
    "title": "i386 时代的系统基础",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-002",
     "TH-HW-003",
-    "TH-HW-004"
+    "TH-FS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30921,12 +33237,13 @@
    "title": "IA-64 支持与退出",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-002",
     "TH-HW-003",
-    "TH-HW-004"
+    "TH-FS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30938,12 +33255,13 @@
    "title": "AMD64：64 位时代转型",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-002",
     "TH-HW-003",
-    "TH-HW-004"
+    "TH-FS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30972,12 +33290,13 @@
    "title": "AArch64：现代 ARM 平台",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-002",
-    "TH-HW-004"
+    "TH-FS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31035,6 +33354,60 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V37-C010-10.10": {
+   "chapter": "V37-C010",
+   "title": "FreeBSD 6.x 与同期 Linux 的功能与性能对比",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-HW-002",
+    "TH-HW-003",
+    "TH-FS-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C010-10.11": {
+   "chapter": "V37-C010",
+   "title": "FreeBSD 6.x 时期的技术淘汰：Giant 锁与 MPSAFE VFS",
+   "meta": false,
+   "domains": [
+    "TH-FS-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-FS-001",
+    "TH-HW-002",
+    "TH-HW-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C010-10.12": {
+   "chapter": "V37-C010",
+   "title": "FreeBSD 6.x 时期未被记名的贡献者",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-GOV-005",
+    "TH-HW-002",
+    "TH-HW-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V37-C011-11.1": {
    "chapter": "V37-C011",
    "title": "src 树与 committer 流程：Committer's Guide 与 commit message 体例",
@@ -31060,13 +33433,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-037",
     "TH-REL-001",
-    "TH-BIZ-018"
+    "TH-REL-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31079,13 +33451,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-018",
     "TH-REL-001",
-    "TH-BIZ-018"
+    "TH-REL-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31189,12 +33560,29 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-012",
     "TH-REL-001",
+    "TH-REL-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C011-11.10": {
+   "chapter": "V37-C011",
+   "title": "FreeBSD 14.0 的发布与 stable／14 分支（2023 年）",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-REL-003",
     "TH-BIZ-018"
    ],
    "projects": [],
@@ -31205,14 +33593,15 @@
   "V37-C012-12.1": {
    "chapter": "V37-C012",
    "title": "基本系统统一性的形成",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31222,14 +33611,15 @@
   "V37-C012-12.2": {
    "chapter": "V37-C012",
    "title": "内核、用户空间与工程体系的协同",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31239,14 +33629,16 @@
   "V37-C012-12.3": {
    "chapter": "V37-C012",
    "title": "稳定性、兼容性与创新之间的取舍",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LAW-000",
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-008",
+    "TH-BIZ-014",
+    "TH-HW-020"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31256,14 +33648,15 @@
   "V37-C012-12.4": {
    "chapter": "V37-C012",
    "title": "服务器、网络与基础设施中的技术定位",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31273,14 +33666,15 @@
   "V37-C012-12.5": {
    "chapter": "V37-C012",
    "title": "FreeBSD 技术遗产与持续发展",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31290,14 +33684,15 @@
   "V37-C012-12.6": {
    "chapter": "V37-C012",
    "title": "技术世代更替：既有实现与既有技能的退出（1990s–2026）",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31307,14 +33702,15 @@
   "V37-C012-12.7": {
    "chapter": "V37-C012",
    "title": "科研计算中的 FreeBSD：HPC、集群与国家实验室",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31324,14 +33720,15 @@
   "V37-C012-12.8": {
    "chapter": "V37-C012",
    "title": "高性能生态位：与 Linux 集群的对比（2000s–2026）",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31341,14 +33738,15 @@
   "V37-C012-12.9": {
    "chapter": "V37-C012",
    "title": "FreeBSD 在自然科学计算中的应用",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31358,14 +33756,15 @@
   "V37-C012-12.10": {
    "chapter": "V37-C012",
    "title": "FreeBSD 在医学、社会科学与数字人文中的应用",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31375,6 +33774,60 @@
   "V37-C012-12.11": {
    "chapter": "V37-C012",
    "title": "版本发行时间线：FreeBSD 1.0–15.x（1993–2026）",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C012-12.12": {
+   "chapter": "V37-C012",
+   "title": "BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-026",
+    "TH-BIZ-014",
+    "TH-HW-020"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C012-12.13": {
+   "chapter": "V37-C012",
+   "title": "time_t 类型与 2038 年问题：64 位时间迁移",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-BIZ-014",
+    "TH-HW-020",
+    "TH-HW-026"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C013-13.1": {
+   "chapter": "V37-C013",
+   "title": "Modula-3 与 CVSup",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -31389,9 +33842,43 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V37-C012-12.12": {
-   "chapter": "V37-C012",
-   "title": "BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）",
+  "V37-C013-13.2": {
+   "chapter": "V37-C013",
+   "title": "C++ 标准库的 BSD 化：libc++ 与 libcxxrt",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C013-13.3": {
+   "chapter": "V37-C013",
+   "title": "Rust 进入基本系统：Somers 方案与社区争论",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C013-13.4": {
+   "chapter": "V37-C013",
+   "title": "跨内核对照：Rust for Linux 观察",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -34028,6 +36515,24 @@
   },
   "V40-C003-3.8": {
    "chapter": "V40-C003",
+   "title": "NetBSD 2.0 的 SMP 架构实现（2003—2004）",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-OS-005",
+    "TH-OS-002",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C003-3.9": {
+   "chapter": "V40-C003",
    "title": "与同时期操作系统的比较：Linux 2.6、FreeBSD 5.x 与 Windows XP",
    "meta": false,
    "domains": [
@@ -34049,12 +36554,13 @@
    "title": "NetBSD 3.0：稳定化阶段",
    "meta": false,
    "domains": [
+    "TH-OS-000",
     "TH-HW-000"
    ],
    "themes": [
+    "TH-OS-005",
     "TH-HW-003",
-    "TH-HW-005",
-    "TH-HW-006"
+    "TH-HW-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34102,12 +36608,13 @@
    "title": "嵌入式市场中的 NetBSD",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
     "TH-HW-022",
-    "TH-HW-003",
-    "TH-HW-005"
+    "TH-OS-005",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34120,12 +36627,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
+    "TH-OS-000",
     "TH-HW-000"
    ],
    "themes": [
     "TH-LANG-016",
-    "TH-HW-003",
-    "TH-HW-005"
+    "TH-OS-005",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34137,12 +36645,13 @@
    "title": "开发者社区与基金会角色变化",
    "meta": false,
    "domains": [
+    "TH-OS-000",
     "TH-HW-000"
    ],
    "themes": [
+    "TH-OS-005",
     "TH-HW-003",
-    "TH-HW-005",
-    "TH-HW-006"
+    "TH-HW-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34154,12 +36663,13 @@
    "title": "外部评价与路线争论",
    "meta": false,
    "domains": [
+    "TH-OS-000",
     "TH-HW-000"
    ],
    "themes": [
+    "TH-OS-005",
     "TH-HW-003",
-    "TH-HW-005",
-    "TH-HW-006"
+    "TH-HW-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34168,15 +36678,54 @@
   },
   "V40-C004-4.8": {
    "chapter": "V40-C004",
-   "title": "与同时期操作系统的比较：Linux 2.6、FreeBSD 6.x–7.x 与 Windows Vista",
+   "title": "NetBSD 1.x 的可移植性、性能与桌面体验之争（1994—2004）",
    "meta": false,
    "domains": [
+    "TH-HW-000",
+    "TH-LANG-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-LANG-036",
+    "TH-OS-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C004-4.9": {
+   "chapter": "V40-C004",
+   "title": "NetBSD 4.0 的发布与细粒度 SMP 改进",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-REL-000",
     "TH-HW-000"
    ],
    "themes": [
+    "TH-OS-005",
+    "TH-REL-001",
+    "TH-HW-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C004-4.10": {
+   "chapter": "V40-C004",
+   "title": "与同时期操作系统的比较：Linux 2.6、FreeBSD 6.x–7.x 与 Windows Vista",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-OS-005",
     "TH-HW-003",
-    "TH-HW-005",
-    "TH-HW-006"
+    "TH-HW-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34189,13 +36738,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34208,13 +36756,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34227,13 +36774,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34246,13 +36792,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34265,13 +36810,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34284,13 +36828,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34303,13 +36846,12 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-001",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34321,13 +36863,12 @@
    "title": "NetBSD 6.0 与现代化尝试",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34339,13 +36880,12 @@
    "title": "多核优化与系统性能提升",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34357,13 +36897,12 @@
    "title": "ARM 生态扩展",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34375,13 +36914,12 @@
    "title": "ARM 与 MIPS 平台扩展（2012–2018）",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34411,13 +36949,12 @@
    "title": "NetBSD 在 BSD 家族中的定位变化",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34429,13 +36966,12 @@
    "title": "外部批评与内部回应",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34444,16 +36980,32 @@
   },
   "V40-C006-6.8": {
    "chapter": "V40-C006",
+   "title": "NetBSD 7.0 的 ARM 多核支持与树莓派移植",
+   "meta": false,
+   "domains": [
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-HW-003",
+    "TH-HW-036",
+    "TH-HW-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C006-6.9": {
+   "chapter": "V40-C006",
    "title": "与同时期操作系统的比较：Linux 3.x–4.x、FreeBSD 9.x–11.x 与 Windows 8／10",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-006",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34466,13 +37018,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-VM-000",
-    "TH-REL-000"
+    "TH-VM-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-VM-000",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34485,13 +37036,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-VM-000",
-    "TH-REL-000"
+    "TH-VM-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-VM-000",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34504,13 +37054,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-VM-000",
-    "TH-REL-000"
+    "TH-VM-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-VM-000",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34523,13 +37072,12 @@
    "meta": false,
    "domains": [
     "TH-VM-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-VM-000",
     "TH-HW-003",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34542,13 +37090,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-VM-000",
-    "TH-REL-000"
+    "TH-VM-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-VM-000",
-    "TH-REL-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34557,17 +37104,34 @@
   },
   "V40-C007-7.6": {
    "chapter": "V40-C007",
-   "title": "与同时期操作系统的比较：Linux 4.x–5.x、FreeBSD 11.x–12.x 与 Windows 10",
+   "title": "NetBSD 8.0 的 64 位 ARM（aarch64）支持",
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-VM-000",
-    "TH-REL-000"
+    "TH-VM-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-VM-000",
-    "TH-REL-001"
+    "TH-HW-036"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C007-7.7": {
+   "chapter": "V40-C007",
+   "title": "与同时期操作系统的比较：Linux 4.x–5.x、FreeBSD 11.x–12.x 与 Windows 10",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-VM-000"
+   ],
+   "themes": [
+    "TH-HW-003",
+    "TH-VM-000",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34599,13 +37163,13 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-003",
-    "TH-HW-003",
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34637,13 +37201,13 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-003",
-    "TH-HW-003",
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34656,13 +37220,13 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-003",
-    "TH-HW-003",
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34675,13 +37239,13 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-003",
-    "TH-HW-003",
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34690,17 +37254,36 @@
   },
   "V40-C008-8.7": {
    "chapter": "V40-C008",
+   "title": "NetBSD 9.0 的发布与 ZFS 集成",
+   "meta": false,
+   "domains": [
+    "TH-FS-000",
+    "TH-REL-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-FS-003",
+    "TH-REL-001",
+    "TH-HW-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C008-8.8": {
+   "chapter": "V40-C008",
    "title": "与同时期操作系统的比较：Linux 5.x–6.x、FreeBSD 12.x–13.x 与 Windows 11",
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-HW-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-FS-003",
-    "TH-HW-003",
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-HW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -34828,6 +37411,40 @@
   },
   "V40-C009-9.8": {
    "chapter": "V40-C009",
+   "title": "NetBSD 10.0 的现代硬件支持",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C009-9.9": {
+   "chapter": "V40-C009",
+   "title": "pkgsrc 与现代软件包管理的持续演进",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V40-C009-9.10": {
+   "chapter": "V40-C009",
    "title": "与同时期操作系统的比较：Linux 6.x、FreeBSD 14.x 与 OpenBSD 7.x",
    "meta": true,
    "domains": [
@@ -34931,6 +37548,23 @@
   "V41-C001-1.6": {
    "chapter": "V41-C001",
    "title": "可移植性的实现成本：性能与维护",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V41-C001-1.7": {
+   "chapter": "V41-C001",
+   "title": "NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -35669,13 +38303,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-016",
     "TH-REL-007",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -35688,13 +38321,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-016",
     "TH-REL-007",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -35707,13 +38339,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-016",
     "TH-REL-007",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -35726,13 +38357,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-016",
     "TH-REL-007",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -35745,13 +38375,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-REL-007",
     "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -35764,13 +38393,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-016",
     "TH-REL-007",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -35783,13 +38411,12 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-016",
     "TH-REL-007",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36085,13 +38712,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36104,13 +38730,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36123,13 +38748,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36142,13 +38766,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36161,13 +38784,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36180,13 +38802,12 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-HIS-001"
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36196,14 +38817,16 @@
   "V41-C012-12.1": {
    "chapter": "V41-C012",
    "title": "交叉构建的工作流：一套构建、多平台产出",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-REL-000",
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-REL-013",
+    "TH-HW-036",
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36213,14 +38836,15 @@
   "V41-C012-12.2": {
    "chapter": "V41-C012",
    "title": "版本控制与移植工作流：CVS 连续性、autoconf 与新平台引入",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-036",
+    "TH-LANG-017",
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36230,14 +38854,15 @@
   "V41-C012-12.3": {
    "chapter": "V41-C012",
    "title": "代码规范与移植纪律：KNF 与 MI／MD 书写的约束",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-036",
+    "TH-LANG-016",
+    "TH-LANG-017"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36247,14 +38872,15 @@
   "V41-C012-12.4": {
    "chapter": "V41-C012",
    "title": "测试：atf 测试框架与回归测试",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-021",
+    "TH-HW-036",
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36264,14 +38890,16 @@
   "V41-C012-12.5": {
    "chapter": "V41-C012",
    "title": "发布工程：正式发布、安装镜像与 release notes",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-REL-000",
+    "TH-VM-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-REL-001",
+    "TH-REL-002",
+    "TH-REL-037",
+    "TH-VM-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36281,14 +38909,15 @@
   "V41-C012-12.6": {
    "chapter": "V41-C012",
    "title": "pkgsrc 的工程过程：批量构建与平台矩阵",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-016",
+    "TH-HW-036",
+    "TH-LANG-017"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36298,6 +38927,60 @@
   "V41-C012-12.7": {
    "chapter": "V41-C012",
    "title": "文档工程：man 页一致性与 developer 文档",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-LANG-016",
+    "TH-LANG-017"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V41-C012-12.8": {
+   "chapter": "V41-C012",
+   "title": "跨项目工程流动：补丁互移与上游回馈",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-LANG-016",
+    "TH-LANG-017"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V41-C012-12.9": {
+   "chapter": "V41-C012",
+   "title": "NetBSD 的极简主义哲学与代码美学",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-LANG-037",
+    "TH-HW-036",
+    "TH-LANG-016"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V41-C013-13.1": {
+   "chapter": "V41-C013",
+   "title": "pkgsrc 与多语言打包生态",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -36312,9 +38995,26 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V41-C012-12.8": {
-   "chapter": "V41-C012",
-   "title": "跨项目工程流动：补丁互移与上游回馈",
+  "V41-C013-13.2": {
+   "chapter": "V41-C013",
+   "title": "跨平台编译器移植史",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V41-C013-13.3": {
+   "chapter": "V41-C013",
+   "title": "NetBSD 用户态的脚本语言演进",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -37875,6 +40575,25 @@
   },
   "V44-C002-2.9": {
    "chapter": "V44-C002",
+   "title": "FreeBSD 2010—2026 年的贡献者多样性与企业参与",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-NET-000",
+    "TH-SEC-000"
+   ],
+   "themes": [
+    "TH-GOV-005",
+    "TH-NET-026",
+    "TH-SEC-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V44-C002-2.10": {
+   "chapter": "V44-C002",
    "title": "与同时期操作系统的比较（OpenBSD 2.x 时期）",
    "meta": false,
    "domains": [
@@ -38058,6 +40777,24 @@
   },
   "V44-C003-3.10": {
    "chapter": "V44-C003",
+   "title": "ipfw、pf 与 ipfilter 的防火墙框架演进",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-GOV-004",
+    "TH-GOV-005"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V44-C003-3.11": {
+   "chapter": "V44-C003",
    "title": "与同时期操作系统的比较：NetBSD 1.5–2.x、FreeBSD 4.x–5.x、Linux 2.4–2.6、Solaris 8–9",
    "meta": false,
    "domains": [
@@ -38081,12 +40818,12 @@
    "domains": [
     "TH-REL-000",
     "TH-LANG-000",
-    "TH-GOV-000"
+    "TH-NET-000"
    ],
    "themes": [
     "TH-REL-001",
     "TH-LANG-010",
-    "TH-GOV-005"
+    "TH-NET-010"
    ],
    "projects": [],
    "technical_terms": [],
@@ -38135,12 +40872,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-GOV-000"
+    "TH-NET-000",
+    "TH-OS-000"
    ],
    "themes": [
     "TH-LANG-010",
-    "TH-GOV-005",
-    "TH-GOV-006"
+    "TH-NET-010",
+    "TH-OS-011"
    ],
    "projects": [],
    "technical_terms": [],
@@ -38189,12 +40927,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-GOV-000"
+    "TH-NET-000",
+    "TH-OS-000"
    ],
    "themes": [
     "TH-LANG-010",
-    "TH-GOV-005",
-    "TH-GOV-006"
+    "TH-NET-010",
+    "TH-OS-011"
    ],
    "projects": [],
    "technical_terms": [],
@@ -38208,12 +40947,12 @@
    "domains": [
     "TH-SEC-000",
     "TH-LANG-000",
-    "TH-GOV-000"
+    "TH-NET-000"
    ],
    "themes": [
     "TH-SEC-035",
     "TH-LANG-010",
-    "TH-GOV-005"
+    "TH-NET-010"
    ],
    "projects": [],
    "technical_terms": [],
@@ -38222,16 +40961,93 @@
   },
   "V44-C004-4.9": {
    "chapter": "V44-C004",
+   "title": "OpenBSD 4.x 的安全与工程改进：malloc 替代",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-NET-000"
+   ],
+   "themes": [
+    "TH-OS-011",
+    "TH-LANG-010",
+    "TH-NET-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V44-C004-4.10": {
+   "chapter": "V44-C004",
+   "title": "OpenBSD 4.x 时期的技术淘汰与新旧交替（2005—2010）",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-NET-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-LANG-010",
+    "TH-NET-010",
+    "TH-OS-011"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V44-C004-4.11": {
+   "chapter": "V44-C004",
+   "title": "OpenBSD 与密码学的深度结合（2005—2012）",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-NET-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-LANG-010",
+    "TH-NET-010",
+    "TH-OS-011"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V44-C004-4.12": {
+   "chapter": "V44-C004",
+   "title": "pf 防火墙从 4.0 到 5.2 的持续演进（2005—2012）",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-LANG-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-LANG-010",
+    "TH-OS-011"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V44-C004-4.13": {
+   "chapter": "V44-C004",
    "title": "与同时期操作系统的比较：Linux、FreeBSD、NetBSD 与其他 UNIX 系统",
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-GOV-000"
+    "TH-NET-000",
+    "TH-OS-000"
    ],
    "themes": [
     "TH-LANG-010",
-    "TH-GOV-005",
-    "TH-GOV-006"
+    "TH-NET-010",
+    "TH-OS-011"
    ],
    "projects": [],
    "technical_terms": [],
@@ -38877,6 +41693,57 @@
   "V45-C001-1.8": {
    "chapter": "V45-C001",
    "title": "安全工程方法在 2000 年代后的制度化",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V45-C001-1.9": {
+   "chapter": "V45-C001",
+   "title": "FreeBSD 安全官制度与安全公告流程",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V45-C001-1.10": {
+   "chapter": "V45-C001",
+   "title": "安全社区的无名守护者：FreeBSD 安全团队成员",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V45-C001-1.11": {
+   "chapter": "V45-C001",
+   "title": "与同时期操作系统的比较：Linux 安全生态与 SELinux、KSPP、LKM",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -40903,12 +43770,16 @@
   "V45-C014-14.1": {
    "chapter": "V45-C014",
    "title": "CVS 流程与提交纪律：commit log 体例与审查",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-LANG-000",
+    "TH-SEC-000"
    ],
    "themes": [
-    "TH-HIS-007"
+    "TH-HIS-007",
+    "TH-LANG-017",
+    "TH-SEC-032"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40918,14 +43789,16 @@
   "V45-C014-14.2": {
    "chapter": "V45-C014",
    "title": "KNF 的严格执行：OpenBSD style(9) 与风格—正确性之辨",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-REL-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-037",
+    "TH-REL-001",
+    "TH-FS-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40935,14 +43808,17 @@
   "V45-C014-14.3": {
    "chapter": "V45-C014",
    "title": "六个月发布节奏：snapshot、release 与 errata 流程",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-FS-000",
+    "TH-REL-000",
+    "TH-SEC-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-FS-007",
+    "TH-REL-001",
+    "TH-REL-016",
+    "TH-SEC-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40952,14 +43828,16 @@
   "V45-C014-14.4": {
    "chapter": "V45-C014",
    "title": "构建集群：ports 与 release 的批量构建",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-REL-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-016",
+    "TH-REL-001",
+    "TH-FS-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40969,14 +43847,16 @@
   "V45-C014-14.5": {
    "chapter": "V45-C014",
    "title": "回归测试：regress 树与测试进入提交流程",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-REL-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-021",
+    "TH-REL-001",
+    "TH-FS-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40986,14 +43866,16 @@
   "V45-C014-14.6": {
    "chapter": "V45-C014",
    "title": "signify 与发布物验证：工程过程里的信任链",
-   "meta": true,
+   "meta": false,
    "domains": [
+    "TH-REL-000",
+    "TH-FS-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-REL-001",
+    "TH-FS-007",
+    "TH-HIS-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -41003,6 +43885,44 @@
   "V45-C014-14.7": {
    "chapter": "V45-C014",
    "title": "hackathon：集中协作的组织方式与产出",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-FS-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-FS-007",
+    "TH-HIS-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V45-C014-14.8": {
+   "chapter": "V45-C014",
+   "title": "文档工程：man 页极简体例与随代码更新",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-FS-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-FS-007",
+    "TH-HIS-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V45-C015-15.1": {
+   "chapter": "V45-C015",
+   "title": "Ports 与用户态脚本语言",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -41017,9 +43937,9 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V45-C014-14.8": {
-   "chapter": "V45-C014",
-   "title": "文档工程：man 页极简体例与随代码更新",
+  "V45-C015-15.2": {
+   "chapter": "V45-C015",
+   "title": "语言政策的保守主义",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -41105,6 +44025,40 @@
   "V46-C001-1.5": {
    "chapter": "V46-C001",
    "title": "1995–2026 年领导期的分期与评价",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V46-C001-1.6": {
+   "chapter": "V46-C001",
+   "title": "OpenBSD 5.x 时期的技术淘汰与新旧交替（2011—2016）",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V46-C001-1.7": {
+   "chapter": "V46-C001",
+   "title": "OpenBSD 5.x 的核心团队与 Theo de Raadt",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -50259,6 +53213,24 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V57-C002-2.4": {
+   "chapter": "V57-C002",
+   "title": "GhostBSD 与 FreeBSD 桌面化（2009—2026）",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HW-020",
+    "TH-HIS-001",
+    "TH-HW-022"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V57-C003-3.1": {
    "chapter": "V57-C003",
    "title": "网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS",
@@ -51455,14 +54427,15 @@
   "V58-C008-8.1": {
    "chapter": "V58-C008",
    "title": "iPhone OS 的诞生与 Darwin 共基（2007–2010）",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51472,14 +54445,15 @@
   "V58-C008-8.2": {
    "chapter": "V58-C008",
    "title": "iOS 的命名确立与版本序列（2010–2026）",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51489,14 +54463,15 @@
   "V58-C008-8.3": {
    "chapter": "V58-C008",
    "title": "iPadOS 的分家与多形态适配（2019–2026）",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51506,14 +54481,15 @@
   "V58-C008-8.4": {
    "chapter": "V58-C008",
    "title": "tvOS：Apple TV 的嵌入式 Darwin 线",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-022",
+    "TH-HW-015",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51523,14 +54499,15 @@
   "V58-C008-8.5": {
    "chapter": "V58-C008",
    "title": "watchOS：可穿戴系统的裁剪与封装",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51540,14 +54517,15 @@
   "V58-C008-8.6": {
    "chapter": "V58-C008",
    "title": "visionOS：空间计算与 macOS 血缘（2023–2026）",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51557,14 +54535,15 @@
   "V58-C008-8.7": {
    "chapter": "V58-C008",
    "title": "T2 等设备固件系统",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51574,14 +54553,15 @@
   "V58-C008-8.8": {
    "chapter": "V58-C008",
    "title": "XNU 内核与 BSD 层在各衍生系统中的共享形态",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -51591,6 +54571,24 @@
   "V58-C008-8.9": {
    "chapter": "V58-C008",
    "title": "闭源边界与开源披露：Apple 家族的开源面",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-HW-015",
+    "TH-HW-022",
+    "TH-OS-037"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V58-C009-9.1": {
+   "chapter": "V58-C009",
+   "title": "Objective-C 与 NeXTSTEP 遗产",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -56974,13 +59972,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-BIZ-000"
+    "TH-BIZ-000",
+    "TH-LAW-000"
    ],
    "themes": [
     "TH-LANG-030",
-    "TH-NET-038",
-    "TH-BIZ-008"
+    "TH-BIZ-008",
+    "TH-LAW-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -57031,13 +60029,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-BIZ-000"
+    "TH-BIZ-000",
+    "TH-LAW-000"
    ],
    "themes": [
     "TH-LANG-030",
-    "TH-NET-038",
-    "TH-BIZ-008"
+    "TH-BIZ-008",
+    "TH-LAW-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -57050,13 +60048,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-BIZ-000"
+    "TH-BIZ-000",
+    "TH-LAW-000"
    ],
    "themes": [
     "TH-LANG-030",
-    "TH-NET-038",
-    "TH-BIZ-008"
+    "TH-BIZ-008",
+    "TH-LAW-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -57070,12 +60068,31 @@
    "domains": [
     "TH-LAW-000",
     "TH-LANG-000",
-    "TH-NET-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-LAW-013",
     "TH-LANG-030",
-    "TH-NET-038"
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V62-C002-2.8": {
+   "chapter": "V62-C002",
+   "title": "POSIX 标准的遵守与合规工程史",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-LANG-000",
+    "TH-LAW-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-LANG-030",
+    "TH-LAW-021"
    ],
    "projects": [],
    "technical_terms": [],
@@ -62090,6 +65107,23 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V66-C001-1.13": {
+   "chapter": "V66-C001",
+   "title": "加拿大 BSD 社区：大学传统与区域组织",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V66-C002-2.1": {
    "chapter": "V66-C002",
    "title": "JUNET 的发端与终止",
@@ -62291,6 +65325,42 @@
   "V66-C002-2.12": {
    "chapter": "V66-C002",
    "title": "日本 BSD 社区的长期变化",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-NET-003",
+    "TH-HW-021",
+    "TH-NET-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V66-C002-2.13": {
+   "chapter": "V66-C002",
+   "title": "韩国 BSD 社区：用户组、企业与学术部署",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-NET-003",
+    "TH-HW-021",
+    "TH-NET-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V66-C002-2.14": {
+   "chapter": "V66-C002",
+   "title": "俄罗斯 BSD 社区：从 DemOS 到 FreeBSD",
    "meta": false,
    "domains": [
     "TH-NET-000",
@@ -66870,6 +69940,24 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V69-C002-2.14": {
+   "chapter": "V69-C002",
+   "title": "视频与音频资源：会议录像、播客与教程生态",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
+    "TH-GOV-015",
+    "TH-HIS-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V69-C003-3.1": {
    "chapter": "V69-C003",
    "title": "UUCP 与早期 UNIX 信息网络",
@@ -69813,6 +72901,24 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
+  "V72-C002-2.8": {
+   "chapter": "V72-C002",
+   "title": "当代 UNIX 与 BSD 的比较：技术、许可证与哲学",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-LAW-013",
+    "TH-BIZ-030",
+    "TH-LAW-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
   "V72-C003-3.1": {
    "chapter": "V72-C003",
    "title": "Novell 的 UNIX 资产与 UnixWare",
@@ -70112,7 +73218,7 @@
    "themes": [
     "TH-LAW-010",
     "TH-LAW-012",
-    "TH-LAW-005"
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70128,8 +73234,8 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
-    "TH-LAW-010"
+    "TH-LAW-010",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70163,8 +73269,8 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
-    "TH-LAW-010"
+    "TH-LAW-010",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70180,8 +73286,8 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
-    "TH-LAW-010"
+    "TH-LAW-010",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70197,8 +73303,8 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
-    "TH-LAW-010"
+    "TH-LAW-010",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70214,8 +73320,8 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
-    "TH-LAW-010"
+    "TH-LAW-010",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70231,8 +73337,8 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
-    "TH-LAW-010"
+    "TH-LAW-010",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -70248,8 +73354,42 @@
    ],
    "themes": [
     "TH-LAW-012",
-    "TH-LAW-005",
+    "TH-LAW-010",
+    "TH-LAW-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V72-C005-5.10": {
+   "chapter": "V72-C005",
+   "title": "BSD 与 GPL 的哲学差异：BSD 不强制 copyleft",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000"
+   ],
+   "themes": [
+    "TH-LAW-003",
+    "TH-LAW-012",
     "TH-LAW-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V72-C005-5.11": {
+   "chapter": "V72-C005",
+   "title": "美国诉微软案、浏览器战争与版权期限延长法",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000"
+   ],
+   "themes": [
+    "TH-LAW-010",
+    "TH-LAW-012",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -74572,6 +77712,652 @@
   "V75-C012-12.6": {
    "chapter": "V75-C012",
    "title": "结语：BSD 史学方法的整体议程",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C001-1.1": {
+   "chapter": "V76-C001",
+   "title": "UMN 假补丁事件",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C001-1.2": {
+   "chapter": "V76-C001",
+   "title": "UMN 争议余波与 AI 标注",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C001-1.3": {
+   "chapter": "V76-C001",
+   "title": "Rust 入核辩论与稳定性之争",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C001-1.4": {
+   "chapter": "V76-C001",
+   "title": "峰会治理、安全披露与工具链争议",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.1": {
+   "chapter": "V76-C002",
+   "title": "-mm 树发布宣告档案（上）",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-LANG-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.2": {
+   "chapter": "V76-C002",
+   "title": "-mm 树发布宣告档案（下）",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-LANG-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.3": {
+   "chapter": "V76-C002",
+   "title": "debugfs、模块参数与驱动接口之争",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-LANG-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.4": {
+   "chapter": "V76-C002",
+   "title": "stable 回归防范与 MAINTAINERS 治理",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-REL-003",
+    "TH-REL-001",
+    "TH-GOV-014"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.5": {
+   "chapter": "V76-C002",
+   "title": "Rust 内核政策与社区争议",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-REL-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-REL-001",
+    "TH-GOV-014"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.6": {
+   "chapter": "V76-C002",
+   "title": "回归追踪与 linux-next 运维",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-LANG-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.7": {
+   "chapter": "V76-C002",
+   "title": "AI 评审与文档持续集成",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-LANG-022",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C002-2.8": {
+   "chapter": "V76-C002",
+   "title": "邮件列表版面治理与琐碎补丁政策",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-GOV-014",
+    "TH-REL-001",
+    "TH-LANG-003"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C003-3.1": {
+   "chapter": "V76-C003",
+   "title": "IO-APIC 与 noapic 治理",
+   "meta": false,
+   "domains": [
+    "TH-HIS-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HIS-001",
+    "TH-LANG-003",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C003-3.2": {
+   "chapter": "V76-C003",
+   "title": "警告白名单与平台兼容定调",
+   "meta": false,
+   "domains": [
+    "TH-HIS-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HIS-001",
+    "TH-LANG-003",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C003-3.3": {
+   "chapter": "V76-C003",
+   "title": "DRM、加速器与设备直通",
+   "meta": false,
+   "domains": [
+    "TH-HIS-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HIS-001",
+    "TH-LANG-003",
+    "TH-LANG-018"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.1": {
+   "chapter": "V76-C004",
+   "title": "GPL 执法与法律史料",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LAW-003",
+    "TH-BIZ-023",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.2": {
+   "chapter": "V76-C004",
+   "title": "内核 ABI 与 printk 史料",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-HW-037",
+    "TH-BIZ-023",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.3": {
+   "chapter": "V76-C004",
+   "title": "邮件考古与缺陷报告形态",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-023",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.4": {
+   "chapter": "V76-C004",
+   "title": "报告文档张贴与审查入档",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-023",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.5": {
+   "chapter": "V76-C004",
+   "title": "治理争论与维护者支持史料",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
+    "TH-BIZ-023",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.6": {
+   "chapter": "V76-C004",
+   "title": "media 维护模式与治理心理学",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-023",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.7": {
+   "chapter": "V76-C004",
+   "title": "TAB 选举与署名标签",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-GOV-009",
+    "TH-BIZ-023",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.8": {
+   "chapter": "V76-C004",
+   "title": "-mm／stable 发布宣告档案",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-REL-003",
+    "TH-BIZ-023"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.9": {
+   "chapter": "V76-C004",
+   "title": "工具与基础设施史",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-023",
+    "TH-GOV-006",
+    "TH-GOV-009"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.10": {
+   "chapter": "V76-C004",
+   "title": "Rust 入核争论档案",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-BIZ-023",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.11": {
+   "chapter": "V76-C004",
+   "title": "AI 评审与政策史料",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-LANG-018",
+    "TH-BIZ-023",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C004-4.12": {
+   "chapter": "V76-C004",
+   "title": "硬件加速器与 malloc 议题",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-OS-011",
+    "TH-BIZ-023",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.1": {
+   "chapter": "V76-C005",
+   "title": "内核接口与系统调用的 BSD 渊源",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.2": {
+   "chapter": "V76-C005",
+   "title": "驱动与硬件移植承袭",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.3": {
+   "chapter": "V76-C005",
+   "title": "安全与能力模型承袭",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.4": {
+   "chapter": "V76-C005",
+   "title": "BSD Jail 与 LSM 分歧",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.5": {
+   "chapter": "V76-C005",
+   "title": "内存管理与地址空间随机化",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.6": {
+   "chapter": "V76-C005",
+   "title": "文件系统、ZFS 与网络承袭",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.7": {
+   "chapter": "V76-C005",
+   "title": "BSD 技术源流综述与人物互见",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.8": {
+   "chapter": "V76-C005",
+   "title": "治理议题与峰会互见",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V76-C005-5.9": {
+   "chapter": "V76-C005",
+   "title": "署名规范与用户态项目",
    "meta": true,
    "domains": [
     "TH-HIS-000"

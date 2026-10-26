@@ -1,0 +1,208 @@
+kind	added_line	text
+vol	# 第七十六卷  Rust 入核与 BSD–Linux 技术承袭（1991–2026）	# 第七十六卷  Rust 入核与 BSD–Linux 技术承袭（1991–2026）
+ch	## 第 11 章 UNIX 世界的语言生态（1969–1989）	## 第 11 章 UNIX 世界的语言生态（1969–1989）
+ch	## 第 5 章 Linux 的语言生态与准入争论	## 第 5 章 Linux 的语言生态与准入争论
+ch	## 第 13 章 FreeBSD 的语言生态与 Rust 准入	## 第 13 章 FreeBSD 的语言生态与 Rust 准入
+ch	## 第 13 章 NetBSD 的语言生态与 pkgsrc	## 第 13 章 NetBSD 的语言生态与 pkgsrc
+ch	## 第 15 章 OpenBSD 的语言与安全工具链	## 第 15 章 OpenBSD 的语言与安全工具链
+ch	## 第 9 章 macOS 的语言世界：Objective-C 与 Swift	## 第 9 章 macOS 的语言世界：Objective-C 与 Swift
+ch	## 第 1 章 Rust 入核争议	## 第 1 章 Rust 入核争议
+ch	## 第 2 章 文件系统与内存管理	## 第 2 章 文件系统与内存管理
+ch	## 第 3 章 硬件平台与警告治理	## 第 3 章 硬件平台与警告治理
+ch	## 第 4 章 早期内核史料与邮件考古	## 第 4 章 早期内核史料与邮件考古
+ch	## 第 5 章 BSD–Linux 技术承袭	## 第 5 章 BSD–Linux 技术承袭
+sec	- 2.3 学术组织 ACM IEEE Computer Society USENIX	- 2.3 学术组织 ACM IEEE Computer Society USENIX
+sec	- 4.5 微机 OS 谱系：CP/M、Apple DOS 与 XENIX 的并行线	- 4.5 微机 OS 谱系：CP/M、Apple DOS 与 XENIX 的并行线
+sec	- 2.6 sunos基于bsd的具体版本谱系	- 2.6 sunos基于bsd的具体版本谱系
+sec	- 8.6 java与虚拟机革命freebsdjava移植史java1995年sun	- 8.6 java与虚拟机革命freebsdjava移植史java1995年sun
+sec	- 8.7 shell家族bsd的命令语言thompsonshellbourneshell与	- 8.7 shell家族bsd的命令语言thompsonshellbourneshell与
+sec	- 8.8 unix碎片化各厂商版本彼此不兼容数据库厂商informix需为超过100种	- 8.8 unix碎片化各厂商版本彼此不兼容数据库厂商informix需为超过100种
+sec	- 8.9 unix谱系的考古学方法源码考古版权谱系与版本命名	- 8.9 unix谱系的考古学方法源码考古版权谱系与版本命名
+sec	- 8.10 安全机制起源pwbunix运维安全实践与商用分支安全分野19731980s	- 8.10 安全机制起源pwbunix运维安全实践与商用分支安全分野19731980s
+sec	- 8.11 脚本语言生态perlpythonruby与ports的共生perl1987年	- 8.11 脚本语言生态perlpythonruby与ports的共生perl1987年
+sec	- 11.1 Fortran、ALGOL 与科学计算传统的诞生	- 11.1 Fortran、ALGOL 与科学计算传统的诞生
+sec	- 11.2 Lisp、AI Lab 与 Lisp Machine	- 11.2 Lisp、AI Lab 与 Lisp Machine
+sec	- 11.3 Wirth 学派：Pascal、Modula-2 与结构化编程	- 11.3 Wirth 学派：Pascal、Modula-2 与结构化编程
+sec	- 11.4 C++ 争论：从 Stroustrup 到内核拒绝	- 11.4 C++ 争论：从 Stroustrup 到内核拒绝
+sec	- 11.5 Java 与脚本语言生态	- 11.5 Java 与脚本语言生态
+sec	- 11.6 语言保守主义与新语言准入	- 11.6 语言保守主义与新语言准入
+sec	- 4.6 学生组织、校园媒体与环境史	- 4.6 学生组织、校园媒体与环境史
+sec	- 4.9 vax硬件与bsd的协同演化decvms与bsd的资源竞争	- 4.9 vax硬件与bsd的协同演化decvms与bsd的资源竞争
+sec	- 2.11 与同时期操作系统的比较1988年同期操作系统attunixsvr3sunos40	- 2.11 与同时期操作系统的比较1988年同期操作系统attunixsvr3sunos40
+sec	- 1.5 Newspeak之喻与v2流转	- 1.5 Newspeak之喻与v2流转
+sec	- 1.6 包容术语v3定稿与graylist	- 1.6 包容术语v3定稿与graylist
+sec	- 1.7 包容术语论战爆发	- 1.7 包容术语论战爆发
+sec	- 4.6 Acked by尾声与LTP入树之辩	- 4.6 Acked by尾声与LTP入树之辩
+sec	- 4.7 AI内容指南与Folio进化论	- 4.7 AI内容指南与Folio进化论
+sec	- 4.8 AI内容政策与highmem路线图	- 4.8 AI内容政策与highmem路线图
+sec	- 4.9 AI指南定稿与源码为人而写	- 4.9 AI指南定稿与源码为人而写
+sec	- 4.10 AI流程落地与Rust稳定性反驳	- 4.10 AI流程落地与Rust稳定性反驳
+sec	- 4.11 AI版权与API弃用定调	- 4.11 AI版权与API弃用定调
+sec	- 4.12 AI缺陷分诊与特性准入	- 4.12 AI缺陷分诊与特性准入
+sec	- 4.13 Bugzilla存废与加速器用户态交锋	- 4.13 Bugzilla存废与加速器用户态交锋
+sec	- 4.14 bugzilla迁移与AI标注规则	- 4.14 bugzilla迁移与AI标注规则
+sec	- 4.15 Cc标签去留与AUTOSEL稳定树定义之争	- 4.15 Cc标签去留与AUTOSEL稳定树定义之争
+sec	- 4.16 ChangeId之争与Linus定调	- 4.16 ChangeId之争与Linus定调
+sec	- 4.17 commit版本史与lore归档大讨论	- 4.17 commit版本史与lore归档大讨论
+sec	- 4.18 GKI争议与AI政策共识梳理	- 4.18 GKI争议与AI政策共识梳理
+sec	- 4.19 KS2018会前议程与TAB竞选	- 4.19 KS2018会前议程与TAB竞选
+sec	- 4.20 KS2019筹备与Profile评审续	- 4.20 KS2019筹备与Profile评审续
+sec	- 4.21 KS2019议题征集与bug跟踪大讨论	- 4.21 KS2019议题征集与bug跟踪大讨论
+sec	- 4.22 ks_bsd	- 4.22 ks_bsd
+sec	- 4.23 ksd_bsd	- 4.23 ksd_bsd
+sec	- 4.24 l2md工具链与TAB章程COVID前瞻	- 4.24 l2md工具链与TAB章程COVID前瞻
+sec	- 4.25 Link尾注立场声明与Smatch停摆	- 4.25 Link尾注立场声明与Smatch停摆
+sec	- 4.26 Link标签强制与git元数据终局	- 4.26 Link标签强制与git元数据终局
+sec	- 4.27 linusnext树创建与trivial政策	- 4.27 linusnext树创建与trivial政策
+sec	- 4.28 Linus表态与AI诉讼进行时	- 4.28 Linus表态与AI诉讼进行时
+sec	- 4.29 linux issues列表与reporting转正	- 4.29 linux issues列表与reporting转正
+sec	- 4.30 linuxnext流程与Bugzilla存废	- 4.30 linuxnext流程与Bugzilla存废
+sec	- 4.31 lore链接定型与KS2019筹备	- 4.31 lore链接定型与KS2019筹备
+sec	- 4.32 mb2q工具与Link定型	- 4.32 mb2q工具与Link定型
+sec	- 4.33 mediaProfile定稿与getmaintainer之争	- 4.33 mediaProfile定稿与getmaintainer之争
+sec	- 4.34 MEP定稿与workflows列表创建	- 4.34 MEP定稿与workflows列表创建
+sec	- 4.35 MS2019文档与补丁接受一致性	- 4.35 MS2019文档与补丁接受一致性
+sec	- 4.36 MS2019议程与lore客户端工具构想	- 4.36 MS2019议程与lore客户端工具构想
+sec	- 4.37 OSDL首届选举与术语v2	- 4.37 OSDL首届选举与术语v2
+sec	- 4.38 python实测与2.2TAB结果	- 4.38 python实测与2.2TAB结果
+sec	- 4.39 Rice定理与东京峰会征文	- 4.39 Rice定理与东京峰会征文
+sec	- 4.40 Rust抽象与AI评审推进	- 4.40 Rust抽象与AI评审推进
+sec	- 4.41 Rust聚合论战与AI审查	- 4.41 Rust聚合论战与AI审查
+sec	- 4.42 Sashiko实证与folios之争	- 4.42 Sashiko实证与folios之争
+sec	- 4.43 SubsystemProfile评审与可信名单之争	- 4.43 SubsystemProfile评审与可信名单之争
+sec	- 4.44 TAB2020选举与代码退役提案	- 4.44 TAB2020选举与代码退役提案
+sec	- 4.45 TAB2025结果与DCO冲突	- 4.45 TAB2025结果与DCO冲突
+sec	- 4.46 TAB候选人陈述与CoC报告	- 4.46 TAB候选人陈述与CoC报告
+sec	- 4.47 TAB纪要术语v3与选举资格	- 4.47 TAB纪要术语v3与选举资格
+sec	- 4.48 TAB组成公告与conclave预案	- 4.48 TAB组成公告与conclave预案
+sec	- 4.49 TAB自荐系列与CoC拒补丁争议	- 4.49 TAB自荐系列与CoC拒补丁争议
+sec	- 4.50 TAB选举与AI标注验证门	- 4.50 TAB选举与AI标注验证门
+sec	- 4.51 TAB选举与CoC私下征询争议	- 4.51 TAB选举与CoC私下征询争议
+sec	- 4.52 TAB选举包容术语与维护者支持	- 4.52 TAB选举包容术语与维护者支持
+sec	- 4.53 TAB选举章程与术语正反	- 4.53 TAB选举章程与术语正反
+sec	- 4.54 THE_REST四封与AI高标论	- 4.54 THE_REST四封与AI高标论
+sec	- 4.55 THEREST分流与generatedcontent	- 4.55 THEREST分流与generatedcontent
+sec	- 4.56 unwind导出四连与conclave评审	- 4.56 unwind导出四连与conclave评审
+sec	- 4.57 上游激励论述与TAB选举量化	- 4.57 上游激励论述与TAB选举量化
+sec	- 4.58 保护墙定调与AI审查红线	- 4.58 保护墙定调与AI审查红线
+sec	- 4.59 停办峰会六封与支持小组	- 4.59 停办峰会六封与支持小组
+sec	- 4.60 参选宣言与CoC半年报	- 4.60 参选宣言与CoC半年报
+sec	- 4.61 峰会出席率重算与新人引导	- 4.61 峰会出席率重算与新人引导
+sec	- 4.62 峰会存废之问与ACK权力边界	- 4.62 峰会存废之问与ACK权力边界
+sec	- 4.63 拒收pull标准与AI文档争议	- 4.63 拒收pull标准与AI文档争议
+sec	- 4.64 术语九封与自荐四连	- 4.64 术语九封与自荐四连
+sec	- 4.65 术语论战与历届选举	- 4.65 术语论战与历届选举
+sec	- 4.66 测试标准化与评审付费之辩	- 4.66 测试标准化与评审付费之辩
+sec	- 4.67 章程史与SPI代跑投票	- 4.67 章程史与SPI代跑投票
+sec	- 4.68 自荐十二封与Fixes补丁	- 4.68 自荐十二封与Fixes补丁
+sec	- 4.69 自荐系列与xz攻击向量	- 4.69 自荐系列与xz攻击向量
+sec	- 4.70 评审标签改革与Link标签溯源	- 4.70 评审标签改革与Link标签溯源
+sec	- 4.71 评审者稀缺与Acked by论战收束	- 4.71 评审者稀缺与Acked by论战收束
+sec	- 4.72 选举结果与kernelorg资格	- 4.72 选举结果与kernelorg资格
+sec	- 5.1 C++ 与 Rust 的准入争论：接纳结果与生态面	- 5.1 C++ 与 Rust 的准入争论：接纳结果与生态面
+sec	- 5.2 用户态语言生态：发行版打包与脚本语言	- 5.2 用户态语言生态：发行版打包与脚本语言
+sec	- 3.10 Jordan Hubbard 的 port make macros 谱系	- 3.10 Jordan Hubbard 的 port make macros 谱系
+sec	- 3.11 从零到 34 000 端口的增长曲线与社区贡献模式	- 3.11 从零到 34 000 端口的增长曲线与社区贡献模式
+sec	- 5.10 FreeBSD 5 x 时期的技术淘汰 GEOM UFS2 rcNG ULE	- 5.10 FreeBSD 5 x 时期的技术淘汰 GEOM UFS2 rcNG ULE
+sec	- 5.11 多元群体贡献 FreeBSD 2002 2005 时期的贡献者多样性 企业	- 5.11 多元群体贡献 FreeBSD 2002 2005 时期的贡献者多样性 企业
+sec	- 5.12 时代语境 1996 2010 总统科技政策 伯克利校园 IC 英美哲学	- 5.12 时代语境 1996 2010 总统科技政策 伯克利校园 IC 英美哲学
+sec	- 5.13 第三方软件变更 PF 防火墙引入与 MTA 格局	- 5.13 第三方软件变更 PF 防火墙引入与 MTA 格局
+sec	- 1.10 CAM SCSI ATA NVMe 子系统 从 Justin Gibbs 的	- 1.10 CAM SCSI ATA NVMe 子系统 从 Justin Gibbs 的
+sec	- 1.11 FreeBSD 13 x 时期的技术淘汰与架构支持变动	- 1.11 FreeBSD 13 x 时期的技术淘汰与架构支持变动
+sec	- 1.12 其他存储栈组件 devfs mdconfig tmpfs sendfile VF	- 1.12 其他存储栈组件 devfs mdconfig tmpfs sendfile VF
+sec	- 1.13 多元群体贡献 FreeBSD 2008 2018 时期的贡献者多样性 企业	- 1.13 多元群体贡献 FreeBSD 2008 2018 时期的贡献者多样性 企业
+sec	- 3.9 freebsd8x的开发者群体与虚拟化团队	- 3.9 freebsd8x的开发者群体与虚拟化团队
+sec	- 3.10 重要贡献者与边缘者 8 x 时期 XEN VNET 移植的无名工程师 8 x	- 3.10 重要贡献者与边缘者 8 x 时期 XEN VNET 移植的无名工程师 8 x
+sec	- 4.9 1998 2000 年 3.0 引入初步 SMP 的工程挑战	- 4.9 1998 2000 年 3.0 引入初步 SMP 的工程挑战
+sec	- 4.10 2003 2006 年 5.0 耗时 3 年开发的工程挑战	- 4.10 2003 2006 年 5.0 耗时 3 年开发的工程挑战
+sec	- 4.11 CAM SCSI 子系统	- 4.11 CAM SCSI 子系统
+sec	- 4.12 freebsd3x的开发者群体与smp团队组织	- 4.12 freebsd3x的开发者群体与smp团队组织
+sec	- 4.13 freebsd5x时期的技术淘汰与废弃特性	- 4.13 freebsd5x时期的技术淘汰与废弃特性
+sec	- 4.14 freebsd5x的开发者群体与工程组织	- 4.14 freebsd5x的开发者群体与工程组织
+sec	- 5.11 9 x 系列总览与工程语境 2010 2014	- 5.11 9 x 系列总览与工程语境 2010 2014
+sec	- 6.11 1994 1998 年 2.0	- 6.11 1994 1998 年 2.0
+sec	- 6.12 2000 2003 年 4.0 Jails	- 6.12 2000 2003 年 4.0 Jails
+sec	- 6.13 freebsd2x的开发者群体与core team代际更替	- 6.13 freebsd2x的开发者群体与core team代际更替
+sec	- 6.14 对 FreeBSD 2 x 的批评 技术债务与 SMP 滞后 对	- 6.14 对 FreeBSD 2 x 的批评 技术债务与 SMP 滞后 对
+sec	- 6.15 重要贡献者与边缘者 2 x 时期被遗忘的驱动维护者 2 x	- 6.15 重要贡献者与边缘者 2 x 时期被遗忘的驱动维护者 2 x
+sec	- 10.10 freebsd6x与同期linux功能与性能对比	- 10.10 freebsd6x与同期linux功能与性能对比
+sec	- 10.11 FreeBSD 6 x 时期的技术淘汰 Giant 锁 MPSAFE VFS	- 10.11 FreeBSD 6 x 时期的技术淘汰 Giant 锁 MPSAFE VFS
+sec	- 10.12 重要贡献者与边缘者 6 x 时期的无名贡献者	- 10.12 重要贡献者与边缘者 6 x 时期的无名贡献者
+sec	- 11.10 2023 11 FreeBSD 14 0 发布 stable 14	- 11.10 2023 11 FreeBSD 14 0 发布 stable 14
+sec	- 12.13 time_t 与 Y2038：64 位时间迁移	- 12.13 time_t 与 Y2038：64 位时间迁移
+sec	- 13.1 Modula-3 与 CVSup	- 13.1 Modula-3 与 CVSup
+sec	- 13.2 C++ 标准库的 BSD 化：libc++／libcxxrt	- 13.2 C++ 标准库的 BSD 化：libc++／libcxxrt
+sec	- 13.3 Rust 进入 base 系统：Somers 方案与社区争论	- 13.3 Rust 进入 base 系统：Somers 方案与社区争论
+sec	- 13.4 跨内核对照：Rust for Linux 观察	- 13.4 跨内核对照：Rust for Linux 观察
+sec	- 3.9 netbsd20smp架构实现20032004	- 3.9 netbsd20smp架构实现20032004
+sec	- 4.9 netbsd1x时代争议的四层辩证链可移植性性能与桌面体验之争19942004	- 4.9 netbsd1x时代争议的四层辩证链可移植性性能与桌面体验之争19942004
+sec	- 4.10 netbsd40的发布与smp改进20071219netbsd40引入细粒度	- 4.10 netbsd40的发布与smp改进20071219netbsd40引入细粒度
+sec	- 6.9 netbsd70与arm生态的深度支持2015970改进arm多核支持引入rpi	- 6.9 netbsd70与arm生态的深度支持2015970改进arm多核支持引入rpi
+sec	- 7.7 netbsd80与64位arm2018780引入aarch64arm64	- 7.7 netbsd80与64位arm2018780引入aarch64arm64
+sec	- 8.8 netbsd90的发布与zfs集成2020214us2020215utc90	- 8.8 netbsd90的发布与zfs集成2020214us2020215utc90
+sec	- 9.9 netbsd100与现代硬件支持2024328100引入对	- 9.9 netbsd100与现代硬件支持2024328100引入对
+sec	- 9.10 pkgsrc3040与现代软件包管理20102026pkgsrc持续演进引入	- 9.10 pkgsrc3040与现代软件包管理20102026pkgsrc持续演进引入
+sec	- 1.7 多平台移植的工程架构19951998netbsd12199610支持12	- 1.7 多平台移植的工程架构19951998netbsd12199610支持12
+sec	- 12.9 netbsd的极简主义哲学与代码美学	- 12.9 netbsd的极简主义哲学与代码美学
+sec	- 13.1 pkgsrc 与多语言打包生态	- 13.1 pkgsrc 与多语言打包生态
+sec	- 13.2 跨平台编译器移植史	- 13.2 跨平台编译器移植史
+sec	- 13.3 NetBSD 用户态的脚本语言演进	- 13.3 NetBSD 用户态的脚本语言演进
+sec	- 2.10 多元群体贡献 FreeBSD 2010 2026 时期的贡献者多样性 企业	- 2.10 多元群体贡献 FreeBSD 2010 2026 时期的贡献者多样性 企业
+sec	- 3.11 防火墙与网络过滤 ipfw pf ipfilter 三大防火墙框架的历史演进 从	- 3.11 防火墙与网络过滤 ipfw pf ipfilter 三大防火墙框架的历史演进 从
+sec	- 4.10 openbsd4044的安全与工程改进2006200840引入malloc替代	- 4.10 openbsd4044的安全与工程改进2006200840引入malloc替代
+sec	- 4.11 openbsd4x时期的技术淘汰多项旧技术新技术交替演进20052010	- 4.11 openbsd4x时期的技术淘汰多项旧技术新技术交替演进20052010
+sec	- 4.12 openbsd与加密学的深度结合20052012openbsd	- 4.12 openbsd与加密学的深度结合20052012openbsd
+sec	- 4.13 pf防火墙的持续演进20052012pf从40到52持续改进引入	- 4.13 pf防火墙的持续演进20052012pf从40到52持续改进引入
+sec	- 1.9 FreeBSD 安全团队与安全公告 FreeBSD Security Offic	- 1.9 FreeBSD 安全团队与安全公告 FreeBSD Security Offic
+sec	- 1.10 与同时期操作系统的比较 Linux 的安全生态 SELinux KSPP LKM	- 1.10 与同时期操作系统的比较 Linux 的安全生态 SELinux KSPP LKM
+sec	- 1.11 重要贡献者与边缘者 安全社区的无名守护者 FreeBSD 安全团队成员	- 1.11 重要贡献者与边缘者 安全社区的无名守护者 FreeBSD 安全团队成员
+sec	- 15.1 ports 与用户态脚本语言	- 15.1 ports 与用户态脚本语言
+sec	- 15.2 语言政策的保守主义	- 15.2 语言政策的保守主义
+sec	- 1.6 openbsd5x时期的技术淘汰多项旧技术新技术交替演进20112016	- 1.6 openbsd5x时期的技术淘汰多项旧技术新技术交替演进20112016
+sec	- 1.7 重要贡献者与边缘者openbsd5x时期的核心团队theoderaadt创始人	- 1.7 重要贡献者与边缘者openbsd5x时期的核心团队theoderaadt创始人
+sec	- 2.4 GhostBSD 与 FreeBSD 桌面化 2009 2026	- 2.4 GhostBSD 与 FreeBSD 桌面化 2009 2026
+sec	- 9.1 Objective-C 与 NeXTSTEP 遗产	- 9.1 Objective-C 与 NeXTSTEP 遗产
+sec	- 2.8 POSIX 标准遵守史 POSIX Portable Operating Sys	- 2.8 POSIX 标准遵守史 POSIX Portable Operating Sys
+sec	- 1.13 加拿大 BSD 社区：大学传统与区域组织	- 1.13 加拿大 BSD 社区：大学传统与区域组织
+sec	- 2.13 韩国 BSD 社区：用户组、企业与学术部署	- 2.13 韩国 BSD 社区：用户组、企业与学术部署
+sec	- 2.14 俄罗斯 BSD 社区：从 DemOS 到 FreeBSD	- 2.14 俄罗斯 BSD 社区：从 DemOS 到 FreeBSD
+sec	- 2.14 视频与音频资源 会议录像 播客与教程生态	- 2.14 视频与音频资源 会议录像 播客与教程生态
+sec	- 2.8 当代 UNIX 与 BSD 的比较 技术 许可证 哲学	- 2.8 当代 UNIX 与 BSD 的比较 技术 许可证 哲学
+sec	- 5.10 BSD vs GPL 的哲学差异 BSDL 不强制 copyleft GPL	- 5.10 BSD vs GPL 的哲学差异 BSDL 不强制 copyleft GPL
+sec	- 5.11 US v Microsoft、浏览器战争与 CTEA	- 5.11 US v Microsoft、浏览器战争与 CTEA
+sec	- 1.1 UMN 假补丁事件	- 1.1 UMN 假补丁事件
+sec	- 1.2 UMN 争议余波与 AI 标注	- 1.2 UMN 争议余波与 AI 标注
+sec	- 1.3 Rust 入核大辩论与稳定性争论	- 1.3 Rust 入核大辩论与稳定性争论
+sec	- 1.4 峰会治理、安全披露与工具链争议	- 1.4 峰会治理、安全披露与工具链争议
+sec	- 2.1 -mm 树发布宣告档案（上）	- 2.1 -mm 树发布宣告档案（上）
+sec	- 2.2 -mm 树发布宣告档案（下）	- 2.2 -mm 树发布宣告档案（下）
+sec	- 2.3 debugfs、模块参数与驱动接口之争	- 2.3 debugfs、模块参数与驱动接口之争
+sec	- 2.4 stable 回归防范与 MAINTAINERS 治理	- 2.4 stable 回归防范与 MAINTAINERS 治理
+sec	- 2.5 Rust 内核政策与社区争议	- 2.5 Rust 内核政策与社区争议
+sec	- 2.6 回归追踪与 linux-next 运维	- 2.6 回归追踪与 linux-next 运维
+sec	- 2.7 AI 评审与文档 CI	- 2.7 AI 评审与文档 CI
+sec	- 2.8 列表版面治理与琐碎补丁政策	- 2.8 列表版面治理与琐碎补丁政策
+sec	- 3.1 IO-APIC 与 noapic 治理	- 3.1 IO-APIC 与 noapic 治理
+sec	- 3.2 警告白名单与平台兼容定调	- 3.2 警告白名单与平台兼容定调
+sec	- 3.3 DRM、加速器与设备直通	- 3.3 DRM、加速器与设备直通
+sec	- 4.1 GPL 执法与法律史料	- 4.1 GPL 执法与法律史料
+sec	- 4.2 内核 ABI 与 printk 史料	- 4.2 内核 ABI 与 printk 史料
+sec	- 4.3 邮件考古与 bug 报告形态	- 4.3 邮件考古与 bug 报告形态
+sec	- 4.4 报告文档张贴与审查入档	- 4.4 报告文档张贴与审查入档
+sec	- 4.5 治理争论与维护者支持史料	- 4.5 治理争论与维护者支持史料
+sec	- 4.6 media 维护模式与治理心理学	- 4.6 media 维护模式与治理心理学
+sec	- 4.7 TAB 选举与署名标签	- 4.7 TAB 选举与署名标签
+sec	- 4.8 -mm／stable 发布宣告档案	- 4.8 -mm／stable 发布宣告档案
+sec	- 4.9 工具与基础设施史	- 4.9 工具与基础设施史
+sec	- 4.10 Rust 入核争论档案	- 4.10 Rust 入核争论档案
+sec	- 4.11 AI 评审与政策史料	- 4.11 AI 评审与政策史料
+sec	- 4.12 硬件加速器与 malloc 议题	- 4.12 硬件加速器与 malloc 议题
+sec	- 5.1 内核接口与系统调用的 BSD 渊源	- 5.1 内核接口与系统调用的 BSD 渊源
+sec	- 5.2 驱动与硬件移植承袭	- 5.2 驱动与硬件移植承袭
+sec	- 5.3 安全与能力模型承袭	- 5.3 安全与能力模型承袭
+sec	- 5.4 BSD Jail 与 LSM 分歧	- 5.4 BSD Jail 与 LSM 分歧
+sec	- 5.5 内存管理与地址空间随机化	- 5.5 内存管理与地址空间随机化
+sec	- 5.6 文件系统、ZFS 与网络承袭	- 5.6 文件系统、ZFS 与网络承袭
+sec	- 5.7 BSD 谱系综述与人物互见	- 5.7 BSD 谱系综述与人物互见
+sec	- 5.8 治理与峰会互见	- 5.8 治理与峰会互见
+sec	- 5.9 署名规范与用户态项目	- 5.9 署名规范与用户态项目

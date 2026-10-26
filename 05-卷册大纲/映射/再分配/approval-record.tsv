@@ -1,138 +1,138 @@
 kind	proposal_id	actual_node_id	parent_old_id	parent_new_id	title	rows	approval	date	approver
-section	S-003706	S-000008	C-0002	C-0002	学术组织 ACM IEEE Computer Society USENIX	21	approved	2026-10-26	ykla
-section	S-003707	S-000156	C-0027	C-0027	sunos基于bsd的具体版本谱系	94	approved	2026-10-26	ykla
-section	S-003708	S-000259	C-0049	C-0049	java与虚拟机革命freebsdjava移植史java1995年sun	92	approved	2026-10-26	ykla
-section	S-003709	S-000260	C-0049	C-0049	shell家族bsd的命令语言thompsonshellbourneshell与	31	approved	2026-10-26	ykla
-section	S-003710	S-000261	C-0049	C-0049	unix碎片化各厂商版本彼此不兼容数据库厂商informix需为超过100种	139	approved	2026-10-26	ykla
-section	S-003711	S-000262	C-0049	C-0049	unix谱系的考古学方法源码考古版权谱系与版本命名	33	approved	2026-10-26	ykla
-section	S-003712	S-000263	C-0049	C-0049	安全机制起源pwbunix运维安全实践与商用分支安全分野19731980s	37	approved	2026-10-26	ykla
-section	S-003713	S-000264	C-0049	C-0049	脚本语言生态perlpythonruby与ports的共生perl1987年	52	approved	2026-10-26	ykla
-section	S-003714	S-000429	C-0070	C-0071	vax硬件与bsd的协同演化decvms与bsd的资源竞争	71	approved	2026-10-26	ykla
-section	S-003715	S-000457	C-0073	C-0074	与同时期操作系统的比较1988年同期操作系统attunixsvr3sunos40	21	approved	2026-10-26	ykla
-section	S-003716	S-000603	C-0096	C-0097	Newspeak之喻与v2流转	42	approved	2026-10-26	ykla
-section	S-003717	S-000604	C-0096	C-0097	包容术语v3定稿与graylist	31	approved	2026-10-26	ykla
-section	S-003718	S-000605	C-0096	C-0097	包容术语论战爆发	44	approved	2026-10-26	ykla
-section	S-003719	S-000623	C-0099	C-0100	Acked by尾声与LTP入树之辩	40	approved	2026-10-26	ykla
-section	S-003720	S-000624	C-0099	C-0100	AI内容指南与Folio进化论	26	approved	2026-10-26	ykla
-section	S-003721	S-000625	C-0099	C-0100	AI内容政策与highmem路线图	24	approved	2026-10-26	ykla
-section	S-003722	S-000626	C-0099	C-0100	AI指南定稿与源码为人而写	31	approved	2026-10-26	ykla
-section	S-003723	S-000627	C-0099	C-0100	AI流程落地与Rust稳定性反驳	23	approved	2026-10-26	ykla
-section	S-003724	S-000628	C-0099	C-0100	AI版权与API弃用定调	34	approved	2026-10-26	ykla
-section	S-003725	S-000629	C-0099	C-0100	AI缺陷分诊与特性准入	35	approved	2026-10-26	ykla
-section	S-003726	S-000630	C-0099	C-0100	Bugzilla存废与加速器用户态交锋	25	approved	2026-10-26	ykla
-section	S-003727	S-000631	C-0099	C-0100	bugzilla迁移与AI标注规则	30	approved	2026-10-26	ykla
-section	S-003728	S-000632	C-0099	C-0100	Cc标签去留与AUTOSEL稳定树定义之争	48	approved	2026-10-26	ykla
-section	S-003729	S-000633	C-0099	C-0100	ChangeId之争与Linus定调	46	approved	2026-10-26	ykla
-section	S-003730	S-000634	C-0099	C-0100	commit版本史与lore归档大讨论	48	approved	2026-10-26	ykla
-section	S-003731	S-000635	C-0099	C-0100	GKI争议与AI政策共识梳理	33	approved	2026-10-26	ykla
-section	S-003732	S-000636	C-0099	C-0100	KS2018会前议程与TAB竞选	37	approved	2026-10-26	ykla
-section	S-003733	S-000637	C-0099	C-0100	KS2019筹备与Profile评审续	34	approved	2026-10-26	ykla
-section	S-003734	S-000638	C-0099	C-0100	KS2019议题征集与bug跟踪大讨论	48	approved	2026-10-26	ykla
-section	S-003735	S-000639	C-0099	C-0100	ks_bsd	43	approved	2026-10-26	ykla
-section	S-003736	S-000640	C-0099	C-0100	ksd_bsd	129	approved	2026-10-26	ykla
-section	S-003737	S-000641	C-0099	C-0100	l2md工具链与TAB章程COVID前瞻	50	approved	2026-10-26	ykla
-section	S-003738	S-000642	C-0099	C-0100	Link尾注立场声明与Smatch停摆	34	approved	2026-10-26	ykla
-section	S-003739	S-000643	C-0099	C-0100	Link标签强制与git元数据终局	49	approved	2026-10-26	ykla
-section	S-003740	S-000644	C-0099	C-0100	linusnext树创建与trivial政策	20	approved	2026-10-26	ykla
-section	S-003741	S-000645	C-0099	C-0100	Linus表态与AI诉讼进行时	34	approved	2026-10-26	ykla
-section	S-003742	S-000646	C-0099	C-0100	linux issues列表与reporting转正	28	approved	2026-10-26	ykla
-section	S-003743	S-000647	C-0099	C-0100	linuxnext流程与Bugzilla存废	21	approved	2026-10-26	ykla
-section	S-003744	S-000648	C-0099	C-0100	lore链接定型与KS2019筹备	44	approved	2026-10-26	ykla
-section	S-003745	S-000649	C-0099	C-0100	mb2q工具与Link定型	47	approved	2026-10-26	ykla
-section	S-003746	S-000650	C-0099	C-0100	mediaProfile定稿与getmaintainer之争	50	approved	2026-10-26	ykla
-section	S-003747	S-000651	C-0099	C-0100	MEP定稿与workflows列表创建	47	approved	2026-10-26	ykla
-section	S-003748	S-000652	C-0099	C-0100	MS2019文档与补丁接受一致性	49	approved	2026-10-26	ykla
-section	S-003749	S-000653	C-0099	C-0100	MS2019议程与lore客户端工具构想	33	approved	2026-10-26	ykla
-section	S-003750	S-000654	C-0099	C-0100	OSDL首届选举与术语v2	41	approved	2026-10-26	ykla
-section	S-003751	S-000655	C-0099	C-0100	python实测与2.2TAB结果	33	approved	2026-10-26	ykla
-section	S-003752	S-000656	C-0099	C-0100	Rice定理与东京峰会征文	35	approved	2026-10-26	ykla
-section	S-003753	S-000657	C-0099	C-0100	Rust抽象与AI评审推进	35	approved	2026-10-26	ykla
-section	S-003754	S-000658	C-0099	C-0100	Rust聚合论战与AI审查	35	approved	2026-10-26	ykla
-section	S-003755	S-000659	C-0099	C-0100	Sashiko实证与folios之争	24	approved	2026-10-26	ykla
-section	S-003756	S-000660	C-0099	C-0100	SubsystemProfile评审与可信名单之争	48	approved	2026-10-26	ykla
-section	S-003757	S-000661	C-0099	C-0100	TAB2020选举与代码退役提案	40	approved	2026-10-26	ykla
-section	S-003758	S-000662	C-0099	C-0100	TAB2025结果与DCO冲突	31	approved	2026-10-26	ykla
-section	S-003759	S-000663	C-0099	C-0100	TAB候选人陈述与CoC报告	46	approved	2026-10-26	ykla
-section	S-003760	S-000664	C-0099	C-0100	TAB纪要术语v3与选举资格	42	approved	2026-10-26	ykla
-section	S-003761	S-000665	C-0099	C-0100	TAB组成公告与conclave预案	42	approved	2026-10-26	ykla
-section	S-003762	S-000666	C-0099	C-0100	TAB自荐系列与CoC拒补丁争议	38	approved	2026-10-26	ykla
-section	S-003763	S-000667	C-0099	C-0100	TAB选举与AI标注验证门	29	approved	2026-10-26	ykla
-section	S-003764	S-000668	C-0099	C-0100	TAB选举与CoC私下征询争议	28	approved	2026-10-26	ykla
-section	S-003765	S-000669	C-0099	C-0100	TAB选举包容术语与维护者支持	38	approved	2026-10-26	ykla
-section	S-003766	S-000670	C-0099	C-0100	TAB选举章程与术语正反	43	approved	2026-10-26	ykla
-section	S-003767	S-000671	C-0099	C-0100	THE_REST四封与AI高标论	27	approved	2026-10-26	ykla
-section	S-003768	S-000672	C-0099	C-0100	THEREST分流与generatedcontent	25	approved	2026-10-26	ykla
-section	S-003769	S-000673	C-0099	C-0100	unwind导出四连与conclave评审	38	approved	2026-10-26	ykla
-section	S-003770	S-000674	C-0099	C-0100	上游激励论述与TAB选举量化	24	approved	2026-10-26	ykla
-section	S-003771	S-000675	C-0099	C-0100	保护墙定调与AI审查红线	25	approved	2026-10-26	ykla
-section	S-003772	S-000676	C-0099	C-0100	停办峰会六封与支持小组	25	approved	2026-10-26	ykla
-section	S-003773	S-000677	C-0099	C-0100	参选宣言与CoC半年报	45	approved	2026-10-26	ykla
+section	S-003706	S-000008	C-0002	C-0002	ACM、IEEE 计算机学会与 USENIX 的学术组织活动	21	approved	2026-10-26	ykla
+section	S-003707	S-000156	C-0027	C-0027	SunOS 基于 BSD 的具体版本源流	94	approved	2026-10-26	ykla
+section	S-003708	S-000259	C-0049	C-0049	Java 与虚拟机革命：FreeBSD 的 JDK 移植史（1995 年）	92	approved	2026-10-26	ykla
+section	S-003709	S-000260	C-0049	C-0049	BSD 的 shell 家族：Thompson、Bourne 与 C shell	31	approved	2026-10-26	ykla
+section	S-003710	S-000261	C-0049	C-0049	UNIX 厂商版本的不兼容与 Informix 的多版本适配	139	approved	2026-10-26	ykla
+section	S-003711	S-000262	C-0049	C-0049	UNIX 版本的考古学方法：源码考古、版权归属与版本命名	33	approved	2026-10-26	ykla
+section	S-003712	S-000263	C-0049	C-0049	PWB/UNIX 运维安全实践与商用分支的分野（1973—1980 年代）	37	approved	2026-10-26	ykla
+section	S-003713	S-000264	C-0049	C-0049	Perl、Python、Ruby 与 Ports 的共生生态（1987 年）	52	approved	2026-10-26	ykla
+section	S-003714	S-000429	C-0070	C-0071	VAX 硬件与 BSD 的协同演化：DEC VMS 的资源竞争	71	approved	2026-10-26	ykla
+section	S-003715	S-000457	C-0073	C-0074	1988 年同期操作系统对照：AT&T UNIX SVR3 与 SunOS 4.0	21	approved	2026-10-26	ykla
+section	S-003716	S-000603	C-0096	C-0097	Newspeak 之喻与术语 v2 的流转	42	approved	2026-10-26	ykla
+section	S-003717	S-000604	C-0096	C-0097	包容术语 v3 定稿与 graylist 去留	31	approved	2026-10-26	ykla
+section	S-003718	S-000605	C-0096	C-0097	包容术语论战的爆发	44	approved	2026-10-26	ykla
+section	S-003719	S-000623	C-0099	C-0100	Acked-by 语义与 LTP 入树之争	40	approved	2026-10-26	ykla
+section	S-003720	S-000624	C-0099	C-0537	AI 内容指南与 Folio 进化论	26	approved	2026-10-26	ykla
+section	S-003721	S-000625	C-0099	C-0537	AI 内容政策与 highmem 路线图	24	approved	2026-10-26	ykla
+section	S-003722	S-000626	C-0099	C-0537	AI 指南定稿与源码为人而写	31	approved	2026-10-26	ykla
+section	S-003723	S-000627	C-0099	C-0537	AI 流程落地与 Rust 稳定性反驳	23	approved	2026-10-26	ykla
+section	S-003724	S-000628	C-0099	C-0537	AI 版权与 API 弃用定调	34	approved	2026-10-26	ykla
+section	S-003725	S-000629	C-0099	C-0537	AI 缺陷分诊与特性准入	35	approved	2026-10-26	ykla
+section	S-003726	S-000630	C-0099	C-0535	Bugzilla 存废与加速器用户态之争	25	approved	2026-10-26	ykla
+section	S-003727	S-000631	C-0099	C-0535	Bugzilla 迁移与 AI 标注规则	30	approved	2026-10-26	ykla
+section	S-003728	S-000632	C-0099	C-0535	Cc 标签去留与 AUTOSEL 稳定树定义之争	48	approved	2026-10-26	ykla
+section	S-003729	S-000633	C-0099	C-0535	Change-Id 之争与 Linus 的表态	46	approved	2026-10-26	ykla
+section	S-003730	S-000634	C-0099	C-0535	提交版本史与 lore 归档之争	48	approved	2026-10-26	ykla
+section	S-003731	S-000635	C-0099	C-0537	GKI 争议与 AI 政策共识梳理	33	approved	2026-10-26	ykla
+section	S-003732	S-000636	C-0099	C-0536	KS2018 会前议程与 TAB 竞选	37	approved	2026-10-26	ykla
+section	S-003733	S-000637	C-0099	C-0536	KS2019 筹备与档案评审续	34	approved	2026-10-26	ykla
+section	S-003734	S-000638	C-0099	C-0536	KS2019 议题征集与缺陷跟踪讨论	48	approved	2026-10-26	ykla
+section	S-003735	S-000639	C-0099	C-0535	邮件列表中的 BSD 与 Linux 议题（一）	43	approved	2026-10-26	ykla
+section	S-003736	S-000640	C-0099	C-0535	邮件列表中的 BSD 与 Linux 议题（二）	129	approved	2026-10-26	ykla
+section	S-003737	S-000641	C-0099	C-0535	l2md 工具链、TAB 章程与疫情前瞻	50	approved	2026-10-26	ykla
+section	S-003738	S-000642	C-0099	C-0535	Link 尾注立场声明与 Smatch 停摆	34	approved	2026-10-26	ykla
+section	S-003739	S-000643	C-0099	C-0535	强制 Link 标签与 git 元数据方案	49	approved	2026-10-26	ykla
+section	S-003740	S-000644	C-0099	C-0535	linus-next 树创建与 trivial 政策	20	approved	2026-10-26	ykla
+section	S-003741	S-000645	C-0099	C-0537	Linus 表态与 AI 诉讼进行时	34	approved	2026-10-26	ykla
+section	S-003742	S-000646	C-0099	C-0535	linux-issues 列表与问题报告转正	28	approved	2026-10-26	ykla
+section	S-003743	S-000647	C-0099	C-0535	linux-next 流程与 Bugzilla 存废	21	approved	2026-10-26	ykla
+section	S-003744	S-000648	C-0099	C-0535	lore 链接定型与 KS2019 筹备	44	approved	2026-10-26	ykla
+section	S-003745	S-000649	C-0099	C-0535	mb2q 工具与 Link 标签定型	47	approved	2026-10-26	ykla
+section	S-003746	S-000650	C-0099	C-0537	media 档案定稿与 getmaintainer 之争	50	approved	2026-10-26	ykla
+section	S-003747	S-000651	C-0099	C-0535	MEP 定稿与工作流列表创建	47	approved	2026-10-26	ykla
+section	S-003748	S-000652	C-0099	C-0535	MS2019 文档与补丁接受一致性	49	approved	2026-10-26	ykla
+section	S-003749	S-000653	C-0099	C-0535	MS2019 议程与 lore 客户端工具构想	33	approved	2026-10-26	ykla
+section	S-003750	S-000654	C-0099	C-0536	OSDL 首届选举与术语 v2	41	approved	2026-10-26	ykla
+section	S-003751	S-000655	C-0099	C-0536	Python 实测与 2.2 TAB 结果	33	approved	2026-10-26	ykla
+section	S-003752	S-000656	C-0099	C-0536	Rice 定理与东京峰会征文	35	approved	2026-10-26	ykla
+section	S-003753	S-000657	C-0099	C-0537	Rust 抽象与 AI 评审推进	35	approved	2026-10-26	ykla
+section	S-003754	S-000658	C-0099	C-0537	Rust 聚合论战与 AI 审查	35	approved	2026-10-26	ykla
+section	S-003755	S-000659	C-0099	C-0537	Sashiko 实证与 Folios 之争	24	approved	2026-10-26	ykla
+section	S-003756	S-000660	C-0099	C-0537	子系统档案评审与可信名单之争	48	approved	2026-10-26	ykla
+section	S-003757	S-000661	C-0099	C-0536	TAB 2020 选举与代码退役提案	40	approved	2026-10-26	ykla
+section	S-003758	S-000662	C-0099	C-0536	TAB 2025 结果与 DCO 冲突	31	approved	2026-10-26	ykla
+section	S-003759	S-000663	C-0099	C-0100	TAB 候选人陈述与 CoC 报告	46	approved	2026-10-26	ykla
+section	S-003760	S-000664	C-0099	C-0536	TAB 纪要、术语 v3 与选举资格	42	approved	2026-10-26	ykla
+section	S-003761	S-000665	C-0099	C-0536	TAB 组成公告与闭门会议预案	42	approved	2026-10-26	ykla
+section	S-003762	S-000666	C-0099	C-0100	TAB 自荐系列与 CoC 拒补丁争议	38	approved	2026-10-26	ykla
+section	S-003763	S-000667	C-0099	C-0537	TAB 选举与 AI 标注验证门	29	approved	2026-10-26	ykla
+section	S-003764	S-000668	C-0099	C-0100	TAB 选举与 CoC 私下征询争议	28	approved	2026-10-26	ykla
+section	S-003765	S-000669	C-0099	C-0100	TAB 选举、包容术语与维护者支持	38	approved	2026-10-26	ykla
+section	S-003766	S-000670	C-0099	C-0536	TAB 选举章程与术语正反	43	approved	2026-10-26	ykla
+section	S-003767	S-000671	C-0099	C-0537	THE REST 与 AI 高标论	27	approved	2026-10-26	ykla
+section	S-003768	S-000672	C-0099	C-0537	THE REST 分流与生成内容	25	approved	2026-10-26	ykla
+section	S-003769	S-000673	C-0099	C-0536	unwind 导出与闭门会议评审	38	approved	2026-10-26	ykla
+section	S-003770	S-000674	C-0099	C-0100	上游激励论述与 TAB 选举量化	24	approved	2026-10-26	ykla
+section	S-003771	S-000675	C-0099	C-0537	保护墙定调与 AI 审查红线	25	approved	2026-10-26	ykla
+section	S-003772	S-000676	C-0099	C-0100	停办峰会与维护者支持小组	25	approved	2026-10-26	ykla
+section	S-003773	S-000677	C-0099	C-0100	参选宣言与 CoC 半年报	45	approved	2026-10-26	ykla
 section	S-003774	S-000678	C-0099	C-0100	峰会出席率重算与新人引导	33	approved	2026-10-26	ykla
-section	S-003775	S-000679	C-0099	C-0100	峰会存废之问与ACK权力边界	34	approved	2026-10-26	ykla
-section	S-003776	S-000680	C-0099	C-0100	拒收pull标准与AI文档争议	33	approved	2026-10-26	ykla
-section	S-003777	S-000681	C-0099	C-0100	术语九封与自荐四连	27	approved	2026-10-26	ykla
-section	S-003778	S-000682	C-0099	C-0100	术语论战与历届选举	34	approved	2026-10-26	ykla
+section	S-003775	S-000679	C-0099	C-0100	峰会存废之问与 ACK 权力边界	34	approved	2026-10-26	ykla
+section	S-003776	S-000680	C-0099	C-0537	拒收拉取请求标准与 AI 文档争议	33	approved	2026-10-26	ykla
+section	S-003777	S-000681	C-0099	C-0536	术语讨论与 TAB 自荐	27	approved	2026-10-26	ykla
+section	S-003778	S-000682	C-0099	C-0536	术语论战与历届选举	34	approved	2026-10-26	ykla
 section	S-003779	S-000683	C-0099	C-0100	测试标准化与评审付费之辩	49	approved	2026-10-26	ykla
-section	S-003780	S-000684	C-0099	C-0100	章程史与SPI代跑投票	32	approved	2026-10-26	ykla
-section	S-003781	S-000685	C-0099	C-0100	自荐十二封与Fixes补丁	39	approved	2026-10-26	ykla
-section	S-003782	S-000686	C-0099	C-0100	自荐系列与xz攻击向量	38	approved	2026-10-26	ykla
-section	S-003783	S-000687	C-0099	C-0100	评审标签改革与Link标签溯源	47	approved	2026-10-26	ykla
-section	S-003784	S-000688	C-0099	C-0100	评审者稀缺与Acked by论战收束	42	approved	2026-10-26	ykla
-section	S-003785	S-000689	C-0099	C-0100	选举结果与kernelorg资格	36	approved	2026-10-26	ykla
-section	S-003786	S-001164	C-0187	C-0189	Jordan Hubbard 的 port make macros 谱系	190	approved	2026-10-26	ykla
-section	S-003787	S-001165	C-0187	C-0189	从零到 34 000 端口的增长曲线与社区贡献模式	1384	approved	2026-10-26	ykla
-section	S-003788	S-001183	C-0189	C-0191	FreeBSD 5 x 时期的技术淘汰 GEOM UFS2 rcNG ULE	193	approved	2026-10-26	ykla
-section	S-003789	S-001184	C-0189	C-0191	多元群体贡献 FreeBSD 2002 2005 时期的贡献者多样性 企业	62	approved	2026-10-26	ykla
-section	S-003790	S-001185	C-0189	C-0191	时代语境 1996 2010 总统科技政策 伯克利校园 IC 英美哲学	54	approved	2026-10-26	ykla
-section	S-003791	S-001186	C-0189	C-0191	第三方软件变更 PF 防火墙引入与 MTA 格局	48	approved	2026-10-26	ykla
-section	S-003792	S-001301	C-0201	C-0203	CAM SCSI ATA NVMe 子系统 从 Justin Gibbs 的	103	approved	2026-10-26	ykla
-section	S-003793	S-001302	C-0201	C-0203	FreeBSD 13 x 时期的技术淘汰与架构支持变动	25	approved	2026-10-26	ykla
-section	S-003794	S-001303	C-0201	C-0203	其他存储栈组件 devfs mdconfig tmpfs sendfile VF	61	approved	2026-10-26	ykla
-section	S-003795	S-001304	C-0201	C-0203	多元群体贡献 FreeBSD 2008 2018 时期的贡献者多样性 企业	72	approved	2026-10-26	ykla
-section	S-003796	S-001322	C-0203	C-0205	freebsd8x的开发者群体与虚拟化团队	161	approved	2026-10-26	ykla
-section	S-003797	S-001323	C-0203	C-0205	重要贡献者与边缘者 8 x 时期 XEN VNET 移植的无名工程师 8 x	163	approved	2026-10-26	ykla
-section	S-003798	S-001332	C-0204	C-0206	1998 2000 年 3.0 引入初步 SMP 的工程挑战	93	approved	2026-10-26	ykla
-section	S-003799	S-001333	C-0204	C-0206	2003 2006 年 5.0 耗时 3 年开发的工程挑战	141	approved	2026-10-26	ykla
-section	S-003800	S-001334	C-0204	C-0206	CAM SCSI 子系统	64	approved	2026-10-26	ykla
-section	S-003801	S-001335	C-0204	C-0206	freebsd3x的开发者群体与smp团队组织	69	approved	2026-10-26	ykla
-section	S-003802	S-001336	C-0204	C-0206	freebsd5x时期的技术淘汰与废弃特性	20	approved	2026-10-26	ykla
-section	S-003803	S-001337	C-0204	C-0206	freebsd5x的开发者群体与工程组织	84	approved	2026-10-26	ykla
-section	S-003804	S-001348	C-0205	C-0207	9 x 系列总览与工程语境 2010 2014	145	approved	2026-10-26	ykla
-section	S-003805	S-001359	C-0206	C-0208	1994 1998 年 2.0	274	approved	2026-10-26	ykla
-section	S-003806	S-001360	C-0206	C-0208	2000 2003 年 4.0 Jails	521	approved	2026-10-26	ykla
-section	S-003807	S-001361	C-0206	C-0208	freebsd2x的开发者群体与core team代际更替	860	approved	2026-10-26	ykla
-section	S-003808	S-001362	C-0206	C-0208	对 FreeBSD 2 x 的批评 技术债务与 SMP 滞后 对	29	approved	2026-10-26	ykla
-section	S-003809	S-001363	C-0206	C-0208	重要贡献者与边缘者 2 x 时期被遗忘的驱动维护者 2 x	69	approved	2026-10-26	ykla
-section	S-003810	S-001399	C-0210	C-0212	freebsd6x与同期linux功能与性能对比	87	approved	2026-10-26	ykla
-section	S-003811	S-001400	C-0210	C-0212	FreeBSD 6 x 时期的技术淘汰 Giant 锁 MPSAFE VFS	52	approved	2026-10-26	ykla
-section	S-003812	S-001401	C-0210	C-0212	重要贡献者与边缘者 6 x 时期的无名贡献者	106	approved	2026-10-26	ykla
-section	S-003813	S-001411	C-0211	C-0213	2023 11 FreeBSD 14 0 发布 stable 14	32	approved	2026-10-26	ykla
-section	S-003814	S-001577	C-0233	C-0236	netbsd20smp架构实现20032004	146	approved	2026-10-26	ykla
-section	S-003815	S-001586	C-0234	C-0237	netbsd1x时代争议的四层辩证链可移植性性能与桌面体验之争19942004	28	approved	2026-10-26	ykla
-section	S-003816	S-001587	C-0234	C-0237	netbsd40的发布与smp改进20071219netbsd40引入细粒度	69	approved	2026-10-26	ykla
-section	S-003817	S-001603	C-0236	C-0239	netbsd70与arm生态的深度支持2015970改进arm多核支持引入rpi	93	approved	2026-10-26	ykla
-section	S-003818	S-001610	C-0237	C-0240	netbsd80与64位arm2018780引入aarch64arm64	85	approved	2026-10-26	ykla
-section	S-003819	S-001618	C-0238	C-0241	netbsd90的发布与zfs集成2020214us2020215utc90	39	approved	2026-10-26	ykla
-section	S-003820	S-001627	C-0239	C-0242	netbsd100与现代硬件支持2024328100引入对	81	approved	2026-10-26	ykla
-section	S-003821	S-001628	C-0239	C-0242	pkgsrc3040与现代软件包管理20102026pkgsrc持续演进引入	55	approved	2026-10-26	ykla
-section	S-003822	S-001635	C-0240	C-0243	多平台移植的工程架构19951998netbsd12199610支持12	155	approved	2026-10-26	ykla
-section	S-003823	S-001713	C-0251	C-0254	netbsd的极简主义哲学与代码美学	34	approved	2026-10-26	ykla
-section	S-003824	S-001804	C-0266	C-0270	多元群体贡献 FreeBSD 2010 2026 时期的贡献者多样性 企业	63	approved	2026-10-26	ykla
-section	S-003825	S-001815	C-0267	C-0271	防火墙与网络过滤 ipfw pf ipfilter 三大防火墙框架的历史演进 从	37	approved	2026-10-26	ykla
-section	S-003826	S-001825	C-0268	C-0272	openbsd4044的安全与工程改进2006200840引入malloc替代	62	approved	2026-10-26	ykla
-section	S-003827	S-001826	C-0268	C-0272	openbsd4x时期的技术淘汰多项旧技术新技术交替演进20052010	54	approved	2026-10-26	ykla
-section	S-003828	S-001827	C-0268	C-0272	openbsd与加密学的深度结合20052012openbsd	26	approved	2026-10-26	ykla
-section	S-003829	S-001828	C-0268	C-0272	pf防火墙的持续演进20052012pf从40到52持续改进引入	35	approved	2026-10-26	ykla
-section	S-003830	S-001866	C-0272	C-0276	FreeBSD 安全团队与安全公告 FreeBSD Security Offic	47	approved	2026-10-26	ykla
-section	S-003831	S-001867	C-0272	C-0276	与同时期操作系统的比较 Linux 的安全生态 SELinux KSPP LKM	25	approved	2026-10-26	ykla
-section	S-003832	S-001868	C-0272	C-0276	重要贡献者与边缘者 安全社区的无名守护者 FreeBSD 安全团队成员	261	approved	2026-10-26	ykla
-section	S-003833	S-001997	C-0286	C-0291	openbsd5x时期的技术淘汰多项旧技术新技术交替演进20112016	22	approved	2026-10-26	ykla
-section	S-003834	S-001998	C-0286	C-0291	重要贡献者与边缘者openbsd5x时期的核心团队theoderaadt创始人	85	approved	2026-10-26	ykla
-section	S-003835	S-002506	C-0367	C-0372	GhostBSD 与 FreeBSD 桌面化 2009 2026	70	approved	2026-10-26	ykla
-section	S-003836	S-002885	C-0414	C-0420	POSIX 标准遵守史 POSIX Portable Operating Sys	24	approved	2026-10-26	ykla
-section	S-003837	S-003435	C-0477	C-0483	视频与音频资源 会议录像 播客与教程生态	286	approved	2026-10-26	ykla
-section	S-003838	S-003599	C-0496	C-0502	当代 UNIX 与 BSD 的比较 技术 许可证 哲学	38	approved	2026-10-26	ykla
-section	S-003839	S-003626	C-0499	C-0505	BSD vs GPL 的哲学差异 BSDL 不强制 copyleft GPL	28	approved	2026-10-26	ykla
+section	S-003780	S-000684	C-0099	C-0536	章程史与 SPI 代跑投票	32	approved	2026-10-26	ykla
+section	S-003781	S-000685	C-0099	C-0536	自荐与 Fixes 补丁	39	approved	2026-10-26	ykla
+section	S-003782	S-000686	C-0099	C-0536	自荐系列与 xz 攻击向量	38	approved	2026-10-26	ykla
+section	S-003783	S-000687	C-0099	C-0100	评审标签改革与 Link 标签溯源	47	approved	2026-10-26	ykla
+section	S-003784	S-000688	C-0099	C-0100	评审者稀缺与 Acked-by 论战收束	42	approved	2026-10-26	ykla
+section	S-003785	S-000689	C-0099	C-0536	选举结果与 kernel.org 资格	36	approved	2026-10-26	ykla
+section	S-003786	S-001164	C-0187	C-0189	Jordan Hubbard 与 Ports 构建宏的源流	190	approved	2026-10-26	ykla
+section	S-003787	S-001165	C-0187	C-0189	Ports 数量的增长曲线与社区贡献模式	1384	approved	2026-10-26	ykla
+section	S-003788	S-001183	C-0189	C-0191	FreeBSD 5.x 时期的技术淘汰：GEOM、UFS2、rcNG 与 ULE	193	approved	2026-10-26	ykla
+section	S-003789	S-001184	C-0189	C-0191	FreeBSD 5.x 时期的贡献者多样性与企业参与	62	approved	2026-10-26	ykla
+section	S-003790	S-001185	C-0189	C-0191	1996—2010 年的时代语境：科技政策、伯克利校园、集成电路与英美哲学	54	approved	2026-10-26	ykla
+section	S-003791	S-001186	C-0189	C-0191	第三方软件变更：PF 防火墙的引入与 MTA 格局	48	approved	2026-10-26	ykla
+section	S-003792	S-001301	C-0201	C-0203	Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统	103	approved	2026-10-26	ykla
+section	S-003793	S-001302	C-0201	C-0203	FreeBSD 13.x 时期的技术淘汰与架构支持变动	25	approved	2026-10-26	ykla
+section	S-003794	S-001303	C-0201	C-0203	其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS	61	approved	2026-10-26	ykla
+section	S-003795	S-001304	C-0201	C-0203	FreeBSD 2008—2018 年的贡献者多样性与企业参与	72	approved	2026-10-26	ykla
+section	S-003796	S-001322	C-0203	C-0205	FreeBSD 8.x 的开发者群体与虚拟化团队	161	approved	2026-10-26	ykla
+section	S-003797	S-001323	C-0203	C-0205	FreeBSD 8.x 时期 XEN／VNET 移植的无名工程师	163	approved	2026-10-26	ykla
+section	S-003798	S-001332	C-0204	C-0206	FreeBSD 3.0 引入初步 SMP 的工程挑战（1998—2000）	93	approved	2026-10-26	ykla
+section	S-003799	S-001333	C-0204	C-0206	FreeBSD 5.0 三年开发周期的工程挑战（2003—2006）	141	approved	2026-10-26	ykla
+section	S-003800	S-001334	C-0204	C-0206	CAM 与 SCSI 子系统	64	approved	2026-10-26	ykla
+section	S-003801	S-001335	C-0204	C-0206	FreeBSD 3.x 的开发者群体与 SMP 团队组织	69	approved	2026-10-26	ykla
+section	S-003802	S-001336	C-0204	C-0206	FreeBSD 5.x 时期的技术淘汰与废弃特性	20	approved	2026-10-26	ykla
+section	S-003803	S-001337	C-0204	C-0206	FreeBSD 5.x 的开发者群体与工程组织	84	approved	2026-10-26	ykla
+section	S-003804	S-001348	C-0205	C-0207	FreeBSD 9.x 系列总览与工程语境（2010—2014）	145	approved	2026-10-26	ykla
+section	S-003805	S-001359	C-0206	C-0208	FreeBSD 2.0 的发布与 2.x 演进（1994—1998）	274	approved	2026-10-26	ykla
+section	S-003806	S-001360	C-0206	C-0208	FreeBSD 4.0 的发布与 Jails 引入（2000—2003）	521	approved	2026-10-26	ykla
+section	S-003807	S-001361	C-0206	C-0208	FreeBSD 2.x 的开发者群体与核心团队代际更替	860	approved	2026-10-26	ykla
+section	S-003808	S-001362	C-0206	C-0208	对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后	29	approved	2026-10-26	ykla
+section	S-003809	S-001363	C-0206	C-0208	FreeBSD 2.x 时期被遗忘的驱动维护者	69	approved	2026-10-26	ykla
+section	S-003810	S-001399	C-0210	C-0212	FreeBSD 6.x 与同期 Linux 的功能与性能对比	87	approved	2026-10-26	ykla
+section	S-003811	S-001400	C-0210	C-0212	FreeBSD 6.x 时期的技术淘汰：Giant 锁与 MPSAFE VFS	52	approved	2026-10-26	ykla
+section	S-003812	S-001401	C-0210	C-0212	FreeBSD 6.x 时期未被记名的贡献者	106	approved	2026-10-26	ykla
+section	S-003813	S-001411	C-0211	C-0213	FreeBSD 14.0 的发布与 stable/14 分支（2023 年）	32	approved	2026-10-26	ykla
+section	S-003814	S-001577	C-0233	C-0236	NetBSD 2.0 的 SMP 架构实现（2003—2004）	146	approved	2026-10-26	ykla
+section	S-003815	S-001586	C-0234	C-0237	NetBSD 1.x 的可移植性、性能与桌面体验之争（1994—2004）	28	approved	2026-10-26	ykla
+section	S-003816	S-001587	C-0234	C-0237	NetBSD 4.0 的发布与细粒度 SMP 改进	69	approved	2026-10-26	ykla
+section	S-003817	S-001603	C-0236	C-0239	NetBSD 7.0 的 ARM 多核支持与树莓派移植	93	approved	2026-10-26	ykla
+section	S-003818	S-001610	C-0237	C-0240	NetBSD 8.0 的 64 位 ARM（aarch64）支持	85	approved	2026-10-26	ykla
+section	S-003819	S-001618	C-0238	C-0241	NetBSD 9.0 的发布与 ZFS 集成	39	approved	2026-10-26	ykla
+section	S-003820	S-001627	C-0239	C-0242	NetBSD 10.0 的现代硬件支持	81	approved	2026-10-26	ykla
+section	S-003821	S-001628	C-0239	C-0242	pkgsrc 的持续演进与现代软件包管理（2010—2026）	55	approved	2026-10-26	ykla
+section	S-003822	S-001635	C-0240	C-0243	NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）	155	approved	2026-10-26	ykla
+section	S-003823	S-001713	C-0251	C-0254	NetBSD 的极简主义哲学与代码美学	34	approved	2026-10-26	ykla
+section	S-003824	S-001804	C-0266	C-0270	FreeBSD 2010—2026 年的贡献者多样性与企业参与	63	approved	2026-10-26	ykla
+section	S-003825	S-001815	C-0267	C-0271	ipfw、pf 与 ipfilter 的防火墙框架演进	37	approved	2026-10-26	ykla
+section	S-003826	S-001825	C-0268	C-0272	OpenBSD 4.x 的安全与工程改进：malloc 替代	62	approved	2026-10-26	ykla
+section	S-003827	S-001826	C-0268	C-0272	OpenBSD 4.x 时期的技术淘汰与新旧交替（2005—2010）	54	approved	2026-10-26	ykla
+section	S-003828	S-001827	C-0268	C-0272	OpenBSD 与密码学的深度结合（2005—2012）	26	approved	2026-10-26	ykla
+section	S-003829	S-001828	C-0268	C-0272	pf 防火墙从 4.0 到 5.2 的持续演进（2005—2012）	35	approved	2026-10-26	ykla
+section	S-003830	S-001866	C-0272	C-0276	FreeBSD 安全官制度与安全公告流程	47	approved	2026-10-26	ykla
+section	S-003831	S-001867	C-0272	C-0276	与同时期操作系统的比较：Linux 安全生态与 SELinux、KSPP、LKM	25	approved	2026-10-26	ykla
+section	S-003832	S-001868	C-0272	C-0276	安全社区的无名守护者：FreeBSD 安全团队成员	261	approved	2026-10-26	ykla
+section	S-003833	S-001997	C-0286	C-0291	OpenBSD 5.x 时期的技术淘汰与新旧交替（2011—2016）	22	approved	2026-10-26	ykla
+section	S-003834	S-001998	C-0286	C-0291	OpenBSD 5.x 的核心团队与 Theo de Raadt	85	approved	2026-10-26	ykla
+section	S-003835	S-002506	C-0367	C-0372	GhostBSD 与 FreeBSD 桌面化（2009—2026）	70	approved	2026-10-26	ykla
+section	S-003836	S-002885	C-0414	C-0420	POSIX 标准的遵守与合规工程史	24	approved	2026-10-26	ykla
+section	S-003837	S-003435	C-0477	C-0483	视频与音频资源：会议录像、播客与教程生态	286	approved	2026-10-26	ykla
+section	S-003838	S-003599	C-0496	C-0502	当代 UNIX 与 BSD 的比较：技术、许可证与哲学	38	approved	2026-10-26	ykla
+section	S-003839	S-003626	C-0499	C-0505	BSD 与 GPL 的哲学差异：不强制 copyleft	28	approved	2026-10-26	ykla
 bucket	B-000001	B-000001	S-000113	S-000115	unix哲学的局限管道组合的简洁性掩盖了错误处理的粗糙	8	default-approved	2026-10-26	登记册
 bucket	B-000002	B-000002	S-000240	S-000243	C 语言的诞生与演化 K R C 到 C23	33	default-approved	2026-10-26	登记册
 bucket	B-000003	B-000003	S-000247	S-000250	安全机制起源root二元特权模型与密码散列演化19731979	8	default-approved	2026-10-26	登记册

@@ -1,0 +1,60 @@
+{
+  "batch_no": "B01",
+  "phase": "B",
+  "date": "2026-10-26",
+  "baseline_commit": "197b05858",
+  "added_commit": "23bc814d8",
+  "whitelist_lines": 215,
+  "counts": {
+    "volumes": 76,
+    "chapters_before": 534,
+    "chapters_after": 537,
+    "sections": 3900,
+    "targets_before": 4510,
+    "targets_after": 4513,
+    "new_chapters": 3,
+    "new_chapter_ids": ["C-0535", "C-0536", "C-0537"],
+    "renamed_dirs": 192,
+    "removed_bucket_dirs": 51,
+    "gitkeep_added": 195,
+    "renumbered_sections": 33
+  },
+  "titles": {
+    "total": 195,
+    "redraft": 116,
+    "normalized": 79,
+    "review_objects": 211,
+    "review_pass": 166,
+    "review_warn": 43,
+    "review_fail": 2,
+    "post_review_fixed": 7,
+    "forbidden_hits": 0
+  },
+  "gates": {
+    "audit_outline_landing": "PASS 17/17",
+    "audit_index_structure": "PASS",
+    "outline_registry_check": "zero-drift",
+    "audit_renumber_guard": "PASS",
+    "audit_silent_loss_guard": "PASS",
+    "audit_md_quote_glyphs": "PASS",
+    "audit_outline_dup": "PASS",
+    "assemble_index_check": "no-drift",
+    "sync_outline_mirror_check": "PASS"
+  },
+  "artifacts": {
+    "outline.txt": "33d157ac11e36d57d89e19028c90ef2187baca8b34421d2f44502d8d168c9167",
+    "targets.tsv": "77079a085a171b37c12a528a91995f22c90f1cc905a85e90e2b92cc260c26c75",
+    "mapping.tsv": "1e08df78bca0d5091c8f06b554b3fae95fee1832eaabf43fe5b3c227b51e48a7",
+    "index.html": "5f6564ab6677dfc3cbf5872aeb6425973bba5461137e0eca832da1e42c8e942b",
+    "SUMMARY.md": "64192dddf4018b0de16e3b785a54a06fa1bce3c1f78c89646557b56168fc518c",
+    "chapter_keywords.json": "5c0f4b0a5d0a00bbc574c2b64830a4f0ecc33b09e35f8a985f7f2a56baacec77",
+    "theme_index.json": "abcf6b71038d97dcc46e1b84e9c80657893c80ed9f8d1921c7186e9858a0e593"
+  },
+  "open_items": [
+    "归属错置：S-001804／S-001866／S-001868（FreeBSD 主体在 OpenBSD 卷）、S-003181／S-003182（韩俄在「日本 BSD 社区」章）待 Task 4 归位",
+    "近重复 8 组与章／卷题 WARN 11 条待证据",
+    "61 条计划批准节点（V-076 36／D5 7／语言章 18）尚无 approval-record 逐节点行，待 Task 8 签收确认",
+    "Task 7.3：mapping.target_id 未变（ID／节号分离）；disputes 本批无改动"
+  ],
+  "method": "apply_fix.py / reorder_cmp.py / fix_v40c9_titles.py / apply_review_fixes.py"
+}

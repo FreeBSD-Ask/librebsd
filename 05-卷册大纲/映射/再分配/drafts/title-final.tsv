@@ -1,0 +1,196 @@
+node_id	kind	vol_no	ch_no	sec_no	old_title	new_title	basis	note	latin_tokens
+S-000008	proposal	1	2	2.3	学术组织 ACM IEEE Computer Society USENIX	ACM、IEEE 计算机学会与 USENIX 的学术组织活动	重拟	并列专名补顿号与结构	3
+S-000017	virtual	1	4	4.5	微机 OS 谱系：CP/M、Apple DOS 与 XENIX 的并行线	微机操作系统的早期分化：CP/M、Apple DOS 与 XENIX	重拟	谱系→早期分化，OS→操作系统，保留三专名	5
+S-000156	proposal	6	2	2.6	sunos基于bsd的具体版本谱系	SunOS 基于 BSD 的具体版本源流	重拟	谱系→源流，保留“具体版本”	2
+S-000263	proposal	8	8	8.10	安全机制起源pwbunix运维安全实践与商用分支安全分野19731980s	PWB/UNIX 运维安全实践与商用分支的分野（1973—1980 年代）	重拟	年份串归括号，补“运维安全”	2
+S-000264	proposal	8	8	8.11	脚本语言生态perlpythonruby与ports的共生perl1987年	Perl、Python、Ruby 与 Ports 的共生生态（1987 年）	重拟	拆连写，保留三语言与年份	4
+S-000259	proposal	8	8	8.6	java与虚拟机革命freebsdjava移植史java1995年sun	Java 与虚拟机革命：FreeBSD 的 JDK 移植史（1995 年）	重拟	拆机器串，年份归括号	3
+S-000260	proposal	8	8	8.7	shell家族bsd的命令语言thompsonshellbourneshell与	BSD 的 shell 家族：Thompson、Bourne 与 C shell	重拟	补全截断的三类 shell	6
+S-000261	proposal	8	8	8.8	unix碎片化各厂商版本彼此不兼容数据库厂商informix需为超过100种	UNIX 厂商版本的不兼容与 Informix 的多版本适配	重拟	删不可核数量，保留两主题	2
+S-000262	proposal	8	8	8.9	unix谱系的考古学方法源码考古版权谱系与版本命名	UNIX 版本的考古学方法：源码考古、版权归属与版本命名	重拟	谱系→版本，保留三主题	1
+S-000277	virtual	8	11	11.1	Fortran、ALGOL 与科学计算传统的诞生	Fortran、ALGOL 与科学计算传统的诞生	规范化	复核保留	2
+S-000278	virtual	8	11	11.2	Lisp、AI Lab 与 Lisp Machine	Lisp、AI 实验室与 Lisp 机	重拟	AI Lab→AI 实验室，Lisp Machine→Lisp 机	3
+S-000279	virtual	8	11	11.3	Wirth 学派：Pascal、Modula-2 与结构化编程	Wirth 学派：Pascal、Modula-2 与结构化编程	规范化	复核保留	3
+S-000280	virtual	8	11	11.4	C++ 争论：从 Stroustrup 到内核拒绝	C++ 争论：从 Stroustrup 到内核拒绝	规范化	复核保留	2
+S-000281	virtual	8	11	11.5	Java 与脚本语言生态	Java 与脚本语言生态	规范化	复核保留	1
+S-000282	virtual	8	11	11.6	语言保守主义与新语言准入	语言保守主义与新语言准入	规范化	复核保留	0
+S-000303	virtual	9	4	4.6	学生组织、校园媒体与环境史	学生组织、校园媒体与环境史	规范化	复核保留	0
+S-000429	proposal	12	4	4.9	vax硬件与bsd的协同演化decvms与bsd的资源竞争	VAX 硬件与 BSD 的协同演化：DEC VMS 的资源竞争	重拟	拆 vax/decvms 连写	4
+S-000457	proposal	13	2	2.11	与同时期操作系统的比较1988年同期操作系统attunixsvr3sunos40	1988 年同期操作系统对照：AT&T UNIX SVR3 与 SunOS 4.0	重拟	40→4.0，删重复限定	5
+S-000603	proposal	18	1	1.5	Newspeak之喻与v2流转	Newspeak 之喻与术语 v2 的流转	重拟	补空格，保留 v2	2
+S-000604	proposal	18	1	1.6	包容术语v3定稿与graylist	包容术语 v3 定稿与 graylist 去留	重拟	补空格与“的”	2
+S-000605	proposal	18	1	1.7	包容术语论战爆发	包容术语论战的爆发	重拟	补结构助词，语义未变	0
+S-000627	proposal	18	4	4.10	AI流程落地与Rust稳定性反驳	AI 流程落地与 Rust 稳定性反驳	规范化	仅补空格	2
+S-000628	proposal	18	4	4.11	AI版权与API弃用定调	AI 版权与 API 弃用定调	规范化	仅补空格	2
+S-000629	proposal	18	4	4.12	AI缺陷分诊与特性准入	AI 缺陷分诊与特性准入	规范化	仅补空格	1
+S-000630	proposal	18	4	4.13	Bugzilla存废与加速器用户态交锋	Bugzilla 存废与加速器用户态之争	重拟	bugzilla 大写，交锋→之争	1
+S-000631	proposal	18	4	4.14	bugzilla迁移与AI标注规则	Bugzilla 迁移与 AI 标注规则	重拟	bugzilla 大写，补空格	2
+S-000632	proposal	18	4	4.15	Cc标签去留与AUTOSEL稳定树定义之争	Cc 标签去留与 AUTOSEL 稳定树定义之争	规范化	仅补空格	2
+S-000633	proposal	18	4	4.16	ChangeId之争与Linus定调	Change-Id 之争与 Linus 的表态	重拟	ChangeId→Change-Id，定调→表态	2
+S-000634	proposal	18	4	4.17	commit版本史与lore归档大讨论	提交版本史与 lore 归档之争	重拟	commit→提交，大讨论→之争	1
+S-000635	proposal	18	4	4.18	GKI争议与AI政策共识梳理	GKI 争议与 AI 政策共识梳理	规范化	仅补空格	2
+S-000636	proposal	18	4	4.19	KS2018会前议程与TAB竞选	KS2018 会前议程与 TAB 竞选	规范化	仅补空格	2
+S-000637	proposal	18	4	4.20	KS2019筹备与Profile评审续	KS2019 筹备与子系统档案评审	重拟	Profile→档案，保留“续”；2026-10-26 复核整改	1
+S-000638	proposal	18	4	4.21	KS2019议题征集与bug跟踪大讨论	KS2019 议题征集与缺陷跟踪讨论	重拟	bug→缺陷，大讨论→讨论	1
+S-000639	proposal	18	4	4.22	ks_bsd	邮件列表中的 BSD 与 Linux 议题（一）	重拟	下划线机器串改可读题名	2
+S-000640	proposal	18	4	4.23	ksd_bsd	邮件列表中的 BSD 与 Linux 议题（二）	重拟	下划线机器串改可读题名	2
+S-000641	proposal	18	4	4.24	l2md工具链与TAB章程COVID前瞻	l2md 工具链、TAB 章程与疫情前瞻	重拟	拆连写，COVID→疫情	2
+S-000642	proposal	18	4	4.25	Link尾注立场声明与Smatch停摆	Link 尾注立场声明与 Smatch 停摆	规范化	仅补空格	2
+S-000643	proposal	18	4	4.26	Link标签强制与git元数据终局	强制 Link 标签与 git 元数据方案	重拟	终局→方案，补空格	2
+S-000644	proposal	18	4	4.27	linusnext树创建与trivial政策	linus-next 树创建与 trivial 政策	重拟	linusnext→linus-next	2
+S-000645	proposal	18	4	4.28	Linus表态与AI诉讼进行时	Linus 表态与 AI 诉讼进行时	规范化	仅补空格	2
+S-000646	proposal	18	4	4.29	linux issues列表与reporting转正	linux-issues 列表与问题报告转正	重拟	reporting→问题报告	1
+S-000647	proposal	18	4	4.30	linuxnext流程与Bugzilla存废	linux-next 流程与 Bugzilla 存废	重拟	linuxnext→linux-next	2
+S-000648	proposal	18	4	4.31	lore链接定型与KS2019筹备	lore 链接定型与 KS2019 筹备	规范化	仅补空格	2
+S-000649	proposal	18	4	4.32	mb2q工具与Link定型	mb2q 工具与 Link 标签定型	规范化	仅补空格与“标签”	2
+S-000650	proposal	18	4	4.33	mediaProfile定稿与getmaintainer之争	media 档案定稿与 getmaintainer 之争	重拟	mediaProfile→media 档案	2
+S-000651	proposal	18	4	4.34	MEP定稿与workflows列表创建	MEP 定稿与工作流列表创建	重拟	workflows→工作流	1
+S-000652	proposal	18	4	4.35	MS2019文档与补丁接受一致性	MS2019 文档与补丁接受一致性	规范化	仅补空格	1
+S-000653	proposal	18	4	4.36	MS2019议程与lore客户端工具构想	MS2019 议程与 lore 客户端工具构想	规范化	仅补空格	2
+S-000654	proposal	18	4	4.37	OSDL首届选举与术语v2	OSDL 首届选举与术语 v2	规范化	仅补空格	2
+S-000655	proposal	18	4	4.38	python实测与2.2TAB结果	Python 实测与 2.2 TAB 结果	重拟	python→Python，拆 TAB	2
+S-000656	proposal	18	4	4.39	Rice定理与东京峰会征文	Rice 定理与东京峰会征文	规范化	仅补空格	1
+S-000657	proposal	18	4	4.40	Rust抽象与AI评审推进	Rust 抽象与 AI 评审推进	规范化	仅补空格	2
+S-000658	proposal	18	4	4.41	Rust聚合论战与AI审查	Rust 聚合论战与 AI 审查	规范化	仅补空格	2
+S-000659	proposal	18	4	4.42	Sashiko实证与folios之争	Sashiko 实证与 Folios 之争	重拟	folios→Folios，补空格	2
+S-000660	proposal	18	4	4.43	SubsystemProfile评审与可信名单之争	子系统档案评审与可信名单之争	重拟	SubsystemProfile→子系统档案	0
+S-000661	proposal	18	4	4.44	TAB2020选举与代码退役提案	TAB 2020 选举与代码退役提案	重拟	TAB2020 拆空格	1
+S-000662	proposal	18	4	4.45	TAB2025结果与DCO冲突	TAB 2025 结果与 DCO 冲突	重拟	TAB2025 拆空格	2
+S-000663	proposal	18	4	4.46	TAB候选人陈述与CoC报告	TAB 候选人陈述与 CoC 报告	规范化	仅补空格	2
+S-000664	proposal	18	4	4.47	TAB纪要术语v3与选举资格	TAB 纪要、术语 v3 与选举资格	重拟	补顿号，拆 v3	2
+S-000665	proposal	18	4	4.48	TAB组成公告与conclave预案	TAB 组成公告与闭门会议预案	重拟	conclave→闭门会议	1
+S-000666	proposal	18	4	4.49	TAB自荐系列与CoC拒补丁争议	TAB 自荐系列与 CoC 拒补丁争议	规范化	仅补空格	2
+S-000667	proposal	18	4	4.50	TAB选举与AI标注验证门	TAB 选举与 AI 标注验证门	规范化	仅补空格	2
+S-000668	proposal	18	4	4.51	TAB选举与CoC私下征询争议	TAB 选举与 CoC 私下征询争议	规范化	仅补空格	2
+S-000669	proposal	18	4	4.52	TAB选举包容术语与维护者支持	TAB 选举、包容术语与维护者支持	重拟	补顿号分层	1
+S-000670	proposal	18	4	4.53	TAB选举章程与术语正反	TAB 选举章程与术语正反	规范化	仅补空格	1
+S-000671	proposal	18	4	4.54	THE_REST四封与AI高标论	THE REST 与 AI 内容高标准之争	重拟	去下划线与“四封”数词；2026-10-26 复核整改	3
+S-000672	proposal	18	4	4.55	THEREST分流与generatedcontent	THE REST 分流与生成内容	重拟	THEREST/generatedcontent 拆分	2
+S-000673	proposal	18	4	4.56	unwind导出四连与conclave评审	unwind 导出与闭门会议评审	重拟	去“四连”，conclave→闭门会议	1
+S-000674	proposal	18	4	4.57	上游激励论述与TAB选举量化	上游激励论述与 TAB 选举量化	规范化	仅补空格	1
+S-000675	proposal	18	4	4.58	保护墙定调与AI审查红线	保护墙定调与 AI 审查红线	规范化	仅补空格	1
+S-000676	proposal	18	4	4.59	停办峰会六封与支持小组	停办峰会与维护者支持小组	重拟	去“六封”数词	0
+S-000623	proposal	18	4	4.6	Acked by尾声与LTP入树之辩	Acked-by 语义与 LTP 入树之争	重拟	Acked by 连字符化，去“尾声”	2
+S-000677	proposal	18	4	4.60	参选宣言与CoC半年报	参选宣言与 CoC 半年报	规范化	仅补空格	1
+S-000678	proposal	18	4	4.61	峰会出席率重算与新人引导	峰会出席率重算与新人引导	规范化	仅补空格	0
+S-000679	proposal	18	4	4.62	峰会存废之问与ACK权力边界	峰会存废之问与 ACK 权力边界	规范化	仅补空格	1
+S-000680	proposal	18	4	4.63	拒收pull标准与AI文档争议	拒收拉取请求标准与 AI 文档争议	重拟	pull→拉取请求	1
+S-000681	proposal	18	4	4.64	术语九封与自荐四连	术语讨论与 TAB 自荐	重拟	去“九封/四连”数词	1
+S-000682	proposal	18	4	4.65	术语论战与历届选举	术语论战与历届选举	规范化	仅补空格	0
+S-000683	proposal	18	4	4.66	测试标准化与评审付费之辩	测试标准化与评审付费之辩	规范化	仅补空格	0
+S-000684	proposal	18	4	4.67	章程史与SPI代跑投票	章程史与 SPI 代跑投票	规范化	仅补空格	1
+S-000685	proposal	18	4	4.68	自荐十二封与Fixes补丁	自荐与 Fixes 补丁	重拟	去“十二封”数词	1
+S-000686	proposal	18	4	4.69	自荐系列与xz攻击向量	自荐系列与 xz 攻击向量	规范化	仅补空格	1
+S-000624	proposal	18	4	4.7	AI内容指南与Folio进化论	AI 内容指南与 Folio 进化论	规范化	仅补空格	2
+S-000687	proposal	18	4	4.70	评审标签改革与Link标签溯源	评审标签改革与 Link 标签溯源	规范化	仅补空格	1
+S-000688	proposal	18	4	4.71	评审者稀缺与Acked by论战收束	评审者稀缺与 Acked-by 论战收束	重拟	Acked by→Acked-by，补空格	1
+S-000689	proposal	18	4	4.72	选举结果与kernelorg资格	选举结果与 kernel.org 资格	重拟	kernelorg→kernel.org	1
+S-000625	proposal	18	4	4.8	AI内容政策与highmem路线图	AI 内容政策与 highmem 路线图	规范化	仅补空格	2
+S-000626	proposal	18	4	4.9	AI指南定稿与源码为人而写	AI 指南定稿与源码为人而写	规范化	仅补空格	1
+S-000690	virtual	18	5	5.1	C++ 与 Rust 的准入争论：接纳结果与生态面	C++ 与 Rust 的准入争论：接纳结果与生态影响	重拟	生态面→生态影响，保留双方	2
+S-000691	virtual	18	5	5.2	用户态语言生态：发行版打包与脚本语言	用户态语言生态：发行版打包与脚本语言	规范化	复核保留	0
+S-001164	proposal	36	3	3.10	Jordan Hubbard 的 port make macros 谱系	Jordan Hubbard 与 Ports 构建宏的源流	重拟	谱系→源流，port make macros→构建宏	3
+S-001165	proposal	36	3	3.11	从零到 34 000 端口的增长曲线与社区贡献模式	Ports 数量的增长曲线与社区贡献模式	重拟	删不可核的 34 000	1
+S-001183	proposal	36	5	5.10	FreeBSD 5 x 时期的技术淘汰 GEOM UFS2 rcNG ULE	FreeBSD 5.x 时期的技术淘汰：GEOM、UFS2、rcNG 与 ULE	重拟	5 x→5.x，保留四项	6
+S-001184	proposal	36	5	5.11	多元群体贡献 FreeBSD 2002 2005 时期的贡献者多样性 企业	FreeBSD 5.x 时期的贡献者多样性与企业参与	重拟	年份区间归并为版本	2
+S-001185	proposal	36	5	5.12	时代语境 1996 2010 总统科技政策 伯克利校园 IC 英美哲学	1996—2010 年的时代语境：科技政策、伯克利校园、集成电路与英美哲学	重拟	IC→集成电路，年份归位	0
+S-001186	proposal	36	5	5.13	第三方软件变更 PF 防火墙引入与 MTA 格局	第三方软件变更：PF 防火墙的引入与 MTA 格局	重拟	补冒号与结构	2
+S-001301	proposal	37	1	1.10	CAM SCSI ATA NVMe 子系统 从 Justin Gibbs 的	Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统	重拟	补全截断，保留四专名	6
+S-001302	proposal	37	1	1.11	FreeBSD 13 x 时期的技术淘汰与架构支持变动	FreeBSD 13.x 时期的技术淘汰与架构支持变动	重拟	13 x→13.x	2
+S-001303	proposal	37	1	1.12	其他存储栈组件 devfs mdconfig tmpfs sendfile VF	其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS	重拟	补全 VF→VFS，保留五项	5
+S-001304	proposal	37	1	1.13	多元群体贡献 FreeBSD 2008 2018 时期的贡献者多样性 企业	FreeBSD 2008—2018 年的贡献者多样性与企业参与	重拟	年份归位	1
+S-001323	proposal	37	3	3.10	重要贡献者与边缘者 8 x 时期 XEN VNET 移植的无名工程师 8 x	FreeBSD 8.x 时期 XEN／VNET 移植的无名工程师	重拟	删重复“8 x”	4
+S-001322	proposal	37	3	3.9	freebsd8x的开发者群体与虚拟化团队	FreeBSD 8.x 的开发者群体与虚拟化团队	规范化	仅拆连写与版本号，主题不变	2
+S-001333	proposal	37	4	4.10	2003 2006 年 5.0 耗时 3 年开发的工程挑战	FreeBSD 5.0 三年开发周期的工程挑战（2003—2006）	重拟	年份归括号	1
+S-001334	proposal	37	4	4.11	CAM SCSI 子系统	CAM 与 SCSI 子系统	重拟	补连接词	2
+S-001335	proposal	37	4	4.12	freebsd3x的开发者群体与smp团队组织	FreeBSD 3.x 的开发者群体与 SMP 团队组织	重拟	freebsd3x 分词	3
+S-001336	proposal	37	4	4.13	freebsd5x时期的技术淘汰与废弃特性	FreeBSD 5.x 时期的技术淘汰与废弃特性	重拟	freebsd5x 分词与版本号	2
+S-001337	proposal	37	4	4.14	freebsd5x的开发者群体与工程组织	FreeBSD 5.x 的开发者群体与工程组织	重拟	freebsd5x 分词与版本号	2
+S-001332	proposal	37	4	4.9	1998 2000 年 3.0 引入初步 SMP 的工程挑战	FreeBSD 3.0 引入初步 SMP 的工程挑战（1998—2000）	重拟	年份归括号	2
+S-001348	proposal	37	5	5.11	9 x 系列总览与工程语境 2010 2014	FreeBSD 9.x 系列总览与工程语境（2010—2014）	重拟	9 x→9.x，年份归括号	2
+S-001359	proposal	37	6	6.11	1994 1998 年 2.0	FreeBSD 2.0 的发布与 2.x 演进（1994—1998）	重拟	补全截断，年份归括号	2
+S-001360	proposal	37	6	6.12	2000 2003 年 4.0 Jails	FreeBSD 4.0 的发布与 Jails 引入（2000—2003）	重拟	补全截断，年份归括号	2
+S-001361	proposal	37	6	6.13	freebsd2x的开发者群体与core team代际更替	FreeBSD 2.x 的开发者群体与核心团队代际更替	重拟	freebsd2x 分词，core team→核心团队	2
+S-001362	proposal	37	6	6.14	对 FreeBSD 2 x 的批评 技术债务与 SMP 滞后 对	对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后	重拟	删尾部重复“对”	3
+S-001363	proposal	37	6	6.15	重要贡献者与边缘者 2 x 时期被遗忘的驱动维护者 2 x	FreeBSD 2.x 时期被遗忘的驱动维护者	重拟	删重复“2 x”	2
+S-001399	proposal	37	10	10.10	freebsd6x与同期linux功能与性能对比	FreeBSD 6.x 与同期 Linux 的功能与性能对比	重拟	freebsd6x 分词	3
+S-001400	proposal	37	10	10.11	FreeBSD 6 x 时期的技术淘汰 Giant 锁 MPSAFE VFS	FreeBSD 6.x 时期的技术淘汰：Giant 锁与 MPSAFE VFS	重拟	补冒号与连接	5
+S-001401	proposal	37	10	10.12	重要贡献者与边缘者 6 x 时期的无名贡献者	FreeBSD 6.x 时期未被记名的贡献者	重拟	删重复“6 x”	2
+S-001411	proposal	37	11	11.10	2023 11 FreeBSD 14 0 发布 stable 14	FreeBSD 14.0 的发布与 stable/14 分支（2023 年）	重拟	14 0→14.0，stable 14→stable/14	2
+S-001424	virtual	37	12	12.13	time_t 与 Y2038：64 位时间迁移	time_t 类型与 2038 年问题：64 位时间迁移	重拟	Y2038→64 位，保留 time_t；2026-10-26 复核整改	2
+S-001425	virtual	37	13	13.1	Modula-3 与 CVSup	Modula-3 与 CVSup	规范化	复核保留	2
+S-001426	virtual	37	13	13.2	C++ 标准库的 BSD 化：libc++／libcxxrt	C++ 标准库的 BSD 化：libc++ 与 libcxxrt	重拟	全角斜杠→与	4
+S-001427	virtual	37	13	13.3	Rust 进入 base 系统：Somers 方案与社区争论	Rust 进入基本系统：Somers 方案与社区争论	重拟	base→基本系统	2
+S-001428	virtual	37	13	13.4	跨内核对照：Rust for Linux 观察	跨内核对照：Rust for Linux 观察	规范化	复核保留	3
+S-001577	proposal	40	3	3.9	netbsd20smp架构实现20032004	NetBSD 2.0 的 SMP 架构实现（2003—2004）	重拟	并版本号与年份	2
+S-001587	proposal	40	4	4.10	netbsd40的发布与smp改进20071219netbsd40引入细粒度	NetBSD 4.0 的发布与细粒度 SMP 改进	重拟	删 20071219 串	2
+S-001586	proposal	40	4	4.9	netbsd1x时代争议的四层辩证链可移植性性能与桌面体验之争19942004	NetBSD 1.x 的可移植性、性能与桌面体验之争（1994—2004）	重拟	去“四层”数词	2
+S-001603	proposal	40	6	6.9	netbsd70与arm生态的深度支持2015970改进arm多核支持引入rpi	NetBSD 7.0 的 ARM 多核支持与树莓派移植	重拟	RPI→树莓派	2
+S-001610	proposal	40	7	7.7	netbsd80与64位arm2018780引入aarch64arm64	NetBSD 8.0 的 64 位 ARM（aarch64）支持	重拟	并版本号，保留 aarch64	3
+S-001618	proposal	40	8	8.8	netbsd90的发布与zfs集成2020214us2020215utc90	NetBSD 9.0 的发布与 ZFS 集成	重拟	删时间戳串	2
+S-001628	proposal	40	9	9.10	pkgsrc3040与现代软件包管理20102026pkgsrc持续演进引入	pkgsrc 与现代软件包管理的持续演进	重拟	删 3040 与粘连串；2026-10-26 去题内年份区间（N-e 年序）	1
+S-001627	proposal	40	9	9.9	netbsd100与现代硬件支持2024328100引入对	NetBSD 10.0 的现代硬件支持	重拟	删 2024328100 串与残词；2026-10-26 去题内年份区间（N-e 年序）	1
+S-001635	proposal	41	1	1.7	多平台移植的工程架构19951998netbsd12199610支持12	NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）	重拟	删重复年份串	1
+S-001713	proposal	41	12	12.9	netbsd的极简主义哲学与代码美学	NetBSD 的极简主义哲学与代码美学	重拟	netbsd 大写	1
+S-001714	virtual	41	13	13.1	pkgsrc 与多语言打包生态	pkgsrc 与多语言打包生态	规范化	复核保留	1
+S-001715	virtual	41	13	13.2	跨平台编译器移植史	跨平台编译器移植史	规范化	复核保留	0
+S-001716	virtual	41	13	13.3	NetBSD 用户态的脚本语言演进	NetBSD 用户态的脚本语言演进	规范化	复核保留	1
+S-001804	proposal	44	2	2.10	多元群体贡献 FreeBSD 2010 2026 时期的贡献者多样性 企业	FreeBSD 2010—2026 年的贡献者多样性与企业参与	重拟	年份归位；宿主为 OpenBSD，原题作 FreeBSD，语义待核	1
+S-001815	proposal	44	3	3.11	防火墙与网络过滤 ipfw pf ipfilter 三大防火墙框架的历史演进 从	ipfw、pf 与 ipfilter 的防火墙框架演进	重拟	去“三大”与残词，保留三专名	3
+S-001825	proposal	44	4	4.10	openbsd4044的安全与工程改进2006200840引入malloc替代	OpenBSD 4.x 的安全与工程改进：malloc 替代	重拟	删含混 4044，保留 malloc	3
+S-001826	proposal	44	4	4.11	openbsd4x时期的技术淘汰多项旧技术新技术交替演进20052010	OpenBSD 4.x 时期的技术淘汰与新旧交替（2005—2010）	重拟	去“多项”与年份串	2
+S-001827	proposal	44	4	4.12	openbsd与加密学的深度结合20052012openbsd	OpenBSD 与密码学的深度结合（2005—2012）	重拟	删重复 openbsd	1
+S-001828	proposal	44	4	4.13	pf防火墙的持续演进20052012pf从40到52持续改进引入	pf 防火墙从 4.0 到 5.2 的持续演进（2005—2012）	重拟	40→4.0、52→5.2	1
+S-001867	proposal	45	1	1.10	与同时期操作系统的比较 Linux 的安全生态 SELinux KSPP LKM	与同时期操作系统的比较：Linux 安全生态与 SELinux、KSPP、LKM	重拟	补冒号与顿号，保留三项	4
+S-001868	proposal	45	1	1.11	重要贡献者与边缘者 安全社区的无名守护者 FreeBSD 安全团队成员	安全社区的无名守护者：FreeBSD 安全团队成员	重拟	补冒号分层	1
+S-001866	proposal	45	1	1.9	FreeBSD 安全团队与安全公告 FreeBSD Security Offic	FreeBSD 安全官制度与安全公告流程	重拟	补全截断 Security Offic	1
+S-001990	virtual	45	15	15.1	ports 与用户态脚本语言	Ports 与用户态脚本语言	重拟	ports→Ports	1
+S-001991	virtual	45	15	15.2	语言政策的保守主义	语言政策的保守主义	规范化	复核保留	0
+S-001997	proposal	46	1	1.6	openbsd5x时期的技术淘汰多项旧技术新技术交替演进20112016	OpenBSD 5.x 时期的技术淘汰与新旧交替（2011—2016）	重拟	去“多项”与年份串	2
+S-001998	proposal	46	1	1.7	重要贡献者与边缘者openbsd5x时期的核心团队theoderaadt创始人	OpenBSD 5.x 的核心团队与 Theo de Raadt	重拟	拼回人名与 5.x	5
+S-002506	proposal	57	2	2.4	GhostBSD 与 FreeBSD 桌面化 2009 2026	GhostBSD 与 FreeBSD 桌面化（2009—2026）	重拟	年份归括号	2
+S-002580	virtual	58	9	9.1	Objective-C 与 NeXTSTEP 遗产	Objective-C 与 NeXTSTEP 遗产	规范化	复核保留	2
+S-002885	proposal	62	2	2.8	POSIX 标准遵守史 POSIX Portable Operating Sys	POSIX 标准的遵守与合规工程史	重拟	删被截断英文全称	1
+S-003168	virtual	66	1	1.13	加拿大 BSD 社区：大学传统与区域组织	加拿大 BSD 社区：大学传统与区域组织	规范化	复核保留	1
+S-003181	virtual	66	2	2.13	韩国 BSD 社区：用户组、企业与学术部署	韩国 BSD 社区：用户组、企业与学术部署	规范化	复核保留	1
+S-003182	virtual	66	2	2.14	俄罗斯 BSD 社区：从 DemOS 到 FreeBSD	俄罗斯 BSD 社区：从 DemOS 到 FreeBSD	规范化	复核保留	3
+S-003435	proposal	69	2	2.14	视频与音频资源 会议录像 播客与教程生态	视频与音频资源：会议录像、播客与教程生态	重拟	补冒号分层	0
+S-003599	proposal	72	2	2.8	当代 UNIX 与 BSD 的比较 技术 许可证 哲学	当代 UNIX 与 BSD 的比较：技术、许可证与哲学	重拟	补冒号与顿号	2
+S-003626	proposal	72	5	5.10	BSD vs GPL 的哲学差异 BSDL 不强制 copyleft GPL	BSD 与 GPL 的哲学差异：BSD 不强制 copyleft	重拟	BSDL 统一作 BSD，删重复 GPL；2026-10-26 复核整改	3
+S-003627	virtual	72	5	5.11	US v Microsoft、浏览器战争与 CTEA	美国诉微软案、浏览器战争与版权期限延长法	重拟	US v Microsoft 译名，CTEA 译名	0
+S-003865	virtual	76	1	1.1	UMN 假补丁事件	UMN 假补丁事件	规范化	复核保留	1
+S-003866	virtual	76	1	1.2	UMN 争议余波与 AI 标注	UMN 争议余波与 AI 标注	规范化	复核保留	2
+S-003867	virtual	76	1	1.3	Rust 入核大辩论与稳定性争论	Rust 入核辩论与稳定性之争	重拟	大辩论→辩论，争论→之争	1
+S-003868	virtual	76	1	1.4	峰会治理、安全披露与工具链争议	峰会治理、安全披露与工具链争议	规范化	复核保留	0
+S-003869	virtual	76	2	2.1	-mm 树发布宣告档案（上）	-mm 树发布宣告档案（上）	重拟	去行首连字符，保留“上”；2026-10-26 复核整改	1
+S-003870	virtual	76	2	2.2	-mm 树发布宣告档案（下）	-mm 树发布宣告档案（下）	重拟	去行首连字符，保留“下”；2026-10-26 复核整改	1
+S-003871	virtual	76	2	2.3	debugfs、模块参数与驱动接口之争	debugfs、模块参数与驱动接口之争	规范化	复核保留	1
+S-003872	virtual	76	2	2.4	stable 回归防范与 MAINTAINERS 治理	stable 回归防范与 MAINTAINERS 治理	规范化	复核保留	2
+S-003873	virtual	76	2	2.5	Rust 内核政策与社区争议	Rust 内核政策与社区争议	规范化	复核保留	1
+S-003874	virtual	76	2	2.6	回归追踪与 linux-next 运维	回归追踪与 linux-next 运维	规范化	复核保留	1
+S-003875	virtual	76	2	2.7	AI 评审与文档 CI	AI 评审与文档持续集成	重拟	CI→持续集成	1
+S-003876	virtual	76	2	2.8	列表版面治理与琐碎补丁政策	邮件列表版面治理与琐碎补丁政策	重拟	补“邮件列表”载体	0
+S-003877	virtual	76	3	3.1	IO-APIC 与 noapic 治理	IO-APIC 与 noapic 治理	规范化	复核保留	2
+S-003878	virtual	76	3	3.2	警告白名单与平台兼容定调	警告白名单与平台兼容定调	规范化	复核保留	0
+S-003879	virtual	76	3	3.3	DRM、加速器与设备直通	DRM、加速器与设备直通	规范化	复核保留	1
+S-003880	virtual	76	4	4.1	GPL 执法与法律史料	GPL 执法与法律史料	规范化	复核保留	1
+S-003889	virtual	76	4	4.10	Rust 入核争论档案	Rust 入核争论档案	规范化	复核保留	1
+S-003890	virtual	76	4	4.11	AI 评审与政策史料	AI 评审与政策史料	规范化	复核保留	1
+S-003891	virtual	76	4	4.12	硬件加速器与 malloc 议题	硬件加速器与 malloc 议题	规范化	复核保留	1
+S-003881	virtual	76	4	4.2	内核 ABI 与 printk 史料	内核 ABI 与 printk 史料	规范化	复核保留	2
+S-003882	virtual	76	4	4.3	邮件考古与 bug 报告形态	邮件考古与缺陷报告形态	重拟	bug→缺陷	0
+S-003883	virtual	76	4	4.4	报告文档张贴与审查入档	报告文档张贴与审查入档	规范化	复核保留	0
+S-003884	virtual	76	4	4.5	治理争论与维护者支持史料	治理争论与维护者支持史料	规范化	复核保留	0
+S-003885	virtual	76	4	4.6	media 维护模式与治理心理学	media 维护模式与治理心理学	规范化	复核保留	1
+S-003886	virtual	76	4	4.7	TAB 选举与署名标签	TAB 选举与署名标签	规范化	复核保留	1
+S-003887	virtual	76	4	4.8	-mm／stable 发布宣告档案	-mm／stable 发布宣告档案	重拟	去行首连字符；2026-10-26 复核整改	2
+S-003888	virtual	76	4	4.9	工具与基础设施史	工具与基础设施史	规范化	复核保留	0
+S-003892	virtual	76	5	5.1	内核接口与系统调用的 BSD 渊源	内核接口与系统调用的 BSD 渊源	规范化	复核保留	1
+S-003893	virtual	76	5	5.2	驱动与硬件移植承袭	驱动与硬件移植承袭	规范化	复核保留	0
+S-003894	virtual	76	5	5.3	安全与能力模型承袭	安全与能力模型承袭	规范化	复核保留	0
+S-003895	virtual	76	5	5.4	BSD Jail 与 LSM 分歧	BSD Jail 与 LSM 分歧	规范化	复核保留	3
+S-003896	virtual	76	5	5.5	内存管理与地址空间随机化	内存管理与地址空间随机化	规范化	复核保留	0
+S-003897	virtual	76	5	5.6	文件系统、ZFS 与网络承袭	文件系统、ZFS 与网络承袭	规范化	复核保留	1
+S-003898	virtual	76	5	5.7	BSD 谱系综述与人物互见	BSD 技术源流综述与人物互见	重拟	谱系→技术源流	1
+S-003899	virtual	76	5	5.8	治理与峰会互见	治理议题与峰会互见	重拟	补“议题”使题名成完整短语	0
+S-003900	virtual	76	5	5.9	署名规范与用户态项目	署名规范与用户态项目	规范化	复核保留	0
