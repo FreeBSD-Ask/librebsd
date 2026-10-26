@@ -12,7 +12,7 @@ const r = await page.evaluate(() => {
   const t = document.body.textContent;
   return {
     has49: t.indexOf('76 卷 537 章 3907 节') !== -1,
-    hasNote: t.indexOf('注 1713') !== -1,
+    hasNote: t.indexOf('注 1717') !== -1,
     self: /目录自校验 6\/6 通过/.test(t),
     foot: (document.querySelector('.doc-foot') || {}).textContent || '(no footer)',
   };
