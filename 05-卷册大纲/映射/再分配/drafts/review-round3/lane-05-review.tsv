@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000662	sec	PASS	FAIL	PASS	FAIL	fit:DCO 冲突无来源，本组 31 条来源题名零命中;fit:TAB 2025 结果仅对应 155.12、155.25，其余 29 条未覆盖	TAB 2025 选举结果与 AI 标注之争	S-034913 155.12 2025 LF TAB 选举结果、S-034926 155.25 TAB 选举最后提醒、S-034915 155.14 LLM 议题、S-034919 155.18 tool-generated content 文档 v5；DCO 未取得
+S-000663	sec	PASS	PASS	PASS	PASS			S-034232 100.5 TAB 候选人陈述、S-034246 100.19 TAB 候选人陈述 Ts'o；S-034230 100.3 CoC 季度报告答疑、S-034268 100.41 CoC 报告反馈回应
+S-000664	sec	PASS	PASS	PASS	PASS			S-034122 97.14、S-034123 97.15 TAB 电话会议纪要；S-034117 97.9 CodingStyle 包容性术语补丁 v3；S-034120 97.12 选举投票资格讨论
+S-000665	sec	PASS	FAIL	WARN	FAIL	fit:闭门会议预案无来源，104.1 仅为 TAB 会议纪要为何未更新;dup:与 4.56 同以‘闭门会议’为题，该对象在章内两次出现	TAB 组成公告与会议纪要公开之争	S-034317 104.2 新一届 TAB 组成公告、S-034316 104.1 TAB 会议纪要为何未更新、S-034263 100.36 技术写作岗位与纪要公开；闭门会议未取得
+S-000666	sec	PASS	PASS	WARN	WARN	dup:与 4.52 同以 TAB 自荐／自提名系列为题，仅尾部事件不同		S-034434 107.3 自荐（Julia Lawall）、S-034437 107.6、S-034438 107.7、S-034442 107.11、S-034459 107.28 自荐；S-034456 107.25 CoC 报告与拒补丁争议
+S-000667	sec	PASS	PASS	PASS	PASS			S-032366 166.5 TAB选举、S-032376 166.15 AI验证门提案、S-032370 166.9 AI补丁标注
+S-000668	sec	PASS	PASS	PASS	PASS			S-033682 65.3 TAB竞选声明、S-033699 65.20 TAB选举门槛争议；S-033684 65.5 CoC私下讨论、S-033700 65.21 CoC咨询机制
+S-000669	sec	PASS	PASS	WARN	WARN	dup:与 4.49 同以 TAB 自提名／自荐系列为题，仅尾部事件不同		S-034070 96.1 TAB2008自提名、S-034079 96.10 TAB2025自提名、S-034105 96.36 TAB2020自提名；S-034106 96.37 包容术语实操细分
+S-000670	sec	PASS	PASS	PASS	PASS			S-034160 98.10 TAB 章程修订公告、S-034154 98.4 2017 TAB 选举结果公告；S-034163 98.13 反对包容性术语补丁、S-034168 98.18 术语辩论：红黑树类比
+S-000671	sec	PASS	WARN	WARN	WARN	fit:‘AI 内容高标准’未见于来源，仅有 AI／LLM 角色与议题类条目;dup:与 4.55 同以 THE REST 起题，副题难以区分		S-032238 148.3 THE REST 迁离 LKML、S-032241 148.6 AI 与 LLM 在内核流程的角色、S-032248 148.13 LLM 相关议题；高标准未取得
+S-000672	sec	PASS	WARN	WARN	WARN	fit:THE REST 未见于本组来源，196.3 仅为 LKML 流量分流;dup:与 4.54 同以 THE REST 起题，副题难以区分		S-032706 196.3 LKML流量分流、S-032714 196.11 工具生成内容准则；THE REST 未取得
+S-000673	sec	PASS	FAIL	WARN	FAIL	fit:闭门会议评审无来源，106.9 仅为项目延续性文档评审;dup:与 4.48 同以‘闭门会议’为题，该对象在章内两次出现	unwind 导出与延续性文档评审	S-034399 106.6 unwind_user 导出之辩、S-034402 106.9 项目延续性文档评审；闭门会议未取得
+S-000674	sec	PASS	WARN	PASS	WARN	fit:‘量化’未见于来源，191.13 题面仅为 TAB 选举		S-034988 191.20 上游激励与厂商博弈、S-034981 191.13 TAB 选举；量化未取得
+S-000675	sec	PASS	FAIL	PASS	FAIL	fit:保护墙定调无来源，本组 25 条来源题名中‘保护墙’‘定调’零命中	AI 审查工具与贡献门槛之争	S-032547 181.6 AI审查工具、S-032562 181.21 AI贡献门槛、S-032563 181.22 AI审查政策；保护墙与定调未取得

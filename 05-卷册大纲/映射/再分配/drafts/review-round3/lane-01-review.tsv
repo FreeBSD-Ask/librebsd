@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000008	sec	PASS	WARN	PASS	WARN	断代:IEEE 计算机学会（1971 年成立）与 USENIX（1975 年成立）晚于本章断代 1943—1951;覆盖:21 条来源全为 1988—1992 年标准报告与会议通告，无该组织成立期的一手条目		来源 S-001826 AssociationforComputingMachinery、S-001835 USENIX 理事会与 IEEE 计算机学会、S-001837 一九九一年 Atlanta DECUS 大会；旧节路径 024.3-学术组织-ACM-IEEE-Computer-Society-USENIX
+S-000017	sec	PASS	FAIL	PASS	FAIL	规范2.7:XENIX 在 7 条来源中零命中，题名所增对象无来源对应;覆盖:来源实含 Tandy TRSDOS、MS-DOS 1.0／2.0／3.3／4.0 与 DR-DOS，均为题名未列	微机操作系统的早期分化：CP/M、Apple DOS 与 MS-DOS	S-000941 CP/M 的微机路径、S-000942 Apple DOS 的个人电脑路径、S-002002 Tandy TRSDOS 的微机路径、S-002410 MS-DOS 1.0（1981，IBM PC 5150）；旧节路径 012.10-cpm1974appledos1978vms 亦无 XENIX
+S-000156	sec	PASS	WARN	PASS	WARN	覆盖:94 条来源中仅 3 条为版本谱系，余 91 条为 SunOS 硬件、授权与运维问答，题名未涵盖;错位:本节置于第 6 卷第 2 章（共同体传播文化），节题与该章主题无关		来源 S-002642 SunOS 1.0 的 BSD 基础、S-002643 SunOS 2.0 的演进、S-002644 SunOS 3.0 的特性；旧节路径 038.2-sunos基于bsd的具体版本谱系
+S-000263	sec	FAIL	PASS	PASS	FAIL	格式:年份区间与年代混写（1973—1980 年代），不合规范第 3 条“数字只用年份、年份区间、版本号”;格式:括号内为时段而非年份或版本，边界不明	PWB／UNIX 运维安全实践与商用分支的安全分野	S-000948 PWB/UNIX 1.0 的运维安全实践——rsh、SCCS、RJE 账号管理、S-000949 System III/V 的安全增强与审计子系统、S-000950 System V TCB 与 TCSEC 评估的史源意义；旧节路径作 19731980s
+S-000264	sec	PASS	FAIL	PASS	FAIL	规范2.7:Ruby 在 52 条来源中零命中;断代:（1987 年）只对 Perl 成立，Python 起于 1991 年、Ruby 起于 1995 年;覆盖:来源主体为 p5-*（Perl）与 py*（Python）的 Ports 维护帖	Perl、Python 与 Ports 的共生生态	S-001458 devel/p5-XSLoader、S-001508 移植依赖 trytond 的 Python、S-001501 关于 PYEASYINST 的 ports133081；全组检索无 ruby 字样
+S-000259	sec	PASS	PASS	PASS	PASS			来源 S-001267 Java 1995 年发布与虚拟机革命、S-001268 FreeBSD Java 移植的早期尝试与挫折、S-001269 FreeBSD Foundation 2005 年获得 Sun Java 二进制许可证
+S-000260	sec	PASS	PASS	WARN	WARN	重复:与同章 8.1（Thompson Shell 与 Bourne Shell：命令解释器的形成）在 Thompson、Bourne 两项上实质重叠;覆盖:来源 S-001218 的 tcsh、bash、ksh、zsh 多 shell 生态未入题名		来源 S-001217 C shell（csh）：Bill Joy 与 2BSD 的贡献、S-001218 tcsh、bash、ksh、zsh：多 shell 生态与 Ports；旧节路径 017.2-shell家族bsd的命令语言
+S-000261	sec	PASS	PASS	PASS	PASS			来源 S-000598 厂商版本不兼容的具体表现、S-000599 Informix 的多版本适配困境、S-000600 碎片化对应用开发的效应；旧节路径 012.3-unix碎片化各厂商版本彼此不兼容
+S-000262	sec	PASS	PASS	PASS	PASS			来源 S-000840 源码考古：TUHS 与 Unix 谱系重建的方法论基础、S-000852 柯达仅置版权字符串于源码、S-000876 争论 UNIX 商标归属而 Xenix 非 AT&T 定义之 UNIX；旧节路径 012.5-源码考古版权谱系与版本命名
+S-000277	sec	PASS	PASS	PASS	PASS			来源 S-001150 FORTRAN 1957 的诞生与 IBM 科学计算生态、S-001151 ALGOL 58/60 的学术标准化历程、S-001152 贝尔实验室的 FORTRAN 早期参与
+S-000278	sec	PASS	PASS	PASS	PASS			来源 S-001154 McCarthy 1958 年 Lisp 的发明与 AI Lab 文化、S-001155 Lisp Machine 与 BSD UNIX 的文化分野、S-000534 Lisp Machine 语言即操作系统
+S-000279	sec	PASS	WARN	PASS	WARN	覆盖:来源含 007.8.2 Smalltalk（1972）的面向对象路径与 007.8.3 Prolog（1972）的逻辑编程路径，题名未涵盖		来源 S-001158 Wirth 的结构化编程理想与 Pascal 教学语言、S-001159 Pascal 在 BSD 环境中的编译器生态、S-001160 Modula-2 的模块化思想对内核设计的效应
+S-000280	sec	PASS	PASS	PASS	PASS			来源 S-001212 Stroustrup 与 C with Classes 到 C++ 的演进、S-001213 BSD 社区对 C++ 的接纳与抵制、S-001214 FreeBSD 内核拒绝 C++ 的工程论证
+S-000281	sec	PASS	PASS	PASS	PASS			来源 S-001267 Java 1995 年发布与虚拟机革命、S-001268 FreeBSD Java 移植的早期尝试；25 条 017.4 脚本语言生态条目（perl、python、ruby 均见）

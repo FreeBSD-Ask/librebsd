@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000634	sec	PASS	PASS	PASS	PASS			S-035811 commit版本史议题、S-035826 文档漏lore域名之疑（大纲现行 5.1）
+S-000635	sec	PASS	WARN	WARN	WARN	契合：GKI 与 AI 仅 5 条，33 行其余为 Rust 与 Bugzilla 杂议；重复：与同章 7.2“AI 内容政策与 highmem 路线图”同题		S-032609 Android GKI争议、S-032623 AI政策共识（大纲现行 7.7）
+S-000636	sec	PASS	PASS	PASS	PASS			S-033653 KS2018议程草案、S-033651 TAB连任竞选（大纲现行 6.1）
+S-000637	sec	PASS	PASS	WARN	WARN	重复：与同章 6.3 同为 KS2019 筹备，仅以副题区分		S-033774 KS2019启动公告、S-033763 Profile模板设计细节（大纲现行 6.2）
+S-000638	sec	PASS	PASS	WARN	WARN	重复：与同章 6.2 同为 KS2019 筹备，仅以副题区分		S-033794 bug报告机器人标准化、S-033800 bug单一入口与优先级（大纲现行 6.3）
+S-000639	sec	FAIL	WARN	WARN	FAIL	格式：括号用作序号（一），非年份、版本或别名；契合：缺陷跟踪仅 2 条，其余为 AI 投递与杂议；重复：与 5.11、5.12 的 Bugzilla 存废诸节同为缺陷跟踪	缺陷跟踪与 AI 补丁投递之争	S-031765 bugzilla拥趸、S-031776 Torvalds回应AI生成代码（大纲现行 5.17）
+S-000640	sec	FAIL	WARN	PASS	FAIL	格式：括号用作序号（二），非年份、版本或别名；契合：明确论及评审激励仅 1 条，129 行多为 CoC、GPL 与工具杂议	评审激励与补丁工具链之争	S-031820 reviewer激励、S-031822 submitGit接入（大纲现行 5.18）
+S-000641	sec	PASS	PASS	PASS	PASS			S-033978 l2md与kit基座、S-033999 TAB章程修改、S-034004 COVID前瞻重磅（大纲现行 5.6）
+S-000642	sec	PASS	WARN	WARN	WARN	契合：Link 尾注与 Smatch 各 1 条，34 行其余为 Bugzilla、AI 与工具链杂议；重复：与同章 5.2、5.4 同为 Link 标签题		S-036335 Link尾注规范、S-036356 Smatch资金困境（大纲现行 5.5）
+S-000643	sec	PASS	PASS	PASS	PASS			S-035856 强制Link标签负担之争、S-035860 git-am自动元数据（大纲现行 5.2）
+S-000644	sec	PASS	FAIL	PASS	FAIL	契合：18 条来源无 linus-next 与 trivial 条目，实为拣选冲突、Bugzilla 渠道与编译器标准杂议；两概念见于邻组 S-032207、S-032204，属题源错配	拣选冲突、Bugzilla 渠道与编译器之争	S-037037 合并与拣选冲突、S-037068 Bugzilla 退役、S-037067 -Werror 争论
+S-000645	sec	PASS	FAIL	PASS	FAIL	契合：34 条来源无 Linus 表态与 AI 诉讼条目，实为峰会、Bugzilla 与 AI 工具杂议	峰会筹备、Bugzilla 改革与 AI 审查工具	S-032221 峰会筹备与疫情讨论边界、S-032213 Bugzilla 改革与 opt-out、S-032226 AI 补丁审查工具
+S-000646	sec	PASS	FAIL	PASS	FAIL	契合：28 条来源无 linux-issues 列表条目，仅有报告转正与标签之争	问题报告转正与 Reported-by 标签之争	S-036574 reporting-issues宜转正、S-036554 Reported-by现状辩护
+S-000647	sec	PASS	WARN	WARN	WARN	契合：仅 2 条对应，其余 19 行为 AI 政策、Rust 与治理杂议；重复：与同章 5.11“Bugzilla 存废与加速器用户态之争”同题		S-035235 linux-next流程、S-035239 Bugzilla存废（大纲现行 5.12）

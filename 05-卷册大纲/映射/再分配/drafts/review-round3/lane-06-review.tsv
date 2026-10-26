@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000676	sec	PASS	PASS	WARN	WARN	重复:与“峰会存废之问与 ACK 权力边界”“峰会出席率重算与新人引导”同以峰会存废为核心议题		S-034844 149.5 停办维护者峰会之辩、S-034862 149.23 维护者互助组（与“支持小组”同指）
+S-000623	sec	PASS	PASS	WARN	WARN	重复:与“评审者稀缺与 Acked-by 论战收束”同以 Acked-by 语义为核心		S-036201 94.1 Acked-by利害相关者语义、S-036228 94.28 LTP入树开明表态、S-036239 94.39 LTP维护者反对拆分
+S-000677	sec	PASS	PASS	WARN	WARN	重复:与“TAB 候选人陈述与 CoC 报告”两个核心对象实质相同		S-034640 123.5 Sarah Sharp 参选 TAB 宣言、S-034653 123.18 行为准则委员会半年度报告
+S-000678	sec	FAIL	WARN	WARN	FAIL	格式:核心名词“出席率重算”在 33 条来源中无对应（违反 2.7）;相符:仅“新人引导”有来源，“峰会”仅见“峰会存废之争”;重复:与“停办峰会与维护者支持小组”“峰会存废之问与 ACK 权力边界”同属峰会议题	峰会存废、维护者倦怠与新人引导	S-034935 167.1 峰会存废之争、S-034950 167.16 维护者倦怠、S-034956 167.22 新人引导
+S-000679	sec	PASS	PASS	WARN	WARN	重复:与“停办峰会与维护者支持小组”同为峰会存废议题		S-035059 200.35 维护者峰会存废、S-035052 200.28 Folios与ACK权
+S-000680	sec	FAIL	WARN	WARN	FAIL	格式:核心名词“AI 文档争议”在 33 条来源中无对应，“拒收”亦无字面来源（违反 2.7）;相符:“拉取请求标准”仅部分对应“Linus 拉取准则”;重复:与“AI 内容指南与 Folio 进化论”同以 AI 内容为核心	Linus 拉取准则与 AI 审查标签政策	S-032693 190.27 Linus 拉取准则、S-032672 190.6 AI 标签政策、S-032667 190.1 AI 审查工具
+S-000681	sec	PASS	PASS	WARN	WARN	重复:与“术语论战与历届选举”共享术语与 TAB 两个对象;重复:与“自荐与 Fixes 补丁”“自荐系列与 xz 攻击向量”自荐主题重叠		S-034518 111.2 包容性术语、S-034538 111.22 TAB自荐
+S-000682	sec	PASS	PASS	WARN	WARN	重复:与“术语讨论与 TAB 自荐”共享术语与 TAB 两个对象		S-034195 99.1 CodingStyle 术语之争、S-034202 99.8 2007 TAB 选举结果
+S-000683	sec	PASS	PASS	PASS	PASS			S-036056 90.1 测试标准化讨论、S-036080 90.25 付费评审商榷
+S-000684	sec	PASS	PASS	PASS	PASS			S-034584 117.1 TAB选举章程史、S-034602 117.19 SPI代跑投票提议
+S-000685	sec	PASS	PASS	WARN	WARN	重复:与“自荐系列与 xz 攻击向量”“术语讨论与 TAB 自荐”同以自荐系列为主题		S-034546 112.3 2022 TAB 自荐（Dan Williams）、S-034565 112.22 Fixes 标签加日期之辩
+S-000686	sec	PASS	PASS	WARN	WARN	重复:与“自荐与 Fixes 补丁”同以自荐系列为主题		S-034711 126.8 2024 TAB选举自荐、S-034727 126.24 xz事件后供应链攻击向量分析
+S-000624	sec	PASS	PASS	WARN	WARN	重复:与“Sashiko 实证与 Folios 之争”同以 Folios 为核心对象;重复:与“拒收拉取请求标准与 AI 文档争议”同以 AI 内容为主题		S-032433 171.6 AI生成内容指南、S-032447 171.20 Folio演进论辩护
+S-000687	sec	PASS	PASS	WARN	WARN	重复:与“Acked-by 语义与 LTP 入树之争”“评审者稀缺与 Acked-by 论战收束”同属评审标签议题		S-036143 91.37 Acked-by 歧义改革案、S-036151 91.45 Link 标签提议溯源

@@ -1,0 +1,14 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-003885	sec	PASS	WARN	WARN	WARN	适配:媒体条目仅 2 条（S-036434、S-036451），其余 28 条为评审流程、RST 文档转换、测试基建与 Werror 警告治理，题名限定不足；重复:与 4.5 治理争论与维护者支持史料 同属治理主题，未加区分		来源 S-036434“media 维护模式自辩”、S-036451“media PM 桎梏陈情”为仅有的媒体条目；S-036448“未转 RST 目录盘点”、S-036476“Werror 跨架构隐患”等不在题名范围
+S-003886	sec	PASS	WARN	PASS	WARN	适配:题名对应 8 条（82.1—82.3 选举 3 条、87.3／87.6／87.7／87.8／87.16 署名标签 5 条），其余 20 条为 Kernel Summit 议程档案、16 条为回归列表与文档转正		来源 S-036486“Bird参选史”、S-036540“署名标签堆叠之弊”支撑题名；S-036489“seccomp四议题”、S-036509“DAMON议题”等议程档案占多数
+S-003887	sec	PASS	PASS	PASS	PASS			来源 S-036705“mm 树发布宣告”、S-036706“stable 发布宣告”及 2.6.x-mm 系列宣告帖；与第 2 章 2.1／2.2 跨章同题，非本章重复
+S-003888	sec	PASS	WARN	WARN	WARN	适配:Rust 政策 5 条、AI 代码标注 4 条、trivial 补丁政策 3 条、TAB 选举 1 条均非工具与基础设施；重复:与 4.10 Rust 入核争论档案、4.11 AI 评审与政策史料 条目交叠		来源 S-036922“工具讨论：bugzilla 退役”、S-036945“临时提交检测工具”支撑题名；S-036923“Rust 政策：C 聚合传参与别名模型”等偏离
+S-003892	sec	PASS	WARN	WARN	WARN	适配:约 15 条为系统调用与 UAPI 议题，另有 UFS 清理、whiteout、iomap、ufs 几何校验等文件系统内部约 10 条不在题名范围；重复:与 5.6 文件系统、ZFS 与网络承袭 条目交叠		来源 S-031632“openat2”、S-031635“clone3 系统调用补丁集”、S-031638“close_range”支撑题名；S-031675“UFS 清理系列”、S-031686“whiteout 文件类型”属文件系统内部
+S-003893	sec	PASS	PASS	PASS	PASS			来源 S-031652“Sun3x 平台的 ESP SCSI 驱动清理”、S-031653“aic79xx 与 aic7xxx 驱动”、S-031623“sparc64 sbus 映射补丁”支撑驱动与硬件移植主题
+S-003894	sec	PASS	WARN	WARN	WARN	适配:dtrace、KAME 与 IPv6、strlcpy、kqueue／kevent、BSD 守护进程惯例、IP_PORTRANGE、BSD 治理智慧 共 7 条为一般 API 或治理条目，与安全与能力模型不符；重复:与 5.1 在 CLONE_FD、openat2 条目上交叠		来源 S-032011“capsicum 能力模型”、S-032086“Capsicum 移植尝试”、S-032089“Landlock 权利集继承”支撑题名；S-032014“kqueue/kevent 事件机制”、S-032020“BSD 治理智慧”偏离
+S-003895	sec	PASS	FAIL	WARN	FAIL	适配:主题错，47 条中仅 S-031715 为 BSD Jail 与 LSM 补丁接口意见，其余为 TIME_WAIT、绑定语义、组播自收、IPv6 流标签、DiffServ 否决等网络栈语义；重复:改题后与 5.6 网络承袭 交叠	BSD 与 Linux 网络栈语义分歧	来源 S-031717“TIME_WAIT 状态行为”、S-031727“以 BSD API 兼容性否决 DiffServ 路由补丁”、S-031753“BSD 绑定不对称设计”均为网络栈语义，与 Jail／LSM 无关
+S-003896	sec	PASS	PASS	PASS	PASS			来源 S-031695“地址空间随机化 RFC 以 OpenBSD 的 mmap 作参照”、S-031710“mseal RFC 以 OpenBSD 动机”、S-031697“2.4 内核 reverse mapping 之争”、S-031708“FreeBSD pageout daemon 算法”
+S-003897	sec	PASS	PASS	PASS	PASS			来源为 5 条聚合条目合计 43 条下层记录：文件系统反向输出 21 条、文件系统血统 13 条、网络反向输出 6 条、ZFS 交叉验证与 NFSv4 ACL 参照 1 条、治理与移植争议 3 条
+S-003898	sec	PASS	PASS	WARN	WARN	重复:与 5.8 治理议题与峰会互见 在“BSD 治理智慧反哺 Linux”“BSD 技术在 Kernel Summit 的张力”条目上交叠，章内未作切分		来源 S-031985（BSD 技术采纳与对照）、S-031987（BSD 人物在 LKML 的出场）、S-032035（BSD 血统与 Linux 技术流向，24 条）支撑题名
+S-003899	sec	PASS	WARN	PASS	WARN	适配:206.2—206.6 共 5 条技术分类（系统调用与内存管理、文件系统与磁盘、分区与硬件、jail 与容器、其他技术承袭）及 395.13.4／395.13.5 两条回帖属技术承袭，与治理或峰会无关		来源 S-031808“……TAB 宣布 2019 年选举”、S-031817“Kernel Summit 2014 征题”、S-032000“其他技术承袭”偏离题名
+S-003900	sec	PASS	PASS	PASS	PASS			来源 S-031971“统一署名方案与 GNU 的做法一致”、S-031970“shadow 项目改用 NetBSD 的 str 系列”、S-031974“mandoc 版 apropos 以 TH 宏第一参”支撑署名规范与用户态项目

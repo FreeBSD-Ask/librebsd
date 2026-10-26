@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-003874	sec	PASS	WARN	PASS	WARN	内容：39 条来源中约 9 条属“回归追踪／linux-next”（169.1、169.3、169.22、180.1、180.15、180.22 等），其余为文档构建、AI 审查、峰会、GitLab 迁移、bcachefs 等，题名只覆盖少数		来源 169.1 回归追踪与regzbot、180.1 linux-next 运维复盘、180.15 linux-next 驻留时长
+S-003875	sec	PASS	WARN	PASS	WARN	内容：40 条来源中属“文档 CI ／AI 评审”者约 6 条（175.3、175.4、175.20、202.3、202.9、202.12 等），其余为 MAINTAINERS、峰会、stable、trivial，限定不足		来源 175.3 文档CI、175.4 AI代码评审、202.12 内核文档构建
+S-003876	sec	PASS	WARN	PASS	WARN	内容：23 条来源中仅 195.1 列表版面治理、195.3 THE REST 收件分流、195.40 补丁发送工具 等属题；题名第二对象“琐碎补丁政策”在本条来源中无对应（该题见 169.13、175.18）		来源 195.1 列表版面治理、195.3 THE REST收件分流、195.38 评审激励机制
+S-003877	sec	PASS	PASS	PASS	PASS			来源 13.1 unexpected IO-APIC 警告编年与维护者定调、14.1 触发全景、15.2 IO-APIC 寄存器位段、16.3 noapic 治理
+S-003878	sec	PASS	PASS	PASS	PASS			来源 22.1 known list 与警告语义、22.3 0x20 白名单外、23.1 白名单语义的终局定性、19.7 平台兼容与硬件定位
+S-003879	sec	PASS	WARN	PASS	WARN	内容：35 条来源中仅 179.1 DRM 分支管理、179.18 与 185.1 加速器用户态要求、185.3 设备直通与 fwctl 属题，其余为 Bugzilla、MAINTAINERS、AI 政策、峰会、stable		来源 179.1 DRM分支管理争论、179.18 加速器用户态要求、185.3 设备直通与fwctl
+S-003880	sec	PASS	PASS	PASS	PASS			来源 1.1 GPL 执法的历史形态、1.3 诉讼 vs 保护之争、1.6 版权归属新议题（1.10 为落点建议条目）
+S-003889	sec	PASS	WARN	PASS	WARN	内容：72 条来源中仅约 7 条属 Rust（160.1、163.3、163.11、172.3、172.21、198.3、198.16），主体为峰会议题、AI 政策、stable 回迁与 Bugzilla		来源 160.1 Rust引入争论、163.11 Rust 内核政策、172.21 Rust维护者权限
+S-003890	sec	PASS	WARN	PASS	WARN	内容：40 条来源中属 AI 评审与政策者约 9 条（156.1、156.6、193.2、193.15、193.19、193.22 等），其余为 TAB 选举、峰会、stable、Bugzilla、Rust		来源 156.1 AI使用政策、156.6 AI审阅自动化、193.2 AI 审查模型
+S-003891	sec	PASS	FAIL	PASS	FAIL	内容：116 条来源中加速器与 malloc 相关不足 5 条（145.24、151.1、151.23、153.2），主体为峰会邮件总集的议题提案、AI 政策、trivial 补丁、stable 与 Bugzilla，题名所指对象不构成内容主体	加速器用户态接口与内核 malloc 提案	来源 151.1 议题提案：内核实现 malloc、145.24 加速器uAPI分层、153.2 加速器用户态 API 设计方法论
+S-003881	sec	PASS	PASS	PASS	PASS			来源 2.1 tracepoint 是否属用户态 ABI、30.2 向用户态回传错误信息与 ABI 门控、30.1 printk 重设计
+S-003882	sec	PASS	PASS	PASS	PASS			来源 5.2 规模盘点与邮件系统约束、10.4 序号与时间戳重排、10.5 Bug reporting feedback loop
+S-003883	sec	PASS	WARN	PASS	WARN	内容：60 条来源中仅 88.1 全文张贴、88.5 TLDR 重写张贴、92.1 临时审查是否入档 等少数属题，主体为 92.x 评审礼仪、Ack 与 Link 标签规范		来源 88.1 报告文档全文张贴、88.5 TLDR重写张贴、92.1 临时审查是否入档
+S-003884	sec	PASS	PASS	PASS	PASS			来源 48.3 社区治理：MAINTAINERS、51.2 维护者特权之辩、52.1 治理火线第二轮、194.3 维护者支持小组

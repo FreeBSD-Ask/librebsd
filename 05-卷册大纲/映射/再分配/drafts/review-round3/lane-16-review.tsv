@@ -1,0 +1,12 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+B-000012	bucket	PASS	WARN	WARN	WARN	贴合:USB 栈不属父节 1.5 的 CAM 设备访问模型，S-016199 亦被判为存储抽象族邻件;贴合:51 行中多数为硬盘、网卡、键盘个案，题面只覆盖 134.7.1—134.7.2;重复:与 1.10“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”实质重叠		S-016198（134.7.1 Motin 的 CAM ATA 重写，映射 V37-1.4）、S-016199（134.7.2 Selasky 与 USB 栈重写完成 usbus2）
+B-000013	bucket	PASS	FAIL	WARN	FAIL	贴合:父节 1.9 为“UFS 与 ZFS 的长期共存”，题面无 ZFS，与挂靠父节主题不符;贴合:核心来源已分别映射至 1.1 FFS、1.2 UFS1 与 UFS2、1.3 Soft Updates;重复:与 1.1、1.2、1.3 实质重复	从 FFS 到 UFS2 的存储格式演进：UFS 与 ZFS 共存之前	S-015424（McKusick 与 FFS 的设计，1984 年 4.2BSD）、S-015425、S-015426（UFS2 与 SUJ），映射分别落 V37-1.1／1.2／1.3
+B-000014	bucket	PASS	WARN	WARN	WARN	贴合:只对应 152.1.2“FreeBSD 对 4.2BSD 栈的持续工程演进”，未含 152.1.3 与 Linux 的比较;重复:与父节 2.1“TCP／IP 网络栈基础：从 4.2BSD 到 4.4BSD”题名实质重合		S-017007（152.1.2）；S-017006、S-017008 为同组骨架行，映射均零命中未落点
+B-000015	bucket	PASS	PASS	WARN	WARN	重复:与父节 3.3“VIMAGE／VNET：网络虚拟化”题名实质重合		S-017293（152.4.1 VNET 虚拟化的架构设计与实现）、S-017294（152.4.2 与 Jail／epair 的工程集成）
+B-000016	bucket	PASS	FAIL	WARN	FAIL	贴合:来源落在 3.2“Jail 的进程、文件系统与网络隔离”与第六十一卷 2.2（chroot 历史局限），与父节 3.6“Jail 与虚拟机的技术分工”不符;重复:与 3.1“UNIX 隔离传统与 FreeBSD Jail”、3.2 实质重复	从 chroot 到 jail(2)：隔离机制的演进与虚拟化分工	S-011962（chroot 的历史局限，映射判 V61-2.2）、S-011963（jail(2) 的系统调用设计，映射 V37-3.2）
+B-000017	bucket	PASS	WARN	WARN	WARN	贴合:仅 107.2.19 命中 Giant（映射 V37-4.4），SMPng 无直接来源;贴合:其余多行为驱动、libc_r、rwlock 等待等细节，映射留空;重复:与 4.3“SMPng 工程目标与内核锁重构”、4.4“Giant 锁拆除与细粒度并发”双重重合		S-012442（107.2.19 John Baldwin 细看 Giant 插桩，映射 V37-4.4）为唯一正命中；S-012428（Kauai ATA 驱动）等为细节行
+B-000018	bucket	PASS	WARN	PASS	WARN	贴合:“边缘贡献者”来源已判归第三十九卷 5.7“非 committer 贡献者的历史位置”，题面跨卷合并;贴合:44 行中多数为 VM、bufcache、archivers 等无关个案		S-014041（114.4.1 ULE 争议中的核心贡献者，映射 V37-4.6）、S-014042（114.4.2 被忽视的边缘贡献者，映射 V39-5.7）
+B-000019	bucket	PASS	PASS	PASS	PASS			S-017319（153.1.1 SMPng 过渡期间网络子系统锁竞争的技术分析）、S-017320（153.1.2 性能倒退对用户与部署的效应）
+B-000020	bucket	PASS	WARN	WARN	WARN	贴合:来源题面作“pkg(7)／pkgng 设计与实现”，题面改为 pkg(8)，手册实体不符;贴合:“到默认系统”在来源中仅见 139.1.2 迁移阵痛与版本演进，限定不足;重复:与父节 7.6“pkgng 与现代软件包体系”题名实质重合		S-016509（139.1.1 pkg(7)／pkgng 设计与实现，映射 V37-7.6）、S-016510（139.1.2 迁移阵痛与版本演进）
+B-000021	bucket	PASS	FAIL	PASS	FAIL	贴合:核心来源 098.4.1—098.4.3 已由映射判归第三十九卷 8.7“技术争论如何塑造项目文化”，不属本卷 7.6;贴合:241 行中其余为 pointyhat、CUPS 默认化、mod_perl 手册页等构建与打包排障，与路线分歧无关	源码编译与二进制软件包：pkgng 之前的两条路线	S-009691（098.4.1 源码编译的 BSD 传统）、S-009692（098.4.2 二进制软件包的便利性诉求），映射均判 V39-8.7
+B-000022	bucket	PASS	WARN	WARN	WARN	贴合:仅 142.2.2、142.2.3 对应 IA-64 退役与 Tier 调整，其余 45 行为 powerpc、ARM、IBM 硬件个案;重复:与父节 10.3“IA-64 支持与退出”题名实质重合		S-016624（142.2.2 IA-64 退役的工程效应）、S-016625（142.2.3 其他架构状态与 Tier 调整），映射均零命中细节级

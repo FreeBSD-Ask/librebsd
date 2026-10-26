@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000688	sec	PASS	PASS	WARN	WARN	重复：同章已有“Acked-by 语义与 LTP 入树之争”“峰会存废之问与 ACK 权力边界”，与本节点共有 Acked-by／ACK 核心对象，未加区分限定		旧三级节名即“评审者稀缺与 Acked-by 论战收束”；来源 S-036183“93.28 Acked-by语义自述”、S-036198“93.43 Acked-by无需改定调”、S-036165“93.10 亚洲开发者评审参与五因”、S-036171“93.16 评审求助开口论”均在列
+S-000689	sec	PASS	PASS	WARN	WARN	重复：同章已有“Python 实测与 2.2 TAB 结果”“TAB 2025 结果与 DCO 冲突”“TAB 纪要、术语 v3 与选举资格”等节，复述“选举结果／资格”对象		旧三级节名“选举结果与kernelorg资格”；来源 S-034365“105.8 2016 TAB 选举结果”、S-034372“105.15 2007 TAB 选举结果”、S-034364“105.7 TAB 章程修改（kernel.org 账号投票）”
+S-000625	sec	PASS	PASS	WARN	WARN	重复：同章“AI 内容指南与 Folio 进化论”“AI 指南定稿与源码为人而写”与本节点同以 AI 内容政策为核心对象，未加区分限定		旧三级节名“AI内容政策与highmem路线图”；来源 S-032307“161.3 AI 内容政策”、S-032305“161.1 HIGHMEM 退役”、S-032313“161.9 AI 代码审查”
+S-000626	sec	PASS	PASS	WARN	WARN	重复：与同章“AI 内容政策与 highmem 路线图”同以 AI 内容政策／规范为核心对象		旧三级节名“AI指南定稿与源码为人而写”；来源 S-032573“182.5 AI内容规范”、S-032575“182.7 AI补丁实证”、S-032577“182.9 AI代码版权”、S-032589“182.21 AI审查工具”
+S-000690	sec	PASS	WARN	PASS	WARN	失衡：67 条来源仅 1 条为 C++（S-034951“167.17 C++ 支持争论”），其余均为 Rust 政策／争论；“生态影响”在来源标题中无对应		来源 S-032300“159.35 Rust内核政策争论”、S-035300“176.18 Rust进内核之辩”、S-032298“159.33 Rust演化稳定性”；C++ 仅 S-034951 一条
+S-000691	sec	PASS	FAIL	PASS	FAIL	主题错：4 条来源全部为 kernel-doc／mb2q 的 Python 版本选择，无“发行版打包”“用户态语言生态”来源；旧三级节名“ks_bsd”亦无可判读对象	kernel-doc 与 mb2q 的 Python 版本选择	来源 S-036248“143.7 kernel-doc Python 版本”、S-034800“146.6 文档构建的Python选择”、S-031954“python3版mb2q…”、S-031773“反对kerneldoc自动改用更高Python版本…”
+S-001164	sec	PASS	PASS	PASS	PASS			旧三级节名“098.1-Jordan-Hubbard-的-port-make-macros-谱系”；来源 S-007296“port make macros 的起源”、S-007297“从早期结构到框架演化”及多条 S-007341 JordanKHubbard 帖
+S-001165	sec	PASS	PASS	PASS	PASS			旧三级节名“098.2-从零到-34-000+-端口的增长曲线与社区贡献模式”；来源 S-007599“Port 增长曲线”、S-007600“社区贡献模式”
+S-001183	sec	PASS	WARN	PASS	WARN	限定不足：UFS2、ULE 仅见于旧三级节名，本节 193 条来源中无 UFS2／ULE 专门条目，内容集中于 GEOM、rcNG 及磁盘／镜像帖		来源 S-012772“GEOM 框架取代旧式 disk 子系统”、S-012774“rcNG（rc.d）取代旧式 rc 脚本”；UFS2／ULE 未取得对应条目
+S-001184	sec	PASS	PASS	PASS	PASS			旧三级节名“多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业…”；来源 S-013142“企业工程力量的有组织贡献”、S-013143“地域与学术的志愿者多样性”、S-013144“项目官方核心与基金会治理”
+S-001185	sec	PASS	PASS	PASS	PASS			旧三级节名“109.1-时代语境-1996-2010-总统科技政策-伯克利校园-IC-英美哲学”；来源 S-012687“总统科技政策…”、S-012688“伯克利校长谱系”、S-012689“集成电路演进…”、S-012690“英美哲学历程”
+S-001186	sec	PASS	PASS	PASS	PASS			旧三级节名“109.3-第三方软件变更-PF-防火墙引入与-MTA-格局”；来源 S-013066“PF 防火墙从 OpenBSD 引入”、S-013067“sendmail 作为默认 MTA 的延续”
+S-001301	sec	PASS	PASS	WARN	WARN	重复：同章“CAM：设备访问模型与存储硬件现代化”与本节点共有 CAM 核心对象，未加区分限定		旧三级节名“132.3-CAM-SCSI-ATA-NVMe-子系统-从-Justin-Gibbs-的”；来源 S-015504“ATA/SATA 子系统演进与 ahci(4)”、S-015505“NVMe 支持：nvd(4) 与 nda(4)”、S-015510 含 JustinGibbs 建议
+S-001302	sec	PASS	PASS	PASS	PASS			旧三级节名“162.7-FreeBSD-13-x-时期的技术淘汰与架构支持变动”，来源路径为“第162章-freebsd13x…”；来源 S-017731“MIPS 架构降级与退役路径”、S-017732“riscv64sf…退役”、S-017733“OpenSSL 1.0.2 移除”

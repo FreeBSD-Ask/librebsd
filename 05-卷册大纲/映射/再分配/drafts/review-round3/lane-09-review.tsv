@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-001362	sec	PASS	PASS	PASS	PASS	无		来源组题 097.6“对 FreeBSD 2.x 的批评 技术债务与 SMP 滞后”，S-007103“技术债务积累”与 S-007104“SMP 支持滞后”逐项对应
+S-001363	sec	PASS	PASS	PASS	PASS	无		来源组题 097.7“重要贡献者与边缘者 2.x 时期被遗忘的驱动维护者”，S-007141“被遗忘的驱动维护者”同名同指
+S-001399	sec	PASS	WARN	PASS	WARN	覆盖:子件为 linux_base 安装失败、mmap 对齐、TLS 等兼容层个案，未见功能与性能对比的直接题面		来源组题 110.8“freebsd6x与同期linux功能与性能对比”，但 S-013346“安装 linux_base880_4 失败”、S-013360“%fs/%gs 与 fsbase”等子件仅涉兼容层个案
+S-001400	sec	PASS	PASS	PASS	PASS	无		来源组题 110.12“FreeBSD 6.x 时期的技术淘汰 Giant 锁 → MPSAFE VFS”，S-013659 与节题逐字对应
+S-001401	sec	PASS	PASS	PASS	PASS	无		来源组题 110.10“重要贡献者与边缘者 6.x 时期的无名贡献者”，S-013479“6.x 时期的无名贡献者”支持题名
+S-001411	sec	PASS	PASS	PASS	PASS	无		来源组路径 164.1“2023-11-FreeBSD-14-0-发布-stable-14”含发布与 stable/14，S-017818“14.0 发布特性集与工程语境”支持发布一支
+S-001424	sec	PASS	WARN	PASS	WARN	覆盖:题名仅取 64 位 time_t 一支，未含来源组 165.4 的 32 位平台 Tier 降级		来源组题 165.4“32 位平台降级与 64-bit time_t Y2038 修复”，S-017909“i386/armv7 平台 Tier 状态调整”未入题，S-017910“64-bit time_t：i386 平台 Y2038 问题修复”入题
+S-001425	sec	PASS	PASS	PASS	PASS	无		S-009681“要点CVSup史料保存较好…但Modula3编译…”同时含 CVSup 与 Modula-3 两个实质对象
+S-001426	sec	PASS	PASS	PASS	PASS	无		S-017483“libc++ 与 libcxxrt：C++ 标准库的 BSD 化”与节题同指
+S-001427	sec	PASS	PASS	PASS	PASS	无		S-019127“Alan Somers 的 Rust 集成方案”与 S-019128“社区争论焦点与共识僵局”分别支持题名两对象
+S-001428	sec	PASS	WARN	PASS	WARN	覆盖:来源兼含 sched_ext BPF 调度器与 AI，题名仅取 Rust for Linux 一支		S-019136“Linux 6.12-6.18：Rust for Linux、sched_ext BPF 调度器与 AI”，节题只覆盖其中一项
+S-001577	sec	PASS	PASS	WARN	WARN	重复:与同章 3.2“SMP 支持的实现过程”、3.3“内核线程模型变化”覆盖同一实质内容		来源组 200.1“netbsd20smp架构实现20032004”，S-022082“Limpach 发布 SA 与 pthread 的 SMP 并发补丁”支持题名，但与同章 3.2、3.3 实质重叠
+S-001587	sec	PASS	PASS	WARN	WARN	重复:与同章 4.2“NetBSD 4.0：SMP 改进与系统扩展”同指 4.0 细粒度锁		来源组 195.1“netbsd40的发布与smp改进…netbsd40引入细粒度”，S-020662“4.0 SMP 锁的设计与实现”与 S-020663“约 2 年发布周期的工程原因”支持题名
+S-001586	sec	PASS	WARN	PASS	WARN	断代:节为 1994—2004，所在章时段为 2005—2009		来源组 191.1“netbsd1x时代争议的四层辩证链…19942004”，S-020468 批评层条目对应 NetBSD 1.x，与所在章时段冲突

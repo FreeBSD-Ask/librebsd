@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000648	sec	PASS	WARN	WARN	WARN	相符：题名两线仅占 44 条来源的少数，主体为 Link 标签与 UUID 方案之争；限定：来源标题未见 KS2019 字样；重复：与 4.20“KS2019 筹备与子系统档案评审”同含“KS2019 筹备”，与 4.32“Link 标签定型”同论 Link 链接		来源 S-033850“Link 域名标准化之问”、S-033851“同意转用 lore 域名”、S-033856“Message-Id-N 自动串版”；KS2019 字样未见于 S-033842—S-033887，未取得
+S-000649	sec	PASS	PASS	WARN	WARN	重复：与 4.26“强制 Link 标签与 git 元数据方案”、4.31“lore 链接定型”同以 Link 标签定型为题，章内已有三节		来源 S-035988“mb2q 工具发布”、S-035986“Link 语法之问”、S-035997“Link 即 UUID”，题名两线均有对应
+S-000650	sec	PASS	WARN	WARN	WARN	相符：media 子系统档案与 get_maintainer.pl 合计约 12／50 条，主体为 checkpatch W=1 与文档存储之争；重复：与 4.20、4.43 共享“子系统档案”对象		来源 S-033950“mediaProfilev2”、S-033958“getmaintainer至上”、S-033926“W=1数据长文”
+S-000651	sec	PASS	WARN	PASS	WARN	相符：MEP 与 workflows 列表合计约 6／47 条，主体为 notes 工作流、patch-id 与 W=1 规则		来源 S-036015“MEPv2改名”、S-036018“MEP模板全文”、S-036035“workflows列表创建”、S-036046“workflows入lore”
+S-000652	sec	PASS	WARN	PASS	WARN	相符：来源标题未见 MS2019 字样，会议归属未取得；文档与补丁接受（二进制等同验证）两线可对应		来源 S-035755“文档写作即查错论”、S-035761“补丁接受基准与风格”、S-035779“.o 比对验纯风格补丁”；MS2019 字面未取得
+S-000653	sec	PASS	WARN	PASS	WARN	相符：来源并含 S-033890“KS2019议程编排”与 S-033900“KS2019议程V2”，题名只取 MS2019，会议限定不足；lore 客户端工具仅 1 条		来源 S-033891“MS2019工作流议题”、S-033905“MS2019议程草案”、S-033898“lore客户端工具构想”；另含 KS2019 议程两条
+S-000654	sec	PASS	WARN	WARN	WARN	相符：“首届”无来源标题支持，2006 OSDL 两条为选举结果与提名公告，多数来源为 2008—2021 各年 TAB 自提名与 CoC 季报；重复：与 4.19、4.47、4.52、4.65 共享“选举”或“术语”		来源 S-034299“2006 OSDL TAB选举结果”、S-034306“2006 OSDL TAB提名公告”、S-034307“术语v2补丁全文”
+S-000655	sec	FAIL	WARN	WARN	FAIL	格式：数字“2.2”系年份 2022 的截断形，来源作“2022 TAB 选举结果”，违反第 2 节数字口径；相符：“Python 实测”在 33 条来源标题中无对应，未取得；重复：与 4.72“选举结果与 kernel.org 资格”同以 TAB 结果为题	Python 实测与 2022 年 TAB 结果	来源 S-034890“2022 TAB 选举结果”为唯一数字对应；S-034863—S-034899 各题名未见 python 字样；相邻 S-034800“文档构建的Python选择”映射至 S-000691，未取得
+S-000656	sec	PASS	WARN	PASS	WARN	相符：“Rice 定理”与“东京”均无来源标题对应，仅“2025／2026 维护者峰会征文”可对应征文一线		来源 S-034798“2025维护者峰会征文”、S-034833“2026维护者峰会征文”；Rice 与东京字样未见于 S-034793—S-034837，未取得
+S-000657	sec	PASS	WARN	WARN	WARN	相符：AI 评审类约 10 条、Rust 类 3 条，合计不及半数，主体为版权、Link 标签、Cc 列表与维护者议题；重复：与 4.41“Rust 聚合论战与 AI 审查”、4.10“AI 流程落地与 Rust 稳定性反驳”结构重复		来源 S-032266“AI补丁评审工具”、S-032277“AI评审提示词”、S-032299“Rust抽象架构”
+S-000658	sec	PASS	WARN	WARN	WARN	相符：“聚合论战”无来源标题对应，S-032134 仅作 Rust for Linux，AI 审查类 4 条；重复：与 4.40“Rust 抽象与 AI 评审推进”结构重复		来源 S-032137“sashiko 审查模型”、S-032162“AI 代码审查（Sashiko）”、S-032163“AI 补丁审查工具”；聚合字样未取得
+S-000659	sec	PASS	WARN	PASS	WARN	相符：“Sashiko 实证”在已映射来源中无对应，S-032500“Sashiko AI审阅”未映射至本节；24 条中 Folios 仅 1 条，主体为 DRM 流程与峰会形式		来源 S-032513“Folios文化争论”；S-032489—S-032515 未见 Sashiko 字样，未取得
+S-000660	sec	PASS	PASS	WARN	WARN	重复：与 4.20“KS2019 筹备与子系统档案评审”同含“子系统档案评审”，与 4.33“media 子系统档案定稿”同论子系统档案，章内三节重叠		来源 S-033709“Profile模板提案”、S-033717“样例Profile评审”、S-033725“信任名单异议”、S-033729“名单定位之辩”
+S-000661	sec	PASS	WARN	WARN	WARN	相符：选举年份 2020 无来源标题支持，未取得；重复：与 4.46、4.50、4.51、4.57 同以 TAB 选举为题		来源 S-034034“过时代码退役文档提案”、S-034031“TAB选举投票规则”、S-034053“TAB选举结果公布”；2020 字样未取得

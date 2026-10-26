@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-001827	sec	PASS	WARN	PASS	WARN	覆盖：26 条来源仅 S-023661—023663 为加密主题，其余为驱动与补丁邮件；术语：“密码学”较来源“disk／network encryption”升格；断代：上限 2012 超出章范围 2006—2011		S-023661 加密集成的工程哲学、S-023662 disk encryption 的实现、S-023663 network encryption 的全面支持
+S-001828	sec	PASS	PASS	WARN	WARN	重复：题名对象与同章 4.5“pf、CARP、网络工具生态发展”及 4.9“pf 语法扩展”交叉，三节均以 pf／CARP 为对象		S-023612 synproxy 与 state tracking、S-023613 ALTQ 队列调度、S-023614 CARP 冗余协议，与题名逐项对应
+S-001867	sec	PASS	WARN	PASS	WARN	覆盖：题名只列 Linux，来源另有 Windows 的安全演进、OpenBSD 安全至上路线与 BSD 实用主义边界；未取得：LKM 无对应来源		S-018859 Linux 安全生态与 SELinux／KSPP、S-018860 Windows 安全演进与 Patch Tuesday、S-018861 OpenBSD 安全至上路线；LKM 未取得
+S-001868	sec	PASS	WARN	WARN	WARN	覆盖：261 条来源仅 S-018439、S-018441 直接对应团队成员，其余为安全通告与端口漏洞邮件；重复：与同章 1.9“FreeBSD 安全官制度与安全公告流程”共用安全公告语料		S-018439 FreeBSD 安全团队成员与贡献、S-018441 漏洞私下报告者与 CVE 申请者；其余多为 FreeBSD SA 通告邮件
+S-001866	sec	PASS	PASS	PASS	PASS			S-018353 FreeBSD Security Officer 制度的建立与演进、S-018354 安全公告的发布流程与格式规范、S-018356 历任 Security Officer 贡献
+S-001990	sec	PASS	WARN	PASS	WARN	系统：来源为 FreeBSD Ports，本章为“OpenBSD 的语言与安全工具链”，题名未加系统限定		S-001452 FreeBSDPorts 以 shell 与 Makefile 实现及其管理脚本、S-023833 ncurses 补丁触发 perl cpan 报错
+S-001991	sec	FAIL	FAIL	PASS	FAIL	格式：以“主义”作主题词（判据 2.4）；主题：来源为 OpenBSD 静态 PIE 的实现，题名改作“语言政策的保守主义”，属换主题（判据 2.7）	OpenBSD 静态 PIE 的实现	S-024490 PascalStumpf 在专访中自述 OpenBSD 静态 PIE 的实现，全节仅此一条来源
+S-001997	sec	PASS	PASS	PASS	PASS			S-024777 固定地址加载→全系统 ASLR、S-024778 OpenSSL→LibreSSL fork、S-024779 gcc→clang／LLVM 替代，另有 2011—2013 清理补丁邮件
+S-001998	sec	PASS	PASS	PASS	PASS			S-024686 de Raadt 的持续主导、S-024687 Brauer／Friedl 的 pf 与 OpenSSH 贡献、S-024688 Beck／Flöter 贡献、S-024689 贡献者 commit 记录考据
+S-002506	sec	PASS	WARN	PASS	WARN	断代：起始 2009 未取得；覆盖：S-026895 为 jails 与托管商合同主题，非桌面栈		S-026898 meson 更新单、S-026905 XFCE 侧损坏、S-026911 gnome 打包、S-026913 Framework 启用；起始 2009 未取得
+S-002580	sec	PASS	WARN	PASS	WARN	未取得：NeXTSTEP 遗产无对应来源；覆盖：来源为 Objective-C 2.0 与垃圾回收的引入，题名漏此实质对象		仅 S-026380“Objective-C 2.0 与垃圾回收的引入”；NeXTSTEP 遗产未取得
+S-002885	sec	PASS	WARN	PASS	WARN	覆盖：多数来源为具体条款争议（wc 选项顺序、pathconf 与 errno、lp 与 lpq），与“文本采纳与修订”不完全对应；S-029335 属合规与授权主题		S-029341 POSIX 与 SUSv3 联合修订公告、S-029338 对 Unix98 的四项修改建议、S-029340 Austin Group FAQ；S-029335 合规工程演进与授权
+S-003168	sec	PASS	PASS	PASS	PASS			S-030851 加拿大大学的 UNIX 研究传统、S-030858 加拿大 BSD 会议与用户组史料、S-030869 加拿大大学与科研机构的 BSD 部署
+S-003181	sec	PASS	WARN	PASS	WARN	未取得：“学术部署”无对应来源，来源仅有用户组、三星电子与互联网基础设施		S-030736／S-030738 韩国 BSD 用户组、S-030747 三星电子与韩国制造业的 BSD 使用、S-030754 BSD 在韩国互联网基础设施中的角色；学术部署未取得

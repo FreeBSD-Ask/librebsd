@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-001303	sec	PASS	PASS	PASS	PASS			S-015651 devfs(5)、S-015652 mdconfig(8)、S-015653 tmpfs(4)、sendfile(2) 与 VFS 层三项与题名逐一对应，其余 58 条为邮件碎片；旧节名 132.4 与题名同源
+S-001304	sec	PASS	WARN	PASS	WARN	fit：来源含企业贡献、志愿者多样性、基金会治理三类，题名缺“基金会治理”，限定不足		S-015806 企业工程力量的有组织贡献、S-015807 地域与学术的志愿者多样性、S-015808 项目官方核心与基金会治理；断代取自旧节名 133.5（2008–2018）
+S-001323	sec	PASS	WARN	WARN	WARN	fit：来源作“XEN／VNET 移植核心工程师”，题名改谓“无名工程师”，限定偏移；dup：与 3.9 同为 8.x 人员切面，边界重叠		S-014438 XEN／VNET 移植核心工程师、S-014439 被忽视的边缘贡献者
+S-001322	sec	PASS	WARN	WARN	WARN	fit：161 条来源全为 ACPI、电源管理等零散回帖，未见“虚拟化团队”或开发者群体实质条目，未取得；dup：与 3.10 同为 8.x 人员切面		S-014181 至 S-014457 共 161 条均为邮件碎片，无实质标题；题名与旧节名 115.7 同源
+S-001333	sec	PASS	FAIL	PASS	FAIL	fit：断代错，5.0 三年开发周期为 2000—2003，2003 年 1 月已发布，2003—2006 属 5.x 分支存续期	FreeBSD 5.0 三年开发周期的工程挑战（2000—2003）	S-012215 5.0 开发的时间线、S-012216 3 年延期的工程原因；旧节名 107.1 亦作 2003—2006
+S-001334	sec	PASS	PASS	PASS	PASS			S-010655 CAM 的设计架构、S-010656 CAM 对 SCSI 的替代、S-010657 CAM 的工程效应
+S-001335	sec	PASS	WARN	PASS	WARN	fit：仅 S-010767 SMPng 项目团队架构 一条支撑“SMP 团队组织”，且 SMPng 属 5.x 期，其余 68 条邮件碎片无“3.x 开发者群体”条目		S-010767 SMPng 项目团队架构；其余为 3.x 安装与 ports 回帖
+S-001336	sec	PASS	FAIL	PASS	FAIL	fit：主题错，20 条来源全为 sparc64 与 PowerPC 平台调试记录，无“技术淘汰”或“废弃特性”条目	FreeBSD 5.x 时期的架构支持变动（sparc64、PowerPC）	S-012619 UltraSPARC III、S-012632 Pegasos、S-012634 FreeSBIE ppc、S-012638 mutex Giant
+S-001337	sec	PASS	WARN	PASS	WARN	fit：84 条均为开发者邮件碎片，无“工程组织”条目，且含 2009、2018 年段落超出 5.x 期		S-012481 至 S-012503 共 84 条邮件碎片；题名与旧节名 107.6 同源
+S-001332	sec	PASS	PASS	WARN	WARN	dup：与 4.2“FreeBSD SMP 初期实现”实质同题，本节仅加版本与年份限定		S-010487 SMP 引入的工程语境、S-010489 初步 SMP 的局限
+S-001348	sec	PASS	PASS	PASS	PASS			S-015950 从 8.x 到 9.x 的开发周期与版本规划、S-015951 丹尼斯·里奇逝世与 9.0 献辞、S-015952 2012 年 11 月 FreeBSD.org 入侵事件
+S-001359	sec	PASS	PASS	PASS	PASS			S-005356 FreeBSD 2.0 发布与特性、S-005357 2.0 至 2.2.x 的演进、S-005358 2.x 时期的社区演进
+S-001360	sec	PASS	PASS	PASS	PASS			S-010964 4.0 发布与 Jails 引入、S-010965 Jails 的技术架构、S-010966 4.0 的其他特性
+S-001361	sec	PASS	WARN	PASS	WARN	fit：860 条中无“核心团队代际更替”实质条目，68 条明标 1999 年属 3.x 期，与题名 2.x 断代不符		旧节名 097.5 与题名同源；来源以 1999 年邮件为主，另有 2014 年著录条目

@@ -1,0 +1,15 @@
+object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
+S-000282	sec	PASS	WARN	PASS	WARN	fit:合并 018.1／018.3／018.4／018.6／018.7 五节，题面只覆盖保守主义与准入两轴，018.4 移植者与 018.7 同期操作系统比较未入题（规范:2.7）		来源节 018.1／018.3／018.4／018.6／018.7；S-001577“语言保守主义的批评”、S-001591“Go、Rust 等新语言在 BSD 生态中的引入”
+S-000303	sec	PASS	WARN	PASS	WARN	fit:“环境史”无来源对应（规范:2.7），来源节题与条目只涉章程、社团、兄弟会与学生媒体		来源节 055.1“伯克利的学生组织与社团生态”；S-003755—S-003759；“环境史”未取得
+S-000429	sec	PASS	PASS	WARN	WARN	dup:与同章 4.5“VAX 与 BSD：硬件能力推动系统演进”实质重叠（规范:2.8）		来源节 034.3 题面，S-002176 VAX-11/780 硬件特性、S-002177 DEC VMS 与 BSD 的竞争、S-002178 BSD 在 VAX 上的优化
+S-000457	sec	PASS	WARN	WARN	WARN	fit:21 条来源中 18 条为 A/UX，题面未含 A/UX（规范:2.7）；dup:来源节属 4.3BSD-Tahoe（1988），与第十四卷第2章 2.10“与同时期操作系统的比较（1988）”实质重复		来源节 040.11；S-003240 SVR3／SVR3.2、S-003241 SunOS 4.0、S-003243 A/UX 及其后 18 条 A/UX 邮件
+S-000603	sec	PASS	PASS	PASS	PASS			来源节 402.11“Newspeak 之喻与 v2 流转”；S-035432“苏联 Newspeak 之喻”、S-035442“回应 Newspeak 之喻”
+S-000604	sec	PASS	PASS	PASS	PASS			来源节 402.12“包容术语 v3 定稿与 graylist”；S-035482“术语补丁 v3 定稿”、S-035488“graylist 去留定调”
+S-000605	sec	PASS	PASS	PASS	PASS			来源节 402.10“包容术语论战爆发”；S-035385“门禁模式适用性质疑”起 44 条
+S-000627	sec	PASS	PASS	PASS	PASS			来源节 396.14“AI 流程落地与 Rust 稳定性反驳”；S-032520“AI 内核流程”、S-032531“Rust 聚合传递”
+S-000628	sec	PASS	PASS	PASS	PASS			来源节 396.12“AI 版权与 API 弃用定调”；S-032464“AI 代码版权”、S-032488“API 弃用规则”
+S-000629	sec	PASS	PASS	PASS	PASS			来源节 396.10“AI 缺陷分诊与特性准入”；S-032408“AI 缺陷分诊”、S-032411“特性准入流程”
+S-000630	sec	PASS	PASS	WARN	WARN	dup:同章 5.12“linux-next 流程与 Bugzilla 存废”重复“Bugzilla 存废”，5.10 亦同以 Bugzilla 为题（规范:2.8）		来源节 401.14“Bugzilla 存废与加速器用户态交锋”；S-035261“Bugzilla 缺陷跟踪”、S-035257“加速器驱动用户态”
+S-000631	sec	PASS	PASS	WARN	WARN	dup:同章 5.11 与 5.12 均以 Bugzilla 去留为题，三节仅以迁移／存废区分（规范:2.8）		来源节 396.1“bugzilla 迁移与 AI 标注规则”；S-032098“bugzilla Blues 讨论”、S-032109“AI 辅助代码补丁标注”
+S-000632	sec	PASS	PASS	PASS	PASS			来源节 401.11；S-035140“Cc 标签历史价值之辩”、S-035168“stable 定义之争”、S-035184“AUTOSEL 移出规则”
+S-000633	sec	PASS	PASS	PASS	PASS			来源节 404.12“Change-Id 之争与 Linus 定调”；S-035927“Change-Id 提案”、S-035935“Change-Id 去 Gerrit 化”

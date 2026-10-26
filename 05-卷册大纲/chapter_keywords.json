@@ -4,12 +4,12 @@
   "tree": "05-卷册大纲",
   "volumes": 76,
   "chapters": 537,
-  "sections": 3900,
+  "sections": 3907,
   "subsections": 0,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "extract": "title+body",
-  "generated_at": "2026-10-26T20:04:00+08:00"
+  "generated_at": "2026-10-27T00:59:46+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -2480,7 +2480,7 @@
    "themes": [
     "TH-HW-018"
    ],
-   "sections": 5
+   "sections": 6
   },
   "V01-C005": {
    "volume": "第01卷-自由与必然：从图灵机到 UNIX（1830s–1989）",
@@ -3543,7 +3543,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 2
+   "sections": 3
   },
   "V19-C001": {
    "volume": "第19卷-UNIX 战争：阵营、联盟与体系整合（1982–1995）",
@@ -4603,16 +4603,16 @@
    "title": "FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台",
    "domains": [],
    "themes": [
+    "TH-OS-027",
     "TH-HW-014",
     "TH-LANG-033",
     "TH-NET-001",
     "TH-NET-003",
     "TH-NET-013",
     "TH-NET-017",
-    "TH-NET-018",
-    "TH-NET-031"
+    "TH-NET-018"
    ],
-   "sections": 9
+   "sections": 10
   },
   "V37-C003": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -5661,7 +5661,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 2
+   "sections": 3
   },
   "V46-C001": {
    "volume": "第46卷-OpenBSD 人物志：安全路线的维护者（1995–2026）",
@@ -6742,7 +6742,7 @@
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 1
+   "sections": 3
   },
   "V59-C001": {
    "volume": "第59卷-BSD 许可证与法律（1977–2026）",
@@ -7400,7 +7400,7 @@
   },
   "V66-C002": {
    "volume": "第66卷-BSD 社区的世界化：区域史（1980–2026）",
-   "title": "日本 BSD 社区：JUNET、WIDE 与 KAME",
+   "title": "东北亚 BSD 社区：日本、韩国与俄罗斯",
    "domains": [],
    "themes": [
     "TH-NET-003",
@@ -7912,7 +7912,7 @@
     "TH-VM-015",
     "TH-VM-023"
    ],
-   "sections": 11
+   "sections": 12
   },
   "V71-C004": {
    "volume": "第71卷-BSD 的隐性遗产与不可见性（1978–2026）",
@@ -8269,7 +8269,7 @@
    "sections": 6
   },
   "V76-C001": {
-   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "volume": "第76卷-Linux 技术史：争议、子系统与早期史料（1991–2026）",
    "title": "Rust 入核争议",
    "domains": [],
    "themes": [
@@ -8280,7 +8280,7 @@
    "sections": 4
   },
   "V76-C002": {
-   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "volume": "第76卷-Linux 技术史：争议、子系统与早期史料（1991–2026）",
    "title": "内核内存管理、稳定化流程与列表治理",
    "domains": [],
    "themes": [
@@ -8294,14 +8294,14 @@
    "sections": 8
   },
   "V76-C003": {
-   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "volume": "第76卷-Linux 技术史：争议、子系统与早期史料（1991–2026）",
    "title": "硬件平台与警告治理",
    "domains": [],
    "themes": [],
    "sections": 3
   },
   "V76-C004": {
-   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "volume": "第76卷-Linux 技术史：争议、子系统与早期史料（1991–2026）",
    "title": "早期内核史料与邮件考古",
    "domains": [],
    "themes": [
@@ -8317,7 +8317,7 @@
    "sections": 12
   },
   "V76-C005": {
-   "volume": "第76卷-Rust 入核与 BSD–Linux 技术承袭（1991–2026）",
+   "volume": "第76卷-Linux 技术史：争议、子系统与早期史料（1991–2026）",
    "title": "BSD 与 Linux 的技术互承",
    "domains": [],
    "themes": [
@@ -8621,6 +8621,25 @@
   "V01-C004-4.5": {
    "chapter": "V01-C004",
    "title": "微机操作系统的早期分化：CP／M、Apple DOS 与 MS-DOS",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-BIZ-000",
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HW-018",
+    "TH-BIZ-014",
+    "TH-HIS-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C004-4.6": {
+   "chapter": "V01-C004",
+   "title": "微机 OS 谱系：从 CP／M 到 MS-DOS",
    "meta": false,
    "domains": [
     "TH-HW-000",
@@ -20609,7 +20628,7 @@
   },
   "V18-C008-8.1": {
    "chapter": "V18-C008",
-   "title": "C++ 与 Rust 的准入争论：接纳结果与生态影响",
+   "title": "内核语言的保守主义：C 传统的确立与守持",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -20626,7 +20645,24 @@
   },
   "V18-C008-8.2": {
    "chapter": "V18-C008",
-   "title": "kernel-doc 与 mb2q 的 Python 版本选择",
+   "title": "C++ 与 Rust 的准入争论：接纳结果与生态面",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V18-C008-8.3": {
+   "chapter": "V18-C008",
+   "title": "用户态语言生态：发行版打包与脚本语言",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -31619,13 +31655,13 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HW-000",
-    "TH-LANG-000"
+    "TH-OS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-001",
-    "TH-HW-014",
-    "TH-LANG-033"
+    "TH-OS-027",
+    "TH-HW-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31638,13 +31674,13 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HW-000",
-    "TH-LANG-000"
+    "TH-OS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-003",
-    "TH-HW-014",
-    "TH-LANG-033"
+    "TH-OS-027",
+    "TH-HW-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31656,14 +31692,14 @@
    "title": "Netgraph：可组合网络架构",
    "meta": false,
    "domains": [
+    "TH-OS-000",
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-LANG-000"
    ],
    "themes": [
+    "TH-OS-027",
     "TH-HW-014",
-    "TH-LANG-033",
-    "TH-NET-001"
+    "TH-LANG-033"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31676,13 +31712,13 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HW-000",
-    "TH-LANG-000"
+    "TH-OS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-031",
-    "TH-HW-014",
-    "TH-LANG-033"
+    "TH-OS-027",
+    "TH-HW-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31714,13 +31750,13 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HW-000",
-    "TH-LANG-000"
+    "TH-OS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-018",
-    "TH-HW-014",
-    "TH-LANG-033"
+    "TH-OS-027",
+    "TH-HW-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31734,12 +31770,12 @@
    "domains": [
     "TH-HW-000",
     "TH-NET-000",
-    "TH-LANG-000"
+    "TH-OS-000"
    ],
    "themes": [
     "TH-HW-014",
     "TH-NET-017",
-    "TH-LANG-033"
+    "TH-OS-027"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31752,13 +31788,13 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HW-000",
-    "TH-LANG-000"
+    "TH-OS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-SEC-013",
-    "TH-HW-014",
-    "TH-LANG-033"
+    "TH-OS-027",
+    "TH-HW-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31771,11 +31807,30 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
+    "TH-OS-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-NET-013",
+    "TH-OS-027",
+    "TH-HW-014"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C002-2.10": {
+   "chapter": "V37-C002",
+   "title": "Kqueue 机制本体：事件通知的设计与实现",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
     "TH-HW-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-NET-013",
+    "TH-OS-027",
     "TH-HW-014",
     "TH-LANG-033"
    ],
@@ -43907,7 +43962,7 @@
   },
   "V45-C015-15.1": {
    "chapter": "V45-C015",
-   "title": "Ports 与用户态脚本语言",
+   "title": "安全编译器与语言工具链加固",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -43924,7 +43979,24 @@
   },
   "V45-C015-15.2": {
    "chapter": "V45-C015",
-   "title": "OpenBSD 静态 PIE 的实现",
+   "title": "Ports 与用户态脚本语言",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V45-C015-15.3": {
+   "chapter": "V45-C015",
+   "title": "语言政策的保守主义",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -54574,6 +54646,40 @@
   "V58-C009-9.1": {
    "chapter": "V58-C009",
    "title": "Objective-C 与 NeXTSTEP 遗产",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V58-C009-9.2": {
+   "chapter": "V58-C009",
+   "title": "Swift 的诞生与开源",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V58-C009-9.3": {
+   "chapter": "V58-C009",
+   "title": "macOS 的脚本语言与开发工具链",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -72288,6 +72394,25 @@
   "V71-C003-3.11": {
    "chapter": "V71-C003",
    "title": "规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-LANG-000",
+    "TH-VM-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
+    "TH-LANG-033",
+    "TH-VM-011"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V71-C003-3.12": {
+   "chapter": "V71-C003",
+   "title": "Hotmail 的 FreeBSD 生产部署",
    "meta": false,
    "domains": [
     "TH-GOV-000",
