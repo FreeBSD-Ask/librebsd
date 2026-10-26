@@ -1,0 +1,11 @@
+batch_id	target_id	cluster_rows	verdict	adjustments	reviewer	date	note
+p1-batch-001	S-001582	486	ADJUSTED	2	子代理	2026-10-27	无年代段首件违反旧树相对序回位；year_key=1869系芯片型号ESS1869误提取回位殿尾（pkgsrc生态扩大簇）
+p1-batch-002	S-000690	375	PASS	0	子代理	2026-10-27	有年代2件居首升序、证据3件居尾、无穿插（C++与Rust准入争论簇）
+p1-batch-003	S-001578	326	ADJUSTED	3	子代理	2026-10-27	伪年键（1978系引文年份）与跨源插序件回位旧树承接序（NetBSD 3.0稳定化簇）
+p1-batch-004	S-003435	286	PASS	0	子代理	2026-10-27	年代段1–18严格升序无穿插、证据2件居尾（视频音频资源簇）
+p1-batch-005	S-001359	274	ADJUSTED	10	子代理	2026-10-27	快照日期自明件与误提取年键件编年回位，调整后全段严格单调；year_key误提取10行+role_class漏判3行披露上游（FreeBSD 2.x开发者簇）
+p1-batch-006	S-001868	261	PASS	0	子代理	2026-10-27	仅1件有年代已居首，260件无年代月日不可判先后（安全团队成员簇）
+p1-batch-007	S-001369	248	ADJUSTED	1	子代理	2026-10-27	2002年11月件同年月序倒置回位；GNATS PR号伪年键（1886–2099）披露上游（pkgng簇）
+p1-batch-008	S-001590	222	PASS	0	子代理	2026-10-27	3件有年代居首升序、219件无年代按旧树196.1.x严格殿后（VFS存储簇）
+(auto-pass)	209个单件簇	209	AUTO-PASS	0	机械	2026-10-27	单件簇无序可调，清单见script/_landing_task7_20261027/batches/auto-pass.tsv
+(deferred)	S-001165/S-001361/S-001360	2765	DEFERRED	-	-	2026-10-27	三巨簇（1,384/860/521）Phase 4聚合定形后重排，本轮不复核
