@@ -97,3 +97,55 @@
 | `_sfu_file_ingest_v5.py` | 文件级入库（幂等，文本层/OCR 优先级） |
 | `_sfu_outline_backfill.py` | 大纲回写（已存在则重建，增量安全） |
 | `_wait_ocr_done.py` | OCR 完成轮询（幂等退出） |
+
+## 6 TUHS Wiki 全量抓取与独立库（2026-10-25 立）
+
+本节登记 `wiki.tuhs.org`（Unix Heritage Wiki，DokuWiki）全量语料的抓取、归一、入库与复核口径。语料库为 `03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb`（DuckDB 2.0.0，存储 `v2.0.0+`），Schema 见 `脚本与命令/tuhs_wiki_schema.sql`。
+
+### 6.1 范围与清单
+
+- **页面范围**：14 个命名空间（systems／source／features／events／people／anecdotes／images／glossary／publications／misc／wiki／blog／playground／refnotes）及其子命名空间，另加顶层页 `start`、`syste`；2026-10-25 实测去重基线 **232 页**（230 命名空间页＋2 顶层页）。
+- **清单真值**：以 `?do=index&idx=<ns>` 递归派生（处理 `&s=` 分页），去重后的页面 ID 集合为唯一口径；逐命名空间计数与集合 SHA-256 写入 `crawl_runs.scope_json`，禁止以各命名空间计数之和充当总数。
+- **外链范围**：页面直接引用的站外链接**只抓一跳**，不递归外站；同一归一 URL 只抓一次。
+
+### 6.2 二进制禁令与 Markdown 归一
+
+- **禁止二进制正文入库**：语料目录内除 `tuhs_wiki.duckdb` 外，文件扩展名只允许 `.md`／`.wikitext`；不落 `.html`／`.pdf`／`.epub`／压缩包等。图片为唯一潜在例外，默认只登记 URL 不下载；确需本体须用户逐批明示并落 `raw/media/`。
+- **Wiki 页**：`export_raw` 取 Wikitext，按纯文本落 `.wikitext`（保真源）；`export_xhtml` 仅内存用于链接抽取与转换，**不落 HTML**；两者统一转 Markdown 落 `.md`，库内 `fulltext.content` 即 Markdown。
+- **外链页**：HTML 去导航后转 Markdown；PDF 只下载到 `script/` 临时目录，pymupdf 文本层或 RapidOCR 转 Markdown 后删除 PDF 本体；`text/plain` 直通。
+- **排除对象**：电子书格式、书名 PDF（>20 MB）、源码压缩包／`utree.pl`／raw 直链、图片音视频、登录／编辑／feed 等动作 URL，一律只登记 `excluded_items`，不下载、不计入抓取失败。
+- **失效回退**：外链 404／410／5xx／超时先查 Wayback `available`，有快照取 `id_` 原始件并记 `fetch_mode='wayback'`。
+
+### 6.3 入库与幂等
+
+- 每页恰 1 条 `fulltext`（失败／延迟页写空内容行）、1 条 `conversions` 主记录；块级结构入 `fulltext_blocks`（含 `heading_path`）。
+- 自然键：wiki＝`page_key`（DokuWiki 页面 ID 原样），external＝`canonical_url`；先查后写／`MERGE`，`id` 动态取 `max+1`，重复运行不产生重复行；内容变化写 `update_log`。
+- 溯源字段：`pages.url`／`fetched_at`／`sha256_source`（原始响应字节）／`sha256_markdown`（落盘 md）／`conversions.converter_version`。
+
+### 6.4 验证与复核（V1–V12）
+
+抓取后须两套验证器各跑一遍，并做第三轮人工抽样：
+
+| 编号 | 判据 | 执行件 |
+| ---- | ---- | ------ |
+| V1 | 页面清单守恒（重派生＝基线＝库内 wiki 页集合；逐命名空间计数一致） | 主验证器／SQL 复核器 |
+| V2 | 双形态落盘与哈希（`.wikitext`／`.md` 存在；md 哈希一致；wiki 源哈希可重算） | 主验证器／SQL 复核器 |
+| V3 | Markdown 覆盖（每页 1 条 fulltext；非空页有块；无 HTML 标签残留） | 主验证器／SQL 复核器 |
+| V4 | 外链闭合（外链集合＝抓取行∪排除台账∪失败行∪延迟行） | 主验证器／SQL 复核器 |
+| V5 | 键与去重（page_key／块键／外链归一 URL／转换键重复为零） | 主验证器／SQL 复核器 |
+| V6 | 原文抽样（30 wiki 页源哈希一致；10 外链页变化只记 `changed_since_crawl`） | 主验证器 |
+| V7 | 运行时／存储版本、表与约束、无 BLOB | 主验证器 |
+| V8 | `EXPORT`→`IMPORT` 可恢复性（11 表行数相等） | 主验证器 |
+| V9 | wiki 二跑幂等（数据表行数不增、页面集合不变） | 主验证器 |
+| V10 | 二进制禁入（扩展名白名单＋文件头魔数扫描为零） | 主验证器／SQL 复核器 |
+| V11 | 转换保真（30 页标题／链接／代码块差异为零；表格行数 wiki 为零、外链 HTML 按“绝对差 ≤ max(2, 20% 源行数)”容差；布局表折叠的标题层级丢失记 INFO；warnings 逐条披露） | 主验证器 |
+| V12 | 转换台账（每页 conversions 行；版本与 md 哈希一致） | 主验证器／SQL 复核器 |
+
+- **第一轮**：`verify_tuhs_wiki.py` 全量 V1–V12，结果写 `verification`（round `R1`）。
+- **第二轮**：`verify_tuhs_wiki_sql.py` 以独立 SQL 复算 V1–V5／V10／V12（round `R2SQL`），不复用主验证器判据代码；两轮结论不一致即判 FAIL。
+- **第三轮**：人工抽样 30 页（覆盖 14 个命名空间，含 ≥5 个外链页），逐字比对源站／外链源与库内 Markdown，抽样清单附报告附录。
+
+### 6.5 执行件与登记
+
+- 抓取器：`脚本与命令/tuhs_wiki_crawl.py`；主验证器：`脚本与命令/verify_tuhs_wiki.py`；独立复核器：`脚本与命令/verify_tuhs_wiki_sql.py`；Schema：`脚本与命令/tuhs_wiki_schema.sql`。
+- 库路径登记于 `流程规则.md`“功能数据库唯一真值路径与空壳防治”；备份纳入 `backup_databases.py` SCOPE（27 库）；登记簿与看板同步 `11-元数据接口/09-文件夹数据库索引/`。

@@ -262,6 +262,16 @@ REGISTRY = [
          object="由 `05-卷册大纲/目录/data/outline.txt` 派生稳定节点 ID（V-001／C-0001／S-000001）并生成 `05-卷册大纲/映射/targets.tsv`；漂移算法（同父同题→同层同题→模糊改题≥0.86→新增，未匹配旧节点退役）落 `05-卷册大纲/映射/drift/drift-report.tsv`；`--write` 生成（默认 dry-run）／`--check` 只读检测／`--sync [--write]` 同步／`--selftest` 六类场景自证",
          trigger="大纲结构变动后（改号／重排／改题／增删）；Task 3 生产版（2026-10-23 立）",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/verify_tuhs_wiki.py",
+         kind="验证器（语料完整性，独立计数）",
+         object="03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb 的 V1–V12 完整性与保真判据",
+         trigger="TUHS Wiki 抓取或重抓后、交付前",
+         selftest="--selftest", in_tests_readme=False),
+    dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/verify_tuhs_wiki_sql.py",
+         kind="验证器（独立 SQL 复核，独立计数）",
+         object="同一语料库的 V1–V5／V10／V12 独立 SQL 复算（不复用主验证器判据代码）",
+         trigger="主验证器通过后，交叉复核轮",
+         selftest="--selftest", in_tests_readme=False),
 ]
 
 # ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
@@ -327,6 +337,8 @@ STAGE_MAP = {
     "review_v2_full.py": "G4",
     "serve_refactor2026.py": "G4",
     "build_theme_index.py": "G3",
+    "verify_tuhs_wiki.py": "G4",
+    "verify_tuhs_wiki_sql.py": "G4",
 }
 
 

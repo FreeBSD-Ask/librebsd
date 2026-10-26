@@ -1,6 +1,6 @@
 r"""Comprehensive database audit for 05-卷册大纲/目录 plan enhancement.
 
-Audits all 12 functional DuckDBs + 15 code repo DuckDBs + 4 mail merge DuckDBs.
+Audits functional DuckDBs + code repo DuckDBs + mail merge DuckDBs.
 Reports: table counts, row counts, schema alignment with 06号文 design.
 """
 import duckdb
@@ -54,7 +54,7 @@ def require_duckdb_version(skip=False):
     print("[INFO] duckdb 版本 {} 与基线一致（{}）".format(actual, fp))
     return 0
 
-# 12 functional DBs from folder_db_registry.csv
+# functional DBs from folder_db_registry.csv
 FUNCTIONAL_DBS = [
     ("changelog", r"01-项目管理\00-变更记录\changelog.duckdb"),
     ("sacred_sources", r"02-sacred源材料\sacred_sources.duckdb"),
@@ -63,6 +63,7 @@ FUNCTIONAL_DBS = [
     ("bsdnow_podcast", r"03-原始史料库\14-播客史料\bsdnow_podcast.duckdb"),
     ("bsd_podcasts_external", r"03-原始史料库\14-播客史料\bsd_podcasts_external.duckdb"),
     ("original_sources", r"03-原始史料库\original_sources.duckdb"),
+    ("tuhs_wiki", r"03-原始史料库\16-TUHS-Wiki史料\tuhs_wiki.duckdb"),
     ("research_notes", r"04-现代研究文献\research_notes.duckdb"),
     ("historical_claims", r"04-现代研究文献\historical_claims.duckdb"),
     ("causal_graph", r"04-现代研究文献\causal_graph.duckdb"),

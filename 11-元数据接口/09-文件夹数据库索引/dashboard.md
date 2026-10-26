@@ -1,6 +1,6 @@
 # 文件夹级数据库构建与去重进度看板
 
-> 本看板记录 7 个文件夹数据库的构建、Schema 优化、去重、跨库引用解析进度。2026-08-01T13:21:49 由 `script/_update_metadata_after_ingest.py` 更新（5 段释读分析入库后）。
+> 本看板记录 8 个文件夹数据库的构建、Schema 优化、去重、跨库引用解析进度。2026-08-01T13:21:49 由 `script/_update_metadata_after_ingest.py` 更新（5 段释读分析入库后）；2026-10-25 Task 4.4 增登记 `mapping`（只读派生自 `映射/mapping.tsv`，真值仍为 TSV）。
 
 ## 构建进度
 
@@ -13,6 +13,8 @@
 | review_reports | 57 | 192 | 1.05 MB | `6fdd6566eaef2bbf` | 1.4 | wal | 4 | 53 |
 | cross_indexes | 53 | 21 | 628.00 KB | `59d615c9f18eaa4a` | 1.4 | wal | 2 | 51 |
 | metadata_interfaces | 12 | 9822 | 3.38 MB | `0c266bd13ba0fc2f` | 1.4 | wal | 2 | 10 |
+| mapping | 0 | 54 | 13.51 MB | `96bd9bf719d68b78` | 1.0 | 只读派生（可随时从 mapping.tsv 重建） | 0 | 0 |
+| tuhs_wiki | 767 | 39560 | 51.27 MB | `daebc661e209eedf` | 1.0 | 语料库（Markdown 正文／`.wikitext` 源，无二进制正文） | 767 | 0 |
 
 ## Schema 优化记录
 

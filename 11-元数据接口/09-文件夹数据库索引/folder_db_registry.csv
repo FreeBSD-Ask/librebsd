@@ -293,3 +293,5 @@ freebsd-fridays,03-原始史料库/14-播客史料/freebsd-fridays.duckdb,03-原
 bsd-conferences-youtube,03-原始史料库/14-播客史料/bsd-conferences-youtube.duckdb,03-原始史料库/14-播客史料,0,0,1323008,1e29d4a8879c0e61,1.0.0,2026-08-28T19:56:13,0,0,0,
 freebsd-office-hours,03-原始史料库/14-播客史料/freebsd-office-hours.duckdb,03-原始史料库/14-播客史料,0,0,1323008,726adae7c8fd28fe,1.0.0,2026-08-28T19:56:13,0,0,0,
 login-zazhi,03-原始史料库/15-login杂志史料/login-zazhi.duckdb,03-原始史料库/15-login杂志史料,0,,500707328,2d74df55ae63861c,1.1.0,2026-10-06T13:38:21,,,,raw_login-db
+mapping,05-卷册大纲/映射/mapping.duckdb,05-卷册大纲/映射,0,54,14168064,96bd9bf719d68b7870f7eacba8f2ec99a45ea69ae08aea71c778e400e7f3c831,1.0,2026-10-25T18:45:13,0,0,0,derived_readonly_from_mapping_tsv
+tuhs_wiki,03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb,03-原始史料库/16-TUHS-Wiki史料,767,39560,53751808,daebc661e209eedfefcca215f4786cb5ef8de0d122fd177a23e6f4006d2cf539,1.0,2026-10-26T06:45:00,0,767,0,raw_wiki_markdown_external

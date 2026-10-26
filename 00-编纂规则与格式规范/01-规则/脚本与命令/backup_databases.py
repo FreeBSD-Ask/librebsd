@@ -20,10 +20,10 @@ freebsd-fridays/bsd-conferences-youtube/freebsd-office-hours），SCOPE 相应�
 historical_claims 单份约 210.6MB。
 ③三次令（备份范围裁剪，2026-10-14）：**播客库 10 个自 SCOPE 移除，不纳入备份**（原文物可再生成，
 无需常备防护）；**邮件列表库（261 分库）与新闻组库（usenet_mail）确认排除**（本不在范围）；
-**references_fulltext 全文数据库保留常备**。裁剪后范围＝14 功能/史料库 + 12 代码仓库库 = 26 库。
+**references_fulltext 全文数据库保留常备**。裁剪后范围＝15 功能/史料库 + 12 代码仓库库 = 27 库（2026-10-25 新增 `tuhs_wiki`）。
 详见流程规则「数据库备份保留规则」小节。
 ④四次裁定（2026-10-14，ykla 令「A」）：**historical_claims 由专项任务独担**——`--all` 备份循环
-跳过该库（`ALL_SKIP`），消除与 `librebsd-hc-backup-30min` 的重复备份；dball 实轮转 25 库 + hc 专项 1 库；
+跳过该库（`ALL_SKIP`），消除与 `librebsd-hc-backup-30min` 的重复备份；dball 实轮转 26 库 + hc 专项 1 库；
 轮换（prune）维持全库收尾（幂等）。另：三任务执行程序已改 **pythonw.exe**（无窗口后台，2026-10-14 ykla 令）——
 std 流为空时自动重定向至 `12-数据库备份/backup_console.log`。
 ⑤五次令（2026-10-14）：**桌面执行日志**——每次运行向 `桌面/数据库备份.txt` 追加一行成功/失败记录
@@ -94,7 +94,7 @@ if (sys.stdout is None or sys.stderr is None) and BASE:
     if sys.stderr is None:
         sys.stderr = _con
 
-# 备份范围：14 个功能/史料正式库 + 12 个代码仓库库 = 26 库
+# 备份范围：15 个功能/史料正式库 + 12 个代码仓库库 = 27 库
 # （2026-10-14 三次令裁剪：播客 10 库移出；邮件列表库/新闻组库本不在范围；references_fulltext 全文数据库保留）
 # （2026-10-14 裁定 A：--all 备份循环跳过 historical_claims（ALL_SKIP）——该库由 hc 专项任务独担）
 SCOPE = {
@@ -107,6 +107,7 @@ SCOPE = {
     # ——2026-10-14 ykla 令（三次令）：**不纳入备份范围**，自 SCOPE 移除（原 2026-08-26 拆分并入）。
     # 同步排除（确认）：邮件列表库（261 分库）与新闻组库 usenet_mail 本不在范围；references_fulltext 保留。
     "original_sources": r"03-原始史料库\original_sources.duckdb",
+    "tuhs_wiki": r"03-原始史料库\16-TUHS-Wiki史料\tuhs_wiki.duckdb",
     "research_notes": r"04-现代研究文献\research_notes.duckdb",
     "historical_claims": r"04-现代研究文献\historical_claims.duckdb",
     "causal_graph": r"04-现代研究文献\causal_graph.duckdb",
@@ -281,7 +282,8 @@ def backup_one(name, rel_path):
         # DuckDB 无 PRAGMA integrity_check；用表计数 + CHECKPOINT 作为基本健康检查
         con.execute("CHECKPOINT")
         table_count = con.execute(
-            "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='main'"
+            "SELECT COUNT(*) FROM information_schema.tables "
+            "WHERE table_schema='main' AND table_type='BASE TABLE'"
         ).fetchone()[0]
         con.execute("EXPORT DATABASE '{}' (FORMAT PARQUET)".format(tmpdir.replace("\\", "/")))
         con.close()
