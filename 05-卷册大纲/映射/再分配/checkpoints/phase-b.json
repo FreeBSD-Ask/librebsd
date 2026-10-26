@@ -13,11 +13,18 @@
     "targets_before": 4510,
     "targets_after": 4513,
     "new_chapters": 3,
-    "new_chapter_ids": ["C-0535", "C-0536", "C-0537"],
+    "new_chapter_ids": [
+      "C-0535",
+      "C-0536",
+      "C-0537"
+    ],
     "renamed_dirs": 192,
     "removed_bucket_dirs": 51,
     "gitkeep_added": 195,
-    "renumbered_sections": 33
+    "renumbered_sections": 33,
+    "bucket_titles_redrafted": 51,
+    "section_titles_round2": 16,
+    "chapter_titles_round2": 3
   },
   "titles": {
     "total": 195,
@@ -28,7 +35,11 @@
     "review_warn": 43,
     "review_fail": 2,
     "post_review_fixed": 7,
-    "forbidden_hits": 0
+    "forbidden_hits": 0,
+    "review_round2_objects": 251,
+    "round2_redraft": 70,
+    "round2_keep": 176,
+    "round2_pending_relocate": 5
   },
   "gates": {
     "audit_outline_landing": "PASS 17/17",
@@ -42,13 +53,13 @@
     "sync_outline_mirror_check": "PASS"
   },
   "artifacts": {
-    "outline.txt": "33d157ac11e36d57d89e19028c90ef2187baca8b34421d2f44502d8d168c9167",
-    "targets.tsv": "77079a085a171b37c12a528a91995f22c90f1cc905a85e90e2b92cc260c26c75",
+    "outline.txt": "446123b6d422c9afcffab752de8c7d52d9c930a091673d1812e5b36f81880f92",
+    "targets.tsv": "c5b62bf5cc9c8b622778441c647e70481e5cbc265cb7602df4091adc8699d025",
     "mapping.tsv": "1e08df78bca0d5091c8f06b554b3fae95fee1832eaabf43fe5b3c227b51e48a7",
-    "index.html": "5f6564ab6677dfc3cbf5872aeb6425973bba5461137e0eca832da1e42c8e942b",
-    "SUMMARY.md": "64192dddf4018b0de16e3b785a54a06fa1bce3c1f78c89646557b56168fc518c",
-    "chapter_keywords.json": "5c0f4b0a5d0a00bbc574c2b64830a4f0ecc33b09e35f8a985f7f2a56baacec77",
-    "theme_index.json": "abcf6b71038d97dcc46e1b84e9c80657893c80ed9f8d1921c7186e9858a0e593"
+    "index.html": "e59fd22c1e3a84b9dfccd9b525cbd950651995e81cbad3a29deb171b319104e0",
+    "SUMMARY.md": "1baa867f02a52d268875c863318cefdb32577d00fc39807abce9da965ed2bee9",
+    "chapter_keywords.json": "a2540d6ca3a4646804c44bc3c257aae2417c041a1fff96d2d35f1135163f6ff3",
+    "theme_index.json": "aaebb114284dd4025e61525350578e61a5b0e78adb58f76239aca7263c700362"
   },
   "open_items": [
     "归属错置：S-001804／S-001866／S-001868（FreeBSD 主体在 OpenBSD 卷）、S-003181／S-003182（韩俄在「日本 BSD 社区」章）待 Task 4 归位",

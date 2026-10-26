@@ -11,7 +11,7 @@ const r = await page.evaluate(() => {
   if (dp) dp.style.zoom = 0.85;
   const t = document.body.textContent;
   return {
-    has49: t.indexOf('75 卷 523 章 3705 节') !== -1,
+    has49: t.indexOf('76 卷 537 章 3900 节') !== -1,
     hasNote: t.indexOf('注 1713') !== -1,
     self: /目录自校验 6\/6 通过/.test(t),
     foot: (document.querySelector('.doc-foot') || {}).textContent || '(no footer)',

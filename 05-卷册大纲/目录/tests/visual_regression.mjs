@@ -510,7 +510,7 @@ function linkVisible(link) {
     click('json');
     click('txt');
     await new Promise(function (r) { setTimeout(r, 400); });
-    return { len: t.split('\n').length, hasStats: /统计：75 卷 523 章 3705 节/.test(t),
+    return { len: t.split('\n').length, hasStats: /统计：76 卷 537 章 3900 节/.test(t),
              summary: t, json: caps[0] || '', txt: caps[1] || '' };
   });
   const fid = checkExportFidelity(summary);
@@ -551,6 +551,10 @@ function linkVisible(link) {
   const csvRows = ex.csv.split(CRLF).filter(function (l) { return l.length; }).slice(1).map(function (l) {
     var out = []; var re = new RegExp(Q + "((?:[^" + Q + "]|" + D + ")*)" + Q, "g"); var m;
     while ((m = re.exec(l))) out.push(m[1].split(D).join(Q));
+    /* 镜像 80-breadcrumb.js 防公式注入：以 = + - @ 或制表/回车起首的单元格被前置单引号（如 “-mm 树”节），比对前剥离 */
+    out = out.map(function (s) {
+      return s.length > 1 && s.charAt(0) === "'" && /^[=+\-@\t\r]/.test(s.charAt(1)) ? s.slice(1) : s;
+    });
     return out;
   });
   const secKey = r => r[2] + " " + r[3];
