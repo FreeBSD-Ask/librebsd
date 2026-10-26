@@ -10,6 +10,7 @@
 - **消化口径**：按“最终只保留未迁移件”逐批消化——已映射（`CONFIRMED`）文件用 `git mv` 迁入新树，迁出即从旧树消失；`UNMAPPED`／`DISPUTED`／`TARGET_LOST`／`DUPLICATE`／`DISCARDED` 与空目录骨架留在旧树，待后续裁决。
 - **只读纪律**：新树建设期间任何脚本或评审只读取旧树，不得改写内容或“顺手修正”；除已确认映射文件的迁出、以及 `TARGET_LOST`／`REMAP` 文件的回迁外，不得改名、删除或新增。**唯一既有例外**：spec SubTask 2.1b 已批准的机械标准化改名——2026-10-24 执行 6,291 件（6,118 反引号剥离＋173 模板名→H1 名），逐件 SHA 前后相等，台账见 `title-standardization.tsv`。
 - **旧树派生件**：旧树 `SUMMARY.md`、`chapter_keywords.json`、`theme_index.json` 为**历史快照、非现行索引**，迁移开始后不再随迁出再生；不得以旧树索引校验新树。**兼容版再生已完成并冻结（2026-10-25，2.1a，ykla 令"偿还0-4的技术债务和遗留"）**：`SUMMARY.md` 已从当前旧树（2.1b 改名后状态）再生（41,233 行，四级嵌套与既有格式逐字节同构，数字序排序，反引号残留 0）；`chapter_keywords.json`／`theme_index.json` 验证**内容一致**——两件零文件名引用（.md 引用 grep 0 命中），改名系文件名层且 SHA 前后相等（`title-standardization.tsv` 6,291/6,291），meta 计数与现树一致（卷 24／章 449／节 3,274／小节 37,484）。再生器 `script/_tmp_regenerate_oldtree_summary.py`（只读旧树＋写 SUMMARY 一件）。**此后不再随新树或旧树变动再生；不得以旧树索引校验新树。**
+- **语义改名建议冻结（2026-10-25，2.1c，ykla 裁决"全部留给 Task 7"）**：`title-review.tsv` 12,489 条（slug 12,274／truncated 108／artifact 103／junk 4；高 9／中 43／低 12,437）**全部不提前改名**，冻结为建议存档（FR-T2-02 执行改名数 0 维持）。**Task 7 承接**：迁移取全题（SubTask 7.2"编号前缀＋标准化标题原文"），slug 12,274 条按其标准化规则自然处理；artifact 103＋truncated 108＋junk 4 条（合计 215 条）**列入 Task 7 标准化规则必剥清单**，Task 7 开批时须纳入其标准化判据并走其全链门禁。
 
 ## 一之二、状态机（2026-10-24 修订，强制，选项 B）
 
@@ -43,6 +44,7 @@ L2／L7 必然 FAIL。2026-10-24 已回退 53 条 `CONFIRMED` → `PENDING`（`r
 | `ref-rewrite.tsv`／`ref-unresolved.tsv`／`ref-sync.tsv` | 引用改写台账／未决挂账／同步留痕 | Task 7／11 |
 | `review/` | 复核工作包（`packs/<旧卷>.tsv`、`disputes.tsv`） | Task 4／5 |
 | `挂账清单/` | Task 6 四类挂账清单（`01-unmapped-by-volume-chapter.tsv` 旧卷×旧章 UNMAPPED 计数、`02-unmapped-no-target-detail.tsv` UNMAPPED 无目标明细（裁决入口）、`03-disputed-by-volume-chapter.tsv` 旧卷×旧章 DISPUTED 计数（分规则通过与规则未决）、`04-backlog-summary-by-volume.tsv` 分卷汇总；生成器 `script/_landing_production_20261024/_task6_backlog.py` 只读可复跑） | Task 6 |
+| `缺口族分析/` | 结构缺口内容分析批数据表 26 件（01–05 旧 vol20 逐章与 395 分流、06–11 UNMAPPED 逐行分层与规则、12–16 D7/D8 数据修正方案、17–21 V-076 五章与三套节粒度映射、22–24 语言史章补证／设计／边界、25 对账表、26 题命中改判 422 行；生成器 `script/_landing_gap_analysis_20261025/` p00–p10 只读可复跑、二跑零增量；报告＝`01-项目管理/01-编纂规划与报告归档/05-大纲落地-结构缺口内容分析-20261025.md`） | 结构缺口内容分析批 20261025 |
 | `reference/` | 18 件历史映射表（章级/节级映射表、关键词/文献/人物/时间线-章节映射表等），只作候选生成参考 | Task 2.5 |
 | `drift/` | 目录变动漂移报告 | Task 3 |
 | `title-standardization.tsv`／`title-review.tsv`／`path-overlong.tsv` | 标题标准化台账／杂质名待裁决／超长路径裁决 | Task 2 |

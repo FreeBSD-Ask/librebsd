@@ -1,0 +1,62 @@
+node_id	old_title	new_title	rules	rationale
+S-000017	微机 OS 谱系：CP/M、Apple DOS 与 XENIX 的并行线	微机 OS 支系：CP/M、Apple DOS 与 XENIX 的并行线	谱系	“谱系”硬禁改“支系”；XENIX 无证据，语义待核
+S-000277	Fortran、ALGOL 与科学计算传统的诞生	Fortran、ALGOL 与科学计算传统的诞生	保持	FORTRAN、ALGOL 与科学计算传统均有证据
+S-000278	Lisp、AI Lab 与 Lisp Machine	Lisp、AI Lab 与 Lisp Machine	保持	Lisp、AI Lab、Lisp Machine 三类证据齐全
+S-000279	Wirth 学派：Pascal、Modula-2 与结构化编程	Wirth 学派：Pascal、Modula-2 与结构化编程	保持	Wirth 学派与 Pascal、Modula-2 见证据 016.3.x
+S-000280	C++ 争论：从 Stroustrup 到内核拒绝	C++ 争论：从 Stroustrup 到内核拒绝	保持	Stroustrup 至内核拒绝的链条证据完整
+S-000281	Java 与脚本语言生态	Java 移植与 Perl、Python、Ruby 的 Ports 生态	术语堆叠	点名 Perl、Python、Ruby，Java 加“移植”锚点
+S-000282	语言保守主义与新语言准入	语言保守主义与 Rust、Go 的准入争论	术语堆叠	“新语言准入”空泛，按证据点名 Rust、Go
+S-000303	学生组织、校园媒体与环境史	ASUC、GA 与学生社团、校园媒体	术语堆叠	“环境史”无对应证据，改为点名 ASUC、GA 与媒体
+S-000690	C++ 与 Rust 的准入争论：接纳结果与生态面	C++ 与 Rust 的准入争论与内核政策	术语堆叠	删“接纳结果与生态面”空转，落内核政策
+S-000691	用户态语言生态：发行版打包与脚本语言	kernel-doc 与 Python 版本的选取之争	术语堆叠	四行证据均涉 kernel-doc 版本，收窄题名
+S-001424	time_t 与 Y2038：64 位时间迁移	time_t 与 Y2038：64 位时间迁移	保持	64 位 time_t 与 Y2038 证据一致
+S-001425	Modula-3 与 CVSup	Modula-3 与 CVSup	保持	唯一证据即 CVSup 史料与 Modula-3 编译
+S-001426	C++ 标准库的 BSD 化：libc++／libcxxrt	C++ 标准库的 BSD 化：libc++ 与 libcxxrt	补空格	全角斜杠改“与”，两侧补半角空格
+S-001427	Rust 进入 base 系统：Somers 方案与社区争论	Rust 进入 base 系统：Somers 方案与社区争论	保持	Somers 方案与社区争论均有证据
+S-001428	跨内核对照：Rust for Linux 观察	跨内核对照：Rust for Linux 观察	保持	证据为 Rust for Linux 观察，题名对应
+S-001714	pkgsrc 与多语言打包生态	pkgsrc 与多语言打包生态	保持	pkgsrc 的 Rust、Python 打包证据支撑
+S-001715	跨平台编译器移植史	跨平台编译器移植史	保持	clang、rustc、C++ 版本证据支撑
+S-001716	NetBSD 用户态的脚本语言演进	NetBSD 用户态的脚本语言演进	保持	Ruby、Java、Perl、Python 用户态证据齐全
+S-001990	ports 与用户态脚本语言	ports 与用户态脚本语言	保持	Ports 用 shell 与 Makefile、Perl 依赖有证据
+S-001991	语言政策的保守主义	语言政策的保守主义	保持	唯证据为静态 PIE，题名语义待核
+S-002580	Objective-C 与 NeXTSTEP 遗产	Objective-C 与 NeXTSTEP 遗产	保持	NeXTSTEP 见卷第 2.3；本节证据仅 Objective-C 2.0
+S-003168	加拿大 BSD 社区：大学传统与区域组织	加拿大 BSD 社区：大学传统与区域组织	保持	大学传统与用户组记录证据齐备
+S-003181	韩国 BSD 社区：用户组、企业与学术部署	韩国 BSD 社区：用户组、企业与学术部署	保持	用户组、三星、互联网基础设施证据齐备
+S-003182	俄罗斯 BSD 社区：从 DemOS 到 FreeBSD	俄罗斯 BSD 社区：从 DemOS 到 FreeBSD	保持	DemOS 至 FreeBSD 与俄语社区证据一致
+S-003627	US v Microsoft、浏览器战争与 CTEA	US v. Microsoft、浏览器战争与 CTEA	补空格	补“v.”与空格，与证据写法一致
+S-003865	UMN 假补丁事件	UMN 假补丁事件	保持	UMN 伪补丁与 MAINTAINERS 分流证据充分
+S-003866	UMN 争议余波与 AI 标注	UMN 争议余波与 AI 标注	保持	UMN 余波与 AI 标注证据一致
+S-003867	Rust 入核大辩论与稳定性争论	Rust 入核大辩论与稳定性争论	保持	Rust 入核早期讨论与稳定性证据一致
+S-003868	峰会治理、安全披露与工具链争议	峰会治理、安全披露与工具链争议	保持	峰会、安全披露、文档工具链三类均有证据
+S-003869	-mm 树发布宣告档案（上）	-mm 树发布宣告档案（上）	保持	上篇为 -mm 与 stable 发布宣告，证据一致
+S-003870	-mm 树发布宣告档案（下）	-mm 树发布宣告档案（下）	保持	下篇仍为 -mm 与 stable 宣告，证据一致
+S-003871	debugfs、模块参数与驱动接口之争	debugfs、模块参数与驱动接口之争	保持	debugfs、模块参数、驱动接口均有证据
+S-003872	stable 回归防范与 MAINTAINERS 治理	stable 回归防范与 MAINTAINERS 治理	保持	stable 回归防回退与 MAINTAINERS 证据一致
+S-003873	Rust 内核政策与社区争议	Rust 内核政策与社区争议	保持	Rust 内核政策为节内主线
+S-003874	回归追踪与 linux-next 运维	回归追踪与 linux-next 运维	保持	regzbot 与 linux-next 运维证据一致
+S-003875	AI 评审与文档 CI	AI 评审与文档 CI	保持	文档 CI 与 AI 代码评审证据一致
+S-003876	列表版面治理与琐碎补丁政策	列表版面治理与琐碎补丁政策	保持	列表版面治理与 trivial 补丁证据一致
+S-003877	IO-APIC 与 noapic 治理	IO-APIC 与 noapic 治理	保持	IO-APIC 警告与 noapic 白名单为主证据
+S-003878	警告白名单与平台兼容定调	警告白名单与平台兼容定调	保持	白名单语义与平台兼容定调有证据
+S-003879	DRM、加速器与设备直通	DRM、加速器与设备直通	保持	DRM 分支、加速器用户态、直通证据一致
+S-003880	GPL 执法与法律史料	GPL 执法与法律史料	保持	GPL 执法形态与版权归属证据一致
+S-003889	Rust 入核争论档案	Rust 入核争论档案	保持	Rust 引入争论与 AI 评审档案证据一致
+S-003890	AI 评审与政策史料	AI 评审与政策史料	保持	AI 使用政策与评审自动化证据一致
+S-003891	硬件加速器与 malloc 议题	硬件加速器与 malloc 议题	保持	UALink、加速器 uAPI、malloc 证据一致
+S-003881	内核 ABI 与 printk 史料	内核 ABI 与 printk 史料	保持	tracepoint ABI 与 printk 重设计证据一致
+S-003882	邮件考古与 bug 报告形态	邮件考古与 bug 报告形态	保持	邮件考古与 bug 报告闭环证据一致
+S-003883	报告文档张贴与审查入档	报告文档张贴与临时审查入档	术语堆叠	补“临时”限定，对齐证据“临时审查是否入档”
+S-003884	治理争论与维护者支持史料	治理争论与维护者支持史料	保持	治理争论与维护者支持证据充足
+S-003885	media 维护模式与治理心理学	media 维护模式与治理心理学	保持	media 维护自辩与治理心理学有证据
+S-003886	TAB 选举与署名标签	TAB 选举与署名标签	保持	TAB 选举与评审标签自动化证据一致
+S-003887	-mm／stable 发布宣告档案	-mm／stable 发布宣告档案	保持	-mm 与 stable 宣告档案证据一致
+S-003888	工具与基础设施史	工具与基础设施史	保持	bugzilla 退役、测试仓库等工具证据一致
+S-003892	内核接口与系统调用的 BSD 渊源	内核接口与系统调用的 BSD 渊源	保持	clone3、openat2、MADV_FREE 等 BSD 渊源
+S-003893	驱动与硬件移植承袭	驱动与硬件移植承袭	保持	sunhme、SPARC、aic7xxx 驱动证据一致
+S-003894	安全与能力模型承袭	安全与能力模型承袭	保持	Capsicum、KAME、strlcpy 证据一致
+S-003895	BSD Jail 与 LSM 分歧	BSD Jail 与 LSM 分歧	保持	Jail 与 LSM 接口设计分歧有直接证据
+S-003896	内存管理与地址空间随机化	内存管理与地址空间随机化	保持	ASLR 与 mmap、reversemapping 证据一致
+S-003897	文件系统、ZFS 与网络承袭	文件系统、ZFS 与网络承袭	保持	ZFS 交叉验证与文件系统反向输出证据一致
+S-003898	BSD 谱系综述与人物互见	BSD 技术源流与人物互见	谱系	“谱系”硬禁改“源流”，保留人物互见
+S-003899	治理与峰会互见	治理与峰会互见	保持	峰会征题与治理互见证据一致
+S-003900	署名规范与用户态项目	署名规范与用户态项目	保持	署名方案与用户态项目证据一致

@@ -1,0 +1,68 @@
+node_id	old_title	new_title	rules	rationale
+S-000008	学术组织 ACM IEEE Computer Society USENIX	ACM、IEEE Computer Society 与 USENIX 的学术组织活动	术语堆叠	并列专名堆叠，补顿号与结构助词，语义未变
+S-000156	sunos基于bsd的具体版本谱系	SunOS 1.0 至 4.1 的 BSD 版本脉络	机器串；谱系	去“谱系”改“版本脉络”，按证据 1.0—4.1 序列点名
+S-000263	安全机制起源pwbunix运维安全实践与商用分支安全分野19731980s	PWB/UNIX 运维安全实践与 System V 的审计与 TCB 评估	机器串；术语堆叠	拆出 PWB/UNIX 与 System V 两条线，删 19731980s 串
+S-000264	脚本语言生态perlpythonruby与ports的共生perl1987年	Perl 与 Python 在 Ports 生态中的共生	机器串	证据无 Ruby 与 1987 年记录，按可核实语言收窄
+S-000259	java与虚拟机革命freebsdjava移植史java1995年sun	Java 与虚拟机革命：FreeBSD 的 JDK 移植史	机器串	拆为 Java 发布与 FreeBSD JDK 移植两条线，删重复年份
+S-000260	shell家族bsd的命令语言thompsonshellbourneshell与	Bourne shell、C shell 与 tcsh、bash、ksh、zsh	机器串；截断	原题以“与”截断；Thompson shell 无证据，按 017.2.x 点名
+S-000261	unix碎片化各厂商版本彼此不兼容数据库厂商informix需为超过100种	UNIX 厂商版本不兼容与 Informix 的多版本适配	机器串；截断	原题止于数量短语；改为证据可见的两项，删未核实数目
+S-000262	unix谱系的考古学方法源码考古版权谱系与版本命名	Unix 源码考古：TUHS 档案与版权考据	机器串；谱系	去“谱系”；证据仅及 TUHS 与源码版权，删版本命名
+S-000429	vax硬件与bsd的协同演化decvms与bsd的资源竞争	VAX-11/780 与 BSD 的协同演化及 VMS 竞争	机器串	拆分 vax/bsd/decvms 三段，补回 VAX-11/780 型号
+S-000457	与同时期操作系统的比较1988年同期操作系统attunixsvr3sunos40	1988 年同期操作系统对照：SVR3、SunOS 4.0 与 A/UX	机器串；版本号合并	合并 40→4.0，删重复“同期操作系统”，点名三系对象
+S-000603	Newspeak之喻与v2流转	Newspeak 之喻与替换词措辞之争	术语堆叠	“v2 流转”无对应证据，按 84.x 措辞与替换词条目收窄
+S-000604	包容术语v3定稿与graylist	包容术语补丁 v3 定稿与 graylist 去留	仅补空格	按 85.6 定稿与 85.11—85.12 graylist 条目补全
+S-000605	包容术语论战爆发	包容术语论战的爆发与门禁适用性争议	术语堆叠	按 83.1 门禁质疑与 83.2 checkpatch 条目补出争议对象
+S-001164	Jordan Hubbard 的 port make macros 谱系	Jordan Hubbard 的 port make macros 源流	谱系	按禁用词将“谱系”替换为“源流”，语义不变
+S-001165	从零到 34 000 端口的增长曲线与社区贡献模式	Ports 的增长曲线与社区贡献模式	数词	“34 000”在证据中不可核，删数值保留增长曲线主题
+S-001183	FreeBSD 5 x 时期的技术淘汰 GEOM UFS2 rcNG ULE	FreeBSD 5.x 的技术淘汰：GEOM 与 rcNG	版本号合并；术语堆叠	5 x 并为 5.x；UFS2 与 ULE 无本节证据，删
+S-001184	多元群体贡献 FreeBSD 2002 2005 时期的贡献者多样性 企业	FreeBSD 5.x 时期的贡献者多样性与企业贡献	版本号合并；术语堆叠	年份区间归并为 5.x，并列短语补结构助词
+S-001185	时代语境 1996 2010 总统科技政策 伯克利校园 IC 英美哲学	1996—2010 年时代语境：科技政策、集成电路与英美哲学	术语堆叠	并列名词补连接与年份区间；IC 还原为集成电路
+S-001186	第三方软件变更 PF 防火墙引入与 MTA 格局	第三方软件变更：PF 防火墙引入与 sendmail 的 MTA 地位	术语堆叠	点名 MTA 为 sendmail（109.3.2），补冒号分层
+S-001301	CAM SCSI ATA NVMe 子系统 从 Justin Gibbs 的	Justin Gibbs 的 CAM 与 SCSI、ATA、NVMe 子系统	截断；术语堆叠	原题以“的”截断；按 132.3.x 补全为 CAM 与三类子系统
+S-001302	FreeBSD 13 x 时期的技术淘汰与架构支持变动	FreeBSD 13.x 的技术淘汰与架构支持变动	版本号合并	仅合并 13 x→13.x，其余语义未动
+S-001303	其他存储栈组件 devfs mdconfig tmpfs sendfile VF	devfs、mdconfig、tmpfs、sendfile 与 VFS 层组件	截断；术语堆叠	原题止于“VF”残词；按 132.4.x 列具名组件
+S-001304	多元群体贡献 FreeBSD 2008 2018 时期的贡献者多样性 企业	FreeBSD 2008—2018 年的贡献者多样性与企业贡献	术语堆叠	年份区间并回，并列短语补助词
+S-001323	重要贡献者与边缘者 8 x 时期 XEN VNET 移植的无名工程师 8 x	XEN/VNET 移植的核心工程师与被忽视的贡献者	机器串；版本号合并	删重复“8 x”，按 115.9.x 点名移植工程师与边缘者
+S-001322	freebsd8x的开发者群体与虚拟化团队	FreeBSD 8.x 的开发者群体与虚拟化团队	机器串；版本号合并	freebsd8x 分词并并为 8.x
+S-001333	2003 2006 年 5.0 耗时 3 年开发的工程挑战	FreeBSD 5.0 三年开发周期的工程挑战	术语堆叠	年份区间与“耗时 3 年”并为“三年开发周期”，补主语
+S-001334	CAM SCSI 子系统	CAM 对 SCSI 的替代与工程效应	术语堆叠	按 100.2.2 与 100.2.3 补出替代与工程效应
+S-001335	freebsd3x的开发者群体与smp团队组织	FreeBSD 3.x 的开发者群体与 SMPng 团队组织	机器串；版本号合并	freebsd3x 分词，smp 按 100.6.1 记为 SMPng
+S-001336	freebsd5x时期的技术淘汰与废弃特性	FreeBSD 5.x 时期的技术淘汰与废弃特性	机器串；版本号合并	仅分词与版本号合并，其余语义未动
+S-001337	freebsd5x的开发者群体与工程组织	FreeBSD 5.x 的开发者群体与工程组织	机器串；版本号合并	仅分词与版本号合并，其余语义未动
+S-001332	1998 2000 年 3.0 引入初步 SMP 的工程挑战	FreeBSD 3.0 初步 SMP 引入的工程局限	术语堆叠	删年份区间并补主语；按 100.1.3 用“局限”
+S-001348	9 x 系列总览与工程语境 2010 2014	FreeBSD 9.x 系列总览与工程语境（2010—2014）	版本号合并	9 x 并为 9.x，年份区间加括号归位
+S-001359	1994 1998 年 2.0	FreeBSD 2.0 的发布与 2.x 演进（1994—1998）	截断；版本号合并	原题仅存年份与版本，按 097.1.x 补发布与演进
+S-001360	2000 2003 年 4.0 Jails	FreeBSD 4.0 的发布与 Jails 引入（2000—2003）	截断	原题仅存年份与版本，按 101.1.x 补发布与 Jails 引入
+S-001361	freebsd2x的开发者群体与core team代际更替	FreeBSD 2.x 的开发者群体与 core team 代际更替	机器串；版本号合并	分词、版本号合并并补专名空格
+S-001362	对 FreeBSD 2 x 的批评 技术债务与 SMP 滞后 对	对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后	版本号合并；机器串	删尾部重复“对”，合并 2 x，补冒号
+S-001363	重要贡献者与边缘者 2 x 时期被遗忘的驱动维护者 2 x	FreeBSD 2.x 被遗忘的驱动维护者	版本号合并；机器串	删重复“2 x”与泛化前缀，按 097.7.1 点名
+S-001399	freebsd6x与同期linux功能与性能对比	FreeBSD 6.x 与同期 Linux 的功能与性能对比	机器串；版本号合并	分词、版本号合并，专名改正确大小写
+S-001400	FreeBSD 6 x 时期的技术淘汰 Giant 锁 MPSAFE VFS	FreeBSD 6.x 的技术淘汰：Giant 锁与 MPSAFE VFS	版本号合并；术语堆叠	合并 6 x，并列名词补冒号与连接词
+S-001401	重要贡献者与边缘者 6 x 时期的无名贡献者	FreeBSD 6.x 时期的无名贡献者	版本号合并；机器串	删重复“6 x”与泛化前缀，保留可核实主题
+S-001411	2023 11 FreeBSD 14 0 发布 stable 14	FreeBSD 14.0 发布与 stable/14 分支（2023 年 11 月）	版本号合并；术语堆叠	14 0→14.0、stable 14→stable/14，日期归位括号
+S-001577	netbsd20smp架构实现20032004	NetBSD 2.0 的 SMP 架构实现（2003—2004）	机器串；版本号合并	netbsd20smp 分词为三词，年份区间加括号
+S-001587	netbsd40的发布与smp改进20071219netbsd40引入细粒度	NetBSD 4.0 的发布与细粒度 SMP 锁	机器串	删 20071219 与重复 netbsd40，按 195.1.1 补“锁”
+S-001586	netbsd1x时代争议的四层辩证链可移植性性能与桌面体验之争19942004	NetBSD 1.x 可移植性、性能与桌面体验之争	机器串；数词	删“四层”数词概括与年份串，保留三项争议对象
+S-001603	netbsd70与arm生态的深度支持2015970改进arm多核支持引入rpi	NetBSD 7.0 的 ARM 多核改进与树莓派移植	机器串	删 2015970 串，RPI 按 205.1.2 还原为树莓派
+S-001610	netbsd80与64位arm2018780引入aarch64arm64	NetBSD 8.0 的 aarch64（arm64）支持引入	机器串；版本号合并	分词并并回 8.0，保留 aarch64 与 arm64 两名
+S-001618	netbsd90的发布与zfs集成2020214us2020215utc90	NetBSD 9.0 的发布与 ZFS 集成	机器串	删时间戳串与重复 90，保留发布与 ZFS 两条线
+S-001628	pkgsrc3040与现代软件包管理20102026pkgsrc持续演进引入	pkgsrc 的持续演进与现代软件包管理	机器串	“3040”与年份串不可核，删去只留主题词
+S-001627	netbsd100与现代硬件支持2024328100引入对	NetBSD 10.0 的现代硬件支持	机器串	删 2024328100 串与残词“引入对”，保留 10.0
+S-001635	多平台移植的工程架构19951998netbsd12199610支持12	NetBSD 1.2 至 1.3 的平台扩展与移植架构（1995—1998）	机器串	按 189.2.2 补 1.3，删重复年份串
+S-001713	netbsd的极简主义哲学与代码美学	NetBSD 的极简取向与代码风格	机器串	补大小写与空格；证据多为风格与命名之争，措辞收窄
+S-001804	多元群体贡献 FreeBSD 2010 2026 时期的贡献者多样性 企业	2010—2026 年的贡献者多样性与企业贡献	术语堆叠	年份区间并回；宿主为 OpenBSD 章而原题作 FreeBSD，语义待核
+S-001815	防火墙与网络过滤 ipfw pf ipfilter 三大防火墙框架的历史演进 从	ipfw 与 pf 防火墙框架的历史演进	数词；截断	删“三大”与尾部残词；ipfilter 无本节证据
+S-001825	openbsd4044的安全与工程改进2006200840引入malloc替代	OpenBSD 4.x 的安全与工程改进：pf 语法与 malloc	机器串；术语堆叠	按 210.1.2 与 210.1.3 点名两项；“4044”歧义未采用
+S-001826	openbsd4x时期的技术淘汰多项旧技术新技术交替演进20052010	OpenBSD 4.x 的技术替代：X.org、pcc 与 ypldap	机器串；数词	删“多项”概括与年份串，按 211.1.x 点名三项替代
+S-001827	openbsd与加密学的深度结合20052012openbsd	OpenBSD 与密码学的深度结合（2005—2012）	机器串	删重复 openbsd 与年份串，年份区间归位括号
+S-001828	pf防火墙的持续演进20052012pf从40到52持续改进引入	pf 防火墙从 4.0 到 5.2 的持续演进	版本号合并；机器串	合并 40→4.0、52→5.2，删年份串与重复 pf
+S-001867	与同时期操作系统的比较 Linux 的安全生态 SELinux KSPP LKM	与同时期操作系统的比较：Linux 安全生态与 SELinux、KSPP	术语堆叠；截断	LKM 无本节证据故删；并列组补冒号与顿号
+S-001868	重要贡献者与边缘者 安全社区的无名守护者 FreeBSD 安全团队成员	安全社区的无名守护者：FreeBSD 安全团队成员与漏洞报告者	术语堆叠	删泛化前缀，按 175.4.3 补漏洞报告者
+S-001866	FreeBSD 安全团队与安全公告 FreeBSD Security Offic	FreeBSD Security Officer 制度与安全公告流程	截断	补全被截断的 Security Officer，点明制度与流程
+S-001997	openbsd5x时期的技术淘汰多项旧技术新技术交替演进20112016	OpenBSD 5.x 的技术替代：ASLR、LibreSSL 与 clang	机器串；数词	删“多项”与年份串，按 216.6.x 点名三项替代
+S-001998	重要贡献者与边缘者openbsd5x时期的核心团队theoderaadt创始人	OpenBSD 5.x 的核心团队与 Theo de Raadt 的主导	机器串；版本号合并	分词并拼回人名与 5.x，删“创始人”泛称
+S-002506	GhostBSD 与 FreeBSD 桌面化 2009 2026	FreeBSD 桌面化与桌面栈维护实践（2009—2026）	术语堆叠	GhostBSD 无本节证据故删专名；年份区间归位括号
+S-002885	POSIX 标准遵守史 POSIX Portable Operating Sys	POSIX 标准遵守与合规工程史	截断；机器串	删被截断的英文全称残段，按 334.2.2 补合规工程
+S-003435	视频与音频资源 会议录像 播客与教程生态	会议录像、播客与教程：视频与音频资源	术语堆叠	并列名词重排为主次结构并补冒号
+S-003599	当代 UNIX 与 BSD 的比较 技术 许可证 哲学	当代 UNIX 与 BSD 的比较：内核源流与技术路线	谱系	去“谱系”改“源流”；许可证无本节证据故删
+S-003626	BSD vs GPL 的哲学差异 BSDL 不强制 copyleft GPL	BSD 与 GPL 的哲学差异：不强制 copyleft	术语堆叠	BSDL 统一作 BSD；删重复 GPL，保留不强制 copyleft

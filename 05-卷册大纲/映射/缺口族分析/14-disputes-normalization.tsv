@@ -1,0 +1,48 @@
+source_id	current_master_status	current_resolution	proposed_resolution	action	note
+S-016311	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=hard-stuff-suspect；subtype=generic；2026-10-25 对账保留
+S-016397	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016399	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016400	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016401	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016402	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016403	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016409	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016413	PENDING	∅	retained:pending→V37-5.4（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V37-5.4；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016417	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016418	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016419	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016420	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016421	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016422	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016423	PENDING	∅	retained:pending→V45-1.5（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V45-1.5；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016424	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016425	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016426	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016433	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016435	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016439	PENDING	∅	retained:pending→V37-7.6（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V37-7.6；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016442	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016443	PENDING	∅	retained:pending→V37-1.2（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V37-1.2；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016444	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016445	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016446	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016450	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016462	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016463	PENDING	∅	retained:pending→V37-5.4（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V37-5.4；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016464	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016465	PENDING	∅	retained:pending→V45-1.5（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V45-1.5；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016466	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016467	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016468	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-016552	UNMAPPED	∅	historical:unmapped（主表 UNMAPPED 无落点，2026-10-25 标历史行）	标历史行	台账存、主表 UNMAPPED；review_state=∅；target_id=∅；diff=三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）；subtype=adjacent；2026-10-25 对账保留
+S-027108	PENDING	∅	retained:pending→V37-5.7（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V37-5.7；diff=三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）；subtype=adjacent；2026-10-25 对账保留
+S-027126	PENDING	∅	retained:pending→V71-2.1（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V71-2.1；diff=三趟不一致（补录：主表有、台账无；2026-10-25 全量对账）；subtype=adjacent；2026-10-25 对账保留
+S-027653	PENDING	∅	retained:pending→V20-1.5（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V20-1.5；diff=hard-stuff-suspect；subtype=generic；2026-10-25 对账保留
+S-027911	PENDING	∅	retained:pending→V59-2.9（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V59-2.9；diff=三趟不一致；subtype=adjacent；2026-10-25 对账保留
+S-027912	PENDING	∅	retained:pending→V72-4.1（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V72-4.1；diff=三趟不一致；subtype=generic；2026-10-25 对账保留
+S-027938	PENDING	∅	retained:pending→V59-7.8（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V59-7.8；diff=三趟不一致；subtype=empty-vs-value；2026-10-25 对账保留
+S-027978	PENDING	∅	retained:pending→V59-5.1（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V59-5.1；diff=三趟不一致；subtype=empty-vs-value；2026-10-25 对账保留
+S-027984	PENDING	∅	retained:pending→V59-2.5（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V59-2.5；diff=三趟不一致；subtype=empty-vs-value；2026-10-25 对账保留
+S-028004	PENDING	∅	retained:pending→V72-4.6（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V72-4.6；diff=hard-stuff-suspect；subtype=generic；2026-10-25 对账保留
+S-028007	PENDING	∅	retained:pending→V63-1.3（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V63-1.3；diff=hard-stuff-suspect；subtype=generic；2026-10-25 对账保留
+S-028087	PENDING	∅	retained:pending→V72-4.3（主表 PENDING，2026-10-25 保留待落盘）	保留并补 resolution	台账存、主表 PENDING；review_state=JUDGED；target_id=V72-4.3；diff=hard-stuff-suspect；subtype=generic；2026-10-25 对账保留

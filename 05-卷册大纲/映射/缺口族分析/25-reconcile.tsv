@@ -1,0 +1,20 @@
+check_id	object	metric	expected	actual	delta	attribution
+1	挂账01	unmapped_total 合计	20922	20922	0	
+2	挂账01	no_target 合计	20922	20922	0	
+3	挂账02	数据行数	20922	20922	0	
+4	挂账02	source_id 与主表 UNMAPPED 差异	0	0	0	
+5	挂账03	disputed_total 合计	6435	6436	1	+1＝旧卷14 章305 反向行计入挂账而主表现态非 DISPUTED（即 47 反向行之一）
+6	挂账03	rule_passed_judged 合计（DISPUTED&JUDGED 口径）	4733	4733	0	
+7	挂账03	unresolved 合计（DISPUTED&非JUDGED 口径）	1702	1703	1	挂账 1,703 与主表 1,702 差 1 同为反向行重叠
+8	挂账04	unmapped 合计	20922	20922	0	
+9	挂账04	disputed 合计	6435	6436	1	同 R5 反向行归因
+10	挂账04	unresolved 合计	1703	0	-1703	挂账04 unresolved 列生成时全 0 未回填，以挂账03／主表切面为准
+16	mapping	PENDING	10127	10127	0	
+17	mapping	DISPUTED	6435	6435	0	
+18	mapping	UNMAPPED	20922	20922	0	
+19	mapping	章级 target_id（V<n>-<n>）	16	16	0	
+11	disputes.tsv	数据行数（工作树）	6023	6023	0	含他线未提交增量 +1032 行（三趟不一致登记，批基线已含，非本批写入）
+12	disputes.tsv	7 列行数	4893	4893	0	p03 生成时口径；他线增量行亦 7 列则同步抬升
+13	disputes.tsv	6 列行数	1130	1130	0	同上
+14	459 缺席行	DISPUTED 无 disputes 行	459	459	0	含 459 补录方案行集一致性=True
+15	47 反向行	disputes 有而主表非 DISPUTED	47	47	0	状态分布 {'UNMAPPED': 30, 'PENDING': 17}
