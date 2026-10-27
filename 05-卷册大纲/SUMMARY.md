@@ -4541,6 +4541,48 @@
             - 16.5.20-年11月29日发件人OHartmann报90CURRENT导入ZFS池BACKU.md
             - 16.5.21-年10月7日RobinVleij换存储后开机卡在日志轮转步骤truss查到Ast.md
         - 16.6-安装与发布介质
+            - 16.6.1-2011年11月20日发件人自述用tartvf列FreeBSD90RC1i386.md
+            - 16.6.2-2011年11月29日自述折腾BIOS设置后终于装上FreeBSDAcer有个叫.md
+            - 16.6.3-2011年10月14日Polytropon表示burncd早在v5的某个版本起就.md
+            - 16.6.4-2011年9月15日DougHardie报一台很旧的i386机无可用光驱SCSI.md
+            - 16.6.5-2011年9月17日Fbsd8主张在bsdinstall键盘本地化步骤加提示对话.md
+            - 16.6.6-2012年4月3日鲍威尔称当年可启动光盘依赖软盘仿真硬件与BIOS过于老旧者现代.md
+            - 16.6.7-年12月8日OliverFromme请求将FreeBSDsparc64快照同步到.md
+            - 16.6.8-年7月16日KenSmith汇总镜像站需求讨论主张新标准同时约束新旧站点把官方镜.md
+            - 16.6.9-年6月12日镜像管理员DanielLang报告ftpleoorg的51R映像下载.md
+            - 16.6.10-年4月20日CHOIJunho通知韩国一级镜像ftpkrfreebsdorg当日.md
+            - 16.6.11-年11月3日ScottLong告知60的ISO与ftp树除i386外已就位于ft.md
+            - 16.6.12-年5月3日DimitarVasilev回复PlamenStoev称将于5月5日至.md
+            - 16.6.13-年1月23日JunhoChoi以ftpkrfreebsdorg管理者身份请求为其.md
+            - 16.6.14-年2月17日SatoshiAsami说明其已在wcarchive的pubFree.md
+            - 16.6.15-年4月26日LyndonNerenberg对MarkMayo愿架设加拿大FTP镜.md
+            - 16.6.16-年10月10日新西兰CLEARCommunications的JamieClark.md
+            - 16.6.17-年11月17日BruceAMah通报已将50DP2的i386位元上传至ftpma.md
+            - 16.6.18-年1月21日PeterWemm赞同删除pubFreeBSDbranches与de.md
+            - 16.6.19-年7月12日EricToll自述在HPNetserverE60上装FreeBSD.md
+            - 16.6.20-年8月6日ChristopherTJewett提醒准备安装FreeBSD的对方其.md
+            - 16.6.21-年4月18日BruceAMah回应快照服务器是否下线的询问称releng4fre.md
+            - 16.6.22-年5月7日维护者WilkoBulte回复上述Alpha安装panic称自己在多台.md
+            - 16.6.23-年2月6日GrahamBentley建议改用3张软盘经FTP装60RELEASE.md
+            - 16.6.24-年3月23日AndrewPantyukhin用CD安装61BETA4时选不中mi.md
+            - 16.6.25-年5月1日NorbertoMeijome称按JohnNielsen步骤在61RC.md
+            - 16.6.26-年5月16日EricMesa报双P2200MHz128MB老机装FreeBSD6.md
+            - 16.6.27-年11月30日vandenHoff首装62到第二块盘时漏选引导管理器sysins.md
+            - 16.6.28-年4月16日JohnNielsen指出这是BTX的已知问题尤其针对USB设备与较.md
+            - 16.6.29-年12月19日BryceSimonds尝试构建最小FreeBSDmemdisk镜.md
+            - 16.6.30-年2月3日DrewSanford自建服务器装70RC1两次灾难性故障memtes.md
+            - 16.6.31-年2月7日RekJed搭FreeBSDjumpstartPXEboot加载器加了.md
+            - 16.6.32-年6月9日建议直接在Windows下启动NeroExpress后选择DiscIm.md
+            - 16.6.33-年6月23日作者建议安装时不要主动指定磁盘几何参数让安装程序自行判断并说自己长期.md
+            - 16.6.34-年3月21日安装FreeBSD55时旧54硬盘挂在第二个IDE通道并被写入boo.md
+            - 16.6.35-年10月15日说明Sunfirev100做基础服务器安装只需第一张CDBind属.md
+            - 16.6.36-年10月27日FranckRoyer在macbook装PCBSD用refit同步.md
+            - 16.6.37-年4月1日Matej完成amd64安装后回复确认整机所有内存都已被识别询问装完后.md
+            - 16.6.38-年4月1日诺万布雷对DVD报错成因存疑同一光驱2月19日由70RELEASE升到.md
+            - 16.6.39-年7月3日AntonShterenlikht在ia64全新安装FreeBSDcu.md
+            - 16.6.40-年1月13日MartinMcCormick做80RELEASE无头安装盘解包is.md
+            - 16.6.41-年1月21日McCormick在mfsbsd10beta3套件启用串口tty登录.md
+            - 16.6.42-年12月20日发件人Morras列出全新装机流程先装基本系统不带套件与端口配网后.md
     - 第17章-FreeBSD 4.0 邮件档案：应用与管理
         - 17.1-Ports 树与包管理
         - 17.2-桌面应用与 X11
