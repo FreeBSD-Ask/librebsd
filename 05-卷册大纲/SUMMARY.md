@@ -4147,6 +4147,50 @@
             - 15.2.63-年12月9日MLDodson在Jordan解释新包系统尚属WIP后接话建议兼纳g.md
             - 15.2.64-年6月21日Doug追问包装何时成为默认并问是在32Release之前还是之后认.md
         - 15.3-社区协作、倡导与文档
+            - 15.3.1-年11月11日TerryLambert于1998年11月11日称劝说PGI支持F.md
+            - 15.3.2-1999年7月23日Robert预告与TedPham合著的CMU15712论文论.md
+            - 15.3.3-1999年8月1日Nik转述对方称已验证系统可产生ENOBUFS且该文本维持原样.md
+            - 15.3.4-1999年8月7日adrian建议可通过阅读wwwdaemonnewsorg上1.md
+            - 15.3.5-1999年8月18日phk引Scheiflers书中文档化的X11开发规则回复T.md
+            - 15.3.6-1999年8月26日imp回信holm的ftsc测试请求建议他与手头也有ftsc.md
+            - 15.3.7-1999年10月14日Matthew称Solarissection9手册页相当完.md
+            - 15.3.8-1999年11月18日Warner建议联系MattDillon说自己撞到的那一例.md
+            - 15.3.9-1999年12月5日green反驳说从无任何人声称30发布时已达标反而明说过相反.md
+            - 15.3.10-1999年9月13日asmodai建议入门读Tanenbaum的ModernOp.md
+            - 15.3.11-IngoSchwarzebsdcan14mandocM2014.md
+            - 15.3.12-年2月18日RichardWackerbarth建议官方另立21与22目标让用户.md
+            - 15.3.13-年6月5日JordanHubbard说明30STABLE分支会是30发布的自然结.md
+            - 15.3.14-年8月18日BrianSomers补充date1手册只引environ7说明TZ.md
+            - 15.3.15-年12月10日jkh请招聘FreeBSDCC++程序员一类的贴子改发到freeb.md
+            - 15.3.16-年4月25日RodneyWGrimes回复FAQ邮件列表别名询问现场贴出其在fr.md
+            - 15.3.17-年8月21日BruceEvans称不应先与Peter协商后再提交libresol.md
+            - 15.3.18-年3月20日就此前关于流量过载讨论中对Terry的人身攻击致歉承认减少流量的主张.md
+            - 15.3.19-年4月7日作者说明OpenBSD已把每日任务改到别的时间点执行曾有人讨论过一个真.md
+            - 15.3.20-年4月18日John说并不想要一个类似NT那样的操作系统那家厂商早已做成且表现出.md
+            - 15.3.21-年4月27日作者建议把调查范围扩到所有院系而不限计算机系并举例说明ftpaufr.md
+            - 15.3.22-年5月15日John指出sgmltools是FreeBSD早期linuxdoc转.md
+            - 15.3.23-年6月4日MichaelHancock补充说已在BSDI任职的JeffreyHo.md
+            - 15.3.24-年6月20日JordanKHubbard称这封KDE编译求助本应发到questi.md
+            - 15.3.25-年8月12日格认为date手册页对时区变量的说明确实不足虽然文中指向enviro.md
+            - 15.3.26-年8月17日迈克史密斯接话反问如果PLIP真有那么简单文档到底放在哪有没有一份类.md
+            - 15.3.27-年9月13日MikeSmith反驳称文档把getservbyport的port参.md
+            - 15.3.28-年10月8日认为任何访问限制措施如同限速法规起初有效但随时间推移效力递减自认作为.md
+            - 15.3.29-年10月31日JohnMark提醒其他列表上的人想跑current就得订阅fre.md
+            - 15.3.30-年11月4日shapiro说自己正在掉泪而对方只是在发笑对方主张厂商若不想让设备.md
+            - 15.3.31-年11月5日gopu询问有没有讲透FreeBSD222文件系统或44BSD文件系.md
+            - 15.3.32-年11月26日mike把帖子转投hackers认为不宜留在security并称匿.md
+            - 15.3.33-年12月4日maddog指出去年USELINUX从Linux视角看算成功但对BS.md
+            - 15.3.34-年12月15日Csanady提到NetBSD在总线这块有几篇不错的手册页bus_.md
+            - 15.3.35-年12月24日Sean指出这门课相当有用且信息量大比他近来在公司受过的SysVr.md
+            - 15.3.36-年4月2日paul问是否要建CVS树由谁牵头并表示自己会把它搭完同时提到Aman.md
+            - 15.3.37-年4月5日sharding说把这封来信转给freebsdhackers@free.md
+            - 15.3.38-年4月10日benedict自荐ChiefEvangelizer自述十九岁仍乐于.md
+            - 15.3.39-年6月25日mike提示若该问题属current相关应改投current邮件列表.md
+            - 15.3.40-年7月23日AndreasKlemm为Ct杂志撰写备份选型文取得Elizabet.md
+            - 15.3.41-年8月20日NateWilliams通读manpage后认为OpenBSD的re.md
+            - 15.3.42-年12月15日OllivierRobert在巴黎IPFuture会上见到Fran.md
+            - 15.3.43-年6月23日TaaviTalvik表示首次撰写manpage近乎黑魔法请求熟悉t.md
+            - 15.3.44-年4月11日jkh建议想找合理的营销模板就去看redhatcom说它的主页正是他.md
         - 15.4-用户硬件环境与使用报告
         - 15.5-杂项
     - 第16章-FreeBSD 4.0 邮件档案：系统与网络
