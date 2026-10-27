@@ -4462,6 +4462,44 @@
             - 16.2.77-年12月28日发件人OmerFarukSEN用QLogicISP2532双口HB.md
             - 16.2.78-年2月3日SergiodeAlmeidaLenzi的Dellr210用PERC6.md
         - 16.3-网络与防火墙
+            - 16.3.1-2011年5月7日判断SRV之所以到不了19216828段是因它只顾等网关回应而.md
+            - 16.3.2-年9月16日20050916Felix用FreeBSD做NAS提供PPPoE与P.md
+            - 16.3.3-2011年10月5日自述FreeBSD82x86机器上samba共享硬件raid.md
+            - 16.3.4-2011年10月18日claudiuvasadi在关于ISCdhcp服务器的讨论.md
+            - 16.3.5-2011年10月22日自述认为第三方接入反正需事先配好认证端口号本可一并告知若对.md
+            - 16.3.6-2011年9月20日Chad认为portknocking可用于偏转随手式非精心的.md
+            - 16.3.7-2012年4月1日MatthewSeaman援引RFC5735指出临时抓地址应用.md
+            - 16.3.8-年8月19日ScottSaunders自述首台FreeBSD48机器用ipfil.md
+            - 16.3.9-年7月22日某ISP管理员自述其编写脚本把tacacs用户数据迁到freerad.md
+            - 16.3.10-年4月5日WilliamEReid自述已为名下全部服务器更新bind并称接手清理.md
+            - 16.3.11-年7月15日某运营者指出ORBS已于6月1日关闭至少有一台原ORBS服务器对所有.md
+            - 16.3.12-年8月8日FrankLaszlo自述其ISP式部署只有两个可用IP用ipfw加n.md
+            - 16.3.13-年9月17日某运营者报告即将同时更换ISP并搬迁机房IP段随之变更预计服务器中断.md
+            - 16.3.14-年12月10日DaleWalker自述其私有网机器经FreeBSD机器走Tels.md
+            - 16.3.15-年1月2日pzw自述其Bind823问题已解决办法是把Cisco677678路由.md
+            - 16.3.16-年4月15日某开发者指出ipfw的fwd转发代码对UDP并未完整实现用它把域名查.md
+            - 16.3.17-年11月12日某运营者报告两地间有一条ADSL2MB与一条2MB帧中继两端各一台.md
+            - 16.3.18-年12月20日某用户用无线网卡做PPPoE客户端初始只有6kbytess加上di.md
+            - 16.3.19-年7月30日MichaelLapinski自述曾几次遇到该错误均因调整netin.md
+            - 16.3.20-年3月31日VictorBondarenko指出若用bind9替换基本系统的bi.md
+            - 16.3.21-年5月21日AleksandrShapayev自述同一套pppd配置与同一家IS.md
+            - 16.3.22-年11月23日Mark自述dynablock区在BIND中需占用117MB内存改.md
+            - 16.3.23-年8月1日AlbertvanDam回报mrouted组播转发问题已在7月23日解.md
+            - 16.3.24-年2月20日BillMoran指出FreeBSD53自带bind9该版本支持DN.md
+            - 16.3.25-年6月24日DominiqueSAFreeBSD54跑oidentd207配PF.md
+            - 16.3.26-年1月9日AshleyMoran谈FreeBSD60下SSH认证极慢只要etcr.md
+            - 16.3.27-年1月19日MikeLoiterman在MacMini的etcsmbconf加b.md
+            - 16.3.28-年5月21日DuaneWhitty答BrettWiggins问IPFILTER下.md
+            - 16.3.29-年4月3日Firas贴出etchosts的三行映射127001同时挂localh.md
+            - 16.3.30-年8月7日Murray以RELENG_7_0配NATT与ipsectools07.md
+            - 16.3.31-年1月25日TgeB在FreeBSD60RELEASE主机上80与25端口连接结.md
+            - 16.3.32-年1月30日Peter答复在rcconf中可单行配置ifconfig_ath0同.md
+            - 16.3.33-年7月31日就如何用FreeBSD让对端用更小发送段的问题讨论提到可对单条TCP.md
+            - 16.3.34-年5月9日询问能否从FreeBSD推文件到Windows共享说明smbclien.md
+            - 16.3.35-年10月29日SveinHalvorsen确认在Archlinux上用dhcpc.md
+            - 16.3.36-年4月14日海斯科克把etcloginconf里的umask改成007后samb.md
+            - 16.3.37-年1月5日perryh用vpnc连CiscoVPN能连上却不通发现只是vpncc.md
+            - 16.3.38-年8月11日CameronSimpson为两台要跑CARP与pfsync的防火墙.md
         - 16.4-Jail 与虚拟化
         - 16.5-存储与文件系统
         - 16.6-安装与发布介质
