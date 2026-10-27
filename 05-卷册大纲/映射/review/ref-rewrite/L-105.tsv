@@ -1,0 +1,36 @@
+source_id	kind	old	new	context	disposition
+S-026189	h1	259.6.1	3.2.1	# 259.6.1 XNU 是什么？——macOS BSD 层的本体论追问	rewritten
+S-026202	h1	260.1.1	2.1.1	# 260.1.1 NeXT 创立语境与 BSD 选型	rewritten
+S-026203	h1	260.2.1	2.2.2	# 260.2.1 NeXTSTEP 发布线与 BSD 版本对应	rewritten
+S-026205	h1	260.4.1	2.4.1	# 260.4.1 OpenStep 规范与 BSD 层抽象	rewritten
+S-026209	h1	260.5.1	2.2.1	# 260.5.1 NeXTSTEP 的 Mach/BSD 混合内核在 1990 年代的定位	rewritten
+S-026220	h1	260.7.4	3.2.2	# 260.7.4 本子节为第119章macOS的BSD哲学文化影响的配套采访录覆盖macOSBSD	rewritten
+S-026221	h1	260.7.5	3.2.3	# 260.7.5 总纲10动手者创造历史Tevanian作为Mach核心开发者到Apple软件主管	rewritten
+S-026234	h1	261.1.1	2.4.2	# 261.1.1 OpenStep 规范的底层 BSD 抽象	rewritten
+S-026235	h1	261.1.2	2.4.3	# 261.1.2 OpenStep 跨平台实现的技术路径与 BSD 层适配	rewritten
+S-026259	h1	262.2.2	2.5.1	# 262.2.2 Rhapsody 的 Yellow Box 与 Blue Box 双层架构	rewritten
+S-026260	h1	262.3.1	2.6.2	# 262.3.1 Server 1.0 的 BSD 子系统与 Rhapsody 5.3 内核	rewritten
+S-026261	h1	262.3.2	2.5.2	# 262.3.2 Rhapsody 早期工程团队与 BSD/Mach 工程师谱系	rewritten
+S-026262	h1	262.4.1	2.6.1	# 262.4.1 Mac OS X Server 1.0 对比 FreeBSD 3.1、Linux 2.2、Windows NT 4.0 Server、Sol	rewritten
+S-026312	h1	264.3.3	3.1.1	# 264.3.3 总纲10动手者创造历史Sanchez作为Darwin开源初期的核心工程师其博客记	rewritten
+S-026328	h1	265.3.2	4.2.1	# 265.3.2 要点Panther期2003年Darwin持续吸收FreeBSD同步补丁free	rewritten
+S-026332	h1	265.5.1	3.3.1	# 265.5.1 kdebug 作为 ktrace 的 Darwin 扩展	rewritten
+S-026380	h1	267.3.3	9.1.1	# 267.3.3 Objective-C 2.0 与垃圾回收的引入	rewritten
+S-026382	h1	267.3.5	4.3.1	# 267.3.5 BSM 审计框架的引入（OpenBSM 移植，跨 BSD/UNIX/macOS 扩展）	rewritten
+S-026415	h1	269.0.8	7.4.1	# 269.0.8 246.2.2 反批评层——BSD 许可证允许此模式与 Apple 的实质性回馈	rewritten
+S-026431	h1	269.2.2	7.4.2	# 269.2.2 反批评层——BSD 许可证允许此模式与 Apple 的实质性回馈	rewritten
+S-026456	h1	270.4.3	7.4.3	# 270.4.3 再批评层：BSD 阵营对 Apple 回应的再反驳	rewritten
+S-026461	h1	270.6.3	7.4.4	# 270.6.3 再回应层：BSD 阵营对 Apple 反批评的再回应	rewritten
+S-026481	h1	271.4.3	7.4.5	# 271.4.3 再批评层：BSD 阵营对 Apple 回应的再反驳	rewritten
+S-026501	h1	272.1.3	4.8.2	# 272.1.3 当代中文舆论标本——《FreeBSD 大败局》2026 版的 Apple Silicon 时间线考据	rewritten
+S-026503	h1	272.2.2	4.8.3	# 272.2.2 Apple Silicon 完成过渡与 Intel 退出	rewritten
+S-026504	h1	272.3.1	6.1.1	# 272.3.1 macOS 15/26 与 UNIX 03 认证维持	rewritten
+S-026505	h1	272.3.2	4.8.4	# 272.3.2 外部贡献者与 Apple Silicon 期的开源边界	rewritten
+S-026524	h1	273.1.1	3.2.4	# 273.1.1 iPhone OS 1.0 的 XNU 与 BSD 裁剪	rewritten
+S-026527	h1	273.2.2	8.4.1	# 273.2.2 watchOS 与 tvOS 的 Darwin 裁剪（2015）	rewritten
+S-026547	h1	274.1.1	4.8.1	# 274.1.1 要点Darwin的libcTCPIP栈文件系统工具在20002003年间直接同步	rewritten
+S-026550	h1	274.3.1	7.11.1	# 274.3.1 “macOS 基于 FreeBSD” 叙事的修正	rewritten
+S-026553	h1	274.4.1	7.11.2	# 274.4.1 macOS 代码流动模式的独特性	rewritten
+S-026584	h1	275.3.1	7.3.1	# 275.3.1 Apple 对 FreeBSD 社区的吸纳与人才流动	rewritten
+S-026591	h1	275.5.1	7.4.6	# 275.5.1 BSD阵营对macOS的核心批评聚焦于形式主义挪用即Apple在工程层面汲取BS	rewritten
+S-026592	h1	275.5.2	7.4.7	# 275.5.2 BSD阵营对Apple反批评的再回应聚焦于四点第一为合法与合宜二分Apple的反	rewritten
