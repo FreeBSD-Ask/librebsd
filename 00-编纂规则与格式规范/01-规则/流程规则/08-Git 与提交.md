@@ -133,4 +133,3 @@ git commit --no-gpg-sign -F <消息文件>        # 不带 pathspec
 - `git rm --cached` 之后若用 `git commit -- <path>`，会取工作区内容把文件重新写回历史——须用不带 pathspec 的提交，或 `GIT_INDEX_FILE` 临时索引 ＋ `commit-tree`。
 
 **判据非空**：上述四条均可复现——②用 `git diff` 与 `git diff --cached` 双查即可见差异；③用一次含他线改动的共享文件提交即可复现卷走；④用 `--amend` 后 `git show --stat` 可见夹带。
-
