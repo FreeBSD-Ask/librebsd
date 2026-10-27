@@ -1,0 +1,91 @@
+source_id	kind	old	new	context	disposition
+S-021821	h1	198.1.1	7.6.28	# 198.1.1 aarch64 支持的开发历程	rewritten
+S-021823	h1	198.1.3	7.6.29	# 198.1.3 与 FreeBSD bhyve 与 Linux KVM 的比较	rewritten
+S-021825	h1	198.1.5	7.6.30	# 198.1.5 年2月18日JaredMcNeill询问berte打算如何处理FFSv1FFSv	rewritten
+S-021830	h1	198.1.10	7.6.31	# 198.1.10 年11月10日MartinHusemann解释armv8是一代CPU而非单一架构	rewritten
+S-021831	h1	198.1.11	7.6.32	# 198.1.11 年11月24日TaylorCampbell指出libc的__floatsitf等	rewritten
+S-021833	h1	198.1.13	7.6.33	# 198.1.13 年1月22日DarcyCain报告x86intrc有仅在INTRSTACKSIZ	rewritten
+S-021835	h1	198.1.15	7.6.34	# 198.1.15 年2月16日SevanJaniyan在pcidevs数据未利用线程回帖称把ver	rewritten
+S-021836	h1	198.1.16	7.6.35	# 198.1.16 年3月2日SevanJaniyan在bootcfg回退线程称已改etctgz随盘	rewritten
+S-021837	h1	198.1.17	7.6.36	# 198.1.17 年3月15日ChristosZoulas引述PaulGoyette认为保留ifd	rewritten
+S-021839	h1	198.1.19	7.6.37	# 198.1.19 年4月3日MartinHusemann反驳只有amd64支持directmap称	rewritten
+S-021840	h1	198.1.20	7.6.38	# 198.1.20 年4月5日ManuelBouyer就console与simplefb的取舍转贴M	rewritten
+S-021841	h1	198.1.21	7.6.39	# 198.1.21 年4月29日coypu提交清理私有80211rateset声明的补丁并请求提交确	rewritten
+S-021842	h1	198.1.22	7.6.40	# 198.1.22 年5月27日KamilRytarowski发布QEMU兼容状态wiki页面声明对	rewritten
+S-021843	h1	198.1.23	7.6.41	# 198.1.23 年6月1日某开发者在i2c快速事务线程里转述维护者关于改用gpioiic验证的排	rewritten
+S-021844	h1	198.1.24	7.6.42	# 198.1.24 年6月18日maya转发一篇讲Skylake上pause指令变慢的外部文章并提到	rewritten
+S-021845	h1	198.1.25	7.6.43	# 198.1.25 年6月28日BennySiegert确认urtwn固件命令5即R92C_CMD_	rewritten
+S-021846	h1	198.1.26	7.6.44	# 198.1.26 年7月7日RobertElz引用WarnerLosh转述PoulHenning引	rewritten
+S-021847	h1	198.1.27	7.6.45	# 198.1.27 年7月12日ThorLancelotSimon追问是否像构建集群那样从tmpfs	rewritten
+S-021849	h1	198.1.29	7.6.46	# 198.1.29 年8月1日RobertElz追溯sockioh同组唯一约定源于最初BSD定义认为	rewritten
+S-021852	h1	198.1.32	7.6.47	# 198.1.32 年8月10日matthewgreen指出那次26分钟构建只累计1418毫秒持锁时	rewritten
+S-021854	h1	198.1.34	7.6.48	# 198.1.34 年8月17日MichaelvanElst说明响应处理对同一次重复完成调用完成函数	rewritten
+S-021855	h1	198.1.35	7.6.85	# 198.1.35 年9月4日ManuelBouyer指出vndc第1255版引入的vnode_ha	rewritten
+S-021857	h1	198.1.37	7.6.49	# 198.1.37 年9月18日MichaelvanElst建议可在无实际IO时预判bmap与str	rewritten
+S-021858	h1	198.1.38	7.6.50	# 198.1.38 年10月16日EmmanuelDreyfus引芯片文档称其USB描述符为不可变并	rewritten
+S-021859	h1	198.1.39	7.6.51	# 198.1.39 年10月31日SiddharthMuralee求助把kcov4特性作为dev模块	rewritten
+S-021860	h1	198.1.40	7.6.52	# 198.1.40 年11月18日MartinHusemann反对改签名方案建议在XEN上直接让CL	rewritten
+S-021862	h1	198.1.42	7.6.53	# 198.1.42 年12月5日thorpej在本线程中汇总审出的补丁缺陷谓PK_KMEM仅当mm_	rewritten
+S-021864	h1	198.1.44	7.6.54	# 198.1.44 年12月15日MatthewGreen提醒不要随意改动结构体指出外部接口本已是6	rewritten
+S-021871	h1	198.1.51	7.6.55	# 198.1.51 年2月17日KamilRytarowski回应JasonThorpe的futex	rewritten
+S-021872	h1	198.1.52	7.6.56	# 198.1.52 年2月20日BERTRANDJoël补充每个线程内fork后紧跟execve去掉	rewritten
+S-021874	h1	198.1.54	7.6.24	# 198.1.54 年3月1日maya在GSoC2019申请线程中回复申请人建议依次接入freeno	rewritten
+S-021876	h1	198.1.56	7.6.57	# 198.1.56 年4月18日ManuelBouyer再报一例evbarm挂起用带LOCKDEBU	rewritten
+S-021878	h1	198.1.58	7.6.58	# 198.1.58 年6月4日Górny提交补丁新增x86_xsave_offsets与x86_xs	rewritten
+S-021879	h1	198.1.59	7.6.59	# 198.1.59 年6月15日matu就ehci附件与分离不对称问题作回应确认ehci_init与	rewritten
+S-021880	h1	198.1.60	7.6.60	# 198.1.60 年6月25日KUSABATakeshi更新补丁把ifnet结构里的if_desc	rewritten
+S-021882	h1	198.1.62	7.6.61	# 198.1.62 年7月5日MichałGórny把x86寄存器测试合并为单一基函数以减少重复提升	rewritten
+S-021883	h1	198.1.63	7.6.62	# 198.1.63 年7月21日coypu针对TaylorRCampbell关于启动时阻塞一次等待熵	rewritten
+S-021884	h1	198.1.64	7.6.63	# 198.1.64 年7月22日PaulKoning与JoergSonnenberger就密码学强随	rewritten
+S-021885	h1	198.1.65	7.6.64	# 198.1.65 年8月1日HaukeFath反对在状态过滤路由器下使用NFSoverTCP指出重	rewritten
+S-021886	h1	198.1.66	7.6.65	# 198.1.66 年9月8日ThorLancelotSimon指出fexecve会让挂载noexe	rewritten
+S-021887	h1	198.1.67	7.6.66	# 198.1.67 年9月10日DavidHolland反驳O_EXEC可在运行期动态开关的提议理由	rewritten
+S-021888	h1	198.1.68	7.6.67	# 198.1.68 年9月13日GregTroxel就压缩线程回应说他清楚能自行设置USE_XZ_S	rewritten
+S-021889	h1	198.1.69	7.6.68	# 198.1.69 年9月15日ChristosZoulas认为namecache相当可靠因为描述符	rewritten
+S-021890	h1	198.1.70	7.6.69	# 198.1.70 年9月24日EmmanuelDreyfus澄清自己只改了引导程序而未动内核mul	rewritten
+S-021891	h1	198.1.71	7.6.70	# 198.1.71 年9月26日KamilRytarowski补充称现实中银行等机构服务仍依赖Fla	rewritten
+S-021893	h1	198.1.73	7.6.71	# 198.1.73 年10月12日MichaelvanElst指出动态栈扩展受阻的程度比动态分配器不	rewritten
+S-021894	h1	198.1.74	7.6.72	# 198.1.74 年11月6日JasonThorpe反对__read_relaxed命名认为rel	rewritten
+S-021895	h1	198.1.75	7.6.73	# 198.1.75 年11月11日JoergSonnenberger转述MaximeVillard关	rewritten
+S-021896	h1	198.1.76	7.6.74	# 198.1.76 年11月18日JasonThorpe转述Mouse关于创建大空洞需付出分配并初始	rewritten
+S-021900	h1	198.1.80	7.6.75	# 198.1.80 年12月17日AndrewDoran认为字符设备被卸载的竞态可解提出需协调spe	rewritten
+S-021901	h1	198.1.81	7.6.76	# 198.1.81 年12月24日ChristosZoulas就合并x86ptrace寄存器测试至单	rewritten
+S-021902	h1	198.1.82	7.6.77	# 198.1.82 年5月28日MartinHusemann认为整数寄存器已足够但corefile格	rewritten
+S-021904	h1	198.1.84	7.6.78	# 198.1.84 年12月28日TerryMoore就USBerrorchecking线程中Pin	rewritten
+S-021905	h1	198.1.85	7.6.79	# 198.1.85 年9月28日ChristosZoulas认为比ValeryUshakov建议的按	rewritten
+S-021906	h1	198.1.86	7.6.1	# 198.1.86 2018年1月20日TobiasUlmer自述数周排查NFS客户端挂起与崩溃指n	rewritten
+S-021907	h1	198.1.87	7.6.2	# 198.1.87 2018年2月9日JoergSonnenberger判定MaximeVillar	rewritten
+S-021908	h1	198.1.88	7.6.80	# 198.1.88 techkernmessages211878	rewritten
+S-021910	h1	198.1.90	7.6.3	# 198.1.90 2018年2月16日SevanJaniyan在pcidevs数据未被利用的线程发	rewritten
+S-021913	h1	198.1.93	7.6.4	# 198.1.93 2018年3月15日ChristosZoulas就compat工作表态称会修好对	rewritten
+S-021915	h1	198.1.95	7.6.5	# 198.1.95 2018年3月20日ManuelBouyer就sunxi时钟树回帖说明部分像素时	rewritten
+S-021916	h1	198.1.96	7.6.6	# 198.1.96 2018年4月2日Mouse提出新系统调用提案自述在写只运行用户态的模拟器本应陷	rewritten
+S-021917	h1	198.1.97	7.6.7	# 198.1.97 2018年4月2日JaromirDolecek就FFS读取触发过多TLBshoo	rewritten
+S-021918	h1	198.1.98	7.6.8	# 198.1.98 2018年4月5日RobertElz否认被怀疑的`archamd64includ	rewritten
+S-021919	h1	198.1.99	7.6.9	# 198.1.99 2018年4月5日ManuelBouyer在simplefb讨论中补充若`std	rewritten
+S-021920	h1	198.1.100	7.6.10	# 198.1.100 2018年4月27日AndrewCagney回复所用板卡为ODROIDC1反馈1	rewritten
+S-021921	h1	198.1.101	7.6.11	# 198.1.101 2018年4月26日AndrewCagney回复该补丁并未改善其100mb连接的	rewritten
+S-021922	h1	198.1.102	7.6.12	# 198.1.102 2018年5月26日macallan就环境光传感器讨论只打趣一句称其实可以滥用如	rewritten
+S-021923	h1	198.1.103	7.6.13	# 198.1.103 2018年6月1日JasonThorpe就i2c探测讨论回应指出树莓派用的是智能	rewritten
+S-021925	h1	198.1.105	7.6.81	# 198.1.105 techkernmessages212682	rewritten
+S-021926	h1	198.1.106	7.6.14	# 198.1.106 2018年6月1日BradSpencer就i2c探测讨论回应指出他过往的传感器驱	rewritten
+S-021927	h1	198.1.107	7.6.15	# 198.1.107 2018年7月12日MartinHusemann回复说自己内存不足以在tmpfs	rewritten
+S-021928	h1	198.1.108	7.6.82	# 198.1.108 techkernmessages212851	rewritten
+S-021929	h1	198.1.109	7.6.16	# 198.1.109 2018年7月12日MartinHusemann报告本地AMD上未能复现构建变慢	rewritten
+S-021930	h1	198.1.110	7.6.83	# 198.1.110 techkernmessages212850	rewritten
+S-021931	h1	198.1.111	7.6.17	# 198.1.111 2018年7月12日PhilNelson就xhci互斥锁断言线程反驳Husema	rewritten
+S-021932	h1	198.1.112	7.6.18	# 198.1.112 2018年7月19日ManuelBouyer查明Xen不用softint_dis	rewritten
+S-021933	h1	198.1.113	7.6.19	# 198.1.113 2018年7月19日ManuelBouyer调试XendomU挂在psrlz时发	rewritten
+S-021934	h1	198.1.114	7.6.20	# 198.1.114 2018年7月18日ManuelBouyer报告近期HEAD在Xen上经anit	rewritten
+S-021935	h1	198.1.115	7.6.21	# 198.1.115 2018年8月1日MartinHusemann追查80构建集群变慢发现单任务实测	rewritten
+S-021936	h1	198.1.116	7.6.25	# 198.1.116 2019年1月21日GregTroxel就raidframe调试插桩补丁回帖可见	rewritten
+S-021937	h1	198.1.117	7.6.26	# 198.1.117 2019年2月2日RyoONODERA在amd64current上用pkgsrc	rewritten
+S-021938	h1	198.1.118	7.6.22	# 198.1.118 2018年8月27日DavidHolland就`proplib`提出三项追问使命	rewritten
+S-021939	h1	198.1.119	7.6.23	# 198.1.119 2018年12月29日Fauberteau就nouveau在NVIDIAGeFo	rewritten
+S-021940	h1	198.1.120	7.6.84	# 198.1.120 techkernmessages2336438	rewritten
+S-021941	h1	198.1.121	7.6.27	# 198.1.121 2019年9月28日matthewgreen称清理明显是进步但不理解32位平台为	rewritten
+S-021942	h1	198.2.1	7.2.1	# 198.2.1 旧 ARM 多核 → 改进 ARM 多核与 aarch64 支持（2018）	rewritten
+S-021943	h1	198.2.2	7.2.2	# 198.2.2 旧 SMP 实现 → 改进 SMP 支持（2018）	rewritten
+S-021956	h1	198.3.1	7.7.2	# 198.3.1 FreeBSD 11.x/12（2018）	rewritten
+S-021958	h1	198.3.3	7.7.3	# 198.3.3 Linux 4.1x（2018）	rewritten
+S-021959	h1	198.3.4	7.7.1	# 198.3.4 Windows 10 / Server 2016（Hyper-V）	rewritten
