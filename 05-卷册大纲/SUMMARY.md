@@ -14,15 +14,15 @@
         - 2.1-ENIAC 与电子计算机时代（1943–1946）
             - 2.1.1-ENIAC原型完成1946年2月正式公开运行.md
             - 2.1.2-1946年2月ENIAC公开运行美国主要大学开始设立计算实验室.md
-            - 2.1.3-年2月ENIAC公开运行后美国主要大学开始设立计算实验室作为电子计算机研究的组织.md
+            - 2.1.3-1946年2月ENIAC公开运行后美国主要大学开始设立计算实验室.md
         - 2.2-存储程序概念及其署名争议：EDVAC、EDSAC 与 UNIVAC（1945–1951）
             - 2.2.1-计算的物质前夜：战时需求与存储程序（1943-1949）.md
         - 2.3-ACM、IEEE 计算机学会与 USENIX 的学术组织活动
-            - 2.3.1-年9月28日Haemer报NISTShell与工具FIPS研讨会联邦机构1991.md
+            - 2.3.1-1990年9月28日Haemer报NISTShell与工具FIPS研讨会.md
             - 2.3.2-DouglasHPrice引KandR第179页第22节说明C中仅前八字符有效P.md
-            - 2.3.3-年9月15日AssociationforComputingMachineryAC.md
+            - 2.3.3-1947年9月15日AssociationforComputingMachinery于Columbia设立.md
             - 2.3.4-作者说明IEEE浮点中指数位的特殊取值分别表示正负无穷与非数并指出未初始化变量可.md
-            - 2.3.5-年3月斯宾塞建议把getopt的样板接口循环只写一次并存档复用并提到自己在达拉斯.md
+            - 2.3.5-1988年3月斯宾塞建议把getopt的样板接口循环只写一次并存档复用.md
             - 2.3.6-UniForumCanada教程讲师JimJoyce简历曾在UCBerkeley.md
             - 2.3.7-ChuckPhillips就ANSI的X3K1计算机文档委员会询问其进展与取向问.md
             - 2.3.8-EllieYoung宣布USENIX理事会于1月会议拨款设IEEE计算机学会操作.md
@@ -32,13 +32,13 @@
             - 2.3.12-EvanLeibovitch发起投票提议新建一个处理应用类主题的Usenet分区.md
             - 2.3.13-JimPage询问以拨号线用远程作业子系统连IBM主机的经验应用跑在3B20与1.md
             - 2.3.14-NickStoughton发布USENIX标准报告ISOSC22JohnHill.md
-            - 2.3.15-JordanHubbard承认与Monroy的最近交锋纯属无聊口角称已无力理解对.md
+            - 2.3.15-JordanHubbard承认与Monroy的交锋纯属无聊口角称将对方列入killfile.md
             - 2.3.16-询问是否有人使用过Apollo工作站称该机能运行AUX而AUX是介于41c之BS.md
             - 2.3.17-指文档工作台随附之pic工具可将流程图便捷地嵌入排版文档之中所得图形颇为可观引用.md
             - 2.3.18-CarlGutekunst称用43BSD时一切正常但UUCP分组协商代码有缺陷修.md
             - 2.3.19-DougKingston介绍多设备排队系统称该系统由BRL编写并述多路打印机队列.md
-            - 2.3.20-年6月19日Zwicky以LISAV程序主席身份发布答疑投稿格式宽收可读即可AS.md
-            - 2.3.21-年1月8日Gwyn长评Haemer十二月报告NFS因stateless设计与兼容.md
+            - 2.3.20-1991年6月19日Zwicky以LISAV程序主席身份发布答疑.md
+            - 2.3.21-1990年1月8日Gwyn长评Haemer十二月报告.md
     - 第3章-计算产业与公司
         - 3.1-通用电气的计算机事业：大型机、分时系统与 Multics
         - 3.2-IBM 的大型机事业：从制表机到 System／360
@@ -109,7 +109,7 @@
         - 9.3-第三版 V3（1973）：管道、过滤器与程序组合
         - 9.4-第四版 V4（1973）：C 语言重构与 UNIX 的学术传播
             - 9.4.1-C 重写对 UNIX 传播的推动作用.md
-            - 9.4.2-UNIX与C语言的共生关系是计算机史上的独特现象UNIX是首个用高级语言C重写的.md
+            - 9.4.2-UNIX与C语言的共生关系是计算机史上的独特现象.md
         - 9.5-第五版 V5（1974）：UNIX 的公开传播
         - 9.6-第六版 V6（1975）：大学传播与教学影响
         - 9.7-V7 前夜的 UNIX 生态与操作系统源流
@@ -201,11 +201,11 @@
             - 1.1.1-错误处理的粗糙性.md
             - 1.1.2-管道组合的语义局限.md
             - 1.1.3-二进制数据处理的不足.md
-            - 1.1.4-年5月12日ONeill发布fullpath101为lslR输出之每个文件名加上.md
+            - 1.1.4-1994年5月12日ONeill发布fullpath101为lslR输出之每个文件名加上完整路径.md
             - 1.1.5-作者给出自己写的父子进程IO重定向示例含dup2替代宏与对readwrite返回.md
             - 1.1.6-转述提问者在Bourneshell内串联多个head取行丢行的问题给出以sed追.md
             - 1.1.7-给出以查找命令的新旧判定比较两文件之法并指出其退出状态恒为零故无从判断成败另附其.md
-            - 1.1.8-年2月10日RichardAOKeefe投稿lit程序补echo之不足可用令以横.md
+            - 1.1.8-1988年2月10日RichardAOKeefe投稿lit程序补echo之不足.md
         - 1.2-文本处理工具：grep、sed 与 awk 的形成
         - 1.3-Shell：可编程的组合层
         - 1.4-Software Tools、RATFOR 与可移植工具传统
@@ -259,46 +259,46 @@
         - 2.2-用户组与区域 UNIX 协会
         - 2.3-邮件列表与新闻组的讨论文化：unix-wizards 与 comp.unix.＊
             - 2.3.1-Rice拟组Sun工作站软硬件专题新闻组该组约10台SMISun与VAX同挂以太.md
-            - 2.3.2-校园社会文化新闻类.md
-            - 2.3.3-校园社会文化新闻类.md
+            - 2.3.2-校园文化新闻：Joy口述史忆41BSD内核调优驳Kashtan基准.md
+            - 2.3.3-校园文化新闻：McKusick忆43BSD-Reno开发与MACH集成.md
             - 2.3.4-提问者引用一篇论文中关于Unix内核过大而需要换页的说法并依据内核常驻这一传统定.md
             - 2.3.5-提醒讨论者注意所在新闻组的定位说明compunixwizards面向需要较高知识.md
             - 2.3.6-说明模块传统上指实现单一抽象类型或服务的函数集合并按目标与约束讨论代码组织还谈到.md
             - 2.3.7-总纲10动手者创造历史Callahan以持续移植编译器教学与组织用户组的具体劳动.md
-            - 2.3.8-校园社会文化新闻类.md
-            - 2.3.9-校园社会文化新闻类.md
+            - 2.3.8-校园文化新闻：UNIX分时系统论文成伯克利引入起点证据.md
+            - 2.3.9-校园文化新闻：Joy忆1980年自荐入CSRG主导4BSD.md
             - 2.3.10-附和时钟守护进程回拨的设想进一步提议让VAX在邮件到达或喜爱新闻组出现新内容时打.md
-            - 2.3.11-校园社会文化新闻类.md
-            - 2.3.12-校园社会文化新闻类.md
-            - 2.3.13-校园社会文化新闻类.md
+            - 2.3.11-校园文化新闻：McKusick忆3BSD诞生与VAX虚拟内存实现.md
+            - 2.3.12-校园文化新闻：Joy加入Sun与Sun创立的双证条目.md
+            - 2.3.13-校园文化新闻：McKusick忆Net2开发与Bostic清理工程.md
         - 2.4-会议论文传统与技术共同体的形成
         - 2.5-共同体的礼节治理：会刊体例与邮件列表惯例（1975–1995）
         - 2.6-SunOS 基于 BSD 的具体版本源流
-            - 2.6.1-年5月10日引Sun技术杂志1989年春季刊述SPARCstation1采用新S.md
+            - 2.6.1-1989年5月10日引Sun技术杂志1989年春季刊述SPARCstation1采用新SCSI驱动.md
             - 2.6.2-帖主贴出1990年7月25日Sun关于SPARCstationIPC的产品通告原.md
-            - 2.6.3-年3月29日设备驱动手册800178010修订A第142页末五行对cdevsw条.md
+            - 2.6.3-1989年3月29日设备驱动手册800178010修订A第142页cdevsw条目顺序描述有误.md
             - 2.6.4-SunOS 1.0 的 BSD 基础.md
             - 2.6.5-SunOS 2.0 的演进.md
             - 2.6.6-SunOS 3.0 的特性.md
-            - 2.6.7-年12月22日Fuhrman描述六台350与四台360的布局令mailhost指.md
-            - 2.6.8-年12月22日Donaldson购入二手350M后无法重启而不丢日期时分相当准日.md
-            - 2.6.9-年12月30日Speck纠正Fuji驱动器inode不足是mkfs缺陷之说这是B.md
-            - 2.6.10-年12月11日Sun工程师Sherif详述Solaris24测试流程反驳无回归测.md
+            - 2.6.7-1988年12月22日Fuhrman描述六台350与四台360的布局令mailhost指向实体主机.md
+            - 2.6.8-1988年12月22日Donaldson购入二手350M后日期漂移二十五天.md
+            - 2.6.9-1988年12月30日Speck纠正Fuji驱动器inode不足是mkfs缺陷之说.md
+            - 2.6.10-1994年12月11日Sun工程师Sherif详述Solaris24测试流程反驳无回归测试之说.md
             - 2.6.11-MarioMarino询问AHA2940是否有BSD驱动可用引用时按L3纪律以上.md
-            - 2.6.12-年1月28日Sun员工ChuckJerian提出YP与named跨域解析文档修订.md
-            - 2.6.13-年2月01日Cyrus述40的NIT有截断单包与丢包三类缺陷Sun支持的Kevi.md
-            - 2.6.14-年10月3日ColemanResearch的ThomasEden建议在Winin.md
-            - 2.6.15-年3月22日DarrelLager的3280配十六兆内存与Hitachi硬盘加Q.md
-            - 2.6.16-年3月02日nfsd卡D状态疑由文件系统inode不一致致NFS守护进程连锁死锁.md
-            - 2.6.17-年3月09日Rutherford实验室ChrisCrampton反驳GuyHar.md
-            - 2.6.18-年3月23日GuyHarris说明40的intelnetd退出时把pty属组设为.md
-            - 2.6.19-年3月04日BrentChapman指出40的intelnetd退出时把pty属.md
-            - 2.6.20-年3月07日Harris公司高级技术部的ChuckMusciano称contoo.md
-            - 2.6.21-年4月4日MITRE公司的GlennRoberts指老工具的文档仍在手册页里把o.md
-            - 2.6.22-年3月14日UCLA天体物理的JonathanEisenhamer问LaserW.md
+            - 2.6.12-1989年1月28日Sun员工ChuckJerian提出YP与named跨域解析文档修订.md
+            - 2.6.13-1989年2月01日Cyrus述40的NIT有截断单包与丢包三类缺陷.md
+            - 2.6.14-1994年10月3日ThomasEden建议在Winini的打印机节加CtrlD=0.md
+            - 2.6.15-1989年3月22日DarrelLager的3280装401后盒式带挂起退scsi补丁后消失.md
+            - 2.6.16-1989年3月02日nfsd卡D状态疑由文件系统inode不一致致NFS守护进程连锁死锁只能重启.md
+            - 2.6.17-1989年3月09日Rutherford实验室ChrisCrampton反驳GuyHarris称fd_set不足.md
+            - 2.6.18-1989年3月23日GuyHarris说明40的intelnetd退出时把pty属组设为wheel.md
+            - 2.6.19-1989年3月04日BrentChapman指出40的intelnetd退出时把pty属组改为wheel.md
+            - 2.6.20-1989年3月07日Harris公司的ChuckMusciano称contool21会把console消息写入文件.md
+            - 2.6.21-1989年4月4日MITRE公司的GlennRoberts指老工具文档仍在手册页加old前缀可查.md
+            - 2.6.22-1989年3月14日UCLA天体物理的JonathanEisenhamer问LaserWriter配Transcript报错.md
             - 2.6.23-KeaneArase征询名为UltraOffice的产品信息称其可在Sun上建文.md
-            - 2.6.24-年5月23日DavidKensiski述SunView崩溃与窗口消失源于40新共.md
-            - 2.6.25-年5月05日解释某内核崩溃源于缓冲区池锁的中断优先级低于部分串口板中断给出重设中.md
+            - 2.6.24-1989年5月23日DavidKensiski述SunView崩溃与窗口消失源于40新共享库缺陷.md
+            - 2.6.25-1989年5月05日解释内核崩溃源于缓冲区池锁中断优先级低于串口板中断.md
             - 2.6.26-JohnIoannidis长篇质疑type4键盘之议自始无Sun员工回应追问Su.md
             - 2.6.27-Sun的随机附带说明是累积式的35远程安装的修复说明竟出现在30的那一本里引用时.md
             - 2.6.28-揭示automount实为把自身作为NFS用户进程挂到挂载点经标准RPC接管访问.md
@@ -309,7 +309,7 @@
             - 2.6.33-Sun工程师说明DVMA传输受资源映射总大小限制4260约一兆字节改用bp_ma.md
             - 2.6.34-查明41口令附属文件读取函数损坏致口令修改守护进程取不到影子口令引用时按L4纪律.md
             - 2.6.35-定位403登录挂起根因是自动挂载usrshare造成死锁因automount取时.md
-            - 2.6.36-年8月5日批评Sun串口速率用四位字段只能取PDP11档位无法移植设定任意波特率.md
+            - 2.6.36-1990年8月5日批评Sun串口速率用四位字段只能取PDP11档位无法设定任意波特率.md
             - 2.6.37-Sun4490的SunOS41记账脚本误查usr而非varadm的剩余空间usr.md
             - 2.6.38-GuyHarris纠正4x并不为整个数据段分配连续交换区无盘机唯一可换出的就是N.md
             - 2.6.39-TFS在411上的完整启用步骤在inetdconf加tfsd条目并重启用moun.md
@@ -319,19 +319,19 @@
             - 2.6.43-归纳Sun3设备驱动级DVMA问答用户空间映射入DVMA空间靠physiomap.md
             - 2.6.44-求psview所缺的硬件专用文件hardc以便在SunView下使用该文件不在m.md
             - 2.6.45-询问威斯康星密尔沃基分校拟购SUN3260专跑SAS供批处理使用求配置内存盘空间.md
-            - 2.6.46-年3月13日答如何从画布把光栅存入文件之问把pixwin拷贝到pixrect再用.md
-            - 2.6.47-年3月13日答工具包可移植之问称凡用Xlib及Xt的工具包皆无不可移植之理因Xt.md
-            - 2.6.48-年1月23日SPARC上dbx显示16位无符号参数的缺陷取栈上32位整数的错误半.md
-            - 2.6.49-JonTankersley答LarsAnderssonf7711有system与.md
+            - 2.6.46-1989年3月13日答如何从画布把光栅存入文件之问.md
+            - 2.6.47-1989年3月13日答工具包可移植之问称凡用Xlib及Xt的工具包皆无不可移植之理.md
+            - 2.6.48-1991年1月23日SPARC上dbx显示16位无符号参数的缺陷.md
+            - 2.6.49-JonTankersley答LarsAnderssonf7711的system与fork补丁可索取.md
             - 2.6.50-分析Telebit的PEP协议仿冒可能导致Zmodem传输超时建议将S111置0.md
             - 2.6.51-自述上传文件时Zmodem每1024字节等待确认致性能减半升级rz与sz无效最终.md
             - 2.6.52-自述所在系拟购廉价计算服务器供六至十二台X终端与约十五名并发用户使用主跑Math.md
-            - 2.6.53-年3月31日据手册pw_copy只在源与目标为同一pixrect时有效并质疑手册.md
-            - 2.6.54-年3月30日报360因Sun连接器拙劣而常从粗以太网脱落的著名问题问有无已满意解.md
-            - 2.6.55-年1月25日DavidCornutt详述其管理过的VerilogXL保护方案密钥.md
-            - 2.6.56-年1月3日AnthonyDatri问远端服务器无响应时本地无关操作也随之挂起是否.md
-            - 2.6.57-年12月20日FrankWortner谓BSD快速文件系统通常保留末百分之十空间.md
-            - 2.6.58-年11月20日RHorn实测SS1上gcc1371与Sun403的cc以TeX排.md
+            - 2.6.53-1989年3月31日据手册pw_copy只在源与目标为同一pixrect时有效.md
+            - 2.6.54-1989年3月30日报360因Sun连接器拙劣常从粗以太网脱落问有无满意解.md
+            - 2.6.55-1991年1月25日DavidCornutt详述其管理过的VerilogXL保护方案.md
+            - 2.6.56-1989年1月3日AnthonyDatri问远端服务器无响应时本地无关操作也随之挂起是否固有缺陷.md
+            - 2.6.57-1988年12月20日FrankWortner谓BSD快速文件系统通常保留末百分之十空间以防抖动.md
+            - 2.6.58-1990年11月20日RHorn实测SS1上gcc1371与Sun403的cc以TeX排版bison手册对比.md
             - 2.6.59-报SS1的RS232C串口接Transpac调制解调器后启动过程即阻塞卡在硬件配.md
             - 2.6.60-JonathanHue报告SPARCsystem330在411下用st驱动访问E.md
             - 2.6.61-rsh与rlogin把多字符按键拆成单字符以太网包致光标跳跃telnet不会测试.md
@@ -342,31 +342,31 @@
             - 2.6.66-在4330上把CPU板八条4MBSIMM与内存板八条1MB对调后总内存仍是40M.md
             - 2.6.67-澄清并非崩溃而是控制台串口驱动把帧错误等同于L1a转入PROM并给出在终端线CP.md
             - 2.6.68-Kennedy9300F磁带机经Xylogics472接口接Sun3280升级格.md
-            - 2.6.69-年3月9日LarryMcVoy给出SPARC上下文切换时间的实测数据与测量代码在.md
-            - 2.6.70-年5月29日Sun的JeffreyZank说明41下DVMA约可用600KB总量.md
+            - 2.6.69-1990年3月9日LarryMcVoy给出SPARC上下文切换时间的实测数据与测量代码.md
+            - 2.6.70-1990年5月29日Sun的JeffreyZank说明41下DVMA约可用600KB总量1MB.md
             - 2.6.71-指出在SS1的403上退出SunView会把色图破坏到clear_colorma.md
             - 2.6.72-BalaVasireddi报告403c加GX板的SS1上X11R4根窗口偏移出屏.md
             - 2.6.73-给出以adb改写内核physmem变量限制可用内存的做法并区分sun4c为四K其.md
             - 2.6.74-03的文件服务守护进程锁死需专用模块修复内存页未解锁缺陷信息源自Sun工程师引用.md
-            - 2.6.75-年4月27日NikolaosFotis报350无浮点机上1650行Fortran.md
-            - 2.6.76-年5月09日CelesteStokely详列其lisp开发网配置十三台带盘360.md
-            - 2.6.77-年6月16日DeLaRuePrintrak的RichardSeegmiller自.md
-            - 2.6.78-JosephMoran报告3160配27版引导PROM与Xylogics451及.md
+            - 2.6.75-1989年4月27日NikolaosFotis报350无浮点机Fortran优化耗8MB内存后coredump.md
+            - 2.6.76-1989年5月09日CelesteStokely详列其lisp开发网配置十三台带盘360.md
+            - 2.6.77-1989年6月16日DeLaRuePrintrak的RichardSeegmiller自述APUNIXExabyte可靠备份.md
+            - 2.6.78-JosephMoran报告3160配27版引导PROM与Xylogics451偶发磁盘首读失败.md
             - 2.6.79-指出早期SMD4只支持24兆字节每秒现出货版本已达30作者实接CDC9720一点.md
             - 2.6.80-给出CDCSabre97201230即一点二吉字节机型配XY753或7053即S.md
             - 2.6.81-摸索SPARCstation可加载系统调用写法并在arisa匿名FTP提供nos.md
-            - 2.6.82-年4月17日Apollo与Sun卡带互转Apollo用devrct8Sun用de.md
-            - 2.6.83-年12月21日FTP无法绑定套接字源于引导时主机名解析失败的根因实为rcboot.md
-            - 2.6.84-年1月31日4110无FPU时由内核软件模拟且实测可慢两百倍驳对方称所有四系机内.md
-            - 2.6.85-年2月19日MarcelBernards用BruceBarnett的累加一万次浮.md
+            - 2.6.82-1988年4月17日Apollo与Sun卡带互转.md
+            - 2.6.83-1988年12月21日FTP无法绑定套接字根因实为rcboot中ifconfig失败.md
+            - 2.6.84-1989年1月31日4110无FPU时由内核软件模拟且实测可慢两百倍.md
+            - 2.6.85-1989年2月19日MarcelBernards用浮点测试程序实测4110无FPU陷入内核软模拟.md
             - 2.6.86-HenrySpencer提醒对方普通计算机调制解调器不能与传真机通话传真机用的是.md
-            - 2.6.87-年3月23日KevinSullivan报3280在35上随机panicbadrm.md
+            - 2.6.87-1989年3月23日KevinSullivan报3280在35上随机panicbadrmfree.md
             - 2.6.88-TodColegrove问386i的DOS窗口能否缩放让程序用上更大区域他跑的字.md
             - 2.6.89-JimHaynes报在跑SunOS35的3280上安装新版sendmail561.md
-            - 2.6.90-年4月24日ScottMenter指Artecon的ArteTHS以太网终端服务.md
-            - 2.6.91-年5月9日AT&TBellLabs的JishnuMukerji称那位Sun分销商.md
+            - 2.6.90-1989年4月24日ScottMenter指Artecon的ArteTHS把网络端口变成本地串口.md
+            - 2.6.91-1989年5月9日AT&TBellLabs的JishnuMukerji称那位Sun分销商搞错了.md
             - 2.6.92-GlennRoberts称可经telnet登录386i运行dosw开多个DOS会.md
-            - 2.6.93-年3月17日据v7n172所载当地Sun办事处转来的消息SunConsultin.md
+            - 2.6.93-1989年3月17日据v7n172所载当地Sun办事处消息SunConsulting有光栅转传真产品.md
             - 2.6.94-发帖者忽觉uupick提示符中的反斜杠c有问题检视usrbinuupick发现它.md
     - 第3章-UNIX 的教学制度化：操作系统课程、教材与实验传统（1975–1995）
         - 3.1-UNIX 进入大学课程：从研究工具到教学系统
@@ -481,39 +481,39 @@
             - 6.1.3-其他 BCPL／B 语言的贡献者.md
             - 6.1.4-BCPL-B-语言与-C-语言前身-Cantabrigian-到.md
         - 6.2-从 B 到 C：语言演化与编译器实现（1971–1973）
-            - 6.2.1-年DennisRitchie在PDP11上实现首个C语言编译器C语言正式诞生C语.md
-            - 6.2.2-LarryMcVoy解释lseek与缓冲输入混用时文件位置为何出错说明库缓冲区与.md
+            - 6.2.1-1972年DennisRitchie在PDP11上实现首个C语言编译器C语言正式诞生.md
+            - 6.2.2-LarryMcVoy解释lseek与缓冲输入混用时文件位置为何出错说明库缓冲区与内核偏移量不同步.md
             - 6.2.3-作者询问内核对同一文件内的定位是否做过优化并比较相对与绝对lseek哪种更快引用.md
             - 6.2.4-解释草案中noalias关键字先入后撤入是为让优化器识别无别名以做向量化撤是因规.md
             - 6.2.5-作者回复说明JHUBRL的PDP11UNIX曾配备C编译器汇编器与带正文覆盖功能.md
-            - 6.2.6-年11月17日JeremyWebber指出某些版本的dd不会补齐最后一块所以无法.md
+            - 6.2.6-1988年11月17日JeremyWebber指出某些版本的dd不会补齐最后一块.md
             - 6.2.7-主张POSIX委员会不应介入决定各类文件该放在何处因为许多文件本不该由应用程序直.md
-            - 6.2.8-年1月20日GuyHarris考C参考手册实允许短整与整与长整三种整数长度且可彼.md
-            - 6.2.9-年1月01日自述曾用A1至A6的宏技巧兼容原型并指出K&R预处理器无法伪造字符串.md
-            - 6.2.10-年1月01日指出证明longlong必要的方案先假定64位整数必要若改为合适环境.md
-            - 6.2.11-年1月01日在Linux上以pgcc29166实测gccpedantic编译al.md
-            - 6.2.12-以Intel远指针为例指出地址位数并不必然对应实际可寻址空间的大小认为对方误解了.md
-            - 6.2.13-年1月01日JohnMashey述1992年AdHoc委员会上至少有一家大型UN.md
+            - 6.2.8-1985年1月20日GuyHarris考C参考手册实允许三种整数长度且可彼此等价.md
+            - 6.2.9-1999年1月01日自述曾用A1至A6的宏技巧兼容原型并指出K&R预处理器无法伪造字符串拼接.md
+            - 6.2.10-1999年1月01日指出证明longlong必要的方案先假定64位整数必要.md
+            - 6.2.11-1999年1月01日在Linux上以pgcc29166实测gccpedantic编译alloca示例无警告.md
+            - 6.2.12-以Intel远指针为例指出地址位数并不必然对应实际可寻址空间的大小认为对方误解了论点.md
+            - 6.2.13-1999年1月01日JohnMashey述1992年AdHoc会上有大型UNIX公司力主IL32LLP64.md
             - 6.2.14-主张整数类型尽量落在CPU寄存器内并讨论long与int同宽的效率理由认同新标准.md
-            - 6.2.15-年1月01日CliveDWFeather说明C89没有任何标准pragma故不存.md
-            - 6.2.16-年01月01日JayMaynard称已旁观他人反对trigraphs数周后表示认.md
+            - 6.2.15-1999年1月01日CliveDWFeather说明C89没有任何标准pragma.md
+            - 6.2.16-1999年01月01日JayMaynard称旁观反对trigraphs数周后认输.md
             - 6.2.17-DennisRitchie说明USG把空文件名判为非法使其颇为不快理由是它是自然.md
             - 6.2.18-JohnBass推测调优中查不到的活动源于悬浮的RS232线自发自收或系统内某块.md
-            - 6.2.19-年8月09日自述已改42的f77不再覆盖命令行指定文件并去掉误导的终止码报错引用.md
-            - 6.2.20-年6月30日AndrewKoenig引K与R手册相关节详述指针与整型转换规则并指.md
-            - 6.2.21-年7月10日JimFranklin指出BSD42的usrincludestdio.md
-            - 6.2.22-年6月25日Bukys报告启用DMFDMA选项会使vaxubadmfc出现两处小.md
-            - 6.2.23-年5月23日Firth续getchar与EOF之辩while取字符与EOF比较本.md
-            - 6.2.24-年5月04日WaynePollock报告ksh中jobs命令缺陷非正式注销时系统.md
-            - 6.2.25-年5月23日JohnStewart指出lex库rodform样板缺陷称lex生成.md
-            - 6.2.26-年3月30日DougGwyn解释V6为何用inttval2而非longtval初.md
-            - 6.2.27-年12月16日Gwyn为__STDC__定调该符号属于X3J11早该注册成商标反.md
-            - 6.2.28-年4月26日Jaeschke逐条驳KeldAmsterdam起草会上他亲为其提案.md
-            - 6.2.29-年10月21日Ritchie全盘自述noalias生死Plauger在1988年.md
-            - 6.2.30-年4月7日Gwyn自陈所贴纽约会议九问之解释全属个人口径非X3J11官方裁定并提.md
+            - 6.2.19-1984年8月09日自述已改42的f77不再覆盖命令行指定文件并去掉误导的终止码报错.md
+            - 6.2.20-1984年6月30日AndrewKoenig引K与R手册详述指针与整型转换规则.md
+            - 6.2.21-1984年7月10日JimFranklin指出BSD42的stdioh在SUN42上sprintf声明失效.md
+            - 6.2.22-1984年6月25日Bukys报告启用DMFDMA选项会使vaxubadmfc出现两处小语法错误.md
+            - 6.2.23-1984年5月23日Firth续getchar与EOF之辩.md
+            - 6.2.24-1984年5月04日WaynePollock报告ksh的jobs命令缺陷非正式注销时提示有作业.md
+            - 6.2.25-1984年5月23日JohnStewart指出lex库rodform样板缺陷.md
+            - 6.2.26-1984年3月30日DougGwyn解释V6用inttval2因初代C不识long.md
+            - 6.2.27-1988年12月16日Gwyn为__STDC__定调.md
+            - 6.2.28-1989年4月26日Jaeschke逐条驳Keld并说明ISO误以为未获听证的缘由.md
+            - 6.2.29-1989年10月21日Ritchie全盘自述noalias生死.md
+            - 6.2.30-1990年4月7日Gwyn自陈纽约会议九问之解释全属个人口径非官方裁定.md
             - 6.2.31-Meissner指出MIPS调用序列下首参为浮点时传入浮点寄存器varargs无.md
-            - 6.2.32-年2月8日Torek贴出44BSDfgetline手册页任意行长取行返回指针直指.md
-            - 6.2.33-年5月12日Gwyn忆证scanf十六进制转换接受0x前缀系X3J11有意票决而.md
+            - 6.2.32-1991年2月8日Torek贴出44BSDfgetline手册页.md
+            - 6.2.33-1991年5月12日Gwyn忆证scanf接受0x前缀系X3J11有意票决.md
         - 6.3-1973 年 UNIX 内核的 C 重写：从机器相关到相对可移植
             - 6.3.1-1973 年 UNIX 内核用 C 重写的过程.md
         - 6.4-C 编译器、系统接口与 UNIX 可移植性
@@ -533,7 +533,7 @@
             - 7.3.6-该帖纠正说挂起信号由shell发出之说引终端手册说明调制解调器断线时由内核向区分.md
             - 7.3.7-SatishKumar更正称umask的低九位用于清除创建文件模式位中的相应位故.md
             - 7.3.8-GuyHarris指出43BSD的telnet滥用终端类型选项在远端设置TERM.md
-            - 7.3.9-年3月20日AndrewKoenig称若保存全部旧口令用户须给口令附加序列号改口.md
+            - 7.3.9-1989年3月20日AndrewKoenig称若保存全部旧口令用户须给口令附加序列号.md
         - 7.4-passwd、crypt 与 UNIX 身份认证
         - 7.5-chroot、设备权限与系统管理边界
         - 7.6-UNIX 安全模型的能力与局限
@@ -546,124 +546,124 @@
         - 8.4-grep、sed 与 awk：文本处理工具的技术机制
         - 8.5-Shell 环境：变量、退出状态与脚本执行
         - 8.6-Java 与虚拟机革命：FreeBSD 的 JDK 移植史（1995 年）
-            - 8.6.1-年4月8日询问diablo版本的JDK与JRE是否含2007年夏令时补丁以及Su.md
-            - 8.6.2-年5月3日tzupdater1_3_32007kzip的下载地址已失效无法取回建.md
-            - 8.6.3-总纲3不存在进步只有权力再分配FreeBSD路由基础设施的命运曲线揭示技术角色的.md
-            - 8.6.4-年2月18日Bug225655请求把develapacheant升级到v1101.md
-            - 8.6.5-年4月7日ThomasTVeldhouse在50RELEASEp7系统上以mak.md
-            - 8.6.6-年12月14日ErnstdeHaan回复Andrew说要做的是重新获取distf.md
-            - 8.6.7-年6月10日GregLewis回应SergeyKosyakov说jdk13在51.md
-            - 8.6.8-年11月24日斯洛文尼亚的AleksanderRozman报51RELEASE上.md
-            - 8.6.9-年7月19日JeremyFaulkner提交EclipseCDT20端口供测试称.md
-            - 8.6.10-年6月23日MarkTeel贴出jedit410在521内核上makeinsta.md
-            - 8.6.11-年5月4日JeremyFaulkner测试Torben完全重写后的eclipse.md
-            - 8.6.12-年11月26日Ben在FreeBSD53RELEASEp1上编译jdk14时Ho.md
-            - 8.6.13-年2月19日回复解释不加cacerts就没有任何SSL连接可用这也是cacert.md
-            - 8.6.14-年3月6日ThomasLange报tomcat加apache与mod_jk前端跑.md
-            - 8.6.15-年11月10日Android说装好JDK15后下一步在FreeBSD6Stabl.md
-            - 8.6.16-年9月23日JeanBaptisteQuenot就Eclipse在GTK下窗口显.md
-            - 8.6.17-年6月8日MikhailTeterin报FreeBSDamd6461上linux.md
-            - 8.6.18-年11月5日KirbyKuehl补充firefox1507_12与firefox.md
-            - 8.6.19-年11月29日改为针对xulrunner库编译之后eclipse的内置浏览器已经.md
-            - 8.6.20-年12月14日在63PRERELEASE上openoffice同样报出符号未定义.md
-            - 8.6.21-年2月7日指出sunsecuritykrb5internalUDPClient类.md
-            - 8.6.22-年7月5日WalterVaughan回复同一线程称自己在双四核机器上把内存从4G.md
-            - 8.6.23-年6月27日FreeBSD用户询问diablojre与diablojdk在amd.md
-            - 8.6.24-年5月17日MarkLinimon将PRports112729责任人由freeb.md
-            - 8.6.25-年11月17日Huff称自己无法像NickJohnson那样夸16配Tomcat.md
-            - 8.6.26-年10月10日CFLAGS加fnotreevrp后可成功构建jdk131p9_8.md
-            - 8.6.27-年9月15日os_sleep补丁疑为绕开Solaris内核不让其出问题重复缺陷4.md
-            - 8.6.28-年4月5日Rogers回信向Miller致谢说把数据段ulimit调低后问题解决.md
-            - 8.6.29-年9月3日确认用JDK16的源码重新构建之后可以稳定复现IPv4mapped地址.md
-            - 8.6.30-年3月3日他确认可复现把netbeansconf的netbeans_jdkhom.md
-            - 8.6.31-年5月20日jdk16的源码jar校验和不匹配而同一批文件里的bin与mozil.md
-            - 8.6.32-年9月21日更换到Nehalem平台之后Eclipse在diablojdk环境下.md
-            - 8.6.33-年1月4日经过确认openjdk7端口在引导JDK时所使用的探测逻辑存在明显的缺.md
-            - 8.6.34-年5月21日JungukKim回复说该openjdk6b19_1的抓取问题应当由.md
-            - 8.6.35-年9月23日Rob指出OpenJDK不包含comsun开头的类包影响batik与.md
-            - 8.6.36-年6月2日Stefan报告他在82STABLEi386主机上构建eclipse3.md
-            - 8.6.37-年9月6日Greg就axis2新端口留言说明他本人对Axis2经验不多认为把库风.md
-            - 8.6.38-年4月20日用户报告该补丁对pomxml文件所作的三处修改全部被拒绝导致extr.md
-            - 8.6.39-年2月5日用户报告升级到swtdevel371后Vuze的多个窗口恢复正常使用此.md
-            - 8.6.40-年5月14日维护者针对构建openjdk6时因缺少x86_64ad目标而中止的问.md
-            - 8.6.41-年2月19日提交在新近主线版本上有效的新补丁已在九点一与八点二稳定版的六十四位及.md
-            - 8.6.42-年7月12日有用户记录该问题在后续版本上依然存在并没有随着版本更新而得到修复目前.md
-            - 8.6.43-年6月20日说明并非所有接口均已实现部分接口尚缺少实现建议先做占位实现以保证接口.md
-            - 8.6.44-年5月25日指出两个版本的源码中均写死了该命令路径因此关闭打印子系统之后命令缺失.md
-            - 8.6.45-年12月1日Jenkins自带的JNA库未包含FreeBSD修复导致libpam.md
-            - 8.6.46-年4月26日缺陷单208553收到huanghwh补充其程序从http拉取约九千.md
-            - 8.6.47-年4月27日PaulPathiakis贴出FreeBSD10x配OpenJDK安.md
-            - 8.6.48-年2月2日JDK9在FreeBSD上运行时触发SIGBUS信号围绕StubRou.md
-            - 8.6.49-年1月2日Bug205229讨论openjdk8的getSystemCpuLoa.md
-            - 8.6.50-年7月28日JDK7在FreeBSD90上构建失败并伴随时间戳异常讨论指向构建产.md
-            - 8.6.51-年9月30日openjdk8编译失败发生在编译NetworkInterface文.md
-            - 8.6.52-年1月18日该提交合入上游LLVMr322623变更使X86指令前缀能够作为独立.md
-            - 8.6.53-年4月21日openjdk8版本8u212即使关闭FONTCONFIG选项con.md
-            - 8.6.54-年8月13日在openjdk111104+112构建上运行JIRA831时服务的.md
-            - 8.6.55-年8月30日提交510301在openjdk12端口中加入了aarch64架构支.md
-            - 8.6.56-年3月18日Klaus回复说拉取请求已合并指出该引导JDK内含demo文件可精简.md
-            - 8.6.57-年5月14日commithook通报MikaelUrankar提交1025536.md
-            - 8.6.58-年1月28日NateWilliams说自己只是把这个东西构建出来主要功劳属于Da.md
-            - 8.6.59-年2月12日SteveByrne指出Sun在Solarisx86上也有这个问题所.md
-            - 8.6.60-年3月4日DanBusarow答复ChuckODonnell的询问称XiGMot.md
-            - 8.6.61-年4月1日AdrianGoins说他在FreeBSD225SNAP上用Apach.md
-            - 8.6.62-年4月8日Kaffe即将发布新版本FreeBSD现有的10b3移植版本过于陈旧应.md
-            - 8.6.63-年6月8日Mittelstaedt说自己在FreeBSD3x上成功构建了jdk1.md
-            - 8.6.64-年12月24日Ben在FreeBSD228发布版上用11月9日AOUT版JDK1.md
-            - 8.6.65-年4月1日Software2GoMotif在FreeBSD上运行还缺少libXp.md
-            - 8.6.66-年5月24日默认fontproperties采用JDK自带Lucida字体回退字.md
-            - 8.6.67-年10月29日MaxKhon反问对方究竟想修正什么并引述说明libgcc在REL.md
-            - 8.6.68-年1月16日TheHermitHacker贴出构建日志jdk12beta在打包阶.md
-            - 8.6.69-年2月23日Nate目前手中握有BSDi方面构建的JDK120相关补丁资料光盘但.md
-            - 8.6.70-年6月15日提问者问在已从源码静态编译好Apache另装JDK与源码编译的MyS.md
-            - 8.6.71-年7月18日KeesJan把问题归因于Linuxulator在加载库时重排了路径.md
-            - 8.6.72-年8月20日BrianSkrab详细说明了用compatlinux的cc带JDK.md
-            - 8.6.73-年8月30日Uwe说AWT的insets概念对X11十分陌生因为X11里inse.md
-            - 8.6.74-年9月22日添加native参数时无法找到JIT编译器只有在显式设置OpenJI.md
-            - 8.6.75-年10月14日Greg宣布patchset5加入NetBSD支持greenthr.md
-            - 8.6.76-年11月28日编译208版本源码时全部非J2EE的JDBC2类均可成功构建但较旧.md
-            - 8.6.77-年12月12日选择pthreads方案的主要原因是HotSpot虚拟机对其有依赖.md
-            - 8.6.78-年1月3日作者在FreeBSD44上用131的AudioClip播放WAV文件会.md
-            - 8.6.79-年1月24日作者在FreeBSD44与jdk131p5下发现getHostNam.md
-            - 8.6.80-年2月16日开启调试模式编译Mozilla会稳定触发插件加载失败而关闭调试选项后.md
-            - 8.6.81-年2月20日通过最新的portscvsup更新获取代码后证实前面的判断说法正确构.md
-            - 8.6.82-年3月13日作者更新到patchset6后重跑测试原生jdk131仍显示GMT+.md
-            - 8.6.83-年6月27日BillHuey认为HotSpot核心代码已经足够成熟使不熟悉lib.md
-            - 8.6.84-年7月10日EddyYoung报告用patchset6构建JDK131时出现JA.md
-            - 8.6.85-年8月14日BillHuey回复Huangwenhui关于Threadsleep.md
-            - 8.6.86-年8月27日ArchieCobbs反问含原生库的JAR该如何归类并举OSGi规范.md
-            - 8.6.87-年9月21日BrianKorver报告在tomcat下运行webapp抛出Abs.md
-            - 8.6.88-年10月15日DaveGlowacki指出linuxsunjdk122不含jav.md
-            - 8.6.89-年10月26日MichaelMercer说自己在gdb输入where后拿到回溯显.md
-            - 8.6.90-年10月31日AlexWilkinson追问升级流程既然JDK13已装且linu.md
-            - 8.6.91-年11月15日Greg发布JDK14适配FreeBSD的首批补丁集声明仅供开发者.md
-            - 8.6.92-年11月25日Alexey推测gethostbyaddr_r函数被动态链接器错误.md
+            - 8.6.1-2007年4月8日询问diablo版本JDK与JRE是否含2007年夏令时补丁.md
+            - 8.6.2-2008年5月3日tzupdater1332007kzip的下载地址已失效无法取回.md
+            - 8.6.3-2002年1月2日在Alpha机器上跑freeBSD44想装Java.md
+            - 8.6.4-2018年2月18日Bug225655请求把develapacheant升级到v1101.md
+            - 8.6.5-2003年4月7日ThomasTVeldhouse在50RELEASEp7系统上构建JDK14.md
+            - 8.6.6-2003年12月14日ErnstdeHaan回复Andrew说要做的是重新获取distfile.md
+            - 8.6.7-2003年6月10日GregLewis回应jdk13在51RELEASE编译失败是include顺序问题.md
+            - 8.6.8-2003年11月24日AleksanderRozman报51RELEASE装linuxsunjdk14遇Heap卡死.md
+            - 8.6.9-2004年7月19日JeremyFaulkner提交EclipseCDT20端口供测试.md
+            - 8.6.10-2004年6月23日MarkTeel贴出jedit410在521内核上makeinstall的输出.md
+            - 8.6.11-2004年5月4日JeremyFaulkner测试Torben完全重写后的eclipse3端口.md
+            - 8.6.12-2004年11月26日Ben在FreeBSD53RELEASEp1上编译jdk14时HotSpot崩溃.md
+            - 8.6.13-2005年2月19日回复解释不加cacerts就没有任何SSL连接可用.md
+            - 8.6.14-2005年3月6日ThomasLange报tomcat加apache与mod_jk前端exec不返回.md
+            - 8.6.15-2005年11月10日Android装好JDK15后在amd64装Eclipse失败.md
+            - 8.6.16-2005年9月23日JeanBaptisteQuenot报Eclipse在GTK下窗口显示空白.md
+            - 8.6.17-2006年6月8日MikhailTeterin报FreeBSDamd6461上linuxfirefox配sunjdk14插件问题.md
+            - 8.6.18-2006年11月5日KirbyKuehl补充firefox15与firefox20并存时的Java插件问题.md
+            - 8.6.19-2006年11月29日改为针对xulrunner库编译之后eclipse的内置浏览器已经可用.md
+            - 8.6.20-2007年12月14日openoffice在63PRERELEASE报符号未定义Java降级后消失.md
+            - 8.6.21-2007年2月7日指出sunsecuritykrb5internalUDPClient类没有提供close方法.md
+            - 8.6.22-2007年7月5日WalterVaughan回复同一线程称自己在双四核机器上把内存从4G加到8G.md
+            - 8.6.23-2007年6月27日FreeBSD用户询问diablojre与diablojdk的amd64Firefox插件现状.md
+            - 8.6.24-2007年5月17日MarkLinimon把PR112729责任人由freebsdjava转给glewis.md
+            - 8.6.25-2007年11月17日Huff称自己无法像NickJohnson那样夸16配Tomcat6好用.md
+            - 8.6.26-2007年10月10日CFLAGS加fnotreevrp后可成功构建jdk131p9_8.md
+            - 8.6.27-2007年9月15日os_sleep补丁疑为绕开Solaris内核不让其出问题.md
+            - 8.6.28-2008年4月5日Rogers回信向Miller致谢说把数据段ulimit调低后问题解决.md
+            - 8.6.29-2008年9月3日确认用JDK16的源码重新构建后可稳定复现IPv4mapped地址问题.md
+            - 8.6.30-2009年3月3日他确认可复现netbeansconf的netbeans_jdkhome配置问题.md
+            - 8.6.31-2009年5月20日jdk16的源码jar校验和不匹配.md
+            - 8.6.32-2009年9月21日更换到Nehalem平台后Eclipse在diablojdk下反复崩溃.md
+            - 8.6.33-2010年1月4日openjdk7端口引导JDK的探测逻辑存在明显缺陷.md
+            - 8.6.34-2010年5月21日JungukKim回复说openjdk6b19_1抓取问题应由他的提交修复.md
+            - 8.6.35-2010年9月23日Rob指出OpenJDK不包含comsun开头的类包.md
+            - 8.6.36-2011年6月2日Stefan报告82STABLE构建eclipse362时jar解包SHA256不匹配.md
+            - 8.6.37-2011年9月6日Greg就axis2新端口留言谈库风格jar装入JAVAJARDIR.md
+            - 8.6.38-2012年4月20日用户报告补丁对pomxml三处修改被拒extract与patch构建失败.md
+            - 8.6.39-2012年2月5日用户报告升级到swtdevel371后Vuze多个窗口恢复正常.md
+            - 8.6.40-2012年5月14日维护者回应openjdk6构建因缺x86_64ad目标中止的问题.md
+            - 8.6.41-2013年2月19日提交新补丁已在九点一与八点二稳定版多架构构建通过.md
+            - 8.6.42-2013年7月12日有用户记录该问题在后续版本依然存在未随版本更新修复.md
+            - 8.6.43-2013年6月20日说明部分接口尚缺实现建议先做占位实现保证可被正常调用.md
+            - 8.6.44-2013年5月25日指出两版本源码均写死命令路径关闭打印子系统后命令缺失.md
+            - 8.6.45-2014年12月1日Jenkins自带的JNA库未包含FreeBSD修复导致libpam模块失效.md
+            - 8.6.46-2016年4月26日缺陷单208553收到huanghwh补充程序从http拉取九千频道波形.md
+            - 8.6.47-2015年4月27日PaulPathiakis贴出FreeBSD10x配OpenJDK装OpenNMS的wiki初稿.md
+            - 8.6.48-2016年2月2日JDK9在FreeBSD上运行时触发SIGBUS信号.md
+            - 8.6.49-2016年1月2日Bug205229讨论openjdk8的getSystemCpuLoadstub实现.md
+            - 8.6.50-2016年7月28日JDK7在FreeBSD90上构建失败并伴随时间戳异常.md
+            - 8.6.51-2016年9月30日openjdk8编译失败于NetworkInterface文件if_snd字段类型不完整.md
+            - 8.6.52-2018年1月18日该提交合入上游LLVMr322623变更使X86指令前缀能够作为独立指令节点.md
+            - 8.6.53-2019年4月21日openjdk8的8u212关闭FONTCONFIG后configure仍查fontconfig.md
+            - 8.6.54-2019年8月13日openjdk111104+112构建上运行JIRA831服务启动与页面访问正常.md
+            - 8.6.55-2019年8月30日提交510301在openjdk12端口加入aarch64架构支持.md
+            - 8.6.56-2019年3月18日Klaus回复拉取请求已合并并指出引导JDK内含demo可精简.md
+            - 8.6.57-2021年5月14日commithook通报Urankar提交1025536a修复openjdk8的armv6与armv7构建.md
+            - 8.6.58-1998年1月28日NateWilliams自述仅完成构建主要功劳属于Damon与Keith.md
+            - 8.6.59-1998年2月12日SteveByrne指出Sun在Solarisx86上也有此问题所以仍是缺陷.md
+            - 8.6.60-1998年3月4日DanBusarow答复XiGMotif20在22.5stable上的可用性询问.md
+            - 8.6.61-1998年4月1日AdrianGoins在FreeBSD225SNAP上配置Apache与jserv.md
+            - 8.6.62-1999年4月8日Kaffe即将发布新版本FreeBSD现有的10b3移植版本过于陈旧应改用快照.md
+            - 8.6.63-1999年6月8日Mittelstaedt说在FreeBSD3x上成功构建jdk12引导版.md
+            - 8.6.64-1999年12月24日Ben在FreeBSD228上用AOUT版JDK118运行jdb调试.md
+            - 8.6.65-2000年4月1日Software2GoMotif在FreeBSD上运行还缺libXp扩展库链接.md
+            - 8.6.66-2000年5月24日默认fontproperties采用JDK自带Lucida字体回退为Courier.md
+            - 8.6.67-2000年10月29日MaxKhon反问对方究竟想修正什么并引述libgcc未做动态构建.md
+            - 8.6.68-2001年1月16日TheHermitHacker贴出jdk12beta打包阶段的构建日志.md
+            - 8.6.69-2001年2月23日Nate握有BSDi构建的JDK120补丁光盘因法律问题分发悬置.md
+            - 8.6.70-2001年6月15日提问者问源码编译Apache另装JDK与MySQL的机器能否直接装JDBC端口.md
+            - 8.6.71-2001年7月18日KeesJan把问题归因于Linuxulator加载库时重排路径.md
+            - 8.6.72-2001年8月20日BrianSkrab详述用compatlinux的cc带JDKinclude编译JNI目标码.md
+            - 8.6.73-2001年8月30日Uwe说AWT的insets概念对X11陌生X11里insets指窗口装饰边距.md
+            - 8.6.74-2001年9月22日添加native参数时无法找到JIT编译器.md
+            - 8.6.75-2001年10月14日Greg宣布patchset5加入NetBSD支持greenthreads内核稳固.md
+            - 8.6.76-2001年11月28日编译208版本源码非J2EE的JDBC2类均可构建但旧JDBC1类无法编出.md
+            - 8.6.77-2001年12月12日选择pthreads方案的主要原因是HotSpot虚拟机对其有依赖.md
+            - 8.6.78-2002年1月3日作者在FreeBSD44上用131的AudioClip播放WAV文件永久等待.md
+            - 8.6.79-2002年1月24日作者在FreeBSD44与jdk131p5下发现getHostName令程序挂起.md
+            - 8.6.80-2002年2月16日开启调试模式编译Mozilla会稳定触发插件加载失败.md
+            - 8.6.81-2002年2月20日经ports cvsup更新后证实判断正确构建仍因缺gtk123依赖失败.md
+            - 8.6.82-2002年3月13日作者更新到patchset6后原生jdk131仍显示GMT+0600.md
+            - 8.6.83-2002年6月27日BillHuey认为HotSpot核心代码已足够成熟便于新人参与维护.md
+            - 8.6.84-2002年7月10日EddyYoung报告patchset6构建JDK131时JAVA_REQUEST_PLUGIN未声明.md
+            - 8.6.85-2002年8月14日BillHuey回复Huangwenhui关于Threadsleep异常缓慢.md
+            - 8.6.86-2002年8月27日ArchieCobbs反问含原生库的JAR该如何归类.md
+            - 8.6.87-2002年9月21日BrianKorver报告在tomcat下运行webapp抛出AbstractMethodError.md
+            - 8.6.88-2002年10月15日DaveGlowacki指出linuxsunjdk122不含javaxnaming类.md
+            - 8.6.89-2002年10月26日MichaelMercer说在gdb输入where后拿到回溯.md
+            - 8.6.90-2002年10月31日AlexWilkinson追问升级流程.md
+            - 8.6.91-2002年11月15日Greg发布JDK14适配FreeBSD的首批补丁集.md
+            - 8.6.92-2002年11月25日Alexey推测gethostbyaddr_r函数被动态链接器错误解析.md
         - 8.7-BSD 的 shell 家族：Thompson、Bourne 与 C shell
             - 8.7.1-Edman分享经telnet检索Archie的shellonelinerArch.md
             - 8.7.2-mawk097版1991年4月由Brennan署名发布是依AhoKernigha.md
             - 8.7.3-C shell（csh）：Bill Joy 与 2BSD 的贡献.md
             - 8.7.4-tcsh、bash、ksh、zsh：多 shell 生态与 Ports.md
-            - 8.7.5-年10月14日DanBernstein主张把POSIX调用视作系统调用即便不在内.md
-            - 8.7.6-年9月4日MichaelMeissner接续PaulVixie称HP在Syste.md
-            - 8.7.7-年7月17日AndyTannenbaum在重新装入以太网代码时临时以反引号包裹g.md
+            - 8.7.5-1990年10月14日DanBernstein主张把POSIX调用视作系统调用.md
+            - 8.7.6-1990年9月4日MichaelMeissner接续PaulVixie称HP在SystemV集成上优于Sun.md
+            - 8.7.7-1984年7月17日AndyTannenbaum在重新装入以太网代码时临时以反引号包裹grepnetload.md
             - 8.7.8-DougGwyn就此前讨论中再造一份sh的提法指出argv0与可执行文件的路径名.md
             - 8.7.9-PaulHarsha答复指出sh中then必须另起一行把then与if写在同一行.md
             - 8.7.10-Lubinsky指出cpdevnull加文件名一次只能处理一个文件遂给出存留已久.md
             - 8.7.11-针对询问more工具源码所在处的提问建议直接改用less并说明可在uunet等站.md
-            - 8.7.12-年4月19日HaL计算机系统的SunilSavkar为setdV17与mark提.md
+            - 8.7.12-1992年4月19日HaL计算机系统的SunilSavkar为setdV17与mark提交手册页补丁.md
             - 8.7.13-自述其读者为bash文档见其中所述特性更近Cshell而非Bourneshell.md
             - 8.7.14-以药品专利相反问并答称是谓那确属你的财产可自由处置又称此事已偏离正题过远请后续讨.md
-            - 8.7.15-年2月4日Intergraph英国的NikSimpson就BillBirch的面.md
-            - 8.7.16-年8月15日DavidAWillcox先致歉于自己误把原拟私复的答案贴至全网继答.md
+            - 8.7.15-1991年2月4日Intergraph英国的NikSimpson就BillBirch的面向对象shell回应.md
+            - 8.7.16-1990年8月15日DavidAWillcox先致歉误贴全网继答MattWette问POSIX2无ld.md
             - 8.7.17-向列表询问有无可解析ksh脚本并生成例程调用树的自由软件希望能为每个例程列出其所.md
             - 8.7.18-Lewis论两种回显写法分属BSD与SV流派并称SunOS近版具系统五兼容特性C.md
             - 8.7.19-一九九一年五月六日DavidFenyes询问是否存在检验Bourneshell兼.md
-            - 8.7.20-年6月17日Quarterman自述提交tar对cpio提案修订版纳入六月十六日.md
+            - 8.7.20-1987年6月17日Quarterman自述提交tar对cpio提案修订版.md
             - 8.7.21-BradTaylor从苹果机器ftp获得tcsh并替换系统口令文件中的csh后登.md
             - 8.7.22-Purdue大学计算中心的PiperKeairnes询问教育采购者能为AUX20.md
             - 8.7.23-AUX201串口无getty时stty改波特率无效PaulCampbell称只要.md
             - 8.7.24-MarceloGallardo详述根因他用cu占着tty1呼出时轮询脚本又取该端.md
-            - 8.7.25-990年10月10日ChrisTorek说明43BSDrenofind重写可再分.md
+            - 8.7.25-1990年10月10日ChrisTorek说明43BSDrenofind重写可再分发版用POSIXfts例程.md
             - 8.7.26-DaveBraun解释shell脚本不能带suid的根因脚本不是被执行而是被仿真.md
             - 8.7.27-RickFarris就ksh是否属公有领域直接答以否定并指AspenTechno.md
             - 8.7.28-GuyHarris认为与其改写带缺陷的make不如在Makefile里显式设置S.md
@@ -680,7 +680,7 @@
             - 8.8.7-参与者报告在SunOS41与403上以SIGIO中断select2等待共享内存数.md
             - 8.8.8-回答其用运行级4解决给出在crontab触发init4由inittab依序执行r.md
             - 8.8.9-讨论应用程序移植到SCOODT后偶发核心转储是否由交换空间不足引起并给出交换空间.md
-            - 8.8.10-询问dbx如何得到交给ptrace的地址例如按行号设断点时如何算出该行首条指令的.md
+            - 8.8.10-询问dbx如何得到交给ptrace的地址例如按行号设断点时如何算出该行首条指令的地址.md
             - 8.8.11-回答如何在43BSD上取得描述符可读字节数指出该系统本身就实现了FIONREAD.md
             - 8.8.12-报告用HDB锁文件与uuxqt互斥时遇到的进程号失效判断难题指出该方案本身难以正.md
             - 8.8.13-认为从主端读取伪终端时并不存在EOF概念说明其设计意图是模拟串口另一侧的数据流引.md
@@ -714,10 +714,10 @@
             - 8.8.41-DavidElliott更正此前说法指出不能通过exec复制描述符须在临时文件删.md
             - 8.8.42-作者说明SystemV消息队列需在配置文件中加入IPCMESSAGE选项并指出S.md
             - 8.8.43-作者澄清其意是genericSVR3默认不含可供多连接服务器使用的本地IPC机制.md
-            - 8.8.44-分析accounting报告数值溢出的原因指出comp_t是非标准类型需要解压并.md
+            - 8.8.44-分析accounting报告数值溢出的原因指出comp_t是非标准类型需要解压并给出解压的临时办法.md
             - 8.8.45-依据自身两年使用经历比较两款产品称缺陷各不相同内存较小时表现较好内存增大后逐步反.md
             - 8.8.46-诊断Altos上uugetty工作不正常的原因指出其cu不创建锁文件且调制解调器.md
-            - 8.8.47-说明创建layer的三种途径即以鼠标调用宿主常驻代理例程或在终端本地程序中进行并.md
+            - 8.8.47-说明创建layer的三种途径即以鼠标调用宿主常驻代理例程或在终端本地程序中进行并逐一点评.md
             - 8.8.48-RichardHargrove询问PDP11浮点格式的细节列出符号位八位指数与二.md
             - 8.8.49-RobertCWhiteJr反驳Allbery认为tar与cpio也不保留fil.md
             - 8.8.50-指出只有实现本身有缺陷的cat才需要u选项良好实现从中得不到任何好处引用时按L4.md
@@ -735,11 +735,11 @@
             - 8.8.62-转述RonHitchens的修复办法把tip二进制中的调制解调器初始化串由S0=.md
             - 8.8.63-RICK提出标准输入输出缓冲在管道forkdupexec组合下的行为问题描述父子.md
             - 8.8.64-ChrisTorek认为弃用标准地址虽可行却非最优主张直接修autoconfc缺.md
-            - 8.8.65-greywolf转述Litmaath关于分流可行且stdin不可重读的观点后转而.md
+            - 8.8.65-greywolf转述Litmaath关于分流可行且stdin不可重读的观点.md
             - 8.8.66-JohnRowe解释1752年9月英国才采用格里历人们在9月2日星期三就寝14日.md
             - 8.8.67-JohnWoods指出UNOS操作系统已把ksh作为标准命令解释程序随系统提供原.md
             - 8.8.68-DougGwyn反驳管道中缓冲标准错误的说法指出标准错误本为不与正常输出混杂而设.md
-            - 8.8.69-DavidCollierBrown称手里有一份名为name的程序似能规范化路径并.md
+            - 8.8.69-DavidCollierBrown称手里有一份名为name的程序似能规范化路径并遍历符号链接得到绝对路径.md
             - 8.8.70-PaulPlaceway介绍CMU的可分离pty设计说明一个pty不与固定终端绑.md
             - 8.8.71-JimCottrell引DougGwyn称第八版UNIX中名为等号的文件有用自称.md
             - 8.8.72-MarcRouleau指出用pwd拼接argv0还原完整路径只在显式指定相对或绝.md
@@ -773,7 +773,7 @@
             - 8.8.100-判断sendmail段错误的原因是冻结配置文件与当前二进制不匹配建议删除该文件后.md
             - 8.8.101-以备份恰在夏令时切换点被覆盖为例主张UNIX的时间记录应统一采用世界时引用时按L.md
             - 8.8.102-说明为测试新套接字域改造tftp后父子两进程从同一端口取包归属随机据此怀疑内核按.md
-            - 8.8.103-该帖回忆在部分旧系统上判断普通文件时除用S_IFMT掩码外还须额外测试掩码为零并.md
+            - 8.8.103-该帖回忆在部分旧系统上判断普通文件时除用S_IFMT掩码外还须额外测试掩码为零.md
             - 8.8.104-MaartenLitmaath指出#行只能带一个选项且限三十二个字符举例#bin.md
             - 8.8.105-回顾netos建组倡议的经过称两个月前征集到约三十份回应却被指程序不当引用时按L.md
             - 8.8.106-EdArnold汇总经分组网编辑文件的问题与社区经验涉及Uninet分片以太网避.md
@@ -784,8 +784,8 @@
             - 8.8.111-说明以swapon启用交换区前须先经config以swapon子句将该交换区编入.md
             - 8.8.112-Casey建议参考Muller的LoadControlSystem可按负载均值控.md
             - 8.8.113-chuck更正RJE原询所用板为ASTAdvancedCommunication.md
-            - 8.8.114-年5月18日SpirosTriantafyllopoulos为RTIngres须.md
-            - 8.8.115-年6月18日戈尔称KERNEL未定义时paramh改包含machine路径致UP.md
+            - 8.8.114-1985年5月18日SpirosTriantafyllopoulos为RTIngres须内核改动辩护.md
+            - 8.8.115-1985年6月18日戈尔称KERNEL未定义时paramh改包含machine路径.md
             - 8.8.116-ChrisTorek称select与SIGCHLD同用存在无可规避竞态认为sel.md
             - 8.8.117-KeldJ述贝尔独立troff一周内在AgfaP400配好含eqn与tbl建议D.md
             - 8.8.118-RichardMathews述尖括号重定向以读写模式开文件实测多版本Bourne.md
@@ -806,7 +806,7 @@
             - 8.8.133-作者RandyWelch自述已把大部分GNU工具移植到PlexusP35上的Sy.md
             - 8.8.134-JoachimRiedel自述Coherent310自带tar解GNUtar包致.md
             - 8.8.135-RayShwake解释vi与tar因程序打开文件读取而更新访问时间而ls列名仅访.md
-            - 8.8.136-年10月12日BruceHimebaugh汇总Altos与NCR对比指NCR宣布.md
+            - 8.8.136-1990年10月12日BruceHimebaugh汇总Altos与NCR对比.md
             - 8.8.137-AndrewHume报告1990年9月X3B111莫里山会议进展涉压缩登记扩展属.md
             - 8.8.138-背景性材料证据等级L2来源historical_claimsduckdbcla.md
         - 8.9-UNIX 版本的考古学方法：源码考古、版权归属与版本命名
@@ -814,13 +814,13 @@
             - 8.9.2-Pardee分析IBM以99365为最晚日期1999年底大量磁盘与磁带文件会被误.md
             - 8.9.3-源码考古：TUHS 与 Unix 谱系重建的方法论基础.md
             - 8.9.4-ThomasKinsman询跨架构与跨操作系统同步开发工具他在SunMips等架.md
-            - 8.9.5-年10月09日DaveSill答同问荐用GNUEmacs经ftp远程编辑配And.md
+            - 8.9.5-1990年10月09日DaveSill答同问荐用GNUEmacs经ftp远程编辑.md
             - 8.9.6-报告者称nroff多页输出时后续页不顶格且逐页加重怀疑垂直间距折算整数行距时累加.md
             - 8.9.7-LyleMcElhaney报告把System3的mm宏包移植到跑42的VAX后除.md
             - 8.9.8-报告者解释其步骤本就要求先取得inumber并让fsck不重连该inode且lo.md
-            - 8.9.9-年10月6日Sicherman指出显示设备会把输出转向使反斜杠进入copy模式粗.md
+            - 8.9.9-1984年10月6日Sicherman指出显示设备会把输出转向使反斜杠进入copy模式.md
             - 8.9.10-Robbins亲述在VAX运行41BSD时m4遇shift一词报错置于引号中即可.md
-            - 8.9.11-Davidson自述先前改动只在带调试信息时有效真正的问题是把calloc返回的.md
+            - 8.9.11-Davidson自述先前改动只在带调试信息时有效真正的问题是把calloc返回的指针递增后再交给cfree.md
             - 8.9.12-Kelem自述提供picman的手册更新补丁可经补丁程序应用补充arcradar.md
             - 8.9.13-自述柯达公司只在源码中放一个staticunsignedchar版权字符串数组称.md
             - 8.9.14-NickChristopher发布ln03plot新版说明旧版驱动实为AT&T软.md
@@ -837,17 +837,17 @@
             - 8.9.25-作者转述InfoWorld报道AT&T宣布成立独立于OSF的V4开发者组织双方产.md
             - 8.9.26-回答GNUEmacs是否也有类似钩子指出它存在同类风险并给出在启动文件中设置变量.md
             - 8.9.27-设想用令牌式描述符重构链接等调用说明多数常规调用都能改由描述符版本完成引用时按L.md
-            - 8.9.28-指出mknod依SVID属于合法调用HP的实现存在缺陷并讨论open对命名管道的.md
+            - 8.9.28-指出mknod依SVID属于合法调用HP的实现存在缺陷并讨论open对命名管道的行为差异.md
             - 8.9.29-争论UNIX商标的归属指出Xenix等系统并非AT&T定义的UNIX称UNIX是.md
             - 8.9.30-GeoffClare反驳把同名符号冲突视为难以捕获的观点以lint示例说明这类重.md
-            - 8.9.31-年4月26日讨论UNIX下的反删除工具指出已有多个公有领域或商业程序但缺少类似反.md
-            - 8.9.32-年6月6日BrendanKehoe就traceroute提出改造思路对getho.md
-            - 8.9.33-年RobPike亲述Blit的建造缘起与BartLocanthi合作为获得廉价高.md
+            - 8.9.31-1991年4月26日讨论UNIX下的反删除工具指出已有多个公有领域或商业程序.md
+            - 8.9.32-1991年6月6日BrendanKehoe就traceroute提出改造思路.md
+            - 8.9.33-1984年RobPike亲述Blit的建造缘起.md
         - 8.10-PWB／UNIX 运维安全实践与商用分支的安全分野
             - 8.10.1-PWB／UNIX 1.0 的运维安全实践——rsh、SCCS、RJE 账号管理.md
             - 8.10.2-System V TCB 与 TCSEC 评估的史源意义.md
-            - 8.10.3-年5月19日DanBernstein用图说明硬连线tty应有的工作方式让gett.md
-            - 8.10.4-OlavKolbu认同write消息应标注来源但主张改为可选项由接收端自行决定并.md
+            - 8.10.3-1991年5月19日DanBernstein用图说明硬连线tty应有的工作方式.md
+            - 8.10.4-OlavKolbu认同write消息应标注来源但主张改为可选项由接收端自行决定.md
             - 8.10.5-DanielKlein报告在USENIX安全研讨会上公布的口令破解结果从一万三千.md
             - 8.10.6-DougMcCallum回答把ftp改成仿rloginrsh是否安全指出其中有若.md
             - 8.10.7-RandalSchwartz反对记录登录失败全部击键的做法认为这是重大安全漏洞建.md
@@ -858,7 +858,7 @@
             - 8.10.12-讨论纸质口令卡片的泄露风险指出旁观者更可能直接偷看键入过程认为该方案并未真正提升.md
             - 8.10.13-讨论口令文件的保护问题指出任何用户都可能读取并复制其中的加密口令以伺机破解引用时.md
             - 8.10.14-报告CIRRUS网络自动柜员机的PIN每笔交易都向发卡行验证且数据流量以DES加.md
-            - 8.10.15-GuyHarris说明在SunOS40上指定负uid的做法可用因为pw_uid被.md
+            - 8.10.15-GuyHarris说明在SunOS40上指定负uid的做法可用.md
             - 8.10.16-介绍自己给atrunc打的两行补丁使at作业在setuid调用前若将要切换到ro.md
             - 8.10.17-介绍把DES向量化的尝试说明用一次处理六十四组加密替代单组向量化的做法引用时按L.md
             - 8.10.18-GPavlov引述NCR的说法称其操作系统磁盘接口代码在设计上排除了非认证磁盘以.md
@@ -868,71 +868,71 @@
             - 8.10.22-MikeWescott报告SystemV下getty与login有时会丢失控制终.md
             - 8.10.23-HenrySpencer说明本部门的守护进程会检查打开是否成功且描述符是否正确反.md
             - 8.10.24-PatIurilli报告在3b2控制台口拆装ACU时碰掉屏蔽地线导致login不.md
-            - 8.10.25-年3月7日科克斯同意已知漏洞更易获修但binaryonly站点即便想做也修不了刊.md
+            - 8.10.25-1985年3月7日科克斯同意已知漏洞更易获修但binaryonly站点即便想做也修不了.md
             - 8.10.26-ChrisTorek释maxusers不是登录人数上限而是预估的同时活跃人数据此.md
             - 8.10.27-SecureWare的CEOMcChesney回应Haugh指责最小权限并非C2.md
-            - 8.10.28-年6月30日EdwardSchwab自述其大学提供无限制的访客登录设想在etcp.md
-            - 8.10.29-年4月21日BrentChapman给出阻止非职员把工作站转入单用户态的sqc程.md
+            - 8.10.28-1991年6月30日EdwardSchwab自述其大学提供无限制的访客登录.md
+            - 8.10.29-1989年4月21日BrentChapman给出阻止非职员把工作站转入单用户态的sqc程序.md
             - 8.10.30-指出该专利文本可见于Wood与Kochan合著的UNIXSystemSecuri.md
-            - 8.10.31-年3月30日Gretzky报告chfn存在getpwent溢出缺陷可造出特权空口.md
-            - 8.10.32-年10月14日mather称其所在站点做同样的事但清理步骤改为条件执行先用las.md
-            - 8.10.33-年3月02日ChrisTorek论access2之竞态洞指42与43BSD可反复.md
-            - 8.10.34-年1月04日述个人工作站各人握有本机root口令su后NFS不授予完整访问再su.md
-            - 8.10.35-年6月20日他给出29bsd的passwd即使正确设置口令也返回非零退出状态之补.md
-            - 8.10.36-年9月20日Cipriani答binpasswd显式把etcpasswd改成04.md
+            - 8.10.31-1989年3月30日Gretzky报告chfn存在getpwent溢出缺陷可造出特权空口令条目.md
+            - 8.10.32-1984年10月14日mather称其所在站点做同样的事但清理步骤改为条件执行.md
+            - 8.10.33-1988年3月02日ChrisTorek论access(2)之竞态洞指42与43BSD可反复互换.md
+            - 8.10.34-1989年1月04日述个人工作站各人握有本机root口令su后NFS不授予完整访问.md
+            - 8.10.35-1984年6月20日他给出29bsd的passwd即使正确设置口令也返回非零退出状态之补丁.md
+            - 8.10.36-1988年9月20日Cipriani答binpasswd显式把etcpasswd改成0444.md
         - 8.11-Perl、Python 与 Ports 的共生生态
-            - 8.11.1-年8月16日linimon于20090816把ports137859那个跨多端口.md
-            - 8.11.2-年7月16日lwhsu于20090716处理ports136799该PR为给ma.md
-            - 8.11.3-年3月26日pav于20090326把ports133081关于PYEASYIN.md
-            - 8.11.4-年7月19日rm把ports180218由open转feedback称现在无法复.md
-            - 8.11.5-年10月27日KurtJaeger回复ports183108请求关闭该PR说明其.md
-            - 8.11.6-年11月21日bugzilla转发AntoineBrodin就Bug194969.md
-            - 8.11.7-年12月16日MarcusvonAppen在Bug195515说除其他报错外还看.md
-            - 8.11.8-年1月17日TatsukiMakino在bugzilla197011评论15中回.md
-            - 8.11.9-年3月21日KubilayKocak把新端口申请PR198704wwwpycol.md
-            - 8.11.10-年5月29日JB称已将v10问题系统升级到已可运行的r281990CURRENT.md
-            - 8.11.11-年9月15日JohannSchweigl表示别只替Cray流泪通用UNIX上有R.md
+            - 8.11.1-2009年8月16日linimon把ports137859批量去硬编码py前缀补丁转freebsdpython.md
+            - 8.11.2-2009年7月16日lwhsu处理ports136799修复mailpymilter的Python版本要求.md
+            - 8.11.3-2009年3月26日pav把ports133081的PYEASYINSTALLARCHDEP问题PR转组.md
+            - 8.11.4-2013年7月19日rm把ports180218由open转feedback称无法复现.md
+            - 8.11.5-2013年10月27日KurtJaeger回复ports183108请求关闭该PR.md
+            - 8.11.6-2014年11月21日bugzilla转发AntoineBrodin的Bug194969exp-run结果.md
+            - 8.11.7-2014年12月16日MarcusvonAppen在Bug195515说还看到Qemuunsupportedioctl提示.md
+            - 8.11.8-2018年1月17日TatsukiMakino在bugzilla197011评论15追问改动有无变化.md
+            - 8.11.9-2015年3月21日KubilayKocak把新端口申请PR198704的关键词改为patchready.md
+            - 8.11.10-2015年5月29日JB称已将v10问题系统升级到r281990CURRENT.md
+            - 8.11.11-1989年9月15日JohannSchweigl表示别只替Cray流泪通用UNIX上有REXX.md
             - 8.11.12-主张合理的shell编译器应把shell语言构件转为语义等价的C函数调用并举其脚.md
             - 8.11.13-Siebenmann对1990年代后Unix技术变化趋缓的判断系个人观察未提供系.md
-            - 8.11.14-年12月21日SergeySkvortsov提醒develp5XSLoader本.md
-            - 8.11.15-年2月5日用户JeffreySchilperoord报告SpamAssassin.md
-            - 8.11.16-年5月27日维护者tobez把ports97983升级到312改为feedbac.md
-            - 8.11.17-年9月2日反驳说不用BSDPAN因其依赖管理粗糙只用cpan与cpanp装了数十.md
-            - 8.11.18-年11月24日Noah询问Errno架构不匹配如何解决portinstallp5.md
-            - 8.11.19-年6月4日tobez回复说这个例程在本机可以正常运行怀疑是对方环境的问题请Dem.md
-            - 8.11.20-年2月11日milki以rescompberkeleyedu署名在cpandis.md
-            - 8.11.21-年8月22日ChrisRees认为p5OpenGL构建确实需要一个活跃的X服务决.md
-            - 8.11.22-年12月10日antoine在D1241的MkScriptsqash213行内评.md
-            - 8.11.23-年8月8日jungleBoogie请人把textprocack更新到2101称该.md
-            - 8.11.24-年6月8日KurtJaegerpiatFreeBSDorg在Bug210120d.md
-            - 8.11.25-年5月12日MichelleSullivan报告p5GnuPGInterface.md
-            - 8.11.26-年6月19日onborodin为securityp5CryptOpenSSLCA.md
-            - 8.11.27-年11月5日bugzilla评论中mikhailrokhin称在CURRENTa.md
-            - 8.11.28-年3月18日KhairilYusof说自己无法在FreeBSD5x的Zope端口.md
-            - 8.11.29-年2月21日RobertGogolok回复ChengLungSung于2月20日.md
-            - 8.11.30-年9月21日miwi将PR116456的新端口ircpygozerbot由ope.md
-            - 8.11.31-年2月27日philip回复PR121160关于develviewvc缺少dat.md
-            - 8.11.32-年9月6日VolodymyrKostyrko提交ports137782新增dat.md
-            - 8.11.33-年2月12日MatthiasAndree说已把82PREREL内核机器上的ZFS.md
-            - 8.11.34-年8月11日MatthiasPetermann移植依赖trytond的Pytho.md
-            - 8.11.35-年4月3日JulioMerino回应AntoineBrodin说koobs的py.md
-            - 8.11.36-年3月4日DmitrySivachenko说333升到334后问题依旧makep.md
-            - 8.11.37-年9月17日oz42说他很想彻底卸掉NIS与yp相关组件但即使在src里跑mak.md
-            - 8.11.38-年12月5日KubilayKocak建议短期让swig20提供指向版本化二进制的.md
-            - 8.11.39-年7月13日bugatrgbaznl在RaspberryPiB上编译langpy.md
-            - 8.11.40-年2月1日RuslanMakhmatkhanov提议移除已过期的langpyth.md
-            - 8.11.41-年1月4日KubilayKocak请Rene过问pyclamav是否可删除因为他.md
-            - 8.11.42-年7月10日FukangChen在makeconf设DEFAULT_VERSIO.md
-            - 8.11.43-年11月10日EdwarddAuvergne在缺陷单214209补一句同一项测试.md
-            - 8.11.44-年8月8日KubilayKocak在bug221311逐条挑出Makefile毛.md
-            - 8.11.45-年12月4日MathieuArnold在回复JohnWOBrien的11号评论时.md
-            - 8.11.46-年2月21日JohnWOBrien回复techlists27过时但许多软件仍假设.md
-            - 8.11.47-年10月26日发帖人补充称上游缺陷并非否认是端口缺陷装到冲突文件的端口须为全部冲.md
-            - 8.11.48-年7月28日发帖人回复认可对方提出的可选依赖方案写法建议若涉及性能应在描述中说明.md
-            - 8.11.49-年9月8日RenéThommler承认sqlite3依赖用法此前不了解pytho.md
-            - 8.11.50-年4月17日dewayne自述排查数小时后发现是自己的makeconf配置损坏所.md
-            - 8.11.51-年3月22日GoranMekic自述wwwpywebargs60支持正在推进但尚.md
-            - 8.11.52-年1月16日AntoineBrodin作为portmgr判定该组多端口升级的ex.md
+            - 8.11.14-2005年12月21日SergeySkvortsov提醒develp5XSLoader兼容500503.md
+            - 8.11.15-2006年2月5日JeffreySchilperoord报告SpamAssassin缺MailSPFQuery.md
+            - 8.11.16-2006年5月27日维护者tobez把ports97983升级到312改为feedback.md
+            - 8.11.17-2007年9月2日反驳说不用BSDPAN因其依赖管理粗糙只用cpan与cpanp.md
+            - 8.11.18-2008年11月24日Noah询问Errno架构不匹配如何解决.md
+            - 8.11.19-2009年6月4日tobez回复说该例程在本机正常怀疑是对方环境问题.md
+            - 8.11.20-2011年2月11日milki以rescompberkeleyedu署名在cpandiscuss发起新线程.md
+            - 8.11.21-2012年8月22日ChrisRees认为p5OpenGL构建确实需要活跃X服务.md
+            - 8.11.22-2014年12月10日antoine在D1241的MkScriptsqash213行内评审.md
+            - 8.11.23-2015年8月8日jungleBoogie请人把textprocack更新到2101.md
+            - 8.11.24-2016年6月8日KurtJaeger在Bug210120指出根因是版本号19650大于1982.md
+            - 8.11.25-2016年5月12日MichelleSullivan报告p5GnuPGInterface构建报GnuPGnotfound.md
+            - 8.11.26-2017年6月19日onborodin为securityp5CryptOpenSSLCA提交CRL解析补丁.md
+            - 8.11.27-2018年11月5日mikhailrokhin称在CURRENTrv340151复现dtrace报错问题.md
+            - 8.11.28-2004年3月18日KhairilYusof说自己无法在FreeBSD5x的Zope端口重现49的问题.md
+            - 8.11.29-2007年2月21日RobertGogolok回复接手消息并直接批准develpylxml更新.md
+            - 8.11.30-2007年9月21日miwi将PR116456的ircpygozerbot由open转feedback.md
+            - 8.11.31-2008年2月27日philip回复PR121160问develviewvc缺pyMySQLdb依赖的检测.md
+            - 8.11.32-2009年9月6日VolodymyrKostyrko提交ports137782新增databasespypostgresql.md
+            - 8.11.33-2011年2月12日MatthiasAndree说已把82PREREL内核机器上的ZFS全部移除.md
+            - 8.11.34-2012年8月11日MatthiasPetermann移植依赖trytond的Python模块.md
+            - 8.11.35-2014年4月3日JulioMerino回应AntoineBrodin谈python34非root打包.md
+            - 8.11.36-2014年3月4日DmitrySivachenko说333升到334后问题依旧makepackage报头文件缺失.md
+            - 8.11.37-2014年9月17日oz42说想彻底卸掉NIS与yp组件但makedeleteold仍残留.md
+            - 8.11.38-2015年12月5日KubilayKocak建议短期让swig20提供版本化二进制软链接.md
+            - 8.11.39-2015年7月13日bugatrgbaznl在RaspberryPiB上编译langpython27时ctypes失败.md
+            - 8.11.40-2016年2月1日RuslanMakhmatkhanov提议移除已过期的langpython32端口.md
+            - 8.11.41-2016年1月4日KubilayKocak请Rene过问pyclamav是否可删除.md
+            - 8.11.42-2016年7月10日FukangChen设DEFAULTVERSIONS后python27报SSLv2符号未定义.md
+            - 8.11.43-2016年11月10日EdwarddAuvergne在缺陷单214209补充同一测试在py27numpy上同样失败.md
+            - 8.11.44-2017年8月8日KubilayKocak在bug221311逐条挑出Makefile毛病.md
+            - 8.11.45-2017年12月4日MathieuArnold回复说FLAVORS后无须再设PYTHON_VERSION.md
+            - 8.11.46-2017年2月21日JohnWOBrien回复techlists.md
+            - 8.11.47-2017年10月26日发帖人补充：称上游缺陷并非否认是端口缺陷.md
+            - 8.11.48-2020年7月28日发帖人认可可选依赖方案写法建议涉及性能应在描述中说明.md
+            - 8.11.49-2019年9月8日RenéThommler承认sqlite3依赖用法此前不了解pythonport拆分.md
+            - 8.11.50-2020年4月17日dewayne自述排查数小时后确认是自己的makeconf配置损坏.md
+            - 8.11.51-2020年3月22日GoranMekic自述wwwpywebargs60支持正在推进但尚需时间.md
+            - 8.11.52-2021年1月16日AntoineBrodin判定该组多端口升级exprun结果无误.md
     - 第9章-UNIX 网络协议与工具
         - 9.1-UUCP 与 UNIX 的早期网络化
         - 9.2-从 ARPANET 到 TCP／IP：UNIX 网络协议环境的形成
@@ -971,7 +971,7 @@
             - 11.4.2-BSD 社区对 C++ 的接纳与抵制.md
             - 11.4.3-FreeBSD 内核拒绝 C++ 的工程论证.md
             - 11.4.4-C++ 编译器在 FreeBSD Ports 中的生态.md
-            - 11.4.5-年1月22日报告希望从C或C++服务器调用Java类其可执行文件必须链接libj.md
+            - 11.4.5-2015年1月22日报告希望从C或C++服务器调用Java类其可执行文件必须链接libjvmso.md
             - 11.4.6-Linus Torvalds 对 C++ 的公开发难：1992 年尝试、2004 年 LKML 邮件与 2007 年 Git 选择 C 的理由.md
             - 11.4.7-Linux 内核中 C++ 的实际使用尝试：GCC C++ 化迁移的冲击与内核模块 C++ 的实验.md
             - 11.4.8-Linux 与 BSD 内核语言策略的对比分析.md
@@ -979,52 +979,52 @@
             - 11.5.1-Java 1995 年发布与虚拟机革命.md
             - 11.5.2-FreeBSD Foundation 2005 年获得 Sun Java 二进制许可证.md
             - 11.5.3-要点Sun2006年GPL化JavaOpenJDK2007年开源FreeBSDO.md
-            - 11.5.4-年4月21日GaborPali在2013年4月21日报告Python2x多线程程.md
+            - 11.5.4-2013年4月21日GaborPali报告Python2x多线程程序在线程内无法正确处理信号.md
             - 11.5.5-版主转发原本发于compsourcesd的介绍文章引手册段落称Perl是适于扫描.md
             - 11.5.6-FreeBSD Java 移植的早期尝试与挫折.md
-            - 11.5.7-年9月5日RoarPettersen报其java程序抛javautilzipZi.md
-            - 11.5.8-年4月7日WadeKlaver运行freenet节点时javavm随机出现段错误.md
-            - 11.5.9-年9月30日Alexey答复询问AMD64原生Java支持进展的人目前尚无进展首.md
-            - 11.5.10-年9月8日他把问题报成103051号问题单类别java严重度serious环境为.md
-            - 11.5.11-年3月26日bugmaster汇总freebsdjava名下问题报告严重类共7条.md
-            - 11.5.12-年8月8日Doe说他装上javajdk16端口后问题就解决了虽然启动Tomcat.md
-            - 11.5.13-年7月13日linimon把问题单ports135002的责任人从java组改派.md
-            - 11.5.14-年10月1日作者报告160_03p4版本字体配置显示正常但新装的openJava.md
-            - 11.5.15-年5月30日请求其他维护者协助合并javacommapi与javacommapi.md
-            - 11.5.16-年11月26日报告Firefox41下的Java测试页出现signedJNLP与.md
-            - 11.5.17-年12月4日ktrace显示java尝试绑定1%29300时返回errno49地.md
-            - 11.5.18-年7月14日r445802将bsdjavamk版本校验改为POSIX正则并用ma.md
-            - 11.5.19-年1月18日Alex反驳报件人把java规范与某平台实现混为一谈指出Java8与.md
-            - 11.5.20-年3月3日由于Java编译器是用Java写成的引导构建必须事先安装一个现有的JD.md
-            - 11.5.21-年9月25日他移植libjava时发现linux_threadsc用了FreeB.md
-            - 11.5.22-年1月28日修改java_wrapper将DEFAULT_THREADS_FLA.md
-            - 11.5.23-年4月24日免费注册JavaDevelopersConnection即可获得三票.md
-            - 11.5.24-年6月1日Ernst在FreeBSD43RELEASE上提交新端口javajdo.md
-            - 11.5.25-年8月25日Shudo报告SunJDK131forLinux版本即便设了JAVA.md
+            - 11.5.7-2003年9月5日RoarPettersen报java程序抛javautilzipZipException.md
+            - 11.5.8-2004年4月7日WadeKlaver运行freenet节点时javavm随机出现段错误.md
+            - 11.5.9-2004年9月30日Alexey答复询问AMD64原生Java支持进展的人.md
+            - 11.5.10-2006年9月8日他把问题报成103051号问题单类别java严重度serious.md
+            - 11.5.11-2007年3月26日bugmaster汇总freebsdjava名下问题报告严重类共7条.md
+            - 11.5.12-2008年8月8日Doe说他装上javajdk16端口后问题就解决了.md
+            - 11.5.13-2009年7月13日linimon把ports135002责任人从java组改派.md
+            - 11.5.14-2009年10月1日作者报告160_03p4版本字体配置正常但openJava6字体难看.md
+            - 11.5.15-2014年5月30日请求其他维护者协助合并javacommapi两端口的staging更新.md
+            - 11.5.16-2015年11月26日报告Firefox41下Java测试页signedJNLP与启动JNLP不匹配.md
+            - 11.5.17-2017年12月4日ktrace显示java绑定本地v6地址9300端口时返回errno49.md
+            - 11.5.18-2017年7月14日r445802将bsdjavamk版本校验改为POSIX正则.md
+            - 11.5.19-2019年1月18日Alex反驳报件人把java规范与平台实现混为一谈.md
+            - 11.5.20-1999年3月3日Java引导构建须先装现有JDK道理同编译C需先有C编译器.md
+            - 11.5.21-1999年9月25日他移植libjava发现linux_threadsc用了FreeBSD没有的SIGPWR.md
+            - 11.5.22-2000年1月28日修改java_wrapper把DEFAULT_THREADS_FLAG改为green.md
+            - 11.5.23-2000年4月24日免费注册JavaDevelopersConnection即可获得三张RFE投票.md
+            - 11.5.24-2001年6月1日Ernst在FreeBSD43RELEASE上提交javajdom端口变更请求.md
+            - 11.5.25-2001年8月25日Shudo报告SunJDK131forLinux设了JAVA_COMPILER也不加载JIT.md
             - 11.5.26-Perl 的诞生与 BSD 系统的早期采用.md
             - 11.5.27-Python 在 FreeBSD 上的生态演进.md
             - 11.5.28-Ruby 与 FreeBSD 的共生关系.md
             - 11.5.29-Tcl／Tk 与其他脚本语言.md
             - 11.5.30-就旧版awk之限建议改用自由软件的新版awk或perl并指出后者为各awk的真正.md
-            - 11.5.31-年11月23日AlexanderLeidinger追查47上perl585的lo.md
-            - 11.5.32-年7月19日DougBarton参与bsdperlmk讨论追问linimon说I.md
-            - 11.5.33-年9月17日他回复PR150563给langp5JavaScriptSpider.md
-            - 11.5.34-年7月20日Bapt质疑为何perl使用带版本号的vendorbinvendor.md
-            - 11.5.35-年5月18日hvopm报告Perl从512升到514后构建develp5Deve.md
-            - 11.5.36-年9月29日milki确认原因BSDPAN在perl模块路径里排得更靠前所以会先.md
-            - 11.5.37-年8月25日AndrejZverev判断p5GDGraph构建失败与perl51.md
-            - 11.5.38-年1月5日mat在Bug196518里说明端口树支持的Perl版本是516518.md
-            - 11.5.39-年10月26日alexbl提议成立python@小组维护Python端口及bsd.md
-            - 11.5.40-年6月13日Colin称Stackless可作为CPython的直接替换但Twi.md
-            - 11.5.41-年5月2日IonMihaiTetcu报告切换到python27后upgrades.md
-            - 11.5.42-年6月14日Gene报告81AMD64上升级ports装上python273_2.md
-            - 11.5.43-年12月19日MarcusvonAppen说明移除langpython后还需让p.md
-            - 11.5.44-年7月11日JungukKim确认关闭PTH选项重编python27是已知变通法.md
-            - 11.5.45-年1月2日KubilayKocak把langpython27关LIBFFI选项后.md
-            - 11.5.46-年3月10日报告者ohartman在10STABLE沙箱里编langpython.md
-            - 11.5.47-年10月21日发帖人请求审阅他贴出一份补丁以新建langpython38端口说明.md
-            - 11.5.48-年10月29日SunpoetPoChuanHsieh认为在Python27到达E.md
-            - 11.5.49-年4月13日DaniloGBaio指出dnspydnspython被众多端口依赖.md
+            - 11.5.31-2004年11月23日AlexanderLeidinger追查47上perl585的locale问题.md
+            - 11.5.32-2010年7月19日DougBarton参与bsdperlmk讨论追问INDEX提速测试.md
+            - 11.5.33-2010年9月17日他回复PR150563给langp5JavaScriptSpiderMonkey提补丁.md
+            - 11.5.34-2011年7月20日Bapt质疑perl使用带版本号的vendorbin等目录.md
+            - 11.5.35-2011年5月18日hvopm报告Perl从512升到514后构建develp5DevelPPPort出问题.md
+            - 11.5.36-2011年9月29日milki确认BSDPAN在perl模块路径排前先加载其自带EUMM.md
+            - 11.5.37-2013年8月25日AndrejZverev判断p5GDGraph构建失败与perl512弃用无关.md
+            - 11.5.38-2015年1月5日mat在Bug196518里说明端口树支持的Perl版本.md
+            - 11.5.39-2006年10月26日alexbl提议成立python@小组维护Python端口及bsdpythonmk.md
+            - 11.5.40-2007年6月13日Colin称Stackless可作CPython直接替换但Twisted等库不可用.md
+            - 11.5.41-2011年5月2日IonMihaiTetcu报告切换到python27后upgradesitepackages目标失败.md
+            - 11.5.42-2012年6月14日Gene报告81AMD64升级ports装python273_2后依赖26的脚本失败.md
+            - 11.5.43-2013年12月19日MarcusvonAppen说明移除langpython后还需支持多版本并存.md
+            - 11.5.44-2014年7月11日JungukKim确认关PTH重编python27是已知变通法.md
+            - 11.5.45-2015年1月2日KubilayKocak给langpython27关LIBFFI后ctypes失败工单加标.md
+            - 11.5.46-2016年3月10日报告者ohartman在10STABLE沙箱编langpython27失败.md
+            - 11.5.47-2019年10月21日发帖人请求审阅新建langpython38端口的补丁.md
+            - 11.5.48-2019年10月29日SunpoetPoChuanHsieh认为Python27EoL前scons两版本可并存.md
+            - 11.5.49-2021年4月13日DaniloGBaio指出dnspydnspython被众多端口依赖改名会致冲突.md
         - 11.6-语言保守主义与新语言准入
             - 11.6.1-Rust 的诞生与系统编程的范式革新.md
             - 11.6.2-FreeBSD 社区对 Rust 的接纳与讨论.md
@@ -1270,8 +1270,8 @@
             - 4.9.6-EdGould指出termio手册没有描述可移植硬件流控原因正是这种机制本身并不.md
             - 4.9.7-报告Ultrix的assert宏在把字符串与空串比较时出错原因是它把表达式文本直.md
             - 4.9.8-报告在MotorolaSystemV68上编写驱动后不清楚安装步骤列出编译建节点.md
-            - 4.9.9-年1月13日ChrisTorek回答SCSI规范的问题说明目标方控制CDMSG与.md
-            - 4.9.10-AlanSteele报告43BSD的DHV11驱动在调制解调器控制方面问题严重并.md
+            - 4.9.9-1990年1月13日ChrisTorek回答SCSI规范的问题说明目标方控制信号.md
+            - 4.9.10-AlanSteele报告43BSD的DHV11驱动在调制解调器控制方面问题严重.md
             - 4.9.11-GregMcGary报告MIPSM120近来频繁换页希望找到能显示各进程换页行为.md
             - 4.9.12-发帖者讨论磁带线规约设想强制磁带带有序列号等特定格式探讨能否用线规约机制在Uni.md
             - 4.9.13-作者询问磁带机块长差异并说明为Archive驱动器改写SCSI驱动时遇到的QIC.md
@@ -1279,8 +1279,8 @@
             - 4.9.15-讨论TK50磁带在文件标记处反复返回零字节的现象指出不同驱动之间的行为差异引用时.md
             - 4.9.16-转引JackMorrison报告Sun3260并口驱动close返回错误错误号为.md
             - 4.9.17-讨论定时输入的实现困难指出alarm信号常被其他用途占用而无法复用例如已用于定期.md
-            - 4.9.18-年11月10日GlendaStubblefield报告VAX780配RA81磁盘.md
-            - 4.9.19-年10月6日报告Tahoe版本DMF驱动在设备为EmulexCS41兼容品时可自.md
+            - 4.9.18-1988年11月10日GlendaStubblefield报告VAX780配RA81每月丢usr文件系统.md
+            - 4.9.19-1988年10月6日报告Tahoe版本DMF驱动在EmulexCS41兼容品上可自配置但多用户即崩.md
             - 4.9.20-作者报告Ultrix201下uucp会话结束时调制解调器端口挂起uucico无法.md
             - 4.9.21-报告Ultrix201下使用uucp时端口在uucico会话结束常挂起疑似卡在d.md
             - 4.9.22-询问如何在UNIX上生成带标号的IBM格式EBCDIC可变长记录磁带以便把C源码.md
@@ -1288,8 +1288,8 @@
             - 4.9.24-PoldermanPaul报告68020机器上同时启动六个C编译器后性能急剧下降.md
             - 4.9.25-ChrisTorek主张增设读取CPU类型的系统调用因MicroVAX会对loc.md
             - 4.9.26-DougGwyn比较工作集与全局时钟两种页面置换方案下进程竞争内存的方式称前者各.md
-            - 4.9.27-年3月21日DougGwyn说明可在SystemV的文件系统开关下提供42BSD.md
-            - 4.9.28-EduardoKrell报告IBM宣布为309043819370及PS2386等.md
+            - 4.9.27-1988年3月21日DougGwyn说明可在SystemV下提供42BSD风格磁盘文件系统.md
+            - 4.9.28-EduardoKrell报告IBM宣布为3090等机型推出AIX内含Locus透明计算设施.md
             - 4.9.29-DominickSamperi称SVID规定已附接共享内存段由子进程继承但其3B.md
             - 4.9.30-DougAlan回应ChrisTorek对块磁带设备用途的疑问称所在单位有大量随.md
             - 4.9.31-NCR的MikeWescott承认该缺陷确实存在但称tty子系统还面临其他相互冲.md
@@ -1297,7 +1297,7 @@
             - 4.9.33-DaveWilson介绍正在评估的Sperry51C一次写入多次读出光盘拟用作长.md
             - 4.9.34-讨论为磁盘分区表增加可读写尺寸的ioctl说明Sun早已支持DKIOCSPART.md
             - 4.9.35-质疑重编译即可解决的说法称其窗口系统在Ultrix12重编译后仍不能用pty二次.md
-            - 4.9.36-报告43BSD下UDA50连接RA80时newfs失败给出mkfs报出的结束码与.md
+            - 4.9.36-报告43BSD下UDA50连接RA80时newfs失败缩分区后恢复.md
             - 4.9.37-nzatwucs报告BerkeleyCAD工具magic触碰到单进程约6MB的地.md
             - 4.9.38-JoePortman建议在PCAT上为XENIX添加设备驱动时让makefile.md
             - 4.9.39-报告Ultrix11下脚本在退出时挂起且仅当同一伪终端上有后台进程运行时才会出现.md
@@ -1307,31 +1307,31 @@
             - 4.9.43-AndrewGollan抱怨新闻组内充斥VAX硬件话题建议另立netdec或ne.md
             - 4.9.44-StephenMuir报告在750的42BSD上第二个tar报称无法打开磁带重试.md
             - 4.9.45-BillStewart自述经验之谈唯一机器无关的磁带格式是EBCDIC无标号lr.md
-            - 4.9.46-年5月10日780运行42bsd加装4MB国家半导体内存至8MB后频现崩溃控制台.md
+            - 4.9.46-1985年5月10日780运行42bsd加装4MB内存至8MB后频现崩溃控制台报uba错误.md
             - 4.9.47-LyleMcElhaney述750之Rev7更新稍解tbuf奇偶错然其CE警告装.md
             - 4.9.48-JohnNagle论C语义松弛处高效代码生成须赖近乎恒真的假定如指针指向内存而非.md
-            - 4.9.49-年7月26日Ed指出共享运行库的想法早于VMSDEC的PDP11系统RSTSE早.md
-            - 4.9.50-年7月21日TimRentsch指路洛杉矶的NetworkResearchCor.md
+            - 4.9.49-1983年7月26日Ed指出共享运行库的想法早于VMS.md
+            - 4.9.50-1983年7月21日TimRentsch指路洛杉矶的NetworkResearchCorporation.md
             - 4.9.51-Kashtan确认IPTCP服务器确实支持rwho包但Wollongong发行版.md
-            - 4.9.52-年4月27日RickLow询问用DEC的VMS与UltrixConnection.md
+            - 4.9.52-1989年4月27日RickLow询问用DEC的VMS与UltrixConnection接入DECnet.md
             - 4.9.53-BarryShein称VMS从未如Unix那样被设计为可由用户源码支持VMS手册.md
-            - 4.9.54-年11月29日Argonne的Boyle建议向Purdue咨询780升级方案称含.md
-            - 4.9.55-年11月08日自制300与1200波特半双工全双工调制解调器询问信号键控方式有无.md
-            - 4.9.56-年9月29日DennisRitchie详述HeathGC100WWV时钟的天线雷.md
-            - 4.9.57-年10月19日DougGwyn赞同Henry对1170引导问题的判断并补充若外设.md
+            - 4.9.54-1984年11月29日Argonne的Boyle建议向Purdue咨询780升级方案.md
+            - 4.9.55-1984年11月08日自制300与1200波特调制解调器询问信号键控方式有无标准.md
+            - 4.9.56-1984年9月29日DennisRitchie详述HeathGC100WWV时钟的天线雷击等问题.md
+            - 4.9.57-1984年10月19日DougGwyn赞同Henry对1170引导问题的判断.md
             - 4.9.58-DougKingston发帖求42BSD的DeAnza驱动直言自己正需要此物并请.md
-            - 4.9.59-年10月06日JohnPierce引述他人误删文件一例调侃正因如此上帝才创造了m.md
+            - 4.9.59-1984年10月06日JohnPierce引述误删文件一例调侃上帝因此创造make与makeclean.md
             - 4.9.60-JeffSpahn求助寻找可在其VAX上运行的empire游戏副本站点运行Uni.md
-            - 4.9.61-年9月26日HenrySpencer回应针对其尖锐措辞的指责承认原帖应写作off.md
-            - 4.9.62-年8月6日MarkHorton引由用户自定的Usenet政策说明专业产品或服务公.md
-            - 4.9.63-年7月28日SteveGlaser指中断向量分配与优先级无关DMA优先级只由总线.md
+            - 4.9.61-1984年9月26日HenrySpencer回应措辞指责承认应写作offt但坚持己见.md
+            - 4.9.62-1984年8月6日MarkHorton引由用户自定的Usenet政策说明产品公告规范.md
+            - 4.9.63-1984年7月28日SteveGlaser指中断向量分配与优先级无关DMA优先级只由总线位置决定.md
             - 4.9.64-TimBray戏称VAX780左起第三四块CPU板上确有闪灯软盘读写进行时闪烁得.md
             - 4.9.65-称KMC11B与DZ11的组合表现出色但尚未听说有面向42BSD的版本普遍发行故.md
             - 4.9.66-NoelKropf问有否人为41bsd的unibus盘驱动sysupc加过坏道转.md
-            - 4.9.67-年5月25日ChrisBoylan询问HP3000上是否有C编译器或Unix其机.md
-            - 4.9.68-年5月05日当事人补充IBM1620一型的绰号CADET意为不会加法甚至不试因其.md
-            - 4.9.69-年5月24日DanChernikoff据手册称System5可运行于PDP117.md
-            - 4.9.70-年4月20日TWG的Wunderlich为EMRS风波正式澄清公告既未说要用US.md
+            - 4.9.67-1984年5月25日ChrisBoylan询问HP3000上是否有C编译器或Unix.md
+            - 4.9.68-1984年5月05日当事人补充IBM1620绰号CADET意为不会加法甚至不试.md
+            - 4.9.69-1984年5月24日DanChernikoff据手册称System5可运行于PDP1170征询用户.md
+            - 4.9.70-1983年4月20日TWG的Wunderlich为EMRS风波正式澄清.md
             - 4.9.71-斯帕福德致谢并称已收到两份LouSalkind的DEUNA驱动及大量指向同一代码.md
     - 第5章-4BSD：VAX 时代的成熟与 BSD 系统能力扩展（1980–1981）
         - 5.1-4BSD 的系统扩展：Job Control、可靠信号与 curses
@@ -1352,7 +1352,7 @@
             - 1.4.2-Robert Elz 自动内核配置（autoconfig）.md
             - 1.4.3-DavidHinnant征询作家工作台WritersWorkbench之能力与可.md
             - 1.4.4-BrianSturgill转述所获指点为Ultrix20编驱动须自配置探测例程中.md
-            - 1.4.5-年10月24日RonChristian自述当年在1123上普通用户可把nice调.md
+            - 1.4.5-1984年10月24日RonChristian自述当年在1123上普通用户可把nice调成负值.md
             - 1.4.6-VAX-11／750 支持.md
         - 1.5-4.1BSD 命名冲突：从 5BSD 到 4.1BSD
         - 1.6-4.1BSD 与 BBN TCP／IP 版本：1981 年 11 月的后续发行
@@ -1390,14 +1390,14 @@
             - 2.11.3-A／UX（Apple，1988）.md
             - 2.11.4-JonWätte回答AUX性能与磁盘需求诸问指用Finder访问Unix文件系统.md
             - 2.11.5-MatthiasUrlichs抱怨sash不支持compress与管道使AUX2.md
-            - 2.11.6-年6月19日alex向网络发帖询问是否有人为运行AUX的MacIIfx编译过mh.md
+            - 2.11.6-1991年6月19日alex向网络发帖询问是否有人为运行AUX的MacIIfx编译过mh工具.md
             - 2.11.7-用户转述彩色显示缺陷CS32与CS24只能其一为256色切换后另一侧变灰登录对话.md
             - 2.11.8-Apple支援人员回应MacIIcx与IIfx互换性称自己并不确知两台机扩展槽内.md
             - 2.11.9-MatthiasUrlichs说SLICE被改回5来自某个安装脚本或是生成新内核.md
             - 2.11.10-CharlesAnderson转述MacGeek的说法称AUX20将支持声音管理.md
             - 2.11.11-苹果AUX的BobLantz说明System文件在AUX下即usrlibmac需.md
             - 2.11.12-作者报告AUX10的usrincludesystypesh中physadr的ty.md
-            - 2.11.13-作者用Micropolis1325的70MB盘配SCSI转ST506适配器实测对.md
+            - 2.11.13-作者用Micropolis1325的70MB盘配SCSI转ST506适配器实测grep每秒100KB.md
             - 2.11.14-Apple的ByronHan回答AUX下AppleTalk支持的提问称Super.md
             - 2.11.15-作者称一年来在AUX与MacOS下用Jasmine80与300MB盘现跑三台30.md
             - 2.11.16-UniSoft的CAnderson称AUX自带BSD备份工具可备份到软盘硬盘或网.md
@@ -1413,7 +1413,7 @@
         - 3.4-Fast File System 与 4.2BSD 的系统扩展
         - 3.5-chroot(2) 与其他新增系统设施的发行史
         - 3.6-4.2BSD 的开发者与贡献网络
-            - 3.6.1-年10月伯克利的CarlSmith2BSD维护者在网路回应PSUnix之争时阐明.md
+            - 3.6.1-1983年10月伯克利的CarlSmith在网路回应PSUnix之争称29BSD是完整发行.md
         - 3.7-Bill Joy 与 Sun 前奏
         - 3.8-4.2BSD 的发行、许可证与传播
         - 3.9-4.2BSD 与同期 UNIX、XENIX、PC DOS、Lisa
@@ -1441,29 +1441,29 @@
             - 4.10.8-RobertBradbury讨论shmat失败返回1而非NULL担心该位模式可能.md
             - 4.10.9-70跑29时Interlan板一获主机内存DMA即令系统崩溃作者疑网络缓冲管理中.md
             - 4.10.10-kel称VM起于IBM英国研究实验室的业余项目IBM长期抵制发布后为收费支持而放.md
-            - 4.10.11-年12月14日DickDunn回应VM370的性能与设计称曾见VM损失四成CPU.md
+            - 4.10.11-1984年12月14日DickDunn回应VM370的性能与设计称曾见VM损失四成CPU.md
             - 4.10.12-报告42bsd上用cron每小时调度一次uucicor1拨叫排队站点首个站点总能.md
-            - 4.10.13-年10月10日LarryTepper介绍在V7上重写lpr与lpd并新增过滤程序.md
-            - 4.10.14-年9月23日DonnSeeley回击指责称42内核惯用typedef求可移植ls.md
-            - 4.10.15-年8月06日SofTech的RichardBlouin给出Unipressema.md
-            - 4.10.16-年9月12日TomKessler称已把在Sun工作站上安装S的长文投递到netm.md
-            - 4.10.17-年3月02日Samperi实测PCAT与3B2上cpio头恒按2字节对齐与cpi.md
-            - 4.10.18-年7月19日Cohrs报告42bsd机器频发panic保护故障崩溃点在iget的.md
-            - 4.10.19-年7月25日KarlDahlke报告SystemV信号量程序在ibm370与3b.md
+            - 4.10.13-1984年10月10日LarryTepper介绍在V7上重写lpr与lpd并新增过滤程序lpf.md
+            - 4.10.14-1984年9月23日DonnSeeley回击指责称42内核惯用typedef求可移植.md
+            - 4.10.15-1984年8月06日SofTech的RichardBlouin给出Unipressemacs的键位配置.md
+            - 4.10.16-1984年9月12日TomKessler称已把在Sun工作站上安装S的长文投递到netmathstat.md
+            - 4.10.17-1988年3月02日Samperi实测PCAT与3B2上cpio头恒按2字节对齐.md
+            - 4.10.18-1984年7月19日Cohrs报告42bsd机器频发panic保护故障崩溃点在iget.md
+            - 4.10.19-1984年7月25日KarlDahlke报告SystemV信号量程序在ibm370与3b20s正常.md
             - 4.10.20-KeithRule求带终端无关颜色概念的curses与termlib他已能给cu.md
-            - 4.10.21-年9月12日ChrisTorek指出rwhod失效源于内核标志位缺陷并给出IFF.md
-            - 4.10.22-年9月18日JosefMoellers详解调试器报Brokenstackfram.md
-            - 4.10.23-年8月31日EdwardVielmetti示范用tunefsm把最小空闲空间从默.md
-            - 4.10.24-年6月11日Curt称在SCOXenix232上装208版FAS串口驱动1655.md
-            - 4.10.25-年3月26日ChrisTorek答复Ultrix40下rlogin窗口尺寸偶发失.md
-            - 4.10.26-年4月21日MikeShaddock附议称受够了抱怨42之差的论调宁可有缺陷但带.md
-            - 4.10.27-年5月22日DaveHorsfall建议与其删对象不如改名其install过程可.md
-            - 4.10.28-年4月16日SidStuart报42udac引导挂死EmulexCS11开合改u.md
-            - 4.10.29-年3月06日rcd考据Berkeley41a把HTNLVTNPCR逐出ctype.md
-            - 4.10.30-年3月01日GuyHarris揭dump靠死推算EOT计块而错坏点延隙写更使块长.md
-            - 4.10.31-年2月9日KeithMuller将实测运行18个月的UCSD负载控制系统正式发布.md
-            - 4.10.32-年10月24日SteveSummit阐明接口规格即契约论凡声明返回错误的调用皆须.md
-            - 4.10.33-年9月24日HenrySpencer为称伯克利为白痴致半歉点名敬重BillJoy.md
+            - 4.10.21-1985年9月12日ChrisTorek指出rwhod失效源于内核标志位缺陷.md
+            - 4.10.22-1990年9月18日JosefMoellers详解调试器报Brokenstackframe的机理.md
+            - 4.10.23-1990年8月31日EdwardVielmetti示范用tunefsm把最小空闲空间降到2%.md
+            - 4.10.24-1991年6月11日Curt称在SCOXenix232上装208版FAS串口驱动.md
+            - 4.10.25-1991年3月26日ChrisTorek答复Ultrix40下rlogin窗口尺寸偶发失灵的问题.md
+            - 4.10.26-1984年4月21日MikeShaddock附议称受够了抱怨42之差的论调.md
+            - 4.10.27-1984年5月22日DaveHorsfall建议与其删对象不如改名.md
+            - 4.10.28-1984年4月16日SidStuart报42udac引导挂死.md
+            - 4.10.29-1984年3月06日rcd考据Berkeley41a把HTNLVTNPCR逐出ctype.md
+            - 4.10.30-1984年3月01日GuyHarris揭dump靠死推算EOT计块而错——坏点延隙写更使块长失准.md
+            - 4.10.31-1985年2月9日KeithMuller将实测运行18个月的UCSD负载控制系统正式发布.md
+            - 4.10.32-1990年10月24日SteveSummit阐明接口规格即契约论.md
+            - 4.10.33-1984年9月24日HenrySpencer为称伯克利为白痴致半歉.md
         - 4.11-与同时期操作系统的比较：Mach、Athena、System V 与其他 UNIX 系统
 - 第14卷-CSRG 后期发行、可移植性与源码独立化（1983–1992）
     - 第1章-2BSD 平行支线：PDP-11 时代的持续发展（1983–1992）
@@ -1759,7 +1759,7 @@
             - 1.7.37-【Linux社区】Tarreau语言警察论.md
             - 1.7.38-【Linux社区】指控关切表演与除忆.md
             - 1.7.39-【Linux社区】Iwai问Fixes遗漏风险.md
-            - 1.7.40-【Linux社区】Raschko长文系统反对.md
+            - 1.7.40-【Linux社区】Raschko长文系统反对改词主张语境决定一切.md
             - 1.7.41-【Linux社区】Pinchart多元文化论.md
             - 1.7.42-【Linux社区】Rostedt忆红黑树命名.md
             - 1.7.43-【Linux社区】Mason认同文化视角.md
@@ -1772,12 +1772,12 @@
         - 3.1-Linux 内核进入 GNU 软件环境
         - 3.2-GCC 与 Linux 内核开发
             - 3.2.1-OSF 的对抗.md
-            - 3.2.2-年6月4日Netwise的Earnhardt再回应称OSF不选SunNetwis.md
+            - 3.2.2-1991年6月4日Netwise的Earnhardt再回应称OSF不选SunNetwise方案.md
         - 3.3-GNU C Library 与 Linux
-            - 3.3.1-年3月25日BBN的Kittredge就SPARC上选TLI还是RPC的常问作答.md
+            - 3.3.1-1991年3月25日BBN的Kittredge就SPARC上选TLI还是RPC的常问作答.md
         - 3.4-Bash 与 GNU 用户空间
         - 3.5-早期 Linux 发行版
-            - 3.5.1-年3月13日GuyHarris答SVR4支持动态链接机制与SunOS41相近可用.md
+            - 3.5.1-1991年3月13日GuyHarris答SVR4支持动态链接机制与SunOS41相近可用dlopen.md
             - 3.5.2-Linux社区MichaelSTsirkin从发行版运维成本出发质疑模块哈希的强.md
             - 3.5.3-【Linux社区】debugfs 安全门槛与发行版实态.md
             - 3.5.4-【Linux社区】发行版bug修复优先级.md
@@ -2967,7 +2967,7 @@
             - 5.17.9-Linux社区重申Android等大批用户已正确合入全部修复反对给少数发行版开安.md
             - 5.17.10-Linux社区以网络子系统为例反驳AI是新问题无专长者投递早已有之自己对疑似sl.md
             - 5.17.11-Linux社区流程记录对TAB的generatedcontentrstv5给出R.md
-            - 5.17.12-Linux社区正式提议维护者支持小组志愿者名单公开准则与保密机制作为CoC之外的.md
+            - 5.17.12-【Linux社区】正式提议维护者支持小组志愿者名单公开准则与保密机制.md
             - 5.17.13-Linux社区认为对方措辞显不悦提出替代表述工具易犯与人类不同的错误维护者可要求.md
             - 5.17.14-Linux社区提议对无名人士深入核心子系统的改动降优先级以自身研究VFS花费数百.md
             - 5.17.15-Linux社区Torvalds回应RapoportAI能从零大规模生成代码之说称.md
@@ -2988,7 +2988,7 @@
             - 5.17.30-Linux社区Levin追问Bottomley例证37f1663c回移因Stab.md
             - 5.17.31-Linux社区要求文档明言评审负担过大时对明显AI生成且未过滤的海量系列可径行拒.md
             - 5.17.32-Linux社区否定把全部读写当READ_ONCECSE与推测读无碍但把一次读重化.md
-            - 5.17.33-Linux社区BorislavPetkov追问fwctl为何物主张RAS的控制与.md
+            - 5.17.33-【Linux社区】BorislavPetkov追问fwctl为何物主张RAS控制归rasdaemon.md
             - 5.17.34-Linux社区Carpenter实测Link标签不可靠抽查首例即v1链接配v3提.md
             - 5.17.35-Linux社区Dobriyan以实测否定C++路线g++要求C99初始化器按声明.md
             - 5.17.36-Linux社区Uwe力主设PGP有效期引GentooGLEP63Sequoia默.md
@@ -3000,7 +3000,7 @@
             - 5.17.42-Linux社区Rostedt记GNUCauldron教训编译器社区的unwind.md
             - 5.17.43-Linux社区LaurentPinchart以三年libcamera经验自省按设.md
         - 5.18-评审激励与补丁工具链之争
-            - 5.18.1-Linux社区TimBirdRT路线之辩史与三案并存论此辩与山同老2000年就与.md
+            - 5.18.1-【Linux社区】TimBird：RT路线之辩史与三案并存论——此辩与山同老.md
             - 5.18.2-Linux社区BradleyMKuhn以Harald自2004年起持续诉讼的史实.md
             - 5.18.3-Linux社区CatalinMarinas在KS2014发起运行时检查议题主张它.md
             - 5.18.4-Linux社区ChrisMason2014档案Intel听进了且影响巨大但生产负.md
@@ -3013,7 +3013,7 @@
             - 5.18.11-Linux社区RobHerring反向警示DTquirk缺位DT除matchta.md
             - 5.18.12-Linux社区RafaelJWysocki论reviewer激励reviewin.md
             - 5.18.13-Linux社区RobertoTyley提出submitGit接入内核GitHub.md
-            - 5.18.14-Linux社区AndyLutomirski反对root=kernel一要看到它的.md
+            - 5.18.14-【Linux社区】AndyLutomirski反对root!=kernel.md
             - 5.18.15-Linux社区NeilBrown不该给linuxnext添加额外含义0dayke.md
             - 5.18.16-Linux社区StevenRostedtpatchwork覆盖不了小子系统tra.md
             - 5.18.17-Linux社区MarkBrown每周ping累积太快且他等ack的一周常是有意延.md
@@ -3054,8 +3054,8 @@
             - 5.18.52-Linux社区LuisRRodriguez披露固件签名制度设计史gettingr.md
             - 5.18.53-Linux社区JoshTriplett给出toolsMakefiletrista.md
             - 5.18.54-Linux社区PeterUjfalusi逐项清点OMAP遗留DMA转换现状以答A.md
-            - 5.18.55-Linux社区GregKH对stable存在回归预期不符现实的定性反问真的吗是的.md
-            - 5.18.56-Linux社区JiriKosina承认GregKH提到的testbot是好消息并.md
+            - 5.18.55-【Linux社区】GregKH对stable存在回归预期不符现实的定性反问.md
+            - 5.18.56-【Linux社区】JiriKosina承认testbot是好消息并自陈信息盲区.md
             - 5.18.57-Linux社区AndyLutomirski回应Bottomley的只想要更安全损.md
             - 5.18.58-Linux社区MarkBrown从维护者取舍角度反对把Fixes标签制度化为硬要.md
             - 5.18.59-Linux社区JamesBottomley以ATASCSI的既有实践回应内置模块.md
@@ -3084,14 +3084,14 @@
             - 5.18.82-Linux社区OlofJohansson以ChromeOS的成功经验与rebas.md
             - 5.18.83-Linux社区VinodKoulIntel补充Brillo似已采ChromeOS.md
             - 5.18.84-Linux社区JoePerchescheckpatch治理建议几乎只对stagi.md
-            - 5.18.85-Linux社区AlexShi将赴ELCEurope参与LTS讨论LTS存在价值对.md
+            - 5.18.85-【Linux社区】AlexShi：将赴ELCEurope参与LTS讨论.md
             - 5.18.86-Linux社区ChrisMasonTAB选举更新11月2日17点于Coronad.md
             - 5.18.87-Linux社区MauroCarvalhoChehab认错PNG其实没问题sphi.md
             - 5.18.88-Linux社区maintainerMauromedia以quilt单树收pull.md
             - 5.18.89-Linux社区maintainerRafaelPM分散于各处不算coredriv.md
             - 5.18.90-Linux社区printkSergeyconsole_sem啥都管console.md
             - 5.18.91-Linux社区Leon并非全知道该政策被接受的例子不是RDMA的RDMA内部我禁.md
-            - 5.18.92-Linux社区Pavel430毫欧是对其中一块电池的估算真值随温度与电池老化等而.md
+            - 5.18.92-【Linux社区】Pavel：430毫欧是对其中一块电池的估算.md
             - 5.18.93-Linux社区DanCarpenter投补丁2／2新增命令行配置工具lconfc.md
             - 5.18.94-Linux社区DavidHowells应Miklos建议在错误字符串前加源标签如.md
             - 5.18.95-Linux社区TakashiIwai答Jiri无意强制策略只用guidance一.md
@@ -3119,12 +3119,12 @@
             - 5.18.117-Linux社区Roeck以i2chwmon单元测试揪出大量溢出QEMU启动测试发.md
             - 5.18.118-Linux社区GeertUytterhoeven澄清争论在于changelog是.md
             - 5.18.119-Linux社区Shuah自述其修复因维护者间无共识而搁置同一bug在syzbot.md
-            - 5.18.120-Linux社区Roeck承诺上报stable每一个回归因任何回归都会被援引为反对.md
+            - 5.18.120-【Linux社区】Roeck承诺上报stable每一个回归.md
             - 5.18.121-Linux社区JiriKosina附和JanKara标签确有人滥用于在chang.md
             - 5.18.122-Linux社区Abbott分享工作流很好但仍感反模式我们需要为自动化而共有的部分.md
             - 5.18.123-Linux社区Mauro同意重复指令不好当年只是实验大问题是programout.md
             - 5.18.124-Linux社区Vetter称无需问kbuild加个Kconfig为你的树设额外c.md
-            - 5.18.125-Linux社区Rostedtdriveby补丁发送者该有与花费数小时的维护者同等.md
+            - 5.18.125-【Linux社区】Rostedt：driveby补丁发送者该有与花费数小时的维护者同等影响力吗.md
             - 5.18.126-Linux社区Rapoport重提LSFMMBPF流产议题secret内存API.md
             - 5.18.127-Linux社区EricWong详述lei数据模型labelsJMAP术语与静态H.md
             - 5.18.128-Linux社区Pinchart自述把多驱动简单改动拆为每驱动一补丁的系列评审后s.md
@@ -4339,15 +4339,15 @@
         - 8.2-C++ 与 Rust 的准入争论：接纳结果与生态面
             - 8.2.1-【Linux社区】EXPORT_SYMBOL_GPL 语义之辩：从 Rusty 2005 到 ABI 稳定性分界线.md
             - 8.2.2-峰会 2021 规划.md
-            - 8.2.3-Rust 内核政策.md
+            - 8.2.3-Rust内核政策：改进C侧接口使双方受益与头文件策略演变.md
             - 8.2.4-Rust 议题征集.md
             - 8.2.5-Rust for Linux 议题.md
-            - 8.2.6-Rust 内核政策.md
+            - 8.2.6-Rust内核政策：政策必须放进内核树并以在树驱动反驳质疑.md
             - 8.2.7-许可证.md
             - 8.2.8-治理.md
             - 8.2.9-杂项.md
             - 8.2.10-C 聚合值传递（Rust 政策）.md
-            - 8.2.11-Rust 内核政策.md
+            - 8.2.11-Rust内核政策：驳学Rust难为短期问题主张改进工具.md
             - 8.2.12-C 聚合传递（Rust 政策）.md
             - 8.2.13-MAINTAINERS“THE REST”改投递.md
             - 8.2.14-工具生成内容文档 v2.md
@@ -4368,17 +4368,17 @@
             - 8.2.29-AI 补丁审查工具.md
             - 8.2.30-stable 分支提交标注.md
             - 8.2.31-设备直通.md
-            - 8.2.32-Rust内核政策.md
+            - 8.2.32-Rust内核政策：Ojeda长文回应hch称网站文档只为凝聚共识.md
             - 8.2.33-Rust 内核策略与测试可用性.md
-            - 8.2.34-Rust for Linux.md
-            - 8.2.35-Rust 内核政策.md
+            - 8.2.34-RustforLinux：内核Rust支持的编译模型与工具链提案.md
+            - 8.2.35-Rust内核政策：systemd清理类型实践与Rust类型系统空洞之析.md
             - 8.2.36-C 聚合传递与 Rust 政策.md
             - 8.2.37-AI补丁评审工具.md
             - 8.2.38-闭源用户态政策.md
             - 8.2.39-AI标注与隐私.md
             - 8.2.40-Link标签替代.md
             - 8.2.41-CC列表自动化.md
-            - 8.2.42-Link标签规范.md
+            - 8.2.42-Link标签规范：msgidlink推荐与commit映射补丁来源难题.md
             - 8.2.43-回归处理准则.md
             - 8.2.44-AI评审提示词.md
             - 8.2.45-PGP密钥过期争论.md
@@ -4389,46 +4389,46 @@
             - 8.2.50-trivial 补丁信任.md
             - 8.2.51-Rust GPIO驱动.md
             - 8.2.52-AI slop条款争论.md
-            - 8.2.53-linux-next测试.md
+            - 8.2.53-linuxnext测试：Bottomley更常测mainline与Brown认为next尚可.md
             - 8.2.54-Bugzilla退役.md
-            - 8.2.55-安全披露流程.md
-            - 8.2.56-维护者倦怠.md
+            - 8.2.55-安全披露流程：回应发行版提前情报并预测立法强制路径.md
+            - 8.2.56-维护者倦怠：Pinchart指交换评审在无商业利益领域失效.md
             - 8.2.57-维护者档案文档.md
             - 8.2.58-Rust演化稳定性.md
             - 8.2.59-Rust内核政策争论.md
             - 8.2.60-项目延续预案.md
-            - 8.2.61-Rust 内核政策.md
+            - 8.2.61-Rust内核政策：Ojeda回应区域禁UB方案称C++应学SafeC++.md
             - 8.2.62-Rust别名规则.md
             - 8.2.63-Rust内核论战.md
             - 8.2.64-Rust政策与C安全.md
             - 8.2.65-Rust入核初期争论.md
-            - 8.2.66-Rust稳定回移.md
-            - 8.2.67-Rust内核政策.md
+            - 8.2.66-Rust稳定回移：Ojeda说明仅不稳定特性变动才需联动回移.md
+            - 8.2.67-Rust内核政策：Ojeda澄清gccrs定位并驳LLVM隐性依赖说.md
             - 8.2.68-API弃用治理.md
             - 8.2.69-峰会疫苗之争.md
             - 8.2.70-AI内核流程.md
             - 8.2.71-补丁基线流程.md
-            - 8.2.72-文件系统维护.md
+            - 8.2.72-文件系统维护：Kleikamp回应JFS弃用称将提高跟进频率.md
             - 8.2.73-Rust进内核.md
             - 8.2.74-回归治理.md
-            - 8.2.75-linus-next测试.md
-            - 8.2.76-维护者倦怠.md
+            - 8.2.75-linusnext测试：Rostedt愿加入统一预合并测试每周批量拉取.md
+            - 8.2.76-维护者倦怠：Linus回顾子系统短会与Brown评嵌入式评审困境.md
             - 8.2.77-stable补丁流程.md
             - 8.2.78-峰会赞助机制.md
-            - 8.2.79-TAB选举.md
+            - 8.2.79-TAB选举：Abbott发布2021提名公告十席半数换届.md
             - 8.2.80-DRM面板驱动.md
             - 8.2.81-生成代码入库.md
             - 8.2.82-治理透明度.md
-            - 8.2.83-Rust内核政策.md
+            - 8.2.83-Rust内核政策：Tso推测编译器敌意根源与Torvalds驳保护墙论.md
             - 8.2.84-Rust内存安全.md
             - 8.2.85-Rust GPIO绑定.md
-            - 8.2.86-Rust内核政策.md
-            - 8.2.87-Rust稳定回移.md
+            - 8.2.86-Rust内核政策：SafeC++提案难进标准与Rust难在运行环境.md
+            - 8.2.87-Rust稳定回移：Lunn警告树内移动文件破坏stable回移.md
             - 8.2.88-Rust 补丁测试.md
-            - 8.2.89-Rust 内核政策.md
+            - 8.2.89-Rust内核政策：Anvin拆四议题主张用成熟工具改进既有C代码.md
             - 8.2.90-Rust GPIO 驱动.md
             - 8.2.91-Rust LPC 提案.md
-            - 8.2.92-Rust政策争论.md
+            - 8.2.92-Rust政策争论：Ojeda驳独占代码推迟至2034论引Clang先例.md
             - 8.2.93-Rust别名模型争论.md
             - 8.2.94-Rust引进争论.md
             - 8.2.95-峰会列表地址混乱.md
@@ -4453,7 +4453,7 @@
             - 8.2.114-Rust入核早期讨论.md
             - 8.2.115-疫情与线下峰会.md
             - 8.2.116-AI补丁政策.md
-            - 8.2.117-linux-next测试.md
+            - 8.2.117-linuxnext测试：Rostedt分支工作流与Tso的xfstests自动化.md
             - 8.2.118-LLM审查与语料.md
             - 8.2.119-补丁接受政策.md
             - 8.2.120-设备直通之争.md
@@ -4469,13 +4469,13 @@
             - 8.2.130-拒补丁透明度.md
             - 8.2.131-UMN补丁风波.md
             - 8.2.132-MAINTAINERS分流.md
-            - 8.2.133-Rust内核政策.md
+            - 8.2.133-Rust内核政策：Sakkinen称难在运行与GregKH指多数bug源于C.md
             - 8.2.134-linus-next测试树.md
             - 8.2.135-红帽GitLab流程.md
-            - 8.2.136-AI生成内容规范.md
+            - 8.2.136-AI生成内容规范：Carpenter定义slop与Hansen谈Generated-by.md
             - 8.2.137-维护者互助组.md
             - 8.2.138-stable邮件精简.md
-            - 8.2.139-平凡补丁政策.md
+            - 8.2.139-平凡补丁政策：Mauro论跨子系统kAPI组合并以UMN回退为例.md
             - 8.2.140-Rust别名之争.md
             - 8.2.141-Link标签改进.md
             - 8.2.142-变量声明规范.md
@@ -4484,12 +4484,12 @@
             - 8.2.145-回归处理优先级.md
             - 8.2.146-Rust早期讨论.md
             - 8.2.147-Rust构建环境.md
-            - 8.2.148-TAB选举.md
+            - 8.2.148-TAB选举：Berg质询计票口径与Abbott承诺改进说明.md
             - 8.2.149-folio与mm治理.md
             - 8.2.150-内核malloc提案.md
-            - 8.2.151-文件系统维护.md
+            - 8.2.151-文件系统维护：Sanjaya追问无人维护文件系统的处置之道.md
             - 8.2.152-用户态配套政策.md
-            - 8.2.153-AI补丁标注.md
+            - 8.2.153-AI补丁标注：Mauro与Rostedt辩AI代码版权引Berne公约.md
             - 8.2.154-Rust入内核争议.md
             - 8.2.155-Link标签流程.md
             - 8.2.156-trivial补丁政策.md
@@ -4505,7 +4505,7 @@
             - 8.2.166-stable邮件治理.md
             - 8.2.167-编译器警告争论.md
             - 8.2.168-stable标签提案.md
-            - 8.2.169-AI生成内容规范.md
+            - 8.2.169-AI生成内容规范：Stoakes区分LLM与checkpatch垃圾并删slop词.md
             - 8.2.170-峰会改线上.md
             - 8.2.171-Rust PR 构建责任.md
             - 8.2.172-回移与链接.md
@@ -4529,17 +4529,17 @@
             - 8.2.190-AI 指南范围.md
             - 8.2.191-并行驱动政策.md
             - 8.2.192-峰会存废讨论.md
-            - 8.2.193-TAB选举.md
+            - 8.2.193-TAB选举：Abbott澄清投票规则并公布2021选举结果.md
             - 8.2.194-AI审查工具.md
-            - 8.2.195-AI补丁标注.md
+            - 8.2.195-AI补丁标注：Luck指当前AI贴SPDX标识即自称许可兼容.md
             - 8.2.196-稳定树回移.md
             - 8.2.197-信任网与PGP.md
-            - 8.2.198-THE REST分流.md
-            - 8.2.199-linus-next测试.md
+            - 8.2.198-THEREST分流：Bonzini质疑lore存档完整性影响迁出可行性.md
+            - 8.2.199-linusnext测试：VanAssche建议blktests纳入LKFT与KernelCI.md
             - 8.2.200-next隐藏提交.md
-            - 8.2.201-设备直通争论.md
-            - 8.2.202-AI生成内容规范.md
-            - 8.2.203-Rust政策讨论.md
+            - 8.2.201-设备直通争论：Pinchart建议改LPC专场与Kosina以hidraw反驳.md
+            - 8.2.202-AI生成内容规范：Stoakes主张明文可拒AI垃圾驳猎巫之忧.md
+            - 8.2.203-Rust政策讨论：BoqunFeng称评审同标准与Pinchart点破三原则.md
             - 8.2.204-Bugzilla存废.md
             - 8.2.205-UMN假补丁事件.md
             - 8.2.206-回归追踪.md
@@ -4548,7 +4548,7 @@
             - 8.2.209-stable邮件量.md
             - 8.2.210-C内存安全提案.md
             - 8.2.211-安全流程扩展.md
-            - 8.2.212-Link标签规范.md
+            - 8.2.212-Link标签规范：b4自动化锚点不可靠与六种匹配失败场景.md
             - 8.2.213-UMN 假补丁事件.md
             - 8.2.214-加速器用户态接口.md
             - 8.2.215-维护者峰会存废.md
@@ -4560,7 +4560,7 @@
             - 8.2.221-补丁审阅工具.md
             - 8.2.222-DCO 与 AI 披露.md
             - 8.2.223-琐碎补丁收件政策.md
-            - 8.2.224-Rust 内核政策.md
+            - 8.2.224-Rust内核政策：Hellwig反对政策网页并警告绑定蔓延.md
             - 8.2.225-Rust 测试环境.md
             - 8.2.226-io_uring BPF 议题.md
             - 8.2.227-HIGHMEM 淘汰.md
@@ -4590,9 +4590,9 @@
             - 8.2.251-疫情与峰会办会.md
             - 8.2.252-Rust参考驱动提案.md
             - 8.2.253-稳定版回归窗口.md
-            - 8.2.254-AI补丁标注.md
+            - 8.2.254-AI补丁标注：Belloni指检查器修补无意义并质疑AI签署权.md
             - 8.2.255-UMN实验争议.md
-            - 8.2.256-THE REST分流.md
+            - 8.2.256-THEREST分流：Brown判断流量源于getmaintainer自动抄送.md
             - 8.2.257-提交标记规范.md
             - 8.2.258-AI提交治理.md
             - 8.2.259-linus-next争议.md
@@ -4603,28 +4603,28 @@
             - 8.2.264-维护者支持组.md
             - 8.2.265-稳定版队列机制.md
             - 8.2.266-列表平台迁移.md
-            - 8.2.267-维护者倦怠.md
+            - 8.2.267-维护者倦怠：Cameron自述IIO评审触底向大厂求助奏效.md
             - 8.2.268-rustc兼容保障.md
             - 8.2.269-峰会存废争论.md
             - 8.2.270-Rust稳定性争论.md
             - 8.2.271-Bugzilla邮件政策.md
-            - 8.2.272-设备直通争论.md
+            - 8.2.272-设备直通争论：Romanovsky信任双向论与Pinchart质疑闭门决策.md
             - 8.2.273-补丁基址标注.md
             - 8.2.274-AI补丁审查.md
             - 8.2.275-稳定版回迁.md
             - 8.2.276-提交溯源标签.md
-            - 8.2.277-平凡补丁政策.md
+            - 8.2.277-平凡补丁政策：Geert介绍全系列收件人可收coverletter做法.md
             - 8.2.278-涉密代码测试.md
             - 8.2.279-稳定版邮件.md
-            - 8.2.280-Rust政策争论.md
+            - 8.2.280-Rust政策争论：Hellwig斥沟通不诚实与GregKH断言多数bug源于C.md
             - 8.2.281-回迁仪表盘.md
             - 8.2.282-堆栈回溯术语.md
-            - 8.2.283-TAB选举.md
+            - 8.2.283-TAB选举：Babka披露2022选举结果并建议投票提前一周.md
             - 8.2.284-维护者支持小组.md
             - 8.2.285-维护者分支管理.md
             - 8.2.286-功能纳退机制.md
             - 8.2.287-邮件引用礼仪.md
-            - 8.2.288-安全披露流程.md
+            - 8.2.288-安全披露流程：Kosina赞同Linus反对强制共享PoC支持闭列表.md
             - 8.2.289-Bugzilla 争议.md
             - 8.2.290-维护者负担分担.md
             - 8.2.291-Rust 绑定与 API 债.md
@@ -4639,24 +4639,24 @@
             - 8.2.300-倦怠与社区支援.md
             - 8.2.301-kernel.org 信任体系.md
             - 8.2.302-stable 维护义务.md
-            - 8.2.303-Rust内核政策.md
+            - 8.2.303-Rust内核政策：cleanuph锁guard析构能力与no_free_ptr警告.md
             - 8.2.304-C 聚合传参（Rust 政策）.md
-            - 8.2.305-Rust 内核政策.md
+            - 8.2.305-Rust内核政策：反驳hch不诚实指控重申2022峰会灵活性立场.md
             - 8.2.306-Rust for Linux 与 irqchip.md
-            - 8.2.307-Rust 内核政策.md
+            - 8.2.307-Rust内核政策：技术反驳C++路线并限定新代码用Rust为新驱动.md
             - 8.2.308-Rust争议与社区担忧.md
             - 8.2.309-Rust驱动引入之辩.md
-            - 8.2.310-Rust内核政策.md
-            - 8.2.311-Rust 内核政策.md
+            - 8.2.310-Rust内核政策：va_list显式假设LLVM质询与cleanup属性用途.md
+            - 8.2.311-Rust内核政策：Sakkinen强调政策写进内核树才具约束力.md
             - 8.2.312-Rust静态引用语义.md
             - 8.2.313-Rust文件布局.md
             - 8.2.314-Rust未定义行为.md
             - 8.2.315-Rust补丁测试.md
-            - 8.2.316-Rust政策争论.md
-            - 8.2.317-Rust for Linux.md
-            - 8.2.318-Rust内核政策.md
+            - 8.2.316-Rust政策争论：Gunthorpe索数据断言仅新驱动用Rust不可持续.md
+            - 8.2.317-RustforLinux：pl061并排反汇编与stable侧复审可行性质疑.md
+            - 8.2.318-Rust内核政策：C++安全提案现状与ISO C工作组对话.md
             - 8.2.319-C聚合传递（Rust政策）.md
-            - 8.2.320-Rust内核政策.md
+            - 8.2.320-Rust内核政策：反驳驱动皆可Rust重写质疑百分之百安全承诺.md
             - 8.2.321-Rust抽象的可扩展性.md
             - 8.2.322-Rust稳定性标准之忧.md
             - 8.2.323-Rust的理论必然性.md
@@ -4674,7 +4674,7 @@
             - 8.2.335-Rust抽象维护责任.md
             - 8.2.336-Rust内核开发.md
             - 8.2.337-Rust进内核之辩.md
-            - 8.2.338-Rust政策讨论.md
+            - 8.2.338-Rust政策讨论：Bottomley荐cleanup注解与Jung澄清panic行为.md
             - 8.2.339-Rust 内核政策（V4L2 视角）.md
             - 8.2.340-Rust 编译器版本政策.md
             - 8.2.341-C aggregate passing（Rust）.md
@@ -4682,7 +4682,7 @@
             - 8.2.343-Rust绑定自动化.md
             - 8.2.344-Rust安全问题.md
             - 8.2.345-Rust与stable.md
-            - 8.2.346-Rust内核政策.md
+            - 8.2.346-Rust内核政策：hpa三点异议并提议评估C++14编译整个内核.md
             - 8.2.347-议题讨论：Rust 与 devres 生命周期.md
             - 8.2.348-议题提问：Rust 反向替代子系统.md
             - 8.2.349-议题讨论：Rust 抽象与全局重构.md
@@ -4698,11 +4698,11 @@
             - 8.2.359-Rust 政策：Miri 能力与 LLVM 缺陷辨析.md
             - 8.2.360-Rust 政策：编译器标准与 C++ 路线.md
             - 8.2.361-Rust GCC后端.md
-            - 8.2.362-Rust引入争论.md
+            - 8.2.362-Rust引入争论：Pinchart回应C++对比与Rostedt复盘bug类型.md
             - 8.2.363-Rust工具链.md
             - 8.2.364-Rust 补丁评审.md
-            - 8.2.365-Rust 内核政策.md
-            - 8.2.366-Rust引入争论.md
+            - 8.2.365-Rust内核政策：Ojeda否认禁并行代码并称CONFIG_RUST终将移除.md
+            - 8.2.366-Rust引入争论：Walleij赞合并试试与Torvalds断言C++仍非好语言.md
             - 8.2.367-Rust维护者权限.md
             - 8.2.368-Rust 引入争论.md
             - 8.2.369-Rust 语言稳定.md
@@ -7497,9 +7497,9 @@
     - 第1章-FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）
         - 1.1-FFS：FreeBSD 存储系统的历史起点（1983）
         - 1.2-UFS1 与 UFS2：文件系统扩展与大容量存储
-            - 1.2.1-要点FreeBSD项目自1993年11月首发FreeBSD10至2026年6月发.md
+            - 1.2.1-要点：FreeBSD 项目自 1993 年 11 月首发 FreeBSD 1.0 至 2026 年 6 月发布 FreeBSD 15.1-RELEASE，共经历五位（含两段工具自动 tag 期）Release Engineer Lead.md
             - 1.2.2-UFS2 取代 UFS1 成为默认文件系统.md
-            - 1.2.3-年8月16日XinLI提交补丁把UFS2的不完整初始化标志推广到UFS1在fsc.md
+            - 1.2.3-2004 年 8 月 16 日，Xin LI 提交补丁把 UFS2 的不完整初始化标志推广到 UFS1, 在 fsck_ffs setup.c 与 newfs mkfs.c 把 FS_BAD2_MAGIC 改为.md
             - 1.2.4-freebsd-src 趋势统计与非 ZFS 存储栈演进的定量印证.md
             - 1.2.5-UFS／FFS TRIM 整合与文件系统完整性.md
             - 1.2.6-UFS／UFS2 64-bit inode 与其他文件系统改进.md
@@ -7508,61 +7508,61 @@
             - 1.3.2-Valerie Aurora 对 Soft Updates 的批评与社区回应.md
             - 1.3.3-UFS 同步元数据 → Soft Updates 延迟写入（4.x 时期持续完善）.md
         - 1.4-GEOM：存储抽象层的形成
-            - 1.4.1-要点GEOM引入FreeBSD的精确时间为FreeBSD502003年1月但开发.md
+            - 1.4.1-要点：GEOM 引入 FreeBSD 的精确时间为 FreeBSD 5.0（2003 年 1 月），但开发工作从 2001-2002 年即已开始.md
             - 1.4.2-phk 的 GEOM 设计哲学与 class 体系.md
         - 1.5-CAM：设备访问模型与存储硬件现代化
             - 1.5.1-Justin T. Gibbs（贾斯廷·T·吉布斯） 与 CAM 架构设计（FreeBSD 3.0，1998 年）.md
-            - 1.5.2-年9月20日发帖人检索归档只找到1999年12月关于戴尔PERC阵列控制器的信息.md
+            - 1.5.2-2000 年 9 月 20 日，发帖人检索归档只找到 1999 年 12 月关于戴尔 PERC 阵列控制器的信息，其中 PERC 2／SC 在 4.x 中已获含引导的支持.md
             - 1.5.3-Alexander Motin 的 CAM ATA 重写.md
             - 1.5.4-Hans Petter Selasky 与 USB 栈重写完成（usbus2）.md
-            - 1.5.5-年11月21日两块SAMSUNGSV1021H与SV0802N分接两通道均报UD.md
-            - 1.5.6-年6月29日JasonACrome称过去两年客户用Hitachi硬盘的约15台服.md
-            - 1.5.7-年4月29日LogitechCommunicateSTX在Linux下经gspc.md
-            - 1.5.8-年2月13日OliverFromme指出若系统存在etc下的wall_cmos_.md
-            - 1.5.9-年1月22日从63升级到71后多台PERC4系统在重负载时使用中日志反复出现To.md
-            - 1.5.10-年3月15日Tyani7320RS5350配两颗IrwindaleXeon与4G.md
-            - 1.5.11-年2月11日笔记本装完80amd64问显示驱动74_2能否支持1600x900及.md
-            - 1.5.12-年3月15日东芝MK3263GSX硬盘从光盘安装时一切正常但用其引导时几何参数被.md
-            - 1.5.13-年1月18日桌机从Optiplex960换到980后所有用户都报键盘异常不按的键.md
-            - 1.5.14-年5月26日最近一批RealtekPCIe千兆卡在RELENG_8和RELENG.md
-            - 1.5.15-年10月27日Athlon64X2平台装FreeBSD100时BTXLoader.md
-            - 1.5.16-年9月16日RAM越大错误越多ECC意义越大刷新可并入DRAM刷新每二十四小时一.md
-            - 1.5.17-年3月5日低配处理器配集成显卡帧缓冲驱动能起但极慢且切到其他终端就黑屏换英特尔驱.md
-            - 1.5.18-年7月16日他让系统休眠后唤醒发现143不再重新初始化经thunderbolt3.md
-            - 1.5.19-年7月13日发帖人就NCR53C810与53C815PCISCSI卡发表评价称其.md
-            - 1.5.20-年8月28日发帖人称K5PR150与K5PR166对应60乘175与66乘175.md
-            - 1.5.21-年10月1日发帖人在并行口接ppbus与Adaptecaic7110接Zip盘内.md
-            - 1.5.22-年12月13日发帖人称基于NCR与SymBIOS芯片集的卡在FreeBSD下表现.md
-            - 1.5.23-年9月29日发帖人二次邀测RealTek8139驱动称首次邀测只收到一个回应并说.md
-            - 1.5.24-年1月27日发帖人发布FreeBSD下IEEE1394火线驱动首个公开版功能目前.md
-            - 1.5.25-年8月13日发帖人补充说明NMBCLUSTERS在稳定版与当前版系统上都可以在启.md
-            - 1.5.26-年11月29日发帖人报告32STABLE下Macronix98715网卡在百兆集.md
-            - 1.5.27-年1月29日发帖人在34下xl0报自协商未完成无载波被降为半双工10Mbps在r.md
-            - 1.5.28-年3月14日发帖人称自己有ConnorSeagate的4xDDS2磁带切换机在F.md
-            - 1.5.29-年4月30日发帖人在Compaqprosario上安装FreeBSD40Rele.md
-            - 1.5.30-年6月7日发帖人报告服务器一周内两次出现fxp0设备超时且整机不再响应ping现.md
-            - 1.5.31-年7月28日发帖人在AbitKA7100主板上加装Highpoint370控制器.md
-            - 1.5.32-年8月11日发帖人澄清此前所说的挂起其实只是自己没等够时间并报告把两块盘单独逐个.md
-            - 1.5.33-年10月25日发帖人更新了SCSI卡固件后在411上重新用解包整套端口树的方式压.md
-            - 1.5.34-年12月12日MikeSmith说明DPTVI系列现已以AdaptecSCSIR.md
-            - 1.5.35-年2月22日发帖人报告AcceleRAID170在尝试挂载根分区后持续输出非法槽.md
-            - 1.5.36-年3月21日发帖人回复确认在内核加载期间把网卡网线拔掉确实可以解决Netfini.md
-            - 1.5.37-年4月24日发帖人回复称自己的SonyCRX140E在FreeBSD42至43各.md
-            - 1.5.38-年7月4日发帖人询问同一IDE控制器混合连接八吉字节非UDMA与六十吉字节ATA.md
-            - 1.5.39-年7月28日发帖人用dump管道接cstream写入QuantumDLT4000.md
-            - 1.5.40-年11月7日发帖人报告华硕CUV4X在硬盘只有两个分区时能正常引导FreeBSD.md
-            - 1.5.41-年12月15日发帖人在CVSup镜像站上遇到状态文件间歇性出现一位错误附板载Ad.md
-            - 1.5.42-年1月24日发帖人联系FTDI索取USB转串行芯片资料对方要求先签保密协议才能提.md
-            - 1.5.43-年4月16日发帖人新购BuslogicBT445SVLBSCSI卡卡体自身探测正.md
-            - 1.5.44-年6月6日AbitKG7主板AMD761加VIA686B南桥在FreeBSD45.md
-            - 1.5.45-年7月19日技嘉GA6BXDFreeBSD46STABLE使用AlcatelSp.md
-            - 1.5.46-年9月18日发帖人报告同步更新期间某块盘反复出现读命令超时并触发控制器复位同时换.md
-            - 1.5.47-年11月24日发帖人将STABLE内核启动挂死归于Eric提交的amr驱动变更机.md
-            - 1.5.48-年1月5日发帖人在47与50两台机器各装一张NetgearFA311网卡用sis.md
-            - 1.5.49-年2月15日发帖人问umass能否在47与50下识别ISD200硬盘始终不行dm.md
-            - 1.5.50-年3月16日发帖人发布兼容48与50的USB以太网卡驱动测试版称以已有网卡驱动源.md
-            - 1.5.51-年1月20日BrettGlass用1月18日的快照引导软盘并在启动时输入boot.md
-            - 1.5.52-年10月29日HanspeterRoth回应X30相机USB传输比Windows.md
+            - 1.5.5-2003 年 11 月 21 日，两块 SAMSUNG SV1021H 与 SV0802N 分接两通道均报 UDMA100,ad2 反复报 UDMA ICRC error fallback 到 PIO，系统似存活但传大文件挂起.md
+            - 1.5.6-2004 年 6 月 29 日，Jason A. Crome 称过去两年客户用 Hitachi 硬盘的约 15 台服务器中 6 台在运行一年后灾难性坏盘，坏盘非同一批次.md
+            - 1.5.7-2009 年 4 月 29 日，Logitech Communicate STX 在 Linux 下经 gspca 可用而 FreeBSD 下不可用，作者给出 dmesg 与 usbdevs 片段，并愿意补充信息协助修复.md
+            - 1.5.8-2009 年 2 月 13 日，Oliver Fromme 指出若系统存在 etc 下的 wall_cmos_clock 文件即可解释该行为.md
+            - 1.5.9-2009 年 1 月 22 日，从 6.3 升级到 7.1 后多台 PERC4 系统在重负载时使用中日志反复出现 Too many retries on command 以及控制器疑似已死 但卷仍可访问系统继续运行 固件 352D MegaCLI.md
+            - 1.5.10-2009 年 3 月 15 日，Tyan i7320R-S5350 配两颗 Irwindale Xeon 与 4G 内存 引导盘是 gmirror 镜像的 ST980811AS 该机跑 Solaris 与 OpenBSD amd64 及 7.1R.md
+            - 1.5.11-2010 年 2 月 11 日，笔记本装完 8.0 amd64 问显示驱动 7.4_2 能否支持 1600x900 及合适的水平垂直同步值并附启动时分区未对齐警告另报无线网卡不被识别.md
+            - 1.5.12-2010 年 3 月 15 日，东芝 MK3263GSX 硬盘从光盘安装时一切正常，但用其引导时几何参数被检测为 0 扇区与 0 磁头与 0 柱面导致无法启动.md
+            - 1.5.13-2011 年 1 月 18 日，桌机从 Optiplex 960 换到 980 后所有用户都报键盘异常，不按的键无限重复直到再按其他键，有时鼠标输入也触发重复.md
+            - 1.5.14-2012 年 5 月 26 日，最近一批 Realtek PCIe 千兆卡在 RELENG_8 和 RELENG_9 上都不好使 日志里 re0 报重置未完成 PHY 写失败 附 PHY 设备附加失败 并显示设备寄存器信息 询问问题所在.md
+            - 1.5.15-2014 年 10 月 27 日，Athlon64 X2 平台装 FreeBSD 10.0 时 BTX Loader 卡住，WD3200AAKS 显示 Starting 后挂起.md
+            - 1.5.16-2015 年 9 月 16 日，RAM 越大错误越多 ECC 意义越大，刷新可并入 DRAM 刷新每二十四小时一次即可，而服务器 BMC 应独立于操作系统记录并报警 ECC 错误.md
+            - 1.5.17-2017 年 3 月 5 日，低配处理器配集成显卡，帧缓冲驱动能起但极慢且切到其他终端就黑屏，换英特尔驱动不行，按论坛建议装内核模式设置也不成，已附配置与日志请求帮助.md
+            - 1.5.18-2025 年 7 月 16 日，他让系统休眠后唤醒，发现 14.3 不再重新初始化经 thunderbolt 3 通道隧穿的外接扩展卡，做 devctl rescan 也无济于事.md
+            - 1.5.19-1997 年 7 月 13 日，发帖人就 NCR 53C810 与 53C815 PCI SCSI 卡发表评价，称其表现优异可与 Adaptec 阵列卡相比.md
+            - 1.5.20-1997 年 8 月 28 日，发帖人称 K5-PR150 与 K5-PR166 对应 60 乘 1.75 与 66 乘 1.75.md
+            - 1.5.21-1997 年 10 月 1 日，发帖人在并行口接 ppbus 与 Adaptec aic7110 接 Zip 盘，内核编译通过且 dmesg 有大量输出.md
+            - 1.5.22-1997 年 12 月 13 日，发帖人称基于 NCR 与 SymBIOS 芯片集的卡在 FreeBSD 下表现良好且相当流行并称 NCR 驱动相当稳定.md
+            - 1.5.23-1998 年 9 月 29 日，发帖人二次邀测 RealTek 8139 驱动，称首次邀测只收到一个回应，并说明本版修正了包尾落在接收缓冲区末尾时的处理缺陷.md
+            - 1.5.24-1999 年 1 月 27 日，发帖人发布 FreeBSD 下 IEEE 1394 火线驱动首个公开版，功能目前有限，IP 实现因芯片限制不符合已提交 IETF 的互联网草案.md
+            - 1.5.25-1999 年 8 月 13 日，发帖人补充说明 NMBCLUSTERS 在稳定版与当前版系统上都可以在启动时调整，无需重编内核，具体做法可查引导程序中的 set tunables 帮助条目.md
+            - 1.5.26-1999 年 11 月 29 日，发帖人报告 3.2-STABLE 下 Macronix 98715 网卡在百兆集线器上偶发降到 10M 速率，强制快网后又会导致集线器部分端口卡死.md
+            - 1.5.27-2000 年 1 月 29 日，发帖人在 3.4 下 xl0 报自协商未完成无载波被降为半双工 10Mbps，在 rc.conf 强制百兆全双工后接口可用.md
+            - 1.5.28-2000 年 3 月 14 日，发帖人称自己有 Connor／Seagate 的 4xDDS2 磁带切换机.md
+            - 1.5.29-2000 年 4 月 30 日，发帖人在 Compaq prosario 上安装 FreeBSD 4.0-Release.md
+            - 1.5.30-2000 年 6 月 7 日，发帖人报告服务器一周内两次出现 fxp0 设备超时且整机不再响应 ping，现象始于一轮约 70MB 的 scp 传输，重启是当时唯一有效办法.md
+            - 1.5.31-2000 年 7 月 28 日，发帖人在 Abit KA7-100 主板上加装 Highpoint 370 控制器后用 4.1 启动软盘找不到硬盘.md
+            - 1.5.32-2000 年 8 月 11 日，发帖人澄清此前所说的挂起其实只是自己没等够时间，并报告把两块盘单独逐个测得性能与预期完全一致，RAID0 下读写都表现得相当不错地快.md
+            - 1.5.33-2000 年 10 月 25 日，发帖人更新了 SCSI 卡固件后，在 4.1.1 上重新用解包整套Ports 树的方式压测 Tekram 390F 与 ST34371W 的组合.md
+            - 1.5.34-2000 年 12 月 12 日，Mike Smith 说明 DPT VI 系列现已以 Adaptec SCSI RAID 名义出售.md
+            - 1.5.35-2001 年 2 月 22 日，发帖人报告 AcceleRAID 170 在尝试挂载根分区后持续输出非法槽位完成消息并停住等待重启，猜测数据不可恢复.md
+            - 1.5.36-2001 年 3 月 21 日，发帖人回复确认在内核加载期间把网卡网线拔掉确实可以解决 Netfinity 5500 板载 pcn 网卡被关断的问题，未再补充其他细节.md
+            - 1.5.37-2001 年 4 月 24 日，发帖人回复称自己的 Sony CRX-140E 在 FreeBSD 4.2 至 4.3 各版本下均工作正常，建议对方从控制器.md
+            - 1.5.38-2001 年 7 月 4 日，发帖人询问同一 IDE 控制器混合连接八吉字节非 UDMA 与六十吉字节 ATA100 硬盘对性能的影响，并附 VIA 82C686B 南桥信息.md
+            - 1.5.39-2001 年 7 月 28 日，发帖人用 dump 管道接 cstream 写入 Quantum DLT4000 磁带，压缩开启时实测约每秒 1.31 兆字节.md
+            - 1.5.40-2001 年 11 月 7 日，发帖人报告华硕 CUV4X 在硬盘只有两个分区时能正常引导 FreeBSD 4.4，同一块硬盘有三个分区时无法引导.md
+            - 1.5.41-2001 年 12 月 15 日，发帖人在 CVSup 镜像站上遇到状态文件间歇性出现一位错误，附板载 Adaptec 控制器与两块 IBM 硬盘的 dmesg 信息.md
+            - 1.5.42-2002 年 1 月 24 日，发帖人联系 FTDI 索取 USB 转串行芯片资料，对方要求先签保密协议才能提供文档，该协议禁止将驱动以开源方式发布故拒绝签署.md
+            - 1.5.43-2002 年 4 月 16 日，发帖人新购 Buslogic BT-445S VLB SCSI 卡，卡体自身探测正常，但 SCSI 总线探测阶段锁死并报 CCB 超时.md
+            - 1.5.44-2002 年 6 月 6 日，Abit KG7 主板 AMD 761 加 VIA 686B 南桥在 FreeBSD 4.5R 上系统一忙就随机挂死，两块 KG7 都有此现象.md
+            - 1.5.45-2002 年 7 月 19 日，技嘉 GA6BXD FreeBSD 4.6-STABLE 使用 Alcatel SpeedTouch USB 调制解调器时端口反复报错.md
+            - 1.5.46-2002 年 9 月 18 日，发帖人报告同步更新期间某块盘反复出现读命令超时并触发控制器复位，同时换页出现无限等待缓冲区与页错误，最终相关进程被信号终止，换线后仍如此.md
+            - 1.5.47-2002 年 11 月 24 日，发帖人将 -STABLE 内核启动挂死归于 Eric 提交的 amr 驱动变更.md
+            - 1.5.48-2003 年 1 月 5 日，发帖人在 4.7 与 5.0 两台机器各装一张 Netgear FA311 网卡，用 sis0 驱动以五到六兆字节每秒传输时 CPU 占用高达约九成至满载.md
+            - 1.5.49-2003 年 2 月 15 日，发帖人问 umass 能否在 4.7 与 5.0 下识别 ISD200 硬盘，始终不行：dmesg 只有 In-System Design 的 USB 存储适配器.md
+            - 1.5.50-2003 年 3 月 16 日，发帖人发布兼容 4.8 与 5.0 的 USB 以太网卡驱动测试版，称以已有网卡驱动源码为模板编写，尚需整理注释、补上许可证并编写手册页.md
+            - 1.5.51-2002 年 1 月 20 日，Brett Glass 用 1 月 18 日的快照引导软盘并在启动时输入 boot -h 后 Promise TX2 硬盘得以工作.md
+            - 1.5.52-2002 年 10 月 29 日，Hanspeter Roth 回应 X30 相机 USB 传输比 Windows 慢十倍，推测 Windows 跑 USB 2.0.md
         - 1.6-RAID、GELI 与存储可靠性体系
             - 1.6.1-HAST：FreeBSD 原生高可用存储复制.md
         - 1.7-ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力
@@ -7570,494 +7570,494 @@
         - 1.9-UFS 与 ZFS 的长期共存
             - 1.9.1-麦库西克（Marshall Kirk McKusick）与 FFS 的设计（1984 年 4.2BSD）.md
             - 1.9.2-UFS 的形成与 Soft Updates 机制（1990 年代）.md
-            - 1.9.3-年3月21日2006年3月21日KrisKennaway回应JohnKozubi.md
-            - 1.9.4-年6月8日IvanVoras2007年6月8日谈tunefs时补充至少6x上文件.md
+            - 1.9.3-2006 年 3 月 21 日 Kris Kennaway 回应 John Kozubik 报的多快照快速删除挂死已记录 kern／94769.md
+            - 1.9.4-2007 年 6 月 8 日，Ivan Voras 2007 年 6 月 8 日谈 tunefs 时补充，至少 6.x 上文件系统写满到端后有时会隐蔽损坏.md
             - 1.9.5-UFS2 与 SUJ：Jeff Roberson 的日志化 Soft Updates（FreeBSD 5.0／9.0）.md
-            - 1.9.6-FlightAware联合创始人KarlLehenbauer转写讹作CarlLi.md
-            - 1.9.7-本期提及或转述的一手材料包括KarlLehenbauer当事人访谈iXSyste.md
-            - 1.9.8-年10月BjörnJacke在linuxfsdevel的文件创建时间birtht.md
-            - 1.9.9-年5月8日PaulEnglish的分区由数据恢复公司恢复只给了镜像他找到可用的备.md
-            - 1.9.10-年5月17日JulianElischer回应MikhailTeterin关于qm.md
-            - 1.9.11-年3月12日KirkMcKusick说明背景fsck假设文件系统行为符合预期不纠.md
-            - 1.9.12-年12月22日JeffRoberson介绍其将日志技术与软更新合并到UFS的项目.md
-            - 1.9.13-年8月31日Carl自述对WDxxEARS四K物理扇区盘的理解GPT分区要对齐到.md
-            - 1.9.14-年12月5日pjd说他们谈的显然不是同一层他所指的同步写是磁盘写把写发给磁盘之后.md
-            - 1.9.15-年7月6日jwd报告升级到当日current后锁顺序反转依旧复现witness回.md
-            - 1.9.16-年5月17日Bernacki宣布nand项目分支已并入主干包含完整的闪存支持环境.md
-            - 1.9.17-年4月28日MatthewSeaman报告FreeBSD92上postgresq.md
-            - 1.9.18-年5月1日DavidWolfskill说明构建机跑stable9r2572212.md
-            - 1.9.19-年8月22日Eitan反对把该行为写进seekdir契约因会复杂化契约但不反对实.md
-            - 1.9.20-年5月5日WalterHop在Bug219049上说启用TRIM并用fsck_u.md
-            - 1.9.21-年1月29日DeepakUkey应用补丁后重测仍崩溃日志显示da0p1在数据写完.md
-            - 1.9.22-年8月14日KirkMcKusick称与他在Netflix合作的同事发现某些闪存.md
-            - 1.9.23-年2月15日KonstantinBelousov给出两个补丁称任一都应能修复问题.md
-            - 1.9.24-年5月14日Jack在130STABLE上报告ada0p2的gmirror磁盘i.md
-            - 1.9.25-年11月4日BjoernAZeeb在虚拟机磁盘镜像上遇ufs_dirbad根分区.md
-            - 1.9.26-年2月15日KirkMcKusick表示这些卸载UFS时的锁序反转已由Kosti.md
-            - 1.9.27-年5月17日KirkMcKusick进一步收紧fs_cssizefs_ncg与f.md
-            - 1.9.28-年11月23日nvass在Bug263885确认UFS软更新日志fsck问题在C.md
-            - 1.9.29-年7月10日KirkMcKusick判断快照删除挂起源于gjournal清理未用.md
-            - 1.9.30-年10月16日KonstantinBelousov说明UFS的IMMUTABLE.md
-            - 1.9.31-年3月17日DavidTimber分享他在Linux内核上开发SEEK_DATA.md
-            - 1.9.32-年9月24日Kamp表示软更新已经快要就绪眼下Kirk在外差旅预计圣诞节前大家就.md
-            - 1.9.33-年5月25日FarshidEslami就是否有类vxfs或IBMAIXjfs的日.md
-            - 1.9.34-年8月14日BruceEvans用tar输出填满文件系统三分之一测不同块大小的f.md
-            - 1.9.35-年2月22日KirkMcKusick说明切换读写与只读挂载不会损坏文件系统运行a.md
-            - 1.9.36-年10月7日MichaelCWu建议Alex先读Adrian的页面或发邮件联系a.md
-            - 1.9.37-年3月18日SergeyBabkin拟提交PRkern14584合并用户与组ID.md
-            - 1.9.38-年4月24日RobertWatson说明FreeBSD已有两套日志文件系统实现均.md
-            - 1.9.39-年6月18日DES建议若要排查磁盘表面错误可直接用dd从磁盘读到devnull而.md
-            - 1.9.40-年2月26日ByronServies补充说明遍历某个ACL的条目需先用acl_g.md
-            - 1.9.41-年5月17日TerryLambert反对清理旧术语主张保留FreeBSD文档旧语.md
-            - 1.9.42-年7月30日DavidCross称他们一直参照extattr示例做UFS扩展现在.md
-            - 1.9.43-年2月27日GaranceDrosihn指出MichaelRanner称附有Ma.md
+            - 1.9.6-FlightAware 联合创始人 Karl Lehenbauer（转写讹作 Carl Liambauer）自述其 FreeBSD 缘起与生产架构.md
+            - 1.9.7-本期提及或转述的一手材料包括：Karl Lehenbauer 当事人访谈；iX Systems 的 BSDCan 2014 wrap-up.md
+            - 1.9.8-2009 年 10 月，Björn Jacke 在 linux-fsdevel 的文件创建时间（birthtime）与纳秒时间戳讨论中指出：utimensat() 的设计未考虑设置创建时间.md
+            - 1.9.9-2003 年 5 月 8 日，Paul English 的分区由数据恢复公司恢复只给了镜像，他找到可用的备用 superblock.md
+            - 1.9.10-2004 年 5 月 17 日，Julian Elischer 回应 Mikhail Teterin 关于 qmail FAQ 中 SoftUpdates 危险说法是否仍成立的提问，认为只要应用会调用 fsync() 且磁盘对数据落盘的回报诚实.md
+            - 1.9.11-2005 年 3 月 12 日，Kirk McKusick 说明背景 fsck 假设文件系统行为符合预期、不纠正错误的引用计数，故可以决定移除目录.md
+            - 1.9.12-2009 年 12 月 22 日，Jeff Roberson 介绍其将日志技术与软更新合并到 UFS 的项目.md
+            - 1.9.13-2010 年 8 月 31 日，Carl 自述对 WDxxEARS 四 K 物理扇区盘的理解：GPT 分区要对齐到 4KiB.md
+            - 1.9.14-2011 年 12 月 5 日，pjd 说他们谈的显然不是同一层，他所指的同步写是磁盘写：把写发给磁盘之后，只有数据真正落到稳定存储时磁盘才会确认，而不是进了磁盘写缓存就确认.md
+            - 1.9.15-2011 年 7 月 6 日，jwd 报告升级到当日 current 后锁顺序反转依旧复现.md
+            - 1.9.16-2012 年 5 月 17 日，Bernacki 宣布 nand 项目分支已并入主干，包含完整的闪存支持环境，涵盖控制器与芯片驱动框架.md
+            - 1.9.17-2014 年 4 月 28 日，Matthew Seaman 报告 FreeBSD 9.2 上 postgresql 9.3.4 偶发整机冻结 5 至 10 分钟.md
+            - 1.9.18-2014 年 5 月 1 日，David Wolfskill 说明构建机跑 stable／9 r257221、24 核.md
+            - 1.9.19-2017 年 8 月 22 日，Eitan 反对把该行为写进 seekdir 契约因会复杂化契约，但不反对实现层如此实现，并指出代码在 telldir 内部被调用.md
+            - 1.9.20-2017 年 5 月 5 日，Walter Hop 在 Bug 219049 上说启用 TRIM 并用 fsck_ufs 清空空闲块后 ftruncate 慢速并无改善.md
+            - 1.9.21-2018 年 1 月 29 日，DeepakUkey 应用补丁后重测仍崩溃日志显示 da0p1 在数据写完前消失 panic 点为 devfs_fsync 的 vop_stdfsync 函数.md
+            - 1.9.22-2019 年 8 月 14 日，Kirk McKusick 称与他在 Netflix 合作的同事发现某些闪存盘的 TRIM 支持存在相当严重的缺陷.md
+            - 1.9.23-2021 年 2 月 15 日，Konstantin Belousov 给出两个补丁，称任一都应能修复问题且两者对正确性都是必需的，第一个正确设置 vnode vm 对象大小.md
+            - 1.9.24-2021 年 5 月 14 日，Jack 在 13.0-STABLE 上报告 ada0p2 的 gmirror 磁盘 iostat 全部 100% 且无 idle，执行 portupgrade -ua 后卡在 pkg 读取阶段两小时，无限写入再次复现.md
+            - 1.9.25-2021 年 11 月 4 日，Bjoern A. Zeeb 在虚拟机磁盘镜像上遇 ufs_dirbad 根分区目录项 mangled，完整 fsck 一轮后修复.md
+            - 1.9.26-2022 年 2 月 15 日，Kirk McKusick 表示这些卸载 UFS 时的锁序反转已由 Kostik 与其本人一系列提交消除，将 bug 标记 FIXED 并关闭.md
+            - 1.9.27-2022 年 5 月 17 日，Kirk McKusick 进一步收紧 fs_cssize、fs_ncg 与 fs_contigsumsize 的取值范围.md
+            - 1.9.28-2022 年 11 月 23 日，nvass 在 Bug 263885 确认 UFS 软更新日志 fsck 问题在 CURRENT 上仍可复现，附 g_union.sh 触发脚本，NVMe 上会死锁并打印 nvme_payload_map 错误.md
+            - 1.9.29-2024 年 7 月 10 日，Kirk McKusick 判断快照删除挂起源于 gjournal 清理未用块时无法正确处理快照 将修改为 gjournal 启用时禁止创建快照 并建议改用软更新而非 gjournal.md
+            - 1.9.30-2024 年 10 月 16 日，KonstantinBelousov 说明 UFS 的 IMMUTABLE 在 lookup 阶段经 VOP_ACCESSX 检查.md
+            - 1.9.31-2026 年 3 月 17 日，DavidTimber 分享他在 Linux 内核上开发 SEEK_DATA 与 SEEK_HOLE 的经验.md
+            - 1.9.32-1997 年 9 月 24 日，Kamp 表示软更新已经快要就绪，眼下 Kirk 在外差旅，预计圣诞节前大家就能看到成果，而且最初多半只会作为额外组件提供，不会马上变成默认行为.md
+            - 1.9.33-1999 年 5 月 25 日，Farshid Eslami 就是否有类 vxfs 或 IBM AIX jfs 的日志文件系统提问答复，称 XFS 是 64 位并支持日志记录.md
+            - 1.9.34-1999 年 8 月 14 日，Bruce Evans 用 tar 输出填满文件系统三分之一测不同块大小的 ffs 与 ext2fs 结果基本如预期.md
+            - 1.9.35-2000 年 2 月 22 日，Kirk McKusick 说明切换读写与只读挂载不会损坏文件系统 运行 async 有固有风险 切回 sync 需一两分钟稳定.md
+            - 1.9.36-2000 年 10 月 7 日，Michael C Wu 建议 Alex 先读 Adrian 的页面或发邮件联系 adrian@freebsd.org 并表示和旁人看法一致 认为 squid／inn 这类数据库型存储可能效果更好.md
+            - 1.9.37-2001 年 3 月 18 日，Sergey Babkin 拟提交 PR kern／14584 合并用户与组 ID 空间 主张超过某个值的 ID 在 UID 和 GID 之间共享 Usenix-2000 BSD BOF 上与 Kirk McKusick.md
+            - 1.9.38-2001 年 4 月 24 日，Robert Watson 说明 FreeBSD 已有两套日志文件系统实现均未公开且为旧版研究原型 推荐 McKusick 论文比较 soft updates 与日志方案.md
+            - 1.9.39-2001 年 6 月 18 日，DES 建议若要排查磁盘表面错误可直接用 dd 从磁盘读到 ／dev／null 而非使用 fsck 因 FreeBSD 手册页没有相应的全表扫描开关.md
+            - 1.9.40-2002 年 2 月 26 日，Byron Servies 补充说明遍历某个 ACL 的条目需先用 acl_get_file 从文件取得该 ACL 之后才能迭代 但每个文件可能带有多个 ACL 因而需按特定 ACL 类型多次调用.md
+            - 1.9.41-2002 年 5 月 17 日，Terry Lambert 反对清理旧术语 主张保留 FreeBSD 文档旧语法风格认为这赋予项目特色 并举 tunefs 手册的 fish 一句为例.md
+            - 1.9.42-2002 年 7 月 30 日，David Cross 称他们一直参照 extattr 示例做 UFS 扩展 现在将新增字段放在 ufsmount 尾部已可正常工作 后续再追踪损坏问题.md
+            - 1.9.43-2003 年 2 月 27 日，Garance Drosihn 指出 Michael Ranner 称附有 Makefile 源码和修改后 man pages 的邮件实际没附源码 若代码没编码在 GEEK CODE BLOCK 里就是忘了附带.md
         - 1.10-Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统
             - 1.10.1-ATA／SATA 子系统演进与 ＊＊ahci(4)＊＊ 驱动.md
             - 1.10.2-NVMe 支持：＊＊nvd(4)＊＊ 与 ＊＊nda(4)＊＊ 的演进.md
-            - 1.10.3-年5月30日JeffSparkes报告RA81接3500的解决办法机箱左上角有一.md
-            - 1.10.4-年8月23日MartynJohnson报告3600从Ultrix22升到30后T.md
-            - 1.10.5-年8月3日DonBowman的PC跑约200小时后WRITE06报ABORTED.md
-            - 1.10.6-年7月2日SteveGrandi确认按JustinGibbs前封建议关掉pack.md
-            - 1.10.7-年7月28日NateLawson的cvscommit在cam_ccbh新增PAT.md
-            - 1.10.8-年6月21日NickTwaddell用current快照试ServeRAID4L.md
-            - 1.10.9-年5月5日称aac等设备有campassthrough别名aacp可用来做固件升.md
-            - 1.10.10-年2月8日解释扫描发生在CAM收到XPT_SCAN_BUS命令时进行该命令在启动.md
-            - 1.10.11-年4月3日mjacob表示自己同样遇到targclose不返回过去曾折腾一番才让.md
-            - 1.10.12-年4月3日ScottLong针对Julien的IntelSRCZCRRAID控制.md
-            - 1.10.13-年5月11日RongenFan询问da4驱动WCEwritecache位默认值指.md
-            - 1.10.14-年8月25日ScottLong发布ciss_p410diff请FreeBSD80.md
-            - 1.10.15-年11月25日RossWest请求关闭kern126866称isp驱动大改写已修.md
-            - 1.10.16-年7月14日LeoPrasathArulraj确认kldstat已列出isp_2.md
-            - 1.10.17-年11月16日KennethDMerry提交为CAM与mps4增加SMP透传支持.md
-            - 1.10.18-年12月13日smh将kern169801的责任人由freebsdscsi改为本.md
-            - 1.10.19-年2月25日bsalinux在FreeBSD90RELEASE上寻求IBMM10.md
-            - 1.10.20-年5月18日Kashyap称LSI在FreeBSD83用mpslsi以30或60.md
-            - 1.10.21-年2月28日StevenHartland补充提醒确认固件已是最新旧固件在使用WR.md
-            - 1.10.22-年7月10日Hartland追问为何看不到实际损坏内容与成因称已知损坏问题早已修.md
-            - 1.10.23-年6月20日SeanBruno回应DouglasGilbert的信息称当天上午已.md
-            - 1.10.24-年4月8日作者排查mpslsi3驱动在xpt_action崩溃时指出scsi_s.md
-            - 1.10.25-年7月23日他在为使用M1015卡的新服务器准备十一点二版本听说P20固件在Fr.md
-            - 1.10.26-年5月28日MichaelJung用三块LSI92008e接SuperMicro.md
-            - 1.10.27-年2月26日cristobal装FreeNas93配LSI3008HBA只见35.md
-            - 1.10.28-年12月4日AlexanderMotin说明IntelESB2只含SATAHBA.md
-            - 1.10.29-年2月15日AndriyGapon描述音频CD插在DVD机中开机时scsi_cd.md
-            - 1.10.30-年6月19日当磁带序列号超过约八十字节时扩展取回路径会在持锁状态下等待内存分配现.md
-            - 1.10.31-年11月7日他照做之后把结果贴了出来命令只在屏幕上打出行标题下面却没有任何一条设.md
-            - 1.10.32-年3月27日Andriy觉得这现象又奇特又费解追问重启进多用户时是否仍用打过补丁.md
-            - 1.10.33-年4月23日smh建议设hwataata_dma为0强制走PIO模式作为变通不过.md
-            - 1.10.34-年5月31日发帖人发现在2940uwBIOS中禁用断连协商后问题消失但他对SCS.md
-            - 1.10.35-年7月6日发帖人称自己已完成该驱动向CAM的初步移植并使其支持带标签排队但旧驱动.md
-            - 1.10.36-年7月15日发帖人报告光驱启动时报致命错误非法请求与逻辑单元不支持而挂载失败附读.md
-            - 1.10.37-年7月21日发帖人说明当时只在该卷上跑两项性能测试作为压力测试的一部分故后果没那.md
-            - 1.10.38-年8月18日BurkardMeyendriesch在稳定版上安装CAM快照补丁后.md
-            - 1.10.39-年9月18日TedBuswell在current做删除文件构建世界等大IO时看到.md
-            - 1.10.40-年9月25日SimonShapiro称最新内核已能从CAM启动DPT丢失中断的问.md
-            - 1.10.41-年10月6日发帖人回复把内核快照里的驱动源嵌入旧版内核理论上可行但对不熟悉内核的.md
-            - 1.10.42-年10月19日发帖人回复该阵列控制器没有驱动他试过向厂商索取编程文档但始终没得到.md
-            - 1.10.43-年11月11日发帖人询问谁家的SCSI硬盘固件质量最好自持IBMUltrasta.md
-            - 1.10.44-年11月29日发帖人报告升级到30当前树启用CAM后用tosha从东芝XM410.md
-            - 1.10.45-年12月11日发帖人先用试写模式刻录两次随后真实刻录在写入前就报介质空间不足而信.md
-            - 1.10.46-年12月23日发帖人称已把磁带驱动在介质末端的文件标记处理改写成特性项认为这只对.md
-            - 1.10.47-年1月9日发帖人说明他只在SCSI列表上所以第一次听说NCR驱动在53c896上.md
-            - 1.10.48-年1月15日发帖人报告自十三日起开发版机器再启不来卡在探测总线实际反复报消息拒绝.md
-            - 1.10.49-年1月20日发帖人报告P2BS板载AIC7890U2W接一块IBMSCSI硬盘用.md
-            - 1.10.50-年2月26日发帖人请人解释一段报错设备上反复出现空闲超时排队总线设备复位命令发送.md
-            - 1.10.51-年3月8日Matt说问题相当严重读块限制命令与模式选择命令都坏了打算过几天在cu.md
-            - 1.10.52-年3月13日Ken笑着附和Matt那句玩笑说如果能想出测量那类事情的可靠办法就值.md
-            - 1.10.53-年3月21日发帖人反驳对方认为大切片仅对多进程有效指出基准测试随机寻道部分实际运.md
-            - 1.10.54-年3月31日发帖人回答想固定设备号与目标号映射的提问建议把设备按顺序固定下来并提.md
-            - 1.10.55-年4月8日发帖人接着上面的争论补一份实例确认自己在一块三四年前的旧刻录光盘机上完.md
-            - 1.10.56-年4月13日发帖人回应多处理器一节说他们测得四路处理器的处理器到内存带宽只有双路.md
-            - 1.10.57-年4月21日发帖人近期将收到一台带差分接口的磁带库正在找配套的主机适配器询问在较.md
-            - 1.10.58-年4月28日发帖人说自己正好有这台机器判断该错误多半是介质不对这台机器很挑自己只.md
-            - 1.10.59-年6月7日发帖人称自3x起只有副盘出现invalidpack错误而主盘从没有过怀.md
-            - 1.10.60-年6月29日发帖人推测崩溃发生在open阶段且阵列返回容量为零说明驱动读取容量带.md
-            - 1.10.61-年7月14日发帖人报告单块盘挂在控制卡上性能令人失望给出硬件配置为双处理器三百兆.md
-            - 1.10.62-年7月30日发帖人说几周前挂掉的盘换回来的替代盘同样不稳用几分钟就出问题只有重新.md
-            - 1.10.63-年8月14日发帖人在当前版上把一个用户分区备份到磁带驱动器预计约两百九十五万个磁.md
-            - 1.10.64-年8月24日发帖人指出这类吞吐对比必须走裸设备并显式给出块大小他给出一条以较大块.md
-            - 1.10.65-年9月8日发帖人称所收补丁未能解决问题对补丁中在末尾做右移而不用乘法的写法表示不.md
-            - 1.10.66-年9月16日发帖人转贴主板手册原文说明该板有五十针八位六十八针十六位与六十八针U.md
-            - 1.10.67-年9月30日发帖人因那条总线上没有重要数据便试用了该驱动随即发现它并不会探测SC.md
-            - 1.10.68-年10月27日发帖人在阵列卡议题下回应询问者称自己找遍各处后认为现有Linux驱.md
-            - 1.10.69-年11月8日发帖人报告QLogicQLC2200光纤通道卡在33RELEASE启.md
-            - 1.10.70-年11月19日补充说卡总线支持已有外部成果被导入源码树目前正在做新总线化相关基础.md
-            - 1.10.71-年11月23日在该驱动是否导入当前分支的讨论邮件里表态明确支持称自己在两台机器上.md
-            - 1.10.72-年12月19日发帖人称已用最新版本的驱动对发布候选树完成适配并试用公布可供下载的.md
-            - 1.10.73-年1月7日发帖人给多台服务器装了把该驱动编译进内核的新内核发现只要板载适配器的端.md
-            - 1.10.74-年2月8日发帖人复查了送修机器的全部线缆与终结一切正常只有一块已终结的盘和一根线.md
-            - 1.10.75-年5月9日发帖人发布该驱动支持U160及性能改进的补丁说明涵盖两款芯片的U160.md
-            - 1.10.76-年6月28日发帖人回复有人已为该系列阵列卡做出可用驱动另一款阵列卡用的也应是其衍.md
-            - 1.10.77-年7月24日发帖人略晚回复推测新版代码中终止器设置可能已改变但对方卡型本不该变请.md
-            - 1.10.78-年8月15日发帖人致谢指点固件问题的人其某型盘需从固件rev2升到rev6后正常.md
-            - 1.10.79-年8月28日发帖人在两块控制器带同品牌大容量盘的配置下持续遇到磁盘在高负载下被断.md
-            - 1.10.80-年9月28日发帖人先称这是一条有价值的信息随后判断这很可能出自己负责代码的缺陷表.md
-            - 1.10.81-年10月16日发帖人回复说数据溢出与数据相位错误那两条消息出现在某型号控制器上把.md
-            - 1.10.82-年11月4日发帖人指出对方把转换接头接在了双绞线差分线缆那一侧引导日志显示两条通.md
-            - 1.10.83-年11月25日发帖人在34R上装了两块TekramDC390分别以ncr和tek.md
-            - 1.10.84-年1月2日发帖人在调并口Zip驱动时请教SCSI状态值的含义他说按头文件里定义的.md
-            - 1.10.85-年1月18日发帖人指出硬盘应当自动重新起转而对方现象并不正常并说明意义字符串给出.md
-            - 1.10.86-年2月5日发帖人称自己在另一台机器上已让目标模式成功运行关键是在内核配置里加入特.md
-            - 1.10.87-年3月13日发帖人认为适用性取决于具体使用方式并指出该专利的实际受让人是另一家公.md
-            - 1.10.88-年3月22日发帖人针对多份归档写入失败给出自己的看法认为应把这台磁带机的末段标志.md
-            - 1.10.89-年4月7日发帖人给不支持高速传输的主板加装一块高速盘驱动按低速协商成功但他发现同.md
-            - 1.10.90-年6月12日发帖人称新机DellPowerEdge2550与FreeBSD424.md
-            - 1.10.91-年6月25日发帖人在回复CAM_NEW_TRAN_CODE相关改动的邮件时追问对.md
-            - 1.10.92-年8月16日发帖人在DellPowerEdge2500上用三块U160盘经PER.md
-            - 1.10.93-年8月29日发帖人回复在HPC1533DDS2驱动器上测试补丁效果正常并提到自己.md
-            - 1.10.94-年11月2日发帖人推测29160上的aic7892突发长度大于2940UW上的7.md
-            - 1.10.95-年11月30日发帖人称装有某控制器的机器启动时常发生内核态缺页恐慌未设定时器的进.md
-            - 1.10.96-年12月21日发帖人称从早期版本一路升级到稳定版后其磁带机几乎完全失效自称对该设.md
-            - 1.10.97-年3月21日发帖人试用用户态SCSI目标模式模拟器运行scsi_target报D.md
-            - 1.10.98-年4月13日发帖人称与Mike共同发现CAMsim被冻结却从未解冻并提交修复补丁.md
-            - 1.10.99-年5月20日发帖人转贴一份OpenBSD上PERC3Di导致主机锁死的报告说明虽.md
-            - 1.10.100-年7月2日发帖人解读PCI状态0x8100表示设备报出主设备检测到的奇偶校验错误.md
-            - 1.10.101-年8月12日发帖人有一个更新SCSI设备固件的win32程序推测其用WriteB.md
-            - 1.10.102-年10月7日发帖人报告45Release的aic7892在高强度访问硬盘时会让机.md
-            - 1.10.103-年11月6日发帖人指出若modesense与modeselect处理代码触发应能.md
+            - 1.10.3-1989 年 5 月 30 日，Jeff Sparkes 报告 RA81 接 3500 的解决办法：机箱左上角有一组四个连接器，0 号连接器接内部 RA70 且处于未接状态.md
+            - 1.10.4-1989 年 8 月 23 日，Martyn Johnson 报告 3600 从 Ultrix 2.2 升到 3.0 后 TK70 出故障.md
+            - 1.10.5-2003 年 8 月 3 日，Don Bowman 的 PC 跑约 200 小时后 WRITE(06) 报 ABORTED COMMAND asc 47,3.md
+            - 1.10.6-2003 年 7 月 2 日，Steve Grandi 确认按 Justin Gibbs 前封建议关掉 packetized protocol 后问题解决，并感谢 Gibbs.md
+            - 1.10.7-2003 年 7 月 28 日，Nate Lawson 的 cvs commit 在 cam_ccb.h 新增 PATH_INQ 标记 PIM_NO_6_BYTE.md
+            - 1.10.8-2003 年 6 月 21 日，Nick Twaddell 用 current 快照试 ServeRAID 4Lx 仍失败，ips0 无法从设备取得配置数据.md
+            - 1.10.9-2004 年 5 月 5 日，称 aac 等设备有 cam passthrough 别名 aacp，可用来做固件升级与 smartmontools 等操作，硬件 RAID 另有其利.md
+            - 1.10.10-2005 年 2 月 8 日，解释扫描发生在 CAM 收到 XPT_SCAN_BUS 命令时进行，该命令在启动期自动跟在 XPT_RESET_BUS 之后.md
+            - 1.10.11-2007 年 4 月 3 日，mjacob 表示自己同样遇到 targclose 不返回，过去曾折腾一番才让它工作，并猜测随着内核其他部分加锁改造得更多它可能又坏掉了.md
+            - 1.10.12-2008 年 4 月 3 日，Scott Long 针对 Julien 的 Intel SRCZCR RAID 控制器 inquiry 数据比较失败的报错给出回应，后者在 FreeBSD 7.0 上配置为.md
+            - 1.10.13-2008 年 5 月 11 日，Rong-en Fan 询问 da(4) 驱动 WCE write cache 位默认值指出部分磁盘默认开启部分关闭与探测时设备返回能力有关并指出同一硬件下 Linux.md
+            - 1.10.14-2009 年 8 月 25 日，Scott Long 发布 ciss_p410.diff 请 FreeBSD 8.0 上新一代 HP Smartarray 适配器 P210 212 410 用户在.md
+            - 1.10.15-2009 年 11 月 25 日，Ross West 请求关闭 kern／126866,称 isp 驱动大改写已修复该问题，依据是 mjacob 在 2009 年 8 月 1 日提交的 SVN rev.md
+            - 1.10.16-2010 年 7 月 14 日，Leo Prasath Arulraj 确认 kldstat 已列出 isp_2300 后错误仍在，还有 bogus intr- isr 8013 的虚假中断，并用.md
+            - 1.10.17-2010 年 11 月 16 日，Kenneth D. Merry 提交为 CAM 与 mps(4) 增加 SMP 透传支持的补丁集.md
+            - 1.10.18-2012 年 12 月 13 日，smh 将 kern／169801 的责任人由 freebsd-scsi 改为本人 smh.md
+            - 1.10.19-2012 年 2 月 25 日，bsalinux 在 FreeBSD 9.0-RELEASE 上寻求 IBM M1015 卡的支持，芯片为 LSI SAS2008.md
+            - 1.10.20-2012 年 5 月 18 日，Kashyap 称 LSI 在 FreeBSD 8.3 用 mpslsi 以 30 或 60 秒间隔循环 HBA reset，约 500 次后正常，长跑则报 Unable.md
+            - 1.10.21-2014 年 2 月 28 日，Steven Hartland 补充提醒确认固件已是最新 旧固件在使用 WRITE SAME 命令时存在已知的数据损坏问题.md
+            - 1.10.22-2014 年 7 月 10 日，Hartland 追问为何看不到实际损坏内容与成因，称已知损坏问题早已修复，希望确认软硬件配置，本方 mfi 承载的数据库机上生产一年半以上从未损坏.md
+            - 1.10.23-2014 年 6 月 20 日，Sean Bruno 回应 Douglas Gilbert 的信息，称当天上午已关闭并更新该 Bugzilla 票据.md
+            - 1.10.24-2015 年 4 月 8 日，作者排查 mpslsi3 驱动在 xpt_action 崩溃时指出 scsi_scan_bus 中先解锁后加锁顺序颠倒，把它改为先加锁再解锁后不再内核崩溃.md
+            - 1.10.25-2015 年 7 月 23 日，他在为使用 M1015 卡的新服务器准备十一点二版本，听说 P20 固件在 FreeBSD 上不稳、应该改用 P19，又翻到早前的一份相关报告.md
+            - 1.10.26-2015 年 5 月 28 日，Michael Jung 用三块 LSI 9200-8e 接 Super Micro CSE-846A-R1200B 机箱.md
+            - 1.10.27-2016 年 2 月 26 日，cristobal 装 FreeNas 9.3 配 LSI 3008 HBA 只见 35 块盘，缺的是 24 号槽位，卡 BIOS 与 Live 下 Linux 都能看到.md
+            - 1.10.28-2017 年 12 月 4 日，Alexander Motin 说明 Intel ESB2 只含 SATA HBA 不认 SAS，兼容方向是 SATA 盘接到 SAS 控制器，转接器也是这个用法.md
+            - 1.10.29-2017 年 2 月 15 日，Andriy Gapon 描述音频 CD 插在 DVD 机中开机时，scsi_cd 报出 200919 个 2048 字节扇区.md
+            - 1.10.30-2017 年 6 月 19 日，当磁带序列号超过约八十字节时，扩展取回路径会在持锁状态下等待内存分配，现改为不等待并在分配失败时直接报错退出，此类长序列号极为罕见.md
+            - 1.10.31-2017 年 11 月 7 日，他照做之后把结果贴了出来：命令只在屏幕上打出行标题，下面却没有任何一条设备条目，而他的系统版本是 FreeBSD 11.1-RELEASE-p2.md
+            - 1.10.32-2018 年 3 月 27 日，Andriy 觉得这现象又奇特又费解，追问重启进多用户时是否仍用打过补丁的内核，并推测可能是启动时硬件或 VirtualBox 已卡死.md
+            - 1.10.33-2019 年 4 月 23 日，smh 建议设 hw.ata.ata_dma 为 0 强制走 PIO 模式作为变通，不过按他找到的规格该盘本应支持 Multi DMA 模式 1.md
+            - 1.10.34-1998 年 5 月 31 日，发帖人发现在 2940uw BIOS 中禁用断连协商后问题消失，但他对 SCSI 错误不够熟悉，怀疑是否缺了这批 IBM 磁盘的怪癖处理.md
+            - 1.10.35-1998 年 7 月 6 日，发帖人称自己已完成该驱动向 CAM 的初步移植并使其支持带标签排队，但旧驱动与新式驱动都未记载如何获取当前传输设置或中止正在执行的命令.md
+            - 1.10.36-1998 年 7 月 15 日，发帖人报告光驱启动时报致命错误非法请求与逻辑单元不支持而挂载失败，附读取容量命令及同一适配器下正常识别的光驱信息，并称难以相信设备不支持零号逻辑单元.md
+            - 1.10.37-1998 年 7 月 21 日，发帖人说明当时只在该卷上跑两项性能测试作为压力测试的一部分，故后果没那么严重，反问终止之外是否可能是固件问题，并仍在追问消息含义：是设备没有响应.md
+            - 1.10.38-1998 年 8 月 18 日，Burkard Meyendriesch 在稳定版上安装 CAM 快照补丁后，运行数小时后光盘驱动器从挂载表中消失并出现设备丢失与读取错误信息.md
+            - 1.10.39-1998 年 9 月 18 日，Ted Buswell 在 -current 做删除文件、构建世界等大 IO 时看到 tagged openings 与一串 ncr0 超时消息.md
+            - 1.10.40-1998 年 9 月 25 日，Simon Shapiro 称最新内核已能从 CAM 启动 DPT，丢失中断的问题似乎不再出现，但他仍对盘符如何分配、硬连线设备为何不被尊重存疑.md
+            - 1.10.41-1998 年 10 月 6 日，发帖人回复把内核快照里的驱动源嵌入旧版内核理论上可行，但对不熟悉内核的人来说极其困难，不如直接买一款新控制器而不去折腾把新子系统搞到旧内核上.md
+            - 1.10.42-1998 年 10 月 19 日，发帖人回复该阵列控制器没有驱动，他试过向厂商索取编程文档但始终没得到任何回应，也不确定整机厂商是否持有该文档以及是否愿意提供.md
+            - 1.10.43-1998 年 11 月 11 日，发帖人询问谁家的 SCSI 硬盘固件质量最好，自持 IBM Ultrastar 2XP 打算迁移到 3.0，希望能预知会碰到的问题.md
+            - 1.10.44-1998 年 11 月 29 日，发帖人报告升级到 3.0 当前树启用 CAM 后，用 tosha 从东芝 XM-4101 抓取 CD 音频会在随机位置报非法请求.md
+            - 1.10.45-1998 年 12 月 11 日，发帖人先用试写模式刻录两次，随后真实刻录在写入前就报介质空间不足，而信息查询却显示已记录两次会话、光盘实际仍空白.md
+            - 1.10.46-1998 年 12 月 23 日，发帖人称已把磁带驱动在介质末端的文件标记处理改写成特性项，认为这只对无法探测介质物理末端的驱动器必要且也应只用于此，并称控制设备已在其待办之列.md
+            - 1.10.47-1999 年 1 月 9 日，发帖人说明他只在 SCSI 列表上，所以第一次听说 NCR 驱动在 53c896 上的问题；那处断言本属不可能发生的情形，他从没见过被触发.md
+            - 1.10.48-1999 年 1 月 15 日，发帖人报告自十三日起开发版机器再启不来，卡在探测总线：实际反复报消息拒绝并忽略、命令块空闲超时、排队设备复位命令并发送总线复位.md
+            - 1.10.49-1999 年 1 月 20 日，发帖人报告 P2B-S 板载 AIC-7890 U2W 接一块 IBM SCSI 硬盘，用启动软盘安装时虽列出 SCSI 设备但内核无任何磁盘记录.md
+            - 1.10.50-1999 年 2 月 26 日，发帖人请人解释一段报错：设备上反复出现空闲超时、排队总线设备复位命令、发送复位消息、超时解除以及意外总线释放；这类消息他收到几十条且编号各不相同.md
+            - 1.10.51-1999 年 3 月 8 日，Matt 说问题相当严重，读块限制命令与模式选择命令都坏了，打算过几天在 -current 合入更多改动后迁到 -STABLE 并请大家测试.md
+            - 1.10.52-1999 年 3 月 13 日，Ken 笑着附和 Matt 那句玩笑，说如果能想出测量那类事情的可靠办法就值得研究，但他认为这是个极其困难的任务，未必能办到.md
+            - 1.10.53-1999 年 3 月 21 日，发帖人反驳对方认为大切片仅对多进程有效，指出基准测试随机寻道部分实际运行三个并行进程而非单进程，并认为即使有数组空闲也不应将请求拆分为多个以提高性能.md
+            - 1.10.54-1999 年 3 月 31 日，发帖人回答想固定设备号与目标号映射的提问，建议把设备按顺序固定下来，并提示可查另一套系统的资料.md
+            - 1.10.55-1999 年 4 月 8 日，发帖人接着上面的争论补一份实例，确认自己在一块三四年前的旧刻录光盘机上完成了新版本系统的安装，说明并非所有机器都装不上去.md
+            - 1.10.56-1999 年 4 月 13 日，发帖人回应多处理器一节，说他们测得四路处理器的处理器到内存带宽只有双路或单路机器的三分之二，另一位工程师在他们有的同类机上跑出几乎相同数字.md
+            - 1.10.57-1999 年 4 月 21 日，发帖人近期将收到一台带差分接口的磁带库、正在找配套的主机适配器，询问在较新版本下哪些差分控制器支持最好、是否仍是某系列、哪款性能最好、哪些应避免.md
+            - 1.10.58-1999 年 4 月 28 日，发帖人说自己正好有这台机器、判断该错误多半是介质不对、这台机器很挑、自己只使用过厂商认证的二十吉字节五型认证带、误订的四型带根本不能识别.md
+            - 1.10.59-1999 年 6 月 7 日，发帖人称自 3.x 起只有副盘出现 invalid pack 错误而主盘从没有过，怀疑起因是这块盘功耗偏高.md
+            - 1.10.60-1999 年 6 月 29 日，发帖人推测崩溃发生在 open 阶段且阵列返回容量为零，说明驱动读取容量带四次重试与五秒超时并视错误是否带恢复动作决定重发.md
+            - 1.10.61-1999 年 7 月 14 日，发帖人报告单块盘挂在控制卡上性能令人失望，给出硬件配置为双处理器三百兆赫配六十四兆内存与稳定版内核，附上测速工具测出的读写数字，并说大程序启动很慢.md
+            - 1.10.62-1999 年 7 月 30 日，发帖人说几周前挂掉的盘换回来的替代盘同样不稳，用几分钟就出问题，只有重新上电才能唤醒，因此怀疑问题在固件而非盘体；他列出启动时显示的固件版本.md
+            - 1.10.63-1999 年 8 月 14 日，发帖人在当前版上把一个用户分区备份到磁带驱动器，预计约两百九十五万个磁带块，写到接近八成时报写入错误并询问是否重启；他说平常一条带子通常能装下更多.md
+            - 1.10.64-1999 年 8 月 24 日，发帖人指出这类吞吐对比必须走裸设备并显式给出块大小，他给出一条以较大块读裸盘的示例命令，并说明块设备只该在挂载文件系统时才算用武之地.md
+            - 1.10.65-1999 年 9 月 8 日，发帖人称所收补丁未能解决问题，对补丁中在末尾做右移而不用乘法的写法表示不解，并说明那台机器是他唯一的 FreeBSD 机器且源码树不断被弄坏.md
+            - 1.10.66-1999 年 9 月 16 日，发帖人转贴主板手册原文说明该板有五十针八位、六十八针十六位与六十八针 Ultra2 三个独立接口，其中宽 SCSI 接口始终已终止且只能作端点设备.md
+            - 1.10.67-1999 年 9 月 30 日，发帖人因那条总线上没有重要数据便试用了该驱动，随即发现它并不会探测 SCSI 设备的全部逻辑单元：他机器上那台更换器所连光驱中只有第一个被识别.md
+            - 1.10.68-1999 年 10 月 27 日，发帖人在阵列卡议题下回应询问者，称自己找遍各处后认为现有 Linux 驱动以及临时拼凑的方案都不可靠，团队里已有若干同类卡.md
+            - 1.10.69-1999 年 11 月 8 日，发帖人报告 QLogic QLC-2200 光纤通道卡在 3.3-RELEASE 启动时被识别但无法继续引导，卡上 BIOS 可正常进入.md
+            - 1.10.70-1999 年 11 月 19 日，补充说卡总线支持已有外部成果被导入源码树、目前正在做新总线化，相关基础工作据他所知已经铺好，以此回应此前有人认为该等不来的那种说法.md
+            - 1.10.71-1999 年 11 月 23 日，在该驱动是否导入当前分支的讨论邮件里表态明确支持，称自己在两台机器上使用表现都很好，希望赶上即将到来的下一次版本发布窗口就更好了.md
+            - 1.10.72-1999 年 12 月 19 日，发帖人称已用最新版本的驱动对发布候选树完成适配并试用，公布可供下载的说明文件与补丁压缩包地址.md
+            - 1.10.73-2000 年 1 月 7 日，发帖人给多台服务器装了把该驱动编译进内核的新内核，发现只要板载适配器的端口上不接任何设备，硬盘指示灯就会一直常亮，其余功能正常.md
+            - 1.10.74-2000 年 2 月 8 日，发帖人复查了送修机器的全部线缆与终结，一切正常，只有一块已终结的盘和一根线，卡本身设成自动终结他怀疑正是原因；他用多个进程大量读写磁盘复现了问题.md
+            - 1.10.75-2000 年 5 月 9 日，发帖人发布该驱动支持 U160 及性能改进的补丁说明，涵盖两款芯片的 U160 支持、指令集嵌入式传输.md
+            - 1.10.76-2000 年 6 月 28 日，发帖人回复有人已为该系列阵列卡做出可用驱动，另一款阵列卡用的也应是其衍生驱动，可从该人网站获取.md
+            - 1.10.77-2000 年 7 月 24 日，发帖人略晚回复推测新版代码中终止器设置可能已改变但对方卡型本不该变，请对方以详细引导方式启动并注意驱动关于终止器所显示的提示信息.md
+            - 1.10.78-2000 年 8 月 15 日，发帖人致谢指点固件问题的人，其某型盘需从固件 rev2 升到 rev6 后正常工作，另一型号也从 rev2 升到 rev4.md
+            - 1.10.79-2000 年 8 月 28 日，发帖人在两块控制器带同品牌大容量盘的配置下持续遇到磁盘在高负载下被断开，怀疑四十兆赫的协商速率是诱因，询问更高带宽补丁何时合入.md
+            - 1.10.80-2000 年 9 月 28 日，发帖人先称这是一条有价值的信息，随后判断这很可能出自己负责代码的缺陷，表示大约要一天才有空处理，并托对方若下周前没见到修复再提醒自己一次.md
+            - 1.10.81-2000 年 10 月 16 日，发帖人回复说数据溢出与数据相位错误那两条消息出现在某型号控制器上，把它换成两块其他型号控制器后连续数天运行良好，决定保持现状.md
+            - 1.10.82-2000 年 11 月 4 日，发帖人指出对方把转换接头接在了双绞线差分线缆那一侧；引导日志显示两条通道当前都是差分模式，他判断这是终结问题，除非那两块老光驱也支持差分.md
+            - 1.10.83-2000 年 11 月 25 日，发帖人在 3.4-R 上装了两块 Tekram DC-390，分别以 ncr 和 tekram_amd 驱动识别，ncr 频繁超时而挂.md
+            - 1.10.84-2001 年 1 月 2 日，发帖人在调并口 Zip 驱动时请教 SCSI 状态值的含义，他说按头文件里定义的状态值似乎只会出现偶数值.md
+            - 1.10.85-2001 年 1 月 18 日，发帖人指出硬盘应当自动重新起转而对方现象并不正常，并说明意义字符串给出数值错误码的文字描述可省去查表的麻烦，命令字符串则说明是哪条命令失败.md
+            - 1.10.86-2001 年 2 月 5 日，发帖人称自己在另一台机器上已让目标模式成功运行，关键是在内核配置里加入特定设备才能触发目标模式功能，并贴出目标选择处理函数片段，所用芯片为 7890 系列.md
+            - 1.10.87-2001 年 3 月 13 日，发帖人认为适用性取决于具体使用方式，并指出该专利的实际受让人是另一家公司，自己早年曾见过申请材料，还附上两个专利号与链接.md
+            - 1.10.88-2001 年 3 月 22 日，发帖人针对多份归档写入失败给出自己的看法，认为应把这台磁带机的末段标志模型设为只有一个文件标记，他没有提供具体命令.md
+            - 1.10.89-2001 年 4 月 7 日，发帖人给不支持高速传输的主板加装一块高速盘，驱动按低速协商成功，但他发现同机另一块盘开始频繁超时，附输出显示请求在数据输出阶段超时并触发总线复位.md
+            - 1.10.90-2001 年 6 月 12 日，发帖人称新机 Dell PowerEdge 2550 与 FreeBSD 4.2、4.3-RELEASE 不兼容.md
+            - 1.10.91-2001 年 6 月 25 日，发帖人在回复 CAM_NEW_TRAN_CODE 相关改动的邮件时追问对方是否已有现成改造、能否直接提交.md
+            - 1.10.92-2001 年 8 月 16 日，发帖人在 Dell PowerEdge 2500 上用三块 U160 盘经 PERC3 Dual Channel 组建 RAID 5 后被识别为 aacd0，安装顺利但重启报.md
+            - 1.10.93-2001 年 8 月 29 日，发帖人回复在 HP C1533 DDS-2 驱动器上测试补丁效果正常，并提到自己在两次磁带备份之后的那天发生了 ／var 文件系统损坏.md
+            - 1.10.94-2001 年 11 月 2 日，发帖人推测 29160 上的 aic7892 突发长度大于 2940UW 上的 7880，因此认为两者对比并不完全等价，无法据此判断问题是否真的解决.md
+            - 1.10.95-2001 年 11 月 30 日，发帖人称装有某控制器的机器启动时常发生内核态缺页恐慌，未设定时器的进程被异常信号杀死，自写程序测得计时器返回值非零，用清零补丁可暂时消除问题.md
+            - 1.10.96-2001 年 12 月 21 日，发帖人称从早期版本一路升级到稳定版后其磁带机几乎完全失效，自称对该设备基本一无所知，除用 rsa0.ctl 查询外任何操作都会使进程挂起直至超时.md
+            - 1.10.97-2002 年 3 月 21 日，发帖人试用用户态 SCSI 目标模式模拟器，运行 scsi_target 报 Device not configured.md
+            - 1.10.98-2002 年 4 月 13 日，发帖人称与 Mike 共同发现 CAM sim 被冻结却从未解冻并提交修复补丁，因在一台服务器上出现另一台无法复现的异常而暂未合入代码.md
+            - 1.10.99-2002 年 5 月 20 日，发帖人转贴一份 OpenBSD 上 PERC 3／Di 导致主机锁死的报告，说明虽是外系缺陷但列表后续讨论提到有服务器死机锁死的说法.md
+            - 1.10.100-2002 年 7 月 2 日，发帖人解读 PCI 状态 0x8100 表示设备报出主设备检测到的奇偶校验错误与数据奇偶校验错误，说明 sym 驱动开启了该检查而 ncr 没有.md
+            - 1.10.101-2002 年 8 月 12 日，发帖人有一个更新 SCSI 设备固件的 win32 程序，推测其用 Write Buffer 0x3B 命令但不知参数.md
+            - 1.10.102-2002 年 10 月 7 日，发帖人报告 4.5-Release 的 aic7892 在高强度访问硬盘时会让机器卡住数分钟后自行恢复，控制台随后打印 SCB 超时.md
+            - 1.10.103-2002 年 11 月 6 日，发帖人指出若 mode sense 与 mode select 处理代码触发，应能看到把最小 CDB 扩到 10 字节的打印却没有出现.md
         - 1.11-FreeBSD 13.x 时期的技术淘汰与架构支持变动
             - 1.11.1-MIPS 架构降级与退役路径.md
             - 1.11.2-riscv64sf（软浮点 RISC-V）退役与 riscv64 演进.md
             - 1.11.3-OpenSSL 1.0.2 移除与 1.1.1 时代.md
-            - 1.11.4-年4月7日MarkMillard补充说同一usefdt启动故障也出现在32位po.md
-            - 1.11.5-年4月19日MarkMillard发来更正承认自己前一封关于lwsync与th_.md
-            - 1.11.6-年8月4日JasonBacon补充说重启之后一切正常I2C与sysctl都无恙这.md
-            - 1.11.7-年2月4日JustinHibbits自述点亮X5000时的网络启动只用了iscd.md
-            - 1.11.8-年2月19日JustinHibbits反驳MarkMillard的顾虑指出自己那.md
-            - 1.11.9-年1月21日JohnBaldwin说明自己在QEMU上按powerpc64交叉工.md
-            - 1.11.10-年7月26日MarkLinimon称自己的Blackbird是Power9机器跑.md
-            - 1.11.11-年6月12日MarkMillard判断有效位掩码只用于sbininit文件的最后.md
-            - 1.11.12-年3月2日BruceEvans追问成因怀疑可能是tickless代码没有正确生成.md
-            - 1.11.13-年5月3日MarkMillard报告970MPG5上vt_upgrade挂起时c.md
-            - 1.11.14-年5月10日MarkMillard贴出基于headr347003的mp_cpud.md
-            - 1.11.15-年5月23日JasonBacon称自己的iMacG5跑SLiM与LXDE已接近可.md
-            - 1.11.16-年11月20日MarkMillard感谢MarkLinimon的点拨指出deve.md
-            - 1.11.17-年2月12日CameronBerkenpas按建议把usrsrcsyssys下的.md
-            - 1.11.18-年1月7日MarkMillard在把系统更新到headr356426并尝试多种构.md
-            - 1.11.19-年6月19日MichaelTuexen在风扇狂转讨论中回复表示乐意参与时基补丁的.md
-            - 1.11.20-年9月22日MarkMillard报告32位powerpc从r365590升到r.md
-            - 1.11.21-年4月16日KevinBowling提醒近期i2c子系统也有通用改动建议Mark.md
-            - 1.11.22-年2月5日JustinHibbits判断MarkMillard遇到的段错误可能是.md
-            - 1.11.23-年2月17日MichaelTuexen回应JulioMerino的PowerMa.md
-            - 1.11.24-年1月15日MarkMillard称即便不打自己的补丁直接交叉编译r368820.md
-            - 1.11.25-年5月10日ChristophSold回答称据其所知不行抱歉建议改看OpenBS.md
+            - 1.11.4-2019 年 4 月 7 日，Mark Millard 补充说同一 usefdt 启动故障也出现在 32 位 powerpc 的 PowerMac3,6 上.md
+            - 1.11.5-2019 年 4 月 19 日，Mark Millard 发来更正，承认自己前一封关于 lwsync 与 th_generation 处理的推断里有思路上的错误.md
+            - 1.11.6-2019 年 8 月 4 日，Jason Bacon 补充说重启之后一切正常、I2C 与 sysctl 都无恙，这种看似随机的表现让他怀疑驱动里有未初始化的变量.md
+            - 1.11.7-2019 年 2 月 4 日，Justin Hibbits 自述点亮 X5000 时的网络启动只用了 isc-dhcp 加 tftp 与 uImage.md
+            - 1.11.8-2019 年 2 月 19 日，Justin Hibbits 反驳 Mark Millard 的顾虑，指出自己那台 POWER9 只有 32 个 SLB 项，其中 4 项被钉住.md
+            - 1.11.9-2019 年 1 月 21 日，John Baldwin 说明自己在 QEMU 上按 powerpc64 交叉工具链构建磁盘镜像以测试 GDB 的过程.md
+            - 1.11.10-2019 年 7 月 26 日，Mark Linimon 称自己的 Blackbird 是 Power9 机器.md
+            - 1.11.11-2019 年 6 月 12 日，Mark Millard 判断有效位掩码只用于 sbin／init 文件的最后一页，而非按 PT_LOAD 所请求数据的大小与对齐来设定.md
+            - 1.11.12-2019 年 3 月 2 日，Bruce Evans 追问成因，怀疑可能是 tickless 代码没有正确生成伪时钟滴答或只是库里的缺陷.md
+            - 1.11.13-2019 年 5 月 3 日，Mark Millard 报告 970MP G5 上 vt_upgrade 挂起时，callout 初始化之后的第一句打印能显示而第二句不显示.md
+            - 1.11.14-2019 年 5 月 10 日，Mark Millard 贴出基于 head -r347003 的 mp_cpudep.c 最小补丁，说明已清掉排查用的临时代码.md
+            - 1.11.15-2019 年 5 月 23 日，Jason Bacon 称自己的 iMac G5 跑 SLiM 与 LXDE 已接近可用的桌面，只差 firefox.md
+            - 1.11.16-2019 年 11 月 20 日，Mark Millard 感谢 Mark Linimon 的点拨，指出 devel／binutils 里 native 排在首位且有默认值.md
+            - 1.11.17-2020 年 2 月 12 日，Cameron Berkenpas 按建议把 ／usr／src／sys／sys 下的头文件复制到 ／usr／include／sys 后构建推进了一步但仍失败，他质疑 make.md
+            - 1.11.18-2020 年 1 月 7 日，Mark Millard 在把系统更新到 head -r356426 并尝试多种构建方式时.md
+            - 1.11.19-2020 年 6 月 19 日，Michael Tuexen 在风扇狂转讨论中回复，表示乐意参与时基补丁的测试，但需先确认自己实验室里那台 PowerMac 的具体型号.md
+            - 1.11.20-2020 年 9 月 22 日，Mark Millard 报告 32 位 powerpc 从 -r365590 升到 -r365932 后双路 PowerMac G4 无法启动.md
+            - 1.11.21-2021 年 4 月 16 日，Kevin Bowling 提醒近期 i2c 子系统也有通用改动，建议 Mark Millard 换用旧版本对比是否出现同样症状以缩小范围.md
+            - 1.11.22-2021 年 2 月 5 日，Justin Hibbits 判断 Mark Millard 遇到的段错误可能是提交 710e45c4b 的余波，该提交已被回退.md
+            - 1.11.23-2021 年 2 月 17 日，Michael Tuexen 回应 Julio Merino 的 PowerMac G5 风扇狂转报告，称这是长期已知问题.md
+            - 1.11.24-2021 年 1 月 15 日，Mark Millard 称即便不打自己的补丁、直接交叉编译 r368820 的内核，在双路单核 G5 上同样极早失败，与官方构件表现不一致.md
+            - 1.11.25-2002 年 5 月 10 日，Christoph Sold 回答称据其所知不行，抱歉，建议改看 OpenBSD 或 NetBSD，因为 FreeBSD 目前还装不上该机型.md
         - 1.12-其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS
-            - 1.12.1-年11月29日MikhailT说home下唯一的fifo是2003年建的mili.md
-            - 1.12.2-年1月23日ReneLadan发布xtaf20070123不再需要专门挂载程序补.md
-            - 1.12.3-年1月3日Damjan在PR205668评论里实测Pedro的补丁能让未干净卸载.md
-            - 1.12.4-年9月24日JDavid用lldb确认崩溃行是nfs_clrpcopsc第169.md
+            - 1.12.1-2015 年 11 月 29 日，Mikhail T 说 ／home 下唯一的 fifo 是 2003 年建的 mi／.licq／licq_fifo 在 NFS 客户端一侧往里面 echo 后.md
+            - 1.12.2-2007 年 1 月 23 日，Rene Ladan 发布 xtaf-20070123, 不再需要专门挂载程序，补丁缩为两个 diff, 挂载改为 mount -t xtaf, NFS 支持在.md
+            - 1.12.3-2016 年 1 月 3 日，Damjan 在 PR 205668 评论里实测 Pedro 的补丁能让未干净卸载的 EXT4 文件系统挂载成功，但仍没有给出该警告.md
+            - 1.12.4-2024 年 9 月 24 日，JDavid 用 lldb 确认崩溃行是 nfs_clrpcops.c 第 1697 行 nfscl_openrelease 调用之后的空指针判断.md
             - 1.12.5-＊＊devfs(5)＊＊：Poul-Henning Kamp（波尔-亨宁·坎普） 设计的动态设备文件系统（FreeBSD 5.0）.md
             - 1.12.6-＊＊mdconfig(8)＊＊ 内存盘与 vnode 盘.md
             - 1.12.7-＊＊tmpfs(4)＊＊、＊＊sendfile(2)＊＊ 与 VFS 层.md
-            - 1.12.8-年7月3日DarioFreni确认从54RELEASE到STABLEunionf.md
-            - 1.12.9-年6月4日RobertWatson承认自己在删除mach头文件时误将该inclu.md
-            - 1.12.10-年3月31日avg建议暂时禁用同一设备多次只读挂载功能因为GEOM引入后该功能因.md
-            - 1.12.11-年1月29日IvanVoras回应挂载点数量上限的提问称不必担心自述曾一次性建到.md
-            - 1.12.12-年3月7日JohnBaldwin报告对持有flock的文件执行close并非原子.md
-            - 1.12.13-年1月17日OlivierCochardLabbé在问题反馈里回讯说应用某位维护.md
-            - 1.12.14-年6月12日MikolajGolub指出ENOENT出自nv_get系列调用的n.md
-            - 1.12.15-年11月5日AlbertShih报告90的ZFSNFS服务器上mountd反复报.md
-            - 1.12.16-年4月20日RickMacklem关闭PR说明该NFSpanic由r259765.md
-            - 1.12.17-年12月24日RickMacklem提议新NFS挂载选项强制客户端设置mtime.md
-            - 1.12.18-年1月31日弗雷迪称自己在FreeBSD9上用UDF读写正常但不确定FreeBS.md
-            - 1.12.19-年8月1日作者称在exports文件中V4行本身并不导出文件系统若要一并保留v3.md
-            - 1.12.20-年2月19日RickMacklem说明88字节路径限制仍然适用改MNAMELEN.md
-            - 1.12.21-年7月2日AhmedKamal报告101ZFS以NFS4导出给LinuxNIS主.md
-            - 1.12.22-年6月20日LarryRosenman查rsync源码发现并未使用mmap而是有.md
-            - 1.12.23-年12月3日RickMacklem转述JasonMader的D8696使纯NFS.md
-            - 1.12.24-年3月29日Rick答Nishida称FreeBSD10起sysfsfuse客户.md
-            - 1.12.25-年12月5日Gerrit发现findsx加execls在失效NFS挂载上卡住ch.md
-            - 1.12.26-年5月22日KirkMcKusick认可Kib的提议合理但遗憾它来得太晚于测试收.md
-            - 1.12.27-年9月14日AndriyGapon表示差点漏掉mountcheckdirs这个议.md
-            - 1.12.28-年3月30日AlexVPetrov用dd将boot1efifat复制到ada0p.md
-            - 1.12.29-年2月10日RickMacklem推断gss_export_name的输出在密码.md
-            - 1.12.30-年9月6日FlorianSchulze从FreeBSD12起ZFS经多个null.md
-            - 1.12.31-年6月4日NazimCanBedir解释内核普通文件IO与设备IO路径不同为做块.md
-            - 1.12.32-年3月11日WarnerLosh说明内核在geom完成设备识别后发出GEOM事件.md
-            - 1.12.33-年10月7日Agata确认MooseFS会调用fuse_lowlevel_not.md
-            - 1.12.34-年5月22日WarnerLosh据SMART日志判断SSD发生519次电源循环与.md
-            - 1.12.35-年9月13日clearscreen称曾试着升到131以便uname不再报出bug.md
-            - 1.12.36-年12月30日RickMacklem上传附件247360补丁不清经缓冲写入页的脏.md
-            - 1.12.37-年6月1日Andrew通过在loaderconf设置hintaesni0disa.md
-            - 1.12.38-年10月31日JohnFCarr报告在poudriere构建期间用control.md
-            - 1.12.39-年9月21日Rick澄清自己原本指copy_file_range未被调用指出若返.md
-            - 1.12.40-年2月5日StefanEsen在msdosfs加入分配释放追踪后复现268005.md
-            - 1.12.41-年1月2日KonstantinBelousov解释缓冲大小是1M时只要映射其中任.md
-            - 1.12.42-年6月16日WarnerLosh建议swap分区至少1MB对齐称该建议未来可能改.md
-            - 1.12.43-年3月28日RickMacklem查看抓包后确认服务器在OpenLookup与G.md
-            - 1.12.44-年2月22日Lexi说启用vfsautofsmount_on_stat后mutt.md
-            - 1.12.45-年7月22日RickMacklem建议用df确认datatestnfs出现在挂载.md
-            - 1.12.46-年11月13日Ronald报告jail内nfsd导出ZFS文件系统后出现进程挂起.md
-            - 1.12.47-年11月30日JDavid表示不知消息来自哪台服务器难进一步核查确认一台小型服务.md
-            - 1.12.48-年9月13日Zaphod因proton支持依赖将工作站与poudriere升至1.md
-            - 1.12.49-年6月17日RickMacklem指真正引入chflags与EIO的是c5d72.md
-            - 1.12.50-年10月2日HeoSungGwan报告vnode的clusterreadahea.md
-            - 1.12.51-年1月5日MariusBendiksen建议改用mkhybrid替代mkisof.md
-            - 1.12.52-年10月27日EricBrueggmann在FreeBSD411STABLE上确.md
-            - 1.12.53-年3月20日AlfredPerlstein追问崩溃细节要求提供crashdump.md
-            - 1.12.54-年4月26日TerryLambert指出这是折叠命名空间方案用户视图只见文件名引.md
-            - 1.12.55-年6月13日jdscol92就FreeBSD43Release中缓冲区结构b_d.md
-            - 1.12.56-年10月9日BobVanValzah正在写Vinum软件RAID入门文章从sta.md
-            - 1.12.57-年2月2日JeroenRuigrok与ScottLong发布FreeBSD上UD.md
-            - 1.12.58-年3月19日ChrisWatson回答HansReiser关于FreeBSD中e.md
-            - 1.12.59-年8月29日Magnus指出smbfs4在校验密码前会把密码转为大写而这在m$已.md
-            - 1.12.60-年11月29日DavidCross分析afs_symlink会让内核panic因.md
-            - 1.12.61-年1月21日Terry认为4x是稳定系统接口不易变更而5x变化大举例1996年在.md
+            - 1.12.8-2005 年 7 月 3 日，Dario Freni 确认从 5.4-RELEASE 到 STABLE unionfs 表现正常.md
+            - 1.12.9-2009 年 6 月 4 日，Robert Watson 承认自己在删除 mac.h 头文件时误将该 include 一并删掉，问题出在 r160133.md
+            - 1.12.10-2010 年 3 月 31 日，avg 建议暂时禁用同一设备多次只读挂载功能，因为 GEOM 引入后该功能因缓冲区缓存层接口的设计问题从未正确工作.md
+            - 1.12.11-2011 年 1 月 29 日，Ivan Voras 回应挂载点数量上限的提问，称不必担心，自述曾一次性建到 14000 个挂载点仍未触限，真正上限由可容纳文件系统结构的内存决定.md
+            - 1.12.12-2012 年 3 月 7 日，John Baldwin 报告对持有 flock 的文件执行 close 并非原子：写入二进制的进程尚未真正关闭时.md
+            - 1.12.13-2013 年 1 月 17 日，Olivier Cochard-Labbé 在问题反馈里回讯，说应用某位维护者版本修订号对应的内核锁补丁后两台机器上的崩溃都得到解决，并致谢.md
+            - 1.12.14-2013 年 6 月 12 日，Mikolaj Golub 指出 ENOENT 出自 nv_get 系列调用的 nv_find 而非 nv_validate 惯用的 EINVAL.md
+            - 1.12.15-2013 年 11 月 5 日，Albert Shih 报告 9.0 的 ZFS NFS 服务器上 mountd 反复报无法删除 filer1 下的导出项.md
+            - 1.12.16-2014 年 4 月 20 日，Rick Macklem 关闭 PR，说明该 NFS panic 由 r259765 修复并以 r261061 合并到 stable／9.md
+            - 1.12.17-2014 年 12 月 24 日，Rick Macklem 提议新 NFS 挂载选项强制客户端设置 mtime 时使用服务器时间，以此规避 Solaris 服务端缺陷.md
+            - 1.12.18-2014 年 1 月 31 日，弗雷迪称自己在 FreeBSD 9 上用 UDF 读写正常，但不确定 FreeBSD 是否支持 UDF 读写挂载，需回家重测确认.md
+            - 1.12.19-2015 年 8 月 1 日，作者称在 exports 文件中 V4 行本身并不导出文件系统，若要一并保留 v3 风格条目就需要另外单独列出，作者自称不了解 ZFS 的 sharenfs.md
+            - 1.12.20-2015 年 2 月 19 日，Rick Macklem 说明 88 字节路径限制仍然适用，改 MNAMELEN 会破坏 statfs(2) 接口故 FreeBSD 不能这么做.md
+            - 1.12.21-2015 年 7 月 2 日，Ahmed Kamal 报告 10.1 ZFS 以 NFS4 导出给 Linux NIS 主服务器.md
+            - 1.12.22-2015 年 6 月 20 日，Larry Rosenman 查 rsync 源码发现并未使用 mmap 而是有类似 mmap 的例程.md
+            - 1.12.23-2016 年 12 月 3 日，Rick Macklem 转述 Jason Mader 的 D8696，使纯 NFSv4 服务器上的 nfsd 不再向 rpcbind 注册.md
+            - 1.12.24-2016 年 3 月 29 日，Rick 答 Nishida，称 FreeBSD10 起 sys／fs／fuse 客户端已取代 ports 版，建议其升级到 FreeBSD10 验证问题.md
+            - 1.12.25-2017 年 12 月 5 日，Gerrit 发现 find -sx ／加-exec ls 在失效 NFS 挂载上卡住 chksetuid，他认为-x 应阻止跨挂载访问.md
+            - 1.12.26-2017 年 5 月 22 日，Kirk McKusick 认可 Kib 的提议合理，但遗憾它来得太晚于测试收尾阶段，请 pho 至少带此改动跑一遍测试套件再定.md
+            - 1.12.27-2017 年 9 月 14 日，Andriy Gapon 表示差点漏掉 mountcheckdirs 这个议题现在重新接手并先推进卸载方向的改动因其似乎没有争议且相当简单.md
+            - 1.12.28-2018 年 3 月 30 日，Alex V Petrov 用 dd 将 boot1.efifat 复制到 ada0p1 成功修复 EFI 引导失败，此前 Harry 建议的标准做法是用.md
+            - 1.12.29-2019 年 2 月 10 日，Rick Macklem 推断 gss_export_name 的输出在密码库中查不到会被映射成 nobody.md
+            - 1.12.30-2019 年 9 月 6 日，Florian Schulze 从 FreeBSD 12 起 ZFS 经多个 nullfs 挂进 jail 后删文件不释放空间，zdb 仍见对象.md
+            - 1.12.31-2020 年 6 月 4 日，Nazim Can Bedir 解释内核普通文件 I／O 与设备 I／O 路径不同，为做块缓存文件系统后备存储必须是设备而非普通文件.md
+            - 1.12.32-2021 年 3 月 11 日，Warner Losh 说明内核在 geom 完成设备识别后发出 GEOM 事件可驱动脚本挂载，exfat 需 fuse 模块与 exfat-utils.md
+            - 1.12.33-2021 年 10 月 7 日，Agata 确认 MooseFS 会调用 fuse_lowlevel_notify_inval_inode，这正对应触发该警告的消息.md
+            - 1.12.34-2022 年 5 月 22 日，Warner Losh 据 SMART 日志判断 SSD 发生 519 次电源循环与 518 次不安全关机，折算约每 20 分钟一次掉电.md
+            - 1.12.35-2022 年 9 月 13 日，clear.screen 称曾试着升到 13.1 以便 uname 不再报出 bug 里那个字符串.md
+            - 1.12.36-2023 年 12 月 30 日，Rick Macklem 上传附件 247360 补丁不清经缓冲写入页的脏位，自称完全未测试，并认为必须配合 kib 的 copy_file_range 补丁.md
+            - 1.12.37-2023 年 6 月 1 日，Andrew 通过在 loader.conf 设置 hint.aesni.0.disabled 来禁用 AESNI.md
+            - 1.12.38-2023 年 10 月 31 日，John F Carr 报告在 poudriere 构建期间用 control-T 观察到 awk 进程在 vnode_init 内抢.md
+            - 1.12.39-2023 年 9 月 21 日，Rick 澄清自己原本指 copy_file_range 未被调用，指出若返回偏离 EINVAL 则 cp(1) 与 cat(1) 需相应调整.md
+            - 1.12.40-2024 年 2 月 5 日，Stefan Esen 在 msdosfs 加入分配释放追踪后复现 268005 问题.md
+            - 1.12.41-2024 年 1 月 2 日，KonstantinBelousov 解释缓冲大小是 1M 时只要映射其中任何一页内核就会验证整个缓冲.md
+            - 1.12.42-2024 年 6 月 16 日，Warner Losh 建议 swap 分区至少 1MB 对齐 称该建议未来可能改为 4 或 16MB 若 SSD 容量可能变化则将分区置于磁盘开头更好.md
+            - 1.12.43-2024 年 3 月 28 日，Rick Macklem 查看抓包后确认服务器在 Open.md
+            - 1.12.44-2025 年 2 月 22 日，Lexi 说启用 vfs.autofs.mount_on_stat 后 mutt 重新加载邮箱要数秒，即便只有约 5 个家目录也严重影响性能，自己倾向让.md
+            - 1.12.45-2025 年 7 月 22 日，RickMacklem 建议用 df 确认／data／testnfs 出现在挂载列表中，因导出由 VOP 层之上的通用代码处理.md
+            - 1.12.46-2025 年 11 月 13 日，Ronald 报告 jail 内 nfsd 导出 ZFS 文件系统后出现进程挂起与 NFS 服务器无响应消息内核为 16-CURRENTaarch64.md
+            - 1.12.47-2025 年 11 月 30 日，J David 表示不知消息来自哪台服务器难进一步核查，确认一台小型服务器用 automounter 访问极少咨询的共享配置目录多年无故障.md
+            - 1.12.48-2025 年 9 月 13 日，Zaphod 因 proton 支持依赖将工作站与 poudriere 升至 15-CURRENT，报告机器开机时 NFS 挂载遇到一次时间超时后跳过下一个共享.md
+            - 1.12.49-2026 年 6 月 17 日，RickMacklem 指真正引入 chflags 与 EIO 的是 c5d72d2 与 3b6d4c6，它们仅在 archive.md
+            - 1.12.50-1996 年 10 月 2 日，Heo Sung-Gwan 报告 vnode 的 cluster read-ahead 字段在多进程同时打开同一文件时互相干扰.md
+            - 1.12.51-2000 年 1 月 5 日，Marius Bendiksen 建议改用 mkhybrid 替代 mkisofs 以支持长文件名 对服务器操作系统中类似 CD-RW.md
+            - 1.12.52-2000 年 10 月 27 日，Eric Brueggmann 在 FreeBSD 4.1.1-STABLE 上确认 df、du、quota 均会引发整机重启.md
+            - 1.12.53-2001 年 3 月 20 日，Alfred Perlstein 追问崩溃细节 要求提供 crashdump 或 traceback 并质询 md0 与 MFS 究竟用于什么以及为何需要.md
+            - 1.12.54-2001 年 4 月 26 日，Terry Lambert 指出这是折叠命名空间方案 用户视图只见文件名 引用时取目录内最新版本 仍须独立的命名空间逃逸处理器做版本重定向.md
+            - 1.12.55-2001 年 6 月 13 日，jdscol92 就 FreeBSD 4.3 Release 中缓冲区结构 b_dep 的含义提出三个问题 涉及 softupdates 文件系统依赖.md
+            - 1.12.56-2001 年 10 月 9 日，Bob Van Valzah 正在写 Vinum 软件 RAID 入门文章，从 ／stand／sysinstall 装到带镜像卷的 server.md
+            - 1.12.57-2002 年 2 月 2 日，Jeroen Ruigrok 与 Scott Long 发布 FreeBSD 上 UDF 支持的首个 alpha 版本 采用 BSD License.md
+            - 1.12.58-2002 年 3 月 19 日，Chris Watson 回答 Hans Reiser 关于 FreeBSD 中 ext2fs 代码许可证的疑问，明确指出使用的是 BSDL.md
+            - 1.12.59-2002 年 8 月 29 日，Magnus 指出 smbfs(4) 在校验密码前会把密码转为大写而这在 m$ 已承认混合大小写密码的好处后不再合适并提议在 smb_conn.c 中移除.md
+            - 1.12.60-2002 年 11 月 29 日，David Cross 分析 afs_symlink 会让内核 panic 因 VOP_SYMLINK 期望填充 vpp 而 AFS 内部建私有 vnode.md
+            - 1.12.61-2003 年 1 月 21 日，Terry 认为 4.x 是稳定系统接口不易变更 而 5.x 变化大 举例 1996 年在 Motorolla PPC PowerStack 上做.md
         - 1.13-FreeBSD 2008—2018 年的贡献者多样性与企业参与
-            - 1.13.1-年7月9日20130709WarrenBlock回应AlbertoMijares.md
+            - 1.13.1-2013 年 7 月 9 日，2013-07-09 Warren Block 回应 Alberto Mijares 保留 sect 分级元素的意见，指出缩进同样能提示层级.md
             - 1.13.2-企业工程力量的有组织贡献.md
             - 1.13.3-地域与学术的志愿者多样性.md
             - 1.13.4-项目官方核心与基金会治理.md
-            - 1.13.5-年11月12日Metrocom的VarshavchickAlexander报告其.md
-            - 1.13.6-年2月5日CorneKotze更新其sftpchroot服务器密钥认证失效的问题.md
-            - 1.13.7-年12月7日GregWang用80CURRENT装盘时sysinstall分区界.md
-            - 1.13.8-年12月26日PoulHenningKamp反驳逻辑盘编号存在上限的说法指出扩展.md
-            - 1.13.9-年7月31日StefanWalter提交PRdocs55122建议手册在gdbe.md
-            - 1.13.10-年1月15日MatthewFuller认为写队列仅在发出多个操作时才有意义dd写.md
-            - 1.13.11-年4月21日Fesenko在Linux下用hdparmI查同一硬盘显示Firmw.md
-            - 1.13.12-年9月28日MarcusFonvieille计划将存储卡内容加入storage章.md
-            - 1.13.13-年4月17日ArtemBelevich说他已禁用ZIL因内核曾在负载下逐渐锁死但.md
-            - 1.13.14-年10月1日GregLehey报告找到并修复Vinum一个开机崩溃bug起因是3.md
-            - 1.13.15-年4月15日GrigoriyStrokin报告40全新安装时3吉Quantumf.md
-            - 1.13.16-年9月8日DarrylOkahata转述BillMoran关于40RELEASE.md
-            - 1.13.17-年9月26日hans报告netautofs首次访问产生spurious日志与au.md
-            - 1.13.18-年9月24日FarhanKhan用dtrace看到内核执行rtwnko的r88e.md
-            - 1.13.19-年7月9日ConradMeyer以一句Yes确认PratyushYadav关于c.md
-            - 1.13.20-年10月2日ThomasMunro称PostgreSQL默认用poll2先为性能.md
-            - 1.13.21-年7月11日12stable路由器上Solarflare网卡连arista705.md
-            - 1.13.22-年3月17日MarkMillard自述在headr358966上下文把ports.md
-            - 1.13.23-年5月9日MarioLobo的VirtualBox608在113STABLEr3.md
-            - 1.13.24-年10月4日Meowthink执行installworld后重启gssd无法启动.md
-            - 1.13.25-年10月29日CraigLeres自查发现xorg日志显示EVDEV_SUPPO.md
-            - 1.13.26-年4月22日PeterBlok在64位12STABLE上用同一份源码建32位ja.md
-            - 1.13.27-年3月22日ChristosMargiolis主张即便已有vardbmixerN.md
-            - 1.13.28-年2月14日jvaucourt称以Gimp打开freebsdorg之logoba.md
-            - 1.13.29-年12月1日spiloss报bug195549指portershandbook第.md
-            - 1.13.30-年1月9日glenBarber认为r310114只修好了vuxml但textpr.md
-            - 1.13.31-年1月27日BenjaminKaduk指出FAQ关于binsh保持精简的答述已不.md
-            - 1.13.32-年7月23日GaborKovesdan在CFR讨论中提议为文档引入两套PDF渲染.md
-            - 1.13.33-年6月19日maci61报缺陷191186指100RELEASE的i386更新元.md
-            - 1.13.34-年3月4日PaulMeng报告netmap手册页里的示例有误Release字段为.md
-            - 1.13.35-年5月17日docs189733要求pkg手册加入添加仓库配置文件的说明bcr以.md
-            - 1.13.36-年10月10日DruLavigne试用Mathematica90的30天版本安装.md
-            - 1.13.37-年10月25日JohanKuuse为上一封混入Gmail增强版富文本致歉改用纯文.md
-            - 1.13.38-年11月20日Bug195209报告人ngie称Handbook与linproc.md
-            - 1.13.39-年9月12日JohnBaldwin修改wait2手册补充wait6与idtype.md
-            - 1.13.40-年10月11日WarrenBlock在Bug194302称当前文档链接在Fire.md
-            - 1.13.41-年4月3日GlenBarber回复TorbjornGranlund表示该问题未出.md
-            - 1.13.42-年8月13日WarrenBlock提议重写etcmotd称现有版本违反多条文档规.md
-            - 1.13.43-年4月7日LiWenHsu重开繁体中文Handbook更新对应Bug193066.md
-            - 1.13.44-年2月7日JohnBaldwin说明GEOM最初用途之一便是处理分区表MBR会同.md
-            - 1.13.45-年1月12日Banks提交sctp4拼写补丁认为SCTP_AUTO_ASCONF.md
-            - 1.13.46-年12月10日Bug205177由chadatnetgatecom报告指pfSe.md
-            - 1.13.47-年11月1日AlanBatie指Handbook的firewallsipfw页让.md
-            - 1.13.48-年2月14日Bug197655由jasonunovitch提交补丁152984指.md
-            - 1.13.49-年9月6日WarrenBlock另出一版实验性etcmotd使用VT100ANS.md
-            - 1.13.50-年8月13日RMarefaty指RaspberryPi页称镜像默认口令为free.md
-            - 1.13.51-年3月3日msiodelskiatgmailcom在101RELEASEp6提B.md
-            - 1.13.52-年5月21日RüsingGerrit请求在Handbook的networkipv.md
-            - 1.13.53-年9月16日SeoTownsend指出freebsdorg的java页写pkgi.md
-            - 1.13.54-年3月19日BenWoods为Handbook第23章UpdatingandUp.md
-            - 1.13.55-年7月8日MarcFonvieille代表doceng@宣布doc树已为110R.md
-            - 1.13.56-年11月12日AdamWeinberger指出Handbook第23231节有误.md
-            - 1.13.57-年9月1日HamidSarmadi对BSD许可证文章的LGPL起源一节提修订建议.md
-            - 1.13.58-年9月27日sergey立单Bug213026指出ixgbe手册页所载驱动名称在.md
-            - 1.13.59-年8月8日lotharlinhard立单Bug221330称网页字符编码与内容不.md
-            - 1.13.60-年2月5日IgorRoshchin报告portscgi查询库底部Lastdata.md
-            - 1.13.61-年7月26日yzgyyang立单Bug221037指严格按说闰秒是应用于UTC而.md
-            - 1.13.62-年4月23日MarcFonvieille代表doceng@宣布doc树slush.md
-            - 1.13.63-年12月4日commithook报告r341451合入stable12eugen.md
-            - 1.13.64-年5月28日PeturIngiEgilsson向freebsddoc提议修正Ha.md
-            - 1.13.65-年8月3日112RELEASEp9下同一磁盘SATA直连时diskinfo扇区数.md
-            - 1.13.66-年8月7日LiangZhuo问epoch调度调用时机if_destroy与in_.md
-            - 1.13.67-年2月19日AustinShafer写DRMbuffer页故障处理器时vm_pa.md
-            - 1.13.68-年7月19日NorbertKoch追测发现复制完整src树并设置MAKEOBJD.md
-            - 1.13.69-年3月4日AnthonyPankov用WITHOUT_SSP=yes从源码构建1.md
-            - 1.13.70-年5月2日KonstantinBelousov指出taskqueue_poll_.md
-            - 1.13.71-年11月29日EugeneGrosbein说同类问题场景不同他的bhyveWin.md
-            - 1.13.72-年12月28日通过xinput修复Firefox左右滚轮在121与122之间的回.md
+            - 1.13.5-2008 年 11 月 12 日，Metrocom 的 Varshavchick Alexander 报告其 FreeBSD 5.4 服务器间歇性报文件系统已满.md
+            - 1.13.6-2009 年 2 月 5 日，Corne Kotze 更新其 sftp chroot 服务器密钥认证失效的问题，称已找到可行解法，并给出核对对端 SSH 版本.md
+            - 1.13.7-2008 年 12 月 7 日，Greg Wang 用 8.0-CURRENT 装盘时 sysinstall 分区界面报无磁盘.md
+            - 1.13.8-2008 年 12 月 26 日，Poul-Henning Kamp 反驳逻辑盘编号存在上限的说法，指出扩展 FAT 分区是链表结构、可以有任意多个分区.md
+            - 1.13.9-2003 年 7 月 31 日，Stefan Walter 提交 PR docs／55122 建议手册在 gdbe 一章注明它无法用于 vinum 卷.md
+            - 1.13.10-2013 年 1 月 15 日，Matthew Fuller 认为写队列仅在发出多个操作时才有意义，dd 写裸设备每次只发一条、等返回后再发下一条，每转最多一个操作.md
+            - 1.13.11-2014 年 4 月 21 日，Fesenko 在 Linux 下用 hdparm -I 查同一硬盘显示 Firmware 1.05 且 Transport 支持 SATA Rev 3.0.md
+            - 1.13.12-2003 年 9 月 28 日，Marcus Fonvieille 计划将存储卡内容加入 storage 章节涵盖 CF-PCMCIA 适配器与 USB 密钥等本人持有设备.md
+            - 1.13.13-2009 年 4 月 17 日，Artem Belevich 说他已禁用 ZIL 因内核曾在负载下逐渐锁死，但 prefetch 仍然开启，打算再试启用 ZIL.md
+            - 1.13.14-1999 年 10 月 1 日，Greg Lehey 报告找到并修复 Vinum 一个开机崩溃 bug，起因是 3.3 允许盘放任意分片后校验未处理空表项，3.2 无此问题.md
+            - 1.13.15-2000 年 4 月 15 日，Grigoriy Strokin 报告 4.0 全新安装时 3 吉 Quantum fireball IDE 硬盘报 ad0 READ command timeout.md
+            - 1.13.16-2000 年 9 月 8 日，Darryl Okahata 转述 Bill Moran 关于 4.0-RELEASE 上 ／var 显示已满但 du 只用到 1% 的旧讨论.md
+            - 1.13.17-2014 年 9 月 26 日，hans 报告 ／net autofs 首次访问产生 spurious 日志与 automountd zombie 在 10-STABLE 上 ls.md
+            - 1.13.18-2017 年 9 月 24 日，Farhan Khan 用 dtrace 看到内核执行 rtwn.ko 的 r88ee_init_bb+0x219 后跳到非预期函数.md
+            - 1.13.19-2018 年 7 月 9 日，Conrad Meyer 以一句 Yes 确认 Pratyush Yadav 关于 contigmalloc(9) 的疑问.md
+            - 1.13.20-2018 年 10 月 2 日，Thomas Munro 称 PostgreSQL 默认用 poll(2)，先为性能在 Linux 上改用 epoll(2).md
+            - 1.13.21-2020 年 7 月 11 日，12-stable 路由器上 Solarflare 网卡连 arista 7050 出现 LACP 断开.md
+            - 1.13.22-2020 年 3 月 17 日，Mark Millard 自述在 head -r358966 上下文把 ports 更新到 -r528535 时.md
+            - 1.13.23-2020 年 5 月 9 日，Mario Lobo 的 VirtualBox 6.0.8 在 11.3-STABLE r359971 正常.md
+            - 1.13.24-2020 年 10 月 4 日，Meowthink 执行 installworld 后重启 gssd 无法启动，与内核无关.md
+            - 1.13.25-2020 年 10 月 29 日，Craig Leres 自查发现 xorg 日志显示 EVDEV_SUPPORT 已启用、Xorg.0.log 内找不到 libinput 字样.md
+            - 1.13.26-2021 年 4 月 22 日，Peter Blok 在 64 位 12-STABLE 上用同一份源码建 32 位 jail，拿到 IP 并可 ping 通同网段.md
+            - 1.13.27-2021 年 3 月 22 日，Christos Margiolis 主张即便已有 ／var／db／mixerN-state 这类状态文件.md
+            - 1.13.28-2011 年 2 月 14 日，jvaucourt 称以 Gimp 打开 freebsd.org 之 logo-basic.svg，红球反光全乱.md
+            - 1.13.29-2014 年 12 月 1 日，spil.oss 报 bug 195549.md
+            - 1.13.30-2013 年 1 月 9 日，glenBarber 认为 r310114 只修好了 vuxml，但 textproc／libxslt Port的问题仍然存在，并会继续造成文档构建失败.md
+            - 1.13.31-2013 年 1 月 27 日，Benjamin Kaduk 指出 FAQ 关于 ／bin／sh 保持精简的答述已不准确，如今该 shell 比过去更完备.md
+            - 1.13.32-2013 年 7 月 23 日，Gabor Kovesdan 在 CFR 讨论中提议为文档引入两套 PDF 渲染方案，dblatex 不依赖 Java 但质量不高.md
+            - 1.13.33-2014 年 6 月 19 日，maci61 报缺陷 191186，指 10.0-RELEASE 的 i386 更新元数据文件中第 23017 行含波浪号.md
+            - 1.13.34-2013 年 3 月 4 日，Paul Meng 报告 netmap 手册页里的示例有误，Release 字段为 9.1.md
+            - 1.13.35-2014 年 5 月 17 日，docs／189733 要求 pkg 手册加入添加仓库配置文件的说明，bcr 以手册无需修改为由关闭该 PR.md
+            - 1.13.36-2013 年 10 月 10 日，Dru Lavigne 试用 Mathematica 9.0 的 30 天版本，安装脚本可以直接跑通.md
+            - 1.13.37-2013 年 10 月 25 日，Johan Kuuse 为上一封混入 Gmail 增强版富文本致歉，改用纯文本重发并补了几句注释，逐段重排他与 Benjamin.md
+            - 1.13.38-2014 年 11 月 20 日，Bug 195209 报告人 ngie 称 Handbook 与 linprocfs.md
+            - 1.13.39-2013 年 9 月 12 日，John Baldwin 修改 wait(2) 手册，补充 wait6() 与 idtypes 的说明，ID 改大写.md
+            - 1.13.40-2014 年 10 月 11 日，Warren Block 在 Bug 194302 称当前文档链接在 Firefox 32.0.3 下单页与分卷 HTML 都能用.md
+            - 1.13.41-2014 年 4 月 3 日，Glen Barber 回复 Torbjorn Granlund，表示该问题未出现在他自己使用的 VirtualBox host 上.md
+            - 1.13.42-2014 年 8 月 13 日，Warren Block 提议重写 ／etc／motd，称现有版本违反多条文档规则，给出新版与差异文件供审查，把网址改为独占一行.md
+            - 1.13.43-2015 年 4 月 7 日，Li-Wen Hsu 重开繁体中文 Handbook 更新，对应 Bug 193066、193715、193750.md
+            - 1.13.44-2014 年 2 月 7 日，John Baldwin 说明 GEOM 最初用途之一便是处理分区表，MBR 会同时用 LBA 与 C／H／S 元组来指定分区边界.md
+            - 1.13.45-2014 年 1 月 12 日，Banks 提交 sctp(4) 拼写补丁.md
+            - 1.13.46-2015 年 12 月 10 日，Bug 205177 由 chad at netgate.com 报告，指 pfSense 应列入软件供应商列表的 security 类别.md
+            - 1.13.47-2014 年 11 月 1 日，Alan Batie 指 Handbook 的 firewalls-ipfw 页让人执行 service ipfw start.md
+            - 1.13.48-2015 年 2 月 14 日，Bug 197655 由 jason.unovitch 提交补丁 152984.md
+            - 1.13.49-2014 年 9 月 6 日，Warren Block 另出一版实验性 ／etc／motd.md
+            - 1.13.50-2015 年 8 月 13 日，R Marefaty 指 Raspberry Pi 页称镜像默认口令为 freebsd／freebsd 与 root／root.md
+            - 1.13.51-2015 年 3 月 3 日，msiodelski at gmail.com 在 10.1-RELEASE-p6 提 Bug 198216：pthread_cond_destroy 手册 ERRORS 节列出.md
+            - 1.13.52-2015 年 5 月 21 日，Rüsing, Gerrit 请求在 Handbook 的 network-ipv6 页给 ipv6_defaultrouter 行补上接口后缀.md
+            - 1.13.53-2015 年 9 月 16 日，Seo Townsend 指出 freebsd.org 的 java 页写 pkg install openjdk7.md
+            - 1.13.54-2016 年 3 月 19 日，Ben Woods 为 Handbook 第 23 章 Updating and Upgrading FreeBSD 提交补丁.md
+            - 1.13.55-2016 年 7 月 8 日，Marc Fonvieille 代表 doceng@ 宣布 doc 树已为 11.0-RELEASE 打标签，日期 7 月 8 日，请有必含改动者告知，大面积改动宜推迟至发布日后.md
+            - 1.13.56-2016 年 11 月 12 日，Adam Weinberger 指出 Handbook 第 23.2.3.1 节有误.md
+            - 1.13.57-2016 年 9 月 1 日，Hamid Sarmadi 对 BSD 许可证文章的 LGPL 起源一节提修订建议，指出原文称静态链接 glibc 就必须公开源码有误.md
+            - 1.13.58-2016 年 9 月 27 日，sergey 立单 Bug 213026 指出 ixgbe 手册页所载驱动名称在 RELENG／11.0 已不再适用.md
+            - 1.13.59-2017 年 8 月 8 日，lothar.linhard 立单 Bug 221330 称网页字符编码与内容不符，以 11.1R 安装页为例.md
+            - 1.13.60-2017 年 2 月 5 日，Igor Roshchin 报告 ports.cgi 查询库底部 Last database update 停在 2016-01-01.md
+            - 1.13.61-2017 年 7 月 26 日，yzgyyang 立单 Bug 221037 指严格按说闰秒是应用于 UTC 而非 TAI.md
+            - 1.13.62-2018 年 4 月 23 日，Marc Fonvieille 代表 doceng@ 宣布 doc 树 slush 自 2018-05-12 开始 以放缓变更供翻译收尾并避免 11.2-RELEASE 末期破坏.md
+            - 1.13.63-2018 年 12 月 4 日，commit-hook 报告 r341451 合入 stable／12.md
+            - 1.13.64-2018 年 5 月 28 日，Petur Ingi Egilsson 向 freebsd-doc 提议修正 Handbook usb-disks 页 称 service automount reload 应写成.md
+            - 1.13.65-2019 年 8 月 3 日，11.2-RELEASE-p9 下同一磁盘 SATA 直连时 diskinfo 扇区数正确，经 USB 转 SATA 适配器接入却少最后一个扇区.md
+            - 1.13.66-2019 年 8 月 7 日，Liang Zhuo 问 epoch 调度调用时机 if_destroy 与 in_pcbfree_defered 均只由进程退出前的 epoch_call_task 触发.md
+            - 1.13.67-2019 年 2 月 19 日，Austin Shafer 写 DRM buffer 页故障处理器时 vm_page_t 结构体未初始化含随机数据 重启后仍相同 phys_addr 不符预期.md
+            - 1.13.68-2019 年 7 月 19 日，Norbert Koch 追测发现复制完整 src 树并设置 MAKEOBJDIRPREFIX 后 make kernel-toolchain 与 make buildkernel.md
+            - 1.13.69-2019 年 3 月 4 日，Anthony Pankov 用 WITHOUT_SSP=yes 从源码构建 11.2-STABLE r344696.md
+            - 1.13.70-2019 年 5 月 2 日，Konstantin Belousov 指出 taskqueue_poll_is_busy() 上方关于单线程上下文的注释只是把该函数天生有竞态说法得幽默些，只有 enqueue.md
+            - 1.13.71-2019 年 11 月 29 日，Eugene Grosbein 说同类问题场景不同.md
+            - 1.13.72-2020 年 12 月 28 日，通过 xinput 修复 Firefox 左右滚轮在 12.1 与 12.2 之间的回归，／var／log／Xorg.0.log 显示使用 evdev，以 xinput.md
     - 第2章-FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台
         - 2.1-TCP／IP 网络栈基础：从 4.2BSD 到 4.4BSD
-            - 2.1.1-年11月17日JohnPolstra报告20061116的current上em在.md
+            - 2.1.1-2006 年 11 月 17 日，John Polstra 报告 2006-11-16 的 -current 上 em 在两台差异很大的平台上均不可用.md
             - 2.1.2-BSD 网络栈代码谱系与继承路径.md
             - 2.1.3-FreeBSD 对 4.2BSD 栈的持续工程演进.md
             - 2.1.4-与 Linux 网络栈演进路径的比较.md
-            - 2.1.5-年5月24日GeorgeRobbins解释链式包致命错误意为deqna驱动收到超.md
-            - 2.1.6-FreeBSD合入由JonathanTLooney提交的TCPblackboxr.md
-            - 2.1.7-年8月25日KrzysztofDrewicz为natd与libalias增加id.md
-            - 2.1.8-年7月8日BruceMSimpson告知AODV路由的RFC3561刚发布并称正.md
-            - 2.1.9-年5月17日BrettGlass自述调查发现FreeBSD的ping把首个回包中.md
-            - 2.1.10-年10月21日LuigiRizzo评论官方关于SACK的说法等于没有计划并称自己.md
-            - 2.1.11-年4月4日RichardWendland在IPv4分片攻击讨论中主张按协议分设每.md
-            - 2.1.12-年4月28日AndrewSwan称那套IGMPv3补丁可较顺利地应用到51REL.md
-            - 2.1.13-年12月10日SuleimanSouhlal在ICMP限速讨论中建议把badpo.md
-            - 2.1.14-年3月8日MarkTinguely提到DaveZarzycki曾为2001年8月.md
-            - 2.1.15-年2月18日GarrettWollman称自己不记得有哪个TCP实现设置过这种重.md
-            - 2.1.16-年7月2日MikeSilbersack主张把RANDOM_IP_ID改为在递增分.md
-            - 2.1.17-年6月17日TonyAckerman宣布面向IntelRPRO10GbE服务器网.md
-            - 2.1.18-年5月6日AndreOppermann提交修改ip_input的变更以新增net.md
-            - 2.1.19-年11月6日James质疑53的ip_fastforward在m_pullup失.md
-            - 2.1.20-年10月14日AndreOppermann回应协议域内协议可加载化的讨论认为注册.md
-            - 2.1.21-年9月5日JohnMarkGurney在巨帧实验中发现在IP层发包完全忽略主机路.md
-            - 2.1.22-年1月24日MarianDurkovic提议把ICMP设为traceroute默.md
-            - 2.1.23-年11月26日GlebSmirnoff承认RELENG_6的ARP异常由自己在1.md
-            - 2.1.24-年10月18日NorikatsuShigemura就DougRabson提议以f.md
-            - 2.1.25-年9月26日PawelJakubDawidek报告在笔记本上以pf配置NAT后在.md
-            - 2.1.26-年12月1日BillPaul担心改动后SIOCSIFFLAGS将不再触发re_i.md
-            - 2.1.27-年2月21日Intel的JackVogel排除主板因素指出两台装有Intel千兆.md
-            - 2.1.28-年1月24日AndreOppermann宣布Marvell与SysKonnect.md
-            - 2.1.29-年7月20日gnn发布PacketConstructionSet01一套便于编写.md
-            - 2.1.30-年3月4日YarTikhiy提醒一个流传已久却缺少技术细节的问题BIND8若以B.md
-            - 2.1.31-年5月24日AndrewThompson再次提议把所有接口的创建与插入通知发给d.md
-            - 2.1.32-年10月19日RemkoLodder附议KipMacy的观察称厂商驱动更新前从未.md
-            - 2.1.33-年9月17日AndreOppermann通告已提交VLAN标签改动涉及bcebg.md
-            - 2.1.34-年4月5日VladimirIvanov称一年半前报过em驱动的严重缺陷指出bce.md
-            - 2.1.35-年4月16日TomJudge报告RELENG_6_2上carp在设备创建时缓存网.md
-            - 2.1.36-年8月29日BruceMSimpson借kscope发现nd6_ns_input.md
-            - 2.1.37-年12月18日MarkFullmer测得问题在约32480秒运行时间后出现认为这.md
-            - 2.1.38-年2月6日MikeSilbersack称改netinettcpmaxtcptw上.md
-            - 2.1.39-年2月25日KipMacy指出FreeBSD向下传给网卡的TSO段可达套接字缓冲.md
-            - 2.1.40-年7月13日JulianElischer主张MTU只约束发送而不约束接收接口在理.md
-            - 2.1.41-年5月17日EygeneRyabinkin为7CURRENT的新版em4写了移植.md
-            - 2.1.42-年10月31日JackVogel反驳VladimirIvanov强调讨论的是已检.md
-            - 2.1.43-年4月4日BjoernAZeeb就FreeBSD7TCP选项与部分路由器不兼容一.md
-            - 2.1.44-年4月21日MarkHills把read返回ETIMEDOUT定位到tcp_ti.md
-            - 2.1.45-年8月21日gnn指出ip_output中回环多播包的代码有缺陷若驱动支持校验和.md
-            - 2.1.46-年12月13日FrankBehrens回复BjoernAZeeb关于IPv4源地.md
-            - 2.1.47-年12月22日AlfredPerlstein转发Juniper发现的IPv6缺陷.md
-            - 2.1.48-年2月13日KipMacy回应Chelsio网卡互通问题说明CURRENT的驱动.md
-            - 2.1.49-年1月3日BruceSimpson补充该浮动静态问题在第二层与第三层都存在指出已.md
-            - 2.1.50-年1月23日AndreOppermann回应xingangshi关于新路由表查找.md
-            - 2.1.51-年7月10日RobertWatson解释关闭UDP校验和后udp_output不.md
-            - 2.1.52-年6月3日MarcLörner在ia64平台上测试发现in6h中IN6_IS_A.md
-            - 2.1.53-年3月12日AndreOppermann回应TCP选项顺序引发的连接失败称这并非.md
-            - 2.1.54-年5月1日SUZUKIShinsuke回应IanBrown的疑问说明pim6sd.md
-            - 2.1.55-年5月26日RobertWatson评估SLIP去留认为若新TTY代码保留线路规.md
-            - 2.1.56-年11月16日PyunYongHyeon告知ale驱动已提交到HEAD并给出st.md
-            - 2.1.57-年10月20日AlexanderMotin报告近期7STABLE与8CURREN.md
-            - 2.1.58-年9月22日GavinAtkinson宣布在SamLeffler帮助下已成功让i.md
-            - 2.1.59-年4月28日ScottUllrich称ErmalLuci已把pfSense的NA.md
-            - 2.1.60-年12月12日JackVogel指出PCIX插槽带宽不足以跑满万兆以太网双口万兆.md
-            - 2.1.61-年2月9日RandallStewart说明SCTP的xsctp_xxxMIB改动.md
-            - 2.1.62-年1月21日MatthiasSchuendehuette报告其作为约五十台HPU.md
-            - 2.1.63-年7月15日PaulBMahol催促提交其if_ndis修补该修补在ic_vap.md
-            - 2.1.64-年6月19日GarrettWollman指出SYN与FIN的组合依然合法可用se.md
-            - 2.1.65-年3月21日RuiPaulo通告已把基本系统的tcpdump更新到400指出最显.md
-            - 2.1.66-年5月11日GustauPérez报告BCM4312配bwi固件在80上间歇失联.md
-            - 2.1.67-年11月3日kalinm报告Marvell88E8057按pyun的补丁替换if.md
-            - 2.1.68-年11月24日JackVogel回应igb的Tx中断过多问题报告该驱动将有重大改.md
-            - 2.1.69-年10月13日BjoernZeeb称已找到bge4在启用ASF且接口已配置时开机.md
-            - 2.1.70-年9月2日StefWalter为无线接口反复报ath0ath_rx_procno.md
-            - 2.1.71-年9月16日LiQing宣布proxyARP修复已提交CURRENT并合入8发布.md
-            - 2.1.72-年4月25日BruceSimpson评估TraverseSolos多口ADSL卡.md
-            - 2.1.73-年8月23日IngoFlaschberger报告ECMP的怪异现象为em1加别名.md
-            - 2.1.74-年2月3日LiQing回应BrettGlass的报告称这些症状在原始80RELE.md
-            - 2.1.75-年1月25日XinLI提交根据反馈修订的接口描述补丁集兼顾为preifdescr.md
-            - 2.1.76-年5月5日JeremieLeHen更新显示套接字详情的fstat补丁使其可在CU.md
-            - 2.1.77-年11月17日JackVogel回应em与igb驱动的MFC请求称一直在追查几个.md
-            - 2.1.78-年9月17日PeteFrench在kern149804中给出自己正在使用的补丁该.md
-            - 2.1.79-年4月5日NikolayDenev在kern155772中称除非启用RADIX_.md
-            - 2.1.80-年4月28日AdamStylinski报告其Intel82541PI千兆网卡在F.md
-            - 2.1.81-年8月19日GarrettCooper报告routec与scope6c之间出现锁.md
-            - 2.1.82-年2月8日JohnBaldwin指出接收方缓冲区填满后一次排空会发出大量重复AC.md
-            - 2.1.83-年1月28日IvoVachkov提交第二版端口随机化补丁实现全部RFC6056算.md
-            - 2.1.84-年7月27日RyanStone报告82RELEASE与head下pxeboot在.md
-            - 2.1.85-年3月2日BruceCran指出0xa5是启用调试时malloc的填充字节因重装.md
-            - 2.1.86-年3月29日JROldroyd更新rtadvd补丁支持在rdnss与dnssl条.md
-            - 2.1.87-年10月11日DamienFleuriot报告CARP在开启preempt时会立.md
-            - 2.1.88-年12月11日AdrianChadd称80211分片需按整条mbuf链原子排队b.md
-            - 2.1.89-年1月13日AndrewBoyer报告82599硬件RSC与VLAN冲突大VLA.md
-            - 2.1.90-年7月7日JackVogel说明igb的LRO默认关闭是因启用后在转发场景出过问.md
-            - 2.1.91-年6月3日BjoernAZeeb报告把HEAD源码更新后ixgbe出现irq26.md
-            - 2.1.92-年3月1日EugeneMZheganin在PRkern164400的跟进中称已把.md
-            - 2.1.93-年3月19日YongHyeonPYUN回应mskYukon在90RELEASE后.md
-            - 2.1.94-年5月7日AdrianChadd反驳对PMTU发现的误解指出该机制的本意就是一开.md
-            - 2.1.95-年11月2日JasonWolfe在排查83RELEASEp4的PMTUD缺陷时发.md
-            - 2.1.96-年11月22日RuiPaulo报告在r243286上出现锁序倒置rtsockc的.md
-            - 2.1.97-年10月18日yongari关闭PRkern169399时说明RTL8168EV.md
-            - 2.1.98-年9月20日AndreyZonov提出把多数TCP定时器改为sysctl的补丁称.md
-            - 2.1.99-年4月19日JohnBaldwin提交第二个ixgbe补丁指出传统IRQ情形同样.md
-            - 2.1.100-年8月5日AndreOppermann回应BryanVenteicher关于需要.md
-            - 2.1.101-年12月6日AdrianChadd主张netisr线程数应少于CPU核数甚至可为.md
-            - 2.1.102-年2月20日JohnBaldwin读罢draftietftcpmnewcwv后认.md
-            - 2.1.103-年1月22日JohnBaldwin答复JackVogel的追问称能复现该igbp.md
-            - 2.1.104-年7月18日AdrianChadd说明该USB无线网卡并非uath覆盖需要有人编.md
-            - 2.1.105-年6月10日ErmalLuçi提交让carp4改用读写锁并统一多个定时器的补丁称.md
-            - 2.1.106-年3月5日NickRogers报告FreeBSD9x配合PF使用时内核路由表可被.md
-            - 2.1.107-年11月18日AdrianChadd认同不向网卡驱动添加NETSTACK选项并称.md
-            - 2.1.108-年10月17日SeanBruno回应关于DellPowerEdge2950上bc.md
-            - 2.1.109-年4月7日AdrianChadd报告在HEAD的多播代码路径上可稳定复现pani.md
-            - 2.1.110-年2月1日MikeTancsa在RELENG_10上用netblast测试igb.md
-            - 2.1.111-年1月1日AdrianChadd报告flowtable在HEAD上对IPv6无效.md
-            - 2.1.112-年1月13日RuiPaulo回应mbuf引用计数问题解释其初衷是让m_copym.md
-            - 2.1.113-年1月30日RickMacklem定位64KNFSIO问题指出一次读应答或写请求.md
-            - 2.1.114-年7月16日AdrianChadd说明自己改造RSS时新增in_rssc函数以返.md
-            - 2.1.115-年3月4日EugeneGrosbein提到melifaro编写的IPflowid.md
-            - 2.1.116-年3月24日ChristopherForgeron认为RickMacklem的T.md
-            - 2.1.117-年5月18日LuigiRizzo公开呼吁列表对netmapdummynetnet.md
-            - 2.1.118-年9月22日AdrianChadd建议用ixgbe与HEAD驱动改用对称RSS键.md
-            - 2.1.119-年8月24日ZaphodBeeblebrox报告FreeBSD在BGE与BCE等.md
-            - 2.1.120-年12月11日AlexanderChernikov认同竞态之断点明关键在lle为.md
-            - 2.1.121-年2月4日AdrianChadd反对把并非哈希的类型标记塞进M_HASHTYPE.md
-            - 2.1.122-年2月17日AshutoshKumar报告FreeBSD101RC4p1的网络脚.md
-            - 2.1.123-年1月5日LuigiRizzo澄清那并非接收描述符发送侧同样有这十二字节应视为K.md
-            - 2.1.124-年1月24日RyanStone创建D1652实现虚拟功能增删MAC地址过滤并指出.md
-            - 2.1.125-年1月29日RandallStewart反驳对返回值的质疑称callout_re.md
-            - 2.1.126-年7月15日AlanSomers提出现有接口查不到网卡允许插哪些模块类型而cxg.md
-            - 2.1.127-年6月17日LakshmiNarasimhanSundararajan报告评估中.md
-            - 2.1.128-年6月29日MikeTancsa称在自己的ZFS服务器上必须把同步写关掉才有稳定.md
-            - 2.1.129-年3月8日CLMartinez报告在虚拟机里用半虚拟网卡时丢包严重直到把收发校验.md
-            - 2.1.130-年5月5日JulienCharbon转述他人之问并宣布计划把TCP定时器引用计数.md
-            - 2.1.131-年11月20日DanielBilik报告一台路由器的出站流量被送往错误接口说刚重.md
-            - 2.1.132-年9月8日GlebSmirnoff预告要对无线网络驱动再清扫一轮说明新体系下只保.md
-            - 2.1.133-年8月2日GerritKühn用两台新版本机器直连万兆复测一年前的问题称网络文件.md
-            - 2.1.134-年8月21日BjoernAZeeb主张删掉那个编译期选项坦言自己六年前就该动手并.md
-            - 2.1.135-年12月26日HirokiSato指出根因是前缀路由在接口停用处理里被清理接口起.md
-            - 2.1.136-年2月8日ChrisTorek报快速增删桥等虚拟接口时会引用已释放内存崩溃停在离.md
-            - 2.1.137-年1月24日Parhar说明清理方案打算把该框架相关的部分移到独立驱动模块这样加.md
-            - 2.1.138-年7月13日LarryRosenman补充说自己也遇到开机立即崩溃的情况并说明正.md
-            - 2.1.139-年6月6日RyanStone指出超过单页的mbuf集群实际上不可行因为物理内存随.md
-            - 2.1.140-年5月5日AlexanderKabaev报把树从3月19日状态更新到r29906.md
-            - 2.1.141-年10月21日Jaeger在评论该路由重启补丁于缺少额外路由参数或无atm与ip.md
-            - 2.1.142-年9月12日bsdops的mj反问对方有没有在rcconf里配置过这块网卡若没有.md
-            - 2.1.143-年9月28日AndrewSavchenko说同一块网卡在100REL上以交叉线连.md
-            - 2.1.144-年12月3日Maffione疑双释放与netmap的额外缓冲特性有关lb用到该特.md
-            - 2.1.145-年12月12日Grosbein说他试用基版routed跑RIPv2时发现其长期严.md
-            - 2.1.146-年1月2日HirenPanchasara在Bug200361hostcachel.md
-            - 2.1.147-年2月2日莫尔什涅夫确认FreeBSD11上同样如此默认无异常但把delayed.md
-            - 2.1.148-年2月16日HirenPanchasara在sbdrop讨论里说自己见过单队列e.md
-            - 2.1.149-年1月20日Rizzo认为无论命令形态选ifconfig还是ethtool统一的.md
-            - 2.1.150-年7月11日GrzegorzJunka回复内存泄漏讨论询问对方的路由器是ARM还.md
-            - 2.1.151-年6月3日BenWoods报告两台运行12CURRENTr319025的机器网络.md
-            - 2.1.152-年7月17日brahmann在freebsdnet邮件列表建议若服务器有两条上行.md
-            - 2.1.153-年6月14日vmaffioneatgmailcomVincenzoMaffion.md
-            - 2.1.154-年6月18日baijiaju1990at163comJiaJuBai自述提交修复.md
-            - 2.1.155-年6月26日nparharatgmailcomNavdeepParharOnTh.md
-            - 2.1.156-年3月6日SebastianHuber提交if_tsec补丁第二枚删除tsec_.md
-            - 2.1.157-年3月8日IanSmith答复AndreaVenturoli的ipfwnat疑问.md
-            - 2.1.158-年3月13日MikeTancsa补充信息问题仅出在经tun接口的出站转换无论重定.md
-            - 2.1.159-年3月22日ozkankirikatgmailcomÖzkanKIRIK致谢Er.md
-            - 2.1.160-年5月25日HarrySchmalzbauer描述用vale作上行时ARP应答无.md
-            - 2.1.161-年5月29日zbeebleatgmailcomZaphodBeeblebrox描.md
-            - 2.1.162-年11月2日AdamVandeMore回复DES征寻IP包头可视化软件之帖简短作.md
-            - 2.1.163-年11月21日KristofProvost回应CatalinSalgau倾向恒按.md
-            - 2.1.164-年11月28日BryanVenteicher回复LewisDonzis关于vmx.md
-            - 2.1.165-年9月12日bu7cheratyandexruAndreyVElsukovOn1.md
-            - 2.1.166-年9月23日killingatmultiplaycoukStevenHartla.md
-            - 2.1.167-年4月2日AdrianChadd宣布问题当日已查明根源在gcc编译器的一个内建函.md
-            - 2.1.168-年4月14日RickMacklem建议尝试调高acregminacregmax与.md
-            - 2.1.169-年4月20日bu7cheratyandexruAndreyVElsukovOn2.md
-            - 2.1.170-年4月28日EugeneGrosbein表示已厌倦替对方修正顶端回复可能不再回复.md
-            - 2.1.171-年8月13日EugeneGrosbein答复称拔线后保留地址与路由系有意为之建议.md
-            - 2.1.172-年8月30日npNavdeepParhar就cxl网卡重启后不工作一事回复称仍在.md
-            - 2.1.173-年2月6日VictorSudakov在Grosbein查证之后追问Kevin其i.md
-            - 2.1.174-年2月15日leebatratnalingorgLeeBrown回应称同样命令在.md
-            - 2.1.175-年1月2日freebsdrwgatpdxrhCN85dnsmgrnetRodne.md
-            - 2.1.176-年1月13日georgatbegeemailGeorgBegeHiExaclyy.md
-            - 2.1.177-年7月17日eugenatgrosbeinnetEugeneGrosbeintr.md
-            - 2.1.178-年7月28日AdrianChadd反驳纯4K页方案称服务器动辄上千万个4K页做大.md
-            - 2.1.179-年6月13日AndreyVElsukov解释成因内核版libalias用m_me.md
-            - 2.1.180-年6月25日GrzegorzJunka答复Rodney所指是其先前邮件中给出的1.md
+            - 2.1.5-1989 年 5 月 24 日，George Robbins 解释链式包致命错误意为 deqna 驱动收到超过 2K 字节的包，而普通以太网包上限约 1500 字节.md
+            - 2.1.6-FreeBSD 合入由 Jonathan T. Looney 提交的 TCP black box recorder，可将 TCP 连接事件写入环形缓冲区.md
+            - 2.1.7-2003 年 8 月 25 日，Krzysztof Drewicz 为 natd 与 libalias 增加 identd 支持编写补丁.md
+            - 2.1.8-2003 年 7 月 8 日，Bruce M Simpson 告知 AODV 路由的 RFC 3561 刚发布.md
+            - 2.1.9-2003 年 5 月 17 日，Brett Glass 自述调查发现 FreeBSD 的 ping 把首个回包中的 ARP 解析耗时一并计入，使本网段的统计结果偏高.md
+            - 2.1.10-2003 年 10 月 21 日，Luigi Rizzo 评论官方关于 SACK 的说法等于没有计划，并称自己很久以前写过一版实现，但重传处理很可能不完整.md
+            - 2.1.11-2004 年 4 月 4 日，Richard Wendland 在 IPv4 分片攻击讨论中主张按协议分设每包分片上限：TCP 因 MSS 与 DF 极少分片可设低限.md
+            - 2.1.12-2004 年 4 月 28 日，Andrew Swan 称那套 IGMPv3 补丁可较顺利地应用到 5.1-RELEASE，并指出 KAME 有更完整更新的实现.md
+            - 2.1.13-2004 年 12 月 10 日，Suleiman Souhlal 在 ICMP 限速讨论中建议把 badport_bandlim() 的全部调用移入 icmp_error() 内部，以简化并改进该限速机制的实现.md
+            - 2.1.14-2004 年 3 月 8 日，Mark Tinguely 提到 Dave Zarzycki 曾为 2001 年 8 月的 current 提交 SACK 与 FACK 补丁.md
+            - 2.1.15-2004 年 2 月 18 日，Garrett Wollman 称自己不记得有哪个 TCP 实现设置过这种重组队列上限，并说至少五年前就已注意到该攻击.md
+            - 2.1.16-2004 年 7 月 2 日，Mike Silbersack 主张把 RANDOM_IP_ID 改为在递增分片 ID 与随机 ID 之间切换的 sysctl，最终移除该内核选项.md
+            - 2.1.17-2004 年 6 月 17 日 Tony Ackerman 宣布面向 Intel PRO／10GbE 服务器网卡适配器的 ixgb 驱动已提交 -current 与 -stable 两个分支.md
+            - 2.1.18-2004 年 5 月 6 日，Andre Oppermann 提交修改 ip_input() 的变更以新增 net.inet.ip.process_options 开关控制 IP Options 处理，并主张默认改为忽略甚至拒绝.md
+            - 2.1.19-2004 年 11 月 6 日，James 质疑 5.3 的 ip_fastforward() 在 m_pullup 失败后跳转 drop 会造成 mbuf 重复释放.md
+            - 2.1.20-2004 年 10 月 14 日，Andre Oppermann 回应协议域内协议可加载化的讨论，认为注册与注销函数本身加锁问题不多，难点在使用这些钩子的代码.md
+            - 2.1.21-2004 年 9 月 5 日，John-Mark Gurney 在巨帧实验中发现在 IP 层发包完全忽略主机路由上设置的 MTU，难以在同一网络中同时支持常规帧与巨帧.md
+            - 2.1.22-2005 年 1 月 24 日，Marian Durkovic 提议把 ICMP 设为 traceroute 默认首选协议.md
+            - 2.1.23-2005 年 11 月 26 日，Gleb Smirnoff 承认 RELENG_6 的 ARP 异常由自己在 1.137.2.5 修订中引入.md
+            - 2.1.24-2005 年 10 月 18 日，Norikatsu Shigemura 就 Doug Rabson 提议以 fwip 替换 GENERIC 中的 fwe 表示反对.md
+            - 2.1.25-2005 年 9 月 26 日，Pawel Jakub Dawidek 报告在笔记本上以 pf 配置 NAT 后，在 Mac 一侧经 ath0 从本地机并行下载多个 FTP 文件.md
+            - 2.1.26-2006 年 12 月 1 日，Bill Paul 担心改动后 SIOCSIFFLAGS 将不再触发 re_init_locked，主张照 vge(4) 的做法.md
+            - 2.1.27-2006 年 2 月 21 日，Intel 的 Jack Vogel 排除主板因素，指出两台装有 Intel 千兆网卡的机器同时出现故障不合常理.md
+            - 2.1.28-2006 年 1 月 24 日，Andre Oppermann 宣布 Marvell 与 SysKonnect 以 BSD 许可公开 YukonII 芯片源码.md
+            - 2.1.29-2006 年 7 月 20 日，gnn 发布 Packet Construction Set 0.1，一套便于编写协议测试软件的 Python 库.md
+            - 2.1.30-2006 年 3 月 4 日，Yar Tikhiy 提醒一个流传已久却缺少技术细节的问题：BIND8 若以 BIND9 作转发器且未启用 forwarders only.md
+            - 2.1.31-2006 年 5 月 24 日，Andrew Thompson 再次提议把所有接口的创建与插入通知发给 devd，而不只限于物理接口，这样伪接口也能被上报并让用户态采取措施.md
+            - 2.1.32-2006 年 10 月 19 日，Remko Lodder 附议 Kip Macy 的观察，称厂商驱动更新前从未遇到 watchdog 超时，更新后开始零星出现.md
+            - 2.1.33-2006 年 9 月 17 日，Andre Oppermann 通告已提交 VLAN 标签改动，涉及 bce、bge、em、ixgb、nfe、nge、re、stge、ti.md
+            - 2.1.34-2007 年 4 月 5 日，Vladimir Ivanov 称一年半前报过 em 驱动的严重缺陷，指出 bce、bge、ixgb 等多数网卡驱动都克隆了同一错误.md
+            - 2.1.35-2007 年 4 月 16 日，Tom Judge 报告 RELENG_6_2 上 carp 在设备创建时缓存网络路由，导致后续无法为 carp0 分配同网段地址.md
+            - 2.1.36-2007 年 8 月 29 日，Bruce M. Simpson 借 kscope 发现 nd6_ns_input() 与 in_arpinput() 存在类似的释放后仍引用路由的问题，称 nd6_ns_input() 在 rtfree() 后访问.md
+            - 2.1.37-2007 年 12 月 18 日，Mark Fullmer 测得问题在约 32480 秒运行时间后出现，认为这一数值已接近 16 位溢出，并给出丢包脉冲图表.md
+            - 2.1.38-2007 年 2 月 6 日，Mike Silbersack 称改 net.inet.tcp.maxtcptw 上限时发现.md
+            - 2.1.39-2007 年 2 月 25 日，Kip Macy 指出 FreeBSD 向下传给网卡的 TSO 段可达套接字缓冲大小而违反 LSO 规范.md
+            - 2.1.40-2007 年 7 月 13 日，Julian Elischer 主张 MTU 只约束发送而不约束接收，接口在理论上应能接受不超过最大实际尺寸的入站包.md
+            - 2.1.41-2007 年 5 月 17 日，Eygene Ryabinkin 为 7-CURRENT 的新版 em(4) 写了移植到 RELENG_6 的临时补丁.md
+            - 2.1.42-2007 年 10 月 31 日，Jack Vogel 反驳 Vladimir Ivanov，强调讨论的是已检入并预定进入 6.3 的代码.md
+            - 2.1.43-2008 年 4 月 4 日，Bjoern A. Zeeb 就 FreeBSD 7 TCP 选项与部分路由器不兼容一事称仍在辨别成因是选项顺序还是填充错误，并回顾问题历史.md
+            - 2.1.44-2008 年 4 月 21 日，Mark Hills 把 read 返回 ETIMEDOUT 定位到 tcp_timer_rexmt 中重传次数超出 TCP_MAXRXTSHIFT 而丢弃连接，并贴出 netstat 统计佐证，称未见实际重传.md
+            - 2.1.45-2008 年 8 月 21 日，gnn 指出 ip_output 中回环多播包的代码有缺陷，若驱动支持校验和卸载，则回环包上线时内容错误，因包未被完整复制.md
+            - 2.1.46-2008 年 12 月 13 日，Frank Behrens 回复 Bjoern A. Zeeb 关于 IPv4 源地址选择补丁的询问.md
+            - 2.1.47-2008 年 12 月 22 日，Alfred Perlstein 转发 Juniper 发现的 IPv6 缺陷.md
+            - 2.1.48-2008 年 2 月 13 日，Kip Macy 回应 Chelsio 网卡互通问题，说明 CURRENT 的驱动与 7.0 差别很大且性能更好.md
+            - 2.1.49-2008 年 1 月 3 日，Bruce Simpson 补充该浮动静态问题在第二层与第三层都存在，指出已存在但经由失效接口的路由会被优先选用.md
+            - 2.1.50-2008 年 1 月 23 日，Andre Oppermann 回应 xingang shi 关于新路由表查找算法的询问，称自己尚未实现该代码，希望今年完成并对它做大量测试.md
+            - 2.1.51-2008 年 7 月 10 日，Robert Watson 解释关闭 UDP 校验和后 udp_output() 不再生成硬件或软件校验和，并说明若硬件校验被停用.md
+            - 2.1.52-2008 年 6 月 3 日，Marc Lörner 在 ia64 平台上测试发现 in6.h 中 IN6_IS_ADDR_UNSPECIFIED 等地址判断宏存在非对齐访问.md
+            - 2.1.53-2008 年 3 月 12 日，Andre Oppermann 回应 TCP 选项顺序引发的连接失败，称这并非 TCP 之过，而是部分电缆调制解调器厂商代码有误.md
+            - 2.1.54-2008 年 5 月 1 日，SUZUKI Shinsuke 回应 Ian Brown 的疑问，说明 pim6sd 要求节点具备全局单播 IPv6 地址.md
+            - 2.1.55-2008 年 5 月 26 日，Robert Watson 评估 SLIP 去留，认为若新 TTY 代码保留线路规程支持，更新现有 SLIP 代码并加锁的任务量相当或更小.md
+            - 2.1.56-2008 年 11 月 16 日，Pyun YongHyeon 告知 ale 驱动已提交到 HEAD，并给出 stable／7 用户可取的下载地址.md
+            - 2.1.57-2008 年 10 月 20 日，Alexander Motin 报告近期 7-STABLE 与 8-CURRENT 上先添加 0.0.0.0／0 再添加 0.0.0.0／1 会被拒绝并提示路由已存在，质疑二者为何被视为相同，6.2 上同样测试正常.md
+            - 2.1.58-2008 年 9 月 22 日，Gavin Atkinson 宣布在 Sam Leffler 帮助下已成功让 iwn(4) 回移到 RELENG_7 后正常工作.md
+            - 2.1.59-2009 年 4 月 28 日，Scott Ullrich 称 Ermal Luci 已把 pfSense 的 NAT-T 补丁整理成形并给出下载地址，认为它短期内可用.md
+            - 2.1.60-2009 年 12 月 12 日，Jack Vogel 指出 PCI-X 插槽带宽不足以跑满万兆以太网，双口万兆网卡需要 8x PCIe 插槽且最好为 Gen2.md
+            - 2.1.61-2009 年 2 月 9 日，Randall Stewart 说明 SCTP 的 xsctp_xxx MIB 改动破坏了 ABI 兼容性，因此许多改动难以并入 7.md
+            - 2.1.62-2009 年 1 月 21 日，Matthias Schuendehuette 报告其作为约五十台 HP-UX 工作站家目录服务器的机器在 6.3 上正常.md
+            - 2.1.63-2009 年 7 月 15 日，Paul B. Mahol 催促提交其 if_ndis 修补，该修补在 ic_vaps 为空时提前返回.md
+            - 2.1.64-2009 年 6 月 19 日，Garrett Wollman 指出 SYN 与 FIN 的组合依然合法，可用 sendmsg 配合 MSG_EOF 生成.md
+            - 2.1.65-2009 年 3 月 21 日，Rui Paulo 通告已把基本系统的 tcpdump 更新到 4.0.0，指出最显著的变化是引入了新的输出格式，并请用户把遇到的任何回归报告给他.md
+            - 2.1.66-2009 年 5 月 11 日，Gustau Pérez 报告 BCM4312 配 bwi 固件在 8.0 上间歇失联.md
+            - 2.1.67-2009 年 11 月 3 日，kalin m 报告 Marvell 88E8057 按 pyun 的补丁替换 if_msk.c 中的加锁调用并重编内核后，网卡可见但仍不可用.md
+            - 2.1.68-2009 年 11 月 24 日，Jack Vogel 回应 igb 的 Tx 中断过多问题，报告该驱动将有重大改动.md
+            - 2.1.69-2009 年 10 月 13 日，Bjoern Zeeb 称已找到 bge(4) 在启用 ASF 且接口已配置时开机挂起的修法，请有 bge 机器的用户协助测试各芯片版本以防回归.md
+            - 2.1.70-2009 年 9 月 2 日，Stef Walter 为无线接口反复报 ath0： ath_rx_proc： no mbuf! 并导致接口失去响应的讨论收尾，称最终查明属于硬件问题.md
+            - 2.1.71-2009 年 9 月 16 日，Li Qing 宣布 proxy ARP 修复已提交 -CURRENT 并合入 8 发布分支，8.0-RC1 应含该修复.md
+            - 2.1.72-2010 年 4 月 25 日，Bruce Simpson 评估 Traverse Solos 多口 ADSL 卡，称其 Linux 驱动须为 BSD 的 netnatm 重写.md
+            - 2.1.73-2010 年 8 月 23 日，Ingo Flaschberger 报告 ECMP 的怪异现象：为 em1 加别名并添加静态路由后 ping 失败.md
+            - 2.1.74-2010 年 2 月 3 日，Li Qing 回应 Brett Glass 的报告，称这些症状在原始 8.0-RELEASE 中并未全部出现.md
+            - 2.1.75-2010 年 1 月 25 日，Xin LI 提交根据反馈修订的接口描述补丁集，兼顾为 pre-ifdescr 环境构建 libpcap 的情形.md
+            - 2.1.76-2010 年 5 月 5 日，Jeremie Le Hen 更新显示套接字详情的 fstat 补丁使其可在 CURRENT 编译，并把该行为改为由 -i 选项启用.md
+            - 2.1.77-2010 年 11 月 17 日，Jack Vogel 回应 em 与 igb 驱动的 MFC 请求，称一直在追查几个难以复现、需数日测试的缺陷，故此前无提交动作，请众人静候.md
+            - 2.1.78-2010 年 9 月 17 日，Pete French 在 kern／149804 中给出自己正在使用的补丁，该补丁由 Xin Li 提供.md
+            - 2.1.79-2011 年 4 月 5 日，Nikolay Denev 在 kern／155772 中称除非启用 RADIX_MPATH 否则该问题难以解决.md
+            - 2.1.80-2011 年 4 月 28 日，Adam Stylinski 报告其 Intel 82541PI 千兆网卡在 FreeBSD 下的发送性能远逊于 Linux.md
+            - 2.1.81-2011 年 8 月 19 日，Garrett Cooper 报告 route.c 与 scope6.c 之间出现锁序颠倒.md
+            - 2.1.82-2011 年 2 月 8 日，John Baldwin 指出接收方缓冲区填满后一次排空会发出大量重复 ACK.md
+            - 2.1.83-2011 年 1 月 28 日，Ivo Vachkov 提交第二版端口随机化补丁，实现全部 RFC6056 算法并同时改动 IPv4 与 IPv6 栈.md
+            - 2.1.84-2011 年 7 月 27 日，Ryan Stone 报告 8.2-RELEASE 与 head 下 pxeboot 在链路闪断后挂死.md
+            - 2.1.85-2011 年 3 月 2 日，Bruce Cran 指出 0xa5 是启用调试时 malloc 的填充字节.md
+            - 2.1.86-2011 年 3 月 29 日，J.R. Oldroyd 更新 rtadvd 补丁.md
+            - 2.1.87-2011 年 10 月 11 日，Damien Fleuriot 报告 CARP 在开启 preempt 时会立即由 INIT 转为 MASTER.md
+            - 2.1.88-2012 年 12 月 11 日，Adrian Chadd 称 802.11 分片需按整条 mbuf 链原子排队，buf_ring 与 if_queue 都不合用.md
+            - 2.1.89-2012 年 1 月 13 日，Andrew Boyer 报告 82599 硬件 RSC 与 VLAN 冲突，大 VLAN 包到达时 VP 位未置位致接收性能骤降.md
+            - 2.1.90-2012 年 7 月 7 日，Jack Vogel 说明 igb 的 LRO 默认关闭是因启用后在转发场景出过问题，如今该问题据称已被修复，若有人能在启用转发时验证无碍并给出反馈.md
+            - 2.1.91-2012 年 6 月 3 日，Bjoern A. Zeeb 报告把 HEAD 源码更新后 ixgbe 出现 irq262 中断风暴，按 Intel 文档把中断风暴阈值调到九千不够.md
+            - 2.1.92-2012 年 3 月 1 日，Eugene M. Zheganin 在 PR kern／164400 的跟进中称已把该 IPsec 崩溃缩小到一份最小配置.md
+            - 2.1.93-2012 年 3 月 19 日，YongHyeon PYUN 回应 msk／Yukon 在 9.0-RELEASE 后的稳定性报告.md
+            - 2.1.94-2012 年 5 月 7 日，Adrian Chadd 反驳对 PMTU 发现的误解，指出该机制的本意就是一开始就拒绝发出过大的帧.md
+            - 2.1.95-2012 年 11 月 2 日，Jason Wolfe 在排查 8.3-RELEASE-p4 的 PMTUD 缺陷时发现.md
+            - 2.1.96-2012 年 11 月 22 日，Rui Paulo 报告在 r243286 上出现锁序倒置.md
+            - 2.1.97-2012 年 10 月 18 日，yongari 关闭 PR kern／169399 时说明，RTL8168E-VL 的支持是在 7.4-RELEASE 发布之后才加入的.md
+            - 2.1.98-2012 年 9 月 20 日，Andrey Zonov 提出把多数 TCP 定时器改为 sysctl 的补丁，称该补丁已使用数月.md
+            - 2.1.99-2013 年 4 月 19 日，John Baldwin 提交第二个 ixgbe 补丁，指出传统 IRQ 情形同样可能乱序处理.md
+            - 2.1.100-2013 年 8 月 5 日，Andre Oppermann 回应 Bryan Venteicher 关于需要更合理 ifnet 与驱动接口的呼吁.md
+            - 2.1.101-2013 年 12 月 6 日，Adrian Chadd 主张 netisr 线程数应少于 CPU 核数，甚至可为多核只留一个.md
+            - 2.1.102-2013 年 2 月 20 日，John Baldwin 读罢 draft-ietf-tcpm-newcwv 后认为它比完全忽略空闲处理更贴合自己的需求，且比原补丁方案更好.md
+            - 2.1.103-2013 年 1 月 22 日，John Baldwin 答复 Jack Vogel 的追问，称能复现该 igb panic 的主板是 SuperMicro X8DTU-F.md
+            - 2.1.104-2013 年 7 月 18 日，Adrian Chadd 说明该 USB 无线网卡并非 uath 覆盖，需要有人编写 ath 与 ath_hal 到 USB 的胶合层.md
+            - 2.1.105-2013 年 6 月 10 日，Ermal Luçi 提交让 carp(4) 改用读写锁并统一多个定时器的补丁，称该补丁已在 pfSense 长期测试.md
+            - 2.1.106-2013 年 3 月 5 日，Nick Rogers 报告 FreeBSD 9.x 配合 PF 使用时内核路由表可被流经系统的流量破坏，高负载下默认路由会变成并未配置的地址.md
+            - 2.1.107-2013 年 11 月 18 日，Adrian Chadd 认同不向网卡驱动添加 NETSTACK 选项，并称目标是让网络栈既可编译选择也可作为模块加载.md
+            - 2.1.108-2013 年 10 月 17 日，Sean Bruno 回应关于 Dell PowerEdge 2950 上 bce 网卡重置与看门狗超时的提问.md
+            - 2.1.109-2014 年 4 月 7 日，Adrian Chadd 报告在 -HEAD 的多播代码路径上可稳定复现 panic，触发方式是用 VLC 浏览网络共享，并附上核心转储文件.md
+            - 2.1.110-2014 年 2 月 1 日，Mike Tancsa 在 RELENG_10 上用 netblast 测试 igb 驱动的转发与防火墙性能时发现统计异常.md
+            - 2.1.111-2014 年 1 月 1 日，Adrian Chadd 报告 flowtable 在 HEAD 上对 IPv6 无效，给出的统计显示查找近 60 亿次而命中仅 2 次、分配为 0.md
+            - 2.1.112-2014 年 1 月 13 日，Rui Paulo 回应 mbuf 引用计数问题，解释其初衷是让 m_copym 免于复制具有外部存储的 mbuf.md
+            - 2.1.113-2014 年 1 月 30 日，Rick Macklem 定位 64K NFS I／O 问题.md
+            - 2.1.114-2014 年 7 月 16 日，Adrian Chadd 说明自己改造 RSS 时新增 in_rss.c 函数以返回当前支持的哈希类型，并计划加入软件哈希计算.md
+            - 2.1.115-2014 年 3 月 4 日，Eugene Grosbein 提到 melifaro 编写的 IP flowid 生成补丁.md
+            - 2.1.116-2014 年 3 月 24 日，Christopher Forgeron 认为 Rick Macklem 的 TSO 补丁在 10.0 上无效、9.2 上仅缓解.md
+            - 2.1.117-2014 年 5 月 18 日，Luigi Rizzo 公开呼吁列表对 netmap、dummynet、netgraph 等核心网络子系统的问题保持开放.md
+            - 2.1.118-2014 年 9 月 22 日，Adrian Chadd 建议用 ixgbe 与 HEAD 驱动、改用对称 RSS 键并配置 N 个队列，让每个收发环各跑一个 snort 实例.md
+            - 2.1.119-2015 年 8 月 24 日，Zaphod Beeblebrox 报告 FreeBSD 在 BGE 与 BCE 等接口上未按 802.1q 标准把 VLAN 帧填充到最小 68 字节，其交换机的错误计数器显示拦下了这批过短帧.md
+            - 2.1.120-2015 年 12 月 11 日，Alexander Chernikov 认同竞态之断，点明关键在 lle 为何被移出，并列举删除接口地址、接口掉线或显式删除请求等多种原因.md
+            - 2.1.121-2015 年 2 月 4 日，Adrian Chadd 反对把并非哈希的类型标记塞进 M_HASHTYPE_LRO_TCP 字段，以免日后给 RSS 的工作划分添乱.md
+            - 2.1.122-2015 年 2 月 17 日，Ashutosh Kumar 报告 FreeBSD 10.1-RC4-p1 的网络脚本缺陷：／etc／network.subr 的 ipv6_down 函数第 764 行误用 case $_inet 判断，应为 case.md
+            - 2.1.123-2015 年 1 月 5 日，Luigi Rizzo 澄清那并非接收描述符，发送侧同样有这十二字节，应视为 KVM 连上 TAP 端口时协商出来的一种封装且双向存在.md
+            - 2.1.124-2015 年 1 月 24 日，Ryan Stone 创建 D1652 实现虚拟功能增删 MAC 地址过滤，并指出在虚拟机环境里这有安全含义，因为虚拟机可能借此听到本不该看到的包.md
+            - 2.1.125-2015 年 1 月 29 日，Randall Stewart 反驳对返回值的质疑，称 callout_reset_sbt_on 里有代码确保返回零.md
+            - 2.1.126-2015 年 7 月 15 日，Alan Somers 提出现有接口查不到网卡允许插哪些模块类型，而 cxgbe 知道自己却不暴露，他可以先加一个 sysctl.md
+            - 2.1.127-2015 年 6 月 17 日，Lakshmi Narasimhan Sundararajan 报告评估中发现该网卡发送性能很差，原因是发送中断散在所有处理器上.md
+            - 2.1.128-2015 年 6 月 29 日，Mike Tancsa 称在自己的 ZFS 服务器上必须把同步写关掉才有稳定一致的写吞吐.md
+            - 2.1.129-2015 年 3 月 8 日，C.L. Martinez 报告在虚拟机里用半虚拟网卡时丢包严重，直到把收发校验和卸载全部关掉才好转.md
+            - 2.1.130-2015 年 5 月 5 日，Julien Charbon 转述他人之问并宣布计划：把 TCP 定时器引用计数的修复合并到稳定分支，称改动只触及两个内部结构体.md
+            - 2.1.131-2015 年 11 月 20 日，Daniel Bilik 报告一台路由器的出站流量被送往错误接口，说刚重启时正常而过一段时间才发作，并贴出两个网口的完整配置与地址分布.md
+            - 2.1.132-2015 年 9 月 8 日，Gleb Smirnoff 预告要对无线网络驱动再清扫一轮，说明新体系下只保留统一的接口接入调用，而现有驱动普遍是分配、插一段自家代码.md
+            - 2.1.133-2016 年 8 月 2 日，Gerrit Kühn 用两台新版本机器直连万兆复测一年前的问题，称网络文件系统依旧只有每秒二三十到八十兆字节，第三版与第四版结果相近.md
+            - 2.1.134-2016 年 8 月 21 日，Bjoern A. Zeeb 主张删掉那个编译期选项，坦言自己六年前就该动手，并请改用加载器可调项、不必再为此单独编译内核.md
+            - 2.1.135-2016 年 12 月 26 日，Hiroki Sato 指出根因是前缀路由在接口停用处理里被清理、接口起来时未重装，且认为直接调用接口起来过重、会引发各协议额外控制输入调用.md
+            - 2.1.136-2016 年 2 月 8 日，Chris Torek 报快速增删桥等虚拟接口时会引用已释放内存崩溃停在离开组播组的加锁路径上并求助组播行家堆栈显示典型已释放标记值.md
+            - 2.1.137-2016 年 1 月 24 日，Parhar 说明清理方案打算把该框架相关的部分移到独立驱动模块这样加载主驱动时就不会再带出这些接口且专用端口在未启用该框架时也能像普通接口挂到内核栈上并声明虚拟接口可各自独立启停.md
+            - 2.1.138-2016 年 7 月 13 日，Larry Rosenman 补充说自己也遇到开机立即崩溃的情况，并说明正在等待 Gleb 的回应.md
+            - 2.1.139-2016 年 6 月 6 日，Ryan Stone 指出超过单页的 mbuf 集群实际上不可行，因为物理内存随时间碎片化最终无法再分配九千字节连续内存.md
+            - 2.1.140-2016 年 5 月 5 日，Alexander Kabaev 报把树从 3 月 19 日状态更新到 r299065 后.md
+            - 2.1.141-2016 年 10 月 21 日，Jaeger 在评论该路由重启补丁于缺少额外路由参数或无 atm 与 ipx 时返回非零退出码的缺陷时指出 ipx 已被移出内核这才是补丁失败的根源.md
+            - 2.1.142-2016 年 9 月 12 日，bsdops 的 mj 反问对方有没有在 rc.conf 里配置过这块网卡若没有请拿配置过 IP 与掩码的网卡再测他表示自己见过同样问题但发生在未配置的接口上.md
+            - 2.1.143-2016 年 9 月 28 日，Andrew Savchenko 说同一块网卡在 10.0-REL 上以交叉线连同两家路由器与 TP-Link 交换机均正常只有这台 DLink 交换机上出问题.md
+            - 2.1.144-2017 年 12 月 3 日，Maffione 疑双释放与 netmap 的额外缓冲特性有关，lb 用到该特性，打开端口时会分配不绑定任何环的额外缓冲供槽位交换使用.md
+            - 2.1.145-2017 年 12 月 12 日，Grosbein 说他试用基版 routed 跑 RIPv2 时发现其长期严重损坏无法使用，至少自 FreeBSD 4.x 时代起如此.md
+            - 2.1.146-2017 年 1 月 2 日，Hiren Panchasara 在 Bug 200361 hostcache.list 泄漏 jail 信息一事上贴补丁于 sysctl_tcp_hc_list 入口用 jailed_without_vnet.md
+            - 2.1.147-2017 年 2 月 2 日，莫尔什涅夫确认 FreeBSD 11 上同样如此默认无异常但把 delayed_ack 置零并调 recvspace 与 sendspace 后本地 http 每传八千字节停顿五秒与 lynx 无关他还跑了 siftr.md
+            - 2.1.148-2017 年 2 月 16 日，Hiren Panchasara 在 sbdrop 讨论里说自己见过单队列 em 与双队列 igb 都出过该问题并问最新带 iflib 的 em 与 igb 驱动能否有改善.md
+            - 2.1.149-2017 年 1 月 20 日，Rizzo 认为无论命令形态选 ifconfig 还是 ethtool 统一的内核接口更重要并建议直接以 ethtool 的头文件特性集为起点因为各项皆为可选.md
+            - 2.1.150-2017 年 7 月 11 日，Grzegorz Junka 回复内存泄漏讨论，询问对方的路由器是 ARM 还是 x86 架构，并列出自己的服务器数据：已连续运行九十三天.md
+            - 2.1.151-2017 年 6 月 3 日，Ben Woods 报告两台运行 12-CURRENT r319025 的机器网络统计被重复计数：systat -ifstat 报约 988 KB／s 而 iftop -B 报约 491 KB／s，与其约 500 KB／s.md
+            - 2.1.152-2017 年 7 月 17 日，brahmann 在 freebsd-net 邮件列表建议，若服务器有两条上行链路，可用 ipfw 配合两个独立流对应两个 FIB.md
+            - 2.1.153-2017 年 6 月 14 日邮件串：Vincenzo Maffione、Hans Petter Selasky 与 Jim Thompson 等的多封英文原件（含 IPsec 36.32Gbps 实测数据）.md
+            - 2.1.154-2017 年 6 月 18 日，baijiaju1990 at 163.com (Jia-Ju Bai) 自述提交修复 alc 驱动疑似持锁休眠问题的补丁.md
+            - 2.1.155-2017 年 6 月 26 日邮件串：Navdeep Parhar 与 Matt Joras 等关于 lagg 分包与网络栈行为的多封英文原件.md
+            - 2.1.156-2017 年 3 月 6 日，Sebastian Huber 提交 if_tsec 补丁第二枚.md
+            - 2.1.157-2017 年 3 月 8 日，Ian Smith 答复 Andrea Venturoli 的 ipfw nat 疑问，确认 if 与 ip 选项互斥，指 NAT 手册描述简略.md
+            - 2.1.158-2017 年 3 月 13 日，Mike Tancsa 补充信息：问题仅出在经 tun 接口的出站转换，无论重定向在何种网卡，面向 OpenVPN 客户端发起连接的转换均不生效.md
+            - 2.1.159-2017 年 3 月 22 日，ozkan.kirik at gmail.com (Özkan KIRIK) 致谢 Ermal：称该 if_epair 补丁实测完美可用.md
+            - 2.1.160-2017 年 5 月 25 日，Harry Schmalzbauer 描述用 vale 作上行时 ARP 应答无法到达虚拟机，而同样拓扑改用 bridge 则正常.md
+            - 2.1.161-2017 年 5 月 29 日，Zaphod Beeblebrox 描述异常现象：千兆局域网上 BGP 会话中几乎每个载荷包都被一个 ACK 加一个第二窗口缩放包回应，检查包计数器未见本机或交换机报错，TCP-MD5 亦未启用.md
+            - 2.1.162-2017 年 11 月 2 日，Adam Vande More 回复 DES 征寻 IP 包头可视化软件之帖，简短作答：他相信 DES 想找的应用可能就叫 protocol.md
+            - 2.1.163-2017 年 11 月 21 日，Kristof Provost 回应 Catalin Salgau：倾向恒按 MJUM9BYTES 分配但嫌浪费内存.md
+            - 2.1.164-2017 年 11 月 28 日，Bryan Venteicher 回复 Lewis Donzis 关于 vmxnet3 驱动无法正确报告链路中断缺陷的来信.md
+            - 2.1.165-2017 年 9 月 12 日邮件串：Andrey V. Elsukov 与 Harry Schmalzbauer 等关于 I350 网卡设备 ID 的多封英文原件.md
+            - 2.1.166-2017 年 9 月 23 日，Steven Hartland 答复 Karl Pielorz 的互操作疑问：CARP 底层协议并未改变，只是呈现方式不同，因此 9 与 10 之间不应有问题；此前 Steven 已说明 10.x 中 CARP.md
+            - 2.1.167-2018 年 4 月 2 日，Adrian Chadd 宣布问题当日已查明，根源在 gcc 编译器的一个内建函数缺陷，他与 cognet 正在梳理相关事项.md
+            - 2.1.168-2018 年 4 月 14 日，Rick Macklem 建议尝试调高 acregmin、acregmax 与 acdirmin、acdirmax.md
+            - 2.1.169-2018 年 4 月 20 日邮件串：Andrey V. Elsukov 与 Victor Gamov 关于 IPsec 安全关联配置的多封英文原件.md
+            - 2.1.170-2018 年 4 月 28 日，Eugene Grosbein 表示已厌倦替对方修正顶端回复、可能不再回复，并澄清 vlan 流量不等于打标签流量.md
+            - 2.1.171-2018 年 8 月 13 日，Eugene Grosbein 答复称拔线后保留地址与路由系有意为之，建议以 lagg(4) 做故障倒换并在 lagg0 上配地址.md
+            - 2.1.172-2018 年 8 月 30 日，np（Navdeep Parhar）就 cxl 网卡重启后不工作一事回复称仍在排查，当前推测是对端在不该协商时尝试自协商（1Gbps 光模块）.md
+            - 2.1.173-2018 年 2 月 6 日，Victor Sudakov 在 Grosbein 查证之后追问 Kevin：其 iwn 网卡的 ifconfig list caps 输出究竟为何.md
+            - 2.1.174-2018 年 2 月 15 日，Lee Brown 回应称同样命令在其 11.1-RELEASE-p6 上报 bad address： gw，并示范先按相同参数复现再用 route del 删除该路由的全过程.md
+            - 2.1.175-2018 年 1 月 2 日，freebsd-rwg at pdx.rh.CN85.dnsmgr.net (Rodney W. Grimes) 建议走二手渠道.md
+            - 2.1.176-2018 年 1 月 13 日邮件串：Georg Bege 与 Rodney W. Grimes 等关于 ADSL2+ 调制解调器与 IP 多播封装的英文原件.md
+            - 2.1.177-2018 年 7 月 17 日邮件串：Eugene Grosbein 与 Lev Serebryakov 关于 vlan、路由与 ipfw NAT 流量的多封英文原件.md
+            - 2.1.178-2018 年 7 月 28 日，Adrian Chadd 反驳纯 4K 页方案，称服务器动辄上千万个 4K 页，做大量网络缓冲分配时应设专用分配器路径直接供给 64K 物理连续页.md
+            - 2.1.179-2018 年 6 月 13 日，Andrey V. Elsukov 解释成因：内核版 libalias 用 m_megapullup 拼出单一连续缓冲.md
+            - 2.1.180-2018 年 6 月 25 日，Grzegorz Junka 答复 Rodney：所指是其先前邮件中给出的 11-STABLE 硬件支持页面，即邮件所引链接那页.md
         - 2.2-KAME IPv6：IPv6 体系进入 FreeBSD
         - 2.3-Netgraph：可组合网络架构
         - 2.4-Dummynet：网络模拟与流量控制
@@ -8065,41 +8065,41 @@
         - 2.5-Kqueue 在高并发网络服务器中的应用
         - 2.6-Netmap：高速数据包处理框架
         - 2.7-Iflib：网络驱动模型重构
-            - 2.7.1-133.6.2 ＊＊iflib(4)＊＊ 网络驱动框架与驱动迁移.md
+            - 2.7.1-要点：iflib（Interface Framework，网络驱动框架）在 FreeBSD 11.x 引入原型，12.x 时期大量网卡驱动迁移到 iflib 框架.md
             - 2.7.2-＊＊iflib(4)＊＊ 网络驱动框架与驱动迁移.md
         - 2.8-Kernel TLS：内核态安全通信
-            - 2.8.1-年7月25日BruceMSimpson提交补丁为内核态IPv4协议消费者增加IP.md
+            - 2.8.1-2007 年 7 月 25 日，Bruce M. Simpson 提交补丁，为内核态 IPv4 协议消费者增加 IP Router Alert 选项检查，并附上补丁位置.md
         - 2.9-WireGuard 与内核 VPN 接口（2010s 末–2026）
         - 2.10-Kqueue 机制本体：事件通知的设计与实现
     - 第3章-FreeBSD 虚拟化体系：从 Jail 到 bhyve
         - 3.1-UNIX 隔离传统与 FreeBSD Jail
-            - 3.1.1-要点chroot到jail的进化史料保存较好但chroot安全分析的学术文献散落.md
-            - 3.1.2-要点Kamp拒绝完全虚拟化路线追求操作系统级隔离共享内核但提供独立命名空间这一哲.md
+            - 3.1.1-要点chroot到jail的进化史料保存较好但chroot安全分析的学术文献散落在多篇论文中.md
+            - 3.1.2-要点Kamp拒绝完全虚拟化路线追求操作系统级隔离共享内核但提供独立命名空间这一哲学在2010年代被Docker／LXC重新验证.md
         - 3.2-Jail 的进程、文件系统与网络隔离
         - 3.3-VIMAGE／VNET：网络虚拟化
             - 3.3.1-VNET 虚拟化的架构设计与实现机制.md
             - 3.3.2-VNET 与 Jail／epair 的工程集成.md
             - 3.3.3-与 Linux network namespace 的比较.md
-            - 3.3.4-年5月9日MilanObuch指出MarcoZec的vimage基于4x而4x之.md
-            - 3.3.5-年6月12日PalleGirgensohn在升级jail服务器时启用VIMAGE.md
-            - 3.3.6-年11月19日BjoernZeeb强调要让人们在VIMAGE下使用pf必须先引入.md
-            - 3.3.7-年9月27日BjoernAZeeb追问脚本里崩在第几步并疑是否在ifconfig.md
+            - 3.3.4-年5月9日MilanObuch指出MarcoZec的vimage基于4x而4x之后架构发生了重大变化.md
+            - 3.3.5-年6月12日PalleGirgensohn在升级jail服务器时启用VIMAGE称吃过苦头才得知PF不能与VIMAGE编入同一内核.md
+            - 3.3.6-年11月19日BjoernZeeb强调要让人们在VIMAGE下使用pf必须先引入他此前多次指出的安全修复.md
+            - 3.3.7-年9月27日BjoernAZeeb追问脚本崩在第几步疑在ifconfig之前.md
             - 3.3.8-网络栈虚拟化的工程实现.md
-            - 3.3.9-要点11x时期虚拟化平台驱动持续改进VMware方面vmx4VMXNET3网络驱.md
+            - 3.3.9-要点11x时期虚拟化平台驱动持续改进VMware方面vmx4VMXNET3网络驱动在10.0从OpenBSD移植后11.x持续改进性能与稳定性.md
             - 3.3.10-VIMAGE／VNET 默认启用与网络虚拟化成熟.md
         - 3.4-Xen 支持与早期虚拟化探索
-            - 3.4.1-要点KipMacy主导Xendom0支持20092011因上游Xen对FreeB.md
+            - 3.4.1-要点KipMacy主导Xendom0支持2009－2011因上游Xen对FreeBSD冷淡而停滞.md
         - 3.5-bhyve：FreeBSD 原生虚拟机监控器
             - 3.5.1-2011-2026 年同期虚拟化技术对照.md
-            - 3.5.2-要点在bhyve出现之前FreeBSD平台的硬件虚拟化方案主要依赖三条路径第一是.md
+            - 3.5.2-要点在bhyve出现之前FreeBSD硬件虚拟化依赖Xen移植QEMU移植与专用模块三条路径.md
             - 3.5.3-bhyve 集成至 FreeBSD 基本系统.md
-            - 3.5.4-要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v.md
+            - 3.5.4-要点bhyve设备模型支持半虚拟化virtio与全虚拟化模拟两类设备.md
         - 3.6-Jail 与虚拟机的技术分工
-            - 3.6.1-chroot起源之争McKusick的BillJoy说对Losh的第7版Unix.md
+            - 3.6.1-chroot起源之争McKusick的BillJoy说与Losh的第7版Unix说尚未完全闭合.md
             - 3.6.2-chroot 的历史局限.md
             - 3.6.3-jail(2) 的系统调用设计.md
             - 3.6.4-从隔离到虚拟化的跃迁.md
-            - 3.6.5-KristofProvost关于if_bridgemutex至epoch改造与O.md
+            - 3.6.5-KristofProvost关于if_bridgemutex至epoch改造与Orange运营商瓶颈的第一手工程叙述.md
         - 3.7-FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000–2020）
             - 3.7.1-Linux VServer 到 Docker 的演化.md
             - 3.7.2-容器演化比较辨析.md
@@ -8109,331 +8109,331 @@
             - 3.7.6-Linux KVM 生态优势的结构性原因.md
         - 3.8-云计算环境中的 FreeBSD 虚拟化
         - 3.9-FreeBSD 8.x 的开发者群体与虚拟化团队
-            - 3.9.1-年3月16日SamLeffler20090316认为是同一问题但根因不清称代码中.md
-            - 3.9.2-年5月24日NateLawson宣布导入IntelACPICA20040514该.md
-            - 3.9.3-年11月20日freebsd报告80200811快照amd64在挂载根前打印lo.md
-            - 3.9.4-年5月21日RobertMoore宣布ACPICA20090521版发布该版不再.md
-            - 3.9.5-年2月28日20100228NorikatsuShigemura用printf调.md
-            - 3.9.6-年8月7日IanFREISLICH于20120807报告pf4从80RELEAS.md
-            - 3.9.7-年4月7日Intel的JackVogel回复TakanoriWatanabe关于.md
-            - 3.9.8-年2月4日AlexandreSunnyKovalenko提出powerd温度上限.md
-            - 3.9.9-年1月18日vader自述参考AOPENAX59Pro的ASL代码修好了EPOX.md
-            - 3.9.10-年3月2日AndriyGapon自述数年前按W83783S规范尝试用PWM控制风.md
-            - 3.9.11-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现.md
-            - 3.9.12-年11月24日PaulBMahol自述在hpnx7300上把hwacpiosna.md
-            - 3.9.13-年4月20日WilliamGrzybowski自述一年半前曾报告笔记本无法为ms.md
-            - 3.9.14-年1月9日GabrielLavoie观察到powerd使用devcpu0freq.md
-            - 3.9.15-年6月2日JosefMoellers自述在富士通RX300S5上装72RELEA.md
-            - 3.9.16-年3月16日AndriyGapon指出部分厂商BIOS把PIIX4E的CPU节流.md
-            - 3.9.17-年10月15日DagErlingSmørgrav认为不能把Intel的双BSD与.md
-            - 3.9.18-年4月6日BartoszFabianowski自述按Alexandre的建议减少.md
-            - 3.9.19-年1月30日RuiPaulo报告最新ACPICA找不到其ASUS010的HID而.md
-            - 3.9.20-年11月11日AndriyGapon提出一个补丁征询意见思路是当有缺陷的BIOS.md
-            - 3.9.21-年9月13日AndriyGapon承认该补丁远未完善情况有些混乱指出同一类型但延.md
-            - 3.9.22-年6月4日GregoryShapiro称FreeBSD已使用独立的freebsd.md
-            - 3.9.23-年12月12日AndriyGapon就i386tinderbox在kern_ra.md
-            - 3.9.24-年3月10日RyanStone说明配置空间共256MB的来由即总线数槽位数功能数.md
-            - 3.9.25-年5月11日ShteryanaShopova反对该写法称开启相应告警选项即可让误.md
-            - 3.9.26-年6月30日MohammedFarrag称手册翻译启动后ArabBSD吸引了埃及.md
-            - 3.9.27-年11月3日LarsEngels向列表介绍即将发售的廉价ARM板Raspberr.md
-            - 3.9.28-年7月14日JasonHellenthal回应MikeMeyer关于VBox客户.md
-            - 3.9.29-年12月17日AntonYuzhaninov设debugdebugger_on_.md
-            - 3.9.30-年11月7日HansPetterSelasky指umasspanic与busdm.md
-            - 3.9.31-年11月16日Bear重装FreeBSD70后安装xorg与gnome2lite.md
-            - 3.9.32-年4月5日StefanBethke启用pf后几分钟轻流量就出现sbsndptrs.md
-            - 3.9.33-年4月30日AntonShterenlikht自述i386配inteli845在.md
-            - 3.9.34-年8月6日LiQing诊断该路由表10551020同键双条目且更具体那项带G标记.md
-            - 3.9.35-年8月12日PieterdeGoeje报告从7STABLE升到current后开.md
-            - 3.9.36-年8月17日DougBarton认为等IP就绪脚本更灵活rcd中可用keywor.md
-            - 3.9.37-年8月24日AristedesManiatis使用freebsdupdate将运.md
-            - 3.9.38-年8月27日MikeAndrews报告两台80BETA3机器中一台在高HTTP负.md
-            - 3.9.39-年12月2日GaryJennejohn在非legacy模式下自测ahci0通过A.md
-            - 3.9.40-年12月6日AlexanderBest报告ATA_CAM下访问dvd驱动器执行c.md
-            - 3.9.41-年12月11日AndriyGapon报告witness在linux_futexc.md
-            - 3.9.42-年12月21日Derek自述做RootOnZFS时用了livefsCD加mems.md
-            - 3.9.43-年2月4日VladimirGrebenschikov反映securitylibf.md
-            - 3.9.44-年2月6日DmitryMarakasov指出man页面中U+002DHYPHEN.md
-            - 3.9.45-年2月19日PawelJakubDawidek回应追踪OpenSolarishg.md
-            - 3.9.46-年2月23日rwatson指出软件禁用CPU需要完整基础设施涉及devicedr.md
-            - 3.9.47-年1月24日JulianElischer说明常规mutex语义上并不真正睡眠但会.md
-            - 3.9.48-年7月15日RobertWatson在处理内核ELF断言过于保守导致加载zfsk.md
-            - 3.9.49-年6月27日RomanDivacky报告8current在r195095起无法引.md
-            - 3.9.50-年7月30日MaximDounin用GENERIC内核加压缩参数gzip9一边远.md
-            - 3.9.51-年6月29日KamigishiRei报告r195153更新并装上AHCICAM补.md
-            - 3.9.52-年6月3日RickMacklem指出mount_nfsc把nfsproto初始化.md
-            - 3.9.53-年6月13日MarcelMoolenaar反驳MarkMurray的污染论并要求.md
-            - 3.9.54-年6月23日KipMacy就3ware9550SXU控制卡上zpoolscrub.md
-            - 3.9.55-年3月9日PaulBMahol报告nullfs引发vrele负引用计数panic.md
-            - 3.9.56-年5月4日LuciusWindschuh在CURRENT@r191784的Thi.md
-            - 3.9.57-年3月11日AndreyChernov用hwusb2umsdebug=15抓到的.md
-            - 3.9.58-年3月14日MichalVarga建议设compatlinuxosrelease.md
-            - 3.9.59-年5月8日KipMacy解释该恐慌表示调用者期望start到start加size.md
-            - 3.9.60-年5月14日JamesVanArtsdalen接ThomasBackman报zf.md
-            - 3.9.61-年5月18日AdrianChadd判定Xen启动恐慌源于一次坏合并回退了先前提交.md
-            - 3.9.62-年5月23日RickMacklem报nfs_srvkrpcc在optionsKG.md
-            - 3.9.63-年5月27日ThomasBackman在amd64虚拟机768MBRAM下以ma.md
-            - 3.9.64-年11月3日MarkLinimon在80RC2manglesmsdosfs线程回.md
-            - 3.9.65-年11月13日sysinstall设置Label后报Unabletofindde.md
-            - 3.9.66-年1月1日EirikØverby补充观察主机已不再接收任何数据包仅在脚本运行会话.md
-            - 3.9.67-年10月2日BruceSimpson补充IGMPv3组状态变更逐组计算但报告按链.md
-            - 3.9.68-年10月7日JohnMarshall验证Alexander的补丁在krb5场景有.md
-            - 3.9.69-年10月10日Boris在amd64上做lib32且启用ccache编译世界时l.md
-            - 3.9.70-年10月19日JulianElischer回复称改写block0的510与511.md
-            - 3.9.71-年10月28日alteriks在GPT盘用raidz1装FreeBSD未完成bo.md
-            - 3.9.72-年9月3日MatthewDillon称这是physio与ATA的已知问题phys.md
-            - 3.9.73-年9月9日VladislavVProdan提PRkern138666称igmpp.md
-            - 3.9.74-年9月22日AndriyGapon针对kldloadatapicam的cored.md
-            - 3.9.75-年9月27日9head默认禁止MAP_FIXEDmmap映射到地址0可能破坏应用.md
-            - 3.9.76-年4月10日julian说明在湾区FreeBSD用户组讨论ports利弊提议在m.md
-            - 3.9.77-年4月30日PowerMacG3750400MHz配OpenFirmware30.md
-            - 3.9.78-年8月10日MichaelWLucas称同样中招实验发现部分apache功能被编.md
-            - 3.9.79-年2月23日gavin把docs132005转feedback诊断libcso6.md
-            - 3.9.80-年8月17日usrlocalinclude被有意排除在编译器包含路径之外目的是避.md
-            - 3.9.81-年1月14日HywelMallett报PR130548称gjournal手册页缺.md
-            - 3.9.82-年7月1日KoukiHashimoto在ex5800xenon的72RELEAS.md
-            - 3.9.83-年6月22日GlenBarber提交PR135921指HandbookB8UNI.md
-            - 3.9.84-年11月26日WarrenBlock列出ftpfreebsdorg上410至62.md
-            - 3.9.85-年2月10日GeorgeMamalakis长期用jail后提出比手册1561更安.md
-            - 3.9.86-年7月4日bcr把docs144498转patched称boot8改引uart4.md
-            - 3.9.87-年8月19日StevenHartland把ack加入greptimetrials.md
-            - 3.9.88-年12月2日报告Illumos已提交移除zfs命令Python依赖的更新认为可能.md
-            - 3.9.89-年2月9日xcllnt承认headtinderboxamd64构建失败sys_p.md
-            - 3.9.90-年2月20日GarrettCooper报告启动bge4后出现锁序反转if_afd.md
-            - 3.9.91-年1月6日DaichiGoto测VirtualBox312take2客户机80R.md
-            - 3.9.92-年1月19日VladimirGrebenschikov用近期ports测试pwc.md
-            - 3.9.93-年1月24日RichardTodd回报AttilioRao要的kerntimec.md
-            - 3.9.94-年1月29日IanFREISLICH报MC950D配u3g工作约一小时后重新插入.md
-            - 3.9.95-年7月5日BruceCran在Xen机器上升级CURRENT后时钟不再更新tim.md
-            - 3.9.96-年7月12日Selasky转述Thompson该IEEE80211panic根因.md
-            - 3.9.97-年7月18日FabioKaminski比较两台笔电81rc2amd64双核明显快.md
-            - 3.9.98-年7月24日Cheekym在SunBlade100以256M内存的81PRERE.md
-            - 3.9.99-年6月2日HansPetterSelasky请对方转储该USB设备的描述符给出u.md
-            - 3.9.100-年6月9日jhell建议改成makeobj与makedepend之后再build.md
-            - 3.9.101-年6月12日MarioSergioFujikawaFerreira报告把机器从i.md
-            - 3.9.102-年6月15日swellk询问GaborKovesdan为何不把425M大小的补丁.md
-            - 3.9.103-年6月22日MartinMatuska为ZFSv15征集测试含用户组配额功能与四.md
-            - 3.9.104-年6月24日他提出应把mailwrapper改名为whateverwrapper.md
-            - 3.9.105-年6月28日他在BSDLiconv线程里简短更新库部分已修好但mk类工具仍未找出.md
-            - 3.9.106-年3月2日升级kernel与world后thunderbird302崩溃怀疑je.md
-            - 3.9.107-年3月19日PaulBMahol报告FreeBSD90CURRENT挂载由new.md
-            - 3.9.108-年5月11日DavidWolfskill保留旧现场后按日常节奏升到r207911.md
-            - 3.9.109-年5月20日RomanDivacky指出只要在etcmakeconf或etcsr.md
-            - 3.9.110-年5月31日MatthewSeaman表示大体同意但等clang能编译多数por.md
-            - 3.9.111-年11月9日Alan判断支持超过512GB内存的改动应很直接需改vmparamh.md
-            - 3.9.112-年11月16日BenjaminKaduk说自己原本以为主版本升级的官方路径是先把.md
-            - 3.9.113-年11月20日AndriyGapon确认tq_name只写不读因为structt.md
-            - 3.9.114-年11月23日追问硬件具备aperf与mperf能力却没有cpufreq时这些M.md
-            - 3.9.115-年11月30日追问进程共享pthread补丁是否还需在includeunistd.md
-            - 3.9.116-年10月11日jhb回复DaichiGOTO关于是否该让fcntl2在F_SET.md
-            - 3.9.117-年10月25日Rene反馈在libcompiler_rt分支下portsx11n.md
-            - 3.9.118-年9月2日Dawidek放出113MB的VirtualBox虚拟机内含FreeB.md
-            - 3.9.119-年9月7日Cieslak质疑loader与bootblock是32位代码认为纯3.md
-            - 3.9.120-年9月9日RobFarmer报90CURRENTr212312Mamd64编译m.md
-            - 3.9.121-年9月14日自陈loopback变慢实为延迟确认所致客户端不需向服务端回发数据时.md
-            - 3.9.122-年9月21日项目中需使用未文档化的EVFILT_FS据此补文档并提交kqueue.md
-            - 3.9.123-年4月1日MarcFonvieille告知doc树已打tag并建立docrele.md
-            - 3.9.124-年9月29日DimitryAndric补充该panic在r213139的i386.md
-            - 3.9.125-年4月6日说会试一下并称可在trgt_amd64c与trgt_i386c的帧判断.md
-            - 3.9.126-年4月11日SergeyVinogradov为ifconfig8增加t参数以点分.md
-            - 3.9.127-年4月25日说明自己在amd64与PowerPC上很早就实现了NX栈支持但一直没.md
-            - 3.9.128-年4月27日提交r221124把默认NFS客户端切为新客户端原来的fstypen.md
-            - 3.9.129-年8月1日回复说9500GT1G显卡用ports版nvidiadriver不列出.md
-            - 3.9.130-年8月3日avg提示Signal4就是SIGILL非法指令可能是他装了面向更高档.md
-            - 3.9.131-年8月5日MikeTancsa说自己用过多款addonics端口倍增器在8x上工.md
-            - 3.9.132-年8月13日TestRat说明该cat链接失败已追溯到devstdout损坏并在.md
-            - 3.9.133-年12月1日SergeyKandaurov承认不知如何优雅地从newverssh.md
-            - 3.9.134-年12月2日DougBarton反问更改默认值如何影响Steve使用profil.md
-            - 3.9.135-年12月5日JackVogel反问在何种配置与硬件下ixgbe跑不满线速称自家验.md
-            - 3.9.136-年12月7日补充检查dvp指向znode的z_unlinked作为数据点猜测对已.md
-            - 3.9.137-年12月12日解释4BSD各CPU取共享队列队头因而负载摊得更匀ULE把线程固定.md
-            - 3.9.138-年12月23日JohnBaldwin引GarrettCooper提及7x时代O2.md
-            - 3.9.139-年12月27日JulianElischer用ktrace定位fetch逐个字符读.md
-            - 3.9.140-年12月29日JosephSAtkinson称桌面100CURRENTr2289.md
-            - 3.9.141-年2月4日JustinTGibbs提交补丁移除OpenSolaris与ZFS头文.md
-            - 3.9.142-年2月18日UlrichSpörlein称自己不清楚DIRPRFX究竟做什么质疑.md
-            - 3.9.143-年2月24日DougBarton按wiki用Clang编完world后miscw.md
-            - 3.9.144-年1月3日Anonymous在g_vfs报错可读性讨论中反问GarrettCoo.md
-            - 3.9.145-年1月20日回应DougBarton不要默认破坏双启Windows能力的建议说明.md
-            - 3.9.146-年7月7日Hartmann反驳Andriy提到kernschedaffinity.md
-            - 3.9.147-年7月11日ArnaudLacombe要求每个补丁入库前强制公开审查无论提交者资.md
-            - 3.9.148-年7月28日MartinMatuska追踪realfspath指出唯一消费点是v.md
-            - 3.9.149-年6月15日DougRabson建议clang不识__builtin_ia32时.md
-            - 3.9.150-年6月25日JustinGibbs判断问题不在GEOM而在CAM之下等待ccb_.md
-            - 3.9.151-年3月25日AlexanderMotin说明graid与gmirror功能相当可.md
-            - 3.9.152-年5月29日DanielStaal称wiki上RootOnZFS的GPTZFSB.md
-            - 3.9.153-年11月16日WarnerLosh针对RobertMillan在用户可见内核头中.md
-            - 3.9.154-年11月23日DimitryAndric答SeanBruno报NFS挂载上svn.md
-            - 3.9.155-年11月28日MartinMatuska回复MarkFelder的zfsioha.md
-            - 3.9.156-年10月5日ThomasDickey回复AntonShterenlikht关于g.md
-            - 3.9.157-年10月14日VincentHoffman回复GavinAtkinson请求就p.md
-            - 3.9.158-年10月22日DougBarton指出返回码不足以判断在subversion17.md
-            - 3.9.159-年9月26日JohnBaldwin指出x86上计时器在DEVICE_SUSPEN.md
-            - 3.9.160-年4月8日KonstantinBelousov反驳WarnerLosh的soft.md
-            - 3.9.161-年4月21日RyanStone报告gstat在升级到100CURRENT后失效认.md
+            - 3.9.1-年3月16日SamLeffler认为是同一问题但根因不清称代码多处已按ifmaprotospec为NULL处理.md
+            - 3.9.2-年5月24日NateLawson宣布导入IntelACPICA20040514该版本修复ThinkPad第二次挂起后立即唤醒的老毛病.md
+            - 3.9.3-年11月20日freebsd报告80200811快照amd64挂载根前打印锁序反转警告.md
+            - 3.9.4-年5月21日RobertMoore宣布ACPICA20090521版发布该版不再保留PM1控制寄存器中的SCI使能位.md
+            - 3.9.5-年2月28日NorikatsuShigemura用printf调试追踪CAM探测路径.md
+            - 3.9.6-年8月7日IanFREISLICH报告pf4从80RELEASE到current错配状态并中止已建流.md
+            - 3.9.7-年4月7日Intel的JackVogel回复TakanoriWatanabe关于if_em恢复路径锁断言的补丁.md
+            - 3.9.8-年2月4日AlexandreSunnyKovalenko提出powerd温度上限补丁.md
+            - 3.9.9-年1月18日vader自述参考AOPENAX59Pro的ASL代码修好了EPOXMVP3C2上PCIIRQ异常与FDC0丢失两个ACPI问题.md
+            - 3.9.10-年3月2日AndriyGapon自述数年前按W83783S规范尝试用PWM控制风扇转速以降低空闲噪声.md
+            - 3.9.11-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现自己对总线不够客气.md
+            - 3.9.12-年11月24日PaulBMahol自述在hpnx7300上把hwacpiosname设为Windows2001后成功从挂起恢复.md
+            - 3.9.13-年4月20日WilliamGrzybowski自述一年半前曾报告笔记本无法为msk网卡分配资源.md
+            - 3.9.14-年1月9日GabrielLavoie观察到powerd使用devcpu0freq_levels而非est提供的freq_settings.md
+            - 3.9.15-年6月2日JosefMoellers自述在富士通RX300S5上装72RELEAASE时需用hint关闭未被使用的AT键盘控制器才能继续.md
+            - 3.9.16-年3月16日AndriyGapon指出部分厂商BIOS把PIIX4E的CPU节流占空宽度设得比Intel文档规定更小.md
+            - 3.9.17-年10月15日DagErlingSmørgrav认为不能把Intel的双BSD与GPL许可文件改为仅BSD.md
+            - 3.9.18-年4月6日BartoszFabianowski自述按Alexandre的建议减少频率档.md
+            - 3.9.19-年1月30日RuiPaulo报告最新ACPICA找不到其ASUS010的HID而FreeBSD8所用的ACPICA20090521正常.md
+            - 3.9.20-年11月11日AndriyGapon提出补丁征询意见为_CST缺C1的缺陷BIOS在acpi_cpu_cx_cst自动补C1.md
+            - 3.9.21-年9月13日AndriyGapon承认该补丁远未完善情况有些混乱指出同一类型但延迟不同的多个C状态处理起来尚无良策.md
+            - 3.9.22-年6月4日GregoryShapiro称FreeBSD已使用独立的freebsdmc文件.md
+            - 3.9.23-年12月12日AndriyGapon就i386tinderbox在kern_racct.c与sx.h中报SCHEDULER_STOPPED未声明一事致歉.md
+            - 3.9.24-年3月10日RyanStone说明配置空间共256MB的来由即总线数槽位数功能数与4096字节寄存器相乘.md
+            - 3.9.25-年5月11日ShteryanaShopova反对该写法称开启相应告警选项即可让误写赋值直接报错.md
+            - 3.9.26-年6月30日MohammedFarrag称手册翻译启动后ArabBSD吸引了埃及的AinShamsUniversity.md
+            - 3.9.27-年11月3日LarsEngels向列表介绍即将发售的廉价ARM板RaspberryPi.md
+            - 3.9.28-年7月14日JasonHellenthal回应MikeMeyer关于VBox客户机性能糟糕的陈述.md
+            - 3.9.29-年12月17日AntonYuzhaninov设debugdebugger_on_panic=0与debug.trace_on_panic=1后能看到panic回溯但coredump未写盘.md
+            - 3.9.30-年11月7日HansPetterSelasky指umasspanic与busdma有关.md
+            - 3.9.31-年11月16日Bear重装FreeBSD70后安装xorg与gnome2litee.md
+            - 3.9.32-年4月5日StefanBethke启用pf后几分钟轻流量就出现sbsndptrsockbuf与mbuf冲突panic镜像swap无dump.md
+            - 3.9.33-年4月30日AntonShterenlikht自述i386配inteli845在xorg.conf启用UXA时触发i915_irq_emit无锁调用错误.md
+            - 3.9.34-年8月6日LiQing诊断该路由表10551020同键双条目且更具体那项带G标记为间接路由.md
+            - 3.9.35-年8月12日PieterdeGoeje报告从7STABLE升到current后开机触发witness警告.md
+            - 3.9.36-年8月17日DougBarton认为等IP就绪脚本更灵活rcd中可用keywords精确配置.md
+            - 3.9.37-年8月24日AristedesManiatis用freebsdupdate升级ZFSv13主机重启触发chflags报错.md
+            - 3.9.38-年8月27日MikeAndrews报告两台80BETA3机器之一在高HTTP负载下反复panic.md
+            - 3.9.39-年12月2日GaryJennejohn在非legacy模式下自测ahci0通过ATA_CAM正常工作.md
+            - 3.9.40-年12月6日AlexanderBest报告ATA_CAM下访问dvd驱动器执行cdrecordblank=all时其他cam成员包括ada0均无法访问直至命令结束.md
+            - 3.9.41-年12月11日AndriyGapon报告witness在linux_futexc检测到同类型锁ftlk被重复获取.md
+            - 3.9.42-年12月21日Derek自述做RootOnZFS时用了livefsCD加memstick镜像.md
+            - 3.9.43-年2月4日VladimirGrebenschikov反映securitylibffprint升级后失效.md
+            - 3.9.44-年2月6日DmitryMarakasov指出man页面中U+002DHYPHEN-MINUS减号被替换为U+2212MINUSSIGN.md
+            - 3.9.45-年2月19日PawelJakubDawidek回应追踪OpenSolarishg的建议.md
+            - 3.9.46-年2月23日rwatson指出软件禁用CPU需要完整基础设施涉及devicedriver线程绑定与sched_bindsched_pin.md
+            - 3.9.47-年1月24日JulianElischer说明常规mutex语义上并不真正睡眠但会deschedule当前线程.md
+            - 3.9.48-年7月15日RobertWatson在处理内核ELF断言过于保守导致加载zfsko时崩溃的讨论中.md
+            - 3.9.49-年6月27日RomanDivacky报告8current自r195095起无法引导卡死在KDB后端打印后.md
+            - 3.9.50-年7月30日MaximDounin用GENERIC内核加压缩参数gzip9一边远远程scp到zfs卷一边并行解压三份ports源码树.md
+            - 3.9.51-年6月29日KamigishiRei报告r195153更新并装上AHCICAM补丁后可用.md
+            - 3.9.52-年6月3日RickMacklem指出mount_nfsc把nfsproto初始化为IPPROTO_UDP使挂载协议与NullRPC默认走udp.md
+            - 3.9.53-年6月13日MarcelMoolenaar反驳MarkMurray的污染论并要求更多细节.md
+            - 3.9.54-年6月23日KipMacy就3ware9550SXU控制卡上zpoolscrub报错给出诊断.md
+            - 3.9.55-年3月9日PaulBMahol报告nullfs引发vrele负引用计数panic附textdump中的锁信息与回溯.md
+            - 3.9.56-年5月4日LuciusWindschuh在T400报lapic1zerodivisorpanic系自身补丁所致并附修正.md
+            - 3.9.57-年3月11日AndreyChernov用hwusb2umsdebug=15抓到的日志显示.md
+            - 3.9.58-年3月14日MichalVarga建议设compatlinuxosrelease=2.4.2走旧linuxulator代码.md
+            - 3.9.59-年5月8日KipMacy解释该恐慌表示调用者期望start到start加size之间存在空闲空间却未找到.md
+            - 3.9.60-年5月14日JamesVanArtsdalen接ThomasBackman报zfssend-R-I经管道recv时崩溃.md
+            - 3.9.61-年5月18日AdrianChadd判定Xen启动恐慌源于坏合并回退修复称current的Xen现已基本可用.md
+            - 3.9.62-年5月23日RickMacklem报nfs_srvkrpcc在optionsKGSSAPI下无法编译.md
+            - 3.9.63-年5月27日ThomasBackman在amd64虚拟机768MBRAM下以make-j4buildworld复现崩溃.md
+            - 3.9.64-年11月3日MarkLinimon在80RC2manglesmsdosfs线程称做ZFS者极少吁更多人参与文件系统工作.md
+            - 3.9.65-年11月13日sysinstall设置Label后报Unabletofinddevicenodefor／dev／ad4s1b并中止安装.md
+            - 3.9.66-年1月1日EirikØverby补充观察主机已不再接收任何数据包仅在脚本运行会话超时前做过少量重传.md
+            - 3.9.67-年10月2日BruceSimpson补充IGMPv3组状态变更逐组计算但报告按链路发出.md
+            - 3.9.68-年10月7日JohnMarshall验证Alexander补丁在krb5场景有效gssapi客户端认证通过.md
+            - 3.9.69-年10月10日Boris在amd64做lib32启用ccache时csui386elf的mkdep报汇编错误.md
+            - 3.9.70-年10月19日JulianElischer回复称改写block0的510与511字节这两个魔数字节可让fdisktaster不再识别该fdisk块.md
+            - 3.9.71-年10月28日alteriks在GPT盘用raidz1装FreeBSD未完成bootslice加到400扇区后allblockcopiesunavailable消失.md
+            - 3.9.72-年9月3日MatthewDillon称这是physio与ATA的已知问题physio用vmapbuf直接映射用户态缓冲作BIO.md
+            - 3.9.73-年9月9日VladislavVProdan提PRkern138666称igmpproxy多播转发失效.md
+            - 3.9.74-年9月22日AndriyGapon针对kldloadatapicam的coredump请求kgdb核查softc.md
+            - 3.9.75-年9月27日9head默认禁止MAP_FIXEDmmap映射到地址0可能破坏应用征集受影响程序回报.md
+            - 3.9.76-年4月10日julian说明在湾区FreeBSD用户组讨论ports利弊提议在mk中加makepbi关键字与PC-BSD的PBI系统合并.md
+            - 3.9.77-年4月30日PowerMacG3750400MHz配OpenFirmware30上9.0SNAPSHOT出现bufwait与dirhash锁序反转.md
+            - 3.9.78-年8月10日MichaelWLucas称同样中招实验发现部分apache功能被编进二进制而非做成模块.md
+            - 3.9.79-年2月23日gavin把docs132005转feedback诊断libcso6为FreeBSD6遗留库.md
+            - 3.9.80-年8月17日usrlocalinclude被有意排除在编译器包含路径之外以避免意外链接.md
+            - 3.9.81-年1月14日HywelMallett报PR130548称gjournal手册页缺少sysctl说明.md
+            - 3.9.82-年7月1日KoukiHashimoto在ex5800xenon的72RELEASE-p2报PR136219.md
+            - 3.9.83-年6月22日GlenBarber提交PR135921指HandbookB8UNIXHistory中BSDReleaseAnnouncements链接404.md
+            - 3.9.84-年11月26日WarrenBlock列出ftpfreebsdorg上410至62各ISO-IMAGES目录已转存ftp-archive.md
+            - 3.9.85-年2月10日GeorgeMamalakis长期用jail后提出比手册1561更安全的架设架构.md
+            - 3.9.86-年7月4日bcr把docs144498转patched称boot8改引uart4的补丁已进HEAD.md
+            - 3.9.87-年8月19日StevenHartland把ack加入greptimetrials称BSDgrep耗时48秒而ack仅4秒.md
+            - 3.9.88-年12月2日报告Illumos已提交移除zfs命令Python依赖的更新认为可能便于把较新版本ZFS移植进-CURRENT.md
+            - 3.9.89-年2月9日xcllnt承认headtinderboxamd64构建失败sys_process.c第520与535行ptrace中union无成员pve32.md
+            - 3.9.90-年2月20日GarrettCooper报告启动bge4后出现锁序反转if_afdata锁先于radixnodehead锁.md
+            - 3.9.91-年1月6日DaichiGoto测VirtualBox312take2客户机80RRELEASE-p1i386、amd64与9-CURRENTamd64.md
+            - 3.9.92-年1月19日VladimirGrebenschikov用近期ports测试pwcview的vga与sif都正常.md
+            - 3.9.93-年1月24日RichardTodd回报AttilioRao要的kerntimecounter.md
+            - 3.9.94-年1月29日IanFREISLICH报MC950D配u3g重插即报setaddress2failed与USBERRSTALLED.md
+            - 3.9.95-年7月5日BruceCran在Xen机器上升级CURRENT后时钟不再更新timecounter选了dummy.md
+            - 3.9.96-年7月12日Selasky转述Thompson该IEEE80211panic根因是ieee80211_node引用计数.md
+            - 3.9.97-年7月18日FabioKaminski比较两台笔电81rc2amd64双核明显快快于9-current的Inteli3四逻辑核.md
+            - 3.9.98-年7月24日Cheekym在SunBlade100以256M内存的81PREREELEASEsparc64上放ZFSv15补丁未出问题,并用两个100M内存盘做镜像写数据、逐个下线皆正常.md
+            - 3.9.99-年6月2日HansPetterSelasky请对方转储该USB设备的描述符给出usbconfig-u0-a3dump_device_descdump_curr_config_desc命令.md
+            - 3.9.100-年6月9日jhell建议改成makeobj与makedepend之后再build更妥当.md
+            - 3.9.101-年6月12日MarioSergioFujikawaFerreira报告迁amd64后无法构建virtualboxose.md
+            - 3.9.102-年6月15日swellk询问GaborKovesdan为何不把425M大小的补丁先用gzip或xz压缩后再发布.md
+            - 3.9.103-年6月22日MartinMatuska为ZFSv15征集测试含用户组配额功能与四个post-9396修复.md
+            - 3.9.104-年6月24日他提出应把mailwrapper改名为whateverwrapper并把lpr程序也一并列进去.md
+            - 3.9.105-年6月28日他在BSDLiconv线程里简短更新库部分已修好但mk类工具仍未找出办法.md
+            - 3.9.106-年3月2日升级kernel与world后thunderbird302崩溃怀疑jemalloc改动引发.md
+            - 3.9.107-年3月19日PaulBMahol报告挂载DVD-RAM上newfs_msdos文件系统panic疑与除以零有关.md
+            - 3.9.108-年5月11日DavidWolfskill升到r207911单用户转多用户再入KDB只见ddb后端.md
+            - 3.9.109-年5月20日RomanDivacky指出在etcmakeconf或etcsrconf把NOWERROR与WERROR设为空值即可通过构建.md
+            - 3.9.110-年5月31日MatthewSeaman表示大体同意但等clang能编译多数ports会是很长的等待.md
+            - 3.9.111-年11月9日Alan判断支持超过512GB内存的改动应很直接需改vmparamh的常量定义.md
+            - 3.9.112-年11月16日BenjaminKaduk说自己原本以为主版本升级的官方路径是先把RELENG_X_Y升到RELENG_X再升到RELENG_{X+1}_Z.md
+            - 3.9.113-年11月20日AndriyGapon确认tq_name只写不读建议直接删除该字段.md
+            - 3.9.114-年11月23日追问硬件具备aperf与mperf能力却没有cpufreq时这些MSR是否仍有意义.md
+            - 3.9.115-年11月30日追问进程共享pthread补丁是否还需在includeunistdd.h里启用_POSIX_THREAD_PROCESS_SHARED定义.md
+            - 3.9.116-年10月11日jhb回复DaichiGOTO关于是否该让fcntl2在F_SETLK返回正确l_pid的讨论.md
+            - 3.9.117-年10月25日Rene反馈libcompiler_rt分支下nvidia-driver需重编否则X使用时panic.md
+            - 3.9.118-年9月2日Dawidek放出113MB的VirtualBox虚拟机内含FreeBSD9-CURRENT加ZFSv28与16块ada磁盘.md
+            - 3.9.119-年9月7日Cieslak质疑loader与bootblock是32位代码认为纯32位代码用i386标记更合适.md
+            - 3.9.120-年9月9日RobFarmer报90CURRENTr212312Mamd64编译mysql51client配置阶段重启.md
+            - 3.9.121-年9月14日自陈loopback变慢实为延迟确认所致客户端不需向服务端回发数据时服务端每个包被延迟100ms.md
+            - 3.9.122-年9月21日项目中需使用未文档化的EVFILT_FS据此补文档并提交kqueue2.diff.md
+            - 3.9.123-年4月1日MarcFonvieille告知doc树已打tag并建立docrelease／8.4.0分支.md
+            - 3.9.124-年9月29日DimitryAndric补充该panic在r213139的i386上可稳定复现.md
+            - 3.9.125-年4月6日说会试一下并称可在trgt_amd64c与trgt_i386c的帧判断里补上fork_trampoline.md
+            - 3.9.126-年4月11日SergeyVinogradov为ifconfig8增加t参数以点分分十进制显示IPv4子网掩码.md
+            - 3.9.127-年4月25日说明自己在amd64与PowerPC上很早就实现了NX栈支持但一直没启用.md
+            - 3.9.128-年4月27日提交r221124把默认NFS客户端切为新客户端原来的fstypenewnfs改名为nfs.md
+            - 3.9.129-年8月1日回复说9500GT1G显卡用ports版nvidiadriver不列出出显示器.md
+            - 3.9.130-年8月3日avg提示Signal4就是SIGILL非法指令可能是他装了面向更高档CPU构建的world.md
+            - 3.9.131-年8月5日MikeTancsa说自己用过多款addonicsPort倍增器在8x上工作很好.md
+            - 3.9.132-年8月13日TestRat说明该cat链接失败已追溯到devstdout损坏并在r224842修复.md
+            - 3.9.133-年12月1日SergeyKandaurov承认不知如何从newverssh取值生成supfile.md
+            - 3.9.134-年12月2日DougBarton反问更改默认值如何影响Steve使用profiled库,称乐见开发者别再破坏构建,并指出Steve没看出笑脸表情.md
+            - 3.9.135-年12月5日JackVogel反问在何种配置与硬件下ixgbe跑不满线速称自家验证中可达线速但结果对硬件与配置敏感.md
+            - 3.9.136-年12月7日补充检查dvp指向znode的z_unlinked作为数据点猜测对已卸载目录的lookup应直接失败.md
+            - 3.9.137-年12月12日解释4BSD各CPU取共享队列队头因而负载摊得更匀ULE把线程固定初始CPU之后再平衡.md
+            - 3.9.138-年12月23日JohnBaldwin引GarrettCooper提及7x时代O22内联导致gdb断点难设.md
+            - 3.9.139-年12月27日JulianElischer用ktrace定位fetch逐个字符读入的现象.md
+            - 3.9.140-年12月29日JosephSAtkinson称桌面100CURRENTr2289926与笔记本9.0-RC3均无法读CD.md
+            - 3.9.141-年2月4日JustinTGibbs提交补丁移除OpenSolaris与ZFS头文件不兼容C++的C构造.md
+            - 3.9.142-年2月18日UlrichSpörlein称自己不清楚DIRPRFX究竟做什么质疑是否也改变实际OBJDIR位置还是只影响make的终端输出.md
+            - 3.9.143-年2月24日DougBarton按wiki用Clang编完world后miscwwmweather+每次启动都崩溃.md
+            - 3.9.144-年1月3日Anonymous在g_vfs报错可读性讨论中反问GarrettCooper是否指perror(1).md
+            - 3.9.145-年1月20日回应DougBarton不要默认破坏双启Windows能力的建议说明安装器仅在磁盘完全未格式化或用户表示只装FreeBSD时才默认GPT.md
+            - 3.9.146-年7月7日Hartmann反驳Andriy提到kernschedaffinity的思路.md
+            - 3.9.147-年7月11日ArnaudLacombe要求每个补丁入库前强制公开审查无论提交者资历.md
+            - 3.9.148-年7月28日MartinMatuska追踪realfspath指出唯一消费点是vfs_mount_alloc的strlcpy写入f_mntonname.md
+            - 3.9.149-年6月15日DougRabson建议clang不识__builtin_ia32时改用标准xmmintrin.h头文件.md
+            - 3.9.150-年6月25日JustinGibbs判断问题不在GEOM而在CAM之下等待ccb_scan的线程本就为异步设备到达与离开事件而阻塞.md
+            - 3.9.151-年3月25日AlexanderMotin说明graid与gmirror功能相当可任选.md
+            - 3.9.152-年5月29日DanielStaal称wiki上RootOnZFS的GPTZFSBoot安装步骤已不适用.md
+            - 3.9.153-年11月16日WarnerLosh针对RobertMillan在用户可见内核头中识别GNU／kFreeBSD的补丁提出替代思路.md
+            - 3.9.154-年11月23日DimitryAndric答SeanBruno报NFS挂载上svnco报E200030diskI／Oerror.md
+            - 3.9.155-年11月28日MartinMatuska回复MarkFelder的zfsiohaang排查结果.md
+            - 3.9.156-年10月5日ThomasDickey回复AntonShterenlikht关于groff的-c行为变化一事.md
+            - 3.9.157-年10月14日VincentHoffman回复GavinAtkinson就pf状态不回收提交PR并附既有报告链接.md
+            - 3.9.158-年10月22日DougBarton指出返回码不足以判断在subversion17下于非版本目录运行svnversion会输出Unversioneddirectory.md
+            - 3.9.159-年9月26日JohnBaldwin指出x86上计时器在DEVICE_SUSPEND遍历树之后显式关闭、又在DEVICE_RESUME之前重新启用.md
+            - 3.9.160-年4月8日KonstantinBelousov反驳WarnerLosh的softc标志方案.md
+            - 3.9.161-年4月21日RyanStone报告gstat升级100CURRENT后失效认为已随r234107修复.md
         - 3.10-FreeBSD 8.x 时期 XEN／VNET 移植的无名工程师
-            - 3.10.1-年12月17日2003年12月NicholasPaufler提交PRi38660.md
-            - 3.10.2-年11月1日2003年11月BillTrost提交PRi38658826在IBM.md
-            - 3.10.3-年11月12日2012年HansPetterSelasky判断该问题只见于Ast.md
-            - 3.10.4-年1月16日Yuri报告在升级RELENG_8源码后编译失败ahcic第574行.md
+            - 3.10.1-年12月17日NicholasPaufler提交PRi386600344.md
+            - 3.10.2-年11月1日BillTrost提交PRi38658826在IBMServer315上reboot只是停机而不重启.md
+            - 3.10.3-年11月12日HansPetterSelasky判断该问题只见于Asterisk1.8.x.md
+            - 3.10.4-年1月16日Yuri报告在升级RELENG_8源码后编译失败ahcic第574行ahci_setup_interrupt中bus_describe_intr出现隐式声明警告.md
             - 3.10.5-XEN／VNET 移植核心工程师.md
             - 3.10.6-被忽视的边缘贡献者.md
-            - 3.10.7-年6月21日HansPetterSelasky发布ISDN4BSD161新增HF.md
-            - 3.10.8-年3月22日BjoernAZeeb提示FreeBSD项目创意页已把i4b子系统重.md
-            - 3.10.9-年4月27日JeffreyKatcher在ThinkPadT40上试验自适应电源.md
-            - 3.10.10-年8月23日OGAWATakaya报告同时开启WITNESS与INVARIANT.md
-            - 3.10.11-年6月12日TomBowyer在VIAEPIACL主板上发现从521RELEAS.md
-            - 3.10.12-年11月9日AdamKKirchhoff用十月二十九日与十一月九日两个日期构建内.md
-            - 3.10.13-年11月24日NateLawson致歉并说明卡总线报错源于自己的挂起与断电顺序补.md
-            - 3.10.14-年12月1日AndreyDomas报告521在AsusP4M266A主板上出现A.md
-            - 3.10.15-年4月1日开发者EdwardTomaszNapierala提交文件系统孤儿化补丁.md
-            - 3.10.16-年4月6日ShaoweiWang回应Yuri的追问指出locale应与传给L选项.md
-            - 3.10.17-年4月21日МеньшиковКонстантин自述重写cdjones的jai.md
-            - 3.10.18-年8月16日RobertWatson回应OliverPinter关于FreeBS.md
-            - 3.10.19-年12月10日GaryJennejohn回应EdSchouten关于现行xter.md
-            - 3.10.20-年12月24日yassineayachi想在两台防火墙上复制Linux的HAPr.md
-            - 3.10.21-年2月13日在TUNABLE_INT标识冲突的讨论中RomanDivacky澄清.md
-            - 3.10.22-年1月27日PatrickLamaizière为基于Nvidia显卡的MacBo.md
-            - 3.10.23-年7月20日BenjaminKaduk在排查无关问题时发现locking9手册内.md
-            - 3.10.24-年6月9日WojciechPuchar建议大文件系统采用大块与稀疏inode称以.md
-            - 3.10.25-年3月10日开发者AlexejSokolov更正此前报告称段错误其实源于读取数据.md
-            - 3.10.26-年3月20日开发者YoshihiroOta质疑某程序为收发各开一条TCP连接的做.md
-            - 3.10.27-年5月1日Yuri更正上一条数据称system占用应为百分之三点八而非二十并补充.md
-            - 3.10.28-年5月8日EdSchouten在并发sysctl的讨论中说明现行实现由一把sys.md
-            - 3.10.29-年5月27日FreeBSD项目的IvanVoras用自己机器的挂载输出说明ZFS.md
-            - 3.10.30-年11月3日NickHibma向列表介绍Meshcom的mesh驱动称自己一方已.md
-            - 3.10.31-年10月4日DougBarton回应AlexTrull指出portmaster并.md
-            - 3.10.32-年9月7日IvanRadovanovic用一段无限fork的自写程序压测触发内核.md
-            - 3.10.33-年9月24日AlexanderBest在freebsdhackers上询问HAM.md
-            - 3.10.34-年4月7日AndriyGapon接手由usb@转来的虚拟驱动器报错问题认为hac.md
-            - 3.10.35-年4月17日AndriyGapon为解决dmesg输出交错问题给出msgbuf_.md
-            - 3.10.36-年4月27日TsuyoshiOzawa发布面向FreeBSD80的dyntick.md
-            - 3.10.37-年8月4日OlegSharoyko确认macbookpro恢复后设备消失的原因是.md
-            - 3.10.38-年8月11日DagErlingSmørgrav回应MatthewJacob的附和.md
-            - 3.10.39-年8月26日FreeBSD的DougBarton询问能在单盘上引导多系统的引导管.md
-            - 3.10.40-年12月2日ErikCederstrand报告有1000多个文件校验和不一致但差.md
-            - 3.10.41-年12月19日FreeBSD的AlexanderBest提交补丁删去sysboo.md
-            - 3.10.42-年2月5日LindaMesserschmidt报告自72至最新的73PREREL.md
-            - 3.10.43-年2月24日PeterSteele称按建议在etcmakeconf中设WITH_.md
-            - 3.10.44-年1月1日UlfLilleengen预告数日后将把AdityaSarawgi在G.md
-            - 3.10.45-年7月9日AndriyGapon经思考与实验后认为无需内联汇编DPCPU_DEF.md
-            - 3.10.46-年7月13日开发者bf在关于bsdportmk的补丁讨论中顺带列出四处可修正的误.md
-            - 3.10.47-年7月23日开发者AlexanderMotin回应Jerry关于GEOM的论断指.md
-            - 3.10.48-年6月23日HansPetterSelasky另开线程指出81RC1中链接器剥离.md
-            - 3.10.49-年3月11日JungukKim回应JohnBaldwin声明CPUID_TO系列.md
-            - 3.10.50-年3月26日DagErlingSmørgrav回应PeterSteele贴出的栈.md
-            - 3.10.51-年5月2日MatthiasAndree回应AlfredPerlstein转述的字.md
-            - 3.10.52-年5月12日EitanAdler贴出补丁为md5增加c选项以便直接比对给定串不匹.md
-            - 3.10.53-年5月27日GarrettCooper回应称对方做法不受支持sysinstall.md
-            - 3.10.54-年11月8日AdrianChadd宣布本周若无异议将提交把打包工具逻辑抽成共用构.md
-            - 3.10.55-年11月14日VeniaminGvozdikov查到该机型对应的传感器与触控板驱.md
-            - 3.10.56-年11月17日MarkFelder借硬盘停转讨论追问称其所在ESX40集群上的F.md
-            - 3.10.57-年10月5日AlexanderBest实测用chflags清除arch标志时工具.md
-            - 3.10.58-年10月21日DagErlingSmørgrav反驳AlexanderBest关.md
-            - 3.10.59-年9月18日JeffRoberson转述RobertWatson关于可用umas.md
-            - 3.10.60-年4月10日Gapon回应Richardson用qemu模拟光盘观察boot0的.md
-            - 3.10.61-年8月26日MonthadarAlJaberi称用DECLARE_MODULE写.md
-            - 3.10.62-年12月7日DaRock报告编译新版ffserver时在libavcodec的汇.md
-            - 3.10.63-年12月26日KostikBelousov回应BorisKochergin关于能.md
-            - 3.10.64-年2月12日BruceCran用dumpfs确认memstickimg为UFS1.md
-            - 3.10.65-年1月3日Motin回应DarmawanSalihun关于PCIIDE控制器基址.md
-            - 3.10.66-年7月2日RobertMillan提交补丁清理aicasm中对__linux__.md
-            - 3.10.67-年7月12日KostikBelousov给出拟在PetrSalinger复测后提.md
-            - 3.10.68-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据.md
-            - 3.10.69-年6月1日PoulHenningKamp分享为硬件工作选购编程器的经验称选定德国.md
-            - 3.10.70-年6月10日JulianHStacey称英国有全国假日而FreeBSD缺少对应的.md
-            - 3.10.71-年6月26日ChristopherJRuwe称因bin157732去查trace.md
-            - 3.10.72-年3月16日DanNelson回应ThiagoDamas的提问提供一份给ps打补.md
-            - 3.10.73-年3月27日GaryKline称自己长期希望FreeBSD也有SunOS那种键盘.md
-            - 3.10.74-年3月31日AlexanderBest报告devstat_buildmatch在.md
-            - 3.10.75-年5月12日LevSerebryakov询问本系统是否有可供替代的专有调用以对应.md
-            - 3.10.76-年5月24日PhilipSoeberg附上针对HEAD的补丁修正IXGBE驱动问.md
-            - 3.10.77-年5月31日JohnBaldwin回应Yuri关于ndis驱动把某个无线网络名显.md
-            - 3.10.78-年11月8日JohnBaldwin回应VijaySingh报告的panic正文可.md
-            - 3.10.79-年11月21日arambaghomian说自己想把opencrypto代码脱离内.md
-            - 3.10.80-年10月10日JeremieLeHen提交stdbuf补丁并回顾自己此前的两封信.md
-            - 3.10.81-年9月24日KMacy回应ArnaudLacombe关于buf_ring的分析承.md
-            - 3.10.82-年4月7日ThomasSchmitt检索到论坛上有FreeBSD90上xfbur.md
-            - 3.10.83-年4月20日ThomasSchmitt回应对方关于cd9660的疑问称其80ST.md
-            - 3.10.84-年4月28日LuigiRizzo指出chromium对c与h之类文件只下载不显示.md
-            - 3.10.85-年8月9日WarnerLosh回应DanMcGregor这批lex用法改动认为改.md
-            - 3.10.86-年2月1日Guzik参照auditpipe的代码写出为devklog增加kque.md
-            - 3.10.87-年2月14日Backus回应xargs短路执行的询问建议对方安装某端口中的shm.md
-            - 3.10.88-年2月20日马斯特自述无盘服务器从6升到8后每次客户端启动都记一条TFTP中止错.md
-            - 3.10.89-年2月28日布鲁诺回应对方刷屏之问自述笔记本的eSATA口也刷同样的消息禁用该口.md
-            - 3.10.90-年7月4日rank1seeker报告该启动停顿现象横跨多个主分支他用过各自定制的.md
-            - 3.10.91-年7月15日JakubLach报告在FreeBSD的clang31上链接阶段传入.md
-            - 3.10.92-年6月9日MatthiasApitz说自己把src与obj拷进USBkey以便装.md
-            - 3.10.93-年6月28日MarcelMoolenaar回应StefanEsser的看法主张元.md
-            - 3.10.94-年3月5日AHaakh在90STABLE的abatonHaakhde机器上以fi.md
-            - 3.10.95-年3月23日SushanthRai追问gcore挂起过程描述sig_suspen.md
-            - 3.10.96-年10月13日MarcelMoolenaar回复GeorgeNevilleNei.md
-            - 3.10.97-年9月3日GarrettCooper提交bsdprogmk重构补丁使其支持一次编.md
-            - 3.10.98-年12月8日MikeTancsa在RELENG_7迁移嵌入式应用从sio到uar.md
-            - 3.10.99-年12月17日UweGrohnwaldt试71RC后82541GI_LF网卡正常.md
-            - 3.10.100-年12月22日SamLeffler在usb2拟于两周后转为默认的通告下指出他过去.md
-            - 3.10.101-年11月5日MikeTancsa自述在SierraUSB卡上试跑NickHibm.md
-            - 3.10.102-年11月13日kevinxlinuz报告以usb2_storage_mss挂载U.md
-            - 3.10.103-年12月31日AryehFriedman公告emulatorsPetiteClo.md
-            - 3.10.104-年5月2日TomohikoSumi自述在推进名为fsyscall的项目把Free.md
-            - 3.10.105-年4月11日JohnBaldwin认为IntelS1200RP上IPMI应通过s.md
-            - 3.10.106-年2月26日RyanStone提交puc补丁为ExarXR17V358加MSI中.md
-            - 3.10.107-年11月10日HitenPandya建议Maksim将Bluetooth章节移至.md
-            - 3.10.108-年4月16日MaximSobolev反映启用AH_SUPPORT_AR5416时.md
-            - 3.10.109-年8月25日ScottUllrich反馈Nexcom防火墙四口Intelem网卡.md
-            - 3.10.110-年5月3日PaulAHowes的3C589DPCMCIA网卡在40STABLE笔.md
-            - 3.10.111-年8月17日SeanOConnell说41STABLE的pcm支持Yamaha7.md
-            - 3.10.112-年12月21日bf澄清并追问对方说的究竟是指powerd8还是独立的etcrcd.md
-            - 3.10.113-年2月16日2月16日imb推测旧TTY代码是bluetoothng_h4驱动被.md
-            - 3.10.114-年2月26日DaichiGOTO发现libusbhiddescrc曾被误提交补丁.md
-            - 3.10.115-年9月10日JohnBaldwin回复RaviPokala的rid疑问对方正改造.md
-            - 3.10.116-年1月15日RenatoBotelho回Hartland的EFIZFS合入通报感.md
-            - 3.10.117-年3月14日AdrianChadd回复称drm2代码需要参与恢复流程而当前i91.md
-            - 3.10.118-年1月23日SCHOUTEN指出panic落在tty_ttydisc但根因似与u.md
-            - 3.10.119-年7月6日PatrickLamaiziere在urlpt_open注释掉ulpt.md
-            - 3.10.120-年7月10日AndrewThompson指出80尚欠USBpolling支持代码.md
-            - 3.10.121-年7月15日PaulBMahol在ndislor串中回报ColemanKane提.md
-            - 3.10.122-年7月22日NathanWhitehorn回复PowerPC用户对80RELEA.md
-            - 3.10.123-年2月9日MiroslavLachman报告KVM内FreeBSD124虚拟机挂.md
-            - 3.10.124-年7月7日AntonShepelev给出最终devdaction脚本基准亮度RE.md
-            - 3.10.125-年2月3日trafdev报告在loaderconf里设hwpcienable_m.md
-            - 3.10.126-年3月22日MarkMillard报告arm64上进程内存页被清零的可复现问题关.md
-            - 3.10.127-年10月26日NicolasEmbriz说明他也在VPS上遇到同样的xpt_co.md
-            - 3.10.128-年7月31日UweGrohnwaldt的JetwayJ7F5M2HVDE主板配V.md
-            - 3.10.129-年6月13日AlexanderBest报ROLLEIRCP7330X相机经USB.md
-            - 3.10.130-年6月29日HansPetterSelasky报告PCI枚举把CologneCh.md
-            - 3.10.131-年9月14日MarkMillard汇总证据说明head在Pine64+2GB于t.md
-            - 3.10.132-年10月23日eMMC50控制器按D17644启用HS400后性能与HS200相.md
-            - 3.10.133-年3月23日AlexKeda的MitsumiUSB软驱报gettingdevic.md
-            - 3.10.134-年5月23日LuciusWindschuh报r192667后CtrlC结束tcp.md
-            - 3.10.135-年7月26日MichaelBeckmann认为SP3G是SaturnII芯片组而.md
-            - 3.10.136-年5月31日StaceySon自述多年前做过AoEinitiator并写过vbl.md
-            - 3.10.137-年11月11日EpsonCX5600扫描部分始终无法配置cups打印正常但开机只.md
-            - 3.10.138-年10月1日DavidHorn报告Inspiron1520synaptics触摸.md
-            - 3.10.139-年10月13日RobertMoore在acpi列表回复指该情形通常由BIOS在运.md
-            - 3.10.140-年9月18日AndreLeClaire当日cvsup并makeworld后执行m.md
-            - 3.10.141-年9月19日JinGuojun报64能正常识别热插SATA到ata2master.md
-            - 3.10.142-年9月28日ZotacION板配AtherosAR9280minipci80RC.md
-            - 3.10.143-年4月8日des回复Tarasov称能否改变扇区大小取决于底层分区方案他猜测答案.md
-            - 3.10.144-年9月7日DanielOConnor在SupermicroX11SSHF的Fre.md
-            - 3.10.145-年3月22日FrankPawlak在226BETA上遇一次突发硬重置显示降级到C.md
-            - 3.10.146-年1月15日PyunYongHyeon指出bge4长期存在ASF处理问题Flor.md
-            - 3.10.147-年7月20日署名Mileena正文落款AndrewRoth称从WalnutCre.md
-            - 3.10.148-年11月10日RonGMinnich的自研atm卡允许多个用户态程序同时组包发出.md
-            - 3.10.149-年9月12日LuigiRizzo解释原因为避免过高延迟音频驱动默认只用025秒的.md
-            - 3.10.150-年2月2日Hosokawa答若所指即自己的pccardtest包几天内会发新版给.md
-            - 3.10.151-年3月1日WilkoBulte用Ultrastor12F挂MicropolisE.md
-            - 3.10.152-年5月7日Regnauld的TadpolePentium1000笔记本最初完全认.md
-            - 3.10.153-年11月14日Veniamin怀疑自己把MacBookPro71弄坏了在sysd.md
-            - 3.10.154-年10月9日MarkMartinec澄清此前误报称RTL8111E实际可用误判源.md
-            - 3.10.155-年10月26日Takanori报启用USB驱动后kerneventtimerpe.md
-            - 3.10.156-年1月2日toomuchdudes改UKBD_NMOD与UKBD_NKEYCOD.md
-            - 3.10.157-年1月18日看到BruceCran附上的devinfo后判断uart01设备其实.md
-            - 3.10.158-年9月4日RickMacklem澄清dtnfsclientko对应旧版NFS客户.md
-            - 3.10.159-年8月15日AlexanderMotin指出若还有别的timecounter可用.md
-            - 3.10.160-年11月3日WarnerLosh转述该厂商支持页的结论关闭readahead可修.md
-            - 3.10.161-年2月24日TomoakiAOKI回复MarioMarietto在FreeBSD.md
-            - 3.10.162-年5月7日GlebPopov报告在ASUSROGGL553VE上Linux可见I.md
-            - 3.10.163-年11月26日RodneyWGrimes回答16核上限可改把amd64inclu.md
+            - 3.10.7-年6月21日HansPetterSelasky发布ISDN4BSD161新增HFC-4S与HFC-8S的完整支持.md
+            - 3.10.8-年3月22日BjoernAZeeb提示FreeBSD项目创意页已把i4b子系统重构列为题目.md
+            - 3.10.9-年4月27日JeffreyKatcher在ThinkPadT40上试验自适应电源管理.md
+            - 3.10.10-年8月23日OGAWATakaya报告同时开启WITNESS与INVARIANTS时内核panic.md
+            - 3.10.11-年6月12日TomBowyer在VIAEPIACL主板上发现从521RELEASSE升级到六月十二日的current后网卡持续报watchdogtimeout.md
+            - 3.10.12-年11月9日AdamKKirchhoff用十月二十九日与十一月九日两个日期构建内核作对照.md
+            - 3.10.13-年11月24日NateLawson致歉并说明卡总线报错源于自己的挂起与断电顺序补丁未合并进该源码树.md
+            - 3.10.14-年12月1日AndreyDomas报告521在AsusP4M266A主板上出现ATA_IDENTIFY无中断与ATAPI_IDENTIFY无中断.md
+            - 3.10.15-年4月1日开发者EdwardTomaszNapierala提交文件系统孤儿化补丁磁盘移除后挂载其上文件系统的操作立即报错、内容不可见.md
+            - 3.10.16-年4月6日ShaoweiWang回应Yuri的追问指出locale应与传给L选项项的参数保持一致.md
+            - 3.10.17-年4月21日МеньшиковКонстантин自述重写cdjones的jailCPU限额补丁以适配ULE调度器.md
+            - 3.10.18-年8月16日RobertWatson回应OliverPinter关于寄存器值置于／proc／pid／regs仅属主可读的说法.md
+            - 3.10.19-年12月10日GaryJennejohn回应EdSchouten关于现行xterm条目与AppleTerminal.app不完全兼容、欢迎提交补丁的说法.md
+            - 3.10.20-年12月24日yassineayachi想在两台防火墙上复制Linux的HAProxy与Heartbeat架构.md
+            - 3.10.21-年2月13日在TUNABLE_INT标识冲突的讨论中RomanDivacky澄清自己说的是SYSINIT参数.md
+            - 3.10.22-年1月27日PatrickLamaizière为基于Nvidia显卡的MacBookPro3,1与3,2写了一个设置背光的临时驱动.md
+            - 3.10.23-年7月20日BenjaminKaduk在排查无关问题时发现locking9手册内容缺失.md
+            - 3.10.24-年6月9日WojciechPuchar建议大文件系统采用大块与稀疏inode称以-b32768与-i524288配置时检查1TB盘不到五分钟.md
+            - 3.10.25-年3月10日开发者AlexejSokolov更正此前报告称段错误其实源于读取数据需同时设置PROT_READ与PROT_WRITE并称问题已解决.md
+            - 3.10.26-年3月20日开发者YoshihiroOta质疑某程序为收发各开一条TCP连接的做法认为TCP本身已是双向通信无须开两条连接并转述友人列举的三点弊端.md
+            - 3.10.27-年5月1日Yuri更正上一条数据称system占用应为百分之三点八而非二十并补充其环境为单核AMD3200主频2GHz的FreeBSD7.2.md
+            - 3.10.28-年5月8日EdSchouten在并发sysctl的讨论中说明现行实现由一把sysctl锁串行化.md
+            - 3.10.29-年5月27日FreeBSD项目的IvanVoras用自己机器的挂载输出说明ZFS数据集可与UFS根共存并正常工作.md
+            - 3.10.30-年11月3日NickHibma向列表介绍Meshcom的mesh驱动称自己一方已开始使用但运行在VoyageLinux上.md
+            - 3.10.31-年10月4日DougBarton回应AlexTrull指出portmaster并无升级后自动重启服务的机制.md
+            - 3.10.32-年9月7日IvanRadovanovic用一段无限fork的自写程序压测触发内核以get_pv_entry提示需提高vm.pmap.shpgperproc而崩溃.md
+            - 3.10.33-年9月24日AlexanderBest在freebsdhackers上询问HAMMMER文件系统移植的现状.md
+            - 3.10.34-年4月7日AndriyGapon接手由usb@转来的虚拟驱动器报错问题认为hackers才是合适的列表.md
+            - 3.10.35-年4月17日AndriyGapon为解决dmesg输出交错问题给出msgbuf_addchar的扩展.md
+            - 3.10.36-年4月27日TsuyoshiOzawa发布面向FreeBSD80的dynticksv2补丁.md
+            - 3.10.37-年8月4日OlegSharoyko确认macbookpro恢复后设备消失的原因是PCI-PCI桥寄存器未被还原.md
+            - 3.10.38-年8月11日DagErlingSmørgrav回应MatthewJacob指出EARS硬盘谎报物理扇区大小.md
+            - 3.10.39-年8月26日FreeBSD的DougBarton询问能在单盘上引导多系统的引导管理器.md
+            - 3.10.40-年12月2日ErikCederstrand报告有1000多个文件校验和不一致但差异方式相同.md
+            - 3.10.41-年12月19日AlexanderBest提交补丁删去sysboot各Makefile中已由上级Makefileinc引入的mnommx标志.md
+            - 3.10.42-年2月5日LindaMesserschmidt报告自72至最新的73PRERELLEASE上.md
+            - 3.10.43-年2月24日PeterSteele称按建议设WITHDEBUG后仍见O2并报告ntpd经启动脚本挂起.md
+            - 3.10.44-年1月1日UlfLilleengen预告数日后将把AdityaSarawgi在GoogleSummerofCode期间及之后完成的ext2fs改进提交到CURRENT.md
+            - 3.10.45-年7月9日AndriyGapon经思考与实验后认为无需内联汇编DPCPU_DEFINE可直接以__section与__aligned(CACHE_LINE_SIZE)及__used定义.md
+            - 3.10.46-年7月13日开发者bf在关于bsdportmk的补丁讨论中顺带列出四处可修正的误拼.md
+            - 3.10.47-年7月23日开发者AlexanderMotin回应Jerry关于GEOM的论断指出Giant只在DISKFLAG_NEEDSGIANT置位才包.md
+            - 3.10.48-年6月23日HansPetterSelasky另开线程指出81RC1中链接器剥离离带section属性的静态数据使多个kmod失效.md
+            - 3.10.49-年3月11日JungukKim回应JohnBaldwin声明CPUID_TO系列宏为自己所加.md
+            - 3.10.50-年3月26日DagErlingSmørgrav回应PeterSteele判定栈回溯不实并列出memchr源码.md
+            - 3.10.51-年5月2日MatthiasAndree回应AlfredPerlstein转述的字符串拷贝告警.md
+            - 3.10.52-年5月12日EitanAdler贴出补丁为md5增加c选项以便直接比对给定串不匹匹配时输出失败标记.md
+            - 3.10.53-年5月27日GarrettCooper回应称对方做法不受支持sysinstall本就假定特定环境.md
+            - 3.10.54-年11月8日AdrianChadd宣布本周若无异议将提交把打包工具逻辑抽成共用构件的改动.md
+            - 3.10.55-年11月14日VeniaminGvozdikov查到该机型对应的传感器与触控板驱动源码.md
+            - 3.10.56-年11月17日MarkFelder借硬盘停转讨论追问称其所在ESX40集群上的FreeBSD8.0与8.1频繁失去网络响应.md
+            - 3.10.57-年10月5日AlexanderBest实测用chflags清除arch标志时工具声称成功实则未生效.md
+            - 3.10.58-年10月21日DagErlingSmørgrav反驳AlexanderBest称现代硬盘可承受数十万次受控卸载.md
+            - 3.10.59-年9月18日JeffRoberson转述RobertWatson关于可用umastat查看内存分布、以及AndreOppermann提议按区域指定逐处理器空闲桶容量的讨论.md
+            - 3.10.60-年4月10日Gapon回应Richardson用qemu模拟光盘观察boot0的想法.md
+            - 3.10.61-年8月26日MonthadarAlJaberi称用DECLARE_MODULE写的模块在FreeBSD-Current下遍历ifnet链表.md
+            - 3.10.62-年12月7日DaRock报告编译新版ffserver时在libavcodec的汇编处报64位基址变址表达式无效.md
+            - 3.10.63-年12月26日KostikBelousov回应BorisKochergin关于能否取到进程换出内存量的提问.md
+            - 3.10.64-年2月12日BruceCran用dumpfs确认memstickimg为UFS1并称挂载／dev／md0会让内核最终panic.md
+            - 3.10.65-年1月3日Motin回应DarmawanSalihun关于PCIIDE控制器基址寄存器的疑问.md
+            - 3.10.66-年7月2日RobertMillan提交补丁清理aicasm中对__linux__宏的误用.md
+            - 3.10.67-年7月12日KostikBelousov给出拟在PetrSalinger复测后提交的rfork补丁.md
+            - 3.10.68-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据手册与板级原理图链接.md
+            - 3.10.69-年6月1日PoulHenningKamp分享选购编程器经验称选定德国Galep5免去USB驱动.md
+            - 3.10.70-年6月10日JulianHStacey称英国有全国假日而FreeBSD缺少对应的calendar.british文件.md
+            - 3.10.71-年6月26日ChristopherJRuwe称因bin157732去查traceroute无法跟踪超长主机名的问题.md
+            - 3.10.72-年3月16日DanNelson回应ThiagoDamas的提问提供一份给ps打补丁的旧方案供试用.md
+            - 3.10.73-年3月27日GaryKline称自己长期希望FreeBSD也有SunOS那种键盘发声工具.md
+            - 3.10.74-年3月31日AlexanderBest报告devstat_buildmatch在遇到某些字符串时会崩溃.md
+            - 3.10.75-年5月12日LevSerebryakov询问本系统是否有可供替代的专有调用以对应Linux程序所用的posix_fadvice与DARWIN程序所用的fcntl加F_RDADVISE.md
+            - 3.10.76-年5月24日PhilipSoeberg附上针对HEAD的补丁修正IXGBE驱动问题.md
+            - 3.10.77-年5月31日JohnBaldwin回应Yuri关于ndis驱动把某个无线网络名显示成0x000000的现象.md
+            - 3.10.78-年11月8日JohnBaldwin回应VijaySingh报告的panic正文可见部分为其转述的对方描述.md
+            - 3.10.79-年11月21日arambaghomian说自己想把opencrypto代码脱离内核整体单独编译.md
+            - 3.10.80-年10月10日JeremieLeHen提交stdbuf补丁并回顾自己此前的两封信重申iostat经管道传给grep时因标准输出不是终端而被全缓冲拖住输出的现象.md
+            - 3.10.81-年9月24日KMacy回应ArnaudLacombe关于buf_ring的分析承认对方判断正确、那处确实需要一个写内存屏障.md
+            - 3.10.82-年4月7日ThomasSchmitt检索到论坛上有FreeBSD90上xfburn无法识别光驱的报告.md
+            - 3.10.83-年4月20日ThomasSchmitt回应对方关于cd9660的疑问称其80STTABLE上同样复现.md
+            - 3.10.84-年4月28日LuigiRizzo指出chromium只下载不显示可在mimeglobs2登记textplain.md
+            - 3.10.85-年8月9日WarnerLosh回应DanMcGregor这批lex用法改动认为改动只涉及基系统如何使用标准lex接口而未触及lex本身.md
+            - 3.10.86-年2月1日Guzik参照auditpipe的代码写出为devklog增加kqueueue支持的补丁.md
+            - 3.10.87-年2月14日Backus回应xargs短路执行的询问建议安装某Port中的shmux工具并以-rsh调用.md
+            - 3.10.88-年2月20日马斯特自述无盘服务器从6升到8后每次客户端启动都记一条TFTP中止错误.md
+            - 3.10.89-年2月28日布鲁诺回应对方刷屏之问自述笔记本的eSATA口也刷同样的消息禁用该口后即消失.md
+            - 3.10.90-年7月4日rank1seeker报告该启动停顿现象横跨多个主分支他用过各自定制的KERNCONF在多个发行版上测试.md
+            - 3.10.91-年7月15日JakubLach报告在FreeBSD的clang31上链接阶段传入-g仍会得到该参数在编译时未使用的警告.md
+            - 3.10.92-年6月9日MatthiasApitz说自己把src与obj拷进USBkey以便装到其他笔记本.md
+            - 3.10.93-年6月28日MarcelMoolenaar回应StefanEsser的看法主张元数据只能放进独立分区.md
+            - 3.10.94-年3月5日AHaakh在90STABLE机器上遍历usrsrc列出基本系统Makefile硬编码cc与gcc.md
+            - 3.10.95-年3月23日SushanthRai追问gcore挂起过程能否安全移出runq上的目标线程.md
+            - 3.10.96-年10月13日MarcelMoolenaar回复GeorgeNevilleNeiil的提问.md
+            - 3.10.97-年9月3日GarrettCooper提交bsdprogmk重构补丁使其支持一次编译多个程序.md
+            - 3.10.98-年12月8日MikeTancsa在RELENG_7迁移嵌入式应用从sio到uart时puc后端uart丢数据.md
+            - 3.10.99-年12月17日UweGrohnwaldt试71RC后82541GI_LF网卡正常工作.md
+            - 3.10.100-年12月22日SamLeffler在usb2拟于两周后转为默认的通告下指出他过去一个月完成的ixp435与cambria相关支持在usb2栈里还没有合并进来.md
+            - 3.10.101-年11月5日MikeTancsa自述在SierraUSB卡上试跑NickHibma的3G驱动称在RELENG_7上工作得相当好并贴usbdevs与dmesg片段.md
+            - 3.10.102-年11月13日kevinxlinuz报告以usb2_storage_mss挂载U盘可成功但无法写入.md
+            - 3.10.103-年12月31日AryehFriedman公告emulatorsPetiteClooud0.2这一bhyve前端发布.md
+            - 3.10.104-年5月2日TomohikoSumi自述在推进名为fsyscall的项目把FreeBSD应用程序的系统调用请求转发到另一台机器执行目标是在安卓等非FreeBSD平台不改代码直接运行这些程序并给出项目介绍页面链接.md
+            - 3.10.105-年4月11日JohnBaldwin认为IntelS1200RP上IPMI应通过smbios而非ACPI接入.md
+            - 3.10.106-年2月26日RyanStone提交puc补丁为ExarXR17V358加MSI中断支持.md
+            - 3.10.107-年11月10日HitenPandya建议Maksim将Bluetooth章节移至AdvancedNetworking章WirelessNetworking下便于手册翻页并顺带报ng_ubt头路径问题.md
+            - 3.10.108-年4月16日MaximSobolev反映启用AH_SUPPORT_AR5416时ath编译失败波及7-stable他质疑为何内核配置保留一个启用即失败的选项并附if_ath.c中rs_flags未定义报错.md
+            - 3.10.109-年8月25日ScottUllrich反馈Nexcom防火墙四口Intelem网卡的em2反复出现watchdogtimeout触发重置消息刷爆系统日志他询问如何压制该日志并声明目前未影响网络连通性.md
+            - 3.10.110-年5月3日PaulAHowes的3C589DPCMCIA网卡在40STABLE笔笔记本上telnet极慢.md
+            - 3.10.111-年8月17日SeanOConnell说41STABLE的pcm支持Yamaha724需MAKEDEV创建节点.md
+            - 3.10.112-年12月21日bf澄清并追问对方指powerd8还是独立的etcrcd下powerprofile.md
+            - 3.10.113-年2月16日2月16日imb推测旧TTY代码是bluetoothng_h4驱动被被弃用的原因.md
+            - 3.10.114-年2月26日DaichiGOTO发现libusbhiddescrc曾被误提交补丁把HID_COMPAT7的elsereturnNULL位置搞错.md
+            - 3.10.115-年9月10日JohnBaldwin回复RaviPokala的rid疑问对方正改造一个自制设备驱动.md
+            - 3.10.116-年1月15日RenatoBotelho回Hartland的EFIZFS合入通报感谢之余追问能否把已安装的ZFS系统迁移到EFI引导原帖未给出具体方法.md
+            - 3.10.117-年3月14日AdrianChadd回复称drm2代码需要参与恢复流程而当前i915kms并无broadwell支持.md
+            - 3.10.118-年1月23日SCHOUTEN指出panic落在tty_ttydisc但根因似与ubt驱动有关.md
+            - 3.10.119-年7月6日PatrickLamaiziere在urlpt_open注释掉ulpt_reset后仍无法打印.md
+            - 3.10.120-年7月10日AndrewThompson指出80尚欠USBpolling支持代码需检查descriptor是否done并回调completioncallback.md
+            - 3.10.121-年7月15日PaulBMahol在ndislor串中回报ColemanKane提交的r194432引入回归.md
+            - 3.10.122-年7月22日NathanWhitehorn回复PowerPC用户对80RELEAASE的提问.md
+            - 3.10.123-年2月9日MiroslavLachman报告KVM内FreeBSD124虚拟机挂载20TBiSCSI磁盘无法识别为da0.md
+            - 3.10.124-年7月7日AntonShepelev给出最终devdaction脚本基准亮度REF=50.md
+            - 3.10.125-年2月3日trafdev报告loaderconf禁用msimsix后zroot开机报poollabel错误.md
+            - 3.10.126-年3月22日MarkMillard报告arm64上进程内存页被清零的可复现问题关联Bugzilla217239与217138.md
+            - 3.10.127-年10月26日NicolasEmbriz说明他也在VPS上遇到同样的xpt_config卡住问题.md
+            - 3.10.128-年7月31日UweGrohnwaldt的JetwayJ7F5M2HVDE主板配VVIAC7处理器.md
+            - 3.10.129-年6月13日AlexanderBest报ROLLEIRCP7330X相机经USBB挂为umass0并识别出da0可移动设备.md
+            - 3.10.130-年6月29日HansPetterSelasky报告PCI枚举把CologneChipDesignsGmbHHFC-SPCIAISDN2BDS0卡误识别成显示设备.md
+            - 3.10.131-年9月14日MarkMillard汇总证据说明head在Pine64+2GB于taskqgroup_adjust_softirq期间挂起或panic.md
+            - 3.10.132-年10月23日eMMC50控制器按D17644启用HS400后性能与HS200相同.md
+            - 3.10.133-年3月23日AlexKeda的MitsumiUSB软驱报gettingdevicedescriptorataddr3failed.md
+            - 3.10.134-年5月23日LuciusWindschuh报r192667后CtrlC结束tcpdump-niuath0触发witness警告.md
+            - 3.10.135-年7月26日MichaelBeckmann认为SP3G是SaturnII芯片组而非NeptuneII.md
+            - 3.10.136-年5月31日StaceySon自述多年前做过AoEinitiator并写过vblade-freebsd.patch.md
+            - 3.10.137-年11月11日EpsonCX5600扫描部分始终无法配置cups打印正常但开机只识别到打印机ulpt0.md
+            - 3.10.138-年10月1日DavidHorn报告Inspiron1520synaptics触摸板须禁用mousetaps才可用.md
+            - 3.10.139-年10月13日RobertMoore在acpi列表回复指该情形通常由BIOS在运行时改包长度造成.md
+            - 3.10.140-年9月18日AndreLeClaire当日cvsup并makeworld后mountcdrom报devicenotconfigured.md
+            - 3.10.141-年9月19日JinGuojun报64能正常识别热插SATA到ata2masterr.md
+            - 3.10.142-年9月28日ZotacION板配AR9280在80RC1上每数秒stuckbeacon重置.md
+            - 3.10.143-年4月8日des回复Tarasov称能否改变扇区大小取决于底层分区方案他猜测答案是不能.md
+            - 3.10.144-年9月7日DanielOConnor在SupermicroX11SSHF试ASPEEDXorg驱动挂在ASTGetDRAMInfo.md
+            - 3.10.145-年3月22日FrankPawlak在226BETA遇突发硬重置显示降级到CGA.md
+            - 3.10.146-年1月15日PyunYongHyeon指出bge4长期存在ASF处理问题FlorisBos的补丁可修复.md
+            - 3.10.147-年7月20日署名Mileena正文落款AndrewRoth称从WalnutCreek买的FreeBSD光盘装在HPVectraEISA机上52MB内存只认出16MB.md
+            - 3.10.148-年11月10日RonGMinnich的自研atm卡允许多个用户态程序同时组包发出端到端不到5微秒、介质速率1.2Gbps.md
+            - 3.10.149-年9月12日LuigiRizzo解释原因为避免过高延迟音频驱动默认只用025秒的数据量.md
+            - 3.10.150-年2月2日Hosokawa答若所指即自己的pccardtest包几天内会发新版给给出ftp位置.md
+            - 3.10.151-年3月1日WilkoBulte用Ultrastor12F挂MicropolisESDI盘失败.md
+            - 3.10.152-年5月7日Regnauld的Tadpole笔记本最初认不出PCI靠补丁探测后挂npx0.md
+            - 3.10.153-年11月14日Veniamin怀疑弄坏MacBookPro71在asmc与atp驱动中找型号判断.md
+            - 3.10.154-年10月9日MarkMartinec澄清此前误报称RTL8111E实际可用误判源于手册未提及与Realtek官网8.0驱动源码体积远大于8.1基础驱动.md
+            - 3.10.155-年10月26日Takanori报启用USB驱动后eventtimerperiodic为0时负载升高系中断共享.md
+            - 3.10.156-年1月2日toomuchdudes改UKBD_NMOD与UKBD_NKEYCODE均无效.md
+            - 3.10.157-年1月18日看到BruceCran附上的devinfo后判断uart01设备其实已存在.md
+            - 3.10.158-年9月4日RickMacklem澄清dtnfsclientko对应旧版NFS客户端.md
+            - 3.10.159-年8月15日AlexanderMotin指出若还有别的timecounter可用可设hint.attimer.0.timecounter=0释放i8254作为单发定时器.md
+            - 3.10.160-年11月3日WarnerLosh转述该厂商支持页的结论关闭readahead可修复该故障.md
+            - 3.10.161-年2月24日TomoakiAOKI回复MarioMarietto在FreeBSD13.1上graphics／drm-kmod-20220907_2不受支持的求助.md
+            - 3.10.162-年5月7日GlebPopov报告ASUSROGGL553VE上Linux可见Intel100／C230两个控制器FreeBSD只认其一.md
+            - 3.10.163-年11月26日RodneyWGrimes回答16核上限可改vmm.h的VM_MAXCPU后重编vmmko.md
     - 第4章-FreeBSD 内核并发体系：SMPng 与多核时代
         - 4.1-4.4BSD 单处理器内核模型
             - 4.1.1-年7月29日史密斯推断这次内核陷阱很可能源自写MSR的指令调用该调用只在处理器自.md
@@ -9866,428 +9866,428 @@
         - 10.1-i386 时代的系统基础
         - 10.2-Alpha、MIPS、SPARC64 历史架构
             - 10.2.1-Alpha 架构的引入与后续退役伏笔.md
-            - 10.2.2-年10月29日一位匿名发件人报告Alpha从软盘引导FreeBSD时在loadi.md
-            - 10.2.3-年5月19日PeterJeremy指出sparc64已成唯一不支持ULE的架构按.md
+            - 10.2.2-2002 年 10 月 29 日，一位匿名发件人报告机器启动到加载 ／boot／loader 之处便陷入崩溃，屏幕上依次出现 halt code 2.md
+            - 10.2.3-2011 年 5 月 19 日，Peter Jeremy 指出 sparc64 已成唯一不支持 ULE 的架构.md
             - 10.2.4-Alpha 架构在 7.0 退役.md
             - 10.2.5-其他架构：powerpc／mips／sparc64／arm 的 Clang 支持.md
         - 10.3-IA-64 支持与退出
             - 10.3.1-IA-64（Itanium）架构在 11.0 移除.md
             - 10.3.2-IA-64 退役的工程效应.md
             - 10.3.3-其他架构状态与 Tier 调整.md
-            - 10.3.4-年1月29日NathanWhitehorn说明CURRENT与100对IBM硬件.md
-            - 10.3.5-年7月29日AlexeyDokuchaev确认把devcpu0freq设为106.md
-            - 10.3.6-年3月29日AlexeyDokuchaev用buildkernel实测kernh.md
-            - 10.3.7-年11月21日JukkaUkkonen用iPad回信确认内核配置的唯一改动是注释.md
-            - 10.3.8-年10月14日NathanWhitehorn强调按规范r1必须被保留认为Mark.md
-            - 10.3.9-年9月8日MarkMillard回应说自己报告的环境仍用syscons且无NVI.md
-            - 10.3.10-年4月1日MarkMillard报告在powerpc非64位110CURRENT.md
-            - 10.3.11-年4月26日JustinHibbits答复KonstantinBelousov说.md
-            - 10.3.12-年12月6日MarkMillard指出powerpc64gcc52的gcccon.md
-            - 10.3.13-年2月10日RickThomas报告在PowerMacG4上通宵编译gnome仍.md
-            - 10.3.14-年1月15日MarkMillard报告其PowerMacG5四核满载时CPUA1.md
-            - 10.3.15-年7月1日JulioMerino报告MacMiniG4上的stable10自九月.md
-            - 10.3.16-年6月28日KonstantinBelousov就usrbinmkesdb链接失.md
-            - 10.3.17-年3月16日MarkMillard报告在powerpc64上以powerpc64.md
-            - 10.3.18-年3月21日MarkMillard指出CROSS_TOOLCHAIN=power.md
-            - 10.3.19-年11月29日MarkMillard报告在powerpc64PowerMac上先.md
-            - 10.3.20-年9月4日AdrianChadd回应LucianoMannucci说HEAD指的.md
-            - 10.3.21-年4月14日MarkMillard说这事要花些时间准备从amd64出发分别构建a.md
-            - 10.3.22-年8月30日MarkMillard通报LLVM缺陷26761被HalFinkel.md
-            - 10.3.23-年12月8日MarkMillard报告在headr309656上把zfs模块里唯.md
-            - 10.3.24-年2月20日RomanDivacky告知自己已把补丁以r261422提交进cla.md
-            - 10.3.25-年1月14日MarkMillard把csupowerpc64Makefile里的.md
-            - 10.3.26-年1月28日XavierHILAIRE在双处理器PowerMacG5上装好Fre.md
-            - 10.3.27-年7月14日AndreyChernov回应称POSIX并未要求wchar_t与c.md
-            - 10.3.28-年6月29日JukkaUkkonen反馈说加入BryanDrewery提供的补丁.md
-            - 10.3.29-年5月30日NathanWhitehorn向LucianoMannucci确认是.md
-            - 10.3.30-年11月10日MarkMillard指出powerpc与powerpc64的GE.md
-            - 10.3.31-年11月27日MarkMillard查到powerpc上libcompiler_.md
-            - 10.3.32-年4月5日SlawaOlhovchenkov用ldd与pkginfo列出libE.md
-            - 10.3.33-年12月13日BrenoLeitao报告启动新内核时停在loader要求手动指定.md
-            - 10.3.34-年2月21日MarkMillard发现对virtualboxoseadditio.md
-            - 10.3.35-年7月5日BryanDrewery认为把head加进ITOOLS的改动不应存在i.md
-            - 10.3.36-年6月20日MarkMillard定位r320127之后powerpc64gcc.md
-            - 10.3.37-年3月5日HirooOno小野寛生表示明白了强制PCI模式的用意接着询问在Fre.md
-            - 10.3.38-年3月27日DimitryAndric回应MarkMillard报告的llvm4.md
-            - 10.3.39-年5月6日MarkMillard报告更新后的编译器在TARGET_ARCH=po.md
-            - 10.3.40-年10月20日StasTimokhin报告MacminiG4的powerpc32.md
-            - 10.3.41-年4月9日NathanWhitehorn解释PowerNV上的网络安装更棘手受内.md
-            - 10.3.42-年2月14日EvanSabin报告Xserve上111STABLE安装程序能跑但.md
-            - 10.3.43-年7月10日JasonBacon报告改用nographic后qemusystem.md
-            - 10.3.44-年11月26日DennisClarke核对RC2的vmparamh仍为0xe00.md
-            - 10.3.45-年10月8日DennisClarke只用一句类比回复LandRover可以把De.md
-            - 10.3.46-年10月22日JohnBaldwin说明GCC仅在对命令行显式给出fPIC时才用.md
-            - 10.3.47-年5月25日BennoRice解释保留NetBSD代码是为编写与改写时备查打算等.md
-            - 10.3.48-年11月28日GeraldHicks附议模拟器有用称自己在思科用psim做过多个.md
-            - 10.3.49-年7月11日Andywantpackets报告他按10月18日说明编译power.md
+            - 10.3.4-2014 年 1 月 29 日，Nathan Whitehorn 说明 -CURRENT 与 10.0 对 IBM 硬件支持有限.md
+            - 10.3.5-2014 年 7 月 29 日，Alexey Dokuchaev 确认把 dev.cpu.0.freq 设为 1066 后 iBook G4 频率提上去了.md
+            - 10.3.6-2014 年 3 月 29 日，Alexey Dokuchaev 用 buildkernel 实测 kern.hz 取 1000 与 2000 的差别.md
+            - 10.3.7-2014 年 11 月 21 日，Jukka Ukkonen 用 iPad 回信确认内核配置的唯一改动是注释掉 sc 并加入 vt.md
+            - 10.3.8-2014 年 10 月 14 日，Nathan Whitehorn 强调按规范 r1 必须被保留，认为 Mark Millard 关于 r3 的观察很有启发.md
+            - 10.3.9-2014 年 9 月 8 日，Mark Millard 回应说自己报告的环境仍用 syscons 且无 NVIDIA 的 KMS，故问题不在 VT 或 KMS 本身.md
+            - 10.3.10-2015 年 4 月 1 日，Mark Millard 报告在 powerpc 非 64 位 11.0-CURRENT 上用 powerpc64-gcc 交叉构建 powerpc64 目标，crti.o 阶段失败，crti.S 第 35 与 51 行报 junk at end of line.md
+            - 10.3.11-2015 年 4 月 26 日，Justin Hibbits 答复 Konstantin Belousov，说 RouterBoard 用的是定制加载器.md
+            - 10.3.12-2015 年 12 月 6 日，Mark Millard 指出 powerpc64-gcc 5.2 的 gcc／config／rs6000／freebsd64.h 仍按 TARGET_64BIT 做条件分支，使 32 位 lib32 语境下 WCHAR_TYPE 被定为 long int，导致.md
+            - 10.3.13-2015 年 2 月 10 日，Rick Thomas 报告在 PowerMac G4 上通宵编译 gnome 仍未成功.md
+            - 10.3.14-2015 年 1 月 15 日，Mark Millard 报告其 PowerMac G5 四核满载时 CPU A1 二极管温度稳定在 90 至 91.6 摄氏度并触发关机.md
+            - 10.3.15-2015 年 7 月 1 日，Julio Merino 报告 Mac Mini G4 上的 stable-10 自九月装起始终无法跑完一整轮 poudriere 批量构建而不崩溃.md
+            - 10.3.16-2015 年 6 月 28 日，Konstantin Belousov 就 usr.bin／mkesdb 链接失败回复 Justin Hibbits.md
+            - 10.3.17-2015 年 3 月 16 日，Mark Millard 报告在 powerpc64 上以 powerpc64-xtoolchain-gcc 的 4.9.1 构建时.md
+            - 10.3.18-2015 年 3 月 21 日，Mark Millard 指出 CROSS_TOOLCHAIN=powerpc64-gcc 不会自动引入 c++ 头与库路径.md
+            - 10.3.19-2015 年 11 月 29 日，Mark Millard 报告在 powerpc64 PowerMac 上先装 lang／gcc5.md
+            - 10.3.20-2015 年 9 月 4 日，Adrian Chadd 回应 Luciano Mannucci 说 HEAD 指的是 FreeBSD 11.md
+            - 10.3.21-2016 年 4 月 14 日，Mark Millard 说这事要花些时间，准备从 amd64 出发分别构建 amd64、armv6 与 powerpc64 三种目标做对照.md
+            - 10.3.22-2016 年 8 月 30 日，Mark Millard 通报 LLVM 缺陷 26761 被 Hal Finkel 从 clang 3.8 的代码生成重分类到主干的公共代码生成.md
+            - 10.3.23-2016 年 12 月 8 日，Mark Millard 报告在 head -r309656 上把 zfs 模块里唯一的 -mminimal-toc 注释掉后再做交叉 buildkernel，这次能走到最后，但装上一启动就立刻死掉，并说明该机并不用 zfs.md
+            - 10.3.24-2016 年 2 月 20 日，Roman Divacky 告知自己已把补丁以 r261422 提交进 clang.md
+            - 10.3.25-2016 年 1 月 14 日，Mark Millard 把 csu／powerpc64／Makefile 里的 -mlongcall 换成 clang 认识的 -mlong-calls 并放开对 gcc 的强制，clang 3.8.0 交叉编译 powerpc64 随即顺利通过此处.md
+            - 10.3.26-2016 年 1 月 28 日，Xavier HILAIRE 在双处理器 PowerMac G5 上装好 FreeBSD 10.2 后发现风扇转速异常偏低.md
+            - 10.3.27-2016 年 7 月 14 日，Andrey Chernov 回应称 POSIX 并未要求 wchar_t 与 char 的符号性一致，那只是 arm ABI 文档的说法.md
+            - 10.3.28-2016 年 6 月 29 日，Jukka Ukkonen 反馈说加入 Bryan Drewery 提供的补丁之后 ppc64 上的构建可以正常跑完，并对修复表示感谢.md
+            - 10.3.29-2016 年 5 月 30 日，Nathan Whitehorn 向 Luciano Mannucci 确认是否为 PowerKVM 下装好后再从盘启动.md
+            - 10.3.30-2016 年 11 月 10 日，Mark Millard 指出 powerpc 与 powerpc64 的 GENERIC 内核配置并不含 syscons.md
+            - 10.3.31-2016 年 11 月 27 日，Mark Millard 查到 powerpc 上 libcompiler_rt、libc 与 libgcc 各带一份 floatdidf 定义.md
+            - 10.3.32-2017 年 4 月 5 日，Slawa Olhovchenkov 用 ldd 与 pkg info 列出 libEGL.md
+            - 10.3.33-2017 年 12 月 13 日，Breno Leitao 报告启动新内核时停在 loader 要求手动指定根文件系统的界面.md
+            - 10.3.34-2017 年 2 月 21 日，Mark Millard 发现对 virtualbox-ose-additions 而言内核 KBI 确实变了，重建该模块后启动崩溃随即消失.md
+            - 10.3.35-2017 年 7 月 5 日，Bryan Drewery 认为把 head 加进 ITOOLS 的改动不应存在，installworld 期间本就不该调用 ld.md
+            - 10.3.36-2017 年 6 月 20 日，Mark Millard 定位 -r320127 之后 powerpc64-gcc 无法完成 buildworld 的原因是一处 using 声明缺少 typename，改好后基于 libc++ 的 amd64 到 powerpc64 交叉构建即可通过.md
+            - 10.3.37-2017 年 3 月 5 日，Hiroo Ono (小野寛生) 表示明白了强制 PCI 模式的用意，接着询问在 FreeBSD 下该如何设置.md
+            - 10.3.38-2017 年 3 月 27 日，Dimitry Andric 回应 Mark Millard 报告的 llvm40 包体积，认为除非要改 llvm 本身.md
+            - 10.3.39-2017 年 5 月 6 日，Mark Millard 报告更新后的编译器在 TARGET_ARCH=powerpc 上又暴露一处代码生成错误：编译 perl5 的 numeric.c 时把两个不同值重复存入同一栈地址，覆盖已保存的 r30，miniperl 因此崩溃.md
+            - 10.3.40-2017 年 10 月 20 日，Stas Timokhin 报告 Mac mini G4 的 powerpc32 上部分模块经 ／boot／loader.conf 加载失败.md
+            - 10.3.41-2018 年 4 月 9 日，Nathan Whitehorn 解释 PowerNV 上的网络安装更棘手，受内核 nfsroot 支持所限.md
+            - 10.3.42-2018 年 2 月 14 日，Evan Sabin 报告 Xserve 上 11.1-STABLE 安装程序能跑.md
+            - 10.3.43-2018 年 7 月 10 日，Jason Bacon 报告改用 -nographic 后 qemu-system-ppc64 在加载内核前就挂住.md
+            - 10.3.44-2018 年 11 月 26 日，Dennis Clarke 核对 RC2 的 vmparam.h 仍为 0xe0000007ffffffff，并称自己并未改动.md
+            - 10.3.45-2018 年 10 月 8 日，Dennis Clarke 只用一句类比回复：Land Rover 可以把 Defender 110 称作豪华 SUV.md
+            - 10.3.46-2018 年 10 月 22 日，John Baldwin 说明 GCC 仅在对命令行显式给出 -fPIC 时才用动态 TLS 模型.md
+            - 10.3.47-2001 年 5 月 25 日，Benno Rice 解释保留 NetBSD 代码是为编写与改写时备查，打算等 FreeBSD 版代码能跑通后再删除.md
+            - 10.3.48-2001 年 11 月 28 日，Gerald Hicks 附议模拟器有用，称自己在思科用 psim 做过多个非平凡原型再把代码落到真实嵌入式目标.md
+            - 10.3.49-2002 年 7 月 11 日，Andy wantpackets 报告他按 10 月 18 日说明编译 powerpc 移植失败.md
         - 10.4-AMD64：64 位时代转型
             - 10.4.1-AMD64 适配的进程与节点.md
-            - 10.4.2-主题工程重构主题.md
-            - 10.4.3-年4月17日GeoffreyLassner报告72RC1在mpt驱动镜像重建第二.md
-            - 10.4.4-年9月18日YassAmed在i386182173回帖称basetxz解包失败目.md
-            - 10.4.5-年12月7日UffeJakobsen以g重建jls后用gdb取得段错误现场回溯显.md
-            - 10.4.6-年3月12日ShaneAmbler报告i386tinderbox上的clang产.md
-            - 10.4.7-年3月25日MarkMillard报告r331499在HyperV下于Ryzen.md
-            - 10.4.8-年9月20日PeterWemm转引Jake描述51CURRENT在amd64上跳.md
-            - 10.4.9-年8月23日SeanMcNeil说bsdtar在amd64上tarzxvvfno.md
-            - 10.4.10-年12月28日AxelGonzalez认为53amd64不支持可加载声卡模块需在.md
-            - 10.4.11-年2月20日JasonLixfeld追问AMD64下究竟多少ports不能用cv.md
-            - 10.4.12-年1月6日AdriaandeGroot确认AMD64在5x上是Tier1平台4x.md
-            - 10.4.13-年2月3日GaryJennejohn说廉价amd64就是socket754加AM.md
-            - 10.4.14-年6月4日SeanMcNeil因ports里的gdb6指向无效源码而改从cvs构.md
-            - 10.4.15-年11月9日Qaas8询问拥有AMDAthlon1GHz处理器时应下载哪种平台镜.md
-            - 10.4.16-年11月30日DavidGilbert报ISP驱动问题是内存相关仅设hwphys.md
-            - 10.4.17-年10月31日JamesRVanArtsalen的TyanS2885K8W配2颗.md
-            - 10.4.18-年4月19日VivekKhera回复DavidKomanek的K8WES2895.md
-            - 10.4.19-年8月30日Dieter说在okay提示下输入booth后开始打印找到的设备但波.md
-            - 10.4.20-年12月27日PavLucistnik回应FranciscoReyes问amd6.md
-            - 10.4.21-年1月12日DavidOBrien反问所谓其他人都用的调用约定究竟是什么因x86.md
-            - 10.4.22-年7月10日PeterWemm认为该补丁方向ok但应建立在DavidXu已提交的.md
-            - 10.4.23-年6月4日MathewSchofield的A8VDeluxe主板同时有Promi.md
-            - 10.4.24-年3月15日SeanMcNeil回复AlexanderKonovalenko在R.md
-            - 10.4.25-年3月22日DamianGerow说通过某个荒唐的偶然尝试解决了先前javac挂.md
-            - 10.4.26-年2月21日AlastairHogge应JohnBaldwin之请附上90CUR.md
-            - 10.4.27-年5月18日发帖人称这项双核识别工作由自己负责请求任何人在他过目审查之前不要提交.md
-            - 10.4.28-年5月25日发帖人报告从Maxtor复制到WDC系统盘进行到50%时服务器崩溃内.md
-            - 10.4.29-年11月8日NorbertoMeijome说自己在TyanGT24上用第一版BI.md
-            - 10.4.30-年11月10日JohnBaldwin请Sean提供堆栈跟踪推测这类陷阱是8259.md
-            - 10.4.31-年11月16日发帖人指出Ultra20实为TyanTomcatK8ES2865主.md
-            - 10.4.32-年11月24日发帖人以amd6489501提交PR报告60AMD64用本地子网f.md
-            - 10.4.33-年10月25日发帖人以缺陷报告形式反馈amd64在物理内存超过四G时由某个磁盘驱.md
-            - 10.4.34-年9月9日发帖人描述想用AMDACML与IntelMKL替代当前使用的ATLAS.md
-            - 10.4.35-年9月15日发帖人提交报告称自己这块主板未被列入64位兼容主板列表板载串行并行主.md
-            - 10.4.36-年9月23日发帖人在amd64机器上装subversion时找不到libssls.md
-            - 10.4.37-年4月6日发帖人贴出amd64系统刚开机片刻的top输出单个mysqld进程的线.md
-            - 10.4.38-年4月27日发帖人在MS7207主板上测试基于OpenBSD的nfe驱动搭配88.md
-            - 10.4.39-年8月21日发帖人分析那份崩溃回溯注意到m0被直接传入m_length而参数值在.md
-            - 10.4.40-年12月11日发帖人汇总该数学函数在多个正式版与开发分支的六四平台上缺失给出用符.md
-            - 10.4.41-年2月7日发帖人用当天最新的源码快照重建amd64装到测试分区单用户模式正常多用.md
-            - 10.4.42-年2月17日发帖人贴出k8dcmissk8bufillrequestl2miss.md
-            - 10.4.43-年1月3日发帖人照用libGLso1软链接指向libX11so6的方案后Skyp.md
-            - 10.4.44-年1月30日发帖人报告GAK8N51GMF9主板上板载的CICADAVSC820.md
-            - 10.4.45-年7月17日发帖人说明NVE驱动的修复补丁已合入RELENG_6分支用户用cvs.md
-            - 10.4.46-年6月13日发帖人纠正对方判断指出Sun是把Tyans2865用在Ultra20.md
-            - 10.4.47-年6月26日发帖人在这串讨论里只留下一句简短追问就问对方遇到该问题用的是哪一块主.md
-            - 10.4.48-年3月9日发帖人在AsusA8VDeluxe双盘VIARAID1上持续出现ata.md
-            - 10.4.49-年3月19日发帖人补充dmidecode需要root权限并回忆起早年ibm360.md
-            - 10.4.50-年5月1日发帖人回复建议先弄清另一系统给该网卡设备分配的是几号中断并给出在引导器.md
-            - 10.4.51-年5月8日发帖人承认看门狗超时回归是自己忘了重新应用补丁造成的随后贴出他执行的完.md
-            - 10.4.52-年5月26日发帖人在搭载X300显卡的测试机上回应该卡已知不支持三维但相关加速网.md
-            - 10.4.53-年11月8日发帖人在讨论该板支持情况时追问先前试用者是否继续排查此前那台61发布.md
-            - 10.4.54-年11月26日发帖人提交btxS补丁扩展BTX的v86监控以捕获INT3并按普通.md
-            - 10.4.55-年10月18日发帖人作为amd64用户指出GNOME2161配套的evoluti.md
-            - 10.4.56-年9月21日发帖人在TYANTempestI5000VSS5372上用61amd.md
-            - 10.4.57-年4月20日发帖人询问列表中有无人反对提交修复AMD64K8家族C1E模式下定时.md
-            - 10.4.58-年8月31日发帖人回复称普通用户可触发即时重启的问题在当前开发版本上已不再出现推.md
-            - 10.4.59-年1月23日发帖人在AMD64机器装FreeBSD62BETA2后想接Oracl.md
-            - 10.4.60-年6月19日发帖人称自己家amd64上用同款Neo2F主板与9600显卡接CRT.md
-            - 10.4.61-年10月6日发帖人重测多个版本的i386镜像均报corruptsymbol与AC.md
-            - 10.4.62-年10月31日发帖人提交缺陷报告报告70BETA1amd64系统上麦克风无声切换.md
-            - 10.4.63-年4月10日发帖人回复找出原因把环境变量中可执行文件路径精简到标准二进制后xpd.md
-            - 10.4.64-年12月27日发帖人在构建机器人报告的开发分支64位目标失败之后说明问题应该已经.md
-            - 10.4.65-年2月11日发帖人提交缺陷单称两台台式机都无法引导从光盘启动时报错提示引导程序未.md
-            - 10.4.66-年2月28日发帖人报告在启动日志里看到频率控制驱动显示处理器受支持却未被识别因而.md
-            - 10.4.67-年3月5日发帖人称开源驱动应付日常使用和播放器足够了只是可能比更完善的驱动更耗C.md
-            - 10.4.68-年3月26日发帖人称其六十四位服务器装有阵列卡虽已在BIOS层级组好逻辑盘但Fr.md
-            - 10.4.69-年5月19日发帖人在两台各有四插槽各配八吉字节内存的机器上安装该系统的发布版与当.md
-            - 10.4.70-年10月10日发帖人在多款AM2主板搭配SCSI适配器与4GB内存时编译世界过程.md
-            - 10.4.71-年3月11日发帖人报告8CURRENTamd64r189705上近日出现怪异构建.md
-            - 10.4.72-年2月20日发帖人指出在当前编译器版本下Intel建议i686用prescott.md
-            - 10.4.73-年11月25日发帖人在LenovoThinkpadSL300273852G上尝试.md
-            - 10.4.74-年10月26日发帖人在其公司的六十位服务器上报告72STABLE内核启动后不久触.md
-            - 10.4.75-年9月16日发帖人自称FreeBSD新手安装FreeBSD72时系统panic并.md
-            - 10.4.76-年12月5日avg表示提交者邮箱退回几乎无法收到任何反馈因此把精英集团主板IDE.md
-            - 10.4.77-年12月5日avg确认PTRACE_GETFPREGS与PTRACE_SETFP.md
-            - 10.4.78-年2月11日报告者在80RELEASEamd64上发现ale驱动对IPv6路由器.md
-            - 10.4.79-年6月5日PeterJeremy针对发帖人报告自建内核把同一块SATA硬盘从SA.md
-            - 10.4.80-年9月3日发帖人提交缺陷报告并附上补丁指出ixgbe在7x系统上无法构建因为dr.md
-            - 10.4.81-年3月16日发帖人补充确认该问题在TCP下同样可复现只要系统上有进程持续尝试连接.md
-            - 10.4.82-年11月14日发帖人回复说执行了关闭显示器省电的命令之后连续三天内都没有再出现黑.md
-            - 10.4.83-年10月27日发帖人报告从八二发布版升级到九零RC一版后功耗调节程序无法工作因为.md
-            - 10.4.84-年4月18日发帖人在90RELEASE上用zfssend经ssh把zvol发到另.md
-            - 10.4.85-年12月8日发帖人更新此前PRamd64171016中报告的问题91RC1amd.md
-            - 10.4.86-年1月4日发帖人本想只重建内核却接连受阻附上版本信息与同步标签说明做内核构建时在.md
-            - 10.4.87-年1月27日发帖人回复称自己理解对方的报告内容但指出问题报错了列表建议对方把最初.md
-            - 10.4.88-年6月24日FabianKeil报告当处理器被允许进入C3状态且系统使用HPET.md
-            - 10.4.89-年10月30日Belousov借有SMEP硬件的Andrey协助修好SMEP启用.md
-            - 10.4.90-年9月9日提交者在91RELEASEp6上报称插入USB硬盘毫无反应默认内核与自.md
-            - 10.4.91-年11月20日发帖人就六十四位页表机制提问页表项第四位控制写回或写透的缓存方式即.md
-            - 10.4.92-年1月13日发帖人报告升级至110后仅输入mount_msdosfs挂载SD读卡.md
-            - 10.4.93-年1月12日发帖人报告AMD官方页面已更新不再声称第2类Spectre变体在AM.md
-            - 10.4.94-年5月23日作者在AMDEPYC主板128GB内存机器上安装FreeBSD111.md
-            - 10.4.95-年9月23日发帖人称自己唯一的FreeBSDamd64上下文即唯一两内存域NUM.md
-            - 10.4.96-年1月19日发帖人比较7950X3D上每核单硬件线程与双硬件线程的基准性能给出附.md
+            - 10.4.2-主题：工程重构.md
+            - 10.4.3-2009 年 4 月 17 日，Geoffrey Lassner 报告 7.2-RC1 在 mpt 驱动镜像重建第二块盘时仍以 trap 12 页错误 panic.md
+            - 10.4.4-2013 年 9 月 18 日，Yass Amed 在 i386／182173 回帖称 base.txz 解包失败目前只在 Windows 8 下的 VirtualBox 中出现.md
+            - 10.4.5-2010 年 12 月 7 日，Uffe Jakobsen 以 -g 重建 jls 后用 gdb 取得段错误现场.md
+            - 10.4.6-2012 年 3 月 12 日，Shane Ambler 报告 i386 tinderbox 上的 clang 产生不一致的预定义宏.md
+            - 10.4.7-2018 年 3 月 25 日，Mark Millard 报告 r331499 在 Hyper-V 下于 Ryzen Threadripper 上 poudriere bulk 约十四小时后 vm_page_free_prep 崩溃.md
+            - 10.4.8-2003 年 9 月 20 日，Peter Wemm 转引 Jake 描述 5.1-CURRENT 在 amd64 上跳到内核入口 0xc0040000 后卡住，只见到版权横幅.md
+            - 10.4.9-2004 年 8 月 23 日，Sean McNeil 说 bsdtar 在 amd64 上 tar zxvvf nonexistent.tar.gz 段错误.md
+            - 10.4.10-2004 年 12 月 28 日，Axel Gonzalez 认为 5.3-amd64 不支持可加载声卡模块，需在内核中编入 sound.md
+            - 10.4.11-2004 年 2 月 20 日，Jason Lixfeld 追问 AMD64 下究竟多少 ports 不能用：cvsup 不行.md
+            - 10.4.12-2004 年 1 月 6 日，Adriaan de Groot 确认 AMD64 在 5.x 上是 Tier-1 平台，4.x 也能以极快的 i386 方式运行.md
+            - 10.4.13-2004 年 2 月 3 日，Gary Jennejohn 说廉价 amd64 就是 socket 754 加 AMD64 3000+，自己就是从 amd-k7 只换主板改成的.md
+            - 10.4.14-2004 年 6 月 4 日，Sean McNeil 因 ports 里的 gdb6 指向无效源码而改从 cvs 构建调试器，但回溯里出现大量乱码且附加到进程也失败.md
+            - 10.4.15-2004 年 11 月 9 日，Qaas8 询问拥有 AMD Athlon 1GHz 处理器时应下载哪种平台镜像，并附带问及为何使用 Times New Roman 字体.md
+            - 10.4.16-2004 年 11 月 30 日，David Gilbert 报 ISP 驱动问题是内存相关，仅设 hw.physmem=2g 即能启动，非卷容量问题.md
+            - 10.4.17-2004 年 10 月 31 日，James R. Van Artsalen 的 Tyan S2885 K8W 配 2 颗 Opteron 248.md
+            - 10.4.18-2005 年 4 月 19 日，Vivek Khera 回复 David Komanek 的 K8WE S2895A2NRF 配 10000 转盘清单，称没这经验.md
+            - 10.4.19-2005 年 8 月 30 日，Dieter 说在 okay 提示下输入 boot -h 后开始打印找到的设备但波特率错误，随后在挂载根分区处挂起且键盘无响应.md
+            - 10.4.20-2005 年 12 月 27 日，Pav Lucistnik 回应 Francisco Reyes 问 amd64 与 i386 的 ／usr／ports 是否相同.md
+            - 10.4.21-2005 年 1 月 12 日，David O'Brien 反问所谓其他人都用的调用约定究竟是什么，因 x86 CPU 并不强制某种方式，一切由编译器编写者决定.md
+            - 10.4.22-2005 年 7 月 10 日，Peter Wemm 认为该补丁方向 ok 但应建立在 David Xu 已提交的 diff 之上，因为这里的不完整.md
+            - 10.4.23-2005 年 6 月 4 日，Mathew Schofield 的 A8V Deluxe 主板同时有 Promise 20378 控制器与 VIA K8T800Pro 芯片组.md
+            - 10.4.24-2005 年 3 月 15 日，Sean McNeil 回复 Alexander Konovalenko 在 RELENG_5 上 WITH_LIB32=yes 做 buildworld 报错的求助，说是你在用 -O2 而它不被支持，需从 ／etc／make.conf 移除任何自定义.md
+            - 10.4.25-2005 年 3 月 22 日，Damian Gerow 说通过某个荒唐的偶然尝试解决了先前 javac 挂死的问题.md
+            - 10.4.26-2010 年 2 月 21 日，Alastair Hogge 应 John Baldwin 之请附上 9.0-CURRENT r204168 的 i386 日志与 mptable 输出，说明该 DP45SG 主板引导 amd64 光盘依旧失败，并贴出 201002 快照在 ACPI.md
+            - 10.4.27-2005 年 5 月 18 日，发帖人称这项双核识别工作由自己负责，请求任何人在他过目审查之前不要提交 AMD 双核相关补丁，尤其与超线程标记有关的部分.md
+            - 10.4.28-2005 年 5 月 25 日，发帖人报告从 Maxtor 复制到 WDC 系统盘进行到 50% 时服务器崩溃，内核报 ad6 READ_DMA 超时并把 ad6 移出配置.md
+            - 10.4.29-2005 年 11 月 8 日，Norberto Meijome 说自己在 Tyan GT24 上用第一版 BIOS 时 6.0 一切正常.md
+            - 10.4.30-2005 年 11 月 10 日，John Baldwin 请 Sean 提供堆栈跟踪，推测这类陷阱是 8259A 在启动时未被真正关闭导致中断被触发.md
+            - 10.4.31-2005 年 11 月 16 日，发帖人指出 Ultra-20 实为 Tyan Tomcat K8E S2865 主板去掉部分组件、与 X2100 同结构，缺少 PS2 串口且只有板载 nve 网卡.md
+            - 10.4.32-2005 年 11 月 24 日，发帖人以 amd64／89501 提交 PR 报告 6.0 AMD64 用本地子网 ftp 安装时系统在 base 阶段的 Extracting base 处约 76 时崩溃.md
+            - 10.4.33-2005 年 10 月 25 日，发帖人以缺陷报告形式反馈 amd64 在物理内存超过四 G 时由某个磁盘驱动调用直接内存总线默认锁机制触发崩溃，并给出多块磁盘并发读写的复现步骤.md
+            - 10.4.34-2005 年 9 月 9 日，发帖人描述想用 AMD ACML 与 Intel MKL 替代当前使用的 ATLAS，以便向多个 x86 与 64 位平台分发软件而无需各平台重编.md
+            - 10.4.35-2005 年 9 月 15 日，发帖人提交报告，称自己这块主板未被列入 64 位兼容主板列表，板载串行并行主控的支持似乎也缺失，磁盘虽能用但行为不稳，偶尔引发与磁盘相关的恐慌.md
+            - 10.4.36-2005 年 9 月 23 日，发帖人在 amd64 机器上装 subversion 时找不到 libssl.so.3.md
+            - 10.4.37-2006 年 4 月 6 日，发帖人贴出 amd64 系统刚开机片刻的 top 输出，单个 mysqld 进程的线程 WCPU 已达 194.21%，整机几乎全在用户态.md
+            - 10.4.38-2006 年 4 月 27 日，发帖人在 MS-7207 主板上测试基于 OpenBSD 的 nfe 驱动搭配 88E1111 补丁，在 6.1-RC 的 amd64 下工作正常，并回帖表示感谢.md
+            - 10.4.39-2006 年 8 月 21 日，发帖人分析那份崩溃回溯，注意到 m0 被直接传入 m_length 而参数值在调用处与调用中被改写，认为不应改变，据此判断要么是随机内存破坏要么是硬件故障.md
+            - 10.4.40-2006 年 12 月 11 日，发帖人汇总该数学函数在多个正式版与开发分支的六四平台上缺失，给出用符号表检查是否受影响的方法，并指出汇编版本在所有发布版中都未修正而主线已正确.md
+            - 10.4.41-2006 年 2 月 7 日，发帖人用当天最新的源码快照重建 amd64 装到测试分区，单用户模式正常，多用户模式进入登录提示后必须连按两次回车才能看到最后一行.md
+            - 10.4.42-2006 年 2 月 17 日，发帖人贴出 k8-dc-miss、k8-bu-fill-request-l2-miss 与未对齐数据引用计数显示几乎全部集中在 copyout.md
+            - 10.4.43-2006 年 1 月 3 日，发帖人照用 libGL.so.1 软链接指向 libX11.so.6 的方案后 Skype 可用，但麦克风不工作，在 i386 下同样如此.md
+            - 10.4.44-2006 年 1 月 30 日，发帖人报告 GA-K8N51GMF-9 主板上板载的 CICADA VSC 8201 千兆网卡缺乏驱动.md
+            - 10.4.45-2006 年 7 月 17 日，发帖人说明 NVE 驱动的修复补丁已合入 RELENG_6 分支，用户用 cvsup 更新到 6.1-STABLE 即可获得该补丁.md
+            - 10.4.46-2006 年 6 月 13 日，发帖人纠正对方判断，指出 Sun 是把 Tyan s2865 用在 Ultra-20 工作站上而非 X2100 双路服务器.md
+            - 10.4.47-2006 年 6 月 26 日，发帖人在这串讨论里只留下一句简短追问，就问对方遇到该问题用的是哪一块主板，没有给出自己对故障成因的判断，也没有补充任何排查步骤或测试建议.md
+            - 10.4.48-2006 年 3 月 9 日，发帖人在 Asus A8V Deluxe 双盘 VIA RAID1 上持续出现 ataraid 内存失败并伴随 vfs_done 写入错误.md
+            - 10.4.49-2006 年 3 月 19 日，发帖人补充 dmidecode 需要 root 权限，并回忆起早年 ibm／360 有一组秘密指令其中一条叫 PUNCH OPERATOR.md
+            - 10.4.50-2006 年 5 月 1 日，发帖人回复建议先弄清另一系统给该网卡设备分配的是几号中断，并给出在引导器里用可调整参数把网卡强制指定到特定中断号的写法，请对方一试.md
+            - 10.4.51-2006 年 5 月 8 日，发帖人承认看门狗超时回归是自己忘了重新应用补丁造成的，随后贴出他执行的完整步骤顺序，并追问正确流程应当怎样、自己究竟哪里做错了.md
+            - 10.4.52-2006 年 5 月 26 日，发帖人在搭载 X300 显卡的测试机上回应，该卡已知不支持三维，但相关加速网站称其支持二维硬件加速；他印象中二维加速在 6.0 上可用.md
+            - 10.4.53-2006 年 11 月 8 日，发帖人在讨论该板支持情况时追问先前试用者是否继续排查，此前那台 6.1 发布版下用不起的板子，对方反馈任何磁盘访问都异常缓慢、写入分区表要约一分钟.md
+            - 10.4.54-2006 年 11 月 26 日，发帖人提交 btx.S 补丁扩展 BTX 的 v86 监控以捕获 INT3 并按普通中断处理，自认不是最佳方案但优于无法引导.md
+            - 10.4.55-2006 年 10 月 18 日，发帖人作为 amd64 用户指出 GNOME 2.16.1 配套的 evolution-data-server 2.8.1 带来内存分配回归.md
+            - 10.4.56-2006 年 9 月 21 日，发帖人在 TYAN Tempest I5000VS S5372 上用 6.1 amd64 内核，开启 ACPI 无法启动.md
+            - 10.4.57-2007 年 4 月 20 日，发帖人询问列表中有无人反对提交修复 AMD64 K8 家族 C1E 模式下定时器失效的补丁.md
+            - 10.4.58-2007 年 8 月 31 日，发帖人回复称普通用户可触发即时重启的问题在当前开发版本上已不再出现.md
+            - 10.4.59-2007 年 1 月 23 日，发帖人在 AMD64 机器装 FreeBSD 6.2-BETA2 后想接 Oracle 数据库.md
+            - 10.4.60-2007 年 6 月 19 日，发帖人称自己家 amd64 上用同款 Neo2-F 主板与 9600 显卡接 CRT 显示器可正常起图形界面，愿把图形配置文件私下发给遇问题的对方.md
+            - 10.4.61-2007 年 10 月 6 日，发帖人重测多个版本的 i386 镜像，均报 corrupt symbol 与 ACPI 自动加载失败并以 BTX Halted 告终.md
+            - 10.4.62-2007 年 10 月 31 日，发帖人提交缺陷报告，报告 7.0-BETA1 amd64 系统上麦克风无声，切换所有录音源均无效，并附上机器型号、启动日志与音频状态输出供排查.md
+            - 10.4.63-2008 年 4 月 10 日，发帖人回复找出原因，把环境变量中可执行文件路径精简到标准二进制后 xpdf 就能编译，并称受对方建议启发，感谢对方，回复很短.md
+            - 10.4.64-2008 年 12 月 27 日，发帖人在构建机器人报告的开发分支 64 位目标失败之后说明问题应该已经修好了，并对打扰大家表示歉意；日志显示构建世界阶段顺利完成.md
+            - 10.4.65-2008 年 2 月 11 日，发帖人提交缺陷单称两台台式机都无法引导，从光盘启动时报错提示引导程序未获得相关内存映射信息，两台分别搭载奔腾四与酷睿双核处理器.md
+            - 10.4.66-2008 年 2 月 28 日，发帖人报告在启动日志里看到频率控制驱动显示处理器受支持却未被识别因而附加失败，两个处理器都如此；他已把相关模块编进内核，电源守护进程似乎可用.md
+            - 10.4.67-2008 年 3 月 5 日，发帖人称开源驱动应付日常使用和播放器足够了，只是可能比更完善的驱动更耗 CPU，并附议建议改买另一厂牌，说明该厂牌虽有意公开显卡规格.md
+            - 10.4.68-2008 年 3 月 26 日，发帖人称其六十四位服务器装有阵列卡，虽已在 BIOS 层级组好逻辑盘，但 FreeBSD 安装时无法检测到硬盘.md
+            - 10.4.69-2008 年 5 月 19 日，发帖人在两台各有四插槽、各配八吉字节内存的机器上安装该系统的发布版与当前版，启动消息只显示约两吉半到三吉字节内存.md
+            - 10.4.70-2008 年 10 月 10 日，发帖人在多款 AM2 主板搭配 SCSI 适配器与 4GB 内存时，编译世界过程中系统崩溃，恢复后根分区常被清空或需要手工检修.md
+            - 10.4.71-2009 年 3 月 11 日，发帖人报告 8-CURRENT amd64 r189705 上近日出现怪异构建行为，部分脚本中的路径名被错误展开.md
+            - 10.4.72-2009 年 2 月 20 日，发帖人指出在当前编译器版本下 Intel 建议 i686 用 prescott、amd64 用 nocona.md
+            - 10.4.73-2009 年 11 月 25 日，发帖人在 Lenovo Thinkpad SL300 2738-52G 上尝试启动 amd64 光盘与 livecd，最后停在设备探测提示之后.md
+            - 10.4.74-2009 年 10 月 26 日，发帖人在其公司的六十位服务器上报告 7.2-STABLE 内核启动后不久触发致命陷阱十二页错误，回溯停在互斥锁睡眠调用.md
+            - 10.4.75-2009 年 9 月 16 日，发帖人自称 FreeBSD 新手，安装 FreeBSD 7.2 时系统 panic 并提示自动重启，附上自己的主板、内存与硬盘配置，询问该如何解决.md
+            - 10.4.76-2010 年 12 月 5 日，avg 表示提交者邮箱退回、几乎无法收到任何反馈，因此把精英集团主板 IDE 控制器识别不了这个报告直接关闭，认为继续保留已无意义.md
+            - 10.4.77-2010 年 12 月 5 日，avg 确认 PTRACE_GETFPREGS 与 PTRACE_SETFPREGS 已损坏的问题在 head 以及 stable／8 中均已解决.md
+            - 10.4.78-2010 年 2 月 11 日，报告者在 8.0-RELEASE amd64 上发现 ale 驱动对 IPv6 路由器通告与邻居通告不作响应.md
+            - 10.4.79-2010 年 6 月 5 日，Peter Jeremy 针对发帖人报告自建内核把同一块 SATA 硬盘从 SATA300 的 UDMA133 降为 UDMA100.md
+            - 10.4.80-2010 年 9 月 3 日，发帖人提交缺陷报告并附上补丁，指出 ixgbe 在 7.x 系统上无法构建.md
+            - 10.4.81-2011 年 3 月 16 日，发帖人补充确认该问题在 TCP 下同样可复现：只要系统上有进程持续尝试连接同一目的地址和端口，新建连接就会沿用旧网关 MAC.md
+            - 10.4.82-2011 年 11 月 14 日，发帖人回复说执行了关闭显示器省电的命令之后连续三天内都没有再出现黑屏问题，因此判断此前的问题与系统挂起后再恢复的阶段有关.md
+            - 10.4.83-2011 年 10 月 27 日，发帖人报告从八二发布版升级到九零 RC 一版后功耗调节程序无法工作，因为某个频率读取参数不再出现.md
+            - 10.4.84-2012 年 4 月 18 日，发帖人在 9.0-RELEASE 上用 zfs send 经 ssh 把 zvol 发到另一台机器，接收端可见但 ／dev／zvol 下无设备.md
+            - 10.4.85-2012 年 12 月 8 日，发帖人更新此前 PR amd64／171016 中报告的问题：9.1 RC1-amd64 用 netinst 镜像安装卡在 base 阶段 97%,称重试后已恢复，推测是运营商更换或 freebsd 服务器端变更所致.md
+            - 10.4.86-2012 年 1 月 4 日，发帖人本想只重建内核却接连受阻，附上版本信息与同步标签，说明做内核构建时在兼容层源文件上因结构体字段不存在而报错.md
+            - 10.4.87-2012 年 1 月 27 日，发帖人回复称自己理解对方的报告内容，但指出问题报错了列表，建议对方把最初发出的那封邮件改投到 freebsd-stable 列表.md
+            - 10.4.88-2012 年 6 月 24 日，Fabian Keil 报告当处理器被允许进入 C3 状态、且系统使用 HPET 作硬件时间计数器时，dtrace 的时间戳变量不可靠.md
+            - 10.4.89-2012 年 10 月 30 日，Belousov 借有 SMEP 硬件的 Andrey 协助修好 SMEP 启用时的双故障问题.md
+            - 10.4.90-2013 年 9 月 9 日，提交者在 9.1-RELEASE-p6 上报称插入 USB 硬盘毫无反应，默认内核与自编内核都能复现，日志显示设备枚举后随即断开.md
+            - 10.4.91-2015 年 11 月 20 日，发帖人就六十四位页表机制提问，页表项第四位控制写回或写透的缓存方式，即便恒等映射的页面也仍走分页，若用 PAT 把该页设为非缓存.md
+            - 10.4.92-2017 年 1 月 13 日，发帖人报告升级至 11.0 后仅输入 mount_msdosfs 挂载 SD 读卡器即可百分之百复现地使系统崩溃，该读卡器在 8、9.md
+            - 10.4.93-2018 年 1 月 12 日，发帖人报告 AMD 官方页面已更新，不再声称第 2 类 Spectre 变体在 AMD 上尚未验证.md
+            - 10.4.94-2018 年 5 月 23 日，作者在 AMD EPYC 主板、128GB 内存机器上安装 FreeBSD 11.1 失败，系统在 PCI 总线枚举时 panic.md
+            - 10.4.95-2019 年 9 月 23 日，发帖人称自己唯一的 FreeBSD amd64 上下文即唯一两内存域 NUMA 环境.md
+            - 10.4.96-2024 年 1 月 19 日，发帖人比较 7950X3D 上每核单硬件线程与双硬件线程的基准性能，给出附件中的曲线图与峰值文字概述.md
         - 10.5-ARM 移植与嵌入式支持
             - 10.5.1-ARM 移植的工程过程.md
             - 10.5.2-ARM 支持的辨析.md
-            - 10.5.3-要点ARM史料疑点1ARM移植起始时间2主要贡献者3与NetBSDarm的关系.md
+            - 10.5.3-要点：ARM 史料疑点：(1) ARM 移植起始时间；(2) 主要贡献者；(3) 与 NetBSD／arm 的关系.md
         - 10.6-AArch64：现代 ARM 平台
         - 10.7-RISC-V 与新架构探索
             - 10.7.1-RISC-V（riscv64）架构引入.md
             - 10.7.2-sparc64 架构退役.md
             - 10.7.3-arm64／aarch64 持续成熟（Tier 2）.md
-            - 10.7.4-年7月15日EmmanuelVadot说明Allwinner板DTS通常只有最少.md
-            - 10.7.5-年7月15日WojciechMacek同意删掉那段locoreS代码并说明第19.md
-            - 10.7.6-年3月28日MarkHeily把FreeBSD110CURRENTarm64aa.md
-            - 10.7.7-年3月29日Otacílio说他需要Fortran编译器而目前所知只有GCC提供.md
-            - 10.7.8-年5月31日RonaldKlop报告RPi3B+跑5月29日的12aarch64.md
-            - 10.7.9-年5月22日MarcinWojtas说明原补丁中fsl_sdhci效果不佳原因是.md
-            - 10.7.10-年3月19日MarkMillard指出3月18日的140树莓派快照未使用boot.md
-            - 10.7.11-年10月3日Mouridsen排查Pinebookpro开启IOMMU时nvme.md
-            - 10.7.12-年10月16日MarkMillard记录Rock64出现USB3问题的构修为ma.md
-            - 10.7.13-年4月7日LexiWinter表示按MarkMillard建议在configtx.md
-            - 10.7.14-年3月22日tuexen报告AmpereAltra用较新的main启动时报SRA.md
-            - 10.7.15-年11月26日TitusManea说明该补丁对应的主板是RadxaCubieA5.md
+            - 10.7.4-2018 年 7 月 15 日，Emmanuel Vadot 说明 Allwinner 板 DTS 通常只有最少信息.md
+            - 10.7.5-2015 年 7 月 15 日，Wojciech Macek 同意删掉那段 locore.S 代码，并说明第 191 行属于补丁摘要里的次级栈计算修正.md
+            - 10.7.6-2016 年 3 月 28 日，Mark Heily 把 FreeBSD 11.0-CURRENT arm64 aarch64 20160308 r296485 memstick 镜像刷入 Odroid C2 的 SD 卡，蓝灯不亮无法启动，但同一 SD 卡与板子能启动 Ubuntu.md
+            - 10.7.7-2017 年 3 月 29 日，Otacílio 说他需要 Fortran 编译器，而目前所知只有 GCC 提供，Warner 已答树内 gcc 无 aarch64 支持.md
+            - 10.7.8-2018 年 5 月 31 日，Ronald Klop 报告 RPi-3B+ 跑 5 月 29 日的 12 aarch64 快照 buildworld 时崩溃.md
+            - 10.7.9-2020 年 5 月 22 日，Marcin Wojtas 说明原补丁中 fsl_sdhci 效果不佳.md
+            - 10.7.10-2021 年 3 月 19 日，Mark Millard 指出 3 月 18 日的 14.0 树莓派快照未使用 ／boot／efi／ 目录约定，而把 MSDOSBOOT 分区挂载到 ／boot／msdos,并附上 df 输出、bootaa64.efi 路径与 fstab 内容佐证.md
+            - 10.7.11-2021 年 10 月 3 日，Mouridsen 排查 Pinebook pro 开启 IOMMU 时 nvme0 的致命数据中止.md
+            - 10.7.12-2022 年 10 月 16 日，Mark Millard 记录 Rock64 出现 USB3 问题的构修为 main-n258610-ba7319e9091b-dirty.md
+            - 10.7.13-2024 年 4 月 7 日，Lexi Winter 表示按 Mark Millard 建议在 config.txt 设置后 USB 超时问题看似已修复.md
+            - 10.7.14-2024 年 3 月 22 日，tuexen 报告 Ampere Altra 用较新的 main 启动时报 SRAT 忽略 0x88300000 处内存与 scmi 模块已存在.md
+            - 10.7.15-2025 年 11 月 26 日，Titus Manea 说明该补丁对应的主板是 Radxa Cubie A5E 即 Allwinner A527.md
         - 10.8-ACPI 与电源管理
         - 10.9-GPU 与无线设备支持（2000s–2026）
         - 10.10-FreeBSD 6.x 与同期 Linux 的功能与性能对比
-            - 10.10.1-年11月1日EricAnholt在GNATS上把kern42404TIOCSCT.md
-            - 10.10.2-年2月10日JohanPettersson安装linux_base880_4失败.md
-            - 10.10.3-年10月13日AndriyGapon定位MQ挂起根因应用同时setuid与set.md
-            - 10.10.4-年8月28日Mateusz报60BETA3上portsaudioaurealkm.md
-            - 10.10.5-年7月28日AlexandreJulliard确认try_mmap_fixed的.md
-            - 10.10.6-年5月23日Cracauer贴出让共享库与mmap默认位置与Linux一致的di.md
-            - 10.10.7-年4月4日Samorodov说相关移植工作其实已有进展等FreeBSD新版发布后.md
-            - 10.10.8-年12月30日Scot报告LTP的amd64多函数失败根因他先前误以为用的是负一.md
-            - 10.10.9-年6月1日AndreiKolu报告FreeBSD61上linux_basegen.md
-            - 10.10.10-年11月3日JungukKim转发DivackyRoman对amd64TLS的分.md
-            - 10.10.11-年10月25日翻遍邮件列表维基百科与官方站仍弄不清希望在FreeBSD62PRE.md
-            - 10.10.12-年1月21日TijlCoosemans称wikimiscbugs说linuxld.md
-            - 10.10.13-年10月10日TijlCoosemans说明%fs%gs与fsbasegsbas.md
-            - 10.10.14-年4月21日RomanDivacky转发用户报的linuxpid2226goog.md
-            - 10.10.15-年1月9日mariofelicioni在FreeBSD70RC1i386上编译e.md
-            - 10.10.16-年6月4日VladimirGrebenschikov在8CURRENT上构建wi.md
-            - 10.10.17-年5月18日ToddWasson回复Juergen说补丁在kqemukmod13.md
-            - 10.10.18-年4月29日KrisMoore报告自wine1118起Steam反复崩溃怀疑是e.md
-            - 10.10.19-年8月21日MarinAtanasov在FreeBSD72上装VirtualBo.md
-            - 10.10.20-年12月23日MichaelButler补一个数据点在coreduo上把vmpm.md
-            - 10.10.21-年6月3日GaborKovesdan提PR在bsdportmk加USE_LINU.md
-            - 10.10.22-年6月17日AdamKKirchhoff在80CURRENT启动Linux下的V.md
-            - 10.10.23-年3月31日KjellToreUllavik指出必须加装textproclinu.md
-            - 10.10.24-年5月15日YamagiBurmeister在带RadeonX1550的机器上实.md
-            - 10.10.25-年4月1日PaulBrook纠正Juergen指出当abi_ulong尺寸小于l.md
-            - 10.10.26-年12月30日AndreAlbsmeier在FreeBSD73STABLE用li.md
-            - 10.10.27-年5月28日MichaelButler说在kernelr208616与vboxs.md
-            - 10.10.28-年6月1日DaichiGOTO报告VirtualBox320存在内存泄漏与百分之.md
-            - 10.10.29-年3月8日PerHedeland在i38672RELEASE上跑virtualb.md
-            - 10.10.30-年8月25日BernhardFroehlich判定VirtualBox需要pyt.md
-            - 10.10.31-年2月21日Yuri报VirtualBox404下删快照时进度对话框弹出期间So.md
-            - 10.10.32-年5月1日typoW在DellR710六块600GB15KSAS组RAID6上测.md
-            - 10.10.33-年4月9日DaichiGOTO找到VirtualBox4112在100CURRE.md
-            - 10.10.34-年5月9日QuentinSchwerkolt回报按Bernhard建议用debu.md
-            - 10.10.35-年10月3日MarekSalwerowicz在双网卡em0与bge0的91宿主上.md
-            - 10.10.36-年9月28日SamiHalabi在91PRERELEASE上用VirtualBo.md
-            - 10.10.37-年12月11日DavidDemelier在Windows81宿主用Virtual.md
-            - 10.10.38-年2月20日mirya在91加VirtualBox426上把GarminGPS设.md
-            - 10.10.39-年5月6日DavidNaylor表示该问题应已在r317544修复请对方若不能从.md
-            - 10.10.40-年11月14日ArtyomMirgorodskiy说自己在postinstall.md
-            - 10.10.41-年10月22日Yuri试430时两台机器都在启动时断言失败报VMMR0导入RTL.md
-            - 10.10.42-年8月7日VassilisLaganakos发布若干linuxf20端口与sky.md
-            - 10.10.43-年2月18日kaltheat在ports186847中确认libiconv依赖破.md
-            - 10.10.44-年12月10日DamjanJovanovic指出qemu用户模式仿真从Git编译.md
-            - 10.10.45-年1月9日MarkoCupać回复ports185584virtualboxos.md
-            - 10.10.46-年3月15日JimmyOlgeni转贴JungukKim关于替换补丁文件并重建的.md
-            - 10.10.47-年11月11日MiguelClara用SublimeText插件测试兼容层缺失的.md
-            - 10.10.48-年1月31日abi在lemul分支测试需epoll的程序时在linuxulato.md
-            - 10.10.49-年3月27日LeonardRucker在FreeBSD101STABLEr280.md
-            - 10.10.50-年1月6日TijlCoosemans提议FreeBSD9101102陆续终止支持.md
-            - 10.10.51-年3月12日AN在FreeBSD120CURRENTr315160升级virtu.md
-            - 10.10.52-年2月19日MatthiasApitz在Windows7的VirtualBox5.md
-            - 10.10.53-年4月27日DuncanYoung报告emulatorsvirtualboxos.md
-            - 10.10.54-年12月19日GaryPalmer从114升级到122后每次启动virtualb.md
-            - 10.10.55-年5月23日DamjanJovanovic指出Wine59发布57至58影响Fr.md
-            - 10.10.56-年10月25日KevinOberman报告升级到virtualboxosekmo.md
-            - 10.10.57-年8月28日SeanEricFagan称与JordanKHubbard的悲观说法.md
-            - 10.10.58-年9月29日MichaelSmith开放doscmd的CVS仓库供sup取用说明.md
-            - 10.10.59-年12月22日KhetanGajjar在FreeBSD30CURRENT的Cyr.md
-            - 10.10.60-年3月25日TheHermitHacker在pcemu中运行WaiteGroup.md
-            - 10.10.61-年7月30日stephenfarrell实测JDK111v3与113prev1的.md
-            - 10.10.62-年5月28日RobertSwindells报告最新AllegroCommonLi.md
-            - 10.10.63-年12月29日DougRabson转引OllivierRobert称SMP上开L.md
-            - 10.10.64-年6月28日MattCurtin说明VMware依赖Linux内核模块这与Fre.md
-            - 10.10.65-年9月16日AndreAlbsmeier报告LinuxMatlab5在旧linu.md
-            - 10.10.66-年11月22日VirenRShah在32STABLE上试用SeagateBack.md
-            - 10.10.67-年12月8日PeterWemm说明他为让vmware主机内网络跑通而改了proc.md
-            - 10.10.68-年12月23日CharlesAnderson说明误用Linux的libGL加载F.md
-            - 10.10.69-年1月19日MarcelMoolenaar建议把jpeg与png的RPM当补丁装.md
-            - 10.10.70-年2月26日NickSayer报告vmware从build438升到468后ra.md
-            - 10.10.71-年4月11日SamLeffler解释时钟漂移通常是因为虚拟机拿到的计时中断不足在.md
-            - 10.10.72-年5月23日MIHIRAYoshiro询问是否有人计划把KentaroInaga.md
-            - 10.10.73-年6月10日LuoqiChen建议在bootloaderconf末尾加入exec.md
-            - 10.10.74-年7月7日MarkWKrentel用tar把Slackware7现场的bin拷到.md
-            - 10.10.75-年10月31日GeorgeVNevilleNeil报告FreeBSD41上以pl.md
-            - 10.10.76-年1月11日nathan报告SMP双路机上42STABLE装好vmware2后点.md
-            - 10.10.77-年3月6日TheBabbler定位到自己vmware联网问题根源是端口revis.md
-            - 10.10.78-年4月29日DMichaelMcFarland汇报周末实测CrossoverOf.md
-            - 10.10.79-年7月26日PiotrWozniak报告装完XFree86并重编doscmd后报.md
-            - 10.10.80-年1月13日EdwardTomaszNapierala指出linprocfs目前.md
-            - 10.10.81-年4月25日KonstantinBelousov回应ColinPercival说.md
-            - 10.10.82-年9月4日DimaPanov指出Mathematica10与11仅兼容CentO.md
-            - 10.10.83-年12月8日RichardSeaman附上linux_pipe相关diff补丁供.md
-            - 10.10.84-年9月15日MarcelMoolenaar建议先确认Linux内核模块匹配当前内.md
-            - 10.10.85-年1月18日BrettTaylor在34STABLE更新linux_base端口.md
-            - 10.10.86-年6月4日GaborKincses在40RELEASE跑AlphaworksLi.md
-            - 10.10.87-年11月28日KrisKennaway明确回答Linux二进制内核对象无法在Fr.md
+            - 10.10.1-2003 年 11 月 1 日，Eric Anholt 在 GNATS 上把 kern／42404 TIOCSCTTY not implemented in linuxulator 的责任人从 freebsd-bugs 转给 emulation.md
+            - 10.10.2-2004 年 2 月 10 日，Johan Pettersson 安装 linux_base-8-8.0_4 失败.md
+            - 10.10.3-2004 年 10 月 13 日，Andriy Gapon 定位 MQ 挂起根因：应用同时 setuid 与 setgid, signal 32 非标准信号，把 security.bsd.conservative_signals 设为 0 即解.md
+            - 10.10.4-2005 年 8 月 28 日，Mateusz 报 6.0-BETA3 上 ports／audio／aureal-kmod 出错，ports／graphics／linux_dri 也不工作.md
+            - 10.10.5-2005 年 7 月 28 日，Alexandre Julliard 确认 try_mmap_fixed 的写法正确，只关心是否有映射而非页在不在内存中.md
+            - 10.10.6-2005 年 5 月 23 日，Cracauer 贴出让共享库与 mmap 默认位置与 Linux 一致的 diff，针对 5-stable 且同样适用于 6-current.md
+            - 10.10.7-2006 年 4 月 4 日，Samorodov 说相关移植工作其实已有进展，等 FreeBSD 新版发布后 linux-xorg-libs Port即可提交，附了补丁并给了装试步骤.md
+            - 10.10.8-2006 年 12 月 30 日，Scot 报告 LTP 的 amd64 多函数失败根因，他先前误以为用的是负一强转为字符指针作地址.md
+            - 10.10.9-2006 年 6 月 1 日，Andrei Kolu 报告 FreeBSD 6.1 上 linux_base-gentoo-stage1-2006.0_1 兼容环境下 chroot ／compat／linux 后 emerge sync 报.md
+            - 10.10.10-2006 年 11 月 3 日，Jung-uk Kim 转发 Divacky Roman 对 amd64 TLS 的分析：基本已实现但只有首个程序能用 TLS 后续段错误.md
+            - 10.10.11-2006 年 10 月 25 日，翻遍邮件列表、维基百科与官方站仍弄不清，希望在 FreeBSD 6.2-PRERELEASE 上托管 free VMware Server.md
+            - 10.10.12-2007 年 1 月 21 日，Tijl Coosemans 称 wiki misc bugs 说 linux ldd 不工作并不准确，用 Linux shell 可用，只是似乎只对 DSO 有效，如 ／compat／linux／bin／sh.md
+            - 10.10.13-2007 年 10 月 10 日，Tijl Coosemans 说明 %fs %gs 与 fsbase gsbase MSR 分离.md
+            - 10.10.14-2008 年 4 月 21 日，Roman Divacky 转发用户报的 linux： pid 2226 (googleearth-bin)： syscall truncate64 not implemented 后请体验者反馈.md
+            - 10.10.15-2008 年 1 月 9 日，mario felicioni 在 FreeBSD 7.0-RC1 i386 上编译 emulators／vmware3 时.md
+            - 10.10.16-2008 年 6 月 4 日，Vladimir Grebenschikov 在 8-CURRENT 上构建 wine 1.0-rc3 失败.md
+            - 10.10.17-2008 年 5 月 18 日，Todd Wasson 回复 Juergen 说补丁在 kqemu-kmod-1.3.0.p11_6 与 p11_7 上均有效.md
+            - 10.10.18-2009 年 4 月 29 日，Kris Moore 报告自 wine 1.1.18 起 Steam 反复崩溃.md
+            - 10.10.19-2009 年 8 月 21 日，Marin Atanasov 在 FreeBSD 7.2 上装 VirtualBox 觉得顺利.md
+            - 10.10.20-2009 年 12 月 23 日，Michael Butler 补一个数据点.md
+            - 10.10.21-2009 年 6 月 3 日，Gabor Kovesdan 提 PR 在 bsd.port.mk 加 USE_LINUX_OSRELEASE 与 USE_LINUX_OSRELEASE_REASON，按 compat.linux.osrelease.md
+            - 10.10.22-2009 年 6 月 17 日，Adam K Kirchhoff 在 8.0-CURRENT 启动 Linux 下的 VDI 触发内核恐慌.md
+            - 10.10.23-2009 年 3 月 31 日，Kjell Tore Ullavik 指出必须加装 textproc／linux-libxml 以及 graphics／linux-gdk-pixbuf，不过在 linux_base-f8 上仍会崩溃，并附了 PR.md
+            - 10.10.24-2009 年 5 月 15 日，Yamagi Burmeister 在带 Radeon X1550 的机器上实测，FreeBSD 32 位到 Linux 32 位正常.md
+            - 10.10.25-2010 年 4 月 1 日，Paul Brook 纠正 Juergen，指出当 abi_ulong 尺寸小于 long 时，(abi_ulong)-1 与 ~0ul 并不相等.md
+            - 10.10.26-2010 年 12 月 30 日，Andre Albsmeier 在 FreeBSD-7.3-STABLE 用 linuxulator 跑 SIMetrix 电路模拟软件 界面与绘制正常 一进仿真就报致命错误 out of memory 无法分配共享堆.md
+            - 10.10.27-2010 年 5 月 28 日，Michael Butler 说在 kernel r208616 与 vbox svn r853 上启动 VirtualBox 3.2.0 出错.md
+            - 10.10.28-2010 年 6 月 1 日，Daichi GOTO 报告 VirtualBox 3.2.0 存在内存泄漏与百分之一百 CPU 占用 但搭配 3.1.8 版本 guest additions 使用 3.2.0 可解决 WinXP 与 Win7 客机在.md
+            - 10.10.29-2010 年 3 月 8 日，Per Hedeland 在 i386 7.2-RELEASE 上跑 virtualbox-ose-3.1.2_1 无法启动 查阅 wiki 已知问题条目按建议杀掉其中一个进程后问题解决 现已能用 Linux 客机 但他怀疑.md
+            - 10.10.30-2011 年 8 月 25 日，Bernhard Froehlich 判定 VirtualBox 需要 python threads.md
+            - 10.10.31-2011 年 2 月 21 日，Yuri 报 VirtualBox 4.0.4 下删快照时进度对话框弹出期间 Solaris 虚拟机窗口收不到鼠标事件.md
+            - 10.10.32-2011 年 5 月 1 日，typo W 在 Dell R710 六块 600GB 15K SAS 组 RAID6 上测得 VirtualBox 3.2.12 跑 8.2 复制 320MB 要 4 秒约 80MB 每秒，而 CentOS 宿主 KVM.md
+            - 10.10.33-2012 年 4 月 9 日，Daichi GOTO 找到 VirtualBox 4.1.12 在 10.0-CURRENT 构建失败的解法.md
+            - 10.10.34-2012 年 5 月 9 日，Quentin Schwerkolt 回报按 Bernhard 建议用 debug 选项重编 VirtualBox 并重启后能正常运行虚拟机.md
+            - 10.10.35-2012 年 10 月 3 日，Marek Salwerowicz 在双网卡 em0 与 bge0 的 9.1 宿主上用 VirtualBox 4.2 桥接 bge0 接 1Gbit LAN，逐个试 Am79C973、Am79C970A 等网卡类型.md
+            - 10.10.36-2012 年 9 月 28 日，Sami Halabi 在 9.1-PRERELEASE 上用 VirtualBox 4.2 几天后报两个问题：单网卡桥接时 XP 客户机起不来.md
+            - 10.10.37-2013 年 12 月 11 日，David Demelier 在 Windows 8.1 宿主用 VirtualBox 加 additions 跑 9.2 amd64 时.md
+            - 10.10.38-2013 年 2 月 20 日，m irya 在 9.1 加 VirtualBox 4.2.6 上把 Garmin GPS 设备传给 Windows 7 客户机.md
+            - 10.10.39-2013 年 5 月 6 日，David Naylor 表示该问题应已在 r317544 修复，请对方若不能从 ports 直接编译就等新版包的发布公告.md
+            - 10.10.40-2013 年 11 月 14 日，Artyom Mirgorodskiy 说自己在 post-install 里把 libssl.so.6 软链成 libssl.so.7.md
+            - 10.10.41-2013 年 10 月 22 日，Yuri 试 4.3.0 时两台机器都在启动时断言失败，报 VMMR0 导入 RTLogGetDefaultInstance 找不到.md
+            - 10.10.42-2014 年 8 月 7 日，Vassilis Laganakos 发布若干 linux-f20 Port与 skype4 Port.md
+            - 10.10.43-2014 年 2 月 18 日，kaltheat 在 ports／186847 中确认 libiconv 依赖破坏 VirtualBox 4.3.6 编译.md
+            - 10.10.44-2014 年 12 月 10 日，Damjan Jovanovic 指出 qemu 用户模式仿真从 Git 编译后启动即段错误.md
+            - 10.10.45-2014 年 1 月 9 日，Marko Cupać 回复 ports／185584 virtualbox-ose 构建失败.md
+            - 10.10.46-2014 年 3 月 15 日，Jimmy Olgeni 转贴 Jung-uk Kim 关于替换补丁文件并重建的说明.md
+            - 10.10.47-2014 年 11 月 11 日，Miguel Clara 用 Sublime Text 插件测试兼容层缺失的系统调用，报告插件抱怨 utimensat 未实现.md
+            - 10.10.48-2015 年 1 月 31 日，abi 在 lemul 分支测试需 epoll 的程序时在 linuxulator 深处触发 panic，附截图链接，称此为首次发邮件列表，询问这能否指向可能的 bug.md
+            - 10.10.49-2015 年 3 月 27 日，Leonard Rucker 在 FreeBSD 10.1-STABLE r280326 配 virtualbox-ose-4.3.26,VBoxManage 与 VBoxHeadless 约十分钟后报.md
+            - 10.10.50-2017 年 1 月 6 日，Tijl Coosemans 提议 FreeBSD 9、10.1、10.2 陆续终止支持后 amd64 默认启用 64 位 Linux 包.md
+            - 10.10.51-2017 年 3 月 12 日，AN 在 FreeBSD 12.0-CURRENT r315160 升级 virtualbox-ose 到 5.1.16 时 kmk 报 VBoxRecompiler.o Error 1 使 VBoxRemPrimary.md
+            - 10.10.52-2018 年 2 月 19 日，Matthias Apitz 在 Windows 7 的 VirtualBox 5.1.18 跑 r314251 访客鼠标移入窗口时客端 Xorg 与 KDE 可见光标但键盘焦点留在 Win7 上致 Ctrl-D 送到.md
+            - 10.10.53-2019 年 4 月 27 日，Duncan Young 报告 emulators／virtualbox-ose 的 VBoxGuestAdditions_5.2.28.iso 下载失效，从 download.virtualbox.org 取回.md
+            - 10.10.54-2020 年 12 月 19 日，Gary Palmer 从 11.4 升级到 12.2 后每次启动 virtualbox 图形界面即内核 panic.md
+            - 10.10.55-2020 年 5 月 23 日，Damjan Jovanovic 指出 Wine 5.9 发布 5.7 至 5.8 影响 FreeBSD 的三处缺陷已上游修复并自述新引入未检查 mmap 返回值缺陷导致断言失败与内存损坏已提交补丁.md
+            - 10.10.56-2021 年 10 月 25 日，Kevin Oberman 报告升级到 virtualbox-ose-kmod 6.1.28 后 vboxdrv 每日数百次打印 Bad CPU context 错误而虚机运行正常并询问含义.md
+            - 10.10.57-1996 年 8 月 28 日，Sean Eric Fagan 称与 Jordan K. Hubbard 的悲观说法相反工作已重新推进.md
+            - 10.10.58-1996 年 9 月 29 日，Michael Smith 开放 doscmd 的 CVS 仓库供 sup 取用.md
+            - 10.10.59-1996 年 12 月 22 日，Khetan Gajjar 在 FreeBSD 3.0-CURRENT 的 Cyrix p150+ 上构建 pcemu1.93pre 失败.md
+            - 10.10.60-1997 年 3 月 25 日，The Hermit Hacker 在 pcemu 中运行 Waite Group 的 Master C++ 后越过启动画面即连续报未实现操作码 69、6E、67、65、6D、63 与 61，错误在 8 行间无限循环.md
+            - 10.10.61-1997 年 7 月 30 日，stephen farrell 实测 JDK 1.1.1-v3 与 1.1.3-pre-v1 的 Linux 版在 FreeBSD 2.2-STABLE 上比 Linux 本机还快，但偶发挂死使 top 显示 pause.md
+            - 10.10.62-1998 年 5 月 28 日，Robert Swindells 报告最新 Allegro Common Lisp 5.0 beta 试图读取 proc 下 pid 的 map 文件而失败，据此建议确实需要仿真 Linux procfs.md
+            - 10.10.63-1998 年 12 月 29 日，Doug Rabson 转引 Ollivier Robert 称 SMP 上开 Linux 线程的 -current 无法跑而自己要试 StarOffice 5 必须用 Linux 线程并答称启用 Linux.md
+            - 10.10.64-1999 年 6 月 28 日，Matt Curtin 说明 VMware 依赖 Linux 内核模块，这与 FreeBSD 对 Linux 的二进制兼容互斥.md
+            - 10.10.65-1999 年 9 月 16 日，Andre Albsmeier 报告 Linux Matlab 5 在旧 linux_lib Port下可用.md
+            - 10.10.66-1999 年 11 月 22 日，Viren R. Shah 在 3.2-STABLE 上试用 Seagate Backup Exec Agent 只见顶层目录看不到子目录 附 truss 输出显示连续 linux_socketcall 与.md
+            - 10.10.67-1999 年 12 月 8 日，Peter Wemm 说明他为让 vmware 主机内网络跑通而改了 procfs.md
+            - 10.10.68-1999 年 12 月 23 日，Charles Anderson 说明误用 Linux 的 libGL 加载 FreeBSD glx.so 才失败.md
+            - 10.10.69-2000 年 1 月 19 日，Marcel Moolenaar 建议把 jpeg 与 png 的 RPM 当补丁装入.md
+            - 10.10.70-2000 年 2 月 26 日，Nick Sayer 报告 vmware 从 build 438 升到 468 后 rawdisk 失效.md
+            - 10.10.71-2000 年 4 月 11 日，Sam Leffler 解释时钟漂移通常是因为虚拟机拿到的计时中断不足，在 Linux 与 Windows 宿主上也会发生.md
+            - 10.10.72-2000 年 5 月 23 日，MIHIRA Yoshiro 询问是否有人计划把 Kentaro Inagaki 的 vmware2 补丁提交进Ports 树.md
+            - 10.10.73-2000 年 6 月 10 日，Luoqi Chen 建议在 ／boot／loader.conf 末尾加入 exec=include ／boot／vmware.4th 以绕开寄存器预置问题，同意 Daniel C. Sobral 的写法比改.md
+            - 10.10.74-2000 年 7 月 7 日，Mark W. Krentel 用 tar 把 Slackware 7 现场的 bin 拷到 ufs 与 ext2fs 分区交叉测试 ls 发现列 ufs 目录始终正常而列 cdrom 与 ext2fs.md
+            - 10.10.75-2000 年 10 月 31 日，George V. Neville-Neil 报告 FreeBSD 4.1 上以 plain disk 加 disk.mbr 让 VMWare 2.0 挂 NT 4.0 第一分区登录即死循环且 disk.mbr.md
+            - 10.10.76-2001 年 1 月 11 日，nathan 报告 SMP 双路机上 4.2-STABLE 装好 vmware2 后点 Power On 会暂时锁死约六十秒后自行退出且无报错而同一Port在另一台单处理器 4.2-STABLE 上一次装好并提到.md
+            - 10.10.77-2001 年 3 月 6 日，The Babbler 定位到自己 vmware 联网问题根源是Port revision 不是最新，版本号相同但 revision 不同.md
+            - 10.10.78-2002 年 4 月 29 日，D. Michael McFarland 汇报周末实测 Crossover Office，linux_base-6 进展有限.md
+            - 10.10.79-2002 年 7 月 26 日，Piotr Wozniak 报告装完 XFree86 并重编 doscmd 后报错仍在.md
+            - 10.10.80-2020 年 1 月 13 日，Edward Tomasz Napierala 指出 linprocfs 目前仅为当前进程提供 ／proc／self／fd 到 ／dev／fd 的符号链接，真正修复需在 procfs 甚至 pseudofs.md
+            - 10.10.81-2024 年 4 月 25 日，Konstantin Belousov 回应 Colin Percival 说原则上可以复现该 linsysfs 问题，但他暂时没时间做.md
+            - 10.10.82-2025 年 9 月 4 日，Dima Panov 指出 Mathematica 10 与 11 仅兼容 CentOS 6 与 7.md
+            - 10.10.83-1998 年 12 月 8 日，Richard Seaman 附上 linux_pipe 相关 diff 补丁供 John Fieber 合并测试.md
+            - 10.10.84-1999 年 9 月 15 日，Marcel Moolenaar 建议先确认 Linux 内核模块匹配当前内核版本，并说明 semctl 对应的 ipc typ=3 在 3.x 系列中已经实现.md
+            - 10.10.85-2000 年 1 月 18 日，Brett Taylor 在 3.4-STABLE 更新 linux_base Port后.md
+            - 10.10.86-2000 年 6 月 4 日，Gabor Kincses 在 4.0-RELEASE 跑 Alphaworks Linux 1.3 报 sigaltstack Cannot allocate memory，因 MINSIGSTKSZ 为 8192 而.md
+            - 10.10.87-2001 年 11 月 28 日，Kris Kennaway 明确回答 Linux 二进制内核对象无法在 FreeBSD 上加载使用，用户态驱动类方案才可能工作.md
         - 10.11-FreeBSD 6.x 时期的技术淘汰：Giant 锁与 MPSAFE VFS
             - 10.11.1-Giant 锁 → MPSAFE VFS 与 SMPng 项目收束（6.0，2005.11.3）.md
-            - 10.11.2-年2月28日JasonGeorge自述向Theo与2006年OpenBSD黑客松.md
+            - 10.11.2-2007 年 2 月 28 日，Jason George 自述向 Theo 与 2006 年 OpenBSD 黑客松提供了 Blade 1000 与 2000 机器.md
             - 10.11.3-KSE M： N 线程模型 → libthr 1：1 线程模型起步（6.x 时期过渡）.md
-            - 10.11.4-年11月7日ScottLong主张早启动时读芯片组的PCIID若能识别就默认启用.md
-            - 10.11.5-年3月30日DejanLesjak判断引入XorgCVS中post70的改动可以.md
-            - 10.11.6-年4月15日MariusStrobl指出大于16GB内存的机器问题源于缺少反弹页.md
-            - 10.11.7-年1月24日MarkLinimon解释zfs未在sparc64上启用是无人测试而.md
-            - 10.11.8-年5月12日MarkLinimon称大量ports假定了i386的整数宽度与字节.md
-            - 10.11.9-年9月25日DmitryAfanasiev报告sparc64平台的内核输出出现错.md
-            - 10.11.10-年2月3日AndrejShidenko报告混合UltraSPARCIVIV+的S.md
-            - 10.11.11-年7月16日AlexanderMotin提交补丁把sparc64与sun4v的定.md
-            - 10.11.12-年11月15日AntonShterenlikht报告在sparc64的curre.md
-            - 10.11.13-年6月30日PeterJeremy报告V440与V890在压力测试下都panic.md
-            - 10.11.14-年4月23日TimHogard报告90RELEASE装在单核v210上后一个简单.md
-            - 10.11.15-年1月24日MariusStrobl回复T2000的安装问题指出当前受支持的SP.md
-            - 10.11.16-年4月6日ScottNewell在Ultra60上做83RELEASE的UFS引.md
-            - 10.11.17-年3月25日ChrisRoss报告MariusStrobl的ATA_CAM_NO.md
-            - 10.11.18-年5月11日MichaelMoll自述在r265844上加装Konstantin.md
-            - 10.11.19-年11月6日JohnMarkGurney回应SeanBruno的说法指出base.md
-            - 10.11.20-年4月12日MarkCaveAyland在qemusystemsparc64上启.md
-            - 10.11.21-年11月8日GordonZaft报告在sparc64上编译VIM的regexp_.md
-            - 10.11.22-年12月12日DanielStekloff列出Debian使用的若干mkisof.md
-            - 10.11.23-年11月6日PeterGrehan说明freebsdupdate不适用于powe.md
-            - 10.11.24-年4月15日PeterGrehan建议用64位传送指令原子更新哈希表中的页表项并.md
-            - 10.11.25-年12月8日JustinHibbits认为问题核心是Altivec内核完全没有实.md
-            - 10.11.26-年1月22日MarcelMoolenaar澄清g_part已支持APM而sysi.md
-            - 10.11.27-年5月1日NathanWhitehorn报告为测试BMAC驱动而新编的CURRE.md
-            - 10.11.28-年11月17日MarcelMoolenaar请RossGohlke说明究竟动了哪.md
-            - 10.11.29-年10月11日MarcoTrillo查CVS后答复Justin声音节点改为按需创.md
-            - 10.11.30-年4月10日HorstGüntherBurkhardtIII答复JochenFa.md
-            - 10.11.31-年8月19日AxelScheepers说自己在iBook上另建苹果HFS分区存放.md
-            - 10.11.32-年2月21日RafalJaworowski答复AlekseyFedorov的交叉.md
-            - 10.11.33-年3月4日WeongyoJeong在苹果ATADMA讨论串中回复NathanWh.md
-            - 10.11.34-年5月4日GrzegorzBernacki答复单步执行原子操作问题的修复出处指出.md
-            - 10.11.35-年8月13日NathanWhitehorn答复BrianLoomis关于G5Xs.md
-            - 10.11.36-年7月16日BryanVyhmeister报告自己的双27GHzPowerMac.md
-            - 10.11.37-年6月23日MarcelMoolenaar对把PowerPC默认HZ改为1000.md
-            - 10.11.38-年11月17日NathanWhitehorn答复SuperBisquit说drm.md
-            - 10.11.39-年9月30日PaulMather在powerpc64快照讨论串中再次发言引用Na.md
-            - 10.11.40-年2月2日SuperBisquit说明自己用的是1月30日的版本把ISO挂成回环.md
-            - 10.11.41-年1月22日TorfinnIngolfsen说PowerMacG4装81beta.md
-            - 10.11.42-年6月18日MarkusHästbacka说他手上一台MacminiG4装完了F.md
-            - 10.11.43-年10月18日NathanWhitehorn答复说ppc64上的binutils.md
-            - 10.11.44-年8月29日MathiasBreuninger实测G4与G5接APCSmartU.md
-            - 10.11.45-年2月4日MariusStrobl表示不解对方为何要套用随手找来的补丁指出那份m.md
-            - 10.11.46-年5月25日StevenMassey询问XserveG5反复关机的问题是否已有结.md
-            - 10.11.47-年4月7日NathanWhitehorn答复JulioMerino关于宽屏控制台.md
-            - 10.11.48-年2月18日MuammerHamutçu回复AndreyVElsukov说gpa.md
-            - 10.11.49-年6月24日dbb补述日志附件被系统过滤改贴关键报错编译时systypesh报m.md
-            - 10.11.50-年9月17日MagesSimon回报G5Quad上GeForce6600的画面模.md
-            - 10.11.51-年12月19日RobBallantyne证实64位的memstick镜像在他的G.md
-            - 10.11.52-年6月19日PaulVBolotoff回alpha67626称mga驱动在alp.md
+            - 10.11.4-2007 年 11 月 7 日，Scott Long 主张早启动时读芯片组的 PCI ID，若能识别就默认启用该修正，并指出这类 tunable 天生晦涩.md
+            - 10.11.5-2006 年 3 月 30 日，Dejan Lesjak 判断引入 X.org CVS 中 post-7.0 的改动可以修复 Creator3D 显卡问题.md
+            - 10.11.6-2007 年 4 月 15 日，Marius Strobl 指出大于 16GB 内存的机器问题源于缺少反弹页支持.md
+            - 10.11.7-2008 年 1 月 24 日，Mark Linimon 解释 zfs 未在 sparc64 上启用是无人测试，而非有意冷落.md
+            - 10.11.8-2009 年 5 月 12 日，Mark Linimon 称大量 ports 假定了 i386 的整数宽度与字节序.md
+            - 10.11.9-2009 年 9 月 25 日，Dmitry Afanasiev 报告 sparc64 平台的内核输出出现错乱现象.md
+            - 10.11.10-2010 年 2 月 3 日，Andrej Shidenko 报告混合 UltraSPARC IV／IV+ 的 Sun Fire V890 引导 8.0-RELEASE 时 loader 报 no node for bootcpu.md
+            - 10.11.11-2010 年 7 月 16 日，Alexander Motin 提交补丁把 sparc64 与 sun4v 的定时器驱动改用新的机器无关事件定时器框架.md
+            - 10.11.12-2010 年 11 月 15 日，Anton Shterenlikht 报告在 sparc64 的 -current r212302 上构建 lang／gcc45 遇到困难并提交了 GCC PR 46086，他不明白 GCC 开发者关于.md
+            - 10.11.13-2011 年 6 月 30 日，Peter Jeremy 报告 V440 与 V890 在压力测试下都 panic 于 uma_small_alloc 的 free page still has mappings 断言，V890 以.md
+            - 10.11.14-2012 年 4 月 23 日，Tim Hogard 报告 9.0-RELEASE 装在单核 v210 上后一个简单 Perl 程序耗时约为对照 Solaris 9 机器的六倍.md
+            - 10.11.15-2012 年 1 月 24 日，Marius Strobl 回复 T2000 的安装问题.md
+            - 10.11.16-2013 年 4 月 6 日，Scott Newell 在 Ultra 60 上做 8.3-RELEASE 的 UFS 引导加 ZFS 根配置.md
+            - 10.11.17-2013 年 3 月 25 日，Chris Ross 报告 Marius Strobl 的 ATA_CAM_NO_48BIT_DMA 补丁无法直接套用到 stable／9.md
+            - 10.11.18-2014 年 5 月 11 日，Michael Moll 自述在 r265844 上加装 Konstantin Belousov 的补丁并开启 INVARIANTS 后.md
+            - 10.11.19-2015 年 11 月 6 日，John-Mark Gurney 回应 Sean Bruno 的说法.md
+            - 10.11.20-2016 年 4 月 12 日，Mark Cave-Ayland 在 qemu-system-sparc64 上启动 FreeBSD 并在 ddb 中执行 ps 与 m 命令.md
+            - 10.11.21-2016 年 11 月 8 日，Gordon Zaft 报告在 sparc64 上编译 VIM 的 regexp_nfa.c 时出现内部编译器段错误.md
+            - 10.11.22-2007 年 12 月 12 日，Daniel Stekloff 列出 Debian 使用的若干 mkisofs 选项，如 iso-level 2、netatalk.md
+            - 10.11.23-2007 年 11 月 6 日，Peter Grehan 说明 freebsd-update 不适用于 powerpc：该平台属第二梯队，安全官不提供支持，因而没有二进制更新可用.md
+            - 10.11.24-2008 年 4 月 15 日，Peter Grehan 建议用 64 位传送指令原子更新哈希表中的页表项，并认为把 OpenFirmware 放进独立 pmap 的老办法行不通.md
+            - 10.11.25-2008 年 12 月 8 日，Justin Hibbits 认为问题核心是 Altivec：内核完全没有实现，程序一把相关指令上去就 SIGILL，因此把它关掉即可解决.md
+            - 10.11.26-2008 年 1 月 22 日，Marcel Moolenaar 澄清 g_part 已支持 APM，而 sysinstall 还没有调用它，理想情况是安装时即可直接分区.md
+            - 10.11.27-2008 年 5 月 1 日，Nathan Whitehorn 报告为测试 BMAC 驱动而新编的 -CURRENT 内核已无法在 PowerMac G3 上引导.md
+            - 10.11.28-2008 年 11 月 17 日，Marcel Moolenaar 请 Ross Gohlke 说明究竟动了哪些内核选项，认为 SMP 最可疑.md
+            - 10.11.29-2008 年 10 月 11 日，Marco Trillo 查 CVS 后答复 Justin.md
+            - 10.11.30-2009 年 4 月 10 日，Horst Günther Burkhardt III 答复 Jochen Fahrner 说 FreeBSD 已到 7.2，多数网卡都受支持.md
+            - 10.11.31-2009 年 8 月 19 日，Axel Scheepers 说自己在 iBook 上另建苹果 HFS 分区存放引导器后手动引导一切正常.md
+            - 10.11.32-2009 年 2 月 21 日，Rafal Jaworowski 答复 Aleksey Fedorov 的交叉编译提问：在 amd64 主机上跑 buildworld 并指定 TARGET_ARCH 为 powerpc.md
+            - 10.11.33-2009 年 3 月 4 日，Weongyo Jeong 在苹果 ATA DMA 讨论串中回复 Nathan Whitehorn，就控制器上 ATAPI 设备的表现继续交换意见.md
+            - 10.11.34-2009 年 5 月 4 日，Grzegorz Bernacki 答复单步执行原子操作问题的修复出处，指出该改动约在二〇〇七年四月合入 gdb 源码，他确认 6.8 中已包含.md
+            - 10.11.35-2010 年 8 月 13 日，Nathan Whitehorn 答复 Brian Loomis 关于 G5 Xserve 集群节点的安装问题，坦言不清楚 USB 光驱能否引导.md
+            - 10.11.36-2010 年 7 月 16 日，Bryan Vyhmeister 报告自己的双 2.7GHz PowerMac G5 遇到同样找不到硬盘的情况.md
+            - 10.11.37-2010 年 6 月 23 日，Marcel Moolenaar 对把 PowerPC 默认 HZ 改为 1000 表示没有异议.md
+            - 10.11.38-2010 年 11 月 17 日，Nathan Whitehorn 答复 Super Bisquit 说，drm 目前在 PowerPC 上至少在他的硬件上无法正常工作.md
+            - 10.11.39-2010 年 9 月 30 日，Paul Mather 在 powerpc64 快照讨论串中再次发言.md
+            - 10.11.40-2011 年 2 月 2 日，Super Bisquit 说明自己用的是 1 月 30 日的版本，把 ISO 挂成回环设备后第一层目录看不到 HFS 引导区.md
+            - 10.11.41-2011 年 1 月 22 日，Torfinn Ingolfsen 说 PowerMac G4 装 8.1-beta1 时只需写 snd_ai2s_load 即可加载声卡.md
+            - 10.11.42-2011 年 6 月 18 日，Markus Hästbacka 说他手上一台 Mac mini G4 装完了 FreeBSD 却起不来，似乎根本没有引导器.md
+            - 10.11.43-2011 年 10 月 18 日，Nathan Whitehorn 答复说 ppc64 上的 binutils 已知是坏的.md
+            - 10.11.44-2012 年 8 月 29 日，Mathias Breuninger 实测 G4 与 G5 接 APC SmartUPS 后断电停机却无法自动重启.md
+            - 10.11.45-2012 年 2 月 4 日，Marius Strobl 表示不解对方为何要套用随手找来的补丁，指出那份 mii_flags 补丁很久以前就已提交，重复应用必然失败.md
+            - 10.11.46-2012 年 5 月 25 日，Steven Massey 询问 Xserve G5 反复关机的问题是否已有结果，称自己的机器连跑完测试的时间都没有，已测过电池.md
+            - 10.11.47-2013 年 4 月 7 日，Nathan Whitehorn 答复 Julio Merino 关于宽屏控制台的问题，指出 syscons 里硬编码的最大屏幕宽度参数过小.md
+            - 10.11.48-2013 年 2 月 18 日，Muammer Hamutçu 回复 Andrey V. Elsukov，说 gpart 的 -b start-offset 虽能腾出空闲空间.md
+            - 10.11.49-2013 年 6 月 24 日，dbb 补述日志附件被系统过滤，改贴关键报错：编译时 sys／types.h 报 machine／endian.h 打不开.md
+            - 10.11.50-2013 年 9 月 17 日，Mages Simon 回报 G5 Quad 上 GeForce 6600 的画面模式问题已解决，办法是把显示器改接到第二个 DVI 口.md
+            - 10.11.51-2014 年 12 月 19 日，Rob Ballantyne 证实 64 位的 memstick 镜像在他的 G5 Quad 上安装成功.md
+            - 10.11.52-2006 年 6 月 19 日，Paul V. Bolotoff 回 alpha／67626 称 mga 驱动在 alpha 上优化不佳 Matrox Millennium 与 Millennium II 在 164LX 上从未成功.md
         - 10.12-FreeBSD 6.x 时期未被记名的贡献者
-            - 10.12.1-年3月28日JoergSonnenberger于2005年3月28日就源码布局表.md
-            - 10.12.2-年5月8日ScottLong于2005年5月8日就该磁盘性能讨论指出RR1280.md
-            - 10.12.3-年8月29日2006年8月JaredMauch回应MikeMeyer关于为何在j.md
-            - 10.12.4-年12月12日2006年12月BillMoran报告在62BETA3amd64上.md
+            - 10.12.1-2005 年 3 月 28 日，Joerg Sonnenberger 于 2005 年 3 月 28 日就源码布局表示，他完全同意该处看法，认为很难把一切摆到完美位置.md
+            - 10.12.2-2005 年 5 月 8 日，Scott Long 于 2005 年 5 月 8 日就该磁盘性能讨论指出 RR1280 实为软件 RAID 卡，全部奇偶校验计算由 CPU 承担.md
+            - 10.12.3-2006 年 8 月 29 日，2006 年 8 月 Jared Mauch 回应 Mike Meyer 关于为何在 jail 内跑 cron 的引文.md
+            - 10.12.4-2006 年 12 月 12 日，2006 年 12 月 Bill Moran 报告在 6.2-BETA3 amd64 上把 kern.ipc.shmmax 设为 2200000000 后回显为负数 -2094967296，他判断这是 32 位无符号整型所致.md
             - 10.12.5-6.x 时期的无名贡献者.md
             - 10.12.6-贡献者谱系梳理.md
-            - 10.12.7-年4月5日FreeBSD开发者SørenSchmidt答复ICH6SATARAI.md
-            - 10.12.8-年4月15日gmailcom的JosephKoshy解释不宜用sendpr提交内.md
-            - 10.12.9-年4月23日chuckrorg的ChuckRobey自述已用k3b成功复制DVD.md
-            - 10.12.10-年8月1日redshiftcom的ray自述能熟练配置FreeBSD服务器却在周.md
-            - 10.12.11-年8月16日MichaelHoneyfield就驱动中mmap的怪异行为求助其驱.md
-            - 10.12.12-年12月4日GiZmen报告花一整天排查后确认是altq作怪仅启用pf规则时机器.md
-            - 10.12.13-年2月1日PauloFragoso报告三星PRISM2网卡在FreeBSD53下.md
-            - 10.12.14-年2月14日SysKonnect的GeraldHeinig按StephanUph.md
-            - 10.12.15-年1月12日VulpesVelox报告其rc改动已可用新增两个rcconf变量其.md
-            - 10.12.16-年1月25日MatthewDillon在讨论串中表示恢复设备状态的难度被严重低估.md
-            - 10.12.17-年1月31日XinLI提出名为skeletonjail的构想让jail通过只读的.md
-            - 10.12.18-年7月9日MarkMurray在讨论中回应SamLeffler称曾托人添加Ope.md
-            - 10.12.19-年7月18日JoergSonnenberger表示近两年Heimdal出现过一些.md
-            - 10.12.20-年7月25日ScottLong解释FelixKM所声明的_IOWR会在进入时从用.md
-            - 10.12.21-年6月13日ChristophHellwig补充建议若要在FreeBSD中加入该.md
-            - 10.12.22-年6月22日NorbertKoch报告kbdmux的新测试现象等屏保激活后按控制.md
-            - 10.12.23-年6月30日GaynWinters报告TyanS5150用ICH6R组RAID1.md
-            - 10.12.24-年3月4日PeterJeremy就硬盘原子写入做估算依SeagateBarrac.md
-            - 10.12.25-年3月8日Nokia的VijaySingh回应答复说明已把属于sysdump_h.md
-            - 10.12.26-年3月31日comsysntukpikievua的AndreySimonenko.md
-            - 10.12.27-年5月23日RaphaelHBecker测试JuergenUnger的新版jai.md
-            - 10.12.28-年11月23日署名BSD的celeritystormcom用户称从60RELEA.md
-            - 10.12.29-年10月2日GlebSmirnoff答复关于FreeBSD54AMD64上MPD.md
-            - 10.12.30-年10月13日TimKientzle就libarchive与libtool提问称.md
-            - 10.12.31-年10月21日JohnBaldwin就sio4附件问题回复MWarnerLosh.md
-            - 10.12.32-年10月28日SørenSchmidt回应Hitachi硬盘写入缓慢的讨论坦言对.md
-            - 10.12.33-年9月6日VladimirYuStepanov反驳VladGALU关于可用二层过.md
-            - 10.12.34-年9月11日wilburysk的DanielGerzo宣布问题已解决自动引导只到.md
-            - 10.12.35-年9月25日ExitConsulting的FrankMayhar答复Giorgo.md
-            - 10.12.36-年4月9日PeterJeremy以其单位经验回应称有多台机器作冗余网关通往40多.md
-            - 10.12.37-年4月16日AndreasBachmann报告其新购DellInspiron94.md
-            - 10.12.38-年2月2日VasilDimov在同一讨论串中答复EnselSharon解释挂载后.md
-            - 10.12.39-年2月24日GiorgosKeramidas补充说明其netstat紧凑输出补丁.md
-            - 10.12.40-年1月16日SteveSuhre报告其T1线路被大量named查询淹没导致30至.md
-            - 10.12.41-年1月26日VitaliySkakun报告快速反复向devcuaR00写入会触发.md
-            - 10.12.42-年7月1日HansPetterSelasky回应PeterJeremy关于改用多.md
-            - 10.12.43-年7月9日StephenJRoznowski报告61STABLEamd64上以m.md
-            - 10.12.44-年7月15日DivackyRoman报告linuxgdb因内部断言失败完全不可用.md
-            - 10.12.45-年7月22日george+freebsd确认根因是系统自动启用plip0接口后一.md
-            - 10.12.46-年7月27日Intron称在70CURRENT内核配置中加入KDBDDBGDBI.md
-            - 10.12.47-年6月6日SoClinuxolator开发者DivackyRoman称其为amd.md
-            - 10.12.48-年3月7日IvanVoras回应MatthewDFuller关于gjournal.md
-            - 10.12.49-年3月20日AGRussellIV自述把最小安装装进1GBU盘随后清空该盘以cp.md
-            - 10.12.50-年3月27日MichaelWLucas报告其运行syslogdDNS与DHCP等.md
-            - 10.12.51-年5月27日jodocusorg的JoostBekkers称友人的机器安装60R.md
-            - 10.12.52-年11月2日berklixorg的JulianStacey报告两台61RELEA.md
-            - 10.12.53-年10月30日YarTikhiy在其文件树深度异常的讨论串中回应UlrichSp.md
-            - 10.12.54-年4月2日myguardnl的ThijsEilander回应一位试图以ptrac.md
-            - 10.12.55-年8月8日CraigBoston回应在FreeBSD内核中使用用户态zlib库的.md
-            - 10.12.56-年8月20日JulianDSeifert称其派生自unrealircd的ircd.md
-            - 10.12.57-年12月1日GregTroxel称在NetBSD上遇到Linux共享库问题thu.md
-            - 10.12.58-年2月3日FrankMayhar发布ffs2recov称其为JohnMarkGu.md
-            - 10.12.59-年2月13日MWarnerLosh据DanielRudy的dmesg判断sio未.md
-            - 10.12.60-年2月20日ThomasDavidRivers自述放弃ral4驱动改用ndis因.md
-            - 10.12.61-年2月26日JoeAuty自述其机器可从FreeBSD62光盘第一张启动但即便把.md
-            - 10.12.62-年1月4日EdSchouten重申其先前关于jail引用泄漏的分析并提出修改ma.md
-            - 10.12.63-年1月11日BerndWalter解释校验和卸载的原理称tcpdump看到错误校.md
-            - 10.12.64-年1月31日PeterJeremy回应RobertWatson关于ABI变更应同.md
-            - 10.12.65-年6月9日MarcelMoolenaar回应IvanVoras关于在geom_p.md
-            - 10.12.66-年6月25日DannyBraniss报告其iscsi_open中structth.md
-            - 10.12.67-年3月12日FrankKnobbe称数年前曾就ipfilter的ipfs工具向D.md
-            - 10.12.68-年3月31日PieterdeGoeje报告__thread变量在fPIC共享对象.md
-            - 10.12.69-年5月14日KrisKennaway回应RickCPetty的追问说明INDEX.md
-            - 10.12.70-年5月22日CraigBoston回应IvanVoras所述GPT字段采用磁盘绝.md
-            - 10.12.71-年11月9日DannyBraniss报告SunX2200上10月20日之后的内核.md
-            - 10.12.72-年11月16日Yuri回应Garrett关于该话题每月反复出现的抱怨建议在nvi.md
-            - 10.12.73-年10月2日DagErlingSmørgrav回应StevenHartland关.md
-            - 10.12.74-年10月15日AlexeyPopov报告3台Dell2850以PERC4RAID.md
-            - 10.12.75-年10月27日DannyBraniss归纳dump卡死症状称dump会创建3个进.md
-            - 10.12.76-年9月19日PawelJakubDawidek回应JamesGritton关于分.md
-            - 10.12.77-年4月14日MitsuruIWASAKI发现卸下ATA通道后系统会在ata_su.md
-            - 10.12.78-年11月2日AlexandreVieira报告其新笔记本AcerAspire56.md
-            - 10.12.79-年8月6日JoaoBR报告升级BIOS后AMD5000+在smp加cpufreq.md
-            - 10.12.80-年1月18日DagErlingSmørgrav报告华硕P5BV配IntelG96.md
-            - 10.12.81-年5月10日HenrikBrixAndersen回应某位T60p用户称acpi_.md
-            - 10.12.82-年10月22日WayneChapeskie自述其ToshibaM40SF3自54.md
-            - 10.12.83-年2月21日BruceEvans在PRi38667469中比较i387汇编与fd.md
-            - 10.12.84-年10月14日MariusStrobl宣告HEAD已初步支持USIII及更新的s.md
-            - 10.12.85-年5月4日KurtLidl自述长期在多种sparc64机器上使用纯ZFS安装并认.md
-            - 10.12.86-年6月19日ChessGriffin提交PRpowerpc124740附上把po.md
-            - 10.12.87-年10月15日Horst说Peter给的sysctl技巧奏效了新的报错是R128.md
-            - 10.12.88-年9月12日PeterGrehan说按Nathan的提示把模式降到WDMA2之后.md
-            - 10.12.89-年1月27日NickWithers回复说自己还没试过Nathan建议的火线dco.md
-            - 10.12.90-年5月11日JustinHibbits说隔了八个月才终于测到AndreasTob.md
-            - 10.12.91-年11月18日AndreyVElsukov读过资料后判断FreeBSD一直误把A.md
-            - 10.12.92-年10月11日JustinHibbits回复AndreasTobler对DTra.md
-            - 10.12.93-年9月8日PeterGrehan告诉NathanWhitehorn自己深陷bhy.md
-            - 10.12.94-年11月15日GregFausak回帖称他们用etinccom卡也遇到自发重启6.md
-            - 10.12.95-年11月22日TaihwaLiang用安装软盘升级到42RELEASE内核探测不.md
-            - 10.12.96-年12月12日PeterJeremy回复称内核任何高于O的优化等级均不受支持并指.md
-            - 10.12.97-年9月17日提交c8b89c11移除usrsbinperiodic里$_loca.md
-            - 10.12.98-年8月2日DrMarkusWaldeck在61RELEASE上提PRdocs10.md
-            - 10.12.99-年12月13日GregLehey反驳说这是semantics而非grammart.md
-            - 10.12.100-年2月20日NikiDenev报PRdocs93590pfconf手册页提到ro.md
-            - 10.12.101-年1月7日EugeneGrosbein回复PRdocs59835指出ipfw8手.md
-            - 10.12.102-年5月12日GiorgosKeramidas处理docs82296将状态从ope.md
-            - 10.12.103-年11月12日AlejandroPulver在61RELEASEp1上向book.md
-            - 10.12.104-年10月18日chinsan接手docs99640其PR内容是Replace${.md
-            - 10.12.105-年10月24日CristiKlein回复trhodes关于FreeBSDHand.md
-            - 10.12.106-年5月11日TimKientzle反对把元数据放在归档之外或附在归档尾部认为全部.md
+            - 10.12.7-2005 年 4 月 5 日，FreeBSD 开发者 Søren Schmidt 答复 ICH6 SATA RAID 支持状况.md
+            - 10.12.8-2005 年 4 月 15 日，gmail.com 的 Joseph Koshy 解释不宜用 send-pr 提交内核转储，因 GNATS 走邮件.md
+            - 10.12.9-2005 年 4 月 23 日，chuckr.org 的 Chuck Robey 自述已用 k3b 成功复制 DVD，现打算把一张在美国买不到.md
+            - 10.12.10-2005 年 8 月 1 日，redshift.com 的 ray 自述能熟练配置 FreeBSD 服务器，却在周末于桌面机上安装 5.4 时处处碰壁.md
+            - 10.12.11-2005 年 8 月 16 日，Michael Honeyfield 就驱动中 mmap 的怪异行为求助：其驱动返回的数值看似正确.md
+            - 10.12.12-2005 年 12 月 4 日，GiZmen 报告花一整天排查后确认是 altq 作怪，仅启用 pf 规则时机器正常，一开启 altq 规则 CPU 立刻被占满.md
+            - 10.12.13-2005 年 2 月 1 日，Paulo Fragoso 报告三星 PRISM2 网卡在 FreeBSD 5.3 下做 hostap 时速率始终停在 2Mbps.md
+            - 10.12.14-2005 年 2 月 14 日，SysKonnect 的 Gerald Heinig 按 Stephan Uphoff 给的选项编译内核后.md
+            - 10.12.15-2005 年 1 月 12 日，Vulpes Velox 报告其 rc 改动已可用，新增两个 rc.conf 变量，其中 nis_avail_tester 用于指定测试脚本.md
+            - 10.12.16-2005 年 1 月 25 日，Matthew Dillon 在讨论串中表示，恢复设备状态的难度被严重低估，可行路线要么让全体驱动支持新的休眠恢复 API.md
+            - 10.12.17-2005 年 1 月 31 日，Xin LI 提出名为 skeleton jail 的构想，让 jail 通过只读的 mount_null 共享宿主机的 base 系统二进制与库.md
+            - 10.12.18-2005 年 7 月 9 日，Mark Murray 在讨论中回应 Sam Leffler 称曾托人添加 OpenBSD 的 sysctl 却始终未见下文.md
+            - 10.12.19-2005 年 7 月 18 日，Joerg Sonnenberger 表示近两年 Heimdal 出现过一些棘手问题，虽不及 MIT krb5 严重，但凭记忆而言不可轻忽.md
+            - 10.12.20-2005 年 7 月 25 日，Scott Long 解释 Felix-KM 所声明的 _IOWR 会在进入时从用户态拷入四字节、退出时再拷出四字节.md
+            - 10.12.21-2005 年 6 月 13 日，Christoph Hellwig 补充建议，若要在 FreeBSD 中加入该特性，不应把整个 file 结构传下去.md
+            - 10.12.22-2005 年 6 月 22 日，Norbert Koch 报告 kbdmux 的新测试现象：等屏保激活后按控制键，其后所按的键都变成控制键组合，例如按 j 得到换行.md
+            - 10.12.23-2005 年 6 月 30 日，Gayn Winters 报告 Tyan S5150 用 ICH6R 组 RAID1 时.md
+            - 10.12.24-2005 年 3 月 4 日，Peter Jeremy 就硬盘原子写入做估算，依 Seagate Barracuda 手册数据推算一次随机寻道加磁道写入需 17.8 毫秒.md
+            - 10.12.25-2005 年 3 月 8 日，Nokia 的 Vijay Singh 回应答复，说明已把属于 sysdump_hdr 结构的位图写入磁盘，磁盘例程未报告漏写任何块.md
+            - 10.12.26-2005 年 3 月 31 日，comsys.ntu-kpi.kiev.ua 的 Andrey Simonenko 于 2005 年 3 月 31 日就 5.3 的 user-wired 内存提出第一问.md
+            - 10.12.27-2005 年 5 月 23 日，Raphael H. Becker 测试 Juergen Unger 的新版 jail getfsstat 补丁后反馈.md
+            - 10.12.28-2005 年 11 月 23 日，署名 BSD 的 celeritystorm.com 用户称从 6.0-RELEASE 升级到 6.0-STABLE 后无法登录.md
+            - 10.12.29-2005 年 10 月 2 日，Gleb Smirnoff 答复关于 FreeBSD 5.4 AMD64 上 MPD 无法启动的报告.md
+            - 10.12.30-2005 年 10 月 13 日，Tim Kientzle 就 libarchive 与 libtool 提问.md
+            - 10.12.31-2005 年 10 月 21 日，John Baldwin 就 sio(4) 附件问题回复 M. Warner Losh.md
+            - 10.12.32-2005 年 10 月 28 日，Søren Schmidt 回应 Hitachi 硬盘写入缓慢的讨论，坦言对 Hitachi 硬盘没有经验.md
+            - 10.12.33-2005 年 9 月 6 日，Vladimir Yu. Stepanov 反驳 Vlad GALU 关于可用二层过滤器控制抓包方向的建议，认为这条路径并不简单.md
+            - 10.12.34-2005 年 9 月 11 日，wilbury.sk 的 Daniel Gerzo 宣布问题已解决：自动引导只到 a 分区找 ／boot／loader.md
+            - 10.12.35-2005 年 9 月 25 日，Exit Consulting 的 Frank Mayhar 答复 Giorgos Keramidas 关于 ccg 在去掉该赋值后即为未使用变量的意见，称自己主要是把这一冗余指出，以便有提交权限者核实并考虑删除该行.md
+            - 10.12.36-2006 年 4 月 9 日，Peter Jeremy 以其单位经验回应，称有多台机器作冗余网关通往 40 多个专用网络，早先只有 4 个网络时用多张网卡，后判定不可扩展.md
+            - 10.12.37-2006 年 4 月 16 日，Andreas Bachmann 报告其新购 Dell Inspiron 9400 笔记本在装上 6.0 与 6.1-BETA4.md
+            - 10.12.38-2006 年 2 月 2 日，Vasil Dimov 在同一讨论串中答复 Ensel Sharon，解释挂载后所见实为被挂载文件系统的根目录，因此属主、属组与权限也随之改变.md
+            - 10.12.39-2006 年 2 月 24 日，Giorgos Keramidas 补充说明其 netstat 紧凑输出补丁，因 -s 选项已被统计显示占用，改用 -c 作为紧凑输出的开关.md
+            - 10.12.40-2006 年 1 月 16 日，Steve Suhre 报告其 T1 线路被大量 named 查询淹没，导致 30 至 50% 的丢包.md
+            - 10.12.41-2006 年 1 月 26 日，Vitaliy Skakun 报告快速反复向 ／dev／cuaR00 写入会触发 panic.md
+            - 10.12.42-2006 年 7 月 1 日，Hans Petter Selasky 回应 Peter Jeremy 关于改用多个不相邻物理页的建议，指出多数 USB 设备驱动依赖连续缓冲.md
+            - 10.12.43-2006 年 7 月 9 日，Stephen J. Roznowski 报告 6.1-STABLE amd64 上以 mksnap_ffs 建快照后用 fsck_ffs 检查.md
+            - 10.12.44-2006 年 7 月 15 日，Divacky Roman 报告 linux gdb 因内部断言失败完全不可用，且 FreeBSD 的 gdb 无法附加到运行中的进程.md
+            - 10.12.45-2006 年 7 月 22 日，george+freebsd 确认根因是系统自动启用 plip0 接口后一直占用 ppbus 直到有人将其关闭，并称该问题在 5.3 时代即已存在.md
+            - 10.12.46-2006 年 7 月 27 日，Intron 称在 7.0-CURRENT 内核配置中加入 KDB、DDB、GDB、INVARIANTS、WITNESS 等选项后.md
+            - 10.12.47-2006 年 6 月 6 日，SoC linuxolator 开发者 Divacky Roman 称其为 amd64 启用模块构建的补丁因缺少符号而无法 kldload.md
+            - 10.12.48-2006 年 3 月 7 日，Ivan Voras 回应 Matthew D. Fuller 关于 gjournal 的提问.md
+            - 10.12.49-2006 年 3 月 20 日，A.G. Russell IV 自述把最小安装装进 1GB U 盘，随后清空该盘.md
+            - 10.12.50-2006 年 3 月 27 日，Michael W. Lucas 报告其运行 syslogd、DNS 与 DHCP 等 UDP 程序的机器会偶发全部停摆.md
+            - 10.12.51-2006 年 5 月 27 日，jodocus.org 的 Joost Bekkers 称友人的机器安装 6.0R 后频繁崩溃，此前 4.10R 一直稳定运行.md
+            - 10.12.52-2006 年 11 月 2 日，berklix.org 的 Julian Stacey 报告两台 6.1-RELEASE 主机间 NFS 对 4GB 及以上文件失败.md
+            - 10.12.53-2006 年 10 月 30 日，Yar Tikhiy 在其文件树深度异常的讨论串中回应 Ulrich Spoerlein 提出的关闭 soft updates 之建议.md
+            - 10.12.54-2007 年 4 月 2 日，myguard.nl 的 Thijs Eilander 回应一位试图以 ptrace 拒绝系统调用的提问者.md
+            - 10.12.55-2007 年 8 月 8 日，Craig Boston 回应在 FreeBSD 内核中使用用户态 zlib 库的提问，称面向用户态的库不能直接链入内核，需针对内核环境移植.md
+            - 10.12.56-2007 年 8 月 20 日，Julian D. Seifert 称其派生自 unrealircd 的 ircd 在 FreeBSD 5.5-Release 上偶发冻结.md
+            - 10.12.57-2007 年 12 月 1 日，Greg Troxel 称在 NetBSD 上遇到 Linux 共享库问题：thunderbird 与 firefox 设置的 LD_LIBRARY_PATH 在调用 acroread 显示 pdf 时仍生效，使 acroread 读到.md
+            - 10.12.58-2007 年 2 月 3 日，Frank Mayhar 发布 ffs2recov，称其为 John-Mark Gurney 的 ffsrecov 的大幅改写版.md
+            - 10.12.59-2007 年 2 月 13 日，M. Warner Losh 据 Daniel Rudy 的 dmesg 判断 sio 未检测到该卡的中断.md
+            - 10.12.60-2007 年 2 月 20 日，Thomas David Rivers 自述放弃 ral(4) 驱动改用 ndis，因 ral 不支持其 WMP54Gv4.1 卡.md
+            - 10.12.61-2007 年 2 月 26 日，Joe Auty 自述其机器可从 FreeBSD 6.2 光盘第一张启动，但即便把光盘上的 ／boot 目录拷回本机.md
+            - 10.12.62-2007 年 1 月 4 日，Ed Schouten 重申其先前关于 jail 引用泄漏的分析，并提出修改 make_dev_credv.md
+            - 10.12.63-2007 年 1 月 11 日，Bernd Walter 解释校验和卸载的原理，称 tcpdump 看到错误校验和是因内核未计算而留给硬件处理.md
+            - 10.12.64-2007 年 1 月 31 日，Peter Jeremy 回应 Robert Watson 关于 ABI 变更应同步修改若干字段的建议，补充认为 mode 也应改为 mode_t.md
+            - 10.12.65-2007 年 6 月 9 日，Marcel Moolenaar 回应 Ivan Voras 关于在 geom_part 中支持 fdisk 与 disklabel 的建议.md
+            - 10.12.66-2007 年 6 月 25 日，Danny Braniss 报告其 iscsi_open 中 struct thread 的 td_proc 打印为 0.md
+            - 10.12.67-2007 年 3 月 12 日，Frank Knobbe 称数年前曾就 ipfilter 的 ipfs 工具向 Darren 提交补丁，始终未获回复.md
+            - 10.12.68-2007 年 3 月 31 日，Pieter de Goeje 报告 __thread 变量在 -fPIC 共享对象场景下失效，附最小复现程序与编译命令.md
+            - 10.12.69-2007 年 5 月 14 日，Kris Kennaway 回应 Rick C. Petty 的追问，说明 INDEX 中有些字段长度并无上限.md
+            - 10.12.70-2007 年 5 月 22 日，Craig Boston 回应 Ivan Voras 所述 GPT 字段采用磁盘绝对偏移一说.md
+            - 10.12.71-2007 年 11 月 9 日，Danny Braniss 报告 Sun X2200 上 10 月 20 日之后的内核弄坏了 bge.md
+            - 10.12.72-2007 年 11 月 16 日，Yuri 回应 Garrett 关于该话题每月反复出现的抱怨，建议在 nvidia-driver Port的输出信息中加入该 Wiki 页面地址.md
+            - 10.12.73-2007 年 10 月 2 日，Dag-Erling Smørgrav 回应 Steven Hartland 关于突破 256 个 pty 上限的询问.md
+            - 10.12.74-2007 年 10 月 15 日，Alexey Popov 报告 3 台 Dell 2850 以 PERC4 RAID5 跑 lighttpd 供流媒体.md
+            - 10.12.75-2007 年 10 月 27 日，Danny Braniss 归纳 dump 卡死症状，称 dump 会创建 3 个进程并以 kill 同步，信号有时在阻塞时仍被收到.md
+            - 10.12.76-2007 年 9 月 19 日，Pawel Jakub Dawidek 回应 James Gritton 关于分层 jail 的询问.md
+            - 10.12.77-2006 年 4 月 14 日，Mitsuru IWASAKI 发现卸下 ATA 通道后系统会在 ata_suspend() 陷入死循环.md
+            - 10.12.78-2006 年 11 月 2 日，Alexandre Vieira 报告其新笔记本 Acer Aspire 5601 AWLMi 的 ACPI 字节码损坏.md
+            - 10.12.79-2007 年 8 月 6 日，JoaoBR 报告升级 BIOS 后 AMD 5000+ 在 smp 加 cpufreq 与 powerd 下正常.md
+            - 10.12.80-2007 年 1 月 18 日，Dag-Erling Smørgrav 报告华硕 P5B-V 配 Intel G965 在 amd64-CURRENT 下没有热区信息.md
+            - 10.12.81-2007 年 5 月 10 日，Henrik Brix Andersen 回应某位 T60p 用户.md
+            - 10.12.82-2007 年 10 月 22 日，Wayne Chapeskie 自述其 Toshiba M40-SF3 自 5.4 起禁用 ACPI，BIOS 到 6.2 才解禁但硬盘无法识别.md
+            - 10.12.83-2005 年 2 月 21 日，Bruce Evans 在 PR i386／67469 中比较 i387 汇编与 fdlibm 对数函数的耗时.md
+            - 10.12.84-2008 年 10 月 14 日，Marius Strobl 宣告 HEAD 已初步支持 US-III 及更新的 sun4u 机器，并列出一批可运行机型.md
+            - 10.12.85-2018 年 5 月 4 日，Kurt Lidl 自述长期在多种 sparc64 机器上使用纯 ZFS 安装并认为相当可靠，早期用 Netra T1.md
+            - 10.12.86-2008 年 6 月 19 日，Chess Griffin 提交 PR powerpc／124740.md
+            - 10.12.87-2008 年 10 月 15 日，Horst 说 Peter 给的 sysctl 技巧奏效了，新的报错是 R128 找不到 fbdevhw 模块导致屏幕没有可用配置.md
+            - 10.12.88-2008 年 9 月 12 日，Peter Grehan 说按 Nathan 的提示把模式降到 WDMA2 之后 DMA 读写能完成了.md
+            - 10.12.89-2009 年 1 月 27 日，Nick Withers 回复说自己还没试过 Nathan 建议的火线 dcons 调试通道，打算接下来就动手，并笑称这将是他头一回用火线.md
+            - 10.12.90-2010 年 5 月 11 日，Justin Hibbits 说隔了八个月才终于测到 Andreas Tobler 的 gdb6 移植补丁，多数功能正常.md
+            - 10.12.91-2011 年 11 月 18 日，Andrey V. Elsukov 读过资料后判断 FreeBSD 一直误把 APM 自身尺寸当成最大条目数.md
+            - 10.12.92-2012 年 10 月 11 日，Justin Hibbits 回复 Andreas Tobler 对 DTrace 补丁的逐条意见，承认上一版仍有残留，重发新补丁供测试.md
+            - 10.12.93-2013 年 9 月 8 日，Peter Grehan 告诉 Nathan Whitehorn 自己深陷 bhyve 的 FreeBSD 10 相关工作，未必能亲自提交这一修复.md
+            - 10.12.94-2000 年 11 月 15 日，Greg Fausak 回帖称他们用 etinc.com 卡也遇到自发重启，6 条 T1 线挂着 600 多个 frame DSL 客户.md
+            - 10.12.95-2000 年 11 月 22 日，Tai-hwa Liang 用安装软盘升级到 4.2-RELEASE，内核探测不到 ata0-master.md
+            - 10.12.96-2000 年 12 月 12 日，Peter Jeremy 回复称内核任何高于 -O 的优化等级均不受支持，并指出 checksum 是一补码和而非 CRC.md
+            - 10.12.97-2025 年 9 月 17 日，提交 c8b89c11 移除 ／usr／sbin／periodic 里 $_localbase 的初始化，$dirlist 变成重复的 ／etc／periodic 两次，使该目录下脚本在每次安全运行时执行两遍，应回退该初始化.md
+            - 10.12.98-2006 年 8 月 2 日，Dr. Markus Waldeck 在 6.1-RELEASE 上提 PR docs／101262.md
+            - 10.12.99-2006 年 12 月 13 日，Greg Lehey 反驳说这是 semantics 而非 grammar，take on board 是航海比喻用法完全正确.md
+            - 10.12.100-2006 年 2 月 20 日，Niki Denev 报 PR docs／93590.md
+            - 10.12.101-2006 年 1 月 7 日，Eugene Grosbein 回复 PR docs／59835 指出 ipfw(8) 手册页未警告某些规则虽被接受但实际无意义.md
+            - 10.12.102-2006 年 5 月 12 日，Giorgos Keramidas 处理 docs／82296 将状态从 open 改为 feedback.md
+            - 10.12.103-2006 年 11 月 12 日，Alejandro Pulver 在 6.1-RELEASE-p1 上向 book.sgml 1.765 提交 PH 补丁，补充 LUA_CMD.md
+            - 10.12.104-2006 年 10 月 18 日，chinsan 接手 docs／99640.md
+            - 10.12.105-2006 年 10 月 24 日，Cristi Klein 回复 trhodes 关于 FreeBSD Handbook 防火墙章节的讨论.md
+            - 10.12.106-2007 年 5 月 11 日，Tim Kientzle 反对把元数据放在归档之外或附在归档尾部，认为全部放进归档才能让人只用 tar 就提取、修改并重建包，便于调试与试验新做法.md
     - 第11章-软件工程：评审、测试、MFC 与发布工程
         - 11.1-src 树与 committer 流程：Committer's Guide 与 commit message 体例
         - 11.2-代码风格纪律：style(9)、cstyle 与提交前的格式门槛
@@ -10295,45 +10295,45 @@
         - 11.4-测试：Kyua、CI 与 tinderbox
         - 11.5-MFC：从 HEAD 到 STABLE 的合并纪律
         - 11.6-发布工程：Release Engineering 团队、公告体例与版本命名
-            - 11.6.1-要点140发布工程团队由ColinPercivalReleaseEngineer.md
+            - 11.6.1-要点：14.0 发布工程团队由 Colin Percival（Release Engineering Lead）、Glen Barber（Deputy Lead for 14.0）、Mike Karels 等组成.md
         - 11.7-Ports 工程：poudriere、QA 与 port 管理者流程
         - 11.8-文档工程：Handbook、man 页与 release notes 的同步
         - 11.9-缺陷跟踪平台的更替：从 GNATS 到 Bugzilla（2014）
-            - 11.9.1-1998年5月4日Hubbard称GNATS管理数千工单时缺陷明显已淹没重要事项.md
-            - 11.9.2-年5月17日StefanZehl把x11wmwmx从40升到56删patcha到.md
+            - 11.9.1-1998 年 5 月 4 日，Hubbard 称 GNATS 管理数千工单时缺陷明显已淹没重要事项，提议编写带检索索引与线索串联的网页版长期工单系统.md
+            - 11.9.2-1999 年 5 月 17 日，Stefan Zehl 把 x11-wm／wmx 从 4.0 升到 5.6，删 patch-a 到 d 加 patch-ae.md
         - 11.10-FreeBSD 14.0 的发布与 stable／14 分支（2023 年）
             - 11.10.1-14.0 发布特性集与工程语境.md
             - 11.10.2-14.0 核心技术特性全景.md
             - 11.10.3-14.0 与 13.x 版本特性对比.md
-            - 11.10.4-年4月19日MateuszGuzik提供vnlru_free_pickdiff供.md
-            - 11.10.5-年1月28日FreeBSD开发者EdMaste更正自己先前的说法说明WITH_D.md
-            - 11.10.6-年3月29日MateuszGuzik认为内核中setbutnotused告警过于.md
-            - 11.10.7-年11月18日HansPetterSelasky自述其音频程序以rtprio8运.md
-            - 11.10.8-年9月17日GaryJennejohn报告内核配置未包含NONINVARIANT.md
-            - 11.10.9-年8月15日AlexanderLeidinger报告其运行约23个jail的宿主.md
-            - 11.10.10-年6月21日HartmutBrandt自述设置静态ARP表项时netlink套接.md
-            - 11.10.11-年5月15日GlenBarber回应代理环境下curl与pyrequests受影.md
-            - 11.10.12-年9月5日MarkMillard自述在ZFS的poudrierebulka中按下.md
-            - 11.10.13-年7月30日DagErlingSmørgrav指出filemon实为device.md
-            - 11.10.14-年3月27日MateuszGuzik自述执行trussftimeout2slee.md
-            - 11.10.15-年11月14日MichalMeloun排查armv7内核换用llvm19lld后.md
-            - 11.10.16-年4月13日AlastairHogge自述在只读的usrsrc上更新15CURR.md
-            - 11.10.17-年8月2日RickMacklem提出MK_MITKRB5为yes时的偏好主张us.md
-            - 11.10.18-年8月9日IanFREISLICH报告OpenSSLlegacyprovider.md
-            - 11.10.19-年8月18日MarcinCieslak报告升级到提交ac641d55ea06的1.md
-            - 11.10.20-年8月31日LexiWinter指出不能用OSVERSION区分Heimdal与.md
-            - 11.10.21-年2月15日MarkMillard指出aarch64armv7与riscv64等.md
-            - 11.10.22-年1月10日MaurizioVairani自述用vmbhyve创建150CURR.md
-            - 11.10.23-年6月25日Alex通报CURRENT中mandoc更新带来的手册写法变化库手册.md
-            - 11.10.24-年5月12日AlexanderLeidinger报告在uipc_usrreqc第.md
-            - 11.10.25-年5月25日JurajLutter在列表中自述已提交评审D35694拟把Open.md
-            - 11.10.26-年11月22日MarkMillard以MALLOC_CONF设置junkallo.md
-            - 11.10.27-年10月1日CySchubert提交补丁把krb5错误表生成过程的输出静音认为其.md
-            - 11.10.28-年10月15日MatteoRiondato主张为pkgbase元包写明收录标准认.md
-            - 11.10.29-年9月5日CySchubert报告HP840上i915kms与iwlwifi的p.md
-            - 11.10.30-年9月23日GlebSmirnoff报告9月稳定周中Netflix的AB测试未发.md
-            - 11.10.31-年3月17日RickMacklem提出allocuio中iovcnt与UIO_M.md
-            - 11.10.32-年3月27日MatthiasLanter定位到相关提交并指出acpidump中存.md
+            - 11.10.4-2022 年 4 月 19 日，Mateusz Guzik 提供 vnlru_free_pick.diff 供验证 vnode 回收问题，并自述该补丁尚不可提交.md
+            - 11.10.5-2022 年 1 月 28 日，FreeBSD 开发者 Ed Maste 更正自己先前的说法.md
+            - 11.10.6-2022 年 3 月 29 日，Mateusz Guzik 认为内核中 set but not used 告警过于泛滥，且看不到持续清理的努力，这些告警弊大于利，主张默认关闭.md
+            - 11.10.7-2022 年 11 月 18 日，Hans Petter Selasky 自述其音频程序以 rtprio 8 运行，按键时负载可达单核八成.md
+            - 11.10.8-2022 年 9 月 17 日，Gary Jennejohn 报告内核配置未包含 NONINVARIANTS 选项时编译 vfs_lookup.c 失败.md
+            - 11.10.9-2023 年 8 月 15 日，Alexander Leidinger 报告其运行约 23 个 jail 的宿主自某次源码更新后出现怪异网络问题，而更早的源码仍正常.md
+            - 11.10.10-2023 年 6 月 21 日，Hartmut Brandt 自述设置静态 ARP 表项时，netlink 套接字上如期收到 RTM_NEWNEIGH 消息.md
+            - 11.10.11-2023 年 5 月 15 日，Glen Barber 回应代理环境下 curl 与 py-requests 受影响的缺陷.md
+            - 11.10.12-2023 年 9 月 5 日，Mark Millard 自述在 ZFS 的 poudriere bulk -a 中按下 ^T.md
+            - 11.10.13-2024 年 7 月 30 日，Dag-Erling Smørgrav 指出 filemon 实为 device 而非 option.md
+            - 11.10.14-2024 年 3 月 27 日，Mateusz Guzik 自述执行 truss -f timeout 2 sleep 10 会使 timeout 无法结束 sleep 且自身卡住，只能以 SIGKILL 终止 truss，此后单跑 timeout.md
+            - 11.10.15-2024 年 11 月 14 日，Michal Meloun 排查 armv7 内核换用 llvm19 lld 后出现的损坏，发现链接脚本未列出 linker set 生成的段.md
+            - 11.10.16-2025 年 4 月 13 日，Alastair Hogge 自述在只读的 ／usr／src 上更新 15-CURRENT 时 etcupdate 报无法构建新树.md
+            - 11.10.17-2025 年 8 月 2 日，Rick Macklem 提出 MK_MITKRB5 为 yes 时的偏好.md
+            - 11.10.18-2025 年 8 月 9 日，Ian FREISLICH 报告 OpenSSL legacy provider 自某夜构建后损坏.md
+            - 11.10.19-2025 年 8 月 18 日，Marcin Cieslak 报告升级到提交 ac641d55ea06 的 15-current 后 wifibox 不再启动.md
+            - 11.10.20-2025 年 8 月 31 日，Lexi Winter 指出不能用 OSVERSION 区分 Heimdal 与 MIT Kerberos，因为用户可以自行选择.md
+            - 11.10.21-2025 年 2 月 15 日，Mark Millard 指出 aarch64、armv7 与 riscv64 等平台缺少 GENERIC.hints.md
+            - 11.10.22-2025 年 1 月 10 日，Maurizio Vairani 自述用 vm-bhyve 创建 15.0-CURRENT 虚拟机.md
+            - 11.10.23-2025 年 6 月 25 日，Alex 通报 CURRENT 中 mandoc 更新带来的手册写法变化，库手册应改用 SYNOPSIS 中的 Lb 宏，LIBRARY 段已弃用.md
+            - 11.10.24-2025 年 5 月 12 日，Alexander Leidinger 报告在 uipc_usrreq.c 第 1440 行触发 sb_acc 大于等于 datalen 的断言 panic，回溯落在 soreceive 与 read 系统调用上，并询问.md
+            - 11.10.25-2025 年 5 月 25 日，Juraj Lutter 在列表中自述已提交评审 D35694，拟把 OpenBSD 的 ts(1) 命令引入 FreeBSD 基本系统.md
+            - 11.10.26-2025 年 11 月 22 日，Mark Millard 以 MALLOC_CONF 设置 junk：alloc 与 zero：true 重测 armv7 chroot 构建.md
+            - 11.10.27-2025 年 10 月 1 日，Cy Schubert 提交补丁把 krb5 错误表生成过程的输出静音，认为其过于嘈杂；该问题由 garga 报告.md
+            - 11.10.28-2025 年 10 月 15 日，Matteo Riondato 主张为 pkgbase 元包写明收录标准，认为清晰文档本身就是可落地的改进，既让用户知道安装元包能期待什么.md
+            - 11.10.29-2025 年 9 月 5 日，Cy Schubert 报告 HP 840 上 i915kms 与 iwlwifi 的 panic 已解决.md
+            - 11.10.30-2025 年 9 月 23 日，Gleb Smirnoff 报告 9 月稳定周中 Netflix 的 A／B 测试未发现性能或稳定性退化，其个人 nVidia 桌面升级基本顺利.md
+            - 11.10.31-2026 年 3 月 17 日，Rick Macklem 提出 allocuio 中 iovcnt 与 UIO_MAXIOV 比较的 KASSERT 是否仍有必要.md
+            - 11.10.32-2024 年 3 月 27 日，Matthias Lanter 定位到相关提交并指出 acpidump 中存在 IRQ 1 的 INT 覆盖条目.md
     - 第12章-FreeBSD 技术路线与应用领域综合：系统工程与长期演进
         - 12.1-基本系统统一性的形成
         - 12.2-内核、用户空间与工程体系的协同
@@ -10348,29 +10348,29 @@
             - 12.10.1-Linux（自由软件哲学与 GNU 人文运动）.md
             - 12.10.2-Windows ／ 微软（商业文化与闭源范式）.md
             - 12.10.3-NetBSD（可移植性哲学与 clean code 文化）.md
-            - 12.10.4-年9月1日DougBarton回应JoaoSchim时称BrettGlass关于.md
-            - 12.10.5-年11月1日DarrenPilgrim转引JaytonGarnett关于没有BS.md
-            - 12.10.6-年7月30日obrien转发SysAdmin杂志编辑AmberAnkerholz.md
-            - 12.10.7-年9月22日PaulGriffith自述在i486DX26632MB内存的机器上.md
-            - 12.10.8-年12月12日AmancioHasty评论compbsdfreebsdmisc上.md
-            - 12.10.9-年4月8日AmancioHasty表示不会支付X11R64的授权费并转述Davi.md
-            - 12.10.10-年5月5日JordanHubbard称WalnutCreek每年FreeBSD业.md
-            - 12.10.11-年7月12日JackVelte应他人要求在讨论中贴出Windows95中ftpe.md
-            - 12.10.12-年10月21日JohannVisagie转述一位微软内部人士的评论称其喜欢Fre.md
-            - 12.10.13-年2月1日JordanHubbard判断FreeBSD对桌面的兴趣已边缘到不值得.md
-            - 12.10.14-年7月16日BrettGlass呼吁在Borland的Linux移植调查表Oth.md
-            - 12.10.15-年11月6日BrettGlass回应eBay上所谓GreenbayCDROM官方.md
-            - 12.10.16-年2月10日MarcoMolteni建议以BSD操作系统及其各开发项目之名集体提.md
-            - 12.10.17-年6月15日TroySettle指出微软在dicecom上招聘FreeBSD系统.md
-            - 12.10.18-年1月6日BradKnowles称FreeBSD当时不支持PowerPC其Pow.md
-            - 12.10.19-年4月16日BrettGlass指出Stallman致TheRegister的信.md
-            - 12.10.20-年6月13日PedroFGiffuni感叹历史上最流行的两款操作系统都内藏BSD.md
-            - 12.10.21-年12月13日TerryLambert自述去年九月离开IBM称IBM收购Whis.md
-            - 12.10.22-年4月2日UCTCSysadmin致函Unisys反对其与微软联手攻击Unix主.md
-            - 12.10.23-年12月22日MiguelMendez回应称NetBSD的pkgsrc体系本就脱.md
+            - 12.10.4-2003 年 9 月 1 日，Doug Barton 回应 Joao Schim 时称，Brett Glass 关于 FreeBSD 桌面定位的自述高度偏向其个人议程.md
+            - 12.10.5-2008 年 11 月 1 日，Darren Pilgrim 转引 Jayton Garnett 关于没有 BSD 就没有互联网、没有互联网也没有 Linux 的说法.md
+            - 12.10.6-1996 年 7 月 30 日，obrien 转发 Sys Admin 杂志编辑 Amber Ankerholz 的回信，对方称自由 UNIX 主题未来可能纳入选题.md
+            - 12.10.7-1997 年 9 月 22 日，Paul Griffith 自述在 i486DX2-66、32MB 内存的机器上安装 FreeBSD 2.1.6.md
+            - 12.10.8-1997 年 12 月 12 日，Amancio Hasty 评论 comp.bsd.freebsd.misc 上持续的 FreeBSD 与 Linux 之争.md
+            - 12.10.9-1998 年 4 月 8 日，Amancio Hasty 表示不会支付 X11R6.4 的授权费.md
+            - 12.10.10-1998 年 5 月 5 日，Jordan Hubbard 称 Walnut Creek 每年 FreeBSD 业务额轻松超过百万美元.md
+            - 12.10.11-1998 年 7 月 12 日，Jack Velte 应他人要求在讨论中贴出 Windows 95 中 ftp.exe 的 strings 输出.md
+            - 12.10.12-1998 年 10 月 21 日，Johann Visagie 转述一位微软内部人士的评论，称其喜欢 FreeBSD 工程师埋头做事的作风.md
+            - 12.10.13-1999 年 2 月 1 日，Jordan Hubbard 判断 FreeBSD 对桌面的兴趣已边缘到不值得考虑，服务器才是项目的面包与黄油.md
+            - 12.10.14-1999 年 7 月 16 日，Brett Glass 呼吁在 Borland 的 Linux 移植调查表 Other 栏多填 FreeBSD.md
+            - 12.10.15-1999 年 11 月 6 日，Brett Glass 回应 eBay 上所谓 Greenbay CDROM 官方发行版的疑问，主张官方发行版来自 FreeBSD 项目本身.md
+            - 12.10.16-2000 年 2 月 10 日，Marco Molteni 建议以 BSD 操作系统及其各开发项目之名集体提名 EFF 先锋奖，理由包括 socket API 与 BSD 式许可.md
+            - 12.10.17-2000 年 6 月 15 日，Troy Settle 指出微软在 dice.com 上招聘 FreeBSD 系统管理员.md
+            - 12.10.18-2001 年 1 月 6 日，Brad Knowles 称 FreeBSD 当时不支持 PowerPC，其 PowerMac 7200 只能考虑 NetBSD 或 OpenBSD.md
+            - 12.10.19-2001 年 4 月 16 日，Brett Glass 指出 Stallman 致 The Register 的信中自称常被误称为 Linux 的操作系统的主要开发者.md
+            - 12.10.20-2001 年 6 月 13 日，Pedro F. Giffuni 感叹历史上最流行的两款操作系统都内藏 BSD 代码.md
+            - 12.10.21-2001 年 12 月 13 日，Terry Lambert 自述去年九月离开 IBM，称 IBM 收购 Whistle 后要求移除计划随下一代产品发布的 SQUID.md
+            - 12.10.22-2002 年 4 月 2 日，UCTC Sysadmin 致函 Unisys，反对其与微软联手攻击 Unix.md
+            - 12.10.23-2002 年 12 月 22 日，Miguel Mendez 回应称 NetBSD 的 pkgsrc 体系本就脱胎于 FreeBSD 的 ports.md
         - 12.11-版本发行时间线：FreeBSD 1.0–15.x（1993–2026）
         - 12.12-BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）
-            - 12.12.1-要点图形栈落后DRM滞后12年WiFi碎片化桌面可用性差距文档陈旧Handboo.md
+            - 12.12.1-要点：图形栈落后（DRM 滞后 1-2 年）、WiFi 碎片化、桌面可用性差距、文档陈旧（Handbook 部分 5+ 年未更新）.md
         - 12.13-time_t 类型与 2038 年问题：64 位时间迁移
             - 12.13.1-64-bit time_t：i386 平台 Y2038 问题修复.md
             - 12.13.2-i386／armv7 平台 Tier 状态调整.md
@@ -10380,7 +10380,7 @@
             - 12.13.6-64-bit time_t 完成与架构支持变化.md
     - 第13章-FreeBSD 的语言生态与 Rust 准入
         - 13.1-Modula-3 与 CVSup
-            - 13.1.1-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md
+            - 13.1.1-要点：CVSup 史料保存较好，因 Polstra 个人维护网站与文档，但 Modula-3 编译器的衰落导致 CVSup 在后期难以构建，部分镜像站点已不可访问.md
         - 13.2-C++ 标准库的 BSD 化：libc++ 与 libcxxrt
             - 13.2.1-libc++ 与 libcxxrt：C++ 标准库的 BSD 化.md
         - 13.3-Rust 进入基本系统：Somers 方案与社区争论
@@ -10394,1412 +10394,1412 @@
             - 13.4.1-Linux 6.12-6.18：Rust for Linux、sched_ext BPF 调度器与 AI 时代的 Linux 演进.md
     - 第14章-FreeBSD 2.x 开发者邮件档案：内核与网络
         - 14.1-TCP／IP 协议栈与网络性能
-            - 14.1.1-年6月26日乔追问范雅各布森1988年谈提高TCP堆栈性能那封邮件时Nagle算.md
-            - 14.1.2-1999年7月27日DagErlingSmorgrav反对将uipc_socke.md
-            - 14.1.3-1999年8月20日geoff与Mark讨论FreeBSD生成初始TCP序列号算.md
-            - 14.1.4-1999年8月24日wayne对比FreeBSD31与Linux225收发小SM.md
-            - 14.1.5-1999年9月6日bosko指出mbufclusters枯竭panic系MGET.md
-            - 14.1.6-1999年9月15日assar针对ping最大包为何止于8184的提问只回一句让.md
-            - 14.1.7-年12月2日基金会资助CAIA向FreeBSD引入五种新TCP拥塞控制算法引用时.md
-            - 14.1.8-年8月11日SeanPaulRees回应说涉事网卡由VMware桥接仿真怀疑与校.md
-            - 14.1.9-年8月19日Tom反驳WesPeters称全双工须全网支持的观点全双工对连到全双.md
-            - 14.1.10-年12月15日MichaelRobinson回应被引者提议把MINCLSIZE做.md
-            - 14.1.11-年8月29日BobWillcox报大量arpresolvecantallocat.md
-            - 14.1.12-年5月28日216RELEASE上疑发现TCP缺陷快速重传之后每收到一个重复AC.md
-            - 14.1.13-年9月9日LuigiRizzo将dummynet整合至桥接层可在桥接层做带宽限制.md
-            - 14.1.14-年10月22日ArchieCobbs认为FreeBSD已不再使用SIOCSARP.md
-            - 14.1.15-年5月2日DavidGreenman回应询问称kernelmb_mapfull是.md
-            - 14.1.16-年4月15日LouisMamakos基于上周邮件列表讨论参考43BSDtahoe.md
-            - 14.1.17-年4月21日DarrenReed提出不必把in_cksum结果存入ip_sumI.md
-            - 14.1.18-年6月24日PoulHenningKamp认为ARP模型更优且应允许稀疏网络下同.md
-            - 14.1.19-年7月24日若只需发送带RouterAlertIP选项的数据包直接调用setso.md
-            - 14.1.20-年3月18日SeanFagan反映22GAMMA的kernuipc_syscal.md
-            - 14.1.21-年4月19日彼得杜福尔认为该基准结果排除了经由文件系统这一最简单方案但他仍主张先.md
-            - 14.1.22-年6月18日AlexanderVTischenko提议给TCP增加RFC风格的U.md
-            - 14.1.23-年9月13日BrianMitchell回复Sunthiti询问如何把已封好IP头.md
-            - 14.1.24-年9月29日RichardJones展示源地址被伪造且目标端口不存在的三次SYN.md
-            - 14.1.25-年10月6日本封作者只在末尾补了一句认为那句FreeBSD比Linux快一半的说.md
-            - 14.1.26-年10月28日DonLewis认为是否省去内存间拷贝其实取决于操作系统只要使用页.md
-            - 14.1.27-年5月8日daryn报告在TCP连接的客户端向已关闭连接的服务器调用write时.md
-            - 14.1.28-年5月23日jim认为双方分歧主要在术语自承LASTACK与CLOSE_WAIT.md
-            - 14.1.29-年2月16日MatthewDillon回应KevinDay正在用尽带宽而非CPU.md
-            - 14.1.30-年2月19日JeffreyHsu称自己在sched_sync中也见过多余的LIS.md
-            - 14.1.31-年3月21日MatthewDillon纠正Alfred关于零拷贝的说法指出所谓零.md
-            - 14.1.32-年6月24日比萨大学的LuigiRizzo在实现可靠数据报协议PGM时撞见sbf.md
-            - 14.1.33-年6月28日Backplane的MatthewDillon说明UIO_NOCOP.md
+            - 14.1.1-1997 年 6 月 26 日，乔追问范雅各布森 1988 年谈提高 TCP 堆栈性能那封邮件时 Nagle 算法是否已实现.md
+            - 14.1.2-1999 年 7 月 27 日，Dag-Erling Smorgrav 反对将 uipc_socket.c 中 Squid 相关选项做成 sysctl 开关 认为改成 socket option 更为妥当.md
+            - 14.1.3-1999 年 8 月 20 日，geoff 与 Mark 讨论 FreeBSD 生成初始 TCP 序列号算法的可预测性.md
+            - 14.1.4-1999 年 8 月 24 日，wayne 对比 FreeBSD 3.1 与 Linux 2.2.5 收发小 SMTP 消息性能.md
+            - 14.1.5-1999 年 9 月 6 日，bosko 指出 mbuf clusters 枯竭 panic 系 MGET 失败后 m_retry 再失败所致.md
+            - 14.1.6-1999 年 9 月 15 日，assar 针对 ping 最大包为何止于 8184 的提问，只回一句让提问者去看 sysctl 变量 net.inet.raw.maxdgram.md
+            - 14.1.7-2010 年 12 月 2 日，基金会资助 CAIA 向 FreeBSD 引入五种新 TCP 拥塞控制算法.md
+            - 14.1.8-2000 年 8 月 11 日，Sean-Paul Rees 回应说涉事网卡由 VMware 桥接仿真，怀疑与校园内其他 VMware 安装冲突.md
+            - 14.1.9-1998 年 8 月 19 日，Tom 反驳 Wes Peters 称全双工须全网支持的观点，全双工对连到全双工端口的任何设备都有益，交换机能在半双工与全双工端口间转发.md
+            - 14.1.10-1998 年 12 月 15 日，Michael Robinson 回应被引者提议把 MINCLSIZE 做成 sysctl 变量而非内核选项，表示愿意实现.md
+            - 14.1.11-1996 年 8 月 29 日，Bob Willcox 报大量 arpresolve can't allocate llinfo for 206.224.65.33 反复刷屏.md
+            - 14.1.12-1997 年 5 月 28 日，2.1.6-RELEASE 上疑发现 TCP 缺陷：快速重传之后每收到一个重复 ACK 就把 cwnd 加一个分组，形成虚假慢启动.md
+            - 14.1.13-1998 年 9 月 9 日，Luigi Rizzo 将 dummynet 整合至桥接层可在桥接层做带宽限制.md
+            - 14.1.14-1998 年 10 月 22 日，Archie Cobbs 认为 FreeBSD 已不再使用 SIOCSARP、SIOCGARP、SIOCDARP 这三个 ioctl 选项.md
+            - 14.1.15-1995 年 5 月 2 日，David Greenman 回应询问称 ／kernel mb_map full 是 bug 而非预期行为.md
+            - 14.1.16-1996 年 4 月 15 日，Louis Mamakos 基于上周邮件列表讨论参考 4.3BSD-tahoe 老代码为 UDP 重新实现时间戳选项并给 FreeBSD-current 附补丁用 recvmsg 取回.md
+            - 14.1.17-1996 年 4 月 21 日，Darren Reed 提出不必把 in_cksum 结果存入 ip_sum.md
+            - 14.1.18-1996 年 6 月 24 日，Poul-Henning Kamp：认为 ARP 模型更优 且应允许稀疏网络下同一 DLCI 或 VC 对应多个网络主机.md
+            - 14.1.19-1996 年 7 月 24 日，若只需发送带 Router Alert IP 选项的数据包，直接调用 setsockopt 即可，无需内核支持.md
+            - 14.1.20-1997 年 3 月 18 日，Sean Fagan 反映 2.2-GAMMA 的 kern／uipc_syscalls.c 里 tsleep 等待串写作 connec.md
+            - 14.1.21-1997 年 4 月 19 日，彼得杜福尔认为该基准结果排除了经由文件系统这一最简单方案，但他仍主张先跑一遍作为调试驱动时的基线，另提一套替代路径，由驱动把缓冲映射进进程地址空间.md
+            - 14.1.22-1997 年 6 月 18 日，Alexander V. Tischenko 提议给 TCP 增加 RFC 风格的 Urgent 指针.md
+            - 14.1.23-1997 年 9 月 13 日，Brian Mitchell 回复 Sunthiti 询问如何把已封好 IP 头的完整报文直接送到指定接口且不含链路层地址.md
+            - 14.1.24-1997 年 9 月 29 日，Richard Jones 展示源地址被伪造且目标端口不存在的三次 SYN 交互，FreeBSD 需再耗约一分十五秒才回 RST.md
+            - 14.1.25-1997 年 10 月 6 日，本封作者只在末尾补了一句，认为那句 FreeBSD 比 Linux 快一半的说法只是玩笑，句尾笑脸符号正是玩笑标记.md
+            - 14.1.26-1997 年 10 月 28 日，Don Lewis 认为是否省去内存间拷贝其实取决于操作系统，只要使用页对齐缓冲并按页大小读取.md
+            - 14.1.27-1998 年 5 月 8 日，daryn 报告在 TCP 连接的客户端向已关闭连接的服务器调用 write 时进程直接退出不返回，预期应得到 -1，请求同类经验与绕过办法.md
+            - 14.1.28-1998 年 5 月 23 日，jim 认为双方分歧主要在术语，自承 LAST-ACK 与 CLOSE_WAIT 这类 TCP 状态名容易让人误当成报文.md
+            - 14.1.29-1999 年 2 月 16 日，Matthew Dillon 回应 Kevin Day 正在用尽带宽而非 CPU 的观点，认为若瓶颈确是内存带宽则 DMA 无助于缓解.md
+            - 14.1.30-1999 年 2 月 19 日，Jeffrey Hsu 称自己在 sched_sync() 中也见过多余的 LIST_REMOVE，并已跑近似补丁数日.md
+            - 14.1.31-1999 年 3 月 21 日，Matthew Dillon 纠正 Alfred 关于零拷贝的说法，指出所谓零拷贝实为一拷贝.md
+            - 14.1.32-1999 年 6 月 24 日，比萨大学的 Luigi Rizzo 在实现可靠数据报协议 PGM 时撞见 sbflush 异常.md
+            - 14.1.33-1999 年 6 月 28 日，Backplane 的 Matthew Dillon 说明 UIO_NOCOPY 仅用于处理 VFS／BIO 与 VM 交互中 I／O 的一种退化情形，与 read write 系统调用及 mmap 代码均无关联，并指出常规调用与内存映射 I／O 汇合于.md
         - 14.2-网卡与设备驱动
-            - 14.2.1-年7月16日PoulHenningKamp回复问1985年那块3Com网卡什么型.md
-            - 14.2.2-1999年8月16日FrankMayhar自述键盘故障根因是配置中把device.md
-            - 14.2.3-1999年11月5日warner认同对方关于去掉OUI检查的意见称他所见到的原始.md
-            - 14.2.4-1999年8月18日charles指出BillPaul已为AlteonTigon.md
-            - 14.2.5-年7月31日吉姆达勒姆自述一张廉价PCI以太网卡声称能用NE2000驱动启动后编.md
-            - 14.2.6-年1月17日JWunsch表示除非这块Microdyne网卡是NE2000一类已.md
-            - 14.2.7-年6月28日duncan把一块旧NE2000网卡插到current机器上得到ed.md
-            - 14.2.8-年8月5日MikeMuir复现MarkkoMerzin场景cat从devaudi.md
-            - 14.2.9-年11月2日PetriHelenius拔插SMCde0网线后链路灯等全部恢复OS.md
-            - 14.2.10-年11月7日DavidMalone报集线器重启约90秒期间de0卡自行切到coa.md
-            - 14.2.11-年2月9日FreeBSD210Development下SMC8432成功工作启动.md
-            - 14.2.12-年3月25日MorganDavis报325current下NE1000探测正常显.md
-            - 14.2.13-年7月5日MattThomas说把DC21040驱动改为IOmapped访问后4.md
-            - 14.2.14-年7月14日OllivierRobert说自己那台SMC8013EP问题相同不断.md
-            - 14.2.15-年8月10日DrewDerbyshire继续排查zp0不能收用DOS配置工具核对.md
-            - 14.2.16-年8月12日Thomas说新de驱动只有一个新特性21140一系卡片的seria.md
-            - 14.2.17-年12月2日AndrzejBialecki装完22ALPHA发现de0行为怪异网.md
-            - 14.2.18-年2月22日ChrisColeman说IntelEtherExpresspro1.md
-            - 14.2.19-年5月7日gnat在2171内核里用6月8日pnp快照SMC8416已可用但So.md
-            - 14.2.20-年7月19日MichaelSmith说明应屏蔽设备上可能干扰的中断确保自己的中断.md
-            - 14.2.21-年8月5日被引者称自己编写了Lance驱动的PCIprobe代码将提交该补丁并使.md
-            - 14.2.22-年8月29日BruceEvans回应为何把波特率限制在Linux用到的取值称只为.md
-            - 14.2.23-年11月3日PeterDufault回应LabPC驱动不应长时间占用CPU的建议.md
-            - 14.2.24-年12月26日WilkoBulte称DEFPAfddi卡在225R上实测可用推翻.md
-            - 14.2.25-年4月16日MikeSmith说lnc的probe成功而ifconfig报ioc.md
-            - 14.2.26-年8月23日MikeSmith称miibus之所以单列成选项与pci至今仍单列同.md
-            - 14.2.27-年10月17日TerryLambert认为应该设独立的close与last_cl.md
-            - 14.2.28-年12月19日JustinTheodoreGibbs回复3c579装完ifcon.md
-            - 14.2.29-年3月11日BruceEvans答Cyclades驱动的bidir支持目前是驱动.md
-            - 14.2.30-年3月27日Hosokawa转述NoriyukiTakahashi已修复3C58.md
-            - 14.2.31-年4月6日JordanKHubbard回复称快照内核中确有ze0驱动并贴出dev.md
-            - 14.2.32-年7月11日RobertMinnear为ZnyxZX342网卡给出补丁改动sys.md
-            - 14.2.33-年9月22日dennis向列表询问关于编写物理设备模块的信息是否已经有最佳资料来.md
-            - 14.2.34-年10月10日BruceEvans反问多点串口总线是什么并建议如需对16x50做.md
-            - 14.2.35-年10月18日JulianElischer回帖问驱动层的改动能否改在if_eth.md
-            - 14.2.36-年1月3日PeterDufault答称无需调制解调器控制时BocaBoardBB.md
-            - 14.2.37-年2月25日FrankDurdaIV说TerryLambert提到有人能把音频格.md
-            - 14.2.38-年3月25日设备驱动入口点与主次设备号分配方式取决于面向current还是更早版.md
-            - 14.2.39-年4月7日JulianElischer主张各类鼠标经同一设备翻译为公共协议后再对.md
-            - 14.2.40-年4月17日PhilTaylor写ChaseResearchAT系列SIO卡驱动.md
-            - 14.2.41-年6月8日DavidGreenman自述为IntelEtherExpressPr.md
-            - 14.2.42-年6月29日Webster给FreeBSD系统的sioc打补丁用标志0x0010.md
-            - 14.2.43-年9月13日数日前215上3C595系列网卡疑似硬件缺陷该vx驱动偶发打印ear.md
-            - 14.2.44-年9月19日TRW私有网络用SMC10100网卡发出155KB巨型以太网帧DE驱.md
-            - 14.2.45-年11月14日MaximBolotin称digiboard驱动已从215移植至2.md
-            - 14.2.46-年11月23日霍巴德认为只要报出驱动器制造商和型号就够用了剩下的麻烦事交给索伦去.md
-            - 14.2.47-年12月26日PeterHawkins确认sb卡问题根因是中断冲突将ed1迁至i.md
-            - 14.2.48-年1月14日BrianMcGovern说ep驱动即便在3C509关闭即插即用后仍.md
-            - 14.2.49-年1月15日RobertSexton指出Digiboard至少有30款产品但仅少.md
-            - 14.2.50-年4月18日DaveTruesdell说自己3com卡在6030X上出过类似故障.md
-            - 14.2.51-年4月21日Smith称正在查看此问题指出驱动自称只允许单一打开者但如Bruce.md
-            - 14.2.52-年5月8日告知其站点提供压缩tar包内含新的de驱动可在22RELENG运行不需.md
-            - 14.2.53-年5月9日回应询问表示其实自己无需出手Matt已主动开始改造de驱动问题对他而言.md
-            - 14.2.54-年5月20日报告3Com网卡走UTP口时无法添加网关路由已重编内核并照ep4加了.md
-            - 14.2.55-年5月27日WayneBaety说他的鼠标也有同样问题不过用的是串行鼠标COM1.md
-            - 14.2.56-年7月15日安赫尔顿报告设备驱动在开机时用它分配半兆内存虽成功启动但怀疑页面并未.md
-            - 14.2.57-年7月21日迈克尔史密斯给出SNDCTL_DSP_GETTRIGGER与SNDC.md
-            - 14.2.58-年9月9日特里兰伯特论证拉低DTR的正统做法是把波特率设为0SystemV历来如.md
-            - 14.2.59-年9月17日米夏埃尔转述他兄长的说法称ZyxelElite在FreeBSD上配合.md
-            - 14.2.60-年9月25日Terry针对关于模块式接头的追问用ASCII图并排画出两种接头轮廓.md
-            - 14.2.61-年9月26日TerryLambert认为该fxp驱动问题最初就无人解决过属早期帖.md
-            - 14.2.62-年9月30日AdrianCaceres需要为网络PCI网卡做optionrom求.md
-            - 14.2.63-年10月5日JWunsch系统默认只认第一串行口需改sioc中相关宏定义并重编内.md
-            - 14.2.64-年10月27日NateWilliams答复pao尚未更新到225但旧版差异除去一.md
-            - 14.2.65-年11月3日关于内存映射型ISA驱动的页错误作者认为映射窗口正确时本应可用怀疑映.md
-            - 14.2.66-年11月8日luigi说试过用自己的代码激活这个PnP设备但系统未识别又说因为设.md
-            - 14.2.67-年11月25日kelly说自己代码里只读一次IIR若LSR检查无错误且IIR指示.md
-            - 14.2.68-年1月10日JohnMarkGurney答AU文件不必另找播放器用cp或cat直.md
-            - 14.2.69-年1月12日MartyLeisner报告IBMtokenring卡不支持混杂模式.md
-            - 14.2.70-年1月24日dima报告fxp驱动在他的机器上可用列出两张IntelEtherE.md
-            - 14.2.71-年1月26日pmeerw自述正在写一个把serialadapter伪装成ethe.md
-            - 14.2.72-年2月2日rhh说明探测失败是他自己的配置疏漏把挂在SoundBlaster32.md
-            - 14.2.73-年2月4日amancio计划将bt848驱动改为lkm模块以便调试帧捕获的内存分.md
-            - 14.2.74-年2月25日terry称N个站点的tokenring允许N31个并发令牌使多个分.md
-            - 14.2.75-年2月24日wilko就TR支持是否已有进展答得很直如今似乎已没人愿意把时间花在.md
-            - 14.2.76-年2月26日dan说这张卡还有个不小的额外好处能在硬件里自动完成IPTCP与UD.md
-            - 14.2.77-年3月10日yuri转述学生的疑问询问有没有API可以让主机自身覆盖自己网卡的M.md
-            - 14.2.78-年4月13日tom就上一条消息里的型号笔误致歉并更正自己那张卡其实是3C589D.md
-            - 14.2.79-年4月15日joe建议改为支持CiscoBaySun等厂商采用的trunking.md
-            - 14.2.80-年4月21日ulf说他已推进到驱动能工作的阶段并发问谁能为这个新驱动分配一个主设.md
-            - 14.2.81-年5月12日amancio认为这个主设备号是全新未占用的空位因此驱动作者仍有机会.md
-            - 14.2.82-年4月17日DougWhite转发SamuelLam关于3COM3C589DPC.md
-            - 14.2.83-年5月24日报3COMEtherlinkII端口310内存d8000未见IRQ标.md
-            - 14.2.84-年7月28日RobertSwindells指所用PCNET芯片文档未提及存在IS.md
-            - 14.2.85-年7月30日AlfredPerlstein回报3c905B驱动运行良好xl0识别.md
-            - 14.2.86-年8月14日StephaneLegrand答JulianElischer所问谓U.md
-            - 14.2.87-年11月23日TerryLambert转述他人称de探测失败不打印消息并不好他则.md
-            - 14.2.88-年1月28日来自yediiafnl的WilkoBulte报告de0Digital.md
-            - 14.2.89-年3月7日KevinDay回应AmancioHasty的IRQ255问题自述曾遇.md
-            - 14.2.90-年5月11日Pisa大学LuigiRizzo回应VoxWareLGSND串口mi.md
-            - 14.2.91-年7月3日DagErlingSmorgrav续述前信中借bpfilter改名一事.md
+            - 14.2.1-1995 年 7 月 16 日，Poul-Henning Kamp 回复问 1985 年那块 3Com 网卡什么型号的人，答是 3c505 即 Etherlink.md
+            - 14.2.2-1999 年 8 月 16 日，Frank Mayhar 自述键盘故障根因是配置中把 device atkbd0 at atkbdc？ 误写替代 device atkbd0 at isa？，感谢 hackers 回应并自称接过头痛帽同时为多次邮件反弹致歉.md
+            - 14.2.3-1999 年 11 月 5 日，warner 认同对方关于去掉 OUI 检查的意见，称他所见到的原始 PAO 代码并无 MAC address check.md
+            - 14.2.4-1999 年 8 月 18 日，charles 指出 Bill Paul 已为 Alteon Tigon 1 与 Tigon 2 网卡开发驱动.md
+            - 14.2.5-1997 年 7 月 31 日，吉姆达勒姆自述一张廉价 PCI 以太网卡声称能用 NE2000 驱动，启动后编号不被识别没有分配驱动.md
+            - 14.2.6-1997 年 1 月 17 日，J Wunsch 表示除非这块 Microdyne 网卡是 NE2000 一类已支持型号的克隆 否则跑起来希望渺茫 他没见过这牌子 请对方补料.md
+            - 14.2.7-1998 年 6 月 28 日，duncan 把一块旧 NE2000 网卡插到 -current 机器上，得到 ed0 device timeout 报错.md
+            - 14.2.8-2000 年 8 月 5 日，Mike Muir 复现 Markko Merzin 场景.md
+            - 14.2.9-1997 年 11 月 2 日，Petri Helenius 拔插 SMC de0 网线后链路灯等全部恢复，OS 却仍报 status： no carrier，日志只见 de0： link down： cable problem？,重新 ifconfig 100baseTX 才回到 active.md
+            - 14.2.10-1997 年 11 月 7 日，David Malone 报集线器重启约 90 秒期间 de0 卡自行切到 co-ax,ifconfig de0 media UTP 可修复，问初始 ifconfig 能否固定媒体类型.md
+            - 14.2.11-1995 年 2 月 9 日，FreeBSD 2.1.0-Development 下 SMC8432 成功工作，启动信息显示 wdc0 挂在 0x1f0-0x1f7 irq 14.md
+            - 14.2.12-1995 年 3 月 25 日，Morgan Davis 报 3／25 -current 下 NE1000 探测正常.md
+            - 14.2.13-1995 年 7 月 5 日，Matt Thomas 说把 DC21040 驱动改为 I／O mapped 访问后 4 口以太网的锁死消失.md
+            - 14.2.14-1995 年 7 月 14 日，Ollivier Robert 说自己那台 SMC8013EP 问题相同，不断把输入包丢掉.md
+            - 14.2.15-1998 年 8 月 10 日，Drew Derbyshire 继续排查 zp0 不能收：用 DOS 配置工具核对 IRQ 10 与 5 均无效，换网线换端口仍无效.md
+            - 14.2.16-1996 年 8 月 12 日，Thomas 说新 de 驱动只有一个新特性：21140 一系卡片的 serial eeprom 里有足够信息，驱动据此自动适配新卡，配置逻辑大改.md
+            - 14.2.17-1996 年 12 月 2 日，Andrzej Bialecki 装完 2.2-ALPHA 发现 de0 行为怪异.md
+            - 14.2.18-1997 年 2 月 22 日，Chris Coleman 说 Intel Ether Express pro 100b 插三块报 page fault panic.md
+            - 14.2.19-1997 年 5 月 7 日，gnat 在 2.1.7.1 内核里用 6 月 8 日 pnp 快照，SMC8416 已可用，但 SoundBlaster 16 仍配不通.md
+            - 14.2.20-1997 年 7 月 19 日，Michael Smith 说明应屏蔽设备上可能干扰的中断，确保自己的中断处理程序不会被调用，其他可能干扰的中断同理.md
+            - 14.2.21-1997 年 8 月 5 日，被引者称自己编写了 Lance 驱动的 PCI probe 代码、将提交该补丁并使启动盘随后出现在 current.freebsd.org.md
+            - 14.2.22-1997 年 8 月 29 日，Bruce Evans 回应为何把波特率限制在 Linux 用到的取值，称只为让 Linux 程序可用.md
+            - 14.2.23-1997 年 11 月 3 日，Peter Dufault 回应 LabPC 驱动不应长时间占用 CPU 的建议，说 fault 一词过重，当初是为未用的功能把控制交回用户进程.md
+            - 14.2.24-1997 年 12 月 26 日，Wilko Bulte 称 DEFPA fddi 卡在 2.2.5R 上实测可用，推翻此前传言.md
+            - 14.2.25-1998 年 4 月 16 日，Mike Smith 说 lnc 的 probe 成功而 ifconfig 报 ioctl SIOCAIFADDR File exists.md
+            - 14.2.26-2000 年 8 月 23 日，Mike Smith 称 miibus 之所以单列成选项，与 pci 至今仍单列同理，因 Config 不够聪明，无法自动处理这类依赖.md
+            - 14.2.27-2000 年 10 月 17 日，Terry Lambert 认为应该设独立的 close 与 last_close 入口点.md
+            - 14.2.28-1994 年 12 月 19 日，Justin Theodore Gibbs 回复 3c579 装完 ifconfig 后完全无法通讯的询问.md
+            - 14.2.29-1995 年 3 月 11 日，Bruce Evans 答 Cyclades 驱动的 bidir 支持目前是驱动的可选功能而非官方策略.md
+            - 14.2.30-1995 年 3 月 27 日，Hosokawa 转述 Noriyuki Takahashi 已修复 3C589 PCMCIA Etherlink III 驱动在 -current 下的失效，该驱动原由他与 Murata 在 2.0R 提交，内测者以 3C589B-COMBO 与 3C589B-TP 验证正常.md
+            - 14.2.31-1995 年 4 月 6 日，Jordan K. Hubbard 回复称快照内核中确有 ze0 驱动并贴出 device ze0 配置行.md
+            - 14.2.32-1995 年 7 月 11 日，Robert Minnear 为 Znyx ZX342 网卡给出补丁改动 sys pci 下 dc21040.h 与 if_de.c 两文件.md
+            - 14.2.33-1995 年 9 月 22 日，dennis 向列表询问关于编写物理设备模块的信息是否已经有最佳资料来源，以及当前的模块实现本身是否已经稳定到可以对外使用.md
+            - 14.2.34-1995 年 10 月 10 日，Bruce Evans 反问多点串口总线是什么，并建议如需对 16x50 做常规串口 IO 则应在 sio 里添加支持而非另起新驱动.md
+            - 14.2.35-1995 年 10 月 18 日，Julian Elischer 回帖问驱动层的改动能否改在 if_ethersubr.c 中完成而非放在各驱动本身.md
+            - 14.2.36-1996 年 1 月 3 日，Peter Dufault 答称无需调制解调器控制时 BocaBoard BB1008 在 2.05 良好仅暖重启偶有探测问题.md
+            - 14.2.37-1996 年 2 月 25 日，Frank Durda IV 说，Terry Lambert 提到有人能把音频格式的 CD 当数据读，从而省去 DAAD 转换;他还说明 matcd 驱动本就能读 redbook 数据，使用 ／dev／matcd0c 即可从任意 CD 读取原始 2352 字节的块.md
+            - 14.2.38-1996 年 3 月 25 日，设备驱动入口点与主次设备号分配方式取决于面向 current 还是更早版本.md
+            - 14.2.39-1996 年 4 月 7 日，Julian Elischer 主张各类鼠标经同一设备翻译为公共协议后再对外暴露.md
+            - 14.2.40-1996 年 4 月 17 日，Phil Taylor 写 Chase Research AT 系列 SIO 卡驱动，每卡有两个跳线可选的中断号.md
+            - 14.2.41-1996 年 6 月 8 日，David Greenman 自述为 Intel EtherExpress Pro100B 写有驱动 现已在 2.1-stable 与 current 可用 用户可从此取用或等待下一版发布.md
+            - 14.2.42-1996 年 6 月 29 日，Webster 给 FreeBSD 系统的 sio.c 打补丁 用标志 0x0010 标记交换 DCD 与 DSR 补丁取自 2.1.0-STABLE 的 diffs 并追问 64 端口与主设备号.md
+            - 14.2.43-1996 年 9 月 13 日，数日前 2.1.5 上 3C595 系列网卡疑似硬件缺陷 该 vx 驱动偶发打印 early defective adapter 提示 后换装 3C509 恢复正常.md
+            - 14.2.44-1996 年 9 月 19 日，TRW 私有网络用 SMC 10／100 网卡发出 15.5KB 巨型以太网帧，DE 驱动的 BIG_PACKET 宏专为这套系统开启.md
+            - 14.2.45-1996 年 11 月 14 日，Maxim Bolotin 称 digiboard 驱动已从 2.1.5 移植至 2.2 全部 bug 已修复，在 PC／16e 硬件上配置 4 条 28K 专用线.md
+            - 14.2.46-1996 年 11 月 23 日，霍巴德认为只要报出驱动器制造商和型号就够用了剩下的麻烦事交给索伦去处理详细启动参数他自己只需要足够信息去买或借设备来确认具体型号.md
+            - 14.2.47-1996 年 12 月 26 日，Peter Hawkins 确认 sb 卡问题根因是中断冲突，将 ed1 迁至 irq 9 腾出 irq 5 给 sdn0 后工作正常.md
+            - 14.2.48-1997 年 1 月 14 日，Brian McGovern 说 ep 驱动即便在 3C509 关闭即插即用后仍做扫描并打出 3C5X9 found 提示.md
+            - 14.2.49-1997 年 1 月 15 日，Robert Sexton 指出 Digiboard 至少有 30 款产品但仅少数兼容 FreeBSD，并要求确认具体型号.md
+            - 14.2.50-1997 年 4 月 18 日，Dave Truesdell 说自己 3com 卡在 6030X 上出过类似故障，改 ／etc／pccard.conf 只用 irq 11 后解决.md
+            - 14.2.51-1997 年 4 月 21 日，Smith 称正在查看此问题，指出驱动自称只允许单一打开者，但如 Bruce 早先所指，文件描述符会在 fork 间被复制，此限制并无意义.md
+            - 14.2.52-1997 年 5 月 8 日，告知其站点提供压缩 tar 包内含新的 de 驱动可在 2.2-RELENG 运行，不需 ifmedia 但会利用.md
+            - 14.2.53-1997 年 5 月 9 日，回应询问，表示其实自己无需出手，Matt 已主动开始改造 de 驱动，问题对他而言已消解，预计数日内可正常运转，而那份咨询名单已存入 Pilot 备用.md
+            - 14.2.54-1997 年 5 月 20 日，报告 3Com 网卡走 UTP 口时无法添加网关路由，已重编内核并照 ep(4) 加了 link 选项，route add 仍返回网络不可达.md
+            - 14.2.55-1997 年 5 月 27 日，Wayne Baety 说他的鼠标也有同样问题，不过用的是串行鼠标，COM1 与其中断上只接了鼠标，而只要拔掉软驱排线现象就消失.md
+            - 14.2.56-1997 年 7 月 15 日，安赫尔顿报告设备驱动在开机时用它分配半兆内存虽成功启动，但怀疑页面并未真正锁定，同主机两块网卡互转报文时出现缺页并使机器崩溃，询问该问题是否已知.md
+            - 14.2.57-1997 年 7 月 21 日，迈克尔史密斯给出 SNDCTL_DSP_GETTRIGGER 与 SNDCTL_DSP_SETTRIGGER 等 Linux 声音驱动的 ioctl 定义供实现 QSeeMe 所需调用，并断言反射器连不上与未实现的 ioctl 无关.md
+            - 14.2.58-1997 年 9 月 9 日，特里 兰伯特 论证拉低 DTR 的正统做法是把波特率设为 0，System V 历来如此；难点是让 DTR 落下足够久完成复位.md
+            - 14.2.59-1997 年 9 月 17 日，米夏埃尔转述他兄长的说法，称 Zyxel Elite 在 FreeBSD 上配合用户空间的 ppp 工作良好，全文仅此一句，没有说明该设备接在何处.md
+            - 14.2.60-1997 年 9 月 25 日，Terry 针对关于模块式接头的追问，用 ASCII 图并排画出两种接头轮廓，说明这种终端的锁定片只是相对普通模块式接头往右挪了一格.md
+            - 14.2.61-1997 年 9 月 26 日，Terry Lambert 认为该 fxp 驱动问题最初就无人解决过，属早期帖早已知情之事，不宜用无关补丁与错误信息混淆.md
+            - 14.2.62-1997 年 9 月 30 日，Adrian Caceres 需要为网络 PCI 网卡做 option rom，求一份 netboot 源码作参考.md
+            - 14.2.63-1997 年 10 月 5 日，J Wunsch：系统默认只认第一串行口，需改 sio.c 中相关宏定义并重编内核与引导块，然后用 disklabel -B 重装.md
+            - 14.2.64-1997 年 10 月 27 日，Nate Williams 答复 pao 尚未更新到 2.2.5，但旧版差异除去一处之外大多可直接套用.md
+            - 14.2.65-1997 年 11 月 3 日，关于内存映射型 ISA 驱动的页错误，作者认为映射窗口正确时本应可用，怀疑映射未做对，并请对方提供探测与附加阶段的源代码以便排查.md
+            - 14.2.66-1997 年 11 月 8 日，luigi 说试过用自己的代码激活这个 PnP 设备但系统未识别，又说因为设备将用来驱动扫描仪，且有些扫描仪在数据传输期间不会断开连接.md
+            - 14.2.67-1997 年 11 月 25 日，kelly 说自己代码里只读一次 IIR，若 LSR 检查无错误且 IIR 指示 FIFO 中断而非超时.md
+            - 14.2.68-1998 年 1 月 10 日，John-Mark Gurney 答 AU 文件不必另找播放器，用 cp 或 cat 直接把文件写入 ／dev／audio 即可出声.md
+            - 14.2.69-1998 年 1 月 12 日，Marty Leisner 报告 IBM tokenring 卡不支持混杂模式，因此不能 tcpdump.md
+            - 14.2.70-1998 年 1 月 24 日，dima 报告 fxp 驱动在他的机器上可用.md
+            - 14.2.71-1998 年 1 月 26 日，pmeerw 自述正在写一个把 serial adapter 伪装成 ethernet 接口的 misc LKM 驱动，用中断与端口 IO.md
+            - 14.2.72-1998 年 2 月 2 日，rhh 说明探测失败是他自己的配置疏漏.md
+            - 14.2.73-1998 年 2 月 4 日，amancio 计划将 bt848 驱动改为 lkm 模块以便调试 帧捕获的内存分配将另行处理 并询问 pci 子系统是否有需注意之处或额外事项.md
+            - 14.2.74-1998 年 2 月 25 日，terry 称 N 个站点的 token ring 允许 N／3 - 1 个并发令牌，使多个分组能同时在处理，做对还支持双向如 FDDI 那样.md
+            - 14.2.75-1998 年 2 月 24 日，wilko 就 TR 支持是否已有进展答得很直：如今似乎已没人愿意把时间花在 TR 开发上；真想让这块开发做起来，要么自己动手，要么出钱请别人替你写.md
+            - 14.2.76-1998 年 2 月 26 日，dan 说这张卡还有个不小的额外好处，能在硬件里自动完成 IP、TCP 与 UDP 的校验和，据他所见这会把 CPU 占用明显拉低.md
+            - 14.2.77-1998 年 3 月 10 日，yuri 转述学生的疑问 询问有没有 API 可以让主机自身覆盖自己网卡的 MAC 地址 还是必须去改内核才能实现这一效果.md
+            - 14.2.78-1998 年 4 月 13 日，tom 就上一条消息里的型号笔误致歉并更正 自己那张卡其实是 3C589D 而非先前所写的型号 下面把原信整段重贴未作改动 请继续按这个正确型号帮忙排查他原来报的故障 其余描述照旧成立.md
+            - 14.2.79-1998 年 4 月 15 日，joe 建议改为支持 Cisco、Bay、Sun 等厂商采用的 trunking 方案，可能需要特殊网卡把所有 mac 地址设为同一值.md
+            - 14.2.80-1998 年 4 月 21 日，ulf 说他已推进到驱动能工作的阶段，并发问谁能为这个新驱动分配一个主设备号，他的签名写着 Alameda Networks 的地址与电话.md
+            - 14.2.81-1998 年 5 月 12 日，amancio 认为这个主设备号是全新未占用的空位，因此驱动作者仍有机会自己给自己的设备起名字，这等于在命名上给提问者多留了些余地.md
+            - 14.2.82-1997 年 4 月 17 日，Doug White 转发 Samuel Lam 关于 3COM 3C589D PCMCIA 网卡问题解决方案.md
+            - 14.2.83-1997 年 5 月 24 日，报 3COM Etherlink II 端口 310 内存 d8000 未见 IRQ 标识问如何判断 IRQ 及 ifconfig 选项 2.2.2 起不来 NFS 挂载挂住疑为硬件.md
+            - 14.2.84-1998 年 7 月 28 日，Robert Swindells 指所用 PCNET 芯片文档未提及存在 ISA 模式，而该芯片用在笔记本主板上作为 PCI 设备工作正常.md
+            - 14.2.85-1998 年 7 月 30 日，Alfred Perlstein 回报 3c905B 驱动运行良好，xl0 识别为 3Com 3c905B Fast Etherlink XL.md
+            - 14.2.86-1998 年 8 月 14 日，Stephane Legrand 答 Julian Elischer 所问，谓 UDF 全称 Universal Disk Format.md
+            - 14.2.87-1998 年 11 月 23 日，Terry Lambert 转述他人称 de 探测失败不打印消息并不好，他则认为 PCI 探测每个设备都呈递给每个驱动直至有驱动认领.md
+            - 14.2.88-1999 年 1 月 28 日，来自 yedi.iaf.nl 的 Wilko Bulte 报告 de0 Digital 21140A 网卡在 2.2.8-stable 上启动探测间歇失败，报找不到 phy 0、无法读 ENET ROM 且地址未知，唯有断电可解；他怀疑 TULIP 的 DELAY 过短.md
+            - 14.2.89-1999 年 3 月 7 日，Kevin Day 回应 Amancio Hasty 的 IRQ 255 问题，自述曾遇同样故障.md
+            - 14.2.90-1999 年 5 月 11 日，Pisa 大学 Luigi Rizzo 回应 VoxWare／LGSND 串口 midi 驱动更新公告.md
+            - 14.2.91-1999 年 7 月 3 日，Dag-Erling Smorgrav 续述前信中借 bpfilter 改名一事发现的另一个问题，称问题并不严重.md
         - 14.3-存储子系统：SCSI、ATA 与磁光设备
-            - 14.3.1-1999年11月2日Rios在33Stable上往IDEZIP盘写入时控制台被同.md
-            - 14.3.2-1999年12月2日bezuidehndhout把LINUX_CDROMVOLR.md
-            - 14.3.3-年2月1日在22BETA挂载星战原声带光盘时第14轨数据报非法模式错误推测mou.md
-            - 14.3.4-年2月2日MarcFournier报ASUSPCISC200SCSI控制器在st.md
-            - 14.3.5-年5月18日JustinGibbs说明57MHz同步率在Ultra模式无效拟按设.md
-            - 14.3.6-年5月28日DanPolivy报告P100上两块板载IDE控制器wdc0notf.md
-            - 14.3.7-年8月28日GregEarle自述21STABLE机器上一块4GbSeagate.md
-            - 14.3.8-年2月20日PeterDufault回复JustinGibbs确认SCSI总线分.md
-            - 14.3.9-年3月23日EricJSchwertfeger感谢有人修复近期快照看不到现有磁盘.md
-            - 14.3.10-年8月14日GaryPalmer回复DanielOConnor关于7895芯片的.md
-            - 14.3.11-年12月20日吉布斯答按他所知7870系列芯片只有16个SCBDMA段与SCB不.md
-            - 14.3.12-年2月2日Bruce纠正该说法只有带label的slice才被写保护整盘设备并不.md
-            - 14.3.13-年11月17日GiritharanRashiyamany用22ALPHA从sd1.md
-            - 14.3.14-年1月18日BruceEvans坚持etcdisktab几乎不该使用应改用aut.md
-            - 14.3.15-年5月15日PoulHenningKamp手上有一张8Mb的Intel2+闪存卡.md
-            - 14.3.16-年7月26日JustinTGibbs解释chio置于bin是因恢复时可能需要re.md
-            - 14.3.17-年1月20日BruceEvans表态isdiskkludge不适合stable但.md
-            - 14.3.18-年2月24日AndrzejBialecki回答确认自己见过DiskOnChip并.md
-            - 14.3.19-年9月21日Lehey确认vinum文件系统可开softupdates因为vin.md
-            - 14.3.20-年2月9日JustinTGibbs指出非A型Adaptec卡不含RevEaic7.md
-            - 14.3.21-年2月20日BruceEvans回复PaulVinciguerra称ATA规范在.md
-            - 14.3.22-年3月18日CharlesMHannum澄清称关于Adaptec不出NDA就不给.md
-            - 14.3.23-年3月24日SergeABabkin承认前一补丁自己引入了bug追加补丁在读取E.md
-            - 14.3.24-年4月8日PeterdaSilva转述他人关于Viper150需以mtfsf跳至.md
-            - 14.3.25-年4月17日SteveGerakines指出软盘磁带驱动在写入时无法检测CRC软.md
-            - 14.3.26-年9月15日JulianElischer在xcdplayer与SCSICDROM.md
-            - 14.3.27-年10月7日JustinTGibbs回应说2842支持taggedqueuing.md
-            - 14.3.28-年10月23日JoeGreco在NCR810提问串中称仅换新ncrc重编内核的升.md
-            - 14.3.29-年12月30日JulianElischer正在重构磁盘访问布局切片有父切片层级与.md
-            - 14.3.30-年2月1日JustinGibbs指aic7xxx驱动错误恢复代码尤其糟糕因未跟上.md
-            - 14.3.31-年3月8日Chernov指出FreeBSD的移植代码只提供SCSIioctl而无.md
-            - 14.3.32-年3月19日AndrewFoster的FreeBSD21STABLE机器从NCR.md
-            - 14.3.33-年4月24日问题不在驱动器能否内部终结而在内部与外部终结孰优作者使用的SunDe.md
-            - 14.3.34-年5月4日JWunsch指出se4与sa4驱动器既不做散聚也不做总线主DMA总线.md
-            - 14.3.35-年8月27日JamesRisner报告DECRZ74在重寻道时ncr1触发cp断.md
-            - 14.3.36-年10月25日LuoqiChen指出ATAPI挂起根因是插入光盘时atapi_s.md
-            - 14.3.37-年1月8日SteveSims用ccd挂Adaptech1542CF遇vm_bou.md
-            - 14.3.38-年2月6日Gibbs判定超过一页的DMA散集列表必须使用contigmalloc.md
-            - 14.3.39-年2月10日ThomasDavidRivers说明newfs在NTRACKS为1.md
-            - 14.3.40-年2月25日JWunsch拒绝回答配置请求因发问方未交代ExabyteTR3Ea.md
-            - 14.3.41-年4月3日JayeMathisen索性把SCSI链上的全部终结器都拔了换成两端主.md
-            - 14.3.42-年5月30日SimonShapiro反映fdisk在给定无意义参数时会直接抹掉启.md
-            - 14.3.43-年7月19日崔俊浩说自己用的是ATAPI即EIDE接口的Zip驱动器工作同样顺畅.md
-            - 14.3.44-年7月26日拉斯卡维反驳说一条磁带上通常存有多个转储那么按照同样的理由mt为何没.md
-            - 14.3.45-年8月6日MichaelSanders反驳TerryLambert认为CD刻录机.md
-            - 14.3.46-年8月26日在断电造成文件系统损坏的讨论里特里指出Sun机器可以买一张非易失写缓.md
-            - 14.3.47-年8月26日HellmuthMichaelis说据他所知部分HewlettPac.md
-            - 14.3.48-年9月12日KeesJanKoster回忆几天前用dd把新格式化的MSDOS软盘.md
-            - 14.3.49-年9月12日TerryLambert澄清多数机型确实在用NEC软驱控制器关键是控.md
-            - 14.3.50-年10月14日MikeSmith先提醒确认外部存储设备已插好并通电再排查线缆与串.md
-            - 14.3.51-年10月20日JWunsch称所有只写光盘识别逻辑都在scsiconfc文件内若.md
-            - 14.3.52-年12月9日wunsch对光驱命令集是否兼容的回答是希望不大需向HP索取文档另提.md
-            - 14.3.53-年1月20日AndrzejBialecki答复dennis表示软盘空间并不充裕希.md
-            - 14.3.54-年1月30日greglehey报告对不存在的切片sd1e执行dd仍然成功且转移0.md
-            - 14.3.55-年2月9日dennis解释竞态最后两个attach几乎同时发senseioctl.md
-            - 14.3.56-年2月24日karl指出驱动收到SCSI感测0x11与0x0c时不做处理而CMD.md
-            - 14.3.57-年2月27日greg回复称目前volumemanager驱动仍在测试尚未完成并坦.md
-            - 14.3.58-年3月1日terry回答可以修需重刷机器BIOS把drivecount从2改大以.md
-            - 14.3.59-年3月4日tom回应称已有集群设计只把重点放在性能上而非可靠性并举例说明希望能把.md
-            - 14.3.60-年3月8日julian说DPT驱动已入22需在config文件中加DPTOPT选.md
-            - 14.3.61-年3月24日Wunsch认为除scsi8外并无命令行工具可看CD卷标追问卷标究竟.md
-            - 14.3.62-年3月25日JordanKHubbard指出bouncebuffer问题已在22.md
-            - 14.3.63-年5月22日Lee问有人弄出并口zipdrive的可靠运行结果吗他不在乎快不快只.md
-            - 14.3.64-年4月14日TonyOverfield纠正MichaelSmith记不清软驱di.md
-            - 14.3.65-年5月14日求助如何在第二块硬盘上安装FreeBSD说明第二块盘可能是从盘也可能.md
-            - 14.3.66-年8月2日JamieHoward把配ZIPZoom卡的SCSIZIP驱动器从旧机.md
-            - 14.3.67-年8月4日StefanEggers提及自己曾在把文件拷到挂在该卡上的MO盘时查看.md
-            - 14.3.68-年8月11日WilkoBulte在EXABYTE8200磁带机讨论中说明他与Pe.md
-            - 14.3.69-年8月26日WilkoBulte纠正TerryLambert关于1542B系列的.md
-            - 14.3.70-年10月10日PeterdaSilva判断随机访问场景下高速光驱反而慢于旧的4x.md
-            - 14.3.71-年11月13日KennethMerry回复BusLogic卡驱动询问指FreeB.md
-            - 14.3.72-年1月18日feralcom的MatthewJacob称曾在ISP2X00与1X.md
-            - 14.3.73-年3月11日Backplane的MatthewDillon就ccd驱动大段故障提.md
-            - 14.3.74-年3月13日KennethPStox回应KarlDenninger的Adapte.md
-            - 14.3.75-年6月25日荷兰开发者WilkoBulte就FibreChannelWWN持久性.md
-            - 14.3.76-年7月15日Technion的NadavEiron报告其486机器装matcd光.md
+            - 14.3.1-1999 年 11 月 2 日，Rios 在 3.3Stable 上往 IDE ZIP 盘写入时，控制台被同一则 i／o error 消息不断刷满.md
+            - 14.3.2-1999 年 12 月 2 日，bezuidehndhout 把 LINUX_CDROMVOLREAD 改为对接 CDIOCGETVOL.md
+            - 14.3.3-1997 年 2 月 1 日，在 2.2-BETA 挂载星战原声带光盘时第 14 轨数据报非法模式错误 推测 mount_cd9660 只检查第一轨而忽略后续数据轨.md
+            - 14.3.4-1996 年 2 月 2 日，Marc Fournier 报 ASUS PCI SC-200 SCSI 控制器在 -stable 内核上无法启动，BIOS 能找到它和磁盘.md
+            - 14.3.5-1996 年 5 月 18 日，Justin Gibbs 说明 5.7MHz 同步率在 Ultra 模式无效，拟按设备动态开关 Ultra 以放通全部速率.md
+            - 14.3.6-1996 年 5 月 28 日，Dan Polivy 报告 P100 上两块板载 IDE 控制器 wdc0 not found at 0x1f0 与 wdc1 not found at 0x170 致 IDE CDROM 不可用，机器另配 PCI SCSI 卡，运行.md
+            - 14.3.7-1997 年 8 月 28 日，Greg Earle 自述 2.1-STABLE 机器上一块 4 Gb Seagate Barracuda 周期性报 MEDIA ERROR.md
+            - 14.3.8-1995 年 2 月 20 日，Peter Dufault 回复 Justin Gibbs 确认 SCSI 总线分配已改为动态分配，与其他 type drivers 的做法一致.md
+            - 14.3.9-1998 年 3 月 23 日，Eric J. Schwertfeger 感谢有人修复近期快照看不到现有磁盘标签的问题.md
+            - 14.3.10-1998 年 8 月 14 日，Gary Palmer 回复 Daniel O'Connor 关于 7895 芯片的询问，指出该芯片要在 FreeBSD 上工作.md
+            - 14.3.11-1995 年 12 月 20 日，吉布斯答：按他所知 7870 系列芯片只有 16 个 SCB；DMA 段与 SCB 不是一回事，每个 SCB 有 256 个可能 DMA 段.md
+            - 14.3.12-1996 年 2 月 2 日，Bruce 纠正该说法：只有带 label 的 slice 才被写保护，整盘设备并不写保护，且只保护第二个 label 块.md
+            - 14.3.13-1996 年 11 月 17 日，Giritharan Rashiyamany 用 2.2-ALPHA 从 sd1 装到 sd0 选文件系统介质失败，列出 ／usr／snap.md
+            - 14.3.14-1997 年 1 月 18 日，Bruce Evans 坚持 ／etc／disktab 几乎不该使用，应改用 auto 条目，或整盘读标签改写后用 -R 写回.md
+            - 14.3.15-1997 年 5 月 15 日，Poul-Henning Kamp 手上有一张 8Mb 的 Intel 2+ 闪存卡，打算为 PCMCIA 支持写块设备驱动.md
+            - 14.3.16-1997 年 7 月 26 日，Justin T. Gibbs 解释 chio 置于 ／bin 是因恢复时可能需要，restore 可用 -s 选项从磁带任一文件读取.md
+            - 14.3.17-1998 年 1 月 20 日，Bruce Evans 表态 isdisk() kludge 不适合 -stable.md
+            - 14.3.18-1999 年 2 月 24 日，Andrzej Bialecki 回答确认自己见过 Disk On Chip 并成功在其上启动 FreeBSD.md
+            - 14.3.19-1999 年 9 月 21 日，Lehey 确认 vinum 文件系统可开 softupdates 因为 vinum 只是虚拟磁盘.md
+            - 14.3.20-1995 年 2 月 9 日，Justin T. Gibbs 指出非 A 型 Adaptec 卡不含 Rev E aic7770，只能可靠使用卡上 16 个 SCB 槽中的 4 个，若想让 tagged queuing 有效就应换更新的卡.md
+            - 14.3.21-1995 年 2 月 20 日，Bruce Evans 回复 Paul Vinciguerra 称 ATA 规范在驱动中也可找到 驱动仅支持 I／O 所必需的 ATA 子集 且旧 ATA 规范未提及 LBA 模式等新命令.md
+            - 14.3.22-1995 年 3 月 18 日，Charles M. Hannum 澄清称关于 Adaptec 不出 NDA 就不给编程信息的说法最初源自 Julian Elischer.md
+            - 14.3.23-1995 年 3 月 24 日，Serge A. Babkin 承认前一补丁自己引入了 bug 追加补丁在读取 EP_W0_ADDRESS_CFG 前后分别插入 GO_WINDOW 宏再切换窗口.md
+            - 14.3.24-1995 年 4 月 8 日，Peter da Silva 转述他人关于 Viper 150 需以 mt fsf 跳至 BLANK CHECK 方可向磁带追加文件的说明.md
+            - 14.3.25-1995 年 4 月 17 日，Steve Gerakines 指出软盘磁带驱动在写入时无法检测 CRC 软错误故 ecc 被纳入标准 每段磁带容三扇区 CRC 错或一次 CRC 漏检 再多则该段损毁 因此整备份压缩有风险建议逐文件压缩.md
+            - 14.3.26-1995 年 9 月 15 日，Julian Elischer 在 xcdplayer 与 SCSI CD-ROM 讨论串中.md
+            - 14.3.27-1995 年 10 月 7 日，Justin T. Gibbs 回应说 2842 支持 tagged queuing 与其他高级 SCSI II 特性 Buslogic 不具备这些特性 并给出 Adaptec 2742 数据 Quantum PD1225 2002 微秒 Empire.md
+            - 14.3.28-1995 年 10 月 23 日，Joe Greco 在 NCR810 提问串中称仅换新 ncr.c 重编内核的升级办法不适用.md
+            - 14.3.29-1995 年 12 月 30 日，Julian Elischer 正在重构磁盘访问布局 切片有父切片层级与方法集 方法可用多个父实现 CCD 类设置 需 devfs 且能与新系统共存 拟作为变更提交.md
+            - 14.3.30-1996 年 2 月 1 日，Justin Gibbs 指 aic7xxx 驱动错误恢复代码尤其糟糕，因未跟上驱动近期稳定性修复，他赞同宁可 panic 重启也不要死冻结的呼声.md
+            - 14.3.31-1996 年 3 月 8 日，Chernov 指出 FreeBSD 的移植代码只提供 SCSI ioctl 而无其他类型.md
+            - 14.3.32-1996 年 3 月 19 日，Andrew Foster 的 FreeBSD 2.1-STABLE 机器从 NCR 换成 Adaptec 2940 后仍反复重启.md
+            - 14.3.33-1996 年 4 月 24 日，问题不在驱动器能否内部终结，而在内部与外部终结孰优；作者使用的 Sun／Dec 机器驱动器出厂通常不设内部终结，PC 世界则相反.md
+            - 14.3.34-1996 年 5 月 4 日，J Wunsch 指出 se(4) 与 sa(4) 驱动器既不做散聚也不做总线主 DMA，总线主 DMA 控制器是散聚的前提.md
+            - 14.3.35-1996 年 8 月 27 日，James Risner 报告 DEC RZ74 在重寻道时 ncr1 触发 cp 断言于 ncr.c 报 cond met or hs complete and queue full 将 tags 设为 1 后消失并质疑归属.md
+            - 14.3.36-1996 年 10 月 25 日，Luoqi Chen：指出 ATAPI 挂起根因是插入光盘时 atapi_start 中请求在 wdstart 返回前即超时，DRQ 已入队.md
+            - 14.3.37-1997 年 1 月 8 日，SteveSims 用 ccd 挂 Adaptech1542-CF 遇 vm_bounce_alloc 因 b_bufsize 小于 b_count 触发 panic-CURRENT 重编依旧复现坚持 BOUNCE_BUFFERS 在 16M 以上必需.md
+            - 14.3.38-1997 年 2 月 6 日，Gibbs 判定超过一页的 DMA 散集列表必须使用 contigmalloc，且只能在接近启动期由调用方申请方能确保可用.md
+            - 14.3.39-1997 年 2 月 10 日，Thomas David Rivers 说明 newfs 在 NTRACKS 为 1 时把 fs_cgmask 设为 0xffffffff.md
+            - 14.3.40-1997 年 2 月 25 日，J Wunsch 拒绝回答配置请求，因发问方未交代 Exabyte TR-3 Eagle Nest 到底是何种硬件.md
+            - 14.3.41-1997 年 4 月 3 日，Jaye Mathisen 索性把 SCSI 链上的全部终结器都拔了，换成两端主动终结，之后再没出现什么明显的 SCSI 相关问题.md
+            - 14.3.42-1997 年 5 月 30 日，Simon Shapiro 反映 fdisk 在给定无意义参数时会直接抹掉启动盘的分区表而不提前告知，往往到下一次启动才发现系统无法启动.md
+            - 14.3.43-1997 年 7 月 19 日，崔俊浩说自己用的是 ATAPI 即 EIDE 接口的 Zip 驱动器，工作同样顺畅，无需设置 CMOS 也能被内核正常识别，速度非常快.md
+            - 14.3.44-1997 年 7 月 26 日，拉斯卡维反驳说一条磁带上通常存有多个转储，那么按照同样的理由，mt 为何没有被放进 ／bin 目录里，这与 chio 的理由并不一致.md
+            - 14.3.45-1997 年 8 月 6 日，Michael Sanders 反驳 Terry Lambert 认为 CD 刻录机可烧录短格式 DVD 的观点.md
+            - 14.3.46-1997 年 8 月 26 日，在断电造成文件系统损坏的讨论里，特里指出 Sun 机器可以买一张非易失写缓冲卡，所以异步写并不危险，因为掉电时缓冲中的数据也不会丢.md
+            - 14.3.47-1997 年 8 月 26 日，Hellmuth Michaelis 说据他所知部分 Hewlett-Packard Netservers 的 BIOS 支持把引导消息发到串口控制台，可作为 Raul 所问问题的现成实例.md
+            - 14.3.48-1997 年 9 月 12 日，Kees Jan Koster 回忆几天前用 dd 把新格式化的 MS-DOS 软盘做成镜像，再倒进旧 FreeBSD 引导盘时中途失败，怀疑与长文件有关，他自写的 bsplit 原来切出的块几乎占满整盘导致软盘频繁损坏.md
+            - 14.3.49-1997 年 9 月 12 日，Terry Lambert 澄清多数机型确实在用 NEC 软驱控制器，关键是控制器不带 FIFO 这一差异，并解释实模式 DOS 靠忙等循环规避时序窗口，主张改用带 FIFO 的部件而非退回忙等.md
+            - 14.3.50-1997 年 10 月 14 日，Mike Smith 先提醒确认外部存储设备已插好并通电，再排查线缆与串接在中间的打印机或切换盒，并建议切换并行口的工作模式.md
+            - 14.3.51-1997 年 10 月 20 日，J Wunsch 称所有只写光盘识别逻辑都在 scsiconf.c 文件内，若对方提供引导启动消息即可告知应添加哪些内容以完成识别.md
+            - 14.3.52-1997 年 12 月 9 日，wunsch 对光驱命令集是否兼容的回答是希望不大，需向 HP 索取文档，另提到今日有人送来一台 Plasmon 4801 但文档也没见到.md
+            - 14.3.53-1998 年 1 月 20 日，Andrzej Bialecki 答复 dennis 表示软盘空间并不充裕希望理解内容必须仔细挑选但已附上全部制作脚本可自行制作版本.md
+            - 14.3.54-1998 年 1 月 30 日，greg lehey 报告对不存在的切片 sd1e 执行 dd 仍然成功且转移 0 字节，他把 ／dev／sd1 分了两块切片 c 与 h.md
+            - 14.3.55-1998 年 2 月 9 日，dennis 解释竞态 最后两个 attach 几乎同时发 sense ioctl 两边都看到 shm_nattach 为 2 故谁都不执行 RMID.md
+            - 14.3.56-1998 年 2 月 24 日，karl 指出驱动收到 SCSI 感测 0x11 与 0x0c 时不做处理，而 CMD 等 RAID 适配器可重写该块修复，建议先强制重分配再写零.md
+            - 14.3.57-1998 年 2 月 27 日，greg 回复称目前 volume manager 驱动仍在测试尚未完成并坦言今后可能还会需要额外动手调整相关代码以让整套驱动能顺利工作.md
+            - 14.3.58-1998 年 3 月 1 日，terry 回答可以修，需重刷机器 BIOS 把 drive count 从 2 改大以让 BIOS 给出正确的 dl 值.md
+            - 14.3.59-1998 年 3 月 4 日，tom 回应称已有集群设计只把重点放在性能上而非可靠性并举例说明希望能把功能从故障节点无感知地迁移到健康节点上继续运行而用户不会察觉到服务中断的情况.md
+            - 14.3.60-1998 年 3 月 8 日，julian 说 DPT 驱动已入 2.2，需在 config 文件中加 DPTOPT 选项先测试，待证明工作后再无需该选项.md
+            - 14.3.61-1998 年 3 月 24 日，Wunsch 认为除 scsi(8) 外并无命令行工具可看 CD 卷标，追问卷标究竟是什么、能否以会话起始处的字节序列表述.md
+            - 14.3.62-1998 年 3 月 25 日，Jordan K Hubbard 指出 bounce buffer 问题已在 2.2-stable 修复并贴出 i386 的 machdep.c 里删掉 bouncepages 按 Maxmem 增量分配那一行的 diff 还提到也可等几个小时装上.md
+            - 14.3.63-1998 年 5 月 22 日，Lee 问有人弄出并口 zip drive 的可靠运行结果吗，他不在乎快不快只要可靠，还说明自己机器上已经装了 scsi 设备.md
+            - 14.3.64-1997 年 4 月 14 日，Tony Overfield 纠正 Michael Smith 记不清软驱 diskchange 信号是 2 号还是 32 号脚的回忆.md
+            - 14.3.65-1997 年 5 月 14 日，求助如何在第二块硬盘上安装 FreeBSD，说明第二块盘可能是从盘也可能是主盘或 zip 等情形，希望有人把步骤写得详尽易懂并愿代为整理成文章补入 FAQ.md
+            - 14.3.66-1998 年 8 月 2 日，Jamie Howard 把配 ZIP Zoom 卡的 SCSI ZIP 驱动器从旧机搬到新 FreeBSD 机器，重编内核后启动即识别.md
+            - 14.3.67-1998 年 8 月 4 日，Stefan Eggers 提及自己曾在把文件拷到挂在该卡上的 MO 盘时查看 top，发现中断占用的 CPU 时间很高.md
+            - 14.3.68-1998 年 8 月 11 日，Wilko Bulte 在 EXABYTE 8200 磁带机讨论中说明他与 Peter van Heusden 用的是同一机型仅固件版本不同.md
+            - 14.3.69-1998 年 8 月 26 日，Wilko Bulte 纠正 Terry Lambert 关于 1542 B 系列的说法，称 B 型并无启用外部连接器的开关.md
+            - 14.3.70-1998 年 10 月 10 日，Peter da Silva 判断随机访问场景下高速光驱反而慢于旧的 4x 或 6x 驱动器，原因是频繁加减速耗时过多.md
+            - 14.3.71-1998 年 11 月 13 日，Kenneth Merry 回复 BusLogic 卡驱动询问.md
+            - 14.3.72-1999 年 1 月 18 日，feral.com 的 Matthew Jacob 称曾在 ISP 2X00 与 1XXX 合并驱动中借用 Erik 关于快速判定命令所需邮件寄存器数量的思路，并指 ESP100、53c974 与 FAS266 内核同源可合并为一驱动.md
+            - 14.3.73-1999 年 3 月 11 日，Backplane 的 Matthew Dillon 就 ccd 驱动大段故障提出假设：若每块磁盘为 8GB 并把条带尺寸设为 8GB.md
+            - 14.3.74-1999 年 3 月 13 日，Kenneth P. Stox 回应 Karl Denninger 的 Adaptec SCSI 端接报错 建议在 Adaptec BIOS 中设定期望端接模式并报告固件版本 说明端接由 BIOS 初始化设定 FreeBSD 不改动.md
+            - 14.3.75-1999 年 6 月 25 日，荷兰开发者 Wilko Bulte 就 Fibre Channel WWN 持久性回复.md
+            - 14.3.76-1999 年 7 月 15 日，Technion 的 Nadav Eiron 报告其 486 机器装 matcd 光驱运行 FreeBSD 2.2.8R 可用但偶有错误.md
         - 14.4-文件系统与虚拟内存
-            - 14.4.1-1999年7月20日ron指出JohnMilford误解了对方的意思认为MFS与.md
-            - 14.4.2-1999年8月17日michael附上旧补丁vop1adiff说明他把vput挪.md
-            - 14.4.3-1999年9月19日elischer自述DEVFS本体本身工作正常问题是mfs与.md
-            - 14.4.4-1999年9月27日rminnich指出内核NFS客户端与服务端均用RPC故存在.md
-            - 14.4.5-1999年10月27日mike认为该测试不足以支撑FFS更慢的结论因FFS会摊开.md
-            - 14.4.6-1999年11月22日rminnich断言空洞文件异常根因在于把使用文件描述符的.md
-            - 14.4.7-1999年7月25日jan纠正被引者关于进程可修改他人地址空间的表述应为不可能并.md
-            - 14.4.8-1999年10月27日robert建议参考Solaris与IRIX的ACL实现以.md
-            - 14.4.9-年8月29日WarnerLosh指出softupdates不会暂缓可由pendi.md
-            - 14.4.10-年10月29日AlexanderViro回应MattDillon的文件描述符补丁.md
-            - 14.4.11-年2月24日DavidGreenman说明内核VM目前仅252MB须扩至508M.md
-            - 14.4.12-年8月31日MarkTinguely同意先释放已驻留页换取交换空间的做法但指出3.md
-            - 14.4.13-年11月13日BillPechter报告21STABLE上出现freevnode.md
-            - 14.4.14-年2月8日PoulHenningKamp评Terry的补丁赞成nameilook.md
-            - 14.4.15-年2月19日MattDay报ffs_sync致命bugffs_vget调getn.md
-            - 14.4.16-年3月17日PoulHenningKamp回复phkmalloc是current.md
-            - 14.4.17-年7月23日AmancioHasty转述JustinGibbs之言称其未深究fs.md
-            - 14.4.18-年11月8日DavidGreenman打算修复发现遍历挂载表的其他函数也有类似问.md
-            - 14.4.19-年2月8日OllivierRobert说除了构建发布外绝不要设置MFS_ROOT.md
-            - 14.4.20-年3月29日BruceEvans回应对方仍存在某种VM问题的猜测指出设置断点当然.md
-            - 14.4.21-年7月22日DougRabson解释nfs_bioread的nonvminfob.md
-            - 14.4.22-年1月5日TerryLambert说明跨Unix挂载FreeBSD文件系统通常因.md
-            - 14.4.23-年11月15日DavidGreenman说明pmap_remove_pages在.md
-            - 14.4.24-年6月16日MatthewDillon指VOP例程族lookup与namei出错.md
-            - 14.4.25-年7月19日Zhihui问为何vm_map_find对kmem_map与mb_m.md
-            - 14.4.26-年2月15日DavidGreenman说明top尚未上报一个叫cached的类别.md
-            - 14.4.27-年6月10日DavidGreenman称近期刚修好的问题在NFS上创建硬链接时触.md
-            - 14.4.28-年8月8日RodneyWGrimes警告mount的noautopatch有相当.md
-            - 14.4.29-年9月6日BruceEvans指出cleanflag在115就有它是不与备用su.md
-            - 14.4.30-年9月19日HowardLew询问FreeBSD是否有机会支持Win95的长文件.md
-            - 14.4.31-年10月11日TerryLambert说并非分区组合方案是修正各文件系统实例cn.md
-            - 14.4.32-年2月6日JulianElischer称自己也会再看对把vfs_opv_numo.md
-            - 14.4.33-年2月10日LuigiRizzo指出这种按需零填充机制只有在页完全不被访问时才成.md
-            - 14.4.34-年3月13日EricLHernes转述Xinside因FreeBSD上mallo.md
-            - 14.4.35-年7月18日Jordan指出内核内存上限选项实为MAXMEM与来信方误写的MAX.md
-            - 14.4.36-年10月6日AdamDavid挂载proc之后执行ps会因procmismatc.md
-            - 14.4.37-年4月5日Smith提出可在malloc块头多留一个字段存放调用者地址来定位分配.md
-            - 14.4.38-年4月17日汉考克称XFS据信约十万行代码即便SGI自己移植也是大工程Verit.md
-            - 14.4.39-年4月23日他说自己看到的现象与自己多年来一直在追的重复分配与释放空闲节点相关的.md
-            - 14.4.40-年5月1日报告在更新过的RELENG_2_2上出现与释放空闲块相关的panic并.md
-            - 14.4.41-年5月4日回应称四机缓存均二百五十六千字为排除硬件故障已换六台机器矛头转向内核级.md
-            - 14.4.42-年5月13日KevinEliuk报告运行每日与每周维护脚本时规律出现swap_p.md
-            - 14.4.43-年6月22日针对Schneider寄来的vnconfig8补丁Wunsch只回一.md
-            - 14.4.44-年7月22日马瑟森指出除设置MAXMEM外再拿最新pmapc补丁即足够他自述那台.md
-            - 14.4.45-年10月4日MarcMLaFerrera在FreeBSD上用mounttext2.md
-            - 14.4.46-年10月15日MikeSmith报告一台二月份版本系统出现异常的换页耗尽跑Lin.md
-            - 14.4.47-年10月21日报告一个诡异现象挂载dos分区后在后台拷贝大文件趁拷贝未完成就在b.md
-            - 14.4.48-年11月18日dyson回复FranciscoReyes补一句做顺序IO时读写不.md
-            - 14.4.49-年11月23日mrcpu认为问题确实与swapping或paging相关出现数百.md
-            - 14.4.50-年12月5日brun咨询FREEBSD225下的内存空洞做法其32MbyteRA.md
-            - 14.4.51-年12月19日cyschubert提出nullfsumapfsunionfspa.md
-            - 14.4.52-年12月22日JulianElischer建议把netbsd代码整理出一版足够干.md
-            - 14.4.53-年12月28日damon自述他的做法是重定义malloc进出监视器从libc取_.md
-            - 14.4.54-年1月5日alfred给出后台执行mount失败则先fsck再mount的嵌套s.md
-            - 14.4.55-年2月8日greg反问JohnSDyson的前提直接追问究竟支持还是不支持说自己.md
-            - 14.4.56-年2月17日tor确认正常用法下从MFS执行同样会出问题大量交换与高碎片文件系统.md
-            - 14.4.57-年4月18日terry答称可以先取得文件vnode对应的inode号再全面搜索文.md
-            - 14.4.58-年5月11日greg在225RELEASE上监控性能发现vmstat输出里扫描页.md
-            - 14.4.59-年6月9日JunichiroItoh询问FreeBSD何时转向NetBSD所用n.md
-            - 14.4.60-年6月9日OllivierRobert指出async的反面是noasync而非s.md
-            - 14.4.61-年6月24日fagan追问删除块设备后原有各项好处是否还在承认这些好处不大但块设.md
-            - 14.4.62-年6月29日wemm提醒对方题面写着NOTMFSMFS不满足需求因为它既不分配也.md
-            - 14.4.63-年11月16日DavidGAndersen报告NFSintr挂载下vinvalb.md
-            - 14.4.64-年1月6日RWWithrowAssociates的罗伯茨温特罗斯在类似漫游挂载的.md
-            - 14.4.65-年2月12日TerryLambert谈UFS上找hometar只要没再写过盘且原.md
-            - 14.4.66-年2月17日TerryLambert批评他人称内核BSS借零页而非显式清零属刻意.md
-            - 14.4.67-年2月24日TerryLambert反驳FFSIO惩罚方案在异步读写与线程场景下.md
-            - 14.4.68-年2月25日罗琦陈在全库检索buffer_map后指出其仅被getnewbuf用.md
-            - 14.4.69-年3月17日DanielCSobral反对在GENERIC中定义MAXMEM引用.md
-            - 14.4.70-年6月8日Cybersites系统总监ChuckYouse参与MAXPHYS讨论.md
-            - 14.4.71-年6月30日FreeBSD开发者JonathanLemon确认已将NetBSD的.md
-            - 14.4.72-年7月8日MatthewDillon说明NetBSD统一缓冲区缓存分支取消vno.md
-            - 14.4.73-年7月13日NeilACarson回应MatthewDillon关于自行实现内存.md
+            - 14.4.1-1999 年 7 月 20 日，ron 指出 John Milford 误解了对方的意思，认为 MFS 与所讨论的 USFS 需求相差甚远，直言 MFS 完全不是同一回事.md
+            - 14.4.2-1999 年 8 月 17 日，michael 附上旧补丁 vop1a.diff 说明他把 vput 挪到了正确的层而路径组件缓冲却被释放在了错误的位置 又指出 John Dyson 把这些缓冲放进了 zones 因此 zfree 例程和 netbsd 里看起来会完全不同.md
+            - 14.4.3-1999 年 9 月 19 日，elischer 自述 DEVFS 本体本身工作正常，问题是 mfs 与 vn 曾使用伪装成设备节点的 dummy vnode.md
+            - 14.4.4-1999 年 9 月 27 日，rminnich 指出内核 NFS 客户端与服务端均用 RPC 故存在 kernel-to-kernel RPC 但不链接 -lrpc.md
+            - 14.4.5-1999 年 10 月 27 日，mike 认为该测试不足以支撑 FFS 更慢的结论，因 FFS 会摊开目录分布以便后续把文件放在父目录附近.md
+            - 14.4.6-1999 年 11 月 22 日，rminnich 断言空洞文件异常根因在于把使用文件描述符的 lseek 与 stdio 混用，lseek 需配合 fileno 取描述符.md
+            - 14.4.7-1999 年 7 月 25 日，jan 纠正被引者关于进程可修改他人地址空间的表述应为不可能并标为手误 另说他正在 OpenBSD 的 ／var／named 里跑 chroot 的 bind 建议 FreeBSD 加入同名路径与 rc.conf 的 -t ／var／named 启动选项.md
+            - 14.4.8-1999 年 10 月 27 日，robert 建议参考 Solaris 与 IRIX 的 ACL 实现以及 POSIX.1e 规范.md
+            - 14.4.9-2000 年 8 月 29 日，Warner Losh 指出 softupdates 不会暂缓可由 pending delete 满足的空间申请.md
+            - 14.4.10-2000 年 10 月 29 日，Alexander Viro 回应 Matt Dillon 的文件描述符补丁讨论.md
+            - 14.4.11-1996 年 2 月 24 日，David Greenman 说明内核 VM 目前仅 252MB，须扩至 508MB 才能容纳更大的内核数据结构，并提到修改后必须重建 libkvm 和 ps，他已用带此改动的 -stable 内核在写此邮件.md
+            - 14.4.12-1995 年 8 月 31 日，Mark Tinguely 同意先释放已驻留页换取交换空间的做法，但指出 386BSD 0.x 年代的硬件顾虑与今天不同.md
+            - 14.4.13-1995 年 11 月 13 日，Bill Pechter 报告 2.1-STABLE 上出现 free vnode isn't 相关崩溃，留有 core dump 可供分析.md
+            - 14.4.14-1996 年 2 月 8 日，Poul-Henning Kamp 评 Terry 的补丁：赞成 namei／lookup 新增 EXCLUDE 标志与功能下沉公共代码.md
+            - 14.4.15-1996 年 2 月 19 日，Matt Day 报 ffs_sync 致命 bug：ffs_vget 调 getnewvnode 后 MALLOC 阻塞期间 ffs_sync 运行，v_data 仍为零即解引用导致崩溃.md
+            - 14.4.16-1996 年 3 月 17 日，Poul-Henning Kamp 回复：phkmalloc 是 -current 的标准 malloc.md
+            - 14.4.17-1996 年 7 月 23 日，Amancio Hasty 转述 Justin Gibbs 之言，称其未深究 fsck 本身，只修掉自家驱动中会造成挂起的缺陷，并赞其做得极好.md
+            - 14.4.18-1996 年 11 月 8 日，David Greenman 打算修复，发现遍历挂载表的其他函数也有类似问题，vfs_busy 休眠醒来后仍引用可能失效的 mp 属根本性错误.md
+            - 14.4.19-1997 年 2 月 8 日，Ollivier Robert 说除了构建发布外绝不要设置 MFS_ROOT，那等于告诉内核根文件系统在内存上而不是在磁盘上.md
+            - 14.4.20-1997 年 3 月 29 日，Bruce Evans 回应对方“仍存在某种 VM 问题”的猜测，指出设置断点当然会改动文本的一个副本.md
+            - 14.4.21-1997 年 7 月 22 日，Doug Rabson 解释 nfs_bioread 的 non vminfo buf found 消息仅是信息级且只在带 DIAGNOSTIC 的内核中出现，Narvi 表示原来不知 DIAGNOSTIC 何时混进自己内核配置文件，下次要仔细检查.md
+            - 14.4.22-1998 年 1 月 5 日，Terry Lambert 说明跨 Unix 挂载 FreeBSD 文件系统通常因字节序等问题不可行.md
+            - 14.4.23-1998 年 11 月 15 日，David Greenman 说明 pmap_remove_pages 在进程 exec 或 exit 时被调用.md
+            - 14.4.24-1999 年 6 月 16 日，Matthew Dillon 指 VOP 例程族.md
+            - 14.4.25-1999 年 7 月 19 日，Zhihui 问为何 vm_map_find 对 kmem_map 与 mb_map 要调 splvm 而 Matthew Dillon 答因为这两个可从中断修改其余内核子映射不可.md
+            - 14.4.26-1995 年 2 月 15 日，David Greenman 说明 top 尚未上报一个叫 cached 的类别.md
+            - 14.4.27-1995 年 6 月 10 日，David Greenman 称近期刚修好的问题在 NFS 上创建硬链接时触发，另一问题更罕见更需连续 NFS I／O 数小时才触发.md
+            - 14.4.28-1995 年 8 月 8 日，Rodney W. Grimes 警告 mount 的 noauto patch 有相当严重 bug 不要施加于运行系统.md
+            - 14.4.29-1995 年 9 月 6 日，Bruce Evans 指出 clean flag 在 1.1.5 就有，它是不与备用 superblock 比较的字段之一.md
+            - 14.4.30-1995 年 9 月 19 日，Howard Lew 询问 FreeBSD 是否有机会支持 Win95 的长文件名，以便 Win95 与 FreeBSD 两个分区之间交换文件时文件名不被截断.md
+            - 14.4.31-1995 年 10 月 11 日，Terry Lambert 说并非分区组合方案，是修正各文件系统实例 cn_pnbuf 的隐式释放.md
+            - 14.4.32-1996 年 2 月 6 日，Julian Elischer 称自己也会再看，对把 vfs_opv_numops 移到 node_if.c 的改动有疑虑.md
+            - 14.4.33-1996 年 2 月 10 日，Luigi Rizzo 指出这种按需零填充机制只有在页完全不被访问时才成立，页第一次被访问时就必须填充，无法回避首次访问的填充动作.md
+            - 14.4.34-1996 年 3 月 13 日，Eric L. Hernes 转述 Xinside 因 FreeBSD 上 malloc 内存泄漏推迟 Motif 发布.md
+            - 14.4.35-1996 年 7 月 18 日，Jordan 指出内核内存上限选项实为 MAXMEM，与来信方误写的 MAXMEMORY 差三个字符，须在 LINT 的配置文件中查证.md
+            - 14.4.36-1996 年 10 月 6 日，Adam David：挂载 ／proc 之后执行 ps 会因 proc mismatch 提前退出.md
+            - 14.4.37-1997 年 4 月 5 日，Smith 提出可在 malloc 块头多留一个字段存放调用者地址来定位分配点，不过他也承认给每一块内存都做完整回溯实在吃力.md
+            - 14.4.38-1997 年 4 月 17 日，汉考克称 XFS 据信约十万行代码，即便 SGI 自己移植也是大工程，Veritas 因对操作系统中立或可尝试.md
+            - 14.4.39-1997 年 4 月 23 日，他说自己看到的现象与自己多年来一直在追的重复分配与释放空闲节点相关的内核崩溃很像，建议查阅邮件归档里每日崩溃与重复分配相关的条目以获得更多线索.md
+            - 14.4.40-1997 年 5 月 1 日，报告在更新过的 RELENG_2_2 上出现与释放空闲块相关的 panic 并贴出回溯询问 bno 22824 含义，因每次复现已没什么办法可试.md
+            - 14.4.41-1997 年 5 月 4 日，回应称四机缓存均二百五十六千字为排除硬件故障已换六台机器矛头转向内核级网络支持关掉网络文件系统静置后平稳运行数小时曾在约七百分进程下拿到二百八十至三百一平均负载.md
+            - 14.4.42-1997 年 5 月 13 日，Kevin Eliuk 报告运行每日与每周维护脚本时规律出现 swap_pager 无限等待缓冲区错误，常跟软读错误.md
+            - 14.4.43-1997 年 6 月 22 日，针对 Schneider 寄来的 vnconfig.8 补丁，Wunsch 只回一句你真有提交权限，意思是有权限的人不该把提交流程转嫁给别人.md
+            - 14.4.44-1997 年 7 月 22 日，马瑟森指出除设置 MAXMEM 外再拿最新 pmap.c 补丁即足够他自述那台五百一十二兆内存的机器用得好好的并明确表示记得列表上有人跑过一吉字节.md
+            - 14.4.45-1997 年 10 月 4 日，Marc M. LaFerrera 在 FreeBSD 上用 mount -t ext2fs 挂载 Linux 分区报文件系统不支持.md
+            - 14.4.46-1997 年 10 月 15 日，Mike Smith 报告一台二月份版本系统出现异常的换页耗尽，跑 Linux ABI 模拟的进程占用大量交换空间却看似并不需要，疑似泄漏.md
+            - 14.4.47-1997 年 10 月 21 日，报告一个诡异现象，挂载 dos 分区后在后台拷贝大文件，趁拷贝未完成就在 bash 里对该文件名做补全，软驱被永久锁死.md
+            - 14.4.48-1997 年 11 月 18 日，dyson 回复 Francisco Reyes 补一句，做顺序 I／O 时读写不宜小于 4K-8K，超过 8K 之后基本就是收益递减.md
+            - 14.4.49-1997 年 11 月 23 日，mrcpu 认为问题确实与 swapping 或 paging 相关，出现数百级 LA 尖峰、磁盘灯常亮 2-3 分钟后自行消失.md
+            - 14.4.50-1997 年 12 月 5 日，brun 咨询 FREEBSD 2.2.5 下的内存空洞做法.md
+            - 14.4.51-1997 年 12 月 19 日，cy-schubert 提出 nullfs umapfs unionfs panic 的可能解法 判定根因是 bsize 为零时触发除零异常 已对照先前发帖的 ftp server 问题验证 说自己不是 FreeBSD 内核黑客只想先听意见再提 PR 实现.md
+            - 14.4.52-1997 年 12 月 22 日，Julian Elischer 建议把 netbsd 代码整理出一版足够干净、能让 dima 及其同伴接受，这样就能一次性提交一套改动.md
+            - 14.4.53-1997 年 12 月 28 日，damon 自述他的做法是重定义 malloc 进出监视器 从 libc 取 _malloc 再调原函数 结果因 ld.so 问题没跑通.md
+            - 14.4.54-1998 年 1 月 5 日，alfred 给出后台执行 mount 失败则先 fsck 再 mount 的嵌套 shell 片段.md
+            - 14.4.55-1998 年 2 月 8 日，greg 反问 John S. Dyson 的前提，直接追问究竟支持还是不支持，说自己找不到任何证据；另说这只是 biord 的特例.md
+            - 14.4.56-1998 年 2 月 17 日，tor 确认正常用法下从 MFS 执行同样会出问题，大量交换与高碎片文件系统有助复现，但尚未在 mount_mfs 使用 -F 映像模式时测试过.md
+            - 14.4.57-1998 年 4 月 18 日，terry 答称可以先取得文件 vnode 对应的 inode 号，再全面搜索文件系统中的目录块，找出指向该 inode 的那个块即为父目录.md
+            - 14.4.58-1998 年 5 月 11 日，greg 在 2.2.5-RELEASE 上监控性能，发现 vmstat 输出里扫描页数常为 0 且从不超过 10 却突然跳到 3005.md
+            - 14.4.59-1998 年 6 月 9 日，Jun-ichiro Itoh 询问 FreeBSD 何时转向 NetBSD 所用 new config 工具并举出旧 config 中 probe 与 attach 顺序仅按总线类型决定先 pci_configure 再 isa_configure 令 cardbus 不满.md
+            - 14.4.60-1998 年 6 月 9 日，Ollivier Robert 指出 async 的反面是 noasync 而非 sync.md
+            - 14.4.61-1998 年 6 月 24 日，fagan 追问删除块设备后原有各项好处是否还在，承认这些好处不大但块设备确有胜过字符设备之处.md
+            - 14.4.62-1998 年 6 月 29 日，wemm 提醒对方题面写着 NOT MFS，MFS 不满足需求，因为它既不分配也不释放 swap.md
+            - 14.4.63-1998 年 11 月 16 日，David G Andersen 报告 NFS intr 挂载下 vinvalbuf 死循环挂死.md
+            - 14.4.64-1999 年 1 月 6 日，R.W. Withrow Associates 的罗伯茨·温特罗斯在类似漫游挂载的 NFS 写入情形下同样遇到挂起，但机器不会崩溃或整机挂起.md
+            - 14.4.65-1999 年 2 月 12 日，Terry Lambert 谈 UFS 上找 home.tar：只要没再写过盘且原始是未压缩 tar 文本内容应可读.md
+            - 14.4.66-1999 年 2 月 17 日，Terry Lambert 批评他人称内核 BSS 借零页而非显式清零属刻意设计的说法，认为等于拆东墙补西墙，其隐藏前提是内存带宽不受限.md
+            - 14.4.67-1999 年 2 月 24 日，Terry Lambert 反驳 FFS I／O 惩罚方案在异步读写与线程场景下难判惩罚对象的疑虑.md
+            - 14.4.68-1999 年 2 月 25 日，罗琦·陈在全库检索 buffer_map 后指出其仅被 getnewbuf() 用于分配缓冲 kva 空间.md
+            - 14.4.69-1999 年 3 月 17 日，Daniel C. Sobral 反对在 GENERIC 中定义 MAXMEM，引用 Jordan K. Hubbard 立场即代价过高，杂志对比测试促使 David 加入大于 64MB 内存检测，拥有故障服务器硬件者应修复硬件而非打补丁.md
+            - 14.4.70-1999 年 6 月 8 日，Cybersites 系统总监 Chuck Youse 参与 MAXPHYS 讨论并补充，ISA 的 DMA 芯片本身只提供 20 位地址.md
+            - 14.4.71-1999 年 6 月 30 日，FreeBSD 开发者 Jonathan Lemon 确认已将 NetBSD 的 GRE 支持移植到 FreeBSD 3.2 并本地运行通过.md
+            - 14.4.72-1999 年 7 月 8 日，Matthew Dillon 说明 NetBSD 统一缓冲区缓存分支取消 vnode 读写旧缓冲区接口.md
+            - 14.4.73-1999 年 7 月 13 日，Neil A. Carson 回应 Matthew Dillon 关于自行实现内存管理子系统只需约一小时的说法，指内核实际上须改在多处方能正确实现.md
         - 14.5-内核架构与启动机制
-            - 14.5.1-1999年9月2日julian回忆当初加入延时循环校准代码与DELAY宏时程序会.md
-            - 14.5.2-1999年9月24日pj认为当前内核无法实现KevinDay所求最简方案是新增m.md
-            - 14.5.3-1999年10月11日chad提交PR后复查发现锁死并非aio_read直接所致.md
-            - 14.5.4-1999年10月18日mike认为只要内核能在不编入任何文件系统的情况下编译通过.md
-            - 14.5.5-1999年11月9日doug反问netwinder是否支持netbooting并.md
-            - 14.5.6-1999年11月13日Ronald赞成自定义系统调用走kld支持称其相当精巧不要.md
-            - 14.5.7-年2月20日arg说明无盘FreeBSD系统的常规做法写在Handbook第14.md
-            - 14.5.8-年10月10日AlokDhir的21stable951005snap无法从sd0.md
-            - 14.5.9-年11月12日BruceEvans答以pushadpopad作biosS快速修补.md
-            - 14.5.10-年7月28日MichaelSmith就Linux兼容方式的正确做法回答LKM更好.md
-            - 14.5.11-年2月4日来信引用者把Fataltrap12内核态缺页的指令指针定位在f01c0.md
-            - 14.5.12-年4月18日JensSchweikhardt出于好奇询问optionNFS的作用.md
-            - 14.5.13-年5月11日WernerGriessl报告用当日取得的stable内核做远程启动.md
-            - 14.5.14-年8月26日MikeSmith补充说明该外置PnP调制解调器响应COMPnP协议.md
-            - 14.5.15-年12月7日BillHamilton补充说bootconfig可用vi创建并写入.md
-            - 14.5.16-年3月23日BruceEvans回应kdc分上下半部的提议上半部随驱动如qcam.md
-            - 14.5.17-年3月29日TerryLambert本人只追问HZvalues被引者称BSDOS.md
-            - 14.5.18-年9月6日BruceEvans建议用配置项HZ=1000但不宜配xntpd并指出.md
-            - 14.5.19-年5月3日JordanHubbard称tickadj在rc与rcnetwork里.md
-            - 14.5.20-年7月7日引文称rhushutdown属shutdown流程故logwtmp须前.md
-            - 14.5.21-年4月6日NickSayer提出securelevel负向调钟的新建议致谢Gar.md
-            - 14.5.22-年4月30日JasonThorpe在讨论中介绍ChuckSilvers正在源码分.md
-            - 14.5.23-年10月22日ArchieCobbs接续MikeSmith关于KLD卸载即pan.md
-            - 14.5.24-年1月3日ChristianGusenbauer说明fbsdboot15发布于f.md
-            - 14.5.25-年3月28日BradMidgley报告950322SNAP在内核恐慌上明显好于F.md
-            - 14.5.26-年4月4日LarsFredriksen就配置数据库劝勿学AIX做法称AIX采用无.md
-            - 14.5.27-年5月4日FrankNobis展示其内核配置做法以optionsCOM_MULT.md
-            - 14.5.28-年6月30日RodneyGrimes回复sbininit与usrsbinwatc.md
-            - 14.5.29-年7月22日HeikkiSuonsivu主张Cyrix问题只涉部分芯片称DX40.md
-            - 14.5.30-年8月25日TerryLambert认为高速数据传输下中断应由服务例程里密集轮询.md
-            - 14.5.31-年9月11日BruceEvans指出DELAYn在无限快硬件上仅延迟n20us延.md
-            - 14.5.32-年9月30日TerryLambert论证SYSINT变更完全传播后静态链接与动态.md
-            - 14.5.33-年10月8日JWunsch举例说明内核配置文件名通常对应目标机器名如freefa.md
-            - 14.5.34-年1月28日KimCulhan报告新装的stable在Boot提示处即将载入内核.md
-            - 14.5.35-年7月9日FreeBSD从不用PIC做spl提升那篇讲x86上如何避免与PIC8.md
-            - 14.5.36-年8月12日WebBox无硬盘方案可行内核text段ROM化data段启动时载入.md
-            - 14.5.37-年9月22日DavidGreenman称用户态统一的想法我们试过参与者都忙于各自.md
-            - 14.5.38-年10月2日JWunsch回复HowardLew的询问内核里CPU识别代码位于s.md
-            - 14.5.39-年4月10日BruceEvans指出ifdefs选项与LKM根本不兼容LKMs不.md
-            - 14.5.40-年4月18日SeanEricFagan解释fs与gs寄存器除VM86模式外处理器.md
-            - 14.5.41-年4月29日温希说自己机器昨天在卸载cd9660这个LKM时崩过大概那个LKM版.md
-            - 14.5.42-年6月6日面对LeeCrites想让若干进程获得并保持固定优先级的提问Micha.md
-            - 14.5.43-年6月23日JoergWunsch反驳直接字符IO到VGA屏幕的要求称这让应用失.md
-            - 14.5.44-年8月13日JordanKHubbard认为所谓两种处理器实为同一块主板与CPU.md
-            - 14.5.45-年8月22日兰伯特认为这多半是PCI仲裁问题多数英特尔PCI桥无法正确仲裁两个以.md
-            - 14.5.46-年9月6日约瑟夫卡尔豪泽说遇到了启动时内存分配问题却无法定位转发他早前就此问题发.md
-            - 14.5.47-年9月12日迈克史密斯在extent管理器之争里为自己主张辩护若只有一片IO空间.md
-            - 14.5.48-年9月16日隐居的极客在30系统上通过modstat确认linux_mod已加载.md
-            - 14.5.49-年9月21日Tom说他未能完全理解对方所述自己也可以把任意内核放到同一张根磁盘并.md
-            - 14.5.50-年9月28日TonyOverfield认为用输入端口0x84做延迟并无不妥指出该.md
-            - 14.5.51-年10月13日关于新模块命名的来回复讨论多个候选名字反复往返却始终未获共识来回之.md
-            - 14.5.52-年10月17日JulianElischer承认ifh与if_varh确实混乱但认.md
-            - 14.5.53-年10月19日JordanHubbard通报Peter已把同步补丁连同MattT.md
-            - 14.5.54-年10月25日ÞorðurIvarsson指出校验失败会关联到CPU的NMI多数.md
-            - 14.5.55-年10月31日他才发现模块链接器其实已经进了current便问PCI设备驱动该如.md
-            - 14.5.56-年11月9日TerryLambert回呛对方毫无幽默感指出OpenBoot做到的.md
-            - 14.5.57-年11月15日Alex答复Jamil的办法就是在config里加g这一项直接在配.md
-            - 14.5.58-年11月16日mini正开发支持VESAVBE12与20的库内核里放一个vesa.md
-            - 14.5.59-年11月19日JWunsch指出向devconsole发声响不可靠因为该设备可能.md
-            - 14.5.60-年12月11日PierreBeyssac认为这类移植大概永远也不会有他解释68h.md
-            - 14.5.61-年1月9日Terry确认独立open与close接口就是那个说法认为device.md
-            - 14.5.62-年1月27日daniel反问无论走哪条路内核内存都得分配数据要么加载进kerne.md
-            - 14.5.63-年1月30日daniel_sobral早前询问在内核中调用tsleep有人告知可.md
-            - 14.5.64-年2月7日shimon指出除根分区的只读挂载外其余挂载都发生在用户态的etcrc.md
-            - 14.5.65-年3月9日walter提议用at_shutdown接口做内核callouthoo.md
-            - 14.5.66-年3月16日ollivier从自己的kernelconfig里摘出一段说加opt.md
-            - 14.5.67-年3月20日leec认为Jordan关于FreeBSD集群愿望的说法可能正确但他.md
-            - 14.5.68-年4月30日Tom自述BOOT_FORCE_COMCONSOLE在bootcon.md
-            - 14.5.69-年5月7日JimCarroll提了个小工具想法若能遍历硬件中断向量表就能显示哪些.md
-            - 14.5.70-年5月21日manar回忆说strongarm上不见freebsd移植netbs.md
-            - 14.5.71-年6月5日niall逐词追问terry所说sysctl作为动态重配实验代码并在调.md
-            - 14.5.72-年6月30日terry认为陷阱编号不合硬件术语源于Pentiumbugworka.md
-            - 14.5.73-年7月2日percy询问BootEasy是否需要主分区才能接管引导以及把win9.md
-            - 14.5.74-年8月19日SRI的NateWilliams回应主张取回被挪作纳秒用途字段的说法.md
-            - 14.5.75-年8月31日JordanKHubbard在227安装覆盖引导扇区一议中预判了用户.md
-            - 14.5.76-年10月23日AmancioHasty说明PCI总线传输因设备而异不像ISADM.md
-            - 14.5.77-年10月30日MikeSmith提议在内核引入scanf理由是设备名等抽象表示增.md
-            - 14.5.78-年11月6日RonGMinnich指出PII等Intel主板PCI读取仅7MBy.md
-            - 14.5.79-年11月9日JordanKHubbard认为他人关于厂商私自假定主机配置的指责并.md
-            - 14.5.80-年1月25日DanielCSobral答复TomTorrance关于num_id.md
-            - 14.5.81-年3月5日TerryLambert回应称优先化AST可与等待完成接口达到相同效果.md
-            - 14.5.82-年6月19日PatLynch报告两颗PPGASocket370Celeron33.md
-            - 14.5.83-年7月4日WarnerLosh在bus空间讨论中承认新bus路径绕过nexus系.md
-            - 14.5.84-年7月8日FreeBSD核心团队成员PoulHenningKamp建议研究Pen.md
-            - 14.5.85-年7月19日MikeSmith援引nextbootmanpage指出loader.md
+            - 14.5.1-1999 年 9 月 2 日，julian 回忆当初加入延时循环校准代码与 DELAY 宏时程序会打印标定系数，且 DELAY 原为自旋循环，但那从没有被称作 bogomips.md
+            - 14.5.2-1999 年 9 月 24 日，pj 认为当前内核无法实现 Kevin Day 所求，最简方案是新增 madvise 选项把相关页面标记为可丢弃而非换出.md
+            - 14.5.3-1999 年 10 月 11 日，chad 提交 PR 后复查发现锁死并非 aio_read 直接所致.md
+            - 14.5.4-1999 年 10 月 18 日，mike 认为只要内核能在不编入任何文件系统的情况下编译通过，去掉全部文件系统就应能正常运作，他也说这个思路早已有人想过且兼有好处与弊端.md
+            - 14.5.5-1999 年 11 月 9 日，doug 反问 netwinder 是否支持 netbooting，并断定若果真如此，那便是内核移植的最佳环境.md
+            - 14.5.6-1999 年 11 月 13 日，Ronald 赞成自定义系统调用走 kld 支持，称其相当精巧，不要改动内核源码树，惯于 linux 者会觉得用模块实现很难.md
+            - 14.5.7-1998 年 2 月 20 日，arg 说明无盘 FreeBSD 系统的常规做法写在 Handbook 第 14.3 节，并纠正 boot ROM 镜像与软盘无关.md
+            - 14.5.8-1995 年 10 月 10 日，Alok Dhir 的 2.1-stable（951005-snap）无法从 sd0 引导.md
+            - 14.5.9-1996 年 11 月 12 日，Bruce Evans 答以 pushad／popad 作 bios.S 快速修补并不合适：它连 %eax 一并保留.md
+            - 14.5.10-1997 年 7 月 28 日，Michael Smith 就 Linux 兼容方式的正确做法回答 LKM 更好.md
+            - 14.5.11-1995 年 2 月 4 日，来信引用者把 Fatal trap 12 内核态缺页的指令指针定位在 f01c04bc 的 _init_scp.md
+            - 14.5.12-1998 年 4 月 18 日，Jens Schweikhardt 出于好奇询问 option NFS 的作用.md
+            - 14.5.13-1998 年 5 月 11 日，Werner Griessl 报告用当日取得的 -stable 内核做远程启动不工作，无法挂载 root.md
+            - 14.5.14-1998 年 8 月 26 日，Mike Smith 补充说明该外置 PnP 调制解调器响应 COM PnP 协议，能被自动识别.md
+            - 14.5.15-1998 年 12 月 7 日，Bill Hamilton 补充说 boot.config 可用 vi 创建并写入默认启动字符串，例如 1：sd0(0,a)kernel.md
+            - 14.5.16-1996 年 3 月 23 日，Bruce Evans 回应 kdc 分上下半部的提议：上半部随驱动如 qcam 与 lpt、下半部随硬件.md
+            - 14.5.17-1996 年 3 月 29 日，Terry Lambert 本人只追问 HZ values.md
+            - 14.5.18-1996 年 9 月 6 日，Bruce Evans 建议用配置项 HZ=1000 但不宜配 xntpd.md
+            - 14.5.19-1997 年 5 月 3 日，Jordan Hubbard 称 tickadj 在 rc 与 rc.network 里被重复启动的问题 RELENG_2_2 早已修好.md
+            - 14.5.20-1997 年 7 月 7 日，引文称 rhushutdown 属 shutdown 流程故 logwtmp 须前移到 runshutdown 之前.md
+            - 14.5.21-1999 年 4 月 6 日，Nick Sayer 提出 securelevel 负向调钟的新建议，致谢 Garance A Droshihn 给出的更优想法.md
+            - 14.5.22-1999 年 4 月 30 日，Jason Thorpe 在讨论中介绍，Chuck Silvers 正在源码分支上做 UBC，即统一缓冲池.md
+            - 14.5.23-1999 年 10 月 22 日，Archie Cobbs 接续 Mike Smith 关于 KLD 卸载即 panic 的看法 指出此类代码应返回错误而非放任卸载继续.md
+            - 14.5.24-1995 年 1 月 3 日，Christian Gusenbauer 说明 fbsdboot 1.5 发布于 fimp01.fim.uni-linz.ac.at：／pub／soft／unix／fbsdboot.arj，须用同目录的 arj.exe 解包；它从找到的首个 FreeBSD 分区启动.md
+            - 14.5.25-1995 年 3 月 28 日，Brad Midgley 报告 950322 SNAP 在内核恐慌上明显好于 FreeBSD 2.0，但网络像网线被反复插拔般间歇中断.md
+            - 14.5.26-1995 年 4 月 4 日，Lars Fredriksen 就配置数据库劝勿学 AIX 做法，称 AIX 采用无文档接口的二进制 DB，数据出错后难恢复，工具不支持全部选项.md
+            - 14.5.27-1995 年 5 月 4 日，Frank Nobis 展示其内核配置做法，以 options COM_MULTIPORT 支持多端口.md
+            - 14.5.28-1995 年 6 月 30 日，Rodney Grimes 回复 ／sbin／init 与 ／usr／sbin／watch 权限问题 称这两个不属于标准可执行文件 init 若要从可执行位撤下需小幅改内核 现有模式是按保守安全策略所做决定 未来也不会改为 555.md
+            - 14.5.29-1995 年 7 月 22 日，Heikki Suonsivu 主张 Cyrix 问题只涉部分芯片 称 DX40 与 DX2／66 看起来行为正常 又说某些主板上有问题 曾用台湾 microstar 主板与 Cyrix 不匹配每天锁定数次 其他 cpu 却正常.md
+            - 14.5.30-1995 年 8 月 25 日，Terry Lambert：认为高速数据传输下中断应由服务例程里密集轮询处理，可直接以 115k 跑非 FIFO 的 UART.md
+            - 14.5.31-1995 年 9 月 11 日，Bruce Evans 指出 DELAY(n) 在无限快硬件上仅延迟 n-20 us 延迟除初始化外不应在多任务系统使用 kbd_cmd 曾忙等最长 5 秒.md
+            - 14.5.32-1995 年 9 月 30 日，Terry Lambert 论证 SYSINT 变更完全传播后静态链接与动态加载无代码差异 反对者坚持所有驱动作为极干净非破坏模块 议题落在 devfs 注册机制与 backing store 能否彻底移除 并提出 frame 文件系统作为替代.md
+            - 14.5.33-1995 年 10 月 8 日，J. Wunsch 举例说明内核配置文件名通常对应目标机器名，如 freefall.freebsd.org 对应 FREEFALL.md
+            - 14.5.34-1996 年 1 月 28 日，Kim Culhan 报告新装的 -stable 在 Boot 提示处即将载入内核时报 Error C：1034 ＞ 1023 即 BIOS 柱面限制，机型 ASUS P55TP4XE 此前运行 -current 一直没有问题，Adaptec 2940 控制器表现相同.md
+            - 14.5.35-1996 年 7 月 9 日，FreeBSD 从不用 PIC 做 spl 提升，那篇讲 x86 上如何避免与 PIC 8259 交谈的论文因此不适用.md
+            - 14.5.36-1996 年 8 月 12 日，WebBox 无硬盘方案可行，内核 text 段 ROM 化、data 段启动时载入 RAM，load 地址需与段寄存器对齐.md
+            - 14.5.37-1996 年 9 月 22 日，David Greenman 称用户态统一的想法我们试过 参与者都忙于各自系统开发 没余力合并源码树 也没足够人力承担长期维护.md
+            - 14.5.38-1996 年 10 月 2 日，J Wunsch 回复 Howard Lew 的询问：内核里 CPU 识别代码位于 ／sys／i386／i386 目录下.md
+            - 14.5.39-1997 年 4 月 10 日，Bruce Evans 指出 ifdefs 选项与 LKM 根本不兼容，LKMs 不得使用 DEVFS 等非标准选项.md
+            - 14.5.40-1997 年 4 月 18 日，Sean Eric Fagan 解释 fs 与 gs 寄存器除 VM86 模式外处理器不会自动压栈，系统虽有相关支持但不完善.md
+            - 14.5.41-1997 年 4 月 29 日，温希说自己机器昨天在卸载 cd9660 这个 LKM 时崩过，大概那个 LKM 版本太旧，起因是近来 LKM 构建出了毛病.md
+            - 14.5.42-1997 年 6 月 6 日，面对 Lee Crites 想让若干进程获得并保持固定优先级的提问，Michael Smith 的答复只给出 man rtprio 一个去处.md
+            - 14.5.43-1997 年 6 月 23 日，Joerg Wunsch 反驳直接字符 I／O 到 VGA 屏幕的要求，称这让应用失去可移植性，应改用 curses.md
+            - 14.5.44-1997 年 8 月 13 日，Jordan K. Hubbard 认为所谓两种处理器实为同一块主板与 CPU 硬件，差别仅在用 SRM 控制台代码替换 ARC 控制台代码.md
+            - 14.5.45-1997 年 8 月 22 日，兰伯特认为这多半是 PCI 仲裁问题：多数英特尔 PCI 桥无法正确仲裁两个以上的总线主控设备.md
+            - 14.5.46-1997 年 9 月 6 日，约瑟夫卡尔豪泽说遇到了启动时内存分配问题却无法定位，转发他早前就此问题发给唐怀特的邮件，其中内核识别到的版本是 2.2-STABLE.md
+            - 14.5.47-1997 年 9 月 12 日，迈克·史密斯在 extent 管理器之争里为自己主张辩护：若只有一片 I／O 空间就只需一张映射表；他原意是接口统一.md
+            - 14.5.48-1997 年 9 月 16 日，隐居的极客在 3.0 系统上通过 modstat 确认 linux_mod 已加载.md
+            - 14.5.49-1997 年 9 月 21 日，Tom 说他未能完全理解对方所述，自己也可以把任意内核放到同一张根磁盘并从其启动，无需重新做 release；同样可以用安装与 fixit 盘完成.md
+            - 14.5.50-1997 年 9 月 28 日，Tony Overfield 认为用输入端口 0x84 做延迟并无不妥，指出该端口与 0x80 等同属未用的 DMA 页寄存器.md
+            - 14.5.51-1997 年 10 月 13 日，关于新模块命名的来回复讨论，多个候选名字反复往返却始终未获共识，来回之间无人拍板，讨论最后以一句理想化却缺乏实用性的短评作结.md
+            - 14.5.52-1997 年 10 月 17 日，Julian Elischer 承认 if.h 与 if_var.h 确实混乱但认为是过渡状态.md
+            - 14.5.53-1997 年 10 月 19 日，Jordan Hubbard 通报 Peter 已把同步补丁连同 Matt Thomas 最新改动合入 de 驱动 DC21xxx 用户速装 2.2.5-971018-BETA 并从 ftp.freebsd.org 或镜像取用未生效须即时回报.md
+            - 14.5.54-1997 年 10 月 25 日，Þorður Ivarsson 指出校验失败会关联到 CPU 的 NMI，多数 BIOS 例程据此停机且不提供出错原因.md
+            - 14.5.55-1997 年 10 月 31 日，他才发现模块链接器其实已经进了 current，便问 PCI 设备驱动该如何接入以及有无迁到 elf 的计划.md
+            - 14.5.56-1997 年 11 月 9 日，Terry Lambert 回呛对方毫无幽默感，指出 OpenBoot 做到的事是让显卡不依赖特定处理器.md
+            - 14.5.57-1997 年 11 月 15 日，Alex 答复 Jamil 的办法就是在 config 里加 -g 这一项 直接在配置文件里开调试符号 整个回答相当简短干脆.md
+            - 14.5.58-1997 年 11 月 16 日，mini 正开发支持 VESA VBE 1.2 与 2.0 的库，内核里放一个 vesa 设备负责显存映射与虚拟帧缓冲.md
+            - 14.5.59-1997 年 11 月 19 日，J Wunsch 指出向 dev console 发声响不可靠，因为该设备可能是 serial 串口.md
+            - 14.5.60-1997 年 12 月 11 日，Pierre Beyssac 认为这类移植大概永远也不会有，他解释 68hc11 系列只是加了料的 6800 基微控制器.md
+            - 14.5.61-1998 年 1 月 9 日，Terry 确认独立 open 与 close 接口就是那个说法.md
+            - 14.5.62-1998 年 1 月 27 日，daniel 反问无论走哪条路内核内存都得分配，数据要么加载进 kernel，要么先在 user land 加载再拷贝回 kernel.md
+            - 14.5.63-1998 年 1 月 30 日，daniel_sobral 早前询问在内核中调用 tsleep()，有人告知可以内核进程作 backing process，他现在想再看这一方案.md
+            - 14.5.64-1998 年 2 月 7 日，shimon 指出除根分区的只读挂载外其余挂载都发生在用户态的 ／etc／rc 里，故他判断内核驱动要远胜于用户态守护程序.md
+            - 14.5.65-1998 年 3 月 9 日，walter 提议用 at_shutdown 接口做内核 callout hook，让／dev／apm 等驱动插入调用队列.md
+            - 14.5.66-1998 年 3 月 16 日，ollivier 从自己的 kernel config 里摘出一段说加 options SYSVSHM SYSVSEM SYSVMSG 与 SHMMAXPGS 设为 1024 就能把共享内存扩到 4MB 并指出信号量与消息队列也有类似的常数可调.md
+            - 14.5.67-1998 年 3 月 20 日，leec 认为 Jordan 关于 FreeBSD 集群愿望的说法可能正确，但他当年不在现场无法核实，也不清楚那份 wishlist 究竟在哪里.md
+            - 14.5.68-1998 年 4 月 30 日，Tom 自述 BOOT_FORCE_COMCONSOLE 在 boot.config 出现之后已过时.md
+            - 14.5.69-1998 年 5 月 7 日，Jim Carroll 提了个小工具想法，若能遍历硬件中断向量表就能显示哪些中断已有驱动在等待处理，从而看出当前占用情况.md
+            - 14.5.70-1998 年 5 月 21 日，manar 回忆说 strongarm 上不见 freebsd 移植，netbsd 移植却成熟，早期因历史原因也叫 RiscBSD.md
+            - 14.5.71-1998 年 6 月 5 日，niall 逐词追问 terry 所说 sysctl 作为动态重配实验代码并在调试过程中使用的具体所指以弄清各措辞的确切含义.md
+            - 14.5.72-1998 年 6 月 30 日，terry 认为陷阱编号不合硬件术语源于 Pentium bug workaround，进程可用 SIGSEGV 处理器处理非自身页面的缺页.md
+            - 14.5.73-1998 年 7 月 2 日，percy 询问 BootEasy 是否需要主分区才能接管引导 以及把 win95 win98 与 FreeBSD 装在不同主分区再把最后一块做成扩展分区是否可管 并说自己只看到 BootEasy 识别扩展驱动器而看不见逻辑驱动器.md
+            - 14.5.74-1998 年 8 月 19 日，SRI 的 Nate Williams 回应主张取回被挪作纳秒用途字段的说法，指出这些字段本是带来 UFS 的同一批人挪走的、属 Lite2 内容.md
+            - 14.5.75-1998 年 8 月 31 日，Jordan K. Hubbard 在 2.2.7 安装覆盖引导扇区一议中预判了用户的操作过程，认为错在 libdialog 的键位方案而非用户.md
+            - 14.5.76-1998 年 10 月 23 日，Amancio Hasty 说明 PCI 总线传输因设备而异，不像 ISA DMA 有标准方式.md
+            - 14.5.77-1998 年 10 月 30 日，Mike Smith 提议在内核引入 scanf，理由是设备名等抽象表示增多使内核解析字符串变得重要，而手写解析繁琐易错.md
+            - 14.5.78-1998 年 11 月 6 日，Ron G. Minnich 指出 PII 等 Intel 主板 PCI 读取仅 7 MBytes／秒.md
+            - 14.5.79-1998 年 11 月 9 日，Jordan K. Hubbard 认为他人关于厂商私自假定主机配置的指责并不相关，主张兼容的本质是让一个平台成立的假设在另一平台同样成立.md
+            - 14.5.80-1999 年 1 月 25 日，Daniel C. Sobral 答复 Tom Torrance 关于 num_ide_disks 被最后一次改动弄坏的说法.md
+            - 14.5.81-1999 年 3 月 5 日，Terry Lambert 回应称优先化 AST 可与等待完成接口达到相同效果.md
+            - 14.5.82-1999 年 6 月 19 日，Pat Lynch 报告两颗 PPGA Socket 370 Celeron 333A 经 MSI6905 双插槽转接板装在 Tyan Thunder 2 主板启动 SMP 内核 panic 提示找不到 local apic 改回 UP 内核则正常.md
+            - 14.5.83-1999 年 7 月 4 日，Warner Losh 在 bus 空间讨论中承认新 bus 路径绕过 nexus 系沿袭 newconfig 代码但认为未必如此.md
+            - 14.5.84-1999 年 7 月 8 日，FreeBSD 核心团队成员 Poul-Henning Kamp 建议研究 Pentium 及后续处理器上片内 APIC 的能力.md
+            - 14.5.85-1999 年 7 月 19 日，Mike Smith 援引 nextboot manpage 指出 loader 配置存在须由其自行更新的情形，该功能当前已丧失.md
         - 14.6-网络配置、防火墙与站点运维
-            - 14.6.1-年11月30日WesPeters指出192168xxxx这类私有地址不能路由到互.md
-            - 14.6.2-年8月28日1998年8月28日DonONeil报告本机一个账户被设为向两人转发.md
-            - 14.6.3-1999年7月28日BrianFFeldman提出ipfw的日志限制相关三类操作.md
-            - 14.6.4-1999年7月30日jkh认可让未配置接口可发广播以支持DHCP是首选方案但他不.md
-            - 14.6.5-1999年8月13日rock指出RFC1035中主机规范只是should但RFC.md
-            - 14.6.6-1999年9月10日brian建议丢弃natd与ipfw改用ipf与ipnat以.md
-            - 14.6.7-1999年10月1日dwhite指出并非全部Alcatel均按RFC148342.md
-            - 14.6.8-1999年10月22日ikuo称ftpmirror19x配httpproxy即可.md
-            - 14.6.9-1999年7月30日nate回忆认为网络组已倾向让未配置接口能发送广播包以支持D.md
-            - 14.6.10-1999年10月29日gena求ISDN拨入配置已配好AVIFritz卡与i4b.md
-            - 14.6.11-年7月30日KrisKennaway回复CristJClark的TelnetPr.md
-            - 14.6.12-年9月6日WillMitayaiKeesoRowe回复说自己按建议把C类地址写入.md
-            - 14.6.13-年6月7日Jordan觉得etcnetstart这类本应不可变的文件理应改由ma.md
-            - 14.6.14-年11月16日KimCulhan在225RELEASE上telnet到SunOS.md
-            - 14.6.15-年4月15日KhetanGajjar澄清被删的只是hostname一行引号之间的.md
-            - 14.6.16-年5月2日michael报告ipfwaddabidirectionalallfr.md
-            - 14.6.17-年4月16日LeoPapandreou怀疑差距来自Qmail与Sendmail称.md
-            - 14.6.18-年6月15日MattWhite称先前说修好是言之过早现在轮到usrsbinppp.md
-            - 14.6.19-年8月3日EvanChampion认为这属于特性而非缺陷建议改用NFS第二版协议.md
-            - 14.6.20-年8月31日Scott报告ftpaccess已有这两行最大问题在于wuftpd看.md
-            - 14.6.21-年10月22日BillSandiford称脚本在cron下无任何错误消息或返回码.md
-            - 14.6.22-年1月10日StaffanUlfberg调试ksrvtgt时见usrbinksr.md
-            - 14.6.23-年12月29日报告etcremote有at=hayes但etcmodems里没有.md
-            - 14.6.24-年3月6日YuryPshenychny指出210R与current的slip实现.md
-            - 14.6.25-年7月15日JWunsch向CyrusGray解释首个DNS服务器超时才会询问下.md
-            - 14.6.26-年12月16日JohnPolstra在组织统一的CVSup镜像时发现srcrel.md
-            - 14.6.27-年3月8日RichardWackerbarth接手恢复spatter故障后的CT.md
-            - 14.6.28-年3月25日LucLewy回复BrianSomers关于探测开放TCP端口的提议.md
-            - 14.6.29-年4月11日dennis报告221R的NFS与FTP加载问题排查结果只有kern.md
-            - 14.6.30-年6月19日DrewDerbyshire回应他人推测ipfw强制用数字形式是因N.md
-            - 14.6.31-年6月25日BrianSomers说PPPoE无回应可能是setdevice行p.md
-            - 14.6.32-年1月8日RichardWackerbarth报告current的sup树疑缺一.md
-            - 14.6.33-年2月1日MichaelReifenberger提醒推行CTM方案须告知使用者C.md
-            - 14.6.34-年2月24日JohnHay报告ctm_rmail修复后仍报cannotopen写.md
-            - 14.6.35-年3月4日LuigiRizzo用snap950210试diskless发现net.md
-            - 14.6.36-年3月29日JWunsch认为telnetbinary下SLIP应可行本已在te.md
-            - 14.6.37-年5月18日MichaelCNewell称路由曾把本机以太网ed0判成ppp0导.md
-            - 14.6.38-年5月25日MikePritchard建议在etcsysconfig里设tcp_.md
-            - 14.6.39-年8月23日PoulHenningKamp在IPFW与SCREEND串里指出各I.md
-            - 14.6.40-年8月29日JWunsch说明Christoph两周未收到提交邮件是因maili.md
-            - 14.6.41-年10月2日AdeBarkah回应镜像提议时回忆公司曾主动提出为Netscape.md
-            - 14.6.42-年10月4日JoeGreco回应关于在Solaris下给接口加别名的提问说把if.md
-            - 14.6.43-年10月9日StuPhillips在210950928SNAP上跑xntpd时i.md
-            - 14.6.44-年10月19日JohnFieber称Netware服务器可以支持lpd但特定服务.md
-            - 14.6.45-年11月14日GregLehey装完最新current后NFS挂载失败mount.md
-            - 14.6.46-年12月13日BruceEvans引man页说明slattach的l选项关闭CL.md
-            - 14.6.47-年1月10日JWunsch答复sendmailcf配置让路由盒取真实主机名而非仅.md
-            - 14.6.48-年2月15日DavidGreenman纠正说每个子网只会得到30个主机地址因为每.md
-            - 14.6.49-年2月27日PeterDufault称他已建议Brian别急因对方没开autor.md
-            - 14.6.50-年5月22日KenGermann的IRC服务器约260客户端后段错误并核心转储把.md
-            - 14.6.51-年9月11日KarlDenninger附上针对CURRENT的差分把启动连接超时.md
-            - 14.6.52-年11月25日兰伯特反问既然自己熟稔sendmail虚拟域的配法那qmail一侧.md
-            - 14.6.53-年12月19日MarkTinguely确认WideDHCPclient在Free.md
-            - 14.6.54-年2月4日CharlesMott提出ppp自动模式下动态地址重连令natd难以支.md
-            - 14.6.55-年2月20日Brian建议用sbinipfw配合内核选项按源目主机网络端口组做访.md
-            - 14.6.56-年4月2日Hinrich反映从软件端口取用的新闻阅读程序与新闻传输服务器同机运行.md
-            - 14.6.57-年5月3日感谢对方并透露除自身规则外还把部分规则施加于用户同时建议出口侧应配置I.md
-            - 14.6.58-年5月3日指出有人使用localhostcom作为垃圾邮件的来源地址此事令该域名.md
-            - 14.6.59-年5月25日他问有没有人知道该写怎样的安全shell才能在登录时执行真实shel.md
-            - 14.6.60-年5月31日LuigiRizzo说明Apache用多服务器标准做法各实例都去ac.md
-            - 14.6.61-年6月3日Joerg反对将路由器发现默认启用在以太网端系统主张应由操作者主动按下.md
-            - 14.6.62-年6月11日MarkTinguely在跑通natd后建议把natd的PID写进v.md
-            - 14.6.63-年6月23日TerryLambert说明下载模式由客户端选定该FTP服务器对二进.md
-            - 14.6.64-年7月11日TerryLambert认可用单一脚本配合casehostname覆.md
-            - 14.6.65-年8月2日丹尼尔奥卡拉根澄清自己只写了那段管理虚拟域名与重定向的perl脚本至于.md
-            - 14.6.66-年8月8日萨迈恩称自带ftpd在22机器上作为web服务器使用时返回登录提示要拖.md
-            - 14.6.67-年9月8日SeanEricFagan反驳对方声称mailfrom地址无须可解析的.md
-            - 14.6.68-年10月1日运行222RELEASE的冰岛ISP用四条线通过ttys启动PPPD.md
-            - 14.6.69-年10月2日JWunsch确认resolvconf声明的域名与主机条目不一致可能.md
-            - 14.6.70-年10月8日确认chargen仅作演示用途任意TCP连接皆会出现该卡顿现象随后询.md
-            - 14.6.71-年10月11日TheHermitHacker想要static_ip的落地用法手头.md
-            - 14.6.72-年10月20日ipfw把默认规则改为open的提议转发了五天无人响应提议在rcc.md
-            - 14.6.73-年10月22日Wunsch主张另起一个独立telnetd程序放弃监听INADDR.md
-            - 14.6.74-年11月14日JamieBowden推荐无硬盘486加natd路由器约10分钟就.md
-            - 14.6.75-年11月19日tlambert认为就算盘满被迫拒收邮件也并非灾难而是gracef.md
-            - 14.6.76-年11月27日eivind主张动态分配认为ipfw本身不应限制numberofr.md
-            - 14.6.77-年11月29日jamil指出这套做法有两处麻烦系统只剩一块盘时重启会崩而且没法在.md
-            - 14.6.78-年12月3日Vladimir来信只问了如何将端口锁定到14400全篇没有附任何配.md
-            - 14.6.79-年12月17日JaroslavKlaus问能否以root身份强制关闭netbio.md
-            - 14.6.80-年12月18日ivt转述newsgammaru的地址为00c0a42e61就00.md
-            - 14.6.81-年1月2日JohnBirrell澄清丢信指sendmail在maillog记录到.md
-            - 14.6.82-年1月16日JonathanMBresler回应说cvsall之前被人干掉了现已.md
-            - 14.6.83-年2月22日ada简短建议把etcdaily从2am挪开以回避同线程讨论的运行问.md
-            - 14.6.84-年3月3日jkh承认对方最初宣布GUI配置工具时自己已亲自测试过但认为界面实现太.md
-            - 14.6.85-年3月7日AllenCampbell建议不要查锁文件是否存在而应查看接口状态指出.md
-            - 14.6.86-年3月23日luigi分享一篇讲microsoft如何管理其web服务器的文章链.md
-            - 14.6.87-年3月26日doug提到ArchieCobbs说新版ISCDHCPserver含.md
-            - 14.6.88-年3月31日jmb回JamesEHousley建议交上下文diff指出RBL检查.md
-            - 14.6.89-年4月7日studded说明cron期待操作者比它聪明并提出与vixie讨论的方.md
-            - 14.6.90-年4月14日mike的整封回复只有一句让改试USRCourierImodem既未.md
-            - 14.6.91-年5月17日jay说明DHCP与bootp一样走广播除非在网关上显式配置DHCP.md
-            - 14.6.92-年5月19日jay认同配置数据库线程里dan提出的smit式思路认为smit并不.md
-            - 14.6.93-年5月28日elischer告知已改动IPFW语义目前仍是可选项且需要IPFW_.md
-            - 14.6.94-年5月29日charles说难点不在Apache配置本身而在让httpd进程跑起.md
-            - 14.6.95-年5月4日建议为入站守护选项增设开关并向防火墙启动脚本加入外部过滤文件支持以便从.md
-            - 14.6.96-年6月24日kimshrier补充说自己要管理分布在四处的FreeBSD机器需s.md
-            - 14.6.97-年7月5日mike自述今晨集群有两处故障dg重启freefall后它没能正常下线.md
-            - 14.6.98-年7月8日jack回话说没读过procmail手册吗并引用手册说明procmai.md
-            - 14.6.99-年7月16日rivers报告在226上把内网机器100010的7490端口暴露到.md
-            - 14.6.100-年9月22日DonLewis回应GregLehey的inetd观察认为其代码自信.md
-            - 14.6.101-年10月6日GrahamWheeler提交改版inetdc把信号处理改为向管道写.md
-            - 14.6.102-年11月1日南乌拉尔Freenet中心管理员KonstantinChuguev回.md
-            - 14.6.103-年11月3日HotJobs程序员AlfredPerlstein说明NFS服务器宕.md
-            - 14.6.104-年12月17日KarlDenninger观察锁死与早上812httpdapa收到.md
-            - 14.6.105-年1月14日BrianSomers表示若libalias改名libnat倾向把p.md
-            - 14.6.106-年1月27日MatthewDillon认为给用户设合理资源限制即可化解cront.md
-            - 14.6.107-年2月18日SEIDataNetworkServices的系统网络管理员Mike.md
-            - 14.6.108-年3月9日JulianElischer建议将tun回环场景改用ipfw与dive.md
-            - 14.6.109-年3月19日JoeSchwartz迁移ISP的NT邮件服务器至FreeBSD31.md
-            - 14.6.110-年7月11日SheldonHearn认为把真实ident并入inetd是坏主意反.md
-            - 14.6.111-年7月12日MarcGFournier以huborg系统管理员报告说服IS同事由.md
-            - 14.6.112-年7月13日BrianFFeldman就identd的FAKEID处理澄清顾虑并.md
-            - 14.6.113-年7月15日Internode网络工程师MarkNewton援引lyndon转引.md
+            - 14.6.1-1998 年 11 月 30 日，Wes Peters 指出 192.168.xx.xx 这类私有地址不能路由到互联网，需在路由器启用 NAT.md
+            - 14.6.2-1998 年 8 月 28 日，Don O'Neil 报告本机一个账户被设为向两人转发.md
+            - 14.6.3-1999 年 7 月 28 日，Brian F Feldman 提出 ipfw 的日志限制相关三类操作 包括按规则设置日志上限.md
+            - 14.6.4-1999 年 7 月 30 日，jkh 认可让未配置接口可发广播以支持 DHCP 是首选方案，但他不认为此事会在合理时间内出现或已有人决定动手实施具体工作.md
+            - 14.6.5-1999 年 8 月 13 日，rock 指出 RFC 1035 中主机规范只是 should 但 RFC 1123 强制引用 RFC 952 故主机名不允许下划线并建议参考 RFC 2181 第十一节澄清.md
+            - 14.6.6-1999 年 9 月 10 日，brian 建议丢弃 natd 与 ipfw 改用 ipf 与 ipnat 以便借助 keepstate 实现接近状态化的包过滤.md
+            - 14.6.7-1999 年 10 月 1 日，dwhite 指出并非全部 Alcatel 均按 RFC 1483 4.2 模式运行 PacBell 尚未如此使用他自述曾改造 userppp 对接 RedBack 现愿供 demo SMS-500 需 AOS 2.2 或以上固件以重实现.md
+            - 14.6.8-1999 年 10 月 22 日，ikuo 称 ftpmirror-1.9x 配 http-proxy 即可经 squid 代理取 FTP 档.md
+            - 14.6.9-1999 年 7 月 30 日，nate 回忆认为网络组已倾向让未配置接口能发送广播包以支持 DHCP 从而免依赖 bpf，此即当初将 bpf 加入内核的压倒性理由.md
+            - 14.6.10-1999 年 10 月 29 日，gena 求 ISDN 拨入配置，已配好 AVI Fritz 卡与 i4b 但 iijppp 样例仅含拨出.md
+            - 14.6.11-2000 年 7 月 30 日，Kris Kennaway 回复 Crist J. Clark 的 Telnet Problem.md
+            - 14.6.12-2000 年 9 月 6 日，Will Mitayai Keeso Rowe 回复说自己按建议把 C 类地址写入 ／etc／mail／relay-domains 并重启 sendmail 后 relaying denied 问题已解决，感谢 Gregory Neil Shapiro 的帮助.md
+            - 14.6.13-1996 年 6 月 7 日，Jordan 觉得 ／etc／netstart 这类本应不可变的文件理应改由 make world 安装 能收窄每次升级需要回头重访的自定义文件范围.md
+            - 14.6.14-1997 年 11 月 16 日，Kim Culhan 在 2.2.5-RELEASE 上 telnet 到 SunOS 与 IRIX 5.3，在 VI 中连按方向键后 SunOS 端每次输出大写 B,IRIX 5.3 只返回 BEL 字符.md
+            - 14.6.15-1998 年 4 月 15 日，Khetan Gajjar 澄清被删的只是 hostname 一行引号之间的值，整行还在，文件创建时间是他重新开机之时.md
+            - 14.6.16-1995 年 5 月 2 日，michael 报告 ipfw adda bidirectional all from 0／0 to 202.12.127.0／24 添加双向记数过滤器得 ipfw： setsockopt failed，950412-SNAP 与截至昨天的 -current 上均如此.md
+            - 14.6.17-1998 年 4 月 16 日，Leo Papandreou 怀疑差距来自 Qmail 与 Sendmail，称 Qmail 明显更快且是某些 Linux 发行版的默认选择.md
+            - 14.6.18-1998 年 6 月 15 日，Matt White 称先前说修好是言之过早，现在轮到 usr.sbin／ppp 在 mkdep 阶段失败.md
+            - 14.6.19-1998 年 8 月 3 日，Evan Champion 认为这属于特性而非缺陷，建议改用 NFS 第二版协议挂载，即在挂载时指定 nfsv2 参数选项.md
+            - 14.6.20-1998 年 8 月 31 日，Scott 报告 ftpaccess 已有这两行，最大问题在于 wu-ftpd 看不到已登录用户，因而无法设置强制用户上限，求解决办法.md
+            - 14.6.21-1998 年 10 月 22 日，Bill Sandiford 称脚本在 cron 下无任何错误消息或返回码，屏幕空白，syslog 也不打印.md
+            - 14.6.22-1999 年 1 月 10 日，Staffan Ulfberg 调试 ksrvtgt 时见 ／usr／bin／ksrvtgt 末行 kauth 的 srvtab 之后多了一个空格.md
+            - 14.6.23-1995 年 12 月 29 日，报告 ／etc／remote 有 at=hayes 但 ／etc／modems 里没有 hayes 条目.md
+            - 14.6.24-1996 年 3 月 6 日，Yury Pshenychny 指出 2.1.0R 与 -current 的 slip 实现有 bug，SLIOCSUNIT 直接改当前接口单元号.md
+            - 14.6.25-1996 年 7 月 15 日，J Wunsch 向 Cyrus Gray 解释首个 DNS 服务器超时才会询问下一个，但若首服务器答 No such domain 则不再询问后续服务器，而是把该应答直接交回请求程序.md
+            - 14.6.26-1996 年 12 月 16 日，John Polstra 在组织统一的 CVSup 镜像时发现 src-release 与 src-tools 集合已过时.md
+            - 14.6.27-1997 年 3 月 8 日，Richard Wackerbarth 接手恢复 spatter 故障后的 CTM 喂送，手头有 src-cur 与 cvs-cur 的最新增量.md
+            - 14.6.28-1997 年 3 月 25 日，Luc Lewy 回复 Brian Somers 关于探测开放 TCP 端口的提议，建议改用 ISS 1.3.md
+            - 14.6.29-1997 年 4 月 11 日，dennis 报告 2.2.1R 的 NFS 与 FTP 加载问题排查结果：只有 kernel developer 选项失败.md
+            - 14.6.30-1997 年 6 月 19 日，Drew Derbyshire 回应他人推测 ipfw 强制用数字形式是因 NIS 与 DNS 不可靠之说.md
+            - 14.6.31-2000 年 6 月 25 日，Brian Somers 说 PPPoE 无回应可能是 set device 行 provider 设错或供应商缓存了旧网卡 MAC 地址.md
+            - 14.6.32-1995 年 1 月 8 日，Richard Wackerbarth 报告 -current 的 sup 树疑缺一次头文件更新.md
+            - 14.6.33-1995 年 2 月 1 日，Michael Reifenberger 提醒推行 CTM 方案须告知使用者 CURRENT 源码是 alpha 代码且可能损毁机器与文件系统.md
+            - 14.6.34-1995 年 2 月 24 日，John Hay 报告 ctm_rmail 修复后仍报 cannot open 写失败，路径变为 tmp.／usr／CTM／pieces／ 前缀式.md
+            - 14.6.35-1995 年 3 月 4 日，Luigi Rizzo 用 snap950210 试 diskless，发现 netboot 的 netboot.com 并非真正 COM 文件可用的是 netboot.com.nohdr 他此前已提，另不同子网下停在 nfs send error 65 疑为未传.md
+            - 14.6.36-1995 年 3 月 29 日，J Wunsch 认为 telnet／binary 下 SLIP 应可行，本已在 telnet 网关登录跑 uucp 和 z-modem.md
+            - 14.6.37-1995 年 5 月 18 日，Michael C. Newell 称路由曾把本机以太网 ed0 判成 ppp0，导致全部流量经 ppp0 出去，只能靠重启本机服务器修复.md
+            - 14.6.38-1995 年 5 月 25 日，Mike Pritchard 建议在 ／etc／sysconfig 里设 tcp_extensions=NO 禁用 RFC1323 与 RFC1644 扩展以提速 SLIP 链路，并说 RFC1323 本身建议慢链路上关掉它.md
+            - 14.6.39-1995 年 8 月 23 日，Poul-Henning Kamp 在 IPFW 与 SCREEND 串里指出，各 IP 网络都应保证最小 MTU 576.md
+            - 14.6.40-1995 年 8 月 29 日，J Wunsch 说明 Christoph 两周未收到提交邮件是因 mailing list 清理所致，Jonathan 事前已发过警告.md
+            - 14.6.41-1995 年 10 月 2 日，Ade Barkah 回应镜像提议时回忆公司曾主动提出为 Netscape 做镜像站点、免费承担资源.md
+            - 14.6.42-1995 年 10 月 4 日，Joe Greco 回应关于在 Solaris 下给接口加别名的提问，说把 ifconfig le0 改成 ifconfig le0：0 即可增加别名.md
+            - 14.6.43-1995 年 10 月 9 日，Stu Phillips 在 2.1.0-950928-SNAP 上跑 xntpd 时 ioctl TIOCSPGRP 与 fcntl F_SETOWN 均报 不适用此设备的错误 尝试让 NMEA 时钟驱动工作.md
+            - 14.6.44-1995 年 10 月 19 日，John Fieber 称 Netware 服务器可以支持 lpd 但特定服务器是否启用属政治问题 自己因此不管天候在印第安纳南部往返半小时取打印件 而非楼下五分钟 并盼能与不讲 lpd 的 Netware 服务器直接对话.md
+            - 14.6.45-1995 年 11 月 14 日，Greg Lehey 装完最新-current 后 NFS 挂载失败.md
+            - 14.6.46-1995 年 12 月 13 日，Bruce Evans 引 man 页说明 slattach 的 -l 选项关闭 CLOCAL 与载波检测，默认断载波时调用重拨命令.md
+            - 14.6.47-1996 年 1 月 10 日，J Wunsch 答复 sendmail.cf 配置，让路由盒取真实主机名而非仅用子域名.md
+            - 14.6.48-1996 年 2 月 15 日，David Greenman 纠正说每个子网只会得到 30 个主机地址，因为每个子网上全 1 的主机位部分就是该子网的广播地址.md
+            - 14.6.49-1996 年 2 月 27 日，Peter Dufault 称他已建议 Brian 别急，因对方没开 auto reallocation，迟早会撞上同类问题；备份是好办法.md
+            - 14.6.50-1996 年 5 月 22 日，Ken Germann 的 IRC 服务器约 260 客户端后段错误并核心转储，把 FD_SETSIZE 调到 1024 反而无法连 IRC 网络.md
+            - 14.6.51-1996 年 9 月 11 日，Karl Denninger 附上针对 CURRENT 的差分，把启动连接超时改为 10 秒，认为今日 Internet 上已足够防丢链.md
+            - 14.6.52-1996 年 11 月 25 日，兰伯特反问既然自己熟稔 sendmail 虚拟域的配法那 qmail 一侧同样需求又该由谁来讲解该怎么落地这一问把讨论主动权交回给对方.md
+            - 14.6.53-1996 年 12 月 19 日，Mark Tinguely 确认 Wide DHCP client 在 FreeBSD 2.1.5 以太网可用并指出 bpfilter 需内核伪设备，可在内核配置文件中添加 pseudo-device bpfilter 4 条目.md
+            - 14.6.54-1997 年 2 月 4 日，Charles Mott 提出 ppp 自动模式下动态地址重连令 natd 难以支持，逐包查询设备地址不可行.md
+            - 14.6.55-1997 年 2 月 20 日，Brian 建议用 ／sbin／ipfw 配合内核选项按源目主机网络端口组做访问控制，并指出 ipfw 可选择不回包以隐藏服务器存在.md
+            - 14.6.56-1997 年 4 月 2 日，Hinrich 反映从软件Port取用的新闻阅读程序与新闻传输服务器同机运行时无法工作，故提交一小补丁增加可关闭开关，让该行为在本地与远程一律启用.md
+            - 14.6.57-1997 年 5 月 3 日，感谢对方并透露除自身规则外还把部分规则施加于用户同时建议出口侧应配置 IP 欺骗过滤另称防垃圾程序尚在成熟期期望将来能提供给Ports Collection.md
+            - 14.6.58-1997 年 5 月 3 日，指出有人使用 localhost.com 作为垃圾邮件的来源地址，此事令该域名的持有者颇为烦恼，遂附难过的表情以示不满并提醒列表留意.md
+            - 14.6.59-1997 年 5 月 25 日，他问有没有人知道该写怎样的安全 shell 才能在登录时执行真实 shell 并把用户环境切成正确状态，说不要 rsh 式的受限 shell.md
+            - 14.6.60-1997 年 5 月 31 日，Luigi Rizzo 说明 Apache 用多服务器标准做法，各实例都去 accept() 或对 socket 做 select.md
+            - 14.6.61-1997 年 6 月 3 日，Joerg 反对将路由器发现默认启用在以太网端系统，主张应由操作者主动按下按钮才开启，新手安装模式可自动引导到该问题.md
+            - 14.6.62-1997 年 6 月 11 日，Mark Tinguely 在跑通 natd 后建议把 natd 的 PID 写进 ／var／run／natd.pid.md
+            - 14.6.63-1997 年 6 月 23 日，Terry Lambert 说明下载模式由客户端选定 该 FTP 服务器对二进制与文本两种格式均不设限 此非服务器所控的文件属性 问题多半出在 WWW 浏览器把 .txt 后缀默认判为纯文本 需调整其选项或在 mailcap 文件中移除 .txt 的纯文本关联.md
+            - 14.6.64-1997 年 7 月 11 日，Terry Lambert 认可用单一脚本配合 case hostname 覆盖 N 台机器，但反问若本就要在升级某项设施时覆盖其脚本又当如何.md
+            - 14.6.65-1997 年 8 月 2 日，丹尼尔奥卡拉根澄清自己只写了那段管理虚拟域名与重定向的 perl 脚本，至于那批 sendmail 规则其实来自阿德里安查德和别处，并不归他所有.md
+            - 14.6.66-1997 年 8 月 8 日，萨迈恩称自带 ftpd 在 2.2 机器上作为 web 服务器使用时返回登录提示要拖二十到三十秒，2.1.7 的 ftpd 没有这问题.md
+            - 14.6.67-1997 年 9 月 8 日，Sean Eric Fagan 反驳对方声称 mail from 地址无须可解析的观点，反问既然无法给这些人回信，还有什么理由允许他们到列表里提出问题.md
+            - 14.6.68-1997 年 10 月 1 日，运行 2.2.2-RELEASE 的冰岛 ISP 用四条线通过 ttys 启动 PPPD，last 命令仍显示已死连接为已登录.md
+            - 14.6.69-1997 年 10 月 2 日，J Wunsch 确认 resolv.conf 声明的域名与主机条目不一致可能就是原因，推测有客户端在请求 localhost.vnet.net.md
+            - 14.6.70-1997 年 10 月 8 日，确认 chargen 仅作演示用途，任意 TCP 连接皆会出现该卡顿现象；随后询问相关修复是否已合入 RELENG_2_2 分支.md
+            - 14.6.71-1997 年 10 月 11 日，The Hermit Hacker 想要 static_ip 的落地用法，手头有两条出口希望把部分流量导向次级那条.md
+            - 14.6.72-1997 年 10 月 20 日，ipfw 把默认规则改为 open 的提议转发了五天无人响应 提议在 rc.conf 中加入警告说明两个 open 的区分 并希望把讨论放回 -stable 邮件列表进行.md
+            - 14.6.73-1997 年 10 月 22 日，Wunsch 主张另起一个独立 telnetd 程序，放弃监听 INADDR_ANY 的通配方式.md
+            - 14.6.74-1997 年 11 月 14 日，Jamie Bowden 推荐无硬盘 486 加 natd 路由器，约 10 分钟就能起防火墙，支持 ethernet、ISDN 与普通拨号.md
+            - 14.6.75-1997 年 11 月 19 日，tlambert 认为就算盘满被迫拒收邮件 也并非灾难而是 graceful failure 邮件仍 enqueued 继续投递并没有丢失 Sendmail 也早已能限制空间 队列剩余块数低于设定值即拒收 他还建议设置配额.md
+            - 14.6.76-1997 年 11 月 27 日，eivind 主张动态分配，认为 ipfw 本身不应限制 number of rules，若要限制也应交由 kernel 来处理.md
+            - 14.6.77-1997 年 11 月 29 日，jamil 指出这套做法有两处麻烦：系统只剩一块盘时重启会崩，而且没法在 ccd 盘上做开箱安装，所以 ccd 盘对他来说只能存数据.md
+            - 14.6.78-1997 年 12 月 3 日，Vladimir 来信只问了如何将端口锁定到 14400，全篇没有附任何配置片段或环境说明，落款处自称自己是 vl.net.ua 的主持人.md
+            - 14.6.79-1997 年 12 月 17 日，Jaroslav Klaus 问能否以 root 身份强制关闭 netbios nmbd 已占用的 socket 而不必等超时.md
+            - 14.6.80-1997 年 12 月 18 日，ivt 转述 news.gamma.ru 的地址为 0：0：c0：a4：2e：61，就 0：0 前缀是否真会有问题征询他人意见.md
+            - 14.6.81-1998 年 1 月 2 日，John Birrell 澄清丢信指 sendmail 在 maillog 记录到消息但未投递到用户账户，日志显示 size 为零.md
+            - 14.6.82-1998 年 1 月 16 日，Jonathan M. Bresler 回应说 cvs-all 之前被人干掉了现已修好，新的 commits 都会出现在那个列表.md
+            - 14.6.83-1998 年 2 月 22 日，ada 简短建议把 ／etc／daily 从 2am 挪开以回避同线程讨论的运行问题.md
+            - 14.6.84-1998 年 3 月 3 日，jkh 承认对方最初宣布 GUI 配置工具时自己已亲自测试过，但认为界面实现太少，还不足以判断在实际工作中能否行得通，故打算等更完备之后再回来看.md
+            - 14.6.85-1998 年 3 月 7 日，Allen Campbell 建议不要查锁文件是否存在而应查看接口状态，指出 pppctl(8) 手册页给出了如何检测 ppp 状态的示例.md
+            - 14.6.86-1998 年 3 月 23 日，luigi 分享一篇讲 microsoft 如何管理其 web 服务器的文章链接，页面本身只是数据入口并指向 MSWord 格式正文.md
+            - 14.6.87-1998 年 3 月 26 日，doug 提到 Archie Cobbs 说新版 ISC DHCP server 含 gateway 与 client 代码.md
+            - 14.6.88-1998 年 3 月 31 日，jmb 回 James E. Housley 建议交上下文 diff 指出 RBL 检查在 2.2.6 与 current 里已从 check_relay 挪到 check_mail 里比对 client_addr 版本升到 1.6 顺手提了用 IP.md
+            - 14.6.89-1998 年 4 月 7 日，studded 说明 cron 期待操作者比它聪明，并提出与 vixie 讨论的方案包括 15 2S 全年标准时与 15 2U 走 UTC.md
+            - 14.6.90-1998 年 4 月 14 日，mike 的整封回复只有一句让改试 USR Courier I-modem，既未说明自己是否真用过该设备，也未给出任何兼容性或驱动方面的判断.md
+            - 14.6.91-1998 年 5 月 17 日，jay 说明 DHCP 与 bootp 一样走广播，除非在网关上显式配置 DHCP 中继否则其他子网的主机看不到这个请求.md
+            - 14.6.92-1998 年 5 月 19 日，jay 认同配置数据库线程里 dan 提出的 smit 式思路，认为 smit 并不坏只是不够优雅，觉得 jordan 的想法不错.md
+            - 14.6.93-1998 年 5 月 28 日，elischer 告知已改动 IPFW 语义，目前仍是可选项且需要 IPFW_DIVERT_RESTART 才生效.md
+            - 14.6.94-1998 年 5 月 29 日，charles 说难点不在 Apache 配置本身而在让 httpd 进程跑起来，作为 FreeBSD 与 Unix 新手对 acces.conf.md
+            - 14.6.95-1997 年 5 月 4 日，建议为入站守护选项增设开关并向防火墙启动脚本加入外部过滤文件支持以便从配置指定路径随后提醒宜先校验该路径确为文件而极简做法已可运行.md
+            - 14.6.96-1998 年 6 月 24 日，kimshrier 补充说自己要管理分布在四处的 FreeBSD 机器，需 ssh 登录后用 ed 或 uemacs 直接改配置文件.md
+            - 14.6.97-1998 年 7 月 5 日，mike 自述今晨集群有两处故障，dg 重启 freefall 后它没能正常下线，hub 的 ／var 也被写满，freefall 现已恢复.md
+            - 14.6.98-1998 年 7 月 8 日，jack 回话说没读过 procmail 手册吗，并引用手册说明 procmail 也能处理已填充的系统邮箱.md
+            - 14.6.99-1998 年 7 月 16 日，rivers 报告在 2.2.6 上把内网机器 10.0.0.10 的 7490 端口暴露到外部已接近成功.md
+            - 14.6.100-1998 年 9 月 22 日，Don Lewis 回应 Greg Lehey 的 inetd 观察，认为其代码自信号处理函数内调用 malloc() 之类做法危险，故并不意外.md
+            - 14.6.101-1998 年 10 月 6 日，Graham Wheeler 提交改版 inetd.c，把信号处理改为向管道写一个字符.md
+            - 14.6.102-1998 年 11 月 1 日，南乌拉尔 Freenet 中心管理员 Konstantin Chuguev 回应 Doug Russell.md
+            - 14.6.103-1998 年 11 月 3 日，HotJobs 程序员 Alfred Perlstein 说明 NFS 服务器宕机会令其上 df 挂起，挂载选项 intr 可让进程被杀死.md
+            - 14.6.104-1998 年 12 月 17 日，Karl Denninger 观察锁死与早上 8：12 httpd.apa 收到 SIGINT 同刻相关，进程状态 D 等待 vmpfw 通道.md
+            - 14.6.105-1999 年 1 月 14 日，Brian Somers 表示若 libalias 改名 libnat，倾向把 ppp 选项改为 nat.md
+            - 14.6.106-1999 年 1 月 27 日，Matthew Dillon 认为给用户设合理资源限制即可化解 crontab 滥用.md
+            - 14.6.107-1999 年 2 月 18 日，SEI Data Network Services 的系统网络管理员 Mike Hoskins 回应 Nate Williams 关于 cdrom 限速的怀疑，称自己稳定能从 cdrom 及众多镜像站点获得 80 至 100 K／s 的速率.md
+            - 14.6.108-1999 年 3 月 9 日，Julian Elischer 建议将 tun 回环场景改用 ipfw 与 divert sockets 处理.md
+            - 14.6.109-1999 年 3 月 19 日，Joe Schwartz 迁移 ISP 的 NT 邮件服务器至 FreeBSD 3.1 时发现 2.8 上可生成的 adduser -batch 命令在 3.1 上报 -batch no longer supported，遂求助用 pw 等方式脚本化批量创建账号.md
+            - 14.6.110-1999 年 7 月 11 日，Sheldon Hearn 认为把真实 ident 并入 inetd 是坏主意，反对让 inetd 成为塞入更多服务的万能网关.md
+            - 14.6.111-1999 年 7 月 12 日，Marc G. Fournier 以 hub.org 系统管理员报告说服 IS 同事由 Win98 迁至 FreeBSD 3.2 加 X 后遇阻 所附 Solaris 机上 tconv 输出 vt221 无法对应 ／etc／termcap 遂询如何在 xterm.md
+            - 14.6.112-1999 年 7 月 13 日，Brian F. Feldman 就 identd 的 FAKEID 处理澄清顾虑并非读穿 symlink.md
+            - 14.6.113-1999 年 7 月 15 日，Internode 网络工程师 Mark Newton 援引 lyndon 转引的 malloc 手册页.md
         - 14.7-系统调用接口与 POSIX 语义
-            - 14.7.1-1999年7月29日sheldonh报告自己空手而归没找到定义系统最大UID的常.md
-            - 14.7.2-1999年8月10日joegroff澄清自己所说改API指新增_r系列函数并希望.md
-            - 14.7.3-1999年8月24日ryan在内核树grep出12个文件用uid等于0而非sus.md
-            - 14.7.4-1999年9月8日eischen针对sigset_t变化导致libc与libc_.md
-            - 14.7.5-1999年10月8日kris提出把uid随机分配以把引入介质与本地系统uid相冲.md
-            - 14.7.6-1999年12月8日luoqi指出0x1f并非垃圾值而是FreeBSD标准用户数.md
-            - 14.7.7-年8月17日KalebSKeithley贴C程序tm置20000228末经mkt.md
-            - 14.7.8-年6月12日itojun认为iso2022有runelocale库配32bitw.md
-            - 14.7.9-年1月14日HaroldGutch指出pw会把以数字开头的用户名误判为UID值导.md
-            - 14.7.10-年4月23日SatoshiAsami在0416snap上发现sh的斜杠结尾通配展.md
-            - 14.7.11-年5月26日GaryPalmer解释usrbinperl的setuid脚本为何失.md
-            - 14.7.12-年11月3日Tom在MichaelCVergallen询问连root的kill9.md
-            - 14.7.13-年7月30日TerryLambert建议PosixAIO应建独立callgate.md
-            - 14.7.14-年7月31日DrewDerbyshire从221升到222后suroot报Und.md
-            - 14.7.15-年11月25日MikeSmith说用户态取以太网MAC地址最好用sysctlif.md
-            - 14.7.16-年11月30日CharlesMott发现sockaddr的sa_len字段跨Un.md
-            - 14.7.17-年3月15日BoskoMilekic指出全局整型errno并不threadsaf.md
-            - 14.7.18-年9月25日CoranthGryphon称常用多名字密码单UID系统首个遇到的名.md
-            - 14.7.19-年10月14日RobMisiak报告程序调用select持续拿EINVAL改用6.md
-            - 14.7.20-年1月17日RobertWithrow主张应提供删除passwd与group条目.md
-            - 14.7.21-年5月8日JWunsch回复指出zopen函数并不在标准IO库可用范围内并直接称.md
-            - 14.7.22-年10月14日LuigiRizzo指出sbin的init以root身份访问未设r.md
-            - 14.7.23-年10月31日建议用waitpidwait3wait4配WNOHANG选项无僵尸.md
-            - 14.7.24-年12月9日兰伯特说明可用select封装出poll函数但超时理论精度仅一毫秒实.md
-            - 14.7.25-年12月13日OPEN_MAX属损坏接口不应继续调用源码树内仅用于设定init起.md
-            - 14.7.26-年3月31日JWunsch指出FreeBSD默认浮点即双精度64位但缺少IEEE.md
-            - 14.7.27-年4月22日该开发者解释线程库为何用读写锁而非仅写锁因用户态线程实现里同一描述符.md
-            - 14.7.28-年4月28日他问ioctl的SIOCGIFCONF请求缓冲区大小该怎么确定是不是.md
-            - 14.7.29-年5月19日认为线程局部存储在包括NT在内也只适用有限场景WIN32下四种线程模.md
-            - 14.7.30-年6月1日AnatolyVorobey指出main返回后会回到libcstart.md
-            - 14.7.31-年7月6日libc版本号只在接口变化时改接口一变必有部分应用无法运行静态链接的应.md
-            - 14.7.32-年8月10日PaulSouthworth为970618快照的libc_r交出补丁.md
-            - 14.7.33-年9月2日SureshMali询问FreeBSD222REALESE的pthre.md
-            - 14.7.34-年9月19日布鲁斯指出OpenBSD在这块已经有一些修正不过POSIX似乎认为不.md
-            - 14.7.35-年10月6日凯文说明rtmx位于北卡罗来纳达勒姆并确认OpenBSD确有实时扩展.md
-            - 14.7.36-年1月19日JohnPolstra指出dlsym拿到未解析符号是因为dlopen.md
-            - 14.7.37-年2月1日amancio问本机的ptrace与linux的ptrace是否存在根.md
-            - 14.7.38-年2月5日mike建议改用wait4来更干净地完成这件事称除非需要睡眠在共享段内.md
-            - 14.7.39-年2月27日jhb反驳Xlib不该知道操作系统怎么提供POSIX接口__erro.md
-            - 14.7.40-年2月28日terry指出varloglastlog按uid记录登录建议uid单.md
-            - 14.7.41-年3月31日keithley怀疑该问题是libc的select或poll重实现引.md
-            - 14.7.42-年4月28日cross回信给BobBishop转来的帖子对帖中描述的为线程而迁移.md
-            - 14.7.43-年5月1日sean说可以改用他给的补丁改动fgetposcfseekcfsetp.md
-            - 14.7.44-年7月3日jkh澄清自己并非主张按unix用户id建链接而是复用应用程序既有的环.md
-            - 14.7.45-年10月15日ArchieCobbs附测试程序报告SIGIO疑似缺陷进程在文件描.md
-            - 14.7.46-年2月6日SergeySKosyakov回复JohnBirrell关于pthre.md
-            - 14.7.47-年7月16日TimVanderhoek认为BakulShah提出的scpy与GN.md
+            - 14.7.1-1999 年 7 月 29 日，sheldonh 报告自己空手而归没找到定义系统最大 UID 的常数.md
+            - 14.7.2-1999 年 8 月 10 日，joe groff 澄清自己所说改 API 指新增 _r 系列函数，并希望不必添加 _r 变体即可实现重入以减轻程序员负担，还催促对方动手做起.md
+            - 14.7.3-1999 年 8 月 24 日，ryan 在内核树 grep 出 12 个文件用 uid 等于 0 而非 suser，涉 ktrace、posix4 的 p1003_1b.md
+            - 14.7.4-1999 年 9 月 8 日，eischen 针对 sigset_t 变化导致 libc 与 libc_r 接口级改动的版本提升提议.md
+            - 14.7.5-1999 年 10 月 8 日，kris 提出把 uid 随机分配，以把引入介质与本地系统 uid 相冲突变成统计问题，多机协作需靠网络数据库在线同步并配合导出导入工具.md
+            - 14.7.6-1999 年 12 月 8 日，luoqi 指出 0x1f 并非垃圾值而是 FreeBSD 标准用户数据段，据此推断问题只可能是驱动改动了 LDT 描述符却在返回时没有还原.md
+            - 14.7.7-1998 年 8 月 17 日，Kaleb S. Keithley 贴 C 程序：tm 置 2000-02-28 末经 mktime 加一秒 gmtime 应输出 3 月 1 日.md
+            - 14.7.8-1998 年 6 月 12 日，itojun 认为 iso-2022 有 runelocale 库配 32bit wchar_t 就无需向 Unicode 迁移 但对方预测到 2010 年 85% 全球 90% 西方系统已跑 Unicode.md
+            - 14.7.9-1999 年 1 月 14 日，Harold Gutch 指出 pw 会把以数字开头的用户名误判为 UID 值.md
+            - 14.7.10-1995 年 4 月 23 日，Satoshi Asami 在 0416-snap 上发现 sh 的斜杠结尾通配展开在符号链接目标不存在时失效，而按目录名通配可以.md
+            - 14.7.11-1995 年 5 月 26 日，Gary Palmer 解释 ／usr／bin／perl 的 setuid 脚本为何失效：perl 发现自己被以 set[ug]id 方式运行时.md
+            - 14.7.12-1998 年 11 月 3 日，Tom 在 Michael C. Vergallen 询问连 root 的 kill -9 都杀不动时断言：等待磁盘或 NFS I／O 的进程无法被杀死，但可以在 mount_nfs 时指定 -i 选项，使等待 NFS 的进程变成可终止的.md
+            - 14.7.13-1996 年 7 月 30 日，Terry Lambert 建议 Posix AIO 应建独立 call gate 加 aiowait 与 aiocancel 调用及内核上下文记录，而不是做成纯用户态库.md
+            - 14.7.14-1997 年 7 月 31 日，Drew Derbyshire 从 2.2.1 升到 2.2.2 后 su root 报 Undefined symbol _MD4Init at 0x8025214 来自 libskey.so.2.0；s／key 登录仍可用；已重编重装 lib 与 su.md
+            - 14.7.15-1997 年 11 月 25 日，Mike Smith 说用户态取以太网 MAC 地址最好用 sysctl()，ifconfig 就是这么做的，虽写法有点丑.md
+            - 14.7.16-1997 年 11 月 30 日，Charles Mott 发现 sockaddr 的 sa_len 字段跨 Unix 系统不通用，OSF1 v4.0 选择性使用.md
+            - 14.7.17-1999 年 3 月 15 日，Bosko Milekic 指出全局整型 errno 并不 thread-safe，多线程重入检查会出错.md
+            - 14.7.18-1995 年 9 月 25 日，Coranth Gryphon 称常用多名字密码单 UID 系统，首个遇到的名字被视为 canonical, 按字母排序可能破坏原设计，故对排序提议存疑.md
+            - 14.7.19-1995 年 10 月 14 日，Rob Misiak 报告程序调用 select 持续拿 EINVAL，改用 64 替代 getdtablesize 后正常.md
+            - 14.7.20-1996 年 1 月 17 日，Robert Withrow 主张应提供删除 passwd 与 group 条目的编程接口，其需让 passwd 库与另一数据库保持同步.md
+            - 14.7.21-1996 年 5 月 8 日，J Wunsch 回复指出 zopen 函数并不在标准 IO 库可用范围内并直接称头文件 stdio.h 中的相关声明有误.md
+            - 14.7.22-1996 年 10 月 14 日，Luigi Rizzo 指出 sbin 的 init 以 root 身份访问未设 root 为零则 ID 映射到 nobody 访问被拒只读导出共用根可行.md
+            - 14.7.23-1996 年 10 月 31 日，建议用 waitpid wait3 wait4 配 WNOHANG 选项，无僵尸时调用返回零；或设 SIGCHLD 处理为 SIG_IGN.md
+            - 14.7.24-1996 年 12 月 9 日，兰伯特说明可用 select 封装出 poll 函数，但超时理论精度仅一毫秒、实际约十毫秒，故不适合做 select 能胜任的多项任务.md
+            - 14.7.25-1996 年 12 月 13 日，OPEN_MAX 属损坏接口不应继续调用，源码树内仅用于设定 init 起始描述符上限由子进程继承.md
+            - 14.7.26-1997 年 3 月 31 日，J Wunsch 指出 FreeBSD 默认浮点即双精度 64 位，但缺少 IEEE 异常处理能力，数值边界行为未受约束.md
+            - 14.7.27-1997 年 4 月 22 日，该开发者解释线程库为何用读写锁而非仅写锁，因用户态线程实现里同一描述符同一时刻只能挂起一个阻塞操作，读写须走单一队列.md
+            - 14.7.28-1997 年 4 月 28 日，他问 ioctl 的 SIOCGIFCONF 请求，缓冲区大小该怎么确定，是不是只能猜个 1K、2K 之类.md
+            - 14.7.29-1997 年 5 月 19 日，认为线程局部存储在包括 NT 在内也只适用有限场景，WIN32 下四种线程模型中仅两种需它且各有不足，认同微软推荐自由线程.md
+            - 14.7.30-1997 年 6 月 1 日，Anatoly Vorobey 指出 main 返回后会回到 libc startup 代码自动调用 exit，无需手写.md
+            - 14.7.31-1997 年 7 月 6 日，libc 版本号只在接口变化时改，接口一变必有部分应用无法运行；静态链接的应用永远可用.md
+            - 14.7.32-1997 年 8 月 10 日，Paul Southworth 为 970618 快照的 libc_r 交出补丁，使 sigwait 依 Posix 规范工作.md
+            - 14.7.33-1997 年 9 月 2 日，Suresh Mali 询问 FreeBSD-2.2.2 REALESE 的 pthread 是否稳定、库是否线程安全.md
+            - 14.7.34-1997 年 9 月 19 日，布鲁斯指出 OpenBSD 在这块已经有一些修正，不过 POSIX 似乎认为不必那么严格，它只要求这些函数可重入且不受限制.md
+            - 14.7.35-1997 年 10 月 6 日，凯文说明 rtmx 位于北卡罗来纳达勒姆 并确认 OpenBSD 确有实时扩展 RTMX 但该扩展位于私有树而不在主分支.md
+            - 14.7.36-1998 年 1 月 19 日，John Polstra 指出 dlsym 拿到未解析符号是因为 dlopen 用了 RTLD_LAZY.md
+            - 14.7.37-1998 年 2 月 1 日，amancio 问本机的 ptrace 与 linux 的 ptrace 是否存在根本差异，以致 linux 仿真层压根没实现 ptrace.md
+            - 14.7.38-1998 年 2 月 5 日，mike 建议改用 wait4 来更干净地完成这件事，称除非需要睡眠在共享段内部否则想不到任何重入或锁的问题.md
+            - 14.7.39-1998 年 2 月 27 日，jhb 反驳 Xlib 不该知道操作系统怎么提供 POSIX 接口，__error 属于内部且随实现而变的东西.md
+            - 14.7.40-1998 年 2 月 28 日，terry 指出 ／var／log／lastlog 按 uid 记录登录，建议 uid 单调递增避免重用，若用户删除可写入 0 值 time_t 作为重置标记，并提醒不可销毁前一用户会计信息.md
+            - 14.7.41-1998 年 3 月 31 日，keithley 怀疑该问题是 libc 的 select 或 poll 重实现引起的.md
+            - 14.7.42-1998 年 4 月 28 日，cross 回信给 Bob Bishop 转来的帖子，对帖中描述的为线程而迁移主机一事只留下一句感慨，说或许应该把线程支持做得更好.md
+            - 14.7.43-1998 年 5 月 1 日，sean 说可以改用他给的补丁，改动 fgetpos.c、fseek.c、fsetpos.c 与 ftell.c.md
+            - 14.7.44-1998 年 7 月 3 日，jkh 澄清自己并非主张按 unix 用户 id 建链接，而是复用应用程序既有的环境变量机制避免另造魔法变量，且争论双方都不掌握实现层面的最终话语权.md
+            - 14.7.45-1998 年 10 月 15 日，Archie Cobbs 附测试程序报告 SIGIO 疑似缺陷：进程在文件描述符可写时并非总能收到信号，输出片刻即停住，按回车触发可读条件才恢复.md
+            - 14.7.46-1999 年 2 月 6 日，Sergey S. Kosyakov 回复 John Birrell 关于 pthread 内存泄漏的建议.md
+            - 14.7.47-1999 年 7 月 16 日，Tim Vanderhoek 认为 Bakul Shah 提出的 scpy 与 GNU stpcpy 相似.md
     - 第15章-FreeBSD 2.x 开发者邮件档案：构建与共同体
         - 15.1-构建、编译与调试工具链
-            - 15.1.1-年1月23日MattBehrens说他其实从19990112快照装的拿到的是完整.md
-            - 15.1.2-1999年7月22日zepeda判断该报错源于编译时未开异常参数是fnoexce.md
-            - 15.1.3-1999年8月4日imp指出freebsdstable上编不了freebsdcu.md
-            - 15.1.4-1999年9月15日kip在33RC下用ddd跑程序按CtrlC后于gdb提示符.md
-            - 15.1.5-1999年11月5日joe自述currentsrctree迟迟无法干净构建贴出f.md
-            - 15.1.6-年9月22日回应对方编译告警指为dn_restart第99行timeout首参指.md
-            - 15.1.7-年8月21日GaryKlinebuildworld与buildkernel成功后.md
-            - 15.1.8-年12月4日ChrisStenton用sup拉完整源码树后编译GENERIC内核.md
-            - 15.1.9-年3月5日JordanHubbard建议不要直接sup覆盖源码树以免危及本地改动.md
-            - 15.1.10-年3月15日NateWilliams指出必须跑makeworld只在usrsrc.md
-            - 15.1.11-年6月6日DavidGreenman回复被引来信中关于RELENG_2_1_0标.md
-            - 15.1.12-年7月20日src210146Agz升到215Rmakeworld在usrsrc.md
-            - 15.1.13-年2月23日DavidHawkins为看makeworld会建出怎样的etc把D.md
-            - 15.1.14-年3月27日MattEagleson说其一台22机器也同样出现该makeworl.md
-            - 15.1.15-年5月4日YaserKDoleh报用cvsup从217升到22后缺失usrsrc.md
-            - 15.1.16-年6月10日spork称重装并cvsup至RELENG_2_2后编译报unist.md
-            - 15.1.17-年7月21日ConradSabatier建议让makeworld的install.md
-            - 15.1.18-年9月11日DaveHummel的makeworld失败源为91197cvsup.md
-            - 15.1.19-年9月29日KenMcKittrick报929刚cvsup的22Stable上m.md
-            - 15.1.20-年10月7日22STABLE且每晚cvsup环境下makeworld中断inst.md
-            - 15.1.21-年10月14日nobody报CVSup后跑完makeworld与makekern.md
-            - 15.1.22-年10月20日CVSup当晨的stable无法构建buildworld编译mnt.md
-            - 15.1.23-年10月24日LauriLaupmaa说makeworld之后系统控制台出现三条.md
-            - 15.1.24-年12月9日StevePrice转述PaulAllenby在libc安装阶段报出.md
-            - 15.1.25-年3月18日AlexChingYuenWong关CFS内核选项后自建定制内核ma.md
-            - 15.1.26-年6月26日JonathanMBresler回应205安装时PARTITION子.md
-            - 15.1.27-年4月25日RichardTodd把222升到22stable后向本地仓库做cv.md
-            - 15.1.28-年8月25日MarkMurray判断ldconfig对usrlib报错是30症状.md
-            - 15.1.29-年10月19日Maltsev询问从22stable系统迁到30可能有哪些需要注意.md
-            - 15.1.30-年11月19日PålSommerhein复现了同一installworld失败于.md
-            - 15.1.31-年12月4日KalebSKEITHLEY用gcc272编译的210R内核很稳但用.md
-            - 15.1.32-年5月14日Terbush报告Perl的doioc在pgcc上编译失败pgcc为.md
-            - 15.1.33-年2月15日JoshuaPeckMacdonald提交bsdkmodmk的改进原.md
-            - 15.1.34-年3月1日Joerg说PAO内核可先在P5桌面机上编译再经NFS拷回作者日常就这.md
-            - 15.1.35-年3月6日MichaelSmith答复称若为makeworld而更新过源码新的G.md
-            - 15.1.36-年6月1日RELENG_2_2分支执行makelibraries时连续崩溃两次都.md
-            - 15.1.37-年6月14日Narvi报22stable的libc_rMakefile似乎漏编了.md
-            - 15.1.38-年8月10日JordanKHubbard回应装releng22freebsdor.md
-            - 15.1.39-年1月30日WarnerLosh发现usrsrcMakefile缺kvm目标提议.md
-            - 15.1.40-年1月30日DavidGreenman指出提问者从旧版30升级到30STABLE.md
-            - 15.1.41-年4月10日Swarin终取崩溃转储调试代码加入前每日崩溃加入后停了一段又复现同.md
-            - 15.1.42-年3月16日PHK拒绝在FreeBSD21临近发布时引入pentium优化gcc.md
-            - 15.1.43-年3月30日JordanKHubbard答includefiles打乱他毫无头绪.md
-            - 15.1.44-年4月12日GennadySorokopud称从ftpxorg取源码编译安装后x.md
-            - 15.1.45-年4月21日BruceEvans称自己常用ddb并指gdb在此显得混乱且多bug.md
-            - 15.1.46-年6月5日JoergWunsch说明请求的调试器变量已存在目前被console在.md
-            - 15.1.47-年9月20日StevePasse把静态链接motif版DDD放到freebsdc.md
-            - 15.1.48-年9月27日TerryLambert认可通过Makefile管理依赖图的价值但认.md
-            - 15.1.49-年9月30日JordanKHubbard表示FreeBSD21将在10月8日周日.md
-            - 15.1.50-年10月2日MartinRenters提议反向解压即在解压过程中覆盖原压缩映像以.md
-            - 15.1.51-年11月10日NeilClark称只抓snap内核未做makeworld因想令T.md
-            - 15.1.52-年11月21日BrianTao在ftpfreebsdioorgpubsystem.md
-            - 15.1.53-年2月14日WarnerLosh说FreeBSD的现状使构建交叉编译器更难在Al.md
-            - 15.1.54-年5月17日认可Jordan在改进安装易用性上做得出色众人知晓只差时间而自己则着.md
-            - 15.1.55-年5月30日SorenDayton提议把makedepend改成可以把输出写到任.md
-            - 15.1.56-年9月4日自由独立环境下main普通函数形式无穷多BSD44Lite使用void.md
-            - 15.1.57-年4月7日Eivind承认整库需十倍源码空间是他算在内核源码上误算的Michae.md
-            - 15.1.58-年4月20日MichaelSlater报告按READMEbsd操作仍无法在Fre.md
-            - 15.1.59-年4月21日JeffreyHsu指出本系统的m4与Solaris的m4对两个迭代.md
-            - 15.1.60-年4月25日VilleEerola用当日RELENG_2_2源码做发行版时制作f.md
-            - 15.1.61-年4月26日布鲁斯伊文斯指出掩码版其实源自44Lite的原生实现而素数版本应属于.md
-            - 15.1.62-年4月27日他指出这取决于素数与编译器取模除法对哈希而言不必精确可化为乘2^32.md
-            - 15.1.63-年4月29日瑞弗斯确认自己那次是用这个办法把const消掉的但他想问的是这事不该.md
-            - 15.1.64-年6月30日WesSantee称RELENG_2_2makeworld修好gnu.md
-            - 15.1.65-年7月10日ThomasGellekum建议在makeworld之前先执行mak.md
-            - 15.1.66-年8月10日布兰登吉尔克里斯普问是否有人想过换新版补丁工具源码树里现在还是pat.md
-            - 15.1.67-年8月25日DaveRivers从releng22取ssys源码用222的配置重.md
-            - 15.1.68-年9月7日巴布金在回复DDB加vtophys议题说明没有现成show命令可做地址.md
-            - 15.1.69-年10月3日Simon寻求非侵入式度量技术以分析DLM例程耗时提议在dlm_lo.md
-            - 15.1.70-年10月17日Vanderhoek说GNUmake与BSDmake其实是两种动物.md
-            - 15.1.71-年11月17日perlstein准备做makeworld并重编内核先问内核针对f.md
-            - 15.1.72-年12月16日Karl问能否用PPro233快机器通过NFS挂载编译给486SX.md
-            - 15.1.73-年12月20日JWunsch补充genassym与aicasm可能引入普通头文件.md
-            - 15.1.74-年1月14日Joel询问透过另一个符号修改const变量的值是否算错误并举con.md
-            - 15.1.75-年2月17日terry举例var在全局声明后又在foo中重复声明一次形成shad.md
-            - 15.1.76-年2月23日bob猜测这段代码意在整数真正等价时避免用FP常量某些目标上或许更省.md
-            - 15.1.77-年4月1日John说明gcc的thread只链接lc_r并不定义相关宏_THRE.md
-            - 15.1.78-年4月12日niall转述john称该报错实为汇编器缺陷且修复已提交至objao.md
-            - 15.1.79-年4月22日amancio看到那版说明里写有installationdestru.md
-            - 15.1.80-年4月27日hans建议用objdump的disassemble选项接管道到wc.md
-            - 15.1.81-年5月4日shenton报告他从光盘装226RELEASE后CVSup到STAB.md
-            - 15.1.82-年5月14日tom报告cvsup加makeworld后重编kernel226ST.md
-            - 15.1.83-年6月4日OllivierRobert指出m486的对齐方式并不适合Pentiu.md
-            - 15.1.84-年6月22日robert说明自己只是在做实验并刻意想避开sysinstall接着.md
-            - 15.1.85-年7月14日andreas给出升级步骤先用cvsup更新usrsrcmakebu.md
-            - 15.1.86-年7月17日stefan想给38633编译小current内核测试swapoff.md
-            - 15.1.87-年3月16日DavidOBrien建议将register议题转至compcomp.md
-            - 15.1.88-年3月28日JulianElischer在FreeBSD228上gmakefre.md
-            - 15.1.89-年6月10日PauloFragoso报告FreeBSD上用DUSE_PAM重编p.md
-            - 15.1.90-年2月22日AmancioHasty说明egcs虽优于gcc28但模板语义变动使.md
+            - 15.1.1-1999 年 1 月 23 日，Matt Behrens 说他其实从 19990112 快照装的，拿到的是完整 ELF 系统；另外尽管镜像是 2.88MB.md
+            - 15.1.2-1999 年 7 月 22 日，zepeda 判断该报错源于编译时未开异常，参数是 fno-exceptions，让他复查 Qt、kdelibs 和 kdebase.md
+            - 15.1.3-1999 年 8 月 4 日，imp 指出 freebsd-stable 上编不了 freebsd-current 内核，除非把编译器升到 egcs.md
+            - 15.1.4-1999 年 9 月 15 日，kip 在 3.3RC 下用 ddd 跑程序按 Ctrl-C 后于 gdb 提示符敲 info threads 无任何回显.md
+            - 15.1.5-1999 年 11 月 5 日，joe 自述 current src tree 迟迟无法干净构建，贴出 f77doc 与 libgcc 的编译日志.md
+            - 15.1.6-1998 年 9 月 22 日，回应对方编译告警，指为 dn_restart 第 99 行 timeout 首参指针类型不兼容.md
+            - 15.1.7-2000 年 8 月 21 日，Gary Kline buildworld 与 buildkernel 成功后在 ／sys／modules 执行 make install 因 time.h 找不到中断，尽管文件存在且已先 make clean.md
+            - 15.1.8-1995 年 12 月 4 日，Chris Stenton 用 sup 拉完整源码树后编译 GENERIC 内核失败，matcd 驱动头文件重复定义 matcderrors, 阵列大小的 NMATCD 未声明，连带 matcd_data 与 kdc_matcd 尺寸出错.md
+            - 15.1.9-1996 年 3 月 5 日，Jordan Hubbard 建议不要直接 sup 覆盖源码树以免危及本地改动，应另 checkout 一份 -stable 并在该目录工作.md
+            - 15.1.10-1996 年 3 月 15 日，Nate Williams 指出必须跑 make world.md
+            - 15.1.11-1996 年 6 月 6 日，David Greenman 回复被引来信中关于 RELENG_2_1_0 标签与 1.7.0.4 修订号不一致致编译困难的抱怨 称你理解错了 此事虽令人困惑但确实正确 署名核心团队成员 Principal Architect 未进一步解释.md
+            - 15.1.12-1996 年 7 月 20 日，src-2.1.0146A.gz 升到 2.1.5R.md
+            - 15.1.13-1997 年 2 月 23 日，David Hawkins 为看 make world 会建出怎样的 ／etc，把 DESTDIR 指到另一目录试装，建完 bin、dev.md
+            - 15.1.14-1997 年 3 月 27 日，Matt Eagleson 说其一台 2.2 机器也同样出现该 make world 失败，此机昨晚刚 cvsup，并问自己是不是操作有误.md
+            - 15.1.15-1997 年 5 月 4 日，Yaser K. Doleh 报用 cvsup 从 2.1.7 升到 2.2 后缺失 usr／src／sys／netiso 目录.md
+            - 15.1.16-1997 年 6 月 10 日，spork 称重装并 cvsup 至 RELENG_2_2 后编译报 unistd.h 与 lst.h 找不到 sys／cdefs.h sys／types.h sys／param.h 等头文件，而 cdefs.h 实在 ／usr／src／sys／sys／cdefs.h.md
+            - 15.1.17-1997 年 7 月 21 日，Conrad Sabatier 建议让 make world 的 install 阶段自动装好 ／etc 下应有文件.md
+            - 15.1.18-1997 年 9 月 11 日，Dave Hummel 的 make world 失败，源为 9-11-97 cvsup,install -c -s -o root -g network -m 4550 ppp ／usr／sbin 报 unknown group network，返回 Error.md
+            - 15.1.19-1997 年 9 月 29 日，Ken McKittrick 报 9-29 刚 cvsup 的 2.2-Stable 上 make depend 失败.md
+            - 15.1.20-1997 年 10 月 7 日，2.2-STABLE 且每晚 cvsup 环境下 make world 中断.md
+            - 15.1.21-1997 年 10 月 14 日，nobody 报 CVSup 后跑完 make world 与 make kernel，pidentd 停止工作.md
+            - 15.1.22-1997 年 10 月 20 日，CVSup 当晨的-stable 无法构建，buildworld 编译／mnt／usr／src／lib／msun／i387／e_acos.S 失败.md
+            - 15.1.23-1997 年 10 月 24 日，Lauri Laupmaa 说 make world 之后系统控制台出现三条重复消息例如 squid11.md
+            - 15.1.24-1997 年 12 月 9 日，Steve Price 转述 Paul Allenby 在 libc 安装阶段报出的 ld.so 缺少 ___generic_syscall 符号错误后，建议进入 ／usr／src／lib／libc 目录执行 make cleandir obj depend all.md
+            - 15.1.25-1998 年 3 月 18 日，Alex Ching-Yuen Wong 关 CFS 内核选项后自建定制内核，make depend 仍引用明显不存在的 ／sys／cfs 源码.md
+            - 15.1.26-1995 年 6 月 26 日，Jonathan M. Bresler 回应 2.0.5 安装时 PARTITION 子菜单不识别 Future Domain TMC-885M：他用 tmc850／950 走 sea 驱动，boot -c 后设 irq sea0 11 与 iomem sea0.md
+            - 15.1.27-1998 年 4 月 25 日，Richard Todd 把 2.2.2 升到 2.2-stable 后.md
+            - 15.1.28-1998 年 8 月 25 日，Mark Murray 判断 ldconfig 对 ／usr／lib 报错是 3.0 症状，怀疑源码混了.md
+            - 15.1.29-1998 年 10 月 19 日，Maltsev 询问从 2.2-stable 系统迁到 3.0 可能有哪些需要注意的坑，常规的 make world 是否就足够.md
+            - 15.1.30-1998 年 11 月 19 日，Pål Sommerhein 复现了同一 installworld 失败.md
+            - 15.1.31-1995 年 12 月 4 日，Kaleb S. KEITHLEY 用 gcc-2.7.2 编译的 2.1.0R 内核很稳.md
+            - 15.1.32-1996 年 5 月 14 日，Terbush 报告 Perl 的 doio.c 在 pgcc 上编译失败，pgcc 为 960426 快照，semctl 第四参数类型不兼容出现在 1364 与 1410 行，报 Error code 1，他把报告同时发给两边并要求讨论回信抄送自己.md
+            - 15.1.33-1997 年 2 月 15 日，Joshua Peck Macdonald 提交 bsd.kmod.mk 的改进，原来损坏的 unload 规则修好，load 会先忽略错误地卸载.md
+            - 15.1.34-1997 年 3 月 1 日，Joerg 说 PAO 内核可先在 P5 桌面机上编译再经 NFS 拷回，作者日常就这么用，只需在客户端导出 ／usr／src／sys.md
+            - 15.1.35-1997 年 3 月 6 日，Michael Smith 答复称若为 make world 而更新过源码.md
+            - 15.1.36-1997 年 6 月 1 日，RELENG_2_2 分支执行 make libraries 时连续崩溃两次，都在同一内核函数但来自不同调用点.md
+            - 15.1.37-1997 年 6 月 14 日，Narvi 报 2.2-stable 的 libc_r Makefile 似乎漏编了 uthread_attr_nit.c.md
+            - 15.1.38-1997 年 8 月 10 日，Jordan K. Hubbard 回应装 releng22.freebsd.org 快照时报 panic： double fault 的求助.md
+            - 15.1.39-1998 年 1 月 30 日，Warner Losh 发现 ／usr／src／Makefile 缺 kvm 目标.md
+            - 15.1.40-1999 年 1 月 30 日，David Greenman 指出提问者从旧版 3.0 升级到 3.0-STABLE 后报告的 inetd 现象.md
+            - 15.1.41-2000 年 4 月 10 日，Swarin 终取崩溃转储，调试代码加入前每日崩溃，加入后停了一段又复现同一 panic；跑 3 月 16 日的 -STABLE.md
+            - 15.1.42-1995 年 3 月 16 日，PHK 拒绝在 FreeBSD 2.1 临近发布时引入 pentium 优化 gcc 以免破坏 c-compiler.md
+            - 15.1.43-1995 年 3 月 30 日，Jordan K. Hubbard 答 include files 打乱他毫无头绪.md
+            - 15.1.44-1995 年 4 月 12 日，Gennady Sorokopud 称从 ftp.x.org 取源码编译安装后 xmcd 正常故判断此 SCSI 超时与系统有关.md
+            - 15.1.45-1995 年 4 月 21 日，Bruce Evans 称自己常用 ddb，并指 gdb 在此显得混乱且多 bug，其 kvm_write() 与库 kvm_write() 不同.md
+            - 15.1.46-1995 年 6 月 5 日，Joerg Wunsch 说明请求的调试器变量已存在，目前被 console 在图形模式下用来禁用 DDB 回退，他自己已为 pcvt 实现.md
+            - 15.1.47-1995 年 9 月 20 日，Steve Passe 把静态链接 motif 版 DDD 放到 freebsd.cdrom.com 的 incoming 目录.md
+            - 15.1.48-1995 年 9 月 27 日，Terry Lambert 认可通过 Makefile 管理依赖图的价值但认为方案过于复杂主要源于／usr 挂载前需调用共享二进制他还反对安装期配置管理并赞同按文件名排序或控制文件方案更易审查启动顺序.md
+            - 15.1.49-1995 年 9 月 30 日，Jordan K. Hubbard 表示 FreeBSD 2.1 将在 10 月 8 日周日刻录 CD-ROM 并同时上线网络.md
+            - 15.1.50-1995 年 10 月 2 日，Martin Renters 提议反向解压，即在解压过程中覆盖原压缩映像以节省 boot 内存.md
+            - 15.1.51-1995 年 11 月 10 日，Neil Clark 称只抓 snap 内核未做 make world，因想令 Toshiba XM-5302B ATAPI cd-rom 工作.md
+            - 15.1.52-1995 年 11 月 21 日，Brian Tao 在 ftp：／／freebsd.io.org／pub／systems／FreeBSD／ 搭起 2.1.0-RELEASE 的非官方镜像，建议 UUNET Canada 及其他加拿大联盟网提供商用户就近取用，问题报告发至 admin@io.org.md
+            - 15.1.53-1996 年 2 月 14 日，Warner Losh 说 FreeBSD 的现状使构建交叉编译器更难 在 Alpha 上尤甚 Linux 上只需适度改写即可 他也动手看过并得出同样棘手难堪的结论 把 FreeBSD 里的 ld 移植到目标环境比把差异移植到 2.6 更容易 但仍是大工程.md
+            - 15.1.54-1996 年 5 月 17 日，认可 Jordan 在改进安装易用性上做得出色众人知晓只差时间而自己则着手改善发行渠道而非只关注版本内的代码并建议装一个让脚本自动接管的机制.md
+            - 15.1.55-1996 年 5 月 30 日，Soren Dayton 提议把 makedepend 改成可以把输出写到任意文件 接着用 ctags 处理这份中间结果 这样就不用为找函数或结构体声明去写专门的定制工具了.md
+            - 15.1.56-1996 年 9 月 4 日，自由独立环境下 main 普通函数形式无穷多 BSD4.4Lite 使用 voidmain(voidframep) 托管环境受 ANSI 约束.md
+            - 15.1.57-1997 年 4 月 7 日，Eivind 承认整库需十倍源码空间是他算在内核源码上误算的.md
+            - 15.1.58-1997 年 4 月 20 日，Michael Slater 报告按 README.bsd 操作仍无法在 FreeBSD 的 2.2.1 上编出 ppp-2.3.0bs.md
+            - 15.1.59-1997 年 4 月 21 日，Jeffrey Hsu 指出本系统的 m4 与 Solaris 的 m4 对两个迭代宏定义结果不同，本地只在第一个定义上有效.md
+            - 15.1.60-1997 年 4 月 25 日，Ville Eerola 用当日 RELENG_2_2 源码做发行版时，制作 fixit 软盘因文件系统写满而失败.md
+            - 15.1.61-1997 年 4 月 26 日，布鲁斯伊文斯指出掩码版其实源自 4.4Lite 的原生实现，而素数版本应属于 FreeBSD 的增强改动.md
+            - 15.1.62-1997 年 4 月 27 日，他指出这取决于素数与编译器，取模除法对哈希而言不必精确，可化为乘 2^32 再除以该素数，在 P5 上这大约比乘 33 慢十倍.md
+            - 15.1.63-1997 年 4 月 29 日，瑞弗斯确认自己那次是用这个办法把 const 消掉的，但他想问的是这事不该由用户来做，还支不支持编译旧的非 ANSI 源码.md
+            - 15.1.64-1997 年 6 月 30 日，Wes Santee 称 RELENG_2_2 make world 修好 gnu info 后仍失败.md
+            - 15.1.65-1997 年 7 月 10 日，Thomas Gellekum 建议在 make world 之前先执行 make includes；同时坦白他早上才发现这一点.md
+            - 15.1.66-1997 年 8 月 10 日，布兰登 吉尔克里斯普问是否有人想过换新版补丁工具，源码树里现在还是 patch 2.1 而 2.4 早已发布;他抱怨 2.1 有任意限制，比如单行长度不能超过 4096 字符，每次都要自己升级，并说 2.4 更聪明，还能配合 RCS 与 SCCS 工作.md
+            - 15.1.67-1997 年 8 月 25 日，Dave Rivers 从 releng22 取 ssys 源码用 2.2.2 的配置重编后出现两处问题.md
+            - 15.1.68-1997 年 9 月 7 日，巴布金在回复 DDB 加 vtophys 议题，说明没有现成 show 命令可做地址转换，并提交一份补丁改动 db_command.c.md
+            - 15.1.69-1997 年 10 月 3 日，Simon 寻求非侵入式度量技术以分析 DLM 例程耗时，提议在 dlm_lock_t 结构中加入 start_time 与 stop_time 字段.md
+            - 15.1.70-1997 年 10 月 17 日，Vanderhoek 说 GNU make 与 BSD make 其实是两种动物.md
+            - 15.1.71-1997 年 11 月 17 日，perlstein 准备做 make world 并重编内核，先问内核针对 f00f 缺陷修了些什么，若未修就不愿全部重建.md
+            - 15.1.72-1997 年 12 月 16 日，Karl 问能否用 P-Pro 233 快机器通过 NFS 挂载编译给 486-SX 33 慢机器用慢机是 2.2.5-Release 快机是 2.2.2-Release.md
+            - 15.1.73-1997 年 12 月 20 日，J Wunsch 补充 genassym 与 aicasm 可能引入普通头文件，他惯于手动处理.md
+            - 15.1.74-1998 年 1 月 14 日，Joel 询问透过另一个符号修改 const 变量的值是否算错误，并举 const int foo = 69.md
+            - 15.1.75-1998 年 2 月 17 日，terry 举例 var 在全局声明后又在 foo 中重复声明一次形成 shadow，反对为一个能用的 C 而装一套与之不配套的 C++.md
+            - 15.1.76-1998 年 2 月 23 日，bob 猜测这段代码意在整数真正等价时避免用 FP 常量某些目标上或许更省并引 K&R II A6.3 判定 Solaris 行为符合标准.md
+            - 15.1.77-1998 年 4 月 1 日，John 说明 gcc 的 -thread 只链接 -lc_r 并不定义相关宏；_THREAD_SAFE 仅用于取线程安全的 errno.md
+            - 15.1.78-1998 年 4 月 12 日，niall 转述 john 称该报错实为汇编器缺陷且修复已提交至 obj-aout.c，自己表示问题已消失并追问能否把它合并到 -stable.md
+            - 15.1.79-1998 年 4 月 22 日，amancio 看到那版说明里写有 installation destructions，便表示不想碰上这种情况，只用一句不想体验安装破坏性的话来回应.md
+            - 15.1.80-1998 年 4 月 27 日，hans 建议用 objdump 的 --disassemble 选项接管道到 wc 统计行数再减四行头来统计指令数.md
+            - 15.1.81-1998 年 5 月 4 日，shenton 报告他从光盘装 2.2.6 RELEASE 后 CVSup 到 STABLE，make buildworld 失败.md
+            - 15.1.82-1998 年 5 月 14 日，tom 报告 cvsup 加 make world 后重编 kernel.md
+            - 15.1.83-1998 年 6 月 4 日，Ollivier Robert 指出 -m486 的对齐方式并不适合 Pentium 及更新处理器，而且 -m486 根本不会生成任何特殊指令.md
+            - 15.1.84-1998 年 6 月 22 日，robert 说明自己只是在做实验并刻意想避开 sysinstall.md
+            - 15.1.85-1998 年 7 月 14 日，andreas 给出升级步骤，先用 cvsup 更新 ／usr／src，make buildworld 再 make installworld.md
+            - 15.1.86-1998 年 7 月 17 日，stefan 想给 386／33 编译小 -current 内核测试 swapoff，误把伪设备 loop 注释掉却留着 sl.md
+            - 15.1.87-1999 年 3 月 16 日，David O'Brien 建议将 register 议题转至 comp.compilers 或 comp.std.c.md
+            - 15.1.88-1999 年 3 月 28 日，Julian Elischer 在 FreeBSD 2.2.8 上 gmake freebsd 编译 jxx 成功.md
+            - 15.1.89-1999 年 6 月 10 日，Paulo Fragoso 报告 FreeBSD 上用 -DUSE_PAM 重编 pppd.md
+            - 15.1.90-1999 年 2 月 22 日，Amancio Hasty 说明 egcs 虽优于 gcc-2.8 但模板语义变动使其无法编译 EF.md
         - 15.2-第三方软件、软件包与版权
-            - 15.2.1-1999年7月26日bill反对重放rev141的补丁因他当时交给squid用户.md
-            - 15.2.2-1999年8月12日thorpej指出若可执行对象包含GPL代码必须提交整个对象.md
-            - 15.2.3-1999年8月28日grog附PortingUNIXSoftware锁章改稿主张.md
-            - 15.2.4-1999年9月22日pedro说明mawk与gawk在ports树中且为GPL许.md
-            - 15.2.5-1999年11月27日garyj用这份移植取到VMware111330targz.md
-            - 15.2.6-1999年12月12日green自述自写Apache模块在FreeBSD228S.md
-            - 15.2.7-1999年11月27日silyaev宣布已在FreeBSD上成功运行VMware.md
-            - 15.2.8-年6月26日RuslanErmilov给出RELENG_4时区提交记录来源tzd.md
-            - 15.2.9-年7月8日PaulVixie说明bind8中nameserh改名为nameser.md
-            - 15.2.10-年7月17日DavidOBrien说明Sendmail8102赶不上41RELE.md
-            - 15.2.11-年4月18日FrankTerhaarYonkers把问题缩小到tcsh的信号处理.md
-            - 15.2.12-年6月3日KhetanGajjar在21stable上构建Lynx25时HTFT.md
-            - 15.2.13-年12月20日BradleyDunn报2161上ucdsnmp与top等端口编译.md
-            - 15.2.14-年3月15日JordanKHubbard答XEmacs装上但找不到libjpeg.md
-            - 15.2.15-年9月25日MattBehrens回答225应会随附BIND496他对此有九成九.md
-            - 15.2.16-年1月25日eculp用上周snap编译xpm报找不到lgnumalloc编译x.md
-            - 15.2.17-年2月21日Studded认为树里xntpd3592是树里版本的后继者还谈ntp.md
-            - 15.2.18-年7月24日AmancioHastyJr在current上构建tk36gnuco.md
-            - 15.2.19-年10月13日Kletsky请维护者把usrsrccontrib里的opie从2.md
-            - 15.2.20-年10月28日GunnarFlygt称30RELEASE下xv报ldelfso1.md
-            - 15.2.21-年11月25日freefall的c再一次彻底写满df列出ports占316445.md
-            - 15.2.22-年7月2日尤利安报告新版CVS破坏构建环境多个产品的模块仓库被检出到同一构建树的.md
-            - 15.2.23-年8月13日NateWilliams回复称看到对方已把kern_exitc放回C.md
-            - 15.2.24-年10月17日ChrisTimmons计划本周末把GLOBAL21合入curre.md
-            - 15.2.25-年1月27日AmancioHasty评估Visaj作为纯JavaGUI构建器配合.md
-            - 15.2.26-年12月3日WesPeters分情形答BitKeeper议题认为可作为port纳.md
-            - 15.2.27-年1月19日ChristophPKukulies分析XinsideX服务器挂死后.md
-            - 15.2.28-年9月26日JakeHamby首次回应ports启动脚本长串讨论谈初看SysV模.md
-            - 15.2.29-年9月26日CoranthGryphon在ports启动脚本讨论中回应Satos.md
-            - 15.2.30-年9月27日sos回应AmancioHastyJr关于svgalib混乱的评语完.md
-            - 15.2.31-年9月28日PeterdaSilva认为包不应自动编辑配置文件主张寻找覆盖面尽可.md
-            - 15.2.32-年10月13日JWunsch回复PeterDufault关于远程Netscape.md
-            - 15.2.33-年4月3日SujalPatel发现XFree86附带的字体数据库包含不存在的字体.md
-            - 15.2.34-年11月19日OllivierRobert指出Perl4与Perl5之间的变更写.md
-            - 15.2.35-年1月27日JWunsch为危险专有模式辩护指出并非所有人都视其为恶此模式服务于.md
-            - 15.2.36-年4月4日Rabson试了Tor的修补0xdeadb那段在并行远端删除与检出几分.md
-            - 15.2.37-年4月6日他明确指出srcsyscontrib下的包可能带有非BSD版权而一旦放.md
-            - 15.2.38-年4月13日MichaelSearle询问curses与ncurses库自某个版.md
-            - 15.2.39-年5月11日Pedro在BSDI的网站上偶然发现MOSIX这个面向Unix的多计.md
-            - 15.2.40-年5月14日表示自己正热切期待Pedro提交Thot的移植因为那样一来就能省得我.md
-            - 15.2.41-年5月17日回应说这种行为可用whichwrap即ww设置来配置默认值为bs表示.md
-            - 15.2.42-年6月15日JWunsch认为复制CD本质只是读取光盘故任何形式的copypro.md
-            - 15.2.43-年7月9日TomSamplonius称NetQuack不可靠跑在Win95后台且.md
-            - 15.2.44-年7月11日MichaelSmith指出libXt并不属于FreeBSD而是XF.md
-            - 15.2.45-年8月18日EugenyKuzakov报告本机已装Java开发套件但持续产生核心.md
-            - 15.2.46-年8月29日威廉姆斯转贴格尔纳在新闻组里关于Netscape新支持的询问末尾只补.md
-            - 15.2.47-年9月17日哈巴德反驳称若连packagesXFree86与CVS仓库得放到CD.md
-            - 15.2.48-年9月27日OllivierRobert答打标签要修改仓库内每个文件属慢操作还会.md
-            - 15.2.49-年10月4日mdean说FreeBSD上没有支持美版128位加密的Netscap.md
-            - 15.2.50-年10月10日JWunsch表示FreeBSD项目组基本不自行维护GNU组件建议.md
-            - 15.2.51-年11月5日jordan称Hasbro律师与tetris律师如出一辙正逐条检查f.md
-            - 15.2.52-年12月8日Manar指出Windows有免费ssh客户端可用虽不完美但能工作因.md
-            - 15.2.53-年1月22日Faber回给WarnerLosh一句提醒务必确保它能够被unins.md
-            - 15.2.54-年1月30日howard自称已潜水一阵最近才自己琢磨这个问题对那句源码不可自由重.md
-            - 15.2.55-年2月6日Jeremy自述在225R上用pkg_add安装jdk102tgz后只.md
-            - 15.2.56-年2月12日lambert指出无论改名还是删除都必须改写历史做法是编辑RCS文件.md
-            - 15.2.57-年2月13日michael说在CURRENT上装tk8端口总是被拉去装tcl80.md
-            - 15.2.58-年4月29日stephen上传bmake版perl5到ftpfreebsdorg.md
-            - 15.2.59-年5月3日doug询问BIND497何时进入sourcetree是否有人在跟进因.md
-            - 15.2.60-年5月5日Jordan说pkg_add在一两个修订版之前确实会那样乱删文件如今已.md
-            - 15.2.61-年5月31日andrew觉得128位安全代理的市场并不小用代理就能省掉给每版下载.md
-            - 15.2.62-年7月15日amancio就此前关于其欲在下一版覆盖他人补丁的争议简短回应表示自.md
-            - 15.2.63-年12月9日MLDodson在Jordan解释新包系统尚属WIP后接话建议兼纳g.md
-            - 15.2.64-年6月21日Doug追问包装何时成为默认并问是在32Release之前还是之后认.md
+            - 15.2.1-1999 年 7 月 26 日，bill 反对重放 rev 1.41 的补丁因他当时交给 squid 用户后导致 X 以不明方式失败已回退 之后在 rev 1.50 加了 PRUS_MORETOCOME 修复 主张若 PRUS_MORETOCOME 有缺陷就修它不要回退 hack.md
+            - 15.2.2-1999 年 8 月 12 日，thorpej 指出若可执行对象包含 GPL 代码 必须提交整个对象的完整源码而不只是 GPL 部分 并称此为问题核心所在.md
+            - 15.2.3-1999 年 8 月 28 日，grog 附 Porting UNIX Software 锁章改稿，主张 FreeBSD 应有内核级锁，建议三种可各自由 sysctl 启用的实现.md
+            - 15.2.4-1999 年 9 月 22 日，pedro 说明 mawk 与 gawk 在 ports 树中且为 GPL 许可，nawk 不是 GPL.md
+            - 15.2.5-1999 年 11 月 27 日，garyj 用这份移植取到 VMware-1.1.1-330.tar.gz 没有问题，可 vmware 无法启动.md
+            - 15.2.6-1999 年 12 月 12 日，green 自述自写 Apache 模块在 FreeBSD 2.2.8-STABLE 配 Apache 1.3.9 上正常.md
+            - 15.2.7-1999 年 11 月 27 日，silyaev 宣布已在 FreeBSD 上成功运行 VMware 1.1 for Linux.md
+            - 15.2.8-2000 年 6 月 26 日，Ruslan Ermilov 给出 RELENG_4 时区提交记录，来源 tzdata2000d.tar.gz，europe 修改量最大.md
+            - 15.2.9-2000 年 7 月 8 日，Paul Vixie 说明 bind8 中 nameser.h 改名为 nameser_compat.h 以保持兼容，因众多代码依赖这些结构成员名.md
+            - 15.2.10-2000 年 7 月 17 日，David O'Brien 说明 Sendmail 8.10.2 赶不上 4.1-RELEASE，他本试图促成但因各步骤可用时间不足未能实现.md
+            - 15.2.11-1996 年 4 月 18 日，Frank Terhaar-Yonkers 把问题缩小到 tcsh 的信号处理，sh 与 csh 均正常而 tcsh 损坏.md
+            - 15.2.12-1996 年 6 月 3 日，Khetan Gajjar 在 2.1 stable 上构建 Lynx 2.5 时 HTFTP.o 报 Undefined symbol _ISSPACE，随后多次 Error code 1 后 Stop.md
+            - 15.2.13-1996 年 12 月 20 日，Bradley Dunn 报 2.1.6.1 上 ucd-snmp 与 top 等Port编译时报 storage size of swaplist is unknown，其内核基本为 GENERIC 仅注释掉多余设备，他只在 VM 代码里见过 swaplist.md
+            - 15.2.14-1997 年 3 月 15 日，Jordan K. Hubbard 答 XEmacs 装上但找不到 libjpeg.so.7.0 非安装也非打包问题，只需再装 jpeg 包.md
+            - 15.2.15-1997 年 9 月 25 日，Matt Behrens 回答 2.2.5 应会随附 BIND 4.9.6，他对此有九成九以上把握.md
+            - 15.2.16-1998 年 1 月 25 日，eculp 用上周 snap 编译 xpm 报找不到 -lgnumalloc，编译 xv 的 tiff 库也如此，旧 snap 无此问题.md
+            - 15.2.17-1998 年 2 月 21 日，Studded 认为树里 xntpd 3-5.92 是树里版本的后继者，还谈 ntp-4.0.72 采用浮点运算.md
+            - 15.2.18-1995 年 7 月 24 日，Amancio Hasty Jr. 在 -current 上构建 tk3.6，gnu configure 反复打印 euid、egid、ruid.md
+            - 15.2.19-1998 年 10 月 13 日，Kletsky 请维护者把 ／usr／src／contrib 里的 opie 从 2.3，即 960922，升到较新的 2.3.2.md
+            - 15.2.20-1998 年 10 月 28 日，Gunnar Flygt 称 3.0-RELEASE 下 xv 报 ld-elf.so.1 找不到 libkrb.so.3.md
+            - 15.2.21-1995 年 11 月 25 日，freefall 的 ／c 再一次彻底写满，df 列出 ports 占 316445 块、4.4BSD-Lite2 占 193023.md
+            - 15.2.22-1997 年 7 月 2 日，尤利安报告新版 CVS 破坏构建环境，多个产品的模块仓库被检出到同一构建树的不同子分支.md
+            - 15.2.23-1997 年 8 月 13 日，Nate Williams 回复称看到对方已把 kern_exit.c 放回 CVS 树并追问原委，说自己恰留存一份副本且与放回的完全一致.md
+            - 15.2.24-1997 年 10 月 17 日，Chris Timmons 计划本周末把 GLOBAL 2.1 合入 -current.md
+            - 15.2.25-1998 年 1 月 27 日，Amancio Hasty 评估 Visaj 作为纯 Java GUI 构建器，配合 jdk1.1.5 与 motif 表现尚可.md
+            - 15.2.26-1999 年 12 月 3 日，Wes Peters 分情形答 BitKeeper 议题 认为可作为 port 纳入且有益 FreeBSD 现有 CVS 服务器本已公开 但迁仓代价极大且自认其并无优势.md
+            - 15.2.27-1995 年 1 月 19 日，Christoph P. Kukulies 分析 Xinside X 服务器挂死后的文件损坏.md
+            - 15.2.28-1995 年 9 月 26 日，Jake Hamby 首次回应 ports 启动脚本长串讨论，谈初看 SysV 模式觉得混乱但熟悉可懂.md
+            - 15.2.29-1995 年 9 月 26 日，Coranth Gryphon 在 ports 启动脚本讨论中回应 Satoshi Asami，后者称依赖图正是争论焦点且 Unix 以 make 处理.md
+            - 15.2.30-1995 年 9 月 27 日，sos 回应 Amancio Hasty Jr.关于 svgalib 混乱的评语完全认同并指出它芯片支持有限主张改用 syscons 通用模式或使用 X 并愿意贡献 syscons 通用模式的库.md
+            - 15.2.31-1995 年 9 月 28 日，Peter da Silva 认为包不应自动编辑配置文件，主张寻找覆盖面尽可能大的统一方案，反问／etc／packages 在他人模型中是什么.md
+            - 15.2.32-1995 年 10 月 13 日，J Wunsch 回复 Peter Dufault 关于远程 Netscape 从未成功的说法.md
+            - 15.2.33-1996 年 4 月 3 日，Sujal Patel 发现 XFree86 附带的字体数据库包含不存在的字体条目使 Xserver 向 Netscape 线程发错杀死 Java 应用给出 mkfontdir 修复.md
+            - 15.2.34-1996 年 11 月 19 日，Ollivier Robert 指出 Perl4 与 Perl5 之间的变更写在 perltrap 里而 5.x 系列内部语法改动很少.md
+            - 15.2.35-1997 年 1 月 27 日，J Wunsch 为危险专有模式辩护，指出并非所有人都视其为恶，此模式服务于愿意使用者，另愿挑战 DOS 兼容与 1024 柱面限制的也可自由选择.md
+            - 15.2.36-1997 年 4 月 4 日，Rabson 试了 Tor 的修补，0xdeadb 那段在并行远端删除与检出几分钟内便令 vget 故障；他认为问题与 nfs_inactive 无关.md
+            - 15.2.37-1997 年 4 月 6 日，他明确指出 src／sys／contrib 下的包可能带有非 BSD 版权，而一旦放在 sys 目录树内用户便无法自主选择是否接受这些许可证约束.md
+            - 15.2.38-1997 年 4 月 13 日，Michael Searle 询问 curses 与 ncurses 库自某个版本以来变化是否大到足以让为更新版本编写的程序无法运行.md
+            - 15.2.39-1997 年 5 月 11 日，Pedro 在 BSDI 的网站上偶然发现 MOSIX 这个面向 Unix 的多计算机操作系统项目，觉得值得游说对方支持 FreeBSD 并认为对方大概也有兴趣.md
+            - 15.2.40-1997 年 5 月 14 日，表示自己正热切期待 Pedro 提交 Thot 的移植，因为那样一来就能省得我们每个人都亲自去摸索 Thot 那曲折难懂的整个构建流程.md
+            - 15.2.41-1997 年 5 月 17 日，回应说这种行为可用 whichwrap 即 ww 设置来配置默认值为 b,s 表示回退键与空格键上换行并感叹几乎所有东西在 vim 里都可以配置.md
+            - 15.2.42-1997 年 6 月 15 日，J Wunsch 认为复制 CD 本质只是读取光盘，故任何形式的 copy protection 在计算机领域都基本无意义.md
+            - 15.2.43-1997 年 7 月 9 日，Tom Samplonius 称 Net.Quack 不可靠，跑在 Win95 后台且多任务不佳，会把前台拖慢误报为 DNS 服务器响应出问题.md
+            - 15.2.44-1997 年 7 月 11 日，Michael Smith 指出 libXt 并不属于 FreeBSD 而是 XFree86 的组成部分，XFree86 是独立发行版.md
+            - 15.2.45-1997 年 8 月 18 日，Eugeny Kuzakov 报告本机已装 Java 开发套件但持续产生核心转储并说明系统版本为 FreeBSD 2.1.7.1.md
+            - 15.2.46-1997 年 8 月 29 日，威廉姆斯转贴格尔纳在新闻组里关于 Netscape 新支持的询问，末尾只补自己一句，说该发布目前仅面向 Win95 与 NT.md
+            - 15.2.47-1997 年 9 月 17 日，哈巴德反驳称若连 packages、XFree86 与 CVS 仓库得放到 CD 2 上，解释没有对应 target 是因制作过程仍需大量人工介入.md
+            - 15.2.48-1997 年 9 月 27 日，Ollivier Robert 答打标签要修改仓库内每个文件属慢操作，还会生成通常约 800 到 900 KB 量级的大型 CTM 文件.md
+            - 15.2.49-1997 年 10 月 4 日，mdean 说 FreeBSD 上没有支持美版 128 位加密的 Netscape 4.0.md
+            - 15.2.50-1997 年 10 月 10 日，J Wunsch 表示 FreeBSD 项目组基本不自行维护 GNU 组件建议直接把补丁提交给 gas 与 gdb 维护者成功率更高.md
+            - 15.2.51-1997 年 11 月 5 日，jordan 称 Hasbro 律师与 tetris 律师如出一辙 正逐条检查 ftp.cdrom.com 的商标违规项要求删除所有 boggle 并会将其从 4.4 Lite 树移除 FreeBSD, Inc. 与此事无关 来信由 Walnut Creek.md
+            - 15.2.52-1997 年 12 月 8 日，Manar 指出 Windows 有免费 ssh 客户端可用，虽不完美但能工作，因此可以考虑彻底停用 telnetd.md
+            - 15.2.53-1998 年 1 月 22 日，Faber 回给 Warner Losh 一句提醒，务必确保它能够被 uninstalled，并且连用了三个笑脸符号.md
+            - 15.2.54-1998 年 1 月 30 日，howard 自称已潜水一阵最近才自己琢磨这个问题，对那句源码不可自由重分发就不能进入代码库的说法感到困惑.md
+            - 15.2.55-1998 年 2 月 6 日，Jeremy 自述在 2.25R 上用 pkg_add 安装 jdk-1.0.2.tgz 后只得到 ／usr／local／share／java 而无 bin 目录，改从 ftp2.freebsd.org 取源码后 bin 目录存在却仍无法运行，求助相关指引.md
+            - 15.2.56-1998 年 2 月 12 日，lambert 指出无论改名还是删除都必须改写历史，做法是编辑 RCS 文件里的文件名，并认为改名与删除两条路所需的开发资源其实相当.md
+            - 15.2.57-1998 年 2 月 13 日，michael 说在 CURRENT 上装 tk8 Port总是被拉去装 tcl 8.0.2，问有没有补丁让Port停止这样做.md
+            - 15.2.58-1998 年 4 月 29 日，stephen 上传 bmake 版 perl5 到 ftp.freebsd.org 的 incoming 目录供测试.md
+            - 15.2.59-1998 年 5 月 3 日，doug 询问 BIND 4.9.7 何时进入 source tree、是否有人在跟进.md
+            - 15.2.60-1998 年 5 月 5 日，Jordan 说 pkg_add 在一两个修订版之前确实会那样乱删文件，如今已经收敛得多，猜对方机器上是 2.2.6 之前的版本.md
+            - 15.2.61-1998 年 5 月 31 日，andrew 觉得 128 位安全代理的市场并不小，用代理就能省掉给每版下载来的 Netscape 或其他浏览器逐个打补丁的麻烦.md
+            - 15.2.62-1998 年 7 月 15 日，amancio 就此前关于其欲在下一版覆盖他人补丁的争议简短回应，表示自己已经想过这个情形并且确实知道该如何处理，未再展开具体方案.md
+            - 15.2.63-1998 年 12 月 9 日，M. L. Dodson 在 Jordan 解释新包系统尚属 WIP 后接话，建议兼纳 g77 与 C++ 入 base 系统以助数值计算者.md
+            - 15.2.64-1999 年 6 月 21 日，Doug 追问包装何时成为默认并问是在 3.2-Release 之前还是之后，认为推翻错误决定的时机几乎从不迟到.md
         - 15.3-社区协作、倡导与文档
-            - 15.3.1-年11月11日TerryLambert于1998年11月11日称劝说PGI支持F.md
-            - 15.3.2-1999年7月23日Robert预告与TedPham合著的CMU15712论文论.md
-            - 15.3.3-1999年8月1日Nik转述对方称已验证系统可产生ENOBUFS且该文本维持原样.md
-            - 15.3.4-1999年8月7日adrian建议可通过阅读wwwdaemonnewsorg上1.md
-            - 15.3.5-1999年8月18日phk引Scheiflers书中文档化的X11开发规则回复T.md
-            - 15.3.6-1999年8月26日imp回信holm的ftsc测试请求建议他与手头也有ftsc.md
-            - 15.3.7-1999年10月14日Matthew称Solarissection9手册页相当完.md
-            - 15.3.8-1999年11月18日Warner建议联系MattDillon说自己撞到的那一例.md
-            - 15.3.9-1999年12月5日green反驳说从无任何人声称30发布时已达标反而明说过相反.md
-            - 15.3.10-1999年9月13日asmodai建议入门读Tanenbaum的ModernOp.md
-            - 15.3.11-IngoSchwarzebsdcan14mandocM2014.md
-            - 15.3.12-年2月18日RichardWackerbarth建议官方另立21与22目标让用户.md
-            - 15.3.13-年6月5日JordanHubbard说明30STABLE分支会是30发布的自然结.md
-            - 15.3.14-年8月18日BrianSomers补充date1手册只引environ7说明TZ.md
-            - 15.3.15-年12月10日jkh请招聘FreeBSDCC++程序员一类的贴子改发到freeb.md
-            - 15.3.16-年4月25日RodneyWGrimes回复FAQ邮件列表别名询问现场贴出其在fr.md
-            - 15.3.17-年8月21日BruceEvans称不应先与Peter协商后再提交libresol.md
-            - 15.3.18-年3月20日就此前关于流量过载讨论中对Terry的人身攻击致歉承认减少流量的主张.md
-            - 15.3.19-年4月7日作者说明OpenBSD已把每日任务改到别的时间点执行曾有人讨论过一个真.md
-            - 15.3.20-年4月18日John说并不想要一个类似NT那样的操作系统那家厂商早已做成且表现出.md
-            - 15.3.21-年4月27日作者建议把调查范围扩到所有院系而不限计算机系并举例说明ftpaufr.md
-            - 15.3.22-年5月15日John指出sgmltools是FreeBSD早期linuxdoc转.md
-            - 15.3.23-年6月4日MichaelHancock补充说已在BSDI任职的JeffreyHo.md
-            - 15.3.24-年6月20日JordanKHubbard称这封KDE编译求助本应发到questi.md
-            - 15.3.25-年8月12日格认为date手册页对时区变量的说明确实不足虽然文中指向enviro.md
-            - 15.3.26-年8月17日迈克史密斯接话反问如果PLIP真有那么简单文档到底放在哪有没有一份类.md
-            - 15.3.27-年9月13日MikeSmith反驳称文档把getservbyport的port参.md
-            - 15.3.28-年10月8日认为任何访问限制措施如同限速法规起初有效但随时间推移效力递减自认作为.md
-            - 15.3.29-年10月31日JohnMark提醒其他列表上的人想跑current就得订阅fre.md
-            - 15.3.30-年11月4日shapiro说自己正在掉泪而对方只是在发笑对方主张厂商若不想让设备.md
-            - 15.3.31-年11月5日gopu询问有没有讲透FreeBSD222文件系统或44BSD文件系.md
-            - 15.3.32-年11月26日mike把帖子转投hackers认为不宜留在security并称匿.md
-            - 15.3.33-年12月4日maddog指出去年USELINUX从Linux视角看算成功但对BS.md
-            - 15.3.34-年12月15日Csanady提到NetBSD在总线这块有几篇不错的手册页bus_.md
-            - 15.3.35-年12月24日Sean指出这门课相当有用且信息量大比他近来在公司受过的SysVr.md
-            - 15.3.36-年4月2日paul问是否要建CVS树由谁牵头并表示自己会把它搭完同时提到Aman.md
-            - 15.3.37-年4月5日sharding说把这封来信转给freebsdhackers@free.md
-            - 15.3.38-年4月10日benedict自荐ChiefEvangelizer自述十九岁仍乐于.md
-            - 15.3.39-年6月25日mike提示若该问题属current相关应改投current邮件列表.md
-            - 15.3.40-年7月23日AndreasKlemm为Ct杂志撰写备份选型文取得Elizabet.md
-            - 15.3.41-年8月20日NateWilliams通读manpage后认为OpenBSD的re.md
-            - 15.3.42-年12月15日OllivierRobert在巴黎IPFuture会上见到Fran.md
-            - 15.3.43-年6月23日TaaviTalvik表示首次撰写manpage近乎黑魔法请求熟悉t.md
-            - 15.3.44-年4月11日jkh建议想找合理的营销模板就去看redhatcom说它的主页正是他.md
+            - 15.3.1-1998 年 11 月 11 日，Terry Lambert 于 1998 年 11 月 11 日称劝说 PGI 支持 FreeBSD 遭拒，PGI 的理由是技术支援人力不足.md
+            - 15.3.2-1999 年 7 月 23 日，Robert 预告与 Ted Pham 合著的 CMU 15-712 论文，论内核在系统空闲期对用户进程做投机执行以生成文件系统预取.md
+            - 15.3.3-1999 年 8 月 1 日，Nik 转述对方称已验证系统可产生 ENOBUFS 且该文本维持原样即可同时说明自己已提交条目将 ENOBUFS 释义为 mbuf pool 在写入 socket 时被完全耗尽.md
+            - 15.3.4-1999 年 8 月 7 日，adrian 建议可通过阅读 www.daemonnews.org 上 199907 期的 bochs.html 采访了解 bochs 项目发起人 作为对 Donald Burr 来信的补充.md
+            - 15.3.5-1999 年 8 月 18 日，phk 引 Scheiflers 书中文档化的 X11 开发规则回复 Terry，称改前代码各层把不识别操作扔给 errno 反而更短.md
+            - 15.3.6-1999 年 8 月 26 日，imp 回信 holm 的 fts.c 测试请求，建议他与手头也有 fts.c 相关补丁的 Bruce Evens 协同工作以避免重复.md
+            - 15.3.7-1999 年 10 月 14 日，Matthew 称 Solaris section 9 手册页相当完整.md
+            - 15.3.8-1999 年 11 月 18 日，Warner 建议联系 Matt Dillon，说自己撞到的那一例正是 Matt Dillon 帮忙解决的.md
+            - 15.3.9-1999 年 12 月 5 日，green 反驳说从无任何人声称 3.0 发布时已达标 反而明说过相反的话 4.0 确是在 3.X 稳定后启动的 Matt 等人改动无法合并进 RELENG_3 只能落在 HEAD 分支.md
+            - 15.3.10-1999 年 9 月 13 日，asmodai 建议入门读 Tanenbaum 的 Modern Operating Systems.md
+            - 15.3.11-Ingo Schwarze《bsdcan14-mandoc》（2014）与《bsdcan15-mandoc》（2015）文献.md
+            - 15.3.12-1997 年 2 月 18 日，Richard Wackerbarth 建议官方另立 2.1 与 2.2 目标，让用户在 stable 改名前自行切换.md
+            - 15.3.13-1998 年 6 月 5 日，Jordan Hubbard 说明 3.0-STABLE 分支会是 3.0 发布的自然结果，但不一定紧跟其后出现，具体时机还要看情况.md
+            - 15.3.14-1997 年 8 月 18 日，Brian Somers 补充 date(1) 手册只引 environ(7) 说明 TZ 不够清楚.md
+            - 15.3.15-1998 年 12 月 10 日，jkh 请招聘 FreeBSD C／C++ 程序员一类的贴子改发到 freebsd-jobs，以保持本列表的技术话题信噪比.md
+            - 15.3.16-1995 年 4 月 25 日，Rodney W. Grimes 回复 FAQ 邮件列表别名询问.md
+            - 15.3.17-1995 年 8 月 21 日，Bruce Evans 称不应先与 Peter 协商后再提交 libresolv 修复，否则 tree 将更久无法构建并增加所有人工作量.md
+            - 15.3.18-1996 年 3 月 20 日，就此前关于流量过载讨论中对 Terry 的人身攻击致歉 承认减少流量的主张本身成立但人身攻击越界 向 Terry 正式道歉.md
+            - 15.3.19-1997 年 4 月 7 日，作者说明 OpenBSD 已把每日任务改到别的时间点执行，曾有人讨论过一个真正处理时间跳跃的办法，即在跳时发生时把所有该跑的任务补跑一遍.md
+            - 15.3.20-1997 年 4 月 18 日，John 说并不想要一个类似 NT 那样的操作系统，那家厂商早已做成且表现出颇为有趣的性能特征；他也承认若能维持更一致的接口会很好.md
+            - 15.3.21-1997 年 4 月 27 日，作者建议把调查范围扩到所有院系而不限计算机系.md
+            - 15.3.22-1997 年 5 月 15 日，John 指出 sgmltools 是 FreeBSD 早期 linuxdoc 转换的基础却是一堆缺乏专业知识者的 hack 堆砌.md
+            - 15.3.23-1997 年 6 月 4 日，Michael Hancock 补充说已在 BSDI 任职的 Jeffrey Hoenig 把他们的 routed 改写成调用 gated 的 perl 脚本，以此回应为何默认使用 routed 而非 gated 的讨论.md
+            - 15.3.24-1997 年 6 月 20 日，Jordan K. Hubbard 称这封 KDE 编译求助本应发到 questions@freebsd.org，但话题尚算有趣便网开一面.md
+            - 15.3.25-1997 年 8 月 12 日，格认为 date 手册页对时区变量的说明确实不足，虽然文中指向 environ 手册，但读者并不清楚那处引用是干什么用的.md
+            - 15.3.26-1997 年 8 月 17 日，迈克史密斯接话反问，如果 PLIP 真有那么简单，文档到底放在哪，有没有一份类似 Linux 迷你说明书那样的东西能把流程讲得连笨脑子也能看懂.md
+            - 15.3.27-1997 年 9 月 13 日，Mike Smith 反驳称文档把 getservbyport 的 port 参数写作 int，与其需网络字节序的实际要求矛盾，并应使用 htonl.md
+            - 15.3.28-1997 年 10 月 8 日，认为任何访问限制措施如同限速法规起初有效但随时间推移效力递减，自认作为新人已占用大量他人时间，期望日后能为社区回馈贡献.md
+            - 15.3.29-1997 年 10 月 31 日，John-Mark 提醒其他列表上的人，想跑 current 就得订阅 freebsd-current，故障交流都集中在那里.md
+            - 15.3.30-1997 年 11 月 4 日，shapiro 说自己正在掉泪而对方只是在发笑，对方主张厂商若不想让设备挂文件系统就会把它做成不可块寻址.md
+            - 15.3.31-1997 年 11 月 5 日，gopu 询问有没有讲透 FreeBSD 2.2.2 文件系统或 4.4 BSD 文件系统的好书.md
+            - 15.3.32-1997 年 11 月 26 日，mike 把帖子转投 -hackers 认为不宜留在 -security，并称匿名登录时口令出现在进程列表属有意设计，因为它提供了可能有用的信息.md
+            - 15.3.33-1997 年 12 月 4 日，maddog 指出去年 USELINUX 从 Linux 视角看算成功但对 BSD 阵营却是灾难有人觉得被刻意排除因此 USENIX 董事会委任他主持新奥尔良会议的 Freenix 专题并搭起多操作系统组织委员会.md
+            - 15.3.34-1997 年 12 月 15 日，Csanady 提到 NetBSD 在总线这块有几篇不错的手册页 bus_space(9) 与 bus_dma(9)，抽象得挺好且跨多个架构可用.md
+            - 15.3.35-1997 年 12 月 24 日，Sean 指出这门课相当有用且信息量大，比他近来在公司受过的 SysVr4 实务讲解还要强，也说明这正是他动手写 procfs 的缘由.md
+            - 15.3.36-1998 年 4 月 2 日，paul 问是否要建 CVS 树 由谁牵头 并表示自己会把它搭完 同时提到 Amancio 建议由有 freefall 账户的人负责.md
+            - 15.3.37-1998 年 4 月 5 日，sharding 说把这封来信转给 freebsd-hackers@freebsd.org 更合适，因为这批人是值得交流的对象.md
+            - 15.3.38-1998 年 4 月 10 日，benedict 自荐 Chief Evangelizer 自述十九岁仍乐于布道并力求保持 tasteful 同时承认自称有 hubristic 之意.md
+            - 15.3.39-1998 年 6 月 25 日，mike 提示若该问题属 -current 相关应改投 -current 邮件列表，并回忆对方先前摆弄过运行时链接器环境，认为这属于附带损害.md
+            - 15.3.40-1998 年 7 月 23 日，Andreas Klemm 为 C't 杂志撰写备份选型文.md
+            - 15.3.41-1998 年 8 月 20 日，Nate Williams 通读 manpage 后认为 OpenBSD 的 realloc 全树改写不正确.md
+            - 15.3.42-1998 年 12 月 15 日，Ollivier Robert 在巴黎 IP Future 会上见到 Francis 与 Jun-ichiro，两人均证实合并且含 NRL 代码，上周奥兰多 IETF 已正式宣布;他转述 Jun-ichiro 的说法：计划 1999 年夏天前完成，目前正做代码审查.md
+            - 15.3.43-1999 年 6 月 23 日，Taavi Talvik 表示首次撰写 man page 近乎黑魔法.md
+            - 15.3.44-1998 年 4 月 11 日，jkh 建议想找合理的营销模板就去看 redhat.com，说它的主页正是他为 freebsd.org 的 news.html 设想的格式.md
         - 15.4-用户硬件环境与使用报告
-            - 15.4.1-1999年9月1日pete报告多台L440GX+服务器主要作单处理器使用加装Ad.md
-            - 15.4.2-1999年9月13日tolyar在HPVectraVA200DT上用32rele.md
-            - 15.4.3-1999年10月5日mikebo报告FBSD33R在HPKayakXU上HP组合.md
-            - 15.4.4-1999年8月3日lpa咨询在拟运行的FBSD32主机上叠加三块IDE硬盘软驱I.md
-            - 15.4.5-1999年10月8日todd自述约50台使用asusp2bd主板的机器配置相近且.md
-            - 15.4.6-年6月10日MartinBlapp称CyrixPR20096MB内存的机器无法b.md
-            - 15.4.7-年1月28日TerryBraun认同30稳定他在新机器上装30RELEASE运行.md
-            - 15.4.8-年4月19日DonWilde有4台在线机跑217在X与2940问题彻底了结前不愿.md
-            - 15.4.9-年4月15日RashidKarimov报告0210SNAP上整机随机冻住跑XFr.md
-            - 15.4.10-年8月25日RashidKarimov说两台配置相同的机器频繁panic报Fat.md
-            - 15.4.11-年5月19日MarkDawson运行的文件服务器用226stable三到四周后崩.md
-            - 15.4.12-年3月10日JayeMathisen在P5120Triton芯片组机上跑stre.md
-            - 15.4.13-年8月6日Rabson说最便宜的hub是netgear的约650美元8口他打算改.md
-            - 15.4.14-年11月10日Bryan在FreeBSD222笔记本上用USRoboticsMe.md
-            - 15.4.15-年2月3日MarkHittinger承认Justin说得对他的EISAP60主板.md
-            - 15.4.16-年1月1日WilkoBulte谈及DECAlphaMultia认为24Mb内存与.md
-            - 15.4.17-年4月23日JohnHay报告sysconsc近月改动使无屏幕但内核含sysco.md
-            - 15.4.18-年10月3日AndreasKlemm在超频讨论中起初认为装风扇加热敏传感器就能防.md
-            - 15.4.19-年10月6日TerryLambert在FiskarsUPS讨论中以manrres.md
-            - 15.4.20-年10月20日JoeGreco承认不易相信同步串口卡比高质量TA更贵指出denn.md
-            - 15.4.21-年10月27日AmancioHastyJr初测表明商业Linux电子表格Xess.md
-            - 15.4.22-年5月16日Babkin补充提问为何EDO内存的访问时间应优于普通RAM其比较后.md
-            - 15.4.23-年8月24日JWunsch指出8101416扫描线字体支持的说法不准确VGA仅2.md
-            - 15.4.24-年11月4日MarkTinguely建议在捕获机不运行X图形环境改用另一台机器显.md
-            - 15.4.25-年11月9日JulianAssange说明对22current打syscons补.md
-            - 15.4.26-年4月2日JayeMathisen用DigitalPriorisHX6000作客.md
-            - 15.4.27-年4月10日菲尔询问FreeBSD217RELEASE下华硕主板与USRCour.md
-            - 15.4.28-年4月11日BrianSomers建议对方试用setcon工具它只切换虚拟终端但.md
-            - 15.4.29-年4月16日KyleMestery报告P150配40MBFPM内存跑FreeBS.md
-            - 15.4.30-年4月22日ArveRonning就GaryClarkII报的随机重启在其内核C.md
-            - 15.4.31-年5月16日本人在内存仅五MB的386sx16笔记本上把FreeBSD22装上了.md
-            - 15.4.32-年5月28日Wunsch确认Obrien那台机器是上周末新编的FreeBSD22.md
-            - 15.4.33-年6月2日Jordan回应在控制器设置里把CDROM可启动关掉并说明这已是共识做.md
-            - 15.4.34-年7月7日DominicFroud向FreeBSD22系列的使用者征集现象xmc.md
-            - 15.4.35-年7月28日杰克汉比在VirtualPC模拟器里启动FreeBSD222后内核加.md
-            - 15.4.36-年8月3日查尔斯澄清主机用的是16550A芯片跑在48666上除了用他自己写的程.md
-            - 15.4.37-年8月4日莱蒙答复他人关于把系统装进百得笔记本的提问说自己手上一台百得机器已经顺.md
-            - 15.4.38-年8月21日JimBallantine在30970807SNAP快照上报告XF8.md
-            - 15.4.39-年9月5日肯尼汉森报告他手上的IntelAnchorageAN430TX主板上S.md
-            - 15.4.40-年9月23日发件账号0000Administrator询问labpc板能否让8路.md
-            - 15.4.41-年9月26日TerryLambert追问compat_linux环境下编译器路径.md
-            - 15.4.42-年1月6日norman认为多余空白页由CtrlF换页符引起因该字符会使打印机进纸.md
-            - 15.4.43-年1月8日kevin报告收到Intel在122497发布的AL440LX主板be.md
-            - 15.4.44-年1月12日msmith评论说从那儿到半图形化登录只需一小步比如登录对话框而非l.md
-            - 15.4.45-年3月4日Simon称自己开发环境使用FDDICDDIDEC卡受FreeBSD支.md
-            - 15.4.46-年5月20日joelh建议提问者去检查~xsessionerrors文件看里面是.md
-            - 15.4.47-年2月16日JWunsch答复启动早期切换虚拟终端的疑问指出要在另一虚拟终端做事.md
-            - 15.4.48-年6月10日terry承认这只是其中一部分其余还包括模拟VxD预期运行环境涵盖使.md
-            - 15.4.49-年6月19日dulai认为它之所以能单独当鼠标只是因为它属于鼠标超集moused.md
-            - 15.4.50-年6月21日MikeSmith反驳MouseRemote应被移出moused的说.md
-            - 15.4.51-年9月2日MIHIRAYoshiro在横滨金泽家中以FreeBSD机器使用Sea.md
-            - 15.4.52-年10月22日承包商HallamOaks就客户的电视广告数字化与非实时卫星传输项.md
-            - 15.4.53-年1月5日RussellLCarter在FreeBSDcurrent上配好ACE.md
-            - 15.4.54-年2月9日俄罗斯用户VladimirNKovalev在FreeBSD227199.md
-            - 15.4.55-年3月4日UlfZimmermann报告一台AMDK6233128MBAdapt.md
-            - 15.4.56-年7月2日Enteract的DavidScheidt报告在FreeBSD的Lin.md
-            - 15.4.57-年7月14日DanielCSobral就MatthewDillon称相机内置Ap.md
+            - 15.4.1-1999 年 9 月 1 日，pete 报告多台 L440GX+ 服务器主要作单处理器使用，加装 Adaptec 2940 亦正常.md
+            - 15.4.2-1999 年 9 月 13 日，tolyar 在 HP Vectra VA／200DT 上用 3.2-release.md
+            - 15.4.3-1999 年 10 月 5 日，mikebo 报告 FBSD 3.3-R 在 HP Kayak XU 上 HP 组合卡遭遇 AMD PCNet-Fast 与 NCR SCSI 驱动冲突，启动后 lnc1 反复抛 Heartbeat error SQE test failed，每几分钟再抛包发送失败.md
+            - 15.4.4-1999 年 8 月 3 日，lpa 咨询在拟运行的 FBSD 3.2 主机上叠加三块 IDE 硬盘 软驱 IDE CD-ROM 三块 ep NIC 与 Adaptec PCI SCSI 适配器后中断配置与架构能否胜任.md
+            - 15.4.5-1999 年 10 月 8 日，todd 自述约 50 台使用 asus p2bd 主板的机器配置相近且运行良好，其内核参数 NMBCLUSERS 设为 30720.md
+            - 15.4.6-1998 年 6 月 10 日，Martin Blapp 称 Cyrix PR200、96 MB 内存的机器无法 build world，约半小时后报致命双重错误.md
+            - 15.4.7-1999 年 1 月 28 日，Terry Braun 认同 3.0 稳定，他在新机器上装 3.0-RELEASE 运行良好.md
+            - 15.4.8-1997 年 4 月 19 日，Don Wilde 有 4 台在线机跑 2.1.7，在 X 与 2940 问题彻底了结前不愿升 2.2.1，要求把 2.1-stable 与 2.2 代码常驻在两张持续更新的 CD 上.md
+            - 15.4.9-1995 年 4 月 15 日，Rashid Karimov 报告 0210 SNAP 上整机随机冻住，跑 XFree 3.1.1，显卡为 Diamond Stealth 64.md
+            - 15.4.10-1995 年 8 月 25 日，Rashid Karimov 说两台配置相同的机器频繁 panic：报 Fatal trap 12 supervisor read.md
+            - 15.4.11-1998 年 5 月 19 日，Mark Dawson 运行的文件服务器用 2.2.6-stable，三到四周后崩溃.md
+            - 15.4.12-1996 年 3 月 10 日，Jaye Mathisen 在 P5-120 Triton 芯片组机上跑 stream_d 基准.md
+            - 15.4.13-1996 年 8 月 6 日，Rabson 说最便宜的 hub 是 netgear 的约 650 美元 8 口，他打算改用交叉线.md
+            - 15.4.14-1997 年 11 月 10 日，Bryan 在 FreeBSD 2.2.2 笔记本上用 USRobotics Megahertz PCMCIA 以太网调制解调卡.md
+            - 15.4.15-1995 年 2 月 3 日，Mark Hittinger 承认 Justin 说得对，他的 EISA P-60 主板确实不能对上面 16mb 做 DMA.md
+            - 15.4.16-1995 年 1 月 1 日，Wilko Bulte 谈及 DEC Alpha Multia，认为 24Mb 内存与 340Mb 硬盘都偏小.md
+            - 15.4.17-1995 年 4 月 23 日，John Hay 报告 syscons.c 近月改动使无屏幕但内核含 syscons 的机器在 attach 例程 bcopy 处 panic.md
+            - 15.4.18-1995 年 10 月 3 日，Andreas Klemm 在超频讨论中起初认为装风扇加热敏传感器就能防止过热，被指出芯片局部过热更需警惕后表示认可.md
+            - 15.4.19-1995 年 10 月 6 日，Terry Lambert 在 Fiskars UPS 讨论中以 man rresvport 作答，称 1023 以下端口仅根用户可分配.md
+            - 15.4.20-1995 年 10 月 20 日，Joe Greco 承认不易相信同步串口卡比高质量 TA 更贵.md
+            - 15.4.21-1995 年 10 月 27 日，Amancio Hasty Jr. 初测表明商业 Linux 电子表格 Xess 在 FreeBSD 的 Linux emulator 下可运行.md
+            - 15.4.22-1996 年 5 月 16 日，Babkin 补充提问为何 EDO 内存的访问时间应优于普通 RAM，其比较后两者结果完全相等，主板为 Triton 配 AMI BIOS.md
+            - 15.4.23-1996 年 8 月 24 日，J Wunsch 指出 8 10 14 16 扫描线字体支持的说法不准确 VGA 仅 25 28 40 50 字符行 该组合仅对应 400 行屏幕 480 行笔记本 LCD 需更大字体但字符行数不变.md
+            - 15.4.24-1996 年 11 月 4 日，Mark Tinguely：建议在捕获机不运行 X 图形环境，改用另一台机器显示 VIC 窗口，判断故障源于 PCI 总线上的其他流量.md
+            - 15.4.25-1996 年 11 月 9 日，Julian Assange 说明对 2.2-current 打 syscons 补丁后重编.md
+            - 15.4.26-1997 年 4 月 2 日，Jaye Mathisen 用 Digital Prioris HX6000 作客户端.md
+            - 15.4.27-1997 年 4 月 10 日，菲尔询问 FreeBSD2.1.7-RELEASE 下华硕主板与 USRCourier 调制解调器能否配合 Defender1000.md
+            - 15.4.28-1997 年 4 月 11 日，Brian Somers 建议对方试用 setcon 工具，它只切换虚拟终端，但在 2.2 的预发布阶段曾把键盘唤醒，源码放在他个人主页.md
+            - 15.4.29-1997 年 4 月 16 日，Kyle Mestery 报告 P150 配 40MB FPM 内存、跑 FreeBSD-2.2.1 与 afterstep.md
+            - 15.4.30-1997 年 4 月 22 日，Arve Ronning 就 Gary Clark II 报的随机重启，在其内核 CONFIG 里点出 irq 5 冲突，串口 sio2.md
+            - 15.4.31-1997 年 5 月 16 日，本人在内存仅五 MB 的 386／sx-16 笔记本上把 FreeBSD 2.2 装上了.md
+            - 15.4.32-1997 年 5 月 28 日，Wunsch 确认 Obrien 那台机器是上周末新编的 FreeBSD 2.2-STABLE 构建.md
+            - 15.4.33-1997 年 6 月 2 日，Jordan 回应在控制器设置里把 CDROM 可启动关掉，并说明这已是共识做法，通常不会长期保持开启，只在确实需要安装时才启用，装完便再关掉.md
+            - 15.4.34-1997 年 7 月 7 日，Dominic Froud 向 FreeBSD 2.2 系列的使用者征集现象：xmcd 的 cda 能否找到音频光盘目录数据.md
+            - 15.4.35-1997 年 7 月 28 日，杰克汉比在 VirtualPC 模拟器里启动 FreeBSD 2.2.2 后，内核加载随即因特权指令故障触发致命陷阱而崩溃.md
+            - 15.4.36-1997 年 8 月 3 日，查尔斯澄清主机用的是 16550A 芯片跑在 486／66 上，除了用他自己写的程序经串口传文件之外几乎完全空转.md
+            - 15.4.37-1997 年 8 月 4 日，莱蒙答复他人关于把系统装进百得笔记本的提问，说自己手上一台百得机器已经顺利运行许久，安装过程并无阻碍，唯一遗留问题是关机调用无法正常执行.md
+            - 15.4.38-1997 年 8 月 21 日，Jim Ballantine 在 3.0-970807-SNAP 快照上报告 XF86Setup 找不到 libtcl.so.75.1 导致 X 配置失败，同时 xlockmore 等包未进入 INDEX 索引，他在来信中向社区报告并请求协助解决.md
+            - 15.4.39-1997 年 9 月 5 日，肯尼汉森报告他手上的 Intel Anchorage AN430TX 主板上，Sony CDU611 光驱接在副控制器 wdc1 上工作正常.md
+            - 15.4.40-1997 年 9 月 23 日，发件账号 0000-Administrator 询问 labpc 板能否让 8 路模拟通道以 1000hz 扫描并逐次中断.md
+            - 15.4.41-1997 年 9 月 26 日，Terry Lambert 追问 compat_linux 环境下编译器路径解析与链接器选择机制.md
+            - 15.4.42-1998 年 1 月 6 日，norman 认为多余空白页由 Ctrl-F 换页符引起，因该字符会使打印机进纸，并追问是否在 printcap 项中指定了 sf.md
+            - 15.4.43-1998 年 1 月 8 日，kevin 报告收到 Intel 在 12／24／97 发布的 AL440LX 主板 beta BIOS.md
+            - 15.4.44-1998 年 1 月 12 日，msmith 评论说从那儿到半图形化登录只需一小步，比如登录对话框而非 login／password prompt，觉得人们会喜欢这种改动.md
+            - 15.4.45-1998 年 3 月 4 日，Simon 称自己开发环境使用 FDDI CDDI，DEC 卡受 FreeBSD 支持，即插即用，能提供冗余且无需昂贵交换机.md
+            - 15.4.46-1998 年 5 月 20 日，joelh 建议提问者去检查 ~／.xsession-errors 文件，看里面是否记录了登录后立即退回登录画面的错误信息.md
+            - 15.4.47-1997 年 2 月 16 日，J Wunsch 答复启动早期切换虚拟终端的疑问指出要在另一虚拟终端做事须内核内存分配器已就绪而切换动作本身须中断可工作.md
+            - 15.4.48-1998 年 6 月 10 日，terry 承认这只是其中一部分其余还包括模拟 VxD 预期运行环境涵盖使用 ELF、遵守节归属标注、为顶部与底部处理正式化虚拟中断以及支持内核分页.md
+            - 15.4.49-1998 年 6 月 19 日，dulai 认为它之所以能单独当鼠标只是因为它属于鼠标超集，moused 应只做鼠标相关的事.md
+            - 15.4.50-1998 年 6 月 21 日，Mike Smith 反驳 MouseRemote 应被移出 moused 的说法 称它本身就是一只鼠标 设计上用于与鼠标串接 处理鼠标数据流的协议处理层正是合适位置 强拆而不给出同等功能与更优架构的方案无人会领情.md
+            - 15.4.51-1998 年 9 月 2 日，MIHIRA Yoshiro 在横滨金泽家中以 FreeBSD 机器使用 Seaple CATV 与 Tokyu Cable TV 两家有线服务.md
+            - 15.4.52-1998 年 10 月 22 日，承包商 Hallam Oaks 就客户的电视广告数字化与非实时卫星传输项目征求方案：需把约 30,000 条广告在线以数字形式存储供检索.md
+            - 15.4.53-1999 年 1 月 5 日，Russell L. Carter 在 FreeBSD -current 上配好 ACE 4.6.md
+            - 15.4.54-1999 年 2 月 9 日，俄罗斯用户 Vladimir N. Kovalev 在 FreeBSD 2.2.7-19981103-SNAP 上用 dummynet 配置六个 ipfw pipe，pipe 1、3、4 生效，pipe 2、5、6 不限带宽，但给这三个加上 delay 就能察觉效果.md
+            - 15.4.55-1999 年 3 月 4 日，Ulf Zimmermann 报告一台 AMD K6-233、128 MB.md
+            - 15.4.56-1999 年 7 月 2 日，Enteract 的 David Scheidt 报告在 FreeBSD 的 Linux 模拟器下运行 Voodoo Banshee 专用 Linux X 服务器效果意外地好，远超对异 OS 驱动的预期，唯与 sysmouse 不兼容，故手动启停 moused.md
+            - 15.4.57-1999 年 7 月 14 日，Daniel C. Sobral 就 Matthew Dillon 称相机内置 Apache 说明内存宽裕.md
         - 15.5-杂项
-            - 15.5.1-年12月1日MattiasPantzare19971201纠正JustenSte.md
-            - 15.5.2-1999年8月3日juha回复DanielCSobral关于传参方式是否一致的疑.md
-            - 15.5.3-1999年8月22日Mitani反驳称按位计n时复杂度为On并给出展开循环的if.md
-            - 15.5.4-1999年8月30日ajk指出四个月前已用sendprbin11031提交mou.md
-            - 15.5.5-1999年7月27日JamesHoward回复Doug关于特征集完整度的评论澄清.md
-            - 15.5.6-年7月1日DavidDawes回复称自己此前已提交prbin2080附上修复解决.md
-            - 15.5.7-年12月30日HowardGoldstein在30CURRENT122098上跑.md
-            - 15.5.8-年7月22日LarsEggert复测确认kern17224在41RC仍存在在BI.md
-            - 15.5.9-年7月26日JoachimStrömbergson指出41RELEASE的rel.md
-            - 15.5.10-年2月10日RonEcheverri询问Jordan在cubfannounce贴.md
-            - 15.5.11-年11月21日DonLewis转述RichardWackerbarth答复称该h.md
-            - 15.5.12-年2月18日SatoshiAsami回应他人报告对方2月12日升级stable后.md
-            - 15.5.13-年3月10日MikeSmith答称未考虑代用户写出变更因mount8不拥有etc.md
-            - 15.5.14-年3月20日FariedNawaz升级到226980319BETA后screen.md
-            - 15.5.15-年4月4日Tom反驳WesPeters的转述新记录立即可得若查询发生在记录添加之.md
-            - 15.5.16-年5月27日MichaelRobinson回应MikeSmith引用原始诊断中w.md
-            - 15.5.17-年9月3日DagErlingSmørgrav说这现象令他想起近来列表上讨论过的M.md
-            - 15.5.18-年11月25日JinGuojun报22Alpha上cat重定向报stdoutBa.md
-            - 15.5.19-年1月25日JohnHay更正自己的报告tzsetup缺南非并非数据缺失zone.md
-            - 15.5.20-年3月16日BruceEvans说明bash会设置$PWD但不予导出而sh两者都.md
-            - 15.5.21-年7月13日ShigioYamaguchi提议在vi的ex命令行用^表示当前行号.md
-            - 15.5.22-年5月12日JasonNordwick说自己在着手bin5733关于cp的问题这.md
-            - 15.5.23-年12月26日KrisKennaway反问对方是否确在FreeBSD主机上查到e.md
-            - 15.5.24-年1月13日JonathanMBresler回复NickolayNDudorov.md
-            - 15.5.25-年4月2日NateWilliams在anyinterest讨论串中回复Brian.md
-            - 15.5.26-年6月17日PeterdaSilva以Nope否定被引者的条件称需快于并行端口的.md
-            - 15.5.27-年9月1日JordanKHubbard回应JulianElischer关于ncu.md
-            - 15.5.28-年9月19日NateWilliams质疑Terry引用BellLabs关于人类短.md
-            - 15.5.29-年9月24日PeterdaSilva称自己用了十年没出过此问题技术部人员也并非都.md
-            - 15.5.30-年10月12日AndreyChernov公开反对应用SergeyShkonda提.md
-            - 15.5.31-年10月16日JamesLeppek回复关于NetBSD与FreeBSD的讨论指.md
-            - 15.5.32-年10月16日OllivierRobert转述JWunsch说法后回应说intl.md
-            - 15.5.33-年10月17日Terry回应88595中空格为0xA0的说法说你有两个空格键并说.md
-            - 15.5.34-年11月26日JordanKHubbard称与PoulHenning均查不出为何.md
-            - 15.5.35-年11月29日OllivierRobert回复JordanKHubbard关于p.md
-            - 15.5.36-年12月7日DavidGreenman反驳上封认为21以22current形式维.md
-            - 15.5.37-年1月18日JordanKHubbard称最近列表上已有人贴出相关补丁建议先确认.md
-            - 15.5.38-年2月5日MichaelSmith答复PoulHenningKamp关于Will.md
-            - 15.5.39-年2月22日MartyLeisner称喜欢Freebsd以commandcore.md
-            - 15.5.40-年5月24日JWunsch简短回应Fieber的引述承认自己此前漏看了Smart.md
-            - 15.5.41-年8月16日ThomasDavidRivers说明该问题在21时曾报过又于215.md
-            - 15.5.42-年8月29日BrandonGillespie提议给DES密码加$0$前缀让旧密码.md
-            - 15.5.43-年3月11日HellmuthMichaelis回复称自己目前正于FreeBSD2.md
-            - 15.5.44-年4月15日DavidGreenman作为FreeBSD核心团队成员和主架构师回.md
-            - 15.5.45-年5月13日给出正确形式为cbf后先接块大小再接归档文件名并强调参数顺序很重要又.md
-            - 15.5.46-年5月22日约翰马克回应说其实FreeBSD里早已有等价命令killall随后补.md
-            - 15.5.47-年6月6日BobBishop针对JustinTGibbs提出的每隔一段就插入一笔.md
-            - 15.5.48-年6月24日TimVanderhoek纠正SteveHowe的设想说明这并非SL.md
-            - 15.5.49-年6月25日MichaelSmith承认自己判断过快转而确认经验法则是否为文件一.md
-            - 15.5.50-年7月2日SebastianLederer回应TerryLambert的四步方案.md
-            - 15.5.51-年7月7日AndreyAChernov认为运行rcshutdown脚本属于关闭流.md
-            - 15.5.52-年8月1日蒂姆范德霍克指出日期语法里cc之前应有两个左括号那是简单正常的逻辑扩展.md
-            - 15.5.53-年9月10日TerryLambert建议shell在变量内部展开路径通配符而不是.md
-            - 15.5.54-年9月24日ThomasGellekum回复vt420termcap请求指向lo.md
-            - 15.5.55-年10月10日MikhailChernomordik询问在FreeBSD下如何用.md
-            - 15.5.56-年11月14日nate反对把shell机器上用户能跑任意代码说成root沦陷指出.md
-            - 15.5.57-年11月16日JonathanMini回应JordanKHubbard称comm.md
-            - 15.5.58-年12月1日Jordan表示新版方案迟迟未定只是还在等对方把计划交出来他甚至用p.md
-            - 15.5.59-年12月1日wosch以一句近乎反问的短句回应AmancioHasty关于重写守.md
-            - 15.5.60-年12月12日JordanKHubbard说明FreeBSD最终采纳的是Inte.md
-            - 15.5.61-年12月27日Jordan回应对方提议给现有工具增加一个可选版本供偏好图形界面的.md
-            - 15.5.62-年1月4日Julian指出对方只说过用不起来而没有更多细节自己同步过代码多次猜测.md
-            - 15.5.63-年1月13日mikehancock说那样就不必放在同一栋楼内自己不太清楚到哪里去.md
-            - 15.5.64-年1月21日pierre对TerryLambert的说法存疑追问其是否指32bi.md
-            - 15.5.65-年1月22日TerryLambert承认自己把TSM说成TypeSpecific.md
-            - 15.5.66-年1月23日Greg指出准确写法为SuSE邮箱suse@susede认为缩写意为.md
-            - 15.5.67-年1月29日AmancioHasty转发McCarthy通过muppetlabs.md
-            - 15.5.68-年2月5日terry提到JeremyAllison在Whistle最近修复了ac.md
-            - 15.5.69-年3月29日lyndon在emacsrc里用globalsetkey把Ch绑到d.md
-            - 15.5.70-年5月6日andreas回应说他自己就是对方要找的那位跑的是30current机.md
-            - 15.5.71-年5月9日joe说明他曾尝试回复但邮件被退信认同John说他只谈了一款产品即NC.md
-            - 15.5.72-年5月28日ollivier说SO4每次运行完都留下几十段共享内存即便干净退出亦.md
-            - 15.5.73-年6月15日ronosson问John指的是协议版本还是软件版本并贴出自己运行c.md
-            - 15.5.74-年7月6日spork反问若对方想要几部调制解调器尽管开口说自己手头囤积的数量非常.md
-            - 15.5.75-年7月19日FreeBSD项目联合创始人及首席架构师DavidGreenman对.md
-            - 15.5.76-年8月5日AndreAlbsmeier回复MarkTinguely关于227中r.md
-            - 15.5.77-年8月7日HowardLeadmon以FreeBSD30CURRENT跑Unde.md
-            - 15.5.78-年9月23日MichaelReifenberger就BrianJenkins报告.md
-            - 15.5.79-年11月26日OllivierRobert回应NikClayton关于欧元码点的.md
-            - 15.5.80-年12月21日Ugen补充此前漏说的系统版本是30RELEASE他取30CURR.md
-            - 15.5.81-年1月8日Primenet的TerryLambert认为Julian的提案相当合.md
-            - 15.5.82-年1月29日BorisPopov回复JoaoCarlosMendesLuis关于.md
-            - 15.5.83-年2月2日rwwacom的RobertWithrow回应rcinituninit.md
-            - 15.5.84-年2月11日FreeBSD成员EivindEklund转述Hunt就忽略nofi.md
-            - 15.5.85-年3月29日MatthewJacob在anotherufspanic讨论串中回应.md
-            - 15.5.86-年6月16日DanielOConnor在MIHIRAYoshiro建议将改过的服.md
-            - 15.5.87-freebsdhackersmessages2622627.md
+            - 15.5.1-1997 年 12 月 1 日，Mattias Pantzare 1997-12-01 纠正 Justen Stepka.md
+            - 15.5.2-1999 年 8 月 3 日，juha 回复 Daniel C Sobral 关于传参方式是否一致的疑问 指出参数串是把各词用空格拼接在一起 建议在相关代码中搜索 strbuf 变量以定位该拼接位置.md
+            - 15.5.3-1999 年 8 月 22 日，Mitani 反驳称按位计 n 时复杂度为 O(n)，并给出展开循环的 if else 链方案从 2^0 逐层比较到 2^31 作为合适实现.md
+            - 15.5.4-1999 年 8 月 30 日，ajk 指出四个月前已用 send-pr bin／11031 提交 mount 用户选项方案，自认为多方面优于当前 sysctl 方式.md
+            - 15.5.5-1999 年 7 月 27 日，James Howard 回复 Doug 关于特征集完整度的评论 澄清此前未实现某特性是因为不知道自己也能这么做 并非有意回避 同时承认理解对方想要此项能力的理由.md
+            - 15.5.6-1997 年 7 月 1 日，David Dawes 回复称自己此前已提交 pr bin／2080 附上修复，解决 64 位整数在 printf 可用而 scanf 失败的问题.md
+            - 15.5.7-1998 年 12 月 30 日，Howard Goldstein 在 3.0-CURRENT 12／20／98 上跑 .／v2show 报 ELF interpreter ／usr／lib／libc.so.1 缺失并 Abort trap，问如何令加载器改用 libc.so.3.md
+            - 15.5.8-2000 年 7 月 22 日，Lars Eggert 复测确认 kern／17224 在 4.1-RC 仍存在.md
+            - 15.5.9-2000 年 7 月 26 日，Joachim Strömbergson 指出 4.1-RELEASE 的 release／texts／i386／RELNOTES.TXT 标题仍写 4.0-STABLE snapshot，正文却是 4.1-RELEASE 内容，判断为快照遗留.md
+            - 15.5.10-1997 年 2 月 10 日，Ron Echeverri 询问 Jordan 在 cubf.announce 贴出的 libc 补丁是否已并入 stable 分支.md
+            - 15.5.11-1997 年 11 月 21 日，Don Lewis 转述 Richard Wackerbarth 答复，称该 hack 旨在区分以同一分支头标签在不同时刻导出的两份源码树.md
+            - 15.5.12-1998 年 2 月 18 日，Satoshi Asami 回应他人报告.md
+            - 15.5.13-1998 年 3 月 10 日，Mike Smith 答称未考虑代用户写出变更，因 mount(8) 不拥有 ／etc／fstab，故它没有理由改动该文件.md
+            - 15.5.14-1998 年 3 月 20 日，Faried Nawaz 升级到 2.2.6-980319-BETA 后 screen 下 delete 键信号被应用误当控制序列处理.md
+            - 15.5.15-1998 年 4 月 4 日，Tom 反驳 Wes Peters 的转述：新记录立即可得，若查询发生在记录添加之前，只会有负缓存条目，约 10 分钟后过期.md
+            - 15.5.16-1998 年 5 月 27 日，Michael Robinson 回应 Mike Smith，引用原始诊断中 wd0 中断超时状态 50 错误 1 no_dam.md
+            - 15.5.17-1998 年 9 月 3 日，Dag-Erling Smørgrav 说这现象令他想起近来列表上讨论过的 MTU discovery 问题，与目标站点本身无关.md
+            - 15.5.18-1996 年 11 月 25 日，Jin Guojun 报 2.2-Alpha 上 cat 重定向报 stdout Bad file descriptor.md
+            - 15.5.19-1997 年 1 月 25 日，John Hay 更正自己的报告，tzsetup 缺南非并非数据缺失.md
+            - 15.5.20-1997 年 3 月 16 日，Bruce Evans 说明 bash 会设置 $PWD 但不予导出，而 sh 两者都不做，回答究竟哪些 shell 会导出 PWD 的疑问.md
+            - 15.5.21-1997 年 7 月 13 日，Shigio Yamaguchi 提议在 vi 的 ex 命令行用 ^ 表示当前行号.md
+            - 15.5.22-1998 年 5 月 12 日，Jason Nordwick 说自己在着手 bin／5733 关于 cp 的问题，这是他第一次尝试修系统，故先问这算不算合格修法.md
+            - 15.5.23-1999 年 12 月 26 日，Kris Kennaway 反问对方是否确在 FreeBSD 主机上查到 ecb_crypt.md
+            - 15.5.24-1995 年 1 月 13 日，Jonathan M. Bresler 回复 Nickolay N. Dudorov 关于 ports 中找不到 majordomo 的询问.md
+            - 15.5.25-1995 年 4 月 2 日，Nate Williams 在 any interest 讨论串中回复 Brian Tao 关于此前稀疏文件讨论的追问.md
+            - 15.5.26-1995 年 6 月 17 日，Peter da Silva 以 Nope 否定被引者的条件，称需快于并行端口的条件还包括图像与打印机分辨率成整数倍或整数分之关系.md
+            - 15.5.27-1995 年 9 月 1 日，Jordan K. Hubbard 回应 Julian Elischer 关于 ncurses 的答复 称原提问者所指的 ncurses 与 FreeBSD 附带版本实质不同 并提醒应更仔细阅读.md
+            - 15.5.28-1995 年 9 月 19 日，Nate Williams 质疑 Terry 引用 Bell Labs 关于人类短期记忆 5 到 9 项的研究来论证 goto 的使用并无直接关联.md
+            - 15.5.29-1995 年 9 月 24 日，Peter da Silva 称自己用了十年没出过此问题，技术部人员也并非都聪明，相比记住做备份或告知新系统更省事，回应 Jonathan Bresler 关于新手不知 02 与 10 顺序的质疑.md
+            - 15.5.30-1995 年 10 月 12 日，Andrey Chernov 公开反对应用 Sergey Shkonda 提交的 talk 客户端八位字符补丁.md
+            - 15.5.31-1995 年 10 月 16 日，James Leppek 回复关于 NetBSD 与 FreeBSD 的讨论.md
+            - 15.5.32-1995 年 10 月 16 日，Ollivier Robert 转述 J Wunsch 说法后回应说 intl 部件可从 ftp.internat.freebsd.org 取回.md
+            - 15.5.33-1995 年 10 月 17 日，Terry 回应 8859-5 中空格为 0xA0 的说法说你有两个空格键？并说明按 WPS 文档处理的用法这叫硬空格而非普通空格.md
+            - 15.5.34-1995 年 11 月 26 日，Jordan K. Hubbard 称与 Poul-Henning 均查不出为何未选磁盘的 boot block 被触碰称自己从不写未选磁盘并表示 sd 设备问题如易修则修.md
+            - 15.5.35-1995 年 11 月 29 日，Ollivier Robert 回复 Jordan K. Hubbard 关于 perl localtime 第五个参数为何得 10 而非 11 的疑问，引手册指出该参数按手册是零基，故 10 即 11 月.md
+            - 15.5.36-1995 年 12 月 7 日，David Greenman：反驳上封认为 2.1 以 2.2-current 形式维护之观点 指出 2.1 实为单独维护 并非以 2.2-current 的形式.md
+            - 15.5.37-1996 年 1 月 18 日，Jordan K. Hubbard 称最近列表上已有人贴出相关补丁，建议先确认是否订阅本列表，并可用官方站点搜索引擎检索 3C595 找回.md
+            - 15.5.38-1996 年 2 月 5 日，Michael Smith 答复 Poul-Henning Kamp 关于 Willows 之疑问，称其全称为 Willows TWIN XPDK.md
+            - 15.5.39-1996 年 2 月 22 日，Marty Leisner 称喜欢 Freebsd 以 command.core 命名 core dump，并问这从何时开始.md
+            - 15.5.40-1996 年 5 月 24 日，J Wunsch 简短回应 Fieber 的引述，承认自己此前漏看了 SmartUPS v／s 的后缀.md
+            - 15.5.41-1996 年 8 月 16 日，Thomas David Rivers 说明该问题在 2.1 时曾报过又于 2.1.5 在同机装机时重现.md
+            - 15.5.42-1996 年 8 月 29 日，Brandon Gillespie 提议给 DES 密码加 $0$ 前缀 让旧密码继续可用并支持更优算法 并建议 passwd 不再隐式用 $1$.md
+            - 15.5.43-1997 年 3 月 11 日，Hellmuth Michaelis 回复称自己目前正于 FreeBSD 2.1.5 之上运行 stock ipfilter 3.1.0.md
+            - 15.5.44-1997 年 4 月 15 日，David Greenman 作为 FreeBSD 核心团队成员和主架构师回答 mmap 映射文件遇到磁盘坏块导致内核无法换入页面的情况.md
+            - 15.5.45-1997 年 5 月 13 日，给出正确形式为 cbf 后先接块大小再接归档文件名并强调参数顺序很重要又补一句顺序这点很要紧不可颠倒以免块大小被当作文件名解析.md
+            - 15.5.46-1997 年 5 月 22 日，约翰马克回应说其实 FreeBSD 里早已有等价命令 killall，随后补一句自己仍惯用自写脚本，因为那才确切知道行为表现如何.md
+            - 15.5.47-1997 年 6 月 6 日，Bob Bishop 针对 Justin T. Gibbs 提出的每隔一段就插入一笔有序事务以冲走饿死的简单标签事务的做法 追问该技巧对目标范围内的所有控制器是否真能按预期生效.md
+            - 15.5.48-1997 年 6 月 24 日，Tim Vanderhoek 纠正 Steve Howe 的设想，说明这并非 S-Lang 的用途，因为它本就该能在 xterm 或哑终端下工作.md
+            - 15.5.49-1997 年 6 月 25 日，Michael Smith 承认自己判断过快，转而确认经验法则是否为文件一旦被改动就应加 $Id$，并说会回头补上刚提交的那些.md
+            - 15.5.50-1997 年 7 月 2 日，Sebastian Lederer 回应 Terry Lambert 的四步方案，主张服务端只需维护一份活跃锁清单连同对应文件句柄.md
+            - 15.5.51-1997 年 7 月 7 日，Andrey A. Chernov 认为运行 rc.shutdown 脚本属于关闭流程本身的一部分.md
+            - 15.5.52-1997 年 8 月 1 日，蒂姆范德霍克指出日期语法里 cc 之前应有两个左括号，那是简单正常的逻辑扩展；他以新来者经验反驳格式太复杂之说，认为晦涩的是打印格式.md
+            - 15.5.53-1997 年 9 月 10 日，Terry Lambert 建议 shell 在变量内部展开路径通配符而不是先 glob 再存入变量.md
+            - 15.5.54-1997 年 9 月 24 日，Thomas Gellekum 回复 vt420 termcap 请求，指向 locke.ccil.org 上的 terminfo 页面.md
+            - 15.5.55-1997 年 10 月 10 日，Mikhail Chernomordik 询问在 FreeBSD 下如何用 GCC 内联 Pentium Intel MMX 指令编写 C 程序并让编译器完成.md
+            - 15.5.56-1997 年 11 月 14 日，nate 反对把 shell 机器上用户能跑任意代码说成 root 沦陷，指出能跑编译器不等于沦陷.md
+            - 15.5.57-1997 年 11 月 16 日，Jonathan Mini 回应 Jordan K. Hubbard 称 commit 权限有帮助但绝非必需，实际取决于对方希望他怎样贡献成果.md
+            - 15.5.58-1997 年 12 月 1 日，Jordan 表示新版方案迟迟未定，只是还在等对方把计划交出来.md
+            - 15.5.59-1997 年 12 月 1 日，wosch 以一句近乎反问的短句回应 Amancio Hasty 关于重写守护进程之问，提议干脆用 Threads 来做 ftpd.md
+            - 15.5.60-1997 年 12 月 12 日，Jordan K Hubbard 说明 FreeBSD 最终采纳的是 Intel 的修复，早期由列表上某人提出的方案从未进入代码树.md
+            - 15.5.61-1997 年 12 月 27 日，Jordan 回应对方提议给现有工具增加一个可选版本供偏好图形界面的用户使用时说这个工具面向的用户群其实并不相同并只回了一句.md
+            - 15.5.62-1998 年 1 月 4 日，Julian 指出对方只说过用不起来而没有更多细节，自己同步过代码多次，猜测对方凭对通常系统的了解做了假设，而包括自己在内其他人并没这么做.md
+            - 15.5.63-1998 年 1 月 13 日，mike hancock 说那样就不必放在同一栋楼内，自己不太清楚到哪里去找耐候计算机，需要时他会把这个选项记在心上继续跟进.md
+            - 15.5.64-1998 年 1 月 21 日，pierre 对 Terry Lambert 的说法存疑，追问其是否指 32 bit，认为情况更复杂因为前缀码与多字节编码之间存在冲突.md
+            - 15.5.65-1998 年 1 月 22 日，Terry Lambert 承认自己把 TSM 说成 Type Specific Memory 纯属脑子放空.md
+            - 15.5.66-1998 年 1 月 23 日，Greg：指出准确写法为 S.u.S.E. 邮箱 suse@suse.de.md
+            - 15.5.67-1998 年 1 月 29 日，Amancio Hasty 转发 McCarthy 通过 muppetlabs descent 页面上邮件称 Descent 已用 Mac 版 C 源码在 Linux 下编译运行 存在图形错乱以及控制台随机锁死等问题.md
+            - 15.5.68-1998 年 2 月 5 日，terry 提到 Jeremy Allison 在 Whistle 最近修复了 accept() 中的一个棘手问题 配合返回码补丁使用户空间 pthreads 得以运行 并称自己另提交补丁经 Jeremy 改进后加入 STL 以支持 draft 4 互斥初始化.md
+            - 15.5.69-1998 年 3 月 29 日，lyndon 在 .emacsrc 里用 global-set-key 把 C-h 绑到 delete-backward-char.md
+            - 15.5.70-1998 年 5 月 6 日，andreas 回应说他自己就是对方要找的那位，跑的是 3.0-current，机器为双路 ppro200 配 Gigabyte 686DX 主板.md
+            - 15.5.71-1998 年 5 月 9 日，joe 说明他曾尝试回复但邮件被退信，认同 John 说他只谈了一款产品即 NC-In-A-Box 包装的判断，承认低估了之外还有相当多的开发在进行.md
+            - 15.5.72-1998 年 5 月 28 日，ollivier 说 SO4 每次运行完都留下几十段共享内存、即便干净退出亦然，因此自备 tcsh 脚本.md
+            - 15.5.73-1998 年 6 月 15 日，ronosson 问 John 指的是协议版本还是软件版本.md
+            - 15.5.74-1998 年 7 月 6 日，spork 反问若对方想要几部调制解调器尽管开口，说自己手头囤积的数量非常多，五六部一定能派上用场，运费一律由他自己全包下来.md
+            - 15.5.75-1998 年 7 月 19 日，FreeBSD 项目联合创始人及首席架构师 David Greenman 对 SLICE 下应注释掉该测试的说法表示困惑.md
+            - 15.5.76-1998 年 8 月 5 日，Andre Albsmeier 回复 Mark Tinguely 关于 2.2.7 中 rsh 与 rshd 严重缺陷的报告.md
+            - 15.5.77-1998 年 8 月 7 日，Howard Leadmon 以 FreeBSD 3.0-CURRENT 跑 Undernet IRC 服务器，需为数千个文件描述符选择服务方式.md
+            - 15.5.78-1998 年 9 月 23 日，Michael Reifenberger 就 Brian Jenkins 报告 CL-PD6730 未被 PCI 代码识别提交补丁.md
+            - 15.5.79-1998 年 11 月 26 日，Ollivier Robert 回应 Nik Clayton 关于欧元码点的疑问.md
+            - 15.5.80-1998 年 12 月 21 日，Ugen 补充此前漏说的系统版本是 3.0-RELEASE.md
+            - 15.5.81-1999 年 1 月 8 日，Primenet 的 Terry Lambert 认为 Julian 的提案相当合理.md
+            - 15.5.82-1999 年 1 月 29 日，Boris Popov 回复 Joao Carlos Mendes Luis 关于 Netware 客户端 1.2beta1 中 Unix 与 Netware 用户映射的询问，确认会实现但不会立刻动手，本封正文除该句答复与一段被引块外几无展开.md
+            - 15.5.83-1999 年 2 月 2 日，rwwa.com 的 Robert Withrow 回应 rc／init／uninit 模块化提案，主张配置管理与启停管理应严格分离.md
+            - 15.5.84-1999 年 2 月 11 日，FreeBSD 成员 Eivind Eklund 转述 Hunt 就忽略 nofinger 提案作出的撤回声明.md
+            - 15.5.85-1999 年 3 月 29 日，Matthew Jacob 在 another ufs panic 讨论串中回应一段引文，该引文称每轮都会先对目标分区执行 newfs.md
+            - 15.5.86-1999 年 6 月 16 日，Daniel OConnor 在 MIHIRA Yoshiro 建议将改过的服务放到 ／usr／local／etc／rc.d 之下时补充.md
+            - 15.5.87-freebsd-hackers 邮件 2622627（空模板件）.md
     - 第16章-FreeBSD 4.0 邮件档案：系统与网络
         - 16.1-内核与系统构建升级
-            - 16.1.1-2011年1月21日自述重编内核并加入P1003_1B_SEMAPHORES之后.md
-            - 16.1.2-2011年11月25日自述在74STABLE上buildworld卡在texin.md
-            - 16.1.3-2011年10月3日报81RELEASEamd64机器用csup拉取CURREN.md
-            - 16.1.4-2011年10月20日自述重新csup源码并以自定义内核配置重编kernel与w.md
-            - 16.1.5-2011年9月13日建议既然要重装就改用9BETA旧机器会舒服得多9里的新计时代.md
-            - 16.1.6-年7月24日KrisKennaway扫描cvsup系列镜像站点后发现众多主机对外.md
-            - 16.1.7-年8月10日KevinGolding指出RELENG_4_6_1属罕见版本因46.md
-            - 16.1.8-年9月10日GaryDMargiotta自述其生产机仍以4x为主在5STABLE.md
-            - 16.1.9-年12月21日MarkTerribile回复Toru关于CVSup长时间编译无果.md
-            - 16.1.10-年5月14日IgorBBykhalo就先前称installworld与merge.md
-            - 16.1.11-年9月6日StefanMalteSchumacher报告内核编译错误已解决称删掉.md
-            - 16.1.12-年5月11日HeinrichRebehn在邮件列表上为噪声致歉并自述instal.md
-            - 16.1.13-年12月4日JoseBorquez自述buildworldinstallworl.md
-            - 16.1.14-年3月24日ToddShirk在FreeBsdamd64用cvsupstable.md
-            - 16.1.15-年11月30日AaronSloancvsup重建54后在usrsrc跑make失.md
-            - 16.1.16-年2月19日KrisKennaway答复ChrisManess的疑问bison1.md
-            - 16.1.17-年5月31日Joe应KrisKennaway要求贴出kernversion为Fr.md
-            - 16.1.18-年12月24日DavidHorn表示只在非更新内核见70RELEASEEoL警告.md
-            - 16.1.19-年1月2日MichaelLednev在FreeBSD70RC1上按步骤复现内核崩.md
-            - 16.1.20-年1月8日Schiz0从63PRERELEASE升到70PRERELEASE后v.md
-            - 16.1.21-年7月30日自述这是一台63数据库服务器准备升级到70检查ports树发现除my.md
-            - 16.1.22-年3月4日Davison用freebsdupdatesh从63升至70RELEA.md
-            - 16.1.23-年3月16日解释CURRENT是重大新特性的开发分支终成80而7STABLE将成.md
-            - 16.1.24-年3月28日试TARGET=i386TARGET_ARCH=i386及两者组合装.md
-            - 16.1.25-年11月21日实测MAXPHYS设1MB为现代硬盘最优2MB提速不明显且增加延迟.md
-            - 16.1.26-年10月7日改用SCHED_4BSD替代sched_ule并把quantum从1.md
-            - 16.1.27-年9月12日嘎恩回复称原62直接升级到63是问题根源改用63光盘重装后portm.md
-            - 16.1.28-年9月13日OliverPeter确认63已完全支持双核只是SMP性能不如7ST.md
-            - 16.1.29-年4月19日迈克尔赞成先在测试机上演练自述家中两台服务器专作升级试验跨大版本如6.md
-            - 16.1.30-年4月23日AndySmith从70机器复制freebsdupdate脚本到6x.md
-            - 16.1.31-年8月4日JoeyMingrone两台旧笔记本跑72RELEASE近来多次内核崩.md
-            - 16.1.32-年8月5日PJ说72升级sysinstall覆盖分区致整机无法启动因某pytho.md
-            - 16.1.33-年12月21日RobertFitzpatrick说用kernhz100后Free.md
-            - 16.1.34-年1月19日AndySmith回复Frank两台服务器分别跑FreeBSD61与.md
-            - 16.1.35-年7月6日KarlVogel说编71通用内核时装完无法启动报无法判断启动磁盘BI.md
-            - 16.1.36-年6月15日SteveFranks发现交叉编译前需导出LD_LIBRARY_PA.md
-            - 16.1.37-年5月25日illoai回应Graeme关于71升到72的freebsdupda.md
-            - 16.1.38-年7月19日DanNelson说他把32位系统原地装上64位内核与基底并重开机随.md
-            - 16.1.39-年6月18日发件人TimDaneliuk把世界重编到当天的81PRERELEAS.md
-            - 16.1.40-年3月11日发件人PaulSchmehl把工作站从72升到80并上KDE4用两台.md
-            - 16.1.41-年3月29日霍尔用dump把自定义内核灌进内存卡机器能启动到挂载根分区这一步却报.md
-            - 16.1.42-年5月15日乌梅奇在8分支做完内核与世界更新后重启发现启动时规则不再加载重开之后.md
-            - 16.1.43-年9月3日MatthiasApitz内核用户层基于CVS加装USB部件uname.md
+            - 16.1.1-2011 年 1 月 21 日，自述重编内核并加入 P1003_1B_SEMAPHORES 之后 Firefox 3.6 的菜单已经能正常打开，试过一整套操作表现良好.md
+            - 16.1.2-2011 年 11 月 25 日，自述在 7.4-STABLE 上 buildworld 卡在 texinfo installincludes.md
+            - 16.1.3-2011 年 10 月 3 日，报 8.1 RELEASE amd64 机器用 csup 拉取 CURRENT 后 buildworld 于 ／usr／lib／libmagic 处失败并报找不到 magic files，改用 tag=RELENG_8 与 tag=RELENG_8.2 同样失败，多用户单用户均同.md
+            - 16.1.4-2011 年 10 月 20 日，自述重新 csup 源码并以自定义内核配置重编 kernel 与 world，uname 报 9.0-RC1.md
+            - 16.1.5-2011 年 9 月 13 日，建议既然要重装就改用 9 BETA，旧机器会舒服得多：9 里的新计时代码修了多项 bug，允许挑选更多备选定时器.md
+            - 16.1.6-2001 年 7 月 24 日，Kris Kennaway 扫描 cvsup 系列镜像站点后发现众多主机对外开放 telnetd.md
+            - 16.1.7-2002 年 8 月 10 日，Kevin Golding 指出 RELENG_4_6_1 属罕见版本，因 4.6 发布后不久发生 OpenSSH 的重大安全事件而临时产生.md
+            - 16.1.8-2003 年 9 月 10 日，Gary D. Margiotta 自述其生产机仍以 4.x 为主，在 5-STABLE 分出前不做升级，只打算 5.2 发布后试一台新机.md
+            - 16.1.9-2003 年 12 月 21 日，Mark Terribile 回复 Toru 关于 CVSup 长时间编译无果的抱怨.md
+            - 16.1.10-2003 年 5 月 14 日，Igor B. Bykhalo 就先前称 installworld 与 mergemaster 后系统异常的报警致歉，称实为根文件系统损坏.md
+            - 16.1.11-2003 年 9 月 6 日，Stefan Malte Schumacher 报告内核编译错误已解决.md
+            - 16.1.12-2004 年 5 月 11 日，Heinrich Rebehn 在邮件列表上为噪声致歉并自述 installworld 失败的原因是自己把 ／usr／obj 指向另一块磁盘的符号链接，而单用户模式下该磁盘并未挂载.md
+            - 16.1.13-2005 年 12 月 4 日，Jose Borquez 自述 buildworld installworld mergemaster 之后 root 登录收到 save-entropy 的 cron 邮件，报 ／etc／rc.conf 第 18 行 Unterminated quoted string.md
+            - 16.1.14-2005 年 3 月 24 日，Todd Shirk 在 FreeBsd／amd64 用 cvsup stable-supfile 做 buildworld 与 installworld，加 snd_via8233，装完进入 KDE3.4 无声且无鼠标功能，sndstat 只列 pcm0 VIA VT8235.md
+            - 16.1.15-2005 年 11 月 30 日，Aaron Sloan cvsup 重建 5.4 后在 ／usr／src 跑 make 失败.md
+            - 16.1.16-2006 年 2 月 19 日，Kris Kennaway 答复 Chris Maness 的疑问，bison 1.75 只是 build dependency 而非运行时依赖.md
+            - 16.1.17-2006 年 5 月 31 日，Joe 应 Kris Kennaway 要求贴出 kern.version 为 FreeBSD 6.0-RELEASE.md
+            - 16.1.18-2008 年 12 月 24 日，David Horn 表示只在非更新内核见 7.0-RELEASE EoL 警告；7.1 RC 在其测试机良好，他会升至 7.1-RELEASE.md
+            - 16.1.19-2008 年 1 月 2 日，Michael Lednev 在 FreeBSD 7.0-RC1 上按步骤复现内核崩溃：插入 USB 闪盘后 mount_msdosfs ／dev／da0s1 ／mnt，再拔出并 umount -f ／mnt，每次都 panic，发信询问是否为已知问题.md
+            - 16.1.20-2008 年 1 月 8 日，Schiz0 从 6.3-PRERELEASE 升到 7.0-PRERELEASE 后，vim、bash 报缺少 libncurses.so.6.md
+            - 16.1.21-2008 年 7 月 30 日，自述这是一台 6.3 数据库服务器准备升级到 7.0 检查 ports 树发现除 mysql 外均已更新有列表成员建议不要升级而直接安装整套 ports 但安装后仍需重新编译可能与旧包或依赖冲突表示会逐一测试这些方案.md
+            - 16.1.22-2008 年 3 月 4 日，Davison 用 freebsd-update.sh 从 6.3 升至 7.0-RELEASE 后遇 lib-XXX.so4 缺失文件实为 XXX.so.5 且 portupgrade -af 未能重编 MailScanner 与 apache 仍报错.md
+            - 16.1.23-2008 年 3 月 16 日，解释 CURRENT 是重大新特性的开发分支终成 8.0 而 7-STABLE 将成 7.1 6-STABLE 将成 6.4 生产系统用 RELENG_7_0 做 bug 与安全修复，只有测试下版或协助开发或需提前取特性才用 STABLE 或 CURRENT.md
+            - 16.1.24-2008 年 3 月 28 日，试 TARGET=i386 TARGET_ARCH=i386 及两者组合装 i386 jail 均报 libedit.so.6 not found 于 sh.md
+            - 16.1.25-2008 年 11 月 21 日，实测 MAXPHYS 设 1MB 为现代硬盘最优 2MB 提速不明显且增加延迟 老盘 20GB 以下或内存 64MB 以下应使用更低值.md
+            - 16.1.26-2008 年 10 月 7 日，改用 SCHED_4BSD 替代 sched_ule 并把 quantum 从 100000 减到 20000 后高负载下语音不再断续 但作者说还会继续测试.md
+            - 16.1.27-2008 年 9 月 12 日，嘎恩回复称原 6.2 直接升级到 6.3 是问题根源，改用 6.3 光盘重装后 portmanager -u -y -p 顺利执行.md
+            - 16.1.28-2008 年 9 月 13 日，Oliver Peter 确认 6.3 已完全支持双核只是 SMP 性能不如 7-STABLE.md
+            - 16.1.29-2009 年 4 月 19 日，迈克尔赞成先在测试机上演练，自述家中两台服务器专作升级试验；跨大版本如 6.x 到 7.x 时先用 dump 全量备份，再全新安装.md
+            - 16.1.30-2009 年 4 月 23 日，Andy Smith 从 7.0 机器复制 freebsd-update 脚本到 6.x 生产机上 fetch 执行正常但尚未实际打补丁需安排停机窗口与回退方案.md
+            - 16.1.31-2009 年 8 月 4 日，Joey Mingrone 两台旧笔记本跑 7.2-RELEASE 近来多次内核崩溃，今天崩溃的机器没有调试符号.md
+            - 16.1.32-2009 年 8 月 5 日，PJ 说 7.2 升级 sysinstall 覆盖分区致整机无法启动因某 python Port异常导致 xcb 无法加载恢复文件后不再用 FreeBSD.md
+            - 16.1.33-2009 年 12 月 21 日，Robert Fitzpatrick 说用 kern.hz 100 后 FreeBSD 7.2 在 vmware 上的时钟差别明显 并推测 vmware-tools 装不上 8.0 因安装找不到 FreeBSD8.0 内核模块 还问过在 ESXi 上是否更好.md
+            - 16.1.34-2009 年 1 月 19 日，Andy Smith 回复 Frank，两台服务器分别跑 FreeBSD 6.1 与 7.0，但 apache 同为 2.2.9.md
+            - 16.1.35-2009 年 7 月 6 日，Karl Vogel 说编 7.1 通用内核时，装完无法启动，报无法判断启动磁盘、BIOS 设备探测不到，根源是坏 boot 加载器.md
+            - 16.1.36-2009 年 6 月 15 日，Steve Franks 发现交叉编译前需导出 LD_LIBRARY_PATH 包含 ／usr／local／lib 等路径.md
+            - 16.1.37-2009 年 5 月 25 日，illoai 回应 Graeme 关于 7.1 升到 7.2 的 freebsd-update 命令，指出版本串写法有误应为 7.2-RELEASE.md
+            - 16.1.38-2010 年 7 月 19 日，Dan Nelson 说他把 32 位系统原地装上 64 位内核与基底并重开机，随后约一周把全部Port升级.md
+            - 16.1.39-2010 年 6 月 18 日，发件人 Tim Daneliuk 把世界重编到当天的 8.1-PRERELEASE 源码，用 portupgrade -f 强制重建所有Port并重启.md
+            - 16.1.40-2010 年 3 月 11 日，发件人 Paul Schmehl 把工作站从 7.2 升到 8.0 并上 KDE 4，用两台 19 寸显示器组成 3360x1050 的虚拟桌面.md
+            - 16.1.41-2010 年 3 月 29 日，霍尔用 dump 把自定义内核灌进内存卡，机器能启动到挂载根分区这一步却报根挂载错误，改用 ufs 方式指定同样失败，只好求助.md
+            - 16.1.42-2010 年 5 月 15 日，乌梅奇在 8 分支做完内核与世界更新后重启，发现启动时规则不再加载，重开之后那两条规则凭空消失了，他确认规则文件本身没有做任何改动.md
+            - 16.1.43-2010 年 9 月 3 日，Matthias Apitz 内核用户层基于 CVS 加装 USB 部件，uname 显示 FreeBSD 8.0-CURRENT，试装 vmware-freebsd-tools 因包内仅 FreeBSD 6 与 7 内核模块.md
         - 16.2-驱动与硬件外设
-            - 16.2.1-2011年1月7日RobertHuff自述FreeBSD网卡驱动自带版本号用gr.md
-            - 16.2.2-2011年1月26日HPLaserJetP1102藏着一个假CDROM装Wind.md
-            - 16.2.3-2011年6月4日Damien称mps现阶段不支持H200硬RAID建议用Mar.md
-            - 16.2.4-2011年11月13日自述在amd上取CPU温度用devcpu0temperat.md
-            - 16.2.5-2011年10月24日发件人在DellLatitudeD630的FreeBSD9.md
-            - 16.2.6-2011年10月28日自述Hoffman称支持sas的新版LSI或PERC或可由.md
-            - 16.2.7-2011年9月6日jordanbhandy报ath0反复出现bbhangdete.md
-            - 16.2.8-2011年9月11日DanielStaal认为OS其实关系不大关键在硬件是否配合.md
-            - 16.2.9-2011年10月13日AlexanderBest称FreeBSD10已把整个AT.md
-            - 16.2.10-年3月1日A105S2051上ACPI报ACPI0370LAN与Atheros5.md
-            - 16.2.11-年4月23日JohnMurphy自述新到的40G富士通硬盘到货后他在Soekri.md
-            - 16.2.12-年10月6日ChimaNjaka报告其3com574BT网卡按受支持硬件文档应由.md
-            - 16.2.13-年5月17日某运营商自述其使用大量3ware卡唯一无法重建的情形是RAID1两块.md
-            - 16.2.14-年3月3日AlexHuppenthal报告用ForeOC3卡连接LucentPS.md
-            - 16.2.15-年10月9日某运营者自述部署四台CompaqProLiantDL360配43ST.md
-            - 16.2.16-年2月25日某用户自述那张LucentAvaya11Mbps网卡装在Pentiu.md
-            - 16.2.17-年3月14日某管理员报告其x86服务器运行FreeBSD45RELEASE键盘被.md
-            - 16.2.18-年6月17日某开发者指出部分网卡驱动在8021q环境下存在MTU问题建议改用fx.md
-            - 16.2.19-年9月8日RahulSiddharthan自述新笔记本上禁用ACPI会在启动早期.md
-            - 16.2.20-年4月13日IlyaAyzenshtok在KVM与光电鼠标的讨论中自述曾遇同类失.md
-            - 16.2.21-年8月31日WalterCPelissero报告PS2键盘经USB转换器后快速打.md
-            - 16.2.22-年12月11日ChrisReadle在软关机讨论中回应称其主板在4x下同样无法软.md
-            - 16.2.23-年7月15日HanHweiWoo建议把BIOS中的pnpos选项设为no称其笔记.md
-            - 16.2.24-年7月19日BillCampbell回答USB存储设备打乱SCSI设备编号的提问.md
-            - 16.2.25-年11月7日JesseGuardiani推荐Adaptec为FreeBSD44与.md
-            - 16.2.26-年10月22日OlafHoyer回复DellPowerEdge1750网卡识别问.md
-            - 16.2.27-年8月9日RogerVetterberg自述在双PIII的DellPowerEd.md
-            - 16.2.28-年8月25日StijnHoop自述读了RAIDframe文档才知磁盘故障后必须重.md
-            - 16.2.29-年12月10日MinnesotaSlinky自述为家用服务器购置AsusA7V6.md
-            - 16.2.30-年2月26日PrzemyslawCeglowski回复称其主板用同款芯片组且存在.md
-            - 16.2.31-年7月1日heikkisoerum自述其EPIACL6000作无头文件服务器毫无.md
-            - 16.2.32-年11月11日MattStaroscik自述3ware70002镜像掉盘换盘重建.md
-            - 16.2.33-年1月24日Spiegel的ath0识别为Atheros5212mac59phy.md
-            - 16.2.34-年7月6日AndreasKohn的NVidiaGeforce2MX装大于1061.md
-            - 16.2.35-年6月16日EverettBatey0x7205为VIATECHVT8378_I.md
-            - 16.2.36-年11月4日NathanVidican用250GBSATARAIDEdition.md
-            - 16.2.37-年9月19日BastiaanWelmers报cups122对HPLaserjet.md
-            - 16.2.38-年12月29日AndrewFalanga靠kldloadatapicam让IDE.md
-            - 16.2.39-年2月13日ChuckSwiger称至少FreeBSD不支持手动停转硬盘而App.md
-            - 16.2.40-年10月14日pfgshield的GeniusG12U游戏棒插在FreeBSD6.md
-            - 16.2.41-年8月1日DavidGurvich说在T23thinkpad上加载acpi_ib.md
-            - 16.2.42-年8月12日MikeClarke指出XeroxPhaser6110只使用Sams.md
-            - 16.2.43-年2月18日ZbigniewSzalbot用apcupsd撑过多次停电电池耗尽触.md
-            - 16.2.44-年6月27日运行FreeBSD70ReleaseUSB鼠标在系统启动时被识别但X.md
-            - 16.2.45-年3月10日70RELEASE移除atapicd后仍报错PIONEERDVDRW.md
-            - 16.2.46-年3月14日USB打印机HPIJS驱动免重编内核HPLIP解锁全功能须关ulpt.md
-            - 16.2.47-年3月17日插入新网卡运行数小时后出现中断风暴vmstati显示em1与atap.md
-            - 16.2.48-年3月25日讨论LPR与LPD打印配置LJ2100推荐用Ghostscript内.md
-            - 16.2.49-年11月2日自述ale4驱动已存在覆盖AtherosAR8121AR8113AR.md
-            - 16.2.50-年11月3日在FreeBSD8CURRENT上通过usb2堆栈配合gpsbabe.md
-            - 16.2.51-年11月18日推荐TrendnetTEW441PC无线网卡因其在FreeBSD下.md
-            - 16.2.52-年11月28日自述FBSD70Ramd64下LPRng配foomatic后lpq.md
-            - 16.2.53-年11月24日确认i386发行版可在64位Xeon上直接正常运行也确认不存在更简.md
-            - 16.2.54-年10月8日回复明确表示硬件故障没有省事的定位办法只能逐件更换直到问题消失这同样.md
-            - 16.2.55-年9月5日IanSmith从未听说过有单核能跑到接近3GHz的ThinkPad指.md
-            - 16.2.56-年9月8日ScottGasch换用GENERIC内核补测后irq19中断仍近占满.md
-            - 16.2.57-年9月10日正文全为嵌套引用块无发件人自述引用中出现IntelS5000PAL主.md
-            - 16.2.58-年9月24日AndyKosela报告手册9432的netprintPerl脚本在.md
-            - 16.2.59-年4月11日克里斯里斯答复雷的Trap12内核报错求助称恐怕不会有好运因为内存测.md
-            - 16.2.60-年8月17日RolandSmith解释plip驱动使用过期标志仅表示驱动待更新不.md
-            - 16.2.61-年8月20日Michal在72R上em0有线与ath0无线共存停机拔线并改rcc.md
-            - 16.2.62-年12月5日GeorgeHartzell发现在X里蓝牙键盘和鼠标只有在插上USB.md
-            - 16.2.63-年12月8日DavidSouthwell装好配置CUPS后onlinelogin.md
-            - 16.2.64-年12月27日AntonShterenlikht向TPLINK问到芯片型号后更困.md
-            - 16.2.65-年2月10日JonathanChen的DellLatitudeD830跑7STA.md
-            - 16.2.66-年1月20日MikeClarke答复他人问KVM切换器说自己用的是AtenCS6.md
-            - 16.2.67-年1月27日Puchar在该贴问Adler的卡是否基于DigitalDecChi.md
-            - 16.2.68-年6月29日ral无线网卡在rcconf配DHCP后无租约且nocarrierp.md
-            - 16.2.69-年3月11日MathieuChappuis用PromiseFastTrakTX2.md
-            - 16.2.70-年3月27日雷贝因说平时用atapicam让devfs把devacd0藏起来并确.md
-            - 16.2.71-年10月11日RobertHuff说明写这封信的机器用的是另一块主板但北桥与集成.md
-            - 16.2.72-年10月16日PJ在网页上找到办法不必理会屏幕上刷出的报错把这块USB钥匙当普通.md
-            - 16.2.73-年9月15日MelFlynn在几台笔记本上做过acpidump见固件表里引用了多.md
-            - 16.2.74-年4月9日BrodeyDover回来说内存问题已经解决440BX芯片组与512M.md
-            - 16.2.75-年12月1日BrianMcCann的em网卡重启后异常并非DellPowerEd.md
-            - 16.2.76-年12月6日RonaldFGuilmette自述root下cdda2wav正常非.md
-            - 16.2.77-年12月28日发件人OmerFarukSEN用QLogicISP2532双口HB.md
-            - 16.2.78-年2月3日SergiodeAlmeidaLenzi的Dellr210用PERC6.md
+            - 16.2.1-2011 年 1 月 7 日，Robert Huff 自述 FreeBSD 网卡驱动自带版本号.md
+            - 16.2.2-2011 年 1 月 26 日，HP LaserJet P1102 藏着一个假 CD-ROM 装 Windows 驱动.md
+            - 16.2.3-2011 年 6 月 4 日，Damien 称 mps 现阶段不支持 H200 硬 RAID.md
+            - 16.2.4-2011 年 11 月 13 日，自述在 amd 上取 CPU 温度用 dev.cpu.0.temperature，读数与 BIOS 及 Linux 相差 15 度.md
+            - 16.2.5-2011 年 10 月 24 日，发件人在 Dell Latitude D630 的 FreeBSD 9.0-RC1 amd64 上报告：卸载重装、重编内核与 world.md
+            - 16.2.6-2011 年 10 月 28 日，自述 Hoffman 称支持 sas 的新版 LSI 或 PERC 或可由 mfi 驱动支持，以 Dell R410 为例.md
+            - 16.2.7-2011 年 9 月 6 日，jordanbhandy 报 ath0 反复出现 bb hang detected resetting，有时把默认路由改为 0.0.0.0／24.md
+            - 16.2.8-2011 年 9 月 11 日，Daniel Staal 认为 OS 其实关系不大，关键在硬件是否配合；许多 KVM 在电脑非当前活动端口时对连接的仿真不佳.md
+            - 16.2.9-2011 年 10 月 13 日，Alexander Best 称 FreeBSD 10 已把整个 ATA 子系统并入 CAM 子系统，atacontrol 不再报告任何内容.md
+            - 16.2.10-2009 年 3 月 1 日，A105-S2051 上 ACPI 报 ACPI-0370，LAN 与 Atheros 5212 无线因 WATCHDOG 超时不可用.md
+            - 16.2.11-2004 年 4 月 23 日，John Murphy 自述新到的 40G 富士通硬盘到货后，他在 Soekris 上重装 5.2.1 又遇到与先前那块坏盘相似的错误.md
+            - 16.2.12-2001 年 10 月 6 日，Chima Njaka 报告其 3com 574BT 网卡按受支持硬件文档应由 ep 驱动.md
+            - 16.2.13-2003 年 5 月 17 日，某运营商自述其使用大量 3ware 卡，唯一无法重建的情形是 RAID1 两块盘同时出现物理错误，正常按盘轮换则无此问题.md
+            - 16.2.14-2001 年 3 月 3 日，Alex Huppenthal 报告用 Fore OC3 卡连接 Lucent PSAX 交换机.md
+            - 16.2.15-2001 年 10 月 9 日，某运营者自述部署四台 Compaq ProLiant DL360 配 4.3-STABLE 运行良好.md
+            - 16.2.16-2002 年 2 月 25 日，某用户自述那张 Lucent Avaya 11Mbps 网卡装在 Pentium 233MHz MMX 网关上.md
+            - 16.2.17-2002 年 3 月 14 日，某管理员报告其 x86 服务器运行 FreeBSD 4.5-RELEASE，键盘被意外拔下再插回后系统即无响应，只能硬关机重启，而这是台生产服务器.md
+            - 16.2.18-2002 年 6 月 17 日，某开发者指出部分网卡驱动在 802.1q 环境下存在 MTU 问题，建议改用 fxp 网卡，并自述其性能测试表现相当出色.md
+            - 16.2.19-2003 年 9 月 8 日，Rahul Siddharthan 自述新笔记本上禁用 ACPI 会在启动早期冻结，启用 ACPI 又无法识别触摸板 psm0.md
+            - 16.2.20-2003 年 4 月 13 日，Ilya Ayzenshtok 在 KVM 与光电鼠标的讨论中自述曾遇同类失灵.md
+            - 16.2.21-2003 年 8 月 31 日，Walter C. Pelissero 报告 PS／2 键盘经 USB 转换器后快速打字会产生多余字符.md
+            - 16.2.22-2003 年 12 月 11 日，Chris Readle 在软关机讨论中回应，称其主板在 4.x 下同样无法软关机，升级到 FreeBSD 5.1 之后即工作正常.md
+            - 16.2.23-2003 年 7 月 15 日，Han Hwei Woo 建议把 BIOS 中的 pnpos 选项设为 no，称其笔记本的 Intel 网卡否则不会被识别.md
+            - 16.2.24-2003 年 7 月 19 日，Bill Campbell 回答 USB 存储设备打乱 SCSI 设备编号的提问时自述，其近期就火线问过同样问题.md
+            - 16.2.25-2003 年 11 月 7 日，Jesse Guardiani 推荐 Adaptec 为 FreeBSD 4.4 与 4.5 提供的 CLI 1.0 工具.md
+            - 16.2.26-2003 年 10 月 22 日，Olaf Hoyer 回复 Dell PowerEdge 1750 网卡识别问题时指出，这是已知问题.md
+            - 16.2.27-2004 年 8 月 9 日，Roger Vetterberg 自述在双 PIII 的 Dell PowerEdge 1500SC 上装 4.9 后崩溃.md
+            - 16.2.28-2004 年 8 月 25 日，Stijn Hoop 自述读了 RAIDframe 文档才知磁盘故障后必须重建奇偶校验，其未照做导致近数周数据损坏.md
+            - 16.2.29-2004 年 12 月 10 日，Minnesota Slinky 自述为家用服务器购置 Asus A7V600-X 主板.md
+            - 16.2.30-2004 年 2 月 26 日，Przemyslaw Ceglowski 回复称其主板用同款芯片组且存在 ACPI 问题，建议在 BIOS 或启动选项里关掉 ACPI 再装.md
+            - 16.2.31-2004 年 7 月 1 日，heikki soerum 自述其 EPIA CL6000 作无头文件服务器毫无问题，5.2 下一切正常.md
+            - 16.2.32-2004 年 11 月 11 日，Matt Staroscik 自述 3ware 7000-2 镜像掉盘换盘重建失败的修法，据 dump 报错定位 ／usr 读错.md
+            - 16.2.33-2005 年 1 月 24 日，Spiegel 的 ath0 识别为 Atheros 5212，mac 5.9 phy 4.3 5ghz radio 4.6，硬件版本 B2.md
+            - 16.2.34-2005 年 7 月 6 日，Andreas Kohn 的 NVidia Geforce 2MX 装大于 1.0.6113 的驱动后 X 运行时死锁.md
+            - 16.2.35-2005 年 6 月 16 日，Everett Batey 0x7205 为 VIATECH VT8378_IG KM400 UniChrome FreeBSD 5.4 FreeSBIE 1.1 无驱动 X.org 6.7 6.8 不支持 出路换板或弃 X.org 用 Knoppix 3.4 XFree86_4.md
+            - 16.2.36-2005 年 11 月 4 日，Nathan Vidican 用 250GB S-ATA RAID Edition 硬盘配 3Ware Escalade 9000 控制器.md
+            - 16.2.37-2006 年 9 月 19 日，Bastiaan Welmers 报 cups 1.2.2 对 HP Laserjet 1010 完全打不出.md
+            - 16.2.38-2007 年 12 月 29 日，Andrew Falanga 靠 kldload atapicam 让 IDE 刻录机支持 scsi ioctls,growisofs 烧 dvd-video 时 mkisofs 报数值过大，该 iso 由 cp ／dev／acd0 拷出，他追问原因.md
+            - 16.2.39-2007 年 2 月 13 日，Chuck Swiger 称至少 FreeBSD 不支持手动停转硬盘，而 Apple 为笔记本省电在磁盘停转上做了大量工作.md
+            - 16.2.40-2007 年 10 月 14 日，pfgshield 的 Genius G-12U 游戏棒插在 FreeBSD-6.2-Release 上.md
+            - 16.2.41-2008 年 8 月 1 日，David Gurvich 说在 T23 thinkpad 上加载 acpi_ibm 后于 ／boot／loader.conf 给鼠标加参数 并在 rc.suspend 中停掉无线接口之后 suspend 与 resume 才正常工作.md
+            - 16.2.42-2008 年 8 月 12 日，Mike Clarke 指出 Xerox Phaser 6110 只使用 Samsung Printer Language 而不支持 PostScript 或 PCL，splix Port列出 13 台 Xerox 但仅 3117 与 6100 经确认可用.md
+            - 16.2.43-2008 年 2 月 18 日，Zbigniew Szalbot 用 apcupsd 撑过多次停电，电池耗尽触发关机后重启卡住.md
+            - 16.2.44-2008 年 6 月 27 日，运行 FreeBSD 7.0-Release，USB 鼠标在系统启动时被识别但 X 下不工作，注释掉 rc.conf 里关于鼠标的那些行之后.md
+            - 16.2.45-2008 年 3 月 10 日，7.0-RELEASE 移除 atapicd 后仍报错.md
+            - 16.2.46-2008 年 3 月 14 日，USB 打印机 HPIJS 驱动免重编内核，HPLIP 解锁全功能须关 ulpt 与 umass，并先起 hpiod hpssd 再起 cupsd.md
+            - 16.2.47-2008 年 3 月 17 日，插入新网卡运行数小时后出现中断风暴，vmstat -i 显示 em1 与 atapci0 共用 irq22 且速率高达 53036.md
+            - 16.2.48-2008 年 3 月 25 日，讨论 LPR 与 LPD 打印配置，LJ2100 推荐用 Ghostscript 内置的 pxlmono 驱动.md
+            - 16.2.49-2008 年 11 月 2 日，自述 ale(4) 驱动已存在 覆盖 Atheros AR8121 AR8113 AR8114 FreeBSD 开发者确认 Eeepc 1000H 可正常使用该网卡.md
+            - 16.2.50-2008 年 11 月 3 日，在 FreeBSD 8-CURRENT 上通过 usb2 堆栈配合 gpsbabel 读取 Forerunner 305 手表数据.md
+            - 16.2.51-2008 年 11 月 18 日，推荐 Trendnet TEW-441PC 无线网卡因其在 FreeBSD 下由 ath(4) 驱动良好支持可以稳定使用并说明其驱动支持良好适合日常上网.md
+            - 16.2.52-2008 年 11 月 28 日，自述 FBSD-7.0-R amd64 下 LPRng 配 foomatic 后 lpq 报 printer not found 并附 printcap 条目含 ulpt0.md
+            - 16.2.53-2008 年 11 月 24 日，确认 i386 发行版可在 64 位 Xeon 上直接正常运行 也确认不存在更简便的方法把系统转换为 amd64 版本 性能收益完全取决于工作负载 部分场景受益 部分反而可能变慢 多媒体编解码与转码类应用通常受益明显.md
+            - 16.2.54-2008 年 10 月 8 日，回复明确表示硬件故障没有省事的定位办法 只能逐件更换直到问题消失 这同样需要停机还会浪费钱 x86 个人电脑普遍如此 并质疑公司把单一主机当单点故障且无故障转移.md
+            - 16.2.55-2008 年 9 月 5 日，Ian Smith 从未听说过有单核能跑到接近 3GHz 的 ThinkPad，指出 T41[／p] 的上限也到不了那么高，正文随后被截断.md
+            - 16.2.56-2008 年 9 月 8 日，Scott Gasch 换用 GENERIC 内核补测后 irq19 中断仍近占满单核但关联驱动变为 fwohci0，速率约每秒 42638 次.md
+            - 16.2.57-2008 年 9 月 10 日，正文全为嵌套引用块，无发件人自述；引用中出现 Intel S5000PAL 主板配双路四核处理器，购入时芯片不被 6.x 支持.md
+            - 16.2.58-2008 年 9 月 24 日，Andy Kosela 报告手册 9.4.3.2 的 netprint Perl 脚本在 plotinus 上运行时报地址族不支持协议族错误指向 ／usr／local／libexec／netprint 第 21 行 7.0-RELEASE 上有问题 6.2-RELEASE 上可用.md
+            - 16.2.59-2009 年 4 月 11 日，克里斯里斯答复雷的 Trap 12 内核报错求助，称恐怕不会有好运，因为内存测试需要访问内存的部分区域；求助方提到错误已多次出现.md
+            - 16.2.60-2009 年 8 月 17 日，Roland Smith 解释 plip 驱动使用过期标志仅表示驱动待更新，不跑并行口 IP 则无碍;GEOM_LABEL 为 UFS 自动指派固定标签，分区挂载时移除属无害.md
+            - 16.2.61-2009 年 8 月 20 日，Michal 在 7.2R 上 em0 有线与 ath0 无线共存，停机拔线并改 rc.conf 后重启 netif 使 ath0 取到 DHCP.md
+            - 16.2.62-2009 年 12 月 5 日，George Hartzell 发现在 X 里蓝牙键盘和鼠标只有在插上 USB 键鼠后才工作，尚未来得及定位原因.md
+            - 16.2.63-2009 年 12 月 8 日，David Southwell 装好配置 CUPS 后 online login 系统不工作，拒绝接受用户名密码组合.md
+            - 16.2.64-2009 年 12 月 27 日，Anton Shterenlikht 向 TP-LINK 问到芯片型号后更困惑.md
+            - 16.2.65-2009 年 2 月 10 日，Jonathan Chen 的 Dell Latitude D830 跑 7-STABLE／amd64.md
+            - 16.2.66-2009 年 1 月 20 日，Mike Clarke 答复他人问 KVM 切换器，说自己用的是 Aten CS64A 四口切换器，三键鼠标和滚轮全部有效.md
+            - 16.2.67-2009 年 1 月 27 日，Puchar 在该贴问 Adler 的卡是否基于 Digital DecChip；他自己有类似非 ZNYX 卡.md
+            - 16.2.68-2009 年 6 月 29 日，ral 无线网卡在 rc.conf 配 DHCP 后无租约且 no carrier，ping 路由器报 no route to host，静态 IP 后丢包约 95%.md
+            - 16.2.69-2009 年 3 月 11 日，Mathieu Chappuis 用 Promise FastTrak TX2000 从 CD 装 FreeBSD 7.1 i386 与 amd64 引导时第一指示符冻结，7.0 同但多些信息，换 Compaq Evo 51s 正常.md
+            - 16.2.70-2009 年 3 月 27 日，雷贝因说平时用 atapicam 让 devfs 把 ／dev／acd0 藏起来，并确认问题出在错误变量 $! 上.md
+            - 16.2.71-2009 年 10 月 11 日，Robert Huff 说明写这封信的机器用的是另一块主板，但北桥与集成显卡相同，整体正常，唯一小问题是关机命令符合预期.md
+            - 16.2.72-2009 年 10 月 16 日，PJ 在网页上找到办法：不必理会屏幕上刷出的报错，把这块 USB 钥匙当普通磁盘挂载，用 mount 以 msdosfs 挂上 da0s1 即可.md
+            - 16.2.73-2009 年 9 月 15 日，Mel Flynn 在几台笔记本上做过 acpidump，见固件表里引用了多媒体键；他自陈 ACPI 知识不足，难判系统能否截获或改道这些按键绑定.md
+            - 16.2.74-2010 年 4 月 9 日，Brodey Dover 回来说内存问题已经解决：440BX 芯片组与 512MB 单条 SDR 内存并不相容.md
+            - 16.2.75-2010 年 12 月 1 日，Brian McCann 的 em 网卡重启后异常并非 Dell PowerEdge 独有且挂 em 驱动的 VMware 虚拟机不受影响.md
+            - 16.2.76-2011 年 12 月 6 日，Ronald F. Guilmette 自述 root 下 cdda2wav 正常，非 root 遭权限拒绝.md
+            - 16.2.77-2011 年 12 月 28 日，发件人 Omer Faruk SEN 用 QLogic ISP2532 双口 HBA 挂 EMC VNX5100 LUN.md
+            - 16.2.78-2011 年 2 月 3 日，Sergio de Almeida Lenzi 的 Dell r210 用 PERC6 阵列卡在 FreeBSD 8.2 上装 160 GB SAS×2 配日志 FS，控制器几乎一直 SAS timeout，启用写缓存后超时消失，但每周仍偶发系统崩溃.md
         - 16.3-网络与防火墙
-            - 16.3.1-2011年5月7日判断SRV之所以到不了19216828段是因它只顾等网关回应而.md
-            - 16.3.2-年9月16日20050916Felix用FreeBSD做NAS提供PPPoE与P.md
-            - 16.3.3-2011年10月5日自述FreeBSD82x86机器上samba共享硬件raid.md
-            - 16.3.4-2011年10月18日claudiuvasadi在关于ISCdhcp服务器的讨论.md
-            - 16.3.5-2011年10月22日自述认为第三方接入反正需事先配好认证端口号本可一并告知若对.md
-            - 16.3.6-2011年9月20日Chad认为portknocking可用于偏转随手式非精心的.md
-            - 16.3.7-2012年4月1日MatthewSeaman援引RFC5735指出临时抓地址应用.md
-            - 16.3.8-年8月19日ScottSaunders自述首台FreeBSD48机器用ipfil.md
-            - 16.3.9-年7月22日某ISP管理员自述其编写脚本把tacacs用户数据迁到freerad.md
-            - 16.3.10-年4月5日WilliamEReid自述已为名下全部服务器更新bind并称接手清理.md
-            - 16.3.11-年7月15日某运营者指出ORBS已于6月1日关闭至少有一台原ORBS服务器对所有.md
-            - 16.3.12-年8月8日FrankLaszlo自述其ISP式部署只有两个可用IP用ipfw加n.md
-            - 16.3.13-年9月17日某运营者报告即将同时更换ISP并搬迁机房IP段随之变更预计服务器中断.md
-            - 16.3.14-年12月10日DaleWalker自述其私有网机器经FreeBSD机器走Tels.md
-            - 16.3.15-年1月2日pzw自述其Bind823问题已解决办法是把Cisco677678路由.md
-            - 16.3.16-年4月15日某开发者指出ipfw的fwd转发代码对UDP并未完整实现用它把域名查.md
-            - 16.3.17-年11月12日某运营者报告两地间有一条ADSL2MB与一条2MB帧中继两端各一台.md
-            - 16.3.18-年12月20日某用户用无线网卡做PPPoE客户端初始只有6kbytess加上di.md
-            - 16.3.19-年7月30日MichaelLapinski自述曾几次遇到该错误均因调整netin.md
-            - 16.3.20-年3月31日VictorBondarenko指出若用bind9替换基本系统的bi.md
-            - 16.3.21-年5月21日AleksandrShapayev自述同一套pppd配置与同一家IS.md
-            - 16.3.22-年11月23日Mark自述dynablock区在BIND中需占用117MB内存改.md
-            - 16.3.23-年8月1日AlbertvanDam回报mrouted组播转发问题已在7月23日解.md
-            - 16.3.24-年2月20日BillMoran指出FreeBSD53自带bind9该版本支持DN.md
-            - 16.3.25-年6月24日DominiqueSAFreeBSD54跑oidentd207配PF.md
-            - 16.3.26-年1月9日AshleyMoran谈FreeBSD60下SSH认证极慢只要etcr.md
-            - 16.3.27-年1月19日MikeLoiterman在MacMini的etcsmbconf加b.md
-            - 16.3.28-年5月21日DuaneWhitty答BrettWiggins问IPFILTER下.md
-            - 16.3.29-年4月3日Firas贴出etchosts的三行映射127001同时挂localh.md
-            - 16.3.30-年8月7日Murray以RELENG_7_0配NATT与ipsectools07.md
-            - 16.3.31-年1月25日TgeB在FreeBSD60RELEASE主机上80与25端口连接结.md
-            - 16.3.32-年1月30日Peter答复在rcconf中可单行配置ifconfig_ath0同.md
-            - 16.3.33-年7月31日就如何用FreeBSD让对端用更小发送段的问题讨论提到可对单条TCP.md
-            - 16.3.34-年5月9日询问能否从FreeBSD推文件到Windows共享说明smbclien.md
-            - 16.3.35-年10月29日SveinHalvorsen确认在Archlinux上用dhcpc.md
-            - 16.3.36-年4月14日海斯科克把etcloginconf里的umask改成007后samb.md
-            - 16.3.37-年1月5日perryh用vpnc连CiscoVPN能连上却不通发现只是vpncc.md
-            - 16.3.38-年8月11日CameronSimpson为两台要跑CARP与pfsync的防火墙.md
+            - 16.3.1-2011 年 5 月 7 日，判断 SRV 之所以到不了 192.168.28 段，是因它只顾等网关回应而从无应答，且子网掩码过窄无法跨到别的子网.md
+            - 16.3.2-2005 年 9 月 16 日，2005-09-16 Felix 用 FreeBSD 做 NAS 提供 PPPoE 与 PPP 接 RADIUS.md
+            - 16.3.3-2011 年 10 月 5 日，自述 FreeBSD8.2 x86 机器上 samba 共享硬件 raid1 加 zfs 阵列，已正常服务数月、开机 23 天，当日突然拒绝连接.md
+            - 16.3.4-2011 年 10 月 18 日，claudiu.vasadi 在关于 ISC dhcp 服务器的讨论中接着说，其实也总是可以用 dhcpd -t 选项来测试配置文件语法.md
+            - 16.3.5-2011 年 10 月 22 日，自述认为第三方接入反正需事先配好认证，端口号本可一并告知；若对方政策强制只用认 22 端口的软件，他视之为设计上就坏掉的软件.md
+            - 16.3.6-2011 年 9 月 20 日，Chad 认为 port knocking 可用于偏转随手式、非精心的破解尝试，但对更老练的攻击算不上真正的安全，实际收益是让日志更干净而非安全本身.md
+            - 16.3.7-2012 年 4 月 1 日，Matthew Seaman 援引 RFC 5735 指出临时抓地址应用 169.254.0.0／16 而非私有网段.md
+            - 16.3.8-2003 年 8 月 19 日，Scott Saunders 自述首台 FreeBSD 4.8 机器用 ipfilter 与 ipnat 做 NAT 和防火墙，已稳定运行六十天.md
+            - 16.3.9-2003 年 7 月 22 日，某 ISP 管理员自述其编写脚本把 tacacs 用户数据迁到 freeradius，并搭好 qmail-tls 与 courier-imap 收发.md
+            - 16.3.10-2001 年 4 月 5 日，William E Reid 自述已为名下全部服务器更新 bind，并称接手清理一个网络整整花了一年，主张只跑必需服务、不给用户 shell.md
+            - 16.3.11-2001 年 7 月 15 日，某运营者指出 ORBS 已于 6 月 1 日关闭，至少有一台原 ORBS 服务器对所有查询都返回命中，会把全部邮件判为垃圾而阻断，建议从配置中移除.md
+            - 16.3.12-2001 年 8 月 8 日，Frank Laszlo 自述其 ISP 式部署只有两个可用 IP.md
+            - 16.3.13-2001 年 9 月 17 日，某运营者报告即将同时更换 ISP 并搬迁机房，IP 段随之变更，预计服务器中断不超过 2 小时，征询 DNS 应如何配置才能在搬迁后尽快恢复可见.md
+            - 16.3.14-2001 年 12 月 10 日，Dale Walker 自述其私有网机器经 FreeBSD 机器走 Telstra ADSL 上网，Telstra 在网关侧另做一层 NAT.md
+            - 16.3.15-2002 年 1 月 2 日，pzw 自述其 Bind 8.2.3 问题已解决，办法是把 Cisco 677／678 路由器的 CBOS 升到 2.4.3 以上.md
+            - 16.3.16-2002 年 4 月 15 日，某开发者指出 ipfw 的 fwd 转发代码对 UDP 并未完整实现，用它把域名查询转发进 jail 未必可行，建议先换别的办法验证.md
+            - 16.3.17-2002 年 11 月 12 日，某运营者报告两地间有一条 ADSL 2MB 与一条 2MB 帧中继 两端各一台 FreeBSD 只配静态路由 想让两条链路合并成近似 4MB 的一条.md
+            - 16.3.18-2002 年 12 月 20 日，某用户用无线网卡做 PPPoE 客户端 初始只有 6kbytes／s 加上 disable protocomp 等选项并把速度设为同步后升到 70kbytes／s 仍觉偏慢.md
+            - 16.3.19-2003 年 7 月 30 日，Michael Lapinski 自述曾几次遇到该错误.md
+            - 16.3.20-2003 年 3 月 31 日，Victor Bondarenko 指出若用 bind9 替换基本系统的 bind8.md
+            - 16.3.21-2003 年 5 月 21 日，Aleksandr Shapayev 自述同一套 pppd 配置与同一家 ISP 下，3.5-STABLE 下载大文件一切正常.md
+            - 16.3.22-2003 年 11 月 23 日，Mark 自述 dynablock 区在 BIND 中需占用 117MB 内存，改用 rbldnsd 后内存效率约提升十倍.md
+            - 16.3.23-2004 年 8 月 1 日，Albert van Dam 回报 mrouted 组播转发问题已在 7 月 23 日解决，只要至少两台主机加入会话即可正常转发.md
+            - 16.3.24-2005 年 2 月 20 日，Bill Moran 指出 FreeBSD 5.3 自带 bind 9，该版本支持 DNS 区按客户端返回不同结果.md
+            - 16.3.25-2005 年 6 月 24 日，Dominique SA FreeBSD 5.4 跑 oidentd 2.0.7 配 PF，启动没问题.md
+            - 16.3.26-2006 年 1 月 9 日，Ashley Moran 谈 FreeBSD 6.0 下 SSH 认证极慢：只要 ／etc／resolv.conf 中名字服务器可达.md
+            - 16.3.27-2006 年 1 月 19 日，Mike Loiterman 在 Mac Mini 的 ／etc／smb.conf 加 backup 共享后重启 Windows File Sharing，以 mount_smbfs 挂 ／mnt／backup，再用 dump 0aufL 加 bzip2 做 level 0 备份.md
+            - 16.3.28-2006 年 5 月 21 日，Duane Whitty 答 Brett Wiggins 问 IPFILTER 下装 ports 有问题.md
+            - 16.3.29-2007 年 4 月 3 日，Firas 贴出 ／etc／hosts 的三行映射，127.0.0.1 同时挂 localhost 与 alice.md
+            - 16.3.30-2008 年 8 月 7 日，Murray 以 RELENG_7_0 配 NAT-T 与 ipsec-tools 0.7.0.md
+            - 16.3.31-2008 年 1 月 25 日，Tge B 在 FreeBSD 6.0-RELEASE 主机上 80 与 25 端口连接结束进入 TIME_WAIT 却二十四小时无一条回收.md
+            - 16.3.32-2008 年 1 月 30 日，Peter 答复在 rc.conf 中可单行配置 ifconfig_ath0 同时写入 WPA 与静态内网地址给出 192.168.13.8 与 255.255.255.0 并称在自己机器上可用.md
+            - 16.3.33-2008 年 7 月 31 日，就如何用 FreeBSD 让对端用更小发送段的问题 讨论提到可对单条 TCP 连接设置 TCP_MAXSEG 使其小于接口 MTU 回复者补充 用 route 加 -mtu 修饰符还能按目的地址单独设置 MTU.md
+            - 16.3.34-2008 年 5 月 9 日，询问能否从 FreeBSD 推文件到 Windows 共享.md
+            - 16.3.35-2008 年 10 月 29 日，Svein Halvorsen 确认在 Archlinux 上用 dhcpcd 客户端（多一个 c）而非服务器，-n 选项触发续租而不是强制.md
+            - 16.3.36-2009 年 4 月 14 日，海斯科克把 ／etc／login.conf 里的 umask 改成 007 后，samba 建档权限变得混乱，ftp 下权限符合预期.md
+            - 16.3.37-2009 年 1 月 5 日，perryh 用 vpnc 连 Cisco VPN 能连上却不通.md
+            - 16.3.38-2010 年 8 月 11 日，Cameron Simpson 为两台要跑 CARP 与 pfsync 的防火墙构建 8.1 amd64 内核 只配 CARP 时构建顺利并启动正常 去掉 pfsync 前缀注释后构建在链接阶段中止 报 in_proto.o 里 pfsync_input 的未定义引用.md
         - 16.4-Jail 与虚拟化
-            - 16.4.1-年3月18日分析openvmtools2008030379993在70上make.md
-            - 16.4.2-2011年5月16日称VIMAGE代码已并入8STABLE但仍挂实验标签且大体可.md
+            - 16.4.1-2008 年 3 月 18 日，分析 open-vm-tools 2008.03.03-79993 在 7.0 上 make modules 失败原因 bus_setup_intr 接口变化需在 INTR_MPSAFE 后补 NULL 又因 net／if_arp.h 移除_ac_enaddr 改用.md
+            - 16.4.2-2011 年 5 月 16 日，称 VIMAGE 代码已并入 8-STABLE 但仍挂实验标签且大体可用.md
             - 16.4.3-4.0 发布与 Jails 引入.md
             - 16.4.4-Jails 的技术架构.md
-            - 16.4.5-年10月1日bsdfsse在题为VMWare逐步指导的帖子中宣布放弃自述在3台机.md
-            - 16.4.6-年1月30日RahulSiddharthan借助FreeBSD的linuxula.md
-            - 16.4.7-年6月3日用户klr自述其已为410的jail找到支持多IP的补丁却始终找不到适.md
-            - 16.4.8-年5月25日AndyGreenwood说jail里ports装的apache13.md
-            - 16.4.9-年6月7日答复ESX302时钟漂移问题指出FreeBSD62及以上无需hinta.md
-            - 16.4.10-年2月14日ReinhardHaller在71的jail的rcconf用ipv6.md
-            - 16.4.11-年6月18日Erik在jail里cyrus用户imap认证失败加defaultd.md
-            - 16.4.12-年10月5日APseudoUtopia查明主机上httpd与basejail两个.md
-            - 16.4.13-年8月6日BrandonGooch转述kalinm问VirtualBox配Fre.md
-            - 16.4.14-年3月23日发件人VincentHoffman说他有一台80RELEASE机器j.md
-            - 16.4.15-年11月24日发件人StevePolyack设securityjailparam.md
-            - 16.4.16-年9月16日GholamMostafaFaridi装virtulbox后启动报N.md
-            - 16.4.17-年8月24日Lobo称自FreeBSD3x起一直经端口编译VirtualBox现.md
+            - 16.4.5-2004 年 10 月 1 日，bsdfsse 在题为 VMWare 逐步指导的帖子中宣布放弃，自述在 3 台机器上共试了 5 天.md
+            - 16.4.6-2002 年 1 月 30 日，Rahul Siddharthan 借助 FreeBSD 的 linuxulator 与 Linux 的 mke2fs.md
+            - 16.4.7-2004 年 6 月 3 日，用户 klr 自述其已为 4.10 的 jail 找到支持多 IP 的补丁，却始终找不到适用于 5.2.1 的对应版本.md
+            - 16.4.8-2006 年 5 月 25 日，Andy Greenwood 说 jail 里 ports 装的 apache13 起不来其实卡在 DNS.md
+            - 16.4.9-2008 年 6 月 7 日，答复 ESX 3.0.2 时钟漂移问题，指出 FreeBSD 6.2 及以上无需 hint.apic.0.disabled 且 kern.hz=100 可用.md
+            - 16.4.10-2009 年 2 月 14 日，Reinhard Haller 在 7.1 的 jail 的 rc.conf 用 ipv6_ifconfig_lo0_alias0 等配 IPv6 别名 不生效 又试了 ipv6_addrs_lo0 的替换写法也没成功.md
+            - 16.4.11-2009 年 6 月 18 日，Erik 在 jail 里 cyrus 用户 imap 认证失败加 defaultdomain 到 imapd.conf 后 realm 消失 checkpass 仍报错开 saslauthd 调试显示 pam 错误而／etc／pam.d 与主机一致怀疑 jail 下 pam.md
+            - 16.4.12-2009 年 10 月 5 日，APseudoUtopia 查明主机上 httpd 与 basejail 两个 jail 目录权限设错.md
+            - 16.4.13-2010 年 8 月 6 日，Brandon Gooch 转述 kalin m 问 VirtualBox 配 FreeBSD 当宿主或来宾够不够成熟、能否用于生产环境.md
+            - 16.4.14-2010 年 3 月 23 日，发件人 Vincent Hoffman 说他有一台 8.0-RELEASE 机器，jail 里除 sshd 外无别的进程.md
+            - 16.4.15-2010 年 11 月 24 日，发件人 Steve Polyack 设 security.jail.param.ip4.saddrsel 返回成功但读取无输出.md
+            - 16.4.16-2010 年 9 月 16 日，Gholam Mostafa Faridi 装 virtulbox 后启动报 NS_ERROR_FACTORY_NOT_REGISTERED.md
+            - 16.4.17-2011 年 8 月 24 日，Lobo 称自 FreeBSD 3.x 起一直经Port编译 VirtualBox（现用 4.1.2）.md
         - 16.5-存储与文件系统
-            - 16.5.1-年4月23日StefanCars表示赞同自述其8台服务器使用vinum在生产环境.md
-            - 16.5.2-年8月16日Vinum作者GregLehey回答配置能否在重装后保留时表示可以依.md
-            - 16.5.3-年6月24日JonathanArnold在讨论根分区大小时援引GregLehey.md
-            - 16.5.4-年8月17日MikhailTeterin自述已关掉noatime经Apache下.md
-            - 16.5.5-年7月13日SteveShorter自述410上的vinum故障系与希捷Chee.md
-            - 16.5.6-年11月21日JoshEndries说看到状态报告提到iSCSI开发进展公司拟上.md
-            - 16.5.7-年10月6日BillSchmitt换新盘后装了49且旧盘仍连着未挂载用ddif=.md
-            - 16.5.8-年6月30日snott说明确需250GB以上swap用作HTTP反向代理大缓存集.md
-            - 16.5.9-年3月9日回复说ext3分区以ext2方式挂载即可用参照man5ext2fs前提.md
-            - 16.5.10-年10月6日指出ggate与dump8一样能在块级读写无需特殊设备即可实现块级访.md
-            - 16.5.11-年4月10日Yuri不取改用FAT32分区的建议指FAT32单文件上限为2^32.md
-            - 16.5.12-年4月26日illoai说双启机上ad4s3是扩展分区ad4s5与ad4s6逻辑.md
-            - 16.5.13-年4月27日Smith回帖Ghirai关于在gmirror加geli的RAID1.md
-            - 16.5.14-年1月26日BryantEadon在64位机器用五块500GB硬盘组raidz阵.md
-            - 16.5.15-年5月6日罗兰史密斯在自己的72源码树里发现libautofs库与mount_a.md
-            - 16.5.16-年5月31日Wojtek说自己TB级分区上跑dump两次都产出无法还原的备份从此.md
-            - 16.5.17-年11月4日StevenSamuelCole的zpool01显示在线却标记数据损.md
-            - 16.5.18-年1月27日RossPenner用一块盘建好zroot池启动后想加第二块盘先gp.md
-            - 16.5.19-年6月2日LeonMeßner在nullfs内tail由NFS挂载的文件后rmt.md
-            - 16.5.20-年11月29日发件人OHartmann报90CURRENT导入ZFS池BACKU.md
-            - 16.5.21-年10月7日RobinVleij换存储后开机卡在日志轮转步骤truss查到Ast.md
+            - 16.5.1-2003 年 4 月 23 日，Stefan Cars 表示赞同，自述其 8 台服务器使用 vinum 在生产环境已运行逾两年.md
+            - 16.5.2-2003 年 8 月 16 日，Vinum 作者 Greg Lehey 回答配置能否在重装后保留时表示可以依赖该特性，但做备份也无妨，并强调绝不要使用 resetconfig.md
+            - 16.5.3-2003 年 6 月 24 日，Jonathan Arnold 在讨论根分区大小时援引 Greg Lehey 在《The Complete FreeBSD》第 4 版的新建议：只建三个文件系统，根含 ／usr 与 ／var 共 4GB，交换区 512MB，其余全给 ／home.md
+            - 16.5.4-2004 年 8 月 17 日，Mikhail Teterin 自述已关掉 noatime，经 Apache 下载的文件 atime 仍停在很久以前.md
+            - 16.5.5-2004 年 7 月 13 日，Steve Shorter 自述 4.10 上的 vinum 故障系与希捷 Cheetah ST318453LC 硬盘及戴尔 2450 不兼容所致.md
+            - 16.5.6-2005 年 11 月 21 日，Josh Endries 说看到状态报告提到 iSCSI 开发进展，公司拟上 SAN 起步约 8 TB 并会继续增长.md
+            - 16.5.7-2005 年 10 月 6 日，Bill Schmitt 换新盘后装了 4.9 且旧盘仍连着未挂载.md
+            - 16.5.8-2008 年 6 月 30 日，snott 说明确需 250GB 以上 swap 用作 HTTP 反向代理大缓存集的后备存储.md
+            - 16.5.9-2008 年 3 月 9 日，回复说 ext3 分区以 ext2 方式挂载即可用，参照 man 5 ext2fs，前提是文件系统不脏即日志干净，若挂载为 ext2 后写入数据再重启进 Linux 将触发长时间 fsck 检查，提醒在 Linux 与 FreeBSD 间共享该分区需谨慎.md
+            - 16.5.10-2008 年 10 月 6 日，指出 ggate 与 dump(8) 一样能在块级读写，无需特殊设备即可实现块级访问，建议将 ggate 改造为复制并透传的模式并拦截本地写入.md
+            - 16.5.11-2009 年 4 月 10 日，Yuri 不取改用 FAT32 分区的建议，指 FAT32 单文件上限为 2^32-1 字节约 4GB，而他的硬盘是 1TB 且文件可能更大.md
+            - 16.5.12-2009 年 4 月 26 日，illoai 说双启机上 ad4s3 是扩展分区，ad4s5 与 ad4s6 逻辑分区放 Linux swap 与根分区，验证过纯逻辑分区可行.md
+            - 16.5.13-2009 年 4 月 27 日，Smith 回帖 Ghirai 关于在 gmirror 加 geli 的 RAID1 上调 vfs.read_max 的读性能实测.md
+            - 16.5.14-2009 年 1 月 26 日，Bryant Eadon 在 64 位机器用五块 500GB 硬盘组 raidz 阵列，复制文件时丢了一块盘，他以为死的就是那盘而热插拔拔出.md
+            - 16.5.15-2009 年 5 月 6 日，罗兰·史密斯在自己的 7.2 源码树里发现 libautofs 库与 mount_autofs 程序但 amd64 机器上未编译安装也不清楚用途.md
+            - 16.5.16-2009 年 5 月 31 日，Wojtek 说自己 TB 级分区上跑 dump 两次都产出无法还原的备份，从此只信任 tar 与 rsync 这类基于文件与目录抽象层的工具.md
+            - 16.5.17-2009 年 11 月 4 日，Steven Samuel Cole 的 zpool01 显示在线却标记数据损坏，永久错误指向一个不存在的文件编号.md
+            - 16.5.18-2010 年 1 月 27 日，Ross Penner 用一块盘建好 zroot 池启动后想加第二块盘.md
+            - 16.5.19-2010 年 6 月 2 日，Leon Meßner 在 nullfs 内 tail 由 NFS 挂载的文件后 rm，tail 报 Stale NFS file handle.md
+            - 16.5.20-2010 年 11 月 29 日，发件人 O. Hartmann 报 9.0-CURRENT 导入 ZFS 池 BACKUP00 失败，两池中跨两台 1TB 硬盘的池正常，两池版本皆为 15.md
+            - 16.5.21-2010 年 10 月 7 日，Robin Vleij 换存储后开机卡在日志轮转步骤，truss 查到 Asterisk 日志踩同样通配符坑，改成三个文件名后正常.md
         - 16.6-安装与发布介质
-            - 16.6.1-2011年11月20日发件人自述用tartvf列FreeBSD90RC1i386.md
-            - 16.6.2-2011年11月29日自述折腾BIOS设置后终于装上FreeBSDAcer有个叫.md
-            - 16.6.3-2011年10月14日Polytropon表示burncd早在v5的某个版本起就.md
-            - 16.6.4-2011年9月15日DougHardie报一台很旧的i386机无可用光驱SCSI.md
-            - 16.6.5-2011年9月17日Fbsd8主张在bsdinstall键盘本地化步骤加提示对话.md
-            - 16.6.6-2012年4月3日鲍威尔称当年可启动光盘依赖软盘仿真硬件与BIOS过于老旧者现代.md
-            - 16.6.7-年12月8日OliverFromme请求将FreeBSDsparc64快照同步到.md
-            - 16.6.8-年7月16日KenSmith汇总镜像站需求讨论主张新标准同时约束新旧站点把官方镜.md
-            - 16.6.9-年6月12日镜像管理员DanielLang报告ftpleoorg的51R映像下载.md
-            - 16.6.10-年4月20日CHOIJunho通知韩国一级镜像ftpkrfreebsdorg当日.md
-            - 16.6.11-年11月3日ScottLong告知60的ISO与ftp树除i386外已就位于ft.md
-            - 16.6.12-年5月3日DimitarVasilev回复PlamenStoev称将于5月5日至.md
-            - 16.6.13-年1月23日JunhoChoi以ftpkrfreebsdorg管理者身份请求为其.md
-            - 16.6.14-年2月17日SatoshiAsami说明其已在wcarchive的pubFree.md
-            - 16.6.15-年4月26日LyndonNerenberg对MarkMayo愿架设加拿大FTP镜.md
-            - 16.6.16-年10月10日新西兰CLEARCommunications的JamieClark.md
-            - 16.6.17-年11月17日BruceAMah通报已将50DP2的i386位元上传至ftpma.md
-            - 16.6.18-年1月21日PeterWemm赞同删除pubFreeBSDbranches与de.md
-            - 16.6.19-年7月12日EricToll自述在HPNetserverE60上装FreeBSD.md
-            - 16.6.20-年8月6日ChristopherTJewett提醒准备安装FreeBSD的对方其.md
-            - 16.6.21-年4月18日BruceAMah回应快照服务器是否下线的询问称releng4fre.md
-            - 16.6.22-年5月7日维护者WilkoBulte回复上述Alpha安装panic称自己在多台.md
-            - 16.6.23-年2月6日GrahamBentley建议改用3张软盘经FTP装60RELEASE.md
-            - 16.6.24-年3月23日AndrewPantyukhin用CD安装61BETA4时选不中mi.md
-            - 16.6.25-年5月1日NorbertoMeijome称按JohnNielsen步骤在61RC.md
-            - 16.6.26-年5月16日EricMesa报双P2200MHz128MB老机装FreeBSD6.md
-            - 16.6.27-年11月30日vandenHoff首装62到第二块盘时漏选引导管理器sysins.md
-            - 16.6.28-年4月16日JohnNielsen指出这是BTX的已知问题尤其针对USB设备与较.md
-            - 16.6.29-年12月19日BryceSimonds尝试构建最小FreeBSDmemdisk镜.md
-            - 16.6.30-年2月3日DrewSanford自建服务器装70RC1两次灾难性故障memtes.md
-            - 16.6.31-年2月7日RekJed搭FreeBSDjumpstartPXEboot加载器加了.md
-            - 16.6.32-年6月9日建议直接在Windows下启动NeroExpress后选择DiscIm.md
-            - 16.6.33-年6月23日作者建议安装时不要主动指定磁盘几何参数让安装程序自行判断并说自己长期.md
-            - 16.6.34-年3月21日安装FreeBSD55时旧54硬盘挂在第二个IDE通道并被写入boo.md
-            - 16.6.35-年10月15日说明Sunfirev100做基础服务器安装只需第一张CDBind属.md
-            - 16.6.36-年10月27日FranckRoyer在macbook装PCBSD用refit同步.md
-            - 16.6.37-年4月1日Matej完成amd64安装后回复确认整机所有内存都已被识别询问装完后.md
-            - 16.6.38-年4月1日诺万布雷对DVD报错成因存疑同一光驱2月19日由70RELEASE升到.md
-            - 16.6.39-年7月3日AntonShterenlikht在ia64全新安装FreeBSDcu.md
-            - 16.6.40-年1月13日MartinMcCormick做80RELEASE无头安装盘解包is.md
-            - 16.6.41-年1月21日McCormick在mfsbsd10beta3套件启用串口tty登录.md
-            - 16.6.42-年12月20日发件人Morras列出全新装机流程先装基本系统不带套件与端口配网后.md
+            - 16.6.1-2011 年 11 月 20 日，发件人自述用 tar tvf 列 FreeBSD-9.0-RC1-i386-dvd1.iso 全部条目并计数，得 17817 项.md
+            - 16.6.2-2011 年 11 月 29 日，自述折腾 BIOS 设置后终于装上 FreeBSD：Acer 有个叫 silent boot 的开关会以图像代替启动消息，关掉才能启动安装.md
+            - 16.6.3-2011 年 10 月 14 日，Polytropon 表示 burncd 早在 v5 的某个版本起就对他失效，故他改用 cdrecord 与 cdrdao 走 SCSI 命令集.md
+            - 16.6.4-2011 年 9 月 15 日，Doug Hardie 报一台很旧的 i386 机无可用光驱，SCSI 连接器古怪、备件 PATA 盘已故障且开机数分钟即从 dev 消失.md
+            - 16.6.5-2011 年 9 月 17 日，Fbsd8 主张在 bsdinstall 键盘本地化步骤加提示对话框而不只改按钮名为 skip，因改名后用户仍不知取消即取默认.md
+            - 16.6.6-2012 年 4 月 3 日，鲍威尔称当年可启动光盘依赖软盘仿真，硬件与 BIOS 过于老旧者，现代启动盘因不再仿真软盘便无法工作.md
+            - 16.6.7-2002 年 12 月 8 日，Oliver Fromme 请求将 FreeBSD／sparc64 快照同步到 ftp7.de.freebsd.org——欧洲侧保有该架构镜像‘也许有用’，本站空间与带宽均充裕，且旧礼先问后做；同日 Murray Stokely 通告 5.0-RC1 的 i386、alpha.md
+            - 16.6.8-2003 年 7 月 16 日，Ken Smith 汇总镜像站需求讨论，主张新标准同时约束新旧站点，把官方镜像划为三级：Tier-0 为 ftp-master 系列.md
+            - 16.6.9-2003 年 6 月 12 日，镜像管理员 Daniel Lang 报告 ftp.leo.org 的 5.1-R 映像下载约五百次，其中 FTP 四百一十四次、HTTP 七十二次.md
+            - 16.6.10-2005 年 4 月 20 日，CHOI Junho 通知韩国一级镜像 ftp.kr.freebsd.org 当日迁移.md
+            - 16.6.11-2005 年 11 月 3 日，Scott Long 告知 6.0 的 ISO 与 ftp 树除 i386 外已就位于 ftp-master，请镜像站尽快同步以便宣布发布.md
+            - 16.6.12-2010 年 5 月 3 日，Dimitar Vasilev 回复 Plamen Stoev，称将于 5 月 5 日至 6 日把其主机列入 DNS 为 www2 与 cvsup.md
+            - 16.6.13-2012 年 1 月 23 日，Junho Choi 以 ftp.kr.freebsd.org 管理者身份请求为其重建中的机器开通经 rsync 访问 ftp-master 的权限，并给出两个待授权 IP 地址，以便重新同步含 9.0R 的目录.md
+            - 16.6.14-1999 年 2 月 17 日，Satoshi Asami 说明其已在 wcarchive 的 ／pub／FreeBSD 下放置 du.out 文件.md
+            - 16.6.15-2001 年 4 月 26 日，Lyndon Nerenberg 对 Mark Mayo 愿架设加拿大 FTP 镜像表示欢迎，称该国长期缺乏此类镜像，请对方准备就绪后直接联系他.md
+            - 16.6.16-2001 年 10 月 10 日，新西兰 CLEAR Communications 的 Jamie Clark 报告其维护的 ftp.nz.freebsd.org 状况.md
+            - 16.6.17-2002 年 11 月 17 日，Bruce A. Mah 通报已将 5.0-DP2 的 i386 位元上传至 ftp-master，包含 FTP 安装目录与两张 ISO 映像.md
+            - 16.6.18-2003 年 1 月 21 日，Peter Wemm 赞同删除 pub／FreeBSD／branches／ 与 development／FreeBSD-CVS／ 目录.md
+            - 16.6.19-2004 年 7 月 12 日，Eric Toll 自述在 HP Netserver E60 上装 FreeBSD 5.2.1 时系统在 agp0 探测处死锁.md
+            - 16.6.20-2001 年 8 月 6 日，Christopher T. Jewett 提醒准备安装 FreeBSD 的对方，其 ISP 是 AOL，与 FreeBSD 不兼容.md
+            - 16.6.21-2002 年 4 月 18 日，Bruce A. Mah 回应快照服务器是否下线的询问，称 releng4.freebsd.org 正在更换为新机器，完成时间未定.md
+            - 16.6.22-2003 年 5 月 7 日，维护者 Wilko Bulte 回复上述 Alpha 安装 panic，称自己在多台机器上多次用 CD 安装均未复现该问题，手中已无 PWS 机型.md
+            - 16.6.23-2006 年 2 月 6 日，Graham Bentley 建议改用 3 张软盘经 FTP 装 6.0-RELEASE.md
+            - 16.6.24-2006 年 3 月 23 日，Andrew Pantyukhin 用 CD 安装 6.1-BETA4 时选不中 minimal 分发集，选中该行后按空格或回车 X 都不出现.md
+            - 16.6.25-2006 年 5 月 1 日，Norberto Meijome 称按 John Nielsen 步骤在 6.1-RC 装好 Flash 7 与 Firefox.md
+            - 16.6.26-2007 年 5 月 16 日，Eric Mesa 报双 P2 200MHz 128MB 老机装 FreeBSD 6.2 受阻.md
+            - 16.6.27-2007 年 11 月 30 日，van den Hoff 首装 6.2 到第二块盘时漏选引导管理器，sysinstall 补救无效.md
+            - 16.6.28-2008 年 4 月 16 日，John Nielsen 指出这是 BTX 的已知问题，尤其针对 USB 设备与较新硬件；修复数周前已提交但晚于 7.0 发布.md
+            - 16.6.29-2008 年 12 月 19 日，Bryce Simonds 尝试构建最小 FreeBSD memdisk 镜像.md
+            - 16.6.30-2008 年 2 月 3 日，Drew Sanford 自建服务器装 7.0RC1 两次灾难性故障，memtest seatools 均通过.md
+            - 16.6.31-2008 年 2 月 7 日，Rek Jed 搭 FreeBSD jumpstart PXE boot.md
+            - 16.6.32-2008 年 6 月 9 日，建议直接在 Windows 下启动 Nero Express 后选择 Disc Image or Saved Project 选项再指向 iso 文件所在路径完成刻录，并指出用 ftp 下载 iso 后可改经 http 取得文件，同时强调在 Windows 机器上刻录 iso.md
+            - 16.6.33-2008 年 6 月 23 日，作者建议安装时不要主动指定磁盘几何参数，让安装程序自行判断，并说自己长期以来一直忽略安装开始时的几何警告，从未遇到过任何问题.md
+            - 16.6.34-2008 年 3 月 21 日，安装 FreeBSD 5.5 时旧 5.4 硬盘挂在第二个 IDE 通道并被写入 bootloader 导致新系统无法识别 Seagate 80GB 双分区 ufs 盘 希望以只读方式抢救数据且不愿对裸设备执行 dd.md
+            - 16.6.35-2008 年 10 月 15 日，说明 Sunfire v100 做基础服务器安装只需第一张 CD Bind 属基本系统组成部分无需单独下载 可删除其源码后再用 ports 系统安装 Bind 即可.md
+            - 16.6.36-2008 年 10 月 27 日，Franck Royer 在 macbook 装 PC-BSD 用 refit 同步，想挂 Gentoo ／home，但／dev 只列前四个 fat32.md
+            - 16.6.37-2009 年 4 月 1 日，Matej 完成 amd64 安装后回复确认整机所有内存都已被识别，询问装完后内存能被全部识别这种现象是否正常，并追问为什么会这样.md
+            - 16.6.38-2009 年 4 月 1 日，诺万布雷对 DVD 报错成因存疑：同一光驱 2 月 19 日由 7.0-RELEASE 升到 RELENG_7 前放过确定带拷贝保护的碟片并无差错，本碟却报错.md
+            - 16.6.39-2009 年 7 月 3 日，Anton Shterenlikht 在 ia64 全新安装 FreeBSD current，想按分区把整个启动盘镜像到同型号 da1.md
+            - 16.6.40-2010 年 1 月 13 日，Martin McCormick 做 8.0-RELEASE 无头安装盘.md
+            - 16.6.41-2010 年 1 月 21 日，McCormick 在 mfsbsd-1.0-beta3 套件启用串口 tty 登录.md
+            - 16.6.42-2011 年 12 月 20 日，发件人 Morras 列出全新装机流程：先装基本系统不带套件与Port，配网后跑 freebsd-update 抓装重启.md
     - 第17章-FreeBSD 4.0 邮件档案：应用与管理
         - 17.1-Ports 树与包管理
-            - 17.1.1-2011年7月8日自述四步绕过perl升级后SpamAssassin装不上卸pe.md
-            - 17.1.2-2011年6月20日Yuri新增netimsofiasip与telepathys.md
-            - 17.1.3-2011年3月8日bf建议把PYTHON_VERSION设为python25或p.md
-            - 17.1.4-2011年3月31日自述不必等pkgdbF先tar备份vardbpkg再rmva.md
-            - 17.1.5-2011年1月20日自述portmanageruf升级在88%时误杀xterm使.md
-            - 17.1.6-2011年7月18日Jeff自述从usrportstextprocflex安装f.md
-            - 17.1.7-2011年5月23日自述带线程重编Perl配预装库从未出问题认为多数CPAN模块.md
-            - 17.1.8-2011年5月30日针对openofficeorg3因依赖perl512装不上的.md
-            - 17.1.9-2011年10月24日发件人报告有小幅进展重建并安装cdrtools端口后把默认.md
-            - 17.1.10-年8月10日PatrickOReilly总结先用portupgradef重建XF.md
-            - 17.1.11-年11月12日JeremyCReed自述曾为NetBSD的pkg_add编写补丁.md
-            - 17.1.12-年7月25日ports维护者JoeMarcusClarke回应ports构建中断.md
-            - 17.1.13-年4月3日Jason报告portupgrade后courierimapd找不到M.md
-            - 17.1.14-年8月31日BenPaley自述漏看了autotoolscleanup公告其pk.md
-            - 17.1.15-年5月27日DuaneWinner自述上周还能正常portinstall的edi.md
-            - 17.1.16-年9月15日clayton自述一次portupgrade中机器硬崩重启后pkg_.md
-            - 17.1.17-年4月30日DavidArmour自述用pkg_info配sort与uniqc查.md
-            - 17.1.18-年8月25日RolandSmith指出cupsbase等port内嵌了部分xpd.md
-            - 17.1.19-年2月28日Ewald照Alexey建议进usrports跑makefetchi.md
-            - 17.1.20-年3月9日Vittorio报告FreeBSD53新手在ports中反复安装LPR.md
-            - 17.1.21-年5月12日BenjaminKeating在FreeBSD54上跑makeind.md
-            - 17.1.22-年9月11日bobself在FreeBSD60beta4pkg_addrdvd+.md
-            - 17.1.23-年9月21日cburchell在53RELEASE上pkg_addr全部报FTP.md
-            - 17.1.24-年6月23日GerardSeibert回DSAJCR问最近一次更新ports树是.md
-            - 17.1.25-年11月12日LowellGilbert回应ErikNorgaard用USE_G.md
-            - 17.1.26-年11月22日BorisSamorodov答Brian问能否让portupgra.md
-            - 17.1.27-年10月10日ScottTHildreth反驳直接用CPAN模块的建议说明DBD.md
-            - 17.1.28-年10月13日KarlAgee在62PRERELEASE上pkg_addrkde.md
-            - 17.1.29-年10月17日ajm回应mplayer重装被win32codecs310p8_1.md
-            - 17.1.30-年9月3日PerryHutchison报按回帖方法运行pkgdbaFfuv后po.md
-            - 17.1.31-年9月8日GaryKline想装Packages不自己buildpkg_addr.md
-            - 17.1.32-年9月14日ColinPercival说明portsnapupdate生成的端口.md
-            - 17.1.33-年4月10日KrisKennaway转述TijlCoosemans称ports系.md
-            - 17.1.34-年4月14日GarrettCooper说明ChadPerrin用whereis查.md
-            - 17.1.35-年8月6日Novembre致谢MichaelNottebrock并称执行port.md
-            - 17.1.36-年8月17日ErnoImmonen说清ports装的包删usrlocalusrX.md
-            - 17.1.37-年8月21日dgmm在usrports用makesearchname=ps2as.md
-            - 17.1.38-年12月14日Oliver新装FreeBSD70BETA4后装rubygempo.md
-            - 17.1.39-年1月27日DeuZa用三机搭FreeBSD本地镜像两小时跑脚本同步一次dist.md
-            - 17.1.40-年7月12日MichaelPSoulier用ports里的mercurial做合.md
-            - 17.1.41-年6月24日Zbigniew在62STABLE编mathsdpa时mathatl.md
-            - 17.1.42-年3月4日RandyPratt说明pkgdbL修复旧版portupgrade把依.md
-            - 17.1.43-年3月27日MichaelPSoulier升级vim端口时卡在抓补丁阶段从ftp.md
-            - 17.1.44-年5月1日编译mount_fusefsc时报mntoptsh找不到Tom建议先确.md
-            - 17.1.45-年11月23日MichaelS在打过补丁的62上package_site指向6s.md
-            - 17.1.46-年9月23日MarcoBeishuizen在62上portupgradeOpen.md
-            - 17.1.47-年4月2日LouKatz报webalizer在61可正常编译安装升62后构建失败.md
-            - 17.1.48-年7月24日就端口管理的大规模做法讨论PieterdeGoeje指出技术上无法在.md
-            - 17.1.49-年6月14日反馈系统并存两个xorgserver包xorgserver14_10.md
-            - 17.1.50-年6月17日在FreeBSD70release上升级ImageMagick641.md
-            - 17.1.51-年3月27日70REL上portsmakeinstall从ftp服务器下载一直失.md
-            - 17.1.52-年3月30日pkgdbF后出现gnomedesktop2220指向nautilu.md
-            - 17.1.53-年5月1日在FreeBSD70RELEASEp1上编译Perl588自定义安装路.md
-            - 17.1.54-年5月12日FreeBSD70RELEASE下装netbeans601报XIOf.md
-            - 17.1.55-年10月2日编译时pngh找不到报Nosuchfileordirectory若已.md
-            - 17.1.56-年10月14日先读vuxml网站上该包的条目及引用资料再决定尽管有安全问题是否还.md
-            - 17.1.57-年10月17日RW回答升级libxml2不该先跑makedeinstallpor.md
-            - 17.1.58-年9月19日DanNelson建议在etcmakeconf里设置WANT_OPE.md
-            - 17.1.59-年9月21日MichalPetrucha报从ports编译OpenOfficeo.md
-            - 17.1.60-年4月4日Matt设想把OPTIONS选项功能下传到编译出的包层面并以自己维护的.md
-            - 17.1.61-年4月6日OliverFromme解答301包的依赖疑问说明pciids为hal.md
-            - 17.1.62-年4月7日Marek补充可用portconfiga并给出常规更新流程csup更新.md
-            - 17.1.63-年4月18日梅尔批评端口升级工具检测到包仍被依赖询问用户卸载后命令却因依赖存在而.md
-            - 17.1.64-年4月29日KlausFriisØstergaard运行pkgdbfFu仍报临时.md
-            - 17.1.65-年12月1日Yuri反映用portupgradeaPP只取二进制包时缺大量包他说.md
-            - 17.1.66-年1月8日DavidHorn说portsnap与freebsdupdate现在都.md
-            - 17.1.67-年1月25日cpghost在四核机上并行装端口得手写makeconfigure与.md
-            - 17.1.68-年7月24日Axel询问除mysql51server之外其他守护进程在portu.md
-            - 17.1.69-年3月16日Howse装64RELEASE后配置portsnapconf取消RE.md
-            - 17.1.70-年5月29日Erik反馈说应用GregLarkin给出的补丁之后libapreq.md
-            - 17.1.71-年7月28日ZbigniewSzalbot升级Apache卡在apr依赖pkg_.md
-            - 17.1.72-年10月4日发件人LenConrad装pydjango11时MarkupSafe.md
-            - 17.1.73-年4月20日ГуляевГоша在82STABLE编译editorslibreo.md
-            - 17.1.74-年8月29日StevenFriedrich按UPDATING升级gtk20构建失.md
-            - 17.1.75-年2月15日AlainGFabry称portsnap应用元数据补丁时反复报补丁压.md
+            - 17.1.1-2011 年 7 月 8 日，自述四步绕过 perl 升级后 SpamAssassin 装不上：卸 perl 5.12 与 SpamAssassin 升 5.14 跑 perl-after-upgrade 再装 但 remmina 因 perl XML 依赖缺失.md
+            - 17.1.2-2011 年 6 月 20 日，Yuri 新增 net-im／sofia-sip 与 telepathy-sofiasip 两Port以给 empathy 加入 SIP 功能.md
+            - 17.1.3-2011 年 3 月 8 日，b. f. 建议把 PYTHON_VERSION 设为 python2.5 或 python2.6 以正常编译该模块.md
+            - 17.1.4-2011 年 3 月 31 日，自述不必等 pkgdb -F：先 tar 备份 ／var／db／pkg，再 rm ／var／db／pkg／pkgdb.db.md
+            - 17.1.5-2011 年 1 月 20 日，自述 portmanager -u -f 升级在 88% 时误杀 xterm 使升级中断，此次加 --resume 从约 20% 重启.md
+            - 17.1.6-2011 年 7 月 18 日，Jeff 自述从 ／usr／ports／textproc／flex 安装 flex-2.5.35_4.md
+            - 17.1.7-2011 年 5 月 23 日，自述带线程重编 Perl 配预装库从未出问题，认为多数 CPAN 模块要么无关线程要么线程安全，仅少数例外.md
+            - 17.1.8-2011 年 5 月 30 日，针对 openoffice.org-3 因依赖 perl 5.12 装不上的抱怨.md
+            - 17.1.9-2011 年 10 月 24 日，发件人报告有小幅进展：重建并安装 cdrtools Port后，把默认设备从设备名改为 cd0 的 SCSI 地址 1,0,0.md
+            - 17.1.10-2003 年 8 月 10 日，Patrick O’Reilly 总结：先用 portupgrade -f 重建 XFree86-libraries.md
+            - 17.1.11-2002 年 11 月 12 日，Jeremy C. Reed 自述曾为 NetBSD 的 pkg_add 编写补丁，使其在通过 FTP 下载软件包时把压缩包留在本地以备复用.md
+            - 17.1.12-2003 年 7 月 25 日，ports 维护者 Joe Marcus Clarke 回应 ports 构建中断之说，称修复补丁正在构建集群上测试，他本人也在试另一组补丁.md
+            - 17.1.13-2004 年 4 月 3 日，Jason 报告 portupgrade 后 courier-imapd 找不到 Maildir.md
+            - 17.1.14-2004 年 8 月 31 日，Ben Paley 自述漏看了 autotools cleanup 公告.md
+            - 17.1.15-2004 年 5 月 27 日，Duane Winner 自述上周还能正常 portinstall 的 editors／openoffice-1.1 Port如今被标记为在 4.x 上损坏，理由是尝试链接 libpthread 失败，他关心这是否只是编译期问题以及何时修复.md
+            - 17.1.16-2004 年 9 月 15 日，clayton 自述一次 portupgrade 中机器硬崩，重启后 pkg_info 报 nvidia-driver 的包信息损坏，诸多工具失效.md
+            - 17.1.17-2005 年 4 月 30 日，David Armour 自述用 pkg_info 配 sort 与 uniq -c 查重复安装，得 autoconf 三份.md
+            - 17.1.18-2005 年 8 月 25 日，Roland Smith 指出 cups-base 等 port 内嵌了部分 xpdf 代码所以仍被 portaudit 标为有漏洞.md
+            - 17.1.19-2005 年 2 月 28 日，Ewald 照 Alexey 建议进 ／usr／ports 跑 make fetchindex 拉取索引后 portsdb -Uu 恢复正常 但他仍不解为何平稳运行数月后突然停摆.md
+            - 17.1.20-2005 年 3 月 9 日，Vittorio 报告 FreeBSD 5.3 新手在 ports 中反复安装 LPRng、apsfilter.md
+            - 17.1.21-2005 年 5 月 12 日，Benjamin Keating 在 FreeBSD 5.4 上跑 make index 报 bsd.port.mk 4847 行有 duplicate script for target 警告，math／fityk 因 wxgtk2 不存在而失败.md
+            - 17.1.22-2005 年 9 月 11 日，bob self 在 FreeBSD-6.0 beta 4 pkg_add -r dvd+rw-tools.md
+            - 17.1.23-2005 年 9 月 21 日，cburchell 在 5.3-RELEASE 上 pkg_add -r 全部报 FTP Unable to get.md
+            - 17.1.24-2006 年 6 月 23 日，Gerard Seibert 回 DSA - JCR，问最近一次更新 ports 树是何时，ports 里的 Samba3 一直在并无新问题.md
+            - 17.1.25-2006 年 11 月 12 日，Lowell Gilbert 回应 Erik Norgaard 用 USE_GECKO=firefox 重编 jdk15 报 nsPluginThread 未声明，自己默认选项装 jdk15 后插件在 firefox 里可用，只编插件不值得几小时人工.md
+            - 17.1.26-2006 年 11 月 22 日，Boris Samorodov 答 Brian 问能否让 portupgrade 或 make install 直接取用包来装依赖.md
+            - 17.1.27-2006 年 10 月 10 日，Scott T. Hildreth 反驳直接用 CPAN 模块的建议.md
+            - 17.1.28-2006 年 10 月 13 日，Karl Agee 在 6.2-PRERELEASE 上 pkg_add -r kde 装完 3.5.4.md
+            - 17.1.29-2006 年 10 月 17 日，ajm 回应 mplayer 重装被 win32-codecs-3.1.0.p8_1,1 forbidden 拦下.md
+            - 17.1.30-2006 年 9 月 3 日，Perry Hutchison 报按回帖方法运行 pkgdb -aFfuv 后 portupgrade 成功，但 abiword 仍编译失败.md
+            - 17.1.31-2006 年 9 月 8 日，Gary Kline 想装 Packages 不自己 build，pkg_add -r 失败后改装 portupgrade.md
+            - 17.1.32-2006 年 9 月 14 日，Colin Percival 说明 portsnap update 生成的Port INDEX 与 portsdb -U 所建的是同一份.md
+            - 17.1.33-2007 年 4 月 10 日，Kris Kennaway 转述 Tijl Coosemans 称 ports 系统无法处理 amd64 的 32 位代码，自己答称其实可以.md
+            - 17.1.34-2007 年 4 月 14 日，Garrett Cooper 说明 Chad Perrin 用 whereis 查不到新装Port多半是用 (t)csh.md
+            - 17.1.35-2007 年 8 月 6 日，Novembre 致谢 Michael Nottebrock，并称执行 portupgrade xkeyboard-config 升级到最新版后.md
+            - 17.1.36-2007 年 8 月 17 日，Erno Immonen 说清 ports 装的包删 ／usr／local ／usr／X11R6 与 ／var／db／pkg ／var／db／ports 即可，pkg_delete -a 也有效但会留残.md
+            - 17.1.37-2007 年 8 月 21 日，dgmm 在 ／usr／ports 用 make search name=ps2ascii 查到 print／dvips2ascii.md
+            - 17.1.38-2007 年 12 月 14 日，Oliver 新装 FreeBSD 7.0-BETA4 后装 rubygem-postgres 失败.md
+            - 17.1.39-2007 年 1 月 27 日，DeuZa 用三机搭 FreeBSD 本地镜像，两小时跑脚本同步一次，distfiles 53gb，6.2-RELEASE 包 15gb.md
+            - 17.1.40-2007 年 7 月 12 日，Michael P. Soulier 用 ports 里的 mercurial 做合并，触发 hgmerge 去找 macOS 的 FileMerge.app 路径并报找不到，反问 FreeBSD 为何带此路径，判定为 hgmerge 自身缺陷.md
+            - 17.1.41-2007 年 6 月 24 日，Zbigniew 在 6.2-STABLE 编 math／sdpa 时 math／atlas 触发 lttst.c 断言失败 Error code 255 机器 AMD Athlon XP 1.6 GHz 1 GB RAM.md
+            - 17.1.42-2007 年 3 月 4 日，Randy Pratt 说明 pkgdb -L 修复旧版 portupgrade 把依赖标为 DELETED 的 bug.md
+            - 17.1.43-2007 年 3 月 27 日，Michael P. Soulier 升级 vim Port时卡在抓补丁阶段.md
+            - 17.1.44-2007 年 5 月 1 日，编译 mount_fusefs.c 时报 mntopts.h 找不到，Tom 建议先确认／usr／src／sbin／mount／mntopts.h 是否存在.md
+            - 17.1.45-2007 年 11 月 23 日，Michael S 在打过补丁的 6.2 上，package_site 指向 6-stable.md
+            - 17.1.46-2007 年 9 月 23 日，Marco Beishuizen 在 6.2 上 portupgrade OpenOffice 2.3.0 后 javaldx pagein soffice.bin 均报 libstdc++.so.6 not found 库在.md
+            - 17.1.47-2008 年 4 月 2 日，Lou Katz 报 webalizer 在 6.1 可正常编译安装 升 6.2 后构建失败 依赖的 gd.4 未找到 而 ports 转而构建 gd-2.0.35 1 仍未提供 gd.4.md
+            - 17.1.48-2008 年 7 月 24 日，就Port管理的大规模做法讨论，Pieter de Goeje 指出技术上无法在未安装依赖的前提下创建包.md
+            - 17.1.49-2008 年 6 月 14 日，反馈系统并存两个 xorg-server 包 xorg-server-1.4_10,1 与 xorg-server-1.2.99.903_1,1 后者Port已到 1.2.99.903_2,1 却升级失败 且 portaudit 判其有 xorg 漏洞 问该移除还是升级.md
+            - 17.1.50-2008 年 6 月 17 日，在 FreeBSD 7.0-release 上升级 ImageMagick 6.4.1.5 时 PerlMagick 26 个测试脚本全部崩溃 wstat 139 共 343 个子测试失败 附完整配置清单与错误日志.md
+            - 17.1.51-2008 年 3 月 27 日，7.0-REL 上 ports make install 从 ftp 服务器下载一直失败 但用 ftp 客户端手动 get 同一 URL 正常 判定是 fetch 受环境变量影响所致 建议命令行直接跑 fetch 复现 参考 fetch(1) 与 fetch(3).md
+            - 17.1.52-2008 年 3 月 30 日，pkgdb -F 后出现 gnome-desktop-2.22.0 指向 nautilus-2.22.1 指向 eel-2.22.1 指向 py25-gnome-2.22.0 指向 tracker-0.6.2_2 再指回 gnome-desktop 的循环依赖.md
+            - 17.1.53-2008 年 5 月 1 日，在 FreeBSD 7.0-RELEASE-p1 上编译 Perl 5.8.8 自定义安装路径仅改安装位置 依赖已成功配置但 make 报 make don't know how to make command-line 中止.md
+            - 17.1.54-2008 年 5 月 12 日，FreeBSD 7.0-RELEASE 下装 netbeans 6.0.1 报 XIO fatal IO error 0，回复者遇同样错误.md
+            - 17.1.55-2008 年 10 月 2 日，编译时 png.h 找不到报 No such file or directory.md
+            - 17.1.56-2008 年 10 月 14 日，先读 vuxml 网站上该包的条目及引用资料 再决定尽管有安全问题是否还要装 若决定装可用 portupgrade 加-m 参数传入 DISABLE_VULNERABILITIES=yes 绕过 否则等修复 通常一周左右会有可用版本.md
+            - 17.1.57-2008 年 10 月 17 日，RW 回答升级 libxml2 不该先跑 make deinstall，portupgrade 会先编译并备份旧包作回滚.md
+            - 17.1.58-2008 年 9 月 19 日，Dan Nelson 建议在 ／etc／make.conf 里设置 WANT_OPENLDAP_VER=23 使 pam_ldap Port在旧 openldap 下也能构建通过.md
+            - 17.1.59-2008 年 9 月 21 日，Michal Petrucha 报从 ports 编译 OpenOffice.org 2.4.1_2 时 configure 找不到 libxml2 随后 dmake 报错最终以包 checksum mismatch 结束.md
+            - 17.1.60-2009 年 4 月 4 日，Matt 设想把 OPTIONS 选项功能下传到编译出的包层面，并以自己维护的 phpMyAdmin Port为例说明第一类情形：选项只影响依赖树.md
+            - 17.1.61-2009 年 4 月 6 日，Oliver Fromme 解答 3.01 包的依赖疑问，说明 pciids 为 hal 所需，并指出约半数依赖与 Xorg 相关，其余涉及 png.md
+            - 17.1.62-2009 年 4 月 7 日，Marek 补充可用 portconfig -a，并给出常规更新流程：csup 更新 ports 树、make index 刷新 INDEX.md
+            - 17.1.63-2009 年 4 月 18 日，梅尔批评Port升级工具检测到包仍被依赖、询问用户卸载后命令却因依赖存在而报错，极不友好.md
+            - 17.1.64-2009 年 4 月 29 日，Klaus Friis Østergaard 运行 pkgdb -fFu 仍报临时目录链接过多，重建 Ruby、db41.md
+            - 17.1.65-2009 年 12 月 1 日，Yuri 反映用 portupgrade -aPP 只取二进制包时缺大量包，他说有可用包时升级会快很多倍，这问题已看很久.md
+            - 17.1.66-2009 年 1 月 8 日，David Horn 说 portsnap 与 freebsd-update 现在都很快.md
+            - 17.1.67-2009 年 1 月 25 日，cpghost 在四核机上并行装Port得手写 make configure 与 make -j5 build，因为只有 build 阶段吃 -jN.md
+            - 17.1.68-2009 年 7 月 24 日，Axel 询问除 mysql51-server 之外其他守护进程在 portupgrade 或 portmanager 升级后是否会自动运行新版本.md
+            - 17.1.69-2009 年 3 月 16 日，Howse 装 6.4-RELEASE 后配置 portsnap.conf 取消 REFUSE 注释以只保留英文.md
+            - 17.1.70-2009 年 5 月 29 日，Erik 反馈说应用 Greg Larkin 给出的补丁之后 libapreq2 Port能够正确编译并顺利安装，问题由此解决.md
+            - 17.1.71-2010 年 7 月 28 日，Zbigniew Szalbot 升级 Apache 卡在 apr 依赖.md
+            - 17.1.72-2010 年 10 月 4 日，发件人 Len Conrad 装 py-django11 时 MarkupSafe 依赖报错，路径与Ports 树不符.md
+            - 17.1.73-2011 年 4 月 20 日，Гуляев Гоша 在 8.2-STABLE 编译 editors／libreoffice 卡 sdbc_hsqldb.dpj javac 抛 IllegalArgumentException 并 Abort trap： 6，试全关、KDE+Java、KDE 无 Java.md
+            - 17.1.74-2011 年 8 月 29 日，Steven Friedrich 按 UPDATING 升级 gtk20 构建失败.md
+            - 17.1.75-2011 年 2 月 15 日，Alain G. Fabry 称 portsnap 应用元数据补丁时反复报补丁压缩包不存在并判定元数据损坏，此故障已持续两周以上.md
         - 17.2-桌面应用与 X11
-            - 17.2.1-年7月31日wwwfirefox20014_1无法显示数学符号先装x11font.md
-            - 17.2.2-2011年2月25日自述先在无外接显示器下启动再执行xrandroutputLV.md
-            - 17.2.3-2011年7月18日自述对OCR求助尝试claraocr未果公开自建FreeBS.md
-            - 17.2.4-2011年7月22日自述使TeXLive2011在FreeBSD789的i386.md
-            - 17.2.5-2011年11月8日自述FreeBSD82跑KDE4与Opera1152一用Op.md
-            - 17.2.6-2011年9月27日自述在90BETA3上运行EnemyTerritory菜单与.md
-            - 17.2.7-2012年4月8日回称FreeBSD的midi本身并无缺陷症结在软件无缘无故弃用.md
-            - 17.2.8-年4月10日MichaelOHenly自述为在root下运行xemacs在roo.md
-            - 17.2.9-年1月6日JeffShevlen报告在FreeBSD44下只启动X环境时SiS5.md
-            - 17.2.10-年8月11日TechnicalInformation自述FreeBSD43所附X.md
-            - 17.2.11-年6月12日GuyMiddleton把系统从31升到51后发现xsetdpms只.md
-            - 17.2.12-年9月12日jason称nForce2主板加载agp_nvidia后一启动X即黑.md
-            - 17.2.13-年6月22日BrianAstill自述自己那块NVidiaRivaTNT264显.md
-            - 17.2.14-年6月11日JohnLevine用光盘装54跑用X的Linux程序如acrore.md
-            - 17.2.15-年3月1日bsdnooby询问X11应用内打印是否有简便办法称花六小时只出两张白.md
-            - 17.2.16-年3月15日Vilot装flashpluginmozilla0412后Firef.md
-            - 17.2.17-年11月16日TinoBoss回复MarcoBeishuizen关于Flash插.md
-            - 17.2.18-年12月23日引AndyHarrison的字体问题贴PramodVenugopa.md
-            - 17.2.19-年2月27日BjörnKönig就前一条误解作澄清称Opera等在FreeBSD.md
-            - 17.2.20-年3月13日ChrisManess贴出dvdslideshow72的报错Svei.md
-            - 17.2.21-年11月6日OliverIberien说明自己把linuxrealplayer用.md
-            - 17.2.22-年11月16日ChristianWalther查出X退出后黑屏的元凶是DRI注释.md
-            - 17.2.23-年8月11日AdamJRichardson因缺OpenGL驱动暂停安装Xorg7.md
-            - 17.2.24-年1月10日TFC用swt321重编azureus后添加新种子即崩溃HotSpo.md
-            - 17.2.25-年6月3日DinoVliet在amd64跑FreeBSD62的机器上升级xorg.md
-            - 17.2.26-年3月16日KevinKinsey在Xfce44与Thunar自动挂载USB棒的.md
-            - 17.2.27-年11月11日TinoEngel在FreeBSD70BETA2上说原生浏览器一律.md
-            - 17.2.28-年10月30日JoshuaIsom换了支持1440x900的液晶控制台画面被自动.md
-            - 17.2.29-年4月12日LtCdData装好FreeBSD70Release后觉得kdm登录.md
-            - 17.2.30-年4月27日Novembre自述从ports装CompizFusion因缺gio.md
-            - 17.2.31-年8月4日ConradJSabatier当日装好Gnash的HEAD版本实测比官.md
-            - 17.2.32-年12月12日WarrenBlock说Thunar配xfce44与hal自动挂载.md
-            - 17.2.33-年11月1日自述日常笔记本运行KDE358配FreeBSD70R稳定测试机上po.md
-            - 17.2.34-年11月17日在FreeBSD70搭配KDE35的环境下使用LoginManag.md
-            - 17.2.35-年11月17日补充KDE35下登录管理器以正确root口令进入管理员模式后对话框.md
-            - 17.2.36-年10月9日回复称应根治调整xterm中ANSI颜色序列对应的RGB值不确定xt.md
-            - 17.2.37-年10月24日BrianDavis用dvdrip从DVD提取音轨为wav格式mp.md
-            - 17.2.38-年9月4日发件人在Wine环境下尝试安装GoogleChrome此前别人试过后授.md
-            - 17.2.39-年9月17日Vinny说在同样包上遇到问题javaldx不认FreeBSD基金会.md
-            - 17.2.40-年8月7日ChadPerrin不建议把Arora当轻量浏览器推荐给没用Qt工具包.md
-            - 17.2.41-年8月11日AftabJahanSubedar在72STABLE上装KDE4时Q.md
-            - 17.2.42-年2月1日GarrettCooper升级xorg74后重建libxcb相关por.md
-            - 17.2.43-年2月8日RemPRoberti装gtkpod向挂载到mntipod的Nano写.md
-            - 17.2.44-年2月11日HowardYeh在IntelG45GMA4500HD机器上71RE.md
-            - 17.2.45-年1月24日EA刚升级X用全新配置启动后只见到还没有窗口的默认画面鼠标无法移动他.md
-            - 17.2.46-年1月30日AlexGoncharov大升级把xorgserver从153_11.md
-            - 17.2.47-年6月7日Manolis说xorgconf里那个设置只在AutoAddDevic.md
-            - 17.2.48-年3月13日Keith那行已在xorgconf里且是xorg更新后让鼠标正常工作.md
-            - 17.2.49-年11月9日ATiRadeonR4670在跑80RC2amd64的机器上装Rad.md
-            - 17.2.50-年4月29日Yuri在rcconf写hald_enable=YES开启hald修.md
-            - 17.2.51-年6月7日EitanAdler实测mixer命令mixervol+4与vol4相.md
-            - 17.2.52-年10月16日发件人MarcoBeishuizen尝试运行chromium立即崩.md
+            - 17.2.1-2008 年 7 月 31 日，www firefox 2.0.0.14_1 无法显示数学符号先装 x11-fonts mathfonts-4.1_5 并经 w3.org 测试套件验证后改装 x11-fonts webfonts 修复.md
+            - 17.2.2-2011 年 2 月 25 日，自述先在无外接显示器下启动再执行 xrandr --output LVDS --primary --output VGA --auto --left-of LVDS 使含 Fluxbox 菜单的内屏成主屏外屏作辅助.md
+            - 17.2.3-2011 年 7 月 18 日，自述对 OCR 求助尝试 claraocr 未果，公开自建 FreeBSD 宏集，新增由 ps 或 .rof 直接生成 pcl 支持.md
+            - 17.2.4-2011 年 7 月 22 日，自述使 TeX Live 2011 在 FreeBSD 7、8、9 的 i386 与 amd64 开箱即用，并预置扩展支持页面覆盖 asy.md
+            - 17.2.5-2011 年 11 月 8 日，自述 FreeBSD 8.2 跑 KDE 4 与 Opera 11.52.md
+            - 17.2.6-2011 年 9 月 27 日，自述在 9.0-BETA3 上运行 Enemy Territory，菜单与游戏中仅得一至二帧每秒，自疑显卡所致.md
+            - 17.2.7-2012 年 4 月 8 日，回称 FreeBSD 的 midi 本身并无缺陷，症结在软件无缘无故弃用 OSS 转投 alsa.md
+            - 17.2.8-2001 年 4 月 10 日，Michael O'Henly 自述为在 root 下运行 xemacs.md
+            - 17.2.9-2002 年 1 月 6 日，Jeff Shevlen 报告在 FreeBSD 4.4 下只启动 X 环境时.md
+            - 17.2.10-2001 年 8 月 11 日，Technical Information 自述 FreeBSD 4.3 所附 XFree86 3.3.6 缺少其 Voodoo 5 显卡驱动.md
+            - 17.2.11-2003 年 6 月 12 日，Guy Middleton 把系统从 3.1 升到 5.1 后发现 xset dpms 只进 standby 不再进 suspend.md
+            - 17.2.12-2003 年 9 月 12 日，jason 称 nForce2 主板加载 agp_nvidia 后一启动 X 即黑屏冻结.md
+            - 17.2.13-2004 年 6 月 22 日，Brian Astill 自述自己那块 NVidia Riva TNT2 64 显卡在 XFree86 里用 nv 驱动工作正常.md
+            - 17.2.14-2005 年 6 月 11 日，John Levine 用光盘装 5.4，跑用 X 的 Linux 程序如 acroread 时报 No fonts found 提示 fontconfig 配置不当，字体文件在 FreeBSD 与 Linux emulation 两处都在位，gnome 正常.md
+            - 17.2.15-2005 年 3 月 1 日，bsdnooby 询问 X11 应用内打印是否有简便办法，称花六小时只出两张白纸，HP Deskjet 940c 已试 Gnome2.md
+            - 17.2.16-2005 年 3 月 15 日，Vilot 装 flashplugin-mozilla-0.4.12 后 Firefox 频繁崩溃.md
+            - 17.2.17-2005 年 11 月 16 日，Tino Boss 回复 Marco Beishuizen 关于 Flash 插件配置，称本机 flashplugin6 可用.md
+            - 17.2.18-2006 年 12 月 23 日，引 Andy Harrison 的字体问题贴，Pramod Venugopal 称在家目录建 .fonts.conf.md
+            - 17.2.19-2006 年 2 月 27 日，Björn König 就前一条误解作澄清，称 Opera 等在 FreeBSD 4.6 上编译的纯二进制程序.md
+            - 17.2.20-2006 年 3 月 13 日，Chris Maness 贴出 dvd-slideshow 7.2 的报错.md
+            - 17.2.21-2006 年 11 月 6 日，Oliver Iberien 说明自己把 linux-realplayer 用 portdowngrade 降到候选列表第 4 个版本并保留原有 linux-gtk，正文引块提到十月二十六日的提交使该包依赖 linux-gtk2 与 linux-gdk-pixbuf.md
+            - 17.2.22-2006 年 11 月 16 日，Christian Walther 查出 X 退出后黑屏的元凶是 DRI，注释掉 xorg.conf 里该模块后就能正常启停.md
+            - 17.2.23-2007 年 8 月 11 日，Adam J Richardson 因缺 OpenGL 驱动暂停安装 Xorg 7.2 建议先看 ／usr／ports／UPDATING 的 Xorg 段 打算等升级到 7.0-RELEASE 时再装.md
+            - 17.2.24-2007 年 1 月 10 日，TFC 用 swt3.2.1 重编 azureus 后添加新种子即崩溃，HotSpot 虚拟机在 libc.so.6 的 realpath 函数上触发 SIGSEGV.md
+            - 17.2.25-2007 年 6 月 3 日，Dino Vliet 在 amd64 跑 FreeBSD 6.2 的机器上升级 xorg 后升级 multimedia／gstreamer-plugins80 Port编译失败，贴出含 caca 系列函数隐式声明与多个未定义标识符报错的完整输出并求助.md
+            - 17.2.26-2007 年 3 月 16 日，Kevin Kinsey 在 Xfce 4.4 与 Thunar 自动挂载 USB 棒的讨论中只追问 Chess Griffin 一件事：HAL 与 Thunar 到底是先装了哪一个.md
+            - 17.2.27-2007 年 11 月 11 日，Tino Engel 在 FreeBSD 7.0-BETA2 上说原生浏览器一律拒绝插件.md
+            - 17.2.28-2007 年 10 月 30 日，Joshua Isom 换了支持 1440x900 的液晶，控制台画面被自动缩放得拉伸模糊并裁掉边角.md
+            - 17.2.29-2008 年 4 月 12 日，LtCdData 装好 FreeBSD 7.0 Release 后觉得 kdm 登录框字太小、几乎无法辨认.md
+            - 17.2.30-2008 年 4 月 27 日，Novembre 自述从 ports 装 Compiz Fusion 因缺 gio-fam-backend 与 glib-2.16.3 未成 后改从 packages 装 结果带出整套 Gnome 包 后台多跑起 gconfd-2 与 gnome-pty-helper.md
+            - 17.2.31-2008 年 8 月 4 日，Conrad J. Sabatier 当日装好 Gnash 的 HEAD 版本，实测比官方发布版 0.8.3 表现明显更好.md
+            - 17.2.32-2008 年 12 月 12 日，Warren Block 说 Thunar 配 xfce 4.4 与 hal 自动挂载 SD 卡正常，卡写保护时系统两次试挂载并认为失败.md
+            - 17.2.33-2008 年 11 月 1 日，自述日常笔记本运行 KDE 3.5.8 配 FreeBSD 7.0R 稳定 测试机上 ports 的 KDE 4.1.0 过不稳 两版表现差异明显.md
+            - 17.2.34-2008 年 11 月 17 日，在 FreeBSD 7.0 搭配 KDE 3.5 的环境下使用 LoginManager，输入正确的 root 密码后弹出的对话框直接关闭.md
+            - 17.2.35-2008 年 11 月 17 日，补充 KDE 3.5 下登录管理器以正确 root 口令进入管理员模式后对话框仍关闭且设置项灰化，用户属 wheel 组但终端内仍可 su 到 root.md
+            - 17.2.36-2008 年 10 月 9 日，回复称应根治，调整 xterm 中 ANSI 颜色序列对应的 RGB 值，不确定 xterm 是否支持以及 RGB 值是否硬编码，类似 rxvt 与 PuTTY 与 SecureCRT 都可行.md
+            - 17.2.37-2008 年 10 月 24 日，Brian Davis 用 dvdrip 从 DVD 提取音轨为 wav 格式，mp3 编码则用 k3b 或其他图形前端处理.md
+            - 17.2.38-2008 年 9 月 4 日，发件人在 Wine 环境下尝试安装 Google Chrome，此前别人试过后授权协议后卡住；他绕过 slashdot 的跳转后成功渲染页面.md
+            - 17.2.39-2008 年 9 月 17 日，Vinny 说在同样包上遇到问题 javaldx 不认 FreeBSD 基金会提供的 Java 运行时 通过更新 ports 树并源码构建 OpenOffice 解决.md
+            - 17.2.40-2009 年 8 月 7 日，Chad Perrin 不建议把 Arora 当轻量浏览器推荐给没用 Qt 工具包应用的人，KDE 用户或许合适，否则至少在这一类上不达标.md
+            - 17.2.41-2009 年 8 月 11 日，Aftab Jahan Subedar 在 7.2-STABLE 上装 KDE4 时 Qt 版本错位，需手动卸载旧 qt 库再安装.md
+            - 17.2.42-2009 年 2 月 1 日，Garrett Cooper 升级 xorg 7.4 后重建 libxcb 相关 ports 一次迭代即完成无 cairo 相关 ports 问题.md
+            - 17.2.43-2009 年 2 月 8 日，Rem P Roberti 装 gtkpod 向挂载到 ／mnt／ipod 的 Nano 写 Petite Fleur 报 Permission denied，文件在 gtkpod 里显示但写不进 Nano，怀疑权限问题.md
+            - 17.2.44-2009 年 2 月 11 日，Howard Yeh 在 Intel G45 GMA-4500HD 机器上 7.1-RELEASE 安装正常，但启动 xorg 即发生内核页错误.md
+            - 17.2.45-2009 年 1 月 24 日，EA 刚升级 X，用全新配置启动后只见到还没有窗口的默认画面，鼠标无法移动.md
+            - 17.2.46-2009 年 1 月 30 日，Alex Goncharov 大升级把 xorg-server 从 1.5.3_1,1 升到 1.5.3_2,1.md
+            - 17.2.47-2009 年 6 月 7 日，Manolis 说 xorg.conf 里那个设置只在 AutoAddDevices 为假时才生效.md
+            - 17.2.48-2009 年 3 月 13 日，Keith 那行已在 xorg.conf 里且是 xorg 更新后让鼠标正常工作所必需，只是没在 ServerLayout 段末行.md
+            - 17.2.49-2009 年 11 月 9 日，ATi Radeon R4670 在跑 8.0-RC2 amd64 的机器上装 Radeon 驱动即死机，画面先出条纹再全黑.md
+            - 17.2.50-2010 年 4 月 29 日，Yuri 在 rc.conf 写 hald_enable=＂YES＂开启 hald，修好 kdm 首次登录失败，但系统大约每 15 秒无响应几秒.md
+            - 17.2.51-2010 年 6 月 7 日，Eitan Adler 实测 mixer 命令：mixer vol +4 与 vol -4 相对增减正常.md
+            - 17.2.52-2010 年 10 月 16 日，发件人 Marco Beishuizen 尝试运行 chromium 立即崩溃并收到 X Window System 的 BadAccess 私有资源访问被拒错误，opera 也因无法读取内核内存报 SIGSEGV 崩溃.md
         - 17.3-系统管理与命令行
-            - 17.3.1-2011年3月2日Fleuriot说重启进单用户可确保多数守护进程与网络相关服务.md
-            - 17.3.2-2011年11月5日发件人跑dateu发现本机时钟亦不同步跑ntpdateubu.md
-            - 17.3.3-2011年10月11日自述若用户不想等脚本跑完才结束会话可用batch或at启动.md
-            - 17.3.4-2011年10月26日Glatting请人解释rs与tfd的含义自述读日志以为系.md
-            - 17.3.5-2011年9月4日给出快速而粗暴的办法在crontab中写入MAILTO=一行并.md
-            - 17.3.6-2011年9月25日AntonioOlivares回复称无论切换到哪个ttyv自.md
-            - 17.3.7-2011年7月22日自述因工作繁忙迟迟未能测试而致歉回默认rcd配置后问题解决曾.md
-            - 17.3.8-2011年5月7日自述用200MB假postscript文件实测cat写入dev.md
-            - 17.3.9-2011年11月13日发件人自述把ttys的ttyv7由gettyPc改为usr.md
-            - 17.3.10-2011年9月27日谓改用perl正则或削去行首行尾通配段即正常指出sed用替换.md
-            - 17.3.11-2012年4月5日发件人称EDITOR必须是可执行文件名会原样交给exec一族作.md
-            - 17.3.12-2012年4月5日发件人引usrsrcusrsbincroncrontabcro.md
-            - 17.3.13-年5月27日GannaterJános自述误删了etcpasswd中一批自己不认.md
-            - 17.3.14-年5月23日某管理员自述在FreeBSD411R与43R两台机器之间复制约9GB.md
-            - 17.3.15-年6月12日某运营者自述用两台450MHzPIII配Barracuda硬盘以rs.md
-            - 17.3.16-年1月8日MathewKanner自述把备份服务器迁到FreeBSD后用标准re.md
-            - 17.3.17-年12月29日DerrickRyalls在无法登录的讨论串中自述其全部账户的过期.md
-            - 17.3.18-年7月10日lewiz回复MonahBaki时提醒其需要nss_ldap并指出l.md
-            - 17.3.19-年9月2日EdAlley自述在FreeBSD48上devnull的权限会被某个未.md
-            - 17.3.20-年2月5日WalterCPelissero自述ktrace日志中系统调用名映射不.md
-            - 17.3.21-年12月13日SergeyZaharchenko指出grepps输出时有时无是因.md
-            - 17.3.22-年1月7日Landman按建议rmrrootcpan清出一半空间根分区使用率降到.md
-            - 17.3.23-年7月13日MarceldeVries在FreeBSD54STABLE上装好Do.md
-            - 17.3.24-年12月14日HugoSilva在62RC1用OpenBSM给username加.md
-            - 17.3.25-年2月15日NenadMihajlovic用61PRERELEASE的mount.md
-            - 17.3.26-年6月9日ChuckSwiger答sysctl名称随FreeBSD版本而变故de.md
-            - 17.3.27-年6月19日ErikTrulsson回JimStapleton下列出的libc文.md
-            - 17.3.28-年3月18日ChuckSwiger说明FreeBSD默认不启用telnet可在e.md
-            - 17.3.29-年3月27日MartinHudec针对Chris想收集屏幕输出的疑问建议在etc.md
-            - 17.3.30-年5月15日GiorgosKeramidas说明manman无输出时应先用fin.md
-            - 17.3.31-年5月18日Freminlins报ntpd在FreeBSD54与60上无法作服务.md
-            - 17.3.32-年10月3日PhilipHallstrom回cron跑不起来的求助帖只问cron.md
-            - 17.3.33-年10月21日AlexZbyslaw转述martinko报mount在sbinu.md
-            - 17.3.34-年4月26日MatthewSeaman转述Irsla想用find的exec取代x.md
-            - 17.3.35-年3月22日ChuckSwiger分析IBMVM向smtpswoxse连接时回发.md
-            - 17.3.36-年8月31日JohnAlmberg自述他试过各种办法都无法让shell保持挂起所.md
-            - 17.3.37-年2月25日AlexZbyslaw指出ntptrace是一个Perl脚本因系统缺.md
-            - 17.3.38-年6月2日反馈执行cpusrsharemisctermcapetctermcap.md
-            - 17.3.39-年6月11日推荐使用口令生成工具apg生成随机字符串分别给出不可发音与可发音两种.md
-            - 17.3.40-年6月30日Marcelo需要按登录信息在两台POP3服务器之间切换用户连接但登.md
-            - 17.3.41-年3月2日greyscanner进程每十一分钟出现无法终止留驻内存用户注释掉sa.md
-            - 17.3.42-年3月6日排查62应用SIGHUP后流程受阻实为误判根因是signalhandl.md
-            - 17.3.43-年3月19日Erik说明Linux没有基本系统自带的makeGNUmake直接安.md
-            - 17.3.44-年5月14日DavidKelly补充修正分卷解压方法分卷中混有inf文件会使ta.md
-            - 17.3.45-年11月13日回复对vmstatz输出中的UMA桶失败计数进行逐条解读并建议先把.md
-            - 17.3.46-年11月19日作者修正自己先前说法loadertunable应通过limits而.md
-            - 17.3.47-年11月30日GiorgosKeramidas指出awk是模式规则语言建议按第三.md
-            - 17.3.48-年10月21日用户收到多台FreeBSD服务器的Nagios告警显示连接被拒排查.md
-            - 17.3.49-年9月18日ManishJain报告FreeBSD62无X图形界面控制台的两个问.md
-            - 17.3.50-年4月8日Polytropon答复称FreeBSD里并没有DOSmode正确说法.md
-            - 17.3.51-年4月15日JonathanMcKeown答复无法登录的求助binsh属动态链接.md
-            - 17.3.52-年4月17日Steve认为提问者显然读过手册也自行排查过便回忆早年配合sendm.md
-            - 17.3.53-年8月2日发件人Danny用pgpsendmail替换sendmail后rcd报.md
-            - 17.3.54-年8月18日TimJudd说在闪存设备上要用mountuw更新已挂载项而非重新挂.md
-            - 17.3.55-年8月21日JeffreyGoldberg建议全量备份再显式排除他rsnapsh.md
-            - 17.3.56-年8月24日KarlVogel用md5追71系统增删改的文件mkdirroott.md
-            - 17.3.57-年12月30日SteveBertrand在cshrc中加别名srm为find加管.md
-            - 17.3.58-年7月29日ZbigniewSzalbot在rcconf里配置了ntpd_ena.md
-            - 17.3.59-年5月4日Shaun报告groups与id无参数时缺www与mercurial组.md
-            - 17.3.60-年11月17日Len于FreeBSD运行rdiffbackup128portsn.md
-            - 17.3.61-年9月7日Ruben有个脚本读取masterpasswdsmbpasswd与gr.md
-            - 17.3.62-年4月2日Norbert报告本地接口连sendmail问候语立刻返回从家中局域网.md
-            - 17.3.63-年7月9日DavidKelly复现Bonomi提的dd管道片段子shell内dd.md
-            - 17.3.64-年5月5日皮奥兹在周末的故障里看到某台机器邮件队列堆得很高走完一次要四分钟以上注.md
-            - 17.3.65-年2月19日DanielStaal建议用procmail规则把邮件全部转发到外部.md
+            - 17.3.1-2011 年 3 月 2 日，Fleuriot 说重启进单用户可确保多数守护进程与网络相关服务未启动，更安全但并非必需.md
+            - 17.3.2-2011 年 11 月 5 日，发件人跑 date -u 发现本机时钟亦不同步，跑 ntpdate -u -b ua.pool.ntp.org 后时钟即准确.md
+            - 17.3.3-2011 年 10 月 11 日，自述若用户不想等脚本跑完才结束会话，可用 batch 或 at 启动脚本；shell 文档声称 .logout 在 shell 退出时执行.md
+            - 17.3.4-2011 年 10 月 26 日，Glatting 请人解释 rs 与 tfd 的含义，自述读日志以为系统不满的是 JMB363 芯片.md
+            - 17.3.5-2011 年 9 月 4 日，给出快速而粗暴的办法：在 crontab 中写入 MAILTO=＂＂ 一行，并提示注意此举会彻底关掉 cron 作业的一切发信.md
+            - 17.3.6-2011 年 9 月 25 日，Antonio Olivares 回复称无论切换到哪个 ttyv，自动登录都不再生效，仅陈述结果而未附新配置或报错信息，仍停留在等待诊断的状态.md
+            - 17.3.7-2011 年 7 月 22 日，自述因工作繁忙迟迟未能测试而致歉，回默认 rc.d 配置后问题解决.md
+            - 17.3.8-2011 年 5 月 7 日，自述用 200MB 假 postscript 文件实测，cat 写入 ／dev／ulpt0 得 2.5MB／s，dd bs=1m 同速.md
+            - 17.3.9-2011 年 11 月 13 日，发件人自述把 ttys 的 ttyv7 由 getty Pc 改为 ／usr／sbin／jexec 1 ／usr／libexec／getty Pc，kill -HUP 1 后 jexec 1 ps 见状态 Is+J，去 v7 登录落入 jail，登出后 getty 正常重生.md
+            - 17.3.10-2011 年 9 月 27 日，谓改用 perl 正则或削去行首行尾通配段即正常，指出 sed 用替换命令而非直接打印匹配才使输出混乱，并解因前导通配贪婪.md
+            - 17.3.11-2012 年 4 月 5 日，发件人称 EDITOR 必须是可执行文件名，会原样交给 exec 一族作待加载的执行体；他自称不是 emacs 用户.md
+            - 17.3.12-2012 年 4 月 5 日，发件人引 usr／src／usr.sbin／cron／crontab／crontab.c 第 404 行 execlp 调用与 man 3 exec 说明，判定 EDITOR 只能填编辑器可执行文件名；附加选项即不再满足该要求，别名也不可用，只能自写脚本.md
+            - 17.3.13-2003 年 5 月 27 日，Gannater János 自述误删了 ／etc／passwd 中一批自己不认识的系统用户，导致完全无法登录，遂贴出文件内容.md
+            - 17.3.14-2001 年 5 月 23 日，某管理员自述在 FreeBSD 4.1.1R 与 4.3R 两台机器之间复制约 9GB 文件时，Cisco 2514 路由器突然失去响应.md
+            - 17.3.15-2001 年 6 月 12 日，某运营者自述用两台 450MHz PIII 配 Barracuda 硬盘，以 rsync 每 15 分钟同步约 2GB 的用户数据、配置与网站.md
+            - 17.3.16-2001 年 1 月 8 日，Mathew Kanner 自述把备份服务器迁到 FreeBSD 后，用标准 restore 即可还原 Solaris.md
+            - 17.3.17-2003 年 12 月 29 日，Derrick Ryalls 在无法登录的讨论串中自述，其全部账户的过期日期曾被莫名设为 1969 年 12 月，改回后登录恢复.md
+            - 17.3.18-2003 年 7 月 10 日，lewiz 回复 Monah Baki 时提醒其需要 nss_ldap.md
+            - 17.3.19-2003 年 9 月 2 日，Ed Alley 自述在 FreeBSD 4.8 上 ／dev／null 的权限会被某个未知进程改为 crw-------.md
+            - 17.3.20-2004 年 2 月 5 日，Walter C. Pelissero 自述 ktrace 日志中系统调用名映射不全，遂在 Debian 上用 strace 对照被传参数.md
+            - 17.3.21-2005 年 12 月 13 日，Sergey Zaharchenko 指出 grep ps 输出时有时无是因 ps 采样时 shell 尚未启动 grep.md
+            - 17.3.22-2005 年 1 月 7 日，Landman 按建议 rm -r ／root／.cpan 清出一半空间，根分区 ／ 使用率降到 51%.md
+            - 17.3.23-2005 年 7 月 13 日，Marcel de Vries 在 FreeBSD 5.4-STABLE 上装好 Domino Notes 6.5.3 Linux 版.md
+            - 17.3.24-2006 年 12 月 14 日，Hugo Silva 在 6.2-RC1 用 OpenBSM 给 username 加 fm fd 后 chmod 与删文件事件完全没有记录 praudit 里只看到 su 到 root 只有把 naflags 改成 all 才多出审计项.md
+            - 17.3.25-2006 年 2 月 15 日，Nenad Mihajlovic 用 6.1-PRERELEASE 的 mount_smbfs 挂 Windows w2k3 AD 共享只有 300-350 kBps，smbclient 却超 8MB／s，已按手册配 ／etc／nsmb.conf，问是 bug 还是配置不当.md
+            - 17.3.26-2006 年 6 月 9 日，Chuck Swiger 答 sysctl 名称随 FreeBSD 版本而变，故 debug.bpf_bufsize 报 unknown oid, 称 net.bpf.maxbufsize 与 net.bpf.bufsize 单位为字节非 MB, 加大缓冲须改 KVA 区域.md
+            - 17.3.27-2006 年 6 月 19 日，Erik Trulsson 回 Jim Stapleton：下列出的 libc 文件就是 glibc，至少 libc.so.6 是.md
+            - 17.3.28-2006 年 3 月 18 日，Chuck Swiger 说明 FreeBSD 默认不启用 telnet，可在 ／etc／inetd.conf 打开并重启或 HUP inetd.md
+            - 17.3.29-2006 年 3 月 27 日，Martin Hudec 针对 Chris 想收集屏幕输出的疑问，建议在 ／etc／syslog.conf 解开 console.info 一行.md
+            - 17.3.30-2006 年 5 月 15 日，Giorgos Keramidas 说明 man man 无输出时应先用 find 配 -type f 交 xargs rm -f 清掉 ／usr／share／man 下所有陈旧 cat 预格式化页，MANPATH 其余目录同样处理.md
+            - 17.3.31-2006 年 5 月 18 日，Freminlins 报 ntpd 在 FreeBSD 5.4 与 6.0 上无法作服务器、4.6.2 上却完全正常.md
+            - 17.3.32-2006 年 10 月 3 日，Philip Hallstrom 回 cron 跑不起来的求助帖，只问 cron 守护进程是否在跑以及 ／var／log／cron 输出如何.md
+            - 17.3.33-2006 年 10 月 21 日，Alex Zbyslaw 转述 martinko 报 mount 在 ／sbin：／usr／sbin 里找不到 mount_fusefs.md
+            - 17.3.34-2007 年 4 月 26 日，Matthew Seaman 转述 Irsla 想用 find 的 -exec 取代 xargs.md
+            - 17.3.35-2007 年 3 月 22 日，Chuck Swiger 分析 IBM VM 向 smtp.swox.se 连接时回发 RST 的成因：SYN-ACK 未匹配 VM 的初始序号.md
+            - 17.3.36-2008 年 8 月 31 日，John Almberg 自述他试过各种办法都无法让 shell 保持挂起，所以问题不像是忘了输入 exit 退出所致.md
+            - 17.3.37-2008 年 2 月 25 日，Alex Zbyslaw 指出 ntptrace 是一个 Perl 脚本.md
+            - 17.3.38-2008 年 6 月 2 日，反馈执行 cp ／usr／share／misc／termcap ／etc／termcap 时提示二者内容相同未被复制.md
+            - 17.3.39-2008 年 6 月 11 日，推荐使用口令生成工具 apg 生成随机字符串 分别给出不可发音与可发音两种模式的实际输出及对应参数 并附相关参考链接说明来源.md
+            - 17.3.40-2008 年 6 月 30 日，Marcelo 需要按登录信息在两台 POP3 服务器之间切换用户连接 但登录属于 pop3 握手的一部分 难以在会话中途转移连接并保留已发送的信息 此前建议的 Pen 不适用 因需在登录完成后才能决定目标 他打算用 socat 编写脚本.md
+            - 17.3.41-2008 年 3 月 2 日，greyscanner 进程每十一分钟出现无法终止留驻内存，用户注释掉 save-entropy cron 条目后进程仍持续.md
+            - 17.3.42-2008 年 3 月 6 日，排查 6.2 应用 SIGHUP 后流程受阻实为误判，根因是 signal handler 内逻辑错误使其永不返回因而屏蔽后续信号.md
+            - 17.3.43-2008 年 3 月 19 日，Erik 说明 Linux 没有基本系统自带的 make，GNU make 直接安装为 make；FreeBSD 有项目维护的基本系统 make.md
+            - 17.3.44-2008 年 5 月 14 日，David Kelly 补充修正分卷解压方法 分卷中混有 .inf 文件会使 tar 出错 不能直接用 cat scontrib 通配全匹配 应改为只匹配分卷段 a 与 b 的通配式再管道给 tar -xvzf -.md
+            - 17.3.45-2008 年 11 月 13 日，回复对 vmstat -z 输出中的 UMA 桶失败计数进行逐条解读，并建议先把 vm.kmem_size 调大之后再观察实际效果变化.md
+            - 17.3.46-2008 年 11 月 19 日，作者修正自己先前说法，loader tunable 应通过 limits 而非 sysctl 显示.md
+            - 17.3.47-2008 年 11 月 30 日，Giorgos Keramidas 指出 awk 是模式规则语言 建议按第三字段分别用 $3 ~ ／adjective／ $3 ~ ／noun／ $3 ~ ／verb／ 三个模式块输出 adj. n. v. 避免长串 if else.md
+            - 17.3.48-2008 年 10 月 21 日，用户收到多台 FreeBSD 服务器的 Nagios 告警显示连接被拒，排查发现告警与多个计划任务时间相关，怀疑因作业繁忙致系统未能响应查询而误报.md
+            - 17.3.49-2008 年 9 月 18 日，Manish Jain 报告 FreeBSD 6.2 无 X 图形界面控制台的两个问题：Delete 键触发退格而非前进删除.md
+            - 17.3.50-2009 年 4 月 8 日，Polytropon 答复称 FreeBSD 里并没有 DOS mode，正确说法是 console mode 或 text mode.md
+            - 17.3.51-2009 年 4 月 15 日，Jonathan McKeown 答复无法登录的求助：／bin／sh 属动态链接，库一旦丢失便出问题.md
+            - 17.3.52-2009 年 4 月 17 日，Steve 认为提问者显然读过手册也自行排查过，便回忆早年配合 sendmail 为上千用户手动处理 vacation 留言的辛苦，觉得有必要分享自己的做法.md
+            - 17.3.53-2009 年 8 月 2 日，发件人 Danny 用 pgpsendmail 替换 sendmail 后 rc.d 报错 SENDMAIL refers back to PGPsendmail 并寻找缺失的安装说明 手册页无更多信息.md
+            - 17.3.54-2009 年 8 月 18 日，Tim Judd 说在闪存设备上要用 mount -uw 更新已挂载项，而非重新挂载.md
+            - 17.3.55-2009 年 8 月 21 日，Jeffrey Goldberg 建议全量备份再显式排除，他 rsnapshot 的 exclude 清单含 ／var／log 与 ／usr／obj.md
+            - 17.3.56-2009 年 8 月 24 日，Karl Vogel 用 md5 追 7.1 系统增删改的文件.md
+            - 17.3.57-2009 年 12 月 30 日，Steve Bertrand 在 .cshrc 中加别名 srm 为 find 加管道 xargs rm 命令，重新登录后报 srm 找不到.md
+            - 17.3.58-2009 年 7 月 29 日，Zbigniew Szalbot 在 rc.conf 里配置了 ntpd_enable 及默认 ntpd_flags 后时钟不同步 Jerry 指出这些是默认值可注释掉 移除后时钟已同步.md
+            - 17.3.59-2009 年 5 月 4 日，Shaun 报告 groups 与 id 无参数时缺 www 与 mercurial 组而用 username 作参数则完整 echo test 写属 www 组的 tmp 文件报 Permission denied.md
+            - 17.3.60-2009 年 11 月 17 日，Len 于 FreeBSD 运行 rdiff-backup 1.2.8.md
+            - 17.3.61-2009 年 9 月 7 日，Ruben 有个脚本读取 master.passwd、smbpasswd 与 group 生成 LDIF 导入 LDAP.md
+            - 17.3.62-2010 年 4 月 2 日，Norbert 报告本地接口连 sendmail 问候语立刻返回，从家中局域网另一台机器连过去则要延迟五秒才发问候，他想立刻响应.md
+            - 17.3.63-2010 年 7 月 9 日，David Kelly 复现 Bonomi 提的 dd 管道片段，子 shell 内 dd 达 count 退出即断管.md
+            - 17.3.64-2010 年 5 月 5 日，皮奥兹在周末的故障里看到某台机器邮件队列堆得很高、走完一次要四分钟以上，注意到某个内核参数偏低而询问能否加倍，并说明当时没有重启机器.md
+            - 17.3.65-2011 年 2 月 19 日，Daniel Staal 建议用 procmail 规则把邮件全部转发到外部地址，再用 formail 把旧 root 邮箱喂入 procmail.md
         - 17.4-Web 与数据库服务
-            - 17.4.1-2011年6月15日他转贴另一人实测称mysql_connect在网页中可用而从.md
-            - 17.4.2-2011年3月16日BCook在82amd64用phpfpm配Imagick读d.md
-            - 17.4.3-2011年9月21日自述指libmysqlclientso18出自databas.md
-            - 17.4.4-年10月26日某开发者引Apache公告指出1320中的若干缺陷已在1322修复.md
-            - 17.4.5-年12月21日某运营者自述在其语境里高流量指的是每月约300GB静态内容那台换到.md
-            - 17.4.6-年2月13日某用户自述前一晚装apach13fp并下载fp50freebsdta.md
-            - 17.4.7-年7月2日某运营者报告squid在FreeBSD40RELEASE上长期占用99.md
-            - 17.4.8-年10月23日某运营者在FreeBSD45上用ports装的wuftpd261由.md
-            - 17.4.9-年1月7日Vitalis在Oracle讨论串中自述经多轮测试用Oracle7客户.md
-            - 17.4.10-年7月6日LucasHolt回应mod_mono卡死询问自述数月前就4x系列上的.md
-            - 17.4.11-年3月12日Mark自述其Apache1329报bindAddressalrea.md
-            - 17.4.12-年12月21日ReneMendoza在FreeBSD54上为squirrelma.md
-            - 17.4.13-年5月6日PatMaddox在FreeBSD53上偶能让lighttpd配合fa.md
-            - 17.4.14-年5月17日OlivierNicole说apache13modssl迁到port.md
-            - 17.4.15-年9月7日ToomasAas的FreeBSD411跑PHP4311libicon.md
-            - 17.4.16-年4月18日vsftpd近期cvsup后端口仍要带sh后缀脚本才能开机自启维护者.md
-            - 17.4.17-年8月26日CyberLeo转述4G上限疑问据所引博客指限制来自x86上MyIS.md
-            - 17.4.18-年7月28日MaximKhitrov说把fastcgiphp脚本从usrloca.md
-            - 17.4.19-年6月19日建议若不复制该mysql就在mycnf注释logbin去掉二进制日志.md
-            - 17.4.20-年6月20日回应FreeBSD作PBX的询问生产环境为FreeBSD61RELE.md
-            - 17.4.21-年10月31日发件人发现51mysql端口实际为5126rc遂回退到5067并询.md
-            - 17.4.22-年9月16日IanSmith回贴Annelise的apache13已运行三年PI.md
-            - 17.4.23-年8月25日ColinBrace在lighttpdconf里关掉了CGI与fas.md
-            - 17.4.24-年7月16日Doyle在64上把PHP526升到5210后WebCalendar.md
-            - 17.4.25-年6月12日GaryKline自述先前写就的PHP脚本突报date依赖系统时区设.md
+            - 17.4.1-2011 年 6 月 15 日，他转贴另一人实测称 mysql_connect 在网页中可用而从命令行调用失败，并给出本机 php 命令输出：版本为 5.2.17.md
+            - 17.4.2-2011 年 3 月 16 日，B. Cook 在 8.2 amd64 用 php-fpm 配 Imagick 读 djvu 时 php 挂死无输出.md
+            - 17.4.3-2011 年 9 月 21 日，自述指 libmysqlclient.so.18 出自 databases／mysql55-client，约半年前已成默认，旧客户端不会自动升级.md
+            - 17.4.4-2001 年 10 月 26 日，某开发者引 Apache 公告指出 1.3.20 中的若干缺陷已在 1.3.22 修复，其中 mod_include 的缺陷会让子进程崩溃.md
+            - 17.4.5-2001 年 12 月 21 日，某运营者自述在其语境里高流量指的是每月约 300GB 静态内容，那台换到 FreeBSD 的机器第一次离线前只调高了 max users.md
+            - 17.4.6-2002 年 2 月 13 日，某用户自述前一晚装 apach13-fp 并下载 fp50.freebsd.tar.Z.md
+            - 17.4.7-2002 年 7 月 2 日，某运营者报告 squid 在 FreeBSD 4.0-RELEASE 上长期占用 99.50% 至 99.99% 的 CPU.md
+            - 17.4.8-2002 年 10 月 23 日，某运营者在 FreeBSD 4.5 上用 ports 装的 wu-ftpd 2.6.1 由 inetd 启动 登录时持续报虚拟主机访问被拒 尽管 ftphosts 中已按 IP 放行该用户.md
+            - 17.4.9-2004 年 1 月 7 日，Vitalis 在 Oracle 讨论串中自述经多轮测试用 Oracle 7 客户端成功连上 Oracle 9i.md
+            - 17.4.10-2004 年 7 月 6 日，Lucas Holt 回应 mod_mono 卡死询问，自述数月前就 4.x 系列上的该问题提交过 bug 报告，优先级被下调且至今未解决.md
+            - 17.4.11-2004 年 3 月 12 日，Mark 自述其 Apache 1.3.29 报 bind： Address already in use.md
+            - 17.4.12-2005 年 12 月 21 日，Rene Mendoza 在 FreeBSD 5.4 上为 squirrelmail 安装 php4-4.4.1_3 编译通过后安装阶段失败 libtool 复制 libphp4.so 后找不到 libphp4.la 报 grep 错误中断.md
+            - 17.4.13-2005 年 5 月 6 日，Pat Maddox 在 FreeBSD 5.3 上偶能让 lighttpd 配合 fastcgi 跑通，但每次重启 lighttpd 就失效.md
+            - 17.4.14-2005 年 5 月 17 日，Olivier Nicole 说 apache13-modssl 迁到 ports 后新 httpd 找不到模块 httpd -t -DSSL 报找不到 ／usr／local／apache／libexec／apache／mod_mmap_static.so.md
+            - 17.4.15-2005 年 9 月 7 日，Toomas Aas 的 FreeBSD 4.11 跑 PHP 4.3.11，libiconv 仍是 1.8_2.md
+            - 17.4.16-2006 年 4 月 18 日，vsftpd 近期 cvsup 后Port仍要带.sh 后缀脚本才能开机自启，维护者却称向后兼容与旧风格并存且 5.X 不受影响，行为不一致存疑.md
+            - 17.4.17-2007 年 8 月 26 日，CyberLeo 转述 4G 上限疑问，据所引博客指限制来自 x86 上 MyISAM 索引算法而非文件系统，64 位平台限制更高.md
+            - 17.4.18-2007 年 7 月 28 日，Maxim Khitrov 说把 fastcgi-php 脚本从 ／usr／local／etc／rc.d 移到 ／etc／rc.d 就完全正常.md
+            - 17.4.19-2008 年 6 月 19 日，建议若不复制该 mysql 就在 my.cnf 注释 log-bin 去掉二进制日志 并认为 mysql 只是报错并非元凶 曾见已删除但仍打开的 apache 日志撑满分区 重启服务后解决.md
+            - 17.4.20-2008 年 6 月 20 日，回应 FreeBSD 作 PBX 的询问，生产环境为 FreeBSD 6.1-RELEASE i386 加 asterisk-1.2.9.1_1.md
+            - 17.4.21-2008 年 10 月 31 日，发件人发现 5.1 mysql Port实际为 5.1.26-rc，遂回退到 5.0.67，并询问是否有办法查明 FreeBSD 7 下当前版本.md
+            - 17.4.22-2008 年 9 月 16 日，Ian Smith 回贴：Annelise 的 apache 1.3 已运行三年，PID 可见可停可重启，本地 lynx 访问主页正常而外部超时;机器能 ping 通、跑 FreeBSD 5.5 左右，重启无效，她再问下一步.md
+            - 17.4.23-2009 年 8 月 25 日，Colin Brace 在 lighttpd.conf 里关掉了 CGI 与 fastCGI 并重启 webserver.md
+            - 17.4.24-2009 年 7 月 16 日，Doyle 在 6.4 上把 PHP 5.2.6 升到 5.2.10 后 WebCalendar 1.2.0b1 报 pid httpd exited on signal 4 及 child pid exit signal Illegal instruction 重装依赖无效.md
+            - 17.4.25-2010 年 6 月 12 日，Gary Kline 自述先前写就的 PHP 脚本突报 date() 依赖系统时区设置警告.md
         - 17.5-杂项
-            - 17.5.1-年2月19日丹尼尔朗于2002年2月19日告知列表他已重写由栗山淳与瓦伦蒂诺瓦谢.md
-            - 17.5.2-年8月15日耶斯佩尔斯克里弗于2002年8月15日报告他将ftpFreeBSDo.md
-            - 17.5.3-年10月13日IgorRobul在20051013回复EfrenBravo关于代.md
-            - 17.5.4-2011年6月25日FreeBSD90CURRENTr223522M上sleep.md
-            - 17.5.5-2011年3月24日本封正文整段转引FrédéricPerrin的回帖署名者只附.md
-            - 17.5.6-2011年5月24日自述控制台已能正常显示带重音字符的文件名但Apache访问仍.md
-            - 17.5.7-2011年5月30日AdamVandeMore的答复被转贴supports虽被提.md
-            - 17.5.8-2011年11月28日ThomasMueller承认自己在subjectline.md
-            - 17.5.9-2011年10月7日Bonomi指出包含ncursesh即带入宏定义KEY_Fn.md
-            - 17.5.10-2011年10月31日Polytropon以本机usrsharemiscbsdf.md
-            - 17.5.11-2011年9月9日BerntHansson自述推测崩溃系swap空间耗尽或硬件故.md
-            - 17.5.12-2011年9月23日致信Damien谢其及时答复称照做仍遇错疑因最初错误所致gt.md
-            - 17.5.13-2011年9月29日ohartman认为Andrea看到的gdb输出与自己那份相.md
+            - 17.5.1-2002 年 2 月 19 日，丹尼尔·朗于 2002 年 2 月 19 日告知列表，他已重写由栗山淳与瓦伦蒂诺·瓦谢托起稿的镜像站文档，并给出位于慕尼黑工业大学服务器的预览网址.md
+            - 17.5.2-2002 年 8 月 15 日，耶斯佩尔·斯克里弗于 2002 年 8 月 15 日报告，他将 ftp.FreeBSD.org 升级至 4.6-STABLE 后重启.md
+            - 17.5.3-2005 年 10 月 13 日，Igor Robul 在 2005-10-13 回复 Efren Bravo 关于代理服务器选型的询问，推荐 oops 代理.md
+            - 17.5.4-2011 年 6 月 25 日，FreeBSD 9.0-CURRENT r223522M 上 sleep 后台运行再 dtrace -P syscall 探测.md
+            - 17.5.5-2011 年 3 月 24 日，本封正文整段转引 Frédéric Perrin 的回帖，署名者只附签名；被引者自述因肩伤打字困难，由 Brad 提示后做递归 grep.md
+            - 17.5.6-2011 年 5 月 24 日，自述控制台已能正常显示带重音字符的文件名，但 Apache 访问仍返回 404；贴出访问日志行显示请求该 docx 路径时返回 404.md
+            - 17.5.7-2011 年 5 月 30 日，Adam Vande More 的答复被转贴：support.s 虽被提及，却没有 586 专属条目，只有若干 i686 项.md
+            - 17.5.8-2011 年 11 月 28 日，Thomas Mueller 承认自己在 subject line 把 device 与 options 写反.md
+            - 17.5.9-2011 年 10 月 7 日，Bonomi 指出包含 ncurses.h 即带入宏定义，KEY_F(n) 的 n 可取 0 到 64，这 64 个连续值起于 KEY_F0.md
+            - 17.5.10-2011 年 10 月 31 日，Polytropon 以本机 ／usr／share／misc／bsd-family-tree 的 The UNIX system family tree： Research and BSD 为对照，指出 FreeBSD 区分操作系统与移植软件而 Linux 无此分界.md
+            - 17.5.11-2011 年 9 月 9 日，Bernt Hansson 自述推测崩溃系 swap 空间耗尽或硬件故障.md
+            - 17.5.12-2011 年 9 月 23 日，致信 Damien 谢其及时答复，称照做仍遇错，疑因最初错误所致——gtar 无论是源码还是包都装不上.md
+            - 17.5.13-2011 年 9 月 29 日，ohartman 认为 Andrea 看到的 gdb 输出与自己那份相仿，记得回溯之前的最后一行指向 libldap60.so.md
             - 17.5.14-4.0 的其他特性.md
-            - 17.5.15-年12月8日某管理员自述其逐一试用过多款ISP计费系统称BillMax虽运行于各.md
-            - 17.5.16-年11月27日BlakeSwensen自述某台机器的日志出现rpcstatd非法.md
-            - 17.5.17-年8月22日某用户自述在FreeBSD45上运行程序报libc_rso3缺失磁盘.md
-            - 17.5.18-年4月28日PaulHoffman回复AlessandrodeManzano关于.md
-            - 17.5.19-年6月30日JasperOMalley指出那台被拿来开玩笑的IBM超级计算机是S.md
-            - 17.5.20-年12月7日ThomasLippert回复MinnesotaSlinky关于控制.md
-            - 17.5.21-年3月10日TerryLambert自述IBM收购Whistle时其InterJ.md
-            - 17.5.22-年1月26日ChrisSouza自述运行45RELEASE的服务器反复重启日志出.md
-            - 17.5.23-年7月26日SimonBarner在AMD64对比Gentoo的讨论中指出Fre.md
-            - 17.5.24-年2月7日克里斯肯纳威引述阿莱杭德罗普尔弗的自述对方照fdpprimer装sp1.md
-            - 17.5.25-年1月15日ColinRaven称数日前自己在53RELEASE上也遇到与Eri.md
-            - 17.5.26-年7月21日MarkusTrippelsdorf回复GőcziSzabolcs关.md
-            - 17.5.27-年6月21日LawrencePetrykanyn在FreeBSD53双引导机从p.md
-            - 17.5.28-年5月30日EugeneHercun指出若整个团队要迁到FreeBSD就不该怕文.md
-            - 17.5.29-年4月27日ColinPercival未说清为何有人要预览给出sortcomm3.md
-            - 17.5.30-年8月9日NikolasBritton就BSDstatsv20唯一键讨论重申自己.md
-            - 17.5.31-年2月23日ChuckSwiger答没有能转换正则的工具多数正则无法用有限长度的.md
-            - 17.5.32-年1月30日LowellGilbert答陈旧权限文件之问说陈旧一词大体与厨房里同.md
-            - 17.5.33-年7月12日VictorRomanArchidona为GentooFreeBSD.md
-            - 17.5.34-年7月25日MatthiasFechner答DavidStanford问Simp.md
-            - 17.5.35-年7月29日JonathanHorne承接JerryMcAllister不知Ne.md
-            - 17.5.36-年5月12日KennethBond指出安全公告页把61RELEASE标为Norm.md
-            - 17.5.37-年10月27日RogerRockyVetterberg回AndyGreenwoo.md
-            - 17.5.38-年9月27日NJThomas记起RicoSecada报的backgroundpo.md
-            - 17.5.39-年9月18日MathiasPickerstable试mls设mls54后跑set.md
-            - 17.5.40-年9月27日vuthecuong每次登录70CURRENT日志里反复刷inope.md
-            - 17.5.41-年1月15日DominikZalewski在FreeBSD61i386上运行ph.md
-            - 17.5.42-年7月28日GiorgosKeramidas指出原故障仅为数值莫名改变而jema.md
-            - 17.5.43-年7月29日讨论自动插入邮件免责声明不可行理由是脚本难以准确猜测回复中的MIME.md
-            - 17.5.44-年3月15日回应编译器疑点建议先在代码中加printf或fprintf到stde.md
-            - 17.5.45-年10月5日用户报告在FreeBSD70RELEASEp2上用gnuradio和.md
-            - 17.5.46-年10月24日NateEldredge回话说rtld查找带版本号的libutil.md
-            - 17.5.47-年9月2日SteveFranks在amd64上运行32位FreeBSD程序即报l.md
-            - 17.5.48-年9月9日Eighner回复RolandSmith称欧元字符不在iso88591.md
-            - 17.5.49-年9月23日RW用Wine跑Windows版ENT程序自测devrandom输出.md
-            - 17.5.50-年4月3日gahn查libgssapiso发现是指向libgssapiso2的符.md
-            - 17.5.51-年12月17日RolandSmith说明他查aristotlethoughtor.md
-            - 17.5.52-年2月20日HerbertLanghans在FreeBSD71上只有strfil.md
-            - 17.5.53-年1月29日BillMoran回复Nerius关于安全漏洞的疑问认为70快一个月.md
-            - 17.5.54-年6月5日Manolis转引JasonHelfman的说法他在80CURRENT.md
-            - 17.5.55-年3月31日GiuseppePagnoni在i386的FreeBSD71RELE.md
-            - 17.5.56-年5月19日PeterSteele的信号处理器加锁后把标志位置零再唤醒条件变量并.md
-            - 17.5.57-年11月12日Jackson补上原本遗漏的pusheax后代码即可正常输出指出此.md
-            - 17.5.58-年10月31日OlivierNicole为造成的打扰致歉承认是自己出错说明72机.md
-            - 17.5.59-年9月22日AflatoonAflatooni的FreeBSD63服务器被入侵他.md
-            - 17.5.60-年8月21日SteffenNeubauer自述FreeBSD81RELEASE上.md
-            - 17.5.61-年8月18日ClintonAdams承认上一封误贴了别的论坛内容补上服务器正确追.md
-            - 17.5.62-freebsdquestionsmessages2403251.md
-            - 17.5.63-freebsdquestionsmessages2406961.md
-            - 17.5.64-freebsdquestionsmessages2407676.md
-            - 17.5.65-freebsdquestionsmessages2407834.md
+            - 17.5.15-2003 年 12 月 8 日，某管理员自述其逐一试用过多款 ISP 计费系统，称 BillMax 虽运行于各类 Unix 平台但界面复杂，对部分人难以上手.md
+            - 17.5.16-2001 年 11 月 27 日，Blake Swensen 自述某台机器的日志出现 rpc.statd 非法主机名记录，其中夹带格式化字符串与大量填充.md
+            - 17.5.17-2002 年 8 月 22 日，某用户自述在 FreeBSD 4.5 上运行程序报 libc_r.so.3 缺失，磁盘上仅有 compat22 与 compat3x 中的压缩版本.md
+            - 17.5.18-2003 年 4 月 28 日，Paul Hoffman 回复 Alessandro de Manzano 关于 Dell PowerEdge 600SC 能否配合 FreeBSD 工作的询问，称自己有两台该型号服务器运行 FreeBSD 4.8 且一切正常.md
+            - 17.5.19-2000 年 6 月 30 日，Jasper O'Malley 指出那台被拿来开玩笑的 IBM 超级计算机是 SP 系统.md
+            - 17.5.20-2003 年 12 月 7 日，Thomas Lippert 回复 Minnesota Slinky 关于控制台与 X 分辨率的提问.md
+            - 17.5.21-2003 年 3 月 10 日，Terry Lambert 自述 IBM 收购 Whistle 时其 InterJet II 产品已包含 Squid.md
+            - 17.5.22-2004 年 1 月 26 日，Chris Souza 自述运行 4.5-RELEASE 的服务器反复重启.md
+            - 17.5.23-2004 年 7 月 26 日，Simon Barner 在 AMD64 对比 Gentoo 的讨论中指出，FreeBSD -current 近几日已默认改用 X.org.md
+            - 17.5.24-2005 年 2 月 7 日，克里斯·肯纳威引述阿莱杭德罗·普尔弗的自述：对方照 fdp-primer 装 sp-1.3.4 包.md
+            - 17.5.25-2005 年 1 月 15 日，Colin Raven 称数日前自己在 5.3-RELEASE 上也遇到与 Eric F Crist 相同的 phpMyAdmin 报错 PDF-Lite-6.0.0p1.tar.gz 缺失仅有 6.0.1 可用.md
+            - 17.5.26-2005 年 7 月 21 日，Markus Trippelsdorf 回复 Gőczi Szabolcs 关于 cups 并行后端 hang 导致 cups 无法启动的问题，建议切换到轮询模式并给出 lptcontrol -p -d ／dev／lpt0 命令.md
+            - 17.5.27-2005 年 6 月 21 日，Lawrence Petrykanyn 在 FreeBSD 5.3 双引导机从 ports 装 OpenOffice 先成功后报无法 fetch 与低版本已装，pkg_delete 报 packing list，pkg_add ／var filesystem is full.md
+            - 17.5.28-2005 年 5 月 30 日，Eugene Hercun 指出若整个团队要迁到 FreeBSD 就不该怕文本操作，称若成员只是编译就该用熟悉的系统.md
+            - 17.5.29-2006 年 4 月 27 日，Colin Percival 未说清为何有人要预览，给出 sort、comm -3 -.md
+            - 17.5.30-2006 年 8 月 9 日，Nikolas Britton 就 BSDstats v2.0 唯一键讨论重申自己方案最佳，能识别 NAT 后的主机.md
+            - 17.5.31-2006 年 2 月 23 日，Chuck Swiger 答没有能转换正则的工具，多数正则无法用有限长度的纯文本串表达，这正是用 regex 的初衷.md
+            - 17.5.32-2006 年 1 月 30 日，Lowell Gilbert 答陈旧权限文件之问，说陈旧一词大体与厨房里同义，即该被丢掉却还没丢掉的东西，他很久没见过，不确定对方那一个怎么来的.md
+            - 17.5.33-2006 年 7 月 12 日，Victor Roman Archidona 为 Gentoo／FreeBSD for Amd64 移植 FreeBSD.md
+            - 17.5.34-2006 年 7 月 25 日，Matthias Fechner 答 David Stanford 问 Simple DNS Configuration.md
+            - 17.5.35-2006 年 7 月 29 日，Jonathan Horne 承接 Jerry McAllister 不知 Nero 选项的话.md
+            - 17.5.36-2006 年 5 月 12 日，Kenneth Bond 指出安全公告页把 6.1-RELEASE 标为 Normal 表示仅 12 个月安全支持.md
+            - 17.5.37-2006 年 10 月 27 日，Roger 'Rocky' Vetterberg 回 Andy Greenwood 问 csup 能否沿用既有 cvsup 文件，答配置相同.md
+            - 17.5.38-2006 年 9 月 27 日，N.J. Thomas 记起 Rico Secada 报的 background-position-horizontal 未实现后冻住.md
+            - 17.5.39-2007 年 9 月 18 日，Mathias Picker -stable 试 mls.md
+            - 17.5.40-2007 年 9 月 27 日，vuthecuong 每次登录 7.0 CURRENT 日志里反复刷 in openpam_dispatch()： pam_nologin.so： no pam_sm_authenticate() 与 no pam_sm_setcred(),问这些报错有害还是无害，该怎样解决.md
+            - 17.5.41-2008 年 1 月 15 日，Dominik Zalewski 在 FreeBSD 6.1 i386 上运行 php5-cli 命令得 Segmentation fault 11 core dumped，浏览器执行同一脚本正常，调整 extensions.ini 模块顺序无效.md
+            - 17.5.42-2008 年 7 月 28 日，Giorgos Keramidas 指出原故障仅为数值莫名改变，而 jemalloc 内存耗尽与用户数据随机损坏是两类不同问题.md
+            - 17.5.43-2008 年 7 月 29 日，讨论自动插入邮件免责声明不可行，理由是脚本难以准确猜测回复中的 MIME 边界与 content-type，改动格式很可能破坏邮件.md
+            - 17.5.44-2008 年 3 月 15 日，回应编译器疑点建议先在代码中加 printf 或 fprintf 到 stderr 实跑观察变量何时被赋值并强调 C 语言可做许多本不该做的事同时运行 lint 检查结果却只抱怨／／注释及／usr／include 内的报错.md
+            - 17.5.45-2008 年 10 月 5 日，用户报告在 FreeBSD 7.0-RELEASE-p2 上用 gnuradio 和 openoffice.org-3 时 python -c import wx 可靠复现卡在 _umtx_op 系统调用 SIGINT 无效 SIGQUIT 才杀进程并 dump.md
+            - 17.5.46-2008 年 10 月 24 日，Nate Eldredge 回话说 rtld 查找带版本号的 libutil.so.5 所以库须放／lib 以便／usr 挂载前即可用.md
+            - 17.5.47-2008 年 9 月 2 日，Steve Franks 在 amd64 上运行 32 位 FreeBSD 程序即报 ／libexec／ld-elf32.so.1 找不到并中止.md
+            - 17.5.48-2008 年 9 月 9 日，Eighner 回复 Roland Smith，称欧元字符不在 iso-8859-1 而在 iso-8859-15 须通过 rc.conf 或 vidcontrol 加载 iso 字体，并批评 UTF-8 对多数欧洲语言使用者是无谓浪费.md
+            - 17.5.49-2008 年 9 月 23 日，RW 用 Wine 跑 Windows 版 ENT 程序自测 ／dev／random 输出，认为统计结果属正常波动.md
+            - 17.5.50-2009 年 4 月 3 日，gahn 查 libgssapi.so 发现是指向 libgssapi.so.2 的符号链接而目标文件不存在并且另一台 6.3 机器上也没有.md
+            - 17.5.51-2009 年 12 月 17 日，Roland Smith 说明他查 aristotle.thought.org 主机名可解析且可 ping 通 但 ethic.thought.org 返回 NXDOMAIN 无法解析 plato.thought.org 仍可 ping 通.md
+            - 17.5.52-2009 年 2 月 20 日，Herbert Langhans 在 FreeBSD 7.1 上只有 strfile 的 manpage 没有二进制.md
+            - 17.5.53-2009 年 1 月 29 日，Bill Moran 回复 Nerius 关于安全漏洞的疑问，认为 7.0 快一个月后停止更新就应升到 7.1：有一整个月可计划安排升级.md
+            - 17.5.54-2009 年 6 月 5 日，Manolis 转引 Jason Helfman 的说法：他在 8.0-CURRENT tinderbox 上编译 openoffice 3 多次失败，而在 7.2-RELEASE 上能正常编译，稳定版尚未测.md
+            - 17.5.55-2009 年 3 月 31 日，Giuseppe Pagnoni 在 i386 的 FreeBSD 7.1-RELEASE-p4 上运行依赖 xview 的应用报_XAllocID 断言失败并中止；已更新Ports 树并执行 portupgrade -rf libxcb.md
+            - 17.5.56-2009 年 5 月 19 日，Peter Steele 的信号处理器加锁后把标志位置零再唤醒条件变量并解锁，起初工作正常，过一阵就不再响应 -2 信号.md
+            - 17.5.57-2009 年 11 月 12 日，Jackson 补上原本遗漏的 push eax 后代码即可正常输出，指出此前失败正源于这条指令缺失.md
+            - 17.5.58-2009 年 10 月 31 日，Olivier Nicole 为造成的打扰致歉，承认是自己出错.md
+            - 17.5.59-2009 年 9 月 22 日，Aflatoon Aflatooni 的 FreeBSD 6.3 服务器被入侵，他在查入侵路径，Apache 错误日志反复出现多个下载工具未找到.md
+            - 17.5.60-2010 年 8 月 21 日，Steffen Neubauer 自述 FreeBSD 8.1-RELEASE 上 RAIDZ1 三盘阵读写随机卡顿，NFS 上 VLC 听歌常阻塞，dd 直读原盘首次九点八秒零字节，再试九点五秒达一十一亿字节，排除 ZFS 层原因.md
+            - 17.5.61-2011 年 8 月 18 日，Clinton Adams 承认上一封误贴了别的论坛内容.md
+            - 17.5.62-freebsd-questions 邮件 2403251（空模板件）.md
+            - 17.5.63-freebsd-questions 邮件 2406961（空模板件）.md
+            - 17.5.64-freebsd-questions 邮件 2407676（空模板件）.md
+            - 17.5.65-freebsd-questions 邮件 2407834（空模板件）.md
 - 第38卷-FreeBSD 人物志：从创始成员到全球维护者（1993–2026）
     - 第1章-创始成员与 386BSD 交接
         - 1.1-Greenman：从 patchkit 到独立系统
@@ -13397,44 +13397,472 @@
     - 第7章-NetBSD 8.x：ARM 现代化与现代平台扩展（2018–2020）
         - 7.1-NetBSD 8.0 的历史背景
         - 7.2-ARM64 支持的发展
+            - 7.2.1-旧 ARM 多核 → 改进 ARM 多核与 aarch64 支持（2018）.md
+            - 7.2.2-旧 SMP 实现 → 改进 SMP 支持（2018）.md
         - 7.3-虚拟化环境中的 NetBSD
         - 7.4-虚拟化与云环境的适配（2018–2020）
         - 7.5-项目规模与生态挑战
         - 7.6-NetBSD 8.0 的 64 位 ARM（aarch64）支持
+            - 7.6.1-2018年1月20日TobiasUlmer自述数周排查NFS客户端挂起与崩溃指n.md
+            - 7.6.2-2018年2月9日JoergSonnenberger判定MaximeVillar.md
+            - 7.6.3-2018年2月16日SevanJaniyan在pcidevs数据未被利用的线程发.md
+            - 7.6.4-2018年3月15日ChristosZoulas就compat工作表态称会修好对.md
+            - 7.6.5-2018年3月20日ManuelBouyer就sunxi时钟树回帖说明部分像素时.md
+            - 7.6.6-2018年4月2日Mouse提出新系统调用提案自述在写只运行用户态的模拟器本应陷.md
+            - 7.6.7-2018年4月2日JaromirDolecek就FFS读取触发过多TLBshoo.md
+            - 7.6.8-2018年4月5日RobertElz否认被怀疑的archamd64includ.md
+            - 7.6.9-2018年4月5日ManuelBouyer在simplefb讨论中补充若std.md
+            - 7.6.10-2018年4月27日AndrewCagney回复所用板卡为ODROIDC1反馈1.md
+            - 7.6.11-2018年4月26日AndrewCagney回复该补丁并未改善其100mb连接的.md
+            - 7.6.12-2018年5月26日macallan就环境光传感器讨论只打趣一句称其实可以滥用如.md
+            - 7.6.13-2018年6月1日JasonThorpe就i2c探测讨论回应指出树莓派用的是智能.md
+            - 7.6.14-2018年6月1日BradSpencer就i2c探测讨论回应指出他过往的传感器驱.md
+            - 7.6.15-2018年7月12日MartinHusemann回复说自己内存不足以在tmpfs.md
+            - 7.6.16-2018年7月12日MartinHusemann报告本地AMD上未能复现构建变慢.md
+            - 7.6.17-2018年7月12日PhilNelson就xhci互斥锁断言线程反驳Husema.md
+            - 7.6.18-2018年7月19日ManuelBouyer查明Xen不用softint_dis.md
+            - 7.6.19-2018年7月19日ManuelBouyer调试XendomU挂在psrlz时发.md
+            - 7.6.20-2018年7月18日ManuelBouyer报告近期HEAD在Xen上经anit.md
+            - 7.6.21-2018年8月1日MartinHusemann追查80构建集群变慢发现单任务实测.md
+            - 7.6.22-2018年8月27日DavidHolland就proplib提出三项追问使命.md
+            - 7.6.23-2018年12月29日Fauberteau就nouveau在NVIDIAGeFo.md
+            - 7.6.24-年3月1日maya在GSoC2019申请线程中回复申请人建议依次接入freeno.md
+            - 7.6.25-2019年1月21日GregTroxel就raidframe调试插桩补丁回帖可见.md
+            - 7.6.26-2019年2月2日RyoONODERA在amd64current上用pkgsrc.md
+            - 7.6.27-2019年9月28日matthewgreen称清理明显是进步但不理解32位平台为.md
+            - 7.6.28-aarch64 支持的开发历程.md
+            - 7.6.29-与 FreeBSD bhyve 与 Linux KVM 的比较.md
+            - 7.6.30-年2月18日JaredMcNeill询问berte打算如何处理FFSv1FFSv.md
+            - 7.6.31-年11月10日MartinHusemann解释armv8是一代CPU而非单一架构.md
+            - 7.6.32-年11月24日TaylorCampbell指出libc的__floatsitf等.md
+            - 7.6.33-年1月22日DarcyCain报告x86intrc有仅在INTRSTACKSIZ.md
+            - 7.6.34-年2月16日SevanJaniyan在pcidevs数据未利用线程回帖称把ver.md
+            - 7.6.35-年3月2日SevanJaniyan在bootcfg回退线程称已改etctgz随盘.md
+            - 7.6.36-年3月15日ChristosZoulas引述PaulGoyette认为保留ifd.md
+            - 7.6.37-年4月3日MartinHusemann反驳只有amd64支持directmap称.md
+            - 7.6.38-年4月5日ManuelBouyer就console与simplefb的取舍转贴M.md
+            - 7.6.39-年4月29日coypu提交清理私有80211rateset声明的补丁并请求提交确.md
+            - 7.6.40-年5月27日KamilRytarowski发布QEMU兼容状态wiki页面声明对.md
+            - 7.6.41-年6月1日某开发者在i2c快速事务线程里转述维护者关于改用gpioiic验证的排.md
+            - 7.6.42-年6月18日maya转发一篇讲Skylake上pause指令变慢的外部文章并提到.md
+            - 7.6.43-年6月28日BennySiegert确认urtwn固件命令5即R92C_CMD_.md
+            - 7.6.44-年7月7日RobertElz引用WarnerLosh转述PoulHenning引.md
+            - 7.6.45-年7月12日ThorLancelotSimon追问是否像构建集群那样从tmpfs.md
+            - 7.6.46-年8月1日RobertElz追溯sockioh同组唯一约定源于最初BSD定义认为.md
+            - 7.6.47-年8月10日matthewgreen指出那次26分钟构建只累计1418毫秒持锁时.md
+            - 7.6.48-年8月17日MichaelvanElst说明响应处理对同一次重复完成调用完成函数.md
+            - 7.6.49-年9月18日MichaelvanElst建议可在无实际IO时预判bmap与str.md
+            - 7.6.50-年10月16日EmmanuelDreyfus引芯片文档称其USB描述符为不可变并.md
+            - 7.6.51-年10月31日SiddharthMuralee求助把kcov4特性作为dev模块.md
+            - 7.6.52-年11月18日MartinHusemann反对改签名方案建议在XEN上直接让CL.md
+            - 7.6.53-年12月5日thorpej在本线程中汇总审出的补丁缺陷谓PK_KMEM仅当mm_.md
+            - 7.6.54-年12月15日MatthewGreen提醒不要随意改动结构体指出外部接口本已是6.md
+            - 7.6.55-年2月17日KamilRytarowski回应JasonThorpe的futex.md
+            - 7.6.56-年2月20日BERTRANDJoël补充每个线程内fork后紧跟execve去掉.md
+            - 7.6.57-年4月18日ManuelBouyer再报一例evbarm挂起用带LOCKDEBU.md
+            - 7.6.58-年6月4日Górny提交补丁新增x86_xsave_offsets与x86_xs.md
+            - 7.6.59-年6月15日matu就ehci附件与分离不对称问题作回应确认ehci_init与.md
+            - 7.6.60-年6月25日KUSABATakeshi更新补丁把ifnet结构里的if_desc.md
+            - 7.6.61-年7月5日MichałGórny把x86寄存器测试合并为单一基函数以减少重复提升.md
+            - 7.6.62-年7月21日coypu针对TaylorRCampbell关于启动时阻塞一次等待熵.md
+            - 7.6.63-年7月22日PaulKoning与JoergSonnenberger就密码学强随.md
+            - 7.6.64-年8月1日HaukeFath反对在状态过滤路由器下使用NFSoverTCP指出重.md
+            - 7.6.65-年9月8日ThorLancelotSimon指出fexecve会让挂载noexe.md
+            - 7.6.66-年9月10日DavidHolland反驳O_EXEC可在运行期动态开关的提议理由.md
+            - 7.6.67-年9月13日GregTroxel就压缩线程回应说他清楚能自行设置USE_XZ_S.md
+            - 7.6.68-年9月15日ChristosZoulas认为namecache相当可靠因为描述符.md
+            - 7.6.69-年9月24日EmmanuelDreyfus澄清自己只改了引导程序而未动内核mul.md
+            - 7.6.70-年9月26日KamilRytarowski补充称现实中银行等机构服务仍依赖Fla.md
+            - 7.6.71-年10月12日MichaelvanElst指出动态栈扩展受阻的程度比动态分配器不.md
+            - 7.6.72-年11月6日JasonThorpe反对__read_relaxed命名认为rel.md
+            - 7.6.73-年11月11日JoergSonnenberger转述MaximeVillard关.md
+            - 7.6.74-年11月18日JasonThorpe转述Mouse关于创建大空洞需付出分配并初始.md
+            - 7.6.75-年12月17日AndrewDoran认为字符设备被卸载的竞态可解提出需协调spe.md
+            - 7.6.76-年12月24日ChristosZoulas就合并x86ptrace寄存器测试至单.md
+            - 7.6.77-年5月28日MartinHusemann认为整数寄存器已足够但corefile格.md
+            - 7.6.78-年12月28日TerryMoore就USBerrorchecking线程中Pin.md
+            - 7.6.79-年9月28日ChristosZoulas认为比ValeryUshakov建议的按.md
+            - 7.6.80-techkernmessages211878.md
+            - 7.6.81-techkernmessages212682.md
+            - 7.6.82-techkernmessages212851.md
+            - 7.6.83-techkernmessages212850.md
+            - 7.6.84-techkernmessages2336438.md
+            - 7.6.85-年9月4日ManuelBouyer指出vndc第1255版引入的vnode_ha.md
         - 7.7-与同时期操作系统的比较：Linux 4.x–5.x、FreeBSD 11.x–12.x 与 Windows 10
+            - 7.7.1-Windows 10 ／ Server 2016（Hyper-V）.md
+            - 7.7.2-FreeBSD 11.x／12（2018）.md
+            - 7.7.3-Linux 4.1x（2018）.md
     - 第8章-NetBSD 9.x：AArch64 支持与内核现代化（2020–2026）
         - 8.1-NetBSD 9.0 发布背景
         - 8.2-ZFS 集成过程
         - 8.3-AArch64 正式支持与平台维护（2020–2026）
         - 8.4-系统安全能力提升
         - 8.5-NetBSD 与现代 BSD 系统竞争环境
+            - 8.5.1-同期 ZFS／CoW 文件系统总览（2020）.md
         - 8.6-9.x 维护线与 netbsd-9 分支的终止
         - 8.7-NetBSD 9.0 的 ZFS 集成与 GPU 支持改进
+            - 8.7.1-年10月14日JunEbihara报告evbarmearmv6hf的201910.md
+            - 8.7.2-年5月26日JunEbihara报告RPI的earmv6hf镜像在2020051.md
+            - 8.7.3-ZFS 集成的工程挑战.md
+            - 8.7.4-GPU 支持的改进.md
+            - 8.7.5-与 FreeBSD OpenZFS 集成的比较.md
+            - 8.7.6-年1月23日MartinHusemann指出往机器上装uboot很棘手有时需要厂.md
+            - 8.7.7-年2月16日KyleEvans报告sunxi_emac内建PHY缺陷指v119把.md
+            - 8.7.8-年5月20日ArtturiAlm针对dmesg中ahcisata0提示忽略损坏的.md
+            - 8.7.9-年6月25日HaroldGutch指出首次建文件系统失败可能源于容量diskla.md
+            - 8.7.10-年7月20日tlaronde以用户与测试者身份报告Olimexa20Lime2在.md
+            - 8.7.11-年8月4日有用户在ROCKPro64网络启动讨论中说明自己不走UEFI而是用ub.md
+            - 8.7.12-年8月30日ManuelBouyer答复OlimexTeres笔记本的dts编译.md
+            - 8.7.13-年11月4日MichaelvanElst列举evbarm内核应默认启用的更多伪设.md
+            - 8.7.14-年2月7日MichaelvanElst解释博通固件的加载发生在config线程c.md
+            - 8.7.15-年4月12日TobiasNygren给出让nss通过构建的变通办法在两个受影响的.md
+            - 8.7.16-年7月16日PaulMather报告RPi48GB上UEFIACPI固件从v11.md
+            - 8.7.17-年4月22日JulianColeman依据DNARD手册实现shark的bitb.md
+            - 8.7.18-年8月1日TobiasNygren给出让BananaPi从硬盘启动的更简方法清空.md
+            - 8.7.19-年11月7日MarcinKaminski补充报告称把vmbufmem_hiwat.md
+            - 8.7.20-年1月13日IzumiTsutsui在ahcisata线程中就sysctlw参数.md
+            - 8.7.21-年1月17日SimonBurge在ahcisata0软错误线程中转述matthe.md
+            - 8.7.22-年1月24日maya在熵重构补丁线程中转述TaylorRCampbell的重做补.md
+            - 8.7.23-年1月30日JoergSonnenberger提醒除WMI非必要之外还应谨慎删除.md
+            - 8.7.24-年2月22日KamilRytarowski报告在MKLIBCSANITIZER下.md
+            - 8.7.25-年3月11日MateuszGuzik就查找变更的性能收益归属提出归因认为Free.md
+            - 8.7.26-年4月2日Mouse就ioctl名称映射的实现方式与数值碰撞的取舍作回应认为对这.md
+            - 8.7.27-年4月4日AndreasGustafsson认同该解释并认为Christos环境.md
+            - 8.7.28-年4月17日Maya在DDC信息刷新线程中回应Mouse关于固定分辨率与52时期.md
+            - 8.7.29-年4月24日Mouse答复自己是对缓冲做轮询而非等待中断轮询由用户态read调用.md
+            - 8.7.30-年5月12日AndrewDoran就ACL补丁回帖指出genfs_can_acc.md
+            - 8.7.31-年5月19日KamilRytarowski就idtypeh枚举讨论回应Rober.md
+            - 8.7.32-年6月2日MartinHusemann回应RockyHotas关于pci_map.md
+            - 8.7.33-年6月15日DavidHolland回复JohnnyBillquist把工具置于.md
+            - 8.7.34-年6月16日DavidHolland回复RoyMarples关于工具内置配置的举.md
+            - 8.7.35-年7月9日Mouse在转述GregAWoods关于umountf走服务器路径可正.md
+            - 8.7.36-年7月23日TaylorRCampbell回应passwd写坏与POSIXren.md
+            - 8.7.37-年10月21日coypu补充说明任何不依赖该标签的系统都可能产出错误标签的二进制.md
+            - 8.7.38-年11月10日Mouse在amd64上报告wscons接管前控制台文本颜色的配置.md
+            - 8.7.39-年11月12日EdgarFuß顺着他人提示回看pmap相关三处提交但自认对pma.md
         - 8.8-与同时期操作系统的比较：Linux 5.x–6.x、FreeBSD 12.x–13.x 与 Windows 11
     - 第9章-NetBSD 10.x–11.x：性能与可扩展性的世代转换（2024–2026）
         - 9.1-NetBSD 10.0 的现代化目标
         - 9.2-10.0 的性能与可扩展性改进
         - 9.3-新硬件支持与架构维护（2024–2026）
+            - 9.3.1-旧硬件支持 → 新硬件支持（新 ARM、新 x86）（2024）.md
         - 9.4-依赖与供应链治理（2024–2026）
         - 9.5-项目规模、贡献者结构与未来挑战
         - 9.6-NetBSD 长期路线的重新定义
         - 9.7-NetBSD 11.0 的发布与 10.x–11.x 的承接（2026-07-30）
+            - 9.7.1-NetBSD 11.0 RC5／RC6／RC7 公告（2026-06-17 至 2026-07-23）——11.0 系列预发布周期收尾.md
         - 9.8-NetBSD 10.0 的 Apple Silicon 移植与 NVMe／USB4 支持
+            - 9.8.1-Apple Silicon M1／M2 的移植.md
+            - 9.8.2-NVMe／USB4 支持的改进.md
+            - 9.8.3-与 Linux Apple Silicon 支持的比较.md
+            - 9.8.4-年3月15日JanBenedictGlaw公布VAX400060真机全量bui.md
+            - 9.8.5-年3月22日DaveTyson报告RaspberryPiZero2的设备树列出三.md
+            - 9.8.6-年7月3日MichaelvanElst建议若要RPI主串口不镜像图形控制台应使用.md
+            - 9.8.7-年9月19日RobertSwindells以PinebookPro为题发起讨论串.md
+            - 9.8.8-年3月5日MoriHiroki报告在Kirkwood88F6281_A1上使用n.md
+            - 9.8.9-年7月26日tlaronde说明底层启动方式因SoC而异若pkgsrc中有对应u.md
+            - 9.8.10-年9月13日RobertSwindells询问向netbsd10分支请求pull.md
+            - 9.8.11-年2月5日MichaelvanElst补充说NetBSD的UEFI引导器只生成伪.md
+            - 9.8.12-年3月27日MichaelvanElst在讨论MMC挂载问题时提到rk3588s.md
+            - 9.8.13-年5月22日Mouse解释autoconf设备名不能以数字结尾因为自动配置机制会.md
+            - 9.8.14-年1月11日Mouse指出若登录会话把标准输入输出与错误都连到devtty而非实.md
+            - 9.8.15-年2月9日Mouse就X服务器可能依赖视频控制台驱动初始化过的视频硬件这一假设作.md
+            - 9.8.16-年3月6日ChristosZoulas回复GSOCZFS根文件系统支持主题下Vi.md
+            - 9.8.17-年4月5日nia质疑多数架构的sysinst已自动注入熵这一判断认为据他所知熵估.md
+            - 9.8.18-年4月11日vanElst指出vnd依据1MB柱面或镜像不足1MB时512字节柱.md
+            - 9.8.19-年4月11日MichaelvanElst回应kre关于vnd4里spb由vng_.md
+            - 9.8.20-年4月25日TaylorCampbell回应自配置API改造认为那批config.md
+            - 9.8.21-年5月25日BrianBuhrow追问Mouse为何需要8000这样高的时钟频率.md
+            - 9.8.22-年5月27日Mouse认为18处hztoms调用其实很少且mvsata与if_b.md
+            - 9.8.23-年5月30日MichaelvanElst回应DavidHolland关于把dis.md
+            - 9.8.24-年7月13日EmmanuelDreyfus就DavidHolland提出的按打开.md
+            - 9.8.25-年9月12日JasonThorpe回应sparc64早期崩溃报告称该情形在Qem.md
+            - 9.8.26-年9月22日JasonThorpe反问MichaelvanElst的HID方案指.md
+            - 9.8.27-年10月15日ValeryUshakov就信号蹦床问题回应JohnMarino展.md
+            - 9.8.28-年10月27日JasonThorpe认可ValeryUshakov提出的直接返回.md
+            - 9.8.29-年11月17日TaylorRCampbell追问报错是否为failedtopow.md
+            - 9.8.30-年3月25日AndrewCagney补充说明GCC支持嵌套函数源于对Pascal.md
+            - 9.8.31-年5月11日EmmanuelDreyfus补充说Apple开发文档中的取值与Ma.md
+            - 9.8.32-年6月14日DavidHolland反驳JohnnyBillquist关于不存在.md
+            - 9.8.33-年6月27日MasanobuSAITOH说明那处#ifdefined__LP64.md
+            - 9.8.34-年7月16日BrianBuhrow回忆NetBSD5时AndrewDoran做S.md
+            - 9.8.35-年8月8日ThomasKlausner说自己很关注模块但能轻松回退到旧内核这个基.md
+            - 9.8.36-年8月20日LukeMewburn就extsrc树移除议题说明表示只收到支持移除.md
+            - 9.8.37-年9月15日BradSpencer说已忘了这些型号但末任东家另一处对SmartO.md
+            - 9.8.38-年9月23日MartinHusemann引手册说明posix_openpt对非法.md
+            - 9.8.39-年10月9日MarioCampos回应Taylor的判断说自己也认为改成u32仍.md
+            - 9.8.40-年1月12日MartinHusemann在HP一体机启动黑屏线程中判断这是固件缺.md
+            - 9.8.41-年1月23日TaylorRCampbell重发membar补丁说明之前gitfo.md
+            - 9.8.42-年2月6日GregTroxel在timerfdpanic线程中转述PHO关于不能.md
+            - 9.8.43-年3月29日MartinHusemann指出当前常态化运行的兼容层测试只有com.md
+            - 9.8.44-年5月19日Bertrand说明重启后取不到回溯因为访问dk5的进程仍全部停在D.md
+            - 9.8.45-年6月26日Thorpe回应匿名vnode的可行性指出没有通用做法认为memfd.md
+            - 9.8.46-年7月21日matthewgreen贴出GDB会话显示libm与libc的调试符.md
+            - 9.8.47-年8月4日MichaelvanElst以dd脚本实测对比NetBSD99977与.md
+            - 9.8.48-年8月31日JHannkenIlljes简略点评BrettLymn的veriex.md
+            - 9.8.49-年9月25日EmmanuelDreyfus澄清bootme指引bootstrap.md
+            - 9.8.50-年11月18日TobiasNygren分析re驱动BAR映射期望64位却得32位.md
+            - 9.8.51-年1月6日BradSpencer回复MLH的刷写疑问说明启用I2C模式不需要刷写.md
+            - 9.8.52-年3月26日RobertSwindells就JasonThorpe的印象提出不同.md
+            - 9.8.53-年8月4日Nat回应TaylorRCampbell关于依赖性与拆分提交的问题说明.md
+            - 9.8.54-年8月13日ValeryUshakov指出at加问号与at会妨碍配置块复制粘贴提.md
+            - 9.8.55-年9月4日EmmanuelDreyfus贴出仅用userconf禁用ichsmb.md
+            - 9.8.56-年9月29日rxg就uwe的回应追问evbarm交叉编译因db_active类型.md
+            - 9.8.57-年10月3日mlelstv判定该卡主控为JMicronJMB585具PCIeGe.md
+            - 9.8.58-年10月22日BrianBuhrow改造if_xennet_xenbus把poo.md
+            - 9.8.59-年1月13日TaylorRCampbell就MMIOcmdline补丁评审追问是.md
+            - 9.8.60-年2月17日BrianBuhrow就svwsata中断路由问题推测NetBSD1.md
+            - 9.8.61-年3月13日DorjoyChowdhury就无刻度高分辨率计时器课题来信说明他这.md
+            - 9.8.62-年4月9日EmmanuelDreyfus回应GregAWoods关于maximu.md
+            - 9.8.63-年4月30日Mouse就碎片使用量的提问列举四种可能的定义包括承载数据的碎片部分.md
+            - 9.8.64-年5月10日EdgarFuß反驳stdio解释不成立认为瓶颈应在内核的vnode.md
+            - 9.8.65-年5月15日EdgarFuß承认自己从未在运行中的系统上使用过crash8询问S.md
+            - 9.8.66-年6月6日GregTroxel主张先明确需求与目标再谈实现认为按套接字创建与绑定.md
+            - 9.8.67-年6月17日EmmanuelDreyfus自述曾跳过UEFIExitBootSe.md
+            - 9.8.68-年7月18日BrianBuhrow在NetBSD109912开发分支amd64双.md
+            - 9.8.69-年8月12日EmmanuelDreyfus回应MichaelvanElst的IP.md
+            - 9.8.70-年11月4日AndriusV就viapcib与viaenv驱动的写法作回应把实现.md
+            - 9.8.71-年12月10日MichaelvanElst说明fsdb复用fsck_ffs代码清.md
+            - 9.8.72-年2月21日DavidBrownlee回应Takashi关于是否有人认真使用ZF.md
+            - 9.8.73-年3月24日SimonBurge指出Takashi的ZFS设备名变更补丁与自己让.md
+            - 9.8.74-年4月15日MichaelvanElst就替代AUTH_SYS的NFS认证方案给.md
+            - 9.8.75-年4月20日KevinBowling就tprof采样结构契约与n32用户态读取6.md
+            - 9.8.76-年4月29日BrettLymn认可Synaptics驱动禁用taptoclick.md
+            - 9.8.77-年5月30日JasonThorpe澄清_wdc_ata_bio_start检查的.md
+            - 9.8.78-年6月7日GregTroxel就CLOCK_MONOTONIC休眠期间是否计入的.md
+            - 9.8.79-年7月27日BrianBuhrow就彩色内核消息提案明确要求若被采纳进基础源码应.md
+            - 9.8.80-年7月28日ThorLancelotSimon认为sysctl前后缀字节的方案相.md
+            - 9.8.81-年1月1日某开发者报告mutt卡在tstile死锁执行gitlog后系统冻结sh.md
         - 9.9-pkgsrc 与现代软件包管理的持续演进
+            - 9.9.1-年2月2日AlekseyCheusov报告512010Q4的x86_64二进制包.md
+            - 9.9.2-年1月15日Campbell贴出py312numpy在HEAD与2023Q4上构.md
+            - 9.9.3-年9月21日BennySiegert发布bulktracker202509新版本.md
+            - 9.9.4-Pkgin 软件包管理器前端的开发.md
+            - 9.9.5-二进制软件包仓库的改进.md
+            - 9.9.6-与容器生态的集成.md
+            - 9.9.7-年8月9日QuentinGarnier建议在pmatch遇到包名版本号部分含逗号.md
+            - 9.9.8-年12月13日AlekseyCheusov指出PREFIX无空格时CFLAGS里.md
+            - 9.9.9-年1月16日AlekseyCheusov宣布发布pkgnih新版本当前仅处理基于.md
+            - 9.9.10-年5月6日ThomasKlausner报告从二进制包装好的abcde运行时因US.md
+            - 9.9.11-年6月19日AlistairCrooks宣布pkgsrc已进入冻结停止新包与基础.md
+            - 9.9.12-年8月2日IgnatiosSouvatzis说明他曾修补langocaml的AR.md
+            - 9.9.13-年8月31日JoergSonnenberger补充DESTDIR移植还需处理in.md
+            - 9.9.14-年10月2日ThomasKlausner说明ftpnetbsdorg有每周cro.md
+            - 9.9.15-年11月6日AlekseyCheusov再次提议从NetBSD基本系统移除pkg.md
+            - 9.9.16-年10月3日Espie指出以选项各异为由否定多包是恶性循环只要没有可靠的二进制包.md
+            - 9.9.17-年2月9日ONODERA报告在XinuosSCOOpenServer507引导p.md
+            - 9.9.18-年4月13日RobertSwindells说收到emulsuse131系列多份安.md
+            - 9.9.19-年6月26日youri答FreePascal必须使用官方bootstrapkit.md
+            - 9.9.20-年10月19日珀金报告启用HTTPS后代理不再被遵守已从上游libfetch移植.md
+            - 9.9.21-年1月4日哈迪报告pkgtoolsx11links缺文件导致nettigervn.md
+            - 9.9.22-年6月14日埃斯皮声称make并不适合拥有众多CPU的大型机器ninja多年来才.md
+            - 9.9.23-年10月5日ThomasOrgis报告readline的libtool无法推断t.md
+            - 9.9.24-年11月4日MartinHusemann解释jail内SSL证书无效而chroo.md
+            - 9.9.25-年2月21日maya补充提示openssl官方提供了Opensslcompatt.md
+            - 9.9.26-年4月17日Rhialto报告graphicsgle在configure阶段因g.md
+            - 9.9.27-年7月9日Troxel分析gtk3加cups依赖的两类用户影响认为两边群体都足够.md
+            - 9.9.28-年9月12日coypu反对在BSD使用libuuid它会以不兼容方式覆盖libc.md
+            - 9.9.29-年12月25日JoergSonnenberger指出MesaLib18默认选项已.md
+            - 9.9.30-年5月23日ThomasOrgis提交qt5qtbase补丁在Linux上显式开.md
+            - 9.9.31-年7月20日Greg询问cacertificates的范围究竟只覆盖OpenSS.md
+            - 9.9.32-年9月7日TobiasNygren称该段疑被Makefile1458破坏stdl.md
+            - 9.9.33-年9月23日DavidBrownlee回应nia关于阻止依赖新编译器的提议指出这.md
+            - 9.9.34-年11月5日MartinHusemann指出boostpredef的sparch.md
+            - 9.9.35-年8月13日Joerg回应称这更像setuptools的缺陷唯一修法只能让更多包.md
+            - 9.9.36-年9月25日Greg已修好emacs28nox11在macOS上的构建confi.md
+            - 9.9.37-年11月28日Siegert表示已开始把Bazel移植到NetBSD但进展有限并.md
+            - 9.9.38-年3月17日Woods认为靠Wnoerror一项项压过去是打地鼠式应对用新编译器.md
+            - 9.9.39-年5月6日Troxel反对用nls的PLIST输出来推动开发者加入nls选项认为.md
+            - 9.9.40-年5月28日DavidHolland指出检查workworklog可见lterm.md
+            - 9.9.41-年7月14日GregTroxel就批量构建输出的平台命名提出疑问分支下应只有20.md
+            - 9.9.42-年8月6日克劳纳在七月的currentamd64上测试该补丁原生make不够用报.md
+            - 9.9.43-年9月17日克劳纳答复提问者建议自行在配置文件里固定版本号以绕开版本探测并提示需.md
+            - 9.9.44-年10月17日nia认为像charconv这类微特性不宜为对齐NetBSDgcc.md
+            - 9.9.45-年11月11日ThomasKlausner反对把maturin默认改成j1指其本.md
+            - 9.9.46-年12月30日Troxel报macOS13上WRKOBJDIR=tmpwork时.md
+            - 9.9.47-年1月21日Klausner提交给pbulk加strict_mode选项的补丁开.md
+            - 9.9.48-年2月18日Ceuppens说自己接了svgalib的维护原维护者BenColv.md
+            - 9.9.49-年3月17日Campbell报告textprochsyaml变坏怀疑是mef构建.md
+            - 9.9.50-年4月2日Klausner提议合并NOT_FOR与BROKEN_ON两类平台禁用.md
+            - 9.9.51-年5月17日Klausner报告Callahan的AIX支持补丁中pkgsrc无.md
+            - 9.9.52-年10月6日MarcinGondek手动完成py312到py313迁移先清set.md
+            - 9.9.53-年2月1日SverreFroyen报告x11qt4qdbus存在同样问题构建前先.md
+            - 9.9.54-年2月17日TobiasNygren说明删除已安装的p5XMLSAX包后问题消失.md
+            - 9.9.55-年3月20日denBrok指出multimediatotemplparser对m.md
         - 9.10-与同时期操作系统的比较：Linux 6.x、FreeBSD 14.x 与 OpenBSD 7.x
 - 第41卷-NetBSD 技术专题史（1993–2026）
     - 第1章-可移植操作系统架构：MI／MD 与 NetBSD 内核设计（1993–2026）
         - 1.1-4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）
         - 1.2-MI／MD 分层思想的形成
+            - 1.2.1-MI／MD 分层的设计原则.md
         - 1.3-autoconf 与设备抽象体系
         - 1.4-bus_space 与 bus_dma：跨硬件平台的关键抽象
+            - 1.4.1-年2月6日BenHarris自述正为pckbc构造抽象层因pckbd与pms仅能.md
         - 1.5-驱动模型与硬件抽象层设计
         - 1.6-可移植性的实现成本：性能与维护
         - 1.7-NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）
+            - 1.7.1-1.2 至 1.3 的平台扩展.md
+            - 1.7.2-与 FreeBSD 多平台策略的比较.md
+            - 1.7.3-年12月12日PerFogelstrom就Laurent询问r4000MIPS平.md
+            - 1.7.4-年11月10日AndersMagnusson说明正把NetBSD移植到VAX目前.md
+            - 1.7.5-年9月08日AlanStrassberg称mprotect首见于44BSD且BS.md
+            - 1.7.6-年8月17日JesusMonroy回复JonCargille追问386BSDR1.md
+            - 1.7.7-年6月04日KeithMoore公布其为NetBSD零点九写的PCMCIANE2.md
+            - 1.7.8-HubertFeyrer宣布NetBSDAmiga的TCPIP联网入门与Netw.md
+            - 1.7.9-年1月1日ChrisDemetriou回应EB64+主板询问说明当前不支持且自己.md
+            - 1.7.10-年1月1日Apple的DavidPaulZimmerman报告AlphaStat.md
+            - 1.7.11-年1月1日ChrisDemetriou告诉调试内核的用户savecore与DDB.md
+            - 1.7.12-年1月1日ChrisDemetriou强调TGA并非PCIVGA设备根本不应被匹.md
+            - 1.7.13-年1月1日ChrisDemetriou发布961127快照含完整可用的EB164.md
+            - 1.7.14-年1月1日ChrisDemetriou剖析installboot报只读文件系统的.md
+            - 1.7.15-年1月1日MatthewJacob发现改用内存映射后ISP在AXP8X00上可用.md
+            - 1.7.16-年1月1日TomLinden总结其在XL266上引导NetBSD的经历说明该机闪.md
+            - 1.7.17-年1月1日CurtSampson认为SRM没有理由不认识PCI卡上的NCR53c.md
+            - 1.7.18-年1月1日CurtSampson建议致电Symbios索取SYM53C810A8.md
+            - 1.7.19-年1月1日JasonThorpe公告已并入Ross关于让回溯能穿过PALcode.md
+            - 1.7.20-年1月1日TimRightnour报告multia从软盘内核启动后通常一分钟内即.md
+            - 1.7.21-年1月1日nm报告其axppci33刷入SRM47后多数命令不可用manlsec.md
+            - 1.7.22-年1月1日JasonThorpe宣布提交DigitalPersonalWorkS.md
+            - 1.7.23-年1月1日TakuyaKoumoto发布TCAlpha键盘控制台第一阶段成果基于.md
+            - 1.7.24-年1月1日PaulHAnderson回帖追问能否改用4MB缓存称自己所有Alph.md
+            - 1.7.25-年1月1日DavidSeifert说明clockh的注释表明SRM会篡改某些日期.md
+            - 1.7.26-年1月1日AllenBriggs称已为Turbochannelalpha做出可用.md
+            - 1.7.27-年1月1日HalMurray称WorkStation600au启动时报sio_i.md
+            - 1.7.28-年1月1日KalebSKEITHLEY报告其EB64+即DigitalEBP30.md
+            - 1.7.29-年1月1日KenWellsch报告其PC164SX上自建GENERIC内核在vg.md
+            - 1.7.30-年1月1日TimRightnour回应KenWellsch称自己有块958卡怎么.md
+            - 1.7.31-年1月1日JeffRizzo回忆13之后有一段时间de驱动比平时更糟他记不真切其.md
+            - 1.7.32-年1月1日ManuelBouyer指出NCR驱动在810与875上遇到SCSI协.md
+            - 1.7.33-年1月1日一位系统管理员分享在FreeBSDAlpha上的解法把etcttys中.md
+            - 1.7.34-年1月1日HalMurray指出支持硬件列表缺少显示卡章节其Miata上的ZLX.md
+            - 1.7.35-年1月1日MichaelLHitch推测BruceLane使用键盘与显示作控制台.md
+            - 1.7.36-年1月1日ManuelBouyer回复MattThomas说明该芯片实际只支持主.md
+            - 1.7.37-年1月1日AndrewvanderStock报告在PC164上无法把软驱认作dv.md
+            - 1.7.38-年1月1日DanielCarosone回应电池猜测认为设置丢失应是SRM固件本身.md
+            - 1.7.39-年1月1日AaronJGrier向考虑购买DEC3000300的人介绍该机是Tu.md
+            - 1.7.40-年1月1日JonLindgren称经历一番周折后已在3000300x上装好141.md
+            - 1.7.41-年1月1日JasonThorpe称已查明探测不存在的PCI设备时出现虚假机器检查.md
+            - 1.7.42-年1月1日JeffRoberson回答DigitalPersonalWorkst.md
+            - 1.7.43-年1月1日matthewgreen指出NetBSDalpha的GCC移植已与上游.md
+            - 1.7.44-年1月1日RCDowdeswell提交应能支持TGA2的代码至少可驱动他AS20.md
+            - 1.7.45-年1月1日NathanWilliams更正此前的笔误称500MHzpc164上c.md
+            - 1.7.46-年1月1日MichaelKukat称其在AXPpci33上装NetBSD并试RA.md
+            - 1.7.47-年2月2日torek解释autoconf的设计允许probe例程出现多次匹配因此.md
+            - 1.7.48-年3月15日StefanGrefen回应备份顾虑承认自己此前误解了@替换机制以为.md
+            - 1.7.49-年6月9日WolfgangSolfrank回应pmap疑问称当前NetBSD虚拟.md
+            - 1.7.50-年9月13日AndersMagnusson称在VAX移植里最初把内核栈搬到别处因.md
+            - 1.7.51-年11月15日gwr就libsocket与静态动态链接混用回应对方转引的ccot.md
+            - 1.7.52-年12月30日mycroft嘲讽以unlink直接令下层文件复现之说称其完全破坏.md
+            - 1.7.53-年1月31日BrettLymn回应把交换放到文件里甚至以vnd设备交换的设想认为.md
+            - 1.7.54-年3月2日ChrisGDemetriou转贴对方含ipoptsshortfrag.md
+            - 1.7.55-年3月6日MikeHibler介绍早年HPUX兼容做法即由hpux程序先chro.md
+            - 1.7.56-年3月13日derMouse以其编写过使用sbrk的软件的经验列出两类理由一是分.md
+            - 1.7.57-年4月7日cgd自述alpha端口的delay倍率是猜出来的他把Machalph.md
+            - 1.7.58-年5月14日ws回应IP分片链表质疑认为在队首分片之前插入新分片并无困难唯一略棘.md
+            - 1.7.59-年6月14日CharlesHannum说明x86端口已做惰性浮点保存只有单个浮点.md
+            - 1.7.60-年7月7日GordonRoss主张exec代码也应把长度按页对齐并指出ELFex.md
+            - 1.7.61-年7月31日MikeLong就pss与wss驱动在confignew下的写法提问.md
+            - 1.7.62-年9月3日JasonThorpe计划编写bootp版nfs_bootc主张让同一.md
+            - 1.7.63-年11月10日JasonThorpe自述把dk_time的计算从kern_clo.md
+            - 1.7.64-年11月14日PerryMetzger警告若NetBSD内核构建流程里出现ASN.md
+            - 1.7.65-年12月30日JasonThorpe讨论DS3100以太网spl问题就为何mal.md
+            - 1.7.66-年1月13日matthewgreen纠正securelevel的说法指出只有在把.md
+            - 1.7.67-年2月9日MichaelRichardson主张应让新手更容易构建内核但反对像S.md
+            - 1.7.68-年2月18日BillStudenmund自述把新的机器无关z8530驱动移植到m.md
+            - 1.7.69-年2月29日WaldiRavens指出sdc把d_secperunit乘d_se.md
+            - 1.7.70-年3月4日KenHornstein自谦迟钝地追问可mmap音频设备究竟如何运作认.md
+            - 1.7.71-年3月25日GordonRoss回应PerFogelstrom的mips共享库之.md
+            - 1.7.72-年3月31日PerFogelstrom反驳需优化才触发的说法称已用OWall与O.md
+            - 1.7.73-年5月4日LeoWeppelman质疑sdclose为何不在末次关闭时重置SDE.md
+            - 1.7.74-年5月9日JasonDowns提问为何连root都不允许对任意tty调用TIOC.md
+            - 1.7.75-年5月17日ErikFair回应ThorstenLockert关于那篇论文的评论.md
+            - 1.7.76-年5月25日GregWoods回应derMouse关于许可级别的解释认为持久争论.md
+            - 1.7.77-年6月4日JasonThorpe详答softc四问称其为设备驱动的杂项软件状态新.md
+            - 1.7.78-年6月24日MatthiasDrochner为PCICAMAC卡写DMA驱动直接.md
+            - 1.7.79-年7月6日MikeLong查过自己的AD1848数据手册确认jason指出的两处.md
+            - 1.7.80-年7月15日MikeLong自述已更新sysdevaudioc使音频驱动可挂接多.md
+            - 1.7.81-年7月22日TedLemon认为IP_HDRINCL现有行为属权宜而非设计决定主.md
+            - 1.7.82-年8月10日CharlesHannum提议清理config8移除devicedr.md
+            - 1.7.83-年8月13日NoriyukiSoda建议把xxx_intr_establish的.md
+            - 1.7.84-年8月14日IrvingReid回忆早年在同一台机器上装着DOSLinux与Ne.md
+            - 1.7.85-年8月15日ChrisDemetriou回应追问确认所设想vmstati输出形如.md
+            - 1.7.86-年9月15日JohnDyson重发含补丁的建议说明在lbolt上睡眠略显无谓改在.md
+            - 1.7.87-年9月24日JustinGibbs回应CharlesHannum的busDMA接.md
+            - 1.7.88-年9月29日DennisFerguson自述已在原帖指出mono_time等单调.md
+            - 1.7.89-年10月1日TerryLambert绘出设备消费者逻辑设备堆叠层与真实磁盘驱动层.md
+            - 1.7.90-年10月2日derMouse分析间隔定时器接口在时钟跳变下无法同时满足等绝对时刻.md
+            - 1.7.91-年10月8日CurtSampson认为应另写一份内核性能调优手册页专门讨论各选项.md
+            - 1.7.92-年10月31日MarkusBaeurle介绍ARM多处理器现状已有把代码载入从处.md
+            - 1.7.93-年11月19日SimonJGerraty附议把格式表放进配置文件的方案回忆CPM.md
+            - 1.7.94-年12月4日derMouse就sd驱动为何先填几何信息作答猜其用意是在磁盘没有盘.md
+            - 1.7.95-年12月14日JonathanStone重申低级自修改代码的维护负担显而易见但称.md
+            - 1.7.96-年12月30日TySarna回应MatthewJacob关于fstat的疑问指出.md
+            - 1.7.97-年1月20日JukkaMarin报告上周末在自己的SS1+上接两块SCSI磁盘时.md
+            - 1.7.98-年1月23日PerryMetzger叙述Lehman机房经验他们花了大量工夫让用.md
+            - 1.7.99-年1月28日GordonRoss回应JasonThorpe将模块性称为一贯与强制.md
+            - 1.7.100-年1月30日BillStudenmund支持软中断可运行在低于spl1的层级因m.md
+            - 1.7.101-年2月4日derMouse报告sun3的sc驱动极不聪明只能处理6字节命令块调试.md
+            - 1.7.102-年2月26日FrankvanderLinden回应NFS缓存进VM的设想指出规范.md
+            - 1.7.103-年3月2日JonathanStone认为新增splsched技术上站得住脚但从软.md
+            - 1.7.104-年3月6日BrettLymn请JohnKohl寄出其已改好的config代码该改.md
+            - 1.7.105-年3月8日JasonThorpe回应JukkaMarin对无盘系统的提问称无盘机.md
+            - 1.7.106-年3月12日cgd回应驱动mmap中btop依赖如何做到机器无关的提问称目前没有.md
+            - 1.7.107-年3月24日FrankvanderLinden自答前帖在解耦挂载与恢复n选项之外.md
+            - 1.7.108-年3月25日FrankvanderLinden说明现有代码其实已在查每次文件句柄.md
+            - 1.7.109-年3月29日IgnatiosSouvatzis反驳Johan称BSD做法在安装场.md
+            - 1.7.110-年3月31日ChrisGDemetriou提议改config使其输出非通配声明先.md
+            - 1.7.111-年4月23日mycroft说明MIT_SHM专用于创建服务器与客户端共享的图像或.md
+            - 1.7.112-年5月16日GordonRoss请KenHornstein把实现寄来承诺不会搁置.md
+            - 1.7.113-年5月24日MartinHusemann自述正把FreeBSD的sysnetif.md
+            - 1.7.114-年6月10日BillStudenmund回应在系统调用入口调用open与clos.md
+            - 1.7.115-年6月24日JasonThorpe回答ManuelBouyer的并发疑问指出在多.md
+            - 1.7.116-年7月1日JonathanStone在同串中建议给ddb加一个接收控制台行数与列.md
+            - 1.7.117-年7月15日JonathanStone说看起来是VM代码在反复对小区域做mmap.md
+            - 1.7.118-年7月18日GScottLloyd发问BSD各系统是否支持总线主控DMA设备直接.md
+            - 1.7.119-年7月22日JeremyCooper建议JukkaMarin参考devnull的.md
+            - 1.7.120-年7月29日ErikFair说明NTP测得的系统时钟漂移由硬件时钟漂移与操作系统.md
+            - 1.7.121-年7月31日AndrewGillham给出LX的12D内核133210ppmSS.md
+            - 1.7.122-年8月11日CurtSampson回应MatthewJacob贴出的旧版busd.md
+            - 1.7.123-年8月15日BillStudenmund提出反例Atari上存在中间硬件做字节交.md
+            - 1.7.124-年8月20日BrianCGrayson提出重命名内核文件的边界情形若以netbs.md
+            - 1.7.125-年9月4日CurtSampson主张改名时应复制文件而非直接移除再对旧文件执行c.md
+            - 1.7.126-年9月22日ManuelBouyer主张MII本质上是一条总线必须提供把任意PH.md
+            - 1.7.127-年10月3日JasonThorpe以insbinswinsl作类比解释两者语义r.md
+            - 1.7.128-年11月14日cgd说明计时采样得到的是每个函数的ticks数而构建剖析内核才能.md
+            - 1.7.129-年12月2日JonathanStone分析每inode8K的空间代价对2GB文件.md
+            - 1.7.130-年12月5日PaulEvans主张在陷入具体实现前先厘清设计目标列出ACL与文件.md
+            - 1.7.131-年12月10日FrankvanderLinden查证后称SolarisSunOS.md
+            - 1.7.132-年12月12日RickKelly回应MatthewJacob的预言指ODM与Wi.md
+            - 1.7.133-年12月17日PerryEMetzger回应AdamGlass的辩解认为NetB.md
+            - 1.7.134-年12月19日SimonJGerraty以touchchmod4755后执行ch.md
+            - 1.7.135-年1月11日ChrisGDemetriou质疑ToddVierling用高位做特.md
+            - 1.7.136-年1月12日GordonWRoss报告最新GNUreadline21会触发tty.md
+            - 1.7.137-年1月13日BillStudenmund提议借32位dev_t改造同时调整每盘分.md
+            - 1.7.138-年1月15日CharlesMHannum重申他最初那封关于dev_t的邮件里已说.md
+            - 1.7.139-年1月16日ManuelBouyer补充说新主号都会大于255而旧MAKEDEV.md
+            - 1.7.140-年1月26日IgnatiosSouvatzis回应Charles称Amiga应支.md
+            - 1.7.141-年1月26日ChrisGDemetriou回应改由引导块传递root与dump分.md
+            - 1.7.142-年1月29日RobertVBaron大致同意FrankvanderLinden的.md
+            - 1.7.143-年2月10日BillStudenmund回应LennartAugustsson的.md
+            - 1.7.144-年2月15日TerryLambert宣布NFS客户端与服务端锁的补丁已可用了经C.md
+            - 1.7.145-年2月20日ThorLancelotSimon报告i386串口控制台出现的多种怪.md
+            - 1.7.146-年3月17日JimHoward回应RobertElz的估算称其论点有循环论证之嫌.md
+            - 1.7.147-年3月21日DennisFerguson指出既然拨入方在拨出方活跃时会睡眠那么拨.md
+            - 1.7.148-年3月27日KenHornstein指出据他所知com驱动本就对1200波特及以.md
+            - 1.7.149-年4月3日JohnDyson分析FreeBSD与NetBSD在vfork后写时复.md
+            - 1.7.150-年4月9日JimHoward转述并纠正关于init使用fork而非vfork的说.md
+            - 1.7.151-年4月20日JasonThorpe指出TIOCDCDTIMESTAMP本身也不是.md
+            - 1.7.152-年4月21日cgd转发了ChrisTorek的邮件其中ChrisTorek认为通.md
+            - 1.7.153-年4月22日JasonThorpe就JonathanStone提出的把COM寄存.md
+            - 1.7.154-年4月27日ChuckCranor请JimHoward提供X服务器map在退出与.md
+            - 1.7.155-年6月11日在bus_dma接口之争中JustinGibbs称FreeBSD实现.md
     - 第2章-多平台移植史：从工作站 UNIX 到现代架构（1993–2026）
         - 2.1-早期平台扩张：x86、68k、VAX、SPARC
         - 2.2-PowerPC、MIPS 与嵌入式平台
+            - 2.2.1-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md
         - 2.3-Alpha 等工作站架构支持
+            - 2.3.1-年1月1日ChrisDemetriou为让BPF在Alpha上工作而修改pcap.md
+            - 2.3.2-年1月1日RCDowdeswell询问alpha上S3显卡的X支持进展并提出修改.md
         - 2.4-ARM 平台支持的发展
         - 2.5-ARM64 与服务器平台
         - 2.6-RISC-V 平台支持
@@ -13450,10 +13878,198 @@
         - 4.1-早期单处理器内核模型
         - 4.2-NetBSD SMP 初期实现
         - 4.3-NetBSD 2.0 SMP 架构
+            - 4.3.1-2019年9月29日MartinHusemann提议为磁盘设备新增ioctl报告.md
+            - 4.3.2-年11月20日BrettLymn证实自己仍在用coda且CMU一侧尚有活动上游并.md
+            - 4.3.3-年12月20日JasonThorpe对他人仍在使用古老aout二进制的回应表达同.md
+            - 4.3.4-年3月16日RobertElz回应MaximeVillard关于网站宣传与现实不.md
+            - 4.3.5-年3月16日Kronsteiner就以v09为资历的论证回敬对方称自己1980年.md
+            - 4.3.6-年3月30日MattSporleder在npf功能缺口争论中只追问具体缺少哪些功.md
+            - 4.3.7-年3月30日BrianBuhrow称用户并非出于偏好而是npf不支持他们现有的P.md
+            - 4.3.8-年4月2日MartinHusemann援引npfctl8的EXAMPLE段回应A.md
+            - 4.3.9-techkernmessages215074.md
         - 4.4-NetBSD 5.x 内核并发重构
         - 4.5-VFS 与驱动 MP-safe 化
         - 4.6-多核时代的 NetBSD 内核维护
         - 4.7-调度器与并发性能优化
+            - 4.7.1-旧 SMP 调度器 → 新 SMP 调度器（2009.4）.md
+            - 4.7.2-传统 VFS 层 → 改进 VFS 层（2009.4）.md
+            - 4.7.3-传统内存分配 → jemalloc 引入（2009.4）.md
+            - 4.7.4-年4月13日SverreFroyen回复DavidYoung的排查建议贴出iwn.md
+            - 4.7.5-年4月27日PetarBogdanovic报告两台几乎相同的netbsd6主机在.md
+            - 4.7.6-年7月12日JasonThorpe提议退役两个古老的网络伪接口stripStar.md
+            - 4.7.7-年11月19日AndrewDoran询问自旋互斥锁计数器结果之测试条件并指繁忙系.md
+            - 4.7.8-6.0 线程调度器的设计.md
+            - 4.7.9-与 FreeBSD 9.x／10.x 技术进展的比较.md
+            - 4.7.10-年7月19日DavidYoung回应称已修好shark以及其他所有ARM端口并会.md
+            - 4.7.11-年10月21日KIYOHARATakashi补充OVERO上sdmmc的状态称仍.md
+            - 4.7.12-年12月29日MattThomas回应KIYOHARATakashi的质疑称TI.md
+            - 4.7.13-年3月4日minux自述把Go移植到NetBSDarm发现setcontext无.md
+            - 4.7.14-年5月18日MathieuLubrano报告已在树莓派上成功完成内核的原生构建此.md
+            - 4.7.15-年8月14日MattThomas提出在Thumb模式下为SVC保留254与255.md
+            - 4.7.16-年4月3日derMouse质疑NetBSD仍在维护的机器是否都有足够快的乘法指令.md
+            - 4.7.17-年4月6日VladimirKirillov提交crash8在amd64上的支持补.md
+            - 4.7.18-年4月6日VladimirKirillov回应JoergSonnenberger.md
+            - 4.7.19-年4月18日JuergenHannkenIlljes回复ManuelBouyer.md
+            - 4.7.20-年4月25日YAMAMOTOTakashi就ffsfsync补丁线程回复谓对方说.md
+            - 4.7.21-年5月4日EdgarFuß在RAID5写性能讨论中补充实测同一硬件raw设备可达.md
+            - 4.7.22-年5月6日JeanYvesMigeon就pmf9与sysmon电源事件线程发出连.md
+            - 4.7.23-年5月30日AlexanderNasonov提交实现linuxfadvise64.md
+            - 4.7.24-年6月3日MasaoUebayashi给出CFDRIVER_DECL的模块条件编.md
+            - 4.7.25-年6月8日YAMAMOTOTakashi感谢bufq_priocscan的改进工.md
+            - 4.7.26-年6月13日Emmanuel承认先前分析有误问题发生在设置rootvnode属性.md
+            - 4.7.27-年6月15日Drochner在uvm锁不一致线程里接续先前请他看附件的往来正文仅.md
+            - 4.7.28-年6月20日BrianBuhrow检查后确认涉事进程的egidgid与rgid都.md
+            - 4.7.29-年7月13日Mouse自述其案头主力为i386机器401自制接口把Suntype.md
+            - 4.7.30-年7月21日DavidHolland承认ffs确实已修指对方像是在怪他花时间修f.md
+            - 4.7.31-年7月22日gilbertfernandes以两个理由反驳称键盘确为荷兰式其一与.md
+            - 4.7.32-年7月31日MindaugasRasiukevicius提交kcpuset9动态.md
+            - 4.7.33-年8月10日JulioMerino在MarcBalmer提出的模块默认安装路径线.md
+            - 4.7.34-年8月17日EmmanuelDreyfus报告打上yamt补丁后的另一次尝试出现.md
+            - 4.7.35-年9月3日MarcBalmer就Kollasch关于端口重编号的顾虑追问com0.md
+            - 4.7.36-年9月8日DavidLaight补充说可以把中间参数写成va_list来附加额外.md
+            - 4.7.37-年9月21日ChristophEgger报告dom0环境下LOCKDEBUG触发.md
+            - 4.7.38-年9月25日EdgarFu就gpio4软件脉冲讨论回帖质疑按JachymHole.md
+            - 4.7.39-年10月15日DavidHolland在内核void函数返回值线程中报告已修复b.md
+            - 4.7.40-年10月19日DavidHolland回应dtraceioctl指针语义问题说看.md
+            - 4.7.41-年10月21日ManuelBouyer反驳称id装不下三十二位时做转换会报错而非.md
+            - 4.7.42-年10月28日GregAWoods辩称本意是表明PR#30115及其历史对应案与.md
+            - 4.7.43-年11月1日ChristosZoulas反问Mondor读的是哪份sync手册贴.md
+            - 4.7.44-年11月9日JeanYvesMigeon就pool_cache_invalida.md
+            - 4.7.45-年11月11日EmmanuelDreyfus报告PUFFS的ADVLOCK触发过.md
+            - 4.7.46-年11月17日DavidYoung称自己原先一直以为对二进制plist存在普遍阻.md
+            - 4.7.47-年11月20日MindaugasRasiukevicius就VOP_GETATT.md
+            - 4.7.48-年11月24日MindaugasRasiukevicius补充指出kernipc.md
+            - 4.7.49-年12月9日AlanBarrett就新随机伪设备补丁的伪随机性质与CSPRNG质.md
+            - 4.7.50-年12月10日IzumiTsutsui以调试mec4的经验回应事件计数器议题指在.md
+            - 4.7.51-年12月12日DavidHolland就十五分钟等待后新文件仍丢失的复现实验回帖.md
+            - 4.7.52-年12月14日EmmanuelDreyfus回应关于Linux兼容代价的质疑指出.md
+            - 4.7.53-年1月1日RolandCDowdeswell引用chmod2的POSIX条文认为.md
+            - 4.7.54-年1月10日SorenJacobsen自述5x的__NetBSD_Version.md
+            - 4.7.55-年1月13日6bone在ibmx3850内核崩溃主题下继续跟进此前他报告用net.md
+            - 4.7.56-年1月17日Mouse在主树研究试验与分支策略讨论中回应Holland认为Net.md
+            - 4.7.57-年1月18日Fuß在ArecaSAS控制器支持讨论中追问究竟哪些Areca控制器.md
+            - 4.7.58-年1月20日Horvath在bus_space_sync讨论中要求补充说明请Th.md
+            - 4.7.59-年2月10日YamamotoTakashi就extattr命名空间映射方向回应M.md
+            - 4.7.60-年2月12日EmmanuelDreyfus就StephenBorrill关于vn.md
+            - 4.7.61-年2月25日EmmanuelDreyfus在映射已存在的问题串补充当时未能处理如.md
+            - 4.7.62-年3月1日CherryGMathew参与maximumnumberofCPUs讨.md
+            - 4.7.63-年3月8日MartinHusemann确认崩溃原因早期子进程在一切就绪前p_vm.md
+            - 4.7.64-年3月14日JukkaRuohonen在KAUTH_GENERIC_ISSUSE.md
+            - 4.7.65-年3月21日Sonnenberger提议GSoC项目把LLVMASAN移植到Ne.md
+            - 4.7.66-年4月2日Dreyfus提交PUFFS缓存TTL补丁使FUSE利用文件系统给出的.md
+            - 4.7.67-年4月30日Mouse就分区表越界时的处理策略追问是整表被忽略分区被抑制还是仅告.md
+            - 4.7.68-年5月16日Mouse指出以所需开销空间为唯一最优指标是合理的但值得点明承认柱面.md
+            - 4.7.69-年5月21日EdgarFuß对比真实根树与linux32模拟环境内lsl同一配置.md
+            - 4.7.70-年5月31日EdgarFuß问能否让某个挂载点按noatime呈现而其它进程正常.md
+            - 4.7.71-年6月7日BrianBuhrow建议newfs用S参数辅助识别扇区大小称NetB.md
+            - 4.7.72-年7月17日DavidHolland回应DavidLaight关于分支的论述说明.md
+            - 4.7.73-年7月18日RogerPauMonne依在线手册kill页rationale倒数.md
+            - 4.7.74-年7月20日EmmanuelDreyfus说明PUFFS依赖vnode加锁语义保.md
+            - 4.7.75-年7月22日MindaugasRasiukevicius质疑拆分查找表能否真减少.md
+            - 4.7.76-年8月22日RogerPau报告在DomU内删除大量文件触发blkfree内核p.md
+            - 4.7.77-年8月25日ManuelBouyer推测固件里启用盘写缓存时固件会写到盘缓存而非.md
+            - 4.7.78-年9月3日AlekseyCheusov报告i38660_BETA2上pr_fin.md
+            - 4.7.79-年9月6日ChristosZoulas认可quotactl改用euid检查的补丁.md
+            - 4.7.80-年9月19日RogerPauMonne报告在XenDomU内对超大项目执行git.md
+            - 4.7.81-年10月4日MichaelvanElst回应根文件系统探测补丁的讨论认为MD代码.md
+            - 4.7.82-年10月10日IzumiTsutsui回应Chuck关于两步提交拆分补丁已难拆分.md
+            - 4.7.83-年10月17日BrianBuhrow梳理出三层排序策略dkctlsdnstrat.md
+            - 4.7.84-年10月23日EmmanuelDreyfus坚持用pthread不算bug认为只.md
+            - 4.7.85-年10月24日ManuelBouyer报NFS服务端出现uvm_fault空指针.md
+            - 4.7.86-年11月2日ThorLancelotSimon反驳Edgar用dd直写块设备测速.md
+            - 4.7.87-年11月7日EdgarFuss反驳称确实崩了两次并说会去试WAPBL_DEBUG.md
+            - 4.7.88-年11月11日EmmanuelDreyfus答复绝对路径检查需二次copyin推.md
+            - 4.7.89-年11月17日BrianBuhrow自述mpt4驱动在需硬件复位时极脆弱复位后P.md
+            - 4.7.90-年12月8日diro用补丁为本系统添加对英特尔Centrino无线N130网卡的.md
+            - 4.7.91-年12月15日MattThomas回应gdb会读到错误寄存器的批评称在归还PCU.md
+            - 4.7.92-年1月17日DavidLaight就事件计数拆分方案提出意见认为把64位计数器拆.md
+            - 4.7.93-年1月28日EduardoHorvath逐位解释所贴页面标志忙位通常表示有输入输.md
+            - 4.7.94-年2月5日GregTroxel反问对方是否指先看硬件规格在不阻塞的前提下尽量多注.md
+            - 4.7.95-年2月25日ManuelBouyer答称新分区起点宜为物理盘上raid分区偏移三.md
+            - 4.7.96-年3月1日WimLewis举出kernsubr_devswc的用户态操作派发作为.md
+            - 4.7.97-年3月5日Mouse报告amd6452在SunFireX4100上向async挂.md
+            - 4.7.98-年3月13日BrianBuhrow追查raidframe组件队列深度落点发现ra.md
+            - 4.7.99-年3月19日GregTroxel在vmem线程转引LarsHeidieker关于.md
+            - 4.7.100-年4月2日EricHaszlakiewicz在POSIX共享内存线程提出疑问文件.md
+            - 4.7.101-年4月22日KIYOHARATakashi在pchb@acpi线程回复Chuck.md
+            - 4.7.102-年5月22日JonathanKollasch就NCQ支持线程回帖确认ahcisa.md
+            - 4.7.103-年6月4日BrianBuhrow提示测bge4硬件前务必先装kern40018补.md
+            - 4.7.104-年6月17日JHannkenIlljes在devicevnodes结构性混乱线程.md
+            - 4.7.105-年6月25日ChristosZoulas就DTracesyscallprovid.md
+            - 4.7.106-年7月3日SAITOHMasanobu收到实测反馈后就在bgeBroadcom5.md
+            - 4.7.107-年8月18日JoergSonnenberger回应JohnnyBillquist.md
+            - 4.7.108-年9月3日GregOster参与RAIDframe异常行为讨论说明磁盘状态本应跨.md
+            - 4.7.109-年9月26日Mouse在修复vnode生命周期的讨论里追问曾有一段时期文件句柄生.md
+            - 4.7.110-年10月7日Mouse给出外围处理器抽象的最小方案含mmap访问内存以及halt.md
+            - 4.7.111-年10月15日作者自述已用该语言为自设计的专有协议写过抓包分析器用来检测网络环路.md
+            - 4.7.112-年10月18日EdgarFuss读RAIDframe手册后指出重建似乎按单个条带.md
+            - 4.7.113-年10月19日IzumiTsutsui主张需要真正可运行的示例实现比如用内置Lu.md
+            - 4.7.114-年11月17日ChristosZoulas在posix_fallocate内核实.md
+            - 4.7.115-年12月4日LourivalVieiraNeto就ptrdiff_t定义位置一议.md
+            - 4.7.116-年12月9日Mouse就函数指针类型转换在C语言下是否安全的提问作讨论认为通过错.md
+            - 4.7.117-年12月19日AlexanderNasonov在外部内存存储与参数打包线程中承认.md
+            - 4.7.118-年12月25日ThorLancelotSimon回应Dreyfus报告mpii驱.md
+            - 4.7.119-年1月16日Holland说不清那些zfs改动从何而来但也不打算深究其余看着没问.md
+            - 4.7.120-年1月23日Michael谓自己在玩Loongson硬件即64位MIPS配32位.md
+            - 4.7.121-年1月28日MindaugasRasiukevicius就proplib替换讨论.md
+            - 4.7.122-年2月2日TaylorRCampbell回应calloc未必自行检查乘积溢出的说.md
+            - 4.7.123-年2月10日AlexanderNasonov回应维护者要求补缺陷单的建议表示照办.md
+            - 4.7.124-年2月20日DavidYoung转贴RobertElz的分析并称只略读过指出进程.md
+            - 4.7.125-年2月28日JHannkenIlljes评阅Campbell的vnode生命周期.md
+            - 4.7.126-年3月19日IlyaZykov提交ptyfs修正补丁以限制多次挂载避免卸载顺序依.md
+            - 4.7.127-年3月24日IlyaZykov简短确认ChristosZoulas关于驱动不能定.md
+            - 4.7.128-年3月30日MartinHusemann撤回有意为之的说法承认崩溃并非预期称首次.md
+            - 4.7.129-年4月3日ChristosZoulas认为补丁整体不错但反对该重构使ptyfs不.md
+            - 4.7.130-年4月13日IliaZykov提议把全局vnode缓存与通用genfs_look.md
+            - 4.7.131-年4月18日MarkkuJuhaniOlaviSaarinen在cprng_fa.md
+            - 4.7.132-年4月23日PaulKoning就cprng_fast基准回帖表示自己一直在旁观.md
+            - 4.7.133-年4月28日伊利亚不同意只用一张全局表的目标反问其有何优势并称只看到劣势举例若挂.md
+            - 4.7.134-年5月22日JHannkenIlljes分析指出仅unmount使用vflush.md
+            - 4.7.135-年5月29日Rasiukevicius在pktqueue包队列接口讨论中回帖认为.md
+            - 4.7.136-年6月25日一名开发者提交新增虚拟节点缓存重设键操作的补丁用于原子更换缓存节点的.md
+            - 4.7.137-年7月22日GregTroxel反对KMEM_REDZONE在DIAGNOSTI.md
+            - 4.7.138-年8月13日RyoONODERA继续此前关于xhci_init与ac64xECP.md
+            - 4.7.139-年8月22日EdgarFu说无法帮上本例但他本人定位并已由hannken解决的旧.md
+            - 4.7.140-年8月26日EmmanuelDreyfus读pciutils源码确认点号b即按字.md
+            - 4.7.141-年8月29日EmmanuelDreyfus解析链路能力寄存器0x00027482.md
+            - 4.7.142-年9月7日EmmanuelDreyfus报告FFS配WAPBL删除大稀疏文件时表.md
+            - 4.7.143-年9月25日MartinHusemann建议参考mknodatc与posix_f.md
+            - 4.7.144-年10月12日KamilRytarowski认为内部性能追踪与锁追踪属于设计缺陷.md
+            - 4.7.145-年10月24日EmmanuelDreyfus就自己开发的PUFFS页缓存只写功能.md
+            - 4.7.146-年10月26日JHannkenIlljes就EmmanuelDreyfus关于l.md
+            - 4.7.147-年11月7日MasaoUebayashi在本线程补一句认为应当立即删除临时的ro.md
+            - 4.7.148-年11月11日JohnNemeth转贴Uebayashi引述Holland关于隐.md
+            - 4.7.149-年11月21日TaylorRCampbell分析TAILQ_INSERT与pse.md
+            - 4.7.150-年11月23日Dreyfus报告glusterfsNFS服务器允许挂载点根vno.md
+            - 4.7.151-年12月4日RyotaOzaki提议硬件中断读侧改用splhigh而非pseri.md
+            - 4.7.152-年12月10日RyotaOzaki在pserialize与硬件中断讨论中回复Th.md
+            - 4.7.153-年12月15日ChristosZoulas以一句fixed自述已提交lockst.md
+            - 4.7.154-年2月4日ChristosZoulas在ixg4互斥问题线程中就SAITOH提交.md
+            - 4.7.155-年2月13日ThorLancelotSimon在中断风暴线程中转贴TomIvar.md
+            - 4.7.156-年2月28日TaylorRCampbell转贴MartinHusemann关于固.md
+            - 4.7.157-年3月13日ChristosZoulas回应IzumiTsutsui关于sysi.md
+            - 4.7.158-年4月20日MaximeVillard报告BrainyR4扫描在sysarcha.md
+            - 4.7.159-年5月20日RyotaOzaki提出移除源码中已退役netns的残留删除AF_N.md
+            - 4.7.160-年5月30日DavidHolland回复GertDoering关于优先取向不同的.md
+            - 4.7.161-年6月3日Jog追问console引导字符串究竟由谁产生称代码注释说它来自引导程.md
+            - 4.7.162-年6月4日Sheda重发先前消息并补上上下文重申自己的论点只针对规范的第一步即查.md
+            - 4.7.163-年6月13日万恩斯特回帖引述特罗泽尔称其偏好用systatvmstat观察因为它.md
+            - 4.7.164-年6月19日富斯称自己不了解LinuxVMS与Windows的bottomhal.md
+            - 4.7.165-年6月21日绿在32位兼容与pmc系统调用线程中自述正有一份进行中的补丁以拆分n.md
+            - 4.7.166-年7月1日索内贝格用一句肯定回应德雷富斯关于x86在无多处理器选项下构建时于ke.md
+            - 4.7.167-年7月2日某用户分享自己多年使用ArecaRAID控制器的经验RAID6写入do.md
+            - 4.7.168-年7月7日某开发者就USB存储崩溃问题作出回应正文以引用他人关于设备分离的观察为.md
+            - 4.7.169-年7月11日回复NicolasJoly关于兼容层ioctl广播地址查询崩溃应已修.md
+            - 4.7.170-年7月25日MaximeVillard指出if_ieee1394subr存在内存.md
+            - 4.7.171-年6月28日DavidLord就尝试NetBSD6BETA2与重装NetBSD5.md
+            - 4.7.172-年11月25日ChristosZoulas就Thor与Emmanuel对fexe.md
+            - 4.7.173-年11月28日JHannkenIlljes就6TB文件系统上跑fsck耗时数小时.md
+            - 4.7.174-年12月28日DavidYoung劝勿把rtk_setmulti与rtk_cal.md
+            - 4.7.175-年10月27日MarcBalmer报告新构建的amd64内核启动即挂起最后一条日.md
+            - 4.7.176-年11月24日ManuelBouyer就mpt4超时恢复中xserror应取何值.md
+            - 4.7.177-年11月26日MarcBalmer就posix消息队列多接收者议题的列表归属与M.md
+            - 4.7.178-年11月29日同意Marc把辅助库与标准库一并放进lua4的方案并称日后需要时再.md
+            - 4.7.179-年11月14日MatthewMondor就文件名编码大量元数据是否算好习惯回帖认.md
     - 第5章-NetBSD 构建与发布机制（1993–2026）
         - 5.1-build.sh 与交叉构建体系
         - 5.2-NetBSD 源代码树组织
@@ -13461,13 +14077,17 @@
         - 5.4-Release Engineering
         - 5.5-Snapshot 与多架构发布
         - 5.6-自动化测试体系
+            - 5.6.1-年9月13日matthewgreen指出可借模拟器跨平台跑测试且已有自动化测试在.md
     - 第6章-文件系统与存储体系
         - 6.1-FFS 与 BSD 文件系统传统
+            - 6.1.1-年11月22日derMouse自认不算文件系统性能行家但指出FFS关于最优块放置.md
         - 6.2-Soft Updates 与一致性维护
         - 6.3-WAPBL 日志文件系统
         - 6.4-RAIDframe 软件 RAID（1998 起）
+            - 6.4.1-年12月21日GilesLean补充根文件系统若用raidframe会引入又一层.md
         - 6.5-CGD 加密磁盘框架
         - 6.6-tmpfs 与现代文件系统扩展
+            - 6.6.1-年6月16日tls转贴Emmanuel关于根文件系统先不带扩展属性挂载fsck后.md
         - 6.7-ZFS 与外部文件系统生态
     - 第7章-网络系统：BSD 网络传统的继承与重构
         - 7.1-BSD TCP／IP 网络栈传统
@@ -13475,24 +14095,34 @@
         - 7.3-网络设备抽象与驱动体系
         - 7.4-net80211 无线网络体系
         - 7.5-NPF 防火墙设计
+            - 7.5.1-旧 IPF／PF 防火墙 → NPF 防火墙引入（2012）.md
+            - 7.5.2-NPF 防火墙的引入.md
+            - 7.5.3-NPF 漏洞史与 NetBSD 自研防火墙的成熟代价.md
         - 7.6-网络安全特性演进：IPsec 与包过滤
         - 7.7-rump 网络栈
     - 第8章-pkgsrc 与 NetBSD 软件生态
         - 8.1-NetBSD Packages 的早期历史
+            - 8.1.1-同期包管理系统生态总览（1993-2004）.md
+            - 8.1.2-共享 NetBSD 软件包管理代码 → pkgsrc 与 OpenBSD Ports 分化（1996 起）.md
         - 8.2-pkgsrc 的形成
         - 8.3-pkgsrc 在 NetBSD 中的系统整合
         - 8.4-pkgsrc bootstrap 与跨平台构建
         - 8.5-二进制软件包体系与 pkgin
+            - 8.5.1-源码编译 → 二进制软件包支持（2004 pkgsrc 1.0）.md
         - 8.6-pkgsrc 的长期维护模式
         - 8.7-pkgsrc 软件安全维护
     - 第9章-NetBSD 系统安全机制
         - 9.1-BSD 安全传统与 NetBSD 设计
         - 9.2-kauth 权限框架
         - 9.3-Veriexec 文件完整性验证（2004）
+            - 9.3.1-VERIEXEC 与 kauth 框架的边界——NetBSD 特有授权与完整性机制.md
         - 9.4-W^X 与 PaX MPROTECT
         - 9.5-ASLR 与 KASLR
         - 9.6-NPF 的访问控制与策略模型
         - 9.7-CGD 磁盘加密
+            - 9.7.1-旧 CGD 加密机制 → CGD 加密改进（2015）.md
+            - 9.7.2-年9月5日cgd指出许多伪磁盘设备并没有structdevice故不能简单加此参.md
+            - 9.7.3-年2月22日cgd认为eeh的定长磁盘结构做法合理但NetBSD关于time_t.md
         - 9.8-SMEP、SMAP 等硬件防护
         - 9.9-静态分析与自动检查
         - 9.10-多架构环境中的安全一致性
@@ -13500,6 +14130,7 @@
     - 第10章-虚拟化与运行环境
         - 10.1-Xen 支持
         - 10.2-NVMM 虚拟机监控框架
+            - 10.2.1-NVMM 虚拟化的设计.md
         - 10.3-云环境中的 NetBSD
         - 10.4-隔离环境与部署形态
         - 10.5-微型虚拟机与轻量隔离（2020–2026）
@@ -13513,17 +14144,69 @@
     - 第12章-NetBSD 软件工程文化与协作规范
         - 12.1-交叉构建的工作流：一套构建、多平台产出
         - 12.2-版本控制与移植工作流：CVS 连续性、autoconf 与新平台引入
+            - 12.2.1-补丁包发布 → CVS 版本控制引入（1993-1994）.md
         - 12.3-代码规范与移植纪律：KNF 与 MI／MD 书写的约束
+            - 12.3.1-年5月5日greywolf就KNF与在他人代码上改动发言引一条移植与改码的第一守.md
         - 12.4-测试：atf 测试框架与回归测试
         - 12.5-发布工程：正式发布、安装镜像与 release notes
         - 12.6-pkgsrc 的工程过程：批量构建与平台矩阵
         - 12.7-文档工程：man 页一致性与 developer 文档
         - 12.8-跨项目工程流动：补丁互移与上游回馈
         - 12.9-NetBSD 的代码极简与美学：KNF、命名与接口取舍
+            - 12.9.1-转写质量分较低且专名讹误密集Klang应为ClangYorkSonnenberg.md
+            - 12.9.2-年8月2日JohnKohl反对删去audio_encoding的name成员称其.md
+            - 12.9.3-年1月3日ArneJuul从portpmax转来讨论并归纳splimp当前承担的.md
+            - 12.9.4-年7月25日derMouse质疑ovbcopy是否算传统接口指传统上bcopy已.md
+            - 12.9.5-年2月24日BillRees主张该竞态暴露的是文件系统本身的缺陷即链接计数与锁的.md
+            - 12.9.6-年4月1日GordonWRoss反对Scott让gcc默认按长字对齐的设想指出改.md
+            - 12.9.7-年8月21日JohnNemeth就bus_space函数名越拖越长调侃反问为何不.md
+            - 12.9.8-年12月9日SeanWitham提议为配置文件制定风格指南以便用继承处理较常见的.md
+            - 12.9.9-年2月17日JonathanStone由反抗英国与英国国教会的历史谈起认为dis.md
+            - 12.9.10-年6月27日FrancoisReneRideau转述与老牌Unix黑客Rober.md
+            - 12.9.11-年9月30日DavidEdelsohn说明缺少常量传播时GCC难以判断位掩码运算.md
+            - 12.9.12-年1月18日ChristianEHopps自述曾遇到K&R定义按int传参而同编.md
+            - 12.9.13-年1月21日SimonBurge就KNF中二级缩进为四空格一条询问是否应给出长行.md
+            - 12.9.14-年1月22日JasonThorpe回应MartinHusemann称该理由是站得.md
+            - 12.9.15-年4月21日bouyer承认siop拼写是自己的笔误主张按芯片或芯片家族命名驱动.md
+            - 12.9.16-年12月13日Greywolf回应cgd对近期变更未经讨论的指责追问所指线路规程.md
+            - 12.9.17-年3月23日MatthiasBuelow解析if判空的两种写法语义差别认为直接等.md
+            - 12.9.18-年2月2日JunYoung批评OpenBSD鼠标代码不应原样提交指其大量用大写命.md
+            - 12.9.19-年4月24日Greywolf回忆当年天下皆VAX时解引用空指针并不会像如今大多数.md
+            - 12.9.20-年2月21日StevenMBellovin主张保留dtime_t指已有人推动64.md
+            - 12.9.21-年6月15日MindaugasRasiukevicius提议为UVM结构统一ty.md
+            - 12.9.22-年7月4日EladEfrat转贴Egger的__BIT宏建议并回帖采纳只说这些确.md
+            - 12.9.23-年8月6日MatthiasDrochner援引C9x713指出以双下划线开头的标.md
+            - 12.9.24-年8月10日tls确认树中还有pcc等编译器且FreeBSD已用LLVM构建过建.md
+            - 12.9.25-年11月12日AnttiKantee用高速公路比喻反驳Johnny称高速公路设计.md
+            - 12.9.26-年11月12日EduardoHorvath就SPARC内联汇编线程回应指出原因正.md
+            - 12.9.27-年7月29日GregTroxel提出解释称PDP11语境下CSR意为控制与状态寄.md
+            - 12.9.28-年10月4日JoergSonnenberger指packed属性有双重作用除去隐.md
+            - 12.9.29-年4月13日DavidLaight反驳MWarnerLosh对FreeBSD打印.md
+            - 12.9.30-年7月13日TedLemon自述因不谨慎使用花括号在其职业生涯中造成过三到四次安.md
+            - 12.9.31-年11月20日ChrisJepeway转述OpenBSD团队约一年半前调查过同类.md
+            - 12.9.32-年12月12日GarrettDAmore反驳80列终端已成历史之说称不少人不愿为.md
+            - 12.9.33-年6月6日ChapmanFlack询问内核模块内私有静态符号的命名应否带模块前缀.md
+            - 12.9.34-年11月24日Michael从macallan1888邮箱发信对DeZeurko.md
     - 第13章-NetBSD 的语言生态与 pkgsrc
         - 13.1-pkgsrc 与多语言打包生态
+            - 13.1.1-年6月21日HavardEidnes为测rust能否用pkgsrc的LLVM而在.md
+            - 13.1.2-年6月12日KimmoSuominen提议pkgsrc的Python实现PEP6.md
         - 13.2-跨平台编译器移植史
+            - 13.2.1-年4月24日索伦贝格尔回答福的疑问说明C++各版本大体是超集但2011起析构函数.md
+            - 13.2.2-2025年3月16日maya回复TaylorRCampbell关于rustcar.md
+            - 13.2.3-年4月24日一位匿名用户在wip编译clang时因系统c++生成异常对象码而改用.md
+            - 13.2.4-年12月1日Adam谓可在etcmkconf中设RUST_TYPE=bin并指向.md
         - 13.3-NetBSD 用户态的脚本语言演进
+            - 13.3.1-年2月27日TakahiroKambe答GregTroxel的质疑许多rubyg.md
+            - 13.3.2-年6月1日RichardPALO发现构建firefox24时捡的是系统java而.md
+            - 13.3.3-年7月8日MatthiasFerdinand指出升级perl5240后p5系列做.md
+            - 13.3.4-年8月2日PatrickWelche转贴JeremyCReed关于python3.md
+            - 13.3.5-年1月27日KinoshitaDaisuke谓其以Python310构建inpu.md
+            - 13.3.6-年9月28日ThomasKlausner说已在wiki建立javaswt项目页并.md
+            - 13.3.7-年5月3日Lewis在RHEL7用2023Q1与默认python310非特权构建.md
+            - 13.3.8-年11月8日DavidHolland说明各包自身的PYTHON_VERSIONS.md
+            - 13.3.9-年5月4日DavidHolland说明设置了PYTHON_VERSION_REQ.md
+            - 13.3.10-年8月19日克劳纳提议删掉那些不兼容标注行因为现在支持Python2的包已必须显.md
 - 第42卷-NetBSD 人物：可移植路线的参与者（1993–2026）
     - 第1章-创立成员
         - 1.1-Demetriou：架构与制度（1993–）
@@ -13566,6 +14249,182 @@
         - 2.1-NetBSD 设计原则的文本来源：手册、邮件列表与代码
         - 2.2-build.sh 与交叉构建文化：从源码构建系统的传统
         - 2.3-pkgsrc 的形成：从软件包系统到跨平台工程理念
+            - 2.3.1-年4月7日ThomasKlausner通报pkgsrc2012Q1分支刚刚完成表.md
+            - 2.3.2-年1月17日TerhoUotila在2012Q4的freecivclient上仅.md
+            - 2.3.3-年10月4日Rhialto报告在pkgsrc2013Q3上multimediav.md
+            - 2.3.4-年1月11日JonathanPerkin宣布pkgsrc2013Q4的MacOS.md
+            - 2.3.5-年8月21日提交wipmcwm更新DISTNAME定为mcwm20130209并.md
+            - 2.3.6-年2月19日coypu回复关于firefoxpkgsrc2015Q4在i3867.md
+            - 2.3.7-年4月28日RolandIllig说明2015年重写pkglint时把旧实现留给.md
+            - 2.3.8-年12月20日JohnDBaker在2018Q4冻结前的pkgsrcHEAD测试.md
+            - 2.3.9-年6月2日TakahiroKambe宣布在pkgsrc2021Q2分支之前把Ru.md
+            - 2.3.10-年3月28日Troxel通告2023Q1分支pkgsrc20231已建立源码即刻.md
+            - 2.3.11-pkgsrc 2.0 的依赖管理改进.md
+            - 2.3.12-跨平台扩展至 Linux／macOS.md
+            - 2.3.13-与 FreeBSD Ports 与 OpenBSD Ports 的比较.md
+            - 2.3.14-年2月4日AlistairCrooks回应joerg的PostgreSQL83导.md
+            - 2.3.15-年2月1日Joerg提议规范二进制包压缩算法的选择机制目前唯一手段是改PKG_S.md
+            - 2.3.16-年6月15日JoergSonnenberger批评相关改动未经测试即提交从pkg.md
+            - 2.3.17-年7月16日ReleaseEngineering成员JeffRizzo求助xor.md
+            - 2.3.18-年7月10日JoergSonnenberger回复DanielVergien关于.md
+            - 2.3.19-年10月19日GeertHendrickx回复KouichirouHiratsu.md
+            - 2.3.20-年2月3日MatthiasDrochner承认privoxy补丁漏了一个&补发新.md
+            - 2.3.21-年3月27日JoergSonnenberger回复AlexeyLebedev关于.md
+            - 2.3.22-年5月21日ThomasKlausner答复称AlexeyLebedev提议为O.md
+            - 2.3.23-年11月1日HavardEidnes上传NetBSDsparc6450上pkgs.md
+            - 2.3.24-年5月5日Rhialto谓calibre另有一个问题他现已改在pkg_comp之.md
+            - 2.3.25-年9月11日MinSikKim解释不做单一texlive包的原因TeXLive没.md
+            - 2.3.26-年11月2日JoergSonnenberger回应Rhialto关于xf86vi.md
+            - 2.3.27-年12月11日MarkDavies就SadClouds在x11kdelibs4找.md
+            - 2.3.28-年2月18日MarkDavies说明kdegraphics3依赖imlib只因k.md
+            - 2.3.29-年3月18日GregTroxel对引入系统texlive探测一事表示这像是内建检.md
+            - 2.3.30-年4月1日ThomasKlausner报告openoffice3在59948am.md
+            - 2.3.31-年4月8日StefanoMarinelli建议把emulatorsqemu从01.md
+            - 2.3.32-年5月12日GregTroxel用fstat观察到xulrunner与gatey.md
+            - 2.3.33-年5月18日AlekseyCheusov纠正一名未署名引用者关于USE_DEST.md
+            - 2.3.34-年7月9日David在NetBSD5i386上头一回用pkg_chkl每条pkg.md
+            - 2.3.35-年8月12日ThomasKlausner发HEADSUP预告包移除依PR4523.md
+            - 2.3.36-年9月6日StephanTesch以Updateforp5CGISimple为题.md
+            - 2.3.37-年9月12日ThomasKlausner回复StephanTesch当日提出的请.md
+            - 2.3.38-年9月20日DavidBrownlee向techx11解释pkgsrc只有X11.md
+            - 2.3.39-年11月20日NatSloss报告krita在NetBSD501上启动需约十分钟.md
+            - 2.3.40-年12月10日IzumiTsutsui在原生NetBSDi38651上用自带pk.md
+            - 2.3.41-年1月31日MartinHusemann就fpos_t转换问题给出一般性建议文本.md
+            - 2.3.42-年3月15日RyoONODERA刚更新完FirefoxThunderbird相关.md
+            - 2.3.43-年4月1日Mayuresh报告自己新建的wipmuttprint存在严重功能缺陷.md
+            - 2.3.44-年5月28日一名未署名参与者说Joyent走的是相反做法SunOS上一切工具不加.md
+            - 2.3.45-年6月6日ThomasKlausner谓为便于大量包免打补丁已新增metapkg.md
+            - 2.3.46-年7月1日GregTroxel准备把swig从1336更新到1340说明1337.md
+            - 2.3.47-年7月18日Tom逛freshports的提交列表时注意到newssuck的WW.md
+            - 2.3.48-年9月13日DarioNiedermann在Slackware上用pkgsrc构.md
+            - 2.3.49-年10月1日DavidHolland提议移除develstlport多年无法编译.md
+            - 2.3.50-年10月8日ThomasKlausner通知他把cairo更新到1124后在OS.md
+            - 2.3.51-年10月24日DarioNiedermann在Slackware1210上bma.md
+            - 2.3.52-年11月7日ChristophBadura承认Havard于10月24日提交的点.md
+            - 2.3.53-年11月26日DavidBrownlee回复Al关于在NetBSD6构建mysq.md
+            - 2.3.54-年12月15日ManuelBouyer询问是否有人让flash在firefox里.md
+            - 2.3.55-年2月11日PierreAbbat继续rollingreplace时pkg_ch.md
+            - 2.3.56-年3月17日RichardPALO回复libffi在solarisx64配合gc.md
+            - 2.3.57-年4月18日MarcBaudoin自述用LaTeX与NetBSD超二十年TeXL.md
+            - 2.3.58-年5月11日EricHaszlakiewicz用pkginfullupgrade.md
+            - 2.3.59-年7月5日ThomasKlausner提交texinfo51与libtasn13.md
+            - 2.3.60-年8月30日PierrePronchery正试经EdgeBSD平台为NetBSD.md
+            - 2.3.61-年9月10日PatrickWelche完成了pulseaudio4的更新包其中h.md
+            - 2.3.62-年11月9日AleksejSaushev提交pbulksh脚本以简化pbulk批.md
+            - 2.3.63-年3月10日IainMorgan报告在SLES11上构建editorsemacs.md
+            - 2.3.64-年4月1日GregTroxel认为xz的构建从父包继承了需要xz自身的信息建议用.md
+            - 2.3.65-年4月11日GregTroxel在NetBSD6i386上构建guile2011.md
+            - 2.3.66-年6月1日MichaiRamakers看到Greg说pkgconfig028已支.md
+            - 2.3.67-年6月29日一位署Tom的用户继续追startx起不来的问题检查etcttysu.md
+            - 2.3.68-年7月31日提出用PKG_OPTIONSbind99+=threads无侵入地关.md
+            - 2.3.69-年9月5日JohnDBaker分析certdatatxt第九数据块是没有前置ce.md
+            - 2.3.70-年10月27日GregTroxel问能否把nginx每个模块做成依赖主包的pkg.md
+            - 2.3.71-年11月24日MakotoFujiwara在NetBSDamd647991上以X.md
+            - 2.3.72-年1月27日JohnDBaker报告在macppc7994上重建develboo.md
+            - 2.3.73-年2月6日JanDanielsson在NetBSDamd64的pkg_compc.md
+            - 2.3.74-年3月14日指出xosview正以旧的tailq格式从_ifnet做kvm_re.md
+            - 2.3.75-年4月15日报告misccalibre有同类问题另缺三个appdataxml采用.md
+            - 2.3.76-年4月24日ThomasKlausner回复说命名约定是给只对特定包有意义的选项.md
+            - 2.3.77-年5月11日IbraheemSaleh称他用外部gcc492在Solaris10.md
+            - 2.3.78-年5月21日JoergSonnenberger在长引用块之后仅回复一句Corre.md
+            - 2.3.79-年6月2日JanDanielsson说在netbsd615与netbsd7上pk.md
+            - 2.3.80-年7月10日MartinHusemann在autoconf构建失败讨论中提出替代.md
+            - 2.3.81-年10月9日JoergSonnenberger提议精简树内PostgreSQL版.md
+            - 2.3.82-年12月9日RichardPALO注意到GraphicsMagick跳过的测试多.md
+            - 2.3.83-年1月26日ThomasKlausner答pkg_alternatives之问它.md
+            - 2.3.84-年3月23日Debian上依赖链触及nbpatch时报错cc带DHAVE_NBC.md
+            - 2.3.85-年4月16日coypu谓用baseXorg跑develmeld时报找不到libG.md
+            - 2.3.86-年9月21日来信报loudmouth153在NetBSDamd6470_STAB.md
+            - 2.3.87-年10月27日通告DarwinLinux与SunOSgcc三平台在用户未自行指定.md
+            - 2.3.88-年12月20日ManuelBouyer澄清自己说过维护42但不维护45仍用42因.md
+            - 2.3.89-年1月24日DavidHolland指出textprocsablotron上游已.md
+            - 2.3.90-年2月8日MartinHusemann转述MakotoFujiwara贴出的gd.md
+            - 2.3.91-年2月15日RobertElz这封回autogen构建失败的信可见正文只有他摘回.md
+            - 2.3.92-年3月17日Paul报告multimediagmplayer今天构建失败tvi_.md
+            - 2.3.93-年3月22日Adam实测libLLVM相关dylib大小分别为43970528与.md
+            - 2.3.94-年3月30日JoergSonnenberger反对让pkgsrcopenssl去.md
+            - 2.3.95-年4月17日Makoto说clawsmailvcalendar升到3150需li.md
+            - 2.3.96-年6月23日PatrickWelche问xlockmore把配置文件装到${PR.md
+            - 2.3.97-年7月6日maya转述pkgsrc现默认g95的来由后说joerg反对改这个默认.md
+            - 2.3.98-年9月1日TimoBuhrmester报告自xf86videoati790即x1.md
+            - 2.3.99-年10月7日Rhialto报告netrtorrent默认勾选的xmlrpc选项在.md
+            - 2.3.100-年12月4日PaulGoyette报告最近的langrust无法构建日志先跑ru.md
+            - 2.3.101-年1月19日PaulGoyette以标题circulardependency提出.md
+            - 2.3.102-年2月22日自述自kde4上pkgsrc起每年试取代kde3总不稳本次amd64.md
+            - 2.3.103-年3月28日Thomas回复指出要看ffmpeg010时变量名写错应写PKG_O.md
+            - 2.3.104-年4月12日Kathe请求对pkgsrcse的langswiprologlite.md
+            - 2.3.105-年4月26日MarcBaudoin报告securitylibsecret自十天前.md
+            - 2.3.106-年6月6日Mayuresh在RPI2的NetBSD80_RC1armv7上构建d.md
+            - 2.3.107-年6月19日发件人报告graphicsImageMagick升到7080后数日内.md
+            - 2.3.108-年7月10日Rhialto针对JonathanPerkin称该段代码三年未动且在.md
+            - 2.3.109-年7月30日针对ArthurBarlow报的ccmake在PLIST里有而des.md
+            - 2.3.110-年9月16日报告在两台amd6480_STABLE系统上构建fontsfontc.md
+            - 2.3.111-年10月4日承认怀疑正是随Solaris附带的那个binsh所致指出Solari.md
+            - 2.3.112-年11月5日针对Julien展示pbulkconf中make=${prefix}.md
+            - 2.3.113-年11月13日ChavdarIvanov在两台NetBSD机器上测试该补丁pin.md
+            - 2.3.114-年11月29日AndreasBeck表示已解决netliblive在Linux上.md
+            - 2.3.115-年1月6日JoergSonnenberger指出混合不同GCC版本效果不好而这正.md
+            - 2.3.116-年1月24日NilsEilers在eeePC1005HA笔记本上装firefox.md
+            - 2.3.117-年4月13日报告Linux上部分包pkg_add失败提示包为Linuxx86_6.md
+            - 2.3.118-年5月23日OttavioCaruso用bmake加PKG_OPTIONSqem.md
+            - 2.3.119-年7月23日ChavdarIvanov称自己在昨天的current上构建出了gn.md
+            - 2.3.120-年10月5日nia提到lightspark作为gnash后继者已进入pkgsrc.md
+            - 2.3.121-年10月16日RobertSwindells继续注释errorsc的调试代码后崩.md
+            - 2.3.122-年11月25日ChavdarIvanov报告wxmaxima改用wxGTK30后.md
+            - 2.3.123-年1月14日RobertElz用comm12比对gcr与gnomekeyring.md
+            - 2.3.124-年2月8日Mayuresh报告在pkgsrccurrent下NetBSD80am.md
+            - 2.3.125-年2月22日ChavdarIvanov回复firefox在NetBSD80构建失.md
+            - 2.3.126-年3月8日DaveEllis回帖称本地构建只看到wgetgnup2re2c和一批.md
+            - 2.3.127-年3月17日JohnDBaker报告把pkgsrc升到HEAD并执行pkg_ro.md
+            - 2.3.128-年4月6日BennySiegert指出该go114补丁与上游无关它把distfi.md
+            - 2.3.129-年5月12日发件人报告在NetBSD90GENERIC_KASLRamd64系统.md
+            - 2.3.130-年6月10日ChavdarIvanov在NetBSDcurrent99965上构.md
+            - 2.3.131-年7月1日Mayuresh报告在Linux上全局设置PREFER_PKGSRC时.md
+            - 2.3.132-年7月28日GregTroxel确认pkg_install用的是base库没有别.md
+            - 2.3.133-年8月8日MichaelForney指出该embedbitcode与lto选项冲.md
+            - 2.3.134-年8月15日TobiasNygren确认OttavioCaruso附上的harf.md
+            - 2.3.135-年9月9日GregTroxel回答ConnorMcLaughlan关于外部rus.md
+            - 2.3.136-年9月22日JohnDBaker报告pkg_rollingreplace卡在py.md
+            - 2.3.137-年10月10日ChavdarIvanov尝试构建wipfreecad0184时发.md
+            - 2.3.138-年11月19日JanDanielsson补充该环境是unprivileged引导.md
+            - 2.3.139-年12月7日JonathanSchleifer报告该变更在干净91系统上把pkg.md
+            - 2.3.140-年1月6日HungNguyenGia补充OS_VARIANT判定片段应插入Sun.md
+            - 2.3.141-年2月3日ChavdarIvanov表示自己有装zstd在今天的amd64cur.md
+            - 2.3.142-年4月5日发件人给出让graphicscinepaint适配develglib2.md
+            - 2.3.143-年12月22日RolandIllig给出定位编译期空转的三步法先找出导致空转的文.md
+            - 2.3.144-年4月1日PaulRipke报告freecad10已在NetBSD10amd64.md
+            - 2.3.145-年7月22日Mayuresh谓pkgsrc更新后openpyxl坏了谓Pytho.md
+            - 2.3.146-年9月3日MartinHusemann报告在NetBSDcurrentamd64.md
+            - 2.3.147-年11月5日atomicules为Helix25071提交wip包并求评审以入C.md
+            - 2.3.148-年1月1日DavidBrownlee建议bob支持命令行覆盖pkgpath例如b.md
+            - 2.3.149-年2月3日GregTroxel在NetBSD10amd64上从pkgsrc构建u.md
+            - 2.3.150-年3月2日BrianBuhrow问miscwindow的更新该交pkgsrc补丁.md
+            - 2.3.151-年3月16日JohnDBaker说同一台改从本地盘运行自100_STABLE起未.md
+            - 2.3.152-年10月5日ChavdarIvanov认为把pkgsrclangpython39.md
+            - 2.3.153-年11月4日Adam把heimdal构建失败判为竞态条件ocsp_asn1h应先.md
+            - 2.3.154-年11月30日GregTroxel认为nextcloud不必拆成版本化包而应保留.md
+            - 2.3.155-年12月30日Rhialto从控制台日志发现pamaf失败真因是usrpkgli.md
+            - 2.3.156-年4月7日GregTroxel指出可用makeshowdependspkgpat.md
+            - 2.3.157-年5月22日Troxel认为升级可行并自述将执行下一分支指出从wip抄入会丢掉S.md
+            - 2.3.158-年7月15日Klausner判定misclibreoffice构建失败根因在zx.md
+            - 2.3.159-年9月5日MansourMoufid怀疑失败是因为用了libstdc++头文件而.md
+            - 2.3.160-年10月17日自述无法取到fvwm3pull683可下载的补丁改为手动套用并另存.md
+            - 2.3.161-年11月27日BennySiegert构建langnpmnpm8151时rese.md
+            - 2.3.162-年1月3日JohnDBaker谓在amd64100_BETA上用pkgsrc20.md
+            - 2.3.163-年1月19日xfalkenx回复称已按原建议处理并提交PR57190称赞Taho.md
+            - 2.3.164-年7月11日EmmanuelDreyfus持有PADLnss_ldap上游补丁拟.md
+            - 2.3.165-年9月3日休斯曼在PKG_DEFAULT_OPTIONS里关掉cups后x11q.md
+            - 2.3.166-年10月2日RinOkuyama回复莱尔托称NetBSD内树GCC默认被强制为D.md
+            - 2.3.167-年10月16日GregTroxel回应10amd64与i386二进制包的询问称a.md
+            - 2.3.168-年11月16日布卢姆称wipqemacs已准备好接受评审并希望入库这是他第一次为.md
+            - 2.3.169-年12月28日尼格伦称此类问题通常用栈重对齐选项规避Firefox在i386上只.md
+            - 2.3.170-年5月6日thomas_orgis补充确认pyscipy在NetBSD93构建失.md
+            - 2.3.171-年6月5日pin验证了在qt6qtbase中加入develwayland的头文件.md
+            - 2.3.172-年7月8日DaveTyson在mkconf加PKG_OPTIONSgerbera.md
+            - 2.3.173-年8月26日Mayuresh已将wiportools提交全部依赖构建成功后卡在C.md
+            - 2.3.174-年10月16日nia更新其PowerPCMac二进制包仓库tigersrc列出A.md
+            - 2.3.175-年2月13日AlekseyCheusov认为不同包共用同一PKGBASE的情形必.md
+            - 2.3.176-年5月22日乔格索嫩贝格澄清ALLOW_VULNERABLE_PACKAGES原.md
         - 2.4-性能与通用性的冲突：SMP、多核时代与架构调整
         - 2.5-“正确性优先”叙事的成立条件与反例
     - 第3章-名称、符号与身份：NetBSD 的自我表达
@@ -13574,6 +14433,7 @@
         - 3.3-版本编号体系：0.8 至 1.6 与 2.0 起的编号变更（1993–1999）
         - 3.4-发布公告、邮件列表与开发节奏中的仪式性
         - 3.5-NetBSD 基金会、商标与项目身份管理
+            - 3.5.1-NetBSD 商标注册与许可政策.md
     - 第4章-共同体与治理文化：开发者、基金会与长期维护
         - 4.1-早期贡献者的文化自述与身份认同
         - 4.2-核心开发者制度与技术决策结构：core group 的职能与文化面
@@ -13586,9 +14446,11 @@
     - 第5章-许可证、自由观与产业关系：宽松许可路线
         - 5.1-BSD 许可证传统与 NetBSD 的自由观
         - 5.2-宽松许可证与商业采用：Wasabi 与 OEM 案例（2000–2008）
+            - 5.2.1-无商业支持体系 → Wasabi Systems 商业支持模式（2000 起）.md
         - 5.3-pkgsrc、嵌入式系统与外部生态扩散（1997–2009）
         - 5.4-开源共享与产业采用：2-clause 转向、被使用追踪与雇主许可门槛
         - 5.5-与 GPL 路线的历史比较
+            - 5.5.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md
         - 5.6-商业使用、闭源衍生与社区价值冲突
         - 5.7-宽松许可下商业采用的规模与回馈的可考边界
     - 第6章-争议、批评与自我反思：可移植性主张的边界
@@ -13599,41 +14461,168 @@
         - 6.5-NetBSD 在公众技术记忆中的位置变化
     - 第7章-NetBSD 传言、都市传说与习俗
         - 7.1-NetBSD 传言考据
+            - 7.1.1-可移植性口号、Theo de Raadt（西奥·德·若特） 驱逐与 Tainted Code 政策传言.md
         - 7.2-NetBSD 习俗考据
+            - 7.2.1-项目统摄史观综合审视：NetBSD 习俗的可移植哲学与社区治理张力.md
+            - 7.2.2-项目统摄史观综合审视：NetBSD 习俗的可移植性哲学与制度创新（操作系统比较视角）.md
     - 第8章-美学：NetBSD 的一致性与符号
         - 8.1-美学的证据与载体：man 页、build.sh 输出、源码组织与邮件
         - 8.2-代码美学：清晰、统一与可维护
+            - 8.2.1-v9-ch184-新增-netbsd代码美学.md
         - 8.3-文档与手册的统一体例
         - 8.4-视觉与符号：从 daemon 到旗帜
         - 8.5-美学与取舍：可移植性优先的代价
+            - 8.5.1-9.x 周期安全态势总览——18 个 SA 背后的可移植性内核安全画像.md
+            - 8.5.2-kernel ASLR 默认启用与可移植性代价——9.0 的安全范式转向.md
+            - 8.5.3-BIND 与 OpenSSL 贡献组件漏洞群——base 与 pkgsrc 的安全维护分工.md
+            - 8.5.4-procfs／PPPoE／USB 等本地代码漏洞——9.x 周期 NetBSD 自有代码审计.md
+            - 8.5.5-年6月19日MartinHusemann在AES线程答SevanJaniyan关.md
         - 8.6-批评：规模与一致性的边界
         - 8.7-参照：美学史与软件美学研究
 - 第44卷-世界上最安全的操作系统：OpenBSD 操作系统的历史（1995–2026）
     - 第1章-OpenBSD 起源（1995–1996）
         - 1.1-1995 年从 NetBSD 分叉的动因与经过
         - 1.2-Theo de Raadt 与 NetBSD 核心团队冲突考据（前史：1994–1995）
+            - 1.2.1-theoderaadt与netbsdcoreteam的冲突考据1994.md
         - 1.3-OpenBSD 早期 CVS 建立与 1.1–1.2 发布（1995–1996）
+            - 1.3.1-要点OpenBSD自1995年10月fork自NetBSD10首个公开发布版Op.md
+            - 1.3.2-openbsd101112的早期发布历程1996.md
         - 1.4-NetBSD 社区回应与分叉争论
         - 1.5-创建期贡献者构成（1995–1996）
         - 1.6-创建期治理结构与开发模式形成
         - 1.7-4.4BSD-Lite 迁移与代码基础重建
+            - 1.7.1-CSRG 4.4BSD-Lite → OpenBSD 代码审计基础（1996-1997）.md
         - 1.8-创建期技术路线争论与批评
         - 1.9-与同时期操作系统的比较：NetBSD、FreeBSD、Linux 与商业 UNIX
     - 第2章-OpenBSD 2.x：OpenSSH 诞生与审计文化形成（1996–2001）
         - 2.1-OpenBSD 2.x 发布史
         - 2.2-代码审计文化建立（1996–2000）
+            - 2.2.1-Windows 2000／XP（2000-2001）.md
+            - 2.2.2-NetBSD 1.5／1.6（2000-2002）.md
+            - 2.2.3-FreeBSD 4.x／5.0（2000-2003）.md
+            - 2.2.4-Linux 2.4（2001）.md
+            - 2.2.5-要点20002004安全文化分野OpenBSD2x以集中代码审计建立安全优先标杆.md
+            - 2.2.6-OpenBSD（安全文化与代码审美）.md
+            - 2.2.7-年7月22日happyemory就主机名中带下划线的话题回应说BIND8x会报错.md
+            - 2.2.8-年7月2日ChristopherRHertel主张把操作系统视作工具而非产品认为.md
+            - 2.2.9-年12月19日STeveAndre回应DerekSivers因听说FreeBSD.md
+            - 2.2.10-年3月1日建议长期运行后才锁死多半是硬件问题称26系统常被人为断电打断前可达数百.md
+            - 2.2.11-年6月18日ChrisPalmer补充说明FDISKMBR命令也可以用FreeD.md
+            - 2.2.12-年10月9日PeterGalbavy转发zebra讨论OSSP处理224005时.md
+            - 2.2.13-年3月24日LuisPinto询问IBMxserver上安装42后ichiic0.md
         - 2.3-OpenSSH 起源：SSH 1.2.12、OSSH 与 OpenBSD fork
+            - 2.3.1-OpenSSH 1999 年 12 月发布与早期版本演进.md
+            - 2.3.2-SSH 的商业化与 OpenBSD 的 fork 动机.md
+            - 2.3.3-OpenSSH 的全球部署与安全审计传统.md
+            - 2.3.4-年9月17日MattDillon解释restarttarget只是读pidfil.md
+            - 2.3.5-年3月1日PeterCLai回复ChrisNeustrup关于openssh与s.md
+            - 2.3.6-年1月11日MarianHettwer指出NO_KERBEROS=yes只意味h.md
+            - 2.3.7-年10月5日DanielBond建议禁口令认证或防火墙OpenSSH认为改端口无.md
+            - 2.3.8-年6月25日XinLi转交OpenBSD补丁让sshkeyscan默认抓取ECD.md
+            - 2.3.9-年11月11日发帖人自称ports维护者并说明这是其观点称base与port版并.md
+            - 2.3.10-年11月24日RandyBerndt注意到DECInternetTunnel的P.md
+            - 2.3.11-年6月12日CORESDI发布CORESDI04安全公告指SSH存在插入攻击漏洞.md
+            - 2.3.12-年3月25日发帖人纠正别人关于Kerberos默认关闭加密的说法指出协议本身总是.md
+            - 2.3.13-年10月13日发帖人称当然应该安装ssh但对发行版内置ssh唯一的顾虑是无法拿到.md
+            - 2.3.14-年1月19日发帖人称在ssh文档读到tcp_wrappers与ssh搭配不带来额.md
+            - 2.3.15-年6月25日发帖人反驳说如果除了fmt参数之外字符串里本身还带有格式代码那么结果.md
+            - 2.3.16-年7月25日发帖人称使用JavaSSH客户端无法确认其不向他人转发主机账号密码因.md
+            - 2.3.17-年9月22日发帖人称FreeBSD同样支持一次性口令ftp如今也支持安全口令交换.md
+            - 2.3.18-年11月16日发帖人在收到关于某账户未指定shell却仍取得root命令行提示符.md
+            - 2.3.19-年3月1日发帖人称他早前发现所有OpenBSD的anoncvs服务器都能被当作跳.md
+            - 2.3.20-年3月27日发帖人称见过的此类延迟有时由反向DNS解析问题引起并建议在已登录的目.md
+            - 2.3.21-年6月1日发帖人指出文件打开函数并不支持RSA并说明认证代理保存的是用口令解密后.md
+            - 2.3.22-年1月1日发帖人列举升级OpenSSH的两个理由其一是把本机报告的版本号与ope.md
+            - 2.3.23-年7月5日发帖人反驳说同一页面也说明OpenSSH内含让此类攻击极难成功实现的代.md
+            - 2.3.24-SSH 商业化与 fork 动机.md
+            - 2.3.25-批评——Ylönen 阵营对 OpenSSH fork 的立场.md
+            - 2.3.26-反批评——OpenBSD 阵营的 fork 正当性论证.md
+            - 2.3.27-合图——OpenSSH fork 的辩证综合.md
         - 2.4-OpenSSH 创建者与主要贡献者
         - 2.5-安全审计方法进入工程流程
         - 2.6-ktrace 等 BSD 工具的继承与扩展（1996–2001）
+            - 2.6.1-要点OpenBSD自fork自NetBSD101996年10月起继承ktrace.md
         - 2.7-外部批评：安全审计文化的成本与争议
         - 2.8-社区贡献者与边缘开发者
         - 2.9-FreeBSD 2010—2026 年的贡献者多样性与企业参与
+            - 2.9.1-年11月30日BrooksDavis20171130回复FarhanKhan询问.md
+            - 2.9.2-企业工程力量的有组织贡献.md
+            - 2.9.3-地域与学术的志愿者多样性.md
+            - 2.9.4-项目官方核心与基金会治理.md
+            - 2.9.5-年1月13日JosefGrosch公告湾区FreeBSD用户组BAFUG于1月1.md
+            - 2.9.6-年5月28日RickHamell发布PFUG用户组例会报告称TedMittels.md
+            - 2.9.7-年11月21日FreeBSD核心团队成员GregLehey致函ntsecurit.md
+            - 2.9.8-年5月8日FreddieCash为SheldonHearn乐见MikeSmith.md
+            - 2.9.9-年2月19日JackVogel称即将发布一版重要的igb驱动并欢迎有需要者提前试.md
+            - 2.9.10-年9月16日PatrickMahan代同事转交关于崩溃转储自V80起失效的邮件正.md
+            - 2.9.11-年8月28日AndriyGapon分析VirtualBoxsetuidroot后.md
+            - 2.9.12-年12月29日JoeNosay致谢AlfredPerlstein表示按其给出的范.md
+            - 2.9.13-年2月21日NicholasWilson发现getpeereid仅对listen.md
+            - 2.9.14-年7月10日KevinDay分享早前雇主的经验机器panic时有一条独立的IPU.md
+            - 2.9.15-年6月4日JasonHellenthal回复gs_stoller忘记密码无法登录.md
+            - 2.9.16-年3月15日SebastianHuber为改善Erlang支持欲把FreeBSD.md
+            - 2.9.17-年3月29日BakulShah反问一线程select套接字时另一线程关闭该描述符.md
+            - 2.9.18-年10月8日YamagiBurmeister回应fuse稳定性询问自述从未在fu.md
+            - 2.9.19-年10月28日AlexeyEgorov移植Linux应用时发现关闭kqueue描.md
+            - 2.9.20-年4月4日DmitrySivachenko自述从stable9迁到stable1.md
+            - 2.9.21-年7月9日SeanFagan在FreeNAS扩展NO_ROOT构建系统加入文件分.md
+            - 2.9.22-年6月6日DanielJanzon提问多核下分发TCP连接的最佳实践想比较单线程.md
+            - 2.9.23-年8月4日GanaelLaplanche补充两个内联补丁其一修改sysboote.md
+            - 2.9.24-年8月26日StanislavSedov针对多线程应用pmcstat采样消耗过大.md
+            - 2.9.25-年12月24日JoeMaloney确认AndriyGapon描述的pkgupgr.md
+            - 2.9.26-年7月4日AndreyFesenko报告FreeBSD110CURRENT下配置.md
+            - 2.9.27-年3月22日YueChen3月22日就研究目的发帖询问如何取内核每页虚拟内存起始.md
+            - 2.9.28-年5月9日JonathandeBoynePollard用nosh114版本已把F.md
+            - 2.9.29-年5月29日SebastianHuber回应PHK关于timecounterwi.md
+            - 2.9.30-年10月13日PhilippeJalaber用极简内核模块modcrashc复现.md
+            - 2.9.31-年8月15日PaulKoch跟进ZFSARC提问含8个mmap数据库以MAP_N.md
+            - 2.9.32-年1月7日MalcolmMatalka通过getconf与检查usrinclud.md
+            - 2.9.33-年6月20日IanLepore回复WarnerLosh建议改用makeoptio.md
+            - 2.9.34-年8月30日GlenBarber说在ALPHA3构建前重启了那台构建机没有做任何.md
+            - 2.9.35-年2月3日EivindNicolayEvensen报告LC_CTYPE为nb_N.md
+            - 2.9.36-年3月12日DmitriiPostolov确认132RC2在NUC7PJYHJ5.md
+            - 2.9.37-年10月8日jbo补充测试程序能编译能链接运行时ldelfso1仍报同一未定义符.md
+            - 2.9.38-年4月2日AlexanderMotin在Bug278099里说明ZFS有意保留旧.md
+            - 2.9.39-年7月1日BakulShah回帖称此前一直搁置该问题这次终于追查到底办法是在et.md
+            - 2.9.40-年7月19日RonaldKlop表示有控制台访问便不必使用nextboot可中断.md
+            - 2.9.41-年3月9日mgrooms在Bugzilla工单271238下补充他在HPD602.md
+            - 2.9.42-年11月19日Sobolev提议废弃FreeBSD私有SO_BINTIME改用通.md
+            - 2.9.43-年8月25日DavidChisnall回应称在C11之前的方言里_Static_.md
+            - 2.9.44-年5月12日SteveKargl给msunMakefile加WARNS=2cla.md
+            - 2.9.45-年5月15日Smorgrav答复StevenFriedrich的bsdinsta.md
+            - 2.9.46-年8月12日SulevMadisSilber表示在13上遭遇同类现象最严重时wi.md
+            - 2.9.47-年12月8日RobertBlayzor自述由135与143升级至150后第一次f.md
+            - 2.9.48-年7月12日ColinPercival称FreeBSD143RELEASEamd.md
+            - 2.9.49-年11月19日ColinPercival解释150各pkgbase仓库里powe.md
+            - 2.9.50-年10月13日LarsTunkrans报告150BETA1安装器依据ASROCK.md
+            - 2.9.51-年9月28日GrahamPerrin给出287569的绕行步骤CtrlC退出安装.md
+            - 2.9.52-年2月3日AntonShepelev在syslogd崩溃讨论中转述MarkJoh.md
+            - 2.9.53-年8月15日JamesGritton认为嵌套jail是受支持的特性应从rc脚本删.md
+            - 2.9.54-年11月3日KonstantinBelousov答DrewDeVault说Fre.md
+            - 2.9.55-年9月7日KonstantinBelousov回应会话结束后清理不可靠之议建议改.md
+            - 2.9.56-年5月14日KonstantinBelousov回复PaulFloyd关于更新V.md
+            - 2.9.57-年4月12日BrooksDavis回复ChristopherBowmanetcf.md
+            - 2.9.58-年3月25日MateuszGuzik在SCHED_ULE讨论串回复Peter与M.md
+            - 2.9.59-年10月16日CraigLeres复盘cmakecore批量构建失败而交互jai.md
+            - 2.9.60-年8月11日AlexanderLeidinger区分sysctl与sysrc前者.md
+            - 2.9.61-年8月19日KonstantinBelousov给出liblibsysdecod.md
+            - 2.9.62-年2月28日AlexArslan回复WarnerLosh称其在GitHub开设的.md
+            - 2.9.63-年7月20日KirillOrlov称在ThinkPadT480上自14以来经OS.md
         - 2.10-与同时期操作系统的比较（OpenBSD 2.x 时期）
+            - 2.10.1-与 FreeBSD／Linux 安全审计实践的比较.md
+            - 2.10.2-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md
     - 第3章-OpenBSD 3.x：pf 与主动安全工程（2001–2005）
         - 3.1-OpenBSD 3.x 发布史
         - 3.2-IPFilter 许可证争议与移除事件（2001）
+            - 3.2.1-ipfilter：早期的跨 BSD 防火墙与许可证争议.md
+            - 3.2.2-IPFilter 许可证变更与 pf fork.md
         - 3.3-pf 的设计、实现与作者群体
+            - 3.3.1-创始人与核心团队的地理与身份多样性.md
+            - 3.3.2-国际志愿者基数的考证困境与间接证据.md
+            - 3.3.3-学术与产业界的双向贡献.md
+            - 3.3.4-年6月19日ChuckYerkes建议自建或购买Hawk品牌机同时推荐SPARC.md
+            - 3.3.5-年7月21日ChanYiuWah报告29配Samba打印服务器上HP5L可用EP.md
+            - 3.3.6-年9月24日询问GA7VMM主板与OpenBSD的兼容性计划装机时加装Athlo.md
         - 3.4-Darren Reed 与 IPFilter 许可证立场考据
         - 3.5-DARPA POSSE 项目与安全研究资金
         - 3.6-W^X 安全设计理念形成
@@ -13641,30 +14630,275 @@
         - 3.8-外部批评：性能、可移植性与维护成本
         - 3.9-贡献者构成与 committer 社群
         - 3.10-ipfw、pf 与 ipfilter 的防火墙框架演进
+            - 3.10.1-年9月15日2004年8月下旬至9月上旬Laier征groupmember之议与.md
+            - 3.10.2-ipfw：FreeBSD 原生防火墙框架.md
+            - 3.10.3-pf：从 OpenBSD 移植的现代防火墙.md
+            - 3.10.4-年9月15日150版自警高风险自050以来首次与OpenBSDcurrent重同.md
+            - 3.10.5-年12月6日CARP补丁集实测反馈MatthewGeorge重取RELENG_5.md
+            - 3.10.6-年8月12日Jeremie追问if_bridge属性是通用PF_HOOKSipf.md
+            - 3.10.7-年2月24日LaierFYI转发Glebius宣告CARP已commit进HEA.md
+            - 3.10.8-年3月24日MaxLaier释允许规则引用动态接口的设计考量建议加载规则集后以p.md
+            - 3.10.9-年2月23日AdamMcDougall报告if_bridge配pf时scrub的.md
+            - 3.10.10-年5月24日MaxLaier分析用户态ppp下NAT源地址取值的时序问题说明为何.md
+            - 3.10.11-年4月18日EdSchouten指出pfc中一处虽非缺陷但值得改进的写法属社区对.md
+            - 3.10.12-年9月5日RianShelley报告两台pfsync防火墙中备用机状态数持续攀升.md
+            - 3.10.13-年3月28日GNATS记录mlaier将kern106400置为feedback.md
+            - 3.10.14-年4月10日MaxLaier采纳MikolajGolub对kern130977的.md
+            - 3.10.15-年5月7日Michal询问80是否会导入与OpenBSD等价的新版pf社区对版本.md
+            - 3.10.16-年6月13日GNATS记录linimon将kern147789责任人由amd64.md
+            - 3.10.17-年9月10日Hartmeier说明pf与多数商用NAT设备不同不感知PPTP载荷.md
+            - 3.10.18-年6月29日pf原作者Hartmeier介入大规模NAT状态异常的排查原作者在维.md
+            - 3.10.19-年12月4日KristofProvost判断该报错意味着状态查找ioctlDIO.md
+            - 3.10.20-年11月8日KristofProvost回答VNETjail与宿主网络隔离问题用.md
+            - 3.10.21-年11月14日KonstantinBelousov否定该判断counterh的i.md
+            - 3.10.22-年3月15日KristofProvost在PR226411PF在IPSec下与G.md
+            - 3.10.23-年1月19日KajetanStaszkiewicz报告规则集重载期间pf表项被过.md
+            - 3.10.24-年8月6日LuigiRizzo建议为devbpf增加ipfwipf等特殊接口名并.md
+            - 3.10.25-年12月14日LuigiRizzo给出区分ipfw1与ipfw2的判据称编译期可.md
+            - 3.10.26-年5月13日JeremieLeHen指411起ipnat与dummynet失效源.md
+            - 3.10.27-年1月2日AttilaNagy报告在多台6STABLE服务器上启用pf后大流量传.md
+            - 3.10.28-年6月19日FlorianCSmeets反馈pf41更新含ALTQ实测运行正常未.md
+            - 3.10.29-年3月2日PaoloPisati发现依赖某个KLD并不保证初始化顺序从另一KLD.md
+            - 3.10.30-年12月4日LytochkinBoris报告FreeBSD8上ipfwfwd失效.md
+            - 3.10.31-年1月17日HajimuUMEMOTO转述LuigiRizzo的主张只需一个同时.md
+            - 3.10.32-年11月27日FernandoGont提醒其VPN流量泄漏草案会影响使用Open.md
+            - 3.10.33-年3月9日ErmalLuçi提供改进版的pf源节点补丁把源状态删除推迟到专门的清.md
+            - 3.10.34-年5月21日LuigiRizzo认为melifaro的ipfw命名表方向正确但部.md
+            - 3.10.35-年12月25日kp提交pf针对TSO的修复指出FreeBSD协议栈只生成带伪首校.md
+            - 3.10.36-年7月23日g_amanakis指出症结可能在保活发送里的子函数给报文加上跳过防.md
+            - 3.10.37-年3月9日VladimirTerziev建议用ipfwaddfwdRouted_.md
         - 3.11-与同时期操作系统的比较：NetBSD 1.5–2.x、FreeBSD 4.x–5.x、Linux 2.4–2.6、Solaris 8–9
+            - 3.11.1-FreeBSD 5.x／6.x／7.x（pf 移植，2004-2008）.md
+            - 3.11.2-NetBSD 4.x（2007）.md
+            - 3.11.3-Windows（无 pf ／ 基础防火墙，2006-2009）.md
+            - 3.11.4-NiclasSodergard回应称该内核漏洞OpenBSD团队已在八月与十月修.md
+            - 3.11.5-年4月18日RaimoNiskanen说明仅凭IP反查CNAME不可行因为PTR.md
+            - 3.11.6-要点OpenBSD2629时期的加密栈与安全工具漏洞标志着安全操作系统自身安全组.md
     - 第4章-OpenBSD 4.x：安全机制体系化（2006–2011）
         - 4.1-OpenBSD 4.x 发布史
         - 4.2-malloc 随机化与内存安全工程
+            - 4.2.1-malloc 替代的安全设计.md
         - 4.3-gcc GPLv3 许可争议与工具链路线抉择
+            - 4.3.1-批评层：FSF／GPL 阵营对 OpenBSD 拒绝 GPLv3、探索 pcc／clang 的批评.md
+            - 4.3.2-反批评层：OpenBSD 阵营的反批评——GPLv3 专利条款争议、pcc／clang 工程必要性.md
+            - 4.3.3-要点gccGPLv3争议的合图层论点包含三个历史定位第一是GPLv3与ISC的根.md
         - 4.4-pcc 探索与 clang 引入准备（2006–2010）
         - 4.5-pf、CARP、网络工具生态发展
         - 4.6-贡献者与维护者群体变化
+            - 4.6.1-要点4x时期多元群体贡献的史料局限提交元数据丢失机构国别信号且contribut.md
         - 4.7-外部批评与回应
         - 4.8-安全文化的社会影响
         - 4.9-OpenBSD 4.x 的工程改进：分配器替换与 pf 语法扩展
+            - 4.9.1-pf 语法的改进与扩展.md
+            - 4.9.2-与 FreeBSD malloc／Linux SLAB 的比较.md
+            - 4.9.3-年开发者MarcoSHyman指出OpenBSD40装完基本系统即自带X与apa.md
+            - 4.9.4-业余无线电的准入在当事人看来对BSD从业者技术门槛很低所需知识大多已具备主要新增.md
+            - 4.9.5-年2月1日FedericoGiannici参与大量队列导致Nobufferspa.md
+            - 4.9.6-年2月20日Woodchuck就用户提议以x@y形式检验SMTPMessageI.md
+            - 4.9.7-年2月28日NickHolland指出用current来验证amd64处理器上i.md
+            - 4.9.8-年3月23日MiodVallat说明PlextorPXEH40Llandisk电.md
+            - 4.9.9-年4月7日MarkKettenis提交pyro4PCIe主机桥驱动41curre.md
+            - 4.9.10-年4月28日FalkBrockerhoff报告从CD安装OpenBSD41后用交.md
+            - 4.9.11-年5月5日DanielOuellet转引onlamp访谈MarkKettenis.md
+            - 4.9.12-年5月21日SteffenSchütz回复MartinToft关于ssh隧道使用.md
+            - 4.9.13-年5月31日ClaudioJeker判定ospfd内核路由表残留IBGP学习到的.md
+            - 4.9.14-年6月9日SteveShockley回应samba低吞吐引述JacobYocom.md
+            - 4.9.15-年6月29日JCRoberts自述已移植并补丁unarj265以支持完整路径解包.md
+            - 4.9.16-年7月10日RaymondLillard答JuanMiscaro询问Athero.md
+            - 4.9.17-年7月23日andrewfresh就OpenBSD41stableGENERIC.md
+            - 4.9.18-年8月10日OttoMoerbeek解释chflagsRschgbin报Oper.md
+            - 4.9.19-年8月27日AlexandreRatchov答NicolasLetellier问.md
+            - 4.9.20-年10月23日BrianASeklecki就RezaMuhammad报告HPPa.md
+            - 4.9.21-年11月6日NickGuenther回应JonathanThornburg询问O.md
+            - 4.9.22-年11月26日PhilipGuenther回应ChrisTankersley关于.md
+            - 4.9.23-年12月8日DongshengSong报告在OpenBSD42上成功编译jdk1.md
+            - 4.9.24-年12月18日StuartHenderson指出ip_outputfailed6.md
+            - 4.9.25-年12月30日PabloHalamaj报告阿根廷新立法调整夏令时12月30日0时.md
+            - 4.9.26-年2月18日RosenIliev指出认证全部在Web应用层完成与Apache和O.md
+            - 4.9.27-年3月13日MatthewDempsky定位dvmrpd崩溃根因vlan0的if.md
+            - 4.9.28-年4月4日DorianBüttner就milterspamd安装遇setenv问.md
+            - 4.9.29-年4月25日ParvinderBhasin说运行shusrlocalshares.md
+            - 4.9.30-年3月14日Punosevac建议先确认xorgconf里HorzSync301.md
+            - 4.9.31-年5月19日TedUnangst就Hannah关于去除fsck_ffs在i386.md
+            - 4.9.32-年6月3日DarrinChandler转贴ToniMueller论nginx相较.md
+            - 4.9.33-年6月19日Donahue建议弃用自写ssh拉取交换机配置脚本改用RANCID经.md
+            - 4.9.34-年7月1日LandryBreuil称自己曾被同类问题坑过来信者加maproot=.md
+            - 4.9.35-年7月13日MarcEspie提醒Jacob该常翻手册指出pkg_info自带P.md
+            - 4.9.36-年8月14日AlexandreRatchov追问midi控制器是否指带标准MID.md
+            - 4.9.37-年8月29日IvovanderSangen查明脚本残留进程的根因是NFS服务端未.md
+            - 4.9.38-年11月10日FelipeAlfaroSolana说明收到的quagga升级di.md
+            - 4.9.39-年11月17日DanielOuellet说明共享库由运行时链接器在程序调用chr.md
+            - 4.9.40-年12月9日StephanARickauer转引AdamDouglas询问Ope.md
+            - 4.9.41-年1月8日DirkWilhelmPeters按PhilipGuenther建议禁.md
+            - 4.9.42-年1月29日AlexeySuslikov判断FujitsuSiemens机器上的.md
+            - 4.9.43-年2月23日StuartHenderson说明原生VLAN1在思科交换机上是特殊.md
+            - 4.9.44-年3月26日MarcEspie判断pkg_add从ftp与http主机与镜像取包.md
+            - 4.9.45-年4月8日Robert撤回前一封回复用户只需像烧普通数据那样把已编译的ports.md
+            - 4.9.46-年5月9日MatthewSzudzik答CemKayali建议在etcrc里用e.md
+            - 4.9.47-年11月23日NicolasLegrand称编译46stable的xenocar.md
+            - 4.9.48-年1月5日PeterHessler说明UDF支持在f2k9时有大幅改进而f2k9.md
+            - 4.9.49-年2月15日StuartHenderson说明qemu的re4模拟默认不含板载定.md
+            - 4.9.50-年3月3日StuartHenderson指出GPS卡卡入sirf二进制模式后须先.md
+            - 4.9.51-年4月14日AntoineJacoutot建议CaseyAllenShobe试一.md
+            - 4.9.52-年7月5日OttoMoerbeek说明sed默认使用基本正则表达式Gnused把.md
+            - 4.9.53-年8月12日EdwinEyanMoragas报告picoLisp在OpenBSD.md
+            - 4.9.54-年9月13日ClaudioJeker澄清UDP因无连接而缺LISTEN状态未指定.md
+            - 4.9.55-年10月11日ДмитрийЦарь科夫自述netbook无过热问题平均在线约一.md
+            - 4.9.56-年11月2日HenningBrauer转引BoudewijnDijkstra称s.md
+            - 4.9.57-年9月6日用户报告darkbotIRC机器人在30与31上运行数小时之后丢失文件.md
+            - 4.9.58-年6月12日OttoMoerbeek提交du工具补丁改用fmt_scaled输出.md
+            - 4.9.59-年9月11日ChrisCappuccio反馈if_em与vlan组合下网络正常连.md
+            - 4.9.60-年2月11日KurtMiller报告Soekris4501单板上接入USB存储设.md
+            - 4.9.61-年4月27日Brad提交gre4补丁添加IPv6支持并将默认MTU改为1476同.md
+            - 4.9.62-年9月8日BijoyThomas自行解答retr_from_intr如何判断被中.md
         - 4.10-OpenBSD 4.x 时期的技术淘汰与新旧交替（2005—2010）
+            - 4.10.1-XFree86 → X.org 转换（OpenBSD 4.1-4.2，2007）.md
+            - 4.10.2-gcc → pcc 尝试与 clang／LLVM 转向前期（2010 起）.md
+            - 4.10.3-2010年12月3日JacobMeuser提交USB拔插防崩溃补丁让内核在设备已.md
+            - 4.10.4-2010年12月16日TedUnangst自述提交uvm补丁让uvm_map_h.md
+            - 4.10.5-2010年12月16日KennethRWesterback修订sd4只读补丁并说.md
+            - 4.10.6-2010年12月25日ClintPachl支持LuisUseche为pkg_de.md
+            - 4.10.7-2011年1月11日JanJohansson报告已用Patrick送出的第一版补.md
+            - 4.10.8-2011年1月23日VadimZhukov承认自己先前关于ksh使用set会修改.md
+            - 4.10.9-2011年2月26日DavidHiggs提交ksh补丁禁止add_glob处理带.md
+            - 4.10.10-2011年3月14日TobiasWeingartner就mfi驱动64位帧议题发.md
+            - 4.10.11-2011年3月24日ClaudioJeker提交if_grec补丁使gre可直接.md
+            - 4.10.12-2011年4月4日BretSLambert提交路由与网络宏清理补丁在netrad.md
+            - 4.10.13-2011年4月11日StefanSperling催评审让file_mbswidt.md
+            - 4.10.14-2011年4月19日DavidGwynne批准KennethRWesterbac.md
+            - 4.10.15-2011年4月30日MarkLumsden就asa1返回值提交补丁使其在传入缺失.md
+            - 4.10.16-2011年5月9日OwainAinsworth提交uvmuvm_pagec补丁删.md
+            - 4.10.17-2011年5月17日frantisekholop与MatthiasKilian就.md
+            - 4.10.18-2011年6月2日PhilipGuenther拒绝PaulIrofti向LIST.md
+            - 4.10.19-2011年6月17日MatthewDempsky提交USB挂载athn4补丁并征.md
+            - 4.10.20-2011年6月19日ToddMiller建议xlint将%m格式按%%处理以捕获.md
+            - 4.10.21-2011年6月23日OwainAinsworth提交清理uvm页面去活调用的补丁.md
+            - 4.10.22-2011年6月23日TobiasUlmer修正libutilimsg_init3.md
+            - 4.10.23-2011年7月4日NicholasMarriott补上specfs对d_kqfi.md
+            - 4.10.24-2011年9月12日MichaelKnudsen询问是否有人愿从他名下清掉USB.md
+            - 4.10.25-2012年1月5日AlexanderBluhm提交从FreeBSD移植的改动删除.md
+            - 4.10.26-yplib／ypcat → ypldap 替换（NIS → LDAP）.md
+            - 4.10.27-年Dave自读bktr驱动pci扫描代码指其中缺少更新卡上EEPROM的实现猜测.md
+            - 4.10.28-Herrb的技术路径起于具体的动手困境他在法国图卢兹求学博士实验室以Sun工作站.md
+            - 4.10.29-在研项目正与JordanHargrave合作重写ACPI工程巨大代码要写要调BI.md
+            - 4.10.30-Sun硬件收藏与平台迁移工作站曾为装有三块帧缓冲的UltraSPARC2不算最快.md
+            - 4.10.31-本期指向的一手材料包括Xenocara项目与xenocaraorg网页及其200.md
+            - 4.10.32-转写受损较重Xenocara多处误转OpenBSD误作OpenGLDXorg误作.md
+            - 4.10.33-年2月14日Henderson指出serverraid8是aac4控制器PCIi.md
+            - 4.10.34-年3月26日michaelhamerski澄清bktr为自带图像处理的视频采集卡.md
+            - 4.10.35-年6月17日DirkMast报告HPNC4010笔记本APM下电池仅显示百分比不.md
+            - 4.10.36-年7月22日MarcBalmer在回复中确认带电池可备份实时时钟的是ALIX1b.md
+            - 4.10.37-年8月26日StuartHenderson答OpenBSD是否支持PowerPC.md
+            - 4.10.38-年10月6日MarkusHennecke说明azalia有配置却不出声时有时会使.md
+            - 4.10.39-年11月18日KurtMosiejczuk报告更新控制台服务器时发现44无法识别.md
+            - 4.10.40-年12月16日MikeBelopuhov请人测试ahcic补丁以支持NVIDIA.md
+            - 4.10.41-年2月13日StefanSperling承认此前未尝试连接其他网络路径因想加入已.md
+            - 4.10.42-年3月26日JacobMeuser用网络lspci判断HP2133的vt1708.md
+            - 4.10.43-年6月11日RobertBlacquiere分享LenovoX300上Sierr.md
+            - 4.10.44-年2月3日SteveWilliams就自46升级到1月28日47beta快照后e.md
+            - 4.10.45-年5月12日LandryBreuil指出用mpi4驱动的LSILogic控制器需.md
+            - 4.10.46-年8月6日SviatoslavChagaev回复xxkb在48beta下键盘布局.md
+            - 4.10.47-年12月17日ChristopherHilton就hotplugd自动挂载UI问.md
+            - 4.10.48-年7月16日MarkusLude报告在SunBlade100上升级sparc64.md
+            - 4.10.49-年10月11日JoshGrosse指ccd退役后拼接可用RAID0加BSD分区实.md
+            - 4.10.50-年12月16日GiovanniBechis回答courierimap邮件中mai.md
+            - 4.10.51-年12月21日BrianKeefer在macppc40stable上多次重复测试.md
+            - 4.10.52-年3月1日修复relayd因SPLAY键变更导致树结构损坏从而CPU占用持续10.md
+            - 4.10.53-openbsd_mailmessages225679.md
+            - 4.10.54-openbsd_mailmessages227409.md
         - 4.11-OpenBSD 与密码学的深度结合（2005—2012）
+            - 4.11.1-2010年12月16日TedUnangst在讨论中链接tarsnapcom上的s.md
+            - 4.11.2-2013年7月15日Sing依djm反馈改进httpd的ECDHE补丁新增SSL.md
+            - 4.11.3-2014年12月9日MaxFillinger提交补丁把ospfd与ospf6d的.md
+            - 4.11.4-2014年12月9日TedUnangst回应JonasTermansen指出的m.md
+            - 4.11.5-加密集成的工程哲学.md
+            - 4.11.6-disk encryption 的实现.md
+            - 4.11.7-network encryption 的全面支持.md
+            - 4.11.8-JoachimRing称30的发行版与pf都还不成熟建议先在非生产环境试用并提交.md
+            - 4.11.9-MajikthseKato详述OpenBSD27NAT下只要客户端发起http就.md
+            - 4.11.10-年10月28日LarsNoodén转引TomRosso建议把passwd移出ht.md
+            - 4.11.11-年2月5日TedUnangst认为AndrewKlettke遇到的relayd创.md
+            - 4.11.12-年12月8日YAMAMOTOTakashi提议为diff1添加GNU风格L参数的.md
+            - 4.11.13-年2月20日AndrewSmith讨论kjs的pthreads非posix扩展情.md
+            - 4.11.14-年4月19日发件人反馈AthlonXPMobile上gwk新powernowk7.md
+            - 4.11.15-年9月25日Otto给出更简洁的rusersauthunix_create空指针.md
+            - 4.11.16-年5月18日Valery询问OpenBSDloader能否加载自定义DSDTAC.md
+            - 4.11.17-年5月24日MartinOwens讨论uberry内核驱动与用户态工具的分工问题.md
+            - 4.11.18-年11月9日MatthieuHerrb判断FujitsuS6010新intel驱.md
+            - 4.11.19-年3月6日MarcoPeereboom提交acpi清理补丁请求测试补丁修正_am.md
+            - 4.11.20-年6月20日JacobMeuser提交uaudio补丁禁用自适应输入端点跳过逻辑.md
+            - 4.11.21-年9月30日JacobMeuser提交azalia驱动补丁在NVIDIAHD音频.md
+            - 4.11.22-年12月14日VladimirKirillov提交usrsbinMakefile.md
+            - 4.11.23-年2月26日DariuszSwiderski提交em482575补丁征求测试含A.md
+            - 4.11.24-年7月23日JordanHargrave提交acpiec早期初始化补丁通过ECD.md
+            - 4.11.25-年10月3日Brynet提交usbdevs新增Avago厂商0x192f及Opt.md
+            - 4.11.26-年11月28日作者在48版本上运行re网卡MCLGETI死循环修复补丁后先前系统.md
         - 4.12-pf 防火墙的持续演进：状态跟踪、队列调度与冗余（2005—2012）
+            - 4.12.1-2010年12月3日KarenSwarth求助排查pfconf配置其主机为本地网.md
+            - 4.12.2-2011年5月24日RafaelSadowski回复NetworkInterfa.md
+            - 4.12.3-2012年1月7日SebastianBenoit提议在pfconf5手册中把se.md
+            - 4.12.4-2012年7月7日HenningBrauer提交pfctl补丁删去IPv6不支持.md
+            - 4.12.5-2013年4月30日TedUnangst回应FrancoFichtner的pf深.md
+            - 4.12.6-2014年6月21日AlexandrNedvedicky提交补丁修复PFOnce.md
+            - 4.12.7-synproxy 与 state tracking 的设计.md
+            - 4.12.8-ALTQ 队列调度的工程效应.md
+            - 4.12.9-CARP 冗余协议的开发.md
+            - 4.12.10-JohnCHollemans称OBSD在同等硬件上性能优于Linux且IPFIP.md
+            - 4.12.11-Hansteen自述文档一侧的处境新版《TheBookofPF》因FreeBSD.md
+            - 4.12.12-年6月4日HenningBrauer回应DavidNewman关于carp与桥接.md
+            - 4.12.13-年9月26日StuartHenderson就网络栈速度问题指出上届黑客营有大量剖.md
+            - 4.12.14-年2月14日ImreOolberg建议为soekris上两台squid缓存机各加.md
+            - 4.12.15-年5月16日StuartHenderson说明OpenBSD路由早已支持ECMP.md
+            - 4.12.16-年8月2日InsanPrajaSW报告刚更新i386路由器内核后控制台和varl.md
+            - 4.12.17-年9月23日JohnJackson建议原发件人查阅openbsdorg的pf手册.md
+            - 4.12.18-年6月2日DianaEichert回应关于pf流量图的需求支持Stuart推荐的.md
+            - 4.12.19-年1月9日HenningBrauer说明natto与rdrto在match与pa.md
+            - 4.12.20-年3月26日GregoryEdigarov说明其部署为默认路由表由手工路由填充另.md
+            - 4.12.21-年6月3日TeemuRintaaho定位pf与ftpproxy主动被动模式故障根.md
+            - 4.12.22-年12月1日ClaudioJeker查IANAbgpparameters指出su.md
+            - 4.12.23-年5月7日StuartHenderson确认rdrto与divertto只改写目.md
+            - 4.12.24-年7月31日StuartHenderson指出IPsecflow优先级高于所有标.md
+            - 4.12.25-年11月10日ChristopherZimmermann指出prio不限制带宽包.md
+            - 4.12.26-年6月29日CraigHammond测试Viaminiitx533MHz平台多核.md
+            - 4.12.27-年10月30日AlejoSanchez反馈Vodafone3GUSBmodem在.md
+            - 4.12.28-年4月19日TedUnangst认为终止ftruncate处理是必要改动指出当前.md
+            - 4.12.29-年2月26日DamienMiller回应devrandom与hifn集成的提议认.md
+            - 4.12.30-年9月11日Steffen讨论ip_input中地址比较与radix树的关系总结.md
+            - 4.12.31-年6月4日JoelSing发现bnx0网卡在3WHS完成后TCP段校验和不正确导.md
+            - 4.12.32-年5月9日Brad提交gem驱动补丁正确设置IFF_OACTIVE标志以指示TX.md
+            - 4.12.33-年12月18日JasonMcIntyre接受StuartHenderson修改c.md
+            - 4.12.34-年1月21日RomeyValadez提交pfsync策略路由补丁第二版将pad字.md
+            - 4.12.35-openbsd_mailmessages229258.md
         - 4.13-与同时期操作系统的比较：Linux、FreeBSD、NetBSD 与其他 UNIX 系统
+            - 4.13.1-Linux 2.6（iptables／netfilter，2006-2009）.md
     - 第5章-OpenBSD 5.x：LibreSSL 与工具链自主化（2011–2016）
         - 5.1-OpenBSD 5.x 发布史
         - 5.2-Heartbleed 事件与 LibreSSL fork
         - 5.3-LibreSSL 的工程目标与争议
+            - 5.3.1-LibreSSL fork 的反批评——OpenBSD 阵营的回应（反批评层）.md
         - 5.4-gcc 至 clang 转换过程
         - 5.5-OpenBSD 基础工具自主化路线
         - 5.6-OpenSSH、OpenNTPD、OpenSMTPD 生态扩展
         - 5.7-贡献者与维护者构成
         - 5.8-外部批评：硬件支持与生态规模问题
+            - 5.8.1-2011年3月2日TheodeRaadt就DellR310H200RAID性能问.md
+            - 5.8.2-2012年6月4日TedUnangst质疑top用U与u两个不同字母区分命令行与.md
+            - 5.8.3-2012年7月13日StefanSperling修改netstat的net802.md
+            - 5.8.4-2012年8月27日StefanFritsch发布virtio驱动第八版新增vi.md
+            - 5.8.5-2012年9月30日BradSmith提交mos4接收过滤与ioctl清理补丁把.md
+            - 5.8.6-2012年11月8日MikeBelopuhov提交ixgbe_82599同步Fr.md
+            - 5.8.7-2012年12月12日贝罗普霍夫提交ix补丁更新版为82598在XAUI背板模式.md
+            - 5.8.8-2013年3月8日MartinPieuchot评审DanielDickman从N.md
+            - 5.8.9-2013年4月26日PatrickWildt说明自己正提交ARMv7与Beagl.md
+            - 5.8.10-2013年7月29日MarkKettenis提交mfi驱动修复补丁使管理命令路径.md
+            - 5.8.11-2013年10月21日Pieuchot评审Xbox360手柄的USB支持补丁指出.md
+            - 5.8.12-2013年10月20日WilliamOrr提交补丁删除octeon架构machd.md
+            - 5.8.13-硬件支持滞后的批评.md
+            - 5.8.14-社区规模过小的质疑.md
+            - 5.8.15-SMP 性能不足的抱怨.md
+            - 5.8.16-批评原始发言与邮件列表考据.md
+            - 5.8.17-openbsd_mailmessages228849.md
+            - 5.8.18-硬件支持滞后的批评.md
         - 5.9-ISC／Berkeley 许可证与 OpenBSD 的代码自由使用政策
         - 5.10-与同时期操作系统的比较：NetBSD 6.x、FreeBSD 9.x–10.x、Linux 3.x、Solaris 11
     - 第6章-OpenBSD 6.x：pledge／unveil 与现代安全模型（2016–2021）
@@ -13674,43 +14908,431 @@
         - 6.4-安全机制进入用户空间程序
         - 6.5-sndio 与简约主义设计
         - 6.6-贡献者与维护者构成（2016–2021）
+            - 6.6.1-基金会现代治理与产业协作的多元贡献.md
         - 6.7-外部批评：兼容性与运维负担
+            - 6.7.1-pledge／unveil 设计争议的批评——可移植性缺陷与细粒度局限（批评层）.md
+            - 6.7.2-pledge／unveil 设计争议的反批评——OpenBSD 阵营的回应（反批评层）.md
+            - 6.7.3-pledge／unveil 设计争议的再批评——对反批评的再回应（再回应层）.md
+            - 6.7.4-pledge／unveil 设计争议的辩证合图（合图层）.md
         - 6.8-开发文化与决策惯例变化（2016–2021）
         - 6.9-兼及旧世代……
     - 第7章-OpenBSD 7.x：现代硬件时代与代码政策（2021–2026）
         - 7.1-OpenBSD 7.x 发布史
         - 7.2-pledge／unveil 的扩展与维护（2021–2026）
         - 7.3-riscv64、ARM64 与现代硬件支持
+            - 7.3.1-Siebenmann对1990年代后Unix技术变化趋缓的判断系个人观察未提供系.md
+            - 7.3.2-ARM64 改进的工程进展.md
+            - 7.3.3-桌面支持的改进.md
+            - 7.3.4-该期以技术新闻为载体实质触及三条史学线索awk等脚本语言在Unix早期的设计逻辑.md
+            - 7.3.5-BrianKernighan接受PLDB访谈自述awk的核心想法是关联数组并强调.md
         - 7.4-异构 CPU 调度与大小核支持
         - 7.5-Wi-Fi 驱动开放化路线（2021–2026）
         - 7.6-生成式 AI 代码政策与 AI 生成代码争议（2022–2026）
+            - 7.6.1-AI 生成代码政策讨论进展.md
+            - 7.6.2-与 FreeBSD AI 代码政策的对照.md
+            - 7.6.3-要点OpenBSDNetBSDFreeBSD关于AI代码政策的邮件列表档案是研究.md
+            - 7.6.4-本体论平等视角下的 BDFL 模式、Core Team 选举制与 AI 代码政策形式.md
+            - 7.6.5-法律与道德是利益分配视角下的 committer 权限与 AI 代码政策.md
+            - 7.6.6-解释学循环与权力知识共谋视角下的 BDFL 叙事与 AI 代码政策叙事.md
         - 7.7-贡献者结构变化
         - 7.8-外部批评与项目回应（2021–2026）
         - 7.9-OpenBSD 对 BSD 生态的代码贡献与软件扩散（2021–2026）
         - 7.10-与同时期操作系统的比较：Linux 6.x、FreeBSD 14.x–15.x 与 NetBSD 10–11（2021–2026）
+            - 7.10.1-FreeBSD 现代化的技术进展.md
 - 第45卷-OpenBSD 技术专题史（1995–2026）
     - 第1章-安全工程体系：从代码审计到主动防御（1995–2026）
         - 1.1-OpenBSD 分叉背景与安全目标的形成
+            - 1.1.1-要点OpenBSD的安全审计文化起源于项目创建后不久deRaadt被一家名为Se.md
         - 1.2-1996–1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理
+            - 1.2.1-要点OpenBSD代码审计方法论由deRaadt主导自1996年fork后逐步建.md
         - 1.3-Secure by Default：默认安全理念
+            - 1.3.1-要点OpenBSD默认安全securebydefault原则体现在默认关闭非必要.md
         - 1.4-Correctness、安全性与工程质量
+            - 1.4.1-同帖续段称只有软件质量过硬才敢宣称能应付意外输入并列出OpenBSD的FAQ与手.md
         - 1.5-漏洞修复流程与安全响应实践
+            - 1.5.1-7.x 周期安全态势总览——errata 存档缺失与 commit 数据的反差.md
+            - 1.5.2-要点OpenBSD19962000年间通过代码审计发现并修复大量安全漏洞包括缓冲.md
+            - 1.5.3-响应措施与长期安全改进.md
+            - 1.5.4-11.x 周期安全响应文化评估——Security Officer 交接与投机执行响应的工程范式.md
+            - 1.5.5-侧信道缓解对 FreeBSD 工程实践的效应.md
+            - 1.5.6-安全公告体系：FreeBSD-SA 与 Errata Notice.md
+            - 1.5.7-安全事件响应的史料辨析.md
+            - 1.5.8-sendmail 最后时代与 13.x 周期安全响应文化评估——被动响应期与工程稳态.md
+            - 1.5.9-修复效应范围与安全响应评估.md
+            - 1.5.10-14.x 周期 FreeBSD 安全响应文化评估——80 个 SA 的工程伦理.md
+            - 1.5.11-BSD 系统在漏洞管理体系中的角色.md
+            - 1.5.12-BSD 安全团队的披露实践.md
+            - 1.5.13-安全补丁的工程实践与分支支持政策.md
+            - 1.5.14-年4月11日发帖人反映其每日端口审计邮件未提示基本系统漏洞并询问基本系统的近期漏.md
+            - 1.5.15-15.x 周期安全响应文化评估——-CURRENT 时代的预发布审计与对 RELEASE 后的预测.md
+            - 1.5.16-与 Linux KASLR／CFG 的比较.md
+            - 1.5.17-安全机制 commit 记录考据.md
+            - 1.5.18-RETGUARD 的批评——性能开销与覆盖范围质疑（批评层）.md
+            - 1.5.19-RETGUARD 的反批评——OpenBSD 阵营的回应（反批评层）.md
+            - 1.5.20-RETGUARD 的再批评——对反批评的再回应（再回应层）.md
+            - 1.5.21-RETGUARD 的辩证合图（合图层）.md
+            - 1.5.22-Spectre／Meltdown 与 MDS 硬件安全响应——6.x 周期 CPU 漏洞爆发期.md
+            - 1.5.23-要点6x周期是OpenBSD主动审计快速修复加固重构循环的形成期主动审计体现于6.md
+            - 1.5.24-libexpat 批量同步与第三方库治理——“跟随上游—批量回溯” 工作流.md
+            - 1.5.25-unbound、smtpd 与 OpenSSH 漏洞——OpenBSD 网络服务攻击面演进.md
+            - 1.5.26-LibreSSL 加密栈独立维护——从 OpenSSL fork 后的安全自主路径.md
+            - 1.5.27-pledge／unveil 在漏洞响应中的扩展——“主动审计—快速修复—加固重构” 循环.md
+            - 1.5.28-要点7x周期OpenBSD对CPU与GPU硬件漏洞的响应体现快速跟进不等待上游的.md
+            - 1.5.29-帖中详述以OpenBSD26做三接口透明网桥时因默认网关在外部而内网互访被ipf.md
         - 1.6-安全审计与功能开发之间的工程关系
         - 1.7-攻击面削减的具体手段：默认关闭、协议精简、权限剥离
         - 1.8-安全工程方法在 2000 年代后的制度化
+            - 1.8.1-要点FreeBSD1990年代后期建立SecurityOfficer制度如War.md
         - 1.9-FreeBSD 安全官制度与安全公告流程
+            - 1.9.1-年5月5日官方发布XFree86SA199801通告指出xterm与Xaw漏洞影.md
+            - 1.9.2-2014年7月FreeBSD社区就PF防火墙展开罕见规模的大讨论邮件列表普遍认同.md
+            - 1.9.3-FreeBSD Security Officer 制度的建立与演进.md
+            - 1.9.4-安全公告的发布流程与格式规范.md
+            - 1.9.5-历任 Security Officer 与安全团队成员贡献.md
+            - 1.9.6-年10月27日SheldonHearn批评225RELEASE的ERRATATX.md
+            - 1.9.7-年9月16日TheAnarcat指出FreeBSDSA0312openssh通告.md
+            - 1.9.8-年12月20日DavidWolfskill就经SSH或SFTP登录用户实施chr.md
+            - 1.9.9-年6月9日FreeBSD发布FreeBSDSA0511gzip通告gzip解压缩.md
+            - 1.9.10-年6月10日FreeBSDSecurityAdvisoryFreeBSDSA09.md
+            - 1.9.11-年11月29日FreeBSDSA1010openssl通告OpenSSL多个漏洞.md
+            - 1.9.12-年8月20日发帖人提议让installworld与freebsdupdate都维.md
+            - 1.9.13-年11月19日发帖人指出SA1314openssh中workaround提到的配.md
+            - 1.9.14-年12月26日发帖人建议有生产主机与资源受限需求的站点改用freebsdupda.md
+            - 1.9.15-年5月1日发帖人指出androidtoolsadb与transmissioncl.md
+            - 1.9.16-年6月18日PiotrKubaj询问是否计划把LibreSSL作为实验性功能引入.md
+            - 1.9.17-年8月23日发帖人指出pkgaudit一词的核心在于评估潜在风险与商业扫描工具一.md
+            - 1.9.18-年1月30日发帖人发布FreeBSDSA1611openssl安全公告通报Ope.md
+            - 1.9.19-年5月17日发帖人指出SA1619sendmsg通告的修订号有误r300093实.md
+            - 1.9.20-年12月18日发帖人创建一个父级跟踪缺陷234112标题为该SQLite远程代码.md
+            - 1.9.21-年8月6日发帖人发布FreeBSDSA1920bsnmp通告主题为bsnmp库的.md
+            - 1.9.22-年7月24日RobertSimmons提议FreeBSD干脆放弃32位支持把相关.md
+            - 1.9.23-年4月18日发帖人转发CERTCA9608公告称pcnfsd存在两个已被利用的漏.md
+            - 1.9.24-年7月4日FreeBSDSecurityOfficer发布FreeBSDSA96.md
+            - 1.9.25-年12月16日发帖人主张不要把利用细节直接发到列表应私下发给FreeBSD安全联.md
+            - 1.9.26-年4月22日DmitryValdov附上OliverFriedrichs的SNI.md
+            - 1.9.27-年10月24日发帖人称听说2251即将发布的信息有误自己无意发布点版本将依靠发布.md
+            - 1.9.28-年4月14日发帖人询问内核为何被安装为555且属root与wheel组而非550.md
+            - 1.9.29-年11月4日JordanHubbard说明安全通告一律刻意列全所涉版本否则通告本.md
+            - 1.9.30-年3月25日发帖人以FreeBSD开发者身份说明社区进展tcp_wrappers.md
+            - 1.9.31-年10月26日发帖人发现wuftpd端口在十月二十四日被更新至260并带有重要安.md
+            - 1.9.32-年5月12日发帖人追问二进制补丁体系能否照顾系统版本差异例如系统并非从RELEA.md
+            - 1.9.33-年7月6日发帖人询问该安全通告对应的补丁是否已被镜像到别处并称ftpfreebs.md
+            - 1.9.34-年7月13日发帖人认为该写法仍未解决FreeBSDPortsCollection.md
+            - 1.9.35-年10月4日发帖人认为讨论仍基于过时的经济假设现在人手比过去多大家对此也有认同说.md
+            - 1.9.36-年10月30日发帖人发布FreeBSDSA0058通告指出chpass家族含本地.md
+            - 1.9.37-年11月14日发帖人认为那则终端库通告应补充信息它未提到与易受攻击版本链接的远程.md
+            - 1.9.38-年11月25日发帖人引用FreeBSDSA0029wuftpd通告称该问题在六月.md
+            - 1.9.39-年2月8日发帖人表示对反复张贴以贬损本系统抬高他方的玩笑式安全通告越来越不满此人.md
+            - 1.9.40-年2月22日发帖人向freebsdsecurity列表询问该BIND漏洞是否已经.md
+            - 1.9.41-年7月26日发帖人回应称看来对方没有用cvsup更新srcsecure集合因此树.md
+            - 1.9.42-年12月11日发布FreeBSDSA0165libgtop指出libgtop_s.md
+            - 1.9.43-年5月12日发帖人针对是否发布该漏洞安全公告的追问回应称不会单独发一份公告但会把.md
+            - 1.9.44-年6月25日发帖人强调本例与以往不同称团队握有可在不公开补丁前提下让用户免疫的工.md
+            - 1.9.45-年6月27日发帖人援引CERT通告称OpenSSH29用户同样不安全并转发完整通.md
+            - 1.9.46-年7月31日JacquesAVidrine说可以直接cvsup到RELENG_4.md
+            - 1.9.47-年11月14日发帖人致谢指出FreeBSDSA0243bind通告中指令说明有误.md
         - 1.10-安全社区的无名守护者：FreeBSD 安全团队成员
+            - 1.10.1-年10月4日发帖人分析Windows2000服务器尝试更新外部DNS的原因可能是.md
+            - 1.10.2-FreeBSD 安全团队成员与贡献.md
+            - 1.10.3-漏洞私下报告者与 CVE 申请者.md
+            - 1.10.4-年6月30日BrianTao承认自己在FreeBSD21与stable上suid.md
+            - 1.10.5-年4月13日VadimKolontsov指出ftpd_popen中argc超10.md
+            - 1.10.6-年8月11日JacquesAVidrine说明撰写通告时会标注终端用户可实际采取.md
+            - 1.10.7-年8月12日KrisKennaway同意Devon接手该port维护并建议为gc.md
+            - 1.10.8-年6月9日MikeHoskins自述配置sudo免密执行mount与umount.md
+            - 1.10.9-年3月29日ChrisBowlby提议在extremefreebsdorg下建s.md
+            - 1.10.10-年5月17日Killing定位当userA执行su至userB运行screenr.md
+            - 1.10.11-年10月1日NorbertKoch答复hutchens关于chkrootkit报.md
+            - 1.10.12-年10月27日BrettGlass转述CVS数据库的最新注释提到ipfw2有us.md
+            - 1.10.13-年9月17日用户报告在FreeBSD48RELEASEp4上以空seed与1序列.md
+            - 1.10.14-年4月20日ChristianSJPeron提交补丁允许jail内prisonr.md
+            - 1.10.15-年4月22日JacquesVidrine说明NetBSD已实现IETFtcpmw.md
+            - 1.10.16-年8月11日RyanThompson反对仅收紧etccrontab权限称etc下.md
+            - 1.10.17-年12月1日MasachikaISHIZUKA报告自己无法验证FreeBSDSA.md
+            - 1.10.18-年12月20日MartonKenyeres建议用nullfsunionfs或lo.md
+            - 1.10.19-年2月27日TimKientzle指出用黑名单处理loginp环保投毒不够安全决.md
+            - 1.10.20-年1月22日RichardBejtlich说明ng_one2many的用途正合D.md
+            - 1.10.21-年7月7日OliverEikemeier在nmapnotscanningnetw.md
+            - 1.10.22-年3月18日JacquesVidrine直接回答AndrewNeporada关于.md
+            - 1.10.23-年5月18日MichaelCollette表示未料到UUCP在DMZ邮箱场景会用.md
+            - 1.10.24-年4月21日NeoVortex修改gettytab的im字段写入回车序列在get.md
+            - 1.10.25-年12月11日Gabor承认加了LC_ALL之后自己才可能发现该问题但认为正确做.md
+            - 1.10.26-年7月13日r2bit说明mijail5补丁在53可用但该补丁会破坏DNS且目前.md
+            - 1.10.27-年3月17日ColinPercival在questions上转述其在securi.md
+            - 1.10.28-年5月14日MatthewFuller指出mod_ssl修改Apache模块AP.md
+            - 1.10.29-年9月22日BorjaMarcos回应称那当然不可行提议用一个sysctl来控制.md
+            - 1.10.30-年2月5日PietroCerutti说明nmap仅root权限可将网卡置入混杂模.md
+            - 1.10.31-年1月26日沃伊达博加丹说明证书为自签且与服务器同属一个证书颁发机构客户端依次创.md
+            - 1.10.32-年6月18日DagErling对安全标准要求同一进程内不同部分互相保护提出质疑指.md
+            - 1.10.33-年5月23日MatthewFuller指出升级MySQL时停止服务的是pkg_d.md
+            - 1.10.34-年10月5日BruceAMah转达PhilippePegon关于CARP与IPv.md
+            - 1.10.35-年11月29日Sakane在旁听该线程后判定ISAKMPnotify消息类型0x.md
+            - 1.10.36-年8月9日AndrewThompson认为这并非安全缺陷只是ifconfig在j.md
+            - 1.10.37-年7月17日RobertWatson指出MacOSXSandbox部分基于Fre.md
+            - 1.10.38-年11月18日EygeneRyabinkin提交portsPR修复printen.md
+            - 1.10.39-年2月4日IanSmith评论Heartland泄露文章指出除语法不佳外该文章还.md
+            - 1.10.40-年7月8日EygeneRyabinkin指出memcpy存在下溢问题会写入out.md
+            - 1.10.41-年3月24日UEDAHiroyuki用dig验证ftp11twfreebsdor.md
+            - 1.10.42-年9月15日ChrisPalmer认为Pieter的方案若能在不破坏应用的前提下.md
+            - 1.10.43-年8月27日István表示自己从未想给用户开sudo加tcpdump权限管理员.md
+            - 1.10.44-年7月31日SelphieKeller写了个内核模块在securelevel一或.md
+            - 1.10.45-年12月24日发帖人说明只有静态链接把库一并打包进程序的情形才需要重新编译端口通.md
+            - 1.10.46-年6月29日发帖人建议把这类讨论放到可信BSD审计邮件列表称该列表上有不少人在F.md
+            - 1.10.47-年10月23日AlexStockman说明自己要把FreeBSD用bdes加密的.md
+            - 1.10.48-年4月28日发帖人在90上发现启用MAC_MLS或加载相应模块后运行atop并退.md
+            - 1.10.49-年2月17日发帖人认为向后兼容并不是致命障碍认为不妨让syslogd同时容纳新旧.md
+            - 1.10.50-年7月9日发帖人强烈不同意unbound只服务本机或小型客户端的说法称其所在的网.md
+            - 1.10.51-年5月13日MatthewSeaman澄清所指是硬件安全模块而非分层存储管理请其.md
+            - 1.10.52-年10月1日发帖人补充setuid还可能因自定义MAC模块等其他原因失败并反问对.md
+            - 1.10.53-年9月6日发帖人指出能在本机登录的攻击者可掌握完整的kenv输出并可以由upti.md
+            - 1.10.54-年9月23日发帖人反驳称生成器只能容纳256位远低于此已足够安全受控替换熵正是Y.md
+            - 1.10.55-年12月24日发帖人反对该变更指出即便rc脚本不使用保存的熵具备root权限的用.md
+            - 1.10.56-年10月23日发帖人在FreeBSD92更新的OpenPAM源码中发现隐私问题p.md
+            - 1.10.57-年4月28日发帖人反驳把base版OpenSSL文件替换为符号链接的方案会破坏系.md
+            - 1.10.58-年1月9日发帖人确认应当发出FreeBSD专用的安全通告并说他已因NTP放大攻击.md
+            - 1.10.59-年7月3日DanielRoethlisberger主张基础安装应具备可用的HTT.md
+            - 1.10.60-年5月26日发帖人建议将logger限制为仅供staff等特定用户组使用并修改m.md
+            - 1.10.61-年10月22日DagErlingSmørgrav回复说用户密码默认仍由login.md
+            - 1.10.62-年9月29日发帖人卸载bash后把bashcheck改为以sh运行报告显示仅CV.md
+            - 1.10.63-年12月18日发帖人赞同设置WITH_OPENSSL_PORT=yes并提醒混合.md
+            - 1.10.64-年1月23日发帖人解释pyc是Python解释器生成的字节码文件推测包内可能误含.md
+            - 1.10.65-年3月16日发帖人Greg在HEAD中提交关闭SSLpadding的改动附邮件说.md
+            - 1.10.66-年5月15日发帖人指出废弃软件常因配套硬件软件无法升级而滞留列举源码bsdtar.md
+            - 1.10.67-年10月27日发帖人回复实测结果用patchp0应用ntp102patch后仅余.md
+            - 1.10.68-年3月10日发帖人在回应另一位参与者称新发布的p38之后sshd已恢复正常的说法.md
+            - 1.10.69-年7月31日发帖人以FreeBSD安全小组成员身份但不代表安全负责人说明团队已知.md
+            - 1.10.70-年3月29日发帖人对关于OpenPGP签名格式规范的澄清表示已收到并明确表态自己.md
+            - 1.10.71-年10月22日发帖人放出公钥信任系统的设计文档链接说明部分内容此前已在黑客与安全.md
+            - 1.10.72-年2月3日发帖人在110内核中观察到新的随机初始序列号每十五秒才生成一次导致RS.md
+            - 1.10.73-年12月11日发帖人指出pkgFreeBSDorg上的包若统一改用ports版本.md
+            - 1.10.74-年1月28日发帖人自述已修复cjdns问题方法是配置静态路由因FreeBSD运行.md
+            - 1.10.75-年2月28日发帖人补发FreeBSD版pwd_mkdb命令的手册页链接指向用该命.md
+            - 1.10.76-年3月8日发帖人谢过对方理解说自己实在不想半夜有人敲门的场面睡眠本就不够他坦言事.md
+            - 1.10.77-年9月8日发帖人表示不喜欢把root密码存放在程序里并建议改用diffiehel.md
+            - 1.10.78-年12月29日发帖人追问在papsecrets文件中为每个已启用登录写入logi.md
+            - 1.10.79-年1月25日发帖人指出文件所有权本身并不赋予文件任何权限只有setuid才会带来.md
+            - 1.10.80-年2月13日BrianClapper表示已在ports集合中准备了若干条目可很快.md
+            - 1.10.81-年4月17日发帖人回复确认对于让外部X客户端访问本机这一情形应当使用xdmcp而.md
+            - 1.10.82-年5月4日发帖人从邮件存档中检索到一条无人回复的旧提问内容是FreeBSD205.md
+            - 1.10.83-年6月8日发帖人劝大家不要过度担忧MD5澄清Dobbertin生成的只是MD5伪.md
+            - 1.10.84-年6月10日发帖人认为终端控制文件里的安全标记只约束密码登录而不约束主机认证因此.md
+            - 1.10.85-年6月24日AmancioHasty建议主动暂停对外服务并下线重建freebsd.md
+            - 1.10.86-年7月4日发帖人建议FreeBSD团队去查看OpenBSD的portmap差异认.md
+            - 1.10.87-年7月17日发帖人给出两组对照数据指出UnixWare把登录程序设为模式550且.md
+            - 1.10.88-年8月12日发帖人找到一份把ftpd改成使用Kerberos认证的补丁但其依赖一.md
+            - 1.10.89-年9月9日发帖人反驳了他人提出把邮件网关换到别的机器或更换现有身份的建议指出搬动.md
+            - 1.10.90-年9月22日发帖人表示除非万不得已都不要丢包因为对端可能已收到确认便认定连接成功.md
+            - 1.10.91-年10月16日发帖人纠正对方的理解指出讨论对象是仍指向影子密码库数据库的文件描述.md
+            - 1.10.92-年11月2日发帖人称可在内核中添加多项检查以阻止chroot内进程做许多此类操作.md
+            - 1.10.93-年11月17日发帖人称自己也厌烦不断修补该邮件服务的漏洞曾在另一商用Unix上试.md
+            - 1.10.94-年11月18日发帖人提出sendmail在绑定端口这件事上并无任何网页服务器做不.md
+            - 1.10.95-年12月7日发帖人作为新入列成员报告在FreeBSD216上似乎找到一个问题已登.md
+            - 1.10.96-年12月16日发帖人建议在sendmailcf中加入PrivacyOptions.md
+            - 1.10.97-年1月27日发帖人回应别人询问能否用sendmail式的重写规则让qmail接收.md
+            - 1.10.98-年2月4日发帖人指出44Lite使用snprintf以避免缓冲区溢出并认为它实际.md
+            - 1.10.99-年2月5日发帖人称核心团队是刻意加剧这场对立情绪的并说他刚接到一名核心成员的语音.md
+            - 1.10.100-年2月15日发帖人在讨论口令加密方案时指出DDJ上有RIPEMD160的完整描述.md
+            - 1.10.101-年2月18日发帖人回应版本进度询问称记得FreeBSD二点一点七被打上标记大概就.md
+            - 1.10.102-年3月26日发帖人认为若要求这些用户标识连续编号即可简化实现只需在netinet.md
+            - 1.10.103-年6月21日发帖人称自己成功登录了该匿名FTP站点并查看了内容发现里面存放着标准.md
+            - 1.10.104-年7月7日发帖人说自己曾通过sysctl实现过针对端口20绑定的类似功能键名为n.md
+            - 1.10.105-年7月29日发帖人称自己试过多种kill信号包括915和HUP三种结果全都只终止.md
+            - 1.10.106-年8月10日发帖人回复称自己正在测试针对该漏洞的补丁方案此前有人询问是否已有修复.md
+            - 1.10.107-年8月12日发帖人提到procfs近期的安全问题后发问是否有人考虑改用常驻的进程.md
+            - 1.10.108-年9月17日发帖人质疑schg标志的安全价值称它虽对某些文件和二进制有用但只要像.md
+            - 1.10.109-年10月14日发帖人称自己参与过多个OrangeBook的UNIX系统认为访问控.md
+            - 1.10.110-年10月29日发帖人询问能否只授权部分用户使用pop3服务而拒绝其余用户并追问若.md
+            - 1.10.111-年11月22日发帖人指出补丁的隐患在于来自反向连接遗留的旧SYNACK可能终止一.md
+            - 1.10.112-年2月13日发帖人指出补丁代码应当出现在netinet下tcp_inputc中即.md
+            - 1.10.113-年2月28日发帖人称安全级别大于零时内存设备只读这一说法并不完全正确请对方查看O.md
+            - 1.10.114-年4月5日MichaelGulyaev询问如何在TCPIP协议栈与用户进程之间建.md
+            - 1.10.115-年4月23日发帖人报告OpenBSD与FreeBSDstable的lprm存在漏.md
+            - 1.10.116-年5月22日发帖人解释口令文件中的无效口令并不表示账户被禁用只表示该用户无法用明.md
+            - 1.10.117-年5月30日发帖人表示据他所知所有散列函数都受生日攻击影响DES被当散列使用时亦.md
+            - 1.10.118-年6月14日发帖人回复称第一问的答案只在用户真的设置securelevel时才成.md
+            - 1.10.119-年6月27日发帖人声明自己已经向代码树提交了一个更为聪明的修复来解决这一溢出问题.md
+            - 1.10.120-年7月5日发帖人反驳称定时任务抢先绑定这种行为应当被检测且很容易检测并指出虽然攻.md
+            - 1.10.121-年7月11日发帖人用ports编译qpopper252编译前把配置改成SERVE.md
+            - 1.10.122-年7月19日发帖人称把栈设为不可执行应能挡住多数缓冲区溢出但通过篡改程序数据仍可.md
+            - 1.10.123-年7月20日发帖人称自动升级通道本身不必成为漏洞只要它密码学上安全就行甚至可配置.md
+            - 1.10.124-年7月22日发帖人反对有东西自动重建软件包的做法说自己平时跑的是发布版加少量调整.md
+            - 1.10.125-年7月27日发帖人认同这一思路说自己也是把日志chown成rootwheel理由.md
+            - 1.10.126-年7月31日发帖人认为用syslog把日志送到安全主机与tripwire同等重要.md
+            - 1.10.127-年8月11日JeffAitken反驳环境变量传递FTP凭据更安全的说法说只要ps.md
+            - 1.10.128-年8月16日发帖人AndrewMcNaughton认为禁用execve只是把攻击.md
+            - 1.10.129-年8月22日发帖人发布让ps的a对普通用户失效看不到他人登录的补丁又完成wwho.md
+            - 1.10.130-年9月10日发帖人称自己也遇到了同样的情况在rxvt终端里运行bash时不小心把.md
+            - 1.10.131-年9月11日发帖人指出多数向他人终端传文的Unix程序会主动过滤控制字符以防此类.md
+            - 1.10.132-年9月21日发帖人称自己单位上也见过这类情况指出formmail是MattWri.md
+            - 1.10.133-年10月5日发帖人认为这算不上缺陷正如其他Unix怪癖中sendmailcf与M.md
+            - 1.10.134-年10月11日发帖人把StephenHenson的PKCS#12实现并入SSLe.md
+            - 1.10.135-年10月21日发帖人提醒不要将nologin加入shells文件以免用户用chs.md
+            - 1.10.136-年10月29日发帖人认为广播列表中写入特定服务器地址的说法不适用于他的情况因为他.md
+            - 1.10.137-年11月17日发帖人反对允许非root用户访问特权端口称这是标准UNIX做法的根.md
+            - 1.10.138-年12月3日发帖人在讨论移除maillocal的suid位时建议与其纠缠于sui.md
+            - 1.10.139-年12月18日发帖人在大学实验室管理三台FreeBSD机器并用KAME套件做IP.md
+            - 1.10.140-年12月24日发帖人提出在可执行文件运行前要求签名校验承认这会按某个倍数拖慢启动.md
+            - 1.10.141-年1月7日发帖人说明自己的内核改动当目标UNIX域套接字设置了特殊选项时内核向该.md
+            - 1.10.142-年1月26日发帖人称此事见诸Bugtraq对方查明约五十二人下载过被植入后门的版.md
+            - 1.10.143-年2月3日发帖人确认这是自动脚本搜寻已知漏洞指出cgibin中的phf是极流行且.md
+            - 1.10.144-年3月7日发帖人通告lsof与super的端口已更新此前二者root漏洞在bug.md
+            - 1.10.145-年3月13日发帖人解释每当检查规则集被触发就会生成这样一条记录通常说明这台服务器.md
+            - 1.10.146-年3月21日发帖人质疑福布斯关于eBay入侵经由FreeBSD的报道准确性认为多.md
+            - 1.10.147-年5月5日发帖人称其站点不时出现莫名重启一旦开启调试便不再复现并认为无法解决不代.md
+            - 1.10.148-年5月20日发帖人回忆所在机构退役硬盘须拆解消磁再用磨轮强行取出并把介质磨成粉末.md
+            - 1.10.149-年6月7日发帖人判断问题出现在主服务器运行rtldc版本达到11328或更新且需.md
+            - 1.10.150-年6月17日发帖人认为光盘性能早已足够光驱启动时机早已成熟并设想构建大容量内存系.md
+            - 1.10.151-年6月21日发帖人提到Solaris2的TCP允许自定义可绑定端口范围的上下界若.md
+            - 1.10.152-年6月28日发帖人依两台思科路由器间IPoverIP隧道经验建议把MTU设为15.md
+            - 1.10.153-年7月9日发帖人猜测对NSS感兴趣的可能就是TerryLambert认为这是个好.md
+            - 1.10.154-年7月14日发帖人询问能否从多台FreeBSD机器经防火墙建立到单一主机的VPN.md
+            - 1.10.155-年8月18日发帖人报告在安全级别3的防火墙上无法修正时间settimeofday.md
+            - 1.10.156-年9月1日发帖人认为nodump文件标志极其有用且是正确做法尤其适用于必须遵守F.md
+            - 1.10.157-年9月6日发帖人指出安全级别提高后内核始终拒绝降低它与init手册页所述仅ini.md
+            - 1.10.158-年9月9日发帖人指出这种做法行不通因为该电缆会以固定间隔发送链路脉冲剪断电缆即会.md
+            - 1.10.159-年9月20日发帖人提议用SYS_write写入devaudit设备配合形如cre.md
+            - 1.10.160-年10月5日发帖人称另一做法是两台机器用nullmodem直连并在对端跑logg.md
+            - 1.10.161-年10月10日发帖人称12345是netbus的默认端口netbus与BackO.md
+            - 1.10.162-年10月16日发帖人称常在一台较安全区域的机器上工作离开时别人进来telnet或.md
+            - 1.10.163-年11月2日发帖人自述proftpd120pre6及更早版本存在该问题升级至pr.md
+            - 1.10.164-年11月9日发帖人称并非只有IE5会发出137端口探测实际是Windows95与.md
+            - 1.10.165-年11月24日发帖人对这场围绕ps输出进程命令行参数是否对他人可见的争论表态明确.md
+            - 1.10.166-年12月2日发帖人询问是否已有应用或端口能实现telnet会话记录并分析需明确记.md
+            - 1.10.167-年12月14日发帖人称自己网络上有一百多台机器向广播地址发送ping会有回复其网.md
+            - 1.10.168-年1月12日发帖人指出控制台失效时只需向init进程发送HUP信号即可刷新不必再.md
+            - 1.10.169-年1月21日发帖人自述在两台CURRENT机器上测试该攻击既无崩溃也无日志异常仅.md
+            - 1.10.170-年1月24日发帖人解释复位回包生成为何开销最大列出数点在集线器环境下回复报文会额.md
+            - 1.10.171-年2月24日发帖人称已查阅iceauth手册并经AltaVista搜索证实相关资.md
+            - 1.10.172-年3月26日发帖人在讨论模块安装时设置schg标志的补丁时回复称打算等自己假期回.md
+            - 1.10.173-年3月29日WesPeters引用22CFR1261说明美国对特定国家的国防物品.md
+            - 1.10.174-年4月13日发帖人询问是否有人在FreeBSD上跑通IKE守护进程称在curre.md
+            - 1.10.175-年4月25日发帖人援引一份报纸商业版文章指出某大型互联网服务商正静默丢弃太平洋电.md
+            - 1.10.176-年5月5日发帖人认为没有附上邮件头就无法判断该localhost究竟是哪一种lo.md
+            - 1.10.177-年6月9日发帖人指出openssl文档以pod格式存放于cryptoopenss.md
+            - 1.10.178-年6月20日发帖人报告PPP路由删除缺陷的修复已合入说明用户态PPP启动时取错路.md
+            - 1.10.179-年7月2日发帖人回复问题依旧存在计划升级到FreeBSD34RELEASE并打S.md
+            - 1.10.180-年7月25日发帖人警告telnet直登root会把密码暴露于路径嗅探且几乎无法追.md
+            - 1.10.181-年8月2日DarrenReed回应质疑称自己已在列表里说明需要做哪些工作却无人动.md
+            - 1.10.182-年8月10日发帖人在FreeBSD上试跑suidperl配合mail的Linux.md
+            - 1.10.183-年8月21日发帖人指出启动时只会执行以sh结尾的文件因此snmpdshsampl.md
+            - 1.10.184-年8月25日发帖人向列表询问为何在安全级别提升到3之后仍能把以只读方式挂载的文件.md
+            - 1.10.185-年9月23日发帖人指出ports里的netmpdnetgraph支持PPTP并且.md
+            - 1.10.186-年9月28日发帖人说明一个守护程序可通过为安全关联提供地址通配符来支持拨号用户相.md
+            - 1.10.187-年10月2日发帖人改用ncftp2客户端以排除原有ftp自身缺陷的干扰向服务器发.md
+            - 1.10.188-年10月3日发帖人说明12345是NetBus的默认端口12346也在使用Net.md
+            - 1.10.189-年11月3日发帖人称自己不愿接收那些宏脚本邮件但更受不了病毒被发现后又收到上百条.md
+            - 1.10.190-年11月15日发帖人称自己印象中BIND在FreeBSD上构建起来相当容易如果需.md
+            - 1.10.191-年11月25日发帖人称自己怀疑该问题与PAM有关但尝试在无PAM支持下重新编译却.md
+            - 1.10.192-年12月5日发帖人先致歉说自己忍不住随后用滑稽方言改写了一段批评称相关通告毫无新.md
+            - 1.10.193-年12月16日发帖人称自己管理着世界各地若干版本不同的FreeBSD机器需在它们.md
+            - 1.10.194-年12月19日发帖人再次解释通告延迟发布的理由包括procfs在FreeBSD中.md
+            - 1.10.195-年12月21日发帖人指出交换机首要目的是通过减少冲突提升性能不按目的端口分流只是.md
+            - 1.10.196-年1月5日发帖人自评其关于ssh的演讲表现怀疑部分论点没有有效传达出去并坦言自己.md
+            - 1.10.197-年1月19日发帖人指出FreeBSD与Solaris8的pam_setcred手.md
+            - 1.10.198-年2月9日发帖人认可用防火墙的思路但认为仍应有一处集中配置各类服务的访问控制他觉.md
+            - 1.10.199-年2月13日发帖人回复称对方说得对也承认反例同样存在说自己此前并不知道xinet.md
+            - 1.10.200-年2月20日发帖人认为这种tvp日志属于应当频繁出现的正常情况并贴出相关代码片段.md
+            - 1.10.201-年3月2日发帖人称约一个月前有个小子经匿名ftp登录他的机器反复尝试读取etcp.md
+            - 1.10.202-年3月13日发帖人称自己是iButton项目协调人该项目旨在定义一组与iButt.md
+            - 1.10.203-年3月21日发帖人升级至43BETA后无法在X的终端窗口内su到root而X外普.md
+            - 1.10.204-年4月5日发帖人报告Apache1319加mod_ssl在FreeBSD43RC.md
+            - 1.10.205-年5月4日发帖人确认反向DNS配置正确且名称服务器正常问题是T1线路中断时响应极.md
+            - 1.10.206-年5月8日发帖人称首次听说时就检查过FreeBSD似乎不受影响不确定该漏洞版本从.md
+            - 1.10.207-年5月14日发帖人说明环境为FreeBSD客户端挂接混合NFS服务器并统一使用N.md
+            - 1.10.208-年5月28日发帖人询问FreeBSD43RC上内核反复打印arp未知硬件地址格式.md
+            - 1.10.209-年6月2日发帖人指出厂商既没为BSDOS也没为FreeBSD发布477端口维护者.md
+            - 1.10.210-年6月8日发帖人用gif接口搭建IPSECVPN后发现gif接口的计数并不总包含.md
+            - 1.10.211-年6月24日发帖人反对把本地路径放在搜索路径末尾主张放在开头以便本地二进制和包装.md
+            - 1.10.212-年7月10日发帖人怀疑自己盯这件事盯得太久而判断力下降仍坚持下列抓包看起来不对连.md
+            - 1.10.213-年7月12日发帖人提到httpwwworbsorg过去会对服务器运行检查以测试其.md
+            - 1.10.214-年7月15日发帖人称自己没有收到ORBS停用的任何通告而原版sendmailmc.md
+            - 1.10.215-年7月19日发帖人在本机用perl生成数据经nc送至本机23端口再用gdb附加到.md
+            - 1.10.216-年7月24日发帖人澄清自己指的是用重定向把木马覆盖写入原有文件这类操作它不会改变.md
+            - 1.10.217-年8月10日发帖人汇报已换盘重建并新增三台FreeBSD43released机器.md
+            - 1.10.218-年8月15日发帖人称FreeBSD44对inetd网络服务正是这样做关于send.md
+            - 1.10.219-年8月31日发帖人告知发给SecurityOfficer@FreeBSDorg的.md
+            - 1.10.220-年9月3日发帖人指出除非包序列具备密码学强度否则可被轻易抓包重放从而使额外的安全.md
+            - 1.10.221-年9月13日发帖人称自己愿意确认美国的属地州乃至联邦层面确实都没有要求服务商保留.md
+            - 1.10.222-年9月18日发帖人报告Nimda蠕虫已开始攻击其服务器并累计数千次连接提醒该蠕虫.md
+            - 1.10.223-年9月22日发帖人称自己已有补丁但认为并不需要因为原始代码并无漏洞copyrig.md
+            - 1.10.224-年9月27日发帖人认为netstat输出中998760个数据包重传却对应1014.md
+            - 1.10.225-年10月2日发帖人在FreeBSD44上创建loginconf新类webuser.md
+            - 1.10.226-年10月6日发帖人说maninit里对安全级别只有寥寥几句他跑FreeBSD44.md
+            - 1.10.227-年10月31日开发者回答审计提问称FreeBSD目前并不具备记录谁在何时访问了哪.md
+            - 1.10.228-年11月13日发帖人称其FreeBSD42RELEASEGENERIC主机疑似遭.md
+            - 1.10.229-年11月15日发帖人建议在Putty的Settings里TerminalKeyb.md
+            - 1.10.230-年11月16日发帖人称每当有人在伪造路由器时就会持续看到这类日志他自己通过伪造路.md
+            - 1.10.231-年11月22日发帖人称定期nmap自家服务器一贯只见到ftpsshsmtp等端口.md
+            - 1.10.232-年12月1日发帖人称phkmalloc在wuftpd那件事上救了大家但很难写出在.md
+            - 1.10.233-年1月4日发帖人说他找到过FreeBSDSA0052的tcpisspatch补丁.md
+            - 1.10.234-年1月22日发帖人称用FreeBSD跑sendmail做邮件服务器Windows.md
+            - 1.10.235-年2月14日kurnik报告FreeBSD45存在syncache严重漏洞可被远.md
+            - 1.10.236-年3月7日发帖人自行编译安装了OpenSSH31p1前缀设为usr完成构建与安装.md
+            - 1.10.237-年3月13日MatjazMartincic提醒提问者另外看看mtree说它跟Tr.md
+            - 1.10.238-年3月23日发帖人称BeOS上有按键时序识别软件他曾用过基于神经网络实现输入一句.md
+            - 1.10.239-年3月28日发帖人称可能是mergemaster把etcgroup覆盖了导致用户.md
+            - 1.10.240-年3月29日发帖人给出另一种做法让buildworld与其他端口正常安装但把文件.md
+            - 1.10.241-年4月19日发帖人按SA0218指引在usrsrc打zlib补丁patch报统一.md
+            - 1.10.242-年5月1日发帖人称其服务器var分区已显示109%且出现vargamesphan.md
+            - 1.10.243-年5月12日发帖人重新针对45RELEASE的ipcomp_corec出一份补丁.md
+            - 1.10.244-年5月30日发帖人在学习测试ipv6时尝试将其配置在jail内部只跑一个ipv6.md
+            - 1.10.245-年6月22日发帖人澄清把用户名别名指向devnull并不影响该用户向外发送邮件即.md
+            - 1.10.246-年6月25日发帖人询问ports中OpenSSH33p的特权分离是否已有人成功启.md
+            - 1.10.247-年6月26日发帖人报告该二进制包pkg_add安装顺利但随附说明与实际不符说明要.md
+            - 1.10.248-年6月28日发帖人在FreeBSD46STABLE装opensshportabl.md
+            - 1.10.249-年6月29日发帖人在四台机器上重编了八次除libc之外又碰上libbind这桩事.md
+            - 1.10.250-年7月2日发帖人称snortcenter可按网络调整规则并从网上更新但用cron.md
+            - 1.10.251-年7月8日发帖人提到portsentry可能有所帮助但承认自己从未如此测试过推测.md
+            - 1.10.252-年7月12日发帖人用gif隧道加密两台家用与工作地DSL设备之间的流量并由rac.md
+            - 1.10.253-年7月18日发帖人贴出自身arp地址跳变日志某IP在两个MAC间切换并出现在网卡.md
+            - 1.10.254-年7月23日发帖人说常见原因是Samba通常是别人用wordpad之类的编辑器改.md
+            - 1.10.255-年7月30日DirkMeyer称自己刚把openssl096e提交进portsC.md
+            - 1.10.256-年8月1日发帖人回应称并无问题他是在解压openssh34tgz后检查是否被植入.md
+            - 1.10.257-年8月11日发帖人回复致谢并称OpenSSL已升级成功补说自己额外执行了forc.md
+            - 1.10.258-年8月27日发帖人不认同端口越多越不安全认为每开一个网络端口只会增加管理时间只有.md
+            - 1.10.259-年9月25日发帖人说明screen希望以root身份运行以更新utmp与wtmp.md
+            - 1.10.260-年10月9日发帖人指出随二进制一起分发的MD5校验和只能防范下载过程中的损坏并非.md
+            - 1.10.261-年11月23日发帖人回应OpenSSHsftpserver缺chroot的问题建.md
         - 1.11-与同时期操作系统的比较：Linux 安全生态与 SELinux、KSPP、LKM
+            - 1.11.1-叙述章——TrustedBSD 安全工程的接口契约与遗留负担：fsuid、BSD accounting、BSD socket 与 unix_find_bsd()（1999–2026）.md
+            - 1.11.2-当事人素材与叙述章——Linux 安全生态与 BSD 安全层的互动（2006–2026）.md
+            - 1.11.3-叙述章——BSD 安全工程在 Linux 内核中的三条谱系线（2012–2026）.md
+            - 1.11.4-叙述章——TrustedBSD 安全工程在 Linux 内核治理的制度化路径：RFC、KSPP 与 TECH TOPIC 四条通道（2016–2024）.md
+            - 1.11.5-Linux 的安全生态与 SELinux／KSPP.md
+            - 1.11.6-Windows 的安全演进与 Patch Tuesday.md
+            - 1.11.7-OpenBSD 的安全至上路线.md
+            - 1.11.8-BSD 安全路径的实用主义边界.md
+            - 1.11.9-节 媒体反响与社区舆论（详见 媒体反响与社区舆论.md）.md
+            - 1.11.10-1015至1601018分别记录了移植谱系接口契约与治理通道本节从话语证据的角度.md
+            - 1.11.11-DavidHowells答复补丁集早已包含UEFIsecureboot触发项CO.md
+            - 1.11.12-JannHorn指出OpenBSD已使用MAP_STACK标志内核定期检查用户态.md
+            - 1.11.13-linux邮件提取.md
+            - 1.11.14-年7月28日PaoloBonzini回评FreeBSDCapsicum移植RFC.md
+            - 1.11.15-年10月22日DavidDrysdale在execveat补丁背景中说明该系统调.md
+            - 1.11.16-linux邮件提取.md
+            - 1.11.17-linux邮件提取.md
+            - 1.11.18-年3月24日MickaëlSalaün提交LandlockLSMv31补丁集说明.md
+            - 1.11.19-linux邮件提取.md
+            - 1.11.20-linux邮件提取.md
+            - 1.11.21-年5月13日StephenHemminger在OSDLBugzilla2399远.md
+            - 1.11.22-年8月25日MickaëlSalaün在Landlock无特权沙箱RFC中说明其.md
+            - 1.11.23-FernandoGont在ICMP攻击对抗TCP草案新版的公告中指出PMTUD攻.md
+            - 1.11.24-在BPF安全检查补丁的讨论中ChangliGao称查看了FreeBSD的bpf实.md
+            - 1.11.25-年4月19日WaimanLong提议把MAP_STACK映射为VM_STACK内.md
     - 第2章-内核安全机制：内存保护、执行控制与随机化
         - 2.1-4.4BSD 基础与 OpenBSD 内核安全重构
         - 2.2-W^X：执行权限分离机制
         - 2.3-GOT、PLT 与动态链接保护
         - 2.4-Stack Protector 与 propolice：栈保护机制的引入
         - 2.5-malloc 随机化与 Guard Page
+            - 2.5.1-malloc → free 链表保护与堆硬化（6.x 持续）.md
         - 2.6-mmap 随机化与地址空间布局随机化
+            - 2.6.1-KARL 地址空间随机化.md
         - 2.7-地址空间随机化：mmap 与栈、堆
         - 2.8-控制流攻击缓解机制
         - 2.9-RETGUARD 与返回地址保护
+            - 2.9.1-朴素返回地址 → RETGUARD 引入（6.4，2018.10）.md
+            - 2.9.2-RETGUARD 返回地址保护.md
         - 2.10-内核内存保护机制
         - 2.11-用户空间与内核安全边界
         - 2.12-内核侧防护的分层与互补
@@ -13723,16 +15345,34 @@
         - 3.2-权限分离模型的形成：从 Provos 设计到通用范式
         - 3.3-Privilege Revocation
         - 3.4-tame 的提出与 pledge 的形成
+            - 3.4.1-年10月21日2015年10月21日deRaadt拒绝在pledge2手册页引用.md
+            - 3.4.2-年10月8日2017年10月8日deRaadt评述社区跨execpledge补丁.md
+            - 3.4.3-＊＊pledge(2)＊＊ 的设计与实现.md
+            - 3.4.4-pledge 的工程哲学.md
+            - 3.4.5-与 Linux seccomp／Capsicum 的比较.md
+            - 3.4.6-Christoph报26下ccd阵列重启后wd1的disklabelfstype.md
+            - 3.4.7-访谈从BSD侧揭示跨平台移植的结构性障碍Baptiste列举kqueue64缺失.md
+            - 3.4.8-总纲25逻辑是形式主义而非世界本身的结构cd的语义由shell内建命令与内核ch.md
+            - 3.4.9-存疑脚注节目对pledge内部机制与execpromises的说明系二手解读须以.md
         - 3.5-pledge 系统调用设计
+            - 3.5.1-节目解读OpenBSD的pledge机制程序在完成启动阶段所需的特权操作后调用p.md
         - 3.6-pledge 权限集合与系统调用限制
         - 3.7-unveil 文件系统视图限制
+            - 3.7.1-朴素文件系统访问 → unveil 系统调用（6.4，2018.10）.md
         - 3.8-pledge 与 unveil 的联合使用
+            - 3.8.1-6.x 周期安全态势总览——errata 存档完整性与 commit 数据的对照.md
+            - 3.8.2-pledge 与 unveil 的配合.md
+            - 3.8.3-pledge 从部分应用到全面普及——6.0-6.9 的渐进部署与 errata 中的 pledge 身影.md
+            - 3.8.4-＊＊unveil(2)＊＊ 引入与 ＊＊syspatch(8)＊＊ 机制——6.4 双重安全革新.md
+            - 3.8.5-LibreSSL 独立维护路径的巩固——与 OpenSSL 路线分离的早期成果.md
+            - 3.8.6-libexpat／perl 等第三方库治理——“跟随上游—批量回溯”工作流的早期形态.md
         - 3.9-权限收缩 API 演进：setresuid 至 pledge 与 unveil
         - 3.10-基本系统中的沙箱化实践
         - 3.11-进程权限收缩与传统 UNIX 权限模型
         - 3.12-从权限分离到应用程序最小权限
     - 第4章-pf 与网络边界安全
         - 4.1-IPFilter 移除与 pf 的形成
+            - 4.1.1-IPFilter → pf 防火墙引入（OpenBSD 3.0，2001.12）.md
         - 4.2-pf 的状态检测与规则处理架构
         - 4.3-pf 地址转换与状态表
         - 4.4-pf 与网络边界安全
@@ -13756,16 +15396,25 @@
         - 6.7-LibreSSL 的代码重构
         - 6.8-libtls 与高层 TLS 接口
         - 6.9-TLS 协议实现与证书验证
+            - 6.9.1-SSL／TLS 协议的发明与演进.md
         - 6.10-随机数、密钥处理与系统安全
         - 6.11-OpenSSH 与 LibreSSL 的维护模式
         - 6.12-密码基础设施与基本系统安全边界
     - 第7章-编译器、链接器与安全构建环境
         - 7.1-OpenBSD 基本系统与自举构建
         - 7.2-系统工具链：GCC 时代与 Clang／lld 接棒
+            - 7.2.1-工具链现代化——lld 默认链接器与 x86 架构 GCC 移除.md
+            - 7.2.2-LLD 成为 amd64 默认链接器.md
+            - 7.2.3-OpenSSL 1.1.1 引入.md
+            - 7.2.4-GNU 阵营对 GCC 移除与 LLD 替代 GNU ld 的批评层.md
+            - 7.2.5-FreeBSD 阵营的反批评层——工程必要性与渐进式架构迁移.md
+            - 7.2.6-GPL 阵营的再回应层——Apache 2.0 双标论与架构弃用具正当化.md
         - 7.3-pcc 探索与自主工具链实践
         - 7.4-Clang 进入 OpenBSD
         - 7.5-编译器硬化与安全代码生成
         - 7.6-ld.so 与动态链接器安全
+            - 7.6.1-143.9.2 lld 链接器替换 GNU ld.md
+            - 7.6.2-lld 链接器替换 GNU ld.md
         - 7.7-PIE、Static PIE 与位置无关代码
         - 7.8-ld、as 与基础工具链维护
         - 7.9-make 与系统构建体系
@@ -13783,6 +15432,7 @@
         - 8.9-OpenBSD 用户空间统一性
     - 第9章-网络服务与系统守护进程安全
         - 9.1-OpenSMTPD 架构
+            - 9.1.1-总纲9经验优先OpenSMTPD源于GillesChehade在实际维护邮件系统.md
         - 9.2-OpenSMTPD 权限分离与服务安全
         - 9.3-relayd 与代理、负载均衡
         - 9.4-httpd 与基础 Web 服务
@@ -13791,6 +15441,7 @@
         - 9.7-unbound 与递归 DNS 服务
         - 9.8-acme-client 与证书自动化
         - 9.9-服务程序的权限收缩实践：五类守护进程案例
+            - 9.9.1-年5月30日发帖人否认为服务守护进程所致指出它不会有稍后再试的提示也不了解二十五.md
         - 9.10-守护进程生命周期管理与权限交接
         - 9.11-基础网络服务最小权限化
         - 9.12-OpenBSD 服务程序统一安全模型
@@ -13802,15 +15453,31 @@
         - 10.5-依赖关系与软件更新
         - 10.6-第三方软件安全维护
         - 10.7-ports 补丁回溯与安全更新流程
+            - 10.7.1-安全补丁回溯移植者的工作.md
         - 10.8-软件生态与基本系统关系
     - 第11章-架构移植史：从 i386 到多架构
         - 11.1-从 i386 到 amd64
+            - 11.1.1-GCC 4.2.1 从 amd64／i386 架构移除.md
+            - 11.1.2-i386／amd64：首批完成 Clang 迁移的架构.md
         - 11.2-m68k、vax、SPARC 等历史架构的退役与保留（1996–2014）
+            - 11.2.1-164.10.2 i386／armv6／32 位 powerpc 架构在 15.0 正式退役.md
+            - 11.2.2-i386／armv6／32 位 powerpc 架构在 15.0 正式退役.md
         - 11.3-arm64 平台支持
+            - 11.3.1-旧 ARM64 支持 → Tier-1 arm64 平台（7.0，2021.10）.md
+            - 11.3.2-arm64／AArch64 正式支持与架构 Tier 体系.md
+            - 11.3.3-aarch64（arm64）升 Tier-1 架构的战略意义.md
+            - 11.3.4-32 位架构降级路径与平台支持演进.md
         - 11.4-armv7 与嵌入式平台
+            - 11.4.1-Raspberry Pi 与嵌入式 ARM 平台.md
         - 11.5-riscv64 与新架构支持
     - 第12章-硬件支持边界
         - 12.1-无线网络硬件与驱动支持
+            - 12.1.1-网络驱动与硬件支持更新.md
+            - 12.1.2-＊＊iwm(4)＊＊ Intel 无线驱动与 802.11n 改进.md
+            - 12.1.3-SCTP、IPv6／KAME 与无线驱动支持.md
+            - 12.1.4-网络栈、驱动与硬件支持改进.md
+            - 12.1.5-WiFi 无线驱动与网络栈改进.md
+            - 12.1.6-无线驱动的更新.md
         - 12.2-固件 blob 依赖与不可维护部件
         - 12.3-硬件文档开放度与驱动可维护性
     - 第13章-OpenBSD 安全工程路线的整合与演进
@@ -13820,6 +15487,13 @@
         - 13.4-Privilege Separation、pledge 与 unveil 的技术连续性
         - 13.5-pf 与网络服务安全体系整合
         - 13.6-OpenSSH、LibreSSL 与基本系统共同演进
+            - 13.6.1-Beck自述LibreSSL的fork决策在2014年4月Heartbleed事.md
+            - 13.6.2-2014年5月12日BrentCook在pem_libc里把变量i初始化为0避免.md
+            - 13.6.3-2014年6月9日StuartHenderson用ag检索ASN1宏名确认拼写完.md
+            - 13.6.4-2014年6月12日AnilMadhavapeddy为libssl的BUF_st.md
+            - 13.6.5-2014年10月16日BobBeck公告LibreSSL211发布以默认禁用SS.md
+            - 13.6.6-本期核心访谈由FreeBSD开发者Conrad讲解加密内核崩溃转储威胁模型覆盖两.md
+            - 13.6.7-TedUnangst在圣母大学安全课上重申其特性即缺陷论安全并非可加过程八套安全.md
         - 13.7-基本系统统一开发模式
         - 13.8-OpenBSD 安全工程路线的长期稳定部分
         - 13.9-OpenBSD 安全工程路线的持续变化部分
@@ -13830,6 +15504,7 @@
         - 14.1-CVS 流程与提交纪律：commit log 体例与审查
         - 14.2-KNF 的严格执行：OpenBSD style(9) 与风格—正确性之辨
         - 14.3-六个月发布节奏：snapshot、release 与 errata 流程
+            - 14.3.1-年12月7日JimBreton称28release与11月6日snapshot的.md
         - 14.4-构建集群：ports 与 release 的批量构建
         - 14.5-回归测试：regress 树与测试进入提交流程
         - 14.6-signify 与发布物验证：工程过程里的信任链
@@ -13838,18 +15513,132 @@
     - 第15章-OpenBSD 的语言与安全工具链
         - 15.1-安全编译器与语言工具链加固
         - 15.2-Ports 与用户态脚本语言
+            - 15.2.1-2011年9月29日DavidCoppa报告ncurses补丁触发perlcpa.md
+            - 15.2.2-要点FreeBSDPorts系统本身用shell与Makefile实现但管理脚本.md
         - 15.3-语言政策的保守主义
+            - 15.3.1-PascalStumpf在专访中自述OpenBSD静态PIE的实现PIE使可执行.md
 - 第46卷-OpenBSD 人物志：安全路线的维护者（1995–2026）
     - 第1章-Theo de Raadt：个人领导结构的记录与评价（1995–2026）
         - 1.1-卷首断代与承接：前段岁月（1968–1995）提要
         - 1.2-分裂与 OpenBSD 的建立（1995）
         - 1.3-领导风格的文本记录：决断、审计与发布节奏
+            - 1.3.1-de Raadt 主导的权限模型.md
+            - 1.3.2-de Raadt 主导的治理结构特征.md
+            - 1.3.3-TheodeRaadt自述身兼OpenBSD项目领导人时近15年开发者与发布工程.md
         - 1.4-批评史与当事人回应（1995–2026）
         - 1.5-1995–2026 年领导期的分期与评价
         - 1.6-OpenBSD 5.x 时期的技术淘汰与新旧交替（2011—2016）
+            - 1.6.1-JohnMarkGurney自述1994年经同学影响接触AUX与Unixware.md
+            - 1.6.2-2011年7月7日ClaudioJeker回复MartinPelikan关于os.md
+            - 1.6.3-2011年8月20日MarcEspie提交补丁移除pkg工具中2007年6月已弃.md
+            - 1.6.4-2011年12月2日JanKlemkow承认此前fxp补丁中gotoerr与标签.md
+            - 1.6.5-2012年1月9日AlexandrShadchin提议删除wsfonth中未使用.md
+            - 1.6.6-2012年3月28日StuartHenderson提交一直留存在树中的bgplg.md
+            - 1.6.7-固定地址加载 → 全系统 ASLR（5.2-5.6，2012-2014）.md
+            - 1.6.8-2013年3月5日MartinPieuchot回复faithd应在版本解锁后删除.md
+            - 1.6.9-2013年8月3日PhilipGuenther表示已合入ArtturiAlm早前.md
+            - 1.6.10-2013年10月30日AndrewFresh指出ModuleBuild将在per.md
+            - 1.6.11-2013年12月2日作者提交tlThunderLAN驱动补丁统一ioctl与接收.md
+            - 1.6.12-OpenSSL → LibreSSL fork（5.6，2014）.md
+            - 1.6.13-gcc → clang／LLVM 替代（5.6-5.7，2014-2015）.md
+            - 1.6.14-2014年1月17日DavidGwynne用iopools替换sbic4的XS_.md
+            - 1.6.15-2014年3月18日ClaudioJeker批准MartinPieuchot停止.md
+            - 1.6.16-2014年6月26日MartinPieuchot提议删除carp_set_ifp.md
+            - 1.6.17-2014年9月8日DavidGwynne提交mfi4补丁把中断建立级别从IPL_.md
+            - 1.6.18-2014年11月15日AlexandreRatchov简化aucat工具移除Mt.md
+            - 1.6.19-2015年1月30日UlfBrosziewski回应MartinPieuchot.md
+            - 1.6.20-总纲9经验优先总纲9经验优先听众磁盘在背板第三槽位不可见的故障经主持人以自身3T.md
+            - 1.6.21-openbsd_mailmessages229504.md
+            - 1.6.22-openbsd_mailmessages231091.md
         - 1.7-OpenBSD 5.x 的核心团队与 Theo de Raadt
+            - 1.7.1-2011年3月2日MatthewDempsky提供libstdc++stdsho.md
+            - 1.7.2-2011年7月17日AlexanderSchrijver修复grep的mmfil.md
+            - 1.7.3-2011年8月2日EddBarrett报告测试中alc0拔线触发看门狗超时系统每.md
+            - 1.7.4-2011年8月30日KennethWesterback回复quotacheck与.md
+            - 1.7.5-2011年10月13日AlexandreRatchov参与GregorBest改.md
+            - 1.7.6-2011年8月30日MarkLumsden认可mg段落填分允许句末括号后保留双空.md
+            - 1.7.7-2012年1月21日GregorBest澄清调度器补丁把时间片从10毫秒改为20.md
+            - 1.7.8-2012年2月12日JoachimSchipper指出select2手册BUGS.md
+            - 1.7.9-2012年4月3日HanBoetes转贴他人关于简化etc下unixsocket.md
+            - 1.7.10-2012年5月14日StuartHenderson为unbound移植上游acc.md
+            - 1.7.11-2012年6月15日PaulIrofti修补linux_futexc的加锁顺序在.md
+            - 1.7.12-2012年8月15日波拉科夫按根特的意见修订pdksh引号剥离补丁把判据扩成SD.md
+            - 1.7.13-2012年9月4日OkanDemirmen回复确认已修好sasyncd中log_.md
+            - 1.7.14-2012年9月28日AlexanderPolakov提交hppa64mkboot.md
+            - 1.7.15-2012年11月5日MarcEspie提交make补丁移除行尾空白剥离使变量定义.md
+            - 1.7.16-2012年11月29日MikeBelopuhov提交fstat输出格式微调补丁把.md
+            - 1.7.17-2012年12月30日MarcusMERIGHI转发AlexanderPolak.md
+            - 1.7.18-2012年9月28日PhilipGuenther指出randomc线程安全补丁没.md
+            - 1.7.19-2013年2月10日维护srcgamesfortunedatfilesfortu.md
+            - 1.7.20-2013年3月4日GerhardRoth在snmpd补丁评审中就关键词命名提出意.md
+            - 1.7.21-2013年3月19日TedUnangst回应提问承认DECREMENT宏漏写外层.md
+            - 1.7.22-2013年3月30日TobiasStoeckmann修复sdiffparsecm.md
+            - 1.7.23-2013年4月12日JasonMcIntyre回应ath手册语法改动争议表示该信.md
+            - 1.7.24-2013年5月22日Coppa批准options4把BUFCACHEPERCEN.md
+            - 1.7.25-2013年6月5日Espie补发tmpfs差异中遗漏的sbinMakefile改.md
+            - 1.7.26-2013年7月4日Alm提交kern_timeoutc补丁删除timeout_a.md
+            - 1.7.27-2013年7月21日JasonMcIntyre对AlexanderHall澄清S.md
+            - 1.7.28-2013年8月31日patrickkeshishian在useradd补丁讨论里.md
+            - 1.7.29-2013年10月12日MarcEspie发布tmux协议变更警告提示重建源码前旧.md
+            - 1.7.30-2013年11月12日AnthonyJBentley提交补丁为isakmpd8增.md
+            - 1.7.31-2013年11月30日jmc认可PhilipGuenther精简getdents.md
+            - 1.7.32-2013年12月13日BrettMahar认可smtpdconf5改用mando.md
+            - 1.7.33-2013年12月29日svenfalempin回应Skinner的rcsubr补.md
+            - 1.7.34-2013年2月10日VladimirTámaraPatiño提交把FreeBSD.md
+            - 1.7.35-2013年11月12日VladimirTámaraPatiño提交check_n.md
+            - 1.7.36-2013年12月11日ToddMiller批准sparc64上sppp与pppo.md
+            - 1.7.37-2014年1月7日LawrenceTeo提交tcpdump校验和检测补丁的第一阶.md
+            - 1.7.38-2014年1月21日FlorianStinglmayr为installboot增.md
+            - 1.7.39-2014年2月2日RobertoVargasCaballero提交comsat补.md
+            - 1.7.40-2014年2月13日保罗伊罗夫蒂更新octeon端口的硬件支持列表并加入DLin.md
+            - 1.7.41-2014年3月6日IngoSchwarze回应TedUnangst把mandoc.md
+            - 1.7.42-2014年3月24日TheodeRaadt回应pshared设计讨论指出sem_.md
+            - 1.7.43-2014年4月16日svenfalempin用gdb与抓包追查dhclient空.md
+            - 1.7.44-2014年4月24日Unangst承认bincputilsc原码出自本人并确认M.md
+            - 1.7.45-2014年4月29日KennethWesterback提交growfs补丁把末块.md
+            - 1.7.46-2014年5月7日TedUnangst回应PeterMalone把malloc与.md
+            - 1.7.47-2014年5月14日AlexandrShadchin提交wsmoused清理补丁.md
+            - 1.7.48-2014年5月25日MarkCaveAyland分析sparc64陷阱表接管崩溃.md
+            - 1.7.49-2014年5月31日BrentCook提交补丁集第七份为dtls1h与pqueu.md
+            - 1.7.50-2014年6月12日BrianCallahan提交mg补丁删去b_fname与空.md
+            - 1.7.51-2014年6月27日YASUOKAMasahiko提交in_pcb哈希表自动扩缩.md
+            - 1.7.52-2014年7月9日TedUnangst提补丁在libssl多处删除ASN1_ST.md
+            - 1.7.53-2014年7月21日AlexHolst提交补丁把etcrc中kbd与ldconf.md
+            - 1.7.54-2014年8月4日WilliamOrr自述已按TedUnangst意见完成dd溢.md
+            - 1.7.55-2014年8月15日PhilipGuenther回复确认insque与remqu.md
+            - 1.7.56-2014年8月27日SébastienMarie比对netbsd与freebsd.md
+            - 1.7.57-2014年9月15日RafaelZalamena提交VPLS数据通路补丁集先把m.md
+            - 1.7.58-2014年9月30日Nicholas对openrcs把atoi改为strtonu.md
+            - 1.7.59-2014年10月8日MikeLarkin放行DavidCoppa把acpithi.md
+            - 1.7.60-2014年10月20日DavidGwynne把crypto_init中crypt.md
+            - 1.7.61-2014年10月31日LandryBreuil报告bulkbuild未因even.md
+            - 1.7.62-2014年11月16日bytevolcano修正mount_tmpfs手册页指出.md
+            - 1.7.63-2014年11月26日TobiasStoeckmann回应NicolasBedo.md
+            - 1.7.64-2014年12月3日AlexanderBluhm批准in6_purgeaddr中.md
+            - 1.7.65-2014年12月11日TobiasStoeckmann实测MiodVallat的.md
+            - 1.7.66-2014年12月19日TheodeRaadt回应关于arc4random注释中措.md
+            - 1.7.67-2014年12月28日JasperLievisse用远程logstash主机成功.md
+            - 1.7.68-2014年2月12日弗兰克布罗德贝克回应sthen与kettenis对relea.md
+            - 1.7.69-2014年4月15日MatthieuHerrb批准用letoh32宏补齐xcbu.md
+            - 1.7.70-2014年4月23日Darwin在DellStudio上实测Cappuccio的.md
+            - 1.7.71-2014年5月31日BrentCook提交补丁集第三份删除ec_libc中未使用.md
+            - 1.7.72-2015年1月4日Moerbeek回评配额宽限期补丁讨论认为在活动系统上执行qu.md
+            - 1.7.73-2015年1月13日Theo宣布内核默认改为笔记本合盖时自动挂起安装程序不再询问.md
+            - 1.7.74-2015年1月20日BrentCook报告其ntpdDNS内存泄漏补丁被Todd.md
+            - 1.7.75-2015年2月6日CraigSkinner提交补丁用newsyslog轮换压缩a.md
+            - 1.7.76-de Raadt 的持续主导.md
+            - 1.7.77-Brauer／Friedl 的 pf 与 OpenSSH 贡献.md
+            - 1.7.78-Beck／Flöter 的安全与网络贡献.md
+            - 1.7.79-贡献者 commit 记录与邮件考据.md
+            - 1.7.80-openbsd_mailmessages229313.md
+            - 1.7.81-openbsd_mailmessages229587.md
+            - 1.7.82-openbsd_mailmessages230579.md
+            - 1.7.83-openbsd_mailmessages230753.md
+            - 1.7.84-openbsd_mailmessages231053.md
+            - 1.7.85-openbsd_mailmessages231624.md
     - 第2章-安全审计参与者群体
         - 2.1-Niels Provos：OpenSSH 早期与特权分离
+            - 2.1.1-Provos／Keromytis 的安全贡献.md
         - 2.2-Markus Friedl：OpenSSH 的 SSH 协议 1.5／2.0 实现
         - 2.3-Damien Miller：OpenSSH 的长期维护者
         - 2.4-pf 的作者群：Hartmeier 等
@@ -13863,6 +15652,20 @@
         - 3.5-论文与 hackathon 产物中的署名
     - 第4章-基金会与 hackathon 组织者
         - 4.1-基金会理事群体
+            - 4.1.1-2010年12月14日KevinChadwick报告dc网卡在启动时出现超时信息.md
+            - 4.1.2-2011年2月15日ClaudioJeker说明改进后的bgpd修正能同时正确打.md
+            - 4.1.3-2011年6月6日TedUnangst指出memconfig的帮助命令会尝试打开.md
+            - 4.1.4-核心开发者与基金会治理的多元化.md
+            - 4.1.5-国际志愿者基数的考证困境.md
+            - 4.1.6-企业赞助与产业协作的多元贡献.md
+            - 4.1.7-发帖者发现pflogd立即退出是因为包日志接口pflog0未置UP并追问pf为何.md
+            - 4.1.8-报告私网FTP服务器经ipnat时被动模式转发失败且同私网客户端登录被判同址引用.md
+            - 4.1.9-RobertUrban提出赠送三张DECTurboChannelPMAZAfas.md
+            - 4.1.10-年12月3日LandryBreuil回顾OpenCON07会议闭幕称技术报告深入.md
+            - 4.1.11-年6月30日roger称威斯康星大学计算机系已更新镜像页公开OpenBSD镜像服.md
+            - 4.1.12-年8月8日MarkKettenis说明ACPI休眠与恢复代码最缺CardBus支.md
+            - 4.1.13-年8月7日JacobMeuser参与audiodaemon讨论赞同把Jack移植.md
+            - 4.1.14-年9月10日EddBarrett就sparc64上X服务器自动配置失效问题回复M.md
         - 4.2-募捐与资金的组织人
         - 4.3-c2k 系列 hackathon 的组织者与长期志愿者
         - 4.4-hackathon 参与者群体
@@ -13928,54 +15731,113 @@
         - 1.1-分叉前的技术背景：Dillon 在 FreeBSD 的工作
         - 1.2-FreeBSD 4.x 时代的 SMP 改进与内核发展背景
         - 1.3-FreeBSD 5.x SMPng 路线与技术分歧
+            - 1.3.1-FreeBSD 5.x SMPng 细粒度锁路径 → DragonFly 1.0 LWKT 消息传递（2003-2004）.md
+            - 1.3.2-与 FreeBSD／NetBSD／OpenBSD／Linux 同期 SMP 技术路线选择的对照与辨析（2003-2008）.md
         - 1.4-DragonFly BSD 的开发起始与公开宣布（2003 年 6 月—7 月）
+            - 1.4.1-要点DragonFlyBSD于2003年6月17日自FreeBSD48分叉com.md
+            - 1.4.2-年7月19日Dillon宣布Logogif正式启用并挂上官网另一方案存入save.md
         - 1.5-DragonFly 创建期版本演进（2003–2004）
         - 1.6-创建期贡献者构成与 committer 变化（2003–2004）
+            - 1.6.1-Hsu 从 FreeBSD 转向 DragonFly 的过程.md
         - 1.7-分叉必要性的技术争论与外部批评、回应（2003–2004）
+            - 1.7.1-2003 年 fork 动机与 FreeBSD 5.x 分歧.md
+            - 1.7.2-反批评层——Dillon 与 DragonFly 阵营的回应.md
         - 1.8-技术继承与自主重构：FreeBSD 基础代码、BSD 用户空间、自主内核改造
         - 1.9-创建期安全维护机制与漏洞通报渠道（2003–2004）
         - 1.10-创建期的代码继承与工具来源（2003–2004）
         - 1.11-创建期与 FreeBSD 的关系（2003–2004）
         - 1.12-与同时期操作系统的比较：FreeBSD 5.x 与 Linux 2.4–2.6
+            - 1.12.1-同期 BSD 家族分叉格局总览（2003-2004）.md
+            - 1.12.2-FreeBSD 5.x（分裂源，2003）.md
+            - 1.12.3-Linux 2.4／2.6（2003-2004）.md
     - 第2章-DragonFly 1.x：LWKT 与消息传递内核实验（2004–2007）
         - 2.1-DragonFly 1.x 发布历史与版本概况（2004–2007）
         - 2.2-DragonFly 1.0 发布（2004）
         - 2.3-DragonFly 1.x 时期贡献者构成与 committer 变化（2004–2007）
         - 2.4-消息传递模型与传统 Unix 内核线程模型比较
+            - 2.4.1-LWKT 与 FreeBSD 5.x SMPng 的比较.md
         - 2.5-同期批评与回应（2004–2007）
         - 2.6-DragonFly 1.x 技术路线调整与代码重构（2004–2007）
         - 2.7-漏洞响应体系与安全维护
+            - 2.7.1-内核与网络栈漏洞——PPP 缓冲区溢出、ARP 饥饿、栈内存泄露与 CERT VU#697164（2003-2006）.md
+            - 2.7.2-LWKT MP-safe 子系统与 HAMMER 雏形期的并发安全考量（2003-2007）.md
         - 2.8-FreeBSD 代码继承与 nullfs 等 BSD 遗产
+            - 2.8.1-nullfs 的 fork 时刻定格与 GEOM 分叉.md
         - 2.9-与同时期操作系统的比较：FreeBSD 5.x–6.x 与 Linux 2.6
+            - 2.9.1-Linux 2.6（2003）.md
+            - 2.9.2-FreeBSD 5.x／6（SMPng，2003-2005）.md
     - 第3章-DragonFly 2.x：HAMMER 文件系统从实验到生产（2008–2011）
         - 3.1-DragonFly 2.x 发布历史与版本概况（2008–2011）
+            - 3.1.1-UFS 默认文件系统 → HAMMER 1.0 默认（DragonFly 2.0，＊＊2008.7.20＊＊）.md
         - 3.2-HAMMER 文件系统设计目标
+            - 3.2.1-Dillon设计HAMMER文件系统的官方设计文档与项目页面详述HAMMER的B.md
         - 3.3-HAMMER 架构与实现
+            - 3.3.1-HAMMER 1.0 的设计与实现.md
         - 3.4-快照、历史记录与数据一致性模型
+            - 3.4.1-HAMMER 历史快照与近实时镜像机制.md
         - 3.5-HAMMER 与 ZFS、Btrfs 的同期比较
+            - 3.5.1-HAMMER 与 ZFS 及 UFS 的技术比较.md
+            - 3.5.2-HAMMER 与 ZFS／UFS 的技术比较.md
         - 3.6-贡献者构成与开发结构
         - 3.7-同期批评与回应（2008–2011）
+            - 3.7.1-再回应层——Dillon 与 DragonFly 阵营对 fork 必要性外部质疑的多层次回应（2003-2010）.md
+            - 3.7.2-反批评层——DragonFly 阵营对 pkgsrc／DPorts 批评的回应（2005-2011）.md
+            - 3.7.3-再批评层与合图层——对 HAMMER 默认切换的再审视与项目史观总纲第 6 条、第 8 条的综合（2008-2010）.md
+            - 3.7.4-批评层——对 HAMMER 文件系统设计的三重质疑（2008-2010）.md
+            - 3.7.5-反批评层——Dillon 与 DragonFly 阵营对 HAMMER 设计批评的反批评（2008-2010）.md
+            - 3.7.6-再回应层——批评方对 Dillon 阵营反批评的再回应（2008-2010）.md
+            - 3.7.7-再批评层——对 Dillon 与 DragonFly 阵营反批评的再回应（2008-2010）.md
+            - 3.7.8-与 FreeBSD／NetBSD／OpenBSD 同期文件系统／软件包管理演化的对照（2008-2010）.md
+            - 3.7.9-批评层——对 UFS→HAMMER 1.0 默认切换的质疑（2008-2010）.md
+            - 3.7.10-反批评层——Dillon 与 DragonFly 阵营对 HAMMER 默认切换的辩护（2008-2010）.md
         - 3.8-DragonFly 2.x 维护收缩与技术路线调整（2008–2011）
         - 3.9-漏洞响应与安全实践
+            - 3.9.1-CVE 引用增长与独立安全响应能力的建立（2007-2011）.md
+            - 3.9.2-OpenSSL 漏洞群——CVE-2007-4995／5135、CVE-2009-0590／0591／0789、CVE-2010-4180、CVE-2011-0014（2007-2011）.md
+            - 3.9.3-网络栈与基本系统漏洞——IPv6 NDP／ieee80211／DNS cache poisoning／bzip2／TLS 前缀注入（2007-2011）.md
+            - 3.9.4-HAMMER 1.0 文件系统安全考量与 MP-safe 扩展（2008-2011）.md
+            - 3.9.5-OpenSSL 1.0.x 漏洞群——CVE-2011-3207／4108／4576／4577／4619、CVE-2012-0050／0884／2110／2333、CVE-2012-2686／2013-0166／0169（2011-2013）.md
+            - 3.9.6-HAMMER 2 开发期安全考量与 MP-safe 持续扩展（2011-2014）.md
     - 第4章-DragonFly 3.x–4.x：HAMMER2 与现代内核架构探索（2011–2017）
         - 4.1-DragonFly 3.x–4.x 发布历史
         - 4.2-HAMMER2 设计目标与开发背景
         - 4.3-HAMMER2 架构：blockref、版本化存储、分布式存储愿景
         - 4.4-HAMMER2 开发进度与工程争议（2011–2017）
+            - 4.4.1-批评层——HAMMER 2 开发周期过长与 Matt Dillon 单人开发导致进度不可预测的批评.md
+            - 4.4.2-反批评层——DragonFly 阵营对开发延迟批评的反回应：设计复杂度、质量保证与开源项目无强制发布周期.md
         - 4.5-SMP 可扩展性重构
         - 4.6-vkernel 与内核实验环境
+            - 4.6.1-vkernel 的设计理念与用户态内核实例.md
+            - 4.6.2-vkernel 的工程实现（系统调用重定向、硬件模拟）.md
+            - 4.6.3-传统内核调试 → vkernel 用户态虚拟化稳定（DragonFly 1.8 → 2.x 持续改进）.md
+            - 4.6.4-vkernel 用户态内核运行机制与调试场景.md
         - 4.7-3.x–4.0 期 DRM／KMS 引入
         - 4.8-贡献者构成与 committer 变化
         - 4.9-同期批评与回应（2011–2017）
+            - 4.9.1-批评层——BSD 阵营对 DragonFly DRM 背离 FreeBSD 的“代码血缘背离”批评（2014-2015）.md
+            - 4.9.2-反批评层——DragonFly 阵营的工程实用主义回应（2014-2017）.md
+            - 4.9.3-代码共享减少的批评层——DragonFly 自研路线导致与 FreeBSD 代码共享趋近于零的批评.md
+            - 4.9.4-反批评层——DragonFly 自研路线的工程合理性与 LWKT／HAMMER 路线分化的必然性.md
         - 4.10-vkernel 的中止、恢复与架构实验影响
+            - 4.10.1-vkernel 持续缺席与 HVM 复活工程进展缓慢（DragonFly 6.0-6.4，2021-2025）.md
         - 4.11-与同时期操作系统的比较：FreeBSD 9.x–11.x 与 Linux 3.x–4.x
+            - 4.11.1-同期 CoW 文件系统总览（2012-2014）.md
+            - 4.11.2-NetBSD 6（2012）.md
+            - 4.11.3-FreeBSD 9／10（ZFS，2012-2014）.md
+            - 4.11.4-OpenBSD 5.x（2012-2014）.md
+            - 4.11.5-Linux 3.x（btrfs，2012-2014）.md
     - 第5章-DragonFly 4.x：现代硬件支持与系统现代化（2015–2017）
         - 5.1-DragonFly 4.x 发布历史
         - 5.2-4.x 期 UEFI 与 NVMe 适配（2015–2017）
         - 5.3-4.x 期 DRM 转换完成与遗留问题
         - 5.4-社区结构与贡献模式变化
         - 5.5-漏洞响应与维护模型
+            - 5.5.1-Heartbleed、POODLE 与 OpenSSL 2014-2015 漏洞群——CVE-2014-0160／CVE-2014-3566／CVE-2015-0204／0209／1788（2014-2016）.md
+            - 5.5.2-LibreSSL 迁移与基本系统漏洞——CVE-2016-7056／CVE-2015-1345 grep(1)（2015-2017）.md
         - 5.6-同期批评与回应（2015–2017）
+            - 5.6.1-批评层——DragonFly 4.x 时代项目可持续性的批评（2014-2017）.md
+            - 5.6.2-反批评层——DragonFly 阵营的工程实用主义与多元路径回应（2014-2017）.md
+            - 5.6.3-再回应层——批评方对 DragonFly 阵营回应的再反驳（2014-2020）.md
         - 5.7-DragonFly 技术遗产与路线评估（2015–2017）
         - 5.8-与同时期操作系统的比较：FreeBSD 10.x–11.x 与 Linux 4.x
     - 第6章-DragonFly 5.x：HAMMER2 转为官方推荐的默认根文件系统（2017–2020）
@@ -13987,8 +15849,19 @@
         - 6.6-同期批评与回应（2017–2020）
         - 6.7-漏洞与安全响应
         - 6.8-与同时期操作系统的比较：FreeBSD 11.x–12.x 与 Linux 4.x–5.x
+            - 6.8.1-同期文件系统创新总览（2018-2020）.md
+            - 6.8.2-FreeBSD 12／13（ZFS，2018-2020）.md
+            - 6.8.3-Linux 5.x（btrfs／ZFS，2018-2020）.md
     - 第7章-DragonFly 6.x：持续维护与未来路线（2021–2026）
         - 7.1-DragonFly 6.x 发布历史
+            - 7.1.1-当前维护状态与发布记录.md
+            - 7.1.2-社区萎缩与核心贡献者留存.md
+            - 7.1.3-与 NetBSD 及 OpenBSD 现状的比较.md
+            - 7.1.4-对BSD不受CVE20157547影响的结论须分层限定FreeBSDlibc与g.md
+            - 7.1.5-年5月10日Dillon裁定CPUTYPE在gcc295下不可用用295做CPU.md
+            - 7.1.6-年2月1日YONETANITomokazu报gcc3Omarch=pentiu.md
+            - 7.1.7-年7月27日KimCulhan报11CURRENT的SMP内核在Pentium4.md
+            - 7.1.8-Stu报告安装10月31日的ISO后挂载自己的CF卡vfat去rm一个文件便落进.md
         - 7.2-6.0–6.4 系列现代化
         - 7.3-HAMMER2 的持续优化（2021–2026）
         - 7.4-NVMM 虚拟化支持
@@ -13996,8 +15869,10 @@
         - 7.6-6.x 期服务器硬件与固件支持（2021–2026）
         - 7.7-riscv64 与未来平台讨论
         - 7.8-生成式 AI 工具在提交与评审中的使用争议（2022–2026）
+            - 7.8.1-DragonFly 对 AI 代码的态度.md
         - 7.9-贡献者与 committer 结构变迁（2022–2026）
         - 7.10-漏洞响应综览与长期维护
+            - 7.10.1-无 SA 系统的安全响应文化——Dillon 个人主导模式的可持续性辨析.md
         - 7.11-与同时期操作系统的比较：FreeBSD、NetBSD、OpenBSD 与 Linux
 - 第49卷-DragonFly BSD 技术专题史（2003–2026）
     - 第1章-LWKT 与内核架构重构：从 FreeBSD 分叉到消息传递模型
@@ -14295,6 +16170,7 @@
         - 2.1-Salus：史家与早期记录
         - 2.2-Lehey：作者、刊物人与社群活动
         - 2.3-Lucas：作者与文档生态
+            - 2.3.1-Michael W. Lucas 的 BSD 书籍系列.md
         - 2.4-Jude：播客与社区传播
         - 2.5-期刊与杂志的编辑群体
         - 2.6-维基、问答与百科记录者
@@ -14313,10 +16189,33 @@
         - 4.6-史料与考据状况：模板化风险之处置
     - 第5章-跨项目与跨国人物
         - 5.1-跨分支的贡献者群体
+            - 5.1.1-韩国 BSD committer 群体概览.md
+            - 5.1.2-澳大利亚 BSD committer 群体概览.md
+            - 5.1.3-印度 BSD committer 群体概览.md
+            - 5.1.4-史料辨析：日本 BSD 社区多元群体统计.md
+            - 5.1.5-海外韩国人 BSD 贡献者.md
+            - 5.1.6-史料辨析：韩国 BSD 社区多元群体统计.md
+            - 5.1.7-俄罗斯 committer 的贡献领域.md
+            - 5.1.8-俄罗斯 BSD 社区中的学生与青年群体.md
+            - 5.1.9-俄罗斯 BSD 社区中的系统管理员群体.md
+            - 5.1.10-多元群体贡献的史料辨析.md
+            - 5.1.11-史料辨析：大洋洲 BSD 社区多元群体统计.md
+            - 5.1.12-史料辨析：南亚 BSD 社区多元群体统计.md
         - 5.2-区域组织者与对外联络人
         - 5.3-转向 Linux 与产业界的成员
         - 5.4-匿名与假名贡献者
+            - 5.4.1-通过俄语社区匿名贡献的中亚 BSD 用户.md
+            - 5.4.2-通过东南亚 BSD 社区匿名贡献的 BSD 用户.md
+            - 5.4.3-通过印度 BSD 社区匿名贡献的南亚 BSD 用户.md
         - 5.5-女性与少数群体贡献者
+            - 5.5.1-333.7.2 韩国女性 BSD 贡献者.md
+            - 5.5.2-日本女性 BSD 贡献者.md
+            - 5.5.3-韩国女性 BSD 贡献者.md
+            - 5.5.4-俄罗斯 BSD 社区中的女性贡献者.md
+            - 5.5.5-加拿大 BSD 作家群体的贡献.md
+            - 5.5.6-史料辨析：加拿大 BSD 社区多元群体统计.md
+            - 5.5.7-中亚女性 BSD 贡献者.md
+            - 5.5.8-史料辨析：中亚 BSD 社区多元群体统计.md
     - 第6章-群体记录方法与会者名录
         - 6.1-防幻觉与考据纪律
         - 6.2-名录化记录的口径：何时列名、何时按类
@@ -14403,18 +16302,55 @@
         - 2.4-Berkeley 网络、文件系统与虚拟内存：工作站采用的技术源头
         - 2.5-SunOS 与商业 UNIX 工程模式
         - 2.6-System V、SVR4 与 SunOS 的转折
+            - 2.6.1-SunOS 4.x 的 BSD 血统到 Solaris 转向.md
         - 2.7-Solaris 建立后的 BSD 遗产
         - 2.8-SunOS 与 Berkeley 的双向技术流动
         - 2.9-Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产
     - 第3章-BSDI：Berkeley UNIX 的直接商业化
         - 3.1-Berkeley Software Design, Inc. 的成立
+            - 3.1.1-年1月01日BobNick自1997年8月初即在PentiumII266上运行B.md
+            - 3.1.2-年1月01日TonyKeeton2000年求BSDI31的安装指导步骤称误丢安装.md
+            - 3.1.3-年1月01日GildasPerrot报告在CompaqDeskpro200051.md
+            - 3.1.4-BSDi 被 USL 起诉与和解的过程.md
+            - 3.1.5-与 Walnut Creek 商业模型的比较.md
+            - 3.1.6-年1月21日KosSki称其在ISP环境用BSDOS客户亟需控制面板以管理域名添.md
+            - 3.1.7-年1月01日一名学生为撰写WindowsNT与UNIX比较报告发帖问六事BSDI.md
+            - 3.1.8-年1月01日耶路撒冷希伯来大学的YehaviBourvine在一台Pentium.md
+            - 3.1.9-年1月01日RobKouwenberg代雇主询问BSDI文件与内存上限其Comp.md
+            - 3.1.10-年1月01日TerryKennedy给出方案有源码许可者在syskernsubr.md
+            - 3.1.11-年1月01日TerryKennedy称BSDI定价体系颇为怪异而厂商拒不公开标价.md
+            - 3.1.12-年1月01日ChrisRadek报告BSDI21在NECVersa6200NTP.md
+            - 3.1.13-年1月01日HP的AlSlater称多带自动加载不是驱动而是叫mtx的工具可切带.md
+            - 3.1.14-年1月01日JohnHough报告四台服务器上的DE500XA卡在BSDI30上.md
+            - 3.1.15-年1月01日ReneeMoriarty称自己遇到同样的IRC连接问题做法是手工添.md
+            - 3.1.16-年1月01日GaryLiefer定位perlBadfree源于BSDI动态加载库.md
+            - 3.1.17-年1月01日CurtSampson在486级NetBSD机器上实测NFSv3写3.md
+            - 3.1.18-年1月01日JWunsch说明单卡多口可把以太口增至八个但须八个IP单条连接的流.md
+            - 3.1.19-年1月01日peterhakanson称BSDOS20存在某些条件下耗尽内存的虚.md
+            - 3.1.20-HowardLeadmon称自己用双CPU主板但BSDI只支持单CPU故单路运行.md
+            - 3.1.21-MichaelHancock提供KAFFE03p1即时编译Java虚拟机信息可在.md
+            - 3.1.22-MarkJeftovic报告Adaptec适配器上纯BSD安装后无法从硬盘引导已.md
+            - 3.1.23-解释rmt系44BSD清理文件系统遗留问题sysadmin二进制移出etc而rm.md
+            - 3.1.24-年1月1日JeremyMalli解释15xx卡问题打开机箱可见Adaptec控制.md
+            - 3.1.25-年1月1日VivekKhera回复KarlRenaut关于升21的征询称在整机上.md
+            - 3.1.26-年1月01日JohnHenders参与Linux到BSDI的口令迁移讨论称自己刚.md
+            - 3.1.27-DanaCorreia询问在BSDI11中如何添加用户指出adduser要到20.md
+            - 3.1.28-年1月01日JWunsch答称若要比价就应与FreeBSD官方光盘比该光盘由Wa.md
+            - 3.1.29-JWunsch就RussellDurkee所载cron于1200执行rootCM.md
+            - 3.1.30-年1月01日TerryKennedy说明TomcatII与I同板但多一颗CPU插.md
+            - 3.1.31-年1月01日JWunsch接Waples称在BSDI21指明端口后板载以太即被识.md
+            - 3.1.32-年1月01日PaulSop以实测说明所用Digiboard扩展端口模块几乎不占C.md
+            - 3.1.33-年1月01日Jeremy给出edquota的模板格式并说明无配额用户须先用edq.md
         - 3.2-BSD／386 与源代码商业模式
+            - 3.2.1-BSDi 商业化 BSD／386（BSD／OS 前身）的模型.md
         - 3.3-BSDI 与 AT&T UNIX System Laboratories 的诉讼
         - 3.4-诉讼对 BSD 源代码清理与命名的影响
         - 3.5-4.4BSD-Lite 与商业 BSD 的重新分化
         - 3.6-BSD／OS 的产品化道路
         - 3.7-商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）
         - 3.8-BSD／OS 的出售与停售：Wind River 时代（2001–2003）
+            - 3.8.1-Wind River 收购 BSDi 的事件.md
+            - 3.8.2-Wind River 公告与收购记录考据.md
     - 第4章-从 Berkeley Sockets 到 Internet 编程接口
         - 4.1-4.2BSD 中的 socket 抽象
         - 4.2-Internet domain 与 TCP／IP 编程模型
@@ -14431,12 +16367,14 @@
         - 5.4-curses 与 vi 的跨系统传播
         - 5.5-厂商 UNIX 与 BSD 间的版权声明互置与源代码痕迹
         - 5.6-AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题
+            - 5.6.1-IBM AIX、HP-UX、Tru64 UNIX 等其它商业 Unix 源码状态.md
         - 5.7-接口相似性与代码继承的区别
         - 5.8-商业 UNIX 中 BSD 成分的可证边界
 - 第57卷-BSD 的衍生与分叉：主干诸系的分岔与扩散（1995–2026）
     - 第1章-源流总览：后分裂时代的分岔、派生与移植
         - 1.1-判准的延续：fork、变种与移植
         - 1.2-后分裂衍生的全景：四主干源流与跨 BSD 派生
+            - 1.2.1-本子节为第121章衍生操作系统谱系的配套采访录覆盖19852026年BSD衍生操.md
         - 1.3-衍生命名、许可与归名的基本问题
         - 1.4-本卷的史料层级与可证范围
         - 1.5-技术分岔点：内核、用户空间与工具链
@@ -14445,21 +16383,112 @@
         - 1.8-同期操作系统生态对照
     - 第2章-桌面系统衍生
         - 2.1-PC-BSD 与桌面产品化
+            - 2.1.1-PC-BSD 的起源：2005 年 iXsystems 与 Kris Moore（克里斯·摩尔） 的合作.md
+            - 2.1.2-PC-BSD 的全盛期：2008-2014 年的桌面 BSD 探索.md
+            - 2.1.3-本子节为第270章PCBSD→TrueOS桌面BSD的兴衰与教训20052020.md
+            - 2.1.4-要点PCBSD15年的桌面BSD尝试可以从形式主义角度进行哲学辨析PCBSD作为.md
+            - 2.1.5-开箱即用桌面 BSD 的尝试.md
+            - 2.1.6-开箱即用桌面 BSD 的尝试.md
+            - 2.1.7-开箱即用桌面 BSD 的尝试.md
         - 2.2-TrueOS 与 FreeBSD 用户空间实验
         - 2.3-小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例
+            - 2.3.1-桌面 BSD 衍生发行版的谱系概览.md
+            - 2.3.2-MidnightBSD起于Holt2004年的构想定位桌面BSD系统以易用与安全.md
+            - 2.3.3-本子节为第124章桌面BSD的配套采访录覆盖20052026年桌面BSD衍生项目.md
+            - 2.3.4-要点至2026年仍在继续的桌面小众BSD衍生项目有GhostBSDEricTur.md
+            - 2.3.5-桌面 BSD 失败的工程原因：硬件兼容性与图形栈滞后.md
+            - 2.3.6-桌面 BSD 失败的商业原因：iXsystems 商业模式的桌面不可持续性.md
+            - 2.3.7-桌面 BSD 失败的社区原因：开发者基数与代际断层.md
+            - 2.3.8-多样化的桌面 BSD 实验.md
+            - 2.3.9-NomadBSD 与 helloSystem 的桌面 BSD 实验细化.md
         - 2.4-FreeBSD 桌面化实践与桌面栈维护（2009—2026）
+            - 2.4.1-年2月8日jbeich于20140208提交r1485日志称不要重复添加esr2.md
+            - 2.4.2-总纲11商品是形式主义jails的诞生由托管商的付费合同驱动一年独占换取开源商业.md
+            - 2.4.3-年2月13日JacquesFoucry自述在Lenovox280笔记本的Free.md
+            - 2.4.4-年11月14日JanBeich在meson更新一单中说明其未等desktop@明.md
+            - 2.4.5-年4月8日Bluey在consolekit2会话活动状态丢失的bug中报告清除~.md
+            - 2.4.6-年5月2日SlawomirWojciechWojtczak记录称131RC3上的.md
+            - 2.4.7-年8月22日SlawomirWojciechWojtczak自述重编develg.md
+            - 2.4.8-年1月12日bjrn在audiopulseaudio更新单中自述另一个问题是me.md
+            - 2.4.9-年9月23日AntonSaietskii称4011下一切正常而42损坏XFCE侧.md
+            - 2.4.10-年12月3日ManfredKoch自述从141RELEASE升级到142RELE.md
+            - 2.4.11-年8月30日GrahamPerrin在dbus的打包提示消息一报告中提到dbus.md
+            - 2.4.12-年2月27日DanielEngberg在Bug279705中反驳CharlieL.md
+            - 2.4.13-年6月8日OlivierDuchateau在Bug286697中介绍gnome_.md
+            - 2.4.14-年3月21日ChristosMargiolis自述已提交补丁以启用Framewo.md
+            - 2.4.15-年5月20日VasilyPostnicov自述升级到143BETA3后系统有时刚.md
+            - 2.4.16-年9月22日JeanSébastienPédron宣布新增graphicsdrm.md
+            - 2.4.17-年2月4日MatthewWener将textproclibxslt构建失败的缺陷.md
+            - 2.4.18-年1月20日DanielEngberg自述使用自建的portsoverlay来规.md
+            - 2.4.19-年3月16日BenHutton报告两台FreeBSD笔记本上KDEPlasma合.md
+            - 2.4.20-年5月27日GlebPopov转达bapt的说法称给pkg应用上游某提交可降低E.md
+            - 2.4.21-年6月22日beat在r321更新wwwlinuxflock至260把原来多个镜.md
+            - 2.4.22-年5月31日mi+thun用gconftool2按mozillazine的reg.md
+            - 2.4.23-年5月28日Yuri报告Firefox401下enwikipediaorg的Vo.md
+            - 2.4.24-年9月4日AndriyGapon回复MaratNAfanasyev表示会去跟进并.md
+            - 2.4.25-年11月3日JanBeich在Bug194757中把受理人由freebsdpor.md
+            - 2.4.26-年12月9日提交者flor1118日志Fixonheadwhenusingcla.md
+            - 2.4.27-年11月23日在bug195312的评论中xmirya报告9stableamd6.md
+            - 2.4.28-年7月22日JanBeich指出libevent2在ArchLinux与PkgS.md
+            - 2.4.29-年10月23日JanBeich在缺陷194543里把自己加入抄送名单并补上上游缺.md
+            - 2.4.30-年6月13日jkim说明因受不了GCC46依赖而自行修复Thunderbird1.md
+            - 2.4.31-年8月7日JanBeich在Bug202165评论中说上游正在移除disable.md
+            - 2.4.32-年11月25日SVNr1103由jbeich提交日志说明补回Nightly遗漏的.md
+            - 2.4.33-年12月19日ThomasQuinot在Bug197930评论中判断根因是残留的.md
+            - 2.4.34-年4月1日jbeich在SVNr1227提交中修改trunkMkbsdgecko.md
+            - 2.4.35-年12月3日jbeich在r1425让aboutmemory暴露私有report.md
+            - 2.4.36-年11月1日dfilter通告flo在FreeBSD端口仓库提交修订332421.md
+            - 2.4.37-年6月3日RonaldFGuilmette撤回前述卡死报告称手动重建并重装nsp.md
+            - 2.4.38-年1月22日OlivierNicole报告FreeBSD101amd64上把BA.md
+            - 2.4.39-年9月16日AndrewMerenbach称在2015MacBook上Chrom.md
+            - 2.4.40-年10月9日MiroslavLachman按建议把gfxcanvasazureb.md
+            - 2.4.41-年6月6日ArtoPekkanen回邮件称自己在AMD64上无法让Firefox.md
+            - 2.4.42-年5月13日hongshao报告用pkginstall装上firefoxesr4.md
+            - 2.4.43-EvgeniyKhramtsov在Bug239873关于wwwfirefox与m.md
+            - 2.4.44-年8月20日MartinBirgmeier在Bug265905评论中给出参照de.md
+            - 2.4.45-年4月5日MarcoBeishuizen在Bug270436评论中报告使用snd.md
+            - 2.4.46-年12月4日andy@neunet在Bug275540评论中说重新编译时取消勾选.md
+            - 2.4.47-年6月5日TatsukiMakino在Bug251246评论#2给出workar.md
+            - 2.4.48-年4月27日jbeich说明gecko@端口用的是NSS而非其他SSL并反问对方.md
+            - 2.4.49-年11月19日Bug221916的评论中ThierryThomas说尚未找到把W.md
+            - 2.4.50-年12月14日JanBeich在Bug221466的Comment#9说SSE2.md
+            - 2.4.51-年6月11日PeterJeremy来信说在amd64主机的i386jail里构建.md
+            - 2.4.52-年1月9日MikhailT在Bug224917第9号评论撤回上一条的乐观说法承认.md
+            - 2.4.53-年9月27日GregV表示自己在把u2fhidrs移植到FreeBSD仓库是gi.md
+            - 2.4.54-年10月19日JanBeich在Bug229893第13号评论中补充说fstac.md
+            - 2.4.55-年12月15日JanBeich在Bug242523评论中回复attachment.md
+            - 2.4.56-年1月24日Bug235166中rkoberman回复JanBeich称自己在r.md
+            - 2.4.57-年6月27日jbeich说不能去掉gtk2Gtk2是AdobeFlash的NPA.md
+            - 2.4.58-年10月27日MateuszPiotrowski在Bug233591评论中说自己.md
+            - 2.4.59-年9月17日CraigLeres在Bug237248评论中提出TZ=Howdy或.md
+            - 2.4.60-年8月26日VVD在Bug248847评论中说测试符合预期重建不带ALSA的FF.md
+            - 2.4.61-年1月8日GregRivers发邮件通报Firefoxvulnerability.md
+            - 2.4.62-年6月9日Bug247108的描述称在KDEPlasma下使用firefox时它.md
+            - 2.4.63-年5月1日jbeich在Bug242523评论中回复canardo说明问题已修复.md
+            - 2.4.64-年10月28日KenDEGUCHI在Bug273291评论#41回复Tatsuk.md
+            - 2.4.65-年2月13日VladimirDruzenko在Bug277021评论中列出132.md
+            - 2.4.66-年6月11日JanBeich在Bug271475说使用Clang时CC就是汇编器.md
+            - 2.4.67-年2月16日LaurentChardon在securitynss与netmpic.md
+            - 2.4.68-年4月18日CharlieLi在Bug294613关于wwwfirefox构建报.md
+            - 2.4.69-年6月23日DanAllen报告FreeBSD14STABLE上Firefoxe.md
+            - 2.4.70-年2月4日MaxBrazhnikov答复称KDE3与Qt3端口已从上游移除此为迁.md
     - 第3章-网络存储衍生
         - 3.1-网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS
     - 第4章-防火墙、路由与安全强化系统
         - 4.1-m0n0wall 与嵌入式防火墙系统
         - 4.2-pfSense 与 FreeBSD 网络平台
+            - 4.2.1-要点pfSense由ChrisBuechler与ScottUllrich于200.md
+            - 4.2.2-关于pfSense核心团队将其定位为面向防火墙场景的嵌入式FreeBSD衍生发行.md
         - 4.3-OPNsense：pfSense 系的分叉（2014–2015）
         - 4.4-HardenedBSD 与安全强化路线
+            - 4.4.1-flashpowder 漏洞缓解框架与 HardenedBSD 本地特有安全 commit.md
     - 第5章-商用设备中的 FreeBSD 系衍生
         - 5.1-厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案
         - 5.2-FreeBSD 系进入专用设备：源流与证据（1999–2026）
     - 第6章-停更与 Live 系统
         - 6.1-项目终止的类型、归因与社区迁移
+            - 6.1.1-批评层：对失败 BSD 衍生版本治理失败的工程、商业、社区、治理四维批评.md
+            - 6.1.2-反批评层：BSD 阵营与衍生项目维护者的反批评——资源限制、许可证自由与开源生态自然淘汰.md
         - 6.2-Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter
         - 6.3-衍生的形成、继承与项目身份
     - 第7章-NetBSD 系衍生
@@ -14481,27 +16510,49 @@
         - 1.4-1984–1985：Macintosh 的市场表现与 Jobs 离开、NeXT 的缘起
     - 第2章-NeXT、Rhapsody 与 BSD 商业化路线
         - 2.1-NeXT 的创立与操作系统战略
+            - 2.1.1-NeXT 创立语境与 BSD 选型.md
         - 2.2-NeXTSTEP 的 BSD 层：4.3BSD-Tahoe 与 BSD Reno 演进
+            - 2.2.1-NeXTSTEP 的 Mach／BSD 混合内核在 1990 年代的定位.md
+            - 2.2.2-NeXTSTEP 发布线与 BSD 版本对应.md
         - 2.3-Mach、Objective-C 与 NeXTSTEP 架构
         - 2.4-OPENSTEP：跨平台 BSD／Mach 尝试
+            - 2.4.1-OpenStep 规范与 BSD 层抽象.md
+            - 2.4.2-OpenStep 规范的底层 BSD 抽象.md
+            - 2.4.3-OpenStep 跨平台实现的技术路径与 BSD 层适配.md
         - 2.5-Apple 收购 NeXT 与 Rhapsody 项目
+            - 2.5.1-Rhapsody 的 Yellow Box 与 Blue Box 双层架构.md
+            - 2.5.2-Rhapsody 早期工程团队与 BSD／Mach 工程师谱系.md
         - 2.6-Mac OS X Server 1.0 与系统转型
+            - 2.6.1-Mac OS X Server 1.0 对比 FreeBSD 3.1、Linux 2.2、Windows NT 4.0 Server、Solaris 7（1999）.md
+            - 2.6.2-Server 1.0 的 BSD 子系统与 Rhapsody 5.3 内核.md
     - 第3章-Darwin 的开放核心期：macOS 的 UNIX 基础
         - 3.1-Darwin 发布与 Apple 开源战略
+            - 3.1.1-总纲10动手者创造历史Sanchez作为Darwin开源初期的核心工程师其博客记.md
         - 3.2-XNU：Mach 3.0、BSD 子系统与 Apple 扩展
+            - 3.2.1-XNU 是什么？——macOS BSD 层的本体论追问.md
+            - 3.2.2-本子节为第119章macOS的BSD哲学文化影响的配套采访录覆盖macOSBSD.md
+            - 3.2.3-总纲10动手者创造历史Tevanian作为Mach核心开发者到Apple软件主管.md
+            - 3.2.4-iPhone OS 1.0 的 XNU 与 BSD 裁剪.md
         - 3.3-Darwin 用户空间与 BSD 工具链
+            - 3.3.1-kdebug 作为 ktrace 的 Darwin 扩展.md
         - 3.4-OpenDarwin 社区实验
         - 3.5-xnu 源码发布与 Apple 开源边界
         - 3.6-Darwin 与 BSD 社区关系
     - 第4章-macOS 系统演进：BSD 层的持续存在
         - 4.1-Mac OS X 初期架构形成（2000–2002）
         - 4.2-Panther–Tiger：UNIX 工具链成熟（2003–2005）
+            - 4.2.1-要点Panther期2003年Darwin持续吸收FreeBSD同步补丁free.md
         - 4.3-Leopard 与 UNIX 03 认证（2007–2009）
+            - 4.3.1-BSM 审计框架的引入（OpenBSM 移植，跨 BSD／UNIX／macOS 扩展）.md
         - 4.4-Snow Leopard：64 位转型与 GCD（2009–2011）
         - 4.5-10.7–10.11：从 Lion 到 El Capitan（2011–2015）
         - 4.6-10.12–10.15：从 Sierra 到 Catalina（2016–2019）
         - 4.7-安全体系变化：签名、沙箱与系统完整性保护
         - 4.8-Apple Silicon 与现代 Darwin
+            - 4.8.1-要点Darwin的libcTCPIP栈文件系统工具在20002003年间直接同步.md
+            - 4.8.2-当代中文舆论标本——《FreeBSD 大败局》2026 版的 Apple Silicon 时间线考据.md
+            - 4.8.3-Apple Silicon 完成过渡与 Intel 退出.md
+            - 4.8.4-外部贡献者与 Apple Silicon 期的开源边界.md
     - 第5章-Apple 移动系统的 Darwin 与 BSD 基础
         - 5.1-iPhone OS 与 Darwin／XNU
         - 5.2-BSD 用户空间在移动系统中的变化
@@ -14509,6 +16560,7 @@
         - 5.4-Apple 全平台 Darwin 统一化
     - 第6章-Apple 的 UNIX 标准认证与 BSD 遗产转化
         - 6.1-UNIX 03 认证历程
+            - 6.1.1-macOS 15／26 与 UNIX 03 认证维持.md
         - 6.2-Apple 对 UNIX 标准的实践
         - 6.3-Darwin 的设计取向：Mach—BSD 混合结构的取舍
         - 6.4-BSD 遗产在商业操作系统中的转化
@@ -14516,7 +16568,15 @@
         - 7.1-Apple 平台中的 BSD 代码
         - 7.2-BSD 许可证与商业闭源模式
         - 7.3-Apple 与 BSD 社区的代码互动
+            - 7.3.1-Apple 对 FreeBSD 社区的吸纳与人才流动.md
         - 7.4-闭源产品里的 BSD 代码与人力：上游维护者与商业公司工程师的分工
+            - 7.4.1-246.2.2 反批评层——BSD 许可证允许此模式与 Apple 的实质性回馈.md
+            - 7.4.2-反批评层——BSD 许可证允许此模式与 Apple 的实质性回馈.md
+            - 7.4.3-再批评层：BSD 阵营对 Apple 回应的再反驳.md
+            - 7.4.4-再回应层：BSD 阵营对 Apple 反批评的再回应.md
+            - 7.4.5-再批评层：BSD 阵营对 Apple 回应的再反驳.md
+            - 7.4.6-BSD阵营对macOS的核心批评聚焦于形式主义挪用即Apple在工程层面汲取BS.md
+            - 7.4.7-BSD阵营对Apple反批评的再回应聚焦于四点第一为合法与合宜二分Apple的反.md
         - 7.5-Darwin 开源边界
         - 7.6-NetBSD 成分与 macOS：用户空间工具的交叉
         - 7.7-OpenBSD 成分与 macOS：pf 防火墙与安全工具
@@ -14524,6 +16584,8 @@
         - 7.9-判准与限度：何谓“与 macOS 有关”的其他衍生
         - 7.10-BSD 与 Darwin 的代码来源
         - 7.11-macOS 与 FreeBSD 的代码交换
+            - 7.11.1-“macOS 基于 FreeBSD” 叙事的修正.md
+            - 7.11.2-macOS 代码流动模式的独特性.md
         - 7.12-代码共享与许可证关系
         - 7.13-代码流动与历史沿革的辨析边界
         - 7.14-Darwin 开源成果的后续流向（2006–2026）
@@ -14532,6 +16594,7 @@
         - 8.2-iOS 的命名确立与版本序列（2010–2026）
         - 8.3-iPadOS 的分家与多形态适配（2019–2026）
         - 8.4-tvOS：Apple TV 的嵌入式 Darwin 线
+            - 8.4.1-watchOS 与 tvOS 的 Darwin 裁剪（2015）.md
         - 8.5-watchOS：可穿戴系统的裁剪与封装
         - 8.6-visionOS：空间计算与 macOS 血缘（2023–2026）
         - 8.7-T2 等设备固件系统
@@ -14539,6 +16602,7 @@
         - 8.9-闭源边界与开源披露：Apple 家族的开源面
     - 第9章-macOS 的语言世界：Objective-C 与 Swift
         - 9.1-Objective-C 与 NeXTSTEP 遗产
+            - 9.1.1-Objective-C 2.0 与垃圾回收的引入.md
         - 9.2-Swift 的诞生与开源
         - 9.3-macOS 的脚本语言与开发工具链
 - 第59卷-BSD 许可证与法律（1977–2026）
@@ -14567,6 +16631,7 @@
         - 3.3-NetBSD 基金会 的版权与再分发政策
         - 3.4-OpenBSD 的 Copyright Policy
         - 3.5-DragonFly BSD 的许可证继承
+            - 3.5.1-NetBSD ABI 政策与 DragonFly BSD ABI 政策.md
         - 3.6-项目如何决定新代码采用何种许可证
         - 3.7-第三方代码进入基本系统的许可管理
         - 3.8-贡献者版权与代码归属
@@ -14611,10 +16676,20 @@
         - 7.4-专有产品对 BSD 代码的采用：案例与许可证基础
         - 7.5-专有硬件上的 BSD 软件：部署形态与证据
         - 7.6-Apple、Sony、Juniper 等商业产品的许可结构
+            - 7.6.1-Apple 与 Sony 的零回馈模式：BSD 许可证允许但不鼓励.md
+            - 7.6.2-批评——用户与 BSD／Linux 阵营对 Sony 移除 OtherOS 的立场.md
         - 7.7-SaaS 与软件再分发的法律差异
         - 7.8-AGPL 对网络服务模式的回应
         - 7.9-云服务商对 BSD 代码的分发定性
         - 7.10-回馈的非义务性：BSD 许可结构下的法律、经济与流向
+            - 7.10.1-项目统摄史观审视：从总纲第 13、15、19、21 条审视 BSD／GPL 商业回馈争议.md
+            - 7.10.2-Linux 社区对 BSD 接受商业回馈的讽刺言论.md
+            - 7.10.3-BSD 接受商业回馈的实际状况：Netflix、Juniper、NetApp 的贡献.md
+            - 7.10.4-BSD 接受商业回馈的形式主义辨析：与 Linux 社区讽刺的对比.md
+            - 7.10.5-商业回馈批评的史观辨析：BSD 与 Linux 的不同回馈模式.md
+            - 7.10.6-BSD 阵营对零回馈再批评层的回应：宽松许可证的哲学辩护与“自由包含不回馈的自由”.md
+            - 7.10.7-合图层：商业回馈争议的辩证闭合与根本争议的不可调和.md
+            - 7.10.8-再批评层：回馈路径的结构性偏移.md
         - 7.11-回馈规模的估算与口径
     - 第8章-许可证变更、分叉与软件生态重组
         - 8.1-项目为什么改变许可证
@@ -14635,9 +16710,12 @@
         - 9.6-署名、归属与历史记忆
         - 9.7-商标限制与软件自由的并存
         - 9.8-“给予自由而不要求回馈”：法律结构与经济后果
+            - 9.8.1-法律与道德是利益分配——BSD 许可证“允许不回馈”的利益分配操作（总纲第 13 条）.md
         - 9.9-自由话语与许可条件的不对称
+            - 9.9.1-法律与道德是利益分配——Sony“安全话语”的形式主义操作（总纲第 13 条）.md
         - 9.10-BSD 许可证中的自由与责任
         - 9.11-BSD 许可证作为一种法律制度设计
+            - 9.11.1-总纲第 13 条审视：BSD 许可证作为法律文本的利益分配形式主义.md
         - 9.12-一手材料的分级与取用规则
 - 第60卷-BSD 软件作品史（1977–2026）
     - 第1章-Berkeley 软件作品传统的形成（1977–1993）
@@ -14875,25 +16953,66 @@
         - 1.15-BSD 项目的供应链响应
     - 第2章-标准化与网络组织
         - 2.1-POSIX 认证与合规对 BSD 项目的影响
+            - 2.1.1-要点BSD历史上的POSIX兼容vsBSD传统路线之争在44BSDLite后逐渐.md
+            - 2.1.2-305.16.2 POSIX 认证成本与 UNIX 03 争议.md
+            - 2.1.3-本子节为第139章FreeBSD合规认证与标准遵守史的配套采访录覆盖199320.md
+            - 2.1.4-POSIX 标准接口与 FreeBSD 实现.md
+            - 2.1.5-POSIX 兼容与 BSD 传统路线之争.md
+            - 2.1.6-POSIX 认证成本与 UNIX 03 争议.md
         - 2.2-ICCB 与 IAB：网络研究组织的形成
         - 2.3-IETF 的形成与研究环境
         - 2.4-IETF 标准化与 BSD 开发者
         - 2.5-RFC 与网络技术文档
+            - 2.5.1-FreeBSD 网络栈与 RFC 实现.md
+            - 2.5.2-TLS／SSL 与防火墙 RFC 合规辨析.md
         - 2.6-DARPA、开放标准与软件实现
         - 2.7-标准符合性、商标认证与许可证的制度区别
+            - 2.7.1-DougGwyn给出符合标准的raise函数完整实现范例引用时按L4纪律以上为邮.md
         - 2.8-POSIX 标准文本的采纳与修订工程
+            - 2.8.1-RichardOKeefe于1990年10月8日就posix_open属性串设计.md
+            - 2.8.2-RandallAtkinson于1993年1月28日主张普通用户也需要lpq与l.md
+            - 2.8.3-AndrewJosey发布AustinGroupFAQ第110版正文标注最后更新.md
+            - 2.8.4-POSIX 合规工程演进与授权.md
+            - 2.8.5-年9月MarcAureleLaFrance自述对Unix98提出四项修改建议禁S.md
+            - 2.8.6-BrianInglis回答ManishJain关于如何用ed执行diffe生成脚.md
+            - 2.8.7-年4月23日AndrewJosey在邮件列表公告POSIX与SUSv3联合修订的.md
+            - 2.8.8-实测在SunOS41上su到另一用户后testr对属主可读的邮件文件返回可读认为.md
+            - 2.8.9-EldadGanin就POSIX通用断言29询问wc工具选项顺序对输出格式的影响.md
+            - 2.8.10-年1月24日IEEEP10031工作组组员DaveDecot回复称systype.md
+            - 2.8.11-年7月1日MichaelBushnell就pathconf与errno之争给出两.md
+            - 2.8.12-DougGwyn亲述其对lp接口与假脱机系统内部实现可分离的看法并以其MDQS用.md
+            - 2.8.13-年8月19日DavidFiander回复JohnLevine指出把脚本经cat管.md
+            - 2.8.14-年7月12日SeanEricFagan反驳Bernstein关于多数C源码程序符.md
+            - 2.8.15-年5月15日HenrySpencer说明PICK曾是某特定公司的专有产品与完整操.md
+            - 2.8.16-年3月4日PeterdaSilva主张与其放行线程不如定义一个可由多系统提供的一.md
+            - 2.8.17-年4月24日JeffreyKegler自述其个人订阅POSIX纸本文档每年耗费约.md
+            - 2.8.18-PeterCollinson转对ANSIX3B111WORM文件系统的报告述随机.md
+            - 2.8.19-EricGisin给出用commandpgetconf_CS_PATH判定标准路.md
+            - 2.8.20-PeterdaSilva天马行空列举以位字符整数浮点字等一切单位报告文件大小之设.md
+            - 2.8.21-年9月11日DominicDunlop发布ISOIECJTC1SC22WG15工.md
+            - 2.8.22-Virginia的Atkinson主张标准不应处理ISO646问题指出ISO64.md
+            - 2.8.23-DavidRTribble述Win32可跑在Linux之上产品名LinuxVM并.md
+            - 2.8.24-题眼冷知识考据POSIX路径解析中的双斜杠除以两个连续斜杠开头的情形外路径中的多.md
     - 第3章-安全认证与软件行业规范
         - 3.1-安全认证与许可证合规的区别
         - 3.2-Common Criteria 与评估保证级认证
         - 3.3-FIPS 140 系列与密码模块验证
+            - 3.3.1-305.19.3 FIPS 140 认证密码模块的漏洞修复流程与 FreeBSD 运行环境.md
+            - 3.3.2-FIPS 140-2／3 标准与密码模块.md
+            - 3.3.3-OpenSSL FIPS 模块在 FreeBSD 认证.md
+            - 3.3.4-FIPS 140 认证密码模块的漏洞修复流程与 FreeBSD 运行环境.md
         - 3.4-ISO／IEC 27001 与组织信息安全管理
+            - 3.4.1-1993-2026 密码学、加密技术、数学原理与信息安全.md
+            - 3.4.2-ISO 27001 认证的成本障碍.md
         - 3.5-第三方评价与产品安全保证
         - 3.6-认证结果与实际工程能力的区别
+            - 3.6.1-CC EAL 评级与实际安全辨析.md
     - 第4章-软件供应链监管与开源法律的新阶段
         - 4.1-软件供应链治理的制度化
         - 4.2-漏洞报告与软件生命周期责任
         - 4.3-SBOM 从工程工具走向监管工具
         - 4.4-网络安全法规与开源软件的适用边界
+            - 4.4.1-医疗设备法规对 BSD 医疗设备部署的效应.md
         - 4.5-欧盟网络弹性法案的形成
         - 4.6-“产品制造商”与“开源软件管理人”
         - 4.7-免费开源软件与商业活动的法律区分
@@ -14931,6 +17050,7 @@
         - 2.6-Debian GNU／kFreeBSD 的终止
         - 2.7-Gentoo／FreeBSD 与 Portage
         - 2.8-Linux 内核与非 GNU 用户空间
+            - 2.8.1-17.7 【Linux社区】驱动与同步语义（EDAC panic／ISR 用户空间禁令）.md
         - 2.9-Chimera Linux 与 FreeBSD core userland
         - 2.10-LLVM、musl 与 FreeBSD 用户空间组件
         - 2.11-内核、libc、工具链与用户空间的可组合性
@@ -14945,6 +17065,7 @@
         - 3.6-“GNU／Linux”命名争议
         - 3.7-BSD 与 Linux 历史来源问题的争论
         - 3.8-中文 BSD／Linux 社区的论战
+            - 3.8.1-63.6 【Linux社区】撤销许可论战.md
         - 3.9-Usenet、邮件列表与论坛档案
         - 3.10-人物立场与项目立场的区别
         - 3.11-同时代争论与后来的历史叙述
@@ -14954,6 +17075,7 @@
         - 4.2-发行版制度对 Linux 传播的影响
         - 4.3-GNU 用户空间、Linux 内核与发行版文化
         - 4.4-BSD 基本系统模式与 Linux 发行版模式
+            - 4.4.1-52.5 【Linux社区】通信系统之辩：邮件强制性与 GitHub 账户墙.md
         - 4.5-商业部署、开发者网络与项目规模
         - 4.6-GitHub 时代的项目协作方式
         - 4.7-邮件列表、提交权限与 Pull Request
@@ -14977,6 +17099,10 @@
         - 7.1-关系史的史料类型：源代码、发行包、版本档案与版权声明
         - 7.2-开发讨论与提交记录：邮件列表、Usenet 与版本树
         - 7.3-项目官方历史、社区叙事与技术事实的区分
+            - 7.3.1-Linux社区提供事实信息0daybot仍在运行配置在githublkptest.md
+            - 7.3.2-64.34 【Linux社区】征询范围质疑.md
+            - 7.3.3-77.11 【Linux社区】lore 链接官方建议.md
+            - 7.3.4-75.7 【Linux社区】seccomp 过滤范围清单.md
         - 7.4-开发者回忆、口述史与同时代材料的交叉验证
         - 7.5-“来源”“影响”“借鉴”“兼容”：概念区分与证据层级
         - 7.6-技术传播与历史归名的证据标准
@@ -15006,12 +17132,14 @@
     - 第2章-FreeBSD 基金会
         - 2.1-基金会成立前的项目资源形态（1993–2000）
         - 2.2-FreeBSD 基金会的成立（2000）
+            - 2.2.1-基金会定位与运作FreeBSDFoundation于2000年成立为501c3公.md
         - 2.3-基金会的法人性质与理事会
         - 2.4-基金会与 FreeBSD 项目的制度分离
         - 2.5-基础设施与网络资源
         - 2.6-开发项目与开发者资助
         - 2.7-基金会资助的三类活动：概览与制度角色
         - 2.8-捐赠与筹资
+            - 2.8.1-史料辨析：基金会年报与捐赠记录.md
         - 2.9-基金会年度报告与财务公开
         - 2.10-基金会预算与财务报表公开
         - 2.11-基金会与 FreeBSD 商标
@@ -15115,14 +17243,22 @@
         - 9.10-个人领导的制度边界
         - 9.11-创始人领导与项目资源管理
         - 9.12-Matt Dillon 领导结构的长期变化
+            - 9.12.1-Dillon 主导的治理结构特征.md
+            - 9.12.2-Dillon 主导的治理结构特征.md
+            - 9.12.3-Dillon 主导的治理结构特征.md
+            - 9.12.4-Dillon 主导的治理结构特征.md
 - 第65卷-BSD 治理制度比较（1993–2026）
     - 第1章-FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的开发权与提交者制度
         - 1.1-贡献者、开发者与提交者
+            - 1.1.1-文档贡献者二等公民化与提交者制度对文档的轻视.md
         - 1.2-提交者位作为项目权力
         - 1.3-新开发者的进入机制
         - 1.4-导师制与知识传递
         - 1.5-代码审阅与技术责任
         - 1.6-提交者权限的暂停与撤销
+            - 1.6.1-公开撤销权限案例.md
+            - 1.6.2-权限撤销透明度辨析.md
+            - 1.6.3-committer 权限撤销透明度批评辨析.md
         - 1.7-维护者与局部自治
         - 1.8-企业雇员与独立开发者
         - 1.9-志愿者与受雇开发者
@@ -15131,6 +17267,7 @@
         - 1.12-1993–2026 年 BSD 开发权制度的差异
         - 1.13-提交权限的构成：贡献记录、所在机构与时间余裕
         - 1.14-性别与多元：BSD 社区的构成与行为准则
+            - 1.14.1-美国社会分化与 BSD 社区的同质性困境：阶层、种族、性别的隐性壁垒.md
         - 1.15-进入机制的三时段比较：邀请制、提交权限授予与 GSoC 管道
     - 第2章-企业参与与项目资源
         - 2.1-企业参与 BSD 开发的动因
@@ -15148,6 +17285,7 @@
         - 3.1-个体薪酬与持续维护
         - 3.2-参与位置的比较：无偿、任职与赞助
         - 3.3-开发者心理：动机、倦怠与社区留存
+            - 3.3.1-开发者老龄化与留存危机.md
     - 第4章-治理冲突、分叉与制度变迁
         - 4.1-技术分歧与治理分歧
         - 4.2-NetBSD 内部冲突与 OpenBSD 分叉
@@ -15159,21 +17297,29 @@
         - 4.8-分叉的类型与制度解释
         - 4.9-分叉后的代码、人员与共同体
         - 4.10-冲突解决与制度调整
+            - 4.10.1-收束叙述章——从许可证对立到治理实体的制度化承认（2001–2026）.md
+            - 4.10.2-合题叙述章——BDFL 从工具到制度再到治理实体的三级跨越（2001–2026）.md
         - 4.11-BSD 项目治理中的继承与断裂
         - 4.12-分叉与开源项目的制度弹性
     - 第5章-开源基金会与 BSD 分支基金会制度比较
         - 5.1-基金会在开源项目中的制度作用
+            - 5.1.1-基金会时代的治理形式主义化（2000-2026）：从个人主导到基金会托管.md
         - 5.2-FreeBSD 基金会 的法律与运营模式
         - 5.3-NetBSD 基金会 的治理模式
+            - 5.3.1-Linux 基金会治理模式对 BSD 文化溯源的批评.md
         - 5.4-OpenBSD 基金会 的组织特点
         - 5.5-DragonFly BSD 无独立基金会的制度背景（截至 2026 年）
         - 5.6-Linux 基金会 的商业协作模式
         - 5.7-Apache Software Foundation 的项目治理模式
+            - 5.7.1-ASF ‘Apache Way’ 治理哲学.md
+            - 5.7.2-Apache／Python 社区治理对比.md
         - 5.8-GNOME Foundation 与桌面生态治理
     - 第6章-BSD 分支治理结构与权力概念比较
         - 6.1-开源资本、公共资源与社区自治
         - 6.2-法人、项目与制品三者的分离：判准与反例
         - 6.3-FreeBSD 的选举型核心团队治理
+            - 6.3.1-316.12.7 选举制度的“基金会-核心团队来回轮换”批评：人员不完全轮替与投票者信息不对称.md
+            - 6.3.2-选举制度的“基金会-核心团队来回轮换”批评：人员不完全轮替与投票者信息不对称.md
         - 6.4-NetBSD 的 核心团队与成员制度
         - 6.5-OpenBSD 的长期个人领导
         - 6.6-DragonFly 的创始人最终决定权
@@ -15181,6 +17327,8 @@
         - 6.8-局部自治与整体项目控制
         - 6.9-大型项目与小型项目的治理差异
         - 6.10-“民主”“集中”“自治”与“独裁”的概念边界
+            - 6.10.1-FreeBSD 共识模型与 Linux 独裁模式、Apache meritocracy 等治理模式比较.md
+            - 6.10.2-a 批评层：BSD 治理模式批评——核心团队制缺乏民主性、贡献者晋升路径不透明与治理现代化不足.md
 - 第66卷-BSD 社区的世界化：区域史（1980–2026）
     - 第1章-BSD 社区世界化的形成
         - 1.1-UNIX 用户共同体的国际化
@@ -15188,6 +17336,9 @@
         - 1.3-USENIX 与跨地区 UNIX 共同体
         - 1.4-UUCP、学术网络与早期地区联系
         - 1.5-BSD 用户组的形成
+            - 1.5.1-各国 BSD 用户组概览.md
+            - 1.5.2-Vancouver 与蒙特利尔的 BSD 用户组.md
+            - 1.5.3-哈萨克斯坦 BSD 用户组的形成.md
         - 1.6-域名、镜像与拨号接入基础设施
         - 1.7-开发者跨地区流动
         - 1.8-企业、大学与用户组织
@@ -15196,6 +17347,10 @@
         - 1.11-从美国共同体到国际 BSD 社区
         - 1.12-标准化、许可证与网络接入：世界化的条件
         - 1.13-加拿大 BSD 社区：大学传统与区域组织
+            - 1.13.1-加拿大大学的 UNIX 研究传统.md
+            - 1.13.2-要点加拿大BSD会议与用户组记录是评估加拿大BSD社区凝聚力的关键史料BSDCa.md
+            - 1.13.3-加拿大大学与科研机构的 BSD 部署.md
+            - 1.13.4-加拿大 BSD 社区的务实风格辨析.md
     - 第2章-东北亚 BSD 社区：日本、韩国与俄罗斯
         - 2.1-JUNET 的发端与终止
         - 2.2-WIDE Project 与 Internet 研究
@@ -15203,14 +17358,28 @@
         - 2.4-日本 BSD 用户组与开发者网络
         - 2.5-BSD 进入日本网络产业
         - 2.6-KAME 项目的形成
+            - 2.6.1-KAME 项目的发起与组织.md
         - 2.7-KAME 的跨机构协作
         - 2.8-KAME 与 IPv6、IPsec 及 Mobile IPv6
+            - 2.8.1-331.2.2 IPv6 协议栈的 BSD 实现.md
+            - 2.8.2-IPv6 协议栈的 BSD 实现.md
         - 2.9-KAME 代码进入 FreeBSD、NetBSD 与其他 BSD
         - 2.10-日本开发者进入全球 BSD 项目
         - 2.11-AsiaBSDCon 与日本 BSD 共同体
         - 2.12-日本 BSD 社区的长期变化
         - 2.13-韩国 BSD 社区：用户组、企业与学术部署
+            - 2.13.1-韩国 BSD 用户组的早期活动.md
+            - 2.13.2-韩国 BSD 用户组的组织演变.md
+            - 2.13.3-三星电子与韩国制造业的 BSD 使用.md
+            - 2.13.4-BSD 在韩国互联网基础设施中的角色.md
+            - 2.13.5-韩国 BSD 社区的低调务实辨析.md
         - 2.14-俄罗斯 BSD 社区：从 DemOS 到 FreeBSD
+            - 2.14.1-苏联时期 Unix 的引入.md
+            - 2.14.2-苏联解体后俄罗斯 Unix 社区的兴起.md
+            - 2.14.3-从 DemOS 到 FreeBSD 的演变.md
+            - 2.14.4-后苏联技术文化的演变.md
+            - 2.14.5-俄语 BSD 社区的组织架构.md
+            - 2.14.6-俄罗斯远东与西伯利亚地区的 BSD 使用者.md
     - 第3章-欧洲 BSD 社区：从学术网络到 EuroBSDCon
         - 3.1-欧洲学术网络与 UNIX
         - 3.2-欧洲早期 BSD 采用者
@@ -15219,34 +17388,91 @@
         - 3.5-英国 BSD 社区
         - 3.6-北欧 BSD 社区
         - 3.7-欧洲高校与科研机构
+            - 3.7.1-学术机构部署的演变过程.md
+            - 3.7.2-学术机构部署的演变过程.md
         - 3.8-欧洲网络产业与 BSD
         - 3.9-BSDCon Europe 的形成
         - 3.10-EuroBSDCon 的跨国组织
         - 3.11-欧洲开发者进入全球 BSD 项目
         - 3.12-欧洲 BSD 社区的长期变化
+            - 3.12.1-欧洲开源社区文化特征.md
     - 第4章-中文 BSD 社区：中国大陆、中国台湾与跨地区网络
         - 4.1-中文 UNIX 用户共同体的形成
         - 4.2-中国大陆学术网络与 BSD
+            - 4.2.1-BSD 在澳大利亚学术网络与 CSIRO 中的部署.md
         - 4.3-1990 年代中国 Internet 与 BSD 的历史条件
         - 4.4-中国大陆 BSD 用户与开发者网络
         - 4.5-FreeBSD 中文社区的形成
+            - 4.5.1-freebsd.org.cn 中文资源库.md
         - 4.6-中国台湾学术网络与 BSD
+            - 4.6.1-台湾 BSD 社区的起源.md
         - 4.7-中国台湾 BSD 用户组织与技术交流
+            - 4.7.1-台湾 BSD 用户组与活动.md
+            - 4.7.2-台湾企业与学术界的 BSD 使用.md
         - 4.8-中国香港、中国澳门及其他中文地区
+            - 4.8.1-香港 BSD 社区的起源.md
+            - 4.8.2-香港 BSD 用户组与活动.md
+            - 4.8.3-澳门 BSD 社区概况.md
         - 4.9-中国大陆与中国台湾 BSD 社区之间的信息流动
+            - 4.9.1-台湾 BSD 社区与大陆 BSD 社区的互动.md
+            - 4.9.2-港澳 BSD 社区与大陆 BSD 社区的互动.md
         - 4.10-BSD 进入中文网络产业
         - 4.11-中文 BSD 开发者参与全球项目
         - 4.12-中文 BSD 社区的长期变化
+            - 4.12.1-中国 FreeBSD 社区的结构性困境.md
     - 第5章-南亚与东南亚 BSD 社区
         - 5.1-印度 BSD 社区
+            - 5.1.1-345.1.2 印度 IT 产业的 BSD 早期采用.md
+            - 5.1.2-史料辨析：东南亚 BSD 社区多元群体统计.md
+            - 5.1.3-东南亚 Linux 社区对比.md
+            - 5.1.4-东南亚 BSD 社区的极度边缘化辨析.md
+            - 5.1.5-史料辨析：东南亚 OS 社区对比数据.md
+            - 5.1.6-IIT 与印度高校的 BSD 教育.md
+            - 5.1.7-印度 IT 产业的 BSD 早期采用.md
+            - 5.1.8-史料辨析：印度 BSD 早期采用记录.md
+            - 5.1.9-印度 BSD 社区参与亚洲 BSD 会议.md
+            - 5.1.10-印度 IT 产业与 BSD 的关系.md
+            - 5.1.11-南亚 BSD 社区的极度边缘化辨析.md
+            - 5.1.12-史料辨析：南亚 OS 社区对比数据.md
         - 5.2-印度理工学院与科研网络的 BSD 使用
+            - 5.2.1-BSD 在印度 IIT 系统与孟加拉国 ISP 中的使用.md
         - 5.3-巴基斯坦 BSD 社区
+            - 5.3.1-345.7.2 巴基斯坦与孟加拉国的 BSD 教师.md
+            - 5.3.2-巴基斯坦的 BSD 使用.md
+            - 5.3.3-巴基斯坦与孟加拉国的 BSD 教育.md
+            - 5.3.4-史料辨析：巴基斯坦与孟加拉国 BSD 使用记录.md
+            - 5.3.5-巴基斯坦与孟加拉国的 BSD 教师.md
         - 5.4-孟加拉 BSD 社区
+            - 5.4.1-345.4.2 孟加拉国的 BSD 使用.md
+            - 5.4.2-孟加拉国的 BSD 使用.md
         - 5.5-新加坡 BSD 社区
+            - 5.5.1-新加坡高校的 BSD 教育.md
+            - 5.5.2-新加坡 ISP 与数据中心的 BSD 部署.md
+            - 5.5.3-史料辨析：新加坡 BSD 部署记录.md
+            - 5.5.4-新加坡多民族 BSD 社区.md
+            - 5.5.5-新加坡作为东南亚 BSD 枢纽的特殊地位.md
         - 5.6-马来西亚 BSD 社区
+            - 5.6.1-马来西亚 BSD 社区的起源.md
+            - 5.6.2-马来西亚高校的 BSD 教育.md
+            - 5.6.3-史料辨析：马来西亚 BSD 社区记录.md
         - 5.7-印度尼西亚 BSD 社区
+            - 5.7.1-印度尼西亚 BSD 社区的起源.md
+            - 5.7.2-印度尼西亚高校的 BSD 教育.md
+            - 5.7.3-史料辨析：印度尼西亚 BSD 社区记录.md
+            - 5.7.4-马来西亚与印度尼西亚的 BSD 教师.md
         - 5.8-菲律宾及其他东南亚地区
+            - 5.8.1-菲律宾的 BSD 使用.md
+            - 5.8.2-越南与菲律宾的高校 BSD 教育.md
+            - 5.8.3-史料辨析：越南与菲律宾 BSD 社区记录.md
         - 5.9-用户组与地区性组织
+            - 5.9.1-印度 BSD 用户组的形成.md
+            - 5.9.2-345.2.2 印度 BSD 用户组的活动形式.md
+            - 5.9.3-新加坡 BSD 用户组与会议.md
+            - 5.9.4-马来西亚 BSD 用户组.md
+            - 5.9.5-印度尼西亚 BSD 用户组与在线社区.md
+            - 5.9.6-泰国 BSD 用户组.md
+            - 5.9.7-印度 BSD 用户组的形成.md
+            - 5.9.8-印度 BSD 用户组的活动形式.md
         - 5.10-地区开发者进入全球项目
         - 5.11-语言、许可成本与人才流动
     - 第6章-拉丁美洲 BSD 社区
@@ -15262,14 +17488,63 @@
         - 6.10-拉丁美洲 BSD 社区的长期变化
     - 第7章-非洲、中东、中亚与大洋洲的 BSD 社区
         - 7.1-非洲 BSD 社区的规模与分布：证据与限度
+            - 7.1.1-非洲互联网演进中的 BSD 角色演变.md
+            - 7.1.2-非洲与中东电信 BSD 比较.md
         - 7.2-南非与非洲英语地区
+            - 7.2.1-南非 ISP 与金融 sector 的 BSD 部署.md
+            - 7.2.2-南非 BSD 社区的演进演变.md
+            - 7.2.3-南非与以色列 BSD 社区比较.md
+            - 7.2.4-南非 BSD 史料辨析.md
         - 7.3-中东 BSD 社区：分布、法域、商标与筹款
         - 7.4-中亚 BSD 社区：官方名录无哈萨克斯坦等中亚国家记录
+            - 7.4.1-341.1.2 哈萨克斯坦高校的 BSD 教育.md
+            - 7.4.2-哈萨克斯坦高校的 BSD 教育.md
+            - 7.4.3-史料辨析：哈萨克斯坦 BSD 早期部署记录.md
+            - 7.4.4-乌兹别克斯坦 BSD 社区的起源.md
+            - 7.4.5-乌兹别克斯坦 BSD 用户的在线社区.md
+            - 7.4.6-史料辨析：乌兹别克斯坦 BSD 社区记录.md
+            - 7.4.7-吉尔吉斯斯坦的 BSD 使用.md
+            - 7.4.8-塔吉克斯坦的 BSD 使用.md
+            - 7.4.9-土库曼斯坦的 BSD 使用.md
+            - 7.4.10-史料辨析：中亚 BSD 使用数据的稀缺性.md
+            - 7.4.11-哈萨克斯坦学术与政府部门的 BSD 部署.md
+            - 7.4.12-中亚 BSD 用户的俄罗斯会议参与.md
+            - 7.4.13-中亚与俄罗斯 BSD 社区的技术合作.md
+            - 7.4.14-史料辨析：中亚与俄罗斯 BSD 社区互动记录.md
         - 7.5-澳大利亚 BSD 社区
+            - 7.5.1-344.5.2 澳大利亚学术网络的 BSD 部署.md
+            - 7.5.2-344.8.2 澳大利亚原住民 BSD 贡献者.md
+            - 7.5.3-史料辨析：中亚 OS 社区对比数据.md
+            - 7.5.4-澳大利亚 BSD 贡献者的早期历史.md
+            - 7.5.5-史料辨析：澳大利亚 BSD 早期部署记录.md
+            - 7.5.6-澳大利亚 ISP 与互联网企业的 BSD 部署.md
+            - 7.5.7-澳大利亚学术网络的 BSD 部署.md
+            - 7.5.8-史料辨析：大洋洲 ISP 与学术界 BSD 部署记录.md
+            - 7.5.9-澳大利亚偏远地区 BSD 用户.md
+            - 7.5.10-澳大利亚城市与偏远地区的 BSD 鸿沟.md
+            - 7.5.11-澳大利亚原住民 BSD 贡献者.md
+            - 7.5.12-澳大利亚 Linux 社区对比.md
+            - 7.5.13-大洋洲 BSD 社区的务实风格辨析.md
         - 7.6-新西兰 BSD 社区与镜像节点
+            - 7.6.1-新西兰 BSD 社区的起源.md
+            - 7.6.2-344.4.2 新西兰高校的 BSD 教育.md
+            - 7.6.3-新西兰 BSD 社区的起源.md
+            - 7.6.4-新西兰高校的 BSD 教育.md
+            - 7.6.5-新西兰 BSD 用户组.md
+            - 7.6.6-史料辨析：新西兰 BSD 社区记录.md
+            - 7.6.7-新西兰 ISP 与学术界的 BSD 使用.md
         - 7.7-非洲、中东与大洋洲的高校与科研机构
+            - 7.7.1-非洲与南美 BSD 教学比较.md
+            - 7.7.2-BSD 在非洲教育网络与研究机构的部署.md
+            - 7.7.3-Technion／KAUST 等高校 BSD 课程.md
+            - 7.7.4-中东与非洲 BSD 教学比较.md
         - 7.8-用户组与开发者网络
+            - 7.8.1-非洲与欧洲用户组比较.md
+            - 7.8.2-非洲用户组史料辨析.md
+            - 7.8.3-中东与非洲用户组比较.md
+            - 7.8.4-中东用户组史料辨析.md
         - 7.9-大洋洲与亚洲、北美之间的联系
+            - 7.9.1-史料辨析：大洋洲 OS 社区对比数据.md
         - 7.10-资料稀疏地区：站点、论坛与社区档案的利用
 - 第67卷-自由／开源软件共同体的会议网络（1975–2026）
     - 第1章-USENIX：共同体的最早物理空间（1975–2000）
@@ -15425,6 +17700,7 @@
         - 10.6-2021 年的单一名额与基金会自资补位
         - 10.7-产出方向：可移植性、内核子系统与测试框架
         - 10.8-档案状态与文献缺口
+            - 10.8.1-NetBSD GSoC 参与史的档案可及性与缺口.md
     - 第11章-OpenBSD 的 GSoC 参与史（2014–2017）
         - 11.1-OpenBSD 与 GSoC：参与形态与组织身份之辨
         - 11.2-2014 年首度参与：5 名学生与 systembsd 的来历
@@ -15478,6 +17754,7 @@
         - 1.1-4.4BSD 文档体系
         - 1.2-手册页传统
         - 1.3-FreeBSD Handbook
+            - 1.3.1-FreeBSD Handbook 的历史演变.md
         - 1.4-Developer's Handbook 与 Porter's Handbook
         - 1.5-NetBSD 文档体系
         - 1.6-OpenBSD 文档体系
@@ -15490,7 +17767,9 @@
     - 第2章-BSD 文档翻译与本地化
         - 2.1-多语言 BSD 文档的形成
         - 2.2-日语 BSD 文档
+            - 2.2.1-年8月27日日文文档项目成员HiroyukiHANAI宣布日语版wwwFreeB.md
         - 2.3-中文 BSD 文档
+            - 2.3.1-中文 Handbook 翻译项目.md
         - 2.4-中文技术出版与 BSD 著作（2002–2026）
         - 2.5-韩语 BSD 文档与出版物
         - 2.6-俄语 BSD 文档与出版物
@@ -15502,6 +17781,292 @@
         - 2.12-翻译作为知识再生产
         - 2.13-翻译档案的保存
         - 2.14-视频与音频资源：会议录像、播客与教程生态
+            - 2.14.1-〔来源不详〕据讲者引述的检索结果最早的jail类代码是在1975年7月18日至1.md
+            - 2.14.2-〔OpenZFS讲座〕MattAhrensDelphix2001年与JeffBo.md
+            - 2.14.3-〔会议不详〕ClonDoc实时协作系统与实验评估团队以OSDI2010提出的Sp.md
+            - 2.14.4-〔USENIXLEET2012〕把套件关联到簇上并解释为何结果按鱼饵套件家族而非.md
+            - 2.14.5-〔USENIXATC2015推测〕主讲人JingleiRen转写音写为JingL.md
+            - 2.14.6-〔LISA2015大会演讲〕JezHumble用组织文化串起精益与绩效援引Ron.md
+            - 2.14.7-〔USENIXSecurity2016推测〕后半场核心贡献是微虚拟化microv.md
+            - 2.14.8-〔LISA2019〕Jupyter的托管方案与生态新进展JupyterHub提供.md
+            - 2.14.9-〔HotEdge2020〕ThomasRauch维也纳工业大学虚拟演讲主题为面向.md
+            - 2.14.10-〔EuroBSDcon2021〕讲者提醒FreeBSD使用者该设备节点为nvd0.md
+            - 2.14.11-〔VLDB2023推测〕Uber两类落地形态评测数据与运维教训缓存采用本地SSD.md
+            - 2.14.12-〔USENIXFAST2023〕FUSEE把KV存储做成完全内存分离让客户端直接.md
+            - 2.14.13-〔USENIXSecurity2024〕浏览器场景的真正障碍是缓存而多bank策.md
+            - 2.14.14-〔USENIXSecurity2024推测〕核心协议OPTICKSCore与扩展.md
+            - 2.14.15-〔2024OpenZFSDeveloperSummit〕RobNorris被引用.md
+            - 2.14.16-〔Fall2024FreeBSDSummit〕某作品是为44BSD委托创作的Yo.md
+            - 2.14.17-〔EuroBSDcon2024〕OlivierCertner口述FreeBSD有.md
+            - 2.14.18-本块为w172提炼波m07c分片汇总落盘20261014024543该分片候选池.md
+            - 2.14.19-BSDCan、EuroBSDCon、AsiaBSDCon 会议录像.md
+            - 2.14.20-主持人分别就三大BSD的桌面使用表达个人取舍Benedict与JT倾向FreeB.md
+            - 2.14.21-受访者将播客定位为倡导而非新闻采访风格刻意温和不做对抗性质询希望受访者有愉快经历.md
+            - 2.14.22-受访者自述其jails学习实验涉足BSD时正值FreeBSD52动机是当时Lin.md
+            - 2.14.23-〔McKusickFreeBSD内核课程〕MarshallKirkMcKusic.md
+            - 2.14.24-〔会议不详〕DanielTanleyBinghamtonUniversity与T.md
+            - 2.14.25-〔会议不详〕Gevoken由透明资源池GPU资源定制器rendermanager.md
+            - 2.14.26-〔计算机历史博物馆活动推断〕现场实操与多方佐证软件策展人AlKossow演示以磁.md
+            - 2.14.27-〔会议不详〕研究演讲讲者Leo介绍异常处理不当导致的潜伏失效exceptiond.md
+            - 2.14.28-〔会议不详〕技术路径以排序网络与epsilon加权将迭代优化合成单次优化stra.md
+            - 2.14.29-〔USENIXATC〕DanielBittman介绍研究操作系统Twizzler.md
+            - 2.14.30-〔会议不详〕UCBerkeley讲者与DawnSongRezaMirzazade.md
+            - 2.14.31-〔OSDI14〕用户引导的设备驱动合成Termite2讲者以实时时钟设备为例说明.md
+            - 2.14.32-〔会议不详〕SSH协议的Terrapin攻击BreakingSSHChannel.md
+            - 2.14.33-〔会议不详〕时序相关故障诊断报告讲者与Rice大学AnChen宾夕法尼亚大学Li.md
+            - 2.14.34-〔SREcon推测〕无发布分支的全自动发布流水线与监控门控主讲人供职于公司基础设.md
+            - 2.14.35-〔会议不详〕BlackBox不可信OS上容器的细粒度数据保护上报告先铺垫虚拟机与.md
+            - 2.14.36-〔会议不详〕演讲者继其2月NDSS报告的UDP放大攻击论文之后的后续工作新近在萨.md
+            - 2.14.37-〔SREcon推测〕CPD算法三要素局限与开源工具讲者因SUSE基准系统结果飘忽.md
+            - 2.14.38-〔USENIXSecurity推测〕Cascade核心技术与结果非对称ISA预模.md
+            - 2.14.39-〔NSDI推测〕Bluebird把裸金属工作负载纳入Azure虚拟网络的架构演进.md
+            - 2.14.40-〔USENIXOSDI推测〕主讲人Guanzhou据论文匹配为威斯康星大学麦迪逊.md
+            - 2.14.41-〔会议不详〕NetApp先进技术组的Madhumita与同组Jayanta合作报.md
+            - 2.14.42-〔USENIXSecurity推测〕后半场覆盖Spectre家族防御评估与内核测.md
+            - 2.14.43-〔USENIXATC推测〕WearDrive面向可穿戴设备的快速节能内存存储主讲.md
+            - 2.14.44-〔会议不详〕RunD面向serverless高密度部署与高并发启动的轻量级安全容.md
+            - 2.14.45-〔会议不详〕FlashReloaded针对闪存存储的体偏置注入BBI攻击主讲人V.md
+            - 2.14.46-〔会议不详〕Chrysalis原型跨层时序违背缓解框架基于多数CPS控制回路由数.md
+            - 2.14.47-〔NSDI推测〕互联网拥塞控制异构化呼唤性能隔离新目标演讲者指出当下最流行的Cu.md
+            - 2.14.48-〔USENIXSecurity〕推测Arbiter融合静态与动态分析的二进制漏洞.md
+            - 2.14.49-〔会议不详〕Slick的三大挑战与结果针对侧信道噪声采用按受害者记录封顶校准标记.md
+            - 2.14.50-〔会议不详〕Gekko对虚拟化云内IO争用无感的存储系统主讲人JiayongCo.md
+            - 2.14.51-〔会议不详〕iMessageObjectiveC实现反序列化攻击面真实利用与结论.md
+            - 2.14.52-〔NSDI推测〕控制律网内遥测与评估incast公平性与可重构网络PowerTC.md
+            - 2.14.53-〔会议不详〕数据经验与走出困境的建议行业侧数据同样失衡她引用基于真实在招职位的C.md
+            - 2.14.54-〔PerconaLive推测〕生产迁移与运维实践主库空间约90%打满CPU与IO.md
+            - 2.14.55-〔SREcon推测〕常规手段收紧限流防火墙丢更多连接禁用Messenger后台图.md
+            - 2.14.56-〔会议不详〕基于归纳的全局保证与OpenTitan案例属性受时间窗k有界约束而单.md
+            - 2.14.57-〔SREcon〕流分析引擎的推倒重来与运维感悟第二位主讲人Heinrich数学背.md
+            - 2.14.58-〔会议不详〕加州大学圣巴巴拉分校博士生Robert介绍检测正则表达式拒绝服务Re.md
+            - 2.14.59-〔CoNEXT推测〕Green的评估与负影响消解机会式使用在120台模拟拓扑本地.md
+            - 2.14.60-〔会议不详〕DRS面向RLVR的解耦奖励服务DisaggregatedRewar.md
+            - 2.14.61-〔SIGCOMM推测〕后半介绍PAX首个同时近似PIFO准入与调度两种行为的可编.md
+            - 2.14.62-〔USENIXSecurity推测〕EASEAndroid转写作EasyAndr.md
+            - 2.14.63-〔会议不详〕YuliangCityUniversityofHongKong介绍C.md
+            - 2.14.64-〔USENIXATC推测〕Faastlane对并行工作流的设计与评估Python.md
+            - 2.14.65-〔HotCloud〕系统架构初步结果与局限架构上用户书写明文Pig脚本经变换器分.md
+            - 2.14.66-〔FAST推测〕后半场讲解SpanFS的设计与评测SpanFS用多个互不重叠的微.md
+            - 2.14.67-〔SREcon推测〕工作负荷与性能边界及偏差正常化工作负荷边界关乎人的交付速度工.md
+            - 2.14.68-〔会议不详〕FastACS架构跨集群复制与实验评估系统由实时提取器生成消息流并分.md
+            - 2.14.69-〔会议不详〕数据库自动测试查询结果验证的必要性与比较式测试预言来自ETHZuri.md
+            - 2.14.70-〔NSDI推测〕后半场讲解PCC的公平性部署与评估测量噪声用随机对照试验两次随机.md
+            - 2.14.71-〔FAST推测〕GLCache组级学习缓存动机与三类既有方案JunChen介绍与.md
+            - 2.14.72-〔SREcon〕BPerf设计与在线重编译BPerf是基于EventTracin.md
+            - 2.14.73-〔会议不详〕后半场讲解数据面实现利用可编程交换机内置的数据面包生成器先以恒定低速.md
+            - 2.14.74-〔USENIXATC推测〕整数GEMM核与迭代器式内存优化及端到端结果针对cuB.md
+            - 2.14.75-〔会议不详〕Reef面向零知识正则证明的系统主讲人EliMargolus介绍私有.md
+            - 2.14.76-〔USENIXSecurity推测〕ComRace检测COM对象中的数据竞争漏洞.md
+            - 2.14.77-〔会议不详〕后半场介绍FR内部与评估FR由chunk存数据与tag存文件信息与块.md
+            - 2.14.78-〔会议不详〕从控制器弱点到实地改灯与建议控制器自带FTP服务器且用户名口令固定不.md
+            - 2.14.79-〔会议不详〕与DanielGenkinNaomiSunEranTromer合作的.md
+            - 2.14.80-〔会议不详〕自研Go包RRDBResourceRecordDatabase用tr.md
+            - 2.14.81-〔NSDI推测〕在资源受限的数据中心中实施网络管理策略提出规则放置系统VCRIB.md
+            - 2.14.82-〔会议不详〕后半场介绍方法与实验结果核心思想是不仅推理元组还要推理数值提出统一近.md
+            - 2.14.83-〔SREcon〕AI集群的失效模式与运维实践Panos逐一讲网络线缆光模块242.md
+            - 2.14.84-〔会议不详〕用Lean定理证明器形式化线性PCPSNARK的可靠性证明主讲人介绍.md
+            - 2.14.85-〔存储系统学术会议推测〕分布式存储升级中的数据格式不兼容缺陷复旦大学报告人Ke介.md
+            - 2.14.86-〔会议不详〕概念数组加二叉树的方案与实验方案把每个键的条目组织成放在伪随机地址的.md
+            - 2.14.87-〔USENIXSecurity推测〕EverParse经过验证的零拷贝安全解析器.md
+            - 2.14.88-〔会议不详〕报告后半复盘DualECDRBG的设计与标准化全流程及其现实可利用性.md
+            - 2.14.89-〔FAST〕DeepSketch去重后数据压缩中参考搜索的问题与核心思路ETHZ.md
+            - 2.14.90-〔USENIXSecurity〕GForceGPU友好的oblivious神经网.md
+            - 2.14.91-〔NDSS推测〕后半场报告TEFAS的数据集构建与五项研究问题评估按生成式流行带.md
+            - 2.14.92-〔会议不详〕后半场以模拟考察自动伸缩与QoS的价值把alpha细化到单个VM粒度.md
+            - 2.14.93-〔会议不详〕12个PoC与内核糊涂代理人观察研究通过审查Linux内核代码文档与.md
+            - 2.14.94-〔会议不详〕透明超级页superpage管理的设计空间描述方案与系统洞见主讲人W.md
+            - 2.14.95-〔会议不详〕TriCache支持核外outofcore高性能处理的用户透明块缓存.md
+            - 2.14.96-〔Vault〕服务器端实现全部基于句柄在需要POSIX语义的句柄上附加POSIX.md
+            - 2.14.97-〔会议不详〕DING面向常见路径卸载罕见路径回落用户态的设计与评测eBPF受限编.md
+            - 2.14.98-〔会议不详〕报告ELVIS高效可扩展的半虚拟化IO系统合作者包括NadavAmi.md
+            - 2.14.99-〔会议不详〕WeiTao与其导师转写作TsuiJingying的报告用一条网内遥.md
+            - 2.14.100-〔会议不详〕后半场五步生成流程上下文复制与评测流程包括仅筛选持续运行longru.md
+            - 2.14.101-〔HotStorage推测〕SSD老化状态难以到达且缺乏老化工具主讲人Zhang.md
+            - 2.14.102-〔会议不详〕BFS枚举增量轨迹检查与评估应对并发用BFS枚举所有可能的in消息顺.md
+            - 2.14.103-〔SREcon推测〕华为云四层负载均衡器HeptRouter的设计动机与数据面技.md
+            - 2.14.104-〔会议不详〕应用compaction结果的一致性修复与端到端评测secondar.md
+            - 2.14.105-〔LISA〕RedHatIT的开源身份管理基础设施全景RedHatIT身份与访问.md
+            - 2.14.106-〔会议不详〕Peregrine的核心操作模块化系统集群与评估核心支持数据上传分块.md
+            - 2.14.107-〔会议不详〕GRASP近似分析中的落后者straggler缓解主讲人与Berke.md
+            - 2.14.108-〔USENIXLISA〕可靠性细节与现场演示讲者先解释EWMA负载均衡代理按历史.md
+            - 2.14.109-〔NSDI〕近似流时间戳sketch与评估提出受countminsketch启发.md
+            - 2.14.110-〔USENIXSecurity〕模型检查评估与Q&A以angr深度优先符号执行检.md
+            - 2.14.111-〔会议不详〕上海交通大学讲者报告机密VMCVM中网络IO的分析与优化CVMAMD.md
+            - 2.14.112-〔会议不详〕CoCuckoo按空子图数量的插入分类优化与评测两个候选桶对应zer.md
+            - 2.14.113-〔FAST〕推测二次写入的实现与DiskSim评测首写不改动二写把一个逻辑页写到.md
+            - 2.14.114-〔USENIXATC推测〕MIG按内存页语义定制的迁移方案与HyperV实现将页.md
+            - 2.14.115-〔USENIXSecurity推测〕GlitchHicker以IEMI攻击相机图.md
+            - 2.14.116-〔SREcon推测〕Facebook生产工程师讲述数据中心硬件维护的规模化人力难.md
+            - 2.14.117-〔会议不详〕SparkJoy让工程师爱上可观测性工具ZackDelagrange.md
+            - 2.14.118-〔USENIXSecurity推测〕Inception面向真实固件程序的系统级安.md
+            - 2.14.119-〔会议不详〕投机类型混淆eBPF上的可利用漏洞主讲人OfekKirshner与A.md
+            - 2.14.120-〔会议不详〕工具设计与评估从提交diff出发按代码结构把改动点分组为函数级目标定.md
+            - 2.14.121-〔会议不详〕设计与评估TClock采用基于队列的委托锁等待者以队列维护可按不同策.md
+            - 2.14.122-〔USENIXSecurity推测〕ConfirmCFI防护的兼容性与相关性评估.md
+            - 2.14.123-〔会议不详〕Phoenix的实现机制评测与问答运行时系统负责自动启停检查点记录内.md
+            - 2.14.124-〔会议不详〕Swiss的两阶段算法与评测第一阶段breadth广撒网寻找协议的小.md
+            - 2.14.125-〔ACSAC推测〕TeeRexSGXenclave信任边界内存破坏漏洞的符号分析.md
+            - 2.14.126-〔会议不详〕MuEFI的协议蹦床与跨隔离数据同步及评估利用UEFI同时控制协议安.md
+            - 2.14.127-〔OSDI推测〕DonghyunKwonKAIST导师MyoungsooJung.md
+            - 2.14.128-〔会议不详〕后半改进算法生产评估与展望利用同一副本内节点分区覆盖互不重叠的性质建.md
+            - 2.14.129-〔会议不详〕后半场讲SMARTR基于Kubernetes的边缘方案与扩展核心结构.md
+            - 2.14.130-〔会议不详〕Jinn用硬件木马劫持安全程序罗切斯特大学博士生导师JohnCris.md
+            - 2.14.131-〔会议不详〕Cenic的微基准与宏观基准评估NetFPGA10G硬件原型以100.md
+            - 2.14.132-〔会议不详〕学术报告《StatefulDataflowGraphs》提出在有向数.md
+            - 2.14.133-〔ACSAC推测〕MiniBox后半场讲架构实现与评测MiniBox把沙箱组件拆.md
+            - 2.14.134-〔会议不详〕后半场报告评测在LavaM与GoogleFuzzerTestSuit.md
+            - 2.14.135-〔NSDI推测〕SPISA机制与机器学习评估SPISA将8位指数与符号+尾数分别.md
+            - 2.14.136-〔USENIXSecurity〕推测ASideJourneytoTitanGoo.md
+            - 2.14.137-〔SREcon推测〕隐私工程与SRE自动化与文化的共通前GoogleSRE现隐私.md
+            - 2.14.138-〔USENIXATC推测〕CloudiusSystems的NadavHarEl转.md
+            - 2.14.139-〔USENIXSecurity〕电路宽度带宽瓶颈与IPP跨方并行后半主流高层安全.md
+            - 2.14.140-〔技术大会推测〕调试直觉训练与设计文档后半调试故事同机客户端到服务器固定40毫秒.md
+            - 2.14.141-〔会议不详〕演讲随后讨论顺序一致与最终一致方案ZooKeeper用ZAB协议写走.md
+            - 2.14.142-〔MLSys推测〕Nirvana面向文生图扩散模型的近似缓存主讲人Shubham.md
+            - 2.14.143-〔会议不详〕用自动测试生成检查DNS实现的RFC合规性主讲人为UCLA博士生与M.md
+            - 2.14.144-〔USENIXATC〕USENIXATC14论文XvMotionUnifiedV.md
+            - 2.14.145-〔会议不详〕用户支撑运营成本与实验共享团队依靠冒烟测试监控与自动修复机器人控制成.md
+            - 2.14.146-〔SREcon推测〕用eBPFBCC监控JVM内嵌追踪点trace工具与BPF原.md
+            - 2.14.147-〔USENIXATC推测〕eDoctor智能手机异常耗电的自动诊断主讲人Xiao.md
+            - 2.14.148-〔FAST推测〕HotRing热点感知的内存键值存储主讲人LuCai阿里巴巴数据.md
+            - 2.14.149-〔USENIXSecurity推测〕CacheQL的实验结果与泄漏点定位该工具对.md
+            - 2.14.150-〔SREcon〕百度智能监控系统的动机与异常检测算法上半百度SIE团队工程师曲显.md
+            - 2.14.151-〔SREcon〕Arewereliableyet可靠性优先级决策框架Blamel.md
+            - 2.14.152-〔USENIXATC〕WardIO的关键技术与GalaxyS5实测结果三项技术为.md
+            - 2.14.153-〔USENIXNSDI推测〕报告Batfish从网络配置中查找错误的新工具合作方.md
+            - 2.14.154-〔NDSS推测〕Alembic给定配置自动推断有状态网络函数防火墙负载均衡器NA.md
+            - 2.14.155-〔会议不详〕对最先进基于溯源的入侵检测系统PIDS的系统化分析主讲人Trista.md
+            - 2.14.156-〔USENIXFAST推测〕生成树被错过的CLNP与PKI模型她讲述应经理造一个.md
+            - 2.14.157-〔USENIXATC推测〕提出ShieldReduce基于细粒度防护数据归约的外.md
+            - 2.14.158-〔SYSTOR推测〕SymbiX论文报告将图算法映射到GPU上处理图无处不在社交.md
+            - 2.14.159-〔USENIXATC〕GraphOne面向演化图实时分析的数据存储GraphOn.md
+            - 2.14.160-〔SREcon〕SRE二十年开篇主题演讲自称对普及SRE负最大责任指SRE图书能.md
+            - 2.14.161-〔SREcon〕Jetcom的分布式追踪实践后半团队改用极简wire规范与Ope.md
+            - 2.14.162-〔USENIXSecurity推测〕Delphi的预处理在线两阶段协议与混合激活.md
+            - 2.14.163-〔USENIXWOOT〕常数时间模型主讲人约二十年前以时序攻击方向博士论文起家为.md
+            - 2.14.164-〔会议不详推测学术安全会议〕访问控制链审计撤销与EncryptFS原型Kusto.md
+            - 2.14.165-〔会议不详〕私有仓库与跨平台typosquatting及Crystal防御工具后.md
+            - 2.14.166-〔NSDI推测〕HashingLinearityECMP并非黑盒UCLA的Zhe.md
+            - 2.14.167-〔USENIXATC〕推测Charm让移动系统设备驱动可动态分析主讲人来自加州大.md
+            - 2.14.168-〔会议不详〕检测控制程序中对输入绝对相对时序的依赖所引发的缺陷主讲人UIUC导师.md
+            - 2.14.169-〔会议不详〕Consul微服务架构下服务发现负载均衡健康检查与动态配置的统一方案.md
+            - 2.14.170-〔会议不详〕Arcus把生产系统上被检测到的利用症状回溯为根因主讲人KarriE.md
+            - 2.14.171-〔USENIXLISA14〕让绿灯即推成为现实主讲人自述讲的是自己在Google.md
+            - 2.14.172-〔USENIXNSDI18〕策略图最小变更修复与两种交互模式NEAtNetwor.md
+            - 2.14.173-〔SREcon〕Shopify的服务化基础设施从表格定义的基础设施到owner度.md
+            - 2.14.174-〔USENIXSecurity推测〕RTAG跨主机的可精细化攻击调查Georgi.md
+            - 2.14.175-〔NSDI推测〕Meta全网部署DCTCP的经验下半长连接交换机侧取舍与意外问题.md
+            - 2.14.176-〔USENIXATC推测〕KEPCPush一种知识增强的面向边缘辅助短视频信息流.md
+            - 2.14.177-〔会议不详〕BaptisteLepers讲大页在NUMA系统上可能损害性能他先复.md
+            - 2.14.178-〔SREcon〕从测试代码到内部人员的纵深防护建议他特别强调测试代码同样是攻击面.md
+            - 2.14.179-〔会议不详推测系统会议〕Mage让安全计算获得近乎零成本的虚拟内存主讲人为加州大.md
+            - 2.14.180-〔SREcon〕危害缓解与fizzlefactors她主张坏事情总会发生所以要像.md
+            - 2.14.181-〔会议不详〕运行时与维护技术以及本session的五篇论文运行时阶段可选日志记录.md
+            - 2.14.182-〔FAST〕LSU的副作用与数据一致性处理以及完整评估LSU的松同步带来两个副作.md
+            - 2.14.183-〔会议不详〕不可变的几种实现模式DigitalRebar演示与问答讲者先厘清SR.md
+            - 2.14.184-〔会议不详〕报告介绍关于固件更新安全的近期工作物联网与嵌入式设备几乎无处不在到2.md
+            - 2.14.185-〔USENIXSecurity〕Agamotto用轻量虚拟机检查点加速内核驱动模.md
+            - 2.14.186-〔USENIXSecurity〕VRASED的验证链条性质刻画与实现结果方法上先.md
+            - 2.14.187-〔SREcon〕广告服务链路的缓存TTL与刷新最佳实践演讲者Tao来自Linke.md
+            - 2.14.188-〔USENIXSecurity推测〕矢量指令故障画像与真实代码攻击在三款处理器上.md
+            - 2.14.189-〔会议不详〕评测压缩比与压缩耗时同时逼近真实数据端到端收益明确评测以压缩比压缩因.md
+            - 2.14.190-〔会议不详〕哈希核与原型聚类把聚类推到近线性实测80%正确并可预测新样本家族相似.md
+            - 2.14.191-〔SREcon推测〕可观测性的范围与把焦点移回客户主讲人Mohit演讲未给单位由.md
+            - 2.14.192-〔会议不详〕Titrate像终端探测带宽那样让路由器实时调节队列阈值报告人Ann.md
+            - 2.14.193-〔USENIXSecurity23〕PET在补丁发布前阻止已发现的Linux内核.md
+            - 2.14.194-〔USENIXATC19〕Orca大规模服务中的差分缺陷定位主讲人Chandra.md
+            - 2.14.195-〔USENIXATC24〕Camel的差异化缓冲设计与评测结果系统基于两个混合易.md
+            - 2.14.196-〔会议不详〕四个来源与各自可用的缓解手段他把变异来源归纳为虚拟机多租户CPU存储.md
+            - 2.14.197-〔会议不详〕从德州人不信能源问题到Sun自己账本里的省法这位住在德州参与Sun生.md
+            - 2.14.198-〔会议不详〕Symphony为LLM推理服务提供低延迟内存层与计算内存分离主讲人.md
+            - 2.14.199-〔USENIXATC推测〕DUA让数据中心资源对FPGA通用可访问主讲人RenX.md
+            - 2.14.200-〔USENIXSecurity推测〕二叉树ORAM的并行化obliviousag.md
+            - 2.14.201-〔SREcon〕JupyterHub与Kubeflow的运行机制逐项对比与经验教.md
+            - 2.14.202-〔系统会议推测〕安全兜底全局协调与实测表现为防止软内存页突然消失而让正在运行的应.md
+            - 2.14.203-〔SREcon推测〕从事故案例看指标为什么会骗人主讲人是BingCortana方.md
+            - 2.14.204-〔会议不详〕从人类擅长的地方着手研究钓鱼邮件检测讲者自称RickWash与Nor.md
+            - 2.14.205-〔USENIXFAST〕StairCode兼顾设备故障与扇区故障的通用纠删码族主.md
+            - 2.14.206-〔USENIXNSDI〕SSDO面向大规模数据中心流量工程的无求解器快速算法主讲.md
+            - 2.14.207-〔SREcon推测〕两条原则五步流程与Reddit的落地实践他提出account.md
+            - 2.14.208-〔SOSP推测〕控制面／数据面分离的硬件支撑与量化收益他指出关键在于硬件IO虚拟.md
+            - 2.14.209-〔会议不详〕HPBValve的两项体验中心技术由于后台应用运行时间更长引用更多H.md
+            - 2.14.210-〔USENIXATC推测〕私有云换来的安全保证控制面隔离与机器无常讲者提出构建虚.md
+            - 2.14.211-〔USENIXSecurity推测〕框架实现接口建模与实测结果工作流分两步先建模.md
+            - 2.14.212-〔USENIXSecurity23据频道标题标注〕在此观察之上先做两件逆向工程还.md
+            - 2.14.213-〔HotCloud推测〕AT&TLabsResearch的演讲者与同事YunMa.md
+            - 2.14.214-〔SREcon〕我们分享PayPal把SRE原则嵌入数据平台的经验今天的处境与未.md
+            - 2.14.215-〔OSDI〕Sanitizer的高运行时代价阻碍了生产环境采用SANRAZOR用.md
+            - 2.14.216-〔USENIXATC〕公平回退框架自适应权重机制与Chitu的实测性能公平回退框.md
+            - 2.14.217-〔HotCloud〕空间与时间变异性实测在线学习权重保证转换与放置评测动手前先去.md
+            - 2.14.218-〔学术会议演讲场合未明示〕上海交大的Xinda报告DST面向分布式事务多版本的标.md
+            - 2.14.219-〔会议不详〕DCExpress把NVMe的门铃与完成通知都砍掉让相变存储器以微秒.md
+            - 2.14.220-〔会议不详〕Chrome共享事件循环构成侧信道页面识别击键计时与隐蔽信道Pepe.md
+            - 2.14.221-〔云计算与系统会议论文报告推测〕列过滤先用模式识别找出作业的分词方式再用抽象解释.md
+            - 2.14.222-〔USENIXSecurity23推测〕开场即点题HashTag要把内存标签与D.md
+            - 2.14.223-〔WOOT13推测〕程序形态极其规整OneGDTtorulethemallone.md
+            - 2.14.224-〔USENIXSecurity21推测〕方案是把符号验证引入飞地程序weprop.md
+            - 2.14.225-〔FAST24推测〕上层还有三项附加优化〔1101〕第一是服务器端回写vanil.md
+            - 2.14.226-〔USENIXSecurity23推测〕关键洞察是环回接口地址固定网卡接口与环回.md
+            - 2.14.227-〔Nodejs生态会议报告推测〕真正可用的是事件循环利用率指标Nodejs其实多.md
+            - 2.14.228-〔DevOpsDays推测〕他接着谈孤岛孤岛其实不是一支团队而是一种工作方式你有.md
+            - 2.14.229-〔USENIXSecurity推测〕整体设计含两个组件crossIR分析与为Ru.md
+            - 2.14.230-〔USENIXSecurity推测〕验证上他们用FFMalloc替换glibc等.md
+            - 2.14.231-〔NSDI〕加州大学圣地亚哥分校的ArjunRoy报告数据中心内部的故障管理工作.md
+            - 2.14.232-〔USENIXSecurity19〕Chrome安全团队的CharlieRice.md
+            - 2.14.233-〔USENIXSecurity14〕但攻击者仍有办法即本工作所称maninthe.md
+            - 2.14.234-〔OSDI20〕本演讲介绍一种基于地址空间代际addressspacegener.md
+            - 2.14.235-〔SREcon22Americas〕RackN创始人兼CEORobHirschf.md
+            - 2.14.236-〔NSDI推测〕Seer面向未来的在线缓存来自PurdueUniversity的.md
+            - 2.14.237-〔FAST推测〕动态HL比例调整与实测性能作者把HLratio定义为高优先级队列.md
+            - 2.14.238-〔AWS存储架构主题演讲会议不详〕cell语义权衡与实测及答疑一个Fazelia.md
+            - 2.14.239-〔SREcon推测〕对策是RiotDirect对玩家的目标很简单降低延迟降低抖动.md
+            - 2.14.240-〔FacebookWebFoundation主题演讲会议不详〕并发控制实例一个L.md
+            - 2.14.241-〔USENIXSecurity23〕讲者给出攻击收尾路径与可落地的浏览器侧对策耗.md
+            - 2.14.242-〔USENIXSecurity24〕验证确实找到两类攻击并催生了协议修订第一类是.md
+            - 2.14.243-〔HotCloud20〕研究者提出IMEisolatedmonitorexecu.md
+            - 2.14.244-〔面向计算天体物理研究者的编程风格讲座〕写好C代码离不开惯用法C里遍历数组至少有.md
+            - 2.14.245-〔USENIXSREcon大会安全专题讨论〕本场面板从国家级攻击讲起据《明镜》周.md
+            - 2.14.246-〔计算机历史博物馆革命系列讲座对谈〕作者以比尔盖茨的话开场若能时间旅行首站当是1.md
+            - 2.14.247-〔可靠性运维大会演讲〕下半场聚焦熔断框架Hystrix的调优债务该框架实现了Mi.md
+            - 2.14.248-〔网络安全经济学主旨演讲〕下半场从可投递性账本讲到验证码市场与支付瓶颈某botn.md
+            - 2.14.249-〔USENIXSecurity密码学小组讨论〕问答环节首先攻可用性来自Agile.md
+            - 2.14.250-〔USENIXSecurity测时奖圆桌〕下半场追问明知该做为何不做并剖析攻击经.md
+            - 2.14.251-〔USENIXLISA大会演讲监控指标设计〕同一套标签方法接着用于CPU与网络I.md
+            - 2.14.252-〔USENIXSecurity安全研讨会演讲〕白宫网络安全协调员负责国土安全方向.md
+            - 2.14.253-〔NSA前资深密码学家学术演讲〕后半段是DES亲历者揭秘标准机构NIST前身提出.md
+            - 2.14.254-〔会议不详〕推测RyanStone口述他称FreeBSD已成功把大量base系统.md
+            - 2.14.255-〔PCBSD安装器讲座〕KrisMoore口述PCBSD安装器支持UFS软更新G.md
+            - 2.14.256-〔来源不详〕BrianAckerson口述Tang服务器实现非常轻量可在Rasp.md
+            - 2.14.257-〔来源不详〕VSync为其优化弱内存屏障完全移除最昂贵的顺序一致性栅栏并把多数原.md
+            - 2.14.258-〔来源不详〕DaisyNFS分两层底层实现事务系统以在磁盘之上获得原子性上层文件.md
+            - 2.14.259-〔来源不详〕直到二〇〇九年Intel与AMD才分别推出同时含VTx与EPT转写音.md
+            - 2.14.260-〔来源不详〕电磁故障攻击发生在ROM验证bootloader时因ROM代码为硬连.md
+            - 2.14.261-〔来源不详〕DruLavigne口述Warden为FreeBSDjails提供了.md
+            - 2.14.262-主持人关于各自进入BSD相识过程第一台电脑与收藏的自述属当事人一手口述BSDNo.md
+            - 2.14.263-总纲9经验优先主持人对三大BSD桌面使用的取舍基于各自实践经验而非抽象优劣判断体.md
+            - 2.14.264-主持人最早安装的BSD版本均为多年后回忆具体版本号可能记忆偏差需与发行时间线比对.md
+            - 2.14.265-BSDNowEP434PenningtonJBSDNow434ItsQuizma.md
+            - 2.14.266-YouTubeEP05iwE8I93ksYouTubeYouTube拟题Comp.md
+            - 2.14.267-YouTubeEP2gnJiBAEQYwYouTubeYouTube拟题时间溯源.md
+            - 2.14.268-YouTubeEPTy7NIKZMK98YouTubeYouTube拟题Usab.md
+            - 2.14.269-YouTubeEP4hS4jCXTZZEYouTubeYouTube拟题容器化文.md
+            - 2.14.270-YouTubeEP6XWau2PsuNEYouTubeYouTube拟题Zenh.md
+            - 2.14.271-YouTubeEP8LEh0IZXarcYouTubeYouTube拟题Flex.md
+            - 2.14.272-YouTubeEPAg9CAwtRc4YouTubeYouTube拟题Hyrax.md
+            - 2.14.273-YouTubeEPCqB_rzu0JUsYouTubeYouTube拟题结合SM.md
+            - 2.14.274-YouTubeEPFYtNygXwWVEYouTubeYouTube拟题可听不见.md
+            - 2.14.275-YouTubeEPCIi7p9ZHjwYouTubeYouTube拟题FlowT.md
+            - 2.14.276-YouTubeEPGxfF6W1tNAIYouTubeYouTube拟题GoFe.md
+            - 2.14.277-YouTubeEPIgLhYmHzLdkYouTubeYouTube拟题Perr.md
+            - 2.14.278-YouTubeEPKb6lVwJX0YsYouTubeYouTube拟题零停机替.md
+            - 2.14.279-YouTubeEPMXbWsxdVgoYouTubeYouTube拟题Copyc.md
+            - 2.14.280-YouTubeEPPIHFtbxp704YouTubeYouTube拟题iFed.md
+            - 2.14.281-YouTubeEPRNTw7jZwlKQYouTubeYouTube拟题Apac.md
+            - 2.14.282-YouTubeEPSuOKaALocAQYouTubeYouTube拟题GHea.md
+            - 2.14.283-YouTubeEPWJ5a9JWQdYAYouTubeYouTube拟题用载荷裁.md
+            - 2.14.284-YouTubeEPXwQq1CG8hp8YouTubeYouTube拟题新兴个人.md
+            - 2.14.285-〔NSDI〕TSP模板互连重排与大bubble无中断更新ASPA把前端解析器并入.md
+            - 2.14.286-讲者口述证据等级L1来源historical_claimsduckdbclai.md
     - 第3章-USENET、邮件列表与早期在线传播
         - 3.1-UUCP 与早期 UNIX 信息网络
         - 3.2-USENET 进入 BSD 社区
@@ -15522,6 +18087,8 @@
         - 4.4-BSD FTP 发行树
         - 4.5-从物理介质到网络分发
         - 4.6-comp.sources 档案与工具收录
+            - 4.6.1-要点应用与文档工具方面收录SydWeinstein的Elm邮件系统22elm2.md
+            - 4.6.2-compsources排版打印工具档案收录.md
     - 第5章-BSD 物理介质与商业发行
         - 5.1-磁带与早期 UNIX 软件分发
         - 5.2-CD-ROM 时代的软件分发
@@ -15547,10 +18114,13 @@
         - 7.3-FreeBSD 技术书籍
         - 7.4-NetBSD、OpenBSD 与 DragonFly BSD 书籍
         - 7.5-高校教材与实验课程
+            - 7.5.1-BSD 教育战略的萎缩：高校 CS 课程中 BSD 被 xv6／Pintos／Linux 取代.md
         - 7.6-Berkeley UNIX 与系统教材
         - 7.7-BSD Magazine 与专业媒体
+            - 7.7.1-媒体对 BSD daemon／词源的误读与传播.md
         - 7.8-在线书籍与 Wiki
         - 7.9-独立技术作者与自助出版
+            - 7.9.1-MichaelWLucas以自出版与Patreon结合的商业模式持续写作BSD技.md
         - 7.10-教材对历史认识的影响
         - 7.11-出版物编辑
         - 7.12-O’Reilly 与 UNIX／BSD 技术出版
@@ -15622,6 +18192,7 @@
     - 第1章-BSD 作为网络设备操作系统
         - 1.1-网络设备中的 BSD 代码：栈移植与系统分离
         - 1.2-Junos 与 FreeBSD 内核
+            - 1.2.1-Junos 基于 FreeBSD 的架构与版本.md
         - 1.3-Junos OS Evolved：Linux 底座的分岔（2018–2026）
         - 1.4-NetScaler 及应用交付设备
         - 1.5-网络设备中的内核、用户空间与厂商代码
@@ -15630,24 +18201,35 @@
         - 1.8-从操作系统产品到设备内部基础设施
     - 第2章-BSD 作为存储设备基础
         - 2.1-企业存储设备中的 BSD
+            - 2.1.1-FreeBSD 在存储／网络设备的基底.md
         - 2.2-Isilon OneFS 与 FreeBSD 内核基础
+            - 2.2.1-与 EMC Isilon 基于 FreeBSD 的比较.md
         - 2.3-NetApp 与 Data ONTAP 中的 BSD 组件
         - 2.4-FreeNAS 的形成与网络存储软件化
         - 2.5-ZFS 进入 FreeBSD 产品体系（2007–2026）
         - 2.6-TrueNAS CORE 与 FreeBSD 平台（2011–2026）
+            - 2.6.1-TrueNAS CORE 与 SCALE 的架构.md
         - 2.7-CORE 向 SCALE 的转移
+            - 2.7.1-277.11.2 CORE 与 SCALE 并存时代的终结.md
+            - 2.7.2-CORE 与 SCALE 并存时代的终结.md
         - 2.8-操作系统底座更替与产品技术连续性
     - 第3章-大规模互联网服务中的 FreeBSD
         - 3.1-从服务器操作系统到服务基础设施
         - 3.2-Netflix Open Connect
+            - 3.2.1-据讲者口述Netflix用FreeBSD与商用硬件实现每秒90吉比特承载100%.md
+            - 3.2.2-要点Netflix在扩展流媒体时选择FreeBSD构建OCA边缘设备理由包括网络.md
+            - 3.2.3-Netflix 基于 FreeBSD 的 CDN 架构.md
         - 3.3-Yahoo 的 FreeBSD 生产部署（1996–2010 年代）
+            - 3.3.1-Yahoo!／Hotmail 大规模部署.md
         - 3.4-FreeBSD-CURRENT 进入生产环境
         - 3.5-WhatsApp 与高并发服务器
+            - 3.5.1-WhatsApp 早期服务器基于 FreeBSD 的架构.md
         - 3.6-性能优化、定制代码与上游合并
         - 3.7-商业部署与 FreeBSD 项目的双向技术流动
         - 3.8-“使用 FreeBSD”与“继承 BSD 技术”的区分
         - 3.9-企业工程师与上游维护者：长期维护的不对等承担
         - 3.10-公有云平台上的 FreeBSD：镜像、托管服务与平台工程
+            - 3.10.1-Azure 部署 FreeBSD 镜像的合作.md
         - 3.11-规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）
         - 3.12-Hotmail 的 FreeBSD 生产部署
     - 第4章-消费电子与游戏主机中的 BSD
@@ -15672,61 +18254,173 @@
 - 第72卷-BSD 法律实务：版权、专利、商标与诉讼（1973–2026）
     - 第1章-UNIX 版权链与 BSD 法律转折
         - 1.1-AT&T 与 UNIX 源代码版权
+            - 1.1.1-要点Net2重写采用逐文件替换策略对每一个包含AT&T版权代码的文件CSRG安排.md
         - 1.2-Berkeley UNIX 的代码来源（1973–1993）
         - 1.3-USL 诉 BSDI：诉因、请求权基础与管辖
         - 1.4-4.4BSD-Lite 与代码清理：版权净化与合规程序
         - 1.5-Novell 取得 UNIX 相关权利
         - 1.6-SCO Group 与 UNIX 版权主张
+            - 1.6.1-2003-2004 年 SCO 诉讼战线的扩展.md
+            - 1.6.2-2007 年 8 月 10 日 Judge Kimball 即决判决 Novell 持有 UNIX 版权.md
+            - 1.6.3-2010.3.30 陪审团确认 Novell 持有 UNIX SVRX 版权.md
+            - 1.6.4-Xinuos v. IBM：SCO saga 的终局（2026）.md
+            - 1.6.5-SCO v. Novell 终局对 BSD 生态法律环境的最终澄清.md
+            - 1.6.6-用户侧诉讼的结局与法律史意义.md
+            - 1.6.7-SCO 用户侧诉讼与 BSD 社区的相关性.md
         - 1.7-BSD 代码源流与版权清理
         - 1.8-从 AT&T 代码到独立 BSD 代码树
         - 1.9-UNIX 诉讼对 BSD 法律地位的长期影响
+            - 1.9.1-Xinuos v. IBM：UNIX 版权诉讼的终章（2021-2026）.md
     - 第2章-商标、UNIX 身份与品牌
         - 2.1-著作权与商标权
         - 2.2-BSD 名称与 Berkeley 标识
         - 2.3-UNIX 商标与 The Open Group
+            - 2.3.1-UNIX-商标与认证的现状.md
         - 2.4-UNIX 认证与操作系统身份
         - 2.5-FreeBSD 商标的法律管理
         - 2.6-BSD Daemon 与项目品牌
         - 2.7-商业产品中的 BSD 商标使用
         - 2.8-当代 UNIX 与 BSD 的比较：技术、许可证与哲学
+            - 2.8.1-Colomar称mem系列由43BSD1986年为SystemV兼容添加C89委.md
+            - 2.8.2-BSD 虚拟内存作为 Linux 内核设计的对标参照系：1998 至 2004 的换页、rmap 与 rusage.md
+            - 2.8.3-2010–2026：Solaris、illumos 与 XNU 作为 BSD 之外的接口锚点.md
+            - 2.8.4-时间线延伸至20252026年BSD家族与illumos已在POSIX采纳路径上.md
+            - 2.8.5-技术谱系比较当代商业UNIXSolarisAIXHPUXzOS的内核谱系Sola.md
+            - 2.8.6-在getrandom2补丁v5讨论中AndyLutomirski在早前同线程发言.md
+            - 2.8.7-Branden汇报groff1230rc2进展其中一项工作是他hadbeenpu.md
+            - 2.8.8-MarkFortescue就sparc的VTOC分区表修正补丁与DavidMil.md
+            - 2.8.9-Brouwer评审Fortescue的Sun与SolarisVTOC分区表修正补.md
+            - 2.8.10-AndyLutomirski在openat2OPENAT2_REGULARv5评.md
+            - 2.8.11-flock并非POSIX规范Kerrisk引述CarlosODonell称flo.md
+            - 2.8.12-linux邮件提取.md
+            - 2.8.13-ChristianBrauner休假中短暂插话赞同Lutomirski的看法并期.md
+            - 2.8.14-DougGilbert发布ddptdd命令的又一个变体sg3_utils中sg_.md
+            - 2.8.15-年12月preadvpwritev系统调用补丁评审中GerdHoffmann指出.md
+            - 2.8.16-DouglasGilbert在sg3_utils129发布公告中说明该工具集面向.md
+            - 2.8.17-ChristophHellwig把LinuxVFS与BSD族及其他系统的命名空间.md
+            - 2.8.18-ChristophHellwig在NFSv4pNFS标准讨论中直接引用44BSD.md
+            - 2.8.19-DiegoCalleja在VM冷启动缓存预热RFC讨论中援引Darwin实现作参.md
+            - 2.8.20-EvgeniyDushistov的RFC补丁为Linuxufs2驱动添加写支持改.md
+            - 2.8.21-NateKarstens回应AlViro关于实现closeonfork的反对意见.md
+            - 2.8.22-凭证切换设计讨论中的Unix线程模型史英文引语allofthepthreadsA.md
+            - 2.8.23-讨论O_CREAT与O_DIRECTORY组合可移植性时作者以POSIX未定义该.md
+            - 2.8.24-linux邮件提取.md
+            - 2.8.25-讨论IPv6UDP绑定语义时EricDumazet引用历史理由说明该反直觉行为因.md
+            - 2.8.26-linux邮件提取.md
+            - 2.8.27-linux邮件提取.md
+            - 2.8.28-AlanCox在内存耗尽导致系统崩溃的讨论中反对把高负载下的崩溃归为内核无能为力.md
+            - 2.8.29-AlViro在closeonfork讨论中针对AIXBSD&MacOShavea.md
+            - 2.8.30-EricDumazet在connect空地址语义争论中对比三家BSD系系统的手册.md
+            - 2.8.31-linux邮件提取.md
+            - 2.8.32-lxorgukukuuorguk域下署名为Alan的维护者邮件列表抬头显示名为化.md
+            - 2.8.33-linux邮件提取.md
+            - 2.8.34-同期BSD接口正从边缘渗入Linux用户态O_DIRECT在SGIIRIX首创并.md
+            - 2.8.35-与同时期 UNIX 的横向比较：Solaris、HP-UX、AIX 与 macOS 作为 BSD 的参照系.md
+            - 2.8.36-与同时期 UNIX 的技术对照：BSD、Solaris 与 System V 的 API 分岔.md
+            - 2.8.37-从 madvise(2) 到 close(2)：BSD 与 POSIX 标准化的交汇.md
+            - 2.8.38-血统考古与语义分叉：flock 与 POSIX 锁、文件变更监视接口，以及 minixfs、sysv 与 UFS 的共同祖先.md
     - 第3章-System V 的最终轨迹：UnixWare、OpenServer 与 SCO 长期诉讼（1995–2021）
         - 3.1-Novell 的 UNIX 资产与 UnixWare
         - 3.2-OpenServer 与 SCO 的企业 UNIX 遗产
         - 3.3-UNIX 商标、源码授权与认证权利的分离
         - 3.4-SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）
+            - 3.4.1-SCO v. IBM／Linux 的对比.md
         - 3.5-SCO 系列诉讼的法律与技术争议
         - 3.6-System V 遗产的产业形态（2021 年后）
     - 第4章-开源许可证的司法解释与诉讼实践
         - 4.1-开源许可证的法律约束力
         - 4.2-版权许可与合同理论
+            - 4.2.1-法国：从合同说到侵权说（Orange v. Entr'Ouvert 2024）.md
+            - 4.2.2-总矩阵表.md
+            - 4.2.3-美国：conditions=侵权 + 合同双轨.md
+            - 4.2.4-德国：违反许可条件=侵权，程序严格.md
+            - 4.2.5-中国：51号 vs 3229号 两极张力.md
+            - 4.2.6-跨法域趋势.md
         - 4.3-Jacobsen v. Katzer
+            - 4.3.1-Jacobsen v. Katzer 案事实与裁判要旨.md
+            - 4.3.2-Jacobsen v. Katzer 案事实经过.md
         - 4.4-开源许可证条件与版权救济
         - 4.5-Artifex Software 诉 Hancom（2017）
+            - 4.5.1-Artifex Software, Inc. v. Hancom, Inc., No. 16-cv-06082 (N.D. Cal. 2017).md
         - 4.6-GPL 执行机制与主要争点
         - 4.7-BusyBox 及其他开源许可证案件
+            - 4.7.1-美国批量执行：BusyBox GPL 系列诉讼（2007-2013）与 FSF v. Cisco（2008-2009）.md
         - 4.8-判决、和解与庭外合规
         - 4.9-不同法域中的许可证解释
         - 4.10-开源许可证诉讼中的证据问题
         - 4.11-延伸判例群（2010–2012）
+            - 4.11.1-Jacobsen v. Katzer, 535 F.3d 1373 (Fed. Cir. 2008).md
+            - 4.11.2-Free Software Foundation, Inc. v. Cisco Systems, Inc. (2008-2009, 和解).md
+            - 4.11.3-SCO Group, Inc. v. International Business Machines Corp., No. 2：03-cv-00294 (D. Utah 2003-2021).md
+            - 4.11.4-XimpleWare Corp. v. Versata Software, Inc.（N.D. Cal. 2013-2015）与 Versata v. Ameriprise（W.D. Tex. 2014）——两案须区分.md
+            - 4.11.5-数字天堂诉柚子科技案（中国 GPL 诉讼第一案），一审 (2015) 京知民初字第 00631 号，二审 (2018) 京民终 471 号.md
+            - 4.11.6-不乱买诉闪亮时尚案（GPL 传染性认定），(2019) 最高法知民终 663 号.md
+            - 4.11.7-网某科技诉亿某通信案（OpenWRT GPLv2 抗辩），(2021) 最高法知民终 51 号.md
+            - 4.11.8-国外判例.md
+            - 4.11.9-国内判例.md
     - 第5章-软件专利、反规避与互操作性
         - 5.1-软件版权与软件专利的边界
         - 5.2-软件专利对开源项目的影响
+            - 5.2.1-专利流氓对 BSD 商业用户的威胁.md
         - 5.3-Apache License 2.0 的专利条款
         - 5.4-专利授权与专利终止机制
+            - 5.4.1-GPL-3.0（2007）——专利授权、反 Tivoization 与终止／恢复.md
         - 5.5-DMCA 第 1201 条
+            - 5.5.1-DMCA 反规避条款的立法语境.md
         - 5.6-反规避条款的适用范围与例外
         - 5.7-软件安全研究与反规避问题
         - 5.8-越狱、互操作性与研究例外
         - 5.9-开源软件中的专利风险管理
         - 5.10-BSD 与 GPL 的哲学差异：BSD 不强制 copyleft
+            - 5.10.1-当事人素材与叙述章——BSD vs GPL 的哲学差异（2004–2025）.md
+            - 5.10.2-copyleft 与非 copyleft 条款对比.md
+            - 5.10.3-两种自由观的演变.md
+            - 5.10.4-本章claim取自dslinux_claimsduckdb之2822关键词子集c.md
+            - 5.10.5-当事人Theo主张接口不可版权调API不构成侵权以上为邮件列表当事人一手自述属过.md
+            - 5.10.6-保罗史密斯假定作者已让与自由软件基金会版权并获改许可之权却未行使以驳第泰奥之论并.md
+            - 5.10.7-PeterSeebach论GPL似强制道德而令其反感并称其最喜爱Artistic.md
+            - 5.10.8-RussAllbery述RMS曾称随Perl发布的文档完全不足须有人另写免费手册.md
+            - 5.10.9-PaulDSmith引词典释义称不诚实须出于故意歪曲事实以行欺骗自谓未见RMS明.md
+            - 5.10.10-PaulDSmith详辨聚合作品之许可乃各部件许可之并因GPL为X许可之严超集故.md
+            - 5.10.11-BillGunshannon称PDP11并无合法免费同好许可操作系统早期UNIX.md
+            - 5.10.12-JasonThorpe忆Net2已无人发行BSDReno因不可自由再分发而难得以.md
+            - 5.10.13-ThomasBushnell述NetBSD因AT&T之文档不可自由分发故无完整手.md
+            - 5.10.14-DonnMiller长文分论GPL宜用于GNU工具与内核BSD许可宜用于小开发者.md
+            - 5.10.15-独立开发者以告别GPL为题撰文论证copyleft在云软件SaaS时代已失去实际.md
+            - 5.10.16-对商业盟友与受众的判断IBMRedHatNovell等大公司是巨大资产改变世界的.md
+            - 5.10.17-GoodbyeGPL原文及其引用的localfirstsoftware论文与FS.md
+            - 5.10.18-告别GPL文章的作者归属在转写中存在噪声主持人将文章与localfirstsof.md
+            - 5.10.19-HorstHvonBrand询问是否可将_syscallX宏层明确改为BSD或至.md
+            - 5.10.20-ArnaudLaunay的补丁改用单行字符串写法以消除gcc3对多行字符串字面量.md
+            - 5.10.21-linux邮件提取.md
+            - 5.10.22-NoahMeyerhans就iputils授权发问ping6c头声明BSD许可但.md
+            - 5.10.23-年12月13日RolandDreier的IPoIBIPv4组播补丁在文件头写入G.md
+            - 5.10.24-年12月20日RolandDreier提交IPoIB组播地址转换补丁新增头文件声.md
+            - 5.10.25-年5月22日AndriiNakryiko回应StanislavFomichev关.md
+            - 5.10.26-年8月JeremyAllison反驳TheodoreTso关于shinyredb.md
+            - 5.10.27-linux邮件提取.md
+            - 5.10.28-2016 ksummit CORE TOPIC 与 BSD 阵营规模化质疑的时间序列补充——从 2002 年 aic7xxx 双许可到 2018 年 Ts'o 反驳.md
         - 5.11-美国诉微软案、浏览器战争与版权期限延长法
+            - 5.11.1-US v. Microsoft 1998 起诉与 76 天庭审.md
+            - 5.11.2-US v. Microsoft：1998-2001 年美国反垄断诉讼.md
+            - 5.11.3-三案对照：USL v. BSDi、US v. Microsoft、EU v. Microsoft 的路径分化.md
+            - 5.11.4-Microsoft 公司史与浏览器战争.md
+            - 5.11.5-96141EldredvAshcroft537US186与CTEA合宪性.md
     - 第6章-加密软件、出口管制与 BSD 的全球传播
         - 6.1-美国密码出口管制的历史背景
         - 6.2-加密软件进入 BSD 系统
+            - 6.2.1-对 BSD 加密栈的实际效应.md
         - 6.3-出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排
         - 6.4-Bernstein 诉 United States（1995–1999）
+            - 6.4.1-Bernstein v. United States, 922 F. Supp. 1426 (N.D. Cal. 1996) —— 一审裁定.md
+            - 6.4.2-Bernstein v. United States, 974 F. Supp. 1288 (N.D. Cal. 1997) —— 补充裁定.md
+            - 6.4.3-Bernstein v. United States, 176 F.3d 1132 (9th Cir. 1999) —— 上诉审判决.md
+            - 6.4.4-Bernstein 案对 BSD 加密生态的历史效应.md
+            - 6.4.5-加密出口管制司法实践的史料辨析.md
         - 6.5-Karn 诉美国国务院
+            - 6.5.1-Karn 案对 BSD 加密组件分发史的意义.md
         - 6.6-Junger 诉 Daley
+            - 6.6.1-Junger 与 Bernstein 并置：代码即言论的双判例格局与 BSD 加密代码分发.md
         - 6.7-源代码与受管制技术信息
         - 6.8-美国加密出口政策的变化
         - 6.9-加密管制与 BSD 全球传播
@@ -15797,15 +18491,18 @@
         - 3.5-与 Halbwachs、Nora 等记忆理论的对话
         - 3.6-技术史中的叙事竞争
         - 3.7-BSD 历史书写的伦理问题
+            - 3.7.1-自反性声明作为书写伦理.md
         - 3.8-谁的名字留下了：遗忘的选择性
         - 3.9-版本库迁移与技术记忆变形
     - 第4章-BSD 历史书写中的自反性问题
         - 4.1-历史作者也是历史的一部分
         - 4.2-技术史研究中的观察者效应
+            - 4.2.1-三重形式主义-bsd史书写的认识论地基.md
         - 4.3-编年史、人物史、问题史与比较史的方法选择
         - 4.4-技术评价中的价值判断与事实判断
         - 4.5-“成功”“失败”“衰落”等历史概念的使用边界
         - 4.6-BSD 历史中的多重解释框架
+            - 4.6.1-认识论自反与虚无主义的边界.md
         - 4.7-本书自身的史学位置
     - 第5章-人力的计量：史料类型、代理指标与可证范围
         - 5.1-史料的类别：提交、邮件、文档与年报
@@ -15839,6 +18536,7 @@
         - 2.5-DragonFly 技术资料的 Git 历史与提交记录
         - 2.6-DragonFly 技术资料的邮件列表与设计讨论
         - 2.7-DragonFly 技术资料的设计文档与开发者说明
+            - 2.7.1-要点LWKT的设计文档与DragonFly源码syskernlwkt_threa.md
         - 2.8-DragonFly 技术资料的 Release Notes 与版本演进记录
         - 2.9-macOS BSD 遗产研究的史料来源
         - 2.10-DragonFly 技术史的资料边界
@@ -15930,6 +18628,7 @@
         - 8.4-法院判决与诉讼档案
         - 8.5-和解协议与法律声明
         - 8.6-商标注册与认证档案
+            - 8.6.1-商标档案的史料辨析.md
     - 第9章-BSD 技术史研究方法：代码考古与工程解释
         - 9.1-从源码恢复技术演进
         - 9.2-Patch、Commit 与设计意图分析
@@ -15941,6 +18640,7 @@
         - 9.8-技术世代更替的计时：如何为贬值建一个可复核的指标
         - 9.9-NetBSD 文化史研究的论证方法：从物质证据到文化解释
         - 9.10-DragonFly 历史研究的证据层级：当事人叙述、同时代记录与后见解释
+            - 9.10.1-南亚 BSD 社区发展时期的当事人陈述（1990-2026 时期当事人）.md
         - 9.11-DragonFly 历史研究的方法论反思
         - 9.12-macOS BSD 遗产研究的方法论反思
         - 9.13-反事实分析的方法限制
@@ -15951,6 +18651,7 @@
         - 9.18-源代码、实现与技术因果分析
     - 第10章-BSD 世界化的综合论述
         - 10.1-BSD 开发者社群的国际构成：规模与分布
+            - 10.1.1-与 Linux 全球分布比较.md
         - 10.2-学术网络、企业网络与用户网络
         - 10.3-会议与人才网络
         - 10.4-参与形态的差异：企业派员、业余投入与制度化资助
@@ -15968,10 +18669,13 @@
         - 10.16-全球化的时间下限与地理边界
     - 第11章-BSD 全球社区史的史料与方法
         - 11.1-用户组档案
+            - 11.1.1-史料辨析：印度 BSD 用户组记录.md
         - 11.2-会议组织记录
         - 11.3-项目邮件列表与开发记录
         - 11.4-基金会年报与活动资料
         - 11.5-地区网站、论坛与社区档案
+            - 11.5.1-台湾 BSD 社区史料的辨析.md
+            - 11.5.2-港澳 BSD 社区史料的辨析.md
         - 11.6-人物访谈与口述史
         - 11.7-地理统计与网络数据
         - 11.8-地区之间的证据密度差异
@@ -15992,37 +18696,1084 @@
         - 1.4-峰会治理、安全披露与工具链争议
     - 第2章-内核内存管理、稳定化流程与列表治理
         - 2.1--mm 树发布宣告档案：早期批次
+            - 2.1.1-103.1 2.6.19-rc2-mm1.md
+            - 2.1.2-103.2 2.6.26-rc5-mm3.md
+            - 2.1.3-103.3 2.6.14-mm2.md
+            - 2.1.4-103.4 2.6.18-rc1-mm1.md
+            - 2.1.5-103.5 2.6.17-rc4-mm1.md
+            - 2.1.6-103.6 Linux 2.2.26 aka “2.2 is not dead” released.md
+            - 2.1.7-103.7 2.6.23-rc6-mm1.md
+            - 2.1.8-103.8 Announce loop-AES-v2.0b file／swap crypto package.md
+            - 2.1.9-103.9 Linux 2.6.13.1.md
+            - 2.1.10-102.1 -mm 发布 2.6.15-rc5-mm2.md
+            - 2.1.11-102.2 -mm 发布 2.6.18-rc6-mm1.md
+            - 2.1.12-102.3 loop-AES v2.2a 工具公告.md
+            - 2.1.13-102.4 -mm 发布 2.6.17-mm4.md
+            - 2.1.14-102.5 stable 发布 2.6.13.2.md
+            - 2.1.15-102.7 -mm 发布 2.6.26-rc5-mm2.md
+            - 2.1.16-102.8 -mm 发布 2.6.16-rc6-mm1.md
+            - 2.1.17-102.9 -mm 发布 2.6.15-rc2-mm1.md
+            - 2.1.18-102.10 stable 2.6.13.3 补丁全文.md
+            - 2.1.19-108.1 -mm 发布 2.6.25-mm1.md
+            - 2.1.20-108.2 -mm 发布 2.6.15-rc5-mm1.md
+            - 2.1.21-108.3 -mm 发布 2.6.12-rc4-mm1.md
+            - 2.1.22-108.4 -mm 发布 2.6.13-rc3-mm3.md
+            - 2.1.23-108.5 vgacon printk scrolling fix（补丁提交）.md
+            - 2.1.24-108.6 -mm 发布 2.6.15-mm4.md
+            - 2.1.25-108.7 -mm 发布 2.6.16-rc4-mm2.md
+            - 2.1.26-108.8 -mm 发布 2.6.18-rc3-mm2.md
+            - 2.1.27-108.9 -mm 发布 2.6.24-rc5-mm1.md
+            - 2.1.28-108.10 loop-AES v3.0b 加密包公告.md
+            - 2.1.29-109.1 2.6.18-mm1.md
+            - 2.1.30-109.2 Re： bug#35275： spelling mistake manual pages.md
+            - 2.1.31-109.3 2.6.14-rc5-mm1.md
+            - 2.1.32-109.4 2.6.22-rc4-mm1.md
+            - 2.1.33-109.5 [Announce] “iswraid” (ICH5R／ICH6R ataraid sub-driver) for 2.4.26.md
+            - 2.1.34-109.7 2.6.27-rc1-mm1.md
+            - 2.1.35-109.8 2.6.12-rc3-mm1.md
+            - 2.1.36-109.9 2.6.18-rc7-mm1.md
+            - 2.1.37-113.1 -mm 发布 2.6.15-mm1.md
+            - 2.1.38-113.2 stable 2.6.13.2 补丁全文.md
+            - 2.1.39-113.3 -mm 发布 2.6.19-rc3-mm1.md
+            - 2.1.40-113.4 loop-AES v2.1b 工具公告.md
+            - 2.1.41-113.5 -mm 发布 2.6.25-rc3-mm1.md
+            - 2.1.42-113.6 -mm 发布 2.6.14-rc1-mm1.md
+            - 2.1.43-113.7 -mm 发布 2.6.13-rc3-mm1.md
+            - 2.1.44-113.8 stable 发布 2.6.15.4.md
+            - 2.1.45-113.9 -mm 发布 2.6.15-mm2.md
+            - 2.1.46-113.10 -mm 发布 2.6.17-rc1-mm3.md
+            - 2.1.47-114.1 2.6.24-mm1.md
+            - 2.1.48-114.2 2.6.16-rc6-mm2.md
+            - 2.1.49-114.3 2.6.23-rc7-mm1.md
+            - 2.1.50-114.4 2.6.17-mm1.md
+            - 2.1.51-114.5 Announce loop-AES-v2.0g file／swap crypto package.md
+            - 2.1.52-114.6 2.6.17-mm5.md
+            - 2.1.53-114.7 Announce loop-AES-v2.2b file／swap crypto package.md
+            - 2.1.54-114.8 2.6.15-rc1-mm2.md
+            - 2.1.55-114.9 Linux 2.2.27-pre1 released.md
+            - 2.1.56-114.10 2.6.17-rc2-mm1.md
+            - 2.1.57-116.1 mm 发布宣告.md
+            - 2.1.58-116.2 工具／项目公告.md
+            - 2.1.59-116.3 bug 报告回应.md
         - 2.2--mm 树发布宣告档案：后期批次
+            - 2.2.1-118.1 2.6.23-rc8-mm2 发布宣告.md
+            - 2.2.2-118.2 2.6.15-rc1-mm1 发布宣告.md
+            - 2.2.3-118.3 2.6.18-rc6-mm2 发布宣告.md
+            - 2.2.4-118.4 Bug 8885 内存卡读取器失效回应.md
+            - 2.2.5-118.5 2.6.17-rc6-mm1 发布宣告.md
+            - 2.2.6-118.6 Linux 2.6.14.3 stable 修复内容.md
+            - 2.2.7-118.7 2.6.16-rc4-mm1 发布宣告.md
+            - 2.2.8-118.8 2.6.19-rc6-mm1 发布宣告.md
+            - 2.2.9-121.1 2.6.16-rc1-mm2.md
+            - 2.2.10-121.2 2.6.20-rc6-mm1.md
+            - 2.2.11-121.3 2.6.17-rc1-mm2.md
+            - 2.2.12-121.4 2.6.20-rc6-mm3.md
+            - 2.2.13-121.5 Announce loop-AES-v2.0e file／swap crypto package.md
+            - 2.2.14-121.6 2.6.12-rc3-mm3.md
+            - 2.2.15-121.7 2.6.17-mm2.md
+            - 2.2.16-121.8 2.6.19-rc1-mm1.md
+            - 2.2.17-121.9 2.6.12-rc1-mm2.md
+            - 2.2.18-121.10 2.6.11-mm3.md
+            - 2.2.19-128.1 2.6.23-rc8-mm1.md
+            - 2.2.20-128.2 Re： Linux 2.6.15.3.md
+            - 2.2.21-128.4 2.6.26-rc5-mm1.md
+            - 2.2.22-128.5 Re： Linux 2.6.15.4.md
+            - 2.2.23-128.6 2.6.28-rc2-mm1.md
+            - 2.2.24-128.7 2.6.11-mm2.md
+            - 2.2.25-128.8 2.6.16-rc1-mm4.md
+            - 2.2.26-128.9 2.6.24-rc6-mm1.md
+            - 2.2.27-128.10 2.6.17-mm6.md
+            - 2.2.28-130.1 2.6.24-rc8-mm1 发布宣告.md
+            - 2.2.29-130.2 2.6.24-rc2-mm1 发布宣告.md
+            - 2.2.30-130.3 2.6.21-mm2 发布宣告.md
+            - 2.2.31-130.4 2.6.27-rc5-mm1 发布宣告.md
+            - 2.2.32-130.5 2.6.11-mm4 发布宣告.md
+            - 2.2.33-130.6 stable 2.6.15.5 修复 diff.md
+            - 2.2.34-130.7 2.6.22-rc1-mm1 发布宣告.md
+            - 2.2.35-130.8 2.6.24-rc3-mm1 发布宣告.md
+            - 2.2.36-130.9 2.6.20-rc1-mm1 发布宣告.md
+            - 2.2.37-135.1 2.6.25-rc8-mm1.md
+            - 2.2.38-135.2 2.6.16-rc5-mm1.md
+            - 2.2.39-135.3 2.6.15-mm3.md
+            - 2.2.40-135.4 2.6.23-rc4-mm1.md
+            - 2.2.41-135.5 2.6.26-rc2-mm1.md
+            - 2.2.42-135.6 Announce loop-AES-v3.0c.md
+            - 2.2.43-135.7 2.6.25-rc5-mm1.md
+            - 2.2.44-135.8 2.6.19-rc6-mm2.md
+            - 2.2.45-135.9 Linux 2.6.13.3.md
+            - 2.2.46-135.10 2.6.19-rc4-mm1.md
         - 2.3-debugfs、模块参数与驱动接口之争
+            - 2.3.1-57.1 【Linux社区】debugfs 定位之争：tracefs 先例与“直接干”流程观.md
+            - 2.3.2-57.2 【Linux社区】模块参数反向迁移与 probe 时序之利.md
+            - 2.3.3-57.5 【Linux社区】ZUFS 用户态文件系统提案.md
+            - 2.3.4-57.6 【Linux社区】Brendan Eich 案引入与法务暴露之辩.md
+            - 2.3.5-57.7 【Linux社区】“封禁 Alice”思想实验：被禁贡献者的有效修复.md
         - 2.4-stable 回归防范与 MAINTAINERS 治理
+            - 2.4.1-140.1 维护者倦怠与评审责任.md
+            - 2.4.2-140.2 安全embargo流程.md
+            - 2.4.3-140.3 峰会议题分诊.md
+            - 2.4.4-140.5 trivial补丁政策.md
+            - 2.4.5-140.8 设备直通争议.md
+            - 2.4.6-140.12 内核malloc提案.md
+            - 2.4.7-140.14 维护者峰会存废与next树.md
+            - 2.4.8-140.16 回归防回退与Link标签.md
+            - 2.4.9-140.17 stable标签政策.md
+            - 2.4.10-140.18 AI补丁评审.md
+            - 2.4.11-140.20 trivial补丁与信任体系.md
+            - 2.4.12-140.24 Folios进程僵局.md
+            - 2.4.13-140.25 linux-next合并策略.md
+            - 2.4.14-140.26 Fixes标签语义.md
+            - 2.4.15-140.27 AI生成内容准则.md
+            - 2.4.16-140.28 C聚合传递与VLIW.md
+            - 2.4.17-140.30 linus-next测试工具.md
+            - 2.4.18-140.33 Link标签价值.md
+            - 2.4.19-140.35 维护者支持小组.md
+            - 2.4.20-140.36 AI与LLM披露.md
+            - 2.4.21-141.1 stable 回退回归防范.md
+            - 2.4.22-141.2 MAINTAINERS 条目校验.md
+            - 2.4.23-141.5 文件系统维护信任之争.md
+            - 2.4.24-141.7 Link 尾注与 Message-ID.md
+            - 2.4.25-141.9 Web of Trust 与密钥有效期.md
+            - 2.4.26-141.10 稳定分支提交打标.md
+            - 2.4.27-141.11 维护者倦怠与审查机器人.md
+            - 2.4.28-141.12 邮件引用修剪与 KTODO.md
+            - 2.4.29-141.13 Link 尾注文档补丁.md
+            - 2.4.30-141.15 维护者倦怠与 CI.md
+            - 2.4.31-141.18 设备直通议题组织.md
+            - 2.4.32-141.19 eBPF 用户态边界.md
+            - 2.4.33-141.20 trivial 补丁接收政策.md
+            - 2.4.34-141.22 维护者倦怠与激励.md
+            - 2.4.35-141.24 硬件使能的期望管理.md
+            - 2.4.36-141.25 MAINTAINERS 校验.md
+            - 2.4.37-141.26 Folios 议题与流程.md
+            - 2.4.38-141.27 维护者导师制.md
+            - 2.4.39-141.28 trivial 补丁政策.md
+            - 2.4.40-141.31 MAINTAINERS THE REST 改抄送.md
+            - 2.4.41-141.35 AI 审查的位置.md
+            - 2.4.42-141.38 Bugzilla 改进与回归追踪.md
+            - 2.4.43-141.40 项目过大与过度恐惧.md
         - 2.5-Rust 内核政策与社区争议
+            - 2.5.1-152.2 LLM 与审查.md
+            - 2.5.2-152.5 设备直通.md
+            - 2.5.3-152.6 kallsyms 行号信息.md
+            - 2.5.4-152.8 内核可持续性.md
+            - 2.5.5-152.10 LLM 标签.md
+            - 2.5.6-152.11 stable 邮件量.md
+            - 2.5.7-152.12 工具生成内容文档.md
+            - 2.5.8-152.15 内核文档工具链.md
+            - 2.5.9-152.16 eBPF 边界.md
+            - 2.5.10-152.17 stable 标签.md
+            - 2.5.11-152.18 TAB 选举.md
+            - 2.5.12-152.20 LLM 与维护者.md
+            - 2.5.13-152.21 kernel.org 工具.md
+            - 2.5.14-152.23 Link 标签.md
+            - 2.5.15-152.24 THE REST 列表.md
+            - 2.5.16-152.25 内核 malloc.md
+            - 2.5.17-162.3 linux-next树组织实验.md
+            - 2.5.18-162.9 Cc范围与lore过滤.md
+            - 2.5.19-162.10 峰会远程参与模式.md
+            - 2.5.20-162.11 Link标签工具链.md
+            - 2.5.21-162.12 AI补丁提示词留存.md
+            - 2.5.22-162.16 社区行为准则争论.md
+            - 2.5.23-162.17 stable标签政策.md
+            - 2.5.24-162.19 AI补丁法律风险.md
+            - 2.5.25-162.20 LLM信任与身份认证.md
+            - 2.5.26-162.21 HIGHMEM淘汰争议.md
+            - 2.5.27-162.22 AI依赖性争论.md
+            - 2.5.28-162.23 明尼苏达事件后补丁审查.md
+            - 2.5.29-162.26 回归修复时限表述.md
+            - 2.5.30-162.27 安全修复影响面之争.md
+            - 2.5.31-162.29 LKML减负方案.md
+            - 2.5.32-162.30 stable邮件过载.md
         - 2.6-回归追踪与 linux-next 运维
+            - 2.6.1-169.1 回归追踪与regzbot.md
+            - 2.6.2-169.2 特性纳入与剔除之辩.md
+            - 2.6.3-169.3 隐藏提交与next滞后.md
+            - 2.6.4-169.5 旧内核构建Werror补丁.md
+            - 2.6.5-169.6 文件系统弃用之争.md
+            - 2.6.6-169.8 NVMe拷贝卸载议题.md
+            - 2.6.7-169.11 内核文档构建优化.md
+            - 2.6.8-169.13 琐碎补丁政策之辩.md
+            - 2.6.9-169.15 diff审阅工具推荐.md
+            - 2.6.10-169.17 邮件工具与工作流.md
+            - 2.6.11-169.20 安全公告与stable基线.md
+            - 2.6.12-169.22 linus-next测试二分.md
+            - 2.6.13-169.23 AI评审bot误报.md
+            - 2.6.14-169.24 DAMON内存监测议题.md
+            - 2.6.15-169.25 stable标签政策矛盾.md
+            - 2.6.16-180.1 linux-next 运维复盘.md
+            - 2.6.17-180.2 AI 审查工具与 CI.md
+            - 2.6.18-180.3 AI 辅助补丁标注.md
+            - 2.6.19-180.4 峰会议程安排.md
+            - 2.6.20-180.6 GitLab 流程迁移争论.md
+            - 2.6.21-180.7 Link 标签与 lore 链接.md
+            - 2.6.22-180.9 checkpatch 局限.md
+            - 2.6.23-180.11 AI 生成内容守则.md
+            - 2.6.24-180.12 倦怠支持资源.md
+            - 2.6.25-180.15 linux-next 驻留时长.md
+            - 2.6.26-180.16 Fixes 标签政策.md
+            - 2.6.27-180.21 Sphinx 版本下限.md
+            - 2.6.28-180.22 稳定版回归修复义务.md
+            - 2.6.29-180.25 安全 embargo 代码质量.md
+            - 2.6.30-180.26 引文礼仪之争.md
+            - 2.6.31-180.27 Werror 处置之争.md
+            - 2.6.32-180.29 AI 时代 ACL 需求.md
+            - 2.6.33-180.30 审查自动化减负.md
+            - 2.6.34-180.31 文件系统用户态化构想.md
+            - 2.6.35-180.32 bcachefs 事件反思.md
+            - 2.6.36-180.34 trivial 树兴衰.md
+            - 2.6.37-180.36 kernel.org 信任改造.md
         - 2.7-AI 评审与文档持续集成
+            - 2.7.1-175.3 文档CI.md
+            - 2.7.2-175.4 AI代码评审.md
+            - 2.7.3-175.5 新手补丁洪流.md
+            - 2.7.4-175.6 MAINTAINERS列表.md
+            - 2.7.5-175.10 Folio争论.md
+            - 2.7.6-175.12 维护者峰会.md
+            - 2.7.7-175.13 安全披露政策.md
+            - 2.7.8-175.14 stable回传规则.md
+            - 2.7.9-175.16 文件系统维护.md
+            - 2.7.10-175.17 电源时序子系统.md
+            - 2.7.11-175.18 trivial补丁政策.md
+            - 2.7.12-175.20 AI标注政策.md
+            - 2.7.13-175.21 回归处理规则.md
+            - 2.7.14-175.22 MAINTAINERS维护.md
+            - 2.7.15-175.23 行为准则争论.md
+            - 2.7.16-175.24 AI贡献门槛.md
+            - 2.7.17-175.25 维护者除名机制.md
+            - 2.7.18-175.27 抄送自动化.md
+            - 2.7.19-202.1 琐碎补丁政策.md
+            - 2.7.20-202.3 AI代码审查.md
+            - 2.7.21-202.4 b4工具工作流.md
+            - 2.7.22-202.5 厂商与社区博弈.md
+            - 2.7.23-202.6 文件系统维护.md
+            - 2.7.24-202.8 AI辅助缺陷报告.md
+            - 2.7.25-202.9 linux-next测试.md
+            - 2.7.26-202.10 cleanup.h变量规则.md
+            - 2.7.27-202.11 AI在内核的角色.md
+            - 2.7.28-202.12 内核文档构建.md
+            - 2.7.29-202.16 峰会存废讨论.md
+            - 2.7.30-202.18 linux-next重复提交.md
+            - 2.7.31-202.19 AI生成内容规范.md
+            - 2.7.32-202.20 stable邮件洪流.md
+            - 2.7.33-202.21 回归修复责任.md
+            - 2.7.34-202.22 HIGHMEM退场.md
+            - 2.7.35-202.23 本地LLM审查.md
+            - 2.7.36-202.27 TAB选举结果.md
+            - 2.7.37-202.30 跨树补丁责任.md
+            - 2.7.38-202.31 stable回归测试.md
         - 2.8-邮件列表版面治理与琐碎补丁政策
+            - 2.8.1-195.1 列表版面治理.md
+            - 2.8.2-195.3 THE REST收件分流.md
+            - 2.8.3-195.4 无符号警告之争.md
+            - 2.8.4-195.6 malloc提案.md
+            - 2.8.5-195.7 AI代码审查.md
+            - 2.8.6-195.8 旧文件系统用户态化.md
+            - 2.8.7-195.11 Bugzilla改革.md
+            - 2.8.8-195.12 linux-next流程.md
+            - 2.8.9-195.15 UMN假补丁事件.md
+            - 2.8.10-195.16 项目延续文档.md
+            - 2.8.11-195.20 安全代码质检门槛.md
+            - 2.8.12-195.21 维护者峰会存废.md
+            - 2.8.13-195.22 TAB选举安排.md
+            - 2.8.14-195.25 安全披露渠道.md
+            - 2.8.15-195.35 AI政策讨论.md
+            - 2.8.16-195.36 缓冲缓存退役.md
+            - 2.8.17-195.37 回归追踪.md
+            - 2.8.18-195.38 评审激励机制.md
+            - 2.8.19-195.40 补丁发送工具.md
     - 第3章-硬件平台与警告治理
         - 3.1-IO-APIC 与 noapic 治理
+            - 3.1.1-12.7 【Linux社区】内核开发进程与 2021 现代回归.md
+            - 3.1.2-13.2 【Linux社区】5.12 热敏中断与 soft lockup 排查（2021）.md
+            - 3.1.3-14.5 【Linux社区】X 窗口、MTRR 与热敏回归（2021 收尾）.md
+            - 3.1.4-11.2 【Linux社区】Driver／module 版本号政策之争.md
+            - 3.1.5-11.3 【Linux社区】PCI driver rebinding 议题.md
+            - 3.1.6-11.4 【Linux社区】mobile phones 议题（Pavel 六问与多方应答）.md
+            - 3.1.7-11.5 【Linux社区】Documentation issues 收尾.md
+            - 3.1.8-11.6 【Linux社区】Bug reporting feedback loop 收尾.md
+            - 3.1.9-12.2 【Linux社区】EBDA MP table 警告与维护者定调.md
+            - 3.1.10-12.4 【Linux社区】APIC 错误与中断分配现象.md
+            - 3.1.11-13.1 【Linux社区】unexpected IO-APIC 警告编年与维护者定调.md
+            - 3.1.12-13.3 【Linux社区】SMP 硬件兼容与 BIOS 选项实战.md
+            - 3.1.13-13.7 【Linux社区】文档维护.md
+            - 3.1.14-14.1 【Linux社区】unexpected IO-APIC 触发全景（21 例）.md
+            - 3.1.15-14.3 【Linux社区】锁死、崩溃与深层故障.md
+            - 3.1.16-14.6 【Linux社区】Cox 定调与维护者方法论.md
+            - 3.1.17-14.7 【Linux社区】文档与学习路径.md
+            - 3.1.18-15.2 【Linux社区】IO-APIC 寄存器位段与多 IO-APIC 拓扑档案.md
+            - 3.1.19-16.3 【Linux社区】noapic 治理：实测、处方与长期个案（6 例）.md
+            - 3.1.20-16.7 【Linux社区】调度、亲和性、报料规范化与文档.md
         - 3.2-警告白名单与平台兼容定调
+            - 3.2.1-18.7 【Linux社区】2021 热敏线（根源定位与下游追问）.md
+            - 3.2.2-18.2 【Linux社区】维护者定调与供应商信息壁垒（4 例）.md
+            - 3.2.3-19.4 【Linux社区】中断均衡与亲和性接口（2 例）.md
+            - 3.2.4-19.7 【Linux社区】平台兼容与硬件定位（7 例）.md
+            - 3.2.5-20.1 【Linux社区】noapic 三原因定调与白名单语义（2 例）.md
+            - 3.2.6-20.6 【Linux社区】崩溃与锁死（3 例）.md
+            - 3.2.7-21.1 【Linux社区】警告机制解读全文与 noapic 论战（2 例）.md
+            - 3.2.8-22.1 【Linux社区】权威定性：known list 与警告语义（3 例）.md
+            - 3.2.9-22.3 【Linux社区】2.4.21 新版措辞与 0x20 白名单外（4 例）.md
+            - 3.2.10-22.4 【Linux社区】寄存器与版本号标本（3 例）.md
+            - 3.2.11-22.5 【Linux社区】警告与真实中断回归同机绑定（2 例）.md
+            - 3.2.12-22.7 【Linux社区】单 CPU 检出与老牌平台（4 例）.md
+            - 3.2.13-22.10 【Linux社区】大机架 Summit／SRAT 标本与文档线（4 例）.md
+            - 3.2.14-23.1 【Linux社区】白名单语义的终局定性（4 例）.md
+            - 3.2.15-23.2 【Linux社区】SiS 平台困境四连（4 例）.md
+            - 3.2.16-23.3 【Linux社区】报料全景与版本 0x20／0x14 家族（12 例）.md
+            - 3.2.17-23.5 【Linux社区】CUV4X-D 处方链与 Netfinity 实效（3 例）.md
+            - 3.2.18-23.8 【Linux社区】E7500 完整档案（1 例）.md
+            - 3.2.19-23.11 【Linux社区】崩溃与老平台三态（3 例）.md
+            - 3.2.20-23.12 【Linux社区】责任归属与处置建议（3 例）.md
+            - 3.2.21-24.1 【Linux社区】版本 0x20 余波与 2.4.22 修复判词（4 例）.md
+            - 3.2.22-24.2 【Linux社区】报料全景一：VIA／KT 系与版本 2／3（5 例）.md
+            - 3.2.23-24.3 【Linux社区】报料全景二：875／HT 平台（6 例）.md
+            - 3.2.24-24.4 【Linux社区】E7500／Xeon 服务器报告（2 例）.md
+            - 3.2.25-24.7 【Linux社区】x360 大机架两代内核对照（2 例）.md
+            - 3.2.26-24.9 【Linux社区】IRQ 分发之问与驱动、电源故障（3 例）.md
+            - 3.2.27-24.10 【Linux社区】HT 能力辨惑五声部（5 例）.md
+            - 3.2.28-24.13 【Linux社区】文档线：Flynn 论文求原文（1 例）.md
         - 3.3-DRM、加速器与设备直通
+            - 3.3.1-179.15 2021峰会筹备.md
+            - 3.3.2-179.1 DRM分支管理争论.md
+            - 3.3.3-179.2 AI补丁审查工具.md
+            - 3.3.4-179.4 CI与维护者负担.md
+            - 3.3.5-179.6 Bugzilla改革争论.md
+            - 3.3.6-179.8 维护者治理规则.md
+            - 3.3.7-179.9 Link标签与消息溯源.md
+            - 3.3.8-179.11 AI补丁文档规范.md
+            - 3.3.9-179.13 linux-next测试.md
+            - 3.3.10-179.14 文件系统维护信任.md
+            - 3.3.11-179.16 MAINTAINERS清理.md
+            - 3.3.12-179.17 回归跟踪regzbot.md
+            - 3.3.13-179.18 加速器用户态要求.md
+            - 3.3.14-179.20 MAINTAINERS分流.md
+            - 3.3.15-179.22 补丁发送脚本.md
+            - 3.3.16-179.23 贡献者信任评分.md
+            - 3.3.17-179.26 Bugzilla替代方案.md
+            - 3.3.18-185.1 加速器驱动用户态.md
+            - 3.3.19-185.3 设备直通与fwctl.md
+            - 3.3.20-185.4 AI审查模型.md
+            - 3.3.21-185.5 混合会议形式.md
+            - 3.3.22-185.9 稳定回溯规则.md
+            - 3.3.23-185.10 AI生成内容规范.md
+            - 3.3.24-185.12 Link尾注规范.md
+            - 3.3.25-185.16 驱动探测缺陷.md
+            - 3.3.26-185.17 安全回溯协作.md
+            - 3.3.27-185.18 维护者资格审查.md
+            - 3.3.28-185.19 AI补丁标注.md
+            - 3.3.29-185.20 GitLab补丁审查.md
+            - 3.3.30-185.22 linus-next测试.md
+            - 3.3.31-185.23 RichACL复兴.md
+            - 3.3.32-185.24 变量声明规则.md
+            - 3.3.33-185.26 维护者信任委派.md
+            - 3.3.34-185.29 恐惧与创新.md
     - 第4章-早期内核史料与邮件考古
         - 4.1-GPL 执法与法律史料
+            - 4.1.1-1.1 【Linux社区】GPL 执法的历史形态（SFC 与 Kuhn 视角）.md
+            - 4.1.2-1.3 【Linux社区】议程筛选与“诉讼 vs 保护”的价值争论.md
+            - 4.1.3-1.5 【Linux社区】三方的治理追问（Conservancy vs Linus vs Ted）.md
+            - 4.1.4-1.6 【Linux社区】版权归属新议题（雇主付费代码的保留态度）.md
+            - 4.1.5-【Linux社区】七、本线程入大纲建议落点.md
         - 4.2-内核 ABI 与 printk 史料
+            - 4.2.1-30.5 【Linux社区】Devicetree 迷你会与 2014 档案五封（5 例）.md
+            - 4.2.2-2.1 【Linux社区】tracepoint 是否属用户态 ABI：分歧起点.md
+            - 4.2.3-2.2 【Linux社区】支持“永不稳定”的修正派（Dobriyan ／ Viro ／ Lutomirski）.md
+            - 4.2.4-2.3 【Linux社区】发行版携带补丁的现实（Jan Kara 与厂商数据）.md
+            - 4.2.5-2.4 【Linux社区】tracepoint 语义稳定性与 ftrace 现实（Masami Hiramatsu）.md
+            - 4.2.6-2.5 【Linux社区】会议形态学：议题被一步步“从 patch 到议题”的过程.md
+            - 4.2.7-30.1 【Linux社区】printk 重设计深水：panic 卸载禁区与 fbdev 归属（5 例）.md
+            - 4.2.8-30.2 【Linux社区】向用户态回传错误信息与 ABI 门控（18 例）.md
+            - 4.2.9-30.3 【Linux社区】tracing 微会、Plumbers 与 ABI 讨论（7 例）.md
+            - 4.2.10-30.4 【Linux社区】kselftest 易用性与 O= 分离构建之争（15 例）.md
         - 4.3-邮件考古与缺陷报告形态
+            - 4.3.1-5.1 【Linux社区】认错与技术对质：PNG 并未损坏.md
+            - 4.3.2-5.2 【Linux社区】规模盘点与邮件系统约束.md
+            - 4.3.3-5.4 【Linux社区】技术路线拉锯：graphviz 语言 vs TeX 怀旧 vs xfig 考古.md
+            - 4.3.4-10.4 【Linux社区】序号、保序与时间戳重排.md
+            - 4.3.5-10.5 【Linux社区】Bug reporting feedback loop.md
+            - 4.3.6-10.6 【Linux社区】Documentation issues：RST 转换与维护.md
+            - 4.3.7-10.7 【Linux社区】Media Summit 与峰会议程机制.md
         - 4.4-报告文档张贴与审查入档
+            - 4.4.1-88.1 报告文档全文张贴.md
+            - 4.4.2-88.2 Greg认可分步指南.md
+            - 4.4.3-88.4 PM依赖机制之辩.md
+            - 4.4.4-88.5 TLDR重写张贴.md
+            - 4.4.5-88.6 Greg认可新TLDR.md
+            - 4.4.6-88.7 Corbet评审TLDR.md
+            - 4.4.7-88.8 stable报告地址定则.md
+            - 4.4.8-88.13 staging提速之辩.md
+            - 4.4.9-88.14 TAB选举催票公告.md
+            - 4.4.10-88.18 cppcheck查泄漏.md
+            - 4.4.11-88.20 2022峰会CFP.md
+            - 4.4.12-88.27 tracepoint前车之鉴.md
+            - 4.4.13-88.28 维护者角色提案.md
+            - 4.4.14-88.29 hidraw作者自省.md
+            - 4.4.15-88.31 eBPF二进制分发.md
+            - 4.4.16-88.32 HID eBPF视作UAPI.md
+            - 4.4.17-88.33 回归追踪议题书.md
+            - 4.4.18-88.35 峰会补充场提案.md
+            - 4.4.19-88.36 嵌入式以修代报.md
+            - 4.4.20-88.37 eBPF即模块论.md
+            - 4.4.21-88.38 eBPF稳定性折中.md
+            - 4.4.22-88.39 上游bpf程序库.md
+            - 4.4.23-88.40 反专有模块策略.md
+            - 4.4.24-88.41 eBPF成稳定后门.md
+            - 4.4.25-88.42 eBPF树内托管.md
+            - 4.4.26-88.43 维护者学习负担.md
+            - 4.4.27-88.44 stable五线之弊.md
+            - 4.4.28-92.1 临时审查是否入档.md
+            - 4.4.29-92.2 版本比对难自动化.md
+            - 4.4.30-92.3 记名为激励评审者.md
+            - 4.4.31-92.5 临时标签或为负值.md
+            - 4.4.32-92.6 补丁串问题三分法.md
+            - 4.4.33-92.8 树外tarball坑客户.md
+            - 4.4.34-92.12 补丁集内应相关.md
+            - 4.4.35-92.13 文档早定义作佐证.md
+            - 4.4.36-92.14 评审者即共同维护.md
+            - 4.4.37-92.15 五维护者口径不一.md
+            - 4.4.38-92.20 琐碎补丁稀释评审.md
+            - 4.4.39-92.22 Link标签指回讨论.md
+            - 4.4.40-92.23 逼公司内部辅导.md
+            - 4.4.41-92.24 跨子系统局部确认.md
+            - 4.4.42-92.25 局部Ack书写实践.md
+            - 4.4.43-92.26 topic分支分批收.md
+            - 4.4.44-92.28 stable回归来源析.md
+            - 4.4.45-92.29 拆分squash存险.md
+            - 4.4.46-92.31 雇主阻挠正式挂名.md
+            - 4.4.47-92.32 commit反查讨论工具.md
+            - 4.4.48-92.33 块层API议题提案.md
+            - 4.4.49-92.34 议题应去fs峰会.md
+            - 4.4.50-92.35 块层为何非议题.md
+            - 4.4.51-92.36 PM覆盖全树之辩.md
+            - 4.4.52-92.37 ext4保Acked原义.md
+            - 4.4.53-92.38 LF有通报联系名单.md
+            - 4.4.54-92.39 ARM农场测stable.md
+            - 4.4.55-92.41 多Link串全版本.md
+            - 4.4.56-92.42 v2应Link回v1.md
+            - 4.4.57-92.43 30个Cc破LKML限.md
+            - 4.4.58-92.44 另立Supported标签.md
+            - 4.4.59-92.45 流程未坏勿添乱.md
+            - 4.4.60-92.47 为未知问题造流程.md
         - 4.5-治理争论与维护者支持史料
+            - 4.5.1-48.1 【Linux社区】embargo 协调组与 CVE 标注之争（11 例）.md
+            - 4.5.2-48.2 【Linux社区】linux-next 覆盖与测试者处境（10 例）.md
+            - 4.5.3-48.3 【Linux社区】社区治理：MAINTAINERS、沟通系统与 ARM patch system（11 例）.md
+            - 4.5.4-48.4 【Linux社区】staging、trivial 树与旧硬件移除（10 例）.md
+            - 4.5.5-48.5 【Linux社区】API 废弃与警告分级（2 例）.md
+            - 4.5.6-51.1 【Linux社区】治理心理学：Walleij 长文与 Belloni 对轰（4 例）.md
+            - 4.5.7-51.2 【Linux社区】维护者特权之辩：Pinchart vs tglx（7 例）.md
+            - 4.5.8-51.3 【Linux社区】统计之辩与 i915 可验证性（4 例）.md
+            - 4.5.9-51.4 【Linux社区】群体维护实验与工具 GitHub 桥（8 例）.md
+            - 4.5.10-51.5 【Linux社区】回归战线：Carpenter 机器人化与 0day 覆盖确认（5 例）.md
+            - 4.5.11-51.6 【Linux社区】-next 剔树机制与 sfr 手记（9 例）.md
+            - 4.5.12-51.7 【Linux社区】safety-critical 认证之辩（5 例）.md
+            - 4.5.13-52.1 【Linux社区】治理火线第二轮：指标之辩与 tglx 退出通牒.md
+            - 4.5.14-52.2 【Linux社区】单任维护者之殇：Brownell 案例与 GPIO sysfs 遗产.md
+            - 4.5.15-52.4 【Linux社区】Project Banbury：拔盘复活之辩.md
+            - 4.5.16-52.7 【Linux社区】工具链与议题归位.md
+            - 4.5.17-194.2 设备直通争议.md
+            - 4.5.18-194.3 维护者支持小组.md
+            - 4.5.19-194.5 安全披露机制.md
+            - 4.5.20-194.6 stable回溯机制.md
+            - 4.5.21-194.7 trivial补丁政策.md
+            - 4.5.22-194.9 AI生成内容指南.md
+            - 4.5.23-194.12 回归处理流程.md
+            - 4.5.24-194.15 Folios议题归属.md
+            - 4.5.25-194.17 AI代码标注政策.md
+            - 4.5.26-194.18 GitLab工作流.md
+            - 4.5.27-194.19 内核文档议题.md
+            - 4.5.28-194.20 linux-next构建.md
+            - 4.5.29-194.23 补丁收件人筛选.md
+            - 4.5.30-194.24 CoC执行争议.md
+            - 4.5.31-194.27 Bugzilla通知争议.md
+            - 4.5.32-194.29 峰会代表性.md
         - 4.6-media 维护模式与治理心理学
+            - 4.6.1-70.1 【Linux社区】media 维护模式自辩.md
+            - 4.6.2-70.2 【Linux社区】扁平树信任之问.md
+            - 4.6.3-70.3 【Linux社区】复审非信任而是双审.md
+            - 4.6.4-70.4 【Linux社区】评审标签自动化提案.md
+            - 4.6.5-70.7 【Linux社区】跨子树补丁与钩子.md
+            - 4.6.6-70.8 【Linux社区】staging 缺陷数据.md
+            - 4.6.7-70.9 【Linux社区】单驱动与重构之辨.md
+            - 4.6.8-70.10 【Linux社区】桌面 40 核机复审流程.md
+            - 4.6.9-70.13 【Linux社区】转换任务入导师名单.md
+            - 4.6.10-70.14 【Linux社区】文件内一致优先.md
+            - 4.6.11-70.15 【Linux社区】未转 RST 目录盘点.md
+            - 4.6.12-70.16 【Linux社区】重构回归风险论断.md
+            - 4.6.13-70.18 【Linux社区】media PM 桎梏陈情.md
+            - 4.6.14-70.19 【Linux社区】维护者职责社会论.md
+            - 4.6.15-70.20 【Linux社区】检查应前置分包.md
+            - 4.6.16-70.22 【Linux社区】文件本地风格之害.md
+            - 4.6.17-70.23 【Linux社区】通审三理由与十年答辩.md
+            - 4.6.18-70.24 【Linux社区】通用测试基建盘点.md
+            - 4.6.19-70.25 【Linux社区】积压队列与升级数.md
+            - 4.6.20-70.26 【Linux社区】教程级讲题拒收函.md
+            - 4.6.21-70.27 【Linux社区】环形缓冲术语定调.md
+            - 4.6.22-70.28 【Linux社区】arch 内存码去重议题.md
+            - 4.6.23-70.31 【Linux社区】退回 PR 亦是教学.md
+            - 4.6.24-70.32 【Linux社区】自动化测试峰议程.md
+            - 4.6.25-70.33 【Linux社区】features 脚本样张.md
+            - 4.6.26-70.34 【Linux社区】日志差分工具指路.md
+            - 4.6.27-70.35 【Linux社区】特性表脚本 RFC 补丁.md
+            - 4.6.28-70.36 【Linux社区】缺 SPDX 审阅意见.md
+            - 4.6.29-70.37 【Linux社区】特性脚本补丁进展.md
+            - 4.6.30-70.38 【Linux社区】W=2 噪声与二进制比对.md
+            - 4.6.31-70.40 【Linux社区】文档注释风格之争.md
+            - 4.6.32-70.43 【Linux社区】Werror 跨架构隐患.md
+            - 4.6.33-70.45 【Linux社区】Werror 全局不可取论.md
+            - 4.6.34-70.48 【Linux社区】编译器 QA 现状.md
+            - 4.6.35-70.49 【Linux社区】i915 告警治理细节.md
         - 4.7-TAB 选举与署名标签
+            - 4.7.1-82.1 【Linux社区】Bird参选史.md
+            - 4.7.2-82.2 【Linux社区】Rostedt2019先例.md
+            - 4.7.3-82.3 【Linux社区】KS2020虚拟启动.md
+            - 4.7.4-82.4 【Linux社区】seccomp四议题.md
+            - 4.7.5-82.5 【Linux社区】KS2014档案-FB.md
+            - 4.7.6-82.17 【Linux社区】KS2014档案-livepatch.md
+            - 4.7.7-82.11 【Linux社区】Linus认可限深.md
+            - 4.7.8-82.14 【Linux社区】补丁在途.md
+            - 4.7.9-82.18 【Linux社区】Williams回Rafael.md
+            - 4.7.10-82.21 【Linux社区】Sarai二阶保留.md
+            - 4.7.11-82.24 【Linux社区】DAMON议题.md
+            - 4.7.12-82.25 【Linux社区】ExtSyscalls议题.md
+            - 4.7.13-82.29 【Linux社区】KS2014档案-CONFIG.md
+            - 4.7.14-82.26 【Linux社区】CorbetDoc议题.md
+            - 4.7.15-82.31 【Linux社区】Shuah新人调研.md
+            - 4.7.16-82.33 【Linux社区】Shuah澄清.md
+            - 4.7.17-82.34 【Linux社区】Pinchart优先级论.md
+            - 4.7.18-82.38 【Linux社区】Shuah价值论.md
+            - 4.7.19-82.39 【Linux社区】Shuah新眼论.md
+            - 4.7.20-82.40 【Linux社区】KS2014档案-dynamicdebug.md
+            - 4.7.21-82.46 【Linux社区】Rapoport训练效应.md
+            - 4.7.22-82.48 【Linux社区】Ted提交提醒.md
+            - 4.7.23-82.49 【Linux社区】Rapoportcheckpatch.md
+            - 4.7.24-87.3 【Linux社区】署名标签堆叠之弊.md
+            - 4.7.25-87.6 【Linux社区】折叠原则与Link足矣.md
+            - 4.7.26-87.7 【Linux社区】补丁迭代与评审计量.md
+            - 4.7.27-87.8 【Linux社区】反对固定署名规则.md
+            - 4.7.28-87.16 【Linux社区】stable回移定署名标准.md
+            - 4.7.29-87.18 【Linux社区】linux-issues列表提案.md
+            - 4.7.30-87.19 【Linux社区】issue定义之问.md
+            - 4.7.31-87.21 【Linux社区】在此即bug报告定位.md
+            - 4.7.32-87.22 【Linux社区】Linus属意回归列表.md
+            - 4.7.33-87.27 【Linux社区】回归列表覆盖之辩.md
+            - 4.7.34-87.28 【Linux社区】issue范围圈定.md
+            - 4.7.35-87.30 【Linux社区】报告去向定位构想.md
+            - 4.7.36-87.33 【Linux社区】用户问题多为回归论.md
+            - 4.7.37-87.35 【Linux社区】虚拟回归列表构想.md
+            - 4.7.38-87.36 【Linux社区】回归占比因人而异.md
+            - 4.7.39-87.40 【Linux社区】lei标签与JMAP规划.md
+            - 4.7.40-87.42 【Linux社区】转正文[1／5]TLDR.md
+            - 4.7.41-87.43 【Linux社区】转正文[2／5]步骤指南.md
+            - 4.7.42-87.45 【Linux社区】转正文[4／5]stable参考.md
+            - 4.7.43-87.46 【Linux社区】转正文[5／5]附录释因.md
+            - 4.7.44-87.38 【Linux社区】文档转正待办清单.md
         - 4.8--mm／stable 发布宣告档案
+            - 4.8.1-125.1 -mm 发布宣告.md
+            - 4.8.2-125.2 bug 报告实质回应.md
+            - 4.8.3-125.3 git 树同步状态说明.md
+            - 4.8.4-125.4 工具发布公告.md
+            - 4.8.5-115.1 mm 树发布宣告.md
+            - 4.8.6-115.2 stable 发布宣告.md
+            - 4.8.7-115.3 stable 补丁跟帖.md
+            - 4.8.8-122.1 2.6.25-rc8-mm2.md
+            - 4.8.9-122.2 2.6.13-mm2.md
+            - 4.8.10-122.3 2.6.13-rc4-mm1.md
+            - 4.8.11-122.4 Re： Linux 2.6.12.5.md
+            - 4.8.12-122.5 2.6.23-mm1.md
+            - 4.8.13-122.6 2.6.20-rc3-mm1.md
+            - 4.8.14-122.7 2.6.23-rc1-mm1.md
+            - 4.8.15-122.9 2.6.18-mm2.md
+            - 4.8.16-122.10 2.6.16-rc2-mm1.md
+            - 4.8.17-129.1 2.6.20-rc6-mm2.md
+            - 4.8.18-129.2 2.6.17-rc5-mm1.md
+            - 4.8.19-129.3 2.6.23-rc1-mm2.md
+            - 4.8.20-129.4 2.6.16-rc1-mm3.md
+            - 4.8.21-129.5 2.6.13-rc6-mm2.md
+            - 4.8.22-129.6 2.6.12-rc1-mm1.md
+            - 4.8.23-129.7 2.6.22-rc2-mm1.md
+            - 4.8.24-129.8 2.6.19-mm1.md
+            - 4.8.25-129.9 2.6.13-rc5-mm1.md
+            - 4.8.26-131.1 2.6.14-rc4-mm1.md
+            - 4.8.27-131.2 Re： Linux 2.6.15.6.md
+            - 4.8.28-131.3 2.6.19-rc2-mm2.md
+            - 4.8.29-131.4 2.6.16-mm2.md
+            - 4.8.30-131.5 Linux 2.6.15.5.md
+            - 4.8.31-131.6 2.6.23-rc2-mm1.md
+            - 4.8.32-131.7 2.6.18-rc4-mm3.md
+            - 4.8.33-131.8 2.6.22-rc3-mm1.md
+            - 4.8.34-132.1 Announce loop-AES-v2.2c file／swap crypto package.md
+            - 4.8.35-132.2 2.6.17-rc1-mm1.md
+            - 4.8.36-132.3 Linux 2.6.12.5.md
+            - 4.8.37-132.4 2.6.12-rc4-mm2.md
+            - 4.8.38-132.5 2.6.23-rc2-mm2.md
+            - 4.8.39-132.6 Announce loop-AES-v2.1c file／swap crypto package.md
+            - 4.8.40-132.7 Announce loop-AES-v2.0c file／swap crypto package.md
+            - 4.8.41-132.8 2.6.17-rc4-mm3.md
+            - 4.8.42-132.9 Linux 2.6.12.6.md
+            - 4.8.43-132.10 2.6.15-rc3-mm1.md
+            - 4.8.44-133.1 stable 发布宣告.md
+            - 4.8.45-133.2 工具公告.md
+            - 4.8.46-133.3 mm 发布宣告.md
+            - 4.8.47-134.1 stable 2.6.12.4 补丁 diff.md
+            - 4.8.48-134.2 vgacon 滚动问题修复回应.md
+            - 4.8.49-134.3 -mm 2.6.16-rc1-mm1 发布.md
+            - 4.8.50-134.4 -mm 2.6.16-rc3-mm1 发布.md
+            - 4.8.51-134.5 -mm 2.6.18-rc2-mm1 发布.md
+            - 4.8.52-134.6 -mm 2.6.14-mm1 发布.md
+            - 4.8.53-134.7 stable 2.6.12.6 补丁 diff.md
+            - 4.8.54-134.8 2.6.20-rc6 回归回应.md
+            - 4.8.55-134.9 -mm 2.6.18-rc5-mm1 发布.md
+            - 4.8.56-134.10 -mm 2.6.16-rc5-mm2 发布.md
         - 4.9-工具与基础设施史
+            - 4.9.1-154.41 2021 峰会议题：UMN 议题承接.md
+            - 4.9.2-154.36 峰会组织：2023 维护者峰会征题.md
+            - 4.9.3-95.3 tests repo聚合构想.md
+            - 4.9.4-95.4 黑名单经济批判.md
+            - 4.9.5-95.5 commit-id作feature flag.md
+            - 4.9.6-95.10 API无人测过证言.md
+            - 4.9.7-95.11 弃用ad hoc之叹.md
+            - 4.9.8-95.13 PVH弃用议题全文.md
+            - 4.9.9-95.16 X版编译不过可删则.md
+            - 4.9.10-95.17 mm层重设计六大议题.md
+            - 4.9.11-154.1 工具讨论：bugzilla 退役.md
+            - 4.9.12-154.3 维护者峰会：自动审查机器人与倦怠.md
+            - 4.9.13-154.4 TAB 选举：候选人提名提醒.md
+            - 4.9.14-154.5 峰会议题：LLM 标签与新人洪流.md
+            - 4.9.15-154.6 trivial 补丁政策：UMN 实验危害确认.md
+            - 4.9.16-154.7 回归处理：深化维护者树质疑.md
+            - 4.9.17-154.10 峰会组织：混合会议与活动形式.md
+            - 4.9.18-154.11 MAINTAINERS 校验：CC 列表治理.md
+            - 4.9.19-154.14 安全披露：linux-distros 与 s@k.o 政策分歧.md
+            - 4.9.20-154.17 AI 代码标注：默认假设需文档化.md
+            - 4.9.21-154.20 文件系统维护：syzbot 与信任边界.md
+            - 4.9.22-154.21 峰会组织：疫情下线下与远程之辩.md
+            - 4.9.23-154.22 AI 代码标注：法律风险显性化.md
+            - 4.9.24-154.24 linux-next 反馈：临时提交检测工具.md
+            - 4.9.25-154.26 内核文档：构建提速与告警治理.md
+            - 4.9.26-154.27 峰会议题：LLM 标签信噪比与依赖风险.md
+            - 4.9.27-154.28 AI 与 LLM：测试代码审阅容量.md
+            - 4.9.28-154.30 linus-next：合并前全量过 next 目标.md
+            - 4.9.29-154.31 维护者峰会：接口设计需弃版重来.md
+            - 4.9.30-154.34 稳定分支标签：Fixes 强制推进.md
+            - 4.9.31-154.35 trivial 补丁政策：UMN media 补丁质量之辩.md
+            - 4.9.32-154.37 trivial 补丁政策：与 UMN 事件切割.md
+            - 4.9.33-154.39 峰会议题：LKML 语料微调专项模型.md
+            - 4.9.34-154.40 linus-next：工作流自辩与质疑.md
+            - 4.9.35-154.42 峰会议题：回归跟踪与修复现状.md
         - 4.10-Rust 入核争论档案
+            - 4.10.1-163.35 2021 峰会议题.md
+            - 4.10.2-160.2 AI评审角色.md
+            - 4.10.3-160.3 峰会存废经费.md
+            - 4.10.4-160.4 AI标注政策.md
+            - 4.10.5-160.5 补丁基址标注.md
+            - 4.10.6-160.6 linus-next树争议.md
+            - 4.10.7-160.7 AI生成内容准则.md
+            - 4.10.8-160.8 峰会疫情筹备.md
+            - 4.10.9-160.11 缺陷报告流程.md
+            - 4.10.10-160.12 CoC委员会职责.md
+            - 4.10.11-160.14 峰会远程参与.md
+            - 4.10.12-160.15 stable回迁策略.md
+            - 4.10.13-160.16 DRM挑选回迁.md
+            - 4.10.14-160.17 Bugzilla争议.md
+            - 4.10.15-160.18 Fixes标签语义.md
+            - 4.10.16-160.21 峰会筹备反馈.md
+            - 4.10.17-160.22 静态检查工具.md
+            - 4.10.18-160.23 Link尾注争议.md
+            - 4.10.19-160.25 维护者倦怠激励.md
+            - 4.10.20-160.26 lore与b4工具.md
+            - 4.10.21-163.2 维护者支持组.md
+            - 4.10.22-163.4 设备直通争论.md
+            - 4.10.23-163.6 Fixes 标签语义.md
+            - 4.10.24-163.7 linus-next 树.md
+            - 4.10.25-163.10 trivial 补丁政策.md
+            - 4.10.26-163.13 TAB 选举.md
+            - 4.10.27-163.14 驱动资源生命周期.md
+            - 4.10.28-163.16 清理宏政策.md
+            - 4.10.29-163.19 devm_kzalloc 危害.md
+            - 4.10.30-163.20 lei 工具.md
+            - 4.10.31-163.21 安全流程与AI.md
+            - 4.10.32-163.25 API 废弃强制.md
+            - 4.10.33-163.27 stable 邮件减量.md
+            - 4.10.34-163.30 补丁抄送范围.md
+            - 4.10.35-163.36 pkeys ABI.md
+            - 4.10.36-172.1 AI评审政策.md
+            - 4.10.37-172.4 设备直通争论.md
+            - 4.10.38-172.6 维护者峰会存废.md
+            - 4.10.39-172.8 Bugzilla存废.md
+            - 4.10.40-172.10 trivial补丁政策.md
+            - 4.10.41-172.11 文件系统信任.md
+            - 4.10.42-172.14 MAINTAINERS路由.md
+            - 4.10.43-172.16 linus-next测试.md
+            - 4.10.44-172.17 补丁评审工具.md
+            - 4.10.45-172.19 回归处理流程.md
+            - 4.10.46-172.20 Link标记改革.md
+            - 4.10.47-172.22 stable邮件量.md
+            - 4.10.48-172.23 Fixes标记语义.md
+            - 4.10.49-198.2 维护者倦怠与自动化.md
+            - 4.10.50-198.5 fwctl设备直通之争.md
+            - 4.10.51-198.7 Link标签之争.md
+            - 4.10.52-198.8 琐碎补丁政策.md
+            - 4.10.53-198.9 AI代码版权责任.md
+            - 4.10.54-198.10 内核文档工具链.md
+            - 4.10.55-198.12 eBPF接口稳定性.md
+            - 4.10.56-198.13 kernel.org工具链报告.md
+            - 4.10.57-198.14 AI审查工具政策.md
+            - 4.10.58-198.19 补丁发送工具.md
+            - 4.10.59-198.20 峰会远程参会.md
+            - 4.10.60-198.22 AI生成内容规范.md
+            - 4.10.61-198.23 AI辅助回迁补丁.md
+            - 4.10.62-198.24 linus-next集成树.md
+            - 4.10.63-198.25 LLM标注与合规.md
+            - 4.10.64-198.27 MAINTAINERS列表变革.md
         - 4.11-AI 评审与政策史料
+            - 4.11.1-156.1 AI使用政策.md
+            - 4.11.2-156.3 TAB选举.md
+            - 4.11.3-156.6 AI审阅自动化.md
+            - 4.11.4-156.8 发布节奏与倦怠.md
+            - 4.11.5-156.9 封面信Cc策略.md
+            - 4.11.6-156.10 协作文档工具.md
+            - 4.11.7-156.11 反对预生成文件.md
+            - 4.11.8-156.12 DRM运行时失败.md
+            - 4.11.9-156.13 THE REST迁移.md
+            - 4.11.10-156.16 维护者倦怠.md
+            - 4.11.11-156.22 CI门禁之辩.md
+            - 4.11.12-156.23 AUTOSEL与stable.md
+            - 4.11.13-156.26 缺陷跟踪工具.md
+            - 4.11.14-156.35 维护者培养路径.md
+            - 4.11.15-156.37 回归修复时限.md
+            - 4.11.16-156.40 linux-next合并策略.md
+            - 4.11.17-193.2 AI 审查模型.md
+            - 4.11.18-193.4 变量声明规则.md
+            - 4.11.19-193.5 峰会疫情安排.md
+            - 4.11.20-193.8 稳定回溯流程.md
+            - 4.11.21-193.9 Bugzilla 之争.md
+            - 4.11.22-193.11 linus-next 树.md
+            - 4.11.23-193.13 文件系统维护政策.md
+            - 4.11.24-193.14 维护者层级.md
+            - 4.11.25-193.15 AI 时代信任.md
+            - 4.11.26-193.16 维护者心理支持.md
+            - 4.11.27-193.17 eBPF 边界.md
+            - 4.11.28-193.18 highmem 淘汰.md
+            - 4.11.29-193.19 AI 风险论辩.md
+            - 4.11.30-193.20 LKML 流量治理.md
+            - 4.11.31-193.21 峰会存废.md
+            - 4.11.32-193.22 AI 披露标签.md
+            - 4.11.33-193.23 补丁提交流程.md
+            - 4.11.34-193.26 TAB 选举.md
+            - 4.11.35-193.27 回归追踪机器人.md
+            - 4.11.36-193.29 initramfs 提案.md
+            - 4.11.37-193.30 安全披露政策.md
         - 4.12-硬件加速器与 malloc 议题
+            - 4.12.1-151.6 峰会组织：2021 赴美行程.md
+            - 4.12.2-145.2 UALink上游化议题提案.md
+            - 4.12.3-145.4 工具生成内容文档.md
+            - 4.12.4-145.5 b4工具链补丁.md
+            - 4.12.5-145.6 linus-next测试流程.md
+            - 4.12.6-145.7 稳定分支提交标签.md
+            - 4.12.7-145.11 AI补丁标注.md
+            - 4.12.8-145.15 trivial补丁与UMN事件.md
+            - 4.12.9-145.17 AI评审提示词.md
+            - 4.12.10-145.18 trivial补丁政策.md
+            - 4.12.11-145.20 AI回移补丁讨论.md
+            - 4.12.12-145.22 工具生成内容文档v5.md
+            - 4.12.13-145.24 加速器uAPI分层.md
+            - 4.12.14-145.26 sashiko提示词维护.md
+            - 4.12.15-145.28 稳定分支autosel.md
+            - 4.12.16-145.29 Posted／Reviewed标签.md
+            - 4.12.17-145.30 -next树治理.md
+            - 4.12.18-145.31 Bugzilla与回归文档.md
+            - 4.12.19-145.33 trivial补丁评审工具.md
+            - 4.12.20-145.34 变量声明位置规则.md
+            - 4.12.21-145.35 语言语义与优化.md
+            - 4.12.22-145.36 Message-ID改写之争.md
+            - 4.12.23-145.39 AI政策分档提案.md
+            - 4.12.24-145.41 DAMON议题提案.md
+            - 4.12.25-145.42 pkeys ABI会议组织.md
+            - 4.12.26-145.43 bug报告礼节.md
+            - 4.12.27-151.1 议题提案：内核实现 malloc.md
+            - 4.12.28-151.2 议题讨论：trivial 补丁受理政策.md
+            - 4.12.29-151.3 议题讨论：bugzilla 退役与 LLM 解码栈回溯.md
+            - 4.12.30-151.4 议题记录：linux-next 隐藏提交.md
+            - 4.12.31-151.5 议题讨论：合并树过平.md
+            - 4.12.32-151.7 数据更正：bugzilla 有用性论战.md
+            - 4.12.33-151.8 议题讨论：bugzilla 强制订阅.md
+            - 4.12.34-151.9 议题讨论：DRM 上游流程与合并窗口.md
+            - 4.12.35-151.10 议题讨论：C 聚合传递与内存模型.md
+            - 4.12.36-151.11 议题征集：ChromeOS 内核议题反馈.md
+            - 4.12.37-151.12 议题讨论：AI 代码审查发现项跟踪.md
+            - 4.12.38-151.13 议题讨论：C 聚合传递与数据竞争语义.md
+            - 4.12.39-151.14 议题讨论：合并树过平与主题分支.md
+            - 4.12.40-151.15 流程记录：TAB 选举 CIVS 投票操作.md
+            - 4.12.41-151.16 议题讨论：stable 邮件语义过滤.md
+            - 4.12.42-151.17 议题讨论：指针返回值注记分类.md
+            - 4.12.43-151.19 补丁反馈：kallsyms 行号信息.md
+            - 4.12.44-151.20 议题讨论：bugzilla 与邮件报障.md
+            - 4.12.45-151.21 议题讨论：LKL 块层与遗留存储.md
+            - 4.12.46-151.22 议题讨论：UMN 论文与 trivial 补丁.md
+            - 4.12.47-151.23 议题讨论：加速器驱动的用户态要求.md
+            - 4.12.48-151.25 流程记录：Message-Id 标签工具化.md
+            - 4.12.49-151.27 治理记录：叫停偏离议题言论.md
+            - 4.12.50-151.28 议题讨论：AI 审查工具进峰会议程.md
+            - 4.12.51-151.29 议题讨论：Qualcomm 上游合规反证.md
+            - 4.12.52-151.30 议题讨论：bugzilla 之后的定位与经费.md
+            - 4.12.53-151.31 议题讨论：Fixes 标签强制实践.md
+            - 4.12.54-151.32 议题讨论：UnsafeCell 别名语义.md
+            - 4.12.55-151.33 议题讨论：AI 在内核流程的角色.md
+            - 4.12.56-151.34 议题讨论：C 内存模型与依赖序.md
+            - 4.12.57-151.36 议题讨论：linux-next 合并顺序分析.md
+            - 4.12.58-151.37 议题讨论：遗留文件系统的存废.md
+            - 4.12.59-151.38 议题提案：每 cgroup 交换设备控制.md
+            - 4.12.60-151.39 议题讨论：dt-bindings 与 DT 一致性.md
+            - 4.12.61-151.40 议题讨论：linus-next 测试报告成本.md
+            - 4.12.62-151.41 议题讨论：bufferhead 与高阶 folio.md
+            - 4.12.63-151.43 议题讨论：GKI 冻结后的核心改动.md
+            - 4.12.64-151.44 议题讨论：AI 审查的局限与定位.md
+            - 4.12.65-151.45 议题讨论：文档构建 PATH 行为定论.md
+            - 4.12.66-151.46 提案：Fixes 标签规则.md
+            - 4.12.67-153.1 Link trailer 替代方案.md
+            - 4.12.68-153.2 议题讨论：加速器用户态 API 设计方法论.md
+            - 4.12.69-153.3 议题讨论：linus-next 树提案评估.md
+            - 4.12.70-153.4 议题提案：revocable 机制防 use-after-free.md
+            - 4.12.71-153.5 议题讨论：C 整数溢出与饱和运算.md
+            - 4.12.72-153.6 流程记录：stable 合并窗口排队澄清.md
+            - 4.12.73-153.7 补丁评审：Link trailer 注释格式.md
+            - 4.12.74-153.8 议题讨论：提交与讨论可靠映射.md
+            - 4.12.75-153.10 补丁评审：kallsyms 行号表边界.md
+            - 4.12.76-153.11 治理立场：维护者峰会性质.md
+            - 4.12.77-153.12 议题讨论：新人补丁应基于哪棵树.md
+            - 4.12.78-153.13 议题讨论：AI 评审的法律风险反驳.md
+            - 4.12.79-153.14 议题讨论：AI 评审工具目标定位.md
+            - 4.12.80-153.15 治理立场：Bugzilla 去留.md
+            - 4.12.81-153.16 议题讨论：linus-next 失败定位.md
+            - 4.12.82-153.18 议题讨论：ISP 驱动 DRM 与 V4L2 路线之争.md
+            - 4.12.83-153.19 议题讨论：编译器重复读全局规则.md
+            - 4.12.84-153.20 议题讨论：无 Fixes 标签补丁为何进 stable.md
+            - 4.12.85-153.21 议题讨论：AI 逐字复制风险.md
+            - 4.12.86-153.22 议题讨论：文件系统信任模型与维护策略.md
+            - 4.12.87-153.23 治理立场：Bugzilla 维护现状.md
+            - 4.12.88-153.24 治理立场：全量采用 stable 修复.md
+            - 4.12.89-153.25 议题讨论：unwinding 与 stack walking 辨析.md
+            - 4.12.90-153.27 议题讨论：UALink 上游策略回应.md
+            - 4.12.91-153.28 议题讨论：b4 ai dig 目标说明.md
+            - 4.12.92-153.29 数据：kernel-doc 构建耗时.md
+            - 4.12.93-153.30 议题讨论：变量声明位置规则反驳.md
+            - 4.12.94-153.31 议题讨论：厂商直通与小众设备.md
+            - 4.12.95-153.32 议题讨论：本地小模型评审可行性.md
+            - 4.12.96-153.33 流程记录：主题分支与 PR 工作流.md
+            - 4.12.97-153.35 议题讨论：htmldocs 构建性能.md
+            - 4.12.98-153.36 补丁评审：工具生成内容文档措辞.md
+            - 4.12.99-153.37 议题讨论：pre-git 历史 Fixes 标签.md
+            - 4.12.100-153.38 补丁评审：Link 注释格式文档一致性.md
+            - 4.12.101-153.40 议题讨论：highmem 淘汰假设修正.md
+            - 4.12.102-153.41 补丁评审：工具生成内容增量补丁.md
+            - 4.12.103-153.42 议题讨论：stable 回归修复义务反驳.md
+            - 4.12.104-153.44 议题讨论：KTODO 与既有任务源差异.md
+            - 4.12.105-153.45 议题讨论：web 表单报障优势.md
+            - 4.12.106-153.46 议题讨论：base-commit 指定语义.md
     - 第5章-BSD 与 Linux 的技术互承
         - 5.1-内核接口与系统调用的 BSD 渊源
+            - 5.1.1-Linux社区2005年SergeEHallyn在命名空间隔离讨论中引用自己实现.md
+            - 5.1.2-Linux社区2025年ChristianBrauner提交让core_patt.md
+            - 5.1.3-Linux社区AndyLutomirski在linuxapi上与EricBied.md
+            - 5.1.4-Linux社区AndyLutomirski在openat2OPENAT2_REG.md
+            - 5.1.5-Linux社区SukadevBhattiprolu发布clone3系统调用补丁集.md
+            - 5.1.6-Linux社区MADV_FREE提案引用jemalloc实践指出该能力在BSD与.md
+            - 5.1.7-Linux社区PaoloBonzini在评论FreeBSDCapsicum移植补.md
+            - 5.1.8-Linux社区ChristianBrauner在close_range系统调用补.md
+            - 5.1.9-Linux社区LinusTorvalds在mincore特权化讨论中转引Matt.md
+            - 5.1.10-Linux社区CambdaZhu发现Linux的kill允许把线程ID当作进程I.md
+            - 5.1.11-Linux社区JoshTriplett在CLONE_FD补丁讨论中回应David.md
+            - 5.1.12-Linux社区AmeerHamza提议为openat增加O_EMPTY_PATH.md
+            - 5.1.13-Linux社区fsync_range与fsync语义讨论中ChristophHe.md
+            - 5.1.14-Linux社区DavidDrysdale在CLONE_FD讨论中直接以FreeB.md
+            - 5.1.15-Linux社区DavidMiller在BTRFS分区起始位置的讨论中指出Sun磁.md
+            - 5.1.16-Linux社区AlViro在POSIX分歧讨论中把BSD系Unix的实际行为抬升.md
+            - 5.1.17-Linux社区fuseuapi类型补丁引发BSD可移植性讨论ArndBergma.md
+            - 5.1.18-Linux社区在用户命名空间补丁讨论中TrondMyklebust建议EricB.md
+            - 5.1.19-Linux社区在storefree路径遍历的性能讨论中ChristophHell.md
+            - 5.1.20-Linux社区AlViro提交vfsgit分支workufs的UFS清理系列共1.md
+            - 5.1.21-Linux社区JonathanKowalski评审pidfd轮询支持时建议改用P.md
+            - 5.1.22-Linux社区utimensat写权限检查修复补丁的评审回帖中MichaelKe.md
+            - 5.1.23-Linux社区MichaelKerrisk在linuxfsdevel报告writ.md
+            - 5.1.24-Linux社区LinusTorvalds在fsufs挂载崩溃的讨论中公开为UFS.md
+            - 5.1.25-Linux社区AurelienJarno在FS_IOC_GETFLAGS与FS_.md
+            - 5.1.26-Linux社区ThomasGleixner就selfteststests_sys.md
+            - 5.1.27-Linux社区EricBiederman在无mntput发生IO的补丁讨论中说明.md
+            - 5.1.28-Linux社区PhillipPotter向fsufs提交注释格式补丁改动s_u2.md
+            - 5.1.29-Linux社区MatthewWilcox在iomap_writepage移除讨论.md
+            - 5.1.30-Linux社区JanBlunck为联合文件系统新增whiteout文件类型时直接.md
+            - 5.1.31-Linux社区在FUSE于close返回EBADF的争论中被引的AntonioS.md
+            - 5.1.32-Linux社区AmirGoldstein在原子文件数据替换接口之争中提议直接沿用.md
+            - 5.1.33-Linux社区fsufs挂载几何校验补丁论证圆柱摘要缓冲区需按ufs1与ufs2.md
+            - 5.1.34-Linux社区AlViro回应UFS的UBSAN移位越界报告称将复活旧补丁为uf.md
+            - 5.1.35-Linux社区ChristianBrauner在文件系统信任与维护治理议题中延续.md
+            - 5.1.36-Linux社区LSF与MM大会参会意向登记中AntonAltaparmakov陈.md
         - 5.2-驱动与硬件移植承袭
+            - 5.2.1-Linux社区2002年5月DouglasGilbert回应Linux2425S.md
+            - 5.2.2-Linux社区MarkCaveAyland用QEMU仿真sunhme卡时发现内核.md
+            - 5.2.3-Linux社区LouisLiu讨论SunNetraE4900上SILO引导加载器.md
+            - 5.2.4-Linux社区ChrisNewport就内核崩溃转储设计建议在SPARC上借鉴S.md
+            - 5.2.5-Linux社区在讨论允许sparc64sbus建立大于1MB映射的补丁时补丁作者.md
+            - 5.2.6-Linux社区LudwigRydberg提交为SPARC架构增加clone3系统.md
+            - 5.2.7-Linux社区SergeiTrofimovich指出glibc手册把O_NDEL.md
+            - 5.2.8-155.4 许可证.md
+            - 5.2.9-Linux社区Sun3x平台的ESPSCSI驱动清理补丁属BSD谱系硬件Sun3.md
+            - 5.2.10-Linux社区补丁清理aic79xx与aic7xxx驱动的MODULE_PARM.md
+            - 5.2.11-Linux社区MarkFortescue在sparc32上调试ESP与QLGCI.md
+            - 5.2.12-Linux社区用户态iSCSItarget库选型讨论中JeffGarzik表示已.md
+            - 5.2.13-Linux社区针对aic7xxx语法文件缺分号的小补丁Gibbs表示FreeBS.md
+            - 5.2.14-Linux社区LSImpt2sas驱动Kconfig配置文件包含GNUGPL许可.md
+            - 5.2.15-Linux社区MODULE_VERSION补丁的diff暴露驱动注释的历史来源作.md
+            - 5.2.16-Linux社区DouglasGilbert发布sg3_utils工具包声明已移植.md
+            - 5.2.17-Linux社区磁带stioctl文档MT_ST_SYSV选项的语义颠倒问题Aar.md
+            - 5.2.18-Linux社区kernelbugzilla80711关于SG_FLAG_LUN_.md
+            - 5.2.19-Linux社区AndreHedrick转发LinusTorvalds关于维护者否.md
         - 5.3-安全与能力模型承袭
+            - 5.3.1-219.1 【Linux社区】Capsicum 移植尝试（2014 David Drysdale 移植 FreeBSD 能力框架，未合入）（9 条）.md
+            - 5.3.2-219.4 【Linux社区】Landlock 权利集继承（2016-2021 合入主线，Capsicum 唯一落地后代）（3 条）.md
+            - 5.3.3-208.1 【Linux社区】dtrace 与内核追踪.md
+            - 5.3.4-208.2 【Linux社区】capsicum 能力模型.md
+            - 5.3.5-208.3 【Linux社区】KAME 与 IPv6／IPsec.md
+            - 5.3.6-208.4 【Linux社区】strlcpy 与 API 移植.md
+            - 5.3.7-208.5 【Linux社区】kqueue／kevent 事件机制.md
+            - 5.3.8-208.6 【Linux社区】arc4random 与 fork 安全.md
+            - 5.3.9-208.8 【Linux社区】BSD 守护进程惯例.md
+            - 5.3.10-【Linux社区】IP_PORTRANGE 与端口管理.md
+            - 5.3.11-208.11 【Linux社区】BSD 治理智慧（续 207.3）.md
+            - 5.3.12-217.1 【Linux社区】BSD 安全谱系与 Linux 能力模型（6 条）.md
+            - 5.3.13-217.2 【Linux社区】BSD 安全技术反向输出与 Linux 采纳（7 条）.md
+            - 5.3.14-219.2 【Linux社区】O_BENEATH 与受限路径解析（FreeBSD 语义进入 openat，未以原名合入）（4 条）.md
+            - 5.3.15-219.3 【Linux社区】CLONE_FD 进程生命周期通知（FreeBSD pdfork 移植，未合入）（3 条）.md
+            - 5.3.16-219.5 【Linux社区】openat2 与 RESOLVE_IN_ROOT（FreeBSD 路径约束语义的最终落地形态）（3 条）.md
+            - 5.3.17-219.6 【Linux社区】附录对照：横向引用、反向流向与词面噪声（3 条）.md
         - 5.4-BSD Jail 与 LSM 分歧
+            - 5.4.1-Linux社区20090415多播重复投递补丁争论NeilHorman以跨系统成.md
+            - 5.4.2-Linux社区AlanCox对BSDJailLSM补丁提出接口设计意见认为jai.md
+            - 5.4.3-Linux社区perskb控制消息补丁讨论中DavidMiller在Stephe.md
+            - 5.4.4-Linux社区TIME_WAIT状态行为讨论中参与者追问Linux为何在SO_R.md
+            - 5.4.5-Linux社区DougMcNaught指出Stevens教材描述的是44BSDL.md
+            - 5.4.6-Linux社区VladYasevich讨论组播自收行为差异时说明客户正从BSD迁.md
+            - 5.4.7-Linux社区PekkaSavola转发默认地址选择性能顾虑称所引顾虑出自一位B.md
+            - 5.4.8-Linux社区EricDumazet在tcp多端口bind修复的问题讨论中转发用.md
+            - 5.4.9-Linux社区讨论IPv6UDP绑定语义时面对为何保留这一反直觉行为的提问Eri.md
+            - 5.4.10-Linux社区VegardNossum质疑CONFIG_NET_KEY帮助文本与.md
+            - 5.4.11-Linux社区StephenHemminger用jhash2替换ipv6addr.md
+            - 5.4.12-Linux社区MichaelSTsirkin在流量控制与端口镜像测试讨论中引用s.md
+            - 5.4.13-Linux社区TomaszTorcz在netdev转发FreeBSD53网络栈改.md
+            - 5.4.14-Linux社区Davem以BSDAPI兼容性为由否决了一个DiffServ路由补.md
+            - 5.4.15-Linux社区IPv6流标签补丁评审中FlorentFourcot反对该新行为并.md
+            - 5.4.16-Linux社区虚拟CAN网络设备驱动补丁入树vcanc的模块许可证声明为Dual.md
+            - 5.4.17-Linux社区EvgeniyPolyakov为把CARP放进内核而非用户态辩护称.md
+            - 5.4.18-Linux社区jamal转发LennertBuytenhek关于etherip的.md
+            - 5.4.19-Linux社区关于内核层socket包装符是否该用EXPORT_SYMBOL_G.md
+            - 5.4.20-Linux社区TCPBIC11讨论中提出是否考虑YeeTingLi的ABC补丁并.md
+            - 5.4.21-Linux社区i40e驱动故障讨论中引用FreeBSD侧修复并被IntelFre.md
+            - 5.4.22-Linux社区XDP讨论中ThomasGraf引述FlorianWestphal.md
+            - 5.4.23-Linux社区RolandDreier的InfiniBandMAD补丁与其系列补.md
+            - 5.4.24-Linux社区MichaelWu梳理Linux80211现状时指出Madwifi.md
+            - 5.4.25-Linux社区Linux挪用BSD代码指控的争论中AdrianBunk澄清两件被.md
+            - 5.4.26-Linux社区IPsec在2561的讨论中USAGI的KazunoriMiyaz.md
+            - 5.4.27-Linux社区IPv6隧道链路本地地址自动配置讨论中PekkaSavola以Fr.md
+            - 5.4.28-Linux社区VladYasevich接续FreeBSD客户机导致skb_war.md
+            - 5.4.29-Linux社区ipsysctltxt字母序整理补丁触及tcp_stdurg说明文.md
+            - 5.4.30-Linux社区AdrianChadd在排队时延与bufferbloat讨论中自述.md
+            - 5.4.31-BSD邮件列表被当作BPF语义的权威判定来源谱系实证netdevmessage.md
+            - 5.4.32-Linux社区IPv6组播转发缓存阈值补丁讨论中提交者AngWayChuang依.md
+            - 5.4.33-Linux社区RealtekRTL8211EPHY隐藏RGMII控制寄存器0x1.md
+            - 5.4.34-Linux社区MichalSoltys解释HFSCRT曲线的弹性语义指出BSD系.md
+            - 5.4.35-Linux社区SCTP自动ASCONF套接字选项补丁中WeiYongjun在实现.md
+            - 5.4.36-Linux社区WolfgangGrandegger提交SJA1000CAN控制器.md
+            - 5.4.37-Linux社区SO_BPF_EXTENSIONS补丁讨论中DavidLaight.md
+            - 5.4.38-Linux社区DaveTaht在Allow00008asavalidaddres.md
+            - 5.4.39-Linux社区SO_REUSEADDR讨论延续前帖有人批评BSD的绑定不对称设计.md
+            - 5.4.40-Linux社区ChristophLameter在回复multicast过滤讨论时.md
+            - 5.4.41-Linux社区MT7531DSA绑定把reset改为可选的争论中HeikoStu.md
+            - 5.4.42-Linux社区netdev线程把Linuxsunrpc的RPCSEC_GSS序列.md
+            - 5.4.43-Linux社区IPv6扩展头权限白名单讨论中BSD的接口谱系地位被点出Sowmi.md
+            - 5.4.44-Linux社区UrsThuermann的CANbroadcastmanager补.md
+            - 5.4.45-Linux社区作者发现netlink代码生成器产物的SPDX标记与其规格不一致生.md
+            - 5.4.46-Linux社区Linux是否窃取代码的转帖中BSD派生源码的许可身份被点明讨论者.md
+            - 5.4.47-Linux社区BenHutchings在IPv6TCLASS套接字选项一致性争议.md
         - 5.5-内存管理与地址空间随机化
+            - 5.5.1-Linux社区20000524linuxmm讨论234版VM队列重构RFC时Ma.md
+            - 5.5.2-Linux社区2000年7月17日VM替换算法讨论中AlanCox以FreeBS.md
+            - 5.5.3-Linux社区2001年AlanCox在无盘节点swap讨论的回复帖中引有nei.md
+            - 5.5.4-Linux社区ChristophHellwig于2002年提交的BKchange.md
+            - 5.5.5-Linux社区2004年2月18日invalidate_mmap_range非G.md
+            - 5.5.6-Linux社区2019年6月TejunHeo就memcg的get_mem_cgr.md
+            - 5.5.7-Linux社区2021年8月移除MAP_DENYWRITE讨论中DavidLai.md
+            - 5.5.8-Linux社区AndrewMorton汇总2559mm1补丁时BillDavid.md
+            - 5.5.9-Linux社区Linux地址空间随机化RFC讨论中作者以OpenBSD的mmap.md
+            - 5.5.10-Linux社区24内核reversemapping之争中Biederman明确以.md
+            - 5.5.11-Linux社区BenjaminCRLaHaise在本封中引用RikvanRiel.md
+            - 5.5.12-Linux社区同一mincore线程延续VlastimilBabka在权限与语义.md
+            - 5.5.13-Linux社区getrusageru_maxrss补丁的变更日志记录旧测试程序触.md
+            - 5.5.14-Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral.md
+            - 5.5.15-Linux社区LinusTorvalds就x86模块依赖外部PAGE_KERNE.md
+            - 5.5.16-Linux社区FreeBSDpageoutdaemon算法讨论DanielPhi.md
+            - 5.5.17-Linux社区khugepagedmTHP讨论中KirylShutsemau转引.md
+            - 5.5.18-Linux社区PedroFalcato在msealRFC讨论中以OpenBSD动.md
+            - 5.5.19-Linux社区NadiaChambers在64k基础页大小的LSFMMBPF讨论.md
+            - 5.5.20-Linux社区讨论kmalloc_obj类型化slab缓存时引用iOS与XNU的.md
         - 5.6-文件系统、ZFS 与网络承袭
+            - 5.6.1-209.1 【Linux社区】BSD 谱系（ZFS 交叉验证与 NFSv4 ACL 参照）.md
+            - 5.6.2-【Linux社区】BSD 文件系统技术反向输出（21 条）.md
+            - 5.6.3-216.2 【Linux社区】BSD 文件系统血统与 Linux 技术流向（13 条）.md
+            - 5.6.4-216.4 【Linux社区】BSD 治理智慧与 Linux 移植争议（3 条）.md
+            - 5.6.5-218.1 【Linux社区】BSD 网络技术反向输出（6 条）.md
         - 5.7-BSD 技术源流综述与人物互见
+            - 5.7.1-Linux社区2009年8月RobertWatsonrwatson@freebs.md
+            - 5.7.2-Linux社区2024年1月23日TheodeRaadtderaadt@open.md
+            - 5.7.3-154.3 BSD谱系.md
+            - 5.7.4-157.1 杂项.md
+            - 5.7.5-BSD谱系.md
+            - 5.7.6-Linux社区内核构建解耦用户态头文件起因之一即用户态头可能处于不兼容许可证并提.md
+            - 5.7.7-Linux社区AlanCox回应链接器表系列关于模块许可标记的讨论指出模块与内核.md
+            - 5.7.8-Linux社区NateKarstens在closeonfork补丁争议中为POS.md
+            - 5.7.9-Linux社区akpm转发的CreatearchKconfig补丁中Linus建.md
+            - 5.7.10-Linux社区PeterZijlstra就freelist补丁征询Cameron.md
+            - 5.7.11-205.1 【Linux社区】BSD 谱系：BSD 技术采纳与对照.md
+            - 5.7.12-205.3 【Linux社区】BSD 人物在 LKML 的出场.md
+            - 5.7.13-205.4 【Linux社区】BSD 治理智慧反哺 Linux.md
+            - 5.7.14-207.2 【Linux社区】BSD 人物在 LKML 的出场（续）.md
+            - 5.7.15-207.3 【Linux社区】BSD 治理智慧反哺 Linux（续）.md
+            - 5.7.16-210.1 【Linux社区】BSD 血统技术被 Linux 采用（10 条）.md
+            - 5.7.17-211.2 【Linux社区】BSD 血统与 Linux 技术流向（24 条）.md
+            - 5.7.18-212.3 【Linux社区】BSD 人物在 lkml 的张力出场（3 条）.md
+            - 5.7.19-213.1 【Linux社区】BSD 技术在 systemd 讨论中的张力（15 条）.md
+            - 5.7.20-213.3 【Linux社区】BSD 人物在 systemd-devel 的出场（2 条）.md
+            - 5.7.21-214.1 【Linux社区】BSD 技术在 Kernel Summit 的张力（8 条）.md
+            - 5.7.22-215.2 【Linux社区】BSD 血统与 Linux 技术流向（2 条）.md
         - 5.8-治理议题与峰会互见
+            - 5.8.1-Linux社区2002年GeoffreyLee就connect到端口0的行为询问.md
+            - 5.8.2-Linux社区TheodoreTso发布KernelSummit2014征题Ch.md
+            - 5.8.3-Linux社区2014年7月EricWBiederman在LKML回复David.md
+            - 5.8.4-Linux社区20180910MAINTAINERSSUMMITBugintro.md
+            - 5.8.5-Linux社区治理议题LinuxFoundationTAB宣布2019年选举转电.md
+            - 5.8.6-Linux社区AndrewTurner在Devicetree工作坊征询中代表Fr.md
+            - 5.8.7-Linux社区JoshTriplettvimfugitive工作流推荐Gblam.md
+            - 5.8.8-Linux社区StevenRostedt针对Kara转述的共识Linus已同意p.md
+            - 5.8.9-Linux社区FengguangWu回应Pinchart的0day状态页请求给出.md
+            - 5.8.10-Linux社区MelGorman就Weiner内存抖动议题给出VM机制诊断现有压.md
+            - 5.8.11-Linux社区LuisRRodriguez就固件加载安全语义与Lutomirsk.md
+            - 5.8.12-Linux社区DavidWoodhouse把签名讨论收拢回最小可行方案给requ.md
+            - 5.8.13-Linux社区SarahSharp论QRoops之社会面指Bjorn等维护者用b.md
+            - 5.8.14-Linux社区KeesCook附和Martin盼patchwork捕获cover.md
+            - 5.8.15-Linux社区Geert追问关键修复补丁不合标准+提交者跑路永不跟进你怎么办被禁.md
+            - 5.8.16-Linux社区DanWilliams将矛盾概括为customerfirstvsu.md
+            - 5.8.17-Linux社区TedTsoKS首轮邀请发出至少两名Gmail用户邀请进垃圾箱SP.md
+            - 5.8.18-206.2 【Linux社区】系统调用与内存管理.md
+            - 5.8.19-206.3 【Linux社区】文件系统与磁盘.md
+            - 5.8.20-【Linux社区】分区与硬件.md
+            - 5.8.21-206.5 【Linux社区】jail与容器.md
+            - 5.8.22-206.6 【Linux社区】其他技术承袭.md
         - 5.9-署名规范与用户态项目
+            - 5.9.1-Linux社区Colomar描述在shadow项目中先尝试改用NetBSD的st.md
+            - 5.9.2-Linux社区Robinson认为统一署名方案与GNU的做法一致AUTHORS文.md
+            - 5.9.3-Linux社区翻译者质疑exec3为何用frontend而非wrapper描述e.md
+            - 5.9.4-Linux社区aligned_alloc3的HISTORY段梳理C11两处UBs.md
+            - 5.9.5-Linux社区Schwarze说明mandoc版apropos1以TH宏的第一参.md
+            - 5.9.6-Linux社区Kerrisk在修订vfork2时增补42BSD手册原文的arch.md
+            - 5.9.7-Linux社区AlejandroColomar提议在manpages增设PARA.md
