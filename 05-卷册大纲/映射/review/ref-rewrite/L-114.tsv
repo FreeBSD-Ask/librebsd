@@ -1,0 +1,13 @@
+source_id	kind	old	new	context	disposition
+S-027094	h1	292.0.7	3.2.1	# 292.0.7 据讲者口述Netflix用FreeBSD与商用硬件实现每秒90吉比特承载100%	rewritten
+S-027102	h1	292.1.1	3.2.2	# 292.1.1 要点Netflix在扩展流媒体时选择FreeBSD构建OCA边缘设备理由包括网络	rewritten
+S-027126	h1	293.2.1	2.1.1	# 293.2.1 FreeBSD 在存储/网络设备的基底	rewritten
+S-027252	h1	298.3.1	3.3.1	# 298.3.1 Yahoo!/Hotmail 大规模部署	rewritten
+S-027559	h1	303.3.3	2.2.1	# 303.3.3 与 EMC Isilon 基于 FreeBSD 的比较	rewritten
+S-027561	h1	303.4.1	1.2.1	# 303.4.1 Junos 基于 FreeBSD 的架构与版本	rewritten
+S-027565	h1	303.5.1	3.2.3	# 303.5.1 Netflix 基于 FreeBSD 的 CDN 架构	rewritten
+S-027569	h1	303.6.1	3.5.1	# 303.6.1 WhatsApp 早期服务器基于 FreeBSD 的架构	rewritten
+S-027573	h1	303.7.1	2.6.1	# 303.7.1 TrueNAS CORE 与 SCALE 的架构	rewritten
+S-027597	h1	304.0.6	2.7.1	# 304.0.6 277.11.2 CORE 与 SCALE 并存时代的终结	rewritten
+S-027613	h1	304.2.2	2.7.2	# 304.2.2 CORE 与 SCALE 并存时代的终结	rewritten
+S-027677	h1	305.6.2	3.10.1	# 305.6.2 Azure 部署 FreeBSD 镜像的合作	rewritten
