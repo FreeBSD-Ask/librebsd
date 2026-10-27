@@ -2,4 +2,4 @@ docs-websites	文档、手册与网站事项	Porter's Handbook 与 pkg 手册等
 ports-ecosystem	Ports 树生态与归类	Port增长统计与社区贡献模式、commitbit 与贡献者身份往来、Port类别调整与 misc 分类由来、移植查询、linux_base 与 nvidia 等Ports 树生态话题。
 apps-clients	应用软件与服务使用	mutt、mh、XEmacs、Motif、Apache、squid、ansible、telegram、PDF 工具等应用软件与网络服务的使用、推荐与配置问答。
 base-system	基本系统与内核话题	ktrace、top、fetch、getopt、sys/param.h、tun0、蓝牙鼠标、bhyve 等基础系统工具与内核的故障排查、版本澄清与升级建议。
-misc	杂项与无法判定	题面信息不足无法归入上述子主题的邮件细节（含无题面的 freebsdports 原始消息），以及 PayPal 信件、致谢致歉、通告更正等杂项往来。
+misc	杂项	题面信息不足无法归入上述子主题的邮件细节（含无题面的 freebsdports 原始消息），以及 PayPal 信件、致谢致歉、通告更正等杂项往来。

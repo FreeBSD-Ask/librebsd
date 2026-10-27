@@ -9,4 +9,4 @@ install-release	安装与发布介质	ISO 与安装盘、无头与串口安装�
 sysadmin-tools	系统管理与命令行	cron 与 at、时间同步、man 手册、mount 与 shell 管道、单用户模式、邮件队列与 procmail 等系统管理题面入此桶。
 web-services	Web 与数据库服务	Apache、PHP、FastCGI、MySQL 等网络服务与数据库应用的部署与故障题面入此桶。
 storage-zfs	存储与文件系统	ZFS 池管理、GPT 与磁盘存储、nullfs 与 NFS 挂载行为等存储题面入此桶。
-misc	题面杂项	题面信息不足、转帖致谢与列表事务类，以及无法归入上述主题的邮件细节入此桶。
+misc	杂项	题面信息不足、转帖致谢与列表事务类，以及无法归入上述主题的邮件细节入此桶。
