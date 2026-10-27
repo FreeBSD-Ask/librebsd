@@ -13,7 +13,7 @@
 - **编纂基准**：新版编纂总纲 v1.0，见 `05-卷册大纲/目录/00-v3-方法论增强-新版编纂总纲.md`。
 - **大纲基准**：commit `8010dce` 为结构基准（已插入第 1 章“UNIX 前史”并全书重编号）——该哈希为 2026-10-17 历史重写前的陈旧标识，现行历史已不含此提交；重写前全史备份＝`script/_bak/20261017/librebsd-mirror-pre-rewrite.git`。
 - **现行大纲目录**：`05-卷册大纲/目录/index.html`（S-me 目录预览）——**装配产物**，一切修改走装配器（见“修改规范”第八件）；页首 `doc-metrics` 是全项目口径的**唯一机器可读权威**。
-- **书评挂靠与外迁**：目录页“本章书目述评”以编号小节挂靠宿主章，卷级综述升格“卷末书目述评”章（每卷至多 1 个）；折叠体全文外迁 `08-核查报告与多轮复核/12-重构大纲书目述评/`，目录页禁载全文（见 28 号文与 `流程规则.md`）。
+- **书评挂靠与外迁**：目录页“本章书目述评”以编号小节挂靠宿主章，卷级综述升格“卷末书目述评”章（每卷至多 1 个）；折叠体全文外迁 `08-核查报告与多轮复核/12-重构大纲书目述评/`，目录页禁载全文（见 28 号文与 `流程规则/00-索引.md`）。
 - **范围**：**禁止编纂正文**；工作范围限于大纲、考据、数据库与目录页。
 
 <!-- BEGIN 口径基准（脚本自动维护，勿手改数字，最后同步 2026-10-27） -->
@@ -40,7 +40,7 @@
 
 ## 文件结构
 
-顶层共 **11 个编号目录**（00–12，编号缺口 **06** 与 **09**）＋ **6 个未编号保留目录**。全部采用“数字序号-中文名称”命名；编号缺口与序号调整的唯一规则见 `流程规则.md`“序号调整例外”“编号缺口登记”小节。
+顶层共 **11 个编号目录**（00–12，编号缺口 **06** 与 **09**）＋ **6 个未编号保留目录**。全部采用“数字序号-中文名称”命名；编号缺口与序号调整的唯一规则见 `流程规则/04-大纲结构与编号.md`“序号调整例外”“编号缺口登记”小节。
 
 ### 一级文件夹（11 个编号目录）
 
@@ -72,11 +72,11 @@
 
 ### 数据库五条通则
 
-1. **DuckDB 为唯一工作副本**（可写）；SQLite 原库以 `ARCHIVE_FINAL_*.db.gz` 永久归档于 `12-数据库备份/` 各库子目录（prune 豁免）。细则见 `流程规则.md`“DuckDB 分析层与主存储层规则”。**运行时版本锁定 `duckdb==2.0.0`**（2026-10-24 切换；唯一声明源 `01-规则/脚本与命令/duckdb-version-baseline.txt`，变更须先走 ADR；三脚本启动校验不一致即退出码 2）；**25 个正式库已迁至新存储格式（v1.0.0 系 → v2.0.0，编号 64→69），`changelog.duckdb` 仍为 v64**——1.5.5 已读不了已迁库，库回退只能靠 `12-数据库备份/` 既有归档重灌（`ADR-0017`，台账 `duckdb-2.0-migration-ledger.md`）。**存储版本只能用 `SELECT tags FROM duckdb_databases()` 读**（`storage_version` 键），禁读文件头偏移 12（2.0.0 起该字段固定为弃用哨兵 999）；巡检入口＝`audit_databases.py` 的 `StorVer` 列与“存储版本分布”、`claimdb_guard.py` 每库头部的 `存储版本=`。
-2. **claim 库唯一真值**：`04-现代研究文献/historical_claims.duckdb`（34 表；行数随批次增长，以库为准）。大纲 ROW_MINE 块头与目录溯源注中的 `historical_claims.duckdb` 均为**逻辑名**，物理路径唯一；同名空壳已清除，防再生见 `流程规则.md`“功能数据库唯一真值路径与空壳防治”。
+1. **DuckDB 为唯一工作副本**（可写）；SQLite 原库以 `ARCHIVE_FINAL_*.db.gz` 永久归档于 `12-数据库备份/` 各库子目录（prune 豁免）。细则见 `流程规则/07-数据库与数据层.md`“DuckDB 分析层与主存储层规则”。**运行时版本锁定 `duckdb==2.0.0`**（2026-10-24 切换；唯一声明源 `01-规则/脚本与命令/duckdb-version-baseline.txt`，变更须先走 ADR；三脚本启动校验不一致即退出码 2）；**25 个正式库已迁至新存储格式（v1.0.0 系 → v2.0.0，编号 64→69），`changelog.duckdb` 仍为 v64**——1.5.5 已读不了已迁库，库回退只能靠 `12-数据库备份/` 既有归档重灌（`ADR-0017`，台账 `duckdb-2.0-migration-ledger.md`）。**存储版本只能用 `SELECT tags FROM duckdb_databases()` 读**（`storage_version` 键），禁读文件头偏移 12（2.0.0 起该字段固定为弃用哨兵 999）；巡检入口＝`audit_databases.py` 的 `StorVer` 列与“存储版本分布”、`claimdb_guard.py` 每库头部的 `存储版本=`。
+2. **claim 库唯一真值**：`04-现代研究文献/historical_claims.duckdb`（34 表；行数随批次增长，以库为准）。大纲 ROW_MINE 块头与目录溯源注中的 `historical_claims.duckdb` 均为**逻辑名**，物理路径唯一；同名空壳已清除，防再生见 `流程规则/07-数据库与数据层.md`“功能数据库唯一真值路径与空壳防治”。
 3. **数据库备份保留规则（系统化，2026-10-14 起）**：三计划任务（`librebsd-dball-backup-30min`／`librebsd-hc-backup-30min`／`librebsd-outline-backup-30min`，均以 pythonw 无窗口后台运行；频次每 5 小时，2026-10-15 ykla 令），常规备份**不再是人工义务**；重大施工前须向 `12-数据库备份/<db>/` 追加一份**专项正式备份**（`<YYYYMMDD_HHMMSS>.db.gz` 或 `before_<批次>_<日期>.db.gz`，同目录落 `.json` 清单），**禁止**在工作区或备份目录使用 `prebak*` 等旁路副本（2026-10-23 用户令）；功能/史料库用**24 小时密槽（30 分钟粒度）＋1/2/3/4/7/15 日槽**，代码仓库 12 库用**轻槽**（无密槽，≤7 份）；播客 10 库／邮件列表库／新闻组库明确不备份，`references_fulltext` 保留；日志 `12-数据库备份/backup_log.jsonl` 与桌面《数据库备份.txt》（滚动 15 日）。**归档体是 `EXPORT DATABASE (FORMAT PARQUET)` → tar → gzip 的逻辑导出**（34 parquet ＋ `schema.sql` ＋ `load.sql`）——**恢复须跑档内 `load.sql`，不是单文件拷贝**；完整性由 `verify_archive()` 三段校验，判据不得用“档内前 6 字节 == DUCK 魔数”。
-4. **写库门禁**：任何批量写库（受控修库／register／批量导入）前必跑 `claimdb_guard.py --db <库名>`（PASS 才写、FAIL 即停）；register 另须 `register_waterlock.py` 水位锁，写前写后各落 `rotate_guard_state.py` 一槽。详见 `流程规则.md`“写库门禁与全库健康哨兵”。
-5. **文件夹级数据库**：`*.duckdb` 不入库；新表须两处登记＋`schema_meta`；`files` 行随源文件级联刷新；转库、源文件清理与交叉引用同步见 `流程规则.md`“其他文件夹转数据库规则”。
+4. **写库门禁**：任何批量写库（受控修库／register／批量导入）前必跑 `claimdb_guard.py --db <库名>`（PASS 才写、FAIL 即停）；register 另须 `register_waterlock.py` 水位锁，写前写后各落 `rotate_guard_state.py` 一槽。详见 `流程规则/07-数据库与数据层.md`“写库门禁与全库健康哨兵”。
+5. **文件夹级数据库**：`*.duckdb` 不入库；新表须两处登记＋`schema_meta`；`files` 行随源文件级联刷新；转库、源文件清理与交叉引用同步见 `流程规则/07-数据库与数据层.md`“其他文件夹转数据库规则”。
 
 ### 根目录未编号保留目录
 
@@ -92,7 +92,7 @@
 | `.zcode/` | ZCode 工作区路径 | 忽略 |
 | `.autocorrectrc`、`.gitattributes`、`.gitignore`、`LICENSE` | 根配置 | 入库 |
 
-`.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则.md`）；**2026-10-17 ykla 裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
+`.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则/00-索引.md`）；**2026-10-17 ykla 裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
 
 ## 规则调用
 
@@ -102,7 +102,7 @@
 | ------ | -------- |
 | 史料考据、来源可信度、许可证与判例、存疑处理 | `考据规则.md` |
 | 文字标点、术语与翻译、加粗与代码、手册页引用、结构化大纲 | `写作规则.md` |
-| 工作流程、修改前后复核、脚本安全、文件编码、数据库与备份、目录页门禁、G0–G5 阶段与裁剪 | `流程规则.md` |
+| 工作流程、修改前后复核、脚本安全、文件编码、数据库与备份、目录页门禁、G0–G5 阶段与裁剪 | `流程规则/00-索引.md` |
 | 工程类批次的需求基线、ADR、技术债、04／05／06 专项、复审与既有规则治理 | `工程实践规则.md` |
 | 合规认证、Linux 文化挪用、仅 FreeBSD 内容跨 BSD/UNIX/macOS 扩展 | `主题规则.md` |
 | 项目统摄史观的引用、释读、映射 | `释读规则.md` |
@@ -130,7 +130,7 @@
 
 ## 内容扩展接口
 
-新增内容须四要素齐备：**路径、命名、必含字段、登记处**。登记处一律是 `规则/README.md` 或 `脚本与命令/README.md`——**本文件不再承担逐条规则登记**（去重规则见 `流程规则.md`“AGENTS.md 与规则目录去重规则”）。
+新增内容须四要素齐备：**路径、命名、必含字段、登记处**。登记处一律是 `规则/README.md` 或 `脚本与命令/README.md`——**本文件不再承担逐条规则登记**（去重规则见 `流程规则/11-治理与体例裁定.md`“AGENTS.md 与规则目录去重规则”）。
 
 | 类别 | 路径与命名 | 必含内容 | 登记／同步 |
 | ---- | ---------- | -------- | ---------- |
@@ -141,12 +141,12 @@
 | 事实核查 | `07-事实核查记录/`（原子记录）／`08-核查报告与多轮复核/`（汇总） | 模板 B（`02-操作手册/模板B-单条事实核查记录.md`）：id、claim、evidence_strength、page、controversy、verifier、verified_date、status；YAML Frontmatter ＋ Markdown 正文；**evidence_strength 须按 0 信任原则评级** | 按子目录归类（02-代码复核／03-时间节点复核／04-核查清单） |
 | 参考文献 | `04-现代研究文献/01-参考文献总目/index.md`；卷级综述另置 `02-卷级文献综述/` | GB/T 7714-2015：作者、题名、出版地、出版者、出版年、页码、ISBN/DOI | 追加著录后同步更新总目 `index.md`；若为大纲级综述来源，再登卷级综述子文件 |
 | 文献本体下载 | `04-现代研究文献/03-文献下载/01-pdf/`、`02-epub/`、`03-ocr/` | `YYYYMMDD_作者_书名.pdf`；OCR 输出同名 Markdown | 下载后在总目 `index.md` 追加完整著录（详见 `03-文献下载/README.md`） |
-| 脚本 | 临时 → `script/`；固定 → `01-规则/脚本与命令/` | Python，文件头 docstring 说明用途，见名知义 | 固定脚本须被规则文件引用并登记 `脚本与命令/README.md`（见 `流程规则.md`“规则引用脚本与命令独立存储规则”） |
+| 脚本 | 临时 → `script/`；固定 → `01-规则/脚本与命令/` | Python，文件头 docstring 说明用途，见名知义 | 固定脚本须被规则文件引用并登记 `脚本与命令/README.md`（见 `流程规则/02-脚本与执行安全.md`“规则引用脚本与命令独立存储规则”） |
 | Spec 配置 | `.trae/specs/<主题>-<YYYY-MM-DD>/` | `spec.md`（Why／What Changes／Impact＋SSOT Schema）、`tasks.md`、`checklist.md` | 在 `.trae/specs/` 下新建三文件；**不入库**（`.gitignore` 挡新增，2026-10-17 ykla 裁决——目录仍可用作工作区） |
 
 ## 修改规范
 
-分三层：**绝对红线**（任何批次不得触碰）→ **每批必跑门禁**（按触发面查表）→ **规则索引**（完整清单在 `规则/README.md`，此处不重复）。**判据正文一律见 `流程规则.md` 对应小节**，本表只给触发条件与脚本；件次索引与流程规则同名，可互查。
+分三层：**绝对红线**（任何批次不得触碰）→ **每批必跑门禁**（按触发面查表）→ **规则索引**（完整清单在 `规则/README.md`，此处不重复）。**判据正文一律见 `流程规则/00-索引.md` 对应小节**，本表只给触发条件与脚本；件次索引与流程规则同名，可互查。
 
 ### 一、绝对红线
 
@@ -154,14 +154,14 @@
 2. **不手改装配产物**：`05-卷册大纲/目录/index.html` 是装配产物，一切修改走 `assemble_index.py`；内容只改 `data/outline.txt`，非正文文案只改 `data/ui-strings.json`；不得在源中写 HTML 标记，不得硬编码口径数字（须用占位符）。
 3. **0 信任与联网复核**：事实改写须联网复核；聚合站不得作一手；“未获一手确证”≠“不存在”。
 4. **引号**：一律用弯引号 “”‘’；**禁直角引号（U+300C／U+300D／U+300E／U+300F）**。**引用与代码块逐字保真**，禁“顺手美化”。**文档类文件（.md/.txt，非内容层）的直角引号由 pre-commit hook（`git_commit_gate.py`）自动转弯引号**（仅围栏代码块与行内代码段之外的文本；内容层与逐字保真档案不在改正面，须人工改）。不可见字符清理为全口径、与引号改正面不同（见红线 5）。
-5. **禁 AI 不可见字符**（不可见字符由 pre-commit hook **F2 全口径自动清理**——Cf 删除＋Zs 归一半角空格；U+FFFD 只披露；commit-msg **B4 兜底阻断**，批准标记 `APPROVED-BY-OWNER:` 放行）。**清理口径（2026-10-17 ykla 裁定，详见 `流程规则.md`“AI 不可见字符清理规则”）**：①零宽／格式控制符（Unicode Cf 全体，含 U+200B–U+200F、U+2060–U+206F、U+FEFF、U+00AD 等）一律删除；②空格类（U+3000、U+00A0、U+202F 等 Zs 除 U+0020）一律改 1 个半角空格并合并空白串，行首／行尾整段删除；③U+FFFD 系编码损坏标记，默认只报告；经 ykla 明示可清理（2026-10-21 令），须先落台账（文件／位置／前后文），可确证缺字者恢复原字母，无从确证者删除、不臆造字符；④引文内的原文残留字符经 2026-10-17 ykla 明示一并清除（逐字保真红线的明示豁免）；⑤换行形态逐行保留，写盘 UTF-8 无 BOM。工具：`脚本与命令/scan_md_invisible.py`（复扫判据）＋`脚本与命令/fix_md_invisible.py`（执行器，默认 dry-run）；分层总览见 `流程规则.md`“统一门禁分层总览”。
+5. **禁 AI 不可见字符**（不可见字符由 pre-commit hook **F2 全口径自动清理**——Cf 删除＋Zs 归一半角空格；U+FFFD 只披露；commit-msg **B4 兜底阻断**，批准标记 `APPROVED-BY-OWNER:` 放行）。**清理口径（2026-10-17 ykla 裁定，详见 `流程规则/03-文件、编码与路径.md`“AI 不可见字符清理规则”）**：①零宽／格式控制符（Unicode Cf 全体，含 U+200B–U+200F、U+2060–U+206F、U+FEFF、U+00AD 等）一律删除；②空格类（U+3000、U+00A0、U+202F 等 Zs 除 U+0020）一律改 1 个半角空格并合并空白串，行首／行尾整段删除；③U+FFFD 系编码损坏标记，默认只报告；经 ykla 明示可清理（2026-10-21 令），须先落台账（文件／位置／前后文），可确证缺字者恢复原字母，无从确证者删除、不臆造字符；④引文内的原文残留字符经 2026-10-17 ykla 明示一并清除（逐字保真红线的明示豁免）；⑤换行形态逐行保留，写盘 UTF-8 无 BOM。工具：`脚本与命令/scan_md_invisible.py`（复扫判据）＋`脚本与命令/fix_md_invisible.py`（执行器，默认 dry-run）；分层总览见 `流程规则/03-文件、编码与路径.md`“统一门禁分层总览”。
 6. **含反引号或 `$` 的文本禁用 `python -c` 双引号内联**（bash 命令替换会掏空内容）；一律写临时脚本（`script/`，UTF-8 无 BOM＋LF）再跑。
 7. **时区与时钟**：取本地时间用系统 `date`／`Get-Date`，勿加 TZ 覆盖；**会话注入的 current_time ≠ 机器时钟**，“是否到点／超时”以实测双源互证。
 8. **根目录禁止新建文件、脚本或目录**，未经显式批准。
 9. **删除 `12-数据库备份/` 任何内容须用户明示**。
 10. **抓取不受 robots.txt 或类似限制约束**（项目既定口径）。
-11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由双阶段 hook（`git_commit_gate.py`，2026-10-17 ykla 批准安装并扩展）自动执行**：pre-commit 自动改正（直角引号弯化／零宽删除／CRLF→LF，仅文档类文件）；commit-msg 阻断（G1 忽略条目／G2 大文件／B2 根目录新条目／B3 备份删除／B4 全角空格／**B5 旁路备份副本**（无放行标记，与红线 12 同口径；状态 D 不拦以免堵死整改删除）／**H3 暂存 .md 含直角引号六码位**——与第二十四件同口径的提交期兜底，F1 不触及的代码上下文与内容层面在此阻断／**H1 提交说明质量**——首行非空、≥8 字符、非占位、无 BOM，无放行标记），批准标记 `APPROVED-IGNORED:`／`APPROVED-BIGFILE:`／`APPROVED-BY-OWNER:` 放行，`--no-verify` 绕过须留痕。详见 `流程规则.md`“Git 暂存规则”。
-12. **禁止旁路备份副本**（2026-10-23 用户令）：任何目录（**含 `script/`**）不得创建 `.bak`／`.bak-`／`.bak_`／`.pre`／`.prebak*`／`-bak`／`.orig`／`.rej`／`~` 等备份副本或 `script/_bak/`、`prebak-*` 备份目录；留痕与回滚唯一靠 Git（提交、标签、`git show`），数据库快照唯一靠 `12-数据库备份/` 三计划任务＋专项正式槽。违规件按“识别→逐件记录路径/字节/sha256→删除→复扫为零”处置，第四步由第三十六件 `audit_sidecar_backup.py` 常态执行（`--dump` 落逐件台账）。**执行器与输出目录命名不得含被清扫模式**（实测清扫器自删致台账丢失）。详见 `流程规则.md`“临时文件规则”与“旁路备份残留扫描门禁”。
+11. **Git 暂存门槛**：除非显式批准，禁止 `git add` 被 `.gitignore` 排除的条目（含 `-f`／`--force`）与单个 **>5 MB**（5,242,880 字节）的文件；暂存前用 `git status --ignored`、`git diff --cached --numstat` 自查，误加用 `git rm --cached` 撤回。**已由双阶段 hook（`git_commit_gate.py`，2026-10-17 ykla 批准安装并扩展）自动执行**：pre-commit 自动改正（直角引号弯化／零宽删除／CRLF→LF，仅文档类文件）；commit-msg 阻断（G1 忽略条目／G2 大文件／B2 根目录新条目／B3 备份删除／B4 全角空格／**B5 旁路备份副本**（无放行标记，与红线 12 同口径；状态 D 不拦以免堵死整改删除）／**H3 暂存 .md 含直角引号六码位**——与第二十四件同口径的提交期兜底，F1 不触及的代码上下文与内容层面在此阻断／**H1 提交说明质量**——首行非空、≥8 字符、非占位、无 BOM，无放行标记），批准标记 `APPROVED-IGNORED:`／`APPROVED-BIGFILE:`／`APPROVED-BY-OWNER:` 放行，`--no-verify` 绕过须留痕。详见 `流程规则/08-Git 与提交.md`“Git 暂存规则”。
+12. **禁止旁路备份副本**（2026-10-23 用户令）：任何目录（**含 `script/`**）不得创建 `.bak`／`.bak-`／`.bak_`／`.pre`／`.prebak*`／`-bak`／`.orig`／`.rej`／`~` 等备份副本或 `script/_bak/`、`prebak-*` 备份目录；留痕与回滚唯一靠 Git（提交、标签、`git show`），数据库快照唯一靠 `12-数据库备份/` 三计划任务＋专项正式槽。违规件按“识别→逐件记录路径/字节/sha256→删除→复扫为零”处置，第四步由第三十六件 `audit_sidecar_backup.py` 常态执行（`--dump` 落逐件台账）。**执行器与输出目录命名不得含被清扫模式**（实测清扫器自删致台账丢失）。详见 `流程规则/03-文件、编码与路径.md`“临时文件规则”与“旁路备份残留扫描门禁”。
 
 ### 二、每批必跑门禁
 
@@ -169,53 +169,53 @@
 
 | 触发面 | 门禁与脚本 | 判据正文 | 件次 |
 | ------ | ---------- | -------- | ---- |
-| 改任一装配源／模板／行为层 | `assemble_index.py --check` → 九件 → 三套浏览器回归 | `流程规则.md`“重构大纲目录四层解耦与装配规则”“目录页与文档门禁判据索引” | 第八件 |
-| 装配产物结构（增删卷章、改口径、改述评挂靠、重编号） | `audit_index_structure.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第七件 |
-| 内容源 `outline.txt` 章结构或改号 | `audit_renumber_guard.py`、`audit_silent_loss_guard.py` | `流程规则.md`“改号同源守卫”“重构静默丢失守卫” | 第十七／二十件 |
-| 注文、分工注、`catalog.json` 的 refs | `audit_note_xref.py`、`xref_audit.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第十四／五件 |
-| 向 `05-卷册大纲/` 写回证据等级标注块 | `audit_evidence_level_labels.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第六件 |
+| 改任一装配源／模板／行为层 | `assemble_index.py --check` → 九件 → 三套浏览器回归 | `流程规则/05-目录页与重构2026.md`“重构大纲目录四层解耦与装配规则”“目录页与文档门禁判据索引” | 第八件 |
+| 装配产物结构（增删卷章、改口径、改述评挂靠、重编号） | `audit_index_structure.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | 第七件 |
+| 内容源 `outline.txt` 章结构或改号 | `audit_renumber_guard.py`、`audit_silent_loss_guard.py` | `流程规则/05-目录页与重构2026.md`“改号同源守卫”“重构静默丢失守卫” | 第十七／二十件 |
+| 注文、分工注、`catalog.json` 的 refs | `audit_note_xref.py`、`xref_audit.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | 第十四／五件 |
+| 向 `05-卷册大纲/` 写回证据等级标注块 | `audit_evidence_level_labels.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | 第六件 |
 | 改动 `05-卷册大纲/` 的 BEGIN/END 标记（常备） | `audit_anchor_pair_order.py` | `TD-022-成对锚处置判据书.md` §四 D4、§十 | 第三十四件 |
-| 改动 `05-卷册大纲/` 内容或入纲写入后（常备） | `audit_outline_dup.py` | `流程规则.md`“大纲重复锚与重复块门禁” | 第三十五件 |
-| 改动 `05-卷册大纲/` 内容落地、映射台账、`targets.tsv`／`layout.tsv` 再生（常备） | `audit_outline_landing.py` | `流程规则.md`“大纲落地一致性门禁（L1–L17）” | 第三十七件 |
-| 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | `流程规则.md`“DATA 数据完整性门禁” | DATA 门禁 |
-| 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | `流程规则.md`“重构大纲目录页面资产层完整性门禁” | 第九件 |
-| 涉页面变更的每批收口 | `audit_page_version_bump.py` | `流程规则.md`“页面版本号递增兜底门禁” | 第十八件 |
-| 改内容源或测试夹具 | `audit_fixture_freshness.py` | `流程规则.md`“夹具新鲜度门禁” | 第十三件 |
-| 改 `serve_refactor2026.py` 及服务行为 | `audit_server_contract.py` | `流程规则.md`“05-卷册大纲/目录服务器” | 第十一件 |
-| 改装配源或模板后（常备） | `audit_a11y.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第二十二件 |
-| 改 `src/js` 行为源或 `doc.js`（常备） | `audit_js_blockscope.py` | `流程规则.md`“目录页与文档门禁判据索引” | 第二十三件 |
-| 新增／改动任何 `.md`（常备） | `audit_md_quote_glyphs.py` | `流程规则.md`“直角引号清零门禁” | 第二十四件 |
-| 新增／改动 `05-卷册大纲/` 树内 `.md`（常备） | `audit_md_bold_spacing.py` | `流程规则.md`“Markdown 加粗空格门禁” | 第二十八件 |
-| 人物库任何写入 | `audit_person_bio_integrity.py` | `流程规则.md`“人物库语义完整性门禁” | 第十五件 |
-| `provenance_history` 任何写入 | `audit_provenance_dupes.py` | `流程规则.md`“审计表完整性门禁” | 数据库类 |
-| 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
-| register 写库 | `register_waterlock.py probe → acquire → register → release` | `流程规则.md`“写库门禁与全库健康哨兵” | 写库门禁 |
+| 改动 `05-卷册大纲/` 内容或入纲写入后（常备） | `audit_outline_dup.py` | `流程规则/06-门禁体系.md`“大纲重复锚与重复块门禁” | 第三十五件 |
+| 改动 `05-卷册大纲/` 内容落地、映射台账、`targets.tsv`／`layout.tsv` 再生（常备） | `audit_outline_landing.py` | `流程规则/06-门禁体系.md`“大纲落地一致性门禁（L1–L17）” | 第三十七件 |
+| 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | `流程规则/05-目录页与重构2026.md`“DATA 数据完整性门禁” | DATA 门禁 |
+| 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | `流程规则/05-目录页与重构2026.md`“重构大纲目录页面资产层完整性门禁” | 第九件 |
+| 涉页面变更的每批收口 | `audit_page_version_bump.py` | `流程规则/05-目录页与重构2026.md`“页面版本号递增兜底门禁” | 第十八件 |
+| 改内容源或测试夹具 | `audit_fixture_freshness.py` | `流程规则/05-目录页与重构2026.md`“夹具新鲜度门禁” | 第十三件 |
+| 改 `serve_refactor2026.py` 及服务行为 | `audit_server_contract.py` | `流程规则/05-目录页与重构2026.md`“05-卷册大纲/目录服务器” | 第十一件 |
+| 改装配源或模板后（常备） | `audit_a11y.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | 第二十二件 |
+| 改 `src/js` 行为源或 `doc.js`（常备） | `audit_js_blockscope.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | 第二十三件 |
+| 新增／改动任何 `.md`（常备） | `audit_md_quote_glyphs.py` | `流程规则/06-门禁体系.md`“直角引号清零门禁” | 第二十四件 |
+| 新增／改动 `05-卷册大纲/` 树内 `.md`（常备） | `audit_md_bold_spacing.py` | `流程规则/06-门禁体系.md`“Markdown 加粗空格门禁” | 第二十八件 |
+| 人物库任何写入 | `audit_person_bio_integrity.py` | `流程规则/05-目录页与重构2026.md`“人物库语义完整性门禁” | 第十五件 |
+| `provenance_history` 任何写入 | `audit_provenance_dupes.py` | `流程规则/06-门禁体系.md`“审计表完整性门禁” | 数据库类 |
+| 任何批量写库（受控修库／register／批量导入） | `claimdb_guard.py --db <库名>`＋`rotate_guard_state.py pre/post` | `流程规则/07-数据库与数据层.md`“写库门禁与全库健康哨兵” | 写库门禁 |
+| register 写库 | `register_waterlock.py probe → acquire → register → release` | `流程规则/07-数据库与数据层.md`“写库门禁与全库健康哨兵” | 写库门禁 |
 | F 线开批前（认领清单新鲜度） | `oaa_remap_claims.py --group Fn --check`（存在率／唯一回映率 100% 方可开批；回映用 `--write --apply`） | `F1-F4-全链路规格.md` FR-F13；`ADR-0008` §1.1 | —（回映器，非门禁） |
-| 向 `05-卷册大纲/` 写 ROW_MINE 块（mail2d／OAA 入纲） | `outline_writer.py --selftest` → `--check-only` → `--write`（须配 `--anchor`；dry-run 默认） | `流程规则.md`“入纲写入器规则”；`ADR-0010` | —（写入器，非门禁） |
-| 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | `流程规则.md`“目录页与文档门禁判据索引” | P2-11 |
-| 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | `流程规则.md`“锚解析审计门禁” | 第十九件 |
-| 新增／删除门禁脚本 | `audit_gate_registry.py` | `流程规则.md`“门禁体系元门禁” | 第十六件 |
+| 向 `05-卷册大纲/` 写 ROW_MINE 块（mail2d／OAA 入纲） | `outline_writer.py --selftest` → `--check-only` → `--write`（须配 `--anchor`；dry-run 默认） | `流程规则/07-数据库与数据层.md`“入纲写入器规则”；`ADR-0010` | —（写入器，非门禁） |
+| 改动 `05-卷册大纲/` 磁盘层 | `audit_disk_terminology.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | P2-11 |
+| 目录注新增 mat／CL 锚 | `audit_anchor_resolution.py` | `流程规则/05-目录页与重构2026.md`“锚解析审计门禁” | 第十九件 |
+| 新增／删除门禁脚本 | `audit_gate_registry.py` | `流程规则/05-目录页与重构2026.md`“门禁体系元门禁” | 第十六件 |
 | 新增／修改 ADR、技术债、工程实践规则或模板 | `audit_engineering_practice.py` | `工程实践规则.md`“门禁与模板接线”（E1–E7） | 第二十九件 |
 | 新任务准入、复核、收口与台账轮替 | `audit_task_lifecycle.py` | `工程实践规则.md`“任务强制审计、复核与轮替”（L1–L12） | 第三十二件 |
-| 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | `流程规则.md`“文档格式门禁” | 第十件 |
-| 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | `流程规则.md`“重构大纲目录口径同步规则” | 口径同步 |
-| **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py`＋`audit_sidecar_backup.py` | `流程规则.md`“重构大纲目录口径同步规则”“门禁体系元门禁”“旁路备份残留扫描门禁”；`任务轮替与归档规则.md` | 口径同步·长线·元门禁·旁路备份 |
+| 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | `流程规则/06-门禁体系.md`“文档格式门禁” | 第十件 |
+| 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | `流程规则/05-目录页与重构2026.md`“重构大纲目录口径同步规则” | 口径同步 |
+| **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py`＋`audit_sidecar_backup.py` | `流程规则/05-目录页与重构2026.md`“重构大纲目录口径同步规则”“门禁体系元门禁”“旁路备份残留扫描门禁”；`任务轮替与归档规则.md` | 口径同步·长线·元门禁·旁路备份 |
 
-**件次索引**（判据正文见 `流程规则.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）｜第三十七件＝大纲落地一致性门禁（`audit_outline_landing.py`）。
+**件次索引**（判据正文见 `流程规则/00-索引.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）｜第三十七件＝大纲落地一致性门禁（`audit_outline_landing.py`）。
 
-**门禁纪律**：判据非空、自检连跑、门禁自身会失效三条见 `流程规则.md`“目录页与文档门禁判据索引”→“门禁纪律”。
+**门禁纪律**：判据非空、自检连跑、门禁自身会失效三条见 `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”→“门禁纪律”。
 
 ### 三、常触及的规则与运维要点
 
-- **逐行逐句检查与联网复核**｜**修改前后复核**｜**临时文件与脚本**｜**文件编码**（UTF-8 无 BOM／LF，禁 CRLF）｜**PowerShell 转 Python**｜**批量过滤与删除型修复的安全规则**（正向收紧优先、删除前影响面评估、双向复核、对称验证、禁黑名单膨胀、误杀即回退）→ `流程规则.md`。
-- **网页参考与全量文件入库**：所有落盘文件均入库（网页参考提取正文，md／txt／pdf／epub 全量），sha256 去重；严禁根目录新路径（`流程规则.md`）。
+- **逐行逐句检查与联网复核**｜**修改前后复核**｜**临时文件与脚本**｜**文件编码**（UTF-8 无 BOM／LF，禁 CRLF）｜**PowerShell 转 Python**｜**批量过滤与删除型修复的安全规则**（正向收紧优先、删除前影响面评估、双向复核、对称验证、禁黑名单膨胀、误杀即回退）→ `流程规则/00-索引.md`。
+- **网页参考与全量文件入库**：所有落盘文件均入库（网页参考提取正文，md／txt／pdf／epub 全量），sha256 去重；严禁根目录新路径（`流程规则/00-索引.md`）。
 - **两份“分工注”门禁的分工**：第五件 `xref_audit.py` 只验引用的章是否存在（悬空）；第十四件 `audit_note_xref.py` 验引号节名／章号节号／自指卷号／ref 著录四判据。二者互补不重复，改 `outline.txt` 注文后**两件都跑**。
 - **源文件注释合规**：`assets/doc.css`／`modern.css`／`page.template.html`／`doc.js`／`theme-preset.js` 的**注释会原样进入产物**，故同属第七件（A 编码禁直角引号、P 注文括注配对）与第九件（B3 页面字符集须被内嵌字体子集覆盖，口径明含 `doc.js`／`theme-preset.js` 源码字符）判据面；改这类源文件后须确认注释未引入禁符号与新用字，**引入新用字须同批跑 `font_subset_rebuild.py` 并重装**——三套浏览器回归**不覆盖注释层**。
 - **标点符号**｜**路径与 IP 加粗**｜**加粗渲染边界**｜**行间代码**｜**手册页引用**｜**一段一行**｜**人名翻译**｜**中文引号强制与代码不可篡改** → `写作规则.md`。
-- **changelog 去重**｜**数据库格式统一**｜**数据库 Schema 优化**｜**文件夹转数据库**｜**过时内容处理**（工作日志式日期标注直接删除；废止小节走“复核→备份→删除→修引用→记 changelog”）→ `流程规则.md`。
+- **changelog 去重**｜**数据库格式统一**｜**数据库 Schema 优化**｜**文件夹转数据库**｜**过时内容处理**（工作日志式日期标注直接删除；废止小节走“复核→备份→删除→修引用→记 changelog”）→ `流程规则/00-索引.md`。
 - **0 信任**｜**多源交叉验证不可靠性**｜**三次复查**｜**失效网址查询**｜**存疑处理**｜**许可证考据**（逐个考据／CC 定性／法哲学／判例案号防错／判决细节防错／版权法体系）→ `考据规则.md`；**引用标准**见 `05-卷册大纲/SUMMARY.md`“引用标准决策 A”。
-- **Git 克隆目录与更新规则**：所有克隆统一置 `03-原始史料库/01-代码仓库史料/<项目>/`，禁止克隆到 `script/`；**强制 `--filter=tree:0`**；增量更新 8 步流程见 `流程规则.md`，脚本 `脚本与命令/git_update_duckdb_20260818.py`。
-- **大纲写入幂等防护（WO-007）**：任何脚本向 `05-卷册大纲/` 写自动增补块前须 `has_block()` 检查，写盘统一走 `write_guard()`（`*.db`→`*.duckdb`、UTF-8 无 BOM、LF），见 `wo007_idempotency.py`；判据正文见 `流程规则.md`“写入幂等（WO-007 续）”。
+- **Git 克隆目录与更新规则**：所有克隆统一置 `03-原始史料库/01-代码仓库史料/<项目>/`，禁止克隆到 `script/`；**强制 `--filter=tree:0`**；增量更新 8 步流程见 `流程规则/00-索引.md`，脚本 `脚本与命令/git_update_duckdb_20260818.py`。
+- **大纲写入幂等防护（WO-007）**：任何脚本向 `05-卷册大纲/` 写自动增补块前须 `has_block()` 检查，写盘统一走 `write_guard()`（`*.db`→`*.duckdb`、UTF-8 无 BOM、LF），见 `wo007_idempotency.py`；判据正文见 `流程规则/00-索引.md`“写入幂等（WO-007 续）”。
 - **目录页更新总则**（2026-09-25 ykla 立规）：`index.html` **每次更新**（不限于结构与计数变动）必须 ①联动改毕所有因此失真的周边文件（口径声明、规则与号文、tests 夹具、mounts 分工注；历史快照豁免）②全量测试。
 - **目录页口径同步**：`doc-metrics` 为唯一权威；`sync_refactor2026_baseline.py --check` 检测漂移、`--sync` 只重写 BEGIN/END 标记块。
 - **05-卷册大纲/目录 两账**：施工事实入口＝92 号文 §十一；状态判读＝98 号文 §十一（冲突以 98 为准）；每批收口三处同步落（`changelog`→92 §十一→98 §十一）。
@@ -228,18 +228,18 @@
 ## 路径与标识说明
 
 - **`bsd_commits.db` 引用**：`05-卷册大纲/` 中大量引用该名，属**概念性标识**（指代 BSD 仓库提交数据集）。该库已拆为 10 个项目级 DuckDB（`freebsd.duckdb`、`netbsd.duckdb` 等），实际查询须指向具体项目库。
-- **`historical_claims.duckdb` 真值路径说明**：唯一物理真值＝`04-现代研究文献/historical_claims.duckdb`，与 `folder_db_registry.csv`、`backup_databases.py` SCOPE、`audit_databases.py`、`analyze_all_databases.py`、`audit_anchor_resolution.py` 五处一致；判据与防再生见 `流程规则.md`“功能数据库唯一真值路径与空壳防治”。
+- **`historical_claims.duckdb` 真值路径说明**：唯一物理真值＝`04-现代研究文献/historical_claims.duckdb`，与 `folder_db_registry.csv`、`backup_databases.py` SCOPE、`audit_databases.py`、`analyze_all_databases.py`、`audit_anchor_resolution.py` 五处一致；判据与防再生见 `流程规则/07-数据库与数据层.md`“功能数据库唯一真值路径与空壳防治”。
 
 ## Lint 配置
 
 - 不带选项与参数的裸命令（`mv`、`cp` 等）一般不加反引号。
-- **markdownlint**（`.markdownlint.json`）：本地 `markdownlint-cli2 v0.22.1`（markdownlint v0.40.0）。闸面（活动文件显式清单）、豁免范围与判据见 `流程规则.md`“文档格式门禁”。
+- **markdownlint**（`.markdownlint.json`）：本地 `markdownlint-cli2 v0.22.1`（markdownlint v0.40.0）。闸面（活动文件显式清单）、豁免范围与判据见 `流程规则/06-门禁体系.md`“文档格式门禁”。
   - **检查**（仓库根目录）：`markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .markdownlint.json`
   - **自动修复**：同上加 `--fix`（可修 MD012／MD047／MD034；**修不了 MD060 对齐**）
   - **MD060 表格列风格**：`compact` ＋ `aligned_delimiter`；管道符两侧各一个空格，空单元格写 `| |`。分隔行 dash 数＝**表头**该列显示宽度 W − 2（无冒号）／− 3（单侧冒号）／− 4（双侧冒号），**CJK 按 2 宽计**。例：表头 `| 脚本 | 用途 |` 每列 W＝6 → `| ---- | ---- |`（4 个 dash）。
   - **MD060 批量修复**：`脚本与命令/fix_md060_delimiters.py`（缺省 dry-run，`--apply` 写盘；只改分隔行，不动表头与数据行，跳过围栏代码块内伪表格）。
   - **MD056**：数据行列数须与表头一致；缺末尾单元格时补 `| |`，不得省略管道符。
-- **AutoCorrect**（`.autocorrectrc`，CLI 2.14.0）：治理 CJK／英文混排空格（`space-word`／`space-punctuation`／`space-bracket`／`space-backticks`／`no-space-fullwidth` 等）；调用规范见 `流程规则.md`“AutoCorrect 调用规范”。
+- **AutoCorrect**（`.autocorrectrc`，CLI 2.14.0）：治理 CJK／英文混排空格（`space-word`／`space-punctuation`／`space-bracket`／`space-backticks`／`no-space-fullwidth` 等）；调用规范见 `流程规则/06-门禁体系.md`“AutoCorrect 调用规范”。
 - **闸面与豁免**：闸面＝`AGENTS.md`＋`01-规则/*.md`＋`01-规则/脚本与命令/*.md`＋`02-操作手册/14-工程实践模板/*.md`＋`01-项目管理/02-工程决策与技术债/*.md`＋`01-项目管理/02-工程决策与技术债/ADR/*.md`＋`05-卷册大纲/目录/` 号文（全域号段，70 号起）＋`05-卷册大纲/目录/tests/*.md`＋`12-重构大纲书目述评/index.md`＋`长线任务总登记表.md`＋`10-交叉索引/S03-历史对象登记表.md`。**豁免**（有意识选择，非遗漏）：`01-项目管理/00-变更记录/**`、`01-项目管理/01-编纂规划与报告归档/**` 历史规划与报告归档、`05-卷册大纲/目录/` 70 号以前历史件、`第*-章级书目述评.md`（逐字保真档案）、`01-规则/script/**`（脚本运行日志）。
 - **工具与门禁的接线**：凡在本文件列为检查工具者，必须有门禁或定期自查与之配套——“工具已文档化 ≠ 工具已生效”。
 
