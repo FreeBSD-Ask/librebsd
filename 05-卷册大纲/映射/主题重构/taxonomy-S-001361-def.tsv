@@ -1,0 +1,13 @@
+theme	title	coverage
+tcp-ip-stack-performance	TCP/IP 协议栈与网络性能	TCP 序列号生成、Nagle 算法、零拷贝与 UIO_NOCOPY、uipc_socket 系统调用层、mbuf 集群枯竭、PGM 协议实现与 FreeBSD/Linux 收发小包性能对比等协议栈实现与性能题面。
+nic-device-drivers	网卡与设备驱动	3Com、ep、vx、SMC、Digiboard、sb 声卡与 VoxWare 音频等驱动缺陷报告与移植，设备标识报法与 bpfilter 改名等网卡及外设驱动题面。
+storage-scsi-ata	存储子系统：SCSI、ATA 与磁光设备	ccd 驱动故障、Adaptec 控制器、SCSI 终结器、ATAPI 挂起、matcd 光驱、Exabyte 磁带、newfs 软盘几何、DMA 散集列表与 FibreChannel WWN 等存储链路题面。
+filesystem-vm-memory	文件系统与虚拟内存	MFS 与 DEVFS 纠缠、vnode 操作补丁、procfs 不匹配、malloc 调试字段、MAXMEM 与 MAXPHYS、统一缓冲区缓存与 NetBSD 子系统移植借鉴等文件系统与内存管理题面。
+kernel-architecture	内核架构与启动机制	用户态统一设想、CPU 识别代码、DELAY 校准、AST 优先化、LKM 与 ifdefs 兼容性、bus space 与 nexus、boot loader 与 nextboot、双 Celeron SMP 及 Pentium 计时研究等内核机制题面。
+network-services-ops	网络配置、防火墙与站点运维	ipfw/ipf/natd 取舍、PPP 动态地址重连、DHCP 支持、私有地址可路由性、RFC 主机名规范，以及 inetd 与 identd、邮件与新闻服务、账户转发、站点迁移与 ISP 运维等题面。
+build-toolchain-debug	构建、编译与调试工具链	快照安装完整性、gmake 构建、egcs 与 gcc 模板语义、fno-exceptions 报错、PAM 重编、ddd 调试操作与编译器寄存器分配议题等构建安装与调试题面。
+ports-licensing-thirdparty	第三方软件、软件包与版权	GPL 代码提交义务、contrib 非 BSD 版权、Perl 版本变更、squid 补丁重放、CVS 修补、软件包默认化、移植专著改稿与专有模式辩护等第三方软件与版权题面。
+community-advocacy-docs	社区协作、倡导与文档	man 手册写作、CMU 论文合著、营销模板、daemonnews 文章、PGI 支持游说、X11 开发规则引用、OpenBSD 惯例参照与 ftsc 测试协作等社区倡导与文档题面。
+system-interfaces-posix	系统调用接口与 POSIX 语义	select 封装 poll、sigset_t 变化与 libc_r、waitpid 防僵尸、_r 系列函数新增、浮点与 IEEE 语义、最大 UID 与 OPEN_MAX 常量、uid 等于 0 的审计与 init 访问权限等系统接口题面。
+user-hardware-reports	用户硬件环境与使用报告	L440GX+ 服务器、HP Vectra、AMD K6、Digital Prioris、Linux 仿真环境、数码相机外设、抓包机不跑 X 与 syscons 补丁等整机环境与使用经历报告题面。
+misc	杂项	题面截断过短或内容零散、无法可靠判定主题的记录（如裸消息行头、传参一致性疑问、send-pr 单件、another_huf panic 串等）。

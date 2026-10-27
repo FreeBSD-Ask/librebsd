@@ -1,0 +1,12 @@
+theme	title	coverage
+ports-pkg	Ports 树与包管理	ports 编译与安装、pkg_add、pkgdb、portupgrade、portsnap、依赖冲突与升级故障、本地 distfiles 镜像等包管理题面入此桶。
+desktop-x11	桌面应用与 X11	Xorg 与显示配置、字体、桌面环境与浏览器、多媒体与音频应用、TeX 等桌面软件的使用与故障题面入此桶。
+kernel-build	内核与系统构建升级	重编内核与 buildworld、csup 源码同步、版本升级路径及升级后启动故障等构建升级题面入此桶。
+hardware-drivers	驱动与硬件外设	网卡、RAID 与磁盘控制器、打印机、光驱、CPU 温度等硬件与驱动题面入此桶。
+network-firewall	网络与防火墙	DHCP、PPP、CARP 与 pfsync、IPFILTER、hosts 与域名解析、网关路由与文件共享服务等网络题面入此桶。
+jails-virt	Jail 与虚拟化	jail 配置与参数、VIMAGE 网络栈、VirtualBox 与 VMware 工具等虚拟化题面入此桶。
+install-release	安装与发布介质	ISO 与安装盘、无头与串口安装、装机流程与介质刻录等安装题面入此桶。
+sysadmin-tools	系统管理与命令行	cron 与 at、时间同步、man 手册、mount 与 shell 管道、单用户模式、邮件队列与 procmail 等系统管理题面入此桶。
+web-services	Web 与数据库服务	Apache、PHP、FastCGI、MySQL 等网络服务与数据库应用的部署与故障题面入此桶。
+storage-zfs	存储与文件系统	ZFS 池管理、GPT 与磁盘存储、nullfs 与 NFS 挂载行为等存储题面入此桶。
+misc	题面杂项	题面信息不足、转帖致谢与列表事务类，以及无法归入上述主题的邮件细节入此桶。
