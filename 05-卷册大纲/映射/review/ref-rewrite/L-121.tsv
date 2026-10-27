@@ -1,0 +1,196 @@
+source_id	kind	old	new	context	disposition
+S-031616	h1	395.1.4	5.7.3	# 395.1.4 154.3 BSD谱系	rewritten
+S-031620	h1	395.2.3	5.2.2	# 395.2.3 Linux社区MarkCaveAyland用QEMU仿真sunhme卡时发现内核	rewritten
+S-031621	h1	395.2.4	5.2.3	# 395.2.4 Linux社区LouisLiu讨论SunNetraE4900上SILO引导加载器	rewritten
+S-031622	h1	395.2.5	5.2.4	# 395.2.5 Linux社区ChrisNewport就内核崩溃转储设计建议在SPARC上借鉴S	rewritten
+S-031623	h1	395.2.6	5.2.5	# 395.2.6 Linux社区在讨论允许sparc64sbus建立大于1MB映射的补丁时补丁作者	rewritten
+S-031624	h1	395.2.7	5.2.6	# 395.2.7 Linux社区LudwigRydberg提交为SPARC架构增加clone3系统	rewritten
+S-031625	h1	395.2.8	5.2.7	# 395.2.8 Linux社区SergeiTrofimovich指出glibc手册把O_NDEL	rewritten
+S-031628	h1	395.2.11	5.2.8	# 395.2.11 155.4 许可证	rewritten
+S-031631	h1	395.3.3	5.1.3	# 395.3.3 Linux社区AndyLutomirski在linuxapi上与EricBied	rewritten
+S-031632	h1	395.3.4	5.1.4	# 395.3.4 Linux社区AndyLutomirski在openat2OPENAT2_REG	rewritten
+S-031635	h1	395.3.7	5.1.5	# 395.3.7 Linux社区SukadevBhattiprolu发布clone3系统调用补丁集	rewritten
+S-031636	h1	395.3.8	5.1.6	# 395.3.8 Linux社区MADV_FREE提案引用jemalloc实践指出该能力在BSD与	rewritten
+S-031637	h1	395.3.9	5.1.7	# 395.3.9 Linux社区PaoloBonzini在评论FreeBSDCapsicum移植补	rewritten
+S-031638	h1	395.3.10	5.1.8	# 395.3.10 Linux社区ChristianBrauner在close_range系统调用补	rewritten
+S-031639	h1	395.3.11	5.1.9	# 395.3.11 Linux社区LinusTorvalds在mincore特权化讨论中转引Matt	rewritten
+S-031640	h1	395.3.12	5.1.10	# 395.3.12 Linux社区CambdaZhu发现Linux的kill允许把线程ID当作进程I	rewritten
+S-031641	h1	395.3.13	5.1.11	# 395.3.13 Linux社区JoshTriplett在CLONE_FD补丁讨论中回应David	rewritten
+S-031643	h1	395.4.2	5.7.4	# 395.4.2 157.1 杂项	rewritten
+S-031644	h1	395.4.3	5.7.5	# 395.4.3 157.2 BSD谱系	rewritten
+S-031646	h1	395.4.5	5.7.6	# 395.4.5 Linux社区内核构建解耦用户态头文件起因之一即用户态头可能处于不兼容许可证并提	rewritten
+S-031647	h1	395.4.6	5.7.7	# 395.4.6 Linux社区AlanCox回应链接器表系列关于模块许可标记的讨论指出模块与内核	rewritten
+S-031648	h1	395.4.7	5.7.8	# 395.4.7 Linux社区NateKarstens在closeonfork补丁争议中为POS	rewritten
+S-031649	h1	395.4.8	5.7.9	# 395.4.8 Linux社区akpm转发的CreatearchKconfig补丁中Linus建	rewritten
+S-031650	h1	395.4.9	5.7.10	# 395.4.9 Linux社区PeterZijlstra就freelist补丁征询Cameron	rewritten
+S-031652	h1	395.5.2	5.2.9	# 395.5.2 Linux社区Sun3x平台的ESPSCSI驱动清理补丁属BSD谱系硬件Sun3	rewritten
+S-031653	h1	395.5.3	5.2.10	# 395.5.3 Linux社区补丁清理aic79xx与aic7xxx驱动的MODULE_PARM	rewritten
+S-031654	h1	395.5.4	5.2.11	# 395.5.4 Linux社区MarkFortescue在sparc32上调试ESP与QLGCI	rewritten
+S-031655	h1	395.5.5	5.2.12	# 395.5.5 Linux社区用户态iSCSItarget库选型讨论中JeffGarzik表示已	rewritten
+S-031656	h1	395.5.6	5.2.13	# 395.5.6 Linux社区针对aic7xxx语法文件缺分号的小补丁Gibbs表示FreeBS	rewritten
+S-031657	h1	395.5.7	5.2.14	# 395.5.7 Linux社区LSImpt2sas驱动Kconfig配置文件包含GNUGPL许可	rewritten
+S-031658	h1	395.5.8	5.2.15	# 395.5.8 Linux社区MODULE_VERSION补丁的diff暴露驱动注释的历史来源作	rewritten
+S-031659	h1	395.5.9	5.2.1	# 395.5.9 Linux社区2002年5月DouglasGilbert回应Linux2425S	rewritten
+S-031660	h1	395.5.10	5.2.16	# 395.5.10 Linux社区DouglasGilbert发布sg3_utils工具包声明已移植	rewritten
+S-031661	h1	395.5.11	5.2.17	# 395.5.11 Linux社区磁带stioctl文档MT_ST_SYSV选项的语义颠倒问题Aar	rewritten
+S-031662	h1	395.5.12	5.2.18	# 395.5.12 Linux社区kernelbugzilla80711关于SG_FLAG_LUN_	rewritten
+S-031663	h1	395.5.13	5.2.19	# 395.5.13 Linux社区AndreHedrick转发LinusTorvalds关于维护者否	rewritten
+S-031666	h1	395.6.2	5.1.12	# 395.6.2 Linux社区AmeerHamza提议为openat增加O_EMPTY_PATH	rewritten
+S-031667	h1	395.6.3	5.1.13	# 395.6.3 Linux社区fsync_range与fsync语义讨论中ChristophHe	rewritten
+S-031668	h1	395.6.4	5.1.14	# 395.6.4 Linux社区DavidDrysdale在CLONE_FD讨论中直接以FreeB	rewritten
+S-031669	h1	395.6.5	5.1.15	# 395.6.5 Linux社区DavidMiller在BTRFS分区起始位置的讨论中指出Sun磁	rewritten
+S-031670	h1	395.6.6	5.1.16	# 395.6.6 Linux社区AlViro在POSIX分歧讨论中把BSD系Unix的实际行为抬升	rewritten
+S-031671	h1	395.6.7	5.1.17	# 395.6.7 Linux社区fuseuapi类型补丁引发BSD可移植性讨论ArndBergma	rewritten
+S-031672	h1	395.6.8	5.1.18	# 395.6.8 Linux社区在用户命名空间补丁讨论中TrondMyklebust建议EricB	rewritten
+S-031673	h1	395.6.9	5.1.36	# 395.6.9 Linux社区LSF与MM大会参会意向登记中AntonAltaparmakov陈	rewritten
+S-031674	h1	395.6.10	5.1.19	# 395.6.10 Linux社区在storefree路径遍历的性能讨论中ChristophHell	rewritten
+S-031675	h1	395.6.11	5.1.20	# 395.6.11 Linux社区AlViro提交vfsgit分支workufs的UFS清理系列共1	rewritten
+S-031676	h1	395.6.12	5.1.21	# 395.6.12 Linux社区JonathanKowalski评审pidfd轮询支持时建议改用P	rewritten
+S-031677	h1	395.6.13	5.1.22	# 395.6.13 Linux社区utimensat写权限检查修复补丁的评审回帖中MichaelKe	rewritten
+S-031678	h1	395.6.14	5.1.23	# 395.6.14 Linux社区MichaelKerrisk在linuxfsdevel报告writ	rewritten
+S-031679	h1	395.6.15	5.1.24	# 395.6.15 Linux社区LinusTorvalds在fsufs挂载崩溃的讨论中公开为UFS	rewritten
+S-031680	h1	395.6.16	5.1.25	# 395.6.16 Linux社区AurelienJarno在FS_IOC_GETFLAGS与FS_	rewritten
+S-031681	h1	395.6.17	5.1.1	# 395.6.17 Linux社区2005年SergeEHallyn在命名空间隔离讨论中引用自己实现	rewritten
+S-031682	h1	395.6.18	5.1.26	# 395.6.18 Linux社区ThomasGleixner就selfteststests_sys	rewritten
+S-031683	h1	395.6.19	5.1.27	# 395.6.19 Linux社区EricBiederman在无mntput发生IO的补丁讨论中说明	rewritten
+S-031684	h1	395.6.20	5.1.28	# 395.6.20 Linux社区PhillipPotter向fsufs提交注释格式补丁改动s_u2	rewritten
+S-031685	h1	395.6.21	5.1.29	# 395.6.21 Linux社区MatthewWilcox在iomap_writepage移除讨论	rewritten
+S-031686	h1	395.6.22	5.1.30	# 395.6.22 Linux社区JanBlunck为联合文件系统新增whiteout文件类型时直接	rewritten
+S-031687	h1	395.6.23	5.1.2	# 395.6.23 Linux社区2025年ChristianBrauner提交让core_patt	rewritten
+S-031688	h1	395.6.24	5.1.31	# 395.6.24 Linux社区在FUSE于close返回EBADF的争论中被引的AntonioS	rewritten
+S-031689	h1	395.6.25	5.1.32	# 395.6.25 Linux社区AmirGoldstein在原子文件数据替换接口之争中提议直接沿用	rewritten
+S-031690	h1	395.6.26	5.1.33	# 395.6.26 Linux社区fsufs挂载几何校验补丁论证圆柱摘要缓冲区需按ufs1与ufs2	rewritten
+S-031691	h1	395.6.27	5.1.34	# 395.6.27 Linux社区AlViro回应UFS的UBSAN移位越界报告称将复活旧补丁为uf	rewritten
+S-031692	h1	395.6.28	5.1.35	# 395.6.28 Linux社区ChristianBrauner在文件系统信任与维护治理议题中延续	rewritten
+S-031694	h1	395.7.2	5.5.8	# 395.7.2 Linux社区AndrewMorton汇总2559mm1补丁时BillDavid	rewritten
+S-031695	h1	395.7.3	5.5.9	# 395.7.3 Linux社区Linux地址空间随机化RFC讨论中作者以OpenBSD的mmap	rewritten
+S-031696	h1	395.7.4	5.5.4	# 395.7.4 Linux社区ChristophHellwig于2002年提交的BKchange	rewritten
+S-031697	h1	395.7.5	5.5.10	# 395.7.5 Linux社区24内核reversemapping之争中Biederman明确以	rewritten
+S-031698	h1	395.7.6	5.5.2	# 395.7.6 Linux社区2000年7月17日VM替换算法讨论中AlanCox以FreeBS	rewritten
+S-031699	h1	395.7.7	5.5.5	# 395.7.7 Linux社区2004年2月18日invalidate_mmap_range非G	rewritten
+S-031700	h1	395.7.8	5.5.7	# 395.7.8 Linux社区2021年8月移除MAP_DENYWRITE讨论中DavidLai	rewritten
+S-031701	h1	395.7.9	5.5.11	# 395.7.9 Linux社区BenjaminCRLaHaise在本封中引用RikvanRiel	rewritten
+S-031702	h1	395.7.10	5.5.12	# 395.7.10 Linux社区同一mincore线程延续VlastimilBabka在权限与语义	rewritten
+S-031703	h1	395.7.11	5.5.13	# 395.7.11 Linux社区getrusageru_maxrss补丁的变更日志记录旧测试程序触	rewritten
+S-031704	h1	395.7.12	5.5.3	# 395.7.12 Linux社区2001年AlanCox在无盘节点swap讨论的回复帖中引有nei	rewritten
+S-031705	h1	395.7.13	5.5.6	# 395.7.13 Linux社区2019年6月TejunHeo就memcg的get_mem_cgr	rewritten
+S-031706	h1	395.7.14	5.5.14	# 395.7.14 Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral	rewritten
+S-031707	h1	395.7.15	5.5.15	# 395.7.15 Linux社区LinusTorvalds就x86模块依赖外部PAGE_KERNE	rewritten
+S-031708	h1	395.7.16	5.5.16	# 395.7.16 Linux社区FreeBSDpageoutdaemon算法讨论DanielPhi	rewritten
+S-031709	h1	395.7.17	5.5.17	# 395.7.17 Linux社区khugepagedmTHP讨论中KirylShutsemau转引	rewritten
+S-031710	h1	395.7.18	5.5.18	# 395.7.18 Linux社区PedroFalcato在msealRFC讨论中以OpenBSD动	rewritten
+S-031711	h1	395.7.19	5.5.19	# 395.7.19 Linux社区NadiaChambers在64k基础页大小的LSFMMBPF讨论	rewritten
+S-031712	h1	395.7.20	5.5.1	# 395.7.20 Linux社区20000524linuxmm讨论234版VM队列重构RFC时Ma	rewritten
+S-031713	h1	395.7.21	5.5.20	# 395.7.21 Linux社区讨论kmalloc_obj类型化slab缓存时引用iOS与XNU的	rewritten
+S-031715	h1	395.8.2	5.4.2	# 395.8.2 Linux社区AlanCox对BSDJailLSM补丁提出接口设计意见认为jai	rewritten
+S-031716	h1	395.8.3	5.4.3	# 395.8.3 Linux社区perskb控制消息补丁讨论中DavidMiller在Stephe	rewritten
+S-031717	h1	395.8.4	5.4.4	# 395.8.4 Linux社区TIME_WAIT状态行为讨论中参与者追问Linux为何在SO_R	rewritten
+S-031718	h1	395.8.5	5.4.5	# 395.8.5 Linux社区DougMcNaught指出Stevens教材描述的是44BSDL	rewritten
+S-031719	h1	395.8.6	5.4.6	# 395.8.6 Linux社区VladYasevich讨论组播自收行为差异时说明客户正从BSD迁	rewritten
+S-031720	h1	395.8.7	5.4.7	# 395.8.7 Linux社区PekkaSavola转发默认地址选择性能顾虑称所引顾虑出自一位B	rewritten
+S-031721	h1	395.8.8	5.4.8	# 395.8.8 Linux社区EricDumazet在tcp多端口bind修复的问题讨论中转发用	rewritten
+S-031722	h1	395.8.9	5.4.9	# 395.8.9 Linux社区讨论IPv6UDP绑定语义时面对为何保留这一反直觉行为的提问Eri	rewritten
+S-031723	h1	395.8.10	5.4.10	# 395.8.10 Linux社区VegardNossum质疑CONFIG_NET_KEY帮助文本与	rewritten
+S-031724	h1	395.8.11	5.4.11	# 395.8.11 Linux社区StephenHemminger用jhash2替换ipv6addr	rewritten
+S-031725	h1	395.8.12	5.4.12	# 395.8.12 Linux社区MichaelSTsirkin在流量控制与端口镜像测试讨论中引用s	rewritten
+S-031726	h1	395.8.13	5.4.13	# 395.8.13 Linux社区TomaszTorcz在netdev转发FreeBSD53网络栈改	rewritten
+S-031727	h1	395.8.14	5.4.14	# 395.8.14 Linux社区Davem以BSDAPI兼容性为由否决了一个DiffServ路由补	rewritten
+S-031728	h1	395.8.15	5.4.15	# 395.8.15 Linux社区IPv6流标签补丁评审中FlorentFourcot反对该新行为并	rewritten
+S-031729	h1	395.8.16	5.4.16	# 395.8.16 Linux社区虚拟CAN网络设备驱动补丁入树vcanc的模块许可证声明为Dual	rewritten
+S-031730	h1	395.8.17	5.4.17	# 395.8.17 Linux社区EvgeniyPolyakov为把CARP放进内核而非用户态辩护称	rewritten
+S-031731	h1	395.8.18	5.4.18	# 395.8.18 Linux社区jamal转发LennertBuytenhek关于etherip的	rewritten
+S-031732	h1	395.8.19	5.4.19	# 395.8.19 Linux社区关于内核层socket包装符是否该用EXPORT_SYMBOL_G	rewritten
+S-031733	h1	395.8.20	5.4.20	# 395.8.20 Linux社区TCPBIC11讨论中提出是否考虑YeeTingLi的ABC补丁并	rewritten
+S-031734	h1	395.8.21	5.4.21	# 395.8.21 Linux社区i40e驱动故障讨论中引用FreeBSD侧修复并被IntelFre	rewritten
+S-031735	h1	395.8.22	5.4.22	# 395.8.22 Linux社区XDP讨论中ThomasGraf引述FlorianWestphal	rewritten
+S-031736	h1	395.8.23	5.4.23	# 395.8.23 Linux社区RolandDreier的InfiniBandMAD补丁与其系列补	rewritten
+S-031737	h1	395.8.24	5.4.24	# 395.8.24 Linux社区MichaelWu梳理Linux80211现状时指出Madwifi	rewritten
+S-031738	h1	395.8.25	5.4.25	# 395.8.25 Linux社区Linux挪用BSD代码指控的争论中AdrianBunk澄清两件被	rewritten
+S-031739	h1	395.8.26	5.4.26	# 395.8.26 Linux社区IPsec在2561的讨论中USAGI的KazunoriMiyaz	rewritten
+S-031740	h1	395.8.27	5.4.27	# 395.8.27 Linux社区IPv6隧道链路本地地址自动配置讨论中PekkaSavola以Fr	rewritten
+S-031741	h1	395.8.28	5.4.28	# 395.8.28 Linux社区VladYasevich接续FreeBSD客户机导致skb_war	rewritten
+S-031742	h1	395.8.29	5.4.29	# 395.8.29 Linux社区ipsysctltxt字母序整理补丁触及tcp_stdurg说明文	rewritten
+S-031743	h1	395.8.30	5.4.30	# 395.8.30 Linux社区AdrianChadd在排队时延与bufferbloat讨论中自述	rewritten
+S-031744	h1	395.8.31	5.4.31	# 395.8.31 BSD邮件列表被当作BPF语义的权威判定来源谱系实证`netdevmessage	rewritten
+S-031745	h1	395.8.32	5.4.32	# 395.8.32 Linux社区IPv6组播转发缓存阈值补丁讨论中提交者AngWayChuang依	rewritten
+S-031747	h1	395.8.34	5.4.33	# 395.8.34 Linux社区RealtekRTL8211EPHY隐藏RGMII控制寄存器0x1	rewritten
+S-031748	h1	395.8.35	5.4.34	# 395.8.35 Linux社区MichalSoltys解释HFSCRT曲线的弹性语义指出BSD系	rewritten
+S-031749	h1	395.8.36	5.4.35	# 395.8.36 Linux社区SCTP自动ASCONF套接字选项补丁中WeiYongjun在实现	rewritten
+S-031750	h1	395.8.37	5.4.36	# 395.8.37 Linux社区WolfgangGrandegger提交SJA1000CAN控制器	rewritten
+S-031751	h1	395.8.38	5.4.37	# 395.8.38 Linux社区SO_BPF_EXTENSIONS补丁讨论中DavidLaight	rewritten
+S-031752	h1	395.8.39	5.4.38	# 395.8.39 Linux社区DaveTaht在Allow00008asavalidaddres	rewritten
+S-031753	h1	395.8.40	5.4.39	# 395.8.40 Linux社区SO_REUSEADDR讨论延续前帖有人批评BSD的绑定不对称设计	rewritten
+S-031754	h1	395.8.41	5.4.40	# 395.8.41 Linux社区ChristophLameter在回复multicast过滤讨论时	rewritten
+S-031756	h1	395.8.43	5.4.41	# 395.8.43 Linux社区MT7531DSA绑定把reset改为可选的争论中HeikoStu	rewritten
+S-031757	h1	395.8.44	5.4.42	# 395.8.44 Linux社区netdev线程把Linuxsunrpc的RPCSEC_GSS序列	rewritten
+S-031758	h1	395.8.45	5.4.43	# 395.8.45 Linux社区IPv6扩展头权限白名单讨论中BSD的接口谱系地位被点出Sowmi	rewritten
+S-031759	h1	395.8.46	5.4.44	# 395.8.46 Linux社区UrsThuermann的CANbroadcastmanager补	rewritten
+S-031760	h1	395.8.47	5.4.45	# 395.8.47 Linux社区作者发现netlink代码生成器产物的SPDX标记与其规格不一致生	rewritten
+S-031761	h1	395.8.48	5.4.1	# 395.8.48 Linux社区20090415多播重复投递补丁争论NeilHorman以跨系统成	rewritten
+S-031762	h1	395.8.49	5.4.46	# 395.8.49 Linux社区Linux是否窃取代码的转帖中BSD派生源码的许可身份被点明讨论者	rewritten
+S-031763	h1	395.8.50	5.4.47	# 395.8.50 Linux社区BenHutchings在IPv6TCLASS套接字选项一致性争议	rewritten
+S-031808	h1	395.9.45	5.8.5	# 395.9.45 Linux社区治理议题LinuxFoundationTAB宣布2019年选举转电	rewritten
+S-031813	h1	395.9.50	5.8.4	# 395.9.50 Linux社区20180910MAINTAINERSSUMMITBugintro	rewritten
+S-031814	h1	395.9.51	5.8.6	# 395.9.51 Linux社区AndrewTurner在Devicetree工作坊征询中代表Fr	rewritten
+S-031817	h1	395.10.2	5.8.2	# 395.10.2 Linux社区TheodoreTso发布KernelSummit2014征题Ch	rewritten
+S-031827	h1	395.10.12	5.8.7	# 395.10.12 Linux社区JoshTriplettvimfugitive工作流推荐Gblam	rewritten
+S-031857	h1	395.10.42	5.8.8	# 395.10.42 Linux社区StevenRostedt针对Kara转述的共识Linus已同意p	rewritten
+S-031859	h1	395.10.44	5.8.9	# 395.10.44 Linux社区FengguangWu回应Pinchart的0day状态页请求给出	rewritten
+S-031861	h1	395.10.46	5.8.10	# 395.10.46 Linux社区MelGorman就Weiner内存抖动议题给出VM机制诊断现有压	rewritten
+S-031867	h1	395.10.52	5.8.11	# 395.10.52 Linux社区LuisRRodriguez就固件加载安全语义与Lutomirsk	rewritten
+S-031870	h1	395.10.55	5.8.12	# 395.10.55 Linux社区DavidWoodhouse把签名讨论收拢回最小可行方案给requ	rewritten
+S-031922	h1	395.10.107	5.8.13	# 395.10.107 Linux社区SarahSharp论QRoops之社会面指Bjorn等维护者用b	rewritten
+S-031934	h1	395.10.119	5.8.14	# 395.10.119 Linux社区KeesCook附和Martin盼patchwork捕获cover	rewritten
+S-031941	h1	395.10.126	5.8.15	# 395.10.126 Linux社区Geert追问关键修复补丁不合标准+提交者跑路永不跟进你怎么办被禁	rewritten
+S-031966	h1	395.10.151	5.8.16	# 395.10.151 Linux社区DanWilliams将矛盾概括为customerfirstvsu	rewritten
+S-031967	h1	395.10.152	5.8.17	# 395.10.152 Linux社区TedTsoKS首轮邀请发出至少两名Gmail用户邀请进垃圾箱SP	rewritten
+S-031970	h1	395.11.3	5.9.1	# 395.11.3 Linux社区Colomar描述在shadow项目中先尝试改用NetBSD的st	rewritten
+S-031971	h1	395.11.4	5.9.2	# 395.11.4 Linux社区Robinson认为统一署名方案与GNU的做法一致AUTHORS文	rewritten
+S-031972	h1	395.11.5	5.9.3	# 395.11.5 Linux社区翻译者质疑exec3为何用frontend而非wrapper描述e	rewritten
+S-031973	h1	395.11.6	5.9.4	# 395.11.6 Linux社区aligned_alloc3的HISTORY段梳理C11两处UBs	rewritten
+S-031974	h1	395.11.7	5.9.5	# 395.11.7 Linux社区Schwarze说明mandoc版apropos1以TH宏的第一参	rewritten
+S-031975	h1	395.11.8	5.9.6	# 395.11.8 Linux社区Kerrisk在修订vfork2时增补42BSD手册原文的arch	rewritten
+S-031976	h1	395.11.9	5.9.7	# 395.11.9 Linux社区AlejandroColomar提议在manpages增设PARA	rewritten
+S-031985	h1	395.12.3	5.7.11	# 395.12.3 205.1 【Linux社区】BSD 谱系：BSD 技术采纳与对照	rewritten
+S-031987	h1	395.12.5	5.7.12	# 395.12.5 205.3 【Linux社区】BSD 人物在 LKML 的出场	rewritten
+S-031988	h1	395.12.6	5.7.13	# 395.12.6 205.4 【Linux社区】BSD 治理智慧反哺 Linux	rewritten
+S-031994	h1	395.13.4	5.8.3	# 395.13.4 Linux社区2014年7月EricWBiederman在LKML回复David	rewritten
+S-031995	h1	395.13.5	5.8.1	# 395.13.5 Linux社区2002年GeoffreyLee就connect到端口0的行为询问	rewritten
+S-031996	h1	395.13.6	5.8.18	# 395.13.6 206.2 【Linux社区】系统调用与内存管理	rewritten
+S-031997	h1	395.13.7	5.8.19	# 395.13.7 206.3 【Linux社区】文件系统与磁盘	rewritten
+S-031998	h1	395.13.8	5.8.20	# 395.13.8 206.4 【Linux社区】分区与硬件	rewritten
+S-031999	h1	395.13.9	5.8.21	# 395.13.9 206.5 【Linux社区】jail与容器	rewritten
+S-032000	h1	395.13.10	5.8.22	# 395.13.10 206.6 【Linux社区】其他技术承袭	rewritten
+S-032005	h1	395.14.4	5.7.14	# 395.14.4 207.2 【Linux社区】BSD 人物在 LKML 的出场（续）	rewritten
+S-032006	h1	395.14.5	5.7.15	# 395.14.5 207.3 【Linux社区】BSD 治理智慧反哺 Linux（续）	rewritten
+S-032010	h1	395.15.3	5.3.3	# 395.15.3 208.1 【Linux社区】dtrace 与内核追踪	rewritten
+S-032011	h1	395.15.4	5.3.4	# 395.15.4 208.2 【Linux社区】capsicum 能力模型	rewritten
+S-032012	h1	395.15.5	5.3.5	# 395.15.5 208.3 【Linux社区】KAME 与 IPv6/IPsec	rewritten
+S-032013	h1	395.15.6	5.3.6	# 395.15.6 208.4 【Linux社区】strlcpy 与 API 移植	rewritten
+S-032014	h1	395.15.7	5.3.7	# 395.15.7 208.5 【Linux社区】kqueue/kevent 事件机制	rewritten
+S-032015	h1	395.15.8	5.3.8	# 395.15.8 208.6 【Linux社区】arc4random 与 fork 安全	rewritten
+S-032017	h1	395.15.10	5.3.9	# 395.15.10 208.8 【Linux社区】BSD 守护进程惯例	rewritten
+S-032018	h1	395.15.11	5.3.10	# 395.15.11 208.9 【Linux社区】IP_PORTRANGE 与端口管理	rewritten
+S-032020	h1	395.15.13	5.3.11	# 395.15.13 208.11 【Linux社区】BSD 治理智慧（续 207.3）	rewritten
+S-032024	h1	395.16.3	5.6.1	# 395.16.3 209.1 【Linux社区】BSD 谱系（ZFS 交叉验证与 NFSv4 ACL 参照）	rewritten
+S-032029	h1	395.17.3	5.7.16	# 395.17.3 210.1 【Linux社区】BSD 血统技术被 Linux 采用（10 条）	rewritten
+S-032035	h1	395.18.4	5.7.17	# 395.18.4 211.2 【Linux社区】BSD 血统与 Linux 技术流向（24 条）	rewritten
+S-032042	h1	395.19.4	5.7.1	# 395.19.4 Linux社区2009年8月RobertWatsonrwatson@freebs	rewritten
+S-032043	h1	395.19.5	5.7.2	# 395.19.5 Linux社区2024年1月23日TheodeRaadtderaadt@open	rewritten
+S-032045	h1	395.19.7	5.7.18	# 395.19.7 212.3 【Linux社区】BSD 人物在 lkml 的张力出场（3 条）	rewritten
+S-032050	h1	395.20.3	5.7.19	# 395.20.3 213.1 【Linux社区】BSD 技术在 systemd 讨论中的张力（15 条）	rewritten
+S-032052	h1	395.20.5	5.7.20	# 395.20.5 213.3 【Linux社区】BSD 人物在 systemd-devel 的出场（2 条）	rewritten
+S-032056	h1	395.21.3	5.7.21	# 395.21.3 214.1 【Linux社区】BSD 技术在 Kernel Summit 的张力（8 条）	rewritten
+S-032062	h1	395.22.4	5.7.22	# 395.22.4 215.2 【Linux社区】BSD 血统与 Linux 技术流向（2 条）	rewritten
+S-032068	h1	395.23.3	5.6.2	# 395.23.3 216.1 【Linux社区】BSD 文件系统技术反向输出（21 条）	rewritten
+S-032069	h1	395.23.4	5.6.3	# 395.23.4 216.2 【Linux社区】BSD 文件系统血统与 Linux 技术流向（13 条）	rewritten
+S-032071	h1	395.23.6	5.6.4	# 395.23.6 216.4 【Linux社区】BSD 治理智慧与 Linux 移植争议（3 条）	rewritten
+S-032075	h1	395.24.3	5.3.12	# 395.24.3 217.1 【Linux社区】BSD 安全谱系与 Linux 能力模型（6 条）	rewritten
+S-032076	h1	395.24.4	5.3.13	# 395.24.4 217.2 【Linux社区】BSD 安全技术反向输出与 Linux 采纳（7 条）	rewritten
+S-032080	h1	395.25.3	5.6.5	# 395.25.3 218.1 【Linux社区】BSD 网络技术反向输出（6 条）	rewritten
+S-032086	h1	395.26.3	5.3.1	# 395.26.3 219.1 【Linux社区】Capsicum 移植尝试（2014 David Drysdale 移植 FreeBSD 能力框架，未合入）	rewritten
+S-032087	h1	395.26.4	5.3.14	# 395.26.4 219.2 【Linux社区】O_BENEATH 与受限路径解析（FreeBSD 语义进入 openat，未以原名合入）（4 条）	rewritten
+S-032088	h1	395.26.5	5.3.15	# 395.26.5 219.3 【Linux社区】CLONE_FD 进程生命周期通知（FreeBSD pdfork 移植，未合入）（3 条）	rewritten
+S-032089	h1	395.26.6	5.3.2	# 395.26.6 219.4 【Linux社区】Landlock 权利集继承（2016-2021 合入主线，Capsicum 唯一落地后代）（3 条）	rewritten
+S-032090	h1	395.26.7	5.3.16	# 395.26.7 219.5 【Linux社区】openat2 与 RESOLVE_IN_ROOT（FreeBSD 路径约束语义的最终落地形态）（3 条）	rewritten
+S-032091	h1	395.26.8	5.3.17	# 395.26.8 219.6 【Linux社区】附录对照：横向引用、反向流向与词面噪声（3 条）	rewritten
