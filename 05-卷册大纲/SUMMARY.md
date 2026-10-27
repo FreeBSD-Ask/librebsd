@@ -3942,6 +3942,53 @@
             - 14.6.112-年7月13日BrianFFeldman就identd的FAKEID处理澄清顾虑并.md
             - 14.6.113-年7月15日Internode网络工程师MarkNewton援引lyndon转引.md
         - 14.7-系统调用接口与 POSIX 语义
+            - 14.7.1-1999年7月29日sheldonh报告自己空手而归没找到定义系统最大UID的常.md
+            - 14.7.2-1999年8月10日joegroff澄清自己所说改API指新增_r系列函数并希望.md
+            - 14.7.3-1999年8月24日ryan在内核树grep出12个文件用uid等于0而非sus.md
+            - 14.7.4-1999年9月8日eischen针对sigset_t变化导致libc与libc_.md
+            - 14.7.5-1999年10月8日kris提出把uid随机分配以把引入介质与本地系统uid相冲.md
+            - 14.7.6-1999年12月8日luoqi指出0x1f并非垃圾值而是FreeBSD标准用户数.md
+            - 14.7.7-年8月17日KalebSKeithley贴C程序tm置20000228末经mkt.md
+            - 14.7.8-年6月12日itojun认为iso2022有runelocale库配32bitw.md
+            - 14.7.9-年1月14日HaroldGutch指出pw会把以数字开头的用户名误判为UID值导.md
+            - 14.7.10-年4月23日SatoshiAsami在0416snap上发现sh的斜杠结尾通配展.md
+            - 14.7.11-年5月26日GaryPalmer解释usrbinperl的setuid脚本为何失.md
+            - 14.7.12-年11月3日Tom在MichaelCVergallen询问连root的kill9.md
+            - 14.7.13-年7月30日TerryLambert建议PosixAIO应建独立callgate.md
+            - 14.7.14-年7月31日DrewDerbyshire从221升到222后suroot报Und.md
+            - 14.7.15-年11月25日MikeSmith说用户态取以太网MAC地址最好用sysctlif.md
+            - 14.7.16-年11月30日CharlesMott发现sockaddr的sa_len字段跨Un.md
+            - 14.7.17-年3月15日BoskoMilekic指出全局整型errno并不threadsaf.md
+            - 14.7.18-年9月25日CoranthGryphon称常用多名字密码单UID系统首个遇到的名.md
+            - 14.7.19-年10月14日RobMisiak报告程序调用select持续拿EINVAL改用6.md
+            - 14.7.20-年1月17日RobertWithrow主张应提供删除passwd与group条目.md
+            - 14.7.21-年5月8日JWunsch回复指出zopen函数并不在标准IO库可用范围内并直接称.md
+            - 14.7.22-年10月14日LuigiRizzo指出sbin的init以root身份访问未设r.md
+            - 14.7.23-年10月31日建议用waitpidwait3wait4配WNOHANG选项无僵尸.md
+            - 14.7.24-年12月9日兰伯特说明可用select封装出poll函数但超时理论精度仅一毫秒实.md
+            - 14.7.25-年12月13日OPEN_MAX属损坏接口不应继续调用源码树内仅用于设定init起.md
+            - 14.7.26-年3月31日JWunsch指出FreeBSD默认浮点即双精度64位但缺少IEEE.md
+            - 14.7.27-年4月22日该开发者解释线程库为何用读写锁而非仅写锁因用户态线程实现里同一描述符.md
+            - 14.7.28-年4月28日他问ioctl的SIOCGIFCONF请求缓冲区大小该怎么确定是不是.md
+            - 14.7.29-年5月19日认为线程局部存储在包括NT在内也只适用有限场景WIN32下四种线程模.md
+            - 14.7.30-年6月1日AnatolyVorobey指出main返回后会回到libcstart.md
+            - 14.7.31-年7月6日libc版本号只在接口变化时改接口一变必有部分应用无法运行静态链接的应.md
+            - 14.7.32-年8月10日PaulSouthworth为970618快照的libc_r交出补丁.md
+            - 14.7.33-年9月2日SureshMali询问FreeBSD222REALESE的pthre.md
+            - 14.7.34-年9月19日布鲁斯指出OpenBSD在这块已经有一些修正不过POSIX似乎认为不.md
+            - 14.7.35-年10月6日凯文说明rtmx位于北卡罗来纳达勒姆并确认OpenBSD确有实时扩展.md
+            - 14.7.36-年1月19日JohnPolstra指出dlsym拿到未解析符号是因为dlopen.md
+            - 14.7.37-年2月1日amancio问本机的ptrace与linux的ptrace是否存在根.md
+            - 14.7.38-年2月5日mike建议改用wait4来更干净地完成这件事称除非需要睡眠在共享段内.md
+            - 14.7.39-年2月27日jhb反驳Xlib不该知道操作系统怎么提供POSIX接口__erro.md
+            - 14.7.40-年2月28日terry指出varloglastlog按uid记录登录建议uid单.md
+            - 14.7.41-年3月31日keithley怀疑该问题是libc的select或poll重实现引.md
+            - 14.7.42-年4月28日cross回信给BobBishop转来的帖子对帖中描述的为线程而迁移.md
+            - 14.7.43-年5月1日sean说可以改用他给的补丁改动fgetposcfseekcfsetp.md
+            - 14.7.44-年7月3日jkh澄清自己并非主张按unix用户id建链接而是复用应用程序既有的环.md
+            - 14.7.45-年10月15日ArchieCobbs附测试程序报告SIGIO疑似缺陷进程在文件描.md
+            - 14.7.46-年2月6日SergeySKosyakov回复JohnBirrell关于pthre.md
+            - 14.7.47-年7月16日TimVanderhoek认为BakulShah提出的scpy与GN.md
     - 第15章-FreeBSD 2.x 开发者邮件档案：构建与共同体
         - 15.1-构建、编译与调试工具链
         - 15.2-第三方软件、软件包与版权
