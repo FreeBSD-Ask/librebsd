@@ -1,0 +1,23 @@
+batch_id	items	fails	fixes_applied	date	note
+p3-batch-001	6	5	1	2026-10-27	结果件 p3r-batch-001.tsv
+p3-batch-002	2	0	0	2026-10-27	结果件 p3r-batch-002.tsv
+p3-batch-003	3	2	2	2026-10-27	结果件 p3r-batch-003.tsv
+p3-batch-004	2	0	0	2026-10-27	结果件 p3r-batch-004.tsv
+p3-batch-005	2	0	0	2026-10-27	结果件 p3r-batch-005.tsv
+p3-batch-006	2	1	1	2026-10-27	结果件 p3r-batch-006.tsv
+p3-batch-007	2	0	0	2026-10-27	结果件 p3r-batch-007.tsv
+p3-batch-008	9	8	8	2026-10-27	结果件 p3r-batch-008.tsv
+p3-batch-009	2	0	0	2026-10-27	结果件 p3r-batch-009.tsv
+p3-batch-010	2	0	0	2026-10-27	结果件 p3r-batch-010.tsv
+p3-batch-011	101	100	0	2026-10-27	结果件 p3r-batch-011.tsv
+p3-batch-012	101	100	0	2026-10-27	结果件 p3r-batch-012.tsv
+p3-batch-013	2	0	0	2026-10-27	结果件 p3r-batch-013.tsv
+p3-batch-014	2	0	0	2026-10-27	结果件 p3r-batch-014.tsv
+p3-batch-015	2	0	0	2026-10-27	结果件 p3r-batch-015.tsv
+p3-batch-016	2	0	0	2026-10-27	结果件 p3r-batch-016.tsv
+p3-batch-017	2	0	0	2026-10-27	结果件 p3r-batch-017.tsv
+p3-batch-018	58	57	57	2026-10-27	结果件 p3r-batch-018.tsv
+p3-batch-019	2	0	0	2026-10-27	结果件 p3r-batch-019.tsv
+p3-batch-020	2	0	0	2026-10-27	结果件 p3r-batch-020.tsv
+p3-batch-021	2	0	0	2026-10-27	结果件 p3r-batch-021.tsv
+(merge)	67	273	67	2026-10-27	skipped=100；fixed_title 与现名相同视为 no-op；011 blanket-FAIL 无修复名留账
