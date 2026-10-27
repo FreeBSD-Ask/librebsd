@@ -78,7 +78,7 @@ SEC_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})-(?P<slug>.+)$")
 SUB_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,4})-(?P<slug>.+)\.md$")
 KEY3_RE = re.compile(r"^\d{3}$")
 KEYN_RE = re.compile(r"^\d{1,3}$")
-LINE_RE = re.compile(r"^(?P<indent> *)- \[(?P<title>.+?)\]\((?P<target>.+)\)$")
+LINE_RE = re.compile(r"^(?P<indent> *)- (?P<title>.+)$")
 
 # 章节词元派生：拉丁词元、合法词形与停用词（沿 sync_chapter_keywords.py 惯例）
 LATIN = re.compile(r"[A-Za-z][A-Za-z0-9.+-]{1,}")
@@ -370,7 +370,7 @@ def render_summary(tree):
     """生成 SUMMARY.md 全文（LF 结尾）。"""
     lines = ["# Summary", ""]
     for level, title, target in iter_entities(tree):
-        lines.append("%s- [%s](%s)" % ("  " * level, title, target))
+        lines.append("%s- %s" % ("  " * level, title))
     return "\n".join(lines) + "\n"
 
 
@@ -565,7 +565,7 @@ def render_keywords(doc):
 def parse_summary(text):
     """解析 SUMMARY 文本为条目列表；返回 (entries, problems)。
 
-    entries 元素：{"line", "indent", "title", "target"}
+    entries 元素：{"line", "indent", "title"}（2026-10-27 去链接化）
     """
     problems = []
     entries = []
@@ -583,7 +583,7 @@ def parse_summary(text):
             problems.append(("S_FORMAT", "第 %d 行无法解析：%r" % (idx, line[:80])))
             continue
         entries.append({"line": idx, "indent": len(m.group("indent")),
-                        "title": m.group("title"), "target": m.group("target")})
+                        "title": m.group("title")})
     return entries, problems
 
 
@@ -617,72 +617,23 @@ def validate(tree, summary_text, keywords_doc=None):
                              "树 %d 卷 %d 章 %d 节 ≠ 目录页口径 %d 卷 %d 章 %d 节"
                              % ((nv, nc, ns) + tuple(metrics))))
 
-    # 二、SUMMARY 逐条比对
+    # 二、SUMMARY 逐条比对（纯文本镜像：按序位配对；2026-10-27 ykla 裁决去链接化）
     entries, parse_problems = parse_summary(summary_text)
     problems.extend(parse_problems)
 
     expected = list(iter_entities(tree))
-    exp_by_key = collections.OrderedDict()
-    for level, title, target in expected:
-        exp_by_key[target.rstrip("/")] = (level, title, target)
-
-    got_by_key = collections.OrderedDict()
-    for ent in entries:
-        key = ent["target"].rstrip("/")
-        if key in got_by_key:
-            problems.append(("S_DUP", "第 %d 行与第 %d 行重复指向 %s"
-                             % (ent["line"], got_by_key[key]["line"], ent["target"])))
-            continue
-        got_by_key[key] = ent
-
-    missing = [k for k in exp_by_key if k not in got_by_key]
-    extra = [k for k in got_by_key if k not in exp_by_key]
-    for key in missing[:40]:
-        problems.append(("S_MISSING", "树中实体未列出：%s" % key))
-    if len(missing) > 40:
-        problems.append(("S_MISSING", "另 %d 条未列出（略）" % (len(missing) - 40)))
-    for key in extra[:40]:
-        problems.append(("S_EXTRA", "镜像含树外条目：%s" % key))
-    if len(extra) > 40:
-        problems.append(("S_EXTRA", "另 %d 条树外条目（略）" % (len(extra) - 40)))
-
-    for key, (level, title, target) in exp_by_key.items():
-        ent = got_by_key.get(key)
-        if ent is None:
-            continue
+    if len(entries) != len(expected):
+        problems.append(("S_COUNT", "镜像条目 %d ≠ 树实体 %d（缺 %d／多 %d）"
+                         % (len(entries), len(expected),
+                            max(0, len(expected) - len(entries)),
+                            max(0, len(entries) - len(expected)))))
+    for i, ((level, title, target), ent) in enumerate(zip(expected, entries), start=1):
         if ent["title"] != title:
-            problems.append(("S_TITLE", "第 %d 行题面 %r ≠ 磁盘名 %r"
-                             % (ent["line"], ent["title"], title)))
+            problems.append(("S_TITLE", "第 %d 行（第 %d 条）题面 %r ≠ 磁盘名 %r"
+                             % (ent["line"], i, ent["title"], title)))
         if ent["indent"] != 2 * level:
             problems.append(("S_INDENT", "第 %d 行缩进 %d ≠ 第 %d 层应有的 %d"
                              % (ent["line"], ent["indent"], level, 2 * level)))
-        if target.endswith("/") and not ent["target"].endswith("/"):
-            problems.append(("S_SLASH", "第 %d 行目录链接缺尾斜杠：%s"
-                             % (ent["line"], ent["target"])))
-        if ent["target"].startswith("/") or ".." in ent["target"].split("/"):
-            problems.append(("S_PATH", "第 %d 行链接目标非法：%s"
-                             % (ent["line"], ent["target"])))
-
-    # 死链与目标类型（对镜像全部条目，含树外条目）
-    for key, ent in got_by_key.items():
-        full = _under(tree.get("_root") or "", _unquote(key))
-        want_dir = not key.endswith(".md")
-        exists = os.path.isdir(full) if want_dir else os.path.isfile(full)
-        if not exists:
-            problems.append(("S_DEAD", "第 %d 行死链：%s" % (ent["line"], ent["target"])))
-        elif want_dir != os.path.isdir(full):
-            problems.append(("S_KIND", "第 %d 行目标类型不符：%s"
-                            % (ent["line"], ent["target"])))
-
-    # 条目序（仅在无缺／多时判，避免连锁噪声）
-    if not missing and not extra:
-        seq_exp = [t.rstrip("/") for _, _, t in expected]
-        seq_got = [e["target"].rstrip("/") for e in entries]
-        for i, (want, got) in enumerate(zip(seq_exp, seq_got)):
-            if want != got:
-                problems.append(("S_ORDER", "第 %d 序位应为 %s，实为 %s"
-                                 % (i + 1, want, got)))
-                break
 
     # 三、chapter_keywords.json 逐键核对（2026-10-21 起由 build_theme_index.py 独立校验）
     if keywords_doc is not None:
@@ -1125,21 +1076,12 @@ def selftest():
             "%d vs %d" % (len(entries), total))
         chk("SUMMARY 解析零问题", not parse_problems, str(parse_problems[:2]))
 
-        indent_ok = True
-        for level, title, target in iter_entities(tree):
-            for ent in entries:
-                if ent["target"] == target:
-                    if ent["indent"] != 2 * level or ent["title"] != title:
-                        indent_ok = False
-                    break
-            else:
-                indent_ok = False
-        chk("缩进（0/2/4/6）与题面逐条正确", indent_ok)
+        indent_ok = all(
+            ent["indent"] == 2 * level and ent["title"] == title
+            for (level, title, target), ent in zip(iter_entities(tree), entries))
+        chk("缩进（0/2/4/6）与题面逐条正确（序位配对）", indent_ok)
 
-        dead = [e["target"] for e in entries
-                if not os.path.exists(_under(tree_dir, _unquote(e["target"].rstrip("/"))))]
-        chk("链接目标全部存在", not dead, str(dead[:3]))
-        empty_listed = any(_unquote(e["target"]).endswith("1.1.2-空件.md") for e in entries)
+        empty_listed = any(e["title"].endswith("1.1.2-空件.md") for e in entries)
         chk("空小节文件照列", empty_listed)
 
         probs_self = validate(tree, summary_text)
@@ -1172,26 +1114,25 @@ def selftest():
             return buf
 
         def add_extra(buf):
-            buf.append("- [第3章-树外](第02卷-合成乙/第3章-树外/)")
+            buf.append("- 第3章-树外（镜像含树外条目）")
             return buf
 
         def dead_link(buf):
-            # 链接目标已 URL 编码，直接改写 `](` 之后整段，确保命中的是**目标**而非题面
-            ln = buf[target_line]
-            cut = ln.rindex("](")
-            buf[target_line] = ln[:cut] + "](" + _quote(
-                "第01卷-合成甲/第2章-alpha起点/2.2-beta路径/2.2.9-不存在.md") + ")"
+            # 纯文本镜像：改题面为树外名（模拟指向不存在实体的条目）
+            buf[target_line] = buf[target_line].replace(
+                "[2.2.1-beta小节.md]", "[2.2.9-不存在的镜像条目]") if False else buf[target_line].replace(
+                "2.2.1-beta小节.md", "2.2.9-不存在的镜像条目")
             return buf
 
         def retitle(buf):
             buf[target_line] = buf[target_line].replace(
-                "[2.2.1-beta小节.md]", "[2.2.1-beta小節.md]")
+                "2.2.1-beta小节.md", "2.2.1-beta小節.md")
             return buf
 
         cases = [
-            ("缺条", drop_entry, "S_MISSING"),
-            ("树外条", add_extra, "S_EXTRA"),
-            ("死链", dead_link, "S_DEAD"),
+            ("缺条", drop_entry, "S_COUNT"),
+            ("树外条", add_extra, "S_COUNT"),
+            ("指向不存在实体（原死链）", dead_link, "S_TITLE"),
             ("题面改字（计数不变）", retitle, "S_TITLE"),
         ]
         for name, mutator, expect in cases:
