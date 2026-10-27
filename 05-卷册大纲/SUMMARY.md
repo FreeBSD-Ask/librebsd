@@ -4519,6 +4519,27 @@
             - 16.4.16-年9月16日GholamMostafaFaridi装virtulbox后启动报N.md
             - 16.4.17-年8月24日Lobo称自FreeBSD3x起一直经端口编译VirtualBox现.md
         - 16.5-存储与文件系统
+            - 16.5.1-年4月23日StefanCars表示赞同自述其8台服务器使用vinum在生产环境.md
+            - 16.5.2-年8月16日Vinum作者GregLehey回答配置能否在重装后保留时表示可以依.md
+            - 16.5.3-年6月24日JonathanArnold在讨论根分区大小时援引GregLehey.md
+            - 16.5.4-年8月17日MikhailTeterin自述已关掉noatime经Apache下.md
+            - 16.5.5-年7月13日SteveShorter自述410上的vinum故障系与希捷Chee.md
+            - 16.5.6-年11月21日JoshEndries说看到状态报告提到iSCSI开发进展公司拟上.md
+            - 16.5.7-年10月6日BillSchmitt换新盘后装了49且旧盘仍连着未挂载用ddif=.md
+            - 16.5.8-年6月30日snott说明确需250GB以上swap用作HTTP反向代理大缓存集.md
+            - 16.5.9-年3月9日回复说ext3分区以ext2方式挂载即可用参照man5ext2fs前提.md
+            - 16.5.10-年10月6日指出ggate与dump8一样能在块级读写无需特殊设备即可实现块级访.md
+            - 16.5.11-年4月10日Yuri不取改用FAT32分区的建议指FAT32单文件上限为2^32.md
+            - 16.5.12-年4月26日illoai说双启机上ad4s3是扩展分区ad4s5与ad4s6逻辑.md
+            - 16.5.13-年4月27日Smith回帖Ghirai关于在gmirror加geli的RAID1.md
+            - 16.5.14-年1月26日BryantEadon在64位机器用五块500GB硬盘组raidz阵.md
+            - 16.5.15-年5月6日罗兰史密斯在自己的72源码树里发现libautofs库与mount_a.md
+            - 16.5.16-年5月31日Wojtek说自己TB级分区上跑dump两次都产出无法还原的备份从此.md
+            - 16.5.17-年11月4日StevenSamuelCole的zpool01显示在线却标记数据损.md
+            - 16.5.18-年1月27日RossPenner用一块盘建好zroot池启动后想加第二块盘先gp.md
+            - 16.5.19-年6月2日LeonMeßner在nullfs内tail由NFS挂载的文件后rmt.md
+            - 16.5.20-年11月29日发件人OHartmann报90CURRENT导入ZFS池BACKU.md
+            - 16.5.21-年10月7日RobinVleij换存储后开机卡在日志轮转步骤truss查到Ast.md
         - 16.6-安装与发布介质
     - 第17章-FreeBSD 4.0 邮件档案：应用与管理
         - 17.1-Ports 树与包管理
