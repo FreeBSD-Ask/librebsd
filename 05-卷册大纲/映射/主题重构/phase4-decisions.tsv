@@ -1,0 +1,3 @@
+source_id	decision	detail	date
+(mega-noop)	keep-as-is	三巨簇 S-001165（1,384）／S-001361（860）／S-001360（521）均为 ~16KB 标准化贴阈邮件细节件（med≈16,046、max≈16,797），合并 2 件即越 16,797 B 阈——“聚合为档案汇编”不可行；ykla 后批准节级拆分→撤销“批次切块”→批准主题重构，终态 47 主题节	2026-10-27
+(inventory-gap)	ledger	Task 1 inventory.tsv 漏登 156 件（mapping 所引盘上全部存在、0 缺，多为 098.2.19xx／012.3.2xx 高小节号件）；字节已盘上实测补全（min=59 med=15,936 max=18,191）	2026-10-27
