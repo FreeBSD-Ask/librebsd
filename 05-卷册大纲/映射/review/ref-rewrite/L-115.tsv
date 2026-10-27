@@ -1,0 +1,113 @@
+source_id	kind	old	new	context	disposition
+S-003384	h1	043.2.1	1.1.1	# 043.2.1 要点Net2重写采用逐文件替换策略对每一个包含AT&T版权代码的文件CSRG安排	rewritten
+S-003487	h1	045.7.1	3.4.1	# 045.7.1 SCO v. IBM/Linux 的对比	rewritten
+S-003488	h1	045.7.2	1.9.1	# 045.7.2 Xinuos v. IBM：UNIX 版权诉讼的终章（2021-2026）	rewritten
+S-003492	h1	045.8.1	5.11.2	# 045.8.1 US v. Microsoft：1998-2001 年美国反垄断诉讼	rewritten
+S-003494	h1	045.8.3	5.11.3	# 045.8.3 三案对照：USL v. BSDi、US v. Microsoft、EU v. Microsoft 的路径分化	rewritten
+S-010903	h1	100.9.3	5.11.1	# 100.9.3 US v. Microsoft 1998 起诉与 76 天庭审	rewritten
+S-010904	h1	100.9.4	5.11.4	# 100.9.4 Microsoft 公司史与浏览器战争	rewritten
+S-012672	h1	108.1.4	5.11.5	# 108.1.4 96141EldredvAshcroft537US186与CTEA合宪性	rewritten
+S-013656	h1	110.11.2	1.6.2	# 110.11.2 2007 年 8 月 10 日 Judge Kimball 即决判决 Novell 持有 UNIX 版权	rewritten
+S-014695	h1	115.10.1	1.6.3	# 115.10.1 2010.3.30 陪审团确认 Novell 持有 UNIX SVRX 版权	rewritten
+S-014698	h1	115.10.4	1.6.5	# 115.10.4 SCO v. Novell 终局对 BSD 生态法律环境的最终澄清	rewritten
+S-027915	h1	311.2.1	5.10.2	# 311.2.1 copyleft 与非 copyleft 条款对比	rewritten
+S-027916	h1	311.2.2	5.10.3	# 311.2.2 两种自由观的演变	rewritten
+S-027919	h1	311.2.5	5.10.1	# 311.2.5 当事人素材与叙述章——BSD vs GPL 的哲学差异（2004–2025）	rewritten
+S-027920	h1	311.2.6	5.10.4	# 311.2.6 本章claim取自dslinux_claimsduckdb之2822关键词子集c	rewritten
+S-027922	h1	311.2.8	5.10.5	# 311.2.8 当事人Theo主张接口不可版权调API不构成侵权以上为邮件列表当事人一手自述属过	rewritten
+S-027923	h1	311.2.9	5.10.6	# 311.2.9 保罗史密斯假定作者已让与自由软件基金会版权并获改许可之权却未行使以驳第泰奥之论并	rewritten
+S-027924	h1	311.2.10	5.10.7	# 311.2.10 PeterSeebach论GPL似强制道德而令其反感并称其最喜爱Artistic	rewritten
+S-027925	h1	311.2.11	5.10.8	# 311.2.11 RussAllbery述RMS曾称随Perl发布的文档完全不足须有人另写免费手册	rewritten
+S-027926	h1	311.2.12	5.10.9	# 311.2.12 PaulDSmith引词典释义称不诚实须出于故意歪曲事实以行欺骗自谓未见RMS明	rewritten
+S-027927	h1	311.2.13	5.10.10	# 311.2.13 PaulDSmith详辨聚合作品之许可乃各部件许可之并因GPL为X许可之严超集故	rewritten
+S-027932	h1	311.2.18	5.10.11	# 311.2.18 BillGunshannon称PDP11并无合法免费同好许可操作系统早期UNIX	rewritten
+S-027933	h1	311.2.19	5.10.12	# 311.2.19 JasonThorpe忆Net2已无人发行BSDReno因不可自由再分发而难得以	rewritten
+S-027934	h1	311.2.20	5.10.13	# 311.2.20 ThomasBushnell述NetBSD因AT&T之文档不可自由分发故无完整手	rewritten
+S-027935	h1	311.2.21	5.10.14	# 311.2.21 DonnMiller长文分论GPL宜用于GNU工具与内核BSD许可宜用于小开发者	rewritten
+S-027936	h1	311.2.22	5.10.15	# 311.2.22 独立开发者以告别GPL为题撰文论证copyleft在云软件SaaS时代已失去实际	rewritten
+S-027937	h1	311.2.23	5.10.16	# 311.2.23 对商业盟友与受众的判断IBMRedHatNovell等大公司是巨大资产改变世界的	rewritten
+S-027938	h1	311.2.24	5.10.17	# 311.2.24 GoodbyeGPL原文及其引用的localfirstsoftware论文与FS	rewritten
+S-027939	h1	311.2.25	5.10.18	# 311.2.25 告别GPL文章的作者归属在转写中存在噪声主持人将文章与localfirstsof	rewritten
+S-027940	h1	311.2.26	5.10.19	# 311.2.26 HorstHvonBrand询问是否可将_syscallX宏层明确改为BSD或至	rewritten
+S-027941	h1	311.2.27	5.10.20	# 311.2.27 ArnaudLaunay的补丁改用单行字符串写法以消除gcc3对多行字符串字面量	rewritten
+S-027942	h1	311.2.28	5.10.21	# 311.2.28 linux邮件提取	rewritten
+S-027943	h1	311.2.29	5.10.22	# 311.2.29 NoahMeyerhans就iputils授权发问ping6c头声明BSD许可但	rewritten
+S-027947	h1	311.2.33	5.10.23	# 311.2.33 年12月13日RolandDreier的IPoIBIPv4组播补丁在文件头写入G	rewritten
+S-027948	h1	311.2.34	5.10.24	# 311.2.34 年12月20日RolandDreier提交IPoIB组播地址转换补丁新增头文件声	rewritten
+S-027949	h1	311.2.35	5.10.25	# 311.2.35 年5月22日AndriiNakryiko回应StanislavFomichev关	rewritten
+S-027950	h1	311.2.36	5.10.26	# 311.2.36 年8月JeremyAllison反驳TheodoreTso关于shinyredb	rewritten
+S-027951	h1	311.2.37	5.10.28	# 311.2.37 2016 ksummit CORE TOPIC 与 BSD 阵营规模化质疑的时间序列补充——从 2002 年 aic7xxx 双许可到 2	rewritten
+S-027952	h1	311.2.38	5.10.27	# 311.2.38 linux邮件提取	rewritten
+S-027995	h1	311.8.3	5.4.1	# 311.8.3 GPL-3.0（2007）——专利授权、反 Tivoization 与终止/恢复	rewritten
+S-028037	h1	311.13.1	4.2.2	# 311.13.1 总矩阵表	rewritten
+S-028038	h1	311.13.2	4.2.3	# 311.13.2 美国：conditions=侵权 + 合同双轨	rewritten
+S-028039	h1	311.13.3	4.2.4	# 311.13.3 德国：违反许可条件=侵权，程序严格	rewritten
+S-028040	h1	311.13.4	4.2.1	# 311.13.4 法国：从合同说到侵权说（Orange v. Entr'Ouvert 2024）	rewritten
+S-028041	h1	311.13.5	4.2.5	# 311.13.5 中国：51号 vs 3229号 两极张力	rewritten
+S-028042	h1	311.13.6	4.2.6	# 311.13.6 跨法域趋势	rewritten
+S-028086	h1	312.3.1	4.3.1	# 312.3.1 Jacobsen v. Katzer 案事实与裁判要旨	rewritten
+S-028144	h1	313.9.1	4.11.1	# 313.9.1 .1 Jacobsen v. Katzer, 535 F.3d 1373 (Fed. Cir. 2008)	rewritten
+S-028145	h1	313.9.2	4.11.4	# 313.9.2 .2 XimpleWare Corp. v. Versata Software, Inc.（N.D. Cal. 2013-2015）与 Ve	rewritten
+S-028146	h1	313.9.3	4.5.1	# 313.9.3 .3 Artifex Software, Inc. v. Hancom, Inc., No. 16-cv-06082 (N.D. Cal. 	rewritten
+S-028147	h1	313.9.4	4.11.3	# 313.9.4 .4 SCO Group, Inc. v. International Business Machines Corp., No. 2:03-	rewritten
+S-028148	h1	313.9.5	4.11.2	# 313.9.5 .5 Free Software Foundation, Inc. v. Cisco Systems, Inc. (2008-2009, 和	rewritten
+S-028149	h1	313.9.6	4.11.8	# 313.9.6 国外判例	rewritten
+S-028150	h1	313.9.7	4.11.5	# 313.9.7 .1 数字天堂诉柚子科技案（中国 GPL 诉讼第一案），一审 (2015) 京知民初字第 00631 号，二审 (2018) 京民终 471	rewritten
+S-028151	h1	313.9.8	4.11.6	# 313.9.8 .2 不乱买诉闪亮时尚案（GPL 传染性认定），(2019) 最高法知民终 663 号	rewritten
+S-028152	h1	313.9.9	4.11.7	# 313.9.9 .3 网某科技诉亿某通信案（OpenWRT GPLv2 抗辩），(2021) 最高法知民终 51 号	rewritten
+S-028154	h1	313.9.11	4.11.9	# 313.9.11 国内判例	rewritten
+S-028943	h1	322.1.3	6.2.1	# 322.1.3 对 BSD 加密栈的实际效应	rewritten
+S-028945	h1	322.2.1	5.5.1	# 322.2.1 DMCA 反规避条款的立法语境	rewritten
+S-028951	h1	322.3.3	5.2.1	# 322.3.3 专利流氓对 BSD 商业用户的威胁	rewritten
+S-028957	h1	322.5.1	4.3.2	# 322.5.1 Jacobsen v. Katzer 案事实经过	rewritten
+S-028966	h1	322.8.1	6.4.1	# 322.8.1 Bernstein v. United States, 922 F. Supp. 1426 (N.D. Cal. 1996) —— 一审裁定	rewritten
+S-028967	h1	322.8.2	6.4.2	# 322.8.2 Bernstein v. United States, 974 F. Supp. 1288 (N.D. Cal. 1997) —— 补充裁定	rewritten
+S-028968	h1	322.8.3	6.4.3	# 322.8.3 Bernstein v. United States, 176 F.3d 1132 (9th Cir. 1999) —— 上诉审判决	rewritten
+S-028969	h1	322.8.4	6.4.4	# 322.8.4 Bernstein 案对 BSD 加密生态的历史效应	rewritten
+S-028970	h1	322.8.5	6.4.5	# 322.8.5 加密出口管制司法实践的史料辨析	rewritten
+S-028976	h1	322.10.3	6.6.1	# 322.10.3 Junger 与 Bernstein 并置：代码即言论的双判例格局与 BSD 加密代码分发	rewritten
+S-028978	h1	322.11.2	4.7.1	# 322.11.2 美国批量执行：BusyBox GPL 系列诉讼（2007-2013）与 FSF v. Cisco（2008-2009）	rewritten
+S-028984	h1	322.12.3	6.5.1	# 322.12.3 Karn 案对 BSD 加密组件分发史的意义	rewritten
+S-029050	h1	324.6.1	1.6.1	# 324.6.1 2003-2004 年 SCO 诉讼战线的扩展	rewritten
+S-029051	h1	324.6.2	1.6.6	# 324.6.2 用户侧诉讼的结局与法律史意义	rewritten
+S-029052	h1	324.6.3	1.6.7	# 324.6.3 SCO 用户侧诉讼与 BSD 社区的相关性	rewritten
+S-029053	h1	324.6.4	1.6.4	# 324.6.4 Xinuos v. IBM：SCO saga 的终局（2026）	rewritten
+S-029068	h1	325.3.1	2.3.1	# 325.3.1 UNIX-商标与认证的现状	rewritten
+S-029070	h1	325.5.1	2.8.5	# 325.5.1 技术谱系比较当代商业UNIXSolarisAIXHPUXzOS的内核谱系Sola	rewritten
+S-029071	h1	325.5.2	2.8.4	# 325.5.2 时间线延伸至20252026年BSD家族与illumos已在POSIX采纳路径上	rewritten
+S-029072	h1	325.5.3	2.8.6	# 325.5.3 在getrandom2补丁v5讨论中AndyLutomirski在早前同线程发言	rewritten
+S-029073	h1	325.5.4	2.8.7	# 325.5.4 Branden汇报groff1230rc2进展其中一项工作是他hadbeenpu	rewritten
+S-029075	h1	325.5.6	2.8.1	# 325.5.6 Colomar称mem系列由43BSD1986年为SystemV兼容添加C89委	rewritten
+S-029077	h1	325.5.8	2.8.8	# 325.5.8 MarkFortescue就sparc的VTOC分区表修正补丁与DavidMil	rewritten
+S-029078	h1	325.5.9	2.8.9	# 325.5.9 Brouwer评审Fortescue的Sun与SolarisVTOC分区表修正补	rewritten
+S-029079	h1	325.5.10	2.8.10	# 325.5.10 AndyLutomirski在openat2OPENAT2_REGULARv5评	rewritten
+S-029080	h1	325.5.11	2.8.11	# 325.5.11 flock并非POSIX规范Kerrisk引述CarlosODonell称flo	rewritten
+S-029081	h1	325.5.12	2.8.12	# 325.5.12 linux邮件提取	rewritten
+S-029083	h1	325.5.14	2.8.13	# 325.5.14 ChristianBrauner休假中短暂插话赞同Lutomirski的看法并期	rewritten
+S-029084	h1	325.5.15	2.8.14	# 325.5.15 DougGilbert发布ddptdd命令的又一个变体sg3_utils中sg_	rewritten
+S-029085	h1	325.5.16	2.8.15	# 325.5.16 年12月preadvpwritev系统调用补丁评审中GerdHoffmann指出	rewritten
+S-029086	h1	325.5.17	2.8.16	# 325.5.17 DouglasGilbert在sg3_utils129发布公告中说明该工具集面向	rewritten
+S-029087	h1	325.5.18	2.8.17	# 325.5.18 ChristophHellwig把LinuxVFS与BSD族及其他系统的命名空间	rewritten
+S-029088	h1	325.5.19	2.8.18	# 325.5.19 ChristophHellwig在NFSv4pNFS标准讨论中直接引用44BSD	rewritten
+S-029090	h1	325.5.21	2.8.19	# 325.5.21 DiegoCalleja在VM冷启动缓存预热RFC讨论中援引Darwin实现作参	rewritten
+S-029091	h1	325.5.22	2.8.20	# 325.5.22 EvgeniyDushistov的RFC补丁为Linuxufs2驱动添加写支持改	rewritten
+S-029092	h1	325.5.23	2.8.21	# 325.5.23 NateKarstens回应AlViro关于实现closeonfork的反对意见	rewritten
+S-029094	h1	325.5.25	2.8.22	# 325.5.25 凭证切换设计讨论中的Unix线程模型史英文引语allofthepthreadsA	rewritten
+S-029096	h1	325.5.27	2.8.23	# 325.5.27 讨论O_CREAT与O_DIRECTORY组合可移植性时作者以POSIX未定义该	rewritten
+S-029097	h1	325.5.28	2.8.24	# 325.5.28 linux邮件提取	rewritten
+S-029099	h1	325.5.30	2.8.25	# 325.5.30 讨论IPv6UDP绑定语义时EricDumazet引用历史理由说明该反直觉行为因	rewritten
+S-029100	h1	325.5.31	2.8.26	# 325.5.31 linux邮件提取	rewritten
+S-029101	h1	325.5.32	2.8.27	# 325.5.32 linux邮件提取	rewritten
+S-029105	h1	325.5.36	2.8.28	# 325.5.36 AlanCox在内存耗尽导致系统崩溃的讨论中反对把高负载下的崩溃归为内核无能为力	rewritten
+S-029107	h1	325.5.38	2.8.29	# 325.5.38 AlViro在closeonfork讨论中针对AIXBSD&MacOShavea	rewritten
+S-029108	h1	325.5.39	2.8.30	# 325.5.39 EricDumazet在connect空地址语义争论中对比三家BSD系系统的手册	rewritten
+S-029109	h1	325.5.40	2.8.31	# 325.5.40 linux邮件提取	rewritten
+S-029110	h1	325.5.41	2.8.32	# 325.5.41 lxorgukukuuorguk域下署名为Alan的维护者邮件列表抬头显示名为化	rewritten
+S-029111	h1	325.5.42	2.8.33	# 325.5.42 linux邮件提取	rewritten
+S-029113	h1	325.5.44	2.8.34	# 325.5.44 同期BSD接口正从边缘渗入Linux用户态O_DIRECT在SGIIRIX首创并	rewritten
+S-029114	h1	325.5.45	2.8.35	# 325.5.45 与同时期 UNIX 的横向比较：Solaris、HP-UX、AIX 与 macOS 作为 BSD 的参照系	rewritten
+S-029115	h1	325.5.46	2.8.36	# 325.5.46 与同时期 UNIX 的技术对照：BSD、Solaris 与 System V 的 API 分岔	rewritten
+S-029116	h1	325.5.47	2.8.37	# 325.5.47 从 madvise(2) 到 close(2)：BSD 与 POSIX 标准化的交汇	rewritten
+S-029117	h1	325.5.48	2.8.3	# 325.5.48 2010–2026：Solaris、illumos 与 XNU 作为 BSD 之外的接口锚点	rewritten
+S-029118	h1	325.5.49	2.8.2	# 325.5.49 BSD 虚拟内存作为 Linux 内核设计的对标参照系：1998 至 2004 的换页、rmap 与 rusage	rewritten
+S-029119	h1	325.5.50	2.8.38	# 325.5.50 血统考古与语义分叉：flock 与 POSIX 锁、文件变更监视接口，以及 minixfs、sysv 与 UFS 的共同祖先	rewritten
