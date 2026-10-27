@@ -3938,9 +3938,18 @@
             - 12.13.6-64-bit time_t 完成与架构支持变化.md
     - 第13章-FreeBSD 的语言生态与 Rust 准入
         - 13.1-Modula-3 与 CVSup
+            - 13.1.1-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md
         - 13.2-C++ 标准库的 BSD 化：libc++ 与 libcxxrt
+            - 13.2.1-libc++ 与 libcxxrt：C++ 标准库的 BSD 化.md
         - 13.3-Rust 进入基本系统：Somers 方案与社区争论
+            - 13.3.1-Alan Somers 的 Rust 集成方案（2024.1.20）.md
+            - 13.3.2-当代中文舆论标本——《FreeBSD 大败局》2026 版（今日头条·灵巧光束）的 Rust 论断句级考据.md
+            - 13.3.3-社区争论焦点与共识僵局.md
+            - 13.3.4-Rust 与 C／C++ 在 FreeBSD 生态中的共存展望.md
+            - 13.3.5-Rust 争论史料辨析.md
+            - 13.3.6-Rust 进 base 系统讨论进展.md
         - 13.4-跨内核对照：Rust for Linux 观察
+            - 13.4.1-Linux 6.12-6.18：Rust for Linux、sched_ext BPF 调度器与 AI 时代的 Linux 演进.md
     - 第14章-FreeBSD 2.x 开发者邮件档案：内核与网络
         - 14.1-TCP／IP 协议栈与网络性能
             - 14.1.1-年6月26日乔追问范雅各布森1988年谈提高TCP堆栈性能那封邮件时Nagle算.md

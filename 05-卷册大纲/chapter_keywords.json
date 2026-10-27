@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3951,
-  "subsections": 3612,
+  "subsections": 3621,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "91e07bf49c93bb9ba2409cc075cbbf784f6b32de9bdca54830fb2851e4e2f9d6",
+  "content_sha256": "93753e905f7eb3d8ca07c3e1913b24ce0e511246878b798df1025c964e8059c4",
   "extract": "title+body",
-  "generated_at": "2026-10-28T01:21:44+08:00"
+  "generated_at": "2026-10-28T01:21:59+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -5834,8 +5834,13 @@
    "domains": [],
    "themes": [
     "TH-LANG-003",
+    "TH-BIZ-006",
+    "TH-GOV-017",
     "TH-LANG-002",
-    "TH-LANG-025"
+    "TH-LANG-025",
+    "TH-LAW-003",
+    "TH-NET-010",
+    "TH-NET-018"
    ],
    "sections": 4
   },
@@ -29932,13 +29937,13 @@
    "title": "从旧 BSD 代码到 4.4BSD-Lite 的大规模迁移",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
     "TH-BIZ-000",
+    "TH-LAW-000",
     "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-016",
     "TH-BIZ-002",
+    "TH-LAW-016",
     "TH-LAW-015",
     "TH-REL-001",
     "TH-HIS-007",
@@ -35765,17 +35770,22 @@
    "title": "Modula-3 与 CVSup",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-NET-000",
+    "TH-VM-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-LANG-003",
-    "TH-LANG-002",
-    "TH-LANG-025"
+    "TH-NET-018",
+    "TH-VM-006",
+    "TH-GOV-017",
+    "TH-BIZ-006",
+    "TH-LAW-003",
+    "TH-NET-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 1,
+   "subs_sha1": "06745eef9da3c0239af96ac980a7fb99a4d24991"
   },
   "V37-C013-13.2": {
    "chapter": "V37-C013",
@@ -35790,43 +35800,59 @@
     "TH-LANG-003"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "c++",
+    "libc",
+    "libc++"
+   ],
+   "subs": 1,
+   "subs_sha1": "54d77ab3c4798fc9e5ad7281027421144b04bd97"
   },
   "V37-C013-13.3": {
    "chapter": "V37-C013",
    "title": "Rust 进入基本系统：Somers 方案与社区争论",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-LANG-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-003",
-    "TH-LANG-002",
-    "TH-LANG-025"
+    "TH-BIZ-006",
+    "TH-GOV-017"
    ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "projects": [
+    "freebsd"
+   ],
+   "technical_terms": [
+    "rust",
+    "c++"
+   ],
+   "subs": 6,
+   "subs_sha1": "f685a4ab7ed15ce58617fdd0c8611819e817414e"
   },
   "V37-C013-13.4": {
    "chapter": "V37-C013",
    "title": "跨内核对照：Rust for Linux 观察",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-LANG-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-003",
-    "TH-LANG-002",
-    "TH-LANG-025"
+    "TH-BIZ-006",
+    "TH-GOV-017"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "bpf",
+    "rust"
+   ],
+   "subs": 1,
+   "subs_sha1": "120eec27d5d7e90022356ca24a5fe1746a47c05b"
   },
   "V37-C014-14.1": {
    "chapter": "V37-C014",
@@ -81480,7 +81506,7 @@
     "TH-LANG-025",
     "TH-HW-037",
     "TH-HIS-004",
-    "TH-LANG-003"
+    "TH-BIZ-029"
    ]
   },
   "V36-C017-17.1.52": {
@@ -81569,8 +81595,7 @@
    "add": [
     "TH-BIZ-029",
     "TH-LANG-010",
-    "TH-HIS-004",
-    "TH-LANG-003"
+    "TH-HIS-004"
    ]
   },
   "V36-C017-17.1.63": {
@@ -84263,7 +84288,7 @@
     "TH-LANG-017",
     "TH-HIS-004",
     "TH-NET-025",
-    "TH-LANG-001"
+    "TH-LANG-015"
    ]
   },
   "V36-C017-17.4.70": {
@@ -84958,7 +84983,7 @@
   "V36-C017-17.6.25": {
    "add": [
     "TH-HW-027",
-    "TH-FS-023"
+    "TH-LANG-015"
    ]
   },
   "V36-C017-17.6.26": {
@@ -85736,8 +85761,8 @@
   "V36-C017-17.7.41": {
    "add": [
     "TH-FS-003",
-    "TH-LANG-034",
-    "TH-REL-003"
+    "TH-REL-003",
+    "TH-LANG-034"
    ]
   },
   "V36-C017-17.7.42": {
@@ -85850,7 +85875,7 @@
    "add": [
     "TH-SEC-006",
     "TH-LANG-010",
-    "TH-NET-002"
+    "TH-REL-027"
    ]
   },
   "V36-C017-17.7.58": {
@@ -85925,8 +85950,7 @@
   "V36-C017-17.7.68": {
    "add": [
     "TH-HW-003",
-    "TH-REL-019",
-    "TH-LANG-003"
+    "TH-REL-019"
    ]
   },
   "V36-C017-17.7.69": {
@@ -85940,7 +85964,7 @@
    "add": [
     "TH-REL-032",
     "TH-VM-009",
-    "TH-LANG-003"
+    "TH-VM-001"
    ]
   },
   "V36-C017-17.7.71": {
@@ -86529,8 +86553,8 @@
    "add": [
     "TH-BIZ-024",
     "TH-BIZ-021",
-    "TH-HW-036",
     "TH-HW-002",
+    "TH-HW-036",
     "TH-HIS-004"
    ]
   },
@@ -86901,7 +86925,7 @@
    "add": [
     "TH-BIZ-002",
     "TH-HW-025",
-    "TH-HW-036"
+    "TH-HW-002"
    ]
   },
   "V36-C017-17.11.5": {
@@ -87016,7 +87040,7 @@
     "TH-LANG-006",
     "TH-GOV-014",
     "TH-NET-027",
-    "TH-GOV-006"
+    "TH-HW-002"
    ]
   },
   "V36-C018-18.1.9": {
@@ -87155,8 +87179,8 @@
   },
   "V36-C018-18.1.24": {
    "add": [
-    "TH-LAW-001",
     "TH-REL-015",
+    "TH-LAW-001",
     "TH-HW-010",
     "TH-HIS-004",
     "TH-LAW-002"
@@ -87542,8 +87566,8 @@
     "TH-SEC-006",
     "TH-LANG-023",
     "TH-REL-007",
-    "TH-VM-006",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-VM-006"
    ]
   },
   "V36-C018-18.1.68": {
@@ -87561,7 +87585,7 @@
     "TH-SEC-013",
     "TH-LANG-010",
     "TH-HIS-004",
-    "TH-LANG-003"
+    "TH-GOV-014"
    ]
   },
   "V36-C018-18.1.70": {
@@ -88804,7 +88828,7 @@
     "TH-REL-015",
     "TH-HW-010",
     "TH-HIS-004",
-    "TH-LANG-003"
+    "TH-GOV-014"
    ]
   },
   "V36-C018-18.3.39": {
@@ -88812,7 +88836,7 @@
     "TH-HW-010",
     "TH-HIS-004",
     "TH-GOV-014",
-    "TH-OS-031"
+    "TH-NET-033"
    ]
   },
   "V36-C018-18.4.1": {
@@ -88932,8 +88956,8 @@
   },
   "V36-C018-18.4.14": {
    "add": [
-    "TH-VM-006",
     "TH-HIS-004",
+    "TH-VM-006",
     "TH-GOV-014",
     "TH-VM-007",
     "TH-BIZ-021"
@@ -88944,8 +88968,8 @@
     "TH-SEC-013",
     "TH-VM-034",
     "TH-HIS-004",
-    "TH-LANG-003",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-LANG-003"
    ]
   },
   "V36-C018-18.4.16": {
@@ -88954,7 +88978,7 @@
     "TH-REL-010",
     "TH-BIZ-004",
     "TH-HIS-004",
-    "TH-LANG-003"
+    "TH-GOV-014"
    ]
   },
   "V36-C018-18.4.17": {
@@ -89237,8 +89261,8 @@
     "TH-SEC-013",
     "TH-LANG-016",
     "TH-HIS-004",
-    "TH-LANG-003",
     "TH-GOV-014",
+    "TH-LANG-003",
     "TH-BIZ-008"
    ]
   },
@@ -90235,8 +90259,8 @@
     "TH-LANG-016",
     "TH-OS-020",
     "TH-HIS-004",
-    "TH-LANG-003",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-LANG-005"
    ]
   },
   "V36-C018-18.7.49": {
@@ -90275,8 +90299,8 @@
     "TH-LANG-016",
     "TH-LANG-017",
     "TH-VM-024",
-    "TH-VM-006",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-VM-006"
    ]
   },
   "V36-C018-18.7.53": {
@@ -90360,8 +90384,8 @@
   },
   "V36-C018-18.7.61": {
    "add": [
-    "TH-LANG-002",
     "TH-LANG-016",
+    "TH-LANG-002",
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-HW-025"
@@ -90604,8 +90628,8 @@
     "TH-NET-018",
     "TH-VM-009",
     "TH-SEC-001",
-    "TH-VM-006",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-VM-006"
    ]
   },
   "V37-C003-3.3.8": {
@@ -90971,8 +90995,8 @@
    "add": [
     "TH-LANG-022",
     "TH-FS-030",
-    "TH-LANG-001",
-    "TH-FS-023"
+    "TH-FS-023",
+    "TH-LANG-001"
    ]
   },
   "V37-C003-3.9.31": {
@@ -91319,7 +91343,7 @@
     "TH-REL-021",
     "TH-BIZ-014",
     "TH-REL-027",
-    "TH-REL-006"
+    "TH-REL-026"
    ]
   },
   "V37-C003-3.9.76": {
@@ -91885,8 +91909,8 @@
   "V37-C003-3.9.146": {
    "add": [
     "TH-NET-023",
-    "TH-REL-026",
     "TH-BIZ-008",
+    "TH-REL-026",
     "TH-OS-003",
     "TH-HW-001"
    ]
@@ -92278,8 +92302,8 @@
   "V37-C003-3.10.28": {
    "add": [
     "TH-LANG-033",
-    "TH-NET-002",
     "TH-REL-027",
+    "TH-NET-002",
     "TH-NET-003",
     "TH-SEC-014"
    ]
@@ -92335,8 +92359,8 @@
    "add": [
     "TH-OS-015",
     "TH-OS-013",
-    "TH-OS-014",
     "TH-HW-012",
+    "TH-OS-014",
     "TH-GOV-014"
    ]
   },
@@ -92997,8 +93021,7 @@
     "TH-HW-033",
     "TH-OS-023",
     "TH-BIZ-008",
-    "TH-FS-023",
-    "TH-VM-006"
+    "TH-FS-023"
    ]
   },
   "V37-C003-3.10.107": {
@@ -93169,8 +93192,7 @@
     "TH-GOV-026",
     "TH-OS-001",
     "TH-FS-003",
-    "TH-FS-006",
-    "TH-VM-006"
+    "TH-FS-006"
    ]
   },
   "V37-C003-3.10.125": {
@@ -93501,8 +93523,7 @@
     "TH-REL-002",
     "TH-FS-019",
     "TH-HW-014",
-    "TH-HW-012",
-    "TH-VM-006"
+    "TH-HW-012"
    ]
   },
   "V37-C003-3.10.161": {
@@ -93774,8 +93795,8 @@
   "V37-C010-10.3.29": {
    "add": [
     "TH-REL-013",
-    "TH-LANG-002",
     "TH-FS-007",
+    "TH-LANG-002",
     "TH-LANG-024"
    ]
   },
@@ -94866,7 +94887,7 @@
     "TH-FS-002",
     "TH-HW-012",
     "TH-LANG-010",
-    "TH-LANG-003"
+    "TH-OS-023"
    ]
   },
   "V37-C010-10.7.14": {
@@ -97064,8 +97085,8 @@
     "TH-NET-034",
     "TH-FS-003",
     "TH-LANG-009",
-    "TH-VM-006",
     "TH-HIS-004",
+    "TH-VM-006",
     "TH-GOV-014"
    ]
   },
@@ -97075,8 +97096,8 @@
     "TH-LANG-018",
     "TH-FS-023",
     "TH-VM-009",
-    "TH-VM-006",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-VM-006"
    ]
   },
   "V37-C011-11.10.8": {
@@ -97146,7 +97167,7 @@
     "TH-REL-014",
     "TH-FS-007",
     "TH-OS-024",
-    "TH-VM-006"
+    "TH-HIS-004"
    ]
   },
   "V37-C011-11.10.15": {
@@ -97312,8 +97333,8 @@
   "V37-C011-11.10.31": {
    "add": [
     "TH-FS-003",
-    "TH-VM-006",
     "TH-HIS-004",
+    "TH-VM-006",
     "TH-GOV-014",
     "TH-LANG-021",
     "TH-OS-030"
@@ -97522,6 +97543,65 @@
     "TH-GOV-017"
    ]
   },
+  "V37-C013-13.2.1": {
+   "add": [
+    "TH-HW-037",
+    "TH-LANG-010",
+    "TH-LANG-034",
+    "TH-LAW-002"
+   ]
+  },
+  "V37-C013-13.3.1": {
+   "add": [
+    "TH-LANG-032",
+    "TH-LANG-024",
+    "TH-SEC-006",
+    "TH-LANG-002",
+    "TH-FS-000"
+   ]
+  },
+  "V37-C013-13.3.2": {
+   "add": [
+    "TH-OS-014",
+    "TH-REL-010"
+   ]
+  },
+  "V37-C013-13.3.3": {
+   "add": [
+    "TH-SEC-003",
+    "TH-SEC-020",
+    "TH-LANG-032",
+    "TH-LANG-010",
+    "TH-LANG-019"
+   ]
+  },
+  "V37-C013-13.3.4": {
+   "add": [
+    "TH-LANG-002",
+    "TH-LANG-024",
+    "TH-LANG-016"
+   ]
+  },
+  "V37-C013-13.3.5": {
+   "add": [
+    "TH-GOV-010"
+   ]
+  },
+  "V37-C013-13.3.6": {
+   "add": [
+    "TH-LANG-016",
+    "TH-REL-005"
+   ]
+  },
+  "V37-C013-13.4.1": {
+   "add": [
+    "TH-REL-006",
+    "TH-OS-003",
+    "TH-OS-019",
+    "TH-VM-012",
+    "TH-LANG-032"
+   ]
+  },
   "V37-C014-14.1.1": {
    "add": [
     "TH-FS-023",
@@ -97578,8 +97658,8 @@
    "add": [
     "TH-NET-004",
     "TH-HIS-003",
-    "TH-SEC-003",
     "TH-NET-003",
+    "TH-SEC-003",
     "TH-GOV-017"
    ]
   },
@@ -98506,8 +98586,8 @@
    "add": [
     "TH-VM-034",
     "TH-NET-003",
-    "TH-LAW-004",
     "TH-LANG-017",
+    "TH-LAW-004",
     "TH-NET-009",
     "TH-HW-010"
    ]
@@ -103857,7 +103937,7 @@
   "V37-C015-15.3.20": {
    "add": [
     "TH-HW-013",
-    "TH-REL-030"
+    "TH-OS-005"
    ]
   },
   "V37-C015-15.3.21": {
@@ -104273,7 +104353,7 @@
   "V37-C015-15.4.37": {
    "add": [
     "TH-OS-034",
-    "TH-LAW-002"
+    "TH-OS-029"
    ]
   },
   "V37-C015-15.4.38": {
@@ -105845,8 +105925,8 @@
   "V37-C016-16.2.66": {
    "add": [
     "TH-VM-008",
-    "TH-NET-013",
     "TH-VM-001",
+    "TH-NET-013",
     "TH-SEC-013"
    ]
   },
@@ -105954,8 +106034,8 @@
   "V37-C016-16.3.2": {
    "add": [
     "TH-LANG-025",
-    "TH-NET-013",
     "TH-REL-027",
+    "TH-NET-013",
     "TH-LANG-015"
    ]
   },
@@ -105988,7 +106068,7 @@
     "TH-FS-031",
     "TH-HW-010",
     "TH-NET-032",
-    "TH-REL-030"
+    "TH-OS-005"
    ]
   },
   "V37-C016-16.3.7": {
