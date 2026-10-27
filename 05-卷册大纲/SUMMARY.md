@@ -4780,6 +4780,31 @@
             - 17.3.64-年5月5日皮奥兹在周末的故障里看到某台机器邮件队列堆得很高走完一次要四分钟以上注.md
             - 17.3.65-年2月19日DanielStaal建议用procmail规则把邮件全部转发到外部.md
         - 17.4-Web 与数据库服务
+            - 17.4.1-2011年6月15日他转贴另一人实测称mysql_connect在网页中可用而从.md
+            - 17.4.2-2011年3月16日BCook在82amd64用phpfpm配Imagick读d.md
+            - 17.4.3-2011年9月21日自述指libmysqlclientso18出自databas.md
+            - 17.4.4-年10月26日某开发者引Apache公告指出1320中的若干缺陷已在1322修复.md
+            - 17.4.5-年12月21日某运营者自述在其语境里高流量指的是每月约300GB静态内容那台换到.md
+            - 17.4.6-年2月13日某用户自述前一晚装apach13fp并下载fp50freebsdta.md
+            - 17.4.7-年7月2日某运营者报告squid在FreeBSD40RELEASE上长期占用99.md
+            - 17.4.8-年10月23日某运营者在FreeBSD45上用ports装的wuftpd261由.md
+            - 17.4.9-年1月7日Vitalis在Oracle讨论串中自述经多轮测试用Oracle7客户.md
+            - 17.4.10-年7月6日LucasHolt回应mod_mono卡死询问自述数月前就4x系列上的.md
+            - 17.4.11-年3月12日Mark自述其Apache1329报bindAddressalrea.md
+            - 17.4.12-年12月21日ReneMendoza在FreeBSD54上为squirrelma.md
+            - 17.4.13-年5月6日PatMaddox在FreeBSD53上偶能让lighttpd配合fa.md
+            - 17.4.14-年5月17日OlivierNicole说apache13modssl迁到port.md
+            - 17.4.15-年9月7日ToomasAas的FreeBSD411跑PHP4311libicon.md
+            - 17.4.16-年4月18日vsftpd近期cvsup后端口仍要带sh后缀脚本才能开机自启维护者.md
+            - 17.4.17-年8月26日CyberLeo转述4G上限疑问据所引博客指限制来自x86上MyIS.md
+            - 17.4.18-年7月28日MaximKhitrov说把fastcgiphp脚本从usrloca.md
+            - 17.4.19-年6月19日建议若不复制该mysql就在mycnf注释logbin去掉二进制日志.md
+            - 17.4.20-年6月20日回应FreeBSD作PBX的询问生产环境为FreeBSD61RELE.md
+            - 17.4.21-年10月31日发件人发现51mysql端口实际为5126rc遂回退到5067并询.md
+            - 17.4.22-年9月16日IanSmith回贴Annelise的apache13已运行三年PI.md
+            - 17.4.23-年8月25日ColinBrace在lighttpdconf里关掉了CGI与fas.md
+            - 17.4.24-年7月16日Doyle在64上把PHP526升到5210后WebCalendar.md
+            - 17.4.25-年6月12日GaryKline自述先前写就的PHP脚本突报date依赖系统时区设.md
         - 17.5-题面杂项
 - 第38卷-FreeBSD 人物志：从创始成员到全球维护者（1993–2026）
     - 第1章-创始成员与 386BSD 交接
