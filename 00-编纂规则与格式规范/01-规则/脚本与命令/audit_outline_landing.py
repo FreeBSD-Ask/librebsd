@@ -17,7 +17,8 @@ L4  H1 与路径一致：小节文件名 `M.N.P-slug.md` 的 M.N.P 与首行 `# 
 L5  旧三段号未决：落点正文含旧式 `0NN.M.P` 三段号且该文件对应 source_id 未在
     `映射/ref-unresolved.tsv` 挂账。
 L6  落点无重复内容：落点 `.md` 的 SHA-256 无重复组。
-L7  SUMMARY 链接齐全：每条 CONFIRMED 落点在 `SUMMARY.md` 中有 URL 编码链接。
+L7  SUMMARY 节条目齐全：每条 CONFIRMED 落点的父节目录名在 `SUMMARY.md` 有
+    条目行（2026-10-28 SUMMARY 去链接化后口径；文件级列举由镜像器 validate 双射覆盖）。
 L8  主题索引口径：`chapter_keywords.json` 的 `meta.schema==theme-index/4`，
     `meta.volumes/chapters/sections` 与树计数一致，`sections` 键数 == 节数。
 L9  落点编码：落点 `.md` 无 BOM、无 CRLF。
@@ -59,7 +60,6 @@ import re
 import shutil
 import sys
 import tempfile
-import urllib.parse
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__)))))
@@ -115,8 +115,18 @@ def _dest_ok(root, rel):
     if n == ".." or n.startswith("../") or "/../" in n:
         return False, "越界"
     if not os.path.isfile(os.path.join(root, rel)):
+        # 双约定兼容（2026-10-28 落地并行期）：dest 带"05-卷册大纲/"仓库相对前缀时剥前缀重试
+        if n.startswith("05-卷册大纲/") and os.path.isfile(
+                os.path.join(root, n[len("05-卷册大纲/"):])):
+            return True, ""
         return False, "缺文件或指向目录"
     return True, ""
+
+
+def _dest_rel05(rel):
+    """layout dest 归一为 05-卷册大纲 相对（兼容仓库相对带前缀形态）。"""
+    n = _norm(rel or "")
+    return n[len("05-卷册大纲/"):] if n.startswith("05-卷册大纲/") else n
 
 
 def _strip_code(text):
@@ -253,7 +263,7 @@ def run_gate(root, mapdir):
     if not has_map:
         skip("L3", "映射基础设施未建")
     else:
-        mapped = {_norm(lay[r["source_id"]].get("dest_relpath") or "")
+        mapped = {_dest_rel05(lay[r["source_id"]].get("dest_relpath"))
                   for r in confirmed if r.get("source_id") in lay}
         extra = [_norm(os.path.relpath(p, root)) for p in dest_md
                  if _norm(os.path.relpath(p, root)) not in mapped]
@@ -288,7 +298,7 @@ def run_gate(root, mapdir):
     up = read_tsv(os.path.join(mapdir, "ref-unresolved.tsv"))
     if up:
         unresolved = {r.get("source_id") for r in up if r.get("source_id")}
-    src_by_dest = {_norm(lay[r["source_id"]].get("dest_relpath") or ""): r.get("source_id")
+    src_by_dest = {_dest_rel05(lay[r["source_id"]].get("dest_relpath")): r.get("source_id")
                    for r in confirmed if r.get("source_id") in lay}
 
     def oldref_hits(pat):
@@ -322,29 +332,26 @@ def run_gate(root, mapdir):
         dups = {h: v for h, v in seen.items() if len(v) > 1}
         add("L6", not dups, "duplicate hash groups=%d" % len(dups))
 
-    # L7 SUMMARY 链接齐全（缺行／空 dest 计失败，不索引崩溃；兼认尖括号形态）
+    # L7 SUMMARY 节条目齐全（SUMMARY 2026-10-27 去链接化改纯文本后，链接判据失配；
+    # 新口径＝每条 CONFIRMED 落点的父节目录名在 SUMMARY.md 有条目行，缺行／空 dest
+    # 计失败，不索引崩溃；文件级列举由镜像器 validate 双射在收口覆盖）
     if not has_map:
         skip("L7", "映射基础设施未建")
     else:
         sp = os.path.join(root, "SUMMARY.md")
         summary = open(sp, encoding="utf-8").read() if os.path.isfile(sp) else ""
-        misslink, emptydest = [], []
+        missline, emptydest = [], []
         for r in confirmed:
             rel = (lay.get(r.get("source_id")) or {}).get("dest_relpath") or ""
             if not rel:
                 emptydest.append(r.get("source_id"))
                 continue
-            rel_n = _norm(rel)
-            enc = urllib.parse.quote(rel_n, safe="/")
-            hit = ("](%s)" % enc in summary
-                   or "](%s)" % rel_n in summary
-                   or "](<%s>)" % rel_n in summary
-                   or "](<%s>)" % enc in summary)
-            if not hit:
-                misslink.append(rel_n)
-        add("L7", not misslink and not emptydest and bool(summary),
+            secdir = _norm(rel).split("/")[-2]
+            if not re.search(r"(?m)^\s*- %s\s*$" % re.escape(secdir), summary):
+                missline.append(_norm(rel))
+        add("L7", not missline and not emptydest and bool(summary),
             "summary=%s confirmed=%d missing=%d emptydest=%d"
-            % ("存在" if summary else "缺失", len(confirmed), len(misslink), len(emptydest)))
+            % ("存在" if summary else "缺失", len(confirmed), len(missline), len(emptydest)))
 
     # L8 主题索引口径（schema＋三元组＋键集；空树缺件按 SKIP 处理）
     kwp = os.path.join(root, "chapter_keywords.json")
@@ -426,7 +433,7 @@ def run_gate(root, mapdir):
                 badname.append(rel or "<空>")
             elif ILLEGAL_NAME & set(os.path.basename(rel)):
                 badname.append(rel)
-            elif len(os.path.join(root, rel)) > 260 and r.get("source_id") not in over_ledger:
+            elif len(os.path.join(root, _dest_rel05(rel))) > 260 and r.get("source_id") not in over_ledger:
                 over.append(rel)
         add("L13", not over and not badname,
             "over260=%d ledger=%d badpath=%d" % (len(over), len(over_ledger), len(badname)))
@@ -537,10 +544,17 @@ def build_fixture(base):
     _write_tsv(os.path.join(mapdir, "layout.tsv"),
                ["source_id", "dest_relpath"],
                [[s, p] for s, p, _ in srcs])
-    # SUMMARY 含三条 URL 编码链接
-    lines = ["# Summary", ""]
-    for s, p, _ in srcs:
-        lines.append("- [%s](%s)" % (p.split("/")[-1], urllib.parse.quote(p, safe="/")))
+    # SUMMARY 纯文本条目（2026-10-28 去链接化口径）：列全落点父节目录名
+    lines = ["# Summary", "",
+             "- 第01卷-合成甲",
+             "    - 第1章-甲一",
+             "        - 1.1-甲一节",
+             "    - 第2章-甲二",
+             "        - 2.1-甲二节",
+             "- 第02卷-合成乙",
+             "    - 第1章-乙一",
+             "        - 1.1-乙一节",
+             "        - 1.2-乙一二节"]
     _mk(os.path.join(root, "SUMMARY.md"), "\n".join(lines) + "\n")
     # 主题索引
     kw = {"meta": {"schema": "theme-index/4", "volumes": 2, "chapters": 3, "sections": 4},
@@ -711,6 +725,12 @@ def selftest():
         good_summary = open(sp, encoding="utf-8").read()
         _mk(sp, "")
         check("负向 L7 SUMMARY 空", g()["L7"][1] == "FAIL")
+        _mk(sp, good_summary)
+
+        # L7 缺节条目（CONFIRMED 落点父节目录名不在 SUMMARY）
+        cut = [ln for ln in good_summary.split("\n") if ln.strip() != "- 2.1-甲二节"]
+        _mk(sp, "\n".join(cut))
+        check("负向 L7 缺节条目", g()["L7"][1] == "FAIL")
         _mk(sp, good_summary)
 
         # L2 dest 空串（不得因 join(root,"") 假 PASS）
