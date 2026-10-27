@@ -3853,10 +3853,45 @@
         - 11.4-测试：Kyua、CI 与 tinderbox
         - 11.5-MFC：从 HEAD 到 STABLE 的合并纪律
         - 11.6-发布工程：Release Engineering 团队、公告体例与版本命名
+            - 11.6.1-要点140发布工程团队由ColinPercivalReleaseEngineer.md
         - 11.7-Ports 工程：poudriere、QA 与 port 管理者流程
         - 11.8-文档工程：Handbook、man 页与 release notes 的同步
         - 11.9-缺陷跟踪平台的更替：从 GNATS 到 Bugzilla（2014）
+            - 11.9.1-1998年5月4日Hubbard称GNATS管理数千工单时缺陷明显已淹没重要事项.md
+            - 11.9.2-年5月17日StefanZehl把x11wmwmx从40升到56删patcha到.md
         - 11.10-FreeBSD 14.0 的发布与 stable／14 分支（2023 年）
+            - 11.10.1-14.0 发布特性集与工程语境.md
+            - 11.10.2-14.0 核心技术特性全景.md
+            - 11.10.3-14.0 与 13.x 版本特性对比.md
+            - 11.10.4-年4月19日MateuszGuzik提供vnlru_free_pickdiff供.md
+            - 11.10.5-年1月28日FreeBSD开发者EdMaste更正自己先前的说法说明WITH_D.md
+            - 11.10.6-年3月29日MateuszGuzik认为内核中setbutnotused告警过于.md
+            - 11.10.7-年11月18日HansPetterSelasky自述其音频程序以rtprio8运.md
+            - 11.10.8-年9月17日GaryJennejohn报告内核配置未包含NONINVARIANT.md
+            - 11.10.9-年8月15日AlexanderLeidinger报告其运行约23个jail的宿主.md
+            - 11.10.10-年6月21日HartmutBrandt自述设置静态ARP表项时netlink套接.md
+            - 11.10.11-年5月15日GlenBarber回应代理环境下curl与pyrequests受影.md
+            - 11.10.12-年9月5日MarkMillard自述在ZFS的poudrierebulka中按下.md
+            - 11.10.13-年7月30日DagErlingSmørgrav指出filemon实为device.md
+            - 11.10.14-年3月27日MateuszGuzik自述执行trussftimeout2slee.md
+            - 11.10.15-年11月14日MichalMeloun排查armv7内核换用llvm19lld后.md
+            - 11.10.16-年4月13日AlastairHogge自述在只读的usrsrc上更新15CURR.md
+            - 11.10.17-年8月2日RickMacklem提出MK_MITKRB5为yes时的偏好主张us.md
+            - 11.10.18-年8月9日IanFREISLICH报告OpenSSLlegacyprovider.md
+            - 11.10.19-年8月18日MarcinCieslak报告升级到提交ac641d55ea06的1.md
+            - 11.10.20-年8月31日LexiWinter指出不能用OSVERSION区分Heimdal与.md
+            - 11.10.21-年2月15日MarkMillard指出aarch64armv7与riscv64等.md
+            - 11.10.22-年1月10日MaurizioVairani自述用vmbhyve创建150CURR.md
+            - 11.10.23-年6月25日Alex通报CURRENT中mandoc更新带来的手册写法变化库手册.md
+            - 11.10.24-年5月12日AlexanderLeidinger报告在uipc_usrreqc第.md
+            - 11.10.25-年5月25日JurajLutter在列表中自述已提交评审D35694拟把Open.md
+            - 11.10.26-年11月22日MarkMillard以MALLOC_CONF设置junkallo.md
+            - 11.10.27-年10月1日CySchubert提交补丁把krb5错误表生成过程的输出静音认为其.md
+            - 11.10.28-年10月15日MatteoRiondato主张为pkgbase元包写明收录标准认.md
+            - 11.10.29-年9月5日CySchubert报告HP840上i915kms与iwlwifi的p.md
+            - 11.10.30-年9月23日GlebSmirnoff报告9月稳定周中Netflix的AB测试未发.md
+            - 11.10.31-年3月17日RickMacklem提出allocuio中iovcnt与UIO_M.md
+            - 11.10.32-年3月27日MatthiasLanter定位到相关提交并指出acpidump中存.md
     - 第12章-FreeBSD 技术路线与应用领域综合：系统工程与长期演进
         - 12.1-基本系统统一性的形成
         - 12.2-内核、用户空间与工程体系的协同
