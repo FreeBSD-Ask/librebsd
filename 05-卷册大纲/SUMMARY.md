@@ -4806,6 +4806,71 @@
             - 17.4.24-年7月16日Doyle在64上把PHP526升到5210后WebCalendar.md
             - 17.4.25-年6月12日GaryKline自述先前写就的PHP脚本突报date依赖系统时区设.md
         - 17.5-题面杂项
+            - 17.5.1-年2月19日丹尼尔朗于2002年2月19日告知列表他已重写由栗山淳与瓦伦蒂诺瓦谢.md
+            - 17.5.2-年8月15日耶斯佩尔斯克里弗于2002年8月15日报告他将ftpFreeBSDo.md
+            - 17.5.3-年10月13日IgorRobul在20051013回复EfrenBravo关于代.md
+            - 17.5.4-2011年6月25日FreeBSD90CURRENTr223522M上sleep.md
+            - 17.5.5-2011年3月24日本封正文整段转引FrédéricPerrin的回帖署名者只附.md
+            - 17.5.6-2011年5月24日自述控制台已能正常显示带重音字符的文件名但Apache访问仍.md
+            - 17.5.7-2011年5月30日AdamVandeMore的答复被转贴supports虽被提.md
+            - 17.5.8-2011年11月28日ThomasMueller承认自己在subjectline.md
+            - 17.5.9-2011年10月7日Bonomi指出包含ncursesh即带入宏定义KEY_Fn.md
+            - 17.5.10-2011年10月31日Polytropon以本机usrsharemiscbsdf.md
+            - 17.5.11-2011年9月9日BerntHansson自述推测崩溃系swap空间耗尽或硬件故.md
+            - 17.5.12-2011年9月23日致信Damien谢其及时答复称照做仍遇错疑因最初错误所致gt.md
+            - 17.5.13-2011年9月29日ohartman认为Andrea看到的gdb输出与自己那份相.md
+            - 17.5.14-4.0 的其他特性.md
+            - 17.5.15-年12月8日某管理员自述其逐一试用过多款ISP计费系统称BillMax虽运行于各.md
+            - 17.5.16-年11月27日BlakeSwensen自述某台机器的日志出现rpcstatd非法.md
+            - 17.5.17-年8月22日某用户自述在FreeBSD45上运行程序报libc_rso3缺失磁盘.md
+            - 17.5.18-年4月28日PaulHoffman回复AlessandrodeManzano关于.md
+            - 17.5.19-年6月30日JasperOMalley指出那台被拿来开玩笑的IBM超级计算机是S.md
+            - 17.5.20-年12月7日ThomasLippert回复MinnesotaSlinky关于控制.md
+            - 17.5.21-年3月10日TerryLambert自述IBM收购Whistle时其InterJ.md
+            - 17.5.22-年1月26日ChrisSouza自述运行45RELEASE的服务器反复重启日志出.md
+            - 17.5.23-年7月26日SimonBarner在AMD64对比Gentoo的讨论中指出Fre.md
+            - 17.5.24-年2月7日克里斯肯纳威引述阿莱杭德罗普尔弗的自述对方照fdpprimer装sp1.md
+            - 17.5.25-年1月15日ColinRaven称数日前自己在53RELEASE上也遇到与Eri.md
+            - 17.5.26-年7月21日MarkusTrippelsdorf回复GőcziSzabolcs关.md
+            - 17.5.27-年6月21日LawrencePetrykanyn在FreeBSD53双引导机从p.md
+            - 17.5.28-年5月30日EugeneHercun指出若整个团队要迁到FreeBSD就不该怕文.md
+            - 17.5.29-年4月27日ColinPercival未说清为何有人要预览给出sortcomm3.md
+            - 17.5.30-年8月9日NikolasBritton就BSDstatsv20唯一键讨论重申自己.md
+            - 17.5.31-年2月23日ChuckSwiger答没有能转换正则的工具多数正则无法用有限长度的.md
+            - 17.5.32-年1月30日LowellGilbert答陈旧权限文件之问说陈旧一词大体与厨房里同.md
+            - 17.5.33-年7月12日VictorRomanArchidona为GentooFreeBSD.md
+            - 17.5.34-年7月25日MatthiasFechner答DavidStanford问Simp.md
+            - 17.5.35-年7月29日JonathanHorne承接JerryMcAllister不知Ne.md
+            - 17.5.36-年5月12日KennethBond指出安全公告页把61RELEASE标为Norm.md
+            - 17.5.37-年10月27日RogerRockyVetterberg回AndyGreenwoo.md
+            - 17.5.38-年9月27日NJThomas记起RicoSecada报的backgroundpo.md
+            - 17.5.39-年9月18日MathiasPickerstable试mls设mls54后跑set.md
+            - 17.5.40-年9月27日vuthecuong每次登录70CURRENT日志里反复刷inope.md
+            - 17.5.41-年1月15日DominikZalewski在FreeBSD61i386上运行ph.md
+            - 17.5.42-年7月28日GiorgosKeramidas指出原故障仅为数值莫名改变而jema.md
+            - 17.5.43-年7月29日讨论自动插入邮件免责声明不可行理由是脚本难以准确猜测回复中的MIME.md
+            - 17.5.44-年3月15日回应编译器疑点建议先在代码中加printf或fprintf到stde.md
+            - 17.5.45-年10月5日用户报告在FreeBSD70RELEASEp2上用gnuradio和.md
+            - 17.5.46-年10月24日NateEldredge回话说rtld查找带版本号的libutil.md
+            - 17.5.47-年9月2日SteveFranks在amd64上运行32位FreeBSD程序即报l.md
+            - 17.5.48-年9月9日Eighner回复RolandSmith称欧元字符不在iso88591.md
+            - 17.5.49-年9月23日RW用Wine跑Windows版ENT程序自测devrandom输出.md
+            - 17.5.50-年4月3日gahn查libgssapiso发现是指向libgssapiso2的符.md
+            - 17.5.51-年12月17日RolandSmith说明他查aristotlethoughtor.md
+            - 17.5.52-年2月20日HerbertLanghans在FreeBSD71上只有strfil.md
+            - 17.5.53-年1月29日BillMoran回复Nerius关于安全漏洞的疑问认为70快一个月.md
+            - 17.5.54-年6月5日Manolis转引JasonHelfman的说法他在80CURRENT.md
+            - 17.5.55-年3月31日GiuseppePagnoni在i386的FreeBSD71RELE.md
+            - 17.5.56-年5月19日PeterSteele的信号处理器加锁后把标志位置零再唤醒条件变量并.md
+            - 17.5.57-年11月12日Jackson补上原本遗漏的pusheax后代码即可正常输出指出此.md
+            - 17.5.58-年10月31日OlivierNicole为造成的打扰致歉承认是自己出错说明72机.md
+            - 17.5.59-年9月22日AflatoonAflatooni的FreeBSD63服务器被入侵他.md
+            - 17.5.60-年8月21日SteffenNeubauer自述FreeBSD81RELEASE上.md
+            - 17.5.61-年8月18日ClintonAdams承认上一封误贴了别的论坛内容补上服务器正确追.md
+            - 17.5.62-freebsdquestionsmessages2403251.md
+            - 17.5.63-freebsdquestionsmessages2406961.md
+            - 17.5.64-freebsdquestionsmessages2407676.md
+            - 17.5.65-freebsdquestionsmessages2407834.md
 - 第38卷-FreeBSD 人物志：从创始成员到全球维护者（1993–2026）
     - 第1章-创始成员与 386BSD 交接
         - 1.1-Greenman：从 patchkit 到独立系统
