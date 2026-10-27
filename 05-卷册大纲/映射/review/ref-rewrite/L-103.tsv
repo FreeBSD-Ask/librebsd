@@ -1,0 +1,39 @@
+source_id	kind	old	new	context	disposition
+S-027666	h1	305.4.1	2.6.1	# 305.4.1 SunOS 4.x 的 BSD 血统到 Solaris 转向	rewritten
+S-027707	h1	305.13.1	3.2.1	# 305.13.1 BSDi 商业化 BSD/386（BSD/OS 前身）的模型	rewritten
+S-027708	h1	305.13.2	3.1.4	# 305.13.2 BSDi 被 USL 起诉与和解的过程	rewritten
+S-027709	h1	305.13.3	3.1.5	# 305.13.3 与 Walnut Creek 商业模型的比较	rewritten
+S-027711	h1	305.13.5	3.1.6	# 305.13.5 年1月21日KosSki称其在ISP环境用BSDOS客户亟需控制面板以管理域名添	rewritten
+S-027712	h1	305.13.6	3.1.2	# 305.13.6 年1月01日TonyKeeton2000年求BSDI31的安装指导步骤称误丢安装	rewritten
+S-027713	h1	305.13.7	3.1.7	# 305.13.7 年1月01日一名学生为撰写WindowsNT与UNIX比较报告发帖问六事BSDI	rewritten
+S-027714	h1	305.13.8	3.1.8	# 305.13.8 年1月01日耶路撒冷希伯来大学的YehaviBourvine在一台Pentium	rewritten
+S-027715	h1	305.13.9	3.1.9	# 305.13.9 年1月01日RobKouwenberg代雇主询问BSDI文件与内存上限其Comp	rewritten
+S-027716	h1	305.13.10	3.1.10	# 305.13.10 年1月01日TerryKennedy给出方案有源码许可者在syskernsubr	rewritten
+S-027717	h1	305.13.11	3.1.11	# 305.13.11 年1月01日TerryKennedy称BSDI定价体系颇为怪异而厂商拒不公开标价	rewritten
+S-027718	h1	305.13.12	3.1.12	# 305.13.12 年1月01日ChrisRadek报告BSDI21在NECVersa6200NTP	rewritten
+S-027720	h1	305.13.14	3.1.13	# 305.13.14 年1月01日HP的AlSlater称多带自动加载不是驱动而是叫mtx的工具可切带	rewritten
+S-027721	h1	305.13.15	3.1.1	# 305.13.15 年1月01日BobNick自1997年8月初即在PentiumII266上运行B	rewritten
+S-027722	h1	305.13.16	3.1.33	# 305.13.16 年1月01日Jeremy给出edquota的模板格式并说明无配额用户须先用edq	rewritten
+S-027724	h1	305.13.18	3.1.14	# 305.13.18 年1月01日JohnHough报告四台服务器上的DE500XA卡在BSDI30上	rewritten
+S-027726	h1	305.13.20	3.1.3	# 305.13.20 年1月01日GildasPerrot报告在CompaqDeskpro200051	rewritten
+S-027728	h1	305.13.22	3.1.15	# 305.13.22 年1月01日ReneeMoriarty称自己遇到同样的IRC连接问题做法是手工添	rewritten
+S-027729	h1	305.13.23	3.1.16	# 305.13.23 年1月01日GaryLiefer定位perlBadfree源于BSDI动态加载库	rewritten
+S-027730	h1	305.13.24	3.1.17	# 305.13.24 年1月01日CurtSampson在486级NetBSD机器上实测NFSv3写3	rewritten
+S-027731	h1	305.13.25	3.1.18	# 305.13.25 年1月01日JWunsch说明单卡多口可把以太口增至八个但须八个IP单条连接的流	rewritten
+S-027732	h1	305.13.26	3.1.19	# 305.13.26 年1月01日peterhakanson称BSDOS20存在某些条件下耗尽内存的虚	rewritten
+S-027733	h1	305.13.27	3.1.20	# 305.13.27 HowardLeadmon称自己用双CPU主板但BSDI只支持单CPU故单路运行	rewritten
+S-027736	h1	305.13.30	3.1.21	# 305.13.30 MichaelHancock提供KAFFE03p1即时编译Java虚拟机信息可在	rewritten
+S-027737	h1	305.13.31	3.1.22	# 305.13.31 MarkJeftovic报告Adaptec适配器上纯BSD安装后无法从硬盘引导已	rewritten
+S-027738	h1	305.13.32	3.1.23	# 305.13.32 解释rmt系44BSD清理文件系统遗留问题sysadmin二进制移出etc而rm	rewritten
+S-027740	h1	305.13.34	3.1.24	# 305.13.34 年1月1日JeremyMalli解释15xx卡问题打开机箱可见Adaptec控制	rewritten
+S-027741	h1	305.13.35	3.1.25	# 305.13.35 年1月1日VivekKhera回复KarlRenaut关于升21的征询称在整机上	rewritten
+S-027742	h1	305.13.36	3.1.26	# 305.13.36 年1月01日JohnHenders参与Linux到BSDI的口令迁移讨论称自己刚	rewritten
+S-027745	h1	305.13.39	3.1.27	# 305.13.39 DanaCorreia询问在BSDI11中如何添加用户指出adduser要到20	rewritten
+S-027749	h1	305.13.43	3.1.28	# 305.13.43 年1月01日JWunsch答称若要比价就应与FreeBSD官方光盘比该光盘由Wa	rewritten
+S-027750	h1	305.13.44	3.1.29	# 305.13.44 JWunsch就RussellDurkee所载cron于1200执行rootCM	rewritten
+S-027751	h1	305.13.45	3.1.30	# 305.13.45 年1月01日TerryKennedy说明TomcatII与I同板但多一颗CPU插	rewritten
+S-027752	h1	305.13.46	3.1.31	# 305.13.46 年1月01日JWunsch接Waples称在BSDI21指明端口后板载以太即被识	rewritten
+S-027753	h1	305.13.47	3.1.32	# 305.13.47 年1月01日PaulSop以实测说明所用Digiboard扩展端口模块几乎不占C	rewritten
+S-027777	h1	305.19.2	3.8.1	# 305.19.2 Wind River 收购 BSDi 的事件	rewritten
+S-027779	h1	305.19.4	3.8.2	# 305.19.4 Wind River 公告与收购记录考据	rewritten
+S-027864	h1	308.2.4	5.6.1	# 308.2.4 IBM AIX、HP-UX、Tru64 UNIX 等其它商业 Unix 源码状态	rewritten
