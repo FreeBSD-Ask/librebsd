@@ -4192,6 +4192,63 @@
             - 15.3.43-年6月23日TaaviTalvik表示首次撰写manpage近乎黑魔法请求熟悉t.md
             - 15.3.44-年4月11日jkh建议想找合理的营销模板就去看redhatcom说它的主页正是他.md
         - 15.4-用户硬件环境与使用报告
+            - 15.4.1-1999年9月1日pete报告多台L440GX+服务器主要作单处理器使用加装Ad.md
+            - 15.4.2-1999年9月13日tolyar在HPVectraVA200DT上用32rele.md
+            - 15.4.3-1999年10月5日mikebo报告FBSD33R在HPKayakXU上HP组合.md
+            - 15.4.4-1999年8月3日lpa咨询在拟运行的FBSD32主机上叠加三块IDE硬盘软驱I.md
+            - 15.4.5-1999年10月8日todd自述约50台使用asusp2bd主板的机器配置相近且.md
+            - 15.4.6-年6月10日MartinBlapp称CyrixPR20096MB内存的机器无法b.md
+            - 15.4.7-年1月28日TerryBraun认同30稳定他在新机器上装30RELEASE运行.md
+            - 15.4.8-年4月19日DonWilde有4台在线机跑217在X与2940问题彻底了结前不愿.md
+            - 15.4.9-年4月15日RashidKarimov报告0210SNAP上整机随机冻住跑XFr.md
+            - 15.4.10-年8月25日RashidKarimov说两台配置相同的机器频繁panic报Fat.md
+            - 15.4.11-年5月19日MarkDawson运行的文件服务器用226stable三到四周后崩.md
+            - 15.4.12-年3月10日JayeMathisen在P5120Triton芯片组机上跑stre.md
+            - 15.4.13-年8月6日Rabson说最便宜的hub是netgear的约650美元8口他打算改.md
+            - 15.4.14-年11月10日Bryan在FreeBSD222笔记本上用USRoboticsMe.md
+            - 15.4.15-年2月3日MarkHittinger承认Justin说得对他的EISAP60主板.md
+            - 15.4.16-年1月1日WilkoBulte谈及DECAlphaMultia认为24Mb内存与.md
+            - 15.4.17-年4月23日JohnHay报告sysconsc近月改动使无屏幕但内核含sysco.md
+            - 15.4.18-年10月3日AndreasKlemm在超频讨论中起初认为装风扇加热敏传感器就能防.md
+            - 15.4.19-年10月6日TerryLambert在FiskarsUPS讨论中以manrres.md
+            - 15.4.20-年10月20日JoeGreco承认不易相信同步串口卡比高质量TA更贵指出denn.md
+            - 15.4.21-年10月27日AmancioHastyJr初测表明商业Linux电子表格Xess.md
+            - 15.4.22-年5月16日Babkin补充提问为何EDO内存的访问时间应优于普通RAM其比较后.md
+            - 15.4.23-年8月24日JWunsch指出8101416扫描线字体支持的说法不准确VGA仅2.md
+            - 15.4.24-年11月4日MarkTinguely建议在捕获机不运行X图形环境改用另一台机器显.md
+            - 15.4.25-年11月9日JulianAssange说明对22current打syscons补.md
+            - 15.4.26-年4月2日JayeMathisen用DigitalPriorisHX6000作客.md
+            - 15.4.27-年4月10日菲尔询问FreeBSD217RELEASE下华硕主板与USRCour.md
+            - 15.4.28-年4月11日BrianSomers建议对方试用setcon工具它只切换虚拟终端但.md
+            - 15.4.29-年4月16日KyleMestery报告P150配40MBFPM内存跑FreeBS.md
+            - 15.4.30-年4月22日ArveRonning就GaryClarkII报的随机重启在其内核C.md
+            - 15.4.31-年5月16日本人在内存仅五MB的386sx16笔记本上把FreeBSD22装上了.md
+            - 15.4.32-年5月28日Wunsch确认Obrien那台机器是上周末新编的FreeBSD22.md
+            - 15.4.33-年6月2日Jordan回应在控制器设置里把CDROM可启动关掉并说明这已是共识做.md
+            - 15.4.34-年7月7日DominicFroud向FreeBSD22系列的使用者征集现象xmc.md
+            - 15.4.35-年7月28日杰克汉比在VirtualPC模拟器里启动FreeBSD222后内核加.md
+            - 15.4.36-年8月3日查尔斯澄清主机用的是16550A芯片跑在48666上除了用他自己写的程.md
+            - 15.4.37-年8月4日莱蒙答复他人关于把系统装进百得笔记本的提问说自己手上一台百得机器已经顺.md
+            - 15.4.38-年8月21日JimBallantine在30970807SNAP快照上报告XF8.md
+            - 15.4.39-年9月5日肯尼汉森报告他手上的IntelAnchorageAN430TX主板上S.md
+            - 15.4.40-年9月23日发件账号0000Administrator询问labpc板能否让8路.md
+            - 15.4.41-年9月26日TerryLambert追问compat_linux环境下编译器路径.md
+            - 15.4.42-年1月6日norman认为多余空白页由CtrlF换页符引起因该字符会使打印机进纸.md
+            - 15.4.43-年1月8日kevin报告收到Intel在122497发布的AL440LX主板be.md
+            - 15.4.44-年1月12日msmith评论说从那儿到半图形化登录只需一小步比如登录对话框而非l.md
+            - 15.4.45-年3月4日Simon称自己开发环境使用FDDICDDIDEC卡受FreeBSD支.md
+            - 15.4.46-年5月20日joelh建议提问者去检查~xsessionerrors文件看里面是.md
+            - 15.4.47-年2月16日JWunsch答复启动早期切换虚拟终端的疑问指出要在另一虚拟终端做事.md
+            - 15.4.48-年6月10日terry承认这只是其中一部分其余还包括模拟VxD预期运行环境涵盖使.md
+            - 15.4.49-年6月19日dulai认为它之所以能单独当鼠标只是因为它属于鼠标超集moused.md
+            - 15.4.50-年6月21日MikeSmith反驳MouseRemote应被移出moused的说.md
+            - 15.4.51-年9月2日MIHIRAYoshiro在横滨金泽家中以FreeBSD机器使用Sea.md
+            - 15.4.52-年10月22日承包商HallamOaks就客户的电视广告数字化与非实时卫星传输项.md
+            - 15.4.53-年1月5日RussellLCarter在FreeBSDcurrent上配好ACE.md
+            - 15.4.54-年2月9日俄罗斯用户VladimirNKovalev在FreeBSD227199.md
+            - 15.4.55-年3月4日UlfZimmermann报告一台AMDK6233128MBAdapt.md
+            - 15.4.56-年7月2日Enteract的DavidScheidt报告在FreeBSD的Lin.md
+            - 15.4.57-年7月14日DanielCSobral就MatthewDillon称相机内置Ap.md
         - 15.5-杂项
     - 第16章-FreeBSD 4.0 邮件档案：系统与网络
         - 16.1-内核与系统构建升级
