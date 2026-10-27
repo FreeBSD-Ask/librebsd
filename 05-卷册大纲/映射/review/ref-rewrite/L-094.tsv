@@ -1,0 +1,41 @@
+source_id	kind	old	new	context	disposition
+S-021987	h1	199.1.1	8.7.3	# 199.1.1 ZFS 集成的工程挑战	rewritten
+S-021988	h1	199.1.2	8.7.4	# 199.1.2 GPU 支持的改进	rewritten
+S-021989	h1	199.1.3	8.7.5	# 199.1.3 与 FreeBSD OpenZFS 集成的比较	rewritten
+S-021991	h1	199.1.5	8.7.6	# 199.1.5 年1月23日MartinHusemann指出往机器上装uboot很棘手有时需要厂	rewritten
+S-021992	h1	199.1.6	8.7.7	# 199.1.6 年2月16日KyleEvans报告sunxi_emac内建PHY缺陷指v119把	rewritten
+S-021994	h1	199.1.8	8.7.8	# 199.1.8 年5月20日ArtturiAlm针对dmesg中ahcisata0提示忽略损坏的	rewritten
+S-021995	h1	199.1.9	8.7.9	# 199.1.9 年6月25日HaroldGutch指出首次建文件系统失败可能源于容量diskla	rewritten
+S-021996	h1	199.1.10	8.7.10	# 199.1.10 年7月20日tlaronde以用户与测试者身份报告Olimexa20Lime2在	rewritten
+S-021997	h1	199.1.11	8.7.11	# 199.1.11 年8月4日有用户在ROCKPro64网络启动讨论中说明自己不走UEFI而是用ub	rewritten
+S-021998	h1	199.1.12	8.7.12	# 199.1.12 年8月30日ManuelBouyer答复OlimexTeres笔记本的dts编译	rewritten
+S-021999	h1	199.1.13	8.7.1	# 199.1.13 年10月14日JunEbihara报告evbarmearmv6hf的201910	rewritten
+S-022000	h1	199.1.14	8.7.13	# 199.1.14 年11月4日MichaelvanElst列举evbarm内核应默认启用的更多伪设	rewritten
+S-022002	h1	199.1.16	8.7.14	# 199.1.16 年2月7日MichaelvanElst解释博通固件的加载发生在config线程c	rewritten
+S-022003	h1	199.1.17	8.7.15	# 199.1.17 年4月12日TobiasNygren给出让nss通过构建的变通办法在两个受影响的	rewritten
+S-022004	h1	199.1.18	8.7.2	# 199.1.18 年5月26日JunEbihara报告RPI的earmv6hf镜像在2020051	rewritten
+S-022006	h1	199.1.20	8.7.16	# 199.1.20 年7月16日PaulMather报告RPi48GB上UEFIACPI固件从v11	rewritten
+S-022009	h1	199.1.23	8.7.17	# 199.1.23 年4月22日JulianColeman依据DNARD手册实现shark的bitb	rewritten
+S-022010	h1	199.1.24	8.7.18	# 199.1.24 年8月1日TobiasNygren给出让BananaPi从硬盘启动的更简方法清空	rewritten
+S-022011	h1	199.1.25	8.7.19	# 199.1.25 年11月7日MarcinKaminski补充报告称把vmbufmem_hiwat	rewritten
+S-022013	h1	199.1.27	8.7.20	# 199.1.27 年1月13日IzumiTsutsui在ahcisata线程中就sysctlw参数	rewritten
+S-022014	h1	199.1.28	8.7.21	# 199.1.28 年1月17日SimonBurge在ahcisata0软错误线程中转述matthe	rewritten
+S-022015	h1	199.1.29	8.7.22	# 199.1.29 年1月24日maya在熵重构补丁线程中转述TaylorRCampbell的重做补	rewritten
+S-022016	h1	199.1.30	8.7.23	# 199.1.30 年1月30日JoergSonnenberger提醒除WMI非必要之外还应谨慎删除	rewritten
+S-022017	h1	199.1.31	8.7.24	# 199.1.31 年2月22日KamilRytarowski报告在MKLIBCSANITIZER下	rewritten
+S-022020	h1	199.1.34	8.7.25	# 199.1.34 年3月11日MateuszGuzik就查找变更的性能收益归属提出归因认为Free	rewritten
+S-022022	h1	199.1.36	8.7.26	# 199.1.36 年4月2日Mouse就ioctl名称映射的实现方式与数值碰撞的取舍作回应认为对这	rewritten
+S-022023	h1	199.1.37	8.7.27	# 199.1.37 年4月4日AndreasGustafsson认同该解释并认为Christos环境	rewritten
+S-022024	h1	199.1.38	8.7.28	# 199.1.38 年4月17日Maya在DDC信息刷新线程中回应Mouse关于固定分辨率与52时期	rewritten
+S-022025	h1	199.1.39	8.7.29	# 199.1.39 年4月24日Mouse答复自己是对缓冲做轮询而非等待中断轮询由用户态read调用	rewritten
+S-022026	h1	199.1.40	8.7.30	# 199.1.40 年5月12日AndrewDoran就ACL补丁回帖指出genfs_can_acc	rewritten
+S-022027	h1	199.1.41	8.7.31	# 199.1.41 年5月19日KamilRytarowski就idtypeh枚举讨论回应Rober	rewritten
+S-022028	h1	199.1.42	8.7.32	# 199.1.42 年6月2日MartinHusemann回应RockyHotas关于pci_map	rewritten
+S-022030	h1	199.1.44	8.7.33	# 199.1.44 年6月15日DavidHolland回复JohnnyBillquist把工具置于	rewritten
+S-022031	h1	199.1.45	8.7.34	# 199.1.45 年6月16日DavidHolland回复RoyMarples关于工具内置配置的举	rewritten
+S-022033	h1	199.1.47	8.7.35	# 199.1.47 年7月9日Mouse在转述GregAWoods关于umountf走服务器路径可正	rewritten
+S-022034	h1	199.1.48	8.7.36	# 199.1.48 年7月23日TaylorRCampbell回应passwd写坏与POSIXren	rewritten
+S-022038	h1	199.1.52	8.7.37	# 199.1.52 年10月21日coypu补充说明任何不依赖该标签的系统都可能产出错误标签的二进制	rewritten
+S-022040	h1	199.1.54	8.7.38	# 199.1.54 年11月10日Mouse在amd64上报告wscons接管前控制台文本颜色的配置	rewritten
+S-022041	h1	199.1.55	8.7.39	# 199.1.55 年11月12日EdgarFuß顺着他人提示回看pmap相关三处提交但自认对pma	rewritten
+S-022053	h1	199.3.5	8.5.1	# 199.3.5 同期 ZFS/CoW 文件系统总览（2020）	rewritten
