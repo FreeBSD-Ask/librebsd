@@ -1,0 +1,4 @@
+source_id	kind	old	new	context	disposition
+S-016871	h1	146.9.5	8.4.1	# 146.9.5 freebsd-src 趋势统计与 FreeBSD 12.x 工具链现代化的定量印证	rewritten
+S-017571	h1	159.1.1	8.2.1	# 159.1.1 GCC → Clang/LLVM 迁移的工程决策过程	rewritten
+S-017633	h1	161.1.2	8.3.1	# 161.1.2 工具链全面 LLVM 化：GCC 4.2.1 彻底移除	rewritten
