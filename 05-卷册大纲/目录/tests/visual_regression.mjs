@@ -510,7 +510,7 @@ function linkVisible(link) {
     click('json');
     click('txt');
     await new Promise(function (r) { setTimeout(r, 400); });
-    return { len: t.split('\n').length, hasStats: /统计：76 卷 537 章 3907 节/.test(t),
+    return { len: t.split('\n').length, hasStats: /统计：76 卷 544 章 3951 节/.test(t),
              summary: t, json: caps[0] || '', txt: caps[1] || '' };
   });
   const fid = checkExportFidelity(summary);

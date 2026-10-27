@@ -1,12 +1,12 @@
-new-ports	新端口提交与移植请求	新端口请求与提交、把外部工具移植为端口、接手新端口 PR 等题面。
-port-updates	端口更新、修正与 PR 往来	既有端口的版本更新、补丁与 pkg-descr 等文件修正，以及相关 PR 的回复、关闭与跟进。
-build-failures	构建失败与故障排查	端口在特定系统或环境下编译、链接、安装与运行故障的报告、定位与排查。
+new-ports	新Port提交与移植请求	新Port请求与提交、把外部工具移植为Port、接手新Port PR 等题面。
+port-updates	Port更新、修正与 PR 往来	既有Port的版本更新、补丁与 pkg-descr 等文件修正，以及相关 PR 的回复、关闭与跟进。
+build-failures	构建失败与故障排查	Port在特定系统或环境下编译、链接、安装与运行故障的报告、定位与排查。
 library-upgrades	共享库升级与依赖版本冲突	libpng、libogg、ORBit、LLVM 等共享库升级、单一版本策略与依赖版本冲突的题面。
-package-tools	包构建与端口管理工具	pkg_add、pkg_version、portmaster、portupgrade、poudriere、make package、make describe 等工具的使用与缺陷。
+package-tools	包构建与Port管理工具	pkg_add、pkg_version、portmaster、portupgrade、poudriere、make package、make describe 等工具的使用与缺陷。
 port-config	构建与运行配置选项	make.conf、rc.conf、USE_* 变量、PREFIX、CPUTYPE、LOADPATH 等构建与运行配置开关的讨论。
 maintainer-changes	维护者变更与工单移交	MAINTAINER 字段变更、维护者更新提交与 PR 或工单负责人移交。
-ports-tree-sync	端口树同步与基础设施	cvsup、portsnap、Attic 清理、FTP 发布与构建集群等端口树同步与基础设施事项。
+ports-tree-sync	Ports 树同步与基础设施	cvsup、portsnap、Attic 清理、FTP 发布与构建集群等Ports 树同步与基础设施事项。
 checksums-versioning	校验和与版本号一致性	MD5 校验失败、tarball 同号异包与版本号不一致等完整性问题。
-policy-debates	端口去留与推行政策争论	端口去留、移除旧包支持、强制升级与不受欢迎技术被持续推行等政策性争论。
+policy-debates	Port去留与推行政策争论	Port去留、移除旧包支持、强制升级与不受欢迎技术被持续推行等政策性争论。
 desktop-x11	桌面环境与 X11 应用问题	KDE、GNOME、Wayland、X11 配置与桌面应用字体、图标、启动问题的题面。
 misc	文档、网站与杂项讨论	docproj 与 pkg 手册等文档网站讨论，以及难以归入上述主题的杂项题面。

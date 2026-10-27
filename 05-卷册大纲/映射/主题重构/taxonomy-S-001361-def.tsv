@@ -1,5 +1,5 @@
 theme	title	coverage
-tcp-ip-stack-performance	TCP/IP 协议栈与网络性能	TCP 序列号生成、Nagle 算法、零拷贝与 UIO_NOCOPY、uipc_socket 系统调用层、mbuf 集群枯竭、PGM 协议实现与 FreeBSD/Linux 收发小包性能对比等协议栈实现与性能题面。
+tcp-ip-stack-performance	TCP／IP 协议栈与网络性能	TCP 序列号生成、Nagle 算法、零拷贝与 UIO_NOCOPY、uipc_socket 系统调用层、mbuf 集群枯竭、PGM 协议实现与 FreeBSD/Linux 收发小包性能对比等协议栈实现与性能题面。
 nic-device-drivers	网卡与设备驱动	3Com、ep、vx、SMC、Digiboard、sb 声卡与 VoxWare 音频等驱动缺陷报告与移植，设备标识报法与 bpfilter 改名等网卡及外设驱动题面。
 storage-scsi-ata	存储子系统：SCSI、ATA 与磁光设备	ccd 驱动故障、Adaptec 控制器、SCSI 终结器、ATAPI 挂起、matcd 光驱、Exabyte 磁带、newfs 软盘几何、DMA 散集列表与 FibreChannel WWN 等存储链路题面。
 filesystem-vm-memory	文件系统与虚拟内存	MFS 与 DEVFS 纠缠、vnode 操作补丁、procfs 不匹配、malloc 调试字段、MAXMEM 与 MAXPHYS、统一缓冲区缓存与 NetBSD 子系统移植借鉴等文件系统与内存管理题面。

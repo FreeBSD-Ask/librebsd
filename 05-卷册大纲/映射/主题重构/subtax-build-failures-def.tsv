@@ -1,0 +1,6 @@
+compile-link-failures	编译与链接故障	configure 检测失败、缺头文件或缺库、未定义符号、make 与编译器报错、构建中止与构建耗时等编译链接环节的报告、定位与排查。
+dependency-distfile-failures	依赖与取档故障	构建依赖缺失、distfile 无法下载或取错、需手工抓档、补丁与解包取件环节的失败报告与排查。
+install-runtime-failures	安装与运行故障	安装与打包脚本出错、服务启动失败、运行期崩溃、段错误、冻结与功能异常等装机之后环节的报告、定位与排查。
+arch-toolchain-failures	架构与工具链故障	arm、aarch64、powerpc、RPi 等特定架构与交叉构建，clang、gcc、llvm、binutils 工具链切换与编译器缺陷引发的故障。
+upgrade-environment-failures	升级与环境故障	系统升级或版本更新之后、旧配置与残留文件、RELEASE 版本与机器环境差异等因素引发的构建与运行失败。
+misc	未判定杂项	题面信息不足或难以归入上述五个子题的邮件件。

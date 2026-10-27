@@ -3,13 +3,13 @@
   "schema": "theme-index/4",
   "tree": "05-卷册大纲",
   "volumes": 76,
-  "chapters": 537,
-  "sections": 3907,
+  "chapters": 544,
+  "sections": 3951,
   "subsections": 0,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "extract": "title+body",
-  "generated_at": "2026-10-27T01:52:12+08:00"
+  "generated_at": "2026-10-27T17:48:10+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -156,6 +156,15 @@
     "blog"
    ]
   },
+  "TH-BIZ-029": {
+   "label": "营销与公关",
+   "level": "narrow",
+   "broader": "TH-BIZ-000",
+   "tech": [
+    "marketing",
+    "pr"
+   ]
+  },
   "TH-BIZ-030": {
    "label": "品牌",
    "level": "narrow",
@@ -296,6 +305,15 @@
    "tech": [
     "geli",
     "fde"
+   ]
+  },
+  "TH-FS-022": {
+   "label": "数据校验",
+   "level": "narrow",
+   "broader": "TH-FS-000",
+   "tech": [
+    "checksum",
+    "zfs checksum"
    ]
   },
   "TH-FS-023": {
@@ -939,6 +957,15 @@
     "c89",
     "c99",
     "c11"
+   ]
+  },
+  "TH-LANG-002": {
+   "label": "C++ 编程语言",
+   "level": "narrow",
+   "broader": "TH-LANG-000",
+   "tech": [
+    "cpp",
+    "c++"
    ]
   },
   "TH-LANG-003": {
@@ -4430,7 +4457,7 @@
     "TH-OS-014",
     "TH-OS-015"
    ],
-   "sections": 11
+   "sections": 10
   },
   "V36-C004": {
    "volume": "第36卷-从大教堂到集市：FreeBSD 操作系统的历史（1993–2026）",
@@ -4581,11 +4608,50 @@
    "title": "FreeBSD 16.x：基本系统重新定义自身（2026–）",
    "domains": [],
    "themes": [
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
+   ],
+   "sections": 10
+  },
+  "V36-C017": {
+   "volume": "第36卷-从大教堂到集市：FreeBSD 操作系统的历史（1993–2026）",
+   "title": "Ports 提交与构建邮件档案",
+   "domains": [],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029",
+    "TH-LANG-024",
+    "TH-REL-009"
+   ],
+   "sections": 11
+  },
+  "V36-C018": {
+   "volume": "第36卷-从大教堂到集市：FreeBSD 操作系统的历史（1993–2026）",
+   "title": "Ports 生态与治理邮件档案",
+   "domains": [],
+   "themes": [
+    "TH-HW-036",
+    "TH-FS-022",
+    "TH-GOV-006",
+    "TH-LANG-016",
+    "TH-REL-004",
+    "TH-REL-009",
+    "TH-REL-015"
+   ],
+   "sections": 7
+  },
+  "V36-C019": {
+   "volume": "第36卷-从大教堂到集市：FreeBSD 操作系统的历史（1993–2026）",
+   "title": "Ports 应用与杂项邮件档案",
+   "domains": [],
+   "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 10
+   "sections": 6
   },
   "V37-C001": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4667,14 +4733,14 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003",
     "TH-GOV-006",
     "TH-LANG-017",
     "TH-OS-005",
     "TH-OS-022",
-    "TH-REL-003"
+    "TH-REL-003",
+    "TH-REL-013"
    ],
-   "sections": 15
+   "sections": 13
   },
   "V37-C007": {
    "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
@@ -4768,11 +4834,61 @@
    "title": "FreeBSD 的语言生态与 Rust 准入",
    "domains": [],
    "themes": [
+    "TH-LANG-003",
+    "TH-LANG-002",
+    "TH-LANG-025"
+   ],
+   "sections": 4
+  },
+  "V37-C014": {
+   "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
+   "title": "FreeBSD 2.x 开发者邮件档案：内核与网络",
+   "domains": [],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-HW-013",
+    "TH-LANG-030",
+    "TH-NET-001",
+    "TH-NET-006",
+    "TH-NET-010",
+    "TH-OS-009",
+    "TH-OS-013"
+   ],
+   "sections": 7
+  },
+  "V37-C015": {
+   "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
+   "title": "FreeBSD 2.x 开发者邮件档案：构建与共同体",
+   "domains": [],
+   "themes": [
+    "TH-LANG-024",
+    "TH-LAW-010",
+    "TH-REL-007"
+   ],
+   "sections": 5
+  },
+  "V37-C016": {
+   "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
+   "title": "FreeBSD 4.0 邮件档案：系统与网络",
+   "domains": [],
+   "themes": [
+    "TH-NET-010",
+    "TH-OS-030",
+    "TH-REL-001",
+    "TH-REL-015"
+   ],
+   "sections": 6
+  },
+  "V37-C017": {
+   "volume": "第37卷-FreeBSD 技术专题史（1993–2026）",
+   "title": "FreeBSD 4.0 邮件档案：应用与管理",
+   "domains": [],
+   "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040"
    ],
-   "sections": 4
+   "sections": 5
   },
   "V38-C001": {
    "volume": "第38卷-FreeBSD 人物志：从创始成员到全球维护者（1993–2026）",
@@ -28791,13 +28907,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28810,13 +28925,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28829,13 +28943,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28848,13 +28961,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28867,13 +28979,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28886,13 +28997,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28905,13 +29015,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28924,13 +29033,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -28943,13 +29051,12 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29119,24 +29226,6 @@
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
   "V36-C003-3.10": {
-   "chapter": "V36-C003",
-   "title": "Ports 数量的增长曲线与社区贡献模式",
-   "meta": false,
-   "domains": [
-    "TH-LANG-000",
-    "TH-OS-000"
-   ],
-   "themes": [
-    "TH-LANG-016",
-    "TH-LANG-026",
-    "TH-OS-005"
-   ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
-  },
-  "V36-C003-3.11": {
    "chapter": "V36-C003",
    "title": "与同时期操作系统的比较：Linux 2.2、Windows 2000、Solaris 8",
    "meta": false,
@@ -29721,13 +29810,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29740,13 +29828,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29759,13 +29846,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29778,13 +29864,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29797,13 +29882,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29816,13 +29900,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29835,13 +29918,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29854,13 +29936,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29873,13 +29954,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-REL-015",
-    "TH-HW-015",
-    "TH-FS-012"
+    "TH-REL-009",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30711,12 +30791,13 @@
    "title": "多架构体系从扩张进入稳定分层",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30728,12 +30809,13 @@
    "title": "AArch64 从新加入的平台成为核心系统平台",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30745,12 +30827,13 @@
    "title": "RISC-V 进入正式发行体系",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-004",
     "TH-HW-003",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30762,12 +30845,13 @@
    "title": "传统 32 位世界与主体系统开始明显分离",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30779,12 +30863,13 @@
    "title": "基本系统构建环境完成一次世代更替",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30796,12 +30881,13 @@
    "title": "历史架构进入最后支持阶段",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30813,12 +30899,13 @@
    "title": "13.x：FreeBSD 现代平台边界基本确定",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30830,12 +30917,13 @@
    "title": "现代系统边界如何经由选择而确定",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30847,12 +30935,13 @@
    "title": "与同时期操作系统的比较：Linux、Windows、商业 UNIX 及其他 BSD（FreeBSD 13.x 时期）",
    "meta": false,
    "domains": [
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-003",
     "TH-HW-004",
-    "TH-HW-015"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30864,13 +30953,13 @@
    "title": "从多架构扩张转向有限而稳定的平台集合",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30882,13 +30971,13 @@
    "title": "操作系统开始以超大规模多核机器为能力上限",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30900,13 +30989,13 @@
    "title": "历史平台退出不再影响主体系统连续性",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30918,13 +31007,13 @@
    "title": "基本系统的密码学基础进入新的世代",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30936,13 +31025,13 @@
    "title": "文件系统维护逐渐脱离停机窗口",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30954,13 +31043,13 @@
    "title": "系统服务向更小、更专用的实现转变",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30972,13 +31061,13 @@
    "title": "14.x：现代服务器 FreeBSD 的成熟形态",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -30990,13 +31079,13 @@
    "title": "成熟期的目标重设及其具体成因",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31008,13 +31097,13 @@
    "title": "与同时期操作系统的比较：Linux、Windows、商业 UNIX 及其他 BSD（FreeBSD 14.x 时期）",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-FS-000"
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-015",
-    "TH-FS-012",
-    "TH-FS-013"
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31261,14 +31350,16 @@
   "V36-C016-16.1": {
    "chapter": "V36-C016",
    "title": "packaged base 从技术预览走向新的系统组织方式",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31278,14 +31369,16 @@
   "V36-C016-16.2": {
    "chapter": "V36-C016",
    "title": "传统 Distribution Sets 的退出",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-REL-000",
+    "TH-HW-000",
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-REL-030",
+    "TH-HW-037",
+    "TH-LAW-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31295,14 +31388,16 @@
   "V36-C016-16.3": {
    "chapter": "V36-C016",
    "title": "基本系统中的历史遗留组件持续退出",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31312,14 +31407,16 @@
   "V36-C016-16.4": {
    "chapter": "V36-C016",
    "title": "GPL 遗留在基本系统中的进一步清理",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LAW-000",
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LAW-003",
+    "TH-HW-037",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31329,14 +31426,16 @@
   "V36-C016-16.5": {
    "chapter": "V36-C016",
    "title": "安装、更新、构建与基本系统封装重新汇合",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31346,14 +31445,16 @@
   "V36-C016-16.6": {
    "chapter": "V36-C016",
    "title": "现代架构体系进入相对稳定的收敛阶段",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31363,14 +31464,16 @@
   "V36-C016-16.7": {
    "chapter": "V36-C016",
    "title": "ABI 连续性成为持续重构的制度性前提",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31380,14 +31483,16 @@
   "V36-C016-16.8": {
    "chapter": "V36-C016",
    "title": "16.x：尚在形成中的下一代 FreeBSD 操作系统形态",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -31397,6 +31502,384 @@
   "V36-C016-16.9": {
    "chapter": "V36-C016",
    "title": "重新定义中被舍弃的组件与代价",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C016-16.10": {
+   "chapter": "V36-C016",
+   "title": "与同时期操作系统的比较：FreeBSD 16.x／Current",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-LAW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-HW-037",
+    "TH-LAW-003",
+    "TH-REL-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.1": {
+   "chapter": "V36-C017",
+   "title": "新Port提交与移植请求",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.2": {
+   "chapter": "V36-C017",
+   "title": "Port版本升级提交与跟进",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.3": {
+   "chapter": "V36-C017",
+   "title": "Port补丁与文件修正",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.4": {
+   "chapter": "V36-C017",
+   "title": "PR 回复、关闭与状态流转",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-HW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-BIZ-029",
+    "TH-HW-036",
+    "TH-REL-015"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.5": {
+   "chapter": "V36-C017",
+   "title": "更新异常与缺陷反馈",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.6": {
+   "chapter": "V36-C017",
+   "title": "编译与链接故障",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.7": {
+   "chapter": "V36-C017",
+   "title": "安装与运行故障",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.8": {
+   "chapter": "V36-C017",
+   "title": "架构与工具链故障",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-HW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-LANG-024",
+    "TH-HW-036",
+    "TH-REL-015"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.9": {
+   "chapter": "V36-C017",
+   "title": "升级与环境故障",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-HW-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-REL-015",
+    "TH-HW-036",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.10": {
+   "chapter": "V36-C017",
+   "title": "依赖与取档故障",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-REL-009",
+    "TH-HW-036",
+    "TH-REL-015"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C017-17.11": {
+   "chapter": "V36-C017",
+   "title": "未判定杂项",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-REL-015",
+    "TH-BIZ-029"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.1": {
+   "chapter": "V36-C018",
+   "title": "包构建与Port管理工具",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-FS-022",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.2": {
+   "chapter": "V36-C018",
+   "title": "构建与运行配置选项",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-FS-022",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.3": {
+   "chapter": "V36-C018",
+   "title": "维护者变更与工单移交",
+   "meta": false,
+   "domains": [
+    "TH-GOV-000",
+    "TH-HW-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-GOV-006",
+    "TH-HW-036",
+    "TH-FS-022"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.4": {
+   "chapter": "V36-C018",
+   "title": "Ports 树同步与基础设施",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-HW-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-LANG-016",
+    "TH-HW-036",
+    "TH-FS-022"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.5": {
+   "chapter": "V36-C018",
+   "title": "校验和与版本号一致性",
+   "meta": false,
+   "domains": [
+    "TH-FS-000",
+    "TH-REL-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-FS-022",
+    "TH-REL-004",
+    "TH-HW-036"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.6": {
+   "chapter": "V36-C018",
+   "title": "Port去留与推行政策争论",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-HW-036",
+    "TH-FS-022",
+    "TH-GOV-006"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C018-18.7": {
+   "chapter": "V36-C018",
+   "title": "共享库升级与依赖版本冲突",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-REL-009",
+    "TH-REL-015",
+    "TH-HW-036"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C019-19.1": {
+   "chapter": "V36-C019",
+   "title": "桌面环境与 X11 应用问题",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -31411,9 +31894,77 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V36-C016-16.10": {
-   "chapter": "V36-C016",
-   "title": "与同时期操作系统的比较：FreeBSD 16.x／Current",
+  "V36-C019-19.2": {
+   "chapter": "V36-C019",
+   "title": "文档、手册与网站事项",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C019-19.3": {
+   "chapter": "V36-C019",
+   "title": "Ports 树生态与归类",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C019-19.4": {
+   "chapter": "V36-C019",
+   "title": "应用软件与服务使用",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C019-19.5": {
+   "chapter": "V36-C019",
+   "title": "基本系统与内核话题",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V36-C019-19.6": {
+   "chapter": "V36-C019",
+   "title": "杂项与无法判定",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -32505,7 +33056,7 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32542,7 +33093,7 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32561,7 +33112,7 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32598,7 +33149,7 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32617,7 +33168,7 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32654,7 +33205,7 @@
    "themes": [
     "TH-FS-007",
     "TH-REL-001",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32692,7 +33243,7 @@
    "themes": [
     "TH-REL-001",
     "TH-FS-007",
-    "TH-GOV-003"
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32700,44 +33251,6 @@
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
   "V37-C006-6.12": {
-   "chapter": "V37-C006",
-   "title": "FreeBSD 4.0 的发布与 Jails 引入（2000—2003）",
-   "meta": false,
-   "domains": [
-    "TH-REL-000",
-    "TH-FS-000",
-    "TH-GOV-000"
-   ],
-   "themes": [
-    "TH-REL-001",
-    "TH-FS-007",
-    "TH-GOV-003"
-   ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
-  },
-  "V37-C006-6.13": {
-   "chapter": "V37-C006",
-   "title": "FreeBSD 2.x 的开发者群体与核心团队代际更替",
-   "meta": false,
-   "domains": [
-    "TH-GOV-000",
-    "TH-REL-000",
-    "TH-FS-000"
-   ],
-   "themes": [
-    "TH-GOV-003",
-    "TH-REL-001",
-    "TH-FS-007"
-   ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
-  },
-  "V37-C006-6.14": {
    "chapter": "V37-C006",
    "title": "对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后",
    "meta": false,
@@ -32756,7 +33269,7 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V37-C006-6.15": {
+  "V37-C006-6.13": {
    "chapter": "V37-C006",
    "title": "FreeBSD 2.x 时期被遗忘的驱动维护者",
    "meta": false,
@@ -33881,14 +34394,14 @@
   "V37-C013-13.1": {
    "chapter": "V37-C013",
    "title": "Modula-3 与 CVSup",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-003",
+    "TH-LANG-002",
+    "TH-LANG-025"
    ],
    "projects": [],
    "technical_terms": [],
@@ -33898,14 +34411,14 @@
   "V37-C013-13.2": {
    "chapter": "V37-C013",
    "title": "C++ 标准库的 BSD 化：libc++ 与 libcxxrt",
-   "meta": true,
+   "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-LANG-002",
+    "TH-LANG-025",
+    "TH-LANG-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -33915,6 +34428,381 @@
   "V37-C013-13.3": {
    "chapter": "V37-C013",
    "title": "Rust 进入基本系统：Somers 方案与社区争论",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-002",
+    "TH-LANG-025"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C013-13.4": {
+   "chapter": "V37-C013",
+   "title": "跨内核对照：Rust for Linux 观察",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LANG-003",
+    "TH-LANG-002",
+    "TH-LANG-025"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.1": {
+   "chapter": "V37-C014",
+   "title": "TCP／IP 协议栈与网络性能",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-BIZ-000"
+   ],
+   "themes": [
+    "TH-NET-001",
+    "TH-NET-006",
+    "TH-BIZ-008"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.2": {
+   "chapter": "V37-C014",
+   "title": "网卡与设备驱动",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-BIZ-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-HW-013",
+    "TH-BIZ-008",
+    "TH-LANG-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.3": {
+   "chapter": "V37-C014",
+   "title": "存储子系统：SCSI、ATA 与磁光设备",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-HW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-HW-013",
+    "TH-LANG-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.4": {
+   "chapter": "V37-C014",
+   "title": "文件系统与虚拟内存",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-BIZ-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-OS-009",
+    "TH-BIZ-008",
+    "TH-HW-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.5": {
+   "chapter": "V37-C014",
+   "title": "内核架构与启动机制",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-HW-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-HW-013",
+    "TH-LANG-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.6": {
+   "chapter": "V37-C014",
+   "title": "网络配置、防火墙与站点运维",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-BIZ-000",
+    "TH-HW-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-BIZ-008",
+    "TH-HW-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C014-14.7": {
+   "chapter": "V37-C014",
+   "title": "系统调用接口与 POSIX 语义",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-LANG-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-LANG-030",
+    "TH-OS-013"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C015-15.1": {
+   "chapter": "V37-C015",
+   "title": "构建、编译与调试工具链",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-LAW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-LANG-024",
+    "TH-LAW-010",
+    "TH-REL-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C015-15.2": {
+   "chapter": "V37-C015",
+   "title": "第三方软件、软件包与版权",
+   "meta": false,
+   "domains": [
+    "TH-LAW-000",
+    "TH-REL-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-LAW-010",
+    "TH-REL-007",
+    "TH-LANG-024"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C015-15.3": {
+   "chapter": "V37-C015",
+   "title": "社区协作、倡导与文档",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-LAW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-LANG-024",
+    "TH-LAW-010",
+    "TH-REL-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C015-15.4": {
+   "chapter": "V37-C015",
+   "title": "用户硬件环境与使用报告",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-LAW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-LANG-024",
+    "TH-LAW-010",
+    "TH-REL-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C015-15.5": {
+   "chapter": "V37-C015",
+   "title": "杂项",
+   "meta": false,
+   "domains": [
+    "TH-LANG-000",
+    "TH-LAW-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-LANG-024",
+    "TH-LAW-010",
+    "TH-REL-007"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C016-16.1": {
+   "chapter": "V37-C016",
+   "title": "内核与系统构建升级",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-NET-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-REL-015",
+    "TH-NET-010",
+    "TH-OS-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C016-16.2": {
+   "chapter": "V37-C016",
+   "title": "驱动与硬件外设",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-OS-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-OS-030",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C016-16.3": {
+   "chapter": "V37-C016",
+   "title": "网络与防火墙",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-OS-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-OS-030",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C016-16.4": {
+   "chapter": "V37-C016",
+   "title": "Jail 与虚拟化",
+   "meta": false,
+   "domains": [
+    "TH-OS-000",
+    "TH-NET-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-OS-030",
+    "TH-NET-010",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C016-16.5": {
+   "chapter": "V37-C016",
+   "title": "存储与文件系统",
+   "meta": false,
+   "domains": [
+    "TH-NET-000",
+    "TH-OS-000",
+    "TH-REL-000"
+   ],
+   "themes": [
+    "TH-NET-010",
+    "TH-OS-030",
+    "TH-REL-001"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C016-16.6": {
+   "chapter": "V37-C016",
+   "title": "安装与发布介质",
+   "meta": false,
+   "domains": [
+    "TH-REL-000",
+    "TH-NET-000",
+    "TH-OS-000"
+   ],
+   "themes": [
+    "TH-REL-001",
+    "TH-NET-010",
+    "TH-OS-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C017-17.1": {
+   "chapter": "V37-C017",
+   "title": "Ports 树与包管理",
    "meta": true,
    "domains": [
     "TH-HIS-000"
@@ -33929,9 +34817,60 @@
    "subs": 0,
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
-  "V37-C013-13.4": {
-   "chapter": "V37-C013",
-   "title": "跨内核对照：Rust for Linux 观察",
+  "V37-C017-17.2": {
+   "chapter": "V37-C017",
+   "title": "桌面应用与 X11",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C017-17.3": {
+   "chapter": "V37-C017",
+   "title": "系统管理与命令行",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C017-17.4": {
+   "chapter": "V37-C017",
+   "title": "Web 与数据库服务",
+   "meta": true,
+   "domains": [
+    "TH-HIS-000"
+   ],
+   "themes": [
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V37-C017-17.5": {
+   "chapter": "V37-C017",
+   "title": "题面杂项",
    "meta": true,
    "domains": [
     "TH-HIS-000"
