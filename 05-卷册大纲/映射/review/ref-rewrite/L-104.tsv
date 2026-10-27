@@ -1,0 +1,93 @@
+source_id	kind	old	new	context	disposition
+S-026642	h1	279.1.1	2.3.1	# 279.1.1 桌面 BSD 衍生发行版的谱系概览	rewritten
+S-026643	h1	279.1.2	2.3.5	# 279.1.2 桌面 BSD 失败的工程原因：硬件兼容性与图形栈滞后	rewritten
+S-026644	h1	279.1.3	2.3.6	# 279.1.3 桌面 BSD 失败的商业原因：iXsystems 商业模式的桌面不可持续性	rewritten
+S-026645	h1	279.1.4	2.3.7	# 279.1.4 桌面 BSD 失败的社区原因：开发者基数与代际断层	rewritten
+S-026646	h1	279.1.5	2.3.4	# 279.1.5 要点至2026年仍在继续的桌面小众BSD衍生项目有GhostBSDEricTur	rewritten
+S-026648	h1	279.2.1	2.1.1	# 279.2.1 PC-BSD 的起源：2005 年 iXsystems 与 Kris Moore（克里斯·摩尔） 的合作	rewritten
+S-026649	h1	279.2.2	2.1.2	# 279.2.2 PC-BSD 的全盛期：2008-2014 年的桌面 BSD 探索	rewritten
+S-026652	h1	279.2.5	2.1.4	# 279.2.5 要点PCBSD15年的桌面BSD尝试可以从形式主义角度进行哲学辨析PCBSD作为	rewritten
+S-026775	h1	283.1.1	6.1.1	# 283.1.1 批评层：对失败 BSD 衍生版本治理失败的工程、商业、社区、治理四维批评	rewritten
+S-026776	h1	283.1.2	6.1.2	# 283.1.2 反批评层：BSD 阵营与衍生项目维护者的反批评——资源限制、许可证自由与开源生态自然淘汰	rewritten
+S-026808	h1	284.4.3	4.4.1	# 284.4.3 flashpowder 漏洞缓解框架与 HardenedBSD 本地特有安全 commit	rewritten
+S-026813	h1	284.7.1	1.2.1	# 284.7.1 本子节为第121章衍生操作系统谱系的配套采访录覆盖19852026年BSD衍生操	rewritten
+S-026860	h1	286.1.1	4.2.1	# 286.1.1 要点pfSense由ChrisBuechler与ScottUllrich于200	rewritten
+S-026862	h1	286.1.3	4.2.2	# 286.1.3 关于pfSense核心团队将其定位为面向防火墙场景的嵌入式FreeBSD衍生发行	rewritten
+S-026895	h1	287.1.2	2.4.2	# 287.1.2 总纲11商品是形式主义jails的诞生由托管商的付费合同驱动一年独占换取开源商业	rewritten
+S-026896	h1	287.1.3	2.4.3	# 287.1.3 年2月13日JacquesFoucry自述在Lenovox280笔记本的Free	rewritten
+S-026898	h1	287.1.5	2.4.4	# 287.1.5 年11月14日JanBeich在meson更新一单中说明其未等desktop@明	rewritten
+S-026899	h1	287.1.6	2.4.5	# 287.1.6 年4月8日Bluey在consolekit2会话活动状态丢失的bug中报告清除~	rewritten
+S-026901	h1	287.1.8	2.4.6	# 287.1.8 年5月2日SlawomirWojciechWojtczak记录称131RC3上的	rewritten
+S-026902	h1	287.1.9	2.4.7	# 287.1.9 年8月22日SlawomirWojciechWojtczak自述重编develg	rewritten
+S-026903	h1	287.1.10	2.4.8	# 287.1.10 年1月12日bjrn在audiopulseaudio更新单中自述另一个问题是me	rewritten
+S-026905	h1	287.1.12	2.4.9	# 287.1.12 年9月23日AntonSaietskii称4011下一切正常而42损坏XFCE侧	rewritten
+S-026906	h1	287.1.13	2.4.10	# 287.1.13 年12月3日ManfredKoch自述从141RELEASE升级到142RELE	rewritten
+S-026909	h1	287.1.16	2.4.11	# 287.1.16 年8月30日GrahamPerrin在dbus的打包提示消息一报告中提到dbus	rewritten
+S-026910	h1	287.1.17	2.4.12	# 287.1.17 年2月27日DanielEngberg在Bug279705中反驳CharlieL	rewritten
+S-026911	h1	287.1.18	2.4.13	# 287.1.18 年6月8日OlivierDuchateau在Bug286697中介绍gnome_	rewritten
+S-026913	h1	287.1.20	2.4.14	# 287.1.20 年3月21日ChristosMargiolis自述已提交补丁以启用Framewo	rewritten
+S-026914	h1	287.1.21	2.4.15	# 287.1.21 年5月20日VasilyPostnicov自述升级到143BETA3后系统有时刚	rewritten
+S-026916	h1	287.1.23	2.4.16	# 287.1.23 年9月22日JeanSébastienPédron宣布新增graphicsdrm	rewritten
+S-026917	h1	287.1.24	2.4.17	# 287.1.24 年2月4日MatthewWener将textproclibxslt构建失败的缺陷	rewritten
+S-026918	h1	287.1.25	2.4.18	# 287.1.25 年1月20日DanielEngberg自述使用自建的portsoverlay来规	rewritten
+S-026920	h1	287.1.27	2.4.19	# 287.1.27 年3月16日BenHutton报告两台FreeBSD笔记本上KDEPlasma合	rewritten
+S-026921	h1	287.1.28	2.4.20	# 287.1.28 年5月27日GlebPopov转达bapt的说法称给pkg应用上游某提交可降低E	rewritten
+S-026922	h1	287.1.29	2.4.21	# 287.1.29 年6月22日beat在r321更新wwwlinuxflock至260把原来多个镜	rewritten
+S-026923	h1	287.1.30	2.4.22	# 287.1.30 年5月31日mi+thun用gconftool2按mozillazine的reg	rewritten
+S-026926	h1	287.1.33	2.4.23	# 287.1.33 年5月28日Yuri报告Firefox401下enwikipediaorg的Vo	rewritten
+S-026927	h1	287.1.34	2.4.24	# 287.1.34 年9月4日AndriyGapon回复MaratNAfanasyev表示会去跟进并	rewritten
+S-026928	h1	287.1.35	2.4.26	# 287.1.35 年12月9日提交者flor1118日志Fixonheadwhenusingcla	rewritten
+S-026930	h1	287.1.37	2.4.28	# 287.1.37 年7月22日JanBeich指出libevent2在ArchLinux与PkgS	rewritten
+S-026931	h1	287.1.38	2.4.30	# 287.1.38 年6月13日jkim说明因受不了GCC46依赖而自行修复Thunderbird1	rewritten
+S-026932	h1	287.1.39	2.4.32	# 287.1.39 年11月25日SVNr1103由jbeich提交日志说明补回Nightly遗漏的	rewritten
+S-026933	h1	287.1.40	2.4.34	# 287.1.40 年4月1日jbeich在SVNr1227提交中修改trunkMkbsdgecko	rewritten
+S-026934	h1	287.1.41	2.4.35	# 287.1.41 年12月3日jbeich在r1425让aboutmemory暴露私有report	rewritten
+S-026936	h1	287.1.43	2.4.36	# 287.1.43 年11月1日dfilter通告flo在FreeBSD端口仓库提交修订332421	rewritten
+S-026939	h1	287.1.46	2.4.1	# 287.1.46 年2月8日jbeich于20140208提交r1485日志称不要重复添加esr2	rewritten
+S-026940	h1	287.1.47	2.4.37	# 287.1.47 年6月3日RonaldFGuilmette撤回前述卡死报告称手动重建并重装nsp	rewritten
+S-026941	h1	287.1.48	2.4.25	# 287.1.48 年11月3日JanBeich在Bug194757中把受理人由freebsdpor	rewritten
+S-026942	h1	287.1.49	2.4.27	# 287.1.49 年11月23日在bug195312的评论中xmirya报告9stableamd6	rewritten
+S-026943	h1	287.1.50	2.4.29	# 287.1.50 年10月23日JanBeich在缺陷194543里把自己加入抄送名单并补上上游缺	rewritten
+S-026944	h1	287.1.51	2.4.31	# 287.1.51 年8月7日JanBeich在Bug202165评论中说上游正在移除disable	rewritten
+S-026945	h1	287.1.52	2.4.33	# 287.1.52 年12月19日ThomasQuinot在Bug197930评论中判断根因是残留的	rewritten
+S-026946	h1	287.1.53	2.4.38	# 287.1.53 年1月22日OlivierNicole报告FreeBSD101amd64上把BA	rewritten
+S-026948	h1	287.1.55	2.4.40	# 287.1.55 年10月9日MiroslavLachman按建议把gfxcanvasazureb	rewritten
+S-026950	h1	287.1.57	2.4.41	# 287.1.57 年6月6日ArtoPekkanen回邮件称自己在AMD64上无法让Firefox	rewritten
+S-026951	h1	287.1.58	2.4.42	# 287.1.58 年5月13日hongshao报告用pkginstall装上firefoxesr4	rewritten
+S-026952	h1	287.1.59	2.4.39	# 287.1.59 年9月16日AndrewMerenbach称在2015MacBook上Chrom	rewritten
+S-026955	h1	287.1.62	2.4.43	# 287.1.62 EvgeniyKhramtsov在Bug239873关于wwwfirefox与m	rewritten
+S-026956	h1	287.1.63	2.4.44	# 287.1.63 年8月20日MartinBirgmeier在Bug265905评论中给出参照de	rewritten
+S-026958	h1	287.1.65	2.4.45	# 287.1.65 年4月5日MarcoBeishuizen在Bug270436评论中报告使用snd	rewritten
+S-026959	h1	287.1.66	2.4.46	# 287.1.66 年12月4日andy@neunet在Bug275540评论中说重新编译时取消勾选	rewritten
+S-026960	h1	287.1.67	2.4.47	# 287.1.67 年6月5日TatsukiMakino在Bug251246评论#2给出workar	rewritten
+S-026961	h1	287.1.68	2.4.48	# 287.1.68 年4月27日jbeich说明gecko@端口用的是NSS而非其他SSL并反问对方	rewritten
+S-026962	h1	287.1.69	2.4.50	# 287.1.69 年12月14日JanBeich在Bug221466的Comment#9说SSE2	rewritten
+S-026963	h1	287.1.70	2.4.51	# 287.1.70 年6月11日PeterJeremy来信说在amd64主机的i386jail里构建	rewritten
+S-026964	h1	287.1.71	2.4.49	# 287.1.71 年11月19日Bug221916的评论中ThierryThomas说尚未找到把W	rewritten
+S-026965	h1	287.1.72	2.4.53	# 287.1.72 年9月27日GregV表示自己在把u2fhidrs移植到FreeBSD仓库是gi	rewritten
+S-026966	h1	287.1.73	2.4.52	# 287.1.73 年1月9日MikhailT在Bug224917第9号评论撤回上一条的乐观说法承认	rewritten
+S-026969	h1	287.1.76	2.4.54	# 287.1.76 年10月19日JanBeich在Bug229893第13号评论中补充说fstac	rewritten
+S-026971	h1	287.1.78	2.4.55	# 287.1.78 年12月15日JanBeich在Bug242523评论中回复attachment	rewritten
+S-026972	h1	287.1.79	2.4.56	# 287.1.79 年1月24日Bug235166中rkoberman回复JanBeich称自己在r	rewritten
+S-026973	h1	287.1.80	2.4.57	# 287.1.80 年6月27日jbeich说不能去掉gtk2Gtk2是AdobeFlash的NPA	rewritten
+S-026975	h1	287.1.82	2.4.58	# 287.1.82 年10月27日MateuszPiotrowski在Bug233591评论中说自己	rewritten
+S-026976	h1	287.1.83	2.4.59	# 287.1.83 年9月17日CraigLeres在Bug237248评论中提出TZ=Howdy或	rewritten
+S-026978	h1	287.1.85	2.4.60	# 287.1.85 年8月26日VVD在Bug248847评论中说测试符合预期重建不带ALSA的FF	rewritten
+S-026979	h1	287.1.86	2.4.61	# 287.1.86 年1月8日GregRivers发邮件通报Firefoxvulnerability	rewritten
+S-026980	h1	287.1.87	2.4.62	# 287.1.87 年6月9日Bug247108的描述称在KDEPlasma下使用firefox时它	rewritten
+S-026981	h1	287.1.88	2.4.63	# 287.1.88 年5月1日jbeich在Bug242523评论中回复canardo说明问题已修复	rewritten
+S-026983	h1	287.1.90	2.4.64	# 287.1.90 年10月28日KenDEGUCHI在Bug273291评论#41回复Tatsuk	rewritten
+S-026984	h1	287.1.91	2.4.65	# 287.1.91 年2月13日VladimirDruzenko在Bug277021评论中列出132	rewritten
+S-026985	h1	287.1.92	2.4.66	# 287.1.92 年6月11日JanBeich在Bug271475说使用Clang时CC就是汇编器	rewritten
+S-026986	h1	287.1.93	2.4.67	# 287.1.93 年2月16日LaurentChardon在securitynss与netmpic	rewritten
+S-026987	h1	287.1.94	2.4.68	# 287.1.94 年4月18日CharlieLi在Bug294613关于wwwfirefox构建报	rewritten
+S-026988	h1	287.1.95	2.4.69	# 287.1.95 年6月23日DanAllen报告FreeBSD14STABLE上Firefoxe	rewritten
+S-026989	h1	287.1.96	2.4.70	# 287.1.96 年2月4日MaxBrazhnikov答复称KDE3与Qt3端口已从上游移除此为迁	rewritten
+S-026990	h1	287.2.1	2.3.8	# 287.2.1 多样化的桌面 BSD 实验	rewritten
+S-026991	h1	287.2.2	2.3.9	# 287.2.2 NomadBSD 与 helloSystem 的桌面 BSD 实验细化	rewritten
+S-027002	h1	287.6.1	2.3.3	# 287.6.1 本子节为第124章桌面BSD的配套采访录覆盖20052026年桌面BSD衍生项目	rewritten
+S-027003	h1	287.6.2	2.3.2	# 287.6.2 MidnightBSD起于Holt2004年的构想定位桌面BSD系统以易用与安全	rewritten
+S-027177	h1	295.1.8	2.1.5	# 295.1.8 开箱即用桌面 BSD 的尝试	rewritten
+S-027180	h1	295.1.11	2.1.6	# 295.1.11 开箱即用桌面 BSD 的尝试	rewritten
+S-027183	h1	295.1.14	2.1.7	# 295.1.14 开箱即用桌面 BSD 的尝试	rewritten
+S-027196	h1	295.6.1	2.1.3	# 295.6.1 本子节为第270章PCBSD→TrueOS桌面BSD的兴衰与教训20052020	rewritten
