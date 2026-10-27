@@ -1,0 +1,4 @@
+source_id	op	split_plan	parts_bytes	review_state	date	note
+S-027196	split-at-landing	在“#### 采访 3：Dru Lavigne”（H4 边界，**字节偏移 12904**，经 p4r 复核修正：原登记 6174 系字符偏移误标）处一分为二：A＝文件头＋采访 1＋采访 2（12,904 B），B＝文件头副本（481 B）＋采访 3（5,768 B）；两部分均贴 16,797 B 阈内；全文 ROW_MINE／DEEP_ANALYSIS／[DB: 锚均 0、无围栏与成对锚，头副本安全；落盘时执行（旧树只读），簇内 P 序相应 +1 重排	PENDING-REVIEW→REVIEWED（4 PASS＋C1 修正后成立）	2026-10-27	唯一超阈件（18,191 B）；目标 S-002503（295.6 采访录）；复核件 p4r-split-s027196.tsv
+(mega-noop)	keep-as-is	三巨簇 S-001165（1,384）／S-001361（860）／S-001360（521）均为 ~16KB 标准化贴阈邮件细节件（med≈16,046、max≈16,797），合并 2 件即越 16,797 B 阈——“聚合为档案汇编”不可行，维持现状；书形修正（目标节拆分为多节）属节级操作，超出小节级预授权，待 ykla 另裁	-	2026-10-27	Phase 4 结论记录；remap 台账本行非操作件
+(inventory-gap)	ledger	Task 1 inventory.tsv 漏登 156 件（mapping 所引盘上全部存在、0 缺，多为 098.2.19xx／012.3.2xx 高小节号件）；字节已盘上实测补全（min=59 med=15,936 max=18,191）	-	2026-10-27	数据缺陷留账，Phase 8 落盘按盘实测兜底
