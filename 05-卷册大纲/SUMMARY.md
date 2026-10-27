@@ -3903,9 +3903,39 @@
         - 12.8-高性能生态位：与 Linux 集群的对比（2000s–2026）
         - 12.9-FreeBSD 在自然科学计算中的应用
         - 12.10-FreeBSD 在医学、社会科学与数字人文中的应用
+            - 12.10.1-Linux（自由软件哲学与 GNU 人文运动）.md
+            - 12.10.2-Windows ／ 微软（商业文化与闭源范式）.md
+            - 12.10.3-NetBSD（可移植性哲学与 clean code 文化）.md
+            - 12.10.4-年9月1日DougBarton回应JoaoSchim时称BrettGlass关于.md
+            - 12.10.5-年11月1日DarrenPilgrim转引JaytonGarnett关于没有BS.md
+            - 12.10.6-年7月30日obrien转发SysAdmin杂志编辑AmberAnkerholz.md
+            - 12.10.7-年9月22日PaulGriffith自述在i486DX26632MB内存的机器上.md
+            - 12.10.8-年12月12日AmancioHasty评论compbsdfreebsdmisc上.md
+            - 12.10.9-年4月8日AmancioHasty表示不会支付X11R64的授权费并转述Davi.md
+            - 12.10.10-年5月5日JordanHubbard称WalnutCreek每年FreeBSD业.md
+            - 12.10.11-年7月12日JackVelte应他人要求在讨论中贴出Windows95中ftpe.md
+            - 12.10.12-年10月21日JohannVisagie转述一位微软内部人士的评论称其喜欢Fre.md
+            - 12.10.13-年2月1日JordanHubbard判断FreeBSD对桌面的兴趣已边缘到不值得.md
+            - 12.10.14-年7月16日BrettGlass呼吁在Borland的Linux移植调查表Oth.md
+            - 12.10.15-年11月6日BrettGlass回应eBay上所谓GreenbayCDROM官方.md
+            - 12.10.16-年2月10日MarcoMolteni建议以BSD操作系统及其各开发项目之名集体提.md
+            - 12.10.17-年6月15日TroySettle指出微软在dicecom上招聘FreeBSD系统.md
+            - 12.10.18-年1月6日BradKnowles称FreeBSD当时不支持PowerPC其Pow.md
+            - 12.10.19-年4月16日BrettGlass指出Stallman致TheRegister的信.md
+            - 12.10.20-年6月13日PedroFGiffuni感叹历史上最流行的两款操作系统都内藏BSD.md
+            - 12.10.21-年12月13日TerryLambert自述去年九月离开IBM称IBM收购Whis.md
+            - 12.10.22-年4月2日UCTCSysadmin致函Unisys反对其与微软联手攻击Unix主.md
+            - 12.10.23-年12月22日MiguelMendez回应称NetBSD的pkgsrc体系本就脱.md
         - 12.11-版本发行时间线：FreeBSD 1.0–15.x（1993–2026）
         - 12.12-BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）
+            - 12.12.1-要点图形栈落后DRM滞后12年WiFi碎片化桌面可用性差距文档陈旧Handboo.md
         - 12.13-time_t 类型与 2038 年问题：64 位时间迁移
+            - 12.13.1-64-bit time_t：i386 平台 Y2038 问题修复.md
+            - 12.13.2-i386／armv7 平台 Tier 状态调整.md
+            - 12.13.3-arm64 Tier 1 成熟与嵌入式板卡支持.md
+            - 12.13.4-平台策略史料辨析.md
+            - 12.13.5-64-bit time_t 强制过渡的代价——32 位平台退役与新攻击面出现.md
+            - 12.13.6-64-bit time_t 完成与架构支持变化.md
     - 第13章-FreeBSD 的语言生态与 Rust 准入
         - 13.1-Modula-3 与 CVSup
         - 13.2-C++ 标准库的 BSD 化：libc++ 与 libcxxrt
