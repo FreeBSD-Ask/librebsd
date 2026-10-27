@@ -1,4 +1,4 @@
-version-upgrades	Port版本升级提交与跟进	把既有Port升级到新版本的提交、宣布、计划与升级方案讨论，含 distinfo 更新与升级兼容性跟进。
-patch-fixes	Port补丁与文件修正	不改版本号的文件级修正与修正提议：Makefile、pkg-descr、pkg-plist、MASTER_SITES、shebang、路径、依赖声明、构建选项、更名与拆分等。
+version-upgrades	Port 版本升级提交与跟进	把既有Port升级到新版本的提交、宣布、计划与升级方案讨论，含 distinfo 更新与升级兼容性跟进。
+patch-fixes	Port 补丁与文件修正	不改版本号的文件级修正与修正提议：Makefile、pkg-descr、pkg-plist、MASTER_SITES、shebang、路径、依赖声明、构建选项、更名与拆分等。
 pr-lifecycle	PR 回复、关闭与状态流转	PR 与缺陷单的回复、催促、确认、审读反馈、关闭、重开、状态变更、重复判定与入库跟进。
 update-issues	更新异常与缺陷反馈	对既有Port缺陷、损坏、过旧、不可用与更新后异常的报告与判断。
