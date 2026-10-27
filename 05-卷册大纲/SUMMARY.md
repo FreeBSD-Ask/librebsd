@@ -4339,6 +4339,49 @@
             - 15.5.87-freebsdhackersmessages2622627.md
     - 第16章-FreeBSD 4.0 邮件档案：系统与网络
         - 16.1-内核与系统构建升级
+            - 16.1.1-2011年1月21日自述重编内核并加入P1003_1B_SEMAPHORES之后.md
+            - 16.1.2-2011年11月25日自述在74STABLE上buildworld卡在texin.md
+            - 16.1.3-2011年10月3日报81RELEASEamd64机器用csup拉取CURREN.md
+            - 16.1.4-2011年10月20日自述重新csup源码并以自定义内核配置重编kernel与w.md
+            - 16.1.5-2011年9月13日建议既然要重装就改用9BETA旧机器会舒服得多9里的新计时代.md
+            - 16.1.6-年7月24日KrisKennaway扫描cvsup系列镜像站点后发现众多主机对外.md
+            - 16.1.7-年8月10日KevinGolding指出RELENG_4_6_1属罕见版本因46.md
+            - 16.1.8-年9月10日GaryDMargiotta自述其生产机仍以4x为主在5STABLE.md
+            - 16.1.9-年12月21日MarkTerribile回复Toru关于CVSup长时间编译无果.md
+            - 16.1.10-年5月14日IgorBBykhalo就先前称installworld与merge.md
+            - 16.1.11-年9月6日StefanMalteSchumacher报告内核编译错误已解决称删掉.md
+            - 16.1.12-年5月11日HeinrichRebehn在邮件列表上为噪声致歉并自述instal.md
+            - 16.1.13-年12月4日JoseBorquez自述buildworldinstallworl.md
+            - 16.1.14-年3月24日ToddShirk在FreeBsdamd64用cvsupstable.md
+            - 16.1.15-年11月30日AaronSloancvsup重建54后在usrsrc跑make失.md
+            - 16.1.16-年2月19日KrisKennaway答复ChrisManess的疑问bison1.md
+            - 16.1.17-年5月31日Joe应KrisKennaway要求贴出kernversion为Fr.md
+            - 16.1.18-年12月24日DavidHorn表示只在非更新内核见70RELEASEEoL警告.md
+            - 16.1.19-年1月2日MichaelLednev在FreeBSD70RC1上按步骤复现内核崩.md
+            - 16.1.20-年1月8日Schiz0从63PRERELEASE升到70PRERELEASE后v.md
+            - 16.1.21-年7月30日自述这是一台63数据库服务器准备升级到70检查ports树发现除my.md
+            - 16.1.22-年3月4日Davison用freebsdupdatesh从63升至70RELEA.md
+            - 16.1.23-年3月16日解释CURRENT是重大新特性的开发分支终成80而7STABLE将成.md
+            - 16.1.24-年3月28日试TARGET=i386TARGET_ARCH=i386及两者组合装.md
+            - 16.1.25-年11月21日实测MAXPHYS设1MB为现代硬盘最优2MB提速不明显且增加延迟.md
+            - 16.1.26-年10月7日改用SCHED_4BSD替代sched_ule并把quantum从1.md
+            - 16.1.27-年9月12日嘎恩回复称原62直接升级到63是问题根源改用63光盘重装后portm.md
+            - 16.1.28-年9月13日OliverPeter确认63已完全支持双核只是SMP性能不如7ST.md
+            - 16.1.29-年4月19日迈克尔赞成先在测试机上演练自述家中两台服务器专作升级试验跨大版本如6.md
+            - 16.1.30-年4月23日AndySmith从70机器复制freebsdupdate脚本到6x.md
+            - 16.1.31-年8月4日JoeyMingrone两台旧笔记本跑72RELEASE近来多次内核崩.md
+            - 16.1.32-年8月5日PJ说72升级sysinstall覆盖分区致整机无法启动因某pytho.md
+            - 16.1.33-年12月21日RobertFitzpatrick说用kernhz100后Free.md
+            - 16.1.34-年1月19日AndySmith回复Frank两台服务器分别跑FreeBSD61与.md
+            - 16.1.35-年7月6日KarlVogel说编71通用内核时装完无法启动报无法判断启动磁盘BI.md
+            - 16.1.36-年6月15日SteveFranks发现交叉编译前需导出LD_LIBRARY_PA.md
+            - 16.1.37-年5月25日illoai回应Graeme关于71升到72的freebsdupda.md
+            - 16.1.38-年7月19日DanNelson说他把32位系统原地装上64位内核与基底并重开机随.md
+            - 16.1.39-年6月18日发件人TimDaneliuk把世界重编到当天的81PRERELEAS.md
+            - 16.1.40-年3月11日发件人PaulSchmehl把工作站从72升到80并上KDE4用两台.md
+            - 16.1.41-年3月29日霍尔用dump把自定义内核灌进内存卡机器能启动到挂载根分区这一步却报.md
+            - 16.1.42-年5月15日乌梅奇在8分支做完内核与世界更新后重启发现启动时规则不再加载重开之后.md
+            - 16.1.43-年9月3日MatthiasApitz内核用户层基于CVS加装USB部件uname.md
         - 16.2-驱动与硬件外设
         - 16.3-网络与防火墙
         - 16.4-Jail 与虚拟化
