@@ -4501,6 +4501,23 @@
             - 16.3.37-年1月5日perryh用vpnc连CiscoVPN能连上却不通发现只是vpncc.md
             - 16.3.38-年8月11日CameronSimpson为两台要跑CARP与pfsync的防火墙.md
         - 16.4-Jail 与虚拟化
+            - 16.4.1-年3月18日分析openvmtools2008030379993在70上make.md
+            - 16.4.2-2011年5月16日称VIMAGE代码已并入8STABLE但仍挂实验标签且大体可.md
+            - 16.4.3-4.0 发布与 Jails 引入.md
+            - 16.4.4-Jails 的技术架构.md
+            - 16.4.5-年10月1日bsdfsse在题为VMWare逐步指导的帖子中宣布放弃自述在3台机.md
+            - 16.4.6-年1月30日RahulSiddharthan借助FreeBSD的linuxula.md
+            - 16.4.7-年6月3日用户klr自述其已为410的jail找到支持多IP的补丁却始终找不到适.md
+            - 16.4.8-年5月25日AndyGreenwood说jail里ports装的apache13.md
+            - 16.4.9-年6月7日答复ESX302时钟漂移问题指出FreeBSD62及以上无需hinta.md
+            - 16.4.10-年2月14日ReinhardHaller在71的jail的rcconf用ipv6.md
+            - 16.4.11-年6月18日Erik在jail里cyrus用户imap认证失败加defaultd.md
+            - 16.4.12-年10月5日APseudoUtopia查明主机上httpd与basejail两个.md
+            - 16.4.13-年8月6日BrandonGooch转述kalinm问VirtualBox配Fre.md
+            - 16.4.14-年3月23日发件人VincentHoffman说他有一台80RELEASE机器j.md
+            - 16.4.15-年11月24日发件人StevePolyack设securityjailparam.md
+            - 16.4.16-年9月16日GholamMostafaFaridi装virtulbox后启动报N.md
+            - 16.4.17-年8月24日Lobo称自FreeBSD3x起一直经端口编译VirtualBox现.md
         - 16.5-存储与文件系统
         - 16.6-安装与发布介质
     - 第17章-FreeBSD 4.0 邮件档案：应用与管理
