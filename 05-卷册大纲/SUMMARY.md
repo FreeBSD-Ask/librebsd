@@ -4082,6 +4082,70 @@
             - 15.1.89-年6月10日PauloFragoso报告FreeBSD上用DUSE_PAM重编p.md
             - 15.1.90-年2月22日AmancioHasty说明egcs虽优于gcc28但模板语义变动使.md
         - 15.2-第三方软件、软件包与版权
+            - 15.2.1-1999年7月26日bill反对重放rev141的补丁因他当时交给squid用户.md
+            - 15.2.2-1999年8月12日thorpej指出若可执行对象包含GPL代码必须提交整个对象.md
+            - 15.2.3-1999年8月28日grog附PortingUNIXSoftware锁章改稿主张.md
+            - 15.2.4-1999年9月22日pedro说明mawk与gawk在ports树中且为GPL许.md
+            - 15.2.5-1999年11月27日garyj用这份移植取到VMware111330targz.md
+            - 15.2.6-1999年12月12日green自述自写Apache模块在FreeBSD228S.md
+            - 15.2.7-1999年11月27日silyaev宣布已在FreeBSD上成功运行VMware.md
+            - 15.2.8-年6月26日RuslanErmilov给出RELENG_4时区提交记录来源tzd.md
+            - 15.2.9-年7月8日PaulVixie说明bind8中nameserh改名为nameser.md
+            - 15.2.10-年7月17日DavidOBrien说明Sendmail8102赶不上41RELE.md
+            - 15.2.11-年4月18日FrankTerhaarYonkers把问题缩小到tcsh的信号处理.md
+            - 15.2.12-年6月3日KhetanGajjar在21stable上构建Lynx25时HTFT.md
+            - 15.2.13-年12月20日BradleyDunn报2161上ucdsnmp与top等端口编译.md
+            - 15.2.14-年3月15日JordanKHubbard答XEmacs装上但找不到libjpeg.md
+            - 15.2.15-年9月25日MattBehrens回答225应会随附BIND496他对此有九成九.md
+            - 15.2.16-年1月25日eculp用上周snap编译xpm报找不到lgnumalloc编译x.md
+            - 15.2.17-年2月21日Studded认为树里xntpd3592是树里版本的后继者还谈ntp.md
+            - 15.2.18-年7月24日AmancioHastyJr在current上构建tk36gnuco.md
+            - 15.2.19-年10月13日Kletsky请维护者把usrsrccontrib里的opie从2.md
+            - 15.2.20-年10月28日GunnarFlygt称30RELEASE下xv报ldelfso1.md
+            - 15.2.21-年11月25日freefall的c再一次彻底写满df列出ports占316445.md
+            - 15.2.22-年7月2日尤利安报告新版CVS破坏构建环境多个产品的模块仓库被检出到同一构建树的.md
+            - 15.2.23-年8月13日NateWilliams回复称看到对方已把kern_exitc放回C.md
+            - 15.2.24-年10月17日ChrisTimmons计划本周末把GLOBAL21合入curre.md
+            - 15.2.25-年1月27日AmancioHasty评估Visaj作为纯JavaGUI构建器配合.md
+            - 15.2.26-年12月3日WesPeters分情形答BitKeeper议题认为可作为port纳.md
+            - 15.2.27-年1月19日ChristophPKukulies分析XinsideX服务器挂死后.md
+            - 15.2.28-年9月26日JakeHamby首次回应ports启动脚本长串讨论谈初看SysV模.md
+            - 15.2.29-年9月26日CoranthGryphon在ports启动脚本讨论中回应Satos.md
+            - 15.2.30-年9月27日sos回应AmancioHastyJr关于svgalib混乱的评语完.md
+            - 15.2.31-年9月28日PeterdaSilva认为包不应自动编辑配置文件主张寻找覆盖面尽可.md
+            - 15.2.32-年10月13日JWunsch回复PeterDufault关于远程Netscape.md
+            - 15.2.33-年4月3日SujalPatel发现XFree86附带的字体数据库包含不存在的字体.md
+            - 15.2.34-年11月19日OllivierRobert指出Perl4与Perl5之间的变更写.md
+            - 15.2.35-年1月27日JWunsch为危险专有模式辩护指出并非所有人都视其为恶此模式服务于.md
+            - 15.2.36-年4月4日Rabson试了Tor的修补0xdeadb那段在并行远端删除与检出几分.md
+            - 15.2.37-年4月6日他明确指出srcsyscontrib下的包可能带有非BSD版权而一旦放.md
+            - 15.2.38-年4月13日MichaelSearle询问curses与ncurses库自某个版.md
+            - 15.2.39-年5月11日Pedro在BSDI的网站上偶然发现MOSIX这个面向Unix的多计.md
+            - 15.2.40-年5月14日表示自己正热切期待Pedro提交Thot的移植因为那样一来就能省得我.md
+            - 15.2.41-年5月17日回应说这种行为可用whichwrap即ww设置来配置默认值为bs表示.md
+            - 15.2.42-年6月15日JWunsch认为复制CD本质只是读取光盘故任何形式的copypro.md
+            - 15.2.43-年7月9日TomSamplonius称NetQuack不可靠跑在Win95后台且.md
+            - 15.2.44-年7月11日MichaelSmith指出libXt并不属于FreeBSD而是XF.md
+            - 15.2.45-年8月18日EugenyKuzakov报告本机已装Java开发套件但持续产生核心.md
+            - 15.2.46-年8月29日威廉姆斯转贴格尔纳在新闻组里关于Netscape新支持的询问末尾只补.md
+            - 15.2.47-年9月17日哈巴德反驳称若连packagesXFree86与CVS仓库得放到CD.md
+            - 15.2.48-年9月27日OllivierRobert答打标签要修改仓库内每个文件属慢操作还会.md
+            - 15.2.49-年10月4日mdean说FreeBSD上没有支持美版128位加密的Netscap.md
+            - 15.2.50-年10月10日JWunsch表示FreeBSD项目组基本不自行维护GNU组件建议.md
+            - 15.2.51-年11月5日jordan称Hasbro律师与tetris律师如出一辙正逐条检查f.md
+            - 15.2.52-年12月8日Manar指出Windows有免费ssh客户端可用虽不完美但能工作因.md
+            - 15.2.53-年1月22日Faber回给WarnerLosh一句提醒务必确保它能够被unins.md
+            - 15.2.54-年1月30日howard自称已潜水一阵最近才自己琢磨这个问题对那句源码不可自由重.md
+            - 15.2.55-年2月6日Jeremy自述在225R上用pkg_add安装jdk102tgz后只.md
+            - 15.2.56-年2月12日lambert指出无论改名还是删除都必须改写历史做法是编辑RCS文件.md
+            - 15.2.57-年2月13日michael说在CURRENT上装tk8端口总是被拉去装tcl80.md
+            - 15.2.58-年4月29日stephen上传bmake版perl5到ftpfreebsdorg.md
+            - 15.2.59-年5月3日doug询问BIND497何时进入sourcetree是否有人在跟进因.md
+            - 15.2.60-年5月5日Jordan说pkg_add在一两个修订版之前确实会那样乱删文件如今已.md
+            - 15.2.61-年5月31日andrew觉得128位安全代理的市场并不小用代理就能省掉给每版下载.md
+            - 15.2.62-年7月15日amancio就此前关于其欲在下一版覆盖他人补丁的争议简短回应表示自.md
+            - 15.2.63-年12月9日MLDodson在Jordan解释新包系统尚属WIP后接话建议兼纳g.md
+            - 15.2.64-年6月21日Doug追问包装何时成为默认并问是在32Release之前还是之后认.md
         - 15.3-社区协作、倡导与文档
         - 15.4-用户硬件环境与使用报告
         - 15.5-杂项
