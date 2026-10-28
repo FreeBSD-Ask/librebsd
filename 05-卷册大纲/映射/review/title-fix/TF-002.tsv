@@ -1,0 +1,95 @@
+source_id	old	new	reason
+S-002749	1989年5月10日引Sun技术杂志1989年春季刊述SPARCstation1采用新SCSI驱动	1989 年 5 月 10 日引 Sun 技术杂志 1989 年春季刊述 SPARCstation 1 采用新 SCSI 驱动	A1 补中英数字间空格；H1 同步
+S-002649	1994年12月11日Sun工程师Sherif详述Solaris24测试流程反驳无回归测试之说	1994 年 12 月 11 日 Sun 工程师 Sherif 详述 Solaris 2.4 测试流程反驳无回归测试之说	A1 补空格；Solaris 2.4 依正文；H1 同步
+S-002650	MarioMarino询问AHA2940是否有BSD驱动可用	Mario Marino 询问 AHA-2940 是否有 BSD 驱动可用	A1 拆人名；AHA-2940 依正文补连字符
+S-002651	1989年1月28日Sun员工ChuckJerian提出YP与named跨域解析文档修订	1989 年 1 月 28 日 Sun 员工 Chuck Jerian 提出 YP 与 named 跨域解析文档修订	A1 补空格；H1 同步
+S-002653	1989年2月01日Cyrus述40的NIT有截断单包与丢包三类缺陷	1989 年 2 月 01 日 Cyrus 述 4.0 的 NIT 有截断单包与丢包三类缺陷	A1 补空格；40→4.0 依正文；H1 同步
+S-002657	1994年10月3日ThomasEden建议在Winini的打印机节加CtrlD=0	1994 年 10 月 3 日 Coleman Research 的 Thomas Eden 建议在 Win.ini 的打印机节加 CtrlD=0	A1 补空格；依 h1 补公司名；Win.ini 依正文
+S-002658	1989年3月22日DarrelLager的3280装401后盒式带挂起退scsi补丁后消失	1989 年 3 月 22 日 Darrel Lager 的 3／280 装 4.0.1 后盒式带挂起退 scsi 补丁后消失	A1 补空格；3/280、4.0.1 依正文还原
+S-002659	1989年3月02日nfsd卡D状态疑由文件系统inode不一致致NFS守护进程连锁死锁只能重启	1989 年 3 月 02 日 nfsd 卡 D 状态疑由文件系统 inode 不一致致 NFS 守护进程连锁死锁只能重启	A1 补空格；H1 同步
+S-002660	1989年3月09日Rutherford实验室ChrisCrampton反驳GuyHarris称fd_set不足	1989 年 3 月 09 日 Rutherford 实验室 Chris Crampton 反驳 Guy Harris 称 fd_set 不足	A1 补空格；H1 同步
+S-002661	1989年3月23日GuyHarris说明40的intelnetd退出时把pty属组设为wheel	1989 年 3 月 23 日 Guy Harris 说明 4.0 的 in.telnetd 退出时把 pty 属组设为 wheel	A1 补空格；40→4.0；intelnetd→in.telnetd
+S-002665	1989年3月04日BrentChapman指出40的intelnetd退出时把pty属组改为wheel	1989 年 3 月 04 日 Brent Chapman 指出 4.0 的 in.telnetd 退出时把 pty 属组改为 wheel	A1 补空格；40→4.0；intelnetd→in.telnetd
+S-002730	帖主贴出1990年7月25日Sun关于SPARCstationIPC的产品通告原文摘录	帖主贴出 1990 年 7 月 25 日 Sun 关于 SPARCstation IPC 的产品通告原文摘录	A1 补空格；拆 SPARCstation IPC
+S-002666	1989年3月07日Harris公司的ChuckMusciano称contool21会把console消息写入文件	1989 年 3 月 07 日 Harris 公司高级技术部的 Chuck Musciano 称 contool 2.1 会把 console 消息写入文件	A1 补空格；依 h1 补高级技术部；contool 2.1
+S-002667	1989年4月4日MITRE公司的GlennRoberts指老工具文档仍在手册页加old前缀可查	1989 年 4 月 4 日 MITRE 公司的 Glenn Roberts 指老工具的文档仍在手册页里把 old 添到工具名前可查	A1 补空格；依 h1 与正文调语序
+S-002668	1989年3月14日UCLA天体物理的JonathanEisenhamer问LaserWriter配Transcript报错	1989 年 3 月 14 日 UCLA 天体物理的 Jonathan Eisenhamer 问 LaserWriter 配 Transcript 报错	A1 补空格；拆 Jonathan Eisenhamer
+S-002669	KeaneArase征询名为UltraOffice的产品信息	Keane Arase 征询名为 UltraOffice 的产品信息	A1 补空格；拆 Keane Arase；H1 同步
+S-002674	1989年5月23日DavidKensiski述SunView崩溃与窗口消失源于40新共享库缺陷	1989 年 5 月 23 日 David Kensiski 述 SunView 崩溃与窗口消失源于 4.0 新共享库缺陷	A1 补空格；40→4.0；H1 同步
+S-002675	1989年5月05日解释内核崩溃源于缓冲区池锁中断优先级低于串口板中断	1989 年 5 月 05 日解释某内核崩溃源于缓冲区池锁的中断优先级低于部分串口板中断	A1 补空格；依 h1 补某内核与部分
+S-002677	JohnIoannidis长篇质疑type4键盘之议自始无Sun员工回应	John Ioannidis 长篇质疑 type-4 键盘之议自始无 Sun 员工回应	A1 补空格；type-4 依正文
+S-002680	Sun的随机附带说明是累积式的35远程安装的修复说明竟出现在30的那一本里	Sun 的随机附带说明是累积式的 3.5 远程安装的修复说明竟出现在 3.0 的那一本里	A1 补空格；35→3.5、30→3.0
+S-002684	揭示automount实为把自身作为NFS用户进程挂到挂载点经标准RPC接管访问	揭示 automount 实为把自身作为 NFS 用户进程挂到挂载点经标准 RPC 接管访问从而在用户态实现文件系统的取巧设计	B4 续至取巧设计；A1 补空格
+S-002686	用户因以adb观察内核被Sun告知违反许可协议中禁止反汇编的条款质疑adb手册未	用户因以 adb 观察内核被 Sun 告知违反许可协议中禁止反汇编的条款质疑 adb 手册未作任何提示	B2 续至未作任何提示；A1 补空格
+S-002656	1989年3月29日设备驱动手册800178010修订A第142页cdevsw条目顺序描述有误	1989 年 3 月 29 日设备驱动手册 800-1780-10 修订 A 第 142 页末五行对 cdevsw 条目顺序描述有误	A1 补空格；800-1780-10；依 h1 补末五行
+S-002687	批评Sun的进程记账能力403才修好部分缺陷组号小于零的用户仍致出错且只在进程起	批评 Sun 的进程记账能力 4.0.3 才修好部分缺陷组号小于零的用户仍致出错且只在进程起止时记账	B4 续至起止时记账；403→4.0.3；A1
+S-002690	RussPoffenberger建议向Sun索取修复大量dbx缺陷的100042号补丁	Russ Poffenberger 建议向 Sun 索取修复大量 dbx 缺陷的 100042 号补丁	A1 补空格；拆 Russ Poffenberger
+S-002692	引Sun解绑说明指出C编译器按每工作站每用户计RTU授权二十个用户需二十份授权	引 Sun 解绑说明指出 C 编译器按每工作站每用户计 RTU 授权二十个用户需二十份授权	A1 补空格；H1 同步
+S-002693	Sun工程师说明DVMA传输受资源映射总大小限制4260约一兆字节改用bp_ma	Sun 工程师说明 DVMA 传输受资源映射总大小限制 4／260 约一兆字节改用 bp_mapin 可绕开	B4 续至 bp_mapin 可绕开；4/260→4／260
+S-002695	查明41口令附属文件读取函数损坏致口令修改守护进程取不到影子口令	查明 4.1 口令附属文件读取函数损坏致口令修改守护进程取不到影子口令	A1 补空格；41→4.1；H1 同步
+S-002696	定位403登录挂起根因是自动挂载usrshare造成死锁	定位 4.0.3 登录挂起根因是自动挂载 usr share 造成死锁	A1 补空格；403→4.0.3；usr share 依正文
+S-002697	1990年8月5日批评Sun串口速率用四位字段只能取PDP11档位无法设定任意波特率	1990 年 8 月 5 日批评 Sun 串口速率用四位字段只能取 PDP-11 档位无法移植设定任意波特率	A1 补空格；PDP-11；依 h1 补移植
+S-002702	Sun4490的SunOS41记账脚本误查usr而非varadm的剩余空间usr	Sun 4／490 的 SunOS 4.1 记账脚本误查 ／usr 而非 ／var／adm 的剩余空间 ／usr 一满 ckpacct 便误关记账	B3 续至误关记账；4/490→4／490；A1
+S-002703	GuyHarris纠正4x并不为整个数据段分配连续交换区无盘机唯一可换出的就是N	Guy Harris 纠正 4.x 并不为整个数据段分配连续交换区无盘机唯一可换出的就是 NFS 上的交换文件	B3 续至 NFS 上的交换文件；4x→4.x；A1
+S-002704	TFS在411上的完整启用步骤在inetdconf加tfsd条目并重启用moun	TFS 在 4.1.1 上的完整启用步骤在 inetd.conf 加 tfsd 条目并重启用 mount_tfs 叠层挂载	B4 续至叠层挂载；411→4.1.1；A1
+S-002707	启动校验和错误源于boot被覆盖后未跑installbootJoeSmith释P	启动校验和错误源于 boot 被覆盖后未跑 installboot Joe Smith 释 PROM 不会读 Unix 文件系统目录只能读磁盘首块	B3 续至只能读磁盘首块；拆 Joe Smith；A1
+S-002712	给出应对夏令时切换的cron重启脚本dstcronfix用zdump求下次时制变	给出应对夏令时切换的 cron 重启脚本 dstcronfix 用 zdump 求下次时制变更	B4 续至下次时制变更；A1 补空格
+S-002713	询问有无编辑versatec格式sunview所用屏幕字体的工具编者附注指出伯克	征询有无编辑 versatec 格式 sunview 所用屏幕字体的工具编者附注指出伯克利标准 vfont 位图按字节对齐 Sun 的 vfont 位图却按字对齐	B1 起头改征询；B4 续至却按字对齐；A1
+S-002714	归纳Sun3设备驱动级DVMA问答用户空间映射入DVMA空间靠physiomap	归纳 Sun 3 设备驱动级 DVMA 问答用户空间映射入 DVMA 空间靠 physio	B4 收于靠 physio 去 physiomap 伪连写；A1
+S-002715	求psview所缺的硬件专用文件hardc以便在SunView下使用	求 psview 所缺的硬件专用文件 hard.c 以便在 SunView 下使用	A1 补空格；hard.c 依正文；H1 同步
+S-002716	询问威斯康星密尔沃基分校拟购SUN3260专跑SAS供批处理使用求配置内存盘空间	征询威斯康星密尔沃基分校拟购 SUN3／260 专跑 SAS 供批处理使用求配置内存盘空间可支持用户数与临时文件盘需求经验	B1 起头改征询；B4 续至需求经验；SUN3／260
+S-002717	1989年3月13日答如何从画布把光栅存入文件之问	1989 年 3 月 13 日答如何从画布把光栅存入文件之问	A1 补空格；H1 同步
+S-002718	1989年3月13日答工具包可移植之问称凡用Xlib及Xt的工具包皆无不可移植之理	1989 年 3 月 13 日答工具包可移植之问称凡用 Xlib 及 Xt 的工具包皆无不可移植之理	A1 补空格；H1 同步
+S-002719	1991年1月23日SPARC上dbx显示16位无符号参数的缺陷	1991 年 1 月 23 日 SPARC 上 dbx 显示 16 位无符号参数的缺陷	A1 补空格；H1 同步
+S-002720	JonTankersley答LarsAnderssonf7711的system与fork补丁可索取	Jon Tankersley 答 Lars Andersson f77 1.1 的 system 与 fork 补丁可索取	A1 补空格；f77 1.1 依正文；拆人名
+S-002721	分析Telebit的PEP协议仿冒可能导致Zmodem传输超时	分析 Telebit 的 PEP 协议仿冒可能导致 Zmodem 传输超时	A1 补空格；H1 同步
+S-002722	自述上传文件时Zmodem每1024字节等待确认致性能减半升级rz与sz无效	自述上传文件时 Zmodem 每 1024 字节等待确认致性能减半升级 rz 与 sz 无效	A1 补空格；H1 同步
+S-002723	自述所在系拟购廉价计算服务器供六至十二台X终端与约十五名并发用户使用	自述所在系拟购廉价计算服务器供六至十二台 X 终端与约十五名并发用户使用	A1 补空格；H1 同步
+S-002724	1989年3月31日据手册pw_copy只在源与目标为同一pixrect时有效	1989 年 3 月 31 日据手册 pw_copy 只在源与目标为同一 pixrect 时有效	A1 补空格；H1 同步
+S-002725	1989年3月30日报360因Sun连接器拙劣常从粗以太网脱落问有无满意解	1989 年 3 月 30 日报 3／60 因 Sun 连接器拙劣而常从粗以太网脱落的著名问题问有无已满意解决者的做法	A1 补空格；3／60；依正文续至解决者的做法
+S-002726	1991年1月25日DavidCornutt详述其管理过的VerilogXL保护方案	1991 年 1 月 25 日 David Cornutt 详述其管理过的 Verilog-XL 保护方案	A1 补空格；Verilog-XL 依正文
+S-002727	1989年1月3日AnthonyDatri问远端服务器无响应时本地无关操作也随之挂起是否固有缺陷	1989 年 1 月 3 日 Anthony Datri 问远端服务器无响应时本地无关操作也随之挂起是否固有缺陷	A1 补空格；H1 同步
+S-002728	1988年12月20日FrankWortner谓BSD快速文件系统通常保留末百分之十空间以防抖动	1988 年 12 月 20 日 Frank Wortner 谓 BSD 快速文件系统通常保留末百分之十空间以防抖动	A1 补空格；H1 同步
+S-002729	1990年11月20日RHorn实测SS1上gcc1371与Sun403的cc以TeX排版bison手册对比	1990 年 11 月 20 日 R Horn 实测 SS1 上 gcc 1.37.1 与 Sun 4.0.3 的 cc 以 TeX 排版 bison 手册对比	A1 补空格；R Horn、gcc 1.37.1、4.0.3 依正文
+S-002731	报SS1的RS232C串口接Transpac调制解调器后启动过程即阻塞卡在硬件配置检查阶段	报 SS1 的 RS-232C 串口接 Transpac 调制解调器后启动过程即阻塞卡在硬件配置检查阶段	A1 补空格；RS232C 写作规范形 RS-232C
+S-002732	JonathanHue报告SPARCsystem33	Jonathan Hue 报告 SPARCsystem 330 在 4.1.1 下用 st 驱动访问 Exabyte 8mm 磁带触发 st_have_window 除零陷阱内核崩溃	B4 续至除零陷阱内核崩溃；补 330 与 4.1.1
+S-002733	rsh与rlogin把多字符按键拆成单字符以太网包致光标跳跃telnet不会	rsh 与 rlogin 把多字符按键拆成单字符以太网包致光标跳跃 telnet 不会	A1 补空格；H1 同步
+S-002734	EricParker用汇编输出分析得出SPARCstation载入与存储周期基准	Eric Parker 用汇编输出分析得出 SPARCstation 载入与存储周期基准 LSI 芯片组缓存命中读两周期写六周期	B4 续至写六周期；A1 补空格
+S-002735	BrianRosen释SS1+数据通路32位须SIMM四条一组每条1Mx9或4M	Brian Rosen 释 SS1+ 数据通路 32 位须 SIMM 四条一组每条 1Mx9 或 4Mx9 中九位有一位奇偶校验即八位数据	B4 续至奇偶校验；4M→4Mx9；拆 Brian Rosen
+S-002736	BrianSmith在SunOS411下用cgfour帧缓冲感到困惑Xsun写入	Brian Smith 在 SunOS 4.1.1 下用 cgfour 帧缓冲感到困惑 Xsun 写入 ／dev／bwtwo0 而控制台驱动写入 ／dev／bwtwo1	B4 续至 bwtwo1；411→4.1.1；A1
+S-002737	回复VanAndel想把SPARC2与键盘显示器拉开25至50英尺之问Carre称自制既易又省	答 Van Andel 想把 SPARC2 与键盘显示器拉开 25 至 50 英尺之问 Carre 称自制既易又省	B1 起头回复改答；A1 补空格
+S-002738	在4330上把CPU板八条4MBSIMM与内存板八条1MB对调后总内存仍是40M	4／330 上对调 CPU 板八条 4MB SIMM 与内存板八条 1MB 后总内存仍是 40MB 却只报 28MB	B1 去悬头；B4 续至只报 28MB；4/330→4／330
+S-002739	澄清并非崩溃而是控制台串口驱动把帧错误等同于L1a转入PROM并给出在终端线CP	澄清并非崩溃而是控制台串口驱动把帧错误等同于 L1-a 转入 PROM 并给出在终端线 CPU 端接收数据脚与地间接约 4.5k 电阻的硬件抑制法	B3 续至硬件抑制法；L1-a 依正文；A1
+S-002740	Kennedy9300F磁带机经Xylogics472接口接Sun3280升级格	Kennedy 9300F 磁带机经 Xylogics 472 接口接 Sun 3／280 升级格式化器与特制固件并手工装系统后磁带首个文件仍会消失	B4 续至仍会消失；3/280→3／280；A1
+S-002741	1990年3月9日LarryMcVoy给出SPARC上下文切换时间的实测数据与测量代码	1990 年 3 月 9 日 Larry McVoy 给出 SPARC 上下文切换时间的实测数据与测量代码	A1 补空格；H1 同步
+S-002646	1988年12月22日Fuhrman描述六台350与四台360的布局令mailhost指向实体主机	1988 年 12 月 22 日 Fuhrman 描述六台 3／50 与四台 3／60 的布局令 mailhost 指向实体主机	A1 补空格；3/50、3/60→全角斜杠；H1 同步
+S-002742	1990年5月29日Sun的JeffreyZank说明41下DVMA约可用600KB总量1MB	1990 年 5 月 29 日 Sun 的 Jeffrey Zank 说明 4.1 下 DVMA 约可用 600KB 总量 1MB	A1 补空格；41→4.1；H1 同步
+S-002743	指出在SS1的403上退出SunView会把色图破坏到clear_colormap无法恢复	SS1 的 4.0.3 上退出 SunView 会把色图破坏到 clear_colormap 无法恢复	B1 去悬头指出；403→4.0.3；A1
+S-002744	BalaVasireddi报告403c加GX板的SS1上X11R4根窗口偏移出屏	Bala Vasireddi 报告 4.0.3c 加 GX 板的 SS1 上 X11R4 根窗口偏移出屏左缘 xterm 折返而单色机正常	B4 续至而单色机正常；403c→4.0.3c；A1
+S-002745	给出以adb改写内核physmem限制可用内存并区分sun4c与其余架构页大小	给出以 adb 改写内核 physmem 变量限制可用内存的做法并区分 sun4c 为四 K 其余架构为八 K 的页大小	A1 补空格；依 h1 补变量做法与四 K 八 K
+S-002746	03的文件服务守护进程锁死需专用模块修复内存页未解锁缺陷信息源自Sun工程师引用	4.0.3 的文件服务守护进程锁死需专用模块修复内存页未解锁缺陷信息源自 Sun 工程师	补题首 4.0.3；去尾引用残；A1 补空格
+S-002747	1989年4月27日NikolaosFotis报350无浮点机Fortran优化耗8MB内存后coredump	1989 年 4 月 27 日 Nikolaos Fotis 报 3／50 无浮点机 Fortran 优化耗 8MB 内存后 core dump	A1 补空格；3/50→3／50；core dump 依正文
+S-002748	1989年5月09日CelesteStokely详列其lisp开发网配置十三台带盘360	1989 年 5 月 09 日 Celeste Stokely 详列其 lisp 开发网配置十三台带盘 3／60	A1 补空格；3/60→3／60；拆 Celeste Stokely
+S-002750	1989年6月16日DeLaRuePrintrak的RichardSeegmiller自述APUNIXExabyte可靠备份	1989 年 6 月 16 日 De La Rue Printrak 的 Richard Seegmiller 自述 APUNIX Exabyte 可靠备份	A1 补空格；拆 De La Rue Printrak
+S-002751	JosephMoran报告3160配27版引导PROM与Xylogics451偶发磁盘首读失败	Joseph Moran 报告 3／160 配 2.7 版引导 PROM 与 Xylogics 451 偶发磁盘首次读失败	A1 补空格；3/160→3／160；首读→首次读
+S-002752	指出早期SMD4只支持24兆字节每秒现出货版本已达30	早期 SMD-4 只支持 2.4 兆字节每秒现出货版本已达 3.0	B1 去悬头指出；SMD-4；24→2.4、30→3.0
+S-002647	1988年12月22日Donaldson购入二手350M后日期漂移二十五天	1988 年 12 月 22 日 Donaldson 购入二手 3／50M 后日期漂移二十五天	A1 补空格；350M→3／50M；H1 同步
+S-002753	给出CDCSabre97201230即一点二吉字节机	给出 CDC Sabre 9720／1230 即一点二吉字节机型配 XY753 或 7053 即 SMD-4 控制器的全部开关与跳线实测设置	A1 补空格；9720／1230；续至机型与实测设置
+S-002754	摸索SPARCstation可加载系统调用写法并在a	摸索 SPARCstation 可加载系统调用写法并在 arisa 匿名 FTP 提供 noswap.shar 样例	B3 续至 noswap.shar 样例；A1 补空格
+S-002755	1988年4月17日Apollo与Sun卡带互转	1988 年 4 月 17 日 Apollo 与 Sun 卡带互转	A1 补空格；H1 同步
+S-002756	1988年12月21日FTP无法绑定套接字根因实为rcboot中ifconfig失败	1988 年 12 月 21 日 FTP 无法绑定套接字根因实为 rc.boot 中 ifconfig 失败	A1 补空格；rcboot→rc.boot 依正文
+S-002757	1989年1月31日4110无FPU时由内核软件模拟且实测可慢两百倍	1989 年 1 月 31 日 4／110 无 FPU 时由内核软件模拟且实测可慢两百倍	A1 补空格；4110→4／110；H1 同步
+S-002758	1989年2月19日MarcelBernards用浮点测试程序实测4110无FPU陷入内核软模拟	1989 年 2 月 19 日 Marcel Bernards 用浮点测试程序实测 4／110 无 FPU 陷入内核软模拟	A1 补空格；4110→4／110；拆 Marcel Bernards
+S-002759	HenrySpencer提醒对方普通计算机调制解调器不能与传真机通话传真机用的是	Henry Spencer 提醒对方普通计算机调制解调器不能与传真机通话传真机用的是非标准调制解调器	B4 续至非标准调制解调器；A1 补空格
+S-002760	1989年3月23日KevinSullivan报3280在35上随机panicbadrmfree	1989 年 3 月 23 日 Kevin Sullivan 报 3／280 在 3.5 上随机 panic bad rmfree	A1 补空格；3.5；panic bad rmfree 依正文
+S-002761	TodColegrove问386i的DOS窗口能否缩放让程序用上更大区域他跑的字	Tod Colegrove 问 386i 的 DOS 窗口能否缩放让程序用上更大区域	B4 去残尾于问句语义边界；A1 补空格
+S-002762	JimHaynes报在跑SunOS35的3280上安装新版sendmail561	Jim Haynes 报在跑 SunOS 3.5 的 3／280 上安装新版 sendmail 5.61 后 biff 与 comsat 全部失效	B4 续至全部失效；3.5、5.61 依正文；A1
+S-002648	1988年12月30日Speck纠正Fuji驱动器inode不足是mkfs缺陷之说	1988 年 12 月 30 日 Speck 纠正 Fuji 驱动器 inode 不足是 mkfs 缺陷之说	A1 补空格；H1 同步
+S-002763	1989年4月24日ScottMenter指Artecon的ArteTHS把网络端口变成本地串口	1989 年 4 月 24 日 Scott Menter 指 Artecon 的 ArteTHS 把网络端口变成本地串口	A1 补空格；网络端口属网络语境合题
+S-002764	1989年5月9日AT&TBellLabs的JishnuMukerji称那位Sun分销商搞错了	1989 年 5 月 9 日 AT&T Bell Labs 的 Jishnu Mukerji 称那位 Sun 分销商搞错了 CDC 9720／1236 配 Xylogics 753 在 Sun 3／150 稳定运行六个月	B2 续至稳定运行六个月；9720／1236；A1
+S-002765	GlennRoberts称可经telnet登录386i运行dosw开多个DOS会话	Glenn Roberts 称可经 telnet 登录 386i 运行 dos -w 开多个 DOS 会话	A1 补空格；dosw→dos -w 依正文
+S-002766	1989年3月17日据v7n172所载当地Sun办事处消息SunConsulting有光栅转传真产品	1989 年 3 月 17 日据 v7n172 所载当地 Sun 办事处转来的消息 Sun Consulting 有光栅转传真产品	A1 补空格；依 h1 补转来的；H1 同步
+S-002767	发帖者忽觉uupick提示符中的反斜杠c有问题检视usrbinuupick发现它	发帖者忽觉 uupick 提示符中的反斜杠 c 有问题检视 ／usr／bin／uupick 发现它是 shell 脚本	B4 续至发现它是 shell 脚本；A1 补空格
+S-001151	ALGOL 58／60 的学术标准化历程	ALGOL 58／60 的学术标准化历程	H1 同步：题面不变；仅 H1 半角斜杠差异同步
+S-001152	贝尔实验室的 FORTRAN 早期参与	贝尔实验室早期参与 FORTRAN 编译器开发	B2 题尾续为完整动宾依正文
+S-001365	2015年1月22日报告希望从C或C++服务器调用Java类其可执行文件必须链接libjvmso	2015 年 1 月 22 日报告希望从 C 或 C++ 服务器调用 Java 类其可执行文件必须链接 libjvm.so	A1 补空格；libjvm.so 依正文；H1 同步
