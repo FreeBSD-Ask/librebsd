@@ -1,0 +1,69 @@
+source_id	old	new	reason
+S-031918	【Linux社区】Pavel：430毫欧是对其中一块电池的估算	【Linux 社区】Pavel：430 毫欧是对其中一块电池的估算，真值随温度与电池老化等而变	A1 修复；残题依 H1 与正文首句补全
+S-031919	Linux社区DanCarpenter投补丁2／2新增命令行配置工具lconfc	Linux 社区 Dan Carpenter 投补丁 2／2——新增命令行配置工具 lconf.c 与 kconfig 脚本	A1 修复；B4 依正文补全至 kconfig 脚本
+S-031920	Linux社区DavidHowells应Miklos建议在错误字符串前加源标签	Linux 社区 David Howells 应 Miklos，建议在错误字符串前加源标签如 nfs、vfs、dvb-core 以区分归属	A1 修复；残题依 H1 与正文首句补全
+S-031921	Linux社区TakashiIwai答Jiri无意强制策略只用guidance一	Linux 社区 Takashi Iwai 答 Jiri：无意强制策略，只用 guidance 一词	A1 修复；B4 依正文补全至 guidance 一词
+S-031923	Linux社区JoePerches在Printkredesign子线程中询问是否	Linux 社区 Joe Perches 在 Printk redesign 子线程中询问是否对这些讨论进行直播	A1/A2 修复；B4 依正文补全至进行直播
+S-031924	Linux社区MarkBrown呼应Ted述某维护者令补丁在next浸泡一周致依	Linux 社区 Mark Brown 呼应 Ted，述某维护者令补丁在 -next 浸泡一周致依赖未被发现	A1 修复；B4 依正文补全至未被发现
+S-031925	Linux社区SashaLevin首发长文基于AUTOSEL经验拟教AI识别bu	Linux 社区 Sasha Levin 首发长文：基于 AUTOSEL 经验拟教 AI 识别 bug-introducing 补丁	A1 修复；B3/B4 依正文补全至补丁
+S-031926	Linux社区LauraAbbott回Guenter指Fedora本就常携带未入	Linux 社区 Laura Abbott 回 Guenter，指 Fedora 本就常携带未入 stable 的补丁	A1 修复；B4 依正文补全至 stable 的补丁
+S-035854	导言	导言：ksummit-discuss p124 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-035866	【Linux社区】列表归档映射设计	【Linux 社区】列表归档映射设计	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035855	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 修复；统一社区标签写法
+S-035875	【Linux社区】正文元数据观察	【Linux 社区】正文元数据观察	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035876	【Linux社区】有损映射钩子探	【Linux 社区】有损映射钩子探	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035879	【Linux社区】lore／r／免列表辨识	【Linux 社区】lore／r／免列表辨识	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035888	【Linux社区】自写补丁回取质疑	【Linux 社区】自写补丁回取质疑	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035889	【Linux社区】恒从列表重做主张	【Linux 社区】恒从列表重做主张	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035892	【Linux社区】回溯移植查询需求	【Linux 社区】回溯移植查询需求	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035893	【Linux社区】追加归档即修复论	【Linux 社区】追加归档即修复论	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035895	【Linux社区】无条件加链成本论	【Linux 社区】无条件加链成本论	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035859	【Linux社区】归纳两项可行动作	【Linux 社区】归纳两项可行动作	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035861	【Linux社区】大系列才有价值论断	【Linux 社区】大系列才有价值论断	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035862	【Linux社区】逻辑电源域扩展构想	【Linux 社区】逻辑电源域扩展构想	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035904	导言	导言：ksummit-discuss p127 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-035914	【Linux社区】clone3 入主线定论	【Linux 社区】clone3 入主线定论	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035915	【Linux社区】Acked-by 释义修订	【Linux 社区】Acked-by 释义修订	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035916	【Linux社区】R： 强制门槛异议	【Linux 社区】R： 强制门槛异议	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035917	【Linux社区】QR oops 项目盘问	【Linux 社区】QR oops 项目盘问	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035918	【Linux社区】拒绝标签圈子化	【Linux 社区】拒绝标签圈子化	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035920	【Linux社区】标签用途论断	【Linux 社区】标签用途论断	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035921	【Linux社区】Coccinelle 确认场景	【Linux 社区】Coccinelle 确认场景	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035922	【Linux社区】R： 行定位澄清	【Linux 社区】R： 行定位澄清	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035923	【Linux社区】R： 列名门槛偏高	【Linux 社区】R： 列名门槛偏高	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035924	【Linux社区】加 R： 先征同意	【Linux 社区】加 R： 先征同意	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035905	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 修复；统一社区标签写法
+S-035926	【Linux社区】Reviewed-by 语义裁定	【Linux 社区】Reviewed-by 语义裁定	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035927	【Linux社区】Change-Id 提案	【Linux 社区】Change-Id 提案	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035928	【Linux社区】versatile QEMU 依赖 PCI	【Linux 社区】versatile QEMU 依赖 PCI	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035930	【Linux社区】gerrit 邮件汇入 lore	【Linux 社区】gerrit 邮件汇入 lore	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035931	【Linux社区】直链 gerrit 提案	【Linux 社区】直链 gerrit 提案	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035932	【Linux社区】反对 gerrit 长期链接	【Linux 社区】反对 gerrit 长期链接	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035933	【Linux社区】版本更迭断链论	【Linux 社区】版本更迭断链论	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035934	【Linux社区】X-Gerrit 头实证	【Linux 社区】X-Gerrit 头实证	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035935	【Linux社区】Change-Id 去 Gerrit 化	【Linux 社区】Change-Id 去 Gerrit 化	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035936	【Linux社区】拒绑 Gerrit 邮件头	【Linux 社区】拒绑 Gerrit 邮件头	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035906	【Linux社区】旧板卡 DT 转换收尾	【Linux 社区】旧板卡 DT 转换收尾	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035937	【Linux社区】指控反 Gerrit 偏见	【Linux 社区】指控反 Gerrit 偏见	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035939	【Linux社区】列表抄送上限放宽	【Linux 社区】列表抄送上限放宽	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035940	【Linux社区】跨子系统补丁黑洞	【Linux 社区】跨子系统补丁黑洞	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035941	【Linux社区】Link 通用化主张	【Linux 社区】Link 通用化主张	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035942	【Linux社区】含 ID 折中链接	【Linux 社区】含 ID 折中链接	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035943	【Linux社区】Change-Id 移出提交	【Linux 社区】Change-Id 移出提交	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035944	【Linux社区】Email2git 现状核查	【Linux 社区】Email2git 现状核查	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035945	【Linux社区】Message-Id 链式主张	【Linux 社区】Message-Id 链式主张	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035946	【Linux社区】两种 Link 形式权衡	【Linux 社区】两种 Link 形式权衡	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035947	【Linux社区】手工链接旧版实践	【Linux 社区】手工链接旧版实践	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035907	【Linux社区】fsnotify 模块导出共识	【Linux 社区】fsnotify 模块导出共识	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035948	【Linux社区】封面信链接链方案	【Linux 社区】封面信链接链方案	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035949	【Linux社区】无服务器链接反驳	【Linux 社区】无服务器链接反驳	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035950	【Linux社区】PM 依赖建模路线	【Linux 社区】PM 依赖建模路线	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035951	【Linux社区】折中归档方案重申	【Linux 社区】折中归档方案重申	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035952	【Linux社区】弃用段规避公私争	【Linux 社区】弃用段规避公私争	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035953	【Linux社区】提交者摩擦之争	【Linux 社区】提交者摩擦之争	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035954	【Linux社区】git 钩子不够论	【Linux 社区】git 钩子不够论	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035908	【Linux社区】patchwork 归档链接落地	【Linux 社区】patchwork 归档链接落地	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035909	【Linux社区】TAB 选举提名公告	【Linux 社区】TAB 选举提名公告	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035910	【Linux社区】seccomp 分层定案	【Linux 社区】seccomp 分层定案	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035911	【Linux社区】seccomp 原型与 LSM	【Linux 社区】seccomp 原型与 LSM	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
+S-035913	【Linux社区】seccomp 深过滤细化	【Linux 社区】seccomp 深过滤细化	A1 修复；统一社区标签并同步 H1 去陈旧块序号前缀
