@@ -1,0 +1,117 @@
+source_id	old	new	reason
+S-034838	导言	导言：ksummit 独有 p12 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-034847	Rust 内核策略	Rust 内核策略	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034848	安全议题禁运处理	安全议题禁运处理	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034849	Bugzilla 调整	Bugzilla 调整	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034850	C 聚合传参	C 聚合传参	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034851	工具生成内容指南	工具生成内容指南	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034852	设备直通之辩	设备直通之辩	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034853	Folios 峰会话题	Folios 峰会话题	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034854	stable 提交标签	stable 提交标签	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034855	Rust for Linux	Rust for Linux	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034856	linus-next 测试	linus-next 测试	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034839	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 补空格（Linux社区 粘连）
+S-034857	回归工作流	回归工作流：Plumbers 主会场之议与 stable-rc 树推广之辩	E1 过短按内容补描述性题面
+S-034858	CONFIG_HIGHMEM 退出	CONFIG_HIGHMEM 退出	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034859	AI 与 LLM 角色	AI 与 LLM 角色	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034860	trivial 补丁政策	trivial 补丁政策	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034861	文件系统信任维护	文件系统信任维护	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034862	维护者互助组	维护者互助组	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034840	加速器驱动用户态要求	加速器驱动用户态要求	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034841	实现 malloc	实现 malloc	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034842	stable 邮件数量	stable 邮件数量	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034843	防回归提交回移	防回归提交回移	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034844	停办维护者峰会之辩	停办维护者峰会之辩	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034845	Web of Trust 与 kernel.org 工具	Web of Trust 与 kernel.org 工具	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034846	TAB 选举	TAB 选举	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034933	导言	导言：ksummit 独有 p31 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-034942	内核文档结构	内核文档结构	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034943	文档构建性能	文档构建性能	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034944	AI 补丁政策	AI 补丁政策	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034945	Rust 可维护性	Rust 可维护性	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034946	TAB 选举	TAB 选举	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034947	Bugzilla 缺陷流程	Bugzilla 缺陷流程	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034948	收件人策略	收件人策略：抄送规则定为政策并实现进 get_maintainer.pl 之议	E1 过短按内容补描述性题面
+S-034949	AI 审查工具	AI 审查工具	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034950	维护者倦怠	维护者倦怠的应对：轮值拉取、双向沟通与匿名反馈	E1 过短按内容补描述性题面
+S-034952	维护者转正流程	维护者转正流程	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034934	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 补空格（Linux社区 粘连）
+S-034953	审查标签礼节	审查标签礼节	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034954	stable 邮件汇总	stable 邮件汇总	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034955	Rust 代码生成对比	Rust 代码生成对比	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034956	新人引导	新人引导：欢迎信机器人与友好补丁机器人模板	E1 过短按内容补描述性题面
+S-034957	设备直通争论	设备直通争论	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034959	Rust 引用计数	Rust 引用计数	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034960	DRM 维护规模	DRM 维护规模	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034961	安全披露政策	安全披露政策	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034962	cleanup.h 风格	cleanup.h 风格	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034963	Revocable 机制	Revocable 机制	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034935	峰会存废之争	峰会存废之争	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034964	栈回溯行号	栈回溯行号：kallsyms 嵌入源码行号之议	E1 过短按内容补描述性题面
+S-034965	devm 生命周期	devm 生命周期	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034966	整数溢出检查	整数溢出检查	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034967	C 结构体传参	C 结构体传参	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034936	安全流程治理	安全流程治理	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034937	Link 尾注工作流	Link 尾注工作流	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034938	邮件列表平台迁移	邮件列表平台迁移	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034939	Rust 别名规则	Rust 别名规则：Miri 验证与内核别名模型之辨	B2 尾则改实义收尾；H1 同步去陈旧前缀
+S-034940	linus-next 测试树	linus-next 测试树	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-034941	Bugzilla 退役提案	Bugzilla 退役提案	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035024	导言	导言：ksummit 独有 p64 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-035034	AI补丁审查	AI 补丁审查	A1 中英粘连补空格
+S-035035	AI标签与DCO	AI 标签与 DCO：生成代码版权覆盖与标注惯例	A1 补空格；B3 尾 DCO 依正文续实义
+S-035036	维护者互助小组	维护者互助小组	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035037	API废弃策略	API 废弃策略	A1 中英粘连补空格
+S-035038	维护者倦怠	维护者倦怠：DRM 多提交者模型的人际经验之邀	E1 过短按内容补描述性题面
+S-035039	AI生成代码争论	AI 生成代码争论	A1 中英粘连补空格
+S-035040	背光控制uAPI	背光控制 uAPI	A1 中英粘连补空格
+S-035041	Bugzilla与LLM解码	Bugzilla 与 LLM 解码	A1 中英粘连补空格
+S-035042	THE REST收件列表	THE REST 收件列表	A1 中英粘连补空格
+S-035043	Rust Ref引用计数	Rust Ref 引用计数	A1 中英粘连补空格
+S-035025	devm_kzalloc检查器	devm_kzalloc 检查器	A1 中英粘连补空格
+S-035044	AI补丁文档规则	AI 补丁文档规则：不作特殊化的工具披露要求	A1 补空格；B2 尾则改实义收尾
+S-035045	Bugzilla邮件量	Bugzilla 邮件量	A1 中英粘连补空格
+S-035046	ARM HIGHMEM淘汰	ARM HIGHMEM 淘汰	A1 中英粘连补空格
+S-035047	Bugzilla依赖调查	Bugzilla 依赖调查	A1 中英粘连补空格
+S-035048	Fixes标签实践	Fixes 标签实践	A1 中英粘连补空格
+S-035049	LLM伦理与成本	LLM 伦理与成本	A1 中英粘连补空格
+S-035050	回归测试覆盖	回归测试覆盖	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035051	Linus言论与CoC	Linus 言论与 CoC：Rostedt 的 TAB 表态	A1 补空格；B3 尾 CoC 依正文续实义
+S-035052	Folios与ACK权	Folios 与 ACK 权	A1 中英粘连补空格
+S-035053	WRITE_ONCE与原子性	WRITE_ONCE 与原子性	A1 中英粘连补空格
+S-035026	文档构建Python选择	文档构建 Python 选择	A1 中英粘连补空格
+S-035055	Bugzilla分诊	Bugzilla 分诊	A1 中英粘连补空格
+S-035056	AI补丁审查力度	AI 补丁审查力度	A1 中英粘连补空格
+S-035057	加速器用户态栈	加速器用户态栈	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035058	AI置信度评分	AI 置信度评分	A1 中英粘连补空格
+S-035059	维护者峰会存废	维护者峰会存废	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035027	linux-next树管理	linux-next 树管理	A1 中英粘连补空格
+S-035028	内核文档工具链	内核文档工具链	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035030	变量声明风格	变量声明风格	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035031	维护者否决权	维护者否决权	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035032	linus-next测试树	linus-next 测试树	A1 中英粘连补空格
+S-035033	补丁溯源标签	补丁溯源标签	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-031810	Linux社区2018年9月Mauro回应Linus提议的Livewithout	Linux 社区 2018 年 9 月 Mauro 回应 Linus 提议的 Live without email 议题	A1 补空格；B4 依正文复原全句
+S-033897	【Linux社区】Linus工作流定调	【Linux 社区】Linus 工作流定调	A1 补空格（Linux社区 粘连）
+S-033910	【Linux社区】Linus每系列分支赞许	【Linux 社区】Linus 每系列分支赞许	A1 补空格（Linux社区 粘连）
+S-034992	维护树层级之辩	维护树层级之辩	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035064	【Linux社区】Linus 一手：XPC、HT 需 APIC 与 UMA 带宽	【Linux 社区】Linus 一手：XPC、HT 需 APIC 与 UMA 带宽	A1 补空格；B4 破恰 40 字峰
+S-035073	【Linux社区】Tracing ABI 收官：Linus 与 Rostedt 七轮对撞及 eBPF 之争（10 例）	【Linux 社区】Tracing ABI 收官：Linus 与 Rostedt 七轮对撞及 eBPF 之争（10 例）	A1 补空格；D1 计数括注保留
+S-035581	【Linux社区】调度观察与 Nehalem 层级队列（7 例）	【Linux 社区】调度观察与 Nehalem 层级队列（7 例）	A1 补空格；D1 计数括注保留
+S-035698	【Linux社区】Kconfig 之难：Linus 三连长文与多方应答（8 例）	【Linux 社区】Kconfig 之难：Linus 三连长文与多方应答（8 例）	A1 补空格；B4 破恰 40；D1 计数括注保留
+S-035709	【Linux社区】Tracing ABI 流沙与 Linus 零填裁决（6 例）	【Linux 社区】Tracing ABI 流沙与 Linus 零填裁决（6 例）	A1 补空格；B4 破恰 40；D1 计数括注保留
+S-035802	【Linux社区】签名标签适用层级	【Linux 社区】签名标签适用层级	A1 补空格（Linux社区 粘连）
+S-035929	【Linux社区】Linus 拒 Change-Id	【Linux 社区】Linus 拒 Change-Id	A1 补空格（Linux社区 粘连）
+S-031770	Linux社区Linus否决Paolo用sed钩子把MessageID改写为Li	Linux 社区 Linus 否决 Paolo 用 sed 钩子把 Message-ID 改写为 Link 的做法	A1 补空格；B3/B4 依正文复原全句
+S-035938	【Linux社区】Linus 接受 gerrit Link	【Linux 社区】Linus 接受 gerrit Link	A1 补空格（Linux社区 粘连）
+S-035977	【Linux社区】Linus 定罪 UUID	【Linux 社区】Linus 定罪 UUID	A1 补空格（Linux社区 粘连）
+S-035982	【Linux社区】Doug 答辩 Linus	【Linux 社区】Doug 答辩 Linus	A1 补空格（Linux社区 粘连）
+S-036385	【Linux社区】“源码”定义之争（Linus 定调）	【Linux 社区】“源码”定义之争（Linus 定调）	A1 补空格；D1 人名括注提示保留
+S-036494	【Linux社区】Linus细节定调	【Linux 社区】Linus 细节定调	A1 补空格（Linux社区 粘连）
+S-031792	Linux社区Linus明言拒绝与linuxdistros合作因其强制披露政策会	Linux 社区 Linus 明言拒绝与 linux-distros 合作，因其强制披露政策会公开漏洞利用代码	A1 补空格；B4 依正文复原全句
+S-031884	Linux社区MatthewGarrett以具体下游生态反驳Linus对Busy	Linux 社区 Matthew Garrett 以具体下游生态反驳 Linus 对 BusyBox 诉讼的定性	A1 补空格；A2 拆人名；B4 依正文复原全句
+S-031913	Linux社区maintainerRafaelreview是决策进程中的建议从常	Linux 社区 maintainer Rafael：review 是决策进程中的建议	A1 补空格；A2 拆连写；B4 依正文复原全句
+S-031931	Linux社区GregKH响应Linus与Sasha的stablenext构想称	Linux 社区 Greg KH 响应 Linus 与 Sasha 的 stable-next 构想	A1 补空格；B4 依正文复原全句
+S-032128	回归治理四提案共同场景	回归治理四提案共同场景	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-033582	【Linux社区】ABI 硬规则之争：Linus 拒绝任何放松（10 例）	【Linux 社区】ABI 硬规则之争：Linus 拒绝任何放松（10 例）	A1 补空格；D1 计数括注保留
+S-033833	【Linux社区】直送Linus由来	【Linux 社区】直送 Linus 由来	A1 补空格（Linux社区 粘连）
