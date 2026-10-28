@@ -1,0 +1,120 @@
+source_id	old	new	reason
+S-002503	BBN TCP／IP 争议与解决方案	BBN TCP／IP 争议与解决方案	H1 同步：题面合规；H1 半角斜杠同步全角
+S-002527	kel称VM起于IBM英国研究实验室的业余项目IBM长期抵制发布后为收费支持而放出	kel 称 VM 起于 IBM 英国研究实验室的业余项目，IBM 长期抵制发布后为收费支持而放出	A1 补空格（kel、VM、IBM 粘连）
+S-002528	1984年12月14日DickDunn回应VM370的性能与设计称曾见VM损失四成CPU	1984 年 12 月 14 日 Dick Dunn 回应 VM／370 的性能与设计，称曾见 VM 损失四成 CPU	A1 补空格；VM370 依正文正名 VM／370
+S-002530	报告42bsd上用cron每小时调度一次uucicor1拨叫排队站点首个站点总能	4.2bsd 上用 cron 每小时调度一次 uucico -r1 拨叫排队站点：首个站点总能拨通，其后每次拨号必报 LOST LINE 错误	A1 补空格；42bsd、uucicor1 依正文正名；去悬头报告；B4 续接
+S-002533	1984年10月10日LarryTepper介绍在V7上重写lpr与lpd并新增过滤程序lpf	1984 年 10 月 10 日 Larry Tepper 介绍在 V7 上重写 lpr 与 lpd 并新增过滤程序 lpf	A1 补空格（人名与工具名粘连拆分）
+S-002535	1984年9月23日DonnSeeley回击指责称42内核惯用typedef求可移植	1984 年 9 月 23 日 Donn Seeley 回击指责，称 4.2 内核惯用 typedef 求可移植	A1 补空格；42 内核依正文正名 4.2 内核
+S-002536	1984年8月06日SofTech的RichardBlouin给出Unipressemacs的键位配置	1984 年 8 月 06 日 SofTech 的 Richard Blouin 给出 Unipress emacs 的键位配置	A1 补空格；Unipressemacs 依正文拆 Unipress emacs
+S-002537	1984年9月12日TomKessler称已把在Sun工作站上安装S的长文投递到netmathstat	1984 年 9 月 12 日 Tom Kessler 称已把在 Sun 工作站上安装 S 的长文投递到 net.math.stat	A1 补空格；netmathstat 依正文正名 net.math.stat
+S-002538	1988年3月02日Samperi实测PCAT与3B2上cpio头恒按2字节对齐	1988 年 3 月 02 日 Samperi 实测 PC AT 与 3B2 上 cpio 头恒按 2 字节对齐，与手册及 AT&T 假定 4 字节之说相左	A1 补空格；PCAT 依正文拆 PC AT；B4 续接语义边界
+S-002539	1984年7月19日Cohrs报告42bsd机器频发panic保护故障崩溃点在iget	1984 年 7 月 19 日 Cohrs 报告 4.2bsd 机器频发 panic 保护故障，崩溃点在 iget 的空闲链摘除代码段	A1 补空格；42bsd 依正文正名 4.2bsd；题尾续接实义
+S-002541	1984年7月25日KarlDahlke报告SystemV信号量程序在ibm370与3b20s正常	1984 年 7 月 25 日 Karl Dahlke 报告 System V 信号量程序在 ibm370 与 3b-20s 上正常	A1 补空格；SystemV、3b20s 依正文正名
+S-002507	ChrisTorek指出检查地址能否读写并不能判断其正确性	Chris Torek 指出检查地址能否读写并不能判断其正确性	A1 补空格（ChrisTorek 人名拆分）
+S-002542	KeithRule求带终端无关颜色概念的curses与termlib他已能给cu	Keith Rule 求带终端无关颜色概念的 curses 与 termlib：他已能给 curses 窗口上色但方法硬编码于 Tektronix 41XX 系列彩显	A1 补空格；B4 截断依正文续接至 Tektronix 41XX 彩显
+S-002544	1985年9月12日ChrisTorek指出rwhod失效源于内核标志位缺陷	1985 年 9 月 12 日 Chris Torek 指出 rwhod 失效源于内核标志位缺陷	A1 补空格（ChrisTorek 人名拆分）
+S-002546	1990年9月18日JosefMoellers详解调试器报Brokenstackframe的机理	1990 年 9 月 18 日 Josef Moellers 详解调试器报 Broken stack frame 的机理	A1 补空格；Brokenstackframe 依正文拆三词
+S-002547	1990年8月31日EdwardVielmetti示范用tunefsm把最小空闲空间降到2%	1990 年 8 月 31 日 Edward Vielmetti 示范用 tunefs -m 把最小空闲空间降到 2%	A1 补空格；tunefsm 依正文正名 tunefs -m
+S-002550	1991年6月11日Curt称在SCOXenix232上装208版FAS串口驱动	1991 年 6 月 11 日 Curt 称在 SCO Xenix 2.3.2 上装 2.08 版 FAS 串口驱动，16550A 的 FIFO 于 38.4Kbps 不再丢字	A1 补空格；SCOXenix232、208 版依正文正名；B4 续接
+S-002552	1991年3月26日ChrisTorek答复Ultrix40下rlogin窗口尺寸偶发失灵的问题	1991 年 3 月 26 日 Chris Torek 答复 Ultrix 4.0 下 rlogin 窗口尺寸偶发失灵的问题	A1 补空格；Ultrix40 依正文正名 Ultrix 4.0
+S-002555	1984年4月21日MikeShaddock附议称受够了抱怨42之差的论调	1984 年 4 月 21 日 Mike Shaddock 附议称受够了抱怨 4.2 之差的论调	A1 补空格；42 之差依正文正名 4.2 之差
+S-002557	1984年5月22日DaveHorsfall建议与其删对象不如改名	1984 年 5 月 22 日 Dave Horsfall 建议与其删对象不如改名	A1 补空格（DaveHorsfall 人名拆分）
+S-002558	1984年4月16日SidStuart报42udac引导挂死	1984 年 4 月 16 日 Sid Stuart 报 4.2 uda.c 引导挂死	A1 补空格；42udac 依正文正名 4.2 uda.c
+S-002560	1984年3月06日rcd考据Berkeley41a把HTNLVTNPCR逐出ctype	1984 年 3 月 06 日 rcd 考据 Berkeley 4.1a 把 HT／NL／VT／NP／CR 逐出 ctype 控制字符类	A1 补空格；Berkeley41a 正名；字符码全角斜杠；题尾续接
+S-002508	发帖者评论内核膨胀与分页策略认为消息传递速度才是关键并讽刺SunOS臃肿期待Pl	发帖者评论内核膨胀与分页策略，认为消息传递速度才是关键，并讽刺 SunOS 臃肿、期待 Plan 9 取代	A1 补空格；B4 截断依正文续接至 Plan 9 取代
+S-002561	1984年3月01日GuyHarris揭dump靠死推算EOT计块而错——坏点延隙写更使块长失准	1984 年 3 月 01 日 Guy Harris 揭 dump 靠死推算 EOT 计块而错——坏点延隙写更使块长失准	A1 补空格（GuyHarris 人名拆分）
+S-002564	1985年2月9日KeithMuller将实测运行18个月的UCSD负载控制系统正式发布	1985 年 2 月 9 日 Keith Muller 将实测运行 18 个月的 UCSD 负载控制系统正式发布	A1 补空格（KeithMuller 人名拆分）
+S-002565	1990年10月24日SteveSummit阐明接口规格即契约论	1990 年 10 月 24 日 Steve Summit 阐明接口规格即契约论：错误返回皆须检查	A1 补空格（SteveSummit 拆分）；避 40 字符峰续接
+S-002566	1984年9月24日HenrySpencer为称伯克利为白痴致半歉	1984 年 9 月 24 日 Henry Spencer 为称伯克利为白痴致半歉	A1 补空格（HenrySpencer 人名拆分）
+S-002509	解释用反引号传递大量文件名的方案失败真正原因是系统对exec参数长度的限制	用反引号传递大量文件名的方案失败，真正原因是系统对 exec 参数长度的限制	A1 补空格（exec 粘连）；微调断句避 40 字符峰
+S-002511	介绍性能调优工具tunex说明它通过分析accounting文件判断哪些程序适合	介绍性能调优工具 tunex，说明它通过分析 accounting 文件判断哪些程序适合设置粘滞位	A1 补空格；B4 截断续接至设置粘滞位
+S-002513	DavidDymm用20万次循环实测strlen与strcpy在UNIX与VMS上的耗时	David Dymm 用 20 万次循环实测 strlen 与 strcpy 在 UNIX 与 VMS 上的耗时	A1 补空格（DavidDymm 人名拆分）
+S-002519	给出42BSDtroff下划线缺陷的修正办法建议只给单个单词加下划线或关闭断词	给出 4.2BSD troff 下划线缺陷的修正办法，建议只给单个单词加下划线或关闭断词	A1 补空格；42BSDtroff 依正文正名 4.2BSD troff
+S-002522	RobertBradbury讨论shmat失败返回1而非NULL担心该位模式可能与合法指针混淆	Robert Bradbury 讨论 shmat 失败返回 -1 而非 NULL，担心该位模式可能与合法指针混淆	A1 补空格；返回 1 依正文正名返回 -1
+S-002524	70跑29时Interlan板一获主机内存DMA即令系统崩溃作者疑网络缓冲管理中	11／70 跑 2.9 时 Interlan 板一获主机内存 DMA 即令系统崩溃，作者疑网络缓冲管理中 UNIBUS 映射代码有隐微 bug	A1 补空格；70跑29 依正文正名 11／70 跑 2.9；B4 续接
+S-003703	BSD 商业衍生路径 → CSRG 成员创办 Sun／BSDi 与商业授权模式（1982-1995）	从 BSD 商业衍生路径到 CSRG 成员创办 Sun／BSDi 与商业授权模式（1982–1995）	C5 箭头改从到结构；D2 年代区间改 U+2013
+S-003685	McKusick 的 CSRG Archive CD-ROM 套装：4 CD 集 1978-1995 完整源码档案	McKusick 的 CSRG Archive CD-ROM 套装：4 CD 集 1978–1995 完整源码档案	D2 年代区间 1978-1995 改 U+2013 连接符
+S-003655	被遗忘的 CSRG 行政人员	CSRG 被遗忘的行政人员	B1 悬头被字重拟为 CSRG 名词起头
+S-003840	与中国的关系：CSRG 时期伯克利-中国高校合作的早期档案；CSRG 时期中国留学生与学者在伯克利 CS 的参与	伯克利与中国的关系：CSRG 时期与中国高校合作的早期档案及中国留学生与学者的参与情况	B1 题首与字重构；B2 题尾与字改参与情况收实义
+S-003843	学术成绩：CSRG 时期伯克利 CS 的代表性学术成绩（FFS、TCP／IP、sendmail、Ingres／Postgres 等）	学术成绩：CSRG 时期伯克利 CS 的代表性学术成绩（FFS、TCP／IP、sendmail、Ingres／Postgres 等）	H1 同步：D1 提示保留（括注为列举）；H1 半角斜杠同步全角
+S-003772	Academic Senate 完整架构（Division、Senate Assembly、Senate Council、各常设委员会）	Academic Senate 完整架构（Division、Senate Assembly、Senate Council、各常设委员会）	保留：D1 提示保留：括注为架构列举非冗余
+S-003773	伯克利教授工会演化（CFA 或 AAUP 伯克利分会）	伯克利教授工会演化（CFA 或 AAUP 伯克利分会）	保留：D1 提示保留：括注为工会名列举
+S-003775	教授组织对 BSD 相关研究的支持或争议（如 DARPA 资助伦理审查）	教授组织对 BSD 相关研究的支持或争议（如 DARPA 资助伦理审查）	保留：D1 提示保留：括注为例示非冗余
+S-003776	CSRG 成员在 Academic Senate 中的角色（McKusick、Karels 等）	CSRG 成员在 Academic Senate 中的角色（McKusick、Karels 等）	保留：D1 提示保留：括注为人名列举
+S-003824	博士后培养：伯克利 CS 博士后制度的历史（含 CSRG 时期是否招收博士后）	博士后培养：伯克利 CS 博士后制度的历史（含 CSRG 时期是否招收博士后）	保留：D1 提示保留：括注为议题范围说明
+S-002786	1984年前后伯克利CSRG与BSD阵营散发42V海报嘲讽SystemV	1984 年前后伯克利 CSRG 与 BSD 阵营散发“4.2＞V”海报嘲讽 System V 缺少 TCP／IP 网络栈与 FFS 快速文件系统	A1 补空格；42V 海报依正文正名“4.2＞V”；题尾续接
+S-031789	Linux社区Bottomley引美国版权局报告称纯AI代码无版权即公有领域DC	Linux 社区 Bottomley 引美国版权局报告称纯 AI 代码无版权即公有领域，DCO 可接受	A1 补空格；B4 截断 DC 依正文续接 DCO 可接受
+S-035342	【Linux社区】封禁 Alice 续辩：剥名版权论与 netfilter 先例	【Linux 社区】封禁 Alice 续辩：剥名版权论与 netfilter 先例	A1 Linux社区补空格；B4 恰 40 字符峰解除
+S-035430	导言	导言：ksummit-discuss p136 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-035440	收录Shuah背书	Williams 收录 Shuah 的 Ack，定 blocklist／passlist 为通用简写	A1 补空格；B1 悬头收录重构为 Williams 起头
+S-035441	弃背景文档收敛	弃背景文档收敛	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035442	回应Newspeak之喻	Williams 以文化交流培训类比回应 Newspeak 之喻	A1 补空格；B1 悬头回应重构为 Williams 起头
+S-035443	作者修订再承诺	作者修订再承诺	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035444	seccomp先例数据	seccomp 先例数据：man-pages 与 libseccomp 已用 allow-list／deny-list	A1 补空格；题面依正文补全两处先例
+S-035445	checkpatch补丁数据	checkpatch 补丁数据	A1 补空格（checkpatch 粘连）
+S-035446	Brauner署Ack	Brauner 署 Acked-by，附议历史段落移入 changelog	A1 补空格；残尾 Ack 依正文续接 Acked-by
+S-035448	allowlist语法之争	allowlist 语法之争	A1 补空格（allowlist 粘连）
+S-035449	非母语者语法论	非母语者语法论	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035450	英语语法无逻辑	英语语法无逻辑	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035431	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 补空格（Linux社区 粘连）
+S-035451	非等价替换论	非等价替换论	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035452	动作明确性原则	动作明确性原则：宁取 allow／deny 的清晰心智模型	B2 题尾则字悬空，补从句收在心智模型实义
+S-035453	具体性优先论	具体性优先论	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035454	ACPI与DT议题	ACPI 与 DT 议题	A1 补空格（ACPI与DT 粘连）
+S-035455	bisect术语之察	bisect 术语之察	A1 补空格（bisect 粘连）
+S-035456	设备平等之问	设备平等之问	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035457	滑坡讽刺批驳	滑坡讽刺批驳	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035458	替换词划界质疑	替换词划界质疑	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035460	语境必要性论	语境必要性论	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035461	词源内涵之辩	词源内涵之辩	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035432	苏联Newspeak之喻	苏联 Newspeak 之喻	A1 补空格（Newspeak 粘连）
+S-035463	双动词构词解析	双动词构词解析	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035464	blacklist贬义确证	blacklist 贬义确证	A1 补空格（blacklist 粘连）
+S-035465	回归标签可行性	回归标签可行性	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035466	blacklist禁废之辩	blacklist 禁废之辩	A1 补空格（blacklist 粘连）
+S-035467	行业标准先例	行业标准先例	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035468	checkpatch分工	checkpatch 分工	A1 补空格（checkpatch 粘连）
+S-035470	Ack升SoB及建议	Ack 升 Signed-off-by 及配对词调整建议	A1 补空格；SoB 依正文展开 Signed-off-by
+S-035471	承诺修checkpatch	承诺修 checkpatch	A1 补空格（checkpatch 粘连）
+S-035472	Brown署Review	Brown 署 Reviewed-by，并建议 controller 与 host 并列	A1 补空格；残尾 Review 依正文续接 Reviewed-by
+S-035473	Carpenter署SoB	Carpenter 署 Signed-off-by，计入 v2 签名征集	A1 补空格；SoB 依正文展开 Signed-off-by
+S-035433	补丁评审措辞意见	补丁评审措辞意见	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035474	Ts'o署SoB	Ts’o 署 Signed-off-by，计入 v2 签名征集	A1 补空格；C2 撇号弯化；SoB 展开 Signed-off-by
+S-035437	git元数据档案信	git 元数据档案信	A1 补空格（git 粘连）
+S-035447	元数据机制论断	元数据机制论断	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035434	支持并求署名	Shuah 支持术语补丁并求署名	B1 悬头支持重构为 Shuah 名词起头
+S-035435	替换词与措辞建议	替换词与措辞建议	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035436	subordinate异议答辩	subordinate 异议答辩	A1 补空格（subordinate 粘连）
+S-035438	slave词亲身经历	slave 词亲身经历	A1 补空格（slave词 粘连）
+S-035439	作者修订承诺	作者修订承诺	H1 同步：题面合规；仅 H1 同步（去陈旧编号前缀）
+S-035475	导言	导言：ksummit-discuss p137 来源、判定与主题分布	E1 过短按导语重拟来源判定与主题分布题面
+S-035484	【Linux社区】术语替换泛滥忧	【Linux 社区】术语替换泛滥忧	A1 补空格（Linux社区 粘连）
+S-035485	【Linux社区】文档检查归属	【Linux 社区】文档检查归属	A1 补空格（Linux社区 粘连）
+S-035486	【Linux社区】术语全球社区论	【Linux 社区】术语全球社区论	A1 补空格（Linux社区 粘连）
+S-035487	【Linux社区】graylist语义界定	【Linux 社区】graylist 语义界定	A1 补空格（Linux社区 粘连）
+S-035488	【Linux社区】graylist去留定调	【Linux 社区】graylist 去留定调	A1 补空格（Linux社区 粘连）
+S-035489	【Linux社区】0-day文档检查	【Linux 社区】0-day 文档检查	A1 补空格（Linux社区 粘连）
+S-035490	【Linux社区】门控机制风险论	【Linux 社区】门控机制风险论	A1 补空格（Linux社区 粘连）
+S-035491	【Linux社区】文档检查替代案	【Linux 社区】文档检查替代案	A1 补空格（Linux社区 粘连）
+S-035492	【Linux社区】文档检查收敛	【Linux 社区】文档检查收敛	A1 补空格（Linux社区 粘连）
+S-035493	【Linux社区】术语文化引证	【Linux 社区】术语文化引证	A1 补空格（Linux社区 粘连）
+S-035476	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 补空格（Linux社区 粘连）
+S-035494	【Linux社区】seccomp用语批评	【Linux 社区】seccomp 用语批评	A1 补空格（Linux社区 粘连）
+S-035495	【Linux社区】Fixes标签机制	【Linux 社区】Fixes 标签机制	A1 补空格（Linux社区 粘连）
+S-035496	【Linux社区】blacklist存废议	【Linux 社区】blacklist 存废议	A1 补空格（Linux社区 粘连）
+S-035497	【Linux社区】SoundWire换词	【Linux 社区】SoundWire 换词	A1 补空格；SoundWire 专名不拆
+S-035498	【Linux社区】术语动词形式	【Linux 社区】术语动词形式	A1 补空格（Linux社区 粘连）
+S-035499	【Linux社区】术语语法商榷	【Linux 社区】术语语法商榷	A1 补空格（Linux社区 粘连）
+S-035500	【Linux社区】allowlist语义辨	【Linux 社区】allowlist 语义辨	A1 补空格（Linux社区 粘连）
+S-035501	【Linux社区】git签名注记设想	【Linux 社区】git 签名注记设想	A1 补空格（Linux社区 粘连）
+S-035502	【Linux社区】全量替换之害论	【Linux 社区】全量替换之害论	A1 补空格（Linux社区 粘连）
+S-035503	【Linux社区】换词分权定调	【Linux 社区】换词分权定调	A1 补空格（Linux社区 粘连）
+S-035477	【Linux社区】PM依赖框架设计	【Linux 社区】PM 依赖框架设计	A1 补空格（Linux社区 粘连）
+S-035504	【Linux社区】术语动词方案	【Linux 社区】术语动词方案	A1 补空格（Linux社区 粘连）
+S-035505	【Linux社区】sed替换可行性	【Linux 社区】sed 替换可行性	A1 补空格（Linux社区 粘连）
+S-035478	【Linux社区】术语替换词修订	【Linux 社区】术语替换词修订	A1 补空格（Linux社区 粘连）
+S-035479	【Linux社区】术语文档去留	【Linux 社区】术语文档去留	A1 补空格（Linux社区 粘连）
+S-035480	【Linux社区】术语补丁质疑	【Linux 社区】术语补丁质疑	A1 补空格（Linux社区 粘连）
+S-035481	【Linux社区】术语补丁背书	【Linux 社区】术语补丁背书	A1 补空格（Linux社区 粘连）
+S-035482	【Linux社区】术语补丁v3定稿	【Linux 社区】术语补丁 v3 定稿	A1 补空格（Linux社区、v3 粘连）
+S-035483	【Linux社区】ARM旧板DT转制	【Linux 社区】ARM 旧板 DT 转制	A1 补空格（Linux社区、ARM、DT 粘连）
