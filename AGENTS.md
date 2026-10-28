@@ -234,7 +234,7 @@
 
 - 不带选项与参数的裸命令（`mv`、`cp` 等）一般不加反引号。
 - **markdownlint**（`.markdownlint.json`）：本地 `markdownlint-cli2 v0.22.1`（markdownlint v0.40.0）。闸面（活动文件显式清单）、豁免范围与判据见 `流程规则/06-门禁体系.md`“文档格式门禁”。
-  - **检查**（仓库根目录）：`markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .markdownlint.json`
+  - **检查**（仓库根目录）：`markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!.qoder/**" "!script/**" --config .markdownlint.json`
   - **自动修复**：同上加 `--fix`（可修 MD012／MD047／MD034；**修不了 MD060 对齐**）
   - **MD060 表格列风格**：`compact` ＋ `aligned_delimiter`；管道符两侧各一个空格，空单元格写 `| |`。分隔行 dash 数＝**表头**该列显示宽度 W − 2（无冒号）／− 3（单侧冒号）／− 4（双侧冒号），**CJK 按 2 宽计**。例：表头 `| 脚本 | 用途 |` 每列 W＝6 → `| ---- | ---- |`（4 个 dash）。
   - **MD060 批量修复**：`脚本与命令/fix_md060_delimiters.py`（缺省 dry-run，`--apply` 写盘；只改分隔行，不动表头与数据行，跳过围栏代码块内伪表格）。

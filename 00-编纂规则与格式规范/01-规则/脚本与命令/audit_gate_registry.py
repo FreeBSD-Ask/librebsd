@@ -150,7 +150,7 @@ REGISTRY = [
          trigger="根级三件再生或提交前",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第二十六件", script="00-编纂规则与格式规范/01-规则/脚本与命令/sync_outline_mirror.py",
-         kind="同步器/门禁", object="大纲根级三件（SUMMARY 双射；主题索引委派 build_theme_index.py，含 theme-index/3 与 theme-reverse/1）", trigger="大纲结构变动后（批 8 / 后续重编号）",
+         kind="同步器/门禁", object="大纲根级三件（SUMMARY 双射；主题索引委派 build_theme_index.py，含 theme-index/4 与 theme-reverse/2）", trigger="大纲结构变动后（批 8 / 后续重编号）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第二十七件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_keyword_index.py",
          kind="门禁", object="主题词索引 A–G 七组：schema／覆盖双射／词质（3–6、元节 1–3、禁用词、中文、补位、单主题占比、零使用）／侧面／对齐码／反查一致／尺寸"

@@ -14,7 +14,7 @@
 T1 **直角引号清零**：全库 `*.md` 中六个码位（U+300C U+300D U+300E U+300F
     U+FF62 U+FF63）出现即 FAIL。判据面＝**入库内容**：跳过 `.git`／`node_modules`
     等，并跳过**不入库工作区**（顶层 `script/`、`_tmp/`、`specs/`、`.trae/`、
-    `.workbuddy/`、`.zcode/`、`.github/`、`.gitbook/`，均按根 `.gitignore` 排除、
+    `.workbuddy/`、`.zcode/`、`.qoder/`、`.github/`、`.gitbook/`，均按根 `.gitignore` 排除、
     不入库——对其判直角引号只会使本件恒 FAIL 而被忽略，等于防线空转；
     `00-编纂规则与格式规范/01-规则/script/` 下有入库 `.md`，故 `script` 只在
     根层跳过）。UTF-8 不可解码者与 open 抛 `OSError` 者（walk 与 open 之间被
@@ -54,7 +54,7 @@ CORNER = {"\u300c", "\u300d", "\u300e", "\u300f", "\uff62", "\uff63"}
 # 与根 .gitignore 及 markdownlint 的排除清单同口径。
 SKIP_DIRS = {
     ".git", "node_modules", ".venv", "__pycache__",
-    ".workbuddy", ".trae", ".zcode", ".github", ".gitbook",
+    ".workbuddy", ".trae", ".zcode", ".qoder", ".github", ".gitbook",
     "_tmp", "specs",
 }
 # 顶层 script/ 整树不入库（AGENTS.md 明确“一律不入库”），只在根层跳过；
