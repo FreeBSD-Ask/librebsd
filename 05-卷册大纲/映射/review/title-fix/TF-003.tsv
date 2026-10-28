@@ -1,0 +1,95 @@
+source_id	old	new	reason
+S-001301	2006年9月8日他把问题报成103051号问题单类别java严重度serious	2006 年 9 月 8 日他把问题报成 103051 号问题单，类别 java、严重度 serious	补空格＋补逗号顿号分句
+S-001313	2007年3月26日bugmaster汇总freebsdjava名下问题报告严重类共7条	2007 年 3 月 26 日 bugmaster 汇总 freebsd-java 名下问题报告，严重类共 7 条	补空格＋正名 freebsd-java
+S-001322	2008年8月8日Doe说他装上javajdk16端口后问题就解决了	2008 年 8 月 8 日 Doe 说他装上 java／jdk16 Port 后问题就解决了，虽启动 Tomcat 仍用 diablo-jdk1.6.0_07 二进制	补空格＋B2 续尾＋端口改 Port
+S-001332	2009年7月13日linimon把ports135002责任人从java组改派	2009 年 7 月 13 日 linimon 把问题单 ports／135002 的责任人从 java 组改派给 freebsd-java 组	B4 续尾改派给组＋补空格＋斜杠
+S-001335	2009年10月1日作者报告160_03p4版本字体配置正常但openJava6字体难看	2009 年 10 月 1 日作者报告 1.6.0_03-p4 版本字体配置正常，但新装 openJava6 字体难看	补空格＋版本正名 1.6.0_03-p4
+S-001362	2014年5月30日请求其他维护者协助合并javacommapi两端口的staging更新	2014 年 5 月 30 日请求其他维护者协助合并 java-commapi 与 java-commapi-freebsd 两 Port 的 staging 更新	补空格＋正名两 Port 名
+S-001366	2015年11月26日报告Firefox41下Java测试页signedJNLP与启动JNLP不匹配	2015 年 11 月 26 日报告 Firefox 41 下 Java 测试页 signed JNLP 与启动 JNLP 不匹配	补空格
+S-001372	2017年12月4日ktrace显示java绑定本地v6地址9300端口时返回errno49	2017 年 12 月 4 日 ktrace 显示 java 绑定 IPv6 本地地址 9300 端口时返回 errno 49	补空格＋v6 正名 IPv6
+S-001373	2017年7月14日r445802将bsdjavamk版本校验改为POSIX正则	2017 年 7 月 14 日 r445802 将 bsd.java.mk 版本校验改为 POSIX 正则，并用 make 的 ts 修饰符简化脚本	B4 续尾简化脚本＋正名 bsd.java.mk
+S-001381	2019年1月18日Alex反驳报件人把java规范与平台实现混为一谈	2019 年 1 月 18 日 Alex 反驳报件人把 java 规范与平台实现混为一谈	补空格
+S-001392	1999年3月3日Java引导构建须先装现有JDK道理同编译C需先有C编译器	1999 年 3 月 3 日 Java 引导构建须先装现有 JDK，道理同编译 C 需先有 C 编译器	补空格＋补逗号分句
+S-001395	1999年9月25日他移植libjava发现linux_threadsc用了FreeBSD没有的SIGPWR	1999 年 9 月 25 日他移植 libjava 发现 linux_threads.c 用了 FreeBSD 没有的 SIGPWR	补空格＋正名 linux_threads.c
+S-001398	2000年1月28日修改java_wrapper把DEFAULT_THREADS_FLAG改为green	2000 年 1 月 28 日修改 java_wrapper 把 DEFAULT_THREADS_FLAG 改为 green	补空格
+S-001401	2000年4月24日免费注册JavaDevelopersConnection即可获得三张RFE投票	2000 年 4 月 24 日免费注册 Java Developer’s Connection 即可获得三张 RFE 投票	A2 拆词＋弯撇号 Developer’s
+S-001411	2001年6月1日Ernst在FreeBSD43RELEASE上提交javajdom端口变更请求	2001 年 6 月 1 日 Ernst 在 FreeBSD 4.3-RELEASE 上提交新 Port java／jdom 变更请求	补空格＋版本正名＋路径全角斜杠
+S-001416	2001年8月25日Shudo报告SunJDK131forLinux设了JAVA_COMPILER也不加载JIT	2001 年 8 月 25 日 Shudo 报告 Sun JDK 1.3.1 for Linux 设了 JAVA_COMPILER 也不加载 JIT	B3 续尾 COMPILER＋版本正名＋空格
+S-001451	Tcl／Tk 与其他脚本语言	Tcl／Tk 与其他脚本语言	H1 同步：H1 同步（半角斜杠转全角）
+S-001270	Sun2006年GPL化JavaOpenJDK2007年开源	Sun 2006 年 GPL 化 Java（OpenJDK），2007 年开源	补空格＋括注 OpenJDK
+S-001454	就旧版awk之限建议改用自由软件的新版awk或perl并指出后者为各awk的真正超集且附带转换器	旧版 awk 之限：建议改用自由软件的新版 awk 或 perl，并指出后者为各 awk 的真正超集且附带转换器	补全句尾＋名词起头避悬头动词
+S-001457	2004年11月23日AlexanderLeidinger追查47上perl585的locale问题	2004 年 11 月 23 日 Alexander Leidinger 追查 4.7 上 perl 5.8.5 的 locale 问题	A2 拆人名＋补空格＋版本正名
+S-001464	2010年7月19日DougBarton参与bsdperlmk讨论追问INDEX提速测试	2010 年 7 月 19 日 Doug Barton 参与 bsd.perl.mk 讨论并追问 INDEX 提速测试计划	A2 拆人名＋续尾计划＋正名 mk
+S-001465	2010年9月17日他回复PR150563给langp5JavaScriptSpiderMonkey提补丁	2010 年 9 月 17 日他回复 PR 150563，给 lang／p5-JavaScript-SpiderMonkey 提补丁	补空格＋路径全角斜杠
+S-001467	2011年7月20日Bapt质疑perl使用带版本号的vendorbin等目录	2011 年 7 月 20 日 Bapt 质疑 perl 使用带版本号的 vendorbin 等目录	补空格
+S-001468	2011年5月18日hvopm报告Perl从512升到514后构建develp5DevelPPPort出问题	2011 年 5 月 18 日 hvo.pm 报告 Perl 从 5.12 升到 5.14 后构建 devel／p5-Devel-PPPort 出问题	补空格＋版本正名＋路径斜杠
+S-001469	2011年9月29日milki确认BSDPAN在perl模块路径排前先加载其自带EUMM	2011 年 9 月 29 日 milki 确认 BSDPAN 在 perl 模块路径排前，先加载其自带 EUMM	补空格＋补逗号分句
+S-001473	2013年8月25日AndrejZverev判断p5GDGraph构建失败与perl512弃用无关	2013 年 8 月 25 日 Andrej Zverev 判断 p5-GD-Graph 构建失败与 perl5.12 弃用无关	A2 拆人名＋正名 p5-GD-Graph
+S-001481	2015年1月5日mat在Bug196518里说明端口树支持的Perl版本	2015 年 1 月 5 日 mat 在 Bug 196518 里说明 Ports 树支持 Perl 5.16、5.18 与 5.20	补空格＋端口树改 Ports 树＋补版本
+S-001493	2006年10月26日alexbl提议成立python@小组维护Python端口及bsdpythonmk	2006 年 10 月 26 日 alexbl 提议成立 python@ 小组维护 Python Port 及 bsd.python.mk 框架	补空格＋正名 mk＋端口改 Port
+S-001513	2013年4月21日GaborPali报告Python2x多线程程序在线程内无法正确处理信号	2013 年 4 月 21 日 Gabor Pali 报告 Python 2.x 多线程程序在线程内无法正确处理信号	A2 拆人名＋补空格＋去重复日期
+S-001495	2007年6月13日Colin称Stackless可作CPython直接替换但Twisted等库不可用	2007 年 6 月 13 日 Colin 称 Stackless 可作 CPython 直接替换但 Twisted 等库不可用	补空格
+S-001507	2011年5月2日IonMihaiTetcu报告切换到python27后upgradesitepackages目标失败	2011 年 5 月 2 日 Ion-Mihai Tetcu 报告切换到 python2.7 后 upgrade-site-packages 目标失败	A2 拆人名＋目标名与版本正名
+S-001510	2012年6月14日Gene报告81AMD64升级ports装python273_2后依赖26的脚本失败	2012 年 6 月 14 日 Gene 报告 8.1 AMD64 升级 Ports 装 python 2.7.3_2 后依赖 2.6 的脚本失败	补空格＋版本正名＋Ports 术语
+S-001514	2013年12月19日MarcusvonAppen说明移除langpython后还需支持多版本并存	2013 年 12 月 19 日 Marcus von Appen 说明移除 lang／python 后还需支持多版本并存	A2 拆人名＋路径全角斜杠
+S-001520	2014年7月11日JungukKim确认关PTH重编python27是已知变通法	2014 年 7 月 11 日 Jung-uk Kim 确认关 PTH 选项重编 python2.7 是已知变通法	A2 拆人名＋补空格＋python2.7 正名
+S-001525	2015年1月2日KubilayKocak给langpython27关LIBFFI后ctypes失败工单加标	2015 年 1 月 2 日 Kubilay Kocak 给 lang／python27 关 LIBFFI 后 ctypes 失败工单加标	A2 拆人名＋路径全角斜杠
+S-001535	2016年3月10日报告者ohartman在10STABLE沙箱编langpython27失败	2016 年 3 月 10 日报告者 ohartman 在 10-STABLE 沙箱编 lang／python27 失败	补空格＋10-STABLE 正名＋斜杠
+S-001545	2019年10月21日发帖人请求审阅新建langpython38端口的补丁	2019 年 10 月 21 日发帖人请求审阅新建 lang／python38 Port 的补丁	补空格＋路径斜杠＋端口改 Port
+S-001548	2019年10月29日SunpoetPoChuanHsieh认为Python27EoL前scons两版本可并存	2019 年 10 月 29 日 Sunpoet Po-Chuan Hsieh 认为 Python 2.7 EoL 前 scons 两版本可并存	A2 拆人名＋补空格＋版本正名
+S-001554	2021年4月13日DaniloGBaio指出dnspydnspython被众多端口依赖改名会致冲突	2021 年 4 月 13 日 Danilo G. Baio 指出 dns／py-dnspython 被众多 Port 依赖，改名会致冲突	A2 拆人名＋路径斜杠＋Port 术语
+S-001249	版主转发原本发于compsourcesd的介绍文章引手册段落称Perl是适于扫描任意文本文件	版主转发原本发于 comp.sources.d 的介绍文章，引手册段落称 Perl 是适于扫描任意文本文件的解释型语言	补空格＋续尾解释型语言
+S-001278	2003年9月5日RoarPettersen报java程序抛javautilzipZipException	2003 年 9 月 5 日 Roar Pettersen 报 java 程序抛 java.util.zip.ZipException	A2 拆人名＋补空格＋异常类名正名
+S-001279	2004年4月7日WadeKlaver运行freenet节点时javavm随机出现段错误	2004 年 4 月 7 日 Wade Klaver 运行 freenet 节点时 javavm 随机出现段错误	A2 拆人名＋补空格
+S-001287	2004年9月30日Alexey答复询问AMD64原生Java支持进展的人	2004 年 9 月 30 日 Alexey 答复询问 AMD64 原生 Java 支持进展的人：尚无进展，首个受支持版本将是 jdk 5.0	补空格＋续尾结论 jdk 5.0
+S-001594	macOS 的 Swift／Objective-C 路径	macOS 的 Swift／Objective-C 路径	H1 同步：H1 同步（半角斜杠转全角）
+S-001595	FreeBSD基本系统以C与shell为根本Ports层容纳多语言	FreeBSD 基本系统在语言上以 C 与 shell 为根本，Ports 层容纳多语言	补空格＋补逗号＋避恰 40
+S-001579	与 Linux Rust 接纳的对比批评	FreeBSD 与 Linux 在 Rust 接纳上的对比批评	B1 与字起头重拟补主语 FreeBSD
+S-001582	Perl／Python／Ruby Port 维护者	Perl／Python／Ruby Port 维护者	H1 同步：H1 同步（半角斜杠转全角）
+S-000249	BCPL／B 语言对 C 语言的效应	BCPL／B 语言对 C 语言的效应	H1 同步：H1 同步（半角斜杠转全角）
+S-000275	其他 BCPL／B 语言的贡献者	其他 BCPL／B 语言的贡献者	H1 同步：H1 同步（半角斜杠转全角）
+S-001734	BCPL-B-语言与-C-语言前身-Cantabrigian-到	BCPL、B 语言与 C 语言前身：从 Cantabrigian 到 Bell Labs	连字符题面还原＋B2 续尾到 Bell Labs
+S-001735	1972年DennisRitchie在PDP11上实现首个C语言编译器C语言正式诞生	1972 年 Dennis Ritchie 在 PDP-11 上实现首个 C 语言编译器，C 语言正式诞生	A2 拆人名＋PDP-11 正名＋逗号
+S-001751	1999年1月01日指出证明longlong必要的方案先假定64位整数必要	1999 年 1 月 1 日指出证明 long long 必要的方案先假定 64 位整数必要	补空格＋日期去前导零
+S-001752	1999年1月01日在Linux上以pgcc29166实测gccpedantic编译alloca示例无警告	1999 年 1 月 1 日在 Linux 上以 pgcc-2.91.66 实测 gcc -pedantic 编译 alloca 示例无警告	补空格＋pgcc 版本正名
+S-001753	以Intel远指针为例指出地址位数并不必然对应实际可寻址空间的大小认为对方误解了论点	举 Intel 远指针为例指出地址位数并不必然对应实际可寻址空间的大小，认为对方误解论点	题首以字重拟举字句式＋补空格
+S-001757	1999年1月01日JohnMashey述1992年AdHoc会上有大型UNIX公司力主IL32LLP64	1999 年 1 月 1 日 John Mashey 述 1992 年 Ad Hoc 会上有大型 UNIX 公司力主 IL32LLP64	A2 拆人名＋补空格＋日期规范
+S-001756	主张整数类型尽量落在CPU寄存器内并讨论long与int同宽的效率理由	主张整数类型尽量落在 CPU 寄存器内，并讨论 long 与 int 同宽的效率理由	补空格＋补逗号分句
+S-001758	1999年1月01日CliveDWFeather说明C89没有任何标准pragma	1999 年 1 月 1 日 Clive D.W. Feather 说明 C89 没有任何标准 pragma	A2 拆人名＋补空格
+S-001760	1999年01月01日JayMaynard称旁观反对trigraphs数周后认输	1999 年 1 月 1 日 Jay Maynard 称旁观他人反对 trigraphs 数周后认输	B4 重拟避恰 40＋A2 拆人名
+S-001762	DennisRitchie说明USG把空文件名判为非法使其颇为不快	Dennis Ritchie 说明 USG 把空文件名判为非法使其颇为不快	A2 拆人名＋补空格
+S-001764	JohnBass推测调优中查不到的活动源于悬浮的RS232线自发自收或系统内某块板故障	John Bass 推测调优中查不到的活动源于悬浮的 RS232 线自发自收或系统内某块板故障	A2 拆人名＋补空格
+S-001768	1984年8月09日自述已改42的f77不再覆盖命令行指定文件并去掉误导的终止码报错	1984 年 8 月 9 日自述已改 4.2 的 f77 不再覆盖命令行指定文件并去掉误导的终止码报错	补空格＋4.2 正名＋日期规范
+S-001737	LarryMcVoy解释lseek与缓冲输入混用时文件位置为何出错说明库缓冲区与内核偏移量不同步	Larry McVoy 解释 lseek 与缓冲输入混用时文件位置为何出错，说明库缓冲区与内核偏移量不同步	A2 拆人名＋补空格＋补逗号
+S-001771	1984年6月30日AndrewKoenig引K与R手册详述指针与整型转换规则	1984 年 6 月 30 日 Andrew Koenig 引 K 与 R 手册详述指针与整型转换，指出两写法因参数不自动转换而不等价	续尾至语义边界＋实义收尾（避则字尾误判）
+S-001772	1984年7月10日JimFranklin指出BSD42的stdioh在SUN42上sprintf声明失效	1984 年 7 月 10 日 Jim Franklin 指出 BSD 4.2 的 stdio.h 在 SUN 4.2 上 sprintf 声明失效	A2 拆人名＋stdio.h 正名＋版本正名
+S-001775	1984年6月25日Bukys报告启用DMFDMA选项会使vaxubadmfc出现两处小语法错误	1984 年 6 月 25 日 Bukys 报告启用 DMFDMA 选项会使 vaxuba／dmf.c 出现两处小语法错误	补空格＋文件路径全角斜杠
+S-001778	1984年5月23日Firth续getchar与EOF之辩	1984 年 5 月 23 日 Firth 续 getchar 与 EOF 之辩，谓 C 实现方当责	补空格＋续尾避恰 40
+S-001779	1984年5月04日WaynePollock报告ksh的jobs命令缺陷非正式注销时提示有作业	1984 年 5 月 4 日 Wayne Pollock 报告 ksh 中 jobs 命令缺陷：非正式注销时提示有作业	A2 拆人名＋补空格＋冒号分句
+S-001780	1984年5月23日JohnStewart指出lex库rodform样板缺陷	1984 年 5 月 23 日 John Stewart 指出 lex 库 rodform 样板缺陷	A2 拆人名＋补空格
+S-001781	1984年3月30日DougGwyn解释V6用inttval2因初代C不识long	1984 年 3 月 30 日 Doug Gwyn 解释 V6 为何用 int tval[2] 而非 long	A2 拆人名＋tval[2] 正名＋空格
+S-001782	1988年12月16日Gwyn为__STDC__定调	1988 年 12 月 16 日 Gwyn 为 __STDC__ 定调	补空格
+S-001783	1989年4月26日Jaeschke逐条驳Keld并说明ISO误以为未获听证的缘由	1989 年 4 月 26 日 Jaeschke 逐条驳 Keld 并说明 ISO 误以为未获听证的缘由	补空格
+S-001784	1989年10月21日Ritchie全盘自述noalias生死	1989 年 10 月 21 日 Ritchie 全盘自述 noalias 之生死	补空格＋加之字避恰 40
+S-001739	作者询问内核对同一文件内的定位是否做过优化并比较相对与绝对lseek哪种更快引用	作者询问内核对同一文件内的定位是否做过优化，并比较相对与绝对 lseek 哪种更快	B4 去引用残留＋补空格＋逗号
+S-001785	1990年4月7日Gwyn自陈纽约会议九问之解释全属个人口径非官方裁定	1990 年 4 月 7 日 Gwyn 自陈纽约会议九问之解释全属个人口径非官方裁定	补空格
+S-001786	Meissner指出MIPS调用序列下首参为浮点时传入浮点寄存器	Meissner 指出 MIPS 调用序列下首参为浮点时传入浮点寄存器	补空格
+S-001787	1991年2月8日Torek贴出44BSDfgetline手册页	1991 年 2 月 8 日 Torek 贴出 4.4BSD fgetline 手册页	补空格＋4.4BSD 正名
+S-001788	1991年5月12日Gwyn忆证scanf接受0x前缀系X3J11有意票决	1991 年 5 月 12 日 Gwyn 忆证 scanf 接受 0x 前缀系 X3J11 有意票决	补空格
+S-001740	解释草案中noalias关键字先入后撤入是为让优化器识别无别名以做向量化撤是因规	解释草案中 noalias 关键字先入后撤：入为让优化器识别无别名以做向量化，撤因规定失当波及库内部	B4 续尾规定失当句＋补空格
+S-001741	作者回复说明JHUBRL的PDP11UNIX曾配备C编译器汇编器与带正文覆盖功能	作者回复说明 JHU／BRL 的 PDP-11 UNIX 曾配备 C 编译器、汇编器与带正文覆盖功能的链接装配器	B4 重拟避恰 40＋正名＋斜杠
+S-001742	1988年11月17日JeremyWebber指出某些版本的dd不会补齐最后一块	1988 年 11 月 17 日 Jeremy Webber 指出某些版本的 dd 不会补齐最后一块	B4 重拟避恰 40＋A2 拆人名
+S-001744	主张POSIX委员会不应介入决定各类文件该放在何处因为许多文件本不该由应用程序直	主张 POSIX 委员会不应介入决定各类文件该放在何处，因为许多文件本不该由应用程序直接访问	B4 续尾直接访问＋补空格
+S-001748	1985年1月20日GuyHarris考C参考手册实允许三种整数长度且可彼此等价	1985 年 1 月 20 日 Guy Harris 考 C 参考手册实允许三种整数长度且可彼此等价	B4 重拟避恰 40＋A2 拆人名
+S-001750	1999年1月01日自述曾用A1至A6的宏技巧兼容原型并指出K&R预处理器无法伪造字符串拼接	1999 年 1 月 1 日自述曾用 A1 至 A6 的宏技巧兼容原型，并指出 K&R 预处理器无法伪造字符串拼接	补空格＋日期规范＋补逗号
+S-000265	1983年ANSI成立X3J11委员会启动C语言标准化工作	1983 年 ANSI 成立 X3J11 委员会启动 C 语言标准化工作	补空格
+S-000266	Kohlmiller答Smith之问他不知何时可知ANSI编译器已普及但知以何为	Kohlmiller 答 Smith 之问：不知 ANSI 编译器何时普及，但知以 NIST 验证套件为凭	B4 重拟避恰 40＋续尾为凭
+S-000435	转载HenrySpencer的setuid7手册页列举setuid程序安全检查要	转载 Henry Spencer 的 setuid(7) 手册页，列举 setuid 程序安全检查要点	B4 续尾要点＋setuid(7) 正名
+S-000553	root／超级用户二元特权模型在 V4 的定型	root／超级用户二元特权模型在 V4 的定型	H1 同步：H1 同步（半角斜杠转全角）
+S-000554	密码散列从明文到 DES crypt(3) 的演化路径	密码散列从明文到 DES crypt(3) 的演化路径	保留：crypt(3) 为手册页序号非冗余括注
+S-000558	GuyHarris指出该登录提示几乎肯定来自telnetd而非getty	Guy Harris 指出该登录提示几乎肯定来自 telnetd 而非 getty	A2 拆人名＋补空格
+S-000559	说明loginid与uid可一对多	loginid 与 uid 可一对多：多个登录名共用同一 uid 时 getpwent 只返回密码文件中首个匹配项	冒号重构避悬头动词＋补全句尾
+S-000560	该帖纠正说挂起信号由shell发出之说引终端手册说明调制解调器断线时由内核向区分进程组发送	该帖纠正挂起信号由 shell 发出之说，引终端手册说明调制解调器断线时由内核向区分进程组发送	补空格＋去冗余说字
+S-000561	SatishKumar更正称umask的低九位用于清除创建文件模式位中的相应位	Satish Kumar 更正称 umask 的低九位用于清除创建文件模式位中的相应位	A2 拆人名＋补空格
+S-000562	GuyHarris指出43BSD的telnet滥用终端类型选项在远端设置TERM	Guy Harris 指出 4.3BSD 的 telnet 滥用终端类型选项在远端设置 TERM	B4 重拟避恰 40＋4.3BSD 正名
+S-000563	1989年3月20日AndrewKoenig称若保存全部旧口令用户须给口令附加序列号	1989 年 3 月 20 日 Andrew Koenig 称若保存全部旧口令用户须给口令附加序列号	A2 拆人名＋补空格
