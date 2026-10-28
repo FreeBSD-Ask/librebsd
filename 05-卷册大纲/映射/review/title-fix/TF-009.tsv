@@ -1,0 +1,108 @@
+source_id	old	new	reason
+S-002176	VAX-11／780 硬件特性	VAX-11／780 硬件特性	H1 同步：题面合规；H1 半角斜杠同步
+S-002191	AlanSteele报告43BSD的DHV11驱动在调制解调器控制方面问题严重	Alan Steele 报告 4.3BSD 的 DHV11 驱动在调制解调器控制方面问题严重	A1 拆名补空格与版本正名
+S-002192	GregMcGary报告MIPSM120近来频繁换页希望找到能显示各进程换页行为	Greg McGary 报告 MIPS M／120 近来频繁换页，希望找到能显示各进程换页行为的工具	A1/B2/B4 从正文复全句正名
+S-002194	发帖者讨论磁带线规约设想强制磁带带有序列号等特定格式探讨能否用线规约机制在Unix上实现这种约束	发帖者讨论磁带线规约，设想强制磁带带有序列号等特定格式，探讨能否用线规约机制在 Unix 上实现这种约束	A1 补中英空格
+S-002199	作者询问磁带机块长差异并说明为Archive驱动器改写SCSI驱动时遇到的QIC记录格式问题	作者询问磁带机块长差异，并说明为 Archive 驱动器改写 SCSI 驱动时遇到的 QIC 记录格式问题	A1 补中英空格
+S-002200	分析Ultrix30下磁带多文件读取问题确认读到文件标记后read持续返回零字节	分析 Ultrix 3.0 下磁带多文件读取问题，确认读到文件标记后 read 持续返回零字节的现象	A1/B4 复全句补空格
+S-002202	讨论TK50磁带在文件标记处反复返回零字节的现象指出不同驱动之间的行为差异	讨论 TK50 磁带在文件标记处反复返回零字节的现象，指出不同驱动间的行为差异	A1 补空格并避 40 字截断峰
+S-002203	转引JackMorrison报告Sun3260并口驱动close返回错误错误号为	转引 Jack Morrison 报告 Sun 3／260 并口驱动 close 返回错误、错误号为非属主	A1/B2/B4 复全句型号正名
+S-002205	讨论定时输入的实现困难指出alarm信号常被其他用途占用而无法复用	讨论定时输入的实现困难，指出 alarm 信号常被其他用途占用而无法复用	A1 补中英空格
+S-002207	1988年11月10日GlendaStubblefield报告VAX780配RA81每月丢usr文件系统	1988 年 11 月 10 日，Glenda Stubblefield 报告 VAX 780 配 RA81 每月丢失 ／usr 文件系统	A1/A2 人名拆分与路径全角
+S-002208	1988年10月6日报告Tahoe版本DMF驱动在EmulexCS41兼容品上可自配置但多用户即崩	1988 年 10 月 6 日，报告 Tahoe 版本 DMF 驱动在 Emulex CS41 兼容品上可自配置但多用户即崩	A1 补空格型号正名
+S-002209	作者报告Ultrix201下uucp会话结束时调制解调器端口挂起uucico无法杀死	作者报告 Ultrix 2.0-1 下 uucp 会话结束时调制解调器端口挂起、uucico 无法杀死	A1 版本正名补空格
+S-002210	报告Ultrix201下使用uucp时端口在uucico会话结束常挂起疑似卡在dhu11驱动	Ultrix 2.0-1 下使用 uucp 时端口在 uucico 会话结束常挂起，疑似卡在 dhu11 驱动	A1/B1 名词起头补空格
+S-002211	询问如何在UNIX上生成带标号的IBM格式EBCDIC可变长记录磁带	征询如何在 UNIX 上生成带标号的 IBM 格式 EBCDIC 可变长记录磁带以便把 C 源码直接读入 VM／CMS	A1/B1 换征询起头复全句
+S-002215	ChrisTorek给出43BSDVAX上SLIP驱动的补丁	Chris Torek 给出 4.3BSD VAX 上 SLIP 驱动的补丁并简化 SC_OACTIVE 判断	A1 拆名版本正名补空格
+S-002216	PoldermanPaul报告68020机器上同时启动六个C编译器后性能急剧下降	Polderman Paul 报告 68020 机器上同时启动六个 C 编译器后性能急剧下降	A1/B4 拆名补空格
+S-002217	ChrisTorek主张增设读取CPU类型的系统调用	Chris Torek 主张增设读取 CPU 类型的系统调用	A1 拆名补空格
+S-002218	DougGwyn比较工作集与全局时钟两种页面置换方案下进程竞争内存的方式称前者各进程只与自身竞争	Doug Gwyn 比较工作集与全局时钟两种页面置换方案下进程竞争内存的方式，称前者各进程只与自身竞争	A1 拆名补空格
+S-002219	1988年3月21日DougGwyn说明可在SystemV下提供42BSD风格磁盘文件系统	1988 年 3 月 21 日，Doug Gwyn 说明可在 System V 下提供 4.2BSD 风格磁盘文件系统	A1 版本正名补空格
+S-002220	EduardoKrell报告IBM宣布为3090等机型推出AIX内含Locus透明计算设施	Eduardo Krell 报告 IBM 宣布为 3090 等机型推出 AIX，内含实为 Locus 的透明计算设施	A1 拆名补空格
+S-002221	DominickSamperi称SVID规定已附接共享内存段由子进程继承	Dominick Samperi 称 SVID 规定已附接共享内存段由子进程继承，但其 3B2 实测须重新附接	A1/A2 拆名复全句补空格
+S-002222	DougAlan回应ChrisTorek对块磁带设备用途的疑问	Doug Alan 回应 Chris Torek 对块磁带设备用途的疑问	A1 拆名补空格
+S-002223	NCR的MikeWescott承认该缺陷确实存在但称tty子系统还面临其他相互冲	NCR 的 Mike Wescott 承认该缺陷确实存在，但称 tty 子系统还面临其他相互冲突的需求	A1/B4 复全句补空格
+S-002224	说明VAX内核态下内核与用户空间同时映射且虚拟地址不重叠	VAX 内核态下内核与用户空间同时映射且虚拟地址不重叠：copyin 与 copyout 不做特殊指令只做合法性检查	A1/B1 冒号结构补空格
+S-002230	DaveWilson介绍正在评估的Sperry51C一次写入多次读出光盘	Dave Wilson 介绍正在评估的 Sperry 51C 一次写入多次读出光盘	A1 拆名型号补空格
+S-002231	讨论为磁盘分区表增加可读写尺寸的ioctl说明Sun早已支持DKIOCSPART改单分区	讨论为磁盘分区表增加可读写尺寸的 ioctl，说明 Sun 早已支持 DKIOCSPART 改单分区	A1 补中英空格
+S-002232	质疑重编译即可解决的说法称其窗口系统在Ultrix12重编译后仍不能用pty二次打开失败	质疑重编译即可解决的说法，称其窗口系统在 Ultrix 1.2 重编译后仍不能用、pty 二次打开失败	A1 补空格正名
+S-002234	报告43BSD下UDA50连接RA80时newfs失败缩分区后恢复	4.3BSD 下 UDA50 连接 RA80 时 newfs 失败：缩分区后恢复正常	A1/B1 名词起头补空格
+S-002235	nzatwucs报告BerkeleyCAD工具magic触碰到单进程约6MB的地址空间上限	nz at wucs 报告 Berkeley CAD 工具 magic 触碰到单进程约 6 MB 的地址空间上限	A1 依正文渲染补空格
+S-002236	JoePortman建议在PCAT上为XENIX添加设备驱动时让makefile	Joe Portman 建议在 PC／AT 上为 XENIX 添加设备驱动时让 makefile 使用 cc -LARGE 大模式编译	A1/B4 复全句斜杠全角
+S-002237	报告Ultrix11下脚本在退出时挂起且仅当同一伪终端上有后台进程运行时才会出现	Ultrix 1.1 下脚本在退出时挂起：仅当同一伪终端上有后台进程运行时才会出现	A1/B1/B4 冒号结构复全句
+S-002180	BinodKTaterway求助为SunSparc1+工作站配置SLIP	Binod K. Taterway 求助为 Sun Sparc 1+ 工作站配置 SLIP	A1/A2 人名正名拆分补空格
+S-002238	报告VAX11750的日时钟寄存器在断电或复位后会倒退数分钟导致重启后系统时间不	VAX 11／750 的日时钟寄存器在断电或复位后会倒退数分钟，导致重启后系统时间不正确	A1/B1/B4 名词起头复全句
+S-002242	MarkPlotnick说明8600上的Ultrix处于现场测试阶段	Mark Plotnick 说明 8600 上的 Ultrix 处于现场测试阶段，只能运行二进制系统	A1/B4 拆名补空格复全句
+S-002244	BruceNemnich报告新到785配八兆内存	Bruce Nemnich 报告新到 785 配八兆内存、双 UBA 与 UDA50 跑 4.2BSD 时出现系统挂起	A1 拆名复全句补空格
+S-002245	AndrewGollan抱怨新闻组内充斥VAX硬件话题	Andrew Gollan 抱怨新闻组内充斥 VAX 硬件话题，建议另立 net.dec 类专门新闻组	A1 拆名补空格
+S-002247	StephenMuir报告在750的42BSD上第二个tar报称无法打开磁带重试无果	Stephen Muir 报告在 750 的 4.2BSD 上第二个 tar 报称无法打开磁带，重试无果	A1 拆名补空格
+S-002249	BillStewart自述经验之谈唯一机器无关的磁带格式是EBCDIC无标号lr	Bill Stewart 自述经验之谈：唯一机器无关的磁带格式是 EBCDIC 无标号、lrecl 为 80 且块长已知小于 4096	A1/B3/B4 复全句至语义边界
+S-002250	1985年5月10日780运行42bsd加装4MB内存至8MB后频现崩溃控制台报uba错误	1985 年 5 月 10 日，780 运行 4.2bsd 加装 4MB 内存至 8MB 后频现崩溃，控制台报 uba 错误	A1 版本正名补空格
+S-002251	LyleMcElhaney述750之Rev7更新稍解tbuf奇偶错	Lyle McElhaney 述 750 之 Rev7 更新稍解 tbuf 奇偶错	A1 拆名补空格
+S-002252	JohnNagle论C语义松弛处高效代码生成须赖近乎恒真的假定如指针指向内存而非设备	John Nagle 论 C 语义松弛处高效代码生成须赖近乎恒真的假定，如指针指向内存而非设备	A1 拆名补空格
+S-002254	1983年7月26日Ed指出共享运行库的想法早于VMS	1983 年 7 月 26 日，Ed 指出共享运行库的想法早于 VMS：DEC 的 PDP-11 系统 RSTS／E 早有 Run-Time Systems	A1/B3 复全句型号正名
+S-002181	提问者报告Sparc1+服务器反复出现串口溢出与内核断言失败两次重编内核仍不消失	提问者报告 Sparc 1+ 服务器反复出现串口溢出与内核断言失败，两次重编内核仍不消失	A1/B4 补空格复全句
+S-002255	1983年7月21日TimRentsch指路洛杉矶的NetworkResearchCorporation	1983 年 7 月 21 日，Tim Rentsch 指路洛杉矶的 Network Research Corporation	A1/A2 拆名补空格
+S-002257	Kashtan确认IPTCP服务器确实支持rwho包但Wollongong发行版	Kashtan 确认 IP／TCP 服务器确实支持 rwho 包，但 Wollongong 发行版沿 4.1c 格式被拒收	A1/B4 复全句正名
+S-002261	1989年4月27日RickLow询问用DEC的VMS与UltrixConnection接入DECnet	1989 年 4 月 27 日，Rick Low 询问用 DEC 的 VMS 与 Ultrix Connection 接入 DECnet	A1/A2 拆名补空格
+S-002262	BarryShein称VMS从未如Unix那样被设计为可由用户源码支持	Barry Shein 称 VMS 从未如 Unix 那样被设计为可由用户源码支持	A1 拆名补空格
+S-002263	1984年11月29日Argonne的Boyle建议向Purdue咨询780升级方案	1984 年 11 月 29 日，Argonne 的 Boyle 建议向 Purdue 咨询 780 升级方案	A1 补空格
+S-002266	1984年11月08日自制300与1200波特调制解调器询问信号键控方式有无标准	1984 年 11 月 08 日，自制 300 与 1200 波特调制解调器，询问信号键控方式有无标准	A1/B4 补空格
+S-002267	1984年9月29日DennisRitchie详述HeathGC100WWV时钟的天线雷击等问题	1984 年 9 月 29 日，Dennis Ritchie 详述 Heath GC100 WWV 时钟的天线雷击等问题	A1/A2 型号正名补空格
+S-002268	1984年10月19日DougGwyn赞同Henry对1170引导问题的判断	1984 年 10 月 19 日，Doug Gwyn 赞同 Henry 对 11／70 引导问题的判断	A1 型号正名补空格
+S-002270	DougKingston发帖求42BSD的DeAnza驱动直言自己正需要此物	Doug Kingston 发帖求 4.2BSD 的 DeAnza 驱动，直言自己正需要此物	A1 拆名补空格
+S-002271	1984年10月06日JohnPierce引述误删文件一例调侃上帝因此创造make与makeclean	1984 年 10 月 06 日，John Pierce 引述误删文件一例，调侃上帝因此创造 make 与 make clean	A1 拆名补空格
+S-002182	EdGould指出termio手册没有描述可移植硬件流控原因正是这种机制本身并不	Ed Gould 指出 termio 手册没有描述可移植硬件流控，原因正是这种机制本身并不存在，手册只记录既有系统	A1/B4 复全句避虚词尾
+S-002272	JeffSpahn求助寻找可在其VAX上运行的empire游戏副本站点运行Unix41	Jeff Spahn 求助寻找可在其 VAX 上运行的 empire 游戏副本，站点运行 Unix 4.1	A1 拆名版本正名
+S-002273	1984年9月26日HenrySpencer回应措辞指责承认应写作offt但坚持己见	1984 年 9 月 26 日，Henry Spencer 回应措辞指责，承认应写作 off_t 但坚持己见	A1 拆名正名补空格
+S-002275	1984年8月6日MarkHorton引由用户自定的Usenet政策说明产品公告规范	1984 年 8 月 6 日，Mark Horton 引由用户自定的 Usenet 政策说明产品公告规范	A1 拆名补空格
+S-002276	1984年7月28日SteveGlaser指中断向量分配与优先级无关DMA优先级只由总线位置决定	1984 年 7 月 28 日，Steve Glaser 指中断向量分配与优先级无关，DMA 优先级只由总线位置决定	A1 拆名补空格
+S-002277	TimBray戏称VAX780左起第三四块CPU板上确有闪灯软盘读写进行时闪烁得颇具启示	Tim Bray 戏称 VAX 780 左起第三四块 CPU 板上确有闪灯，软盘读写进行时闪烁得颇具启示	A1 拆名补空格
+S-002278	称KMC11B与DZ11的组合表现出色但尚未听说有面向42BSD的版本普遍发行	KMC11B 与 DZ11 组合表现出色，尚未听说有面向 4.2BSD 的普遍发行版本	A1/B1 名词起头正名
+S-002281	NoelKropf问有否人为41bsd的unibus盘驱动sysupc加过坏道转	Noel Kropf 问有否人为 4.1bsd 的 unibus 盘驱动 sys／up.c 加过坏道转发代码	A1/B4 复全句路径全角
+S-002282	1984年5月25日ChrisBoylan询问HP3000上是否有C编译器或Unix	1984 年 5 月 25 日，Chris Boylan 询问 HP-3000 上是否有 C 编译器或 Unix	A1 型号正名补空格
+S-002283	1984年5月05日当事人补充IBM1620绰号CADET意为不会加法甚至不试	1984 年 5 月 05 日，当事人补充 IBM 1620 一型的绰号 CADET 意为不会加法甚至不试	A1 型号正名补空格
+S-002284	1984年5月24日DanChernikoff据手册称System5可运行于PDP1170征询用户	1984 年 5 月 24 日，Dan Chernikoff 据手册称 System 5 可运行于 PDP 11／70，征询用户	A1 型号正名补空格
+S-002184	报告Ultrix的assert宏在把字符串与空串比较时出错	Ultrix 的 assert 宏在把字符串与空串比较时出错	A1/B1 名词起头正名
+S-002286	1983年4月20日TWG的Wunderlich为EMRS风波正式澄清	1983 年 4 月 20 日，TWG 的 Wunderlich 为 EMRS 风波正式澄清	A1 补空格
+S-002287	斯帕福德致谢并称已收到两份LouSalkind的DEUNA驱动及大量指向同一代码的线索	斯帕福德致谢并称已收到两份 Lou Salkind 的 DEUNA 驱动及大量指向同一代码的线索	A1 拆名补空格
+S-002188	报告在MotorolaSystemV68上编写驱动后不清楚安装步骤列出编译建节点	Motorola System V／68 上编写驱动后不清楚安装步骤：列出编译、建节点等已做操作	A1/A2/B1/B4 正名冒号结构
+S-002190	1990年1月13日ChrisTorek回答SCSI规范的问题说明目标方控制信号	1990 年 1 月 13 日，Chris Torek 回答 SCSI 规范的问题，说明目标方控制信号	A1/B4 补空格
+S-002149	4BSD 性能调优与 4.1BSD 内核增强（1980.10 4BSD → 1981.6 4.1BSD）	4BSD 性能调优与 4.1BSD 内核增强：从 1980.10 的 4BSD 到 1981.6 的 4.1BSD	C5 箭头改从到结构并去括注
+S-002411	VAX／VMS V4（1982，DEC）	VAX／VMS V4（1982，DEC）	H1 同步：D1 厂商括注保留；H1 斜杠同步
+S-002345	David Kashtan VMS vs UNIX 基准测试与 Joy 性能调优	David Kashtan VMS vs UNIX 基准测试与 Joy 内核性能调优	B4 微扩避 40 字峰
+S-002346	Robert Elz 自动内核配置（autoconfig）	Robert Elz 自动内核配置（autoconfig）	保留：D1 提示保留：括注为工具专名
+S-002348	DavidHinnant征询作家工作台WritersWorkbench之能力与可得性	David Hinnant 征询作家工作台 Writer’s Workbench 之能力与可得性	A1/A2 拆名撇号弯形
+S-002349	BrianSturgill转述所获指点为Ultrix20编驱动须自配置探测例程中	Brian Sturgill 转述所获指点：为 Ultrix 2.0 编驱动须自配置探测例程删除 br 与 cvec 两行	A1/B4 复全句至语义边界
+S-002351	1984年10月24日RonChristian自述当年在1123上普通用户可把nice调成负值	1984 年 10 月 24 日，Ron Christian 自述当年在 11／23 上普通用户可把 nice 调成负值	A1 型号正名补空格
+S-002353	VAX-11／750 支持	VAX-11／750 支持	H1 同步：题面合规；H1 半角斜杠同步
+S-003240	AT&T UNIX SVR3 ／ SVR3.2（1987-1988）	AT&T UNIX SVR3 ／ SVR3.2（1987–1988）	D2 年代区间改 U+2013
+S-003255	CharlesAnderson转述MacGeek的说法称AUX20将支持声音管理	Charles Anderson 转述 MacGeek 的说法，称 A／UX 2.0 将支持声音管理器	A1/A2/B4 拆名复全句
+S-003257	苹果AUX的BobLantz说明System文件在AUX下即usrlibmac需	苹果 A／UX 的 Bob Lantz 说明 System 文件在 A／UX 下即 ／usr／lib／mac，需先添加 DA	A1/B4 复全句路径全角
+S-003258	作者报告AUX10的usrincludesystypesh中physadr的ty	作者报告 A／UX 1.0 的 ／usr／include／sys／types.h 中 physadr 的 typedef 漏掉分号	A1/A2/B3/B4 复全句路径全角
+S-003259	作者用Micropolis1325的70MB盘配SCSI转ST506适配器实测grep每秒100KB	作者用 Micropolis 1325 的 70MB 盘配 SCSI 转 ST506 适配器实测 grep 约每秒 100KB	A1 型号正名补空格
+S-003262	Apple的ByronHan回答AUX下AppleTalk支持的提问称Super	Apple 的 Byron Han 回答 A／UX 下 AppleTalk 支持的提问，称 SuperMac 出 CommCard 板卡	A1/B4 拆名复全句
+S-003263	作者称一年来在AUX与MacOS下用Jasmine80与300MB盘现跑三台30	作者称一年来在 A／UX 与 MacOS 下用 Jasmine 80 与 300MB 盘，现跑三台 300MB Wren	A1/B4 复全句补空格
+S-003265	UniSoft的CAnderson称AUX自带BSD备份工具可备份到软盘硬盘或网	UniSoft 的 C. Anderson 称 A／UX 自带 BSD 备份工具，可备份到软盘、硬盘或网络	A1/B4 补空格复全句
+S-003267	Apple的PhilRonzone回应批评承认缺好用的HFS与UNIX文件系统传输程序	Apple 的 Phil Ronzone 回应批评，承认缺好用的 HFS 与 UNIX 文件系统传输程序	A1 拆名补空格
+S-003268	MarcTKaufman亲述cu的缺陷非特权用户调用后无法释放LCK文件且cu未	Marc T. Kaufman 亲述 cu 的缺陷：非特权用户无法释放 LCK 文件且未用 L.sys 拨号信息	A1/B2/B4 复全句
+S-003269	UniSoft的JohnSovereign亲述AUX文件大小限制继承System	UniSoft 的 John Sovereign 亲述 A／UX 文件大小限制继承 System V	A1/B4 补空格复全句
+S-003270	WilliamRoberts发布其暑期学生写的AUX读取MacOSHFS分区库第	William Roberts 发布其暑期学生写的 A／UX 读取 MacOS HFS 分区库第一部分 shar 包	A1/A2/B4 拆名复全句
+S-003271	AlexNghiem判断AUX10仅支持CDCWrenIII一种大容量盘认为10	Alex Nghiem 判断 A／UX 1.0 仅支持 CDC-Wren III 一种大容量盘	A1/B4 复全句型号正名
+S-003243	A／UX（Apple，1988）	A／UX：Apple 的 Macintosh UNIX 实现（1988）	E1 补描述性题面
+S-003245	JonWätte回答AUX性能与磁盘需求诸问指用Finder访问Unix文件系统	Jon Wätte 回答 A／UX 性能与磁盘需求诸问：Finder 访问 Unix 文件系统开销大	A1/B4 复全句
+S-003246	MatthiasUrlichs抱怨sash不支持compress与管道使AUX2	Matthias Urlichs 抱怨 sash 不支持 compress 与管道，A／UX 2.0.1 升级只能 NFS 拉取	A1/A2/B4 拆名复全句
+S-003248	1991年6月19日alex向网络发帖询问是否有人为运行AUX的MacIIfx编译过mh工具	1991 年 6 月 19 日，alex 向网络发帖询问是否有人为运行 A／UX 的 Mac IIfx 编译过 mh 工具	A1 补空格型号正名
+S-003250	用户转述彩色显示缺陷CS32与CS24只能其一为256色切换后另一侧变灰登录对话	用户转述彩色显示缺陷：CS32 与 CS24 只能其一为 256 色，切换后另一侧变灰	A1/B4 复全句补空格
+S-003251	Apple支援人员回应MacIIcx与IIfx互换性	Apple 支援人员回应 Mac IIcx 与 IIfx 互换性	A1 型号正名补空格
+S-003254	MatthiasUrlichs说SLICE被改回5来自某个安装脚本	Matthias Urlichs 说 SLICE 被改回 5 来自某个安装脚本	A1/A2 拆名补空格
+S-000774	MikeKarels宣布推迟43BSD发布的政治问题已解决预计两个月内打包二月中	Mike Karels 宣布推迟 4.3BSD 发布的政治问题已解决，预计两个月内打包	A1/B4 补空格
+S-003236	4.2BSD 混杂代码结构 → 4.3BSD-Tahoe 机器相关／无关代码分离（1986-1988）	从 4.2BSD 混杂代码结构到 4.3BSD-Tahoe 机器相关／无关代码分离（1986–1988）	C5 箭头改从到；D2 改 U+2013
+S-003217	1986-1990 年分离工作的过程	1986–1990 年分离工作的过程	D2 年代区间改 U+2013
+S-003223	43BSDTahoe1986主要特性包括机器相关无关代码初步分离	4.3BSD Tahoe 主要特性包括机器相关／无关代码初步分离（1988）	A1 正名年份依正文改 1988
+S-003216	机器相关／无关代码分离的语境	机器相关／无关代码分离的语境	H1 同步：题面合规；H1 半角斜杠同步
+S-003220	CCI Power 6／32 硬件规格与 Tahoe 适配代码规模	CCI Power 6／32 硬件规格与 Tahoe 适配代码规模	H1 同步：题面合规；H1 半角斜杠同步
+S-003221	Tahoe 时期的虚拟内存状况——非 “重写” 而是机器相关代码分离（澄清缺口 2ah 的前提错误）	Tahoe 时期的虚拟内存状况——非 “重写” 而是机器相关代码分离（澄清缺口 2ah 的前提错误）	保留：D1 提示保留：括注为勘误说明
+S-002124	DARPA 测试确认 BSD 版本更优（1985-1986，4.3BSD 发布前）	DARPA 测试确认 BSD 版本更优（1985–1986，4.3BSD 发布前）	D2 年代区间改 U+2013；D1 留
+S-002144	BIND（Berkeley Internet Name Domain）	BIND 域名服务器（Berkeley Internet Name Domain）的开发与重写	E1 补描述性题面
+S-002038	1983年10月伯克利的CarlSmith在网路回应PSUnix之争称29BSD是完整发行	1983 年 10 月，伯克利的 Carl Smith 在网路回应 PSUnix 之争，称 2.9BSD 是完整发行	A1 补空格版本正名
