@@ -1,0 +1,118 @@
+source_id	old	new	reason
+S-035233	导言	导言：ksummit 独有 p21 来源、判定与主题分布	E1：按导语重拟来源、判定与主题分布题面；页码已读文件核实
+S-035242	AI评审与政策	AI 评审与政策	A1：中英边界补空格
+S-035243	文档工具链	内核文档工具链：Rust 文档整合与目录独立之议	E1：题面过短，冒号结构按内容补实义
+S-035244	TAB选举	TAB 选举投票率与 2025 年选举进程	A1 补空格；E1 题面过短按正文重拟
+S-035245	安全禁运流程	安全禁运流程	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035246	峰会存续资金	峰会存续资金	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035247	社区健康资源	社区健康资源	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035248	ISP框架争论	ISP 框架争论	A1：中英边界补空格
+S-035249	稳定分支标签	稳定分支标签	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035250	内核密钥管理	内核密钥管理	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035251	用户态开放要求	用户态开放要求	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035252	维护者列表改革	维护者列表改革	H1 同步：题面不变；H1 去 157.x 陈旧块号前缀并同步
+S-035253	GitLab工作流	GitLab 工作流	A1：中英边界补空格；A3 为真专名不拆
+S-035235	linux-next流程	linux-next 流程	A1：中英边界补空格
+S-035236	AI生成内容政策	AI 生成内容政策	A1：中英边界补空格
+S-035237	贡献者信任	贡献者信任统计与 AI 夸大漏洞之扰	E1：题面过短，按正文补信任统计与夸大漏洞题面
+S-035238	HIGHMEM淘汰争议	HIGHMEM 淘汰争议	A1：中英边界补空格
+S-035239	Bugzilla存废	Bugzilla 存废	A1：中英边界补空格
+S-035240	Rust内核迁移	Rust 内核迁移	A1：中英边界补空格
+S-035241	Link标签存废	Link 标签存废	A1：中英边界补空格
+S-035234	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1：标签补空格统一为【Linux 社区】
+S-036536	导言	导言：ksummit-discuss p139 来源、判定与主题分布	E1：按导语重拟来源、判定与主题分布题面；页码已读文件核实
+S-036549	【Linux社区】Mason驳btrfs上游论	【Linux 社区】Mason 驳 btrfs 上游论	A1：标签与中英边界补空格
+S-036550	【Linux社区】折叠场景Reported歧义	【Linux 社区】折叠场景 Reported 歧义	A1：标签与中英边界补空格
+S-036551	【Linux社区】Postel定律宽放标签	【Linux 社区】Postel 定律宽放标签	A1：标签与中英边界补空格
+S-036552	【Linux社区】折叠评论致谢标签	【Linux 社区】折叠评论致谢标签	A1：标签补空格统一为【Linux 社区】
+S-036554	【Linux社区】Reported-by现状辩护	【Linux 社区】Reported-by 现状辩护	A1：标签与中英边界补空格
+S-036557	【Linux社区】lore统一检索预告	【Linux 社区】lore 统一检索预告	A1：标签与中英边界补空格
+S-036560	【Linux社区】staging拖慢开发论	【Linux 社区】staging 拖慢开发论	A1：标签与中英边界补空格
+S-036561	【Linux社区】s：Bug主题词检索	【Linux 社区】lore 的 s：Bug 主题词检索	A1：标签与中英边界补空格；补 lore 限定
+S-036562	【Linux社区】改主题不如CC列表	【Linux 社区】改主题不如 CC 列表	A1：标签与中英边界补空格
+S-036563	【Linux社区】bugtracker转feed方案	【Linux 社区】bugtracker 转 feed 方案	A1：标签与中英边界补空格
+S-036537	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1：标签补空格统一为【Linux 社区】
+S-036566	【Linux社区】结构化报告表提议	【Linux 社区】结构化报告表提议	A1：标签补空格统一为【Linux 社区】
+S-036568	【Linux社区】kdevops公开基线	【Linux 社区】kdevops 公开基线	A1：标签与中英边界补空格
+S-036569	【Linux社区】bugzilla首页引流提示	【Linux 社区】bugzilla 首页引流提示	A1：标签与中英边界补空格
+S-036571	【Linux社区】no-rebase修复分散论	【Linux 社区】no-rebase 修复分散论	A1：标签与中英边界补空格
+S-036574	【Linux社区】reporting-issues宜转正	【Linux 社区】reporting-issues 宜转正	A1：标签与中英边界补空格
+S-036576	【Linux社区】拒绝过度承诺表态	【Linux 社区】拒绝过度承诺表态	A1：标签补空格统一为【Linux 社区】
+S-036578	【Linux社区】文档转正RFC公告	【Linux 社区】文档转正 RFC 公告	A1：标签与中英边界补空格
+S-036581	【Linux社区】PM依赖IOMMU相机争锋	【Linux 社区】PM 依赖 IOMMU 相机争锋	A1：标签与中英边界补空格
+S-036584	【Linux社区】转正文[3a／5]参考主节	【Linux 社区】转正文[3a／5]参考主节	A1：标签补空格统一为【Linux 社区】
+S-036538	【Linux社区】预生产驱动门控之争	【Linux 社区】预生产驱动门控之争	A1：标签补空格统一为【Linux 社区】
+S-036539	【Linux社区】折叠修复署名之争	【Linux 社区】折叠修复署名之争	A1：标签补空格统一为【Linux 社区】
+S-036541	【Linux社区】lore透明日志归档提案	【Linux 社区】lore 透明日志归档提案	A1：标签与中英边界补空格
+S-036542	【Linux社区】归档方案与notes取舍	【Linux 社区】归档方案与 notes 取舍	A1：标签与中英边界补空格
+S-036546	【Linux社区】Adjusted-by标签提案	【Linux 社区】Adjusted-by 标签提案	A1：标签与中英边界补空格
+S-036547	【Linux社区】新标签命名与价值质疑	【Linux 社区】新标签命名与价值质疑	A1：标签补空格统一为【Linux 社区】
+S-036548	【Linux社区】Fixes-from标签主张	【Linux 社区】Fixes-from 标签主张	A1：标签与中英边界补空格
+S-037035	导言	导言：ksummit 独有 p27 来源、判定与主题分布	E1：按导语重拟来源、判定与主题分布题面；页码已读文件核实
+S-037054	C 标准化参与	C 标准化参与缺位与动员	B2：题尾与字悬空，改缺位与动员实义收尾
+S-037058	UMN 事件反思	UMN 事件反思	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037059	UALink 上游路径	UALink 上游路径	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037060	禁运代码质量	禁运代码质量	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037062	栈回溯行号	CONFIG_KALLSYMS_LINEINFO 栈回溯行号实测	E1：题面过短，按正文补行号实测配置项题面
+S-037064	kernel-doc 工具	kernel-doc 工具	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037065	Rust 驱动安全	Rust 驱动安全	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037067	Werror 争论	-Werror 争论	题面残缺，依 h1_text 补 -Werror 连字符改题
+S-037068	Bugzilla 退役	Bugzilla 退役	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037069	lore 回复技巧	lore 回复技巧	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037036	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1：标签补空格统一为【Linux 社区】
+S-037070	Sashiko 审查	Sashiko 审查	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037037	合并与拣选冲突	合并与拣选冲突	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037041	Bugzilla 报告渠道	Bugzilla 报告渠道	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037044	C 聚合传参	C 聚合传参	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037045	文档构建性能	文档构建性能	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037048	静态分析指针注解	静态分析指针注解	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037051	HIGHMEM 退场	HIGHMEM 退场	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-037053	邮件引用礼仪	邮件引用礼仪	H1 同步：题面不变；H1 去 163.x 陈旧块号前缀并同步
+S-035137	导言	导言：ksummit-discuss p125 来源、判定与主题分布	E1：按导语重拟来源、判定与主题分布题面；页码已读文件核实
+S-035146	【Linux社区】Cc入提交利弊权衡	【Linux 社区】Cc 入提交利弊权衡	A1：标签与中英边界补空格
+S-035147	【Linux社区】DRM自取补丁实践	【Linux 社区】DRM 自取补丁实践	A1：标签与中英边界补空格
+S-035149	【Linux社区】gitnotes追踪回溯	【Linux 社区】git notes 追踪回溯	A1：标签补空格；gitnotes 依正文拆 git notes
+S-035150	【Linux社区】DRM绘制oops方案	【Linux 社区】DRM 绘制 oops 方案	A1：标签与中英边界补空格
+S-035151	【Linux社区】Fixes标签反查实践	【Linux 社区】Fixes 标签反查实践	A1：标签与中英边界补空格
+S-035152	【Linux社区】列表讨论附注提案	【Linux 社区】列表讨论附注提案	A1：标签补空格统一为【Linux 社区】
+S-035153	【Linux社区】AUTOSEL驱动覆盖忧	【Linux 社区】AUTOSEL 驱动覆盖忧	A1：标签与中英边界补空格
+S-035154	【Linux社区】驱动回溯不可缓论	【Linux 社区】驱动回溯不可缓论	A1：标签补空格统一为【Linux 社区】
+S-035155	【Linux社区】stable保守性之辩	【Linux 社区】stable 保守性之辩	A1：标签与中英边界补空格
+S-035156	【Linux社区】以论文存设计演进	【Linux 社区】以论文存设计演进	A1：标签补空格统一为【Linux 社区】
+S-035138	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1：标签补空格统一为【Linux 社区】
+S-035157	【Linux社区】评审标签四论纲	【Linux 社区】评审标签四论纲	A1：标签补空格统一为【Linux 社区】
+S-035158	【Linux社区】Cc存档价值反证	【Linux 社区】Cc 存档价值反证	A1：标签与中英边界补空格
+S-035159	【Linux社区】stable只求Cc负担	【Linux 社区】stable 只求 Cc 负担	A1：标签与中英边界补空格
+S-035160	【Linux社区】ARM旧板DT收尾	【Linux 社区】ARM 旧板 DT 收尾	A1：标签与中英边界补空格
+S-035161	【Linux社区】Cc唯一存档例外	【Linux 社区】Cc 唯一存档例外	A1：标签与中英边界补空格
+S-035162	【Linux社区】反对评审附说明	【Linux 社区】反对评审附说明	A1：标签补空格统一为【Linux 社区】
+S-035163	【Linux社区】评审覆盖面不明弊	【Linux 社区】评审覆盖面不明弊	A1：标签补空格统一为【Linux 社区】
+S-035165	【Linux社区】空评审认知偏差	【Linux 社区】空评审认知偏差	A1：标签补空格统一为【Linux 社区】
+S-035166	【Linux社区】AUTOSEL回滚率辩护	【Linux 社区】AUTOSEL 回滚率辩护	A1：标签与中英边界补空格
+S-035167	【Linux社区】Ack语义流变梳理	【Linux 社区】Ack 语义流变梳理	A1：标签与中英边界补空格
+S-035168	【Linux社区】stable定义之争	【Linux 社区】stable 定义之争	A1：标签与中英边界补空格
+S-035139	【Linux社区】内核文档格式校验之争	【Linux 社区】内核文档格式校验之争	A1：标签补空格统一为【Linux 社区】
+S-035169	【Linux社区】I2C试行评审说明	【Linux 社区】I2C 试行评审说明	A1：标签与中英边界补空格
+S-035170	【Linux社区】重申Ack旧义	【Linux 社区】重申 Ack 旧义	A1：标签与中英边界补空格
+S-035172	【Linux社区】安卓218例LTS佐证	【Linux 社区】安卓 218 例 LTS 佐证	A1：标签与中英边界补空格
+S-035173	【Linux社区】回滚率指标质疑	【Linux 社区】回滚率指标质疑	A1：标签补空格统一为【Linux 社区】
+S-035174	【Linux社区】承诺上报每回归	【Linux 社区】承诺上报每回归	A1：标签补空格统一为【Linux 社区】
+S-035175	【Linux社区】中央回归追踪缺位	【Linux 社区】中央回归追踪缺位	A1：标签补空格统一为【Linux 社区】
+S-035176	【Linux社区】消费电子不上报习性	【Linux 社区】消费电子不上报习性	A1：标签补空格统一为【Linux 社区】
+S-035177	【Linux社区】正面评审偏少之因	【Linux 社区】正面评审系统性偏少的缘由	A1：标签补空格；B2 尾因改缘由实义收尾
+S-035178	【Linux社区】gregkh宣讲承诺	【Linux 社区】gregkh 宣讲承诺	A1：标签与中英边界补空格
+S-035179	【Linux社区】回归追踪出资困局	【Linux 社区】回归追踪出资困局	A1：标签补空格统一为【Linux 社区】
+S-035180	【Linux社区】单点负荷败因论	【Linux 社区】单点负荷败因论	A1：标签补空格统一为【Linux 社区】
+S-035181	【Linux社区】保密文化与多源更新	【Linux 社区】保密文化与多源更新	A1：标签补空格统一为【Linux 社区】
+S-035140	【Linux社区】Cc标签历史价值之辩	【Linux 社区】Cc 标签历史价值之辩	A1：标签与中英边界补空格
+S-035182	【Linux社区】ACPI与DT属性对接	【Linux 社区】ACPI 与 DT 属性对接	A1：标签与中英边界补空格
+S-035183	【Linux社区】stable指运行时稳定	【Linux 社区】stable 指运行时稳定	A1：标签与中英边界补空格
+S-035184	【Linux社区】AUTOSEL移出规则	【Linux 社区】AUTOSEL 移出须维护者申请	A1：标签补空格；B2 尾则改申请实义收尾
+S-035185	【Linux社区】LF自资回归追踪议	【Linux 社区】LF 自资回归追踪议	A1：标签与中英边界补空格
+S-035186	【Linux社区】do_on_cpu提案	【Linux 社区】do_on_cpu 提案	A1：标签与中英边界补空格
+S-035171	【Linux社区】提交元数据附加层	【Linux 社区】提交元数据附加层	A1：标签补空格统一为【Linux 社区】
+S-035141	【Linux社区】脚本检查Cc噪音提议	【Linux 社区】脚本检查 Cc 噪音提议	A1：标签与中英边界补空格
+S-035142	【Linux社区】cutoff下方Cc实测	【Linux 社区】cutoff 下方 Cc 实测	A1：标签与中英边界补空格
+S-035143	【Linux社区】Cc标签来源追查	【Linux 社区】Cc 标签来源追查	A1：标签与中英边界补空格
+S-035144	【Linux社区】tglx澄清mbox脚本	【Linux 社区】tglx 澄清 mbox 脚本	A1：标签与中英边界补空格
+S-035145	【Linux社区】git-am不加Cc澄清	【Linux 社区】git-am 不加 Cc 澄清	A1：标签与中英边界补空格
