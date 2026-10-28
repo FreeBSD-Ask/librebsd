@@ -1,0 +1,121 @@
+source_id	old	new	reason
+S-000614	询问dbx如何得到交给ptrace的地址例如按行号设断点时如何算出该行首条指令的地址	dbx 交给 ptrace 的地址如何求得：按行号设断点时算出该行第一条指令的地址	A1 补空格；B1 去悬头改为冒号结构
+S-000766	判断sendmail段错误的原因是冻结配置文件与当前二进制不匹配	判断 sendmail 段错误的原因是冻结配置文件与当前二进制不匹配	A1 补空格
+S-000767	以备份恰在夏令时切换点被覆盖为例主张UNIX的时间记录应统一采用世界时	以备份恰在夏令时切换点被覆盖为例主张 UNIX 的时间记录应统一采用世界时	A1 补空格
+S-000768	说明为测试新套接字域改造tftp后父子两进程从同一端口取包归属随机	为测试新套接字域改造 tftp 后父子两进程从同一端口取包归属随机	A1 补空格；B1 去悬头动词
+S-000769	该帖回忆在部分旧系统上判断普通文件时除用S_IFMT掩码外还须额外测试掩码为零	该帖回忆在部分旧系统上判断普通文件时除用 S_IFMT 掩码外还须额外测试掩码为零	A1 补空格
+S-000772	MaartenLitmaath指出#行只能带一个选项且限三十二个字符举例#bin	Maarten Litmaath 指出 ＃！行只能带一个选项且限三十二个字符，举例 ／bin／sed -f 与 ／bin／awk -f 希望取消该限制	A1+A2 拆名；B4 依正文复原；＃！全角化避半角叹号
+S-000773	回顾netos建组倡议的经过称两个月前征集到约三十份回应却被指程序不当	回顾 net.os 建组倡议的经过，称两个月前征集到约三十份回应却被指程序不当	A1 补空格
+S-000775	EdArnold汇总经分组网编辑文件的问题与社区经验涉及Uninet分片以太网避单字包	Ed Arnold 汇总经分组网编辑文件的问题与社区经验，涉及 Uninet 分片、以太网避单字包	A1 补空格；A2 拆人名 Ed Arnold
+S-000776	SteveMiller报告43在8600上除dmz3	Steve Miller 报告 4.3 在 8600 上除 dmz-32 接口需 Chris Torek 略作改造外开箱可用	A1 补空格；依 H1 与正文补全 dmz-32 句
+S-000778	SethZirin报告tar管道复制放在后台执行会无限挂起前台执行同一命令行则正	Seth Zirin 报告 tar 管道复制放在后台执行会无限挂起，前台执行同一命令行则正常	A1 补空格；B4 续句补全
+S-000780	WilliamKucharski证明AmdahlUT	William Kucharski 证明 Amdahl UTS 2.0 系统上运行的 spell 同样能识别出三个疑似被误判的伪词	A1+A2 拆名；依 H1 补全 Amdahl UTS 2.0 句
+S-000615	回答如何在43BSD上取得描述符可读字节数指出该系统本身就实现了FIONREAD这一控制调用	回答如何在 4.3BSD 上取得描述符可读字节数，指出该系统本身就实现了 FIONREAD 这一控制调用	A1 补空格
+S-000782	自述新增zonk系统调用向某用户全部进程发指定信号以清理fork炸弹返回找到的进	自述新增 zonk 系统调用，向某用户全部进程发指定信号以清理 fork 炸弹，返回找到的进程数	A1 补空格；B4 续句补全
+S-000783	说明以swapon启用交换区前须先经config以s	以 swapon 启用交换区前须先经 config 以 swap on 子句将该交换区编入 vmunix 内核文件方可生效	A1 补空格；B1 去悬头；B3 依正文续接
+S-000785	Casey建议参考Muller的LoadControlSystem	Casey 建议参考 Muller 的 Load Control System，可按负载均值控制非交互型 CPU 密集程序	A1+A2 拆词；Load Control System 正名
+S-000788	chuck更正RJE原询所用板为ASTAdvancedCommunications	chuck 更正 RJE 原询所用板为 AST 高级通信板卡	A1+A2；Communications 14 字母超 A2 上限按义转述
+S-000790	1985年5月18日SpirosTriantafyllopoulos为RTIngres须内核改动辩护	1985 年 5 月 18 日斯皮罗斯·特里安塔菲洛普洛斯为 RTIngres 须内核改动辩护	A1+A2；姓 18 字母超 A2 上限按音转写，正文留原名
+S-000791	1985年6月18日戈尔称KERNEL未定义时paramh改包含machine路径	1985 年 6 月 18 日戈尔称 KERNEL 未定义时 param.h 改包含 machine 路径	A1 补空格
+S-000793	ChrisTorek称select与SIGCHLD同用存在无可规避竞态	Chris Torek 称 select 与 SIGCHLD 同用存在无可规避竞态	A1 补空格；A3 拆人名
+S-000794	KeldJ述贝尔独立troff一周内在AgfaP400配好含eqn与tbl	Keld J 述贝尔独立 troff 一周内在 Agfa P400 配好含 eqn 与 tbl，建议以 DWB 为起点	A1 补空格；B3 续接至建议 DWB 为起点
+S-000796	RichardMathews述尖括号重定向以读写模式开文件	Richard Mathews 述尖括号重定向以读写模式开文件，实测多版本 Bourne shell 均仅以只读模式打开	A1+A2 拆名；依 H1 补实测从句
+S-000797	DaveBrierley述改42文件系统上限还须改locores中Fastreclaim程序	Dave Brierley 述改 4.2 文件系统上限还须改 locore.s 中 Fastreclaim 程序	A1 补空格；locore.s 依正文正名
+S-000616	报告用HDB锁文件与uuxqt互斥时遇到的进程号失效判断难题指出该方案本身难以正	用 HDB 锁文件与 uuxqt 互斥时的进程号失效判断难题：该方案本身难以正确处理	A1 补空格；B1 去悬头；B4 续句补全
+S-000798	Stearns述42记账时间以秒截断非四舍五入12万个进程中万个记作零秒故建议改	Stearns 述 4.2 记账时间以秒截断非四舍五入，1.2 万个进程中万个记作零秒，故建议改用毫秒记录	A1 补空格；B4 续句补全
+S-000799	chongo设想把bin与etc与kmem等挂载为只读盘包	chongo 设想把 bin 与 etc 与 kmem 等挂载为只读盘包	A1 补空格
+S-000800	grunwald述在伊利诺伊访BillJoy获知Sun起初考虑采用Courier协议	grunwald 述在伊利诺伊访 Bill Joy 获知 Sun 起初考虑采用 Courier 协议	A1 补空格；A3 拆人名 Bill Joy
+S-000801	McKie给出43BSD终端行定义样例指出状态字段可组合开关与secure三值	McKie 给出 4.3BSD 终端行定义样例，指出状态字段可组合开关与 secure 三值	A1 补空格
+S-000803	ChrisTorek析42sendmail未检查EOF致遇非CRLF终止行时反复写满文件系统	Chris Torek 析 4.2 sendmail 未检查 EOF 致遇非 CRLF 终止行时反复写满文件系统	A1 补空格；A3 拆人名
+S-000804	Jose谈以PostScript为通信协议之设想谓NeWS无此工具	Jose 谈以 PostScript 为通信协议之设想，谓 NeWS 无此工具	A1 补空格；A3 拆人名
+S-000805	DougGwyn建议进程同步锁要可移植自建统一接口对接系统相关实现	Doug Gwyn 建议进程同步锁要可移植，自建统一接口对接系统相关实现	A1 补空格；A3 拆人名
+S-000806	GuyHarris详解O_CREAT缺省只读与3参opencreat语义区别O_	Guy Harris 详解 O_CREAT 缺省只读与 3 参 open／creat 语义区别	A1 补空格；B4 收语义边界；斜杠全角化
+S-000810	DaveAxness询问如何用adb补丁uucico程序以支持19200波特率	Dave Axness 询问如何用 adb 补丁 uucico 程序以支持 19200 波特率	A1 补空格；A3 拆人名
+S-000807	FredFish为BRU刚加设备轮换可给多个f设备选项程序按序循环写满一卷自动换	Fred Fish 为 BRU 刚加设备轮换：可给多个 -f 设备选项，程序按序循环写满一卷自动换下一台设备	A1 补空格；B4 依正文复原
+S-000617	认为从主端读取伪终端时并不存在EOF概念说明其设计意图是模拟串口另一侧的数据流引	从主端读取伪终端时并不存在 EOF 概念：其设计意图是模拟串口另一侧的数据流	A1 补空格；B1 重构名词起头；B4 复原
+S-000811	MITRE的ChrisWalters转述华盛顿邮报商	MITRE 的 Chris Walters 转述华盛顿邮报商业版称 UI 与 OSF 中止谈判但就某些基准达成一致	A1 补空格；依 H1 与正文补全截断题面
+S-000813	PeteKaiser论VMS源码成本高昂可购微缩胶片代偿DEC有专门支持机制	Pete Kaiser 论 VMS 源码成本高昂、可购微缩胶片代偿、DEC 有专门支持机制	A1 补空格；A3 拆人名
+S-000815	作者报告把BSD的dump与restore移植到SystemV第3版寻找能处理目录重连	作者报告把 BSD 的 dump 与 restore 移植到 System V 第 3 版，寻找能处理目录重连	A1 补空格
+S-000816	作者RandyWelch自述已把大部分GNU工具移植到PlexusP35上的Sy	作者 Randy Welch 自述已把大部分 GNU 工具移植到 Plexus P／35 上的 System V 或 Plexus 变体	A1+A2 拆名；B3 续接；型号斜杠全角化
+S-000818	JoachimRiedel自述Coherent310	Joachim Riedel 自述 Coherent 3.1.0 自带 tar 解 GNU tar 包致校验错	A1 补空格；A3 拆名；依 H1 补全
+S-000819	RayShwake解释vi与tar因程序打开文件读取	Ray Shwake 解释 vi 与 tar 因程序打开文件读取而更新访问时间，而 ls 列名仅访问 inode 不含数据故不更新	A1 补空格；依 H1 与正文补全截断题面
+S-000821	1990年10月12日BruceHimebaugh汇总Altos与NCR对比	1990 年 10 月 12 日 Bruce Himebaugh 汇总 Altos 与 NCR 对比	A1+A2 拆名补空格
+S-000812	AndrewHume报告1990年9月X3B111莫里山会议进展涉压缩登记扩展属	Andrew Hume 报告 1990 年 9 月 X3B11.1 莫里山会议进展，涉压缩登记、扩展属性等议题	A1 补空格；B4 续句补全；X3B11.1 正名
+S-000809	背景性材料证据等级L2来源historical_claimsduckdbcla	David Herron 证实 Bell Tech 被 Intel 收购后旧产品改标或停售、BLIT 图形引擎卡不再受支持	C5 剥离杂质；依正文首条 ROW_MINE 正名（TF-005 先例）
+S-000620	解释链接器为何会用数据符号解析函数调用指出库函数名冲突会被本地定义优先替换故C标	解释链接器为何会用数据符号解析函数调用，指出库函数名冲突会被本地定义优先替换，故 C 标准严格限制	A1 补空格；B4 续句补全
+S-000624	PaulAndrePanon与朋友为排查Screenv20a与vt100终端的异常行为	Paul-Andre Panon 与朋友排查 Screen v2.0a 与 vt100 终端异常行为，定位到 termcap 处理问题	A1+A2 拆名；B2 实义收尾
+S-000625	说明用原始套接字收发IP数据报时发送只需数据部分而接收会带上首部且总长度字段与RFC规定不一致	用原始套接字收发 IP 数据报时发送只需数据部分而接收会带上首部且总长度字段与 RFC 规定不一致	A1 补空格；B1 去悬头动词
+S-000627	转载第三方关于预分配文件的答复说明如何得到一个无空洞且不会被系统回收的文件	转载第三方关于预分配文件的答复说明如何得到一个无空洞且不会被系统回收的文件	H1 同步：hard 空；题面完整，仅同步 H1
+S-000629	指出tar把确认提示写到标准输出并从标准输入读取回答是缺陷认为应改用devtty	tar 把确认提示写到标准输出并从标准输入读取回答是缺陷，认为应改由 ／dev／tty 读取	A1 补空格；B1 重构名词起头；B4 复原
+S-000630	询问BSD的IPC是否支持在进程间传递文件描述符以及哪些程序采用了这一机制	BSD 的 IPC 是否支持在进程间传递文件描述符以及哪些程序采用了这一机制	A1 补空格；B1 去悬头动词
+S-000633	回答如何清除仍存活的父进程下的僵尸子进程建议查看带状态的等待调用	回答如何清除仍存活的父进程下的僵尸子进程建议查看带状态的等待调用	H1 同步：hard 空；题面完整，仅同步 H1
+S-000634	GuyHarris指出跨机数据交换除字长与结构布局外还涉及字节序与浮点格式	Guy Harris 指出跨机数据交换除字长与结构布局外还涉及字节序与浮点格式	A1 补空格；A3 拆人名
+S-000635	RichPatterson寻求Berkeley系Unix的mcleanup例程源码	Rich Patterson 寻求 Berkeley 系 Unix 的 mcleanup 例程源码	A1 补空格；A3 拆人名
+S-000636	GuyHarris说明SunOS4x与SystemVRelease4都以mmap实现映射	Guy Harris 说明 SunOS 4.x 与 System V Release 4 都以 mmap 实现映射	A1+A2 补空格；版本正名 SunOS 4.x
+S-000637	MikeIsrael报告SystemV下反复收到系统进程表暂时满的提示	Mike Israel 报告 System V 下反复收到系统进程表暂时满的提示，进程数到 40 便无法再启动	A1 补空格；A3 拆名；避恰 40 字补从句
+S-000638	DieterRothmeier询问套接字地址结构中INADDR_LOOPBACK的用途	Dieter Rothmeier 询问套接字地址结构中 INADDR_LOOPBACK 的用途	A1+A2 拆名
+S-000641	讨论SystemVBourneshell在登录时调用shrc的顺序及其相对etc	讨论 System V Bourne shell 在登录时调用 .shrc 的顺序及其相对 ／etc／profile 的位置	A1+A2 补空格；B3 续接；斜杠全角化
+S-000644	回答者改口承认曾忽略物理IO字符设备指出raw磁带等设备会按每个iovec各调用	回答者改口承认曾忽略物理 I／O 字符设备，指出 raw 磁带等设备会按每个 iovec 各调用一次策略例程	A1 补空格；B4 续句补全；I／O 全角斜杠
+S-000648	PhilCornes说明内核并不执行脚本是由C库的exec调用派生shell处理	Phil Cornes 说明内核并不执行脚本是由 C 库的 exec 调用派生 shell 处理	A1 补空格；B4 解恰 40 字形；A3 拆名
+S-000650	GregLimes贴出自己编写的一段支持代码说明它一直能取得运行中程序的可执行文	Greg Limes 贴出自己编写的一段支持代码，说明它一直能取得运行中程序的可执行文件路径名	A1 补空格；B4 续句补全；A3 拆名
+S-000651	PeterRowell介绍用setjmp与longjmp保存恢复寄存器状态实现可移植任务管理	Peter Rowell 介绍用 setjmp 与 longjmp 保存恢复寄存器状态实现可移植任务管理	A1 补空格；A3 拆人名
+S-000653	询问Bourneshell中标识符的定义遇到形如$x等于1的环境变量触发不是标识	Bourne shell 中标识符的定义之问：形如 $x 等于 1 的环境变量触发不是标识符报错	A1 补空格；B1 重构名词起头；B4 复原
+S-000654	讨论Z0MAGIC的来历说明该机制通过让链接器生成不含零页的映像来捕获空指针错误	讨论 Z0MAGIC 的来历，说明该机制通过让链接器生成不含零页的映像来捕获空指针错误	A1 补空格；B4 解恰 40 字形
+S-000655	报告修改版csh在SunOS4上管道偶尔报终端输出停止并已定位到进程组处理问题引	修改版 csh 在 SunOS 4 上管道偶尔报终端输出停止：已定位到进程组处理问题	A1 补空格；B1 去悬头；B4 复原
+S-000658	作者总结如何从用户程序可靠判断当前运行级别指出关键在于etcutmp中的运行级别	作者总结如何从用户程序可靠判断当前运行级别，指出关键在于 ／etc／utmp 中的运行级别记录	A1 补空格；B4 复原；斜杠全角化
+S-000660	介绍PyramidOSx用条件符号链接实现双环境的做法	介绍 Pyramid OSx 用条件符号链接实现双环境的做法	A1 补空格
+S-000661	比较Berkeley与Ritchie两种stdio在文件结束后的行为差异	比较 Berkeley 与 Ritchie 两种 stdio 在文件结束后的行为差异	A1 补空格
+S-000663	回答RFS中远程符号链接在哪一端解释的问题指出倾向于在客户端解释	回答 RFS 中远程符号链接在哪一端解释的问题，指出倾向于在客户端解释	A1 补空格
+S-000665	提出行规程实现中的具体疑问询问内核究竟期望各例程在哪些结构与状态位上做什么	提出行规程实现中的具体疑问询问内核究竟期望各例程在哪些结构与状态位上做什么	H1 同步：hard 空；题面完整，仅同步 H1
+S-000666	说明标准输入返回一次EOF后即粘滞的行为由BillShannon引入并认为这不符	标准输入返回一次 EOF 后即粘滞的行为由 Bill Shannon 引入，并认为其不符正确语义	A1 补空格；B1 去悬头；B4 复原；A3 拆名
+S-000603	承认自身表述属一般化说法但指出SIGCLD与SIGCHLD在此情形下行为类似中断	帖中承认自身表述属一般化说法，但指出 SIGCLD 与 SIGCHLD 在此情形下行为类似中断	A1 补空格；B1 去悬头；B4 复原
+S-000668	RobMcMahon赞成flink设想并建议与O_NOLINK联合使用	Rob McMahon 赞成 flink 设想并建议与 O_NOLINK 联合使用	A1 补空格
+S-000669	DavidElliott更正此前说法指出不能通过exec复制描述符须在临时文件删	David Elliott 更正此前说法：exec 不能复制描述符，多次重定向须在临时文件删除前完成	A1 补空格；B4 续句补全；B2 实义收尾；A3 拆名
+S-000672	作者说明SystemV消息队列需在配置文件中加入IPCMESSAGE选项	作者说明 System V 消息队列需在配置文件中加入 IPCMESSAGE 选项	A1 补空格
+S-000675	作者澄清其意是genericSVR3默认不含可供多连接服务器使用的本地IPC机制	作者澄清其意是 generic SVR3 默认不含可供多连接服务器使用的本地 IPC 机制	A1 补空格；B4 解恰 40 字形
+S-000676	分析accounting报告数值溢出的原因指出comp_t是非标准类型需要解压并给出解压的临时办法	分析 accounting 报告数值溢出的原因，指出 comp_t 是非标准类型需要解压，并给出解压的临时办法	A1 补空格
+S-000680	依据自身两年使用经历比较两款产品称缺陷各不相同内存较小时表现较好内存增大后逐步反	依据自身两年使用经历比较两款产品，称缺陷各不相同，内存较小时表现较好、内存增大后逐步反超	B4 续句补全；全角逗号分句
+S-000681	诊断Altos上uugetty工作不正常的原因指出其cu不创建锁文件且调制解调器	诊断 Altos 上 uugetty 工作不正常的原因，指出其 cu 不创建锁文件且调制解调器控制不工作	A1 补空格；B4 续句补全
+S-000683	说明创建layer的三种途径即以鼠标调用宿主常驻代理例程或在终端本地程序中进行并逐一点评	创建 layer 的三种途径：以鼠标、调用宿主常驻代理例程或在终端本地程序中进行并逐一点评	A1 补空格；B1 去悬头改冒号；避恰 40 字
+S-000685	RichardHargrove询问PDP11浮点格式的细节列出符号位	Richard Hargrove 询问 PDP-11 浮点格式的细节，列出符号位、八位指数与二十三位尾数的位域布局	A1+A2 拆名；PDP-11 依正文正名
+S-000686	RobertCWhiteJr反驳Allbery认为tar与cpio也不保留fileness	Robert C. White Jr. 反驳 Allbery 称 tar 与 cpio 也不保留 file-ness 的说法	A1+A2 拆名；B3 加从句收实义
+S-000604	CharlesHannum回应负载平均值曲线为何呈指数衰减的提问	Charles Hannum 回应负载平均值曲线为何呈指数衰减的提问	A1 补空格；A3 拆人名
+S-000687	指出只有实现本身有缺陷的cat才需要u选项良好实现从中得不到任何好处	只有实现本身有缺陷的 cat 才需要 -u 选项，良好实现从中得不到任何好处	A1 补空格；B1 去悬头动词
+S-000689	用户报告kill之后进程无法清除的现象说明主程序fork并exec出子进程后未能	用户报告 kill 之后进程无法清除的现象：主程序 fork 并 exec 出子进程后未能回收	A1 补空格；B4 续句补全改冒号
+S-000690	询问lockf函数是否广泛支持	lockf 函数是否广泛支持，兼论 SunOS 上 time 函数只需包含 sys／time.h 的差异是否属 POSIX 规定	A1 补空格；B1 去悬头；依 H1 补全
+S-000692	指出以参数展开符号拼接的shell脚本在文件名含空白等特殊字符时会失效	以参数展开符号拼接的 shell 脚本在文件名含空白等特殊字符时会失效	A1 补空格；B1 去悬头动词
+S-000693	作者质疑用termio的VMIN与VTIME实现延时在高波特率下的可靠性	作者质疑用 termio 的 VMIN 与 VTIME 实现延时在高波特率下的可靠性	A1 补空格
+S-000697	回答识别进程父进程的问题指出可用负参数kill整个进程组若需查父进程则用nlis	回答识别进程父进程的问题，指出可用负参数 kill 整个进程组，查父进程则用 nlist 与 ／dev／kmem 比对进程表	A1 补空格；B4 续句补全；斜杠全角化
+S-000698	EduardoKrell作为当事人说明ksh在SVR4上开启作业控制运行的移植只需数分钟	Eduardo Krell 作为当事人说明 ksh 在 SVR4 上开启作业控制运行的移植只需数分钟	A1 补空格；A3 拆人名
+S-000699	列出介绍AIX虚拟资源管理器的IBM系统期刊论文与较早的技术报告供查阅分层系统设	列出介绍 AIX 虚拟资源管理器的 IBM 系统期刊论文与较早的技术报告，供查阅分层系统设计	A1 补空格；B4 续句补全
+S-000701	说明TOPS20的接回与分离改变的是作业所连终端	TOPS-20 的接回与分离改变的是作业所连终端，System V 的 sxt 机制反而便于实现	A1 补空格；B1 去悬头；TOPS-20 正名
+S-000702	在同一线程中复述可执行文件换入方式的差异转述他人观点并作补充	同一线程内对可执行文件换入方式差异的复述：转述他人观点并作补充	B1 在字悬头重构名词起头
+S-000605	JerryFreedmanJr询问在SunOS403上如何取得一毫秒粒度的计时器	Jerry Freedman Jr. 询问在 SunOS 4.0.3 上如何取得一毫秒粒度的计时器	A1+A2 拆名；B4 解恰 40 字形
+S-000704	PeterGross想让ndbm数据库留在进程虚拟地址空间办法或重写例程或把文件映射入内存	Peter Gross 想让 ndbm 数据库留在进程虚拟地址空间，办法或重写例程、或把文件映射入内存	A1 补空格；A3 拆人名
+S-000706	StephenFriedl引述PaulVixie关于COFF现状的看法	Stephen Friedl 引述 Paul Vixie 关于 COFF 现状的看法	A1 补空格；A3 拆人名
+S-000709	转述RonHitchens的修复办法把tip二进制中的调制解调器初始化串由S0=	转述 Ron Hitchens 的修复办法：把 tip 二进制中调制解调器初始化串由 S0=1 改为 S0=3 即可解决	A1 补空格；B4 依正文复原；A3 拆名
+S-000710	RICK提出标准输入输出缓冲在管道forkdupexec组合下的行为问题描述父子进程通信现象	RICK 提出标准输入输出缓冲在管道 fork dup exec 组合下的行为问题，描述父子进程通信现象	A1 补空格
+S-000711	ChrisTorek认为弃用标准地址虽可行却非最优主张直接修autoconfc缺陷	Chris Torek 认为弃用标准地址虽可行却非最优，主张直接修 autoconf.c 缺陷	A1 补空格；A3 拆人名
+S-000713	greywolf转述Litmaath关于分流可行且stdin不可重读的观点	greywolf 转述 Litmaath 关于分流可行且 stdin 不可重读的观点	A1 补空格
+S-000716	JohnRowe解释1752年9月英国才采用格里历人们在9月2日星期三就寝14日星期四起床	John Rowe 解释 1752 年 9 月英国才采用格里历，人们在 9 月 2 日星期三就寝、14 日星期四起床	A1 补空格；A3 拆人名
+S-000717	JohnWoods指出UNOS操作系统已把ksh作为标准命令解释程序随系统提供	John Woods 指出 UNOS 操作系统已把 ksh 作为标准命令解释程序随系统提供	A1 补空格；A3 拆人名
+S-000718	DougGwyn反驳管道中缓冲标准错误的说法指出标准错误本为不与正常输出混杂而设	Doug Gwyn 反驳管道中缓冲标准错误的说法，指出标准错误本为不与正常输出混杂而设	A1 补空格；B4 解恰 40 字形；A3 拆名
+S-000719	DavidCollierBrown称手里有一份名为name的程序似能规范化路径并遍历符号链接得到绝对路径	David Collier-Brown 称手里有一份名为 name 的程序，似能规范化路径并遍历符号链接得到绝对路径	A1+A2 拆名；Collier-Brown 连字符正名
+S-000607	参与者报告在SunOS41与403上以SIGIO中断select2等待共享内存数	参与者报告在 SunOS 4.1 与 4.0.3 上以 SIGIO 中断 select 等待共享内存数据，出现部分信号丢失	A1 补空格；B4 续句补全
+S-000721	PaulPlaceway介绍CMU的可分离pty设计说明一个pty不与固定终端绑定	Paul Placeway 介绍 CMU 的可分离 pty 设计，说明一个 pty 不与固定终端绑定	A1 补空格；A3 拆人名
+S-000722	JimCottrell引DougGwyn称第八版UNIX中名为等号的文件有用自称卖关子不知其用途	Jim Cottrell 引 Doug Gwyn 称第八版 UNIX 中名为等号的文件有用，自称卖关子不知其用途	A1 补空格；A3 拆人名
+S-000723	MarcRouleau指出用pwd拼接argv0还原完整路径只在显式指定相对或绝	Marc Rouleau 指出用 pwd 拼接 argv[0] 还原完整路径只在显式指定相对或绝对路径时成立	A1 补空格；B4 依正文复原；A3 拆名
+S-000726	GuyHarris说明Berklix与SystemV沿用地址零可寻址问题且问题不断回流	Guy Harris 说明 Berklix 与 System V 沿用地址零可寻址问题且问题不断回流	A1 补空格；A3 拆人名
+S-000729	DougGwyn转述SystemVRelease32已把tmp与usrtmp以1	Doug Gwyn 转述 System V Release 3.2 已把 ／tmp 与 ／usr／tmp 以 1777 模式发行	A1+A2 补空格；B4 复原 1777；斜杠全角化
+S-000731	PaulLew表示惊讶fmt竟可指定行宽反复查阅man页也没记载称之为又一个未文档化特性	Paul Lew 表示惊讶 fmt 竟可指定行宽，反复查阅 man 页也没记载，称之为又一个未文档化特性	A1 补空格；A3 拆人名
+S-000733	RahulDhesi逐项列出43BSD有而SVR3缺失的功能包括作业控制智能回显	Rahul Dhesi 逐项列出 4.3BSD 有而 SVR3 缺失的功能，包括作业控制、智能回显与软链接	A1 补空格；B4 续句收实义；A3 拆名
+S-000734	MikeBrown报告向远端NFS文件写入的速率比读取低三到四倍并询问这是否为NFS固有特性	Mike Brown 报告向远端 NFS 文件写入的速率比读取低三到四倍，并询问这是否为 NFS 固有特性	A1 补空格；A3 拆人名
+S-000735	ScottEPreece补充指出SystemV的ld虽能标记内存区可执行信息却不传入COFF映像	Scott E. Preece 补充指出 System V 的 ld 虽能标记内存区可执行，信息却不传入 COFF 映像	A1 补空格；拆名 Scott E. Preece
+S-000736	WilliamSommerfeld称其Athena所	William Sommerfeld 称其 Athena 所用的威斯康星 4.3 加 NFS 已备九成回报写错误代码	A1+A2 拆名；依 H1 与正文补全截断题面
+S-000611	回答其用运行级4解决给出在crontab触发init4由inittab依序执行rc4	回答其用运行级 4 解决，给出在 crontab 触发 init 4、由 inittab 依序执行 rc4、磁盘备份再切回运行级 3 的做法	A1 补空格
+S-000737	询问42与43BSD的vi及view在未改动文件即退出时为何更新inode变更时间	4.2 与 4.3 BSD 的 vi 及 view 在未改动文件即退出时为何更新 inode 变更时间	A1 补空格；B1 去悬头动词
+S-000742	引用Apple第4464652号专利第11项权利要求指出下拉菜单已被其覆盖说明当	引用 Apple 第 4464652 号专利第 11 项权利要求，指出下拉菜单已被其覆盖，说明当时界面实现纷纷改用弹出式菜单的缘由	A1 补空格；B4 续句补全；B2 实义收尾
+S-000739	指出所用Ultrix手册的tar5页把Chksum说成十进制ASCII值实应为八	所用 Ultrix 手册的 tar(5) 页把 Chksum 说成十进制 ASCII 值，实应为八进制 ASCII 值	A1 补空格；B1 去悬头；B4 复原；tar(5) 为手册序号
+S-000740	AndrewHume指出第九版及以后的Unix会保留管道写入的边界读操作不再返回	Andrew Hume 指出第九版及以后的 Unix 会保留管道写入的边界，读操作不再返回任意数据	A1 补空格；B4 续句补全；A3 拆名
+S-000741	判断43下Emulex板丢字符的现象像EmulexCS21的问题并给出两种解决办法	判断 4.3 下 Emulex 板丢字符的现象像 Emulex CS21 的问题，并给出两种解决办法	A1 补空格
+S-000744	PaulVixie询问守护进程如何摆脱控制终端指出syslogd	Paul Vixie 询问守护进程如何摆脱控制终端，指出 syslogd、inetd 与 cron 在 ps 中都不显示控制终端	A1 补空格；A3 拆名；依 H1 补全列举
