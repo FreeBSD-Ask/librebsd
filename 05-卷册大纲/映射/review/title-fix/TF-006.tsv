@@ -1,0 +1,31 @@
+source_id	old	new	reason
+S-001255	Edman分享经telnet检索Archie的shellonelinerArch	Edman 分享经 telnet 检索 Archie 的 shell one-liner——Archie 服务 1990-12 传播一手用法	B4 依正文补全题尾；A1 补空格
+S-001229	Lubinsky指出cpdevnull加文件名一次只能处理一个文件遂给出存留已久	Lubinsky 指出 cp／dev／null 加文件名一次只能处理一个文件，遂给出存留已久的 wipe 脚本	B4 续句补全；A1；路径斜杠全角化
+S-001230	针对询问more工具源码所在处的提问建议直接改用less	针对询问 more 工具源码所在处的提问，建议直接改用 less，并说明可在 uunet 等站点的 comp.sources.unix 归档中通过 FTP 取得	A1 补空格；依正文补 uunet 归档从句
+S-001231	1992年4月19日HaL计算机系统的SunilSavkar为setdV17与mark提交手册页补丁	1992 年 4 月 19 日 HaL 计算机系统的 Sunil Savkar 为 setd V1.7 与 mark 提交手册页补丁	A1 补空格；版本依正文正名 V1.7
+S-001235	自述其读者为bash文档见其中所述特性更近Cshell而非Bourneshell	自述其读者为 bash 文档，见其中所述特性更近 C shell 而非 Bourne shell，因名实相悖而困惑，遂称初阅文档后已失去移植该 shell 的兴趣	B4 续句补全；A1；全角逗号分句
+S-001236	以药品专利相反问并答称是谓那确属你的财产可自由处置又称此事已偏离正题过远请后续讨论改转邮件进行	以药品专利相反问并答称是谓那确属你的财产可自由处置又称此事已偏离正题过远请后续讨论改转邮件进行	H1 同步：hard 空；题面完整，仅同步 H1
+S-001238	1991年2月4日Intergraph英国的NikSimpson就BillBirch的面向对象shell回应	1991 年 2 月 4 日 Intergraph 英国的 Nik Simpson 就 Bill Birch 的面向对象 shell 回应	A1+A2 补空格拆人名；H1 截断以文件名为准
+S-001240	1990年8月15日DavidAWillcox先致歉误贴全网继答MattWette问POSIX2无ld	1990 年 8 月 15 日 David A Willcox 先致歉于自己误把原拟私复的答案贴至全网，继答 Matt Wette 之问 POSIX.2 中确无 ld	A1+B3 依正文补全；POSIX.2 正名
+S-001241	向列表询问有无可解析ksh脚本并生成例程调用树的自由	向列表询问有无可解析 ksh 脚本并生成例程调用树的自由软件	A1 补空格；依正文补全自由软件
+S-001242	Lewis论两种回显写法分属BSD与SV流派并称Su	Lewis 论两种回显写法分属 BSD 与 SV 流派，并称 SunOS 近版具系统五兼容特性，Connet 补 ／5bin 存放此类命令	A1+B3 依正文补全；斜杠全角化
+S-001244	一九九一年五月六日DavidFenyes询问是否存在检验Bourneshell兼容性测试脚本	一九九一年五月六日 David Fenyes 询问是否存在检验 Bourne shell 兼容性的标准测试脚本	A1+A2 补空格拆人名；依正文正名
+S-001256	mawk097版1991年4月由Brennan署名发布	mawk 0.97 版 1991 年 4 月由 Brennan 署名发布，是依 Aho Kernighan Weinberger 合著 AWK 语言书定义的一种 awk 实现	A1 补空格；版本正名 0.97；依正文补全
+S-001248	1987年6月17日Quarterman自述提交tar对cpio提案修订版	1987 年 6 月 17 日 Quarterman 自述提交 tar 对 cpio 提案修订版，纳入六月十六日前收集的各方意见	A1 补空格；依正文补纳入意见从句
+S-001250	BradTaylor从苹果机器ftp获得tcsh并替换系统口令文件中的csh后登录	Brad Taylor 从苹果机器 ftp 获得 tcsh 并替换系统口令文件中的 csh 后登录	A1+A2 补空格拆人名
+S-001251	Purdue大学计算中心的PiperKeairnes询问教育采购者能为AUX20	Purdue 大学计算中心的 Piper Keairnes 询问教育采购者能为 A／UX 2.0.1 找到的最佳价格	B4 续句补全；A1+A2；A／UX 正名
+S-001252	AUX201串口无getty时stty改波特率无效PaulCampbell称只要	A／UX 2.0.1 串口无 getty 时 stty 改波特率无效，Paul Campbell 称进程全部关闭后端口状态即复位	B4 续句补全；A1+A2；A／UX 正名
+S-001253	MarceloGallardo详述根因他用cu占着tty1呼出时轮询脚本又取该端	Marcelo Gallardo 详述根因，他用 cu 占着 tty1 呼出时轮询脚本又取该端口，系统有时冻结	B4 续句补全；A1+A2 拆人名
+S-001254	1990年10月10日ChrisTorek说明43BSDrenofind重写可再分发版用POSIXfts例程	1990 年 10 月 10 日 Chris Torek 说明 4.3BSD-reno find 重写可再分发版使用 POSIX fts 例程	A1 补空格；版本正名 4.3BSD-reno
+S-001258	DaveBraun解释shell脚本不能带suid的根因脚本不是被执行而是被仿真	Dave Braun 解释 shell 脚本不能带 suid 的根因，脚本不是被执行而是被仿真	B4 避 40 字截断形；A1+A2 拆人名
+S-001259	RickFarris就ksh是否属公有领域直接答以否定	Rick Farris 就 ksh 是否属公有领域直接答以否定，并指 Aspen Technologies 与 Mortice Kern Systems 两家均出售 Korn Shell	A1+A2 补空格拆人名；依 H1 正文补全
+S-001261	GuyHarris认为与其改写带缺陷的make不如在Makefile里显式设置SHELL	Guy Harris 认为与其改写带缺陷的 make，不如在 Makefile 里显式设置 SHELL	A1+A2 补空格拆人名
+S-001262	StefanPress受同事之托代发帖报告Vax11750运行BSD43时偶发内	Stefan Press 受同事之托代发帖，报告 Vax 11／750 运行 BSD 4.3 时偶发内核 panic	B4 续句补全；A1+A2；型号斜杠全角化
+S-001263	LarryWall答复正则表达式工具的写法问题给出在shell中处理正则的可行做法并说明其取舍	Larry Wall 答复正则表达式工具的写法问题，给出在 shell 中处理正则的可行做法并说明其取舍	A1+A2 补空格拆人名
+S-001266	节目对pledge内部机制与execpromises的说明系二手解读须以手册页与源码为准	节目对 pledge 内部机制与 execpromises 的说明系二手解读，须以 OpenBSD 手册页与源码为准	A1 补空格；依正文补 OpenBSD 从句
+S-001220	1990年10月14日DanBernstein主张把POSIX调用视作系统调用	1990 年 10 月 14 日 Dan Bernstein 主张把 POSIX 调用视作系统调用	A1+A2 补空格拆人名
+S-001221	1990年9月4日MichaelMeissner接续PaulVixie称HP在SystemV集成上优于Sun	1990 年 9 月 4 日 Michael Meissner 接续 Paul Vixie 称 HP 在 System V 集成上优于 Sun、Pyramid 优于众家的说法，指出各 UNIX 阵营各有长处	A1+A2 补空格拆人名；B3 依正文补全
+S-001223	1984年7月17日AndyTannenbaum在重新装入以太网代码时临时以反引号包裹grepnetload	1984 年 7 月 17 日 Andy Tannenbaum 在重新装入以太网代码时临时以反引号包裹 grep netload ／etc／rc 交给 csh 执行	A1+A2 补空格拆人名；斜杠全角化
+S-001224	DougGwyn就此前讨论中再造一份sh的提法指出argv0与可执行文件的路径名	Doug Gwyn 就此前讨论中再造一份 sh 的提法指出 argv[0] 与可执行文件的路径名并无必然关系	B4 续句补全；A1+A2；argv[0] 正名
+S-001225	PaulHarsha答复指出sh中then必须另起一行	Paul Harsha 答复指出 sh 中 then 必须另起一行，把 then 与 if 写在同一行会触发 ELSE UNEXPECTED	A1+A2 补空格拆人名；依正文补全
+S-001217	C shell（csh）：Bill Joy 与 2BSD 的贡献	C shell（csh）：Bill Joy 与 2BSD 的贡献	保留：hard 空且 H1 一致；D1 名称括注惯例保留
