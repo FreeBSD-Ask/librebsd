@@ -1,0 +1,88 @@
+source_id	old	new	reason
+S-000948	PWB／UNIX 1.0 的运维安全实践——rsh、SCCS、RJE 账号管理	PWB／UNIX 1.0 的运维安全实践——rsh、SCCS、RJE 账号管理	H1 同步：同步 H1（半角斜杠差异）
+S-000967	danielrlevy指出仅凭文件描述符不足以完成chdir	daniel.r.levy 指出仅凭文件描述符不足以完成 chdir，因为可能持有在当下权限下无法打开的目录描述符	A1 补空格＋正名 daniel.r.levy＋补全从句
+S-000968	请教SunOS401上发送与接收UDP广播的做法是否以点255结尾的地址填入so	SunOS 4.0（.1）上发送与接收 UDP 广播：是否以点 255 结尾的地址填入 sockaddr_in 并用 sendto 与 recvfrom	B1 去悬头＋B3 续全＋A1 补空格
+S-000969	讨论纸质口令卡片的泄露风险指出旁观者更可能直接偷看键入过程认为该方案并未真正提升	讨论纸质口令卡片的泄露风险，指出旁观者更可能直接偷看键入过程，认为该方案并未真正提升安全性	B4 复原全句
+S-000970	讨论口令文件的保护问题指出任何用户都可能读取并复制其中的加密口令以伺机破解	讨论口令文件的保护问题指出任何用户都可能读取并复制其中的加密口令以伺机破解	H1 同步：同步 H1
+S-000971	报告CIRRUS网络自动柜员机的PIN每笔交易都向发卡行验证	CIRRUS 网络自动柜员机的 PIN 每笔交易都向发卡行验证，且数据流量以 DES 加密并以公钥方式分发密钥	B1 去悬头＋A1 补空格＋补全
+S-000974	GuyHarris说明在SunOS40上指定负uid的做法可用	Guy Harris 说明在 SunOS 4.0 上指定负 uid 的做法可用	A1 补空格＋拆 Guy Harris＋正名 SunOS 4.0
+S-000975	介绍自己给atrunc打的两行补丁使at作业在setuid调用前若将要切换到root就直接退出	介绍自己给 atrun.c 打的两行补丁，使 at 作业在 setuid 调用前若将要切换到 root 就直接退出	A1 补空格＋正名 atrun.c
+S-000976	介绍把DES向量化的尝试说明用一次处理六十四组加密替代单组向量化的做法	介绍把 DES 向量化的尝试，说明用一次处理六十四组加密替代单组向量化的做法	A1 补空格
+S-000980	GPavlov引述NCR的说法称其操作系统磁盘接口代码在设计上排除了非认证磁盘以保数据可靠性	G.Pavlov 引述 NCR 的说法，称其操作系统磁盘接口代码在设计上排除了非认证磁盘，以保数据可靠性	A1 补空格＋正名 G.Pavlov
+S-000981	RootBoyJim反驳说内核对双点只有部分知识只在创建删除与改名等情形及挂载点等处特殊处理	Root Boy Jim 反驳说内核对双点只有部分知识，只在创建、删除与改名等情形及挂载点等处特殊处理，因此双点不能从文件系统里删掉	A1 补空格＋拆 Root Boy Jim＋补全结论
+S-000983	TimIhde报告本站建名为backup的登录账户	Tim Ihde 报告本站建名为 backup 的登录账户，以 uid 零身份运行并以专用 C 程序作 shell 执行备份	A1 补空格＋拆 Tim Ihde＋补全
+S-000984	认为在确有额外登录安全需求的场合采用难以猜测的用户名是个不错的做法	确有额外登录安全需求的场合，采用难以猜测的用户名是个不错的做法	B1 去悬头重构
+S-000985	MikeWescott报告SystemV下getty与login有时会丢失控制终端	Mike Wescott 报告 System V 下 getty 与 login 有时会丢失控制终端	A1 补空格＋拆 Mike Wescott＋正名 System V
+S-000987	HenrySpencer说明本部门的守护进程会检查打开是否成功且描述符是否正确	Henry Spencer 说明本部门的守护进程会检查打开是否成功且描述符是否正确，反对不检查结果的做法	A1 补空格＋拆 Henry Spencer＋补全
+S-000990	PatIurilli报告在3b2控制台口拆装ACU时碰掉屏蔽地线	Pat Iurilli 报告在 3b2 控制台口拆装 ACU 时碰掉屏蔽地线，导致 login 不问口令即报登录错误	A1 补空格＋拆 Pat Iurilli＋补全
+S-000992	1985年3月7日科克斯同意已知漏洞更易获修但binaryonly站点即便想做也修不了	1985 年 3 月 7 日科克斯同意已知漏洞更易获修但 binary-only 站点即便想做也修不了，刊法成根将致数月脆弱故只电邮 root	A1 补空格＋B2 补从句实义收尾
+S-000993	ChrisTorek释maxusers不是登录人数上限而是预估的同时活跃人数据此定系统表大小	Chris Torek 释 maxusers 不是登录人数上限，而是预估的同时活跃人数、据此定系统表大小	A1 补空格＋拆 Chris Torek
+S-000994	SecureWare的CEOMcChesney回应Haugh指责最小权限并非C2	SecureWare 的 CEO McChesney 回应 Haugh 指责：最小权限并非 C2 级要求	B4 复原断句＋A1 补空格
+S-000995	1991年6月30日EdwardSchwab自述其大学提供无限制的访客登录	1991 年 6 月 30 日 Edward Schwab 自述其大学提供无限制的访客登录	A1 补空格＋拆 Edward Schwab
+S-000996	1989年4月21日BrentChapman给出阻止非职员把工作站转入单用户态的sqc程序	1989 年 4 月 21 日 Brent Chapman 给出阻止非职员把工作站转入单用户态的 sq.c 程序	A1 补空格＋拆 Brent Chapman＋正名 sq.c
+S-000952	1991年5月19日DanBernstein用图说明硬连线tty应有的工作方式	1991 年 5 月 19 日 Dan Bernstein 用图说明硬连线 tty 应有的工作方式	A1 补空格＋拆 Dan Bernstein
+S-000998	指出该专利文本可见于Wood与Kochan合著的UNIXSystemSecurity一书	该专利文本可见于 Wood 与 Kochan 合著的 UNIX System Security 一书	B1 去悬头＋A1 补空格＋拆 UNIX System Security
+S-000999	1989年3月30日Gretzky报告chfn存在getpwent溢出缺陷可造出特权空口令条目	1989 年 3 月 30 日 Gretzky 报告 chfn 存在 getpwent 溢出缺陷可造出特权空口令条目	A1 补空格
+S-001001	1984年10月14日mather称其所在站点做同样的事但清理步骤改为条件执行	1984 年 10 月 14 日 mather 称其所在站点做同样的事但清理步骤改为条件执行	A1 补空格
+S-001003	1988年3月02日ChrisTorek论access(2)之竞态洞指42与43BSD可反复互换	1988 年 3 月 02 日 Chris Torek 论 access(2) 之竞态洞，指 4.2 与 4.3BSD 可反复互换实与有效 ID 而 setuid 不可逆	A1 补空格＋拆 Chris Torek＋正名 4.2／4.3BSD
+S-001005	1989年1月04日述个人工作站各人握有本机root口令su后NFS不授予完整访问	1989 年 1 月 04 日：个人工作站各人握有本机 root 口令，su 后 NFS 不授予完整访问，再 su 至他人账号即可读写其文件	A1 补空格＋悬头述改冒号＋补全
+S-001006	1984年6月20日他给出29bsd的passwd即使正确设置口令也返回非零退出状态之补丁	1984 年 6 月 20 日他给出 2.9bsd 的 passwd 即使正确设置口令也返回非零退出状态之补丁	A1 补空格＋正名 2.9bsd
+S-001011	1988年9月20日Cipriani答binpasswd显式把etcpasswd改成0444	1988 年 9 月 20 日 Cipriani 答 ／bin／passwd 显式把 ／etc／passwd 改成 0444 之抱怨	A1 补空格＋路径全角斜杠
+S-000953	OlavKolbu认同write消息应标注来源但主张改为可选项由接收端自行决定	Olav Kolbu 认同 write 消息应标注来源，但主张改为可选项由接收端自行决定	A1 补空格＋拆 Olav Kolbu
+S-000954	DanielKlein报告在USENIX安全研讨会上公布的口令破解结果	Daniel Klein 报告在 USENIX 安全研讨会上公布的口令破解结果，从一万三千余个账户中破解出三千余个	A1 补空格＋拆 Daniel Klein＋补全
+S-000959	DougMcCallum回答把ftp改成仿rloginrsh是否安全指出其中有若	Doug McCallum 回答把 ftp 改成仿 rlogin／rsh 是否安全，指出其中有若干需要留意的风险点	B4 复原＋A1 补空格＋斜杠全角
+S-000960	RandalSchwartz反对记录登录失败全部击键的做法认为这是重大安全漏洞建议另行邮件讨论	Randal Schwartz 反对记录登录失败全部击键的做法，认为这是重大安全漏洞，建议另行邮件讨论	A1 补空格＋拆 Randal Schwartz
+S-000962	回答者承认可执行程序这类漏洞无法阻止转而从检测入手	回答者承认可执行程序这类漏洞无法阻止转而从检测入手	H1 同步：同步 H1
+S-000965	说明getlogin与cuserid的实现差异指出前者依赖utmp记录而后者会退回真实用户号查询	getlogin 与 cuserid 的实现差异：前者依赖 utmp 记录而后者会退回真实用户号查询	B1 去悬头改冒号＋A1 补空格
+S-001499	2009年8月16日linimon把ports137859批量去硬编码py前缀补丁转freebsdpython	2009 年 8 月 16 日 linimon 把 ports／137859 批量去硬编码 py- 前缀补丁转 freebsd-python	A1 补空格＋PR 号全角斜杠＋正名 freebsd-python
+S-001483	2015年5月29日JB称已将v10问题系统升级到r281990CURRENT	2015 年 5 月 29 日 J. B. 称已将 v10 问题系统升级到已可运行的 r281990 CURRENT	A1 补空格＋正名 J. B. 与 r281990 CURRENT
+S-001453	1989年9月15日JohannSchweigl表示别只替Cray流泪通用UNIX上有REXX	1989 年 9 月 15 日 Johann Schweigl 表示别只替 Cray 流泪，通用 UNIX 上有 REXX	A1 补空格＋拆 Johann Schweigl
+S-001455	主张合理的shell编译器应把shell语言构件转为语义等价的C函数调用	主张合理的 shell 编译器应把 shell 语言构件转为语义等价的 C 函数调用	A1 补空格
+S-001456	Siebenmann对1990年代后Unix技术变化趋缓的判断系个人观察未提供系统比较证据	Siebenmann 对 1990 年代后 Unix 技术变化趋缓的判断系个人观察，未提供系统比较证据	A1 补空格
+S-001458	2005年12月21日SergeySkvortsov提醒develp5XSLoader兼容500503	2005 年 12 月 21 日 Sergey Skvortsov 提醒 devel／p5-XSLoader 本身兼容 5.00503	A1 补空格＋正名 5.00503＋路径全角斜杠
+S-001459	2006年2月5日JeffreySchilperoord报告SpamAssassin缺MailSPFQuery	2006 年 2 月 5 日 Jeffrey Schilperoord 报告 SpamAssassin 找不到 Mail／SPF／Query.pm	A1 补空格＋拆 Jeffrey Schilperoord＋路径全角斜杠
+S-001460	2006年5月27日维护者tobez把ports97983升级到312改为feedback	2006 年 5 月 27 日维护者 tobez 把 ports／97983 升级到 3.1.2 改为 feedback	A1 补空格＋PR 号全角斜杠＋正名 3.1.2
+S-001461	2007年9月2日反驳说不用BSDPAN因其依赖管理粗糙只用cpan与cpanp	2007 年 9 月 2 日反驳说不用 BSDPAN 因其依赖管理粗糙，只用 cpan 与 cpanp 装了数十个模块都没问题	B4 复原＋A1 补空格
+S-001462	2008年11月24日Noah询问Errno架构不匹配如何解决	2008 年 11 月 24 日 Noah 询问 Errno 架构不匹配如何解决：装 p5-Net-DNS-0.63 时报错	A1 补空格＋B4 续全
+S-001463	2009年6月4日tobez回复说该例程在本机正常怀疑是对方环境问题	2009 年 6 月 4 日 tobez 回复说这个例程在本机可以正常运行，怀疑是对方环境的问题	A1 补空格
+S-001500	2009年7月16日lwhsu处理ports136799修复mailpymilter的Python版本要求	2009 年 7 月 16 日 lwhsu 处理 ports／136799 修复 mail／py-milter 的 Python 版本要求	A1 补空格＋路径全角斜杠
+S-001466	2011年2月11日milki以rescompberkeleyedu署名在cpandiscuss发起新线程	2011 年 2 月 11 日 milki 以 rescomp.berkeley.edu 署名在 cpan-discuss@perl.org 发起新线程	A1 补空格＋正名 rescomp.berkeley.edu
+S-001470	2012年8月22日ChrisRees认为p5OpenGL构建确实需要活跃X服务	2012 年 8 月 22 日 Chris Rees 认为 p5-OpenGL 构建确实需要一个活跃的 X 服务	B4 复原＋A1 补空格＋正名 p5-OpenGL
+S-001476	2014年12月10日antoine在D1241的MkScriptsqash213行内评审	2014 年 12 月 10 日 antoine 在 D1241 的 Mk／Scripts／qa.sh 213 行内评审	A1 补空格＋路径全角斜杠
+S-001480	2015年8月8日jungleBoogie请人把textprocack更新到2101	2015 年 8 月 8 日 jungle Boogie 请人把 textproc／ack 更新到 2.101	A1 补空格＋拆 jungle Boogie＋正名 2.101
+S-001485	2016年6月8日KurtJaeger在Bug210120指出根因是版本号19650大于1982	2016 年 6 月 8 日 Kurt Jaeger 在 Bug 210120 指出根因是版本号 1.9650 大于 1.982	A1 补空格＋正名 1.9650／1.982
+S-001486	2016年5月12日MichelleSullivan报告p5GnuPGInterface构建报GnuPGnotfound	2016 年 5 月 12 日 Michelle Sullivan 报告 p5-GnuPG-Interface 构建报 GnuPG not found	A1 补空格＋拆 Michelle Sullivan
+S-001487	2017年6月19日onborodin为securityp5CryptOpenSSLCA提交CRL解析补丁	2017 年 6 月 19 日 onborodin 为 security／p5-Crypt-OpenSSL-CA 提交 CRL 解析补丁	A1 补空格＋路径全角斜杠
+S-001489	2018年11月5日mikhailrokhin称在CURRENTrv340151复现dtrace报错问题	2018 年 11 月 5 日 mikhail.rokhin 称在 CURRENT amd64 rv 340151 复现 dtrace 报错问题	A1 补空格＋正名 mikhail.rokhin
+S-001492	2004年3月18日KhairilYusof说自己无法在FreeBSD5x的Zope端口重现49的问题	2004 年 3 月 18 日 Khairil Yusof 说自己无法在 FreeBSD-5.x 的 Zope Port 重现 FreeBSD 4.9 的问题	A1 补空格＋正名 FreeBSD-5.x＋端口改 Port
+S-001494	2007年2月21日RobertGogolok回复接手消息并直接批准develpylxml更新	2007 年 2 月 21 日 Robert Gogolok 回复接手消息并直接批准 devel／py-lxml 更新	A1 补空格＋路径全角斜杠
+S-001501	2009年3月26日pav把ports133081的PYEASYINSTALLARCHDEP问题PR转组	2009 年 3 月 26 日 pav 把 ports／133081 的 PYEASYINSTALL_ARCHDEP 问题 PR 转组	A1 补空格＋PR 号全角斜杠
+S-001496	2007年9月21日miwi将PR116456的ircpygozerbot由open转feedback	2007 年 9 月 21 日 miwi 将 PR 116456 的新 Port irc／py-gozerbot 由 open 转 feedback	A1 补空格＋路径全角斜杠＋端口改 Port
+S-001497	2008年2月27日philip回复PR121160问develviewvc缺pyMySQLdb依赖的检测	2008 年 2 月 27 日 philip 回复 PR 121160 问 devel／viewvc 缺 databases／py-MySQLdb 依赖的检测	A1 补空格＋路径全角斜杠
+S-001502	2009年9月6日VolodymyrKostyrko提交ports137782新增databasespypostgresql	2009 年 9 月 6 日 Volodymyr Kostyrko 提交 ports／137782 新增 databases／py-postgresql	A1 补空格＋路径全角斜杠
+S-001506	2011年2月12日MatthiasAndree说已把82PREREL内核机器上的ZFS全部移除	2011 年 2 月 12 日 Matthias Andree 说已把 8.2-PREREL 内核机器上的 ZFS 全部移除	A1 补空格＋正名 8.2-PREREL
+S-001508	2012年8月11日MatthiasPetermann移植依赖trytond的Python模块	2012 年 8 月 11 日 Matthias Petermann 移植依赖 trytond 的 Python 模块	A1 补空格＋拆 Matthias Petermann
+S-001517	2014年4月3日JulioMerino回应AntoineBrodin谈python34非root打包	2014 年 4 月 3 日 Julio Merino 回应 Antoine Brodin 谈 python34 非 root 打包	A1 补空格
+S-001521	2014年3月4日DmitrySivachenko说333升到334后问题依旧makepackage报头文件缺失	2014 年 3 月 4 日 Dmitry Sivachenko 说 3.3.3 升到 3.3.4 后问题依旧，make package 报头文件缺失	A1 补空格＋正名 3.3.3／3.3.4
+S-001523	2014年9月17日oz42说想彻底卸掉NIS与yp组件但makedeleteold仍残留	2014 年 9 月 17 日 oz42 说他很想彻底卸掉 NIS 与 yp 组件但 make delete-old 仍残留	A1 补空格
+S-001524	2015年12月5日KubilayKocak建议短期让swig20提供版本化二进制软链接	2015 年 12 月 5 日 Kubilay Kocak 建议短期让 swig20 提供指向版本化二进制的软链接	A1 补空格
+S-001526	2015年7月13日bugatrgbaznl在RaspberryPiB上编译langpython27时ctypes失败	2015 年 7 月 13 日 bug at rgbaz.nl 在 Raspberry Pi B 上编译 lang／python27 时 _ctypes 失败	A1 补空格＋正名 bug at rgbaz.nl
+S-001515	2013年7月19日rm把ports180218由open转feedback称无法复现	2013 年 7 月 19 日 rm 把 ports／180218 由 open 转 feedback 称无法复现	A1 补空格＋PR 号全角斜杠
+S-001530	2016年2月1日RuslanMakhmatkhanov提议移除已过期的langpython32端口	2016 年 2 月 1 日 Ruslan Makhmatkhanov 提议移除已过期的 lang／python32 Port	A1 补空格＋路径全角斜杠＋端口改 Port
+S-001531	2016年1月4日KubilayKocak请Rene过问pyclamav是否可删除	2016 年 1 月 4 日 Kubilay Kocak 请 Rene 过问 py-clamav 是否可删除	A1 补空格
+S-001533	2016年7月10日FukangChen设DEFAULTVERSIONS后python27报SSLv2符号未定义	2016 年 7 月 10 日 Fukang Chen 设 DEFAULT_VERSIONS 后 python27 报 SSLv2 符号未定义	A1 补空格＋拆 Fukang Chen
+S-001536	2016年11月10日EdwarddAuvergne在缺陷单214209补充同一测试在py27numpy上同样失败	2016 年 11 月 10 日 Edward d’Auvergne 在缺陷单 214209 补充同一测试在 py27-numpy 上同样失败	A1 补空格＋弯撇号＋正名 py27-numpy
+S-001539	2017年8月8日KubilayKocak在bug221311逐条挑出Makefile毛病	2017 年 8 月 8 日 Kubilay Kocak 在 bug 221311 逐条挑出 Makefile 毛病	A1 补空格
+S-001540	2017年12月4日MathieuArnold回复说FLAVORS后无须再设PYTHON_VERSION	2017 年 12 月 4 日 Mathieu Arnold 回复说 FLAVORS 后无须再设 PYTHON_VERSION	A1 补空格
+S-001541	2017年2月21日JohnWOBrien回复techlists	2017 年 2 月 21 日 John W. O’Brien 回复 tech-lists：2.7 过时但许多软件仍假设只有 Python 2	A1 补空格＋弯撇号＋B3 续全
+S-001542	2017年10月26日发帖人补充：称上游缺陷并非否认是端口缺陷	2017 年 10 月 26 日发帖人补充：称上游缺陷并非否认是 Port 缺陷，装到冲突文件的 Port 须为全部冲突 Port 声明 CONFLICTS	A1 补空格＋端口改 Port＋B4 续全
+S-001546	2020年7月28日发帖人认可可选依赖方案写法建议涉及性能应在描述中说明	2020 年 7 月 28 日发帖人认可可选依赖方案写法，建议涉及性能应在描述中说明	A1 补空格
+S-001549	2019年9月8日RenéThommler承认sqlite3依赖用法此前不了解pythonport拆分	2019 年 9 月 8 日 René Thommler 承认 sqlite3 依赖用法此前不了解 Python Port 拆分	A1 补空格＋端口改 Port
+S-001475	2013年10月27日KurtJaeger回复ports183108请求关闭该PR	2013 年 10 月 27 日 Kurt Jaeger 回复 ports／183108 请求关闭该 PR，说明其 databases／p5-DBD-cego 补丁已被 183359 取代	B3 续全＋A1 补空格＋PR 号全角斜杠
+S-001550	2020年4月17日dewayne自述排查数小时后确认是自己的makeconf配置损坏	2020 年 4 月 17 日 dewayne 自述排查数小时后发现是自己的 make.conf 配置损坏	A1 补空格＋正名 make.conf
+S-001552	2020年3月22日GoranMekic自述wwwpywebargs60支持正在推进但尚需时间	2020 年 3 月 22 日 Goran Mekic 自述 www／py-webargs 6.0 支持正在推进但尚需时间	A1 补空格＋路径全角斜杠
+S-001555	2021年1月16日AntoineBrodin判定该组多端口升级exprun结果无误	2021 年 1 月 16 日 Antoine Brodin 判定该组多 Port 升级 exp-run 结果无误	A1 补空格＋端口改 Port
+S-001479	2014年11月21日bugzilla转发AntoineBrodin的Bug194969exp-run结果	2014 年 11 月 21 日 bugzilla 转发 Antoine Brodin 的 Bug 194969 exp-run 结果	A1 补空格
+S-001518	2014年12月16日MarcusvonAppen在Bug195515说还看到Qemuunsupportedioctl提示	2014 年 12 月 16 日 Marcus von Appen 在 Bug 195515 说还看到 Qemu unsupported ioctl 提示	A1 补空格＋拆 Marcus von Appen
+S-001488	2018年1月17日TatsukiMakino在bugzilla197011评论15追问改动有无变化	2018 年 1 月 17 日 Tatsuki Makino 在 bugzilla 197011 评论 15 追问改动有无变化	A1 补空格
+S-001527	2015年3月21日KubilayKocak把新端口申请PR198704的关键词改为patchready	2015 年 3 月 21 日 Kubilay Kocak 把新 Port 申请 PR 198704 的关键词改为 patch-ready	A1 补空格＋正名 patch-ready＋端口改 Port
