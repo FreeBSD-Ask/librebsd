@@ -1,0 +1,93 @@
+source_id	old	new	reason
+S-001302	2007年4月8日询问diablo版本JDK与JRE是否含2007年夏令时补丁	2007 年 4 月 8 日询问 diablo 版本的 JDK 与 JRE 是否含 2007 年夏令时补丁	A1 补空格；措辞依正文
+S-001284	2004年6月23日MarkTeel贴出jedit410在521内核上makeinstall的输出	2004 年 6 月 23 日 Mark Teel 贴出 jedit-4.1.0 在 5.2.1 内核上 make install 的输出	A1+A2 补空格拆名；版本依正文
+S-001285	2004年5月4日JeremyFaulkner测试Torben完全重写后的eclipse3端口	2004 年 5 月 4 日 Jeremy Faulkner 测试 Torben 完全重写后的 eclipse3 端口	A1+A2 补空格拆人名
+S-001286	2004年11月26日Ben在FreeBSD53RELEASEp1上编译jdk14时HotSpot崩溃	2004 年 11 月 26 日 Ben 在 FreeBSD 5.3-RELEASE-p1 上编译 jdk14 时 HotSpot 崩溃	A1 补空格；版本依正文
+S-001289	2005年2月19日回复解释不加cacerts就没有任何SSL连接可用	2005 年 2 月 19 日回复解释不加 cacerts 就没有任何 SSL 连接可用	A1 补空格
+S-001291	2005年3月6日ThomasLange报tomcat加apache与mod_jk前端exec不返回	2005 年 3 月 6 日 Thomas Lange 报 tomcat 加 apache 与 mod_jk 前端 exec 不返回	A1+A2 补空格拆人名
+S-001292	2005年11月10日Android装好JDK15后在amd64装Eclipse失败	2005 年 11 月 10 日 Android 装好 JDK15 后在 amd64 装 Eclipse 失败	A1 补空格
+S-001293	2005年9月23日JeanBaptisteQuenot报Eclipse在GTK下窗口显示空白	2005 年 9 月 23 日 Jean-Baptiste Quenot 报 Eclipse 在 GTK 下窗口显示空白	A1+A2 补空格；人名依正文
+S-001297	2006年6月8日MikhailTeterin报FreeBSDamd6461上linuxfirefox配sunjdk14插件问题	2006 年 6 月 8 日 Mikhail Teterin 报 FreeBSD／amd64-6.1 上 linux-firefox 配 linux-sun-jdk14 插件问题	A1+A2；版本正名；斜杠全角化
+S-001298	2006年11月5日KirbyKuehl补充firefox15与firefox20并存时的Java插件问题	2006 年 11 月 5 日 Kirby Kuehl 补充 firefox-1.5.0.7 与 firefox-2.0 并存时的 Java 插件问题	A1+A2；版本依正文（略包次避半角逗号）
+S-001299	2006年11月29日改为针对xulrunner库编译之后eclipse的内置浏览器已经可用	2006 年 11 月 29 日改为针对 xulrunner 库编译之后 eclipse 的内置浏览器已经可用	A1 补空格
+S-001328	2008年5月3日tzupdater1332007kzip的下载地址已失效无法取回	2008 年 5 月 3 日 tzupdater-1_3_3-2007k.zip 的下载地址已失效无法取回	A1；文件名依正文正名
+S-001306	2007年12月14日openoffice在63PRERELEASE报符号未定义Java降级后消失	2007 年 12 月 14 日 openoffice 在 6.3-PRERELEASE 报符号未定义 Java 降级后消失	A1 补空格；版本依正文
+S-001307	2007年2月7日指出sunsecuritykrb5internalUDPClient类没有提供close方法	2007 年 2 月 7 日指出 sun.security.krb5.internal.UDPClient 类没有提供 close 方法	A1+A2；类名依正文加点
+S-001309	2007年7月5日WalterVaughan回复同一线程称自己在双四核机器上把内存从4G加到8G	2007 年 7 月 5 日 Walter Vaughan 回复同一线程称自己在双四核机器上把内存从 4G 加到 8G	A1+A2 补空格拆人名
+S-001312	2007年6月27日FreeBSD用户询问diablojre与diablojdk的amd64Firefox插件现状	2007 年 6 月 27 日 FreeBSD 用户询问 diablo-jre 与 diablo-jdk 在 amd64 上的 Firefox 插件现状	A1 补空格；包名依正文
+S-001314	2007年5月17日MarkLinimon把PR112729责任人由freebsdjava转给glewis	2007 年 5 月 17 日 Mark Linimon 把 PR ports／112729 责任人由 freebsd-java 转给 glewis	A1+A2；PR 号正名；斜杠全角化
+S-001316	2007年11月17日Huff称自己无法像NickJohnson那样夸16配Tomcat6好用	2007 年 11 月 17 日 Huff 称自己无法像 Nick Johnson 那样夸 1.6 配 Tomcat 6 好用	A1+A2 补空格；版本依正文
+S-001318	2007年10月10日CFLAGS加fnotreevrp后可成功构建jdk131p9_8	2007 年 10 月 10 日 CFLAGS 加 -fno-tree-vrp 后可成功构建 jdk-1.3.1p9_8	A1；编译开关与版本依正文
+S-001320	2007年9月15日os_sleep补丁疑为绕开Solaris内核不让其出问题	2007 年 9 月 15 日 os_sleep 补丁疑为绕开 Solaris 内核不让其出问题	A1 补空格
+S-001321	2008年4月5日Rogers回信向Miller致谢说把数据段ulimit调低后问题解决	2008 年 4 月 5 日 Rogers 回信向 Miller 致谢说把数据段 ulimit 调低后问题解决	A1+A2 补空格拆人名
+S-001329	2008年9月3日确认用JDK16的源码重新构建后可稳定复现IPv4mapped地址问题	2008 年 9 月 3 日确认用 JDK 1.6 的源码重新构建后可稳定复现 IPv4-mapped 地址问题	A1 补空格；版本与连字符依正文
+S-001271	2002年1月2日在Alpha机器上跑freeBSD44想装Java	2002 年 1 月 2 日在 Alpha 机器上跑 FreeBSD 4.4 想装 Java	A1 补空格；FreeBSD 正名；题文对位首条
+S-001333	2009年3月3日他确认可复现netbeansconf的netbeans_jdkhome配置问题	2009 年 3 月 3 日他确认可复现 netbeans.conf 的 netbeans_jdkhome 配置问题	A1 补空格；配置文件名依正文
+S-001334	2009年5月20日jdk16的源码jar校验和不匹配	2009 年 5 月 20 日 jdk16 的源码 jar 校验和不匹配	A1 补空格
+S-001336	2009年9月21日更换到Nehalem平台后Eclipse在diablojdk下反复崩溃	2009 年 9 月 21 日更换到 Nehalem 平台后 Eclipse 在 diablo-jdk 下反复崩溃	A1 补空格；包名依正文
+S-001337	2010年1月4日openjdk7端口引导JDK的探测逻辑存在明显缺陷	2010 年 1 月 4 日 openjdk7 端口引导 JDK 的探测逻辑存在明显缺陷	A1 补空格
+S-001338	2010年5月21日JungukKim回复说openjdk6b19_1抓取问题应由他的提交修复	2010 年 5 月 21 日 Jung-uk Kim 回复说 openjdk6-b19_1 抓取问题应由他的提交修复	A1+A2；人名与版本依正文
+S-001340	2010年9月23日Rob指出OpenJDK不包含comsun开头的类包	2010 年 9 月 23 日 Rob 指出 OpenJDK 不包含 com.sun 开头的类包	A1 补空格；包名加点正名
+S-001344	2011年6月2日Stefan报告82STABLE构建eclipse362时jar解包SHA256不匹配	2011 年 6 月 2 日 Stefan 报告 8.2-STABLE 构建 eclipse-3.6.2 时 jar 解包 SHA256 不匹配	A1 补空格；版本依正文
+S-001345	2011年9月6日Greg就axis2新端口留言谈库风格jar装入JAVAJARDIR	2011 年 9 月 6 日 Greg 就 axis2 新端口留言谈库风格 jar 装入 JAVAJARDIR	A1 补空格
+S-001346	2012年4月20日用户报告补丁对pomxml三处修改被拒extract与patch构建失败	2012 年 4 月 20 日用户报告补丁对 pom.xml 三处修改被拒 extract 与 patch 构建失败	A1 补空格；文件名依正文
+S-001347	2012年2月5日用户报告升级到swtdevel371后Vuze多个窗口恢复正常	2012 年 2 月 5 日用户报告升级到 swt-devel 3.7.1 后 Vuze 多个窗口恢复正常使用	B4 续尾补全句；A1；版本依正文
+S-001272	2018年2月18日Bug225655请求把develapacheant升级到v1101	2018 年 2 月 18 日 Bug 225655 请求把 devel／apache-ant 升级到 v1.10.1	A1 补空格；端口路径斜杠全角化
+S-001349	2012年5月14日维护者回应openjdk6构建因缺x86_64ad目标中止的问题	2012 年 5 月 14 日维护者回应 openjdk6 构建因缺 x86_64.ad 目标中止的问题	A1 补空格；文件名依正文
+S-001353	2013年2月19日提交新补丁已在九点一与八点二稳定版多架构构建通过	2013 年 2 月 19 日提交新补丁已在九点一与八点二稳定版多架构构建通过并移除全部编译依赖	B2 改实义收尾；A1 补空格
+S-001354	2013年7月12日有用户记录该问题在后续版本依然存在未随版本更新修复	2013 年 7 月 12 日有用户记录该问题在后续版本依然存在并未随版本更新修复	A1 补空格；加并未避 40 字截断形
+S-001355	2013年6月20日说明部分接口尚缺实现建议先做占位实现保证可被正常调用	2013 年 6 月 20 日说明部分接口尚缺实现建议先做占位实现保证可被正常调用	A1 补空格
+S-001356	2013年5月25日指出两版本源码均写死命令路径关闭打印子系统后命令缺失	2013 年 5 月 25 日指出两版本源码均写死命令路径关闭打印子系统后命令缺失	A1 补空格
+S-001358	2014年12月1日Jenkins自带的JNA库未包含FreeBSD修复导致libpam模块失效	2014 年 12 月 1 日 Jenkins 自带的 JNA 库未包含 FreeBSD 修复导致 libpam 模块失效	A1 补空格
+S-001367	2016年4月26日缺陷单208553收到huanghwh补充程序从http拉取九千频道波形	2016 年 4 月 26 日缺陷单 208553 收到 huanghwh 补充程序从 http 拉取九千频道波形	A1 补空格
+S-001364	2015年4月27日PaulPathiakis贴出FreeBSD10x配OpenJDK装OpenNMS的wiki初稿	2015 年 4 月 27 日 Paul Pathiakis 贴出 FreeBSD 10.x 配 OpenJDK 装 OpenNMS 的 wiki 初稿	A1+A2 补空格；版本正名
+S-001368	2016年2月2日JDK9在FreeBSD上运行时触发SIGBUS信号	2016 年 2 月 2 日 JDK 9 在 FreeBSD 上运行时触发 SIGBUS 信号	A1 补空格；JDK 9 依正文
+S-001369	2016年1月2日Bug205229讨论openjdk8的getSystemCpuLoadstub实现	2016 年 1 月 2 日 Bug 205229 讨论 openjdk8 系统 CPU 负载 stub 实现	A2 长方法名转述；A1 补空格
+S-001273	2003年4月7日ThomasTVeldhouse在50RELEASEp7系统上构建JDK14	2003 年 4 月 7 日 Thomas T. Veldhouse 在 5.0-RELEASE-p7 系统上构建 JDK14	A1+A2；人名与版本依正文
+S-001370	2016年7月28日JDK7在FreeBSD90上构建失败并伴随时间戳异常	2016 年 7 月 28 日 JDK7 在 FreeBSD 9.0 上构建失败并伴随时间戳异常	A1 补空格；版本依正文
+S-001371	2016年9月30日openjdk8编译失败于NetworkInterface文件if_snd字段类型不完整	2016 年 9 月 30 日 openjdk8 编译失败于网络接口文件 if_snd 字段类型不完整	A2 长文件名转述；A1 补空格
+S-001376	2018年1月18日该提交合入上游LLVMr322623变更使X86指令前缀能够作为独立指令节点	2018 年 1 月 18 日该提交合入上游 LLVM r322623 变更使 X86 指令前缀能够作为独立指令节点	A1 补空格
+S-001378	2019年4月21日openjdk8的8u212关闭FONTCONFIG后configure仍查fontconfig	2019 年 4 月 21 日 openjdk8 的 8u212 关闭 FONTCONFIG 后 configure 仍查 fontconfig	A1 补空格
+S-001379	2019年8月13日openjdk111104+112构建上运行JIRA831服务启动与页面访问正常	2019 年 8 月 13 日 openjdk11-11.0.4+11.2 构建上运行 JIRA 8.3.1 服务启动与页面访问正常	A1 补空格；版本依正文
+S-001380	2019年8月30日提交510301在openjdk12端口加入aarch64架构支持	2019 年 8 月 30 日提交 510301 在 openjdk12 端口加入 aarch64 架构支持	A1 补空格
+S-001382	2019年3月18日Klaus回复拉取请求已合并并指出引导JDK内含demo可精简	2019 年 3 月 18 日 Klaus 回复拉取请求已合并并指出引导 JDK 内含 demo 可精简	A1 补空格
+S-001384	2021年5月14日commithook通报Urankar提交1025536a修复openjdk8的armv6与armv7构建	2021 年 5 月 14 日 commit-hook 通报 Mikael Urankar 提交 1025536a 修复 openjdk8 的 armv6 与 armv7 构建	A1+A2；人名正名 commit-hook
+S-001385	1998年1月28日NateWilliams自述仅完成构建主要功劳属于Damon与Keith	1998 年 1 月 28 日 Nate Williams 自述仅完成构建主要功劳属于 Damon 与 Keith	A1+A2 补空格拆人名
+S-001386	1998年2月12日SteveByrne指出Sun在Solarisx86上也有此问题所以仍是缺陷	1998 年 2 月 12 日 Steve Byrne 指出 Sun 在 Solaris x86 上也有此问题所以仍是缺陷	A1+A2 补空格拆人名
+S-001274	2003年12月14日ErnstdeHaan回复Andrew说要做的是重新获取distfile	2003 年 12 月 14 日 Ernst de Haan 回复 Andrew 说要做的是重新获取 distfile	A1+A2 补空格；人名依正文拆分
+S-001387	1998年3月4日DanBusarow答复XiGMotif20在22.5stable上的可用性询问	1998 年 3 月 4 日 Dan Busarow 答复 XiG Motif-2.0 在 2.2.5-stable 上的可用性询问	A1+A2；产品与版本正名
+S-001389	1998年4月1日AdrianGoins在FreeBSD225SNAP上配置Apache与jserv	1998 年 4 月 1 日 Adrian Goins 在 FreeBSD 2.2.5-SNAP 上配置 Apache 与 jserv	A1+A2 补空格；版本依正文
+S-001393	1999年4月8日Kaffe即将发布新版本FreeBSD现有的10b3移植版本过于陈旧应改用快照	1999 年 4 月 8 日 Kaffe 即将发布新版本 FreeBSD 现有的 1.0b3 移植版本过于陈旧应改用快照	A1 补空格；版本正名 1.0b3
+S-001394	1999年6月8日Mittelstaedt说在FreeBSD3x上成功构建jdk12引导版	1999 年 6 月 8 日 Mittelstaedt 说在 FreeBSD 3.x 上成功构建 jdk1.2 引导版	A1 补空格；版本依正文
+S-001397	1999年12月24日Ben在FreeBSD228上用AOUT版JDK118运行jdb调试	1999 年 12 月 24 日 Ben 在 FreeBSD 2.2.8 上用 AOUT 版 JDK 1.1.8 运行 jdb 调试	A1 补空格；版本依正文
+S-001400	2000年4月1日Software2GoMotif在FreeBSD上运行还缺libXp扩展库链接	2000 年 4 月 1 日 Software2Go Motif 在 FreeBSD 上运行还缺 libXp 扩展库链接	A1+A2 补空格；产品名拆分
+S-001403	2000年5月24日默认fontproperties采用JDK自带Lucida字体回退为Courier	2000 年 5 月 24 日默认 font.properties 采用 JDK 自带 Lucida 字体回退为 Courier	A1 补空格；配置文件名正名
+S-001408	2000年10月29日MaxKhon反问对方究竟想修正什么并引述libgcc未做动态构建	2000 年 10 月 29 日 Max Khon 反问对方究竟想修正什么并引述 libgcc 未做动态构建	A1+A2 补空格拆人名
+S-001409	2001年1月16日TheHermitHacker贴出jdk12beta打包阶段的构建日志	2001 年 1 月 16 日 The Hermit Hacker 贴出 jdk12-beta 打包阶段的构建日志	A1+A2 补空格；版本依正文
+S-001410	2001年2月23日Nate握有BSDi构建的JDK120补丁光盘因法律问题分发悬置	2001 年 2 月 23 日 Nate 握有 BSDi 构建的 JDK 1.2.0 补丁光盘因法律问题分发悬置	A1 补空格；版本依正文
+S-001275	2003年6月10日GregLewis回应jdk13在51RELEASE编译失败是include顺序问题	2003 年 6 月 10 日 Greg Lewis 回应 jdk13 在 5.1-RELEASE 编译失败是 include 顺序问题	A1+A2 补空格；版本依正文
+S-001412	2001年6月15日提问者问源码编译Apache另装JDK与MySQL的机器能否直接装JDBC端口	2001 年 6 月 15 日提问者问源码编译 Apache 另装 JDK 与 MySQL 的机器能否直接装 JDBC 端口	A1 补空格
+S-001413	2001年7月18日KeesJan把问题归因于Linuxulator加载库时重排路径	2001 年 7 月 18 日 Kees Jan 把问题归因于 Linuxulator 加载库时重排路径	A1+A2 补空格拆人名
+S-001415	2001年8月20日BrianSkrab详述用compatlinux的cc带JDKinclude编译JNI目标码	2001 年 8 月 20 日 Brian Skrab 详述用 compat linux 的 cc 带 JDK include 编译 JNI 目标码	A1+A2 补空格；写法依正文
+S-001417	2001年8月30日Uwe说AWT的insets概念对X11陌生X11里insets指窗口装饰边距	2001 年 8 月 30 日 Uwe 说 AWT 的 insets 概念对 X11 陌生，X11 里 insets 指窗口装饰边距	A1 补空格；全角逗号分句
+S-001419	2001年9月22日添加native参数时无法找到JIT编译器	2001 年 9 月 22 日添加 -native 参数时无法找到 JIT 编译器	A1 补空格；参数名依正文
+S-001420	2001年10月14日Greg宣布patchset5加入NetBSD支持greenthreads内核稳固	2001 年 10 月 14 日 Greg 宣布 patchset 5 加入 NetBSD 支持，green threads 内核稳固	A1+A2 补空格；词组依正文拆分
+S-001422	2001年11月28日编译208版本源码非J2EE的JDBC2类均可构建但旧JDBC1类无法编出	2001 年 11 月 28 日编译 2.0.8 版本源码非 J2EE 的 JDBC2 类均可构建但旧 JDBC1 类无法编出	A1 补空格；版本正名 2.0.8
+S-001423	2001年12月12日选择pthreads方案的主要原因是HotSpot虚拟机对其有依赖	2001 年 12 月 12 日选择 pthreads 方案的主要原因是 HotSpot 虚拟机对其有依赖	A1 补空格
+S-001424	2002年1月3日作者在FreeBSD44上用131的AudioClip播放WAV文件永久等待	2002 年 1 月 3 日作者在 FreeBSD 4.4 上用 1.3.1 的 AudioClip 播放 WAV 文件永久等待	A1 补空格；版本依正文
+S-001425	2002年1月24日作者在FreeBSD44与jdk131p5下发现getHostName令程序挂起	2002 年 1 月 24 日作者在 FreeBSD 4.4 与 jdk1.3.1p5 下发现 getHostName 令程序挂起	A1 补空格；版本依正文
+S-001277	2003年11月24日AleksanderRozman报51RELEASE装linuxsunjdk14遇Heap卡死	2003 年 11 月 24 日 Aleksander Rozman 报 5.1-RELEASE 装 linux-sun-jdk14 遇 Heap 卡死	A1+A2；版本正名；拆人名
+S-001428	2002年2月16日开启调试模式编译Mozilla会稳定触发插件加载失败	2002 年 2 月 16 日开启调试模式编译 Mozilla 会稳定触发插件加载失败	A1 补空格
+S-001429	2002年2月20日经ports cvsup更新后证实判断正确构建仍因缺gtk123依赖失败	2002 年 2 月 20 日经 ports cvsup 更新后证实判断正确构建仍因缺 gtk12.3 依赖失败	A1 补空格；依赖包版本正名
+S-001432	2002年3月13日作者更新到patchset6后原生jdk131仍显示GMT+0600	2002 年 3 月 13 日作者更新到 patchset6 后原生 jdk1.3.1 仍显示 GMT+0600	A1 补空格；GMT 去冒号避禁字符
+S-001434	2002年6月27日BillHuey认为HotSpot核心代码已足够成熟便于新人参与维护	2002 年 6 月 27 日 Bill Huey 认为 HotSpot 核心代码已足够成熟便于新人参与维护	A1+A2 补空格拆人名
+S-001435	2002年7月10日EddyYoung报告patchset6构建JDK131时JAVA_REQUEST_PLUGIN未声明	2002 年 7 月 10 日 Eddy Young 报告 patchset 6 构建 JDK 1.3.1 时 JAVA_REQUEST_PLUGIN 未声明	A1+A2 补空格；版本与宏名依正文
+S-001436	2002年8月14日BillHuey回复Huangwenhui关于Threadsleep异常缓慢	2002 年 8 月 14 日 Bill Huey 回复 Huang wen hui 关于 Thread.sleep 异常缓慢	A1+A2 补空格；名从主人依正文
+S-001438	2002年8月27日ArchieCobbs反问含原生库的JAR该如何归类	2002 年 8 月 27 日 Archie Cobbs 反问含原生库的 JAR 该如何归类	A1+A2 补空格拆人名
+S-001440	2002年9月21日BrianKorver报告在tomcat下运行webapp抛出AbstractMethodError	2002 年 9 月 21 日 Brian Korver 报告在 tomcat 下运行 webapp 抛出抽象方法错误	A2 长异常类名转述；A1 补空格
+S-001442	2002年10月15日DaveGlowacki指出linuxsunjdk122不含javaxnaming类	2002 年 10 月 15 日 Dave Glowacki 指出 linux-sun-jdk1.2.2 不含 javax.naming 类	A1+A2 补空格；包名正名
+S-001443	2002年10月26日MichaelMercer说在gdb输入where后拿到回溯	2002 年 10 月 26 日 Michael Mercer 说在 gdb 输入 where 后拿到回溯	A1+A2 补空格拆人名
+S-001283	2004年7月19日JeremyFaulkner提交EclipseCDT20端口供测试	2004 年 7 月 19 日 Jeremy Faulkner 提交 Eclipse CDT 2.0 端口供测试	A1+A2 补空格；版本依正文
+S-001444	2002年10月31日AlexWilkinson追问升级流程	2002 年 10 月 31 日 Alex Wilkinson 追问升级流程	A1+A2 补空格拆人名
+S-001445	2002年11月15日Greg发布JDK14适配FreeBSD的首批补丁集	2002 年 11 月 15 日 Greg 发布 JDK 1.4 适配 FreeBSD 的首批补丁集	A1 补空格；版本依正文
+S-001446	2002年11月25日Alexey推测gethostbyaddr_r函数被动态链接器错误解析	2002 年 11 月 25 日 Alexey 推测 gethostbyaddr_r 函数被动态链接器错误解析	A1 补空格
