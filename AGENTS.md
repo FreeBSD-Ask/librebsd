@@ -56,7 +56,7 @@
 | 08 | `08-核查报告与多轮复核/` | 汇总报告／多轮复核／目录审计＋`review_reports.duckdb`；`重构2026/` 仅存历史归档（`review_logs/`、`目录裁决归档-20261022/`、`_prep_20260915/`、内层 `12-重构大纲书目述评/`、`script/`），活动目录页与号文已迁 `05-卷册大纲/目录/`＋`12-重构大纲书目述评/`（25 卷分卷＋`index.md`，无块卷不建文件）＋`06-全书综合核查/`＋`07-目录审计/`＋G5 历史争议图谱／G6 比较史／G8 同行评议／G11 可复现性（各目录仅存 `index.md`，内容在库）＋`13-deepseek-cankao消解归档/`；`07-目录审计/` 旧件冻结、**新批次不入库**（执行记录归 `05-卷册大纲/目录/` 顶层，2026-10-20 起） |
 | 10 | `10-交叉索引/` | 八类索引（人名／主题／命令／术语／年代 G9／组织机构 G10／概念史 G2／人物传记 G3）已入 `cross_indexes.duckdb`（10 表）；顶层存 `S03-历史对象登记表.md` 与 `S03-historical_objects.json` |
 | 11 | `11-元数据接口/` | `01-章节元数据/chapter_index.json`、`02-交叉引用/cross_reference_map.csv`、`09-文件夹数据库索引/`（`folder_db_registry.csv`＋`cross_db_references.csv`＋`dashboard.md`）＋`metadata_interfaces.duckdb`（含 `build_citation_records` 引文记录＝G7／`timeline_records`）＋`ndb构建脚本-20260922/` |
-| 12 | `12-数据库备份/` | 备份与归档层（补编号缺口 12）；`backup_databases.py`（SCOPE 27 库＝15 功能/史料库＋12 代码仓库库；`--all` 实轮 26 库，historical_claims 由 hc 专项独担）＋`backup_outline.py`（`05-卷册大纲/` tar.gz）；运行日志 `backup_log.jsonl`；**删除本目录任何内容须用户明示** |
+| 12 | `12-数据库备份/` | 备份与归档层（补编号缺口 12）；`backup_databases.py`（SCOPE 28 库＝16 功能/史料库＋12 代码仓库库；`--all` 实轮 27 库，historical_claims 由 hc 专项独担）＋`backup_outline.py`（`05-卷册大纲/` tar.gz）；运行日志 `backup_log.jsonl`；**删除本目录任何内容须用户明示** |
 | 13 | `13-软件工程/` | 工程实践方法论基线（原 `13-engineering-doctrine/`，2026-10-29 改名；`ADR-0001` 采纳）：`00-philosophy.md`–`07-delivery.md` 八篇＋`templates/` 九件模板＋`NOTICE.md` 回流记录。**正文不直接改**，可普适条款按 `NOTICE.md` 版本化回流（见 `工程实践规则.md`）；本项目无 PR 平台，模板以批次提交核对清单落地 |
 
 **编号缺口 06、09**：06 为正文层停用后的空号，09 为保留空号；两号不得复用。

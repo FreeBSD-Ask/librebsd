@@ -20,10 +20,10 @@ freebsd-fridays/bsd-conferences-youtube/freebsd-office-hours），SCOPE 相应�
 historical_claims 单份约 210.6MB。
 ③三次令（备份范围裁剪，2026-10-14）：**播客库 10 个自 SCOPE 移除，不纳入备份**（原文物可再生成，
 无需常备防护）；**邮件列表库（261 分库）与新闻组库（usenet_mail）确认排除**（本不在范围）；
-**references_fulltext 全文数据库保留常备**。裁剪后范围＝15 功能/史料库 + 12 代码仓库库 = 27 库（2026-10-25 新增 `tuhs_wiki`）。
+**references_fulltext 全文数据库保留常备**。裁剪后范围＝16 功能/史料库 + 12 代码仓库库 = 28 库（2026-10-25 新增 `tuhs_wiki`；2026-10-29 新增 `login-zazhi`——15-login 语料 md 不入库，该库为语料唯一工作副本，481MB 走轻槽）。
 详见流程规则「数据库备份保留规则」小节。
 ④四次裁定（2026-10-14，ykla 令「A」）：**historical_claims 由专项任务独担**——`--all` 备份循环
-跳过该库（`ALL_SKIP`），消除与 `librebsd-hc-backup-30min` 的重复备份；dball 实轮转 26 库 + hc 专项 1 库；
+跳过该库（`ALL_SKIP`），消除与 `librebsd-hc-backup-30min` 的重复备份；dball 实轮转 27 库 + hc 专项 1 库；
 轮换（prune）维持全库收尾（幂等）。另：三任务执行程序已改 **pythonw.exe**（无窗口后台，2026-10-14 ykla 令）——
 std 流为空时自动重定向至 `12-数据库备份/backup_console.log`。
 ⑤五次令（2026-10-14）：**桌面执行日志**——每次运行向 `桌面/数据库备份.txt` 追加一行成功/失败记录
@@ -94,9 +94,10 @@ if (sys.stdout is None or sys.stderr is None) and BASE:
     if sys.stderr is None:
         sys.stderr = _con
 
-# 备份范围：15 个功能/史料正式库 + 12 个代码仓库库 = 27 库
+# 备份范围：16 个功能/史料正式库 + 12 个代码仓库库 = 28 库
 # （2026-10-14 三次令裁剪：播客 10 库移出；邮件列表库/新闻组库本不在范围；references_fulltext 全文数据库保留）
 # （2026-10-14 裁定 A：--all 备份循环跳过 historical_claims（ALL_SKIP）——该库由 hc 专项任务独担）
+# （2026-10-25 新增 tuhs_wiki；2026-10-29 新增 login-zazhi——15-login 语料 md 不入库，该库即语料唯一工作副本）
 SCOPE = {
     "changelog": r"01-项目管理\00-变更记录\changelog.duckdb",
     "sacred_sources": r"02-sacred源材料\sacred_sources.duckdb",
@@ -108,6 +109,7 @@ SCOPE = {
     # 同步排除（确认）：邮件列表库（261 分库）与新闻组库 usenet_mail 本不在范围；references_fulltext 保留。
     "original_sources": r"03-原始史料库\original_sources.duckdb",
     "tuhs_wiki": r"03-原始史料库\16-TUHS-Wiki史料\tuhs_wiki.duckdb",
+    "login-zazhi": r"03-原始史料库\15-login杂志史料\login-zazhi.duckdb",
     "research_notes": r"04-现代研究文献\research_notes.duckdb",
     "historical_claims": r"04-现代研究文献\historical_claims.duckdb",
     "causal_graph": r"04-现代研究文献\causal_graph.duckdb",
@@ -154,6 +156,10 @@ DENSE_POLICY = {
 for _k in ("freebsd", "netbsd", "openbsd", "dragonfly", "openzfs", "bsd-derivatives",
            "cross_source_identity", "illumos-gate", "openssh-apple", "openssh", "darwin", "linux-kernel"):
     DENSE_POLICY[_k] = {"dense_minutes": 30, "dense_window_hours": 0, "daily_slots": [1, 2, 3, 4, 7, 15]}
+# 2026-10-29：15-login 语料库 481MB（md 语料不入库，本库即语料唯一工作副本）同走轻槽，
+# 避免 24 小时密槽按 5 小时频次堆积大档。
+DENSE_POLICY["login-zazhi"] = {"dense_minutes": 30, "dense_window_hours": 0,
+                               "daily_slots": [1, 2, 3, 4, 7, 15]}
 
 # 2026-10-14 ykla 裁定 A：historical_claims 由专项任务 librebsd-hc-backup-30min 独担——
 # --all 备份循环跳过该库（消除重复备份：此前该库每 ~15 分钟被双任务各备一份）；

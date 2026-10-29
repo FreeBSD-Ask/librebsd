@@ -123,7 +123,7 @@ G2_RATIO = 0.9
 
 
 def load_scope():
-    """复用 backup_databases.py 的 SCOPE（全库枚举，26 库）。"""
+    """复用 backup_databases.py 的 SCOPE（全库枚举，27 库）。"""
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "backup_databases.py")
     spec = importlib.util.spec_from_file_location("backup_databases", path)
     m = importlib.util.module_from_spec(spec)

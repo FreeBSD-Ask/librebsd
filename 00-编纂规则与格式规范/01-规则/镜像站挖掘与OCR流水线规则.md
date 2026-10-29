@@ -148,4 +148,4 @@
 ### 6.5 执行件与登记
 
 - 抓取器：`脚本与命令/tuhs_wiki_crawl.py`；主验证器：`脚本与命令/verify_tuhs_wiki.py`；独立复核器：`脚本与命令/verify_tuhs_wiki_sql.py`；Schema：`脚本与命令/tuhs_wiki_schema.sql`。
-- 库路径登记于 `流程规则.md`“功能数据库唯一真值路径与空壳防治”；备份纳入 `backup_databases.py` SCOPE（27 库）；登记簿与看板同步 `11-元数据接口/09-文件夹数据库索引/`。
+- 库路径登记于 `流程规则.md`“功能数据库唯一真值路径与空壳防治”；备份纳入 `backup_databases.py` SCOPE（28 库）；登记簿与看板同步 `11-元数据接口/09-文件夹数据库索引/`。
