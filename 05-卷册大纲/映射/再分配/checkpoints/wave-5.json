@@ -1,0 +1,48 @@
+{
+  "batch_no": "W05",
+  "wave": 5,
+  "volumes": [
+    17,
+    18,
+    19,
+    20
+  ],
+  "rows": 7265,
+  "source_id_range": [
+    "S-029929",
+    "S-037193"
+  ],
+  "sub_batches": [
+    {
+      "sub": "W05a",
+      "volumes": [
+        17,
+        18,
+        19
+      ],
+      "rows": 1669
+    },
+    {
+      "sub": "W05b",
+      "volumes": [
+        20
+      ],
+      "rows": 5596
+    }
+  ],
+  "disposition": {
+    "EXISTING_SECTION": 197,
+    "VIRTUAL_TARGET": 1387,
+    "REVIEW": 186,
+    "AGGREGATE_CANDIDATE": 5495,
+    "UNMAPPED_KEEP": 0,
+    "DUPLICATE": 0
+  },
+  "inputs": {
+    "mapping.tsv": "f229ebafb8de52dd00c072a71cbbff19a090c08e467d401c18d4a0307970ee8e",
+    "targets.tsv": "32953902672b0b676dd74934ebb327ed775adee870d09f6b92daf1ae09f82102",
+    "outline.txt": "b21eaddfeafb91aeaa4b79608fd332923bc38d1ea39a64edf924ce5afc2dc461",
+    "12-chapter-level-targets.tsv": "06c7017701a192256e4510d8e29aa862dfd4d56719aaba3302ff0a240184f9be"
+  },
+  "method": "p02_recheck.py"
+}

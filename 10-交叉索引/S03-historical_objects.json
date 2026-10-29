@@ -1,0 +1,4498 @@
+{
+ "generated": "2026-10-06",
+ "metrics": {
+  "volumes": 54,
+  "chapters": 454,
+  "sections": 3683,
+  "notes": 870
+ },
+ "layer_object": [
+  "人物",
+  "组织·机构",
+  "代码树·版本",
+  "技术物",
+  "制度·许可证",
+  "事件",
+  "概念"
+ ],
+ "layer_subject": [
+  "操作系统",
+  "项目",
+  "基金会",
+  "团队与职位"
+ ],
+ "volumes": [
+  {
+   "vol": 1,
+   "title": "自由与必然：从图灵机到 UNIX",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 2,
+   "title": "UNIX 软件工程、哲学与文化",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 3,
+   "title": "UNIX 技术专题史",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 4,
+   "title": "通往西部的帝国之路：从贝克莱到伯克利",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 5,
+   "title": "BSD 伊始与早期发行",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 6,
+   "title": "从 4BSD 到 4.3BSD 的 CSRG 时代",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 7,
+   "title": "CSRG 后期发行、可移植性与源码独立化",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 8,
+   "title": "GNU 与自由软件运动",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "事件、人物、概念"
+  },
+  {
+   "vol": 9,
+   "title": "独立操作系统的形成：从 Linux Kernel 到 GNU/Linux",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 10,
+   "title": "UNIX 战争：联盟、阵营与体系整合",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 11,
+   "title": "法律危机：USL 诉讼与 BSD 存亡",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 12,
+   "title": "UNIX 标准化：从 POSIX 到单一规范",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 13,
+   "title": "CSRG 终局：4.4BSD-Lite、和解协议与伯克利谢幕",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 14,
+   "title": "386BSD：BSD UNIX 的现代化与分水岭",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 15,
+   "title": "BSD 的变种与衍生：从商业授权到主干诸系",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 16,
+   "title": "BSD UNIX 大分裂：三大分支的确立",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 17,
+   "title": "BSD UNIX 文化与哲学",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 18,
+   "title": "BSD UNIX 技术专题史",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 19,
+   "title": "开源运动：话语权、与其作为手段的自由软件之辨",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "事件、制度、概念"
+  },
+  {
+   "vol": 20,
+   "title": "GNU/Linux 与 BSD：来源、参照与判定",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、事件"
+  },
+  {
+   "vol": 21,
+   "title": "从大教堂到集市：FreeBSD 操作系统的历史",
+   "subject_key": "operating_system",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、事件（发行）"
+  },
+  {
+   "vol": 22,
+   "title": "FreeBSD 技术专题史",
+   "subject_key": "technology",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物"
+  },
+  {
+   "vol": 23,
+   "title": "FreeBSD 文化、社会与哲学",
+   "subject_key": "project",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构（项目）、事件（决策）、制度"
+  },
+  {
+   "vol": 24,
+   "title": "可移植的执念：NetBSD 操作系统的历史",
+   "subject_key": "operating_system",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、事件（发行）"
+  },
+  {
+   "vol": 25,
+   "title": "NetBSD 技术专题史",
+   "subject_key": "technology",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物"
+  },
+  {
+   "vol": 26,
+   "title": "NetBSD 文化、社会与哲学",
+   "subject_key": "project",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构（项目）、事件（决策）、制度"
+  },
+  {
+   "vol": 27,
+   "title": "世界上最安全的操作系统：OpenBSD 的历史",
+   "subject_key": "operating_system",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、事件（发行）"
+  },
+  {
+   "vol": 28,
+   "title": "OpenBSD 技术专题史",
+   "subject_key": "technology",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物"
+  },
+  {
+   "vol": 29,
+   "title": "OpenBSD 文化、社会与哲学",
+   "subject_key": "project",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构（项目）、事件（决策）、制度"
+  },
+  {
+   "vol": 30,
+   "title": "DragonFly BSD 操作系统的历史",
+   "subject_key": "operating_system",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、事件（发行）"
+  },
+  {
+   "vol": 31,
+   "title": "DragonFly 技术专题史",
+   "subject_key": "technology",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物"
+  },
+  {
+   "vol": 32,
+   "title": "DragonFly BSD 文化、社会与哲学",
+   "subject_key": "project",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构（项目）、事件（决策）、制度"
+  },
+  {
+   "vol": 33,
+   "title": "FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 技术发展史的横向比较",
+   "subject_key": "parallel",
+   "subject": "四方并列",
+   "objects": "技术物、事件"
+  },
+  {
+   "vol": 34,
+   "title": "FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 文化、社会与哲学的横向比较",
+   "subject_key": "parallel",
+   "subject": "四方并列",
+   "objects": "概念、事件、制度"
+  },
+  {
+   "vol": 35,
+   "title": "沉默的基石：BSD 技术的扩散、商业化与隐性遗产",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、组织·机构、事件"
+  },
+  {
+   "vol": 36,
+   "title": "BSD 的衍生与分叉：主干诸系的分岔与扩散",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、组织·机构"
+  },
+  {
+   "vol": 37,
+   "title": "macOS 历史：经过认证的 UNIX 发行版",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、事件"
+  },
+  {
+   "vol": 38,
+   "title": "BSD 软件作品史",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 39,
+   "title": "BSD 分支的安全工程：防线、漏洞与响应",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 40,
+   "title": "BSD 许可证与法律",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、事件"
+  },
+  {
+   "vol": 41,
+   "title": "BSD 合规、标准与供应链",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "制度·标准、事件"
+  },
+  {
+   "vol": 42,
+   "title": "BSD–Linux 关系史",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 43,
+   "title": "开源运动对自由软件运动的遮蔽与文化挪用",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 44,
+   "title": "Linux 对 BSD、对 UNIX 的遮蔽与文化挪用",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 45,
+   "title": "现代 BSD 分支的治理制度",
+   "subject_key": "institution",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构（法人／团队）、制度、事件"
+  },
+  {
+   "vol": 46,
+   "title": "BSD 治理专题与制度比较",
+   "subject_key": "institution",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、概念"
+  },
+  {
+   "vol": 47,
+   "title": "DARPA 与 BSD 计算机技术史",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "事件、组织·机构、制度"
+  },
+  {
+   "vol": 48,
+   "title": "BSD 社区的世界化与世界化的 BSD",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 49,
+   "title": "开源会议：BSD 与开源共同体的会议网络",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 50,
+   "title": "编程之夏、实习与新人选拔",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 51,
+   "title": "BSD 的传言、都市传说、俚语与习俗",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 52,
+   "title": "BSD 的传播载体与公众记忆",
+   "subject_key": "external",
+   "subject": "BSD 之外",
+   "objects": "事件、组织·机构、概念"
+  },
+  {
+   "vol": 53,
+   "title": "BSD 会者定离的六十年",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  },
+  {
+   "vol": 54,
+   "title": "BSD 史学史与方法",
+   "subject_key": "mixed",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言"
+  }
+ ],
+ "chapters": [
+  {
+   "vol": 1,
+   "ch": 1,
+   "title": "计算的前史：从机械计算到可计算性",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：前史章→其所述对象"
+  },
+  {
+   "vol": 1,
+   "ch": 2,
+   "title": "电子计算机时代与 UNIX 诞生前的产业",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 3,
+   "title": "操作系统的形成",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 4,
+   "title": "Multics：现代操作系统的先驱",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 5,
+   "title": "贝尔实验室计算科学研究中心与 UNIX 的诞生",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 6,
+   "title": "Research UNIX 的形成、鼎盛与寂灭前夜：V1 至 V7",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 7,
+   "title": "Research Unix 的暮年：V8、V9、V10",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 8,
+   "title": "美国科技政策通史：从宪政奠基到冷战国家建制（1789–1969）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 9,
+   "title": "AT&T 同意令与大学授权：法律偶然条件（1925–1984）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 10,
+   "title": "政策塑造：反垄断、科研资助、知识产权与出口管制",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 11,
+   "title": "UNIX 的机器：PDP-11 与 VAX",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 12,
+   "title": "小型机产业的兴衰与终局",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 13,
+   "title": "机器、磁带与机时：UNIX 物质条件的使用面",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 1,
+   "ch": 14,
+   "title": "卷末书目述评：从图灵机到 UNIX 全卷综述",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 2,
+   "ch": 1,
+   "title": "UNIX 软件工程与工具传统",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 2,
+   "ch": 2,
+   "title": "UNIX 哲学、文化与历史记忆",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 2,
+   "ch": 3,
+   "title": "Plan 9：对 UNIX 系统模型的再思考",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 2,
+   "ch": 4,
+   "title": "UNIX 共同体与传播文化：USENIX、用户组与邮件列表（1975–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 2,
+   "ch": 5,
+   "title": "UNIX 的教学制度化：操作系统课程、教材与实验传统（1975–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 1,
+   "title": "内核、进程与进程间通信",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 2,
+   "title": "系统调用与文件描述符",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 3,
+   "title": "UNIX 文件模型与设备 I/O",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 4,
+   "title": "可执行文件、链接与程序装载",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 5,
+   "title": "虚拟内存思想与商用 UNIX 分化",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 6,
+   "title": "C 语言、编译器与 UNIX 的可移植性",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 7,
+   "title": "用户、权限与 UNIX 安全模型",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 8,
+   "title": "Shell、终端与文本工具",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 9,
+   "title": "UNIX 网络协议与工具",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 10,
+   "title": "ARPANET、网络研究共同体与 Internetting",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 11,
+   "title": "软件工程：Research UNIX 时代的工程过程",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 12,
+   "title": "UNIX 技术史的源码考古与史料方法",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 3,
+   "ch": 13,
+   "title": "卷末书目述评：UNIX 技术专题史",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 4,
+   "ch": 1,
+   "title": "贝克莱、伯克利市与加州大学史",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 4,
+   "ch": 2,
+   "title": "计算机科学学科的形成：以伯克利为枢纽",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 4,
+   "ch": 3,
+   "title": "加州大学伯克利分校的制度、治理与政治语境",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 4,
+   "ch": 4,
+   "title": "被遮蔽的 CSRG：组织、档案与解散",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 4,
+   "ch": 5,
+   "title": "CSRG 的教育模式与学术传播",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 4,
+   "ch": 6,
+   "title": "伯克利的学术扩散：技术、人才与制度网络",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 5,
+   "ch": 1,
+   "title": "UNIX 进入伯克利：学术计算环境的形成（1973–1976）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 5,
+   "ch": 2,
+   "title": "1BSD：从 UNIX 源码到伯克利软件发行版（1977–1978）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 5,
+   "ch": 3,
+   "title": "2BSD：vi、C Shell 与 BSD 用户环境的形成（1979）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 5,
+   "ch": 4,
+   "title": "3BSD：VAX 移植与虚拟内存系统的形成（1979–1980）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 5,
+   "ch": 5,
+   "title": "4BSD：VAX 时代的成熟与 BSD 系统能力扩展（1980–1981）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 6,
+   "ch": 1,
+   "title": "4.1BSD：从 4BSD 到 DARPA 支持下的系统扩张（1981）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 6,
+   "ch": 2,
+   "title": "4.1a、4.1b、4.1c：通往 4.2BSD 的过渡工程（1981–1983）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 6,
+   "ch": 3,
+   "title": "4.2BSD：网络化 UNIX 的定型（1983）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 6,
+   "ch": 4,
+   "title": "4.3BSD：性能成熟与 Berkeley UNIX 的扩张（1984–1986）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 7,
+   "ch": 1,
+   "title": "2BSD 平行支线：PDP-11 时代的持续发展（1983–1989）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 7,
+   "ch": 2,
+   "title": "4.3BSD-Tahoe：机器无关化与 BSD 可移植性的转折（1988）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 7,
+   "ch": 3,
+   "title": "Net/1：首次独立网络源码发行（1988–1989）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 7,
+   "ch": 4,
+   "title": "4.3BSD-Reno：走向 4.4BSD 的中间发行（1990）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 7,
+   "ch": 5,
+   "title": "AT&T 代码重写与 Net/2 的形成",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 7,
+   "ch": 6,
+   "title": "Net/2 的发行、传播与历史定位",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 8,
+   "ch": 1,
+   "title": "伯克利软件传统与自由软件运动的前史",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：前史章→其所述对象"
+  },
+  {
+   "vol": 8,
+   "ch": 2,
+   "title": "GNU 计划与自由软件运动的形成",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 8,
+   "ch": 3,
+   "title": "GNU 系统的构造与长期开发",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 8,
+   "ch": 4,
+   "title": "自由软件话语的制度化",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 8,
+   "ch": 5,
+   "title": "自由软件运动的长期延续（1990s–2026）",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 9,
+   "ch": 1,
+   "title": "Minix 与 386 PC：独立操作系统的前史与技术条件（1987–1991）",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": "例外：前史章→其所述对象"
+  },
+  {
+   "vol": 9,
+   "ch": 2,
+   "title": "Linux 0.01 的产生与发布（1991）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 9,
+   "ch": 3,
+   "title": "Linux 早期协作与共同体（1991–1994）",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 9,
+   "ch": 4,
+   "title": "GNU 与 Linux 的组合：从分立项目到共同系统",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 9,
+   "ch": 5,
+   "title": "Linux 的发展与共同体（1991–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 1,
+   "title": "AT&T 的商业化转向与 System V 的形成（1982–1991）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 2,
+   "title": "UNIX 战争的阵营与体系整合（1987–1992）",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 3,
+   "title": "商业 UNIX 的多极市场：Sun、IBM、HP、SGI 与 SCO",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 4,
+   "title": "USL：UNIX 系统实验室与授权机器",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 5,
+   "title": "BSD/386 与 BSD/OS：BSD 阵营的商业化（1991–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 6,
+   "title": "UNIX 产业的外部竞争：Windows NT 与平台转型（1990–1998）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 7,
+   "title": "Linux 的兴起与 UNIX 市场的空窗（1991–2000）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 10,
+   "ch": 8,
+   "title": "卷末书目述评：UNIX 标准化、商业化与 UNIX 战争",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 11,
+   "ch": 1,
+   "title": "386BSD：Net/2 向个人计算机的移植（1992–1993）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 11,
+   "ch": 2,
+   "title": "BSD/386：BSD 商业化与 UNIX 市场（1992–1994）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 11,
+   "ch": 3,
+   "title": "USL v. BSDi：法律危机与发行体系冻结（1992–1994）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 11,
+   "ch": 4,
+   "title": "诉讼的讲述：法律事件如何进入 BSD 集体记忆",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 12,
+   "ch": 1,
+   "title": "Research UNIX 与商业 UNIX 的分流",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 12,
+   "ch": 2,
+   "title": "从 POSIX 到单一 UNIX 规范（1987–1996）",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 12,
+   "ch": 3,
+   "title": "UNIX 继承之争：BSD、GNU 与 Linux",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 13,
+   "ch": 1,
+   "title": "4.4BSD 项目：Alpha、Encumbered 与最终发行准备（1992–1994）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 13,
+   "ch": 2,
+   "title": "和解与 4.4BSD-Lite：Berkeley 源码独立化的完成（1994–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 13,
+   "ch": 3,
+   "title": "4.4BSD 的技术遗产与再发行谱系",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 14,
+   "ch": 1,
+   "title": "《Dr. Dobb's Journal》连载与公开传播（1991–1992）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 14,
+   "ch": 2,
+   "title": "386BSD 的出现与 PC BSD 时代的开始（1992–1993）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 14,
+   "ch": 3,
+   "title": "Patchkit 与 386BSD 的社区维护（1992–1993）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 14,
+   "ch": 4,
+   "title": "386BSD Release 1.0 与 CD-ROM 时代（1994–1997）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 14,
+   "ch": 5,
+   "title": "Release 2.0 与 386BSD 的数字遗存（2016）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 15,
+   "ch": 1,
+   "title": "谱系总览：从商业授权到主干诸系",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 15,
+   "ch": 2,
+   "title": "商业工作站与小型机变种",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 15,
+   "ch": 3,
+   "title": "微机时代：386BSD 谱系定位与同期尝试",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 15,
+   "ch": 4,
+   "title": "主干的确立（1993–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 15,
+   "ch": 5,
+   "title": "区别与联系：1995 年前的谱系解释",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 15,
+   "ch": 6,
+   "title": "卷末书目述评",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 16,
+   "ch": 1,
+   "title": "FreeBSD 的诞生：生产系统路线的形成（1993）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 16,
+   "ch": 2,
+   "title": "NetBSD 的诞生：可移植性路线的形成（1993）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 16,
+   "ch": 3,
+   "title": "OpenBSD 的形成：从 NetBSD 分裂到安全路线（1995–1996）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 16,
+   "ch": 4,
+   "title": "BSD 家族的形成：路线分化与共同遗产（1995–2003）",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 16,
+   "ch": 5,
+   "title": "DragonFly BSD：BSD 分叉传统的再次延续（2003）",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 16,
+   "ch": 6,
+   "title": "BSD 分叉史的历史解释与共同演化（1992–2005）",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 1,
+   "title": "伯克利的文化地层：城市、大学与 CSRG 的三角",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 2,
+   "title": "名称与符号：BSD UNIX 的文化身份如何形成",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 3,
+   "title": "共同体实践：发行、协作、反馈与教育",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 4,
+   "title": "从实践到观念：BSD UNIX 的价值与哲学",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 5,
+   "title": "身份、边界与分化前夜",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 6,
+   "title": "美学：BSD UNIX 共同文化",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 17,
+   "ch": 7,
+   "title": "卷末书目述评：BSD UNIX 文化与哲学",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 18,
+   "ch": 1,
+   "title": "BSD 内核结构、调度与进程间通信",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 2,
+   "title": "FFS 与 UFS：BSD UNIX 文件系统的形成与演进",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 3,
+   "title": "虚拟内存、可执行文件与程序装载",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 4,
+   "title": "BSD 工具链与平台移植",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 5,
+   "title": "BSD 安全机制：隔离、能力与包过滤",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 6,
+   "title": "终端、Shell 与文本工具传统",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 7,
+   "title": "网络栈：从 Berkeley TCP/IP 到现代 BSD 网络系统",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 8,
+   "title": "服务层：邮件、域名、文件服务与数据库",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 18,
+   "ch": 9,
+   "title": "卷末书目述评：BSD–UNIX 技术史",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 19,
+   "ch": 1,
+   "title": "开源话语的形成与制度化",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 19,
+   "ch": 2,
+   "title": "自由软件运动与开源运动的横向比较",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 19,
+   "ch": 3,
+   "title": "开源治理的制度化：从企业采纳到开源办公室",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 20,
+   "ch": 1,
+   "title": "Linux、BSD 与 UNIX：来源与参照",
+   "subject": "BSD 之外",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 20,
+   "ch": 2,
+   "title": "代码证据与判定标准",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 20,
+   "ch": 3,
+   "title": "比对工具与谱系基础设施",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 1,
+   "title": "FreeBSD 1.x：386BSD 之后，PC 上的 BSD 如何成为一个独立系统（1993–1994）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 2,
+   "title": "FreeBSD 2.x：4.4BSD-Lite 重新定义 FreeBSD（1994–1998）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 3,
+   "title": "FreeBSD 3.x：4.4BSD-Lite2 合流与现代 FreeBSD 基线（1998–2000）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 4,
+   "title": "FreeBSD 4.x：成熟 Internet Unix 的完整形态（2000–2003）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 5,
+   "title": "FreeBSD 5.x：一场持续数年的操作系统重建（2003–2005）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 6,
+   "title": "FreeBSD 6.x：从重建中的系统重新获得稳定性（2005–2008）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 7,
+   "title": "FreeBSD 7.x：现代服务器的尺度第一次真正改变（2008–2009）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 8,
+   "title": "FreeBSD 8.x：操作系统开始面向虚拟化世界（2009–2012）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 9,
+   "title": "FreeBSD 9.x：重新设计“如何安装和启动一个 FreeBSD”（2012–2014）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 10,
+   "title": "FreeBSD 10.x：基本系统开始脱离传统 Unix 工具链（2014–2016）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 11,
+   "title": "FreeBSD 11.x：FreeBSD 离开传统 PC 的中心位置（2016–2018）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 12,
+   "title": "FreeBSD 12.x：现代平台成为系统基线（2018–2021）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 13,
+   "title": "FreeBSD 13.x：现代 FreeBSD 的基本轮廓定型（2021–2023）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 14,
+   "title": "FreeBSD 14.x：成熟操作系统面向新一代硬件重新定标（2023–2025）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 15,
+   "title": "FreeBSD 15.x：基本系统进入软件包时代（2025–2026）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 21,
+   "ch": 16,
+   "title": "FreeBSD 16.x：基本系统重新定义自身（2026–，在研）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 1,
+   "title": "FreeBSD 存储体系：从 4.4BSD 文件系统到 OpenZFS 时代",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 2,
+   "title": "FreeBSD 网络体系：从 BSD TCP/IP 到高速网络平台",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 3,
+   "title": "FreeBSD 虚拟化体系：从 Jail 到 bhyve",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 4,
+   "title": "FreeBSD 内核并发体系：SMPng 与多核时代",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 5,
+   "title": "FreeBSD 安全架构：隔离、能力与系统防护",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 6,
+   "title": "FreeBSD 基本系统工程：源码、构建与发布",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 7,
+   "title": "FreeBSD 软件生态：Ports、Packages 与 pkg",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 8,
+   "title": "FreeBSD 工具链与开发环境",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 9,
+   "title": "FreeBSD 系统可观测性与性能工程",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 10,
+   "title": "FreeBSD 硬件架构支持：从 i386 到多架构系统",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 11,
+   "title": "软件工程：评审、测试、MFC 与发布工程",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 22,
+   "ch": 12,
+   "title": "FreeBSD 技术路线综合：系统工程与长期演进",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 1,
+   "title": "从 Berkeley UNIX 到 FreeBSD：文化传统的继承与转化（1977–1998）",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 2,
+   "title": "工程文化：代码、文档与系统设计中的价值",
+   "subject": "项目（共同体）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 3,
+   "title": "FreeBSD 与 UNIX 世界：传统、身份与继承关系",
+   "subject": "项目（共同体）",
+   "objects": "制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 4,
+   "title": "FreeBSD 的符号体系：名称、版本与视觉文化",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 5,
+   "title": "FreeBSD 共同体结构：开发者、治理与协作文化",
+   "subject": "项目（共同体）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 6,
+   "title": "用户文化：管理员、Ports 与系统实践传统",
+   "subject": "项目（共同体）",
+   "objects": "人物、技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 7,
+   "title": "自由、商业与 BSD 许可证：法律文本、项目实践与争议",
+   "subject": "项目（共同体）",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 8,
+   "title": "争议、分裂与自我修正：FreeBSD 文化的内在矛盾",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 9,
+   "title": "FreeBSD 的历史记忆与未来想象（1993–2026）：制度连续性与不确定性",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 23,
+   "ch": 10,
+   "title": "美学：FreeBSD 的视觉、文档与代码",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 1,
+   "title": "386BSD 分叉与 NetBSD 的诞生：重新寻找 UNIX/BSD 的延续（1993–1994）",
+   "subject": "操作系统（制品）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 2,
+   "title": "NetBSD 1.x：可移植操作系统理念的确立（1994–2002）",
+   "subject": "操作系统（制品）",
+   "objects": "人物、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 3,
+   "title": "NetBSD 2.x：SMP 与现代内核转型（2002–2005）",
+   "subject": "操作系统（制品）",
+   "objects": "人物、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 4,
+   "title": "NetBSD 3.x–4.x：多平台系统的成熟与嵌入式扩展（2005–2009）",
+   "subject": "操作系统（制品）",
+   "objects": "人物、组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 5,
+   "title": "NetBSD 5.x：大规模内核重构与现代化困难（2009–2012）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 6,
+   "title": "NetBSD 6.x–7.x：现代硬件时代的适应（2012–2018）",
+   "subject": "操作系统（制品）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 7,
+   "title": "NetBSD 8.x：ARM 现代化与现代平台扩展（2018–2020）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 8,
+   "title": "NetBSD 9.x：AArch64 支持与内核现代化（2020–2024）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 9,
+   "title": "NetBSD 10.x：性能与可扩展性的世代转换（2024–2026）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 10,
+   "title": "NetBSD 历史中的人物、争议与思想遗产",
+   "subject": "操作系统（制品）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 24,
+   "ch": 11,
+   "title": "卷末史料与研究方法",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 25,
+   "ch": 1,
+   "title": "可移植操作系统架构：MI/MD 与 NetBSD 内核设计（1993–2026）",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 2,
+   "title": "多平台移植史：从工作站 UNIX 到现代架构（1993–2026）",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 3,
+   "title": "内核组件化与 Anykernel：rump kernel（2005–2026）",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 4,
+   "title": "内核并发与 SMP：从单处理器 UNIX 到多核系统",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 5,
+   "title": "NetBSD 构建、发布与工程体系",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 6,
+   "title": "文件系统与存储体系",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 7,
+   "title": "网络系统：BSD 网络传统的继承与重构",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 8,
+   "title": "pkgsrc 与 NetBSD 软件生态",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 9,
+   "title": "NetBSD 系统安全机制",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 10,
+   "title": "虚拟化、运行环境与技术路线总结",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 25,
+   "ch": 11,
+   "title": "软件工程：build.sh、atf 与发布工程",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 1,
+   "title": "分化轴总论：从 BSD 遗产到可移植性原则（1993–2026）",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 2,
+   "title": "工程哲学的物质基础：一致性、简洁性与长期主义",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 3,
+   "title": "名称、符号与身份：NetBSD 的自我表达",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 4,
+   "title": "共同体与治理文化：开发者、基金会与长期维护",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 26,
+   "ch": 5,
+   "title": "许可证、自由观与产业关系：宽松许可路线",
+   "subject": "项目（共同体）",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 6,
+   "title": "争议、批评与自我反思：可移植性主张的边界",
+   "subject": "项目（共同体）",
+   "objects": "人物、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 7,
+   "title": "美学：NetBSD 的一致性与符号",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、代码树·版本、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 26,
+   "ch": 8,
+   "title": "卷末书目述评：NetBSD 文化、社会与哲学史料总目",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 27,
+   "ch": 1,
+   "title": "OpenBSD 起源（1995–1996）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 2,
+   "title": "OpenBSD 2.x：OpenSSH 诞生与审计文化形成（1996–2001）",
+   "subject": "操作系统（制品）",
+   "objects": "人物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 3,
+   "title": "OpenBSD 3.x：pf 与主动安全工程（2001–2005）",
+   "subject": "操作系统（制品）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 4,
+   "title": "OpenBSD 4.x：安全机制体系化（2006–2010）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 5,
+   "title": "OpenBSD 5.x：LibreSSL 与工具链自主化（2011–2015）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 6,
+   "title": "OpenBSD 6.x：pledge/unveil 与现代安全模型（2016–2021）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 7,
+   "title": "OpenBSD 7.x：现代硬件时代与代码政策（2021–2026）",
+   "subject": "操作系统（制品）",
+   "objects": "技术物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 27,
+   "ch": 8,
+   "title": "卷末书目述评：OpenBSD 历史研究方法",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 28,
+   "ch": 1,
+   "title": "安全工程体系：从代码审计到主动防御（1995–2026）",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 2,
+   "title": "内核安全机制：内存保护、执行控制与随机化",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 3,
+   "title": "进程隔离与最小权限模型",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 4,
+   "title": "网络安全基础设施：pf 与互联网协议工程",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 5,
+   "title": "密码学基础设施：OpenSSH、LibreSSL 与 TLS",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 6,
+   "title": "编译器、链接器与安全构建环境（GCC-local 时代与 LLVM 接管）",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 7,
+   "title": "UNIX 用户空间与基本系统工具",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 8,
+   "title": "网络服务与系统守护进程安全",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 9,
+   "title": "Ports、软件生态与安全维护",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 10,
+   "title": "架构移植、硬件支持与安全边界",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 11,
+   "title": "软件工程：CVS 流程、六个月节奏与快照发布",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 28,
+   "ch": 12,
+   "title": "OpenBSD 安全工程路线的整合与演进",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 1,
+   "title": "分化轴总论：主动安全与许可证纯化——从 CSRG/USENIX 到 OpenBSD 的分化",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 2,
+   "title": "工程哲学的物质基础：审计文化与重构传统",
+   "subject": "项目（共同体）",
+   "objects": "技术物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 3,
+   "title": "符号、名称与仪式：Puffy、发行歌曲与 hackathon",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 4,
+   "title": "共同体与治理文化：核心维护者、开发圈与开放边界",
+   "subject": "项目（共同体）",
+   "objects": "人物、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 5,
+   "title": "价值、许可证与自由观：ISC 许可、安全共享与产业关系",
+   "subject": "项目（共同体）",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 6,
+   "title": "争议、批评与自我批评：安全声誉的形成与边界",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 7,
+   "title": "美学：OpenBSD 的极简与仪式",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 29,
+   "ch": 8,
+   "title": "卷末书目述评：OpenBSD 文化、社会与哲学",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 30,
+   "ch": 1,
+   "title": "FreeBSD 路线分歧与 DragonFly BSD 的创建",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 2,
+   "title": "分叉的争论、技术继承与历史定位",
+   "subject": "操作系统（制品）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 3,
+   "title": "DragonFly 1.x：LWKT 与消息传递内核实验（2004–2007）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 4,
+   "title": "DragonFly 2.x：HAMMER 文件系统实验（2008–2010）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 5,
+   "title": "DragonFly 3.x–4.x：HAMMER2 与现代内核架构探索（2011–2017）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 6,
+   "title": "DragonFly 4.x：现代硬件支持与系统现代化（2015–2017）",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 7,
+   "title": "DragonFly 5.x：HAMMER2 成熟与现代系统能力（2017–2020）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 8,
+   "title": "DragonFly 6.x：持续维护与未来路线（2021–2026）",
+   "subject": "操作系统（制品）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 30,
+   "ch": 9,
+   "title": "DragonFly BSD 技术遗产与史料方法",
+   "subject": "操作系统（制品）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 1,
+   "title": "LWKT 与内核架构重构：从 FreeBSD 分叉到消息传递模型",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 2,
+   "title": "SMP、多核与内核扩展路线",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 3,
+   "title": "HAMMER 文件系统：面向历史版本保留的存储模型",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 4,
+   "title": "vkernel 与系统实验环境",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 5,
+   "title": "Clustered Objects 与分布式系统实验",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 6,
+   "title": "用户空间、软件包与系统生态分化",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 7,
+   "title": "网络、驱动与硬件支持",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 8,
+   "title": "虚拟化与现代运行环境",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 9,
+   "title": "DragonFly 技术路线整合与演进",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 31,
+   "ch": 10,
+   "title": "软件工程：git 流程、小团队协作与发布",
+   "subject": "操作系统之技术物（对象层）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 1,
+   "title": "分化轴总论：多核时代的架构实验与 BSD 遗产重构",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 2,
+   "title": "工程哲学的物质基础：内核重构与可扩展性实验",
+   "subject": "项目（共同体）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 3,
+   "title": "符号、名称与社区认同：DragonFly 标识与低仪式化文化",
+   "subject": "项目（共同体）",
+   "objects": "人物、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 4,
+   "title": "共同体与治理文化：核心维护模式与小规模项目结构",
+   "subject": "项目（共同体）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 5,
+   "title": "价值、许可证与自由观：代码流动与生态位置",
+   "subject": "项目（共同体）",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 6,
+   "title": "争议、批评与自我反思：创新路线的长期影响",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 7,
+   "title": "美学：DragonFly BSD 的命名与低仪式",
+   "subject": "项目（共同体）",
+   "objects": "代码树·版本、技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 32,
+   "ch": 8,
+   "title": "卷末书目述评：DragonFly BSD 文化、社会与哲学",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 33,
+   "ch": 1,
+   "title": "存储系统的新阶段：ZFS、HAMMER 与现代 BSD",
+   "subject": "四方并列",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 2,
+   "title": "多处理、内核重构与虚拟化",
+   "subject": "四方并列",
+   "objects": "技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 3,
+   "title": "跨项目技术流动与 BSD 技术的继承关系",
+   "subject": "四方并列",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 4,
+   "title": "软件工程：从 CSRG 到 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的工程过程",
+   "subject": "四方并列",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 5,
+   "title": "网络与密码安全",
+   "subject": "四方并列",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 6,
+   "title": "软件供应链安全",
+   "subject": "四方并列",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 7,
+   "title": "技术路线横向比较总论：分支取舍与相互影响",
+   "subject": "四方并列",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 33,
+   "ch": 8,
+   "title": "卷末书目述评：技术发展史比较的方法与史料边界",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 34,
+   "ch": 1,
+   "title": "比较史的方法与历史前提",
+   "subject": "四方并列",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 2,
+   "title": "BSD 后继系统的主要发展路线",
+   "subject": "四方并列",
+   "objects": "组织·机构、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 3,
+   "title": "工程哲学与系统设计文化",
+   "subject": "四方并列",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 4,
+   "title": "身份表达、符号与社区仪式",
+   "subject": "四方并列",
+   "objects": "人物、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 5,
+   "title": "治理结构与共同体形成",
+   "subject": "四方并列",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 6,
+   "title": "许可证实践与代码流动",
+   "subject": "四方并列",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 7,
+   "title": "技术遗产与历史影响",
+   "subject": "四方并列",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 8,
+   "title": "美学：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的横向比较",
+   "subject": "四方并列",
+   "objects": "制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 34,
+   "ch": 9,
+   "title": "历史记忆与比较史反思",
+   "subject": "四方并列",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 1,
+   "title": "从学术 UNIX 到产业基础软件",
+   "subject": "BSD 之外",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 2,
+   "title": "SunOS：BSD 进入工作站与商业 UNIX",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 3,
+   "title": "BSDI：Berkeley UNIX 的直接商业化",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 4,
+   "title": "从 Berkeley Sockets 到 Internet 编程接口",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 5,
+   "title": "商业 UNIX 中的 Berkeley 技术",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 6,
+   "title": "BSD 作为网络设备操作系统",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 7,
+   "title": "BSD 作为存储设备基础",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 8,
+   "title": "大规模互联网服务中的 FreeBSD",
+   "subject": "BSD 之外",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 9,
+   "title": "消费电子与游戏主机中的 BSD",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 10,
+   "title": "Berkeley 软件传统的独立扩散",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 11,
+   "title": "沉默的基石：BSD 遗产为何逐渐不可见",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 35,
+   "ch": 12,
+   "title": "重建 BSD 扩散史的证据与方法",
+   "subject": "BSD 之外",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 1,
+   "title": "谱系总览：后分裂时代的分岔、派生与移植",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 2,
+   "title": "FreeBSD 系衍生",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 3,
+   "title": "NetBSD 系衍生",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 4,
+   "title": "OpenBSD 系衍生",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 5,
+   "title": "DragonFly 系与跨 BSD 衍生",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 6,
+   "title": "区别与联系：谱系的解释框架",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 36,
+   "ch": 7,
+   "title": "卷末书目述评",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 37,
+   "ch": 1,
+   "title": "苹果公司的诞生与早期道路（1976–1985）",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 2,
+   "title": "NeXT、Rhapsody 与 BSD 商业化路线",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 3,
+   "title": "Darwin 的开放核心期：macOS 的 UNIX 基础",
+   "subject": "BSD 之外",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 4,
+   "title": "macOS 系统演进：BSD 层的持续存在",
+   "subject": "BSD 之外",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 5,
+   "title": "iOS 中的 BSD 与 UNIX 认证哲学",
+   "subject": "BSD 之外",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 6,
+   "title": "Apple 生态中的 BSD：从内核到用户空间",
+   "subject": "BSD 之外",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 7,
+   "title": "其他 BSD 衍生与 macOS：交叉采用与谱系旁支",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 8,
+   "title": "代码流动与技术继承：macOS、BSD 与 Linux",
+   "subject": "BSD 之外",
+   "objects": "人物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 37,
+   "ch": 9,
+   "title": "卷末书目述评：macOS BSD 遗产研究",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 38,
+   "ch": 1,
+   "title": "Berkeley 软件作品传统的形成（1977–1993）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 2,
+   "title": "vi：Unix 编辑器传统的形成",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 3,
+   "title": "csh 与 Unix Shell 软件传统",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 4,
+   "title": "curses、termcap 与终端软件生态",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 5,
+   "title": "BSD 网络软件作品：socket、TCP/IP 与 Internet 工具",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 6,
+   "title": "sendmail：互联网邮件基础设施",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 7,
+   "title": "BIND：DNS 软件基础设施",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 8,
+   "title": "Unix 系统管理软件作品",
+   "subject": "混合（见卷导言）",
+   "objects": "概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 9,
+   "title": "OpenSSH：现代远程访问基础设施",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 10,
+   "title": "OpenBSD 软件作品体系",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 11,
+   "title": "BSD 软件生态工具作品",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 12,
+   "title": "被重新归类的 BSD 软件作品：Linux、Unix 与现代计算的来源归属问题",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 38,
+   "ch": 13,
+   "title": "BSD 软件作品生命周期与史料方法",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 1,
+   "title": "UNIX 网络化与现代安全工程的形成（1988–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 2,
+   "title": "BSD 安全工程共同基础",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 3,
+   "title": "经典安全模型群",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 4,
+   "title": "现代缓解与高保证技术",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 5,
+   "title": "BSD 安全机制比较：模型、目标与工程取舍",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 6,
+   "title": "BSD 安全工程路线历史比较",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 7,
+   "title": "漏洞类型与攻击面",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 8,
+   "title": "漏洞事件与工程响应",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 39,
+   "ch": 9,
+   "title": "BSD 安全工程史的方法与史料",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 1,
+   "title": "伯克利软件的版权与许可传统",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 2,
+   "title": "BSD 许可证条款的演变：4-Clause、3-Clause 与 2-Clause",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 3,
+   "title": "UNIX 版权链与 BSD 法律转折",
+   "subject": "BSD 之外",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 4,
+   "title": "BSD 项目的许可证政策与版权治理",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 5,
+   "title": "自由软件、Copyleft 与 BSD",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 6,
+   "title": "宽松许可证的类型与许可证兼容性",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 7,
+   "title": "版权归属、贡献者与项目法律主体",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 8,
+   "title": "商标、UNIX 身份与品牌",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 9,
+   "title": "开源许可证的司法解释与诉讼实践",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 10,
+   "title": "软件专利、反规避与互操作性",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 11,
+   "title": "加密软件、出口管制与 BSD 的全球传播",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 12,
+   "title": "商业再利用、闭源衍生与网络服务",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 40,
+   "ch": 13,
+   "title": "许可证变更、分叉与软件生态重组",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 1,
+   "title": "Free Software、Open Source 与许可证制度化",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 2,
+   "title": "开源许可证合规与软件供应链",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 3,
+   "title": "标准化与网络组织",
+   "subject": "BSD 之外",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 4,
+   "title": "安全认证与软件行业规范",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 5,
+   "title": "软件供应链监管与开源法律的新阶段",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 6,
+   "title": "BSD 许可证中的自由、限制与法律形式",
+   "subject": "BSD 之外",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 7,
+   "title": "BSD 法律史料：文本与档案",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 41,
+   "ch": 8,
+   "title": "合规数据与法律史方法",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 1,
+   "title": "BSD 与 Linux 的技术交流与重新组合",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 2,
+   "title": "内核、用户空间与发行版的重新组合",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 3,
+   "title": "BSD、Linux 与自由软件共同体的冲突、对话与历史记忆",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 4,
+   "title": "Linux 兴起与 BSD 的市场位置",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 5,
+   "title": "BSD 的现代位置与评价词史",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 6,
+   "title": "BSD–Linux 关系史的证据、判定标准与可证范围",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 7,
+   "title": "systemd 与 BSD init：初始化系统的哲学分野",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 8,
+   "title": "System V 的最终轨迹：UnixWare、OpenServer 与 SCO 长期诉讼（1995–2021）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 42,
+   "ch": 9,
+   "title": "自由软件、开源与 BSD 的横向比较",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 43,
+   "ch": 1,
+   "title": "开源话语对自由软件的遮蔽",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 43,
+   "ch": 2,
+   "title": "双许可与专利限制：源码开放的名义化形态",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 43,
+   "ch": 3,
+   "title": "反叙事的机构形态：FSF 的定点运动文本",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 44,
+   "ch": 1,
+   "title": "BSD 技术传统的传播、遮蔽与文化挪用",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 44,
+   "ch": 2,
+   "title": "BSD 组件在 Linux 生态中的归名",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 1,
+   "title": "FreeBSD 项目治理",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 2,
+   "title": "FreeBSD 基金会",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 45,
+   "ch": 3,
+   "title": "NetBSD 项目治理",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 4,
+   "title": "NetBSD 基金会",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 45,
+   "ch": 5,
+   "title": "OpenBSD 项目治理",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 6,
+   "title": "Theo de Raadt 与 OpenBSD 的个人领导结构",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 7,
+   "title": "OpenBSD 基金会",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 45,
+   "ch": 8,
+   "title": "DragonFly BSD 项目治理",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 9,
+   "title": "Matt Dillon 与 DragonFly BSD 的个人领导结构",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 45,
+   "ch": 10,
+   "title": "职位与团队：治理章未承载的授权结构",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 46,
+   "ch": 1,
+   "title": "FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的开发权与提交者制度",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 46,
+   "ch": 2,
+   "title": "企业参与与项目资源",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 46,
+   "ch": 3,
+   "title": "治理冲突、分叉与制度变迁",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 46,
+   "ch": 4,
+   "title": "开源基金会制度比较：BSD 与其他开源项目",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 46,
+   "ch": 5,
+   "title": "BSD 治理制度的历史比较",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 46,
+   "ch": 6,
+   "title": "BSD 治理史的证据与方法",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "人物、组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 1,
+   "title": "ARPA 的成立与计算机研究制度的形成（1957–1962）",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 2,
+   "title": "IPTO 与项目制科研：分时研究环境（1962–1969）",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 3,
+   "title": "DARPA 与网络研究时代：ARPANET 到 Internetting 的资助与管理（1966–1983）",
+   "subject": "BSD 之外",
+   "objects": "技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 4,
+   "title": "DARPA 与 Berkeley：合同、CSRG 与 BSD 的形成（1980–1995）",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 5,
+   "title": "DARPA 与现代研究操作系统：FreeBSD 与能力计算（1993–2026）",
+   "subject": "BSD 之外",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 6,
+   "title": "Program Manager 制度与成果转移",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 7,
+   "title": "技术延续、军民两用与制度影响",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 8,
+   "title": "机构网络：BBN、CMU、SRI、LBL 与 MIT",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 9,
+   "title": "成果转化：国防、政府科研网络与产业（1970s–1990s）",
+   "subject": "BSD 之外",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 10,
+   "title": "DARPA 与 BSD 的关系类型与证据链",
+   "subject": "BSD 之外",
+   "objects": "组织·机构",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 47,
+   "ch": 11,
+   "title": "本卷史料与方法：DARPA 档案、合同文件与检索路径",
+   "subject": "BSD 之外",
+   "objects": "人物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 1,
+   "title": "BSD 社区世界化的形成",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 2,
+   "title": "日本 BSD 社区：JUNET、WIDE 与 KAME",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 3,
+   "title": "欧洲 BSD 社区：从学术网络到 EuroBSDCon",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 4,
+   "title": "中文 BSD 社区：大陆、台湾与跨地区网络",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 5,
+   "title": "南亚与东南亚 BSD 社区",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 6,
+   "title": "拉丁美洲 BSD 社区",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 7,
+   "title": "非洲、中东、中亚与大洋洲",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 8,
+   "title": "BSD 世界化中的人员、机构与知识流动",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 9,
+   "title": "BSD 全球史中的中心、边缘与缺席",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 10,
+   "title": "BSD 社区世界化的历史解释",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 48,
+   "ch": 11,
+   "title": "BSD 全球社区史的史料与方法",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 1,
+   "title": "USENIX：共同体的最早物理空间（1975–2000）",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 2,
+   "title": "BSDCon：BSD 专有会议的首次尝试（1999–2003）",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 3,
+   "title": "EuroBSDCon：欧洲共同体的年度集会（2001–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 4,
+   "title": "AsiaBSDCon：亚洲共同体的年度集会（2004–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 5,
+   "title": "BSDCan：北美共同体的年度集会（2004–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 6,
+   "title": "非 BSD 专有的开源会议与 FOSDEM",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 7,
+   "title": "hackathon：无议程的代码生产仪式",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 8,
+   "title": "会议的机制与功能",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 9,
+   "title": "瘟疫、流行病与技术共同体（2003–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 49,
+   "ch": 10,
+   "title": "对开源会议的批评与会议资料档案",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 1,
+   "title": "谷歌编程之夏的创立（2005）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 2,
+   "title": "GSoC 的运行机制与选拔流程",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 3,
+   "title": "GSoC 的完成率与镀金问题",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 4,
+   "title": "对编程之夏的批评（一）：选拔的不透明性与权力授予的任性",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 5,
+   "title": "对编程之夏的批评（二）：镀金、付费与共同体门槛",
+   "subject": "混合（见卷导言）",
+   "objects": "事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 6,
+   "title": "FreeBSD 的 GSoC 参与史（2005–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 7,
+   "title": "NetBSD 的 GSoC 参与史（2005–2025）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 8,
+   "title": "OpenBSD 的 GSoC 参与史（2014–2015 年两度参与与 2017 年退出）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 9,
+   "title": "DragonFly BSD 的 GSoC 参与史（2008–2013）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 10,
+   "title": "illumos 的 GSoC 参与史（2011 年首次参与、2017 年再在列与随后的缺席）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 11,
+   "title": "GSoC 参与的系统间横向比较",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 12,
+   "title": "Outreachy 与多元化实习",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 13,
+   "title": "基金会实习项目",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 50,
+   "ch": 14,
+   "title": "GSoC 与基金会实习的学术研究",
+   "subject": "基金会（法人）＋团队与职位（授权结构）",
+   "objects": "组织·机构、制度、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：跨主体对照章（归法人／团队）"
+  },
+  {
+   "vol": 50,
+   "ch": 15,
+   "title": "编程之夏与开源共同体的功能",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 16,
+   "title": "DTrace 的 GSoC 参与与其局限（2008–2022）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 17,
+   "title": "Capsicum 的 GSoC 参与史（2011–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 18,
+   "title": "bhyve 的 GSoC 参与史（2014–2025）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 19,
+   "title": "ZFS 工具与测试的 GSoC 参与史（2017–2022）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 50,
+   "ch": 20,
+   "title": "卷末书目述评：编程之夏、实习与新人选拔",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 51,
+   "ch": 1,
+   "title": "UNIX 早期传言与都市传说",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 2,
+   "title": "FreeBSD 传言与习俗",
+   "subject": "混合（见卷导言）",
+   "objects": "概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 3,
+   "title": "NetBSD 传言与习俗",
+   "subject": "混合（见卷导言）",
+   "objects": "概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 4,
+   "title": "OpenBSD 传言与习俗",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 5,
+   "title": "DragonFly BSD 传言与习俗",
+   "subject": "混合（见卷导言）",
+   "objects": "概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 6,
+   "title": "macOS/Darwin 传言考据",
+   "subject": "混合（见卷导言）",
+   "objects": "见卷导言",
+   "objects_source": "卷组默认值",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 7,
+   "title": "BSD/UNIX 俚语与行话",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 8,
+   "title": "习俗与仪式",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 51,
+   "ch": 9,
+   "title": "卷末史料总目：传言、俚语与习俗的考证基础",
+   "subject": "对象层（史料与方法）",
+   "objects": "全部七类（书目与史料）",
+   "objects_source": "卷组默认值",
+   "flag": "例外：述评章→对象层"
+  },
+  {
+   "vol": 52,
+   "ch": 1,
+   "title": "BSD 文档体系与知识生产",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 2,
+   "title": "BSD 文档翻译与本地化",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 3,
+   "title": "USENET、邮件列表与早期在线传播",
+   "subject": "BSD 之外",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 4,
+   "title": "源代码、软件包与物理分发",
+   "subject": "BSD 之外",
+   "objects": "代码树·版本、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 5,
+   "title": "镜像站与志愿基础设施",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 6,
+   "title": "BSD 书籍、杂志与教育传播",
+   "subject": "BSD 之外",
+   "objects": "人物、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 7,
+   "title": "新闻媒体、网站与网络公众记忆",
+   "subject": "BSD 之外",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 8,
+   "title": "纪念、博物馆与数字遗产",
+   "subject": "BSD 之外",
+   "objects": "人物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 9,
+   "title": "传播劳动与历史可见性",
+   "subject": "BSD 之外",
+   "objects": "人物、组织·机构、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 52,
+   "ch": 10,
+   "title": "BSD 传播史的证据与方法",
+   "subject": "BSD 之外",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 1,
+   "title": "聚合：实验室、大学与 CSRG 的伯克利化（1969–1992）",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、技术物",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 2,
+   "title": "分离：诉讼、许可证与 BSD 分支重组（1989–1995）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、制度·许可证、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 3,
+   "title": "平行：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 及商业 BSD 分支的展开（1995–2010）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 4,
+   "title": "再分离：BSD 内部路线分化与技术身份形成（2000–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 5,
+   "title": "再聚合：基础设施时代的 BSD 回流（2010–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、技术物、制度·许可证",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 6,
+   "title": "六十年分离聚合模型的历史解释",
+   "subject": "混合（见卷导言）",
+   "objects": "制度·许可证、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 7,
+   "title": "偶然性节点考：BSD 历史中的关键转折",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 8,
+   "title": "迁移与坚守：BSD 版本控制与历史连续性",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 9,
+   "title": "基石与声名：BSD 遗产的社会分配",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、技术物、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 53,
+   "ch": 10,
+   "title": "BSD 分支的未来聚合：RISC-V 与开放计算（2010–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 1,
+   "title": "BSD 历史书写的形成：从技术记录到历史解释",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 2,
+   "title": "BSD 历史书写的演变（1993–2026）",
+   "subject": "混合（见卷导言）",
+   "objects": "技术物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 3,
+   "title": "声名分配与历史记忆：谁被记住，谁被遗忘",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 4,
+   "title": "BSD 历史中的重新命名、重新归因与技术来源问题",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 5,
+   "title": "BSD 史料体系：源码、档案与数字记录",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本、事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 6,
+   "title": "各卷史料来源登记",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、组织·机构、代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 7,
+   "title": "BSD 技术史研究方法：代码考古与工程解释",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 8,
+   "title": "记忆研究与 BSD 历史书写方法论",
+   "subject": "混合（见卷导言）",
+   "objects": "事件、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 9,
+   "title": "BSD 历史书写中的自反性问题",
+   "subject": "混合（见卷导言）",
+   "objects": "人物、概念",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 10,
+   "title": "人力的计量：史料类型、代理指标与可证范围",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 11,
+   "title": "AI 时代的软件历史研究",
+   "subject": "混合（见卷导言）",
+   "objects": "代码树·版本",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  },
+  {
+   "vol": 54,
+   "ch": 12,
+   "title": "BSD 史学方法总结：从技术事实到历史理解",
+   "subject": "混合（见卷导言）",
+   "objects": "组织·机构、代码树·版本、事件",
+   "objects_source": "机检初判（关键词，待人工复核）",
+   "flag": ""
+  }
+ ],
+ "chapter_rule_exceptions": [
+  "述评章→对象层",
+  "跨主体对照章（卷 45 ch10／卷 46 ch4 等）",
+  "前史章→其所述对象"
+ ],
+ "chapter_objects_caveat": "对象类为关键词机检初判，最终判定须逐章实读（0 信任）"
+}
