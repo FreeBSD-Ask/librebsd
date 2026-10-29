@@ -1,0 +1,38 @@
+key	value
+git_head	571678fd6685faa8d052982f6b421eb9814ee231
+git_head_subject	571678fd6 Add temp/garbage file cleanup rules (§12)
+git_status_lines	4
+git_status	M 00-编纂规则与格式规范/01-规则/README.md
+ M AGENTS.md
+?? 00-编纂规则与格式规范/01-规则/小节建制与题名规则.md
+?? 05-卷册大纲/映射/准入基线-20261029.tsv
+outline_dirs_volumes	76
+outline_dirs_chapters	544
+outline_dirs_sections	3951
+outline_subsection_md	15206
+outline_gitkeep	3309
+outline_sections_with_md	642
+outline_sections_gitkeep_only	3309
+mapping_header	source_id|source_relpath|source_sha256_pre|source_sha256|source_title|source_section_path|status|method|confidence|review_a|review_b|review_c|target_id|order|review_state|note
+mapping_rows	37484
+mapping_status_dist	CONFIRMED=15206 DISPUTED=3143 PENDING=4739 UNMAPPED=14396
+layout_rows	15206
+oldtree_volumes	24
+oldtree_md	22278
+oldtree_json	0
+oldtree_top_md	2
+oldtree_file_total	22280
+oldtree_missing	15206
+outline_txt_volumes	76
+outline_txt_chapters	544
+outline_txt_sections	3951
+outline_txt_lines	4854
+mirror_SUMMARY.md_bytes	1999273
+mirror_SUMMARY.md_sha256	c6e7150f948303b96ea21e666125c7efe228605d2fec9e0dda796c40729220b4
+mirror_chapter_keywords.json_bytes	2983522
+mirror_chapter_keywords.json_sha256	d4440b47c27fb5958c40e8055a9a6c25d7c7ce6eea73c88590a1526e6e3308ed
+mirror_theme_index.json_bytes	1291250
+mirror_theme_index.json_sha256	8ecd527dd8f62b4cfe79be90a42b6ef9435d4dfc0beebe3eaa04657e022b3e2c
+targets_rows	4578
+targets_header	node_id|level|parent_id|vol_no|ch_no|sec_no|title|path_title|status|first_seen|last_seen|renamed_from
+targets_level_dist	ch=545 sec=3956 vol=77
