@@ -42,7 +42,11 @@
 --------
 实测 v0.23.2 与 v0.22.1 对同一语料给出**不同计数**（5,487 条为 v0.23.2 与 v0.22.1
 一致值，但历史上 `npx --yes` 曾拉到新版产生漂移）。为保证可复现，本门禁钉定
-`markdownlint-cli2 0.22.1 / markdownlint 0.40.0`；升级须显式 `--allow-version`。
+`markdownlint-cli2 0.24.0 / markdownlint 0.42.0`（2026-10-29 升级，升级前同语料复跑：
+闸面 166 文件、旧新两版报错集逐条相同）——**摘要行形态随版本变动**（旧版
+`Summary: N error(s)`，v0.24.0 起 `Summary: N issues in M file(s)`），故升级须
+①显式 `--allow-version`；②同批核 `SUMMARY_RE` 是否仍能解析新版摘要行（否则表现为
+“无法解析 lint 输出”的假红）；③核报错集有无新增。
 
 防衰减护栏（2026-09-20 补；2026-10-15 解禁改造）
 ------------------------------------------
@@ -77,7 +81,7 @@ from pathlib import Path
 # os.path.abspath 不做符号链接/盘符解析，保留盘符，Node 侧即可正常加载配置。
 ROOT = Path(os.path.abspath(__file__)).parents[3]
 
-PINNED = ("0.22.1", "0.40.0")  # markdownlint-cli2 / markdownlint
+PINNED = ("0.24.0", "0.42.0")  # markdownlint-cli2 / markdownlint
 
 MANIFEST = [
     "AGENTS.md",
@@ -116,7 +120,9 @@ AUDIT_SCOPE = [
     "spec/*.md",
 ]
 
-SUMMARY_RE = re.compile(r"Summary: (\d+) error")
+# 摘要行两代形态并存：旧版 `Summary: 0 error(s)`；cli2 v0.24.0 起 `Summary: 0 issues in 0 files`。
+# 只认 “N error” 会在升级后落到“无法解析 lint 输出”分支，把真缺陷误报成解析失败。
+SUMMARY_RE = re.compile(r"Summary: (\d+)\s+(?:error|issue)")
 
 
 def find_bin():

@@ -1,0 +1,98 @@
+# 编纂工程 CI —— 只收编可在无本地数据库、无浏览器、无人机固定路径环境下判定的门禁。
+# 未收编门禁（浏览器视觉回归、无障碍、数据库类、整改中件）的原因见 README“CI（GitHub Actions）”。
+# 依赖钉定：第三方 action 一律钉定 40 位提交 SHA（行尾注释记语义版本），不随浮动 tag 漂移；
+# 升级由 `dependabot.yml` 的 github-actions 生态提 PR，或手工换 SHA＋注释后重跑本工作流。
+# 2026-10-29 核：checkout v7.0.1／setup-python v7.1.0／setup-node v7.1.0 为各自最新正式版。
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GATES: 00-编纂规则与格式规范/01-规则/脚本与命令
+  TESTS: 05-卷册大纲/目录/tests
+  DOC: 05-卷册大纲/目录
+
+jobs:
+  gates:
+    name: 门禁套件
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      # fetch-depth 0 为必需：第二十件静默丢失守卫默认读历史提交 305b3202 的早期大纲快照。
+      - name: 检出（全量历史）
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: 安装 Python 3.14
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: "3.14"
+
+      - name: 安装 Node 24
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        with:
+          node-version: "24"
+
+      - name: 安装 markdownlint-cli2（第十件钉定 cli2 0.24.0 / markdownlint 0.42.0）
+        run: npm install -g markdownlint-cli2@0.24.0 markdownlint@0.42.0
+
+      - name: 文本与格式层门禁
+        run: |
+          python "$GATES/audit_markdown_lint.py"
+          python "$GATES/audit_md_quote_glyphs.py"
+          python "$GATES/audit_md_bold_spacing.py"
+          python "$GATES/scan_md_invisible.py"
+          python "$GATES/audit_js_blockscope.py"
+          python "$GATES/audit_mirror_ingest.py"
+          python "$GATES/audit_disk_terminology.py"
+
+      - name: 大纲与目录页结构层门禁
+        run: |
+          python "$GATES/audit_index_structure.py"
+          python "$GATES/audit_sequence_continuity.py"
+          python "$GATES/audit_data_integrity.py"
+          python "$GATES/embed.py" --check
+          python "$GATES/sync_refactor2026_baseline.py" --check
+          python "$GATES/audit_page_assets.py"
+          python "$GATES/audit_server_contract.py"
+          python "$GATES/audit_page_version_bump.py"
+
+      - name: 守卫、锚与交叉引用层门禁
+        run: |
+          python "$GATES/audit_renumber_guard.py"
+          python "$GATES/audit_silent_loss_guard.py"
+          python "$GATES/audit_outline_dup.py"
+          python "$GATES/audit_anchor_pairs.py"
+          python "$GATES/audit_anchor_pair_order.py"
+          python "$GATES/xref_audit.py"
+          python "$GATES/audit_note_xref.py"
+
+      - name: 落地与治理层门禁
+        run: |
+          # 落地门禁以仓库相对根运行：L13 的“绝对路径 >260”判据锚定本机 Windows 检出，
+          # CI 环境改用相对根口径，免因 runner 检出根更长而系统性误判（本机仍按原口径必跑）。
+          python "$GATES/audit_outline_landing.py" --root 05-卷册大纲
+          python "$GATES/audit_gate_registry.py"
+          python "$TESTS/outline_selfcheck.py"
+          python "$TESTS/tri_structure_negtest.py"
+
+      - name: Python 语法编译检查（CI 专用，非项目门禁）
+        run: python -m compileall -q "$GATES" "$TESTS"
+
+      - name: Node 语法冒烟（CI 专用，非项目门禁；浏览器套件仅本机可运行）
+        run: |
+          for f in "$TESTS"/*.mjs "$DOC"/src/js/*.js "$DOC"/assets/doc.js "$DOC"/assets/theme-preset.js; do
+            node --check "$f"
+            echo "  OK $f"
+          done

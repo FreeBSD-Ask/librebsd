@@ -1,0 +1,23 @@
+# Dependabot 更新配置。
+# 生态选择：本仓库唯一的依赖清单面是 GitHub Actions 工作流（.github/workflows/ci.yml）。
+# Python 门禁脚本只用标准库（DuckDB 仅数据库类脚本使用，版本经 duckdb-version-baseline.txt
+# 锁定，不走包管理器清单）；markdownlint-cli2 按第十件钉定版本在 CI 步骤内安装。
+# 故仅启用 github-actions 生态；日后若新增 requirements.txt / package.json，再追加对应条目。
+# 注：工作流内的 action 以 40 位提交 SHA 钉定（见 ci.yml 头部），Dependabot 会把 SHA 与行尾
+# 版本注释一并改写，故钉定后仍由此配置纳管，不需改为 tag 引用。
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
