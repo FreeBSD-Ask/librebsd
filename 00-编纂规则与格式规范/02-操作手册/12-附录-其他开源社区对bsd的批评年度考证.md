@@ -104,7 +104,7 @@
 
 **批评者**：自由软件基金会（FSF）与 GCC 社区部分成员。
 **批评内容**：2014 年 1 月，FreeBSD 10.0 发布，默认采用 Clang/LLVM 作为系统编译器，移除 GCC（GPLv3 许可证）作为默认编译器。FSF 与部分 GCC 社区成员批评此举是“为逃避 GPLv3 而采用技术上不成熟的替代品”，认为 Clang/LLVM 的 BSD 许可证会削弱 GCC 的社区贡献循环。FSF 还担忧 Clang/LLVM 允许厂商闭源化编译器扩展，破坏 copyleft 保护。
-**史料出处**：freebsd.org/releases/10.0R/announce/（一手史料，FreeBSD 10.0 发布说明）；fsf.org 新闻稿与邮件列表存档（一手史料）；GCC 邮件列表 gcc@gcc.gnu.org 讨论（一手史料）。
+**史料出处**：freebsd.org/releases/10.0R/announce/（一手史料，FreeBSD 10.0 发布说明）；fsf.org 新闻稿与邮件列表存档（一手史料）；GCC 邮件列表 <gcc@gcc.gnu.org> 讨论（一手史料）。
 **BSD 社区回应**：FreeBSD 核心团队（如 Robert Watson、Ed Maste）回应称，迁移至 Clang/LLVM 的主要动机是 GPLv3 许可证与 FreeBSD 基础系统的兼容性问题（FreeBSD 基础系统排除 GPLv3 代码），以及 Clang/LLVM 在编译速度、错误诊断、内存占用上的技术优势。本书第五卷第 58 章 BSD 化相关小节须详述此迁移。
 
 ### 13.16 2014 年：Heartbleed 与 Shellshock 暴露开源生态的安全审查缺陷
@@ -166,7 +166,7 @@
 ### 13.24 批评主题归类
 
 | 主题 | 涉及年度 | 典型批评者 | 批评核心 | 史料类型 |
-|------|----------|------------|----------|----------|
+| ---- | -------- | ---------- | -------- | -------- |
 | 许可证哲学 | 1983、1985、1989、2007、2014 | 斯托曼、FSF、ESR、GKH | BSD 许可证过宽，纵容闭源化 | 一手史料为主 |
 | 开发模式 | 1996、1998 | ESR、OSI | BSD 大教堂模式不如 Linux 市集模式 | 一手史料为主 |
 | 法律风险 | 1992、2003 | USL、SCO、Linux 社区 | BSD 代码来源法律地位不明确 | 一手与二手史料并重 |
@@ -177,7 +177,7 @@
 
 ### 13.25 一手史料与二手史料区分
 
-**一手史料**：当事人直接撰写的文档，包括邮件列表原帖（LKML、freebsd-hackers、tech@openbsd.org 等）、基金会官方公告（freebsd.org、gnu.org、opensource.org）、法庭文件（USL v. BSDi、SCO v. IBM）、CVE 与 NVD 官方条目、当事人个人博客（ESR、斯托曼、Donenfeld、D'Amore 等）、项目发布说明。写作时优先引用一手史料。
+**一手史料**：当事人直接撰写的文档，包括邮件列表原帖（LKML、freebsd-hackers、<tech@openbsd.org> 等）、基金会官方公告（freebsd.org、gnu.org、opensource.org）、法庭文件（USL v. BSDi、SCO v. IBM）、CVE 与 NVD 官方条目、当事人个人博客（ESR、斯托曼、Donenfeld、D'Amore 等）、项目发布说明。写作时优先引用一手史料。
 
 **二手史料**：媒体与第三方评论，包括 Phoronix、LWN.net、ZDNet、The Register、Slashdot、OSNews、Errata Security 博客（部分）、Wikipedia 及其引用的二次文献。二手史料可用于补充背景与社区反应，但不得作为核心史实依据，须回溯至一手史料核实。
 
