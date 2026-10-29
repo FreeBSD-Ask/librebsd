@@ -66,7 +66,7 @@ netsh advfirewall firewall delete rule name=senseindex-8090
 逐项核验（八项断言，全部走真实 HTTP）：
 
 | 项 | 行为 |
-| --- | --- |
+| -- | ---- |
 | **docroot 白名单** | 只服务 `/`、`/index.html`、`/favicon.ico`；其余一律 404。`data/`、`tests/`、`script/`、`_prep_*`、备份件、`catalog.json` **均不可获取** |
 | **目录列表** | **结构上不存在**——父类为 `BaseHTTPRequestHandler`，没有 `list_directory` 可被继承 |
 | **传输压缩** | 按需读盘并预压 gzip 缓存；`Accept-Encoding: gzip` 时发送。1,583,076 B → 890,469 B（−43.8%） |
@@ -87,7 +87,7 @@ netsh advfirewall firewall delete rule name=senseindex-8090
 ### 相对旧版的取舍变化
 
 | 项 | 旧 `serve_index.py` | 现版 |
-| --- | --- | --- |
+| -- | ------------------- | ---- |
 | 并发 | 单线程 `HTTPServer`（省内存） | `ThreadingHTTPServer`（HTTP/1.1 keep-alive 下单线程会被慢客户端阻塞） |
 | 协议 | `HTTP/1.0`（每请求关连接） | `HTTP/1.1`（keep-alive；`Content-Length` 必发） |
 | docroot | 整棵树 | 白名单三路径 |
@@ -96,7 +96,7 @@ netsh advfirewall firewall delete rule name=senseindex-8090
 ## 排错
 
 | 现象 | 处置 |
-| --- | --- |
+| ---- | ---- |
 | 启动没反应 | 端口被占用时脚本**静默退出（退出码 0）**——先确认是否已有实例在跑：`netstat -ano \| findstr :8090` |
 | 启动报“白名单资产缺失” | docroot 下缺 `index.html` 或 `assets/favicon.ico`；用 `--root` 指定正确目录 |
 | 无控制台看不到错误 | 用 `python.exe`（而非 `pythonw.exe`）启动，或看 `%LOCALAPPDATA%\senseindex\serve_refactor2026.err.log` |

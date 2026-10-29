@@ -17,7 +17,7 @@
 ## 2 首批归并组（8 组，制度化示例）
 
 | 规范名 | 别名（归并前） |
-| --- | --- |
+| ------ | -------------- |
 | FreeBSD Project | FreeBSD Project、FreeBSD 项目、FreeBSD Project（联合创始人）、FreeBSD Project（联合创始人，Core Team 1992-1995） |
 | OpenBSD Project | OpenBSD Project、OpenBSD、OpenBSD 项目、OpenBSD project |
 | NetBSD Project | NetBSD Project、The NetBSD Project、NetBSD |
