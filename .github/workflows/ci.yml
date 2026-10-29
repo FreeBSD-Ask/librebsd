@@ -39,6 +39,10 @@ jobs:
         with:
           python-version: "3.14"
 
+      # 第九件（页面资产层）解析 woff2 子集需 fontTools；woff2 编解码另需 brotli。
+      - name: 安装页面资产门禁依赖（fontTools＋brotli）
+        run: python -m pip install --disable-pip-version-check fonttools brotli
+
       - name: 安装 Node 24
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
@@ -47,7 +51,11 @@ jobs:
       - name: 安装 markdownlint-cli2（第十件钉定 cli2 0.24.0 / markdownlint 0.42.0）
         run: npm install -g markdownlint-cli2@0.24.0 markdownlint@0.42.0
 
+      # 四个闸层一律 continue-on-error：存量红项（另线在修）不应让后续闸层被 skipped 而失去可见性；
+      # 真实结论由末步「汇总门禁结果」给出，任一闸层 FAIL 即整轮失败。
       - name: 文本与格式层门禁
+        id: g1
+        continue-on-error: true
         run: |
           python "$GATES/audit_markdown_lint.py"
           python "$GATES/audit_md_quote_glyphs.py"
@@ -61,6 +69,8 @@ jobs:
           python "$GATES/audit_keyword_index.py"
 
       - name: 大纲与目录页结构层门禁
+        id: g2
+        continue-on-error: true
         run: |
           python "$GATES/audit_index_structure.py"
           python "$GATES/audit_sequence_continuity.py"
@@ -72,6 +82,8 @@ jobs:
           python "$GATES/audit_page_version_bump.py"
 
       - name: 守卫、锚与交叉引用层门禁
+        id: g3
+        continue-on-error: true
         run: |
           python "$GATES/audit_renumber_guard.py"
           # 第二十件 T1 已固化为仓内快照（08-核查报告与多轮复核/重构2026/data/outline-t1-20261011.txt），
@@ -84,6 +96,8 @@ jobs:
           python "$GATES/audit_note_xref.py"
 
       - name: 落地与治理层门禁
+        id: g4
+        continue-on-error: true
         run: |
           # 落地门禁以仓库相对根运行：L13 的“绝对路径 >260”判据锚定本机 Windows 检出，
           # CI 环境改用相对根口径，免因 runner 检出根更长而系统性误判（本机仍按原口径必跑）。
@@ -103,3 +117,21 @@ jobs:
             node --check "$f"
             echo "  OK $f"
           done
+
+      # 末步汇总：各闸层以 outcome（而非 conclusion）判读，避免 continue-on-error 把红项吞成绿。
+      - name: 汇总门禁结果（任一闸层 FAIL 即整轮失败）
+        if: always()
+        run: |
+          fail=0
+          for layer in "文本与格式层:${{ steps.g1.outcome }}" "大纲与目录页结构层:${{ steps.g2.outcome }}" \
+                       "守卫、锚与交叉引用层:${{ steps.g3.outcome }}" "落地与治理层:${{ steps.g4.outcome }}"; do
+            name="${layer%%:*}"
+            out="${layer##*:}"
+            echo "$name → $out"
+            if [ "$out" != "success" ]; then fail=1; fi
+          done
+          if [ "$fail" = "1" ]; then
+            echo "::error::门禁套件存在未通过闸层，详见各步日志"
+            exit 1
+          fi
+          echo "全部门禁闸层通过"
