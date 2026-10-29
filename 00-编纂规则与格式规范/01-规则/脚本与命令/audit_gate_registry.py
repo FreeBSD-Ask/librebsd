@@ -162,7 +162,7 @@ REGISTRY = [
          selftest="--selftest", in_tests_readme=False),
     dict(no="第二十九件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_engineering_practice.py",
          kind="门禁（工程实践基线，独立计数）",
-         object="ADR 必填字段／ADR 索引与编号／技术债字段／模板接线／规则登记／复审日期",
+         object="ADR 必填字段／ADR 索引与编号／技术债字段／模板接线／规则登记／复审日期／意图确证接线",
          trigger="新增或修改 ADR、技术债、工程实践规则或模板后；工程类批次收口（2026-10-22 立）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第三十件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_oaa_batch.py",

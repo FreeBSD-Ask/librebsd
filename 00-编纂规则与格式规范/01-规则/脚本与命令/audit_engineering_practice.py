@@ -21,11 +21,12 @@ E6 复审日期存在；过期仅 WARN，不判 FAIL
 E7 `流程规则.md` 存根内的分册索引表与 `流程规则/` 全部 H2 标题逐条一致
    （2026-10-29 随 2026-10-27 拆分改造：原“单文件 H2 ↔ 列表行”判据在拆分后无对象，
    改为跨分册校验，并逐行核对链接指向的分册内确有该 H2）
+E8 意图确证接线（理论件／全局节／G0／AGENTS／模板 I）
 
 用法
 ----
     python audit_engineering_practice.py            # 0 通过 / 1 不通过
-    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 八类负向夹具）
+    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 十二类负向夹具）
     python audit_engineering_practice.py --list     # 打印检查对象
 
 依赖：仅标准库。
@@ -54,6 +55,8 @@ BAD_OWNERS = {"", "待定", "后续补", "TBD", "无", "项目组", "以后"}
 DATE_RE = re.compile(r"复审日期(?:\*\*)?\s*[：:]\s*(\d{4}-\d{2}-\d{2})")
 INDEX_BEGIN = "<!-- FLOW_INDEX_BEGIN -->"
 INDEX_END = "<!-- FLOW_INDEX_END -->"
+INTENT_KEYS = ["用户原话", "目标", "非目标", "验收判据", "手段自由度", "未知"]
+FLOW_INTENT_KEYS = ["全任务适用", "档 A", "档 B"]
 
 
 def _paths(root: pathlib.Path):
@@ -73,6 +76,10 @@ def _paths(root: pathlib.Path):
         "index": gov / "index.md",
         "debt": gov / "技术债登记.md",
         "templates": root / "00-编纂规则与格式规范" / "02-操作手册" / "14-工程实践模板",
+        "doctrine": root / "13-软件工程" / "08-intent-first.md",
+        "doctrine_readme": root / "13-软件工程" / "README.md",
+        "templ_i": root / "00-编纂规则与格式规范" / "02-操作手册" / "14-工程实践模板"
+                   / "模板I-批次提交核对清单.md",
     }
 
 
@@ -144,6 +151,40 @@ def _flow_h2_map(flow_dir: pathlib.Path):
         hs = [m.group(1).strip() for m in re.finditer(r"(?m)^##\s+(.+?)\s*$", _read(f))]
         out[f.name] = hs
     return out
+
+
+def _flow_part_texts(flow_dir: pathlib.Path):
+    """分册正文 [(文件名, 文本)]；分册集合口径同 `_flow_h2_map`（NN≠00）。"""
+    out = []
+    if not flow_dir.is_dir():
+        return out
+    for f in sorted(flow_dir.glob("*.md")):
+        if not FLOW_PART_RE.match(f.name) or f.name.startswith("00-"):
+            continue
+        out.append((f.name, _read(f)))
+    return out
+
+
+def _h2_section(text: str, needle: str) -> str:
+    """取标题含 needle 的首个顶层 H2 所在整节正文（自该 `##` 行至下一 `##` 行或文件末）。
+
+    顶层 H2 判定为正则 `^##` 后接空白：`### ` 第三字符为 `#`，不匹配，故三级标题不会截断本节。
+    未找到含 needle 的 H2 时返回空串。
+    """
+    lines = text.splitlines()
+    start = None
+    for i, line in enumerate(lines):
+        if re.match(r"^##\s", line) and needle in line:
+            start = i
+            break
+    if start is None:
+        return ""
+    end = len(lines)
+    for j in range(start + 1, len(lines)):
+        if re.match(r"^##\s", lines[j]):
+            end = j
+            break
+    return "\n".join(lines[start:end])
 
 
 def _flow_index_check(text: str, flow_dir: pathlib.Path):
@@ -297,6 +338,53 @@ def run_checks(root: pathlib.Path):
     # E7 流程规则二级索引与 H2 标题一致
     e7_ok, e7_detail = _flow_index_check(_read(p["flow"]), p["flow_dir"])
     rows.append(("E7", "流程规则二级索引与 H2 标题一致", e7_ok, e7_detail))
+
+    # E8 意图确证接线（理论件／全局节／G0／AGENTS／模板 I）
+    e8_bad = []
+    if not p["doctrine"].exists():
+        e8_bad.append("缺 13-软件工程/08-intent-first.md")
+    else:
+        doctrine_text = _read(p["doctrine"])
+        lack = []
+        for k in INTENT_KEYS:
+            # “目标”不得被“非目标”子串满足（负向后视排除“非”前缀）
+            if k == "目标":
+                if re.search(r"(?<!非)目标", doctrine_text) is None:
+                    lack.append(k)
+            elif k not in doctrine_text:
+                lack.append(k)
+        if lack:
+            e8_bad.append("08-intent-first.md 缺字段关键词：%s" % "、".join(lack))
+    readme_lines = _read(p["doctrine_readme"]).splitlines()
+    if not any(line.strip().startswith("|") and "08-intent-first.md" in line
+               for line in readme_lines):
+        e8_bad.append("13-软件工程/README.md 未在表格行登记 08-intent-first.md")
+    parts = _flow_part_texts(p["flow_dir"])
+    sec_ok = False
+    for _name, text in parts:
+        # 三关键词只在含“意图确证”的顶层 H2 整节正文内判定，避免节外文字误满足
+        sec = _h2_section(text, "意图确证")
+        if sec and all(k in sec for k in FLOW_INTENT_KEYS):
+            sec_ok = True
+            break
+    if not sec_ok:
+        e8_bad.append("流程规则/ 分册无顶层 H2 含“意图确证”且该节正文含 %s"
+                      % "、".join(FLOW_INTENT_KEYS))
+    g0_ok = any(re.match(r"^\|\s*G0\s*\|", line) and "意图" in line
+                for _n, text in parts for line in text.splitlines())
+    if not g0_ok:
+        e8_bad.append("流程规则/ 分册无“| G0 |”开头且含“意图”的表格行")
+    if "意图确证" not in rule_text or "08-intent-first.md" not in rule_text:
+        e8_bad.append("工程实践规则.md 缺“意图确证”或 08-intent-first.md 引用")
+    agents_ok = any("意图确证" in line and ("所有任务" in line or "任何任务" in line)
+                    for line in _read(p["agents"]).splitlines())
+    if not agents_ok:
+        e8_bad.append("AGENTS.md 无同一行含“意图确证”与“所有任务／任何任务”")
+    if not p["templ_i"].exists() or "意图确证" not in _read(p["templ_i"]):
+        e8_bad.append("模板I-批次提交核对清单.md 缺失或未含“意图确证”")
+    rows.append(("E8", "意图确证接线", not e8_bad,
+                 "；".join(e8_bad) if e8_bad else
+                 "理论件／全局节／G0／AGENTS／模板 I 接线一致"))
     return rows, rule_date
 
 
@@ -337,8 +425,9 @@ def _write_fixture(root: pathlib.Path):
         encoding="utf-8",
     )
     for name in ("模板G-架构决策记录.md", "模板H-技术债登记.md",
-                 "模板I-批次提交核对清单.md", "模板J-工程实践复审.md"):
+                 "模板J-工程实践复审.md"):
         (p["templates"] / name).write_text("# %s\n" % name, encoding="utf-8")
+    p["templ_i"].write_text("# 模板I\n- [ ] 意图确证单已写\n", encoding="utf-8")
     (p["templates"] / "00-模板说明.md").write_text(
         "# 说明\n\n模板G-架构决策记录.md 模板H-技术债登记.md "
         "模板I-批次提交核对清单.md 模板J-工程实践复审.md\n",
@@ -347,21 +436,42 @@ def _write_fixture(root: pathlib.Path):
     p["rule"].write_text(
         "# 工程实践规则\n\n- **复审日期**：2027-01-22\n\n"
         "模板G-架构决策记录.md 模板H-技术债登记.md "
-        "模板I-批次提交核对清单.md 模板J-工程实践复审.md\n",
+        "模板I-批次提交核对清单.md 模板J-工程实践复审.md\n"
+        "意图确证 见 08-intent-first.md\n",
         encoding="utf-8",
     )
     p["rule_readme"].write_text("工程实践规则.md\n", encoding="utf-8")
-    p["agents"].write_text("工程实践规则.md\n", encoding="utf-8")
+    p["doctrine"].parent.mkdir(parents=True, exist_ok=True)
+    p["doctrine"].write_text(
+        "# 知难行易：意图确证先于手段\n\n"
+        "档 A：用户原话、目标、非目标、验收判据、手段自由度、未知\n",
+        encoding="utf-8",
+    )
+    p["doctrine_readme"].write_text(
+        "# 13-软件工程\n\n| 文件 | 内文 | 必读 |\n| ---- | ---- | ---- |\n"
+        "| `08-intent-first.md` | x | 是 |\n",
+        encoding="utf-8",
+    )
+    p["agents"].write_text(
+        "工程实践规则.md\n任何任务开工前先写意图确证（所有任务）\n", encoding="utf-8")
     p["flow_dir"].mkdir(parents=True, exist_ok=True)
     (p["flow_dir"] / "01-测试分册.md").write_text(
-        "# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n", encoding="utf-8")
+        "# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
+        "## 意图确证（知难行易；全任务适用；2026-10-29 立）\n\n"
+        "全任务适用（不限工程类批次）；档 A：全量六字段；档 B：轻量三要素。\n\n"
+        "| 阶段 | 名称 | 活动 | 退出判据 |\n"
+        "| ---- | ---- | ---- | ---- |\n"
+        "| G0 | 立项与范围 | 写意图确证 | 意图确证单已写 |\n",
+        encoding="utf-8")
     p["flow"].write_text(
         "# 流程规则（转发索引存根）\n\n"
         "<!-- FLOW_INDEX_BEGIN -->\n\n"
         "| 分册 | 原小节 |\n"
         "| ---- | ------ |\n"
         "| [流程规则/01-测试分册.md](流程规则/01-测试分册.md) "
-        "| 工程实践生命周期与阶段门禁（G0–G5） |\n\n"
+        "| 工程实践生命周期与阶段门禁（G0–G5） |\n"
+        "| [流程规则/01-测试分册.md](流程规则/01-测试分册.md) "
+        "| 意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
         "<!-- FLOW_INDEX_END -->\n",
         encoding="utf-8",
     )
@@ -408,6 +518,37 @@ def cmd_selftest():
             ("E7", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/01-测试分册.md")
              .write_text("# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
                          "## 新增未登记小节\n", encoding="utf-8")),
+            # E8 负向之一（2026-10-29 立）：缺理论件
+            ("E8", lambda: (tmp / "13-软件工程/08-intent-first.md").unlink()),
+            # E8 负向之二：全局节缺“档 B”
+            ("E8", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/01-测试分册.md")
+             .write_text("# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
+                         "## 意图确证（知难行易；全任务适用；2026-10-29 立）\n\n"
+                         "全任务适用（不限工程类批次）；档 A：全量六字段。\n\n"
+                         "| 阶段 | 名称 | 活动 | 退出判据 |\n"
+                         "| ---- | ---- | ---- | ---- |\n"
+                         "| G0 | 立项与范围 | 写意图确证 | 意图确证单已写 |\n",
+                         encoding="utf-8")),
+            # E8 负向之三：G0 行缺“意图”
+            ("E8", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/01-测试分册.md")
+             .write_text("# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
+                         "## 意图确证（知难行易；全任务适用；2026-10-29 立）\n\n"
+                         "全任务适用（不限工程类批次）；档 A：全量六字段；档 B：轻量三要素。\n\n"
+                         "| 阶段 | 名称 | 活动 | 退出判据 |\n"
+                         "| ---- | ---- | ---- | ---- |\n"
+                         "| G0 | 立项与范围 | 定范围 | 范围有书面结论 |\n",
+                         encoding="utf-8")),
+            # E8 负向之四：模板 I 缺“意图确证”条目
+            ("E8", lambda: (tmp / "00-编纂规则与格式规范/02-操作手册/14-工程实践模板"
+                            "/模板I-批次提交核对清单.md").write_text("# 模板I\n", encoding="utf-8")),
+            # E8 目标子串覆盖（2026-10-29 补）：08 件只留“非目标”、删去“目标”，须判缺
+            ("E8", lambda: (tmp / "13-软件工程/08-intent-first.md").write_text(
+                "# 知难行易：意图确证先于手段\n\n"
+                "档 A：用户原话、非目标、验收判据、手段自由度、未知\n",
+                encoding="utf-8")),
+            # E8 README 表格行判定（2026-10-29 补）：仅非表格行提及 08-intent-first.md 须 FAIL
+            ("E8", lambda: (tmp / "13-软件工程/README.md").write_text(
+                "# 13-软件工程\n\n08-intent-first.md\n", encoding="utf-8")),
         ]
         for code, mutate in cases:
             _write_fixture(tmp)
@@ -423,7 +564,7 @@ def cmd_selftest():
         for f in failures:
             print("     - %s" % f)
         return 1
-    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E7 八类负向夹具均命中")
+    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8 十二类负向夹具均命中")
     return 0
 
 
@@ -441,7 +582,8 @@ def main():
     if args.list:
         print("对象：")
         for key in ("rule", "rule_readme", "flow", "flow_dir", "agents", "gov", "adr_dir",
-                    "index", "debt", "templates", "cmd_readme", "registry"):
+                    "index", "debt", "templates", "cmd_readme", "registry",
+                    "doctrine", "doctrine_readme", "templ_i"):
             print("  %-10s %s" % (key, _paths(root)[key]))
         return 0
 
