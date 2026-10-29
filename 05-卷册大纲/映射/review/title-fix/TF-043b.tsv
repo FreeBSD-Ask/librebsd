@@ -1,0 +1,2 @@
+source_id	old	new	reason
+S-008293	2017 年 6 月 29 日，Pfeifer 称 gcc5-devel 的 include-fixed 头文件不致 ABI 不兼容	2017 年 6 月 29 日，Gerald Pfeifer 感谢 Mark Millard 关于 gcc5-devel 使用 include-fixed 头文件的说明，表示将同时为 gcc5 本身准备改动，认为该头文件情况不会造成 ABI 层面的二进制不兼容	去残斜杠与未译 meantime
