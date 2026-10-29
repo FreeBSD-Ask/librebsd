@@ -13,7 +13,7 @@
 `entries` 单表，字段如下：
 
 | 字段 | 类型 | 说明 |
-| --- | --- | --- |
+| ---- | ---- | ---- |
 | id | BIGINT | 条目主键（应用层以 `max(id)+1` 生成，DuckDB 无 AUTOINCREMENT 约束） |
 | date | VARCHAR | 日期，格式 YYYY-MM-DD |
 | entry_order | BIGINT | 同日内条目序号 |
