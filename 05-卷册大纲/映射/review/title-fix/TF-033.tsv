@@ -1,0 +1,100 @@
+source_id	old	new	reason
+S-033923	导言	导言：ksummit-discuss p132 来源、判定与主题分布	E1：按导语重拟来源、判定与主题分布题面；p132 已读文件核实
+S-033932	【Linux社区】Petersen受众论	【Linux 社区】Petersen 受众论	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033933	【Linux社区】全系列到列表	【Linux 社区】全系列到列表	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033934	【Linux社区】Fixes标签局限	【Linux 社区】Fixes 标签局限	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033935	【Linux社区】Jani文档累积批评	【Linux 社区】Jani 文档累积批评	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033936	【Linux社区】checkpatch配置化	【Linux 社区】checkpatch 配置化	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033940	【Linux社区】KS2014档案-TODO	【Linux 社区】KS2014 档案-TODO	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033937	【Linux社区】gitnotes折中	【Linux 社区】git notes 折中	A1 补空格；gitnotes 依正文拆 git notes；H1 同步
+S-033938	【Linux社区】供应商大系列	【Linux 社区】供应商大系列	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033939	【Linux社区】供应商不分树	【Linux 社区】供应商不分树	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033941	【Linux社区】ViroMUA现实	【Linux 社区】Viro MUA 现实	A1 补空格；依正文拆人名 Viro 与主题 MUA；H1 同步
+S-033928	【Linux社区】KS2014档案-列表上限	【Linux 社区】KS2014 档案-列表上限	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033942	【Linux社区】DougMUA回应	【Linux 社区】Doug MUA 回应	A1 补空格；依正文拆人名 Doug 与主题 MUA；H1 同步
+S-033944	【Linux社区】Mauro存储投票	【Linux 社区】Mauro 存储投票	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033945	【Linux社区】Kees让步赞赏	【Linux 社区】Kees 让步赞赏	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033946	【Linux社区】不特别原则	【Linux 社区】不特别原则主张	A1 补空格；B2 尾则字悬空，补主张实义收尾；H1 同步
+S-033947	【Linux社区】MauroReST方案	【Linux 社区】Mauro ReST 方案	A1 补空格；依正文拆人名 Mauro 与方案名 ReST；H1 同步
+S-033948	【Linux社区】Pinchart评审	【Linux 社区】Pinchart 评审	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033951	【Linux社区】KS2014档案-cgit	【Linux 社区】KS2014 档案-cgit	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033949	【Linux社区】Mauro修订	【Linux 社区】Mauro 修订	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033950	【Linux社区】mediaProfilev2	【Linux 社区】media 子系统 Profile v2 定稿	A1 补空格；mediaProfilev2 依正文拟 media 子系统 Profile v2 定稿
+S-033952	【Linux社区】+++问	【Linux 社区】+++ 与 --- 之分节标记动机	A1 补空格；题面依正文补分节标记之问由；H1 同步
+S-033929	【Linux社区】KS2014档案-EFI测试	【Linux 社区】KS2014 档案-EFI 测试	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033953	【Linux社区】Pinchart二轮	【Linux 社区】Pinchart 二轮	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033954	【Linux社区】KeesReST构建	【Linux 社区】Kees ReST 构建	A1 补空格；依正文拆人名 Kees 与术语 ReST；H1 同步
+S-033955	【Linux社区】awk方案	【Linux 社区】awk 方案	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033956	【Linux社区】CC与自动化	【Linux 社区】CC 与自动化	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033957	【Linux社区】Helgaas细问	【Linux 社区】Helgaas 细问	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033958	【Linux社区】getmaintainer至上	【Linux 社区】get_maintainer.pl 至上	A1 补空格；getmaintainer 依正文正名 get_maintainer.pl；H1 同步
+S-033959	【Linux社区】分散存储	【Linux 社区】分散存储	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033960	【Linux社区】fixes增强	【Linux 社区】Fixes 增强	A1 补空格；Fixes 标签依正文正名大写；H1 同步
+S-033962	【Linux社区】KS2014档案-gatekeeper	【Linux 社区】KS2014 档案-gatekeeper	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033961	【Linux社区】dimfixes演示	【Linux 社区】dim fixes 演示	A1 补空格；dimfixes 依正文拆 dim fixes；H1 同步
+S-033930	【Linux社区】2010提案自引	【Linux 社区】2010 提案自引	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033963	【Linux社区】dim局限	【Linux 社区】dim 局限	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033964	【Linux社区】接受至上	【Linux 社区】接受至上	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033965	【Linux社区】dim源码公开	【Linux 社区】dim 源码公开	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033966	【Linux社区】HerringCI细节	【Linux 社区】Herring CI 细节	A1 补空格；依正文拆人名 Herring 与 CI；H1 同步
+S-033967	【Linux社区】拆分旧案	【Linux 社区】拆分旧案	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033968	【Linux社区】Brown离线标签	【Linux 社区】Brown 离线标签	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033969	【Linux社区】Vetter拆分提议	【Linux 社区】Vetter 拆分提议	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033970	【Linux社区】LKMLdevnull	【Linux 社区】LKML 的 devnull 类比	A1 补空格；LKMLdevnull 依正文拆 LKML 与 devnull；H1 同步
+S-033971	【Linux社区】LKML可发现性	【Linux 社区】LKML 可发现性	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033972	【Linux社区】Jani流量数据	【Linux 社区】Jani 流量数据	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033924	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 补空格：标签与中英边界；H1 同置终态
+S-033973	【Linux社区】KS2014档案-cgit回应	【Linux 社区】KS2014 档案-cgit 回应	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-001968	制作者断言386BSD1992年7月14日发布是BSD家族中首个完整开源操作系统	制作者断言 386BSD（1992 年 7 月 14 日发布）是 BSD 家族中首个完整开源操作系统	A1/B4：解恰 40 字形，依正文首句复原并补空格
+S-033925	【Linux社区】应用时静默修	【Linux 社区】应用时静默修	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033926	【Linux社区】W=1数据长文	【Linux 社区】W=1 数据长文	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033927	【Linux社区】MauroW=0主张	【Linux 社区】Mauro W=0 主张	A1 补空格；依正文拆人名 Mauro 与 W=0 选项；H1 同步
+S-033931	【Linux社区】gcc9无差异	【Linux 社区】gcc 9 无差异	A1 补空格；gcc9 依正文正名 gcc 9；H1 同步
+S-033706	导言	导言：ksummit-discuss p118 来源、判定与主题分布	E1：按导语重拟来源、判定与主题分布题面；p118 已读文件核实
+S-033716	【Linux社区】主题行经验之谈	【Linux 社区】主题行经验之谈	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033717	【Linux社区】样例Profile评审	【Linux 社区】样例 Profile 评审	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033718	【Linux社区】文档受众分立	【Linux 社区】文档受众分立	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033719	【Linux社区】子系统句法红线	【Linux 社区】子系统句法红线	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033720	【Linux社区】评审名单去重	【Linux 社区】评审名单去重	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033721	【Linux社区】样例受众批评	【Linux 社区】样例受众批评	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033722	【Linux社区】受众顺位共识	【Linux 社区】受众顺位共识	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033723	【Linux社区】媒体样例Profile	【Linux 社区】媒体样例 Profile	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033724	【Linux社区】属性接口设计	【Linux 社区】属性接口设计	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033725	【Linux社区】信任名单异议	【Linux 社区】信任名单异议	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033707	【Linux社区】零、体例说明	【Linux 社区】零、体例说明	A1 补空格：标签与中英边界；H1 同置终态
+S-033726	【Linux社区】社会接口辩护	【Linux 社区】社会接口辩护	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033727	【Linux社区】名单改名折中	【Linux 社区】名单改名折中	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033728	【Linux社区】删除名单主张	【Linux 社区】删除名单主张	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033729	【Linux社区】名单定位之辩	【Linux 社区】名单定位之辩	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033730	【Linux社区】P：条目去留考证	【Linux 社区】P：条目去留考证	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033731	【Linux社区】XArray报道动向	【Linux 社区】XArray 报道动向回应	A1 补空格；B2 尾向字悬空，补回应实义收尾；H1 同步
+S-033734	【Linux社区】XArray适用边界	【Linux 社区】XArray 适用边界	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033735	【Linux社区】属性模式统一	【Linux 社区】属性模式统一	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033736	【Linux社区】XArray演讲定位	【Linux 社区】XArray 演讲定位	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033737	【Linux社区】R：标签收编论	【Linux 社区】R：标签收编论	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033708	【Linux社区】P：标签回收提案	【Linux 社区】P：标签回收提案	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033738	【Linux社区】名单入选门槛	【Linux 社区】名单入选门槛	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033739	【Linux社区】分文件评审名录	【Linux 社区】分文件评审名录	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033740	【Linux社区】名单质疑交锋	【Linux 社区】名单质疑交锋	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033741	【Linux社区】工作流细节问答	【Linux 社区】工作流细节问答	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033743	【Linux社区】前缀方案反驳	【Linux 社区】前缀方案反驳	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033744	【Linux社区】作者逐点回应	【Linux 社区】作者逐点回应	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033745	【Linux社区】API增长考证	【Linux 社区】API 增长考证	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033747	【Linux社区】v2改进承诺	【Linux 社区】v2 改进承诺	A1 补空格：标签与中数边界；H1 同步去陈旧块序号前缀
+S-033748	【Linux社区】受众改写承诺	【Linux 社区】受众改写承诺	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033749	【Linux社区】名单扩展性质疑	【Linux 社区】名单扩展性质疑	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033710	【Linux社区】首个样例Profile	【Linux 社区】首个样例 Profile	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033750	【Linux社区】media样例校对	【Linux 社区】media 样例校对与联系方式补全	A1 补空格；B2 尾对字悬空，补联系方式补全实义收尾
+S-033751	【Linux社区】名单辩护陈述	【Linux 社区】名单辩护陈述	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033752	【Linux社区】新人措辞建议	【Linux 社区】新人措辞建议	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033753	【Linux社区】时区命名规范	【Linux 社区】时区命名规范	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033754	【Linux社区】挂名激励效应	【Linux 社区】挂名激励效应	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033755	【Linux社区】media样例补正	【Linux 社区】media 样例补正	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033709	【Linux社区】Profile模板提案	【Linux 社区】Profile 模板提案	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033732	【Linux社区】模板逐节评审	【Linux 社区】模板逐节评审	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033733	【Linux社区】模板定位澄清	【Linux 社区】模板定位澄清	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033711	【Linux社区】P：条目清理与Ack	【Linux 社区】P：条目清理与 Acked-by 同意	A1 补空格；B3 尾拉丁残，依正文续 Acked-by 同意收尾
+S-033712	【Linux社区】补丁主题行规则	【Linux 社区】补丁主题行规则质询	A1 补空格；B2 尾则字悬空，补质询实义收尾；H1 同步
+S-033713	【Linux社区】media子维护者模式	【Linux 社区】media 子维护者模式	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033714	【Linux社区】ACPI属性机制	【Linux 社区】ACPI 属性机制	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
+S-033715	【Linux社区】Profile工具联动	【Linux 社区】Profile 工具联动	A1 补空格：标签与中英边界；H1 同步去陈旧块序号前缀
