@@ -1,0 +1,2 @@
+date	stage	tag	commit	commit_subject	counts	gates	note
+2026-10-29	置零	outline-zero-20261029	c40515cc5	APPROVED-BIGFILE: chore(outline): 小节层重制置零批——mapping status 复位至落地前基线 22cfe0518、layout 清零、落地账目归档	mapping 37,484 行（CONFIRMED 0／DISPUTED 6,434／UNMAPPED 20,923／PENDING 10,127）；layout 0 行；树 76 卷／544 章／3,951 节；旧 .md 15,206（待清）	文档 lint 0 error；直角引号 0；加粗空格 0；基线漂移 0；长线 18 条一致；元门禁 R1–R8 FAIL 0；旁路备份 FAIL 2,291（他线存量，只披露不代改）	置零批收口；后续小节层重制由 rebuild-outline-subsection-layer-20261029 接管
