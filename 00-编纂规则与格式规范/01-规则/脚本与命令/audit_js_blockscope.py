@@ -25,7 +25,10 @@ import re
 import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", newline="\n")
-ROOT = r"D:/librebsd/05-卷册大纲/目录"
+# 根路径由本件位置推导（parents[3]＝仓库根）：CI 在 Linux 检出，写死盘符会使全部行为源判“缺失”
+# （2026-10-29 修；本机与 CI 同构，不再依赖盘符）。
+ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))), "05-卷册大纲", "目录")
 SRC_JS = ROOT + "/src/js"
 MANIFEST = SRC_JS + "/manifest.txt"
 DOC_JS = ROOT + "/assets/doc.js"

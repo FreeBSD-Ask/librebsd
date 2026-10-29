@@ -28,7 +28,8 @@ import re
 import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-DEFAULT = pathlib.Path(r"D:/librebsd/05-卷册大纲/目录/index.html")
+# 2026-10-29 修：原写死盘符路径，CI（Linux 检出）下不可达；改由本件位置推导（parents[3]＝仓库根）。
+DEFAULT = pathlib.Path(__file__).resolve().parents[3] / "05-卷册大纲" / "目录" / "index.html"
 path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT
 html = path.read_text(encoding="utf-8")
 # 常量：

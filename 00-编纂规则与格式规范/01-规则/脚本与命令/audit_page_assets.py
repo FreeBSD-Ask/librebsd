@@ -83,8 +83,9 @@ import sys
 import tarfile
 import tempfile
 
-# ===== 路径常量（机器固定值，迁移时同步更新）=====
-DEFAULT_ROOT = r"D:/librebsd/05-卷册大纲/目录"
+# ===== 路径常量（2026-10-29 改为由本件位置推导，不再写死盘符：CI 在 Linux 检出）=====
+_REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+DEFAULT_ROOT = os.path.join(_REPO, "05-卷册大纲", "目录")
 ROOT = DEFAULT_ROOT
 ASSETS = ROOT + "/assets"
 DATA = ROOT + "/data"
@@ -98,7 +99,8 @@ FAVICON = ASSETS + "/favicon.ico"
 TOUCH_ICON = ASSETS + "/apple-touch-icon.png"
 CATALOG_JSON = DATA + "/catalog.json"
 SRC_CMAP = DATA + "/font-source-cmap.txt"
-FONT_SOURCE_TGZ = r"D:/librebsd/script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz"
+FONT_SOURCE_TGZ = os.path.join(_REPO, "script", "_font_embed_20260905",
+                               "lxgw-wenkai-screen-webfont-1.7.0.tgz")
 FONT_FAMILY = "LXGW WenKai Screen"
 
 

@@ -21,12 +21,16 @@
 #
 # 注意：`!` 行（卷级分工注）渲染为 .vol-note，不在 <span class="src"> 内，
 # 本脚本不覆盖（由 S6 独立脚本核验）。
+import os
 import re
 import sys
 
 SELFTEST = '--selftest' in sys.argv
 
-TARGET = sys.argv[1] if len(sys.argv) > 1 else r'D:/librebsd/05-卷册大纲/目录/index.html'
+TARGET = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.abspath(__file__))))), "05-卷册大纲", "目录", "index.html")
+# 2026-10-29 修：缺省目标由本件位置推导，不写死盘符（CI 在 Linux 检出）。
 if SELFTEST:
     # 负向夹具（2026-10-03 第六批）：「冻结基准语境豁免」判据的双向验证。
     #  夹具1（须豁免）：引用紧邻「冻结基准」，且为叙述性历史旧号；

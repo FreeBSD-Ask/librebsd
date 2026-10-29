@@ -105,9 +105,12 @@ def o_flag(s):
         return m.group(0)
     return None
 
+import os
 import sys
 
-DEFAULT = r"D:/librebsd/05-卷册大纲/目录/index.html"
+# 路径由本件位置推导（parents[3]＝仓库根），不写死盘符（2026-10-29 修：CI 在 Linux 检出错位）。
+DEFAULT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))), "05-卷册大纲", "目录", "index.html")
 CN = "零一二三四五六七八九"
 # M 组 OS 比较节题形制（与核查脚本 script/_vol_adjust_20260927/check_os_compare.py 同源）：
 # 全库命中 29 处、违规 0。写作「与同时期操作系统的比较」者须由 `同时期操作系统` 一支命中。
