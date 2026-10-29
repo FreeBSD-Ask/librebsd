@@ -100,6 +100,7 @@ claimed_at=<YYYY-MM-DDTHH:MM:SS>
 
 - 注册表：`taskgroups.tsv`（76 行，机器可读；列含组号、卷号、卷题、章节数、`mapping.tsv` 命中 0 行的节数、旧料件数与字节、标题估算区间、波次、状态、产出路径）。
 - 任务卡：`V{NN}/task.md`（每卷一卡，自足交接：范围、产出、禁止、作业顺序）。
+- 交接书（给外部执行体，含流程、检查点、tasks 与反例）：`ZCode交接书-3A.6.md`。
 - 二者由固定脚本再生，不得手改：`python 00-编纂规则与格式规范/01-规则/脚本与命令/build_title_taskgroups.py`；`--check` 只比对不写盘（漂移 exit 1）。
 
 口径提示：`no_corpus_sections` 指 `mapping.tsv` 命中 0 行的节，与标题层 `corpus_gap` 例外（逐题登记，V01 为 231 条）口径不同；组内拟题时以实际题数为准。
