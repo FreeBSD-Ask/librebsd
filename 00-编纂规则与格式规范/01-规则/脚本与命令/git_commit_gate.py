@@ -74,12 +74,15 @@ IDEOGRAPHIC_SPACE = "\u3000"
 
 # B5：旁路备份副本（2026-10-23 用户令；全库禁止，无放行标记）
 # 变体口径与 .gitignore 封禁段一致：prebak 之外，preback／pre_／pre-／_pre_ 一类
-# “写前快照”命名同判（复核发现磁盘存在 .pre_*／.pre-*／.preback* 存量，须同堵入口）
+# “写前快照”命名同判（复核发现磁盘存在 .pre_*／.pre-*／.preback* 存量，须同堵入口）。
+# 2026-10-29 收窄中缀 pre：仅认后接数字的日期形（`-pre-20261023` 一类）。原写法
+# `[._-]pre[-_]` 会把题名内含合法版本号的改名件（实测第37卷 10.10.61 节题 `JDK 1.1.3-pre-v1`）
+# 拒在提交口，与第三十六件收窄后口径不一致；判据正文本亦不含中缀 pre 形态。
 SIDECAR_NAME_RE = (
     re.compile(r"(?i)\.prebak"),
     re.compile(r"(?i)\.preback"),
     re.compile(r"(?i)\.pre[-_]"),
-    re.compile(r"(?i)[._-]pre[-_]"),
+    re.compile(r"(?i)[._-]pre[-_](?=\d)"),
     re.compile(r"(?i)[._-]bak($|[-_.0-9])"),
     re.compile(r"(?i)\.bak($|[-_.0-9])"),
     re.compile(r"(?i)\.orig($|[0-9])"),
@@ -611,8 +614,17 @@ def selftest():
     open(os.path.join(repo, "docs", "a.md.pre_b004_20261005"), "w", encoding="utf-8").write("x\n")
     open(os.path.join(repo, "docs", "b.txt.preback-t1"), "w", encoding="utf-8").write("x\n")
     open(os.path.join(repo, "docs", "c.md-bak-20261001"), "w", encoding="utf-8").write("x\n")
+    # 中缀 pre 的日期形仍须拒（2026-10-29 收窄后不空转）
+    open(os.path.join(repo, "docs", "d.md-foo-pre-20261023.md"), "w", encoding="utf-8").write("x\n")
     g("add", "-A")
     check("B5_变体命名拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    # 版本号题名（`1.1.3-pre-v1` 一类）不是旁路副本：2026-10-29 收窄后须放行
+    repo, g = newrepo("t_b5ver")
+    os.makedirs(os.path.join(repo, "docs"))
+    open(os.path.join(repo, "docs", "10.10.61-实测-JDK-1.1.3-pre-v1-pause.md"),
+         "w", encoding="utf-8").write("x\n")
+    g("add", "-A")
+    check("B5_版本号题名放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     # B5 整改通道：删除遗留副本（状态 D）必须放行，否则违规件永远清不掉
     repo, g = newrepo("t_b5del")
     os.makedirs(os.path.join(repo, "docs"))
