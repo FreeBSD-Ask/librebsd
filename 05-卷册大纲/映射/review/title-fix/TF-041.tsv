@@ -109,3 +109,5 @@ S-008995	1999 年 2 月 28 日，Adam Payne 报告编译 ssh 端口时 make 中�
 S-009185	2000 年 1 月 22 日，Will Andrews 回应 Dean Hollister 报告 ELM 编译失败称 inttypes.h 自 3.x 起才进入 ／usr／include，其系统过旧装不了 ELM 2.4ME，建议至少升到 3.1-RELEASE	2000 年 1 月 22 日，Will Andrews 回应 Dean Hollister 报告 ELM 编译失败称 inttypes.h 自 3.x 起才进入 ／usr／include，其系统过旧装不了 ELM 2.4ME，建议至少升到 3.1-RELEASE	H1 同步：题面合规，H1 半角斜杠随题面同步
 S-009189	2000 年 1 月 30 日，Alexander Langer 提交 ports／16473	2000 年 1 月 30 日，Alexander Langer 提交 ports／16473，报 smalltalk 的 texinfo 文档在 -stable 处理不了而 -current 正常	题面单薄依正文补事由；H1 斜杠同步
 S-009190	2000 年 1 月 31 日，David G Paschich 提交 ports／16483 报 imap-uw 构建失败	2000 年 1 月 31 日，David G Paschich 提交 ports／16483 报 imap-uw 构建失败	H1 同步：题面合规，H1 半角斜杠随题面同步
+S-007619	2021 年 2 月 14 日，Lutter 以过期关闭 logstash5 缺陷，指其将从 ports 移除	2021 年 2 月 14 日，Juraj Lutter 关闭 Bug 233843 时指出 sysutils／logstash5 已不再积极维护并计划从 Ports 树中移除，把一个仅存于旧版本分支的 Port 缺陷以过期方式了结，ELK Port 组随上游主版本推进而逐代淘汰	并行语义轮抢先改名，按盘上实态重落合规全题
+S-007926	2012 年 10 月 27 日，Huff 报 LibreOffice 编译安装启动全通过，属单点实测	2012 年 10 月 27 日，Robert Huff 以三行回报确认 LibreOffice 三五四七编译安装启动全部通过，耗时最久的重型 Port 仅靠一次实测验证	并行语义轮抢先改名，按盘上实态重落合规全题
