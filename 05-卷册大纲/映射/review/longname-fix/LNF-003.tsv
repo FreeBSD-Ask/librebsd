@@ -1,0 +1,6 @@
+idx	num	old_bytes	new_bytes	old_stem	new_stem
+1	17.4.35	275	105	17.4.35-2021 年 2 月 14 日，Juraj Lutter 关闭 Bug 233843 时指出 sysutils／logstash5 已不再积极维护并计划从 Ports 树中移除，把一个仅存于旧版本分支的 Port 缺陷以过期方式了结，ELK Port 组随上游主版本推进而逐代淘汰	17.4.35-2021 年 2 月 14 日，Lutter 以过期关闭 logstash5 缺陷，指其将从 Ports 树移除
+2	17.7.59	286	147	17.7.59-2016 年 3 月 8 日，Vick Khera 报告把 pam_google_authenticator 从 20140826_1 升到 1.01.20160208 后远程登录即断开，原因是 PAM 共享库从 ／usr／local／lib 移至 security 子目录，而 UPDATING 对此毫无说明，要求升级提示中大幅标注	17.7.59-2016 年 3 月 8 日，Khera 报 pam_google_authenticator 升级后登录即断，PAM 库移入 security 子目录而 UPDATING 未说明
+3	17.7.99	257	117	17.7.99-2000 年 8 月 29 日，Kris Kennaway 转引 Mark Andrews 称 netscape 停止响应并进入忙循环后表示 Unix 版 Netscape 一贯如此无解，建议改用 Linux 版更稳定或关闭 java，并称他在 Unix 版中 java 从未正常工作	17.7.99-2000 年 8 月 29 日，Kennaway 称 Unix 版 Netscape 忙循环无解，建议改 Linux 版或关闭 java
+4	18.2.24	319	137	18.2.24-2013 年 10 月 3 日，Lars Engels 回应 Sam Fourman Jr. 关于以 Ports 默认选项用 clang33 构建的 Chromium 在地址栏搜索时输入字母 a 就核心转储的报告，说自己从 pkg-test 取到的版本也出现同样现象，把这条回归的复现范围扩大到一个不同来源的构建	18.2.24-2013 年 10 月 3 日，Engels 报 pkg-test 版 Chromium 同样在地址栏输入 a 即核心转储，扩大回归复现范围
+5	18.2.81	258	100	18.2.81-2000 年 3 月 20 日，Mikhail Teterin 反问 Will Andrews 用 -pthread 测过 screem 是否意味着整个 pth-devel 都会被移除，并质疑既然有人可能因别的原因要装它，那还不如修 www／mozilla Port 让它用对的东西	18.2.81-2000 年 3 月 20 日，Teterin 质疑移除 pth-devel 的必要，主张修 mozilla Port

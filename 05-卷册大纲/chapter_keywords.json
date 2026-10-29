@@ -7,9 +7,9 @@
   "sections": 3951,
   "subsections": 15206,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "875ad62339c3b9beb275ef4b6e86ef6e28d58b4b6cd25f34a5eeb35a82f994e3",
+  "content_sha256": "fc191b4c77a2d79f660409c10e9297b24ff70ecfcab28335c3fd5c4d00e50dbb",
   "extract": "title+body",
-  "generated_at": "2026-10-29T13:31:57+08:00"
+  "generated_at": "2026-10-29T14:51:29+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -34436,7 +34436,7 @@
     "bash"
    ],
    "subs": 114,
-   "subs_sha1": "65a1cd96271de847d3c4e944d378c581e6c87539"
+   "subs_sha1": "dfd4efbd504ac07cbc69db0cb314560c11f90645"
   },
   "V36-C017-17.5": {
    "chapter": "V36-C017",
@@ -34535,7 +34535,7 @@
     "release"
    ],
    "subs": 100,
-   "subs_sha1": "231a7fee3d9a0537f40774a02bb70a5384197dc7"
+   "subs_sha1": "affa5392f0a1779ac32ff13f8712f8da2c9fe835"
   },
   "V36-C017-17.8": {
    "chapter": "V36-C017",
@@ -34716,7 +34716,7 @@
     "perl"
    ],
    "subs": 88,
-   "subs_sha1": "eaff087fdb6d8c98394364882d9adeb58e7425dd"
+   "subs_sha1": "6703ee619c502c0c31f871cde277ffb9d2cf9af2"
   },
   "V36-C018-18.3": {
    "chapter": "V36-C018",
@@ -107052,7 +107052,6 @@
   },
   "V36-C017-17.4.35": {
    "add": [
-    "TH-HW-036",
     "TH-NET-025",
     "TH-VM-015",
     "TH-HW-010",
@@ -109131,7 +109130,7 @@
     "TH-VM-009",
     "TH-OS-030",
     "TH-REL-015",
-    "TH-NET-026"
+    "TH-LANG-005"
    ]
   },
   "V36-C017-17.7.60": {
@@ -111882,12 +111881,8 @@
   },
   "V36-C018-18.2.81": {
    "add": [
-    "TH-OS-002",
     "TH-GOV-006",
     "TH-LANG-009"
-   ],
-   "technical_terms": [
-    "pthread"
    ]
   },
   "V36-C018-18.2.82": {
