@@ -1,0 +1,109 @@
+source_id	old	new	reason
+S-009647	freebsd-ports 邮件 1741585（空模板件）	freebsd-ports 邮件 1741585：空模板件	D1 非时间括注折入题面
+S-009651	freebsd-ports 邮件 1741796（空模板件）	freebsd-ports 邮件 1741796：空模板件	D1 非时间括注折入题面
+S-009657	freebsd-ports 邮件 1742457（空模板件）	freebsd-ports 邮件 1742457：空模板件	D1 非时间括注折入题面
+S-009660	freebsd-ports 邮件 1742708（空模板件）	freebsd-ports 邮件 1742708：空模板件	D1 非时间括注折入题面
+S-009663	freebsd-ports 邮件 1742951（空模板件）	freebsd-ports 邮件 1742951：空模板件	D1 非时间括注折入题面
+S-009666	freebsd-ports 邮件 1743237（空模板件）	freebsd-ports 邮件 1743237：空模板件	D1 非时间括注折入题面
+S-009669	freebsd-ports 邮件 1743625（空模板件）	freebsd-ports 邮件 1743625：空模板件	D1 非时间括注折入题面
+S-009671	freebsd-ports 邮件 1743779（空模板件）	freebsd-ports 邮件 1743779：空模板件	D1 非时间括注折入题面
+S-009652	freebsd-ports 邮件 1741843（空模板件）	freebsd-ports 邮件 1741843：空模板件	D1 非时间括注折入题面
+S-007816	2008 年 6 月 29 日，Remko Lodder 回复 NetOne 称 Snow.nl 的约八节点 OSPF 网络在 6.x 与 7.x 机器上使用 openospfd 未见问题，愿接收配置以尝试复现	2008 年 6 月 29 日，Remko Lodder 回复 NetOne 称 Snow.nl 的约八节点 OSPF 网络在 6.x 与 7.x 机器上使用 openospfd 未见问题，愿接收配置以尝试复现	保留：A3 Snow.nl 与 openospfd 为真专名，非挤压
+S-007893	2012 年 6 月 8 日邮件串：Warren Block 与 Olivier Smedts 的英文往复（引文原件）	2012 年 6 月 8 日邮件串：Warren Block 与 Olivier Smedts 的英文往复，属引文原件	D1 括注折入题面，收在实义
+S-007894	2012 年 6 月 20 日，bapt at FreeBSD.org（Baptiste Daroussin）确认 optionsng 的 UNIQUENAME 前缀须用小写	2012 年 6 月 20 日，bapt at FreeBSD.org 即 Baptiste Daroussin 确认 optionsng 的 UNIQUENAME 前缀须用小写	D1 人名括注折入题面
+S-007899	2012 年 3 月 5 日邮件串：Conrad J. Sabatier 与 Matthew Seaman 关于非标准安装位置的英文往复（引文原件）	2012 年 3 月 5 日邮件串：Conrad J. Sabatier 与 Matthew Seaman 关于非标准安装位置的英文往复，属引文原件	D1 括注折入题面，收在实义
+S-007909	2012 年 3 月 26 日 freebsd-chat 列表拒信：主题为 New job vacancy - see detail（英文原件）	2012 年 3 月 26 日 freebsd-chat 列表拒信：主题为 New job vacancy - see detail，属英文原件	D1 括注折入题面
+S-007910	2012 年 3 月 28 日 freebsd-ports 列表出现冒充 PayPal 的钓鱼邮件（英文原件）	2012 年 3 月 28 日 freebsd-ports 列表出现冒充 PayPal 的钓鱼邮件，属英文原件	D1 括注折入；PayPal 真专名保留
+S-007912	2012 年 5 月 2 日，glarkin at FreeBSD.org (Greg Larkin) 回应 Kaya：自己刚在 FreeBSD 上部署 Puppet Dashboard，提供 docs.puppetlabs.com 手册链接，并分享经验（Ruby／vendors 目录与已装 ports 冲突	2012 年 5 月 2 日，glarkin at FreeBSD.org 即 Greg Larkin 回应 Kaya：自己刚在 FreeBSD 上部署 Puppet Dashboard，给出手册链接，并分享 Ruby／vendors 目录与已装 Ports 冲突、Spamassassin 虚拟包问题及其规避办法	补齐截断括注，端口改 Ports；F1 缩短
+S-007915	2012 年 5 月 8 日邮件串：Baptiste Daroussin 与 Andriy Gapon 的英文往复（引文原件）	2012 年 5 月 8 日邮件串：Baptiste Daroussin 与 Andriy Gapon 的英文往复，属引文原件	D1 括注折入题面，收在实义
+S-007919	2012 年 5 月 15 日邮件串：Svyatoslav Lempert 与 Olivier Mueller 关于 FreeBSD 8.3 提交的英文往复（引文原件）	2012 年 5 月 15 日邮件串：Svyatoslav Lempert 与 Olivier Mueller 关于 FreeBSD 8.3 提交的英文往复，属引文原件	D1 括注折入题面，收在实义
+S-007921	2012 年 5 月 17 日，Jan Dakinevich 指出移植依赖 libusb 且以 pkgconfig 检测的软件存在困难，因为基本系统中缺少对应的 .pc 文件，提议修改 devel／libusb 使端口能生成 libusb-1.0.pc	2012 年 5 月 17 日，Jan Dakinevich 指出移植依赖 libusb 且以 pkgconfig 检测的软件存在困难，因为基本系统缺少对应的 .pc 文件，提议修改 devel／libusb 使该 Port 能生成 libusb-1.0.pc	端口改 Port；H1 半角斜杠全角化
+S-008186	2016 年 6 月 16 日，Ben Woods 回复 Freddie Cash 说不知道 -d 参数 因自己在看 pkg-install(8) 手册而非 pkg(8) 手册 但即使加上 -d 仍未显示冲突细节 继续追问有无其他方法让 pkg 揭示具体冲突	2016 年 6 月 16 日，Ben Woods 回复 Freddie Cash 说不清楚 -d 参数，因自己看的是 pkg-install(8) 手册而非 pkg(8) 手册，但即使加上 -d 仍未显示冲突细节，继续追问有无其他方法让 pkg 揭示具体冲突	补全角分句，手册页引用保留
+S-008204	2016 年 11 月 6 日，Andrey Chernov 回应 Mathieu Arnold，只记得一个并非 p5 端口的 www／w3mir	2016 年 11 月 6 日，Andrey Chernov 回应 Mathieu Arnold，只记得一个并非 p5 Port 的 www／w3mir	端口改 Port，全角斜杠
+S-008277	2017 年 7 月 17 日，Boris Samorodov 以 FreeBSD Committer 身份回复，指出本地仓库配置方式记载于 PKG-REPOSITORY(5) 手册，URL scheme 的形式见 FETCH(3)	2017 年 7 月 17 日，Boris Samorodov 以 FreeBSD Committer 身份回复，指出本地仓库配置方式记载于 PKG-REPOSITORY(5) 手册，URL scheme 的形式见 FETCH(3)	保留：D1 仅手册页引用 PKG-REPOSITORY(5) 与 FETCH(3)
+S-008487	2020 年 8 月 7 日，Michael Gmelin 感谢 Steve Wills 回复称希望能有用户可依赖的精简默认方式，装 git 包虽多数时候明显却非总能做到	2020 年 8 月 7 日，Michael Gmelin 感谢 Steve Wills 回复，称希望能有用户可依赖的精简默认方式，装 git 包虽多数时候明显却非总能做到，问 svnlite 检出是否为长期选项	B2 题尾到字补从句，收在实义
+S-009627	freebsd-ports 邮件 1739775（空模板件）	freebsd-ports 邮件 1739775：空模板件	D1 非时间括注折入题面
+S-008556	2020 年 3 月 28 日，Chris Ross 回应说自己已看到当日信息，并表示接下来想就 net-p2p／deluge 与 peers 向 Ruslan 征求反馈	2020 年 3 月 28 日，Chris Ross 回应说自己已看到当日信息，并表示接下来想就 net-p2p／deluge 与 peers 向 Ruslan 征求反馈	H1 同步：H1 半角斜杠全角化同步
+S-008653	1996 年 8 月 3 日，Narvi 承认 That's what the problem was 当时可见 MX 主机全在美国 timed miserably out 落款 Sander	1996 年 8 月 3 日，Narvi 承认 That’s what the problem was，当时可见 MX 主机全在美国 timed miserably out，落款 Sander	C2 直引号弯化为 That’s
+S-008753	1997 年 5 月 25 日，Christian Fortin 回复 Wolfram Schneider 的两周新端口公告，问是否计划加入 WordPerfect 7.0	1997 年 5 月 25 日，Christian Fortin 回复 Wolfram Schneider 的两周新 Port 公告，问是否计划加入 WordPerfect 7.0	端口改 Port；WordPerfect 真专名保留
+S-009630	freebsd-ports 邮件 1740102（空模板件）	freebsd-ports 邮件 1740102：空模板件	D1 非时间括注折入题面
+S-009324	2000 年 7 月 13 日，Will Andrews 称在达成合规前 Chris Faulhaber 的 rc.d 方案最优因 LessTif 等包难以做到 hier(7) 合规	2000 年 7 月 13 日，Will Andrews 称在达成合规前 Chris Faulhaber 的 rc.d 方案最优因 LessTif 等包难以做到 hier(7) 合规	保留：A3 LessTif 真专名，hier(7) 手册引用保留
+S-009636	freebsd-ports 邮件 1740512（空模板件）	freebsd-ports 邮件 1740512：空模板件	D1 非时间括注折入题面
+S-009643	freebsd-ports 邮件 1741026（空模板件）	freebsd-ports 邮件 1741026：空模板件	D1 非时间括注折入题面
+S-007244	要点：FreeBSD 1.x 基于 4.3BSD-Net／2，含 USL 诉讼潜在争议代码；USL v. BSDi 诉讼 1994 年 1 月和解后	要点：FreeBSD 1.x 基于 4.3BSD-Net／2 含 USL 诉讼潜在争议代码，USL v. BSDi 诉讼 1994 年 1 月和解后 CSRG 于 6 月发布 4.4BSD-Lite 重建法律基础	补齐和解后截断；H1 半角斜杠全角化
+S-007250	要点：Linux 2.0(1996.6) 引入 SMP 支持 (粗粒度大内核锁)、2.2(1999.1) 改进 SMP 与网络栈，引入防火墙	要点：Linux 2.0（1996.6）引入 SMP 支持（粗粒度大内核锁），2.2（1999.1）改进 SMP 与网络栈并引入防火墙 ipchains	括号全角化，补齐 ipchains 收尾
+S-007251	要点：Windows NT 4.0(1996.7) 将图形驱动移入内核以提升性能，引入 IIS 2.0 与 TCP／IP 栈改进	要点：Windows NT 4.0(1996.7) 将图形驱动移入内核以提升性能，引入 IIS 2.0 与 TCP／IP 栈改进	H1 同步：H1 半角斜杠全角化同步
+S-007252	要点：Solaris 2.4(1994.11)、2.5(1995.11)、2.6(1997.5) 在企业级网络栈成熟度上领先，2.6 引入 IPv6 与	要点：Solaris 2.4（1994.11）、2.5（1995.11）、2.6（1997.5）在企业级网络栈成熟度上领先，2.6 引入 IPv6 与 sendfilev	B2 题尾与字续接 sendfilev；括号全角化
+S-007254	不同时期人员的采访录（详见同卷采访录目录）	不同时期人员的采访录，详见同卷采访录目录	D1 括注折入题面
+S-007255	数据库引用（freebsd.duckdb）：本子节对应 freebsd 代码仓库	freebsd 代码仓库 1994–1998 年提交量数据库引用	去 .duckdb 杂质并避开 40 字符截断
+S-007256	Ingo Schwarze《bsdcan14-mandoc》（2014）	Ingo Schwarze 的 mandoc 系列 BSDCan 讲稿（2014、2015、2018）文献	补齐截断，按 260 限收短
+S-007258	John DiMarco 应和 Mary Baker 并首倡‘Historic Opportunity facing Free Unix’：自由 Unix	John DiMarco 应和 Mary Baker，首倡自由 Unix 变体主打桌面成为可能，为大辩论主帖源头	补齐截断，按 260 限收短
+S-007259	称微软内部为 Windows95 产品发布所用的 Web 服务器选用了 BSDI，此事经广泛传播后已无法再 telnet 取得 BSDI 提示符	微软内部为 Windows95 发布所用的 Web 服务器选用 BSDI，此事经广泛传播后再无法 telnet 取得 BSDI 提示符	B1 悬头称字改名词起头
+S-007261	J Wunsch 指 Debian 源树统一度或高于 BSD，并批评 BSD 第三方包乱放 ／var／run 与只读 ／usr	J Wunsch 指 Debian 源树统一度或高于 BSD，并批评 BSD 第三方包乱放 ／var／run 与只读 ／usr	H1 同步：H1 半角斜杠全角化同步
+S-010930	要点：除企业核心外，FreeBSD 贡献者横跨多国——德国、法国、俄罗斯等地域 ccTLD 与多所大学（如 Stony Brook）的学术贡献显著	要点：除企业核心外，FreeBSD 贡献者横跨德国、法国、俄罗斯等地，多所大学的学术贡献显著	D1 校名括注折入，收在实义
+S-010931	要点：FreeBSD 核心提交者（@freebsd.org）构成持续投入的主干，FreeBSD Foundation（约 2000 年成立	要点：FreeBSD 核心提交者构成主干，FreeBSD Foundation 提供法律、资金与招聘托管	补齐截断括注，收在实义
+S-010933	LessTif 0.83（LGPL Motif 克隆）发布	LGPL Motif 克隆 LessTif 0.83 发布	D1 括注折入；LessTif 真专名保留
+S-010934	公开撤回对 Buslogic 控制器的推荐（厂商关系转折）	公开撤回对 Buslogic 控制器的推荐，标志厂商关系转折	D1 括注折入题面
+S-010938	1999 年 9 月 20 日，Rick Hamell 指出本列表当初获准存在的前提就是不许在此提技术问题，并解释这条规定背后的实际考量	1999 年 9 月 20 日，Rick Hamell 指出本列表获准存在的前提是不许在此提技术问题，并解释背后的实际考量，担心新手拿到无人纠正的错误建议	补齐截断句，收在建议
+S-007944	2013 年 1 月 5 日，b.f. 解释 kmod 类端口沿用 base 系统 makefile 编译内核模块，套用 kern.mk 里各种内核标志以求一致，故混用非默认工具链风险很大	2013 年 1 月 5 日，b.f. 解释 kmod 类 Port 沿用 base 系统 Makefile 编译内核模块，混用非默认工具链风险很大并预告大量 Port 构建失败	端口改 Port，补齐截断句
+S-007340	1995 年 4 月 18 日，Satoshi Asami 于 1995-04-18 报 dvi2xx 构建 scripts／ftpget 试图在 work 目录创建 ftpget ftplib.pl	1995 年 4 月 18 日，Satoshi Asami 报 dvi2xx 的 scripts／ftpget 在 work 目录创建 ftpget ftplib.pl 却 permission denied 而不得其解	补齐截断，去重复日期，全角斜杠
+S-007300	建议排查未定义符号时用自定别名：icheck 在头文件里 grep 符号、lcheck 在 GNU 静态库里 grep，称可解约九成此类问题	排查未定义符号的自定别名做法：icheck 在头文件里 grep 符号、lcheck 在 GNU 静态库里 grep，称可解约九成此类问题	B1 悬头建议改名词起头
+S-007444	1998 年 1 月 21 日，ache 要求 Peter 从 Attic 恢复旧版 ／usr／bin／patch，并撤掉他对 pch.c 与 patch.1 的本地改动	1998 年 1 月 21 日，ache 要求 Peter 从 Attic 恢复旧版 ／usr／bin／patch，并撤掉他对 pch.c 与 patch.1 的本地改动	H1 同步：H1 半角斜杠全角化同步
+S-007301	Ivan Leung 称 .cshrc 中 noclobber 致 cc -M 重定向失败，改用 ＞! 可写，SHELL 无法写成 ／bin／csh -c	Ivan Leung 称 .cshrc 的 noclobber 致 cc -M 重定向失败，改用强制覆盖重定向符可写入，SHELL 无法写成 ／bin／csh -c	C7 半角叹号改写规避；全角斜杠
+S-007450	1998 年 6 月 17 日，tg 关闭 ports／6972，判定 lesstif 安装失败根因是 bsd.port.mk 过旧	1998 年 6 月 17 日，tg 关闭 ports／6972，判定 lesstif 安装失败根因是 bsd.port.mk 过旧	H1 同步：H1 半角斜杠全角化同步
+S-007451	1998 年 7 月 18 日，David O'Brien 说 EGCS 与 gcc28 构建不了可运行内核属同一批问题	1998 年 7 月 18 日，David O’Brien 说 EGCS 与 gcc28 构建不了可运行内核属同一批问题	C2 直撇号弯化为 O’Brien
+S-007457	1998 年 8 月 21 日，asami 指出 ImageMagick 这个情形只有 section 3 的 manpage 装进那个子目录	1998 年 8 月 21 日，asami 指出 ImageMagick 这个情形只有 section 3 的 manpage 装进那个子目录	保留：A3 ImageMagick 为真专名，非挤压
+S-007466	1998 年 10 月 9 日，shige 提交 editors／emacs20 更新，说明在 3.0-BETA 上构建时	1998 年 10 月 9 日，shige 提交 editors／emacs20 更新，说明在 3.0-BETA 上构建时 scripts／configure 会停顿并要求回答 y 才能继续	补齐截断句；全角斜杠
+S-007470	1998 年 11 月 30 日，Nordwick 装完 www／netscape45-communicator 却跑不起来，程序要的是 libXt.so.6.0	1998 年 11 月 30 日，Nordwick 装完 www／netscape45-communicator 却跑不起来，程序要的是 libXt.so.6.0	H1 同步：H1 半角斜杠全角化同步
+S-007476	1999 年 2 月 16 日，Daniel O'Connor 回复 Joseph Koshy 关于 dlsym 与 ELF 的讨论，说自己在工作时移植到 elf 就踩过这个坑	1999 年 2 月 16 日，Daniel O’Connor 回复 Joseph Koshy 关于 dlsym 与 ELF 的讨论，说自己在工作时移植到 elf 就踩过这个坑	C2 直撇号弯化为 O’Connor
+S-007483	1999 年 6 月 17 日，Bill Fumerola 提议把 tkstep80 虚拟类别加进三百个列出类别的文件里，说该类别本由某批用它的端口维护者无意引入、列表上没讨论过	1999 年 6 月 17 日，Bill Fumerola 提议把 tkstep80 虚拟类别加进三百个列出类别的文件，称它由相关 Port 维护者无意引入且列表上从未讨论，先征求反对意见再动手	B2 题尾过字改实义收尾；端口改 Port
+S-007492	1999 年 9 月 19 日，tkato 为 lang／mawk 的 Makefile 补上 PREFIX 支持，把 WRKSRC 改写为花括号形式引用变量	1999 年 9 月 19 日，tkato 为 lang／mawk 的 Makefile 补上 PREFIX 支持，把 WRKSRC 改写为花括号形式引用变量	H1 同步：H1 半角斜杠全角化同步
+S-007497	2000 年 1 月 17 日，Kris Kennaway 提议在升 OSVERSION 之外于 bsd.port.mk 加 USE_OPENSSL 开关自动设置 LIB_DEPENDS	2000 年 1 月 17 日，Kris Kennaway 提议于 bsd.port.mk 加 USE_OPENSSL 开关自动设置 LIB_DEPENDS，但难以区分国际版与无 rsaref 的美版	补齐截断句；F1 缩短
+S-007501	2000 年 4 月 1 日，Will Andrews 反对 kde11 改名迁移动作，称说服 KDE 1.1.x 程序员为 KDE2 重写不现实，还叠加 Qt 1.45 与 Qt 2.0	2000 年 4 月 1 日，Will Andrews 反对 kde11 改名迁移，称说服 KDE 1.1.x 程序员为 KDE2 重写不现实，还叠加 Qt 1.45 与 Qt 2.0 的兼容难题	补齐截断，题尾与字收在难题
+S-007504	2000 年 5 月 3 日，Asami 评 Kennaway 带宽排序方案或可行但工作量巨大并澄清限制处理所指为端口依赖落入不同再分发类时的纠缠且认可 OpenBSD 的许可清查称自己早收到	2000 年 5 月 3 日，Asami 评 Kennaway 带宽排序方案或可行但工作量巨大，并称自己早收到 jdp 来信只是被淹没	B2 题尾到字补实义收尾
+S-007505	2000 年 5 月 7 日，David O'Brien 在 USE_ 指令提案串中明确拒绝向 vim5 提交改动，称愿接受任何改善 GTK 支持但不使其成为默认行为的补丁	2000 年 5 月 7 日，David O’Brien 在 USE_ 指令提案串中拒绝向 vim5 提交改动，称愿接受任何改善 GTK 支持但不使其成为默认行为的补丁	C2 直撇号弯化为 O’Brien
+S-007506	2000 年 5 月 28 日，Andrew L. Neporada 回复 Mohit Aron 关于 pdflatex 移植的请求指出 print 下的 teTeX 端口已内置 pdflatex	2000 年 5 月 28 日，Andrew L. Neporada 回复 Mohit Aron 的 pdflatex 移植请求，指出 print 下的 teTeX Port 已内置 pdflatex 无需重复移植	端口改 Port，补齐截断句
+S-007511	2000 年 6 月 30 日，GeraldPfeifer 询问先前提议的 ports-maintainers 邮件列表进展表示所有反馈均正面并寻求推进该列表以向维护者广播重大变更和即将发布的版本	2000 年 6 月 30 日，Gerald Pfeifer 询问先前提议的 ports-maintainers 邮件列表进展，表示反馈均正面，并寻求推进该列表以向维护者广播重大变更	A3 人名挤压拆分 GeraldPfeifer，补分句
+S-007515	2000 年 7 月 31 日，alex 说明 XMMS 的立体声插件对环绕音响音质提升显著但爆音问题使其无法使用并询问多媒体团队成员是否了解此现象呢吗呀了吧	2000 年 7 月 31 日，alex 称 XMMS 的立体声插件对环绕音响音质提升显著，但爆音问题令其无法使用，询问多媒体团队是否了解此现象	B2 题尾语气词垃圾串改实义收尾
+S-007519	2000 年 9 月 4 日，Kiriyama 表示更偏好保留 bsd.emacs.mk 名称不建议重命名为 bsd.elisp.mk，并建议 elisp 类别端口也可继续使用	2000 年 9 月 4 日，Kiriyama 更偏好保留 bsd.emacs.mk 名称不建议重命名为 bsd.elisp.mk，并建议 elisp 类别 Port 也可继续使用 bsd.emacs.mk	端口改 Port，补齐截断句
+S-007521	2000 年 9 月 16 日，ade 关闭 ports／21096 关于 games／nethack unbreak 与 assume maintainership 的 PR	2000 年 9 月 16 日，ade 关闭关于 games／nethack 解除禁用与接任维护者的 ports／21096 号 PR	A2 maintainership 语义转述；全角斜杠
+S-007522	2000 年 10 月 2 日，Alexander Kabaev 提交 PR 21705 报告 cscope 因 FreeBSD fputs 返回字节数不准 将错误 offset 写入索引	2000 年 10 月 2 日，Alexander Kabaev 报 PR 21705：cscope 因 fputs 返回字节数不准把错误 offset 写入索引，致索引无法重用，并附 __FreeBSD__ 宏补丁	补齐截断句；F1 缩短
+S-007525	2000 年 11 月 15 日，Johann Visagie 提交 PR 22865 首次移植 omniORBpy Python CORBA 接口端口说明需整个预构建 omniORB 源码树且与	2000 年 11 月 15 日，Johann Visagie 提交 PR 22865 首次移植 omniORBpy 接口 Port，需整个预构建 omniORB 源码树且与 devel／omniORB 强耦合	B2 与字补实义；端口改 Port；F1 缩短
+S-007526	2001 年 1 月 6 日，andreas 回复 PR 24110 ipa 说明端口应遵守系统 CFLAGS 否则需在 Makefile 加 NO_PACKAGE=ignores cflags	2001 年 1 月 6 日，andreas 回复 PR 24110 ipa，说明该 Port 应遵守系统 CFLAGS，否则需在 Makefile 加 NO_PACKAGE=ignores cflags 表示无法打包	端口改 Port，补齐截断句
+S-007307	2004 年 2 月 16 日，Oliver Eikemeier 列出仍依赖 OpenLDAP 2.0 的端口，涵盖 balsa、qmail-ldap、gq 等	2004 年 2 月 16 日，Oliver Eikemeier 列出仍依赖 OpenLDAP 2.0 的 Port，涵盖 balsa、qmail-ldap、gq 等包	B2 题尾等字补实义；端口改 Port
+S-007531	Keith J. Davey 提交 ports／25233 报告 wget-1.6_1 端口在 FreeBSD 4.2-RELEASE 上 patch-ab 五处 hunk 应用失败致 make	Keith J. Davey 提交 ports／25233 报告 wget-1.6_1 Port 在 FreeBSD 4.2-RELEASE 上 patch-ab 五处 hunk 失败致 make install 中止	补齐致 make 截断；端口改 Port；F1 缩短
+S-007533	David O'Brien 质疑 shell 究竟为何需要 dl 函数并认为静态链接即可无需多此一举地复杂化端口构建与安装流程并呼吁保持简洁	David O’Brien 质疑 shell 为何需要 dl 函数，认为静态链接即可，不必复杂化 Port 构建与安装流程，并呼吁保持简洁	C2 弯撇号；端口改 Port；补分句
+S-007548	2001 年 8 月 27 日，petef 将 ports／30148 libtool 补丁转交 portmgr 维护者	2001 年 8 月 27 日，petef 将 ports／30148 libtool 补丁转交 portmgr 维护者	H1 同步：H1 半角斜杠全角化同步
+S-007550	2001 年 9 月 3 日，关闭 PR30134 表示 math／ntl 端口的最新版本已提交入库	2001 年 9 月 3 日，关闭 PR30134，表示 math／ntl Port 的最新版本已提交入库	端口改 Port；全角斜杠
+S-007551	2001 年 9 月 3 日，knu 在 PR29853 认领新端口 www／mod_watch 并表示自己负责	2001 年 9 月 3 日，knu 在 PR29853 认领新 Port www／mod_watch 并表示自己负责	端口改 Port；全角斜杠
+S-007554	2001 年 11 月 15 日，Noel Koethe 质疑 Samba 2.2.2 为何命名 samba-devel 并提议移除旧 net／samba 让 samba-devel 顶替	2001 年 11 月 15 日，Noel Koethe 质疑 Samba 2.2.2 为何命名 samba-devel 并提议移除旧 net／samba 让 samba-devel 顶替	H1 同步：H1 半角斜杠全角化同步
+S-007559	2001 年 12 月 7 日，Boris Köster 报告构建 databases／gnomedb 时 gnome-db-0.2.93.tar.gz 校验和与 distinfo 记录不一致	2001 年 12 月 7 日，Boris Köster 报告构建 databases／gnomedb 时 gnome-db-0.2.93.tar.gz 校验和与 distinfo 记录不一致	H1 同步：H1 半角斜杠全角化同步
+S-007578	2002 年 2 月 2 日，Alex Dupre 提交 print／pdflib 由 4.0.1 升至 4.0.2 并删除多余 MASTER_SITES	2002 年 2 月 2 日，Alex Dupre 提交 print／pdflib 由 4.0.1 升至 4.0.2 并删除多余 MASTER_SITES	H1 同步：H1 半角斜杠全角化同步
+S-007587	2002 年 5 月 5 日，Jim Pingle 报告 jakarta-tomcat3 用 tomcat3ctl 启动即抛 ZipException 而 rc.d 脚本也因此起不来	2002 年 5 月 5 日，Jim Pingle 报告 jakarta-tomcat3 用 tomcat3ctl 启动即抛 ZipException 而 rc.d 脚本也因此起不来	保留：A3 ZipException 为标识符真名，非挤压
+S-007590	2002 年 6 月 7 日，KATO 提交 PR 38997 将 games／vamos 改用 USE_LIBTOOL 并新增 files／patch-configure 补丁文件	2002 年 6 月 7 日，KATO 提交 PR 38997 将 games／vamos 改用 USE_LIBTOOL 并新增 files／patch-configure 补丁文件	H1 同步：H1 半角斜杠全角化同步
+S-007592	2002 年 6 月 12 日，david marshall 报告 mail／p5-Mail-Audit 缺少运行依赖 并附修改该端口 Makefile 的 diff	2002 年 6 月 12 日，david marshall 报告 mail／p5-Mail-Audit 缺少运行依赖，并附修改该 Port Makefile 的 diff	端口改 Port；补全角逗号
+S-007341	1995 年 4 月 18 日，Jordan K Hubbard 于 1995-04-18 报 mh-6.8.3 包 pkg_add 后跑 show 触发 ld.so libmh.so.3.2	1995 年 4 月 18 日，Jordan K Hubbard 报 mh-6.8.3 包 pkg_add 后运行 show 触发 ld.so libmh.so.3.2 报 Undefined error 0，怀疑漏装共享库	补齐截断句，去重复日期；F1 缩短
+S-007313	2004 年 6 月 19 日，Yar Tikhiy 指出 Porter's Handbook 尚未记录 PLIST_FILES 与 PLIST_DIRS，提交补丁填补这一空白	2004 年 6 月 19 日，Yar Tikhiy 指出 Porter’s Handbook 尚未记录 PLIST_FILES 与 PLIST_DIRS，提交补丁填补这一空白	C2 直撇号弯化为 Porter’s
+S-007335	1995 年 4 月 6 日，作者解释 _HAVE_PARAM_H 本应由 Makefile 设值以表示系统有 sys／param.h	1995 年 4 月 6 日，作者解释 _HAVE_PARAM_H 本应由 Makefile 设值以表示系统有 sys／param.h	H1 同步：H1 半角斜杠全角化同步
+S-007349	1995 年 5 月 11 日，哈维尔·马丁·鲁埃达自测 pcnfsd 端口发现安装建 ／var／spool／pcnfsd 但可执行文件用 ／var／spool／pcnfs 目录名不一致，还盲装到	1995 年 5 月 11 日，哈维尔·马丁·鲁埃达自测 pcnfsd Port，发现安装建 ／var／spool／pcnfsd 而可执行文件用 ／var／spool／pcnfs，还盲装到 libexec 与 man8	B2 到字改实义；端口改 Port；F1 缩短
+S-007367	1995 年 8 月 3 日，Gellekum 把 noweb.tar.gz 放进 wcarchives 的 ／pub／FreeBSD／incoming	1995 年 8 月 3 日，Gellekum 把 noweb.tar.gz 放进 wcarchives 的 ／pub／FreeBSD／incoming	H1 同步：H1 半角斜杠全角化同步
+S-007372	1995 年 8 月 20 日，承认 hylafax 去找 ／usr／local／bin／sed 是本机的问题	1995 年 8 月 20 日，作者承认 hylafax 去找 ／usr／local／bin／sed 是本机环境问题，因本地日语版 sed 被 configure 抓走	补主语与成因，收在实义
+S-007373	1995 年 8 月 23 日，Jordan 判定 mime.types 是 Netscape FAQ 所指内置部分而 mailcap 才是关键缺失补齐后 Netscape 能正确识别 MPEG	1995 年 8 月 23 日，Jordan 判定 mime.types 是 Netscape FAQ 所指内置部分，mailcap 才是关键缺失，补齐后能识别 MPEG 音频文件	补齐截断句，按 260 限收短
+S-007375	1995 年 8 月 28 日，Jordan 主张改用 pkg_info 并以 foomake v3.51 与 galacticGenocide 的反例说明仅检	1995 年 8 月 28 日，Jordan 主张改用 pkg_info，以 foomake v3.51 为例说明仅检可执行文件不够，须按 pkg_info -e 匹配版本串	A2 galacticGenocide 语义转述
+S-007385	1995 年 10 月 5 日，Hideaki Ohmon 指出 ports／japanese／ptex 的 pkg／COMMENT 有误	1995 年 10 月 5 日，Hideaki Ohmon 指出 ports／japanese／ptex 的 pkg／COMMENT 有误	H1 同步：H1 半角斜杠全角化同步
+S-007388	1995 年 10 月 22 日，Jordan Hubbard 请维护者缩短 pkg／COMMENT 单行描述	1995 年 10 月 22 日，Jordan Hubbard 请维护者缩短 pkg／COMMENT 单行描述	H1 同步：H1 半角斜杠全角化同步
+S-007396	1996 年 1 月 22 日，赞同 Peter Wemm 观点称 ssh 出现时默认路径为 ／etc 虽位置不差但使 ／etc 杂乱故曾请 Tatu 加入 --with-etcdir 配置开关	1996 年 1 月 22 日，赞同 Peter Wemm 观点，称 ssh 默认路径 ／etc 使 ／etc 杂乱，故曾请 Tatu 加入 --with-etcdir 开关，并主张装于 ／etc／ssh	补齐截断句；端口改 Port 意译；全角斜杠
+S-007399	1996 年 2 月 29 日，invalid opcode 认为 ／usr／X11R6／man 下的手册页同样可以放进 local／share／man	1996 年 2 月 29 日，invalid opcode 认为 ／usr／X11R6／man 下的手册页同样可以放进 local／share／man	H1 同步：H1 半角斜杠全角化同步
+S-007401	1996 年 3 月 12 日，Garth Kidd 自承 FreeBSD 新丁疏忽未先查 ports-current，误以为更新端口会随 2.1.0-RELEASE 分发，询问是否用	1996 年 3 月 12 日，Garth Kidd 自承疏忽未先查 ports-current，误以为更新 Port 会随 2.1.0-RELEASE 分发，询问是否该先用 pkg_manage 删除首次尝试	补齐询问是否用截断；端口改 Port；F1 缩短
+S-007406	1996 年 4 月 10 日，Satoshi Asami 表示既然改用 ／usr／X11R6 应就没事，共享库装进 ／lib 那种严重脱轨的做法不用太操心	1996 年 4 月 10 日，Satoshi Asami 表示既然改用 ／usr／X11R6 应就没事，共享库装进 ／lib 那种严重脱轨的做法不用太操心	H1 同步：H1 半角斜杠全角化同步
+S-007408	1996 年 6 月 2 日，John Fieber 给出反例，用 Makefile 的 ! = 赋值从 uname -r 造变量并替代 bsd.port.mk 方案	1996 年 6 月 2 日，John Fieber 给出反例：用 Makefile 的 shell 赋值从 uname -r 造变量，替代 bsd.port.mk 方案	C7 半角叹号改写规避
+S-007409	1996 年 6 月 26 日，Gary Palmer 发现 ftp.freebsd.org 总在 MASTER_SITES 指定站点之前被优先抓取，与过去相反不知是否期望行为	1996 年 6 月 26 日，Gary Palmer 发现 ftp.freebsd.org 总在 MASTER_SITES 指定站点之前被优先抓取，与过去相反，于是在 bsd.port.mk 插调试行确认	B2 题尾为字改实义收尾（插调试行确认）
+S-007411	1996 年 7 月 30 日，回应 Chuck Robey 关于 ports／print／ghostscript4 发行命名的意见，Narvi 说情况并非如此	1996 年 7 月 30 日，回应 Chuck Robey 关于 ports／print／ghostscript4 发行命名的意见，Narvi 说情况并非如此	H1 同步：H1 半角斜杠全角化同步
+S-007412	1996 年 8 月 2 日，Jordan Hubbard 指出该样本 Makefile 13K 体积过大 引 Science Made Stupid 说 Warty things too big	1996 年 8 月 2 日，Jordan Hubbard 指样本 Makefile 13K 体积过大，主张人读模板方案不可行，应改为程序可读模板配合 GUI 生成器	补齐截断句，按 260 限收短
+S-007298	要点：bsd.port.mk 从 1.0（1994）经历 2.0（1996 引入 PLIST）、3.0（1998 引入 OPTIONS）	要点：bsd.port.mk 从 1.0 到 4.0 的大版本演化，逐版引入新变量约定与构建阶段	补齐截断括注，收在实义
+S-007426	1997 年 1 月 9 日，Warner Losh 据移植经验称 sys／param.h 至少存在于 99.999 百分比例定义 unix 或 __unix__ 的系统上	1997 年 1 月 9 日，Warner Losh 据移植经验称 sys／param.h 至少存在于 99.999 百分比例定义 unix 或 __unix__ 的系统上	H1 同步：H1 半角斜杠全角化同步
+S-007427	1997 年 1 月 12 日，John Fieber 继续 html 讨论，称解析标题只需定位 ＜title＞ 与 ＜／title＞ 之间即可	1997 年 1 月 12 日，John Fieber 继续 html 讨论，称解析标题只需定位 ＜title＞ 与 ＜／title＞ 之间即可	H1 同步：H1 半角斜杠全角化同步
+S-011867	- 要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0	要点：Windows 2000（2000.2）以 Active Directory 与 IIS 5.0 吸引部分企业用户，但 FreeBSD 在 ISP 场景仍占优势	去题首残留短横，补齐句尾
+S-011885	要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0	要点：Windows 2000 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0 吸引部分企业用户	补齐 H1 句尾，与 4.8.1 区分
+S-012186	要点：2000 年 Linux 处于 2.2／2.4 开发期（2.4 于 2001.1 发布），由 Torvalds	要点：2000 年 Linux 处于 2.2／2.4 开发期，由 Torvalds 个人把关并被称为“仁慈的终身独裁者”	补齐由 Torvalds 截断；全角斜杠
+S-011903	要点：2000-2003 年同期 Linux 2.4(2001.1) 引入 SMP 改进、iptables、ReiserFS	要点：2000–2003 年同期 Linux 2.4（2001.1）引入 SMP 改进、iptables、ReiserFS	D2 年代区间改用 U+2013；括号全角化
