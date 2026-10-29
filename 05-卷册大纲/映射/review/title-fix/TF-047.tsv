@@ -1,0 +1,116 @@
+source_id	old	new	reason
+S-013659	Giant 锁 → MPSAFE VFS 与 SMPng 项目收束（6.0，2005.11.3）	Giant 锁与 MPSAFE VFS：SMPng 项目随 6.0 于 2005 年 11 月 3 日收束	C5 删箭头改述；D1 时间括注折入题面
+S-013675	2010 年 2 月 3 日，Andrej Shidenko 报告混合 UltraSPARC IV／IV+ 的 Sun Fire V890 引导 8.0-RELEASE 时 loader 报 no node for bootcpu	2010 年 2 月 3 日，Andrej Shidenko 报告混合 UltraSPARC IV／IV+ 的 Sun Fire V890 引导 8.0-RELEASE 时 loader 报 no node for bootcpu	H1 同步：题面完整；H1 半角斜杠随题面同步
+S-013677	2010 年 11 月 15 日，Anton Shterenlikht 报告在 sparc64 的 -current r212302 上构建 lang／gcc45 遇到困难并提交了 GCC PR 46086，他不明白 GCC 开发者关于	2010 年 11 月 15 日，Anton Shterenlikht 在 sparc64 的 -current r212302 上构建 lang／gcc45 失败并提交 GCC PR 46086	题面截断于关于，续至 PR 号；F1 缩短
+S-013680	2011 年 6 月 30 日，Peter Jeremy 报告 V440 与 V890 在压力测试下都 panic 于 uma_small_alloc 的 free page still has mappings 断言，V890 以	2011 年 6 月 30 日，Peter Jeremy 报告 V440 与 V890 在压力测试下均 panic 于 uma_small_alloc 的 free page still has mappings 断言，V890 约一小时即复现	B2 尾字悬空，依正文续至复现
+S-013686	2013 年 3 月 25 日，Chris Ross 报告 Marius Strobl 的 ATA_CAM_NO_48BIT_DMA 补丁无法直接套用到 stable／9	2013 年 3 月 25 日，Chris Ross 报告 Marius Strobl 的 ATA_CAM_NO_48BIT_DMA 补丁无法直接套用到 stable／9	H1 同步：H1 半角斜杠随题面同步
+S-013701	2008 年 4 月 15 日，Peter Grehan 建议用 64 位传送指令原子更新哈希表中的页表项，并认为把 OpenFirmware 放进独立 pmap 的老办法行不通	2008 年 4 月 15 日，Peter Grehan 建议用 64 位传送指令原子更新哈希表中的页表项，并认为把 OpenFirmware 放进独立 pmap 的老办法行不通	保留：A3 为真专名 OpenFirmware，不拆
+S-013705	2008 年 5 月 1 日，Nathan Whitehorn 报告为测试 BMAC 驱动而新编的 -CURRENT 内核已无法在 PowerMac G3 上引导	2008 年 5 月 1 日，Nathan Whitehorn 报告为测试 BMAC 驱动而新编的 -CURRENT 内核已无法在 PowerMac G3 上引导	保留：A3 为真专名 PowerMac，不拆
+S-013660	KSE M： N 线程模型 → libthr 1：1 线程模型起步（6.x 时期过渡）	KSE M：N 线程模型逐步让位于 libthr 1：1 线程模型（6.x 时期过渡）	C5 删箭头改述；冒号后空格归一
+S-013712	2009 年 2 月 21 日，Rafal Jaworowski 答复 Aleksey Fedorov 的交叉编译提问：在 amd64 主机上跑 buildworld 并指定 TARGET_ARCH 为 powerpc	2009 年 2 月 21 日，Rafal Jaworowski 答复 Aleksey Fedorov 的交叉编译提问：在 amd64 主机上跑 buildworld 并指定 TARGET_ARCH 为 powerpc	H1 同步：题面完整；H1 续语不取
+S-013721	2010 年 7 月 16 日，Bryan Vyhmeister 报告自己的双 2.7GHz PowerMac G5 遇到同样找不到硬盘的情况	2010 年 7 月 16 日，Bryan Vyhmeister 报告自己的双 2.7GHz PowerMac G5 遇到同样找不到硬盘的情况	保留：A3 为真专名 PowerMac，不拆
+S-013726	2011 年 1 月 22 日，Torfinn Ingolfsen 说 PowerMac G4 装 8.1-beta1 时只需写 snd_ai2s_load 即可加载声卡	2011 年 1 月 22 日，Torfinn Ingolfsen 说 PowerMac G4 装 8.1-beta1 时只需写 snd_ai2s_load 即可加载声卡	保留：A3 为真专名 PowerMac，不拆
+S-013729	2011 年 10 月 18 日，Nathan Whitehorn 答复说 ppc64 上的 binutils 已知是坏的	2011 年 10 月 18 日，Nathan Whitehorn 答复说 ppc64 上的 binutils 已知有问题	B2 尾的字改实义收尾
+S-013740	2013 年 6 月 24 日，dbb 补述日志附件被系统过滤，改贴关键报错：编译时 sys／types.h 报 machine／endian.h 打不开	2013 年 6 月 24 日，dbb 补述日志附件被系统过滤，改贴关键报错：编译时 sys／types.h 报 machine／endian.h 打不开	H1 同步：H1 半角斜杠随题面同步
+S-013746	2006 年 6 月 19 日，Paul V. Bolotoff 回 alpha／67626 称 mga 驱动在 alpha 上优化不佳 Matrox Millennium 与 Millennium II 在 164LX 上从未成功	2006 年 6 月 19 日，Paul V. Bolotoff 回 alpha／67626 称 mga 驱动在 alpha 上优化不佳，Matrox Millennium 与 Millennium II 在 164LX 上从未成功	补分句逗号拆连读；H1 同步
+S-013643	2006 年 2 月 20 日，Niki Denev 报 PR docs／93590	2006 年 2 月 20 日，Niki Denev 报 PR docs／93590	H1 同步：H1 半角斜杠随题面同步
+S-013644	2006 年 1 月 7 日，Eugene Grosbein 回复 PR docs／59835 指出 ipfw(8) 手册页未警告某些规则虽被接受但实际无意义	2006 年 1 月 7 日，Eugene Grosbein 回复 PR docs／59835 指出 ipfw(8) 手册页未警告某些规则虽被接受但实际无意义	H1 同步：H1 半角斜杠同步；ipfw(8) 手册页引用保留
+S-013648	2006 年 5 月 12 日，Giorgos Keramidas 处理 docs／82296 将状态从 open 改为 feedback	2006 年 5 月 12 日，Giorgos Keramidas 处理 docs／82296 将状态从 open 改为 feedback	H1 同步：H1 半角斜杠随题面同步
+S-013652	2006 年 10 月 18 日，chinsan 接手 docs／99640	2006 年 10 月 18 日，chinsan 接手 docs／99640	H1 同步：H1 半角斜杠随题面同步
+S-013495	2005 年 2 月 14 日，SysKonnect 的 Gerald Heinig 按 Stephan Uphoff 给的选项编译内核后	2005 年 2 月 14 日，SysKonnect 的 Gerald Heinig 按 Stephan Uphoff 给的选项编译内核后，机器停在探测例程前等待 FireWire GDB 连接	题面止于后字，依正文续至语义边界
+S-013526	2005 年 10 月 21 日，John Baldwin 就 sio(4) 附件问题回复 M. Warner Losh	2005 年 10 月 21 日，John Baldwin 就 sio(4) 附件问题回复 M. Warner Losh	保留：D1 为 sio(4) 手册页引用，保留
+S-013529	2005 年 9 月 11 日，wilbury.sk 的 Daniel Gerzo 宣布问题已解决：自动引导只到 a 分区找 ／boot／loader	2005 年 9 月 11 日，wilbury.sk 的 Daniel Gerzo 宣布问题已解决：自动引导只到 a 分区找 ／boot／loader	H1 同步：H1 半角斜杠随题面同步
+S-013539	2006 年 12 月 12 日，2006 年 12 月 Bill Moran 报告在 6.2-BETA3 amd64 上把 kern.ipc.shmmax 设为 2200000000 后回显为负数 -2094967296，他判断这是 32 位无符号整型所致	2006 年 12 月 12 日，Bill Moran 报告在 6.2-BETA3 amd64 上把 kern.ipc.shmmax 设为 2200000000 后回显为负数 -2094967296，他判断这是 32 位无符号整型所致	删重复日期片段 2006 年 12 月
+S-013546	2006 年 1 月 26 日，Vitaliy Skakun 报告快速反复向 ／dev／cuaR00 写入会触发 panic	2006 年 1 月 26 日，Vitaliy Skakun 报告快速反复向 ／dev／cuaR00 写入会触发 panic	H1 同步：H1 半角斜杠随题面同步
+S-013550	2006 年 7 月 22 日，george+freebsd 确认根因是系统自动启用 plip0 接口后一直占用 ppbus 直到有人将其关闭，并称该问题在 5.3 时代即已存在	2006 年 7 月 22 日，george+freebsd 确认根因是系统自动启用 plip0 接口后一直占用 ppbus 直到有人将其关闭，并称该问题在 5.3 时代即已出现	B2 尾在字改实义收尾
+S-013573	2007 年 12 月 1 日，Greg Troxel 称在 NetBSD 上遇到 Linux 共享库问题：thunderbird 与 firefox 设置的 LD_LIBRARY_PATH 在调用 acroread 显示 pdf 时仍生效，使 acroread 读到	2007 年 12 月 1 日，Greg Troxel 称在 NetBSD 上遇到 Linux 共享库问题：thunderbird 与 firefox 设置的 LD_LIBRARY_PATH 在调用 acroread 显示 pdf 时仍生效，使 acroread 读到 BSD 库	B2 尾到字悬空，依正文续至库
+S-013578	2007 年 2 月 20 日，Thomas David Rivers 自述放弃 ral(4) 驱动改用 ndis，因 ral 不支持其 WMP54Gv4.1 卡	2007 年 2 月 20 日，Thomas David Rivers 自述放弃 ral(4) 驱动改用 ndis，因 ral 不支持其 WMP54Gv4.1 卡	保留：D1 为 ral(4) 手册页引用，保留
+S-013579	2007 年 2 月 26 日，Joe Auty 自述其机器可从 FreeBSD 6.2 光盘第一张启动，但即便把光盘上的 ／boot 目录拷回本机	2007 年 2 月 26 日，Joe Auty 自述其机器可从 FreeBSD 6.2 光盘第一张启动，但即便把光盘上的 ／boot 目录拷回本机，仍在安全模式下复现同一内核 panic	题面截断，依正文续至 panic
+S-013597	2007 年 11 月 16 日，Yuri 回应 Garrett 关于该话题每月反复出现的抱怨，建议在 nvidia-driver Port的输出信息中加入该 Wiki 页面地址	2007 年 11 月 16 日，Yuri 回应 Garrett 关于该话题每月反复出现的抱怨，建议在 nvidia-driver Port 的输出信息中加入该 Wiki 页面地址	A1 中英粘连补空格
+S-013601	2007 年 10 月 27 日，Danny Braniss 归纳 dump 卡死症状，称 dump 会创建 3 个进程并以 kill 同步，信号有时在阻塞时仍被收到	2007 年 10 月 27 日，Danny Braniss 归纳 dump 卡死症状，称 dump 会创建 3 个进程并以 kill 同步，信号有时在阻塞状态下仍会被接收	B2 尾到字改实义收尾
+S-013603	2006 年 4 月 14 日，Mitsuru IWASAKI 发现卸下 ATA 通道后系统会在 ata_suspend() 陷入死循环	2006 年 4 月 14 日，Mitsuru IWASAKI 发现卸下 ATA 通道后系统会在 ata_suspend 中陷入死循环	D1 函数空括注删除，折入题面
+S-013612	2005 年 2 月 21 日，Bruce Evans 在 PR i386／67469 中比较 i387 汇编与 fdlibm 对数函数的耗时	2005 年 2 月 21 日，Bruce Evans 在 PR i386／67469 中比较 i387 汇编与 fdlibm 对数函数的耗时	H1 同步：H1 半角斜杠随题面同步
+S-013620	2008 年 6 月 19 日，Chess Griffin 提交 PR powerpc／124740	2008 年 6 月 19 日，Chess Griffin 提交 PR powerpc／124740	H1 同步：H1 半角斜杠随题面同步
+S-013622	2008 年 9 月 12 日，Peter Grehan 说按 Nathan 的提示把模式降到 WDMA2 之后 DMA 读写能完成了	2008 年 9 月 12 日，Peter Grehan 说按 Nathan 的提示把模式降到 WDMA2 之后 DMA 读写恢复正常	B2 尾了字改实义收尾
+S-013485	2005 年 4 月 23 日，chuckr.org 的 Chuck Robey 自述已用 k3b 成功复制 DVD，现打算把一张在美国买不到	2005 年 4 月 23 日，chuckr.org 的 Chuck Robey 自述已用 k3b 成功复制 DVD，现打算把一张英国 2 区 DVD 转为 1 区	B2 尾到字截断，依正文续至区码
+S-013637	2025 年 9 月 17 日，提交 c8b89c11 移除 ／usr／sbin／periodic 里 $_localbase 的初始化，$dirlist 变成重复的 ／etc／periodic 两次，使该目录下脚本在每次安全运行时执行两遍，应回退该初始化	2025 年 9 月 17 日，提交 c8b89c11 移除 ／usr／sbin／periodic 里 $_localbase 的初始化，$dirlist 变成重复的 ／etc／periodic 两次，使该目录下脚本在每次安全运行时执行两遍，应回退该初始化	H1 同步：H1 半角斜杠随题面同步
+S-013640	2006 年 8 月 2 日，Dr. Markus Waldeck 在 6.1-RELEASE 上提 PR docs／101262	2006 年 8 月 2 日，Dr. Markus Waldeck 在 6.1-RELEASE 上提 PR docs／101262	H1 同步：H1 半角斜杠随题面同步
+S-012352	2002 年 10 月 29 日，一位匿名发件人报告机器启动到加载 ／boot／loader 之处便陷入崩溃，屏幕上依次出现 halt code 2	2002 年 10 月 29 日，一位匿名发件人报告机器启动到加载 ／boot／loader 之处便陷入崩溃，屏幕依次出现 halt code 2、kernel stack not valid halt 与 PC 等于 0 的提示	题面截断，依正文续至提示项
+S-017492	其他架构：powerpc／mips／sparc64／arm 的 Clang 支持	其他架构：powerpc／mips／sparc64／arm 上的 Clang 支持	B4 题面恰 40 字符，改写避开封顶
+S-016623	IA-64（Itanium）架构在 11.0 移除	Intel Itanium 的 IA-64 架构在 FreeBSD 11.0 中移除	D1 非时间括注折入题面
+S-016635	2015 年 4 月 1 日，Mark Millard 报告在 powerpc 非 64 位 11.0-CURRENT 上用 powerpc64-gcc 交叉构建 powerpc64 目标，crti.o 阶段失败，crti.S 第 35 与 51 行报 junk at end of line	2015 年 4 月 1 日，Mark Millard 报告在 powerpc 非 64 位 11.0-CURRENT 上用 powerpc64-gcc 交叉构建 powerpc64 目标，crti.o 阶段失败，crti.S 第 35 与 51 行报 junk at end of line	H1 同步：题面完整；H1 续语不取
+S-016636	2015 年 4 月 26 日，Justin Hibbits 答复 Konstantin Belousov，说 RouterBoard 用的是定制加载器	2015 年 4 月 26 日，Justin Hibbits 答复 Konstantin Belousov，说 RouterBoard 用的是定制加载器	保留：A3 为真专名 RouterBoard，不拆
+S-016637	2015 年 12 月 6 日，Mark Millard 指出 powerpc64-gcc 5.2 的 gcc／config／rs6000／freebsd64.h 仍按 TARGET_64BIT 做条件分支，使 32 位 lib32 语境下 WCHAR_TYPE 被定为 long int，导致	2015 年 12 月 6 日，Mark Millard 指出 powerpc64-gcc 5.2 的 freebsd64.h 仍按 TARGET_64BIT 做条件分支，使 32 位语境宽字符类型定为 long int 而与 FreeBSD 的 Char 不兼容	题面截断于导致，F1 缩短至不兼容
+S-016639	2015 年 2 月 10 日，Rick Thomas 报告在 PowerMac G4 上通宵编译 gnome 仍未成功	2015 年 2 月 10 日，Rick Thomas 报告在 PowerMac G4 上通宵编译 gnome 仍未成功	保留：A3 为真专名 PowerMac，不拆
+S-016640	2015 年 1 月 15 日，Mark Millard 报告其 PowerMac G5 四核满载时 CPU A1 二极管温度稳定在 90 至 91.6 摄氏度并触发关机	2015 年 1 月 15 日，Mark Millard 报告其 PowerMac G5 四核满载时 CPU A1 二极管温度稳定在 90 至 91.6 摄氏度并触发关机	保留：A3 为真专名 PowerMac，不拆
+S-016642	2015 年 6 月 28 日，Konstantin Belousov 就 usr.bin／mkesdb 链接失败回复 Justin Hibbits	2015 年 6 月 28 日，Konstantin Belousov 就 usr.bin／mkesdb 链接失败回复 Justin Hibbits	H1 同步：H1 半角斜杠随题面同步
+S-016647	2015 年 11 月 29 日，Mark Millard 报告在 powerpc64 PowerMac 上先装 lang／gcc5	2015 年 11 月 29 日，Mark Millard 报告 powerpc64 PowerMac 上先装 lang／gcc5 再更新交叉工具链，pkg-static 报两版 GCC 5.2.0 冲突	题面截断于 gcc5，依正文续至冲突
+S-016654	2016 年 1 月 14 日，Mark Millard 把 csu／powerpc64／Makefile 里的 -mlongcall 换成 clang 认识的 -mlong-calls 并放开对 gcc 的强制，clang 3.8.0 交叉编译 powerpc64 随即顺利通过此处	2016 年 1 月 14 日，Mark Millard 把 csu／powerpc64／Makefile 里的 -mlongcall 换成 clang 认识的 -mlong-calls 并放开对 gcc 的强制，clang 3.8.0 交叉编译 powerpc64 随即顺利通过此处	H1 同步：H1 半角斜杠随题面同步
+S-016655	2016 年 1 月 28 日，Xavier HILAIRE 在双处理器 PowerMac G5 上装好 FreeBSD 10.2 后发现风扇转速异常偏低	2016 年 1 月 28 日，Xavier HILAIRE 在双处理器 PowerMac G5 上装好 FreeBSD 10.2 后发现风扇转速异常偏低	保留：A3 为真专名 PowerMac，不拆
+S-016671	2017 年 6 月 20 日，Mark Millard 定位 -r320127 之后 powerpc64-gcc 无法完成 buildworld 的原因是一处 using 声明缺少 typename，改好后基于 libc++ 的 amd64 到 powerpc64 交叉构建即可通过	2017 年 6 月 20 日，Mark Millard 定位 -r320127 之后 powerpc64-gcc 无法完成 buildworld 的原因是一处 using 声明缺少 typename，改好后基于 libc++ 的 amd64 到 powerpc64 交叉构建即可顺利完成	B2 尾过字改实义收尾
+S-016672	2017 年 3 月 5 日，Hiroo Ono (小野寛生) 表示明白了强制 PCI 模式的用意，接着询问在 FreeBSD 下该如何设置	2017 年 3 月 5 日，Hiroo Ono 表示明白了强制 PCI 模式的用意，接着询问在 FreeBSD 下该如何设置	D1 括注日文别名删去，正文保留
+S-016676	2017 年 10 月 20 日，Stas Timokhin 报告 Mac mini G4 的 powerpc32 上部分模块经 ／boot／loader.conf 加载失败	2017 年 10 月 20 日，Stas Timokhin 报告 Mac mini G4 的 powerpc32 上部分模块经 ／boot／loader.conf 加载失败	H1 同步：H1 半角斜杠随题面同步
+S-016685	2018 年 11 月 26 日，Dennis Clarke 核对 RC2 的 vmparam.h 仍为 0xe0000007ffffffff，并称自己并未改动	2018 年 11 月 26 日，Dennis Clarke 核对 RC2 的 vmparam.h 中虚拟地址上限常量未改、两处副本哈希一致，称自己并未改动	A2 长十六进制字面量按语义转述
+S-016628	2014 年 7 月 29 日，Alexey Dokuchaev 确认把 dev.cpu.0.freq 设为 1066 后 iBook G4 频率提上去了	2014 年 7 月 29 日，Alexey Dokuchaev 确认把 dev.cpu.0.freq 设为 1066 后 iBook G4 频率成功提高	B2 尾了字改实义收尾
+S-018921	2004 年 2 月 3 日，Gary Jennejohn 说廉价 amd64 就是 socket 754 加 AMD64 3000+，自己就是从 amd-k7 只换主板改成的	2004 年 2 月 3 日，Gary Jennejohn 说廉价 amd64 就是 socket 754 加 AMD64 3000+，自己那台就是从 amd-k7 只换主板升级而来	B2 尾的字改实义收尾
+S-018929	2005 年 4 月 19 日，Vivek Khera 回复 David Komanek 的 K8WE S2895A2NRF 配 10000 转盘清单，称没这经验	2005 年 4 月 19 日，Vivek Khera 回复 David Komanek 关于 K8WE 主板 S2895 配万转硬盘清单的询问，称自己没这经验	A2 型号连写语义转述；尾改实义
+S-018933	2005 年 12 月 27 日，Pav Lucistnik 回应 Francisco Reyes 问 amd64 与 i386 的 ／usr／ports 是否相同	2005 年 12 月 27 日，Pav Lucistnik 回应 Francisco Reyes 问 amd64 与 i386 的 ／usr／ports 是否相同	H1 同步：H1 半角斜杠随题面同步
+S-018934	2005 年 1 月 12 日，David O'Brien 反问所谓其他人都用的调用约定究竟是什么，因 x86 CPU 并不强制某种方式，一切由编译器编写者决定	2005 年 1 月 12 日，David O’Brien 反问所谓其他人都用的调用约定究竟是什么，因 x86 CPU 并不强制某种方式，一切由编译器编写者决定	C2 直引号改弯撇号
+S-018936	2005 年 6 月 4 日，Mathew Schofield 的 A8V Deluxe 主板同时有 Promise 20378 控制器与 VIA K8T800Pro 芯片组	2005 年 6 月 4 日，Mathew Schofield 的 A8V Deluxe 主板同时带有 Promise 20378 控制器与威盛的 K8T 平台 Pro 芯片组	A2 型号连写按语义转述，正文保留
+S-018939	2005 年 3 月 15 日，Sean McNeil 回复 Alexander Konovalenko 在 RELENG_5 上 WITH_LIB32=yes 做 buildworld 报错的求助，说是你在用 -O2 而它不被支持，需从 ／etc／make.conf 移除任何自定义	2005 年 3 月 15 日，Sean McNeil 回复 Alexander Konovalenko 在 RELENG_5 上 WITH_LIB32=yes 做 buildworld 报错的求助，指出他不该用 -O2，需从 ／etc／make.conf 移除任何自定义 CFLAGS	题面止于自定义，依 H1 补 CFLAGS
+S-018942	2010 年 2 月 21 日，Alastair Hogge 应 John Baldwin 之请附上 9.0-CURRENT r204168 的 i386 日志与 mptable 输出，说明该 DP45SG 主板引导 amd64 光盘依旧失败，并贴出 201002 快照在 ACPI	2010 年 2 月 21 日，Alastair Hogge 应 John Baldwin 之请附上 9.0-CURRENT r204168 的 i386 日志与 mptable 输出，说明该 DP45SG 主板引导 amd64 光盘依旧失败	题面截断于 ACPI，F1 缩短至失败
+S-018951	2005 年 11 月 24 日，发帖人以 amd64／89501 提交 PR 报告 6.0 AMD64 用本地子网 ftp 安装时系统在 base 阶段的 Extracting base 处约 76 时崩溃	2005 年 11 月 24 日，发帖人以 amd64／89501 提交 PR 报告 6.0 AMD64 用本地子网 ftp 安装时系统在 base 阶段的 Extracting base 处约 76 时崩溃	H1 同步：H1 半角斜杠随题面同步
+S-018910	2013 年 9 月 18 日，Yass Amed 在 i386／182173 回帖称 base.txz 解包失败目前只在 Windows 8 下的 VirtualBox 中出现	2013 年 9 月 18 日，Yass Amed 在 i386／182173 回帖称 base.txz 解包失败目前只在 Windows 8 下的 VirtualBox 中出现	H1 同步：H1 半角斜杠随题面同步
+S-018978	2006 年 3 月 19 日，发帖人补充 dmidecode 需要 root 权限，并回忆起早年 ibm／360 有一组秘密指令其中一条叫 PUNCH OPERATOR	2006 年 3 月 19 日，发帖人补充 dmidecode 需要 root 权限，并回忆起早年 ibm／360 有一组秘密指令其中一条叫 PUNCH OPERATOR	H1 同步：H1 半角斜杠随题面同步
+S-018980	2006 年 5 月 8 日，发帖人承认看门狗超时回归是自己忘了重新应用补丁造成的，随后贴出他执行的完整步骤顺序，并追问正确流程应当怎样、自己究竟哪里做错了	2006 年 5 月 8 日，发帖人承认看门狗超时回归是自己忘了重新应用补丁造成的，随后贴出他执行的完整步骤顺序，并追问正确流程应当怎样、自己究竟哪里做错	B2 尾了字改实义收尾
+S-018986	2006 年 9 月 21 日，发帖人在 TYAN Tempest I5000VS S5372 上用 6.1 amd64 内核，开启 ACPI 无法启动	2006 年 9 月 21 日，发帖人在 TYAN Tempest I5000 的 VS 版 S5372 主板上用 6.1 amd64 内核，开启 ACPI 无法启动	A2 型号连写拆开转述
+S-019024	2010 年 12 月 5 日，avg 确认 PTRACE_GETFPREGS 与 PTRACE_SETFPREGS 已损坏的问题在 head 以及 stable／8 中均已解决	2010 年 12 月 5 日，avg 确认 PTRACE_GETFPREGS 与 PTRACE_SETFPREGS 已损坏的问题在 head 以及 stable／8 中均已解决	H1 同步：H1 半角斜杠随题面同步
+S-019040	2012 年 4 月 18 日，发帖人在 9.0-RELEASE 上用 zfs send 经 ssh 把 zvol 发到另一台机器，接收端可见但 ／dev／zvol 下无设备	2012 年 4 月 18 日，发帖人在 9.0-RELEASE 上用 zfs send 经 ssh 把 zvol 发到另一台机器，接收端可见但 ／dev／zvol 下无设备	H1 同步：H1 半角斜杠随题面同步
+S-019041	2012 年 12 月 8 日，发帖人更新此前 PR amd64／171016 中报告的问题：9.1 RC1-amd64 用 netinst 镜像安装卡在 base 阶段 97%,称重试后已恢复，推测是运营商更换或 freebsd 服务器端变更所致	2012 年 12 月 8 日，发帖人更新此前 PR amd64／171016 中报告的问题：9.1 RC1-amd64 用 netinst 镜像安装卡在 base 阶段 97%，称重试后已恢复，推测是运营商更换或 freebsd 服务器端变更所致	C7 半角逗号全角化
+S-013314	要点：ARM 史料疑点：(1) ARM 移植起始时间；(2) 主要贡献者；(3) 与 NetBSD／arm 的关系	ARM 史料疑点：移植起始时间、主要贡献者以及与 NetBSD／arm 的关系	删要点前缀与序号括注，改顿号列述
+S-016768	RISC-V（riscv64）架构引入	RISC-V 的 riscv64 架构引入	D1 括注折入题面
+S-016783	2021 年 3 月 19 日，Mark Millard 指出 3 月 18 日的 14.0 树莓派快照未使用 ／boot／efi／ 目录约定，而把 MSDOSBOOT 分区挂载到 ／boot／msdos,并附上 df 输出、bootaa64.efi 路径与 fstab 内容佐证	2021 年 3 月 19 日，Mark Millard 指出 3 月 18 日的 14.0 树莓派快照未使用 ／boot／efi／ 目录约定，而把 MSDOSBOOT 分区挂载到 ／boot／msdos，并附上 df 输出、bootaa64.efi 路径与 fstab 内容佐证	C7 半角逗号全角化
+S-016786	2022 年 10 月 16 日，Mark Millard 记录 Rock64 出现 USB3 问题的构修为 main-n258610-ba7319e9091b-dirty	2022 年 10 月 16 日，Mark Millard 记录 Rock64 出现 USB3 问题的构修为 main 分支快照 n258610	A2 长构修号按语义转述，正文保留
+S-016788	2024 年 3 月 22 日，tuexen 报告 Ampere Altra 用较新的 main 启动时报 SRAT 忽略 0x88300000 处内存与 scmi 模块已存在	2024 年 3 月 22 日，tuexen 报告 Ampere Altra 用较新的 main 启动时出现 SRAT 忽略 0x88300000 处内存与 scmi 模块重复加载两项告警	B2 尾在字改实义收尾
+S-016770	arm64／aarch64 持续成熟（Tier 2）	arm64／aarch64 在 12.x 时期维持 Tier 2 并持续成熟	D1 括注折入题面
+S-016774	2016 年 3 月 28 日，Mark Heily 把 FreeBSD 11.0-CURRENT arm64 aarch64 20160308 r296485 memstick 镜像刷入 Odroid C2 的 SD 卡，蓝灯不亮无法启动，但同一 SD 卡与板子能启动 Ubuntu	2016 年 3 月 28 日，Mark Heily 把 FreeBSD 11.0-CURRENT arm64 aarch64 20160308 r296485 memstick 镜像刷入 Odroid C2 的 SD 卡，蓝灯不亮无法启动，但同一 SD 卡与板子能启动 Ubuntu	H1 同步：题面完整；H1 续语不取
+S-017839	2024 年 3 月 27 日，Mateusz Guzik 自述执行 truss -f timeout 2 sleep 10 会使 timeout 无法结束 sleep 且自身卡住，只能以 SIGKILL 终止 truss，此后单跑 timeout	2024 年 3 月 27 日，Mateusz Guzik 自述执行 truss -f timeout 2 sleep 10 会使 timeout 无法结束 sleep 且自身卡住，此后单跑 timeout 也会卡在内核中	题面截断于单跑 timeout，续至内核
+S-017842	2025 年 4 月 13 日，Alastair Hogge 自述在只读的 ／usr／src 上更新 15-CURRENT 时 etcupdate 报无法构建新树	2025 年 4 月 13 日，Alastair Hogge 自述在只读的 ／usr／src 上更新 15-CURRENT 时 etcupdate 报无法构建新树	H1 同步：H1 半角斜杠随题面同步
+S-017845	2025 年 8 月 18 日，Marcin Cieslak 报告升级到提交 ac641d55ea06 的 15-current 后 wifibox 不再启动	2025 年 8 月 18 日，Marcin Cieslak 报告升级到较新的 main 提交后 wifibox 不再启动，疑似与 ppc0 设备争用	A2 长提交号按语义转述，正文保留
+S-017854	2025 年 5 月 12 日，Alexander Leidinger 报告在 uipc_usrreq.c 第 1440 行触发 sb_acc 大于等于 datalen 的断言 panic，回溯落在 soreceive 与 read 系统调用上，并询问	2025 年 5 月 12 日，Alexander Leidinger 报告在 uipc_usrreq.c 第 1440 行触发 sb_acc 大于等于 datalen 的断言 panic，询问是否与 Gleb Smirnoff 的套接字改动有关	题面截断于并询问，续至套接字改动
+S-017855	2025 年 5 月 25 日，Juraj Lutter 在列表中自述已提交评审 D35694，拟把 OpenBSD 的 ts(1) 命令引入 FreeBSD 基本系统	2025 年 5 月 25 日，Juraj Lutter 在列表中自述已提交评审 D35694，拟把 OpenBSD 的 ts(1) 命令引入 FreeBSD 基本系统	保留：D1 为 ts(1) 手册页引用，保留
+S-017857	2025 年 11 月 22 日，Mark Millard 以 MALLOC_CONF 设置 junk：alloc 与 zero：true 重测 armv7 chroot 构建	2025 年 11 月 22 日，Mark Millard 以 MALLOC_CONF 设置 junk：alloc 与 zero：true 重测 armv7 chroot 构建	H1 同步：H1 半角冒号随题面全角同步
+S-017860	2025 年 9 月 5 日，Cy Schubert 报告 HP 840 上 i915kms 与 iwlwifi 的 panic 已解决	2025 年 9 月 5 日，Cy Schubert 报告 HP 840 上 i915 的 KMS 驱动与 iwlwifi 的 panic 已解决	A2 i915kms 按语义转述，正文保留
+S-017861	2025 年 9 月 23 日，Gleb Smirnoff 报告 9 月稳定周中 Netflix 的 A／B 测试未发现性能或稳定性退化，其个人 nVidia 桌面升级基本顺利	2025 年 9 月 23 日，Gleb Smirnoff 报告 9 月稳定周中 Netflix 的 A／B 测试未发现性能或稳定性退化，其个人 nVidia 桌面升级基本顺利	H1 同步：H1 半角斜杠随题面同步
+S-017821	要点：14.0 发布工程团队由 Colin Percival（Release Engineering Lead）、Glen Barber（Deputy Lead for 14.0）、Mike Karels 等组成	FreeBSD 14.0 发布工程团队：Colin Percival 任发布工程负责人，Glen Barber 为副手，Mike Karels 亦是成员	删要点前缀与英文职衔括注
+S-009017	1999 年 5 月 17 日，Stefan Zehl 把 x11-wm／wmx 从 4.0 升到 5.6，删 patch-a 到 d 加 patch-ae	1999 年 5 月 17 日，Stefan Zehl 把 x11-wm／wmx 从 4.0 升到 5.6，删 patch-a 到 d 加 patch-ae	H1 同步：H1 半角斜杠随题面同步
+S-018204	Linux（自由软件哲学与 GNU 人文运动）	Linux：自由软件哲学与 GNU 人文运动	E1 过短，删括注改冒号结构
+S-018229	2001 年 1 月 6 日，Brad Knowles 称 FreeBSD 当时不支持 PowerPC，其 PowerMac 7200 只能考虑 NetBSD 或 OpenBSD	2001 年 1 月 6 日，Brad Knowles 称 FreeBSD 当时不支持 PowerPC，其 PowerMac 7200 只能考虑 NetBSD 或 OpenBSD	保留：A3 为真专名 PowerMac，不拆
+S-018205	Windows ／ 微软（商业文化与闭源范式）	Windows 与微软：商业文化与闭源范式	D1 非时间括注改冒号结构
+S-018207	NetBSD（可移植性哲学与 clean code 文化）	NetBSD：可移植性哲学与 clean code 文化	D1 非时间括注改冒号结构
+S-018215	1997 年 9 月 22 日，Paul Griffith 自述在 i486DX2-66、32MB 内存的机器上安装 FreeBSD 2.1.6	1997 年 9 月 22 日，Paul Griffith 自述在 i486 DX2-66、32MB 内存的机器上安装 FreeBSD 2.1.6	A2 型号连写拆开 i486 DX2-66
+S-019068	要点：图形栈落后（DRM 滞后 1-2 年）、WiFi 碎片化、桌面可用性差距、文档陈旧（Handbook 部分 5+ 年未更新）	桌面短板清单：图形栈落后、WiFi 碎片化、可用性差距与文档陈旧	删要点前缀与半角连字符括注
+S-019131	当代中文舆论标本——《FreeBSD 大败局》2026 版（今日头条·灵巧光束）的 Rust 论断句级考据	当代中文舆论标本：今日头条“灵巧光束”《FreeBSD 大败局》2026 版 Rust 论断的句级考据	D1 出处括注折入题面
+S-006006	1996 年 8 月 29 日，Bob Willcox 报大量 arpresolve can't allocate llinfo for 206.224.65.33 反复刷屏	1996 年 8 月 29 日，Bob Willcox 报大量 arpresolve can’t allocate llinfo for 206.224.65.33 反复刷屏	C2 直引号改弯撇号
+S-006149	1995 年 5 月 2 日，David Greenman 回应询问称 ／kernel mb_map full 是 bug 而非预期行为	1995 年 5 月 2 日，David Greenman 回应询问称 ／kernel mb_map full 是 bug 而非预期设计	B2 尾为字改实义收尾
+S-006357	1997 年 3 月 18 日，Sean Fagan 反映 2.2-GAMMA 的 kern／uipc_syscalls.c 里 tsleep 等待串写作 connec	1997 年 3 月 18 日，Sean Fagan 反映 2.2-GAMMA 的 kern／uipc_syscalls.c 里 tsleep 等待串被截成 connec，疑似拼写错误	题面止于截断串，依正文续至边界
+S-006969	1999 年 2 月 19 日，Jeffrey Hsu 称自己在 sched_sync() 中也见过多余的 LIST_REMOVE，并已跑近似补丁数日	1999 年 2 月 19 日，Jeffrey Hsu 称自己在 sched_sync 中也见过多余的 LIST_REMOVE，并已跑近似补丁数日	D1 函数空括注删除，折入题面
+S-005885	1997 年 11 月 7 日，David Malone 报集线器重启约 90 秒期间 de0 卡自行切到 co-ax,ifconfig de0 media UTP 可修复，问初始 ifconfig 能否固定媒体类型	1997 年 11 月 7 日，David Malone 报集线器重启约 90 秒期间 de0 卡自行切到 co-ax，ifconfig de0 media UTP 可修复，问初始 ifconfig 能否固定媒体类型	C7 半角逗号全角化
+S-005892	1995 年 3 月 25 日，Morgan Davis 报 3／25 -current 下 NE1000 探测正常	1995 年 3 月 25 日，Morgan Davis 报 3／25 -current 下 NE1000 探测正常	H1 同步：H1 半角斜杠随题面同步
+S-005921	1995 年 7 月 5 日，Matt Thomas 说把 DC21040 驱动改为 I／O mapped 访问后 4 口以太网的锁死消失	1995 年 7 月 5 日，Matt Thomas 说把 DC21040 驱动改为 I／O mapped 访问后 4 口以太网的锁死消失	H1 同步：H1 半角斜杠随题面同步
+S-005922	1995 年 7 月 14 日，Ollivier Robert 说自己那台 SMC8013EP 问题相同，不断把输入包丢掉	1995 年 7 月 14 日，Ollivier Robert 说自己那台 SMC 8013EP 问题相同，不断把输入包丢掉	A2 型号连写拆开 SMC 8013EP
+S-006037	1997 年 5 月 7 日，gnat 在 2.1.7.1 内核里用 6 月 8 日 pnp 快照，SMC8416 已可用，但 SoundBlaster 16 仍配不通	1997 年 5 月 7 日，gnat 在 2.1.7.1 内核里用 6 月 8 日 pnp 快照，SMC8416 已可用，但 SoundBlaster 16 仍配不通	保留：A3 为真专名 SoundBlaster，不拆
+S-007041	1999 年 8 月 16 日，Frank Mayhar 自述键盘故障根因是配置中把 device atkbd0 at atkbdc？ 误写替代 device atkbd0 at isa？，感谢 hackers 回应并自称接过头痛帽同时为多次邮件反弹致歉	1999 年 8 月 16 日，Frank Mayhar 自述键盘故障根因是配置中把 device atkbd0 at atkbdc？ 误写替代 device atkbd0 at isa？，感谢 hackers 回应并自称接过头痛帽同时为多次邮件反弹致歉	H1 同步：H1 半角问号随题面全角同步
+S-006134	1995 年 3 月 27 日，Hosokawa 转述 Noriyuki Takahashi 已修复 3C589 PCMCIA Etherlink III 驱动在 -current 下的失效，该驱动原由他与 Murata 在 2.0R 提交，内测者以 3C589B-COMBO 与 3C589B-TP 验证正常	1995 年 3 月 27 日，Hosokawa 转述 Noriyuki Takahashi 已修复 3C589 PCMCIA Etherlink III 驱动在 -current 下的失效，该驱动原由他与 Murata 在 2.0R 提交，内测者以 3C589 的 B 版 COMBO 与 TP 两种型号验证正常	A2 型号连写按语义转述，正文保留
+S-006241	1996 年 1 月 3 日，Peter Dufault 答称无需调制解调器控制时 BocaBoard BB1008 在 2.05 良好仅暖重启偶有探测问题	1996 年 1 月 3 日，Peter Dufault 答称无需调制解调器控制时 BocaBoard BB1008 在 2.05 良好仅暖重启偶有探测问题	保留：A3 为真专名 BocaBoard，不拆
+S-006289	1996 年 6 月 8 日，David Greenman 自述为 Intel EtherExpress Pro100B 写有驱动 现已在 2.1-stable 与 current 可用 用户可从此取用或等待下一版发布	1996 年 6 月 8 日，David Greenman 自述已为 Intel EtherExpress Pro 100B 写好驱动，现已在 2.1-stable 与 current 可用，用户可取用或等待下一版发布	A2 型号连写拆开；补句读
+S-006309	1996 年 9 月 19 日，TRW 私有网络用 SMC 10／100 网卡发出 15.5KB 巨型以太网帧，DE 驱动的 BIG_PACKET 宏专为这套系统开启	1996 年 9 月 19 日，TRW 私有网络用 SMC 10／100 网卡发出 15.5KB 巨型以太网帧，DE 驱动的 BIG_PACKET 宏专为这套系统开启	H1 同步：H1 半角斜杠随题面同步
+S-006326	1996 年 11 月 14 日，Maxim Bolotin 称 digiboard 驱动已从 2.1.5 移植至 2.2 全部 bug 已修复，在 PC／16e 硬件上配置 4 条 28K 专用线	1996 年 11 月 14 日，Maxim Bolotin 称 digiboard 驱动已从 2.1.5 移植至 2.2 全部 bug 已修复，在 PC／16e 硬件上配置 4 条 28K 专用线	H1 同步：H1 半角斜杠随题面同步
+S-006380	1997 年 4 月 18 日，Dave Truesdell 说自己 3com 卡在 6030X 上出过类似故障，改 ／etc／pccard.conf 只用 irq 11 后解决	1997 年 4 月 18 日，Dave Truesdell 说自己 3com 卡在 6030X 上出过类似故障，改 ／etc／pccard.conf 只用 irq 11 后解决	H1 同步：H1 半角斜杠随题面同步
+S-006432	1997 年 5 月 20 日，报告 3Com 网卡走 UTP 口时无法添加网关路由，已重编内核并照 ep(4) 加了 link 选项，route add 仍返回网络不可达	1997 年 5 月 20 日，报告 3Com 网卡走 UTP 口时无法添加网关路由，已重编内核并照 ep(4) 加了 link 选项，route add 仍返回网络不可达	保留：D1 为 ep(4) 手册页引用，保留
+S-006680	1998 年 1 月 10 日，John-Mark Gurney 答 AU 文件不必另找播放器，用 cp 或 cat 直接把文件写入 ／dev／audio 即可出声	1998 年 1 月 10 日，John-Mark Gurney 答 AU 文件不必另找播放器，用 cp 或 cat 直接把文件写入 ／dev／audio 即可出声	H1 同步：H1 半角斜杠随题面同步
+S-006739	1998 年 2 月 25 日，terry 称 N 个站点的 token ring 允许 N／3 - 1 个并发令牌，使多个分组能同时在处理，做对还支持双向如 FDDI 那样	1998 年 2 月 25 日，terry 称 N 个站点的 token ring 允许 N／3 - 1 个并发令牌，使多个分组能同时在处理，做对还支持双向如 FDDI 那样	H1 同步：H1 半角斜杠随题面同步
+S-006834	1997 年 4 月 17 日，Doug White 转发 Samuel Lam 关于 3COM 3C589D PCMCIA 网卡问题解决方案	1997 年 4 月 17 日，Doug White 转发 Samuel Lam 关于 3COM 3C589 的 D 版 PCMCIA 网卡问题解决方案	A2 型号连写语义转述
+S-006885	1998 年 7 月 30 日，Alfred Perlstein 回报 3c905B 驱动运行良好，xl0 识别为 3Com 3c905B Fast Etherlink XL	1998 年 7 月 30 日，Alfred Perlstein 回报 3c905 的 B 版驱动运行良好，xl0 识别为 3Com 3c905 B 版 Fast Etherlink XL	A2 型号连写语义转述
+S-005884	1997 年 11 月 2 日，Petri Helenius 拔插 SMC de0 网线后链路灯等全部恢复，OS 却仍报 status： no carrier，日志只见 de0： link down： cable problem？,重新 ifconfig 100baseTX 才回到 active	1997 年 11 月 2 日，Petri Helenius 拔插 SMC de0 网线后链路灯等全部恢复，OS 却仍报 status： no carrier，日志只见 de0： link down： cable problem？，重新 ifconfig 100baseTX 才回到 active	C7 半角逗号全角化
+S-006993	1999 年 5 月 11 日，Pisa 大学 Luigi Rizzo 回应 VoxWare／LGSND 串口 midi 驱动更新公告	1999 年 5 月 11 日，Pisa 大学 Luigi Rizzo 回应 VoxWare／LGSND 串口 midi 驱动更新公告	H1 同步：H1 半角斜杠随题面同步
