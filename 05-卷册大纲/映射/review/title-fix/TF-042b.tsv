@@ -1,0 +1,4 @@
+source_id	old	new	reason
+S-008032	2014 年 6 月 23 日，Bob Willcox 报从服务器跑客户端时 minidlna.log 周期性出现 inotify.c：857： warn： kevent polling failure： Interrupted system call，用的是 ports 里的 1.1.3，他问这是否需要担忧	2014 年 6 月 23 日，Bob Willcox 报从服务器跑客户端时 minidlna.log 周期性出现 inotify.c：857： warn： kevent polling failure： Interrupted system call，用的是 Ports 里的 1.1.3，他问这是否需要担忧	案例改名 ports→Ports（Windows 大小写不敏感，两段 mv 善后）
+S-009342	2000 年 8 月 29 日，Kennaway 称 Unix 版 Netscape 忙循环无解，建议改 Linux 版或禁用 Java	2000 年 8 月 29 日，Kris Kennaway 转引 Mark Andrews 称 netscape 停止响应并进入忙循环后表示 Unix 版 Netscape 一贯如此无解，建议改用 Linux 版更稳定或关闭 java，并称他在 Unix 版中 java 从未正常工作	并行语义轮抢先改名，按盘上实态落合规全题
+S-009229	2000 年 3 月 20 日，Teterin 质疑移除 pth-devel 的必要，主张修 mozilla 端口	2000 年 3 月 20 日，Mikhail Teterin 反问 Will Andrews 用 -pthread 测过 screem 是否意味着整个 pth-devel 都会被移除，并质疑既然有人可能因别的原因要装它，那还不如修 www／mozilla Port 让它用对的东西	并行语义轮抢先改名含端口误译，改落合规全题
