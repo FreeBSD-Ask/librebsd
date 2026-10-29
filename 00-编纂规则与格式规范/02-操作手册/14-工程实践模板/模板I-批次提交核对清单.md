@@ -1,6 +1,6 @@
 # 批次提交核对清单（模板）
 
-> 每批提交前逐项核对；未实现事项必须明确标记并写明当前行为。本清单是 `13-engineering-doctrine/templates/pr-checklist.template.md` 的项目化版本；本项目无 PR 平台，以批次提交替代。
+> 每批提交前逐项核对；未实现事项必须明确标记并写明当前行为。本清单是 `13-软件工程/templates/pr-checklist.template.md` 的项目化版本；本项目无 PR 平台，以批次提交替代。
 
 ## 1. 范围与需求
 

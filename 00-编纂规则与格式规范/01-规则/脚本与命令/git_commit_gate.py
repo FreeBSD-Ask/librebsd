@@ -113,6 +113,9 @@ ROOT_FILE_WHITELIST = {
     ".autocorrectrc", ".gitattributes", ".gitignore", ".markdownlint.json",
     ".textlintrc", ".textlintrc.json", "LICENSE", "AGENTS.md",
     "favicon.ico", "logo.svg", "README.md",
+    # 2026-10-29 补登记：第三方 BSD 家族树参照件，被 01-项目管理/03-架构与技术文档/
+    # 07-附录-谱系与术语.md 与 115 号文引用；已在库，列入白名单以免删除后重建被 B2 拦。
+    "bsd-family-tree.txt", "bsd-family-tree-zh.txt",
 }
 
 
