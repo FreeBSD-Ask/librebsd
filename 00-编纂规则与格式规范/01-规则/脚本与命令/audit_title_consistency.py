@@ -20,8 +20,9 @@
 --------
 A 台账结构（表头、唯一性、层级对位、order 连续、status 枚举）
 B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度、年代括注）
-C 字符 C1–C7（中英空格、直角引号、ASCII 句读、危险字符、空白与不可见字符、术语、
-   禁词：Q2「谱系」＋《释读规则》读者面禁名；理论腔词披露不拦）
+C 字符 C1–C8（中英空格、直角引号、ASCII 句读、危险字符、空白与不可见字符、术语、
+   禁词：Q2「谱系」＋《释读规则》读者面禁名；理论腔词披露不拦；
+   C8 去 AI 味：空转词硬拦、同卷同尾簇 ≤3、单题「的」≤2、AI 腔词披露不拦）
 D 语义 S1–S4 的可机读下限（题旨非空、层级一致、同节平行、异质登记）
 E 证据齐（每条标题有证据行、证据 id 在台账内、层级与日期格式）
 F 四源覆盖（计数与集合一致、≥2 源、专名／标准号／年代题 ≥3 源、单源题为 0）
@@ -87,6 +88,10 @@ WORKER_JARGON = ("未判定", "待定", "杂项", "空模板件", "属英文原�
 # 以「叙事」为研究对象者）合法，故只披露不硬拦，防误杀。
 BANNED_TITLE = ("谱系", "一刻哲学", "构造哲学")
 REVIEW_TERMS = ("叙事", "话语", "互构", "建构", "解构", "范式", "语境", "他者", "视域", "主体性")
+# C8 去 AI 味（2026-10-30 ykla 令“标题风格应一致，去 AI 味的同时保持学术性”）：
+# 硬拦 AI 高频空转词、同卷结尾二字簇超限、单题「的」超密；临界词只披露防误杀。
+BANNED_AI = ("赋能", "抓手", "闭环", "颗粒度", "锚点", "景深", "温差", "样态")
+REVIEW_AI = ("图景", "维度", "对位", "坐标", "版图", "生态", "张力", "轨迹", "格局", "画像")
 PATTERN_TECH = re.compile(r"[A-Za-z]{2,}|POSIX|IEEE|ANSI|ISO|RFC|USENIX|ACM")
 STANDARD = re.compile(r"(IEEE\s*Std|POSIX|ISO/IEC|ANSI|RFC\s*\d+|USENIX)")
 YEAR_IN = re.compile(r"\d{4}")
@@ -327,6 +332,37 @@ def run(root):
     rows_out.append(("C7i", "C7i 理论腔词披露（人工复核项，不拦退出码）", True,
                      "命中 %d 处：%s" % (len(info_c7), "、".join(info_c7[:6]) or "无")))
 
+    # C8 去 AI 味与风格一致（2026-10-30 ykla 令：标题风格应一致，去 AI 味的同时保持学术性）
+    bad_c8a = []
+    for _, _, r in all_rows:
+        hits = [w for w in BANNED_AI if w in r["title"]]
+        if hits:
+            bad_c8a.append("%s（%s）" % (r["subsection_id"], "、".join(hits)))
+    f("C8a", "C8a 禁 AI 高频空转词", bad_c8a,
+      "命中 %d 处：%s" % (len(bad_c8a), "、".join(bad_c8a[:5]) or "无"))
+
+    bad_c8b = []
+    tail_groups = {}
+    for vol, ln, r in all_rows:
+        t = "".join(r["title"].split())
+        if len(t) >= 2:
+            tail_groups.setdefault((vol, t[-2:]), []).append(r["subsection_id"])
+    for (vol, tail), ids in sorted(tail_groups.items()):
+        if len(ids) > 3:
+            bad_c8b.append("V%s 尾“%s”×%d（%s…）" % (vol, tail, len(ids), "、".join(ids[:4])))
+    f("C8b", "C8b 风格一致：同卷同结尾二字簇 ≤3", bad_c8b,
+      "超限簇 %d 处：%s" % (len(bad_c8b), "、".join(bad_c8b[:5]) or "无"))
+
+    bad_c8c = ["%s（的×%d）" % (r["subsection_id"], r["title"].count("的"))
+               for _, _, r in all_rows if r["title"].count("的") > 2]
+    f("C8c", "C8c 单题“的”字 ≤2（去 AI 味）", bad_c8c,
+      "超限 %d 处：%s" % (len(bad_c8c), "、".join(bad_c8c[:5]) or "无"))
+
+    info_c8 = ["%s（%s）" % (r["subsection_id"], "、".join(w for w in REVIEW_AI if w in r["title"]))
+               for _, _, r in all_rows if any(w in r["title"] for w in REVIEW_AI)]
+    rows_out.append(("C8i", "C8i AI 腔词披露（人工复核项，不拦退出码）", True,
+                     "命中 %d 处：%s" % (len(info_c8), "、".join(info_c8[:6]) or "无")))
+
     # ---------------- D 语义下限
     bad_d1 = ["%s（thesis 空或过短）" % r["subsection_id"] for _, _, r in all_rows
               if len(r["thesis"].strip()) < 8]
@@ -511,10 +547,10 @@ def report(rows, title):
 
 
 def cmd_selftest():
-    """正例 1 例＋反例 17 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
+    """正例 1 例＋反例 20 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
 
-    全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／C7／F2／F3／G1／
-    H1／A2／A3／D1／G2／H2／H3 十七类。
+    全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／C7／C8a／C8b／
+    C8c／F2／F3／G1／H1／A2／A3／D1／G2／H2／H3 二十类。
     """
     good = ["自动计算的观念源流", "差分机与通用计算的分离", "形式化纲领的边界"]
     TAB = "\t"
@@ -599,6 +635,10 @@ def cmd_selftest():
            ["这是一条被刻意写得非常非常长的小节标题用于验证四十字硬上限是否真的会被门禁拦下并报错"] + good[1:])
     expect("反例 C2 ASCII 直引号", "C2", ['"自由"的两种含义'] + good[1:])
     expect("反例 C7 谱系禁词", "C7", ["Unix 谱系的分岔"] + good[1:])
+    expect("反例 C8a AI 空转词", "C8a", ["系统架构的赋能设计"] + good[1:])
+    expect("反例 C8b 同尾簇超限", "C8b",
+           ["管道机制的引入过程", "文件系统的形成过程", "命令解释的演化过程", "编程风格的定型过程"])
+    expect("反例 C8c 三重“的”", "C8c", ["系统的状态的管理的统一"] + good[1:])
     expect("反例 F2 专名题仅 2 源", "F2",
            ["TCP/IP 的移植", "内核接口的约定", "许可安排的演变"])
     expect("反例 F3 单源题", "F3", good, sources="史料")
