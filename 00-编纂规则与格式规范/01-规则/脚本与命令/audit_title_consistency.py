@@ -20,7 +20,8 @@
 --------
 A 台账结构（表头、唯一性、层级对位、order 连续、status 枚举）
 B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度、年代括注）
-C 字符 C1–C6（中英空格、直角引号、ASCII 句读、危险字符、空白与不可见字符、术语）
+C 字符 C1–C7（中英空格、直角引号、ASCII 句读、危险字符、空白与不可见字符、术语、
+   禁词：Q2「谱系」＋《释读规则》读者面禁名；理论腔词披露不拦）
 D 语义 S1–S4 的可机读下限（题旨非空、层级一致、同节平行、异质登记）
 E 证据齐（每条标题有证据行、证据 id 在台账内、层级与日期格式）
 F 四源覆盖（计数与集合一致、≥2 源、专名／标准号／年代题 ≥3 源、单源题为 0）
@@ -80,6 +81,12 @@ VERB_HEAD = ("讨论", "分析", "介绍", "说明", "论述", "研究", "探讨
 TRANSCRIBE = ("宣布", "指出", "表示", "认为", "建议", "询问", "承认", "强调",
               "透露", "提议", "反驳", "呼吁", "质疑", "回复", "答复")
 WORKER_JARGON = ("未判定", "待定", "杂项", "空模板件", "属英文原件", "属引文原件")
+# C7 禁词（2026-10-30 增补，ykla 授权）：Q2「谱系」禁用（2026-10-08 立，125 号文 阶段 F，
+# ykla 硬令「标题＋注文一并清理」）与《释读规则》读者面禁名，小节题名同口径。
+# REVIEW_TERMS 为理论腔披露表（人工复核项，不拦退出码）：对象层研究题（如史学辨析章
+# 以「叙事」为研究对象者）合法，故只披露不硬拦，防误杀。
+BANNED_TITLE = ("谱系", "一刻哲学", "构造哲学")
+REVIEW_TERMS = ("叙事", "话语", "互构", "建构", "解构", "范式", "语境", "他者", "视域", "主体性")
 PATTERN_TECH = re.compile(r"[A-Za-z]{2,}|POSIX|IEEE|ANSI|ISO|RFC|USENIX|ACM")
 STANDARD = re.compile(r"(IEEE\s*Std|POSIX|ISO/IEC|ANSI|RFC\s*\d+|USENIX)")
 YEAR_IN = re.compile(r"\d{4}")
@@ -308,6 +315,18 @@ def run(root):
     f("C6", "C6 术语（Port 单数／禁端口误译／Ports 专名）", bad_c6,
       "命中 %d 处：%s" % (len(bad_c6), "、".join(bad_c6[:5]) or "无"))
 
+    bad_c7 = []
+    for _, _, r in all_rows:
+        hits = [w for w in BANNED_TITLE if w in r["title"]]
+        if hits:
+            bad_c7.append("%s（%s）" % (r["subsection_id"], "、".join(hits)))
+    f("C7", "C7 禁词（Q2 谱系；释读规则读者面禁名）", bad_c7,
+      "命中 %d 处：%s" % (len(bad_c7), "、".join(bad_c7[:5]) or "无"))
+    info_c7 = ["%s（%s）" % (r["subsection_id"], "、".join(w for w in REVIEW_TERMS if w in r["title"]))
+               for _, _, r in all_rows if any(w in r["title"] for w in REVIEW_TERMS)]
+    rows_out.append(("C7i", "C7i 理论腔词披露（人工复核项，不拦退出码）", True,
+                     "命中 %d 处：%s" % (len(info_c7), "、".join(info_c7[:6]) or "无")))
+
     # ---------------- D 语义下限
     bad_d1 = ["%s（thesis 空或过短）" % r["subsection_id"] for _, _, r in all_rows
               if len(r["thesis"].strip()) < 8]
@@ -492,10 +511,10 @@ def report(rows, title):
 
 
 def cmd_selftest():
-    """正例 1 例＋反例 16 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
+    """正例 1 例＋反例 17 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
 
-    全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／F2／F3／G1／H1／
-    A2／A3／D1／G2／H2／H3 十六类。
+    全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／C7／F2／F3／G1／
+    H1／A2／A3／D1／G2／H2／H3 十七类。
     """
     good = ["自动计算的观念源流", "差分机与通用计算的分离", "形式化纲领的边界"]
     TAB = "\t"
@@ -579,6 +598,7 @@ def cmd_selftest():
     expect("反例 B6 超 40 字", "B6",
            ["这是一条被刻意写得非常非常长的小节标题用于验证四十字硬上限是否真的会被门禁拦下并报错"] + good[1:])
     expect("反例 C2 ASCII 直引号", "C2", ['"自由"的两种含义'] + good[1:])
+    expect("反例 C7 谱系禁词", "C7", ["Unix 谱系的分岔"] + good[1:])
     expect("反例 F2 专名题仅 2 源", "F2",
            ["TCP/IP 的移植", "内核接口的约定", "许可安排的演变"])
     expect("反例 F3 单源题", "F3", good, sources="史料")
