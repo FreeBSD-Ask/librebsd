@@ -70,20 +70,37 @@ cnki*
 !旧大纲-20261023/theme_index.json
 !05-卷册大纲/chapter_keywords.json
 !05-卷册大纲/theme_index.json
+# 元数据载体与战役 checkpoints 入库例外（2026-10-29 跟踪范围复核）：两件是 AGENTS.md 点名的
+# 顶层载体（chapter_index.json 被 build_folder_databases.py 实读，参考索引缺则全新克隆不可用）；
+# checkpoints 是 Task 7–8 续跑状态，不入库则新克隆无法续跑（与 data/catalog.json 同口径）。
+# 三处父目录均未被排除，负规则有效。
+!10-交叉索引/S03-historical_objects.json
+!11-元数据接口/01-章节元数据/chapter_index.json
+!05-卷册大纲/映射/再分配/checkpoints/*.json
 # 根目录临时工作文件（并发会话的路径清单等，不入版本库）
 /_*.txt
 # 目录页测试套件例外（2026-09-11 固化，须随 index.html 一起纳入版本管理；
 # 2026-10-23 C4 随目录源迁入新 05 同步改指；同日补 .py 夹具例外——
-# 第十二件 tri_structure_negtest.py 与第二十一件 outline_selfcheck.py 是
-# 门禁依赖件，不入库即失去复现性；_scratch 探针与 .mjs 探针仍不入库）
+# 第十二件 tri_structure_negtest.py 与第二十一件 outline_selfcheck.py 是门禁依赖件，不入库即失去复现性。
+# 2026-10-29 复核改注（旧注“_scratch 探针与 .mjs 探针仍不入库”已与实态不符）：
+# _probe_*.mjs 是 128／144／151 号文点名的“夹具联动”对象，须入库；_regr_on_backup.mjs 原为
+# 第十三件豁免对象，2026-10-29 淘汰（夹具所指向的备份件已不存在，套件恒不可跑）。
+# _scratch/ 是 134 号文设立的中间件隔离区（37 件 txt 回归日志），不入库。
 !05-卷册大纲/目录/tests/*.mjs
 !05-卷册大纲/目录/tests/*.py
 !05-卷册大纲/目录/tests/README.md
+/05-卷册大纲/目录/tests/_scratch/
 *.mp3
 *.pdf
 *.epub
 /04-现代研究文献/05-参考文献全文数据库
-/03-原始史料库
+# 03 库默认不入库；2026-10-29 跟踪范围复核改为“子项排除”，以放行规则登记载体与器物索引。
+# 勿改回整目录排除：父目录被排除时 git 不支持 re-include 其内部文件，负规则会静默失效。
+/03-原始史料库/*
+!/03-原始史料库/06-考据记录/
+!/03-原始史料库/10-技术器物史料/
+# 15-login／16-TUHS 的 md 为第三方全文语料（Login 杂志正文、bitsavers 抓取正文、DokuWiki 语料），
+# 2026-10-29 ykla 裁“不入库”：以 duckdb 为工作副本，避免第三方全文永久写入 git 历史。
 /04-现代研究文献/03-文献下载
 *.tmp_fix
 *.tmp_fix2
@@ -168,5 +185,8 @@ cnki*
 /.tmp
 state/inuse.6428.lock
 /.qoder
+# 审计与评审日志不再新增入库（2026-10-20 ykla 加此二条）：各批执行记录已归位
+# `05-卷册大纲/目录/` 顶层（06-门禁体系.md §52，130–147 批先例），故 08/07-目录审计 与
+# review_logs/ 只保留既有冻结件（68／18 件），新件一律不入索引。
 /08-核查报告与多轮复核/07-目录审计
 /review_logs
