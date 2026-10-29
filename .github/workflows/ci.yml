@@ -1,5 +1,5 @@
 # 编纂工程 CI —— 只收编可在无本地数据库、无浏览器、无人机固定路径环境下判定的门禁。
-# 未收编门禁（浏览器视觉回归、无障碍、数据库类、整改中件）的原因见 README“CI（GitHub Actions）”。
+# 未收编门禁（浏览器视觉回归、无障碍、数据库类、第二十件基线不可达）的原因见 README“CI（GitHub Actions）”。
 # 依赖钉定：第三方 action 一律钉定 40 位提交 SHA（行尾注释记语义版本），不随浮动 tag 漂移；
 # 升级由 `dependabot.yml` 的 github-actions 生态提 PR，或手工换 SHA＋注释后重跑本工作流。
 # 2026-10-29 核：checkout v7.0.1／setup-python v7.1.0／setup-node v7.1.0 为各自最新正式版。
@@ -28,11 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      # fetch-depth 0 为必需：第二十件静默丢失守卫默认读历史提交 305b3202 的早期大纲快照。
-      - name: 检出（全量历史）
+      # fetch-depth 1：无门禁硬依赖历史（第二十件 T1 已固化为仓内快照，见守卫层注释）。
+      - name: 检出
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: 安装 Python 3.14
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
@@ -56,6 +56,9 @@ jobs:
           python "$GATES/audit_js_blockscope.py"
           python "$GATES/audit_mirror_ingest.py"
           python "$GATES/audit_disk_terminology.py"
+          python "$GATES/audit_fixture_freshness.py"
+          python "$GATES/audit_sidecar_backup.py"
+          python "$GATES/audit_keyword_index.py"
 
       - name: 大纲与目录页结构层门禁
         run: |
@@ -71,6 +74,8 @@ jobs:
       - name: 守卫、锚与交叉引用层门禁
         run: |
           python "$GATES/audit_renumber_guard.py"
+          # 第二十件 T1 已固化为仓内快照（08-核查报告与多轮复核/重构2026/data/outline-t1-20261011.txt），
+          # 不依赖历史对象，浅克隆即可判。
           python "$GATES/audit_silent_loss_guard.py"
           python "$GATES/audit_outline_dup.py"
           python "$GATES/audit_anchor_pairs.py"
@@ -84,6 +89,8 @@ jobs:
           # CI 环境改用相对根口径，免因 runner 检出根更长而系统性误判（本机仍按原口径必跑）。
           python "$GATES/audit_outline_landing.py" --root 05-卷册大纲
           python "$GATES/audit_gate_registry.py"
+          python "$GATES/audit_engineering_practice.py"
+          python "$GATES/audit_task_lifecycle.py"
           python "$TESTS/outline_selfcheck.py"
           python "$TESTS/tri_structure_negtest.py"
 
