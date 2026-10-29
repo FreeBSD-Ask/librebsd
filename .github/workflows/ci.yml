@@ -92,8 +92,11 @@ jobs:
           # 不依赖历史对象，浅克隆即可判。
           python "$GATES/audit_silent_loss_guard.py"
           python "$GATES/audit_outline_dup.py"
-          python "$GATES/audit_anchor_pairs.py"
-          python "$GATES/audit_anchor_pair_order.py"
+          # 第三十三／三十四件（成对锚配平、BEGIN/END 章内配对）暂不收编，两条缘由：
+          # ① 二者只在带 --check 时才 exit 1，缺省恒 exit 0——原样收编即假绿（2026-10-29 实测）；
+          # ② 存量缺损未清：56 件块头／块尾缺失（含正文截断）＋第 71 卷 3.2.1 一处 W172 孤儿 END；
+          #    逐件清单与处置口径见 01-项目管理/02-工程决策与技术债/锚配平缺损清单与处置施工单-20261029.md。
+          # 清零后恢复调用并显式带 --check。
           python "$GATES/xref_audit.py"
           python "$GATES/audit_note_xref.py"
 
