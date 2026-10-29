@@ -57,6 +57,11 @@ cnki*
 !00-编纂规则与格式规范/01-规则/脚本与命令/*.py
 # 受控主题词表（固定输入，随生成器入库；2026-10-21 立）
 !00-编纂规则与格式规范/01-规则/脚本与命令/主题词表.json
+# 根级 lint 配置入库例外（2026-10-29 立）：第十件门禁 audit_markdown_lint.py 与 CI 均读取
+# 根级 .markdownlint.json（AGENTS.md“Lint 配置”章节的唯一实现载体）；不入库则全新克隆
+# 的 lint 门禁恒失败，故在 `*.json` 全局规则下显式加例外（与 git_commit_gate.py
+# ROOT_FILE_WHITELIST 白名单同源）。
+!.markdownlint.json
 # 目录页数据层例外（2026-10-23 复核整改）：装配器读入的活动源，不入库则全新克隆
 # 无法重装配（assemble_index.py 会因缺 catalog.json／ui-strings.json 直接失败）。
 !05-卷册大纲/目录/data/catalog.json
