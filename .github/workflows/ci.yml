@@ -52,7 +52,7 @@ jobs:
         run: npm install -g markdownlint-cli2@0.24.0 markdownlint@0.42.0
 
       # 四个闸层一律 continue-on-error：存量红项（另线在修）不应让后续闸层被 skipped 而失去可见性；
-      # 真实结论由末步「汇总门禁结果」给出，任一闸层 FAIL 即整轮失败。
+      # 真实结论由末步“汇总门禁结果”给出，任一闸层 FAIL 即整轮失败。
       - name: 文本与格式层门禁
         id: g1
         continue-on-error: true
@@ -104,7 +104,8 @@ jobs:
           python "$GATES/audit_outline_landing.py" --root 05-卷册大纲
           python "$GATES/audit_gate_registry.py"
           python "$GATES/audit_engineering_practice.py"
-          python "$GATES/audit_task_lifecycle.py"
+          # 第三十二件（任务生命周期）暂不收编：其扫描面为工作区 `specs/`，按红线不入库，
+          # 全新克隆下恒「扫描面缺失」exit 2。本机批流程照跑，CI 侧留待该件改为仓内台账后并入。
           python "$TESTS/outline_selfcheck.py"
           python "$TESTS/tri_structure_negtest.py"
 
