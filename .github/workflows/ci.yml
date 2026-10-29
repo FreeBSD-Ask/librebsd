@@ -1,5 +1,5 @@
 # 编纂工程 CI —— 只收编可在无本地数据库、无浏览器、无人机固定路径环境下判定的门禁。
-# 未收编门禁（浏览器视觉回归、无障碍、数据库类、第二十件基线不可达）的原因见 README“CI（GitHub Actions）”。
+# 未收编门禁（浏览器视觉回归、无障碍、数据库类、第三十二件扫描面不入库）的原因见 README“CI（GitHub Actions）”。
 # 依赖钉定：第三方 action 一律钉定 40 位提交 SHA（行尾注释记语义版本），不随浮动 tag 漂移；
 # 升级由 `dependabot.yml` 的 github-actions 生态提 PR，或手工换 SHA＋注释后重跑本工作流。
 # 2026-10-29 核：checkout v7.0.1／setup-python v7.1.0／setup-node v7.1.0 为各自最新正式版。
@@ -40,8 +40,10 @@ jobs:
           python-version: "3.14"
 
       # 第九件（页面资产层）解析 woff2 子集需 fontTools；woff2 编解码另需 brotli。
-      - name: 安装页面资产门禁依赖（fontTools＋brotli）
-        run: python -m pip install --disable-pip-version-check fonttools brotli
+      # 版本钉定＝第九件本机验证通过的组合（4.62.1／1.2.0）：woff2 解析对版本敏感，
+      # 浮动装新易让资产门禁在 CI 侧与本地判定漂移；升级须本地复跑第九件后再改此行。
+      - name: 安装页面资产门禁依赖（fontTools==4.62.1＋brotli==1.2.0）
+        run: python -m pip install --disable-pip-version-check fonttools==4.62.1 brotli==1.2.0
 
       - name: 安装 Node 24
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
@@ -105,7 +107,7 @@ jobs:
           python "$GATES/audit_gate_registry.py"
           python "$GATES/audit_engineering_practice.py"
           # 第三十二件（任务生命周期）暂不收编：其扫描面为工作区 `specs/`，按红线不入库，
-          # 全新克隆下恒「扫描面缺失」exit 2。本机批流程照跑，CI 侧留待该件改为仓内台账后并入。
+          # 全新克隆下恒“扫描面缺失”exit 2。本机批流程照跑，CI 侧留待该件改为仓内台账后并入。
           python "$TESTS/outline_selfcheck.py"
           python "$TESTS/tri_structure_negtest.py"
 
