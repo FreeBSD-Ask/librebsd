@@ -110,7 +110,7 @@ FIX_EXCLUDE_PREFIX = (
     "05-卷册大纲/目录/data/", "08-核查报告与多轮复核/12-重构大纲书目述评/",
 )
 ROOT_FILE_WHITELIST = {
-    ".autocorrectrc", ".gitattributes", ".gitignore", ".markdownlint.json",
+    ".autocorrectrc", ".gitattributes", ".gitignore", ".zcodeignore", ".markdownlint.json",
     ".textlintrc", ".textlintrc.json", "LICENSE", "AGENTS.md",
     "favicon.ico", "logo.svg", "README.md",
     # 2026-10-29 补登记：第三方 BSD 家族树参照件，被 01-项目管理/03-架构与技术文档/

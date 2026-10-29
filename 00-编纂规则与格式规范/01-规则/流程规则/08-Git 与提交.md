@@ -61,7 +61,7 @@ git diff --cached --numstat              # 体积与改动量
 
 **阻断类（commit-msg 阶段核对批准标记；2026-10-17 ykla 批准扩展）**：除上述 G1（忽略条目）/G2（>5 MB）外，另设下列阻断：
 
-- **B2 根目录新增一级条目不在白名单**——白名单＝`.autocorrectrc`／`.gitattributes`／`.gitignore`／`.markdownlint.json`／`.textlintrc`／`.textlintrc.json`／`LICENSE`／`AGENTS.md`／`favicon.ico`／`logo.svg`／`README.md`／`bsd-family-tree.txt`／`bsd-family-tree-zh.txt`（末两件 2026-10-29 补登记：第三方家族树参照件，已在库且被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 引用）；编号目录与 `script/` 等既有目录的新增文件不受限（只拦**根目录一级**新条目）。
+- **B2 根目录新增一级条目不在白名单**——白名单＝`.autocorrectrc`／`.gitattributes`／`.gitignore`／`.zcodeignore`／`.markdownlint.json`／`.textlintrc`／`.textlintrc.json`／`LICENSE`／`AGENTS.md`／`favicon.ico`／`logo.svg`／`README.md`／`bsd-family-tree.txt`／`bsd-family-tree-zh.txt`（末三组 2026-10-29 补登记：家族树两件为第三方参照件，已在库且被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 引用；`.zcodeignore` 为已入库的根级忽略配置，补登以免误判）；编号目录与 `script/` 等既有目录的新增文件不受限（只拦**根目录一级**新条目）。
 - **B3 暂存区删除 `12-数据库备份/**`**——备份归档不得经 git 删除。
 - **B4 文档类文件含全角空格 U+3000**（禁 AI 不可见字符）。
 - **B5 暂存区含旁路备份副本**（2026-10-23 用户令，**无放行标记**）：路径名命中 `.prebak*`／`.bak`／`.bak-*`／`.bak_*`／`.bak.<数字>`／`.orig`／`.rej`／`~` 结尾，或任一路径段含 `prebak`——一律拒收。缘由：2026-10-23 实测清除 783 件 prebak（17.7 GB）与 1,064 件 bak 类旁路件；留痕与回滚唯一靠 Git，数据库快照唯一走 `12-数据库备份/` 正式槽。

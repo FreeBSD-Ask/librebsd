@@ -92,7 +92,7 @@
 | `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 不入库（2026-10-17 ykla 裁决，目录保留作工作区） |
 | `.zcode/` | ZCode 工作区路径 | 忽略 |
 | `bsd-family-tree.txt`、`bsd-family-tree-zh.txt` | 第三方维护的 BSD 家族树纯文本参照件（逐年更新）；被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 与 115 号文引用 | 入库（2026-10-29 补登记，同步列入 B2 根级白名单） |
-| `.autocorrectrc`、`.gitattributes`、`.gitignore`、`LICENSE` | 根配置 | 入库 |
+| `.autocorrectrc`、`.gitattributes`、`.gitignore`、`.zcodeignore`、`LICENSE` | 根配置 | 入库 |
 
 `.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则/00-索引.md`）；**2026-10-17 ykla 裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
 
