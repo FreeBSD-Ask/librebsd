@@ -7,7 +7,9 @@
 
 口径：
 - 命中族（文件名大小写不敏感）：`.prebak*`／`.preback*`／`.pre`／`.pre-*`／`.pre_*`／
-  `-bak`／`-bak-*`／`_bak`／`_bak_*`／`.bak*`／`.orig*`／`.rej`／结尾 `~`，
+  `-bak`／`-bak-*`／`_bak`／`_bak_*`／`.bak*`／`.orig*`／`.rej`／结尾 `~`；
+  **中缀 pre 仅认后接数字的日期形**（`-pre-20261023` 一类；题名内 `1.1.3-pre-v1`
+  这类版本号不判违规，2026-10-29 收窄），
   **数据文件复合后缀**（`.<duckdb|db|parquet|tar.gz>.<词尾>bak`，如 `.closurebak`／`.driftbak`，2026-10-24 补；
   限数据文件前缀，`_tmp/` 等临时区的 `*.json.failbak` 不属本族），
   以及备份目录名 `prebak-*`／`_bak*`／`*_备份*` 之下的一切内容。
@@ -36,7 +38,10 @@ NAME_RES = [
     ("prebak", re.compile(r"(?i)\.prebak")),
     ("preback", re.compile(r"(?i)\.preback")),
     ("pre-suffix", re.compile(r"(?i)\.pre($|[-_])")),
-    ("pre-mid", re.compile(r"(?i)[._-]pre[-_]")),
+    # pre-mid 仅认后接数字的日期形（如 `-pre-20261023`）：2026-10-29 收窄——正文题名内
+    # 合法版本号（实测第37卷 10.10.61 节题含 `JDK 1.1.3-pre-v1`）不得误判为备份副本；
+    # 判据正文本就不含中缀 pre 形态，此收窄更忠实于规则，防 TF 改题批再现同类误报。
+    ("pre-mid", re.compile(r"(?i)[._-]pre[-_](?=\d)")),
     ("bak-suffix", re.compile(r"(?i)\.bak($|[-_.0-9])")),
     ("bak-mid", re.compile(r"(?i)[._-]bak($|[-_.0-9])")),
     # 复合后缀（2026-10-24 补）：`references_fulltext.duckdb.closurebak`／`.driftbak` 一类
@@ -172,7 +177,9 @@ def selftest():
                 "docs/h.duckdb.pre_fixdb", "docs/i-bak-20261001.md",
                 "docs/j.md.pre",
                 # 复合后缀（2026-10-24 补）：实测曾长期漏检的两件形态
-                "docs/k.duckdb.closurebak", "docs/l.duckdb.driftbak"]
+                "docs/k.duckdb.closurebak", "docs/l.duckdb.driftbak",
+                # 中缀 pre 日期形（2026-10-29 收窄后仍须命中；原仅 pre-mid 族覆盖）
+                "docs/m-foo-pre-20261023.md"]
         for rel in viol:
             p = os.path.join(tmp, rel.replace("/", os.sep))
             os.makedirs(os.path.dirname(p), exist_ok=True)
@@ -192,6 +199,8 @@ def selftest():
         # 正常件不得误报
         open(os.path.join(tmp, "docs", "normal.md"), "w", encoding="utf-8").write("x\n")
         open(os.path.join(tmp, "docs", "pre-existing-note.md"), "w", encoding="utf-8").write("x\n")
+        # 题名内含合法版本号（2026-10-29 收窄）：`1.1.3-pre-v1` 不是备份后缀，不得误报
+        open(os.path.join(tmp, "docs", "o-1.1.3-pre-v1-note.md"), "w", encoding="utf-8").write("x\n")
 
         hits, exempted, formal = scan(tmp)
         paths = {h["path"] for h in hits}
@@ -209,6 +218,7 @@ def selftest():
             ("T7 正式归档体豁免", len(formal) == 1, True),
             ("T8 正常件零误报", ("docs/normal.md" in paths) or ("docs/pre-existing-note.md" in paths), False),
             ("T9 违规文件计数", sum(1 for h in hits if not h["dir"]), len(viol) + 2),
+            ("T9b 版本号题名不误报", "docs/o-1.1.3-pre-v1-note.md" not in paths, True),
         ]
         bad = 0
         for name, got, want in checks:

@@ -9,14 +9,16 @@
   内容源残留，或在豁免登记表中有登记（合法改题／主题归并／待裁定），否则 FAIL。
 
 三时点载体：
-  T1（最早）：Git 提交 305b320（2026-09-18 22:57）的 `data/outline.txt`——36 卷 321 章口径，
-             与 88 号文基点（2026-09-19 12:20 的 HTML 快照）逐章一致；原 HTML prebak 快照
-             已按 2026-10-23 旁路备份封禁令清除，改以 Git 提交为唯一可长期取证载体。
+  T1（最早）：仓内快照 `08-核查报告与多轮复核/重构2026/data/outline-t1-20261011.txt`——
+             2026-10-11 时点 67 卷 483 章（取自提交 c7ced9322）。
+             **2026-10-29 重定基线**：原载体为 Git 提交 305b320（2026-09-18，36 卷 321 章），
+             该对象在历史重写后被 gc 清除、无引用可达，远端按 SHA 取回失败；故固化为仓内快照。
+             窗口由“09-19→今”收窄为“10-11→今”，09-19→10-11 段已由 88 号文当年逐条甄别覆盖。
   T3（现行）：data/outline.txt
-  （T2 中间时点 09-20 prebak 亦已不在盘；本件以 T1↔T3 两端比对承载 88 判据——判据实质
+  （T2 中间时点 09-20 prebak 已不在盘；本件以 T1↔T3 两端比对承载 88 判据——判据实质
     为“曾为章、现为零承接”。初版实跑 326 章得候选 34，逐条语义甄别（2026-10-09）：
     UI 面板 3 条判据过滤、合法改题/归并 27 条入豁免表（各带去向北键）、F 组待裁定 4 条
-    入豁免表（92 号文 L608）。豁免合计 31 条。）
+    入豁免表（92 号文 L608）；2026-10-29 重定基线批另增 2 条。）
 
 豁免登记表（有意识的选择，非遗漏；每条含去向北键，北键消失＝豁免腐烂 FAIL）：
   改题/归并类：watch 键为现行承接章题或其区分词；watch 键在现行 outline 消失 → 豁免腐烂。
@@ -32,13 +34,18 @@ import re
 import subprocess
 import sys
 
-DEFAULT_EARLY_COMMIT = "305b3202822ad89a6f511cf93c0474e8b1649f1d"
-# T1 是**历史提交**内的路径，须按当时布局写死：305b320（2026-09-18）时内容源在
-# `08-核查报告与多轮复核/重构2026/data/outline.txt`；2026-10-23 搬迁批把它移到
-# `05-卷册大纲/目录/data/outline.txt`。机械改名不得波及此处（改则 `git show` 找不到文件）。
-DEFAULT_EARLY_PATH = "08-核查报告与多轮复核/重构2026/data/outline.txt"
-DEFAULT_OUTLINE = r"d:\librebsd\05-卷册大纲/目录\data\outline.txt"
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+# T1 早期载体（2026-10-29 重定基线）：原以 Git 提交 305b320（2026-09-18 22:57，36 卷 321 章）
+# 为唯一长期取证载体。2026-10-29 实测该对象在历史重写后被 gc 清除：无任何引用可达，
+# 远端按 SHA 取回亦失败（origin 仅 main 与两标签）。故改为**仓内快照**：
+# 2026-10-11 时点、67 卷 483 章（取自提交 c7ced9322 的同路径文件），
+# 使判据在全新克隆与 CI 中可复现（原 GIT: 形态仍保留，可用 --early 显式指定）。
+# 判据窗口影响：“09-19→今”收窄为“10-11→今”；09-19→10-11 段的丢失已由 88 号文当年
+# 逐条语义甄别覆盖（本件豁免表即其产物），本次重定基线批新增 2 条承接豁免。
+DEFAULT_EARLY = os.path.join(REPO, "08-核查报告与多轮复核", "重构2026", "data",
+                             "outline-t1-20261011.txt")
+DEFAULT_OUTLINE = os.path.join(REPO, "05-卷册大纲", "目录", "data", "outline.txt")
 
 # index.html 工具面板 h3（非章，判据过滤；面板标题变化不影响判定）
 UI_PANELS = ("跨卷关联图谱", "时间线视图", "结构修订史")
@@ -87,6 +94,9 @@ EXEMPTS = {
     "虚拟化与现代运行环境": ("虚拟化与运行环境", "改题：现行卷38 第10章", "P92 门禁同步"),
     "宽松许可证的类型与许可证兼容性": ("许可证兼容", "归并：现行卷56 5.8／5.10", "P92 门禁同步"),
     "合规数据与法律史方法": ("自动化合规数据", "归并：现行卷59 5.2", "P92 门禁同步"),
+    # —— 2026-10-29 T1 重定基线批（窗口 10-11→今；2 条改题/归并承接，用户 2026-10-29 批准）——
+    "卷末史料与方法": ("书目述评", "改题＋外迁：28 号文书评挂靠改造后章级题名取消，述评改为编号小节挂靠宿主章，全文外迁 12-重构大纲书目述评/", "T1 重定基线批"),
+    "习俗与仪式": ("习俗", "改题/归并：现行“传言、都市传说与习俗”三章（卷十一/卷二十九/卷六十三）与“符号与仪式”横向比较章承接", "T1 重定基线批"),
     # —— UI 面板模板串（非章题，静态豁免）——
     "ui.search.title": (None, "UI 面板模板串，非章题", "P92 门禁同步"),
     "ui.graph.h3": (None, "UI 面板模板串，非章题", "P92 门禁同步"),
@@ -138,7 +148,7 @@ def load_early(spec):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--early", default="GIT:%s:%s" % (DEFAULT_EARLY_COMMIT, DEFAULT_EARLY_PATH))
+    ap.add_argument("--early", default=DEFAULT_EARLY)
     ap.add_argument("--outline", default=DEFAULT_OUTLINE)
     args = ap.parse_args()
 
@@ -151,7 +161,7 @@ def main():
 
     print("=" * 72)
     print("第二十件：重构静默丢失守卫（88 号文三时点比对法固化）")
-    print(f"  T1 早期载体：{DEFAULT_EARLY_COMMIT[:7]}:data/outline.txt（章 {len(titles)}）")
+    print(f"  T1 早期载体：{os.path.relpath(args.early, REPO) if os.path.isfile(args.early) else args.early}（章 {len(titles)}）")
     print(f"  T3 现行内容源：{os.path.basename(args.outline)}")
     print("-" * 72)
 

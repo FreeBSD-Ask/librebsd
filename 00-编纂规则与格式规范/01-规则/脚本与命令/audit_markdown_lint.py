@@ -117,7 +117,10 @@ AUDIT_SCOPE = [
     "00-编纂规则与格式规范/02-操作手册/**/*.md",
     "01-项目管理/**/*.md",
     "AGENTS.md",
-    "spec/*.md",
+    # 2026-10-29 修正：原写 `spec/*.md`——该目录自始不存在，恒零匹配，致 `--all` 恒 exit 1，
+    # 与“全审计面仅可见性、恒 exit 0”的契约矛盾；工作区实际目录为 specs/<slug>/spec.md（二级），
+    # 故用递归模式。
+    "specs/**/*.md",
 ]
 
 # 摘要行两代形态并存：旧版 `Summary: 0 error(s)`；cli2 v0.24.0 起 `Summary: 0 issues in 0 files`。
@@ -160,13 +163,25 @@ def resolve(patterns):
     return uniq, empty
 
 
+LINT_BATCH = 80  # 单批上限：Windows 命令行有 32K 上限，CJK 路径按 3 字节计，>100 件即可能超限
+
+
 def run_lint(exe, files):
-    cmd = [exe] + files + ["--config", ".markdownlint.json"]
-    out = subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT),
-                         encoding="utf-8", errors="replace")
-    text = (out.stdout or "") + (out.stderr or "")
-    m = SUMMARY_RE.search(text)
-    return (int(m.group(1)) if m else None), text
+    """分批调用并按 Summary 求和；任一批输出不可解析即返回 None（不静默当 0）。"""
+    total = 0
+    texts = []
+    for i in range(0, len(files), LINT_BATCH):
+        batch = files[i:i + LINT_BATCH]
+        cmd = [exe] + batch + ["--config", ".markdownlint.json"]
+        out = subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT),
+                             encoding="utf-8", errors="replace")
+        text = (out.stdout or "") + (out.stderr or "")
+        m = SUMMARY_RE.search(text)
+        if not m:
+            return None, text
+        total += int(m.group(1))
+        texts.append(text)
+    return total, "\n".join(texts)
 
 
 # 自检夹具：覆盖 MANIFEST 全部模式（T0 断言覆盖，防夹具与闸面脱钩）

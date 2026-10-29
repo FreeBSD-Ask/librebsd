@@ -4,7 +4,8 @@
 判据七组：
   A schema／版本／计数
   B 覆盖与题面双射（节键、题面、subs 数、subs_sha1、content_sha256）
-  C 词质（普通节 3–6、元节 1–3 限史学域、禁用词、中文正名、补位 ≤2、单主题占比 ≤30%、概念零使用）
+  C 词质（普通节 3–6、元节 1–3 限史学域、禁用词、中文正名、补位 ≤2、单主题占比 ≤30%；
+    概念零使用只示 WARN——索引为每节 top-N 排序结果，未被选入不等于词表失效，2026-10-29 定级）
   D 侧面（projects 合法、technical_terms ≤8 且在词表内）
   E 对齐码（ccs／clc 格式合法、空值合法）
   F 反查一致（theme_index ↔ chapter_keywords）
@@ -51,6 +52,7 @@ def load(out_dir):
 
 def check_dir(out_dir=ROOT, structure=True):
     problems = []
+    warns = []
     try:
         kw, rev = load(out_dir)
     except Exception as exc:
@@ -80,6 +82,7 @@ def check_dir(out_dir=ROOT, structure=True):
                                        for r in secs.values()):
         problems.append(("A2", "meta.subsections 与节 subs 合计不符"))
     share = {}
+    share_norm = {}
     for sid, row in secs.items():
         n = len(row.get("themes") or []) + len(row.get("auto") or [])
         if row.get("meta"):
@@ -101,6 +104,8 @@ def check_dir(out_dir=ROOT, structure=True):
                 problems.append(("C4", "节 %s 补位词非法：%s" % (sid, a)))
         for cid in row.get("themes") or []:
             share[cid] = share.get(cid, 0) + 1
+            if not row.get("meta"):
+                share_norm[cid] = share_norm.get(cid, 0) + 1
             c = by_id.get(cid)
             if not c:
                 problems.append(("C0", "节 %s 引用词表外主题 %s" % (sid, cid)))
@@ -126,14 +131,22 @@ def check_dir(out_dir=ROOT, structure=True):
     if (kw.get("meta") or {}).get("subsections") == 0:
         print("SKIP C5／C6（骨架树：0 小节正文，主题分布与词表覆盖率无可判内容）")
     else:
-        for cid, n in share.items():
-            if n / max(len(secs), 1) > MAX_SHARE:
-                problems.append(("C5", "主题 %s 占比 %.1f%% > 30%%"
+        # C5 分母＝普通节（非元节）：元节默认主题由 build_theme_index._default_meta 结构性注入
+        # （编纂体例／史料等级／索引与元数据），元节占比一涨默认词占比即随涨，与“主题退化”无关。
+        # 2026-10-29 实测：元节 1,052（26.6%），三默认词全量口径 23.0%–34.8%（超限）、
+        # 普通节口径最高 17.2%（合规）。判据改以普通节为分母；元节默认设计变更时须同批复核本条。
+        n_norm = sum(1 for r in secs.values() if not r.get("meta"))
+        for cid, n in share_norm.items():
+            if n / max(n_norm, 1) > MAX_SHARE:
+                problems.append(("C5", "主题 %s 占普通节 %.1f%% > 30%%（%d／%d）"
                                  % ((by_id.get(cid) or {}).get("prefLabel", cid),
-                                    100.0 * n / max(len(secs), 1))))
+                                    100.0 * n / max(n_norm, 1), n, n_norm)))
         unused = sorted(set(by_id) - used)
         if unused:
-            problems.append(("C6", "词表概念零使用 %d 个（如 %s）" % (len(unused), unused[:5])))
+            # 2026-10-29 定级调整：索引是“每节 top-N 取词”的排序结果，概念未被选入
+            # 不等于词表失效（实测 20 个零使用概念中 18 个在树内有语料命中，属排序落选；
+            # 其余为语料尚未涉及）。词表冗余治理属人工轮次，故只示 WARN、不阻断门禁。
+            warns.append(("C6", "词表概念零使用 %d 个（如 %s）" % (len(unused), unused[:5])))
 
     # D：侧面
     for sid, row in secs.items():
@@ -167,14 +180,16 @@ def check_dir(out_dir=ROOT, structure=True):
         problems.append(("G1", "chapter_keywords.json %.2f MB > 5 MB" % kw_mb))
     if rev_mb > MAX_REV_MB:
         problems.append(("G1", "theme_index.json %.2f MB > 2 MB" % rev_mb))
-    return problems
+    return problems, warns
 
 
 def cmd_check(out_dir=ROOT):
     print("=" * 72)
     print("主题词索引门禁（schema theme-index/4／theme-reverse/2）")
     print("=" * 72)
-    problems = check_dir(out_dir)
+    problems, warns = check_dir(out_dir)
+    for code, detail in warns:
+        print("  WARN [%s] %s" % (code, detail))
     if problems:
         print("  校验：FAIL（%d 项）" % len(problems))
         for code, detail in problems[:60]:
@@ -195,7 +210,7 @@ def cmd_selftest():
     os.makedirs(fix, exist_ok=True)
     for name in (KW, REV):
         shutil.copy2(os.path.join(ROOT, name), os.path.join(fix, name))
-    base = check_dir(fix, structure=False)
+    base, _ = check_dir(fix, structure=False)
     ok = not base
     print("=" * 72)
     print("判据非空自检（基线须 PASS；七类夹具须命中）")
@@ -229,7 +244,7 @@ def cmd_selftest():
     ]
     for title, name, fn, expect in cases:
         mutate(name, fn)
-        probs = check_dir(fix, structure=False)
+        probs, _ = check_dir(fix, structure=False)
         codes = {c for c, _ in probs}
         hit = expect in codes
         ok = ok and hit

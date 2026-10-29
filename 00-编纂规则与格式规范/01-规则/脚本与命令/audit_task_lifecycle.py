@@ -77,7 +77,10 @@ REVIEW_VERDICT = {"PASS", "FAIL", "不适用"}
 ROLES = {"作者", "复核子代理", "独立复核", "ykla"}
 # 称呼规范（2026-10-23 用户令）：角色令牌统一写 ykla；历史行仍用旧称，读入时等价归一，
 # 只影响判据、不回写台账（回写属称呼批的另一步，不得在此隐式改数据）。
-ROLE_ALIAS = {"主理人": "ykla"}
+ROLE_ALIAS = {"主理人": "ykla",
+              # 2026-10-29：迁移战役卷级复核行的既有写法（独立复核子代理）读入时归一，
+              # 与上同理只影响判据、不回写台账。
+              "独立复核子代理": "复核子代理"}
 TG_STATUS = {"采纳", "部分采纳", "不采纳", "待定"}
 PLACEHOLDER = {"", "—", "-", "／", "/", "待复核", "复核中"}
 
@@ -87,6 +90,18 @@ def _read(path: pathlib.Path) -> str:
         return path.read_text(encoding="utf-8", errors="replace")
     except OSError:
         return ""
+
+
+def _flow_layer_text(p) -> str:
+    """流程规则判据面：存根＋各分册全文拼接。
+
+    2026-10-27 规则按主题拆分后，判据正文在 `流程规则/*.md`，`流程规则.md` 仅为转发索引存根；
+    L11 的接线校验须在整层可寻，否则拆分即令接线判据空转（2026-10-29 修）。
+    """
+    parts = [_read(p["flow"])]
+    if p["flow_dir"].is_dir():
+        parts.extend(_read(f) for f in sorted(p["flow_dir"].glob("*.md")))
+    return "\n".join(parts)
 
 
 def _split_row(line: str) -> list[str]:
@@ -215,6 +230,7 @@ def _paths(root: pathlib.Path):
         "tg": gov / "软件工程理论缺口与增补登记.md",
         "rule": rule_dir / "工程实践规则.md",
         "flow": rule_dir / "流程规则.md",
+        "flow_dir": rule_dir / "流程规则",
         "rotation_rule": rule_dir / "任务轮替与归档规则.md",
         "rule_readme": rule_dir / "README.md",
         "cmd_readme": rule_dir / "脚本与命令" / "README.md",
@@ -509,7 +525,8 @@ def run_checks(root: pathlib.Path):
         ("AGENTS", p["agents"], "audit_task_lifecycle.py"),
         ("门禁登记表", p["registry"], "audit_task_lifecycle.py"),
     ]
-    wire_bad = [name for name, path, needle in checks if needle not in _read(path)]
+    wire_bad = [name for name, path, needle in checks
+                if needle not in (_flow_layer_text(p) if path == p["flow"] else _read(path))]
     if not p["archive_index"].is_file():
         wire_bad.append("13 号轮替槽 index.md")
     rows.append(("L11", "规则与登记接线", not wire_bad,

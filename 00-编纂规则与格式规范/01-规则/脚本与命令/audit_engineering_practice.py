@@ -7,7 +7,8 @@
 - `01-项目管理/02-工程决策与技术债/技术债登记.md`：表字段、承担者、状态
 - `00-编纂规则与格式规范/02-操作手册/14-工程实践模板/`：模板接线
 - `00-编纂规则与格式规范/01-规则/工程实践规则.md`：规则登记与复审日期
-- `流程规则.md`、`01-规则/README.md`、`AGENTS.md`、`脚本与命令/README.md`、`audit_gate_registry.py`：接线
+- `流程规则.md`（拆分后为转发索引存根）与 `流程规则/`：分册索引与各分册 H2 逐条一致
+- `01-规则/README.md`、`AGENTS.md`、`脚本与命令/README.md`、`audit_gate_registry.py`：接线
 
 判据
 ----
@@ -17,12 +18,14 @@ E3 技术债表字段、承担者与状态
 E4 模板存在且被规则或模板说明引用；规则引用的模板存在
 E5 规则登记与门禁接线
 E6 复审日期存在；过期仅 WARN，不判 FAIL
-E7 `流程规则.md` 二级索引与全部 H2 标题严格一致
+E7 `流程规则.md` 存根内的分册索引表与 `流程规则/` 全部 H2 标题逐条一致
+   （2026-10-29 随 2026-10-27 拆分改造：原“单文件 H2 ↔ 列表行”判据在拆分后无对象，
+   改为跨分册校验，并逐行核对链接指向的分册内确有该 H2）
 
 用法
 ----
     python audit_engineering_practice.py            # 0 通过 / 1 不通过
-    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 七类负向夹具）
+    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 八类负向夹具）
     python audit_engineering_practice.py --list     # 打印检查对象
 
 依赖：仅标准库。
@@ -61,6 +64,7 @@ def _paths(root: pathlib.Path):
         "rule": rule_dir / "工程实践规则.md",
         "rule_readme": rule_dir / "README.md",
         "flow": rule_dir / "流程规则.md",
+        "flow_dir": rule_dir / "流程规则",
         "cmd_readme": rule_dir / "脚本与命令" / "README.md",
         "registry": rule_dir / "脚本与命令" / "audit_gate_registry.py",
         "agents": root / "AGENTS.md",
@@ -121,17 +125,55 @@ def _review_date(text: str):
     return m.group(1) if m else None
 
 
-def _flow_index_check(text: str):
-    h2 = [m.group(1).strip() for m in re.finditer(r"(?m)^##\s+(.+?)\s*$", text)]
+FLOW_ROW_RE = re.compile(r"(?m)^\|\s*\[[^\]]*\]\(([^)]+)\)\s*\|\s*(.+?)\s*\|\s*$")
+FLOW_PART_RE = re.compile(r"^\d\d-.+\.md$")
+
+
+def _flow_h2_map(flow_dir: pathlib.Path):
+    """分册 H2 清单 {分册文件名: [H2, ...]}。
+
+    分册集合＝`流程规则/NN-*.md` 且 NN≠00：`00-索引.md` 的 H2 是原文导言标题
+    （H1 降级为 H3 以免双 H1 的约定），属容器文件，不是可登记规则小节。
+    """
+    out = {}
+    if not flow_dir.is_dir():
+        return out
+    for f in sorted(flow_dir.glob("*.md")):
+        if not FLOW_PART_RE.match(f.name) or f.name.startswith("00-"):
+            continue
+        hs = [m.group(1).strip() for m in re.finditer(r"(?m)^##\s+(.+?)\s*$", _read(f))]
+        out[f.name] = hs
+    return out
+
+
+def _flow_index_check(text: str, flow_dir: pathlib.Path):
+    """存根分册索引 ↔ 各分册 H2 逐条一致（2026-10-29 跨分册改造，见模块 docstring E7）。"""
     if INDEX_BEGIN not in text or INDEX_END not in text:
         return False, "缺 FLOW_INDEX_BEGIN／FLOW_INDEX_END 标记"
     block = text.split(INDEX_BEGIN, 1)[1].split(INDEX_END, 1)[0]
-    entries = [line[2:].strip() for line in block.splitlines() if line.startswith("- ")]
-    missing = [t for t in h2 if t not in entries]
-    extra = [e for e in entries if e not in h2]
-    if missing or extra:
-        return False, "缺条目 %s；多条目 %s" % ("、".join(missing) or "无", "、".join(extra) or "无")
-    return True, "H2 %d 条与索引一致" % len(h2)
+    rows = [(m.group(1).strip(), m.group(2).strip()) for m in FLOW_ROW_RE.finditer(block)]
+    h2map = _flow_h2_map(flow_dir)
+    if not h2map:
+        return False, "未找到分册：%s" % flow_dir
+    if not rows:
+        return False, "索引块内无“分册链接 | 小节”表格行"
+    covered, bad = {}, []
+    for target, title in rows:
+        name = target.rsplit("/", 1)[-1]
+        if name not in h2map:
+            bad.append("%s（分册不存在）" % target)
+        elif title not in h2map[name]:
+            bad.append("%s 无 H2“%s”" % (name, title))
+        else:
+            covered.setdefault(name, set()).add(title)
+    missing = ["%s：%s" % (n, h) for n, hs in h2map.items()
+               for h in hs if h not in covered.get(n, set())]
+    if bad or missing:
+        return False, "错指 %d 条%s；未登记 %d 条%s" % (
+            len(bad), "（%s）" % "、".join(bad[:3]) if bad else "",
+            len(missing), "（%s）" % "、".join(missing[:3]) if missing else "")
+    return True, "分册 %d 件／H2 %d 条与索引 %d 行一致" % (
+        len(h2map), sum(len(v) for v in h2map.values()), len(rows))
 
 
 def run_checks(root: pathlib.Path):
@@ -253,7 +295,7 @@ def run_checks(root: pathlib.Path):
                  % (rule_date or "未填", len(adr_dates))))
 
     # E7 流程规则二级索引与 H2 标题一致
-    e7_ok, e7_detail = _flow_index_check(_read(p["flow"]))
+    e7_ok, e7_detail = _flow_index_check(_read(p["flow"]), p["flow_dir"])
     rows.append(("E7", "流程规则二级索引与 H2 标题一致", e7_ok, e7_detail))
     return rows, rule_date
 
@@ -310,11 +352,16 @@ def _write_fixture(root: pathlib.Path):
     )
     p["rule_readme"].write_text("工程实践规则.md\n", encoding="utf-8")
     p["agents"].write_text("工程实践规则.md\n", encoding="utf-8")
+    p["flow_dir"].mkdir(parents=True, exist_ok=True)
+    (p["flow_dir"] / "01-测试分册.md").write_text(
+        "# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n", encoding="utf-8")
     p["flow"].write_text(
-        "## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
-        "**二级索引（按域）**\n\n"
-        "<!-- FLOW_INDEX_BEGIN -->\n"
-        "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+        "# 流程规则（转发索引存根）\n\n"
+        "<!-- FLOW_INDEX_BEGIN -->\n\n"
+        "| 分册 | 原小节 |\n"
+        "| ---- | ------ |\n"
+        "| [流程规则/01-测试分册.md](流程规则/01-测试分册.md) "
+        "| 工程实践生命周期与阶段门禁（G0–G5） |\n\n"
         "<!-- FLOW_INDEX_END -->\n",
         encoding="utf-8",
     )
@@ -350,12 +397,17 @@ def cmd_selftest():
              .write_text("无\n", encoding="utf-8")),
             ("E6", lambda: (tmp / "00-编纂规则与格式规范/01-规则/工程实践规则.md")
              .write_text("# 工程实践规则\n\n模板G-架构决策记录.md\n", encoding="utf-8")),
-            ("E7", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则.md")
-             .write_text("## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
-                         "**二级索引（按域）**\n\n"
-                         "<!-- FLOW_INDEX_BEGIN -->\n"
-                         "- 别的标题\n"
-                         "<!-- FLOW_INDEX_END -->\n", encoding="utf-8")),
+            ("E7", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则.md").write_text(
+                "# 流程规则（转发索引存根）\n\n"
+                "<!-- FLOW_INDEX_BEGIN -->\n\n"
+                "| 分册 | 原小节 |\n"
+                "| ---- | ------ |\n"
+                "| [流程规则/01-测试分册.md](流程规则/01-测试分册.md) | 别的标题 |\n\n"
+                "<!-- FLOW_INDEX_END -->\n", encoding="utf-8")),
+            # E7 负向之二（2026-10-29 随跨分册改造补）：分册新增 H2 而存根未登记
+            ("E7", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/01-测试分册.md")
+             .write_text("# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
+                         "## 新增未登记小节\n", encoding="utf-8")),
         ]
         for code, mutate in cases:
             _write_fixture(tmp)
@@ -371,7 +423,7 @@ def cmd_selftest():
         for f in failures:
             print("     - %s" % f)
         return 1
-    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E7 七类负向夹具均命中")
+    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E7 八类负向夹具均命中")
     return 0
 
 
@@ -388,7 +440,7 @@ def main():
     root = pathlib.Path(args.root).resolve() if args.root else REPO
     if args.list:
         print("对象：")
-        for key in ("rule", "rule_readme", "flow", "agents", "gov", "adr_dir",
+        for key in ("rule", "rule_readme", "flow", "flow_dir", "agents", "gov", "adr_dir",
                     "index", "debt", "templates", "cmd_readme", "registry"):
             print("  %-10s %s" % (key, _paths(root)[key]))
         return 0
