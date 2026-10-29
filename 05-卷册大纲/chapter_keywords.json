@@ -7,9 +7,9 @@
   "sections": 3951,
   "subsections": 15206,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "4052536c3abcc61c2be081ef04455187b45b0abebcf2e887dcaba42f8df66282",
+  "content_sha256": "13723071e0fe63b189a44a939e9fe9547a2edb6133abca28f8431f4a2bdb1c8f",
   "extract": "title+body",
-  "generated_at": "2026-10-29T12:16:13+08:00"
+  "generated_at": "2026-10-29T12:28:58+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -34369,14 +34369,14 @@
     "ports",
     "pr",
     "pkg",
+    "md5",
     "amd64",
     "audio",
     "c99",
-    "dns",
-    "gcc"
+    "dns"
    ],
    "subs": 87,
-   "subs_sha1": "a779c9b3e0001d526c29afb1017a3e5c336282c2"
+   "subs_sha1": "c8bd413ba02a21eb01e810d3cdac238fe53f8928"
   },
   "V36-C017-17.3": {
    "chapter": "V36-C017",
@@ -34406,7 +34406,7 @@
     "amd64"
    ],
    "subs": 110,
-   "subs_sha1": "5adcc0fb50749e6383b9fa115e854d87513e4b54"
+   "subs_sha1": "62a400ac9b4aeb1009a55a06ebde9bd55ca4ec71"
   },
   "V36-C017-17.4": {
    "chapter": "V36-C017",
@@ -34621,7 +34621,7 @@
     "tinderbox"
    ],
    "subs": 23,
-   "subs_sha1": "06e90782c61986eb7617619e261a86902392426e"
+   "subs_sha1": "9bda64bb78f5d21b7dc167b98c103c7e68b885ce"
   },
   "V36-C017-17.11": {
    "chapter": "V36-C017",
@@ -34653,7 +34653,7 @@
     "x11"
    ],
    "subs": 11,
-   "subs_sha1": "532efb5bdf60403560031138cffd52cb61172d33"
+   "subs_sha1": "f9df5aba7a5f5e7816e3f27a2b564f91dfb3d8f8"
   },
   "V36-C018-18.1": {
    "chapter": "V36-C018",
@@ -105179,9 +105179,6 @@
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-GOV-006"
-   ],
-   "technical_terms": [
-    "md5"
    ]
   },
   "V36-C017-17.2.8": {
@@ -105442,6 +105439,9 @@
    "add": [
     "TH-LANG-034",
     "TH-LANG-010"
+   ],
+   "technical_terms": [
+    "gcc"
    ]
   },
   "V36-C017-17.2.39": {
@@ -105865,10 +105865,10 @@
   "V36-C017-17.2.86": {
    "add": [
     "TH-SEC-010",
+    "TH-REL-007",
+    "TH-LANG-007",
     "TH-HW-010",
-    "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-BIZ-008"
+    "TH-HIS-004"
    ]
   },
   "V36-C017-17.2.87": {
@@ -106248,7 +106248,7 @@
     "TH-REL-007",
     "TH-HIS-004",
     "TH-HW-026",
-    "TH-BIZ-029"
+    "TH-LANG-015"
    ]
   },
   "V36-C017-17.3.46": {
@@ -106298,9 +106298,9 @@
   "V36-C017-17.3.51": {
    "add": [
     "TH-BIZ-029",
-    "TH-HW-013",
     "TH-LANG-018",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-REL-009"
    ]
   },
   "V36-C017-17.3.52": {
@@ -106542,10 +106542,13 @@
   },
   "V36-C017-17.3.79": {
    "add": [
+    "TH-SEC-010",
     "TH-HW-010",
     "TH-HIS-004",
-    "TH-FS-022",
-    "TH-FS-031"
+    "TH-FS-022"
+   ],
+   "technical_terms": [
+    "md5"
    ]
   },
   "V36-C017-17.3.80": {

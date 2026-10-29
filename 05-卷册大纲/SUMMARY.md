@@ -6223,7 +6223,7 @@
             - 17.2.9-1999 年 5 月 26 日，Martin Kammerhofer 提 ports／11897，把 textproc／java2html 从 0.5 升到 0.6.1.md
             - 17.2.10-2000 年 4 月 17 日，KATO Tsuguru 提交 PR18050 升级 graphics／gqview 至 0.8.0，把 MASTER_SITES 迁到 sourceforge 并同步更新 pkg／DESCR 的 WWW.md
             - 17.2.11-2002 年 7 月 25 日，Cyrille 提交 net／ddup 更新使其符合 Dyndns 开发接口含动态与自定义 DNS 支持.md
-            - 17.2.12-2002 年 7 月 25 日，埃斯伯恩提交 devel／tdl 升到 1.2 的补丁，改 Makefile 版本号并同步 distinfo 校验和.md
+            - 17.2.12-2002 年 7 月 25 日，埃斯伯恩提交 devel／tdl 升到 1.2 的补丁，改 Makefile 版本号使 distinfo 校验和同步更新.md
             - 17.2.13-2002 年 8 月 18 日，AlanE 称 archivemail 已升到 0.4.9，可清信箱旧邮件，但 0.1.10 时权限受限无法处理系统信箱.md
             - 17.2.14-2002 年 8 月 26 日，KATO 提交 white_dune 升至 0.19.4 补丁加 PORTEPOCH 1 并新增三份 src 下 Makefile.in 补丁.md
             - 17.2.15-2002 年 9 月 1 日，多米尼克提交 diablo 端口由 3.0 升级到 4.2 并说明需重命名启动脚本与移除旧补丁文件.md
@@ -6258,7 +6258,7 @@
             - 17.2.44-2007 年 2 月 1 日，Andriy Gapon 质疑 kdelibs3 升版时 bump PORTREVISION，称此次为纯结构性调整无功能性变化，依据命名规则本不必 bump.md
             - 17.2.45-2007 年 6 月 4 日，Gabor Kovesdan 在 emacs 22.1 发布讨论中建议视 emacs 发布周期过长的情形让 emacs-devel 与新版主端口并行保留，并说明用 repo-copy 而非 repo-move.md
             - 17.2.46-2007 年 6 月 30 日，Simon Barner 说明 PR 113474 含 boost 1.34.0 更新补丁正在测试中并会先贴出来供测试后很快提交.md
-            - 17.2.47-2008 年 8 月 14 日，Max Brazhnikov 宣布 KDE 3.5.9 已入 area51，其 7.0-release i386 tinderbox 构建通过.md
+            - 17.2.47-2008 年 8 月 14 日，Max Brazhnikov 宣布 KDE 3.5.9 已入 area51，其 7.0-release i386 tinderbox 构建通过，邀其它平台与版本测试.md
             - 17.2.48-2008 年 5 月 16 日，Dmitry Marakasov 提交 gnash 0.8.2 升级 PR 并判断相对 0.8.1 是功能回退，建议版本暂缓.md
             - 17.2.49-2008 年 11 月 9 日，Alexander Churanov 交出可构建 boost 1.37 的补丁，指出数学库所用 c99 与 SUSv3 长双精度函数在 6.2 与 7.0 缺失.md
             - 17.2.50-2009 年 4 月 26 日，Martin Wilke 代表 KDE FreeBSD 团队发起 QT-4.5.1 首次公开测试征集.md
@@ -6268,14 +6268,14 @@
             - 17.2.54-2015 年 7 月 21 日，Andrea Venturoli 在 9.3／amd64 上把 cacti 升到 0.8.8f，走完升级向导后页面一片空白.md
             - 17.2.55-2018 年 2 月 19 日，Kurt Jaeger 提交 evince 从 3.18.2_5 升级到 3.26.0 的补丁并致谢全体参与者感谢他们提供测试与反馈.md
             - 17.2.56-2018 年 1 月 17 日，Martin Waschbüsch 维护 archivers／libz4，上游改用四位版本号 v1.8.1.2.md
-            - 17.2.57-2019 年 12 月 5 日，Matthew Seaman 更新 sysutils／py-ansible-lint 4.2.0 发现源码无 setup.py, make 卡配置阶段抛 FileNotFoundError No such file or directory setup.py.md
+            - 17.2.57-2019 年 12 月 5 日，Matthew Seaman 更新 sysutils／py-ansible-lint 至 4.2.0 发现源码无 setup.py，make 卡在配置阶段抛出文件未找到错误.md
             - 17.2.58-2020 年 2 月 28 日，Andrea Venturoli 计划升级旧 Bacula 安装，从 9.4.x 看到 9.6.2 已发布.md
             - 17.2.59-1995 年 9 月 30 日，说 xearth 1.0 已经出了，只需把 Makefile 里的 patches 目录与 pre-patch 规则打掉就能放进去.md
             - 17.2.60-1996 年 10 月 30 日，Julian Jenkins 表示计划做 spice 端口更新但要等下周论文截稿后才能开始.md
             - 17.2.61-1996 年 12 月 18 日，Ville Eerola 提交 PR ports／2245 更新 fetchmail 端口到 2.3 版本.md
             - 17.2.62-1997 年 12 月 1 日，usagi 升级 ruby-1.0 端口至 971125 快照，并附 patch-ag 让样本脚本装入 lib／ruby／sample.md
             - 17.2.63-1998 年 2 月 16 日，Stefan 指出 Beta3 之后只剩 patch-a0 与 patch-ag 两个补丁，其余补丁早已并入上游版本，他请提问者回报本地补丁清单.md
-            - 17.2.64-1998 年 7 月 6 日，Andrey Zakhvatov 提交 games／xlines 端口更新补丁，修改构建与安装规则.md
+            - 17.2.64-1998 年 7 月 6 日，Andrey Zakhvatov 提交 games／xlines 端口更新补丁，修改构建与安装规则，新增 NO_WRKSUBDIR 与 NOPORTDOCS 条件.md
             - 17.2.65-1998 年 8 月 31 日，Hans Huebner 提交 cyrus imapd 从 1.5.2 升到 1.5.14 的补丁，原无 tcl 时构建失败，原提交者邮箱已失效.md
             - 17.2.66-1998 年 11 月 7 日，James Raynard 回复说，即将把 sfio 端口升级到 sfio98，随后就提交入库，感谢对方指出该端口版本过时.md
             - 17.2.67-1999 年 2 月 7 日，Don Croyle 查 sleepycat 站点想更新该 port，发现现版 distfile 只能靠其 cgi-bin 脚本下载.md
@@ -6297,7 +6297,7 @@
             - 17.2.83-2000 年 3 月 5 日，Jim Mock 回应 Akinori MUSHA 的质疑 认同 tidy 升级不应降低版本号 并附上改用日期命名的修订补丁.md
             - 17.2.84-2000 年 3 月 9 日，KATO Tsuguru 提交 ports／17284 把 net／ntp 升级到 4.0.99g.md
             - 17.2.85-2000 年 4 月 1 日，dsh 提 ports／17734 把 net／binkd 升到 0.9.3 并附 Makefile 差异，DISTNAME 改 binkd093.md
-            - 17.2.86-2000 年 7 月 5 日，JunSeon Oh 提交 korean／bitchx 更新至最新韩文打补丁版本的变更请求，正文附带包含 Makefile.md
+            - 17.2.86-2000 年 7 月 5 日，JunSeon Oh 提交 korean／bitchx 更新至最新韩文打补丁版本的变更请求，正文附 Makefile、md5 与 pkg 目录的 shell 归档.md
             - 17.2.87-2000 年 9 月 28 日，KATO Tsuguru 提交 ports 21613 更新 games／xracer 修正本地与 X11 路径变量并新增五个补丁文件替换原 patch-aa.md
         - 17.3-Port 补丁与文件修正
             - 17.3.1-2001 年 8 月 2 日，Pete Fritchman 为 joe-devel 新加 patch-Makefile.in 修安装与 CFLAGS 配置管理问题，建议先检查配置文件后重试构建.md
@@ -6330,14 +6330,14 @@
             - 17.3.28-2007 年 6 月 14 日，thttpd 维护者 Anders Nordby 把口令程序改名后，请 apache13 系各端口与 apache20、apache21.md
             - 17.3.29-2025 年 11 月 11 日，Saro 提交 elasticsearch91 的 9.1.7，同样移除 shebangfix，并告知 9.2 已另开缺陷单.md
             - 17.3.30-2026 年 2 月 22 日，Tomoaki Aoki 自述当年把 nvidia-kmod 从 nvidia-driver 拆出时.md
-            - 17.3.31-2004 年 10 月 13 日，Rob 指出 etherboot 5.2.4 的 pkg-descr 磁盘无盘引导说明有误，boot1a.bin 与 zrom 均不存在.md
+            - 17.3.31-2004 年 10 月 13 日，Rob 指出 etherboot 5.2.4 的 pkg-descr 磁盘无盘引导说明有误，boot1a.bin 与 zrom 均不存在，给出改用 bin 目录下 dsk 再 dd 到 fd0c 的流程.md
             - 17.3.32-2005 年 3 月 24 日，Nielsen 提交 net／py-ldap 补丁引入 WITHOUT_THREADS 变量以在纯 mod_python 场景下禁用线程支持.md
             - 17.3.33-2005 年 10 月 24 日，Willy Picard 指出 p5-Flickr-Upload 未声明对 p5-Flickr-API 的依赖.md
             - 17.3.34-2006 年 1 月 23 日，Eggert 已将兼容 Pike 7.0 的补丁合入 Bison CV 通过 undef short 与新增 yytype_uint8 等类型使 Pike 7.0 可构建拟随 2.2 发布.md
             - 17.3.35-2011 年 9 月 10 日，Doug Barton 指出 x11／xset 的 USE_XORG 只列 xmuu 而漏 xproto 会错过 xproto 的升级需求.md
             - 17.3.36-2012 年 8 月 14 日，Chris Rees 在 vlc 2.0.3 线程中提交 ProjectM 路径修复并接续此前提出的 vlc 崩溃讨论.md
             - 17.3.37-2012 年 6 月 2 日，Rainer Hurling（rhurlin@gwdg.de）建议在修 devel／gobject-introspection 前先升级 graphics／cairo，以绕过该编译失败.md
-            - 17.3.38-2013 年 9 月 6 日，wen heping 提交 Makefile 补丁.md
+            - 17.3.38-2013 年 9 月 6 日，wen heping 提交 Makefile 补丁，把 mapserver 的 do-install 中 PROG_FILES 安装源由 WRKSRC 改为其下 .libs 目录.md
             - 17.3.39-2014 年 2 月 13 日，Rodrigo OSORIO 给出 post-patch 片段.md
             - 17.3.40-2014 年 7 月 8 日，Rolf J. Sødahl 指出 flow-tools 英文手册页脚月份用了西里尔字母编码需要修正 并称赞 Netflow 与 flow-tools 有用.md
             - 17.3.41-2014 年 6 月 11 日，Antoine Brodin 回信附上 bsd.port.mk 补丁.md
@@ -6349,12 +6349,12 @@
             - 17.3.47-2016 年 12 月 17 日，Jan Beich 指出 lightning 有两份副本仅移除其中一份.md
             - 17.3.48-2016 年 2 月 22 日，Vanilla Hsu 留言说他刚给 freebsd ports 添加了那个补丁.md
             - 17.3.49-2016 年 1 月 31 日，Kurt Jaeger 建议 miller 端口改用上游提供的 configure.ac 基础设施 添加 USES=autoreconf 与 GNU_CONFIGURE=yes 并移除 WORKSRC 与 WRKSRC_SUBDIR=c 说明此改后几乎能编译但仍有问题.md
-            - 17.3.50-2016 年 11 月 29 日，Fernando Apesteguía 维护 cad／openvsp.md
-            - 17.3.51-2017 年 7 月 12 日，blubee blubeeme 维护 epson-inkjet-printer-201401w 端口 使用 GNU／Linux 驱动程序 配 USES=linux 与 USE_LINUX=cups-libs jpeg 自定义 do-install 与.md
+            - 17.3.50-2016 年 11 月 29 日，Fernando Apesteguía 维护 cad／openvsp，pkg-fallout 报未定义引用错误疑与 libstdc++ 相关.md
+            - 17.3.51-2017 年 7 月 12 日，blubee blubeeme 维护 epson-inkjet-printer-201401w 端口，用 GNU／Linux 驱动配 USES=linux 自定义安装卸载逻辑，因残留符号链接未清理请团队评审其片段.md
             - 17.3.52-2017 年 7 月 23 日，Grzegorz Junka 按建议把 openimageio Makefile 中 libopencv_core.so 的依赖由 graphics／opencv2-core 改为 graphics／opencv-core 后重跑 poudriere.md
             - 17.3.53-2017 年 7 月 26 日，Herbert J. Skuhra 直接挂补丁建议移除 dns／libidn2／Makefile 的 BUILD_DEPENDS 中 ronn：textproc／rubygem-ronn 一项只说了一句 附件应该管用.md
             - 17.3.54-2018 年 6 月 11 日，Kurt Jaeger 为 leofs 1.4.1 端口准备了补丁 PR 228887，请求社区帮忙 run-test 后再决定提交.md
-            - 17.3.55-2018 年 6 月 17 日，Kurt Jaeger 说明他已提交两个改 distsite 修抓取问题的 PR，ninix-aya 的 PR 仍开着.md
+            - 17.3.55-2018 年 6 月 17 日，Kurt Jaeger 说明他已提交两个改 distsite 修抓取问题的 PR，ninix-aya 的 PR 仍开着，策略不接受 distcache 式设施作取档源.md
             - 17.3.56-2019 年 4 月 20 日，Hajimu UMEMOTO 针对 databases／ruby-bdb 在 ruby 2.5 下构建失败给出 Makefile 补丁.md
             - 17.3.57-2019 年 7 月 20 日，Daniel Morante 谈 maven 端口指 java／eclipse 用预热 maven 仓库方案不完美，与 yarn 依赖相关.md
             - 17.3.58-2021 年 4 月 13 日，Dan Langille 指出 audio／faac 当前主页指向的域名已与该端口无关.md
@@ -6378,7 +6378,7 @@
             - 17.3.76-1998 年 7 月 19 日，Adrian Wontroba 提交 mutt 补丁三项，一是启用 ／doc 下 make fbsd 并复制 .html.md
             - 17.3.77-1998 年 8 月 13 日，Don Croyle 替换 p5-News-Newsrc 的归档以适配 perl 5.005.md
             - 17.3.78-1998 年 9 月 25 日，taoka 提 ports／8049，给 japanese／jvim 打 patch-ac 修视觉模式故障.md
-            - 17.3.79-1998 年 11 月 4 日，Ichiro Fukuhara 修 japanese／postgresql.md
+            - 17.3.79-1998 年 11 月 4 日，Ichiro Fukuhara 更新 japanese／postgresql 补丁与 md5 校验以跟随上游最新版.md
             - 17.3.80-1998 年 11 月 9 日，Candy 提 ports／8614 的 xipmsg 修复.md
             - 17.3.81-1998 年 11 月 17 日，Tom Hukins 自查自己先前提交的 print／klyx，发现 Makefile 里的变量名写错.md
             - 17.3.82-1998 年 12 月 4 日，taoka 报 ports／8957，lang／jdk 的 PLIST 漏了 jdk1.1.7／bin 下一整批软链接.md
@@ -6400,7 +6400,7 @@
             - 17.3.98-2000 年 1 月 18 日，Alexander Langer 为 games／xbill 提交补丁，把 Cable.h 中缺少返回类型的 onspark 声明补成 int，称虽然 ANSI C 禁止无类型声明，无类型本应被当作 int 处理.md
             - 17.3.99-2000 年 2 月 22 日，cpiazza 把 devel／cook 的 PLIST 多余 info／dir 项请求转交维护者 jasone 后续处理.md
             - 17.3.100-2000 年 2 月 22 日，Maxim Sobolev 针对 ports／x11-toolkits／lesstif 提交补丁.md
-            - 17.3.101-2000 年 2 月 24 日，knu 提交 ports／16972.md
+            - 17.3.101-2000 年 2 月 24 日，knu 提交 ports／16972 拟拆分 esecanna 系列端口以适配动态加载机制.md
             - 17.3.102-2000 年 2 月 28 日，tkato 在 ports／17049 修正 deskutils／gnucash 的 MASTER_SITES.md
             - 17.3.103-2000 年 3 月 12 日，Patrick Seal 承认 MASTER_SITES 是复制粘贴的笔误，但坚持 boxes 不能靠 all 目标构建.md
             - 17.3.104-2000 年 3 月 13 日，Adrian Filipi-Martin 为 security／tripwire 提交补丁，修三点.md
@@ -6845,7 +6845,7 @@
             - 17.10.3-2002 年 8 月 29 日，Kimura 实测抓取 Invitation to Ruby 镜像时出错建议为文档类端口单设类别.md
             - 17.10.4-2002 年 9 月 14 日，Matthew 自测 make fetch 取 bash2 补丁全部成功，推断 Stacey 系统被 cwru 拒绝连接.md
             - 17.10.5-2002 年 9 月 15 日，John 按 David 所给命令用 OPEN 防火墙设置跑 fetch 测试并将修改后的脚本输出附于信件.md
-            - 17.10.6-2018 年 4 月 13 日，Fotis Zabaras 解析根因：logstash-6.2.3 上游把 Gemfile 的 atomic gem 约束改为‘atomic, ＜= 1.1.99’（Gemfile.lock 同步），原 patch-Gemfile／patch-Gemfile.lock.md
+            - 17.10.6-2018 年 4 月 13 日，Fotis Zabaras 解析根因：logstash-6.2.3 上游把 Gemfile 的 atomic gem 约束改为不高于 1.1.99 并同步更新 Gemfile.lock，原 patch-Gemfile／patch-Gemfile.lock 因此打不上，删两补丁即装.md
             - 17.10.7-2002 年 7 月 1 日，Blaz Zupan 报 port 缺 unzip 构建依赖：机器没装 unzip 直接构建失败（有 zip 依赖却漏了 unzip）.md
             - 17.10.8-2004 年 3 月 25 日，Paul Oliver 报告 gnump3d-2.6_1 端口无法下载 distfile，因上游发布 2.7 后移除了 2.6.md
             - 17.10.9-2005 年 3 月 19 日，Boris Samorodov 自述 gtk20 报错排查结论须先安装 libXft 再 reinstall pango 方可解决并提交 PR／79019 供维护者跟进.md
@@ -6859,7 +6859,7 @@
             - 17.10.17-1997 年 5 月 30 日，jkh 回复 vtcl 打包失败说 tar 报找不到 lib／vtcl／ANNOUNCE 等文件.md
             - 17.10.18-1997 年 7 月 15 日，Fenner 称在他本机的 2.2.2 上装了 tk4.1 之后 rtpmon 就能正常构建.md
             - 17.10.19-1997 年 10 月 8 日，tg 提示 Griessl 是否重装过 tcl80 与 tk80，说明这两个端口的头文件位置有过改动，正是 tix 找不到头文件的嫌疑来源.md
-            - 17.10.20-1998 年 7 月 21 日，他在 ports／7346 报 Python 端口编不过，前提是用了下载来的补丁，那些补丁校验和本身就不对.md
+            - 17.10.20-1998 年 7 月 21 日，他在 ports／7346 报 Python 端口编不过，前提是用了下载来的补丁，那些补丁校验和本身就不对，把 PATCHFILES 行关掉就编得通.md
             - 17.10.21-1998 年 11 月 12 日，Bill 尝试安装 math／geg 更新失败于 gtk11 依赖，报缺 gtk11 头文件错误，卸载重装 gtk11 仍失败.md
             - 17.10.22-2000 年 1 月 21 日，Bill Fenner 补充 geomview 还需要先装 Motif lesstif、xforms、mesa3 与 tk82 四个依赖.md
             - 17.10.23-2000 年 4 月 16 日，Jean-Marc Zucconi 就 XFree86 3.3.6 端口打补丁失败给出未实测补丁建议在 Makefile 为 PATCH_ARGS 补上指向 DIST_SUBDIR 的工作目录参数.md
@@ -6872,7 +6872,7 @@
             - 17.11.6-2017 年 2 月 14 日，Kevin Golding 回复 Paul Macdonald 关于 pecl-memcached 版本拆分的问题.md
             - 17.11.7-2017 年 1 月 18 日，Walter Schwarzenfeld 在 bugzilla 216237 请求审阅 Mythtv 0.28 更新补丁.md
             - 17.11.8-2019 年 8 月 18 日，Niclas Zeising 表示会调查 x11／xscreensaver 竞态.md
-            - 17.11.9-2019 年 9 月 6 日，Per olof Ljungmark 报告 FreeBSD12.0-STABLE 下 nextcloudclient-0.0.0.20190705_3 报 QNetworkReply：：HostNotFoundError，无法重启同步，而 status.php 可访问.md
+            - 17.11.9-2019 年 9 月 6 日，Per olof Ljungmark 报告 FreeBSD 12.0-STABLE 下 Nextcloud 客户端 20190705 版无法重启同步并报主机未找到错误，而 status.php 可访问.md
             - 17.11.10-1998 年 3 月 31 日，Shimon 在列表里只报一行结论，称 kdemultimedia-3.1b 在 3.0-CURRENT 系统上无法构建，并致歉正文过于简短.md
             - 17.11.11-2000 年 4 月 12 日，Jeffrey S. Sharp 追加 PR 17938 的复现步骤说明在 4.0-RELEASE 与 CVSup cvs-all 和 ports-all 后还应 make world 再装 kde11 才能复现.md
     - 第18章-Ports 生态与治理邮件档案
