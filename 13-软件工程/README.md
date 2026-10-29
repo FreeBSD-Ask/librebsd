@@ -30,7 +30,7 @@
 | `06-ui-resources.md` | 极简 UI、主题、预算、i18n/RTL、可访问性、挂起 | 按需 |
 | `07-delivery.md` | 目录分类、编码卫生、PR 清单、版本与证据 | 是 |
 | `08-intent-first.md` | 知难行易：意图确证先于手段（项目侧增补） | 是 |
-| `09-reflection-generalization.md` | 反思、理论化与全局回流：九条普适原则与 G6 门禁（项目侧增补） | 是 |
+| `09-reflection-generalization.md` | 反思、理论化与全局回流：十条普适原则与 G6 门禁（项目侧增补） | 是 |
 | `templates/` | AGENTS、ADR、并发档案、哲学审查、PR、spec/tasks/checklist 模板 | 是 |
 
 ## 3. 最小采用步骤
