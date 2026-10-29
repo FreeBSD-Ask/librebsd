@@ -4345,7 +4345,7 @@
             - 8.2.6-Rust 内核政策：政策必须放进内核树并以在树驱动反驳质疑.md
             - 8.2.7-许可证：crate 导入的 SPDX 标注、双许可与非 GPL 工具链之争.md
             - 8.2.8-治理：kernel.org 集中化、维护者否决权与 Rust 构建责任.md
-            - 8.2.9-杂项.md
+            - 8.2.9-Mesa／drm 上游化政策与 Rust 跨系统维护讨论.md
             - 8.2.10-C 聚合值传递（Rust 政策）.md
             - 8.2.11-Rust 内核政策：驳学习 Rust 难之说，指其属短期问题并主张改进工具.md
             - 8.2.12-C 聚合传递（Rust 政策）.md
@@ -4422,20 +4422,20 @@
             - 8.2.83-Rust 内核政策：Ts’o 推测编译器敌意根源，Torvalds 驳保护墙论.md
             - 8.2.84-Rust 内存安全.md
             - 8.2.85-Rust GPIO 绑定.md
-            - 8.2.86-Rust内核政策：SafeC++提案难进标准与Rust难在运行环境.md
-            - 8.2.87-Rust稳定回移：Lunn警告树内移动文件破坏stable回移.md
+            - 8.2.86-Rust 内核政策：Safe C++ 提案难进标准与 Rust 难在运行环境.md
+            - 8.2.87-Rust 稳定回移：Lunn 警告树内移动文件破坏 stable 回移.md
             - 8.2.88-Rust 补丁测试.md
-            - 8.2.89-Rust内核政策：Anvin拆四议题主张用成熟工具改进既有C代码.md
+            - 8.2.89-Rust 内核政策：Anvin 拆四议题主张用成熟工具改进既有 C 代码.md
             - 8.2.90-Rust GPIO 驱动.md
             - 8.2.91-Rust LPC 提案.md
-            - 8.2.92-Rust政策争论：Ojeda驳独占代码推迟至2034论引Clang先例.md
-            - 8.2.93-Rust别名模型争论.md
-            - 8.2.94-Rust引进争论.md
+            - 8.2.92-Rust 政策争论：Ojeda 驳独占代码推迟至 2034 论引 Clang 先例.md
+            - 8.2.93-Rust 别名模型争论.md
+            - 8.2.94-Rust 引进争论.md
             - 8.2.95-峰会列表地址混乱.md
-            - 8.2.96-HID-BPF稳定性契约.md
+            - 8.2.96-HID-BPF 稳定性契约.md
             - 8.2.97-文档愿景议题提案.md
-            - 8.2.98-Sphinx缺陷与构建.md
-            - 8.2.99-Rust维护面议题扩展.md
+            - 8.2.98-Sphinx 缺陷与构建.md
+            - 8.2.99-Rust 维护面议题扩展.md
             - 8.2.100-峰会规模碍讨论.md
             - 8.2.101-Rust 门槛与倦怠.md
             - 8.2.102-Rust 反 C 偏见论.md
@@ -4728,16 +4728,16 @@
             - 8.3.13-TAB 选举 CIVS opt-in.md
             - 8.3.14-内核文档议题.md
             - 8.3.15-工具生成内容指南 v2.md
-            - 8.3.16-设备直通.md
+            - 8.3.16-CXL 设备直通缺节点级授权的安全模型与 V4L2／DRM 议题归并建议.md
             - 8.3.17-LLM 相关议题.md
             - 8.3.18-AI 补丁审查工具.md
             - 8.3.19-API 弃用强制.md
             - 8.3.20-sashiko 审查模型.md
-            - 8.3.21-维护者倦怠.md
-            - 8.3.22-Linux社区明确反对kerneldoc自动改用更高Python版本的魔法质疑覆.md
-            - 8.3.23-Linux社区Tglx发布python3版mb2q仅依赖python3yamlm.md
-            - 8.3.24-文档构建Python版本.md
-            - 8.3.25-文档构建的Python选择.md
+            - 8.3.21-维护者倦怠：补丁洪流为主因，呼吁活跃开发者兼做审查.md
+            - 8.3.22-Linux 社区明确反对 kernel-doc 自动改用更高 Python 版本的魔法，质疑覆盖用户搜索路径是否妥当.md
+            - 8.3.23-Linux 社区 Tglx 发布 python3 版 mb2q，仅依赖 python3-yaml.md
+            - 8.3.24-文档构建 Python 版本.md
+            - 8.3.25-文档构建的 Python 选择.md
             - 8.3.26-kernel-doc Python 版本.md
             - 8.3.27-议题讨论：文档构建自动选 Python 版本.md
 - 第19卷-UNIX 战争：阵营、联盟与体系整合（1982–1995）
@@ -4796,13 +4796,13 @@
 - 第21卷-386BSD：BSD UNIX 的现代化与分水岭（1991–2016）
     - 第1章-《Dr. Dobb's Journal》连载与公开传播（1991–1992）
         - 1.1-“Porting UNIX to the 386”：逐月公开的分步移植
-            - 1.1.1-porting-unix-to-the-386逐月公开的分步移植.md
+            - 1.1.1-《Porting UNIX to the 386》逐月公开的分步移植.md
         - 1.2-连载作为技术教育与社区动员
-            - 1.2.1-DDJ连载使386BSD在国际技术社区获得知名度吸引荷兰澳大利亚日本等地开发者尝试.md
+            - 1.2.1-DDJ 连载使 386BSD 在国际技术社区获得知名度，吸引荷兰、澳大利亚、日本等地开发者尝试.md
     - 第2章-386BSD 的出现与 PC BSD 时代的开始（1992–1993）
         - 2.1-4.3BSD Net／2 与 386BSD 的技术来源
-            - 2.1.1-VAX 小型机／中小型机 → Intel 80386 32 位 PC 平台迁移（1991-1992）.md
-            - 2.1.2-Net／2 含争议代码 → 386BSD 单人维护补丁积压模式（1992-1993）.md
+            - 2.1.1-VAX 小型机／中小型机至 Intel 80386 32 位 PC 平台迁移（1991–1992）.md
+            - 2.1.2-Net／2 含争议代码下的 386BSD 单人维护补丁积压模式（1992–1993）.md
             - 2.1.3-Net／2 作为 386BSD 的自由代码基线.md
         - 2.2-Bill Jolitz 与 386BSD 项目的形成
             - 2.2.1-Jolitz 夫妇与项目的协作组合.md
@@ -4825,9 +4825,9 @@
         - 3.6-386BSD 更新节奏问题
     - 第4章-386BSD Release 1.0 与 CD-ROM 时代（1994–1997）
         - 4.1-386BSD Release 1.0：全新内核设计的再出发
-            - 4.1.1-386bsd-release-10全新内核设计的再出发.md
+            - 4.1.1-386BSD Release 1.0 全新内核设计的再出发.md
         - 4.2-Reference CD-ROM：CD-ROM 时代的发行与流通（1994–1997）
-            - 4.2.1-reference-cd-rom-cd-rom时代的发行与畅销.md
+            - 4.2.1-Reference CD-ROM：CD-ROM 时代的发行与畅销.md
     - 第5章-Release 2.0 与 386BSD 的数字遗存（2016）
         - 5.1-Release 2.0：GitHub 仓库的再更新
 - 第22卷-法律危机：USL 诉 BSDi 与发行冻结（1992–1994）
@@ -4943,12 +4943,12 @@
         - 1.2-从 Patchkit 到独立项目
             - 1.2.1-从 FreeBSD 源码树到独立项目.md
         - 1.3-FreeBSD 名称与项目定位
-            - 1.3.1-1993年开源项目命名需考虑与已有商标冲突（386BSDBSDi等）.md
+            - 1.3.1-1993 年开源项目命名需考虑与已有商标冲突（386BSD、BSDi 等）.md
             - 1.3.2-FreeBSD 名称的最终选择.md
         - 1.4-FreeBSD 1.0 发布
-            - 1.4.1-FreeBSD诞生配套采访录覆盖1993年项目创建时期当事人.md
-            - 1.4.2-386BSD 单人维护 → FreeBSD Core Team 集体治理模式（1993-1994）.md
-            - 1.4.3-补丁包维护 → CVS 版本控制系统（1993-1995）.md
+            - 1.4.1-FreeBSD 诞生配套采访录覆盖 1993 年项目创建时期当事人.md
+            - 1.4.2-386BSD 单人维护至 FreeBSD Core Team 集体治理模式（1993–1994）.md
+            - 1.4.3-补丁包维护至 CVS 版本控制系统（1993–1995）.md
         - 1.5-早期核心开发结构
         - 1.6-FreeBSD 与 386BSD 的关系
         - 1.7-FreeBSD 早期技术路线选择
@@ -4956,7 +4956,7 @@
             - 1.8.1-独立地位的确立标志.md
     - 第2章-NetBSD 的诞生：可移植性路线的形成（1993–1995）
         - 2.1-NetBSD 发起背景
-            - 2.1.1-没有必然性只有偶然性：OpenBSD的诞生源于具体的NetBSD冲突与一次CSRG入侵事件.md
+            - 2.1.1-没有必然性只有偶然性：OpenBSD 的诞生源于具体的 NetBSD 冲突与一次 CSRG 入侵事件.md
             - 2.1.2-OpenBSD 从 NetBSD 分叉的批评——对 Theo de Raadt 被逐出 NetBSD 核心团队与 OpenBSD 分叉造成 BSD 社区分裂的批评（批评层）.md
             - 2.1.3-四位发起人与可移植性诉求.md
         - 2.2-NetBSD 与 386BSD 的分离过程
@@ -5055,12 +5055,12 @@
         - 2.6-物质证据总目：1BSD–4.4BSD 的发行物、磁带、手册、补丁与勘误
     - 第3章-名称与符号：BSD UNIX 的文化身份如何形成
         - 3.1-Berkeley UNIX、Berkeley Software Distribution 与“BSD”：名称的形成
-            - 3.1.1-伯克利市的命名由来：Anglican Bishop George Berkeley（1685-1753）与爱尔兰哲学家.md
+            - 3.1.1-伯克利市的命名由来：Anglican Bishop George Berkeley（1685–1753）与爱尔兰哲学家.md
         - 3.2-“BSD”缩写的出现、固定与传播
         - 3.3-版本编号作为身份秩序：1BSD、2BSD、3BSD、4BSD 与 4.xBSD
         - 3.4-daemon 一词与 BSD daemon：名称、语境与早期用法
             - 3.4.1-苏格拉底 daimon 与古希腊多神教中的 daemon（守护神语境）.md
-            - 3.4.2-MIT Project MAC 与 Unix 文化中的 daemon：Maxwell's demon 思想实验起源.md
+            - 3.4.2-MIT Project MAC 与 Unix 文化中的 daemon：Maxwell’s demon 思想实验起源.md
         - 3.5-视觉身份的所有权、使用权与商业化：从插图到商标
         - 3.6-伯克利 UNIX 认证与教育推广的尝试及其得失
         - 3.7-外部贡献者的参与边界：记录、评价与争议
@@ -5098,7 +5098,7 @@
         - 8.1-BSD 专属俚语考据
             - 8.1.1-BSD 专属俚语：daemon、MFC／MFH／MFV、commit bit、core team、tainted code 与 BSD is dying 梗.md
             - 8.1.2-BSD／Linux 论战俚语、版本号俚语与工具命令俚语：GNUtian、BSD is dying、CURRENT／STABLE、make buildworld 与 ZFS 的工程话语.md
-            - 8.1.3-文件系统俚语与文化梗：UFS、FFS、ZFS、HAMMER、BSD is dying 与 recurring 梗的文化基因.md
+            - 8.1.3-文件系统俚语与文化梗：UFS、FFS、ZFS、HAMMER、BSD is dying 与 recurring 梗.md
         - 8.2-黑客文化俚语的跨系统传播
         - 8.3-俚语的社群功能与传播
         - 8.4-名言与典故的考据规则：首次可证出处、存疑标注与对勘表
@@ -6092,11 +6092,11 @@
             - 17.1.6-2000 年 5 月 6 日，Scott A. Moberly 提交 ports／18416 新端口 gbackground 版本 1.0.0b2，壳档内含 Makefile md5 patch-aa 与 pkg 的 PLIST COMMENT DESCR.md
             - 17.1.7-2002 年 1 月 27 日，David Yeske 提交 PR 34327 申请添加新端口 graphics xmms-goom 并附上端口 shar 下载链接.md
             - 17.1.8-2002 年 1 月 31 日，Igor Olemskoi 提交新端口 mail／dbmail 附带建库脚本与用户创建流程.md
-            - 17.1.9-2000 年 5 月 20 日，西里尔勒菲弗提交 ports／18691 新增 x11-toolkits／openmotif 2.1.30a，因 FreeBSD 缺 wcs 系列函数便从 glibc 2.1.3 取来放入 files／FreeBSD.h，并照抄 staroffice5 的.md
+            - 17.1.9-2000 年 5 月 20 日，勒菲弗提交 ports／18691 新增 openmotif，补 wcs 函数而照抄的 IGNORE 规则失效.md
             - 17.1.10-2002 年 5 月 4 日，Brian Palmer 提交 ports／37729 新增 net／kopete 0.3 作为支持 ICQ AIM MSN 的 KDE3 即时通讯客户端.md
             - 17.1.11-2000 年 5 月 26 日，Peter van Heusden 以 ports 18826 提交 p5-Error 新端口.md
             - 17.1.12-2002 年 6 月 6 日，Tod McQuillin 提交新端口 net／p5-Net-SNPP 用于简单网络寻呼协议.md
-            - 17.1.13-2002 年 7 月 22 日，Ha2r4s 提新增 xntp3 端口，即网络时间协议 NTP 第三版，称可在 FreeBSD 4.x 至 5.0 上运行.md
+            - 17.1.13-2002 年 7 月 22 日，xntp3 新端口提交，即网络时间协议 NTP 第三版，称可在 FreeBSD 4.x 至 5.0 上运行.md
             - 17.1.14-2002 年 7 月 24 日，Michael 提交新端口 net／p5-Net-Whois-RIPE1.19 一个 RIPEwhois 客户端 Perl 模块.md
             - 17.1.15-2002 年 8 月 21 日，Kuehn 提交 x11-toolkits／lablgtk 1.2.5 新端口说明依赖 ocaml 3.06 与 lablgl 0.98 均已入库.md
             - 17.1.16-2002 年 8 月 27 日，辛普森提交新端口 wmymail，用 fetchmail 与 libdockapp 在 WindowMaker 停靠区显示新邮件数.md
@@ -6128,22 +6128,22 @@
             - 17.1.42-2007 年 7 月 11 日，Steffen Beyer 首次移植 Qtpfsgui 发现程序绑定 math／fftw3-float 却需 math／fftw3 头文件并把两者分别列入依赖.md
             - 17.1.43-2009 年 12 月 12 日，Wesley Shields 回复 mplayer from SVN 的讨论.md
             - 17.1.44-2009 年 7 月 31 日，Cezary Morga 澄清自己要的不是 Perl 代码补丁而是新端口与 Makefile 修改以 diff 形式提交的补丁.md
-            - 17.1.45-2013 年 5 月 1 日，Jake Smith 查到 MySQL ZRM 的 OpenBSD 移植维护者 2010 年曾向上游索取 man 页源码但无回应，而该 OpenBSD 移植直接把格式化好的 catman(1) 页放进 man／catX,他据此追问 FreeBSD.md
+            - 17.1.45-2013 年 5 月 1 日，Smith 追问 FreeBSD 可否照 OpenBSD 做法直接放 catman 页入 man／catX.md
             - 17.1.46-2014 年 2 月 7 日，Peter Klett 说 RetroShare 在 FreeBSD 10 无 ports 的 GCC 时构建失败 已在 9.2 编通 0.5.5c.md
             - 17.1.47-2015 年 4 月 24 日，Torsten Zuehlsdorff 查清 Gitlab 的 gem 依赖须先解决，排除 development 与 test 组共 96 项.md
             - 17.1.48-2015 年 12 月 11 日，Piotr Florczyk 打包 Go 程序 telegraf 时发现 poudriere 在 fetch 之后切断网络.md
             - 17.1.49-2016 年 2 月 24 日，Chris H 在 CPAN 上搜到 App-Pm2Port-0.29 回复从 Perl 模块自动建 FreeBSD 端口的请求.md
             - 17.1.50-2016 年 1 月 12 日，Martin Wilke 公告 php7 for FreeBSD，接手 Senta Ltd 在 github 的初步工作.md
             - 17.1.51-2017 年 2 月 22 日，Danilo G. Baio 接受 Ben Woods 的建议.md
-            - 17.1.52-2017 年 7 月 5 日，Jov 提议把 Debian 的 hardening-check 工具移植到 FreeBSD 附 sshd 检查输出 显示 PIE Stack protected Fortify Source 与 Read-only relocations Immediate.md
-            - 17.1.53-2017 年 7 月 13 日，Otacílio 尝试把 rmtp 库移植成自用端口，编译在 cotire 预编译头阶段中断，报 fatal error： 'ext ／ atomicity.h' file not found, 按指引加 -I 路径后转而报别的头文件缺失.md
+            - 17.1.52-2017 年 7 月 5 日，Jov 提议把 Debian 的 hardening-check 工具移植到 FreeBSD 附 sshd 检查输出 显示 PIE Stack protected Fortify Source 与 Read-only relocations Immediate binding 均为 yes.md
+            - 17.1.53-2017 年 7 月 13 日，Otacílio 尝试把 rmtp 库移植成自用端口，编译在 cotire 预编译头阶段中断，报 fatal error：‘ext／atomicity.h’ file not found，按指引加 -I 路径后转而报别的头文件缺失.md
             - 17.1.54-2018 年 8 月 13 日，Kubilay Kocak 说明 theonionbox 在 PyPI 有 sdist 与项目页.md
             - 17.1.55-2019 年 6 月 25 日，Gary Aitken 移植 prusa slicer 时遇到大量按平台宏分派的条件编译，常见的是 __linux__、__FreeBSD__.md
             - 17.1.56-2020 年 4 月 17 日，Theron 称自己也在用 llvm-mingw 并提交过 237213 号 PR，说自己漏掉了应到列表上提出，版本已过时欢迎更新.md
-            - 17.1.57-2020 年 4 月 19 日，Dima Pasechnik 只回一句 inkscape is being ported to Python3 so one has to wait，转帖里 Oberman 关于 Makefile 改 ：2.7 与 gnumeric post-install.md
+            - 17.1.57-2020 年 4 月 19 日，Dima Pasechnik 只回一句 inkscape is being ported to Python3 so one has to wait，转帖里 Oberman 关于 Makefile 改 ：2.7 与 gnumeric post-install 的讨论不是他的主张.md
             - 17.1.58-2020 年 4 月 24 日，Jaeger 说 mailman3 移植已经有 PR 225543 补丁本身没问题但需要 run-tests.md
             - 17.1.59-2020 年 7 月 13 日，回 unifi-poller 新端口请求 bug 247338：他说自己在看，但 github.com 报告宕机，暂时无法获取该端口所需的资料.md
-            - 17.1.60-2020 年 6 月 21 日，Nikolaj Thygesen 首个端口 swi-prolog 卡在 pkgconfig 路径：cmake 把它装到 PREFIX／share／pkgconfig 而非 libdata／pkgconfig，在 pkg-plist 写 @sample.md
+            - 17.1.60-2020 年 6 月 21 日，Nikolaj Thygesen 首个端口 swi-prolog 卡在 pkgconfig 路径：cmake 把它装到 PREFIX／share／pkgconfig 而非 libdata／pkgconfig，在 pkg-plist 写 @sample 虽有效但不满意，求更标准做法.md
             - 17.1.61-2020 年 5 月 15 日，The Doctor 建议将开源 VPN 产品 softether 移植到 FreeBSD 称其源自 University of Tsukba Japan 并表示可以参与贡献.md
             - 17.1.62-2020 年 10 月 8 日，Mehmet Erol Sanliturk 就 IcingaDB 移植一事列出 icinga.com 下载页与 freshports 上的 net-mgmt／icinga2、icingaweb2、icinga 三个条目，但坦言自己无法判断这些是否为最新版.md
             - 17.1.63-2021 年 4 月 27 日，Rodrigo Osorio 就 Markus Mann 关于新端口 www／owncast 的提交流程提问给出指导.md

@@ -1,0 +1,3 @@
+idx	num	old_bytes	new_bytes	old_stem	new_stem
+1	17.1.45	278	113	17.1.45-2013 年 5 月 1 日，Jake Smith 查到 MySQL ZRM 的 OpenBSD 移植维护者 2010 年曾向上游索取 man 页源码但无回应，而该 OpenBSD 移植直接把格式化好的 catman(1) 页放进 man／catX，他据此追问 FreeBSD 这边能否沿用同样做法	17.1.45-2013 年 5 月 1 日，Smith 追问 FreeBSD 可否照 OpenBSD 做法直接放 catman 页入 man／catX
+2	17.1.9	256	129	17.1.9-2000 年 5 月 20 日，西里尔勒菲弗提交 ports／18691 新增 x11-toolkits／openmotif 2.1.30a，因 FreeBSD 缺 wcs 系列函数便从 glibc 2.1.3 取来放入 files／FreeBSD.h，并照抄 staroffice5 的 IGNORE 规则却发现不生效	17.1.9-2000 年 5 月 20 日，勒菲弗提交 ports／18691 新增 openmotif，补 wcs 函数而照抄的 IGNORE 规则失效
