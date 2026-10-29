@@ -91,3 +91,41 @@ claimed_at=<YYYY-MM-DDTHH:MM:SS>
 
 - 内容批（Task 8）取本卷 `title-design/V{NN}.tsv` 与 `title-evidence/V{NN}.tsv`，核对 `title.ok` 与 `ledger_sha256` 后才研读史料。
 - 标题表冻结后不得增删改题；确需改者，走“新增一行＋废前行”，并重批该卷。
+
+## 七、按卷任务组（Task 3A.6 的拆分，2026-10-29 立）
+
+3A.6（全 3,951 节标题铺开）拆为 **76 个按卷任务组**，组间**无写依赖**，可同时交给不同会话。
+
+### 7.1 注册表与任务卡
+
+- 注册表：`taskgroups.tsv`（76 行，机器可读；列含组号、卷号、卷题、章节数、`mapping.tsv` 命中 0 行的节数、旧料件数与字节、标题估算区间、波次、状态、产出路径）。
+- 任务卡：`V{NN}/task.md`（每卷一卡，自足交接：范围、产出、禁止、作业顺序）。
+- 二者由固定脚本再生，不得手改：`python 00-编纂规则与格式规范/01-规则/脚本与命令/build_title_taskgroups.py`；`--check` 只比对不写盘（漂移 exit 1）。
+
+口径提示：`no_corpus_sections` 指 `mapping.tsv` 命中 0 行的节，与标题层 `corpus_gap` 例外（逐题登记，V01 为 231 条）口径不同；组内拟题时以实际题数为准。
+
+### 7.2 独立性契约（组间零写冲突）
+
+| 资源 | 归属 | 组可否写 |
+| ---- | ---- | -------- |
+| `title-design/V{NN}.tsv`、`title-evidence/V{NN}.tsv`、`exceptions/V{NN}.tsv`、`V{NN}-标题呈审报告.md` | 该卷组 | 可（唯一） |
+| `parallel/title/V{NN}/` 三件 | 该卷组 | 可（唯一） |
+| `approvals.tsv`、`approved/V{NN}.title.ok` | 合并者 | 否 |
+| `taskgroups.tsv`、`V{NN}/task.md`、本文件、风格规范 | 维护者 | 否 |
+| `outline.txt`、`index.html`、树内 `.md`、`targets.tsv`、`mapping.tsv` | 结构批／镜像线 | 否 |
+
+因此任一组开工不需等待他组；唯一共享读取是 `audit_title_consistency.py --check`（读全部 `V*.tsv`），故某组台账不合规会让全库检查变红——属**可见性**而非写冲突，修复只在本地组内完成。
+
+### 7.3 组内完成判据（DoD）
+
+1. 该卷全部节均有标题，每节 2–12 条，同节字数极差 ≤14。
+2. `audit_title_consistency.py --check` FAIL 0。
+3. `done.json` 三判据齐（行数＝titles、`ledger_sha256` 一致、`selftest_exit=0`）。
+4. 呈 ykla 卷级批准；合并者写 `title.ok` 与 `approvals.tsv` 行后该组收口。
+5. 无史料节逐题登记 `corpus_gap`，不写正文、不建 `.md`（空骨架属 3A.6 收口步）。
+
+### 7.4 排班建议
+
+- 波次（`wave`）仅提示：V02–V09 为第 1 波，其后每 8 卷一波；波内各组可任意并发。
+- 建议同时开工不超过执行环境的终端上限；同一卷任何时刻只允许 1 个写者（`claim` 排他）。
+- 相邻卷（同章题域交叉者）宜由同一会话连续做，以减少术语漂移；但这不是依赖，跨会话亦可。
