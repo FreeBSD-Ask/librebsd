@@ -5335,7 +5335,7 @@
     - 第2章-FreeBSD 2.x：4.4BSD-Lite 重新定义 FreeBSD（1994–1998）
         - 2.1-4.4BSD-Lite 的诞生与 FreeBSD 基础代码重建
         - 2.2-从旧 BSD 代码到 4.4BSD-Lite 的大规模迁移
-            - 2.2.1-要点：FreeBSD 1.x 基于 4.3BSD-Net／2，含 USL 诉讼潜在争议代码；USL v. BSDi 诉讼 1994 年 1 月和解后.md
+            - 2.2.1-要点：FreeBSD 1.x 基于 4.3BSD-Net／2 含 USL 诉讼潜在争议代码，USL v. BSDi 诉讼 1994 年 1 月和解后 CSRG 于 6 月发布 4.4BSD-Lite 重建法律基础.md
         - 2.3-4.4BSD-Lite 带来的新内核基线
         - 2.4-用户空间、文件系统与设备体系的重新拼接
         - 2.5-sysinstall 与完整发行系统的形成
@@ -5343,14 +5343,14 @@
         - 2.7-FreeBSD 转向独立操作系统的完成
         - 2.8-USL 诉讼与 FreeBSD 代码来源的更换
         - 2.9-与同时期操作系统的比较：Linux 2.0–2.2、Windows NT 4.0、Solaris 2.4–2.6
-            - 2.9.1-要点：Linux 2.0(1996.6) 引入 SMP 支持 (粗粒度大内核锁)、2.2(1999.1) 改进 SMP 与网络栈，引入防火墙.md
+            - 2.9.1-要点：Linux 2.0（1996.6）引入 SMP 支持（粗粒度大内核锁），2.2（1999.1）改进 SMP 与网络栈并引入防火墙 ipchains.md
             - 2.9.2-要点：Windows NT 4.0(1996.7) 将图形驱动移入内核以提升性能，引入 IIS 2.0 与 TCP／IP 栈改进.md
-            - 2.9.3-要点：Solaris 2.4(1994.11)、2.5(1995.11)、2.6(1997.5) 在企业级网络栈成熟度上领先，2.6 引入 IPv6 与.md
-            - 2.9.4-不同时期人员的采访录（详见同卷采访录目录）.md
-            - 2.9.5-数据库引用（freebsd.duckdb）：本子节对应 freebsd 代码仓库.md
-            - 2.9.6-Ingo Schwarze《bsdcan14-mandoc》（2014）.md
-            - 2.9.7-John DiMarco 应和 Mary Baker 并首倡‘Historic Opportunity facing Free Unix’：自由 Unix.md
-            - 2.9.8-称微软内部为 Windows95 产品发布所用的 Web 服务器选用了 BSDI，此事经广泛传播后已无法再 telnet 取得 BSDI 提示符.md
+            - 2.9.3-要点：Solaris 2.4（1994.11）、2.5（1995.11）、2.6（1997.5）在企业级网络栈成熟度上领先，2.6 引入 IPv6 与 sendfilev.md
+            - 2.9.4-不同时期人员的采访录，详见同卷采访录目录.md
+            - 2.9.5-freebsd 代码仓库 1994–1998 年提交量数据库引用.md
+            - 2.9.6-Ingo Schwarze 的 mandoc 系列 BSDCan 讲稿（2014、2015、2018）文献.md
+            - 2.9.7-John DiMarco 应和 Mary Baker，首倡自由 Unix 变体主打桌面成为可能，为大辩论主帖源头.md
+            - 2.9.8-微软内部为 Windows95 发布所用的 Web 服务器选用 BSDI，此事经广泛传播后再无法 telnet 取得 BSDI 提示符.md
             - 2.9.9-J Wunsch 指 Debian 源树统一度或高于 BSD，并批评 BSD 第三方包乱放 ／var／run 与只读 ／usr.md
     - 第3章-FreeBSD 3.x：4.4BSD-Lite2 合流与现代 FreeBSD 基线（1998–2000）
         - 3.1-4.4BSD-Lite2 的形成与独立历史位置
@@ -5358,32 +5358,32 @@
         - 3.3-4.4BSD-Lite 与 4.4BSD-Lite2 两套基础之间的断裂与连续
         - 3.4-ELF 成为新的系统二进制基础
         - 3.5-内核模块化与运行时系统扩展
-            - 3.5.1-2013 年 1 月 5 日，b.f. 解释 kmod 类端口沿用 base 系统 makefile 编译内核模块，套用 kern.mk 里各种内核标志以求一致，故混用非默认工具链风险很大.md
+            - 3.5.1-2013 年 1 月 5 日，b.f. 解释 kmod 类 Port 沿用 base 系统 Makefile 编译内核模块，混用非默认工具链风险很大并预告大量 Port 构建失败.md
         - 3.6-多处理器、多架构与统一内核接口的起步
         - 3.7-FreeBSD 3.x：BSD 最后一代遗产进入现代 FreeBSD
         - 3.8-两代代码遗产合并后的继承与差异
         - 3.9-Jordan Hubbard 与 Ports 构建宏的源流
-            - 3.9.1-1995 年 4 月 18 日，Satoshi Asami 于 1995-04-18 报 dvi2xx 构建 scripts／ftpget 试图在 work 目录创建 ftpget ftplib.pl.md
-            - 3.9.2-1995 年 4 月 18 日，Jordan K Hubbard 于 1995-04-18 报 mh-6.8.3 包 pkg_add 后跑 show 触发 ld.so libmh.so.3.2.md
+            - 3.9.1-1995 年 4 月 18 日，Satoshi Asami 报 dvi2xx 的 scripts／ftpget 在 work 目录创建 ftpget ftplib.pl 却 permission denied 而不得其解.md
+            - 3.9.2-1995 年 4 月 18 日，Jordan K Hubbard 报 mh-6.8.3 包 pkg_add 后运行 show 触发 ld.so libmh.so.3.2 报 Undefined error 0，怀疑漏装共享库.md
             - 3.9.3-2002 年 6 月 14 日，Mohacsi 提交新端口 hu-ispell 0.85 匈牙利拼写检查，称须先在 bsd.port.mk 加 hungarian 类别.md
             - 3.9.4-2002 年 8 月 30 日，Bishop 建议把 pircbot 的两个 MASTER_SITES 拆到两行称若干自动网页解析器会因单行写法出错.md
             - 3.9.5-2002 年 10 月 19 日，Alan Eldridge 告知 Dirk Meyer automake14 查找 GTK 宏的缺陷已修复.md
             - 3.9.6-2002 年 10 月 19 日，Lars Thegler 建议用 pre-fetch 目标检测 Perl 版本依赖以替代现有做法.md
             - 3.9.7-要点：Jordan Hubbard 1994 年 8 月的 port make macros 是 Ports 系统的雏形.md
             - 3.9.8-要点：Ports 从 1994 年的简单 Makefile 宏演化为 1998 年的 bsd.port.mk 框架，期间引入 MASTER_SITES、WRKSRC、PLIST.md
-            - 3.9.9-要点：bsd.port.mk 从 1.0（1994）经历 2.0（1996 引入 PLIST）、3.0（1998 引入 OPTIONS）.md
-            - 3.9.10-建议排查未定义符号时用自定别名：icheck 在头文件里 grep 符号、lcheck 在 GNU 静态库里 grep，称可解约九成此类问题.md
-            - 3.9.11-Ivan Leung 称 .cshrc 中 noclobber 致 cc -M 重定向失败，改用 ＞! 可写，SHELL 无法写成 ／bin／csh -c.md
+            - 3.9.9-要点：bsd.port.mk 从 1.0 到 4.0 的大版本演化，逐版引入新变量约定与构建阶段.md
+            - 3.9.10-排查未定义符号的自定别名做法：icheck 在头文件里 grep 符号、lcheck 在 GNU 静态库里 grep，称可解约九成此类问题.md
+            - 3.9.11-Ivan Leung 称 .cshrc 的 noclobber 致 cc -M 重定向失败，改用强制覆盖重定向符可写入，SHELL 无法写成 ／bin／csh -c.md
             - 3.9.12-1996 年 1 月 3 日，Josef Grosch 发起“Semimonthly Software list for FreeBSD”半月清单.md
             - 3.9.13-2004 年 8 月 26 日，Ion-Mihai Tetcu 询问在 .include bsd.port.pre.mk 之前先行包含 files 目录中的文件是否合法.md
             - 3.9.14-2004 年 12 月 19 日，Edwin Groothuis 解释 master-sites-all 只返回含全部 distfile 的 master-sites.md
             - 3.9.15-2004 年 2 月 5 日，Kris Kennaway 反对 Andy Fawcett 为 USE_GETTEXT 增加参数的提议，认为既无必要又偏离惯例.md
-            - 3.9.16-2004 年 2 月 16 日，Oliver Eikemeier 列出仍依赖 OpenLDAP 2.0 的端口，涵盖 balsa、qmail-ldap、gq 等.md
+            - 3.9.16-2004 年 2 月 16 日，Oliver Eikemeier 列出仍依赖 OpenLDAP 2.0 的 Port，涵盖 balsa、qmail-ldap、gq 等包.md
             - 3.9.17-2004 年 1 月 3 日，Doug Barton 建议为覆盖基本系统的端口统一变量命名约定，即前缀加下划线再加端口名的形式.md
             - 3.9.18-2004 年 1 月 18 日，Thomas-Martin Seck 回应 rcNG 化的提议.md
             - 3.9.19-2004 年 7 月 1 日，Alexander Leidinger 转述 Conrad J. Sabatier 的 ALT_PKGDEP 方案.md
             - 3.9.20-2004 年 7 月 23 日，Eric Anholt 宣布 X.Org 转换补丁进入代码树，-CURRENT 默认改用 X.Org.md
-            - 3.9.21-2004 年 6 月 19 日，Yar Tikhiy 指出 Porter's Handbook 尚未记录 PLIST_FILES 与 PLIST_DIRS，提交补丁填补这一空白.md
+            - 3.9.21-2004 年 6 月 19 日，Yar Tikhiy 指出 Porter’s Handbook 尚未记录 PLIST_FILES 与 PLIST_DIRS，提交补丁填补这一空白.md
             - 3.9.22-2004 年 10 月 14 日，Marc Flambard 实测 vtk-python-4.3.0_3 在 5.3 无法编译.md
             - 3.9.23-2005 年 12 月 8 日，Doug Barton 强调 REQUIRE 行只规定 rcorder 次序，并不保证依赖服务已运行，端口脚本须自行处理服务未起的情况.md
             - 3.9.24-2004 年 3 月 23 日，Michael Nottebrock 说明 libltdl 的 lt_dlopen 必须依赖 libtool 存档才能工作.md
@@ -5403,7 +5403,7 @@
             - 3.9.38-1995 年 4 月 22 日，Jordan K. Hubbard 认为 fake-pkg 应放进 framework.md
             - 3.9.39-1995 年 4 月 26 日，Jordan Hubbard 说 XFree86 端口现开箱即构感谢 Jean-Marc.md
             - 3.9.40-1995 年 4 月 28 日，Satoshi 查 gcc 源码不知库如何附加.md
-            - 3.9.41-1995 年 5 月 11 日，哈维尔·马丁·鲁埃达自测 pcnfsd 端口发现安装建 ／var／spool／pcnfsd 但可执行文件用 ／var／spool／pcnfs 目录名不一致，还盲装到.md
+            - 3.9.41-1995 年 5 月 11 日，哈维尔·马丁·鲁埃达自测 pcnfsd Port，发现安装建 ／var／spool／pcnfsd 而可执行文件用 ／var／spool／pcnfs，还盲装到 libexec 与 man8.md
             - 3.9.42-1995 年 5 月 12 日，Satoshi Asami 确认 pcnfsd 的 patch-aa 与 Makefile.inc 已提交.md
             - 3.9.43-1995 年 5 月 14 日，Satoshi Asami 宣布冻结 ports 树可从 forgery.cs.berkeley.edu 取分类 tarball.md
             - 3.9.44-1995 年 5 月 17 日，Satoshi Asami 建议 tcsh 改用 ports 做法只改 Makefile 的 DISTNAME，很多端口这样就能工作.md
@@ -5417,9 +5417,9 @@
             - 3.9.52-1995 年 8 月 3 日，Gellekum 把 noweb.tar.gz 放进 wcarchives 的 ／pub／FreeBSD／incoming.md
             - 3.9.53-1995 年 8 月 13 日，Satoshi Asami 诊断 tclDP 强建 tcl 的根源是缺 ldconfig -m.md
             - 3.9.54-1995 年 8 月 14 日，Michael Smith 说明 Chipmunk 当前版本端口仍在制作，预计当晚 8 点抽出时间送一份给 Satoshi Asami 审批.md
-            - 3.9.55-1995 年 8 月 20 日，承认 hylafax 去找 ／usr／local／bin／sed 是本机的问题.md
-            - 3.9.56-1995 年 8 月 23 日，Jordan 判定 mime.types 是 Netscape FAQ 所指内置部分而 mailcap 才是关键缺失补齐后 Netscape 能正确识别 MPEG.md
-            - 3.9.57-1995 年 8 月 28 日，Jordan 主张改用 pkg_info 并以 foomake v3.51 与 galacticGenocide 的反例说明仅检.md
+            - 3.9.55-1995 年 8 月 20 日，作者承认 hylafax 去找 ／usr／local／bin／sed 是本机环境问题，因本地日语版 sed 被 configure 抓走.md
+            - 3.9.56-1995 年 8 月 23 日，Jordan 判定 mime.types 是 Netscape FAQ 所指内置部分，mailcap 才是关键缺失，补齐后能识别 MPEG 音频文件.md
+            - 3.9.57-1995 年 8 月 28 日，Jordan 主张改用 pkg_info，以 foomake v3.51 为例说明仅检可执行文件不够，须按 pkg_info -e 匹配版本串.md
             - 3.9.58-1995 年 8 月 29 日，Paul Richards 认可 Jordan Hubbard 要以更高专业度对待每个端口，但反驳 Makefile 加一字段就能自动化.md
             - 3.9.59-1995 年 9 月 4 日，Douglas Jackson 就 Tk 问题补充取证.md
             - 3.9.60-1995 年 9 月 13 日，Chuck Robey 说邮件存档文件曾在 ftp 上公开可查现在必须联网才能访问对拨号入网的用户过于辛苦他希望存档文件能再次公开.md
@@ -5433,21 +5433,21 @@
             - 3.9.68-1995 年 11 月 9 日，Satoshi Asami 宣告 2.1 端口树已可烧盘.md
             - 3.9.69-1995 年 11 月 17 日，Asami 提提案 3，让 FETCH、BUILD、RUN_DEPENDS 支持非可执行文件.md
             - 3.9.70-1995 年 12 月 20 日，收到 xv 可自由分发的确认消息后，为 xv 端口添加 post-install 目标把文档打进二进制包.md
-            - 3.9.71-1996 年 1 月 22 日，赞同 Peter Wemm 观点称 ssh 出现时默认路径为 ／etc 虽位置不差但使 ／etc 杂乱故曾请 Tatu 加入 --with-etcdir 配置开关.md
+            - 3.9.71-1996 年 1 月 22 日，赞同 Peter Wemm 观点，称 ssh 默认路径 ／etc 使 ／etc 杂乱，故曾请 Tatu 加入 --with-etcdir 开关，并主张装于 ／etc／ssh.md
             - 3.9.72-1996 年 1 月 29 日，Andreas Klemm 回复 2.1.0 用户问 WWW 服务器怎么装.md
             - 3.9.73-1996 年 2 月 29 日，invalid opcode 认为 ／usr／X11R6／man 下的手册页同样可以放进 local／share／man.md
-            - 3.9.74-1996 年 3 月 12 日，Garth Kidd 自承 FreeBSD 新丁疏忽未先查 ports-current，误以为更新端口会随 2.1.0-RELEASE 分发，询问是否用.md
+            - 3.9.74-1996 年 3 月 12 日，Garth Kidd 自承疏忽未先查 ports-current，误以为更新 Port 会随 2.1.0-RELEASE 分发，询问是否该先用 pkg_manage 删除首次尝试.md
             - 3.9.75-1996 年 3 月 21 日，Jorg Wunsch 回复 xperfmon 讨论，说明这改动与 NFSv3 无关也与 4.4BSD 无关.md
             - 3.9.76-1996 年 3 月 26 日，MIHIRA Yoshiro 提交 WIDE DHCP 1.3beta 端口.md
             - 3.9.77-1996 年 4 月 4 日，Satoshi Asami 报该 supscan 刚跑完，最终大小 1294KB，认为可行、甚至比多数 sendmail 都小，并祝对方化缘顺利.md
             - 3.9.78-1996 年 4 月 8 日，Tom Samplonius 说明 FreeBSD 通过 db 的兼容接口提供 ndbm 支持且 db 实为内置在 libc 中.md
             - 3.9.79-1996 年 4 月 10 日，Satoshi Asami 表示既然改用 ／usr／X11R6 应就没事，共享库装进 ／lib 那种严重脱轨的做法不用太操心.md
             - 3.9.80-1996 年 4 月 23 日，Michael Elbel 说自己只用过 Oracle 与 Ingres 的嵌入式 SQL，双方所指或不同.md
-            - 3.9.81-1996 年 6 月 2 日，John Fieber 给出反例，用 Makefile 的 ! = 赋值从 uname -r 造变量并替代 bsd.port.mk 方案.md
-            - 3.9.82-1996 年 6 月 26 日，Gary Palmer 发现 ftp.freebsd.org 总在 MASTER_SITES 指定站点之前被优先抓取，与过去相反不知是否期望行为.md
+            - 3.9.81-1996 年 6 月 2 日，John Fieber 给出反例：用 Makefile 的 shell 赋值从 uname -r 造变量，替代 bsd.port.mk 方案.md
+            - 3.9.82-1996 年 6 月 26 日，Gary Palmer 发现 ftp.freebsd.org 总在 MASTER_SITES 指定站点之前被优先抓取，与过去相反，于是在 bsd.port.mk 插调试行确认.md
             - 3.9.83-1996 年 7 月 10 日，Satoshi Asami 要求 xforms-0.81 端口改以递归 diff 提交，指出维护者 Makefile 已过时.md
             - 3.9.84-1996 年 7 月 30 日，回应 Chuck Robey 关于 ports／print／ghostscript4 发行命名的意见，Narvi 说情况并非如此.md
-            - 3.9.85-1996 年 8 月 2 日，Jordan Hubbard 指出该样本 Makefile 13K 体积过大 引 Science Made Stupid 说 Warty things too big.md
+            - 3.9.85-1996 年 8 月 2 日，Jordan Hubbard 指样本 Makefile 13K 体积过大，主张人读模板方案不可行，应改为程序可读模板配合 GUI 生成器.md
             - 3.9.86-1996 年 8 月 7 日，Mark Murray 反驳 Chernov，说看补丁，存在可定义 SERVERROOT 与 DOCUMENTROOT 位置的宏.md
             - 3.9.87-1996 年 8 月 15 日，Satoshi Asami 提交了改 bsd.port.mk 的补丁，顺手清理 PATCH_DEBUG 逻辑.md
             - 3.9.88-1996 年 8 月 21 日，Hubbard 反问 man page 为什么非要在远程服务器上，主张直接把它与端口一起 check in 而非走远程服务器.md
@@ -5473,8 +5473,8 @@
             - 3.9.108-1998 年 4 月 18 日，rotel 报告 bsd.port.mk 在若干处直接调用 make 而不是变量 MAKE，导致 GNU make 被误调，端口包注册失败.md
             - 3.9.109-1998 年 6 月 5 日，Andrey Chernov 举出至少三处实例，称动态链接库会被配置脚本以符号查询工具处理，表示一时想不起具体涉及哪些端口.md
             - 3.9.110-1998 年 6 月 17 日，tg 关闭 ports／6972，判定 lesstif 安装失败根因是 bsd.port.mk 过旧.md
-            - 3.9.111-1998 年 7 月 18 日，David O'Brien 说 EGCS 与 gcc28 构建不了可运行内核属同一批问题.md
-            - 3.9.112-1998 年 7 月 31 日，asami 承认有人忘了把 mail／mutt.with_pgp 从主 Makefile 中移除，导致整个 ports 树清理在遇到该目录时中断.md
+            - 3.9.111-1998 年 7 月 18 日，David O’Brien 说 EGCS 与 gcc28 构建不了可运行内核属同一批问题.md
+            - 3.9.112-1998 年 7 月 31 日，asami 承认有人忘了把 mail／mutt.with_pgp 从主 Makefile 中移除，导致整个 Ports 树清理在遇到该目录时中断.md
             - 3.9.113-1998 年 8 月 9 日，Steve Price 判断故障源于另一个端口构建后，残留的 junk 文件污染了环境，清理掉这些残留后 explorer 工作恢复正常.md
             - 3.9.114-1998 年 8 月 12 日，asami 判断 Mesa2 与 Mesa3 共享库仅版本号不同，两版本不能同时装在打包机上.md
             - 3.9.115-1998 年 8 月 20 日，asami 把拨开关那天叫作 E-day，排出 ports 迁移流程，先警告使用者动手前必须读懂流程否则系统会废.md
@@ -5485,53 +5485,53 @@
             - 3.9.120-1998 年 9 月 21 日，Enkhyl 提交 XFree86 端口补丁以支持 Krb4.md
             - 3.9.121-1998 年 9 月 23 日，imp 期望存在编译 ELF 二进制时恒定的宏例如 __FreeBSD_MUMBLE_ELF__，向 asami 追问后自认答案已自答.md
             - 3.9.122-1998 年 10 月 5 日，asami 认为 ELF 与 a.out 需要不同补丁这点直接用 #ifdef 处理就行，那些性能敏感部分写成汇编的端口因前导下划线差异要不同补丁.md
-            - 3.9.123-1998 年 10 月 9 日，shige 提交 editors／emacs20 更新，说明在 3.0-BETA 上构建时.md
+            - 3.9.123-1998 年 10 月 9 日，shige 提交 editors／emacs20 更新，说明在 3.0-BETA 上构建时 scripts／configure 会停顿并要求回答 y 才能继续.md
             - 3.9.124-1998 年 11 月 12 日，Zeilenga 正在为 OpenLDAP 1.1 搭建 autoconf 构建环境，想探测系统是否支持压缩 man 页以及应该用哪种压缩机制.md
             - 3.9.125-1998 年 11 月 30 日，Nordwick 装完 www／netscape45-communicator 却跑不起来，程序要的是 libXt.so.6.0.md
             - 3.9.126-1998 年 12 月 10 日，Martin Cracauer 表示大家都沉默了，仍希望有人就 fetch 阶段临时文件命名给出建议.md
             - 3.9.127-1998 年 12 月 28 日，Steve Kargl 认可 Pedro 提的 ALL_TARGET 设为 depend all 的方案，并说自己会试跑看效果如何.md
             - 3.9.128-1999 年 1 月 6 日，Hidetoshi Shimokawa 提出 CFLAGS 用问号等号赋值没有效果，因 sys.mk 总会设值，建议去掉全部优化与机器相关标志.md
             - 3.9.129-1999 年 1 月 29 日，Satoshi Asami 回答这本来就是设计意图，端口的 .mk 文件应与 ports 树同步而不是 src 树.md
-            - 3.9.130-1999 年 2 月 16 日，Daniel O'Connor 回复 Joseph Koshy 关于 dlsym 与 ELF 的讨论，说自己在工作时移植到 elf 就踩过这个坑.md
+            - 3.9.130-1999 年 2 月 16 日，Daniel O’Connor 回复 Joseph Koshy 关于 dlsym 与 ELF 的讨论，说自己在工作时移植到 elf 就踩过这个坑.md
             - 3.9.131-1999 年 2 月 28 日，H. Eckert 提 PR 指出 libtix 命名不一致，库实际装成 libtix4.1.8.0.so.md
             - 3.9.132-1999 年 5 月 21 日，Tim Vanderhoek 在 makesum 那条线程里反问一句，说要在一整个端口层级里递归创建校验和到底图什么，他没提其他技术意见.md
             - 3.9.133-1999 年 5 月 31 日，Ladavac Marino 说他当晚要做一个 flatfile 数据库原型，结果是 ASCII 文件，可以拿它做 diff 并且只传输差异.md
-            - 3.9.134-1999 年 6 月 17 日，Bill Fumerola 提议把 tkstep80 虚拟类别加进三百个列出类别的文件里，说该类别本由某批用它的端口维护者无意引入、列表上没讨论过.md
+            - 3.9.134-1999 年 6 月 17 日，Bill Fumerola 提议把 tkstep80 虚拟类别加进三百个列出类别的文件，称它由相关 Port 维护者无意引入且列表上从未讨论，先征求反对意见再动手.md
             - 3.9.135-1999 年 7 月 5 日，Steve Price 指出 BROKEN 通常有其原因，但可用 NO_IGNORE=yes 强行构建.md
             - 3.9.136-1999 年 7 月 27 日，Neil Blakey-Milner 提议在 _PORT_USE 之外另设目标，调用外部客户端按选择生成 Makefile.portconf.md
             - 3.9.137-1999 年 9 月 19 日，tkato 为 lang／mawk 的 Makefile 补上 PREFIX 支持，把 WRKSRC 改写为花括号形式引用变量.md
             - 3.9.138-1999 年 10 月 12 日，Asami 答复 Ade Lovett 关于混合压缩蒸馏文件，建议自写 do-extract 或用 EXTRACT_ONLY.md
-            - 3.9.139-2000 年 1 月 17 日，Kris Kennaway 提议在升 OSVERSION 之外于 bsd.port.mk 加 USE_OPENSSL 开关自动设置 LIB_DEPENDS.md
+            - 3.9.139-2000 年 1 月 17 日，Kris Kennaway 提议于 bsd.port.mk 加 USE_OPENSSL 开关自动设置 LIB_DEPENDS，但难以区分国际版与无 rsaref 的美版.md
             - 3.9.140-2000 年 3 月 12 日，Patrick Seal 感谢 Ade 的 ALL_TARGET 建议，并提议把它的用法写进 bsd.port.mk 文档.md
             - 3.9.141-2000 年 3 月 23 日，Nik Clayton 在 distfile 大小存放位置的讨论中回复 Ah of course.md
-            - 3.9.142-2000 年 4 月 1 日，Will Andrews 反对 kde11 改名迁移动作，称说服 KDE 1.1.x 程序员为 KDE2 重写不现实，还叠加 Qt 1.45 与 Qt 2.0.md
+            - 3.9.142-2000 年 4 月 1 日，Will Andrews 反对 kde11 改名迁移，称说服 KDE 1.1.x 程序员为 KDE2 重写不现实，还叠加 Qt 1.45 与 Qt 2.0 的兼容难题.md
             - 3.9.143-2000 年 4 月 10 日，Jeremy Lea 在列表上发布 with.patch，把端口里混用的 NO_、WANT_.md
-            - 3.9.144-2000 年 5 月 3 日，Asami 评 Kennaway 带宽排序方案或可行但工作量巨大并澄清限制处理所指为端口依赖落入不同再分发类时的纠缠且认可 OpenBSD 的许可清查称自己早收到.md
-            - 3.9.145-2000 年 5 月 7 日，David O'Brien 在 USE_ 指令提案串中明确拒绝向 vim5 提交改动，称愿接受任何改善 GTK 支持但不使其成为默认行为的补丁.md
-            - 3.9.146-2000 年 5 月 28 日，Andrew L. Neporada 回复 Mohit Aron 关于 pdflatex 移植的请求指出 print 下的 teTeX 端口已内置 pdflatex.md
-            - 3.9.147-2000 年 6 月 30 日，GeraldPfeifer 询问先前提议的 ports-maintainers 邮件列表进展表示所有反馈均正面并寻求推进该列表以向维护者广播重大变更和即将发布的版本.md
+            - 3.9.144-2000 年 5 月 3 日，Asami 评 Kennaway 带宽排序方案或可行但工作量巨大，并称自己早收到 jdp 来信只是被淹没.md
+            - 3.9.145-2000 年 5 月 7 日，David O’Brien 在 USE_ 指令提案串中拒绝向 vim5 提交改动，称愿接受任何改善 GTK 支持但不使其成为默认行为的补丁.md
+            - 3.9.146-2000 年 5 月 28 日，Andrew L. Neporada 回复 Mohit Aron 的 pdflatex 移植请求，指出 print 下的 teTeX Port 已内置 pdflatex 无需重复移植.md
+            - 3.9.147-2000 年 6 月 30 日，Gerald Pfeifer 询问先前提议的 ports-maintainers 邮件列表进展，表示反馈均正面，并寻求推进该列表以向维护者广播重大变更.md
             - 3.9.148-2000 年 7 月 12 日，Ben Smithurst 回复 Dag-Erling 认为-r 隐含-R 是与旧 fetch 不同但合理但 RELENG_3 上仍用旧版所以旧发行版还需显式带-R.md
-            - 3.9.149-2000 年 7 月 31 日，alex 说明 XMMS 的立体声插件对环绕音响音质提升显著但爆音问题使其无法使用并询问多媒体团队成员是否了解此现象呢吗呀了吧.md
+            - 3.9.149-2000 年 7 月 31 日，alex 称 XMMS 的立体声插件对环绕音响音质提升显著，但爆音问题令其无法使用，询问多媒体团队是否了解此现象.md
             - 3.9.150-2000 年 8 月 3 日，Satoshi Asami 转引自己提交的 cvs commit.md
             - 3.9.151-2000 年 8 月 16 日，Kris Kennaway 提议新增 LOCALVERSION 变量，每次本地改动递增并在官方版本升级时归零.md
-            - 3.9.152-2000 年 9 月 4 日，Kiriyama 表示更偏好保留 bsd.emacs.mk 名称不建议重命名为 bsd.elisp.mk，并建议 elisp 类别端口也可继续使用.md
-            - 3.9.153-2000 年 9 月 16 日，ade 关闭 ports／21096 关于 games／nethack unbreak 与 assume maintainership 的 PR.md
-            - 3.9.154-2000 年 10 月 2 日，Alexander Kabaev 提交 PR 21705 报告 cscope 因 FreeBSD fputs 返回字节数不准 将错误 offset 写入索引.md
-            - 3.9.155-2000 年 11 月 15 日，Johann Visagie 提交 PR 22865 首次移植 omniORBpy Python CORBA 接口端口说明需整个预构建 omniORB 源码树且与.md
-            - 3.9.156-2001 年 1 月 6 日，andreas 回复 PR 24110 ipa 说明端口应遵守系统 CFLAGS 否则需在 Makefile 加 NO_PACKAGE=ignores cflags.md
+            - 3.9.152-2000 年 9 月 4 日，Kiriyama 更偏好保留 bsd.emacs.mk 名称不建议重命名为 bsd.elisp.mk，并建议 elisp 类别 Port 也可继续使用 bsd.emacs.mk.md
+            - 3.9.153-2000 年 9 月 16 日，ade 关闭关于 games／nethack 解除禁用与接任维护者的 ports／21096 号 PR.md
+            - 3.9.154-2000 年 10 月 2 日，Alexander Kabaev 报 PR 21705：cscope 因 fputs 返回字节数不准把错误 offset 写入索引，致索引无法重用，并附 __FreeBSD__ 宏补丁.md
+            - 3.9.155-2000 年 11 月 15 日，Johann Visagie 提交 PR 22865 首次移植 omniORBpy 接口 Port，需整个预构建 omniORB 源码树且与 devel／omniORB 强耦合.md
+            - 3.9.156-2001 年 1 月 6 日，andreas 回复 PR 24110 ipa，说明该 Port 应遵守系统 CFLAGS，否则需在 Makefile 加 NO_PACKAGE=ignores cflags 表示无法打包.md
             - 3.9.157-Jordan Hubbard 建议 pkg_info 和 pkg_delete 直接接收通配符参数免得另加 -P -F 之类的选项.md
             - 3.9.158-Doug Barton 表示 linux_base 下的悬空符号链接由 filesystem RPM 生成并不打算替发行方修 bug.md
             - 3.9.159-Albert Kinderman 指出 wrapper-1.0_1 的说明称适配 XFree86 4 却硬依赖 XFree86-3.3.6_6 使 pkg_add 失败.md
-            - 3.9.160-Keith J. Davey 提交 ports／25233 报告 wget-1.6_1 端口在 FreeBSD 4.2-RELEASE 上 patch-ab 五处 hunk 应用失败致 make.md
+            - 3.9.160-Keith J. Davey 提交 ports／25233 报告 wget-1.6_1 Port 在 FreeBSD 4.2-RELEASE 上 patch-ab 五处 hunk 失败致 make install 中止.md
             - 3.9.161-用户 Juraj Bednar 报告 libmcrypt 在 FreeBSD 上与 mod_php4 配合时崩溃并附 PHP 与 libmcrypt 联合调试回溯日志.md
-            - 3.9.162-David O'Brien 质疑 shell 究竟为何需要 dl 函数并认为静态链接即可无需多此一举地复杂化端口构建与安装流程并呼吁保持简洁.md
+            - 3.9.162-David O’Brien 质疑 shell 为何需要 dl 函数，认为静态链接即可，不必复杂化 Port 构建与安装流程，并呼吁保持简洁.md
             - 3.9.163-Roman Shterenzon 表示 lopster 发现 bug 且自己无暇修复因此不升级建议去 GNATS 查在案 PR.md
             - 3.9.164-2001 年 5 月 12 日，John 反对套用版本后缀命名指出 tcl 与 gtk 案例存在特定共存需求不适合 samba 情形.md
             - 3.9.165-2001 年 5 月 19 日，解释该缺陷是维护团队刚发现的常见问题并说明保留 2.0.9 分支是为了在 2.2.0 出现重大问题时的稳定后备.md
             - 3.9.166-2001 年 7 月 17 日，Andrews 就 PORTREVISION 递增含义提出替代表述主张应说明该包确与新库链接而非仅版本号副本.md
             - 3.9.167-2001 年 8 月 27 日，petef 将 ports／30148 libtool 补丁转交 portmgr 维护者.md
-            - 3.9.168-2001 年 9 月 3 日，关闭 PR30134 表示 math／ntl 端口的最新版本已提交入库.md
-            - 3.9.169-2001 年 9 月 3 日，knu 在 PR29853 认领新端口 www／mod_watch 并表示自己负责.md
+            - 3.9.168-2001 年 9 月 3 日，关闭 PR30134，表示 math／ntl Port 的最新版本已提交入库.md
+            - 3.9.169-2001 年 9 月 3 日，knu 在 PR29853 认领新 Port www／mod_watch 并表示自己负责.md
             - 3.9.170-2001 年 11 月 15 日，Noel Koethe 质疑 Samba 2.2.2 为何命名 samba-devel 并提议移除旧 net／samba 让 samba-devel 顶替.md
             - 3.9.171-2001 年 11 月 16 日，John Baldwin 指出问题在于 check_cpuid 未保存与恢复 PSL_ID 标志位并转述 Maxim 刚提交了相应修改.md
             - 3.9.172-2001 年 12 月 7 日，Boris Köster 报告构建 databases／gnomedb 时 gnome-db-0.2.93.tar.gz 校验和与 distinfo 记录不一致.md
@@ -5552,16 +5552,16 @@
             - 3.9.187-2002 年 5 月 5 日，Jim Pingle 报告 jakarta-tomcat3 用 tomcat3ctl 启动即抛 ZipException 而 rc.d 脚本也因此起不来.md
             - 3.9.188-2002 年 6 月 3 日，Julian Elischer 提议把现行两级路径保留为 inode 层另建以符号链接组织的独立目录层.md
             - 3.9.189-2002 年 6 月 7 日，KATO 提交 PR 38997 将 games／vamos 改用 USE_LIBTOOL 并新增 files／patch-configure 补丁文件.md
-            - 3.9.190-2002 年 6 月 12 日，david marshall 报告 mail／p5-Mail-Audit 缺少运行依赖 并附修改该端口 Makefile 的 diff.md
+            - 3.9.190-2002 年 6 月 12 日，david marshall 报告 mail／p5-Mail-Audit 缺少运行依赖，并附修改该 Port Makefile 的 diff.md
         - 3.10-与同时期操作系统的比较：Linux 2.2、Windows 2000、Solaris 8
             - 3.10.1-要点：本时期 FreeBSD 核心仓库的贡献高度依赖受雇于企业的核心开发者——iXsystems、Netflix、Intel.md
-            - 3.10.2-要点：除企业核心外，FreeBSD 贡献者横跨多国——德国、法国、俄罗斯等地域 ccTLD 与多所大学（如 Stony Brook）的学术贡献显著.md
-            - 3.10.3-要点：FreeBSD 核心提交者（@freebsd.org）构成持续投入的主干，FreeBSD Foundation（约 2000 年成立.md
-            - 3.10.4-LessTif 0.83（LGPL Motif 克隆）发布.md
-            - 3.10.5-公开撤回对 Buslogic 控制器的推荐（厂商关系转折）.md
+            - 3.10.2-要点：除企业核心外，FreeBSD 贡献者横跨德国、法国、俄罗斯等地，多所大学的学术贡献显著.md
+            - 3.10.3-要点：FreeBSD 核心提交者构成主干，FreeBSD Foundation 提供法律、资金与招聘托管.md
+            - 3.10.4-LGPL Motif 克隆 LessTif 0.83 发布.md
+            - 3.10.5-公开撤回对 Buslogic 控制器的推荐，标志厂商关系转折.md
             - 3.10.6-1998 年 7 月 3 日，Sue Blake 发起新手常用软件包 Top Ten 征集，说她正在整合一个面向新手的包，会装入若干文档并连带安装其他常用软件包.md
             - 3.10.7-1999 年 2 月 5 日，Sue Blake 借有人向 FreeBSD 列表误发测试邮件一事提醒新手，该信可能被投递五千份，切勿再向邮件列表发测试信.md
-            - 3.10.8-1999 年 9 月 20 日，Rick Hamell 指出本列表当初获准存在的前提就是不许在此提技术问题，并解释这条规定背后的实际考量.md
+            - 3.10.8-1999 年 9 月 20 日，Rick Hamell 指出本列表获准存在的前提是不许在此提技术问题，并解释背后的实际考量，担心新手拿到无人纠正的错误建议.md
             - 3.10.9-2000 年 5 月 28 日，leegold 认为没有适合新手的 FreeBSD 文档，所见文档都假设读者具备系统管理员级知识.md
     - 第4章-FreeBSD 4.x：成熟 Internet Unix 的完整形态（2000–2003）
         - 4.1-4.x 的长支持周期与稳定形态（2000–2003）
@@ -5572,10 +5572,10 @@
         - 4.6-PC、服务器与 Internet 主机开始共享同一种 FreeBSD
         - 4.7-4.x：传统 BSD Unix 系统形态的成熟期
         - 4.8-与同时期操作系统的比较：Linux 2.4、Windows 2000／XP、Solaris 8／9（FreeBSD 4.x 时期）
-            - 4.8.1-- 要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0.md
-            - 4.8.2-要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0.md
-            - 4.8.3-要点：2000 年 Linux 处于 2.2／2.4 开发期（2.4 于 2001.1 发布），由 Torvalds.md
-            - 4.8.4-要点：2000-2003 年同期 Linux 2.4(2001.1) 引入 SMP 改进、iptables、ReiserFS.md
+            - 4.8.1-要点：Windows 2000（2000.2）以 Active Directory 与 IIS 5.0 吸引部分企业用户，但 FreeBSD 在 ISP 场景仍占优势.md
+            - 4.8.2-要点：Windows 2000 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0 吸引部分企业用户.md
+            - 4.8.3-要点：2000 年 Linux 处于 2.2／2.4 开发期，由 Torvalds 个人把关并被称为“仁慈的终身独裁者”.md
+            - 4.8.4-要点：2000–2003 年同期 Linux 2.4（2001.1）引入 SMP 改进、iptables、ReiserFS.md
     - 第5章-FreeBSD 5.x：一场持续数年的操作系统重建（2003–2005）
         - 5.1-从增量开发转向内核基础设施重建
         - 5.2-多处理器成为系统设计而非附加能力
@@ -7085,7 +7085,7 @@
             - 18.3.9-2002 年 7 月 27 日，Stephane Legrand 提交 security／bugs 维护者更新到 4.1.0 并换维护者邮箱.md
             - 18.3.10-2002 年 8 月 23 日，Keramidas 将 zsh 提案责任改派给端口维护者 will 并称该端口本就该由其负责.md
             - 18.3.11-2002 年 8 月 27 日，Weisgerber 将 wmmail 错误网址报告的责任由 freebsd-ports 改派给该端口维护者 jim.md
-            - 18.3.12-2002 年 9 月 29 日，Wang 提 www／flashplugin-mozilla 维护者更新补丁，采纳 NAKAYAMA 建议并另建 devel 端口.md
+            - 18.3.12-2002 年 9 月 29 日，Wang 提 www／flashplugin-mozilla 维护者更新补丁，采纳 NAKAYAMA 建议并另建 devel Port.md
             - 18.3.13-2002 年 9 月 30 日，Dean 提交 net／naim 维护者更新 PR 把 pkg-descr 的 WWW 改到 site.rpi-acm.org 新地址.md
             - 18.3.14-2002 年 12 月 19 日，Josef El-Rayes 提交 net／simicq 维护者更新补丁并自述新增补丁使其可编译.md
             - 18.3.15-2002 年 12 月 23 日，Pete Fritchman 把 46499 改派给维护者 demon.md
@@ -7095,28 +7095,28 @@
             - 18.3.19-2004 年 7 月 4 日，Diane Bruce 宣布与 Carl Makin、Matt Dawson 非正式组成 hamradio cabal.md
             - 18.3.20-2007 年 12 月 3 日，Thierry Thomas 说明约 80 个 aspell 端口的维护权已放弃、欢迎接手，并提到 ga、hi、sk、fy 等变体的更新已就绪.md
             - 18.3.21-2013 年 5 月 7 日，Beeblebrox 承认自己误判了 devel／imake 的归属，发现它其实来自 xorg-devel 树而非 ports 树.md
-            - 18.3.22-2018 年 4 月 23 日，www／py-recaptcha 维护者 Philip Paeps 表示早已忘记自己在维护此端口并多年未用.md
+            - 18.3.22-2018 年 4 月 23 日，www／py-recaptcha 维护者 Philip Paeps 表示早已忘记自己在维护此 Port 并多年未用.md
             - 18.3.23-2021 年 2 月 16 日，Joachim Werner 以 games／bsdgames 维护者身份请求把 564133 合入 2021Q1 的 pkg-fallout 二进制仓库，因 NO_WERROR 弃用导致构建失败而他已提交修复.md
             - 18.3.24-2021 年 2 月 23 日，Neel Chauhan 接管 emulators／i386-wine-devel 更新至 6.2 并加 14.0 支持提交 D28908.md
             - 18.3.25-1996 年 5 月 15 日，Bernd Rosauer 追问谁愿维护 Postgres95 这种 50MB 安装量的大件，若无人接手自己愿来.md
-            - 18.3.26-1996 年 10 月 23 日，scrappy 把 ports／1734 tiff-3.4 端口提交的 Responsible 由 freebsd-ports 转给 asami.md
+            - 18.3.26-1996 年 10 月 23 日，scrappy 把 ports／1734 tiff-3.4 提交的 Responsible 由 freebsd-ports 转给 asami.md
             - 18.3.27-1997 年 1 月 6 日，Masafumi NAKANE 将 ports／2360 的 Responsible 由 freebsd-ports 改为 max.md
             - 18.3.28-1997 年 1 月 11 日，Asami 接手 ports／2432 XFMail 过期问题，把责任人从 freebsd-ports 转给 ache.md
             - 18.3.29-1997 年 6 月 6 日，Satoshi Asami 把 ncftp 端口 readline 问题的负责人改派给 ache.md
             - 18.3.30-1998 年 8 月 25 日，asami 把 editors／emacs20 从 emacs-20.3 的更新转给维护者 jseger，指出报告人未直接通知维护者.md
             - 18.3.31-1998 年 9 月 12 日，Andreas Klemm 宣布 Dirk Froemberg 接任 apache-php 端口维护者.md
-            - 18.3.32-1998 年 10 月 25 日，fenner 将 ports／7804 的责任方改派给 jseger 作为该端口维护者.md
+            - 18.3.32-1998 年 10 月 25 日，fenner 将 ports／7804 的责任方改派给 jseger 作为该 Port 维护者.md
             - 18.3.33-1998 年 12 月 6 日，billf 把 tkdesk 隐式依赖 devel／gmake-3.77 的 PR 转派给 wosch.md
             - 18.3.34-1999 年 11 月 7 日，Stefan Zehl 以 sidplay 维护者身份更新至 1.36.35 修复旧版损坏，并自承 diff 套 diff 的写法虽丑但可行.md
-            - 18.3.35-2000 年 1 月 22 日，asami 关闭 ports／16287 并把负责人转给维护者 jdp，说明 lang／modula-3-lib 缺 bison 依赖的问题已于 2000／01／20 由维护者自行修好.md
+            - 18.3.35-2000 年 1 月 22 日，asami 关闭 ports／16287 并把负责人转给维护者 jdp，说明 lang／modula-3-lib 缺 bison 依赖的问题已于 2000 年 1 月 20 日由维护者自行修好.md
             - 18.3.36-2000 年 4 月 21 日，MIHIRA Yoshiro 以 games／rollemup 维护者身份为 ports／18127 请求把自己的邮箱改为 sanpei@sanpei.org 并修正 Rollemup 的下载 URL 附 Makefile 与 pkg／DESCR 的差异.md
-            - 18.3.37-2001 年 2 月 2 日，Bill Fenner 评论 ports／graphics／gdtclft 的 Makefile.bsd 1.2 提交 指出未安装 tcl 时会大量报错严重影响构建体验.md
+            - 18.3.37-2001 年 2 月 2 日，Bill Fenner 评论 ports／graphics／gdtclft 的 Makefile.bsd 1.2 提交，指出未安装 tcl 时会大量报错严重影响构建体验.md
             - 18.3.38-Gerald Pfeifer 维护者更新提交 ports／25168 升级 Wine 到 2001.02.16 补 winedbg.so 文件.md
-            - 18.3.39-2001 年 6 月 13 日，维护者把编号 28117 的 math／rpc 端口更新请求移交处理，将负责人从 ports 组改派给维护者 ijliao 自行跟进.md
+            - 18.3.39-2001 年 6 月 13 日，维护者把编号 28117 的 math／rpc Port 更新请求移交处理，将负责人从 ports 组改派给维护者 ijliao 自行跟进.md
         - 18.4-Ports 树同步与基础设施
             - 18.4.1-2002 年 10 月 16 日，Marcus 将 mozilla 仓库复制为 mozilla-vendor 并提交 1.1 升级补丁.md
             - 18.4.2-2002 年 12 月 18 日，Adam Weinberger 告知 Janine 正处于 ports 冻结期到一月中旬不会接受新端口若要更早须自行提 PR.md
-            - 18.4.3-2013 年 3 月 4 日，Eitan Adler 说明他曾在 2012-01-21 把 1385 处 BUILD_DEPENDS 等号写法改为冒号赋值依赖 RUN_DEPENDS，如今 devel／ccache 加入后这类端口已有 bug，端口不应假定 BUILD_DEPENDS 初始为空.md
+            - 18.4.3-2013 年 3 月 4 日，Adler 称 BUILD_DEPENDS 改冒号赋值后，devel／ccache 暴露 Port 假定依赖非空的问题.md
             - 18.4.4-2005 年 7 月 18 日，Ken Smith 通知 packages-5.3-release 的归档处理，称已将 5.3 发布相关内容复制至 FreeBSD-Archive.md
             - 18.4.5-2004 年 11 月 14 日，Kris Kennaway 指出 CVS 中的 INDEX 长期以来只在发布版本时才更新，远超用户所说每几周一次的间隔.md
             - 18.4.6-2005 年 2 月 8 日，Ade Lovett 提议 package 构建集群改为非特权运行以暴露所有特权敏感 port 便于树级批量修复.md
@@ -7129,9 +7129,9 @@
             - 18.4.13-2017 年 1 月 6 日，Bob Eager 在 portsnap 清理讨论中建议用 find 与 xargs 一次性处理 ／var／db／portsnap／files 中的临时文件，绕过手工分批 rm 遇到参数列表过长的麻烦.md
             - 18.4.14-2017 年 1 月 14 日，Mathieu Arnold 补充说构建经常会被毫无通知地洗牌，beefyX 那些机器也不该被直接访问.md
             - 18.4.15-2020 年 12 月 13 日，Kevin Oberman 指出 121amd64 latest 于 12 月 2 日启动的那次构建跑了超过 90 小时，称这是他见过最长的构建.md
-            - 18.4.16-2020 年 6 月 17 日，Matthew Seaman 建议 @lbutlr 下次切换分支时改用 svn switch ^／releng／12.1 替代重新 checkout，可节省大量不必要的网络流量（此前其清空 ／usr／src 后全量检出耗时较长）.md
+            - 18.4.16-2020 年 6 月 17 日，Matthew Seaman 建议 @lbutlr 下次切换分支时改用 svn switch ^／releng／12.1 替代重新 checkout，可节省大量不必要的网络流量.md
             - 18.4.17-2021 年 4 月 2 日，Guido Falsi 回答迁移期如何更新 ports，可等官方 git 仓库可用，或参考 github、gitlab 镜像，文档见 wiki.md
-            - 18.4.18-1995 年 10 月 8 日，J Wunsch 核查 Olof Johansson 给出的 ftp.luth.se 上 netscape 2.0beta 目录，指出该目录并不存在.md
+            - 18.4.18-1995 年 10 月 8 日，J Wunsch 核查 Olof Johansson 给出的 ftp.luth.se 上 netscape 2.0beta 目录，指该目录缺失.md
             - 18.4.19-1995 年 11 月 22 日，Ruiyuan Jiang 说自己反复尝试下载 CNews 和 NNTP 描述文件都失败，请对方把描述文件邮件发给他.md
             - 18.4.20-1995 年 12 月 7 日，Ruiyuan Jiang 从 www.FreeBSD.org 多次尝试下载 C News 与 NNTP transport 的说明文档都没成功.md
             - 18.4.21-1997 年 2 月 10 日，John Polstra 指出两个补丁已失效不应出现在本地树中 称 CVSup 采纳已有树时无从识别陈旧文件 因此将其原样保留 建议删除整个 patches 目录后重新执行 CVSup 更新.md
@@ -7141,7 +7141,7 @@
             - 18.4.25-1998 年 3 月 6 日，itojun 回复询问 siag 2.65 去向的帖子，称该版本的源已经下架而 2.67 已经就绪，表示将尝试把该端口升级到新版本，并感谢对方主动提醒.md
             - 18.4.26-1998 年 4 月 28 日，asami 回应说可以代 mph 把 xcogitate 的分发文件放进本地，但既然 mph 在 freefall 上已有账户.md
             - 18.4.27-1998 年 5 月 3 日，Mitchell 强烈附议保留本地 CVS 树，认为负担得起就极为有用，能免费拿到全部变更日志，遇到崩掉的东西还能立刻把几个文件回退前一两个版本.md
-            - 18.4.28-1998 年 8 月 10 日，OConnor 为 graphics／pstoedit 提交不可下载 distfile 的修复，把 MASTER_SITES.md
+            - 18.4.28-1998 年 8 月 10 日，OConnor 为 graphics／pstoedit 提交不可下载 distfile 的修复，把 MASTER_SITES 由 geocities 换成 denic.net 的可用镜像.md
             - 18.4.29-1998 年 8 月 19 日，Stefan Zehl 实测 sendfile-2.1 能正常抓取 distfile，认为 ports 里把它标记为 BROKEN fetch 是误报.md
             - 18.4.30-1999 年 9 月 3 日，Ade Lovett 建议 Satoshi Asami 把 bento 构建汇总日志挂到打包页面上公开，而不是发到列表，让移植者与提交者按需查阅.md
             - 18.4.31-2000 年 4 月 23 日，Chuck Robey 于 4 月 23 日回帖 Will Andrews 称端口树作为 ports 应当同时保留 syslog-ng 与 nsyslog 两个但就个人选用建议上仍坚持他原先说的推荐 nsyslog.md
@@ -7149,52 +7149,52 @@
             - 18.4.33-2001 年 1 月 19 日，Kris Kennaway 分析 Attic 清理导致 cvsup 无法删除旧补丁使大量端口构建失败并建议两方案解决旧端口问题.md
             - 18.4.34-2001 年 1 月 22 日，Wayne Farmer 询问 ftp.freebsd.org 上 4.2-RELEASE ports.tgz 是否损坏因两次下载 MD5 均不符.md
             - 18.4.35-2001 年 1 月 30 日，Brandon Fosdick 报告 cvsup installworld 后 everybuddy 启动即报 bind 地址已占用且卸载重装端口或包皆无效请求协助.md
-            - 18.4.36-2001 年 5 月 21 日，Tadayuki 报告 cvsup 因 jakarta-tomcat 的 files 目录非空导致更新失败并询问是否他人遇到.md
+            - 18.4.36-2001 年 5 月 21 日，Tadayuki 报告 cvsup 因 jakarta-tomcat 的 files 目录非空导致更新失败，询问他人是否同样遇到该故障.md
         - 18.5-校验和与版本号一致性
             - 18.5.1-2001 年 7 月 30 日，Chris Elsworth 疑问 audio／easytag-0.15 的 MD5 与 distinfo 记录不符并寻找旧 tar 包比对变更.md
             - 18.5.2-2001 年 11 月 14 日，Rob Simmons 报告 crimson 端口 tarball 同版本号下 MD5 变了，校验和不匹配.md
             - 18.5.3-2007 年 5 月 21 日，xtreamzion 报告 math／miracl-5.23_3 的分发文件 MD5 与 SHA256 校验和双双不匹配.md
             - 18.5.4-2013 年 10 月 5 日，naddy 针对 r329323 报告称 calcoo-1.3.18_6 与 galculator-2.1.2 在 9.1-QAT 的 i386 和 amd64 上各余留 Perl 文件，他认为这是 QAT 或 Perl 一侧的问题，与那两个包无关.md
-            - 18.5.5-2014 年 11 月 29 日，Yuri 解释常见情况是依赖包被整块并入依赖方却保留同名文件，本案 gnupg 需要 dirmngr 且部分已并入，dirmngr 仍独立存在.md
+            - 18.5.5-2014 年 11 月 29 日，Yuri 解释常见情况是依赖包被整块并入依赖方却保留同名文件，本案 gnupg 需要 dirmngr 且部分已并入，dirmngr 仍独立保留.md
             - 18.5.6-2016 年 12 月 30 日，Thomas Munro 提出 PostgreSQL 包版本化建议，因为 pkg 无法同时安装多个主版本.md
             - 18.5.7-2017 年 4 月 14 日，同一 ports 修订下 openmpi-1.10.6_1 与 openmpi2-2.0.2_4 都能正常重装.md
-            - 18.5.8-2018 年 12 月 11 日，Stefan Esser 解释端口尾部 ,1 为新纪元用于强制升级至更低版本，通常新版本升级因问题被撤回时发生.md
+            - 18.5.8-2018 年 12 月 11 日，Stefan Esser 解释 Port 版本号尾部加 1 的新纪元记号，用于强制升级至更低版本，通常发生在新版本升级因问题被撤回时.md
             - 18.5.9-2018 年 9 月 20 日，Franco Fichtner 说明他提这个笔误是因为改回正确日期会让版本号变小，pkg 便不会把 ntopng 当升级.md
-            - 18.5.10-2019 年 7 月 9 日，Mathieu Arnold 说明 12.0-RELEASE-p 与 12.0-STABLE 属不同分支即 releng／12.0 与 stable／12，releng 仅接收安全与关键修复，分叉时 OSVERSION 1200086，stable／12 升为.md
+            - 18.5.10-2019 年 7 月 9 日，Mathieu Arnold 说明 12.0-RELEASE-p 与 12.0-STABLE 属不同分支即 releng／12.0 与 stable／12，releng 仅接收安全与关键修复，分叉时 OSVERSION 1200086，stable／12 升为 1200500.md
             - 18.5.11-2021 年 5 月 10 日，Mark Millard 建议把哈希截断到 12 位并保留完整四位年份.md
             - 18.5.12-1996 年 1 月 25 日，Satoshi Asami 判定 colorls-2.1 构建失败是取错了 tarball.md
             - 18.5.13-1996 年 2 月 21 日，Kukulies 报告 tex-3.1415.tgz 与 latex2e-95.06.tgz 两个包在 2.1-R 下安装因 mtree 报错失败.md
-            - 18.5.14-1996 年 9 月 14 日，Richard Wackerbarth 报告 gmake-3.75.tar.gz 的 MD5 为 f3dd5a2bc74aee00b9f3c38f5d438f60，沿用 3.74 版本的补丁仍适用.md
+            - 18.5.14-1996 年 9 月 14 日，Richard Wackerbarth 报告 gmake-3.75.tar.gz 的 MD5 校验值，指出沿用 3.74 版本的补丁仍适用.md
             - 18.5.15-1996 年 12 月 3 日，Michael Smith 称 md5 全扫描约 8 分钟比预想快.md
             - 18.5.16-1997 年 3 月 22 日，J Wunsch 澄清端口并无版本标签，2.2 的端口树只是发布完成时端口集合的快照，故现有 xperfmon 端口本身就是更新后的版本.md
             - 18.5.17-1997 年 5 月 19 日，Peter Wemm 回帖确认自己已经按要求为 2.2.2R 的端口树打上版本标签，并说明相关的标记准备工作至此全部完成.md
             - 18.5.18-1999 年 5 月 24 日，Matt 指出 netscape46-navigator 端口的 DISTFILES 误写成 communicator 的文件名.md
             - 18.5.19-1999 年 8 月 2 日，Rasmus Kaj 想试跑 GRacer 却取件失败，连那唯一主站点所属的域名都解析不出来，于是回帖问端口树里能否多挂几个镜像地址.md
-            - 18.5.20-2000 年 3 月 8 日，R. Imura 指出 graphics／ImageMagick 端口的 5.1.1 校验和 17c054dc1c116b9e0222483ca02fba1a 有误，附 diff 改为 04a606d99dfa8db3e5aa5e31cf074482，并说明官方 tar.md
+            - 18.5.20-2000 年 3 月 8 日，R. Imura 指出 graphics／ImageMagick Port 的 5.1.1 校验和有误，附 diff 改成正确校验和，并说明官方 tar 包时间戳晚于 Port 提交时间.md
             - 18.5.21-2001 年 1 月 2 日，Chris Faulhaber 回复 mpg123 端口问题指出 tarball 权限 711 源自作者 tar 包本身并建议阅读 README 以了解预编译.o 文件的用途.md
             - 18.5.22-Carl Fongheiser 报告 dgen-sdl 端口存在 MD5 校验失败与 SDL 库版本依赖错误两个问题并附修正补丁.md
         - 18.6-Port 去留与推行政策争论
             - 18.6.1-2001 年 11 月 26 日，大卫查普曼质疑 openverse 是否真的无人使用即便项目陈旧且已死亡也不应贸然删除端口.md
             - 18.6.2-2002 年 8 月 28 日，Jason 反驳称 MP3 许可条款已扩展至解码器领域大量软件使用 MP3 音轨故问题更严重.md
             - 18.6.3-2002 年 10 月 13 日，Dominik Brettnacher 建议移除 sysutils／guitar 给出不再活跃开发、作者从网络上消失、已有可行替代三条理由.md
-            - 18.6.4-2002 年 10 月 12 日，Trevor Johnson 提请删除 net／scotty 端口并指出其自 2000 年 8 月起因安全漏洞被标记 FORBIDDEN.md
+            - 18.6.4-2002 年 10 月 12 日，Trevor Johnson 提请删除 net／scotty Port 并指出其自 2000 年 8 月起因安全漏洞被标记 FORBIDDEN.md
             - 18.6.5-2002 年 9 月 21 日，克里斯·肯纳韦于 2002 年 9 月 21 日通报，他按此前预告从 ftp-master 删除了约 18000 个 distfiles.md
             - 18.6.6-2003 年 8 月 18 日，Sergey Matveychuk 提议让端口依赖特性而非具体端口，端口自设 FEATURE 变量声明自身提供的能力.md
             - 18.6.7-2003 年 7 月 11 日，Joe Marcus Clarke 预告下周起从 ports 树移除 GNOME 1.4 核心桌面组件，含 gnomecore、nautilus.md
             - 18.6.8-2003 年 11 月 11 日，Kris Kennaway 认为维护者通常不应获得提交权限，对此往往直接拒绝，提交者不只是提交 PR 的关卡.md
             - 18.6.9-2004 年 6 月 28 日，Mark Linimon 回应端口依赖多余的问题，指出瓶颈在于缺少做回归测试的人力，移除依赖前必须先证明其确实不再需要.md
-            - 18.6.10-2004 年 11 月 5 日，Mark Linimon 发送 ports 被标 forbidden 通告列出 misc／compat22 等常因安全考虑被禁的端口.md
+            - 18.6.10-2004 年 11 月 5 日，Mark Linimon 发送 ports 被标 forbidden 通告列出 misc／compat22 等常因安全考虑被禁的 Port.md
             - 18.6.11-2006 年 12 月 21 日，Alexander Botero-Lowry 指出 SCons 只是 make 的替代品而非构建系统替代品，并提及 Waf 项目作为更优选择.md
             - 18.6.12-2007 年 3 月 15 日，Robert Huff 判断 www／mozilla 并非给人类直接使用应改用 SeaMonkey 或 FireFox+Thunderbird.md
             - 18.6.13-2013 年 2 月 4 日，Yuri 针对构建日志里的 ANSI 转义序列表示，这类工具本应在非终端环境下关闭彩色输出，应靠 isatty 判断.md
             - 18.6.14-2014 年 12 月 1 日，Stephen Fisher 说 ispell 端口已被移除，改由 aspell-ispell 兼容脚本顶上.md
-            - 18.6.15-2014 年 2 月 2 日，Herbert J. Skuhra 指出 lzmalib 自 FreeBSD 8.1 起已入 base,grep 结果只有 p5-Compress-Raw-Lzma 与开启 LZMA 选项的 databases／tokyocabinet 两端口依赖该 port.md
+            - 18.6.15-2014 年 2 月 2 日，Herbert J. Skuhra 指出 lzmalib 自 FreeBSD 8.1 起已入 base，grep 结果只有 p5-Compress-Raw-Lzma 与开启 LZMA 选项的 databases／tokyocabinet 两个 Port 依赖它.md
             - 18.6.16-2014 年 6 月 8 日，Lev Serebryakov 说用 pkgng 之后收到越来越多只用二进制包的请求.md
             - 18.6.17-2014 年 3 月 27 日，Anton Afanasyev 说 Moonlight 开发已死 Silverlight 也差不多这样.md
             - 18.6.18-2015 年 8 月 20 日，Larry Baird 称有几台无头服务器在用 ghostscript nox11，全部自构端口并设 OPTIONS_UNSET=X11.md
             - 18.6.19-2015 年 8 月 31 日，Patrick Powell 表示在 ModPerl2 可用之前不应切换 Perl 默认版本，对他本人和许多人是拦路石.md
             - 18.6.20-2016 年 12 月 7 日，Jason Unovitch 建议在客户支持场景下，若所部署未受安全问题影响可停留旧 quarterly.md
-            - 18.6.21-2016 年 12 月 13 日，Julian H. Stacey 称端口不应需要 root 权限执行 cd ／usr／ports make -i fetch.md
+            - 18.6.21-2016 年 12 月 13 日，Julian H. Stacey 称 Port 不应需要 root 权限执行 cd ／usr／ports make -i fetch.md
             - 18.6.22-2016 年 3 月 20 日，Kurt Jaeger 指出 ticket 系统对安全相关缺陷报告限制访问是常见做法，列举 Cisco 与 redhat 都有类似做法作为佐证.md
             - 18.6.23-2016 年 3 月 24 日，Mike Jakubik 认为 php 是特殊情况因为升级缓慢，许多主机提供商未更新且大量软件不兼容最新版.md
             - 18.6.24-2017 年 8 月 8 日，Randy Bush 说上周因 dovecot2 被强推损失了半天.md
@@ -7215,12 +7215,12 @@
             - 18.6.39-1996 年 11 月 7 日，Andreas Klemm 主张移除 ghostscript 2.6.2 与 3.x 只留 gs4.md
             - 18.6.40-1997 年 1 月 9 日，Warner Losh 逐条表态：最认同方案一用 BSD 或 __44bsd__ 改动并回送补丁、下次发布可删.md
             - 18.6.41-1997 年 3 月 25 日，Chuck Robey 建议从端口树移除 scitext，理由是上游开发已经停滞且其最新版本存在严重缺陷，因此继续保留该端口已无实际意义.md
-            - 18.6.42-1997 年 9 月 28 日，Daniel Eischen 说明不打算把 gnat 端口绑到 FreeBSD 自带 gcc，因为 contrib／gcc 会变动.md
+            - 18.6.42-1997 年 9 月 28 日，Daniel Eischen 说明不打算把 gnat Port 绑到 FreeBSD 自带 gcc，因为 contrib／gcc 会变动.md
             - 18.6.43-1997 年 10 月 22 日，Stacey 回应 Chuck 的命名建议，主张 src 与 ports 统一使用同一个页面尺寸环境变量.md
             - 18.6.44-1998 年 2 月 19 日，asami 反对维护者自己直接改名端口，主张由他来做仓库复制操作.md
             - 18.6.45-1999 年 1 月 1 日，asami 就 bzip2 使用政策表态，只要解压没有比压缩明显慢，他就看不出反对的理由.md
             - 18.6.46-1999 年 2 月 24 日，Mendes Luis 提 PR 请复活 misc／buffer，说明 Mark Murray 因缺少 distsite 把它删掉.md
-            - 18.6.47-1999 年 7 月 8 日，Steve Kargl 反驳 David O'Brien 按发行版命名端口的说法，举富士通 Fortran 安装脚本为例.md
+            - 18.6.47-1999 年 7 月 8 日，Steve Kargl 反驳 David O’Brien 按发行版命名 Port 的说法，举富士通 Fortran 安装脚本为例.md
             - 18.6.48-1999 年 9 月 10 日，Satoshi Asami 明确回绝把 proftpd 的安全修正带进发行包，说明例外只留给本就无法打包的端口.md
             - 18.6.49-1999 年 11 月 22 日，itojun 询问四个中日文字体端口的原始分发件早已消失多时，是否该一并删除其目录，把端口退役的处置标准摆上台面，供维护者裁夺.md
         - 18.7-共享库升级与依赖版本冲突
@@ -7232,9 +7232,9 @@
             - 18.7.6-2002 年 8 月 30 日，Kolobov 提交 gpgme 升至 0.3.9 并补 t-eventloop.c 缺 sys-types.h 并纳入 info 文件.md
             - 18.7.7-2002 年 10 月 16 日，Spoerlein 提交 libtool 升级至 1.4.3 补丁并说明已用其编译多个 port 无报错.md
             - 18.7.8-2011 年 12 月 5 日，2011 年 12 月 Thierry Thomas 同意把 aspell 及各语言词典的维护权移交 office 团队并加入团队.md
-            - 18.7.9-2002 年 9 月 11 日，李明应提交人请求关闭 Postfix 与 db3 冲突提案，标注关闭原因.md
+            - 18.7.9-2002 年 9 月 11 日，李明应提交人请求关闭 Postfix 与 db3 冲突提案，并注明关闭理由.md
             - 18.7.10-2006 年 4 月 28 日，Pathiakis 查证 slib-guile 的 Makefile 注明须与 slib 版本同步后.md
-            - 18.7.11-2006 年 10 月 11 日，Andriy Gapon 定位 py-sip 升级 Python 2.5 失败因 object.h 中 PyHeapTypeObject 字段 type 与 name 改名 ht_type 与 ht_name 且自述已测试用 blanket 替换修复.md
+            - 18.7.11-2006 年 10 月 11 日，Andriy Gapon 定位 py-sip 升级 Python 2.5 失败，源于 object.h 中堆类型对象结构体的 type 与 name 字段改名为 ht_type 与 ht_name，并自述已测过用批量替换修复.md
             - 18.7.12-2006 年 10 月 24 日，Erwin Van de Velde 指出 glib20 升级失败的根因是 icu 的编译错误，该问题数周前已报告且正阻塞多套系统的多项更新.md
             - 18.7.13-2007 年 12 月 16 日，Hyogeol Lee 报 gstreamer 更新后无法播放 MP3，7.0-BETA4 与 amd64 current 皆报内部数据流错误.md
             - 18.7.14-2007 年 5 月 13 日，Howard Goldstein 判断 OpenLDAP 头文件冲突与 xorg 无关建议在 makefile 加 MOZ_OPTIONS 禁用 ldap 以让 xorg 7.2 测试继续.md
@@ -7244,20 +7244,20 @@
             - 18.7.18-2009 年 6 月 17 日，simplex 在 FreeBSD 7.2-RELEASE-p1 升级 c-ares 与 Unreal 后 ircd 服务器以信号 11 崩溃重编两端口无效.md
             - 18.7.19-2010 年 4 月 20 日，Sean McAfee 转述 phpPgAdmin 4.2.2 与 PHP 5.3.2 不兼容的问题 并称已在本地树更新后提交编号 145888 的 PR 及补丁.md
             - 18.7.20-2010 年 3 月 31 日，Henk van Oers 重编全部 png 依赖后跑 libchk.md
-            - 18.7.21-2012 年 3 月 7 日，ale (Alex Dupre) 回复 Roman Bogorodskiy 的 libtool 问题.md
-            - 18.7.22-2013 年 11 月 1 日，Tijl Coosemans 针对 Kevin Oberman 反映的 vlc 因 libssh2 的 .pc 文件写了 Requires.private 而要求 libssl libcrypto 的问题，建议改成 Libs.private： -lssl.md
-            - 18.7.23-2013 年 11 月 4 日，Matthias Andree 回应 AN 关于 libtasn1 升到 3.3 后 security／libgnome-keyring-2.32.0_5 构建失败，称该问题大约在报告后数分钟内已修复，更新端口树后 PORTREVISION 6 已能正常构建.md
+            - 18.7.21-2012 年 3 月 7 日，ale 即 Alex Dupre 回复 Roman Bogorodskiy 的 libtool 问题.md
+            - 18.7.22-2013 年 11 月 1 日，Tijl Coosemans 针对 Kevin Oberman 反映的 vlc 因 libssh2 的 .pc 文件写了 Requires.private 而要求 libssl libcrypto 的问题，建议改成 Libs.private：-lssl -lcrypto.md
+            - 18.7.23-2013 年 11 月 4 日，Matthias Andree 回应 AN 关于 libtasn1 升到 3.3 后 security／libgnome-keyring-2.32.0_5 构建失败，称该问题大约在报告后数分钟内已修复，更新 Ports 树后 PORTREVISION 6 已能正常构建.md
             - 18.7.24-2014 年 6 月 18 日，Kurt Jaeger 答从 php 5.4 升到 5.5 不能一步到位，他有约 46 个 php5 5.4.29 模块，第一步 portupgrade 可行而第二步大量报错，每个模块都要手动找对应 php55 替代.md
-            - 18.7.25-2014 年 11 月 8 日，Scot Hetzel 纠正 Chris H：lang／clang(33／34／35) 并非 10+ 默认工具链.md
+            - 18.7.25-2014 年 11 月 8 日，Scot Hetzel 纠正 Chris H：lang／clang 33／34／35 并非 10+ 默认工具链.md
             - 18.7.26-2015 年 7 月 6 日，库森曼斯回复 mono 的 iconv 行为按预期工作且与 Linux 一致，未装 libiconv 时用 base iconv.md
             - 18.7.27-2015 年 9 月 29 日，Matthew Seaman 判断至少缺 libarchive.so，而它本该在基本系统里.md
             - 18.7.28-2016 年 8 月 9 日，他说明 openntpd 的 https 功能依赖新库 libtls，约束检查是它的标准特性，因此无意默认关闭.md
             - 18.7.29-2016 年 8 月 23 日，Matt Smith 说 LibreSSL 自 OpenSSL 1.0.1 分叉后未回移植新版内容.md
-            - 18.7.30-2016 年 2 月 27 日，Yuri 确认 FreeBSD 上任何 clang 版本都尚不可用 UBSan，该包未能检测编译器是否支持它，故排除 sanitizer 方向.md
+            - 18.7.30-2016 年 2 月 27 日，Yuri 确认 FreeBSD 上任何 clang 版本都尚不可用 UBSan，该包未能检测编译器是否支持它，故排除 sanitizer 路线.md
             - 18.7.31-2016 年 7 月 22 日，Matthew Seaman 追问是否可能需要同时装两个不同版本的 lua、是否有 lua 的消费者要求特定版本.md
             - 18.7.32-2016 年 3 月 31 日，Ambler 建议以加后缀并存多版 ffmpeg，升 3.x 移旧版.md
             - 18.7.33-2017 年 2 月 16 日，Emanuel Haupt 认为卸载 llvm37 使 xorg-server 段错误消失一事应写入 ports／UPDATING 文档中.md
-            - 18.7.34-2017 年 6 月 29 日，Pfeifer 称 gcc5-devel 的 include-fixed 头文件不致 ABI 不兼容.md
+            - 18.7.34-2017 年 6 月 29 日，Gerald Pfeifer 感谢 Mark Millard 关于 gcc5-devel 使用 include-fixed 头文件的说明，表示将同时为 gcc5 本身准备改动，认为该头文件情况不会造成 ABI 层面的二进制不兼容.md
             - 18.7.35-2017 年 3 月 18 日，Michael Gmelin 补充指出这里说的并不只是客户端，mariadb-server 那一侧同样需要关闭 GSSAPI.md
             - 18.7.36-2017 年 5 月 18 日，Adam Weinberger 质疑 yarn 为何依赖 node6，指出 npm 依赖 node，其他使用 node 的端口也都依赖 node.md
             - 18.7.37-2017 年 11 月 4 日，Pete Wright 确认回退到 jemalloc4 后有巨大性能提升.md
@@ -7265,7 +7265,7 @@
             - 18.7.39-2018 年 8 月 1 日，Kevin Oberman 补充在 xproto 合并场景下 evieext-1.1.1 未被列出为 orphaned，认为此处本应被修复.md
             - 18.7.40-2018 年 1 月 22 日，kremels 在 FreeBSD 11.1 上于原服务器升级 mariadb100-server 至 10.0.33_1.md
             - 18.7.41-2018 年 11 月 20 日，Steve Kargl 提醒 libicuuc.so.62 到 63 的 libmap.conf 方案只是临时.md
-            - 18.7.42-2018 年 10 月 7 日，Kevin Oberman 以 graphics／mesa-dri 依赖 py-mako 为例.md
+            - 18.7.42-2018 年 10 月 7 日，Kevin Oberman 以 graphics／mesa-dri 依赖 py-mako 为例，指仅声明 BUILD_DEPENDS 会漏掉依赖关系，建议同时声明 RUN_DEPENDS.md
             - 18.7.43-2019 年 2 月 17 日，Russell L. Carter 贴出自己机器上 libgfortran.so.5 的 ldd 输出.md
             - 18.7.44-2019 年 1 月 11 日，Ed Maste 宣布 i386 将在数周内切换至 LLVM lld 作为系统链接器.md
             - 18.7.45-2019 年 1 月 30 日，Manfred Antar 回应 Alex V. Petrov 关于 py36-setuptools_scm-3.1.0 构建失败的问题.md
@@ -7296,7 +7296,7 @@
             - 19.1.3-2002 年 9 月 24 日，Sparrow 指出 Motif 应用失效源于 XKeysymDB 缺失并建议重装 XFree86 库端口.md
             - 19.1.4-2006 年 5 月 7 日，呼吁做好 2.0 的 KDE 集成：1.1.x 在 6.1 及以后已坏、2.0 成为唯一可构建版本，而手工放 desktop 文件虽能出菜单却缺图标.md
             - 19.1.5-2004 年 6 月 1 日，Joe Marcus Clarke 回应称 Evolution-1.4.6 在 FreeBSD amd64 上应可直接编译.md
-            - 19.1.6-2004 年 5 月 26 日，Aeefyu 在 x11／kde3 元端口中找不到 kwifimanager 与 kwireless，仅在 HTML 文档目录下见到不完整资料.md
+            - 19.1.6-2004 年 5 月 26 日，Aeefyu 在 x11／kde3 元 Port 中找不到 kwifimanager 与 kwireless，仅在 HTML 文档目录下见到不完整资料.md
             - 19.1.7-2004 年 5 月 28 日，Michael Nottebrock 回复 Daniel Eischen 的 qt33 补丁表示将修.md
             - 19.1.8-2005 年 1 月 16 日，Mark Ovens 表示 digikam 已可启动，唯内置图片查看器只显示纯黑窗口，其能正确回报图片属性说明图像已载入却无法显示.md
             - 19.1.9-2005 年 7 月 24 日，Dave Tweten 对比三台 ThinkPad 发现 x11-fonts／libXft 仅在近期未更新的两台构建失败.md
@@ -7309,11 +7309,11 @@
             - 19.1.16-2016 年 12 月 1 日，Marko Cupać 报告 Thunar 浏览 ／net 自动挂载的 NFS 共享时双击延迟 5 秒以上，返回与向上按钮同样卡顿.md
             - 19.1.17-2017 年 12 月 21 日，Sid 主张 Wayland 不应与 gtk3、gtk2、gnome 相关程序混在一起，那会立刻造成膨胀.md
             - 19.1.18-2017 年 1 月 15 日，Stari Karp 补充说 startx 启动 GNOME3 与 Lumina 都黑屏，startx 配 Fluxbox 可用.md
-            - 19.1.19-2020 年 2 月 26 日，Miroslav Lachman 汇报 fontFamilyList append 注释后的现象.md
+            - 19.1.19-2020 年 2 月 26 日，Miroslav Lachman 汇报注释掉字体家族列表追加行后 phantomjs 渲染网页不显示文字与字体的现象.md
             - 19.1.20-1995 年 11 月 28 日，Donald Burr 判断 Anthony Hill 报的 MIT-SHM 缺失是因为内核没编进共享内存扩展.md
             - 19.1.21-1996 年 4 月 11 日，Jake Hamby 称自己在 Motif 上很满足.md
             - 19.1.22-1996 年 4 月 11 日，Eric J. Schwertfeger 说 fvwm 完全可以配成 Alt-Tab 切换且支持模块.md
-            - 19.1.23-1998 年 9 月 15 日，Penisoara 复盘 pine 4.03 查不到新邮件的根因.md
+            - 19.1.23-1998 年 9 月 15 日，Penisoara 复盘 pine 4.03 查不到新邮件的触发条件，疑与 XWindows 下 bash 及超大 xterm 有关.md
             - 19.1.24-1998 年 10 月 21 日，Steve Price 判断 XttXF86srv-common 的动态加载问题其实已修.md
             - 19.1.25-1998 年 11 月 29 日，Nordwick 报 Trident 3Dimage985 这块 AGP 卡装上 XFree86-3.3.3 之后.md
             - 19.1.26-1999 年 5 月 12 日，Thomas T. Veldhouse 补陈控制台毫无输出，gnome-session 疑卡死循环.md
@@ -7327,15 +7327,15 @@
             - 19.2.3-2007 年 11 月 29 日，Yoshihiro Ota 建议 mount(8) 改维护 nmount 支持的类型列表，以免每次新增文件系统都须修改 mount(8)，并附补丁.md
             - 19.2.4-2016 年 3 月 27 日，Warren Block 总结 pw usermod -G 参数讨论建议修订 pw.8 手册中-G 的说明文字，明确其会从 groulist 未指定组移除用户并强调不要将其用于将用户加入主组.md
             - 19.2.5-2017 年 2 月 12 日，Mathieu Arnold 在 devel／check 与 pkg 手册文档讨论串中回信.md
-            - 19.2.6-2018 年 4 月 18 日，Gary Aitken 澄清其实读过 FreeBSD Porter's Handbook 多次 因 0.40 遗留的失配 distinfo 误判 SF 不生效才另试 已对 0.40 跑过 makesum 才留下陈旧文件.md
-            - 19.2.7-2019 年 3 月 21 日，Dan Langille 说明 freshports.org 宕机系软件错误 美东 6：30 PM 至次日 9：20 AM 下线 给出 freshports.wordpress.com 状态页与 twitter 账号.md
+            - 19.2.6-2018 年 4 月 18 日，Gary Aitken 澄清其实多次读过 FreeBSD Porter’s Handbook，是因 0.40 遗留的失配 distinfo 误判 SF 不生效才另作尝试，对 0.40 跑过 makesum 才留下陈旧文件.md
+            - 19.2.7-2019 年 3 月 21 日，Dan Langille 说明 freshports.org 宕机系软件错误，美东 6：30 PM 至次日 9：20 AM 下线，并给出 freshports.wordpress.com 状态页与 twitter 账号.md
             - 19.2.8-1996 年 2 月 27 日，Tim White 报告 ／ports／databases 网页指向的 MSQL 包 FTP 链接失效，服务器上找不到该文件.md
             - 19.2.9-1998 年 3 月 25 日，John Fieber 建议在移植手册补写 tcl 状态总结，并质疑有无免费归档线程工具能扛住数百兆字节邮件.md
         - 19.3-Ports 树生态与归类
             - 19.3.1-2002 年 4 月 23 日，Edy Gardo 澄清两个 gnome-commander PR 系同一人不同邮箱提交仅版本号与翻译有差异.md
             - 19.3.2-2002 年 12 月 23 日，Pete Fritchman 解释 nvidia 驱动闭源无法由 FreeBSD 维护者修复.md
             - 19.3.3-2002 年 12 月 27 日，Daniel Eischen 反驳称 lang／gcc28 无 %SUBDIR% 且只需设 MASTER_SITE_SUBDIR.md
-            - 19.3.4-要点：Port 数量从 1994 年的约 100 个增长至 2010 年的 24,000 余个，2024 年突破 34,000 个，增长曲线呈指数型.md
+            - 19.3.4-Port 数量从 1994 年的约 100 个增长至 2010 年的 2.4 万余个，2024 年突破 3.4 万个，增长曲线呈指数型.md
             - 19.3.5-要点：Ports 社区贡献模式以 maintainer 制度为核心，每个 port 由 1-3 名 maintainer 维护.md
             - 19.3.6-- 总纲 5 没有必然性，只有偶然性：受访者获得 commit bit 的经过呈现纯粹的偶然性：起念也许该争取提交权限约一周后.md
             - 19.3.7-2018 年 9 月 17 日，Niclas Zeising 在 Bug 230298 中表示不批准 graphics／mesa-dri 升到 18.2.0.md
@@ -7344,15 +7344,15 @@
             - 19.3.10-2018 年 12 月 22 日 Mel Pilgrim 称自己无 commit bit 不能用 Kurt Jaeger 建议的 Tools scripts mfh.md
             - 19.3.11-2018 年 2 月 7 日，Matthew Seaman 转述 ports 三大在研变更 Flavours Sub-packages 与 Variable dependencies 的推进次序，称 Flavours 已落地但 pkg(8) 的变量依赖仍待后续.md
             - 19.3.12-2021 年 3 月 13 日，Stefan Esser 在 14-CURRENT 无 ports 选项线程以德语回帖，请检查 TERM 是否非 xterm、vt100.md
-            - 19.3.13-1996 年 8 月 19 日，MOROHOSHI Akihiko 追问怎么查软件是否已被移植过.md
+            - 19.3.13-1996 年 8 月 19 日，MOROHOSHI Akihiko 追问如何查询软件是否已被移植.md
             - 19.3.14-1996 年 9 月 7 日，Pedro Giffuni 提示 ports collection 中 tacacsd 可能已失效.md
             - 19.3.15-1997 年 8 月 3 日，Smith 指出讨论混淆了 perl／tcl 作为系统组件与作为用户便利工具两种定位.md
-            - 19.3.16-1999 年 6 月 23 日，Ruslan Shevchenko 指出 asami 在提案里把 doc++ 列进 java 分类是错的.md
+            - 19.3.16-1999 年 6 月 23 日，Ruslan Shevchenko 指出 asami 在提案里把 doc++ 列进 java 分类有误.md
             - 19.3.17-1999 年 7 月 5 日，Satoshi 附议 binkd 自 net 移入 mail，因为 FidoNet 邮件器走 TCP IP 传输.md
             - 19.3.18-1999 年 7 月 12 日，asami 回应 John-Mark Gurney 的归类意见，承认当年设此分类时未想到 MIME 封装，描述欠妥，于是请对方改写分类说明.md
-            - 19.3.19-1999 年 10 月 18 日，Wildan Usman 询问为何 ports／databases／mysql322-client 的源码在官网找不到，只获 did not find 提示;反映 1999 年 Ports 检索与源码镜像页面的信息缺口.md
-            - 19.3.20-2000 年 3 月 22 日，Marcel Moolenaar 说明 linux_base 不含 tar 是因系统自带 tar 已够兼容并解释 Linux rpm 3.x 与主机系统不兼容的原因.md
-            - 19.3.21-2000 年 8 月 14 日，Ralf S. Engelschall 表示在 4.1-STABLE 配合较新 linux_base 已用脚本在两台机器成功安装 StarOffice 5.2 转引 Jim Mock 称 5.2 移植棘手 建议将脚本改为新端口.md
+            - 19.3.19-1999 年 10 月 18 日，Wildan Usman 询问为何 ports／databases／mysql322-client 的源码在官网找不到，只获 did not find 提示，反映 1999 年 Ports 检索与源码镜像页面的信息缺口.md
+            - 19.3.20-2000 年 3 月 22 日，Marcel Moolenaar 说明 linux_base 不含 tar 是因系统自带 tar 已够兼容，并解释 Linux rpm 3.x 与主机系统不兼容的缘由.md
+            - 19.3.21-2000 年 8 月 14 日，Ralf S. Engelschall 表示在 4.1-STABLE 配合较新 linux_base 已用脚本在两台机器成功安装 StarOffice 5.2，转引 Jim Mock 称 5.2 移植棘手，建议将脚本改为新 Port.md
         - 19.4-应用软件与服务使用
             - 19.4.1-2001 年 10 月 21 日，Cyrille 建议改为请 Mozilla 发布增量 diff 如 X11 多年做法只需下基线与后续补丁并询问如何在端口 Makefile 中处理.md
             - 19.4.2-2002 年 6 月 11 日，Rasmus Skaarup 询问是否有工具能凭文件头尾识别 mpeg mp3 avi 等真实格式.md
@@ -7364,7 +7364,7 @@
             - 19.4.8-2013 年 3 月 8 日，Bernt Hansson 回复 Wojtek 关于非网页日历与日记软件的询问，简单建议在提示符下输入 cal 或 ncal 即可使用.md
             - 19.4.9-2013 年 3 月 17 日，Chris Petrik 回应 Waitman Gobble 关于 GNUstep 的实测反馈.md
             - 19.4.10-2014 年 2 月 11 日，Benjamin Podszun 自述 ansible 装机时 service dovecot start 在未设 dovecot_enable 下仍返回成功 怀疑是 init 脚本的小 bug.md
-            - 19.4.11-2014 年 10 月 15 日，Beeblebrox 用 Adobe 官网 PDF 试 pdf2ps，报 Warning File has an empty CropBox 与 Error reading a content stream;两页文档第二页无输出，原文件 256.4 KB 膨胀到 5.0.md
+            - 19.4.11-2014 年 10 月 15 日，Beeblebrox 用 Adobe 官网 PDF 试 pdf2ps，报 Warning File has an empty CropBox 与 Error reading a content stream，两页文档第二页无输出，原文件 256.4 KB 膨胀到 5.0 MB.md
             - 19.4.12-2015 年 4 月 1 日，Dave Horsfall 问 a1poweruser.com 是否用 DNSBL 等过滤，他糟糕的一周约收十封而拒五百封.md
             - 19.4.13-2015 年 8 月 6 日，Matthias Apitz 实测 telegram-cli 不发已读通知，用 iPhone 发消息对方读完后仍保持单勾，只有打开 Telegram app 后 iPhone 上旧消息才变成双勾，称这是好消息.md
             - 19.4.14-2015 年 6 月 2 日，Tim Daneliuk 称照 Matthew 的设置 SSL Labs 评分略低于自己的配置 且自认 +LOW 应为 -LOW 打算继续调整以求浏览器兼容与安全防护的平衡.md
@@ -7373,15 +7373,15 @@
             - 19.4.17-Janky Jay 依梅尔建议清除了 Apache／PHP 配置中的 smarty3 路径（主要是 php.ini）并重启 Apache，坦言未清空 templates_c 目录.md
             - 19.4.18-2018 年 5 月 15 日，Christopher Hall 询问 sysutils／ansible 支持 Python 3.6 方案.md
             - 19.4.19-2020 年 4 月 4 日，Torfinn Ingolfsen 说自己只用 deskutils／calibre 的基础功能即 content server 传书到阅读器.md
-            - 19.4.20-2020 年 12 月 21 日，Dan Mahoney 报告公司多年使用 mail／dma 端口，发现 base 自约 11.0 起已含 dma.md
-            - 19.4.21-1995 年 12 月 31 日，说自己已跑 idled 两个月，主要用于踢空闲用户（10 分钟空闲加 1 分钟警告即踢）.md
+            - 19.4.20-2020 年 12 月 21 日，Dan Mahoney 报告公司多年使用 mail／dma Port，发现 base 自约 11.0 起已含 dma.md
+            - 19.4.21-1995 年 12 月 31 日，有用户自述已跑 idled 两个月，主要用于踢空闲用户，10 分钟空闲加 1 分钟警告即踢.md
             - 19.4.22-1996 年 4 月 27 日，Scott Blachowicz 回忆 mh 曾加 POP 支持使 inc 总走 pop 而失去正常用法，建议按 pophost 项决定是否启用.md
             - 19.4.23-1996 年 8 月 1 日，Webmaster Jim 称他是在 lynx-dev 列表上读到这份咨询，觉得 FreeBSD 方面更懂行的人应该能给出答案.md
             - 19.4.24-1996 年 9 月 3 日，Jeffrey Hsu 说上次动手已是最后，图形 applet 若能重链接也许还能救，但 1.0.2 得从头再来.md
             - 19.4.25-1997 年 1 月 30 日，Satoshi Asami 指出对方邮件客户端把 7bit Content-Type 等头部当正文尾部附上 建议修复或不用 Netscape 邮件 并承认自己环境里 FORCE_PKG_REGISTER 使未察觉已安装检测遗漏.md
             - 19.4.26-1997 年 8 月 6 日，Slemko 说明 htpasswd 位于 Apache 发行版的 support 目录内，当前端口尚未安装该工具.md
             - 19.4.27-1997 年 9 月 11 日，Tom 说明 xinetd 只按 IP 做访问控制，因 DNS 查询开销太大而放弃主机名解析，并主张邮件的主机名查询应在 mailer 内部完成.md
-            - 19.4.28-1997 年 10 月 28 日，Slemko 指出这个 FrontPage 端口，会让任何人轻易获得 root 权限，建议暂缓使用，等到有更稳妥的做法出现.md
+            - 19.4.28-1997 年 10 月 28 日，Slemko 指出这个 FrontPage Port 会让任何人轻易获得 root 权限，建议暂缓使用，等到有更稳妥的做法出现.md
             - 19.4.29-1998 年 3 月 13 日，burr 用 ports 里的 squid 搭起首台 web 代理，感到速度明显变快，想问如何让代理自动抓取整站页面，并且只在本站域名内刷新内容.md
             - 19.4.30-1998 年 3 月 17 日，Donald Burr 转述来自新闻组等渠道的初步报告，称 LessTif 0.83 在 Java 与 AWT 方面明显更守规矩.md
             - 19.4.31-1998 年 4 月 29 日，wosch 答复 Alsharif 关于 MajorDomo 包的疑问，说明 FreeBSD 没有该二进制包，必须从源码交互式构建.md
@@ -7393,7 +7393,7 @@
             - 19.4.37-1998 年 9 月 3 日，Bill Fumerola 认为缺少 ASP 支持让从 NT 迁到 FreeBSD 很难.md
             - 19.4.38-2000 年 3 月 4 日，Scot W. Hetzel 回应 Matthew Dodd.md
             - 19.4.39-2000 年 3 月 18 日，Chris Piazza 回应 Brandon Fosdick 关于 Eterm 为何停在 0.8.10 的疑问.md
-            - 19.4.40-2000 年 5 月 18 日，ChristianOspelkaus 宣布其 mfm 程序发布了新版本并致谢该程序已收入 FreeBSD 端口集合.md
+            - 19.4.40-2000 年 5 月 18 日，Christian Ospelkaus 宣布其 mfm 程序发布了新版本，并致谢该程序已收入 FreeBSD Ports Collection.md
             - 19.4.41-2000 年 6 月 27 日，Ade Lovett 在讨论 pgp2 与 pgp6 主程序同名冲突时建议借鉴 tclsh wish 的处理方式，把 pgp2 端口改为直接安装为 pgp2，让 pgp 这个名字保留作为转发者.md
             - 19.4.42-2000 年 7 月 29 日，SADA Kenji 回复 conrads 说明自己需读 XSwallow 项目文档以核验软件的授权条件方能继续审核该端口提交.md
         - 19.5-基本系统与内核话题
@@ -7409,13 +7409,13 @@
             - 19.5.10-2020 年 4 月 7 日，Grzegorz Junka 承认那确实不是 STABLE 并引自己早先邮件.md
             - 19.5.11-2020 年 3 月 5 日，Tatsuki Makino 认为蓝牙 mouse 此前也从未真正正常而是依赖其他 mouse 与 Virtual core XTEST 指针他还把 protocol-common.c 和 devices.c 中 NBUTTONS 增到 10 以上.md
             - 19.5.12-2020 年 3 月 9 日，Willem Jan Withagen 提出 bhyve Rados 块驱动原型 RFC，列出四项方案：随 bhyve 编译.md
-            - 19.5.13-2020 年 3 月 20 日，George Hartzell 报告 FreeBSD 12.1p3 root-on-zfs 上 poudriere 报 cannot rollback 快照错误，there is a snapshot more recent than prepkg，builder.md
+            - 19.5.13-2020 年 3 月 20 日，George Hartzell 报告 FreeBSD 12.1p3 root-on-zfs 上 poudriere 报 cannot rollback 快照错误，there is a snapshot more recent than prepkg，builder crashed.md
             - 19.5.14-2020 年 3 月 22 日，Yuri Pankov 建议加 -a 选项.md
             - 19.5.15-2020 年 5 月 2 日，Eugene Grosbein 指出 rndc-key 只用于 127.0.0.1 本地连接，只能被本地用户滥用，除非存在可远程执行的漏洞.md
-            - 19.5.16-1995 年 11 月 6 日，J Wunsch 称 FreeBSD 已有 ktrace 并追问差别何在；gdb 能在其上运行，所以推断 ptrace 的答案是肯定的.md
+            - 19.5.16-1995 年 11 月 6 日，J Wunsch 称 FreeBSD 已有 ktrace 并追问差别何在，因 gdb 能在其上运行，推断 ptrace 也获支持.md
             - 19.5.17-1995 年 12 月 20 日，为延迟致歉称需把主机从 NetBSD 1.0 升级到 FreeBSD 2.1.0.md
             - 19.5.18-1996 年 2 月 1 日，Greg Lehey 质疑 sys／param.h 的宏方案，问它如何区分 BSD／OS、NetBSD 与 FreeBSD.md
-            - 19.5.19-1996 年 2 月 11 日，Poul-Henning Kamp 针对刚加入 lib／libfakegnumalloc 的提交评论，认为需要移植 gnumalloc.md
+            - 19.5.19-1996 年 2 月 11 日，Poul-Henning Kamp 针对刚加入 lib 的 gnumalloc 兼容桩库提交评论，认为仍需真正移植 gnumalloc.md
             - 19.5.20-1996 年 4 月 8 日，Ronald Grootkarzyn 报告用 install.sh 从 cd-rom 重装 bin 发行包后 GCC 恢复正常.md
             - 19.5.21-1996 年 7 月 21 日，Veggy Vinny 澄清自己跑的是仅三四天前的 FreeBSD -current，以此解释与 Julian H. Stacey 之间的构建差异.md
             - 19.5.22-1996 年 8 月 9 日，Werner Griessl 回复 Hitachi CD-ROM ATAPI 问题只写了 Hallo.md
@@ -7427,38 +7427,38 @@
             - 19.5.28-2000 年 7 月 12 日，David Kanter 说明 tun0 在 4.0 中动态创建故启动时 wmnet 看不到该设备登录后再运行才显示控制台消息 Adding device tun0.md
         - 19.6-杂项
             - 19.6.1-2002 年 1 月 4 日，pat 关闭 xpk 邮箱与站点维护更新工单 33557 并致谢确认已提交.md
-            - 19.6.2-freebsd-ports 邮件 1741843（空模板件）.md
+            - 19.6.2-freebsd-ports 邮件 1741843：空模板件.md
             - 19.6.3-- 受访者自述 2003 年其莫斯科家庭 ISP 的 Windows 服务器每日多次崩溃，遍试 Red Hat、SuSE、Gentoo.md
             - 19.6.4-2009 年 5 月 31 日，Marco Steinbach 将两台 Windows 2003 x64 SP2 测试机由 VMWare Server 1.0.9 迁至 virtualbox-2.2.2r1985，FreeBSD amd64 7.2-RELEASE 内网互通 24 小时无异常.md
-            - 19.6.5-freebsd-ports 邮件 1739775（空模板件）.md
-            - 19.6.6-freebsd-ports 邮件 1740102（空模板件）.md
-            - 19.6.7-freebsd-ports 邮件 1740512（空模板件）.md
+            - 19.6.5-freebsd-ports 邮件 1739775：空模板件.md
+            - 19.6.6-freebsd-ports 邮件 1740102：空模板件.md
+            - 19.6.7-freebsd-ports 邮件 1740512：空模板件.md
             - 19.6.8-2002 年 12 月 20 日，AlanE 承认自己语气偏生硬本是缓和紧张气氛，并承诺自行审查 Holm 补丁署名纳入除非对方另发 PR.md
-            - 19.6.9-freebsd-ports 邮件 1741026（空模板件）.md
-            - 19.6.10-freebsd-ports 邮件 1741585（空模板件）.md
-            - 19.6.11-freebsd-ports 邮件 1741796（空模板件）.md
-            - 19.6.12-freebsd-ports 邮件 1742457（空模板件）.md
-            - 19.6.13-freebsd-ports 邮件 1742708（空模板件）.md
-            - 19.6.14-freebsd-ports 邮件 1742951（空模板件）.md
-            - 19.6.15-freebsd-ports 邮件 1743237（空模板件）.md
-            - 19.6.16-freebsd-ports 邮件 1743625（空模板件）.md
-            - 19.6.17-freebsd-ports 邮件 1743779（空模板件）.md
+            - 19.6.9-freebsd-ports 邮件 1741026：空模板件.md
+            - 19.6.10-freebsd-ports 邮件 1741585：空模板件.md
+            - 19.6.11-freebsd-ports 邮件 1741796：空模板件.md
+            - 19.6.12-freebsd-ports 邮件 1742457：空模板件.md
+            - 19.6.13-freebsd-ports 邮件 1742708：空模板件.md
+            - 19.6.14-freebsd-ports 邮件 1742951：空模板件.md
+            - 19.6.15-freebsd-ports 邮件 1743237：空模板件.md
+            - 19.6.16-freebsd-ports 邮件 1743625：空模板件.md
+            - 19.6.17-freebsd-ports 邮件 1743779：空模板件.md
             - 19.6.18-2004 年 5 月 22 日，Tommy Scheunemann 转述 Jeremy Messenger 关于 Opera 菜单条目的说法.md
             - 19.6.19-2005 年 1 月 18 日，Jeremie Le Hen 回复 Florent Thoumie.md
             - 19.6.20-2005 年 9 月 2 日，Alejandro Pulver 回应 Juan Saldarriaga 关于 chicken 端口落后于 2.0 官方稳定版的求更帖.md
             - 19.6.21-2008 年 6 月 29 日，Remko Lodder 回复 NetOne 称 Snow.nl 的约八节点 OSPF 网络在 6.x 与 7.x 机器上使用 openospfd 未见问题，愿接收配置以尝试复现.md
             - 19.6.22-2009 年 4 月 10 日，Torfinn Ingolfsen 转述 Bernhard Fröhlich 关于 mythtv 取系统 libavcodec 的补丁及其在 mythtranscode 遇 XvMC 报错的说明.md
-            - 19.6.23-2012 年 6 月 8 日邮件串：Warren Block 与 Olivier Smedts 的英文往复（引文原件）.md
-            - 19.6.24-2012 年 6 月 20 日，bapt at FreeBSD.org（Baptiste Daroussin）确认 optionsng 的 UNIQUENAME 前缀须用小写.md
-            - 19.6.25-2012 年 3 月 5 日邮件串：Conrad J. Sabatier 与 Matthew Seaman 关于非标准安装位置的英文往复（引文原件）.md
-            - 19.6.26-2012 年 3 月 26 日 freebsd-chat 列表拒信：主题为 New job vacancy - see detail（英文原件）.md
-            - 19.6.27-2012 年 3 月 28 日 freebsd-ports 列表出现冒充 PayPal 的钓鱼邮件（英文原件）.md
+            - 19.6.23-2012 年 6 月 8 日邮件串：Warren Block 与 Olivier Smedts 的英文往复，属引文原件.md
+            - 19.6.24-2012 年 6 月 20 日，bapt at FreeBSD.org 即 Baptiste Daroussin 确认 optionsng 的 UNIQUENAME 前缀须用小写.md
+            - 19.6.25-2012 年 3 月 5 日邮件串：Conrad J. Sabatier 与 Matthew Seaman 关于非标准安装位置的英文往复，属引文原件.md
+            - 19.6.26-2012 年 3 月 26 日 freebsd-chat 列表拒信：主题为 New job vacancy - see detail，属英文原件.md
+            - 19.6.27-2012 年 3 月 28 日 freebsd-ports 列表出现冒充 PayPal 的钓鱼邮件，属英文原件.md
             - 19.6.28-2012 年 3 月 30 日，Da Rock 答复称系统为上周全新安装.md
-            - 19.6.29-2012 年 5 月 2 日，glarkin at FreeBSD.org (Greg Larkin) 回应 Kaya：自己刚在 FreeBSD 上部署 Puppet Dashboard，提供 docs.puppetlabs.com 手册链接，并分享经验（Ruby／vendors 目录与已装 ports 冲突.md
-            - 19.6.30-2012 年 5 月 8 日邮件串：Baptiste Daroussin 与 Andriy Gapon 的英文往复（引文原件）.md
-            - 19.6.31-2012 年 5 月 15 日邮件串：Svyatoslav Lempert 与 Olivier Mueller 关于 FreeBSD 8.3 提交的英文往复（引文原件）.md
+            - 19.6.29-2012 年 5 月 2 日，Larkin 分享 Puppet Dashboard 部署经验，含 Ruby／vendors 冲突与 Spamassassin 虚拟包规避.md
+            - 19.6.30-2012 年 5 月 8 日邮件串：Baptiste Daroussin 与 Andriy Gapon 的英文往复，属引文原件.md
+            - 19.6.31-2012 年 5 月 15 日邮件串：Svyatoslav Lempert 与 Olivier Mueller 关于 FreeBSD 8.3 提交的英文往复，属引文原件.md
             - 19.6.32-2012 年 5 月 16 日，Mark Linimon 在回复 Max Brazhnikov 关于 Boost 端口更新的邮件时表示可以尽快提交该更新，并建议在同一提交中把其余相关端口标记为 BROKEN.md
-            - 19.6.33-2012 年 5 月 17 日，Jan Dakinevich 指出移植依赖 libusb 且以 pkgconfig 检测的软件存在困难，因为基本系统中缺少对应的 .pc 文件，提议修改 devel／libusb 使端口能生成 libusb-1.0.pc.md
+            - 19.6.33-2012 年 5 月 17 日，Jan Dakinevich 指出移植依赖 libusb 且以 pkgconfig 检测的软件存在困难，因为基本系统缺少对应的 .pc 文件，提议修改 devel／libusb 使该 Port 能生成 libusb-1.0.pc.md
             - 19.6.34-2013 年 2 月 12 日，4444 at web12.vhosting.pcextreme.nl 在 freebsd-ports 列表以纯邮箱地址作为 FROM 署名.md
             - 19.6.35-2013 年 6 月 26 日，Konstantin Belousov 回答 Gmelin 的追问，用 clang 在 stable 上无法复现.md
             - 19.6.36-2014 年 11 月 25 日，Christian Weisgerber 反驳 Andrew Berg 的说法.md
@@ -7466,24 +7466,24 @@
             - 19.6.38-2016 年 7 月 15 日，Martin Waschbüsch 指 sope-core 的 NGExtensions 使用 iconv 不能假设下级依赖会带入.md
             - 19.6.39-2016 年 7 月 27 日，Torsten Zuehlsdorff 说明 cpghost 的 open-axiom 是 2015 年 6 月的古董包.md
             - 19.6.40-2016 年 6 月 8 日，David Wolfskill 回应 Rafael Rodrigues Nakano 预先下载全部源码再离线构建的询问.md
-            - 19.6.41-2016 年 6 月 16 日，Ben Woods 回复 Freddie Cash 说不知道 -d 参数 因自己在看 pkg-install(8) 手册而非 pkg(8) 手册 但即使加上 -d 仍未显示冲突细节 继续追问有无其他方法让 pkg 揭示具体冲突.md
+            - 19.6.41-2016 年 6 月 16 日，Ben Woods 回复 Freddie Cash 说不清楚 -d 参数，因自己看的是 pkg-install(8) 手册而非 pkg(8) 手册，但即使加上 -d 仍未显示冲突细节，继续追问有无其他方法让 pkg 揭示具体冲突.md
             - 19.6.42-2016 年 3 月 15 日，Torfinn Ingolfsen 反问在 Raspberry Pi 及 FreeBSD 新支持的 ARM 平台上编译 llvm 端口需要多少小时.md
-            - 19.6.43-2016 年 11 月 6 日，Andrey Chernov 回应 Mathieu Arnold，只记得一个并非 p5 端口的 www／w3mir.md
+            - 19.6.43-2016 年 11 月 6 日，Andrey Chernov 回应 Mathieu Arnold，只记得一个并非 p5 Port 的 www／w3mir.md
             - 19.6.44-2016 年 11 月 15 日，tech-lists 在 freebsd-stable r308206、ports 426176.md
             - 19.6.45-2017 年 7 月 17 日，Boris Samorodov 以 FreeBSD Committer 身份回复，指出本地仓库配置方式记载于 PKG-REPOSITORY(5) 手册，URL scheme 的形式见 FETCH(3).md
             - 19.6.46-2017 年 3 月 21 日，Gleb Smirnoff 回复 Baptiste Daroussin 关于 exp-run 结果的争论.md
             - 19.6.47-2017 年 9 月 22 日，Gerald Pfeifer 回应 Richard Gallamore 关于 USE_GCC 5+ 只设 BUILD 与 RUN 依赖.md
             - 19.6.48-2018 年 11 月 3 日，Mateusz Piotrowski 建议 Eugene Kaltashkin 就 QEMU Guest Agent 端口改向 Bugzilla 提补丁，这样能在把它引进树之前先修潜在问题.md
-            - 19.6.49-2020 年 8 月 7 日，Michael Gmelin 感谢 Steve Wills 回复称希望能有用户可依赖的精简默认方式，装 git 包虽多数时候明显却非总能做到.md
+            - 19.6.49-2020 年 8 月 7 日，Michael Gmelin 感谢 Steve Wills 回复，称希望能有用户可依赖的精简默认方式，装 git 包虽多数时候明显却非总能做到，问 svnlite 检出是否为长期选项.md
             - 19.6.50-2020 年 10 月 2 日，Dave Horsfall 称始终把警告当作潜在错误来处理，举一例某工作要求 -Wall 不产生任何输出.md
             - 19.6.51-2021 年 4 月 1 日，Kurt Jaeger 说公告就是那篇帖子，只是具体日期写得太简短.md
             - 19.6.52-2020 年 3 月 28 日，Chris Ross 回应说自己已看到当日信息，并表示接下来想就 net-p2p／deluge 与 peers 向 Ruslan 征求反馈.md
             - 19.6.53-2021 年 1 月 16 日，Dan Mahoney 报告公司内部部署脚本因 252339 事故受损.md
             - 19.6.54-2021 年 3 月 25 日，Miroslav Lachman 应 Dewayne Geraghty 关于 python2.7 双重标准批评的一帖回帖.md
-            - 19.6.55-1996 年 8 月 3 日，Narvi 承认 That's what the problem was 当时可见 MX 主机全在美国 timed miserably out 落款 Sander.md
+            - 19.6.55-1996 年 8 月 3 日，Narvi 承认 That’s what the problem was，当时可见 MX 主机全在美国 timed miserably out，落款 Sander.md
             - 19.6.56-1997 年 4 月 15 日，报告自己正尝试重启与 NANOG 侧 traceroute 维护方的联络，以推进该版本的更新，好让上游能重新收到修改请求，也好让端口更新不再停滞.md
-            - 19.6.57-1997 年 4 月 18 日，感谢 Thomas 愿意翻出 386BSD 时代的 SlingShot 补丁，并借此指出 ports 树里仍缺很多 Xview 相关项.md
-            - 19.6.58-1997 年 5 月 25 日，Christian Fortin 回复 Wolfram Schneider 的两周新端口公告，问是否计划加入 WordPerfect 7.0.md
+            - 19.6.57-1997 年 4 月 18 日，感谢 Thomas 愿意翻出 386BSD 时代的 SlingShot 补丁，并借此指出 Ports 树里仍缺很多 Xview 相关项.md
+            - 19.6.58-1997 年 5 月 25 日，Christian Fortin 回复 Wolfram Schneider 的两周新 Port 公告，问是否计划加入 WordPerfect 7.0.md
             - 19.6.59-1998 年 1 月 19 日 ache 论证旧版先查星号横线行、新版忽略 Index 行，意味着两者对 CVS 生成的 diff 处理无异，因都不关注 Index 行，好让争点收敛到真实差异.md
             - 19.6.60-1998 年 8 月 28 日，Tim Vanderhoek 表示这不算建议，只是自己会再试几种写法弄清原因，也提醒留意系统头.md
             - 19.6.61-1999 年 3 月 16 日，Patrick Murphy 在 FreeBSD 3.1-RELEASE 上.md

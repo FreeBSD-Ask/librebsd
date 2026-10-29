@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""audit_outline_landing.py —— 大纲落地一致性门禁 L1–L17（第三十七件，固定脚本）。
+"""audit_outline_landing.py —— 大纲落地一致性门禁 L1–L18（第三十七件，固定脚本）。
 
 用途
 ----
-对 `05-卷册大纲/` 落地树做 L1–L17 全量一致性审计，回答“目录真值、映射台账、
+对 `05-卷册大纲/` 落地树做 L1–L18 全量一致性审计，回答“目录真值、映射台账、
 磁盘落点、派生件四者是否自洽”。判据正文见 `流程规则.md`“大纲落地一致性门禁
-（L1–L17）”；本器是唯一执行件。
+（L1–L18）”；本器是唯一执行件。
 
 判据（每条一行结果为 PASS／FAIL／SKIP）
 ----
@@ -32,12 +32,14 @@ L15 REMAP 挂账与后继：mapping 标 REMAP 者须在 `映射/remap.tsv`；其
     `successor_ids` 非空且全部为 active 目标。
 L16 旧二段号未决：落点正文含旧式 `0NN.M` 二段号（排除日期形态）且未挂账。
 L17 节占位互斥：节目录内 `.md` 与 `.gitkeep` 不得并存；无 `.md` 时必须有 `.gitkeep`。
+L18 落点名长度：落点单段文件名（UTF-8 字节）须 ≤255。Linux 的 NAME_MAX 按字节计，
+    超限时 checkout 直接 ENAMETOOLONG；本机 NTFS 按字符计，故只能在门禁侧拦。
 
 SKIP 语义
 --------
 L2／L3／L5／L6／L7／L11／L12／L13／L15／L16 依赖 `映射/mapping.tsv` 与
 `映射/layout.tsv`；二者不存在时这些判据标 SKIP（映射基础设施未建，非缺陷），
-不计 FAIL。L1／L4／L8／L9／L10／L14／L17 只依赖目录真值与磁盘，常时可判。
+不计 FAIL。L1／L4／L8／L9／L10／L14／L17／L18 只依赖目录真值与磁盘，常时可判。
 
 用法
 ----
@@ -208,7 +210,7 @@ def _norm(p):
 
 
 def run_gate(root, mapdir):
-    """执行 L1–L17，返回 [(判据, 结果, 说明)]。"""
+    """执行 L1–L18，返回 [(判据, 结果, 说明)]。"""
     if not os.path.isdir(root):
         print("FATAL 大纲根不存在或不是目录：%s" % root)
         raise SystemExit(2)
@@ -486,8 +488,26 @@ def run_gate(root, mapdir):
     add("L17", not both and not nogk,
         "secs=%d md+gitkeep=%d empty_without_gitkeep=%d" % (len(secs), len(both), len(nogk)))
 
-    # 按 L1..L17 顺序输出
-    order = {("L%d" % i): i for i in range(1, 18)}
+    # L18 落点名长度：单段文件名（UTF-8 字节）须 ≤255，否则 Linux 检出 ENAMETOOLONG
+    # （2026-10-29 立：CI 三次因 255 字节上限在「检出」即失败，而本机 NTFS 按字符计、无感）
+    n_md, overname = 0, []
+    for dirpath, _dirs, files in os.walk(root):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            n_md += 1
+            nb = len(fn.encode("utf-8"))
+            if nb > 255:
+                rel = os.path.relpath(os.path.join(dirpath, fn), root).replace("\\", "/")
+                overname.append((nb, rel))
+    overname.sort(reverse=True)
+    add("L18", not overname,
+        "md=%d over255=%d%s" % (n_md, len(overname),
+                                "" if not overname else
+                                " 首例=%dB %s" % (overname[0][0], overname[0][1])))
+
+    # 按 L1..L18 顺序输出
+    order = {("L%d" % i): i for i in range(1, 19)}
     res.sort(key=lambda t: order.get(t[0], 99))
     return res
 
@@ -579,7 +599,7 @@ def selftest():
         r = run_gate(root, os.path.join(root, "映射"))
         fails = [x for x in r if x[1] == "FAIL"]
         check("正例全 PASS", not fails, "%d 项 FAIL" % len(fails))
-        check("L1–L17 齐 17 条", len([x for x in r if x[0].startswith("L")]) == 17)
+        check("L1–L18 齐 18 条", len([x for x in r if x[0].startswith("L")]) == 18)
 
         # 负向：L17 节内 .md 与 .gitkeep 并存
         gk = os.path.join(root, "第01卷-合成甲", "第1章-甲一", "1.1-甲一节", ".gitkeep")
@@ -587,6 +607,14 @@ def selftest():
         r17 = {x[0]: x for x in run_gate(root, os.path.join(root, "映射"))}
         check("负向 L17 并存", r17["L17"][1] == "FAIL")
         os.remove(gk)
+
+        # 负向：L18 单段文件名 >255 字节（88 个汉字＝264 字节；NTFS 按字符计，可建）
+        p18 = os.path.join(root, "第01卷-合成甲", "第2章-甲二", "2.1-甲二节",
+                           "9.9.9-" + "长" * 88 + ".md")
+        _mk(p18, "# 9.9.9 长名\n")
+        r18 = {x[0]: x for x in run_gate(root, os.path.join(root, "映射"))}
+        check("负向 L18 超 255 字节", r18["L18"][1] == "FAIL")
+        os.remove(p18)
 
         # 负向：L4 H1 前缀不符
         p4 = os.path.join(root, "第01卷-合成甲", "第2章-甲二", "2.1-甲二节", "2.1.1-甲二一.md")
@@ -894,7 +922,7 @@ def selftest():
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="大纲落地一致性门禁 L1–L17")
+    ap = argparse.ArgumentParser(description="大纲落地一致性门禁 L1–L18")
     ap.add_argument("--root", default=DEFAULT_ROOT, help="大纲树根（默认 05-卷册大纲）")
     ap.add_argument("--map", default=None, help="映射层目录（默认 <root>/映射）")
     ap.add_argument("--check", action="store_true", help="只读检查（默认行为，兼容门禁调用惯例）")
@@ -909,7 +937,7 @@ def main(argv=None):
     fails = [x for x in res if x[1] == "FAIL"]
     skips = [x for x in res if x[1] == "SKIP"]
     print("=" * 72)
-    print("大纲落地一致性门禁 L1–L17")
+    print("大纲落地一致性门禁 L1–L18")
     print("=" * 72)
     for no, verdict, detail in res:
         print("  %-4s %-4s %s" % (no, verdict, detail))

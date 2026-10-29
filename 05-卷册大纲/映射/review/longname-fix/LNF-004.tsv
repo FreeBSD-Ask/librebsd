@@ -1,0 +1,3 @@
+idx	num	old_bytes	new_bytes	old_stem	new_stem
+1	18.4.3	260	132	18.4.3-2013 年 3 月 4 日，Eitan Adler 说明他曾在 2012 年 1 月 21 日把 1385 处 BUILD_DEPENDS 等号写法改为冒号赋值依赖 RUN_DEPENDS，如今 devel／ccache 加入后这类 Port 已有 bug，Port 不应假定 BUILD_DEPENDS 初始为空	18.4.3-2013 年 3 月 4 日，Adler 称 BUILD_DEPENDS 改冒号赋值后，devel／ccache 暴露 Port 假定依赖非空的问题
+2	19.6.29	260	137	19.6.29-2012 年 5 月 2 日，glarkin at FreeBSD.org 即 Greg Larkin 回应 Kaya：自己刚在 FreeBSD 上部署 Puppet Dashboard，给出手册链接，并分享 Ruby／vendors 目录与已装 Ports 冲突、Spamassassin 虚拟包问题及其规避办法	19.6.29-2012 年 5 月 2 日，Larkin 分享 Puppet Dashboard 部署经验，含 Ruby／vendors 冲突与 Spamassassin 虚拟包规避
