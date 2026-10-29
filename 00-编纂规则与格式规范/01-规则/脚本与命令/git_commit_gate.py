@@ -38,6 +38,9 @@
   B5  暂存路径为旁路备份副本（`.bak`／`.bak-*`／`.bak_*`／`.bak.<数字>`／`.prebak*`／
       `.orig`／`.rej`／`~` 结尾，或任一路径段含 `prebak`）→ 拒，**无放行标记**
       （2026-10-23 用户令：全库禁止旁路备份副本；留痕与回滚唯一靠 Git）
+  B6  暂存路径的任一单段文件名 UTF-8 字节 > 255（Linux NAME_MAX）→ 拒；`APPROVED-BY-OWNER:` 放行。
+      缘由（2026-10-29 立）：本机 NTFS 按字符计，256 字节的中文名照样能建，但 CI 在 Linux 检出时
+      直接 ENAMETOOLONG，门禁根本跑不到——落地门禁 L18 只能事后报，提交口才是唯一能拦的位置。
   H3  暂存 `.md` 含直角引号六码位（U+300C/300D/300E/300F/FF62/FF63）→ 拒；
       `APPROVED-BY-OWNER:` 放行。对象面＝**全部暂存 .md**（含内容层/逐字保真档案与
       代码上下文），与第二十四件 `audit_md_quote_glyphs.py` 的全库 T1 判据同一口径；
@@ -376,6 +379,17 @@ def stage_commitmsg(msg):
     bad_ignored, bad_big, bad_root, bad_bakdel, bad_space, bad_corner = [], [], [], [], [], []
     # B5 只拦“新增／修改”旁路副本；D（删除）是整改通道本身，不得阻断（否则遗留副本无法清除）
     bad_sidecar = [path for st, path, old in items if st != "D" and is_sidecar(path)]
+    # B6：单段文件名 UTF-8 字节 >255（Linux NAME_MAX）。本机 NTFS 按字符计可建，Linux 检出会
+    # ENAMETOOLONG 而使 CI 在「检出」即失败，届时门禁根本跑不到——故必须在提交口拦。
+    bad_longname = []
+    for st, path, old in items:
+        if st == "D":
+            continue
+        for comp in path.split("/"):
+            n = len(comp.encode("utf-8", "surrogateescape"))
+            if n > 255:
+                bad_longname.append("%s（单段 %d 字节）" % (path, n))
+                break
     bad_bakdel = [path for st, path, old in items
                   if st == "D" and path.startswith("12-数据库备份/")]
     new_paths = [path for st, path, old in items
@@ -413,6 +427,11 @@ def stage_commitmsg(msg):
     if bad_sidecar:
         errs.append("B5 暂存区含旁路备份副本（全库禁止，无放行标记；回滚靠 Git）：\n  "
                     + "\n  ".join(bad_sidecar))
+    if bad_longname:
+        errs.append("B6 暂存路径含单段文件名超过 255 字节（Linux NAME_MAX；CI 会在「检出」步骤\n"
+                    "   ENAMETOOLONG 失败，门禁跑不到。处置：缩短文件名与 H1 题名，见\n"
+                    "   05-卷册大纲/映射/review/longname-fix/ 的 LNF 台账）：\n  "
+                    + "\n  ".join(bad_longname))
     if bad_corner:
         errs.append("H3 暂存 .md 含直角引号六码位（第二十四件全库清零不变量的提交期兜底；"
                     "F1 不自动改正代码上下文与内容层/逐字保真面，故此处阻断）：\n  " + "\n  ".join(bad_corner))
@@ -422,7 +441,7 @@ def stage_commitmsg(msg):
     errs = [e for e in errs if not (
         (e.startswith("G1") and TAG_IGNORED in msg) or
         (e.startswith("G2") and TAG_BIGFILE in msg) or
-        (e.startswith(("B2", "B3", "B4", "H3")) and TAG_OWNER in msg))]
+        (e.startswith(("B2", "B3", "B4", "B6", "H3")) and TAG_OWNER in msg))]
     if errs:
         print("git_commit_gate 拒收（流程规则「Git 暂存规则」；批准标记：%s／%s／%s）：" % (TAG_IGNORED, TAG_BIGFILE, TAG_OWNER), flush=True)
         for e in errs:
@@ -594,6 +613,16 @@ def selftest():
     g("add", "-A")
     check("B4_全角空格拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("B4_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
+
+    # B6 单段文件名 >255 字节（88 个汉字＝264 字节；NTFS 按字符计可建，Linux 检出会失败）
+    repo, g = newrepo("t_b6")
+    os.makedirs(os.path.join(repo, "05-卷册大纲"))
+    long_name = "长" * 88 + ".md"
+    with open(os.path.join(repo, "05-卷册大纲", long_name), "w", encoding="utf-8") as f:
+        f.write("# 长名\n")
+    g("add", "-A")
+    check("B6_超长名拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
+    check("B6_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " 有意添加\n"))
 
     # B5 旁路备份副本（无放行标记）
     repo, g = newrepo("t_b5")
