@@ -115,10 +115,10 @@ NOTES_CONST_RE = re.compile(r"\bnotes\s*[:=]\s*(\d+)")
 # 这些夹具**刻意**绑定历史快照，其数值不应等于现行口径。
 # 豁免不等于免检：本件会断言“豁免项仍然需要豁免”——若某豁免文件已不再含非现行三元组，
 # 即判 FAIL，逼人删除腐烂的豁免条目（防豁免清单随目录演进静默失效）。
+# 2026-10-29：唯一豁免项 `_regr_on_backup.mjs` 已淘汰（ykla 裁定）——该套件所指向的
+# 历史备份件 script/_bak_index_before_batch1_20260912.html 磁盘与 git 均无，套件恒以
+# ERR_FILE_NOT_FOUND 退出，属从未执行的分支；现表为空，机制保留备后续新增。
 EXEMPT_FILES = {
-    "_regr_on_backup.mjs":
-        "对历史备份件 script/_bak_index_before_batch1_20260912.html（2026-09-12，25 卷 233 章 1525 节）"
-        "跑的回归，夹具须匹配该快照而非现行口径",
 }
 
 
