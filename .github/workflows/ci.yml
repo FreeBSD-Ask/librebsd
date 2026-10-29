@@ -82,6 +82,7 @@ jobs:
           python "$GATES/audit_page_assets.py"
           python "$GATES/audit_server_contract.py"
           python "$GATES/audit_page_version_bump.py"
+          python "$GATES/audit_title_consistency.py"
 
       - name: 守卫、锚与交叉引用层门禁
         id: g3

@@ -692,6 +692,50 @@ def probe_doc_resilient(rel, note, last):
     }
 
 
+def probe_title_design():
+    """小节标题设计（2026-10-29 立线，Task 3A）。
+
+    真值＝`05-卷册大纲/映射/title-design/`：每卷 `V{NN}.tsv` 为标题表（首行表头，余行为标题）；
+    批准＝`title-design/approved/V{NN}.title.ok`；例外＝`title-design/exceptions/V{NN}.tsv`；
+    证据＝`映射/title-evidence/V{NN}.tsv`。
+    **零态合法**：立线未开工时 0 标题、0 批准，不得判 FAIL（与 landing05 置零点后同为活跃零基线）。
+    sources 只列当前存在的文件（缺源会令 --check 恒 FAIL）。
+    """
+    dd = _p("05-卷册大纲", "映射", "title-design")
+    ed = _p("05-卷册大纲", "映射", "title-evidence")
+    srcs = []
+    titles = ledgers = 0
+    if os.path.isdir(dd):
+        for name in sorted(os.listdir(dd)):
+            if name.startswith("V") and name.endswith(".tsv") and len(name) == 7:
+                p = os.path.join(dd, name)
+                titles += max(0, len(_read(p).splitlines()) - 1)
+                ledgers += 1
+                srcs.append(p)
+    style = os.path.join(dd, "风格规范.md")
+    if os.path.exists(style):
+        srcs.append(style)
+    approved = 0
+    okd = os.path.join(dd, "approved")
+    if os.path.isdir(okd):
+        approved = sum(1 for n in os.listdir(okd) if n.endswith(".title.ok"))
+    exc = 0
+    exd = os.path.join(dd, "exceptions")
+    if os.path.isdir(exd):
+        for n in sorted(os.listdir(exd)):
+            if n.endswith(".tsv"):
+                exc += max(0, len(_read(os.path.join(exd, n)).splitlines()) - 1)
+    evid = 0
+    if os.path.isdir(ed):
+        evid = sum(1 for n in os.listdir(ed) if n.startswith("V") and n.endswith(".tsv"))
+    return {"status": "ACTIVE",
+            "progress": "标题 %d 条（%d 卷台账）／已批 %d/76 卷／例外 %d 条／证据 %d 卷"
+                        % (titles, ledgers, approved, exc, evid),
+            "values": {"titles": titles, "ledgers": ledgers, "approved_volumes": approved,
+                       "volumes": 76, "exceptions": exc, "evidence_volumes": evid},
+            "sources": srcs}
+
+
 # ---------------------------------------------------------------- 线定义
 LINES = [
     dict(id="usenet7", name="usenet 行级挖掘（7 组）", probe=probe_usenet7,
@@ -731,6 +775,11 @@ LINES = [
          resume="读 `.trae/specs/migrate-refactor2026-into-outline-20261023/tasks.md`＋"
                 "`01-项目管理/01-编纂规划与报告归档/05-大纲落地Task1-2-4-5任务书-20261023.md`",
          health="`00-编纂规则与格式规范/01-规则/脚本与命令/audit_outline_landing.py --check`（L1–L17）",
+         deep=None),
+    dict(id="title3a", name="小节标题设计（Task 3A）", probe=probe_title_design,
+         resume="读 `.trae/specs/rebuild-outline-subsection-layer-20261029/tasks.md` Task 3A＋"
+                "`05-卷册大纲/映射/title-design/风格规范.md`＋`05-卷册大纲/映射/parallel/title/README.md`",
+         health="`00-编纂规则与格式规范/01-规则/脚本与命令/audit_title_consistency.py --check`（第三十九件）",
          deep=None),
     dict(id="aline", name="A 线 大纲逐文件核查报告", probe=lambda: probe_doc_resilient(
         ("script", "_outline_audit_20260906"), "见该目录 PROGRESS/HANDOFF",
