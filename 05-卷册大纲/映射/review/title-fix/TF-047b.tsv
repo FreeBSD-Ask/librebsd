@@ -1,0 +1,4 @@
+source_id	old	new	reason
+S-006261	1996 年 2 月 25 日，称音频 CD 可当数据读，matcd 能取 redbook 原始 2352 字节块	1996 年 2 月 25 日，Frank Durda IV 说，Terry Lambert 提到有人能把音频格式的 CD 当数据读，从而省去 DAAD 转换；他还说明 matcd 驱动本就能读 redbook 数据，使用 ／dev／matcd0c 即可从任意 CD 读取原始 2352 字节的块	C7 半角分号全角化
+S-006785	1998 年 4 月 13 日，更正网卡型号为 3C589D 并重贴原信续查	1998 年 4 月 13 日，tom 为先前消息中的型号笔误致歉并更正：他那张卡实为 3C589 的 D 版，原信整段重贴未作改动，请继续按正确型号排查原先报告的故障	A2 型号转述；空格改句读
+S-007005	1999 年 6 月 28 日，Dillon 释 UIO_NOCOPY 仅用于 VFS 与 BIO 交互的退化情形	1999 年 6 月 28 日，Backplane 的 Matthew Dillon 说明 UIO_NOCOPY 仅用于处理 VFS／BIO 与 VM 交互中 I／O 的一种退化情形，与 read write 系统调用及 mmap 代码均无关联，并指出常规调用与内存映射 I／O 汇合于 VMIO 页缓存	题面截断于汇合于，依 H1 续至页缓存
