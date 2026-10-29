@@ -52,7 +52,10 @@ import time
 os.environ.setdefault("PYTHONDONTWRITEBYTECODE", "1")
 os.environ.setdefault("PYTHONNOUSERSITE", "1")
 
-DEFAULT_ROOT = r"D:\librebsd\05-卷册大纲\目录"
+# 2026-10-29 修：docroot 缺省值改由本件位置推导（parents[3]＝仓库根）。原写死盘符，
+# 在 CI（Linux 检出）下 abspath 会把它拼成 `<cwd>/D:\librebsd/...`，白名单资产全判缺失。
+DEFAULT_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))), "05-卷册大纲", "目录")
 DEFAULT_PORT = 8090
 DEFAULT_BIND = "0.0.0.0"
 
