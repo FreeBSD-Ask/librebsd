@@ -16,8 +16,10 @@
 
 口径
 ----
-- 节数：targets 实测；V01 记 61（55 既有＋2.3 拆节 6，ykla 2026-10-29 已批）。
-- 标题估算：J3 每节 2–12，中位 6；V01 取实测 363。
+- 节数：targets 实测；已批卷改用该卷台账实测（V01 因 2.3 拆节记 61，ykla 2026-10-29 已批）。
+- 标题估算：J3 每节 2–12，中位 6；已批卷改用 `title.ok` 的 `title_count` 实测。
+- 状态：由 `title-design/approved/V{NN}.title.ok` 派生（存在且台账在盘即 approved，否则 pending）；
+  不再按卷号写死。
 - `no_corpus_sections`：mapping.tsv 命中 0 行的节数，与标题层 `corpus_gap` 例外口径不同。
 - 波次（wave）：仅排班提示，组间无依赖。
 
@@ -36,6 +38,28 @@ import sys
 HDR = ["group_id", "vol", "vol_title", "chapters", "sections", "no_corpus_sections",
        "mapped_files", "corpus_bytes", "titles_est_min", "titles_est_target",
        "titles_est_max", "wave", "status", "outputs"]
+
+
+def approved_info(mapd, v):
+    """读 `approved/V{NN}.title.ok` 与该卷台账；齐备返回 dict，否则 None。
+
+    status 与实测计数只由批准标记派生，不在脚本里按卷号写死。
+    """
+    ok = os.path.join(mapd, "title-design", "approved", "V%02d.title.ok" % v)
+    led = os.path.join(mapd, "title-design", "V%02d.tsv" % v)
+    if not (os.path.exists(ok) and os.path.exists(led)):
+        return None
+    kv = {}
+    for ln in io.open(ok, encoding="utf-8").read().split("\n"):
+        if "=" in ln:
+            k, val = ln.split("=", 1)
+            kv[k.strip()] = val.strip()
+    lines = [ln for ln in io.open(led, encoding="utf-8").read().split("\n") if ln.strip()]
+    hdr = lines[0].split("\t")
+    body = [dict(zip(hdr, ln.split("\t"))) for ln in lines[1:]]
+    nsec = len({(r["chapter"], r["section"]) for r in body})
+    return {"count": int(kv.get("title_count") or len(body)),
+            "sha": kv.get("ledger_sha256", ""), "nsec": nsec}
 
 
 def build(root):
@@ -76,12 +100,13 @@ def build(root):
         seen = {r["source_relpath"] for r in rows_map if r["target_id"] in ids}
         nbytes = sum(path_bytes.get(p, 0) for p in seen)
         nsec = len(ids)
-        status = "pending"
-        if v == 1:
-            nsec, status = 61, "approved"
+        info = approved_info(mapd, v)
+        status = "approved" if info else "pending"
+        if info:
+            nsec = info["nsec"]
         titles_min, titles_mid, titles_max = 2 * nsec, 6 * nsec, 12 * nsec
-        if v == 1:
-            titles_min = titles_mid = titles_max = 363
+        if info:
+            titles_min = titles_mid = titles_max = info["count"]
         wave = 1 if v == 1 else (v - 2) // 8 + 1
         outs = ("title-design/V%02d.tsv;title-evidence/V%02d.tsv;"
                 "exceptions/V%02d.tsv(按需);V%02d-标题呈审报告.md" % (v, v, v, v))
@@ -96,14 +121,19 @@ def render_tsv(rows):
     return "\n".join(lines) + "\n"
 
 
-def render_card(r):
+def render_card(r, sha=""):
     (gid, vol, vt, ch, sec, nohis, files, nbytes, tmin, tmid, tmax,
      wave, status, _outs) = r
     v = int(vol)
     extra = ""
     if status == "approved":
-        extra = ("- **已批**：363 条定稿，ledger_sha256=52d7b522…；"
-                 "tag `outline-v01-titles-approved-20261029`。本组不再重复作业，仅作样板参照。\n")
+        extra = ("- **已批**：%s 条定稿，ledger_sha256=%s…；tag 与批准时间见 "
+                 "`映射/里程碑tag台账.tsv`。本组不再重复作业。\n"
+                 % (tmid, (sha or "?")[:8]))
+    if status == "approved":
+        title_line = "- 已定稿标题：%s 条（台账实测；J3 每节 2–12）\n" % tmid
+    else:
+        title_line = "- 预计标题：%s–%s（中位 %s；J3 每节 2–12）\n" % (tmin, tmax, tmid)
     return "".join([
         "# %s 第 %s 卷 标题设计任务组\n\n" % (gid, vol),
         "> 协议：`../README.md`；注册表：`../taskgroups.tsv`（本组数值以该行为准）。\n",
@@ -113,7 +143,7 @@ def render_card(r):
         "- 章数 %s；节数 %s（V01 已含 2.3 拆节 6 节，其余卷按 `targets.tsv` 实测）；"
         "`mapping.tsv` 命中 0 行的节 %s 个\n" % (ch, sec, nohis),
         "- 旧料：映射件 %s 件、%s 字节（`mapping.tsv` 该卷节点命中）\n" % (files, nbytes),
-        "- 预计标题：%s–%s（中位 %s；J3 每节 2–12）\n" % (tmin, tmax, tmid),
+        title_line,
         extra,
         "\n## 二、产出（只写这些）\n\n",
         "- `05-卷册大纲/映射/title-design/V%02d.tsv`\n" % v,
@@ -141,12 +171,18 @@ def main():
     a = ap.parse_args()
     root = a.root or os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
     rows = build(root)
+    mapd = os.path.join(root, "05-卷册大纲", "映射")
+    shas = {}
+    for r in rows:
+        if r[12] == "approved":
+            info = approved_info(mapd, int(r[1]))
+            shas[int(r[1])] = info["sha"] if info else ""
     tsv = render_tsv(rows)
     drift = 0
     for r in rows:
         p = os.path.join(root, "05-卷册大纲", "映射", "parallel", "title",
                          "V%02d" % int(r[1]), "task.md")
-        card = render_card(r)
+        card = render_card(r, shas.get(int(r[1]), ""))
         if a.check:
             cur = io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
             if cur != card:
