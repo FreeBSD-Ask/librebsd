@@ -1,3 +1,6 @@
 kind	vol	title_count	ledger_sha256	approved_by	approved_at	note
 title	V01	363	52d7b522228446fdd76e996f6897ab5fed122de414ea23abae2d8b28cd98b71c	ykla	2026-10-29	ykla 2026-10-29 批；含 231 条 corpus_gap（open）与 2.3 拆节 k=7（结构批 3,951→3,957 节与落盘同批）；台账任何增删改题即失效重批
 title	V03	90	0a945a0169c65508d3efcd23904ca34563df178b8cca3ea5cce6bbdd3400b89d	ykla	2026-10-30	ykla 2026-10-30 批；含 90 条 corpus_gap（open，3A.6 空骨架步）与无升格提案（P1–P3 均无）；台账任何增删改题即失效重批
+title	V01	363	5ff755ec88c9b84b0d43dfc84abab661f6ed51da3e74c2f729284757a9e87023	ykla	2026-10-30	Q2 谱系清理改题重批（ykla 2026-10-30 允许 s2 代改题名 4＋thesis 6）；supersedes 2026-10-29 行 52d7b522；含 231 条 corpus_gap（open）
+title	V02	102	33174eb0aa7327ca6cc459055c0fa1f013a36cb542c6cc94c98d6b9bf183ea0f	ykla	2026-10-30	二稿首批（一稿谱系与理论腔已依 ykla 指正清理）；ykla 2026-10-30 批；含 102 条 corpus_gap（open，3A.6 空骨架步）
+title	V03	90	62f6b79dd91a718580aaf983fc12632c70f5e8c98cff5fe52870e3a0d56f7106	ykla	2026-10-30	Q2 谱系清理改题重批（ykla 2026-10-30 允许 s2 代改 1.1.4）；supersedes 同日前行 0a945a01；含 90 条 corpus_gap（open）
