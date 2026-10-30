@@ -4,12 +4,12 @@
   "tree": "05-卷册大纲",
   "volumes": 76,
   "chapters": 544,
-  "sections": 3951,
+  "sections": 3954,
   "subsections": 0,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "extract": "title+body",
-  "generated_at": "2026-10-29T21:35:32+08:00"
+  "generated_at": "2026-10-30T15:27:57+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -2487,8 +2487,14 @@
    "volume": "第01卷-自由与必然：从图灵机到 UNIX（1830s–1989）",
    "title": "电子计算机的诞生",
    "domains": [],
-   "themes": [],
-   "sections": 3
+   "themes": [
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010",
+    "TH-HW-008",
+    "TH-LANG-030"
+   ],
+   "sections": 9
   },
   "V01-C003": {
    "volume": "第01卷-自由与必然：从图灵机到 UNIX（1830s–1989）",
@@ -3764,7 +3770,7 @@
    "themes": [
     "TH-LAW-016"
    ],
-   "sections": 4
+   "sections": 3
   },
   "V23-C003": {
    "volume": "第23卷-USL v. BSDi 的和解：协议条款、文件处置与史料缺口（1994–1995）",
@@ -3831,7 +3837,7 @@
    "title": "CSRG 的组织终局与档案保存（1995）",
    "domains": [],
    "themes": [],
-   "sections": 3
+   "sections": 1
   },
   "V25-C003": {
    "volume": "第25卷-4.4BSD-Lite2 与伯克利谢幕（1994–2005）",
@@ -8536,13 +8542,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-HIS-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-BIZ-014",
-    "TH-HIS-001",
-    "TH-HW-018"
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8555,12 +8561,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-HIS-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-BIZ-014",
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8569,17 +8576,131 @@
   },
   "V01-C002-2.3": {
    "chapter": "V01-C002",
-   "title": "ACM、IEEE 计算机学会与 USENIX 的学术组织活动",
+   "title": "ACM 与 IEEE 计算机学会：两个学科组织的建制",
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-HIS-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-BIZ-014",
-    "TH-HIS-001",
-    "TH-HW-018"
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.4": {
+   "chapter": "V01-C002",
+   "title": "USENIX 的成立、理事会与年会治理",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.5": {
+   "chapter": "V01-C002",
+   "title": "USENIX 标准报告：志愿编辑与标准联络",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.6": {
+   "chapter": "V01-C002",
+   "title": "POSIX 会议的议程、投票与批准",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-GOV-000",
+    "TH-LANG-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-GOV-010",
+    "TH-LANG-030"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.7": {
+   "chapter": "V01-C002",
+   "title": "ANSI X3 与 ISO SC22：语言标准的国内与国际接口",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.8": {
+   "chapter": "V01-C002",
+   "title": "文档与平台轮廓标准：X3K1、POSIX.0 与 POSIX.18",
+   "meta": false,
+   "domains": [
+    "TH-BIZ-000",
+    "TH-FS-000",
+    "TH-GOV-000"
+   ],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-FS-038",
+    "TH-GOV-010"
+   ],
+   "projects": [],
+   "technical_terms": [],
+   "subs": 0,
+   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "V01-C002-2.9": {
+   "chapter": "V01-C002",
+   "title": "用户组与会议生态：UniForum、DECUS 与 LISA",
+   "meta": false,
+   "domains": [
+    "TH-HW-000",
+    "TH-BIZ-000",
+    "TH-FS-000"
+   ],
+   "themes": [
+    "TH-HW-008",
+    "TH-BIZ-008",
+    "TH-FS-038"
    ],
    "projects": [],
    "technical_terms": [],
@@ -22435,7 +22556,7 @@
   },
   "V23-C002-2.2": {
    "chapter": "V23-C002",
-   "title": "和解协议的关键条款与法律意义",
+   "title": "和解协议的关键条款与法律效果",
    "meta": false,
    "domains": [
     "TH-LAW-000",
@@ -22454,24 +22575,6 @@
   "V23-C002-2.3": {
    "chapter": "V23-C002",
    "title": "USL 诉 BSD 相关主体：当事人适格与责任分配",
-   "meta": false,
-   "domains": [
-    "TH-LAW-000",
-    "TH-HIS-000"
-   ],
-   "themes": [
-    "TH-LAW-016",
-    "TH-HIS-001",
-    "TH-LAW-001"
-   ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
-  },
-  "V23-C002-2.4": {
-   "chapter": "V23-C002",
-   "title": "1994 年和解：协议条款与法律效果",
    "meta": false,
    "domains": [
     "TH-LAW-000",
@@ -22889,26 +22992,7 @@
   },
   "V25-C002-2.1": {
    "chapter": "V25-C002",
-   "title": "CSRG 的终结与最后阶段",
-   "meta": false,
-   "domains": [
-    "TH-HIS-000"
-   ],
-   "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
-   ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "的终结与最后"
-   ]
-  },
-  "V25-C002-2.2": {
-   "chapter": "V25-C002",
-   "title": "CSRG 的组织终局与档案保存",
+   "title": "CSRG 的组织终局与档案保存（1994–1995）",
    "meta": false,
    "domains": [
     "TH-HIS-000"
@@ -22923,25 +23007,6 @@
    "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
    "auto": [
     "的组织终局与"
-   ]
-  },
-  "V25-C002-2.3": {
-   "chapter": "V25-C002",
-   "title": "CSRG 的解散：1994–1995 年的组织终结",
-   "meta": false,
-   "domains": [
-    "TH-HIS-000"
-   ],
-   "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
-   ],
-   "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "的解散"
    ]
   },
   "V25-C003-3.1": {
