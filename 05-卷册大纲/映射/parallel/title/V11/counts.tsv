@@ -1,0 +1,7 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T02:53:31	start	0	0	0	C0 通过（漂移0）；x=V11；会话 batch11-20（V11–V20 十组）
+2026-10-30T02:53:31	claim	0	0	0	O_EXCL 创建成功
+2026-10-30T03:05:50	draft	34	204	0	台账落定 204 题
+2026-10-30T03:05:50	exception	34	204	198	corpus_gap 逐题登记
+2026-10-30T03:15:28	selfcheck	0	0	0	第三十九件全库 FAIL 1（V01 C8b 他卷既存，C8 为 10-30 新判据）；本卷贡献 0；交付合并者
+2026-10-30T05:24:14	done	34	204	198	done.json 三判据齐；呈审报告已出
