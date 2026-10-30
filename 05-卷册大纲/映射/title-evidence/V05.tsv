@@ -1,0 +1,403 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V05.1.1.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.5-unix哲学的局限管道组合的简洁性掩盖了错误处理的粗糙/010.5.2-管道组合的语义局限.md	史料	A	2026-10-30	010.5.2 管道组合的语义局限 要点：**要点**：管道为字节流，缺乏结构化数据语义；	none
+V05.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“管道与过滤器：组合式软件工程的形成”；本小节题为其下位论题	none
+V05.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.1.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.5-unix哲学的局限管道组合的简洁性掩盖了错误处理的粗糙/010.5.6-作者给出自己写的父子进程IO重定向示例含dup2替代宏与对readwrite返回.md	史料	A	2026-10-30	010.5.6 作者给出自己写的父子进程IO重定向示例含dup2替代宏与对readwrite返回 要点：作者给出自己写的父子进程I/O重定向示例，含dup2替代宏与对read、write返回值的检查。	none
+V05.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“管道与过滤器：组合式软件工程的形成”；本小节题为其下位论题	none
+V05.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.1.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.5-unix哲学的局限管道组合的简洁性掩盖了错误处理的粗糙/010.5.11-年2月10日RichardAOKeefe投稿lit程序补echo之不足可用令以横.md	史料	A	2026-10-30	010.5.11 年2月10日RichardAOKeefe投稿lit程序补echo之不足可用令以横 要点：1988年2月10日，RichardA.O'Keefe投稿lit程序补echo之不足，可用--令以横线开头或含反斜杠的文件名经变量赋值时正确取回。	none
+V05.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“管道与过滤器：组合式软件工程的形成”；本小节题为其下位论题	none
+V05.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.1.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.5-unix哲学的局限管道组合的简洁性掩盖了错误处理的粗糙/010.5.1-错误处理的粗糙性.md	史料	A	2026-10-30	010.5.1 错误处理的粗糙性 要点：**要点**：管道组合中工具错误处理粗糙——失败仅返回非零退出码，错误信息流向stderr与正常输出分离；	none
+V05.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“管道与过滤器：组合式软件工程的形成”；本小节题为其下位论题	none
+V05.1.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.1.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.5-unix哲学的局限管道组合的简洁性掩盖了错误处理的粗糙/010.5.3-二进制数据处理的不足.md	史料	A	2026-10-30	010.5.3 二进制数据处理的不足 要点：**要点**：UNIX工具以文本流为核心，二进制数据处理需od、dd等专用工具；	none
+V05.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“管道与过滤器：组合式软件工程的形成”；本小节题为其下位论题	none
+V05.1.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.2.1	Unix 第 7 版手册 grep(1) 原文（cat-v 镜像）	http://man.cat-v.org/unix-7th/1/grep	联网	A	2026-10-30	Commands of the grep family search the input files (standard input default) for lines matching a pattern.	none
+V05.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“文本处理工具：grep、sed 与 awk 的形成”；本小节题为其下位论题	none
+V05.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.2.2	Unix 第 7 版手册 sed(1) 原文	http://man.cat-v.org/unix-7th/1/sed	联网	A	2026-10-30	Sed copies the named files (standard input default) to the standard output, edited according to a script of commands.	none
+V05.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“文本处理工具：grep、sed 与 awk 的形成”；本小节题为其下位论题	none
+V05.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.2.3	Unix 第 7 版手册 awk(1) 原文	http://man.cat-v.org/unix-7th/1/awk	联网	A	2026-10-30	Awk scans each input file for lines that match any of a set of patterns specified in prog.	none
+V05.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“文本处理工具：grep、sed 与 awk 的形成”；本小节题为其下位论题	none
+V05.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.2.4	管道条目	https://en.wikipedia.org/wiki/Pipeline_(Unix)	联网	B	2026-10-30	The concept of pipelines was championed by Douglas McIlroy at Unix’s ancestral home of Bell Labs, during the development of Unix, shaping its toolbox philosophy.	none
+V05.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“文本处理工具：grep、sed 与 awk 的形成”；本小节题为其下位论题	none
+V05.1.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.2.5	Unix 第 7 版手册 grep(1) 原文（cat-v 镜像）	http://man.cat-v.org/unix-7th/1/grep	联网	A	2026-10-30	Commands of the grep family search the input files (standard input default) for lines matching a pattern.	none
+V05.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“文本处理工具：grep、sed 与 awk 的形成”；本小节题为其下位论题	none
+V05.1.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.3.1	Unix 第 7 版手册 sh(1) 原文	http://man.cat-v.org/unix-7th/1/sh	联网	A	2026-10-30	Sh is a command programming language that executes commands read from a terminal or a file.	none
+V05.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Shell：可编程的组合层”；本小节题为其下位论题	none
+V05.1.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.3.2	Unix 第 7 版手册 sh(1) 原文	http://man.cat-v.org/unix-7th/1/sh	联网	A	2026-10-30	Sh is a command programming language that executes commands read from a terminal or a file.	none
+V05.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Shell：可编程的组合层”；本小节题为其下位论题	none
+V05.1.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.3.3	Unix 第 7 版手册 sh(1) 原文	http://man.cat-v.org/unix-7th/1/sh	联网	A	2026-10-30	Sh is a command programming language that executes commands read from a terminal or a file.	none
+V05.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Shell：可编程的组合层”；本小节题为其下位论题	none
+V05.1.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Shell：可编程的组合层”；本小节题为其下位论题	none
+V05.1.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Shell：可编程的组合层”；本小节题为其下位论题	none
+V05.1.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.4.1	RATFOR 条目	https://en.wikipedia.org/wiki/RATFOR	联网	B	2026-10-30	Ratfor (short for Rational Fortran) is a programming language implemented as a preprocessor for Fortran 66.	none
+V05.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Software Tools、RATFOR 与可移植工具传统”；本小节题为其下位论题	none
+V05.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.4.2	RATFOR 条目	https://en.wikipedia.org/wiki/RATFOR	联网	B	2026-10-30	Ratfor (short for Rational Fortran) is a programming language implemented as a preprocessor for Fortran 66.	none
+V05.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Software Tools、RATFOR 与可移植工具传统”；本小节题为其下位论题	none
+V05.1.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Software Tools、RATFOR 与可移植工具传统”；本小节题为其下位论题	none
+V05.1.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Software Tools、RATFOR 与可移植工具传统”；本小节题为其下位论题	none
+V05.1.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Software Tools、RATFOR 与可移植工具传统”；本小节题为其下位论题	none
+V05.1.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.5.1	Unix 第 7 版手册 make(1) 原文	http://man.cat-v.org/unix-7th/1/make	联网	A	2026-10-30	Make executes commands in makefile to update one or more target names.	none
+V05.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”；本小节题为其下位论题	none
+V05.1.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.5.2	SCCS 条目	https://en.wikipedia.org/wiki/Source_Code_Control_System	联网	B	2026-10-30	Source Code Control System (SCCS) is a version control system designed to track changes in source code and other text files during the development of a piece of software.	none
+V05.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”；本小节题为其下位论题	none
+V05.1.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.5.3	Lint 条目	https://en.wikipedia.org/wiki/Lint_(software)	联网	B	2026-10-30	Lint is a Unix utility that performs static program analysis on C language source code.	none
+V05.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”；本小节题为其下位论题	none
+V05.1.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.5.4	Yacc 条目	https://en.wikipedia.org/wiki/Yacc	联网	B	2026-10-30	Yacc (Yet Another Compiler-Compiler) is a computer program for the Unix operating system developed by Stephen C. Johnson.	none
+V05.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”；本小节题为其下位论题	none
+V05.1.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“软件构造工具链：make、SCCS／RCS、lint 与 lex／yacc”；本小节题为其下位论题	none
+V05.1.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.6.1	Unix 第 7 版手册 troff(1) 原文	http://man.cat-v.org/unix-7th/1/troff	联网	A	2026-10-30	Troff formats text in the named files for printing on a Graphic Systems C/A/T phototypesetter; nroff for typewriter-like devices.	none
+V05.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文档工具链与 UNIX 手册：roff、troff／nroff 与 man”；本小节题为其下位论题	none
+V05.1.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.6.2	Unix 第 7 版手册 man(1) 原文	http://man.cat-v.org/unix-7th/1/man	联网	A	2026-10-30	Man locates and prints the section of this manual named title in the specified chapter.	none
+V05.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文档工具链与 UNIX 手册：roff、troff／nroff 与 man”；本小节题为其下位论题	none
+V05.1.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文档工具链与 UNIX 手册：roff、troff／nroff 与 man”；本小节题为其下位论题	none
+V05.1.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文档工具链与 UNIX 手册：roff、troff／nroff 与 man”；本小节题为其下位论题	none
+V05.1.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文档工具链与 UNIX 手册：roff、troff／nroff 与 man”；本小节题为其下位论题	none
+V05.1.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.7.1	《UNIX 编程环境》条目	https://en.wikipedia.org/wiki/The_UNIX_Programming_Environment	联网	B	2026-10-30	The Unix Programming Environment, first published in 1984 by Prentice Hall, is a book written by Brian W. Kernighan and Rob Pike, both of Bell Labs and considered an important and early document of the Unix operating system.	none
+V05.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“《UNIX 编程环境》与 Pike 的程序设计批评”；本小节题为其下位论题	none
+V05.1.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“《UNIX 编程环境》与 Pike 的程序设计批评”；本小节题为其下位论题	none
+V05.1.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.7.3	《UNIX 编程环境》条目	https://en.wikipedia.org/wiki/The_UNIX_Programming_Environment	联网	B	2026-10-30	The Unix Programming Environment, first published in 1984 by Prentice Hall, is a book written by Brian W. Kernighan and Rob Pike, both of Bell Labs and considered an important and early document of the Unix operating system.	none
+V05.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“《UNIX 编程环境》与 Pike 的程序设计批评”；本小节题为其下位论题	none
+V05.1.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“《UNIX 编程环境》与 Pike 的程序设计批评”；本小节题为其下位论题	none
+V05.1.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“《UNIX 编程环境》与 Pike 的程序设计批评”；本小节题为其下位论题	none
+V05.1.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.8.1	Dennis Ritchie《The Development of the C Language》作者自存重印	https://www.bell-labs.com/usr/dmr/www/chist.html	联网	A	2026-10-30	The C programming language was devised in the early 1970s as a system implementation language for the nascent Unix operating system.	none
+V05.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“UNIX 的可移植性：C、接口与跨平台软件”；本小节题为其下位论题	none
+V05.1.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“UNIX 的可移植性：C、接口与跨平台软件”；本小节题为其下位论题	none
+V05.1.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“UNIX 的可移植性：C、接口与跨平台软件”；本小节题为其下位论题	none
+V05.1.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“UNIX 的可移植性：C、接口与跨平台软件”；本小节题为其下位论题	none
+V05.1.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“UNIX 的可移植性：C、接口与跨平台软件”；本小节题为其下位论题	none
+V05.1.8.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“软件工具的组合：程序接口与组合惯例”；本小节题为其下位论题	none
+V05.1.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“软件工具的组合：程序接口与组合惯例”；本小节题为其下位论题	none
+V05.1.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.9.3	管道条目	https://en.wikipedia.org/wiki/Pipeline_(Unix)	联网	B	2026-10-30	The concept of pipelines was championed by Douglas McIlroy at Unix’s ancestral home of Bell Labs, during the development of Unix, shaping its toolbox philosophy.	none
+V05.1.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“软件工具的组合：程序接口与组合惯例”；本小节题为其下位论题	none
+V05.1.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“软件工具的组合：程序接口与组合惯例”；本小节题为其下位论题	none
+V05.1.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“软件工具的组合：程序接口与组合惯例”；本小节题为其下位论题	none
+V05.1.9.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“构造工具引入前后的协作方式（1975–1985）”；本小节题为其下位论题	none
+V05.1.10.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“构造工具引入前后的协作方式（1975–1985）”；本小节题为其下位论题	none
+V05.1.10.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“构造工具引入前后的协作方式（1975–1985）”；本小节题为其下位论题	none
+V05.1.10.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“构造工具引入前后的协作方式（1975–1985）”；本小节题为其下位论题	none
+V05.1.10.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“构造工具引入前后的协作方式（1975–1985）”；本小节题为其下位论题	none
+V05.1.10.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.11.1	SCCS 条目	https://en.wikipedia.org/wiki/Source_Code_Control_System	联网	B	2026-10-30	Source Code Control System (SCCS) is a version control system designed to track changes in source code and other text files during the development of a piece of software.	none
+V05.1.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“版本控制：SCCS、RCS 与变更登记”；本小节题为其下位论题	none
+V05.1.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.11.2	RCS 条目	https://en.wikipedia.org/wiki/Revision_Control_System	联网	B	2026-10-30	Revision Control System (RCS) is an early implementation of a version control system (VCS).	none
+V05.1.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“版本控制：SCCS、RCS 与变更登记”；本小节题为其下位论题	none
+V05.1.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“版本控制：SCCS、RCS 与变更登记”；本小节题为其下位论题	none
+V05.1.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“版本控制：SCCS、RCS 与变更登记”；本小节题为其下位论题	none
+V05.1.11.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“版本控制：SCCS、RCS 与变更登记”；本小节题为其下位论题	none
+V05.1.11.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.12.1	Unix 第 7 版手册 make(1) 原文	http://man.cat-v.org/unix-7th/1/make	联网	A	2026-10-30	Make executes commands in makefile to update one or more target names.	none
+V05.1.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“构建过程：make、Makefile 与依赖管理”；本小节题为其下位论题	none
+V05.1.12.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“构建过程：make、Makefile 与依赖管理”；本小节题为其下位论题	none
+V05.1.12.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“构建过程：make、Makefile 与依赖管理”；本小节题为其下位论题	none
+V05.1.12.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“构建过程：make、Makefile 与依赖管理”；本小节题为其下位论题	none
+V05.1.12.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“构建过程：make、Makefile 与依赖管理”；本小节题为其下位论题	none
+V05.1.12.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.13.1	patch 条目	https://en.wikipedia.org/wiki/Patch_(Unix)	联网	B	2026-10-30	patch is a shell command that updates text files according to instructions in a separate file, called a patch file.	none
+V05.1.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“变更分发：patch、邮件与 Usenet 源码组”；本小节题为其下位论题	none
+V05.1.13.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.13.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“变更分发：patch、邮件与 Usenet 源码组”；本小节题为其下位论题	none
+V05.1.13.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.13.3	Usenet 条目	https://en.wikipedia.org/wiki/Usenet	联网	B	2026-10-30	Usenet, short for User’s Network, is a worldwide distributed discussion system available on computers.	none
+V05.1.13.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“变更分发：patch、邮件与 Usenet 源码组”；本小节题为其下位论题	none
+V05.1.13.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.13.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“变更分发：patch、邮件与 Usenet 源码组”；本小节题为其下位论题	none
+V05.1.13.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.13.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“变更分发：patch、邮件与 Usenet 源码组”；本小节题为其下位论题	none
+V05.1.13.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.14.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“测试：正式测试套件缺席时代的验证方式”；本小节题为其下位论题	none
+V05.1.14.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.14.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“测试：正式测试套件缺席时代的验证方式”；本小节题为其下位论题	none
+V05.1.14.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.14.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“测试：正式测试套件缺席时代的验证方式”；本小节题为其下位论题	none
+V05.1.14.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.14.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“测试：正式测试套件缺席时代的验证方式”；本小节题为其下位论题	none
+V05.1.14.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.14.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“测试：正式测试套件缺席时代的验证方式”；本小节题为其下位论题	none
+V05.1.14.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.15.1	K&R 教科书条目	https://en.wikipedia.org/wiki/The_C_Programming_Language	联网	B	2026-10-30	The C Programming Language (sometimes termed K&R, after its authors’ initials) is a computer programming book written by Brian Kernighan and Dennis Ritchie	none
+V05.1.15.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“代码书写规范：Thompson-Ritchie 风格与 K&R 体例”；本小节题为其下位论题	none
+V05.1.15.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.15.2	Rob Pike《Notes on Programming in C》原文镜像	http://doc.cat-v.org/bell_labs/pikestyle	联网	A	2026-10-30	What follows is a set of short essays that collectively encourage a philosophy of clarity in programming rather than giving hard rules.	none
+V05.1.15.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“代码书写规范：Thompson-Ritchie 风格与 K&R 体例”；本小节题为其下位论题	none
+V05.1.15.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.15.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“代码书写规范：Thompson-Ritchie 风格与 K&R 体例”；本小节题为其下位论题	none
+V05.1.15.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.15.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“代码书写规范：Thompson-Ritchie 风格与 K&R 体例”；本小节题为其下位论题	none
+V05.1.15.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.15.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“代码书写规范：Thompson-Ritchie 风格与 K&R 体例”；本小节题为其下位论题	none
+V05.1.15.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.16.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 16 节“文档工程：man、troff 与手册随代码更新”；本小节题为其下位论题	none
+V05.1.16.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.16.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 16 节“文档工程：man、troff 与手册随代码更新”；本小节题为其下位论题	none
+V05.1.16.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.16.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 16 节“文档工程：man、troff 与手册随代码更新”；本小节题为其下位论题	none
+V05.1.16.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.16.4	Unix 第 7 版手册 man(1) 原文	http://man.cat-v.org/unix-7th/1/man	联网	A	2026-10-30	Man locates and prints the section of this manual named title in the specified chapter.	none
+V05.1.16.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 16 节“文档工程：man、troff 与手册随代码更新”；本小节题为其下位论题	none
+V05.1.16.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.16.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 16 节“文档工程：man、troff 与手册随代码更新”；本小节题为其下位论题	none
+V05.1.16.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.17.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 17 节“评审：非正式审查与莱昂氏注释的传播”；本小节题为其下位论题	none
+V05.1.17.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.17.2	莱昂氏注释条目	https://en.wikipedia.org/wiki/A_Commentary_on_the_UNIX_Operating_System	联网	B	2026-10-30	A Commentary on the Sixth Edition UNIX Operating System by John Lions (later reissued as Lions’ Commentary on UNIX 6th Edition and commonly referred to as the Lions Book) is a highly influential 1976 publication containing analytical commentary on the source code of the 6th Edition Unix computer operating system	none
+V05.1.17.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 17 节“评审：非正式审查与莱昂氏注释的传播”；本小节题为其下位论题	none
+V05.1.17.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.17.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 17 节“评审：非正式审查与莱昂氏注释的传播”；本小节题为其下位论题	none
+V05.1.17.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.17.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 17 节“评审：非正式审查与莱昂氏注释的传播”；本小节题为其下位论题	none
+V05.1.17.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.1.17.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 17 节“评审：非正式审查与莱昂氏注释的传播”；本小节题为其下位论题	none
+V05.1.17.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.1.1	Unix 哲学条目	https://en.wikipedia.org/wiki/Unix_philosophy	联网	B	2026-10-30	The Unix philosophy, originated by Ken Thompson, is a set of cultural norms and philosophical approaches to minimalist, modular software development.	none
+V05.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“UNIX 哲学：从工程习惯到思想体系”；本小节题为其下位论题	none
+V05.2.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.1.2	Unix 哲学条目（1974 论文设计考量段）	https://en.wikipedia.org/wiki/Unix_philosophy	联网	B	2026-10-30	In their Unix paper of 1974, Ritchie and Thompson quote the following design considerations	none
+V05.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“UNIX 哲学：从工程习惯到思想体系”；本小节题为其下位论题	none
+V05.2.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“UNIX 哲学：从工程习惯到思想体系”；本小节题为其下位论题	none
+V05.2.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“UNIX 哲学：从工程习惯到思想体系”；本小节题为其下位论题	none
+V05.2.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“UNIX 哲学：从工程习惯到思想体系”；本小节题为其下位论题	none
+V05.2.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.2.1	管道条目	https://en.wikipedia.org/wiki/Pipeline_(Unix)	联网	B	2026-10-30	The concept of pipelines was championed by Douglas McIlroy at Unix’s ancestral home of Bell Labs, during the development of Unix, shaping its toolbox philosophy.	none
+V05.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节““Do one thing well”：从 1978 年 UNIX 实践到后来的哲学化表述”；本小节题为其下位论题	none
+V05.2.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.2.2	Unix 哲学条目（1974 论文设计考量段）	https://en.wikipedia.org/wiki/Unix_philosophy	联网	B	2026-10-30	In their Unix paper of 1974, Ritchie and Thompson quote the following design considerations	none
+V05.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节““Do one thing well”：从 1978 年 UNIX 实践到后来的哲学化表述”；本小节题为其下位论题	none
+V05.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节““Do one thing well”：从 1978 年 UNIX 实践到后来的哲学化表述”；本小节题为其下位论题	none
+V05.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节““Do one thing well”：从 1978 年 UNIX 实践到后来的哲学化表述”；本小节题为其下位论题	none
+V05.2.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节““Do one thing well”：从 1978 年 UNIX 实践到后来的哲学化表述”；本小节题为其下位论题	none
+V05.2.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.3.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.2-一切皆文件plan9的后续继承/010.2.1-一切皆文件的unix起源.md	史料	A	2026-10-30	010.2.1 一切皆文件的 UNIX 起源 要点：**要点**：“一切皆文件”原则在V1(1971)已初具形态——普通文件、目录、设备文件共享inode结构；	none
+V05.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““一切皆文件”：系统模型与哲学化表达”；本小节题为其下位论题	none
+V05.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.3.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.2-一切皆文件plan9的后续继承/010.2.1-一切皆文件的unix起源.md	史料	A	2026-10-30	010.2.1 一切皆文件的 UNIX 起源 要点：**要点**：“一切皆文件”原则在V1(1971)已初具形态——普通文件、目录、设备文件共享inode结构；	none
+V05.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““一切皆文件”：系统模型与哲学化表达”；本小节题为其下位论题	none
+V05.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.3.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.2-一切皆文件plan9的后续继承/010.2.4-要点BellLabsPlan91992把一切皆文件推至极致文件系统为唯一接口网络.md	史料	A	2026-10-30	010.2.4 要点BellLabsPlan91992把一切皆文件推至极致文件系统为唯一接口网络 要点：**要点**：BellLabsPlan9(1992)把“一切皆文件”推至极致——文件系统为唯一接口，网络、窗口、进程均通过9P协议访问；	none
+V05.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““一切皆文件”：系统模型与哲学化表达”；本小节题为其下位论题	none
+V05.2.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.3.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.2-一切皆文件plan9的后续继承/010.2.1-一切皆文件的unix起源.md	史料	A	2026-10-30	010.2.1 一切皆文件的 UNIX 起源 要点：**要点**：“一切皆文件”原则在V1(1971)已初具形态——普通文件、目录、设备文件共享inode结构；	none
+V05.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““一切皆文件”：系统模型与哲学化表达”；本小节题为其下位论题	none
+V05.2.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.3.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.2-一切皆文件plan9的后续继承/010.2.4-要点BellLabsPlan91992把一切皆文件推至极致文件系统为唯一接口网络.md	史料	A	2026-10-30	010.2.4 要点BellLabsPlan91992把一切皆文件推至极致文件系统为唯一接口网络 要点：**要点**：BellLabsPlan9(1992)把“一切皆文件”推至极致——文件系统为唯一接口，网络、窗口、进程均通过9P协议访问；	none
+V05.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““一切皆文件”：系统模型与哲学化表达”；本小节题为其下位论题	none
+V05.2.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.4.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第003章-multics的起源与三方合作/003.13-对unix的批评multics视角multics阵营对unix简化路线的批评/003.13.2-复杂性与简洁性的哲学分歧.md	史料	A	2026-10-30	003.13.2 复杂性与简洁性的哲学分歧 要点：**要点**：Multics代表“系统正确性优先”路径——所有功能完备后再发布；	none
+V05.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 哲学的批评：简洁、组合与复杂性”；本小节题为其下位论题	none
+V05.2.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.4.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第014章-unix审美的批评与同期os比较/014.4-与同时期操作系统的比较multics哲学统一抽象的复杂性vms哲学工程实用主义/014.4.1-multics哲学的统一抽象复杂性.md	史料	A	2026-10-30	014.4.1 Multics 哲学的统一抽象复杂性 要点：**要点**：Multics哲学的核心是“统一抽象”——段式内存、统一文件数据库、动态链接；	none
+V05.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 哲学的批评：简洁、组合与复杂性”；本小节题为其下位论题	none
+V05.2.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.4.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第014章-unix审美的批评与同期os比较/014.4-与同时期操作系统的比较multics哲学统一抽象的复杂性vms哲学工程实用主义/014.4.1-multics哲学的统一抽象复杂性.md	史料	A	2026-10-30	014.4.1 Multics 哲学的统一抽象复杂性 要点：**要点**：Multics哲学的核心是“统一抽象”——段式内存、统一文件数据库、动态链接；	none
+V05.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 哲学的批评：简洁、组合与复杂性”；本小节题为其下位论题	none
+V05.2.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.4.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第003章-multics的起源与三方合作/003.13-对unix的批评multics视角multics阵营对unix简化路线的批评/003.13.2-复杂性与简洁性的哲学分歧.md	史料	A	2026-10-30	003.13.2 复杂性与简洁性的哲学分歧 要点：**要点**：Multics代表“系统正确性优先”路径——所有功能完备后再发布；	none
+V05.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 哲学的批评：简洁、组合与复杂性”；本小节题为其下位论题	none
+V05.2.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.4.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第003章-multics的起源与三方合作/003.13-对unix的批评multics视角multics阵营对unix简化路线的批评/003.13.2-复杂性与简洁性的哲学分歧.md	史料	A	2026-10-30	003.13.2 复杂性与简洁性的哲学分歧 要点：**要点**：Multics代表“系统正确性优先”路径——所有功能完备后再发布；	none
+V05.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 哲学的批评：简洁、组合与复杂性”；本小节题为其下位论题	none
+V05.2.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“工程评价词的来历：简洁、组合与可移植何以成为尺度”；本小节题为其下位论题	none
+V05.2.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“工程评价词的来历：简洁、组合与可移植何以成为尺度”；本小节题为其下位论题	none
+V05.2.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“工程评价词的来历：简洁、组合与可移植何以成为尺度”；本小节题为其下位论题	none
+V05.2.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“工程评价词的来历：简洁、组合与可移植何以成为尺度”；本小节题为其下位论题	none
+V05.2.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“工程评价词的来历：简洁、组合与可移植何以成为尺度”；本小节题为其下位论题	none
+V05.2.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.6.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.1-doonethingwell的文本谱系从mcilroy到pike到raymond/010.1.3-ericraymond的unix编程哲学.md	史料	A	2026-10-30	010.1.3 Eric Raymond 的 UNIX 编程哲学 要点：**要点**：EricRaymond2003年“TheArtofUNIXProgramming”把UNIX哲学系统化为17条原则，从单一工具到组合哲学全面论述；	none
+V05.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“《UNIX 编程艺术》的接受史与批判——文本、引用与误读”；本小节题为其下位论题	none
+V05.2.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.6.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.1-doonethingwell的文本谱系从mcilroy到pike到raymond/010.1.3-ericraymond的unix编程哲学.md	史料	A	2026-10-30	010.1.3 Eric Raymond 的 UNIX 编程哲学 要点：**要点**：EricRaymond2003年“TheArtofUNIXProgramming”把UNIX哲学系统化为17条原则，从单一工具到组合哲学全面论述；	none
+V05.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“《UNIX 编程艺术》的接受史与批判——文本、引用与误读”；本小节题为其下位论题	none
+V05.2.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.6.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.1-doonethingwell的文本谱系从mcilroy到pike到raymond/010.1.3-ericraymond的unix编程哲学.md	史料	A	2026-10-30	010.1.3 Eric Raymond 的 UNIX 编程哲学 要点：**要点**：EricRaymond2003年“TheArtofUNIXProgramming”把UNIX哲学系统化为17条原则，从单一工具到组合哲学全面论述；	none
+V05.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“《UNIX 编程艺术》的接受史与批判——文本、引用与误读”；本小节题为其下位论题	none
+V05.2.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.6.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.1-doonethingwell的文本谱系从mcilroy到pike到raymond/010.1.3-ericraymond的unix编程哲学.md	史料	A	2026-10-30	010.1.3 Eric Raymond 的 UNIX 编程哲学 要点：**要点**：EricRaymond2003年“TheArtofUNIXProgramming”把UNIX哲学系统化为17条原则，从单一工具到组合哲学全面论述；	none
+V05.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“《UNIX 编程艺术》的接受史与批判——文本、引用与误读”；本小节题为其下位论题	none
+V05.2.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.2.6.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第010章-unix哲学的工程原则形成/010.1-doonethingwell的文本谱系从mcilroy到pike到raymond/010.1.3-ericraymond的unix编程哲学.md	史料	A	2026-10-30	010.1.3 Eric Raymond 的 UNIX 编程哲学 要点：**要点**：EricRaymond2003年“TheArtofUNIXProgramming”把UNIX哲学系统化为17条原则，从单一工具到组合哲学全面论述；	none
+V05.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“《UNIX 编程艺术》的接受史与批判——文本、引用与误读”；本小节题为其下位论题	none
+V05.2.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.1.1	集体记忆条目	https://en.wikipedia.org/wiki/Collective_memory	联网	B	2026-10-30	The philosopher and sociologist Maurice Halbwachs analyzed and advanced the concept of the collective memory in the book Les cadres sociaux de la mémoire (“The Social Frameworks of Memory”)(1925).	none
+V05.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“记忆研究框架：集体记忆、记忆之场与传说的操作性区分”；本小节题为其下位论题	none
+V05.3.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.1.2	记忆之场条目	https://en.wikipedia.org/wiki/Lieux_de_mémoire	联网	B	2026-10-30	A lieu de mémoire (French for “site of memory” or memory space) is a physical place or object which acts as container of memory.	none
+V05.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“记忆研究框架：集体记忆、记忆之场与传说的操作性区分”；本小节题为其下位论题	none
+V05.3.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“记忆研究框架：集体记忆、记忆之场与传说的操作性区分”；本小节题为其下位论题	none
+V05.3.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.1.4	集体记忆条目（史学对照段）	https://en.wikipedia.org/wiki/Collective_memory	联网	B	2026-10-30	The difference between history and collective memory is best understood when comparing the aims and characteristics of each.	none
+V05.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“记忆研究框架：集体记忆、记忆之场与传说的操作性区分”；本小节题为其下位论题	none
+V05.3.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“记忆研究框架：集体记忆、记忆之场与传说的操作性区分”；本小节题为其下位论题	none
+V05.3.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.2.1	Jargon File 官方站（ESR 维护）	https://www.catb.org/jargon/	联网	A	2026-10-30	This page indexes all the WWW resources associated with the Jargon File and its print version, The New Hacker’s Dictionary.	none
+V05.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Jargon File 与 Hacker 文化的文本化”；本小节题为其下位论题	none
+V05.3.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.2.2	Jargon File 官方站（ESR 维护）	https://www.catb.org/jargon/	联网	A	2026-10-30	This page indexes all the WWW resources associated with the Jargon File and its print version, The New Hacker’s Dictionary.	none
+V05.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Jargon File 与 Hacker 文化的文本化”；本小节题为其下位论题	none
+V05.3.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Jargon File 与 Hacker 文化的文本化”；本小节题为其下位论题	none
+V05.3.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Jargon File 与 Hacker 文化的文本化”；本小节题为其下位论题	none
+V05.3.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Jargon File 与 Hacker 文化的文本化”；本小节题为其下位论题	none
+V05.3.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.3.1	Unix 条目信息框（年代基准）	https://en.wikipedia.org/wiki/Unix	联网	B	2026-10-30	Initial release | Development started in 1969 First manual published internally in November 1971 Announced outside Bell Labs in October 1973	none
+V05.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 起源叙事：一手史料与都市传说／事后哲学化的区分”；本小节题为其下位论题	none
+V05.3.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 起源叙事：一手史料与都市传说／事后哲学化的区分”；本小节题为其下位论题	none
+V05.3.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 起源叙事：一手史料与都市传说／事后哲学化的区分”；本小节题为其下位论题	none
+V05.3.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 起源叙事：一手史料与都市传说／事后哲学化的区分”；本小节题为其下位论题	none
+V05.3.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 起源叙事：一手史料与都市传说／事后哲学化的区分”；本小节题为其下位论题	none
+V05.3.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.4.1	Richard P. Gabriel 原文页（作者一手）	https://dreamsongs.com/WorseIsBetter.html	联网	A	2026-10-30	I jokingly answered, “because, well, worse is better.”	none
+V05.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Worse is Better 之辩：简洁与实现的取舍（1991）”；本小节题为其下位论题	none
+V05.3.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.4.2	Gabriel 原文存档镜像（cat-v.org）	http://doc.cat-v.org/programming/worse_is_better	联网	B	2026-10-30	It is slightly better to be simple than correct.	none
+V05.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Worse is Better 之辩：简洁与实现的取舍（1991）”；本小节题为其下位论题	none
+V05.3.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Worse is Better 之辩：简洁与实现的取舍（1991）”；本小节题为其下位论题	none
+V05.3.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Worse is Better 之辩：简洁与实现的取舍（1991）”；本小节题为其下位论题	none
+V05.3.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Worse is Better 之辩：简洁与实现的取舍（1991）”；本小节题为其下位论题	none
+V05.3.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.1.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第026章-plan9的起源与技术演化/026.1-Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思/026.1.1-plan-9-的起源-贝尔实验室-1985-1992-的-unix-反思.md	史料	A	2026-10-30	026.1.1 Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思 要点：Plan9操作系统项目于1985年前后在BellLabsMurrayHill计算科学研究中心（ComputingScienceResearchCenter，即著名的1127室）启动，由KenThompson、Dennis	none
+V05.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Plan 9 的起源与早期分发（约 1985–1993）”；本小节题为其下位论题	none
+V05.4.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.1.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第026章-plan9的起源与技术演化/026.1-Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思/026.1.1-plan-9-的起源-贝尔实验室-1985-1992-的-unix-反思.md	史料	A	2026-10-30	026.1.1 Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思 要点：Plan9操作系统项目于1985年前后在BellLabsMurrayHill计算科学研究中心（ComputingScienceResearchCenter，即著名的1127室）启动，由KenThompson、Dennis	none
+V05.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Plan 9 的起源与早期分发（约 1985–1993）”；本小节题为其下位论题	none
+V05.4.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.1.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第026章-plan9的起源与技术演化/026.1-Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思/026.1.1-plan-9-的起源-贝尔实验室-1985-1992-的-unix-反思.md	史料	A	2026-10-30	026.1.1 Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思 要点：Plan9操作系统项目于1985年前后在BellLabsMurrayHill计算科学研究中心（ComputingScienceResearchCenter，即著名的1127室）启动，由KenThompson、Dennis	none
+V05.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Plan 9 的起源与早期分发（约 1985–1993）”；本小节题为其下位论题	none
+V05.4.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.1.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第026章-plan9的起源与技术演化/026.1-Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思/026.1.1-plan-9-的起源-贝尔实验室-1985-1992-的-unix-反思.md	史料	A	2026-10-30	026.1.1 Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思 要点：Plan9操作系统项目于1985年前后在BellLabsMurrayHill计算科学研究中心（ComputingScienceResearchCenter，即著名的1127室）启动，由KenThompson、Dennis	none
+V05.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Plan 9 的起源与早期分发（约 1985–1993）”；本小节题为其下位论题	none
+V05.4.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.1.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第026章-plan9的起源与技术演化/026.1-Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思/026.1.1-plan-9-的起源-贝尔实验室-1985-1992-的-unix-反思.md	史料	A	2026-10-30	026.1.1 Plan-9-的起源-贝尔实验室-1985-1992-的-UNIX-反思 要点：Plan9操作系统项目于1985年前后在BellLabsMurrayHill计算科学研究中心（ComputingScienceResearchCenter，即著名的1127室）启动，由KenThompson、Dennis	none
+V05.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Plan 9 的起源与早期分发（约 1985–1993）”；本小节题为其下位论题	none
+V05.4.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.2.1	Plan 9 条目	https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs	联网	B	2026-10-30	Plan 9 from Bell Labs is an operating system designed by the Computing Science Research Center (CSRC) at Bell Labs in the mid-1980s, built on the UNIX concepts first developed there in the late 1960s.	none
+V05.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“CSRC、Bell Labs 与 Plan 9 的研究环境（1980 年代–1996）”；本小节题为其下位论题	none
+V05.4.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“CSRC、Bell Labs 与 Plan 9 的研究环境（1980 年代–1996）”；本小节题为其下位论题	none
+V05.4.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.2.3	Plan 9 条目	https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs	联网	B	2026-10-30	Plan 9 from Bell Labs is an operating system designed by the Computing Science Research Center (CSRC) at Bell Labs in the mid-1980s, built on the UNIX concepts first developed there in the late 1960s.	none
+V05.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“CSRC、Bell Labs 与 Plan 9 的研究环境（1980 年代–1996）”；本小节题为其下位论题	none
+V05.4.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“CSRC、Bell Labs 与 Plan 9 的研究环境（1980 年代–1996）”；本小节题为其下位论题	none
+V05.4.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“CSRC、Bell Labs 与 Plan 9 的研究环境（1980 年代–1996）”；本小节题为其下位论题	none
+V05.4.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.3.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.2-Plan-9-的关键概念史-UTF-8-命名空间-9P-rio/027.2.1-本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P.md	史料	A	2026-10-30	027.2.1 本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P 要点：本子节系统叙述Plan9的关键概念史——UTF-8编码、per-process命名空间、9P协议、rio窗口系统、Alef与Limbo语言、acme编辑器，呈现这些概念的设计动机、演化路径与对当代计算生态的隐性影响；	none
+V05.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Plan 9 的系统模型：9P、命名空间与 Rio”；本小节题为其下位论题	none
+V05.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.3.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.2-Plan-9-的关键概念史-UTF-8-命名空间-9P-rio/027.2.1-本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P.md	史料	A	2026-10-30	027.2.1 本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P 要点：本子节系统叙述Plan9的关键概念史——UTF-8编码、per-process命名空间、9P协议、rio窗口系统、Alef与Limbo语言、acme编辑器，呈现这些概念的设计动机、演化路径与对当代计算生态的隐性影响；	none
+V05.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Plan 9 的系统模型：9P、命名空间与 Rio”；本小节题为其下位论题	none
+V05.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.3.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.2-Plan-9-的关键概念史-UTF-8-命名空间-9P-rio/027.2.1-本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P.md	史料	A	2026-10-30	027.2.1 本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P 要点：本子节系统叙述Plan9的关键概念史——UTF-8编码、per-process命名空间、9P协议、rio窗口系统、Alef与Limbo语言、acme编辑器，呈现这些概念的设计动机、演化路径与对当代计算生态的隐性影响；	none
+V05.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Plan 9 的系统模型：9P、命名空间与 Rio”；本小节题为其下位论题	none
+V05.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.3.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.2-Plan-9-的关键概念史-UTF-8-命名空间-9P-rio/027.2.1-本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P.md	史料	A	2026-10-30	027.2.1 本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P 要点：本子节系统叙述Plan9的关键概念史——UTF-8编码、per-process命名空间、9P协议、rio窗口系统、Alef与Limbo语言、acme编辑器，呈现这些概念的设计动机、演化路径与对当代计算生态的隐性影响；	none
+V05.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Plan 9 的系统模型：9P、命名空间与 Rio”；本小节题为其下位论题	none
+V05.4.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.3.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.2-Plan-9-的关键概念史-UTF-8-命名空间-9P-rio/027.2.1-本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P.md	史料	A	2026-10-30	027.2.1 本子节系统叙述Plan9的关键概念史UTF8编码perprocess命名空间9P 要点：本子节系统叙述Plan9的关键概念史——UTF-8编码、per-process命名空间、9P协议、rio窗口系统、Alef与Limbo语言、acme编辑器，呈现这些概念的设计动机、演化路径与对当代计算生态的隐性影响；	none
+V05.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Plan 9 的系统模型：9P、命名空间与 Rio”；本小节题为其下位论题	none
+V05.4.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.4.1	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.1-Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证/027.1.1-plan-9-与-unix-bsd-的比较-技术哲学与许可证.md	史料	A	2026-10-30	027.1.1 Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证 要点：本子节呈现Plan9与UNIX/BSD/Linux在技术哲学与许可证层面的比较，遵循G6比较史研究约束——呈现不可通约性，禁止“优劣”二元判断，禁止“先进必胜”或“落后必败”的目的论叙事；	none
+V05.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Plan 9 与 UNIX：继承、拒绝与重新设计”；本小节题为其下位论题	none
+V05.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.4.2	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.1-Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证/027.1.1-plan-9-与-unix-bsd-的比较-技术哲学与许可证.md	史料	A	2026-10-30	027.1.1 Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证 要点：本子节呈现Plan9与UNIX/BSD/Linux在技术哲学与许可证层面的比较，遵循G6比较史研究约束——呈现不可通约性，禁止“优劣”二元判断，禁止“先进必胜”或“落后必败”的目的论叙事；	none
+V05.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Plan 9 与 UNIX：继承、拒绝与重新设计”；本小节题为其下位论题	none
+V05.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.4.3	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.1-Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证/027.1.1-plan-9-与-unix-bsd-的比较-技术哲学与许可证.md	史料	A	2026-10-30	027.1.1 Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证 要点：本子节呈现Plan9与UNIX/BSD/Linux在技术哲学与许可证层面的比较，遵循G6比较史研究约束——呈现不可通约性，禁止“优劣”二元判断，禁止“先进必胜”或“落后必败”的目的论叙事；	none
+V05.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Plan 9 与 UNIX：继承、拒绝与重新设计”；本小节题为其下位论题	none
+V05.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.4.4	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.1-Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证/027.1.1-plan-9-与-unix-bsd-的比较-技术哲学与许可证.md	史料	A	2026-10-30	027.1.1 Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证 要点：本子节呈现Plan9与UNIX/BSD/Linux在技术哲学与许可证层面的比较，遵循G6比较史研究约束——呈现不可通约性，禁止“优劣”二元判断，禁止“先进必胜”或“落后必败”的目的论叙事；	none
+V05.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Plan 9 与 UNIX：继承、拒绝与重新设计”；本小节题为其下位论题	none
+V05.4.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.4.5	旧树同节料件（块级摘要）	旧大纲-20261023/第01卷-unix的起源/第027章-plan9的哲学与当代影响/027.1-Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证/027.1.1-plan-9-与-unix-bsd-的比较-技术哲学与许可证.md	史料	A	2026-10-30	027.1.1 Plan-9-与-UNIX-BSD-的比较-技术哲学与许可证 要点：本子节呈现Plan9与UNIX/BSD/Linux在技术哲学与许可证层面的比较，遵循G6比较史研究约束——呈现不可通约性，禁止“优劣”二元判断，禁止“先进必胜”或“落后必败”的目的论叙事；	none
+V05.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Plan 9 与 UNIX：继承、拒绝与重新设计”；本小节题为其下位论题	none
+V05.4.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.5.1	Plan 9 条目（许可史段）	https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs	联网	B	2026-10-30	Since 2000, Plan 9 has been free and open-source.	none
+V05.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Plan 9 的传播与影响：UTF-8、Inferno 与 9front 续支（1993–2010 年代）”；本小节题为其下位论题	none
+V05.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.5.2	Pike 与 Thompson《Hello World》原文（Plan 9 官方文档档，9p.io，一手）	http://9p.io/sys/doc/utf.html	联网	A	2026-10-30	Plan 9 is the first system to treat the representation of all major languages on a uniform, equal footing throughout all its software.	none
+V05.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Plan 9 的传播与影响：UTF-8、Inferno 与 9front 续支（1993–2010 年代）”；本小节题为其下位论题	none
+V05.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.5.3	Inferno 条目	https://en.wikipedia.org/wiki/Inferno_(operating_system)	联网	B	2026-10-30	Inferno was created in 1995 by members of the AT&T Bell Labs Computing Sciences Research Center to bring ideas derived from their previous operating system, Plan 9 from Bell Labs, to a wider range of devices and networks.	none
+V05.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Plan 9 的传播与影响：UTF-8、Inferno 与 9front 续支（1993–2010 年代）”；本小节题为其下位论题	none
+V05.4.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.5.4	9front 官方站（续支发行在续）	https://9front.org/	联网	A	2026-10-30	latest release: GEFS SERVICE PACK 1	none
+V05.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Plan 9 的传播与影响：UTF-8、Inferno 与 9front 续支（1993–2010 年代）”；本小节题为其下位论题	none
+V05.4.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V05.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Plan 9 的传播与影响：UTF-8、Inferno 与 9front 续支（1993–2010 年代）”；本小节题为其下位论题	none
+V05.4.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none

@@ -2,23 +2,23 @@ group_id	vol	vol_title	chapters	sections	no_corpus_sections	mapped_files	corpus_
 TG-V01	1	自由与必然：从图灵机到 UNIX（1830s–1989）	10	61	36	55	565200	363	363	363	1	approved	title-design/V01.tsv;title-evidence/V01.tsv;exceptions/V01.tsv(按需);V01-标题呈审报告.md
 TG-V02	2	UNIX 的制度条件：法律与政策（1789–2026）	2	17	17	0	0	102	102	102	1	approved	title-design/V02.tsv;title-evidence/V02.tsv;exceptions/V02.tsv(按需);V02-标题呈审报告.md
 TG-V03	3	UNIX 的物质条件：机器、产业与机时（1970–2026）	3	15	15	0	0	90	90	90	1	approved	title-design/V03.tsv;title-evidence/V03.tsv;exceptions/V03.tsv(按需);V03-标题呈审报告.md
-TG-V04	4	UNIX 人物志：创造者、维护者与记录者（1962–1990）	6	28	28	0	0	56	168	336	1	pending	title-design/V04.tsv;title-evidence/V04.tsv;exceptions/V04.tsv(按需);V04-标题呈审报告.md
-TG-V05	5	UNIX 软件工程、哲学、叙事记忆与系统再思考（1969–1989）	4	32	25	16	143539	64	192	384	1	pending	title-design/V05.tsv;title-evidence/V05.tsv;exceptions/V05.tsv(按需);V05-标题呈审报告.md
-TG-V06	6	UNIX 共同体、传播与教学（1975–1995）	3	14	12	107	1562434	28	84	168	1	pending	title-design/V06.tsv;title-evidence/V06.tsv;exceptions/V06.tsv(按需);V06-标题呈审报告.md
-TG-V07	7	UNIX 学术史：研究 UNIX V1 至 V7 的研究文献与史学（1969–2026）	13	54	54	0	0	108	324	648	1	pending	title-design/V07.tsv;title-evidence/V07.tsv;exceptions/V07.tsv(按需);V07-标题呈审报告.md
-TG-V08	8	UNIX 技术专题史（1969–1989）	11	68	50	524	7563478	136	408	816	1	pending	title-design/V08.tsv;title-evidence/V08.tsv;exceptions/V08.tsv(按需);V08-标题呈审报告.md
-TG-V09	9	通往西部的帝国之路：从贝克莱到伯克利（1868–1995）	5	24	15	24	178816	48	144	288	1	pending	title-design/V09.tsv;title-evidence/V09.tsv;exceptions/V09.tsv(按需);V09-标题呈审报告.md
-TG-V10	10	ARPA／DARPA 与计算机研究制度（1957–2026）	6	56	56	0	0	112	336	672	2	pending	title-design/V10.tsv;title-evidence/V10.tsv;exceptions/V10.tsv(按需);V10-标题呈审报告.md
-TG-V11	11	DARPA 的资助机制与史料（1958–2026）	4	34	33	1	6213	68	204	408	2	pending	title-design/V11.tsv;title-evidence/V11.tsv;exceptions/V11.tsv(按需);V11-标题呈审报告.md
-TG-V12	12	BSD 伊始与早期发行（1973–1981）	5	39	32	94	1224605	78	234	468	2	pending	title-design/V12.tsv;title-evidence/V12.tsv;exceptions/V12.tsv(按需);V12-标题呈审报告.md
-TG-V13	13	从 4.1BSD 到 4.3BSD 的 CSRG 时代（1981–1986）	4	43	33	76	911939	86	258	516	2	pending	title-design/V13.tsv;title-evidence/V13.tsv;exceptions/V13.tsv(按需);V13-标题呈审报告.md
-TG-V14	14	CSRG 后期发行、可移植性与源码独立化（1983–1992）	6	51	51	0	0	102	306	612	2	pending	title-design/V14.tsv;title-evidence/V14.tsv;exceptions/V14.tsv(按需);V14-标题呈审报告.md
-TG-V15	15	CSRG 的组织、档案、教育与学术扩散（1974–1995）	4	19	7	25	165353	38	114	228	2	pending	title-design/V15.tsv;title-evidence/V15.tsv;exceptions/V15.tsv(按需);V15-标题呈审报告.md
-TG-V16	16	GNU 与自由软件运动（1970–2026）	6	40	40	0	0	80	240	480	2	pending	title-design/V16.tsv;title-evidence/V16.tsv;exceptions/V16.tsv(按需);V16-标题呈审报告.md
-TG-V17	17	Minix 的世界：一间教室、一位作者与一所大学（1987–1991）	4	10	10	0	0	20	60	120	2	pending	title-design/V17.tsv;title-evidence/V17.tsv;exceptions/V17.tsv(按需);V17-标题呈审报告.md
-TG-V18	18	Linux：独立操作系统的形成与发展（1991–2026）	8	94	16	3003	4154790	188	564	1128	3	pending	title-design/V18.tsv;title-evidence/V18.tsv;exceptions/V18.tsv(按需);V18-标题呈审报告.md
-TG-V19	19	UNIX 战争：阵营、联盟与体系整合（1982–1995）	4	25	25	0	0	50	150	300	3	pending	title-design/V19.tsv;title-evidence/V19.tsv;exceptions/V19.tsv(按需);V19-标题呈审报告.md
-TG-V20	20	商业 UNIX 市场与标准化（1984–1998）	3	19	19	0	0	38	114	228	3	pending	title-design/V20.tsv;title-evidence/V20.tsv;exceptions/V20.tsv(按需);V20-标题呈审报告.md
+TG-V04	4	UNIX 人物志：创造者、维护者与记录者（1962–1990）	6	28	28	0	0	168	168	168	1	approved	title-design/V04.tsv;title-evidence/V04.tsv;exceptions/V04.tsv(按需);V04-标题呈审报告.md
+TG-V05	5	UNIX 软件工程、哲学、叙事记忆与系统再思考（1969–1989）	4	32	25	16	143539	160	160	160	1	approved	title-design/V05.tsv;title-evidence/V05.tsv;exceptions/V05.tsv(按需);V05-标题呈审报告.md
+TG-V06	6	UNIX 共同体、传播与教学（1975–1995）	3	14	12	107	1562434	70	70	70	1	approved	title-design/V06.tsv;title-evidence/V06.tsv;exceptions/V06.tsv(按需);V06-标题呈审报告.md
+TG-V07	7	UNIX 学术史：研究 UNIX V1 至 V7 的研究文献与史学（1969–2026）	13	54	54	0	0	270	270	270	1	approved	title-design/V07.tsv;title-evidence/V07.tsv;exceptions/V07.tsv(按需);V07-标题呈审报告.md
+TG-V08	8	UNIX 技术专题史（1969–1989）	11	68	50	524	7563478	340	340	340	1	approved	title-design/V08.tsv;title-evidence/V08.tsv;exceptions/V08.tsv(按需);V08-标题呈审报告.md
+TG-V09	9	通往西部的帝国之路：从贝克莱到伯克利（1868–1995）	5	24	15	24	178816	120	120	120	1	approved	title-design/V09.tsv;title-evidence/V09.tsv;exceptions/V09.tsv(按需);V09-标题呈审报告.md
+TG-V10	10	ARPA／DARPA 与计算机研究制度（1957–2026）	6	56	56	0	0	280	280	280	2	approved	title-design/V10.tsv;title-evidence/V10.tsv;exceptions/V10.tsv(按需);V10-标题呈审报告.md
+TG-V11	11	DARPA 的资助机制与史料（1958–2026）	4	34	33	1	6213	204	204	204	2	approved	title-design/V11.tsv;title-evidence/V11.tsv;exceptions/V11.tsv(按需);V11-标题呈审报告.md
+TG-V12	12	BSD 伊始与早期发行（1973–1981）	5	39	32	94	1224605	234	234	234	2	approved	title-design/V12.tsv;title-evidence/V12.tsv;exceptions/V12.tsv(按需);V12-标题呈审报告.md
+TG-V13	13	从 4.1BSD 到 4.3BSD 的 CSRG 时代（1981–1986）	4	43	33	76	911939	258	258	258	2	approved	title-design/V13.tsv;title-evidence/V13.tsv;exceptions/V13.tsv(按需);V13-标题呈审报告.md
+TG-V14	14	CSRG 后期发行、可移植性与源码独立化（1983–1992）	6	51	51	0	0	306	306	306	2	approved	title-design/V14.tsv;title-evidence/V14.tsv;exceptions/V14.tsv(按需);V14-标题呈审报告.md
+TG-V15	15	CSRG 的组织、档案、教育与学术扩散（1974–1995）	4	19	7	25	165353	114	114	114	2	approved	title-design/V15.tsv;title-evidence/V15.tsv;exceptions/V15.tsv(按需);V15-标题呈审报告.md
+TG-V16	16	GNU 与自由软件运动（1970–2026）	6	40	40	0	0	240	240	240	2	approved	title-design/V16.tsv;title-evidence/V16.tsv;exceptions/V16.tsv(按需);V16-标题呈审报告.md
+TG-V17	17	Minix 的世界：一间教室、一位作者与一所大学（1987–1991）	4	10	10	0	0	60	60	60	2	approved	title-design/V17.tsv;title-evidence/V17.tsv;exceptions/V17.tsv(按需);V17-标题呈审报告.md
+TG-V18	18	Linux：独立操作系统的形成与发展（1991–2026）	8	94	16	3003	4154790	564	564	564	3	approved	title-design/V18.tsv;title-evidence/V18.tsv;exceptions/V18.tsv(按需);V18-标题呈审报告.md
+TG-V19	19	UNIX 战争：阵营、联盟与体系整合（1982–1995）	4	25	25	0	0	150	150	150	3	approved	title-design/V19.tsv;title-evidence/V19.tsv;exceptions/V19.tsv(按需);V19-标题呈审报告.md
+TG-V20	20	商业 UNIX 市场与标准化（1984–1998）	3	19	19	0	0	114	114	114	3	approved	title-design/V20.tsv;title-evidence/V20.tsv;exceptions/V20.tsv(按需);V20-标题呈审报告.md
 TG-V21	21	386BSD：BSD UNIX 的现代化与分水岭（1991–2016）	5	19	9	12	42384	38	114	228	3	pending	title-design/V21.tsv;title-evidence/V21.tsv;exceptions/V21.tsv(按需);V21-标题呈审报告.md
 TG-V22	22	法律危机：USL 诉 BSDi 与发行冻结（1992–1994）	5	25	25	0	0	50	150	300	3	pending	title-design/V22.tsv;title-evidence/V22.tsv;exceptions/V22.tsv(按需);V22-标题呈审报告.md
 TG-V23	23	USL v. BSDi 的和解：协议条款、文件处置与史料缺口（1994–1995）	4	13	13	0	0	26	78	156	3	pending	title-design/V23.tsv;title-evidence/V23.tsv;exceptions/V23.tsv(按需);V23-标题呈审报告.md
