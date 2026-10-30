@@ -1,2 +1,8 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:25	start				开工：3A.6 派单 V31-V50
+2026-10-30T16:02:21	claim				claim created session=resume-3a6-20261030-V32
+2026-10-30T16:44:24	draft	30	150	0	拟题完成（30 节各 5 题）
+2026-10-30T16:44:24	exception	30	150	150	150 题均无旧树同节料件，登记 corpus_gap
+2026-10-30T16:44:24	selfcheck	30	150	150	沙箱门禁 FAIL 0（exit 0）；全库门禁 3 项 FAIL 均属 V55
+2026-10-30T16:44:24	done	30	150	150	done.json 已写
+2026-10-30T16:50:57	selfcheck	30	150	150	沙箱门禁 FAIL 0（exit 0）；全库门禁 exit 2 因 V58 证据列数违约（他卷在途），V32 不涉

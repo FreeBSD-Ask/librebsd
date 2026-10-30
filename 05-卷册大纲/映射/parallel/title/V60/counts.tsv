@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T18:12:22	start	0	0	0	承接 TG-V60（14 章 106 节），claim 已在
+2026-10-30T18:12:22	draft	106	529	419	14 件 parts 合并，逐章 merge_parts→assemble
+2026-10-30T18:12:22	assemble	106	529	419	lint hard=0 warn=0；ledger 150c7fbabe53
+2026-10-30T18:12:22	audit	106	529	419	audit_title_consistency 本卷 FAIL 0（他卷与 H1 不代改）
+2026-10-30T18:12:22	review	106	529	419	逐条判读 529 条，14 件 review_chN.tsv，改题 28 条
+2026-10-30T18:12:22	report	106	529	419	呈审报告已写，待 ykla 卷级批准
+2026-10-30T18:12:22	done	106	529	419	指纹 150c7fbabe53e856433dd36f43107537169686dbfce04a5616e353ef99491890

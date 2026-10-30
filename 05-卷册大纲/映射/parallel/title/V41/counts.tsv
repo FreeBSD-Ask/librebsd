@@ -1,2 +1,10 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:28	start				开工：3A.6 派单 V31-V50
+2026-10-30T18:17:16	takeover				ykla 2026-10-30 批准 10 子代理接管；原 session wb3a6-v31-50 无 done.json
+2026-10-30T18:17:30	draft	88	418		全卷 88 节逐节读 outline 节题与分工注后拟题
+2026-10-30T18:17:40	exception	88	418	413	83 节旧树映射 0 件或语义错配，逐题登记 corpus_gap
+2026-10-30T18:18:10	selfcheck	88	418	413	audit_title_consistency --check：V41 FAIL 0；全局 exit 1 因他卷 V12 H1 hash 不符
+2026-10-30T18:18:20	done	88	418	413	done.json 三判据齐；ledger_sha256=0ea42de77b9b813ba618d28eb233baeb7559831ea77ab8779c69974dd89eb811
+2026-10-30T19:50:00	draft	88	418	413	第二轮（ykla 令退回）：418 条联网引文改由 _v41_map.py 逐题指认、_v41_make.py 生成并逐字校验
+2026-10-30T20:15:25	selfcheck	88	418	413	_v41_verify2：联网行 418／未命中 0／复用 0／URL 99／maxPage 25（6.0%）／tier A416 B2／维基 0；audit_title_consistency V41 FAIL 0（他卷 V46 C6 FAIL）
+2026-10-30T20:18:00	done	88	418	413	第二轮收口：题面／thesis／order／status／sources 零改动，ledger_sha256 未变

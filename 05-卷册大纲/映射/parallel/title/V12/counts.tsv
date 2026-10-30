@@ -5,3 +5,8 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T03:13:58	exception	39	234	192	corpus_gap 逐题登记
 2026-10-30T03:15:28	selfcheck	0	0	0	第三十九件全库 FAIL 1（V01 C8b 他卷既存，C8 为 10-30 新判据）；本卷贡献 0；交付合并者
 2026-10-30T05:24:14	done	39	234	192	done.json 三判据齐；呈审报告已出
+2026-10-30T17:27:21	takeover	39	234	192	ykla 2026-10-30 批准 10 子代理接管；superseded=zcode-glm53flash-b11-20
+2026-10-30T17:22:10	selfcheck	39	234	192	第三十九件 --check：40 项 FAIL 1（H1 本卷 hash 待合并者重批），其余 39 项 PASS；联网补证 284 行／28 URL／未命中 0
+2026-10-30T17:27:21	done	39	234	192	证据 510→794（联网 284）；sources 全覆盖；ledger_sha256=30cba5967e71
+2026-10-30T19:05:19	整改	39	234	192	ykla 裁定退回改题：改题 8 条（1.1.3／2.3.5／3.9.1–3.9.6），联网引文替换 2 条＋query 改写 4 条；新 ledger_sha256=600efaa5f327；第三十九件 FAIL 1（H1 待重批）
+2026-10-30T19:20:00	整改	39	234	192	二次整改 7 题（对象化题面）；指纹 914577674197

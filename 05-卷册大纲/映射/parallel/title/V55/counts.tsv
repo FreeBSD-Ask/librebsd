@@ -1,0 +1,9 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T09:26:42	start	0	0	0	认领完成（claim 原子创建，存在即让出）；读 outline／targets／mapping 实查
+2026-10-30T15:30:00	draft	52	268	268	13 章分 parts 起草完毕；ch1 既有 24 题逐条复核并修正；全卷 corpus=none（mapping.tsv 命中 0 行）
+2026-10-30T16:20:00	assemble	52	268	268	merge_parts 后首装配；lint hard=27（T6 长度与 C8b 尾簇），逐条改名清零
+2026-10-30T16:50:00	audit	52	268	268	audit_title_consistency --check：本卷 FAIL 0；余 1 项为他线 V11 的 H1
+2026-10-30T17:05:00	review	52	268	268	13 件 review_ch{N}.tsv 共 268 行逐条判读；维持 263、改题 4、改论题 1；apply_review 后重装配
+2026-10-30T17:09:00	assemble	52	268	268	复装配：lint hard=0 warn=0；ledger_sha256=f651dc678d774d8cbc21968d442e34207f82d512b117cb78b110b3a779a1272c
+2026-10-30T17:12:00	report	52	268	268	呈审报告已写（13 章逐章结论、修正表、12 项存疑、本地库交叉复核）
+2026-10-30T17:13:00	done	52	268	268	四件＋两凭据齐备，待 ykla 卷级批准；本会话不自批

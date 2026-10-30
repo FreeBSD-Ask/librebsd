@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T17:12:13	start	0	0	0	V56 接单，input 切片与 mapping 实查就绪
+2026-10-30T17:12:13	draft	40	187	73	五章 parts 全部落地，merge_parts 合成 design.json
+2026-10-30T17:12:13	assemble	40	187	73	assemble.py V56，lint hard=0 warn=0
+2026-10-30T17:12:13	audit	40	187	73	audit_title_consistency --check：V56 无 FAIL（唯一 FAIL 为 V11 H1）
+2026-10-30T17:12:13	review	40	187	73	逐条判读 187/187，处置 14 条（改写 7、删除 7）
+2026-10-30T17:12:13	report	40	187	73	呈审报告已写，hash=4555ceb0b1a4
+2026-10-30T17:12:13	done	40	187	73	待 ykla 卷级批准；本会话不自批

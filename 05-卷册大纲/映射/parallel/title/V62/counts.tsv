@@ -1,0 +1,9 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T09:26:42	start	0	0	0	claim 已存在（claude-main-v51-76-20261030），未重建
+2026-10-30T15:05:00	corpus	0	0	0	逐节实查：mapping 命中 8 节，2.7 判语义不合；有料 7／无料 39
+2026-10-30T16:40:00	draft	46	230	195	五章 parts 完毕（75／40／30／50／35），merge_parts 通过
+2026-10-30T17:10:00	assemble	46	230	195	assemble.py V62：lint hard=0 warn=0
+2026-10-30T17:20:00	audit	46	230	195	audit_title_consistency --check：本卷 FAIL 0（他卷 V60／V64／V12 披露不代改）
+2026-10-30T17:40:00	review	46	230	195	逐条判读 230／230：维持 215、改题 13、换证 2；apply_review 后重装配 harder=0
+2026-10-30T17:50:00	report	46	230	195	呈审报告与四源矩阵落盘；不同 URL 37，A 201／B 12／C 0
+2026-10-30T17:53:58	done	46	230	195	ledger_sha256=a21bb74dfef36072f480f15ed253b968a82623e973e934c08c945bd61ee9a0e7

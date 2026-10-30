@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T09:26:42	start	0	0	0	claim 已存在（claude-main-v51-76-20261030），本会话按卷接手
+2026-10-30T16:56:00	draft	30	150	0	parts ch1–ch9 逐章生成并合并；本行时刻为批末实测，各章在同批内连续完成
+2026-10-30T16:56:00	assemble	30	150	80	ledger_sha256=ca0056f8…（判读前 71ccf184…）；lint hard=0 warn=0
+2026-10-30T16:56:00	audit	30	150	80	audit_title_consistency --check：本卷 FAIL 0；他卷 FAIL 6（V55 B1/C8b/G2、V56 B3/C8b、V11 H1）
+2026-10-30T16:56:00	review	30	150	80	逐条判读 150 条：改题 29、改论题 29、补证 6 行；判读表 review_ch1–ch9.tsv
+2026-10-30T16:56:00	report	30	150	80	呈审报告 title-design/V57-标题呈审报告.md 已写
+2026-10-30T16:56:00	done	30	150	80	待 ykla 卷级批准；本会话不自批、不写 title.ok

@@ -1,0 +1,11 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T15:40:00	start	0	0	0	claim 已由上级会话持有（session=claude-main-v51-76-20261030），本执行体不重建
+2026-10-30T15:50:00	draft	4	20	20	第 1 章 parts 落盘，merge_parts＋assemble 预检
+2026-10-30T16:05:00	draft	16	80	80	第 2–3 章落盘（含史料 17 节中的 9 节）
+2026-10-30T16:20:00	draft	32	160	100	第 4–6 章落盘
+2026-10-30T16:35:00	draft	58	270	188	第 7–9 章落盘，全卷成型
+2026-10-30T16:40:00	selfcheck	58	270	188	assemble V58：lint hard=0 warn=0；尾簇三轮回改后清零
+2026-10-30T16:50:00	exception	58	270	188	188 条 corpus_gap（41 个无料节逐题）
+2026-10-30T17:00:00	selfcheck	58	270	188	audit_title_consistency --check：本卷 FAIL 0（他卷 V55／V56／V11 各有 FAIL，如实记录不代改）
+2026-10-30T17:05:00	draft	58	270	188	逐条判读 270/270：维持 232、改 24（改题 6）、补证 2；apply_review 后重装配 hard=0
+2026-10-30T17:10:00	done	58	270	188	呈审报告落盘；账本 sha256=878a97589302512094ba39fdbcbbc8334c1abd318dbe42a48a9b6ec405f95020

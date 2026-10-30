@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T17:05:11	start	0	0	0	claim 已存在；无 parts，从第 1 章起草
+2026-10-30T17:48:20	draft	70	284	0	八章 parts 写完并 merge；design.json 70 节 284 题
+2026-10-30T17:52:06	assemble	70	284	0	首装 hard=20（17 条 7 字题、3 条缺第三源），逐条修补
+2026-10-30T17:58:33	assemble	70	284	280	尾簇拆解后 hard=0 warn=0；exceptions corpus_gap 280
+2026-10-30T18:02:47	audit	70	284	280	audit_title_consistency --check：本卷 FAIL 0（B1／B3 两条已改题）
+2026-10-30T18:08:12	review	70	284	280	逐条判读 284 行（八件），改论题 4、补证 2；重装 hard=0
+2026-10-30T18:10:29	report	70	284	280	呈审报告与 done.json 已写；hash=53b59ab2c103

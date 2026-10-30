@@ -5,3 +5,6 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T03:05:50	exception	34	204	198	corpus_gap 逐题登记
 2026-10-30T03:15:28	selfcheck	0	0	0	第三十九件全库 FAIL 1（V01 C8b 他卷既存，C8 为 10-30 新判据）；本卷贡献 0；交付合并者
 2026-10-30T05:24:14	done	34	204	198	done.json 三判据齐；呈审报告已出
+2026-10-30T16:49:28	takeover	34	204	198	ykla 2026-10-30 批准 10 子代理接管；superseded=zcode-glm53flash-b11-20；V11 全量联网补证（仅补证不改题）
+2026-10-30T16:56:10	selfcheck	34	204	198	第三十九件 FAIL 6：本卷仅 H1（标记 715bb7dd… ≠ 实 d4124083…，待合并者重批）；B1／B3／B6／C6／C8b 为他卷（V55／V56／V58），不代改
+2026-10-30T16:56:10	done	34	204	198	补证收口：证据 414→618（联网 204 行），独立 URL 27，逐字校验未命中 0；题面零改动；指纹 d4124083bce0

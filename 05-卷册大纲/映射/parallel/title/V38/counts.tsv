@@ -1,2 +1,8 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:27	start				开工：3A.6 派单 V31-V50
+2026-10-30T17:55:06	takeover	0	0	0	ykla 2026-10-30 批准 10 子代理接管；原 claim session=wb3a6-v31-50 无 done.json
+2026-10-30T17:55:06	draft	33	198	0	台账落定 198 题（33 节 × 6）
+2026-10-30T17:55:06	exception	33	198	198	corpus_gap 逐题登记（本卷旧树料 0 件）
+2026-10-30T17:55:06	selfcheck	33	198	198	第三十九件全库 FAIL 6 项（B1 V60、B3 V64、B6 V39、C6 V39／V64、C8b V39、H1 V12 均他卷）；本卷贡献 0
+2026-10-30T17:55:06	done	33	198	198	done.json 三判据齐；呈审报告已出
+2026-10-30T19:24:03	rework	33	198	198	evidence 换源 64 行（维基 56 换官方／一手页、8 行同页换句）；维基 0、同句复用 0、未命中 0、独立 URL 28；ledger_sha256 未变

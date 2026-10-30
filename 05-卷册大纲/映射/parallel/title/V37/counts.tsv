@@ -1,2 +1,9 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:27	start				开工：3A.6 派单 V31-V50
+2026-10-30T17:01:42	takeover				原 session=wb3a6-v31-50 无 done.json；ykla 2026-10-30 批准 10 子代理接管
+2026-10-30T17:01:42	claim	0	0	0	接管控领 V37；旧 claim 由 resume 会话重写
+2026-10-30T17:01:42	draft	159	795	0	逐节读 outline 节题与分工注，按风格规范八步拟题
+2026-10-30T17:01:42	exception	159	795	530	106 个零料节逐题登记 corpus_gap
+2026-10-30T17:01:42	selfcheck	159	795	530	audit_title_consistency.py --check：V37 FAIL 0；他卷 FAIL 见报告
+2026-10-30T17:07:15	done	159	795	530	ledger_sha256=60dea753c55ca4d03c7e45f57a017984de2b62e2c5d394bebb130d0427d540ef；待 ykla 卷级批准
+2026-10-30T19:26:21	revise	159	795	530	ykla 退回补精确引文后整改：联网行 795→789，替换 179，回退 8，删行 6（arch-handbook 无逐题一手句），URL 66→153，maxPage 128，未命中0／重复0／维基0；ledger_sha256=c76854f98c686286bada280759ede569100604448a699d97162d065d3d5dbdcb

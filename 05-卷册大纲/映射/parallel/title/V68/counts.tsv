@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T09:26:42	start	0	0	0	claim 已存在（claude-main-v51-76-20261030），本会话接手 V68
+2026-10-30T14:20:00	draft	112	560	555	17 章 parts 起草完毕；逐节实查：mapping 命中 1 节（10.8），余 111 节旧树为 162 B 待补占位
+2026-10-30T14:32:00	assemble	112	560	555	assemble.py V68：首轮 lint hard=102（长度 7／日期起首／源数 2），逐条改题后清零
+2026-10-30T14:52:00	audit	112	560	555	第三十九件 40 项全 PASS（FAIL 0）；C8b 尾簇经两轮改写压至 ≤3
+2026-10-30T15:10:00	review	112	560	555	560 条逐条判读，判读表 review_ch1–17.tsv；修正 180 条（含尾簇改写）
+2026-10-30T15:20:00	report	112	560	555	呈审报告落盘；台账指纹 ac155b1e
+2026-10-30T15:24:00	done	112	560	555	done.json 写入；等待 ykla 卷级批准
