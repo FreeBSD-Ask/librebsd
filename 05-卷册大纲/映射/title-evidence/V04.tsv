@@ -1,104 +1,151 @@
 subsection_id	query	url	source_type	tier	accessed	quote	conflict
 V04.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Thompson：从 Multics 退出到 PDP-7 的路径”；本节题为其下位论题	none
 V04.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.1.1	Multics 退出与行迹（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	With the experience gained from Multics, Ken Thompson began to build his own operating system for the giant 645, starting from scratch.	none
 V04.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Thompson：从 Multics 退出到 PDP-7 的路径”；本节题为其下位论题	none
 V04.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.1.2	Multics 退出决策（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	In 1969, Bell Labs decided to get out of the Multics project. It became clear that Research was a drag on the Computing Center's budget. A clean, sharp decision was made to get out. The project did not wind down. It just stopped.	none
 V04.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Thompson：从 Multics 退出到 PDP-7 的路径”；本节题为其下位论题	none
 V04.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.1.3	PDP-7 来历与闲置图形引擎（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	That was the origin of the PDP7. The PDP7 had an improved graphics engine, that had been sitting idle. That's what Thompson grabbed and finally used to build early versions of Unix on.	none
 V04.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Thompson：从 Multics 退出到 PDP-7 的路径”；本节题为其下位论题	none
 V04.1.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.1.4	CACM 1974 原始论文（ACM DL 全文 PDF）	https://dl.acm.org/doi/pdf/10.1145/357980.358014	联网	A	2026-10-30	Ken Thompson, in working on a program for simulating the movements of celestial bodies in the solar system, became dissatisfied with the excessively slow rate by which he developed programs within MULTICS as then constituted. Thompson wrote an operating system for the PDP-7 minicomputer and worked on his space program there.	none
 V04.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Thompson：从 Multics 退出到 PDP-7 的路径”；本节题为其下位论题	none
 V04.1.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.1.5	Ritchie 演化论文·单人署名的自我交代	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	The reader will not, on the average, go far wrong if he reads each occurrence of 'we' with unclear antecedent as 'Thompson, with some assistance from me.'	none
 V04.1.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Thompson：从 Multics 退出到 PDP-7 的路径”；本节题为其下位论题	none
 V04.1.1.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.1.6	早期文献与回忆互证（Ritchie 致谢段）	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	I am grateful to S. P. Morgan, K. Thompson, and M. D. McIlroy for providing early documents and digging up recollections.	none
 V04.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Ritchie：C 语言与 UNIX 的双重作者身份”；本节题为其下位论题	none
 V04.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.2.1	Kernighan 执笔的国家纪念册（NAP）	https://www.nationalacademies.org/read/23394/chapter/40	联网	A	2026-10-30	Dennis joined Bell Labs in 1967 as a member of the technical staff in what soon became the Computing Science Research Center. For the first few years, he worked on the Multics project.	none
 V04.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Ritchie：C 语言与 UNIX 的双重作者身份”；本节题为其下位论题	none
 V04.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.2.2	ACM 授奖页·图灵奖 1983 引文	https://awards.acm.org/award_winners/ritchie_1506389	联网	A	2026-10-30	With Ken Thompson, for their development of generic operating systems theory and specifically for the implementation of the UNIX operating system.	none
 V04.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Ritchie：C 语言与 UNIX 的双重作者身份”；本节题为其下位论题	none
 V04.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.2.3	内核以 C 重写的分水岭（Ritchie 演化论文）	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	Perhaps the most important watershed occurred during 1973, when the operating system kernel was rewritten in C. It was at this point that the system assumed its modern form.	none
 V04.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Ritchie：C 语言与 UNIX 的双重作者身份”；本节题为其下位论题	none
 V04.1.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.2.4	图灵奖得主编目·K&R 著录	https://amturing.acm.org/bib/ritchie_1506389.cfm	联网	A	2026-10-30	Kernighan, Brian W. and Dennis M. Ritchie, The C Programming Language, Second Edition, Prentice Hall, Inc., 1988. The classical description of the C language.	none
 V04.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Ritchie：C 语言与 UNIX 的双重作者身份”；本节题为其下位论题	none
 V04.1.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.2.5	纪念册所引当事人自述	https://www.nationalacademies.org/read/23394/chapter/40	联网	A	2026-10-30	Explaining his career path, he once said, My undergraduate experience convinced me that I was not smart enough to be a physicist, and that computers were quite neat.	none
 V04.1.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Ritchie：C 语言与 UNIX 的双重作者身份”；本节题为其下位论题	none
 V04.1.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.2.6	BBC 讣闻的集体创作名单	https://www.bbc.com/news/technology-15287391	联网	B	2026-10-30	Along with Ken Thompson, Brian Kernighan, Douglas McIlroy, and Joe Ossanna, Dr Ritchie was one of the key creators of the Unix operating system at Bell Labs during the 1960s and 70s.	none
 V04.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“McIlroy：管道、组件化与“一件事做好””；本节题为其下位论题	none
 V04.1.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.3.1	McIlroy 1964 管道备忘录原件（影印转录）	https://doc.cat-v.org/unix/pipes/	联网	B	2026-10-30	We should have some ways of coupling programs like garden hose--screw in another segment when it becomes necessary to massage data in another way. M. D. McIlroy October 11, 1964	none
 V04.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“McIlroy：管道、组件化与“一件事做好””；本节题为其下位论题	none
 V04.1.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.3.2	管道落地过程（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	Over a period from 1970 to 1972, McIlroy suggested proposal after proposal. Then one day, I came up with a syntax for the shell that went along with the piping, and Ken said, I'm gonna do it. Thompson didn't do exactly what McIlroy had proposed for the pipe system call, but invented a slightly better one.	none
 V04.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“McIlroy：管道、组件化与“一件事做好””；本节题为其下位论题	none
 V04.1.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.3.3	Bell Labs 官方传承页·哲学面	https://www.nokia.com/bell-labs/unix-history/philosophy.html	联网	A	2026-10-30	As McIlroy described it, the philosophy that everyone started to put forth was Write programs that do one thing and do it well. Write programs to work together. Write programs that handle text streams, because that is a universal interface.	none
 V04.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“McIlroy：管道、组件化与“一件事做好””；本节题为其下位论题	none
 V04.1.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.3.4	Bell Labs 官方传承页·工具箱路径	https://www.nokia.com/bell-labs/unix-history/	联网	A	2026-10-30	The system also fostered a distinctive approach to software design -- solving a problem by interconnecting simpler tools, rather than creating large monolithic application programs.	none
 V04.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“McIlroy：管道、组件化与“一件事做好””；本节题为其下位论题	none
 V04.1.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.3.5	Research UNIX Reader·McIlroy 工具清单	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Later he contributed an eclectic bag of utilities: tmg for compiler writing, speak for reading text aloud, diff, and join.	none
 V04.1.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“McIlroy：管道、组件化与“一件事做好””；本节题为其下位论题	none
 V04.1.3.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.3.6	口述与文稿的原则定形差异（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	Those ideas which add up to the tool approach, were there in some unformed way before pipes, but they really came together afterwards. Pipes became the catalyst for this UNIX philosophy.	none
 V04.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Bourne 与 Feldman：shell 与 make 的作者们”；本节题为其下位论题	none
 V04.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.4.1	1978 年口令档案中的两位作者（Ars Technica）	https://arstechnica.com/information-technology/2019/10/forum-cracks-the-vintage-passwords-of-ken-thompson-and-other-unix-pioneers/	联网	B	2026-10-30	Stephen R. Bourne, creator of the Bourne shell command line interpreter, chose 'bourne'; and Stuart Feldman, author of Unix automation tool make and the first Fortran compiler, used 'axolotl'.	none
 V04.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Bourne 与 Feldman：shell 与 make 的作者们”；本节题为其下位论题	none
 V04.1.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Bourne 与 Feldman：shell 与 make 的作者们”；本节题为其下位论题	none
 V04.1.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.4.3	Feldman 的 make 论文（Softw. Pract. Exper. 1979）	https://onlinelibrary.wiley.com/doi/10.1002/spe.4380090402	联网	A	2026-10-30	This paper describes a program that can keep track of the relationships between parts of a program, and issue the commands needed to make the parts consistent after changes are made.	none
 V04.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Bourne 与 Feldman：shell 与 make 的作者们”；本节题为其下位论题	none
 V04.1.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.4.4	Bourne 携 Algol 68C 编译器入职（采访）	https://opensource.com/article/20/6/algol68	联网	B	2026-10-30	When Steve Bourne (yes, the person who created the Bourne shell) came to Bell Labs with the Algol 68C compiler, he made it do the same things that C could do; it had Unix system call interfaces and so forth.	none
 V04.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Bourne 与 Feldman：shell 与 make 的作者们”；本节题为其下位论题	none
 V04.1.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.4.5	工具署名与贡献认定（口令档案报道）	https://arstechnica.com/information-technology/2019/10/forum-cracks-the-vintage-passwords-of-ken-thompson-and-other-unix-pioneers/	联网	B	2026-10-30	Stephen R. Bourne, creator of the Bourne shell command line interpreter; and Stuart Feldman, author of Unix automation tool make and the first Fortran compiler.	none
 V04.1.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Bourne 与 Feldman：shell 与 make 的作者们”；本节题为其下位论题	none
 V04.1.4.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Kernighan：语言、文档与 UNIX 的公共表达”；本节题为其下位论题	none
 V04.1.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.5.1	Kernighan 普林斯顿官页·回忆录	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	Unix: A History and a Memoir. This book is part history and part memoir. It tells the story of the origin of Unix, explaining what Unix is, how it came about, and why it matters.	none
 V04.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Kernighan：语言、文档与 UNIX 的公共表达”；本节题为其下位论题	none
 V04.1.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.5.2	Kernighan 普林斯顿官页·科普教材	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	Understanding the Digital World explains how computer hardware, software, networks, and systems work. Accessible to non-speciaists, the book is written for anyone with an interest in computing.	none
 V04.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Kernighan：语言、文档与 UNIX 的公共表达”；本节题为其下位论题	none
 V04.1.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.5.3	纪念册·K&R 合著与译介	https://www.nationalacademies.org/read/23394/chapter/40	联网	A	2026-10-30	The C Programming Language, coauthored with Brian Kernighan, was first published in 1978 (Prentice Hall). Universally known as K&R after its authors, it is still a standard reference and has been translated into more than two dozen languages.	none
 V04.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Kernighan：语言、文档与 UNIX 的公共表达”；本节题为其下位论题	none
 V04.1.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Kernighan：语言、文档与 UNIX 的公共表达”；本节题为其下位论题	none
 V04.1.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.5.5	面向公众的讲史实践（普林斯顿官页）	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	Accessible to non-speciaists, the book is written for anyone with an interest in computing or the history of inventions.	none
 V04.1.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Kernighan：语言、文档与 UNIX 的公共表达”；本节题为其下位论题	none
 V04.1.5.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.5.6	多语种译本与回响（普林斯顿官页）	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	Korean translation, August 2020. German translation, October 2020. Chinese translation by 韩磊 Han Lei, March 2021. Russian translation, 2021. Polish transation by Piotr Cieslak, 2021. Japanese translation, 2025.	none
 V04.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“Ossanna 与 troff：排版管线的工程与文献”；本节题为其下位论题	none
 V04.1.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.6.1	Ossanna 履历（troff.org，转录 IEEE 资料）	https://troff.org/whoswho.html	联网	B	2026-10-30	He has since been a Member of the Technical Staff of the Bell Telephone Laboratories, Murray Hill, N.J. He presently is concerned with the operation of the Murray Hill Computation Center and is actively engaged in the software design of Multics.	none
 V04.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“Ossanna 与 troff：排版管线的工程与文献”；本节题为其下位论题	none
 V04.1.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.6.2	troff 官方史页·三代演进	https://troff.org/history.html	联网	B	2026-10-30	Troff was originally written by the late Joe Ossanna in about 1973, in assembly language for the PDP-11, to drive the Graphic Systems CAT typesetter. It was rewritten in C around 1975, and underwent slow but steady evolution until Ossanna's death late in 1977.	none
 V04.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“Ossanna 与 troff：排版管线的工程与文献”；本节题为其下位论题	none
 V04.1.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.6.3	CSTR 97·EQN/TBL 预处理流水线	https://www.tuhs.org/Archive/Documentation/TechReports/Bell_Labs/CSTRs/97.pdf	联网	A	2026-10-30	a voracious appetite for computer resources (especially when used with macro packages and preprocessors like EQN and TBL) -- TROFF has been the basis of document preparation at Bell Labs for some years	none
 V04.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“Ossanna 与 troff：排版管线的工程与文献”；本节题为其下位论题	none
 V04.1.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.6.4	CSTR 97·设备无关化与参数文件分层	https://www.tuhs.org/Archive/Documentation/TechReports/Bell_Labs/CSTRs/97.pdf	联网	A	2026-10-30	TROFF output used to be binary device codes specific to the CAT and arcane beyond description. The output of the new version is ASCII characters in a simple and (I hope) universal language. The new version reads a parameter file each time it is invoked.	none
 V04.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“Ossanna 与 troff：排版管线的工程与文献”；本节题为其下位论题	none
 V04.1.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.6.5	CSTR 97·Kernighan 接续维护	https://www.tuhs.org/Archive/Documentation/TechReports/Bell_Labs/CSTRs/97.pdf	联网	A	2026-10-30	In 1979, Brian Kernighan modified troff so that it would produce output for a variety of typesetters, while retaining its input specifications.	none
 V04.1.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“Ossanna 与 troff：排版管线的工程与文献”；本节题为其下位论题	none
 V04.1.6.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.1.6.6	troff 官方史页·版本定年	https://troff.org/history.html	联网	B	2026-10-30	Over the decade from 1979 to 1989, the internals have been modestly revised, though much of the code remains as it was when Ossanna wrote it.	none
 V04.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Corbató 与分时研究的早期群体”；本节题为其下位论题	none
 V04.2.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.1.1	ACM 授奖页·Corbató 组织工作	https://awards.acm.org/award_winners/corbato_1009471	联网	A	2026-10-30	Fernando Corbato coordinated the effort, provided a clear vision of an integrated shared computing utility, and made many technical contributions of lasting importance.	none
 V04.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Corbató 与分时研究的早期群体”；本节题为其下位论题	none
 V04.2.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.1.2	ACM 授奖页·CTSS 路线	https://awards.acm.org/award_winners/corbato_1009471	联网	A	2026-10-30	At MIT's Computation Center and Project MAC, from 1960 to 1965, he spearheaded the development of CTSS (The Compatible Time-Sharing System), which was the earliest general-purpose, time-share operating system organized for utility-like use.	none
 V04.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Corbató 与分时研究的早期群体”；本节题为其下位论题	none
 V04.2.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.1.3	ACM 授奖页·Multics 工程目标	https://awards.acm.org/award_winners/corbato_1009471	联网	A	2026-10-30	Corbato also led the development of Multics (Multiplexed Information and Computer Service), a joint effort of Project MAC, Bell Telephone Laboratories, and General Electric, from 1964 to 1969.	none
 V04.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Corbató 与分时研究的早期群体”；本节题为其下位论题	none
 V04.2.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.1.4	三方合作缔结（multicians.org·Van Vleck）	https://www.multicians.org/unix.html	联网	B	2026-10-30	When BTL joined with MIT Project MAC and General Electric's computer department in 1964 to create the Multics project, BTL contributed some of the finest programmers in the world to the team.	none
 V04.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Corbató 与分时研究的早期群体”；本节题为其下位论题	none
 V04.2.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.1.5	口述来源定位（multicians.org 引 CHM 口述史）	https://www.multicians.org/unix.html	联网	B	2026-10-30	The Oral history interview with Doug McIlroy, part 1, conducted by David C. Brock on 30 September 2009, Computer History Museum provides background about the involvement of Bell Labs in the Multics project.	none
 V04.2.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Corbató 与分时研究的早期群体”；本节题为其下位论题	none
 V04.2.1.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.1.6	1965 年 FJCC 奠基论文留存（multicians.org）	https://www.multicians.org/unix.html	联网	B	2026-10-30	Several of the BTL leaders contributed to the 1965 FJCC papers that were the foundation of Multics design: Victor A. Vyssotsky, Peter G. Neumann, Joseph F. Ossanna, Edward E. David Jr.	none
 V04.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Multics 工程师群体：分工与记录”；本节题为其下位论题	none
 V04.2.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.2.1	三地一体的开发团队（multicians.org）	https://www.multicians.org/unix.html	联网	B	2026-10-30	The MIT, GE, and BTL development team worked together closely despite being located in different states.	none
 V04.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Multics 工程师群体：分工与记录”；本节题为其下位论题	none
 V04.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.2.2	实验室一方参与形态（multicians.org）	https://www.multicians.org/unix.html	联网	B	2026-10-30	Bell Labs Multicians were provided with time-sharing terminals -- many BTL folks used Teletype Model 37s -- and data telephone arrangements were set up to make it easy for them.	none
 V04.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Multics 工程师群体：分工与记录”；本节题为其下位论题	none
 V04.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.2.3	ACM 授奖页·厂商角色与后继	https://awards.acm.org/award_winners/corbato_1009471	联网	A	2026-10-30	Honeywell, which took over General Electric's role, later introduced Multics as a product, which still runs today.	none
 V04.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Multics 工程师群体：分工与记录”；本节题为其下位论题	none
 V04.2.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.2.4	MIT CSAIL 讣闻·训练下一代	https://www.csail.mit.edu/news/fernando-corby-corbato-1926-2019	联网	A	2026-10-30	Multics doubled as a fertile training ground for an emerging generation of programmers that included C programming language creator Dennis Ritchie, Unix developer Ken Thompson, and spreadsheet inventors Dan Bricklin and Bob Frankston.	none
 V04.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Multics 工程师群体：分工与记录”；本节题为其下位论题	none
 V04.2.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.2.5	Multicians 名录的去向登记	https://www.multicians.org/multicians.html	联网	B	2026-10-30	2059 names, 735 mail addresses (128 bounce), 127 home pages (5 404), 134 deceased.	none
 V04.2.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Multics 工程师群体：分工与记录”；本节题为其下位论题	none
 V04.2.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.2.6	名录口径的定义（multicians.org）	https://www.multicians.org/multicians.html	联网	B	2026-10-30	Who is a Multician? Anybody who contributed to the development and success of Multics, who advocated it to others and tried to make it better, who loves the system (with all its faults).	none
 V04.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“三方合作中的行政、文档与测试岗位”；本节题为其下位论题	none
 V04.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.3.1	预算与行政的存证（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	It became clear that Research was a drag on the Computing Center's budget. They had a million dollars worth of equipment in the attic that was sitting there being played with by three people.	none
 V04.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“三方合作中的行政、文档与测试岗位”；本节题为其下位论题	none
 V04.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.3.2	V7 手册原书（bitsavers 扫描件）·文档生产	https://bitsavers.org/pdf/att/unix/7th_Edition/UNIX_Programmers_Manual_Seventh_Edition_January_1979_Volume_1_SRI_Reprint_June_1980.pdf	联网	A	2026-10-30	Troff prepares documents for a Graphics Systems phototypesetter; it is very similar to nroff. and often works from exactly the same source text. It was used to produce this manual.	none
 V04.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“三方合作中的行政、文档与测试岗位”；本节题为其下位论题	none
 V04.2.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“三方合作中的行政、文档与测试岗位”；本节题为其下位论题	none
@@ -107,220 +154,303 @@ V04.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V04.2.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.2.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“三方合作中的行政、文档与测试岗位”；本节题为其下位论题	none
 V04.2.3.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.3.6	机构分立的记录价值（CHM 口述史）	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	The Computer Center still owned the machines and was separate from Research. So Computing Research had no computers.	none
 V04.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“记录状况与待访档案”；本节题为其下位论题	none
 V04.2.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.4.1	机构史档案资源定位（multicians.org 引 CHM）	https://www.multicians.org/unix.html	联网	B	2026-10-30	as described in A History of Computing Research at Bell Laboratories (1937-1975), conducted by W. Stanley Brown on 01 May 2022, Computer History Museum	none
 V04.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“记录状况与待访档案”；本节题为其下位论题	none
 V04.2.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.4.2	决策留痕（Van Vleck 引 McIlroy）	https://www.multicians.org/unix.html	联网	B	2026-10-30	Ed David knew the folks at MIT, and he and Licklider ... thought that (BTL working on Multics) would be a good idea.	none
 V04.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“记录状况与待访档案”；本节题为其下位论题	none
 V04.2.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.4.3	名录即待访线索	https://www.multicians.org/multicians.html	联网	B	2026-10-30	2059 names, 735 mail addresses (128 bounce), 127 home pages (5 404), 134 deceased.	none
 V04.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“记录状况与待访档案”；本节题为其下位论题	none
 V04.2.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.2.4.4	补录窗口的紧迫性	https://www.multicians.org/multicians.html	联网	B	2026-10-30	134 deceased.	none
 V04.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“记录状况与待访档案”；本节题为其下位论题	none
 V04.2.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.2.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“记录状况与待访档案”；本节题为其下位论题	none
 V04.2.4.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Lou Katz 与 Columbia：首位被许可者”；本节题为其下位论题	none
 V04.3.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.1.1	TUHS 一手信件·首散与首会	https://www.tuhs.org/pipermail/tuhs/2017-September/011901.html	联网	A	2026-10-30	In the early spring of 1974, Lou Katz (then at Columbia University) organized a meeting of Unix users.	none
 V04.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Lou Katz 与 Columbia：首位被许可者”；本节题为其下位论题	none
 V04.3.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.1.2	TUHS 一手信件·哥伦比亚首例	https://www.tuhs.org/pipermail/tuhs/2025-September/032530.html	联网	A	2026-10-30	Columbia had the first. Lou Katz was >>external<< user 1 of Fourth Edition.	none
 V04.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Lou Katz 与 Columbia：首位被许可者”；本节题为其下位论题	none
 V04.3.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.1.3	Cole 演讲文稿（USENIX 官方 PDF）	https://www.usenix.org/sites/default/files/winter18_cole_unix_cnam.pdf	联网	B	2026-10-30	anyone that asked could license and obtain code from AT&T and use it. There was no warranty of any kind. You asked for it, there it was. You figure it out. The first to ask was Prof. Lou Katz of Columbia University.	none
 V04.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Lou Katz 与 Columbia：首位被许可者”；本节题为其下位论题	none
 V04.3.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.1.4	TUHS 一手信件·九磁带场景还原	https://www.tuhs.org/pipermail/tuhs/2017-September/011901.html	联网	A	2026-10-30	Cy got RK05s for the department, Katz told me, but we didn't have a drive, so I drove down to Murray Hill and Ken cut me a 9-track tape.	none
 V04.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Lou Katz 与 Columbia：首位被许可者”；本节题为其下位论题	none
 V04.3.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.1.5	当事人回忆引语（TUHS）	https://www.tuhs.org/pipermail/tuhs/2017-September/011901.html	联网	A	2026-10-30	Cy got RK05s for the department, Katz told me, but we didn't have a drive, so I drove down to Murray Hill and Ken cut me a 9-track tape.	none
 V04.3.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Lou Katz 与 Columbia：首位被许可者”；本节题为其下位论题	none
 V04.3.1.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.1.6	Salus 撰 USENIX 官方 ;login: 文章	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Lou was also the one who realized that if AT&T wasn't going to support the system, the only answer was for the users to band together.	none
 V04.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“大学许可时代的经手者们”；本节题为其下位论题	none
 V04.3.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.2.1	法务经手（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Back to the lawyers. It was decided that requests from academic institutions were OK.	none
 V04.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“大学许可时代的经手者们”；本节题为其下位论题	none
 V04.3.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.2.2	许可文本经手（Cole 演讲文稿）	https://www.usenix.org/sites/default/files/winter18_cole_unix_cnam.pdf	联网	B	2026-10-30	I was working in the industry from the late 1970s onward, and had installed a number of commercial UNIX sites, and had obtained the first commercial license for a University at CMU in 1978.	none
 V04.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“大学许可时代的经手者们”；本节题为其下位论题	none
 V04.3.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.2.3	TUHS 一手信件·收费政策	https://www.tuhs.org/pipermail/tuhs/2019-September/018710.html	联网	A	2026-10-30	a commercial source license was $20K for the first CPU and 5K for each additional one	none
 V04.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“大学许可时代的经手者们”；本节题为其下位论题	none
 V04.3.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.2.4	许可发放节奏（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Within six months, Ken had cut and shipped two dozen DEC RK-05s.	none
 V04.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“大学许可时代的经手者们”；本节题为其下位论题	none
 V04.3.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.2.5	TUHS 一手信件·签字页流转	https://www.tuhs.org/pipermail/tuhs/2025-September/032530.html	联网	A	2026-10-30	This is why we all sent a copy of the signature page for the license to another site before they would send you the code.	none
 V04.3.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“大学许可时代的经手者们”；本节题为其下位论题	none
 V04.3.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.2.6	经手人口径（Cole 演讲文稿）	https://www.usenix.org/sites/default/files/winter18_cole_unix_cnam.pdf	联网	B	2026-10-30	In fact, the term we used was that AT&T actually abandoned the sources at your front door.	none
 V04.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“早期大学采用者群体”；本节题为其下位论题	none
 V04.3.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.3.1	多机构聚合（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	about 20 people from a dozen institutions turned up for a meeting on May 15, 1974	none
 V04.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“早期大学采用者群体”；本节题为其下位论题	none
 V04.3.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.3.2	机型与机时成本（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	The RK-05 disk drive was a removable hard drive with a total capacity of 1.6 million 12-bit words. The drive was priced at $5,100; disk cartridges cost about $99 each.	none
 V04.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“早期大学采用者群体”；本节题为其下位论题	none
 V04.3.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.3.3	哥大计算史年表（da Cruz，哥大官站）	http://www.columbia.edu/cu/computinghistory/	联网	B	2026-10-30	1975: First Timesharing; 1986: UNIX	none
 V04.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“早期大学采用者群体”；本节题为其下位论题	none
 V04.3.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.3.4	采用动机（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Lou was also the one who realized that if AT&T wasn't going to support the system, the only answer was for the users to band together.	none
 V04.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“早期大学采用者群体”；本节题为其下位论题	none
 V04.3.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.3.5	用户横向联络网（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Twice as many folks attended the meeting of June 18, 1975. It was held at the City University of New York with Ira Fuchs making the arrangements. In October of that year, there were two meetings: on Monday the 27th at CUNY and on Friday the 31st at the Naval Postgraduate School (NPG) in Monterey, CA.	none
 V04.3.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“早期大学采用者群体”；本节题为其下位论题	none
 V04.3.3.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.3.6	TUHS 一手信件·年代存疑标注	https://www.tuhs.org/pipermail/tuhs/2025-September/032530.html	联网	A	2026-10-30	I'd have to ask Lou what the date was, but I have always thought it was soon after Oct'73 SOSP	none
 V04.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“USENIX 早期与用户组组织者”；本节题为其下位论题	none
 V04.3.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.4.1	创始组织者分工（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Ken Thompson, complicitously, provided Lou with the list of those who had requested disks. Lou and Mel Ferentz (then at Brooklyn College) sent out invitations	none
 V04.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“USENIX 早期与用户组组织者”；本节题为其下位论题	none
 V04.3.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.4.2	TUHS 一手信件·首次会议筹备	https://www.tuhs.org/pipermail/tuhs/2017-September/011901.html	联网	A	2026-10-30	The meeting was held on May 15, 1974, in the Merritt Conference Room on the third floor of Columbia's College of Physicians and Surgeons	none
 V04.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“USENIX 早期与用户组组织者”；本节题为其下位论题	none
 V04.3.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“USENIX 早期与用户组组织者”；本节题为其下位论题	none
 V04.3.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.4.4	早期规模（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	about 20 people from a dozen institutions turned up for a meeting on May 15, 1974	none
 V04.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“USENIX 早期与用户组组织者”；本节题为其下位论题	none
 V04.3.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.4.5	志愿组织劳动（Salus/USENIX）	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Lou and Mel Ferentz (then at Brooklyn College) sent out invitations, and about 20 people from a dozen institutions turned up for a meeting	none
 V04.3.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“USENIX 早期与用户组组织者”；本节题为其下位论题	none
 V04.3.4.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“早期课程与讲义的作者们”；本节题为其下位论题	none
 V04.3.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.5.1	图灵奖得主编目·Lions 课程讲义	https://amturing.acm.org/bib/ritchie_1506389.cfm	联网	A	2026-10-30	John Lions, A Commentary on the Unix Operating System, 1976. Course notes for Lions' University of New South Wales Department of Computer Science courses 6.602B and 6.657G.	none
 V04.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“早期课程与讲义的作者们”；本节题为其下位论题	none
 V04.3.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.5.2	图灵奖得主编目·讲义与课程	https://amturing.acm.org/bib/ritchie_1506389.cfm	联网	A	2026-10-30	Course notes for Lions' University of New South Wales Department of Computer Science courses 6.602B and 6.657G.	none
 V04.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“早期课程与讲义的作者们”；本节题为其下位论题	none
 V04.3.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.5.3	图灵奖得主编目·改编与再版授权链	https://amturing.acm.org/bib/ritchie_1506389.cfm	联网	A	2026-10-30	Widely redistributed by photocopy in the late 70s and early 80s. Republished in 1996 by Peer-To-Peer Communications (ISBN 1-57398-013-7)	none
 V04.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“早期课程与讲义的作者们”；本节题为其下位论题	none
 V04.3.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“早期课程与讲义的作者们”；本节题为其下位论题	none
 V04.3.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.3.5.5	图灵奖得主编目·教学谱系	https://amturing.acm.org/bib/ritchie_1506389.cfm	联网	A	2026-10-30	Course notes for Lions' University of New South Wales Department of Computer Science courses 6.602B and 6.657G.	none
 V04.3.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“早期课程与讲义的作者们”；本节题为其下位论题	none
 V04.3.5.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“awk 三人组：Aho、Weinberger、Kernighan 的协作面”；本节题为其下位论题	none
 V04.4.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.1.1	awk 三人组再版署名（普林斯顿官页）	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	The AWK Programming Language, Second Edition, by Al Aho, Brian Kernighan and Peter Weinberger.	none
 V04.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“awk 三人组：Aho、Weinberger、Kernighan 的协作面”；本节题为其下位论题	none
 V04.4.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.1.2	Research UNIX Reader·Aho 理论落地	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Steve (Stephen C.) Johnson's yacc reduced Al (Alfred V.) Aho's expertise in language theory to practice.	none
 V04.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“awk 三人组：Aho、Weinberger、Kernighan 的协作面”；本节题为其下位论题	none
 V04.4.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.1.3	awk 三人组署名（普林斯顿官页）	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	The AWK Programming Language, Second Edition, by Al Aho, Brian Kernighan and Peter Weinberger.	none
 V04.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“awk 三人组：Aho、Weinberger、Kernighan 的协作面”；本节题为其下位论题	none
 V04.4.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.1.4	awk 三人组署名（普林斯顿官页）	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	The AWK Programming Language, Second Edition, by Al Aho, Brian Kernighan and Peter Weinberger.	none
 V04.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“awk 三人组：Aho、Weinberger、Kernighan 的协作面”；本节题为其下位论题	none
 V04.4.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“awk 三人组：Aho、Weinberger、Kernighan 的协作面”；本节题为其下位论题	none
 V04.4.1.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.1.6	awk 第二版的署名演进（普林斯顿官页）	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	The AWK Programming Language, Second Edition, by Al Aho, Brian Kernighan and Peter Weinberger. Book web site www.awk.dev.	none
 V04.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“sed、grep 与正则工程的作者们”；本节题为其下位论题	none
 V04.4.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.2.1	Research UNIX Reader·grep/sed/egrep 作者	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	The success of grep suggested other utilities. One of these, gres for global substitution, evolved into the stream editor sed (McMahon, v7). Grep also inspired Al Aho to apply his encyclopedic knowledge of language theory to make the very general egrep and the highly specialized fgrep (v7).	none
 V04.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“sed、grep 与正则工程的作者们”；本节题为其下位论题	none
 V04.4.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.2.2	Research UNIX Reader·sed 诞生	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	The success of grep suggested other utilities. One of these, gres for global substitution, evolved into the stream editor sed (McMahon, v7).	none
 V04.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“sed、grep 与正则工程的作者们”；本节题为其下位论题	none
 V04.4.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.2.3	Research UNIX Reader·grep 成名	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Grep, generally cited as the prototypical software tool, was born when Ken Thompson was asked how to search for patterns in a file that was too big for the editor. Thompson promptly liberated his regular expression recognizer and christened it after the ed command g/re/p. It was an instant hit and soon entered our language as a verb.	none
 V04.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“sed、grep 与正则工程的作者们”；本节题为其下位论题	none
 V04.4.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.2.4	Research UNIX Reader·egrep 取舍	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Over the years Aho honed egrep into an awesomely performing program, simple on the outside but the highest of tech on the inside.	none
 V04.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“sed、grep 与正则工程的作者们”；本节题为其下位论题	none
 V04.4.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.2.5	Research UNIX Reader·命名与流传	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	christened it after the ed command g/re/p. It was an instant hit and soon entered our language as a verb.	none
 V04.4.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“sed、grep 与正则工程的作者们”；本节题为其下位论题	none
 V04.4.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.2.6	Research UNIX Reader·署名归属	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	The success of grep suggested other utilities. One of these, gres for global substitution, evolved into the stream editor sed (McMahon, v7).	none
 V04.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“shell 家族的作者群”；本节题为其下位论题	none
 V04.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.3.1	CHM 口述史·shell 与管道语法	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	Then one day, I came up with a syntax for the shell that went along with the piping, and Ken said, I'm gonna do it.	none
 V04.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“shell 家族的作者群”；本节题为其下位论题	none
 V04.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“shell 家族的作者群”；本节题为其下位论题	none
 V04.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“shell 家族的作者群”；本节题为其下位论题	none
 V04.4.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.3.4	CHM 口述史·shell 可编程化	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	Thompson didn't do exactly what McIlroy had proposed for the pipe system call, but invented a slightly better one.	none
 V04.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“shell 家族的作者群”；本节题为其下位论题	none
 V04.4.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“shell 家族的作者群”；本节题为其下位论题	none
 V04.4.3.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“编辑器与终端工具的作者群体”；本节题为其下位论题	none
 V04.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.4.1	Research UNIX Reader·ed 归属	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	The first debugger db and the definitive ed were Ritchie's	none
 V04.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“编辑器与终端工具的作者群体”；本节题为其下位论题	none
 V04.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.4.2	Research UNIX Reader·ed 归属	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	The first debugger db and the definitive ed were Ritchie's	none
 V04.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“编辑器与终端工具的作者群体”；本节题为其下位论题	none
 V04.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“编辑器与终端工具的作者群体”；本节题为其下位论题	none
 V04.4.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“编辑器与终端工具的作者群体”；本节题为其下位论题	none
 V04.4.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.4.5	Research UNIX Reader·署名实践	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	The first debugger db and the definitive ed were Ritchie's	none
 V04.4.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“编辑器与终端工具的作者群体”；本节题为其下位论题	none
 V04.4.4.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“编译器与工具链的作者群体”；本节题为其下位论题	none
 V04.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.5.1	Research UNIX Reader·Johnson 与可移植化	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	With Steve Johnson he made UNIX portable, moving the system	none
 V04.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“编译器与工具链的作者群体”；本节题为其下位论题	none
 V04.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.5.2	Research UNIX Reader·可移植 C 编译器	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Upon that base Steve built the portable C compiler that was used to port the system itself and to evaluate candidate instruction sets for unbuilt machines.	none
 V04.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“编译器与工具链的作者群体”；本节题为其下位论题	none
 V04.4.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.5.3	Research UNIX Reader·yacc 与理论落地	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Steve (Stephen C.) Johnson's yacc reduced Al (Alfred V.) Aho's expertise in language theory to practice.	none
 V04.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“编译器与工具链的作者群体”；本节题为其下位论题	none
 V04.4.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.4.5.4	Research UNIX Reader·理论到工具	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Steve (Stephen C.) Johnson's yacc reduced Al (Alfred V.) Aho's expertise in language theory to practice.	none
 V04.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“编译器与工具链的作者群体”；本节题为其下位论题	none
 V04.4.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.4.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“编译器与工具链的作者群体”；本节题为其下位论题	none
 V04.4.5.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“手册页与文档传统的写作群体”；本节题为其下位论题	none
 V04.5.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.1.1	V7 手册原书·手册生产	https://bitsavers.org/pdf/att/unix/7th_Edition/UNIX_Programmers_Manual_Seventh_Edition_January_1979_Volume_1_SRI_Reprint_June_1980.pdf	联网	A	2026-10-30	Text processing. Almost all text is entered through the editor ed(1). Nroff is an elaborate text formatting program. Troff prepares documents for a Graphics Systems phototypesetter. It was used to produce this manual.	none
 V04.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“手册页与文档传统的写作群体”；本节题为其下位论题	none
 V04.5.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.1.2	V7 手册原书·卷章体例	https://bitsavers.org/pdf/att/unix/7th_Edition/UNIX_Programmers_Manual_Seventh_Edition_January_1979_Volume_1_SRI_Reprint_June_1980.pdf	联网	A	2026-10-30	It may also be useful to glance through section 2 of this manual; which discusses system calls	none
 V04.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“手册页与文档传统的写作群体”；本节题为其下位论题	none
 V04.5.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.1.3	V7 手册原书·语例驱动	https://bitsavers.org/pdf/att/unix/7th_Edition/UNIX_Programmers_Manual_Seventh_Edition_January_1979_Volume_1_SRI_Reprint_June_1980.pdf	联网	A	2026-10-30	A path name may be used anywhere a file name is required.	none
 V04.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“手册页与文档传统的写作群体”；本节题为其下位论题	none
 V04.5.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.1.4	V7 手册原书·版本迁移章	https://bitsavers.org/pdf/att/unix/7th_Edition/UNIX_Programmers_Manual_Seventh_Edition_January_1979_Volume_1_SRI_Reprint_June_1980.pdf	联网	A	2026-10-30	CONVERTING FROM THE 6TH EDITION. There follows a catalogue of significant, mostly incompatible, changes that will affect old users converting to the 7th edition.	none
 V04.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“手册页与文档传统的写作群体”；本节题为其下位论题	none
 V04.5.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.1.5	V7 手册原书·troff 排版自证	https://bitsavers.org/pdf/att/unix/7th_Edition/UNIX_Programmers_Manual_Seventh_Edition_January_1979_Volume_1_SRI_Reprint_June_1980.pdf	联网	A	2026-10-30	It was used to produce this manual.	none
 V04.5.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“手册页与文档传统的写作群体”；本节题为其下位论题	none
 V04.5.1.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“早期书籍与教材作者”；本节题为其下位论题	none
 V04.5.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.2.1	Kernighan 官页·著述身份	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	This book is part history and part memoir.	none
 V04.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“早期书籍与教材作者”；本节题为其下位论题	none
 V04.5.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.2.2	Kernighan 官页·出版渠道	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	Published by Princeton University Press. Now available at Amazon and other booksellers in hardback, paperback and e-book.	none
 V04.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“早期书籍与教材作者”；本节题为其下位论题	none
 V04.5.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.2.3	纪念册·K&R 术语定名的传播	https://www.nationalacademies.org/read/23394/chapter/40	联网	A	2026-10-30	Universally known as K&R after its authors, it is still a standard reference and has been translated into more than two dozen languages.	none
 V04.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“早期书籍与教材作者”；本节题为其下位论题	none
 V04.5.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.2.4	Kernighan 官页·勘误与读者反馈	https://www.cs.princeton.edu/~bwk/	联网	A	2026-10-30	Errata here, superseding the list at awk.dev.	none
 V04.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“早期书籍与教材作者”；本节题为其下位论题	none
 V04.5.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.5.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“早期书籍与教材作者”；本节题为其下位论题	none
 V04.5.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“论文与会议署名群体”；本节题为其下位论题	none
 V04.5.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.3.1	CACM 1974 论文获奖记录	https://dl.acm.org/doi/pdf/10.1145/357980.358014	联网	A	2026-10-30	This paper received the ACM award for best paper in programming languages and systems in 1974.	none
 V04.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“论文与会议署名群体”；本节题为其下位论题	none
 V04.5.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.3.2	Salus/USENIX·首发报告的发言人	https://www.usenix.org/system/files/login/articles/login_june_10_salus.pdf	联网	B	2026-10-30	Ken Thompson and Dennis Ritchie gave the first paper on the UNIX operating system in October 1973 at the ACM Symposium on Operating Principles. Ken and Dennis were allowed to drive up the Hudson Valley to IBM's new research lab at Yorktown Heights and speak to the nearly 200 attendees.	none
 V04.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“论文与会议署名群体”；本节题为其下位论题	none
 V04.5.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.3.3	ACM 授奖页·合著引文	https://awards.acm.org/award-recipients/thompson_4588371	联网	A	2026-10-30	Dennis M. Ritchie, Ken Thompson. For their development of generic operating systems theory and specifically for the implementation of the Unix operating system.	none
 V04.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“论文与会议署名群体”；本节题为其下位论题	none
 V04.5.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.3.4	ACM 图灵奖页·影响定位	https://amturing.acm.org/award%5Fwinners/thompson%5F4588371.cfm	联网	A	2026-10-30	The success of the UNIX system stems from its tasteful selection of a few key ideas and their elegant implementation. The model of the Unix system has led a generation of software designers to new ways of thinking about programming.	none
 V04.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“论文与会议署名群体”；本节题为其下位论题	none
 V04.5.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.3.5	Research UNIX Reader·幕后贡献者补录	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Lorinda L. Cherry collaborated with Morris on dc-bc and typo. Always fascinated by text processing, Lorinda initiated eqn and invented parts, an approximate parser that was exploited in the celebrated Writer's Workbench.	none
 V04.5.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“论文与会议署名群体”；本节题为其下位论题	none
 V04.5.3.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.3.6	图灵奖得主编目·文献比对实践	https://amturing.acm.org/bib/ritchie_1506389.cfm	联网	A	2026-10-30	Dennis M. Ritchie Bibliography - A.M. Turing Award Winner	none
 V04.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“记录者与被采访者：口述史的形成”；本节题为其下位论题	none
 V04.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.4.1	CHM 口述史·项目属性	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	The following is an account of an interview with Doug McIlroy	none
 V04.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“记录者与被采访者：口述史的形成”；本节题为其下位论题	none
 V04.5.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.4.2	multicians.org·采访者与受访者	https://www.multicians.org/unix.html	联网	B	2026-10-30	The Oral history interview with Doug McIlroy, part 1, conducted by David C. Brock on 30 September 2009, Computer History Museum	none
 V04.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“记录者与被采访者：口述史的形成”；本节题为其下位论题	none
 V04.5.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“记录者与被采访者：口述史的形成”；本节题为其下位论题	none
 V04.5.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.4.4	CHM 口述史·转录整理形态	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	The following is an account of an interview with Doug McIlroy	none
 V04.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“记录者与被采访者：口述史的形成”；本节题为其下位论题	none
 V04.5.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.5.4.5	Ritchie 演化论文·记忆偏差自省	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	One of the comforting things about old memories is their tendency to take on a rosy glow.	none
 V04.5.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“记录者与被采访者：口述史的形成”；本节题为其下位论题	none
 V04.5.4.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“独作叙事的批评：人物行迹与署名”；本节题为其下位论题	none
 V04.6.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.1.1	Ritchie 演化论文·署名归并的自我交代	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	Because I am most interested in describing the evolution of ideas, this paper attributes ideas and work to individuals only where it seems most important. The reader will not, on the average, go far wrong if he reads each occurrence of 'we' with unclear antecedent as 'Thompson, with some assistance from me.'	none
 V04.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“独作叙事的批评：人物行迹与署名”；本节题为其下位论题	none
 V04.6.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.1.2	Research UNIX Reader·被遮蔽者的名字	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Bob invented the distinctively original utilities typo, and dc-bc (with Lorinda Cherry), wrote most of the math library, and wrote primes and factor (with Thompson).	none
 V04.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“独作叙事的批评：人物行迹与署名”；本节题为其下位论题	none
 V04.6.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.1.3	Research UNIX Reader·重新归属的笔法	https://mcilroy.cs.dartmouth.edu/reader.pdf	联网	A	2026-10-30	Doug (M. Douglas) McIlroy exercised the right of a department head to muscle in on the original two-user PDP-7 system.	none
 V04.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“独作叙事的批评：人物行迹与署名”；本节题为其下位论题	none
 V04.6.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“独作叙事的批评：人物行迹与署名”；本节题为其下位论题	none
 V04.6.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.1.5	Ritchie 演化论文·归名的克制原则	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	Because I am most interested in describing the evolution of ideas, this paper attributes ideas and work to individuals only where it seems most important.	none
 V04.6.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“独作叙事的批评：人物行迹与署名”；本节题为其下位论题	none
 V04.6.1.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.1.6	纪念册·行迹重估的基础	https://www.nationalacademies.org/read/23394/chapter/40	联网	A	2026-10-30	Unix had its origins with Kenneth Lane Thompson's early experiments in building an operating system on a small castoff computer; he was soon joined by Dennis, and the two of them created the first recognizable version in late 1969.	none
 V04.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“争议记述的考据：Ritchie、Thompson 与密码、Linux 传闻”；本节题为其下位论题	none
 V04.6.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“争议记述的考据：Ritchie、Thompson 与密码、Linux 传闻”；本节题为其下位论题	none
 V04.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.2.2	Ars Technica·口令档案的传播与破译	https://arstechnica.com/information-technology/2019/10/forum-cracks-the-vintage-passwords-of-ken-thompson-and-other-unix-pioneers/	联网	B	2026-10-30	Forum cracks the vintage passwords of Ken Thompson and other Unix pioneers. BSD co-inventor Dennis Ritchie, for instance, used 'dmac' (his middle name was MacAlistair)	none
 V04.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“争议记述的考据：Ritchie、Thompson 与密码、Linux 传闻”；本节题为其下位论题	none
 V04.6.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“争议记述的考据：Ritchie、Thompson 与密码、Linux 传闻”；本节题为其下位论题	none
 V04.6.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.2.4	CACM 1974 原始论文·命名与谱系事实	https://dl.acm.org/doi/pdf/10.1145/357980.358014	联网	A	2026-10-30	The name, UNIX, was a transformation of MULTICS, with MULTI- becoming UNI and -CS becoming -X.	none
 V04.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“争议记述的考据：Ritchie、Thompson 与密码、Linux 传闻”；本节题为其下位论题	none
 V04.6.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.2.5	当事人一手文本（Ritchie 演化论文）	https://www.nokia.com/bell-labs/about/dennis-m-ritchie/hist.pdf	联网	A	2026-10-30	This paper presents a brief history of the early development of the Unix operating system. It concentrates on the evolution of the file system, the process-control mechanism, and the idea of pipelined commands.	none
 V04.6.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“争议记述的考据：Ritchie、Thompson 与密码、Linux 传闻”；本节题为其下位论题	none
 V04.6.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“形象与公共记忆：照片、访谈与纪念文本”；本节题为其下位论题	none
 V04.6.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.3.1	BBC 讣闻·影像载体	https://www.bbc.com/news/technology-15287391	联网	B	2026-10-30	Image caption, Dr Ritchie (middle) and Mr Thompson were awarded the US National Medal of Technology for their work on Unix	none
 V04.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“形象与公共记忆：照片、访谈与纪念文本”；本节题为其下位论题	none
 V04.6.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.3.2	BBC 讣闻·照片定格	https://www.bbc.com/news/technology-15287391	联网	B	2026-10-30	Image caption, Dr Ritchie (middle) and Mr Thompson were awarded the US National Medal of Technology for their work on Unix	none
 V04.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“形象与公共记忆：照片、访谈与纪念文本”；本节题为其下位论题	none
 V04.6.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.3.3	CHM 口述史·转录形态	https://www.tuhs.org/Archive/Documentation/OralHistory/precis/mcilroy.htm	联网	A	2026-10-30	The following is an account of an interview with Doug McIlroy	none
 V04.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“形象与公共记忆：照片、访谈与纪念文本”；本节题为其下位论题	none
 V04.6.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.3.4	NAP 纪念册·纪念文体的框架	https://www.nationalacademies.org/read/23394/chapter/40	联网	A	2026-10-30	DENNIS M. RITCHIE 1941-2011. Elected in 1988. For development of the C programming language and for co-development of the UNIX operating system. BY BRIAN W. KERNIGHAN	none
 V04.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“形象与公共记忆：照片、访谈与纪念文本”；本节题为其下位论题	none
 V04.6.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
+V04.6.3.5	卫报讣闻（Campbell-Kelly 执笔）	https://www.theguardian.com/technology/2011/oct/13/dennis-ritchie	联网	B	2026-10-30	The American computer scientist Dennis Ritchie, who has died aged 70 after suffering from cancer and heart disease, was one of the co-inventors of the Unix operating system and the C programming language.	none
 V04.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“形象与公共记忆：照片、访谈与纪念文本”；本节题为其下位论题	none
 V04.6.3.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V04.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“卷末收束：作为第五卷的前导”；本节题为其下位论题	none
