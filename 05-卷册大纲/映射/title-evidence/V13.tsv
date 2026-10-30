@@ -752,7 +752,7 @@ V13.4.11.3	Athena 页	https://news.mit.edu/2018/mit-looking-back-project-athena-
 V13.4.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：Mach、Athena、System V 与其他 UNIX 系统”；本节题为其下位论题	none
 V13.4.11.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V13.4.11.4	Mach 论文页	https://doi.org/10.5555/324493.325071	联网	A	2026-10-30	Mach is a multiprocessor operating system kernel currently under development at Carnegie-Mellon University. In	none
-V13.4.11.4	Athena 页	https://news.mit.edu/2018/mit-looking-back-project-athena-distributed-computing-for-students-1111	联网	B	2026-10-30	In 1983, the year Project Athena began, it was still possible for students to receive a science or engineering	none
+V13.4.11.4	System V 与 BSD 的两强并立	https://en.wikipedia.org/wiki/UNIX_System_V	联网	C	2026-10-30	In the 1980s and early-1990s, UNIX System V and the Berkeley Software Distribution (BSD) were the two major versions of UNIX.	none
 V13.4.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：Mach、Athena、System V 与其他 UNIX 系统”；本节题为其下位论题	none
 V13.4.11.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V13.4.11.5	Mach 论文页	https://doi.org/10.5555/324493.325071	联网	A	2026-10-30	Mach is a multiprocessor operating system kernel currently under development at Carnegie-Mellon University. In	none
@@ -760,4 +760,4 @@ V13.4.11.5	Athena 页	https://news.mit.edu/2018/mit-looking-back-project-athena-
 V13.4.11.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：Mach、Athena、System V 与其他 UNIX 系统”；本节题为其下位论题	none
 V13.4.11.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V13.4.11.6	Mach 论文页	https://doi.org/10.5555/324493.325071	联网	A	2026-10-30	Mach is a multiprocessor operating system kernel currently under development at Carnegie-Mellon University. In	none
-V13.4.11.6	Athena 页	https://news.mit.edu/2018/mit-looking-back-project-athena-distributed-computing-for-students-1111	联网	B	2026-10-30	In 1983, the year Project Athena began, it was still possible for students to receive a science or engineering	none
+V13.4.11.6	比较叙述的时限依据	https://en.wikipedia.org/wiki/UNIX_System_V	联网	C	2026-10-30	UNIX System V (pronounced: "System Five") is one of the first commercial versions of the Unix operating system. It was originally developed by AT&T and first released in 1983.	none

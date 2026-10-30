@@ -1,3 +1,11 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T08:27:11	start	0	0	0	批次 3A.6 V21–V30（本会话）开工
 2026-10-30T08:27:11	claim	0	0	0	session=zcode-glm53flash-v21-30
+2026-10-30T09:10:18	takeover	0	0	0	session=zcode-glm53flash-v21-30-r2；原会话 zcode-glm53flash-v21-30 于 V22 后中止（末次写入 08:57），ykla 2026-10-30 派单接管，不重拟已定稿题
+2026-10-30T09:31:58	draft	47	235	190	台账/证据/例外三件落盘
+2026-10-30T09:44:19	selfcheck	47	235	190	第三十九件 --check：本卷贡献 FAIL 0（存量 V01/V02 C8b 不在本卷）
+2026-10-30T09:44:19	done	47	235	190	done.json 落定；呈审报告随批
+2026-10-30T10:06:00	draft	47	235	190	台账/证据/例外三件落盘
+2026-10-30T10:07:48	draft	47	235	190	台账/证据/例外三件落盘
+2026-10-30T10:08:42	selfcheck	47	235	190	第三十九件 --check：本卷贡献 FAIL 0
+2026-10-30T10:08:42	done	47	235	190	done.json 落定；呈审报告随批

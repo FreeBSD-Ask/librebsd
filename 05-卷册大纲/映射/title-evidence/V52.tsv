@@ -1,0 +1,789 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V52.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“ZFS 的设计背景”；本节题为其下位论题	none
+V52.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.1.1	ZFS 与卷管理角色的合并	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	More than a file system, ZFS is fundamentally different from traditional file systems. Combining the traditionally separate roles of volume manager and file system provides ZFS with unique advantages.	none
+V52.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“ZFS 的设计背景”；本节题为其下位论题	none
+V52.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.1.2	ZFS 事务化写入	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	The middle layer is the Data Management Unit, which uses the storage provided by the SPA by reading and writing to it transactionally in an atomic manner.	none
+V52.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“ZFS 的设计背景”；本节题为其下位论题	none
+V52.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.1.3	ZFS 数据完整性设计目标	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	Data integrity: All data includes a checksum of the data. ZFS calculates checksums and writes them along with the data. When reading that data later, ZFS recalculates the checksums.	none
+V52.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“ZFS 的设计背景”；本节题为其下位论题	none
+V52.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.1.4	ZFS 开发起点	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	2001 – Development of ZFS started with two engineers at Sun Microsystems.	none
+V52.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“ZFS 的设计背景”；本节题为其下位论题	none
+V52.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.1.5	ZFS 池化存储目标	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	Pooled storage: adding physical storage devices to a pool, and allocating storage space from that shared pool. Space is available to all file systems and volumes, and increases by adding new storage devices to the pool.	none
+V52.1.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“ZFS 的设计背景”；本节题为其下位论题	none
+V52.1.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.1.6	ZFS 的 Solaris 起源	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	ZFS was originally developed by Sun Microsystems for the Solaris operating system.	none
+V52.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“OpenZFS 与 FreeBSD”；本节题为其下位论题	none
+V52.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.2.1	ZFS 进入 FreeBSD 版本	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	2008 – A port to FreeBSD was released as part of FreeBSD 7.0.	none
+V52.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“OpenZFS 与 FreeBSD”；本节题为其下位论题	none
+V52.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.2.2	OpenZFS 跨平台补丁流向	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.	none
+V52.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“OpenZFS 与 FreeBSD”；本节题为其下位论题	none
+V52.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.2.3	ZFS 源码的 CDDL 许可	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	The source code for ZFS was released under the CDDL as part of the OpenSolaris operating system, and was subsequently ported to other platforms.	none
+V52.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“OpenZFS 与 FreeBSD”；本节题为其下位论题	none
+V52.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.2.4	OpenZFS feature flags 取代版本号	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	2012 – Feature flags were introduced to replace legacy on-disk version numbers, enabling easier distributed evolution of the ZFS on-disk format to support new features.	none
+V52.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“OpenZFS 与 FreeBSD”；本节题为其下位论题	none
+V52.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.2.5	FreeBSD 侧 ZFS 功能与 OpenZFS 版本	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	RAID-Z expansion requires OpenZFS 2.3 or later, first available in FreeBSD 15.0.	none
+V52.1.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“OpenZFS 与 FreeBSD”；本节题为其下位论题	none
+V52.1.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.2.6	illumos 承接 ZFS 开放开发	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	2010 – illumos was founded as the truly open source successor to OpenSolaris, and continued to develop ZFS in the open.	none
+V52.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“ZFS 与传统 UFS／FFS 的技术分界”；本节题为其下位论题	none
+V52.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.3.1	传统文件系统的单盘假设	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	Traditional file systems could exist on a single disk at a time. If there were two disks then creating two separate file systems was necessary.	none
+V52.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“ZFS 与传统 UFS／FFS 的技术分界”；本节题为其下位论题	none
+V52.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.3.2	GEOM 之上 UFS 的设备视角	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	Even with software RAID solutions like those provided by GEOM, the UFS file system living on top of the RAID believes it is dealing with a single device.	none
+V52.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“ZFS 与传统 UFS／FFS 的技术分界”；本节题为其下位论题	none
+V52.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.3.3	ZFS 合并卷管理与文件系统	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	ZFS' combination of the volume manager and the file system solves this and allows the creation of file systems that all share a pool of available storage.	none
+V52.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“ZFS 与传统 UFS／FFS 的技术分界”；本节题为其下位论题	none
+V52.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.3.4	ZFS 感知物理磁盘布局	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	One big advantage of ZFS' awareness of the physical disk layout is that existing file systems grow automatically when adding extra disks to the pool.	none
+V52.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“ZFS 与传统 UFS／FFS 的技术分界”；本节题为其下位论题	none
+V52.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.3.5	ZFS 数据集与属性	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	ZFS can also apply different properties to each file system. This makes it useful to create separate file systems and datasets instead of a single monolithic file system.	none
+V52.1.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“ZFS 与传统 UFS／FFS 的技术分界”；本节题为其下位论题	none
+V52.1.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.3.6	ZFS 池取代的存储层次	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	The ZFS pool is a full storage stack capable of replacing RAID, partitioning, volume management, fstab/exports files and traditional file-systems that span only 1 disk, such as UFS and XFS.	none
+V52.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly 的 HAMMER”；本节题为其下位论题	none
+V52.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.4.1	HAMMER 设计与实现周期	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	Hammer is a new BSD file-system written by the author. Design on the file-system began in early 2007 and took approximately 9 months, and the implementation phase following took another 9 months.	none
+V52.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly 的 HAMMER”；本节题为其下位论题	none
+V52.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.4.2	HAMMER 免 fsck 目标	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	Instant or nearly-instant mount. No fsck needed on crash recovery.	none
+V52.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly 的 HAMMER”；本节题为其下位论题	none
+V52.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.4.3	HAMMER 全历史保留	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	Full history retention with easy access, via the live file-system.	none
+V52.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly 的 HAMMER”；本节题为其下位论题	none
+V52.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.4.4	HAMMER UNDO 记录范围	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	UNDO records for meta-data only. Data is not (never!) immediately overwritten so no UNDO is needed for file data.	none
+V52.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly 的 HAMMER”；本节题为其下位论题	none
+V52.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.4.5	HAMMER 全局 B-Tree 索引	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	I-nodes, directory entries, and file data are all indexed with a single global B-Tree. Each B-Tree element has a create transaction id and a delete transaction id.	none
+V52.1.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly 的 HAMMER”；本节题为其下位论题	none
+V52.1.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.4.6	HAMMER 容量上限	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	Thus Hammer is able to address up to 256 52 bit volumes. That is 256 x 4096 TB or a total of up to 1 Exabyte.	none
+V52.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
+V52.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.5.1	HAMMER2 设计简化的理由	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Even though HAMMER2 has a lot more features then HAMMER1 the actual design is simpler than HAMMER1, with virtually no edge cases to worry about	none
+V52.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
+V52.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.5.2	HAMMER2 超级根与多根	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Multiple roots (allowing snapshots to be mounted).  This is implemented via the super-root concept.	none
+V52.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
+V52.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.5.3	HAMMER2 可写快照	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Writable snapshots.  Any subdirectory tree can be snapshotted.  Snapshots show up in the super-root.	none
+V52.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
+V52.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.5.4	HAMMER2 blockref 与 mirror_tid	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Because HAMMER2 is block-oriented and copy-on-write each blockref tracks both direct modifications to the referenced data via (modify_tid) and indirect modifications to the referenced data or any sub-tree via (mirror_tid).	none
+V52.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
+V52.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.5.5	HAMMER2 压缩配置粒度	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Will support multiple compression algorithms configured on subdirectory tree basis and on a file basis.  Up to 64K block compression will be used.	none
+V52.1.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
+V52.1.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.5.6	HAMMER1 B-Tree 边界案例	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	I spent 12+ months working edge cases out in HAMMER1's B-Tree, for example... that won't be an issue for HAMMER2 development	none
+V52.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
+V52.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.6.1	软更新机制	http://www.mckusick.com/softdep/index.html	联网	A	2026-10-30	Soft updates, an alternative to these approaches, is an implementation mechanism that tracks and enforces metadata update dependencies to ensure that the disk image is always kept consistent.	none
+V52.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
+V52.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.6.2	软更新与后台 fsck	http://www.mckusick.com/softdep/index.html	联网	A	2026-10-30	By ensuring that the only inconsistencies are unclaimed blocks or inodes, soft updates can eliminate the need to run a filesystem check program after every system crash.	none
+V52.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
+V52.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.6.3	UFS 快照挂起时间	http://www.mckusick.com/softdep/index.html	联网	A	2026-10-30	A key feature of these snapshots is that they usually require filesystem write activity to be suspended for less than one second. The suspension time is independent of the size of the filesystem.	none
+V52.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
+V52.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.6.4	NetBSD WAPBL 日志重放	http://net.bsd.my/changes/2008.html	联网	B	2026-10-30	In case of a crash or unexpected power loss however, the journaled file system will not need a lengthy file system check at boot time, but instead the kernel will replay the log within seconds.	none
+V52.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
+V52.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.6.5	WAPBL 与 softdep 不兼容	http://net.bsd.my/changes/2008.html	联网	B	2026-10-30	Note that WAPBL is not compatible with soft-dependencies, so please ensure that you first remove the “softdep” option if present.	none
+V52.1.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
+V52.1.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.6.6	ZFS 元数据副本安排	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	All metadata is stored twice by default, with the object containing the pool's state at a given transaction group to which the labels point being written three times.	none
+V52.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
+V52.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.7.1	ZFS merkle 树校验	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	Committed data is stored in a merkle tree that is updated atomically on each transaction group commit	none
+V52.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
+V52.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.7.2	HAMMER 放弃传播到根块指针	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	I also considered a propagate-to-root block pointer system for a short while but it simply was not compatible with the history retention requirement.	none
+V52.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
+V52.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.7.3	HAMMER CRC 非层次校验	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	Hammer CRC checks all major structures and data. The CRC checks are not hierarchical per-say, meaning that updating a low level record does not cause a CRC update to propagate to the root of the file-system tree.	none
+V52.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
+V52.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.7.4	ZFS 单盘池无自愈	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	A pool consisting of a single device has no self-healing capabilities.	none
+V52.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
+V52.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.7.5	ZFS ZIL 自校验块	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	ZIL records storing changes to be made for synchronous IO are self checksumming blocks that are read only on pool import if the system made changes before the last transaction group commit was made.	none
+V52.1.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
+V52.1.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.7.6	ZFS 快照对象单位	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	ZFS creates snapshots of a dataset, not a single directory or file.	none
+V52.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“比较口径总例：对象、维度与判准”；本节题为其下位论题	none
+V52.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.8.1	ZFS 设计目标作为比较维度	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	ZFS has three major design goals:	none
+V52.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“比较口径总例：对象、维度与判准”；本节题为其下位论题	none
+V52.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.8.2	HAMMER 设计与实现月数	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	Design on the file-system began in early 2007 and took approximately 9 months, and the implementation phase following took another 9 months.	none
+V52.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“比较口径总例：对象、维度与判准”；本节题为其下位论题	none
+V52.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“比较口径总例：对象、维度与判准”；本节题为其下位论题	none
+V52.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“比较口径总例：对象、维度与判准”；本节题为其下位论题	none
+V52.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.1.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“比较口径总例：对象、维度与判准”；本节题为其下位论题	none
+V52.1.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
+V52.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.1	pre-SMPng 的单一自旋锁	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node1.html	联网	A	2026-10-30	Prior to the SMPng project, SMP support in FreeBSD was limited to the i386 architecture and used one giant spin lock for the entire kernel as described in Section 10.2 of [Schimmel94]. This kernel architecture is referred to as pre-SMPng.	none
+V52.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
+V52.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.2	OpenBSD SMP 起点	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	The OpenBSD project started work on SMP support for various architectures in February 2000.	none
+V52.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
+V52.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.3	NetBSD 5.0 线程模型	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	The threading system was rewritten and is now based on a 1:1 model.	none
+V52.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
+V52.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.4	OpenBSD 每处理器运行队列	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	The OpenBSD scheduler is based on the traditional 4.4BSD scheduler, with some enhancements for SMP support. Each processor has its own runqueue.	none
+V52.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
+V52.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.5	中断线程化的必要性	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node2.html	联网	A	2026-10-30	Interrupt threads are necessary so that an interrupt handler has a context in which to block on a lock without blocking an unrelated top half kernel thread.	none
+V52.2.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
+V52.2.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.1.6	4.4BSD 调度器的 SMP 增补	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	The OpenBSD scheduler is based on the traditional 4.4BSD scheduler, with some enhancements for SMP support.	none
+V52.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
+V52.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.2.1	SMPng 项目起点与 BSDi	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node2.html	联网	A	2026-10-30	The SMPng project first began in June of 2000 with a presentation given to several FreeBSD developers by Chuck Paterson of BSDi explaining BSDi's SMP project to multithread their own kernel.	none
+V52.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
+V52.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.2.2	sched_lock 与 Giant 分工	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node2.html	联网	A	2026-10-30	A spin mutex named sched_lock was used to protect the scheduler queues, sleep queues, and other scheduler data structures. A sleep mutex named Giant was added to protect everything else in the kernel.	none
+V52.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
+V52.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.2.3	锁分析器与细粒度化	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node2.html	联网	A	2026-10-30	These include implementing a lock profiler that can determine which locks are heavily contested as well as where they are heavily contested. This will allow developers to determine when locking needs to be made more fine-grained.	none
+V52.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
+V52.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.2.4	SMPng 项目收尾	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	Thanks to the hard work of many developers over the past ~6 years, this goal is now complete.	none
+V52.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
+V52.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.2.5	SMPng 收尾时仍受 giant 保护的子系统	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	While Giant has not been completely eliminated from the kernel and several subsystems are still giant-locked (notably ipv6, tty, and CAM, although work is in progress on all of these fronts)	none
+V52.2.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
+V52.2.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.2.6	SMPng 收尾后的工作重心	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	The focus of SMP development work has largely changed from "break up Giant everywhere" to "carefully measure the effects of the locking decisions that were made, and optimize for greater performance and scalability".	none
+V52.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
+V52.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.3.1	LWKT 与执行上下文解耦	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	The Lightweight Kernel Threads (LWKT) system decouples the traditional Unix notions of an execution context from a VM address space.	none
+V52.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
+V52.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.3.2	LWKT 每处理器调度器	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Each processor has its own self-contained threads scheduler. Threads are tied to a processor and can only move under special circumstances.	none
+V52.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
+V52.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.3.3	LWKT 抢占规则	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	A thread can only be pre-empted by an interrupt thread.	none
+V52.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
+V52.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.3.4	跨处理器调度与 IPI	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Cross-processor scheduling is implemented via asynchronous inter-processor interrupts. Because these messages can be batched for a given interrupt, the system exhibits graceful degradation under load.	none
+V52.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
+V52.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.3.5	DragonFly 两层调度器	http://dragonflybsd.org/features	联网	A	2026-10-30	The scheduler abstraction has been split up into two layers. The LWKT (Light Weight Kernel Thread) scheduler is used by the kernel to schedule all executable entities. The User Thread Scheduler is a separate scheduler which selects one user thread at a time for each CPU and schedules it using the LWKT scheduler.	none
+V52.2.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
+V52.2.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.3.6	LWKT 线程迁移条件	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Threads are tied to a processor and can only move under special circumstances.	none
+V52.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“DragonFly 的内核架构实验”；本节题为其下位论题	none
+V52.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.4.1	DragonFly 消息传递取向	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	It departs from its predecessor in a number of ways, most notably, in place of the symmetric multiprocessing support being added to the upcoming FreeBSD 5 branch, DragonFlyBSD uses the concepts of partitioning and replication layered on top of a message passing system to implement lock-free scalability on symmetric as well as non-symmetric NUMA multiprocessors.	none
+V52.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“DragonFly 的内核架构实验”；本节题为其下位论题	none
+V52.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.4.2	线程串行化与资源归属	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	The next goal is to add multiprocessor support to the kernel using a thread serialization paradigm where resources are owned by a particular processor and messages passed to perform an operation on that resource.	none
+V52.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“DragonFly 的内核架构实验”；本节题为其下位论题	none
+V52.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.4.3	DragonFly 代码基线	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	The source base was forked off the RELENG_4 branch of FreeBSD on June 16, 2003	none
+V52.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“DragonFly 的内核架构实验”；本节题为其下位论题	none
+V52.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.4.4	协议线程的分派授权	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Protocol thread management is delegated to the individual protocol module, so the rest of the kernel and networking stack does not need to know how many threads nor which processor those threads were bound to.	none
+V52.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“DragonFly 的内核架构实验”；本节题为其下位论题	none
+V52.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.4.5	用户态消息传递进度	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Additional facilities such as the user-land messaging are close to completion --- an early form has been committed to the source repository.	none
+V52.2.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“DragonFly 的内核架构实验”；本节题为其下位论题	none
+V52.2.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.4.6	驱动框架的消息式改造	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Portions of the device driver framework have been converted to message passing style.	none
+V52.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
+V52.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.5.1	加锁路线与消息路线的对照	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	This is in stark contrast to the all-or-nothing requirement enforced by the SMP locking approach	none
+V52.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
+V52.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.5.2	NUMA 预设与线程放置	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Rather than starting with a SMP viewpoint and then trying to match it to NUMA reality, DragonFlyBSD starts out with a NUMA-centric view of the world and explicitly partitions the workload among multiple processors.	none
+V52.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
+V52.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.5.3	OpenBSD 大锁模型	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	OpenBSD employs a Big Giant Lock model. In this model, we need to acquire a lock every time we enter the kernel, in order to prevent kernel code from executing on multiple processors at the same time.	none
+V52.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
+V52.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.5.4	NetBSD 调度器模块化	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Added support for SCHED_M2, a second scheduling algorithm, as an alternative to the original SCHED_4BSD algorithm.	none
+V52.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
+V52.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.5.5	OpenBSD rthread 1:1 线程	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	An rthread is a 1:1 native kernel thread library, implemented using the rfork system call.	none
+V52.2.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
+V52.2.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.2.5.6	并发改造的时间跨度	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	According to the SMPng project webpage, "The end goal of the SMPng Project is to decompose the Giant lock into a number of smaller locks, resulting in reduced contention (and improved SMP performance)."	none
+V52.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
+V52.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.1.1	vkernel 定义	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	The vkernel architecture allows for running DragonFly kernels in userland.	none
+V52.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
+V52.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.1.2	vkernel 的调试方式	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	It is possible to directly gdb the virtual kernel's process.	none
+V52.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
+V52.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.1.3	vkernel 内存承载方式	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	The virtual kernel's memory is backed by a temporary file created in /var/vkernel and immediately unlinked.	none
+V52.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
+V52.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.1.4	vke 设备的 mbuf 分配	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	By default, half of the total mbuf clusters available is distributed equally among all the vke devices up to 256.	none
+V52.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
+V52.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.1.5	vkernel 构建配置	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	In order to compile a virtual kernel use the VKERNEL64 kernel configuration file residing in /sys/config	none
+V52.3.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
+V52.3.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.1.6	vkernel 下构建 world 的限制	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	The virtual kernel platform does not have all the header files expected by a world build	none
+V52.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
+V52.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.2.1	bhyve 进入基本系统	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	Major enhancements in virtualization, including the addition of bhyve(8), virtio(4), and native paravirtualized drivers providing support for FreeBSD as a guest operating system on Microsoft Hyper-V.	none
+V52.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
+V52.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.2.2	bhyve 的 BSD 许可	https://www-legacy.freebsd.org/doc/handbook/virtualization-host-bhyve.html	联网	A	2026-10-30	The bhyve BSD-licensed hypervisor became part of the base system with FreeBSD 10.0-RELEASE.	none
+V52.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
+V52.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.2.3	bhyve 的 CPU 前提	https://www-legacy.freebsd.org/doc/handbook/virtualization-host-bhyve.html	联网	A	2026-10-30	The bhyve design requires a processor that supports Intel® Extended Page Tables (EPT) or AMD® Rapid Virtualization Indexing (RVI) or Nested Page Tables (NPT).	none
+V52.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
+V52.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.2.4	bhyve 的半虚拟化驱动	https://docs-archive.freebsd.org/doc/9.3-RELEASE/usr/share/doc/freebsd/en/books/handbook/virtualization-host-bhyve.html	联网	B	2026-10-30	It also avoids emulating compatible hardware for the guest and instead relies on para-virtualization drivers. In FreeBSD, these are provided by the virtio(4) driver.	none
+V52.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
+V52.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.2.5	bhyve 控制台缺省	https://www-legacy.freebsd.org/doc/handbook/virtualization-host-bhyve.html	联网	A	2026-10-30	By default, bhyve provides access to serial console and does not emulate a graphical console.	none
+V52.3.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
+V52.3.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.2.6	bhyve 的 vmm 设备节点	https://www-legacy.freebsd.org/doc/handbook/virtualization-host-bhyve.html	联网	A	2026-10-30	A device node is created in /dev/vmm for each virtual machine.	none
+V52.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSD 虚拟化与云平台采用（2010 年代后）”；本节题为其下位论题	none
+V52.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.3.1	FreeBSD EC2 AMI 检索	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	FreeBSD/amd64 EC2 AMI IDs can be retrieved from the Systems Manager Parameter Store in each region using the keys:	none
+V52.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSD 虚拟化与云平台采用（2010 年代后）”；本节题为其下位论题	none
+V52.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.3.2	FreeBSD 在各云市场的上架状态	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	FreeBSD virtual machine images are available on the Azure Marketplace at:	none
+V52.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSD 虚拟化与云平台采用（2010 年代后）”；本节题为其下位论题	none
+V52.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.3.3	FreeBSD 云镜像的 UFS 与 ZFS 双套	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	FreeBSD virtual machine images are expected to be available in the near future in the Oracle Cloud Infrastructure Marketplace for amd64 and aarch64 architectures, in both UFS and ZFS filesystems	none
+V52.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSD 虚拟化与云平台采用（2010 年代后）”；本节题为其下位论题	none
+V52.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.3.4	FreeBSD 预装镜像格式	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	Pre-installed virtual machine images are also available for the amd64 (x86_64), AArch64 (arm64), and RISCV (riscv64) architectures in QCOW2, VHD, and VMDK disk image formats, as well as raw (unformatted) images.	none
+V52.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSD 虚拟化与云平台采用（2010 年代后）”；本节题为其下位论题	none
+V52.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.3.5	FreeBSD 作为 Hyper-V 客体	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	native paravirtualized drivers providing support for FreeBSD as a guest operating system on Microsoft Hyper-V	none
+V52.3.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSD 虚拟化与云平台采用（2010 年代后）”；本节题为其下位论题	none
+V52.3.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.3.6	FreeBSD 云平台清单	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	FreeBSD 15.0-RELEASE is also available on these cloud hosting platforms:	none
+V52.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“虚拟化路线比较：bhyve、vkernel 与 hypervisor 选型”；本节题为其下位论题	none
+V52.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.4.1	vmm 的定义	https://man.openbsd.org/vmm	联网	A	2026-10-30	The vmm driver implements a virtual machine monitor (VMM) suitable for executing virtual machines (VMs).	none
+V52.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“虚拟化路线比较：bhyve、vkernel 与 hypervisor 选型”；本节题为其下位论题	none
+V52.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.4.2	OpenBSD vmm 的引入版本	https://man.openbsd.org/vmm	联网	A	2026-10-30	The vmm driver appeared in OpenBSD 5.9 .	none
+V52.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“虚拟化路线比较：bhyve、vkernel 与 hypervisor 选型”；本节题为其下位论题	none
+V52.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.4.3	vmd 的 privsep 与 pledge	https://www.openbsd.org/papers/asiabsdcon2016-vmd-slides.pdf	联网	A	2026-10-30	“sandboxed” VMs using privsep and pledge	none
+V52.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“虚拟化路线比较：bhyve、vkernel 与 hypervisor 选型”；本节题为其下位论题	none
+V52.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.4.4	bhyve 的客体运行方式	https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8	联网	A	2026-10-30	bhyve is a hypervisor that runs guest operating systems inside a virtual machine. It can run guests on amd64 and arm64 platforms with suitable hardware support.	none
+V52.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“虚拟化路线比较：bhyve、vkernel 与 hypervisor 选型”；本节题为其下位论题	none
+V52.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.4.5	bhyve 入树的集成方式	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	Major enhancements in virtualization, including the addition of bhyve(8), virtio(4)	none
+V52.3.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“虚拟化路线比较：bhyve、vkernel 与 hypervisor 选型”；本节题为其下位论题	none
+V52.3.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.3.4.6	FreeBSD 的云平台发行	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	FreeBSD 15.0-RELEASE is also available on these cloud hosting platforms:	none
+V52.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
+V52.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.1.1	FreeBSD 起于 386BSD 补丁包	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The FreeBSD Project had its genesis in the early part of 1993, partially as the brainchild of the Unofficial 386BSDPatchkit's last 3 coordinators: Nate Williams, Rod Grimes and Jordan Hubbard.	none
+V52.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
+V52.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.1.2	FreeBSD 1.0 的代码来源	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993. This was based on the 4.3BSD-Lite ("Net/2") tape from U.C. Berkeley, with many components also provided by 386BSD and the Free Software Foundation.	none
+V52.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
+V52.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.1.3	NetBSD 建项目动因	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993.	none
+V52.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
+V52.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.1.4	NetBSD 创始人	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	The NetBSD project was founded by Chris Demetriou, Theo de Raadt, Adam Glass and Charles M. Hannum.	none
+V52.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
+V52.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.1.5	NetBSD 与 FreeBSD 的初始取向	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	NetBSD's original focus was quality and architecture independence. FreeBSD was formed later with a focus on the i386 PC platform.	none
+V52.4.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
+V52.4.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.1.6	FreeBSD 从 4.4BSD-Lite 重建	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	It took the project until November of 1994 to make this transition, and in December it released FreeBSD 2.0 to the world.	none
+V52.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 的可移植性架构与代码组织”；本节题为其下位论题	none
+V52.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.2.1	NetBSD 的 port 概念	https://www.netbsd.org/ports/	联网	A	2026-10-30	NetBSD calls a supported architecture a port. Most ports run on generic hardware and emulators, although some commercial hardware also exists.	none
+V52.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 的可移植性架构与代码组织”；本节题为其下位论题	none
+V52.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.2.2	NetBSD 端口分级	https://www.netbsd.org/ports/	联网	A	2026-10-30	Ports are classified into three tiers based on the current importance of the architecture and the level of community activity.	none
+V52.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 的可移植性架构与代码组织”；本节题为其下位论题	none
+V52.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.2.3	NetBSD 的 MI 变更规则	https://www.netbsd.org/ports/	联网	A	2026-10-30	Machine independent (MI) changes should benefit these ports.	none
+V52.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 的可移植性架构与代码组织”；本节题为其下位论题	none
+V52.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.2.4	NetBSD 的 MD 支持责任	https://www.netbsd.org/ports/	联网	A	2026-10-30	It is the developer's responsibility to implement machine dependent (MD) support necessary for changes, fix build problems and aid in debugging with any platform-specific problems.	none
+V52.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 的可移植性架构与代码组织”；本节题为其下位论题	none
+V52.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.2.5	NetBSD 同架构用户态共享	https://www.netbsd.org/ports/	联网	A	2026-10-30	Machines of the same MACHINE_ARCH share the same userland binaries (with a few device specific exceptions).	none
+V52.4.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 的可移植性架构与代码组织”；本节题为其下位论题	none
+V52.4.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.2.6	NetBSD 端口退出机制	https://www.netbsd.org/ports/	联网	A	2026-10-30	If the port is not reported fixed within the next 6-12 months, it will be moved to the Attic.	none
+V52.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD、OpenBSD 与 DragonFly 的技术分化”；本节题为其下位论题	none
+V52.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.3.1	OpenBSD 的系统定位	https://www.openbsd.org/	联网	A	2026-10-30	The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system.	none
+V52.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD、OpenBSD 与 DragonFly 的技术分化”；本节题为其下位论题	none
+V52.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.3.2	OpenBSD 的主动安全取向	https://www.openbsd.org/	联网	A	2026-10-30	Our efforts emphasize portability, standardization, correctness, proactive security and integrated cryptography.	none
+V52.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD、OpenBSD 与 DragonFly 的技术分化”；本节题为其下位论题	none
+V52.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.3.3	DragonFly 代码基线时点	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	The source base was forked off the RELENG_4 branch of FreeBSD on June 16, 2003	none
+V52.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD、OpenBSD 与 DragonFly 的技术分化”；本节题为其下位论题	none
+V52.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.3.4	DragonFly 与 FreeBSD 5 的路线对立	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	in place of the symmetric multiprocessing support being added to the upcoming FreeBSD 5 branch, DragonFlyBSD uses the concepts of partitioning and replication layered on top of a message passing system	none
+V52.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD、OpenBSD 与 DragonFly 的技术分化”；本节题为其下位论题	none
+V52.4.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.3.5	DragonFly 分叉时的规模	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	It is currently comprised of 16 committers with write privileges to the source repository and a community of outside contributors who submit bug patches and help with testing.	none
+V52.4.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD、OpenBSD 与 DragonFly 的技术分化”；本节题为其下位论题	none
+V52.4.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.3.6	FreeBSD 与 4.4BSD-Lite 的关系	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD is based on the 4.4BSD-Lite release from Computer Systems Research Group (CSRG) at the University of California at Berkeley, and carries on the distinguished tradition of BSD systems development.	none
+V52.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
+V52.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.4.1	FreeBSD 的 Ports 与包双轨	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Almost every port is also provided as a pre-compiled "package", which can be installed with a simple command (pkg install) by those who do not wish to compile their own ports from source.	none
+V52.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
+V52.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.4.2	FreeBSD Ports 规模	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	There are about 37000 ports; the entire Ports Collection requires approximately 3 GB.	none
+V52.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
+V52.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.4.3	pkgsrc 的 bootstrap 前置	https://pkgsrc.org/	联网	A	2026-10-30	NetBSD already contains the necessary tools for using pkgsrc; on other platforms you need to bootstrap pkgsrc to get the package management tools installed.	none
+V52.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
+V52.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.4.4	pkgsrc 季度分支	https://www.pkgsrc.org/	联网	A	2026-10-30	the pkgsrc developers are proud to announce the pkgsrc-2026Q3 branch, the 92nd pkgsrc release	none
+V52.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
+V52.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.4.5	FreeBSD 默认包管理工具	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	pkg(7) is now the default package management utility.	none
+V52.4.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
+V52.4.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.4.6	pkgsrc 支持的平台范围	https://pkgsrc.org/	联网	A	2026-10-30	Code exists in pkgsrc to support 20+ Unix-like operating systems and 15+ CPU architectures.	none
+V52.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenSSH、OpenZFS、WireGuard 等跨项目技术传播”；本节题为其下位论题	none
+V52.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.5.1	OpenSSH 的设立动机	https://www.openssh.com/history.html	联网	A	2026-10-30	In 1999, some OpenBSD developers set to the task of freeing SSH, cleaning up the license mess, and maintaining the codebase towards the future.	none
+V52.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenSSH、OpenZFS、WireGuard 等跨项目技术传播”；本节题为其下位论题	none
+V52.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.5.2	OpenSSH 的源码起点	https://www.openssh.com/history.html	联网	A	2026-10-30	OpenSSH is a derivative of the original free ssh 1.2.12 release from Tatu Ylönen. That version was the last one free enough for reuse.	none
+V52.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenSSH、OpenZFS、WireGuard 等跨项目技术传播”；本节题为其下位论题	none
+V52.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.5.3	OpenSSH 首次导入	https://www.openssh.com/history.html	联网	A	2026-10-30	The initial import was done on Sep 26, 1999	none
+V52.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenSSH、OpenZFS、WireGuard 等跨项目技术传播”；本节题为其下位论题	none
+V52.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.5.4	OpenSSH 核心与移植分离	https://www.openssh.com/history.html	联网	A	2026-10-30	we decided to split our core development efforts from portability developments	none
+V52.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenSSH、OpenZFS、WireGuard 等跨项目技术传播”；本节题为其下位论题	none
+V52.4.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.5.5	OpenZFS 的跨平台合并	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.	none
+V52.4.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenSSH、OpenZFS、WireGuard 等跨项目技术传播”；本节题为其下位论题	none
+V52.4.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.5.6	WireGuard 的平台扩散	https://www.wireguard.com/	联网	A	2026-10-30	Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable.	none
+V52.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“DTrace：从 Solaris 到 FreeBSD 的追踪框架移植”；本节题为其下位论题	none
+V52.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.6.1	DTrace 的原始目的	https://docs.freebsd.org/en/books/handbook/dtrace/	联网	A	2026-10-30	DTrace, also known as Dynamic Tracing, was developed by Sun™ as a tool for locating performance bottlenecks in production and pre-production systems.	none
+V52.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“DTrace：从 Solaris 到 FreeBSD 的追踪框架移植”；本节题为其下位论题	none
+V52.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.6.2	FreeBSD DTrace 的实现形态	https://docs.freebsd.org/en/books/handbook/dtrace/	联网	A	2026-10-30	The primary difference is that in FreeBSD, DTrace is implemented as a set of kernel modules and DTrace can not be used until the modules are loaded.	none
+V52.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“DTrace：从 Solaris 到 FreeBSD 的追踪框架移植”；本节题为其下位论题	none
+V52.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.6.3	FreeBSD DTrace 的 CTF 数据	https://docs.freebsd.org/en/books/handbook/dtrace/	联网	A	2026-10-30	FreeBSD uses the DDB_CTF kernel option to enable support for loading ctf(5) data from kernel modules and the kernel itself.	none
+V52.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“DTrace：从 Solaris 到 FreeBSD 的追踪框架移植”；本节题为其下位论题	none
+V52.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.6.4	DTrace 的许可状态	https://docs.freebsd.org/en/books/handbook/dtrace/	联网	A	2026-10-30	While a FreeBSD kernel with DTrace support is BSD licensed, the CDDL is used when the modules are distributed in binary form or the binaries are loaded.	none
+V52.4.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“DTrace：从 Solaris 到 FreeBSD 的追踪框架移植”；本节题为其下位论题	none
+V52.4.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.6.5	FreeBSD DTrace 的使用权限	https://docs.freebsd.org/en/books/handbook/dtrace/	联网	A	2026-10-30	Due to security differences, only root may use DTrace on FreeBSD.	none
+V52.4.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“DTrace：从 Solaris 到 FreeBSD 的追踪框架移植”；本节题为其下位论题	none
+V52.4.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.6.6	DTrace 脚本跨系统兼容	https://docs.freebsd.org/en/books/handbook/dtrace/	联网	A	2026-10-30	Thus, D scripts written on Solaris™ may or may not work unmodified on FreeBSD, and vice versa.	none
+V52.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“DTrace 与 eBPF：追踪框架的跨系统影响”；本节题为其下位论题	none
+V52.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.7.1	eBPF 的技术定位	https://www.bsdcan.org/2018/schedule/track/Hacking/963.en.html	联网	A	2026-10-30	eBPF is an in-kernel virtual machine with an independent 64-bit instruction set architecture with C calling convention.	none
+V52.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“DTrace 与 eBPF：追踪框架的跨系统影响”；本节题为其下位论题	none
+V52.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.7.2	eBPF 的起点	https://www.bsdcan.org/2018/schedule/track/Hacking/963.en.html	联网	A	2026-10-30	It was appeared in the Linux kernel in 2014 as an extension to the existing BPF.	none
+V52.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“DTrace 与 eBPF：追踪框架的跨系统影响”；本节题为其下位论题	none
+V52.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.7.3	eBPF 的用途范围	https://www.bsdcan.org/2018/schedule/track/Hacking/963.en.html	联网	A	2026-10-30	Today many applications such as dynamic tracing, resource control, and system call filtering are proposed and implemented by using eBPF in Linux.	none
+V52.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“DTrace 与 eBPF：追踪框架的跨系统影响”；本节题为其下位论题	none
+V52.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.7.4	eBPF 移植 FreeBSD 的方法	https://www.bsdcan.org/2018/schedule/track/Hacking/963.en.html	联网	A	2026-10-30	We will break up existing Linux eBPF system into several components and explain how each component works.	none
+V52.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“DTrace 与 eBPF：追踪框架的跨系统影响”；本节题为其下位论题	none
+V52.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.7.5	FreeBSD eBPF 的实现组成	https://people.freebsd.org/~hrs/hrs-20190919-ebpf.pdf	联网	A	2026-10-30	eBPF interpreter and JIT compiler	none
+V52.4.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“DTrace 与 eBPF：追踪框架的跨系统影响”；本节题为其下位论题	none
+V52.4.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.7.6	FreeBSD eBPF 的能力缺口	https://people.freebsd.org/~hrs/hrs-20190919-ebpf.pdf	联网	A	2026-10-30	Still lacking of...hooks in kernel.	none
+V52.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 技术向其他 UNIX、Linux 与商业系统的流动”；本节题为其下位论题	none
+V52.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.8.1	Junos 与 FreeBSD 的关系	https://www.juniper.net/documentation//us/en/software/junos/routing-overview/topics/concept/rpd-memory-faq.html	联网	A	2026-10-30	Junos OS is based on the FreeBSD Unix operating system.	none
+V52.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 技术向其他 UNIX、Linux 与商业系统的流动”；本节题为其下位论题	none
+V52.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.8.2	Junos 对 FreeBSD 的改写	https://www.juniper.net/documentation//us/en/software/junos/routing-overview/topics/concept/rpd-memory-faq.html	联网	A	2026-10-30	The open source software is modified and hardened to operate in the device’s specialized environment. For example, some executables have been deleted, while other utilities were de-emphasized.	none
+V52.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 技术向其他 UNIX、Linux 与商业系统的流动”；本节题为其下位论题	none
+V52.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.8.3	Junos 的进程隔离	https://www.juniper.net/documentation//us/en/software/junos/routing-overview/topics/concept/rpd-memory-faq.html	联网	A	2026-10-30	This separation provides isolation between the processes, and resiliency in the event of a process failure.	none
+V52.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 技术向其他 UNIX、Linux 与商业系统的流动”；本节题为其下位论题	none
+V52.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.8.4	OpenSSH 向外移植	https://www.openssh.com/history.html	联网	A	2026-10-30	Damien Miller, Philip Hands, and a handful of others started porting OpenSSH to Linux and various other Unix operating systems.	none
+V52.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 技术向其他 UNIX、Linux 与商业系统的流动”；本节题为其下位论题	none
+V52.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.8.5	OpenZFS 的双向流动	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	Ports of ZFS to other platforms continued porting upstream changes from illumos.	none
+V52.4.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 技术向其他 UNIX、Linux 与商业系统的流动”；本节题为其下位论题	none
+V52.4.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.4.8.6	BSD 许可对商业并入的允许	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Liberal Open Source license, which grants the rights to freely modify and extend its source code and incorporate it in both Open Source projects and closed products without imposing restrictions typical to copyleft licenses	none
+V52.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“版本控制的分流：从 CSRG 的 SCCS 到四系各自的 CVS／Git 仓库”；本节题为其下位论题	none
+V52.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.1.1	FreeBSD 版本控制迁移	https://cgit.freebsd.org/doc/tree/website/content/en/developers/cvs.adoc?id=e20c2174c7e02330fbc7d4f2c8d2d161fd7279b5	联网	A	2026-10-30	In June 2008, development of the base system migrated from CVS to Subversion.	none
+V52.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“版本控制的分流：从 CSRG 的 SCCS 到四系各自的 CVS／Git 仓库”；本节题为其下位论题	none
+V52.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.1.2	CVS 到 Subversion 的迁移时点	https://cgit.freebsd.org/doc/tree/website/content/en/developers/cvs.adoc?id=e20c2174c7e02330fbc7d4f2c8d2d161fd7279b5	联网	A	2026-10-30	In May 2012, the FreeBSD Documentation Project moved from CVS to Subversion.	none
+V52.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“版本控制的分流：从 CSRG 的 SCCS 到四系各自的 CVS／Git 仓库”；本节题为其下位论题	none
+V52.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.1.3	基本系统迁入 Git	https://cgit.freebsd.org/doc/tree/website/content/en/developers/cvs.adoc?id=e20c2174c7e02330fbc7d4f2c8d2d161fd7279b5	联网	A	2026-10-30	In December 2020, development of the base system migrated from Subversion to Git.	none
+V52.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“版本控制的分流：从 CSRG 的 SCCS 到四系各自的 CVS／Git 仓库”；本节题为其下位论题	none
+V52.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.1.4	doc 与 ports 树的迁移	https://cgit.freebsd.org/doc/tree/website/content/en/developers/cvs.adoc?id=e20c2174c7e02330fbc7d4f2c8d2d161fd7279b5	联网	A	2026-10-30	In April 2021, the FreeBSD Ports tree has been moved from Subversion to Git.	none
+V52.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“版本控制的分流：从 CSRG 的 SCCS 到四系各自的 CVS／Git 仓库”；本节题为其下位论题	none
+V52.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.1.5	git2svn 导出机制	https://cgit.freebsd.org/doc/tree/website/content/en/developers/cvs.adoc?id=e20c2174c7e02330fbc7d4f2c8d2d161fd7279b5	联网	A	2026-10-30	Since December 2020, after development moved to Git, Subversion only receives translated commits from git2svn exporter in stable/11, stable/12 and supported release branches.	none
+V52.5.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“版本控制的分流：从 CSRG 的 SCCS 到四系各自的 CVS／Git 仓库”；本节题为其下位论题	none
+V52.5.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.1.6	CVS 长期作为中央仓库	https://www.freebsd.org/handbook/history.html	联网	A	2026-10-30	For several years, the central source tree for FreeBSD was maintained by CVS (Concurrent Versions System), a freely available source code control tool.	none
+V52.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
+V52.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.2.1	提交前评审	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Committers are encouraged to seek review for their work as part of the normal development process, regardless of the area of the tree where the work is occurring.	none
+V52.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
+V52.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.2.2	提交说明体例	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	The first line is the subject of the commit, it contains what port was changed, and a summary of the commit. It should contain 50 characters or less.	none
+V52.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
+V52.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.2.3	patchkit 与主线的关系	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The original goal was to produce an intermediate snapshot of 386BSD in order to fix a number of problems that the patchkit mechanism was just not capable of solving.	none
+V52.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
+V52.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.2.4	提交权限的分区	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V52.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
+V52.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.2.5	冻结期审批口令	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	To enforce commit approvals by the FreeBSD Release Engineering Team, the Release Engineering Team must approve any changes to the branch, in which case the commit log must include an Approved by: re (login) line, where "login" is the login ID of the approver.	none
+V52.5.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
+V52.5.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.2.6	主线合并稳定线的等待期	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The default minimum timeframe before merging to stable/ branches is three (3) days.	none
+V52.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“测试体系：regress 树、Kyua 前身与 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的差异”；本节题为其下位论题	none
+V52.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.3.1	FreeBSD 测试套件的出现	https://www.freebsd.org/cgi/man.cgi?query=tests	联网	A	2026-10-30	The FreeBSD Test Suite first appeared in FreeBSD 10.1 and was installed by default in FreeBSD 11.0.	none
+V52.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“测试体系：regress 树、Kyua 前身与 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的差异”；本节题为其下位论题	none
+V52.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.3.2	NetBSD 自动测试框架	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	a preview of metadata journaling for FFS file systems (known as WAPBL, Write Ahead Physical Block Logging), the 'jemalloc' memory allocator, the X.Org X11 distribution instead of XFree86 on a number of ports, the Power Management Framework, ACPI suspend/resume support on many laptops, write support for UDF file systems, the Automated Testing Framework	none
+V52.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“测试体系：regress 树、Kyua 前身与 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的差异”；本节题为其下位论题	none
+V52.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.3.3	Kyua 进入基本系统	https://www.freebsd.org/cgi/man.cgi?query=tests	联网	A	2026-10-30	The test driver, kyua(1), was imported as part of the base system in FreeBSD 13.0, previously being available only in ports(7).	none
+V52.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“测试体系：regress 树、Kyua 前身与 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的差异”；本节题为其下位论题	none
+V52.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.3.4	测试套件默认安装	https://www.freebsd.org/cgi/man.cgi?query=tests	联网	A	2026-10-30	was installed by default in FreeBSD 11.0	none
+V52.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“测试体系：regress 树、Kyua 前身与 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的差异”；本节题为其下位论题	none
+V52.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.3.5	FreeBSD 与 NetBSD 测试套件的一致性目标	https://wiki.freebsd.org/TestSuite	联网	B	2026-10-30	Minimize divergence with NetBSD's test suite. Both systems should use the same testing tools and have a similar setup so that sharing test code is possible and easy.	none
+V52.5.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“测试体系：regress 树、Kyua 前身与 FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的差异”；本节题为其下位论题	none
+V52.5.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.3.6	Kyua 支持多种测试程序	https://www.freebsd.org/cgi/man.cgi?query=kyua&sektion=1	联网	A	2026-10-30	Kyua is able to execute test programs written with a plethora of testing libraries and languages.	none
+V52.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
+V52.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.4.1	点发布与零点发布	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	In between releases from the stable/ branches, approximately every two (2) years, a release will be cut directly from main. These releases have been historically referred to as "dot-zero" releases.	none
+V52.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
+V52.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.4.2	发布周期排期	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	Approximately two months before the start of the release cycle, the FreeBSD Release Engineering Team decides on a schedule for the release.	none
+V52.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
+V52.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.4.3	代码冻结的定义	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The code freeze marks the point in time where all commits to the branch require explicit approval from the FreeBSD Release Engineering Team.	none
+V52.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
+V52.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.4.4	ALPHA 构建	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The idea behind "ALPHA" builds is to provide regular FreeBSD-provided builds before the creation of the stable/ branch.	none
+V52.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
+V52.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.4.5	发布公告的校验清单	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	SHA256 and MD5 hashes for the release ISO and memory stick images are included at the bottom of this message.	none
+V52.5.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
+V52.5.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.4.6	发布支持期限	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	FreeBSD 10.0-RELEASE will be supported until 31 January 2015.	none
+V52.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“移植工程：MI／MD、autoconf 与平台引入流程”；本节题为其下位论题	none
+V52.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.5.1	MI 与 MD 分层	https://www.netbsd.org/ports/	联网	A	2026-10-30	It is the developer's responsibility to implement machine dependent (MD) support necessary for changes, fix build problems and aid in debugging with any platform-specific problems.	none
+V52.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“移植工程：MI／MD、autoconf 与平台引入流程”；本节题为其下位论题	none
+V52.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.5.2	平台引入的测试义务	https://www.netbsd.org/ports/	联网	A	2026-10-30	MI changes must be tested on at least one of these ports.	none
+V52.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“移植工程：MI／MD、autoconf 与平台引入流程”；本节题为其下位论题	none
+V52.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.5.3	构建问题责任归属	https://www.netbsd.org/ports/	联网	A	2026-10-30	It is the developer's responsibility to implement machine dependent (MD) support necessary for changes, fix build problems and aid in debugging with any platform-specific problems.	none
+V52.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“移植工程：MI／MD、autoconf 与平台引入流程”；本节题为其下位论题	none
+V52.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.5.4	自动测试回归禁令	https://www.netbsd.org/ports/	联网	A	2026-10-30	Regressions in the automated NetBSD test suite (/usr/tests) are not allowed.	none
+V52.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“移植工程：MI／MD、autoconf 与平台引入流程”；本节题为其下位论题	none
+V52.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.5.5	端口分级门槛	https://www.netbsd.org/ports/	联网	A	2026-10-30	Summarizing, the tiers can be viewed to represent ports that NetBSD will support, ports that NetBSD does its best to support, and ports which may be desupported soon.	none
+V52.5.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“移植工程：MI／MD、autoconf 与平台引入流程”；本节题为其下位论题	none
+V52.5.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.5.6	NetBSD 架构与安装介质	https://www.netbsd.org/	联网	A	2026-10-30	NetBSD is a free, fast, secure, and highly portable Unix-like Open Source operating system. It is available for a wide range of platforms, from large-scale servers and powerful desktop systems to handheld and embedded devices.	none
+V52.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文档工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的手册体系与随代码更新”；本节题为其下位论题	none
+V52.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.6.1	mdoc 语义标记	https://man.openbsd.org/mandoc.1	联网	A	2026-10-30	Markdown is a very weak markup language, so all semantic markup is lost, and even part of the presentational markup may be lost.	none
+V52.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文档工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的手册体系与随代码更新”；本节题为其下位论题	none
+V52.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.6.2	mandoc 入树	https://man.openbsd.org/mandoc.1	联网	A	2026-10-30	The mandoc utility first appeared in OpenBSD 4.8.	none
+V52.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文档工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的手册体系与随代码更新”；本节题为其下位论题	none
+V52.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.6.3	mandoc 输出格式	https://man.openbsd.org/mandoc.1	联网	A	2026-10-30	Supported values for the output argument are ascii, html, the default of locale, man, markdown, tree, and utf8.	none
+V52.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文档工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的手册体系与随代码更新”；本节题为其下位论题	none
+V52.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.6.4	mandoc lint 模式	https://man.openbsd.org/mandoc.1	联网	A	2026-10-30	The special -T lint mode only parses the input and produces no output.	none
+V52.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文档工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的手册体系与随代码更新”；本节题为其下位论题	none
+V52.5.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.6.5	文档树的冻结与打标	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The doc/ tree slush is coordinated by the FreeBSD Documentation Engineering Team.	none
+V52.5.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文档工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的手册体系与随代码更新”；本节题为其下位论题	none
+V52.5.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.6.6	手册页覆盖范围	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	there are also the man(1) pages, not only for userspace daemons, utilities, and configuration files, but also for kernel driver APIs (section 9) and individual drivers (section 4)	none
+V52.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“代码风格与编程规范的横向比较：KNF 四变体与 GNU／Linux 对照”；本节题为其下位论题	none
+V52.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.7.1	KNF 的来源	https://man.freebsd.org/cgi/man.cgi?query=style&sektion=9	联网	A	2026-10-30	Style guide for FreeBSD.  Based on the CSRG's KNF (Kernel Normal Form).	none
+V52.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“代码风格与编程规范的横向比较：KNF 四变体与 GNU／Linux 对照”；本节题为其下位论题	none
+V52.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.7.2	缩进规则	https://man.freebsd.org/cgi/man.cgi?query=style&sektion=9	联网	A	2026-10-30	Indentation is an 8 character tab.  Second level indents are four spaces.	none
+V52.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“代码风格与编程规范的横向比较：KNF 四变体与 GNU／Linux 对照”；本节题为其下位论题	none
+V52.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.7.3	函数定义格式	https://man.freebsd.org/cgi/man.cgi?query=style&sektion=9	联网	A	2026-10-30	The function type should be on a line by itself preceding the function.  The opening brace of the function body should be on a line by itself.	none
+V52.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“代码风格与编程规范的横向比较：KNF 四变体与 GNU／Linux 对照”；本节题为其下位论题	none
+V52.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.7.4	GNU 编码规范的原则	https://www.gnu.org/prep/standards/standards.html	联网	A	2026-10-30	The most important point is to be self-consistent—try to stick to the conventions you pick, and try to document them as much as possible.	none
+V52.5.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“代码风格与编程规范的横向比较：KNF 四变体与 GNU／Linux 对照”；本节题为其下位论题	none
+V52.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.7.5	风格改动与合并冲突	https://man.freebsd.org/cgi/man.cgi?query=style&sektion=9	联网	A	2026-10-30	Stylistic changes, including whitespace ones, complicate the work of downstream consumers and may impair developers' ability to trace the history of some changes.	none
+V52.5.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“代码风格与编程规范的横向比较：KNF 四变体与 GNU／Linux 对照”；本节题为其下位论题	none
+V52.5.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.7.6	纯风格提交的处理	https://man.freebsd.org/cgi/man.cgi?query=style&sektion=9	联网	A	2026-10-30	Style-only commits should be added to the file .git-blame-ignore-revs at the top of the source repository to hide them from git blame.	none
+V52.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“跨项目工程流动：MFC、backport 与补丁互移”；本节题为其下位论题	none
+V52.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.8.1	MFC 的合并方向	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	After a reasonable testing period, changes can then be merged to the stable/ branches.	none
+V52.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“跨项目工程流动：MFC、backport 与补丁互移”；本节题为其下位论题	none
+V52.5.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.8.2	即时合并的例外	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	there are a few special circumstances where an immediate merge may be necessary, such as a critical security fix, or a bug fix that directly inhibits the release build process.	none
+V52.5.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“跨项目工程流动：MFC、backport 与补丁互移”；本节题为其下位论题	none
+V52.5.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.8.3	移植分支与原树分工	https://www.openssh.com/history.html	联网	A	2026-10-30	we decided to split our core development efforts from portability developments	none
+V52.5.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“跨项目工程流动：MFC、backport 与补丁互移”；本节题为其下位论题	none
+V52.5.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.8.4	下游从上游拉取	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	Ports of ZFS to other platforms continued porting upstream changes from illumos.	none
+V52.5.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“跨项目工程流动：MFC、backport 与补丁互移”；本节题为其下位论题	none
+V52.5.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.8.5	跨系引入构建工具	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	make(1) has been replaced with bmake(1), obtained from the NetBSD Project.	none
+V52.5.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“跨项目工程流动：MFC、backport 与补丁互移”；本节题为其下位论题	none
+V52.5.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.5.8.6	共享与分化的平衡	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.	none
+V52.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“平台支持：VAX、Tahoe、MIPS、SPARC、Alpha、x86、ARM 与 RISC-V”；本节题为其下位论题	none
+V52.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.1.1	重点级端口数量	https://www.netbsd.org/ports/	联网	A	2026-10-30	Currently there are 8 ports with Tier I status.	none
+V52.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“平台支持：VAX、Tahoe、MIPS、SPARC、Alpha、x86、ARM 与 RISC-V”；本节题为其下位论题	none
+V52.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.1.2	重点级端口清单	https://www.netbsd.org/ports/	联网	A	2026-10-30	The platforms consist of modern server, embedded and desktop architectures.	none
+V52.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“平台支持：VAX、Tahoe、MIPS、SPARC、Alpha、x86、ARM 与 RISC-V”；本节题为其下位论题	none
+V52.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.1.3	FreeBSD 支持架构	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD is an Open Source, standards-compliant Unix-like operating system for x86 (both 32 and 64 bit), ARM, AArch64, RISC-V, POWER, and PowerPC computers.	none
+V52.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“平台支持：VAX、Tahoe、MIPS、SPARC、Alpha、x86、ARM 与 RISC-V”；本节题为其下位论题	none
+V52.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.1.4	RISC-V 与 ARM 的支持地位	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	x86 (both 32 and 64 bit), ARM, AArch64, RISC-V, POWER, and PowerPC computers	none
+V52.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“平台支持：VAX、Tahoe、MIPS、SPARC、Alpha、x86、ARM 与 RISC-V”；本节题为其下位论题	none
+V52.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.1.5	端口的生命维持级	https://www.netbsd.org/ports/	联网	A	2026-10-30	Ports are moved to life support if they no longer function.	none
+V52.6.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“平台支持：VAX、Tahoe、MIPS、SPARC、Alpha、x86、ARM 与 RISC-V”；本节题为其下位论题	none
+V52.6.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.1.6	端口纳入日期	https://www.netbsd.org/ports/	联网	A	2026-10-30	The NetBSD Ports History page details the inclusion date for each port.	none
+V52.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“KAME 与 IPv6”；本节题为其下位论题	none
+V52.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.2.1	KAME 的组织形式	https://www.kame.net/?/?/	联网	A	2026-10-30	The KAME project was a joint effort of six companies in Japan to provide a free stack of IPv6, IPsec, and Mobile IPv6 for BSD variants.	none
+V52.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“KAME 与 IPv6”；本节题为其下位论题	none
+V52.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.2.2	KAME 的项目周期	https://www.kame.net/project-overview.html	联网	A	2026-10-30	The KAME project was started as a 2-year project (April 1998 - March 2000). It has got extension for 2 years several times, so will be until March 2006 at this moment.	none
+V52.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“KAME 与 IPv6”；本节题为其下位论题	none
+V52.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.2.3	KAME 的设立理由	https://www.kame.net/project-overview.html	联网	A	2026-10-30	even if *BSD projects chose a single IPv6 stack to merge into themselves, the code would be maintained by each project separately and the code would likely be quite different on each project tree	none
+V52.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“KAME 与 IPv6”；本节题为其下位论题	none
+V52.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.2.4	KAME 代码的合流	https://www.kame.net/?/?/	联网	A	2026-10-30	Almost all of our implemented code has been merged to FreeBSD and NetBSD.	none
+V52.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“KAME 与 IPv6”；本节题为其下位论题	none
+V52.6.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.2.5	KAME 成果的采用范围	https://www.kame.net/?/?/	联网	A	2026-10-30	Our products are available in: FreeBSD 4.0 and beyond OpenBSD 2.7 and beyond NetBSD 1.5 and beyond BSD/OS 4.2 and beyond	none
+V52.6.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“KAME 与 IPv6”；本节题为其下位论题	none
+V52.6.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.2.6	KAME 的许可取向	https://www.kame.net/project-overview.html	联网	A	2026-10-30	The most important task is to implement the best networking code possible, under the BSD copyright.	none
+V52.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“netgraph、桥接、链路聚合与 VNET”；本节题为其下位论题	none
+V52.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.3.1	netgraph 的图结构	https://man.freebsd.org/cgi/man.cgi?query=netgraph&sektion=4	联网	A	2026-10-30	The objects, known as nodes, can be arranged into arbitrarily complicated graphs.	none
+V52.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“netgraph、桥接、链路聚合与 VNET”；本节题为其下位论题	none
+V52.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.3.2	netgraph 节点自动装载	https://man.freebsd.org/cgi/man.cgi?query=netgraph&sektion=4	联网	A	2026-10-30	when a request to create a new node of unknown type type is made, netgraph will attempt to load the KLD module ng_<type>.ko.	none
+V52.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“netgraph、桥接、链路聚合与 VNET”；本节题为其下位论题	none
+V52.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.3.3	桥接的地址学习	https://man.freebsd.org/cgi/man.cgi?query=if_bridge&sektion=4	联网	A	2026-10-30	For unicast traffic, the bridge learns which MAC addresses are associated with which interfaces and will forward the traffic selectively.	none
+V52.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“netgraph、桥接、链路聚合与 VNET”；本节题为其下位论题	none
+V52.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.3.4	桥接的生成树	https://man.freebsd.org/cgi/man.cgi?query=if_bridge&sektion=4	联网	A	2026-10-30	Spanning Tree is used to detect and remove loops in a network topology.	none
+V52.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“netgraph、桥接、链路聚合与 VNET”；本节题为其下位论题	none
+V52.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.3.5	lagg 的聚合协议	https://man.freebsd.org/cgi/man.cgi?query=lagg&sektion=4	联网	A	2026-10-30	The driver currently supports the aggregation protocols failover (the default), lacp, loadbalance, roundrobin, broadcast, and none.	none
+V52.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“netgraph、桥接、链路聚合与 VNET”；本节题为其下位论题	none
+V52.6.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.3.6	VNET 的基本手法	https://www.freebsd.org/cgi/man.cgi?query=VNET&sektion=9&apropos=0&manpath=FreeBSD+15.0-RELEASE+and+Ports	联网	A	2026-10-30	The basic idea is to change global resources most notably variables into per network stack resources and have functions, sysctls, eventhandlers, etc. access and handle them in the context of the correct instance.	none
+V52.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“netmap、iflib、SCTP 与高性能网络”；本节题为其下位论题	none
+V52.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.4.1	netmap 的成本分解	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	we identified and successfully reduced or removed three main packet processing costs: per-packet dynamic memory allocations, removed by preallocating resources; system call overheads, amortized over large batches; and memory copies, eliminated by sharing buffers and metadata between kernel and userspace	none
+V52.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“netmap、iflib、SCTP 与高性能网络”；本节题为其下位论题	none
+V52.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.4.2	netmap 的实测吞吐	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	a single core running at 900 MHz can send or receive 14.88 Mpps (the peak packet rate on 10 Gbit/s links).	none
+V52.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“netmap、iflib、SCTP 与高性能网络”；本节题为其下位论题	none
+V52.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.4.3	netmap 的内存保护	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	while still protecting access to device registers and other kernel memory areas	none
+V52.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“netmap、iflib、SCTP 与高性能网络”；本节题为其下位论题	none
+V52.6.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.4.4	iflib 的设计目的	https://man.freebsd.org/cgi/man.cgi?query=iflib&sektion=9	联网	A	2026-10-30	It is designed to remove a large amount of the boilerplate that is often needed for modern network interface devices, allowing driver authors to focus on the specific code needed for their hardware.	none
+V52.6.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“netmap、iflib、SCTP 与高性能网络”；本节题为其下位论题	none
+V52.6.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.4.5	iflib 的组件划分	https://man.freebsd.org/cgi/man.cgi?query=iflib&sektion=9	联网	A	2026-10-30	There are three logical components to iflib each of which is described in its own manual page.	none
+V52.6.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“netmap、iflib、SCTP 与高性能网络”；本节题为其下位论题	none
+V52.6.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.4.6	SCTP 的多宿主与多流	https://man.freebsd.org/cgi/man.cgi?query=sctp&sektion=4	联网	A	2026-10-30	The SCTP protocol directly supports multi-homing.	none
+V52.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
+V52.6.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.5.1	WireGuard 的配置目标	https://www.wireguard.com/	联网	A	2026-10-30	WireGuard aims to be as easy to configure and deploy as SSH.	none
+V52.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
+V52.6.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.5.2	WireGuard 的连接建立	https://www.wireguard.com/	联网	A	2026-10-30	A VPN connection is made simply by exchanging very simple public keys – exactly like exchanging SSH keys – and all the rest is transparently handled by WireGuard.	none
+V52.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
+V52.6.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.5.3	WireGuard 的可审计性	https://www.wireguard.com/	联网	A	2026-10-30	It is meant to be easily implemented in very few lines of code, and easily auditable for security vulnerabilities.	none
+V52.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
+V52.6.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.5.4	WireGuard 的平台次序	https://www.wireguard.com/	联网	A	2026-10-30	Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable.	none
+V52.6.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
+V52.6.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.5.5	WireGuard 的内核实现取向	https://www.wireguard.com/	联网	A	2026-10-30	the fact that WireGuard lives inside the Linux kernel means that secure networking can be very high-speed	none
+V52.6.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
+V52.6.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.6.5.6	WireGuard 的跨平台说明	https://www.wireguard.com/	联网	A	2026-10-30	If you intend to implement WireGuard for a new platform, please read the cross-platform notes.	none
+V52.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“并发模型比较的结论：三条重构路径的成因”；本节题为其下位论题	none
+V52.7.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.1.1	拆锁路线的收尾	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	Thanks to the hard work of many developers over the past ~6 years, this goal is now complete.	none
+V52.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“并发模型比较的结论：三条重构路径的成因”；本节题为其下位论题	none
+V52.7.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.1.2	无锁分区的 NUMA 预设	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	Rather than starting with a SMP viewpoint and then trying to match it to NUMA reality, DragonFlyBSD starts out with a NUMA-centric view of the world and explicitly partitions the workload among multiple processors.	none
+V52.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“并发模型比较的结论：三条重构路径的成因”；本节题为其下位论题	none
+V52.7.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.1.3	大锁模型的代价	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	We can preserve legacy code with this model, however it does not scale well compared to more recent implementations that are based on fine-grained lock models.	none
+V52.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“并发模型比较的结论：三条重构路径的成因”；本节题为其下位论题	none
+V52.7.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.1.4	共同起点：单一内核锁	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node1.html	联网	A	2026-10-30	Prior to the SMPng project, SMP support in FreeBSD was limited to the i386 architecture and used one giant spin lock for the entire kernel	none
+V52.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“并发模型比较的结论：三条重构路径的成因”；本节题为其下位论题	none
+V52.7.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.1.5	线程模型与锁改造的先后	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	This improved performance is the result of a rewritten threading subsystem based on a 1:1 threading model, new kernel synchronization primitives, kernel preemption, a rewritten scheduler implementation, real-time scheduling extensions, processor sets, and dynamic CPU sets for thread affinity.	none
+V52.7.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“并发模型比较的结论：三条重构路径的成因”；本节题为其下位论题	none
+V52.7.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.1.6	改造完成的标准	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	While Giant has not been completely eliminated from the kernel and several subsystems are still giant-locked	none
+V52.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“存储路线的结论：引入、自研与借用的三种策略”；本节题为其下位论题	none
+V52.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.2.1	引入路线的内核依赖	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	ZFS was originally developed by Sun Microsystems for the Solaris operating system.	none
+V52.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“存储路线的结论：引入、自研与借用的三种策略”；本节题为其下位论题	none
+V52.7.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.2.2	自研路线的目标	https://www.dragonflybsd.org/hammer/hammer.pdf	联网	A	2026-10-30	It is my intention to make Hammer the next-generation file-system for BSD systems and I will support any BSD or Linux port as fully as I can.	none
+V52.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“存储路线的结论：引入、自研与借用的三种策略”；本节题为其下位论题	none
+V52.7.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.2.3	借用路线的上游同步	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.	none
+V52.7.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“存储路线的结论：引入、自研与借用的三种策略”；本节题为其下位论题	none
+V52.7.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.2.4	快照对象的单位	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	ZFS creates snapshots of a dataset, not a single directory or file.	none
+V52.7.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“存储路线的结论：引入、自研与借用的三种策略”；本节题为其下位论题	none
+V52.7.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.2.5	自愈的冗余前提	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	A pool consisting of a single device has no self-healing capabilities.	none
+V52.7.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“存储路线的结论：引入、自研与借用的三种策略”；本节题为其下位论题	none
+V52.7.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.2.6	文件系统与发行版本的绑定	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	2008 – A port to FreeBSD was released as part of FreeBSD 7.0.	none
+V52.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络栈与安全机制比较的结论：三种安全—性能取向”；本节题为其下位论题	none
+V52.7.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.3.1	共享参考实现与本地改造	https://www.kame.net/project-overview.html	联网	A	2026-10-30	They are developing/improving network code (sys/netinet tree) separately.	none
+V52.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络栈与安全机制比较的结论：三种安全—性能取向”；本节题为其下位论题	none
+V52.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.3.2	pledge 的承诺模型	https://man.openbsd.org/pledge.2	联网	A	2026-10-30	By calling pledge() the program can declare which subsystems it will need in the future in a space-separated string called promises. Subsystems not listed become unavailable, and most attempts to use operations in that subsystem result in the process being killed with an uncatchable SIGABRT	none
+V52.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络栈与安全机制比较的结论：三种安全—性能取向”；本节题为其下位论题	none
+V52.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.3.3	Capsicum 的能力模型	https://man.freebsd.org/cgi/man.cgi?query=capsicum&sektion=4	联网	A	2026-10-30	Capabilities are unforgeable tokens of authority that can be delegated and must be presented to perform an action. Capsicum makes file descriptors into capabilities.	none
+V52.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络栈与安全机制比较的结论：三种安全—性能取向”；本节题为其下位论题	none
+V52.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.3.4	加速路径与通用栈的关系	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	we provide an architecture that is tightly integrated with existing operating system primitives, not tied to specific hardware, and easy to use and maintain	none
+V52.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络栈与安全机制比较的结论：三种安全—性能取向”；本节题为其下位论题	none
+V52.7.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.3.5	虚拟网络栈的隔离	https://www.freebsd.org/cgi/man.cgi?query=VNET&sektion=9&apropos=0&manpath=FreeBSD+15.0-RELEASE+and+Ports	联网	A	2026-10-30	Each (virtual) network stack is attached to a prison, with vnet0 being the unrestricted default network stack of the base system.	none
+V52.7.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络栈与安全机制比较的结论：三种安全—性能取向”；本节题为其下位论题	none
+V52.7.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.3.6	安全机制入树的时点	https://man.freebsd.org/cgi/man.cgi?query=capsicum&sektion=4	联网	A	2026-10-30	Capsicum first appeared in FreeBSD 9.0, and was developed at the University of Cambridge.	none
+V52.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
+V52.7.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.4.1	pkgsrc 的定位	https://pkgsrc.org/	联网	A	2026-10-30	pkgsrc is a framework for managing third-party software on UNIX-like systems, currently containing over 26,000 packages.	none
+V52.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
+V52.7.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.4.2	季度分支的节奏	https://www.pkgsrc.org/	联网	A	2026-10-30	the pkgsrc developers are proud to announce the pkgsrc-2026Q3 branch, the 92nd pkgsrc release	none
+V52.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
+V52.7.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.4.3	预编译包的覆盖	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Almost every port is also provided as a pre-compiled "package", which can be installed with a simple command (pkg install) by those who do not wish to compile their own ports from source.	none
+V52.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
+V52.7.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.4.4	框架的跨系统覆盖	https://pkgsrc.org/	联网	A	2026-10-30	Code exists in pkgsrc to support 20+ Unix-like operating systems and 15+ CPU architectures.	none
+V52.7.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
+V52.7.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.4.5	包管理工具入基本系统	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	pkg(7) is now the default package management utility.	none
+V52.7.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
+V52.7.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.4.6	生态规模	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	There are about 37000 ports; the entire Ports Collection requires approximately 3 GB.	none
+V52.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“技术路线分化的历史原因与相互影响”；本节题为其下位论题	none
+V52.7.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.5.1	基线时点的锁定	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	The source base was forked off the RELENG_4 branch of FreeBSD on June 16, 2003	none
+V52.7.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“技术路线分化的历史原因与相互影响”；本节题为其下位论题	none
+V52.7.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.5.2	许可取向的牵引	https://www.openbsd.org/	联网	A	2026-10-30	The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system.	none
+V52.7.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“技术路线分化的历史原因与相互影响”；本节题为其下位论题	none
+V52.7.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.5.3	人力规模	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	It is currently comprised of 16 committers with write privileges to the source repository and a community of outside contributors who submit bug patches and help with testing.	none
+V52.7.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“技术路线分化的历史原因与相互影响”；本节题为其下位论题	none
+V52.7.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.5.4	创始取向的延续	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	NetBSD's original focus was quality and architecture independence. FreeBSD was formed later with a focus on the i386 PC platform.	none
+V52.7.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“技术路线分化的历史原因与相互影响”；本节题为其下位论题	none
+V52.7.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.5.5	借鉴与分流的并存	https://openzfs.org/w/index.php?oldid=778	联网	A	2026-10-30	New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.	none
+V52.7.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“技术路线分化的历史原因与相互影响”；本节题为其下位论题	none
+V52.7.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.5.6	分化叙事的自我定位	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	in place of the symmetric multiprocessing support being added to the upcoming FreeBSD 5 branch, DragonFlyBSD uses the concepts of partitioning and replication layered on top of a message passing system	none
+V52.7.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“同时期操作系统比较：DragonFly BSD、FreeBSD、NetBSD、OpenBSD、Linux”；本节题为其下位论题	none
+V52.7.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.6.1	DragonFly 与同类系统的关系	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly belongs to the same class of operating systems as other BSD-derived systems and Linux. It is based on the same UNIX ideals and APIs and shares ancestor code with other BSD operating systems.	none
+V52.7.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“同时期操作系统比较：DragonFly BSD、FreeBSD、NetBSD、OpenBSD、Linux”；本节题为其下位论题	none
+V52.7.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.6.2	工程制度的差异	https://www.gnu.org/prep/standards/standards.html	联网	A	2026-10-30	The GNU Coding Standards were written by Richard Stallman and other GNU Project volunteers.	none
+V52.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“同时期操作系统比较：DragonFly BSD、FreeBSD、NetBSD、OpenBSD、Linux”；本节题为其下位论题	none
+V52.7.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.6.3	许可对商业采用的影响	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Liberal Open Source license, which grants the rights to freely modify and extend its source code and incorporate it in both Open Source projects and closed products	none
+V52.7.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“同时期操作系统比较：DragonFly BSD、FreeBSD、NetBSD、OpenBSD、Linux”；本节题为其下位论题	none
+V52.7.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.6.4	发行节奏	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	approximately every two (2) years, a release will be cut directly from main	none
+V52.7.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“同时期操作系统比较：DragonFly BSD、FreeBSD、NetBSD、OpenBSD、Linux”；本节题为其下位论题	none
+V52.7.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.6.5	云时代的共同压力	https://www.freebsd.org/releases/15.0R/announce	联网	A	2026-10-30	FreeBSD 15.0-RELEASE is also available on these cloud hosting platforms:	none
+V52.7.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“同时期操作系统比较：DragonFly BSD、FreeBSD、NetBSD、OpenBSD、Linux”；本节题为其下位论题	none
+V52.7.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V52.7.6.6	技术同源与实现差异	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	netmap has been implemented in FreeBSD and Linux for several 1 and 10 Gbit/s network adapters.	none
