@@ -1,0 +1,595 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V38.1.1.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 1 节“Greenman：从 patchkit 到独立系统”；本节题为其下位论题	none
+V38.1.1.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.1.1	贡献者名录：386BSD 补丁集名单中的 Greenman 署名	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	David Greenman < dg@Root.COM >	none
+V38.1.1.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 1 节“Greenman：从 patchkit 到独立系统”；本节题为其下位论题	none
+V38.1.1.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.1.2	手册导言：项目命名经过	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	they adopted the name "FreeBSD" coined by David Greenman.	none
+V38.1.1.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 1 节“Greenman：从 patchkit 到独立系统”；本节题为其下位论题	none
+V38.1.1.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.1.3	手册导言：另立系统的初衷	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The original goal was to produce an intermediate snapshot of 386BSD in order to fix a number of problems that the patchkit mechanism was just not capable of solving.	none
+V38.1.1.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 1 节“Greenman：从 patchkit 到独立系统”；本节题为其下位论题	none
+V38.1.1.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.1.4	贡献者名录：Greenman 核心任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	David Greenman < dg@FreeBSD.org > (1992 - 2002)	none
+V38.1.1.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 1 节“Greenman：从 patchkit 到独立系统”；本节题为其下位论题	none
+V38.1.1.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.1.5	手册导言：Walnut Creek 的渠道支持	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Jordan contacted Walnut Creek CDROM with an eye toward improving FreeBSD	none
+V38.1.1.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 1 节“Greenman：从 patchkit 到独立系统”；本节题为其下位论题	none
+V38.1.1.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.1.6	《FreeBSD at 30》格林曼访谈：早期贡献者的后出叙述	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	This first installment is with David Greenman Lawrence, an early contributor who helped give FreeBSD its “high performance server” reputation.	none
+V38.1.2.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 2 节“Hubbard：创始期的组织与后续”；本节题为其下位论题	none
+V38.1.2.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.2.1	项目新闻：1993 年 6 月 19 日创始三人公告	https://www.freebsd.org/news/newsflash/	联网	A	2026-10-30	On June 19, 1993, Jordan Hubbard, Rod Grimes, and David Greenman announced to the world the creation of their new fork of the BSD 4.3 operating system.	none
+V38.1.2.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 2 节“Hubbard：创始期的组织与后续”；本节题为其下位论题	none
+V38.1.2.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.2.2	项目新闻：1994 年 8 月 Hubbard 的 Ports 首个提交	https://www.freebsd.org/news/newsflash/	联网	A	2026-10-30	It all started with this commit from Jordan Hubbard on August 21, 1994: "Commit my new ports make macros. Still not 100% complete yet by any means but fairly usable at this stage."	none
+V38.1.2.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 2 节“Hubbard：创始期的组织与后续”；本节题为其下位论题	none
+V38.1.2.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.2.3	《FreeBSD at 30》坎普回忆：sysinstall 的作者与设计目标	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Jordan wrote almost all of the sysinstall program, and it lived up to our design goal of asking all questions up front instead of sometime later when the answer was needed--like Windows or Solaris did, much to everybody’s annoyance.	none
+V38.1.2.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 2 节“Hubbard：创始期的组织与后续”；本节题为其下位论题	none
+V38.1.2.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.2.4	《FreeBSD at 30》坎普回忆：Hubbard 与发行工程的岗位绑定	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	After some more releases, I got out of releng@ on good behavior, but Jordan was stuck with release engineering as long as he worked at Walnut Creek, because FreeBSD became a major product for them.	none
+V38.1.2.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 2 节“Hubbard：创始期的组织与后续”；本节题为其下位论题	none
+V38.1.2.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.2.5	《FreeBSD at 30》坎普回忆：Hubbard 于 1994 年授予第 21 个提交权限	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	On February 26, 1994, almost precisely 29 years ago as I write this, Jordan gave me the 21st commit-bit in the FreeBSD project.	none
+V38.1.2.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 2 节“Hubbard：创始期的组织与后续”；本节题为其下位论题	none
+V38.1.2.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.2.6	贡献者名录：Hubbard 核心任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Jordan K. Hubbard < jkh@FreeBSD.org > (1992 - 2002)	none
+V38.1.3.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 3 节“Grimes：创始月份的参与与离开”；本节题为其下位论题	none
+V38.1.3.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.3.1	手册导言：补丁集末任协调者	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	the brainchild of the Unofficial 386BSD	none
+V38.1.3.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 3 节“Grimes：创始月份的参与与离开”；本节题为其下位论题	none
+V38.1.3.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.3.2	手册导言：1993 年上半年补丁集三位协调人	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The FreeBSD Project had its genesis in the early part of 1993, partially as the brainchild of the Unofficial 386BSDPatchkit’s last 3 coordinators: Nate Williams, Rod Grimes and Jordan Hubbard.	none
+V38.1.3.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 3 节“Grimes：创始月份的参与与离开”；本节题为其下位论题	none
+V38.1.3.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.3.3	贡献者名录：Grimes 核心任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Rodney W. Grimes < rgrimes@FreeBSD.org > (1992 - 1995)	none
+V38.1.3.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 3 节“Grimes：创始月份的参与与离开”；本节题为其下位论题	none
+V38.1.3.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.3.4	手册导言：FreeBSD 1.0 于 1993 年 12 月发行	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993.	none
+V38.1.3.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 3 节“Grimes：创始月份的参与与离开”；本节题为其下位论题	none
+V38.1.3.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.3.5	《FreeBSD at 30》坎普回忆：Grimes 承担 CVS 树迁移	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Rod Grimes did most of that work and, as I remember it, he had the new CVS tree ready for us sometime in May 1994.	none
+V38.1.3.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 3 节“Grimes：创始月份的参与与离开”；本节题为其下位论题	none
+V38.1.3.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.3.6	贡献者名录：名录收录口径	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	The following people were members of the FreeBSD core team during the periods indicated.	none
+V38.1.4.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 4 节“Williams 与创始期的交接记录”；本节题为其下位论题	none
+V38.1.4.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.4.1	手册导言：三人并列	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Nate Williams, Rod Grimes and Jordan Hubbard	none
+V38.1.4.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 4 节“Williams 与创始期的交接记录”；本节题为其下位论题	none
+V38.1.4.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.4.2	手册导言：命名由 Greenman 提出、三人决定沿用	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The trio thought that the goal remained worthwhile, even without Bill’s support, and so they adopted the name "FreeBSD" coined by David Greenman.	none
+V38.1.4.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 4 节“Williams 与创始期的交接记录”；本节题为其下位论题	none
+V38.1.4.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.4.3	贡献者名录：Williams 核心任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Nate Williams < nate@FreeBSD.org > (1992 - 1996)	none
+V38.1.4.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 4 节“Williams 与创始期的交接记录”；本节题为其下位论题	none
+V38.1.4.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.4.4	贡献者名录：核心校友节体例	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	2. Core Team Alumni The following people were members of the FreeBSD core team during the periods indicated.	none
+V38.1.4.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 4 节“Williams 与创始期的交接记录”；本节题为其下位论题	none
+V38.1.4.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.4.5	《FreeBSD at 30》洛斯文：三十年后追述的创始叙事	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Then, three months later, 30 years ago, Jordan Hubbard et al. did the exact same thing, under the name FreeBSD.	none
+V38.1.4.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 4 节“Williams 与创始期的交接记录”；本节题为其下位论题	none
+V38.1.4.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.4.6	《FreeBSD at 30》格林曼访谈：可考的 1992 年邮件列表起点	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Julian Elischer posted a message on comp.unix.bsd (dated November 17, 1992) about a series of mailing lists that he had set up for discussing 386BSD (Bill Jolitz’s baby).	none
+V38.1.5.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 5 节“Jolitz：386BSD 的作者与其后的接续”；本节题为其下位论题	none
+V38.1.5.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.5.1	项目新闻：FreeBSD 1.0 取用 386BSD 0.1 并注明 Jolitz 夫妇	https://www.freebsd.org/news/newsflash/	联网	A	2026-10-30	FreeBSD was derived from the 386BSD 0.1 release from Bill and Lynne Jolitz with its 1.0 release in Nov 1993.	none
+V38.1.5.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 5 节“Jolitz：386BSD 的作者与其后的接续”；本节题为其下位论题	none
+V38.1.5.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.5.2	麦库西克《BSD 二十年》第六章：Jolitz 补齐缺失文件	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Within six months of the release, Bill Jolitz had written replacements for the six missing files.	none
+V38.1.5.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 5 节“Jolitz：386BSD 的作者与其后的接续”；本节题为其下位论题	none
+V38.1.5.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.5.3	麦库西克《BSD 二十年》第六章：386/BSD 以网络分发	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Jolitz's 386/BSD distribution was done almost entirely on the Net.	none
+V38.1.5.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 5 节“Jolitz：386BSD 的作者与其后的接续”；本节题为其下位论题	none
+V38.1.5.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.5.4	手册导言：Jolitz 撤回对项目的许可	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Those plans came to a rude halt when Bill Jolitz suddenly decided to withdraw his sanction from the project without any clear indication of what would be done instead.	none
+V38.1.5.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 5 节“Jolitz：386BSD 的作者与其后的接续”；本节题为其下位论题	none
+V38.1.5.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.5.5	TUHS 邮件列表：2022 年 4 月 Jolitz 逝世通报	https://www.tuhs.org/pipermail/tuhs/2022-April/025643.html	联网	A	2026-10-30	I just heard from Lynne Jolitz, Bill's wife. It seems he passed away about a month ago after a long illness.	none
+V38.1.5.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 5 节“Jolitz：386BSD 的作者与其后的接续”；本节题为其下位论题	none
+V38.1.5.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.5.6	TUHS 邮件列表：第三方对 Jolitz 知识产权争执的记述	https://www.tuhs.org/pipermail/tuhs/2020-January/020083.html	联网	A	2026-10-30	I also reacted very badly to the public dirty linen spats around the Jolitz's IPR, and who-did-what to-whom in woodshed, with colonel mustard and the lead pipe.	none
+V38.1.6.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 6 节“McKusick：创始联合者与长期记录者”；本节题为其下位论题	none
+V38.1.6.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.6.1	麦库西克站点：本人所撰伯克利 Unix 史与影像	https://www.mckusick.com/history/index.html	联网	A	2026-10-30	The history of Unix development at Berkeley has been recounted in detail by Marshall Kirk McKusick in his chapter in the O'Reilly book Open Sources: Voices from the Open Source Revolution and is now recounted in part one of this video.	none
+V38.1.6.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 6 节“McKusick：创始联合者与长期记录者”；本节题为其下位论题	none
+V38.1.6.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.6.2	McKusick 主页：档案光盘	https://www.mckusick.com/	联网	A	2026-10-30	Information about the CSRG Archive CD-ROM set .	none
+V38.1.6.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 6 节“McKusick：创始联合者与长期记录者”；本节题为其下位论题	none
+V38.1.6.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.6.3	《FreeBSD at 30》坎普文：麦库西克在 USENIX 与 EUUG 刊物的长期露面	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	His picture had been over numerous articles in USENIX and European Unix Users Group’s magazine over the years.	none
+V38.1.6.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 6 节“McKusick：创始联合者与长期记录者”；本节题为其下位论题	none
+V38.1.6.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.6.4	《FreeBSD at 30》作者小传：著书、授课与专家证词	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	MARSHALL KIRK MCKUSICK writes books and articles, teaches classes on UNIX- and BSD-related subjects, and provides expert-witness testimony on software patent, trade secret, and copyright issues.	none
+V38.1.6.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 6 节“McKusick：创始联合者与长期记录者”；本节题为其下位论题	none
+V38.1.6.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.6.5	《FreeBSD at 30》作者小传：核心任期与基金会董事任期	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	He was one of the FreeBSD core team members from 2006 to 2022, has been a FreeBSD Foundation board member since 2008, and has hosted AsiaBSDCon, an international conference on BSD-derived operating systems in Asia, since 2007.	none
+V38.1.6.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 6 节“McKusick：创始联合者与长期记录者”；本节题为其下位论题	none
+V38.1.6.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.6.6	McKusick 史页：叙述范围	https://www.mckusick.com/history/index.html	联网	A	2026-10-30	his part concludes with a description of the roles played by the thousands of volunteer developers that make up the FreeBSD Project of today.	none
+V38.1.7.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 7 节“Bostic：创始期的档案员与离场（1993–1995）”；本节题为其下位论题	none
+V38.1.7.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.7.1	麦库西克《BSD 二十年》第四章：Karels、Bostic 与其逐文件清理	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Resigned to our task, Karels, Bostic, and I spent the next several months going over the entire distribution, file by file, removing code that had originated in the 32/V release.	none
+V38.1.7.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 7 节“Bostic：创始期的档案员与离场（1993–1995）”；本节题为其下位论题	none
+V38.1.7.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.7.2	贡献者名录：补丁集名单	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Keith Bostic < bostic@toe.CS.Berkeley.EDU >	none
+V38.1.7.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 7 节“Bostic：创始期的档案员与离场（1993–1995）”；本节题为其下位论题	none
+V38.1.7.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.7.3	贡献者名录：附加贡献者名单所载 Bostic 署名	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Keith Bostic < bostic@bostic.com >	none
+V38.1.7.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 7 节“Bostic：创始期的档案员与离场（1993–1995）”；本节题为其下位论题	none
+V38.1.7.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.7.4	贡献者名录：名录时间下限	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Satoshi Asami < asami@FreeBSD.org > (1993 - 2001)	none
+V38.1.7.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 7 节“Bostic：创始期的档案员与离场（1993–1995）”；本节题为其下位论题	none
+V38.1.7.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.7.5	麦库西克站点：影像第一部仅至伯克利时期的分工说明	https://www.mckusick.com/history/index.html	联网	A	2026-10-30	Part I is titled ``Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable''.	none
+V38.1.7.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“创始成员与 386BSD 交接”第 7 节“Bostic：创始期的档案员与离场（1993–1995）”；本节题为其下位论题	none
+V38.1.7.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.1.7.6	贡献者名录：补丁集名单节标题	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	8. 386BSD Patch Kit Patch Contributors (in alphabetical order by first name):	none
+V38.2.1.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 1 节“第一代 core：选举前的时代”；本节题为其下位论题	none
+V38.2.1.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.1.1	《FreeBSD at 30》坎普文：无章程时期的非正式核心	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	The core team was the nominal governing board of the project, but there were no formal definitions of any of those things, we had no bylaws, and we had three huge internal handicaps: First, we were global, and the culture differences were very real.	none
+V38.2.1.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 1 节“第一代 core：选举前的时代”；本节题为其下位论题	none
+V38.2.1.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.1.2	《FreeBSD at 30》坎普文：核心由发起者自行出任	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	The people who set up the project deputized themselves onto the Core team.	none
+V38.2.1.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 1 节“第一代 core：选举前的时代”；本节题为其下位论题	none
+V38.2.1.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.1.3	《FreeBSD at 30》坎普文：核心席位扩至九人	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Core was also expanded to nine people.	none
+V38.2.1.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 1 节“第一代 core：选举前的时代”；本节题为其下位论题	none
+V38.2.1.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.1.4	《FreeBSD at 30》坎普文：以最小章程换取选举	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	One way or another: I eventually got my election after we had agreed to a very minimal set of bylaws for FreeBSD.	none
+V38.2.1.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 1 节“第一代 core：选举前的时代”；本节题为其下位论题	none
+V38.2.1.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.1.5	Core 章程：表决与生效	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	These bylaws were approved by a vote of active committers on August 28, 2000.	none
+V38.2.1.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 1 节“第一代 core：选举前的时代”；本节题为其下位论题	none
+V38.2.1.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.1.6	项目管理层页：核心团队秘书为非投票成员	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Core Team Secretary is a non-voting member of the Core Team, responsible for documenting the work done by core, keeping track of the core agenda, contacting non-core members on behalf of core, sending mail to core, and interfacing with the admin team for committer/account approval.	none
+V38.2.2.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 2 节“世代更替中的长期成员”；本节题为其下位论题	none
+V38.2.2.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.2.1	贡献者名录：Peter Wemm 的两段任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Peter Wemm < peter@FreeBSD.org > (1995 - 2006, 2008 - 2010)	none
+V38.2.2.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 2 节“世代更替中的长期成员”；本节题为其下位论题	none
+V38.2.2.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.2.2	贡献者名录：Scott Long 的两段任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Scott Long < scottl@FreeBSD.org > (2004 - 2005, 2020 - 2022)	none
+V38.2.2.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 2 节“世代更替中的长期成员”；本节题为其下位论题	none
+V38.2.2.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.2.3	管理页：核心与源码团队并列	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Source Management Team (also known as srcmgr due to its email alias) is responsible for issues relating to the base system.	none
+V38.2.2.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 2 节“世代更替中的长期成员”；本节题为其下位论题	none
+V38.2.2.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.2.4	贡献者名录：Watson 核心任期	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Robert Watson < rwatson@FreeBSD.org > (2000 - 2012)	none
+V38.2.2.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 2 节“世代更替中的长期成员”；本节题为其下位论题	none
+V38.2.2.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.2.5	Core 章程：两年一届	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Core elections are held every 2 years, first time September 2000.	none
+V38.2.2.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 2 节“世代更替中的长期成员”；本节题为其下位论题	none
+V38.2.2.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.2.6	《FreeBSD at 30》团队章程节：核心全员每两年改选	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	The entire Core is elected every two years.	none
+V38.2.3.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 3 节“re／security／doceng 团队负责人群体”；本节题为其下位论题	none
+V38.2.3.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.3.1	管理页：发布工程负责人	https://www.freebsd.org/administration/	联网	A	2026-10-30	Colin Percival < cperciva@FreeBSD.org > (Lead)	none
+V38.2.3.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 3 节“re／security／doceng 团队负责人群体”；本节题为其下位论题	none
+V38.2.3.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.3.2	安全页：公告签发与签署	https://www.freebsd.org/security/	联网	A	2026-10-30	Advisories are always signed using the FreeBSD Security Officer PGP key	none
+V38.2.3.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 3 节“re／security／doceng 团队负责人群体”；本节题为其下位论题	none
+V38.2.3.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.3.3	doceng 章程：主要职责	https://www.freebsd.org/internal/doceng/	联网	A	2026-10-30	is a body to handle some of the meta-project issues associated with the FreeBSD Documentation Project.	none
+V38.2.3.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 3 节“re／security／doceng 团队负责人群体”；本节题为其下位论题	none
+V38.2.3.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.3.4	管理页：portmgr 首要职责	https://www.freebsd.org/administration/	联网	A	2026-10-30	The primary responsibility of the FreeBSD Ports Management Team is to ensure that the FreeBSD Ports Developer community provides a ports collection that is functional, stable, up-to-date and full-featured.	none
+V38.2.3.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 3 节“re／security／doceng 团队负责人群体”；本节题为其下位论题	none
+V38.2.3.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.3.5	管理页：pkgmgr 职责	https://www.freebsd.org/administration/	联网	A	2026-10-30	The primary responsibility of the FreeBSD Packages Management Team is to assure the ports tree remains functional	none
+V38.2.3.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 3 节“re／security／doceng 团队负责人群体”；本节题为其下位论题	none
+V38.2.3.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.3.6	管理页：团队与角色总述	https://www.freebsd.org/administration/	联网	A	2026-10-30	This page lists teams, groups and individuals within the FreeBSD project with designated project roles and areas of responsibility	none
+V38.2.4.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 4 节“轮换与争议中的人物”；本节题为其下位论题	none
+V38.2.4.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.4.1	Core 章程：任期终止条件	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	their resignation, or c) their removal by a two-thirds majority vote of Voting Members	none
+V38.2.4.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 4 节“轮换与争议中的人物”；本节题为其下位论题	none
+V38.2.4.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.4.2	Core 章程：罢免条款	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Core members and committers may be ejected by a 2/3 vote of core.	none
+V38.2.4.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 4 节“轮换与争议中的人物”；本节题为其下位论题	none
+V38.2.4.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.4.3	Core 章程：提前选举	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	If the size of core falls below 7, an early election is held.	none
+V38.2.4.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 4 节“轮换与争议中的人物”；本节题为其下位论题	none
+V38.2.4.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.4.4	Core 章程：2026 年修订	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	except that an Incumbent Core Team Member currently in their third or fourth consecutive year may not run for reelection.	none
+V38.2.4.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 4 节“轮换与争议中的人物”；本节题为其下位论题	none
+V38.2.4.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.4.5	《FreeBSD at 30》坎普文：核心事务转为人事争执	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	The core team no longer set technical direction; instead, we were mainly dispensers of commit bits, and our main involvement was with squabbles between committers.	none
+V38.2.4.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 4 节“轮换与争议中的人物”；本节题为其下位论题	none
+V38.2.4.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.4.6	《FreeBSD at 30》坎普文：届次记录与选举邮件	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	In the past 24 years, the committers have taken their job as voters seriously, we are on our 12th duly elected core team, none of which have been any worse than we were on “core.0” and many of them have been obviously better.	none
+V38.2.5.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 5 节“commit bit 授予人群的结构性统计（1993–2026）”；本节题为其下位论题	none
+V38.2.5.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.5.1	提交者指南：权限分区	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V38.2.5.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 5 节“commit bit 授予人群的结构性统计（1993–2026）”；本节题为其下位论题	none
+V38.2.5.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.5.2	Core 章程：活跃提交者定义	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Active committers have made a commit to the tree in the last 12 months. Core consists of 9 elected active committers.	none
+V38.2.5.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 5 节“commit bit 授予人群的结构性统计（1993–2026）”；本节题为其下位论题	none
+V38.2.5.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.5.3	《FreeBSD at 30》格林曼访谈：开发者规模的三百余量级	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	As FreeBSD became a thing in its own right, the size of the project grew with over 300 developers who contributed all sorts of things that I never would have imagined in the beginning.	none
+V38.2.5.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 5 节“commit bit 授予人群的结构性统计（1993–2026）”；本节题为其下位论题	none
+V38.2.5.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.5.4	提交者指南：导师提名	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.	none
+V38.2.5.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 5 节“commit bit 授予人群的结构性统计（1993–2026）”；本节题为其下位论题	none
+V38.2.5.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.5.5	提交者指南：名册存档	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	The access and mentors files are stored in an orphan branch, internal/admin , in each repository.	none
+V38.2.5.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“Core Team 的世代与治理成员”第 5 节“commit bit 授予人群的结构性统计（1993–2026）”；本节题为其下位论题	none
+V38.2.5.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.2.5.6	Core 章程：活跃贡献者定义	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	An Active Contributor is someone who has an active src, ports, or doc commit bit and has committed to the main branch	none
+V38.3.1.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 1 节“Dillon：FreeBSD 核心岁月（1990s–2003）”；本节题为其下位论题	none
+V38.3.1.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.1.1	贡献者名录：Dillon 的核心任期时段	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Matthew Dillon < dillon@FreeBSD.org > (1998 - 2003)	none
+V38.3.1.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 1 节“Dillon：FreeBSD 核心岁月（1990s–2003）”；本节题为其下位论题	none
+V38.3.1.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.1.2	《FreeBSD at 30》坎普文：SMPng 实现三人组	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	In the end, only Matt Dillon, Jason Evans, and myself ended up on the implementation team.	none
+V38.3.1.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 1 节“Dillon：FreeBSD 核心岁月（1990s–2003）”；本节题为其下位论题	none
+V38.3.1.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.1.3	《FreeBSD at 30》坎普文：核心决议驱逐 Dillon 的经过	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	came to the conclusion that we would have to expel one, Matt Dillon, though it was by no means clear that he was more at fault.	none
+V38.3.1.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 1 节“Dillon：FreeBSD 核心岁月（1990s–2003）”；本节题为其下位论题	none
+V38.3.1.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.1.4	DragonFly 官方史页：2003 年自 FreeBSD 4.8 分叉	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
+V38.3.1.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 1 节“Dillon：FreeBSD 核心岁月（1990s–2003）”；本节题为其下位论题	none
+V38.3.1.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.1.5	DragonFly 官方史页：HAMMER 于 2007 至 2008 年间开发	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	In the 2007-2008 time frame, a new filesystem called HAMMER was developed for DragonFly BSD.	none
+V38.3.1.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 1 节“Dillon：FreeBSD 核心岁月（1990s–2003）”；本节题为其下位论题	none
+V38.3.1.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.1.6	DragonFly 团队页：Dillon 的项目清单含 AMD64 工作	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	He has been working on or completed DragonFly projects such as variant symlinks, MPIPE, the slab allocator, the namecache, LWKT, live CD, AMD64 work, and much more, including coordination of projects other contributors have submitted.	none
+V38.3.2.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 2 节“Kamp：多面手的源代码之外”；本节题为其下位论题	none
+V38.3.2.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.2.1	Kamp 主页：提交频率自述	https://people.freebsd.org/~phk/	联网	A	2026-10-30	At one point I averaged one commit to the CVS tree every 18 hours.	none
+V38.3.2.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 2 节“Kamp：多面手的源代码之外”；本节题为其下位论题	none
+V38.3.2.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.2.2	Kamp 主页：GEOM 与设备层	https://people.freebsd.org/~phk/	联网	A	2026-10-30	MD5 based password scrambler Phkmalloc Jails Defined sbufs for safe string handling DEVFS and dynamic device support GEOM, modular disk transformations.	none
+V38.3.2.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 2 节“Kamp：多面手的源代码之外”；本节题为其下位论题	none
+V38.3.2.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.2.3	坎普个人页：GBDE 磁盘加密的可部署取向	https://people.freebsd.org/~phk/	联网	A	2026-10-30	GBDE , disk encryption you can actually use.	none
+V38.3.2.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 2 节“Kamp：多面手的源代码之外”；本节题为其下位论题	none
+V38.3.2.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.2.4	Kamp 主页：职责清单	https://people.freebsd.org/~phk/	联网	A	2026-10-30	Wrote src/release/Makefile Release engineer for FreeBSD 2.X series	none
+V38.3.2.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 2 节“Kamp：多面手的源代码之外”；本节题为其下位论题	none
+V38.3.2.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.2.5	Kamp 主页：无酬投入自述	https://people.freebsd.org/~phk/	联网	A	2026-10-30	Despite what some people think, I am not paid by anybody to work full time on FreeBSD	none
+V38.3.2.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 2 节“Kamp：多面手的源代码之外”；本节题为其下位论题	none
+V38.3.2.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.2.6	《FreeBSD at 30》坎普文：入核心后即任 2.0 发行工程师	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Not long after, I was inducted into the core team and almost immediately appointed release-engineer for 2.0, together with Jordan.	none
+V38.3.3.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 3 节“Losh：长程技术维护与方法论”；本节题为其下位论题	none
+V38.3.3.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.3.1	贡献者名录：Losh 任期三段	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Warner Losh < imp@FreeBSD.org > (2000 - 2008, 2010 - 2012, 2018 - 2022)	none
+V38.3.3.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 3 节“Losh：长程技术维护与方法论”；本节题为其下位论题	none
+V38.3.3.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.3.2	2025 年第一季度报告：源码管理团队的缺陷与合并请求分流	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	srcmgr@ is focused on finding ways to make src developers more productive, and to try and manage the large numbers of bug reports and pull requests that we receive.	none
+V38.3.3.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 3 节“Losh：长程技术维护与方法论”；本节题为其下位论题	none
+V38.3.3.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.3.3	2025 年季报：缺陷会战	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	In January and February, srcmgr@ ran two online bug-busting sessions, each attended by roughly 12 developers.	none
+V38.3.3.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 3 节“Losh：长程技术维护与方法论”；本节题为其下位论题	none
+V38.3.3.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.3.4	2025 年第一季度报告：GSoC 指导组织资格	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	At the end of February, we were excited to learn that FreeBSD was once again selected as a mentoring organization for GSoC 2025.	none
+V38.3.3.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 3 节“Losh：长程技术维护与方法论”；本节题为其下位论题	none
+V38.3.3.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.3.5	管理页：核心与源码团队在列	https://www.freebsd.org/administration/	联网	A	2026-10-30	The Core Team is elected by the active developers in the project.	none
+V38.3.3.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 3 节“Losh：长程技术维护与方法论”；本节题为其下位论题	none
+V38.3.3.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.3.6	管理页：现任核心团队列名	https://www.freebsd.org/administration/	联网	A	2026-10-30	Warner Losh < imp@FreeBSD.org >	none
+V38.3.4.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 4 节“Watson：TrustedBSD 与安全路线的人”；本节题为其下位论题	none
+V38.3.4.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.4.1	Watson 主页：项目创立年	http://www.watson.org/~robert/	联网	A	2026-10-30	I founded the TrustedBSD Project (1999) and OpenBSM Project (2005)	none
+V38.3.4.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 4 节“Watson：TrustedBSD 与安全路线的人”；本节题为其下位论题	none
+V38.3.4.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.4.2	Watson 主页：成果整合	http://www.watson.org/~robert/	联网	A	2026-10-30	Significant results of this work have now been integrated into the FreeBSD, NetBSD, OpenBSD, Linux, and Mac OS X operating systems	none
+V38.3.4.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 4 节“Watson：TrustedBSD 与安全路线的人”；本节题为其下位论题	none
+V38.3.4.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.4.3	Watson 主页：SMPng 网络栈	http://www.watson.org/~robert/	联网	A	2026-10-30	my work on the multi-threaded, multi-processor network stack for FreeBSD 5.x and 6.x	none
+V38.3.4.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 4 节“Watson：TrustedBSD 与安全路线的人”；本节题为其下位论题	none
+V38.3.4.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.4.4	Watson 主页：职务自述	http://www.watson.org/~robert/	联网	A	2026-10-30	I am Professor of Systems, Security, and Architecture at the University of Cambridge Computer Laboratory in the Security Group , as well as a FreeBSD developer and member of the board of directors of the FreeBSD Foundation .	none
+V38.3.4.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 4 节“Watson：TrustedBSD 与安全路线的人”；本节题为其下位论题	none
+V38.3.4.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.4.5	Watson 主页：2003 年任主席	http://www.watson.org/~robert/	联网	A	2026-10-30	I joined the board of the FreeBSD Foundation as president in 2003	none
+V38.3.4.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 4 节“Watson：TrustedBSD 与安全路线的人”；本节题为其下位论题	none
+V38.3.4.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.4.6	基金会团队页：董事 Watson 条目	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	He has served on the FreeBSD Core Team and Foundation Board for over ten years	none
+V38.3.5.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 5 节“Jason Evans：jemalloc 与分配器工程”；本节题为其下位论题	none
+V38.3.5.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.5.1	BSDCan 2006 论文：摘要背景	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	The FreeBSD project has been engaged in ongoing work to provide scalable support for multi-processor computer systems since version 5.	none
+V38.3.5.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 5 节“Jason Evans：jemalloc 与分配器工程”；本节题为其下位论题	none
+V38.3.5.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.5.2	BSDCan 2006 论文：基准结论	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	Benchmarks indicate that with this al- locator , memory allocation for multi-threaded applications scales well as the number of processors in- creases.	none
+V38.3.5.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 5 节“Jason Evans：jemalloc 与分配器工程”；本节题为其下位论题	none
+V38.3.5.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.5.3	BSDCan 2006 论文：旧实现评述	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	implementation by Kamp (1998), commonly referred to as phkmalloc, has long been considered one of the best available	none
+V38.3.5.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 5 节“Jason Evans：jemalloc 与分配器工程”；本节题为其下位论题	none
+V38.3.5.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.5.4	BSDCan 2006 论文：设计年代	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	it was designed at a time when multi-processor systems were rare	none
+V38.3.5.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 5 节“Jason Evans：jemalloc 与分配器工程”；本节题为其下位论题	none
+V38.3.5.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.5.5	BSDCan 2006 论文：作者与日期	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	A Scalable Concurrent malloc(3) Implementation for FreeBSD Jason Evans <jasone@FreeBSD.org> April 16, 2006	none
+V38.3.5.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 5 节“Jason Evans：jemalloc 与分配器工程”；本节题为其下位论题	none
+V38.3.5.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.5.6	BSDCan 2006 论文：设计主张	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	I present a new memory allocator that builds on the state of the art to provide scalable concurrent allocation for applications.	none
+V38.3.6.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 6 节“存储与网络方向的作者群”；本节题为其下位论题	none
+V38.3.6.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.6.1	《FreeBSD at 30》坎普文：存储域三家实现与 Kirk 的 FFS/UFS	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Heidemann’s extensible VNODEs, Seltzer’s LFS, and Kirk’s FFS/UFS.	none
+V38.3.6.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 6 节“存储与网络方向的作者群”；本节题为其下位论题	none
+V38.3.6.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.6.2	《FreeBSD at 30》坎普文：GEOM 位于驱动与文件系统之间	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	The GEOM framework in FreeBSD sits between disk drivers and file systems, allowing plug-ins of various transformations, like mirroring, RAID, block-level encryption, etc.	none
+V38.3.6.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 6 节“存储与网络方向的作者群”；本节题为其下位论题	none
+V38.3.6.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.6.3	Watson 主页：工作领域	http://www.watson.org/~robert/	联网	A	2026-10-30	My areas of work have included the network stack, file systems, and security.	none
+V38.3.6.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 6 节“存储与网络方向的作者群”；本节题为其下位论题	none
+V38.3.6.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.6.4	坎普个人页：Timecounter 重写与时标来源	https://people.freebsd.org/~phk/	联网	A	2026-10-30	The outcome so far is that I have rewritten the Timecounter code in FreeBSD so it can use any current or future timestandard to the limit of what the hardware will allow, and I am currently trying to push that boundary as far back as I can.	none
+V38.3.6.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 6 节“存储与网络方向的作者群”；本节题为其下位论题	none
+V38.3.6.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.6.5	Kamp 主页：设备与内核接口	https://people.freebsd.org/~phk/	联网	A	2026-10-30	Rewrote the VFS namecache Cleaned up vnode object model	none
+V38.3.6.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 6 节“存储与网络方向的作者群”；本节题为其下位论题	none
+V38.3.6.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.6.6	BSDCan 2006 论文：分配器作者	https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf	联网	A	2026-10-30	A Scalable Concurrent malloc(3) Implementation for FreeBSD Jason Evans <jasone@FreeBSD.org>	none
+V38.3.7.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 7 节“2010s 后的新一代维护者”；本节题为其下位论题	none
+V38.3.7.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.7.1	2025 年季报：srcmgr 组成	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	The current members are Ed Maste, Mark Johnston, John Baldwin, and Warner Losh.	none
+V38.3.7.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 7 节“2010s 后的新一代维护者”；本节题为其下位论题	none
+V38.3.7.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.7.2	2025 年季报：文档活跃度	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	the newcomer helper team under Alexander Ziaee	none
+V38.3.7.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 7 节“2010s 后的新一代维护者”；本节题为其下位论题	none
+V38.3.7.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.7.3	2025 年季报：GSoC 接口	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	At the request of Warner Losh , we have created a workspace for #google-summer-of-code on the server.	none
+V38.3.7.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 7 节“2010s 后的新一代维护者”；本节题为其下位论题	none
+V38.3.7.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.7.4	基金会团队页：雇员岗位	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Li-Wen joined the FreeBSD Foundation in May 2018 as a Software Engineer responsible for the software quality improvement projects.	none
+V38.3.7.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 7 节“2010s 后的新一代维护者”；本节题为其下位论题	none
+V38.3.7.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.7.5	基金会团队页：新人背景	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Konstantin started using FreeBSD in 1998 and began working on fixing bugs in 2005.	none
+V38.3.7.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“技术方向的长期参与者”第 7 节“2010s 后的新一代维护者”；本节题为其下位论题	none
+V38.3.7.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.3.7.6	基金会团队页：新人入会年份	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	He first joined the FreeBSD Foundation in 2017 as a co-op student	none
+V38.4.1.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 1 节“Goodkin：基金会初期的岁月”；本节题为其下位论题	none
+V38.4.1.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.1.1	基金会团队页：Goodkin 任职	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Deb has been with the Foundation since August, 2005.	none
+V38.4.1.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 1 节“Goodkin：基金会初期的岁月”；本节题为其下位论题	none
+V38.4.1.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.1.2	基金会团队页：Goodkin 履历	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	She has spent 20+ years working in marketing, sales, and development of data storage devices.	none
+V38.4.1.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 1 节“Goodkin：基金会初期的岁月”；本节题为其下位论题	none
+V38.4.1.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.1.3	基金会介绍：经费来源	https://www.freebsdfoundation.org/about-us/about-the-foundation/	联网	A	2026-10-30	Funded by individual and corporate donations, we invest directly in FreeBSD through software development, infrastructure improvements, advocacy, training, and community engagement.	none
+V38.4.1.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 1 节“Goodkin：基金会初期的岁月”；本节题为其下位论题	none
+V38.4.1.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.1.4	Watson 主页：会议赞助网络	http://www.watson.org/~robert/	联网	A	2026-10-30	the Foundation sponsors a number of BSD-related conferences, including AsiaBSDCon, EuroBSDCon, and BSDCan, as well as several FreeBSD Developer Summits each year.	none
+V38.4.1.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 1 节“Goodkin：基金会初期的岁月”；本节题为其下位论题	none
+V38.4.1.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.1.5	2025 年季报：基金会联系人	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	Contact: Deb Goodkin < deb@FreeBSDFoundation.org >	none
+V38.4.1.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 1 节“Goodkin：基金会初期的岁月”；本节题为其下位论题	none
+V38.4.1.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.1.6	基金会介绍：组织定位	https://www.freebsdfoundation.org/about-us/about-the-foundation/	联网	A	2026-10-30	The FreeBSD Foundation is a US-based 501(c)(3) non-profit organization dedicated to supporting the FreeBSD Project and community.	none
+V38.4.2.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 2 节“董事会与执行层成员”；本节题为其下位论题	none
+V38.4.2.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.2.1	基金会团队页：董事会性质	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	The Foundation Board is a governing board composed of volunteers who champion FreeBSD	none
+V38.4.2.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 2 节“董事会与执行层成员”；本节题为其下位论题	none
+V38.4.2.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.2.2	基金会团队页：Gibbs 条目	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	After serving on the FreeBSD Core Team from 1995-2000 he created the FreeBSD Foundation to provide a non-profit framework for funding FreeBSD development and community support.	none
+V38.4.2.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 2 节“董事会与执行层成员”；本节题为其下位论题	none
+V38.4.2.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.2.3	基金会团队页：Wafaa 条目	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	encompassing internal and external open source engagements and has been working with both the FreeBSD Foundation and the community for over 8 years	none
+V38.4.2.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 2 节“董事会与执行层成员”；本节题为其下位论题	none
+V38.4.2.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.2.4	基金会团队页：Baldwin 条目	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	John currently chairs the editorial board of the FreeBSD Journal.	none
+V38.4.2.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 2 节“董事会与执行层成员”；本节题为其下位论题	none
+V38.4.2.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.2.5	基金会团队页：执行层岗位	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Anne joined the Foundation in 2015 and brings 20 years of experience in technology-focused marketing, communications, and operations.	none
+V38.4.2.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 2 节“董事会与执行层成员”；本节题为其下位论题	none
+V38.4.2.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.2.6	基金会团队页：董事与日常运营	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	While they are not involved in the day-to-day operations of the Foundation	none
+V38.4.3.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 3 节“捐款与赞助关系中的个人”；本节题为其下位论题	none
+V38.4.3.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.3.1	捐赠页：分层名录	https://www.freebsdfoundation.org/about-us/our-donors/	联网	A	2026-10-30	We acknowledge the 2023 – 2025 donors by listing their names below.	none
+V38.4.3.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 3 节“捐款与赞助关系中的个人”；本节题为其下位论题	none
+V38.4.3.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.3.2	捐赠页：伙伴与资助	https://www.freebsdfoundation.org/about-us/our-donors/	联网	A	2026-10-30	Depending on your level of support, partners will receive more opportunities for community engagement	none
+V38.4.3.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 3 节“捐款与赞助关系中的个人”；本节题为其下位论题	none
+V38.4.3.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.3.3	捐赠页：实物捐赠	https://www.freebsdfoundation.org/about-us/our-donors/	联网	A	2026-10-30	The Foundation would like to thank the companies that generously donate free servers and hosting services	none
+V38.4.3.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 3 节“捐款与赞助关系中的个人”；本节题为其下位论题	none
+V38.4.3.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.3.4	基金会介绍：经费分配	https://www.freebsdfoundation.org/about-us/about-the-foundation/	联网	A	2026-10-30	Most of our funding	none
+V38.4.3.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 3 节“捐款与赞助关系中的个人”；本节题为其下位论题	none
+V38.4.3.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.3.5	捐赠页：伙伴计划	https://www.freebsdfoundation.org/about-us/our-donors/	联网	A	2026-10-30	These donations fully fund the foundation; without them, we would not exist.	none
+V38.4.3.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 3 节“捐款与赞助关系中的个人”；本节题为其下位论题	none
+V38.4.3.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.3.6	贡献者名录：捐赠陈列	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	9. Donors Gallery The FreeBSD Foundation thanks financial and in-kind donors .	none
+V38.4.4.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 4 节“企业驻开源工程师群体”；本节题为其下位论题	none
+V38.4.4.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.4.1	基金会团队页：Maste 履历	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Ed first became involved with FreeBSD while working on the operating system team at Sandvine, Inc. in 2003.	none
+V38.4.4.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 4 节“企业驻开源工程师群体”；本节题为其下位论题	none
+V38.4.4.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.4.2	基金会团队页：Arm 开源办公室	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Andrew leads Arm	none
+V38.4.4.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 4 节“企业驻开源工程师群体”；本节题为其下位论题	none
+V38.4.4.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.4.3	基金会团队页：Cottlehuber 条目	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Dave Cottlehuber is the Founder & CTO of SkunkWerks	none
+V38.4.4.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 4 节“企业驻开源工程师群体”；本节题为其下位论题	none
+V38.4.4.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.4.4	基金会团队页：Maste 上游回流	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	led a number of developers working to bring enhancements from FreeBSD into Sandvine	none
+V38.4.4.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 4 节“企业驻开源工程师群体”；本节题为其下位论题	none
+V38.4.4.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.4.5	基金会团队页：董事 Watson 业界往来	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	He has worked extensively with industrial consumers of FreeBSD to support their interaction with the open-source community	none
+V38.4.4.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 4 节“企业驻开源工程师群体”；本节题为其下位论题	none
+V38.4.4.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.4.6	2025 年季报：基金会定位	https://www.freebsd.org/status/report-2025-01-2025-03/	联网	A	2026-10-30	The FreeBSD Foundation is a 501(c)(3) non-profit organization dedicated to advancing FreeBSD through technical and non-technical support.	none
+V38.4.5.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 5 节“基金会对外关系与社区联络人”；本节题为其下位论题	none
+V38.4.5.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.5.1	《FreeBSD at 30》坎普文：基金会于 2000 年 12 月设立	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	This all changed, however, when Justin Gibbs (a Core Team alumnus) founded the FreeBSD Foundation in December 2000, as a US non-profit 501(c)(3) legal entity.	none
+V38.4.5.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 5 节“基金会对外关系与社区联络人”；本节题为其下位论题	none
+V38.4.5.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.5.2	基金会团队页：营销协调岗	https://www.freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Florine is a creative and data-driven Marketing Coordinator	none
+V38.4.5.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 5 节“基金会对外关系与社区联络人”；本节题为其下位论题	none
+V38.4.5.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.5.3	基金会介绍：法律实体	https://www.freebsdfoundation.org/about-us/about-the-foundation/	联网	A	2026-10-30	managing contracts, licenses, and other agreements on its behalf.	none
+V38.4.5.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 5 节“基金会对外关系与社区联络人”；本节题为其下位论题	none
+V38.4.5.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.5.4	Watson 主页：峰会与差旅支持	http://www.watson.org/~robert/	联网	A	2026-10-30	Helping to support the developer community by sponsoring developer travel, hardware, conferences, etc, is vital	none
+V38.4.5.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 5 节“基金会对外关系与社区联络人”；本节题为其下位论题	none
+V38.4.5.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.5.5	基金会介绍：新人体验	https://www.freebsdfoundation.org/about-us/about-the-foundation/	联网	A	2026-10-30	Improving onboarding processes and documentation while supporting newcomers	none
+V38.4.5.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章“基金会与生态人物”第 5 节“基金会对外关系与社区联络人”；本节题为其下位论题	none
+V38.4.5.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.4.5.6	基金会介绍：愿景表述	https://www.freebsdfoundation.org/about-us/about-the-foundation/	联网	A	2026-10-30	a future where FreeBSD plays a central role in technology and the communities that rely on it.	none
+V38.5.1.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 1 节“Ports 维护者与提交者群体”；本节题为其下位论题	none
+V38.5.1.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.1.1	手册 Ports 章：维护者查询	https://docs.freebsd.org/en/books/handbook/ports/	联网	A	2026-10-30	Ask the maintainer of the port for help.	none
+V38.5.1.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 1 节“Ports 维护者与提交者群体”；本节题为其下位论题	none
+V38.5.1.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.1.2	手册 Ports 章：团队维护者	https://docs.freebsd.org/en/books/handbook/ports/	联网	A	2026-10-30	Some ports are not maintained by an individual but instead by a group maintainer represented by a mailing list .	none
+V38.5.1.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 1 节“Ports 维护者与提交者群体”；本节题为其下位论题	none
+V38.5.1.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.1.3	提交者指南：权限分区表	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	ports portmgr@ ports/	none
+V38.5.1.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 1 节“Ports 维护者与提交者群体”；本节题为其下位论题	none
+V38.5.1.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.1.4	管理页：pkgmgr 与构建集群	https://www.freebsd.org/administration/	联网	A	2026-10-30	maintain the automated package building cluster	none
+V38.5.1.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 1 节“Ports 维护者与提交者群体”；本节题为其下位论题	none
+V38.5.1.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.1.5	贡献者名录：Ports 团队校友	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	4. Ports Management Team Alumni The following people were members of the FreeBSD portmgr team during the periods indicated.	none
+V38.5.1.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 1 节“Ports 维护者与提交者群体”；本节题为其下位论题	none
+V38.5.1.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.1.6	《FreeBSD at 30》团队清单：Ports 与包管理团队另立	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	This includes the ports management and package management teams as mentioned above, along with the security team, release engineering team, and the core team.	none
+V38.5.2.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 2 节“doceng 与手册作者群体”；本节题为其下位论题	none
+V38.5.2.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.2.1	doceng 章程：新提交者审批	https://www.freebsd.org/internal/doceng/	联网	A	2026-10-30	New doc committers are approved by doceng@ with a vote through email and a two week timeout.	none
+V38.5.2.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 2 节“doceng 与手册作者群体”；本节题为其下位论题	none
+V38.5.2.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.2.2	doceng 章程：维护读本	https://www.freebsd.org/internal/doceng/	联网	A	2026-10-30	To maintain the doc project primer, which documents best practices for the FreeBSD Documentation Project.	none
+V38.5.2.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 2 节“doceng 与手册作者群体”；本节题为其下位论题	none
+V38.5.2.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.2.3	doceng 章程：工具链维护	https://www.freebsd.org/internal/doceng/	联网	A	2026-10-30	to ensure that the documentation toolchains (DocBook, groff, etc.) are in good working order	none
+V38.5.2.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 2 节“doceng 与手册作者群体”；本节题为其下位论题	none
+V38.5.2.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.2.4	doceng 章程：闲置提交者	https://www.freebsd.org/internal/doceng/	联网	A	2026-10-30	Doc Committers that have not made a commit in 18 months will be contacted by a doceng@ member	none
+V38.5.2.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 2 节“doceng 与手册作者群体”；本节题为其下位论题	none
+V38.5.2.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.2.5	管理页：网站团队任命	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Webmaster Team is appointed by FreeBSD Documentation Engineering Team	none
+V38.5.2.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 2 节“doceng 与手册作者群体”；本节题为其下位论题	none
+V38.5.2.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.2.6	文档工程读本：译者与作者	https://docs.freebsd.org/en/books/fdp-primer/translations/	联网	A	2026-10-30	This is the FAQ for people translating the FreeBSD documentation (FAQ, Handbook, tutorials, manual pages, and others) to different languages.	none
+V38.5.3.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 3 节“翻译与本地化者”；本节题为其下位论题	none
+V38.5.3.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.3.1	文档工程读本：语言团队	https://docs.freebsd.org/en/books/fdp-primer/translations/	联网	A	2026-10-30	Different translation groups have their own mailing lists.	none
+V38.5.3.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 3 节“翻译与本地化者”；本节题为其下位论题	none
+V38.5.3.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.3.2	doceng 章程：两类文档权限	https://www.freebsd.org/internal/doceng/	联网	A	2026-10-30	There are two kinds of doc commit bits: translator commit bit, which is limited to translations in a particular language and full commit bit, which is only granted to aspirants, who have shown enough English writing skills.	none
+V38.5.3.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 3 节“翻译与本地化者”；本节题为其下位论题	none
+V38.5.3.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.3.3	文档工程读本：翻译通则	https://docs.freebsd.org/en/books/fdp-primer/translations/	联网	A	2026-10-30	In addition there is freebsd-translators@freebsd.org for general translation discussion.	none
+V38.5.3.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 3 节“翻译与本地化者”；本节题为其下位论题	none
+V38.5.3.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.3.4	文档工程读本：本地内容政策	https://docs.freebsd.org/en/books/fdp-primer/translations/	联网	A	2026-10-30	We would prefer that you did not.	none
+V38.5.3.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 3 节“翻译与本地化者”；本节题为其下位论题	none
+V38.5.3.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.3.5	文档工程读本：构建确认	https://docs.freebsd.org/en/books/fdp-primer/translations/	联网	A	2026-10-30	will then take your translation and confirm that it builds.	none
+V38.5.3.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 3 节“翻译与本地化者”；本节题为其下位论题	none
+V38.5.3.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.3.6	文档工程读本：翻译页维护	https://docs.freebsd.org/en/books/fdp-primer/translations/	联网	A	2026-10-30	The Documentation Project translations page lists the translation efforts that are currently known about.	none
+V38.5.4.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 4 节“镜像站管理者”；本节题为其下位论题	none
+V38.5.4.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.4.1	手册附录：官方镜像运营	https://docs.freebsd.org/en/books/handbook/mirrors/	联网	A	2026-10-30	The official mirrors of the FreeBSD project are made up of many machines operated by the project cluster administrators and behind GeoDNS to direct users to the closest available mirror.	none
+V38.5.4.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 4 节“镜像站管理者”；本节题为其下位论题	none
+V38.5.4.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.4.2	手册附录：社区镜像名录	https://docs.freebsd.org/en/books/handbook/mirrors/	联网	A	2026-10-30	Mirror list maintained by the community and other companies	none
+V38.5.4.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 4 节“镜像站管理者”；本节题为其下位论题	none
+V38.5.4.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.4.3	手册附录：镜像站点分布	https://docs.freebsd.org/en/books/handbook/mirrors/	联网	A	2026-10-30	Current locations are Australia, Brazil, France, Japan (two sites), Malaysia, South Africa, Sweden, Taiwan, United States of America	none
+V38.5.4.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 4 节“镜像站管理者”；本节题为其下位论题	none
+V38.5.4.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.4.4	手册附录：招募赞助	https://docs.freebsd.org/en/books/handbook/mirrors/	联网	A	2026-10-30	The project is looking for new locations; those willing to sponsor, please reach out to the Cluster Administrators team for more information.	none
+V38.5.4.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 4 节“镜像站管理者”；本节题为其下位论题	none
+V38.5.4.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.4.5	手册附录：清单更新时间	https://docs.freebsd.org/en/books/handbook/mirrors/	联网	A	2026-10-30	The current list of protocols supported by the community mirrors was last updated on 2022-01-31	none
+V38.5.4.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 4 节“镜像站管理者”；本节题为其下位论题	none
+V38.5.4.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.4.6	管理页：镜像协调人职责	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FTP/WWW Mirror Site Coordinators coordinate all the FTP/WWW mirror site administrators	none
+V38.5.5.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 5 节“用户组与推广活动的成员”；本节题为其下位论题	none
+V38.5.5.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.5.1	用户组页：全球分布	https://www.freebsd.org/usergroups/	联网	A	2026-10-30	widespread popularity has spawned a number of user groups around the world.	none
+V38.5.5.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 5 节“用户组与推广活动的成员”；本节题为其下位论题	none
+V38.5.5.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.5.2	用户组页：准入偏好	https://www.freebsd.org/usergroups/	联网	A	2026-10-30	we prefer user groups that are active and which conduct their business in public	none
+V38.5.5.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 5 节“用户组与推广活动的成员”；本节题为其下位论题	none
+V38.5.5.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.5.3	用户组页：关西小组创组	https://www.freebsd.org/usergroups/	联网	A	2026-10-30	The Kansai *BSD Users Group was established on November 13, 1999.	none
+V38.5.5.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 5 节“用户组与推广活动的成员”；本节题为其下位论题	none
+V38.5.5.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.5.4	用户组页：法国小组译介	https://www.freebsd.org/usergroups/	联网	A	2026-10-30	They are also active in helping out FOSDEM (held in Brussels).	none
+V38.5.5.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 5 节“用户组与推广活动的成员”；本节题为其下位论题	none
+V38.5.5.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.5.5	用户组页：全球联合组织	https://www.freebsd.org/usergroups/	联网	A	2026-10-30	The Global BSD User Groups organization was founded to help promote local BSD user groups	none
+V38.5.5.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“各类岗位的维护者”第 5 节“用户组与推广活动的成员”；本节题为其下位论题	none
+V38.5.5.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.5.5.6	用户组页：更新日期	https://www.freebsd.org/usergroups/	联网	A	2026-10-30	Last modified on : September 6, 2026 by Alexander Ziaee	none
+V38.6.1.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 1 节“对核心团队的批评史”；本节题为其下位论题	none
+V38.6.1.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.1.1	《FreeBSD at 30》格林曼访谈：核心自我任命引出的权限质疑	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	With the Core Team being self-appointed, there was an ongoing question about where the Core Team’s authority comes from.	none
+V38.6.1.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 1 节“对核心团队的批评史”；本节题为其下位论题	none
+V38.6.1.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.1.2	《FreeBSD at 30》坎普文：核心从不劝退离席者	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	But out of some kind of misguided respect, we never retired anybody, even if they had wandered off and we hadn’t heard from them for years.	none
+V38.6.1.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 1 节“对核心团队的批评史”；本节题为其下位论题	none
+V38.6.1.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.1.3	《FreeBSD at 30》坎普文：核心处置越规提交者的先例	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	We had a surprising number of rogue committers, in particular a high-profile case where two committers fought each other in the open.	none
+V38.6.1.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 1 节“对核心团队的批评史”；本节题为其下位论题	none
+V38.6.1.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.1.4	Kamp 主页：推动民主改选	https://people.freebsd.org/~phk/	联网	A	2026-10-30	I was a member of the FreeBSD coreteam from early 1994 until I six years later managed to manipulate the project into democratically electing a new core team.	none
+V38.6.1.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 1 节“对核心团队的批评史”；本节题为其下位论题	none
+V38.6.1.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.1.5	核心章程：三分之一提交者联署可触发提前选举	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	A petition of 1/3 of active committers can trigger an early election.	none
+V38.6.1.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 1 节“对核心团队的批评史”；本节题为其下位论题	none
+V38.6.1.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.1.6	《FreeBSD at 30》坎普文：当事人第一人称对核心席位的自述	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	I suspect the argument which finally sold them on my idea was when I said that I would not be a candidate if an election were held, but otherwise I would cling to my core bit to the bitter end, or until they pried it away from me, in bright daylight and in public.	none
+V38.6.2.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 2 节“社群记忆中的标志性人物典故：集体记忆与史实之辨”；本节题为其下位论题	none
+V38.6.2.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.2.1	《FreeBSD at 30》坎普文：项目方对 Jolitz 未回应的叙述	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	Bill Jolitz, who had ported the NET/2 sources and added what it took to make it run on a i386, did not respond to the many people who offered him help and patches, the promised 0.2 version never materialized, and the patchkit grew and grew, topping out at 138 “official unofficial” patches	none
+V38.6.2.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 2 节“社群记忆中的标志性人物典故：集体记忆与史实之辨”；本节题为其下位论题	none
+V38.6.2.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.2.2	手册导言：项目方对 386BSD 疏于维护的表述	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	386BSD was Bill Jolitz’s operating system, which had been up to that point suffering rather severely from almost a year’s worth of neglect.	none
+V38.6.2.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 2 节“社群记忆中的标志性人物典故：集体记忆与史实之辨”；本节题为其下位论题	none
+V38.6.2.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.2.3	《FreeBSD at 30》坎普文：补丁集署名与批次归属	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	In September, my first patch was the nineteenth and final patch in the first installment of Terry Lambert’s “unofficial 386BSD patchkit”:	none
+V38.6.2.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 2 节“社群记忆中的标志性人物典故：集体记忆与史实之辨”；本节题为其下位论题	none
+V38.6.2.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.2.4	贡献者名录：逝者纪念节	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	5. Development Team: In Memoriam During the many years that the FreeBSD Project has been in existence, sadly, some of our developers have passed away.	none
+V38.6.2.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 2 节“社群记忆中的标志性人物典故：集体记忆与史实之辨”；本节题为其下位论题	none
+V38.6.2.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.2.5	TUHS 邮件列表：报道者自述所知有限、随获随报	https://www.tuhs.org/pipermail/tuhs/2022-April/025643.html	联网	A	2026-10-30	I know little more than what I have just reported at this time, but will pass on any info as I learn it.	none
+V38.6.2.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 2 节“社群记忆中的标志性人物典故：集体记忆与史实之辨”；本节题为其下位论题	none
+V38.6.2.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.2.6	bikeshed 文：争论规模的记忆	https://www.bikeshed.org/	联网	B	2026-10-30	The sleep(1) saga is the most blatant example of a bike shed discussion we have had ever in FreeBSD.	none
+V38.6.3.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 3 节“名人名言与身份认同中的人”；本节题为其下位论题	none
+V38.6.3.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.3.1	Kamp 主页：标语式自述	https://people.freebsd.org/~phk/	联网	A	2026-10-30	FreeBSD - UNIX the way I like it.	none
+V38.6.3.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 3 节“名人名言与身份认同中的人”；本节题为其下位论题	none
+V38.6.3.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.3.2	Kamp 主页：许可观自述	https://people.freebsd.org/~phk/	联网	A	2026-10-30	I think the GNU license is a joke, it fights the capitalism it so much is against with their own tools	none
+V38.6.3.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 3 节“名人名言与身份认同中的人”；本节题为其下位论题	none
+V38.6.3.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.3.3	《FreeBSD at 30》坎普文：beer-ware 许可加于 md5crypt	https://freebsdfoundation.org/wp-content/uploads/2023/06/9a09afdf5fb325213a554aba948ae00a2e4bba06.2.pdf	联网	A	2026-10-30	BSD license mail storms and just to tick off everybody equally, I revived my old “beer-ware” license and slapped that on md5crypt before I committed it.	none
+V38.6.3.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 3 节“名人名言与身份认同中的人”；本节题为其下位论题	none
+V38.6.3.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.3.4	bikeshed 文：隐喻表述	https://www.bikeshed.org/	联网	B	2026-10-30	This is a metaphor indicating that you need not argue about every little feature just because you know enough to do so	none
+V38.6.3.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 3 节“名人名言与身份认同中的人”；本节题为其下位论题	none
+V38.6.3.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.3.5	坎普个人页：BEER-WARE 许可原文段的逐字引文	https://people.freebsd.org/~phk/	联网	A	2026-10-30	If we meet some day, and you think * this stuff is worth it, you can buy me a beer in return Poul-Henning Kamp	none
+V38.6.3.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 3 节“名人名言与身份认同中的人”；本节题为其下位论题	none
+V38.6.3.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.3.6	Kamp 主页：对律师解释自由的反感	https://people.freebsd.org/~phk/	联网	A	2026-10-30	I have had it with lawyers trying to interpret freedom.	none
+V38.6.4.1	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 4 节“人物史的记忆、代际与未及收录者”；本节题为其下位论题	none
+V38.6.4.1	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.4.1	贡献者名录：逝者编排	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	In rough reverse chronological order of their passing:	none
+V38.6.4.2	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 4 节“人物史的记忆、代际与未及收录者”；本节题为其下位论题	none
+V38.6.4.2	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.4.2	贡献者名录：附加贡献者节	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	7. Additional FreeBSD Contributors	none
+V38.6.4.3	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 4 节“人物史的记忆、代际与未及收录者”；本节题为其下位论题	none
+V38.6.4.3	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.4.3	贡献者名录：派生贡献者节	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	6. Derived Software Contributors	none
+V38.6.4.4	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 4 节“人物史的记忆、代际与未及收录者”；本节题为其下位论题	none
+V38.6.4.4	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.4.4	贡献者名录：Karels 逝世纪念	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	Mike Karels (2016 - 2024; RIP 2024)	none
+V38.6.4.5	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 4 节“人物史的记忆、代际与未及收录者”；本节题为其下位论题	none
+V38.6.4.5	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.4.5	贡献者名录：名录收录范围	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	This article lists individuals and organizations who have made a contribution to FreeBSD.	none
+V38.6.4.6	节题与上位章题（逐字）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章“争议与形象”第 4 节“人物史的记忆、代际与未及收录者”；本节题为其下位论题	none
+V38.6.4.6	题名判据（T／C／S）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T6 长度 8–40、S2 上下位一致、S3 同节平行；C1 中英与中数各一空格、C8c 单题“的”≤2；句式见风格规范 §二	none
+V38.6.4.6	TUHS 邮件列表：通报对 Jolitz 角色的可考界定	https://www.tuhs.org/pipermail/tuhs/2022-April/025643.html	联网	A	2026-10-30	Most of you know he was the original force behind the BSD 386 development.	none

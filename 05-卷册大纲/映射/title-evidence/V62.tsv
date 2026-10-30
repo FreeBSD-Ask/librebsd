@@ -1,0 +1,687 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V62.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“从许可证阅读到合规管理”；本节题为其下位论题	none
+V62.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.1.1	许可证审读的原始问题	https://reuse.software/	联网	A	2026-10-30	We solve a fundamental issue that Free Software licensing has at the very source: what license is a file licensed under, and who owns the copyright?	none
+V62.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“从许可证阅读到合规管理”；本节题为其下位论题	none
+V62.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“从许可证阅读到合规管理”；本节题为其下位论题	none
+V62.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.1.3	合规流程的关键位置	https://openchainproject.org/license-compliance	联网	A	2026-10-30	The key places to have license compliance processes	none
+V62.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“从许可证阅读到合规管理”；本节题为其下位论题	none
+V62.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.1.4	二进制再分发的声明义务	https://spdx.org/licenses/BSD-2-Clause.html	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
+V62.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“从许可证阅读到合规管理”；本节题为其下位论题	none
+V62.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“SPDX 许可证标识”；本节题为其下位论题	none
+V62.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.2.1	标识符的用途	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	Use SPDX short-form identifiers to communicate license information in a simple, efficient, portable and machine-readable manner	none
+V62.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“SPDX 许可证标识”；本节题为其下位论题	none
+V62.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.2.2	表达式写法示例	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	/* SPDX-License-Identifier: MIT OR Apache-2.0 */	none
+V62.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“SPDX 许可证标识”；本节题为其下位论题	none
+V62.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.2.3	逐文件标注方法	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	In each file in your project, just add a single line in the following format, tailored to your license(s) and the comment style for that file’s language:	none
+V62.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“SPDX 许可证标识”；本节题为其下位论题	none
+V62.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.2.4	许可清单的构成	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	The SPDX License List includes a standardized short identifier, the full name, the license text, and a canonical permanent URL for each license and exception.	none
+V62.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“SPDX 许可证标识”；本节题为其下位论题	none
+V62.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.2.5	SPDX 标准化状态	https://spdx.dev/	联网	A	2026-10-30	The SPDX specification is a freely available international open standard (ISO/IEC 5962:2021).	none
+V62.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“软件成分识别”；本节题为其下位论题	none
+V62.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.3.1	依赖识别的工具角色	https://oss-review-toolkit.org/	联网	A	2026-10-30	The Analyzer is a Software Composition Analysis (SCA) tool that identifies the dependencies of your projects, and gathers information about them, such as licenses, copyrights, and source code locations.	none
+V62.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“软件成分识别”；本节题为其下位论题	none
+V62.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.3.2	扫描器的信息面	https://oss-review-toolkit.org/	联网	A	2026-10-30	The Scanner integrates third-party source code scanners to gather information about licenses, copyrights, and snippets in the source code of your projects and their dependencies.	none
+V62.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“软件成分识别”；本节题为其下位论题	none
+V62.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.3.3	组件清单的申报口径	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	Components describe the complete inventory of first-party and third-party components.	none
+V62.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“软件成分识别”；本节题为其下位论题	none
+V62.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.3.4	组成完整性标注	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	The aggregate of each composition can be described as complete, incomplete, incomplete first-party only, incomplete third-party only, or unknown.	none
+V62.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“软件成分识别”；本节题为其下位论题	none
+V62.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.3.5	符合性声明的置信字段	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	Each declaration may include attestations, claims, counter-claims, evidence, counter-evidence, along with conformance and confidence.	none
+V62.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“SBOM 与许可证信息”；本节题为其下位论题	none
+V62.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.4.1	最小元素的政策来源	https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom	联网	A	2026-10-30	The Executive Order (14028) on Improving the Nation’s Cybersecurity directs the Department of Commerce, in coordination with the National Telecommunications and Information Administration (NTIA), to publish the “minimum elements” for a Software Bill of Materials (SBOM).	none
+V62.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“SBOM 与许可证信息”；本节题为其下位论题	none
+V62.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.4.2	SBOM 的定义	https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom	联网	A	2026-10-30	An SBOM is a formal record containing the details and supply chain relationships of various components used in building software.	none
+V62.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“SBOM 与许可证信息”；本节题为其下位论题	none
+V62.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.4.3	清单的清单性质	https://www.cisa.gov/sbom	联网	A	2026-10-30	An SBOM is a nested inventory, a list of ingredients that make up software components.	none
+V62.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“SBOM 与许可证信息”；本节题为其下位论题	none
+V62.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.4.4	用途与演进	https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom	联网	A	2026-10-30	this report defines the scope of how to think about minimum elements, describes SBOM use cases for greater transparency in the software supply chain, and lays out options for future evolution.	none
+V62.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“SBOM 与许可证信息”；本节题为其下位论题	none
+V62.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.4.5	格式设计取向	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	The CycloneDX specification is a highly modular and extensible framework designed to represent a broad range of supply chain information with precision and flexibility.	none
+V62.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“许可证扫描与源代码检测”；本节题为其下位论题	none
+V62.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.5.1	许可名归一	https://oss-review-toolkit.org/	联网	A	2026-10-30	Built-in and configurable mapping of arbitrary licenses to SPDX license IDs.	none
+V62.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“许可证扫描与源代码检测”；本节题为其下位论题	none
+V62.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.5.2	启发式工具的局限	https://reuse.software/	联网	A	2026-10-30	There are many tools that aid you in license compliance for software, many using databases and fuzzy heuristics.	none
+V62.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“许可证扫描与源代码检测”；本节题为其下位论题	none
+V62.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.5.3	片段信息的来源	https://oss-review-toolkit.org/	联网	A	2026-10-30	gather information about licenses, copyrights, and snippets in the source code of your projects and their dependencies	none
+V62.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“许可证扫描与源代码检测”；本节题为其下位论题	none
+V62.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.5.4	扫描结果复用	https://oss-review-toolkit.org/	联网	A	2026-10-30	Scan results can be stored for later reuse to avoid re-scanning the same source code.	none
+V62.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“许可证扫描与源代码检测”；本节题为其下位论题	none
+V62.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.5.5	工具与人工的分工	https://reuse.software/	联网	A	2026-10-30	REUSE does not replace other tools, it is a long-awaited addition.	none
+V62.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“NOTICE、版权声明与归属要求”；本节题为其下位论题	none
+V62.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.6.1	源码再分发的保留义务	https://spdx.org/licenses/BSD-2-Clause.html	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V62.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“NOTICE、版权声明与归属要求”；本节题为其下位论题	none
+V62.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.6.2	NOTICE 模板	https://oss-review-toolkit.org/	联网	A	2026-10-30	Templates for notice files, disclosure documents, and vulnerability reports are included.	none
+V62.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“NOTICE、版权声明与归属要求”；本节题为其下位论题	none
+V62.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.6.3	附随材料的位置	https://spdx.org/licenses/BSD-2-Clause.html	联网	A	2026-10-30	in the documentation and/or other materials provided with the distribution	none
+V62.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“NOTICE、版权声明与归属要求”；本节题为其下位论题	none
+V62.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.6.4	逐文件标注成本	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	Needs only one new comment line per file	none
+V62.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“NOTICE、版权声明与归属要求”；本节题为其下位论题	none
+V62.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.6.5	补标的做法	https://reuse.software/	联网	A	2026-10-30	Add copyright and licensing information to each file	none
+V62.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“多许可证项目的合规判断”；本节题为其下位论题	none
+V62.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.7.1	兼容性矩阵	https://oss-review-toolkit.org/	联网	A	2026-10-30	Provides an in-built rule set based on the OSADL License Compatibility Matrix.	none
+V62.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“多许可证项目的合规判断”；本节题为其下位论题	none
+V62.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.7.2	择一表达式	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	/* SPDX-License-Identifier: MIT OR Apache-2.0 */	none
+V62.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“多许可证项目的合规判断”；本节题为其下位论题	none
+V62.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.7.3	分区与完整性	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	Compositions describe constituent parts (including components, services, and dependency relationships) and their completeness.	none
+V62.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“多许可证项目的合规判断”；本节题为其下位论题	none
+V62.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.7.4	许可与例外同列	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	a list of commonly found licenses and exceptions used in free and open or collaborative software, data, hardware, or documentation	none
+V62.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“多许可证项目的合规判断”；本节题为其下位论题	none
+V62.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.7.5	策略引擎的裁量	https://oss-review-toolkit.org/	联网	A	2026-10-30	The Evaluator provides a scriptable rule engine to evaluate the gathered data against custom policy rules.	none
+V62.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“第三方代码进入操作系统源树”；本节题为其下位论题	none
+V62.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.8.1	移植补丁的随附	https://www.freebsd.org/ports/	联网	A	2026-10-30	Each port listed here contains any patches necessary to make the original application source code compile and run on FreeBSD.	none
+V62.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“第三方代码进入操作系统源树”；本节题为其下位论题	none
+V62.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“第三方代码进入操作系统源树”；本节题为其下位论题	none
+V62.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.8.3	补丁的应用流程	https://www.freebsd.org/ports/	联网	A	2026-10-30	Each port’s Makefile automatically fetches the application source code, either from a local disk or the network, unpacks it on your system, applies the patches, and compiles.	none
+V62.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“第三方代码进入操作系统源树”；本节题为其下位论题	none
+V62.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“第三方代码进入操作系统源树”；本节题为其下位论题	none
+V62.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.8.5	旧版本支持状态	https://www.freebsd.org/ports/	联网	A	2026-10-30	Older releases are not supported and may or may not work correctly with an up-to-date ports collection.	none
+V62.1.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“供应商、分销商与下游产品的合规责任”；本节题为其下位论题	none
+V62.1.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.9.1	分销商定义	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	The distributor is a natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the market without affecting its properties.	none
+V62.1.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“供应商、分销商与下游产品的合规责任”；本节题为其下位论题	none
+V62.1.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.9.2	进口商核验义务	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	The importer needs to ensure that the product is in compliance with the CRA, by ensuring inter alia that the manufacturer has complied with the product-related essential cybersecurity requirements and has processes in place to comply with the vulnerability handling obligations	none
+V62.1.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“供应商、分销商与下游产品的合规责任”；本节题为其下位论题	none
+V62.1.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.9.3	分销商核验内容	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	The distributor needs to verify that products with digital elements bear the CE marking and that manufacturers and importers have complied with certain obligations	none
+V62.1.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“供应商、分销商与下游产品的合规责任”；本节题为其下位论题	none
+V62.1.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.9.4	价值链各环节义务	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	These obligations must be met at every stage of the value chain.	none
+V62.1.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“供应商、分销商与下游产品的合规责任”；本节题为其下位论题	none
+V62.1.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.9.5	管理人的责任下限	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	Open-source software stewards are not subject to penalties for infringements of the CRA.	none
+V62.1.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开源治理标准化：OpenChain 与 OpenSSF”；本节题为其下位论题	none
+V62.1.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.10.1	规范定位	https://openchainproject.org/license-compliance	联网	A	2026-10-30	ISO/IEC 5230 defines the key requirements of a quality open source license compliance program	none
+V62.1.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开源治理标准化：OpenChain 与 OpenSSF”；本节题为其下位论题	none
+V62.1.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.10.2	采纳方式	https://openchainproject.org/license-compliance	联网	A	2026-10-30	You can adopt ISO/IEC 5230 through self-certification or in collaboration with one of our official partners.	none
+V62.1.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开源治理标准化：OpenChain 与 OpenSSF”；本节题为其下位论题	none
+V62.1.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.10.3	治理分工	https://openssf.org/about/	联网	A	2026-10-30	Neither the Governing Board (GB) nor the Technical Advisory Council (TAC) is responsible for managing the foundation hosted Working Groups (WGs) and projects directly.	none
+V62.1.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开源治理标准化：OpenChain 与 OpenSSF”；本节题为其下位论题	none
+V62.1.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.10.4	基金会宗旨	https://openssf.org/about/	联网	A	2026-10-30	The Open Source Security Foundation (OpenSSF) seeks to make it easier to sustainably secure the development, maintenance, release, and consumption of open source software (OSS).	none
+V62.1.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开源治理标准化：OpenChain 与 OpenSSF”；本节题为其下位论题	none
+V62.1.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.10.5	文本等效声明	https://openchainproject.org/license-compliance	联网	A	2026-10-30	The OpenChain version and the ISO version are functionally identical.	none
+V62.1.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“从法务审查到自动化合规工程”；本节题为其下位论题	none
+V62.1.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.11.1	工具链分工	https://oss-review-toolkit.org/	联网	A	2026-10-30	The OSS Review Toolkit (ORT) is a set of tools that work together to help you manage and analyze your software projects.	none
+V62.1.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“从法务审查到自动化合规工程”；本节题为其下位论题	none
+V62.1.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.11.2	合规即代码的提法	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	Declarations provide the basis for "compliance-as-code".	none
+V62.1.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“从法务审查到自动化合规工程”；本节题为其下位论题	none
+V62.1.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.11.3	职责分配要求	https://openchainproject.org/license-compliance	联网	A	2026-10-30	How to assign roles and responsibilities	none
+V62.1.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“从法务审查到自动化合规工程”；本节题为其下位论题	none
+V62.1.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.11.4	来源与时间标注	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	Citations identify who contributed specific pieces of information to a CycloneDX BOM and when that contribution was made.	none
+V62.1.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“从法务审查到自动化合规工程”；本节题为其下位论题	none
+V62.1.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.11.5	合规项目的人工收益	https://reuse.software/	联网	A	2026-10-30	A REUSE-compliant project makes the jobs of legal experts and compliance officers much easier.	none
+V62.1.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“Ports、pkgsrc 与第三方软件”；本节题为其下位论题	none
+V62.1.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.12.1	Ports 规模	https://www.freebsd.org/ports/	联网	A	2026-10-30	over 34,000 applications, utilities or libraries	none
+V62.1.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“Ports、pkgsrc 与第三方软件”；本节题为其下位论题	none
+V62.1.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.12.2	pkgsrc 定位	https://www.netbsd.org/docs/software/packages.html	联网	A	2026-10-30	The NetBSD Packages Collection (pkgsrc) is a framework for building third-party software on NetBSD and other UNIX-like systems, currently containing over 13000 packages.	none
+V62.1.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“Ports、pkgsrc 与第三方软件”；本节题为其下位论题	none
+V62.1.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.12.3	包管理器的安全下载	https://www.freebsd.org/ports/	联网	A	2026-10-30	Use pkg-install(8) to securely download and install a package.	none
+V62.1.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“Ports、pkgsrc 与第三方软件”；本节题为其下位论题	none
+V62.1.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.12.4	预编译包的供给	https://www.freebsd.org/ports/	联网	A	2026-10-30	For most of those, a precompiled package with default options exists for each supported release, saving the user the work and time of having to compile anything at all.	none
+V62.1.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“Ports、pkgsrc 与第三方软件”；本节题为其下位论题	none
+V62.1.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.12.5	跨平台取向	https://www.netbsd.org/docs/software/packages.html	联网	A	2026-10-30	It is used to enable freely available software to be configured and built easily on supported platforms.	none
+V62.1.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“软件签名与构建链”；本节题为其下位论题	none
+V62.1.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.13.1	签名的证明范围	https://docs.sigstore.dev/	联网	A	2026-10-30	Software consumers can trace software back to the source to know who created the artifact and that it has not been altered or tampered with after it was signed.	none
+V62.1.13.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“软件签名与构建链”；本节题为其下位论题	none
+V62.1.13.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.13.2	溯源含义	https://slsa.dev/spec/v1.0/levels	联网	A	2026-10-30	Provenance describes what entity built the artifact, what process they used, and what the inputs were.	none
+V62.1.13.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“软件签名与构建链”；本节题为其下位论题	none
+V62.1.13.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.13.3	密钥管理的难点	https://docs.sigstore.dev/	联网	A	2026-10-30	Key management : How do you keep the private key secure so it can’t be lost or stolen?	none
+V62.1.13.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“软件签名与构建链”；本节题为其下位论题	none
+V62.1.13.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.13.4	密钥吊销问题	https://docs.sigstore.dev/	联网	A	2026-10-30	If the keypair is compromised, how do you distribute new keys in a way that convinces users of your legitimacy and that you’re not an attacker?	none
+V62.1.13.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“软件签名与构建链”；本节题为其下位论题	none
+V62.1.13.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.13.5	未签名的风险面	https://docs.sigstore.dev/	联网	A	2026-10-30	unsigned software is at risk for several attack vectors	none
+V62.1.14.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“构建环境信任边界”；本节题为其下位论题	none
+V62.1.14.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.14.1	隔离要求	https://slsa.dev/spec/v1.0/levels	联网	A	2026-10-30	prevent runs from influencing one another, even within the same project	none
+V62.1.14.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“构建环境信任边界”；本节题为其下位论题	none
+V62.1.14.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.14.2	托管平台条件	https://slsa.dev/spec/v1.0/levels	联网	A	2026-10-30	Build platform runs on dedicated infrastructure, not an individual’s workstation, and the provenance is tied to that infrastructure through a digital signature	none
+V62.1.14.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“构建环境信任边界”；本节题为其下位论题	none
+V62.1.14.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.14.3	实现差异	https://slsa.dev/spec/v1.0/levels	联网	A	2026-10-30	Each ecosystem (for open source) or organization (for closed source) defines exactly how this is implemented, including: means of defining expectations, what provenance format is accepted, whether reproducible builds are used	none
+V62.1.14.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“构建环境信任边界”；本节题为其下位论题	none
+V62.1.14.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.14.4	步骤透明	https://in-toto.io/	联网	A	2026-10-30	It does so by making it transparent to the user what steps were performed, by whom and in what order.	none
+V62.1.14.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“构建环境信任边界”；本节题为其下位论题	none
+V62.1.14.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.14.5	发布环节的错漏	https://slsa.dev/spec/v1.0/levels	联网	A	2026-10-30	prevents mistakes during the release process, such as building from a commit that is not present in the upstream repo	none
+V62.1.15.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“BSD 项目的供应链响应”；本节题为其下位论题	none
+V62.1.15.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.15.1	缺陷受理	https://www.freebsd.org/security/	联网	A	2026-10-30	For every issue that gets reported, an internal tracking number is created, unless something is very obviously not a security issue.	none
+V62.1.15.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“BSD 项目的供应链响应”；本节题为其下位论题	none
+V62.1.15.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.15.2	公告的签名与归档	https://www.freebsd.org/security/	联网	A	2026-10-30	Advisories are always signed using the FreeBSD Security Officer PGP key and are archived, along with their associated patches, at the https://security.FreeBSD.org web server	none
+V62.1.15.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“BSD 项目的供应链响应”；本节题为其下位论题	none
+V62.1.15.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.15.3	公告覆盖分支	https://www.freebsd.org/security/	联网	A	2026-10-30	The FreeBSD Security Officer provides security advisories for *-STABLE Branches* and the *Security Branches*.	none
+V62.1.15.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“BSD 项目的供应链响应”；本节题为其下位论题	none
+V62.1.15.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.15.4	包集合的独立通报	https://www.freebsd.org/security/	联网	A	2026-10-30	Issues affecting the FreeBSD Ports Collection are covered separately in the FreeBSD VuXML document.	none
+V62.1.15.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“BSD 项目的供应链响应”；本节题为其下位论题	none
+V62.1.15.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.1.15.5	支持期承诺	https://www.freebsd.org/security/	联网	A	2026-10-30	From FreeBSD 15 onward, each stable branch is explicitly supported for 4 years from its dot-zero release.	none
+V62.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“POSIX 认证与合规对 BSD 项目的影响”；本节题为其下位论题	none
+V62.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.1.1	测试套件与标准对应	https://www.opengroup.org/posix-systems	联网	A	2026-10-30	The Open Group includes in its range of test suites a number of conformance tests for the IEEE POSIX standards.	none
+V62.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“POSIX 认证与合规对 BSD 项目的影响”；本节题为其下位论题	none
+V62.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.1.2	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第336章-合规认证与标准遵守-内部张力/336.4-对-FreeBSD-合规路线的批评-Linux-与商业-Unix-竞争者/336.4.2-posix认证成本与unix03争议.md	史料	A	2026-10-30	UNIX 03 认证成本与 The Open Group 商标政策长期受社区批评，Linux Foundation 主导 LSB 部分原因即规避 UNIX 03 费用	none
+V62.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“POSIX 认证与合规对 BSD 项目的影响”；本节题为其下位论题	none
+V62.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.1.3	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.2-POSIX-标准遵守史-POSIX-Portable-Operating-Sys/334.2.2-posix合规工程演进与授权.md	史料	A	2026-10-30	2004 年 6 月 IEEE 与 The Open Group 正式授权 FreeBSD 项目使用 1400 余个 POSIX 接口文档材料供手册页引用	none
+V62.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“POSIX 认证与合规对 BSD 项目的影响”；本节题为其下位论题	none
+V62.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.1.4	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.2-POSIX-标准遵守史-POSIX-Portable-Operating-Sys/334.2.1-posix标准接口与freebsd实现.md	史料	A	2026-10-30	POSIX.1b 标准的实时调度接口（sched_setscheduler(2) 等）则在 FreeBSD 5.0-RELEASE（2003 年 1 月）首次内置	none
+V62.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“POSIX 认证与合规对 BSD 项目的影响”；本节题为其下位论题	none
+V62.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.1.5	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.2-POSIX-标准遵守史-POSIX-Portable-Operating-Sys/334.2.2-posix合规工程演进与授权.md	史料	A	2026-10-30	FreeBSD 长期设有“C99 and POSIX Conformance Project”但从未申请 POSIX Certified 认证	none
+V62.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“ICCB 与 IAB：网络研究组织的形成”；本节题为其下位论题	none
+V62.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.2.1	ICCB 的设立	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	it was necessary to form an informal committee to guide the technical evolution of the protocol suite. This group was called the Internet Configuration Control Board (ICCB) and was established by Dr. Vinton Cerf	none
+V62.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“ICCB 与 IAB：网络研究组织的形成”；本节题为其下位论题	none
+V62.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.2.2	ICCB 改组为 IAB	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	Late that year, the ICCB was reorganized by Dr. Barry Leiner, Cerf's successor at DARPA, around a series of task forces considering different technical aspects of internetting. The re-organized group was named the Internet Activities Board.	none
+V62.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“ICCB 与 IAB：网络研究组织的形成”；本节题为其下位论题	none
+V62.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.2.3	两支部队的建制	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	1)  Internet Engineering Task Force (IETF) 2)  Internet Research Task Force (IRTF)	none
+V62.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“ICCB 与 IAB：网络研究组织的形成”；本节题为其下位论题	none
+V62.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.2.4	FRICC 的职能	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	formed an informal Federal Research Internet Coordinating Committee (FRICC) to coordinate U.S. Government support for and development and use of the Internet system	none
+V62.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“ICCB 与 IAB：网络研究组织的形成”；本节题为其下位论题	none
+V62.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.2.5	文档自述的性质	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	This RFC provides a history and description of the Internet Activities Board (IAB) and its subsidiary organizations.	none
+V62.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“IETF 的形成与研究环境”；本节题为其下位论题	none
+V62.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.3.1	工作组为执行单位	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	The work of the IETF is performed by subcommittees known as Working Groups.	none
+V62.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“IETF 的形成与研究环境”；本节题为其下位论题	none
+V62.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.3.2	八个技术面向	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	It is organized around a set of eight technical areas, each managed by a technical area director.	none
+V62.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“IETF 的形成与研究环境”；本节题为其下位论题	none
+V62.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.3.3	参与方式	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	There is no membership in the IETF. Anyone can participate by signing up to a working group mailing list	none
+V62.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“IETF 的形成与研究环境”；本节题为其下位论题	none
+V62.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.3.4	会议性质	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	IETF meetings are very different from standard industry conferences as they are working meetings with the primary goal of helping Working Groups (WGs) get their tasks done	none
+V62.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“IETF 的形成与研究环境”；本节题为其下位论题	none
+V62.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.3.5	职责下授	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	The IAB has delegated to the IESG the general responsibility for making the Internet work and for the resolution of all short- and mid-range protocol and architectural issues required to make the Internet function effectively.	none
+V62.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“IETF 标准化与 BSD 开发者”；本节题为其下位论题	none
+V62.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.4.1	标准提升阶梯	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	A Standard Protocol starts out as a Proposed Standard and may be promoted to Draft Standard and finally Standard after suitable review, comment, implementation and testing.	none
+V62.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“IETF 标准化与 BSD 开发者”；本节题为其下位论题	none
+V62.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.4.2	标准依据	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	We make standards based on the combined engineering judgement of our participants and our real-world experience in implementing and deploying our specifications.	none
+V62.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“IETF 标准化与 BSD 开发者”；本节题为其下位论题	none
+V62.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.4.3	标准提案的来源	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	The IETF is a major source of proposed protocol standards, for final approval by the IAB.	none
+V62.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“IETF 标准化与 BSD 开发者”；本节题为其下位论题	none
+V62.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.4.4	参与规模	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	over 7000 people actively participate in the IETF either by authoring a document, engaging in a mailing list discussion, or attending a meeting	none
+V62.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“IETF 标准化与 BSD 开发者”；本节题为其下位论题	none
+V62.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.4.5	IAB 的三项职能	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	1)   Sets Internet Standards, 2)   Manages the RFC publication process, 3)   Reviews the operation of the IETF and IRTF	none
+V62.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“RFC 与网络技术文档”；本节题为其下位论题	none
+V62.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.5.1	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.4-RFC-系列标准遵守史/334.4.1-freebsd网络栈与rfc实现.md	史料	A	2026-10-30	334.4.1 FreeBSD 网络栈与 RFC 实现	none
+V62.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“RFC 与网络技术文档”；本节题为其下位论题	none
+V62.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.5.2	MUST 的效力	https://www.rfc-editor.org/rfc/rfc2119.txt	联网	A	2026-10-30	This word, or the terms "REQUIRED" or "SHALL", mean that the definition is an absolute requirement of the specification.	none
+V62.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“RFC 与网络技术文档”；本节题为其下位论题	none
+V62.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.5.3	系列的起点	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	The archival RFC series was initiated in 1969 by Dr. Stephen D. Crocker as a means of documenting the development of the original ARPANET protocol suite	none
+V62.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“RFC 与网络技术文档”；本节题为其下位论题	none
+V62.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.5.4	文稿的存废	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	Internet-Drafts are either submitted to the RFC editor for publication or discarded within 3-6 months.	none
+V62.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“RFC 与网络技术文档”；本节题为其下位论题	none
+V62.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.5.5	引用惯例	https://www.rfc-editor.org/rfc/rfc2119.txt	联网	A	2026-10-30	The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.	none
+V62.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DARPA、开放标准与软件实现”；本节题为其下位论题	none
+V62.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.6.1	DARPA 立项	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	In 1968, the U.S. Defense Advanced Research Projects Agency (DARPA) initiated an effort to develop a technology which is now known as packet switching.	none
+V62.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DARPA、开放标准与软件实现”；本节题为其下位论题	none
+V62.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.6.2	多介质研究	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	During the early 1970's, DARPA initiated a number of programs to explore the use of packet switching methods in alternative media including mobile radio, satellite and cable	none
+V62.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DARPA、开放标准与软件实现”；本节题为其下位论题	none
+V62.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.6.3	研究成果的延续	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	This solution was further developed as part of a research program in internetting sponsored by DARPA	none
+V62.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DARPA、开放标准与软件实现”；本节题为其下位论题	none
+V62.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.6.4	FNC 的定位	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	The FNC is the Federal Government's body for coordinating the agencies that support the Internet.	none
+V62.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DARPA、开放标准与软件实现”；本节题为其下位论题	none
+V62.2.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.6.5	1990 年重组	https://www.rfc-editor.org/rfc/rfc1160.txt	联网	A	2026-10-30	In 1990, the FRICC was reorganized as part of a larger initiative sponsored by the networking subcommittee of the Federal Coordinating Committee on Science, Engineering and Technology (FCCSET).	none
+V62.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“标准符合性、商标认证与许可证的制度区别”；本节题为其下位论题	none
+V62.2.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.7.1	自愿标准的性质	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	The IETF makes voluntary standards that are often adopted by Internet users, network operators, and equipment vendors	none
+V62.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“标准符合性、商标认证与许可证的制度区别”；本节题为其下位论题	none
+V62.2.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.7.2	符合性的申报	https://www.opengroup.org/posix-systems	联网	A	2026-10-30	Suppliers are also able to demonstrate their conformance visibly through the recently established POSIX®: Certified by IEEE and The Open Group certification program.	none
+V62.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“标准符合性、商标认证与许可证的制度区别”；本节题为其下位论题	none
+V62.2.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.7.3	认证机构的中立性	https://www.opengroup.org/posix-systems	联网	A	2026-10-30	The Open Group is well established as the premier open systems test supplier and certification authority. As a supplier independent and product neutral organization	none
+V62.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“标准符合性、商标认证与许可证的制度区别”；本节题为其下位论题	none
+V62.2.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.7.4	许可的授权结构	https://spdx.org/licenses/BSD-2-Clause.html	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met	none
+V62.2.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“标准符合性、商标认证与许可证的制度区别”；本节题为其下位论题	none
+V62.2.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.7.5	标准组织对权利的另行处理	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	The IETF has policies about Intellectual Property Rights (IPR) that are designed to ensure that IETF participants have as much information as possible about any IPR constraints on a technical proposal as early as possible in the development process.	none
+V62.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“POSIX 标准文本的采纳与修订工程”；本节题为其下位论题	none
+V62.2.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.8.1	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.2-POSIX-标准遵守史-POSIX-Portable-Operating-Sys/334.2.2-posix合规工程演进与授权.md	史料	A	2026-10-30	334.2.2 POSIX 合规工程演进与授权	none
+V62.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“POSIX 标准文本的采纳与修订工程”；本节题为其下位论题	none
+V62.2.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.8.2	2024 年版的发布	https://www.opengroup.org/austin/	联网	A	2026-10-30	June 14, 2024: IEEE Std 1003.1-2024 has been published by IEEE. The Open Group Base Specifications, Issue 8 has been published by The Open Group.	none
+V62.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“POSIX 标准文本的采纳与修订工程”；本节题为其下位论题	none
+V62.2.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.8.3	缺陷受理入口	https://www.opengroup.org/austin/	联网	A	2026-10-30	To submit a bug report against the specifications please use the Mantis online defect tracker at [ http://austingroupbugs.net](http://austingroupbugs.net/).	none
+V62.2.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“POSIX 标准文本的采纳与修订工程”；本节题为其下位论题	none
+V62.2.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.8.4	一次编写多处采纳	https://www.opengroup.org/austin/	联网	A	2026-10-30	The approach to specification development is "write once, adopt everywhere", with the deliverables being a set of specifications that carry the IEEE POSIX designation, The Open Group's Technical Standard designation, and the ISO/IEC designation.	none
+V62.2.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“POSIX 标准文本的采纳与修订工程”；本节题为其下位论题	none
+V62.2.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.2.8.5	变更与解释的集中处理	https://www.opengroup.org/austin/	联网	A	2026-10-30	The group uses a Mantis bug tracker for handling change requests, defect reports and interpretations.	none
+V62.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“安全认证与许可证合规的区别”；本节题为其下位论题	none
+V62.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.1.1	认证适用的对象	https://csrc.nist.gov/pubs/fips/140-3/final	联网	A	2026-10-30	This standard shall be used in designing and implementing cryptographic modules that federal departments and agencies operate or are operated for them under contract.	none
+V62.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“安全认证与许可证合规的区别”；本节题为其下位论题	none
+V62.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.1.2	功能要求分部	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	Part 2: Security functional requirements	none
+V62.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“安全认证与许可证合规的区别”；本节题为其下位论题	none
+V62.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.1.3	版本过渡截止	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	CCV3.1R5 version is the last from the 3.1 series, and may optionally be used for evaluation starting no later than the 30th of June 2024.	none
+V62.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“安全认证与许可证合规的区别”；本节题为其下位论题	none
+V62.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.1.4	适用机构	https://csrc.nist.gov/pubs/fips/140-3/final	联网	A	2026-10-30	This standard is applicable to all federal agencies that use cryptographic-based security systems to protect sensitive information in computer and telecommunication systems	none
+V62.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“安全认证与许可证合规的区别”；本节题为其下位论题	none
+V62.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.1.5	管理体系认证的含义	https://www.iso.org/standard/27001	联网	A	2026-10-30	Conformity with ISO/IEC 27001 means that an organization or business has put in place a system to manage risks related to the security of data owned or handled by the company	none
+V62.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Common Criteria 与评估保证级认证”；本节题为其下位论题	none
+V62.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.2.1	第一部为导论与通用模型	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	Part 1: Introduction and general model	none
+V62.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Common Criteria 与评估保证级认证”；本节题为其下位论题	none
+V62.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.2.2	轮廓与安全目标的过渡期	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	STs conformant to CC:2022 based on PPs certified according to CC3.1 will be accepted up to the 31st of December 2027.	none
+V62.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Common Criteria 与评估保证级认证”；本节题为其下位论题	none
+V62.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.2.3	保证级等价	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	The member organisations of the CCRA declare that defined assurance levels (EALs) between versions of the criteria are equivalent and can therefore be used without restrictions for composition activities.	none
+V62.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Common Criteria 与评估保证级认证”；本节题为其下位论题	none
+V62.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.2.4	强制支撑文档	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	Those which are termed 'Mandatory Supporting Documents' are required to have been applied when a product involving the particular technology is certified in order to support mutual recognition.	none
+V62.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Common Criteria 与评估保证级认证”；本节题为其下位论题	none
+V62.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.2.5	延续活动的启动窗口	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	Assurance continuity activities (maintenance, re-evaluation and re-assessment) based on CC 3.1 evaluations can be started for up to 2 years from the initial certification date.	none
+V62.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“FIPS 140 系列与密码模块验证”；本节题为其下位论题	none
+V62.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.3.1	四级安全强度	https://csrc.nist.gov/pubs/fips/140-3/final	联网	A	2026-10-30	The standard provides four increasing, qualitative levels of security intended to cover a wide range of potential applications and environments.	none
+V62.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“FIPS 140 系列与密码模块验证”；本节题为其下位论题	none
+V62.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.3.2	版本取代关系	https://csrc.nist.gov/pubs/fips/140-3/final	联网	A	2026-10-30	Supersedes: [FIPS 140-2 (12/03/2002)](https://csrc.nist.gov/pubs/fips/140-2/upd2/final)	none
+V62.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“FIPS 140 系列与密码模块验证”；本节题为其下位论题	none
+V62.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.3.3	补充文件的作用	https://csrc.nist.gov/pubs/fips/140-3/final	联网	A	2026-10-30	Supporting SP 800-140x documents that modify requirements of ISO/IEC 19790:2012 and ISO/IEC 24759:2017	none
+V62.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“FIPS 140 系列与密码模块验证”；本节题为其下位论题	none
+V62.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.3.4	审查领域清单	https://csrc.nist.gov/pubs/fips/140-3/final	联网	A	2026-10-30	These areas include cryptographic module specification; cryptographic module interfaces; roles, services, and authentication; software/firmware security	none
+V62.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“FIPS 140 系列与密码模块验证”；本节题为其下位论题	none
+V62.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.3.5	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.7-FIPS-140-密码模块认证史/334.7.2-opensslfips模块在freebsd认证.md	史料	A	2026-10-30	OpenSSL FIPS Object Module 曾获 FIPS 140-2 证书（证书号 1747 等），FreeBSD 可作为运行环境被列入证书的“operational environment”中	none
+V62.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“ISO／IEC 27001 与组织信息安全管理”；本节题为其下位论题	none
+V62.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.4.1	标准要求	https://www.iso.org/standard/27001	联网	A	2026-10-30	It defines requirements an ISMS must meet.	none
+V62.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“ISO／IEC 27001 与组织信息安全管理”；本节题为其下位论题	none
+V62.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.4.2	风险导向	https://www.iso.org/standard/27001	联网	A	2026-10-30	ISO/IEC 27001 helps organizations become risk-aware and proactively identify and address weaknesses.	none
+V62.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“ISO／IEC 27001 与组织信息安全管理”；本节题为其下位论题	none
+V62.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.4.3	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第336章-合规认证与标准遵守-内部张力/336.2-freebsd合规认证与标准遵守的外部批评/336.2.1-iso27001认证的成本障碍.md	史料	A	2026-10-30	认证费用每年超过 5 万美元（>$50K/年）	none
+V62.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“ISO／IEC 27001 与组织信息安全管理”；本节题为其下位论题	none
+V62.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.4.4	体系范围	https://www.iso.org/standard/27001	联网	A	2026-10-30	ISO/IEC 27001 promotes a holistic approach to information security: vetting people, policies and technology.	none
+V62.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“ISO／IEC 27001 与组织信息安全管理”；本节题为其下位论题	none
+V62.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.4.5	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第336章-合规认证与标准遵守-内部张力/336.2-freebsd合规认证与标准遵守的外部批评/336.2.1-iso27001认证的成本障碍.md	史料	A	2026-10-30	替代事后审计证明流程有效性	none
+V62.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“第三方评价与产品安全保证”；本节题为其下位论题	none
+V62.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.5.1	实验室最低要求	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	Minimum ITSEF Requirements for Security Evaluations of Smart cards and similar devices Mandatory	none
+V62.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“第三方评价与产品安全保证”；本节题为其下位论题	none
+V62.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.5.2	产品系列的评估方法	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	Evaluation methodology for product series, v1.0	none
+V62.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“第三方评价与产品安全保证”；本节题为其下位论题	none
+V62.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.5.3	安全目标的公开清洗	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	ST sanitising for publication	none
+V62.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“第三方评价与产品安全保证”；本节题为其下位论题	none
+V62.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.5.4	影子认证	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	2004-07-001 Conducting Shadow Certifications	none
+V62.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“第三方评价与产品安全保证”；本节题为其下位论题	none
+V62.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.5.5	授权名录	https://www.fedramp.gov/	联网	A	2026-10-30	The FedRAMP Marketplace is a searchable database of FedRAMP certified cloud services, authorizing agencies, and FedRAMP recognized assessors.	none
+V62.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“认证结果与实际工程能力的区别”；本节题为其下位论题	none
+V62.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.6.1	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第335章-合规认证与标准遵守-commoncriteria/335.1-Common-Criteria-与-TrustedBSD/335.1.3-cceal评级与实际安全辨析.md	史料	A	2026-10-30	CC EAL 评级衡量的是评估过程的严格程度而非产品本身的安全程度	none
+V62.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“认证结果与实际工程能力的区别”；本节题为其下位论题	none
+V62.3.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.6.2	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第335章-合规认证与标准遵守-commoncriteria/335.1-Common-Criteria-与-TrustedBSD/335.1.3-cceal评级与实际安全辨析.md	史料	A	2026-10-30	FreeBSD 未通过 CC 认证但通过 TrustedBSD 工程实现实质安全功能	none
+V62.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“认证结果与实际工程能力的区别”；本节题为其下位论题	none
+V62.3.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.6.3	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第335章-合规认证与标准遵守-commoncriteria/335.1-Common-Criteria-与-TrustedBSD/335.1.3-cceal评级与实际安全辨析.md	史料	A	2026-10-30	某些通过 EAL 4+ 的产品被发现严重漏洞（如 Juniper 2015 backdoor）说明 EAL 评级非安全保证	none
+V62.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“认证结果与实际工程能力的区别”；本节题为其下位论题	none
+V62.3.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.6.4	框架的沟通用途	https://csrc.nist.gov/pubs/sp/800/218/final	联网	A	2026-10-30	Because the framework provides a common vocabulary for secure software development, software purchasers and consumers can also use it to foster communications with suppliers in acquisition processes and other management activities.	none
+V62.3.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“认证结果与实际工程能力的区别”；本节题为其下位论题	none
+V62.3.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.3.6.5	判定方案的公开	https://www.freebsd.org/security/	联网	A	2026-10-30	To determine whether or not a Security Advisory is warranted we use the following scheme:	none
+V62.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“软件供应链治理的制度化”；本节题为其下位论题	none
+V62.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.1.1	行政令的指令	https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom	联网	A	2026-10-30	The Executive Order (14028) on Improving the Nation’s Cybersecurity directs the Department of Commerce, in coordination with the National Telecommunications and Information Administration (NTIA), to publish the “minimum elements” for a Software Bill of Materials (SBOM).	none
+V62.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“软件供应链治理的制度化”；本节题为其下位论题	none
+V62.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.1.2	框架的可集成性	https://csrc.nist.gov/pubs/sp/800/218/final	联网	A	2026-10-30	This document recommends the Secure Software Development Framework (SSDF) – a core set of high-level secure software development practices that can be integrated into each SDLC implementation.	none
+V62.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“软件供应链治理的制度化”；本节题为其下位论题	none
+V62.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.1.3	清单指引的更新	https://www.cisa.gov/sbom	联网	A	2026-10-30	Updated draft SBOM guidance outlines current best practices for software transparency and supply chain security.	none
+V62.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“软件供应链治理的制度化”；本节题为其下位论题	none
+V62.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.1.4	认知与准备落差	https://openssf.org/blog/2025/06/16/cra-ready-how-open-source-projects-can-prepare-for-the-eu-cyber-resilience-act/	联网	A	2026-10-30	while awareness of the CRA is growing, many open source contributors still feel unprepared	none
+V62.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“软件供应链治理的制度化”；本节题为其下位论题	none
+V62.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.1.5	单一平台的减负设计	https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp	联网	A	2026-10-30	Designed to simplify EU reporting obligations, the SRP allows users to report once through a single platform and communicate the relevant information to the appropriate authorities.	none
+V62.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“漏洞报告与软件生命周期责任”；本节题为其下位论题	none
+V62.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.2.1	上市后的通报义务	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	After the product is placed on the market, the manufacturer is required to notify actively exploited vulnerabilities and severe incidents having an impact on the security of the product that it becomes aware of.	none
+V62.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“漏洞报告与软件生命周期责任”；本节题为其下位论题	none
+V62.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.2.2	时限分级	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	24 hours for an early warning notification; 72 hours for the "main" notification	none
+V62.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“漏洞报告与软件生命周期责任”；本节题为其下位论题	none
+V62.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.2.3	支持期明示	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	The end date of the support period (including month and year) needs to be clearly and understandably specified at the time of purchase.	none
+V62.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“漏洞报告与软件生命周期责任”；本节题为其下位论题	none
+V62.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.2.4	存量产品覆盖	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	Reporting obligations apply to all products with digital elements that have been made available on the Union market, including those already placed on the market before 11 December 2027.	none
+V62.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“漏洞报告与软件生命周期责任”；本节题为其下位论题	none
+V62.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.2.5	已利用漏洞目录	https://www.cisa.gov/known-exploited-vulnerabilities-catalog	联网	A	2026-10-30	CISA maintains the authoritative source of vulnerabilities that have been exploited in the wild.	none
+V62.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“SBOM 从工程工具走向监管工具”；本节题为其下位论题	none
+V62.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.3.1	清单分发的角色	https://www.cisa.gov/sbom	联网	A	2026-10-30	This document defines the three roles (SBOM Author, SBOM Consumer, and SBOM Distributor) of the SBOM sharing lifecycle	none
+V62.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“SBOM 从工程工具走向监管工具”；本节题为其下位论题	none
+V62.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.3.2	属性定义	https://www.cisa.gov/sbom	联网	A	2026-10-30	This document, further defines and clarifies SBOM Attributes from the 2021 Framing Software Component Transparency document	none
+V62.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“SBOM 从工程工具走向监管工具”；本节题为其下位论题	none
+V62.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.3.3	约定文件名	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	The following file names are conventionally used for storing CycloneDX BOM files: bom.json for JSON encoded CycloneDX BOM files.	none
+V62.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“SBOM 从工程工具走向监管工具”；本节题为其下位论题	none
+V62.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.3.4	可利用性声明	https://www.cisa.gov/sbom	联网	A	2026-10-30	A VEX document is an attestation, a form of a security advisory that indicates whether a product or products are affected by a known vulnerability or vulnerabilities.	none
+V62.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“SBOM 从工程工具走向监管工具”；本节题为其下位论题	none
+V62.4.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.3.5	第三方组件尽责	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	If the manufacturer integrates third-party components, it needs to exercise due diligence so that those components do not compromise the cybersecurity of its product with digital elements.	none
+V62.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“网络安全法规与开源软件的适用边界”；本节题为其下位论题	none
+V62.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.4.1	法规目标	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	The Cyber Resilience Act (CRA) aims to make sure all digital products are safe from cyber threats.	none
+V62.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“网络安全法规与开源软件的适用边界”；本节题为其下位论题	none
+V62.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.4.2	开源例外的门槛	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	only free and open-source software that is made available on the market, and therefore supplied for distribution or use in the course of a commercial activity, falls in scope of the Cyber Resilience Act	none
+V62.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“网络安全法规与开源软件的适用边界”；本节题为其下位论题	none
+V62.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.4.3	开发模式的差异	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	The CRA recognises that, to foster the development and deployment of free and open-source software, special attention should be paid to the nature of the different development models of software distributed and developed under free and open-source software licences.	none
+V62.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“网络安全法规与开源软件的适用边界”；本节题为其下位论题	none
+V62.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.4.4	贡献者排除	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	the CRA does not apply to developers who contribute with source code to free and open-source software that are not under their responsibility	none
+V62.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“网络安全法规与开源软件的适用边界”；本节题为其下位论题	none
+V62.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.4.5	旧树同节料件 H1	旧大纲-20261023/第16卷-开源运动与合规治理/第342章-全球社区时期的其他科学-自反性/342.6-全球社区时期-BSD-科学应用相关法律与开源政策-各国版权法对-BSD/342.6.6-医疗设备法规对bsd医疗设备部署的效应.md	史料	A	2026-10-30	BSD 许可证允许闭源商用与嵌入式部署、无 copyleft 源码公开义务，使 BSD 代码可进入不公开源码的医疗设备固件而不触发许可证冲突	none
+V62.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“欧盟网络弹性法案的形成”；本节题为其下位论题	none
+V62.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.5.1	战略承接	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	The Cyber Resilience Act builds on the 2020 EU Cybersecurity Strategy and EU Security Union Strategy.	none
+V62.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“欧盟网络弹性法案的形成”；本节题为其下位论题	none
+V62.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.5.2	条例全称与通过日	https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng	联网	A	2026-10-30	Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements	none
+V62.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“欧盟网络弹性法案的形成”；本节题为其下位论题	none
+V62.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.5.3	产品类别举例	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	From baby-monitors to smart watches, from apps to computer programs, connectable hardware and software are omnipresent in our daily lives.	none
+V62.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“欧盟网络弹性法案的形成”；本节题为其下位论题	none
+V62.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.5.4	与 NIS2 的关系	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	It complements other legislation in this area, specifically the NIS2 Directive.	none
+V62.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“欧盟网络弹性法案的形成”；本节题为其下位论题	none
+V62.4.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.5.5	生效与适用时点	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	The CRA entered into force on 10 December 2024. The main obligations introduced by the Act will apply from 11 December 2027, with reporting obligations to apply as of 11 September 2026.	none
+V62.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节““产品制造商”与“开源软件管理人””；本节题为其下位论题	none
+V62.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.6.1	制造商定义	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	The main obligations of the CRA are directed at manufacturers, i.e. the natural or legal persons that place a product with digital elements on the market under their name or trademark.	none
+V62.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节““产品制造商”与“开源软件管理人””；本节题为其下位论题	none
+V62.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.6.2	轻量制度	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	These are legal persons who provide support on a sustained basis for the development of such products which are intended for commercial activities, and who play a main role in ensuring their viability, and are subject to a light-touch and tailor-made regulatory regime.	none
+V62.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节““产品制造商”与“开源软件管理人””；本节题为其下位论题	none
+V62.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.6.3	管理人判据	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	Where a legal person does not place them on the market but provides systematic support on a sustained basis for the development of specific products with digital elements	none
+V62.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节““产品制造商”与“开源软件管理人””；本节题为其下位论题	none
+V62.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.6.4	管理人义务	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	Open-source software stewards are subject to the obligations laid down in Article 24, notably putting in place a cybersecurity policy to foster secure development and handling of vulnerabilities	none
+V62.4.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节““产品制造商”与“开源软件管理人””；本节题为其下位论题	none
+V62.4.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.6.5	定义疑问	https://openssf.org/blog/2025/06/16/cra-ready-how-open-source-projects-can-prepare-for-the-eu-cyber-resilience-act/	联网	A	2026-10-30	What qualifies as a “product with digital elements”? How do responsibilities shift for upstream OSS?	none
+V62.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“免费开源软件与商业活动的法律区分”；本节题为其下位论题	none
+V62.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.7.1	商业活动要件	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	supplied for distribution or use in the course of a commercial activity	none
+V62.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“免费开源软件与商业活动的法律区分”；本节题为其下位论题	none
+V62.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.7.2	货币化标准	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	the provision of products with digital elements qualifying as free and open-source software that are not monetised by their manufacturers should not be considered to be a commercial activity	none
+V62.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“免费开源软件与商业活动的法律区分”；本节题为其下位论题	none
+V62.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.7.3	多重角色	https://openssf.org/blog/2025/06/16/cra-ready-how-open-source-projects-can-prepare-for-the-eu-cyber-resilience-act/	联网	A	2026-10-30	Whether you’re a maintainer, contributor, or vendor, the CRA introduces new expectations—and new responsibilities.	none
+V62.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“免费开源软件与商业活动的法律区分”；本节题为其下位论题	none
+V62.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.7.4	身份转换	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	Where a manufacturer places on the market a product with digital elements that is a free and open-source software, it is subject to the obligations of manufacturers.	none
+V62.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“免费开源软件与商业活动的法律区分”；本节题为其下位论题	none
+V62.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.7.5	发布与投放的区分	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	Taking into account the importance for cybersecurity of many products with digital elements qualifying as free and open-source software that are published, but not made available on the market within the meaning of the CRA	none
+V62.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CRA 中的漏洞报告与责任边界”；本节题为其下位论题	none
+V62.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.8.1	通报范围	https://digital-strategy.ec.europa.eu/en/policies/cra-reporting	联网	A	2026-10-30	As of 11 September 2026, manufacturers are required to report actively exploited vulnerabilities and severe incidents impacting the security of products with digital elements.	none
+V62.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CRA 中的漏洞报告与责任边界”；本节题为其下位论题	none
+V62.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.8.2	时限分段	https://digital-strategy.ec.europa.eu/en/policies/cra-reporting	联网	A	2026-10-30	They need to submit an early warning within 24 hours of becoming aware, and a full notification within 72 hours.	none
+V62.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CRA 中的漏洞报告与责任边界”；本节题为其下位论题	none
+V62.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.8.3	平台归属	https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp	联网	A	2026-10-30	The Single Reporting Platform (SRP) is the online tool developed, operated and maintained by ENISA	none
+V62.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CRA 中的漏洞报告与责任边界”；本节题为其下位论题	none
+V62.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.8.4	延迟传播	https://digital-strategy.ec.europa.eu/en/policies/cra-reporting	联网	A	2026-10-30	In exceptional circumstances and based on justified cybersecurity-related grounds, the CSIRT may decide to delay dissemination to other CSIRTs	none
+V62.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CRA 中的漏洞报告与责任边界”；本节题为其下位论题	none
+V62.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.8.5	管理人通报时点	https://digital-strategy.ec.europa.eu/en/policies/cra-reporting	联网	A	2026-10-30	open-source software stewards are subject to reporting obligations (Article 24(3)) from 11 December 2027.	none
+V62.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“开源项目与市场监管”；本节题为其下位论题	none
+V62.4.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.9.1	执法主体	https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	联网	A	2026-10-30	Products will bear the CE marking to indicate that they comply with the CRA requirements and national market surveillance authorities will ensure enforcement of the rules.	none
+V62.4.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“开源项目与市场监管”；本节题为其下位论题	none
+V62.4.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.9.2	文档备查	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	The manufacturer is required to keep the documentation at the disposal of market surveillance authorities, as they can request it as part of their enforcement activities.	none
+V62.4.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“开源项目与市场监管”；本节题为其下位论题	none
+V62.4.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.9.3	整改协作	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	to cooperate with market surveillance authorities and take appropriate corrective actions	none
+V62.4.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“开源项目与市场监管”；本节题为其下位论题	none
+V62.4.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.9.4	措施入档	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	the means that the manufacturer chooses to implement the essential requirements (e.g. standards or other technical measures), need to be included in the technical documentation	none
+V62.4.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“开源项目与市场监管”；本节题为其下位论题	none
+V62.4.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.9.5	罚款豁免	https://digital-strategy.ec.europa.eu/en/policies/cra-open-source	联网	A	2026-10-30	open-source software stewards are not subject to administrative fines for infringements of the CRA	none
+V62.4.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“CRA 实施过渡期（2026）与开源法律责任结构的变化”；本节题为其下位论题	none
+V62.4.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.10.1	平台启用时点	https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp	联网	A	2026-10-30	From 11 September 2026, manufacturers are required to submit these mandatory notifications through the SRP.	none
+V62.4.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“CRA 实施过渡期（2026）与开源法律责任结构的变化”；本节题为其下位论题	none
+V62.4.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.10.2	平台设立的缘由	https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp	联网	A	2026-10-30	The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) for the reporting of actively exploited vulnerabilities and severe incidents in products with digital elements available in the EU market.	none
+V62.4.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“CRA 实施过渡期（2026）与开源法律责任结构的变化”；本节题为其下位论题	none
+V62.4.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.10.3	存量口径	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	including those already placed on the market before 11 December 2027	none
+V62.4.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“CRA 实施过渡期（2026）与开源法律责任结构的变化”；本节题为其下位论题	none
+V62.4.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.10.4	管理人的责任限度	https://digital-strategy.ec.europa.eu/en/policies/cra-summary	联网	A	2026-10-30	report actively exploited vulnerabilities, to the extent that they are involved in the development of the products with digital elements	none
+V62.4.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“CRA 实施过渡期（2026）与开源法律责任结构的变化”；本节题为其下位论题	none
+V62.4.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.4.10.5	面向项目的指引	https://openssf.org/blog/2025/06/16/cra-ready-how-open-source-projects-can-prepare-for-the-eu-cyber-resilience-act/	联网	A	2026-10-30	The course is tailored for developers, maintainers, and project leads—especially those who want clear guidance without legal complexity.	none
+V62.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“标准文本与规范文件”；本节题为其下位论题	none
+V62.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.1.1	在线阅读渠道	https://www.opengroup.org/austin/	联网	A	2026-10-30	The html version of the 2024 edition is freely available to read online, more information and registration are	none
+V62.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“标准文本与规范文件”；本节题为其下位论题	none
+V62.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.1.2	准则文件免费下载	https://www.commoncriteriaportal.org/cc/	联网	A	2026-10-30	CC:2022 Release 1 consists of five parts. Make sure to download and use these files.	none
+V62.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“标准文本与规范文件”；本节题为其下位论题	none
+V62.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.1.3	修正件的存在	https://www.iso.org/standard/27001	联网	A	2026-10-30	This standard has 1 amendment.	none
+V62.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“标准文本与规范文件”；本节题为其下位论题	none
+V62.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.1.4	权威版本所在	https://www.ietf.org/about/introduction/	联网	A	2026-10-30	The [RFC Editor](https://www.rfc-editor.org/) website is the authoritative site for RFCs.	none
+V62.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“标准文本与规范文件”；本节题为其下位论题	none
+V62.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.1.5	公报引用格式	https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng	联网	A	2026-10-30	OJ L, 2024/2847, 20.11.2024, ELI: http://data.europa.eu/eli/reg/2024/2847/oj	none
+V62.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“SPDX、SBOM 与自动化合规数据”；本节题为其下位论题	none
+V62.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.2.1	资源汇集	https://www.cisa.gov/sbom	联网	A	2026-10-30	This website will also be a nexus for the broader set of SBOM resources across the digital ecosystem and around the world.	none
+V62.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“SPDX、SBOM 与自动化合规数据”；本节题为其下位论题	none
+V62.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.2.2	清单目的	https://spdx.dev/learn/handling-license-info/	联网	A	2026-10-30	The purpose of the SPDX License List is to enable efficient and reliable identification of such licenses and exceptions in an SPDX document, in source files or elsewhere.	none
+V62.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“SPDX、SBOM 与自动化合规数据”；本节题为其下位论题	none
+V62.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.2.3	媒体类型登记	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	The following media types are officially registered with IANA:	none
+V62.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“SPDX、SBOM 与自动化合规数据”；本节题为其下位论题	none
+V62.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.2.4	属性的分档描述	https://www.cisa.gov/sbom	联网	A	2026-10-30	offering descriptions of the minimum expected, recommended practices, and aspirational goal for each Attribute	none
+V62.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“SPDX、SBOM 与自动化合规数据”；本节题为其下位论题	none
+V62.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.2.5	元数据字段	https://cyclonedx.org/specification/overview/	联网	A	2026-10-30	BOM metadata includes the supplier, manufacturer, and target component for which the BOM describes. It also includes the tools used to create the BOM, and license information for the BOM document itself.	none
+V62.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“企业开源公告与源代码发布记录”；本节题为其下位论题	none
+V62.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.3.1	开源承诺	https://opensource.apple.com/	联网	A	2026-10-30	Apple works with developers around the world to create, contribute, and release open source code.	none
+V62.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“企业开源公告与源代码发布记录”；本节题为其下位论题	none
+V62.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.3.2	源码获取方式	https://opensource.apple.com/	联网	A	2026-10-30	You can access the source code for our operating systems and developer tools by downloading releases or browsing Git repositories.	none
+V62.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“企业开源公告与源代码发布记录”；本节题为其下位论题	none
+V62.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.3.3	公告提出的两项要求	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	They sent a letter demanding that BSDi do two things: drop the 1-800-ITS-Unix phone number and make it clear in the advertisements that BSDi's product was not Unix.	none
+V62.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“企业开源公告与源代码发布记录”；本节题为其下位论题	none
+V62.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.3.4	项目与归档入口	https://opensource.apple.com/	联网	A	2026-10-30	Explore some of the projects we lead and contribute to below.	none
+V62.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“企业开源公告与源代码发布记录”；本节题为其下位论题	none
+V62.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.3.5	口径表述	https://opensource.apple.com/	联网	A	2026-10-30	Open source software is at the heart of Apple platforms and developer tools.	none
+V62.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“法律评论与参与者口述史”；本节题为其下位论题	none
+V62.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.4.1	机构评论的维护者	https://www.gnu.org/licenses/license-list.en.html	联网	A	2026-10-30	This page is maintained by the Free Software Foundation's Licensing and Compliance Lab.	none
+V62.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“法律评论与参与者口述史”；本节题为其下位论题	none
+V62.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.4.2	当事人自述	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	According to Bill, "The Unix systems then offered eight or 10 different competing mechanisms to do basically the same thing."	none
+V62.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“法律评论与参与者口述史”；本节题为其下位论题	none
+V62.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.4.3	引述的身份与时点	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Linus told Meta Magazine in 1993, "If 386BSD had been available when I started on Linux, Linux would probably never had happened."	none
+V62.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“法律评论与参与者口述史”；本节题为其下位论题	none
+V62.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.4.4	事后追述	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	According to Jordan Huddard (one of the creators of FreeBSD), this episode "effectively ceded the territory to Linux during a critical period in which there was a leadership vacuum and lots of Fear, Uncertainty and Doubt in the BSD community".	none
+V62.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“法律评论与参与者口述史”；本节题为其下位论题	none
+V62.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.4.5	密约的公开路径	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The terms of the agreement were secret for many years, but were eventually released under the California Public Records law.	none
+V62.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“法律文本、项目政策与实际行为的区别”；本节题为其下位论题	none
+V62.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.5.1	承诺性表述	https://www.freebsd.org/security/	联网	A	2026-10-30	FreeBSD takes security very seriously and its developers are constantly working on making the operating system as secure as possible.	none
+V62.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“法律文本、项目政策与实际行为的区别”；本节题为其下位论题	none
+V62.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.5.2	政策排除范围	https://www.freebsd.org/security/	联网	A	2026-10-30	Advisories are not issued for the *-CURRENT Branch*, which is primarily oriented towards FreeBSD developers.	none
+V62.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“法律文本、项目政策与实际行为的区别”；本节题为其下位论题	none
+V62.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.5.3	司法行为的记录	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The judge agreed and told USL "restate their complaint based solely on the six files or he would dismiss it".	none
+V62.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“法律文本、项目政策与实际行为的区别”；本节题为其下位论题	none
+V62.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.5.4	编号来源	https://www.freebsd.org/security/	联网	A	2026-10-30	Once it had been determined that a Security Advisory is warranted, either the submitter delivers a CVE number if he/she already requested one, or we use one from the FreeBSD pool available.	none
+V62.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“法律文本、项目政策与实际行为的区别”；本节题为其下位论题	none
+V62.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.5.5	异说并存	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	There are differing accounts as to whether or not they got rid of the phone number, but they did fulfil the second part of USL's demand.	none
+V62.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“BSD 法律史中的不可确定问题”；本节题为其下位论题	none
+V62.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.6.1	和解后的文件处置	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Only three files had to be removed from Networking Release 2 and changes were made to other files. The University of California added USL copyrights to 70 files.	none
+V62.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“BSD 法律史中的不可确定问题”；本节题为其下位论题	none
+V62.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.6.2	密约条款的滞后公开	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The terms of the agreement were secret for many years, but were eventually released under the California Public Records law.	none
+V62.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“BSD 法律史中的不可确定问题”；本节题为其下位论题	none
+V62.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.6.3	听审时点	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Towards the end of 1992, Judge Dickinson R. Debevoise from New Jersey heard the arguments for the injunction.	none
+V62.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“BSD 法律史中的不可确定问题”；本节题为其下位论题	none
+V62.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.6.4	和解进程的时序	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	In 1993, the two sides opted for settlement talks instead. However, progress was slow because neither side wanted to budge.	none
+V62.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“BSD 法律史中的不可确定问题”；本节题为其下位论题	none
+V62.5.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.6.5	出版物效力的自限	https://www.gnu.org/licenses/license-list.en.html	联网	A	2026-10-30	You can use our publications to understand how GNU licenses work or help you advocate for free software, but they are not legal advice.	none
+V62.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“许可证制度与软件产业的形成”；本节题为其下位论题	none
+V62.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.7.1	许可决定再利用	https://reuse.software/	联网	A	2026-10-30	The license of your project sets the terms under which others can reuse your software.	none
+V62.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“许可证制度与软件产业的形成”；本节题为其下位论题	none
+V62.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.7.2	商业发行的定价	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Anyone could get both the source and the binaries for $995. This was a 99% discount on the price AT&T charged for their System V Unix.	none
+V62.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“许可证制度与软件产业的形成”；本节题为其下位论题	none
+V62.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.7.3	合规服务业态	https://oss-review-toolkit.org/	联网	A	2026-10-30	It provides a comprehensive solution for Software Composition Analysis (SCA), license compliance, vulnerability management, and more, helping you to manage the risks in your software supply chain.	none
+V62.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“许可证制度与软件产业的形成”；本节题为其下位论题	none
+V62.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.7.4	产业责任表述	https://openssf.org/about/	联网	A	2026-10-30	OSS is a digital public good and as an industry, we have an obligation to address the security concerns with the community.	none
+V62.5.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“许可证制度与软件产业的形成”；本节题为其下位论题	none
+V62.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V62.5.7.5	推荐集的机构来源	https://reuse.software/	联网	A	2026-10-30	REUSE was started by the Free Software Foundation Europe (FSFE) to provide a set of recommendations to make licensing your Free Software projects easy, comprehensive, unambiguous, and machine-readable.	none

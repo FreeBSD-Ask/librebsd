@@ -1,0 +1,491 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V57.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“判准的延续：fork、变种与移植”；本节题为其下位论题	none
+V57.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.1.1	分叉年代序列	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In 1996, OpenBSD split off from NetBSD, and in 2003, DragonFlyBSD split off from FreeBSD.	none
+V57.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“判准的延续：fork、变种与移植”；本节题为其下位论题	none
+V57.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.1.2	分叉动因	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	The two projects originally diverged due to differences in patience waiting for improvements to 386BSD.	none
+V57.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“判准的延续：fork、变种与移植”；本节题为其下位论题	none
+V57.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.1.3	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none
+V57.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“判准的延续：fork、变种与移植”；本节题为其下位论题	none
+V57.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.1.4	分叉年代序列	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In 1996, OpenBSD split off from NetBSD, and in 2003, DragonFlyBSD split off from FreeBSD.	none
+V57.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“判准的延续：fork、变种与移植”；本节题为其下位论题	none
+V57.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.1.5	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“后分裂衍生的全景：四主干源流与跨 BSD 派生”；本节题为其下位论题	none
+V57.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.2.1	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none
+V57.1.2.1	四主干源流的派生总目	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.2-衍生谱系的拓扑结构/284.2.1-从freebsdnetbsdopenbsd分叉的衍生.md	史料	A	2026-10-30	衍生操作系统以 FreeBSD（JunOS、PlayStation、TrueNAS、pfSense）与 NetBSD（部分嵌入式）为主要上游；同一 BSD 基础经不同产品工程形成异构谱系，体现 “同源多枝”。	none
+V57.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“后分裂衍生的全景：四主干源流与跨 BSD 派生”；本节题为其下位论题	none
+V57.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.2.2	分叉年代序列	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In 1996, OpenBSD split off from NetBSD, and in 2003, DragonFlyBSD split off from FreeBSD.	none
+V57.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“后分裂衍生的全景：四主干源流与跨 BSD 派生”；本节题为其下位论题	none
+V57.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.2.3	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.1.2.3	同源多枝的拓扑记载	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.2-衍生谱系的拓扑结构/284.2.1-从freebsdnetbsdopenbsd分叉的衍生.md	史料	A	2026-10-30	衍生操作系统以 FreeBSD（JunOS、PlayStation、TrueNAS、pfSense）与 NetBSD（部分嵌入式）为主要上游；同一 BSD 基础经不同产品工程形成异构谱系，体现 “同源多枝”。	none
+V57.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“后分裂衍生的全景：四主干源流与跨 BSD 派生”；本节题为其下位论题	none
+V57.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.2.4	分叉动因	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	The two projects originally diverged due to differences in patience waiting for improvements to 386BSD.	none
+V57.1.2.4	fork 提交比例的分层对照	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.2-衍生谱系的拓扑结构/284.2.1-从freebsdnetbsdopenbsd分叉的衍生.md	史料	A	2026-10-30	hardenedbsd-src 2016 年 merge_commits = 10,726/total = 44,207（24.3%）、2017 年 9,667/40,943（23.6%），pfsense-src 2016 年 merge_commits = 661/total = 28,813（2.3%）	none
+V57.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“后分裂衍生的全景：四主干源流与跨 BSD 派生”；本节题为其下位论题	none
+V57.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.2.5	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“衍生命名、许可与归名的基本问题”；本节题为其下位论题	none
+V57.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.3.1	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.1.3.1	域名占用的取名困难	https://www.midnightbsd.org/about/	联网	A	2026-10-30	Many domain names related to BSD are in use by different parties. desktopbsd’s domain had been purchased but not up yet. My list of 35 names didn’t last long when I started checking whois records.	none
+V57.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“衍生命名、许可与归名的基本问题”；本节题为其下位论题	none
+V57.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.3.2	域名占用的取名困难	https://www.midnightbsd.org/about/	联网	A	2026-10-30	Many domain names related to BSD are in use by different parties. desktopbsd’s domain had been purchased but not up yet. My list of 35 names didn’t last long when I started checking whois records.	none
+V57.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“衍生命名、许可与归名的基本问题”；本节题为其下位论题	none
+V57.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.3.3	源码再分发条件	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V57.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“衍生命名、许可与归名的基本问题”；本节题为其下位论题	none
+V57.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.3.4	衍生作品权利范围	https://www.openbsd.org/policy.html	联网	A	2026-10-30	a copyright of a derivative work does not affect the rights held by the owner of the copyright of the original work, rather only the part added.	none
+V57.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“衍生命名、许可与归名的基本问题”；本节题为其下位论题	none
+V57.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.3.5	伯克利版权无限制	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The original Berkeley copyright poses no restrictions on private or commercial use of the software and imposes only simple and uniform requirements for maintaining copyright notices in redistributed versions and crediting the originator of the material only in advertising.	none
+V57.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“本卷的史料层级与可证范围”；本节题为其下位论题	none
+V57.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.4.1	1999 年特效集群	https://www.freebsd.org/press/press-rel-1/	联网	A	2026-10-30	32 Dual-Processor FreeBSD systems were used to generate a large number of special effects in the cutting edge Warner Brothers film, The Matrix.	none
+V57.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“本卷的史料层级与可证范围”；本节题为其下位论题	none
+V57.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S2	none
+V57.1.4.2	4.4BSD 基底	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The OpenBSD project produces a freely available, multi-platform 4.4BSD-based UNIX-like operating system.	none
+V57.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“本卷的史料层级与可证范围”；本节题为其下位论题	none
+V57.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.4.3	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“本卷的史料层级与可证范围”；本节题为其下位论题	none
+V57.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.4.4	BSD 权属与共同体	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	No one person or corporation owns BSD. It is created and distributed by a community of highly technical and committed contributors all over the world.	none
+V57.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“本卷的史料层级与可证范围”；本节题为其下位论题	none
+V57.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.4.5	广告条款撤销	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999. Verbatim copies of the Berkeley license in the OpenBSD tree have that term removed.	none
+V57.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“技术分岔点：内核、用户空间与工具链”；本节题为其下位论题	none
+V57.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.5.1	DragonFly 目标层级	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	DragonFlyBSD aims for high performance and scalability under everything from a single-node UP system to a massively clustered system.	none
+V57.1.5.1	内核分叉的技术动因	旧大纲-20261023/第13卷-bsd衍生操作系统/第280章-社区态度与linux对比/280.3-BSD-与-Linux-的-Kernel-和用户空间-ABI-稳定问题/280.3.2-freebsd内核abi政策大版本内稳定跨大版本不保证.md	史料	A	2026-10-30	FreeBSD 内核 ABI 政策为“大版本内稳定，跨大版本不保证”——同一大版本（如 FreeBSD 14.x）内的内核 ABI 稳定，跨大版本（如 FreeBSD 13.x → 14.x）的内核 ABI 不保证稳定。	none
+V57.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“技术分岔点：内核、用户空间与工具链”；本节题为其下位论题	none
+V57.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.5.2	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none
+V57.1.5.2	用户空间的分层与复用	旧大纲-20261023/第13卷-bsd衍生操作系统/第280章-社区态度与linux对比/280.3-BSD-与-Linux-的-Kernel-和用户空间-ABI-稳定问题/280.3.2-freebsd内核abi政策大版本内稳定跨大版本不保证.md	史料	A	2026-10-30	FreeBSD 内核 ABI 政策为“大版本内稳定，跨大版本不保证”——同一大版本（如 FreeBSD 14.x）内的内核 ABI 稳定，跨大版本（如 FreeBSD 13.x → 14.x）的内核 ABI 不保证稳定。	none
+V57.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“技术分岔点：内核、用户空间与工具链”；本节题为其下位论题	none
+V57.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.5.3	源码与二进制的双轨	https://docs.freebsd.org/en/books/handbook/ports/	联网	A	2026-10-30	FreeBSD provides two complementary technologies for installing third-party software: the FreeBSD Ports Collection, for installing from source, and packages, for installing from pre-built binaries.	none
+V57.1.5.3	pkgsrc 定位	https://www.netbsd.org/docs/pkgsrc/	联网	A	2026-10-30	pkgsrc is a centralized package management system for Unix-like operating systems.	none
+V57.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“技术分岔点：内核、用户空间与工具链”；本节题为其下位论题	none
+V57.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.5.4	提交权分区授予	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V57.1.5.4	内核接口的稳定承诺	旧大纲-20261023/第13卷-bsd衍生操作系统/第280章-社区态度与linux对比/280.3-BSD-与-Linux-的-Kernel-和用户空间-ABI-稳定问题/280.3.2-freebsd内核abi政策大版本内稳定跨大版本不保证.md	史料	A	2026-10-30	FreeBSD 内核 ABI 政策为“大版本内稳定，跨大版本不保证”——同一大版本（如 FreeBSD 14.x）内的内核 ABI 稳定，跨大版本（如 FreeBSD 13.x → 14.x）的内核 ABI 不保证稳定。	none
+V57.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“技术分岔点：内核、用户空间与工具链”；本节题为其下位论题	none
+V57.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.5.5	打包框架的合并	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none
+V57.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“宽松许可下的衍生自由度与署名惯例”；本节题为其下位论题	none
+V57.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.6.1	广告条款撤销	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999. Verbatim copies of the Berkeley license in the OpenBSD tree have that term removed.	none
+V57.1.6.1	广告条款撤销的时点	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.1-BSD-许可证的扩散机制-1988-1999/284.1.1-bsd-许可证的扩散机制-1988-1999.md	史料	A	2026-10-30	BSD 许可证（1988 年 UCB 文本、1999 年 7 月删除广告条款后余 3 条款，2 条款版系后续社区简化）允许代码在保留版权声明前提下用于专有产品，使 BSD 成为网络设备与嵌入式系统的首选基底	none
+V57.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“宽松许可下的衍生自由度与署名惯例”；本节题为其下位论题	none
+V57.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.6.2	二进制再分发条件	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
+V57.1.6.2	二条款与三条款的文本差别	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.1-BSD-许可证的扩散机制-1988-1999/284.1.1-bsd-许可证的扩散机制-1988-1999.md	史料	A	2026-10-30	BSD 许可证（1988 年 UCB 文本、1999 年 7 月删除广告条款后余 3 条款，2 条款版系后续社区简化）允许代码在保留版权声明前提下用于专有产品，使 BSD 成为网络设备与嵌入式系统的首选基底	none
+V57.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“宽松许可下的衍生自由度与署名惯例”；本节题为其下位论题	none
+V57.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.6.3	源码再分发条件	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V57.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“宽松许可下的衍生自由度与署名惯例”；本节题为其下位论题	none
+V57.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.6.4	衍生作品权利范围	https://www.openbsd.org/policy.html	联网	A	2026-10-30	a copyright of a derivative work does not affect the rights held by the owner of the copyright of the original work, rather only the part added.	none
+V57.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“宽松许可下的衍生自由度与署名惯例”；本节题为其下位论题	none
+V57.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.6.5	伯克利版权无限制	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The original Berkeley copyright poses no restrictions on private or commercial use of the software and imposes only simple and uniform requirements for maintaining copyright notices in redistributed versions and crediting the originator of the material only in advertising.	none
+V57.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“社区治理与项目生命周期”；本节题为其下位论题	none
+V57.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.7.1	提交权分区授予	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V57.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“社区治理与项目生命周期”；本节题为其下位论题	none
+V57.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.7.2	提交权的推荐程序	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.	none
+V57.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“社区治理与项目生命周期”；本节题为其下位论题	none
+V57.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.7.3	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“社区治理与项目生命周期”；本节题为其下位论题	none
+V57.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.7.4	源码留存与承接	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	TrueOS source code will remain available on GitHub for others that may want to continue the work that we started so many years ago.	none
+V57.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“社区治理与项目生命周期”；本节题为其下位论题	none
+V57.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.7.5	发行节奏	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Make a release approximately every six months.	none
+V57.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“同期操作系统生态对照”；本节题为其下位论题	none
+V57.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.8.1	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none
+V57.1.8.1	与 Linux 发行生态的对照	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.3-与同时期操作系统的比较/284.3.1-与同时期操作系统的比较.md	史料	A	2026-10-30	对比 Linux 衍生谱系（Android、各发行版）与 BSD 衍生谱系，二者扩散机制（GPL vs BSD 许可）与产品形态（开源生态 vs 嵌入专有）根本不同。	none
+V57.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“同期操作系统生态对照”；本节题为其下位论题	none
+V57.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.8.2	BSD 血统表述	https://freebsdfoundation.org/our-work/education-advocacy/	联网	A	2026-10-30	FreeBSD is a free Unix-like operating system descended from Research Unix via the Berkeley Software Distribution (BSD), also known as “Berkeley Unix.”	none
+V57.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“同期操作系统生态对照”；本节题为其下位论题	none
+V57.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.8.3	Junos 的 FreeBSD 内核	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an  upgraded FreeBSD kernel.   Most Junos  OS-based hardware platforms run Junos OS with upgraded  FreeBSD.	none
+V57.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“同期操作系统生态对照”；本节题为其下位论题	none
+V57.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.8.4	可移植性与平台面	https://www.netbsd.org/	联网	A	2026-10-30	NetBSD is a free, fast, secure, and highly portable Unix-like  Open Source operating system. It is available for a wide  range of platforms, from large-scale servers and powerful  desktop systems to handheld and embedded devices.	none
+V57.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“同期操作系统生态对照”；本节题为其下位论题	none
+V57.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.1.8.5	商用分生产品	https://www.openbsd.org/goals.html	联网	A	2026-10-30	There are  commercial spin-offs of OpenBSD.	none
+V57.1.8.5	生态位比较的取材限度	旧大纲-20261023/第13卷-bsd衍生操作系统/第284章-衍生操作系统谱系/284.3-与同时期操作系统的比较/284.3.1-与同时期操作系统的比较.md	史料	A	2026-10-30	对比 Linux 衍生谱系（Android、各发行版）与 BSD 衍生谱系，二者扩散机制（GPL vs BSD 许可）与产品形态（开源生态 vs 嵌入专有）根本不同。	none
+V57.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“PC-BSD 与桌面产品化”；本节题为其下位论题	none
+V57.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.1.1	PC-BSD 并入公司	https://www.ixsystems.com/history/	联网	A	2026-10-30	iXsystems acquires the PC-BSD operating system and appoints its creator, Kris Moore, as Director of PC-BSD Software Development.	none
+V57.2.1.1	PC-BSD 的图形安装器路线	旧大纲-20261023/第13卷-bsd衍生操作系统/第295章-pc-bsd-trueos/295.1-PC-BSD-的-FreeBSD-桌面化努力-2005-2018/295.1.1-要点PCBSD2005由KrisMoore克里斯摩尔发起提供图形安装器PBI软件.md	史料	A	2026-10-30	PC-BSD（2005）由 Kris Moore（克里斯·摩尔） 发起，提供图形安装器、PBI 软件包系统、预配置桌面，目标是 “开箱即用 FreeBSD 桌面”	none
+V57.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“PC-BSD 与桌面产品化”；本节题为其下位论题	none
+V57.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.1.2	PBI 插件体系借用	https://www.ixsystems.com/history/	联网	A	2026-10-30	iXsystems updates FreeNAS to version 8.3, bringing in a plugin system based on PC-BSD  PBIs and ZFSv28.	none
+V57.2.1.2	桌面产品化的打包选择	旧大纲-20261023/第13卷-bsd衍生操作系统/第295章-pc-bsd-trueos/295.1-PC-BSD-的-FreeBSD-桌面化努力-2005-2018/295.1.1-要点PCBSD2005由KrisMoore克里斯摩尔发起提供图形安装器PBI软件.md	史料	A	2026-10-30	PC-BSD（2005）由 Kris Moore（克里斯·摩尔） 发起，提供图形安装器、PBI 软件包系统、预配置桌面，目标是 “开箱即用 FreeBSD 桌面”	none
+V57.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“PC-BSD 与桌面产品化”；本节题为其下位论题	none
+V57.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.1.3	MATE 桌面栈	https://ghostbsd.org/about	联网	A	2026-10-30	GhostBSD is a FreeBSD-based operating system engineered to provide a robust, user-friendly desktop experience. Combining the reliability of FreeBSD with the elegance of the MATE desktop environment	none
+V57.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“PC-BSD 与桌面产品化”；本节题为其下位论题	none
+V57.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.1.4	版本序列	https://www.midnightbsd.org/about/	联网	A	2026-10-30	At the time of writing, we’ve released 13 major versions of MidnightBSD since 2006.	none
+V57.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“PC-BSD 与桌面产品化”；本节题为其下位论题	none
+V57.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.1.5	PC-BSD 并入公司	https://www.ixsystems.com/history/	联网	A	2026-10-30	iXsystems acquires the PC-BSD operating system and appoints its creator, Kris Moore, as Director of PC-BSD Software Development.	none
+V57.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“TrueOS 与 FreeBSD 用户空间实验”；本节题为其下位论题	none
+V57.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.2.1	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.2.2.1	从 PC-BSD 到 TrueOS 的更名	旧大纲-20261023/第13卷-bsd衍生操作系统/第295章-pc-bsd-trueos/295.2-TrueOS-的转型与终结-2018-2020/295.2.1-从桌面到服务端的定位转变.md	史料	A	2026-10-30	2018 年 PC-BSD 更名为 TrueOS，转向服务端/嵌入式定位（延续 FreeBSD 基底），桌面努力由 Project Trident（基于 TrueOS）承接；2020 年前后 TrueOS/Trident 项目渐止	none
+V57.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“TrueOS 与 FreeBSD 用户空间实验”；本节题为其下位论题	none
+V57.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.2.2	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“TrueOS 与 FreeBSD 用户空间实验”；本节题为其下位论题	none
+V57.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.2.3	提交权分区授予	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V57.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“TrueOS 与 FreeBSD 用户空间实验”；本节题为其下位论题	none
+V57.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.2.4	PBI 插件体系借用	https://www.ixsystems.com/history/	联网	A	2026-10-30	iXsystems updates FreeNAS to version 8.3, bringing in a plugin system based on PC-BSD  PBIs and ZFSv28.	none
+V57.2.2.4	用户空间实验的技术清单	旧大纲-20261023/第13卷-bsd衍生操作系统/第295章-pc-bsd-trueos/295.2-TrueOS-的转型与终结-2018-2020/295.2.1-从桌面到服务端的定位转变.md	史料	A	2026-10-30	2018 年 PC-BSD 更名为 TrueOS，转向服务端/嵌入式定位（延续 FreeBSD 基底），桌面努力由 Project Trident（基于 TrueOS）承接；2020 年前后 TrueOS/Trident 项目渐止	none
+V57.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“TrueOS 与 FreeBSD 用户空间实验”；本节题为其下位论题	none
+V57.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.2.5	源码留存与承接	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	TrueOS source code will remain available on GitHub for others that may want to continue the work that we started so many years ago.	none
+V57.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例”；本节题为其下位论题	none
+V57.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.3.1	MATE 桌面栈	https://ghostbsd.org/about	联网	A	2026-10-30	GhostBSD is a FreeBSD-based operating system engineered to provide a robust, user-friendly desktop experience. Combining the reliability of FreeBSD with the elegance of the MATE desktop environment	none
+V57.2.3.1	GhostBSD 的桌面栈选择	旧大纲-20261023/第13卷-bsd衍生操作系统/第279章-失败衍生版本与开源治理批评/279.1-失败和仍在继续的-BSD-衍生版本与项目/279.1.1-桌面bsd衍生发行版的谱系概览.md	史料	A	2026-10-30	自 2000 年代起，以 FreeBSD/NetBSD/OpenBSD 为底座构建“开箱即用桌面 BSD”的尝试形成一条清晰的衍生发行版谱系	none
+V57.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例”；本节题为其下位论题	none
+V57.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.3.2	分叉基线	https://www.midnightbsd.org/about/	联网	A	2026-10-30	MidnightBSD was forked from FreeBSD 6.1 beta. The system was forked to allow us to customize and integrate the environment including the ports and system configuration.	none
+V57.2.3.2	MidnightBSD 的分叉起点	旧大纲-20261023/第13卷-bsd衍生操作系统/第279章-失败衍生版本与开源治理批评/279.1-失败和仍在继续的-BSD-衍生版本与项目/279.1.1-桌面bsd衍生发行版的谱系概览.md	史料	A	2026-10-30	自 2000 年代起，以 FreeBSD/NetBSD/OpenBSD 为底座构建“开箱即用桌面 BSD”的尝试形成一条清晰的衍生发行版谱系	none
+V57.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例”；本节题为其下位论题	none
+V57.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.3.3	分叉态度	https://www.midnightbsd.org/about/	联网	A	2026-10-30	We did not fork FreeBSD as a result of a falling out, but rather as an excellent starting point.	none
+V57.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例”；本节题为其下位论题	none
+V57.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.3.4	版本序列	https://www.midnightbsd.org/about/	联网	A	2026-10-30	At the time of writing, we’ve released 13 major versions of MidnightBSD since 2006.	none
+V57.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例”；本节题为其下位论题	none
+V57.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.3.5	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.2.3.5	生命周期短促的成因	旧大纲-20261023/第13卷-bsd衍生操作系统/第279章-失败衍生版本与开源治理批评/279.1-失败和仍在继续的-BSD-衍生版本与项目/279.1.1-桌面bsd衍生发行版的谱系概览.md	史料	A	2026-10-30	自 2000 年代起，以 FreeBSD/NetBSD/OpenBSD 为底座构建“开箱即用桌面 BSD”的尝试形成一条清晰的衍生发行版谱系	none
+V57.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeBSD 桌面化实践与桌面栈维护（2009—2026）”；本节题为其下位论题	none
+V57.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.4.1	源码与二进制的双轨	https://docs.freebsd.org/en/books/handbook/ports/	联网	A	2026-10-30	FreeBSD provides two complementary technologies for installing third-party software: the FreeBSD Ports Collection, for installing from source, and packages, for installing from pre-built binaries.	none
+V57.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeBSD 桌面化实践与桌面栈维护（2009—2026）”；本节题为其下位论题	none
+V57.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.4.2	打包框架的合并	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none
+V57.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeBSD 桌面化实践与桌面栈维护（2009—2026）”；本节题为其下位论题	none
+V57.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.4.3	MATE 桌面栈	https://ghostbsd.org/about	联网	A	2026-10-30	GhostBSD is a FreeBSD-based operating system engineered to provide a robust, user-friendly desktop experience. Combining the reliability of FreeBSD with the elegance of the MATE desktop environment	none
+V57.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeBSD 桌面化实践与桌面栈维护（2009—2026）”；本节题为其下位论题	none
+V57.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.4.4	修订 BSD 许可	https://ghostbsd.org/about	联网	A	2026-10-30	GhostBSD’s source code is openly available on GitHub under the Revised BSD License	none
+V57.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeBSD 桌面化实践与桌面栈维护（2009—2026）”；本节题为其下位论题	none
+V57.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.2.4.5	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none
+V57.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS”；本节题为其下位论题	none
+V57.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.3.1.1	FreeNAS 接管	https://www.ixsystems.com/history/	联网	A	2026-10-30	In December, iXsystems takes over the development of the FreeNAS Project. FreeNAS, an embedded storage server solution, was about to switch development from FreeBSD to Linux. iXsystems offered to sponsor the project and has since reimplemented it for FreeBSD 8.	none
+V57.3.1.1	FreeNAS 的两代同名异指	旧大纲-20261023/第13卷-bsd衍生操作系统/第285章-truenas/285.1-FreeNAS-的-FreeBSD-根基-2005-2011/285.1.1-要点FreeNAS2005以FreeBSD为基底提供基于Web的NAS管理利用F.md	史料	A	2026-10-30	FreeNAS（2005）以 FreeBSD 为基底，提供基于 Web 的 NAS 管理，利用 FreeBSD 的 ZFS（later）、Samba、ZFS 集成能力	none
+V57.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS”；本节题为其下位论题	none
+V57.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.3.1.2	CORE 承接 FreeNAS	https://www.ixsystems.com/history/	联网	A	2026-10-30	TrueNAS CORE introduced as the continuation of FreeNAS under TrueNAS Open Storage.	none
+V57.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS”；本节题为其下位论题	none
+V57.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.3.1.3	FreeBSD 基底的 NAS 发行	https://www.xigmanas.com/	联网	A	2026-10-30	XigmaNAS is an Open Source Storage NAS (Network-Attached Storage) distribution based on FreeBSD.	none
+V57.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS”；本节题为其下位论题	none
+V57.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.3.1.4	两线合并完成	https://www.ixsystems.com/history/	联网	A	2026-10-30	The Unification of FreeNAS and TrueNAS is completed at the end of 2021.	none
+V57.3.1.4	ZFS 版本跟随的方针	旧大纲-20261023/第13卷-bsd衍生操作系统/第285章-truenas/285.1-FreeNAS-的-FreeBSD-根基-2005-2011/285.1.1-要点FreeNAS2005以FreeBSD为基底提供基于Web的NAS管理利用F.md	史料	A	2026-10-30	FreeNAS（2005）以 FreeBSD 为基底，提供基于 Web 的 NAS 管理，利用 FreeBSD 的 ZFS（later）、Samba、ZFS 集成能力	none
+V57.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS”；本节题为其下位论题	none
+V57.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.3.1.5	商用盒式设备的替代	https://www.xigmanas.com/	联网	A	2026-10-30	XigmaNAS keeps going where many commercial box solutions stop.	none
+V57.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“m0n0wall 与嵌入式防火墙系统”；本节题为其下位论题	none
+V57.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.1.1	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.1.1	m0n0wall 的终止与迁移提示	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.1-pfSense-的-FreeBSD-根基-2004-2014/286.1.1-要点pfSense由ChrisBuechler与ScottUllrich于200.md	史料	A	2026-10-30	m0n0wall 项目于 2015 年 2 月 15 日由 Manuel Kasper 宣布永久终止，Manuel Kasper 在终止公告中鼓励 m0n0wall 用户迁移至 OPNsense	none
+V57.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“m0n0wall 与嵌入式防火墙系统”；本节题为其下位论题	none
+V57.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.1.2	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.1.2	嵌入式镜像的体积约束	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.1-pfSense-的-FreeBSD-根基-2004-2014/286.1.1-要点pfSense由ChrisBuechler与ScottUllrich于200.md	史料	A	2026-10-30	pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限	none
+V57.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“m0n0wall 与嵌入式防火墙系统”；本节题为其下位论题	none
+V57.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.1.3	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“m0n0wall 与嵌入式防火墙系统”；本节题为其下位论题	none
+V57.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.1.4	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.1.4	社区延续项目的接续	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.2-OPNsense-的分叉与竞争-2014-2026/286.2.1-opnsense的诞生.md	史料	A	2026-10-30	2015 年 2 月 m0n0wall 终止后，Manuel Kasper 将 m0n0wall 开发社区转交给 OPNsense 项目，OPNsense 在品牌叙事中即以“m0n0wall 与 pfSense 共同继承者”自居，这一谱系声称须以 OPNsense 官方公告与 m0n0wall 终止声明交叉验证	noted
+V57.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“m0n0wall 与嵌入式防火墙系统”；本节题为其下位论题	none
+V57.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.1.5	二条款许可	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense is and will be available with the simple 2-clause BSD license.	none
+V57.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“pfSense 与 FreeBSD 网络平台”；本节题为其下位论题	none
+V57.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.2.1	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.2.1	分叉起点的官方陈述	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.1-pfSense-的-FreeBSD-根基-2004-2014/286.1.1-要点pfSense由ChrisBuechler与ScottUllrich于200.md	史料	A	2026-10-30	pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限	none
+V57.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“pfSense 与 FreeBSD 网络平台”；本节题为其下位论题	none
+V57.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.2.2	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.2.2	可扩展性目标的技术取向	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.1-pfSense-的-FreeBSD-根基-2004-2014/286.1.1-要点pfSense由ChrisBuechler与ScottUllrich于200.md	史料	A	2026-10-30	pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限	none
+V57.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“pfSense 与 FreeBSD 网络平台”；本节题为其下位论题	none
+V57.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.2.3	二条款许可	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense is and will be available with the simple 2-clause BSD license.	none
+V57.4.2.3	商业版与社区版的界线	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.1-pfSense-的-FreeBSD-根基-2004-2014/286.1.1-要点pfSense由ChrisBuechler与ScottUllrich于200.md	史料	A	2026-10-30	pfSense 沿用 FreeBSD 的 Packet Filter 与 Web 管理，并由 BSD Perimeter（后更名为 Netgate）提供商业支持，是 FreeBSD 在网络防火墙领域的主导产品	none
+V57.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“pfSense 与 FreeBSD 网络平台”；本节题为其下位论题	none
+V57.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.2.4	源码与二进制的双轨	https://docs.freebsd.org/en/books/handbook/ports/	联网	A	2026-10-30	FreeBSD provides two complementary technologies for installing third-party software: the FreeBSD Ports Collection, for installing from source, and packages, for installing from pre-built binaries.	none
+V57.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“pfSense 与 FreeBSD 网络平台”；本节题为其下位论题	none
+V57.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.2.5	固定发行周期	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	A fixed release cycle of 2 major releases each year offers businesses the opportunity to plan upgrades ahead.	none
+V57.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OPNsense：pfSense 系的分叉（2014–2015）”；本节题为其下位论题	none
+V57.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.3.1	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.3.1	分叉时点的两条记载	旧大纲-20261023/第13卷-bsd衍生操作系统/第286章-pfsense-opnsense/286.2-OPNsense-的分叉与竞争-2014-2026/286.2.1-opnsense的诞生.md	史料	A	2026-10-30	OPNsense 由 Deciso B.V.（荷兰公司，Franco Fichtner 主导）于 2014 年自 pfSense 分叉启动，2015 年 1 月首次正式发布	none
+V57.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OPNsense：pfSense 系的分叉（2014–2015）”；本节题为其下位论题	none
+V57.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.3.2	分叉起点与首发	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	none
+V57.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OPNsense：pfSense 系的分叉（2014–2015）”；本节题为其下位论题	none
+V57.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.3.3	三人核心团队	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	The international core team currently consists of three people.	none
+V57.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OPNsense：pfSense 系的分叉（2014–2015）”；本节题为其下位论题	none
+V57.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.3.4	固定发行周期	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	A fixed release cycle of 2 major releases each year offers businesses the opportunity to plan upgrades ahead.	none
+V57.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OPNsense：pfSense 系的分叉（2014–2015）”；本节题为其下位论题	none
+V57.4.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.3.5	公司创办主体	https://opnsense.org/about/about-opnsense/	联网	A	2026-10-30	The OPNsense project is founded by Deciso B.V.	none
+V57.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HardenedBSD 与安全强化路线”；本节题为其下位论题	none
+V57.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.4.1	2014 年创立	https://hardenedbsd.org/content/about	联网	A	2026-10-30	Founded in 2014 by Oliver Pinter and Shawn Webb, HardenedBSD is a security-enhanced fork of FreeBSD. The HardenedBSD Project implements many exploit mitigation and security technologies on top of FreeBSD.	none
+V57.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HardenedBSD 与安全强化路线”；本节题为其下位论题	none
+V57.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.4.2	为开发便利而分叉	https://hardenedbsd.org/content/about	联网	A	2026-10-30	HardenedBSD forked the FreeBSD codebase for ease of development. Prior to HardenedBSD’s founding, Oliver and Shawn worked on separate repositories, occasionally causing collaboration issues.	none
+V57.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HardenedBSD 与安全强化路线”；本节题为其下位论题	none
+V57.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.4.3	2014 年创立	https://hardenedbsd.org/content/about	联网	A	2026-10-30	Founded in 2014 by Oliver Pinter and Shawn Webb, HardenedBSD is a security-enhanced fork of FreeBSD. The HardenedBSD Project implements many exploit mitigation and security technologies on top of FreeBSD.	none
+V57.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HardenedBSD 与安全强化路线”；本节题为其下位论题	none
+V57.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.4.4	净室重实现目标	https://hardenedbsd.org/content/about	联网	A	2026-10-30	Our primary goal is to provide a clean-room reimplementation of the publicly-documented parts of the grsecurity patchset for Linux.	none
+V57.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HardenedBSD 与安全强化路线”；本节题为其下位论题	none
+V57.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.4.4.5	净室重实现目标	https://hardenedbsd.org/content/about	联网	A	2026-10-30	Our primary goal is to provide a clean-room reimplementation of the publicly-documented parts of the grsecurity patchset for Linux.	none
+V57.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案”；本节题为其下位论题	none
+V57.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.1.1	Junos 的 FreeBSD 内核	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an  upgraded FreeBSD kernel.   Most Junos  OS-based hardware platforms run Junos OS with upgraded  FreeBSD.	none
+V57.5.1.1	Junos 的 FreeBSD 基线	旧大纲-20261023/第13卷-bsd衍生操作系统/第288章-juniper-junos/288.1-JunOS-的-FreeBSD-基底-1998-2005/288.1.1-freebsd在运营商路由的采用.md	史料	A	2026-10-30	Juniper（1996 创立）于 1998 年发布 M40 路由器，运行 JunOS——基于 FreeBSD 用户空间 + 微内核（JunOS 用 FreeBSD 用户态 + 自研内核转发平面）	none
+V57.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案”；本节题为其下位论题	none
+V57.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.1.2	Junos 的 FreeBSD 内核	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an  upgraded FreeBSD kernel.   Most Junos  OS-based hardware platforms run Junos OS with upgraded  FreeBSD.	none
+V57.5.1.2	控制平面与转发平面的分层	旧大纲-20261023/第13卷-bsd衍生操作系统/第288章-juniper-junos/288.1-JunOS-的-FreeBSD-基底-1998-2005/288.1.1-freebsd在运营商路由的采用.md	史料	A	2026-10-30	Juniper（1996 创立）于 1998 年发布 M40 路由器，运行 JunOS——基于 FreeBSD 用户空间 + 微内核（JunOS 用 FreeBSD 用户态 + 自研内核转发平面）	none
+V57.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案”；本节题为其下位论题	none
+V57.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.1.3	案例总目范围	https://freebsdfoundation.org/our-work/education-advocacy/	联网	A	2026-10-30	From enterprise to individuals. From mission-critical to servers to laptops.	none
+V57.5.1.3	OneFS 的取证难点	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V57.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案”；本节题为其下位论题	none
+V57.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.1.4	BSD 血统表述	https://freebsdfoundation.org/our-work/education-advocacy/	联网	A	2026-10-30	FreeBSD is a free Unix-like operating system descended from Research Unix via the Berkeley Software Distribution (BSD), also known as “Berkeley Unix.”	none
+V57.5.1.4	Data ONTAP 的代码线索	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V57.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案”；本节题为其下位论题	none
+V57.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.1.5	商用分生产品	https://www.openbsd.org/goals.html	联网	A	2026-10-30	There are  commercial spin-offs of OpenBSD.	none
+V57.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 系进入专用设备：源流与证据（1999–2026）”；本节题为其下位论题	none
+V57.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.2.1	1999 年特效集群	https://www.freebsd.org/press/press-rel-1/	联网	A	2026-10-30	32 Dual-Processor FreeBSD systems were used to generate a large number of special effects in the cutting edge Warner Brothers film, The Matrix.	none
+V57.5.2.1	临时改换系统的决策	https://www.freebsd.org/press/press-rel-1/	联网	A	2026-10-30	It was at that point we decided on going with a FreeBSD based solution, due to the ability to get the hardware quickly as well as the reliability and ease of administration that FreeBSD provides us.	none
+V57.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 系进入专用设备：源流与证据（1999–2026）”；本节题为其下位论题	none
+V57.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.2.2	DragonFly 目标层级	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	DragonFlyBSD aims for high performance and scalability under everything from a single-node UP system to a massively clustered system.	none
+V57.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 系进入专用设备：源流与证据（1999–2026）”；本节题为其下位论题	none
+V57.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.2.3	源码与二进制的双轨	https://docs.freebsd.org/en/books/handbook/ports/	联网	A	2026-10-30	FreeBSD provides two complementary technologies for installing third-party software: the FreeBSD Ports Collection, for installing from source, and packages, for installing from pre-built binaries.	none
+V57.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 系进入专用设备：源流与证据（1999–2026）”；本节题为其下位论题	none
+V57.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.2.4	案例总目范围	https://freebsdfoundation.org/our-work/education-advocacy/	联网	A	2026-10-30	From enterprise to individuals. From mission-critical to servers to laptops.	none
+V57.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 系进入专用设备：源流与证据（1999–2026）”；本节题为其下位论题	none
+V57.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.5.2.5	商用分生产品	https://www.openbsd.org/goals.html	联网	A	2026-10-30	There are  commercial spin-offs of OpenBSD.	none
+V57.5.2.5	专用设备衍生的判定要件	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V57.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“项目终止的类型、归因与社区迁移”；本节题为其下位论题	none
+V57.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.1.1	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.6.1.1	终止公告的三种体裁	旧大纲-20261023/第13卷-bsd衍生操作系统/第279章-失败衍生版本与开源治理批评/279.1-失败和仍在继续的-BSD-衍生版本与项目/279.1.1-桌面bsd衍生发行版的谱系概览.md	史料	A	2026-10-30	PC-BSD（2005 年由 iXsystems 推出，2017 年更名为 TrueOS，2018 年转向 TrueOS Core 后停摆）、FreeSBIE（2004 年意大利佛罗伦萨开源社区开发的 LiveCD BSD，2007 年后停止更新）	none
+V57.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“项目终止的类型、归因与社区迁移”；本节题为其下位论题	none
+V57.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.1.2	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“项目终止的类型、归因与社区迁移”；本节题为其下位论题	none
+V57.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.1.3	源码留存与承接	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	TrueOS source code will remain available on GitHub for others that may want to continue the work that we started so many years ago.	none
+V57.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“项目终止的类型、归因与社区迁移”；本节题为其下位论题	none
+V57.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.1.4	源码留存与承接	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	TrueOS source code will remain available on GitHub for others that may want to continue the work that we started so many years ago.	none
+V57.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“项目终止的类型、归因与社区迁移”；本节题为其下位论题	none
+V57.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.1.5	FreeNAS 接管	https://www.ixsystems.com/history/	联网	A	2026-10-30	In December, iXsystems takes over the development of the FreeNAS Project. FreeNAS, an embedded storage server solution, was about to switch development from FreeBSD to Linux. iXsystems offered to sponsor the project and has since reimplemented it for FreeBSD 8.	none
+V57.6.1.5	终止后的维护承接	旧大纲-20261023/第13卷-bsd衍生操作系统/第279章-失败衍生版本与开源治理批评/279.1-失败和仍在继续的-BSD-衍生版本与项目/279.1.1-桌面bsd衍生发行版的谱系概览.md	史料	A	2026-10-30	PC-BSD（2005 年由 iXsystems 推出，2017 年更名为 TrueOS，2018 年转向 TrueOS Core 后停摆）、FreeSBIE（2004 年意大利佛罗伦萨开源社区开发的 LiveCD BSD，2007 年后停止更新）	none
+V57.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter”；本节题为其下位论题	none
+V57.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.2.1	FreeSBIE 的 LiveCD 定位	https://www.freebsd.org/status/report-2006-06-2006-10.html	联网	A	2026-10-30	FreeSBIE is a FreeBSD based LiveCD.	none
+V57.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter”；本节题为其下位论题	none
+V57.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.2.2	FreeSBIE 的 LiveCD 定位	https://www.freebsd.org/status/report-2006-06-2006-10.html	联网	A	2026-10-30	FreeSBIE is a FreeBSD based LiveCD.	none
+V57.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter”；本节题为其下位论题	none
+V57.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.2.3	4.4BSD 基底	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The OpenBSD project produces a freely available, multi-platform 4.4BSD-based UNIX-like operating system.	none
+V57.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter”；本节题为其下位论题	none
+V57.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.2.4	可接受许可	https://www.openbsd.org/goals.html	联网	A	2026-10-30	ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code, NDAs are never acceptable.	none
+V57.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter”；本节题为其下位论题	none
+V57.6.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.2.5	源码留存与承接	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	TrueOS source code will remain available on GitHub for others that may want to continue the work that we started so many years ago.	none
+V57.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“衍生的形成、继承与项目身份”；本节题为其下位论题	none
+V57.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.3.1	分叉态度	https://www.midnightbsd.org/about/	联网	A	2026-10-30	We did not fork FreeBSD as a result of a falling out, but rather as an excellent starting point.	none
+V57.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“衍生的形成、继承与项目身份”；本节题为其下位论题	none
+V57.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.3.2	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“衍生的形成、继承与项目身份”；本节题为其下位论题	none
+V57.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.3.3	分叉基线	https://www.midnightbsd.org/about/	联网	A	2026-10-30	MidnightBSD was forked from FreeBSD 6.1 beta. The system was forked to allow us to customize and integrate the environment including the ports and system configuration.	none
+V57.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“衍生的形成、继承与项目身份”；本节题为其下位论题	none
+V57.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.3.4	衍生作品权利范围	https://www.openbsd.org/policy.html	联网	A	2026-10-30	a copyright of a derivative work does not affect the rights held by the owner of the copyright of the original work, rather only the part added.	none
+V57.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“衍生的形成、继承与项目身份”；本节题为其下位论题	none
+V57.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.6.3.5	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“Debian GNU／NetBSD：跨内核发行形态”；本节题为其下位论题	none
+V57.7.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.1.1	可移植性与平台面	https://www.netbsd.org/	联网	A	2026-10-30	NetBSD is a free, fast, secure, and highly portable Unix-like  Open Source operating system. It is available for a wide  range of platforms, from large-scale servers and powerful  desktop systems to handheld and embedded devices.	none
+V57.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“Debian GNU／NetBSD：跨内核发行形态”；本节题为其下位论题	none
+V57.7.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.1.2	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none
+V57.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“Debian GNU／NetBSD：跨内核发行形态”；本节题为其下位论题	none
+V57.7.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.1.3	技术预览与退出发布	https://www.debian.org/ports/kfreebsd-gnu/	联网	A	2026-10-30	它已作為技術預覽和首個非 Linux 移植版本隨 Debian 6.0 (Squeeze) 和 7.0 (Wheezy) 一同發佈。不過，自 Debian 8 (Jessie) 以來，它已不再包含在官方版本中。	none
+V57.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“Debian GNU／NetBSD：跨内核发行形态”；本节题为其下位论题	none
+V57.7.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.1.4	可移植性与平台面	https://www.netbsd.org/	联网	A	2026-10-30	NetBSD is a free, fast, secure, and highly portable Unix-like  Open Source operating system. It is available for a wide  range of platforms, from large-scale servers and powerful  desktop systems to handheld and embedded devices.	none
+V57.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“Debian GNU／NetBSD：跨内核发行形态”；本节题为其下位论题	none
+V57.7.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.1.5	BSD 权属与共同体	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	No one person or corporation owns BSD. It is created and distributed by a community of highly technical and committed contributors all over the world.	none
+V57.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“桌面与嵌入式衍生：OS108、PolyBSD、smolBSD”；本节题为其下位论题	none
+V57.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.2.1	MATE 桌面栈	https://ghostbsd.org/about	联网	A	2026-10-30	GhostBSD is a FreeBSD-based operating system engineered to provide a robust, user-friendly desktop experience. Combining the reliability of FreeBSD with the elegance of the MATE desktop environment	none
+V57.7.2.1	桌面环境的更换先例	https://www.midnightbsd.org/about/	联网	A	2026-10-30	We switched from GNUstep + Window Maker + GWorkspace to Xfce as our desktop environment.	none
+V57.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“桌面与嵌入式衍生：OS108、PolyBSD、smolBSD”；本节题为其下位论题	none
+V57.7.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.2.2	微虚拟机定位	https://github.com/NetBSDfr/smolBSD	联网	A	2026-10-30	smolBSD helps you create a minimal NetBSD based BSD UNIX virtual machine that’s able to boot and start a service in a couple milliseconds.	none
+V57.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“桌面与嵌入式衍生：OS108、PolyBSD、smolBSD”；本节题为其下位论题	none
+V57.7.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.2.3	可移植性与平台面	https://www.netbsd.org/	联网	A	2026-10-30	NetBSD is a free, fast, secure, and highly portable Unix-like  Open Source operating system. It is available for a wide  range of platforms, from large-scale servers and powerful  desktop systems to handheld and embedded devices.	none
+V57.7.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“桌面与嵌入式衍生：OS108、PolyBSD、smolBSD”；本节题为其下位论题	none
+V57.7.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.2.4	微虚拟机定位	https://github.com/NetBSDfr/smolBSD	联网	A	2026-10-30	smolBSD helps you create a minimal NetBSD based BSD UNIX virtual machine that’s able to boot and start a service in a couple milliseconds.	none
+V57.7.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“桌面与嵌入式衍生：OS108、PolyBSD、smolBSD”；本节题为其下位论题	none
+V57.7.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.2.5	微虚拟机定位	https://github.com/NetBSDfr/smolBSD	联网	A	2026-10-30	smolBSD helps you create a minimal NetBSD based BSD UNIX virtual machine that’s able to boot and start a service in a couple milliseconds.	none
+V57.7.2.5	最小系统的构建约束	https://github.com/NetBSDfr/smolBSD	联网	A	2026-10-30	No prior _NetBSD_ installation is required, a _microvm_ can be created and started from any _NetBSD_, _GNU/Linux_, _macOS_ system and probably more.	none
+V57.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“工具与 Live 衍生：irBSD、Jibbed 与 Gentoo／NetBSD”；本节题为其下位论题	none
+V57.7.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.3.1	可移植性与平台面	https://www.netbsd.org/	联网	A	2026-10-30	NetBSD is a free, fast, secure, and highly portable Unix-like  Open Source operating system. It is available for a wide  range of platforms, from large-scale servers and powerful  desktop systems to handheld and embedded devices.	none
+V57.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“工具与 Live 衍生：irBSD、Jibbed 与 Gentoo／NetBSD”；本节题为其下位论题	none
+V57.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.3.2	FreeSBIE 的 LiveCD 定位	https://www.freebsd.org/status/report-2006-06-2006-10.html	联网	A	2026-10-30	FreeSBIE is a FreeBSD based LiveCD.	none
+V57.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“工具与 Live 衍生：irBSD、Jibbed 与 Gentoo／NetBSD”；本节题为其下位论题	none
+V57.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.3.3	pkgsrc 定位	https://www.netbsd.org/docs/pkgsrc/	联网	A	2026-10-30	pkgsrc is a centralized package management system for Unix-like operating systems.	none
+V57.7.3.3	打包框架的跨项目复用	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none
+V57.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“工具与 Live 衍生：irBSD、Jibbed 与 Gentoo／NetBSD”；本节题为其下位论题	none
+V57.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.3.4	可接受许可	https://www.openbsd.org/goals.html	联网	A	2026-10-30	ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code, NDAs are never acceptable.	none
+V57.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“工具与 Live 衍生：irBSD、Jibbed 与 Gentoo／NetBSD”；本节题为其下位论题	none
+V57.7.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.7.3.5	源码留存与承接	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	TrueOS source code will remain available on GitHub for others that may want to continue the work that we started so many years ago.	none
+V57.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“MirOS BSD：欧洲衍生与许可选择”；本节题为其下位论题	none
+V57.8.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.1.1	MirBSD 自我定位	https://mirbsd.de/	联网	A	2026-10-30	MirBSD is mirabilos’ Open Source playground.	none
+V57.8.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“MirOS BSD：欧洲衍生与许可选择”；本节题为其下位论题	none
+V57.8.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.1.2	可接受许可	https://www.openbsd.org/goals.html	联网	A	2026-10-30	ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code, NDAs are never acceptable.	none
+V57.8.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“MirOS BSD：欧洲衍生与许可选择”；本节题为其下位论题	none
+V57.8.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.1.3	衍生作品权利范围	https://www.openbsd.org/policy.html	联网	A	2026-10-30	a copyright of a derivative work does not affect the rights held by the owner of the copyright of the original work, rather only the part added.	none
+V57.8.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“MirOS BSD：欧洲衍生与许可选择”；本节题为其下位论题	none
+V57.8.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.1.4	发行节奏	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Make a release approximately every six months.	none
+V57.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“MirOS BSD：欧洲衍生与许可选择”；本节题为其下位论题	none
+V57.8.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.1.5	MirBSD 自我定位	https://mirbsd.de/	联网	A	2026-10-30	MirBSD is mirabilos’ Open Source playground.	none
+V57.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“Gentoo／OpenBSD 与 Live 系统：OliveBSD、Anonym.OS”；本节题为其下位论题	none
+V57.8.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.2.1	4.4BSD 基底	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The OpenBSD project produces a freely available, multi-platform 4.4BSD-based UNIX-like operating system.	none
+V57.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“Gentoo／OpenBSD 与 Live 系统：OliveBSD、Anonym.OS”；本节题为其下位论题	none
+V57.8.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.2.2	可接受许可	https://www.openbsd.org/goals.html	联网	A	2026-10-30	ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code, NDAs are never acceptable.	none
+V57.8.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“Gentoo／OpenBSD 与 Live 系统：OliveBSD、Anonym.OS”；本节题为其下位论题	none
+V57.8.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.2.3	pkgsrc 定位	https://www.netbsd.org/docs/pkgsrc/	联网	A	2026-10-30	pkgsrc is a centralized package management system for Unix-like operating systems.	none
+V57.8.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“Gentoo／OpenBSD 与 Live 系统：OliveBSD、Anonym.OS”；本节题为其下位论题	none
+V57.8.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.2.4	FreeSBIE 的 LiveCD 定位	https://www.freebsd.org/status/report-2006-06-2006-10.html	联网	A	2026-10-30	FreeSBIE is a FreeBSD based LiveCD.	none
+V57.8.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“Gentoo／OpenBSD 与 Live 系统：OliveBSD、Anonym.OS”；本节题为其下位论题	none
+V57.8.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.2.5	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.8.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“停更与小型衍生：ekkoBSD、MicroBSD”；本节题为其下位论题	none
+V57.8.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.3.1	4.4BSD 基底	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The OpenBSD project produces a freely available, multi-platform 4.4BSD-based UNIX-like operating system.	none
+V57.8.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“停更与小型衍生：ekkoBSD、MicroBSD”；本节题为其下位论题	none
+V57.8.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.3.2	商用分生产品	https://www.openbsd.org/goals.html	联网	A	2026-10-30	There are  commercial spin-offs of OpenBSD.	none
+V57.8.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“停更与小型衍生：ekkoBSD、MicroBSD”；本节题为其下位论题	none
+V57.8.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.3.3	伯克利版权无限制	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The original Berkeley copyright poses no restrictions on private or commercial use of the software and imposes only simple and uniform requirements for maintaining copyright notices in redistributed versions and crediting the originator of the material only in advertising.	none
+V57.8.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“停更与小型衍生：ekkoBSD、MicroBSD”；本节题为其下位论题	none
+V57.8.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.3.4	家族树题名	https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	联网	A	2026-10-30	The UNIX system family tree: Research and BSD	none
+V57.8.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“停更与小型衍生：ekkoBSD、MicroBSD”；本节题为其下位论题	none
+V57.8.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.8.3.5	TrueOS 终止公告	https://www.truenas.com/TrueOS-Discontinuation/	联网	A	2026-10-30	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily involved in other Open Source projects like FreeNAS & TrueNAS CORE. We’re incredibly proud of the work we put into TrueOS and its predecessor, PC-BSD.	none
+V57.9.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
+V57.9.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.1.1	分叉时点与基线	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
+V57.9.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
+V57.9.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.1.2	自我定位的变迁	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement, but this description has long since become obsolete.	none
+V57.9.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
+V57.9.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.1.3	自我定位的变迁	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement, but this description has long since become obsolete.	none
+V57.9.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
+V57.9.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.1.4	打包框架的合并	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none
+V57.9.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
+V57.9.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.1.5	DragonFly 目标层级	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	DragonFlyBSD aims for high performance and scalability under everything from a single-node UP system to a massively clustered system.	none
+V57.9.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“跨 BSD 衍生：Gentoo／kFreeBSD 与 Debian GNU／kFreeBSD”；本节题为其下位论题	none
+V57.9.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.2.1	技术预览与退出发布	https://www.debian.org/ports/kfreebsd-gnu/	联网	A	2026-10-30	它已作為技術預覽和首個非 Linux 移植版本隨 Debian 6.0 (Squeeze) 和 7.0 (Wheezy) 一同發佈。不過，自 Debian 8 (Jessie) 以來，它已不再包含在官方版本中。	none
+V57.9.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“跨 BSD 衍生：Gentoo／kFreeBSD 与 Debian GNU／kFreeBSD”；本节题为其下位论题	none
+V57.9.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.2.2	kFreeBSD 移植终止	https://www.debian.org/ports/kfreebsd-gnu/	联网	A	2026-10-30	由於缺乏興趣和志願者，Debian GNU/kFreeBSD 的開發已於 2023 年 7 月正式終止。	none
+V57.9.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“跨 BSD 衍生：Gentoo／kFreeBSD 与 Debian GNU／kFreeBSD”；本节题为其下位论题	none
+V57.9.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.2.3	提交权分区授予	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V57.9.2.3	补丁进入主线的提案程序	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.	none
+V57.9.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“跨 BSD 衍生：Gentoo／kFreeBSD 与 Debian GNU／kFreeBSD”；本节题为其下位论题	none
+V57.9.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.2.4	提交权的推荐程序	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.	none
+V57.9.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“跨 BSD 衍生：Gentoo／kFreeBSD 与 Debian GNU／kFreeBSD”；本节题为其下位论题	none
+V57.9.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V57.9.2.5	四主干与用户空间分歧	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	In contrast to the numerous Linux distributions, there are only four major open source BSDs. Each BSD project maintains its own source tree and its own kernel.	none

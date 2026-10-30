@@ -1,0 +1,1260 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V41.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.1.1	官方站／手册页	https://www.netbsd.org/releases/formal-1.4/NetBSD-1.4.html	联网	A	2026-10-30	---- -- ------- The NetBSD Operating System is a fully functional Open Source Unix-like operating system descended from the Berkeley Networking Release 2 (Net/2), 4.4BSD-Lite, and 4.4BSD-Lite2 sources.	none
+V41.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.1.2	官方站／手册页	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993.	none
+V41.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.1.3	官方站／手册页	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	The History of the NetBSD Project NetBSD took its roots from the original UCB 4.3BSD via the Net/2 release and 386BSD .	none
+V41.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.1.4	官方站／手册页	https://www.netbsd.org/releases/formal-1.0/NetBSD-1.0.html	联网	A	2026-10-30	NetBSD 1.0 is based on 4.4BSD Lite and Berkeley Networking Release 2 sources.	none
+V41.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	Kernel interfaces have continued to be refined, and more subsystems and device drivers are shared among the different ports.	none
+V41.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“MI／MD 分层思想的形成”；本节题为其下位论题	none
+V41.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.2.1	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	CONCEPTS AND GUIDELINES Bus spaces are described by bus space tags, which can be created only by machine-dependent code.	none
+V41.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“MI／MD 分层思想的形成”；本节题为其下位论题	none
+V41.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.2.2	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	Machine-dependent types, variables, and functions should be marked clearly in < machine/bus_defs.h > and in < machine/bus_funcs.h > to avoid confusion with the machine-independent types and functions, and, if possible, should be given names which make the machine-dependence clear.	none
+V41.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“MI／MD 分层思想的形成”；本节题为其下位论题	none
+V41.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.2.3	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	Some of the significant changes include: Support for machine independent device drivers has been radically improved with the addition of the "bus.h" interface, providing a high quality abstraction for machine and architecture independent device access.	none
+V41.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“MI／MD 分层思想的形成”；本节题为其下位论题	none
+V41.1.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.2.4	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	MI changes must be tested on at least one of these ports.	none
+V41.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“MI／MD 分层思想的形成”；本节题为其下位论题	none
+V41.1.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.2.5	官方站／手册页	https://man.netbsd.org/intro.9	联网	A	2026-10-30	MI DEVICE DRIVER API Bus and Machine Independent DMA Mapping Interface.	none
+V41.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“autoconf 与设备抽象体系”；本节题为其下位论题	none
+V41.1.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.3.1	官方站／手册页	https://man.netbsd.org/config.5	联网	A	2026-10-30	In the options selection part of the kernel configura- tion files, an attachment is an interface attribute concatenated with a number or the wildcard `?'.	none
+V41.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“autoconf 与设备抽象体系”；本节题为其下位论题	none
+V41.1.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.3.2	官方站／手册页	https://man.netbsd.org/autoconf.9	联网	A	2026-10-30	In its most basic form, autoconfiguration consists of the recursive process of finding and attaching all devices on a bus, including other busses.	none
+V41.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“autoconf 与设备抽象体系”；本节题为其下位论题	none
+V41.1.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.3.3	官方站／手册页	https://man.netbsd.org/autoconf.9	联网	A	2026-10-30	The autoconfiguration framework also supports indirect configuration where the drivers must probe the bus looking for the presence of a device.	none
+V41.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“autoconf 与设备抽象体系”；本节题为其下位论题	none
+V41.1.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.3.4	官方站／手册页	https://man.netbsd.org/config.5	联网	A	2026-10-30	Devices, instances and attachments The main benefit of the kernel configuration file is to allow the user to avoid compiling some drivers, and wire down the configuration of some others.	none
+V41.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“autoconf 与设备抽象体系”；本节题为其下位论题	none
+V41.1.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.3.5	官方站／手册页	https://man.netbsd.org/driver.9	联网	A	2026-10-30	The autoconfiguration framework will call the attach function (via its cfattach structure) of the driver which returns the highest value from its match function.	none
+V41.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“bus_space 与 bus_dma：跨硬件平台的关键抽象”；本节题为其下位论题	none
+V41.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.4.1	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	Access to regions of bus space is facilitated by use of bus space han- dles, which are usually created by mapping a specific range of a bus space.	none
+V41.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“bus_space 与 bus_dma：跨硬件平台的关键抽象”；本节题为其下位论题	none
+V41.1.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.4.2	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	The bus_space_barrier () function orders reads and writes in prefetchable or cacheable mappings relative to other reads and writes in bus spaces.	none
+V41.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“bus_space 与 bus_dma：跨硬件平台的关键抽象”；本节题为其下位论题	none
+V41.1.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.4.3	官方站／手册页	https://man.netbsd.org/bus_dma.9	联网	A	2026-10-30	bus_dma_segment_t A structure with at least the following members: bus_addr_t ds_addr; bus_size_t ds_len; The structure may have machine-dependent members and arbitrary layout.	none
+V41.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“bus_space 与 bus_dma：跨硬件平台的关键抽象”；本节题为其下位论题	none
+V41.1.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.4.4	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	This permits many good things, including (among many) clean multi-platform bounce buffer support.	none
+V41.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“bus_space 与 bus_dma：跨硬件平台的关键抽象”；本节题为其下位论题	none
+V41.1.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.4.5	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	The goal of the bus_space functions is to allow a single driver source file to manipulate a set of devices on different system architectures, and to allow a single driver object file to manipulate a set of devices on multiple bus types on a single architecture.	none
+V41.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“驱动模型与硬件抽象层设计”；本节题为其下位论题	none
+V41.1.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.5.1	官方站／手册页	https://man.netbsd.org/driver.9	联网	A	2026-10-30	For a driver to be compiled into the kernel, config(1) must be aware of its existence.	none
+V41.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“驱动模型与硬件抽象层设计”；本节题为其下位论题	none
+V41.1.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.5.2	官方站／手册页	https://man.netbsd.org/config.5	联网	A	2026-10-30	The attributes on which an instance of device base can attach must be interface attributes, or root in case the device is at the top-level, which is usually the case of e.g., mainbus(4) .	none
+V41.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“驱动模型与硬件抽象层设计”；本节题为其下位论题	none
+V41.1.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.5.3	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	· Redefining bus space tags and handles so that machine-independent bus interface drivers (for example PCI to VME bridges) could define and implement bus spaces without requiring machine-dependent code.	none
+V41.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“驱动模型与硬件抽象层设计”；本节题为其下位论题	none
+V41.1.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.5.4	官方站／手册页	https://man.netbsd.org/autoconf.9	联网	A	2026-10-30	config_detach ( dev , flags ) Called by the parent to detach the child device.	none
+V41.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“驱动模型与硬件抽象层设计”；本节题为其下位论题	none
+V41.1.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.5.5	官方站／手册页	https://man.netbsd.org/pci.4	联网	A	2026-10-30	HARDWARE NetBSD includes machine-independent PCI drivers, sorted by device type and driver name: SCSI interfaces ahc(4) Adaptec 29xx, 39xx, and other AIC-7xxx-based SCSI interfaces.	none
+V41.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“可移植性的实现成本：性能与维护”；本节题为其下位论题	none
+V41.1.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.6.1	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	It is the developer's responsibility to implement machine dependent (MD) support necessary for changes, fix build problems and aid in debugging with any platform-specific problems.	none
+V41.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“可移植性的实现成本：性能与维护”；本节题为其下位论题	none
+V41.1.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.6.2	官方站／手册页	https://man.netbsd.org/bus_dma.9	联网	A	2026-10-30	where each operation may involve cache flush/invalida- tion, bounce buffer copying, and/or memory barriers.	none
+V41.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“可移植性的实现成本：性能与维护”；本节题为其下位论题	none
+V41.1.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.6.3	官方站／手册页	https://www.netbsd.org/releases/formal-1.6/NetBSD-1.6.html	联网	A	2026-10-30	At least 38 ports for the NetBSD 1.6 release were cross-built on a NetBSD/i386 system using this mechanism.	none
+V41.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“可移植性的实现成本：性能与维护”；本节题为其下位论题	none
+V41.1.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.6.4	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	NetBSD 2.0 runs on 54 different system architectures featuring 17 machine architectures across 17 distinct CPU families, and is being ported to more.	none
+V41.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“可移植性的实现成本：性能与维护”；本节题为其下位论题	none
+V41.1.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.6.5	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	The guidelines are as follows: Generally speaking, the port boots and works, but keeping it working is the responsibility of the user community.	none
+V41.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）”；本节题为其下位论题	none
+V41.1.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.7.1	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	Information about NetBSD 1.3 Information about NetBSD 1.3 NetBSD 1.3 was the sixth release of the NetBSD operating system, and was released on January 4, 1998.	none
+V41.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）”；本节题为其下位论题	none
+V41.1.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.7.2	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Port will be bumped up to organic when it is shown to be working.	none
+V41.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）”；本节题为其下位论题	none
+V41.1.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.7.3	官方站／手册页	https://www.netbsd.org/releases/formal-1.4/NetBSD-1.4.html	联网	A	2026-10-30	Binary releases for all supported architectures are either available for download now or will be made available within a few days.	none
+V41.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）”；本节题为其下位论题	none
+V41.1.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.7.4	官方站／手册页	https://www.netbsd.org/ports/macppc/	联网	A	2026-10-30	If you successfully install on a system not listed here, send an email to port-macppc@NetBSD.org .	none
+V41.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“NetBSD 1.2 至 1.3 的多平台移植架构（1995—1998）”；本节题为其下位论题	none
+V41.1.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.1.7.5	官方站／手册页	https://man.netbsd.org/bus_space.9	联网	A	2026-10-30	The functions were merged to work on generic ``spaces'' early in the NetBSD 1.3 development cycle, and many drivers were converted to use them.	none
+V41.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“早期平台扩张：x86、68k、VAX、SPARC”；本节题为其下位论题	none
+V41.2.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.1.1	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	i386 i386 19930321 Intel/AMD etc. x86 processor line	none
+V41.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“早期平台扩张：x86、68k、VAX、SPARC”；本节题为其下位论题	none
+V41.2.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.1.2	官方站／手册页	https://www.netbsd.org/ports/mac68k/	联网	A	2026-10-30	It began as a port of the Berkeley Networking Release 2 (more commonly known as Net/2) with 386BSD-0.1 filling in the cracks.	none
+V41.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“早期平台扩张：x86、68k、VAX、SPARC”；本节题为其下位论题	none
+V41.2.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.1.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	vax vax 19940802 Digital Equipment Corp. VAX machines	none
+V41.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“早期平台扩张：x86、68k、VAX、SPARC”；本节题为其下位论题	none
+V41.2.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.1.4	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	sparc sparc 19931002 Sun Microsystems SPARC (sun4, sun4c, sun4m) 32 bit machines	none
+V41.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“早期平台扩张：x86、68k、VAX、SPARC”；本节题为其下位论题	none
+V41.2.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	Significant changes from NetBSD 1.1 include: Continuing the multi-platform tradition, the integration of the DEC Alpha port has been completed, and new ports to ARM and x68k have been added.	none
+V41.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“PowerPC、MIPS 与嵌入式平台”；本节题为其下位论题	none
+V41.2.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.2.1	官方站／手册页	https://www.netbsd.org/ports/macppc/	联网	A	2026-10-30	NetBSD/macppc is a port to Apple's PowerPC-based Macintosh computers with Open Firmware.	none
+V41.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“PowerPC、MIPS 与嵌入式平台”；本节题为其下位论题	none
+V41.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.2.2	官方站／手册页	https://www.netbsd.org/ports/sandpoint/	联网	A	2026-10-30	The main focus of this port is now on MPC824x based consumer NAS (Network Attached Storage) systems, while the original evaluation boards are still supported.	none
+V41.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“PowerPC、MIPS 与嵌入式平台”；本节题为其下位论题	none
+V41.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.2.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	evbmips mipseb,mipsel,mips64eb,mips64el 20020307 MIPS-based eval boards	none
+V41.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“PowerPC、MIPS 与嵌入式平台”；本节题为其下位论题	none
+V41.2.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.2.4	官方站／手册页	https://www.netbsd.org/ports/algor/	联网	A	2026-10-30	Algorithmics boards include PCI and PC-like on-board peripherals, and have a CPU daughtercard, allowing the user to evaluate a variety of MIPS CPUs.	none
+V41.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“PowerPC、MIPS 与嵌入式平台”；本节题为其下位论题	none
+V41.2.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.2.5	官方站／手册页	https://www.netbsd.org/ports/sandpoint/	联网	A	2026-10-30	Two processor modules have been tested: The "Unity" module with the MPC8240 The "Altimus" with MPC7400 (G4) and MPC107 [1] Support is present, but this configuration was not tested, or not reported working yet.	none
+V41.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Alpha 等工作站架构支持”；本节题为其下位论题	none
+V41.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.3.1	官方站／手册页	https://www.netbsd.org/ports/alpha/	联网	A	2026-10-30	NetBSD/alpha is a true 64-bit system that fully implements the LP64 architecture, using 64-bit pointers and 64-bit long integers (standard integers are still 32 bits) in a linear four terabyte (4TB) address space.	none
+V41.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Alpha 等工作站架构支持”；本节题为其下位论题	none
+V41.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.3.2	官方站／手册页	https://www.netbsd.org/ports/alpha/	联网	A	2026-10-30	NetBSD runs on almost all of the existing alpha systems, including some of the more unusual ones with proprietary or legacy bus architectures, such as the large-scale 8400, all of the TURBOchannel systems, the 4100 series, and the EISA-only Jensen.	none
+V41.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Alpha 等工作站架构支持”；本节题为其下位论题	none
+V41.2.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.3.3	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Generally speaking, the hardware platforms of organic ports have lost their industrial relevance, or there is not enough community activity for the port to make it to the first tier.	none
+V41.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Alpha 等工作站架构支持”；本节题为其下位论题	none
+V41.2.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.3.4	官方站／手册页	https://www.netbsd.org/ports/alpha/	联网	A	2026-10-30	NetBSD/alpha was the first free OS to run on the Alpha and supports by far the largest number of alpha system types of any free OS.	none
+V41.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Alpha 等工作站架构支持”；本节题为其下位论题	none
+V41.2.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.3.5	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	Generic cpu features shared among multiple ports aarch64: ARMv8 CPU based platform files	none
+V41.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ARM 平台支持的发展”；本节题为其下位论题	none
+V41.2.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.4.1	官方站／手册页	https://www.netbsd.org/ports/evbarm/	联网	A	2026-10-30	The "evb" component is a reference to evaluation boards, the original target of the port.	none
+V41.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ARM 平台支持的发展”；本节题为其下位论题	none
+V41.2.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.4.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	evbarm armeb,aarch64 20010905 ARM-based eval boards	none
+V41.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ARM 平台支持的发展”；本节题为其下位论题	none
+V41.2.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.4.3	官方站／手册页	https://www.netbsd.org/ports/evbarm/	联网	A	2026-10-30	Board specific information (often including installation information) Most ARM boards (unless they have UEFI or Raspberry Pi firmware) require a board-specific U-Boot image alongside the generic NetBSD image to be written to their storage.	none
+V41.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ARM 平台支持的发展”；本节题为其下位论题	none
+V41.2.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.4.4	官方站／手册页	https://www.netbsd.org/ports/evbarm/	联网	A	2026-10-30	However, the single GENERIC/GENERIC64 kernel now supports a range of machines including development boards, virtual machines, "ServerReady" (SBBR/SBSA) hardware, and laptops through both device tree and ACPI based booting.	none
+V41.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ARM 平台支持的发展”；本节题为其下位论题	none
+V41.2.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.4.5	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Movement to life support causes a mail to be sent out to the port mailing list and the portmaster.	none
+V41.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ARM64 与服务器平台”；本节题为其下位论题	none
+V41.2.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.5.1	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	aarch64: ARMv8 CPU based platform files arm: ARM CPU based platform files	none
+V41.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ARM64 与服务器平台”；本节题为其下位论题	none
+V41.2.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	aq(4) - added hardware TCP/UDP RX checksum offloading for Aquantia 2.5/5/10 Gigabit Ethernet interfaces, and support for the Marvell AQC113 10G adapter.	none
+V41.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ARM64 与服务器平台”；本节题为其下位论题	none
+V41.2.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.5.3	官方站／手册页	https://www.netbsd.org/ports/evbarm/	联网	A	2026-10-30	Running 32-bit binaries is supported with compat32 .	none
+V41.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ARM64 与服务器平台”；本节题为其下位论题	none
+V41.2.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.5.4	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	Currently supported releases The NetBSD-10 and NetBSD-11 branches are currently being maintained .	none
+V41.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ARM64 与服务器平台”；本节题为其下位论题	none
+V41.2.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.5.5	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Currently there are 8 ports with Tier I status.	none
+V41.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“RISC-V 平台支持”；本节题为其下位论题	none
+V41.2.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.6.1	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	New port to the RISC-V architecture: riscv - Initial support for QEMU, including Google Goldfish RTC, VirtIO (network, disk, etc) devices, virtualized audio.	none
+V41.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“RISC-V 平台支持”；本节题为其下位论题	none
+V41.2.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.6.2	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	Default : ``yes'' on aarch64 , aarch64eb , earmv5* , earmv6* , earmv7* , riscv32 , and riscv64 ; ``no'' on other platforms.	none
+V41.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“RISC-V 平台支持”；本节题为其下位论题	none
+V41.2.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.6.3	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	NetBSD 11.0 is the first stable release to include support for 64-bit RISC-V platforms, including a range of StarFive JH71XX-based devices such as the VisionFive 2, PINE64 STAR64, as well as QEMU.	none
+V41.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“RISC-V 平台支持”；本节题为其下位论题	none
+V41.2.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.6.4	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	The tier system Ports are classified into three tiers based on the current importance of the architecture and the level of community activity.	none
+V41.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“RISC-V 平台支持”；本节题为其下位论题	none
+V41.2.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.6.5	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	riscv riscv64 20230507 RISC-V based machines	none
+V41.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“多架构维护模型”；本节题为其下位论题	none
+V41.2.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.7.1	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	'ports') Ports The tier system Tiers Tier I: Focus — support is part of NetBSD's strategy Tier II: Organic — evolving at its own pace Tier III: Life Support — severely incapacitated or broken CPU architectures Ports by CPU architecture Platforms (a.k.a.	none
+V41.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“多架构维护模型”；本节题为其下位论题	none
+V41.2.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.7.2	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	In this chapter, we will show how to use build.sh to first create a toolchain, including compiler, assembler, linker and so on, then use it to cross-compile a NetBSD kernel and userspace for AArch64 on an AMD64 host machine.	none
+V41.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“多架构维护模型”；本节题为其下位论题	none
+V41.2.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.7.3	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Implementing (significant) new features requires a prior discussion on an appropriate technical mailing list.	none
+V41.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“多架构维护模型”；本节题为其下位论题	none
+V41.2.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.7.4	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	If the port is not reported fixed within the next 6-12 months, it will be moved to the Attic.	none
+V41.2.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“多架构维护模型”；本节题为其下位论题	none
+V41.2.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.2.7.5	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Summarizing, the tiers can be viewed to represent ports that NetBSD will support, ports that NetBSD does its best to support, and ports which may be desupported soon.	none
+V41.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Anykernel 架构思想”；本节题为其下位论题	none
+V41.3.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.1.1	官方站／手册页	https://man.netbsd.org/rump.3	联网	A	2026-10-30	Like the rumpuser(3) library, librump is a mandatory component and is present in every rump kernel.	none
+V41.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Anykernel 架构思想”；本节题为其下位论题	none
+V41.3.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.1.2	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Added rump(3) , the Runnable Userspace Meta Program framework.	none
+V41.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Anykernel 架构思想”；本节题为其下位论题	none
+V41.3.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.1.3	官方站／手册页	https://man.netbsd.org/rump.3	联网	A	2026-10-30	In addi- tion to fundamental routines such as kernel memory allocators and lock- ing, librump provides system call wrappers.	none
+V41.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Anykernel 架构思想”；本节题为其下位论题	none
+V41.3.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.1.4	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	This option is useful only when building rumpkernel(7) kernels for NetBSD userspace, and an empty value may be supplied elsewhere.	none
+V41.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Anykernel 架构思想”；本节题为其下位论题	none
+V41.3.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.1.5	官方站／手册页	https://man.netbsd.org/rump_lwproc.3	联网	A	2026-10-30	These basic principles apply to rump kernels as well, but since a rump kernel uses the host's thread and process context directly, the rules for how thread context is determined are different.	none
+V41.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“rump kernel 的设计目标”；本节题为其下位论题	none
+V41.3.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.2.1	官方站／手册页	https://man.netbsd.org/rump_lwproc.3	联网	A	2026-10-30	In the rump kernel model, each host thread (implemented for example with pthreads or green threads) is either bound to a rump kernel lwp or accesses the rump kernel with an implicit thread context associated with pid 1.	none
+V41.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“rump kernel 的设计目标”；本节题为其下位论题	none
+V41.3.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.2.2	官方站／手册页	https://man.netbsd.org/rump_sp.7	联网	A	2026-10-30	Also, almost any unmodified dynamically linked application (for example telnet(1) or ls(1) ) can be used as a rump kernel client with the help of system call hijacking.	none
+V41.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“rump kernel 的设计目标”；本节题为其下位论题	none
+V41.3.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.2.3	官方站／手册页	https://man.netbsd.org/rump_lwproc.3	联网	A	2026-10-30	An implicit thread context is created every time the rump kernel is entered and disbanded upon exit.	none
+V41.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“rump kernel 的设计目标”；本节题为其下位论题	none
+V41.3.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.2.4	官方站／手册页	https://man.netbsd.org/rump_lwproc.3	联网	A	2026-10-30	The association between host threads and the rump kernel curlwp is left to the caller.	none
+V41.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“rump kernel 的设计目标”；本节题为其下位论题	none
+V41.3.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.2.5	官方站／手册页	https://man.netbsd.org/rump_sp.7	联网	A	2026-10-30	This facility is therefore meant mostly for operations which are not performance critical, such as configuration of a rump ker- nel server.	none
+V41.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“文件系统、驱动与网络协议栈用户态化”；本节题为其下位论题	none
+V41.3.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.3.1	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	mount(8) : Added -o rump , which mounts the file system as a userspace server via puffs(4) and rump(3) instead of using a kernel drver.	none
+V41.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“文件系统、驱动与网络协议栈用户态化”；本节题为其下位论题	none
+V41.3.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.3.2	官方站／手册页	https://man.netbsd.org/rump_server.1	联网	A	2026-10-30	To test a con- figuration, run rump_server with LD_BIND_NOW=1 (see EXAMPLES ).	none
+V41.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“文件系统、驱动与网络协议栈用户态化”；本节题为其下位论题	none
+V41.3.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.3.3	官方站／手册页	https://man.netbsd.org/rump_sp.7	联网	A	2026-10-30	For example, network-related clients will typi- cally avoid making any file system related system calls against the rump kernel, since it is not guaranteed that a rump network server has file system support.	none
+V41.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“文件系统、驱动与网络协议栈用户态化”；本节题为其下位论题	none
+V41.3.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.3.4	官方站／手册页	https://man.netbsd.org/rump_server.1	联网	A	2026-10-30	Clients can use the system calls provided by rump_server via url .	none
+V41.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“文件系统、驱动与网络协议栈用户态化”；本节题为其下位论题	none
+V41.3.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.3.5	官方站／手册页	https://man.netbsd.org/rump_server.1	联网	A	2026-10-30	EXAMPLES Start a server and load the tmpfs file system module, and halt the server immediately afterwards: $ rump_server -lrumpvfs -m /modules/tmpfs.kmod unix://sock $ env RUMP_SERVER=unix://sock rump.halt Start a server with the one gigabyte host file dk.img mapped as the block device /dev/dk in the rump kernel.	none
+V41.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“rump kernel 与测试基础设施”；本节题为其下位论题	none
+V41.3.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.4.1	官方站／手册页	https://man.netbsd.org/atf.7	联网	A	2026-10-30	As regards developers, ATF provides the necessary means to easily create test suites composed of multiple test programs, which in turn are a col- lection of test cases.	none
+V41.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“rump kernel 与测试基础设施”；本节题为其下位论题	none
+V41.3.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.4.2	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	RUMPUSER_THREADS Defines the threading implementation used by the rumpuser(3) hypercall implementation.	none
+V41.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“rump kernel 与测试基础设施”；本节题为其下位论题	none
+V41.3.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.4.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/build.sh	联网	A	2026-10-30	# # We test that rump links with a number of component configurations.	none
+V41.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“rump kernel 与测试基础设施”；本节题为其下位论题	none
+V41.3.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.4.4	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Miscellaneous: Added pud(4) , a driver that makes it possible to implement block and character devices in userspace.	none
+V41.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“rump kernel 与测试基础设施”；本节题为其下位论题	none
+V41.3.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.4.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	A new virtual USB host driver (vHCI) allows fuzzing and detecting bugs in USB drivers from userspace, even if the hardware is unavailable to developers.	none
+V41.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“rump kernel 的应用形态与外部采用”；本节题为其下位论题	none
+V41.3.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.5.1	官方站／手册页	https://man.netbsd.org/rump_server.1	联网	A	2026-10-30	The string drivespec must be of comma-separated name = value format and must contain the following tokens: key Block device path in rump kernel namespace.	none
+V41.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“rump kernel 的应用形态与外部采用”；本节题为其下位论题	none
+V41.3.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	A userspace implementation using a rump kernel server is also included, see wg-userspace(8) The NetBSD implementation works with WireGuard ® implementations used by commercial VPN providers, Android, Linux, and more.	none
+V41.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“rump kernel 的应用形态与外部采用”；本节题为其下位论题	none
+V41.3.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.5.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/build.sh	联网	A	2026-10-30	# Therefore, if ld complains only about rumpuser symbols, rump kernel # linking was successful.	none
+V41.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“rump kernel 的应用形态与外部采用”；本节题为其下位论题	none
+V41.3.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.5.4	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	RUMP_NBCOMPAT Selects which NetBSD userland binary compatibility COMPAT_ ver kernel options are enabled in the rumpkernel(7) kernels.	none
+V41.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“rump kernel 的应用形态与外部采用”；本节题为其下位论题	none
+V41.3.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.5.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	In-kernel IPv6 Router Advertisment handling - now handled in userspace by dhcpcd(8) .	none
+V41.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“rump kernel 的设计边界与历史意义”；本节题为其下位论题	none
+V41.3.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.6.1	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/build.sh	联网	A	2026-10-30	This is possible # since the rump kernel is a closed namespace apart from calls to rumpuser.	none
+V41.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“rump kernel 的设计边界与历史意义”；本节题为其下位论题	none
+V41.3.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.6.2	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	If ``yes'', build with uniprocess-optimized locking, which requires RUMP_NCPU=1 in the environment at runtime.	none
+V41.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“rump kernel 的设计边界与历史意义”；本节题为其下位论题	none
+V41.3.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.6.3	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Added putter(9) (Pass-to-Userspace Transporter), a generic request-response handler for kernel-attached userspace daemons.	none
+V41.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“rump kernel 的设计边界与历史意义”；本节题为其下位论题	none
+V41.3.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.6.4	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	Indicates whether the rump(3) headers, libraries, and programs are to be installed.	none
+V41.3.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“rump kernel 的设计边界与历史意义”；本节题为其下位论题	none
+V41.3.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.3.6.5	官方站／手册页	https://man.netbsd.org/rump_sp.7	联网	A	2026-10-30	While making a local rump system call is faster than calling the host kernel, a remote system call over a socket is slower.	none
+V41.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“早期单处理器内核模型”；本节题为其下位论题	none
+V41.4.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.1.1	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Platforms x86 ( i386 , amd64 ): Removed GENERIC.MP and made MULTIPROCESSOR mandatory.	none
+V41.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“早期单处理器内核模型”；本节题为其下位论题	none
+V41.4.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.1.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Improved parallelization: rewritten page allocator with awareness of CPU topology, replaced global counters with per-CPU counters, and reduced lock contention.	none
+V41.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“早期单处理器内核模型”；本节题为其下位论题	none
+V41.4.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.1.3	官方站／手册页	https://man.netbsd.org/options.4	联网	A	2026-10-30	See pci_msi(9) for details of MSI/MSIX support options NO_PREEMPTION Disables kpreempt(9) support in the kernel.	none
+V41.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“早期单处理器内核模型”；本节题为其下位论题	none
+V41.4.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.1.4	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	The addition of a native threads implementation for all platforms and symmetric multiprocessing (SMP) on i386 and other popular platforms were long-standing goals for NetBSD 2.0.	none
+V41.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“早期单处理器内核模型”；本节题为其下位论题	none
+V41.4.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	This improved performance is the result of a rewritten threading subsystem based on a 1:1 threading model, new kernel synchronization primitives, kernel preemption, a rewritten scheduler implementation, real-time scheduling extensions, processor sets , and dynamic CPU sets for thread affinity .	none
+V41.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD SMP 初期实现”；本节题为其下位论题	none
+V41.4.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.2.1	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	Both of these goals have now been met—SMP support has been added for i386, SPARC, and PowerPC, the SMP support on Alpha and VAX has been improved, and the new port to the 64-bit AMD/Opteron also supports SMP.	none
+V41.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD SMP 初期实现”；本节题为其下位论题	none
+V41.4.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.2.2	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	macppc : Switched to generic powerpc interrupt, clock, PCI, bus_dma(9) , bus_space(9) , SMP, and IPI frameworks.	none
+V41.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD SMP 初期实现”；本节题为其下位论题	none
+V41.4.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.2.3	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	Rewritten interrupt handling to be much more efficient, added "fast" software interrupts and kernel preemption.	none
+V41.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD SMP 初期实现”；本节题为其下位论题	none
+V41.4.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.2.4	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	prep : Switched to generic powerpc PCI, ISA, interrupt, clock, IPI, and SMP frameworks.	none
+V41.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD SMP 初期实现”；本节题为其下位论题	none
+V41.4.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.2.5	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Multi-threaded applications can now efficiently make use of more than one CPU or core, and system performance is much better under I/O and network load, benefiting, for example, server, scientific, and software development workloads.	none
+V41.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“NetBSD 2.0 SMP 架构”；本节题为其下位论题	none
+V41.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.3.1	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	The i386 port now supports SMP and has a new ACPI and power management framework which takes advantage of Intel's ACPI implementation.	none
+V41.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“NetBSD 2.0 SMP 架构”；本节题为其下位论题	none
+V41.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.3.2	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	Native thread support has been added, based on Scheduler Activations.	none
+V41.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“NetBSD 2.0 SMP 架构”；本节题为其下位论题	none
+V41.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.3.3	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Added support for ACPI S3 (suspend-to-RAM) on MP systems.	none
+V41.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“NetBSD 2.0 SMP 架构”；本节题为其下位论题	none
+V41.4.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.3.4	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Completed various kernel-wide audits of internal API usage: membar_ops(3) , autoconf(9) , device detach...	none
+V41.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“NetBSD 2.0 SMP 架构”；本节题为其下位论题	none
+V41.4.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.3.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Changes since NetBSD 9.3 Performance and scalability Benchmarks of NetBSD 10 show huge performance and scalability gains over NetBSD 9.x, especially on multiprocessor and multicore systems, for compute and filesystem-bound applications.	none
+V41.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“NetBSD 5.x 内核并发重构”；本节题为其下位论题	none
+V41.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.4.1	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	NetBSD 5.0 features greatly improved performance and scalability on modern multiprocessor (SMP) and multi-core systems.	none
+V41.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“NetBSD 5.x 内核并发重构”；本节题为其下位论题	none
+V41.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.4.2	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Added MI code to support in-kernel preemption and made i386 and amd64 use it.	none
+V41.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“NetBSD 5.x 内核并发重构”；本节题为其下位论题	none
+V41.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.4.3	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Improved scheduler performance, including the ability to more appropriately spread load on a mixture of slow and fast cores (e.g.	none
+V41.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“NetBSD 5.x 内核并发重构”；本节题为其下位论题	none
+V41.4.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.4.4	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Long-term regressions (build breakage or failing tests) are not acceptable and changes causing such will be backed out if the regressions are not addressed.	none
+V41.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“NetBSD 5.x 内核并发重构”；本节题为其下位论题	none
+V41.4.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.4.5	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	Some highlights: SMP support for Xen domU kernels, initial suspend/resume support for Xen domU, PCI pass-through support for Xen3, and addition of the balloon driver.	none
+V41.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“VFS 与驱动 MP-safe 化”；本节题为其下位论题	none
+V41.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.5.1	官方站／手册页	https://man.netbsd.org/kauth.9	联网	A	2026-10-30	The authorization wrapper for this scope is declared as int kauth_authorize_vnode ( kauth_cred_t cred , kauth_action_t action , vnode_t *vp , vnode_t *dvp , int fs_decision ) This scope is heavily used in file system code and can potentially affect system-wide performance.	none
+V41.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“VFS 与驱动 MP-safe 化”；本节题为其下位论题	none
+V41.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	awge(4) - Improved fine-grained locking with NET_MPSAFE kernel option.	none
+V41.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“VFS 与驱动 MP-safe 化”；本节题为其下位论题	none
+V41.4.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-8/NetBSD-8.0.html	联网	A	2026-10-30	The kernel option NET_MPSAFE is required to enable this.	none
+V41.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“VFS 与驱动 MP-safe 化”；本节题为其下位论题	none
+V41.4.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.5.4	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	bge(4) - removed requirement of big kernel lock (support for NET_MPSAFE kernel option for Broadcom 10/100/Gigabit Ethernet interfaces).	none
+V41.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“VFS 与驱动 MP-safe 化”；本节题为其下位论题	none
+V41.4.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.5.5	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	We would like to continue funded development in various areas, including: Improving network stack concurrency and performance.	none
+V41.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“多核时代的 NetBSD 内核维护”；本节题为其下位论题	none
+V41.4.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.6.1	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	The default scheduler implementation was rewritten, giving large performance improvements on SMP systems, and bringing support for real-time and time-sharing classes.	none
+V41.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“多核时代的 NetBSD 内核维护”；本节题为其下位论题	none
+V41.4.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.6.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Improved parallelization: rewritten page allocator	none
+V41.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“多核时代的 NetBSD 内核维护”；本节题为其下位论题	none
+V41.4.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.6.3	官方站／手册页	https://man.netbsd.org/options.4	联网	A	2026-10-30	NO_PREEMPTION Disables kpreempt(9) support	none
+V41.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“多核时代的 NetBSD 内核维护”；本节题为其下位论题	none
+V41.4.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.6.4	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	» Log data from daily binary snapshots » Log data from periodic test suite runs	none
+V41.4.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“多核时代的 NetBSD 内核维护”；本节题为其下位论题	none
+V41.4.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.6.5	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Currently there are 49 ports with Tier II status.	none
+V41.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“调度器与并发性能优化”；本节题为其下位论题	none
+V41.4.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.7.1	官方站／手册页	https://man.netbsd.org/sysctl.7	联网	A	2026-10-30	kern.sched.kpreempt_pri (dynamic) Minimum priority to trigger kernel preemption.	none
+V41.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“调度器与并发性能优化”；本节题为其下位论题	none
+V41.4.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.7.2	官方站／手册页	https://man.netbsd.org/lockstat	联网	A	2026-10-30	-c Report percentage of total events by count, and sort the out- put by number of events.	none
+V41.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“调度器与并发性能优化”；本节题为其下位论题	none
+V41.4.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.7.3	官方站／手册页	https://man.netbsd.org/lockstat	联网	A	2026-10-30	DESCRIPTION The lockstat command enables system wide tracing of kernel lock events, executes the specified command, and when finished reports statistics to the user.	none
+V41.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“调度器与并发性能优化”；本节题为其下位论题	none
+V41.4.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.7.4	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	Changes from the previous release include scalability improvements on multi-core systems, many new and updated device drivers, Xen and MIPS port improvements, and brand new features such as a new packet filter.	none
+V41.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“调度器与并发性能优化”；本节题为其下位论题	none
+V41.4.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.4.7.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	More sanitizers, testing capabilities, and quality assurance: Kernel Concurrency Sanitizer - detects race conditions in the kernel at runtime.	none
+V41.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“build.sh 与交叉构建体系”；本节题为其下位论题	none
+V41.5.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.1.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	build.sh will take care of creating all the tools required to build NetBSD for a given platform, and make them available ready to use for development work.	none
+V41.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“build.sh 与交叉构建体系”；本节题为其下位论题	none
+V41.5.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.1.2	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	In NetBSD terminology, this is called the "toolchain", and it includes BSD-compatible make(1), C/C++ compilers, linker, assembler, config(8), as well as a fair number of tools that are only required when crosscompiling a full NetBSD release, which we won't cover here.	none
+V41.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“build.sh 与交叉构建体系”；本节题为其下位论题	none
+V41.5.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.1.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/mk/bsd.README	联网	A	2026-10-30	Note: build.sh will provide a default of "releasedir" (in the top-level .OBJDIR) unless run in 'expert' mode with the -E option.	none
+V41.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“build.sh 与交叉构建体系”；本节题为其下位论题	none
+V41.5.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.1.4	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/mk/bsd.README	联网	A	2026-10-30	The basic rule for the variable naming scheme is as follows: HOST_<cmd> A command that runs on the host machine regardless of whether or not the system is being cross compiled, or options for such a command.	none
+V41.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“build.sh 与交叉构建体系”；本节题为其下位论题	none
+V41.5.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.1.5	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/build.sh	联网	A	2026-10-30	# # Some shells known to fail this test are: NetBSD /bin/ksh (as of 2009-12), # bash-3.1, pdksh-5.2.14, zsh-4.2.7 in "emulate sh" mode.	none
+V41.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“NetBSD 源代码树组织”；本节题为其下位论题	none
+V41.5.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.2.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	when creating a full release: $ ./build.sh -U -u -O ~/obj -j2 -x -X /home/nia/cvs/xsrc -m evbarm -a aarch64 release The -x option automatically sets the variable to build X11, and -X points to the directory containing the X11 sources.	none
+V41.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“NetBSD 源代码树组织”；本节题为其下位论题	none
+V41.5.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.2.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	Single port cpu families alpha: Digital Equipment Alpha processor	none
+V41.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“NetBSD 源代码树组织”；本节题为其下位论题	none
+V41.5.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.2.3	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	By keeping track of changes and building every now and again, one can be assured that these architectures can build their own release.	none
+V41.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“NetBSD 源代码树组织”；本节题为其下位论题	none
+V41.5.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.2.4	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Do not commit code from a tree checked out from anywhere but from cvs.NetBSD.org.	none
+V41.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“NetBSD 源代码树组织”；本节题为其下位论题	none
+V41.5.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.2.5	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/sys/arch/README	联网	A	2026-10-30	hb68k m68000,m68k 20260718 Homebrew machines based on the Motorola 68K CPUs	none
+V41.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内核与用户空间构建”；本节题为其下位论题	none
+V41.5.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.3.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	Configuring the kernel manually Now that we have a working toolchain available, the "usual" steps for building a kernel are needed - create a kernel config file, run config (1) , then build.	none
+V41.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内核与用户空间构建”；本节题为其下位论题	none
+V41.5.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.3.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/mk/bsd.README	联网	A	2026-10-30	MKCLEANSRC Controls whether or not the 'clean' and 'cleandir' targets will delete files from both the object directory, ${.OBJDIR}, and the source directory, ${.CURDIR}.	none
+V41.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内核与用户空间构建”；本节题为其下位论题	none
+V41.5.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.3.3	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	As the config (1) program used to create header files and Makefile for a kernel build is platform specific, we need to use the "nbconfig" program that's part of our new toolchain.	none
+V41.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内核与用户空间构建”；本节题为其下位论题	none
+V41.5.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.3.4	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	This skips running mtree (8) on DESTDIR , useful on systems where building as an unprivileged user, or where it is known that the system wide mtree files have not changed.	none
+V41.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内核与用户空间构建”；本节题为其下位论题	none
+V41.5.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.3.5	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/mk/bsd.README	联网	A	2026-10-30	This is to be used when building your own install script so that the entire system can be made stripped/not-stripped using a single knob.	none
+V41.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“Release Engineering”；本节题为其下位论题	none
+V41.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.4.1	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	Older branches/releases do NOT get security updates any more.	none
+V41.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“Release Engineering”；本节题为其下位论题	none
+V41.5.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.4.2	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	Your generous donation would be particularly welcome at this point in time, since the release engineering process for NetBSD 2.0 was unfortunately set back by hardware failures on the build machines, necessitating the immediate replacement of the equipment.	none
+V41.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“Release Engineering”；本节题为其下位论题	none
+V41.5.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.4.3	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	The complete list of changes can be found in the CHANGES-2.0 file	none
+V41.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“Release Engineering”；本节题为其下位论题	none
+V41.5.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.4.4	官方站／手册页	https://releng.netbsd.org/cgi-bin/builds.cgi	联网	A	2026-10-30	Summary of daily snapshot builds The dates under each tag below are links to the reports for the builds done for a checkout of that tag at the time specified.	none
+V41.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“Release Engineering”；本节题为其下位论题	none
+V41.5.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.4.5	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	Planned release date for NetBSD 11.1: end of September 2026.	none
+V41.5.5.1	旧树同节料件（块级摘要）	旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.3-补丁包发布cvs版本控制引入1993-1994.md	史料	A	2026-10-30	386BSD 采用补丁包（patchkit）发布模式，补丁由 Jolitz 个人整合，难以追溯版本历史；NetBSD 1993 年创建后即引入 CVS 作为版本控制系统，建立 commit log、分支、标签机制；CVS 引入使 NetBSD 开发过程可追溯、可回溯、可协作，告别补丁包时代；CVS 仓库托管于 anon	none
+V41.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“Snapshot 与多架构发布”；本节题为其下位论题	none
+V41.5.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.5.1	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	NetBSD ® Release Engineering Status Site » Daily binary snapshots » Log data from daily binary snapshots » Log data from periodic test suite runs » pkgsrc bulk build status tracker » Ticket Tracking for NetBSD 11 » Ticket Tracking for NetBSD 10 » Ticket Tracking for NetBSD pkgsrc Branch status: 11.0 has been released.	none
+V41.5.5.2	旧树同节料件（块级摘要）	旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.3-补丁包发布cvs版本控制引入1993-1994.md	史料	A	2026-10-30	386BSD 采用补丁包（patchkit）发布模式，补丁由 Jolitz 个人整合，难以追溯版本历史；NetBSD 1993 年创建后即引入 CVS 作为版本控制系统，建立 commit log、分支、标签机制；CVS 引入使 NetBSD 开发过程可追溯、可回溯、可协作，告别补丁包时代；CVS 仓库托管于 anon	none
+V41.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“Snapshot 与多架构发布”；本节题为其下位论题	none
+V41.5.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	The NetBSD 2.0 release contains complete binary releases for 48 different machine types.	none
+V41.5.5.3	旧树同节料件（块级摘要）	旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.3-补丁包发布cvs版本控制引入1993-1994.md	史料	A	2026-10-30	386BSD 采用补丁包（patchkit）发布模式，补丁由 Jolitz 个人整合，难以追溯版本历史；NetBSD 1993 年创建后即引入 CVS 作为版本控制系统，建立 commit log、分支、标签机制；CVS 引入使 NetBSD 开发过程可追溯、可回溯、可协作，告别补丁包时代；CVS 仓库托管于 anon	none
+V41.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“Snapshot 与多架构发布”；本节题为其下位论题	none
+V41.5.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	UEFI bootloader improvements: support for other-endian FFS file systems, booting from raid(4) volumes, ISO9660 (.iso file system) support, boot.cfg support, gop command for changing the video mode, loading kernel modules directly from the bootloader.	none
+V41.5.5.4	旧树同节料件（块级摘要）	旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.3-补丁包发布cvs版本控制引入1993-1994.md	史料	A	2026-10-30	386BSD 采用补丁包（patchkit）发布模式，补丁由 Jolitz 个人整合，难以追溯版本历史；NetBSD 1993 年创建后即引入 CVS 作为版本控制系统，建立 commit log、分支、标签机制；CVS 引入使 NetBSD 开发过程可追溯、可回溯、可协作，告别补丁包时代；CVS 仓库托管于 anon	none
+V41.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“Snapshot 与多架构发布”；本节题为其下位论题	none
+V41.5.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.5.4	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	Since formal releases are effectively unchanging (there are typically very few official patches made to them), they are relatively easy to support, both by NetBSD's developers and the developers of applications.	none
+V41.5.5.5	旧树同节料件（块级摘要）	旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.3-补丁包发布cvs版本控制引入1993-1994.md	史料	A	2026-10-30	386BSD 采用补丁包（patchkit）发布模式，补丁由 Jolitz 个人整合，难以追溯版本历史；NetBSD 1993 年创建后即引入 CVS 作为版本控制系统，建立 commit log、分支、标签机制；CVS 引入使 NetBSD 开发过程可追溯、可回溯、可协作，告别补丁包时代；CVS 仓库托管于 anon	none
+V41.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“Snapshot 与多架构发布”；本节题为其下位论题	none
+V41.5.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.5.5	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Regressions in the automated NetBSD test suite (/usr/tests) are not allowed.	none
+V41.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“自动化测试体系”；本节题为其下位论题	none
+V41.5.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.6.1	官方站／手册页	https://man.netbsd.org/atf.7	联网	A	2026-10-30	The Automated Testing Framework ( ATF ) is a collection of libraries and utilities designed to ease unattended application testing in the hands of developers and end users of a specific piece of software.	none
+V41.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“自动化测试体系”；本节题为其下位论题	none
+V41.5.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.6.2	官方站／手册页	https://man.netbsd.org/atf.7	联网	A	2026-10-30	Public utilities: atf-check(1) Executes a command and checks that its exit code, its standard output and its standard error output match pre-specified expected values.	none
+V41.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“自动化测试体系”；本节题为其下位论题	none
+V41.5.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.6.3	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	Log data from periodic test suite runs » pkgsrc bulk build status tracker	none
+V41.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“自动化测试体系”；本节题为其下位论题	none
+V41.5.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.6.4	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Check the daily builds and the automated test runs .	none
+V41.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“自动化测试体系”；本节题为其下位论题	none
+V41.5.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.5.6.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	More sanitizers, testing capabilities, and quality assurance	none
+V41.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FFS 与 BSD 文件系统传统”；本节题为其下位论题	none
+V41.6.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.1.1	官方站／手册页	https://man.netbsd.org/newfs.8	联网	A	2026-10-30	For the newfs command to succeed, the disk label should first be updated such that the fstype field for the partition is set to `4.2BSD' or `Apple UFS', unless -F or -I is used.	none
+V41.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FFS 与 BSD 文件系统传统”；本节题为其下位论题	none
+V41.6.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.1.2	官方站／手册页	https://man.netbsd.org/fsck_ffs.8	联网	A	2026-10-30	DESCRIPTION fsck_ffs performs interactive file system consistency checks and repair for each of the file systems specified on the command line.	none
+V41.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FFS 与 BSD 文件系统传统”；本节题为其下位论题	none
+V41.6.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.1.3	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	UFS2 is an extension to FFS, adding 64 bit block pointers and support for extended file storage.	none
+V41.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FFS 与 BSD 文件系统传统”；本节题为其下位论题	none
+V41.6.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.1.4	官方站／手册页	https://man.netbsd.org/mount_ffs.8	联网	A	2026-10-30	Fast File Systems should no longer be listed as type ``ufs'' in fstab(5) and instead should be listed as type ``ffs''.	none
+V41.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FFS 与 BSD 文件系统传统”；本节题为其下位论题	none
+V41.6.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html	联网	A	2026-10-30	File systems scan_ffs(8) , scan_lfs(8) : utilities to find FFSv1/v2 and LFS partitions to recover lost disklabels on disks and image files.	none
+V41.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Soft Updates 与一致性维护”；本节题为其下位论题	none
+V41.6.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.2.1	官方站／手册页	https://man.netbsd.org/mount_ffs.8	联网	A	2026-10-30	Ganger, "Soft Updates: A Technique for Eliminating Most Synchronous Writes in the Fast File System", Proceedings of the FREENIX track: 1999 USENIX Annual Technical Conference , pp.	none
+V41.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Soft Updates 与一致性维护”；本节题为其下位论题	none
+V41.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.2.2	官方站／手册页	https://man.netbsd.org/fsck_ffs.8	联网	A	2026-10-30	If the file system is inconsistent the operator is prompted for concurrence before each correction is attempted.	none
+V41.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Soft Updates 与一致性维护”；本节题为其下位论题	none
+V41.6.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.2.3	官方站／手册页	https://man.netbsd.org/fsck_ffs.8	联网	A	2026-10-30	If the operator does not have write permission on the file system fsck_ffs will default to a -n action.	none
+V41.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Soft Updates 与一致性维护”；本节题为其下位论题	none
+V41.6.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.2.4	官方站／手册页	https://man.netbsd.org/mount_ffs.8	联网	A	2026-10-30	The mount_ufs form of the command is meant for backward compatibility only.	none
+V41.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“Soft Updates 与一致性维护”；本节题为其下位论题	none
+V41.6.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.2.5	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	Installer (sysinst): Default to wapbl(4) logging for UFS partitions.	none
+V41.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“WAPBL 日志文件系统”；本节题为其下位论题	none
+V41.6.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.3.1	官方站／手册页	https://man.netbsd.org/wapbl.4	联网	A	2026-10-30	WAPBL currently maintains its journal in one of two locations: - After the file system The journal is placed in the same partition as the file system, but between the file system and the end of the partition.	none
+V41.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“WAPBL 日志文件系统”；本节题为其下位论题	none
+V41.6.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.3.2	官方站／手册页	https://man.netbsd.org/wapbl.4	联网	A	2026-10-30	For existing file systems and general use, however, simply using mount -o log /dev/wd0a /mnt will be sufficient to create an appropriate journal within the file sys- tem.	none
+V41.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“WAPBL 日志文件系统”；本节题为其下位论题	none
+V41.6.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.3.3	官方站／手册页	https://man.netbsd.org/wapbl.4	联网	A	2026-10-30	- Within the file system The journal is allocated as a special contiguous file within the file system.	none
+V41.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“WAPBL 日志文件系统”；本节题为其下位论题	none
+V41.6.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.3.4	官方站／手册页	https://man.netbsd.org/wapbl.4	联网	A	2026-10-30	It also provides bet- ter general-use performance over regular FFS.	none
+V41.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“WAPBL 日志文件系统”；本节题为其下位论题	none
+V41.6.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.3.5	官方站／手册页	https://www.netbsd.org/releases/formal-8/NetBSD-8.0.html	联网	A	2026-10-30	Various WAPBL (the NetBSD file system "log" option) stability and performance improvements.	none
+V41.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“RAIDframe 软件 RAID（1998 起）”；本节题为其下位论题	none
+V41.6.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.4.1	官方站／手册页	https://man.netbsd.org/raid.4	联网	A	2026-10-30	In 1999, component labels, spares, automatic rebuilding of parity, and autoconfiguration of volumes were added.	none
+V41.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“RAIDframe 软件 RAID（1998 起）”；本节题为其下位论题	none
+V41.6.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.4.2	官方站／手册页	https://man.netbsd.org/raid.4	联网	A	2026-10-30	In 2000, root on RAID support was added (initially, with no support for loading kernels from RAID volumes, which has been added to many ports since.) In 2009, support for parity bimap was added, reducing parity resync time after a crash.	none
+V41.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“RAIDframe 软件 RAID（1998 起）”；本节题为其下位论题	none
+V41.6.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.4.3	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-rf.html	联网	A	2026-10-30	RAIDframe may be used as a mechanism for facilitating backups in systems without backup hardware, but this is not an ideal configuration.	none
+V41.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“RAIDframe 软件 RAID（1998 起）”；本节题为其下位论题	none
+V41.6.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.4.4	官方站／手册页	https://man.netbsd.org/raid.4	联网	A	2026-10-30	To enable this tracing the following option may be speci- fied: options RF_ACC_TRACE=1 For extensive debugging there are a number of kernel options which will aid in performing extra diagnosis of various parts of the RAIDframe sub- systems.	none
+V41.6.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“RAIDframe 软件 RAID（1998 起）”；本节题为其下位论题	none
+V41.6.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.4.5	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-rf.html	联网	A	2026-10-30	NetBSD also has another in-kernel RAID level 0 system in its ccd (4) subsystem (see Chapter 15, Concatenated Disk Device (CCD) configuration ).	none
+V41.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“CGD 加密磁盘框架”；本节题为其下位论题	none
+V41.6.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.5.1	官方站／手册页	https://man.netbsd.org/cgd.4	联网	A	2026-10-30	Security model As long as you keep the key secret, cgd keeps the content of the disk secret from a passive adversary, such as a thief who steals your disk or a border patrol agent who detains you and takes a snapshot of your lap- top's disk while you are crossing a border.	none
+V41.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“CGD 加密磁盘框架”；本节题为其下位论题	none
+V41.6.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.5.2	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-cgd.html	联网	A	2026-10-30	Components of the Crypto-Graphic Disk system 14.2.1.	none
+V41.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“CGD 加密磁盘框架”；本节题为其下位论题	none
+V41.6.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.5.3	官方站／手册页	https://man.netbsd.org/cgd.4	联网	A	2026-10-30	IV Methods A very early version of cgd had a bug in the CBC-based ciphers aes-cbc, 3des-cbc, and blowfish-cbc: the CBC initialization vector was chosen to be the eight-fold encryption under the block cipher of the little-endian encoding of the disk sector number, which has no impact on security but reduces performance.	none
+V41.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“CGD 加密磁盘框架”；本节题为其下位论题	none
+V41.6.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.5.4	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-cgd.html	联网	A	2026-10-30	Adiantum provides the best security by encrypting entire disk sectors at a time (512 bytes), and generally provides the best performance on machines without CPU support for accelerating AES.	none
+V41.6.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“CGD 加密磁盘框架”；本节题为其下位论题	none
+V41.6.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.5.5	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-cgd.html	联网	A	2026-10-30	It doesn't matter that the cgd on the CD is, since the CD's disklabel the cgd resides in has 2048 bytes/sector.	none
+V41.6.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“tmpfs 与现代文件系统扩展”；本节题为其下位论题	none
+V41.6.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.6.1	官方站／手册页	https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html	联网	A	2026-10-30	tmpfs: added a new memory-based file system aimed at replacing mfs.	none
+V41.6.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“tmpfs 与现代文件系统扩展”；本节题为其下位论题	none
+V41.6.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.6.2	官方站／手册页	https://man.netbsd.org/options.4	联网	A	2026-10-30	file-system TMPFS Includes code for the efficient memory file system, normally used over /tmp .	none
+V41.6.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“tmpfs 与现代文件系统扩展”；本节题为其下位论题	none
+V41.6.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.6.3	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	MAKEDEV(8) now uses mtree(8) in preference to pax(1) and mknod(8) , making node creation more efficient, and mount_tmpfs(8) in preference to mount_mfs(8) when creating a memory file system.	none
+V41.6.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“tmpfs 与现代文件系统扩展”；本节题为其下位论题	none
+V41.6.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.6.4	官方站／手册页	https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html	联网	A	2026-10-30	vnd(4) : the vnode disk driver can be used on filesystems such as smbfs and tmpfs.	none
+V41.6.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“tmpfs 与现代文件系统扩展”；本节题为其下位论题	none
+V41.6.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.6.5	官方站／手册页	https://man.netbsd.org/rc.conf.5	联网	A	2026-10-30	Before removing block-type swap devices, it is wise to unmount tmpfs filesystems to avoid having to swap their contents back into RAM.	none
+V41.6.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“ZFS 与外部文件系统生态”；本节题为其下位论题	none
+V41.6.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.7.1	官方站／手册页	https://www.netbsd.org/releases/formal-9/NetBSD-9.0.html	联网	A	2026-10-30	This is the first release with ZFS usable for daily use, but there is no support for booting from ZFS nor using ZFS as root filesystem yet.	none
+V41.6.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“ZFS 与外部文件系统生态”；本节题为其下位论题	none
+V41.6.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.7.2	官方站／手册页	https://man.netbsd.org/mount_zfs.8	联网	A	2026-10-30	A command to manage legacy ZFS mounts appeared in Solaris as /etc/fs/zfs/mount .	none
+V41.6.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“ZFS 与外部文件系统生态”；本节题为其下位论题	none
+V41.6.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.7.3	官方站／手册页	https://www.netbsd.org/about/	联网	A	2026-10-30	Modern storage capabilities - including the ZFS file system, RAIDframe software RAID system, and cgd disk encryption.	none
+V41.6.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“ZFS 与外部文件系统生态”；本节题为其下位论题	none
+V41.6.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.7.4	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.1.html	联网	A	2026-10-30	zvol: implement DIOCCACHESYNC , improves performance with ZFS on a Xen domU.	none
+V41.6.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“ZFS 与外部文件系统生态”；本节题为其下位论题	none
+V41.6.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.6.7.5	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	If you commit code that was not written by yourself, double check that the license on that code permits import into the NetBSD source repository, and permits free distribution.	none
+V41.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD TCP／IP 网络栈传统”；本节题为其下位论题	none
+V41.7.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.1.1	官方站／手册页	https://www.netbsd.org/releases/formal-3/NetBSD-3.1.html	联网	A	2026-10-30	Picking up its ancestry from the Berkeley Networking Release 2 (Net/2), 4.4BSD-lite and 4.4BSD-Lite2, the NetBSD project continues to provide its application platform on a wide range of hardware platforms - not only vintage hardware, but also modern desktop and server hardware with Intel and AMD Opteron CPUs as well as embedded systems with MIPS, PowerPC, Super-H, ARM and Xscale CPUs.	none
+V41.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD TCP／IP 网络栈传统”；本节题为其下位论题	none
+V41.7.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.1.2	官方站／手册页	https://www.netbsd.org/docs/network/ipsec/	联网	A	2026-10-30	IPsec = IKE + ESP || AH IPsec consists of two parts: the Internet Key Exchange daemon (RFC 7296) that establishes and maintains secure associations between peers, and the ESP/RFC protocols used to secure IP datagrams.	none
+V41.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD TCP／IP 网络栈传统”；本节题为其下位论题	none
+V41.7.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.1.3	官方站／手册页	https://man.netbsd.org/ifconfig.8	联网	A	2026-10-30	ifconfig must be used at boot time to define the network address of each interface present on a machine; it may also be used at a later time to redefine an interface's address or other operating parameters.	none
+V41.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD TCP／IP 网络栈传统”；本节题为其下位论题	none
+V41.7.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.1.4	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Drivers and support for networking technologies largely replaced by Ethernet: HIPPI , FDDI , and TokenRing .	none
+V41.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD TCP／IP 网络栈传统”；本节题为其下位论题	none
+V41.7.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.1.5	官方站／手册页	https://www.netbsd.org/docs/network/	联网	A	2026-10-30	- the definition of network interface IF , used by /etc/rc.d/network at system initialisation, to configure a network interface.	none
+V41.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“KAME 项目与 IPv6／IPsec”；本节题为其下位论题	none
+V41.7.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.2.1	官方站／手册页	https://www.netbsd.org/docs/network/ipv6/	联网	A	2026-10-30	Other links KAME project , where the IPv6 implementation came from IPv6 Tunnel Broker by Hurricane Electric World IPv6 Launch 6to4 Explained IPv6 Networking FAQ Getting Started IPv6 code was merged into NetBSD in June 1999, and is part of NetBSD.	none
+V41.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“KAME 项目与 IPv6／IPsec”；本节题为其下位论题	none
+V41.7.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.2.2	官方站／手册页	https://www.netbsd.org/docs/network/ipsec/	联网	A	2026-10-30	NetBSD 1.5 incorporates KAME IPsec stack of early June 2000.	none
+V41.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“KAME 项目与 IPv6／IPsec”；本节题为其下位论题	none
+V41.7.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.2.3	官方站／手册页	https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html	联网	A	2026-10-30	Security The FAST_IPSEC IPsec implementation was extended to use hardware acceleration for IPv6, in addition to the hardware accelerated IPv4 that was available before.	none
+V41.7.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“KAME 项目与 IPv6／IPsec”；本节题为其下位论题	none
+V41.7.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.2.4	官方站／手册页	https://www.netbsd.org/docs/network/ipsec/	联网	A	2026-10-30	API compatibility with other IPsec stacks If you write userland code that is aware of IPsec	none
+V41.7.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“KAME 项目与 IPv6／IPsec”；本节题为其下位论题	none
+V41.7.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.2.5	官方站／手册页	https://man.netbsd.org/setkey.8	联网	A	2026-10-30	The setkey command first appeared in the WIDE Hydrangea IPv6 protocol stack kit.	none
+V41.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络设备抽象与驱动体系”；本节题为其下位论题	none
+V41.7.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.3.1	官方站／手册页	https://www.netbsd.org/docs/network/	联网	A	2026-10-30	/etc/ifaliases - ifaliases(5) a single interface can be aliased to more than one IP number.	none
+V41.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络设备抽象与驱动体系”；本节题为其下位论题	none
+V41.7.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.3.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Paravirtualized network devices ( xennet(4) ), block devices ( xbd(4) ) are now MPSAFE and can take advantage of kernel paralellization.	none
+V41.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络设备抽象与驱动体系”；本节题为其下位论题	none
+V41.7.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.3.3	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Added support for jumbo frames and feature-sg to paravirtualized network interfaces.	none
+V41.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络设备抽象与驱动体系”；本节题为其下位论题	none
+V41.7.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.3.4	官方站／手册页	https://man.netbsd.org/netstat.1	联网	A	2026-10-30	Using the third form, with a wait interval specified, netstat will continuously display the informa- tion regarding packet traffic on the configured network interfaces.	none
+V41.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“网络设备抽象与驱动体系”；本节题为其下位论题	none
+V41.7.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.3.5	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	The more intrusive your changes are the higher is the level of required prior approval.	none
+V41.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“net80211 无线网络体系”；本节题为其下位论题	none
+V41.7.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.4.1	官方站／手册页	https://man.netbsd.org/ifconfig.8	联网	A	2026-10-30	rts threshold (IEEE 802.11 devices only) Configure the RTS/CTS thresh- old for IEEE 802.11-based wireless network interfaces.	none
+V41.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“net80211 无线网络体系”；本节题为其下位论题	none
+V41.7.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.4.2	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Added zyd(4) , a driver for ZyDAS ZD1211/ZD1211B USB IEEE 802.11b/g wireless network devices.	none
+V41.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“net80211 无线网络体系”；本节题为其下位论题	none
+V41.7.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.4.3	官方站／手册页	https://man.netbsd.org/wpa_supplicant.conf.5	联网	A	2026-10-30	pairwise List of acceptable pairwise (unicast) ciphers for WPA; one or more of: CCMP (AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP (Temporal Key Integrity Protocol, IEEE 802.11i/D7.0), NONE (deprecated).	none
+V41.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“net80211 无线网络体系”；本节题为其下位论题	none
+V41.7.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.4.4	官方站／手册页	https://man.netbsd.org/wpa_supplicant.conf.5	联网	A	2026-10-30	The wpa_supplicant(8) utility will automatically select the best network based on the order of the network blocks in the configuration file, net- work security level (WPA/WPA2 is preferred), and signal strength.	none
+V41.7.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“net80211 无线网络体系”；本节题为其下位论题	none
+V41.7.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.4.5	官方站／手册页	https://man.netbsd.org/ifconfig.8	联网	A	2026-10-30	ssid id (IEEE 802.11 devices only) Configure the Service Set Identifier (aka the network name) for IEEE 802.11-based wireless network interfaces.	none
+V41.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“NPF 防火墙设计”；本节题为其下位论题	none
+V41.7.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.5.1	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	This release also introduces NetBSD Packet Filter (NPF) - a new packet filter, designed with multi-core systems in mind, which can do TCP/IP traffic filtering, stateful inspection, and network address translation (NAT).	none
+V41.7.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“NPF 防火墙设计”；本节题为其下位论题	none
+V41.7.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.5.2	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	Stateful NPF supports stateful packet inspection which can be used to bypass unnecessary rule processing as well as to complement NAT.	none
+V41.7.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“NPF 防火墙设计”；本节题为其下位论题	none
+V41.7.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-7/NetBSD-7.0.html	联网	A	2026-10-30	Freescale i.MX50, i.MX51: Kobo Touch, Netwalker Xilinx Zynq: Parallella, ZedBoard Major NPF improvements: BPF with just-in-time (JIT) compilation by default.	none
+V41.7.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“NPF 防火墙设计”；本节题为其下位论题	none
+V41.7.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.5.4	官方站／手册页	https://www.netbsd.org/releases/formal-3/NetBSD-3.0.html	联网	A	2026-10-30	The OpenBSD Packet Filter has been integrated as an alternative packet filter solution.	none
+V41.7.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“NPF 防火墙设计”；本节题为其下位论题	none
+V41.7.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.5.5	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	block ether in final from $source_mac to $dest_mac type $ether_type Filtering at this layer is stateless and has no access to upper layer protocols.	none
+V41.7.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“网络安全特性演进：IPsec 与包过滤”；本节题为其下位论题	none
+V41.7.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.6.1	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	Networking ipf(8) has been upgraded to version 4.1.3.	none
+V41.7.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“网络安全特性演进：IPsec 与包过滤”；本节题为其下位论题	none
+V41.7.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.6.2	官方站／手册页	https://man.netbsd.org/ipsec.4	联网	A	2026-10-30	ipsec consists of three sub-protocols: Encapsulated Security Payload (ESP) protects IP payloads from wire-tap- ping (interception) by encrypting them with secret key cryptogra- phy algorithms.	none
+V41.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“网络安全特性演进：IPsec 与包过滤”；本节题为其下位论题	none
+V41.7.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.6.3	官方站／手册页	https://man.netbsd.org/bpf.4	联网	A	2026-10-30	To improve performance, the buffer passed to read must be the same size as the buffers used internally by bpf .	none
+V41.7.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“网络安全特性演进：IPsec 与包过滤”；本节题为其下位论题	none
+V41.7.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.6.4	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	If layer 2 groups are defined in your NPF configuration, then a layer-2 default group becomes mandatory.	none
+V41.7.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“网络安全特性演进：IPsec 与包过滤”；本节题为其下位论题	none
+V41.7.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.6.5	官方站／手册页	https://man.netbsd.org/ipsec.4	联网	A	2026-10-30	Tunnel mode includes IP-in-IP encapsulation operation and is designed for security gateways, as in Virtual Private Network (VPN) configura- tions.	none
+V41.7.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“rump 网络栈”；本节题为其下位论题	none
+V41.7.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.7.1	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	A userspace implementation using a rump kernel server is also included	none
+V41.7.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“rump 网络栈”；本节题为其下位论题	none
+V41.7.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.7.2	官方站／手册页	https://man.netbsd.org/rump_sp.7	联网	A	2026-10-30	Clients The NetBSD base system comes with multiple preinstalled clients which can be used to configure a rump kernel and request diagnostic information.	none
+V41.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“rump 网络栈”；本节题为其下位论题	none
+V41.7.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.7.3	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	Improves isolation in multi-tenant systems Prevent an untrusted user from making any network connec- tions.	none
+V41.7.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“rump 网络栈”；本节题为其下位论题	none
+V41.7.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.7.4	官方站／手册页	https://man.netbsd.org/rump_lwproc.3	联网	A	2026-10-30	It is possible to create a dedicated host thread for every rump kernel lwp or multiplex them on top of a single host thread.	none
+V41.7.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“rump 网络栈”；本节题为其下位论题	none
+V41.7.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.7.7.5	官方站／手册页	https://man.netbsd.org/mk.conf.5	联网	A	2026-10-30	Indicates whether rumpkernel(7) kernels are built with support for the virt(4) network interface.	none
+V41.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“NetBSD Packages 的早期历史”；本节题为其下位论题	none
+V41.8.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.1.1	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	A "packages" system has been adapted from FreeBSD and will provide binary package installations for third party applications.	none
+V41.8.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“NetBSD Packages 的早期历史”；本节题为其下位论题	none
+V41.8.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.1.2	官方站／手册页	https://man.netbsd.org/pkg_add.1	联网	A	2026-10-30	-n Don't actually install a package, just report the steps that would be taken if it was.	none
+V41.8.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“NetBSD Packages 的早期历史”；本节题为其下位论题	none
+V41.8.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.1.3	官方站／手册页	https://man.netbsd.org/pkg_info.1	联网	A	2026-10-30	-B Show some of the important definitions used when building the binary package (the ``Build information'') for each package.	none
+V41.8.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“NetBSD Packages 的早期历史”；本节题为其下位论题	none
+V41.8.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.1.4	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	It is the default package manager of NetBSD and SmartOS , and can be used to enable freely available software to be built easily on a large number of other UNIX-like platforms.	none
+V41.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“NetBSD Packages 的早期历史”；本节题为其下位论题	none
+V41.8.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	The NetBSD Packages Collection contains over 5000 packages and binary package releases for a number of platforms are currently in progress.	none
+V41.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“pkgsrc 的形成”；本节题为其下位论题	none
+V41.8.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.2.1	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	2026Q2 23 June 2026 - pkgsrc-2026Q2 released The pkgsrc developers are proud to announce the pkgsrc-2026Q2 branch, the 91st pkgsrc release.	none
+V41.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“pkgsrc 的形成”；本节题为其下位论题	none
+V41.8.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.2.2	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	The installation prefix, acceptable software licenses, international encryption requirements and build-time options for a large number of packages are all set in a simple, central configuration file.	none
+V41.8.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“pkgsrc 的形成”；本节题为其下位论题	none
+V41.8.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.2.3	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/creating.html	联网	A	2026-10-30	For each of these dependencies, look where it exists in pkgsrc, and if there is a file called buildlink3.mk in that directory, add a line to your package Makefile which includes that file just before the last line.	none
+V41.8.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“pkgsrc 的形成”；本节题为其下位论题	none
+V41.8.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.2.4	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	pkgsrc is very versatile and configurable, supporting building packages for an arbitrary installation prefix, allowing multiple branches to coexist on one machine, a build options framework, and a compiler transformation framework, among other advanced features.	none
+V41.8.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“pkgsrc 的形成”；本节题为其下位论题	none
+V41.8.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.2.5	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	This portability also ensures that pkgsrc is consistent across all platforms .	none
+V41.8.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“pkgsrc 在 NetBSD 中的系统整合”；本节题为其下位论题	none
+V41.8.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.3.1	官方站／手册页	https://man.netbsd.org/pkg_add.1	联网	A	2026-10-30	Pay particular attention to any +INSTALL or +DEINSTALL files, and inspect the +CONTENTS file for @cwd , @mode (check for setuid), @dirrm , @exec , and @unexec directives, and/or use the pkg_info( 1 ) command to examine the package file.	none
+V41.8.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“pkgsrc 在 NetBSD 中的系统整合”；本节题为其下位论题	none
+V41.8.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.3.2	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/configuring.html	联网	A	2026-10-30	When using pkgsrc on Linux systems, there is high risk of " leakage " , where programs installed by pkgsrc may inadvertently use a command or library not installed by pkgsrc, e.g.	none
+V41.8.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“pkgsrc 在 NetBSD 中的系统整合”；本节题为其下位论题	none
+V41.8.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.3.3	官方站／手册页	https://man.netbsd.org/pkg_admin.1	联网	A	2026-10-30	] Use this command to check the files belonging to some or all of the packages installed on the local machine against the checksum which was recorded in the +CONTENTS files at package installation time.	none
+V41.8.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“pkgsrc 在 NetBSD 中的系统整合”；本节题为其下位论题	none
+V41.8.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.3.4	官方站／手册页	https://man.netbsd.org/pkg_add.1	联网	A	2026-10-30	-f Force installation to proceed even if prerequisite packages are not installed or the install script fails.	none
+V41.8.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“pkgsrc 在 NetBSD 中的系统整合”；本节题为其下位论题	none
+V41.8.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.3.5	官方站／手册页	https://man.netbsd.org/pkg_info.1	联网	A	2026-10-30	TECHNICAL DETAILS Package info is either extracted from package files named on the command line, or from already installed package information in <PKG_DBDIR>/<pkg-name> .	none
+V41.8.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“pkgsrc bootstrap 与跨平台构建”；本节题为其下位论题	none
+V41.8.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.4.1	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	NetBSD already contains the necessary tools for using pkgsrc; on other platforms you need to bootstrap pkgsrc to get the package management tools installed.	none
+V41.8.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“pkgsrc bootstrap 与跨平台构建”；本节题为其下位论题	none
+V41.8.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.4.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/pkgsrc/trunk/bootstrap/README	联网	A	2026-10-30	Please note that on some systems (IRIX and SunOS, for example), the bootstrap script will look into a number of common directories for alternative implementations of some tools.	none
+V41.8.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“pkgsrc bootstrap 与跨平台构建”；本节题为其下位论题	none
+V41.8.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.4.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/pkgsrc/trunk/bootstrap/README	联网	A	2026-10-30	PER PLATFORM INFORMATION ======================== pkgsrc supports or has supported many operating systems (platforms).	none
+V41.8.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“pkgsrc bootstrap 与跨平台构建”；本节题为其下位论题	none
+V41.8.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.4.4	官方站／手册页	https://raw.githubusercontent.com/NetBSD/pkgsrc/trunk/bootstrap/README	联网	A	2026-10-30	(See above for --prefix and its default value.) On platforms that ship with same-named pkg_* tools, such as OpenBSD and older FreeBSD, consider putting $prefix/bin earlier in PATH.	none
+V41.8.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“pkgsrc bootstrap 与跨平台构建”；本节题为其下位论题	none
+V41.8.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.4.5	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/	联网	A	2026-10-30	Creating binary packages for everything in pkgsrc (bulk builds) 8.1.	none
+V41.8.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“二进制软件包体系与 pkgin”；本节题为其下位论题	none
+V41.8.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.5.1	官方站／手册页	https://pkgin.net/	联网	B	2026-10-30	Platforms pkgin is known to work and have been tested under the following platforms : NetBSD 4 to 9 DragonFly BSD 2.0 to 3.0 Solaris 10/SunOS 5.10 Opensolaris/SunOS 5.11 Debian GNU/Linux 5 to 9 Mac OS X 10.5 to 10.10 Minix 3.2.0 and 3.3.0 Contact Please do not hesitate to contact us on #pkgsrc or #NetBSD channels @ Libera.Chat IRC Network.	none
+V41.8.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“二进制软件包体系与 pkgin”；本节题为其下位论题	none
+V41.8.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.5.2	官方站／手册页	https://pkgin.net/	联网	B	2026-10-30	It relies on pkg_summary(5) for installation, removal and upgrade of packages and associated dependencies, using a remote repository.	none
+V41.8.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“二进制软件包体系与 pkgin”；本节题为其下位论题	none
+V41.8.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.5.3	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	pkgsrc also has some basic commands to handle binary packages, so that not every user has to build the packages for himself, which is a time-costly task.	none
+V41.8.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“二进制软件包体系与 pkgin”；本节题为其下位论题	none
+V41.8.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.5.4	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	2025Q4 20 December 2025 - pkgsrc-2025Q4 released The pkgsrc developers are proud to announce the pkgsrc-2025Q4 branch, the 89th pkgsrc release.	none
+V41.8.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“二进制软件包体系与 pkgin”；本节题为其下位论题	none
+V41.8.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.5.5	官方站／手册页	https://man.netbsd.org/pkg_add.1	联网	A	2026-10-30	For extra protection, use the digital signatures provided where possible (see the pkg_install.conf( 5 ) ), or, failing that, use tar( 1 ) to extract the package file, and inspect its contents and scripts to ensure it poses no danger to your system's integrity.	none
+V41.8.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“pkgsrc 的长期维护模式”；本节题为其下位论题	none
+V41.8.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.6.1	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	23 September 2026 - pkgsrc-2026Q3 released The pkgsrc developers	none
+V41.8.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“pkgsrc 的长期维护模式”；本节题为其下位论题	none
+V41.8.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.6.2	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	Please report your experiences trying pkgsrc on unusual platforms to the pkgsrc-users mailing list, complete with bootstrapping and build logs.	none
+V41.8.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“pkgsrc 的长期维护模式”；本节题为其下位论题	none
+V41.8.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.6.3	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	There are numerous checks in pkgsrc that try to find such bugs: static analysis tools ( pkgtools/pkglint ), build-time checks (portability of shell scripts), and post-installation checks (installed files, references to shared libraries, script interpreters).	none
+V41.8.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“pkgsrc 的长期维护模式”；本节题为其下位论题	none
+V41.8.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.6.4	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	2025Q3 25 September 2025 - pkgsrc-2025Q3 released The pkgsrc developers are proud to announce the pkgsrc-2025Q3 branch, the 88th pkgsrc release.	none
+V41.8.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“pkgsrc 的长期维护模式”；本节题为其下位论题	none
+V41.8.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.6.5	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	pkgsrc has built-in support for handling varying dependencies, such as pthreads and X11, and extended features such as IPv6 support on a range of platforms.	none
+V41.8.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“pkgsrc 软件安全维护”；本节题为其下位论题	none
+V41.8.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.7.1	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/using.html	联网	A	2026-10-30	Through pkg_admin fetch-pkg-vulnerabilities , this list can be downloaded automatically, and a security audit of all packages installed on a system can take place.	none
+V41.8.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“pkgsrc 软件安全维护”；本节题为其下位论题	none
+V41.8.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.7.2	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	The list is available from the NetBSD FTP site at: ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities This file is signed with the pkgsrc-security GPG key .	none
+V41.8.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“pkgsrc 软件安全维护”；本节题为其下位论题	none
+V41.8.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.7.3	官方站／手册页	https://man.netbsd.org/security.conf.5	联网	A	2026-10-30	check_pkg_vulnerabilities Checks the currently installed packages against a database of known vulnerabilities and reports those that are vulnerable.	none
+V41.8.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“pkgsrc 软件安全维护”；本节题为其下位论题	none
+V41.8.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.7.4	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/fixes.html	联网	A	2026-10-30	BUILDLINK_API_DEPENDS.jpeg+= jpeg>=9.0 .include "../../graphics/jpeg/buildlink3.mk" For security fixes, please update the package vulnerabilities file.	none
+V41.8.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“pkgsrc 软件安全维护”；本节题为其下位论题	none
+V41.8.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.8.7.5	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	However, when a vulnerability is found during a code audit, or when several other issues are likely to be spotted and fixed in the near future, the security team may delay the release of a Security Advisory, so that one unique, comprehensive Security Advisory covering several vulnerabilities can be issued.	none
+V41.9.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“BSD 安全传统与 NetBSD 设计”；本节题为其下位论题	none
+V41.9.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.1.1	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Several security features are available in NetBSD, including IPsec, a homegrown firewall (NPF), a file integrity system ( Veriexec ), a kernel authorization framework ( kauth(9) ), disk encryption ( CGD ), among others.	none
+V41.9.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“BSD 安全传统与 NetBSD 设计”；本节题为其下位论题	none
+V41.9.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.1.2	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Security and NetBSD Security issues in NetBSD are handled by three groups: the Security Team, the Security Alert Team, and the Security Officer.	none
+V41.9.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“BSD 安全传统与 NetBSD 设计”；本节题为其下位论题	none
+V41.9.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.1.3	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	These groups investigate, document and update code in response to newly reported security issues.	none
+V41.9.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“BSD 安全传统与 NetBSD 设计”；本节题为其下位论题	none
+V41.9.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.1.4	官方站／手册页	https://man.netbsd.org/security.conf.5	联网	A	2026-10-30	The /etc/security script is run, by default, every night from /etc/daily , on a NetBSD system, if configured do to so from /etc/daily.conf .	none
+V41.9.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“kauth 权限框架”；本节题为其下位论题	none
+V41.9.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.2.1	官方站／手册页	https://man.netbsd.org/kauth.9	联网	A	2026-10-30	Kernel Programming Interface kauth exports a KPI that allows developers both of NetBSD and third-party products to authorize requests, access and modify credentials, create and remove scopes and listeners, and perform other miscellaneous operations on credentials.	none
+V41.9.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“kauth 权限框架”；本节题为其下位论题	none
+V41.9.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.2.2	官方站／手册页	https://man.netbsd.org/kauth.9	联网	A	2026-10-30	Credential Private Data kauth provides an interface to allow attaching security-model private data to credentials.	none
+V41.9.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“kauth 权限框架”；本节题为其下位论题	none
+V41.9.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.2.3	官方站／手册页	https://man.netbsd.org/kauth.9	联网	A	2026-10-30	Adding a new scope should happen only when an entire subsystem is intro- duced and it is assumed other parts of the kernel may want to interfere with its inner-workings.	none
+V41.9.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“kauth 权限框架”；本节题为其下位论题	none
+V41.9.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.2.4	官方站／手册页	https://man.netbsd.org/kauth.9	联网	A	2026-10-30	EXAMPLES Older code had no abstraction of the security model, so most privilege checks looked like this: if (suser(cred, &acflag) == 0) /* allow privileged operation */ Using the new interface, you must ask for a specific privilege explic- itly.	none
+V41.9.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“Veriexec 文件完整性验证（2004）”；本节题为其下位论题	none
+V41.9.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.3.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-veriexec.html	联网	A	2026-10-30	Some examples for Veriexec signature file entries: /bin/ls MD5 dc2e14dc84bdefff4bf9777958c1b20b DIRECT /usr/bin/perl MD5 914aa8aa47ebd79ccd7909a09ed61f81 INDIRECT /etc/pf.conf MD5 950e1dd6fcb3f27df1bf6accf7029f7d FILE Veriexec allows you to specify more than one way to access a file in an entry.	none
+V41.9.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“Veriexec 文件完整性验证（2004）”；本节题为其下位论题	none
+V41.9.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.3.2	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	Verified Exec verifies a cryptographic hash before allowing execution of binaries and scripts.	none
+V41.9.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“Veriexec 文件完整性验证（2004）”；本节题为其下位论题	none
+V41.9.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.3.3	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-veriexec.html	联网	A	2026-10-30	Kernel configuration To use Veriexec, aside from creating a signatures file, you should enable (uncomment) it in your kernel's config file: (e.g.	none
+V41.9.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“Veriexec 文件完整性验证（2004）”；本节题为其下位论题	none
+V41.9.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.3.4	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	In addition, Verified Exec can also be used to limit the use of script interpreters to authorized scripts only and disallow interactive use.	none
+V41.9.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“W^X 与 PaX MPROTECT”；本节题为其下位论题	none
+V41.9.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.4.1	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	NetBSD 2.0 enforces non-executable mappings on many platforms.	none
+V41.9.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“W^X 与 PaX MPROTECT”；本节题为其下位论题	none
+V41.9.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.4.2	官方站／手册页	https://man.netbsd.org/paxctl.8	联网	A	2026-10-30	The PaX flags signify to the loader the privilege protections to be applied to mapped memory pages, and fuller explanations of the specific protections can be found in the security(7) manpage.	none
+V41.9.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“W^X 与 PaX MPROTECT”；本节题为其下位论题	none
+V41.9.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.4.3	官方站／手册页	https://man.netbsd.org/paxctl.8	联网	A	2026-10-30	DESCRIPTION The paxctl utility is used to list and manipulate PaX flags associated with an ELF program.	none
+V41.9.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“W^X 与 PaX MPROTECT”；本节题为其下位论题	none
+V41.9.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.4.4	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	NetBSD 2.0 supports PROT_EXEC permission via mmap(2) for all platforms where the hardware differentiates execute access from data access, though not necessarily with single-page granularity.	none
+V41.9.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“ASLR 与 KASLR”；本节题为其下位论题	none
+V41.9.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.5.1	官方站／手册页	https://www.netbsd.org/releases/formal-9/NetBSD-9.0.html	联网	A	2026-10-30	Security, Quality Assurance Support for Kernel ASLR , on x86 64-bit, via the new GENERIC_KASLR kernel configuration file.	none
+V41.9.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“ASLR 与 KASLR”；本节题为其下位论题	none
+V41.9.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-9/NetBSD-9.0.html	联网	A	2026-10-30	via the new GENERIC_KASLR kernel configuration file	none
+V41.9.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“ASLR 与 KASLR”；本节题为其下位论题	none
+V41.9.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.5.3	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	The platforms consist of modern server, embedded and desktop architectures.	none
+V41.9.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“ASLR 与 KASLR”；本节题为其下位论题	none
+V41.9.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.5.4	官方站／手册页	https://www.netbsd.org/releases/formal-9/NetBSD-9.0.html	联网	A	2026-10-30	The default GENERIC configuration is also shipped with a partial Kernel ASLR enabled by default.	none
+V41.9.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 6 节“NPF 的访问控制与策略模型”；本节题为其下位论题	none
+V41.9.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.6.1	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	There are multiple structural elements that npf.conf may contain, such as: · variables · table definitions (with or without content) · abstraction groups · packet filtering rules · map rules for address translation · application level gateways · procedure definitions to call on filtered packets · parameter settings.	none
+V41.9.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 6 节“NPF 的访问控制与策略模型”；本节题为其下位论题	none
+V41.9.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.6.2	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	With a static list, NPF will capture the interface addresses on configuration load, whereas with a dynamic list NPF will capture the runtime list of addresses, reflecting any changes to the interface, including the attach and detach.	none
+V41.9.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 6 节“NPF 的访问控制与策略模型”；本节题为其下位论题	none
+V41.9.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.6.3	官方站／手册页	https://man.netbsd.org/npf.conf.5	联网	A	2026-10-30	Note that tables can be replaced by other tables using npfctl(8) , so for example, a const table could be replaced at runtime.	none
+V41.9.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 6 节“NPF 的访问控制与策略模型”；本节题为其下位论题	none
+V41.9.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.6.4	官方站／手册页	https://man.netbsd.org/bpf.4	联网	A	2026-10-30	STANDARD IOCTLS bpf supports several standard ioctl(2) 's which allow the user to do async and/or non-blocking I/O to an open bpf file descriptor.	none
+V41.9.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“CGD 磁盘加密”；本节题为其下位论题	none
+V41.9.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.7.1	官方站／手册页	https://man.netbsd.org/cgd.4	联网	A	2026-10-30	Note: Internally, the `parity bits' of the 192-bit key are ignored, so there are only 168 bits of key material, and owing to generic attacks on 64-bit block ciphers and to meet-in-the-middle attacks on compositions of ciphers as in EDE3 the security is much lower than one might expect even for a 168-bit key.	none
+V41.9.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“CGD 磁盘加密”；本节题为其下位论题	none
+V41.9.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.7.2	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-cgd.html	联网	A	2026-10-30	Rather than taking a file-oriented approach to encryption, consider a block-oriented approach—a virtual hard disk, that looks just like a normal hard disk with normal filesystems, but which encrypts and decrypts each block on the way to and from the real disk.	none
+V41.9.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“CGD 磁盘加密”；本节题为其下位论题	none
+V41.9.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.7.3	官方站／手册页	https://man.netbsd.org/options.4	联网	A	2026-10-30	options VMSWAP_DEFAULT_PLAINTEXT Store swap in plaintext, not encrypted, which may expose secrets if the underlying nonvolatile medium is disclosed.	none
+V41.9.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“CGD 磁盘加密”；本节题为其下位论题	none
+V41.9.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.7.4	官方站／手册页	https://man.netbsd.org/options.4	联网	A	2026-10-30	Swap encryption can still be turned on dynamically with the vm.swap_encrypt sysctl(7) knob.	none
+V41.9.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“SMEP、SMAP 等硬件防护”；本节题为其下位论题	none
+V41.9.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.8.1	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Support for these mitigations sometimes depends on the capabilities of the hardware.	none
+V41.9.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“SMEP、SMAP 等硬件防护”；本节题为其下位论题	none
+V41.9.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.8.2	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	In terms of exploit mitigations, NetBSD supports a good number of modern features: W^X (in both userland and the kernel), Userland ASLR, Kernel ASLR, SMEP, SMAP, and a variety of other internal kernel bug detection features.	none
+V41.9.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“SMEP、SMAP 等硬件防护”；本节题为其下位论题	none
+V41.9.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.8.3	官方站／手册页	https://man.netbsd.org/paxctl.8	联网	A	2026-10-30	AUTHORS Elad Efrat < elad@NetBSD.org > Christos Zoulas < christos@NetBSD.org > RESTRICTIONS The paxctl utility uses elf(5) note sections to mark executables with PaX flags.	none
+V41.9.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“SMEP、SMAP 等硬件防护”；本节题为其下位论题	none
+V41.9.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.8.4	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Some advanced internal bug detection features are enabled only during the development process, because they are too costly from a performance point of view.	none
+V41.9.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 9 节“静态分析与自动检查”；本节题为其下位论题	none
+V41.9.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.9.1	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Specifically, the NetBSD source tree is periodically analyzed by two separate code scanners to maintain and improve code quality: Coverity - a commercial code scanner, and Brainy - a private code scanner developed by a NetBSD developer.	none
+V41.9.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 9 节“静态分析与自动检查”；本节题为其下位论题	none
+V41.9.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.9.2	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	To compensate for that the NetBSD Foundation utilizes modern tools and techniques to automatically detect and manually correct bugs as soon as they appear.	none
+V41.9.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 9 节“静态分析与自动检查”；本节题为其下位论题	none
+V41.9.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.9.3	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Given the rate of change and the amount of human resources available, it is not possible to manually verify every line of code for correctness.	none
+V41.9.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 9 节“静态分析与自动检查”；本节题为其下位论题	none
+V41.9.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.9.4	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	The NetBSD source tree contains several millions of lines of code written by many different people and organizations with varying styles and quality.	none
+V41.9.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 10 节“多架构环境中的安全一致性”；本节题为其下位论题	none
+V41.9.10.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.10.1	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	CPU architectures Ports by CPU architecture	none
+V41.9.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 10 节“多架构环境中的安全一致性”；本节题为其下位论题	none
+V41.9.10.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.10.2	官方站／手册页	https://man.netbsd.org/security.conf.5	联网	A	2026-10-30	check_mtree This runs mtree(8) to ensure that the system is installed correctly.	none
+V41.9.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 10 节“多架构环境中的安全一致性”；本节题为其下位论题	none
+V41.9.10.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.10.3	官方站／手册页	https://www.netbsd.org/releases/formal-9/NetBSD-9.0.html	联网	A	2026-10-30	Support for userland sanitizers , with new configurations allowing to run the entire userland stack with sanitizers.	none
+V41.9.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 10 节“多架构环境中的安全一致性”；本节题为其下位论题	none
+V41.9.10.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.10.4	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Currently there are 1 ports with Tier III status.	none
+V41.9.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 11 节“NetBSD 安全机制的工程取舍”；本节题为其下位论题	none
+V41.9.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.11.1	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	If a package is vulnerable, you will see output similar to the following: Package wireshark-2.0.1 has a denial-of-service vulnerability, see https://www.wireshark.org/security/wnpa-sec-2016-04.html Users can set up pkg_admin to download the pkg-vulnerabilities file daily, and include a package audit in the daily security script.	none
+V41.9.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 11 节“NetBSD 安全机制的工程取舍”；本节题为其下位论题	none
+V41.9.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.11.2	官方站／手册页	https://man.netbsd.org/paxctl.8	联网	A	2026-10-30	To view existing flags on a program , execute paxctl without any flags.	none
+V41.9.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 11 节“NetBSD 安全机制的工程取舍”；本节题为其下位论题	none
+V41.9.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.11.3	官方站／手册页	https://man.netbsd.org/security.conf.5	联网	A	2026-10-30	check_changelist This determines a list of files from the con- tents of /etc/changelist , and the output of mtree -D for /etc/mtree/special and /etc/mtree/special.local .	none
+V41.9.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 11 节“NetBSD 安全机制的工程取舍”；本节题为其下位论题	none
+V41.9.11.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.9.11.4	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	Other classic secure network services are available, such as SSH (OpenSSH) and Kerberos 5 (Heimdal).	none
+V41.10.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“Xen 支持”；本节题为其下位论题	none
+V41.10.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.1.1	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026-10-30	Xen is a virtual machine monitor for x86 that supports execution of multiple guest operating systems with unprecedented levels of performance and resource isolation.	none
+V41.10.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“Xen 支持”；本节题为其下位论题	none
+V41.10.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.1.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Virtualization improvements Many improvements to Xen support: Added support for Xen PVH.	none
+V41.10.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“Xen 支持”；本节题为其下位论题	none
+V41.10.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.1.3	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026-10-30	It is not quite a port in its own right, but an extension to the i386 and amd64 ports.	none
+V41.10.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“Xen 支持”；本节题为其下位论题	none
+V41.10.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.1.4	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026-10-30	It was first brought to NetBSD by Christian Limpach and committed to the source tree on March 11th, 2004.	none
+V41.10.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“Xen 支持”；本节题为其下位论题	none
+V41.10.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	New vio9p(4) driver allows mounting VirtIO 9P filesystems exported by the VM host.	none
+V41.10.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“NVMM 虚拟机监控框架”；本节题为其下位论题	none
+V41.10.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.2.1	官方站／手册页	https://man.netbsd.org/nvmm.4	联网	A	2026-10-30	It is made of a generic MI frontend, to which MD backends can be plugged to implement the core virtualization.	none
+V41.10.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“NVMM 虚拟机监控框架”；本节题为其下位论题	none
+V41.10.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.2.2	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	nvmm_machine_create () creates a virtual machine in the kernel.	none
+V41.10.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“NVMM 虚拟机监控框架”；本节题为其下位论题	none
+V41.10.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.2.3	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	A virtual machine is described by an opaque structure, nvmm_machine .	none
+V41.10.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“NVMM 虚拟机监控框架”；本节题为其下位论题	none
+V41.10.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.2.4	官方站／手册页	https://man.netbsd.org/nvmm.4	联网	A	2026-10-30	SUPPORT The following backends are supported: - x86-SVM, for x86 AMD CPUs - x86-VMX, for x86 Intel CPUs Note that for VMX support, the CPU must also support "VMX Unrestricted Guest", which is only present if Extended Page Tables (EPT) is supported.	none
+V41.10.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“NVMM 虚拟机监控框架”；本节题为其下位论题	none
+V41.10.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.2.5	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	If using a special configuration, emulator software should arrange to have the proper permissions before invoking nvmm_init (), and can drop them after the call has completed.	none
+V41.10.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“云环境中的 NetBSD”；本节题为其下位论题	none
+V41.10.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.3.1	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Upgrade instructions An existing installation can be upgraded by booting an installation image and selecting the Upgrade option.	none
+V41.10.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“云环境中的 NetBSD”；本节题为其下位论题	none
+V41.10.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.3.2	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	x86 - Support for VirtIO over MMIO device discovery handled through kernel command-line parameters via the pv(4) pseudo-bus.	none
+V41.10.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“云环境中的 NetBSD”；本节题为其下位论题	none
+V41.10.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.3.3	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Incompatible changes Changes to the installation process; Compatibility libraries (for 32-bit binaries on 64-bit platforms, and 64-bit binaries on MIPS) have been split into new base32/base64, debug32/debug64 sets.	none
+V41.10.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“云环境中的 NetBSD”；本节题为其下位论题	none
+V41.10.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.3.4	官方站／手册页	https://man.netbsd.org/nvmmctl.8	联网	A	2026-10-30	Valid com- mands are: identify Display the capabilities of the system.	none
+V41.10.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“云环境中的 NetBSD”；本节题为其下位论题	none
+V41.10.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.3.5	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	The NetBSD 11.0 release provides supported binary distributions for the following systems	none
+V41.10.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“隔离环境与部署形态”；本节题为其下位论题	none
+V41.10.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.4.1	官方站／手册页	https://man.netbsd.org/nvmm.4	联网	A	2026-10-30	In practice, nvmm is used by the libnvmm(3) API to implement hypervisors.	none
+V41.10.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“隔离环境与部署形态”；本节题为其下位论题	none
+V41.10.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.4.2	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	Emulator software should not attempt to modify this structure directly, and should use the API pro- vided by libnvmm to manage virtual machines.	none
+V41.10.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“隔离环境与部署形态”；本节题为其下位论题	none
+V41.10.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.4.3	官方站／手册页	https://www.netbsd.org/security/	联网	A	2026-10-30	This allows for good quality insurance during development, and at the same time avoids performance overhead in the stable releases.	none
+V41.10.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“隔离环境与部署形态”；本节题为其下位论题	none
+V41.10.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.4.4	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026-10-30	Current versions of Xen also support ARM, but NetBSD has no support for that as of yet.	none
+V41.10.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“隔离环境与部署形态”；本节题为其下位论题	none
+V41.10.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.4.5	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	nvmm_gpa_map () maps into the guest physical memory beginning on address gpa the buffer of size size located at address hva of the calling process' virtual address space.	none
+V41.10.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.5.1	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	NetBSD Virtual Machine Monitor ( nvmm(4) ) improvements: Allow the host to suspend and resume while a virtual machine is running.	none
+V41.10.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.5.2	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	nvmm_gpa_unmap () removes the guest physical memory area beginning on address gpa and of size size from the machine mach .	none
+V41.10.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Enhanced compliance with POSIX.1-2024 and C23 programming interface standards.	none
+V41.10.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.5.4	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026-10-30	NetBSD/xen is a port of NetBSD to the Xen virtual machine monitor.	none
+V41.10.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.10.5.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Security and quality assurance Compatibility with WireGuard ®: A new interface, wg(4) , provides a VPN tunnel compatible with the WireGuard ® specification.	none
+V41.11.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“可移植性的技术意义”；本节题为其下位论题	none
+V41.11.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.1.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-intro.html	联网	A	2026-10-30	But portability is tied to code quality; without a well-written and well-organized code base it would be impossible to support a large number of platforms.	none
+V41.11.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“可移植性的技术意义”；本节题为其下位论题	none
+V41.11.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.1.2	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	A number of new platforms are supported, including Darwin, FreeBSD, IRIX, Linux, OpenBSD and Solaris.	none
+V41.11.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“可移植性的技术意义”；本节题为其下位论题	none
+V41.11.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.1.3	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	It is available for a wide range of platforms, from large-scale servers and powerful desktop systems to handheld and embedded devices.	none
+V41.11.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“可移植性的技术意义”；本节题为其下位论题	none
+V41.11.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.1.4	官方站／手册页	https://www.netbsd.org/releases/formal-1.6/NetBSD-1.6.html	联网	A	2026-10-30	The NetBSD 1.6 release contains complete binary releases for thirty nine different system architectures.	none
+V41.11.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“可移植性的技术意义”；本节题为其下位论题	none
+V41.11.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.1.5	官方站／手册页	https://www.netbsd.org/about/	联网	A	2026-10-30	NetBSD is distributed as a set of fully reproducible binaries	none
+V41.11.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“NetBSD 技术成果与内部影响”；本节题为其下位论题	none
+V41.11.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.2.1	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Support for new Armv8-A security features: Privileged Access Never - helps prevent inadvertent userspace memory access by the kernel.	none
+V41.11.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“NetBSD 技术成果与内部影响”；本节题为其下位论题	none
+V41.11.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.2.2	官方站／手册页	https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html	联网	A	2026-10-30	The NetBSD improvements were merged into the pkgsrc version.	none
+V41.11.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“NetBSD 技术成果与内部影响”；本节题为其下位论题	none
+V41.11.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.2.3	官方站／手册页	https://www.netbsd.org/about/	联网	A	2026-10-30	The " BSD " in our name is an obvious recognition of our heritage as a derivative of 4.4BSD and 386BSD .	none
+V41.11.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“NetBSD 技术成果与内部影响”；本节题为其下位论题	none
+V41.11.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.2.4	官方站／手册页	https://www.netbsd.org/releases/formal-4/NetBSD-4.0.html	联网	A	2026-10-30	NetBSD's kernel authorization is a hybrid clean-room implementation of a similar interface developed by Apple, extending its capabilities and combining concepts of credential inheritance control.	none
+V41.11.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“NetBSD 技术成果与内部影响”；本节题为其下位论题	none
+V41.11.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.2.5	官方站／手册页	https://www.netbsd.org/developers/	联网	A	2026-10-30	NetBSD Developer Documentation This page is the jumping-off point into the NetBSD developer documentation tree.	none
+V41.11.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“对 UNIX 系统设计的贡献”；本节题为其下位论题	none
+V41.11.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.3.1	官方站／手册页	https://www.netbsd.org/gallery/research.html	联网	A	2026-10-30	The project develops a network adapter, initially at 10 Gbps speeds, tailored to the needs of monitoring tools.	none
+V41.11.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“对 UNIX 系统设计的贡献”；本节题为其下位论题	none
+V41.11.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.3.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/pkgsrc/trunk/README.md	联网	A	2026-10-30	It's also supported as a first-class option in [OmniOS CE](https://omniosce.org/) and [Oasis Linux](https://github.com/oasislinux/oasis).	none
+V41.11.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“对 UNIX 系统设计的贡献”；本节题为其下位论题	none
+V41.11.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.3.3	官方站／手册页	https://www.netbsd.org/gallery/research.html	联网	A	2026-10-30	They are currently examining several proposed modifications to the Transmission Control Protocol (TCP) protocol.	none
+V41.11.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“对 UNIX 系统设计的贡献”；本节题为其下位论题	none
+V41.11.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.3.4	官方站／手册页	https://www.netbsd.org/about/	联网	A	2026-10-30	NetBSD is distributed as a set of fully reproducible binaries: Releases are cut periodically from stable branches after a period of testing and are supported for several years.	none
+V41.11.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“对 UNIX 系统设计的贡献”；本节题为其下位论题	none
+V41.11.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.3.5	官方站／手册页	https://raw.githubusercontent.com/NetBSD/pkgsrc/trunk/README.md	联网	A	2026-10-30	pkgsrc is the default package manager for [NetBSD](https://www.NetBSD.org/) and [SmartOS](https://www.tritondatacenter.com/smartos).	none
+V41.11.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“技术路线中的工程限制”；本节题为其下位论题	none
+V41.11.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.4.1	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Various optimizations of architecture-dependent x86 and AArch64 code, vastly improved network and I/O throughput on aarch64.	none
+V41.11.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“技术路线中的工程限制”；本节题为其下位论题	none
+V41.11.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.4.2	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	pkgsrc bulk build status tracker » Ticket Tracking for NetBSD 11	none
+V41.11.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“技术路线中的工程限制”；本节题为其下位论题	none
+V41.11.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.4.3	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	The default package database for new installations was changed to /usr/pkg/pkgdb for consistency with other pkgsrc platforms, replacing /var/db/pkg .	none
+V41.11.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“技术路线中的工程限制”；本节题为其下位论题	none
+V41.11.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.4.4	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	MI architecture decisions may penalize organic ports if there is a benefit for focus ports.	none
+V41.11.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“技术路线中的工程限制”；本节题为其下位论题	none
+V41.11.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.4.5	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Your generous donations during the 2007 fund drive allowed us to sponsor much of the above development in the areas of SMP performance and scalability.	none
+V41.11.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.5.1	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Machine-independent device drivers New machine-independent drivers: apei(4) - New driver for ACPI Platform Error Interfaces.	none
+V41.11.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Improved drivers: Synced the GPU drivers in the kernel with Linux 5.6, bringing lots of new hardware support for accelerated graphics, for Intel (via i915 ), Nvidia (via nouveau ), and AMD (via amdgpu and radeon ) graphics processors.	none
+V41.11.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Initial support for the Qualcomm Snapdragon X Elite platform.	none
+V41.11.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.5.4	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	Formal releases of NetBSD are intended to provide a stable, supported platform on which people can base their work.	none
+V41.11.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.5.5	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	NetBSD Formal Releases The latest formal release is NetBSD 11.0 .	none
+V41.11.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.6.1	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	Information about NetBSD 1.2 Information about NetBSD 1.2 NetBSD 1.2 was the fifth release of the NetBSD operating system.	none
+V41.11.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.6.2	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	Because they are well-tested and made only when ready, formal releases are useful for people who don't want to be on the " bleeding edge " of development, or who just want to run applications.	none
+V41.11.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.6.3	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	NetBSD 1.2 was released on October 4, 1996.	none
+V41.11.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.6.4	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	The latest patch release, NetBSD 1.3.3, was released on December 23, 1998.	none
+V41.11.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.11.6.5	官方站／手册页	https://www.netbsd.org/releases/formal-1.0/NetBSD-1.0.html	联网	A	2026-10-30	Demetriou) Newsgroups: comp.os.386bsd.announce Subject: Announcing the release of NetBSD 1.0 Date: 8 Nov 1994 11:17:59 -0800 I am pleased to announce the availability of release 1.0 of the NetBSD operating system, a freely available and redistributable BSD system that runs on a variety of hardware platforms.	none
+V41.12.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“交叉构建的工作流：一套构建、多平台产出”；本节题为其下位论题	none
+V41.12.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.1.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	It should be no surprise that building and creating a release would look like the following: $ ./build.sh -U -u -j2 -O ~/obj -m evbarm -a aarch64 release These commands will compile the full NetBSD userland and put it into the destination object directory, and then build a release from it in a release subdirectory.	none
+V41.12.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“交叉构建的工作流：一套构建、多平台产出”；本节题为其下位论题	none
+V41.12.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.1.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/build.sh	联网	A	2026-10-30	# cat <<EOF $0: $errmsg The NetBSD build system requires a shell that supports modern POSIX features, as well as the "local" keyword in functions (which is a widely-implemented but non-standardised feature).	none
+V41.12.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“交叉构建的工作流：一套构建、多平台产出”；本节题为其下位论题	none
+V41.12.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.1.3	官方站／手册页	https://releng.netbsd.org/cgi-bin/builds.cgi	联网	A	2026-10-30	The dates under each tag below are links to the reports for the builds	none
+V41.12.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“交叉构建的工作流：一套构建、多平台产出”；本节题为其下位论题	none
+V41.12.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.1.4	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/build.sh	联网	A	2026-10-30	The above command will usually enable build.sh to automatically set HOST_SH=/path/to/suitable/shell, but if that fails, then you may also need to explicitly set the HOST_SH environment variable, as follows: HOST_SH=/path/to/suitable/shell export HOST_SH \${HOST_SH} $0 ...	none
+V41.12.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“版本控制与移植工作流：CVS 连续性、autoconf 与新平台引入”；本节题为其下位论题	none
+V41.12.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.2.1	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/UPDATING	联网	A	2026-10-30	Cause: If a directory is created by mistake, then it is sometimes deleted from the CVS repository using administrative commands that bypass the normal cvs access controls.	none
+V41.12.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“版本控制与移植工作流：CVS 连续性、autoconf 与新平台引入”；本节题为其下位论题	none
+V41.12.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.2.2	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	when taking code that was submitted with a problem report), ask a developer who is familiar with that part of the system for review.	none
+V41.12.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“版本控制与移植工作流：CVS 连续性、autoconf 与新平台引入”；本节题为其下位论题	none
+V41.12.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.2.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/UPDATING	联网	A	2026-10-30	20221116: The addition to NetBSD's version of UFS2 of support for extended attributes broke backward compatibility with previous releases of NetBSD, so UFS2 has been restored to being compatible with previous NetBSD releases by disabling extended attributes.	none
+V41.12.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“版本控制与移植工作流：CVS 连续性、autoconf 与新平台引入”；本节题为其下位论题	none
+V41.12.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.2.4	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	"Obvious" fixes can be committed without any prior discussion or review.	none
+V41.12.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“代码规范与移植纪律：KNF 与 MI／MD 书写的约束”；本节题为其下位论题	none
+V41.12.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.3.1	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/misc/style	联网	A	2026-10-30	* * from: @(#)style 1.12 (Berkeley) 3/18/94 */ /* * An indent(1) profile approximating the style outlined in * this document lives in /usr/share/misc/indent.pro.	none
+V41.12.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“代码规范与移植纪律：KNF 与 MI／MD 书写的约束”；本节题为其下位论题	none
+V41.12.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.3.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/misc/style	联网	A	2026-10-30	*/ /* * extern declarations must only appear in header files, not in .c * files, so the same declaration is used by the .c file defining it * and the .c file using it, giving the compiler the opportunity to * detect type errors.	none
+V41.12.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“代码规范与移植纪律：KNF 与 MI／MD 书写的约束”；本节题为其下位论题	none
+V41.12.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.3.3	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Do not mix functionality or bug-fix patches with whitespace/layout updates.	none
+V41.12.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“代码规范与移植纪律：KNF 与 MI／MD 书写的约束”；本节题为其下位论题	none
+V41.12.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.3.4	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/misc/style	联网	A	2026-10-30	It is a * useful tool to assist in converting code to KNF, but indent(1) * output generated using this profile must not be considered to * be an authoritative reference.	none
+V41.12.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“测试：atf 测试框架与回归测试”；本节题为其下位论题	none
+V41.12.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.4.1	官方站／手册页	https://man.netbsd.org/atf-test-case.4	联网	A	2026-10-30	A test case is defined by three components regardless of the language it is implemented in: a header, a body and a cleanup routine.	none
+V41.12.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“测试：atf 测试框架与回归测试”；本节题为其下位论题	none
+V41.12.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.4.2	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Run all relevant tests from /usr/tests or ideally the whole test suite.	none
+V41.12.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“测试：atf 测试框架与回归测试”；本节题为其下位论题	none
+V41.12.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.4.3	官方站／手册页	https://man.netbsd.org/atf-test-case.4	联网	A	2026-10-30	Given this, test cases are very fine-grained, but they attempt to group similar smaller tests which are semantically related.	none
+V41.12.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“测试：atf 测试框架与回归测试”；本节题为其下位论题	none
+V41.12.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.4.4	官方站／手册页	https://man.netbsd.org/atf.7	联网	A	2026-10-30	It also attempts to simplify the debugging of problems when these test cases detect an error by providing as much information as possible about the failure.	none
+V41.12.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“发布工程：正式发布、安装镜像与 release notes”；本节题为其下位论题	none
+V41.12.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.5.1	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	Useful after "distribution" or "release" kernel=conf Build kernel with config file `conf' kernel.gdb=conf Build kernel (including netbsd.gdb) with config file `conf' releasekernel=conf Install kernel built by kernel=conf to RELEASEDIR.	none
+V41.12.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“发布工程：正式发布、安装镜像与 release notes”；本节题为其下位论题	none
+V41.12.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.5.2	官方站／手册页	https://www.netbsd.org/docs/guide/en/chap-build.html	联网	A	2026-10-30	iso-image-source Create CD-ROM image with source in RELEASEDIR/images.	none
+V41.12.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“发布工程：正式发布、安装镜像与 release notes”；本节题为其下位论题	none
+V41.12.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	The current release has built upon the successful NetBSD 1.1 release by integrating many bug fixes, adding new and updated kernel subsystems, and adding various userland enhancements.	none
+V41.12.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“发布工程：正式发布、安装镜像与 release notes”；本节题为其下位论题	none
+V41.12.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.5.4	官方站／手册页	https://releng.netbsd.org/	联网	A	2026-10-30	Ticket Tracking for NetBSD 11 » Ticket Tracking for NetBSD 10	none
+V41.12.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 6 节“pkgsrc 的工程过程：批量构建与平台矩阵”；本节题为其下位论题	none
+V41.12.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.6.1	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	primary focus These platforms have many active users and active bulk builds.	none
+V41.12.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 6 节“pkgsrc 的工程过程：批量构建与平台矩阵”；本节题为其下位论题	none
+V41.12.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.6.2	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-30	Both big endian (eb) and little endian (el) MIPS and SH3 ports are supported	none
+V41.12.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 6 节“pkgsrc 的工程过程：批量构建与平台矩阵”；本节题为其下位论题	none
+V41.12.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.6.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/UPDATING	联网	A	2026-10-30	Symptom:undefined reference to `getprogname' or `setprogname' Fix: Rebuild and install lib/libc Symptom:Update build fails in src/tools/gcc complaining that a variable (e.g.	none
+V41.12.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 6 节“pkgsrc 的工程过程：批量构建与平台矩阵”；本节题为其下位论题	none
+V41.12.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.6.4	官方站／手册页	https://www.netbsd.org/releases/formal-6/NetBSD-6.0.html	联网	A	2026-10-30	With the release of NetBSD 6.0, the 6.0 Fund Drive targets raising 60,000 USD by the end of 2012.	none
+V41.12.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 7 节“文档工程：man 页一致性与 developer 文档”；本节题为其下位论题	none
+V41.12.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.7.1	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	If you changed a man page, make sure that groff/nroff creates the formatted man page you expect.	none
+V41.12.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 7 节“文档工程：man 页一致性与 developer 文档”；本节题为其下位论题	none
+V41.12.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.7.2	官方站／手册页	https://man.netbsd.org/intro.9	联网	A	2026-10-30	In addition to the normal man page format, the kernel pages include an additional section: CODE REFERENCES Contains the pathname(s) of the source file(s) which contain the definition and/or source code of the vari- ables or functions being documented.	none
+V41.12.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 7 节“文档工程：man 页一致性与 developer 文档”；本节题为其下位论题	none
+V41.12.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.7.3	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Clearly document the reasons for your changes in the commit log.	none
+V41.12.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 7 节“文档工程：man 页一致性与 developer 文档”；本节题为其下位论题	none
+V41.12.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.7.4	官方站／手册页	https://man.netbsd.org/make.1	联网	A	2026-10-30	For a more thorough description of make and makefiles, please refer to PMake - A Tutorial (from 1993).	none
+V41.12.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 8 节“跨项目工程流动：补丁互移与上游回馈”；本节题为其下位论题	none
+V41.12.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.8.1	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	If you took code from an other Open Source Project, give credit, like: "From FreeBSD" Do not revert other developer's commits.	none
+V41.12.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 8 节“跨项目工程流动：补丁互移与上游回馈”；本节题为其下位论题	none
+V41.12.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.8.2	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Also, "fixed some stuff" or "cvs-1.10.0" isn't informative whereas the following example is: "Print useful line number on error while executing .for directive." If your change fixes a PR, document it with an appropriate message.	none
+V41.12.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 8 节“跨项目工程流动：补丁互移与上游回馈”；本节题为其下位论题	none
+V41.12.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.8.3	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Code generated by a large language model or similar technology, such as GitHub/Microsoft's Copilot, OpenAI's ChatGPT, or Facebook/Meta's Code Llama, is presumed to be tainted code, and must not be committed without prior written approval by core.	none
+V41.12.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 8 节“跨项目工程流动：补丁互移与上游回馈”；本节题为其下位论题	none
+V41.12.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.8.4	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	If you do not agree with another developer's commit, do not revert it on your own.	none
+V41.12.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 9 节“NetBSD 的代码极简与美学：KNF、命名与接口取舍”；本节题为其下位论题	none
+V41.12.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.9.1	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/misc/style	联网	A	2026-10-30	Use `struct example' or * `struct example *' in the public API; that way, other header files * which declare functions or define struct or union types that involve * only pointers to `struct example' need not pull in unnecessary * header files.	none
+V41.12.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 9 节“NetBSD 的代码极简与美学：KNF、命名与接口取舍”；本节题为其下位论题	none
+V41.12.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.9.2	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/share/misc/style	联网	A	2026-10-30	Major structures should be declared at the top of the file in which they	none
+V41.12.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 9 节“NetBSD 的代码极简与美学：KNF、命名与接口取舍”；本节题为其下位论题	none
+V41.12.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.9.3	官方站／手册页	https://man.netbsd.org/intro.9	联网	A	2026-10-30	It describes function interfaces and variables of use to the systems and device driver programmer.	none
+V41.12.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 9 节“NetBSD 的代码极简与美学：KNF、命名与接口取舍”；本节题为其下位论题	none
+V41.12.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.12.9.4	官方站／手册页	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Do those separately (apart from the general requirement that changes be made in such a way that it is easy to discern what each fix did, as described in item 6, there will be pullup issues with largely changed files from trunk->branch when mixing whitespace with functionality fixes).	none
+V41.13.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“pkgsrc 与多语言打包生态”；本节题为其下位论题	none
+V41.13.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.1.1	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/creating.html	联网	A	2026-10-30	To be able to continue to use these packages, the GNOME 2 packages were imported as separate packages, and their names usually have a " 2 " appended.	none
+V41.13.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“pkgsrc 与多语言打包生态”；本节题为其下位论题	none
+V41.13.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.1.2	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/creating.html	联网	A	2026-10-30	Before GNOME 2 had been released, there were already many GNOME 1 packages in pkgsrc.	none
+V41.13.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“pkgsrc 与多语言打包生态”；本节题为其下位论题	none
+V41.13.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.1.3	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	If a package suggests to add USE_TOOLS+=perl to the package Makefile, research whether the package actually needs Perl.	none
+V41.13.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“pkgsrc 与多语言打包生态”；本节题为其下位论题	none
+V41.13.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.1.4	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/creating.html	联网	A	2026-10-30	If you just need binaries from a dependent package, add a DEPENDS line to the Makefile, which specifies the version of the dependency and where it can be found in pkgsrc.	none
+V41.13.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“pkgsrc 与多语言打包生态”；本节题为其下位论题	none
+V41.13.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.1.5	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/pkgsrc.html	联网	A	2026-10-30	Whenever you try to build a package whose license is not in this list, you will get an error message.	none
+V41.13.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“跨平台编译器移植史”；本节题为其下位论题	none
+V41.13.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.2.1	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	Miscellaneous NetBSD 2.0 supports a new toolchain based on gcc 3.3.3 and binutils 2.14.	none
+V41.13.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“跨平台编译器移植史”；本节题为其下位论题	none
+V41.13.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.2.2	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	Most of userland now compiles with high levels of gcc warnings turned on, which has lead to the discovery and elimination of many bugs.	none
+V41.13.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“跨平台编译器移植史”；本节题为其下位论题	none
+V41.13.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.2.3	官方站／手册页	https://raw.githubusercontent.com/NetBSD/src/trunk/UPDATING	联网	A	2026-10-30	20191022: Ports amd64 and aarch64 switched to GCC 8.3 by default.	none
+V41.13.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“跨平台编译器移植史”；本节题为其下位论题	none
+V41.13.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.2.4	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	gcc 3.3.3 adds support for a number of CPU targets and greatly improved support for i386 and other targets.	none
+V41.13.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“NetBSD 用户态的脚本语言演进”；本节题为其下位论题	none
+V41.13.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.3.1	官方站／手册页	https://www.netbsd.org/releases/formal-2.0/NetBSD-2.0.html	联网	A	2026-10-30	OpenOffice.org, Perl, Apache and many more	none
+V41.13.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“NetBSD 用户态的脚本语言演进”；本节题为其下位论题	none
+V41.13.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.3.2	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/using.html	联网	A	2026-10-30	The first is to only install the package tools and to use binary packages that someone else has prepared.	none
+V41.13.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“NetBSD 用户态的脚本语言演进”；本节题为其下位论题	none
+V41.13.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.3.3	官方站／手册页	https://www.pkgsrc.org/	联网	A	2026-10-30	23 September 2026 - pkgsrc-2026Q3 released	none
+V41.13.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“NetBSD 用户态的脚本语言演进”；本节题为其下位论题	none
+V41.13.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
+V41.13.3.4	官方站／手册页	https://www.netbsd.org/docs/pkgsrc/	联网	A	2026-10-30	It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure.	none

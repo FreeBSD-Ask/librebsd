@@ -1,0 +1,841 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V55.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Watson 等：CHERI／CheriBSD 研究论文群”；本节题为其下位论题	none
+V55.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.1.1	CHERI 项目主持人名单与所属机构	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	PIs: Robert N. M. Watson (University of Cambridge), Simon W. Moore (University of Cambridge), Peter Sewell (University of Cambridge), and Peter Neumann (SRI International)	none
+V55.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Watson 等：CHERI／CheriBSD 研究论文群”；本节题为其下位论题	none
+V55.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.1.2	An Introduction to CHERI 与 ISA 规范的关系	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	The authoritative reference to the CHERI Instruction-Set Architecture (ISA) is the ISA specification. This report is updated intermittently to reflect ongoing research into the CHERI approach; the current version, released in June 2019, is version 7	none
+V55.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Watson 等：CHERI／CheriBSD 研究论文群”；本节题为其下位论题	none
+V55.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.1.3	CHERI 项目性质界定	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	CHERI is a hardware/software/semantics co-design project, combining hardware implementation, adaption of mainstream software stacks, and formal semantics and proof.	none
+V55.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Watson 等：CHERI／CheriBSD 研究论文群”；本节题为其下位论题	none
+V55.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.1.4	CHERI 形式化工作的定位	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	Formal modeling and verification has been an essential part of both the practical day-to-day aspects of developing CHERI, as well as an essential longer-term argument for its security and maintainability.	none
+V55.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Watson 等：CHERI／CheriBSD 研究论文群”；本节题为其下位论题	none
+V55.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.1.5	CHERI 原型软件栈的组成	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	We have prototyped a complete software stack for CHERI by adapting widely used open-source software such as Clang/LLVM, FreeBSD, FreeRTOS, and applications such as WebKit, OpenSSH, and PostgreSQL.	none
+V55.1.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“Watson 等：CHERI／CheriBSD 研究论文群”；本节题为其下位论题	none
+V55.1.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.1.6	Arm Morello 公布与 CHERI 的关系	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	On 17 October 2019, Arm announced the Morello board, an experimental CPU, SoC, and board integrating CHERI support into an ARMv8-A baseline system.	none
+V55.1.1.6	CHERI 所针对的架构序列	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	The CHERI ideas have been developed first as a modification to 64-bit MIPS and now also for 32/64-bit RISC-V and 64-bit ARMv8-A.	none
+V55.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 基金会报告中的研究记述”；本节题为其下位论题	none
+V55.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.2.1	FreeBSD 2024 年第四季度状态报告的条目数	https://www.freebsd.org/status/report-2024-10-2024-12/	联网	A	2026-10-30	Here is the fourth and last 2024 status report, with 44 entries.	none
+V55.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 基金会报告中的研究记述”；本节题为其下位论题	none
+V55.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.2.2	基金会 2025 年第一季度人力配置数字	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	Foundation employees: 7	none
+V55.1.2.2	基金会承包者人数	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	Foundation contractors: 19	none
+V55.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 基金会报告中的研究记述”；本节题为其下位论题	none
+V55.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.2.3	基金会季度更新的按数字统计	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	Here is a snapshot of what we worked on last quarter, by the numbers:	none
+V55.1.2.3	在研项目数与提交数	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	Active software development projects: 20+	none
+V55.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 基金会报告中的研究记述”；本节题为其下位论题	none
+V55.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.2.4	带赞助标识的提交在三树中的分布	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	Overall, there were 346 `src`, 96 `ports`, and 14 `doc` tree commits identifying the FreeBSD Foundation as a sponsor.	none
+V55.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 基金会报告中的研究记述”；本节题为其下位论题	none
+V55.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.2.5	基金会财务公开文件清单	https://freebsdfoundation.org/about-us/about-the-foundation/financials/	联网	A	2026-10-30	2025 Budget Summary	none
+V55.1.2.5	基金会年度损益表	https://freebsdfoundation.org/about-us/about-the-foundation/financials/	联网	A	2026-10-30	2025 Profit & Loss Report	none
+V55.1.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 基金会报告中的研究记述”；本节题为其下位论题	none
+V55.1.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.2.6	笔记本支持项目的预算与周期	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	It has a budget of $750,000, which will be used over one to two years.	none
+V55.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSDCan／EuroBSDCon 研究论文线”；本节题为其下位论题	none
+V55.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.3.1	EuroBSDCon 首届会期地点与原名	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	The inaugural conference (EuroBSDCon) was organized in 2001, November 9th till 11th, under the name BSDCon Europe 2001. It was held at the Thistle Hotel in Brighton (UK).	none
+V55.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSDCan／EuroBSDCon 研究论文线”；本节题为其下位论题	none
+V55.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.3.2	BSDCan 2004 参会人数与会期	https://www.bsdcan.org/2004/index.html	联网	A	2026-10-30	We had 156 people attend the conference.	none
+V55.1.3.2	BSDCan 2004 会期与场地	https://www.bsdcan.org/2004/index.html	联网	A	2026-10-30	May 13-16, 2004	none
+V55.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSDCan／EuroBSDCon 研究论文线”；本节题为其下位论题	none
+V55.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.3.3	BSDCon Europe 与 EuroBSDCon 的名称沿革	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	The inaugural conference (EuroBSDCon) was organized in 2001, November 9th till 11th, under the name BSDCon Europe 2001.	none
+V55.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSDCan／EuroBSDCon 研究论文线”；本节题为其下位论题	none
+V55.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.3.4	EuroBSDCon 首届征会宗旨原文	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	The aim of the conference is to provide a focal point for European users and developers of all the BSD derived operating systems.	none
+V55.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSDCan／EuroBSDCon 研究论文线”；本节题为其下位论题	none
+V55.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.3.5	2025 年开发者峰会与 BSDCan 的合办安排	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	Began planning the June 2025 FreeBSD Developer Summit, taking place June 11-12, 2025, co-located with BSDCan 2025	none
+V55.1.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSDCan／EuroBSDCon 研究论文线”；本节题为其下位论题	none
+V55.1.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.3.6	BSDCan 2004 的会议定位自述	https://www.bsdcan.org/2004/index.html	联网	A	2026-10-30	BSDCan 2004 was a hugely technical conference for people working on 4.4BSD based operating systems and related projects.	none
+V55.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“安全审计与形式化方法论文群”；本节题为其下位论题	none
+V55.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.4.1	Coverity 向基金会提供许可的公告	https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-newsletter-december-23-2005-2/	联网	A	2026-10-30	The Foundation has provided a machine to run the software. And, ISC has generously provided co-location space for us.	none
+V55.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“安全审计与形式化方法论文群”；本节题为其下位论题	none
+V55.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.4.2	Coverity Prevent 的缺陷类别数与命中比例	https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-newsletter-december-23-2005-2/	联网	A	2026-10-30	Coverity Prevent detects over 30 different categories of flaws by simulating each program path in a finite state machine.	none
+V55.1.4.2	所报缺陷为真实缺陷的比例	https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-newsletter-december-23-2005-2/	联网	A	2026-10-30	approximately 80% of the results that it reports are flaws in the code that, if executed, would have effects ranging from system crashes to performance degradation to security vulnerabilities.	none
+V55.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“安全审计与形式化方法论文群”；本节题为其下位论题	none
+V55.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.4.3	静态分析研发方向中的并发缺陷类别	https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-newsletter-december-23-2005-2/	联网	A	2026-10-30	detecting concurrency issues, including missing unlocks, double locks, and inconsistent lock ordering	none
+V55.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“安全审计与形式化方法论文群”；本节题为其下位论题	none
+V55.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.4.4	CHERI 形式化工作说明	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	Formal modeling and verification has been an essential part of both the practical day-to-day aspects of developing CHERI, as well as an essential longer-term argument for its security and maintainability.	none
+V55.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“安全审计与形式化方法论文群”；本节题为其下位论题	none
+V55.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.4.5	CHERI 形式化论文的会议出处	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-publications.html	联网	A	2026-10-30	In Proceedings of the 41st IEEE Symposium on Security and Privacy (Oakland 2020). San Jose, CA, USA, May 18-20, 2020.	none
+V55.1.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“安全审计与形式化方法论文群”；本节题为其下位论题	none
+V55.1.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.1.4.6	2024 年 Capsicum 与 bhyve 审计的委托方	https://www.freebsd.org/status/report-2024-10-2024-12/	联网	A	2026-10-30	Shared the FreeBSD Foundation 2024 Report on the Security Audit of the Capsicum and bhyve subsystems.	none
+V55.1.4.6	审计的出资方	https://www.freebsd.org/status/report-2024-10-2024-12/	联网	A	2026-10-30	FreeBSD Foundation Releases Bhyve and Capsicum Security Audit Funded by Alpha-Omega Project	none
+V55.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“McKusick、Neville-Neil 与 Watson：《FreeBSD 操作系统设计与实现》”；本节题为其下位论题	none
+V55.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.1.1	第二版相对首版的改写比例	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	Approximately one-third of this edition’s content is completely new, and another one-third has been extensively rewritten.	none
+V55.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“McKusick、Neville-Neil 与 Watson：《FreeBSD 操作系统设计与实现》”；本节题为其下位论题	none
+V55.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.1.2	出版社对三位作者的定位	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	Three long-time FreeBSD project leaders begin with a concise overview of the FreeBSD kernel’s current design and implementation.	none
+V55.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“McKusick、Neville-Neil 与 Watson：《FreeBSD 操作系统设计与实现》”；本节题为其下位论题	none
+V55.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.1.3	第二版发行日	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	Published Sep 5, 2014  by Addison-Wesley Professional.	none
+V55.2.1.3	第二版版权年	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	Copyright 2015	noted
+V55.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“McKusick、Neville-Neil 与 Watson：《FreeBSD 操作系统设计与实现》”；本节题为其下位论题	none
+V55.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.1.4	第二版所覆盖的内核子系统	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	Explaining key design decisions, they detail the concepts, data structures, and algorithms used in implementing each significant system facility, including process management, security, virtual memory, the I/O system, filesystems, socket IPC, and networking.	none
+V55.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“McKusick、Neville-Neil 与 Watson：《FreeBSD 操作系统设计与实现》”；本节题为其下位论题	none
+V55.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.1.5	麦库西克的实现经历	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	While at the University of California, Berkeley, he implemented the 4.2BSD fast filesystem. He was research computer scientist at the Berkeley Computer Systems Research Group (CSRG), overseeing development and release of 4.3BSD and 4.4BSD.	none
+V55.2.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“McKusick、Neville-Neil 与 Watson：《FreeBSD 操作系统设计与实现》”；本节题为其下位论题	none
+V55.2.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.1.6	该书的用途定位	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	Readers can use this guide as both a working reference and an in-depth study of a leading contemporary, portable, open source operating system.	none
+V55.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Coleman：《Coding Freedom》（2012）”；本节题为其下位论题	none
+V55.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.2.1	该书的题名与出版社年份	https://gabriellacoleman.org/index.html	联网	A	2026-10-30	Coding Freedom: The Ethics and Aesthetics of Hacking (Princeton University Press, 2012)	noted
+V55.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Coleman：《Coding Freedom》（2012）”；本节题为其下位论题	none
+V55.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.2.2	作者的学科取向	https://gabriellacoleman.org/index.html	联网	A	2026-10-30	Her scholarship covers the politics, cultures, and ethics of hacking.	none
+V55.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Coleman：《Coding Freedom》（2012）”；本节题为其下位论题	none
+V55.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.2.3	大纲对该书对象界的限缩	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	2.2／2.3 为开源研究的相邻文献，非 BSD 研究文献；二书与 BSD 的可证关联须在正文交代，否则移出对象界（对象界定见第 9 章）	none
+V55.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Coleman：《Coding Freedom》（2012）”；本节题为其下位论题	none
+V55.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.2.4	作者的博士训练年份与学科	https://gabriellacoleman.org/index.html	联网	A	2026-10-30	In 2005, she received her Ph.D. in Socio-cultural Anthropology from the University of Chicago.	none
+V55.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Coleman：《Coding Freedom》（2012）”；本节题为其下位论题	none
+V55.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.2.5	作者两本专著的序列	https://gabriellacoleman.org/index.html	联网	A	2026-10-30	She is the author of two books on computer hackers: Coding Freedom: The Ethics and Aesthetics of Hacking (Princeton University Press, 2012) and Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous (Verso, 2014)	none
+V55.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Eghbal：《Working in Public》（2020）”；本节题为其下位论题	none
+V55.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.3.1	作者 2016 年报告的研究范围	https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/	联网	A	2026-10-30	In this extensive report, published with support from the Ford Foundation in 2016, writer and investor Nadia Eghbal explores the lack of institutional support for public code.	none
+V55.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Eghbal：《Working in Public》（2020）”；本节题为其下位论题	none
+V55.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.3.2	公共代码维护者的劳动性质	https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/	联网	A	2026-10-30	However, few realize that public code is built and maintained almost exclusively by unpaid volunteers, and the enormous amount of work required is in desperate need of institutional support.	none
+V55.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Eghbal：《Working in Public》（2020）”；本节题为其下位论题	none
+V55.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.3.3	数字基础设施的现行资助形式	https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/	联网	A	2026-10-30	Current business models for digital infrastructure include “bounties” from companies or individuals, sponsorships or donations.	none
+V55.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Eghbal：《Working in Public》（2020）”；本节题为其下位论题	none
+V55.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.3.4	作者的机构任职与转向	https://nadiaeghbal.com/	联网	A	2026-10-30	I recently decided to wrap up my time at Protocol Labs, and along with it, my time in open source research.	none
+V55.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Eghbal：《Working in Public》（2020）”；本节题为其下位论题	none
+V55.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.3.5	大纲对该书出版信息的登记	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	一手：Stripe Press《Working in Public: The Making and Maintenance of Open Source Software》（2020，ISBN 9780578675862）；体例注：作者后更名 Nadia Asparouhova（同书）	noted
+V55.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Lucas：《Absolute FreeBSD》等技术著作”；本节题为其下位论题	none
+V55.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.4.1	第三版的出版月与页数	https://nostarch.com/absfreebsd3	联网	A	2026-10-30	October 2018, 704 pp.	none
+V55.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Lucas：《Absolute FreeBSD》等技术著作”；本节题为其下位论题	none
+V55.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.4.2	该书的读者前提	https://nostarch.com/absfreebsd3	联网	A	2026-10-30	Any computer system is only as good as the system administrator’s knowledge.	none
+V55.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Lucas：《Absolute FreeBSD》等技术著作”；本节题为其下位论题	none
+V55.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.4.3	作者的系列著作	https://nostarch.com/absfreebsd3	联网	A	2026-10-30	Lucas is the author of the critically-acclaimed Absolute BSD, Absolute OpenBSD, Cisco Routers for the Desperate, and PGP & GPG, all from No Starch Press.	none
+V55.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Lucas：《Absolute FreeBSD》等技术著作”；本节题为其下位论题	none
+V55.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.4.4	该书的组织原则	https://nostarch.com/absfreebsd3	联网	A	2026-10-30	A cohesive focus on service delivery and best practice means that you can apply much of the book to other operating systems.	none
+V55.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Lucas：《Absolute FreeBSD》等技术著作”；本节题为其下位论题	none
+V55.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.4.5	该书的运维章目	https://nostarch.com/absfreebsd3	联网	A	2026-10-30	Container-style virtualization with jails	none
+V55.2.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Lucas：《Absolute FreeBSD》等技术著作”；本节题为其下位论题	none
+V55.2.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.2.4.6	第二版出版年月的两说	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第二版（No Starch Press，ISBN 978-1-59327-151-0，744 页；出版年月两说——No Starch 官方页作 2008-11，零售平台与书目作 2007-09/11，并陈）	noted
+V55.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“《FreeBSD Journal》的研究文章线”；本节题为其下位论题	none
+V55.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.1.1	编委会主席与成员	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	John Baldwin	none
+V55.3.1.1	编委会主席的职务说明	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	FreeBSD Developer and Chair of the FreeBSD Journal Editorial Board.	none
+V55.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“《FreeBSD Journal》的研究文章线”；本节题为其下位论题	none
+V55.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.1.2	刊物年度选题排期	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	Laptop/Desktop (January/February/March)	none
+V55.3.1.2	编务日历的年度标识	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	2026 Editorial Calendar	none
+V55.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“《FreeBSD Journal》的研究文章线”；本节题为其下位论题	none
+V55.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.1.3	刊物发行模式的变更	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	The FreeBSD Journal is a free publication. Read more in the FAQ about our reasons for moving to a free subscription model.	none
+V55.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“《FreeBSD Journal》的研究文章线”；本节题为其下位论题	none
+V55.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.1.4	刊物的出版方与首期	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	首期 2014 年 1／2 月号（FreeBSD 基金会 30 年时间线载）；刊头 ISBN 978-0-615-88479-0，出版方 FreeBSD 基金会（Boulder, CO）	none
+V55.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“《FreeBSD Journal》的研究文章线”；本节题为其下位论题	none
+V55.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.1.5	顾问委员会的成员来源	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	Founder of the FreeBSD Foundation, President of the FreeBSD Foundation Board, and a Software Engineer at Facebook.	none
+V55.3.1.5	顾问名单中的企业技术负责人	https://freebsdfoundation.org/our-work/journal/	联网	A	2026-10-30	CTO at Klara Inc., the global FreeBSD Professional Services and Support company	none
+V55.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Phoronix 与技术媒体的 BSD 研究报道”；本节题为其下位论题	none
+V55.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.2.1	BSD 栏目的档案结构	https://www.phoronix.com/linux/BSD	联网	A	2026-10-30	BSD News Archives	none
+V55.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Phoronix 与技术媒体的 BSD 研究报道”；本节题为其下位论题	none
+V55.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.2.2	版本发布类条目的写法	https://www.phoronix.com/linux/BSD	联网	A	2026-10-30	For those that haven't yet made the move to FreeBSD 15 with still relying on FreeBSD 14 in production, out today is FreeBSD 14.5-RELEASE.	none
+V55.3.2.2	同一版本的候选版条目	https://www.phoronix.com/linux/BSD	联网	A	2026-10-30	Ahead of FreeBSD 14.5-RELEASE hopefully debuting on 8 September, FreeBSD 14.5-RC1 is out today as the final scheduled development release.	none
+V55.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Phoronix 与技术媒体的 BSD 研究报道”；本节题为其下位论题	none
+V55.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.2.3	文件系统项目的报道	https://www.phoronix.com/linux/BSD	联网	A	2026-10-30	GEFS is a crash-safe, snapshotting, copy-on-write file-system that he wrote initially for 9front and now porting to OpenBSD.	none
+V55.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Phoronix 与技术媒体的 BSD 研究报道”；本节题为其下位论题	none
+V55.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.2.4	发行要点的指标化表述	https://www.phoronix.com/linux/BSD	联网	A	2026-10-30	OpenBSD 7.9 Released With Support For Up To 255 x86_64 CPU Cores, WiFi 6	none
+V55.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Phoronix 与技术媒体的 BSD 研究报道”；本节题为其下位论题	none
+V55.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.2.5	NetBSD 稳定支末版的报道	https://www.phoronix.com/linux/BSD	联网	A	2026-10-30	NetBSD 9.5 released today as the final release of the NetBSD 9 stable branch.	none
+V55.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“LWN 的 BSD 系列文章”；本节题为其下位论题	none
+V55.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.3.1	季报在该站的呈现形式	https://lwn.net/Articles/1059924/	联网	A	2026-10-30	To : freebsd-announce-AT-freebsd.org	none
+V55.3.3.1	转载文的邮件头字段	https://lwn.net/Articles/1059924/	联网	A	2026-10-30	Message-ID : <aZxl6c6Bz5yjQ3wO@freefall.freebsd.org>	none
+V55.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“LWN 的 BSD 系列文章”；本节题为其下位论题	none
+V55.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.3.2	季度报告的条目数	https://lwn.net/Articles/1059924/	联网	A	2026-10-30	Here is the fourth 2025 status report, with 28 entries.	none
+V55.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“LWN 的 BSD 系列文章”；本节题为其下位论题	none
+V55.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.3.3	报告截稿规则的变更	https://lwn.net/Articles/1059924/	联网	A	2026-10-30	Starting from next quarter, report submission will have a deadline on the 14th of the first month past the end of quarter and this deadline will be actually enforced for everyone, including committers and teams.	none
+V55.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“LWN 的 BSD 系列文章”；本节题为其下位论题	none
+V55.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.3.4	该站 BSD 内容的检索入口	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：LWN 无专设 BSD 栏目页，以主题检索为据	none
+V55.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“LWN 的 BSD 系列文章”；本节题为其下位论题	none
+V55.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.3.5	报告落款的署名方式	https://lwn.net/Articles/1059924/	联网	A	2026-10-30	Lorenzo Salvadore, on behalf of Status Team	none
+V55.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“基金会年报的叙述研究”；本节题为其下位论题	none
+V55.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.4.1	基金会公开的年度账目	https://freebsdfoundation.org/about-us/about-the-foundation/financials/	联网	A	2026-10-30	2025 Budget Summary	none
+V55.3.4.1	年度损益表	https://freebsdfoundation.org/about-us/about-the-foundation/financials/	联网	A	2026-10-30	2025 Profit & Loss Report	none
+V55.3.4.1	年度资产负债表	https://freebsdfoundation.org/about-us/about-the-foundation/financials/	联网	A	2026-10-30	2024 Balance Sheet	none
+V55.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“基金会年报的叙述研究”；本节题为其下位论题	none
+V55.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.4.2	基金会的法人身份与资金来源	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	The FreeBSD Foundation is a 501(c)(3) non-profit organization dedicated to advancing FreeBSD through technical and non-technical support. Funded entirely by donations, the Foundation supports software development, infrastructure, security, and collaboration efforts; organizes events and developer summits; provides educational resources; and represents the FreeBSD Project in legal matters.	none
+V55.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“基金会年报的叙述研究”；本节题为其下位论题	none
+V55.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.4.3	OpenBSD 基金会的法人性质	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	We are a Canadian federally incorporated not-for-profit corporation, which means funds directed to us must be directed towards our stated objects, other than what we require for operating overhead.	none
+V55.3.4.3	不注册慈善机构的原因	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	The reporting overhead (accounting and legal costs) to operate a registered charity in Canada is prohibitive without a sizable revenue stream.	none
+V55.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“基金会年报的叙述研究”；本节题为其下位论题	none
+V55.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.4.4	活动页的年度罗列方式	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded developer expenses for: p2k25: ports hackathon, Sep 12 - Sep 19, 2025, Ottery St. Mary, England	none
+V55.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“基金会年报的叙述研究”；本节题为其下位论题	none
+V55.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.3.4.5	年度募捐总额	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The Foundation received $380,653 in new donations during its 2024 fund raising campaign.	none
+V55.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“;login： 的当代 BSD 报道”；本节题为其下位论题	none
+V55.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.1.1	刊物的形态沿革	https://www.usenix.org/publications/login	联网	A	2026-10-30	For over 20 years, ;login: was a print magazine with a digital version; in the two decades previous, it was USENIX’s newsletter, UNIX News.	none
+V55.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“;login： 的当代 BSD 报道”；本节题为其下位论题	none
+V55.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.1.2	刊物转为数字出版的年份	https://www.usenix.org/publications/login	联网	A	2026-10-30	In 2021, ;login: changed from a formally published print magazine with a digital version to a fully open-access digital-only publication.	none
+V55.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“;login： 的当代 BSD 报道”；本节题为其下位论题	none
+V55.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.1.3	线上刊的停刊年	https://www.usenix.org/publications/login	联网	A	2026-10-30	In 2025, ;login: Online concluded publication.	none
+V55.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“;login： 的当代 BSD 报道”；本节题为其下位论题	none
+V55.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.1.4	改版时点的两说	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	改版两说并陈——2020 宣布、2021 生效（官方 2021 年会报告），另载 ;login: Online 2025 年终止	noted
+V55.4.1.4	协会自述的改版年	https://www.usenix.org/publications/login	联网	A	2026-10-30	to a fully open-access digital-only publication	none
+V55.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“;login： 的当代 BSD 报道”；本节题为其下位论题	none
+V55.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.1.5	刊物的国际标准刊号	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	USENIX《;login:》（ISSN 1044-6397）2010s BSD 文章与改版记录	none
+V55.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“USENIX／atc 与 OSDI 中的 BSD 研究”；本节题为其下位论题	none
+V55.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.2.1	netmap 论文的获奖与页码	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	Awarded Best Paper!	none
+V55.4.2.1	会议录所记页码	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	pages = {101--112}	noted
+V55.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“USENIX／atc 与 OSDI 中的 BSD 研究”；本节题为其下位论题	none
+V55.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.2.2	netmap 的实现平台	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	netmap has been implemented in FreeBSD and Linux for several 1 and 10 Gbit/s network adapters.	none
+V55.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“USENIX／atc 与 OSDI 中的 BSD 研究”；本节题为其下位论题	none
+V55.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.2.3	大页论文的实现平台	https://www.usenix.org/legacy/publications/library/proceedings/osdi02/tech/full_papers/navarro/navarro.pdf	联网	A	2026-10-30	We implement it in FreeBSD on the Alpha CPU, and evaluate it on real workloads and benchmarks.	none
+V55.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“USENIX／atc 与 OSDI 中的 BSD 研究”；本节题为其下位论题	none
+V55.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.2.4	OSDI 1999 的 IO-Lite 篇目	https://www.usenix.org/legacy/event/osdi99/technical.html	联网	A	2026-10-30	IO-Lite: A Unified I/O Buffering and Caching System Vivek S. Pai, Peter Druschel, Willy Zwaenepoel, Rice University	none
+V55.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“USENIX／atc 与 OSDI 中的 BSD 研究”；本节题为其下位论题	none
+V55.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.2.5	netmap 作者机构	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	Luigi Rizzo, Università di Pisa, Italy	none
+V55.4.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“USENIX／atc 与 OSDI 中的 BSD 研究”；本节题为其下位论题	none
+V55.4.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.2.6	协会的开放获取承诺	https://www.usenix.org/conference/atc12/technical-sessions/presentation/rizzo	联网	A	2026-10-30	USENIX is committed to Open Access to the research presented at our events. Papers and proceedings are freely available to everyone once the event begins.	none
+V55.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“IEEE Software 等期刊的 BSD 主题”；本节题为其下位论题	none
+V55.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.3.1	比较论文的卷期与页码	https://www.computer.org/csdl/magazine/co/2018/02/mco2018020044/13rRUB6SpVV	联网	A	2026-10-30	Feb. 2018, pp. 44-53, vol. 51	none
+V55.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“IEEE Software 等期刊的 BSD 主题”；本节题为其下位论题	none
+V55.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.3.2	论文的比较框架	https://www.computer.org/csdl/magazine/co/2018/02/mco2018020044/13rRUB6SpVV	联网	A	2026-10-30	FreeBSD implements a traditional compact monolithic Unix kernel, whereas Mac OS builds the BSD Unix functionality on top of the Mach microkernel.	none
+V55.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“IEEE Software 等期刊的 BSD 主题”；本节题为其下位论题	none
+V55.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.3.3	论文作者机构	https://www.computer.org/csdl/magazine/co/2018/02/mco2018020044/13rRUB6SpVV	联网	A	2026-10-30	Technology Education Institute of Eastern Macedonia and Thrace	none
+V55.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“IEEE Software 等期刊的 BSD 主题”；本节题为其下位论题	none
+V55.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.3.4	论文所引内核教材	https://www.computer.org/csdl/magazine/co/2018/02/mco2018020044/13rRUB6SpVV	联网	A	2026-10-30	M.K. McKusick, G.V. Neville-Neil, and Robert N.M. Watson, The Design and Implementation of the FreeBSD Operating System, 2nd ed., Addison-Wesley Professional, 2014.	none
+V55.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“IEEE Software 等期刊的 BSD 主题”；本节题为其下位论题	none
+V55.4.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.3.5	计算史专刊的取证边界	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：IEEE Annals 的 BSD 专题未获一手，标此边界	noted
+V55.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“中文学术语境中的 BSD 研究”；本节题为其下位论题	none
+V55.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.4.1	中文期刊库的取证状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	未获一手——CNKI 域 BSD 专题未获一手；替代可回溯者：arXiv 1512.06908（面向多核架构的操作系统可扩展性研究，含 FreeBSD）、《开源软件文集》（中国电力出版社，ISBN 9787508301983）、freebsd-journal-cn.bsdcn.org 译刊；如实用替代并明标	noted
+V55.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“中文学术语境中的 BSD 研究”；本节题为其下位论题	none
+V55.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.4.2	预印本 1512.06908 的作者与摘要	https://arxiv.org/abs/1512.06908	联网	A	2026-10-30	Large number of cores and hardware resource sharing are two characteristics on multicore processors, which bring new challenges for the design of operating systems.	none
+V55.4.4.2	预印本的作者与提交日	https://arxiv.org/abs/1512.06908	联网	A	2026-10-30	Submitted on 21 Dec 2015	none
+V55.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“中文学术语境中的 BSD 研究”；本节题为其下位论题	none
+V55.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.4.3	预印本摘要所述对象	https://arxiv.org/abs/1512.06908	联网	A	2026-10-30	how to simulate and avoid the phenomenon that speedup decreases with the number of cores because of lock contention (i.e., lock thrashing)	noted
+V55.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“中文学术语境中的 BSD 研究”；本节题为其下位论题	none
+V55.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.4.4	中文译刊的载体	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	freebsd-journal-cn.bsdcn.org 译刊	none
+V55.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“中文学术语境中的 BSD 研究”；本节题为其下位论题	none
+V55.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.4.4.5	中文文集的著录信息	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	《开源软件文集》（中国电力出版社，ISBN 9787508301983）	none
+V55.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“当代核心开发者的口述与访谈文献”；本节题为其下位论题	none
+V55.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.1.1	早期访谈播客的期号	https://bsdtalk.blogspot.com/2006/02/bsdtalk018-interview-with-kirk.html	联网	A	2026-10-30	bsdtalk018 - Interview with Kirk McKusick	none
+V55.5.1.1	周播节目的访谈定位	https://www.bsdnow.tv/	联网	A	2026-10-30	we cover the latest news and have an extensive series of tutorials, as well as interviews with various people from all areas of the BSD community.	none
+V55.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“当代核心开发者的口述与访谈文献”；本节题为其下位论题	none
+V55.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.1.2	博物馆目录的检索结果	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	经 CHM 目录与口述史索引检索，CHM 无 McKusick 口述史（有其捐赠批次 X7878.2017 藏目，勿与口述史混同）	noted
+V55.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“当代核心开发者的口述与访谈文献”；本节题为其下位论题	none
+V55.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.1.3	访谈所涉议题	https://www.bsdnow.tv/278	联网	A	2026-10-30	We sat down at BSDCan 2018 to interview Kirk McKusick about various topics ranging about the early years of Berkeley Unix, his continuing work on UFS, the governance of FreeBSD, and more.	none
+V55.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“当代核心开发者的口述与访谈文献”；本节题为其下位论题	none
+V55.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.1.4	节目的内容构成	https://www.bsdnow.tv/	联网	A	2026-10-30	Our show aims to be helpful and informative for new users that want to learn about them, but still be entertaining for the people who are already pros.	none
+V55.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“当代核心开发者的口述与访谈文献”；本节题为其下位论题	none
+V55.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.1.5	早期访谈的受访者身份	https://bsdtalk.blogspot.com/2006/02/bsdtalk018-interview-with-kirk.html	联网	A	2026-10-30	Interview with Marshall Kirk McKusick, Computer Scientist and early BSD developer at UC Berkeley.	none
+V55.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“基金会人物与治理研究传记”；本节题为其下位论题	none
+V55.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.2.1	首位雇员的入职时间	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	In 2005, the FreeBSD Foundation hired its first employee, Deb Goodkin, who came to the Foundation with a strong technical background of 20 years in storage development	none
+V55.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“基金会人物与治理研究传记”；本节题为其下位论题	none
+V55.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.2.2	基金会的创立者与年月	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	Founded as a 501(c)(3) non-profit organization by early FreeBSD developer Justin Gibbs in March 2000	none
+V55.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“基金会人物与治理研究传记”；本节题为其下位论题	none
+V55.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.2.3	志愿董事会期间的作为	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	From 2000 to 2005, FreeBSD Foundation activities were managed by its board of directors comprised of volunteers, including Gibbs. During this time, FreeBSD partnered with Sun Microsystems to license FreeBSD Java binaries, funded early work on network scalability for SMP systems, and fostered BSD conferences.	none
+V55.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“基金会人物与治理研究传记”；本节题为其下位论题	none
+V55.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.2.4	执行董事的职务延续	https://freebsdfoundation.org/about-us/our-team/	联网	A	2026-10-30	Deb has been with the Foundation since August, 2005.	none
+V55.5.2.4	任内所建制度	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	Goodkin has been instrumental in creating policies and a corporate structure to ensure that as volunteers, board members and staff change, the FreeBSD Foundation continues to thrive and support the FreeBSD Project.	none
+V55.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“基金会人物与治理研究传记”；本节题为其下位论题	none
+V55.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.2.5	专职团队的分工	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	The FreeBSD Foundation has added Senior Software Developer Konstantin Belousov, Director of Project Development Ed Maste, Software Engineer Li-Wen Hsu, Marketing Director Anne Dickison, and Administrator Manager Loren Gurkowski to the full-time team.	none
+V55.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
+V55.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.3.1	规模增长对维护者的压力	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	As the number of patches and authors significantly increases, maintainers come under considerable pressure, which may hinder the operation and even the sustainability of the community.	none
+V55.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
+V55.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.3.2	维护者的流程角色	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	In the traditional workflow, maintainers serve as "gatekeepers" for the subsystems that they maintain.	none
+V55.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
+V55.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.3.3	访谈的代际线索	https://www.bsdnow.tv/278	联网	A	2026-10-30	How the code and community grew	none
+V55.5.3.3	领导层变迁的访谈议题	https://www.bsdnow.tv/278	联网	A	2026-10-30	The leadership of the project, and how it changed over time	none
+V55.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
+V55.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.3.4	代际记述的取证状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：代际“老一代／新一代”学术记述未获一手，本节以口述史料为据并标边界	noted
+V55.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
+V55.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.3.5	当前主持人名单	https://www.bsdnow.tv/	联网	A	2026-10-30	JT Pennington	noted
+V55.5.3.5	创始主持的记载	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	BSD Now（2013 起，Allan Jude 与 Kris Moore）	noted
+V55.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD 人物考订的代理指标边界”；本节题为其下位论题	none
+V55.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.4.1	多重提交者模型的四项维度	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	We explore the effect of the model on the i915 subsystem with respect to four dimensions: pressure, latency, complexity, and quality assurance.	none
+V55.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD 人物考订的代理指标边界”；本节题为其下位论题	none
+V55.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.4.2	候选提交者的定位方法	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	We employ a network analysis approach to locate candidate committers for the target subsystems	none
+V55.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD 人物考订的代理指标边界”；本节题为其下位论题	none
+V55.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.4.3	模型的适用条件	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	we propose that overloaded subsystems which have trustworthy candidate committers are suitable for adopting the model	none
+V55.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD 人物考订的代理指标边界”；本节题为其下位论题	none
+V55.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.4.4	研究的自我定位	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	To the best of our knowledge, this is the first study focusing on how to scale open source communities.	none
+V55.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD 人物考订的代理指标边界”；本节题为其下位论题	none
+V55.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.5.4.5	本节的方法面定位	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：本节立“代理指标边界”方法面，非 BSD 专属研究	noted
+V55.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FreeBSD 基金会的学术建制面”；本节题为其下位论题	none
+V55.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.1.1	基金会的创立时间与法人形式	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	Founded as a 501(c)(3) non-profit organization by early FreeBSD developer Justin Gibbs in March 2000	none
+V55.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FreeBSD 基金会的学术建制面”；本节题为其下位论题	none
+V55.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.1.2	基金会会址的两处记载	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	现址 3980 Broadway St. STE #103-107, Boulder, CO（旧载 5757 Central Ave.）	noted
+V55.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FreeBSD 基金会的学术建制面”；本节题为其下位论题	none
+V55.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.1.3	捐款的用途划分	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	Funding comes from individual and corporate donations and is used to fund development projects; support infrastructure; improve test coverage, continuous integration and automation; sponsor community engagement; and advocate for the Project.	none
+V55.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FreeBSD 基金会的学术建制面”；本节题为其下位论题	none
+V55.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.1.4	会议资助的起始与范围	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	The Foundation began funding travel grants in 2004 for developers to attend BSD-related events. In addition to sponsoring AsiaBSDcon, BSD Sig at USENIX Annual Technical Conference and EuroBSDcon, the FreeBSD Foundation also held its first workshops in Tonga in 2018 and Australia in 2020.	none
+V55.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“FreeBSD 基金会的学术建制面”；本节题为其下位论题	none
+V55.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.1.5	首个合作开发项目	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	in 2006 participated in its first collaborative development project, the Network Stack Virtualization Project, allowing for complete networking independence between jails on a system, including giving each jail its own firewall, virtual network interfaces, rate limiting, routing tables, and IPSEC configuration.	none
+V55.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“NetBSD 基金会／OpenBSD 支持组织研究”；本节题为其下位论题	none
+V55.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.2.1	基金会的注册地与章程	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation is incorporated in the State of Delaware, and is governed by a set of bylaws.	none
+V55.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“NetBSD 基金会／OpenBSD 支持组织研究”；本节题为其下位论题	none
+V55.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.2.2	董事会成员的产生方式	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The Board members were elected by the NetBSD Developer community, following the Board election procedure.	none
+V55.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“NetBSD 基金会／OpenBSD 支持组织研究”；本节题为其下位论题	none
+V55.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.2.3	执行委员会的设立记录	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Various committees have been set up by the Board: see the Executive Committees of the NetBSD Foundation page for details.	none
+V55.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“NetBSD 基金会／OpenBSD 支持组织研究”；本节题为其下位论题	none
+V55.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.2.4	财务报告的年度范围	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Financial report:  2004	none
+V55.6.2.4	最新一份财务报告	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Financial report:  2025	none
+V55.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“NetBSD 基金会／OpenBSD 支持组织研究”；本节题为其下位论题	none
+V55.6.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.2.5	筹款渠道与收据规则	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	We are not a registered charity, in the sense that we do not issue tax deductible receipts.	none
+V55.6.2.5	雇主配捐平台的登记	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	The OpenBSD Foundation has been registered with Benevity which is used by the corporate employee dontaion matching programs.	none
+V55.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“大学与企业的 BSD 研究实验室”；本节题为其下位论题	none
+V55.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.3.1	CHERI 项目的资助规模与来源	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	On 22 January 2019, the UK government announced that the UK Industrial Strategy Challenge Fund (ISCF) will support the integration of new fundamental hardware security through a £70M investment, to be matched by a further £117M from industry including from Microsoft and Google.	none
+V55.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“大学与企业的 BSD 研究实验室”；本节题为其下位论题	none
+V55.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.3.2	企业合作方的产出	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	As part of the program, Arm will produce a demonstrator CPU, SoC, and board based on experimental integration of CHERI into the ARMv8-A ISA.	none
+V55.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“大学与企业的 BSD 研究实验室”；本节题为其下位论题	none
+V55.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.3.3	研究成果的落地形态	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	We have prototyped a complete software stack for CHERI by adapting widely used open-source software such as Clang/LLVM, FreeBSD, FreeRTOS, and applications such as WebKit, OpenSSH, and PostgreSQL.	none
+V55.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“大学与企业的 BSD 研究实验室”；本节题为其下位论题	none
+V55.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.3.4	企业赞助的内核维护项目	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	一手补充：NetApp 赞助 Klara 内核维护（FreeBSD 季度状态报告 2020 Q4）	none
+V55.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“大学与企业的 BSD 研究实验室”；本节题为其下位论题	none
+V55.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.3.5	图形栈项目的联合赞助	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	iXsystems 联合赞助 FreeBSD 基金会 GEM／KMS／DRI 项目（truenas.com/history，2011）并列高校研究存储案例（UCSD IGPP 2015、U Florida ECE 2018）	none
+V55.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“大学与企业的 BSD 研究实验室”；本节题为其下位论题	none
+V55.6.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.3.6	亚洲会议页面的版权署名	https://www.asiabsdcon.org/	联网	A	2026-10-30	Copyright (c) 2015-19 BSD Research	none
+V55.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“学术会议的机构网络”；本节题为其下位论题	none
+V55.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.4.1	欧洲首届会议的会址	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	It was held at the Thistle Hotel in Brighton (UK).	none
+V55.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“学术会议的机构网络”；本节题为其下位论题	none
+V55.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.4.2	北美首届会议的场地	https://www.bsdcan.org/2004/index.html	联网	A	2026-10-30	University of Ottawa	none
+V55.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“学术会议的机构网络”；本节题为其下位论题	none
+V55.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.4.3	亚洲会议大会主席的身份	https://www.asiabsdcon.org/	联网	A	2026-10-30	General Chair Hiroki Sato (FreeBSD Project, Tokyo Institute of Technology)	none
+V55.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“学术会议的机构网络”；本节题为其下位论题	none
+V55.6.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.4.4	程序委员会的成员构成	https://www.asiabsdcon.org/	联网	A	2026-10-30	Program Committee Members George V. Neville-Neil (Neville-Neil Consulting) Hidetoshi Shimokawa (FreeBSD Project) Masanobu SAITOH (The NetBSD Foundation) Henning Brauer (OpenBSD Project) Li-Wen Hsu (FreeBSD Project) Allan Jude (FreeBSD Project)	none
+V55.6.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“学术会议的机构网络”；本节题为其下位论题	none
+V55.6.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.6.4.5	三线会议的组织归属	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：三者各由所在社区与基金会主导，无统一上位机构	none
+V55.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“FreeBSD 基金会赞助结构研究”；本节题为其下位论题	none
+V55.7.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.1.1	赞助档位的金额	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Platinum Partner ($250,000+)	none
+V55.7.1.1	白银档的浮动规则	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Silver Partner (*Variable by headcount*)	none
+V55.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“FreeBSD 基金会赞助结构研究”；本节题为其下位论题	none
+V55.7.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.1.2	赞助权益的两类内容	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Company visits from members of the Foundation Team to help facilitate your organization’s needs with FreeBSD developers	none
+V55.7.1.2	联合营销的权益条目	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Full page ad space in the FreeBSD Journal	none
+V55.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“FreeBSD 基金会赞助结构研究”；本节题为其下位论题	none
+V55.7.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.1.3	档位名称的历年变动	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：档位名称历年有变，以官网赞助页为准	noted
+V55.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“FreeBSD 基金会赞助结构研究”；本节题为其下位论题	none
+V55.7.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.1.4	赞助款的主要用途	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Your support helps the Foundation continue and increase support of the FreeBSD Project in key areas such as accelerating operating system improvements, providing full-time release engineering support, improving and maintaining FreeBSD infrastructure, advocacy and outreach, and more!	none
+V55.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“FreeBSD 基金会赞助结构研究”；本节题为其下位论题	none
+V55.7.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.1.5	白金档的对接安排	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	All Platinum level partners have access to a dedicated Foundation representative to act as liaison between the partner and the FreeBSD Project and community.	none
+V55.7.1.5	黄金档的会谈频次	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Quarterly virtual or in person meetings with Foundation staff and Board (Board as needed and available), to support the Partner’s success.	none
+V55.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“企业资助与行为自主的研究记述”；本节题为其下位论题	none
+V55.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.2.1	项目关键决策的归属	https://docs.freebsd.org/en/books/faq/	联网	A	2026-10-30	The key decisions concerning the FreeBSD project, such as the overall direction of the project or who is allowed to add code to the source tree, are made by an elected Core Team of nine people.	none
+V55.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“企业资助与行为自主的研究记述”；本节题为其下位论题	none
+V55.7.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.2.2	维护者平衡资助方的治理做法	https://arxiv.org/abs/2404.06484	联网	A	2026-10-30	the governance protocols employed by the maintainers to balance the diverse interests of their community and funders	none
+V55.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“企业资助与行为自主的研究记述”；本节题为其下位论题	none
+V55.7.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.2.3	政府资助评价的研究空白	https://arxiv.org/abs/2404.06484	联网	A	2026-10-30	However, little is known about how OSS developers evaluate the relative benefits and drawbacks of governmental funding for OSS.	none
+V55.7.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“企业资助与行为自主的研究记述”；本节题为其下位论题	none
+V55.7.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.2.4	政府资助开源的三重动机	https://arxiv.org/abs/2404.06484	联网	A	2026-10-30	Governments are increasingly funding open source software (OSS) development to support software security, digital sovereignty, and national competitiveness in science and innovation, amongst others.	none
+V55.7.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“企业资助与行为自主的研究记述”；本节题为其下位论题	none
+V55.7.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.2.5	个案的对象与规模	https://arxiv.org/abs/2404.06484	联网	A	2026-10-30	This study explores this question through a case study on scikit-learn, a Python library for machine learning, funded by public research grants, commercial sponsorship, micro-donations, and a 32 euro million grant announced in France’s artificial intelligence strategy.	none
+V55.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“GSoC／Outreachy 的学术管道资助”；本节题为其下位论题	none
+V55.7.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.3.1	首次参与该计划的年份	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	That year, FreeBSD Foundation participated in the first Google Summer of Code	none
+V55.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“GSoC／Outreachy 的学术管道资助”；本节题为其下位论题	none
+V55.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.3.2	连续参与的届数	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	That marks our 21st consecutive year in the program.	none
+V55.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“GSoC／Outreachy 的学术管道资助”；本节题为其下位论题	none
+V55.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.3.3	年度申请与名额流程	https://freebsdfoundation.org/blog/freebsd-foundation-q1-2025-status-update/	联网	A	2026-10-30	We received 64 applications, and we will learn which projects will be awarded slots on May 8.	none
+V55.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“GSoC／Outreachy 的学术管道资助”；本节题为其下位论题	none
+V55.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.3.4	各分支参与的年份区间	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	NetBSD 2005–2013、2016–2019；DragonFly 自 2008（2014 未入选，见 DragonFly Digest）；OpenBSD 首次参与 2014（Digest 记述）	none
+V55.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“GSoC／Outreachy 的学术管道资助”；本节题为其下位论题	none
+V55.7.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.3.5	Outreachy 参与记录的检索结果	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Outreachy 之 BSD 参与记录未获一手（Outreachy 官方历届 cohort 与 alums 页未检出三系为指导组织	noted
+V55.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“赞助透明度的史学评估”；本节题为其下位论题	none
+V55.7.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.4.1	申报表的公开查阅条款	https://www.irs.gov/instructions/i990	联网	A	2026-10-30	An organization’s completed Form 990 or 990-EZ, and a section 501(c)(3) organization’s Form 990-T, Exempt Organization Business Income Tax Return, are generally available for public inspection as required by section 6104.	none
+V55.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“赞助透明度的史学评估”；本节题为其下位论题	none
+V55.7.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.4.2	2024 财年的收支与净额	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	Net Income	none
+V55.7.4.2	年度支出总额	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	$2,602,008	none
+V55.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“赞助透明度的史学评估”；本节题为其下位论题	none
+V55.7.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.4.3	捐款在收入中的占比	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	Contributions	none
+V55.7.4.3	捐款占比数值	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	83.6%	none
+V55.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“赞助透明度的史学评估”；本节题为其下位论题	none
+V55.7.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.4.4	高管薪酬的披露额	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	Executive Compensation	none
+V55.7.4.4	其他工资支出额	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	$558,805	none
+V55.7.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“赞助透明度的史学评估”；本节题为其下位论题	none
+V55.7.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.7.4.5	两类账目的证据分层	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：990 与审计报表为公开主证，季报 P&L 属内部账	none
+V55.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“行为准则制度研究”；本节题为其下位论题	none
+V55.8.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.1.1	准则的公布日	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	Publication date: 2020-06-09	none
+V55.8.1.1	准则的末次修改	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	Last modified on : June 22, 2023	none
+V55.8.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“行为准则制度研究”；本节题为其下位论题	none
+V55.8.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.1.2	准则文本的来源链	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	This text is based on the LLVM Project’s draft CoC, which in turn is based on the Django Project Code of Conduct, which is in turn based on wording from the Speak Up! project.	none
+V55.8.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“行为准则制度研究”；本节题为其下位论题	none
+V55.8.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.1.3	准则的适用范围	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	This code of conduct applies to all spaces managed by the FreeBSD project. This includes online chat, mailing lists, bug trackers, FreeBSD events such as the developer meetings and socials, and any other forums created by the project that the community uses for communication.	none
+V55.8.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“行为准则制度研究”；本节题为其下位论题	none
+V55.8.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.1.4	准则的举报渠道	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	If you believe someone is violating the code of conduct, we ask that you report it by emailing conduct@FreeBSD.org.	none
+V55.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“行为准则制度研究”；本节题为其下位论题	none
+V55.8.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.1.5	同侪项目的规范文本状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	OpenBSD 以官方邮件列表 Netiquette 文本（含反欺凌条款）为行为规范，NetBSD 官方政策清单无 CoC 条目——二者正式 CoC 缺位为实，非行为规范缺位	none
+V55.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
+V55.8.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.2.1	提交权的授予主体	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	commit bit 由 core／doceng／portmgr 授；Core 9 人、两年一选	none
+V55.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
+V55.8.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.2.2	核心组的职能与产生方式	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Core Team constitutes the project’s "Board of Directors", responsible for deciding the project’s overall goals and direction as well as managing specific areas of the FreeBSD project landscape. The Core Team is elected by the active developers in the project.	none
+V55.8.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
+V55.8.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.2.3	项目模型的材料来源	https://docs.freebsd.org/en/books/dev-model/	联网	A	2026-10-30	It is based on the Niels Jørgensen’s paper, FreeBSD’s official documents, discussions on FreeBSD mailing lists and interviews with developers.	none
+V55.8.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
+V55.8.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.2.4	项目的组织分层与所有权	https://docs.freebsd.org/en/books/dev-model/	联网	A	2026-10-30	While no-one takes ownership of FreeBSD, the FreeBSD organisation is divided into core, committers and contributors and is part of the FreeBSD community that lives around it.	none
+V55.8.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
+V55.8.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.2.5	在职提交者的计量	https://docs.freebsd.org/en/books/dev-model/	联网	A	2026-10-30	The total number of active unique committers on June 2022 was 317.	none
+V55.8.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“安全响应制度的学术研究”；本节题为其下位论题	none
+V55.8.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.3.1	安全组的职责	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Security Team (headed by the Security Officer) is responsible for keeping the community aware of bugs, exploits and security risks affecting the FreeBSD src and ports trees, and to promote and distribute information needed to safely run FreeBSD systems. Furthermore, it is responsible for resolving software bugs affecting the security of FreeBSD and issuing security advisories.	none
+V55.8.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“安全响应制度的学术研究”；本节题为其下位论题	none
+V55.8.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.3.2	安全官章程的存在	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Security Officer Charter describes the duties and responsibilities of the Security Officer in greater detail.	none
+V55.8.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“安全响应制度的学术研究”；本节题为其下位论题	none
+V55.8.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.3.3	安全公告的归档方式	https://www.openbsd.org/security.html	联网	A	2026-10-30	For security advisories for specific releases, click below:	none
+V55.8.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“安全响应制度的学术研究”；本节题为其下位论题	none
+V55.8.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.3.4	修补说明的惯例	https://www.openbsd.org/security.html	联网	A	2026-10-30	Since exploitability is not proven for many of the fixes we make, do not expect the relevant commit message to say SECURITY FIX!	none
+V55.8.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“安全响应制度的学术研究”；本节题为其下位论题	none
+V55.8.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.3.5	响应制度的章程状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：OpenBSD 无正式章程文件，以官方页与公告实务为据	noted
+V55.8.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“基金会法人制度研究”；本节题为其下位论题	none
+V55.8.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.4.1	基金会的免税条款	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	Designated as a 501(c)(3)	none
+V55.8.4.1	机构类型归类	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	Science and Technology Research Institutes, Services / Computer Science	none
+V55.8.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“基金会法人制度研究”；本节题为其下位论题	none
+V55.8.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.4.2	章程文本的公开方式	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation is incorporated in the State of Delaware, and is governed by a set of bylaws.	none
+V55.8.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“基金会法人制度研究”；本节题为其下位论题	none
+V55.8.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.4.3	创立年份的两说	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	成立年两说并陈——官方 20 周年文作 2000-03（另说 2000-12）	noted
+V55.8.4.3	税务豁免的生效月	https://projects.propublica.org/nonprofits/organizations/841545163	联网	B	2026-10-30	Tax exemption issued: Dec. 2000	noted
+V55.8.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“基金会法人制度研究”；本节题为其下位论题	none
+V55.8.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.4.4	商标权的取得年份	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	In 2004, the FreeBSD Foundation acquired the FreeBSD trademark from Wind River.	none
+V55.8.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“基金会法人制度研究”；本节题为其下位论题	none
+V55.8.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.8.4.5	基金会的对外代理职能	https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	联网	A	2026-10-30	The Foundation also represents the FreeBSD Project in executing contracts, license agreements, and other legal arrangements that require a recognized legal entity.	none
+V55.9.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节““当代 BSD”的对象界定与分期”；本节题为其下位论题	none
+V55.9.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.1.1	分期依据与检索结果	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	“当代 BSD”分期直接界定未获一手（Crossref 全库检索未见界定性分期文献），以二版序为据，分期宜自建并声明依据	noted
+V55.9.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节““当代 BSD”的对象界定与分期”；本节题为其下位论题	none
+V55.9.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.1.2	教材所覆盖的版本区间	https://www.informit.com/store/design-and-implementation-of-the-freebsd-operating-system-9780321968975	联网	A	2026-10-30	The most complete, authoritative technical guide to the FreeBSD kernel’s internal structure has now been extensively updated to cover all major improvements between Versions 5 and 11.	none
+V55.9.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节““当代 BSD”的对象界定与分期”；本节题为其下位论题	none
+V55.9.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.1.3	分支安装占比的估算	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	The description applies most closely to FreeBSD, which accounts for an estimated 80% of the BSD installations, but the differences from NetBSD, OpenBSD and DragonFlyBSD are small.	none
+V55.9.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节““当代 BSD”的对象界定与分期”；本节题为其下位论题	none
+V55.9.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.1.4	分支划分的通行说法	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	but the differences from NetBSD, OpenBSD and DragonFlyBSD are small	none
+V55.9.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节““当代 BSD”的对象界定与分期”；本节题为其下位论题	none
+V55.9.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.1.5	本节对分期的取证说明	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：“当代 BSD”分期直接界定未获一手	noted
+V55.9.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节““分裂后”叙事的学术建构”；本节题为其下位论题	none
+V55.9.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.2.1	诉讼与命名的关系	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	With the elimination of the last vestige of AT&T code from BSD, it also lost the right to the name UNIX	none
+V55.9.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节““分裂后”叙事的学术建构”；本节题为其下位论题	none
+V55.9.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.2.2	诉讼影响的持久性	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	The case was settled out of court in 1994, but the spectre of the litigation continues to haunt people.	none
+V55.9.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节““分裂后”叙事的学术建构”；本节题为其下位论题	none
+V55.9.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.2.3	分割点的版本与月份	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The newly blessed release was called 4.4BSD-Lite and was released in June 1994 under terms identical to those used for the Networking releases.	none
+V55.9.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节““分裂后”叙事的学术建构”；本节题为其下位论题	none
+V55.9.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.2.4	无负担发行的许可内容	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	the terms allow free redistribution in source and binary form subject only to the constraint that the University copyrights remain intact and that the University receive credit when others use the code.	none
+V55.9.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节““分裂后”叙事的学术建构”；本节题为其下位论题	none
+V55.9.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.2.5	分裂叙事的文献状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：以开发者自述为主，独立学术研究少，标此边界	noted
+V55.9.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“学术史与社区史书写边界”；本节题为其下位论题	none
+V55.9.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.3.1	史学理论参照书目	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Rosenzweig 与 Thelen《The Presence of the Past》（Columbia UP, 1998，ISBN 0-231-11148-7）；Coleman《Coding Freedom》（Princeton UP, 2013）	noted
+V55.9.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“学术史与社区史书写边界”；本节题为其下位论题	none
+V55.9.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.3.2	边界专论的检索状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：BSD 社区史／学术史边界专论未获一手	noted
+V55.9.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“学术史与社区史书写边界”；本节题为其下位论题	none
+V55.9.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.3.3	官方说明的文体与设问	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	So what is the secret? Why is BSD not better known? This white paper addresses these and other questions.	none
+V55.9.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“学术史与社区史书写边界”；本节题为其下位论题	none
+V55.9.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.3.4	参与者自述的收束方式	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	I am proud to have had the opportunity to help pioneer the Open Source software movement.	none
+V55.9.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“学术史与社区史书写边界”；本节题为其下位论题	none
+V55.9.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.3.5	学术史取材的补充要求	https://arxiv.org/abs/2112.13217	联网	A	2026-10-30	The survey had 224 respondents.	none
+V55.9.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“研究伦理与社区关系”；本节题为其下位论题	none
+V55.9.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.4.1	争议事件的经过	https://arxiv.org/abs/2112.13217	联网	A	2026-10-30	Following an incident in which buggy code was submitted to the Linux kernel to see whether it would be caught, we conduct a survey among open source developers and empirical software engineering researchers to see what behaviors they think are acceptable.	none
+V55.9.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“研究伦理与社区关系”；本节题为其下位论题	none
+V55.9.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.4.2	知情同意的调查结论	https://arxiv.org/abs/2112.13217	联网	A	2026-10-30	many would agree to experiments on open-source projects if the subjects were notified and provided informed consent, and in special cases also if only the project leaders agree.	none
+V55.9.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“研究伦理与社区关系”；本节题为其下位论题	none
+V55.9.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.4.3	调查的样本规模	https://arxiv.org/abs/2112.13217	联网	A	2026-10-30	The survey had 224 respondents.	none
+V55.9.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“研究伦理与社区关系”；本节题为其下位论题	none
+V55.9.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.4.4	对平台规则的建議	https://arxiv.org/abs/2112.13217	联网	A	2026-10-30	it is recommended that open source repositories and projects address use for research in their access guidelines	none
+V55.9.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“研究伦理与社区关系”；本节题为其下位论题	none
+V55.9.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.9.4.5	伦理规范制定的咨询建议	https://arxiv.org/abs/2112.13217	联网	A	2026-10-30	the open source community wants to be heard, so professional societies and IRBs should consult with them when formulating ethics codes.	none
+V55.10.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“比较叙事中的遮蔽争议”；本节题为其下位论题	none
+V55.10.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.1.1	两部通史的著录与视角	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	两说并陈——Salus《A Quarter Century of UNIX》（Addison-Wesley, 1994，ISBN 0-201-54777-5）；McKusick 1999；Raymond《UNIX 编程艺术》（原题 The Art of Unix Programming）第二章（诉讼冻结与社区分裂两种解释）	noted
+V55.10.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“比较叙事中的遮蔽争议”；本节题为其下位论题	none
+V55.10.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.1.2	资助机构选择伯克利的理由	http://www.catb.org/esr/writings/taoup/html/ch02s01.html	联网	B	2026-10-30	Instead, DARPA chose Berkeley Unix as a platform — explicitly because its source code was available and unencumbered	none
+V55.10.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“比较叙事中的遮蔽争议”；本节题为其下位论题	none
+V55.10.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.1.3	认知落差的三项原因	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	The BSD developers are often more interested in polishing their code than marketing it.	none
+V55.10.1.3	商业代言的缺失	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	Until recently, the open source BSDs had no such proponents.	none
+V55.10.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“比较叙事中的遮蔽争议”；本节题为其下位论题	none
+V55.10.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.1.4	两种解释的并陈要求	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第二章（诉讼冻结与社区分裂两种解释）	none
+V55.10.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 1 节“比较叙事中的遮蔽争议”；本节题为其下位论题	none
+V55.10.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.1.5	本章的编排原则	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	〔分期：本章按论题编排，非年序（2026-10-21 批复）〕	none
+V55.10.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“FreeBSD 5.x 重建争议的学术记述”；本节题为其下位论题	none
+V55.10.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.2.1	巨型锁的自适应选项	https://www.freebsd.org/releases/5.3R/relnotes-i386/	联网	A	2026-10-30	A kernel option ADAPTIVE_GIANT, which causes the Giant lock to also be treated in an adaptive fashion when adaptive mutexes are enabled, has been added. This improves the performance of SMP machines and is enabled by default on the i386.	none
+V55.10.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“FreeBSD 5.x 重建争议的学术记述”；本节题为其下位论题	none
+V55.10.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.2.2	保守配置的回退选项	https://www.freebsd.org/releases/5.3R/relnotes-i386/	联网	A	2026-10-30	A new kernel option NET_WITH_GIANT has been added. This restores the default value of debug.mpsafenet to 0, and is intended for use on systems compiled with known unsafe components, or where a more conservative configuration is desired.	none
+V55.10.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“FreeBSD 5.x 重建争议的学术记述”；本节题为其下位论题	none
+V55.10.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.2.3	调度器名称的查询项	https://www.freebsd.org/releases/5.3R/relnotes-i386/	联网	A	2026-10-30	A sysctl kern.sched.name which has the name of the scheduler currently in use, has been added, and the kern.quantum sysctl has been moved to kern.sched.quantum for consistency.	none
+V55.10.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“FreeBSD 5.x 重建争议的学术记述”；本节题为其下位论题	none
+V55.10.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.2.4	重建期的目标陈述	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	一手：src UPDATING 20000907（SMPng 提交）；5.3／5.4 发行说明（ADAPTIVE_GIANT）；rwatson 2005 AsiaBSDCon 讲稿	none
+V55.10.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 2 节“FreeBSD 5.x 重建争议的学术记述”；本节题为其下位论题	none
+V55.10.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.2.5	两说的并陈要求	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	两说并陈——官方称目标达成，社区对 5.x 稳定性有批评	noted
+V55.10.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“OpenSSL／OpenSSH 分叉研究的反响”；本节题为其下位论题	none
+V55.10.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.3.1	漏洞的技术表述	https://www.openssl.org/news/secadv/20140407.txt	联网	A	2026-10-30	A missing bounds check in the handling of the TLS heartbeat extension can be used to reveal up to 64k of memory to a connected client or server.	none
+V55.10.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“OpenSSL／OpenSSH 分叉研究的反响”；本节题为其下位论题	none
+V55.10.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.3.2	受影响版本的范围	https://www.openssl.org/news/secadv/20140407.txt	联网	A	2026-10-30	Only 1.0.1 and 1.0.2-beta releases of OpenSSL are affected including 1.0.1f and 1.0.2-beta1.	none
+V55.10.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“OpenSSL／OpenSSH 分叉研究的反响”；本节题为其下位论题	none
+V55.10.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.3.3	分叉发生的时点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：LibreSSL 系 2014-04 分叉之实；OpenSSH 为 OpenBSD 自有项目而非分叉，题面连带关系在注中厘清	none
+V55.10.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“OpenSSL／OpenSSH 分叉研究的反响”；本节题为其下位论题	none
+V55.10.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.3.4	两类项目的性质差别	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	OpenSSH 为 OpenBSD 自有项目而非分叉	none
+V55.10.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“OpenSSL／OpenSSH 分叉研究的反响”；本节题为其下位论题	none
+V55.10.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.3.5	分叉后的研究延续	https://www.openbsd.org/papers/	联网	A	2026-10-30	Theo Buehler - Design and verification of the TLS 1.3 handshake state machine in LibreSSL	none
+V55.10.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“社区倦怠与可持续性争论的文献”；本节题为其下位论题	none
+V55.10.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.4.1	无偿劳动的机构依赖	https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/	联网	A	2026-10-30	Without effective support for coders’ work on publicly available projects, not only will their labor go uncompensated, but the digital world risks security breaches, interruptions in service, and slowed innovation.	none
+V55.10.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“社区倦怠与可持续性争论的文献”；本节题为其下位论题	none
+V55.10.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.4.2	资金与可持续性的关系	https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/	联网	A	2026-10-30	Eghbal emphasizes that because open source thrives on human rather than financial resources, money alone won’t fix the problem.	none
+V55.10.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“社区倦怠与可持续性争论的文献”；本节题为其下位论题	none
+V55.10.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.4.3	贡献下滑的调查结论	https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf	联网	A	2026-10-30	There has been a notable decline in contributions from both professional and personal users.	none
+V55.10.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“社区倦怠与可持续性争论的文献”；本节题为其下位论题	none
+V55.10.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.4.4	贡献障碍的主要投诉	https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf	联网	A	2026-10-30	fragmentation, review delays, opaque processes, and a steep learning curve are among the top complaints.	none
+V55.10.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“社区倦怠与可持续性争论的文献”；本节题为其下位论题	none
+V55.10.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.10.4.5	入职流程的整改建议	https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf	联网	A	2026-10-30	Simplifying and documenting the onboarding and submission process	none
+V55.11.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
+V55.11.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.1.1	容器镜像的发布	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The FreeBSD project is now publishing OCI-compatible container images.	none
+V55.11.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
+V55.11.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.1.2	云市场镜像的上架	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The FreeBSD project is now publishing Oracle Cloud Infrastructure images.	none
+V55.11.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
+V55.11.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.1.3	小型云镜像的构成	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The FreeBSD projects now publishes "small" EC2 images; these are the "base" images minus debug symbols, tests, 32-bit libraries, the LLDB debugger, the Amazon SSM Agent, and the AWS CLI.	none
+V55.11.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
+V55.11.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.1.4	云平台网络配置的支持	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The nuageinit startup script now supports OpenStack network config.	none
+V55.11.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
+V55.11.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.1.5	平台清单的覆盖范围	https://www.openbsd.org/arm64.html	联网	A	2026-10-30	The current target platforms are Allwinner A64/H5/H6/H616, Amlogic G12B/SM1, AMD Opteron A1100, Ampere eMAG/Altra, Apple M1/M2, Marvell ARMADA 3K/7K/8K, Rockchip RK3328/RK3399/RK3528/RK356x/RK3588, Broadcom BCM2837/BCM2711/BCM2712 (Raspberry Pi 3/4/5), Qualcomm Snapdragon 7x/8x and Socionext SCA11.	none
+V55.11.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“LLVM／Clang 工具链转型研究”；本节题为其下位论题	none
+V55.11.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.2.1	默认编译器的更换	https://www.freebsd.org/releases/10.0R/relnotes/	联网	A	2026-10-30	On platforms where clang(1) is the default system compiler (such as i386, amd64, arm), GCC and GNU libstdc are no longer built by default.	none
+V55.11.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“LLVM／Clang 工具链转型研究”；本节题为其下位论题	none
+V55.11.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.2.2	旧编译器的残留平台	https://www.freebsd.org/releases/10.0R/relnotes/	联网	A	2026-10-30	GCC 4.2.1 and libstdc++ are still built and used by default on pc98 and all other platforms where clang(1) is not the default system compiler.	none
+V55.11.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“LLVM／Clang 工具链转型研究”；本节题为其下位论题	none
+V55.11.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.2.3	工具链的版本升级	https://www.freebsd.org/releases/10.0R/relnotes/	联网	A	2026-10-30	clang(1) and llvm have been updated to version 3.3 release.	none
+V55.11.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“LLVM／Clang 工具链转型研究”；本节题为其下位论题	none
+V55.11.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.2.4	转型起点的两段记载	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	时间线：2010 引入、10.0（2014）默认	none
+V55.11.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“LLVM／Clang 工具链转型研究”；本节题为其下位论题	none
+V55.11.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.2.5	旧编译器移除的时点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	FreeBSD 基金会 工具链文（GCC 4.2.1 于 2020-02-29 移除）	none
+V55.11.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“Git 时代版本治理转型记述”；本节题为其下位论题	none
+V55.11.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.3.1	源码树的迁移时点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	一手：FreeBSD src UPDATING 20201223（src 迁 Git，2020-12）	none
+V55.11.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“Git 时代版本治理转型记述”；本节题为其下位论题	none
+V55.11.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.3.2	文档树的迁移时点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	doc 迁移同批 2020-12	none
+V55.11.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“Git 时代版本治理转型记述”；本节题为其下位论题	none
+V55.11.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.3.3	移植树的迁移时点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	ports 迁 Git 2021-04	none
+V55.11.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“Git 时代版本治理转型记述”；本节题为其下位论题	none
+V55.11.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.3.4	手册入门章的改写	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	This primer is less ambitiously scoped than the old Subversion Primer, but should cover the basics.	none
+V55.11.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“Git 时代版本治理转型记述”；本节题为其下位论题	none
+V55.11.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.3.5	文档迁移年的订正	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：doc 迁移年订正为 2020-12（原记 2021-04 系 ports 时点混记）	noted
+V55.11.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“转型叙事的史料边界”；本节题为其下位论题	none
+V55.11.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.4.1	本节的主证类型	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：本节为方法性节，以版本控制与公告为主证	none
+V55.11.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“转型叙事的史料边界”；本节题为其下位论题	none
+V55.11.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.4.2	软件考古的方法文献	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Hunt 与 Thomas《Software Archaeology》（IEEE Software 19(2)，2002）	none
+V55.11.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“转型叙事的史料边界”；本节题为其下位论题	none
+V55.11.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.4.3	概念史的方法文献	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Haigh《Software in the 1960s as Concept, Service, and Product》（IEEE Annals 24(1)，2002）	none
+V55.11.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“转型叙事的史料边界”；本节题为其下位论题	none
+V55.11.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.4.4	计算史书写的参照	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Mahoney《The histories of computing(s)》（2005）与《Histories of Computing》（Harvard UP，2011）	none
+V55.11.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“转型叙事的史料边界”；本节题为其下位论题	none
+V55.11.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.11.4.5	家族树文本的旁证作用	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	一手：src UPDATING 与 share/misc/bsd-family-tree	none
+V55.12.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“云原生 BSD 研究”；本节题为其下位论题	none
+V55.12.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.1.1	容器运行时的实现者与形态	https://freebsdfoundation.org/project/oci-container-support/	联网	A	2026-10-30	Doug Rabson, a FreeBSD project member, has developed ocijail, an experimental OCI-compatible runtime for FreeBSD jails.	none
+V55.12.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“云原生 BSD 研究”；本节题为其下位论题	none
+V55.12.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.1.2	项目的进度标注	https://freebsdfoundation.org/project/oci-container-support/	联网	A	2026-10-30	In Progress	none
+V55.12.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“云原生 BSD 研究”；本节题为其下位论题	none
+V55.12.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.1.3	镜像托管的基础设施选择	https://freebsdfoundation.org/project/oci-container-support/	联网	A	2026-10-30	The FreeBSD Project envisions that this distribution will be managed using existing container image infrastructure, e.g., Docker Hub or the GitHub container registry, or potentially, by hosting an image registry in FreeBSD-owned infrastructure.	none
+V55.12.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“云原生 BSD 研究”；本节题为其下位论题	none
+V55.12.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.1.4	容器隔离的取舍说明	https://freebsdfoundation.org/project/oci-container-support/	联网	A	2026-10-30	It provides strong isolation similar to VMs but with less overhead, making it ideal for microservices and modern architectures.	none
+V55.12.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“云原生 BSD 研究”；本节题为其下位论题	none
+V55.12.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.1.5	标准工作组的职责	https://freebsdfoundation.org/project/oci-container-support/	联网	A	2026-10-30	An OCI working group is defining these standards for FreeBSD, with implementations using jails and potentially lightweight VMs with FreeBSD’s bhyve hypervisor	none
+V55.12.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“CHERI 能力架构与安全前沿”；本节题为其下位论题	none
+V55.12.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.2.1	能力架构的界定	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	CHERI is an ongoing research project, from 2010 to date, that revises the hardware/software architectural interface with hardware support for capabilities that can be used for fine-grained memory protection and/or scalable software compartmentalisation.	none
+V55.12.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“CHERI 能力架构与安全前沿”；本节题为其下位论题	none
+V55.12.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.2.2	保护与分区的并列目标	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	fine-grained memory protection and/or scalable software compartmentalisation	none
+V55.12.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“CHERI 能力架构与安全前沿”；本节题为其下位论题	none
+V55.12.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.2.3	部署与微架构的要求	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/dsbd.html	联网	A	2026-10-30	CHERI aims to provide practically deployable performance and compatibility for software, as well as being microarchitecturally viable for mainstream architectures and microarchitectures.	none
+V55.12.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“CHERI 能力架构与安全前沿”；本节题为其下位论题	none
+V55.12.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.2.4	规范第九版的架构替换	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-publications.html	联网	A	2026-10-30	Our most recent CHERI instruction-set specification, CHERI ISAv9, replaces CHERI-MIPS with CHERI-RISC-V as our primary reference architecture	none
+V55.12.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“CHERI 能力架构与安全前沿”；本节题为其下位论题	none
+V55.12.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.2.5	形式化论文的验证对象	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-publications.html	联网	A	2026-10-30	Verified Security for the Morello Capability-enhanced Prototype Arm Architecture	none
+V55.12.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“Rust 与内核混合开发前沿”；本节题为其下位论题	none
+V55.12.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.3.1	内核内 Rust 文档的指引	https://docs.kernel.org/rust/index.html	联网	A	2026-10-30	Documentation related to Rust within the kernel. To start using Rust in the kernel, please read the Quick Start guide.	none
+V55.12.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“Rust 与内核混合开发前沿”；本节题为其下位论题	none
+V55.12.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.3.2	架构支持章的位置	https://docs.kernel.org/rust/index.html	联网	A	2026-10-30	Arch Support	none
+V55.12.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“Rust 与内核混合开发前沿”；本节题为其下位论题	none
+V55.12.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.3.3	测试章的位置	https://docs.kernel.org/rust/index.html	联网	A	2026-10-30	Testing	none
+V55.12.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“Rust 与内核混合开发前沿”；本节题为其下位论题	none
+V55.12.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.3.4	分支的成熟度对照	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：FreeBSD 内核 Rust 仍属实验；NetBSD rump kernel 为 C 语言机制而非 Rust 对照	none
+V55.12.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“Rust 与内核混合开发前沿”；本节题为其下位论题	none
+V55.12.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.3.5	语言工具链的版本	https://www.freebsd.org/status/report-2025-04-2025-06/	联网	A	2026-10-30	Rust 1.87.0	none
+V55.12.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“AI 辅助工程对 BSD 研究的影响”；本节题为其下位论题	none
+V55.12.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.4.1	项目的资助来源与额度	https://freebsdfoundation.org/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/	联网	A	2026-10-30	The FreeBSD Foundation has received a $250k grant to secure time from key members of the FreeBSD Security team and to cover time from other staff as needed to support their work.	none
+V55.12.4.1	项目的期限	https://freebsdfoundation.org/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/	联网	A	2026-10-30	The 6-month project is being funded by a grant from the Alpha Omega project.	none
+V55.12.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“AI 辅助工程对 BSD 研究的影响”；本节题为其下位论题	none
+V55.12.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.4.2	人机分工的声明	https://freebsdfoundation.org/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/	联网	A	2026-10-30	AI will be used for vulnerability discovery and analysis only, all patches will be manually created.	none
+V55.12.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“AI 辅助工程对 BSD 研究的影响”；本节题为其下位论题	none
+V55.12.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.4.3	利用时窗的压缩	https://freebsdfoundation.org/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/	联网	A	2026-10-30	Open source codebases have become a key target for AI-assisted vulnerability scanning and this has reduced the effective time to exploitation to 0 days.	none
+V55.12.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“AI 辅助工程对 BSD 研究的影响”；本节题为其下位论题	none
+V55.12.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.4.4	核心开发者负担的变化	https://arxiv.org/abs/2510.10165	联网	A	2026-10-30	the added rework burden falls on the more experienced (core) developers, who review 6.5% more code after Copilot’s introduction, but show a 19% drop in their original code productivity.	none
+V55.12.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“AI 辅助工程对 BSD 研究的影响”；本节题为其下位论题	none
+V55.12.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.12.4.5	使用政策的制定状况	https://www.freebsd.org/status/report-2025-04-2025-06/	联网	A	2026-10-30	We currently tend to not use it to generate code because of license concerns.	none
+V55.13.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“当代 BSD 与 Linux 的比较研究文献”；本节题为其下位论题	none
+V55.13.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.1.1	对比实验的条件控制	https://www.usenix.org/conference/atc18/presentation/bouron	联网	A	2026-10-30	We compare ULE and CFS in otherwise identical circumstances.	none
+V55.13.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“当代 BSD 与 Linux 的比较研究文献”；本节题为其下位论题	none
+V55.13.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.1.2	对照实验的移植做法	https://www.usenix.org/conference/atc18/presentation/bouron	联网	A	2026-10-30	We have ported ULE to Linux, and use it to schedule all threads that are normally scheduled by CFS.	none
+V55.13.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“当代 BSD 与 Linux 的比较研究文献”；本节题为其下位论题	none
+V55.13.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.1.3	对比研究的总体结论	https://www.usenix.org/conference/atc18/presentation/bouron	联网	A	2026-10-30	There is no overall winner. On many workloads the two schedulers perform similarly, but for some workloads there are significant and even surprising differences.	none
+V55.13.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“当代 BSD 与 Linux 的比较研究文献”；本节题为其下位论题	none
+V55.13.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.1.4	两类调度策略的权衡	https://www.usenix.org/conference/atc18/presentation/bouron	联网	A	2026-10-30	ULE may cause starvation, even when executing a single application with identical threads, but this starvation may actually lead to better application performance for some workloads. The more complex load balancing mechanism of CFS reacts more quickly to workload changes, but ULE achieves a better load balance in the long run.	none
+V55.13.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“当代 BSD 与 Linux 的比较研究文献”；本节题为其下位论题	none
+V55.13.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.1.5	两类系统的同异说明	https://docs.freebsd.org/en/articles/explaining-bsd/	联网	A	2026-10-30	Both are UNIX® like operating systems. Both are developed by non-commercial projects (this does not apply to many other Linux distributions, of course).	none
+V55.13.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“四分支当代比较研究”；本节题为其下位论题	none
+V55.13.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.2.1	研究挖掘的提交数	https://arxiv.org/abs/2206.05616	联网	A	2026-10-30	We mine 797,879 commits to characterize code churn in terms of the annual growth rate, commit types, change type ratio, and size taxonomy of commits for different subsystems (kernel, non-kernel, and mixed).	none
+V55.13.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“四分支当代比较研究”；本节题为其下位论题	none
+V55.13.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.2.2	研究覆盖的分支	https://arxiv.org/abs/2206.05616	联网	A	2026-10-30	We conducted an exploratory study on four BSD family operating systems: DragonFlyBSD, FreeBSD, NetBSD, and OpenBSD.	none
+V55.13.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“四分支当代比较研究”；本节题为其下位论题	none
+V55.13.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.2.3	全局指标与子系统差异	https://arxiv.org/abs/2206.05616	联网	A	2026-10-30	Our study provides empirical evidence that quantifiable evolutionary code characteristics at a global system scope fail to take into account significant individual differences that exist at a subsystem level.	none
+V55.13.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“四分支当代比较研究”；本节题为其下位论题	none
+V55.13.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.2.4	内核与非内核提交的体量比较	https://arxiv.org/abs/2206.05616	联网	A	2026-10-30	kernel commits are larger than non-kernel commits	none
+V55.13.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 2 节“四分支当代比较研究”；本节题为其下位论题	none
+V55.13.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.2.5	两类代码的评审时长	https://arxiv.org/abs/2206.05616	联网	A	2026-10-30	code reviews for kernel code take longer than non-kernel code	none
+V55.13.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“与 macOS／iOS 家族的比较研究”；本节题为其下位论题	none
+V55.13.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.3.1	系统来源的三项并置	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	Darwin technology is based on BSD, Mach 3.0, and Apple technologies.	none
+V55.13.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“与 macOS／iOS 家族的比较研究”；本节题为其下位论题	none
+V55.13.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.3.2	内核环境的部件构成	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	In OS X, however, the kernel environment contains much more than the Mach kernel itself. The OS X kernel environment includes the Mach kernel, BSD, the I/O Kit, file systems, and networking components.	none
+V55.13.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“与 macOS／iOS 家族的比较研究”；本节题为其下位论题	none
+V55.13.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.3.3	BSD 层提供的接口	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	BSD also provides a set of industry-standard APIs.	none
+V55.13.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“与 macOS／iOS 家族的比较研究”；本节题为其下位论题	none
+V55.13.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.3.4	商用系统的 BSD 成分	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	In fact, most of today’s commercial UNIX and UNIX-like operating systems contain a great deal of BSD code.	none
+V55.13.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“与 macOS／iOS 家族的比较研究”；本节题为其下位论题	none
+V55.13.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.3.5	厂商自述的证据地位	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：以 Apple 自述为主，互见 macOS 卷相关章	none
+V55.13.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“比较方法与计量边界”；本节题为其下位论题	none
+V55.13.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.4.1	计量工具的构造效度	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Fenton 与 Bieman《Software Metrics: A Rigorous and Practical Approach》三版（CRC, 2014，ISBN 978-1439838228）——LOC 与 commit 受语言与构造效度限制	none
+V55.13.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“比较方法与计量边界”；本节题为其下位论题	none
+V55.13.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.4.2	全局聚合指标的失效	https://arxiv.org/abs/2206.05616	联网	A	2026-10-30	Our study provides empirical evidence that quantifiable evolutionary code characteristics at a global system scope fail to take into account significant individual differences that exist at a subsystem level.	none
+V55.13.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“比较方法与计量边界”；本节题为其下位论题	none
+V55.13.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.4.3	对照条件的声明	https://www.usenix.org/conference/atc18/presentation/bouron	联网	A	2026-10-30	The observed performance differences are solely the result of scheduling decisions, and do not reflect differences in other subsystems between FreeBSD and Linux.	none
+V55.13.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“比较方法与计量边界”；本节题为其下位论题	none
+V55.13.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.4.4	调查回收的样本量	https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf	联网	A	2026-10-30	A total of 2,127 substantially complete returns were received (not all respondents answered all questions)	none
+V55.13.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“比较方法与计量边界”；本节题为其下位论题	none
+V55.13.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V55.13.4.5	比较的边界声明	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例注：计量不宜直作比较指标，本节立边界	none

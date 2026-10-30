@@ -1,0 +1,564 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V56.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD UNIX 进入计算机工业”；本节题为其下位论题	none
+V56.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.1.1	AT&T 早期 UNIX 许可条款	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	no support, no bug fixes, and no credit	none
+V56.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD UNIX 进入计算机工业”；本节题为其下位论题	none
+V56.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.1.2	厂商采用 4.2BSD 的原因	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Most of the Unix vendors shipped a 4.2BSD system rather than the commercial System V from AT&T. The reason was that System V had neither networking nor the Berkley Fast filesystem.	none
+V56.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD UNIX 进入计算机工业”；本节题为其下位论题	none
+V56.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.1.3	BSD 网络代码独立授权	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	With the increasing cost of the AT&T source licenses, vendors that wanted to build standalone TCP/IP-based networking products for the PC market using the BSD code found the per-binary costs prohibitive.	none
+V56.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD UNIX 进入计算机工业”；本节题为其下位论题	none
+V56.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.1.4	BSD 发行件许可与定价	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	The fact that the BSD release had a simple license agreement, credited those who produced the software, and was priced at the actual cost of the media and distribution	none
+V56.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD UNIX 进入计算机工业”；本节题为其下位论题	none
+V56.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.1.5	首个商业 UNIX 支持商	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	in 1977, Interactive Systems (Santa Monica, CA) became the first company to support Unix commercially. It was soon followed by Human Computing Resources in Toronto.	none
+V56.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Interactive Systems 与第一个商业 UNIX（1977）”；本节题为其下位论题	none
+V56.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.2.1	Interactive Systems 创立公告	04-现代研究文献/historical_claims.duckdb#CL-1-00247	史料	A	2026-10-30	1977年USENIX会议上，Peter Weiner宣布成立Interactive Systems Corporation，提供UNIX系统配置、安装、培训与合同编程等服务；同期贝尔实验室存在LSX、MINI-UNIX、MERT等多个UNIX变体，并正将UNIX移植到INTERDATA 8/32，Version 7计划扩展文件系统块数、i-node至32字（含三级间接指针）及16位UID。	none
+V56.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Interactive Systems 与第一个商业 UNIX（1977）”；本节题为其下位论题	none
+V56.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.2.2	Interactive Systems 客户名单	04-现代研究文献/historical_claims.duckdb#CL-1-00493	史料	A	2026-10-30	至1980年初，Interactive Systems Corporation（最早的UNIX商业化厂商之一）的客户名单已涵盖贝尔实验室、多所美国大学及航空航天、通信等行业机构，反映UNIX在1980年前后由学术研究环境向商业与产业机构扩散的市场格局。	none
+V56.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Interactive Systems 与第一个商业 UNIX（1977）”；本节题为其下位论题	none
+V56.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.2.3	USENIX 会议记录中的征集	04-现代研究文献/historical_claims.duckdb#CL-1-00266	史料	A	2026-10-30	1977年8月USENIX会议记录显示：UCLA安全内核项目使用Pascal到C翻译器以生成可自动验证的代码；Interactive Systems的Peter Weiner征集UNIX改进建议；UNIX用户组宣布注册为非营利组织，软件发行中心由芝加哥迁往纽约以加速发行。	none
+V56.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Interactive Systems 与第一个商业 UNIX（1977）”；本节题为其下位论题	none
+V56.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.2.4	Interactive Systems 系统基线	04-现代研究文献/historical_claims.duckdb#CL-RM-013915	史料	A	2026-10-30	Santa Monica 的 Interactive Systems 正从 V6/PWB 体系迁往 System III	none
+V56.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Interactive Systems 与第一个商业 UNIX（1977）”；本节题为其下位论题	none
+V56.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.2.5	首个商业支持者的时序	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	in 1977, Interactive Systems (Santa Monica, CA) became the first company to support Unix commercially. It was soon followed by Human Computing Resources in Toronto.	none
+V56.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“代码、接口、系统与人员的传播路径”；本节题为其下位论题	none
+V56.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.3.1	早期 UNIX 发行载体	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	The license was on one side of a sheet of paper.	none
+V56.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“代码、接口、系统与人员的传播路径”；本节题为其下位论题	none
+V56.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.3.2	人员流动与代码携带	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In the late spring of 1982, Joy announced he was joining Sun Microsystems.	none
+V56.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“代码、接口、系统与人员的传播路径”；本节题为其下位论题	none
+V56.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.3.3	socket 接口约定	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	Socket creates an endpoint for communication and returns a descriptor.	none
+V56.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“代码、接口、系统与人员的传播路径”；本节题为其下位论题	none
+V56.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.3.4	BSD 发行编号的调整	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	So, to resolve the issue, Berkeley agreed to change the naming scheme for future releases to stay at 4BSD and just increment the minor number.	none
+V56.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“代码、接口、系统与人员的传播路径”；本节题为其下位论题	none
+V56.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.3.5	发行文档的来源署名	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The only requirements were that the copyright notices in the source file be left intact and that products that incorporated the code indicate in their documentation that the product contained code from the University of California and its contributors.	none
+V56.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“从“基于 BSD”到“包含 BSD 代码””；本节题为其下位论题	none
+V56.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.4.1	授权文本的表述方式	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The only requirements were that the copyright notices in the source file be left intact and that products that incorporated the code indicate in their documentation that the product contained code from the University of California and its contributors.	none
+V56.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“从“基于 BSD”到“包含 BSD 代码””；本节题为其下位论题	none
+V56.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.4.2	Networking Release 1 条款	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The BSD originated networking code and supporting utilities were released in June 1989 as Networking Release 1, the first freely-redistributable code from Berkeley.	none
+V56.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“从“基于 BSD”到“包含 BSD 代码””；本节题为其下位论题	none
+V56.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.4.3	4.4BSD 二进制发行条款	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the University of California, Berkeley and its contributors.	none
+V56.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“从“基于 BSD”到“包含 BSD 代码””；本节题为其下位论题	none
+V56.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.4.4	广告致谢条款的删除	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	Effective immediately, licensees and distributors are no longer required to include the acknowledgement within advertising materials.	none
+V56.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“从“基于 BSD”到“包含 BSD 代码””；本节题为其下位论题	none
+V56.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.4.5	4.4BSD 版权归属	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All of the documentation and software included in the 4.4BSD and 4.4BSD-Lite Releases is copyrighted by The Regents of the University of California.	none
+V56.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“商业产品中的 BSD 技术边界”；本节题为其下位论题	none
+V56.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.5.1	技术边界的判定要件	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The only requirements were that the copyright notices in the source file be left intact and that products that incorporated the code indicate in their documentation that the product contained code from the University of California and its contributors.	none
+V56.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“商业产品中的 BSD 技术边界”；本节题为其下位论题	none
+V56.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.5.2	版权声明互置	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The University's suit claimed that USL had failed in their obligation to provide due credit to the University for the use of BSD code in System V as required by the license that they had signed with the University.	none
+V56.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“商业产品中的 BSD 技术边界”；本节题为其下位论题	none
+V56.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.5.3	手册页文件级比对	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“商业产品中的 BSD 技术边界”；本节题为其下位论题	none
+V56.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.5.4	版权年表	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All of the documentation and software included in the 4.4BSD and 4.4BSD-Lite Releases is copyrighted by The Regents of the University of California.	none
+V56.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“商业产品中的 BSD 技术边界”；本节题为其下位论题	none
+V56.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.5.5	边界主张与六文件	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	At the preliminary hearing for the injunction, BSDI contended that they were simply using the sources being freely distributed by the University of California plus six additional files.	none
+V56.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“闭源系统中的源流辨认”；本节题为其下位论题	none
+V56.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.6.1	版权头与源流痕迹	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the University of California, Berkeley and its contributors.	none
+V56.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“闭源系统中的源流辨认”；本节题为其下位论题	none
+V56.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.6.2	商业系统手册页比对	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“闭源系统中的源流辨认”；本节题为其下位论题	none
+V56.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.6.3	工具平台支持清单	https://www.tcpdump.org/	联网	A	2026-10-30	It also removes any remaining support for AOS (4.3BSD Unix), BSD/OS, DOS, HP-UX before 10.20, IRIX, MinGW, {OSF/1, Digital Unix, Tru64 Unix}, SINIX, Solaris 9, SunOS 3.x, 4.x and 5.x before 5.3.2, and Ultrix.	none
+V56.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“闭源系统中的源流辨认”；本节题为其下位论题	none
+V56.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.6.4	BSD 商标归属	04-现代研究文献/historical_claims.duckdb#CL-RM-095095	史料	A	2026-10-30	David Greenman 指出 BSD 是 Berkeley Software Design 的注册商标，FreeBSD 等名亦各自注册	none
+V56.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“闭源系统中的源流辨认”；本节题为其下位论题	none
+V56.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.6.5	二进制与商业秘密主张	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The suit alleged that the BSDI product contained proprietary USL code and trade secrets.	none
+V56.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 扩散史的史料层级”；本节题为其下位论题	none
+V56.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.7.1	一手自述的可用性	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In the late spring of 1982, Joy announced he was joining Sun Microsystems.	none
+V56.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 扩散史的史料层级”；本节题为其下位论题	none
+V56.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.7.2	发行件手册页的证据力	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	Socket creates an endpoint for communication and returns a descriptor.	none
+V56.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 扩散史的史料层级”；本节题为其下位论题	none
+V56.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.7.3	回忆与发行件对齐	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	This system, called 4.1c, was distributed in April 1983; many vendors used this release to prepare for ports of 4.2 to their hardware.	none
+V56.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 扩散史的史料层级”；本节题为其下位论题	none
+V56.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.7.4	厂商文档的自述来源	https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2	联网	A	2026-10-30	It uses the sockets paradigm that was first popularized by Berkeley Software Distribution (BSD) UNIX.	none
+V56.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 扩散史的史料层级”；本节题为其下位论题	none
+V56.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.1.7.5	保密材料公开程序	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The terms of the agreement were secret for many years, but were eventually released under the California Public Records law.	none
+V56.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Sun Microsystems 与 BSD UNIX”；本节题为其下位论题	none
+V56.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.1.1	SunOS 基线来源	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	Sun's system was ultimately upgraded to 4.2BSD after the official release.	none
+V56.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Sun Microsystems 与 BSD UNIX”；本节题为其下位论题	none
+V56.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.1.2	商业 UNIX 的 BSD 基线	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	Several commercial operating systems were based on 4.2; DEC's Ultrix and SunOS were the most notable.	none
+V56.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Sun Microsystems 与 BSD UNIX”；本节题为其下位论题	none
+V56.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.1.3	Unix 与硬件的共生	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	And there's Sun, where Unix and hardware grew symbiotically, and which propagated BSD.	none
+V56.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Sun Microsystems 与 BSD UNIX”；本节题为其下位论题	none
+V56.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.1.4	伯克利人员的产业去向	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In the late spring of 1982, Joy announced he was joining Sun Microsystems.	none
+V56.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“Sun Microsystems 与 BSD UNIX”；本节题为其下位论题	none
+V56.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.1.5	过渡发行与厂商移植	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	This system, called 4.1c, was distributed in April 1983; many vendors used this release to prepare for ports of 4.2 to their hardware.	none
+V56.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Sun 的创立与创始团队（1982）”；本节题为其下位论题	none
+V56.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.2.1	创始成员的伯克利渊源	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In the late spring of 1982, Joy announced he was joining Sun Microsystems.	none
+V56.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Sun 的创立与创始团队（1982）”；本节题为其下位论题	none
+V56.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.2.2	IPC 重做的分工	04-现代研究文献/historical_claims.duckdb#CL-RM-013746	史料	A	2026-10-30	Bill Joy 正为（至少）VAX UNIX 重做 IPC，意图同时取代 mpx 与 pipes	none
+V56.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Sun 的创立与创始团队（1982）”；本节题为其下位论题	none
+V56.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.2.3	创始成员身份自述	04-现代研究文献/historical_claims.duckdb#CL-RM-055737	史料	A	2026-10-30	Sun 创始人 Bechtolsheim 自述 Type3 键盘正被淘汰，用户须适应新产品配 Type4	none
+V56.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Sun 的创立与创始团队（1982）”；本节题为其下位论题	none
+V56.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.2.4	商用基线追平	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	Sun's system was ultimately upgraded to 4.2BSD after the official release.	none
+V56.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“SunOS 早期版本与 BSD 内核基础”；本节题为其下位论题	none
+V56.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.3.1	早期版本基线	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.4-Sun-Microsystems-的-Unix-谱系-SunOS-1-0/305.4.1-sunos4x的bsd血统到solaris转向.md	史料	A	2026-10-30	**SunOS 1.0**-4.x 基于 BSD，**SunOS 5.x**（**Solaris**）转向 **SVR4**。	none
+V56.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“SunOS 早期版本与 BSD 内核基础”；本节题为其下位论题	none
+V56.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.3.2	手册页同源比对	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“SunOS 早期版本与 BSD 内核基础”；本节题为其下位论题	none
+V56.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.3.3	过渡发行件	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	This system, called 4.1c, was distributed in April 1983; many vendors used this release to prepare for ports of 4.2 to their hardware.	none
+V56.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“SunOS 早期版本与 BSD 内核基础”；本节题为其下位论题	none
+V56.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.3.4	共享库默认绑定	04-现代研究文献/historical_claims.duckdb#CL-RM-024637	史料	A	2026-10-30	提示 SunOS 4.0 默认采用动态绑定共享库及其语义陷阱	none
+V56.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“SunOS 早期版本与 BSD 内核基础”；本节题为其下位论题	none
+V56.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.3.5	套接字语义条目	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	A SOCK_STREAM type provides sequenced, reliable, two-way connection based byte streams with an out-of-band data transmission mechanism.	none
+V56.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Berkeley 网络、文件系统与虚拟内存：工作站采用的技术源头”；本节题为其下位论题	none
+V56.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.4.1	NFS 协议规范	https://www.rfc-editor.org/rfc/rfc1094.txt	联网	A	2026-10-30	The Sun Network Filesystem (NFS) protocol provides transparent remote access to shared files across networks.	none
+V56.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Berkeley 网络、文件系统与虚拟内存：工作站采用的技术源头”；本节题为其下位论题	none
+V56.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.4.2	虚拟内存候选	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Our first choice was the virtual memory system that appeared in Sun Microsystem's SunOS. Although there was some discussion about Sun contributing the code to Berkeley, nothing came of those talks.	none
+V56.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Berkeley 网络、文件系统与虚拟内存：工作站采用的技术源头”；本节题为其下位论题	none
+V56.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.4.3	NFS 实现来源	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The other major addition to the system at the time was a Sun-compatible version of the Network Filesystem (NFS). Again the CSRG was able to avoid writing the actual NFS code, instead getting an implementation done by Rick Macklem at the University of Geulph in Canada.	none
+V56.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Berkeley 网络、文件系统与虚拟内存：工作站采用的技术源头”；本节题为其下位论题	none
+V56.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.4.4	TCP/IP 原型来源	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	When Rob Gurwitz released an early implementation of the TCP/IP protocols to Berkeley, Joy integrated it into the system and tuned its performance.	none
+V56.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Berkeley 网络、文件系统与虚拟内存：工作站采用的技术源头”；本节题为其下位论题	none
+V56.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.4.5	地址空间目标	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	support processes with multi-gigabyte address space requirements	none
+V56.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“SunOS 与商业 UNIX 工程模式”；本节题为其下位论题	none
+V56.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.5.1	分布式文件公开规格	04-现代研究文献/historical_claims.duckdb#CL-RM-018097	史料	A	2026-10-30	1985 年 1 月 23 日达拉斯 UniForum 现场：InfoMart 当天获执照并准时开幕；Sun Microsystems 在展览宣布其分布式文件系统，技术与规格将大部分进入公有领域，被现场评价"实为相当令人印象深刻的逆标准"——Sun 分布式文件产品首次公开展示的现场记录	none
+V56.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“SunOS 与商业 UNIX 工程模式”；本节题为其下位论题	none
+V56.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.5.2	协议规范公有属性	04-现代研究文献/historical_claims.duckdb#CL-2-00634	史料	A	2026-10-30	1986 年 11 月，Sun Microsystems 在 USENIX 会议（;login: 刊载）开设 NFS 教程，称 NFS 为面向异构网络的分布式文件共享服务，其 RPC/XDR 支撑协议可供其他网络服务使用，且全部 NFS 协议规范处于公有领域。	none
+V56.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“SunOS 与商业 UNIX 工程模式”；本节题为其下位论题	none
+V56.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.5.3	补丁磁带惯例	04-现代研究文献/historical_claims.duckdb#CL-RM-024619	史料	A	2026-10-30	SunOS 4.0.1 补丁磁带的安装流程与修复清单实测	none
+V56.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“SunOS 与商业 UNIX 工程模式”；本节题为其下位论题	none
+V56.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.5.4	RPC 自研取舍	04-现代研究文献/historical_claims.duckdb#CL-RM-070174	史料	A	2026-10-30	grunwald述Bill Joy讲Sun曾考虑Courier后自研RPC的NFS史实	none
+V56.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“SunOS 与商业 UNIX 工程模式”；本节题为其下位论题	none
+V56.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.5.5	许可与分发约束	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The only requirements were that the copyright notices in the source file be left intact and that products that incorporated the code indicate in their documentation that the product contained code from the University of California and its contributors.	none
+V56.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“System V、SVR4 与 SunOS 的转折”；本节题为其下位论题	none
+V56.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.6.1	版本序列断点	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.4-Sun-Microsystems-的-Unix-谱系-SunOS-1-0/305.4.1-sunos4x的bsd血统到solaris转向.md	史料	A	2026-10-30	**SunOS 1.0**-4.x 基于 BSD，**SunOS 5.x**（**Solaris**）转向 **SVR4**。	none
+V56.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“System V、SVR4 与 SunOS 的转折”；本节题为其下位论题	none
+V56.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.6.2	商业发行体制	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The final release from Bell Laboratories was 32/V; thereafter all Unix releases from AT&T, initially System III and later System V, were managed by a different group that emphasized stable commercial releases.	none
+V56.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“System V、SVR4 与 SunOS 的转折”；本节题为其下位论题	none
+V56.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.6.3	命名变更待核	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.4-Sun-Microsystems-的-Unix-谱系-SunOS-1-0/305.4.1-sunos4x的bsd血统到solaris转向.md	史料	A	2026-10-30	**SunOS 5.x** 改名 **Solaris** 的确切时间需核查	none
+V56.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“System V、SVR4 与 SunOS 的转折”；本节题为其下位论题	none
+V56.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.6.4	双基线手册并存	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Solaris 建立后的 BSD 遗产”；本节题为其下位论题	none
+V56.2.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.7.1	闭源转向后果	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.5-Oracle-收购-Sun-后的-Solaris-11-与/305.5.1-oraclesolaris11的发布与闭源转向.md	史料	A	2026-10-30	**Oracle** 2010 年 1 月完成对 **Sun** 的收购后，于 2011 年 9 月发布 **Solaris 11**，并在 2017 年前后逐步关闭 **OpenSolaris** 源码更新，转向闭源订阅模式。	none
+V56.2.7.1	Solaris 11 兼容承诺	https://www.oracle.com/solaris/	联网	B	2026-10-30	We’ve been designing the OS for more than two decades, always ensuring that we’ve engineered in features to meet the latest market trends while maintaining backward compatibility.	none
+V56.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Solaris 建立后的 BSD 遗产”；本节题为其下位论题	none
+V56.2.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.7.2	公告与路线图	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.5-Oracle-收购-Sun-后的-Solaris-11-与/305.5.4-oracle公告与solaris路线图考据.md	史料	A	2026-10-30	**Oracle** 通过官方公告、**Solaris** 路线图文档阐述未来方向，但这些文档多被删除或归档后需依赖 `archive.org` 检索。	none
+V56.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Solaris 建立后的 BSD 遗产”；本节题为其下位论题	none
+V56.2.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.7.3	闭源化的警示	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.5-Oracle-收购-Sun-后的-Solaris-11-与/305.5.3-oracle闭源化对bsd的警示分析.md	史料	A	2026-10-30	**Oracle** 关闭 **OpenSolaris**、起诉 **Google** Java API 侵权等行为被 BSD 社区视为商业公司接管开源项目的警示案例。	none
+V56.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Solaris 建立后的 BSD 遗产”；本节题为其下位论题	none
+V56.2.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.7.4	Solaris 平台支持范围	https://www.tcpdump.org/	联网	A	2026-10-30	improves support for FreeBSD, illumos, Linux, macOS, NetBSD, OpenBSD, QNX, and Solaris 11	none
+V56.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“SunOS 与 Berkeley 的双向技术流动”；本节题为其下位论题	none
+V56.2.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.8.1	虚拟内存移植评估	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Our first choice was the virtual memory system that appeared in Sun Microsystem's SunOS. Although there was some discussion about Sun contributing the code to Berkeley, nothing came of those talks.	none
+V56.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“SunOS 与 Berkeley 的双向技术流动”；本节题为其下位论题	none
+V56.2.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.8.2	NFS 兼容实现	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The other major addition to the system at the time was a Sun-compatible version of the Network Filesystem (NFS). Again the CSRG was able to avoid writing the actual NFS code, instead getting an implementation done by Rick Macklem at the University of Geulph in Canada.	none
+V56.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“SunOS 与 Berkeley 的双向技术流动”；本节题为其下位论题	none
+V56.2.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.8.3	协议规范公开前提	https://www.rfc-editor.org/rfc/rfc1094.txt	联网	A	2026-10-30	This RFC describes a protocol that Sun Microsystems, Inc., and others are using.	none
+V56.2.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；本节题为其下位论题	none
+V56.2.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.9.1	illumos 源码可得性	https://illumos.org/	联网	A	2026-10-30	illumos is freely available from its source repository	none
+V56.2.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；本节题为其下位论题	none
+V56.2.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.9.2	illumos 开发主体	https://illumos.org/	联网	A	2026-10-30	illumos is developed by both volunteers and companies building products on top of the software.	none
+V56.2.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；本节题为其下位论题	none
+V56.2.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.9.3	ZFS 跨平台	https://openzfs.org/wiki/Main_Page	联网	A	2026-10-30	The OpenZFS project brings together developers from the Linux, FreeBSD, illumos, MacOS, and Windows platforms.	none
+V56.2.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；本节题为其下位论题	none
+V56.2.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.9.4	bhyve 两平台	https://bhyve.org/	联网	A	2026-10-30	bhyve, the "BSD hypervisor", pronounced "beehive" is a hypervisor/virtual machine manager available on FreeBSD and illumos.	none
+V56.2.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Sun 一系的当代延续：Solaris 演化与 illumos 的 BSD 遗产”；本节题为其下位论题	none
+V56.2.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.2.9.5	Solaris 旧版退场	https://www.tcpdump.org/	联网	A	2026-10-30	It also removes any remaining support for AOS (4.3BSD Unix), BSD/OS, DOS, HP-UX before 10.20, IRIX, MinGW, {OSF/1, Digital Unix, Tru64 Unix}, SINIX, Solaris 9, SunOS 3.x, 4.x and 5.x before 5.3.2, and Ultrix.	none
+V56.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Berkeley Software Design, Inc. 的成立”；本节题为其下位论题	none
+V56.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.1.1	创立年份与名单	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.1-bsdi商业化bsd386bsdos前身的模型.md	史料	A	2026-10-30	**BSDi** 1991 年由 **Rick Adams**、**Mike Karels**、**Marshall Kirk McKusick（马歇尔·柯克·麦库西克）** 等前 **CSRG** 成员成立，商业销售 **BSD/386**（**BSD/OS** 前身，基于 **Net/2**）服务器操作系统，主打 **ISP** 与电信市场	none
+V56.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Berkeley Software Design, Inc. 的成立”；本节题为其下位论题	none
+V56.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.1.2	创始成员构成	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	This included Keith Bostic, Kirk McKusick, Mike Karels, Bill Jolitz, and Donn Seeley.	none
+V56.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Berkeley Software Design, Inc. 的成立”；本节题为其下位论题	none
+V56.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.1.3	Net/2 承接关系	04-现代研究文献/historical_claims.duckdb#CL-15-3234	史料	A	2026-10-30	据〔The Quick and Dirty History of UNIX, BSD, and FreeBSD（Kevin Sweeney）讲者口述：讲者称转写作 Net Two 的 Net/2 虽仍有缺件、尚不能自成完整系统，但它是向 Intel 386 架构两个移植的基础：自由开源的 FreeBSD 与 Berkeley Software Design（BSDi）的专有 BSD/386。	none
+V56.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Berkeley Software Design, Inc. 的成立”；本节题为其下位论题	none
+V56.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.1.4	商标与许可分置	04-现代研究文献/historical_claims.duckdb#CL-RM-095095	史料	A	2026-10-30	David Greenman 指出 BSD 是 Berkeley Software Design 的注册商标，FreeBSD 等名亦各自注册	none
+V56.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Berkeley Software Design, Inc. 的成立”；本节题为其下位论题	none
+V56.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.1.5	商业发行起点	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	BSDi started selling their commercial version of BSD in January of 1992 after receiving permission from UC Berkeley.	none
+V56.3.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Berkeley Software Design, Inc. 的成立”；本节题为其下位论题	none
+V56.3.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.1.6	公司来源两说	04-现代研究文献/historical_claims.duckdb#CL-RM-385223	史料	A	2026-10-30	FreeBSD 官方《Explaining BSD》文档载：CSRG 成员 Jolitz 补足 Net/2 缺失代码并于 1992 年初以 386BSD 发布，同时另一批前 CSRG 成员组建 Berkeley Software Design Inc. 并发布基于同一来源（"based on the same sources"）的 BSD/386 beta	none
+V56.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“BSD／386 与源代码商业模式”；本节题为其下位论题	none
+V56.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.2.1	源码与二进制打包	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	BSDI began selling their system including both source and binaries in January 1992 for $995.	none
+V56.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“BSD／386 与源代码商业模式”；本节题为其下位论题	none
+V56.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.2.2	与 System V 比价	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	This was a 99% discount on the price AT&T charged for their System V Unix.	none
+V56.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“BSD／386 与源代码商业模式”；本节题为其下位论题	none
+V56.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.2.3	电话营销争议	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Interested readers were told to call 1-800-ITS-Unix.	none
+V56.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“BSD／386 与源代码商业模式”；本节题为其下位论题	none
+V56.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.2.4	目标客户定位	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.1-bsdi商业化bsd386bsdos前身的模型.md	史料	A	2026-10-30	**BSDi** 1991 年由 **Rick Adams**、**Mike Karels**、**Marshall Kirk McKusick（马歇尔·柯克·麦库西克）** 等前 **CSRG** 成员成立，商业销售 **BSD/386**（**BSD/OS** 前身，基于 **Net/2**）服务器操作系统，主打 **ISP** 与电信市场	none
+V56.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“BSD／386 与源代码商业模式”；本节题为其下位论题	none
+V56.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.2.5	高定价低销量模型	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.3-与walnutcreek商业模型的比较.md	史料	A	2026-10-30	**BSDi** 销售专有商业 **BSD/OS** 操作系统，**Walnut Creek** 则销售 **FreeBSD** 廉价 CD-ROM，前者高定价低销量，后者低定价高销量。	none
+V56.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSDI 与 AT&T UNIX System Laboratories 的诉讼”；本节题为其下位论题	none
+V56.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.3.1	诉因构成	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The suit alleged that the BSDI product contained proprietary USL code and trade secrets.	none
+V56.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSDI 与 AT&T UNIX System Laboratories 的诉讼”；本节题为其下位论题	none
+V56.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.3.2	禁令审理	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In December 1992, Dickinson R. Debevoise, a United States District Judge in New Jersey, heard the arguments for the injunction.	none
+V56.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSDI 与 AT&T UNIX System Laboratories 的诉讼”；本节题为其下位论题	none
+V56.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.3.3	六文件抗辩	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	At the preliminary hearing for the injunction, BSDI contended that they were simply using the sources being freely distributed by the University of California plus six additional files.	none
+V56.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSDI 与 AT&T UNIX System Laboratories 的诉讼”；本节题为其下位论题	none
+V56.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.3.4	反诉诉因	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The University's suit claimed that USL had failed in their obligation to provide due credit to the University for the use of BSD code in System V as required by the license that they had signed with the University.	none
+V56.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“BSDI 与 AT&T UNIX System Laboratories 的诉讼”；本节题为其下位论题	none
+V56.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.3.5	和解时点确认	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.2-bsdi被usl起诉与和解的过程.md	史料	A	2026-10-30	1992 年 **USL** 起诉 **BSDi** 主张 **BSD** 代码含 **AT&T** 商业秘密，1993 年法官驳回大部分诉求，1994 年和解后 **BSDi** 转向基于 **4.4BSD-Lite** 发布 **BSD/OS** 2.0。	none
+V56.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“诉讼对 BSD 源代码清理与命名的影响”；本节题为其下位论题	none
+V56.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.4.1	清理规模	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The result was that three files were removed from the 18,000 that made up Networking Release 2, and a number of minor changes were made to other files.	none
+V56.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“诉讼对 BSD 源代码清理与命名的影响”；本节题为其下位论题	none
+V56.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.4.2	版权补加	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The University of California added USL copyrights to 70 files.	none
+V56.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“诉讼对 BSD 源代码清理与命名的影响”；本节题为其下位论题	none
+V56.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.4.3	再发行条件	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	the terms allow free redistribution in source and binary form subject only to the constraint that the University copyrights remain intact and that the University receive credit when others use the code	none
+V56.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“诉讼对 BSD 源代码清理与命名的影响”；本节题为其下位论题	none
+V56.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.4.4	中断代价	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	effectively ceded the territory to Linux during a critical period in which there was a leadership vacuum and lots of Fear, Uncertainty and Doubt in the BSD community	none
+V56.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“诉讼对 BSD 源代码清理与命名的影响”；本节题为其下位论题	none
+V56.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.4.5	基线切换	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.2-bsdi被usl起诉与和解的过程.md	史料	A	2026-10-30	1992 年 **USL** 起诉 **BSDi** 主张 **BSD** 代码含 **AT&T** 商业秘密，1993 年法官驳回大部分诉求，1994 年和解后 **BSDi** 转向基于 **4.4BSD-Lite** 发布 **BSD/OS** 2.0。	none
+V56.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“4.4BSD-Lite 与商业 BSD 的重新分化”；本节题为其下位论题	none
+V56.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.5.1	Lite 条款沿袭	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The newly blessed release was called 4.4BSD-Lite and was released in June 1994 under terms identical to those used for the Networking releases.	none
+V56.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“4.4BSD-Lite 与商业 BSD 的重新分化”；本节题为其下位论题	none
+V56.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.5.2	基线重灌	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	So, all the BSD groups that were doing releases at that time, BSDI, NetBSD, and FreeBSD, had to restart their code base with the 4.4BSD-Lite sources into which they then merged their enhancements and improvements.	none
+V56.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“4.4BSD-Lite 与商业 BSD 的重新分化”；本节题为其下位论题	none
+V56.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.5.3	免诉承诺边界	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The lawsuit settlement also stipulated that USL would not sue any organization using 4.4BSD-Lite as the base for their system.	none
+V56.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“4.4BSD-Lite 与商业 BSD 的重新分化”；本节题为其下位论题	none
+V56.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.5.4	版本重编	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.2-bsdi被usl起诉与和解的过程.md	史料	A	2026-10-30	1992 年 **USL** 起诉 **BSDi** 主张 **BSD** 代码含 **AT&T** 商业秘密，1993 年法官驳回大部分诉求，1994 年和解后 **BSDi** 转向基于 **4.4BSD-Lite** 发布 **BSD/OS** 2.0。	none
+V56.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“BSD／OS 的产品化道路”；本节题为其下位论题	none
+V56.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.6.1	产品名称更替	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	It was originally called BSD/386, but later changed to BSD/OS.	none
+V56.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“BSD／OS 的产品化道路”；本节题为其下位论题	none
+V56.3.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.6.2	授权与支持分层	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	This was a 99% discount on the price AT&T charged for their System V Unix.	none
+V56.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“BSD／OS 的产品化道路”；本节题为其下位论题	none
+V56.3.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.6.3	发行渠道整合	04-现代研究文献/historical_claims.duckdb#CL-RM-071759	史料	A	2026-10-30	Nik Clayton 说明 Walnut Creek 与 Berkeley Software Design 已合并，新公司名为 BSDi	none
+V56.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“BSD／OS 的产品化道路”；本节题为其下位论题	none
+V56.3.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.6.4	并入库	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.19-Wind-River-VxWorks-Wind-River-1981-年成立/305.19.2-windriver收购bsdi的事件.md	史料	A	2026-10-30	**Wind River** 2001 年 4 月收购 **BSDi** 的 **BSD/OS** 与 **FreeBSD Mall** 业务，意图将 **BSD/OS** 并入其嵌入式产品线，但 2003 年后逐步停止 **BSD/OS** 独立发行。	none
+V56.3.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“BSD／OS 的产品化道路”；本节题为其下位论题	none
+V56.3.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.6.5	与社区版比价	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.3-与walnutcreek商业模型的比较.md	史料	A	2026-10-30	**BSDi** 销售专有商业 **BSD/OS** 操作系统，**Walnut Creek** 则销售 **FreeBSD** 廉价 CD-ROM，前者高定价低销量，后者低定价高销量。	none
+V56.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）”；本节题为其下位论题	none
+V56.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.7.1	分流时点	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In the mid-1990s, OpenBSD spun off from the NetBSD group.	none
+V56.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）”；本节题为其下位论题	none
+V56.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.7.2	社区基线选择	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	So, all the BSD groups that were doing releases at that time, BSDI, NetBSD, and FreeBSD, had to restart their code base with the 4.4BSD-Lite sources into which they then merged their enhancements and improvements.	none
+V56.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）”；本节题为其下位论题	none
+V56.3.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.7.3	人才流向	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	effectively ceded the territory to Linux during a critical period in which there was a leadership vacuum and lots of Fear, Uncertainty and Doubt in the BSD community	none
+V56.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.8.1	收购时点	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.19-Wind-River-VxWorks-Wind-River-1981-年成立/305.19.2-windriver收购bsdi的事件.md	史料	A	2026-10-30	**Wind River** 2001 年 4 月收购 **BSDi** 的 **BSD/OS** 与 **FreeBSD Mall** 业务，意图将 **BSD/OS** 并入其嵌入式产品线，但 2003 年后逐步停止 **BSD/OS** 独立发行。	none
+V56.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.8.2	停售停支年份	04-现代研究文献/historical_claims.duckdb#CL-RM-022575	史料	A	2026-10-30	Jason Bourne指出Wind River已于2003年止售BSD/OS、2004年止支持	none
+V56.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.8.3	末版发行号	04-现代研究文献/historical_claims.duckdb#CL-RM-022586	史料	A	2026-10-30	称BSD/OS5.1是Wind River公司的最后一个BSD版本	none
+V56.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.8.4	并入嵌入式	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.19-Wind-River-VxWorks-Wind-River-1981-年成立/305.19.4-windriver公告与收购记录考据.md	史料	A	2026-10-30	**Wind River** 2018 年被 **TPG Capital** 以约 35 亿美元从 **Intel** 收购，**Intel** 2009 年以 8.84 亿美元收购 **Wind River**，历次所有权变更影响产品策略。	none
+V56.3.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.8.5	公司更名去向	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The following year, BSDi sold its software business to Wind River Systems, and the remaining company was then renamed to iXsystems.	none
+V56.3.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.3.8.6	售后移交反应	04-现代研究文献/historical_claims.duckdb#CL-RM-023060	史料	A	2026-10-30	2001年问有否收到Wind River的续费通知反映并购后售后更替	none
+V56.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none
+V56.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.1.1	端点定义	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	Socket creates an endpoint for communication and returns a descriptor.	none
+V56.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none
+V56.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.1.2	通信类型划分	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	A SOCK_STREAM type provides sequenced, reliable, two-way connection based byte streams with an out-of-band data transmission mechanism.	none
+V56.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none
+V56.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.1.3	地址族枚举	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	AF_INET (ARPA Internet addresses)	none
+V56.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none
+V56.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.1.4	协议域选取	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	Normally only a single protocol exists to support a particular socket type using a given address format.	none
+V56.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none
+V56.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.1.5	带外数据错配	04-现代研究文献/historical_claims.duckdb#CL-RM-039921	史料	A	2026-10-30	Chris Torek 指出 TCP 并不存在真正的带外数据而只有紧急数据，BSD socket 抽象却只提供带外数据，二者之间存在错配。	none
+V56.4.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none
+V56.4.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.1.6	原始套接字权限	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	SOCK_RAW sockets provide access to internal network interfaces.	none
+V56.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“Internet domain 与 TCP／IP 编程模型”；本节题为其下位论题	none
+V56.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.2.1	互联网地址族	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	AF_INET (ARPA Internet addresses)	none
+V56.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“Internet domain 与 TCP／IP 编程模型”；本节题为其下位论题	none
+V56.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.2.2	传输层并置	https://www.tuhs.org/cgi-bin/utree.pl?file=4.2BSD/usr/man/man2/socket.2	联网	A	2026-10-30	A SOCK_STREAM type provides sequenced, reliable, two-way connection based byte streams with an out-of-band data transmission mechanism.	none
+V56.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“Internet domain 与 TCP／IP 编程模型”；本节题为其下位论题	none
+V56.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.2.3	多协议重构	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	they redesigned the internal structuring of the software, refining the interfaces so that multiple network protocols could be used simultaneously	none
+V56.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“Internet domain 与 TCP／IP 编程模型”；本节题为其下位论题	none
+V56.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.2.4	原型整合	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	When Rob Gurwitz released an early implementation of the TCP/IP protocols to Berkeley, Joy integrated it into the system and tuned its performance.	none
+V56.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“Internet domain 与 TCP／IP 编程模型”；本节题为其下位论题	none
+V56.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.2.5	设计目标条目	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	provide flexible interprocess communication facilities that allow researchers to do work in distributed systems, and would integrate networking support	none
+V56.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Berkeley sockets 的接口扩散”；本节题为其下位论题	none
+V56.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.3.1	首个 TCP/IP 实现	04-现代研究文献/historical_claims.duckdb#CL-RM-092553	史料	A	2026-10-30	指出 Berkeley sockets 是 Unix 上首个 TCP/IP 实现，后被包括 AT&T 在内广泛复制	none
+V56.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Berkeley sockets 的接口扩散”；本节题为其下位论题	none
+V56.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.3.2	手册页跨系统复制	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Berkeley sockets 的接口扩散”；本节题为其下位论题	none
+V56.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.3.3	站点许可时间窗口	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The popularity of 4.2BSD was impressive; within eighteen months more than 1,000 site licenses had been issued.	none
+V56.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Berkeley sockets 的接口扩散”；本节题为其下位论题	none
+V56.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.3.4	示例文档流传	https://www.tuhs.org/cgi-bin/utree.pl?file=4.4BSD/usr/share/man/cat2/socket.0	联网	A	2026-10-30	307: 4.2BSD/usr/man/man2/socket.2	none
+V56.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Windows Sockets 与 Berkeley 编程模型”；本节题为其下位论题	none
+V56.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.4.1	编程模型来源	https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2	联网	A	2026-10-30	It uses the sockets paradigm that was first popularized by Berkeley Software Distribution (BSD) UNIX.	none
+V56.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Windows Sockets 与 Berkeley 编程模型”；本节题为其下位论题	none
+V56.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.4.2	兼容承诺	https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2	联网	A	2026-10-30	It was later adapted for Windows in Windows Sockets 1.1, with which Windows Sockets 2 applications are backward compatible.	none
+V56.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Windows Sockets 与 Berkeley 编程模型”；本节题为其下位论题	none
+V56.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.4.3	系统内置时点	04-现代研究文献/historical_claims.duckdb#CL-21-00553	史料	A	2026-10-30	Windows 95 是首个开箱即带 Windows Sockets (Winsock) 的 MS-Windows 版本，此后 PC 上互联网应用迅速增加。	none
+V56.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Windows Sockets 与 Berkeley 编程模型”；本节题为其下位论题	none
+V56.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.4.4	NT 子系统移植	04-现代研究文献/historical_claims.duckdb#CL-2-00416	史料	A	2026-10-30	1998年USENIX会议上报告：INTERIX通过在NT实现Berkeley sockets与System V IPC实现UNIX应用移植（Apache移植仅需数小时）；Apple Rhapsody（后为MacOS X）包含来自NetBSD、FreeBSD、OpenBSD的代码，网络栈基于BSD 4.4 TCP/IP。	none
+V56.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Windows Sockets 与 Berkeley 编程模型”；本节题为其下位论题	none
+V56.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.4.5	API 限缩模拟	04-现代研究文献/historical_claims.duckdb#CL-1-00497	史料	A	2026-10-30	1998 年，Paas 团队在 USENIX 报告 nt2unix 项目：通过将 Winsock 2.0 限缩至 BSD Sockets API、以全局信号处理器模拟 NT 结构化异常处理等手段，在 Solaris 与 Linux 上实现了 Win32 API 的'合理子集'模拟，并以 15000 行代码模块验证无需修改源码即可运行，证明 UNIX 下模拟 Win32 可行。	none
+V56.4.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Windows Sockets 与 Berkeley 编程模型”；本节题为其下位论题	none
+V56.4.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.4.6	早期第三方栈	04-现代研究文献/historical_claims.duckdb#CL-2-00347	史料	A	2026-10-30	1997年Softway Systems的OpenNT在Windows NT上以独立子系统提供UNIX系统调用环境，实现Berkeley sockets、X11R6服务器及mwm/twm窗口管理器，但单一可执行文件无法混用UNIX与Win32系统调用，限制了UNIX应用向NT移植时的GUI与数据库库复用。	none
+V56.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“BIND 的接口遗产：DNS 编程接口的扩散”；本节题为其下位论题	none
+V56.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.5.1	解析器接口约定	https://www.isc.org/bind/	联网	A	2026-10-30	As the first, oldest, and most commonly deployed solution, there are more network engineers who are already familiar with BIND 9 than with any other system.	none
+V56.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“BIND 的接口遗产：DNS 编程接口的扩散”；本节题为其下位论题	none
+V56.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.5.2	DNS 规范文本	https://www.rfc-editor.org/rfc/rfc1035.txt	联网	A	2026-10-30	This RFC describes the details of the domain system and protocol	none
+V56.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“BIND 的接口遗产：DNS 编程接口的扩散”；本节题为其下位论题	none
+V56.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.5.3	许可条款选择	https://www.isc.org/bind/	联网	A	2026-10-30	BIND 9 is transparent open source, licensed under the MPL 2.0 license.	none
+V56.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“BIND 的接口遗产：DNS 编程接口的扩散”；本节题为其下位论题	none
+V56.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.5.4	解析库移除	04-现代研究文献/historical_claims.duckdb#CL-RM-046490	史料	A	2026-10-30	就基础系统移除 BIND 发出最终通告	none
+V56.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“sendmail 的接口遗产：邮件系统的编程接口”；本节题为其下位论题	none
+V56.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.6.1	配置文件发行路径	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	4.3BSD/usr/src/usr.lib/sendmail/cf.hosttable/arpa.mc	none
+V56.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“sendmail 的接口遗产：邮件系统的编程接口”；本节题为其下位论题	none
+V56.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.6.2	配置工具封装	04-现代研究文献/historical_claims.duckdb#CL-RM-047563	史料	A	2026-10-30	Ease（sendmail 配置）工具介绍。	none
+V56.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“tcpdump、libpcap 与网络分析工具链”；本节题为其下位论题	none
+V56.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.7.1	抓包库平台支持	https://www.tcpdump.org/	联网	A	2026-10-30	It also removes any remaining support for AOS (4.3BSD Unix), BSD/OS, DOS, HP-UX before 10.20, IRIX, MinGW, {OSF/1, Digital Unix, Tru64 Unix}, SINIX, Solaris 9, SunOS 3.x, 4.x and 5.x before 5.3.2, and Ultrix.	none
+V56.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“tcpdump、libpcap 与网络分析工具链”；本节题为其下位论题	none
+V56.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.7.2	BPF 与工具分工	04-现代研究文献/historical_claims.duckdb#CL-RM-146885	史料	A	2026-10-30	itojun 回应 bpf 与 tcpdump 的关系	none
+V56.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“tcpdump、libpcap 与网络分析工具链”；本节题为其下位论题	none
+V56.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.7.3	发行维护周期	https://www.tcpdump.org/	联网	A	2026-10-30	This libpcap release is a result of nearly six years of development done by The Tcpdump Group and many contributors.	none
+V56.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“从 BSD 实现到事实标准的网络接口”；本节题为其下位论题	none
+V56.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.8.1	双绑定标准化	04-现代研究文献/historical_claims.duckdb#CL-2-00191	史料	A	2026-10-30	1995 年 POSIX.1g（原 POSIX.12）工作组在 XTI 与 Berkeley sockets 两个候选进程间通信接口之间无法抉择，最终决定将两者的 C 语言绑定同时标准化，并附带标准化 poll() 与 select()；同期 POSIX 组织因会议出席萎缩而放弃 LIS 与测试方法要求。	none
+V56.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“从 BSD 实现到事实标准的网络接口”；本节题为其下位论题	none
+V56.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.8.2	头文件标准归属	https://pubs.opengroup.org/onlinepubs/009696699/basedefs/sys/socket.h.html	联网	A	2026-10-30	The <sys/socket.h> header shall define the sockaddr structure that includes at least the following members	none
+V56.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“从 BSD 实现到事实标准的网络接口”；本节题为其下位论题	none
+V56.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.8.3	迁移层兼容	04-现代研究文献/historical_claims.duckdb#CL-2-00416	史料	A	2026-10-30	1998年USENIX会议上报告：INTERIX通过在NT实现Berkeley sockets与System V IPC实现UNIX应用移植（Apache移植仅需数小时）；Apple Rhapsody（后为MacOS X）包含来自NetBSD、FreeBSD、OpenBSD的代码，网络栈基于BSD 4.4 TCP/IP。	none
+V56.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“从 BSD 实现到事实标准的网络接口”；本节题为其下位论题	none
+V56.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.8.4	事实标准确认	https://pubs.opengroup.org/onlinepubs/009696699/basedefs/sys/socket.h.html	联网	A	2026-10-30	sys/socket.h - main sockets header	none
+V56.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“从 BSD 实现到事实标准的网络接口”；本节题为其下位论题	none
+V56.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.4.8.5	派生条目一致	https://www.tuhs.org/cgi-bin/utree.pl?file=4.4BSD/usr/share/man/cat2/socket.0	联网	A	2026-10-30	307: 4.2BSD/usr/man/man2/socket.2	none
+V56.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Berkeley UNIX 与 System V 的技术合流”；本节题为其下位论题	none
+V56.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.1.1	合流方向	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Most of the Unix vendors shipped a 4.2BSD system rather than the commercial System V from AT&T. The reason was that System V had neither networking nor the Berkley Fast filesystem.	none
+V56.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Berkeley UNIX 与 System V 的技术合流”；本节题为其下位论题	none
+V56.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.1.2	回流选择	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Although most of the vendors had started the switch back to System V, large parts of 4.3BSD were carried over into their systems, particularly the networking subsystem.	none
+V56.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Berkeley UNIX 与 System V 的技术合流”；本节题为其下位论题	none
+V56.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.1.3	早期商业基线	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	Several commercial operating systems were based on 4.2; DEC's Ultrix and SunOS were the most notable.	none
+V56.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Berkeley UNIX 与 System V 的技术合流”；本节题为其下位论题	none
+V56.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.1.4	贝尔实验室发行终止	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The final release from Bell Laboratories was 32/V; thereafter all Unix releases from AT&T, initially System III and later System V, were managed by a different group that emphasized stable commercial releases.	none
+V56.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Berkeley UNIX 与 System V 的技术合流”；本节题为其下位论题	none
+V56.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.1.5	编号避讳	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The original intent had been to call it the 5BSD release; however, there were objections from AT&T that there would be customer confusion between their commercial Unix release, System V, and a Berkeley release named 5BSD.	none
+V56.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“BSD 网络代码进入商业 UNIX”；本节题为其下位论题	none
+V56.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.2.1	网络子系统移植	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Although most of the vendors had started the switch back to System V, large parts of 4.3BSD were carried over into their systems, particularly the networking subsystem.	none
+V56.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“BSD 网络代码进入商业 UNIX”；本节题为其下位论题	none
+V56.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.2.2	手册页同源证据	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“BSD 网络代码进入商业 UNIX”；本节题为其下位论题	none
+V56.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.2.3	计费阻力	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	With the increasing cost of the AT&T source licenses, vendors that wanted to build standalone TCP/IP-based networking products for the PC market using the BSD code found the per-binary costs prohibitive.	none
+V56.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“BSD 网络代码进入商业 UNIX”；本节题为其下位论题	none
+V56.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.2.4	复制行为记述	04-现代研究文献/historical_claims.duckdb#CL-RM-092553	史料	A	2026-10-30	指出 Berkeley sockets 是 Unix 上首个 TCP/IP 实现，后被包括 AT&T 在内广泛复制	none
+V56.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“BSD 网络代码进入商业 UNIX”；本节题为其下位论题	none
+V56.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.2.5	独立授权	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The BSD originated networking code and supporting utilities were released in June 1989 as Networking Release 1, the first freely-redistributable code from Berkeley.	none
+V56.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Berkeley 用户空间工具与命令体系”；本节题为其下位论题	none
+V56.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.3.1	工具集重写	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	He solicited folks to rewrite the Unix utilities from scratch based solely on their published descriptions.	none
+V56.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Berkeley 用户空间工具与命令体系”；本节题为其下位论题	none
+V56.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.3.2	署名激励	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Their only compensation would be to have their name listed among the Berkeley contributors next to the name of the utility that they rewrote.	none
+V56.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Berkeley 用户空间工具与命令体系”；本节题为其下位论题	none
+V56.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.3.3	重写时间跨度	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Soon the list crossed one hundred utilities and within 18 months nearly all the important utilities and libraries had been rewritten.	none
+V56.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Berkeley 用户空间工具与命令体系”；本节题为其下位论题	none
+V56.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.3.4	命令体系取舍	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Although the Linux system is perhaps the most well-known, about half of the utilities that it comes packaged with are drawn from the BSD distribution.	none
+V56.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“curses 与 vi 的跨系统传播”；本节题为其下位论题	none
+V56.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.4.1	屏幕管理解释器	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	he decided to consolidate the screen management by using a small interpreter to redraw the screen	none
+V56.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“curses 与 vi 的跨系统传播”；本节题为其下位论题	none
+V56.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.4.2	curses 游戏渊源	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	It's a screen handler and optimization program that Arnold wrote to make the playing of Rogue easier.	none
+V56.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“curses 与 vi 的跨系统传播”；本节题为其下位论题	none
+V56.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.4.3	vi 派生序列	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	With the arrival of some ADM-3a terminals offering screen-addressable cursors, Joy was finally able to write vi, bringing screen-based editing to Berkeley.	none
+V56.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“curses 与 vi 的跨系统传播”；本节题为其下位论题	none
+V56.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.4.4	跨系统移植时点	https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	联网	B	2026-10-30	Version 8 ported vi (by Bill Joy), curses (by Ken Arnold), and termcap (by Joy) from BSD.	none
+V56.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“curses 与 vi 的跨系统传播”；本节题为其下位论题	none
+V56.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.4.5	复刻存续	04-现代研究文献/historical_claims.duckdb#CL-21-03755	史料	A	2026-10-30	1994-07 Vim 自称接近完整复刻经典 Unix vi 编辑器的功能，并支持 MS-DOS、Amiga 与多数 Unix 形态。	none
+V56.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“厂商 UNIX 与 BSD 间的版权声明互置与源代码痕迹”；本节题为其下位论题	none
+V56.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.5.1	声明互置争议	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The University's suit claimed that USL had failed in their obligation to provide due credit to the University for the use of BSD code in System V as required by the license that they had signed with the University.	none
+V56.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“厂商 UNIX 与 BSD 间的版权声明互置与源代码痕迹”；本节题为其下位论题	none
+V56.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.5.2	版权头层叠	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All of the documentation and software included in the 4.4BSD and 4.4BSD-Lite Releases is copyrighted by The Regents of the University of California.	none
+V56.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“厂商 UNIX 与 BSD 间的版权声明互置与源代码痕迹”；本节题为其下位论题	none
+V56.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.5.3	广告条款存废	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the University of California, Berkeley and its contributors.	none
+V56.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“厂商 UNIX 与 BSD 间的版权声明互置与源代码痕迹”；本节题为其下位论题	none
+V56.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.5.4	同源文件比对	https://www.tuhs.org/cgi-bin/utree.pl?file=SunOS-4.1.4/man/man2/socket.2	联网	A	2026-10-30	412: 4.2BSD/usr/man/man2/socket.2	none
+V56.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“厂商 UNIX 与 BSD 间的版权声明互置与源代码痕迹”；本节题为其下位论题	none
+V56.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.5.5	痕迹证据强度	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	Effective immediately, licensees and distributors are no longer required to include the acknowledgement within advertising materials.	none
+V56.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题”；本节题为其下位论题	none
+V56.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.6.1	封闭系统档案缺口	旧大纲-20261023/第14卷-商业生态与企业案例/第308章-贡献者os比较赞助复核与采访媒体/308.2-被遮蔽的史实-商业-Unix-源码的去向与封闭-SunOS-4-x-源码未释放/308.2.4-ibmaixhp-uxtru64unix等其它商业unix源码状态.md	史料	A	2026-10-30	**IBM** **AIX**（1986 年起）基于 **System V** 与 **BSD** 混合，源码从未公开释放	none
+V56.5.6.1	AIX 厂商文档定位	https://www.ibm.com/products/aix	联网	B	2026-10-30	IBM® AIX® on IBM Power11® helps organizations modernize with confidence by providing a trusted UNIX™ operating environment designed to support mission-critical business operations.	none
+V56.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题”；本节题为其下位论题	none
+V56.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.6.2	HP-UX 投产年份	04-现代研究文献/historical_claims.duckdb#CL-RM-014346	史料	A	2026-10-30	HP-UX/9000（Series 500）正式投产与首台交付	none
+V56.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题”；本节题为其下位论题	none
+V56.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.6.3	基线归属混淆	04-现代研究文献/historical_claims.duckdb#CL-RM-322524	史料	A	2026-10-30	IBM JFS 实为 OS/2 版而非 AIX 版	none
+V56.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题”；本节题为其下位论题	none
+V56.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.6.4	支持清单退场	https://www.tcpdump.org/	联网	A	2026-10-30	It also removes any remaining support for AOS (4.3BSD Unix), BSD/OS, DOS, HP-UX before 10.20, IRIX, MinGW, {OSF/1, Digital Unix, Tru64 Unix}, SINIX, Solaris 9, SunOS 3.x, 4.x and 5.x before 5.3.2, and Ultrix.	none
+V56.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题”；本节题为其下位论题	none
+V56.5.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.6.5	维护状态分野	04-现代研究文献/historical_claims.duckdb#CL-RM-256962	史料	A	2026-10-30	BSD OS IRIX等已无人维护 HP-UX与AIX虽在维护但难测试	none
+V56.5.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“AIX、HP-UX、IRIX 及其他商业 UNIX 的证据问题”；本节题为其下位论题	none
+V56.5.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.6.6	产品文档重建	旧大纲-20261023/第14卷-商业生态与企业案例/第308章-贡献者os比较赞助复核与采访媒体/308.2-被遮蔽的史实-商业-Unix-源码的去向与封闭-SunOS-4-x-源码未释放/308.2.4-ibmaixhp-uxtru64unix等其它商业unix源码状态.md	史料	A	2026-10-30	**IBM** **AIX**（1986 年起）基于 **System V** 与 **BSD** 混合，源码从未公开释放	none
+V56.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“接口相似性与代码继承的区别”；本节题为其下位论题	none
+V56.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.7.1	接口相似形式	https://pubs.opengroup.org/onlinepubs/009696699/basedefs/sys/socket.h.html	联网	A	2026-10-30	The <sys/socket.h> header shall define the sockaddr structure that includes at least the following members	none
+V56.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“接口相似性与代码继承的区别”；本节题为其下位论题	none
+V56.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.7.2	代码继承要件	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the University of California, Berkeley and its contributors.	none
+V56.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“接口相似性与代码继承的区别”；本节题为其下位论题	none
+V56.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.7.3	行为兼容错位	https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2	联网	A	2026-10-30	It uses the sockets paradigm that was first popularized by Berkeley Software Distribution (BSD) UNIX.	none
+V56.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“接口相似性与代码继承的区别”；本节题为其下位论题	none
+V56.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.7.4	文档声明效力	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The only requirements were that the copyright notices in the source file be left intact and that products that incorporated the code indicate in their documentation that the product contained code from the University of California and its contributors.	none
+V56.5.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“接口相似性与代码继承的区别”；本节题为其下位论题	none
+V56.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.7.5	判定保守原则	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	At the preliminary hearing for the injunction, BSDI contended that they were simply using the sources being freely distributed by the University of California plus six additional files.	none
+V56.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“商业 UNIX 中 BSD 成分的可证边界”；本节题为其下位论题	none
+V56.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.8.1	可证成分分类	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Although most of the vendors had started the switch back to System V, large parts of 4.3BSD were carried over into their systems, particularly the networking subsystem.	none
+V56.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“商业 UNIX 中 BSD 成分的可证边界”；本节题为其下位论题	none
+V56.5.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.8.2	边界表述规范	https://www.freebsd.org/copyright/license.html	联网	A	2026-10-30	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the University of California, Berkeley and its contributors.	none
+V56.5.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“商业 UNIX 中 BSD 成分的可证边界”；本节题为其下位论题	none
+V56.5.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V56.5.8.3	未证登记办法	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	At the preliminary hearing for the injunction, BSDI contended that they were simply using the sources being freely distributed by the University of California plus six additional files.	none

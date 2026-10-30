@@ -1,0 +1,699 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V63.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD 软件进入 Linux 系统”；本节题为其下位论题	none
+V63.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.1	OpenSSH 移植到 Linux 的经过	https://www.openssh.com/history.html	联网	A	2026-10-30	Damien Miller, Philip Hands, and a handful of others started porting OpenSSH to Linux and various other Unix operating systems.	none
+V63.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD 软件进入 Linux 系统”；本节题为其下位论题	none
+V63.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.2	tcpdump 与 libpcap 的起源	https://www.ietf.org/archive/id/draft-ietf-opsawg-pcap-07.txt	联网	A	2026-10-30	In the late 1980's, Van Jacobson, Steve McCanne, and others at the Network Research Group at Lawrence Berkeley National Laboratory developed the tcpdump program to capture and dissect network traces.	none
+V63.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD 软件进入 Linux 系统”；本节题为其下位论题	none
+V63.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD 软件进入 Linux 系统”；本节题为其下位论题	none
+V63.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.4	SSH 早期许可限制	https://www.openssh.com/history.html	联网	A	2026-10-30	The first of the restrictive licenses forbade people from making a Windows or DOS version. Later licenses restricted the use of ssh in a commercial environment, instead requiring companies to buy an expensive version from a company called Datafellows.	none
+V63.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“BSD 网络软件与 Linux 用户空间”；本节题为其下位论题	none
+V63.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.2.1	libpcap 库的形成	https://www.ietf.org/archive/id/draft-ietf-opsawg-pcap-07.txt	联网	A	2026-10-30	The code to capture traffic, using low-level mechanisms in various operating systems, and to read and write network traces to a file was later put into a library named libpcap.	none
+V63.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“BSD 网络软件与 Linux 用户空间”；本节题为其下位论题	none
+V63.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.2.2	BPF 结构与过滤器跨系统共用	https://cgit.freebsd.org/src/plain/contrib/libpcap/pcap/bpf.h	联网	A	2026-10-30	Try and keep these values and structures similar to BSD, especially the BPF code definitions which need to match so you can share filters	none
+V63.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“BSD 网络软件与 Linux 用户空间”；本节题为其下位论题	none
+V63.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“BSD 网络软件与 Linux 用户空间”；本节题为其下位论题	none
+V63.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSD 许可证软件在 Linux 生态中的使用”；本节题为其下位论题	none
+V63.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.3.1	Linux 内核双许可与 BSD 条款	https://www.kernel.org/doc/html/latest/process/license-rules.html	联网	A	2026-10-30	Aside from that, individual files can be provided under a dual license, e.g. one of the compatible GPL variants and alternatively under a permissive license like BSD, MIT etc.	none
+V63.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSD 许可证软件在 Linux 生态中的使用”；本节题为其下位论题	none
+V63.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.3.2	个别文件许可须与 GPL-2.0 相容	https://www.kernel.org/doc/html/latest/process/license-rules.html	联网	A	2026-10-30	The license described in the COPYING file applies to the kernel source as a whole, though individual source files can have a different license which is required to be compatible with the GPL-2.0	none
+V63.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSD 许可证软件在 Linux 生态中的使用”；本节题为其下位论题	none
+V63.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“BSD 许可证软件在 Linux 生态中的使用”；本节题为其下位论题	none
+V63.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“GNU 工具进入 BSD 系统”；本节题为其下位论题	none
+V63.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.4.1	FreeBSD 长期依赖 GNU 工具链	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	For most of its history FreeBSD relied on the full GNU toolchain suite, including the GNU Compiler Collection (GCC) compiler and GNU binutils.	none
+V63.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“GNU 工具进入 BSD 系统”；本节题为其下位论题	none
+V63.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.4.2	binutils 的移植面与用途	https://www.gnu.org/software/binutils/	联网	A	2026-10-30	The binutils have been ported to most major Unix variants as well as Wintel systems, and their main reason for existence is to give the GNU system (and GNU/Linux) the facility to compile and link programs.	none
+V63.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“GNU 工具进入 BSD 系统”；本节题为其下位论题	none
+V63.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.4.3	基础系统与 Ports 树的分层	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	In addition to this base system, there’s a third-party software ecosystem managed through the FreeBSD ports tree and binary packages.	none
+V63.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“GNU 工具进入 BSD 系统”；本节题为其下位论题	none
+V63.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.4.4	ELF Tool Chain 组件替换	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	For FreeBSD 11 we have migrated to ELF Tool Chain’s implementation of addr2line, c++filt, objcopy, nm, readelf, size, strip, and strings.	none
+V63.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“FreeBSD 早期工具链构成：GCC、binutils 与常见表述考异”；本节题为其下位论题	none
+V63.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.5.1	FreeBSD 早期 GNU 工具链组成	https://freebsdfoundation.org/wp-content/uploads/2021/05/FreeBSD-13.0-Toolchain.pdf	联网	A	2026-10-30	From the beginning, FreeBSD relied on the GNU tool chain, including the GCC compiler, Binutils linker and binary utilities, and the GDB debugger.	none
+V63.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“FreeBSD 早期工具链构成：GCC、binutils 与常见表述考异”；本节题为其下位论题	none
+V63.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.5.2	GNU 工具链沿用区间	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	They served the FreeBSD Project well from 1993 until 2007, when the GNU project migrated to releasing its software under the General Public License, version 3 (GPLv3).	none
+V63.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“FreeBSD 早期工具链构成：GCC、binutils 与常见表述考异”；本节题为其下位论题	none
+V63.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.5.3	GDB 由 Ports 提供的去向	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	In addition to LLDB in the base system, the GNU GDB debugger is available by building from the ports tree or installing the package.	none
+V63.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“FreeBSD 早期工具链构成：GCC、binutils 与常见表述考异”；本节题为其下位论题	none
+V63.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“GCC、binutils 与 BSD 系统构建”；本节题为其下位论题	none
+V63.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“GCC、binutils 与 BSD 系统构建”；本节题为其下位论题	none
+V63.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.6.2	GNU ld 在 FreeBSD 的沿用	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	To date we’ve used the GNU linker in FreeBSD, most recently updated to version 2.17.50 in February 2011.	none
+V63.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“GCC、binutils 与 BSD 系统构建”；本节题为其下位论题	none
+V63.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“GCC、binutils 与 BSD 系统构建”；本节题为其下位论题	none
+V63.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.6.4	二进制工具的历史供给	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	These tools were historically provided by GNU binutils.	none
+V63.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“FreeBSD 向 LLVM／Clang 工具链迁移”；本节题为其下位论题	none
+V63.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.7.1	工具链迁移的多重动因	https://freebsdfoundation.org/wp-content/uploads/2021/05/FreeBSD-13.0-Toolchain.pdf	联网	A	2026-10-30	License considerations were only one part of the rationale. New technology, the ability to implement new and bespoke functionality, and promoting competition in OSS tools also factored into the team’s goals.	none
+V63.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“FreeBSD 向 LLVM／Clang 工具链迁移”；本节题为其下位论题	none
+V63.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.7.2	Clang 成为系统编译器的时点	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	When FreeBSD 10 released in January 2014, it included Clang as the system compiler (that is, installed as /usr/bin/cc) for the 32- and 64bit Intel x86 architectures.	none
+V63.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“FreeBSD 向 LLVM／Clang 工具链迁移”；本节题为其下位论题	none
+V63.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.7.3	LLD 自举与基础系统构建能力	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	Work began on LLD’s ELF support in July 2015 and has progressed very quickly; it currently selfhosts on several of LLVM’s supported architectures and includes almost all of the functionality required to build the FreeBSD base system.	none
+V63.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“FreeBSD 向 LLVM／Clang 工具链迁移”；本节题为其下位论题	none
+V63.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.7.4	MIPS 与 PowerPC 仍用 GCC	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	Clang includes some support for the MIPS and PowerPC architectures, but is not yet capable of replacing the system compiler there; those architectures continue to use GCC.	none
+V63.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“跨项目开发者与软件维护”；本节题为其下位论题	none
+V63.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.1	跨项目开发者的多重身份	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	Aside from FreeBSD and ELF Tool Chain, he is a contributor to a number of other open-source projects, including LLVM, QEMU, and Open vSwitch.	none
+V63.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“跨项目开发者与软件维护”；本节题为其下位论题	none
+V63.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“跨项目开发者与软件维护”；本节题为其下位论题	none
+V63.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“跨项目开发者与软件维护”；本节题为其下位论题	none
+V63.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.4	工具链更新的开发者构成	https://freebsdfoundation.org/wp-content/uploads/2021/05/FreeBSD-13.0-Toolchain.pdf	联网	A	2026-10-30	These tools were kept current with regular updates by a group of developers, both volunteer and paid.	none
+V63.1.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“网络协议、系统接口与工具的共同实现”；本节题为其下位论题	none
+V63.1.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“网络协议、系统接口与工具的共同实现”；本节题为其下位论题	none
+V63.1.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.2	用户空间接口与系统调用边界	https://www.kernel.org/doc/html/latest/process/license-rules.html	联网	A	2026-10-30	The User-space API (UAPI) header files, which describe the interface of user-space programs to the kernel are a special case. According to the note in the kernel COPYING file, the syscall interface is a clear boundary, which does not extend the GPL requirements to any software which uses it to communicate with the kernel.	none
+V63.1.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“网络协议、系统接口与工具的共同实现”；本节题为其下位论题	none
+V63.1.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“网络协议、系统接口与工具的共同实现”；本节题为其下位论题	none
+V63.1.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“代码共享与独立实现的区别”；本节题为其下位论题	none
+V63.1.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“代码共享与独立实现的区别”；本节题为其下位论题	none
+V63.1.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.2	代码派生声明作为同源判据	https://cgit.freebsd.org/src/plain/contrib/libpcap/pcap/bpf.h	联网	A	2026-10-30	This code is derived from the Stanford/CMU enet packet filter, (net/enet.c) distributed as part of 4.3BSD, and code contributed to Berkeley by Steven McCanne and Van Jacobson both of Lawrence Berkeley Laboratory.	none
+V63.1.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“代码共享与独立实现的区别”；本节题为其下位论题	none
+V63.1.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“代码共享与独立实现的区别”；本节题为其下位论题	none
+V63.1.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“技术交流与历史来源的区别”；本节题为其下位论题	none
+V63.1.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“技术交流与历史来源的区别”；本节题为其下位论题	none
+V63.1.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“技术交流与历史来源的区别”；本节题为其下位论题	none
+V63.1.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“技术交流与历史来源的区别”；本节题为其下位论题	none
+V63.1.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.4	许可变体须回源文件判定	https://www.kernel.org/doc/html/latest/process/license-rules.html	联网	A	2026-10-30	The exact variant of the BSD license can only be determined via the license information in the corresponding source files.	none
+V63.1.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“BSD 与 Linux 在实际开发中的长期交汇”；本节题为其下位论题	none
+V63.1.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“BSD 与 Linux 在实际开发中的长期交汇”；本节题为其下位论题	none
+V63.1.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“BSD 与 Linux 在实际开发中的长期交汇”；本节题为其下位论题	none
+V63.1.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.3	ELF Tool Chain 自 FreeBSD 独立	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	It began as part of the FreeBSD Project, but became a standalone project in order to facilitate collaboration with the wider open-source community.	none
+V63.1.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“BSD 与 Linux 在实际开发中的长期交汇”；本节题为其下位论题	none
+V63.1.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“操作系统的分层结构”；本节题为其下位论题	none
+V63.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.1.1	内核与 libc 的职责分工	https://musl.libc.org/about.html	联网	A	2026-10-30	While the kernel governs access to hardware, memory, filesystems, and the privileges for accessing these resources, libc is responsible for: providing C bindings for the OS interfaces	none
+V63.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“操作系统的分层结构”；本节题为其下位论题	none
+V63.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“操作系统的分层结构”；本节题为其下位论题	none
+V63.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“操作系统的分层结构”；本节题为其下位论题	none
+V63.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Debian GNU／kFreeBSD 的形成”；本节题为其下位论题	none
+V63.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.2.1	kFreeBSD 中 k 的语义	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	It stands for "kernel of". Hence "kFreeBSD" means "kernel of FreeBSD", and "GNU/kFreeBSD" means "GNU with kernel of FreeBSD".	none
+V63.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Debian GNU／kFreeBSD 的形成”；本节题为其下位论题	none
+V63.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Debian GNU／kFreeBSD 的形成”；本节题为其下位论题	none
+V63.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.2.3	组合方式的名义界定	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	Hence "kFreeBSD" means "kernel of FreeBSD", and "GNU/kFreeBSD" means "GNU with kernel of FreeBSD".	none
+V63.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Debian GNU／kFreeBSD 的形成”；本节题为其下位论题	none
+V63.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.2.4	技术预览与正式发布的分别	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	It was available in the official Debian *squeeze* release as a 'technology preview'.	none
+V63.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“FreeBSD 内核与非 BSD 用户空间的组合形态”；本节题为其下位论题	none
+V63.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.3.1	FreeBSD 内核承载异源 libc	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	Yes, you will need: - A FreeBSD 9, 10 or later kernel. - libc0.1 2.11.3-1 or later (available in Wheezy/Sid or in any up-to-date Squeeze install).	none
+V63.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“FreeBSD 内核与非 BSD 用户空间的组合形态”；本节题为其下位论题	none
+V63.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“FreeBSD 内核与非 BSD 用户空间的组合形态”；本节题为其下位论题	none
+V63.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“FreeBSD 内核与非 BSD 用户空间的组合形态”；本节题为其下位论题	none
+V63.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Debian GNU／kFreeBSD 作为 Debian 官方移植”；本节题为其下位论题	none
+V63.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.4.1	官方发行版中的正式架构	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	Debian GNU/kFreeBSD will be featured in the official Debian *wheezy* release.	none
+V63.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Debian GNU／kFreeBSD 作为 Debian 官方移植”；本节题为其下位论题	none
+V63.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Debian GNU／kFreeBSD 作为 Debian 官方移植”；本节题为其下位论题	none
+V63.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“Debian GNU／kFreeBSD 作为 Debian 官方移植”；本节题为其下位论题	none
+V63.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Debian GNU／kFreeBSD 的长期维护”；本节题为其下位论题	none
+V63.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.5.1	组合移植的主要贡献者	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	Contributors would be mostly: Aurélien Jarno, Petr Salinger, Luca Filipozzi, Robert Millan, Cyril Brulebois.	none
+V63.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Debian GNU／kFreeBSD 的长期维护”；本节题为其下位论题	none
+V63.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.5.2	内核版本与发行版版本的对应	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	*jessie* will have a 10.1 kernel and userland. The *wheezy* release had a 9.0 kernel (the default for new installs and upgrades) or optional 8.3 kernel (but may have reduced functionality).	none
+V63.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Debian GNU／kFreeBSD 的长期维护”；本节题为其下位论题	none
+V63.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Debian GNU／kFreeBSD 的长期维护”；本节题为其下位论题	none
+V63.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“Debian GNU／kFreeBSD 的终止”；本节题为其下位论题	none
+V63.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“Debian GNU／kFreeBSD 的终止”；本节题为其下位论题	none
+V63.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.6.2	移植退场后的资料状态	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	kFreeBSD has been removed from ports, the FAQ ist now mostly of historic value.	none
+V63.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“Debian GNU／kFreeBSD 的终止”；本节题为其下位论题	none
+V63.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“Debian GNU／kFreeBSD 的终止”；本节题为其下位论题	none
+V63.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Gentoo／FreeBSD 与 Portage”；本节题为其下位论题	none
+V63.2.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.7.1	Gentoo/FreeBSD 项目目标	https://lists.freebsd.org/pipermail/freebsd-doc/2016-March/026611.html	联网	A	2026-10-30	Gentoo/FreeBSD <http://www.gentoo.org/proj/en/gentoo-alt/bsd/fbsd/index.xml> is an effort by the Gentoo Project to port their complete administration facilities to take advantage of the reliable FreeBSD kernel and userland.	none
+V63.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Gentoo／FreeBSD 与 Portage”；本节题为其下位论题	none
+V63.2.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Gentoo／FreeBSD 与 Portage”；本节题为其下位论题	none
+V63.2.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.7.3	Gentoo/FreeBSD 项目状态	https://lists.freebsd.org/pipermail/freebsd-doc/2016-March/026611.html	联网	A	2026-10-30	This project is purely incomplete and experimental.	none
+V63.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“Gentoo／FreeBSD 与 Portage”；本节题为其下位论题	none
+V63.2.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“Linux 内核与非 GNU 用户空间”；本节题为其下位论题	none
+V63.2.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.8.1	非 GNU 用户空间的组合实例	https://chimera-linux.org/	联网	A	2026-10-30	Chimera uses a novel combination of core tools from FreeBSD, the LLVM toolchain, and the Musl C library, delivering a fresh experience with several major benefits.	none
+V63.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“Linux 内核与非 GNU 用户空间”；本节题为其下位论题	none
+V63.2.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“Linux 内核与非 GNU 用户空间”；本节题为其下位论题	none
+V63.2.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.8.3	中断上下文访问用户空间的禁令	旧大纲-20261023/第20卷-linux社区史与比较研究/第401章-stable与回归治理/401.1-中断均衡补丁与触发模式回归/401.1.8-177linux社区驱动与同步语义edacpanicisr用户空间禁令.md	史料	A	2026-10-30	User space access from interrupts is a complete no-no. If you absolutely must share memory directly then allocate kernel memory, mmap it into the user process and write to the kernel address.	none
+V63.2.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“Linux 内核与非 GNU 用户空间”；本节题为其下位论题	none
+V63.2.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Chimera Linux 与 FreeBSD core userland”；本节题为其下位论题	none
+V63.2.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.9.1	FreeBSD 工具与 Linux 内核的组合	https://chimera-linux.org/	联网	A	2026-10-30	Chimera uses a novel combination of core tools from FreeBSD, the LLVM toolchain, and the Musl C library	none
+V63.2.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Chimera Linux 与 FreeBSD core userland”；本节题为其下位论题	none
+V63.2.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Chimera Linux 与 FreeBSD core userland”；本节题为其下位论题	none
+V63.2.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.9.3	发行版自述的定位	https://chimera-linux.org/	联网	A	2026-10-30	Chimera is a general-purpose Linux-based OS born from unhappiness with the status quo. We aim to create a system that is simple, transparent, and easy to pick up, without having to give up practicality and a rich feature set.	none
+V63.2.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“Chimera Linux 与 FreeBSD core userland”；本节题为其下位论题	none
+V63.2.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“LLVM、musl 与 FreeBSD 用户空间组件”；本节题为其下位论题	none
+V63.2.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.10.1	工具链与 C 库的组合实例	https://chimera-linux.org/	联网	A	2026-10-30	Chimera uses a novel combination of core tools from FreeBSD, the LLVM toolchain, and the Musl C library	none
+V63.2.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“LLVM、musl 与 FreeBSD 用户空间组件”；本节题为其下位论题	none
+V63.2.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.10.2	musl 的实现基座	https://musl.libc.org/about.html	联网	A	2026-10-30	musl, pronounced like the word “mussel” or “muscle”, is a “libc”, an implementation of the standard library functionality described in the ISO C and POSIX standards, plus common extensions, built on top of the Linux system calls API.	none
+V63.2.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“LLVM、musl 与 FreeBSD 用户空间组件”；本节题为其下位论题	none
+V63.2.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“LLVM、musl 与 FreeBSD 用户空间组件”；本节题为其下位论题	none
+V63.2.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“内核、libc、工具链与用户空间的可组合性”；本节题为其下位论题	none
+V63.2.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.11.1	三件异构组件的组合	https://chimera-linux.org/	联网	A	2026-10-30	Chimera uses a novel combination of core tools from FreeBSD, the LLVM toolchain, and the Musl C library, delivering a fresh experience with several major benefits.	none
+V63.2.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“内核、libc、工具链与用户空间的可组合性”；本节题为其下位论题	none
+V63.2.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“内核、libc、工具链与用户空间的可组合性”；本节题为其下位论题	none
+V63.2.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“内核、libc、工具链与用户空间的可组合性”；本节题为其下位论题	none
+V63.2.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节““操作系统”边界在组合系统中的重新划分”；本节题为其下位论题	none
+V63.2.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节““操作系统”边界在组合系统中的重新划分”；本节题为其下位论题	none
+V63.2.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.12.2	发行版把内核与用户空间配套	https://wiki.debian.org/Debian_GNU/kFreeBSD_FAQ	联网	A	2026-10-30	*jessie* will have a 10.1 kernel and userland.	none
+V63.2.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节““操作系统”边界在组合系统中的重新划分”；本节题为其下位论题	none
+V63.2.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节““操作系统”边界在组合系统中的重新划分”；本节题为其下位论题	none
+V63.2.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 13 节“选取标准与个案边界：生态内组件与跨传统作品的分界”；本节题为其下位论题	none
+V63.2.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.13.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 13 节“选取标准与个案边界：生态内组件与跨传统作品的分界”；本节题为其下位论题	none
+V63.2.13.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.13.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 13 节“选取标准与个案边界：生态内组件与跨传统作品的分界”；本节题为其下位论题	none
+V63.2.13.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.13.3	两系组件在同一发行版中的组合	https://chimera-linux.org/	联网	A	2026-10-30	Chimera uses a novel combination of core tools from FreeBSD, the LLVM toolchain, and the Musl C library, delivering a fresh experience with several major benefits.	none
+V63.2.13.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 13 节“选取标准与个案边界：生态内组件与跨传统作品的分界”；本节题为其下位论题	none
+V63.2.13.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“早期 Linux 社区与 BSD 社区”；本节题为其下位论题	none
+V63.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.1.1	论战发生的场所与时机	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	In early 1992, noticing the way that the Linux discussion had taken over the discussion in comp.os.minix, he decided it was time to comment on Linux.	none
+V63.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“早期 Linux 社区与 BSD 社区”；本节题为其下位论题	none
+V63.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“早期 Linux 社区与 BSD 社区”；本节题为其下位论题	none
+V63.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.1.3	论战参与者名单	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	It's fun to read this and note who joined into the discussion; you see user-hacker Ken Thompson (one of the founders of Unix) and David Miller (who is a major Linux kernel hacker now), as well as many others.	none
+V63.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“早期 Linux 社区与 BSD 社区”；本节题为其下位论题	none
+V63.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“1992 年 Tanenbaum–Torvalds 论战”；本节题为其下位论题	none
+V63.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.2.1	论战首帖的时间与组别	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	From: ast@cs.vu.nl Newsgroups: comp.os.minix Subject: LINUX is obsolete Date: 29 Jan 92 12:12:50 GMT	none
+V63.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“1992 年 Tanenbaum–Torvalds 论战”；本节题为其下位论题	none
+V63.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.2.2	对整体内核的评价	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	LINUX is a monolithic style system. This is a giant step back into the 1970s.	none
+V63.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“1992 年 Tanenbaum–Torvalds 论战”；本节题为其下位论题	none
+V63.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.2.3	可移植性的两种主张	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	I think it is a gross error to design an OS for any specific architecture, since that is not going to be around all that long.	none
+V63.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“1992 年 Tanenbaum–Torvalds 论战”；本节题为其下位论题	none
+V63.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.2.4	论战文本的汇编形态	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	What follows in this appendix are what are known in the community as the Tanenbaum/Linus "Linux is obsolete" debates.	none
+V63.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“微内核与整体内核之争”；本节题为其下位论题	none
+V63.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.3.1	微内核已胜的论据	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	Microkernels have won. The only real argument for monolithic systems was performance, and there is now enough evidence showing that microkernel systems can be just as fast as monolithic systems	none
+V63.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“微内核与整体内核之争”；本节题为其下位论题	none
+V63.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.3.2	对微内核主张的回应	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	True, linux is monolithic, and I agree that microkernels are nicer. With a less argumentative subject, I'd probably have agreed with most of what you said.	none
+V63.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“微内核与整体内核之争”；本节题为其下位论题	none
+V63.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“微内核与整体内核之争”；本节题为其下位论题	none
+V63.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“1990 年代 Linux 与 BSD 技术路线之争的后续”；本节题为其下位论题	none
+V63.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“1990 年代 Linux 与 BSD 技术路线之争的后续”；本节题为其下位论题	none
+V63.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“1990 年代 Linux 与 BSD 技术路线之争的后续”；本节题为其下位论题	none
+V63.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.4.3	可用性优先于架构论辩的自述	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	If the GNU kernel had been ready last spring, I'd not have bothered to even start my project: the fact is that it wasn't and still isn't. Linux wins heavily on points of being available now.	none
+V63.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“1990 年代 Linux 与 BSD 技术路线之争的后续”；本节题为其下位论题	none
+V63.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Linux 与 BSD 的许可证争论”；本节题为其下位论题	none
+V63.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.5.1	BSD 广告条款的问题	https://www.gnu.org/licenses/bsd.html	联网	A	2026-10-30	Most of them are equivalent except for details of wording, but the license used for BSD until 1999 had a special problem: the “obnoxious BSD advertising clause.”	none
+V63.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Linux 与 BSD 的许可证争论”；本节题为其下位论题	none
+V63.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.5.2	广告条款的删除经过	https://www.gnu.org/licenses/bsd.html	联网	A	2026-10-30	In June 1999, after two years of discussions, the University of California removed this clause from the license of BSD.	none
+V63.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Linux 与 BSD 的许可证争论”；本节题为其下位论题	none
+V63.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Linux 与 BSD 的许可证争论”；本节题为其下位论题	none
+V63.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节““GNU／Linux”命名争议”；本节题为其下位论题	none
+V63.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.6.1	系统命名的主张	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	Linux 一般和 GNU 操作系统一起使用：整个系统基本上就是 GNU 加上 Linux，或叫 GNU/Linux。所有被叫做“Linux”的发行版实际上是 GNU/Linux 发行版。	none
+V63.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节““GNU／Linux”命名争议”；本节题为其下位论题	none
+V63.3.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.6.2	发行版中的代码占比	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	一个 CD-ROM 提供商发现在他们的 “Linux 发行版”中，GNU 软件占单一最大的比重，大约是整个源代码的28%，其中包括一些关键性主要部件，没有它们，就没有整个系统。	none
+V63.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节““GNU／Linux”命名争议”；本节题为其下位论题	none
+V63.3.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节““GNU／Linux”命名争议”；本节题为其下位论题	none
+V63.3.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“BSD 与 Linux 历史来源问题的争论”；本节题为其下位论题	none
+V63.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.7.1	两系独立发展的表述	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	BSD 系统现在也使用一些 GNU 程序，正如 GNU 系统及其派生版使用一些 BSD 程序一样；然而，整体来看，他们是两个独立发展的不同系统。	none
+V63.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“BSD 与 Linux 历史来源问题的争论”；本节题为其下位论题	none
+V63.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“BSD 与 Linux 历史来源问题的争论”；本节题为其下位论题	none
+V63.3.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.7.3	两系互相取用程序的实情	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	然而，整体来看，他们是两个独立发展的不同系统。	none
+V63.3.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“BSD 与 Linux 历史来源问题的争论”；本节题为其下位论题	none
+V63.3.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“中文 BSD／Linux 社区的论战”；本节题为其下位论题	none
+V63.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“中文 BSD／Linux 社区的论战”；本节题为其下位论题	none
+V63.3.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.8.2	名称用法的官方主张	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	无论你是否使用 GNU/Linux，请不要含糊不清地使用“Linux”这一名称来混淆大众。Linux 是一个内核，是系统的主要基本部件之一。	none
+V63.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“中文 BSD／Linux 社区的论战”；本节题为其下位论题	none
+V63.3.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“中文 BSD／Linux 社区的论战”；本节题为其下位论题	none
+V63.3.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“Usenet、邮件列表与论坛档案”；本节题为其下位论题	none
+V63.3.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.9.1	论战文本的网络可得性	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	Electronic copies of this debate are available on the Web and are easily found through any search service.	none
+V63.3.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“Usenet、邮件列表与论坛档案”；本节题为其下位论题	none
+V63.3.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“Usenet、邮件列表与论坛档案”；本节题为其下位论题	none
+V63.3.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“Usenet、邮件列表与论坛档案”；本节题为其下位论题	none
+V63.3.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“人物立场与项目立场的区别”；本节题为其下位论题	none
+V63.3.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.10.1	当事人对论战态度的说明	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	When Linus himself heard that we were including this, he wanted to make sure that the world understood that he holds no animus towards Tanenbaum	none
+V63.3.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“人物立场与项目立场的区别”；本节题为其下位论题	none
+V63.3.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“人物立场与项目立场的区别”；本节题为其下位论题	none
+V63.3.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“人物立场与项目立场的区别”；本节题为其下位论题	none
+V63.3.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“同时代争论与后来的历史叙述”；本节题为其下位论题	none
+V63.3.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.11.1	论战发生时的技术语境	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	To put this discussion into perspective, when it occurred in 1992, the 386 was the dominating chip and the 486 had not come out on the market.	none
+V63.3.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“同时代争论与后来的历史叙述”；本节题为其下位论题	none
+V63.3.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“同时代争论与后来的历史叙述”；本节题为其下位论题	none
+V63.3.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“同时代争论与后来的历史叙述”；本节题为其下位论题	none
+V63.3.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“技术争论、社区身份与历史记忆”；本节题为其下位论题	none
+V63.3.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“技术争论、社区身份与历史记忆”；本节题为其下位论题	none
+V63.3.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“技术争论、社区身份与历史记忆”；本节题为其下位论题	none
+V63.3.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.12.3	两系关系的整体判断	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	BSD 的开发者受到 GNU 工程的激励而将他们的代码变成了自由软件，尤其受到来自 GNU 的活动家的明确吸引和帮助，但是他们的代码和 GNU 并不重合。	none
+V63.3.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“技术争论、社区身份与历史记忆”；本节题为其下位论题	none
+V63.3.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Linux 传播与 Unix-like 软件市场”；本节题为其下位论题	none
+V63.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.1.1	发行版命名与市场单位	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	整个系统基本上就是 GNU 加上 Linux，或叫 GNU/Linux。所有被叫做“Linux”的发行版实际上是 GNU/Linux 发行版。	none
+V63.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Linux 传播与 Unix-like 软件市场”；本节题为其下位论题	none
+V63.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Linux 传播与 Unix-like 软件市场”；本节题为其下位论题	none
+V63.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.1.3	商业 UNIX 厂商格局的叙述	https://lwn.net/Articles/698042/	联网	B	2026-10-30	A whole set of Unix-based vendors had succeeded in displacing much of the minicomputer market but, in the process, they had turned Unix into numerous incompatible proprietary systems	none
+V63.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Linux 传播与 Unix-like 软件市场”；本节题为其下位论题	none
+V63.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“发行版制度对 Linux 传播的影响”；本节题为其下位论题	none
+V63.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.2.1	发行版制度的形成	https://www.debian.org/doc/manuals/project-history/releases.en.html	联网	A	2026-10-30	The deployment of an explicit master server on which Debian developers would construct each release led directly to the formation of the Debian mirror network, and indirectly to the development of many of the policies and procedures used to manage the project today.	none
+V63.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“发行版制度对 Linux 传播的影响”；本节题为其下位论题	none
+V63.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“发行版制度对 Linux 传播的影响”；本节题为其下位论题	none
+V63.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“发行版制度对 Linux 传播的影响”；本节题为其下位论题	none
+V63.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“GNU 用户空间、Linux 内核与发行版文化”；本节题为其下位论题	none
+V63.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.3.1	发行版成分的统计口径	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	一个 CD-ROM 提供商发现在他们的 “Linux 发行版”中，GNU 软件占单一最大的比重，大约是整个源代码的28%，其中包括一些关键性主要部件，没有它们，就没有整个系统。	none
+V63.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“GNU 用户空间、Linux 内核与发行版文化”；本节题为其下位论题	none
+V63.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“GNU 用户空间、Linux 内核与发行版文化”；本节题为其下位论题	none
+V63.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“GNU 用户空间、Linux 内核与发行版文化”；本节题为其下位论题	none
+V63.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“BSD 基本系统模式与 Linux 发行版模式”；本节题为其下位论题	none
+V63.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.4.1	基础系统的概念	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	As with other BSD distributions, FreeBSD has the concept of a base system, an integrated kernel, and core userland, which are developed, tested, and released together by a common team.	none
+V63.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“BSD 基本系统模式与 Linux 发行版模式”；本节题为其下位论题	none
+V63.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“BSD 基本系统模式与 Linux 发行版模式”；本节题为其下位论题	none
+V63.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“BSD 基本系统模式与 Linux 发行版模式”；本节题为其下位论题	none
+V63.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“商业部署、开发者网络与项目规模”；本节题为其下位论题	none
+V63.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“商业部署、开发者网络与项目规模”；本节题为其下位论题	none
+V63.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“商业部署、开发者网络与项目规模”；本节题为其下位论题	none
+V63.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.5.3	Ports 树的包数规模	https://freebsdfoundation.org/wp-content/uploads/2016/10/FreeBSD-Toolchain.pdf	联网	A	2026-10-30	Over 26,000 thirdparty software packages exist in the ports tree.	none
+V63.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“商业部署、开发者网络与项目规模”；本节题为其下位论题	none
+V63.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GitHub 时代的项目协作方式”；本节题为其下位论题	none
+V63.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.6.1	版本控制迁移的范围	https://www.freebsd.org/status/report-2020-10-2020-12.html	联网	A	2026-10-30	The other main working item is working on the VCS migration to change the src and doc source from Subversion to Git.	none
+V63.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GitHub 时代的项目协作方式”；本节题为其下位论题	none
+V63.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GitHub 时代的项目协作方式”；本节题为其下位论题	none
+V63.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GitHub 时代的项目协作方式”；本节题为其下位论题	none
+V63.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“邮件列表、提交权限与 Pull Request”；本节题为其下位论题	none
+V63.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.7.1	提交权限按区域分配	https://docs.freebsd.org/en/articles/committers-guide/index.html	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V63.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“邮件列表、提交权限与 Pull Request”；本节题为其下位论题	none
+V63.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.7.2	先审查后提交的规则	https://docs.freebsd.org/en/articles/committers-guide/index.html	联网	A	2026-10-30	For changes beyond those described here, committers should seek review from committers with the appropriate bit in the target repository. When in doubt, seek review, even if you have a commit bit in the repo.	none
+V63.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“邮件列表、提交权限与 Pull Request”；本节题为其下位论题	none
+V63.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“邮件列表、提交权限与 Pull Request”；本节题为其下位论题	none
+V63.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.4.7.4	新提交者的引导程序	https://docs.freebsd.org/en/articles/committers-guide/index.html	联网	A	2026-10-30	Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.	none
+V63.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Linux 0.01 与 Minix 背景”；本节题为其下位论题	none
+V63.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.1.1	0.01 版发布说明的自我定位	https://ftp.funet.fi/pub/linux/historical/kernel/old-versions/RELNOTES-0.01	联网	A	2026-10-30	As the version number (0.01) suggests this is not a mature product.	none
+V63.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Linux 0.01 与 Minix 背景”；本节题为其下位论题	none
+V63.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.1.2	内核起点的自我描述	https://ftp.funet.fi/pub/linux/historical/kernel/old-versions/RELNOTES-0.01	联网	A	2026-10-30	This is a free minix-like kernel for i386(+) based AT-machines.	none
+V63.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Linux 0.01 与 Minix 背景”；本节题为其下位论题	none
+V63.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.1.3	内核代码来源的自述	https://ftp.funet.fi/pub/linux/historical/kernel/old-versions/RELNOTES-0.01	联网	A	2026-10-30	Although linux is a complete kernel, and uses no code from minix or other sources, almost none of the support routines have yet been coded.	none
+V63.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“Linux 0.01 与 Minix 背景”；本节题为其下位论题	none
+V63.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.1.4	运行所需的硬件清单	https://ftp.funet.fi/pub/linux/historical/kernel/old-versions/RELNOTES-0.01	联网	A	2026-10-30	Hardware needed for running linux: - 386 AT - VGA/EGA screen - AT-type harddisk controller (IDE is fine)	none
+V63.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“386 PC 与自由 UNIX 软件的时间窗口”；本节题为其下位论题	none
+V63.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.2.1	早期内核的平台绑带	https://lwn.net/Articles/698042/	联网	B	2026-10-30	many basic system calls were absent, and Linus didn't think it would ever be possible to port the kernel to a non-x86 architecture	none
+V63.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“386 PC 与自由 UNIX 软件的时间窗口”；本节题为其下位论题	none
+V63.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.2.2	1991 年的 UNIX 格局	https://lwn.net/Articles/698042/	联网	B	2026-10-30	A whole set of Unix-based vendors had succeeded in displacing much of the minicomputer market but, in the process, they had turned Unix into numerous incompatible proprietary systems, each of which had its own problems and none of which could be fixed by its users.	none
+V63.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“386 PC 与自由 UNIX 软件的时间窗口”；本节题为其下位论题	none
+V63.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.2.3	1992 年的主流硬件	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	when it occurred in 1992, the 386 was the dominating chip and the 486 had not come out on the market	none
+V63.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“386 PC 与自由 UNIX 软件的时间窗口”；本节题为其下位论题	none
+V63.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Linux 的开发者聚合与发行版形成”；本节题为其下位论题	none
+V63.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.3.1	早期开发者规模的记载	https://www.debian.org/doc/manuals/project-history/releases.en.html	联网	A	2026-10-30	Debian 0.91 (January 1994): This release had a simple package system which could install and uninstall packages. The project had grown to several dozen people at this point.	none
+V63.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Linux 的开发者聚合与发行版形成”；本节题为其下位论题	none
+V63.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.3.2	最早一批发行版的版本序列	https://www.debian.org/doc/manuals/project-history/releases.en.html	联网	A	2026-10-30	Debian 0.01 through 0.90 (August-December 1993)	none
+V63.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Linux 的开发者聚合与发行版形成”；本节题为其下位论题	none
+V63.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Linux 的开发者聚合与发行版形成”；本节题为其下位论题	none
+V63.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“商业 UNIX 市场收缩与 Linux 的进入”；本节题为其下位论题	none
+V63.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.4.1	商业 UNIX 的碎片化后果	https://lwn.net/Articles/698042/	联网	B	2026-10-30	Unix, in moving down from minicomputers, had become much more widespread, but it also lost the code-sharing culture that had helped to make it Unix in the first place.	none
+V63.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“商业 UNIX 市场收缩与 Linux 的进入”；本节题为其下位论题	none
+V63.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“商业 UNIX 市场收缩与 Linux 的进入”；本节题为其下位论题	none
+V63.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.4.3	首发公告时的可用状态	https://lwn.net/Articles/698042/	联网	B	2026-10-30	At the time of the announcement, Linux was vaporware; the first source release wouldn't come for another month.	none
+V63.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“商业 UNIX 市场收缩与 Linux 的进入”；本节题为其下位论题	none
+V63.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“GPL、发行版与商业软件模式”；本节题为其下位论题	none
+V63.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.5.1	著佐权许可的义务	https://www.gnu.org/licenses/bsd.html	联网	A	2026-10-30	Copyleft licenses such as the GNU GPL insist that modified versions of the program must be free software as well.	none
+V63.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“GPL、发行版与商业软件模式”；本节题为其下位论题	none
+V63.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.5.2	商业附盘与发行版的关系	https://www.debian.org/doc/manuals/project-history/releases.en.html	联网	A	2026-10-30	Debian 1.0 was never released: InfoMagic, a CD vendor, accidentally shipped a development release of Debian and entitled it 1.0.	none
+V63.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“GPL、发行版与商业软件模式”；本节题为其下位论题	none
+V63.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“GPL、发行版与商业软件模式”；本节题为其下位论题	none
+V63.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“企业 Linux 的形成”；本节题为其下位论题	none
+V63.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.6.1	企业版发行的时间与形态	http://media.corporate-ir.net/media_files/NSD/RHAT/reports/rhat_051804.pdf	联网	A	2026-10-30	We developed an enterprise operating system, Red Hat Enterprise Linux AS, which we introduced in May 2002.	none
+V63.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“企业 Linux 的形成”；本节题为其下位论题	none
+V63.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.6.2	订阅制的交付方式	http://media.corporate-ir.net/media_files/NSD/RHAT/reports/rhat_051804.pdf	联网	A	2026-10-30	Our Red Hat Enterprise Linux products are primarily delivered on an annual subscription basis with one year of subscription services and access to the basic software update and configuration management functionality of Red Hat Enterprise Network.	none
+V63.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“企业 Linux 的形成”；本节题为其下位论题	none
+V63.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“企业 Linux 的形成”；本节题为其下位论题	none
+V63.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD、Linux 与商业 UNIX 的不同发展路径”；本节题为其下位论题	none
+V63.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.7.1	Unix 战争余波的叙述	https://lwn.net/Articles/698042/	联网	B	2026-10-30	The consequences of the Unix wars were already being felt, and we were being told by the trade press that the upcoming Windows NT release would be the end of Unix altogether.	none
+V63.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD、Linux 与商业 UNIX 的不同发展路径”；本节题为其下位论题	none
+V63.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD、Linux 与商业 UNIX 的不同发展路径”；本节题为其下位论题	none
+V63.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD、Linux 与商业 UNIX 的不同发展路径”；本节题为其下位论题	none
+V63.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“BSD 项目在现代自由软件共同体中的位置”；本节题为其下位论题	none
+V63.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.1.1	项目的自我定位	https://freebsdfoundation.org/freebsd-project/what-is-freebsd/	联网	A	2026-10-30	FreeBSD is a modern, community-governed, open source operating system with enterprise-friendly permissive licensing.	none
+V63.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“BSD 项目在现代自由软件共同体中的位置”；本节题为其下位论题	none
+V63.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.1.2	治理与支持机构的分工	https://freebsdfoundation.org/freebsd-project/what-is-freebsd/	联网	A	2026-10-30	A leading, long-standing, and highly active open source project, FreeBSD is democratically managed by an elected core team, and supported by the FreeBSD Foundation and community worldwide.	none
+V63.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“BSD 项目在现代自由软件共同体中的位置”；本节题为其下位论题	none
+V63.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“BSD 项目在现代自由软件共同体中的位置”；本节题为其下位论题	none
+V63.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“容器、云计算与基础设施层的系统构成”；本节题为其下位论题	none
+V63.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.2.1	系统级容器化的项目自述	https://freebsdfoundation.org/freebsd-project/what-is-freebsd/	联网	A	2026-10-30	Jails A unique feature of FreeBSD, increase security by creating operating system-level containerization and partitioning.	none
+V63.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“容器、云计算与基础设施层的系统构成”；本节题为其下位论题	none
+V63.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“容器、云计算与基础设施层的系统构成”；本节题为其下位论题	none
+V63.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.2.3	容器部署对 C 库选择的影响	https://musl.libc.org/about.html	联网	A	2026-10-30	Design around this principle started out with embedded and low-end desktops in mind, but ended up carrying musl (and like-minded distributions) to prominence in the container deployment wave.	none
+V63.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“容器、云计算与基础设施层的系统构成”；本节题为其下位论题	none
+V63.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“BSD 在网络、存储与系统软件中的持续存在”；本节题为其下位论题	none
+V63.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.3.1	网络栈的自述性能	https://freebsdfoundation.org/freebsd-project/what-is-freebsd/	联网	A	2026-10-30	TCP/IP FreeBSD’s TCP/IP stack is native and has less latency and faster response time.	none
+V63.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“BSD 在网络、存储与系统软件中的持续存在”；本节题为其下位论题	none
+V63.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.3.2	存储技术的整合时点	https://freebsdfoundation.org/freebsd-project/what-is-freebsd/	联网	A	2026-10-30	First non-Solaris integration of ZFS	none
+V63.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“BSD 在网络、存储与系统软件中的持续存在”；本节题为其下位论题	none
+V63.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“BSD 在网络、存储与系统软件中的持续存在”；本节题为其下位论题	none
+V63.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“非 GNU Linux 系统的发展”；本节题为其下位论题	none
+V63.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.4.1	非 GNU 用户空间的当代发行版	https://chimera-linux.org/	联网	A	2026-10-30	Chimera uses a novel combination of core tools from FreeBSD, the LLVM toolchain, and the Musl C library, delivering a fresh experience with several major benefits.	none
+V63.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“非 GNU Linux 系统的发展”；本节题为其下位论题	none
+V63.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“非 GNU Linux 系统的发展”；本节题为其下位论题	none
+V63.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.4.3	工具链许可的择取	https://musl.libc.org/about.html	联网	A	2026-10-30	Since 2012, musl has been licensed under the permissive MIT license.	none
+V63.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“非 GNU Linux 系统的发展”；本节题为其下位论题	none
+V63.6.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节““主流”评价词的用法史与言说位置”；本节题为其下位论题	none
+V63.6.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.5.1	早期对系统的评价用语	https://lwn.net/Articles/698042/	联网	B	2026-10-30	It was, in other words, a toy system, not something that seemed poised to take over the world.	none
+V63.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节““主流”评价词的用法史与言说位置”；本节题为其下位论题	none
+V63.6.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节““主流”评价词的用法史与言说位置”；本节题为其下位论题	none
+V63.6.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节““主流”评价词的用法史与言说位置”；本节题为其下位论题	none
+V63.6.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节““主流”“成功”与“失败”的历史解释问题”；本节题为其下位论题	none
+V63.6.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.6.1	对事后评判的反思	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	Although Andrew Tanenbaum has been derided for his heavy hand and misjudgements of the Linux kernel, such a reaction to Tanenbaum is unfair.	none
+V63.6.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节““主流”“成功”与“失败”的历史解释问题”；本节题为其下位论题	none
+V63.6.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节““主流”“成功”与“失败”的历史解释问题”；本节题为其下位论题	none
+V63.6.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节““主流”“成功”与“失败”的历史解释问题”；本节题为其下位论题	none
+V63.6.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“Darwin 与 Linux 的技术交汇”；本节题为其下位论题	none
+V63.6.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.7.1	内核对 BSD 来源的说明	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html	联网	A	2026-10-30	The BSD portion of the OS X kernel is derived primarily from FreeBSD, a version of 4.4BSD that offers advanced networking, performance, security, and compatibility features.	none
+V63.6.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“Darwin 与 Linux 的技术交汇”；本节题为其下位论题	none
+V63.6.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.7.2	两层机制的差异	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html	联网	A	2026-10-30	The locking mechanism used throughout the kernel differs substantially from the mechanism used in FreeBSD.	none
+V63.6.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“Darwin 与 Linux 的技术交汇”；本节题为其下位论题	none
+V63.6.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“Darwin 与 Linux 的技术交汇”；本节题为其下位论题	none
+V63.6.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.6.7.4	来源与实现同一性的说明	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html	联网	A	2026-10-30	Although the BSD layer of OS X is derived from 4.4BSD, keep in mind that it is not identical to 4.4BSD.	none
+V63.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“关系史的史料类型：源代码、发行包、版本档案与版权声明”；本节题为其下位论题	none
+V63.7.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.1.1	项目版权文件的统摄条款	https://cgit.freebsd.org/src/plain/COPYRIGHT	联网	A	2026-10-30	The compilation of software known as FreeBSD is distributed under the following terms:	none
+V63.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“关系史的史料类型：源代码、发行包、版本档案与版权声明”；本节题为其下位论题	none
+V63.7.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“关系史的史料类型：源代码、发行包、版本档案与版权声明”；本节题为其下位论题	none
+V63.7.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.1.3	许可变更公告的文本	https://cgit.freebsd.org/src/plain/COPYRIGHT	联网	A	2026-10-30	Effective immediately, licensees and distributors are no longer required to include the acknowledgement within advertising materials.	none
+V63.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“关系史的史料类型：源代码、发行包、版本档案与版权声明”；本节题为其下位论题	none
+V63.7.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“开发讨论与提交记录：邮件列表、Usenet 与版本树”；本节题为其下位论题	none
+V63.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“开发讨论与提交记录：邮件列表、Usenet 与版本树”；本节题为其下位论题	none
+V63.7.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.2.2	回帖的定位三要素	http://web.cs.wpi.edu/~cs502/cisco11/Papers/Tanenbaum-TorvaldsDebate.pdf	联网	A	2026-10-30	From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds) Subject: Re: LINUX is obsolete Date: 29 Jan 92 23:14:26 GMT	none
+V63.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“开发讨论与提交记录：邮件列表、Usenet 与版本树”；本节题为其下位论题	none
+V63.7.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“开发讨论与提交记录：邮件列表、Usenet 与版本树”；本节题为其下位论题	none
+V63.7.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“项目官方历史、社区叙事与技术事实的区分”；本节题为其下位论题	none
+V63.7.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.3.1	项目自述的身份界定	https://www.netbsd.org/about/	联网	A	2026-10-30	It isn't a "distribution" or variant, but has evolved over several decades to be a complete and unique operating system in the BSD family.	none
+V63.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“项目官方历史、社区叙事与技术事实的区分”；本节题为其下位论题	none
+V63.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.3.2	社区常见的派生关系提问	https://www.gnu.org/gnu/linux-and-gnu.html	联网	A	2026-10-30	人们有时会问 BSD 是否也是一个 GNU 的派生版本，像 GNU/Linux 那样。	none
+V63.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“项目官方历史、社区叙事与技术事实的区分”；本节题为其下位论题	none
+V63.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“项目官方历史、社区叙事与技术事实的区分”；本节题为其下位论题	none
+V63.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“开发者回忆、口述史与同时代材料的交叉验证”；本节题为其下位论题	none
+V63.7.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“开发者回忆、口述史与同时代材料的交叉验证”；本节题为其下位论题	none
+V63.7.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.4.2	事后回顾的时间距离	https://lwn.net/Articles/698042/	联网	B	2026-10-30	Twenty-five years later, it is fair to say that none of us foresaw where Linux would go — a lesson that should be taken to heart when trying to imagine where it might go from here.	none
+V63.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“开发者回忆、口述史与同时代材料的交叉验证”；本节题为其下位论题	none
+V63.7.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“开发者回忆、口述史与同时代材料的交叉验证”；本节题为其下位论题	none
+V63.7.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节““来源”“影响”“借鉴”“兼容”：概念区分与证据层级”；本节题为其下位论题	none
+V63.7.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.5.1	派生关系的技术表述	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html	联网	A	2026-10-30	The BSD portion of the OS X kernel is derived primarily from FreeBSD, a version of 4.4BSD that offers advanced networking, performance, security, and compatibility features.	none
+V63.7.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节““来源”“影响”“借鉴”“兼容”：概念区分与证据层级”；本节题为其下位论题	none
+V63.7.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.5.2	派生来源的自我表述	https://www.netbsd.org/about/	联网	A	2026-10-30	The NetBSD code was originally derived from 4.4BSD Lite2 from the University of California, Berkeley.	none
+V63.7.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节““来源”“影响”“借鉴”“兼容”：概念区分与证据层级”；本节题为其下位论题	none
+V63.7.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节““来源”“影响”“借鉴”“兼容”：概念区分与证据层级”；本节题为其下位论题	none
+V63.7.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“技术传播与历史归名的证据标准”；本节题为其下位论题	none
+V63.7.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.6.1	版权文件所列的软件来源	https://cgit.freebsd.org/src/plain/COPYRIGHT	联网	A	2026-10-30	The 4.4BSD and 4.4BSD-Lite software is distributed under the following terms:	none
+V63.7.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“技术传播与历史归名的证据标准”；本节题为其下位论题	none
+V63.7.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“技术传播与历史归名的证据标准”；本节题为其下位论题	none
+V63.7.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“技术传播与历史归名的证据标准”；本节题为其下位论题	none
+V63.7.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“文化挪用命题的证据边界与关系史的可证范围”；本节题为其下位论题	none
+V63.7.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“文化挪用命题的证据边界与关系史的可证范围”；本节题为其下位论题	none
+V63.7.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.7.2	许可变更的档案留痕	https://cgit.freebsd.org/src/plain/COPYRIGHT	联网	A	2026-10-30	NOTE: The copyright of UC Berkeley's Berkeley Software Distribution ("BSD") source has been updated.	none
+V63.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“文化挪用命题的证据边界与关系史的可证范围”；本节题为其下位论题	none
+V63.7.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“文化挪用命题的证据边界与关系史的可证范围”；本节题为其下位论题	none
+V63.7.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“多项目技术网络：同源分化与独立生态”；本节题为其下位论题	none
+V63.7.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.8.1	BSD 名称所标来源	https://www.netbsd.org/about/	联网	A	2026-10-30	The “BSD” in our name is an obvious recognition of our heritage as a derivative of 4.4BSD and 386BSD.	none
+V63.7.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“多项目技术网络：同源分化与独立生态”；本节题为其下位论题	none
+V63.7.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“多项目技术网络：同源分化与独立生态”；本节题为其下位论题	none
+V63.7.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.8.3	项目协作方式的自我描述	https://www.netbsd.org/about/	联网	A	2026-10-30	NetBSD was one of the first major open source projects to be organized collaboratively entirely over the internet, using a network-connected version control system to develop the OS and organizing the project over email since 1993.	none
+V63.7.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“多项目技术网络：同源分化与独立生态”；本节题为其下位论题	none
+V63.7.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“systemd 的诞生时间线”；本节题为其下位论题	none
+V63.8.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.1.1	发起文的自我定位	https://0pointer.net/blog/projects/systemd.html	联网	A	2026-10-30	we are experimenting with a new init system and it is fun.	none
+V63.8.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“systemd 的诞生时间线”；本节题为其下位论题	none
+V63.8.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.1.2	进程标识 1 的职责	https://0pointer.net/blog/projects/systemd.html	联网	A	2026-10-30	It is started by the kernel before all other processes and is the parent process for all those other processes that have nobody else to be child of.	none
+V63.8.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“systemd 的诞生时间线”；本节题为其下位论题	none
+V63.8.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.1.3	对传统初始化系统的评价	https://0pointer.net/blog/projects/systemd.html	联网	A	2026-10-30	Unfortunately, the traditional SysV init system was not particularly fast.	none
+V63.8.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“systemd 的诞生时间线”；本节题为其下位论题	none
+V63.8.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.1.4	先行替代方案的位置	https://0pointer.net/blog/projects/systemd.html	联网	A	2026-10-30	Many replacements have been suggested, only one of them really took off: Upstart, which has by now found its way into all major distributions.	none
+V63.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“systemd 的诞生时间线”；本节题为其下位论题	none
+V63.8.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“发行版的采纳与拒绝”；本节题为其下位论题	none
+V63.8.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.2.1	技术委员会关于默认初始化的裁决	https://www.debian.org/doc/manuals/debian-faq/customizing.en.html	联网	A	2026-10-30	The committee decided that the default init system for Linux architectures in jessie should be systemd.	none
+V63.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“发行版的采纳与拒绝”；本节题为其下位论题	none
+V63.8.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.2.2	默认初始化切换的发行版	https://www.debian.org/doc/manuals/debian-faq/customizing.en.html	联网	A	2026-10-30	Debian 8 "jessie" in April 2015 was the first release to ship with systemd as default init.	none
+V63.8.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“发行版的采纳与拒绝”；本节题为其下位论题	none
+V63.8.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.2.3	对多初始化系统的支持要求	https://www.debian.org/doc/manuals/debian-faq/customizing.en.html	联网	A	2026-10-30	The technical committee expects maintainers to continue to support the multiple available init systems	none
+V63.8.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“发行版的采纳与拒绝”；本节题为其下位论题	none
+V63.8.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.2.4	分叉项目的自我说明	https://www.devuan.org/	联网	A	2026-10-30	Devuan GNU+Linux is a fork of Debian without systemd that allows users to reclaim control over their system by avoiding unnecessary entanglements and ensuring Init Freedom.	none
+V63.8.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“发行版的采纳与拒绝”；本节题为其下位论题	none
+V63.8.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“BSD 阵营立场：rc.d、rcNG 与 BSD 系 init 的延续”；本节题为其下位论题	none
+V63.8.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.3.1	早期启动脚本的形态	https://docs.freebsd.org/en/articles/rc-scripting/	联网	A	2026-10-30	The historical BSD had a monolithic startup script, /etc/rc.	none
+V63.8.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“BSD 阵营立场：rc.d、rcNG 与 BSD 系 init 的延续”；本节题为其下位论题	none
+V63.8.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.3.2	框架的两条设计原则	https://docs.freebsd.org/en/articles/rc-scripting/	联网	A	2026-10-30	The basic ideas behind BSD rc.d are fine modularity and code reuse.	none
+V63.8.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“BSD 阵营立场：rc.d、rcNG 与 BSD 系 init 的延续”；本节题为其下位论题	none
+V63.8.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.3.3	框架的作者与引入路径	https://docs.freebsd.org/en/articles/rc-scripting/	联网	A	2026-10-30	Thus BSD rc.d was born. Its acknowledged fathers were Luke Mewburn and the NetBSD community. Later it was imported into FreeBSD.	none
+V63.8.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“BSD 阵营立场：rc.d、rcNG 与 BSD 系 init 的延续”；本节题为其下位论题	none
+V63.8.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“BSD 阵营立场：rc.d、rcNG 与 BSD 系 init 的延续”；本节题为其下位论题	none
+V63.8.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“初始化系统的设计前提比较”；本节题为其下位论题	none
+V63.8.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.4.1	并行启动的两条要点	https://0pointer.net/blog/projects/systemd.html	联网	A	2026-10-30	For a fast and efficient boot-up two things are crucial: - To start less. - And to start more in parallel.	none
+V63.8.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“初始化系统的设计前提比较”；本节题为其下位论题	none
+V63.8.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.4.2	脚本关键字的排序工具	https://docs.freebsd.org/en/articles/rc-scripting/	联网	A	2026-10-30	Finally, an important part of the rc.d framework is rcorder(8), which helps /etc/rc to run the small scripts orderly with respect to dependencies between them.	none
+V63.8.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“初始化系统的设计前提比较”；本节题为其下位论题	none
+V63.8.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“初始化系统的设计前提比较”；本节题为其下位论题	none
+V63.8.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.8.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“初始化系统的设计前提比较”；本节题为其下位论题	none
+V63.8.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
