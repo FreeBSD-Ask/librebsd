@@ -2,3 +2,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T10:03:06	design+assemble	69	415	396	lint hard=0 warn=0; audit 40/40 PASS; corpus=present 4.8/4.9/4.11
 2026-10-30T10:40:00	review_fix	69	415	396	主代理逐条复核修正，重装配，sha256=72dfdd4245c8
 2026-10-30T10:55:00	supplement	-	-	-	补证批：V51 史料3+DOI4+改题2，V53 一手1；sha256=72dfdd4245c8
+2026-10-30T11:05:00	crosscheck	-	-	-	存疑项本地库交叉复核，sha256=72dfdd4245c8
