@@ -5,6 +5,7 @@ V53.1.1.1	4.4BSD-Lite 发布条款	https://www.oreilly.com/openbook/opensources/
 V53.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD 共同传统：CSRG、4.4BSD 与 UNIX 工程文化遗产”；本节题为其下位论题	none
 V53.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；甲／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.1.1.2	CSRG 解散与多组并存	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	B	2026-10-30	While it might seem best to have a single centralized authority overseeing the system development, the idea of having several groups with different charters ensures that many different approaches will be tried.	none
+V53.1.1.2	CSRG 解散与多组并存	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.	none
 V53.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“BSD 共同传统：CSRG、4.4BSD 与 UNIX 工程文化遗产”；本节题为其下位论题	none
 V53.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；甲／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.1.1.3	源代码发行传统的意义	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	B	2026-10-30	Because the system is released in source form, the best ideas can easily be picked up by other groups.	none
@@ -195,6 +196,7 @@ V53.2.4.4	FreeBSD 网络强项	https://docs.freebsd.org/en/books/handbook/introd
 V53.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“硬件支持、用户需求与工程优先级”；本节题为其下位论题	none
 V53.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；甲／乙／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.2.4.5	NetBSD ARM 支持	https://www.netbsd.org/about/	联网	A	2026-10-30	Entirely in the mainline kernel, supported by a single image, and maintained by NetBSD developers with long-term support in mind.	none
+V53.2.4.5	ARM 平台的支持方式	https://www.netbsd.org/about/	联网	A	2026-10-30	ARM hardware support for a wide range of open, low-cost, and high-end devices, including powerful SBBA/SBBR servers, open hardware laptops, and pocket-sized development boards. Entirely in the mainline kernel, supported by a single image, and maintained by NetBSD developers with long-term support in mind.	none
 V53.2.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“硬件支持、用户需求与工程优先级”；本节题为其下位论题	none
 V53.2.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；甲／乙／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.2.4.6	OpenBSD 平台增删依据	https://www.openbsdhandbook.com/introduction/	联网	B	2026-10-30	Architectures are added or retired based on hardware availability, developer interest, and build quality.	none
@@ -360,6 +362,7 @@ V53.3.6.5	OpenBSD W^X 首次启用	https://www.openbsd.org/innovations.html	联�
 V53.3.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“微创新与架构重构：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 项目技术路线比较”；本节题为其下位论题	none
 V53.3.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／己族；S2 下位一致；S3 同节同族同粒度	none
 V53.3.6.6	FreeBSD 版本控制迁移	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	In June 2008, the Project switched to using SVN (Subversion). The switch was deemed necessary, as the technical limitations imposed by CVS were becoming obvious due to the rapid expansion of the source tree and the amount of history already stored.	none
+V53.3.6.6	版本控制系统的两次迁移	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	In December 2020, the Project migrated Source and Documentation repositories to Git, with Ports following suit in April 2021.	none
 V53.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“正确性优先的不同表述与各自前提”；本节题为其下位论题	none
 V53.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／己族；S2 下位一致；S3 同节同族同粒度	none
 V53.3.7.1	OpenBSD 目标首句	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	Our goals place emphasis on correctness, security, standardization, and portability.	none
@@ -423,6 +426,7 @@ V53.4.3.2	首届 hackathon 产出	https://www.openbsd.org/hackathons.html	联网
 V53.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OpenBSD：Puffy、发行歌曲与 hackathon 文化”；本节题为其下位论题	none
 V53.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.3.3	hackathon 议程形式	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	In our form, hackathons do not have talks, nor a specific schedule.	none
+V53.4.3.3	集会以写代码为唯一议程	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	Hackathons are about writing code.	none
 V53.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OpenBSD：Puffy、发行歌曲与 hackathon 文化”；本节题为其下位论题	none
 V53.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.3.4	hackathon 参会资格	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	Hackathon attendees come by invitation only.	none
@@ -465,15 +469,18 @@ V53.4.5.4	FreeBSD 发行分级	https://www.freebsd.org/releases/	联网	A	2026-1
 V53.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“版本编号、发行周期与项目时间意识”；本节题为其下位论题	none
 V53.4.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.5.5	NetBSD 分支分工	https://www.netbsd.org/about/	联网	A	2026-10-30	NetBSD-current is a nightly distribution of the latest development branch, and includes the latest features, but also potentially experimental changes and bugs.	none
+V53.4.5.5	稳定分支与当前分支的分工	https://www.netbsd.org/about/	联网	A	2026-10-30	NetBSD-stable is a nightly distribution of the latest release branch, and includes fixes and improvements that will make it into the next point release.	none
 V53.4.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“版本编号、发行周期与项目时间意识”；本节题为其下位论题	none
 V53.4.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.5.6	FreeBSD 遗留版定位	https://www.freebsd.org/releases/	联网	A	2026-10-30	Legacy releases are provided for existing users wishing to stay with a more conservative upgrade strategy.	none
+V53.4.5.6	支持周期的公开承诺	https://www.freebsd.org/releases/	联网	A	2026-10-30	For information about branches, release dates, and estimated end-of-life (EOL) dates, please see the Supported Releases section of FreeBSD Security Information.	none
 V53.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“会议、邮件列表与线上社区仪式”；本节题为其下位论题	none
 V53.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.6.1	OpenBSD 邮件礼节	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Be considerate of other subscribers on the mailing lists.	none
 V53.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“会议、邮件列表与线上社区仪式”；本节题为其下位论题	none
 V53.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.6.2	OpenBSD 纯文本规定	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Plain text, 72 characters per line.	none
+V53.4.6.2	纯文本与行宽规定	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Messages that do not include a plain text part will be summarily rejected.	none
 V53.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“会议、邮件列表与线上社区仪式”；本节题为其下位论题	none
 V53.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.4.6.3	OpenBSD 主题行要求	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Messages with an empty Subject will get bounced to the list manager and will take longer to show up.	none
@@ -523,9 +530,11 @@ V53.4.8.5	BSD 目录层次约定	旧大纲-20261023/第17卷-政治制度与社�
 V53.4.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 通用习俗考据”；本节题为其下位论题	none
 V53.4.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.8.6	chflags 文件标志传统	旧大纲-20261023/第17卷-政治制度与社区治理/第354章-bsd俚语考据与通用习俗/354.2-BSD-通用习俗特殊文化考据/354.2.6-chflags与flags传统bsd文件标志扩展与evenrootcannotm.md	史料	A	2026-10-30	BSD 文件标志扩展传统 Unix 权限模型，包含 uchg（user immutable，用户不可变标志）	none
+V53.4.8.6	chflags 与不可变标志	https://man.openbsd.org/chflags.1	联网	A	2026-10-30	The superuser-settable sappnd and schg flags can be set at any time, but may only be cleared when the system is running at security level 0 or -1 (insecure or permanently insecure mode, respectively).	none
 V53.4.8.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“BSD 通用习俗考据”；本节题为其下位论题	none
 V53.4.8.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.8.7	securelevel 机制	旧大纲-20261023/第17卷-政治制度与社区治理/第354章-bsd俚语考据与通用习俗/354.2-BSD-通用习俗特殊文化考据/354.2.7-securelevel传统bsd内核安全级别与不可逆降级机制.md	史料	A	2026-10-30	BSD securelevel 是内核安全级别机制，分为多个级别	none
+V53.4.8.7	securelevel 的不可逆降级	https://man.openbsd.org/securelevel.7	联网	A	2026-10-30	However, only init(8) may lower it once the system has entered secure mode.	none
 V53.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“UNIX 习俗考据”；本节题为其下位论题	none
 V53.4.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.9.1	vi 成书时间传言	旧大纲-20261023/第01卷-unix的起源/第015章-unix习俗考据与都市传说辨析/015.1-unix早期相传言与都市传说考据/015.1.1-billjoyvi48小时dennisritchie评linux与kenthom.md	史料	A	2026-10-30	“Bill Joy 在 48 小时内写出 vi”（史实失实	none
@@ -536,6 +545,7 @@ V53.4.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V53.4.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.9.3	同意令与 Unix 分发	旧大纲-20261023/第01卷-unix的起源/第015章-unix习俗考据与都市传说辨析/015.1-unix早期相传言与都市传说考据/015.1.3-attconsentdecreefork启发管道发明doonethingwell.md	史料	A	2026-10-30	1956 年 AT&T 与美国司法部达成的 Consent Decree 要求 AT&T 退出非电信业务领域	none
 V53.4.9.3	广告条款撤销日期	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999.	none
+V53.4.9.3	同意令与源码许可的关联	https://spectrum.ieee.org/the-strange-birth-and-long-life-of-unix	联网	A	2026-10-30	In 1956, AT&T had agreed to a U.S government consent decree that prevented the company from selling products not directly related to telephones and telecommunications, in return for its legal monopoly status in running the country’s long-distance phone service. So Unix could not be sold as a product. Instead, AT&T released the Unix source code under license to anyone who asked, charging only a nominal fee.	none
 V53.4.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“UNIX 习俗考据”；本节题为其下位论题	none
 V53.4.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.9.4	V6 内核注释	旧大纲-20261023/第01卷-unix的起源/第015章-unix习俗考据与都市传说辨析/015.1-unix早期相传言与都市传说考据/015.1.4-要点V6UNIX内核中著名的注释Youarenotexpectedtounde.md	史料	A	2026-10-30	该注释因作者对代码晦涩度的自我调侃而成为 UNIX 史上最著名的代码注释之一	none
@@ -563,16 +573,19 @@ V53.4.10.5	FreeBSD CoC 底线条款	https://www.freebsd.org/internal/code-of-con
 V53.4.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“本卷考据方法总结与待考条目清单”；本节题为其下位论题	none
 V53.4.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.11.1	源清单层级定义	03-原始史料库/06-考据记录/20261002_传言俚语习俗考证源清单.md	史料	A	2026-10-30	**使用原则**（同上 §1.2.1）：①优先使用第一、二层；不同层级冲突时以低形式主义程度者为准；②**从不以第五层作为唯一来源**；③禁引百科类与不可溯源网络来源。	none
+V53.4.11.1	考据源清单的层级划分	03-原始史料库/06-考据记录/20261002_传言俚语习俗考证源清单.md	目录	A	2026-10-30	| **A 第一层** | 代码与构建产物 | commit log、源代码、发布 tarball、makefile | 最高 | 最低（代码是行动的直接痕迹） |	none
 V53.4.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“本卷考据方法总结与待考条目清单”；本节题为其下位论题	none
 V53.4.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.11.2	OpenBSD 审计文化起源	旧大纲-20261023/第10卷-openbsd的历史/第232章-openbsd的相关传言与都市传说考据/232.3-安全审计文化考据与专业批评/232.3.1-要点OpenBSD的安全审计文化起源于项目创建后不久deRaadt被一家名为Se.md	史料	A	2026-10-30	OpenBSD 的安全审计文化起源于项目创建后不久——de Raadt 被一家名为 Secure Networks, Inc.（SNI）的本地安全软件公司联系。	none
 V53.4.11.2	OpenBSD 审计团队规模与起始	https://www.openbsd.org/security.html	联网	A	2026-10-30	Our security auditing team typically has between six and twelve members who continue to search for and fix new security holes. We have been auditing since the summer of 1996.	none
+V53.4.11.2	审计文化的商业催化	https://www.openbsd.org/security.html	联网	A	2026-10-30	Some members of our security auditing team worked for Secure Networks, the company that made the industry’s premier network security scanning software package Ballista	none
 V53.4.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“本卷考据方法总结与待考条目清单”；本节题为其下位论题	none
 V53.4.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.11.3	二手转述的证据等级	旧大纲-20261023/第10卷-openbsd的历史/第232章-openbsd的相关传言与都市传说考据/232.3-安全审计文化考据与专业批评/232.3.2-JohnCHollemans记录486VL机双启动装OBSD27报badmagi.md	史料	A	2026-10-30	以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。	none
 V53.4.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“本卷考据方法总结与待考条目清单”；本节题为其下位论题	none
 V53.4.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.11.4	源清单抽取方法	03-原始史料库/06-考据记录/20261002_传言俚语习俗考证源清单.md	史料	A	2026-10-30	字段逐条抽取（合计 **98 条源串**），按 **`02-sacred源材料/lishidagang.md` §1.2.1“史料类型与层级”** 的五层级谱系归类。	none
+V53.4.11.4	待考条目的登记格式	03-原始史料库/06-考据记录/20261002_传言俚语习俗考证源清单.md	目录	A	2026-10-30	| 源 | 出现卷（磁盘层） | 用途 |	none
 V53.4.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“本卷考据方法总结与待考条目清单”；本节题为其下位论题	none
 V53.4.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度；S1 忠于旧树料件	none
 V53.4.11.5	源清单重建说明	03-原始史料库/06-考据记录/20261002_传言俚语习俗考证源清单.md	史料	A	2026-10-30	原件的 **A–E 类目定义**未随文件留存；本清单的 A–E 采用 **lishidagang §1.2.1** 的权威定义（下表），**非复原原件**——此点如实标注。	none
@@ -582,6 +595,7 @@ V53.4.11.6	OpenBSD 安全叙事的外部评估	旧大纲-20261023/第10卷-openb
 V53.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“分析边界：信仰属性作为框架而非定性”；本节题为其下位论题	none
 V53.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.5.1.1	daemon 与 demon 的误读澄清	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	This is an egregious misunderstanding.	none
+V53.5.1.1	信念措辞的引用来源	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	In the Unix System Administration Handbook, Evi Nemeth has this to say about daemons:	none
 V53.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“分析边界：信仰属性作为框架而非定性”；本节题为其下位论题	none
 V53.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.5.1.2	daemon 与 demon 的联想	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	Many people equate the word "daemon" with the word "demon," implying some kind of Satanic connection between UNIX® and the underworld.	none
@@ -600,6 +614,7 @@ V53.5.1.6	OpenBSD 安全抱负表述	https://www.openbsd.org/security.html	联�
 V53.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节““BSD 信徒”话语：信仰隐喻的文本证据与流变”；本节题为其下位论题	none
 V53.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.5.2.1	OpenBSD 安全信念句	https://www.openbsd.org/security.html	联网	A	2026-10-30	Our open software development model permits us to take a more uncompromising view towards increased security than most vendors are able to.	none
+V53.5.2.1	信念式表述的文本分布	https://www.openbsd.org/security.html	联网	A	2026-10-30	Like many readers of the BUGTRAQ mailing list, we believe in full disclosure of security problems.	none
 V53.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节““BSD 信徒”话语：信仰隐喻的文本证据与流变”；本节题为其下位论题	none
 V53.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.5.2.2	基金会教育与推广使命	https://www.freebsd.org/advocacy/	联网	A	2026-10-30	Teaching others and spreading the word about FreeBSD is an important part of the Foundation’s mission.	none
@@ -627,6 +642,7 @@ V53.5.3.3	NetBSD 标志会员投票	https://www.netbsd.org/foundation/reports/20
 V53.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“发行版忠诚：选择、迁移与认同的可考维度”；本节题为其下位论题	none
 V53.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.5.3.4	DragonFly 切割旧包袱	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
+V53.5.3.4	分支起点的技术理由	http://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.	none
 V53.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“发行版忠诚：选择、迁移与认同的可考维度”；本节题为其下位论题	none
 V53.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；乙／戊族；S2 下位一致；S3 同节同族同粒度	none
 V53.5.3.5	FreeBSD 强项清单	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Its particular strengths are:	none
@@ -675,6 +691,7 @@ V53.6.2.1	核心选举周期	https://www.freebsd.org/internal/bylaws/	联网	A	2
 V53.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“FreeBSD Core Team：从自设团队到 committer 直选”；本节题为其下位论题	none
 V53.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.2.2	核心选举程序时长	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	4 weeks for the actual vote.	none
+V53.6.2.2	四周投票的程序安排	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	1 week to tally active committers wishing to run for core.	none
 V53.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“FreeBSD Core Team：从自设团队到 committer 直选”；本节题为其下位论题	none
 V53.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.2.3	核心罢免条款	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Core members and committers may be ejected by a 2/3 vote of core.	none
@@ -705,6 +722,7 @@ V53.6.3.5	执行委员会体系	https://www.netbsd.org/foundation/	联网	A	2026
 V53.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“NetBSD Core Group 与基金会：执行委员会制下的非选举治理结构”；本节题为其下位论题	none
 V53.6.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.3.6	核心组与基金会分界	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	The NetBSD Core Group can be reached at: `<core@NetBSD.org>`.	none
+V53.6.3.6	法人章程与技术职权的分离	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation is incorporated in the State of Delaware, and is governed by a set of bylaws.	none
 V53.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“OpenBSD：核心维护者模式与集中决策”；本节题为其下位论题	none
 V53.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.4.1	hackathon 经费联系人	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	If anyone wants to help us FUND ONE OF THESE EVENTS OR A DEVELOPER'S TRAVEL, please contact Theo de Raadt (who generally has the most knowledge about upcoming options), or directly offer travel expenses to a developer for the next event.	none
@@ -735,6 +753,7 @@ V53.6.5.3	同行标准的约束力	https://www.dragonflybsd.org/team/	联网	A	2
 V53.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“DragonFly BSD：Dillon 个人主导的开发模式与集群愿景”；本节题为其下位论题	none
 V53.6.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.5.4	DragonFly 集群目标来源	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The ultimate goal of the DragonFly project at its inception was to provide native clustering support in the kernel.	none
+V53.6.5.4	集群目标的长期牵引	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
 V53.6.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“DragonFly BSD：Dillon 个人主导的开发模式与集群愿景”；本节题为其下位论题	none
 V53.6.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.5.5	DragonFly 网站维护	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	He has been working on or completed DragonFly projects such as variant symlinks, MPIPE, the slab allocator, the namecache, LWKT, live CD, AMD64 work, and much more, including coordination of projects other contributors have submitted.	none
@@ -789,6 +808,7 @@ V53.6.8.3	重复违规处置	https://www.openbsd.org/mail.html	联网	A	2026-10-
 V53.6.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“邮件列表冲突、技术争论与社区边界”；本节题为其下位论题	none
 V53.6.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.8.4	OpenBSD 提问举证要求	https://www.openbsd.org/mail.html	联网	A	2026-10-30	All questions should include at least the version of OpenBSD.	none
+V53.6.8.4	争论中的举证要求	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Any hardware-related questions should mention the platform (i386, amd64, etc.) and provide a full dmesg(8).	none
 V53.6.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“邮件列表冲突、技术争论与社区边界”；本节题为其下位论题	none
 V53.6.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.6.8.5	OpenBSD 观点差异原则	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Intelligent people may look at the same set of facts and come to very different conclusions.	none
@@ -828,9 +848,11 @@ V53.7.1.4	广告条款撤销	https://www.openbsd.org/policy.html	联网	A	2026-1
 V53.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD 许可证传统的历史来源：从 USL 诉讼与和解（1992 至 1994-01）到广告条款删除（1999-07-22）”；本节题为其下位论题	none
 V53.7.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.1.5	禁令驳回与争点	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	B	2026-10-30	On a Friday about six weeks later, he issued a forty-page opinion in which he denied the injunction and threw out all but two of the complaints.	none
+V53.7.1.5	禁令驳回后的争点收窄	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	The remaining two complaints were narrowed to recent copyrights and the possibility of the loss of trade secrets.	none
 V53.7.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD 许可证传统的历史来源：从 USL 诉讼与和解（1992 至 1994-01）到广告条款删除（1999-07-22）”；本节题为其下位论题	none
 V53.7.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.1.6	四款 BSD 许可原始形态	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	This license was used in the University of California, Berkeley's second Berkeley Networking Release and the 4.4BSD Lite software release, is called the "4-clause BSD license", and looks like this:	none
+V53.7.1.6	四款条文的原始句式	https://www.openbsd.org/policy.html	联网	A	2026-10-30	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the University of California, Berkeley and its contributors.	none
 V53.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“宽松许可证与代码传播模式”；本节题为其下位论题	none
 V53.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.2.1	宽松许可的出售与源码	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	One thing that some people don't realize about Berkeley-style licenses is that they allow licensees (the users of the licensed work) to sell the code, in any form, with or without modification, and that they make no requirement that licensees give away the source code, even if they're selling binaries.	none
@@ -858,9 +880,11 @@ V53.7.3.2	OpenBSD 新代码许可	https://www.openbsd.org/policy.html	联网	A	2
 V53.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“FreeBSD、NetBSD、OpenBSD、DragonFly 的许可证实践”；本节题为其下位论题	none
 V53.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.3.3	NetBSD 二款版转换	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	In 2008, following on from a vote amongst the membership of the NetBSD Foundation, and in recognition of the changing face of software licensing, the NetBSD Foundation has changed its recommended license to be a 2 clause BSD license.	none
+V53.7.3.3	NetBSD 的二句版转换	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	At the same time, all the code which was contributed to the NetBSD Foundation has been modified to use the new 2-clause NetBSD license.	none
 V53.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“FreeBSD、NetBSD、OpenBSD、DragonFly 的许可证实践”；本节题为其下位论题	none
 V53.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.3.4	NetBSD 换版理由	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	Some of our developers work for companies in Open Source or research departments where they are allowed to contribute back daytime work to the open source project, but only if the project's license is acceptable to their legal department, and the 4 clause BSD license has been rejected in some cases.	none
+V53.7.3.4	背书条款的弃用理由	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	The members of the NetBSD Foundation (i.e. its developers) no longer considered clause 4 (the "endorsement" clause) to be useful in today's software world.	none
 V53.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“FreeBSD、NetBSD、OpenBSD、DragonFly 的许可证实践”；本节题为其下位论题	none
 V53.7.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.3.5	FreeBSD 许可追踪	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Keeping Track of Licenses Granted to the FreeBSD Project	none
@@ -885,6 +909,7 @@ V53.7.4.5	FreeBSD 树内 GPL 容忍	https://docs.freebsd.org/en/books/handbook/i
 V53.7.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“GPL 模型与 BSD 模型的制度差异”；本节题为其下位论题	none
 V53.7.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.4.6	许可制度可比项	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	Additionally, we don't think it's right to require people who add to our work and want to distribute the results (for profit or otherwise) to give away the source to their additions; they made the additions, and they should be free to do with them as they wish.	none
+V53.7.4.6	派生作品的源码义务	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The GNU Public License and licenses modeled on it impose the restriction that source code must be distributed or made available for all works that are derivatives of the GNU copyrighted code.	none
 V53.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“商业采用、嵌入式系统与代码再利用”；本节题为其下位论题	none
 V53.7.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.5.1	FreeBSD 商业采用场景	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
@@ -930,6 +955,7 @@ V53.7.7.2	公共代码资源的历史成本	https://www.openbsd.org/policy.html	
 V53.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“回馈机制、公共代码资源与利益分配问题”；本节题为其下位论题	none
 V53.7.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.7.3	取用与资助的不对称	https://www.openssh.com/	联网	A	2026-10-30	OpenSSH is incorporated into many commercial products, but very few of those companies assist OpenSSH with funding.	none
+V53.7.7.3	非营利资格的缺位	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	DragonFly is not yet incorporated as a non-profit, meaning no tax benefit is available for donating time or goods to the project.	none
 V53.7.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“回馈机制、公共代码资源与利益分配问题”；本节题为其下位论题	none
 V53.7.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.7.4	基金会捐助渠道	https://www.openbsdfoundation.org/	联网	A	2026-10-30	The Foundation needs contributions from Individuals and Companies to support its efforts.	none
@@ -954,6 +980,7 @@ V53.7.8.4	许可中的观点声明	https://www.freebsd.org/copyright/freebsd-lic
 V53.7.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“许可证与项目身份之间的关系”；本节题为其下位论题	none
 V53.7.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.8.5	许可与商标分工	https://www.netbsd.org/about/disclaimer.html	联网	A	2026-10-30	NetBSD ® is a registered trademark of The NetBSD Foundation, Inc.	none
+V53.7.8.5	许可与商标的分工	https://www.freebsd.org/copyright/trademarks/	联网	A	2026-10-30	FreeBSD is a registered trademark of The FreeBSD Foundation.	none
 V53.7.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“许可证与项目身份之间的关系”；本节题为其下位论题	none
 V53.7.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.8.6	版权的产生方式	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Because copyrights arise from the creation of a work, rather than through a registration process, there needs to be a practical way to extend permission to use a work beyond what might be allowed by "fair use" provisions of the copyright laws.	none
@@ -969,12 +996,14 @@ V53.7.9.3	捐助公开清单	https://www.openbsdfoundation.org/	联网	A	2026-10
 V53.7.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的回馈形态比较：可考与不可考”；本节题为其下位论题	none
 V53.7.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.9.4	第三方换版与登记	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	Third parties are encouraged to change the license on any files which have a 4-clause license contributed to the NetBSD Foundation to a 2-clause license.	none
+V53.7.9.4	代码回流的计量困难	https://www.netbsd.org/about/redistribution.html	联网	A	2026-10-30	We would also encourage you to inform us about these files, so that we can continue to track the many places in which NetBSD is used.	none
 V53.7.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的回馈形态比较：可考与不可考”；本节题为其下位论题	none
 V53.7.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.9.5	四分支回馈可比性	https://www.openbsd.org/policy.html	联网	A	2026-10-30	NetBSD has included material copyrighted by individuals who have imposed license conditions beyond that of the general NetBSD license, but granted the NetBSD Foundation license to distribute the material.	none
 V53.7.9.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的回馈形态比较：可考与不可考”；本节题为其下位论题	none
 V53.7.9.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；戊／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.7.9.6	不可考项处置	https://www.openbsdfoundation.org/	联网	A	2026-10-30	The Foundation's support enables OpenBSD and related projects to move forward and pay the bills.	none
+V53.7.9.6	捐助名单的收录规则	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	We list donors here but we don't link back; this is not for advertising.	none
 V53.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD：网络、存储、虚拟化与互联网基础设施”；本节题为其下位论题	none
 V53.8.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.1.1	Netflix 采用 FreeBSD-CURRENT	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	Netflix adopted FreeBSD-CURRENT for its Open Connect CDN, aligning closely with the FreeBSD community and staying at the forefront of system development.	none
@@ -984,12 +1013,15 @@ V53.8.1.2	Netflix 树与上游对齐	https://freebsdfoundation.org/end-user-stor
 V53.8.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD：网络、存储、虚拟化与互联网基础设施”；本节题为其下位论题	none
 V53.8.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.1.3	内核 TLS 吞吐	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	It allows for efficient data handling and has enabled Netflix to achieve 400 Gb/s throughput on its CDN servers.	none
+V53.8.1.3	内核 TLS 的吞吐收益	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	KTLS is a technology that moves the processing of TLS (Transport Layer Security) from user applications to the operating system kernel.	none
 V53.8.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD：网络、存储、虚拟化与互联网基础设施”；本节题为其下位论题	none
 V53.8.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.1.4	异步 sendfile 改造	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	Other notable enhancements to FreeBSD by Netflix include asynchronous sendfile operations, which facilitate non-blocking data transfers, and advanced VM page caching techniques that improve data handling efficiency and network throughput.	none
+V53.8.1.4	发送文件路径的零拷贝改造	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	With sendfile and kernel TLS, we can eliminate many of these memory bandwidth bottlenecks	none
 V53.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD：网络、存储、虚拟化与互联网基础设施”；本节题为其下位论题	none
 V53.8.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.1.5	FreeBSD 承载互联网流量	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	The fastest and highest-trafficked network on the internet, all running FreeBSD	none
+V53.8.1.5	概念验证阶段的 10 Gb/s 接口配置	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	In 2012, a proof-of-concept CDN was started on vanilla FreeBSD 9.0-RELEASE and nginx that was provisioned on servers equipped with a single 10 Gbit/s interface.	none
 V53.8.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD：网络、存储、虚拟化与互联网基础设施”；本节题为其下位论题	none
 V53.8.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.1.6	Netflix 机群规模	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	We are one of the biggest sources of traffic on the internet – sending terabits per second, powered by thousands of servers or appliances, all running FreeBSD.	none
@@ -999,6 +1031,7 @@ V53.8.2.1	NetBSD 端口分级	https://www.netbsd.org/ports/	联网	A	2026-10-30	
 V53.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“NetBSD：跨架构支持与可移植工程传统”；本节题为其下位论题	none
 V53.8.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.2.2	第一层端口定位	https://www.netbsd.org/ports/	联网	A	2026-10-30	Focus ports are the architectures that NetBSD targets as part of its strategy.	none
+V53.8.2.2	第一层移植的战略角色	https://www.netbsd.org/ports/	联网	A	2026-10-30	Machine independent (MI) changes should benefit these ports.	none
 V53.8.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“NetBSD：跨架构支持与可移植工程传统”；本节题为其下位论题	none
 V53.8.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.2.3	第二层端口维护责任	https://www.netbsd.org/ports/	联网	A	2026-10-30	Generally speaking, the port boots and works, but keeping it working is the responsibility of the user community.	none
@@ -1035,6 +1068,7 @@ V53.8.4.1	LWKT 两级调度	https://www.dragonflybsd.org/features/	联网	A	2026
 V53.8.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“DragonFly BSD：LWKT、HAMMER 与内核架构实验”；本节题为其下位论题	none
 V53.8.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.4.2	虚拟内核用途	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	VKERNEL - DragonFly implements a virtual kernel feature for running DragonFly kernels in userland inside DragonFly kernels.	none
+V53.8.4.2	虚拟内核的调试用途	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	This works similarly to Usermode Linux and allows DragonFly kernels to be debugged as a userland process. The primary use is to make kernel development easier.	none
 V53.8.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“DragonFly BSD：LWKT、HAMMER 与内核架构实验”；本节题为其下位论题	none
 V53.8.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.4.3	HAMMER 快照保留	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	All non-temporary HAMMER filesystems in DragonFly by default automatically maintain 60 days worth of 1-day snapshots and 1-day worth of fine-grained (30-second) snapshots.	none
@@ -1092,6 +1126,7 @@ V53.8.7.2	下游源码发布与标注	https://opensource.apple.com/	联网	A	202
 V53.8.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“可见影响与隐性影响：技术史中的归因问题”；本节题为其下位论题	none
 V53.8.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.7.3	可移植版来源说明	https://www.openssh.com/portable.html	联网	A	2026-10-30	The portable OpenSSH follows development of the official version, but releases are not synchronized.	none
+V53.8.7.3	跟踪上游的反馈时距	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	When we run FreeBSD-CURRENT, we catch things really fast. If there’s some regression, we catch it right away. There’s no two—or three-year delay between somebody committing something and us finding it’s a problem.	none
 V53.8.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“可见影响与隐性影响：技术史中的归因问题”；本节题为其下位论题	none
 V53.8.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；己／丙族；S2 下位一致；S3 同节同族同粒度	none
 V53.8.7.4	上游提交的动机	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	It’s crucial to reduce the divergence of your operating system to FreeBSD, which means that you need to upstream your changes.	none
@@ -1149,6 +1184,7 @@ V53.9.3.3	BSD Daemon 著作权归属	https://www.freebsd.org/copyright/daemon.ht
 V53.9.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“视觉与符号的横向对照”；本节题为其下位论题	none
 V53.9.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.3.4	NetBSD 换标程序	https://www.netbsd.org/foundation/reports/2004Q4.html	联网	A	2026-10-30	The logo was selected out of over 400 submissions by 238 artists.	none
+V53.9.3.4	视觉更新的征集程序	https://www.netbsd.org/foundation/reports/2004Q4.html	联网	A	2026-10-30	Members of the NetBSD Foundation voted for the new logo from a short-list of six submitted designs selected by the logo committee.	none
 V53.9.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“视觉与符号的横向对照”；本节题为其下位论题	none
 V53.9.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.3.5	BSD Daemon 反复出现	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	The little red fellow that graces many of these pages is the BSD Daemon.	none
@@ -1167,6 +1203,7 @@ V53.9.4.3	hackathon 纪念衫	https://www.openbsd.org/hackathons.html	联网	A	2
 V53.9.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“仪式的横向对照”；本节题为其下位论题	none
 V53.9.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.4.4	OpenBSD 发行歌曲	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Three audio CDs have been made which contain approximately 5 years of songs each:	none
+V53.9.4.4	发行歌曲的配属形式	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Every 6 months the OpenBSD project has the pleasure to release our software with artwork and possibly a matching song.	none
 V53.9.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“仪式的横向对照”；本节题为其下位论题	none
 V53.9.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.4.5	邮件格式礼节	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Plain text, 72 characters per line.	none
@@ -1224,9 +1261,11 @@ V53.9.7.4	漏洞口号的范围	https://www.openbsd.org/	联网	A	2026-10-30	Onl
 V53.9.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“批评：审美主张与工程结果的落差”；本节题为其下位论题	none
 V53.9.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.7.5	批评的举证	https://www.dreamsongs.com/WorseIsBetter.html	联网	B	2026-10-30	Decide for yourselves.	none
+V53.9.7.5	外部评语对该文的判语	https://www.dreamsongs.com/WorseIsBetter.html	联网	A	2026-10-30	The classic essay on "worse is better" is either misunderstood or wrong	none
 V53.9.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“批评：审美主张与工程结果的落差”；本节题为其下位论题	none
 V53.9.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.7.6	化名反驳自身主张	https://www.dreamsongs.com/WorseIsBetter.html	联网	B	2026-10-30	This piece attacked worse is better.	none
+V53.9.7.6	批评与自我批评的对称	https://www.dreamsongs.com/WorseIsBetter.html	联网	A	2026-10-30	In the Winter of 1991-1992 I wrote an essay called "Worse Is Better Is Worse" under the name "Nickieben Bourbaki." This piece attacked worse is better.	none
 V53.9.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
 V53.9.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；丙／乙族；S2 下位一致；S3 同节同族同粒度	none
 V53.9.8.1	Unix 哲学法则条目	http://www.catb.org/esr/writings/taoup/html/ch01s06.html	联网	B	2026-10-30	Design for simplicity; add complexity only where you must.	none

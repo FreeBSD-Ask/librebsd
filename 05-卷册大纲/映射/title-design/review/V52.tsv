@@ -1,0 +1,265 @@
+subsection_id	section	title	scope_fit	evidence_fit	verdict	reason	new_title	new_thesis	new_evidence_url	new_evidence_quote	action
+V52.1.1.1	1	池化存储与卷管理角色的合并	in	direct	keep	手册原句“Combining the traditionally separate roles of volume manager and file system provides ZFS with unique advantages”直证两层职能合并为 ZFS 的结构特征；题面落在“ZFS 的设计背景”之下位，未越出节题。					不改
+V52.1.1.2	1	事务对象模型与磁盘一致性的前提	in	partial	rewrite	引文“reading and writing to it transactionally in an atomic manner”只证 DMU 以原子事务读写，未及“对象模型”；原子提交才是“一致性前提”的支点，故缩题避未证措辞。	原子事务提交与一致性前提	ZFS 以事务组为提交单位，原子写入是其免修复特性的结构前提。			改题
+V52.1.1.3	1	端到端校验的设计取向	in	partial	rewrite	引文“ZFS calculates checksums and writes them along with the data… recalculates the checksums”证校验随写随读，全句未出现“端到端”；带未证术语易被读作原文主张，缩题。	校验和随数据写入的取向	校验和与数据同写、读取时重算，完整性检查内嵌于存储栈。			改题
+V52.1.1.4	1	两名工程师起步时的存储栈处境	in	partial	rewrite	引文“2001 – Development of ZFS started with two engineers at Sun Microsystems.”只证年份与人数；“既有 Solaris 存储栈的约束”在本行无引文，题面后半属推断，改题限可证部分。	两人小组的 2001 年起步	ZFS 起于 Sun 内部两人小组，2001 年为可考的起点年份。			改题
+V52.1.1.5	1	三项目标之间的轻重权衡	in	partial	rewrite	本行引文只列“Pooled storage”一条；同页“ZFS has three major design goals”仅证三项并列，无轻重次序与“支配作用”的记载，题面断言无据，改题。	三项设计目标的并列陈述	手册将完整性、池化与性能并列为设计目标，未作轻重排序。			改题
+V52.1.1.6	1	Solaris 内核依赖留下的移植负担	in	partial	rewrite	引文“ZFS was originally developed by Sun Microsystems for the Solaris operating system.”证原生平台，“移植负担”须另一层证据（见 1.2 各条），单行不足以支撑后半，改题。	ZFS 的 Solaris 原生出身	ZFS 自始为 Solaris 编写，该出身是各 BSD 移植的起点条件。			改题
+V52.1.2.1	2	FreeBSD 7.0 引入 ZFS 的时点	in	direct	keep	引文“2008 – A port to FreeBSD was released as part of FreeBSD 7.0.”直证版本与时点；惟 thesis 的“先发意义”属评价，摘要节不宜下判断，建议删去该半句。					不改
+V52.1.2.2	2	OpenZFS 成立后上游回流的方向	in	direct	keep	引文“New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.”直证双向回流，题面“方向”可核。					不改
+V52.1.2.3	2	CDDL 许可与内核树的分装	in	partial	rewrite	引文只证“The source code for ZFS was released under the CDDL as part of the OpenSolaris operating system”，“迫使在内核树中以独立模块分装”无引文，且属因果判断，摘要节越权；改题限许可事实。	ZFS 源码的 CDDL 发布条件	源码随 OpenSolaris 以 CDDL 发布，许可条款与 BSD 许可不同。			改题
+V52.1.2.4	2	OpenZFS 跨平台代码合流的口径	in	direct	keep	引文“Feature flags were introduced to replace legacy on-disk version numbers, enabling easier distributed evolution”直证合流口径，题面与证据一一对应。					不改
+V52.1.2.5	2	FreeBSD 侧功能先行与上游滞后的落差	in	partial	rewrite	引文“RAID-Z expansion requires OpenZFS 2.3 or later, first available in FreeBSD 15.0.”只证功能与版本绑定，未见“先行”“滞后”的时序差，题面属推断，改题。	新功能与 OpenZFS 版本号的绑定	部分功能须达指定 OpenZFS 版本，方随 FreeBSD 各版可用。			改题
+V52.1.2.6	2	从 Sun 移植到共同体维护的移交	in	partial	rewrite	引文“2010 – illumos was founded as the truly open source successor to OpenSolaris, and continued to develop ZFS in the open.”证 illumos 承接开放开发；“FreeBSD 侧维护主体改变”无引文，属推断，改题。	illumos 承接 ZFS 的开放开发	OpenSolaris 终止后由 illumos 承接 ZFS 的开放开发。			改题
+V52.1.3.1	3	单盘假设与池化布局的分界	in	direct	keep	引文“Traditional file systems could exist on a single disk at a time. If there were two disks then creating two separate file systems was necessary.”直证单盘假设，池化一侧由 1.1.1 承担，分界可立。					不改
+V52.1.3.2	3	GEOM 软 RAID 之上的 UFS 视角	in	direct	keep	引文“Even with software RAID solutions like those provided by GEOM, the UFS file system living on top of the RAID believes it is dealing with a single device.”直证 UFS 仍以单设备自视。					不改
+V52.1.3.3	3	卷管理与文件系统合并的代价	in	partial	rewrite	引文“ZFS' combination of the volume manager and the file system solves this and allows the creation of file systems that all share a pool”证合并的效果，未证“把冗余与扩容逻辑锁入内部”的代价；与 1.1.1 分工，本节陈化解一侧。	两层合并对单盘困境的化解	合并卷管理与文件系统，解决了多盘须建多个文件系统的问题。			改题
+V52.1.3.4	3	文件系统感知磁盘结构的程度	in	direct	keep	引文“One big advantage of ZFS' awareness of the physical disk layout is that existing file systems grow automatically when adding extra disks to the pool.”直证感知与自动扩容。					不改
+V52.1.3.5	3	数据集划分对单一大文件系统的替代	in	direct	keep	引文“create separate file systems and datasets instead of a single monolithic file system”直证替代关系。					不改
+V52.1.3.6	3	池取代单盘文件系统的范围	in	direct	keep	引文“The ZFS pool is a full storage stack capable of replacing RAID, partitioning, volume management… and traditional file-systems that span only 1 disk”直证自述的替代范围；thesis 的“实际边界”宜改为“自述范围”，以免把主张当评价。					不改
+V52.1.4.1	4	HAMMER 设计九个月的实施节奏	in	direct	keep	引文“Design on the file-system began in early 2007 and took approximately 9 months, and the implementation phase following took another 9 months.”直证两段节奏；thesis 的“与 2.0 发布窗口绑定”无引文，摘要节删去。					不改
+V52.1.4.2	4	免 fsck 挂载的设计承诺	in	direct	keep	引文“Instant or nearly-instant mount. No fsck needed on crash recovery.”直证承诺，题面用“承诺”而非“实现”，与文献性质相合。					不改
+V52.1.4.3	4	全历史保留与实时文件系统的结合	in	direct	keep	引文“Full history retention with easy access, via the live file-system.”直证历史保留挂靠活动文件系统。					不改
+V52.1.4.4	4	UNDO 记录只覆盖元数据的界限	in	direct	keep	引文“UNDO records for meta-data only. Data is not (never!) immediately overwritten so no UNDO is needed for file data.”直证边界。					不改
+V52.1.4.5	4	单一全局 B-Tree 的索引编排	in	direct	keep	引文“I-nodes, directory entries, and file data are all indexed with a single global B-Tree.”直证单树编排。					不改
+V52.1.4.6	4	1 EB 容量目标的技术前提	in	direct	keep	引文“Hammer is able to address up to 256 52 bit volumes. That is 256 x 4096 TB or a total of up to 1 Exabyte.”直证位宽分配与容量上限。					不改
+V52.1.5.1	5	HAMMER2 简化设计的返工理由	in	direct	keep	引文“Even though HAMMER2 has a lot more features then HAMMER1 the actual design is simpler than HAMMER1, with virtually no edge cases to worry about”直证“特性更多而设计更简”。					不改
+V52.1.5.2	5	超级根下的多根挂载安排	in	direct	keep	引文“Multiple roots (allowing snapshots to be mounted). This is implemented via the super-root concept.”直证超级根与多根挂载。					不改
+V52.1.5.3	5	子树可写快照的无限定条件	in	direct	keep	引文“Writable snapshots. Any subdirectory tree can be snapshotted.”直证任意子树可快照且可写。					不改
+V52.1.5.4	5	blockref 双事务标识的镜像次序	in	partial	rewrite	引文只证“each blockref tracks both direct modifications… (modify_tid) and indirect modifications… (mirror_tid)”，双标识可立，“镜像次序”与“免于排队”无引文，改题。	blockref 的修改与镜像双标识	每个 blockref 同时记修改事务号与镜像事务号，两者分工不同。			改题
+V52.1.5.5	5	按子树配置压缩的存储分层	in	direct	keep	引文“multiple compression algorithms configured on subdirectory tree basis and on a file basis. Up to 64K block compression will be used.”直证配置粒度与块上限。					不改
+V52.1.5.6	5	HAMMER 边界案例的长期清理	in	direct	keep	引文“I spent 12+ months working edge cases out in HAMMER1's B-Tree… that won't be an issue for HAMMER2 development”直证清理史及其对 HAMMER2 的反向约束。					不改
+V52.1.6.1	6	软更新对同步写次序的替代	in	direct	keep	引文“Soft updates, an alternative to these approaches, is an implementation mechanism that tracks and enforces metadata update dependencies to ensure that the disk image is always kept consistent.”直证替代与依赖追踪。					不改
+V52.1.6.2	6	崩溃后免全盘检查的恢复次序	in	direct	keep	引文“By ensuring that the only inconsistencies are unclaimed blocks or inodes, soft updates can eliminate the need to run a filesystem check program after every system crash.”直证限定与免检。					不改
+V52.1.6.3	6	快照挂起窗口与文件系统体量	in	direct	keep	引文“…suspended for less than one second. The suspension time is independent of the size of the filesystem.”直证挂起窗口与体量无关。					不改
+V52.1.6.4	6	WAPBL 日志重放的秒级恢复	in	direct	keep	引文“the kernel will replay the log within seconds”直证秒级重放；该页为镜像站（B 级），正文批宜以 NetBSD 官方 changelog 复核。					不改
+V52.1.6.5	6	日志与软更新的互斥关系	in	direct	keep	引文“Note that WAPBL is not compatible with soft-dependencies”直证互斥。					不改
+V52.1.6.6	6	元数据标签的三写安排	in	direct	keep	引文“All metadata is stored twice by default, with the object containing the pool's state… written three times.”直证双写与三写。					不改
+V52.1.7.1	7	merkle 树在校验链中的位置	in	partial	keep	引文“Committed data is stored in a merkle tree that is updated atomically on each transaction group commit”证 merkle 树；“校验和存于块指针并逐级上卷”的细部须由该页其他段落（如 block pointer 段）在正文批补，题面核心词已证。					不改
+V52.1.7.2	7	HAMMER 放弃传播到根指针的取舍	in	direct	keep	引文“I also considered a propagate-to-root block pointer system for a short while but it simply was not compatible with the history retention requirement.”直证试验、放弃与理由。					不改
+V52.1.7.3	7	非层次 CRC 与层次校验的落差	in	direct	keep	引文“The CRC checks are not hierarchical per-say, meaning that updating a low level record does not cause a CRC update to propagate to the root”直证非层次；层次侧由 1.7.1 同页承担，落差可立。					不改
+V52.1.7.4	7	单盘池自愈能力的缺位	in	direct	keep	引文“A pool consisting of a single device has no self-healing capabilities.”直证缺位。					不改
+V52.1.7.5	7	ZIL 自校验块的导入读取条件	in	direct	keep	引文“ZIL records… are self checksumming blocks that are read only on pool import if the system made changes before the last transaction group commit”直证自校验与读取条件。					不改
+V52.1.7.6	7	快照语义在四系中的不同实现	in	partial	rewrite	引文“ZFS creates snapshots of a dataset, not a single directory or file.”只及 ZFS 一侧，“四系四种对象定义”越出本行证据，亦越过比较节可担的举证面；缩题，他系一侧另设题。	数据集级快照的对象界定	ZFS 以数据集而非目录或单文件为快照单位。			改题
+V52.1.8.1	8	设计目标陈述作为维度来源	in	partial	keep	手册“ZFS has three major design goals”是可转写为维度的目标清单实例；维度取舍本身属体例判断，由本节节题与目录分工注承担，证据只作例证，不作史实断言。					不改
+V52.1.8.2	8	实现时序作为工程判准的依据	in	partial	keep	“9 months… another 9 months”是时序类判准的实例；“取值口径与误用风险”属体例判断、无引文，报告披露为方法论语境。					不改
+V52.1.8.3	8	四方并列对象的边界划定	in	partial	supplement	原行只有目录与规则两源，无联网证据；补项目官网自述作“四方并列”的同类依据，题面收为“可比基础”，排除编年与人物则由目录 @@ 注与规则 S2 承担（A 级，2026-10-30 实测）。	四方并列对象的可比基础	四分支同属一类系统并共享祖先代码，故可并列比较；编年与人物叙述不在本卷对象内。	https://www.dragonflybsd.org/	DragonFly belongs to the same class of operating systems as other BSD-derived systems and Linux.	改题并补证
+V52.1.8.4	8	摘要节引用本体卷的边界	in	partial	supplement	原行无联网证据；1.2、1.4、1.5 的摘要节身份及其“主述见本体卷”由目录 @@ 分工注确定，补写作规范页“摘要描述而不评断”一句作体例依据（B 级，2026-10-30 实测）。			https://writingcenter.unc.edu/tips-and-tools/abstracts/	An abstract is not a review, nor does it evaluate the work being abstracted.	补证
+V52.1.8.5	8	横向比较与分支编年的划界	in	partial	supplement	原行无联网证据；补 FreeBSD 源码树谱系件标题句，证编年以家族树件单独承载、与本卷对照分工（A 级，2026-10-30 实测），分工条款另见目录 @@ 注。			https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	The UNIX system family tree: Research and BSD	补证
+V52.1.8.6	8	单一分支材料支撑四系结论的风险	in	partial	rewrite	本节四题皆无联网行；“证据表上的识别标志”属方法承诺而非可引史实，且无合适一手方法论文本可引（试检 Gutenberg 史学方法译本，抓取被截断），改题后由目录 @@ 注（“主体四方并列，不设单一主体”）＋规则四源矩阵两源成立，缺口如实披露。	单支材料的引用限度	四系结论须以各方材料分别支撑，单一分支的材料不得推及他系。			改题（联网补证未获，披露）
+V52.2.1.1	1	单锁内核在对称多处理下的限度	in	direct	keep	引文“used one giant spin lock for the entire kernel… This kernel architecture is referred to as pre-SMPng.”直证单锁结构与规模上限的由来。					不改
+V52.2.1.2	1	OpenBSD 多处理器支持的 2000 年起点	in	direct	keep	引文“The OpenBSD project started work on SMP support for various architectures in February 2000.”直证起点；平台先后次序须另条补。					不改
+V52.2.1.3	1	NetBSD 5.0 的线程模型改写	in	direct	keep	引文“The threading system was rewritten and is now based on a 1:1 model.”直证改写；性能因果由 7.1.5 同页长句补，本节不重复。					不改
+V52.2.1.4	1	处理器亲和性与运行队列的分置	in	partial	keep	引文“Each processor has its own runqueue.”只证 OpenBSD 一侧；thesis 的“四系共同选择”无引文，须收为单系实例，题面本身可立。					不改（thesis 收窄）
+V52.2.1.5	1	中断线程化对执行上下文的改造	in	direct	keep	引文“Interrupt threads are necessary so that an interrupt handler has a context in which to block on a lock without blocking an unrelated top half kernel thread.”直证上下文改造。					不改
+V52.2.1.6	1	从 4.4BSD 调度器到多核调度的过渡	in	partial	keep	引文“The OpenBSD scheduler is based on the traditional 4.4BSD scheduler, with some enhancements for SMP support.”证继承与增补；“遗留约束”无引文，thesis 收窄为继承事实。					不改（thesis 收窄）
+V52.2.2.1	2	SMPng 起点的 BSDi 经验输入	in	direct	keep	引文“…first began in June of 2000 with a presentation given to several FreeBSD developers by Chuck Paterson of BSDi explaining BSDi's SMP project”直证经验输入。					不改
+V52.2.2.2	2	Giant 与 sched_lock 的初始分工	in	direct	keep	引文“A spin mutex named sched_lock was used to protect the scheduler queues… A sleep mutex named Giant was added to protect everything else in the kernel.”直证两锁分工。					不改
+V52.2.2.3	2	锁分析器对细粒度化次序的约束	in	direct	keep	引文“implementing a lock profiler that can determine which locks are heavily contested as well as where they are heavily contested”直证按测量推进。					不改
+V52.2.2.4	2	六年拆锁周期的收尾判定	in	direct	keep	引文“over the past ~6 years, this goal is now complete.”直证六年与收尾；判准转变由 2.2.6 承担，两题分层。					不改
+V52.2.2.5	2	遗留 giant 锁子系统的清单	in	direct	keep	引文“several subsystems are still giant-locked (notably ipv6, tty, and CAM…)”直证清单。					不改
+V52.2.2.6	2	从拆锁转向测量的重心迁移	in	direct	keep	引文“The focus of SMP development work has largely changed from 'break up Giant everywhere' to 'carefully measure…'”直证重心迁移。					不改
+V52.2.3.1	3	LWKT 对执行上下文与地址空间的解耦	in	direct	keep	引文“The Lightweight Kernel Threads (LWKT) system decouples the traditional Unix notions of an execution context from a VM address space.”直证解耦。					不改
+V52.2.3.2	3	每处理器自含调度器的绑定规则	in	direct	keep	引文“Each processor has its own self-contained threads scheduler. Threads are tied to a processor and can only move under special circumstances.”直证绑定规则。					不改
+V52.2.3.3	3	仅允许中断线程抢占的次序	in	direct	keep	引文“A thread can only be pre-empted by an interrupt thread.”直证抢占次序；“由免锁”属推论，thesis 收窄。					不改
+V52.2.3.4	3	跨处理器调度的异步 IPI 通路	in	direct	keep	引文“Cross-processor scheduling is implemented via asynchronous inter-processor interrupts… the system exhibits graceful degradation under load.”直证通路与退化特性。					不改
+V52.2.3.5	3	内核调度器与用户调度器的两层分工	in	direct	keep	features 页“The scheduler abstraction has been split up into two layers… The User Thread Scheduler is a separate scheduler…”直证两层分工。					不改
+V52.2.3.6	3	线程迁移的特殊情形限定	in	partial	drop	本行与 2.3.2 引同一句“Threads are tied to a processor and can only move under special circumstances.”，摘要节内重复设题；“这些例外在负载下的触发频率与代价”亦无引文，删题并入 2.3.2。					删题
+V52.2.4.1	4	以消息传递替代共享锁的设计取向	in	direct	keep	引文“in place of the symmetric multiprocessing support being added to the upcoming FreeBSD 5 branch, DragonFlyBSD uses the concepts of partitioning and replication layered on top of a message passing system”直证取向。					不改
+V52.2.4.2	4	资源归属处理器与消息路由的编排	in	direct	keep	引文“resources are owned by a particular processor and messages passed to perform an operation on that resource”直证编排。					不改
+V52.2.4.3	4	从 FreeBSD 4 分支切出的代码基线	in	direct	keep	引文“The source base was forked off the RELENG_4 branch of FreeBSD on June 16, 2003”直证基线与日期。					不改
+V52.2.4.4	4	网络协议线程的按协议分派	in	direct	keep	引文“Protocol thread management is delegated to the individual protocol module, so the rest of the kernel and networking stack does not need to know how many threads”直证分派授权。					不改
+V52.2.4.5	4	用户态消息传递的落地进度	in	direct	keep	引文“…user-land messaging are close to completion — an early form has been committed to the source repository.”直证未完成状态。					不改
+V52.2.4.6	4	消息式驱动框架的改造范围	in	direct	keep	引文“Portions of the device driver framework have been converted to message passing style.”直证“部分”改造。					不改
+V52.2.5.1	5	细粒度锁与无锁分区的成本对照	in	direct	keep	引文“This is in stark contrast to the all-or-nothing requirement enforced by the SMP locking approach”直证两条路线在改造面上的差别。					不改
+V52.2.5.2	5	SMPng 与 LWKT 对 NUMA 的预设差异	in	direct	keep	引文“Rather than starting with a SMP viewpoint and then trying to match it to NUMA reality, DragonFlyBSD starts out with a NUMA-centric view of the world”直证预设不同。					不改
+V52.2.5.3	5	OpenBSD 大锁模型的保守收益	in	partial	supplement	现引只陈大锁模型的操作方式（进入内核即取锁），不及“保守收益”；同篇另有“We can preserve legacy code with this model, however it does not scale well…”，补入后题面两半皆有据（A 级，2026-10-30 实测）。			http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	We can preserve legacy code with this model, however it does not scale well compared to more recent implementations that are based on fine-grained lock models.	补证
+V52.2.5.4	5	NetBSD 调度器模块化的可选余地	in	direct	keep	引文“Added support for SCHED_M2, a second scheduling algorithm, as an alternative to the original SCHED_4BSD algorithm.”直证可替换。					不改
+V52.2.5.5	5	线程模型选择在四系中的分布	in	partial	rewrite	引文“An rthread is a 1:1 native kernel thread library, implemented using the rfork system call.”只及 OpenBSD 一侧，“四系分布”无引文，改题限单系并留出他系位。	OpenBSD rthread 的 1:1 实现	OpenBSD 以 rfork 实现 1:1 原生线程库，与他系模型选择并列可比。			改题
+V52.2.5.6	5	并发改造时间跨度的可比限度	in	mismatch	rewrite	引文只是 SMPng 目标原句（“decompose the Giant lock into a number of smaller locks”）与“时间跨度可比性”无关，题面与证据不对应；改题就引。	SMPng 收尾目标的公开表述	SMPng 公开目标为把 Giant 拆成多把小锁以降低争用，收尾判据由此而来。			改题
+V52.3.1.1	1	vkernel 作为用户态 DragonFly 系统的定位	in	direct	keep	引文“The vkernel architecture allows for running DragonFly kernels in userland.”直证定位。					不改
+V52.3.1.2	1	用户态内核的 gdb 直接调试手段	in	direct	keep	引文“It is possible to directly gdb the virtual kernel's process.”直证调试路径。					不改
+V52.3.1.3	1	内核内存由临时文件承载的回收机制	in	direct	keep	引文“The virtual kernel's memory is backed by a temporary file created in /var/vkernel and immediately unlinked.”直证承载与回收。					不改
+V52.3.1.4	1	vke 设备与 mbuf 簇的分配规则	in	direct	keep	引文“By default, half of the total mbuf clusters available is distributed equally among all the vke devices up to 256.”直证分配规则。					不改
+V52.3.1.5	1	VKERNEL64 配置与内核构建入口	in	direct	keep	引文“In order to compile a virtual kernel use the VKERNEL64 kernel configuration file residing in /sys/config”直证构建入口。					不改
+V52.3.1.6	1	虚拟内核平台的 world 构建限制	in	direct	keep	引文“The virtual kernel platform does not have all the header files expected by a world build”直证限制。					不改
+V52.3.2.1	2	bhyve 在 FreeBSD 10.0 的入树时点	in	direct	keep	引文“Major enhancements in virtualization, including the addition of bhyve(8), virtio(4), and native paravirtualized drivers…”直证同批入树。					不改
+V52.3.2.2	2	BSD 许可对管理程序选型的影响	in	partial	rewrite	引文“The bhyve BSD-licensed hypervisor became part of the base system with FreeBSD 10.0-RELEASE.”只证许可与入树；“排除若干现成方案”无引文，且属因果判断，摘要节越权，改题。	bhyve 的 BSD 许可与基本系统身份	bhyve 以 BSD 许可随 10.0 进入基本系统，许可为其身份的一部分。			改题
+V52.3.2.3	2	EPT 与 RVI 的硬件前提	in	direct	keep	引文“The bhyve design requires a processor that supports Intel® Extended Page Tables (EPT) or AMD® Rapid Virtualization Indexing (RVI) or Nested Page Tables (NPT).”直证硬门槛。					不改
+V52.3.2.4	2	virtio 设备模型的半虚拟化取向	in	direct	keep	引文“It also avoids emulating compatible hardware for the guest and instead relies on para-virtualization drivers.”直证半虚拟化取向（B 级存档页）。					不改
+V52.3.2.5	2	串行控制台与图形控制台的缺省	in	direct	keep	引文“By default, bhyve provides access to serial console and does not emulate a graphical console.”直证缺省。					不改
+V52.3.2.6	2	vmm 设备节点对虚拟机生命周期的绑定	in	direct	keep	引文“A device node is created in /dev/vmm for each virtual machine.”直证一机一节点。					不改
+V52.3.3.1	3	EC2 区域的 AMI 检索路径	in	direct	keep	引文“FreeBSD/amd64 EC2 AMI IDs can be retrieved from the Systems Manager Parameter Store in each region”直证按区域分发。					不改
+V52.3.3.2	3	Azure 与 GCE 的上架状态差异	in	partial	supplement	现引只证 Azure“available on the Azure Marketplace”，差异的另一半在同页 GCE 句（expected in the near future），补入后“状态差异”成立（A 级，2026-10-30 实测）。			https://www.freebsd.org/releases/15.0R/announce/	FreeBSD images are also expected to be available in the near future in the Google Compute Engine	补证
+V52.3.3.3	3	UFS 与 ZFS 双镜像的发行安排	in	direct	keep	引文“in both UFS and ZFS filesystems”直证双镜像。					不改
+V52.3.3.4	3	预装镜像格式的兼容取舍	in	direct	keep	引文“…in QCOW2, VHD, and VMDK disk image formats, as well as raw (unformatted) images.”直证格式组合。					不改
+V52.3.3.5	3	Hyper-V 客体的半虚拟化驱动	in	direct	keep	引文“native paravirtualized drivers providing support for FreeBSD as a guest operating system on Microsoft Hyper-V”直证客体驱动。					不改
+V52.3.3.6	3	云平台清单的四家并列	in	partial	keep	引句为清单引言；同页四条分别为 Amazon® EC2™、Google® Compute Engine™、Microsoft® Azure™、Oracle Cloud Infrastructure（2026-10-30 实测），四家可核；Azure 为“available”、其余多为“expected”，落差亦可核，题面不必改。					不改
+V52.3.4.1	4	三类管理程序的对象差异	in	partial	rewrite	引文“The vmm driver implements a virtual machine monitor (VMM) suitable for executing virtual machines (VMs).”只证监控器—虚拟机一层；“三类对象差异”另须 3.1、3.2 各条支撑，本行不足以立，缩题。	监控器与虚拟机的对象关系	监控器以虚拟机为操作对象，而用户态内核的运行单位是进程，二者层级不同。			改题
+V52.3.4.2	4	OpenBSD vmm 的内核内监控器定位	in	partial	keep	引文“The vmm driver appeared in OpenBSD 5.9.”证时点与驱动身份；“置于内核内”由 3.4.1 同页句（driver implements a VMM）补，题面可立。					不改
+V52.3.4.3	4	privsep 与 pledge 对 VM 进程的约束	in	direct	keep	幻灯片句“‘sandboxed’ VMs using privsep and pledge”直证约束手段。					不改
+V52.3.4.4	4	用户态内核与硬件虚拟化的适用分工	in	partial	rewrite	引文只陈 bhyve“runs guest operating systems inside a virtual machine… on amd64 and arm64 platforms with suitable hardware support”，未及用户态内核一侧，分工断言无据；缩题。	客体运行对硬件支持的要求	bhyve 在 amd64 与 arm64 上运行客体，须相应硬件支持。			改题
+V52.3.4.5	4	管理程序选型的许可与集成成本	in	partial	drop	现引与 3.2.1 同一句（10.0R 公告的“addition of bhyve(8), virtio(4)…”），同章重复；且“许可与集成成本”两事本行皆无引文，删题以免同章复证。					删题
+V52.3.4.6	4	虚拟化路线与云采用的耦合限度	in	partial	rewrite	引句仅证云平台清单存在，未及“云上多用托管实例而非自建 hypervisor”，题面断言无据；改题落在材料限度，取其消极证据之用。	云平台可用性作为路线的材料限度	发行公告的云平台清单只说明可用性，不构成 hypervisor 选型的证据。			改题
+V52.4.1.1	1	386BSD 补丁包的三位协调者	in	direct	keep	引文“…partially as the brainchild of the Unofficial 386BSDPatchkit's last 3 coordinators: Nate Williams, Rod Grimes and Jordan Hubbard.”直证三位协调者。					不改
+V52.4.1.2	1	FreeBSD 1.0 的 Net／2 底本	in	direct	keep	引文“This was based on the 4.3BSD-Lite ('Net/2') tape from U.C. Berkeley, with many components also provided by 386BSD and the Free Software Foundation.”直证混合来源。					不改
+V52.4.1.3	1	NetBSD 建项目时的补丁质量困境	in	direct	keep	引文“Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993.”直证动因。					不改
+V52.4.1.4	1	NetBSD 四位创始人的组成	in	direct	keep	引文“The NetBSD project was founded by Chris Demetriou, Theo de Raadt, Adam Glass and Charles M. Hannum.”直证四人署名。					不改
+V52.4.1.5	1	架构无关取向与 i386 取向的分岔	in	direct	keep	引文“NetBSD's original focus was quality and architecture independence. FreeBSD was formed later with a focus on the i386 PC platform.”直证取向分岔。					不改
+V52.4.1.6	1	4.4BSD-Lite 重写对两系基线的影响	in	partial	supplement	现引只给 1994 年 11 月过渡与 12 月 2.0，未及重写动因；手册同页“FreeBSD then set about the arduous task of literally re-inventing itself from a completely new and rather incomplete set of 4.4BSD-Lite bits.”证重建，补入后成立；“两系”只 FreeBSD 一侧可证，题面收为基线重置（A 级，2026-10-30 实测）。	4.4BSD-Lite 重建对代码基线的重置	诉讼和解后项目须以 Lite 源码重建，共同基线由此重置。	https://docs.freebsd.org/en/books/handbook/introduction/	FreeBSD then set about the arduous task of literally re-inventing itself from a completely new and rather incomplete set of 4.4BSD-Lite bits.	改题并补证
+V52.4.2.1	2	port 作为受支持架构的命名惯例	in	direct	keep	引文“NetBSD calls a supported architecture a port.”直证命名惯例，题面用“port”合 C6 口径。					不改
+V52.4.2.2	2	三层分级对平台维护义务的划分	in	direct	keep	引文“Ports are classified into three tiers based on the current importance of the architecture and the level of community activity.”直证三级。					不改
+V52.4.2.3	2	MI 变更须惠及重点平台的规则	in	direct	keep	引文“Machine independent (MI) changes should benefit these ports.”直证规则。					不改
+V52.4.2.4	2	机器相关支持的开发者责任	in	direct	keep	引文“It is the developer's responsibility to implement machine dependent (MD) support necessary for changes, fix build problems and aid in debugging”直证责任归属。					不改
+V52.4.2.5	2	同一 MACHINE_ARCH 的用户态共享	in	direct	keep	引文“Machines of the same MACHINE_ARCH share the same userland binaries…”直证共享；thesis 内“端口”一词宜改“移植平台”，与 C6 口径一致。					不改（thesis 术语修正）
+V52.4.2.6	2	生命维持级端口的退出机制	in	direct	rewrite	引文“If the port is not reported fixed within the next 6-12 months, it will be moved to the Attic.”直证限期清退；题面“端口”系 NetBSD port 的误译，触 C6，改以“移植平台”表述。	长期失修移植平台的限期清退	长期失修的移植平台须在六个月至一年内修复，否则移入 Attic。			改题（C6）
+V52.4.3.1	3	OpenBSD 的 4.4BSD 派生身份	in	direct	keep	引文“The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system.”直证派生身份。					不改
+V52.4.3.2	3	主动安全取向对分支路线的约束	in	partial	rewrite	引文是宗旨原句，列出“portability, standardization, correctness, proactive security and integrated cryptography”，未证“排斥若干性能优化路径”，约束为推断；改题落在宗旨表述。	项目宗旨中的主动安全取向	项目宗旨把可移植、标准化、正确性、主动安全与集成密码学并列陈述。			改题
+V52.4.3.3	3	DragonFly 从 RELENG_4 切出的时点	in	direct	keep	引文“The source base was forked off the RELENG_4 branch of FreeBSD on June 16, 2003”直证时点；同句亦见 2.4.3，摘要节与分化节各证一层，不属重复设题。					不改
+V52.4.3.4	3	以消息传递区分于 FreeBSD 5 的立场	in	direct	keep	引文“in place of the symmetric multiprocessing support being added to the upcoming FreeBSD 5 branch…”直证自我定位的对立句式。					不改
+V52.4.3.5	3	分叉时提交者规模与代码体量	in	partial	rewrite	引文“It is currently comprised of 16 committers with write privileges…”只证人数，“八百万行代码”在本行无引文，缩题避未证数字。	分叉时的提交者规模	分叉当年具写权限的提交者为十六人。			改题
+V52.4.3.6	3	4.4BSD-Lite 作为共同祖先的地位	in	partial	rewrite	引文只证 FreeBSD“is based on the 4.4BSD-Lite release”，“四系均可上溯”须各系另证，题面越出本行证据；缩题。	CSRG 发行版的承继起点	各系以 CSRG 的 Lite 发行版为代码起点，本句证 FreeBSD 一侧。			改题
+V52.4.4.1	4	Ports 树与预编译包的双轨供给	in	direct	keep	引文“Almost every port is also provided as a pre-compiled 'package', which can be installed with a simple command (pkg install)”直证双轨，题面“Ports 树”合 C6。					不改
+V52.4.4.2	4	Ports 规模的量级与体积	in	direct	rewrite	引文“There are about 37000 ports; the entire Ports Collection requires approximately 3 GB.”直证量级与体量；题面裸用“Ports”，按 C6 须写“Ports 树”。	Ports 树规模的量级与体积	集合含约三万七千个 port，整树约 3 GB，镜像与同步成本由此而来。			改题（C6）
+V52.4.4.3	4	pkgsrc 对其他系统的引导安装	in	direct	keep	引文“…on other platforms you need to bootstrap pkgsrc to get the package management tools installed.”直证前置步骤。					不改
+V52.4.4.4	4	pkgsrc 分支制与季度发布	in	partial	keep	引文“the pkgsrc developers are proud to announce the pkgsrc-2026Q3 branch, the 92nd pkgsrc release”直证季度分支与累计期数；“与滚动树的差别”属推断，thesis 收窄。					不改（thesis 收窄）
+V52.4.4.5	4	包管理工具在基本系统中的位置	in	direct	keep	引文“pkg(7) is now the default package management utility.”直证默认工具身份。					不改
+V52.4.4.6	4	第三方生态跨系统的移植成本	in	partial	rewrite	引文“Code exists in pkgsrc to support 20+ Unix-like operating systems and 15+ CPU architectures.”只给支持面，成本无引文；改题落在基数，成本留待正文批。	pkgsrc 支持的系统与架构基数	框架声明支持二十余种 Unix 类系统与十五种以上架构。			改题
+V52.4.5.1	5	OpenSSH 对受限许可的清理动机	in	direct	keep	引文“some OpenBSD developers set to the task of freeing SSH, cleaning up the license mess, and maintaining the codebase towards the future.”直证动机。					不改
+V52.4.5.2	5	从 ssh 1.2.12 到 OSSH 的来源链	in	direct	keep	引文“OpenSSH is a derivative of the original free ssh 1.2.12 release from Tatu Ylönen. That version was the last one free enough for reuse.”直证来源与版本选择。					不改
+V52.4.5.3	5	首次导入的截止期压力	in	partial	rewrite	引文“The initial import was done on Sep 26, 1999”只给导入日期，截止期与开发强度无引文，改题就日期（与 2.6 发行日期并置方见“不足两月”，见正文批）。	首次导入的 1999 年时点	OpenSSH 的初次导入发生在 1999 年 9 月 26 日。			改题
+V52.4.5.4	5	核心开发与移植分支的分离	in	direct	keep	引文“we decided to split our core development efforts from portability developments”直证分离。					不改
+V52.4.5.5	5	OpenZFS 跨平台上游的合并方式	in	direct	keep	引文“New OpenZFS features and fixes are regularly pulled in from illumos, to all ports to other platforms, and vice versa.”直证互拉模式。					不改
+V52.4.5.6	5	WireGuard 从 Linux 内核向外扩散	in	direct	keep	引文“Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android)”直证次序与扩散面。					不改
+V52.4.6.1	6	DTrace 在 Sun 的原始用途	in	direct	keep	引文“DTrace, also known as Dynamic Tracing, was developed by Sun™ as a tool for locating performance bottlenecks in production and pre-production systems.”直证原始用途。					不改
+V52.4.6.2	6	以内核模块实现的移植形态	in	direct	keep	引文“in FreeBSD, DTrace is implemented as a set of kernel modules and DTrace can not be used until the modules are loaded.”直证模块形态。					不改
+V52.4.6.3	6	CTF 类型数据对探针的支持	in	direct	keep	引文“FreeBSD uses the DDB_CTF kernel option to enable support for loading ctf(5) data from kernel modules and the kernel itself.”直证类型数据依赖。					不改
+V52.4.6.4	6	CDDL 与二进制分发条件	in	direct	keep	引文“While a FreeBSD kernel with DTrace support is BSD licensed, the CDDL is used when the modules are distributed in binary form or the binaries are loaded.”直证双重状态。					不改
+V52.4.6.5	6	root 独占使用权的安全落差	in	direct	keep	引文“Due to security differences, only root may use DTrace on FreeBSD.”直证落差。					不改
+V52.4.6.6	6	探针参数不兼容对脚本移植的阻碍	in	direct	keep	引文“D scripts written on Solaris™ may or may not work unmodified on FreeBSD, and vice versa.”直证不兼容。					不改
+V52.4.7.1	7	eBPF 作为内核内虚拟机的定位	in	direct	keep	引文“eBPF is an in-kernel virtual machine with an independent 64-bit instruction set architecture with C calling convention.”直证定位。					不改
+V52.4.7.2	7	eBPF 在 Linux 的 2014 年起点	in	direct	keep	引文“It was appeared in the Linux kernel in 2014 as an extension to the existing BPF.”证年份与来路（原文时态欠妥，引文不改）。					不改
+V52.4.7.3	7	动态追踪与过滤共用同一虚拟机	in	direct	keep	引文“many applications such as dynamic tracing, resource control, and system call filtering are proposed and implemented by using eBPF in Linux.”直证复用。					不改
+V52.4.7.4	7	移植前对 Linux 组件的拆解	in	direct	keep	引文“We will break up existing Linux eBPF system into several components and explain how each component works.”直证拆解做法。					不改
+V52.4.7.5	7	JIT 与解释器并存的实现取舍	in	partial	rewrite	幻灯片仅列“eBPF interpreter and JIT compiler”两词，证两条执行路径并存；“对平台覆盖与性能的折中”无引文，缩题。	解释器与 JIT 的双实现	实现同时备解释器与 JIT 编译器两条执行路径。			改题
+V52.4.7.6	7	钩子缺失对追踪能力的限制	in	partial	keep	引文“Still lacking of...hooks in kernel.”为幻灯片断句，证缺钩子；“暂不能替代 DTrace”由该报告的问题意识承担，引文残缺已在证据行注明，不据此加码。					不改
+V52.4.8.1	8	Junos 以内核改造承载路由功能	in	partial	rewrite	引文“Junos OS is based on the FreeBSD Unix operating system.”只证出身，未及“内核改造”，改题限可证部分。	Junos 的 FreeBSD 出身	Junos OS 以 FreeBSD 为其操作系统基础。			改题
+V52.4.8.2	8	开源软件在设备环境中的加固改写	in	direct	keep	引文“The open source software is modified and hardened to operate in the device's specialized environment. For example, some executables have been deleted…”直证改写。					不改
+V52.4.8.3	8	进程隔离对设备弹性的支撑	in	direct	keep	引文“This separation provides isolation between the processes, and resiliency in the event of a process failure.”直证隔离与弹性。					不改
+V52.4.8.4	8	OpenSSH 进入其他系统的路径	in	direct	keep	引文“Damien Miller, Philip Hands, and a handful of others started porting OpenSSH to Linux and various other Unix operating systems.”直证移植主体与方向。					不改
+V52.4.8.5	8	OpenZFS 在 Linux 与 BSD 间的双向流动	in	partial	keep	引句“Ports of ZFS to other platforms continued porting upstream changes from illumos.”只陈单向拉取；“双向、互为上游”由 1.2.2 同页 vice versa 句补，题面可立。					不改
+V52.4.8.6	8	BSD 代码进入商业产品的许可空间	in	direct	keep	引文“Liberal Open Source license… incorporate it in both Open Source projects and closed products without imposing restrictions typical to copyleft licenses”直证许可空间。					不改
+V52.5.1.1	1	CSRG 之后版本控制的三次迁移	in	partial	rewrite	引文“In June 2008, development of the base system migrated from CVS to Subversion.”只证一次迁移，题面“三次”须三时点并列，本行不足；缩题并把其余时点分给 5.1.2 至 5.1.4。	基本系统 2008 年迁出 CVS	基本系统于 2008 年 6 月由 CVS 迁至 Subversion。			改题
+V52.5.1.2	1	由 CVS 转向 Subversion 的年份	in	partial	rewrite	引文实为“In May 2012, the FreeBSD Documentation Project moved from CVS to Subversion.”，指文档树而非基本系统，与 5.1.1 的 2008 年同题两指；改题明确对象。	文档树 2012 年的迁移	文档项目于 2012 年 5 月由 CVS 迁至 Subversion。			改题
+V52.5.1.3	1	基本系统迁入 Git 的年份	in	direct	keep	引文“In December 2020, development of the base system migrated from Subversion to Git.”直证年份与对象；与 13.0 构建流程的衔接须另条补，thesis 收窄。					不改（thesis 收窄）
+V52.5.1.4	1	doc 与 ports 两树的迁移先后	in	partial	rewrite	引文“In April 2021, the FreeBSD Ports tree has been moved from Subversion to Git.”只给 Ports 树时点，先后关系须与 5.1.2 日期并置方可成立；本节取 Ports 树一侧。	Ports 树 2021 年的迁移	Ports 树于 2021 年 4 月由 Subversion 迁至 Git。			改题
+V52.5.1.5	1	git2svn 导出对旧分支的维持	in	direct	keep	引文“Subversion only receives translated commits from git2svn exporter in stable/11, stable/12 and supported release branches.”直证兼容层与双轨期。					不改
+V52.5.1.6	1	CVS 作为长期中央仓库的时期	in	partial	keep	引文“For several years, the central source tree for FreeBSD was maintained by CVS”证长期中央仓库；“权限模型塑造提交文化”无引文，thesis 收窄。					不改（thesis 收窄）
+V52.5.2.1	2	提交前评审的惯例强度	in	direct	keep	引文“Committers are encouraged to seek review for their work as part of the normal development process”直证“鼓励”而非一律强制。					不改
+V52.5.2.2	2	提交说明的首行与正文分界	in	partial	keep	引文“The first line is the subject of the commit… It should contain 50 characters or less.”直证首行摘要与字数，“正文分段”由同页后续段落承担，题面可立。					不改
+V52.5.2.3	2	patchkit 遗产进入主线的过程	in	partial	rewrite	引文“The original goal was to produce an intermediate snapshot of 386BSD in order to fix a number of problems that the patchkit mechanism was just not capable of solving.”只陈 patchkit 的能力边界，未及“遗产进入主线”与组织惯性；改题就引。	patchkit 机制的能力边界	原有补丁包机制无法解决一批问题，故另建中间快照。			改题
+V52.5.2.4	2	提交权限的分区授予	in	direct	keep	引文“When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.”直证分区授予。					不改
+V52.5.2.5	2	代码冻结期审批口令的格式	in	direct	keep	引文“…the commit log must include an Approved by: re (login) line, where 'login' is the login ID of the approver.”直证格式。					不改
+V52.5.2.6	2	主线与稳定线的合并等待	in	direct	keep	引文“The default minimum timeframe before merging to stable/ branches is three (3) days.”直证等待期。					不改
+V52.5.3.1	3	regress 树向统一测试套件的收编	in	partial	rewrite	引文“The FreeBSD Test Suite first appeared in FreeBSD 10.1 and was installed by default in FreeBSD 11.0.”只证套件出现与默认化，“regress 树收编”无引文；与 5.3.4 分工，本节取出现时点。	测试套件的首次出现	FreeBSD 测试套件首见于 10.1。			改题
+V52.5.3.2	3	ATF 在 NetBSD 的引入	in	direct	keep	5.0 公告清单末项“the Automated Testing Framework”证同批发布，题面“同批的意味”亦由此清单支撑。					不改
+V52.5.3.3	3	Kyua 作为测试驱动的位置	in	direct	keep	引文“The test driver, kyua(1), was imported as part of the base system in FreeBSD 13.0, previously being available only in ports(7).”直证驱动入基本系统。					不改
+V52.5.3.4	3	测试套件默认安装的版本界标	in	direct	keep	引文“was installed by default in FreeBSD 11.0”直证界标；与 5.3.1 分引同句两半，不属重复。					不改
+V52.5.3.5	3	四系共用测试工具的收敛程度	in	direct	keep	引文“Minimize divergence with NetBSD's test suite… sharing test code is possible and easy.”直证收敛取向（B 级 wiki）。					不改
+V52.5.3.6	3	测试框架对多语言的容纳	in	direct	keep	引文“Kyua is able to execute test programs written with a plethora of testing libraries and languages.”直证多语言容纳。					不改
+V52.5.4.1	4	点发布与零点发布的区分	in	direct	keep	引文“a release will be cut directly from main. These releases have been historically referred to as 'dot-zero' releases.”直证区分与周期。					不改
+V52.5.4.2	4	发布周期里程碑的排定	in	direct	keep	引文“Approximately two months before the start of the release cycle, the FreeBSD Release Engineering Team decides on a schedule for the release.”直证前置期。					不改
+V52.5.4.3	4	代码冻结对提交权的收束	in	direct	keep	引文“The code freeze marks the point in time where all commits to the branch require explicit approval from the FreeBSD Release Engineering Team.”直证收束。					不改
+V52.5.4.4	4	ALPHA 构建对稳定分支的预告	in	direct	keep	引文“The idea behind 'ALPHA' builds is to provide regular FreeBSD-provided builds before the creation of the stable/ branch.”直证先于分支。					不改
+V52.5.4.5	4	公告体例中的镜像与校验清单	in	direct	keep	引文“SHA256 and MD5 hashes for the release ISO and memory stick images are included at the bottom of this message.”直证体例。					不改
+V52.5.4.6	4	支持窗口与终止期限	in	direct	keep	引文“FreeBSD 10.0-RELEASE will be supported until 31 January 2015.”直证终止期限。					不改
+V52.5.5.1	5	MI 与 MD 的代码分层	in	partial	supplement	现引只及 MD 一侧；同页另有“Machine independent (MI) changes should benefit these ports.”，补入后分层两半皆有据（A 级，2026-10-30 实测）。			https://www.netbsd.org/ports/	Machine independent (MI) changes should benefit these ports.	补证
+V52.5.5.2	5	平台引入的测试义务	in	direct	keep	引文“MI changes must be tested on at least one of these ports.”直证测试义务。					不改
+V52.5.5.3	5	构建问题的修复责任归属	in	direct	keep	引文“…fix build problems and aid in debugging with any platform-specific problems.”直证自负其责；与 4.2.4 同句，两节各证一层（分级页／移植流程），保留并记跨节复用。					不改
+V52.5.5.4	5	自动测试回归的禁令	in	direct	keep	引文“Regressions in the automated NetBSD test suite (/usr/tests) are not allowed.”直证禁令。					不改
+V52.5.5.5	5	端口分级作为引入门槛	in	direct	rewrite	引文“the tiers can be viewed to represent ports that NetBSD will support, ports that NetBSD does its best to support, and ports which may be desupported soon.”直证承诺强度分层；题面“端口”触 C6，改“移植平台”。	移植平台分级作为引入门槛	三级分级界定承诺强度，决定新平台可得的支持。			改题（C6）
+V52.5.5.6	5	架构清单与发布物的对应	in	partial	rewrite	引文“It is available for a wide range of platforms…”只自述覆盖范围，未及“架构清单与发布物对应”；改题落在自述。	首页对平台覆盖的自述	首页以“wide range of platforms”概括平台覆盖，未逐一列名。			改题
+V52.5.6.1	6	mdoc 语义标记对手册的限定	in	direct	keep	引文“Markdown is a very weak markup language, so all semantic markup is lost, and even part of the presentational markup may be lost.”直证语义标记会丢失。					不改
+V52.5.6.2	6	mandoc 进入基本系统的年份	in	direct	keep	引文“The mandoc utility first appeared in OpenBSD 4.8.”直证年份。					不改
+V52.5.6.3	6	同一源文件多格式输出的配置	in	direct	keep	引文“Supported values for the output argument are ascii, html, the default of locale, man, markdown, tree, and utf8.”直证单源多输出。					不改
+V52.5.6.4	6	手册校验模式对体例的强制	in	direct	keep	引文“The special -T lint mode only parses the input and produces no output.”直证校验模式。					不改
+V52.5.6.5	6	文档树与代码树的同步发布	in	partial	rewrite	引文“The doc/ tree slush is coordinated by the FreeBSD Documentation Engineering Team.”只证独立冻结节点，“避免文档滞后”无引文；缩题。	文档树的独立冻结节点	文档树的 slush 由文档工程组单独协调，与代码树分开设点。			改题
+V52.5.6.6	6	手册页与内核接口的对应	in	direct	keep	引文“…the man(1) pages, not only for userspace daemons, utilities, and configuration files, but also for kernel driver APIs (section 9) and individual drivers (section 4)”直证覆盖面。					不改
+V52.5.7.1	7	KNF 作为四系共同底本	in	direct	keep	style(9) 自述“Based on the CSRG's KNF (Kernel Normal Form).”；他系沿用另见目录溯源注（OpenBSD style.9 版权行、NetBSD 与 DragonFly 沿用），两源合成即可立。					不改
+V52.5.7.2	7	制表符缩进与八字符宽度	in	direct	keep	引文“Indentation is an 8 character tab. Second level indents are four spaces.”直证。					不改
+V52.5.7.3	7	函数返回类型独立成行	in	direct	keep	引文“The function type should be on a line by itself preceding the function.”直证。					不改
+V52.5.7.4	7	GNU 规范的自洽性原则	in	direct	keep	引文“The most important point is to be self-consistent—try to stick to the conventions you pick”直证首要要求。					不改
+V52.5.7.5	7	纯风格改动对合并的干扰	in	direct	keep	引文“Stylistic changes, including whitespace ones, complicate the work of downstream consumers and may impair developers' ability to trace the history”直证代价。					不改
+V52.5.7.6	7	风格提交与功能提交的分离	in	direct	keep	引文“Style-only commits should be added to the file .git-blame-ignore-revs…”直证分离登记。					不改
+V52.5.8.1	8	MFC 对稳定分支的补丁回流	in	direct	keep	引文“After a reasonable testing period, changes can then be merged to the stable/ branches.”直证回流。					不改
+V52.5.8.2	8	三日等待下限的例外情形	in	direct	keep	引文“there are a few special circumstances where an immediate merge may be necessary, such as a critical security fix, or a bug fix that directly inhibits the release build process.”直证例外界定。					不改
+V52.5.8.3	8	移植分支与原树的界线	in	direct	keep	引文“we decided to split our core development efforts from portability developments”直证界线；与 4.5.4 同句，两节各证一层（传播史／工程流动），保留并记。					不改
+V52.5.8.4	8	上游改动进入下游的渠道	in	direct	keep	引文“Ports of ZFS to other platforms continued porting upstream changes from illumos.”直证拉取路径。					不改
+V52.5.8.5	8	工具跨系引入的实例	in	direct	keep	引文“make(1) has been replaced with bmake(1), obtained from the NetBSD Project.”直证跨系引入实例。					不改
+V52.5.8.6	8	代码共享与分支分化的平衡	in	partial	keep	引句证双向共享（vice versa），“保留差异”一侧由 4.3.4 与 7.5.6 补；“平衡”的体例含义须在正文批落定，题面保留。					不改
+V52.6.1.1	1	重点端口的八席分布	in	direct	rewrite	引文“Currently there are 8 ports with Tier I status.”直证八席；题面“端口”触 C6，改“移植平台”，并删去无引文的“逐版重排”。	重点级移植平台的八席分布	当前列为 Tier I 的移植平台共八席。			改题（C6）
+V52.6.1.2	1	sparc64 与 amd64 的重点地位	in	partial	rewrite	引文“The platforms consist of modern server, embedded and desktop architectures.”只给类别，未列 sparc64 与 amd64；题含两个拉丁专名而无对应证据，source 数亦不足三条命名依据，改题。	重点平台覆盖的架构类别	Tier I 平台覆盖服务器、嵌入式与桌面三类架构。			改题
+V52.6.1.3	1	FreeBSD 支持架构的清单范围	in	direct	keep	引文“…for x86 (both 32 and 64 bit), ARM, AArch64, RISC-V, POWER, and PowerPC computers.”直证清单。					不改
+V52.6.1.4	1	RISC-V 与 ARM 的同期引入	in	partial	rewrite	引文只把两架构并列于同一清单，未及引入时点差异，“掩盖”属推断；改题就清单。	RISC-V 与 ARM 同列一份清单	两架构在导论清单中并列出现，清单本身不含引入时点。			改题
+V52.6.1.5	1	老平台的生命维持与退出	in	partial	keep	引文“Ports are moved to life support if they no longer function.”证降级；退出（移入 Attic）见 4.2.6 同页另一句，两行合成“阶梯”，题面可立。					不改
+V52.6.1.6	1	跨分支移植沿革的可比口径	in	direct	keep	引文“The NetBSD Ports History page details the inclusion date for each port.”直证以纳入日期为轴。					不改
+V52.6.2.1	2	KAME 六家日本企业的联合出资	in	direct	keep	引文“The KAME project was a joint effort of six companies in Japan…”直证出资结构。					不改
+V52.6.2.2	2	项目八年跨度与多次延期	in	direct	keep	引文“started as a 2-year project (April 1998 - March 2000). It has got extension for 2 years several times, so will be until March 2006”直证延期与跨度。					不改
+V52.6.2.3	2	共享参考实现替代各自维护	in	direct	keep	引文“…the code would be maintained by each project separately and the code would likely be quite different on each project tree”直证问题意识。					不改
+V52.6.2.4	2	合流进 FreeBSD 与 NetBSD 的收尾	in	direct	keep	引文“Almost all of our implemented code has been merged to FreeBSD and NetBSD.”直证收尾方式。					不改
+V52.6.2.5	2	BSD／OS 与商业系统的同步采用	in	direct	keep	引文“Our products are available in: FreeBSD 4.0 and beyond OpenBSD 2.7 and beyond NetBSD 1.5 and beyond BSD/OS 4.2 and beyond”直证四系统并存。					不改
+V52.6.2.6	2	IPv6 参考实现与 BSD 许可的绑定	in	direct	keep	引文“The most important task is to implement the best networking code possible, under the BSD copyright.”直证许可为明列任务。					不改
+V52.6.3.1	3	netgraph 图状结构对协议组合的支撑	in	direct	keep	引文“The objects, known as nodes, can be arranged into arbitrarily complicated graphs.”直证图状结构。					不改
+V52.6.3.2	3	节点类型按需自动装载的机制	in	direct	keep	引文“when a request to create a new node of unknown type type is made, netgraph will attempt to load the KLD module ng_<type>.ko.”直证自动装载。					不改
+V52.6.3.3	3	桥接对 MAC 学习表的依赖	in	direct	keep	引文“For unicast traffic, the bridge learns which MAC addresses are associated with which interfaces and will forward the traffic selectively.”直证学习表依赖。					不改
+V52.6.3.4	3	生成树协议对环路的抑制	in	partial	keep	引文“Spanning Tree is used to detect and remove loops in a network topology.”直证环路抑制；“四系默认状态”无引文，thesis 收为单系实例。					不改（thesis 收窄）
+V52.6.3.5	3	链路聚合六种协议的并存	in	direct	keep	引文“failover (the default), lacp, loadbalance, roundrobin, broadcast, and none”恰为六项，直证并存。					不改
+V52.6.3.6	3	VNET 把全局变量改为每实例	in	direct	keep	引文“change global resources most notably variables into per network stack resources”直证改写手段。					不改
+V52.6.4.1	4	netmap 对三项包处理成本的处理	in	direct	keep	引文“we identified and successfully reduced or removed three main packet processing costs…”直证三项分解。					不改
+V52.6.4.2	4	单核 14.88 Mpps 的实测上限	in	direct	keep	引文“a single core running at 900 MHz can send or receive 14.88 Mpps (the peak packet rate on 10 Gbit/s links).”直证数字与口径。					不改
+V52.6.4.3	4	零拷贝与内核内存保护的兼顾	in	partial	keep	引文“…while still protecting access to device registers and other kernel memory areas”为从句片段，只证保护内核内存区；零拷贝由 6.4.1 同篇承担，两行合成可立，引文残缺已在证据行注明。					不改
+V52.6.4.4	4	iflib 对驱动样板代码的收拢	in	direct	keep	引文“It is designed to remove a large amount of the boilerplate that is often needed for modern network interface devices”直证收拢。					不改
+V52.6.4.5	4	驱动框架的三层职能划分	in	partial	keep	引文“There are three logical components to iflib each of which is described in its own manual page.”证三层分立；“设备无关／相关／收发”的名目未在引文，thesis 收窄。					不改（thesis 收窄）
+V52.6.4.6	4	SCTP 多流与多宿主的内核实现	in	partial	rewrite	引文“The SCTP protocol directly supports multi-homing.”只证多宿主，“多流”无引文，缩题。	SCTP 协议的多宿主支持	SCTP 协议栈直接支持多宿主。			改题
+V52.6.5.1	5	WireGuard 以极简接口为设计目标	in	direct	keep	引文“WireGuard aims to be as easy to configure and deploy as SSH.”直证设计目标。					不改
+V52.6.5.2	5	公钥交换替代连接状态管理	in	direct	keep	引文“A VPN connection is made simply by exchanging very simple public keys – exactly like exchanging SSH keys – and all the rest is transparently handled by WireGuard.”直证替代。					不改
+V52.6.5.3	5	可审计性对代码规模的要求	in	direct	keep	引文“It is meant to be easily implemented in very few lines of code, and easily auditable for security vulnerabilities.”直证规模约束。					不改
+V52.6.5.4	5	从 Linux 内核到 BSD 的移植起点	in	direct	keep	引文“Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android)”直证次序；与 4.5.6 同句，两节各证一层（传播史／实现本体），保留。					不改
+V52.6.5.5	5	内核内实现的吞吐优势	in	partial	rewrite	引文“…WireGuard lives inside the Linux kernel means that secure networking can be very high-speed”只陈 Linux 侧主张，未及“BSD 侧的可行边界”，改题限主张本身。	内核内实现的吞吐主张	官方以“置于 Linux 内核”解释其高速，BSD 侧实现形态另见本体卷。			改题
+V52.6.5.6	5	跨平台说明对移植者的指引	in	direct	keep	引文“If you intend to implement WireGuard for a new platform, please read the cross-platform notes.”直证指引。					不改
+V52.7.1.1	1	拆锁路线的渐进收益与尾声	in	direct	keep	引文“over the past ~6 years, this goal is now complete.”直证收尾；与 2.2.4 同句，摘要节与结论章各证一层，保留。					不改
+V52.7.1.2	1	无锁分区对 NUMA 的预适应	in	direct	keep	引文“DragonFlyBSD starts out with a NUMA-centric view of the world and explicitly partitions the workload among multiple processors.”直证预适应；与 2.5.2 同句，两处各证一层。					不改
+V52.7.1.3	1	大锁模型的保守代价	in	direct	keep	引文“We can preserve legacy code with this model, however it does not scale well compared to more recent implementations that are based on fine-grained lock models.”直证保守收益与代价两端。					不改
+V52.7.1.4	1	三条路径的共同源头	in	partial	keep	引文只证 FreeBSD 前 SMPng 的单一自旋锁；另两系源头由 2.5.3（大锁）与 2.4.3（继承 4.x 树）承担，结论章允综合，保留并记三腿来源。					不改
+V52.7.1.5	1	线程模型选择对改造次序的制约	in	direct	keep	引文“…rewritten threading subsystem based on a 1:1 threading model, new kernel synchronization primitives, kernel preemption…”直证两事同批。					不改
+V52.7.1.6	1	并发改造终点的判定分歧	in	partial	rewrite	引文只陈“several subsystems are still giant-locked”，未及“各系标准不一”；改题落在残留项，避免把单系记载读成四系比较。	改造收尾时的残留项	宣布完成时仍有 ipv6、tty、CAM 等子系统受 giant 保护。			改题
+V52.7.2.1	2	引入路线的移植成本	in	partial	rewrite	引文“ZFS was originally developed by Sun Microsystems for the Solaris operating system.”只证原生平台，成本分摊无引文；改题限前提。	引入路线的原生平台前提	引入 ZFS 须先处理其 Solaris 原生依赖，1.2 各条即其后续。			改题
+V52.7.2.2	2	自研路线的设计自洽	in	partial	rewrite	引文“It is my intention to make Hammer the next-generation file-system for BSD systems and I will support any BSD or Linux port as fully as I can.”是作者意图与支持承诺，非“设计自洽”，改题就引。	自研文件系统的作者意图	作者自陈以 HAMMER 为 BSD 下一代文件系统，并愿支持他系移植。			改题
+V52.7.2.3	2	借用路线与上游同步的负担	in	partial	keep	引文“pulled in from illumos, to all ports to other platforms, and vice versa.”证持续与上游拉平；“负担转协作常态”须 OpenZFS 组织材料另证，thesis 收窄。					不改（thesis 收窄）
+V52.7.2.4	2	三种策略在快照语义上的分岔	in	partial	rewrite	引文只及 ZFS 以数据集为快照单位，“三种策略”无引文；改题并指明子树一侧见 1.5.3。	快照单位的分歧	快照以数据集为单位或以子树为单位，用法随之不同。			改题
+V52.7.2.5	2	校验强度与冗余前提的绑定	in	direct	keep	引文“A pool consisting of a single device has no self-healing capabilities.”直证绑定；与 1.7.4 同句，两处各证一层（机制／结论）。					不改
+V52.7.2.6	2	路线选择与发行版本的耦合	in	partial	rewrite	引文“2008 – A port to FreeBSD was released as part of FreeBSD 7.0.”只给入版时点，“难以回退、路径锁定”无引文，改题。	引入时点与版本号的绑定	ZFS 以 FreeBSD 7.0 为其入版时点，此后版本序列与文件系统演进并行。			改题
+V52.7.3.1	3	共享参考实现与各自改造的张力	in	partial	keep	引文“They are developing/improving network code (sys/netinet tree) separately.”证各自改造，共享一侧由 6.2.3 补，两行合成“张力”，题面可立。					不改
+V52.7.3.2	3	承诺模型对系统调用面的裁剪	in	direct	keep	pledge(2)“Subsystems not listed become unavailable… result in the process being killed with an uncatchable SIGABRT”直证裁剪。					不改
+V52.7.3.3	3	能力模型对文件描述符的倚重	in	direct	keep	引文“Capabilities are unforgeable tokens of authority… Capsicum makes file descriptors into capabilities.”直证倚重。					不改
+V52.7.3.4	3	内核内加速与通用栈的分层	in	partial	keep	引文“…tightly integrated with existing operating system primitives, not tied to specific hardware, and easy to use and maintain”证与通用栈共存；“快速路径独立而不取代”由 6.4.1 补，题面可立。					不改
+V52.7.3.5	3	虚拟网络栈对隔离能力的加成	in	partial	keep	引文“Each (virtual) network stack is attached to a prison, with vnet0 being the unrestricted default…”证与 jail 绑定；“与内存开销的兑换”无引文，thesis 收窄。					不改（thesis 收窄）
+V52.7.3.6	3	安全机制进入基本系统的门槛	in	partial	rewrite	引文“Capsicum first appeared in FreeBSD 9.0, and was developed at the University of Cambridge.”只给入树版本与来源，“须先证明不伤权能”无引文，改题。	Capsicum 进入基本系统的版本	Capsicum 首见于 FreeBSD 9.0，源自剑桥大学。			改题
+V52.7.4.1	4	Ports 与 pkgsrc 的两种治理	in	partial	supplement	现引只及 pkgsrc“a framework for managing third-party software on UNIX-like systems”，Ports 一侧无引文；补手册“two complementary technologies… the FreeBSD Ports Collection, for installing from source”作对照，题面裸“Ports”按 C6 补“树”（A 级，2026-10-30 实测）。	Ports 树与 pkgsrc 的两种定位	一方为发行版内的源码集合，一方为跨系统的框架。	https://docs.freebsd.org/en/books/handbook/ports/	FreeBSD provides two complementary technologies for installing third-party software: the FreeBSD Ports Collection, for installing from source, and packages, for installing from pre-built binaries.	改题并补证（C6）
+V52.7.4.2	4	季度分支与滚动树的时间尺度	in	partial	keep	引文“…pkgsrc-2026Q3 branch, the 92nd pkgsrc release”证季度分支；“滚动树追新”属推断，thesis 收窄。					不改（thesis 收窄）
+V52.7.4.3	4	预编译包对源码构建的替代	in	direct	keep	引文“Almost every port is also provided as a pre-compiled 'package'…”直证替代；与 4.4.1 同句，两处各证一层。					不改
+V52.7.4.4	4	移植框架对异系统的吸附力	in	direct	keep	引文“Code exists in pkgsrc to support 20+ Unix-like operating systems and 15+ CPU architectures.”直证覆盖。					不改
+V52.7.4.5	4	基本系统与第三方件的边界	in	direct	keep	引文“pkg(7) is now the default package management utility.”直证工具入基本系统。					不改
+V52.7.4.6	4	生态规模对发行策略的反作用	in	partial	rewrite	引文只给“about 37000 ports… approximately 3 GB”，无“倒逼镜像与同步变革”的记载，且与 4.4.2 同句同旨；改题作两框架体量对照，避重。	两种框架的体量对照	FreeBSD 集合约三万七千个 port、约 3 GB，pkgsrc 声明逾 26000 包，两框架同处万级。			改题
+V52.7.5.1	5	代码基线时点对路线的锁定	in	partial	keep	引文“forked off the RELENG_4 branch of FreeBSD on June 16, 2003”证基线时点；“锁定、长期效力”属推论，thesis 收窄。					不改（thesis 收窄）
+V52.7.5.2	5	许可与治理结构的牵引	in	mismatch	rewrite	引文“The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system.”只是项目自述，未及“许可决定可吸纳的代码来源”；题面与证据不对应，改题就引。	自由可得在项目自述中的位置	项目以“FREE, multi-platform 4.4BSD-based”自述，许可取向居自述首位。			改题
+V52.7.5.3	5	人力规模对改造深度的限制	in	partial	keep	引文“16 committers with write privileges”证规模，限制为推论；题面保留，thesis 收窄为“可核的规模基数”。					不改（thesis 收窄）
+V52.7.5.4	5	创始取向的长期投影	in	partial	keep	引文“NetBSD's original focus was quality and architecture independence…”证创始取向，投影为推论；题面保留。					不改（thesis 收窄）
+V52.7.5.5	5	相互借鉴与刻意分流的并存	in	partial	keep	引句证借鉴（vice versa），刻意分流由 4.3.4 与 7.5.6 补，两行合成可立。					不改
+V52.7.5.6	5	分化叙事的自我建构成分	in	direct	keep	引文“in place of the symmetric multiprocessing support being added to the upcoming FreeBSD 5 branch，DragonFlyBSD uses…”即以对立面定义自身，直证自我建构。					不改
+V52.7.6.1	6	五系共享的 UNIX 接口面	in	direct	keep	引文“belongs to the same class of operating systems as other BSD-derived systems and Linux… based on the same UNIX ideals and APIs”直证共享面。					不改
+V52.7.6.2	6	内核接口相似而工程制度不同	in	mismatch	rewrite	引文“The GNU Coding Standards were written by Richard Stallman and other GNU Project volunteers.”只陈规范作者，与“接口相似／制度不同”无涉；改题就引。	GNU 编码规范的成文形态	GNU 侧以署名团队的成文规范约束风格，可与 BSD 各系风格页并列对照。			改题
+V52.7.6.3	6	许可差异对商业采用的影响	in	direct	keep	引文“…incorporate it in both Open Source projects and closed products without imposing restrictions typical to copyleft licenses”直证商业空间。					不改
+V52.7.6.4	6	发行节奏的可比尺度	in	partial	keep	引文“approximately every two (2) years, a release will be cut directly from main”证周期；“只在同类流程间可比”属方法判断，题面保留、thesis 收窄。					不改（thesis 收窄）
+V52.7.6.5	6	虚拟化与云时代的共同压力	in	partial	rewrite	引句只证 FreeBSD 一方在云平台可用，3.3 各条亦只及 FreeBSD；“五系共同压力、趋同”无引文，缩题。	发行公告中的云平台条目	发行公告把云平台可用性列为固定条目，供给压力已成常态。			改题
+V52.7.6.6	6	比较结论的适用边界	in	mismatch	rewrite	引文“netmap has been implemented in FreeBSD and Linux for several 1 and 10 Gbit/s network adapters.”只陈实现范围，未及结论边界的论证；改题就实现范围，反面材料留待正文批。	netmap 跨系统实现的既有范围	netmap 已在 FreeBSD 与 Linux 上实现于若干 1 Gbit/s 与 10 Gbit/s 适配器，结论限于该范围。			改题

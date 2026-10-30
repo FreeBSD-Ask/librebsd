@@ -15,6 +15,7 @@ V51.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.1.4	分叉动机的官方叙述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon, one of the developers for FreeBSD, was growing increasingly frustrated with the FreeBSD Project's direction for release 5.	none
 V51.1.1.4	保守用户的留守建议	https://www.freebsd.org/releases/5.0R/announce/	联网	A	2026-10-30	More conservative users may prefer to continue using FreeBSD 4.X.	none
+V51.1.1.4	FreeBSD 5 发布延宕	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	The FreeBSD 5 release had been delayed multiple times, and had performance problems compared to earlier releases of FreeBSD.	none
 V51.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“DragonFly 分化轴的形成：FreeBSD 5.x SMP 路线争议与架构选择”；本节题为其下位论题	none
 V51.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.1.5	无互斥锁线程基础设施	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	This proving work involved implementing much of the earlier UP->SMP converstion work that was done when 5.x first branched, but under an entirely new mutex-free light weight kernel threading infrastructure.	none
@@ -27,6 +28,7 @@ V51.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.2.1	无互斥锁线程基础设施	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	This proving work involved implementing much of the earlier UP->SMP converstion work that was done when 5.x first branched, but under an entirely new mutex-free light weight kernel threading infrastructure.	none
 V51.1.2.1	线程间消息接口	https://man.dragonflybsd.org/?command=msgport&section=9	联网	A	2026-10-30	Light weight kernel threads in DragonFly may use a message passing interface to communicate with each other.  Messages are sent to message ports.	none
+V51.1.2.1	LWKT 线程基础设施	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	This proving work involved implementing much of the earlier UP->SMP converstion work that was done when 5.x first branched, but under an entirely new mutex-free light weight kernel threading infrastructure. It includes the LWKT system, interrupt threads, and pure threads for system processes amoung other things.	none
 V51.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“分化的物质基础：LWKT、消息传递模型与内核重构”；本节题为其下位论题	none
 V51.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.2.2	内建端口的默认配置	https://man.dragonflybsd.org/?command=msgport&section=9	联网	A	2026-10-30	All light weight kernel threads have a built-in message port, but you may create additional ports if necessary.	none
@@ -51,6 +53,7 @@ V51.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.3.1	分叉时间与原始定位	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon. The project was originally billed as "the logical continuation of the FreeBSD 4.x series"	none
 V51.1.3.1	定位表述的时效	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	but this description has long since become obsolete	none
+V51.1.3.1	逻辑延续说的提出与废弃	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement, but this description has long since become obsolete.	none
 V51.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“从工程路线到项目身份：DragonFly 自我定位的形成”；本节题为其下位论题	none
 V51.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.3.2	项目初创目标	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The ultimate goal of the DragonFly project at its inception was to provide native clustering support in the kernel.	none
@@ -63,6 +66,7 @@ V51.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.3.4	分叉后的持续协作	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Despite this, the DragonFly BSD and FreeBSD projects still work together, sharing bug fixes, driver updates, and other improvements.	none
 V51.1.3.4	提交权限的撤回	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Due to conflicts with other FreeBSD developers over the implementation of his ideas, his ability to directly change the codebase was eventually revoked.	none
+V51.1.3.4	与 FreeBSD 关系的再叙述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement, but this description has long since become obsolete.	none
 V51.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“从工程路线到项目身份：DragonFly 自我定位的形成”；本节题为其下位论题	none
 V51.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.3.5	渐进改造的前提	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Because DragonFly is built on an existing very stable code base, it is possible to make these radical changes as part of an incremental process.	none
@@ -79,6 +83,7 @@ V51.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.4.2	分叉后的持续协作	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Despite this, the DragonFly BSD and FreeBSD projects still work together, sharing bug fixes, driver updates, and other improvements.	none
 V51.1.4.2	差异最小化的用意	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	Differences between ports and DPorts are intentionally kept to a minimum, both to maintain familiarity for mutual users of both operating systems and also to leverage the tremendous amount of work the FreeBSD contributors put into ports.	none
+V51.1.4.2	驱动移植的推进时点	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	From 2009 onward many developers have focused on SMP scalability while others have put an emphasis on new feature development and driver porting.	none
 V51.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“架构实验的边界：创新、兼容性与维护成本”；本节题为其下位论题	none
 V51.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.4.3	平台移植的暂缓	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	For obvious reasons the codebase will only run on i386 for now, and ports to other platforms will not happen until the MD infrastructure is cleaned up and finalized.	none
@@ -91,10 +96,12 @@ V51.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.4.5	提交前讨论的场域	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Discussion prior to committing usually occurs on the kernel@, submit@, or bugs@ mailing lists and depends on the work involved.	none
 V51.1.4.5	虚拟内核的功能定位	https://www.dragonflybsd.org/	联网	A	2026-10-30	Virtual kernels provide the ability to run a full-blown kernel as a user process for the purpose of managing resources or for accelerated kernel development and debugging.	none
+V51.1.4.5	实验工作的准入次序	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	There are still a number of big ticket items that have to be accomplished, primarily in converting the I/O path to using VM Object/range lists, before work can branch out into other areas.	none
 V51.1.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“架构实验的边界：创新、兼容性与维护成本”；本节题为其下位论题	none
 V51.1.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.4.6	原始方向的遗留影响	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
 V51.1.4.6	锁简化的双重手段	https://www.dragonflybsd.org/	联网	A	2026-10-30	A combination of intentional simplification of certain classes of locks to make more expansive subsystems less prone to deadlocks, and the rewriting of nearly all the original codebase using algorithms designed specifically with SMP in mind	none
+V51.1.4.6	边界收缩的长期收益	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	One of the important works included the simplification and general cleanup of the majority of the kernel subsystems. This work was originally intended to support single system image clustering, but has had the effect of making the kernel much more reliable, understandable and easily maintainable.	none
 V51.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“项目史要：本体事件与制品事件的层次”；本节题为其下位论题	none
 V51.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.1.5.1	第一阶段的重写范围	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	During the first major phase of the project, which lasted until early 2007, the DragonFly project focused on rewriting most of the major kernel subsystems	none
@@ -191,6 +198,7 @@ V51.2.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.2.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.2.3.6	细粒度锁的路线表述	https://www.freebsd.org/releases/5.0R/announce/	联网	A	2026-10-30	Fine-grained locking in the kernel paves the road for much higher efficiency of multi-processor systems.	none
 V51.2.3.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.2.3.6	两条路线的公开表述	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.	none
 V51.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“工程审美：简化机制与长期维护之间的取舍”；本节题为其下位论题	none
 V51.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.2.4.1	渐进改造的前提	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Because DragonFly is built on an existing very stable code base, it is possible to make these radical changes as part of an incremental process.	none
@@ -315,6 +323,7 @@ V51.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.2.1	源码归属的否定表述	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Areas within the repository do not "belong" to any committer.	none
 V51.3.2.1	提交前讨论的场域	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Discussion prior to committing usually occurs on the kernel@, submit@, or bugs@ mailing lists and depends on the work involved.	none
+V51.3.2.1	提交账号的开通方式	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	We create an account for you on both machines and install your public SSH key to give you access.	none
 V51.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“提交权限与审查中的信任文化”；本节题为其下位论题	none
 V51.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.2.2	开发模式的松散与终裁	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	The DragonFly development model is loose; changes to the code are generally peer-reviewed and added when any objections have been corrected. There is no formal entry/rejection process, though final say on all code submissions goes to Matt Dillon, as originator of this project.	none
@@ -331,6 +340,7 @@ V51.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.2.5	提交成果的共有属性	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	All committed work becomes community property.  No developer has a "lock" on any part of the source tree.	none
 V51.3.2.5	活跃讨论者的默认承担	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Usually the developer most active in a discussion about a bug commits the fix, but it isn't considered a big deal.	none
+V51.3.2.5	跨人修正的礼节要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	courtesy dictates that you post to kernel@ and/or email the developer.	none
 V51.3.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“提交权限与审查中的信任文化”；本节题为其下位论题	none
 V51.3.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.2.6	重大冲突的裁决人	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	On the occasion that a major code conflict occurs, for example if two people are doing major work in the same area of the source tree and forgot to collaborate with each other, the project leader will be responsible for resolving the conflict.	none
@@ -339,10 +349,12 @@ V51.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.3.1	提交信息的格式要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One line summary of your change (less than 50 characters).	none
 V51.3.3.1	修复合并的技术手段	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	To merge bug fixes to other branches (MFC), use git cherry-pick	none
+V51.3.3.1	补丁提交的最低格式	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Including desired source code changes (unified diff format is best) is the most useful format.	none
 V51.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“技术门槛与贡献者进入路径”；本节题为其下位论题	none
 V51.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.3.2	列表与缺陷库的绑定	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The bugs@ and submit@ lists are tied into the bug tracker at bugs.dragonflybsd.org.	none
 V51.3.3.2	提交前讨论的场域	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Discussion prior to committing usually occurs on the kernel@, submit@, or bugs@ mailing lists and depends on the work involved.	none
+V51.3.3.2	缺陷库账号的审核环节	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The sign-up process is moderated so an administrator will have to activate your account before it can be used.	none
 V51.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“技术门槛与贡献者进入路径”；本节题为其下位论题	none
 V51.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.3.3	项目清单的用途	https://www.dragonflybsd.org/docs/developer/ProjectsPage/	联网	A	2026-10-30	This page shall serve as a common place to look if you're in search of a DragonFly related project.	none
@@ -351,14 +363,17 @@ V51.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.3.4	活跃讨论者的默认承担	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Usually the developer most active in a discussion about a bug commits the fix, but it isn't considered a big deal.	none
 V51.3.3.4	投稿无资格审核	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
+V51.3.3.4	从补丁到提交权的过渡	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	A certain number of developers have access to commit changes to the DragonFly source, and can do so after review on that list.	none
 V51.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“技术门槛与贡献者进入路径”；本节题为其下位论题	none
 V51.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.3.5	避免撞车的核对	https://www.dragonflybsd.org/docs/developer/ProjectsPage/	联网	A	2026-10-30	It's also the place to check if someone else is already working on it (to prevent project collision) or should be contacted.	none
 V51.3.3.5	改旧文件须循旧例	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Changes to existing files should be consistent with that file's conventions.	none
+V51.3.3.5	文档工作的低门槛入口	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One exception to this rule is documentation.	none
 V51.3.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“技术门槛与贡献者进入路径”；本节题为其下位论题	none
 V51.3.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.3.6	投稿无资格审核	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
 V51.3.3.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.3.3.6	开放投稿与同行审查的组合	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	The DragonFly development model is loose; changes to the code are generally peer-reviewed and added when any objections have been corrected.	none
 V51.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“邮件列表文化：冲突、讨论与技术决策”；本节题为其下位论题	none
 V51.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.4.1	列表与频道的并列	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The DragonFly project has several mailing lists and an IRC channel for discussion.	none
@@ -367,6 +382,7 @@ V51.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.4.2	架构改动的讨论与否决	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This is generally Matt Dillon's area of expertise.  All major architectural changes must be discussed on the kernel@ mailing list and he retains veto power.	none
 V51.3.4.2	参与邀请的措辞	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	Anyone interested in working on or discussing the project is welcome!	none
+V51.3.4.2	修复提交的避让通报	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	so you don't race other committers trying to do the same thing	none
 V51.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“邮件列表文化：冲突、讨论与技术决策”；本节题为其下位论题	none
 V51.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.4.3	异议期的固定说法	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	If there are no objections I will commit it next Tuesday.	none
@@ -375,10 +391,12 @@ V51.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.4.4	列表与频道的并列	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The DragonFly project has several mailing lists and an IRC channel for discussion.	none
 V51.3.4.4	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
+V51.3.4.4	邮件存档的镜像分布	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	By web archive	none
 V51.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“邮件列表文化：冲突、讨论与技术决策”；本节题为其下位论题	none
 V51.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.4.5	栏目口吻	https://www.dragonflydigest.com/	联网	B	2026-10-30	At least one of these links is going to eat some of your day, in a fun way.	none
 V51.3.4.5	与遗产切割的态度	https://www.dragonflybsd.org/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
+V51.3.4.5	新工具入树的前置讨论	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	New drivers or utilities are usually discussed.	none
 V51.3.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“邮件列表文化：冲突、讨论与技术决策”；本节题为其下位论题	none
 V51.3.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.4.6	重大冲突的裁决人	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	On the occasion that a major code conflict occurs, for example if two people are doing major work in the same area of the source tree and forgot to collaborate with each other, the project leader will be responsible for resolving the conflict.	none
@@ -400,6 +418,7 @@ V51.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.5.4	悬赏的激励定义	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	A code bounty is a certain financial stimulant to encourage someone to put his or her effort into a project.	none
 V51.3.5.4	付款前的稳定观察期	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	Payment for a project shall be issued in no less than 72 hours after the DragonFly developers has had ten business days to determine if the code is stable and usefulness	none
+V51.3.5.4	非货币报酬的设想余地	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	or non-financial rewards for completing a bounty project, like free hardware (we love that!)	none
 V51.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“小规模项目的非正式协作形态”；本节题为其下位论题	none
 V51.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.5.5	悬赏的开放领取	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	Bounty Projects are open to anyone that has a reasonable capability of completing the project.	none
@@ -413,6 +432,7 @@ V51.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.6.1	版本序列与日期	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
 V51.3.6.1	主版本与修订版并置	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.0 (December 30, 2022)	none
+V51.3.6.1	开发快照的版本标记	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	DragonFly 5.9-DEVELOPMENT	none
 V51.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“版本编号与开发阶段语义”；本节题为其下位论题	none
 V51.3.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.6.2	首个正式版	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	1.0 (July 12, 2004)	none
@@ -421,6 +441,7 @@ V51.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.6.3	发布间隔的疏密	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.1 (April 30, 2025)	none
 V51.3.6.3	版本序列与日期	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
+V51.3.6.3	点版本的修订语义	https://www.dragonflybsd.org/release64/	联网	A	2026-10-30	Fixed the issue that a pkg(8) update might delete the df-latest.conf config file, which rendered pkg(8) unusable.	none
 V51.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“版本编号与开发阶段语义”；本节题为其下位论题	none
 V51.3.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.6.4	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
@@ -433,6 +454,7 @@ V51.3.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.6.6	版本序列与日期	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
 V51.3.6.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.3.6.6	发布间隔的不均匀分布	https://www.dragonflybsd.org/release64/	联网	A	2026-10-30	Version 6.4.0 released 2022 12 30	none
 V51.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“项目活动形式与低密度社区结构”；本节题为其下位论题	none
 V51.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.7.1	最早的公开演讲	https://www.dragonflybsd.org/presentations/	联网	A	2026-10-30	UCB Slides on DragonFlyBSD [PDF], [OpenOffice SXD] 23 October 2003	none
@@ -461,14 +483,17 @@ V51.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.8.1	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
 V51.3.8.1	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
+V51.3.8.1	自造术语的命名实例	https://www.dragonflybsd.org/	联网	A	2026-10-30	This feature, commonly referred to as “swapcache”	none
 V51.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“项目语汇与开发者文化”；本节题为其下位论题	none
 V51.3.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.8.2	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
 V51.3.8.2	消息子系统的类比	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	The kernel messaging subsystem being developed is similar to those found in microkernels such as Mach, though it is less complex by design.	none
+V51.3.8.2	缩写首次出现即展开	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	All VCS (version control system) revision identification from files obtained from elsewhere should be maintained in comments	none
 V51.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“项目语汇与开发者文化”；本节题为其下位论题	none
 V51.3.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.8.3	注释须成完整句子	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Multi-line comments look like this.  Make them real sentences.  Fill them so they look like real paragraphs.	none
 V51.3.8.3	改旧文件须循旧例	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Changes to existing files should be consistent with that file's conventions.	none
+V51.3.8.3	未完成注释的标记用法	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	XXX in a comment indicates code which is incomplete, suboptimal, or otherwise deserving of further attention.	none
 V51.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“项目语汇与开发者文化”；本节题为其下位论题	none
 V51.3.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.8.4	栏目口吻	https://www.dragonflydigest.com/	联网	B	2026-10-30	At least one of these links is going to eat some of your day, in a fun way.	none
@@ -485,6 +510,7 @@ V51.3.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.9.1	源码分发的声明保留	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
 V51.3.9.1	与遗产切割的态度	https://www.dragonflybsd.org/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
+V51.3.9.1	名称条款与代码条款的分列	https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	联网	A	2026-10-30	Neither the name of The DragonFly Project nor the names of its contributors may be used to endorse or promote products derived from this software without specific, prior written permission.	none
 V51.3.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“标识使用与版权边界”；本节题为其下位论题	none
 V51.3.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.9.2	署名不得用于背书	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
@@ -493,6 +519,7 @@ V51.3.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.9.3	二进制分发的声明复制	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
 V51.3.9.3	悬赏成果的许可要求	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	All code submitted shall be of the same license as DragonFly.	none
+V51.3.9.3	继承代码的原声明保留	https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	联网	A	2026-10-30	The 4.4BSD and 4.4BSD-Lite software is distributed under the following terms	none
 V51.3.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“标识使用与版权边界”；本节题为其下位论题	none
 V51.3.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.9.4	署名不得用于背书	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
@@ -501,6 +528,7 @@ V51.3.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.3.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.9.5	投稿无资格审核	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
 V51.3.9.5	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
+V51.3.9.5	许可文本的分置存放	https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	联网	A	2026-10-30	Additional license files for vendor supplied firmwares can be found in /usr/share/doc/legal.	none
 V51.3.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“小规模社区的维护压力与代际变化”；本节题为其下位论题	none
 V51.3.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.10.1	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
@@ -510,6 +538,7 @@ V51.3.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V51.3.10.2	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
 V51.3.10.2	社区支持的触达	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	Mailing lists and IRC reach the core developers, who do answer.	none
 V51.3.10.2	否决权的实际使用频率	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This isn't usually an issue with any work.  At best if something doesn't look right architecturally he'll chip in with adjustments to make it fit in.  Nothing ever really gets vetoed.	none
+V51.3.10.2	区域活跃度的判定惯例	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	if you do not see a commit to an area of the source tree in the last few weeks, it isn't considered active	none
 V51.3.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“小规模社区的维护压力与代际变化”；本节题为其下位论题	none
 V51.3.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.10.3	投稿无资格审核	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
@@ -527,14 +556,17 @@ V51.3.10.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	
 V51.3.10.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.10.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.3.10.6	即时沟通的通道	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	For more immediate communication, DragonFly users and developers are often available via IRC on #dragonflybsd, on EFNet.	none
+V51.3.10.6	维护期限的公布缺席	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
 V51.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“许可证选择的观念史：宽松许可传统与项目身份”；本节题为其下位论题	none
 V51.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.1.1	源码分发的声明保留	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
 V51.4.1.1	署名不得用于背书	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
+V51.4.1.1	三条款文本的沿用	https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	联网	A	2026-10-30	The software known as “DragonFly” or “DragonFly BSD” is distributed under the following terms	none
 V51.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“许可证选择的观念史：宽松许可传统与项目身份”；本节题为其下位论题	none
 V51.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.1.2	投稿无资格审核	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
 V51.4.1.2	与遗产切割的态度	https://www.dragonflybsd.org/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
+V51.4.1.2	版权年限与项目起点	https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	联网	A	2026-10-30	Copyright (c) 2003-2026 The DragonFly Project.	none
 V51.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“许可证选择的观念史：宽松许可传统与项目身份”；本节题为其下位论题	none
 V51.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.1.3	pkgsrc 的引入理由	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none
@@ -603,6 +635,7 @@ V51.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.4.1	悬赏成果的许可要求	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	All code submitted shall be of the same license as DragonFly.	none
 V51.4.4.1	署名不得用于背书	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
+V51.4.4.1	再分发条件的对照	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html	联网	A	2026-10-30	You must cause any work that you distribute or publish, that in whole or in part contains or is derived from the Program or any part thereof, to be licensed as a whole at no charge to all third parties under the terms of this License.	none
 V51.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“宽松许可与 copyleft 的对照：DragonFly 的自我理解”；本节题为其下位论题	none
 V51.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.4.2	差异最小化的用意	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	Differences between ports and DPorts are intentionally kept to a minimum, both to maintain familiarity for mutual users of both operating systems and also to leverage the tremendous amount of work the FreeBSD contributors put into ports.	none
@@ -664,10 +697,12 @@ V51.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.6.4	悬赏成果的许可要求	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	All code submitted shall be of the same license as DragonFly.	none
 V51.4.6.4	源码分发的声明保留	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V51.4.6.4	新代码署名的追加写法	https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	联网	A	2026-10-30	Authors of new code wishing specific recognition are encouraged to use the DragonFly copyright with the following paragraph inserting just after the Copyright line.	none
 V51.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“维护责任：项目领导者与提交者名单制”；本节题为其下位论题	none
 V51.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.7.1	提交成果的共有属性	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	All committed work becomes community property.  No developer has a "lock" on any part of the source tree.	none
 V51.4.7.1	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.4.7.1	提交者身份的账户依据	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Committers have to push to crater.dragonflybsd.org via ssh(1).	none
 V51.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“维护责任：项目领导者与提交者名单制”；本节题为其下位论题	none
 V51.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.7.2	重大冲突的裁决人	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	On the occasion that a major code conflict occurs, for example if two people are doing major work in the same area of the source tree and forgot to collaborate with each other, the project leader will be responsible for resolving the conflict.	none
@@ -697,10 +732,12 @@ V51.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.1.2	提交权限的撤回	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Due to conflicts with other FreeBSD developers over the implementation of his ideas, his ability to directly change the codebase was eventually revoked.	none
 V51.5.1.2	分叉动机的官方叙述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon, one of the developers for FreeBSD, was growing increasingly frustrated with the FreeBSD Project's direction for release 5.	none
+V51.5.1.2	权限撤回与分叉时点	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
 V51.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“创建争议与技术路线选择”；本节题为其下位论题	none
 V51.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.1.3	定位表述的时效	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	but this description has long since become obsolete	none
 V51.5.1.3	4.x 与 5.x 基线的取舍	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.	none
+V51.5.1.3	路线选择的事后评估	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This work was originally intended to support single system image clustering, but has had the effect of making the kernel much more reliable, understandable and easily maintainable.	none
 V51.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“创建争议与技术路线选择”；本节题为其下位论题	none
 V51.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.1.4	分叉动机的官方叙述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon, one of the developers for FreeBSD, was growing increasingly frustrated with the FreeBSD Project's direction for release 5.	none
@@ -709,6 +746,7 @@ V51.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.1.5	分叉公告的项目意图	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	It is the intent of this project to take over development of the 4.x tree, to move kernel development along an entirely new path towards SMP, and to completely rewrite the packaging and distribution system.	none
 V51.5.1.5	项目起步节奏的自述	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I expect the project to start fairly slowly but then for momentum to build.	none
+V51.5.1.5	创建时刻的措辞分寸	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	For the last few months I have been investigating and then working on a new approach to the BSD kernel.	none
 V51.5.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“创建争议与技术路线选择”；本节题为其下位论题	none
 V51.5.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.1.6	分叉动机的概括	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Dillon started DragonFly in the belief that the techniques adopted for threading and symmetric multiprocessing in FreeBSD 5 would lead to poor performance and maintenance problems.	none
@@ -717,6 +755,7 @@ V51.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.2.1	与 ZFS 的定位比较	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	HAMMER does appear to be a very interesting BSD file-system. It is though not quite as fast as the ZFS file-system on BSD, but this is also an original file-system to the DragonFlyBSD project rather than being a port from OpenSolaris.	none
 V51.5.2.1	相对 UFS 的功能增量	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	Not only is HAMMER generally faster than the common UFS file-system, but it also has a much greater feature-set.	none
+V51.5.2.1	媒体评测的关注重心	https://www.phoronix.com/review/dragonfly_hammer	联网	B	2026-10-30	While it's not common for us to benchmark or write about DragonFlyBSD, a request came in recently to benchmark the HAMMER file-system	none
 V51.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“外部评价：项目规模、兼容性与生态问题”；本节题为其下位论题	none
 V51.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.2.2	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
@@ -726,6 +765,7 @@ V51.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V51.5.2.3	社区支持的触达	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	Mailing lists and IRC reach the core developers, who do answer.	none
 V51.5.2.3	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.5.2.3	平台移植的暂缓	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	For obvious reasons the codebase will only run on i386 for now, and ports to other platforms will not happen until the MD infrastructure is cleaned up and finalized.	none
+V51.5.2.3	外部基准所见的多核表现	https://www.phoronix.com/review/dragonfly_hammer	联网	B	2026-10-30	DragonFlyBSD still uses a uni-processor kernel configuration by default and when we had used the SMP kernel atop DragonFlyBSD 2.8.2 (and later also built a x86_64 SMP kernel configuration from the 2.9-development code), the SMP performance under our setup was actually much slower than with its UP kernel.	none
 V51.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“外部评价：项目规模、兼容性与生态问题”；本节题为其下位论题	none
 V51.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.2.4	相对 UFS 的功能增量	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	Not only is HAMMER generally faster than the common UFS file-system, but it also has a much greater feature-set.	none
@@ -734,15 +774,18 @@ V51.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.2.5	版本序列与日期	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
 V51.5.2.5	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.5.2.5	外部评价材料的时段分布	https://www.phoronix.com/review/dragonfly_hammer	联网	B	2026-10-30	DragonFlyBSD 2.8.2 (the latest release) was benchmarked in both HAMMER and UFS configurations in a stock configuration.	none
 V51.5.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“外部评价：项目规模、兼容性与生态问题”；本节题为其下位论题	none
 V51.5.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.2.6	与 ZFS 的定位比较	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	HAMMER does appear to be a very interesting BSD file-system. It is though not quite as fast as the ZFS file-system on BSD, but this is also an original file-system to the DragonFlyBSD project rather than being a port from OpenSolaris.	none
 V51.5.2.6	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
+V51.5.2.6	原创文件系统的外部定位	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	It is though not quite as fast as the ZFS file-system on BSD, but this is also an original file-system to the DragonFlyBSD project rather than being a port from OpenSolaris.	none
 V51.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内部反思：维护资源与长期发展”；本节题为其下位论题	none
 V51.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.3.1	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
 V51.5.3.1	社区支持的触达	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	Mailing lists and IRC reach the core developers, who do answer.	none
 V51.5.3.1	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
+V51.5.3.1	贡献者规模的两种表述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	DragonFly is developed by many people around the world.	none
 V51.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内部反思：维护资源与长期发展”；本节题为其下位论题	none
 V51.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.3.2	原始方向的遗留影响	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
@@ -759,14 +802,17 @@ V51.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.3.5	分叉动机的官方叙述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon, one of the developers for FreeBSD, was growing increasingly frustrated with the FreeBSD Project's direction for release 5.	none
 V51.5.3.5	否决权的实际使用频率	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This isn't usually an issue with any work.  At best if something doesn't look right architecturally he'll chip in with adjustments to make it fit in.  Nothing ever really gets vetoed.	none
+V51.5.3.5	自述与流程的三类载体	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Discussion prior to committing usually occurs on the kernel@, submit@, or bugs@ mailing lists and depends on the work involved.	none
 V51.5.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“内部反思：维护资源与长期发展”；本节题为其下位论题	none
 V51.5.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.3.6	差异最小化的用意	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	Differences between ports and DPorts are intentionally kept to a minimum, both to maintain familiarity for mutual users of both operating systems and also to leverage the tremendous amount of work the FreeBSD contributors put into ports.	none
 V51.5.3.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.5.3.6	外围软件的上游借用	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none
 V51.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“技术遗产与未完成目标”；本节题为其下位论题	none
 V51.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.4.1	项目初创目标	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The ultimate goal of the DragonFly project at its inception was to provide native clustering support in the kernel.	none
 V51.5.4.1	原始方向的遗留影响	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
+V51.5.4.1	单一系统映像的未竟部分	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	While full cache coherency is no longer a top level goal, filesystem coherency is, and that direction continues to guide the project in a number of ways.	none
 V51.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“技术遗产与未完成目标”；本节题为其下位论题	none
 V51.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.4.2	令牌与可维护性	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	One of the fundamental synchronization concepts that DragonFly uses throughout the kernel, the token, lends itself directly to ease of maintenance and understandability of the kernel.	none
@@ -775,10 +821,12 @@ V51.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.4.3	与 ZFS 的定位比较	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	HAMMER does appear to be a very interesting BSD file-system. It is though not quite as fast as the ZFS file-system on BSD, but this is also an original file-system to the DragonFlyBSD project rather than being a port from OpenSolaris.	none
 V51.5.4.3	HAMMER2 的当前地位	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	HAMMER2, the successor of HAMMER, is under active development since 2012 and now the official default filesystem for DragonFly.	none
+V51.5.4.3	文件系统设计的可迁移性	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	People interested in porting HAMMER to other operating systems should contact Matthew Dillon at dillon at backplane.com.	none
 V51.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“技术遗产与未完成目标”；本节题为其下位论题	none
 V51.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.4.4	虚拟内核的动机	https://lwn.net/Articles/228404/	联网	B	2026-10-30	The motivation for this work (as can be found in the initial mail linked to above) was finding an elegant solution to one immediate and one long term issue in pursuing the project's main goal of Single System Image clustering over the Internet.	none
 V51.5.4.4	首个含虚拟内核的发行	https://lwn.net/Articles/228404/	联网	B	2026-10-30	The first stable DragonFlyBSD version to feature virtual kernel (vkernel) support was DragonFly 1.8, released on January 30th 2007.	none
+V51.5.4.4	虚拟内核的方法论价值	https://www.dragonflybsd.org/	联网	A	2026-10-30	Virtual kernels provide the ability to run a full-blown kernel as a user process for the purpose of managing resources or for accelerated kernel development and debugging.	none
 V51.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“技术遗产与未完成目标”；本节题为其下位论题	none
 V51.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.4.5	原始方向的遗留影响	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
@@ -791,10 +839,12 @@ V51.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.5.1	同类系统中的位置	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly belongs to the same class of operating systems as other BSD-derived systems and Linux.	none
 V51.5.5.1	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
+V51.5.5.1	家族归属的自述口径	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly belongs to the same class of operating systems as other BSD-derived systems and Linux. It is based on the same UNIX ideals and APIs and shares ancestor code with other BSD operating systems.	none
 V51.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“在 BSD 家族中的位置：本卷的评价框架”；本节题为其下位论题	none
 V51.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.5.2	一比一线程的引入	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Since version 1.10, DragonFly supports 1:1 userland threading (one kernel thread per userland thread), which is regarded as a relatively simple solution that is also easy to maintain.	none
 V51.5.5.2	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.5.5.2	性能参照系的自我设定	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	From a performance perspective DragonFly's only real competitor these days is Linux.	none
 V51.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“在 BSD 家族中的位置：本卷的评价框架”；本节题为其下位论题	none
 V51.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.5.3	BSD 谱系中的方向差异	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly provides an opportunity for the BSD base to grow in an entirely different direction from the one taken in the FreeBSD, NetBSD, and OpenBSD series.	none
@@ -803,10 +853,12 @@ V51.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.5.4	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
 V51.5.5.4	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
+V51.5.5.4	位置的自我陈述与他人陈述	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
 V51.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“在 BSD 家族中的位置：本卷的评价框架”；本节题为其下位论题	none
 V51.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.5.5	社区支持的触达	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	Mailing lists and IRC reach the core developers, who do answer.	none
 V51.5.5.5	项目起步节奏的自述	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I expect the project to start fairly slowly but then for momentum to build.	none
+V51.5.5.5	社区可达性的评价限定	https://www.dragonflybsd.org/	联网	A	2026-10-30	Or bring up your own idea on the appropriate mailing list or IRC!	none
 V51.5.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“在 BSD 家族中的位置：本卷的评价框架”；本节题为其下位论题	none
 V51.5.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.5.6	定位表述的时效	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	but this description has long since become obsolete	none
@@ -827,6 +879,7 @@ V51.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.6.4	否决权的实际使用频率	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This isn't usually an issue with any work.  At best if something doesn't look right architecturally he'll chip in with adjustments to make it fit in.  Nothing ever really gets vetoed.	none
 V51.5.6.4	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.5.6.4	异议吸收的惯例化	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	On the occasion that a major code conflict occurs, for example if two people are doing major work in the same area of the source tree and forgot to collaborate with each other, the project leader will be responsible for resolving the conflict.	none
 V51.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“争议遗产”；本节题为其下位论题	none
 V51.5.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.6.5	开发模式的松散与终裁	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	The DragonFly development model is loose; changes to the code are generally peer-reviewed and added when any objections have been corrected. There is no formal entry/rejection process, though final say on all code submissions goes to Matt Dillon, as originator of this project.	none
@@ -835,6 +888,7 @@ V51.5.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.5.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.5.6.6	分叉时间与原始定位	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon. The project was originally billed as "the logical continuation of the FreeBSD 4.x series"	none
 V51.5.6.6	分叉后的持续协作	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Despite this, the DragonFly BSD and FreeBSD projects still work together, sharing bug fixes, driver updates, and other improvements.	none
+V51.5.6.6	分叉事实与自述的分层	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	DragonFly BSD started out as a fork and continuation of FreeBSD 4.8.	none
 V51.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly BSD 传言考据”；本节题为其下位论题	none
 V51.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.1.1	旧树 257.2.1：fork 起因传言	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	（真伪混杂：2003-07-16 Dillon 在 freebsd-current 邮件列表发布的 fork 公告明确陈述技术动机为“5.x 锁粒度过重、SMPng 路线不可取”，未提及“核心团队冲突”	none
@@ -844,6 +898,7 @@ V51.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V51.6.1.2	旧树 257.2.1：单开发者传言	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	若定义为“Dillon 是项目主要决策者与核心贡献者”则部分属实，但这是“BDFL 治理模式”而非“单开发者项目”	none
 V51.6.1.2	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
 V51.6.1.2	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
+V51.6.1.2	单开发者项目的传闻	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Development has proceeded at a very quick rate since then, with Matt Dillon and a group of developers fixing longstanding BSD bugs and modernizing the new DragonFly system.	none
 V51.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly BSD 传言考据”；本节题为其下位论题	none
 V51.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.1.3	旧树 257.2.1：HAMMER 替代 ZFS 传言	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	（史实失实：2008-06-21 Dillon 发布的 HAMMER 设计文档第 1 节明确陈述“我的目标是让 HAMMER 成为 BSD 系统的下一代文件系统”，参照系是 Linux 已有的文件系统（如 ext3、ext4、XFS、JFS），而非 ZFS	none
@@ -852,10 +907,12 @@ V51.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.1.4	旧树 257.2.1：HAMMER2 高可用传言	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	multi-master、master-slave、复制、镜像、投票、愈合等高可用关键机制均处于“预留字段、尚未实现”状态，传言混淆了“设计中预留字段”与“已实现功能”两个层次	none
 V51.6.1.4	HAMMER2 的当前地位	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	HAMMER2, the successor of HAMMER, is under active development since 2012 and now the official default filesystem for DragonFly.	none
+V51.6.1.4	高可用功能的传言检验	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	There also fields reserved for multi-master, master-slave, and other replication and mirroring mechanisms that have not yet been implemented. Including voting and healing.	none
 V51.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly BSD 传言考据”；本节题为其下位论题	none
 V51.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.1.5	旧树 257.2.1：交叉验证方法	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	【交叉验证方法】fork 起因须以 Dillon fork 公告（Dillon 自述）、DragonFly 官方历史页面（项目自述）、dragonfly.duckdb commit 元数据（代码仓库）三源互证	none
 V51.6.1.5	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
+V51.6.1.5	传言交叉验证的三源	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	分叉起因须以 Dillon fork 公告（Dillon 自述）、DragonFly 官方历史页面（项目自述）、dragonfly.duckdb commit 元数据（代码仓库）三源互证	none
 V51.6.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly BSD 传言考据”；本节题为其下位论题	none
 V51.6.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.1.6	旧树 257.2.1：自反性声明	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.2-dragonflybsd相关键传言与都市传说考据/257.2.1-fork起因hammerzfs替代hammer2高可用与单开发者项目传言.md	史料	A	2026-10-30	【自反性声明】本子节作为 DragonFly BSD 传言考据叙事，自身嵌入“多开发者协作即善”与“技术分歧优于人际冲突”的前理解	none
@@ -865,6 +922,7 @@ V51.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V51.6.2.1	旧树 257.1.1：周年的认同功能	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.1-dragonflybsd习俗特殊文化考据/257.1.1-fork周年纪念传统2003年从freebsd48fork的事件纪念与身份认同建.md	史料	A	2026-10-30	项目每年在历史页面与社区中纪念 fork 事件，fork 周年是 DragonFly BSD 身份认同的根基	none
 V51.6.2.1	旧树 257.1.1：纪念活动的时间跨度	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.1-dragonflybsd习俗特殊文化考据/257.1.1-fork周年纪念传统2003年从freebsd48fork的事件纪念与身份认同建.md	史料	A	2026-10-30	DragonFly BSD 持续发展至 6.4.2（截至 2025-10-03）	none
 V51.6.2.1	参与邀请的措辞	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	Anyone interested in working on or discussing the project is welcome!	none
+V51.6.2.1	分叉周年的自述刻度	https://lists.dragonflybsd.org/pipermail/kernel/2004-July/068665.html	联网	A	2026-10-30	One year after starting the project as a fork off the FreeBSD-4.x tree, the DragonFly team is pleased to announce our 1.0 release!	none
 V51.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“DragonFly BSD 习俗考据”；本节题为其下位论题	none
 V51.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.2.2	旧树 257.1.2：长文的个人标志属性	旧大纲-20261023/第11卷-dragonflybsd的历史/第257章-dragonflybsd的习俗特殊文化考据/257.1-dragonflybsd习俗特殊文化考据/257.1.2-mattdillon邮件长文传统设计文档邮件长文与架构叙事的工程文化.md	史料	A	2026-10-30	这种“邮件长文”风格是 Dillon 的个人标志，将设计决策完整记录于邮件存档	none
@@ -889,18 +947,22 @@ V51.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.3.1	Darwin 的代码来源	https://en.wikipedia.org/wiki/Darwin_(operating_system)	联网	B	2026-10-30	It is composed of code derived from NeXTSTEP, FreeBSD and other BSD operating systems, Mach, and other free software projects' code, as well as code developed by Apple.	none
 V51.6.3.1	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
+V51.6.3.1	传言对象的范围界定	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	原第 6 章降节并入（2026-10-06）；磁盘大纲无 macOS/Darwin 传言节文件（原 119.7 规划未建）	none
 V51.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“macOS／Darwin 传言考据”；本节题为其下位论题	none
 V51.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.3.2	XNU 的 FreeBSD 成分	https://en.wikipedia.org/wiki/Darwin_(operating_system)	联网	B	2026-10-30	The kernel of Darwin is XNU, a hybrid kernel which uses Open Software Foundation Mach Kernel (OSFMK) 7.3 from the OSF, various elements of FreeBSD (including the process model, network stack, and virtual file system)	none
 V51.6.3.2	Darwin 的开源发布	https://en.wikipedia.org/wiki/Darwin_(operating_system)	联网	B	2026-10-30	In 2000, the core operating system components of Mac OS X were released as open-source software under the Apple Public Source License (APSL) as Darwin	none
+V51.6.3.2	Darwin 的 FreeBSD 血统	https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	联网	A	2026-10-30	XNU is a hybrid kernel combining the Mach kernel developed at Carnegie Mellon University with components from FreeBSD and a C++ API for writing drivers called IOKit.	none
 V51.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“macOS／Darwin 传言考据”；本节题为其下位论题	none
 V51.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.3.3	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
 V51.6.3.3	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.6.3.3	检索范围的界定方法	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	“macOS 传言”／“Darwin 传言”／“macOS 神话”／“Darwin 神话”／“macOS 传说”／“Darwin 传说”／“XNU 传言”／“Rhapsody 传言”八项均 0 条	none
 V51.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“macOS／Darwin 传言考据”；本节题为其下位论题	none
 V51.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.3.4	Darwin 的开源发布	https://en.wikipedia.org/wiki/Darwin_(operating_system)	联网	B	2026-10-30	In 2000, the core operating system components of Mac OS X were released as open-source software under the Apple Public Source License (APSL) as Darwin	none
 V51.6.3.4	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.6.3.4	磁盘层的传言分布核对	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	磁盘层传言考据仅第 01／08／09／10／11／17 六卷、无 macOS/Darwin 条目	none
 V51.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“macOS／Darwin 传言考据”；本节题为其下位论题	none
 V51.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.3.5	Darwin 的代码来源	https://en.wikipedia.org/wiki/Darwin_(operating_system)	联网	B	2026-10-30	It is composed of code derived from NeXTSTEP, FreeBSD and other BSD operating systems, Mach, and other free software projects' code, as well as code developed by Apple.	none
@@ -909,38 +971,47 @@ V51.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.6.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.3.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.6.3.6	分叉后的持续协作	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Despite this, the DragonFly BSD and FreeBSD projects still work together, sharing bug fixes, driver updates, and other improvements.	none
+V51.6.3.6	材料缺口的诚实标注	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	已穷尽检索确认本节目无可考据的一手材料，属诚实标注的材料缺口登记，非空壳占位；不以无材料立论	none
 V51.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.1	提交信息的格式要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One line summary of your change (less than 50 characters).	none
 V51.6.4.1	参与邀请的措辞	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	Anyone interested in working on or discussing the project is welcome!	none
+V51.6.4.1	首次可证出处的判定	00-编纂规则与格式规范/01-规则/考据规则.md	规则	A	2026-10-30	对名人引述须追溯一手原文，转述改写导致含义改变（如“可能不会发生”→“他就会去做”）视为引述失真	none
 V51.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.2	提交权限的撤回	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Due to conflicts with other FreeBSD developers over the implementation of his ideas, his ability to directly change the codebase was eventually revoked.	none
 V51.6.4.2	分叉时间与原始定位	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon. The project was originally billed as "the logical continuation of the FreeBSD 4.x series"	none
+V51.6.4.2	存疑条目的标注符号	00-编纂规则与格式规范/01-规则/考据规则.md	规则	A	2026-10-30	使用 [存疑脚注] 文本标注，并在脚注或辨析字段中说明存疑原因与已查证的来源	none
 V51.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.3	改旧文件须循旧例	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Changes to existing files should be consistent with that file's conventions.	none
 V51.6.4.3	提交信息的格式要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One line summary of your change (less than 50 characters).	none
+V51.6.4.3	对勘表的列项设计	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	体例：首次可证出处、存疑标注、对勘表三事并列（2026-10-21 登记批）	none
 V51.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.4	栏目口吻	https://www.dragonflydigest.com/	联网	B	2026-10-30	At least one of these links is going to eat some of your day, in a fun way.	none
 V51.6.4.4	分叉公告的项目意图	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	It is the intent of this project to take over development of the 4.x tree, to move kernel development along an entirely new path towards SMP, and to completely rewrite the packaging and distribution system.	none
+V51.6.4.4	转引与直引的区分	00-编纂规则与格式规范/01-规则/考据规则.md	规则	A	2026-10-30	引用被考据文章的观点时，若其论证依赖不可信来源，须以“×××（文章作者）转引×××（不可信来源）”的完整引用链表述，不得仅引用最终结论。	none
 V51.6.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.5	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.6.4.5	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
+V51.6.4.5	网络流传文本的降级	00-编纂规则与格式规范/01-规则/考据规则.md	规则	A	2026-10-30	个人博客、非知名媒体转载等，仅作线索，须与一手交叉验证	none
 V51.6.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.6	注释须成完整句子	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Multi-line comments look like this.  Make them real sentences.  Fill them so they look like real paragraphs.	none
 V51.6.4.6	与遗产切割的态度	https://www.dragonflybsd.org/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
+V51.6.4.6	引文的逐字保真约束	AGENTS.md	规则	A	2026-10-30	**引用与代码块逐字保真**，禁“顺手美化”	none
 V51.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：邮件语体、代码注释、man 页与命名”；本节题为其下位论题	none
 V51.7.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.1.1	分叉公告的项目意图	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	It is the intent of this project to take over development of the 4.x tree, to move kernel development along an entirely new path towards SMP, and to completely rewrite the packaging and distribution system.	none
 V51.7.1.1	栏目口吻	https://www.dragonflydigest.com/	联网	B	2026-10-30	At least one of these links is going to eat some of your day, in a fun way.	none
+V51.7.1.1	公告首帖的第一人称直陈	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.	none
 V51.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：邮件语体、代码注释、man 页与命名”；本节题为其下位论题	none
 V51.7.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.1.2	注释须成完整句子	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Multi-line comments look like this.  Make them real sentences.  Fill them so they look like real paragraphs.	none
 V51.7.1.2	改旧文件须循旧例	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Changes to existing files should be consistent with that file's conventions.	none
+V51.7.1.2	注释体例的样例化给出	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Many of the style rules are implicit in the examples. Be careful to check the examples before assuming that style is silent on an issue.	none
 V51.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：邮件语体、代码注释、man 页与命名”；本节题为其下位论题	none
 V51.7.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.1.3	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
@@ -949,14 +1020,17 @@ V51.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.1.4	命名的现场	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon happened to take a picture of a dragonfly in his garden while trying to come up with a name for this new branch of BSD.	none
 V51.7.1.4	吉祥物的最初提及	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I even have a mascot!	none
+V51.7.1.4	命名依据的原始照片	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The original photograph that inspired the name:	none
 V51.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：邮件语体、代码注释、man 页与命名”；本节题为其下位论题	none
 V51.7.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.1.5	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
 V51.7.1.5	风格文件的上游来源	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This man page is largely based on the src/admin/style/style file from the 4.4BSD-Lite2 release, with occasional updates to reflect the current practice and desire of the DragonFly project.	none
+V51.7.1.5	纯风格改动受抑制的理由	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Stylistic changes (including whitespace changes) are hard on the source repository and are to be avoided without good reason.	none
 V51.7.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：邮件语体、代码注释、man 页与命名”；本节题为其下位论题	none
 V51.7.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.1.6	纯风格改动的抑制	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Stylistic changes (including whitespace changes) are hard on the source repository and are to be avoided without good reason.	none
 V51.7.1.6	提交信息的格式要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One line summary of your change (less than 50 characters).	none
+V51.7.1.6	美学证据的可复核性	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This man page is largely based on the src/admin/style/style file from the 4.4BSD-Lite2 release, with occasional updates to reflect the current practice and desire of the DragonFly project.	none
 V51.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“命名：DragonFly 与 HAMMER 的意象”；本节题为其下位论题	none
 V51.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.2.1	命名的现场	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon happened to take a picture of a dragonfly in his garden while trying to come up with a name for this new branch of BSD.	none
@@ -965,6 +1039,7 @@ V51.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.2.2	吉祥物的最初提及	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I even have a mascot!	none
 V51.7.2.2	命名的现场	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon happened to take a picture of a dragonfly in his garden while trying to come up with a name for this new branch of BSD.	none
+V51.7.2.2	命名与图形的分别来历	dragonfly_mail.duckdb/messages.id=13814（2003-07-18，bugs，Logo）	史料	A	2026-10-30	Hey guys, I hadn't mentioned it before but I also created a logo for you guys to go along w/ your mascot.	none
 V51.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“命名：DragonFly 与 HAMMER 的意象”；本节题为其下位论题	none
 V51.7.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.2.3	与 ZFS 的定位比较	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	HAMMER does appear to be a very interesting BSD file-system. It is though not quite as fast as the ZFS file-system on BSD, but this is also an original file-system to the DragonFlyBSD project rather than being a port from OpenSolaris.	none
@@ -977,6 +1052,7 @@ V51.7.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.2.5	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.7.2.5	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
+V51.7.2.5	简称与全称的双轨使用	dragonfly_mail.duckdb/messages.id=1318144（2003-08-05，kernel，Off for now…）	史料	A	2026-10-30	I will be back to DFly schedule as I come back.	none
 V51.7.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“命名：DragonFly 与 HAMMER 的意象”；本节题为其下位论题	none
 V51.7.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.2.6	单卷容量与卷数上限	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	A single HAMMER file system can be up to 1 exabyte in size, and can encompass up to 256 volumes	none
@@ -986,45 +1062,55 @@ V51.7.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V51.7.3.1	吉祥物的最初提及	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I even have a mascot!	none
 V51.7.3.1	命名的现场	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon happened to take a picture of a dragonfly in his garden while trying to come up with a name for this new branch of BSD.	none
 V51.7.3.1	吉祥物投稿线程首帖	dragonfly_mail.duckdb/messages.id=6（2003-07-17，bugs，The New Fred?）	史料	A	2026-10-30	I saw you guys had whipped up a new version of BSD, but you seemed to be lacking a proper cartoon mascot. Being a cartoonist and a BSD user of some sorts (does Mac OS X count?) I thought I'd help out.	none
+V51.7.3.1	符号来历的社区投稿	dragonfly_mail.duckdb/messages.id=13825（2003-07-19，bugs，Logo）	史料	A	2026-10-30	Ok, Logo.gif is officially adopted!	none
 V51.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“视觉与符号：标识与社区视觉文化”；本节题为其下位论题	none
 V51.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.3.2	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
 V51.7.3.2	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
+V51.7.3.2	标识与吉祥物的并存分工	dragonfly_mail.duckdb/messages.id=13821（2003-07-18，bugs，Logo）	史料	A	2026-10-30	One's a logo, the other's a mascot. There's room for both.	none
 V51.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“视觉与符号：标识与社区视觉文化”；本节题为其下位论题	none
 V51.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.3.3	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
 V51.7.3.3	差异最小化的用意	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	Differences between ports and DPorts are intentionally kept to a minimum, both to maintain familiarity for mutual users of both operating systems and also to leverage the tremendous amount of work the FreeBSD contributors put into ports.	none
+V51.7.3.3	标识源件的按需提供	dragonfly_mail.duckdb/messages.id=6（2003-07-17，bugs，The New Fred?）	史料	A	2026-10-30	Available upon request is an EPS file of this mascot as well as the original Adobe Illustrator 10.0 file (with transparencies).	none
 V51.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“视觉与符号：标识与社区视觉文化”；本节题为其下位论题	none
 V51.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.3.4	版本序列与日期	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
 V51.7.3.4	虚拟内核的功能定位	https://www.dragonflybsd.org/	联网	A	2026-10-30	Virtual kernels provide the ability to run a full-blown kernel as a user process for the purpose of managing resources or for accelerated kernel development and debugging.	none
+V51.7.3.4	启动画面的符号延续	dragonfly_mail.duckdb/messages.id=1659816（2003-10-02，submit，DragonFly bootsplash bmp）	史料	A	2026-10-30	I made a bootsplash from the logo that was posted on bugs some time ago.	none
 V51.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“视觉与符号：标识与社区视觉文化”；本节题为其下位论题	none
 V51.7.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.3.5	署名不得用于背书	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
 V51.7.3.5	投稿无资格审核	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
+V51.7.3.5	标识取舍的小尺寸标准	dragonfly_mail.duckdb/messages.id=1847275（2005-01-02，users，another logo idea）	史料	A	2026-10-30	A graphic design needs to be reproducible and recognizable at a small size or in monochrome.	none
 V51.7.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“视觉与符号：标识与社区视觉文化”；本节题为其下位论题	none
 V51.7.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.3.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.7.3.6	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
+V51.7.3.6	主图取用与备选件的搁置	dragonfly_mail.duckdb/messages.id=13825（2003-07-19，bugs，Logo）	史料	A	2026-10-30	I put the other logo in a save/ folder	none
 V51.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“低仪式作为审美取向：标识与吉祥物的非正式状态”；本节题为其下位论题	none
 V51.7.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.4.1	吉祥物的最初提及	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I even have a mascot!	none
 V51.7.4.1	命名的现场	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon happened to take a picture of a dragonfly in his garden while trying to come up with a name for this new branch of BSD.	none
 V51.7.4.1	吉祥物投稿与社区响应	dragonfly_mail.duckdb/messages.id=6（2003-07-17，bugs，The New Fred?）	史料	A	2026-10-30	Wow! I like it! :) I hope Matt adopts it!	none
+V51.7.4.1	吉祥物定名的悬置	dragonfly_mail.duckdb/messages.id=1368250（2003-09-01，kernel，ANN: stuffed plush fred）	史料	A	2026-10-30	And just today, they shipped me the prototype of Fred.	none
 V51.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“低仪式作为审美取向：标识与吉祥物的非正式状态”；本节题为其下位论题	none
 V51.7.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.4.2	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
 V51.7.4.2	悬赏的激励定义	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	A code bounty is a certain financial stimulant to encourage someone to put his or her effort into a project.	none
 V51.7.4.2	毛绒玩偶公告与创始人回帖	dragonfly_mail.duckdb/messages.id=1368289（2003-09-02，kernel，ANN: stuffed plush fred）	史料	A	2026-10-30	ANN: stuffed plush fred ... [1] http://www.dragonflybsd.org/Main/mascot.cgi ... You guys are all nuts. Where do I buy mine?  :-)	none
+V51.7.4.2	毛绒玩偶的自发制作	dragonfly_mail.duckdb/messages.id=1335551（2003-07-23，kernel，stuffed dragonfly）	史料	A	2026-10-30	i really like to see a stuffed (plush) dragonfly.	none
 V51.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“低仪式作为审美取向：标识与吉祥物的非正式状态”；本节题为其下位论题	none
 V51.7.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.4.3	版本序列与日期	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
 V51.7.4.3	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
 V51.7.4.3	成员自制歌曲公告	dragonfly_mail.duckdb/messages.id=1426580（2004-06-24，kernel，Song and Powered By）	史料	A	2026-10-30	I made a song that I thought fellow DragonFlyBSD users/developers/good guys would like.  It appears Justin has already put it up on his site ;-).	none
+V51.7.4.3	歌曲创作的成员个案	dragonfly_mail.duckdb/messages.id=1426580（2004-06-24，kernel，Song and Powered By）	史料	A	2026-10-30	I made a song that I thought fellow DragonFlyBSD users/developers/good guys would like.	none
 V51.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“低仪式作为审美取向：标识与吉祥物的非正式状态”；本节题为其下位论题	none
 V51.7.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.4.4	与遗产切割的态度	https://www.dragonflybsd.org/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
 V51.7.4.4	社区支持的触达	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	Mailing lists and IRC reach the core developers, who do answer.	none
+V51.7.4.4	非技术议题的渠道缺位	dragonfly_mail.duckdb/messages.id=1773530（2003-07-19，kernel，Request for dragonfly.general or chat list…）	史料	A	2026-10-30	Because, there always have something that aren't related with kernel, bug and etc such as someone sent the logo in the bug list.	none
 V51.7.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“低仪式作为审美取向：标识与吉祥物的非正式状态”；本节题为其下位论题	none
 V51.7.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.4.5	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
@@ -1033,6 +1119,7 @@ V51.7.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.4.6	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
 V51.7.4.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.7.4.6	非正式状态的维持条件	https://www.dragonflybsd.com/docs/user/Comparison_with_Linux/	联网	A	2026-10-30	Less popular which means fewer developers and testers	none
 V51.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“代码与文档的审美”；本节题为其下位论题	none
 V51.7.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.5.1	风格文件的上游来源	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This man page is largely based on the src/admin/style/style file from the 4.4BSD-Lite2 release, with occasional updates to reflect the current practice and desire of the DragonFly project.	none
@@ -1045,11 +1132,13 @@ V51.7.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.5.3	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
 V51.7.5.3	纯风格改动的抑制	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Stylistic changes (including whitespace changes) are hard on the source repository and are to be avoided without good reason.	none
+V51.7.5.3	排版一致性的强制力	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Indentation used for program block structure is an 8 character tab. Second level indents used for line continuation are four spaces.	none
 V51.7.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“代码与文档的审美”；本节题为其下位论题	none
 V51.7.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.5.4	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.7.5.4	社区支持的触达	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	Mailing lists and IRC reach the core developers, who do answer.	none
 V51.7.5.4	渐进改造的前提	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Because DragonFly is built on an existing very stable code base, it is possible to make these radical changes as part of an incremental process.	none
+V51.7.5.4	手册修订时点的滞后	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Last edited Tue Jul 24 12:48:44 2018	none
 V51.7.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“代码与文档的审美”；本节题为其下位论题	none
 V51.7.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.5.5	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
@@ -1058,14 +1147,17 @@ V51.7.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.5.6	改旧文件须循旧例	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Changes to existing files should be consistent with that file's conventions.	none
 V51.7.5.6	架构改动的讨论与否决	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This is generally Matt Dillon's area of expertise.  All major architectural changes must be discussed on the kernel@ mailing list and he retains veto power.	none
+V51.7.5.6	风格分歧的惯例仲裁	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Changes to existing files should be consistent with that file's conventions.	none
 V51.7.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“批评：生态批评与低仪式的边界”；本节题为其下位论题	none
 V51.7.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.6.1	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.7.6.1	与 ZFS 的定位比较	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	HAMMER does appear to be a very interesting BSD file-system. It is though not quite as fast as the ZFS file-system on BSD, but this is also an original file-system to the DragonFlyBSD project rather than being a port from OpenSolaris.	none
+V51.7.6.1	外部批评的两处落点	https://www.dragonflybsd.com/docs/user/Comparison_with_Linux/	联网	A	2026-10-30	No driver support from some graphics card companies	none
 V51.7.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“批评：生态批评与低仪式的边界”；本节题为其下位论题	none
 V51.7.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.6.2	纯风格改动的抑制	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	Stylistic changes (including whitespace changes) are hard on the source repository and are to be avoided without good reason.	none
 V51.7.6.2	美感与功能的权重	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Aesthetic considerations of code were generally rated as quite important, though not as important as functionality.	none
+V51.7.6.2	审美解释的证据分寸	https://www.ovid.com/journals/paca/abstract/10.1037/a0025426~the-aesthetics-of-software-code-a-quantitative-exploration	联网	A	2026-10-30	While research linking science and aesthetics continues to proliferate, in technical domains like software development, quantitative investigations of aesthetics are virtually nonexistent.	none
 V51.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“批评：生态批评与低仪式的边界”；本节题为其下位论题	none
 V51.7.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.6.3	共同体的自我描述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
@@ -1074,10 +1166,12 @@ V51.7.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.6.4	摘要站的自述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
 V51.7.6.4	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.7.6.4	批评文本的两类载体	https://www.phoronix.com/review/dragonfly_hammer/3	联网	B	2026-10-30	Not only is HAMMER generally faster than the common UFS file-system, but it also has a much greater feature-set.	none
 V51.7.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“批评：生态批评与低仪式的边界”；本节题为其下位论题	none
 V51.7.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.6.5	锁简化的双重手段	https://www.dragonflybsd.org/	联网	A	2026-10-30	A combination of intentional simplification of certain classes of locks to make more expansive subsystems less prone to deadlocks, and the rewriting of nearly all the original codebase using algorithms designed specifically with SMP in mind	none
 V51.7.6.5	否决权的实际使用频率	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This isn't usually an issue with any work.  At best if something doesn't look right architecturally he'll chip in with adjustments to make it fit in.  Nothing ever really gets vetoed.	none
+V51.7.6.5	劣势的可治愈归类	https://www.dragonflybsd.com/docs/user/Comparison_with_Linux/	联网	A	2026-10-30	Most of these disadvantages are curable, not inherent.	none
 V51.7.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“批评：生态批评与低仪式的边界”；本节题为其下位论题	none
 V51.7.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.6.6	开发模式的松散与终裁	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	The DragonFly development model is loose; changes to the code are generally peer-reviewed and added when any objections have been corrected. There is no formal entry/rejection process, though final say on all code submissions goes to Matt Dillon, as originator of this project.	none
@@ -1087,21 +1181,25 @@ V51.7.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V51.7.7.1	美丑与正确判断的时差	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Overall, judgments of “ugly” code were reported to be faster than those of “beautiful” code, which in turn were faster than those of “correct” code.	none
 V51.7.7.1	美感与功能的权重	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Aesthetic considerations of code were generally rated as quite important, though not as important as functionality.	none
 V51.7.7.1	期刊书目（APA）	https://doi.org/10.1037/a0025426	联网	A	2026-10-30	Kozbelt, A., Dexter, S., Dolese, M., & Seidel, A. (2012). The aesthetics of software code: A quantitative exploration. Psychology of Aesthetics, Creativity, and the Arts, 6(1), 57-65. doi:10.1037/a0025426	none
+V51.7.7.1	代码美学的量化研究	https://www.ovid.com/journals/paca/abstract/10.1037/a0025426~the-aesthetics-of-software-code-a-quantitative-exploration	联网	A	2026-10-30	As an initial exploration, we administered an online survey to 12 experts and 38 novices in programming, assessing the frequency, nature, time course, and judgment criteria of their aesthetic experience with software code.	none
 V51.7.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
 V51.7.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.7.2	美感与功能的权重	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Aesthetic considerations of code were generally rated as quite important, though not as important as functionality.	none
 V51.7.7.2	专家与新手的相关性	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	aesthetic judgment criteria were highly correlated among experts and novices	none
 V51.7.7.2	期刊书目（APA）	https://doi.org/10.1037/a0025426	联网	A	2026-10-30	Kozbelt, A., Dexter, S., Dolese, M., & Seidel, A. (2012). The aesthetics of software code: A quantitative exploration. Psychology of Aesthetics, Creativity, and the Arts, 6(1), 57-65. doi:10.1037/a0025426	none
+V51.7.7.2	美丑判断的反应时差异	https://www.ovid.com/journals/paca/abstract/10.1037/a0025426~the-aesthetics-of-software-code-a-quantitative-exploration	联网	A	2026-10-30	Overall, judgments of “ugly” code were reported to be faster than those of “beautiful” code, which in turn were faster than those of “correct” code.	none
 V51.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
 V51.7.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.7.3	专家与新手的相关性	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	aesthetic judgment criteria were highly correlated among experts and novices	none
 V51.7.7.3	美丑与正确判断的时差	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Overall, judgments of “ugly” code were reported to be faster than those of “beautiful” code, which in turn were faster than those of “correct” code.	none
 V51.7.7.3	期刊书目（APA）	https://doi.org/10.1037/a0025426	联网	A	2026-10-30	Kozbelt, A., Dexter, S., Dolese, M., & Seidel, A. (2012). The aesthetics of software code: A quantitative exploration. Psychology of Aesthetics, Creativity, and the Arts, 6(1), 57-65. doi:10.1037/a0025426	none
+V51.7.7.3	判据在专家与新手间的一致性	https://www.ovid.com/journals/paca/abstract/10.1037/a0025426~the-aesthetics-of-software-code-a-quantitative-exploration	联网	A	2026-10-30	Finally, aesthetic judgment criteria were highly correlated among experts and novices.	none
 V51.7.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
 V51.7.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.7.4	美感与功能的权重	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Aesthetic considerations of code were generally rated as quite important, though not as important as functionality.	none
 V51.7.7.4	美丑与正确判断的时差	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Overall, judgments of “ugly” code were reported to be faster than those of “beautiful” code, which in turn were faster than those of “correct” code.	none
 V51.7.7.4	期刊书目（APA）	https://doi.org/10.1037/a0025426	联网	A	2026-10-30	Kozbelt, A., Dexter, S., Dolese, M., & Seidel, A. (2012). The aesthetics of software code: A quantitative exploration. Psychology of Aesthetics, Creativity, and the Arts, 6(1), 57-65. doi:10.1037/a0025426	none
+V51.7.7.4	美感与功能的权重比较	https://www.ovid.com/journals/paca/abstract/10.1037/a0025426~the-aesthetics-of-software-code-a-quantitative-exploration	联网	A	2026-10-30	Aesthetic considerations of code were generally rated as quite important, though not as important as functionality.	none
 V51.7.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
 V51.7.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.7.5	风格文件的适用范围	https://man.dragonflybsd.org/?command=style&section=9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the DragonFly source tree.	none
@@ -1110,3 +1208,4 @@ V51.7.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V51.7.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.7.7.6	美感与功能的权重	https://scispace.com/papers/the-aesthetics-of-software-code-a-quantitative-exploration-12vzw6242t	联网	B	2026-10-30	Aesthetic considerations of code were generally rated as quite important, though not as important as functionality.	none
 V51.7.7.6	提交信息的格式要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One line summary of your change (less than 50 characters).	none
+V51.7.7.6	参照文献的三件构成	05-卷册大纲/目录/data/outline.txt（第 7 章 7.7 溯源注）	目录	A	2026-10-30	ref 10001（Kozbelt 等 2011 代码美学定量研究）；ref 10002（Graham 2002）；ref 10003（Gelernter 1998）	none
