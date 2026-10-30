@@ -1,2 +1,13 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:31	start				开工：3A.6 派单 V31-V50
+2026-10-30T21:12:48	takeover				ykla 2026-10-30 批准 10 子代理接管；原 claim session=wb3a6-v31-50 超时无 done.json
+2026-10-30T21:14:10	draft	5	15	0	第 1 章 5 节 15 题落盘（含 3 源证据行）
+2026-10-30T21:16:02	draft	12	36	0	第 2 章 7 节 21 题落盘
+2026-10-30T21:18:40	draft	20	60	0	第 3 章 8 节 24 题落盘
+2026-10-30T21:20:05	draft	27	81	0	第 4 章 7 节 21 题落盘
+2026-10-30T21:21:30	draft	34	102	0	第 5 章 7 节 21 题落盘
+2026-10-30T21:22:20	draft	36	108	0	第 6 章 2 节 6 题落盘
+2026-10-30T21:23:10	draft	44	132	0	第 7 章 8 节 24 题落盘；全卷 44 节 132 题齐
+2026-10-30T21:24:00	exception	44	132	132	132 条 corpus_gap：mapping.tsv 该卷 52 件全属第 11 卷 DragonFly 语料（跨卷错绑），本卷 44 节实无本主题旧料
+2026-10-30T21:25:50	selfcheck	44	132	132	audit_title_consistency --check：本卷 FAIL 0；他卷 V48 B3 命中 2 处（只记录不代改）
+2026-10-30T21:27:10	done	44	132	132	done.json：titles=132、ledger_sha256=f0d281ba…、selftest_exit=0；呈审报告已落盘，待 ykla 卷级批准

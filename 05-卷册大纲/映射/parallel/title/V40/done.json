@@ -1,0 +1,11 @@
+{
+  "vol": "V40",
+  "sections": 78,
+  "titles": 468,
+  "exceptions": 450,
+  "ledger_sha256": "5d76bf55c0940c9734596e680d30fbd7ceecf8d40f09b9b70bdb3ac5a36ab489",
+  "selftest_exit": 0,
+  "finished_at": "2026-10-30T19:08:55",
+  "session": "resume-3a6-20261030-V40",
+  "note": "V40 判据全 PASS；全库 H1 FAIL 1 处属他卷 V12，只记录不代改；台账仅改 thesis 内一处直角引号为弯引号（题面零改动），hash 更新"
+}

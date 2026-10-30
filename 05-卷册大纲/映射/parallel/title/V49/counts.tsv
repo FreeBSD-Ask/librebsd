@@ -1,2 +1,7 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:31	start				开工：3A.6 派单 V31-V50
+2026-10-30T21:34:02	takeover				ykla 2026-10-30 批准 10 子代理接管；superseded=wb3a6-v31-50
+2026-10-30T21:34:02	draft	62	310	0	读 outline.txt 与 targets.tsv 实测 62 节；逐节 5 题，分 13 批落盘
+2026-10-30T21:34:02	exception	62	310	310	旧树 0 件，310 题 corpus_gap/open
+2026-10-30T21:34:02	selfcheck	62	310	310	audit_title_consistency --check：V49 FAIL 0（他卷 FAIL 2，记 V50）
+2026-10-30T21:34:02	done	62	310	310	证据 930 行；联网 310 行／43 URL；逐字命中 310/310；同句复用 0；维基 0

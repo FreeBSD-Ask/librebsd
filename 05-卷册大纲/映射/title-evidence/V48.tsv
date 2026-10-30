@@ -1,0 +1,819 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V48.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“分叉前的技术背景：Dillon 在 FreeBSD 的工作”；本节题为其下位论题	none
+V48.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt has also contributed code to The FreeBSD Project and the Linux kernel for subsystems such as VM and NFS.	none
+V48.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“分叉前的技术背景：Dillon 在 FreeBSD 的工作”；本节题为其下位论题	none
+V48.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	One of the important works included the simplification and general cleanup of the majority of the kernel subsystems.	none
+V48.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“分叉前的技术背景：Dillon 在 FreeBSD 的工作”；本节题为其下位论题	none
+V48.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This work was originally intended to support single system image clustering, but has had the effect of making the kernel much more reliable, understandable and easily maintainable.	none
+V48.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“分叉前的技术背景：Dillon 在 FreeBSD 的工作”；本节题为其下位论题	none
+V48.1.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
+V48.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 4.x 时代的 SMP 改进与内核发展背景”；本节题为其下位论题	none
+V48.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	DragonFly is still running under the Big Giant Lock, but this will probably be the last release where that is the case.	none
+V48.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 4.x 时代的 SMP 改进与内核发展背景”；本节题为其下位论题	none
+V48.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.2.2	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	The TCP stack is now almost fully threaded (and will likely be the first subsystem we remove the BGL from in coming months).	none
+V48.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 4.x 时代的 SMP 改进与内核发展背景”；本节题为其下位论题	none
+V48.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.2.3	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	The namecache has been completely rewritten and is now considered to be production-ready with this release.	none
+V48.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“FreeBSD 4.x 时代的 SMP 改进与内核发展背景”；本节题为其下位论题	none
+V48.1.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	The greatest progress has been made in the network subsystem.	none
+V48.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“FreeBSD 5.x SMPng 路线与技术分歧”；本节题为其下位论题	none
+V48.1.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement , but this description has long since become obsolete.	none
+V48.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“FreeBSD 5.x SMPng 路线与技术分歧”；本节题为其下位论题	none
+V48.1.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.3.2	发行与项目页一手表述	https://www.freebsd.org/releases/	联网	A	2026-10-30	5.2 (January 9, 2004)	none
+V48.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“FreeBSD 5.x SMPng 路线与技术分歧”；本节题为其下位论题	none
+V48.1.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	We also made significant progress in pushing the big giant lock inward and made extensive modifications to the kernel infrastructure with an eye towards DragonFly's main clustering and userland VFS goals.	none
+V48.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“FreeBSD 5.x SMPng 路线与技术分歧”；本节题为其下位论题	none
+V48.1.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.3.4	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	The two largest user-visible subsystems that still have major work pending are the userland threading and ports/packages subsystems.	none
+V48.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly BSD 的开发起始与公开宣布（2003 年 6 月—7 月）”；本节题为其下位论题	none
+V48.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
+V48.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly BSD 的开发起始与公开宣布（2003 年 6 月—7 月）”；本节题为其下位论题	none
+V48.1.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.4.2	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	DragonFly-1.0 RELEASED!	none
+V48.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly BSD 的开发起始与公开宣布（2003 年 6 月—7 月）”；本节题为其下位论题	none
+V48.1.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.4.3	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	We've made excellent progress in our first year.	none
+V48.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“DragonFly BSD 的开发起始与公开宣布（2003 年 6 月—7 月）”；本节题为其下位论题	none
+V48.1.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.4.4	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	We have done so much that it cannot all be listed here.	none
+V48.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“DragonFly 创建期版本演进（2003–2004）”；本节题为其下位论题	none
+V48.1.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	1.2.5 31-Jul-2005 Numerous critical SMP fixes: critical section and spl code, IPI messaging, LWKT tokens, and a ktrace fix.	none
+V48.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“DragonFly 创建期版本演进（2003–2004）”；本节题为其下位论题	none
+V48.1.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.5.2	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	People will find that the DragonFly-1.0 release is still using the old 4.x pthreads model, and at the moment we are relying on the FreeBSD ports tree with DragonFly specific overrides for third party application support...	none
+V48.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“DragonFly 创建期版本演进（2003–2004）”；本节题为其下位论题	none
+V48.1.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.1.5.3	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212852.html	联网	A	2026-10-30	1.0A is now available http://www.dragonflybsd.org/main/download.cgi, check the mirrors list carefully.	none
+V48.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“DragonFly 创建期版本演进（2003–2004）”；本节题为其下位论题	none
+V48.1.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.5.4	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212852.html	联网	A	2026-10-30	There is also an xdelta binary patch to convert a 1.0 ISO into a 1.0A ISO (/usr/ports/misc/xdelta).	none
+V48.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“创建期贡献者构成与 committer 变化（2003–2004）”；本节题为其下位论题	none
+V48.1.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.6.1	旧树同节料件（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.2-社区萎缩与核心贡献者留存.md	史料	A	2026-10-30	contributors 表显示核心贡献者留存情况——Dillon（合并 10666 条，2003-06-17 至 20	none
+V48.1.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Listed here are some of the people who have made this project possible.	none
+V48.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“创建期贡献者构成与 committer 变化（2003–2004）”；本节题为其下位论题	none
+V48.1.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.6.2	旧树同节料件（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.2-社区萎缩与核心贡献者留存.md	史料	A	2026-10-30	Dillon（合并 10666 条，2003-06-17 至 2026-06-10 仍活跃）、Wildner（合并 10	none
+V48.1.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is also the principal code contributor to DragonFly BSD and supports the website and other online resources for this project.	none
+V48.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“创建期贡献者构成与 committer 变化（2003–2004）”；本节题为其下位论题	none
+V48.1.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Committers To send an email to one of the committers append dragonflybsd.org .	none
+V48.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“创建期贡献者构成与 committer 变化（2003–2004）”；本节题为其下位论题	none
+V48.1.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Many individuals have stepped up to contribute various pieces of code, documentation, ideas, and feedback to The DragonFly Project.	none
+V48.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“分叉必要性的技术争论与外部批评、回应（2003–2004）”；本节题为其下位论题	none
+V48.1.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.7.1	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	We have replaced nearly all of the core threading, process, interrupt, and network infrastructure with DragonFly native subsystems.	none
+V48.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“分叉必要性的技术争论与外部批评、回应（2003–2004）”；本节题为其下位论题	none
+V48.1.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	It goes without saying that this release is far more stable then our 1.0A release.	none
+V48.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“分叉必要性的技术争论与外部批评、回应（2003–2004）”；本节题为其下位论题	none
+V48.1.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.7.3	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	We do not always get every last little fix into a release.	none
+V48.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“分叉必要性的技术争论与外部批评、回应（2003–2004）”；本节题为其下位论题	none
+V48.1.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.1.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	this description has long since become obsolete.	none
+V48.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“技术继承与自主重构：FreeBSD 基础代码、BSD 用户空间、自主内核改造”；本节题为其下位论题	none
+V48.1.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.8.1	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	We have made excellent progress bringing in those pieces from FreeBSD, NetBSD, and OpenBSD that fit our model.	none
+V48.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“技术继承与自主重构：FreeBSD 基础代码、BSD 用户空间、自主内核改造”；本节题为其下位论题	none
+V48.1.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.8.2	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Bring in a bunch of new malloc() features from OpenBSD (guard pages, free page protection, pointer guard, etc).	none
+V48.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“技术继承与自主重构：FreeBSD 基础代码、BSD 用户空间、自主内核改造”；本节题为其下位论题	none
+V48.1.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.8.3	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This involved a great deal of work in nearly every subsystem, particularly the filesystem APIs and kernel core.	none
+V48.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“技术继承与自主重构：FreeBSD 基础代码、BSD 用户空间、自主内核改造”；本节题为其下位论题	none
+V48.1.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.8.4	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	This will be last release that uses GCC 2.95.x as the default compiler.	none
+V48.1.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“创建期安全维护机制与漏洞通报渠道（2003–2004）”；本节题为其下位论题	none
+V48.1.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.9.1	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	DragonFly's policy is to only commit bug fixes to release branches.	none
+V48.1.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“创建期安全维护机制与漏洞通报渠道（2003–2004）”；本节题为其下位论题	none
+V48.1.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.9.2	发行与项目页一手表述	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The bugs@ and submit@ lists are tied into the bug tracker at bugs.dragonflybsd.org .	none
+V48.1.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“创建期安全维护机制与漏洞通报渠道（2003–2004）”；本节题为其下位论题	none
+V48.1.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.9.3	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	1.2.3 29-Jun-2005 Compiler, bootstrap, security, fork/^Z race, nfile limit, token, and packet filter fixes.	none
+V48.1.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“创建期安全维护机制与漏洞通报渠道（2003–2004）”；本节题为其下位论题	none
+V48.1.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.9.4	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	Also a security fix for a libz overflow.	none
+V48.1.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“创建期的代码继承与工具来源（2003–2004）”；本节题为其下位论题	none
+V48.1.10.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.10.1	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	Both GCC 3.4.x and GCC 2.95.x are supported in this release through the use of the CCVER environment variable ('gcc2' or 'gcc34').	none
+V48.1.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“创建期的代码继承与工具来源（2003–2004）”；本节题为其下位论题	none
+V48.1.10.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.10.2	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Get rid of gdb -k, replace with a separately built kgdb, and build a separate libgdb as well.	none
+V48.1.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“创建期的代码继承与工具来源（2003–2004）”；本节题为其下位论题	none
+V48.1.10.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.10.3	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	OpenSSH updated to 3.9p1 ncurses updated to 5.4 dhcp udpated to 3.0 CVS 1.12.11 base with additional FreeBSD and DragonFly hacks	none
+V48.1.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“创建期的代码继承与工具来源（2003–2004）”；本节题为其下位论题	none
+V48.1.10.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.10.4	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	The most common way to track a release is to use cvsup to track the release sources and then build and install a new world and kernel to keep your system updated.	none
+V48.1.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“创建期与 FreeBSD 的关系（2003–2004）”；本节题为其下位论题	none
+V48.1.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.11.1	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Bring in SHA256 support from FreeBSD.	none
+V48.1.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“创建期与 FreeBSD 的关系（2003–2004）”；本节题为其下位论题	none
+V48.1.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.11.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	CAM sync w/ FreeBSD, plus additional CAM work to fix disconnect races and panics.	none
+V48.1.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“创建期与 FreeBSD 的关系（2003–2004）”；本节题为其下位论题	none
+V48.1.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.11.3	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly provides an opportunity for the BSD base to grow in an entirely different direction from the one taken in the FreeBSD, NetBSD, and OpenBSD series.	none
+V48.1.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“创建期与 FreeBSD 的关系（2003–2004）”；本节题为其下位论题	none
+V48.1.11.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.11.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD has been going through rapid and ever increasing development since the fork.	none
+V48.1.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“与同时期操作系统的比较：FreeBSD 5.x 与 Linux 2.4–2.6”；本节题为其下位论题	none
+V48.1.12.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.1.12.1	发行与项目页一手表述	https://www.freebsd.org/releases/	联网	A	2026-10-30	5.1 (June 9, 2003)	none
+V48.1.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“与同时期操作系统的比较：FreeBSD 5.x 与 Linux 2.4–2.6”；本节题为其下位论题	none
+V48.1.12.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.1.12.2	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	MPSAFE work - Push the BGL deeper into the kernel call stack for many system calls.	none
+V48.1.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“与同时期操作系统的比较：FreeBSD 5.x 与 Linux 2.4–2.6”；本节题为其下位论题	none
+V48.1.12.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.12.3	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	The TCP stack now fully supports the SACK protocol and a large number of bug and performance fixes have gone in, especially in regard to GigE performance over LANs.	none
+V48.1.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“与同时期操作系统的比较：FreeBSD 5.x 与 Linux 2.4–2.6”；本节题为其下位论题	none
+V48.1.12.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.1.12.4	发行与项目页一手表述	https://www.kernel.org/releases.html	联网	A	2026-10-30	This scheme was abandoned after the release of kernel 2.6 and these days pre-release kernels are indicated with "-rc".	none
+V48.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“DragonFly 1.x 发布历史与版本概况（2004–2007）”；本节题为其下位论题	none
+V48.2.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	1.8.0 (January 30, 2007)	none
+V48.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“DragonFly 1.x 发布历史与版本概况（2004–2007）”；本节题为其下位论题	none
+V48.2.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	We backport compatible bug fixes from current development into release branches but we do not generally backport new features.	none
+V48.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“DragonFly 1.x 发布历史与版本概况（2004–2007）”；本节题为其下位论题	none
+V48.2.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	Version Date Comments 1.2.0 08-Apr-2005 RELEASE CD 1.2.1 22-Apr-2005 (unspecified)	none
+V48.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“DragonFly 1.x 发布历史与版本概况（2004–2007）”；本节题为其下位论题	none
+V48.2.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	1.10.x : 1.10.1 (August 21, 2007) 1.10.0 (August 6, 2007)	none
+V48.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“DragonFly 1.0 发布（2004）”；本节题为其下位论题	none
+V48.2.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	1.0.x : 1.0A (July 14, 2004) 1.0 (July 12, 2004)	none
+V48.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“DragonFly 1.0 发布（2004）”；本节题为其下位论题	none
+V48.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.2.2	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212809.html	联网	A	2026-10-30	And that is just the tip of the iceberg, we will be doing far more in the coming year!	none
+V48.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“DragonFly 1.0 发布（2004）”；本节题为其下位论题	none
+V48.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.2.3	发行与项目页一手表述	http://lists.dragonflybsd.org/pipermail/kernel/2004-July/212852.html	联网	A	2026-10-30	xdelta binary patch to convert a 1.0 ISO into a 1.0A ISO (/usr/ports/misc/xdelta).	none
+V48.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“DragonFly 1.0 发布（2004）”；本节题为其下位论题	none
+V48.2.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	1.0A (July 14, 2004)	none
+V48.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“DragonFly 1.x 时期贡献者构成与 committer 变化（2004–2007）”；本节题为其下位论题	none
+V48.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Foy <liamfoy@> Robert Garrett <rob@> Jordan Gordeev <smtms@> Samuel J.	none
+V48.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“DragonFly 1.x 时期贡献者构成与 committer 变化（2004–2007）”；本节题为其下位论题	none
+V48.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.3.2	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	There are no restrictions on who can contribute or how you can contribute, other than peer standards.	none
+V48.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“DragonFly 1.x 时期贡献者构成与 committer 变化（2004–2007）”；本节题为其下位论题	none
+V48.2.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.2.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Project Leader Matthew Dillon is known for creating the DICE C compiler on the Amiga, and later co-founding BEST Internet in San Francisco.	none
+V48.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“DragonFly 1.x 时期贡献者构成与 committer 变化（2004–2007）”；本节题为其下位论题	none
+V48.2.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.3.4	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
+V48.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“消息传递模型与传统 Unix 内核线程模型比较”；本节题为其下位论题	none
+V48.2.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	The scheduler abstraction has been split up into two layers.	none
+V48.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“消息传递模型与传统 Unix 内核线程模型比较”；本节题为其下位论题	none
+V48.2.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.2.4.2	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	The LWKT (Light Weight Kernel Thread) scheduler is used by the kernel to schedule all executable entities.	none
+V48.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“消息传递模型与传统 Unix 内核线程模型比较”；本节题为其下位论题	none
+V48.2.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.4.3	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	The User Thread Scheduler is a separate scheduler which selects one user thread at a time for each CPU and schedules it using the LWKT scheduler.	none
+V48.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“消息传递模型与传统 Unix 内核线程模型比较”；本节题为其下位论题	none
+V48.2.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.2.4.4	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	The old rfork(2) mechanism still exists but is no longer used.	none
+V48.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“同期批评与回应（2004–2007）”；本节题为其下位论题	none
+V48.2.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/release30/	联网	A	2026-10-30	Remaining issues - The DragonFly bug tracker mentions some issues still known but not fully diagnosed at time of release.	none
+V48.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“同期批评与回应（2004–2007）”；本节题为其下位论题	none
+V48.2.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.5.2	发行与项目页一手表述	https://www.dragonflybsd.org/release26/	联网	A	2026-10-30	DragonFly 2.6.x Special Installation and Upgrade Notes 2.6.3 - 2.6.3 is a stabilization and pkgsrc compatibility pass.	none
+V48.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“同期批评与回应（2004–2007）”；本节题为其下位论题	none
+V48.2.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.5.3	发行与项目页一手表述	https://www.dragonflybsd.org/release24/	联网	A	2026-10-30	The DVD ISO HAMMER install has bugs (see Known Release Issues ).	none
+V48.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“同期批评与回应（2004–2007）”；本节题为其下位论题	none
+V48.2.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.2.5.4	发行与项目页一手表述	https://www.dragonflybsd.org/release22/	联网	A	2026-10-30	HAMMER changes HAMMER VFS: Added missing hammer_rel_volume() call in deadlock/retry case.	none
+V48.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DragonFly 1.x 技术路线调整与代码重构（2004–2007）”；本节题为其下位论题	none
+V48.2.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.2.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Major cleanup of the LWKT token code.	none
+V48.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DragonFly 1.x 技术路线调整与代码重构（2004–2007）”；本节题为其下位论题	none
+V48.2.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Major BUF/BIO work - make the entire BUF/BIO subsystem BIO centric.	none
+V48.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DragonFly 1.x 技术路线调整与代码重构（2004–2007）”；本节题为其下位论题	none
+V48.2.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Replace many instances where LWKT tokens are used with spinlocks.	none
+V48.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“DragonFly 1.x 技术路线调整与代码重构（2004–2007）”；本节题为其下位论题	none
+V48.2.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.2.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Add cpu-binding support to the scheduler and add a system call to access it.	none
+V48.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“漏洞响应体系与安全维护”；本节题为其下位论题	none
+V48.2.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.7.1	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	1.2.4 07-Jul-2005 Wildcard expansion bug in /bin/sh, bzip2 security issue, core dumping to NFS mounts, updated leapseconds, bridging fixes.	none
+V48.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“漏洞响应体系与安全维护”；本节题为其下位论题	none
+V48.2.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	OpenSSH was updated to version 5.0p1.	none
+V48.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“漏洞响应体系与安全维护”；本节题为其下位论题	none
+V48.2.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.7.3	发行与项目页一手表述	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	A mailing list subscription is not necessary to post a bug report when you access the bugs database via bugs.dragonflybsd.org .	none
+V48.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“漏洞响应体系与安全维护”；本节题为其下位论题	none
+V48.2.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/release12/	联网	A	2026-10-30	A detailed commit history is available.	none
+V48.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“FreeBSD 代码继承与 nullfs 等 BSD 遗产”；本节题为其下位论题	none
+V48.2.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.8.1	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	It supports arbitrary mount points that do not loop, a problem on other operating systems, making it extremely flexible in its application.	none
+V48.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“FreeBSD 代码继承与 nullfs 等 BSD 遗产”；本节题为其下位论题	none
+V48.2.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.8.2	发行与项目页一手表述	https://www.dragonflybsd.org/release26/	联网	A	2026-10-30	DragonFly 2.6.1 Release Notes Release Improvements Kernel changes Ported tmpfs (efficient memory filesystem) from NetBSD Added support for minidumps Added swapcache support for SSDs Ported POSIX Message Queues from NetBSD (Google Summer of Code Project).	none
+V48.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“FreeBSD 代码继承与 nullfs 等 BSD 遗产”；本节题为其下位论题	none
+V48.2.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.8.3	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	Rearrange the VFS code such that VOP_OPEN is now responsible for assocating a VM object with a vnode.	none
+V48.2.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“FreeBSD 代码继承与 nullfs 等 BSD 遗产”；本节题为其下位论题	none
+V48.2.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.2.8.4	发行与项目页一手表述	https://www.dragonflybsd.org/release16/	联网	A	2026-10-30	The mechanisms are too crude to co-exist with upcoming cache coherency management work and the original implementation hacked up the NFS code pretty severely.	none
+V48.2.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“与同时期操作系统的比较：FreeBSD 5.x–6.x 与 Linux 2.6”；本节题为其下位论题	none
+V48.2.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.9.1	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	Process and thread components now scale to at least a million user processes or threads, given sufficient physical memory to support that much (around 128GB minimum for one million processes).	none
+V48.2.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“与同时期操作系统的比较：FreeBSD 5.x–6.x 与 Linux 2.6”；本节题为其下位论题	none
+V48.2.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.9.2	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	Because memory management is fully SMP-aware, a multi-core system can literally allocate and free memory at a rate in the multiple gigabytes/sec range.	none
+V48.2.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“与同时期操作系统的比较：FreeBSD 5.x–6.x 与 Linux 2.6”；本节题为其下位论题	none
+V48.2.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.9.3	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	Given a machine with sufficient capability, hundreds of thousands of concurrent TCP sockets can operate efficiently and packet routing capabilities are very high.	none
+V48.2.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“与同时期操作系统的比较：FreeBSD 5.x–6.x 与 Linux 2.6”；本节题为其下位论题	none
+V48.2.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.2.9.4	发行与项目页一手表述	https://www.freebsd.org/releases/	联网	A	2026-10-30	6.0 (November 4, 2005)	none
+V48.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“DragonFly 2.x 发布历史与版本概况（2008–2011）”；本节题为其下位论题	none
+V48.3.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	2.2.0 (February 17, 2009)	none
+V48.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“DragonFly 2.x 发布历史与版本概况（2008–2011）”；本节题为其下位论题	none
+V48.3.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	DragonFly 2.0 Release Notes HAMMER filesystem released!	none
+V48.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“DragonFly 2.x 发布历史与版本概况（2008–2011）”；本节题为其下位论题	none
+V48.3.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/release26/	联网	A	2026-10-30	2.6.2 - Users running a late 2.5 or the 2.6.1 release are urged to upgrade to 2.6.2 or later as soon as possible.	none
+V48.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“DragonFly 2.x 发布历史与版本概况（2008–2011）”；本节题为其下位论题	none
+V48.3.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.3.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/release22/	联网	A	2026-10-30	Security updates FreeBSD-SA-09:05.telnet - fix environment based code execution vulnerability DragonFly 2.2.0 Release Notes Release Improvements A new DVD ISO release image is now available, in addition to the CD release.	none
+V48.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“HAMMER 文件系统设计目标”；本节题为其下位论题	none
+V48.3.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This filesystem has been designed to solve numerous issues and to add many new capabilities to DragonFly, such as fine-grained history retention (snapshots), instant crash recovery, and near real-time mirroring.	none
+V48.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“HAMMER 文件系统设计目标”；本节题为其下位论题	none
+V48.3.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.2.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Crash recovery on-mount, no fsck.	none
+V48.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“HAMMER 文件系统设计目标”；本节题为其下位论题	none
+V48.3.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.3.2.3	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	A single HAMMER file system can be up to 1 exabyte in size, and can encompass up to 256 volumes, each of which can be up to 4 petabytes (4096 terabytes).	none
+V48.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“HAMMER 文件系统设计目标”；本节题为其下位论题	none
+V48.3.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.3.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Mirroring: Queueless incremental mirroring, master to multi-slave.	none
+V48.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“HAMMER 架构与实现”；本节题为其下位论题	none
+V48.3.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Snapshots are indexed by the on-media B-Tree and are extremely storage-efficient.	none
+V48.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“HAMMER 架构与实现”；本节题为其下位论题	none
+V48.3.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.3.3.2	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Backups and history HAMMER file systems can be split up into multiple pseudo-file systems, or PFSs.	none
+V48.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“HAMMER 架构与实现”；本节题为其下位论题	none
+V48.3.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Snapshots and history require significantly different space management than usual, and HAMMER will recover space based on each PFS's pruning schedule.	none
+V48.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“HAMMER 架构与实现”；本节题为其下位论题	none
+V48.3.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.3.4	发行与项目页一手表述	https://www.dragonflybsd.org/release24/	联网	A	2026-10-30	Add a B-Tree rebalancing feature (hammer rebalance).	none
+V48.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“快照、历史记录与数据一致性模型”；本节题为其下位论题	none
+V48.3.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	The state of the filesystem can be accessed live on 30-60 second boundaries without having to make explicit snapshots, up to a configurable fine-grained retention time.	none
+V48.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“快照、历史记录与数据一致性模型”；本节题为其下位论题	none
+V48.3.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.4.2	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	By default the system cron generates one snapshot a day and retains 60 days worth.	none
+V48.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“快照、历史记录与数据一致性模型”；本节题为其下位论题	none
+V48.3.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.3.4.3	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Data and meta-data is CRC-checked for integrity.	none
+V48.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“快照、历史记录与数据一致性模型”；本节题为其下位论题	none
+V48.3.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.4.4	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	A convenient undo command is provided for single-file history, diffs, and extractions.	none
+V48.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“HAMMER 与 ZFS、Btrfs 的同期比较”；本节题为其下位论题	none
+V48.3.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.3.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Multi-volume, maximum storage capacity of 1-Exabyte.	none
+V48.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“HAMMER 与 ZFS、Btrfs 的同期比较”；本节题为其下位论题	none
+V48.3.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.5.2	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Coarse-grained history is controlled by snapshots.	none
+V48.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“HAMMER 与 ZFS、Btrfs 的同期比较”；本节题为其下位论题	none
+V48.3.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.5.3	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	1 master PFS can stream backups to any number of slave PFSs.	none
+V48.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“HAMMER 与 ZFS、Btrfs 的同期比较”；本节题为其下位论题	none
+V48.3.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.5.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	From 2009 onward many developers have focused on SMP scalability while others have put an emphasis on new feature development and driver porting.	none
+V48.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“贡献者构成与开发结构”；本节题为其下位论题	none
+V48.3.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	many developers have focused on SMP scalability while others have put an emphasis on new feature development and driver porting.	none
+V48.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“贡献者构成与开发结构”；本节题为其下位论题	none
+V48.3.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Hardware changes (Networking) A double-ton of work on wireless drivers (by Sephe) A double-ton of work on ethernet drivers (by Sephe) Good progress made on removing the BGL from the network paths.	none
+V48.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“贡献者构成与开发结构”；本节题为其下位论题	none
+V48.3.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	no restrictions on who can contribute or how you can contribute, other than peer standards.	none
+V48.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“贡献者构成与开发结构”；本节题为其下位论题	none
+V48.3.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/release24/	联网	A	2026-10-30	Load testing using parallel pkgsrc bulk builds succeeded!	none
+V48.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“同期批评与回应（2008–2011）”；本节题为其下位论题	none
+V48.3.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.7.1	发行与项目页一手表述	https://www.dragonflybsd.org/release26/	联网	A	2026-10-30	2.6.2 fixes a serious HAMMER filesystem corruption bug related to reblocking full or nearly full HAMMER filesystems.	none
+V48.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“同期批评与回应（2008–2011）”；本节题为其下位论题	none
+V48.3.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/release30/	联网	A	2026-10-30	HAMMER on smaller disk drives is possible but requires careful pruning to keep from filling the disk with file history.	none
+V48.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“同期批评与回应（2008–2011）”；本节题为其下位论题	none
+V48.3.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.7.3	发行与项目页一手表述	https://www.dragonflybsd.org/release30/	联网	A	2026-10-30	HAMMER's behavior in very low memory configurations has also improved; it will no longer readily starve a system of kernel allocation space.	none
+V48.3.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“同期批评与回应（2008–2011）”；本节题为其下位论题	none
+V48.3.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/release22/	联网	A	2026-10-30	HAMMER changes HAMMER is now considered production-capable.	none
+V48.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“DragonFly 2.x 维护收缩与技术路线调整（2008–2011）”；本节题为其下位论题	none
+V48.3.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.8.1	发行与项目页一手表述	https://www.dragonflybsd.org/release26/	联网	A	2026-10-30	HAMMER - Our filesystem now supports a REDO log on top of the UNDO log it already had.	none
+V48.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“DragonFly 2.x 维护收缩与技术路线调整（2008–2011）”；本节题为其下位论题	none
+V48.3.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.8.2	发行与项目页一手表述	https://www.dragonflybsd.org/release26/	联网	A	2026-10-30	Both i386 and x86_64 binary packages have been upgraded to pkgsrc-2010Q1 for 2.6.3.	none
+V48.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“DragonFly 2.x 维护收缩与技术路线调整（2008–2011）”；本节题为其下位论题	none
+V48.3.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.8.3	发行与项目页一手表述	https://www.dragonflybsd.org/release30/	联网	A	2026-10-30	(2.13 is the development version of DragonFly that became 3.0.) HAMMER performance greatly increased A new time domain multiplexing method has been added to balance storage operation types over long time periods.	none
+V48.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“DragonFly 2.x 维护收缩与技术路线调整（2008–2011）”；本节题为其下位论题	none
+V48.3.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.8.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	During this time a paramount goal was to keep the system updated with regard to the third party applications and base system utilities needed to make any system usable in production.	none
+V48.3.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“漏洞响应与安全实践”；本节题为其下位论题	none
+V48.3.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.9.1	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	BIND was updated to version 9.3.4-P2 fixing a serious security issue.	none
+V48.3.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“漏洞响应与安全实践”；本节题为其下位论题	none
+V48.3.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.9.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Userland changes Add blacklist feature for weak Debian-generated SSH keys.	none
+V48.3.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“漏洞响应与安全实践”；本节题为其下位论题	none
+V48.3.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.3.9.3	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Improved random number operation.	none
+V48.3.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“漏洞响应与安全实践”；本节题为其下位论题	none
+V48.3.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.3.9.4	发行与项目页一手表述	https://www.dragonflybsd.org/release22/	联网	A	2026-10-30	To get a list of all packages, let pkg_search(1) download the summary file for that release: # pkg_search -d DragonFly 2.2.1 Release Notes Kernel changes Fixes for libthread_xu: MAP_STACK and an errno leak.	none
+V48.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“DragonFly 3.x–4.x 发布历史”；本节题为其下位论题	none
+V48.4.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/release30/	联网	A	2026-10-30	2.13 is the development version of DragonFly that became 3.0.) HAMMER performance greatly increased A new time domain multiplexing method has been added to balance storage operation types over long time periods.	none
+V48.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“DragonFly 3.x–4.x 发布历史”；本节题为其下位论题	none
+V48.4.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/release40/	联网	A	2026-10-30	32-bit i386 architecture no longer supported As announced during the 3.8 release, DragonFly BSD is 64-bit only.	none
+V48.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“DragonFly 3.x–4.x 发布历史”；本节题为其下位论题	none
+V48.4.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	3.0.1 (February 22, 2012)	none
+V48.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“DragonFly 3.x–4.x 发布历史”；本节题为其下位论题	none
+V48.4.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	禁日期起头	none
+V48.4.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	3.8.0 (June 4, 2014)	none
+V48.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“HAMMER2 设计目标与开发背景”；本节题为其下位论题	none
+V48.4.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	Hammer2 Status New in this release: Hammer2 supports root mounts, and live dedup.	none
+V48.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“HAMMER2 设计目标与开发背景”；本节题为其下位论题	none
+V48.4.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.4.2.2	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Future and TBD Features HAMMER2 implements a fat blockref in its radix tables which allows for up to a 512-bit hash or cryptographic signature.	none
+V48.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“HAMMER2 设计目标与开发背景”；本节题为其下位论题	none
+V48.4.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.4.2.3	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	In addition, file data compression of a logical block can result in a smaller physical block.	none
+V48.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“HAMMER2 设计目标与开发背景”；本节题为其下位论题	none
+V48.4.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	There also fields reserved for multi-master, master-slave, and other replication and mirroring mechanisms that have not yet been implemented.	none
+V48.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“HAMMER2 架构：blockref、版本化存储、分布式存储愿景”；本节题为其下位论题	none
+V48.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	The radix tree is dynamic in that each entry can dynamically control how many bits it chops off.	none
+V48.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“HAMMER2 架构：blockref、版本化存储、分布式存储愿景”；本节题为其下位论题	none
+V48.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.4.3.2	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Any file less than or equal to 512 bytes stores its data directly in the inode.	none
+V48.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“HAMMER2 架构：blockref、版本化存储、分布式存储愿景”；本节题为其下位论题	none
+V48.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Directory entries are hashed (semi-sorted hash algorithm), and directly embedded in the radix table's blockref structure for maximum performance.	none
+V48.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“HAMMER2 架构：blockref、版本化存储、分布式存储愿景”；本节题为其下位论题	none
+V48.4.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.4.3.4	发行与项目页一手表述	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Because of the block-copy-on-write nature of the filesystem, the filesystem is able to create a snapshot trivially simply by copying the volume header's root block table (4 blockref entries).	none
+V48.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HAMMER2 开发进度与工程争议（2011–2017）”；本节题为其下位论题	none
+V48.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/release34/	联网	A	2026-10-30	HAMMER2 NOTE: HAMMER2 is not operational yet, not even for devs.	none
+V48.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HAMMER2 开发进度与工程争议（2011–2017）”；本节题为其下位论题	none
+V48.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.4.4.2	发行与项目页一手表述	https://www.dragonflybsd.org/release36/	联网	A	2026-10-30	HAMMER2 HAMMER2 is in the system but not ready for use.	none
+V48.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HAMMER2 开发进度与工程争议（2011–2017）”；本节题为其下位论题	none
+V48.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.4.3	发行与项目页一手表述	https://www.dragonflybsd.org/release38/	联网	A	2026-10-30	Development of HAMMER2 is ongoing in DragonFly 3.9.	none
+V48.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“HAMMER2 开发进度与工程争议（2011–2017）”；本节题为其下位论题	none
+V48.4.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.4.4	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Hammer2 Status Development continues but no word yet on a first release.	none
+V48.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“SMP 可扩展性重构”；本节题为其下位论题	none
+V48.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The VM system was finally fine-grain locked all the way down to the pmap in late 2011, resulting in huge performance gains on many-core machines.	none
+V48.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“SMP 可扩展性重构”；本节题为其下位论题	none
+V48.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.5.2	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	In 2013 the PID, PGRP, and SESSION subsystems were SMP-scaled.	none
+V48.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“SMP 可扩展性重构”；本节题为其下位论题	none
+V48.4.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.5.3	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	In 2014 one of the few remaining SMP-critical scalability paths, the fork/exec/exit/wait sequence, including related page-faulting and library mapping, was fully scaled, greatly boosting bulk build performance and concurrency.	none
+V48.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“SMP 可扩展性重构”；本节题为其下位论题	none
+V48.4.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.5.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	Also during this period the network stack underwent a continuous stream of small SMP improvements to the point where today all major protocols, including both ipfw and PF, are fully concurrent with few locking collisions.	none
+V48.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“vkernel 与内核实验环境”；本节题为其下位论题	none
+V48.4.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	VKERNEL - DragonFly implements a virtual kernel feature for running DragonFly kernels in userland inside DragonFly kernels.	none
+V48.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“vkernel 与内核实验环境”；本节题为其下位论题	none
+V48.4.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.4.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	This works similarly to Usermode Linux and allows DragonFly kernels to be debugged as a userland process.	none
+V48.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“vkernel 与内核实验环境”；本节题为其下位论题	none
+V48.4.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	The primary use is to make kernel development easier.	none
+V48.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“vkernel 与内核实验环境”；本节题为其下位论题	none
+V48.4.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Add vknet and vknetd ...	none
+V48.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“3.x–4.0 期 DRM／KMS 引入”；本节题为其下位论题	none
+V48.4.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.7.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	In 2012 FranÃ§ois Tigeot and a dedicated group of helpers began retooling DRM (the graphics subsystem) with an active port from Linux, slowly bringing DragonFly up to modern standards.	none
+V48.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“3.x–4.0 期 DRM／KMS 引入”；本节题为其下位论题	none
+V48.4.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/release40/	联网	A	2026-10-30	Graphics The drm/i915 driver is now mostly based on the Linux 3.8.13 implementation and is no longer similar to the FreeBSD driver.	none
+V48.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“3.x–4.0 期 DRM／KMS 引入”；本节题为其下位论题	none
+V48.4.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.4.7.3	发行与项目页一手表述	https://www.dragonflybsd.org/release40/	联网	A	2026-10-30	Many Linux APIs and data structures have been implemented in the DragonFly kernel in order to reuse as many parts as possible of the Linux drm/i915 code without modifications.	none
+V48.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“3.x–4.0 期 DRM／KMS 引入”；本节题为其下位论题	none
+V48.4.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/release40/	联网	A	2026-10-30	The mach64, mga, r128, savage, sis and tdfx drm drivers have been removed.	none
+V48.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“贡献者构成与 committer 变化”；本节题为其下位论题	none
+V48.4.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.8.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	Major kernel subsystems were also scaled one after another.	none
+V48.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“贡献者构成与 committer 变化”；本节题为其下位论题	none
+V48.4.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.8.2	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Lots of compatibility fixes to headers to improve dports bulk builds.	none
+V48.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“贡献者构成与 committer 变化”；本节题为其下位论题	none
+V48.4.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.8.3	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	other than peer standards.	none
+V48.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“贡献者构成与 committer 变化”；本节题为其下位论题	none
+V48.4.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.8.4	发行与项目页一手表述	https://www.dragonflybsd.org/release38/	联网	A	2026-10-30	Graphics drivers The drm/i915 driver had originally been ported from FreeBSD.	none
+V48.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“同期批评与回应（2011–2017）”；本节题为其下位论题	none
+V48.4.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.9.1	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	As with all benchmarks, the above numbers are indicative only of the specific test performed and to get a true sense of whether or not it will be a benefit to a specific workload it must be tested in that environment.	none
+V48.4.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“同期批评与回应（2011–2017）”；本节题为其下位论题	none
+V48.4.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.9.2	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	Note: single-host pgbench runs like the ones above are not directly useful for estimating PostgreSQL scaling behavior.	none
+V48.4.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“同期批评与回应（2011–2017）”；本节题为其下位论题	none
+V48.4.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.9.3	发行与项目页一手表述	https://www.dragonflybsd.org/release38/	联网	A	2026-10-30	Howewer, many issues remain and thus Xorg still doesn't use the drm/radeon driver by default.	none
+V48.4.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“同期批评与回应（2011–2017）”；本节题为其下位论题	none
+V48.4.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.9.4	发行与项目页一手表述	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	The WANT_HAMMER2 option has to be added to build HAMMER2 pieces.	none
+V48.4.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“vkernel 的中止、恢复与架构实验影响”；本节题为其下位论题	none
+V48.4.10.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.10.1	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Fixes issues with kill -9 on vkernels.	none
+V48.4.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“vkernel 的中止、恢复与架构实验影响”；本节题为其下位论题	none
+V48.4.10.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.10.2	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Implement a cothread API and abstraction for vkernel drivers.	none
+V48.4.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“vkernel 的中止、恢复与架构实验影响”；本节题为其下位论题	none
+V48.4.10.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.10.3	发行与项目页一手表述	https://www.dragonflybsd.org/release20/	联网	A	2026-10-30	Fix issues related to gdb'ing a vkernel.	none
+V48.4.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“vkernel 的中止、恢复与架构实验影响”；本节题为其下位论题	none
+V48.4.10.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.10.4	发行与项目页一手表述	https://www.dragonflybsd.org/release34/	联网	A	2026-10-30	Userland changes Vkernel disk serial numbers and interface MACs can now be set from the command line.	none
+V48.4.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：FreeBSD 9.x–11.x 与 Linux 3.x–4.x”；本节题为其下位论题	none
+V48.4.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.4.11.1	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	The following graph charts the performance of the PostgreSQL 9.3 development version as of late June 2012 on DragonFly BSD 3.0 and 3.2, FreeBSD 9.1, NetBSD 6.0 and Scientific Linux 6.2 running Linux kernel version 2.6.32.	none
+V48.4.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：FreeBSD 9.x–11.x 与 Linux 3.x–4.x”；本节题为其下位论题	none
+V48.4.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.11.2	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	PostgreSQL's scalability in 3.2 far surpasses other BSD-derived codebases and is roughly on par with the Linux kernel (which has been the object of expensive, multi-year optimization efforts).	none
+V48.4.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：FreeBSD 9.x–11.x 与 Linux 3.x–4.x”；本节题为其下位论题	none
+V48.4.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.11.3	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	Since there is no SMP contention, the divergence left over from this is likely caused by memory latency as more and more cpu threads bang on memory at the same time.	none
+V48.4.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“与同时期操作系统的比较：FreeBSD 9.x–11.x 与 Linux 3.x–4.x”；本节题为其下位论题	none
+V48.4.11.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.4.11.4	发行与项目页一手表述	https://www.freebsd.org/releases/	联网	A	2026-10-30	9.0 (January 12, 2012)	none
+V48.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“DragonFly 4.x 发布历史”；本节题为其下位论题	none
+V48.5.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	4.0.0 (November 23, 2014)	none
+V48.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“DragonFly 4.x 发布历史”；本节题为其下位论题	none
+V48.5.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.5.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	4.2.0 (June 29, 2015)	none
+V48.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“DragonFly 4.x 发布历史”；本节题为其下位论题	none
+V48.5.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	4.8.0 (March 27, 2017)	none
+V48.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“DragonFly 4.x 发布历史”；本节题为其下位论题	none
+V48.5.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.5.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	4.4.1 (December 7, 2015)	none
+V48.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“4.x 期 UEFI 与 NVMe 适配（2015–2017）”；本节题为其下位论题	none
+V48.5.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.5.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	NVMe support We now have a NVMe driver (PCIe SSDs).	none
+V48.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“4.x 期 UEFI 与 NVMe 适配（2015–2017）”；本节题为其下位论题	none
+V48.5.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.2.2	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	NVMe support is not in the default kernel, yet.	none
+V48.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“4.x 期 UEFI 与 NVMe 适配（2015–2017）”；本节题为其下位论题	none
+V48.5.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.2.3	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	Please note that a machine's ability to boot from an NVMe device depends on the BIOS, and not DragonFly.	none
+V48.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“4.x 期 UEFI 与 NVMe 适配（2015–2017）”；本节题为其下位论题	none
+V48.5.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	As part of the NVMe driver work we revamped the buffer cache subsystem and a number of other I/O related paths, further reducing lock contention and IPI signalling overheads.	none
+V48.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“4.x 期 DRM 转换完成与遗留问题”；本节题为其下位论题	none
+V48.5.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.5.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	The radeon driver has been updated to match Linux 3.18, and controls for the backlight are available through drm.radeon.backlight.	none
+V48.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“4.x 期 DRM 转换完成与遗留问题”；本节题为其下位论题	none
+V48.5.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.3.2	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Graphics Stabilizes Broadwell and Skylake, bring us up to the Linux 4.6 equivalent DRM.	none
+V48.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“4.x 期 DRM 转换完成与遗留问题”；本节题为其下位论题	none
+V48.5.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.5.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Handle EFI framebuffer passing into DRM, improve syscons VT switching and fix a related deadlock.	none
+V48.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“4.x 期 DRM 转换完成与遗留问题”；本节题为其下位论题	none
+V48.5.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.3.4	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Fix a kernel drm thread priority mistake that allowed user processes to have a higher priority than the drm helper thread.	none
+V48.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“社区结构与贡献模式变化”；本节题为其下位论题	none
+V48.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.5.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The DragonFly BSD community is made up of users and developers that take pride in an operating system that maintains challenging goals and ideals.	none
+V48.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“社区结构与贡献模式变化”；本节题为其下位论题	none
+V48.5.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.4.2	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	This community has no reservation about cutting ties with legacy when it makes sense, preferring a pragmatic, no-nonsense approach to development of the system.	none
+V48.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“社区结构与贡献模式变化”；本节题为其下位论题	none
+V48.5.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.4.3	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The community also takes pride in its openness and innovative spirit, applying patience liberally and always trying to find a means to meet or exceed the performance of our competitors while maintaining our trademark algorithmic simplicity.	none
+V48.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“社区结构与贡献模式变化”；本节题为其下位论题	none
+V48.5.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.4.4	发行与项目页一手表述	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The sign-up process is moderated so an administrator will have to activate your account before it can be used.	none
+V48.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“漏洞响应与维护模型”；本节题为其下位论题	none
+V48.5.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Several OpenSSL imports for security fixes.	none
+V48.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“漏洞响应与维护模型”；本节题为其下位论题	none
+V48.5.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.5.2	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	4.6.1 adds some security fixes and a power management daemon.	none
+V48.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“漏洞响应与维护模型”；本节题为其下位论题	none
+V48.5.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.5.3	发行与项目页一手表述	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	If WPA Supplicant from base is used, there will be a 10-second delay during boot as a message is displayed that strongly recommends that the DPorts version (security/wpa_supplicant) be used instead.	none
+V48.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“漏洞响应与维护模型”；本节题为其下位论题	none
+V48.5.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.5.4	发行与项目页一手表述	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	Clang Status The Clang dport mostly works in DragonFly but is not officially supported for kernel or boot-loader builds until we track down and correct a number of issues with the clang-built boot loader.	none
+V48.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“同期批评与回应（2015–2017）”；本节题为其下位论题	none
+V48.5.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Clang status A starting framework has been added for using clang as the alternate base compiler in DragonFly, to replace gcc 4.7.	none
+V48.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“同期批评与回应（2015–2017）”；本节题为其下位论题	none
+V48.5.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	The Clang dport mostly works in DragonFly but is not officially supported for kernel or boot-loader builds until we track down and correct a number of issues with the clang-built boot loader.	none
+V48.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“同期批评与回应（2015–2017）”；本节题为其下位论题	none
+V48.5.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	Clang can of course be added as a package.	none
+V48.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“同期批评与回应（2015–2017）”；本节题为其下位论题	none
+V48.5.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	Hammer2 Status HAMMER2 is still in-progress and will continue to be for some time.	none
+V48.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“DragonFly 技术遗产与路线评估（2015–2017）”；本节题为其下位论题	none
+V48.5.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.7.1	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	As of 2015 fully accelerated 2D, 3D, and video support is operational with Xorg.	none
+V48.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“DragonFly 技术遗产与路线评估（2015–2017）”；本节题为其下位论题	none
+V48.5.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	Graphics, Video, and Sound have turned DragonFly into quite a nice desktop.	none
+V48.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“DragonFly 技术遗产与路线评估（2015–2017）”；本节题为其下位论题	none
+V48.5.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.7.3	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	From a performance perspective DragonFly's only real competitor these days is Linux.	none
+V48.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“DragonFly 技术遗产与路线评估（2015–2017）”；本节题为其下位论题	none
+V48.5.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly includes many useful features that differentiate it from other operating systems in the same class.	none
+V48.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“与同时期操作系统的比较：FreeBSD 10.x–11.x 与 Linux 4.x”；本节题为其下位论题	none
+V48.5.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.5.8.1	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	Some select benchmarks that represent the general performance attributes of DragonFly are included in this page.	none
+V48.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“与同时期操作系统的比较：FreeBSD 10.x–11.x 与 Linux 4.x”；本节题为其下位论题	none
+V48.5.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.5.8.2	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	With the huge amount of SMP work done since 2012, the entire query path no longer has any SMP contention whatsoever and we expect a roughly linear curve until we run out of CPU cores and start digging into hyperthreads.	none
+V48.5.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“与同时期操作系统的比较：FreeBSD 10.x–11.x 与 Linux 4.x”；本节题为其下位论题	none
+V48.5.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.5.8.3	发行与项目页一手表述	https://www.freebsd.org/releases/	联网	A	2026-10-30	10.0 (January 20, 2014)	none
+V48.5.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“与同时期操作系统的比较：FreeBSD 10.x–11.x 与 Linux 4.x”；本节题为其下位论题	none
+V48.5.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.5.8.4	发行与项目页一手表述	https://www.dragonflybsd.org/features/	联网	A	2026-10-30	The kernel memory manager is somewhat NUMA aware.	none
+V48.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly 5.x 发布历史”；本节题为其下位论题	none
+V48.6.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.6.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	5.0.0 (October 16, 2017)	none
+V48.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly 5.x 发布历史”；本节题为其下位论题	none
+V48.6.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/release50/	联网	A	2026-10-30	Big-ticket items HAMMER2 Preliminary HAMMER2 support has been released into the wild as-of the 5.0 release.	none
+V48.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly 5.x 发布历史”；本节题为其下位论题	none
+V48.6.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	5.4.1 (December 24, 2018)	none
+V48.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“DragonFly 5.x 发布历史”；本节题为其下位论题	none
+V48.6.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	禁日期起头	none
+V48.6.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	5.8.0 (March 3, 2020)	none
+V48.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“HAMMER2 的功能完备（2015–2020）”；本节题为其下位论题	none
+V48.6.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	HAMMER2 HAMMER2 is recommended as the default root filesystem in non-clustered mode.	none
+V48.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“HAMMER2 的功能完备（2015–2020）”；本节题为其下位论题	none
+V48.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.6.2.2	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	DragonFly version 5.4.1 has significant HAMMER2 improvements (meta-consistency protection for snapshots and crashes, better on-media topology) , better WLAN interface handling, and improved WLAN connection with dhcpcd(8).	none
+V48.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“HAMMER2 的功能完备（2015–2020）”；本节题为其下位论题	none
+V48.6.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.2.3	发行与项目页一手表述	https://www.dragonflybsd.org/release50/	联网	A	2026-10-30	The boot loader will support both UFS and HAMMER2 /boot.	none
+V48.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“HAMMER2 的功能完备（2015–2020）”；本节题为其下位论题	none
+V48.6.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.6.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/release50/	联网	A	2026-10-30	DragonFly 5.0 has single-image HAMMER2 support, with live dedup (for cp's), compression, fast recovery, snapshot, and boot support.	none
+V48.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“网络、存储与系统性能改进”；本节题为其下位论题	none
+V48.6.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/release56/	联网	A	2026-10-30	HAMMER2 The filesystem sync code has been rewritten to significantly improve performance.	none
+V48.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“网络、存储与系统性能改进”；本节题为其下位论题	none
+V48.6.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.3.2	发行与项目页一手表述	https://www.dragonflybsd.org/release52/	联网	A	2026-10-30	In particular, HAMMER2, the disk layer, and the NVME controller now support KVABIO.	none
+V48.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“网络、存储与系统性能改进”；本节题为其下位论题	none
+V48.6.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	HAMMER2 now has immediate (async) flush follow-through when the operating system requests it, with write-clustering support at the device level if enabled.	none
+V48.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“网络、存储与系统性能改进”；本节题为其下位论题	none
+V48.6.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.3.4	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	better WLAN interface handling, and improved WLAN connection with dhcpcd(8).	none
+V48.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“DPorts 生态的成熟（2017–2020）”；本节题为其下位论题	none
+V48.6.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.6.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	It is based on FreeBSD's Ports Collection.	none
+V48.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“DPorts 生态的成熟（2017–2020）”；本节题为其下位论题	none
+V48.6.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.4.2	发行与项目页一手表述	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	Big-ticket items dsynth(1) written and added to base, making it more convenient for users to build their own binary repos for DPorts(7) .	none
+V48.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“DPorts 生态的成熟（2017–2020）”；本节题为其下位论题	none
+V48.6.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.6.4.3	发行与项目页一手表述	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	Differences between ports and DPorts are intentionally kept to a minimum, both to maintain familiarity for mutual users of both operating systems and also to leverage the tremendous amount of work the FreeBSD contributors put into ports.	none
+V48.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“DPorts 生态的成熟（2017–2020）”；本节题为其下位论题	none
+V48.6.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.4.4	发行与项目页一手表述	https://www.dragonflybsd.org/docs/howtos/DPortsUsage/	联网	A	2026-10-30	The pkg(8) tool called "pkg" is a modern and fast binary package manager.	none
+V48.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“贡献者结构变化”；本节题为其下位论题	none
+V48.6.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The team is currently working on 2025Q2 .	none
+V48.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“贡献者结构变化”；本节题为其下位论题	none
+V48.6.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.5.2	发行与项目页一手表述	https://www.dragonflybsd.org/release60/	联网	A	2026-10-30	HAMMER2 work continues, with updates from Tomohiro Kusumi.	none
+V48.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“贡献者结构变化”；本节题为其下位论题	none
+V48.6.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.5.3	发行与项目页一手表述	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	DRM (GPU) support continues to improve slowly but steadily.	none
+V48.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“贡献者结构变化”；本节题为其下位论题	none
+V48.6.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.5.4	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	Compiler status gcc 8.0 is the default compiler, for kernel, world, and dports.	none
+V48.6.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“同期批评与回应（2017–2020）”；本节题为其下位论题	none
+V48.6.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/release52/	联网	A	2026-10-30	HAMMER2 H2 has received a very large number of bug fixes and performance improvements.	none
+V48.6.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“同期批评与回应（2017–2020）”；本节题为其下位论题	none
+V48.6.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	HAMMER2 changes in 5.4.2 A HAMMER2 corruption issue has been found: it can ONLY occur during heavy write activity during a bulkfree operation, typically when heavy manipulation of directory entries or inodes occurs.	none
+V48.6.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“同期批评与回应（2017–2020）”；本节题为其下位论题	none
+V48.6.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	Some people have noticed these issues recently, and while they can be cleaned up with manual hammer2 directives after the fact, it was really annoying to have to deal with.	none
+V48.6.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“同期批评与回应（2017–2020）”；本节题为其下位论题	none
+V48.6.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	DragonFly 5.4.2 has a fix for a rare potential HAMMER2 corruption problem .	none
+V48.6.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“漏洞与安全响应”；本节题为其下位论题	none
+V48.6.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.7.1	发行与项目页一手表述	https://www.dragonflybsd.org/release54/	联网	A	2026-10-30	wpa_supplicant is installed via dports, by default, to override the default version in base.	none
+V48.6.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“漏洞与安全响应”；本节题为其下位论题	none
+V48.6.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/release52/	联网	A	2026-10-30	Add hammer2 utilities to initrd for hammer2 crypto bootstrapping and rescue.	none
+V48.6.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“漏洞与安全响应”；本节题为其下位论题	none
+V48.6.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.7.3	发行与项目页一手表述	https://www.dragonflybsd.org/release52/	联网	A	2026-10-30	Games are no longer group-shared, improving security.	none
+V48.6.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“漏洞与安全响应”；本节题为其下位论题	none
+V48.6.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/release56/	联网	A	2026-10-30	This will require updating dports that use the network.	none
+V48.6.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“与同时期操作系统的比较：FreeBSD 11.x–12.x 与 Linux 4.x–5.x”；本节题为其下位论题	none
+V48.6.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.6.8.1	发行与项目页一手表述	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	Filesystems HAMMER2 Fix inode & chain limits in order to avoid kmalloc pool assertions on low-memory machines.	none
+V48.6.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“与同时期操作系统的比较：FreeBSD 11.x–12.x 与 Linux 4.x–5.x”；本节题为其下位论题	none
+V48.6.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.6.8.2	发行与项目页一手表述	https://www.dragonflybsd.org/release56/	联网	A	2026-10-30	With BKVABUF, buffers are no longer as expensive as they used to be, and both HAMMER1 and HAMMER2 cache file data and meta-data via the device node (prior to decompression).	none
+V48.6.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“与同时期操作系统的比较：FreeBSD 11.x–12.x 与 Linux 4.x–5.x”；本节题为其下位论题	none
+V48.6.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.6.8.3	发行与项目页一手表述	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	Fix a number of issues and significantly improve performance by optimizing how HAMMER2 support threads are dispatched.	none
+V48.6.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“与同时期操作系统的比较：FreeBSD 11.x–12.x 与 Linux 4.x–5.x”；本节题为其下位论题	none
+V48.6.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.6.8.4	发行与项目页一手表述	https://www.freebsd.org/releases/	联网	A	2026-10-30	11.0 (October 10, 2016)	none
+V48.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“DragonFly 6.x 发布历史”；本节题为其下位论题	none
+V48.7.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.1.1	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.0.0 (May 10, 2021)	none
+V48.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“DragonFly 6.x 发布历史”；本节题为其下位论题	none
+V48.7.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.7.1.2	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.0 (December 30, 2022)	none
+V48.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“DragonFly 6.x 发布历史”；本节题为其下位论题	none
+V48.7.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.1.3	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.2.1 (January 9, 2022)	none
+V48.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“DragonFly 6.x 发布历史”；本节题为其下位论题	none
+V48.7.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.1.4	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFlyBSD: DragonFly BSD DragonFly BSD Edit Page | RecentChanges | History | Preferences About History Features Performance Team Images Community Download Mirrors Documentation Mailing Lists Source Commercial Donations Bugs Security PGP Keys Exports Hammer DragonFly BSD DragonFly 6.4.2 released DragonFly version 6.4.2 is released.	none
+V48.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“6.0–6.4 系列现代化”；本节题为其下位论题	none
+V48.7.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.2.1	发行与项目页一手表述	https://www.dragonflybsd.org/release60/	联网	A	2026-10-30	This version has a revamped VFS caching system, various filesystem updates including HAMMER2, and a long list of userland updates.	none
+V48.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“6.0–6.4 系列现代化”；本节题为其下位论题	none
+V48.7.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.2.2	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	This version has hardware support for type-2 hypervisors with NVMM, an amdgpu driver, the experimental ability to remote-mount HAMMER2 volumes, and many other changes.	none
+V48.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“6.0–6.4 系列现代化”；本节题为其下位论题	none
+V48.7.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.2.3	发行与项目页一手表述	https://www.dragonflybsd.org/release60/	联网	A	2026-10-30	DRM system now matches Linux 4.10.17.	none
+V48.7.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“6.0–6.4 系列现代化”；本节题为其下位论题	none
+V48.7.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.2.4	发行与项目页一手表述	https://www.dragonflybsd.org/release64/	联网	A	2026-10-30	6.4 packages have already been built and are immediately available.	none
+V48.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“HAMMER2 的持续优化（2021–2026）”；本节题为其下位论题	none
+V48.7.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.3.1	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	Fix excessive memory use during bulkfree.	none
+V48.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“HAMMER2 的持续优化（2021–2026）”；本节题为其下位论题	none
+V48.7.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.3.2	发行与项目页一手表述	https://www.dragonflybsd.org/release64/	联网	A	2026-10-30	hammer2 - Fix chain allocation tracking counter calculation.	none
+V48.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“HAMMER2 的持续优化（2021–2026）”；本节题为其下位论题	none
+V48.7.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.3.3	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	growfs support added to HAMMER2 for changing the size of an existing HAMMER2 volume.	none
+V48.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“HAMMER2 的持续优化（2021–2026）”；本节题为其下位论题	none
+V48.7.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.3.4	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	Remote HAMMER2 disks can be mounted (Experimental!) drm/amdgpu driver imported, matches Linux 4.19 support.	none
+V48.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“NVMM 虚拟化支持”；本节题为其下位论题	none
+V48.7.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.7.4.1	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	Big-ticket items NVMM, a type-2 hypervisor for hardware-supported virtualization, ported to DragonFly.	none
+V48.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“NVMM 虚拟化支持”；本节题为其下位论题	none
+V48.7.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.4.2	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	NVMM under QEMU should now be used for virtualizing DFly.	none
+V48.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“NVMM 虚拟化支持”；本节题为其下位论题	none
+V48.7.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.4.3	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	See the NVMM Hypervisor documentation.	none
+V48.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“NVMM 虚拟化支持”；本节题为其下位论题	none
+V48.7.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.4.4	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	The 6.4 series has hardware support for type-2 hypervisors with NVMM, an amdgpu driver, the experimental ability to remote-mount HAMMER2 volumes, and many other changes.	none
+V48.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“amdgpu 与现代图形支持”；本节题为其下位论题	none
+V48.7.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.7.5.1	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	matches Linux 4.19 support.	none
+V48.7.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“amdgpu 与现代图形支持”；本节题为其下位论题	none
+V48.7.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.5.2	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	drm/amd: amdgpu support added through (roughly) the 3400G APU.	none
+V48.7.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“amdgpu 与现代图形支持”；本节题为其下位论题	none
+V48.7.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.5.3	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	drm/ttm updated to match.	none
+V48.7.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“amdgpu 与现代图形支持”；本节题为其下位论题	none
+V48.7.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.5.4	发行与项目页一手表述	https://www.dragonflybsd.org/release64/	联网	A	2026-10-30	fix ipv6 crash (6.4.2) Graphics drm - Retry page fault handler on buffer data in-transit, fixing an Xorg crash on certain monitor connect/disconnect events.	none
+V48.7.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“6.x 期服务器硬件与固件支持（2021–2026）”；本节题为其下位论题	none
+V48.7.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	每条标题至少两源；专名、标准号、年代题至少三源	none
+V48.7.6.1	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	Filesystems multiple checks added to fdisk growfs support improved in HAMMER2 usr.sbin/fstyp: Add BeFS support makefs: Add FAT support (taken from FreeBSD) hammer2 - Fix excessive memory use during bulkfree.	none
+V48.7.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“6.x 期服务器硬件与固件支持（2021–2026）”；本节题为其下位论题	none
+V48.7.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.6.2	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	multiple checks added to fdisk growfs support improved in HAMMER2 usr.sbin/fstyp: Add BeFS support makefs: Add FAT support (taken from FreeBSD) hammer2 - Fix excessive memory use during bulkfree.	none
+V48.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“6.x 期服务器硬件与固件支持（2021–2026）”；本节题为其下位论题	none
+V48.7.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.6.3	发行与项目页一手表述	https://www.dragonflybsd.org/release60/	联网	A	2026-10-30	Filesystems HAMMER2 - multiple cleanups and fixes HAMMER2 - initial multi-volume support (multi-local disk, not networked multi-master) HAMMER2 - Fix rename over empty directory issue.	none
+V48.7.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“6.x 期服务器硬件与固件支持（2021–2026）”；本节题为其下位论题	none
+V48.7.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.6.4	发行与项目页一手表述	https://www.dragonflybsd.org/download/	联网	A	2026-10-30	Download live image 64-bit DragonFly BSD is 64-bit only .	none
+V48.7.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“riscv64 与未来平台讨论”；本节题为其下位论题	none
+V48.7.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.7.1	发行与项目页一手表述	https://www.dragonflybsd.org/download/	联网	A	2026-10-30	Download live image 64-bit	none
+V48.7.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“riscv64 与未来平台讨论”；本节题为其下位论题	none
+V48.7.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.7.2	发行与项目页一手表述	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	Mailing lists DragonFly uses Mailman to manage all mailing lists.	none
+V48.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“riscv64 与未来平台讨论”；本节题为其下位论题	none
+V48.7.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.7.3	发行与项目页一手表述	https://lists.dragonflybsd.org/	联网	A	2026-10-30	Each list is organized by year and month, available ordered by thread or by date.	none
+V48.7.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“riscv64 与未来平台讨论”；本节题为其下位论题	none
+V48.7.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.7.4	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	only real competitor these days is Linux.	none
+V48.7.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“生成式 AI 工具在提交与评审中的使用争议（2022–2026）”；本节题为其下位论题	none
+V48.7.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.8.1	发行与项目页一手表述	https://lists.dragonflybsd.org/	联网	A	2026-10-30	DragonFly BSD Mailing List Archives The DragonFly BSD Mailing List Archives This page archives posts on the DragonFly BSD mailing lists/newsgroups.	none
+V48.7.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“生成式 AI 工具在提交与评审中的使用争议（2022–2026）”；本节题为其下位论题	none
+V48.7.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.7.8.2	发行与项目页一手表述	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Code generated by a large language model or similar technology, such as GitHub/Microsoft's Copilot, OpenAI's ChatGPT, or Facebook/Meta's Code Llama, is presumed to be tainted code, and must not be committed without prior written approval by core.	none
+V48.7.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“生成式 AI 工具在提交与评审中的使用争议（2022–2026）”；本节题为其下位论题	none
+V48.7.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.8.3	发行与项目页一手表述	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	without prior written approval by core.	none
+V48.7.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“生成式 AI 工具在提交与评审中的使用争议（2022–2026）”；本节题为其下位论题	none
+V48.7.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.8.4	发行与项目页一手表述	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	when taking code that was submitted with a problem report), ask a developer who is familiar with that part of the system for review.	none
+V48.7.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“贡献者与 committer 结构变迁（2022–2026）”；本节题为其下位论题	none
+V48.7.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.9.1	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Here's the list but it may be incomplete.	none
+V48.7.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“贡献者与 committer 结构变迁（2022–2026）”；本节题为其下位论题	none
+V48.7.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.9.2	发行与项目页一手表述	https://www.dragonflybsd.org/release62/	联网	A	2026-10-30	hammer2 - Fix freemap accounting that could lead to incorrect filesystem full situations.	none
+V48.7.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“贡献者与 committer 结构变迁（2022–2026）”；本节题为其下位论题	none
+V48.7.9.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.9.3	发行与项目页一手表述	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	dsynth is used to build some or all of the DPorts collection, over 25000 third-party packages.	none
+V48.7.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“贡献者与 committer 结构变迁（2022–2026）”；本节题为其下位论题	none
+V48.7.9.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.9.4	发行与项目页一手表述	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	To send an email to one of the committers append dragonflybsd.org .	none
+V48.7.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 10 节“漏洞响应综览与长期维护”；本节题为其下位论题	none
+V48.7.10.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.10.1	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	6.4.2 adds fixes for the installer, ipv6, and for userland programs that create many subprocesses.	none
+V48.7.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 10 节“漏洞响应综览与长期维护”；本节题为其下位论题	none
+V48.7.10.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.10.2	发行与项目页一手表述	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.2 (May 9, 2025)	none
+V48.7.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 10 节“漏洞响应综览与长期维护”；本节题为其下位论题	none
+V48.7.10.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.10.3	发行与项目页一手表述	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	Subscribers to these lists will receive all output, but to post to those lists, you need to have an account.	none
+V48.7.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 10 节“漏洞响应综览与长期维护”；本节题为其下位论题	none
+V48.7.10.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.10.4	发行与项目页一手表述	https://www.dragonflybsd.org/release64/	联网	A	2026-10-30	Panics when using ipv6 under certain circumstances are fixed.	none
+V48.7.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 11 节“与同时期操作系统的比较：FreeBSD、NetBSD、OpenBSD 与 Linux”；本节题为其下位论题	none
+V48.7.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.11.1	发行与项目页一手表述	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly belongs to the same class of operating systems as other BSD-derived systems and Linux.	none
+V48.7.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 11 节“与同时期操作系统的比较：FreeBSD、NetBSD、OpenBSD 与 Linux”；本节题为其下位论题	none
+V48.7.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	同节平行：同节内题名句式、粒度相当	none
+V48.7.11.2	发行与项目页一手表述	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	Newer, better versions can be found in dports and ours was getting crufy.	none
+V48.7.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 11 节“与同时期操作系统的比较：FreeBSD、NetBSD、OpenBSD 与 Linux”；本节题为其下位论题	none
+V48.7.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.11.3	发行与项目页一手表述	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	While full cache coherency is no longer a top level goal, filesystem coherency is, and that direction continues to guide the project in a number of ways.	none
+V48.7.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 11 节“与同时期操作系统的比较：FreeBSD、NetBSD、OpenBSD 与 Linux”；本节题为其下位论题	none
+V48.7.11.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	论题名词短语	none
+V48.7.11.4	发行与项目页一手表述	https://www.dragonflybsd.org/performance/	联网	A	2026-10-30	roughly on par with the Linux kernel (which has been the object of expensive, multi-year optimization efforts).	none

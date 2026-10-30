@@ -489,7 +489,7 @@ V45.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V45.5.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“路由软件的作者与代际”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.3.3	OpenBGPD 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	OpenBGPD including bgpd(8) and bgpctl(8) : Written by Claudio Jeker and Henning Brauer. Imported December 17, 2003 and first released with OpenBSD 3.5.	none
 V45.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenIKED 与 IKE／IPsec 实现”；本条为第 1 条下位论题（去空格 12 字）	none
-V45.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“IKEv2 守护的双向职责”去空格 12 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“IKEv2 守护的双向任务”去空格 12 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.4.1	iked 描述句	https://man.openbsd.org/iked	联网	A	2026-10-30	iked is an Internet Key Exchange (IKEv2) daemon which performs mutual authentication and which establishes and maintains IPsec flows and security associations (SAs) between the two peers.	none
 V45.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenIKED 与 IKE／IPsec 实现”；本条为第 2 条下位论题（去空格 9 字）	none
 V45.5.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二丙 关系／比较族，题名“协议标准的合并关系”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
@@ -504,8 +504,8 @@ V45.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V45.5.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“源验证状态的通告”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.5.2	RFC 8097 参考	https://man.openbsd.org/bgpd	联网	A	2026-10-30	BGP Prefix Origin Validation State Extended Community , RFC 8097 , March 2017 .	none
 V45.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“rpki-client 与路由源验证”；本条为第 3 条下位论题（去空格 9 字）	none
-V45.5.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“验证工具的导入时节”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.5.5.3	rpki-client 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	rpki-client(8) : Started by Kristaps Dzonsons. Imported June 17, 2019; released with OpenBSD 6.7.	none
+V45.5.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“验证工具的启用时机”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.5.5.3	rpki-client 启用句	https://www.openbsd.org/67.html	联网	A	2026-10-30	Enabled rpki-client(8) , a free, easy-to-use implementation of the Resource Public Key Infrastructure (RPKI) for Relying Parties (RP) to facilitate validation of the Route Origin of a BGP announcement.	none
 V45.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“网络协议实现中的最小权限设计”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.5.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“分离程序的派生执行”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.6.1	fork+exec 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Implemented first by Damien Miller ( sshd(8) 2004), Claudio Jeker ( bgpd(8) , 2015), Eric Faurot ( smtpd(8) , 2016), Rafael Zalamena (various, 2016), and others.	none
@@ -615,7 +615,7 @@ V45.6.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V45.6.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“chroot 内的证书访问”去空格 12 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.6.8.3	chroot 证书句	https://www.openbsd.org/57.html	联网	A	2026-10-30	This facilitates accessing certificates from a chrooted environment.	none
 V45.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“TLS 协议实现与证书验证”；本条为第 1 条下位论题（去空格 11 字）	none
-V45.6.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“证书检查工具的入树轨迹”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.6.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“证书检查工具的入树年份”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.6.9.1	ocspcheck 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	ocspcheck(8) : Written by Bob Beck. Imported January 24, 2017; released with OpenBSD 6.1.	none
 V45.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“TLS 协议实现与证书验证”；本条为第 2 条下位论题（去空格 8 字）	none
 V45.6.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“重协商入口的关闭”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
@@ -635,9 +635,9 @@ V45.6.10.3	freezero 条	https://www.openbsd.org/innovations.html	联网	A	2026-1
 V45.6.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“随机数、密钥处理与系统安全”；本条为第 4 条下位论题（去空格 9 字）	none
 V45.6.10.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“密钥缓冲的蒙面分配”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.6.10.4	malloc_conceal 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	malloc_conceal(3) and calloc_conceal(3) : Otto Moerbeek, May 10, 2019, OpenBSD 6.5	none
-V45.6.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 11 节“OpenSSH 与 LibreSSL 的维护模式”；本条为第 1 条下位论题（去空格 8 字）	none
-V45.6.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“维护者的接续名单”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.6.11.1	OpenSSH 维护者条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Now maintained by Markus Friedl, Damien Miller, Darren Tucker, and Theo de Raadt.	none
+V45.6.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 11 节“OpenSSH 与 LibreSSL 的维护模式”；本条为第 1 条下位论题（去空格 10 字）	none
+V45.6.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“早期开发者的集中署名”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.6.11.1	早期开发者署名句	https://www.openssh.com/history.html	联网	A	2026-10-30	As of that time, most OpenSSH development had been done by Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt, and Dug Song.	none
 V45.6.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 11 节“OpenSSH 与 LibreSSL 的维护模式”；本条为第 2 条下位论题（去空格 9 字）	none
 V45.6.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“财政支撑的归属主体”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.6.11.2	财政支撑句	https://www.libressl.org/	联网	A	2026-10-30	LibreSSL is supported financially by the OpenBSD Foundation and the OpenBSD Project .	none
@@ -709,13 +709,13 @@ V45.7.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与�
 V45.7.6.2	hints 文件句	https://man.openbsd.org/ld.so	联网	A	2026-10-30	To quickly locate the required shared objects in the filesystem, ld.so may use a “hints” file, prepared by the ldconfig(8) utility, in which the full path specification of the shared objects can be looked up by hashing on the 3-tuple ⟨library-name, major-version-number, minor-version-number⟩.	none
 V45.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“ld.so 与动态链接器安全”；本条为第 3 条下位论题（去空格 11 字）	none
 V45.7.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“多线程惰性绑定的新调用”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.7.6.3	kbind 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	A new syscall kbind(2) permits lazy-binding to be W^X safe in multi-threaded programs.	none
+V45.7.6.3	kbind 惰性绑定句	https://www.openbsd.org/59.html	联网	A	2026-10-30	Perform lazy binding updates in ld.so(1) using kbind(2) to improve security and reduce overhead in threaded processes.	none
 V45.7.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“PIE、Static PIE 与位置无关代码”；本条为第 1 条下位论题（去空格 12 字）	none
 V45.7.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“位置无关可执行件的实现者”去空格 12 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.7.7.1	PIE 实现句	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Implemented in November 2008 by Kurt Miller and enabled by default by Pascal Stumpf in August 2012.	none
 V45.7.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“PIE、Static PIE 与位置无关代码”；本条为第 2 条下位论题（去空格 11 字）	none
-V45.7.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“静态二进制的位置无关化”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.7.7.2	Static-PIE 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Static-PIE : Position-independent static binaries for /bin, /sbin and ramdisks.	none
+V45.7.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“静态链接件的位置随机化”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.7.7.2	static PIE 句	https://www.openbsd.org/57.html	联网	A	2026-10-30	All architectures have been transitioned to static PIE, meaning the statically linked binaries in /bin and /sbin now have randomly located text segments.	none
 V45.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“PIE、Static PIE 与位置无关代码”；本条为第 3 条下位论题（去空格 8 字）	none
 V45.7.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“静态版的落地版本”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.7.7.3	Static-PIE 实现句	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Implemented for OpenBSD 5.7 by Kurt Miller and Mark Kettenis.	none
@@ -809,9 +809,9 @@ V45.8.6.1	signify 定位句	https://man.openbsd.org/signify	联网	A	2026-10-30	
 V45.8.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“signify 与软件验证”；本条为第 2 条下位论题（去空格 8 字）	none
 V45.8.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“完整性的最小承诺”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.8.6.2	signify 完整性句	https://man.openbsd.org/signify	联网	A	2026-10-30	A signature verifies the integrity of a message .	none
-V45.8.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“signify 与软件验证”；本条为第 3 条下位论题（去空格 9 字）	none
-V45.8.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二丁 事件／节点族，题名“验证工具的入树时点”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.8.6.3	signify 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	signify(1) : Written by Ted Unangst . Imported December 31, 2013 and first released with OpenBSD 5.5.	none
+V45.8.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“signify 与软件验证”；本条为第 3 条下位论题（去空格 10 字）	none
+V45.8.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“发行物与包的签名覆盖”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.8.6.3	发行签名句	https://www.openbsd.org/55.html	联网	A	2026-10-30	Releases and packages are now cryptographically signed with the signify(1) utility.	none
 V45.8.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“基本系统更新机制”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.8.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“补丁工具的四项动作”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.8.7.1	syspatch 定位句	https://man.openbsd.org/syspatch	联网	A	2026-10-30	syspatch is a utility to fetch, verify, install and revert OpenBSD binary patches.	none
@@ -820,7 +820,7 @@ V45.8.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与�
 V45.8.7.2	回滚包句	https://man.openbsd.org/syspatch	联网	A	2026-10-30	When run without any options, syspatch will apply all missing patches, creating a rollback tarball containing the files it is about to replace, then extracting and installing all files contained in the syspatch tarball.	none
 V45.8.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“基本系统更新机制”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.8.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“二进制更新工具的入树”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.8.7.3	syspatch 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	syspatch(8) : Written by Antoine Jacoutot. Imported September 5, 2016; released with OpenBSD 6.1.	none
+V45.8.7.3	syspatch 入树句	https://www.openbsd.org/61.html	联网	A	2026-10-30	Assorted improvements: New syspatch(8) utility for security and reliability binary updates to the base system.	none
 V45.8.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“基本系统与 ports 的技术边界”；本条为第 1 条下位论题（去空格 13 字）	none
 V45.8.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“Ports 树的基础设施职能”去空格 13 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.8.8.1	ports 定位句	https://man.openbsd.org/ports	联网	A	2026-10-30	The OpenBSD Ports Collection is the infrastructure used to create binary packages for third party applications.	none
@@ -872,9 +872,9 @@ V45.9.3.2	relayd 用途句	https://man.openbsd.org/relayd	联网	A	2026-10-30	It
 V45.9.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“relayd 与代理、负载均衡”；本条为第 3 条下位论题（去空格 8 字）	none
 V45.9.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二乙 结构／构成族，题名“可用性探测的分组”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.9.3.3	可用性探测句	https://man.openbsd.org/relayd	联网	A	2026-10-30	The daemon is able to monitor groups of hosts for availability, which is determined by checking for a specific service common to a host group.	none
-V45.9.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“relayd 与代理、负载均衡”；本条为第 4 条下位论题（去空格 8 字）	none
-V45.9.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“套件的导入与首发”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.9.3.4	relayd 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	relayd(8) with relayctl(8) : Started by Pierre-Yves Ritschard and Reyk Flöter. Imported December 16, 2006 and first released with OpenBSD 4.1.	none
+V45.9.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“relayd 与代理、负载均衡”；本条为第 4 条下位论题（去空格 9 字）	none
+V45.9.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“地址转换中继的实现”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.9.3.4	relayd 动态中继句	https://www.openbsd.org/44.html	联网	A	2026-10-30	Added support for dynamic IPv6-to-IPv4 or IPv4-to-IPv6 TCP relays in relayd(8) .	none
 V45.9.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 4 节“httpd 与基础 Web 服务”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.9.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“服务器的最小功能集”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.9.4.1	httpd 定位句	https://man.openbsd.org/httpd	联网	A	2026-10-30	The httpd daemon is an HTTP server with FastCGI and TLS support.	none
@@ -893,9 +893,9 @@ V45.9.5.1	slowcgi 定位句	https://man.openbsd.org/slowcgi	联网	A	2026-10-30	
 V45.9.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“slowcgi 与 FastCGI 服务架构”；本条为第 2 条下位论题（去空格 11 字）	none
 V45.9.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“常驻进程替代逐请求派生”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.9.5.2	常驻对比句	https://man.openbsd.org/slowcgi	联网	A	2026-10-30	While CGI scripts need to be forked for every request, FastCGI scripts can be kept running and handle many HTTP requests.	none
-V45.9.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“slowcgi 与 FastCGI 服务架构”；本条为第 3 条下位论题（去空格 8 字）	none
-V45.9.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“组件的入树与首发”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.9.5.3	slowcgi 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	slowcgi(8) : Written by Florian Obser. Imported May 23, 2013 and first released with OpenBSD 5.4.	none
+V45.9.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“slowcgi 与 FastCGI 服务架构”；本条为第 3 条下位论题（去空格 9 字）	none
+V45.9.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“并发连接的处理能力”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.9.5.3	slowcgi 并发句	https://www.openbsd.org/55.html	联网	A	2026-10-30	slowcgi(8) now works with a high number of concurrent connections.	none
 V45.9.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 6 节“nsd 与权威 DNS 服务”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.9.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“权威服务的完整覆盖”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.9.6.1	NSD 定位句	https://man.openbsd.org/nsd	联网	A	2026-10-30	NSD is a complete implementation of an authoritative DNS nameserver.	none
@@ -918,8 +918,8 @@ V45.9.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V45.9.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“证书自动化的客户端”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.9.8.1	acme 定位句	https://man.openbsd.org/acme-client	联网	A	2026-10-30	acme-client is an Automatic Certificate Management Environment (ACME) client: it looks in its configuration for a domain section corresponding to the handle given as command line argument and uses that configuration to retrieve an X.509 certificate which can be used to provide domain name validation (i.e. prove that the domain is who it says it is).	none
 V45.9.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“acme-client 与证书自动化”；本条为第 2 条下位论题（去空格 10 字）	none
-V45.9.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“证书工具的入树与首发”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.9.8.2	acme-client 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	acme-client(1) : Written by Kristaps Dzonsons, imported August 31, 2016; released with OpenBSD 6.1.	none
+V45.9.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“证书工具的入树与来源”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.9.8.2	acme-client 导入句	https://www.openbsd.org/61.html	联网	A	2026-10-30	acme-client(1) , a privilege separated Automatic Certificate Management Environment (ACME) client written by Kristaps Dzonsons has been imported.	none
 V45.9.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 9 节“服务程序的权限收缩实践：五类守护进程案例”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.9.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“邮件队列逻辑的重订”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.9.9.1	smtpd 改进句	https://www.openbsd.org/52.html	联网	A	2026-10-30	Various improvements in smtpd(8) : reliability fixes, new MTA client, new scheduler and improved queue logic, simplified smtpd.conf(5) syntax, better RFC compliance and several cosmetic changes.	none
@@ -1124,9 +1124,9 @@ V45.13.3.2	execute-only 条	https://www.openbsd.org/innovations.html	联网	A	20
 V45.13.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 3 节“内存防护、编译器与链接器协同”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.13.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“系统调用桩的返回保护”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.3.3	系统调用桩条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	amd64 system call stubs also protected in OpenBSD 7.3.	none
-V45.13.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“Privilege Separation、pledge 与 unveil 的技术连续性”；本条为第 1 条下位论题（去空格 11 字）	none
-V45.13.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二己 技术／器物族，题名“文件视图接口的入树年份”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.13.4.1	unveil 条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	unveil(2) : Theo de Raadt and Bob Beck, July 13, 2018, OpenBSD 6.4	none
+V45.13.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“Privilege Separation、pledge 与 unveil 的技术连续性”；本条为第 1 条下位论题（去空格 12 字）	none
+V45.13.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二己 技术／器物族，题名“文件视图接口的规模化使用”去空格 12 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.13.4.1	unveil 规模化句	https://www.openbsd.org/67.html	联网	A	2026-10-30	Security improvements: unveil(2) is now used in 82 userland programs to redact filesystem access.	none
 V45.13.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 4 节“Privilege Separation、pledge 与 unveil 的技术连续性”；本条为第 2 条下位论题（去空格 9 字）	none
 V45.13.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“承诺撤销的可见痕迹”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.4.2	承诺撤除句	https://man.openbsd.org/pledge	联网	A	2026-10-30	The limited filesystem access it provided is now disabled, so the promise has been removed and will return EINVAL .	none
@@ -1191,8 +1191,8 @@ V45.13.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录
 V45.13.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“论文与机制的对应”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.11.2	论文入口句	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Some of them are explained in detail in our research papers .	none
 V45.13.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995–2026）”；本条为第 3 条下位论题（去空格 9 字）	none
-V45.13.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“首个特性堆栈的领先”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.13.11.3	IPsec 领先条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	OpenBSD was the first free operating system to provide an IPSec stack.	none
+V45.13.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“首个加密栈的提供者”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.13.11.3	IPsec 首发句	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	OpenBSD was the first operating system to ship with an IPsec stack.	none
 V45.13.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2–7.9（1996–2026）”；本条为第 1 条下位论题（去空格 8 字）	none
 V45.13.12.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“发行物的常规供给”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.12.1	发行与快照句	https://www.openbsd.org/plat.html	联网	A	2026-10-30	new releases always exist, and there are attempts to make snapshots available on a regular basis	none
@@ -1269,7 +1269,7 @@ V45.14.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	
 V45.14.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“手册完备度的署名”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.14.8.1	手册完备句	https://www.openssh.com/history.html	联网	A	2026-10-30	It is mostly due to him that the manual pages are so complete.	none
 V45.14.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 14 章第 8 节“文档工程：man 页极简体例与随代码更新”；本条为第 2 条下位论题（去空格 9 字）	none
-V45.14.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“手册排版工具的定位”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.14.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“手册排版工具的输出”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.14.8.2	mandoc 定位句	https://man.openbsd.org/mandoc	联网	A	2026-10-30	The mandoc utility formats manual pages for display.	none
 V45.14.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 14 章第 8 节“文档工程：man 页极简体例与随代码更新”；本条为第 3 条下位论题（去空格 9 字）	none
 V45.14.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“输入编码的自动识别”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
