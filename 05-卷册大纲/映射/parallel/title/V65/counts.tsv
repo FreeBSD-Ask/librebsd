@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T09:30:00	start	0	0	0	claim 已存在（父会话），本会话续跑
+2026-10-30T22:44:46	draft	59	279	0	parts ch1–ch6 写完并 merge
+2026-10-30T22:44:46	assemble	59	279	274	assemble 首轮 hard=0 warn=11
+2026-10-30T22:44:46	audit	59	279	274	audit_title_consistency 本卷 FAIL 0
+2026-10-30T22:44:46	review	59	279	274	逐条判读 279/279，修正 24
+2026-10-30T22:44:46	report	59	279	274	呈审报告落盘
+2026-10-30T22:44:46	done	59	279	274	ledger_sha256=5c9d43c4dbd6c30d708a864be885c2b93d9584b9421dcccda7c976248fb43204

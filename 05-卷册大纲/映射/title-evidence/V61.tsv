@@ -11,6 +11,7 @@ V61.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V61.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.1.3	setuid 提权机制	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
 V61.1.1.3	root 获取的途径分类	https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7	联网	A	2026-10-30	Security concerns can be split up into several categories: 1. Denial of Service attacks (DoS) 2. User account compromises 3. Root compromise through accessible servers 4. Root compromise via user accounts 5. Backdoor creation	none
+V61.1.1.3	setuid 位的提权通道	https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7	联网	A	2026-10-30	The other big potential root hole in a system are the SUID-root and SGID binaries installed on the system.	none
 V61.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“UNIX 信任模型与超级用户制度”；本节题为其下位论题	none
 V61.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.1.4	早期信任模型	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
@@ -242,7 +243,6 @@ V61.2.1.4	授权主体清单	https://web.mit.edu/Saltzer/www/publications/protec
 V61.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“UNIX UID／GID 权限体系”；本节题为其下位论题	none
 V61.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.1.5	检查例程的位置	旧大纲-20261023/第01卷-unix的起源/第009章-贝尔实验室的黄金时代/009.11-安全机制起源setuidsetgid机制引入与文件权限模型定型19731975/009.11.4-要点setuidsetgid机制与9位rwx权限模型在V61975年完整后成为B.md	史料	A	2026-10-30	009.11.4 要点setuidsetgid机制与9位rwx权限模型在V61975年完整后成为B	none
-V61.2.1.5	自主控制之外的强制判定	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Mandatory Integrity Control (MIC) provides a mechanism for controlling access to securable objects. This mechanism is in addition to discretionary access control and evaluates access before access checks against an object's discretionary access control list (DACL) are evaluated.	none
 V61.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“chroot 与早期隔离思想”；本节题为其下位论题	none
 V61.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.2.1	chroot 的作用范围	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
@@ -270,7 +270,6 @@ V61.2.3.1	jail 不低于父系统	https://man.freebsd.org/cgi/man.cgi?query=jail
 V61.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“securelevel 与 BSD 权限边界”；本节题为其下位论题	none
 V61.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.3.2	内核写入限制	旧大纲-20261023/第04卷-大分裂与四大bsd的诞生/第090章-unix版权归属争议与novell卖sco/090.4-44bsd/090.4.2-securelevel等44bsd新安全机制经44bsd-lite传递给三大bs.md	史料	A	2026-10-30	090.4.2 securelevel 等 4.4BSD 新安全机制经 4.4BSD-Lite 传递给三大 BSD	none
-V61.2.3.2	root 获取的类别	https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7	联网	A	2026-10-30	Security concerns can be split up into several categories: 1. Denial of Service attacks (DoS) 2. User account compromises 3. Root compromise through accessible servers 4. Root compromise via user accounts 5. Backdoor creation	none
 V61.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“securelevel 与 BSD 权限边界”；本节题为其下位论题	none
 V61.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.3.3	单用户模式	旧大纲-20261023/第04卷-大分裂与四大bsd的诞生/第090章-unix版权归属争议与novell卖sco/090.4-44bsd/090.4.2-securelevel等44bsd新安全机制经44bsd-lite传递给三大bs.md	史料	A	2026-10-30	090.4.2 securelevel 等 4.4BSD 新安全机制经 4.4BSD-Lite 传递给三大 BSD	none
@@ -278,11 +277,9 @@ V61.2.3.3	逐 jail 限制的设置面	https://man.freebsd.org/cgi/man.cgi?query=
 V61.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“securelevel 与 BSD 权限边界”；本节题为其下位论题	none
 V61.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.3.4	越权路径对应	旧大纲-20261023/第04卷-大分裂与四大bsd的诞生/第090章-unix版权归属争议与novell卖sco/090.4-44bsd/090.4.2-securelevel等44bsd新安全机制经44bsd-lite传递给三大bs.md	史料	A	2026-10-30	090.4.2 securelevel 等 4.4BSD 新安全机制经 4.4BSD-Lite 传递给三大 BSD	none
-V61.2.3.4	能力框架的定位	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	Capsicum is a lightweight OS capability and sandbox framework.	none
 V61.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“securelevel 与 BSD 权限边界”；本节题为其下位论题	none
 V61.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.3.5	跨分支传递	旧大纲-20261023/第04卷-大分裂与四大bsd的诞生/第090章-unix版权归属争议与novell卖sco/090.4-44bsd/090.4.2-securelevel等44bsd新安全机制经44bsd-lite传递给三大bs.md	史料	A	2026-10-30	090.4.2 securelevel 等 4.4BSD 新安全机制经 4.4BSD-Lite 传递给三大 BSD	none
-V61.2.3.5	jail 工具的通用行为	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8	联网	A	2026-10-30	The jail utility creates new jails, or modifies or removes existing jails.	none
 V61.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ACL 与扩展访问控制”；本节题为其下位论题	none
 V61.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.4.1	ACL 条目的结构	旧大纲-20261023/第02卷-伯克利的岁月/第036章-4.2bsd革命与三件套/036.7-关键词行级挖掘素材线索/036.7.3-Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs.md	史料	A	2026-10-30	036.7.3 Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs	none
@@ -290,19 +287,15 @@ V61.2.4.1	授权主体清单的定义	https://web.mit.edu/Saltzer/www/publicatio
 V61.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ACL 与扩展访问控制”；本节题为其下位论题	none
 V61.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.4.2	掩码与有效权限	旧大纲-20261023/第02卷-伯克利的岁月/第036章-4.2bsd革命与三件套/036.7-关键词行级挖掘素材线索/036.7.3-Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs.md	史料	A	2026-10-30	036.7.3 Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs	none
-V61.2.4.2	标签承载的策略信息	https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	联网	A	2026-10-30	Each system subject (processes, sockets, etc.) and each system object (file system objects, sockets, etc.) can carry with it a MAC label.	none
 V61.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ACL 与扩展访问控制”；本节题为其下位论题	none
 V61.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.4.3	与权限位的映射	旧大纲-20261023/第02卷-伯克利的岁月/第036章-4.2bsd革命与三件套/036.7-关键词行级挖掘素材线索/036.7.3-Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs.md	史料	A	2026-10-30	036.7.3 Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs	none
-V61.2.4.3	主体作为问责单位	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	The entity in a computer system to which authorizations are granted; thus, the unit of accountability in a computer system.	none
 V61.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ACL 与扩展访问控制”；本节题为其下位论题	none
 V61.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.4.4	文件系统标志	旧大纲-20261023/第02卷-伯克利的岁月/第036章-4.2bsd革命与三件套/036.7-关键词行级挖掘素材线索/036.7.3-Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs.md	史料	A	2026-10-30	036.7.3 Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs	none
-V61.2.4.4	在自主控制之外追加判定	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Mandatory Integrity Control (MIC) provides a mechanism for controlling access to securable objects. This mechanism is in addition to discretionary access control and evaluates access before access checks against an object's discretionary access control list (DACL) are evaluated.	none
 V61.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“ACL 与扩展访问控制”；本节题为其下位论题	none
 V61.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.4.5	移植取舍	旧大纲-20261023/第02卷-伯克利的岁月/第036章-4.2bsd革命与三件套/036.7-关键词行级挖掘素材线索/036.7.3-Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs.md	史料	A	2026-10-30	036.7.3 Chown说明其ACL包与UFS补丁效果相同可能冲突ACL包将发布于reftfs	none
-V61.2.4.5	文件完整性系统的并列	https://www.netbsd.org/security/	联网	A	2026-10-30	Several security features are available in NetBSD, including IPsec, a homegrown firewall (NPF), a file integrity system (Veriexec), a kernel authorization framework (kauth(9)), disk encryption (CGD), among others.	none
 V61.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“MAC 与强制访问控制”；本节题为其下位论题	none
 V61.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.5.1	框架的可装载设计	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
@@ -438,10 +431,8 @@ V61.2.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V61.2.12.1	公告以安全官密钥签署	https://www.freebsd.org/security/	联网	A	2026-10-30	Advisories are always signed using the FreeBSD Security Officer PGP key and are archived, along with their associated patches, at the https://security.FreeBSD.org web server	none
 V61.2.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节“软件签名与发布完整性”；本节题为其下位论题	none
 V61.2.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.2.12.2	CVE 号取自公共池与提交者	https://www.freebsd.org/security/	联网	A	2026-10-30	Once it had been determined that a Security Advisory is warranted, either the submitter delivers a CVE number if he/she already requested one, or we use one from the FreeBSD pool available.	none
 V61.2.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节“软件签名与发布完整性”；本节题为其下位论题	none
 V61.2.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.2.12.3	源码补丁与签名文件并存	https://www.openbsd.org/errata76.html	联网	A	2026-10-30	003: RELIABILITY FIX: October 29, 2024 [ A source code patch exists which remedies this problem. ]	none
 V61.2.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 12 节“软件签名与发布完整性”；本节题为其下位论题	none
 V61.2.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.12.4	公告与补丁归档于同一服务器	https://www.freebsd.org/security/	联网	A	2026-10-30	Advisories are always signed using the FreeBSD Security Officer PGP key and are archived, along with their associated patches, at the https://security.FreeBSD.org web server	none
@@ -467,7 +458,6 @@ V61.3.1.4	入口检查未覆盖	https://man.freebsd.org/cgi/man.cgi?query=mac_ml
 V61.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从权限控制到安全模型”；本节题为其下位论题	none
 V61.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.1.5	移植代价	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点/149.1.2-root用户的全能性与安全限制演进.md	史料	A	2026-10-30	149.1.2 root 用户的全能性与安全限制演进	none
-V61.3.1.5	在自主控制之外追加判定	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Mandatory Integrity Control (MIC) provides a mechanism for controlling access to securable objects. This mechanism is in addition to discretionary access control and evaluates access before access checks against an object's discretionary access control list (DACL) are evaluated.	none
 V61.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
 V61.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.2.1	读方向的约束	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
@@ -505,10 +495,8 @@ V61.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.3.3.5	严格信息流策略	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	联网	A	2026-10-30	The mac_biba policy module implements the Biba integrity model, which protects the integrity of system objects and subjects by means of a strict information flow policy.	none
 V61.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.4.1	受限程序的约束	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	Allowing a borrowed program to have access to data, while ensuring that the program cannot release the information.	none
 V61.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.4.2	进程取用户与文件完整级的较低者	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	When a user attempts to launch an executable file, the new process is created with the minimum of the user integrity level and the file integrity level.	none
 V61.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.4.3	可配置的安全事件记录	https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	联网	A	2026-10-30	Security Event Audit is a facility to provide fine-grained, configurable logging of security-relevant events, and is intended to meet the requirements of the Common Criteria (CC) Common Access Protection Profile (CAPP) evaluation.	none
@@ -520,19 +508,16 @@ V61.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.3.4.5	强制策略只能在基础策略上收缩	https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	联网	A	2026-10-30	due to its nature, MAC security policies may only restrict access relative to one another and the base system policy; they cannot override traditional Unix security provisions such as file permissions and superuser checks.	none
 V61.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.5.1	隔间之间无信息流	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	A protection system that separates principals into compartments between which no flow of information or control is possible.	none
 V61.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.5.2	当前可访问的对象集合	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	The set of objects that currently may be directly accessed by a principal.	none
 V61.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.5.3	不可伪造的凭证	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	In a computer system, an unforgeable ticket, which when presented can be taken as incontestable proof that the presenter is authorized to have access to the object named in the ticket.	none
 V61.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.5.4	角色模型的普及	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
+V61.3.5.4	角色模型的普及	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
 V61.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.5.5	安全管理的复杂度	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	One of the most challenging problems in managing large networks is the complexity of security administration.	none
+V61.3.5.5	安全管理的复杂度	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	One of the most challenging problems in managing large networks is the complexity of security administration.	none
 V61.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“参考监视器与可信计算基础”；本节题为其下位论题	none
 V61.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.6.1	拦截点位置	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
@@ -556,23 +541,22 @@ V61.3.6.5	面向 CAPP 评估的设计	https://man.freebsd.org/cgi/man.cgi?query=
 V61.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.1	三类模型的授权主体	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
-V61.3.7.1	角色成为主流模型	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
+V61.3.7.1	角色成为主流模型	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
 V61.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.2	角色层次	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
-V61.3.7.2	标准的两次修订	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	The NIST model for RBAC was adopted as American National Standard 359-2004 by the American National Standards Institute, International Committee for Information Technology Standards (ANSI/INCITS) on February 11, 2004. It was revised as INCITS 359-2012 in 2012.	none
+V61.3.7.2	标准的两次修订	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	The NIST model for RBAC was adopted as American National Standard 359-2004 by the American National Standards Institute, International Committee for Information Technology Standards (ANSI/INCITS) on February 11, 2004. It was revised as INCITS 359-2012 in 2012.	none
 V61.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.3	角色标准	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
-V61.3.7.3	359-2004 与 2012 修订	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	The NIST model for RBAC was adopted as American National Standard 359-2004 by the American National Standards Institute, International Committee for Information Technology Standards (ANSI/INCITS) on February 11, 2004. It was revised as INCITS 359-2012 in 2012.	none
+V61.3.7.3	359-2004 与 2012 修订	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	The NIST model for RBAC was adopted as American National Standard 359-2004 by the American National Standards Institute, International Committee for Information Technology Standards (ANSI/INCITS) on February 11, 2004. It was revised as INCITS 359-2012 in 2012.	none
 V61.3.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.4	组合部署	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
-V61.3.7.4	无标签对象按中等处理	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Objects that lack an integrity label are treated as medium by the operating system	none
 V61.3.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.5	管理成本	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
-V61.3.7.5	安全管理复杂度	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	One of the most challenging problems in managing large networks is the complexity of security administration.	none
+V61.3.7.5	安全管理复杂度	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	One of the most challenging problems in managing large networks is the complexity of security administration.	none
 V61.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“能力模型与最小权限原则”；本节题为其下位论题	none
 V61.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.8.1	能力凭证的语义	旧大纲-20261023/第06卷-freebsd的核心技术革新/第127章-capsicum的设计与watson团队贡献/127.2-能力-capability-与沙箱-sandbox-的设计哲学-以进程级/127.2.4-要点Capsicum能力模型的理论溯源可至1970年代的能力系统研究剑桥大学CA.md	史料	A	2026-10-30	127.2.4 要点Capsicum能力模型的理论溯源可至1970年代的能力系统研究剑桥大学CA	none
@@ -612,7 +596,6 @@ V61.4.1.4	逐进程独立地址空间	https://www.openbsd.org/innovations.html	�
 V61.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“隔离、沙箱与权限下降”；本节题为其下位论题	none
 V61.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.1.5	隔离失败的类型	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.4-Jails-的技术局限-网络栈共享与权限模型/103.4.3-局限性的效应分析.md	史料	A	2026-10-30	103.4.3 局限性的效应分析	none
-V61.4.1.5	虚拟网络栈的可选边界	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8	联网	A	2026-10-30	vnet Create the jail with its own virtual network stack, with its own network interfaces, addresses, routing table, etc.	none
 V61.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“内存安全与执行保护”；本节题为其下位论题	none
 V61.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.2.1	读写执行分界	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.3-内存保护机制wxaslr栈保护pie.md	史料	A	2026-10-30	150.1.3 内存保护机制：W^X、ASLR、栈保护、PIE	none
@@ -700,19 +683,19 @@ V61.4.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.4.6.5	由基金会支持的开源项目	https://sel4.systems/	联网	A	2026-10-30	seL4 is open source, supported by the seL4 Foundation	none
 V61.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“安全启动与硬件信任根”；本节题为其下位论题	none
 V61.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.4.7.1	启动代码须由固件已知密钥签名	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	Secure Boot requires that all boot-time code prior to the UEFI ExitBootServices call, be signed by a private key whose public key counterpart is known to the boot firmware.	none
+V61.4.7.1	启动代码须由固件已知密钥签名	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	Secure Boot requires that all boot-time code prior to the UEFI ExitBootServices call, be signed by a private key whose public key counterpart is known to the boot firmware.	none
 V61.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“安全启动与硬件信任根”；本节题为其下位论题	none
 V61.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.4.7.2	自建密钥与自签加载器	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	We should also users to generate their own keys, enrol them in the firmware and sign their own shim and/or loader.	none
+V61.4.7.2	自建密钥与自签加载器	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	We should also users to generate their own keys, enrol them in the firmware and sign their own shim and/or loader.	none
 V61.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“安全启动与硬件信任根”；本节题为其下位论题	none
 V61.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.4.7.3	仅微软密钥普遍预置	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	Currently the only key that is guaranteed to be present in any given system is Microsoft's.	none
+V61.4.7.3	仅微软密钥普遍预置	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	Currently the only key that is guaranteed to be present in any given system is Microsoft's.	none
 V61.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“安全启动与硬件信任根”；本节题为其下位论题	none
 V61.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.4.7.4	内核与模块签名的可选锁定	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
+V61.4.7.4	内核与模块签名的可选锁定	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
 V61.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“安全启动与硬件信任根”；本节题为其下位论题	none
 V61.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.4.7.5	由基金会持有签名密钥	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	The FreeBSD project should obtain a key, held by the FreeBSD Foundation, to use in verification and it should be used to sign releases.	none
+V61.4.7.5	由基金会持有签名密钥	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	The FreeBSD project should obtain a key, held by the FreeBSD Foundation, to use in verification and it should be used to sign releases.	none
 V61.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CHERI 与能力计算模型”；本节题为其下位论题	none
 V61.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.8.1	能力的硬件编码	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.1-cheri指令集扩展的技术原理.md	史料	A	2026-10-30	128.4.1 CHERI 指令集扩展的技术原理	none
@@ -720,15 +703,12 @@ V61.4.8.1	重审硬件与软件的基本设计	https://www.cl.cam.ac.uk/research
 V61.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CHERI 与能力计算模型”；本节题为其下位论题	none
 V61.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.8.2	指针与能力	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.1-cheri指令集扩展的技术原理.md	史料	A	2026-10-30	128.4.1 CHERI 指令集扩展的技术原理	none
-V61.4.8.2	项目主持机构与人员构成	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	联网	A	2026-10-30	PIs: Robert N. M. Watson (University of Cambridge), Simon W. Moore (University of Cambridge), Peter Sewell (University of Cambridge), Brooks Davis (SRI International), and Peter Neumann (SRI International)	none
 V61.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CHERI 与能力计算模型”；本节题为其下位论题	none
 V61.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.8.3	保护粒度	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.4-cheri项目起源史料考证.md	史料	A	2026-10-30	128.4.4 CHERI 项目起源史料考证	none
-V61.4.8.3	自 2010 年起的资助序列	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	联网	A	2026-10-30	CHERI has been supported by the DARPA CRASH, MRC, SSITH, and CPM programs since 2010, as well as other DARPA research and transition funding.	none
 V61.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CHERI 与能力计算模型”；本节题为其下位论题	none
 V61.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.8.4	兼容层	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.4-cheri项目起源史料考证.md	史料	A	2026-10-30	128.4.4 CHERI 项目起源史料考证	none
-V61.4.8.4	Arm 试验处理器的支持来源	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	联网	A	2026-10-30	Since 2019, development of Arm's experimental CHERI-enabled Morello processor, SoC, and board has been supported by UKRI as part of the Digital Security by Design programme	none
 V61.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“CHERI 与能力计算模型”；本节题为其下位论题	none
 V61.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.8.5	混合模式	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.4-cheri项目起源史料考证.md	史料	A	2026-10-30	128.4.4 CHERI 项目起源史料考证	none
@@ -748,11 +728,9 @@ V61.4.9.3	联合研究项目的定位	https://www.cl.cam.ac.uk/research/security
 V61.4.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“BERI 与 CHERI 研究项目：DARPA 与 AFRL 资助”；本节题为其下位论题	none
 V61.4.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.9.4	学术产业交接	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.4-cheri项目起源史料考证.md	史料	A	2026-10-30	128.4.4 CHERI 项目起源史料考证	none
-V61.4.9.4	剑桥与 SRI 的共同主持	https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	联网	A	2026-10-30	PIs: Robert N. M. Watson (University of Cambridge), Simon W. Moore (University of Cambridge), Peter Sewell (University of Cambridge), Brooks Davis (SRI International), and Peter Neumann (SRI International)	none
 V61.4.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“BERI 与 CHERI 研究项目：DARPA 与 AFRL 资助”；本节题为其下位论题	none
 V61.4.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.9.5	试验平台	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.4-CHERI-指令集扩展-2010-年起剑桥大学与-SRI-Internation/128.4.4-cheri项目起源史料考证.md	史料	A	2026-10-30	128.4.4 CHERI 项目起源史料考证	none
-V61.4.9.5	高保证内核的验证做法	https://sel4.systems/	联网	A	2026-10-30	seL4 is both the world's most highly assured and the world's fastest operating system kernel. Its uniqueness lies in the formal mathematical proof that it behaves exactly as specified	none
 V61.4.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“安全模型在 BSD 中的历史转化”；本节题为其下位论题	none
 V61.4.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.10.1	条款的代码落点	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.2-Jails-Capsicum-CHERI-的三阶段演进/149.2.4-三阶段演进的史料辨析.md	史料	A	2026-10-30	149.2.4 三阶段演进的史料辨析	none
@@ -772,7 +750,6 @@ V61.4.10.4	主体客体携带标签	https://man.freebsd.org/cgi/man.cgi?query=ma
 V61.4.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“安全模型在 BSD 中的历史转化”；本节题为其下位论题	none
 V61.4.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.10.5	分支差异	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.2-Jails-Capsicum-CHERI-的三阶段演进/149.2.4-三阶段演进的史料辨析.md	史料	A	2026-10-30	149.2.4 三阶段演进的史料辨析	none
-V61.4.10.5	PIE 的可执行文件形态	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	PIE binaries are executable files that do not have a fixed load address.	none
 V61.4.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“编译期缓解：FORTIFY_SOURCE、stack protector 与 PIE 的启用史”；本节题为其下位论题	none
 V61.4.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.11.1	栈保护默认化	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.3-内存保护机制wxaslr栈保护pie.md	史料	A	2026-10-30	150.1.3 内存保护机制：W^X、ASLR、栈保护、PIE	none
@@ -796,7 +773,6 @@ V61.4.11.5	逐帧哨兵与栈探测	https://man.freebsd.org/cgi/man.cgi?query=mi
 V61.4.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“Capsicum：能力安全的设计与集成”；本节题为其下位论题	none
 V61.4.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.12.1	能力模式的切换	旧大纲-20261023/第06卷-freebsd的核心技术革新/第127章-capsicum的设计与watson团队贡献/127.1-罗伯特-N-M-沃森-Robert-Watson-团队设计-Capsicum/127.1.1-capsicum论文的核心技术贡献.md	史料	A	2026-10-30	127.1.1 Capsicum 论文的核心技术贡献	none
-V61.4.12.1	面向 UNIX 的能力实现	https://www.usenix.org/conference/usenixsecurity10/capsicum-practical-capabilities-unix	联网	A	2026-10-30	Capsicum: Practical Capabilities for UNIX	none
 V61.4.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“Capsicum：能力安全的设计与集成”；本节题为其下位论题	none
 V61.4.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.12.2	描述符能力化	旧大纲-20261023/第06卷-freebsd的核心技术革新/第127章-capsicum的设计与watson团队贡献/127.1-罗伯特-N-M-沃森-Robert-Watson-团队设计-Capsicum/127.1.1-capsicum论文的核心技术贡献.md	史料	A	2026-10-30	127.1.1 Capsicum 论文的核心技术贡献	none
@@ -804,7 +780,6 @@ V61.4.12.2	能力由打开的描述符确定	https://github.com/NuxiNL/cloudabi	
 V61.4.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“Capsicum：能力安全的设计与集成”；本节题为其下位论题	none
 V61.4.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.12.3	最小改动目标	旧大纲-20261023/第06卷-freebsd的核心技术革新/第127章-capsicum的设计与watson团队贡献/127.1-罗伯特-N-M-沃森-Robert-Watson-团队设计-Capsicum/127.1.1-capsicum论文的核心技术贡献.md	史料	A	2026-10-30	127.1.1 Capsicum 论文的核心技术贡献	none
-V61.4.12.3	2010 年会议论文的定位	https://www.usenix.org/conference/usenixsecurity10/capsicum-practical-capabilities-unix	联网	A	2026-10-30	19th USENIX Security Symposium (USENIX Security 10), Washington, DC, August 2010	none
 V61.4.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“Capsicum：能力安全的设计与集成”；本节题为其下位论题	none
 V61.4.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.12.4	内核用户态分工	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.1-FreeBSD-9-0-2012-1-将-Capsicum-作为可选特性引入/128.1.4-capsicum集成历程史料考证.md	史料	A	2026-10-30	128.1.4 Capsicum 集成历程史料考证	none
@@ -812,7 +787,6 @@ V61.4.12.4	轻量能力与沙箱框架	https://man.freebsd.org/cgi/man.cgi?query
 V61.4.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“Capsicum：能力安全的设计与集成”；本节题为其下位论题	none
 V61.4.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.12.5	实验到常规	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.1-FreeBSD-9-0-2012-1-将-Capsicum-作为可选特性引入/128.1.4-capsicum集成历程史料考证.md	史料	A	2026-10-30	128.1.4 Capsicum 集成历程史料考证	none
-V61.4.12.5	作者机构与合作方	https://www.usenix.org/conference/usenixsecurity10/capsicum-practical-capabilities-unix	联网	A	2026-10-30	Robert N.M. Watson, University of Cambridge; Jonathan Anderson, University of Cambridge; Ben Laurie, Google UK Ltd.; Kris Kennaway, Google UK Ltd.	none
 V61.4.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 13 节“能力安全模型的扩散：CloudABI 与其他系统的移植”；本节题为其下位论题	none
 V61.4.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.13.1	调用面的收窄	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.3-Google-Chromium-对-Capsicum-的早期评估与最终放弃/128.3.4-capsicum-linux与cloudabiwasi的后续效应.md	史料	A	2026-10-30	128.3.4 Capsicum-Linux 与 CloudABI/WASI 的后续效应	none
@@ -844,7 +818,6 @@ V61.4.14.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V61.4.14.3	多年国际竞赛的组织方式	https://csrc.nist.gov/projects/post-quantum-cryptography	联网	A	2026-10-30	Through a multi-year international competition involving industry, academia, and governments,	none
 V61.4.14.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 14 节“后量子密码迁移”；本节题为其下位论题	none
 V61.4.14.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.4.14.4	恶意代码分析与安全编码	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Originally focused on incident response, we have expanded into cybersecurity areas such as network situational awareness, malicious code analysis, secure coding	none
 V61.4.14.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 14 节“后量子密码迁移”；本节题为其下位论题	none
 V61.4.14.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.14.5	量子计算机可能尚需数十年	https://csrc.nist.gov/projects/post-quantum-cryptography	联网	A	2026-10-30	NIST's Post-Quantum Cryptography (PQC) project leads the national and global effort to secure electronic information against the future threat of quantum computers	none
@@ -855,7 +828,6 @@ V61.5.1.1	强制策略只能相对基础策略收缩	https://man.freebsd.org/cgi
 V61.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“自主访问控制与强制访问控制比较”；本节题为其下位论题	none
 V61.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.1.2	策略变更权限	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点/149.1.2-root用户的全能性与安全限制演进.md	史料	A	2026-10-30	149.1.2 root 用户的全能性与安全限制演进	none
-V61.5.1.2	在自主控制之外追加判定	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Mandatory Integrity Control (MIC) provides a mechanism for controlling access to securable objects. This mechanism is in addition to discretionary access control and evaluates access before access checks against an object's discretionary access control list (DACL) are evaluated.	none
 V61.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“自主访问控制与强制访问控制比较”；本节题为其下位论题	none
 V61.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.1.3	与超级用户的关系	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点/149.1.2-root用户的全能性与安全限制演进.md	史料	A	2026-10-30	149.1.2 root 用户的全能性与安全限制演进	none
@@ -863,7 +835,6 @@ V61.5.1.3	框架对 root 的约束限度	https://man.freebsd.org/cgi/man.cgi?que
 V61.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“自主访问控制与强制访问控制比较”；本节题为其下位论题	none
 V61.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.1.4	部署成本	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点/149.1.2-root用户的全能性与安全限制演进.md	史料	A	2026-10-30	149.1.2 root 用户的全能性与安全限制演进	none
-V61.5.1.4	客体侧授权清单	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	A list of principals that are authorized to have access to some object.	none
 V61.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“自主访问控制与强制访问控制比较”；本节题为其下位论题	none
 V61.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.1.5	组合次序	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点/149.1.2-root用户的全能性与安全限制演进.md	史料	A	2026-10-30	149.1.2 root 用户的全能性与安全限制演进	none
@@ -879,15 +850,12 @@ V61.5.2.2	能力由打开的描述符决定	https://github.com/NuxiNL/cloudabi	�
 V61.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“能力模型与权限下降比较”；本节题为其下位论题	none
 V61.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.2.3	改造工作量	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.2-Jails-Capsicum-CHERI-的三阶段演进/149.2.4-三阶段演进的史料辨析.md	史料	A	2026-10-30	149.2.4 三阶段演进的史料辨析	none
-V61.5.2.3	收紧内存布局去除权限	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Process layouts in memory tightened to remove execute permission from all segmented, non-instruction data and to remove write permission from data that is only modified during loading and relocation.	none
 V61.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“能力模型与权限下降比较”；本节题为其下位论题	none
 V61.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.2.4	能力与沙箱	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.2-Jails-Capsicum-CHERI-的三阶段演进/149.2.4-三阶段演进的史料辨析.md	史料	A	2026-10-30	149.2.4 三阶段演进的史料辨析	none
-V61.5.2.4	W^X 的强制时点	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	W^X : First used for sparc, sparc64, alpha, and hppa in OpenBSD 3.3. Strictly enforced by default since OpenBSD 6.0	none
 V61.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“能力模型与权限下降比较”；本节题为其下位论题	none
 V61.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.2.5	失效模式	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.2-Jails-Capsicum-CHERI-的三阶段演进/149.2.4-三阶段演进的史料辨析.md	史料	A	2026-10-30	149.2.4 三阶段演进的史料辨析	none
-V61.5.2.5	受控程序的约束	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	Allowing a borrowed program to have access to data, while ensuring that the program cannot release the information.	none
 V61.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Jail、sandbox 与进程隔离比较”；本节题为其下位论题	none
 V61.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.3.1	命名空间划分	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.4-容器演化史料辨析.md	史料	A	2026-10-30	103.9.4 容器演化史料辨析	none
@@ -907,7 +875,6 @@ V61.5.3.4	jail 作为完全隔离方案	https://man.freebsd.org/cgi/man.cgi?quer
 V61.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Jail、sandbox 与进程隔离比较”；本节题为其下位论题	none
 V61.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.3.5	跨系统落差	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.4-容器演化史料辨析.md	史料	A	2026-10-30	103.9.4 容器演化史料辨析	none
-V61.5.3.5	文件完整性与内核授权框架并列	https://www.netbsd.org/security/	联网	A	2026-10-30	Several security features are available in NetBSD, including IPsec, a homegrown firewall (NPF), a file integrity system (Veriexec), a kernel authorization framework (kauth(9)), disk encryption (CGD), among others.	none
 V61.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“pf、ipfw 与 NPF：网络过滤模型的横向比较”；本节题为其下位论题	none
 V61.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.4.1	规则语言	旧大纲-20261023/第07卷-freebsd的工程体系重构/第154章-freebsd网络栈的tcp-sack漏洞与响应/154.4-防火墙与网络过滤-ipfw-pf-ipfilter-三大防火墙框架的历史演进-从/154.4.17-年9月5日RianShelley报告两台pfsync防火墙中备用机状态数持续攀升.md	史料	A	2026-10-30	154.4.17 年9月5日RianShelley报告两台pfsync防火墙中备用机状态数持续攀升	none
@@ -959,7 +926,7 @@ V61.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.5.6.3	严格级别后的写入禁止	https://man.netbsd.org/veriexec.4	联网	A	2026-10-30	Note that the requests VERIEXEC_LOAD, VERIEXEC_DELETE, and VERIEXEC_FLUSH are not permitted once the strict level has been raised past 0.	none
 V61.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件完整性与可信计算比较”；本节题为其下位论题	none
 V61.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.5.6.4	内核与模块签名的可选锁定	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
+V61.5.6.4	内核与模块签名的可选锁定	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
 V61.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件完整性与可信计算比较”；本节题为其下位论题	none
 V61.5.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.6.5	完整性系统与磁盘加密并列	https://www.netbsd.org/security/	联网	A	2026-10-30	Several security features are available in NetBSD, including IPsec, a homegrown firewall (NPF), a file integrity system (Veriexec), a kernel authorization framework (kauth(9)), disk encryption (CGD), among others.	none
@@ -982,7 +949,6 @@ V61.5.7.4	支持多种加密算法	https://man.freebsd.org/cgi/man.cgi?query=gel
 V61.5.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“密码基础设施比较”；本节题为其下位论题	none
 V61.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.7.5	硬件加速与熵源	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.2-random4内核随机数生成器yarrow到fortuna的演进.md	史料	A	2026-10-30	150.1.2 **random(4)** 内核随机数生成器：Yarrow 到 Fortuna 的演进	none
-V61.5.7.5	熵源掩码的选择	https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	联网	A	2026-10-30	The kern.random.harvest.mask bitmask is used to select the possible entropy sources.	none
 V61.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“软件供应链安全比较”；本节题为其下位论题	none
 V61.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.8.1	供应链事件的覆盖	旧大纲-20261023/第07卷-freebsd的工程体系重构/第168章-freebsd14x第三方软件与同期os比较/168.3-14-x-周期漏洞与安全响应综览-80-个-SA-背后的工程伦理/168.3.5-xz后门事件cve-2024-3094辨析-供应链安全与freebsd不受影响的.md	史料	A	2026-10-30	168.3.5 xz 后门事件（CVE-2024-3094）辨析——供应链安全与 FreeBSD 不受影响的考据	none
@@ -1002,7 +968,6 @@ V61.5.8.4	后门仅在发行档	https://www.openwall.com/lists/oss-security/2024
 V61.5.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“软件供应链安全比较”；本节题为其下位论题	none
 V61.5.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.8.5	事件整改	旧大纲-20261023/第07卷-freebsd的工程体系重构/第168章-freebsd14x第三方软件与同期os比较/168.3-14-x-周期漏洞与安全响应综览-80-个-SA-背后的工程伦理/168.3.5-xz后门事件cve-2024-3094辨析-供应链安全与freebsd不受影响的.md	史料	A	2026-10-30	168.3.5 xz 后门事件（CVE-2024-3094）辨析——供应链安全与 FreeBSD 不受影响的考据	none
-V61.5.8.5	跨分支同步的公告编号	https://www.netbsd.org/security/	联网	A	2026-10-30	NetBSD-SA2024-002 OpenSSH CVE-2024-6387 `regreSSHion'	none
 V61.5.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“安全默认策略比较”；本节题为其下位论题	none
 V61.5.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.9.1	默认最安全且不启用服务	https://www.netbsd.org/security/	联网	A	2026-10-30	All services default to their most secure settings, and no services are enabled by default for new installations.	none
@@ -1011,13 +976,10 @@ V61.5.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.5.9.2	抢先修复安全问题	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Pay attention to security problems and fix them before anyone else does. (Try to be the #1 most secure operating system.)	none
 V61.5.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“安全默认策略比较”；本节题为其下位论题	none
 V61.5.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.5.9.3	约每六个月发布一版	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Make a release approximately every six months.	none
 V61.5.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“安全默认策略比较”；本节题为其下位论题	none
 V61.5.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.5.9.4	勘误与安全公告的分流	https://www.freebsd.org/security/	联网	A	2026-10-30	Errata affecting the base system but not classified as security vulnerabilities are covered separately on the FreeBSD Errata Notices page.	none
 V61.5.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“安全默认策略比较”；本节题为其下位论题	none
 V61.5.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.5.9.5	逐 jail 限制的可设性	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8	联网	A	2026-10-30	Some restrictions of the jail environment may be set on a per-jail	none
 V61.5.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“pledge(2)、unveil(2) 与 Capsicum：安全机制与项目目标的关系”；本节题为其下位论题	none
 V61.5.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.10.1	承诺集的表达	旧大纲-20261023/第10卷-openbsd的历史/第218章-openbsd-6x的pledge安全机制/218.3-openbsd64与unveil20181064引入unveil2/218.3.9-要点pledgeunveil设计争议的项目统摄史观审视须从总纲三条切入其一总纲第.md	史料	A	2026-10-30	218.3.9 要点pledgeunveil设计争议的项目统摄史观审视须从总纲三条切入其一总纲第	none
@@ -1045,11 +1007,9 @@ V61.5.11.1	许可与代码来源的取向	https://www.openbsd.org/goals.html	联
 V61.5.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“BSD 安全路线差异的历史原因”；本节题为其下位论题	none
 V61.5.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.11.2	人员规模约束	旧大纲-20261023/第10卷-openbsd的历史/第229章-openbsd的安全至上哲学/229.6-批评层bdfl模式安全至上文化排外性与商业支持缺位的批评/229.6.3-要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规.md	史料	A	2026-10-30	229.6.3 要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规	none
-V61.5.11.2	组织从小组扩展为团队	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Under Pethia's leadership, the unit expanded and evolved from the CERT Coordination Center—a small group focused on computer incident response—to a research organization of more than 200 professionals	none
 V61.5.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“BSD 安全路线差异的历史原因”；本节题为其下位论题	none
 V61.5.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.11.3	商业支持	旧大纲-20261023/第10卷-openbsd的历史/第229章-openbsd的安全至上哲学/229.6-批评层bdfl模式安全至上文化排外性与商业支持缺位的批评/229.6.3-要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规.md	史料	A	2026-10-30	229.6.3 要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规	none
-V61.5.11.3	自由使用与再分发的取向	https://www.openbsd.org/policy.html	联网	A	2026-10-30	OpenBSD strives to provide code that can be freely used, copied, modified, and distributed by anyone and for any purpose. This maintains the spirit of the original Berkeley Software Distribution.	none
 V61.5.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“BSD 安全路线差异的历史原因”；本节题为其下位论题	none
 V61.5.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.11.4	审计投入	旧大纲-20261023/第10卷-openbsd的历史/第229章-openbsd的安全至上哲学/229.6-批评层bdfl模式安全至上文化排外性与商业支持缺位的批评/229.6.3-要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规.md	史料	A	2026-10-30	229.6.3 要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规	none
@@ -1057,7 +1017,6 @@ V61.5.11.4	两套扫描器的常态分析	https://www.netbsd.org/security/	联�
 V61.5.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“BSD 安全路线差异的历史原因”；本节题为其下位论题	none
 V61.5.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.11.5	路径依赖	旧大纲-20261023/第10卷-openbsd的历史/第229章-openbsd的安全至上哲学/229.6-批评层bdfl模式安全至上文化排外性与商业支持缺位的批评/229.6.3-要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规.md	史料	A	2026-10-30	229.6.3 要点对OpenBSD商业支持缺位的批评集中于资金规模与生态影响两个维度其一资金规	none
-V61.5.11.5	广告条款的撤销时点	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999. Verbatim copies of the Berkeley license in the OpenBSD tree have that term removed.	none
 V61.5.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 12 节“FreeBSD：系统工程与能力安全”；本节题为其下位论题	none
 V61.5.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.12.1	能力框架工程化	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.1-FreeBSD-9-0-2012-1-将-Capsicum-作为可选特性引入/128.1.4-capsicum集成历程史料考证.md	史料	A	2026-10-30	128.1.4 Capsicum 集成历程史料考证	none
@@ -1069,7 +1028,6 @@ V61.5.12.2	轻量能力与沙箱框架	https://man.freebsd.org/cgi/man.cgi?query
 V61.5.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 12 节“FreeBSD：系统工程与能力安全”；本节题为其下位论题	none
 V61.5.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.12.3	商业生态衔接	旧大纲-20261023/第06卷-freebsd的核心技术革新/第128章-capsicum在freebsd的集成与演进/128.1-FreeBSD-9-0-2012-1-将-Capsicum-作为可选特性引入/128.1.4-capsicum集成历程史料考证.md	史料	A	2026-10-30	128.1.4 Capsicum 集成历程史料考证	none
-V61.5.12.3	鼓励公司按需取用	https://www.openbsd.org/goals.html	联网	A	2026-10-30	We strive to make our software robust and secure, and encourage companies to use whichever pieces they want to.	none
 V61.5.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 12 节“FreeBSD：系统工程与能力安全”；本节题为其下位论题	none
 V61.5.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.12.4	团队编制	旧大纲-20261023/第08卷-freebsd的范式转换/第175章-freebsd安全团队与安全公告制度/175.1-FreeBSD-安全团队与安全公告-FreeBSD-Security-Offic/175.1.4-历任securityofficer与安全团队成员贡献.md	史料	A	2026-10-30	175.1.4 历任 Security Officer 与安全团队成员贡献	none
@@ -1077,7 +1035,6 @@ V61.5.12.4	稳定分支与安全分支的公告范围	https://www.freebsd.org/se
 V61.5.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 12 节“FreeBSD：系统工程与能力安全”；本节题为其下位论题	none
 V61.5.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.12.5	大体量维护	旧大纲-20261023/第08卷-freebsd的范式转换/第175章-freebsd安全团队与安全公告制度/175.1-FreeBSD-安全团队与安全公告-FreeBSD-Security-Offic/175.1.4-历任securityofficer与安全团队成员贡献.md	史料	A	2026-10-30	175.1.4 历任 Security Officer 与安全团队成员贡献	none
-V61.5.12.5	可装载策略架构的维护面	https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	联网	A	2026-10-30	The Mandatory Access Control, or MAC, framework allows administrators to finely control system security by providing for a loadable security policy architecture.	none
 V61.5.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 13 节“NetBSD：可移植性与持续维护”；本节题为其下位论题	none
 V61.5.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.13.1	跨平台加固	旧大纲-20261023/第09卷-netbsd的历史/第198章-netbsd-8.0与64位arm虚拟化/198.4-netbsd8x周期漏洞与安全响应综览kernelaslr/198.4.7-8x周期netbsd安全文化评估-aslr默认启用前夜的过渡期哲学.md	史料	A	2026-10-30	198.4.7 8.x 周期 NetBSD 安全文化评估——ASLR 默认启用前夜的过渡期哲学	none
@@ -1101,7 +1058,6 @@ V61.5.13.5	默认覆盖的架构清单	https://man.netbsd.org/veriexec.4	联网	
 V61.5.14.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 14 节“OpenBSD：源码审计与权限收缩”；本节题为其下位论题	none
 V61.5.14.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.14.1	逐行审计组织	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
-V61.5.14.1	扫描器辅助的代码质量	https://www.netbsd.org/security/	联网	A	2026-10-30	the NetBSD source tree is periodically analyzed by two separate code scanners to maintain and improve code quality: Coverity - a commercial code scanner, and Brainy - a private code scanner developed by a NetBSD developer.	none
 V61.5.14.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 14 节“OpenBSD：源码审计与权限收缩”；本节题为其下位论题	none
 V61.5.14.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.14.2	默认加固	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
@@ -1121,7 +1077,6 @@ V61.5.14.5	2018 年引入的 unveil	https://www.openbsd.org/innovations.html	联
 V61.5.15.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 15 节“DragonFly：架构实验与资源约束”；本节题为其下位论题	none
 V61.5.15.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.15.1	小团队响应	旧大纲-20261023/第11卷-dragonflybsd的历史/第252章-dragonfly6x的现代化与持续维护/252.5-dragonflybsd6x周期漏洞与安全响应综览/252.5.5-贡献组件漏洞集中清算-expatlibarchivelibressl升级链.md	史料	A	2026-10-30	252.5.5 贡献组件漏洞集中清算——expat/libarchive/libressl 升级链	none
-V61.5.15.1	公告覆盖的分支范围	https://www.freebsd.org/security/	联网	A	2026-10-30	The FreeBSD Security Officer provides security advisories for *-STABLE Branches* and the Security Branches.	none
 V61.5.15.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 15 节“DragonFly：架构实验与资源约束”；本节题为其下位论题	none
 V61.5.15.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.15.2	上游补丁跟进	旧大纲-20261023/第11卷-dragonflybsd的历史/第252章-dragonfly6x的现代化与持续维护/252.5-dragonflybsd6x周期漏洞与安全响应综览/252.5.5-贡献组件漏洞集中清算-expatlibarchivelibressl升级链.md	史料	A	2026-10-30	252.5.5 贡献组件漏洞集中清算——expat/libarchive/libressl 升级链	none
@@ -1129,7 +1084,6 @@ V61.5.15.2	sshd 修复的源码补丁	https://www.openbsd.org/errata76.html	联�
 V61.5.15.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 15 节“DragonFly：架构实验与资源约束”；本节题为其下位论题	none
 V61.5.15.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.15.3	架构实验代价	旧大纲-20261023/第11卷-dragonflybsd的历史/第252章-dragonfly6x的现代化与持续维护/252.5-dragonflybsd6x周期漏洞与安全响应综览/252.5.5-贡献组件漏洞集中清算-expatlibarchivelibressl升级链.md	史料	A	2026-10-30	252.5.5 贡献组件漏洞集中清算——expat/libarchive/libressl 升级链	none
-V61.5.15.3	三组分工的响应架构	https://www.netbsd.org/security/	联网	A	2026-10-30	Security issues in NetBSD are handled by three groups: the Security Team, the Security Alert Team, and the Security Officer.	none
 V61.5.15.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 15 节“DragonFly：架构实验与资源约束”；本节题为其下位论题	none
 V61.5.15.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.15.4	资源约束取舍	旧大纲-20261023/第11卷-dragonflybsd的历史/第252章-dragonfly6x的现代化与持续维护/252.5-dragonflybsd6x周期漏洞与安全响应综览/252.5.5-贡献组件漏洞集中清算-expatlibarchivelibressl升级链.md	史料	A	2026-10-30	252.5.5 贡献组件漏洞集中清算——expat/libarchive/libressl 升级链	none
@@ -1137,27 +1091,22 @@ V61.5.15.4	默认不启用服务的取向	https://www.netbsd.org/security/	联�
 V61.5.15.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 15 节“DragonFly：架构实验与资源约束”；本节题为其下位论题	none
 V61.5.15.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.15.5	与原项目的分工	旧大纲-20261023/第11卷-dragonflybsd的历史/第252章-dragonfly6x的现代化与持续维护/252.5-dragonflybsd6x周期漏洞与安全响应综览/252.5.5-贡献组件漏洞集中清算-expatlibarchivelibressl升级链.md	史料	A	2026-10-30	252.5.5 贡献组件漏洞集中清算——expat/libarchive/libressl 升级链	none
-V61.5.15.5	同一漏洞的公告时点	https://security.freebsd.org/advisories/FreeBSD-SA-19:08.rack.asc	联网	A	2026-10-30	Announced: 2019-06-19	none
 V61.5.16.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 16 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 安全思想比较”；本节题为其下位论题	none
 V61.5.16.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.16.1	威胁模型预设	旧大纲-20261023/第10卷-openbsd的历史/第231章-openbsd与同时期操作系统的技术比较/231.1-与freebsd安全模型的对照/231.1.1-要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO.md	史料	A	2026-10-30	231.1.1 要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO	none
-V61.5.16.1	机密性与完整性并用的场景	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	In traditional trusted operating systems, the MLS confidentiality model is used in concert with the Biba integrity model in order to protect the Trusted Code Base (TCB).	none
 V61.5.16.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 16 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 安全思想比较”；本节题为其下位论题	none
 V61.5.16.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.16.2	加固优先序	旧大纲-20261023/第10卷-openbsd的历史/第231章-openbsd与同时期操作系统的技术比较/231.1-与freebsd安全模型的对照/231.1.1-要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO.md	史料	A	2026-10-30	231.1.1 要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO	none
-V61.5.16.2	保护可信代码基的目标	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	联网	A	2026-10-30	In traditional trusted operating systems, the Biba integrity model is used to protect the Trusted Code Base (TCB).	none
+V61.5.16.2	加固手段的优先序	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Pay attention to security problems and fix them before anyone else does. (Try to be the #1 most secure operating system.)	none
 V61.5.16.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 16 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 安全思想比较”；本节题为其下位论题	none
 V61.5.16.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.16.3	默认策略激进度	旧大纲-20261023/第10卷-openbsd的历史/第231章-openbsd与同时期操作系统的技术比较/231.1-与freebsd安全模型的对照/231.1.1-要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO.md	史料	A	2026-10-30	231.1.1 要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO	none
-V61.5.16.3	四档完整性等级的划分	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Windows defines four integrity levels: low, medium, high, and system.	none
 V61.5.16.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 16 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 安全思想比较”；本节题为其下位论题	none
 V61.5.16.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.16.4	共同遗产保留	旧大纲-20261023/第10卷-openbsd的历史/第231章-openbsd与同时期操作系统的技术比较/231.1-与freebsd安全模型的对照/231.1.1-要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO.md	史料	A	2026-10-30	231.1.1 要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO	none
-V61.5.16.4	强隔离与受控通信的取向	https://sel4.systems/	联网	A	2026-10-30	seL4 protects critical systems from software failures and cyber-attacks. It allows non-critical functionality to run securely alongside critical payloads by enforcing strong isolation and controlled communication.	none
 V61.5.16.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 16 节“FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 安全思想比较”；本节题为其下位论题	none
 V61.5.16.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.16.5	思想差异根由	旧大纲-20261023/第10卷-openbsd的历史/第231章-openbsd与同时期操作系统的技术比较/231.1-与freebsd安全模型的对照/231.1.1-要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO.md	史料	A	2026-10-30	231.1.1 要点OpenBSD采用默认安全+代码审计模型FreeBSD采用SecurityO	none
-V61.5.16.5	机构起源与任期	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Richard Pethia was founding director of the SEI's CERT Division. Pethia, who served as director of CERT from 1988 to 2016, guided the organization through tremendous growth and change.	none
 V61.5.17.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 17 节“安全文化与工程实践差异”；本节题为其下位论题	none
 V61.5.17.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.17.1	响应速度的组织基础	旧大纲-20261023/第17卷-政治制度与社区治理/第352章-安全响应文化与哲学深化审视/352.2-BSD-项目安全响应文化与-Linux-illumos-的比较/352.2.5-Geert称隔离系统旧stable尚可联网世界须随时升级旧稳定仍暴露于主线已修漏.md	史料	A	2026-10-30	352.2.5 Geert称隔离系统旧stable尚可联网世界须随时升级旧稳定仍暴露于主线已修漏	none
@@ -1173,7 +1122,6 @@ V61.5.17.3	商业与自研扫描器的并用	https://www.netbsd.org/security/	�
 V61.5.17.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 17 节“安全文化与工程实践差异”；本节题为其下位论题	none
 V61.5.17.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.17.4	志愿者规模效应	旧大纲-20261023/第17卷-政治制度与社区治理/第352章-安全响应文化与哲学深化审视/352.2-BSD-项目安全响应文化与-Linux-illumos-的比较/352.2.5-Geert称隔离系统旧stable尚可联网世界须随时升级旧稳定仍暴露于主线已修漏.md	史料	A	2026-10-30	352.2.5 Geert称隔离系统旧stable尚可联网世界须随时升级旧稳定仍暴露于主线已修漏	none
-V61.5.17.4	从小组扩展为团队的过程	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Under Pethia's leadership, the unit expanded and evolved from the CERT Coordination Center—a small group focused on computer incident response—to a research organization of more than 200 professionals	none
 V61.5.17.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 17 节“安全文化与工程实践差异”；本节题为其下位论题	none
 V61.5.17.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.17.5	文化反塑机制	旧大纲-20261023/第17卷-政治制度与社区治理/第352章-安全响应文化与哲学深化审视/352.2-BSD-项目安全响应文化与-Linux-illumos-的比较/352.2.5-Geert称隔离系统旧stable尚可联网世界须随时升级旧稳定仍暴露于主线已修漏.md	史料	A	2026-10-30	352.2.5 Geert称隔离系统旧stable尚可联网世界须随时升级旧稳定仍暴露于主线已修漏	none
@@ -1181,23 +1129,22 @@ V61.5.17.5	逐条建立跟踪号的流程	https://www.freebsd.org/security/	联�
 V61.5.18.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.1	强制控制的实现层	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
-V61.5.18.1	在自主控制之外追加判定	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	Mandatory Integrity Control (MIC) provides a mechanism for controlling access to securable objects. This mechanism is in addition to discretionary access control and evaluates access before access checks against an object's discretionary access control list (DACL) are evaluated.	none
+V61.5.18.1	在自主控制之外追加判定	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	B	2026-10-30	Mandatory Integrity Control (MIC) provides a mechanism for controlling access to securable objects. This mechanism is in addition to discretionary access control and evaluates access before access checks against an object's discretionary access control list (DACL) are evaluated.	none
 V61.5.18.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.2	沙箱技术取舍	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
-V61.5.18.2	进程取较低完整级	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	When a user attempts to launch an executable file, the new process is created with the minimum of the user integrity level and the file integrity level.	none
+V61.5.18.2	进程取较低完整级	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	B	2026-10-30	When a user attempts to launch an executable file, the new process is created with the minimum of the user integrity level and the file integrity level.	none
 V61.5.18.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.3	完整性度量位置	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
-V61.5.18.3	启动代码须由固件已知密钥签名	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	Secure Boot requires that all boot-time code prior to the UEFI ExitBootServices call, be signed by a private key whose public key counterpart is known to the boot firmware.	none
+V61.5.18.3	启动代码须由固件已知密钥签名	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	Secure Boot requires that all boot-time code prior to the UEFI ExitBootServices call, be signed by a private key whose public key counterpart is known to the boot firmware.	none
 V61.5.18.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.4	权限模型收敛	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
-V61.5.18.4	角色模型成为主流	https://csrc.nist.gov/projects/role-based-access-control	联网	A	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
+V61.5.18.4	角色模型成为主流	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
 V61.5.18.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.5	对照限度	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
-V61.5.18.5	隔间式隔离的定义	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	A protection system that separates principals into compartments between which no flow of information or control is possible.	none
 V61.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“权限提升漏洞”；本节题为其下位论题	none
 V61.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.1.1	提权的类型划分	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
@@ -1213,17 +1160,14 @@ V61.6.1.3	旧漏洞的回归	https://www.qualys.com/2024/07/01/cve-2024-6387/reg
 V61.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“权限提升漏洞”；本节题为其下位论题	none
 V61.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.1.4	提权后的持久化	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
-V61.6.1.4	后门创建作为一类问题	https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7	联网	A	2026-10-30	Security concerns can be split up into several categories: 1. Denial of Service attacks (DoS) 2. User account compromises 3. Root compromise through accessible servers 4. Root compromise via user accounts 5. Backdoor creation	none
 V61.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“权限提升漏洞”；本节题为其下位论题	none
 V61.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.1.5	分级判据	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
 V61.6.1.5	远程可利用才计拒绝服务	https://www.freebsd.org/security/	联网	A	2026-10-30	Is it a Denial of Service vulnerability? Only when remotely exploitable	none
 V61.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“内核内存破坏”；本节题为其下位论题	none
 V61.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.2.1	栈帧哨兵检测栈破坏	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	In userland, SSP adds a per-process randomized canary at the end of every stack frame which is checked for corruption upon return from the function, and stack probing in PAGE_SIZE chunks.	none
 V61.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“内核内存破坏”；本节题为其下位论题	none
 V61.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.2.2	检测未定义行为以防控制流被劫持	https://clang.llvm.org/docs/ControlFlowIntegrity.html	联网	A	2026-10-30	Clang includes an implementation of a number of control flow integrity (CFI) schemes, which are designed to abort the program upon detecting certain forms of undefined behavior that can potentially allow attackers to subvert the program's control flow.	none
 V61.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“内核内存破坏”；本节题为其下位论题	none
 V61.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.2.3	页可写与可执行互斥	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	Under the W^X mitigation, memory pages may be writable (W) or executable (E), but not both at the same time.	none
@@ -1258,7 +1202,6 @@ V61.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.6.4.1	内存泄露是否构成公告的判据	https://www.freebsd.org/security/	联网	A	2026-10-30	Is it a privilege escalation vulnerability? Is it a code injection vulnerability? Is it a memory disclosure or dataleak vulnerability?	none
 V61.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“信息泄露”；本节题为其下位论题	none
 V61.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.4.2	隔间之间无信息流	https://web.mit.edu/Saltzer/www/publications/protection/	联网	A	2026-10-30	A protection system that separates principals into compartments between which no flow of information or control is possible.	none
 V61.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“信息泄露”；本节题为其下位论题	none
 V61.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.4.3	审计埋点不完整	https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	联网	A	2026-10-30	Instrumentation of auditable events in the kernel is not complete, as some system calls do not generate audit records, or generate audit records with incomplete argument information.	none
@@ -1287,7 +1230,6 @@ V61.6.5.4	非默认栈默认不加载	https://security.freebsd.org/advisories/Fr
 V61.6.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“网络协议漏洞”；本节题为其下位论题	none
 V61.6.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.5.5	协议栈加固层次	旧大纲-20261023/第07卷-freebsd的工程体系重构/第154章-freebsd网络栈的tcp-sack漏洞与响应/154.1-TCP-SACK-与网络栈安全-TCP-SACK-协议漏洞效应范围涵盖/154.1.1-tcpsack漏洞技术细节与效应范围.md	史料	A	2026-10-30	154.1.1 TCP SACK 漏洞技术细节与效应范围	none
-V61.6.5.5	页权限的互斥策略	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	Under the W^X mitigation, memory pages may be writable (W) or executable (E), but not both at the same time.	none
 V61.6.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“网络协议漏洞案例：TCP SACK 与栈级响应（2019）”；本节题为其下位论题	none
 V61.6.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.6.1	链表膨胀	旧大纲-20261023/第07卷-freebsd的工程体系重构/第154章-freebsd网络栈的tcp-sack漏洞与响应/154.1-TCP-SACK-与网络栈安全-TCP-SACK-协议漏洞效应范围涵盖/154.1.1-tcpsack漏洞技术细节与效应范围.md	史料	A	2026-10-30	154.1.1 TCP SACK 漏洞技术细节与效应范围	none
@@ -1313,16 +1255,12 @@ V61.6.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V61.6.7.1	内存泄露与数据泄露的判据	https://www.freebsd.org/security/	联网	A	2026-10-30	Is it a privilege escalation vulnerability? Is it a code injection vulnerability? Is it a memory disclosure or dataleak vulnerability?	none
 V61.6.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“文件系统漏洞”；本节题为其下位论题	none
 V61.6.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.7.2	信号处理中的非异步安全调用	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	We discovered a vulnerability (a signal handler race condition) in OpenSSH's server (sshd): if a client does not authenticate within LoginGraceTime seconds ... sshd's SIGALRM handler is called asynchronously, but this signal handler calls various functions that are not async-signal-safe	none
 V61.6.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“文件系统漏洞”；本节题为其下位论题	none
 V61.6.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.7.3	部分调用不产生记录	https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	联网	A	2026-10-30	Instrumentation of auditable events in the kernel is not complete, as some system calls do not generate audit records, or generate audit records with incomplete argument information.	none
 V61.6.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“文件系统漏洞”；本节题为其下位论题	none
 V61.6.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.7.4	链表遍历导致资源耗尽	https://nvd.nist.gov/vuln/detail/CVE-2019-5599	联网	A	2026-10-30	In FreeBSD 12.0-STABLE before r349197 and 12.0-RELEASE before 12.0-RELEASE-p6, a bug in the non-default RACK TCP stack can allow an attacker to cause several linked lists to grow unbounded and cause an expensive list traversal on every packet being processed, leading to resource exhaustion and a denial of service.	none
 V61.6.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“文件系统漏洞”；本节题为其下位论题	none
 V61.6.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.7.5	源码补丁与签名文件	https://www.openbsd.org/errata76.html	联网	A	2026-10-30	003: RELIABILITY FIX: October 29, 2024 [ A source code patch exists which remedies this problem. ]	none
 V61.6.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“隔离边界突破”；本节题为其下位论题	none
 V61.6.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.8.1	命名空间越界	旧大纲-20261023/第06卷-freebsd的核心技术革新/第129章-cheri的法律基础与硬件合作协议/129.4-外部批评与安全争议-Capsicum-沙箱逃逸案例-CHERI/129.4.1-capsicum沙箱模型的局限性与逃逸案例.md	史料	A	2026-10-30	129.4.1 Capsicum 沙箱模型的局限性与逃逸案例	none
@@ -1338,31 +1276,25 @@ V61.6.8.3	入口检查未覆盖全部通道	https://man.freebsd.org/cgi/man.cgi?
 V61.6.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“隔离边界突破”；本节题为其下位论题	none
 V61.6.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.8.4	逃逸构造步骤	旧大纲-20261023/第06卷-freebsd的核心技术革新/第129章-cheri的法律基础与硬件合作协议/129.4-外部批评与安全争议-Capsicum-沙箱逃逸案例-CHERI/129.4.1-capsicum沙箱模型的局限性与逃逸案例.md	史料	A	2026-10-30	129.4.1 Capsicum 沙箱模型的局限性与逃逸案例	none
-V61.6.8.4	收紧内存布局去除权限	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Process layouts in memory tightened to remove execute permission from all segmented, non-instruction data and to remove write permission from data that is only modified during loading and relocation.	none
 V61.6.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“隔离边界突破”；本节题为其下位论题	none
 V61.6.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.8.5	加固次序	旧大纲-20261023/第06卷-freebsd的核心技术革新/第129章-cheri的法律基础与硬件合作协议/129.4-外部批评与安全争议-Capsicum-沙箱逃逸案例-CHERI/129.4.1-capsicum沙箱模型的局限性与逃逸案例.md	史料	A	2026-10-30	129.4.1 Capsicum 沙箱模型的局限性与逃逸案例	none
-V61.6.8.5	权限分离的落地时点	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Privilege separation : First implemented by Niels Provos and Markus Friedl in OpenSSH in March 2002, released with OpenBSD 3.2.	none
 V61.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“虚拟化攻击面”；本节题为其下位论题	none
 V61.6.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.9.1	设备模型模拟面	旧大纲-20261023/第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.4-bhyve-的架构设计/130.4.2-要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v.md	史料	A	2026-10-30	130.4.2 要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v	none
-V61.6.9.1	进程取较低完整级	https://learn.microsoft.com/en-us/windows/win32/secauthz/mandatory-integrity-control	联网	A	2026-10-30	When a user attempts to launch an executable file, the new process is created with the minimum of the user integrity level and the file integrity level.	none
 V61.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“虚拟化攻击面”；本节题为其下位论题	none
 V61.6.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.9.2	客户机越权出口	旧大纲-20261023/第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.4-bhyve-的架构设计/130.4.2-要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v.md	史料	A	2026-10-30	130.4.2 要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v	none
-V61.6.9.2	完全隔离的另一路径	https://man.freebsd.org/cgi/man.cgi?query=chroot&sektion=2	联网	A	2026-10-30	For complete isolation from the rest of the system, use jail(2) instead.	none
 V61.6.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“虚拟化攻击面”；本节题为其下位论题	none
 V61.6.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.9.3	引导校验缺口	旧大纲-20261023/第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.5-与-grub2-bhyve-uefi-edk2-bhyve-的引导链整合/130.5.2-要点bhyve引导链的演进遵循按需添加的工程节奏2011年初始版本仅支持bhyv.md	史料	A	2026-10-30	130.5.2 要点bhyve引导链的演进遵循按需添加的工程节奏2011年初始版本仅支持bhyv	none
-V61.6.9.3	内核与模块签名的锁定	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
+V61.6.9.3	内核与模块签名的锁定	https://wiki.freebsd.org/SecureBoot	联网	B	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
 V61.6.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“虚拟化攻击面”；本节题为其下位论题	none
 V61.6.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.9.4	宿主客户分界	旧大纲-20261023/第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.4-bhyve-的架构设计/130.4.2-要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v.md	史料	A	2026-10-30	130.4.2 要点bhyve的设备模型同时支持半虚拟化virtio设备与全虚拟化模拟设备两类v	none
-V61.6.9.4	虚拟网络栈的边界	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8	联网	A	2026-10-30	vnet Create the jail with its own virtual network stack, with its own network interfaces, addresses, routing table, etc.	none
 V61.6.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“虚拟化攻击面”；本节题为其下位论题	none
 V61.6.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.9.5	虚拟化修补节奏	旧大纲-20261023/第06卷-freebsd的核心技术革新/第130章-bhyve的起源与架构设计/130.6-bhyve-在-TrueNAS-CORE-与-FreeNAS-中的部署/130.6.1-bhyve的主要商业用户场景.md	史料	A	2026-10-30	130.6.1 bhyve 的主要商业用户场景	none
-V61.6.9.5	合并公告的延后	https://www.netbsd.org/security/	联网	A	2026-10-30	when a vulnerability is found during a code audit, or when several other issues are likely to be spotted and fixed in the near future, the security team may delay the release of a Security Advisory, so that one unique, comprehensive Security Advisory covering several vulnerabilities can be issued.	none
 V61.6.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“认证系统漏洞”；本节题为其下位论题	none
 V61.6.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.10.1	认证时序缺陷	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.4-2024年regresshioncve-2024-6387.md	史料	A	2026-10-30	150.3.4 2024 年：regreSSHion（CVE-2024-6387）	none
@@ -1374,7 +1306,6 @@ V61.6.10.2	SIGALRM 处理中的不安全调用	https://www.qualys.com/2024/07/01
 V61.6.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“认证系统漏洞”；本节题为其下位论题	none
 V61.6.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.10.3	密钥交换偏差	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.4-2024年regresshioncve-2024-6387.md	史料	A	2026-10-30	150.3.4 2024 年：regreSSHion（CVE-2024-6387）	none
-V61.6.10.3	CVE 号的取得方式	https://www.freebsd.org/security/	联网	A	2026-10-30	Once it had been determined that a Security Advisory is warranted, either the submitter delivers a CVE number if he/she already requested one, or we use one from the FreeBSD pool available.	none
 V61.6.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“认证系统漏洞”；本节题为其下位论题	none
 V61.6.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.10.4	默认配置暴露	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.4-2024年regresshioncve-2024-6387.md	史料	A	2026-10-30	150.3.4 2024 年：regreSSHion（CVE-2024-6387）	none
@@ -1405,19 +1336,15 @@ V61.6.11.5	流程改造	旧大纲-20261023/第07卷-freebsd的工程体系重构
 V61.6.11.5	初判为发行版后证实为上游	https://www.openwall.com/lists/oss-security/2024/03/29/4	联网	A	2026-10-30	At first I thought this was a compromise of debian's package, but it turns out to be upstream.	none
 V61.6.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 12 节“补丁与回归测试”；本节题为其下位论题	none
 V61.6.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.12.1	合成语料可供后续测试	https://lcamtuf.coredump.cx/afl/	联网	A	2026-10-30	The compact synthesized corpora produced by the tool are also useful for seeding other, more labor- or resource-intensive testing regimes down the road.	none
 V61.6.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 12 节“补丁与回归测试”；本节题为其下位论题	none
 V61.6.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.12.2	几乎无需配置	https://lcamtuf.coredump.cx/afl/	联网	A	2026-10-30	it has modest performance overhead, uses a variety of highly effective fuzzing strategies and effort minimization tricks, requires essentially no configuration	none
 V61.6.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 12 节“补丁与回归测试”；本节题为其下位论题	none
 V61.6.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.12.3	多数方案依赖链接时优化	https://clang.llvm.org/docs/ControlFlowIntegrity.html	联网	A	2026-10-30	As currently implemented, all schemes except for kcfi rely on link-time optimization (LTO)	none
 V61.6.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 12 节“补丁与回归测试”；本节题为其下位论题	none
 V61.6.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.12.4	源码补丁附带签名校验	https://www.openbsd.org/errata76.html	联网	A	2026-10-30	003: RELIABILITY FIX: October 29, 2024 [ A source code patch exists which remedies this problem. ]	none
 V61.6.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 12 节“补丁与回归测试”；本节题为其下位论题	none
 V61.6.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.6.12.5	缓解措施的能力边界	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	Security vulnerability mitigations are techniques employed in FreeBSD to limit the potential impact of security vulnerabilities in software and hardware.	none
 V61.6.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 13 节“安全公告体系”；本节题为其下位论题	none
 V61.6.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.13.1	公告与勘误分流	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.2-FreeBSD-Security-Team-与安全响应体系-安全公告/150.2.2-安全公告体系freebsd-sa与erratanotice.md	史料	A	2026-10-30	150.2.2 安全公告体系：FreeBSD-SA 与 Errata Notice	none
@@ -1449,7 +1376,6 @@ V61.6.14.2	sshd 的同一修复	https://www.openbsd.org/errata76.html	联网	A	2
 V61.6.14.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 14 节“BSD 对第三方库漏洞的响应”；本节题为其下位论题	none
 V61.6.14.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.14.3	兼容性代价	旧大纲-20261023/第07卷-freebsd的工程体系重构/第163章-freebsd13x第三方软件与安全响应/163.3-13-x-周期漏洞与安全响应综览-39-个-SA-与-OpenSSL-1-1-1/163.3.4-heimdal2022-2023集中清理-kerberos安全债务的早期清算.md	史料	A	2026-10-30	163.3.4 Heimdal 2022-2023 集中清理——Kerberos 安全债务的早期清算	none
-V61.6.14.3	打包层与上游的关系	https://www.openwall.com/lists/oss-security/2024/03/29/4	联网	A	2026-10-30	At first I thought this was a compromise of debian's package, but it turns out to be upstream.	none
 V61.6.14.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 14 节“BSD 对第三方库漏洞的响应”；本节题为其下位论题	none
 V61.6.14.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.14.4	公告移植时序	旧大纲-20261023/第07卷-freebsd的工程体系重构/第163章-freebsd13x第三方软件与安全响应/163.3-13-x-周期漏洞与安全响应综览-39-个-SA-与-OpenSSL-1-1-1/163.3.4-heimdal2022-2023集中清理-kerberos安全债务的早期清算.md	史料	A	2026-10-30	163.3.4 Heimdal 2022-2023 集中清理——Kerberos 安全债务的早期清算	none
@@ -1505,7 +1431,6 @@ V61.7.3.1	修复提交的说明文本	https://www.qualys.com/2024/07/01/cve-2024
 V61.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“源代码提交历史”；本节题为其下位论题	none
 V61.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.3.2	修复提交标记	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
-V61.7.3.2	修订号与分支的对应	https://security.freebsd.org/advisories/FreeBSD-SA-19:08.rack.asc	联网	A	2026-10-30	Announced: 2019-06-19	none
 V61.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“源代码提交历史”；本节题为其下位论题	none
 V61.7.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.3.3	合并痕迹	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
@@ -1513,11 +1438,9 @@ V61.7.3.3	稳定分支与安全分支的分工	https://www.freebsd.org/security/
 V61.7.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“源代码提交历史”；本节题为其下位论题	none
 V61.7.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.3.4	提交者身份	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
-V61.7.3.4	机构起源与人员任期	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Richard Pethia was founding director of the SEI's CERT Division. Pethia, who served as director of CERT from 1988 to 2016, guided the organization through tremendous growth and change.	none
 V61.7.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“源代码提交历史”；本节题为其下位论题	none
 V61.7.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.3.5	历史重写	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
-V61.7.3.5	扫描器对源码的常态分析	https://www.netbsd.org/security/	联网	A	2026-10-30	the NetBSD source tree is periodically analyzed by two separate code scanners to maintain and improve code quality: Coverity - a commercial code scanner, and Brainy - a private code scanner developed by a NetBSD developer.	none
 V61.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“补丁与版本树”；本节题为其下位论题	none
 V61.7.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.4.1	补丁文本形态	旧大纲-20261023/第06卷-freebsd的核心技术革新/第136章-freebsd9x安全响应与史观反思/136.2-项目统摄史观审视-BSD-patch-替代-GNU-patch-争议的方法论反思/136.2.3-总纲第21条审视-革命与改革是历史方法论分歧.md	史料	A	2026-10-30	136.2.3 总纲第 21 条审视——革命与改革是历史方法论分歧	none
@@ -1553,7 +1476,6 @@ V61.7.5.3	以安全官密钥签署	https://www.freebsd.org/security/	联网	A	20
 V61.7.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“安全团队与漏洞通告记录：以 FreeBSD 安全官团队为例”；本节题为其下位论题	none
 V61.7.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.5.4	邮件存档	旧大纲-20261023/第08卷-freebsd的范式转换/第175章-freebsd安全团队与安全公告制度/175.1-FreeBSD-安全团队与安全公告-FreeBSD-Security-Offic/175.1.4-历任securityofficer与安全团队成员贡献.md	史料	A	2026-10-30	175.1.4 历任 Security Officer 与安全团队成员贡献	none
-V61.7.5.4	首任主任与任期	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Richard Pethia was founding director of the SEI's CERT Division. Pethia, who served as director of CERT from 1988 to 2016, guided the organization through tremendous growth and change.	none
 V61.7.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“安全团队与漏洞通告记录：以 FreeBSD 安全官团队为例”；本节题为其下位论题	none
 V61.7.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.5.5	史料缺口	旧大纲-20261023/第08卷-freebsd的范式转换/第175章-freebsd安全团队与安全公告制度/175.1-FreeBSD-安全团队与安全公告-FreeBSD-Security-Offic/175.1.4-历任securityofficer与安全团队成员贡献.md	史料	A	2026-10-30	175.1.4 历任 Security Officer 与安全团队成员贡献	none
@@ -1569,7 +1491,6 @@ V61.7.6.2	记录格式的行业来源	https://man.freebsd.org/cgi/man.cgi?query=
 V61.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“代码审计报告”；本节题为其下位论题	none
 V61.7.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.6.3	外部委托	旧大纲-20261023/第10卷-openbsd的历史/第224章-openbsd安全文化的奠基/224.6-审计记录考据方法论/224.6.1-要点OpenBSDcommitlog中审计commit通常以fix或audit为.md	史料	A	2026-10-30	224.6.1 要点OpenBSDcommitlog中审计commit通常以fix或audit为	none
-V61.7.6.3	内部跟踪与分类流程	https://www.freebsd.org/security/	联网	A	2026-10-30	For every issue that gets reported, an internal tracking number is created, unless something is very obviously not a security issue.	none
 V61.7.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“代码审计报告”；本节题为其下位论题	none
 V61.7.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.6.4	发现项处置	旧大纲-20261023/第10卷-openbsd的历史/第224章-openbsd安全文化的奠基/224.6-审计记录考据方法论/224.6.1-要点OpenBSDcommitlog中审计commit通常以fix或audit为.md	史料	A	2026-10-30	224.6.1 要点OpenBSDcommitlog中审计commit通常以fix或audit为	none
@@ -1601,7 +1522,6 @@ V61.7.7.5	公共库收录时点的滞后	https://nvd.nist.gov/vuln/detail/CVE-20
 V61.7.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“用户规模与暴露面的关系”；本节题为其下位论题	none
 V61.7.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.8.1	安装基数估算	旧大纲-20261023/第10卷-openbsd的历史/第215章-openbsd-3x的持续安全改进/215.4-与同时期操作系统的比较19962004年同期netbsd1216可移植性至上/215.4.4-要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20.md	史料	A	2026-10-30	215.4.4 要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20	none
-V61.7.8.1	默认不启用服务的安装取向	https://www.netbsd.org/security/	联网	A	2026-10-30	All services default to their most secure settings, and no services are enabled by default for new installations.	none
 V61.7.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“用户规模与暴露面的关系”；本节题为其下位论题	none
 V61.7.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.8.2	暴露比例	旧大纲-20261023/第10卷-openbsd的历史/第215章-openbsd-3x的持续安全改进/215.4-与同时期操作系统的比较19962004年同期netbsd1216可移植性至上/215.4.4-要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20.md	史料	A	2026-10-30	215.4.4 要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20	none
@@ -1609,15 +1529,12 @@ V61.7.8.2	远程可利用的判据	https://www.freebsd.org/security/	联网	A	20
 V61.7.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“用户规模与暴露面的关系”；本节题为其下位论题	none
 V61.7.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.8.3	目标选择	旧大纲-20261023/第10卷-openbsd的历史/第215章-openbsd-3x的持续安全改进/215.4-与同时期操作系统的比较19962004年同期netbsd1216可移植性至上/215.4.4-要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20.md	史料	A	2026-10-30	215.4.4 要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20	none
-V61.7.8.3	鼓励公司按需取用的取向	https://www.openbsd.org/goals.html	联网	A	2026-10-30	We strive to make our software robust and secure, and encourage companies to use whichever pieces they want to.	none
 V61.7.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“用户规模与暴露面的关系”；本节题为其下位论题	none
 V61.7.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.8.4	数据可得性	旧大纲-20261023/第10卷-openbsd的历史/第215章-openbsd-3x的持续安全改进/215.4-与同时期操作系统的比较19962004年同期netbsd1216可移植性至上/215.4.4-要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20.md	史料	A	2026-10-30	215.4.4 要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20	none
-V61.7.8.4	组织规模的扩张	https://www.sei.cmu.edu/divisions/cert/	联网	A	2026-10-30	Under Pethia's leadership, the unit expanded and evolved from the CERT Coordination Center—a small group focused on computer incident response—to a research organization of more than 200 professionals	none
 V61.7.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“用户规模与暴露面的关系”；本节题为其下位论题	none
 V61.7.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.8.5	相关性误读	旧大纲-20261023/第10卷-openbsd的历史/第215章-openbsd-3x的持续安全改进/215.4-与同时期操作系统的比较19962004年同期netbsd1216可移植性至上/215.4.4-要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20.md	史料	A	2026-10-30	215.4.4 要点19962004年间市场份额数据Linux服务器市场占有率从约5%升至约20	none
-V61.7.8.5	扫描器对质量的常态作用	https://www.netbsd.org/security/	联网	A	2026-10-30	the NetBSD source tree is periodically analyzed by two separate code scanners to maintain and improve code quality: Coverity - a commercial code scanner, and Brainy - a private code scanner developed by a NetBSD developer.	none
 V61.7.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“安全机制目标与实际效果”；本节题为其下位论题	none
 V61.7.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.9.1	目标可测性	旧大纲-20261023/第17卷-政治制度与社区治理/第352章-安全响应文化与哲学深化审视/352.3-bsd安全响应文化的历史演化与未来趋势/352.3.1-从被动修复到proactive安全工程.md	史料	A	2026-10-30	352.3.1 从被动修复到 Proactive 安全工程	none
@@ -1625,7 +1542,6 @@ V61.7.9.1	缓解不解决底层缺陷的定位	https://man.freebsd.org/cgi/man.c
 V61.7.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“安全机制目标与实际效果”；本节题为其下位论题	none
 V61.7.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.9.2	部署率	旧大纲-20261023/第17卷-政治制度与社区治理/第352章-安全响应文化与哲学深化审视/352.3-bsd安全响应文化的历史演化与未来趋势/352.3.1-从被动修复到proactive安全工程.md	史料	A	2026-10-30	352.3.1 从被动修复到 Proactive 安全工程	none
-V61.7.9.2	可选的运行时锁定	https://wiki.freebsd.org/SecureBoot	联网	A	2026-10-30	The second stage would be to allow kernels and kernel modules to be signed and to permit the system to be fully locked down as per the Fedora approach.	none
 V61.7.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“安全机制目标与实际效果”；本节题为其下位论题	none
 V61.7.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.9.3	绕过案例权重	旧大纲-20261023/第17卷-政治制度与社区治理/第352章-安全响应文化与哲学深化审视/352.3-bsd安全响应文化的历史演化与未来趋势/352.3.1-从被动修复到proactive安全工程.md	史料	A	2026-10-30	352.3.1 从被动修复到 Proactive 安全工程	none

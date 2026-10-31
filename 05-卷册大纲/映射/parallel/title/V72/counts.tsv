@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T22:50:31	start	0	0	0	接续上一执行体；claim 已存（session=claude-main-v51-76-20261030），本会话沿用不改
+2026-10-30T22:50:31	design_complete	54	262	192	六章 parts 分章写入后 merge_parts 合并；第一轮 exceptions=192
+2026-10-30T22:50:31	assemble	54	262	192	lint hard=0 warn=9（C8b 九簇超限，逐条改写收尾）
+2026-10-30T22:50:31	audit	54	262	192	audit_title_consistency --check：本卷 FAIL 0
+2026-10-30T22:50:31	review	54	262	192	逐条判读 262／262：keep 232／supplement 25／rewrite 5；补证 25 行
+2026-10-30T22:50:31	report	54	262	187	V72-标题呈审报告.md 已写；4.9 补入库内判例登记后 exceptions=187
+2026-10-30T22:50:31	done	54	262	187	待 ykla 卷级批准；本会话不自批；sha256=394419b250d0bc73

@@ -1,0 +1,8 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T22:10:00	start	88	441	85	续跑：parts 7 件与 design.json 已在盘，判读未收口
+2026-10-30T22:12:00	draft	88	441	85	逐条判读表 review_ch1–ch7 建成，441 行全覆盖
+2026-10-30T22:15:00	assemble	88	441	85	assemble.py V61：lint hard=0 warn=0
+2026-10-30T22:18:00	audit	88	441	85	audit_title_consistency --check：40 项 FAIL 0
+2026-10-30T22:22:00	review	88	441	85	维持 318、改写 123（改题 8、改论题 30、删错配 84、删并补 1）
+2026-10-30T22:25:00	report	88	441	85	V61-标题呈审报告.md 落盘
+2026-10-30T22:26:00	done	88	441	85	ledger_sha256=6008443295a094898bdceb1f57fffee8bf5f486dffbeb00f94cb21d0b886c1ee

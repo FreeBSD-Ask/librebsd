@@ -1,0 +1,9 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T17:47:00	start	0	0	0	claim 已存在；九个 src_ch*.tsv 起草（时间据工作区文件回填）
+2026-10-30T22:53:00	draft	118	590	370	design.json 118 节 590 题并经一轮证据修正（题源数 4→3、引文逐字化）（时间据文件回填）
+2026-10-30T22:53:00	assemble	118	590	370	装配三件台账；lint hard=0 warn=0（时间据文件回填）
+2026-10-30T22:53:00	review	118	590	370	前轮逐条判读 590 行（review_ch1..9.tsv），改题 24（已应用）；判读留痕 note_ch1..6.txt（时间据文件回填）
+2026-10-31T02:02:54	review_fix	118	590	370	本会话逐条复核 590 行：维持 546、改论题 5、补证 9、改题 6；纠 3.11.3 计数误、4.1.4／4.12.4 跨节近重、8.12.5 无据归因、4 条论题禁词
+2026-10-31T02:02:54	assemble	118	590	370	重装配 hard=0 warn=0；evidence 1778→1794；sha256=3478d882dd69
+2026-10-31T02:02:54	audit	118	590	370	audit_title_consistency --check：本卷 FAIL 0（唯一 FAIL 为 V73 C8b，他卷不代改）
+2026-10-31T02:02:54	report	118	590	370	呈审报告与 done.json 已写；hash=3478d882dd69

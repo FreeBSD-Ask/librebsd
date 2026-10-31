@@ -1,0 +1,11 @@
+{
+ "vol": "V63",
+ "sections": 70,
+ "titles": 284,
+ "exceptions": 280,
+ "ledger_sha256": "53b59ab2c10364f0e2d6646fec8dc37eaeef44bccdf0ceae554b1e7afbd05b06",
+ "selftest_exit": 0,
+ "finished_at": "2026-10-30T18:10:29",
+ "session": "claude-subagent-V63-20261030",
+ "review_fix": "2026-10-30 逐条判读 284 条：维持 278、改论题 4（2.12.2／5.4.1／6.5.1／6.7.2）、补证 2（4.3.1／5.7.1）；判读表见 work/V63/review_ch1..8.tsv"
+}

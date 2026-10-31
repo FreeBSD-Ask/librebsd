@@ -1,0 +1,823 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V72.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“AT&T 与 UNIX 源代码版权”；本节题为其下位论题	none
+V72.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.1.1	同意令与业务限制	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	In the late 1950s, AT&T was forced to accept a consent decree from the US government to end an anti-trust lawsuit. As part of that consent decree, AT&T had to limit its business endeavours to its national telephone system and special projects for the federal government.	none
+V72.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“AT&T 与 UNIX 源代码版权”；本节题为其下位论题	none
+V72.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.1.2	非商业许可条款	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	They would license Unix to universities, but they would operate under a "no advertising, no support, no bug fixes, payment in advance" plan.	none
+V72.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“AT&T 与 UNIX 源代码版权”；本节题为其下位论题	none
+V72.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.1.3	版权标注登记	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	There are bound to be omissions of copyright in this file. Please email me if there are other copyright notices that can be added here.	none
+V72.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“AT&T 与 UNIX 源代码版权”；本节题为其下位论题	none
+V72.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.1.4	派生部分判定	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Any portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are substantially derived from the Novell UNIX systems above are also copyright Novell.	none
+V72.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“AT&T 与 UNIX 源代码版权”；本节题为其下位论题	none
+V72.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.1.5	授权费落差	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Anyone could get both the source and the binaries for $995. This was a 99% discount on the price AT&T charged for their System V Unix.	none
+V72.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Berkeley UNIX 的代码来源（1973–1993）”；本节题为其下位论题	none
+V72.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.2.1	AT&T 代码基线	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Novell owns the copyright on these versions of UNIX (as well as others): 1st, 2nd, 3rd, 4th, 5th, 6th & 7th Editions, PWB/UNIX, Mini UNIX, and 32V.	none
+V72.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Berkeley UNIX 的代码来源（1973–1993）”；本节题为其下位论题	none
+V72.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.2.2	自写部分归属	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Depending on where the software was developed, those portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are not substantially derived from the Novell UNIX systems above are either copyright the Regents of the University of California, or by the authors of the software.	none
+V72.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Berkeley UNIX 的代码来源（1973–1993）”；本节题为其下位论题	none
+V72.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.2.3	发行版序列	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Any portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are substantially derived from the Novell UNIX systems above are also copyright Novell.	none
+V72.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Berkeley UNIX 的代码来源（1973–1993）”；本节题为其下位论题	none
+V72.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.2.4	386BSD 重写	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The initial release of 386BSD worked but was barely functional. So, Bill and Lynne Jolitz started working on creating a full release. They began by removing and replacing the pieces that had unsatisfactory licenses or no longer worked the way they should.	none
+V72.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“USL 诉 BSDI：诉因、请求权基础与管辖”；本节题为其下位论题	none
+V72.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.3.1	诉因构成	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The suit filed by USL alleged that BSDi's product included code and trade secrets that belonged to USL.	none
+V72.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“USL 诉 BSDI：诉因、请求权基础与管辖”；本节题为其下位论题	none
+V72.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.3.2	诉前警告	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	They sent a letter demanding that BSDi do two things: drop the 1-800-ITS-Unix phone number and make it clear in the advertisements that BSDi's product was not Unix.	none
+V72.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“USL 诉 BSDI：诉因、请求权基础与管辖”；本节题为其下位论题	none
+V72.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.3.3	管辖与禁令裁定	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Judge Dickinson R. Debevoise from New Jersey heard the arguments for the injunction. After deliberating 6 weeks, he denied the injunction and threw out all but two complaints.	none
+V72.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“USL 诉 BSDI：诉因、请求权基础与管辖”；本节题为其下位论题	none
+V72.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.3.4	反诉主张	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The University of California filed a counter-suit against USL in California district court. This counter-suit pointed out that USL's product System V included code from BSD and they had failed to credit the University per the license USL had agreed to.	none
+V72.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“USL 诉 BSDI：诉因、请求权基础与管辖”；本节题为其下位论题	none
+V72.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.3.5	六份文件	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	At the pre-trial hearing, BSDi pointed out that they were using code from the University of California, Berkeley, except for six kernel files that had been written by Bill Jolitz to replace copyrighted code.	none
+V72.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“4.4BSD-Lite 与代码清理：版权净化与合规程序”；本节题为其下位论题	none
+V72.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.4.1	和解清理规模	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Only three files had to be removed from Networking Release 2 and changes were made to other files.	none
+V72.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“4.4BSD-Lite 与代码清理：版权净化与合规程序”；本节题为其下位论题	none
+V72.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.4.2	版权补注	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The University of California added USL copyrights to 70 files.	none
+V72.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“4.4BSD-Lite 与代码清理：版权净化与合规程序”；本节题为其下位论题	none
+V72.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.4.3	溯源审计	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.2-bsd代码溯源审计的工程响应.md	史料	A	2026-10-30	SCO 诉讼促使 FreeBSD 与 OpenBSD 启动代码溯源审计，重新核对文件头版权与许可证声明，部分文件因来源不明被重写	none
+V72.1.4.3	溯源审计	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	It effectively stalled development on BSD for several years. No one wanted to risk getting pulled into the lawsuit.	none
+V72.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“4.4BSD-Lite 与代码清理：版权净化与合规程序”；本节题为其下位论题	none
+V72.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.4.4	开发停滞	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	No one wanted to risk getting pulled into the lawsuit.	none
+V72.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“4.4BSD-Lite 与代码清理：版权净化与合规程序”；本节题为其下位论题	none
+V72.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.4.5	标注缺口	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	There are bound to be omissions of copyright in this file. Please email me if there are other copyright notices that can be added here.	none
+V72.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Novell 取得 UNIX 相关权利”；本节题为其下位论题	none
+V72.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.5.1	USL 转手	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	USL was purchased from AT&T by Novell. The CEO of Novell said that he would prefer to compete in the marketplace than in court.	none
+V72.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Novell 取得 UNIX 相关权利”；本节题为其下位论题	none
+V72.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.5.2	版权归属说明	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Novell owns the copyright on these versions of UNIX (as well as others): 1st, 2nd, 3rd, 4th, 5th, 6th & 7th Editions, PWB/UNIX, Mini UNIX, and 32V.	none
+V72.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Novell 取得 UNIX 相关权利”；本节题为其下位论题	none
+V72.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.5.3	商标与源码分属	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	UNIX is a registered trademark in the United States and other countries, licensed exclusively through X/Open Company, Ltd.	none
+V72.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Novell 取得 UNIX 相关权利”；本节题为其下位论题	none
+V72.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.5.4	许可费结构	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Anyone could get both the source and the binaries for $995. This was a 99% discount on the price AT&T charged for their System V Unix.	none
+V72.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Novell 取得 UNIX 相关权利”；本节题为其下位论题	none
+V72.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.5.5	旧版开放许可	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	In 2002, Caldera provided a BSD-style source license for these systems.	none
+V72.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“SCO Group 与 UNIX 版权主张”；本节题为其下位论题	none
+V72.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.6.1	Caldera 承接	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	In 2002, Caldera provided a BSD-style source license for these systems.	none
+V72.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“SCO Group 与 UNIX 版权主张”；本节题为其下位论题	none
+V72.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.6.2	SCO 主张	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.1-sco诉ibm案对unix谱系的冲击.md	史料	A	2026-10-30	2003 年 SCO Group 诉 IBM 案声称 IBM 将 UNIX 源码（含 BSD 衍生代码）移植至 Linux，索赔 50 亿美元；案件引发 BSD 社区对代码溯源与版权链的重新审视，1994 年 USL-BSD 和解协议成为关键抗辩依据。	none
+V72.1.6.2	SCO 主张与 Novell 版权说明	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Novell owns the copyright on these versions of UNIX (as well as others): 1st, 2nd, 3rd, 4th, 5th, 6th & 7th Editions, PWB/UNIX, Mini UNIX, and 32V.	none
+V72.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“SCO Group 与 UNIX 版权主张”；本节题为其下位论题	none
+V72.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.6.3	SCO 诉讼清单	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	the Company had a total of $7,787,000 in cash and cash equivalents and $5,389,000 in restricted cash, of which $3,394,000 is designated to pay for experts, consultants and other costs in connection with the litigation between the Company and IBM, Novell and Red Hat (the "SCO Litigation")	none
+V72.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“SCO Group 与 UNIX 版权主张”；本节题为其下位论题	none
+V72.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.6.4	Novell 保留权利	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“SCO Group 与 UNIX 版权主张”；本节题为其下位论题	none
+V72.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.6.5	版权链两说	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Novell owns the copyright on these versions of UNIX (as well as others): 1st, 2nd, 3rd, 4th, 5th, 6th & 7th Editions, PWB/UNIX, Mini UNIX, and 32V.	none
+V72.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 代码源流与版权清理”；本节题为其下位论题	none
+V72.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.7.1	逐文件核对	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.2-bsd代码溯源审计的工程响应.md	史料	A	2026-10-30	SCO 诉讼促使 FreeBSD 与 OpenBSD 启动代码溯源审计，重新核对文件头版权与许可证声明，部分文件因来源不明被重写	none
+V72.1.7.1	逐文件版权补注	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The University of California added USL copyrights to 70 files.	none
+V72.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 代码源流与版权清理”；本节题为其下位论题	none
+V72.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.7.2	来源不明处置	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.2-bsd代码溯源审计的工程响应.md	史料	A	2026-10-30	SCO 诉讼促使 FreeBSD 与 OpenBSD 启动代码溯源审计，重新核对文件头版权与许可证声明，部分文件因来源不明被重写	none
+V72.1.7.2	来源不明文件的替换	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The initial release of 386BSD worked but was barely functional. So, Bill and Lynne Jolitz started working on creating a full release. They began by removing and replacing the pieces that had unsatisfactory licenses or no longer worked the way they should.	none
+V72.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 代码源流与版权清理”；本节题为其下位论题	none
+V72.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.7.3	第三方代码	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Depending on where the software was developed, those portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are not substantially derived from the Novell UNIX systems above are either copyright the Regents of the University of California, or by the authors of the software.	none
+V72.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 代码源流与版权清理”；本节题为其下位论题	none
+V72.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.7.4	来源台账	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Any portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are substantially derived from the Novell UNIX systems above are also copyright Novell.	none
+V72.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“BSD 代码源流与版权清理”；本节题为其下位论题	none
+V72.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.7.5	审计公开	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.2-bsd代码溯源审计的工程响应.md	史料	A	2026-10-30	审计结果公开于 BSD 项目 SCM 与邮件列表	none
+V72.1.7.5	版权标注征集	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	There are bound to be omissions of copyright in this file. Please email me if there are other copyright notices that can be added here.	none
+V72.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从 AT&T 代码到独立 BSD 代码树”；本节题为其下位论题	none
+V72.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.8.1	独立树条件	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The initial release of 386BSD worked but was barely functional. So, Bill and Lynne Jolitz started working on creating a full release. They began by removing and replacing the pieces that had unsatisfactory licenses or no longer worked the way they should.	none
+V72.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从 AT&T 代码到独立 BSD 代码树”；本节题为其下位论题	none
+V72.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.8.2	净版起点	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Only three files had to be removed from Networking Release 2 and changes were made to other files.	none
+V72.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从 AT&T 代码到独立 BSD 代码树”；本节题为其下位论题	none
+V72.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.8.3	残余代码分布	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Any portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are substantially derived from the Novell UNIX systems above are also copyright Novell.	none
+V72.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从 AT&T 代码到独立 BSD 代码树”；本节题为其下位论题	none
+V72.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.8.4	版权分层	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Depending on where the software was developed, those portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are not substantially derived from the Novell UNIX systems above are either copyright the Regents of the University of California, or by the authors of the software.	none
+V72.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从 AT&T 代码到独立 BSD 代码树”；本节题为其下位论题	none
+V72.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.8.5	后续发行约束	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Novell owns the copyright on these versions of UNIX (as well as others): 1st, 2nd, 3rd, 4th, 5th, 6th & 7th Editions, PWB/UNIX, Mini UNIX, and 32V.	none
+V72.1.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“UNIX 诉讼对 BSD 法律地位的长期影响”；本节题为其下位论题	none
+V72.1.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.9.1	开发停滞	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	It effectively stalled development on BSD for several years. No one wanted to risk getting pulled into the lawsuit.	none
+V72.1.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“UNIX 诉讼对 BSD 法律地位的长期影响”；本节题为其下位论题	none
+V72.1.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.9.2	贡献者流向	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	this episode "effectively ceded the territory to Linux during a critical period in which there was a leadership vacuum and lots of Fear, Uncertainty and Doubt in the BSD community"	none
+V72.1.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“UNIX 诉讼对 BSD 法律地位的长期影响”；本节题为其下位论题	none
+V72.1.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.9.3	商业采用	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	USL was purchased from AT&T by Novell. The CEO of Novell said that he would prefer to compete in the marketplace than in court.	none
+V72.1.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“UNIX 诉讼对 BSD 法律地位的长期影响”；本节题为其下位论题	none
+V72.1.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.9.4	和解条款释出	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	Only three files had to be removed from Networking Release 2 and changes were made to other files.	none
+V72.1.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“UNIX 诉讼对 BSD 法律地位的长期影响”；本节题为其下位论题	none
+V72.1.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.1.9.5	地位确认	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The University of California added USL copyrights to 70 files.	none
+V72.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“著作权与商标权”；本节题为其下位论题	none
+V72.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.1.1	著作权对象	https://www.copyright.gov/what-is-copyright/	联网	A	2026-10-30	copyright protects expression, and never ideas, procedures, methods, systems, processes, concepts, principles, or discoveries	none
+V72.2.1.1	商标对象	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	A trademark can be any word, phrase, symbol, design, or a combination of these things that identifies your goods or services.	none
+V72.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“著作权与商标权”；本节题为其下位论题	none
+V72.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.1.2	创作要件	https://www.copyright.gov/what-is-copyright/	联网	A	2026-10-30	Works are original when they are independently created by a human author and have a minimal degree of creativity.	none
+V72.2.1.2	使用要件	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	You establish rights in your trademark by using it, but those rights are limited, and they only apply to the geographic area in which you're providing your goods or services.	none
+V72.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“著作权与商标权”；本节题为其下位论题	none
+V72.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.1.3	属地限度	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	You establish rights in your trademark by using it, but those rights are limited, and they only apply to the geographic area in which you're providing your goods or services.	none
+V72.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“著作权与商标权”；本节题为其下位论题	none
+V72.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.1.4	名称排除	https://www.copyright.gov/what-is-copyright/	联网	A	2026-10-30	There are some things, however, that are not creative, like: titles, names, short phrases, and slogans; familiar symbols or designs	none
+V72.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“著作权与商标权”；本节题为其下位论题	none
+V72.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.1.5	权利并用	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	none
+V72.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“BSD 名称与 Berkeley 标识”；本节题为其下位论题	none
+V72.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.2.1	名称序列	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Any portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are substantially derived from the Novell UNIX systems above are also copyright Novell.	none
+V72.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“BSD 名称与 Berkeley 标识”；本节题为其下位论题	none
+V72.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.2.2	名称与来源	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	none
+V72.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“BSD 名称与 Berkeley 标识”；本节题为其下位论题	none
+V72.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.2.3	背书禁令	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
+V72.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“BSD 名称与 Berkeley 标识”；本节题为其下位论题	none
+V72.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.2.4	标识归属	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Depending on where the software was developed, those portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are not substantially derived from the Novell UNIX systems above are either copyright the Regents of the University of California, or by the authors of the software.	none
+V72.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“BSD 名称与 Berkeley 标识”；本节题为其下位论题	none
+V72.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.2.5	注册空档	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	You establish rights in your trademark by using it, but those rights are limited, and they only apply to the geographic area in which you're providing your goods or services.	none
+V72.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“UNIX 商标与 The Open Group”；本节题为其下位论题	none
+V72.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.3.1	商标持有	https://www.opengroup.org/platforms	联网	A	2026-10-30	The UNIX trademark is owned and managed by The Open Group on behalf of the industry to signify products that are certified to conform to the Single UNIX Specification.	none
+V72.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“UNIX 商标与 The Open Group”；本节题为其下位论题	none
+V72.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.3.2	独家许可	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	UNIX is a registered trademark in the United States and other countries, licensed exclusively through X/Open Company, Ltd.	none
+V72.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“UNIX 商标与 The Open Group”；本节题为其下位论题	none
+V72.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.3.3	注册清单	https://www.opengroup.org/trademarks	联网	A	2026-10-30	The Open Group owns the following Trademarks registered in the United States and other countries:	none
+V72.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“UNIX 商标与 The Open Group”；本节题为其下位论题	none
+V72.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.3.4	认证绑定	https://www.opengroup.org/certifications/unix	联网	A	2026-10-30	Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.	none
+V72.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“UNIX 商标与 The Open Group”；本节题为其下位论题	none
+V72.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.3.5	商标诉因	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The suit filed by USL alleged that BSDi's product included code and trade secrets that belonged to USL.	none
+V72.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 认证与操作系统身份”；本节题为其下位论题	none
+V72.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.4.1	认证门槛	https://www.opengroup.org/certifications/unix	联网	A	2026-10-30	Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.	none
+V72.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 认证与操作系统身份”；本节题为其下位论题	none
+V72.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.4.2	规范版本	https://www.opengroup.org/platforms	联网	A	2026-10-30	The UNIX trademark is owned and managed by The Open Group on behalf of the industry to signify products that are certified to conform to the Single UNIX Specification.	none
+V72.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 认证与操作系统身份”；本节题为其下位论题	none
+V72.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.4.3	产品登记册	https://www.opengroup.org/certifications/unix	联网	A	2026-10-30	To view the register of certified products see http://www.opengroup.org/openbrand/register	none
+V72.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 认证与操作系统身份”；本节题为其下位论题	none
+V72.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.4.4	命名空间	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	none
+V72.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“UNIX 认证与操作系统身份”；本节题为其下位论题	none
+V72.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.4.5	商业 UNIX 延续	https://www.xinuos.com/	联网	A	2026-10-30	Xinuos and SCO have been building operating systems for enterprise environments for more than 40 years	none
+V72.2.4.5	认证序列	https://www.opengroup.org/certifications/unix	联网	A	2026-10-30	Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.	none
+V72.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“FreeBSD 商标的法律管理”；本节题为其下位论题	none
+V72.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.5.1	持有主体	FreeBSD is a registered trademark of The FreeBSD Foundation.	联网	A	2026-10-30	FreeBSD is a registered trademark of The FreeBSD Foundation.	none
+V72.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“FreeBSD 商标的法律管理”；本节题为其下位论题	none
+V72.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.5.2	标识与口号	https://freebsdfoundation.org/brand/	联网	A	2026-10-30	FreeBSD is a registered trademark of The FreeBSD Foundation. The FreeBSD logo and The Power to Serve are trademarks of The FreeBSD Foundation.	none
+V72.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“FreeBSD 商标的法律管理”；本节题为其下位论题	none
+V72.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.5.3	使用条款	https://freebsdfoundation.org/brand/	联网	A	2026-10-30	FreeBSD is a registered trademark of The FreeBSD Foundation. The FreeBSD logo and The Power to Serve are trademarks of The FreeBSD Foundation.	none
+V72.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“FreeBSD 商标的法律管理”；本节题为其下位论题	none
+V72.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.5.4	再发行使用	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	none
+V72.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“FreeBSD 商标的法律管理”；本节题为其下位论题	none
+V72.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.5.5	治理衔接	FreeBSD is a registered trademark of The FreeBSD Foundation.	联网	A	2026-10-30	FreeBSD is a registered trademark of The FreeBSD Foundation.	none
+V72.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“BSD Daemon 与项目品牌”；本节题为其下位论题	none
+V72.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.6.1	形象著作权	https://www.mckusick.com/beastie/mainpage/copyright.html	联网	A	2026-10-30	The BSD Daemon is copyrighted by Marshall Kirk McKusick.	none
+V72.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“BSD Daemon 与项目品牌”；本节题为其下位论题	none
+V72.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.6.2	名称传说	https://www.mckusick.com/beastie/	联网	A	2026-10-30	Contrary to a myth first started by some advertising droid at Walnut Creek, the daemon's name is *NOT* Chuck. He is very proud of the fact that he does not have a name, he is just the BSD daemon. If you insist on a name, call him beastie.	none
+V72.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“BSD Daemon 与项目品牌”；本节题为其下位论题	none
+V72.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.6.3	批量许可	https://www.mckusick.com/beastie/mainpage/copyright.html	联网	A	2026-10-30	If you want to mass produce the daemon on Tshirts, CDROM's, etc you need to request permission in advance.	none
+V72.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“BSD Daemon 与项目品牌”；本节题为其下位论题	none
+V72.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.6.4	维权经验	https://www.mckusick.com/beastie/mainpage/copyright.html	联网	A	2026-10-30	I almost lost the daemon to a certain large company because I failed to show due dilligence in protecting it.	none
+V72.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“BSD Daemon 与项目品牌”；本节题为其下位论题	none
+V72.2.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.6.5	权属分工	https://www.mckusick.com/beastie/mainpage/copyright.html	联网	A	2026-10-30	The BSD Daemon is copyrighted by Marshall Kirk McKusick.	none
+V72.2.6.5	名称商标	FreeBSD is a registered trademark of The FreeBSD Foundation.	联网	A	2026-10-30	FreeBSD is a registered trademark of The FreeBSD Foundation.	none
+V72.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“商业产品中的 BSD 商标使用”；本节题为其下位论题	none
+V72.2.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.7.1	代码来源	https://opensource.apple.com/	联网	A	2026-10-30	Open source software is at the heart of Apple platforms and developer tools.	none
+V72.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“商业产品中的 BSD 商标使用”；本节题为其下位论题	none
+V72.2.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.7.2	自有商标叠加	https://www.xinuos.com/	联网	A	2026-10-30	Xinuos and associated logo, SCO*office* Server, SCO*office,* Xinuos, OpenServer, ODT, Open Desktop, AIM Benchmark, and Hot Iron Awards are trademarks or registered trademarks of Xinuos, Inc. in the U.S.A. and other countries.	none
+V72.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“商业产品中的 BSD 商标使用”；本节题为其下位论题	none
+V72.2.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.7.3	商标声明页	https://www.freebsd.org/copyright/trademarks	联网	A	2026-10-30	Motif, OSF/1, and UNIX are registered trademarks and IT DialTone and The Open Group are trademarks of The Open Group in the United States and other countries.	none
+V72.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“商业产品中的 BSD 商标使用”；本节题为其下位论题	none
+V72.2.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.7.4	来源与归属	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	Depending on where the software was developed, those portions of 1BSD, 2BSD, 2.xBSD, 3BSD and 4.xBSD which are not substantially derived from the Novell UNIX systems above are either copyright the Regents of the University of California, or by the authors of the software.	none
+V72.2.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“商业产品中的 BSD 商标使用”；本节题为其下位论题	none
+V72.2.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.7.5	品牌反馈	https://opensource.apple.com/	联网	A	2026-10-30	Open source software is at the heart of Apple platforms and developer tools.	none
+V72.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“当代 UNIX 与 BSD 的比较：技术、许可证与哲学”；本节题为其下位论题	none
+V72.2.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.8.1	规范遵从	https://www.opengroup.org/platforms	联网	A	2026-10-30	The UNIX trademark is owned and managed by The Open Group on behalf of the industry to signify products that are certified to conform to the Single UNIX Specification.	none
+V72.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“当代 UNIX 与 BSD 的比较：技术、许可证与哲学”；本节题为其下位论题	none
+V72.2.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.8.2	许可条款	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V72.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“当代 UNIX 与 BSD 的比较：技术、许可证与哲学”；本节题为其下位论题	none
+V72.2.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.8.3	认证与发行	https://www.opengroup.org/certifications/unix	联网	A	2026-10-30	Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.	none
+V72.2.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“当代 UNIX 与 BSD 的比较：技术、许可证与哲学”；本节题为其下位论题	none
+V72.2.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.8.4	商标约束	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	none
+V72.2.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“当代 UNIX 与 BSD 的比较：技术、许可证与哲学”；本节题为其下位论题	none
+V72.2.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.2.8.5	长期并存	https://www.xinuos.com/	联网	A	2026-10-30	Xinuos and SCO have been building operating systems for enterprise environments for more than 40 years	none
+V72.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Novell 的 UNIX 资产与 UnixWare”；本节题为其下位论题	none
+V72.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.1.1	协议标的	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Novell 的 UNIX 资产与 UnixWare”；本节题为其下位论题	none
+V72.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.1.2	版税流保留	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	the remaining $1,995,000 of restricted cash is payable to Novell for its retained binary royalty stream	none
+V72.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Novell 的 UNIX 资产与 UnixWare”；本节题为其下位论题	none
+V72.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.1.3	商标不在标的	https://www.sco.com/company/legal/	联网	A	2026-10-30	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.	none
+V72.3.1.3	商标持有	https://www.opengroup.org/platforms	联网	A	2026-10-30	The UNIX trademark is owned and managed by The Open Group on behalf of the industry to signify products that are certified to conform to the Single UNIX Specification.	none
+V72.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Novell 的 UNIX 资产与 UnixWare”；本节题为其下位论题	none
+V72.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.1.4	UnixWare 归属	https://www.xinuos.com/	联网	A	2026-10-30	Create web service-based applications and service-oriented architectures on top of existing console-based applications and relational databases with SCO UnixWare 7 Definitive 2018.	none
+V72.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Novell 的 UNIX 资产与 UnixWare”；本节题为其下位论题	none
+V72.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.1.5	权属碎片	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“OpenServer 与 SCO 的企业 UNIX 遗产”；本节题为其下位论题	none
+V72.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.2.1	SVR5 内核	https://www.xinuos.com/	联网	A	2026-10-30	Access a bundle of ready-made applications platforms by our dedicated open source community for OpenServer 6 – database server, network server, and developer– with the UNIX SVR5 kernel.	none
+V72.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“OpenServer 与 SCO 的企业 UNIX 遗产”；本节题为其下位论题	none
+V72.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.2.2	产品商标	https://www.sco.com/company/legal/	联网	A	2026-10-30	Xinuos and associated logo, SCO*office* Server, SCO*office,* Xinuos, OpenServer, ODT, Open Desktop, AIM Benchmark, and Hot Iron Awards are trademarks or registered trademarks of Xinuos, Inc. in the U.S.A. and other countries.	none
+V72.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“OpenServer 与 SCO 的企业 UNIX 遗产”；本节题为其下位论题	none
+V72.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.2.3	企业装机	https://www.xinuos.com/	联网	A	2026-10-30	Xinuos and SCO have been building operating systems for enterprise environments for more than 40 years	none
+V72.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“OpenServer 与 SCO 的企业 UNIX 遗产”；本节题为其下位论题	none
+V72.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.2.4	诉讼开支	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	of which $3,394,000 is designated to pay for experts, consultants and other costs in connection with the litigation between the Company and IBM, Novell and Red Hat (the "SCO Litigation")	none
+V72.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 商标、源码授权与认证权利的分离”；本节题为其下位论题	none
+V72.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.3.1	三类权利	https://www.sco.com/company/legal/	联网	A	2026-10-30	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.	none
+V72.3.3.1	商标管理	https://www.opengroup.org/platforms	联网	A	2026-10-30	The UNIX trademark is owned and managed by The Open Group on behalf of the industry to signify products that are certified to conform to the Single UNIX Specification.	none
+V72.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 商标、源码授权与认证权利的分离”；本节题为其下位论题	none
+V72.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.3.2	许可分立	https://www.tuhs.org/Archive/COPYRIGHTS	联网	A	2026-10-30	UNIX is a registered trademark in the United States and other countries, licensed exclusively through X/Open Company, Ltd.	none
+V72.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 商标、源码授权与认证权利的分离”；本节题为其下位论题	none
+V72.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.3.3	认证同源	https://www.opengroup.org/certifications/unix	联网	A	2026-10-30	Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.	none
+V72.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 商标、源码授权与认证权利的分离”；本节题为其下位论题	none
+V72.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.3.4	命名约束	https://www.uspto.gov/trademarks/basics/what-trademark	联网	A	2026-10-30	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	none
+V72.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“UNIX 商标、源码授权与认证权利的分离”；本节题为其下位论题	none
+V72.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.3.5	分离与诉讼	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）”；本节题为其下位论题	none
+V72.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.4.1	索赔规模	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.1-sco诉ibm案对unix谱系的冲击.md	史料	A	2026-10-30	2003 年 SCO Group 诉 IBM 案声称 IBM 将 UNIX 源码（含 BSD 衍生代码）移植至 Linux，索赔 50 亿美元；案件引发 BSD 社区对代码溯源与版权链的重新审视，1994 年 USL-BSD 和解协议成为关键抗辩依据。	none
+V72.3.4.1	SCO 三线诉讼范围	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	of which $3,394,000 is designated to pay for experts, consultants and other costs in connection with the litigation between the Company and IBM, Novell and Red Hat (the "SCO Litigation")	none
+V72.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）”；本节题为其下位论题	none
+V72.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.4.2	用户授权主张	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	of which $3,394,000 is designated to pay for experts, consultants and other costs in connection with the litigation between the Company and IBM, Novell and Red Hat (the "SCO Litigation")	none
+V72.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）”；本节题为其下位论题	none
+V72.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.4.3	资产承接	https://www.xinuos.com/	联网	A	2026-10-30	Xinuos and SCO have been building operating systems for enterprise environments for more than 40 years	none
+V72.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）”；本节题为其下位论题	none
+V72.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.4.4	诉讼资金	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	of which $3,394,000 is designated to pay for experts, consultants and other costs in connection with the litigation between the Company and IBM, Novell and Red Hat (the "SCO Litigation")	none
+V72.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）”；本节题为其下位论题	none
+V72.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.4.5	亏损累积	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	The Company incurred a net loss of $2,167,000 for the six months ended April 30, 2007, and during that same period used cash of $50,000 in its operating activities.	none
+V72.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“SCO 系列诉讼的法律与技术争议”；本节题为其下位论题	none
+V72.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.5.1	版权归属	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“SCO 系列诉讼的法律与技术争议”；本节题为其下位论题	none
+V72.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.5.2	源码比对	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	At the pre-trial hearing, BSDi pointed out that they were using code from the University of California, Berkeley, except for six kernel files that had been written by Bill Jolitz to replace copyrighted code.	none
+V72.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“SCO 系列诉讼的法律与技术争议”；本节题为其下位论题	none
+V72.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.5.3	诉讼时效	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.1-sco诉ibm案对unix谱系的冲击.md	史料	A	2026-10-30	SCO saga 的终章为 2026 年 8 月 10 日 Xinuos v. IBM 上诉被驳回（诉讼时效已过），所有 SCO 系实体对 IBM/Linux 用户/Red Hat/Novell 的诉讼均以失败告终	none
+V72.3.5.3	版权归属上诉	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“SCO 系列诉讼的法律与技术争议”；本节题为其下位论题	none
+V72.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.5.4	多线诉讼	https://www.sec.gov/Archives/edgar/data/1102542/000095013407013419/v31153e10vq.htm	联网	A	2026-10-30	of which $3,394,000 is designated to pay for experts, consultants and other costs in connection with the litigation between the Company and IBM, Novell and Red Hat (the "SCO Litigation")	none
+V72.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“SCO 系列诉讼的法律与技术争议”；本节题为其下位论题	none
+V72.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.5.5	采用曲线	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	this episode "effectively ceded the territory to Linux during a critical period in which there was a leadership vacuum and lots of Fear, Uncertainty and Doubt in the BSD community"	none
+V72.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“System V 遗产的产业形态（2021 年后）”；本节题为其下位论题	none
+V72.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.6.1	现持有人	https://www.xinuos.com/	联网	A	2026-10-30	Access a bundle of ready-made applications platforms by our dedicated open source community for OpenServer 6 – database server, network server, and developer– with the UNIX SVR5 kernel.	none
+V72.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“System V 遗产的产业形态（2021 年后）”；本节题为其下位论题	none
+V72.3.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.6.2	商标存续	https://www.sco.com/company/legal/	联网	A	2026-10-30	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.	none
+V72.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“System V 遗产的产业形态（2021 年后）”；本节题为其下位论题	none
+V72.3.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.6.3	支持范围	https://www.xinuos.com/	联网	A	2026-10-30	Create web service-based applications and service-oriented architectures on top of existing console-based applications and relational databases with SCO UnixWare 7 Definitive 2018.	none
+V72.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“System V 遗产的产业形态（2021 年后）”；本节题为其下位论题	none
+V72.3.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.6.4	争议收尾	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.3-软件专利的威胁-SCO-诉讼与专利流氓/322.3.1-sco诉ibm案对unix谱系的冲击.md	史料	A	2026-10-30	SCO saga 的终章为 2026 年 8 月 10 日 Xinuos v. IBM 上诉被驳回（诉讼时效已过），所有 SCO 系实体对 IBM/Linux 用户/Red Hat/Novell 的诉讼均以失败告终	none
+V72.3.6.4	SVR5 产品延续	https://www.xinuos.com/	联网	A	2026-10-30	Access a bundle of ready-made applications platforms by our dedicated open source community for OpenServer 6 – database server, network server, and developer– with the UNIX SVR5 kernel.	none
+V72.3.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“System V 遗产的产业形态（2021 年后）”；本节题为其下位论题	none
+V72.3.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.3.6.5	形态收缩	https://www.xinuos.com/	联网	A	2026-10-30	Xinuos and associated logo, SCO*office* Server, SCO*office,* Xinuos, OpenServer, ODT, Open Desktop, AIM Benchmark, and Hot Iron Awards are trademarks or registered trademarks of Xinuos, Inc. in the U.S.A. and other countries.	none
+V72.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“开源许可证的法律约束力”；本节题为其下位论题	none
+V72.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.1.1	可执行性认定	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	the terms of the Artistic License are enforceable copyright conditions	none
+V72.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“开源许可证的法律约束力”；本节题为其下位论题	none
+V72.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.1.2	违约与侵权	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	Defendants' alleged violation of the conditions of the license may have constituted a breach of the nonexclusive license, but does not create liability for copyright infringement where it would not otherwise exist.	none
+V72.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“开源许可证的法律约束力”；本节题为其下位论题	none
+V72.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.1.3	条件通知功能	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	The Artistic License in this case also requires that changes to the computer code be tracked so that downstream users know what part of the computer code is the original code created by the copyright holder and what part has been newly added or altered by another collaborator.	none
+V72.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“开源许可证的法律约束力”；本节题为其下位论题	none
+V72.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.1.4	协作基础	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	Open source licensing has become a widely used method of creative collaboration that serves to advance the arts and sciences in a manner and at a pace that few could have imagined just a few decades ago.	none
+V72.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“开源许可证的法律约束力”；本节题为其下位论题	none
+V72.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.1.5	确认路径	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Plaintiff Artifex Software, Inc. brings breach of contract and copyright infringement claims against Defendant Hancom, Inc. arising out of Hancom's alleged breach of an open source software agreement.	none
+V72.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“版权许可与合同理论”；本节题为其下位论题	none
+V72.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.2.1	性质之辩	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Plaintiff Artifex Software, Inc. brings breach of contract and copyright infringement claims against Defendant Hancom, Inc. arising out of Hancom's alleged breach of an open source software agreement.	none
+V72.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“版权许可与合同理论”；本节题为其下位论题	none
+V72.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.2.2	违约自认	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Defendant concedes that for purposes of this motion that it did in fact breach the GPL.	none
+V72.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“版权许可与合同理论”；本节题为其下位论题	none
+V72.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.2.3	对价关系	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	In exchange and in consideration for this collaborative work, the copyright holder permits users to copy, modify and distribute the software code subject to conditions that serve to protect downstream users and to keep the code accessible.	none
+V72.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“版权许可与合同理论”；本节题为其下位论题	none
+V72.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.2.4	估值参照	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	there is a difference between using the alternative commercial license as a way of valuing Defendant's breach of the GPL and imposing the terms of the commercial license on Defendant	none
+V72.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“版权许可与合同理论”；本节题为其下位论题	none
+V72.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.2.5	终止后义务	https://www.fsf.org/blogs/licensing/update-on-artifex-v-hancom-gnu-gpl-compliance-case-1	联网	B	2026-10-30	the language of the GPL suggests that Defendant's obligations persisted beyond termination of its rights to propagate software using Ghostscript	none
+V72.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Jacobsen v. Katzer”；本节题为其下位论题	none
+V72.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.3.1	案件事实	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	The Artistic License in this case also requires that changes to the computer code be tracked so that downstream users know what part of the computer code is the original code created by the copyright holder and what part has been newly added or altered by another collaborator.	none
+V72.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Jacobsen v. Katzer”；本节题为其下位论题	none
+V72.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.3.2	初审定性	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	Defendants' alleged violation of the conditions of the license may have constituted a breach of the nonexclusive license, but does not create liability for copyright infringement where it would not otherwise exist.	none
+V72.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Jacobsen v. Katzer”；本节题为其下位论题	none
+V72.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.3.3	上诉改判	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	the terms of the Artistic License are enforceable copyright conditions	none
+V72.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“Jacobsen v. Katzer”；本节题为其下位论题	none
+V72.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.3.4	管辖成因	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	Although an appeal concerning copyright law and not patent law is rare in our Circuit, here we indeed possess appellate jurisdiction.	none
+V72.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“开源许可证条件与版权救济”；本节题为其下位论题	none
+V72.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.4.1	条件与契约	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	the terms of the Artistic License are enforceable copyright conditions	none
+V72.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“开源许可证条件与版权救济”；本节题为其下位论题	none
+V72.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.4.2	救济可得性	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	Defendants' alleged violation of the conditions of the license may have constituted a breach of the nonexclusive license, but does not create liability for copyright infringement where it would not otherwise exist.	none
+V72.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“开源许可证条件与版权救济”；本节题为其下位论题	none
+V72.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.4.3	救济选择	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	The complaint filed by SFLC on behalf of the BusyBox developers requests that an injunction be issued against Monsoon Multimedia.	none
+V72.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“开源许可证条件与版权救济”；本节题为其下位论题	none
+V72.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.4.4	举证负担	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	the District Court did not make factual findings on the likelihood of success on the merits	none
+V72.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“开源许可证条件与版权救济”；本节题为其下位论题	none
+V72.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.4.5	下游利益	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	In exchange and in consideration for this collaborative work, the copyright holder permits users to copy, modify and distribute the software code subject to conditions that serve to protect downstream users and to keep the code accessible.	none
+V72.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Artifex Software 诉 Hancom（2017）”；本节题为其下位论题	none
+V72.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.5.1	双许可模式	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Plaintiff Artifex Software, Inc. brings breach of contract and copyright infringement claims against Defendant Hancom, Inc. arising out of Hancom's alleged breach of an open source software agreement.	none
+V72.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Artifex Software 诉 Hancom（2017）”；本节题为其下位论题	none
+V72.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.5.2	简易判决争点	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Hancom's motion for partial summary judgment on Plaintiff's breach of contract claim is now pending before the Court.	none
+V72.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Artifex Software 诉 Hancom（2017）”；本节题为其下位论题	none
+V72.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.5.3	赔偿基准	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	there is a difference between using the alternative commercial license as a way of valuing Defendant's breach of the GPL and imposing the terms of the commercial license on Defendant	none
+V72.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Artifex Software 诉 Hancom（2017）”；本节题为其下位论题	none
+V72.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.5.4	取源义务	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Section 6 of the GPL requires licensors to distribute or offer to provide copies of source code for all software in the product that is covered by the license.	none
+V72.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“Artifex Software 诉 Hancom（2017）”；本节题为其下位论题	none
+V72.4.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.5.5	后续执行	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Defendant concedes that for purposes of this motion that it did in fact breach the GPL.	none
+V72.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GPL 执行机制与主要争点”；本节题为其下位论题	none
+V72.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.6.1	条款基础	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html	联网	A	2026-10-30	You must cause any work that you distribute or publish, that in whole or in part contains or is derived from the Program or any part thereof, to be licensed as a whole at no charge to all third parties under the terms of this License.	none
+V72.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GPL 执行机制与主要争点”；本节题为其下位论题	none
+V72.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.6.2	机构化执行	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Conservancy's primary work in copyleft compliance currently focuses on our Strategic GPL Enforcement Initiative.	none
+V72.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GPL 执行机制与主要争点”；本节题为其下位论题	none
+V72.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.6.3	合规优先	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Conservancy helps distributors of Free Software in a friendly spirit of cooperation and participation.	none
+V72.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GPL 执行机制与主要争点”；本节题为其下位论题	none
+V72.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.6.4	诉讼取舍	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	SFLC today announced that it has filed the first ever U.S. copyright infringement lawsuit based on a violation of the GNU General Public License (GPL)	none
+V72.4.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“GPL 执行机制与主要争点”；本节题为其下位论题	none
+V72.4.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.6.5	用户权利	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	including defending and upholding the rights of software users and consumers under copyleft licenses, such as the GPL	none
+V72.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“BusyBox 及其他开源许可证案件”；本节题为其下位论题	none
+V72.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.7.1	首例诉讼	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	SFLC today announced that it has filed the first ever U.S. copyright infringement lawsuit based on a violation of the GNU General Public License (GPL)	none
+V72.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“BusyBox 及其他开源许可证案件”；本节题为其下位论题	none
+V72.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.7.2	取源义务	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	One of the conditions of the GPL is that re-distributors of BusyBox are required to ensure that each downstream recipient is provided access to the source code of the program.	none
+V72.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“BusyBox 及其他开源许可证案件”；本节题为其下位论题	none
+V72.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.7.3	禁令范围	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	The complaint filed by SFLC on behalf of the BusyBox developers requests that an injunction be issued against Monsoon Multimedia.	none
+V72.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“BusyBox 及其他开源许可证案件”；本节题为其下位论题	none
+V72.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.7.4	管辖登记	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	The lawsuit, "Erik Andersen and Rob Landley v. Monsoon Multimedia Inc.," case number 07-CV-8205	none
+V72.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“BusyBox 及其他开源许可证案件”；本节题为其下位论题	none
+V72.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.7.5	系列案件	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Historically, Conservancy was well-known for its ongoing license compliance efforts on behalf of its BusyBox member project.	none
+V72.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“判决、和解与庭外合规”；本节题为其下位论题	none
+V72.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.8.1	庭外优先	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Conservancy helps distributors of Free Software in a friendly spirit of cooperation and participation.	none
+V72.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“判决、和解与庭外合规”；本节题为其下位论题	none
+V72.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.8.2	共同原则	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Conservancy has co-published, with the Free Software Foundation (FSF), the principles that both organizations follow in their compliance efforts	none
+V72.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“判决、和解与庭外合规”；本节题为其下位论题	none
+V72.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.8.3	判决与和解	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Defendant concedes that for purposes of this motion that it did in fact breach the GPL.	none
+V72.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“判决、和解与庭外合规”；本节题为其下位论题	none
+V72.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.8.4	成本分担	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Conservancy's primary work in copyleft compliance currently focuses on our Strategic GPL Enforcement Initiative.	none
+V72.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“判决、和解与庭外合规”；本节题为其下位论题	none
+V72.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.8.5	收束标志	https://sfconservancy.org/copyleft-compliance/vmware-lawsuit-faq.html	联网	A	2026-10-30	Since the suit has concluded, any funds you donate here will support our ongoing compliance efforts.	none
+V72.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“不同法域中的许可证解释”；本节题为其下位论题	none
+V72.4.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.9.1	德国程序	https://sfconservancy.org/copyleft-compliance/vmware-lawsuit-faq.html	联网	A	2026-10-30	Christoph Hellwig's lawsuit against VMware in Germany over alleged GPL violations on Linux	none
+V72.4.9.1	Hellwig 判例登记	04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb references id=2584	史料	A	2026-10-30	Hellwig v. VMware, OLG Hamburg, Urteil 2019-02-28（德语原文，维持程序性驳回）	none
+V72.4.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“不同法域中的许可证解释”；本节题为其下位论题	none
+V72.4.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.9.2	请求人资格	https://sfconservancy.org/copyleft-compliance/vmware-lawsuit-faq.html	联网	A	2026-10-30	Christoph is one of most active developers of the Linux kernel.	none
+V72.4.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“不同法域中的许可证解释”；本节题为其下位论题	none
+V72.4.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.9.3	许可变更	https://ipc.court.gov.cn/zh-cn/news/view-3655.html	联网	A	2026-10-30	2016年9月10日，Lody将LGPL3.0协议变更为GPL3.0协议。	none
+V72.4.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“不同法域中的许可证解释”；本节题为其下位论题	none
+V72.4.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.9.4	跨法域效力	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html	联网	A	2026-10-30	You must cause any work that you distribute or publish, that in whole or in part contains or is derived from the Program or any part thereof, to be licensed as a whole at no charge to all third parties under the terms of this License.	none
+V72.4.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“不同法域中的许可证解释”；本节题为其下位论题	none
+V72.4.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.9.5	路径差异	https://sfconservancy.org/copyleft-compliance/	联网	A	2026-10-30	Conservancy's primary work in copyleft compliance currently focuses on our Strategic GPL Enforcement Initiative.	none
+V72.4.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“开源许可证诉讼中的证据问题”；本节题为其下位论题	none
+V72.4.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.10.1	条款举证	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Section 6 of the GPL requires licensors to distribute or offer to provide copies of source code for all software in the product that is covered by the license.	none
+V72.4.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“开源许可证诉讼中的证据问题”；本节题为其下位论题	none
+V72.4.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.10.2	分发证据	https://www.softwarefreedom.org/news/2007/sep/20/busybox/	联网	A	2026-10-30	One of the conditions of the GPL is that re-distributors of BusyBox are required to ensure that each downstream recipient is provided access to the source code of the program.	none
+V72.4.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“开源许可证诉讼中的证据问题”；本节题为其下位论题	none
+V72.4.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.10.3	上传记录	https://ipc.court.gov.cn/zh-cn/news/view-3655.html	联网	A	2026-10-30	Lody于2016年7月7日在GitHub网站上传了VirtualApp的初始源代码共计31097行，次日附加了LGPL3.0协议。	none
+V72.4.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“开源许可证诉讼中的证据问题”；本节题为其下位论题	none
+V72.4.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.10.4	许可痕迹	https://ipc.court.gov.cn/zh-cn/news/view-3655.html	联网	A	2026-10-30	2017年10月29日，Lody删除GPL3.0协议。	none
+V72.4.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“开源许可证诉讼中的证据问题”；本节题为其下位论题	none
+V72.4.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.10.5	证据不足	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	the District Court did not make factual findings on the likelihood of success on the merits	none
+V72.4.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“延伸判例群（2010–2012）”；本节题为其下位论题	none
+V72.4.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.11.1	归属判决	https://cases.justia.com/federal/appellate-courts/ca10/08-4217/920090824/0.pdf	联网	A	2026-10-30	other rights retained by Novell following the sale of part of its UNIX business to Santa Cruz, a predecessor corporate entity to SCO, in the mid-1990s	none
+V72.4.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“延伸判例群（2010–2012）”；本节题为其下位论题	none
+V72.4.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.11.2	派生判准	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	The Artistic License in this case also requires that changes to the computer code be tracked so that downstream users know what part of the computer code is the original code created by the copyright holder and what part has been newly added or altered by another collaborator.	none
+V72.4.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“延伸判例群（2010–2012）”；本节题为其下位论题	none
+V72.4.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.11.3	引用惯例	https://www.cafc.uscourts.gov/opinions-orders/08-1001.pdf	联网	A	2026-10-30	Defendants' alleged violation of the conditions of the license may have constituted a breach of the nonexclusive license, but does not create liability for copyright infringement where it would not otherwise exist.	none
+V72.4.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“延伸判例群（2010–2012）”；本节题为其下位论题	none
+V72.4.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.4.11.4	类型分布	https://www.govinfo.gov/content/pkg/USCOURTS-cand-3_16-cv-06982/pdf/USCOURTS-cand-3_16-cv-06982-2.pdf	联网	A	2026-10-30	Plaintiff Artifex Software, Inc. brings breach of contract and copyright infringement claims against Defendant Hancom, Inc. arising out of Hancom's alleged breach of an open source software agreement.	none
+V72.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“软件版权与软件专利的边界”；本节题为其下位论题	none
+V72.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.1.1	表达界限	https://www.copyright.gov/what-is-copyright/	联网	A	2026-10-30	copyright protects expression, and never ideas, procedures, methods, systems, processes, concepts, principles, or discoveries	none
+V72.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“软件版权与软件专利的边界”；本节题为其下位论题	none
+V72.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.1.2	期限结构	https://www.uspto.gov/patents/basics/patent-process-overview	联网	A	2026-10-30	The term of a utility or plant patent generally lasts 20 years from the date the application was filed in the United States, subject to the payment of maintenance fees and any patent term extension, adjustment, or disclaimer.	none
+V72.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“软件版权与软件专利的边界”；本节题为其下位论题	none
+V72.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.1.3	两类保护	https://www.uspto.gov/patents/basics/patent-process-overview	联网	A	2026-10-30	A U.S. patent gives the patent owner the right to exclude others from making, using, offering for sale, selling throughout, or importing an invention into the U.S. for a limited time.	none
+V72.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“软件版权与软件专利的边界”；本节题为其下位论题	none
+V72.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.1.4	门槛差异	https://www.copyright.gov/what-is-copyright/	联网	A	2026-10-30	Works are original when they are independently created by a human author and have a minimal degree of creativity.	none
+V72.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“软件版权与软件专利的边界”；本节题为其下位论题	none
+V72.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.1.5	权利授予	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.	none
+V72.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“软件专利对开源项目的影响”；本节题为其下位论题	none
+V72.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.2.1	抗辩成本	https://openinventionnetwork.com/	联网	A	2026-10-30	Open Source technologies are advancing faster than ever & patent litigation is escalating with defense costs averaging $4 million per case & over $5 million when claims exceed $25 million.	none
+V72.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“软件专利对开源项目的影响”；本节题为其下位论题	none
+V72.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.2.2	防御联盟	https://openinventionnetwork.com/	联网	A	2026-10-30	Since 2005, OIN has delivered protection by building the world's largest & only patent defense community with 4,100+ members, supported by the original $160 million investment from our founding members	none
+V72.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“软件专利对开源项目的影响”；本节题为其下位论题	none
+V72.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.2.3	免费资格	https://openinventionnetwork.com/	联网	A	2026-10-30	Small businesses, startups & individual developers will continue to receive patent protection for free	none
+V72.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“软件专利对开源项目的影响”；本节题为其下位论题	none
+V72.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.2.4	风险商业化	https://openinventionnetwork.com/	联网	A	2026-10-30	Open Source technologies are advancing faster than ever & patent litigation is escalating with defense costs averaging $4 million per case & over $5 million when claims exceed $25 million.	none
+V72.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“软件专利对开源项目的影响”；本节题为其下位论题	none
+V72.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.2.5	默示授权	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work	none
+V72.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Apache License 2.0 的专利条款”；本节题为其下位论题	none
+V72.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.3.1	专利授权	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work	none
+V72.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Apache License 2.0 的专利条款”；本节题为其下位论题	none
+V72.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.3.2	并列授权	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.	none
+V72.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Apache License 2.0 的专利条款”；本节题为其下位论题	none
+V72.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.3.3	终止触发	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.	none
+V72.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“Apache License 2.0 的专利条款”；本节题为其下位论题	none
+V72.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.3.4	防御意图	https://openinventionnetwork.com/	联网	A	2026-10-30	Since 2005, OIN has delivered protection by building the world's largest & only patent defense community with 4,100+ members, supported by the original $160 million investment from our founding members	none
+V72.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“专利授权与专利终止机制”；本节题为其下位论题	none
+V72.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.4.1	触发要件	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.	none
+V72.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“专利授权与专利终止机制”；本节题为其下位论题	none
+V72.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.4.2	专利池	https://openinventionnetwork.com/	联网	A	2026-10-30	Since 2005, OIN has delivered protection by building the world's largest & only patent defense community with 4,100+ members, supported by the original $160 million investment from our founding members	none
+V72.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“专利授权与专利终止机制”；本节题为其下位论题	none
+V72.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.4.3	期限错位	https://www.uspto.gov/patents/basics/patent-process-overview	联网	A	2026-10-30	The term of a utility or plant patent generally lasts 20 years from the date the application was filed in the United States, subject to the payment of maintenance fees and any patent term extension, adjustment, or disclaimer.	none
+V72.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“专利授权与专利终止机制”；本节题为其下位论题	none
+V72.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.4.4	反诉对称	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.	none
+V72.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“专利授权与专利终止机制”；本节题为其下位论题	none
+V72.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.4.5	范围限定	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work	none
+V72.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DMCA 第 1201 条”；本节题为其下位论题	none
+V72.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.5.1	禁止范围	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	No person shall circumvent a technological measure that effectively controls access to a work protected under this title.	none
+V72.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DMCA 第 1201 条”；本节题为其下位论题	none
+V72.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.5.2	三类行为	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	No person shall circumvent a technological measure that effectively controls access to a work protected under this title.	none
+V72.5.5.2	例外结构	https://www.ecfr.gov/current/title-37/chapter-II/subchapter-A/part-201/section-201.40	联网	A	2026-10-30	This section prescribes the classes of copyrighted works for which the Librarian of Congress has determined, pursuant to 17 U.S.C. 1201(a)(1)(C) and (D), that noninfringing uses by persons who are users of such works are, or are likely to be, adversely affected.	none
+V72.5.5.2	三类受控行为的区分	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	(b) Additional Violations.—(1) No person shall manufacture, import, offer to the public, provide, or otherwise traffic in any technology, product, service, device, component, or part thereof	none
+V72.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DMCA 第 1201 条”；本节题为其下位论题	none
+V72.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.5.3	三年周期	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	During the 2-year period described in subparagraph (A), and during each succeeding 3-year period, the Librarian of Congress, upon the recommendation of the Register of Copyrights	none
+V72.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DMCA 第 1201 条”；本节题为其下位论题	none
+V72.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.5.4	判定主体	https://www.copyright.gov/1201/	联网	A	2026-10-30	The Copyright Office has initiated the tenth triennial rulemaking proceeding under the Digital Millennium Copyright Act, Title 17, section 1201, of the United States Code.	none
+V72.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DMCA 第 1201 条”；本节题为其下位论题	none
+V72.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.5.5	救济位置	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	The prohibition contained in subparagraph (A) shall not apply to persons who are users of a copyrighted work which is in a particular class of works, if such persons are, or are likely to be in the succeeding 3-year period, adversely affected by virtue of such prohibition in their ability to make noninfringing uses of that particular class of works under this title, as determined under subparagraph (C).	none
+V72.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“反规避条款的适用范围与例外”；本节题为其下位论题	none
+V72.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.6.1	类别列举	https://www.ecfr.gov/current/title-37/chapter-II/subchapter-A/part-201/section-201.40	联网	A	2026-10-30	This section prescribes the classes of copyrighted works for which the Librarian of Congress has determined, pursuant to 17 U.S.C. 1201(a)(1)(C) and (D), that noninfringing uses by persons who are users of such works are, or are likely to be, adversely affected.	none
+V72.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“反规避条款的适用范围与例外”；本节题为其下位论题	none
+V72.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.6.2	续期运行	https://www.copyright.gov/1201/	联网	A	2026-10-30	Renewed exemptions remain in force for an additional three-year period (October 2027–October 2030).	none
+V72.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“反规避条款的适用范围与例外”；本节题为其下位论题	none
+V72.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.6.3	认定门槛	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	The prohibition contained in subparagraph (A) shall not apply to persons who are users of a copyrighted work which is in a particular class of works, if such persons are, or are likely to be in the succeeding 3-year period, adversely affected by virtue of such prohibition in their ability to make noninfringing uses of that particular class of works under this title, as determined under subparagraph (C).	none
+V72.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“反规避条款的适用范围与例外”；本节题为其下位论题	none
+V72.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.6.4	市场影响	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	During the 2-year period described in subparagraph (A), and during each succeeding 3-year period, the Librarian of Congress, upon the recommendation of the Register of Copyrights	none
+V72.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“软件安全研究与反规避问题”；本节题为其下位论题	none
+V72.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.7.1	设立理由	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	During the 2-year period described in subparagraph (A), and during each succeeding 3-year period, the Librarian of Congress, upon the recommendation of the Register of Copyrights	none
+V72.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“软件安全研究与反规避问题”；本节题为其下位论题	none
+V72.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.7.2	研究风险	https://www.ecfr.gov/current/title-37/chapter-II/subchapter-A/part-201/section-201.40	联网	A	2026-10-30	This section prescribes the classes of copyrighted works for which the Librarian of Congress has determined, pursuant to 17 U.S.C. 1201(a)(1)(C) and (D), that noninfringing uses by persons who are users of such works are, or are likely to be, adversely affected.	none
+V72.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“软件安全研究与反规避问题”；本节题为其下位论题	none
+V72.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.7.3	披露定性	https://www.copyright.gov/1201/	联网	A	2026-10-30	The Copyright Office has initiated the tenth triennial rulemaking proceeding under the Digital Millennium Copyright Act, Title 17, section 1201, of the United States Code.	none
+V72.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“软件安全研究与反规避问题”；本节题为其下位论题	none
+V72.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.7.4	周期约束	https://www.copyright.gov/1201/	联网	A	2026-10-30	Renewed exemptions remain in force for an additional three-year period (October 2027–October 2030).	none
+V72.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“越狱、互操作性与研究例外”；本节题为其下位论题	none
+V72.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.8.1	越狱沿革	https://www.copyright.gov/1201/	联网	A	2026-10-30	Renewed exemptions remain in force for an additional three-year period (October 2027–October 2030).	none
+V72.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“越狱、互操作性与研究例外”；本节题为其下位论题	none
+V72.5.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.8.2	互操作落点	https://www.ecfr.gov/current/title-37/chapter-II/subchapter-A/part-201/section-201.40	联网	A	2026-10-30	This section prescribes the classes of copyrighted works for which the Librarian of Congress has determined, pursuant to 17 U.S.C. 1201(a)(1)(C) and (D), that noninfringing uses by persons who are users of such works are, or are likely to be, adversely affected.	none
+V72.5.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“越狱、互操作性与研究例外”；本节题为其下位论题	none
+V72.5.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.8.3	界限划定	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	The prohibition contained in subparagraph (A) shall not apply to persons who are users of a copyrighted work which is in a particular class of works, if such persons are, or are likely to be in the succeeding 3-year period, adversely affected by virtue of such prohibition in their ability to make noninfringing uses of that particular class of works under this title, as determined under subparagraph (C).	none
+V72.5.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“越狱、互操作性与研究例外”；本节题为其下位论题	none
+V72.5.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.8.4	更新节奏	https://www.copyright.gov/1201/	联网	A	2026-10-30	The Copyright Office has initiated the tenth triennial rulemaking proceeding under the Digital Millennium Copyright Act, Title 17, section 1201, of the United States Code.	none
+V72.5.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“越狱、互操作性与研究例外”；本节题为其下位论题	none
+V72.5.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.8.5	权利冲突	https://www.copyright.gov/title17/92chap12.html	联网	A	2026-10-30	No person shall circumvent a technological measure that effectively controls access to a work protected under this title.	none
+V72.5.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“开源软件中的专利风险管理”；本节题为其下位论题	none
+V72.5.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.9.1	加入条件	https://openinventionnetwork.com/	联网	A	2026-10-30	Since 2005, OIN has delivered protection by building the world's largest & only patent defense community with 4,100+ members, supported by the original $160 million investment from our founding members	none
+V72.5.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“开源软件中的专利风险管理”；本节题为其下位论题	none
+V72.5.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.9.2	免费保护	https://openinventionnetwork.com/	联网	A	2026-10-30	Small businesses, startups & individual developers will continue to receive patent protection for free	none
+V72.5.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“开源软件中的专利风险管理”；本节题为其下位论题	none
+V72.5.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.9.3	成本估算	https://openinventionnetwork.com/	联网	A	2026-10-30	Open Source technologies are advancing faster than ever & patent litigation is escalating with defense costs averaging $4 million per case & over $5 million when claims exceed $25 million.	none
+V72.5.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“开源软件中的专利风险管理”；本节题为其下位论题	none
+V72.5.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.9.4	风险分配	https://www.apache.org/licenses/LICENSE-2.0	联网	A	2026-10-30	If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.	none
+V72.5.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“开源软件中的专利风险管理”；本节题为其下位论题	none
+V72.5.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.9.5	前置检索	https://www.uspto.gov/patents/basics/patent-process-overview	联网	A	2026-10-30	A U.S. patent gives the patent owner the right to exclude others from making, using, offering for sale, selling throughout, or importing an invention into the U.S. for a limited time.	none
+V72.5.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“BSD 与 GPL 的哲学差异：BSD 不强制 copyleft”；本节题为其下位论题	none
+V72.5.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.10.1	强制力	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html	联网	A	2026-10-30	You must cause any work that you distribute or publish, that in whole or in part contains or is derived from the Program or any part thereof, to be licensed as a whole at no charge to all third parties under the terms of this License.	none
+V72.5.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“BSD 与 GPL 的哲学差异：BSD 不强制 copyleft”；本节题为其下位论题	none
+V72.5.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.10.2	声明义务	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V72.5.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“BSD 与 GPL 的哲学差异：BSD 不强制 copyleft”；本节题为其下位论题	none
+V72.5.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.10.3	背书禁令	https://opensource.org/license/bsd-3-clause	联网	A	2026-10-30	Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.	none
+V72.5.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“BSD 与 GPL 的哲学差异：BSD 不强制 copyleft”；本节题为其下位论题	none
+V72.5.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.10.4	自由观分野	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html	联网	A	2026-10-30	The GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users.	none
+V72.5.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“美国诉微软案、浏览器战争与版权期限延长法”；本节题为其下位论题	none
+V72.5.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.11.1	垄断认定	https://www.govinfo.gov/content/pkg/FR-2001-11-28/html/01-29498.htm	联网	A	2026-10-30	the United States Court of Appeals for the District of Columbia unanimously affirmed portions of the district court's finding and conclusion that Microsoft illegally maintained its operating system monopoly in violation of section 2 of the Sherman Act	none
+V72.5.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“美国诉微软案、浏览器战争与版权期限延长法”；本节题为其下位论题	none
+V72.5.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.11.2	捆绑诉因	https://www.govinfo.gov/content/pkg/FR-2001-11-28/html/01-29498.htm	联网	A	2026-10-30	the court of appeals reversed the district court's determination that Microsoft violated section 2 by illegally attempting to monopolize the Internet browser market	none
+V72.5.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“美国诉微软案、浏览器战争与版权期限延长法”；本节题为其下位论题	none
+V72.5.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.11.3	救济结构	https://www.govinfo.gov/content/pkg/FR-2001-11-28/html/01-29498.htm	联网	A	2026-10-30	On May 18, the United States filed a Complaint alleging that Microsoft, the world's largest supplier of computer software for personal computers, restrained competition in violation of sections 1 and 2 of the Sherman Act	none
+V72.5.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“美国诉微软案、浏览器战争与版权期限延长法”；本节题为其下位论题	none
+V72.5.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.11.4	延长幅度	https://www.copyright.gov/title17/92chap3.html	联网	A	2026-10-30	Any copyright still in its renewal term at the time that the Sonny Bono Copyright Term Extension Act becomes effective shall have a copyright term of 95 years from the date copyright was originally secured.	none
+V72.5.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 11 节“美国诉微软案、浏览器战争与版权期限延长法”；本节题为其下位论题	none
+V72.5.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.5.11.5	匿名作品期限	https://www.copyright.gov/title17/92chap3.html	联网	A	2026-10-30	the copyright endures for a term of 95 years from the year of its first publication, or a term of 120 years from the year of its creation, whichever expires first	none
+V72.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“美国密码出口管制的历史背景”；本节题为其下位论题	none
+V72.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.1.1	清单纳入	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.1-美国加密出口管制-ITAR-与-EAR-的历史效应/322.1.1-itar框架下的加密软件分类.md	史料	A	2026-10-30	美国国务院依据《国际武器贸易条例》（ITAR）将含加密功能的软件列入“军需品清单”，1990 年代初 Kerberos、PGP、SSL 等含加密代码的 BSD 软件一度被视为受管制物项，源代码出口需逐案申请许可	none
+V72.6.1.1	加密物项分类	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	Encryption items fall under Category 5, Part 2 for Information Security.	none
+V72.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“美国密码出口管制的历史背景”；本节题为其下位论题	none
+V72.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.1.2	管辖分工	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	Encryption exports are controlled under the Arms Export Control Act (AECA) and the Export Administration Act (EAA)	none
+V72.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“美国密码出口管制的历史背景”；本节题为其下位论题	none
+V72.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.1.3	逐案审批	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	The main license exception that is used for items in Cat. 5, Part 2 is License Exception ENC (Section 740.17).	none
+V72.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“美国密码出口管制的历史背景”；本节题为其下位论题	none
+V72.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.1.4	公开豁免	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	1. Encryption items that are NOT subject to the EAR (publicly available)	none
+V72.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“美国密码出口管制的历史背景”；本节题为其下位论题	none
+V72.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.1.5	政策理由	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	The U.S. Government has traditionally maintained that controls over strong encryption are necessary for national security, foreign policy, and law enforcement reasons.	none
+V72.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“加密软件进入 BSD 系统”；本节题为其下位论题	none
+V72.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.2.1	组件限制	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.7-美国加密出口管制对bsd代码分发的实际影响/322.7.1-itarear对freebsdcrypto的历史限制.md	史料	A	2026-10-30	1990 年代强加密软件被归类为军火——FreeBSD DES/kerberos 无法含在官方 FTP 镜像中。2000 年 1 月克林顿放宽后解除。	none
+V72.6.2.1	公开可得豁免	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	1. Encryption items that are NOT subject to the EAR (publicly available)	none
+V72.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“加密软件进入 BSD 系统”；本节题为其下位论题	none
+V72.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.2.2	镜像评估	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.1-美国加密出口管制-ITAR-与-EAR-的历史效应/322.1.3-对bsd加密栈的实际效应.md	史料	A	2026-10-30	1990 年代 FreeBSD 与 OpenBSD 在国际镜像站点发布加密代码（如 Kerberos、SSL、IPsec）时面临法律不确定性，部分镜像站点（如南非、俄罗斯镜像）需个案评估，影响了 BSD 加密栈在境外部署的时序	none
+V72.6.2.2	加拿大出口清单	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	The Export Control List of Canada places no significant restriction on the export of cryptographic software, and is even more explicit about the free export of freely-available cryptographic software.	none
+V72.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“加密软件进入 BSD 系统”；本节题为其下位论题	none
+V72.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.2.3	替代路径	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	We require that the cryptographic software we use be freely available and with good licenses.	none
+V72.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“加密软件进入 BSD 系统”；本节题为其下位论题	none
+V72.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.2.4	筛选条件	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	We do not directly use cryptography with nasty patents.	none
+V72.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“加密软件进入 BSD 系统”；本节题为其下位论题	none
+V72.6.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.2.5	并入案例	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	OpenBSD was the first operating system to ship with an IPsec stack.	none
+V72.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排”；本节题为其下位论题	none
+V72.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.3.1	所在地	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	The OpenBSD project is based in Canada.	none
+V72.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排”；本节题为其下位论题	none
+V72.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.3.2	清单宽松	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	The Export Control List of Canada places no significant restriction on the export of cryptographic software, and is even more explicit about the free export of freely-available cryptographic software.	none
+V72.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排”；本节题为其下位论题	none
+V72.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.3.3	国籍限制	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	If any non-American cryptographer who meets the constraints listed earlier is interested in helping out with embedded cryptography in OpenBSD, please contact us.	none
+V72.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排”；本节题为其下位论题	none
+V72.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.3.4	合规成本	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	in late 1996 the President transferred jurisdiction over nonmilitary items to DOC, which at the same time eased controls over commercial encryption that used a key recovery feature or was destined for financial institutions.	none
+V72.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排”；本节题为其下位论题	none
+V72.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.3.5	形态塑造	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.1-美国加密出口管制-ITAR-与-EAR-的历史效应/322.1.3-对bsd加密栈的实际效应.md	史料	A	2026-10-30	1990 年代 FreeBSD 与 OpenBSD 在国际镜像站点发布加密代码（如 Kerberos、SSL、IPsec）时面临法律不确定性，部分镜像站点（如南非、俄罗斯镜像）需个案评估，影响了 BSD 加密栈在境外部署的时序	none
+V72.6.3.5	首个 IPsec 栈	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	OpenBSD was the first operating system to ship with an IPsec stack.	none
+V72.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“Bernstein 诉 United States（1995–1999）”；本节题为其下位论题	none
+V72.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.4.1	案件起因	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.8-加密出口管制的司法实践-Bernstein-v-United-States/322.8.1-bernsteinvunitedstates922fsupp1426ndcal1.md	史料	A	2026-10-30	Daniel J. Bernstein 时为加州大学伯克利分校数学博士生，1990 年开发了加密算法 Snuffle（后发展为 Snuffle 5.0），并撰写了相关的学术论文与源代码。	none
+V72.6.4.1	源码表达的宪法地位	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	encryption software, in its source code form and as employed by those in the field of cryptography, must be viewed as expressive for First Amendment purposes, and thus is entitled to the protections of the prior restraint doctrine.	none
+V72.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“Bernstein 诉 United States（1995–1999）”；本节题为其下位论题	none
+V72.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.4.2	一审认定	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.8-加密出口管制的司法实践-Bernstein-v-United-States/322.8.1-bernsteinvunitedstates922fsupp1426ndcal1.md	史料	A	2026-10-30	This court can find no meaningful difference between computer language, particularly high-level languages as defined above, and German or French....Like music and mathematical equations, computer language is just that, language, and it communicates information either to a computer or to those who can read it...	none
+V72.6.4.2	事前限制认定	http://www.cs.columbia.edu/~smb/classes/f23/Files/Bernstein_v_DOJ.html	联网	A	2026-10-30	we hold that the challenged regulations constitute a prior restraint on speech that offends the First Amendment	none
+V72.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“Bernstein 诉 United States（1995–1999）”；本节题为其下位论题	none
+V72.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.4.3	三项理由	http://www.cs.columbia.edu/~smb/classes/f23/Files/Bernstein_v_DOJ.html	联网	A	2026-10-30	We find that the EAR regulations (1) operate as a prepublication licensing scheme that burdens scientific expression, (2) vest boundless discretion in government officials, and (3) lack adequate procedural safeguards.	none
+V72.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“Bernstein 诉 United States（1995–1999）”；本节题为其下位论题	none
+V72.6.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.4.4	判决撤回	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.8-加密出口管制的司法实践-Bernstein-v-United-States/322.8.1-bernsteinvunitedstates922fsupp1426ndcal1.md	史料	A	2026-10-30	176 F.3d 1132 判决后被撤回——政府请求全院复审（en banc review），第九巡回上诉法院于 192 F.3d 1308（9th Cir. 1999）下令全院复审并撤回三人合议庭意见	none
+V72.6.4.4	加州与俄亥俄的挑战	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	Courts in California and Ohio have allowed challenges to proceed, holding that encryption source code is protected speech for First Amendment purposes.	none
+V72.6.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“Bernstein 诉 United States（1995–1999）”；本节题为其下位论题	none
+V72.6.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.4.5	实际效果	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.7-美国加密出口管制对bsd代码分发的实际影响/322.7.1-itarear对freebsdcrypto的历史限制.md	史料	A	2026-10-30	1990 年代强加密软件被归类为军火——FreeBSD DES/kerberos 无法含在官方 FTP 镜像中。2000 年 1 月克林顿放宽后解除。	none
+V72.6.4.5	违宪结论	http://www.cs.columbia.edu/~smb/classes/f23/Files/Bernstein_v_DOJ.html	联网	A	2026-10-30	we hold that the challenged regulations constitute a prior restraint on speech that offends the First Amendment	none
+V72.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“Karn 诉美国国务院”；本节题为其下位论题	none
+V72.6.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.5.1	差别待遇	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.12-加密出口管制的司法实践补遗-karn-v-us与书盘差异的宪法争议/322.12.1-案件背景同一份源码书可出口软盘不可1994-1995.md	史料	A	2026-10-30	1994 年 3 月 2 日 ODTC 裁定：书（印刷形式）不受 ITAR 军需品管制可自由出口，但随书软盘（含书中第五部分印刷的加密源码）属军需品清单 XIII(b)(1) 类“国防物品”，须出口许可	none
+V72.6.5.1	教科书与软盘裁定	https://houstonlawreview.org/article/4938-encryption-use-law-and-anarchy-on-the-digital-frontier.pdf	联网	B	2026-10-30	in March 1994 the State Department ruled that Applied Cryptography, a textbook containing encryption algorithms and source code, was not subject to its jurisdiction and therefore not subject to export control	none
+V72.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“Karn 诉美国国务院”；本节题为其下位论题	none
+V72.6.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.5.2	程序起点	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.12-加密出口管制的司法实践补遗-karn-v-us与书盘差异的宪法争议/322.12.1-案件背景同一份源码书可出口软盘不可1994-1995.md	史料	A	2026-10-30	**Karn v. U.S. Dept. of State**（Civil Action No. 95-01812, D.D.C.），原告 Philip R. Karn Jr.（贝尔实验室工程师，密码学专家）1994 年向国务院国防贸易管制办公室（ODTC）申请出口 Bruce Schneier 所著《Applied Cryptography》（应用密码学）一书及配套软盘	none
+V72.6.5.2	Karn 的第一修正案主张	https://houstonlawreview.org/article/4938-encryption-use-law-and-anarchy-on-the-digital-frontier.pdf	联网	B	2026-10-30	Karn also claimed First Amendment protection, arguing that the regulation was content based and, therefore, presumptively invalid.	none
+V72.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“Karn 诉美国国务院”；本节题为其下位论题	none
+V72.6.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.5.3	宪法依据	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.12-加密出口管制的司法实践补遗-karn-v-us与书盘差异的宪法争议/322.12.1-案件背景同一份源码书可出口软盘不可1994-1995.md	史料	A	2026-10-30	主张：软盘载有与书完全相同的信息（源码），仅介质不同却受不同管制，违反第一修正案（言论自由）与第五修正案（正当程序），构成事前限制	none
+V72.6.5.3	事前限制的宪法结论	http://www.cs.columbia.edu/~smb/classes/f23/Files/Bernstein_v_DOJ.html	联网	A	2026-10-30	we hold that the challenged regulations constitute a prior restraint on speech that offends the First Amendment	none
+V72.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“Karn 诉美国国务院”；本节题为其下位论题	none
+V72.6.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.5.4	内容中立	https://houstonlawreview.org/article/4938-encryption-use-law-and-anarchy-on-the-digital-frontier.pdf	联网	B	2026-10-30	the court dismissed the claim on the grounds that the regulation was content neutral regardless of the speech aspect of computer code	none
+V72.6.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“Karn 诉美国国务院”；本节题为其下位论题	none
+V72.6.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.5.5	示范效应	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	the outcome generally turning on whether the court viewed the encryption item and its export as essentially expressive or functional	none
+V72.6.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“Junger 诉 Daley”；本节题为其下位论题	none
+V72.6.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.6.1	发布动机	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.10-加密出口管制的司法实践续-junger-v-daley与代码即言论的第六巡回确认/322.10.1-案件背景法学院教授的加密源码发布争议1996-1998.md	史料	A	2026-10-30	原告 Peter D. Junger 为凯斯西储大学（Case Western Reserve University）法学院教授，教授“计算机与法律”课程并撰写相关教材，1996 年欲在个人网站上发布自己编写的加密程序源码以作教学示例	none
+V72.6.6.1	俄亥俄的挑战	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	Courts in California and Ohio have allowed challenges to proceed, holding that encryption source code is protected speech for First Amendment purposes.	none
+V72.6.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“Junger 诉 Daley”；本节题为其下位论题	none
+V72.6.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.6.2	移交依据	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.10-加密出口管制的司法实践续-junger-v-daley与代码即言论的第六巡回确认/322.10.1-案件背景法学院教授的加密源码发布争议1996-1998.md	史料	A	2026-10-30	1996 年 11 月 15 日克林顿总统签发第 13026 号行政令，将非军用加密产品出口管制管辖权从国务院（ITAR）移交商务部（EAR 出口管理条例），商务部将加密软件（含源码）列为 5D002 管制物项，要求出口许可，网络发布视为出口	none
+V72.6.6.2	管辖权移交	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	in late 1996 the President transferred jurisdiction over nonmilitary items to DOC, which at the same time eased controls over commercial encryption that used a key recovery feature or was destined for financial institutions.	none
+V72.6.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“Junger 诉 Daley”；本节题为其下位论题	none
+V72.6.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.6.3	功能性认定	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.10-加密出口管制的司法实践续-junger-v-daley与代码即言论的第六巡回确认/322.10.1-案件背景法学院教授的加密源码发布争议1996-1998.md	史料	A	2026-10-30	1998 年 7 月地区法院（James S. Gwin 法官）判决政府胜诉——8 F. Supp. 2d 708 (N.D. Ohio 1998)，认定源码“本质上具功能性”、不构成受保护言论，管制属内容中立并适用中间审查（O'Brien 标准）	none
+V72.6.6.3	表达性与功能性判断	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	the outcome generally turning on whether the court viewed the encryption item and its export as essentially expressive or functional	none
+V72.6.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“Junger 诉 Daley”；本节题为其下位论题	none
+V72.6.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.6.4	表达手段	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	Courts in California and Ohio have allowed challenges to proceed, holding that encryption source code is protected speech for First Amendment purposes.	none
+V72.6.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“Junger 诉 Daley”；本节题为其下位论题	none
+V72.6.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.6.5	学术自由	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.10-加密出口管制的司法实践续-junger-v-daley与代码即言论的第六巡回确认/322.10.1-案件背景法学院教授的加密源码发布争议1996-1998.md	史料	A	2026-10-30	原告 Peter D. Junger 为凯斯西储大学（Case Western Reserve University）法学院教授，教授“计算机与法律”课程并撰写相关教材，1996 年欲在个人网站上发布自己编写的加密程序源码以作教学示例	none
+V72.6.6.5	表达保护	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	encryption software, in its source code form and as employed by those in the field of cryptography, must be viewed as expressive for First Amendment purposes, and thus is entitled to the protections of the prior restraint doctrine.	none
+V72.6.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“源代码与受管制技术信息”；本节题为其下位论题	none
+V72.6.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.7.1	公开可得	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	1. Encryption items that are NOT subject to the EAR (publicly available)	none
+V72.6.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“源代码与受管制技术信息”；本节题为其下位论题	none
+V72.6.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.7.2	表达属性	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	encryption software, in its source code form and as employed by those in the field of cryptography, must be viewed as expressive for First Amendment purposes, and thus is entitled to the protections of the prior restraint doctrine.	none
+V72.6.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“源代码与受管制技术信息”；本节题为其下位论题	none
+V72.6.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.7.3	管制分类	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	Encryption items fall under Category 5, Part 2 for Information Security.	none
+V72.6.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“源代码与受管制技术信息”；本节题为其下位论题	none
+V72.6.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.7.4	发布等同出口	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.10-加密出口管制的司法实践续-junger-v-daley与代码即言论的第六巡回确认/322.10.1-案件背景法学院教授的加密源码发布争议1996-1998.md	史料	A	2026-10-30	1996 年 11 月 15 日克林顿总统签发第 13026 号行政令，将非军用加密产品出口管制管辖权从国务院（ITAR）移交商务部（EAR 出口管理条例），商务部将加密软件（含源码）列为 5D002 管制物项，要求出口许可，网络发布视为出口	none
+V72.6.7.4	许可例外适用	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	The main license exception that is used for items in Cat. 5, Part 2 is License Exception ENC (Section 740.17).	none
+V72.6.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“源代码与受管制技术信息”；本节题为其下位论题	none
+V72.6.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.7.5	适用争议	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	the outcome generally turning on whether the court viewed the encryption item and its export as essentially expressive or functional	none
+V72.6.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“美国加密出口政策的变化”；本节题为其下位论题	none
+V72.6.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.8.1	移交时点	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	in late 1996 the President transferred jurisdiction over nonmilitary items to DOC, which at the same time eased controls over commercial encryption that used a key recovery feature or was destined for financial institutions.	none
+V72.6.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“美国加密出口政策的变化”；本节题为其下位论题	none
+V72.6.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.8.2	放松阶梯	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	In 1998 the Administration further relaxed controls over 56-bit technology generally and stronger encryption destined for U.S. subsidiaries, insurance companies, and other end-users	none
+V72.6.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“美国加密出口政策的变化”；本节题为其下位论题	none
+V72.6.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.8.3	例外通则	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf	联网	B	2026-10-30	Further modifications were announced in September 1999, allowing license exceptions for the export of encryption of any key length after a technical review to most end-users in all but terrorist countries	none
+V72.6.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“美国加密出口政策的变化”；本节题为其下位论题	none
+V72.6.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.8.4	现行结构	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	The main license exception that is used for items in Cat. 5, Part 2 is License Exception ENC (Section 740.17).	none
+V72.6.8.4	分类框架	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	Encryption items fall under Category 5, Part 2 for Information Security.	none
+V72.6.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“美国加密出口政策的变化”；本节题为其下位论题	none
+V72.6.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.8.5	放松限度	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	There is no "unexportable" level of encryption under license exception ENC.	none
+V72.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“加密管制与 BSD 全球传播”；本节题为其下位论题	none
+V72.6.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.9.1	部署时序	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.1-美国加密出口管制-ITAR-与-EAR-的历史效应/322.1.3-对bsd加密栈的实际效应.md	史料	A	2026-10-30	1990 年代 FreeBSD 与 OpenBSD 在国际镜像站点发布加密代码（如 Kerberos、SSL、IPsec）时面临法律不确定性，部分镜像站点（如南非、俄罗斯镜像）需个案评估，影响了 BSD 加密栈在境外部署的时序	none
+V72.6.9.1	加拿大清单	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	The Export Control List of Canada places no significant restriction on the export of cryptographic software, and is even more explicit about the free export of freely-available cryptographic software.	none
+V72.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“加密管制与 BSD 全球传播”；本节题为其下位论题	none
+V72.6.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.9.2	基地优势	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	The Export Control List of Canada places no significant restriction on the export of cryptographic software, and is even more explicit about the free export of freely-available cryptographic software.	none
+V72.6.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“加密管制与 BSD 全球传播”；本节题为其下位论题	none
+V72.6.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.9.3	合规筛选	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	We require that the cryptographic software we use be freely available and with good licenses.	none
+V72.6.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“加密管制与 BSD 全球传播”；本节题为其下位论题	none
+V72.6.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.9.4	政策扩散	旧大纲-20261023/第15卷-许可证哲学与法律分析/第322章-法律限制加密出口管制/322.7-美国加密出口管制对bsd代码分发的实际影响/322.7.1-itarear对freebsdcrypto的历史限制.md	史料	A	2026-10-30	1990 年代强加密软件被归类为军火——FreeBSD DES/kerberos 无法含在官方 FTP 镜像中。2000 年 1 月克林顿放宽后解除。	none
+V72.6.9.4	无不可出口等级	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	There is no "unexportable" level of encryption under license exception ENC.	none
+V72.6.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“加密管制与 BSD 全球传播”；本节题为其下位论题	none
+V72.6.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V72.6.9.5	管制遗产	https://www.bis.doc.gov/index.php/policy-guidance/encryption	联网	A	2026-10-30	1. Encryption items that are NOT subject to the EAR (publicly available)	none

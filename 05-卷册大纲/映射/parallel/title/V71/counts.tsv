@@ -1,0 +1,9 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T21:56:53	start	0	0	0	claim 已由主代理创建；work/V71 无 parts，从第 1 章起草
+2026-10-30T21:56:53	draft	45	225	130	五章 parts 齐备，merge_parts 出 design.json（45 节 225 条）
+2026-10-30T21:56:53	assemble	45	225	130	装配 lint hard=0 warn=0（修 3.8 极差、5.9.2 长度、尾簇 位置/方式/选择）
+2026-10-30T21:56:53	audit	45	225	130	audit_title_consistency 40 项本卷 FAIL 0
+2026-10-30T21:56:53	review	45	225	130	225 条逐条判读（review_ch1–ch5）；维持 214、改题 8、改论题 3
+2026-10-30T21:56:53	supplement	45	225	130	补证 2 条（2.7.5、3.4.1）；证据 900→903 行，URL 31 个
+2026-10-30T21:56:53	report	45	225	130	V71-标题呈审报告.md 落盘；台账指纹 aac14e75407527ad1b905554696e8818ce28043dcfe0f276131d964b57a849f6
+2026-10-30T21:56:53	done	45	225	130	lint hard=0 warn=0；全局门禁 40 项 FAIL 0

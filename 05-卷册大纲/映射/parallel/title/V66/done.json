@@ -1,0 +1,11 @@
+{
+ "vol": "V66",
+ "sections": 82,
+ "titles": 236,
+ "exceptions": 126,
+ "ledger_sha256": "b983674b85c75f996f1e20e1001d216a92ee31003edcf1f3004f4c4ff59c7b3e",
+ "selftest_exit": 0,
+ "finished_at": "2026-10-30T22:52:03",
+ "session": "claude-subagent-V66-20261030",
+ "review_fix": "2026-10-31 收口体哈希同步：done.json 写就（10-30 22:52）后原会话于 22:56 末次装配再改台账（联网证据行扩容），本行刷新哈希并订正报告 §二 数字；计数 236/126 与判读表 236 行未变。"
+}

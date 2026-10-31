@@ -1,0 +1,11 @@
+{
+ "vol": "V52",
+ "sections": 44,
+ "titles": 262,
+ "exceptions": 262,
+ "ledger_sha256": "09c3e6386d746ed18270053a3378cdc208053b70342cb7ed5e0fba56ec0a88d7",
+ "selftest_exit": 0,
+ "finished_at": "2026-10-30T16:16:23",
+ "session": "subagent-v52-20261030",
+ "review_fix": "2026-10-30 逐条判读：全卷逐题判证据契合度；补回判读表 rewrite 稿 V52.3.4.6（终稿漏收，台账编号重排为 V52.3.4.5），台账 261→262；lint hard=0；见 title-design 呈审报告与 work 判读表"
+}

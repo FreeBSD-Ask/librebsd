@@ -1,0 +1,9 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T22:44:00	start	0	0	0	claim 已存在；build_ch1..5.py 起草（时间据工作区文件回填）
+2026-10-30T22:57:00	draft	39	196	176	design.json 39 节 196 题（fix1 超短题与尾簇预修、fix2 复核表补证字段）（时间据文件回填）
+2026-10-30T22:54:00	assemble	39	196	176	首装三件台账；make_review.py 生成判读表（时间据文件回填）
+2026-10-30T22:57:00	review	39	196	176	前轮逐条判读 196 行（review_ch1..5.tsv，rewrite 10＋supplement 1 已应用）（时间据文件回填）
+2026-10-31T02:26:33	review_fix	39	196	176	本会话逐条复核 196 行：维持 178、改题 6（1.2.1／1.6.1／2.4.4／4.5.3 尾簇／5.2.4＋2.1.1、5.2.4 论题）、补证 2（2.4.4／2.4.5）；修复 6 处引文空格脱漏（CSRG-contrib 页）
+2026-10-31T02:26:33	assemble	39	196	176	重装配 hard=0 warn=0；evidence 598→600，B 级误标 netbsd.org／apple.com 16 行改 A；sha256=3f1e9fd33558
+2026-10-31T02:26:33	audit	39	196	176	audit_title_consistency --check：全库 40 项 FAIL 0（本卷 C8b 尾簇已清）
+2026-10-31T02:26:33	report	39	196	176	呈审报告与 done.json 已写；hash=3f1e9fd33558

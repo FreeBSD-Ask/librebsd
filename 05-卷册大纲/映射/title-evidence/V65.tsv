@@ -1,0 +1,853 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V65.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“贡献者、开发者与提交者”；本节题为其下位论题	none
+V65.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.1.1	提交者身份的界定口径	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The committers are the people who have push access to the Git repository, and are authorized to make modifications to the FreeBSD source	none
+V65.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“贡献者、开发者与提交者”；本节题为其下位论题	none
+V65.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.1.2	贡献者与开发者的层级差	https://docs.freebsd.org/en/articles/contributing/	联网	A	2026-10-30	A large and growing number of international contributors, of greatly varying ages and areas of technical expertise, develop FreeBSD.	none
+V65.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“贡献者、开发者与提交者”；本节题为其下位论题	none
+V65.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.1.3	用户作为开发者来源的位置	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	the largest group of developers are the users themselves who provide feedback and bug fixes to us on an almost constant basis	none
+V65.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“贡献者、开发者与提交者”；本节题为其下位论题	none
+V65.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.1.4	NetBSD 的人员类别编制	https://www.netbsd.org/people/	联网	A	2026-10-30	Those people can be broken down into the following groups:	none
+V65.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“贡献者、开发者与提交者”；本节题为其下位论题	none
+V65.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.1.5	身份称谓与权限的对应关系	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	The meritocracy typically has various roles within each individual Apache project community:	none
+V65.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“提交者位作为项目权力”；本节题为其下位论题	none
+V65.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.2.1	提交位的授予与范围指定	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
+V65.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“提交者位作为项目权力”；本节题为其下位论题	none
+V65.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.2.2	提交位作为写权限的实质	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	A committer is a developer who has write access to the code	none
+V65.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“提交者位作为项目权力”；本节题为其下位论题	none
+V65.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.2.3	权限范围与仓库分界的对应	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Generally, the areas associated with a bit reflect who authorized the allocation of the commit bit.	none
+V65.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“提交者位作为项目权力”；本节题为其下位论题	none
+V65.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.2.4	增设权限领域的审批路径	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Additional areas of authority may be added at a later date: when this occurs, the committer should follow normal commit bit allocation procedures for that area of the tree, seeking approval from the appropriate entity and possibly getting a mentor for that area for some period of time.	none
+V65.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“提交者位作为项目权力”；本节题为其下位论题	none
+V65.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.2.5	提交位的公开名单与规模	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	To send an email to one of the committers append dragonflybsd.org.	none
+V65.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“新开发者的进入机制”；本节题为其下位论题	none
+V65.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.3.1	新提交者的提名与审批流程	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.	none
+V65.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“新开发者的进入机制”；本节题为其下位论题	none
+V65.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.3.2	申请程序的书面化程度	https://www.netbsd.org/developers/	联网	A	2026-10-30	New NetBSD developer application procedure	none
+V65.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“新开发者的进入机制”；本节题为其下位论题	none
+V65.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.3.3	导师提名在新人准入中的作用	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	finding a mentor who will propose them to srcmgr, doceng, or portmgr	none
+V65.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“新开发者的进入机制”；本节题为其下位论题	none
+V65.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.3.4	招募渠道的开放与集中	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-10-30	FreeBSD has participated as a mentoring organization every year since GSoC began in 2005	none
+V65.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“新开发者的进入机制”；本节题为其下位论题	none
+V65.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.3.5	入门门槛的技术与时间成本	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-10-30	participating in Google Summer of Code is a significant time commitment	none
+V65.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“导师制与知识传递”；本节题为其下位论题	none
+V65.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.4.1	导师责任的书面规定	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	A mentor is responsible for teaching the mentee the rules and conventions of the project and guiding their first steps in the developer community.	none
+V65.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“导师制与知识传递”；本节题为其下位论题	none
+V65.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.4.2	导师对受导者行为的担保	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	The mentor is also personally responsible for the mentee	none
+V65.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“导师制与知识传递”；本节题为其下位论题	none
+V65.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.4.3	受导期提交须经批准	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	For committers: do not commit anything without first getting mentor approval.	none
+V65.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“导师制与知识传递”；本节题为其下位论题	none
+V65.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.4.4	导师制的解除与自主提交	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When the mentor decides that a mentee has learned the ropes and is ready to commit on their own, the mentor announces it with a commit to mentors.	none
+V65.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“导师制与知识传递”；本节题为其下位论题	none
+V65.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.4.5	功劳制晋升的对照位置	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	A PMC member is a committer who was elected due to	none
+V65.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“代码审阅与技术责任”；本节题为其下位论题	none
+V65.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.5.1	非平凡改动的审阅义务	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	All non-trivial changes should be reviewed before they are committed to the repository.	none
+V65.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“代码审阅与技术责任”；本节题为其下位论题	none
+V65.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.5.2	审阅渠道的公开取向	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Reviews may be conducted by email, in Bugzilla, in Phabricator, or by another mechanism. Where possible, reviews should be public.	none
+V65.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“代码审阅与技术责任”；本节题为其下位论题	none
+V65.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.5.3	审阅循环中的明确同意	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Code review can be an iterative process, which continues until the patch is ready to be committed.	none
+V65.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“代码审阅与技术责任”；本节题为其下位论题	none
+V65.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.5.4	审阅不可由超时替代	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Timeouts are not a substitute for review.	none
+V65.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“代码审阅与技术责任”；本节题为其下位论题	none
+V65.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.5.5	审查者的专业资格限定	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	only an appropriate subject-matter expert can approve a change	none
+V65.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“提交者权限的暂停与撤销”；本节题为其下位论题	none
+V65.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.6.1	暂停权限的临时决定权	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Individual members of core have the power to temporarily suspend commit privileges until core as a whole has the chance to review the issue.	none
+V65.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“提交者权限的暂停与撤销”；本节题为其下位论题	none
+V65.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.6.2	长期停权所需的表决门槛	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Only a 2/3 majority of core has the authority to suspend commit privileges for longer than a week or to remove them permanently.	none
+V65.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“提交者权限的暂停与撤销”；本节题为其下位论题	none
+V65.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.6.3	紧急处置中的仓库管理员角色	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	a temporary suspension may also be done by the repository meisters	none
+V65.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“提交者权限的暂停与撤销”；本节题为其下位论题	none
+V65.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.6.4	被停权者的听证权利	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	a committer whose privileges are suspended or revoked is entitled to a "hearing" by core	none
+V65.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“提交者权限的暂停与撤销”；本节题为其下位论题	none
+V65.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.6.5	撤销后的复核间隔	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	A committer whose privileges have been revoked entirely may request a review after a period of 6 months has elapsed.	none
+V65.1.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“提交者权限的暂停与撤销”；本节题为其下位论题	none
+V65.1.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.6.6	核心团队驱逐成员的票数门槛	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Core members and committers may be ejected by a 2/3 vote of core.	none
+V65.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“维护者与局部自治”；本节题为其下位论题	none
+V65.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.7.1	维护领域的责任归属	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When modifying parts of the system which are maintained, formally or informally, consider asking for a review just as a developer would have before becoming a committer.	none
+V65.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“维护者与局部自治”；本节题为其下位论题	none
+V65.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.7.2	团队章程的批准层级	https://www.freebsd.org/portmgr/	联网	A	2026-10-30	Discusses the goals, rights, and responsibilities of the team. The contents of this document are approved by the FreeBSD Core Team.	none
+V65.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“维护者与局部自治”；本节题为其下位论题	none
+V65.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.7.3	局部自治与核心团队的位阶	https://www.freebsd.org/administration/	联网	A	2026-10-30	responsible for deciding the project	none
+V65.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“维护者与局部自治”；本节题为其下位论题	none
+V65.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.7.4	维护者名单的公开方式	https://www.freebsd.org/portmgr/	联网	A	2026-10-30	portmgr@FreeBSD.org: Mathieu Arnold <mat@FreeBSD.org>	none
+V65.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“维护者与局部自治”；本节题为其下位论题	none
+V65.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.7.5	领域自治的边界与例外	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	These changes do not require review or approval from a committer in the target repository:	none
+V65.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“企业雇员与独立开发者”；本节题为其下位论题	none
+V65.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.8.1	受雇开发者的参与动因	https://producingoss.com/en/money.html	联网	B	2026-10-30	a company needs a particular piece of software to be maintained and developed, and does not need monopoly control of that software	none
+V65.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“企业雇员与独立开发者”；本节题为其下位论题	none
+V65.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.8.2	企业支持与项目信誉的联动	https://producingoss.com/en/money.html	联网	B	2026-10-30	When a large company visibly backs an open source project, people assume the project will receive adequate support in its early stages	none
+V65.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“企业雇员与独立开发者”；本节题为其下位论题	none
+V65.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.8.3	独立开发者的位置与留存	https://producingoss.com/en/money.html	联网	B	2026-10-30	they'll leave for a project that seems more like a meritocracy and less like unpaid labor for someone else	none
+V65.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“企业雇员与独立开发者”；本节题为其下位论题	none
+V65.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.8.4	雇员身份在决策中的换算	https://producingoss.com/en/money.html	联网	B	2026-10-30	the weight given to your company	none
+V65.1.8.4	雇员身份在决策中的换算	https://producingoss.com/en/money.html	联网	A	2026-10-30	determined by its representatives	none
+V65.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“企业雇员与独立开发者”；本节题为其下位论题	none
+V65.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.8.5	企业开发团队的商业定位	https://klarasystems.com/	联网	B	2026-10-30	Klara is at the intersection of enterprise and open source	none
+V65.1.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“志愿者与受雇开发者”；本节题为其下位论题	none
+V65.1.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.9.1	无偿劳动的份额与表述	https://producingoss.com/en/money.html	联网	B	2026-10-30	most free software is written by paid developers, not by volunteers	none
+V65.1.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“志愿者与受雇开发者”；本节题为其下位论题	none
+V65.1.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.9.2	薪酬对响应速度的影响	https://producingoss.com/en/money.html	联网	B	2026-10-30	Having paid developers means that bug reports are more likely to be listened to	none
+V65.1.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“志愿者与受雇开发者”；本节题为其下位论题	none
+V65.1.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.9.3	志愿者的动机与持续投入	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The maintainers of OpenBSD support the project largely from their own pockets.	none
+V65.1.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“志愿者与受雇开发者”；本节题为其下位论题	none
+V65.1.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.9.4	受雇与志愿的混合编制	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	most members of the core team are also volunteers when it comes to FreeBSD development	none
+V65.1.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 9 节“志愿者与受雇开发者”；本节题为其下位论题	none
+V65.1.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.9.5	捐助与劳动的替代关系	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it.	none
+V65.1.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开发权限与项目成员身份”；本节题为其下位论题	none
+V65.1.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.10.1	活跃贡献者的时间口径	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	An Active Contributor is someone who has an active src, ports, or doc commit bit and has committed to the main branch of the src, ports or doc repositories in the last twelve months	none
+V65.1.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开发权限与项目成员身份”；本节题为其下位论题	none
+V65.1.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.10.2	表决权与提交位的绑定	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Any Active Contributor, and only Active Contributors, may vote in a Core Team Election.	none
+V65.1.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开发权限与项目成员身份”；本节题为其下位论题	none
+V65.1.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.10.3	成员资格在法人层面的延伸	https://www.netbsd.org/foundation/executive-committees.html	联网	A	2026-10-30	To oversee all aspects of membership in the Foundation.	none
+V65.1.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开发权限与项目成员身份”；本节题为其下位论题	none
+V65.1.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.10.4	会员身份与开发身份的错位	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	Members care for the ASF itself, usually through project-related and cross-project activities.	none
+V65.1.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 10 节“开发权限与项目成员身份”；本节题为其下位论题	none
+V65.1.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.10.5	权限失效的判定时点	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	the determination of who is or is not an Active Contributor is made relative to the start of the registration period.	none
+V65.1.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“开发权与项目边界”；本节题为其下位论题	none
+V65.1.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.11.1	仓库分界与权限范围	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Source Management Team (also known as srcmgr due to its email alias) is responsible for issues relating to the base system.	none
+V65.1.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“开发权与项目边界”；本节题为其下位论题	none
+V65.1.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.11.2	项目边界在代码树中的体现	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	the areas associated with a bit reflect who authorized the allocation of the commit bit	none
+V65.1.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“开发权与项目边界”；本节题为其下位论题	none
+V65.1.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.11.3	外部贡献的接入位置	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	All pull requests committed to the FreeBSD repository should be reviewed by at least one person.	none
+V65.1.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“开发权与项目边界”；本节题为其下位论题	none
+V65.1.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.11.4	分支权限与主干权限的区分	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	committing non-obvious changes to a repo where you do not hold a commit bit	none
+V65.1.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 11 节“开发权与项目边界”；本节题为其下位论题	none
+V65.1.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.11.5	边界之外的支持形态	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	A few people who have access to the FreeBSD machines do not have commit bits.	none
+V65.1.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“1993–2026 年 BSD 开发权制度的差异”；本节题为其下位论题	none
+V65.1.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.12.1	权限制度的分期与转折	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	These bylaws were approved by a vote of active committers on August 28, 2000.	none
+V65.1.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“1993–2026 年 BSD 开发权制度的差异”；本节题为其下位论题	none
+V65.1.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.12.2	章程修订的两代文本	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	These bylaws were approved by a vote of active committers on May 27, 2026.	none
+V65.1.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“1993–2026 年 BSD 开发权制度的差异”；本节题为其下位论题	none
+V65.1.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.12.3	选举周期由两年到一年的调整	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Core Team Elections are held annually.	none
+V65.1.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“1993–2026 年 BSD 开发权制度的差异”；本节题为其下位论题	none
+V65.1.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.12.4	核心团队规模的调整	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	The FreeBSD Core Team consists of up to seven Voting Members and two Alternate Members.	none
+V65.1.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“1993–2026 年 BSD 开发权制度的差异”；本节题为其下位论题	none
+V65.1.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.12.5	任期限制的新设条款	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	an Incumbent Core Team Member currently in their third or fourth consecutive year may not run for reelection	none
+V65.1.12.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 12 节“1993–2026 年 BSD 开发权制度的差异”；本节题为其下位论题	none
+V65.1.12.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.12.6	生效时点的过渡安排	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	These revised bylaws will take effect in 2028	none
+V65.1.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“提交权限的构成：贡献记录、所在机构与时间余裕”；本节题为其下位论题	none
+V65.1.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.13.1	贡献记录作为权限的前提	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	has committed to the main branch of the src, ports or doc repositories in the last twelve months	none
+V65.1.13.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“提交权限的构成：贡献记录、所在机构与时间余裕”；本节题为其下位论题	none
+V65.1.13.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.13.2	所在机构对参与时间的支撑	https://producingoss.com/en/money.html	联网	B	2026-10-30	If you hire good programmers, and they stick around long enough to get experience with the software and credibility in the community	none
+V65.1.13.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“提交权限的构成：贡献记录、所在机构与时间余裕”；本节题为其下位论题	none
+V65.1.13.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.13.3	时间余裕与提交频率的联动	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Active committers have made a commit to the tree in the last 12 months.	none
+V65.1.13.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“提交权限的构成：贡献记录、所在机构与时间余裕”；本节题为其下位论题	none
+V65.1.13.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.13.4	权限构成的三个变量	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	An Active Contributor is someone who has an active src, ports, or doc commit bit	none
+V65.1.13.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 13 节“提交权限的构成：贡献记录、所在机构与时间余裕”；本节题为其下位论题	none
+V65.1.13.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.13.5	非全职者的权限维持方式	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	should also not be misconstrued as meaning	none
+V65.1.13.5	非全职者的权限维持方式	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	do not benefit from the project financially	none
+V65.1.14.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“性别与多元：BSD 社区的构成与行为准则”；本节题为其下位论题	none
+V65.1.14.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.14.1	行为准则的文本来源	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	which in turn is based on the Django Project Code of Conduct	none
+V65.1.14.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“性别与多元：BSD 社区的构成与行为准则”；本节题为其下位论题	none
+V65.1.14.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.14.2	准则覆盖的空间范围	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	This code of conduct applies to all spaces managed by the FreeBSD project.	none
+V65.1.14.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“性别与多元：BSD 社区的构成与行为准则”；本节题为其下位论题	none
+V65.1.14.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.14.3	违规举报的收件通道	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	If you believe someone is violating the code of conduct, we ask that you report it by emailing conduct@FreeBSD.org.	none
+V65.1.14.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“性别与多元：BSD 社区的构成与行为准则”；本节题为其下位论题	none
+V65.1.14.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.14.4	多元构成的宣示语句	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	We strive to be a community that welcomes and supports people of all backgrounds and identities.	none
+V65.1.14.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 14 节“性别与多元：BSD 社区的构成与行为准则”；本节题为其下位论题	none
+V65.1.14.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.14.5	准则公布的年份标记	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	Publication date: 2020-06-09	none
+V65.1.15.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“进入机制的三时段比较：邀请制、提交权限授予与 GSoC 管道”；本节题为其下位论题	none
+V65.1.15.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.15.1	邀请制的早期形态	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	new developers are invited in (and sometimes out)	none
+V65.1.15.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“进入机制的三时段比较：邀请制、提交权限授予与 GSoC 管道”；本节题为其下位论题	none
+V65.1.15.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.15.2	提交权限授予的程序化	https://www.freebsd.org/administration/	联网	A	2026-10-30	Requests for new accounts will not be acted upon without the proper approval from the appropriate entity.	none
+V65.1.15.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“进入机制的三时段比较：邀请制、提交权限授予与 GSoC 管道”；本节题为其下位论题	none
+V65.1.15.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.15.3	GSoC 管道与导师配对	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-10-30	The work is done under the guidance of one or more mentors and the effort is rewarded with a stipend.	none
+V65.1.15.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“进入机制的三时段比较：邀请制、提交权限授予与 GSoC 管道”；本节题为其下位论题	none
+V65.1.15.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.15.4	实习生转为开发者的通道	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-10-30	Many of our past GSoC students have gone on to become FreeBSD developers.	none
+V65.1.15.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 15 节“进入机制的三时段比较：邀请制、提交权限授予与 GSoC 管道”；本节题为其下位论题	none
+V65.1.15.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.1.15.5	三时段的制度差异	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-10-30	It enables contributors to spend from 8 to 22 weeks over the summer "interning" with open source software projects.	none
+V65.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业参与 BSD 开发的动因”；本节题为其下位论题	none
+V65.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.1.1	企业需求与共享维护的算路	https://producingoss.com/en/money.html	联网	B	2026-10-30	a company needs a particular piece of software to be maintained and developed, and does not need monopoly control of that software	none
+V65.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业参与 BSD 开发的动因”；本节题为其下位论题	none
+V65.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.1.2	商业支持服务的市场位置	https://klarasystems.com/	联网	B	2026-10-30	Klara is at the intersection of enterprise and open source	none
+V65.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业参与 BSD 开发的动因”；本节题为其下位论题	none
+V65.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.1.3	硬件厂商的生态位置	https://www.ixsystems.com/about-us/	联网	A	2026-10-30	We are an enterprise company and dedicated open source pioneers.	none
+V65.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业参与 BSD 开发的动因”；本节题为其下位论题	none
+V65.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.1.4	企业参与的技术议程诉求	https://producingoss.com/en/money.html	联网	B	2026-10-30	The work can only be accepted based on its own merits and on how it fits into the community	none
+V65.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业参与 BSD 开发的动因”；本节题为其下位论题	none
+V65.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.1.5	层级组织与非强制共同体的接合	https://producingoss.com/en/money.html	联网	B	2026-10-30	The key question is how the hierarchical command structures of corporations and the polyarchical, non-coercive communities of free software projects can work productively with each other	none
+V65.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“企业雇佣 BSD 开发者”；本节题为其下位论题	none
+V65.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.2.1	商业支持公司的开发者编制	https://klarasystems.com/	联网	B	2026-10-30	Our expert FreeBSD developers use a deliverable-based workflow to build custom boot loaders, device drivers, security features, and other kernel enhancements.	none
+V65.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“企业雇佣 BSD 开发者”；本节题为其下位论题	none
+V65.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.2.2	硬件公司的开发投入	https://www.ixsystems.com/about-us/	联网	A	2026-10-30	Relied upon by millions in over 140 countries, TrueNAS is an award-winning universal data platform	none
+V65.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“企业雇佣 BSD 开发者”；本节题为其下位论题	none
+V65.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.2.3	雇佣关系对项目的影响路径	https://producingoss.com/en/money.html	联网	B	2026-10-30	If they are respected in the project, they will have influence beyond just their votes.	none
+V65.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“企业雇佣 BSD 开发者”；本节题为其下位论题	none
+V65.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.2.4	雇佣规模的披露缺口	https://klarasystems.com/	联网	B	2026-10-30	We provide comprehensive support services for FreeBSD and ZFS infrastructures	none
+V65.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“企业雇佣 BSD 开发者”；本节题为其下位论题	none
+V65.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.2.5	自筹企业的资金模式	https://www.ixsystems.com/about-us/	联网	A	2026-10-30	Founded in Silicon Valley in 2002, iXsystems, a profitable self-funded company	none
+V65.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“企业赞助与个人贡献”；本节题为其下位论题	none
+V65.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.3.1	捐助来源的双重结构	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	Funded by individual and corporate donations, we invest directly in FreeBSD	none
+V65.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“企业赞助与个人贡献”；本节题为其下位论题	none
+V65.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.3.2	个人小额捐助的累积	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	you can make non-tax-deductible donations through PayPal	none
+V65.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“企业赞助与个人贡献”；本节题为其下位论题	none
+V65.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.3.3	捐助名单的非广告原则	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	We list donors here but we don	none
+V65.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“企业赞助与个人贡献”；本节题为其下位论题	none
+V65.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.3.4	捐助用途的指定方式	https://openbsdfoundation.org/	联网	A	2026-10-30	The Foundation uses all funds it receives to fund infrastructure costs for the projects, and developer events and initiatives	none
+V65.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“企业赞助与个人贡献”；本节题为其下位论题	none
+V65.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.3.5	企业与个人出资的动机差	https://openbsdfoundation.org/	联网	A	2026-10-30	The Foundation needs contributions from Individuals and Companies to support its efforts.	none
+V65.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“企业资金与项目资源”；本节题为其下位论题	none
+V65.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.4.1	资金的分配优先级	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	Most of our funding—over 60%—supports software development	none
+V65.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“企业资金与项目资源”；本节题为其下位论题	none
+V65.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.4.2	预算结构的公开形式	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	prioritize directing resources where they have the greatest impact	none
+V65.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“企业资金与项目资源”；本节题为其下位论题	none
+V65.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.4.3	法人账户与项目账户的分置	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	Matthew Dillon manages the account separately, and all money goes to DragonFly hardware or code bounties.	none
+V65.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“企业资金与项目资源”；本节题为其下位论题	none
+V65.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.4.4	年度财务报告的编制	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The following status reports of the NetBSD Foundation are available:	none
+V65.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“企业资金与项目资源”；本节题为其下位论题	none
+V65.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.4.5	行政与筹款开支的占比	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	Essential operations such as administration and fundraising make up a smaller share	none
+V65.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“企业雇佣与志愿劳动的资源结构”；本节题为其下位论题	none
+V65.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.5.1	薪酬劳动与志愿劳动的配比	https://producingoss.com/en/money.html	联网	B	2026-10-30	most free software is written by paid developers, not by volunteers	none
+V65.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“企业雇佣与志愿劳动的资源结构”；本节题为其下位论题	none
+V65.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.5.2	资源结构的非正式补贴	https://producingoss.com/en/money.html	联网	B	2026-10-30	its office space and network bandwidth are donated, albeit unknowingly, by the organizations those people work for	none
+V65.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“企业雇佣与志愿劳动的资源结构”；本节题为其下位论题	none
+V65.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.5.3	非正式协作的成型过程	https://producingoss.com/en/money.html	联网	B	2026-10-30	an unofficial consortium has been formed	none
+V65.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“企业雇佣与志愿劳动的资源结构”；本节题为其下位论题	none
+V65.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.5.4	志愿劳动的组织化程度	https://producingoss.com/en/money.html	联网	B	2026-10-30	Today such efforts are often more formalized.	none
+V65.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“企业雇佣与志愿劳动的资源结构”；本节题为其下位论题	none
+V65.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.5.5	资金对人员流失的缓冲	https://producingoss.com/en/money.html	联网	B	2026-10-30	the project will be less vulnerable to the Forces of Chaos	none
+V65.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“基础设施、硬件与网络资源”；本节题为其下位论题	none
+V65.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.6.1	集群与主站的维护分工	https://www.freebsd.org/administration/	联网	A	2026-10-30	The Cluster Administrators are responsible for maintaining the machines and services that the project relies on for its distributed work and communication.	none
+V65.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“基础设施、硬件与网络资源”；本节题为其下位论题	none
+V65.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.6.2	硬件采购的资助渠道	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded the purchasing of machines for developers and project infrastructure.	none
+V65.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“基础设施、硬件与网络资源”；本节题为其下位论题	none
+V65.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.6.3	网络接入的会员资格支出	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded continued membership in Cybera	none
+V65.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“基础设施、硬件与网络资源”；本节题为其下位论题	none
+V65.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.6.4	机房电力与冷却的成本项	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded the electrical and cooling costs for the primary site.	none
+V65.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“基础设施、硬件与网络资源”；本节题为其下位论题	none
+V65.2.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.6.5	硬件捐助的交付责任划分	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	The DragonFly BSD Project is not responsible for any transactions.	none
+V65.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“黑客松与开发会议的资源来源”；本节题为其下位论题	none
+V65.2.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.7.1	黑客松的资助名目	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded developer expenses for: j2k25: japan hackathon, May 18 - 25, 2025, Nara, Japan	none
+V65.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“黑客松与开发会议的资源来源”；本节题为其下位论题	none
+V65.2.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.7.2	会议差旅的报销范围	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded developer expenses for: p2k25: ports hackathon, Sep 12 - Sep 19, 2025, Ottery St. Mary, England	none
+V65.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“黑客松与开发会议的资源来源”；本节题为其下位论题	none
+V65.2.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.7.3	厂商峰会的组织方	https://freebsdfoundation.org/our-work/	联网	A	2026-10-30	November 2026 FreeBSD Vendor Summit	none
+V65.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“黑客松与开发会议的资源来源”；本节题为其下位论题	none
+V65.2.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.7.4	活动资助的年度口径	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	During 2024 the foundation supported the following activities.	none
+V65.2.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“黑客松与开发会议的资源来源”；本节题为其下位论题	none
+V65.2.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.7.5	聚会密度与协作节奏	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Focus on being developer-oriented in all senses, including holding developer-only events called hackathons.	none
+V65.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“商业参与与项目独立性”；本节题为其下位论题	none
+V65.2.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.8.1	法人实体与项目决策的分置	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	managing contracts, licenses, and other agreements on its behalf	none
+V65.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“商业参与与项目独立性”；本节题为其下位论题	none
+V65.2.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.8.2	资金换取的信用而非控制	https://producingoss.com/en/money.html	联网	B	2026-10-30	So money needs to be used carefully, and without communicating an intent to control.	none
+V65.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“商业参与与项目独立性”；本节题为其下位论题	none
+V65.2.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.8.3	中立托管平台的角色	https://www.linuxfoundation.org/about	联网	A	2026-10-30	The Linux Foundation provides a neutral, trusted hub for developers to code, manage, and scale open technology projects.	none
+V65.2.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“商业参与与项目独立性”；本节题为其下位论题	none
+V65.2.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.8.4	出资方在共同体中的权重	https://producingoss.com/en/money.html	联网	B	2026-10-30	There is no need for paid developers to disguise their motives, either.	none
+V65.2.8.4	出资方在共同体中的权重	https://producingoss.com/en/money.html	联网	A	2026-10-30	convertible to influence	none
+V65.2.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“商业参与与项目独立性”；本节题为其下位论题	none
+V65.2.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.8.5	独立性在人事上的落点	https://www.freebsd.org/administration/	联网	A	2026-10-30	The Core Team is elected by the active developers in the project.	none
+V65.2.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“小型项目的资源约束”；本节题为其下位论题	none
+V65.2.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.9.1	未设法人实体的税负后果	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	DragonFly is not yet incorporated as a non-profit, meaning no tax benefit is available for donating time or goods to the project.	none
+V65.2.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“小型项目的资源约束”；本节题为其下位论题	none
+V65.2.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.9.2	单一账户的代管安排	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	Matthew Dillon manages the account separately	none
+V65.2.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“小型项目的资源约束”；本节题为其下位论题	none
+V65.2.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.9.3	自筹公司的资金模式	https://www.ixsystems.com/about-us/	联网	A	2026-10-30	a profitable self-funded company	none
+V65.2.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“小型项目的资源约束”；本节题为其下位论题	none
+V65.2.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.9.4	小型项目的人手集中度	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	The DragonFly Project, like many open source projects, is a technical project supported by a team of geographically separated people.	none
+V65.2.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 9 节“小型项目的资源约束”；本节题为其下位论题	none
+V65.2.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.9.5	募资量级与资源上限	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The Foundation received $380,653 in new donations during its 2024 fund raising campaign.	none
+V65.2.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“资源配置与技术议程”；本节题为其下位论题	none
+V65.2.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.10.1	资助方与议程的对应	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funds a number of activities for OpenBSD to ensure that we have infrastructure to support development	none
+V65.2.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“资源配置与技术议程”；本节题为其下位论题	none
+V65.2.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.10.2	议程设定中的开发者意愿	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The answer is based on two things: the wishes of the developers and	none
+V65.2.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“资源配置与技术议程”；本节题为其下位论题	none
+V65.2.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.10.3	KAME 项目的资助来源	旧大纲-20261023/第18卷-全球社区地区bsd史/第367章-日本bsd社区/367.2-KAME-项目-IPv6-与-IPsec-的-BSD-实现-1998-2006/367.2.1-kame项目的发起与组织.md	史料	A	2026-10-30	得到日本通信综合研究所（CRL）与 WIDE 项目资助，是日本学术界对 BSD 最具影响力的贡献	none
+V65.2.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“资源配置与技术议程”；本节题为其下位论题	none
+V65.2.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.10.4	技术议程与资源投入的错位	https://producingoss.com/en/money.html	联网	B	2026-10-30	Corporations have become conscious of the benefits of open source software, and now involve themselves intentionally in its development.	none
+V65.2.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“资源配置与技术议程”；本节题为其下位论题	none
+V65.2.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.10.5	资源投向的年度取舍	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation provided funding for developer support.	none
+V65.2.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“BSD 项目长期持续性的资源条件”；本节题为其下位论题	none
+V65.2.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.11.1	长期预算的年度连续性	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	During 2025 the foundation supported the following activities.	none
+V65.2.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“BSD 项目长期持续性的资源条件”；本节题为其下位论题	none
+V65.2.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.11.2	捐赠总额与支出规模的对照	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	During 2022 the foundation paid out $351,842 to support its activities.	none
+V65.2.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“BSD 项目长期持续性的资源条件”；本节题为其下位论题	none
+V65.2.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.11.3	持续性依赖的人员条件	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	the likelihood that the project would continue even if all of its founding members were to move on to other things	none
+V65.2.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“BSD 项目长期持续性的资源条件”；本节题为其下位论题	none
+V65.2.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.11.4	筹款节奏与项目年度	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The Foundation received $398,928 in new donations during its 2022 Fund raising Campaign.	none
+V65.2.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 11 节“BSD 项目长期持续性的资源条件”；本节题为其下位论题	none
+V65.2.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.2.11.5	资金中断的风险与缓冲	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	We also dedicate a significant portion to advocacy and education	none
+V65.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“个体薪酬与持续维护”；本节题为其下位论题	none
+V65.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.1.1	受薪维护的普遍程度	https://producingoss.com/en/money.html	联网	B	2026-10-30	most free software is written by paid developers, not by volunteers	none
+V65.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“个体薪酬与持续维护”；本节题为其下位论题	none
+V65.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.1.2	维护工作的薪酬来源	https://klarasystems.com/	联网	B	2026-10-30	We provide comprehensive support services for FreeBSD and ZFS infrastructures	none
+V65.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“个体薪酬与持续维护”；本节题为其下位论题	none
+V65.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.1.3	无偿维护者的时间成本	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The maintainers of OpenBSD support the project largely from their own pockets.	none
+V65.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“个体薪酬与持续维护”；本节题为其下位论题	none
+V65.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.1.4	基金会资助的岗位设置	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The Foundation funds software development via project grants and provides staff to immediately respond to urgent problems and implement new features and functionality.	none
+V65.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“个体薪酬与持续维护”；本节题为其下位论题	none
+V65.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.1.5	个人薪酬与项目收益的分离	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	most members of the core team are also volunteers when it comes to FreeBSD development	none
+V65.3.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“个体薪酬与持续维护”；本节题为其下位论题	none
+V65.3.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.1.6	专职维护的交付方式	https://klarasystems.com/	联网	B	2026-10-30	Our expert FreeBSD developers use a deliverable-based workflow	none
+V65.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“参与位置的比较：无偿、任职与赞助”；本节题为其下位论题	none
+V65.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.2.1	无偿参与的位置与限度	https://producingoss.com/en/money.html	联网	B	2026-10-30	the proportion of truly unpaid volunteers was probably higher	none
+V65.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“参与位置的比较：无偿、任职与赞助”；本节题为其下位论题	none
+V65.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.2.2	任职参与的合同形态	https://klarasystems.com/	联网	B	2026-10-30	Our support subscription ensures you have capable experts you can count on	none
+V65.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“参与位置的比较：无偿、任职与赞助”；本节题为其下位论题	none
+V65.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.2.3	赞助参与的间接链条	https://producingoss.com/en/money.html	联网	B	2026-10-30	it buys development credibility	none
+V65.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“参与位置的比较：无偿、任职与赞助”；本节题为其下位论题	none
+V65.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.2.4	三种位置的决策权差异	https://producingoss.com/en/money.html	联网	B	2026-10-30	They will have a vote, or if there are many of them, they will have a voting block.	none
+V65.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“参与位置的比较：无偿、任职与赞助”；本节题为其下位论题	none
+V65.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.2.5	位置转换的常见通道	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-10-30	Many of our past GSoC students have gone on to become FreeBSD developers.	none
+V65.3.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“参与位置的比较：无偿、任职与赞助”；本节题为其下位论题	none
+V65.3.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.2.6	无偿者的退出机制	https://producingoss.com/en/money.html	联网	B	2026-10-30	the "out" developers gradually stop trying to be taken seriously	none
+V65.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“开发者心理：动机、倦怠与社区留存”；本节题为其下位论题	none
+V65.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.3.1	动机表述中的兴趣成分	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	Programmers who enjoy writing operating systems are naturally always	none
+V65.3.3.1	动机表述中的兴趣成分	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	we are definitely not prepared to insist on it	none
+V65.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“开发者心理：动机、倦怠与社区留存”；本节题为其下位论题	none
+V65.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.3.2	倦怠与外流的结构原因	https://producingoss.com/en/money.html	联网	B	2026-10-30	this can divide a project into in-group and out-group developers	none
+V65.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“开发者心理：动机、倦怠与社区留存”；本节题为其下位论题	none
+V65.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.3.3	留存与可见度的关系	https://producingoss.com/en/money.html	联网	B	2026-10-30	there will be fewer and fewer large code contributions from unexpected sources	none
+V65.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“开发者心理：动机、倦怠与社区留存”；本节题为其下位论题	none
+V65.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.3.4	静默退出的行为形态	https://producingoss.com/en/money.html	联网	B	2026-10-30	They may never complain overtly on the mailing lists.	none
+V65.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“开发者心理：动机、倦怠与社区留存”；本节题为其下位论题	none
+V65.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.3.5	社区健康的衡量口径	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	a sense of institutional permanence, supported by habits and procedures that are well understood by everyone who participates	none
+V65.3.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“开发者心理：动机、倦怠与社区留存”；本节题为其下位论题	none
+V65.3.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.3.3.6	巴士系数与交接风险	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	how many participants would have to get hit by a bus	none
+V65.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“技术分歧与治理分歧”；本节题为其下位论题	none
+V65.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.1.1	技术分歧与社交分歧的分野	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	Disagreements, both social and technical, happen all the time and FreeBSD is no exception.	none
+V65.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“技术分歧与治理分歧”；本节题为其下位论题	none
+V65.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.1.2	分歧升级为治理问题的条件	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	The fact is, the question is not easy to answer.	none
+V65.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“技术分歧与治理分歧”；本节题为其下位论题	none
+V65.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.1.3	争议解决的非正式手段	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	Others use a less formal structure, but more personal self-restraint on the part of leaders	none
+V65.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“技术分歧与治理分歧”；本节题为其下位论题	none
+V65.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.1.4	冲突记录的制度化载体	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Core will issue interpretations of the bylaws from time to time as necessary	none
+V65.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 内部冲突与 OpenBSD 分叉”；本节题为其下位论题	none
+V65.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.2.1	分叉事件在编年中的定位	https://producingoss.com/en/forks.html	联网	B	2026-10-30	At its most basic, a fork is when one copy of a project diverges from another copy	none
+V65.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 内部冲突与 OpenBSD 分叉”；本节题为其下位论题	none
+V65.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.2.2	硬分叉与开发分叉的区别	https://producingoss.com/en/forks.html	联网	B	2026-10-30	Hard forks (also sometimes called social forks) are much less common, and are much more significant when they happen.	none
+V65.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 内部冲突与 OpenBSD 分叉”；本节题为其下位论题	none
+V65.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.2.3	分叉后的正统认定问题	https://producingoss.com/en/forks.html	联网	B	2026-10-30	Once a project forks, there is no definitive answer to the question of which fork is the	none
+V65.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 内部冲突与 OpenBSD 分叉”；本节题为其下位论题	none
+V65.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.2.4	分叉作为信心投票	https://producingoss.com/en/forks.html	联网	B	2026-10-30	a fork is, in essence, a vote of confidence.	none
+V65.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD 5.x 时期的技术与组织冲突”；本节题为其下位论题	none
+V65.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.3.1	5.0 发布前的开发周期	https://www.freebsd.org/releases/5.0R/announce/	联网	A	2026-10-30	The culmination of nearly three years of work	none
+V65.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD 5.x 时期的技术与组织冲突”；本节题为其下位论题	none
+V65.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.3.2	新技术栈的引入清单	https://www.freebsd.org/releases/5.0R/announce/	联网	A	2026-10-30	Among the long list of new and improved features:	none
+V65.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD 5.x 时期的技术与组织冲突”；本节题为其下位论题	none
+V65.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.3.3	保守用户的迁移建议	https://www.freebsd.org/releases/5.0R/announce/	联网	A	2026-10-30	More conservative users may prefer to continue using FreeBSD 4.X.	none
+V65.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“FreeBSD 5.x 时期的技术与组织冲突”；本节题为其下位论题	none
+V65.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.3.4	发布说明中的风险提示	https://www.freebsd.org/releases/5.0R/announce/	联网	A	2026-10-30	it may not be suitable for all users	none
+V65.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“DragonFly 从 FreeBSD 分叉”；本节题为其下位论题	none
+V65.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.4.1	分叉起点与版本依据	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
+V65.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“DragonFly 从 FreeBSD 分叉”；本节题为其下位论题	none
+V65.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.4.2	分叉公告的自我定位	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series"	none
+V65.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“DragonFly 从 FreeBSD 分叉”；本节题为其下位论题	none
+V65.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.4.3	首个技术目标的设定	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The ultimate goal of the DragonFly project at its inception was to provide native clustering support in the kernel.	none
+V65.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“DragonFly 从 FreeBSD 分叉”；本节题为其下位论题	none
+V65.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.4.4	分叉后与上游的组件共用	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources	none
+V65.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“领导权与技术路线”；本节题为其下位论题	none
+V65.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.5.1	项目领袖的技术主张	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
+V65.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“领导权与技术路线”；本节题为其下位论题	none
+V65.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.5.2	技术路线的个人印记	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is also the principal code contributor to DragonFly BSD	none
+V65.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“领导权与技术路线”；本节题为其下位论题	none
+V65.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.5.3	路线之争的裁决位置	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	even projects that are not formally organized as democracies are, in practice, democracies when it comes to important decisions	none
+V65.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“领导权与技术路线”；本节题为其下位论题	none
+V65.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.5.4	追随与选择的双重性	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	this is because they choose to do so, in a situation where they really do have freedom of choice	none
+V65.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“开发权限与项目纪律冲突”；本节题为其下位论题	none
+V65.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.6.1	纪律条款的成文化程度	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	As noted, breaking some of these rules can be grounds for suspension	none
+V65.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“开发权限与项目纪律冲突”；本节题为其下位论题	none
+V65.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.6.2	违规处置的量刑阶梯	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	upon repeated offense, permanent removal of commit privileges	none
+V65.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“开发权限与项目纪律冲突”；本节题为其下位论题	none
+V65.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.6.3	处置与移除的次序	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Violators will be removed from the FreeBSD developers mailing list, resulting in a suspension of commit privileges.	none
+V65.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“开发权限与项目纪律冲突”；本节题为其下位论题	none
+V65.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.6.4	停权期限的议定方式	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	the total duration of the suspension being determined at that time	none
+V65.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“核心团队、基金会与个人领导之间的关系”；本节题为其下位论题	none
+V65.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.7.1	法人角色与项目角色的分工	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation serves as the legal entity which owns several of	none
+V65.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“核心团队、基金会与个人领导之间的关系”；本节题为其下位论题	none
+V65.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.7.2	基金会与核心团队的联络机制	https://www.freebsd.org/administration/	联网	A	2026-10-30	Allan Jude <allanjude@FreeBSD.org> (Core Team Liaison)	none
+V65.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“核心团队、基金会与个人领导之间的关系”；本节题为其下位论题	none
+V65.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.7.3	个人领导在法人结构中的位置	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	He has been working on or completed DragonFly projects such as variant symlinks, MPIPE	none
+V65.4.7.3	个人领导在法人结构中的地位	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
+V65.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“核心团队、基金会与个人领导之间的关系”；本节题为其下位论题	none
+V65.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.7.4	三方关系的章程依据	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	their removal by a two-thirds majority vote of Voting Members	none
+V65.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“分叉的类型与制度解释”；本节题为其下位论题	none
+V65.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.8.1	硬分叉的社会成因	https://producingoss.com/en/forks.html	联网	B	2026-10-30	Some forks are due to amicable but irreconcilable disagreements about the direction of the project	none
+V65.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“分叉的类型与制度解释”；本节题为其下位论题	none
+V65.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.8.2	分叉作为表决机制	https://producingoss.com/en/forks.html	联网	B	2026-10-30	If more than half of the developers are in favor of whatever course the fork proposes to take, usually there is no need to fork	none
+V65.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“分叉的类型与制度解释”；本节题为其下位论题	none
+V65.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.8.3	分叉威胁的治理效应	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	the more serious the threat of a fork becomes, the more willing people are to compromise to avoid it	none
+V65.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“分叉的类型与制度解释”；本节题为其下位论题	none
+V65.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.8.4	制度解释的适用边界	https://producingoss.com/en/forks.html	联网	B	2026-10-30	The distinction between them is important.	none
+V65.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“分叉后的代码、人员与共同体”；本节题为其下位论题	none
+V65.4.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.9.1	不可复制资产的归属争议	https://producingoss.com/en/forks.html	联网	B	2026-10-30	When a fork occurs, there can be a question of what happens to non-copyable assets	none
+V65.4.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“分叉后的代码、人员与共同体”；本节题为其下位论题	none
+V65.4.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.9.2	人员分流与协作可能	https://producingoss.com/en/forks.html	联网	B	2026-10-30	don't force people to make exclusive choices	none
+V65.4.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“分叉后的代码、人员与共同体”；本节题为其下位论题	none
+V65.4.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.9.3	名称与品牌的分置	https://producingoss.com/en/forks.html	联网	B	2026-10-30	will treat the fork as a new project, with a new name	none
+V65.4.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“分叉后的代码、人员与共同体”；本节题为其下位论题	none
+V65.4.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.9.4	上游对分叉的协助姿态	https://producingoss.com/en/forks.html	联网	B	2026-10-30	be as cooperative as is practicable with the fork	none
+V65.4.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“冲突解决与制度调整”；本节题为其下位论题	none
+V65.4.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.10.1	章程修订的触发条件	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Changes to these bylaws may be proposed at any time by the Core Team or by a petition signed by 5% of Active Contributors.	none
+V65.4.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“冲突解决与制度调整”；本节题为其下位论题	none
+V65.4.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.10.2	表决门槛的制度设计	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Any amendment that receives two thirds or more of the votes cast in the poll is deemed to have passed	none
+V65.4.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“冲突解决与制度调整”；本节题为其下位论题	none
+V65.4.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.10.3	规则变更的参与率约束	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	These rules can be changed by a 2/3 majority of committers if at least 50% of active committers cast their vote.	none
+V65.4.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“冲突解决与制度调整”；本节题为其下位论题	none
+V65.4.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.10.4	行为准则作为软性调整	https://www.freebsd.org/internal/code-of-conduct/	联网	A	2026-10-30	has always worked to be a welcoming and respectful community	none
+V65.4.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“BSD 项目治理中的继承与断裂”；本节题为其下位论题	none
+V65.4.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.11.1	伯克利遗产的制度继承	https://www.netbsd.org/about/	联网	A	2026-10-30	The NetBSD code was originally derived from 4.4BSD Lite2 from the University of California, Berkeley.	none
+V65.4.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“BSD 项目治理中的继承与断裂”；本节题为其下位论题	none
+V65.4.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.11.2	断裂处的制度重建	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	One of the important works included the simplification and general cleanup of the majority of the kernel subsystems.	none
+V65.4.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“BSD 项目治理中的继承与断裂”；本节题为其下位论题	none
+V65.4.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.11.3	继承与断裂的并存形态	https://producingoss.com/en/forks.html	联网	B	2026-10-30	a potentially permanent divergence	none
+V65.4.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“BSD 项目治理中的继承与断裂”；本节题为其下位论题	none
+V65.4.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.11.4	分叉后的共同体再造	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Many individuals have stepped up to contribute various pieces of code, documentation, ideas, and feedback to The DragonFly Project.	none
+V65.4.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“分叉与开源项目的制度弹性”；本节题为其下位论题	none
+V65.4.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.12.1	教堂与市集的两种组织	http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/	联网	B	2026-10-30	model of most of the commercial world	none
+V65.4.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“分叉与开源项目的制度弹性”；本节题为其下位论题	none
+V65.4.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.12.2	制度弹性来自退出权	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	The potential for forks is the reason there are no true dictators in free software projects.	none
+V65.4.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“分叉与开源项目的制度弹性”；本节题为其下位论题	none
+V65.4.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.12.3	治理结构的常见类型	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	There are three common governance structures associated with open source projects.	none
+V65.4.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“分叉与开源项目的制度弹性”；本节题为其下位论题	none
+V65.4.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.4.12.4	制度弹性的上限所在	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	puts an upper limit on how much power anyone can exert in a project	none
+V65.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“基金会在开源项目中的制度作用”；本节题为其下位论题	none
+V65.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.1.1	法人与项目的托管关系	https://www.netbsd.org/foundation/	联网	A	2026-10-30	handles donations of money, services, hardware or time to the project	none
+V65.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“基金会在开源项目中的制度作用”；本节题为其下位论题	none
+V65.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.1.2	资金与法律资产的集中管理	https://foundation.gnome.org/	联网	A	2026-10-30	It provides essential functions and support for GNOME, including managing the project	none
+V65.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“基金会在开源项目中的制度作用”；本节题为其下位论题	none
+V65.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.1.3	商标与许可的持有主体	https://foundation.gnome.org/	联网	A	2026-10-30	The GNOME Foundation is the owner of the GNOME trademarks.	none
+V65.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“基金会在开源项目中的制度作用”；本节题为其下位论题	none
+V65.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.1.4	基金会的中立性功能	https://www.linuxfoundation.org/about	联网	A	2026-10-30	has provided a neutral home and unmatched support for cutting-edge projects	none
+V65.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 基金会 的法律与运营模式”；本节题为其下位论题	none
+V65.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.2.1	501(c)(3) 法人的定位	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	The FreeBSD Foundation is a US-based 501(c)(3) non-profit organization	none
+V65.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 基金会 的法律与运营模式”；本节题为其下位论题	none
+V65.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.2.2	认可法人的合同与许可职能	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	managing contracts, licenses, and other agreements on its behalf	none
+V65.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 基金会 的法律与运营模式”；本节题为其下位论题	none
+V65.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.2.3	资金投向的优先级	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	we invest directly in FreeBSD through software development, infrastructure improvements, advocacy, training, and community engagement	none
+V65.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 基金会 的法律与运营模式”；本节题为其下位论题	none
+V65.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.2.4	运营开支的占比位置	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	Essential operations such as administration and fundraising make up a smaller share	none
+V65.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“FreeBSD 基金会 的法律与运营模式”；本节题为其下位论题	none
+V65.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.2.5	与项目团队的联络安排	https://www.freebsd.org/administration/	联网	A	2026-10-30	Allan Jude <allanjude@FreeBSD.org> (Core Team Liaison)	none
+V65.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“NetBSD 基金会 的治理模式”；本节题为其下位论题	none
+V65.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.3.1	特拉华州法人的章程依据	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation is incorporated in the State of Delaware, and is governed by a set of bylaws.	none
+V65.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“NetBSD 基金会 的治理模式”；本节题为其下位论题	none
+V65.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.3.2	董事会由开发者选举产生	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The Board members were elected by the NetBSD Developer community	none
+V65.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“NetBSD 基金会 的治理模式”；本节题为其下位论题	none
+V65.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.3.3	执行委员会的设置与分工	https://www.netbsd.org/foundation/executive-committees.html	联网	A	2026-10-30	the following executive committees were formed on January 14, 2003	none
+V65.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“NetBSD 基金会 的治理模式”；本节题为其下位论题	none
+V65.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.3.4	会员资格与表决程序	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	shall be put forth to the Active Members for a vote	none
+V65.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“NetBSD 基金会 的治理模式”；本节题为其下位论题	none
+V65.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.3.5	财务与会员事务的委员会	https://www.netbsd.org/foundation/executive-committees.html	联网	A	2026-10-30	To oversee and maintain a record of the financial business of the Foundation.	none
+V65.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenBSD 基金会 的组织特点”；本节题为其下位论题	none
+V65.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.4.1	加拿大非营利法人的形态	https://openbsdfoundation.org/	联网	A	2026-10-30	The OpenBSD Foundation is a Canadian not-for-profit corporation	none
+V65.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenBSD 基金会 的组织特点”；本节题为其下位论题	none
+V65.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.4.2	资助范围与关联项目	https://openbsdfoundation.org/	联网	A	2026-10-30	exists to support OpenBSD and related projects	none
+V65.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenBSD 基金会 的组织特点”；本节题为其下位论题	none
+V65.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.4.3	资金用途的公开口径	https://openbsdfoundation.org/	联网	A	2026-10-30	See our Activities Page for more details.	none
+V65.5.4.3	资金用途的公开口径	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation provided funding for developer support.	none
+V65.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenBSD 基金会 的组织特点”；本节题为其下位论题	none
+V65.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.4.4	捐款收据与税务限制	https://openbsdfoundation.org/donations.html	联网	A	2026-10-30	We can issue receipts for donations which while	none
+V65.5.4.4	捐款收据与税务限制	https://openbsdfoundation.org/donations.html	联网	A	2026-10-30	not deductible as charitable donations in Canada	none
+V65.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OpenBSD 基金会 的组织特点”；本节题为其下位论题	none
+V65.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.4.5	筹款活动的年度节奏	https://openbsdfoundation.org/activities.html	联网	A	2026-10-30	The Foundation received $398,928 in new donations during its 2022 Fund raising Campaign.	none
+V65.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DragonFly BSD 无独立基金会的制度背景（截至 2026 年）”；本节题为其下位论题	none
+V65.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.5.1	未设法人实体的税负后果	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	meaning no tax benefit is available for donating time or goods to the project	none
+V65.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DragonFly BSD 无独立基金会的制度背景（截至 2026 年）”；本节题为其下位论题	none
+V65.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.5.2	个人代管账户的安排	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	all money goes to DragonFly hardware or code bounties	none
+V65.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DragonFly BSD 无独立基金会的制度背景（截至 2026 年）”；本节题为其下位论题	none
+V65.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.5.3	硬件捐助的私人渠道	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	please contact the requestor directly	none
+V65.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“DragonFly BSD 无独立基金会的制度背景（截至 2026 年）”；本节题为其下位论题	none
+V65.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.5.4	无基金会状态的项目风险	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	You and the donating/receiving party must independently resolve any delivery issues	none
+V65.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“Linux 基金会 的商业协作模式”；本节题为其下位论题	none
+V65.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.6.1	501(c)(6) 行业协会的法定位	https://www.linuxfoundation.org/about	联网	A	2026-10-30	a 501(c)(6) non-profit	none
+V65.5.6.1	501(c)(6) 的协会法人属性	https://www.linuxfoundation.org/about	联网	A	2026-10-30	For years the Linux Foundation, a 501(c)(6) non-profit, has provided a neutral home	none
+V65.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“Linux 基金会 的商业协作模式”；本节题为其下位论题	none
+V65.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.6.2	中立托管与项目聚合	https://www.linuxfoundation.org/about	联网	A	2026-10-30	neutral home and unmatched support for cutting-edge projects	none
+V65.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“Linux 基金会 的商业协作模式”；本节题为其下位论题	none
+V65.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.6.3	会员企业的协作接口	https://www.linuxfoundation.org/about	联网	A	2026-10-30	We help companies and developers identify and contribute to the projects that matter.	none
+V65.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“Linux 基金会 的商业协作模式”；本节题为其下位论题	none
+V65.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.6.4	商业协作与治理权的分离	https://www.linuxfoundation.org/about	联网	A	2026-10-30	We provide turnkey technology and support programs for developer enablement, business operations	none
+V65.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“Apache Software Foundation 的项目治理模式”；本节题为其下位论题	none
+V65.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.7.1	董事会与 PMC 的两级治理	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	Board of Directors (board) governs the foundation and is composed of	none
+V65.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“Apache Software Foundation 的项目治理模式”；本节题为其下位论题	none
+V65.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.7.2	功劳制下的角色序列	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	The meritocracy typically has various roles within each individual Apache project community:	none
+V65.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“Apache Software Foundation 的项目治理模式”；本节题为其下位论题	none
+V65.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.7.3	PMC 的技术决定权	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	PMC has technical decision-making authority regarding the content	none
+V65.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“Apache Software Foundation 的项目治理模式”；本节题为其下位论题	none
+V65.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.7.4	主席任命与委员选举的分工	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	The Board appoints the chair of the PMC	none
+V65.5.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“Apache Software Foundation 的项目治理模式”；本节题为其下位论题	none
+V65.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.7.5	共识表决的懒共识规则	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	projects make decisions with a lazy consensus approach	none
+V65.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“GNOME Foundation 与桌面生态治理”；本节题为其下位论题	none
+V65.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.8.1	会员制与选举董事会的组合	https://foundation.gnome.org/	联网	A	2026-10-30	The GNOME Foundation is a membership-based organization with an elected board of directors.	none
+V65.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“GNOME Foundation 与桌面生态治理”；本节题为其下位论题	none
+V65.5.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.8.2	顾问委员会的咨询位置	https://foundation.gnome.org/	联网	A	2026-10-30	It is guided by its Advisory Board.	none
+V65.5.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“GNOME Foundation 与桌面生态治理”；本节题为其下位论题	none
+V65.5.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.8.3	商标持有与生态边界	https://foundation.gnome.org/	联网	A	2026-10-30	The GNOME Foundation is the owner of the GNOME trademarks.	none
+V65.5.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“GNOME Foundation 与桌面生态治理”；本节题为其下位论题	none
+V65.5.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.8.4	桌面生态的资金用途	https://foundation.gnome.org/	联网	A	2026-10-30	Donations are essential for us to improve our development infrastructure, host community events, and keep Flathub running.	none
+V65.5.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“GNOME Foundation 与桌面生态治理”；本节题为其下位论题	none
+V65.5.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.5.8.5	项目起源的两人起点	https://www.gnome.org/about/	联网	A	2026-10-30	The GNOME project was founded in 1997 by two students	none
+V65.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“开源资本、公共资源与社区自治”；本节题为其下位论题	none
+V65.6.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.1.1	代码可分叉性与自治基础	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	the ability of anyone to take a copy of the source code and use it to start a competing project	none
+V65.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“开源资本、公共资源与社区自治”；本节题为其下位论题	none
+V65.6.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.1.2	公共资源的托管归属	https://foundation.gnome.org/	联网	A	2026-10-30	including managing the project	none
+V65.6.1.2	公共资源的托管归属	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation serves as the legal entity which owns several of	none
+V65.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“开源资本、公共资源与社区自治”；本节题为其下位论题	none
+V65.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.1.3	自治的正式与非正式两种	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	There are various ways to achieve this kind of success. Some involve a formal governance structure	none
+V65.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“开源资本、公共资源与社区自治”；本节题为其下位论题	none
+V65.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.1.4	资本进入后的自治限度	https://producingoss.com/en/money.html	联网	B	2026-10-30	If developers who aren	none
+V65.6.1.4	资本进入后的自治限度	https://producingoss.com/en/money.html	联网	A	2026-10-30	this can divide a project into in-group and out-group developers	none
+V65.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“法人、项目与制品三者的分离：判准与反例”；本节题为其下位论题	none
+V65.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.2.1	法人、项目与制品的三角	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	recognized legal entity	none
+V65.6.2.1	法人、项目与制品的三角	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	managing contracts, licenses, and other agreements on its behalf	none
+V65.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“法人、项目与制品三者的分离：判准与反例”；本节题为其下位论题	none
+V65.6.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.2.2	三分离判准的落点	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation serves as the legal entity which owns several of	none
+V65.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“法人、项目与制品三者的分离：判准与反例”；本节题为其下位论题	none
+V65.6.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.2.3	主体错置的常见形态	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	Project Management Committees (PMCs) govern the projects, and they are	none
+V65.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“法人、项目与制品三者的分离：判准与反例”；本节题为其下位论题	none
+V65.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.2.4	商标归属作为判准之一	https://producingoss.com/en/forks.html	联网	B	2026-10-30	If there is some organization with trademark rights to the name	none
+V65.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“FreeBSD 的选举型核心团队治理”；本节题为其下位论题	none
+V65.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.3.1	核心团队的董事会类比	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The FreeBSD core team would be equivalent to the board of directors if the FreeBSD Project were a company.	none
+V65.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“FreeBSD 的选举型核心团队治理”；本节题为其下位论题	none
+V65.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.3.2	选举人资格的时间门槛	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Any Active Contributor, and only Active Contributors, may run in a Core Team Election	none
+V65.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“FreeBSD 的选举型核心团队治理”；本节题为其下位论题	none
+V65.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.3.3	年度选举的八周流程	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	for a total of eight weeks terminating no later than the second Wednesday of May	none
+V65.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“FreeBSD 的选举型核心团队治理”；本节题为其下位论题	none
+V65.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.3.4	任期与交替成员的分层	https://www.freebsd.org/internal/bylaws/	联网	A	2026-10-30	Alternate Members participate in meetings and discussions but do not vote.	none
+V65.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“FreeBSD 的选举型核心团队治理”；本节题为其下位论题	none
+V65.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.3.5	职位轮换的任期上限	https://www.freebsd.org/internal/	联网	A	2026-10-30	core	none
+V65.6.3.5	职位轮换的任期上限	https://www.freebsd.org/internal/	联网	A	2026-10-30	Hat Term Limits Policy	none
+V65.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“NetBSD 的 核心团队与成员制度”；本节题为其下位论题	none
+V65.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.4.1	核心组的技术管理定位	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	If the NetBSD Project were a large company, the NetBSD core group would be the technical management.	none
+V65.6.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“NetBSD 的 核心团队与成员制度”；本节题为其下位论题	none
+V65.6.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.4.2	核心组的架构议题职责	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	consider the serious architectural questions that need to be addressed	none
+V65.6.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“NetBSD 的 核心团队与成员制度”；本节题为其下位论题	none
+V65.6.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.4.3	董事会与核心组的两层结构	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation has a Board of Directors	none
+V65.6.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“NetBSD 的 核心团队与成员制度”；本节题为其下位论题	none
+V65.6.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.4.4	成员资格的取得与终止	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	A Member may have his/her membership terminated if s/he is	none
+V65.6.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“NetBSD 的 核心团队与成员制度”；本节题为其下位论题	none
+V65.6.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.4.5	核心组名单的更替记录	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Previous NetBSD Core Group members:	none
+V65.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“OpenBSD 的长期个人领导”；本节题为其下位论题	none
+V65.6.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.5.1	维护者自筹的经费结构	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The maintainers of OpenBSD support the project largely from their own pockets.	none
+V65.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“OpenBSD 的长期个人领导”；本节题为其下位论题	none
+V65.6.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.5.2	技术署名中的领袖痕迹	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Theo de Raadt, August 25, 1996, OpenBSD 2.0	none
+V65.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“OpenBSD 的长期个人领导”；本节题为其下位论题	none
+V65.6.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.5.3	技术优先的决策口径	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Be as politics-free as possible; solutions should be decided on the basis of technical merit.	none
+V65.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“OpenBSD 的长期个人领导”；本节题为其下位论题	none
+V65.6.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.5.4	长期在位的制度代价	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	The nominal "dictator"	none
+V65.6.5.4	长期在位的制度代价	https://producingoss.com/en/social-infrastructure.html	联网	A	2026-10-30	If the dictator were to suddenly start making bad decisions, there would be restlessness	none
+V65.6.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“DragonFly 的创始人最终决定权”；本节题为其下位论题	none
+V65.6.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.6.1	创始人身份与代码主导	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
+V65.6.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“DragonFly 的创始人最终决定权”；本节题为其下位论题	none
+V65.6.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.6.2	网站与资源的个人维护	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	supports the website and other online resources for this project	none
+V65.6.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“DragonFly 的创始人最终决定权”；本节题为其下位论题	none
+V65.6.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.6.3	同伴标准下的开放参与	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	There are no restrictions on who can contribute or how you can contribute, other than peer standards.	none
+V65.6.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“DragonFly 的创始人最终决定权”；本节题为其下位论题	none
+V65.6.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.6.4	决定权与协作的张力	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	including coordination of projects other contributors have submitted	none
+V65.6.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“项目内部权力与法人权力”；本节题为其下位论题	none
+V65.6.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.7.1	内部权力与法人权力的分界	https://freebsdfoundation.org/about-us/	联网	A	2026-10-30	managing contracts, licenses, and other agreements on its behalf	none
+V65.6.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“项目内部权力与法人权力”；本节题为其下位论题	none
+V65.6.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.7.2	内部技术权力的行使主体	https://www.freebsd.org/administration/	联网	A	2026-10-30	responsible for deciding the project	none
+V65.6.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“项目内部权力与法人权力”；本节题为其下位论题	none
+V65.6.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.7.3	双轨权力的交汇点	https://www.freebsd.org/administration/	联网	A	2026-10-30	Allan Jude <allanjude@FreeBSD.org> (Core Team Liaison)	none
+V65.6.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“项目内部权力与法人权力”；本节题为其下位论题	none
+V65.6.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.7.4	法人权力的边界所在	https://www.netbsd.org/foundation/	联网	A	2026-10-30	administers NetBSD copyrights	none
+V65.6.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“局部自治与整体项目控制”；本节题为其下位论题	none
+V65.6.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.8.1	团队章程与核心团队批准	https://www.freebsd.org/portmgr/	联网	A	2026-10-30	The contents of this document are approved by the FreeBSD Core Team.	none
+V65.6.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“局部自治与整体项目控制”；本节题为其下位论题	none
+V65.6.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.8.2	领域自治的范围划定	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	the areas of the tree where the bit may be used are specified	none
+V65.6.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“局部自治与整体项目控制”；本节题为其下位论题	none
+V65.6.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.8.3	整体控制的手段清单	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	The board can to terminate a PMC at any time by resolution.	none
+V65.6.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“局部自治与整体项目控制”；本节题为其下位论题	none
+V65.6.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.8.4	自治失效的回收机制	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Only a 2/3 majority of core has the authority to suspend commit privileges	none
+V65.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“大型项目与小型项目的治理差异”；本节题为其下位论题	none
+V65.6.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.9.1	规模差异下的治理模型	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	Smaller projects are probably BDFL by default, because there are only one or two maintainers.	none
+V65.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“大型项目与小型项目的治理差异”；本节题为其下位论题	none
+V65.6.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.9.2	小项目的默认领袖制	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	one person (usually the initial author of the project) has final say on all major project decisions	none
+V65.6.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“大型项目与小型项目的治理差异”；本节题为其下位论题	none
+V65.6.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.9.3	大项目的委员会分层	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	you might form a	none
+V65.6.9.3	大项目的委员会分层	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	of maintainers, or even subcommittees of people who take ownership of different issue areas	none
+V65.6.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“大型项目与小型项目的治理差异”；本节题为其下位论题	none
+V65.6.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.9.4	治理文档的书写时点	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	There is no right time to write down your project	none
+V65.6.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“大型项目与小型项目的治理差异”；本节题为其下位论题	none
+V65.6.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.9.5	维护者的身份界定	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	A maintainer doesn	none
+V65.6.9.5	维护者的身份界定	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	necessarily have to be someone who writes code	none
+V65.6.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节““民主”“集中”“自治”与“独裁”的概念边界”；本节题为其下位论题	none
+V65.6.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.10.1	独裁标签的实际含义	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	The potential for forks is the reason there are no true dictators in free software projects.	none
+V65.6.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节““民主”“集中”“自治”与“独裁”的概念边界”；本节题为其下位论题	none
+V65.6.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.10.2	民主在重要决策上的实态	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	even projects that are not formally organized as democracies are, in practice, democracies when it comes to important decisions	none
+V65.6.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节““民主”“集中”“自治”与“独裁”的概念边界”；本节题为其下位论题	none
+V65.6.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.10.3	集中与共识的边界	https://www.apache.org/foundation/how-it-works.html	联网	A	2026-10-30	Apache projects are managed using a collaborative, consensus-based	none
+V65.6.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节““民主”“集中”“自治”与“独裁”的概念边界”；本节题为其下位论题	none
+V65.6.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.10.4	概念标签的误用与限度	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	There are three common governance structures associated with open source projects.	none
+V65.6.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节““民主”“集中”“自治”与“独裁”的概念边界”；本节题为其下位论题	none
+V65.6.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V65.6.10.5	三类结构的参照位置	https://opensource.guide/leadership-and-governance/	联网	A	2026-10-30	Under a liberal contribution model, the people who do the most work are recognized as most influential	none

@@ -1,0 +1,904 @@
+subsection_id	query	url	source_type	tier	accessed	quote	conflict
+V71.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“网络设备中的 BSD 代码：栈移植与系统分离”；本节题为其下位论题	none
+V71.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.1.1	Junos 内核与 FreeBSD 内核分离	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.1.1	Junos 的 FreeBSD 内核基线	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an upgraded FreeBSD kernel.	none
+V71.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“网络设备中的 BSD 代码：栈移植与系统分离”；本节题为其下位论题	none
+V71.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.1.2	内核代码分层与升级	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.1.2	模块化网络系统	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	It was the first modular network OS, providing clear separation between control and data planes.	none
+V71.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“网络设备中的 BSD 代码：栈移植与系统分离”；本节题为其下位论题	none
+V71.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.1.3	设备商品中的协议栈	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	It was the first modular network OS, providing clear separation between control and data planes.	none
+V71.1.1.3	嵌入式路由设备基础	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“网络设备中的 BSD 代码：栈移植与系统分离”；本节题为其下位论题	none
+V71.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.1.4	私有代码与上游代码的界线	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.1.4	厂商改动的回流量	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“网络设备中的 BSD 代码：栈移植与系统分离”；本节题为其下位论题	none
+V71.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.1.5	Wind River 收购 BSDi 资产	https://www.windriver.com/node/1154	联网	A	2026-10-30	2000 ウインドリバー、初のオープンソーステクノロジー企業であるBerkeley Software Designsを買収し、デュアルOSビジネスモデルへの移行を表明	none
+V71.1.1.5	嵌入式系统的内核来源	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Several Junos OS devices incorporate the upgraded version of FreeBSD Kernel (version 10.0) to offer a host of key benefits:	none
+V71.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Junos 与 FreeBSD 内核”；本节题为其下位论题	none
+V71.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.2.1	Junos 的 FreeBSD 基线	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an upgraded FreeBSD kernel.	none
+V71.1.2.1	Junos 的 FreeBSD 版本基线	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.4-Juniper-Junos-路由器操作系统基于-FreeBSD/303.4.1-junos基于freebsd的架构与版本.md	史料	A	2026-10-30	Juniper Junos 的控制平面基于 FreeBSD，早期版本基于 FreeBSD 6.x 内核（很老版本），后续版本演进至 FreeBSD 10.x 或更高版本。	none
+V71.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Junos 与 FreeBSD 内核”；本节题为其下位论题	none
+V71.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.2.2	路由引擎的内核升级范围	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Most Junos OS-based hardware platforms run Junos OS with upgraded FreeBSD.	none
+V71.1.2.2	内核版本演进	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.4-Juniper-Junos-路由器操作系统基于-FreeBSD/303.4.1-junos基于freebsd的架构与版本.md	史料	A	2026-10-30	Juniper Junos 的控制平面基于 FreeBSD，早期版本基于 FreeBSD 6.x 内核（很老版本），后续版本演进至 FreeBSD 10.x 或更高版本。	none
+V71.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Junos 与 FreeBSD 内核”；本节题为其下位论题	none
+V71.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.2.3	用户空间与内核分工	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.2.3	控制平面系统构成	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an upgraded FreeBSD kernel.	none
+V71.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Junos 与 FreeBSD 内核”；本节题为其下位论题	none
+V71.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.2.4	平台与内核版本的对应	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Most Junos OS-based hardware platforms run Junos OS with upgraded FreeBSD.	none
+V71.1.2.4	内核升级的适用范围	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Several Junos OS devices incorporate the upgraded version of FreeBSD Kernel (version 10.0) to offer a host of key benefits:	none
+V71.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“Junos 与 FreeBSD 内核”；本节题为其下位论题	none
+V71.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.2.5	FreeBSD 10 内核的采用范围	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Several Junos OS devices incorporate the upgraded version of FreeBSD Kernel (version 10.0) to offer a host of key benefits:	none
+V71.1.2.5	多数平台的 FreeBSD 版本	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Most Junos OS-based hardware platforms run Junos OS with upgraded FreeBSD.	none
+V71.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Junos OS Evolved：Linux 底座的分岔（2018–2026）”；本节题为其下位论题	none
+V71.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.3.1	两代 Junos 的内核差异	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved is built on top of a Linux kernel, while Junos OS operates on the FreeBSD kernel.	none
+V71.1.3.1	Evolved 的原生 Linux 底座	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved runs on native Linux.	none
+V71.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Junos OS Evolved：Linux 底座的分岔（2018–2026）”；本节题为其下位论题	none
+V71.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.3.2	两代系统的架构差异	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved is built on top of a Linux kernel, while Junos OS operates on the FreeBSD kernel.	none
+V71.1.3.2	Junos 的模块化传统	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	It was the first modular network OS, providing clear separation between control and data planes.	none
+V71.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Junos OS Evolved：Linux 底座的分岔（2018–2026）”；本节题为其下位论题	none
+V71.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.3.3	节点模型的系统定义	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	In Junos OS Evolved, a node is any component that can run the Linux kernel and Junos OS Evolved applications, and all nodes are considered compute nodes.	none
+V71.1.3.3	系统概念的差异	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved is built on top of a Linux kernel, while Junos OS operates on the FreeBSD kernel.	none
+V71.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Junos OS Evolved：Linux 底座的分岔（2018–2026）”；本节题为其下位论题	none
+V71.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.3.4	网络栈的运行基础	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved runs on native Linux.	none
+V71.1.3.4	节点与网络操作	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	In Junos OS Evolved, a node is any component that can run the Linux kernel and Junos OS Evolved applications, and all nodes are considered compute nodes.	none
+V71.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Junos OS Evolved：Linux 底座的分岔（2018–2026）”；本节题为其下位论题	none
+V71.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.3.5	底座更替的依据	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved is built on top of a Linux kernel, while Junos OS operates on the FreeBSD kernel.	none
+V71.1.3.5	更替后的系统形态	https://www.juniper.net/documentation/us/en/software/junos/overview-evo/topics/concept/evo-top-differences.html	联网	A	2026-10-30	Junos OS Evolved runs on native Linux.	none
+V71.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“NetScaler 及应用交付设备”；本节题为其下位论题	none
+V71.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.4.1	NetScaler 底层系统	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.4.1	NetScaler 的 FreeBSD 基底	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V71.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“NetScaler 及应用交付设备”；本节题为其下位论题	none
+V71.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.4.2	系统层职责	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.4.2	第三方组件的系统归属	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“NetScaler 及应用交付设备”；本节题为其下位论题	none
+V71.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.4.3	BLX 的运行形态	https://docs.netscaler.com/en-us/blx/current-release/faqs-blx	联网	A	2026-10-30	NetScaler BLX is a software package that runs natively on Linux systems.	none
+V71.1.4.3	BLX 的裸金属定位	https://docs.netscaler.com/en-us/blx/current-release/faqs-blx	联网	A	2026-10-30	NetScaler BLX is a bare metal software version of NetScaler that runs as a native application on the Linux host.	none
+V71.1.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“NetScaler 及应用交付设备”；本节题为其下位论题	none
+V71.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.4.4	软件形态的系统底座	https://docs.netscaler.com/en-us/blx/current-release/faqs-blx	联网	A	2026-10-30	NetScaler BLX is a software package that runs natively on Linux systems.	none
+V71.1.4.4	设备形态的系统底座	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“NetScaler 及应用交付设备”；本节题为其下位论题	none
+V71.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.4.5	第三方组件通知	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.1.4.5	设备系统的组件披露	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“网络设备中的内核、用户空间与厂商代码”；本节题为其下位论题	none
+V71.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.5.1	内核与用户空间的分离	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.5.1	设备系统层	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“网络设备中的内核、用户空间与厂商代码”；本节题为其下位论题	none
+V71.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.5.2	内核升级与驱动适配	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Several Junos OS devices incorporate the upgraded version of FreeBSD Kernel (version 10.0) to offer a host of key benefits:	none
+V71.1.5.2	设备内核的定制	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“网络设备中的内核、用户空间与厂商代码”；本节题为其下位论题	none
+V71.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.5.3	专有内核与用户空间	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.1.5.3	厂商代码与内核代码	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“网络设备中的内核、用户空间与厂商代码”；本节题为其下位论题	none
+V71.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.5.4	设备内核的接口约束	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Several Junos OS devices incorporate the upgraded version of FreeBSD Kernel (version 10.0) to offer a host of key benefits:	none
+V71.1.5.4	设备内核对网络栈的要求	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.1.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“网络设备中的内核、用户空间与厂商代码”；本节题为其下位论题	none
+V71.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.5.5	设备组件清单	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.1.5.5	设备组件列举	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“上游合并与厂商长期维护”；本节题为其下位论题	none
+V71.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.6.1	厂商补丁的回流量	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.1.6.1	内核改动的归属	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“上游合并与厂商长期维护”；本节题为其下位论题	none
+V71.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.6.2	Juniper 的内核改动	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.6.2	企业提交者的上游角色	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“上游合并与厂商长期维护”；本节题为其下位论题	none
+V71.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.6.3	上游化与维护负担	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.1.6.3	企业回馈的机制	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.1.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“上游合并与厂商长期维护”；本节题为其下位论题	none
+V71.1.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.6.4	设备内核版本跟进	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Several Junos OS devices incorporate the upgraded version of FreeBSD Kernel (version 10.0) to offer a host of key benefits:	none
+V71.1.6.4	维护负担的转移	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“上游合并与厂商长期维护”；本节题为其下位论题	none
+V71.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.6.5	平台版本切换	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Most Junos OS-based hardware platforms run Junos OS with upgraded FreeBSD.	none
+V71.1.6.5	上游合并的反馈回路	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.1.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“网络设备中 BSD 基本系统的隐形化”；本节题为其下位论题	none
+V71.1.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.7.1	文档中的底层系统提及	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.7.1	设备文档中的系统说明	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.1.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“网络设备中 BSD 基本系统的隐形化”；本节题为其下位论题	none
+V71.1.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.7.2	产品文档的组件披露	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.1.7.2	产品文档的系统描述	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an upgraded FreeBSD kernel.	none
+V71.1.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“网络设备中 BSD 基本系统的隐形化”；本节题为其下位论题	none
+V71.1.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.7.3	设备系统层的可见性	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.7.3	设备启动与系统分区	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.1.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“网络设备中 BSD 基本系统的隐形化”；本节题为其下位论题	none
+V71.1.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.7.4	封装与分层	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.7.4	形态转换与系统名	https://docs.netscaler.com/en-us/blx/current-release/faqs-blx	联网	A	2026-10-30	NetScaler BLX is a software package that runs natively on Linux systems.	none
+V71.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“网络设备中 BSD 基本系统的隐形化”；本节题为其下位论题	none
+V71.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.7.5	品牌与系统基础	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.1.7.5	品牌重命名与系统	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.1.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从操作系统产品到设备内部基础设施”；本节题为其下位论题	none
+V71.1.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.8.1	操作系统作为设备基础	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.1.8.1	设备中的操作系统形态	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an upgraded FreeBSD kernel.	none
+V71.1.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从操作系统产品到设备内部基础设施”；本节题为其下位论题	none
+V71.1.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.8.2	通用内核的裁剪与分层	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	联网	A	2026-10-30	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ultimately making the Junos operating system modular and allowing the underlying OS to be easily upgraded.	none
+V71.1.8.2	设备底座的内核来源	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.1.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从操作系统产品到设备内部基础设施”；本节题为其下位论题	none
+V71.1.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.8.3	设备内部的系统层	https://docs.netscaler.com/us/en/citrix-adc/13-1/system/audit-logging.html	联网	A	2026-10-30	Runs on the underlying FreeBSD operating system (OS) of the NetScaler appliance or on a remote system.	none
+V71.1.8.3	组件层次与归属	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.1.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从操作系统产品到设备内部基础设施”；本节题为其下位论题	none
+V71.1.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.8.4	固件化的版本管理	https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	联网	A	2026-10-30	Most Junos OS-based hardware platforms run Junos OS with upgraded FreeBSD.	none
+V71.1.8.4	发行版形态的系统延续	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 8 节“从操作系统产品到设备内部基础设施”；本节题为其下位论题	none
+V71.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.1.8.5	维护责任的分配	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.1.8.5	上游与厂商的维护分工	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业存储设备中的 BSD”；本节题为其下位论题	none
+V71.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.1.1	存储阵列的 BSD 基底	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.1.1	存储设备厂商的 BSD 基底	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V71.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业存储设备中的 BSD”；本节题为其下位论题	none
+V71.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.1.2	NetApp 的 ONTAP 系统来源	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	NetApp proudly uses FreeBSD as a core component of our ONTAP storage operating system.	none
+V71.2.1.2	Isilon 与 ONTAP 的共同来源	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.3-NetApp-ONTAP-存储操作系统基于-FreeBSD/303.3.3-与emcisilon基于freebsd的比较.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 操作系统也基于 FreeBSD，与 NetApp ONTAP 类似。两家存储厂商均选择 FreeBSD 作为底层但回馈有限。	none
+V71.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业存储设备中的 BSD”；本节题为其下位论题	none
+V71.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.1.3	选择 FreeBSD 的实用理由	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.2.1.3	存储设备的系统选择	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业存储设备中的 BSD”；本节题为其下位论题	none
+V71.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.1.4	企业提交的回流量	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.2.1.4	商业实体提交占比	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V71.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“企业存储设备中的 BSD”；本节题为其下位论题	none
+V71.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.1.5	设备组件清单	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.2.1.5	设备系统文档	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Isilon OneFS 与 FreeBSD 内核基础”；本节题为其下位论题	none
+V71.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.2.1	OneFS 的系统出身	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.2.1	OneFS 的 FreeBSD 基础	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.3-NetApp-ONTAP-存储操作系统基于-FreeBSD/303.3.3-与emcisilon基于freebsd的比较.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 操作系统也基于 FreeBSD，与 NetApp ONTAP 类似。两家存储厂商均选择 FreeBSD 作为底层但回馈有限。	none
+V71.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Isilon OneFS 与 FreeBSD 内核基础”；本节题为其下位论题	none
+V71.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.2.2	BSD 基底与 OneFS 文件系统	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.2.2	文件系统与系统底座	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	ZFS is an advanced file system designed to solve major problems found in previous storage subsystem software.	none
+V71.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Isilon OneFS 与 FreeBSD 内核基础”；本节题为其下位论题	none
+V71.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.2.3	OneFS 版本与系统版本	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.2.3	存储产品的版本对齐	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Isilon OneFS 与 FreeBSD 内核基础”；本节题为其下位论题	none
+V71.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.2.4	集群系统的底层依赖	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.2.4	存储子系统的系统接口	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	ZFS is an advanced file system designed to solve major problems found in previous storage subsystem software.	none
+V71.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“Isilon OneFS 与 FreeBSD 内核基础”；本节题为其下位论题	none
+V71.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.2.5	技术文档中的 BSD 披露	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.2.5	组件披露的体例	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“NetApp 与 Data ONTAP 中的 BSD 组件”；本节题为其下位论题	none
+V71.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.3.1	ONTAP 的 FreeBSD 组件	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	NetApp proudly uses FreeBSD as a core component of our ONTAP storage operating system.	none
+V71.2.3.1	ONTAP 的组件范围	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.3-NetApp-ONTAP-存储操作系统基于-FreeBSD/303.3.1-ontap基于freebsd的架构.md	史料	A	2026-10-30	NetApp ONTAP 的底层操作系统基于 FreeBSD，NetApp 长期维护自己的 fork。ONTAP 的 WAFL 文件系统与 ZFS 类似但独立开发。	none
+V71.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“NetApp 与 Data ONTAP 中的 BSD 组件”；本节题为其下位论题	none
+V71.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.3.2	专有内核与用户空间	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.2.3.2	WAFL 与 BSD 内核	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.3-NetApp-ONTAP-存储操作系统基于-FreeBSD/303.3.1-ontap基于freebsd的架构.md	史料	A	2026-10-30	NetApp ONTAP 的底层操作系统基于 FreeBSD，NetApp 长期维护自己的 fork。ONTAP 的 WAFL 文件系统与 ZFS 类似但独立开发。	none
+V71.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“NetApp 与 Data ONTAP 中的 BSD 组件”；本节题为其下位论题	none
+V71.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.3.3	NetApp 的上游改动数量	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.2.3.3	ONTAP 对 FreeBSD 的依赖	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	NetApp proudly uses FreeBSD as a core component of our ONTAP storage operating system.	none
+V71.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“NetApp 与 Data ONTAP 中的 BSD 组件”；本节题为其下位论题	none
+V71.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.3.4	bhyve 的进入路径	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	A standout contribution from NetApp is the introduction of bhyve into FreeBSD in 2011, where it became part of the base system with FreeBSD 10.0-RELEASE	none
+V71.2.3.4	企业贡献的公共化	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	NetApp proudly uses FreeBSD as a core component of our ONTAP storage operating system.	none
+V71.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“NetApp 与 Data ONTAP 中的 BSD 组件”；本节题为其下位论题	none
+V71.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.3.5	厂商 fork 的由来	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.2.3.5	fork 与主线的合并	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeNAS 的形成与网络存储软件化”；本节题为其下位论题	none
+V71.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.4.1	FreeNAS 的早期形态	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.2.4.1	FreeNAS 的起源与基底	旧大纲-20261023/第13卷-bsd衍生操作系统/第285章-truenas/285.1-FreeNAS-的-FreeBSD-根基-2005-2011/285.1.1-要点FreeNAS2005以FreeBSD为基底提供基于Web的NAS管理利用F.md	史料	A	2026-10-30	FreeNAS（2005）以 FreeBSD 为基底，提供基于 Web 的 NAS 管理，利用 FreeBSD 的 ZFS（later）、Samba、ZFS 集成能力；其成功证明 BSD 在存储设备上的可行性。	none
+V71.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeNAS 的形成与网络存储软件化”；本节题为其下位论题	none
+V71.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.4.2	网络存储的软件形态	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.4.2	软件化与 ZFS 集成	旧大纲-20261023/第13卷-bsd衍生操作系统/第285章-truenas/285.1-FreeNAS-的-FreeBSD-根基-2005-2011/285.1.1-要点FreeNAS2005以FreeBSD为基底提供基于Web的NAS管理利用F.md	史料	A	2026-10-30	FreeNAS（2005）以 FreeBSD 为基底，提供基于 Web 的 NAS 管理，利用 FreeBSD 的 ZFS（later）、Samba、ZFS 集成能力；其成功证明 BSD 在存储设备上的可行性。	none
+V71.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeNAS 的形成与网络存储软件化”；本节题为其下位论题	none
+V71.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.4.3	发行形态与迁移	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.4.3	发行版的系统底座	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeNAS 的形成与网络存储软件化”；本节题为其下位论题	none
+V71.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.4.4	商业版与社区版的代码共用	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.4.4	品牌统一与项目治理	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.2.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“FreeNAS 的形成与网络存储软件化”；本节题为其下位论题	none
+V71.2.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.4.5	FreeNAS 的更名	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.2.4.5	更名后的系统延续	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ZFS 进入 FreeBSD 产品体系（2007–2026）”；本节题为其下位论题	none
+V71.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.5.1	ZFS 在基本系统中的地位	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	ZFS is an advanced file system designed to solve major problems found in previous storage subsystem software.	none
+V71.2.5.1	ZFS 的开源治理归属	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Originally developed at Sun Microsystems, ongoing open source ZFS development has moved to the OpenZFS Project.	none
+V71.2.5.1	ZFS 在基本系统中的位次	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Fully integrated OpenZFS support, including root-on-ZFS, ZFS Boot Environments, fault management, administrative delegation, support for jails	none
+V71.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ZFS 进入 FreeBSD 产品体系（2007–2026）”；本节题为其下位论题	none
+V71.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.5.2	存储池与系统管理	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	ZFS is an advanced file system designed to solve major problems found in previous storage subsystem software.	none
+V71.2.5.2	存储产品的系统底座	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ZFS 进入 FreeBSD 产品体系（2007–2026）”；本节题为其下位论题	none
+V71.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.5.3	OpenZFS 的项目归属	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Originally developed at Sun Microsystems, ongoing open source ZFS development has moved to the OpenZFS Project.	none
+V71.2.5.3	跨系统的 ZFS 共用	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ZFS 进入 FreeBSD 产品体系（2007–2026）”；本节题为其下位论题	none
+V71.2.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.5.4	ZFS 的系统集成	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	ZFS is an advanced file system designed to solve major problems found in previous storage subsystem software.	none
+V71.2.5.4	系统迁移与存储兼容	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“ZFS 进入 FreeBSD 产品体系（2007–2026）”；本节题为其下位论题	none
+V71.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.5.5	校验和与数据修复	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	ZFS is an advanced file system designed to solve major problems found in previous storage subsystem software.	none
+V71.2.5.5	存储设备的可靠性设计	https://www.dell.com/support/kbdoc/en-us/000003791/what-is-an-isilon-boot-disk-and-what-does-it-do	联网	A	2026-10-30	OneFS is based off FreeBSD and that _is_the OS.	none
+V71.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“TrueNAS CORE 与 FreeBSD 平台（2011–2026）”；本节题为其下位论题	none
+V71.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.6.1	CORE 的 FreeBSD 12 基线	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.6.1	CORE 与 SCALE 的底座差异	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.7-iXsystems-TrueNAS-FreeBSD-下游发行版/303.7.1-truenascore与scale的架构.md	史料	A	2026-10-30	TrueNAS CORE 基于 FreeBSD，TrueNAS SCALE 基于 Debian Linux。iXsystems 同时维护两个版本，2025 年起将重心转向 SCALE。	none
+V71.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“TrueNAS CORE 与 FreeBSD 平台（2011–2026）”；本节题为其下位论题	none
+V71.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.6.2	更名后的品牌结构	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.2.6.2	品牌统一后的代码共用	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“TrueNAS CORE 与 FreeBSD 平台（2011–2026）”；本节题为其下位论题	none
+V71.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.6.3	两档产品的系统基础	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.6.3	品牌分档	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.2.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“TrueNAS CORE 与 FreeBSD 平台（2011–2026）”；本节题为其下位论题	none
+V71.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.6.4	版本迁移的节奏	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.6.4	系统延续的承诺	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“TrueNAS CORE 与 FreeBSD 平台（2011–2026）”；本节题为其下位论题	none
+V71.2.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.6.5	宽松许可的商业使用	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Liberal Open Source license, which grants the rights to freely modify and extend its source code and incorporate it in both Open Source projects and closed products without imposing restrictions typical to copyleft licenses	none
+V71.2.6.5	平台与许可取向	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“CORE 向 SCALE 的转移”；本节题为其下位论题	none
+V71.2.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.7.1	SCALE 的底座选择	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Because of these project goals, we chose Linux (Debian) as the base OS so that we had access to all of these container and clustering tools	none
+V71.2.7.1	SCALE 的 Linux 底座	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.7-iXsystems-TrueNAS-FreeBSD-下游发行版/303.7.1-truenascore与scale的架构.md	史料	A	2026-10-30	TrueNAS CORE 基于 FreeBSD，TrueNAS SCALE 基于 Debian Linux。iXsystems 同时维护两个版本，2025 年起将重心转向 SCALE。	none
+V71.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“CORE 向 SCALE 的转移”；本节题为其下位论题	none
+V71.2.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.7.2	容器需求与底座重选	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Because of these project goals, we chose Linux (Debian) as the base OS so that we had access to all of these container and clustering tools	none
+V71.2.7.2	跨底座的软件共用	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“CORE 向 SCALE 的转移”；本节题为其下位论题	none
+V71.2.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.7.3	从 CORE 迁移至 Linux 版	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.7.3	双版本并行的安排	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.7-iXsystems-TrueNAS-FreeBSD-下游发行版/303.7.1-truenascore与scale的架构.md	史料	A	2026-10-30	TrueNAS CORE 基于 FreeBSD，TrueNAS SCALE 基于 Debian Linux。iXsystems 同时维护两个版本，2025 年起将重心转向 SCALE。	none
+V71.2.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“CORE 向 SCALE 的转移”；本节题为其下位论题	none
+V71.2.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.7.4	迁移说明	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.7.4	数据与配置的延续	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“CORE 向 SCALE 的转移”；本节题为其下位论题	none
+V71.2.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.7.5	CORE 的维护状态	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.7.5	CORE 线的终结与新版本	旧大纲-20261023/第14卷-商业生态与企业案例/第304章-基金会争议与企业治理/304.2-TrueNAS-放弃-FreeBSD-2025-4-22-iXsystems/304.2.1-truenas2504转向linux的技术细节.md	史料	A	2026-10-30	TrueNAS 25.04（Fangtooth）于 2025 年 4 月 22 日正式发布，基于 Linux Kernel 6.12（底层发行版为 Debian 12 bookworm），用 Incus 替代 jails，支持 Secure Boot 与 TPM。	none
+V71.2.7.5	CORE 维护期的收束	https://www.truenas.com/docs/core/13.3/gettingstarted/	联网	A	2026-10-30	This content documents the end of life 13.3 TrueNAS Community release. Archival documentation is provided for reference only and not actively maintained.	none
+V71.2.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“操作系统底座更替与产品技术连续性”；本节题为其下位论题	none
+V71.2.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.8.1	跨底座的软件共用比例	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.8.1	底座更替后的功能延续	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“操作系统底座更替与产品技术连续性”；本节题为其下位论题	none
+V71.2.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.8.2	系统无关的中间件	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.8.2	底座更换的技术前提	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Because of these project goals, we chose Linux (Debian) as the base OS so that we had access to all of these container and clustering tools	none
+V71.2.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“操作系统底座更替与产品技术连续性”；本节题为其下位论题	none
+V71.2.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.8.3	OpenZFS 的跨系统集成	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	apart from the OS, over 90% of TrueNAS software is shared between the CORE, Enterprise, and SCALE editions	none
+V71.2.8.3	OpenZFS 的上游治理	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Originally developed at Sun Microsystems, ongoing open source ZFS development has moved to the OpenZFS Project.	none
+V71.2.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“操作系统底座更替与产品技术连续性”；本节题为其下位论题	none
+V71.2.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.8.4	迁移后的功能与支持	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.2.8.4	原系统的延续承诺	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Both of these TrueNAS editions use FreeBSD 12.0 as the base OS and it has been performing very well. Future development for these editions will continue on FreeBSD.	none
+V71.2.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 8 节“操作系统底座更替与产品技术连续性”；本节题为其下位论题	none
+V71.2.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.2.8.5	底座更换的动因	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	Because of these project goals, we chose Linux (Debian) as the base OS so that we had access to all of these container and clustering tools	none
+V71.2.8.5	迁移成本的分担	https://www.truenas.com/docs/scale/25.10/printview/gettingstarted/	联网	A	2026-10-30	This section guides you through installing TrueNAS, or migrating from a FreeBSD-based TrueNAS version to a Linux-based TrueNAS version	none
+V71.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从服务器操作系统到服务基础设施”；本节题为其下位论题	none
+V71.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.1.1	服务器与路由场景的系统定位	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.3.1.1	服务层的系统选型依据	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD was selected for its balance of stability and features, a strong development community and staff expertise.	none
+V71.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从服务器操作系统到服务基础设施”；本节题为其下位论题	none
+V71.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.1.2	选型的性能与社区依据	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD was selected for its balance of stability and features, a strong development community and staff expertise.	none
+V71.3.1.2	服务场景的系统要求	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	Netflix picked FreeBSD 9 because it is a high-performing, low-maintenance, and reliable operating system supported by major hardware vendors.	none
+V71.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从服务器操作系统到服务基础设施”；本节题为其下位论题	none
+V71.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.1.3	边缘设备的硬件层次	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.1.3	边缘与控制的系统分工	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Open Connect Appliances run a lightly customized version of FreeBSD.	none
+V71.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从服务器操作系统到服务基础设施”；本节题为其下位论题	none
+V71.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.1.4	上游维护与业务连续	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.1.4	低维护成本的系统要求	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	Netflix picked FreeBSD 9 because it is a high-performing, low-maintenance, and reliable operating system supported by major hardware vendors.	none
+V71.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从服务器操作系统到服务基础设施”；本节题为其下位论题	none
+V71.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.1.5	服务规模的上限	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.3.1.5	网络栈性能的权重	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD was selected for its balance of stability and features, a strong development community and staff expertise.	none
+V71.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Netflix Open Connect”；本节题为其下位论题	none
+V71.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.2.1	边缘设备的构成	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.2.1	Open Connect 的设备构成	旧大纲-20261023/第13卷-bsd衍生操作系统/第292章-netflix-open-connect/292.1-Netflix-的-FreeBSD-选型-2011-2015/292.1.1-要点Netflix在扩展流媒体时选择FreeBSD构建OCA边缘设备理由包括网络.md	史料	A	2026-10-30	Netflix 在扩展流媒体时选择 FreeBSD 构建 OCA 边缘设备，理由包括网络栈性能、ZFS 存储可靠性、dtrace 可观测性；Netflix 工程师在 BSDCan 等会议公开其 FreeBSD at scale 实践。	none
+V71.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Netflix Open Connect”；本节题为其下位论题	none
+V71.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.2.2	OCA 选型依据	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD was selected for its balance of stability and features, a strong development community and staff expertise.	none
+V71.3.2.2	选型的技术理由	旧大纲-20261023/第13卷-bsd衍生操作系统/第292章-netflix-open-connect/292.1-Netflix-的-FreeBSD-选型-2011-2015/292.1.1-要点Netflix在扩展流媒体时选择FreeBSD构建OCA边缘设备理由包括网络.md	史料	A	2026-10-30	Netflix 在扩展流媒体时选择 FreeBSD 构建 OCA 边缘设备，理由包括网络栈性能、ZFS 存储可靠性、dtrace 可观测性；Netflix 工程师在 BSDCan 等会议公开其 FreeBSD at scale 实践。	none
+V71.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Netflix Open Connect”；本节题为其下位论题	none
+V71.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.2.3	设备部署形态	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.2.3	边缘网络的部署范围	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Open Connect Appliances run a lightly customized version of FreeBSD.	none
+V71.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Netflix Open Connect”；本节题为其下位论题	none
+V71.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.2.4	峰值吞吐的记录	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.3.2.4	设备吞吐规格	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Netflix Open Connect”；本节题为其下位论题	none
+V71.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.2.5	峰值流量的表述	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.3.2.5	流媒体服务的规模口径	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	Netflix picked FreeBSD 9 because it is a high-performing, low-maintenance, and reliable operating system supported by major hardware vendors.	none
+V71.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Yahoo 的 FreeBSD 生产部署（1996–2010 年代）”；本节题为其下位论题	none
+V71.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.3.1	企业部署的公开清单	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.3.3.1	Yahoo 的前端部署	旧大纲-20261023/第14卷-商业生态与企业案例/第298章-经济生态与foundation资助模式/298.3-FreeBSD-在商业部署中的经济价值-Yahoo!-Hotmail/298.3.1-yahoohotmail大规模部署.md	史料	A	2026-10-30	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一，整个前端服务运行于 FreeBSD + Apache	none
+V71.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Yahoo 的 FreeBSD 生产部署（1996–2010 年代）”；本节题为其下位论题	none
+V71.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.3.2	大规模网站的系统采用	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.3.3.2	门户部署的规模	旧大纲-20261023/第14卷-商业生态与企业案例/第298章-经济生态与foundation资助模式/298.3-FreeBSD-在商业部署中的经济价值-Yahoo!-Hotmail/298.3.1-yahoohotmail大规模部署.md	史料	A	2026-10-30	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一，整个前端服务运行于 FreeBSD + Apache	none
+V71.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Yahoo 的 FreeBSD 生产部署（1996–2010 年代）”；本节题为其下位论题	none
+V71.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.3.3	商业部署的示范效应	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	Netflix picked FreeBSD 9 because it is a high-performing, low-maintenance, and reliable operating system supported by major hardware vendors.	none
+V71.3.3.3	商业证明的年代	旧大纲-20261023/第14卷-商业生态与企业案例/第298章-经济生态与foundation资助模式/298.3-FreeBSD-在商业部署中的经济价值-Yahoo!-Hotmail/298.3.1-yahoohotmail大规模部署.md	史料	A	2026-10-30	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一，整个前端服务运行于 FreeBSD + Apache	none
+V71.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Yahoo 的 FreeBSD 生产部署（1996–2010 年代）”；本节题为其下位论题	none
+V71.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.3.4	企业反馈的回流方式	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.3.4	回流的制度化	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Yahoo 的 FreeBSD 生产部署（1996–2010 年代）”；本节题为其下位论题	none
+V71.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.3.5	部署记录的年代范围	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.3.3.5	部署起始年	旧大纲-20261023/第14卷-商业生态与企业案例/第298章-经济生态与foundation资助模式/298.3-FreeBSD-在商业部署中的经济价值-Yahoo!-Hotmail/298.3.1-yahoohotmail大规模部署.md	史料	A	2026-10-30	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一，整个前端服务运行于 FreeBSD + Apache	none
+V71.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“FreeBSD-CURRENT 进入生产环境”；本节题为其下位论题	none
+V71.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.4.1	生产设备使用开发分支	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD-CURRENT (HEAD)	none
+V71.3.4.1	开发分支的定制使用	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Open Connect Appliances run a lightly customized version of FreeBSD.	none
+V71.3.4.1	开发分支进入生产的先例	https://freebsdfoundation.org/end-user-stories/netflix-case-study/	联网	A	2026-10-30	Netflix adopted FreeBSD-CURRENT for its Open Connect CDN, aligning closely with the FreeBSD community and staying at the forefront of system development.	none
+V71.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“FreeBSD-CURRENT 进入生产环境”；本节题为其下位论题	none
+V71.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.4.2	CURRENT 的设备使用	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD-CURRENT (HEAD)	none
+V71.3.4.2	轻量定制的开发分支	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Open Connect Appliances run a lightly customized version of FreeBSD.	none
+V71.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“FreeBSD-CURRENT 进入生产环境”；本节题为其下位论题	none
+V71.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.4.3	跟进主线的反馈回路	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.4.3	提交者参与的跟进	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“FreeBSD-CURRENT 进入生产环境”；本节题为其下位论题	none
+V71.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.4.4	代码回流的机制	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.4.4	上游协作的价值	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“FreeBSD-CURRENT 进入生产环境”；本节题为其下位论题	none
+V71.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.4.5	单用途设备的运维	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.4.5	设备与分支的匹配	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Open Connect Appliances run a lightly customized version of FreeBSD.	none
+V71.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“WhatsApp 与高并发服务器”；本节题为其下位论题	none
+V71.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.5.1	WhatsApp 的系统选择	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	At WhatsApp, we leverage FreeBSD and Erlang to provide industry record uptime. The ability to scale linearly on commodity hardware has allowed WhatsApp to keep our serving costs low. These days, we run anywhere between 2 million and 3 million concurrent TCP connections on a single FreeBSD server.	none
+V71.3.5.1	选型原因	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.6-WhatsApp-早期服务器基于-FreeBSD/303.6.1-whatsapp早期服务器基于freebsd的架构.md	史料	A	2026-10-30	WhatsApp 早期服务器基于 FreeBSD，选择 FreeBSD 的原因是网络栈性能与稳定性。	none
+V71.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“WhatsApp 与高并发服务器”；本节题为其下位论题	none
+V71.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.5.2	Erlang 与 FreeBSD 的组合	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	At WhatsApp, we leverage FreeBSD and Erlang to provide industry record uptime. The ability to scale linearly on commodity hardware has allowed WhatsApp to keep our serving costs low. These days, we run anywhere between 2 million and 3 million concurrent TCP connections on a single FreeBSD server.	none
+V71.3.5.2	后端架构组合	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.6-WhatsApp-早期服务器基于-FreeBSD/303.6.1-whatsapp早期服务器基于freebsd的架构.md	史料	A	2026-10-30	WhatsApp 早期服务器基于 FreeBSD，选择 FreeBSD 的原因是网络栈性能与稳定性。	none
+V71.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“WhatsApp 与高并发服务器”；本节题为其下位论题	none
+V71.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.5.3	单机连接数口径	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	At WhatsApp, we leverage FreeBSD and Erlang to provide industry record uptime. The ability to scale linearly on commodity hardware has allowed WhatsApp to keep our serving costs low. These days, we run anywhere between 2 million and 3 million concurrent TCP connections on a single FreeBSD server.	none
+V71.3.5.3	同类规模口径的对照	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“WhatsApp 与高并发服务器”；本节题为其下位论题	none
+V71.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.5.4	线性扩展与成本	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	At WhatsApp, we leverage FreeBSD and Erlang to provide industry record uptime. The ability to scale linearly on commodity hardware has allowed WhatsApp to keep our serving costs low. These days, we run anywhere between 2 million and 3 million concurrent TCP connections on a single FreeBSD server.	none
+V71.3.5.4	商品硬件的横向扩展	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“WhatsApp 与高并发服务器”；本节题为其下位论题	none
+V71.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.5.5	企业回馈的两种形态	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.5.5	WhatsApp 的回馈	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	At WhatsApp, we leverage FreeBSD and Erlang to provide industry record uptime. The ability to scale linearly on commodity hardware has allowed WhatsApp to keep our serving costs low. These days, we run anywhere between 2 million and 3 million concurrent TCP connections on a single FreeBSD server.	none
+V71.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“性能优化、定制代码与上游合并”；本节题为其下位论题	none
+V71.3.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.6.1	网络优化的回流	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.6.1	优化代码的上游去向	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“性能优化、定制代码与上游合并”；本节题为其下位论题	none
+V71.3.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.6.2	通用改动的回流	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.6.2	专有与公共代码的分界	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“性能优化、定制代码与上游合并”；本节题为其下位论题	none
+V71.3.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.6.3	内核卸载的工程协作	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.6.3	功能回流的路径	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“性能优化、定制代码与上游合并”；本节题为其下位论题	none
+V71.3.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.6.4	上游评审的过程	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.6.4	补丁评审与回流	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“性能优化、定制代码与上游合并”；本节题为其下位论题	none
+V71.3.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.6.5	商用负载的规模	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.3.6.5	负载驱动的选型	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD was selected for its balance of stability and features, a strong development community and staff expertise.	none
+V71.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业部署与 FreeBSD 项目的双向技术流动”；本节题为其下位论题	none
+V71.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.7.1	企业与项目的双向流动	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.7.1	双向流动的制度化	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业部署与 FreeBSD 项目的双向技术流动”；本节题为其下位论题	none
+V71.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.7.2	企业提交者的双重身份	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.7.2	提交者与雇主的关联	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业部署与 FreeBSD 项目的双向技术流动”；本节题为其下位论题	none
+V71.3.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.7.3	商业需求的上游化	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.7.3	需求与开发的回路	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业部署与 FreeBSD 项目的双向技术流动”；本节题为其下位论题	none
+V71.3.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.7.4	上游优先的执行	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.7.4	上游优先与产品线	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.3.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业部署与 FreeBSD 项目的双向技术流动”；本节题为其下位论题	none
+V71.3.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.7.5	回馈计量的口径	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.7.5	流动计量的局限	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节““使用 FreeBSD”与“继承 BSD 技术”的区分”；本节题为其下位论题	none
+V71.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.8.1	整套系统与组件的关系	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.3.8.1	系统使用与组件借用的区别	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节““使用 FreeBSD”与“继承 BSD 技术”的区分”；本节题为其下位论题	none
+V71.3.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.8.2	公开的系统声明	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.3.8.2	组件清单的证据作用	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节““使用 FreeBSD”与“继承 BSD 技术”的区分”；本节题为其下位论题	none
+V71.3.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.8.3	直接依赖的证据	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.3.8.3	工具级借用的证据	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD's fsck/ newfs commands	none
+V71.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节““使用 FreeBSD”与“继承 BSD 技术”的区分”；本节题为其下位论题	none
+V71.3.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.8.4	组件清单的读法	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.3.8.4	整机派生的二手叙述	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.3.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节““使用 FreeBSD”与“继承 BSD 技术”的区分”；本节题为其下位论题	none
+V71.3.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.8.5	闭源设备的披露材料	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.3.8.5	公开声明作为证据	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	Darwin technology is based on BSD, Mach 3.0, and Apple technologies.	none
+V71.3.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“企业工程师与上游维护者：长期维护的不对等承担”；本节题为其下位论题	none
+V71.3.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.9.1	企业工程师的上游位置	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.3.9.1	企业与上游提交者的关系	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.8-外部贡献者争议-企业贡献模式光谱-Netflix-Jonathan-Looney/303.8.1-netflix与juniper的上游贡献模式.md	史料	A	2026-10-30	Netflix 与 Juniper 是 FreeBSD 上游贡献最活跃的企业，两者均有 committer 直接推送代码。	none
+V71.3.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“企业工程师与上游维护者：长期维护的不对等承担”；本节题为其下位论题	none
+V71.3.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.9.2	提交统计的口径偏差	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.9.2	邮箱域名识别的局限	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.2-存储与网络设备中的-BSD-Isilon-NetApp-NetScaler/293.2.1-freebsd在存储网络设备的基底.md	史料	A	2026-10-30	EMC Isilon 的 OneFS 基于 FreeBSD；NetApp ONTAP 含 BSD 网络栈渊源；Citrix NetScaler（ADC）基于 FreeBSD；这些设备在企业数据中心广泛部署但 BSD 身份不对外强调	none
+V71.3.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“企业工程师与上游维护者：长期维护的不对等承担”；本节题为其下位论题	none
+V71.3.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.9.3	维护负担的分配	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.9.3	维护与回馈的不对称	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“企业工程师与上游维护者：长期维护的不对等承担”；本节题为其下位论题	none
+V71.3.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.9.4	回馈模式的差异	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.9.4	商业采用与回馈的对照	https://freebsdfoundation.org/end-user-stories/	联网	A	2026-10-30	Netflix picked FreeBSD 9 because it is a high-performing, low-maintenance, and reliable operating system supported by major hardware vendors.	none
+V71.3.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 9 节“企业工程师与上游维护者：长期维护的不对等承担”；本节题为其下位论题	none
+V71.3.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.9.5	维护成本的上游转移	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.9.5	责任转移的机制	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.3.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“公有云平台上的 FreeBSD：镜像、托管服务与平台工程”；本节题为其下位论题	none
+V71.3.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.10.1	云厂商的镜像渠道	https://www.freebsd.org/where/	联网	A	2026-10-30	The FreeBSD Operating System is available via images on this page or directly from cloud vendors.	none
+V71.3.10.1	Azure 的镜像合作	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.6-Microsoft-对-BSD-的间接效应-Windows-NT-1993-年由/305.6.2-azure部署freebsd镜像的合作.md	史料	A	2026-10-30	Microsoft Azure 自 2012 年起通过 FreeBSD Foundation 合作提供官方 FreeBSD 镜像，2015 年正式列为 Marketplace 支持镜像。	none
+V71.3.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“公有云平台上的 FreeBSD：镜像、托管服务与平台工程”；本节题为其下位论题	none
+V71.3.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.10.2	预装镜像的形态	https://www.freebsd.org/where/	联网	A	2026-10-30	Virtual machine images: Pre-installed systems for hypervisors and cloud environments.	none
+V71.3.10.2	发行版的镜像格式	https://www.freebsd.org/releases/14.5R/announce/	联网	A	2026-10-30	FreeBSD 14.5-RELEASE is also available on these cloud hosting platforms:	none
+V71.3.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“公有云平台上的 FreeBSD：镜像、托管服务与平台工程”；本节题为其下位论题	none
+V71.3.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.10.3	云市场的镜像条目	https://www.freebsd.org/releases/14.5R/announce/	联网	A	2026-10-30	FreeBSD virtual machine images are expected to be available on the Azure Marketplace at:	none
+V71.3.10.3	云市场的入口	https://www.freebsd.org/where/	联网	A	2026-10-30	The FreeBSD Operating System is available via images on this page or directly from cloud vendors.	none
+V71.3.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“公有云平台上的 FreeBSD：镜像、托管服务与平台工程”；本节题为其下位论题	none
+V71.3.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.10.4	发行版与云平台的对接	https://www.freebsd.org/releases/14.5R/announce/	联网	A	2026-10-30	FreeBSD 14.5-RELEASE is also available on these cloud hosting platforms:	none
+V71.3.10.4	平台合作的维护责任	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.6-Microsoft-对-BSD-的间接效应-Windows-NT-1993-年由/305.6.2-azure部署freebsd镜像的合作.md	史料	A	2026-10-30	Microsoft Azure 自 2012 年起通过 FreeBSD Foundation 合作提供官方 FreeBSD 镜像，2015 年正式列为 Marketplace 支持镜像。	none
+V71.3.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“公有云平台上的 FreeBSD：镜像、托管服务与平台工程”；本节题为其下位论题	none
+V71.3.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.10.5	云上版本的发布	https://www.freebsd.org/releases/14.5R/announce/	联网	A	2026-10-30	FreeBSD virtual machine images are expected to be available on the Azure Marketplace at:	none
+V71.3.10.5	镜像版本的更新	https://www.freebsd.org/where/	联网	A	2026-10-30	Virtual machine images: Pre-installed systems for hypervisors and cloud environments.	none
+V71.3.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）”；本节题为其下位论题	none
+V71.3.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.11.1	网络接入的系统选择	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.3.11.1	小型设备的系统基础	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.3.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）”；本节题为其下位论题	none
+V71.3.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.11.2	网络服务的系统组合	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.3.11.2	接入设备的硬件约束	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）”；本节题为其下位论题	none
+V71.3.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.11.3	低成本设备的系统配置	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.3.11.3	商品硬件与成本	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.3.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）”；本节题为其下位论题	none
+V71.3.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.11.4	运营者自述的性质	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.3.11.4	自述材料的证据限度	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.3.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“规模的另一端：中小接入运营商以 FreeBSD 建栈（2000 年代）”；本节题为其下位论题	none
+V71.3.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.11.5	超大规模的一端	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.3.11.5	设备规模的一端	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.3.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“Hotmail 的 FreeBSD 生产部署”；本节题为其下位论题	none
+V71.3.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.12.1	Hotmail 的前端架构	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	FreeBSD, a UNIX-like system similar to the Linux operating system, was used to run the front-end Web servers that handled login, Microsoft Outlook Express, and Web-based content delivery tasks.	none
+V71.3.12.1	Hotmail 的系统构成	旧大纲-20261023/第14卷-商业生态与企业案例/第298章-经济生态与foundation资助模式/298.3-FreeBSD-在商业部署中的经济价值-Yahoo!-Hotmail/298.3.1-yahoohotmail大规模部署.md	史料	A	2026-10-30	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一，整个前端服务运行于 FreeBSD + Apache	none
+V71.3.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“Hotmail 的 FreeBSD 生产部署”；本节题为其下位论题	none
+V71.3.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.12.2	收购时点与用户规模	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	Acquired by Microsoft in 1997, with an installed base of 9 million users	none
+V71.3.12.2	收购前的部署记录	旧大纲-20261023/第14卷-商业生态与企业案例/第298章-经济生态与foundation资助模式/298.3-FreeBSD-在商业部署中的经济价值-Yahoo!-Hotmail/298.3.1-yahoohotmail大规模部署.md	史料	A	2026-10-30	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一，整个前端服务运行于 FreeBSD + Apache	none
+V71.3.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“Hotmail 的 FreeBSD 生产部署”；本节题为其下位论题	none
+V71.3.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.12.3	迁移的时点与目标	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	During June and July of 2000, the Hotmail site was converted from FreeBSD running Apache Web services to Windows 2000 Server running Microsoft Internet Information Services 5.0.	none
+V71.3.12.3	收购与迁移的关联	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	Acquired by Microsoft in 1997, with an installed base of 9 million users	none
+V71.3.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“Hotmail 的 FreeBSD 生产部署”；本节题为其下位论题	none
+V71.3.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.12.4	迁移的分期	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	During June and July of 2000, the Hotmail site was converted from FreeBSD running Apache Web services to Windows 2000 Server running Microsoft Internet Information Services 5.0.	none
+V71.3.12.4	迁移前的系统基础	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	FreeBSD, a UNIX-like system similar to the Linux operating system, was used to run the front-end Web servers that handled login, Microsoft Outlook Express, and Web-based content delivery tasks.	none
+V71.3.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“Hotmail 的 FreeBSD 生产部署”；本节题为其下位论题	none
+V71.3.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.3.12.5	迁移后的系统	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	During June and July of 2000, the Hotmail site was converted from FreeBSD running Apache Web services to Windows 2000 Server running Microsoft Internet Information Services 5.0.	none
+V71.3.12.5	迁移的评价语境	https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)	联网	A	2026-10-30	Acquired by Microsoft in 1997, with an installed base of 9 million users	none
+V71.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Sony 与 BSD 软件体系”；本节题为其下位论题	none
+V71.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.1.1	PS4 的 BSD 软件体系	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.1.1	网络组件的 BSD 来源	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Sony 与 BSD 软件体系”；本节题为其下位论题	none
+V71.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.1.2	组件清单的列示方式	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.1.2	PS5 的清单口径	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Sony 与 BSD 软件体系”；本节题为其下位论题	none
+V71.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.1.3	许可证声明的随附	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.4.1.3	源码提供义务	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Sony 与 BSD 软件体系”；本节题为其下位论题	none
+V71.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.1.4	分层取材的组件	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.1.4	掌机的分层组件	https://doc.dl.playstation.net/doc/psvita-oss/	联网	A	2026-10-30	PlayStation®Vita contains the following third-party open source software.	none
+V71.4.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“Sony 与 BSD 软件体系”；本节题为其下位论题	none
+V71.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.1.5	消费设备的系统基础	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.4.1.5	BSD 在终端设备的位置	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	Darwin technology is based on BSD, Mach 3.0, and Apple technologies.	none
+V71.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“PlayStation 3 中的 FreeBSD 与 NetBSD”；本节题为其下位论题	none
+V71.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.2.1	PS3 的 BSD 与 NetBSD 成分	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.2.1	PS3 系统的争议	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.2-Sony-PS3-4-5-PS4-运行修改版-FreeBSD-9-0-即/303.2.1-orbisos基于freebsd90的具体修改.md	史料	A	2026-10-30	PS3 的操作系统（Cell OS）是否基于 FreeBSD 存在争议	none
+V71.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“PlayStation 3 中的 FreeBSD 与 NetBSD”；本节题为其下位论题	none
+V71.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.2.2	Cell OS 的二手判断	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.2.2	Cell OS 的争议记录	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.2-Sony-PS3-4-5-PS4-运行修改版-FreeBSD-9-0-即/303.2.1-orbisos基于freebsd90的具体修改.md	史料	A	2026-10-30	PS3 的操作系统（Cell OS）是否基于 FreeBSD 存在争议	none
+V71.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“PlayStation 3 中的 FreeBSD 与 NetBSD”；本节题为其下位论题	none
+V71.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.2.3	PS3 的 NetBSD 部分	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.2.3	NetBSD 组件的声明方式	https://www.playstation.com/en-us/oss/ps-vita/netbsd/	联网	A	2026-10-30	This product includes software developed by the NetBSD Foundation, Inc. and its contributors.	none
+V71.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“PlayStation 3 中的 FreeBSD 与 NetBSD”；本节题为其下位论题	none
+V71.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.2.4	逆向分析的证据性质	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.2.4	二手材料的限度	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.2-Sony-PS3-4-5-PS4-运行修改版-FreeBSD-9-0-即/303.2.1-orbisos基于freebsd90的具体修改.md	史料	A	2026-10-30	PS3 的操作系统（Cell OS）是否基于 FreeBSD 存在争议	none
+V71.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“PlayStation 3 中的 FreeBSD 与 NetBSD”；本节题为其下位论题	none
+V71.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.2.5	厂商披露的优先性	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.2.5	逆向材料的补位	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“PlayStation Vita 中的 FreeBSD 与 NetBSD 成分”；本节题为其下位论题	none
+V71.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.3.1	Vita 的组件清单	https://doc.dl.playstation.net/doc/psvita-oss/	联网	A	2026-10-30	PlayStation®Vita contains the following third-party open source software.	none
+V71.4.3.1	NetBSD 条目的声明	https://www.playstation.com/en-us/oss/ps-vita/netbsd/	联网	A	2026-10-30	This product includes software developed by the NetBSD Foundation, Inc. and its contributors.	none
+V71.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“PlayStation Vita 中的 FreeBSD 与 NetBSD 成分”；本节题为其下位论题	none
+V71.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.3.2	NetBSD 许可文本	https://www.playstation.com/en-us/oss/ps-vita/netbsd/	联网	A	2026-10-30	This product includes software developed by the NetBSD Foundation, Inc. and its contributors.	none
+V71.4.3.2	FreeBSD 许可文本	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“PlayStation Vita 中的 FreeBSD 与 NetBSD 成分”；本节题为其下位论题	none
+V71.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.3.3	组件级证据	https://doc.dl.playstation.net/doc/psvita-oss/	联网	A	2026-10-30	PlayStation®Vita contains the following third-party open source software.	none
+V71.4.3.3	源码清单的判定作用	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“PlayStation Vita 中的 FreeBSD 与 NetBSD 成分”；本节题为其下位论题	none
+V71.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.3.4	掌机披露范围	https://doc.dl.playstation.net/doc/psvita-oss/	联网	A	2026-10-30	PlayStation®Vita contains the following third-party open source software.	none
+V71.4.3.4	同类掌机的披露体例	https://support.nintendo.com/jp/switch/intellectual-property/switch-family/switch.html	联网	A	2026-10-30	Software in this console includes open source software distributed under the terms of the Mozilla Public License 2.0, the terms of the GNU Library General Public License 2.0 and/or the terms of the GNU Lesser General Public License 2.1	none
+V71.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“PlayStation Vita 中的 FreeBSD 与 NetBSD 成分”；本节题为其下位论题	none
+V71.4.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.3.5	组件类别的分布	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.3.5	清单的分类结构	https://doc.dl.playstation.net/doc/psvita-oss/	联网	A	2026-10-30	PlayStation®Vita contains the following third-party open source software.	none
+V71.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013–2020）”；本节题为其下位论题	none
+V71.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.4.1	Orbis OS 的 FreeBSD 血统	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.4.1	Orbis OS 的基线	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.2-Sony-PS3-4-5-PS4-运行修改版-FreeBSD-9-0-即/303.2.1-orbisos基于freebsd90的具体修改.md	史料	A	2026-10-30	Sony PS4 的 Orbis OS 基于 FreeBSD 9.0，进行了大量定制包括图形驱动、网络栈与安全模块。PS5 的系统软件继续基于 FreeBSD。Sony 未公开 Orbis 源码。	none
+V71.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013–2020）”；本节题为其下位论题	none
+V71.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.4.2	PS5 的源码披露	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.4.2	PS5 的系统延续	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.2-Sony-PS3-4-5-PS4-运行修改版-FreeBSD-9-0-即/303.2.1-orbisos基于freebsd90的具体修改.md	史料	A	2026-10-30	Sony PS4 的 Orbis OS 基于 FreeBSD 9.0，进行了大量定制包括图形驱动、网络栈与安全模块。PS5 的系统软件继续基于 FreeBSD。Sony 未公开 Orbis 源码。	none
+V71.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013–2020）”；本节题为其下位论题	none
+V71.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.4.3	定制组件的清单	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.4.3	定制范围	旧大纲-20261023/第14卷-商业生态与企业案例/第303章-freebsd商业使用案例与bsdl缺陷/303.2-Sony-PS3-4-5-PS4-运行修改版-FreeBSD-9-0-即/303.2.1-orbisos基于freebsd90的具体修改.md	史料	A	2026-10-30	Sony PS4 的 Orbis OS 基于 FreeBSD 9.0，进行了大量定制包括图形驱动、网络栈与安全模块。PS5 的系统软件继续基于 FreeBSD。Sony 未公开 Orbis 源码。	none
+V71.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013–2020）”；本节题为其下位论题	none
+V71.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.4.4	按组件披露源码	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.4.4	许可文本的公开	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013–2020）”；本节题为其下位论题	none
+V71.4.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.4.5	PS4 的组件清单	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.4.5	PS5 的延续证据	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“文件系统工具、系统库与基础设施代码的进入”；本节题为其下位论题	none
+V71.4.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.5.1	文件系统工具的出处	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD's fsck/ newfs commands	none
+V71.4.5.1	工具组件的列示	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“文件系统工具、系统库与基础设施代码的进入”；本节题为其下位论题	none
+V71.4.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.5.2	BSD libc 的列示	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.5.2	BSD 库层的移植	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	The BSD layer is based on the BSD kernel, primarily FreeBSD.	none
+V71.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“文件系统工具、系统库与基础设施代码的进入”；本节题为其下位论题	none
+V71.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.5.3	基础设施组件的分布	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.5.3	组件化清单的体例	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“文件系统工具、系统库与基础设施代码的进入”；本节题为其下位论题	none
+V71.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.5.4	工具链的系统位置	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD's fsck/ newfs commands	none
+V71.4.5.4	工具组件的层次	https://doc.dl.playstation.net/doc/psvita-oss/	联网	A	2026-10-30	PlayStation®Vita contains the following third-party open source software.	none
+V71.4.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“文件系统工具、系统库与基础设施代码的进入”；本节题为其下位论题	none
+V71.4.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.5.5	许可文本线索	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.4.5.5	逆向识别的线索	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“闭源系统中的开源组件披露”；本节题为其下位论题	none
+V71.4.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.6.1	第三方组件的披露义务	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.4.6.1	源码披露义务	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“闭源系统中的开源组件披露”；本节题为其下位论题	none
+V71.4.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.6.2	随附许可文本	https://support.nintendo.com/jp/switch/intellectual-property/switch-family/switch.html	联网	A	2026-10-30	Software in this console includes open source software distributed under the terms of the Mozilla Public License 2.0, the terms of the GNU Library General Public License 2.0 and/or the terms of the GNU Lesser General Public License 2.1	none
+V71.4.6.2	设备内许可声明	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“闭源系统中的开源组件披露”；本节题为其下位论题	none
+V71.4.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.6.3	清单完整性的自述	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.4.6.3	第三方通知的范围	https://support.nintendo.com/jp/switch/intellectual-property/switch-family/switch.html	联网	A	2026-10-30	Software in this console includes open source software distributed under the terms of the Mozilla Public License 2.0, the terms of the GNU Library General Public License 2.0 and/or the terms of the GNU Lesser General Public License 2.1	none
+V71.4.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“闭源系统中的开源组件披露”；本节题为其下位论题	none
+V71.4.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.6.4	通知文件的编制	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.4.6.4	分页编制的体例	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“闭源系统中的开源组件披露”；本节题为其下位论题	none
+V71.4.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.6.5	清单不全的声明	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.4.6.5	源码提供的范围	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“游戏主机中的 BSD 代码与系统源流问题”；本节题为其下位论题	none
+V71.4.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.7.1	主机源流的判定	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.7.1	公开材料的限度	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“游戏主机中的 BSD 代码与系统源流问题”；本节题为其下位论题	none
+V71.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.7.2	整机派生的判断	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.7.2	组件借用的清单	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“游戏主机中的 BSD 代码与系统源流问题”；本节题为其下位论题	none
+V71.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.7.3	逆向取证的限制	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.7.3	公开源码的限度	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.4.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“游戏主机中的 BSD 代码与系统源流问题”；本节题为其下位论题	none
+V71.4.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.7.4	清单的组件证据	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.4.7.4	声明的版本判断	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“游戏主机中的 BSD 代码与系统源流问题”；本节题为其下位论题	none
+V71.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.4.7.5	二手叙述的限度	https://www.exploit-db.com/docs/english/44207-hacking-the-ps4,-part-1---introduction-to-ps4s-security,-and-userland-rop.pdf	联网	B	2026-10-30	Most notably, the PS4's Orbis OS is based on FreeBSD (9.0), just like the PS3's OS was (with parts of NetBSD as well)	none
+V71.4.7.5	披露材料的边界	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD 许可证与再分发”；本节题为其下位论题	none
+V71.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.1.1	源码再分发的条件	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V71.5.1.1	FreeBSD 许可的条件	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD 许可证与再分发”；本节题为其下位论题	none
+V71.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.1.2	二进制分发的声明义务	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
+V71.5.1.2	设备内的声明保留	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD 许可证与再分发”；本节题为其下位论题	none
+V71.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.1.3	宽松许可的商业使用	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Liberal Open Source license, which grants the rights to freely modify and extend its source code and incorporate it in both Open Source projects and closed products without imposing restrictions typical to copyleft licenses	none
+V71.5.1.3	闭源设备中的 BSD 许可	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD 许可证与再分发”；本节题为其下位论题	none
+V71.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.1.4	项目级许可文本	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Copyright 1992-2026 The FreeBSD Project.	none
+V71.5.1.4	通用两条款文本	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V71.5.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD 许可证与再分发”；本节题为其下位论题	none
+V71.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.1.5	下游分发的声明责任	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
+V71.5.1.5	下游产品的通知文件	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“版权声明与产品身份的分离”；本节题为其下位论题	none
+V71.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.2.1	版权声明的形制	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Copyright 1992-2026 The FreeBSD Project.	none
+V71.5.2.1	设备中的版权声明	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“版权声明与产品身份的分离”；本节题为其下位论题	none
+V71.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.2.2	许可章节的归属表述	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.5.2.2	产品文档的许可章节	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“版权声明与产品身份的分离”；本节题为其下位论题	none
+V71.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.2.3	声明保留的义务	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V71.5.2.3	声明保留的痕迹	https://www.playstation.com/en-us/oss/ps4/network-freebsd/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“版权声明与产品身份的分离”；本节题为其下位论题	none
+V71.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.2.4	产品身份与系统来源	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.2.4	品牌与系统的分离	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“版权声明与产品身份的分离”；本节题为其下位论题	none
+V71.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.2.5	许可模板的体例	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Copyright 1992-2026 The FreeBSD Project.	none
+V71.5.2.5	通用模板的体例	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
+V71.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“闭源产品中的源代码归属”；本节题为其下位论题	none
+V71.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.3.1	闭源产品中的 BSD 源码	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.3.1	闭源吸收的许可依据	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Liberal Open Source license, which grants the rights to freely modify and extend its source code and incorporate it in both Open Source projects and closed products without imposing restrictions typical to copyleft licenses	none
+V71.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“闭源产品中的源代码归属”；本节题为其下位论题	none
+V71.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.3.2	衍生作品的许可约束	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	none
+V71.5.3.2	衍生分发的条件	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:	none
+V71.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“闭源产品中的源代码归属”；本节题为其下位论题	none
+V71.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.3.3	按组件计算的公开义务	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.5.3.3	组件清单的义务范围	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“闭源产品中的源代码归属”；本节题为其下位论题	none
+V71.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.3.4	权属声明的依据	https://www.freebsd.org/copyright/freebsd-license/	联网	A	2026-10-30	Copyright 1992-2026 The FreeBSD Project.	none
+V71.5.3.4	合规声明的依据	https://opensource.org/license/bsd-2-clause	联网	A	2026-10-30	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.	none
+V71.5.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“闭源产品中的源代码归属”；本节题为其下位论题	none
+V71.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.3.5	源码可得性的证据	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.5.3.5	组件清单的证据	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OSS 公告、源代码包与产品文档”；本节题为其下位论题	none
+V71.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.4.1	厂商的开源公告页	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.5.4.1	厂商的通知文件	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OSS 公告、源代码包与产品文档”；本节题为其下位论题	none
+V71.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.4.2	按版本分页的源码	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.5.4.2	源码提供渠道	https://support.nintendo.com/jp/switch/intellectual-property/switch-family/switch.html	联网	A	2026-10-30	Software in this console includes open source software distributed under the terms of the Mozilla Public License 2.0, the terms of the GNU Library General Public License 2.0 and/or the terms of the GNU Lesser General Public License 2.1	none
+V71.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OSS 公告、源代码包与产品文档”；本节题为其下位论题	none
+V71.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.4.3	文档附录中的组件	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.4.3	产品页的组件列表	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OSS 公告、源代码包与产品文档”；本节题为其下位论题	none
+V71.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.4.4	公告的版本范围	https://doc.dl.playstation.net/doc/ps5-oss/	联网	A	2026-10-30	In compliance with the applicable open source software licenses, the source code of the following open source software used in PlayStation®5 is made available to the user.	none
+V71.5.4.4	文档的组件名称	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“OSS 公告、源代码包与产品文档”；本节题为其下位论题	none
+V71.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.4.5	支持页的披露入口	https://support.nintendo.com/jp/switch/intellectual-property/switch-family/switch.html	联网	A	2026-10-30	Software in this console includes open source software distributed under the terms of the Mozilla Public License 2.0, the terms of the GNU Library General Public License 2.0 and/or the terms of the GNU Lesser General Public License 2.1	none
+V71.5.4.5	法务页的披露入口	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“从“BSD 系统”到“设备内部组件””；本节题为其下位论题	none
+V71.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.5.1	系统被表述为组件	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.5.1	系统可见度低于部署规模	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.4-企业沉默-BSD-现象的辩证链-BSD-社区与企业阵营的对称呈现/293.4.1-批评-bsd社区对企业沉默bsd现象的立场.md	史料	A	2026-10-30	企业不公开承认 FreeBSD 基底使 FreeBSD 在公共话语中的可见度低于实际部署规模	none
+V71.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“从“BSD 系统”到“设备内部组件””；本节题为其下位论题	none
+V71.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.5.2	组件的功能命名	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.5.2	产品名对系统名的覆盖	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“从“BSD 系统”到“设备内部组件””；本节题为其下位论题	none
+V71.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.5.3	品牌发布与系统叙事	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.5.5.3	叙事退场的后果	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.4-企业沉默-BSD-现象的辩证链-BSD-社区与企业阵营的对称呈现/293.4.1-批评-bsd社区对企业沉默bsd现象的立场.md	史料	A	2026-10-30	企业不公开承认 FreeBSD 基底使 FreeBSD 在公共话语中的可见度低于实际部署规模	none
+V71.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“从“BSD 系统”到“设备内部组件””；本节题为其下位论题	none
+V71.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.5.4	企业内部的维护分工	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.5.5.4	组件维护的组织安排	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“从“BSD 系统”到“设备内部组件””；本节题为其下位论题	none
+V71.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.5.5	话语层面的身份转换	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.4-企业沉默-BSD-现象的辩证链-BSD-社区与企业阵营的对称呈现/293.4.1-批评-bsd社区对企业沉默bsd现象的立场.md	史料	A	2026-10-30	企业不公开承认 FreeBSD 基底使 FreeBSD 在公共话语中的可见度低于实际部署规模	none
+V71.5.5.5	文档用词的证据	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“从显式继承到接口标准化”；本节题为其下位论题	none
+V71.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.6.1	显式继承的表述	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.6.1	接口层的继承	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	The BSD layer is based on the BSD kernel, primarily FreeBSD.	none
+V71.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“从显式继承到接口标准化”；本节题为其下位论题	none
+V71.5.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.6.2	标准协议的系统实现	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.5.6.2	标准接口下的系统来源	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	Darwin technology is based on BSD, Mach 3.0, and Apple technologies.	none
+V71.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“从显式继承到接口标准化”；本节题为其下位论题	none
+V71.5.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.6.3	兼容层的实现	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	The BSD layer is based on the BSD kernel, primarily FreeBSD.	none
+V71.5.6.3	组件适配与兼容	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“从显式继承到接口标准化”；本节题为其下位论题	none
+V71.5.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.6.4	标准协议的采纳动力	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Strong TCP/IP networking - FreeBSD implements industry standard protocols with ever increasing performance and scalability. This makes it a good match in both server, and routing/firewalling roles - and indeed many companies and vendors use it precisely for that purpose.	none
+V71.5.6.4	组件标准的形成	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“从显式继承到接口标准化”；本节题为其下位论题	none
+V71.5.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.6.5	接口文档的可考性	https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	联网	A	2026-10-30	The BSD layer is based on the BSD kernel, primarily FreeBSD.	none
+V71.5.6.5	接口约定的公开度	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“商业品牌取代操作系统身份”；本节题为其下位论题	none
+V71.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.7.1	品牌对系统名的覆盖	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.5.7.1	产品名与系统名	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“商业品牌取代操作系统身份”；本节题为其下位论题	none
+V71.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.7.2	产品线的品牌重组	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.5.7.2	产品线的组件归属	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf	联网	A	2026-10-30	Citrix ADC 13.0 may include third party software components licensed under the following terms.	none
+V71.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“商业品牌取代操作系统身份”；本节题为其下位论题	none
+V71.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.7.3	品牌叙事的能力导向	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.5.7.3	系统在话语中的缺席	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.4-企业沉默-BSD-现象的辩证链-BSD-社区与企业阵营的对称呈现/293.4.1-批评-bsd社区对企业沉默bsd现象的立场.md	史料	A	2026-10-30	企业不公开承认 FreeBSD 基底使 FreeBSD 在公共话语中的可见度低于实际部署规模	none
+V71.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“商业品牌取代操作系统身份”；本节题为其下位论题	none
+V71.5.7.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.7.4	品牌与版本的对应	https://www.truenas.com/blog/truenas-multi-os/	联网	A	2026-10-30	With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE.	none
+V71.5.7.4	产品与系统的对应	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	NetApp’s decision to use FreeBSD as a stable and efficient base for the ONTAP operating system was a practical decision made in the mid-2000s.	none
+V71.5.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“商业品牌取代操作系统身份”；本节题为其下位论题	none
+V71.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.7.5	传播中的系统名省略	旧大纲-20261023/第13卷-bsd衍生操作系统/第293章-沉默bsd企业的freebsd基底/293.4-企业沉默-BSD-现象的辩证链-BSD-社区与企业阵营的对称呈现/293.4.1-批评-bsd社区对企业沉默bsd现象的立场.md	史料	A	2026-10-30	企业不公开承认 FreeBSD 基底使 FreeBSD 在公共话语中的可见度低于实际部署规模	none
+V71.5.7.5	公开清单的补偿作用	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“工业采用中的 BSD 代码分布与规模估计”；本节题为其下位论题	none
+V71.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.8.1	设备领域的系统分布	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.5.8.1	交付设备的分布	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“工业采用中的 BSD 代码分布与规模估计”；本节题为其下位论题	none
+V71.5.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.8.2	部署规模的数据	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.5.8.2	企业自述的数据	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.5.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“工业采用中的 BSD 代码分布与规模估计”；本节题为其下位论题	none
+V71.5.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.8.3	交付网络的行业位置	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.5.8.3	消费电子的采用面	https://www.playstation.com/en-us/oss/ps4/	联网	A	2026-10-30	FreeBSD Kernel	none
+V71.5.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“工业采用中的 BSD 代码分布与规模估计”；本节题为其下位论题	none
+V71.5.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.8.4	峰值口径的偏差	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.5.8.4	自述口径的偏差	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.5.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“工业采用中的 BSD 代码分布与规模估计”；本节题为其下位论题	none
+V71.5.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.8.5	已核的分布证据	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.5.8.5	可推的分布证据	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“不可见的规模：工业采用中 BSD 代码的可考数量与不可考数量”；本节题为其下位论题	none
+V71.5.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.9.1	可考数量的来源	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.5.9.1	闭源设备的不可考部分	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“不可见的规模：工业采用中 BSD 代码的可考数量与不可考数量”；本节题为其下位论题	none
+V71.5.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.9.2	流量口径的计量	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.5.9.2	设备口径的计量	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.5.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“不可见的规模：工业采用中 BSD 代码的可考数量与不可考数量”；本节题为其下位论题	none
+V71.5.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.9.3	不可考成分的估计	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.	none
+V71.5.9.3	设备分布的区间判断	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD makes an excellent foundation for building embedded routers, firewalls, and other devices.	none
+V71.5.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“不可见的规模：工业采用中 BSD 代码的可考数量与不可考数量”；本节题为其下位论题	none
+V71.5.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.9.4	估计值的标注	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.5.9.4	自述规模的标注	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	A list of testimonials from companies basing their products and services on FreeBSD can be found at the FreeBSD Foundation website.	none
+V71.5.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“不可见的规模：工业采用中 BSD 代码的可考数量与不可考数量”；本节题为其下位论题	none
+V71.5.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.9.5	设备规模的口径	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.5.9.5	流量规模的年份	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	OPEN CONNECT PUSHES OVER 100 TB/S PEAK	none
+V71.5.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“OCA 的交付链：设备层的 BSD 成分与上游回馈的不对等”；本节题为其下位论题	none
+V71.5.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.10.1	OCA 的系统成分	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD-CURRENT (HEAD)	none
+V71.5.10.1	OCA 的系统选型	旧大纲-20261023/第13卷-bsd衍生操作系统/第292章-netflix-open-connect/292.1-Netflix-的-FreeBSD-选型-2011-2015/292.1.1-要点Netflix在扩展流媒体时选择FreeBSD构建OCA边缘设备理由包括网络.md	史料	A	2026-10-30	Netflix 在扩展流媒体时选择 FreeBSD 构建 OCA 边缘设备，理由包括网络栈性能、ZFS 存储可靠性、dtrace 可观测性；Netflix 工程师在 BSDCan 等会议公开其 FreeBSD at scale 实践。	none
+V71.5.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“OCA 的交付链：设备层的 BSD 成分与上游回馈的不对等”；本节题为其下位论题	none
+V71.5.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.10.2	代码回流的流向	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.5.10.2	提交者的回流角色	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none
+V71.5.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“OCA 的交付链：设备层的 BSD 成分与上游回馈的不对等”；本节题为其下位论题	none
+V71.5.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.10.3	回馈与定制的比例	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.	none
+V71.5.10.3	企业回馈的不对等	https://freebsdfoundation.org/blog/netapps-strategic-contributions-to-freebsd-a-deep-dive-into-upstreaming-efforts/	联网	A	2026-10-30	Over recent years, NetApp’s strategy has led to nearly 300 changes being upstreamed to FreeBSD, with plans to further this contribution significantly.	none
+V71.5.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“OCA 的交付链：设备层的 BSD 成分与上游回馈的不对等”；本节题为其下位论题	none
+V71.5.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.10.4	边缘设备的运维分工	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	Our Open Connect Appliances are based on commodity PC components, assembled in custom cases by our suppliers.	none
+V71.5.10.4	设备的运维安排	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Open Connect Appliances run a lightly customized version of FreeBSD.	none
+V71.5.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 10 节“OCA 的交付链：设备层的 BSD 成分与上游回馈的不对等”；本节题为其下位论题	none
+V71.5.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V71.5.10.5	官方设备说明	https://openconnect.netflix.com/en/appliances	联网	A	2026-10-30	FreeBSD-CURRENT (HEAD)	none
+V71.5.10.5	工程报告的补证	https://people.freebsd.org/~emaste/FreeBSD_Foundation_Netflix_Open_Connect_Case_Study.pdf	联网	A	2026-10-30	Netflix employs several FreeBSD committers and additional members of the Open Connect team also contribute code upstream.	none

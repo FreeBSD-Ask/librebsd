@@ -1,0 +1,9 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-31T03:31:07	start	0	0	0	V76 执行体开工（session=zcode-subagent-V76-20261031；36 节中 32 节 corpus=present、1.1–1.4 共 4 节 corpus=none）
+2026-10-31T05:29:26	draft	36	196	0	五章 36 节全数拟题（ch1 24／ch2 48／ch3 18／ch4 60／ch5 46）；每节 5–6 条
+2026-10-31T05:29:26	assemble	36	196	24	首装 hard=1 warn=5（C8A 闭环＋五簇尾字超限）；修正后二装 hard=0 warn=0；corpus_gap 24 条（1.1–1.4 无料节）；hash=1ae88b116802b023
+2026-10-31T05:29:26	audit	36	196	24	门禁首跑 40 项 FAIL 3（B1 动词起首 1.1.5、B3 转述动词 4.5.3、C7 禁词谱系 6 处）；修正后二跑 40 项 FAIL 0（本卷无 FAIL）
+2026-10-31T05:29:26	review	36	196	24	逐题判读 196 行（review_ch1..5.tsv）：维持 188、改题 8（B1／B3／C7 修正，题义不变）；direct 直证 161、indirect 侧证 35
+2026-10-31T05:31:56	report	36	196	24	呈审报告落盘 title-design/V76-标题呈审报告.md；hash=1ae88b116802b023
+2026-10-31T05:31:56	done	36	196	24	done.json 落盘（session=zcode-subagent-V76-20261031；三判据自校通过：titles=196=台账行数、hash 一致、selftest_exit=0）
+2026-10-31T05:34:09	report	36	196	24	呈审报告 tier 数据订正（A 708／B 20）；hash 不变

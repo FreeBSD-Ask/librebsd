@@ -1,0 +1,10 @@
+at	event	sections_done	titles_done	exceptions_open	note
+2026-10-30T23:25:44	start	0	0	0	V74 执行体开工（session=zcode-subagent-V74-20261030；39 节全 corpus=none）
+2026-10-31T02:48:05	draft	39	183	0	前任 ch1–3（20 节 99 题）沿用；续做执行体补跑 ch4–6（19 节 84 题）并 merge
+2026-10-31T02:48:05	assemble	39	183	183	首装 hard=0 warn=0；183 题 corpus=none 逐题登记 corpus_gap；hash=fd2148579183fbd0
+2026-10-31T03:16:42	audit	39	183	183	门禁首跑 40 项 FAIL 1（B1 动词起首：6.3.3／6.3.4）；复核另判出 2.2.2 引文离题
+2026-10-31T03:16:42	assemble	39	183	183	修正后二装 hard=0 warn=0（补证 9／改论题 2／改题 1／B1 改题 2）；hash=5d6c8c68e9b9c857
+2026-10-31T03:16:42	audit	39	183	183	门禁二跑 40 项 FAIL 0（本卷无 FAIL）
+2026-10-31T03:16:42	review	39	183	183	逐题判读 183 行（review_ch1..6.tsv）：维持 171、补证 9、改论题 2（其一兼补证）、改题 1
+2026-10-31T03:22:19	report	39	183	183	呈审报告落盘 title-design/V74-标题呈审报告.md；hash=5d6c8c68e9b9c857
+2026-10-31T03:22:19	done	39	183	183	done.json 落盘（session=zcode-subagent-V74-20261030；前任 10-31 00:49 中断后续做收口）

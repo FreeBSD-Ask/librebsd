@@ -241,6 +241,8 @@ V64.2.2.4	起始资金的来源结构	旧大纲-20261023/第16卷-开源运动�
 V64.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“FreeBSD 基金会的成立（2000）”；本节题为其下位论题	none
 V64.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.2.2.5	与核心章程的同渡节点	旧大纲-20261023/第16卷-开源运动与合规治理/第337章-freebsd社区演进史-治理结构/337.2-Core-Team-选举制度/337.2.6-基金会定位与运作FreeBSDFoundation于2000年成立为501c3公.md	史料	A	2026-10-30	基金会不监督项目决策，而是评估关键需求后以雇员软件工程师快速实施安全变通、资助 ZFS、Wi-Fi、Linuxulator、ifconfig 等内外部项目	none
+V64.2.2.5	章程批准日期	04-现代研究文献/historical_claims.duckdb｜claim=CL-RM-000903	史料	A	2026-10-31	FreeBSD Core Team 章程（Core Bylaws）批准日期为 2000 年 8 月 28 日（freebsd.org/internal/bylaws 官方页面确证）	none
+V64.2.2.5	基金会成立年份	旧大纲-20261023/第16卷-开源运动与合规治理/第337章-freebsd社区演进史-治理结构/337.2-Core-Team-选举制度/337.2.6	史料	A	2026-10-31	FreeBSD Foundation 于 2000 年成立，为 501(c)(3) 公共慈善组织	none
 V64.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“基金会的法人性质与理事会”；本节题为其下位论题	none
 V64.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.2.3.1	科罗拉多的法律适用	https://www.freebsdfoundation.org/wp-content/uploads/2015/12/FoundationBylaws.pdf	联网	A	2026-10-30	If such day is a legal holiday under the laws of Colorado, the annual meeting shall be held on the next succeeding business day which is not a legal holiday under the laws of Colorado.	none
@@ -277,6 +279,7 @@ V64.2.5.1	硬件支出的年度规模	https://freebsdfoundation.org/our-work/inf
 V64.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“基础设施与网络资源”；本节题为其下位论题	none
 V64.2.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.2.5.2	持续集成的机器配置	https://freebsdfoundation.org/our-work/infrastructure-support/	联网	A	2026-10-30	Below are just a few areas where your donations have helped us support FreeBSD.	none
+V64.2.5.2	Jenkins 持续集成条目	https://freebsdfoundation.org/our-work/infrastructure-support/	联网	A	2026-10-31	Continuous Integration (Jenkins)	none
 V64.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“基础设施与网络资源”；本节题为其下位论题	none
 V64.2.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.2.5.3	包构建集群的覆盖面	https://freebsdfoundation.org/our-work/infrastructure-support/	联网	A	2026-10-30	Package build cluster – many x86 machines to build quarterly and current package sets across multiple releases.	none
@@ -348,7 +351,7 @@ V64.2.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.2.9.5	年报作为史料的可核性	旧大纲-20261023/第16卷-开源运动与合规治理/第338章-freebsd社区演进史-comitter留存/338.5-基金会资金不足/338.5.4-史料辨析基金会年报与捐赠记录.md	史料	A	2026-10-30	**史料**：Foundation 2014-2024 年报、990 表、捐赠者名单 ［B］	none
 V64.2.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“基金会预算与财务报表公开”；本节题为其下位论题	none
 V64.2.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.2.10.1	预算文本的正式件	https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary/	联网	A	2026-10-30	Read the Budget Summary	none
+V64.2.10.1	预算文本的正式件	https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary/	联网	A	2026-10-30	This year we’re providing a more in-depth look at the Foundation’s budget to give the community a clearer view of how resources are used to support FreeBSD.	none
 V64.2.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 10 节“基金会预算与财务报表公开”；本节题为其下位论题	none
 V64.2.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.2.10.2	预算作为指引而非定案	https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary/	联网	A	2026-10-30	the 2025 budget should be seen as a guideline rather than a fixed plan.	none
@@ -399,7 +402,8 @@ V64.2.13.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.2.13.2	黄金层级的回报清单	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Gold Partner ($150,000-$249,999)	none
 V64.2.13.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 13 节“企业赞助与基金会资源”；本节题为其下位论题	none
 V64.2.13.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.2.13.3	白银层级的规模档	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Silver Partner (Variable by headcount)	none
+V64.2.13.3	白银层级的规模档	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Silver Partner ( Variable by headcount*)	none
+V64.2.13.3	白银五档价目	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-31	*$10,000 Less Than 100 employees; $25,000 100 – 999; $50,000 1,000 – 4,999; $75,000 5,000 – 9,999; $100,000 10,000+	none
 V64.2.13.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 13 节“企业赞助与基金会资源”；本节题为其下位论题	none
 V64.2.13.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.2.13.4	赞助权益的宣传位	https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	联网	A	2026-10-30	Your organization’s brand prominently displayed on the Foundation website	none
@@ -445,6 +449,7 @@ V64.3.2.2	网络版本控制的前置	https://www.netbsd.org/about/	联网	A	202
 V64.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“1993–1995 年核心开发者与项目管理”；本节题为其下位论题	none
 V64.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.2.3	核心小组的早期名单	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Previous NetBSD Core Group members:	none
+V64.3.2.3	历任名录前五名	https://www.netbsd.org/people/core.html	联网	A	2026-10-31	Previous NetBSD Core Group members: Allen Barrett Allen Briggs <briggs@NetBSD.org> J.T. Conklin Chris G. Demetriou Theo de Raadt	none
 V64.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“1993–1995 年核心开发者与项目管理”；本节题为其下位论题	none
 V64.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.2.4	四人组的日常协作	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	NetBSD's original focus was quality and architecture independence.	none
@@ -459,7 +464,8 @@ V64.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.3.3.2	架构问题的审议职能	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	consider the serious architectural questions that need to be addressed if the NetBSD Project is going to keep producing a viable system	none
 V64.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“核心团队的形成”；本节题为其下位论题	none
 V64.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.3.3.3	成员更替的长名单	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Previous NetBSD Core Group members: Alan Barrett Allen Briggs J.T. Conklin Chris G. Demetriou Theo de Raadt	none
+V64.3.3.3	成员更替的长名单	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Previous NetBSD Core Group members: Allen Barrett Allen Briggs	none
+V64.3.3.3	历任名录前十名	https://www.netbsd.org/people/core.html	联网	A	2026-10-31	Previous NetBSD Core Group members: Allen Barrett Allen Briggs <briggs@NetBSD.org> J.T. Conklin Chris G. Demetriou Theo de Raadt Quentin Garnier <cube@NetBSD.org> Adam Glass Jun-ichiro itojun Hagino Charles Hannum	none
 V64.3.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“核心团队的形成”；本节题为其下位论题	none
 V64.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.3.4	核心对外的单一联络口	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	The NetBSD Core Group can be reached at: <core@NetBSD.org>.	none
@@ -483,7 +489,7 @@ V64.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.3.4.5	明显修补的免审边界	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	"Obvious" fixes can be committed without any prior discussion or review.	none
 V64.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“开发者成员制度”；本节题为其下位论题	none
 V64.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.3.5.1	开发者即基金会成员	https://www.netbsd.org/developers/	联网	A	2026-10-30	NetBSD developers are members of the NetBSD Foundation and have CVS commit privileges.	none
+V64.3.5.1	开发者即基金会成员	https://www.netbsd.org/foundation/policies/application-procedure.html	联网	A	2026-10-30	The form may be filled out in consultation with one or more developers, but is intended to be primarily filled out by the applicant.	none
 V64.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“开发者成员制度”；本节题为其下位论题	none
 V64.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.5.2	推荐人制度的入口	https://www.netbsd.org/foundation/policies/application-procedure.html	联网	A	2026-10-30	Existing members decide to sponsor a potential member.	none
@@ -513,7 +519,7 @@ V64.3.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.3.6.5	五百人触发的制宪门槛	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	At such time as the number of Active Members reaches 500, a new Constitution shall be proposed	none
 V64.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“提交者与代码提交权”；本节题为其下位论题	none
 V64.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.3.7.1	提交权的技术边界	https://www.netbsd.org/developers/	联网	A	2026-10-30	have CVS commit privileges	none
+V64.3.7.1	提交权的技术边界	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Commit only code you are familiar with.	none
 V64.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“提交者与代码提交权”；本节题为其下位论题	none
 V64.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.7.2	熟悉范围内的提交义务	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	Commit only code you are familiar with.	none
@@ -531,7 +537,7 @@ V64.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.3.8.1	邮件作为主要议事场	https://www.netbsd.org/about/	联网	A	2026-10-30	NetBSD was one of the first major open source projects to be organized collaboratively entirely over the internet	none
 V64.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“邮件列表与异步决策”；本节题为其下位论题	none
 V64.3.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.3.8.2	技术列表的前置讨论	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	All other (i.e. "non-obvious") fixes *should* have a review.	none
+V64.3.8.2	技术列表的前置讨论	https://www.netbsd.org/developers/commit-guidelines.html	联网	A	2026-10-30	All other (i. e. "non-obvious") fixes should have a review.	none
 V64.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“邮件列表与异步决策”；本节题为其下位论题	none
 V64.3.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.8.3	电子表决的合法形式	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	which notice and vote may take place by electronic means	none
@@ -580,9 +586,10 @@ V64.3.11.2	历任核心名单的跨度	https://www.netbsd.org/people/core.html	�
 V64.3.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“核心团队的长期演变”；本节题为其下位论题	none
 V64.3.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.11.3	创始成员的去职轨迹	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Theo de Raadt Quentin Garnier <cube@NetBSD.org> Adam Glass	none
+V64.3.11.3	现任核心七人名单	https://www.netbsd.org/people/core.html	联网	A	2026-10-31	The current NetBSD Core Group is: Christos Zoulas Chuck Silvers Martin Husemann Matthew Green Rin Okuyama Robert Elz Taylor R. Campbell	none
 V64.3.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“核心团队的长期演变”；本节题为其下位论题	none
 V64.3.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.3.11.4	核心席位规模的稳定	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Chuck Silvers <chs@NetBSD.org> Martin Husemann <martin@NetBSD.org>	none
+V64.3.11.4	核心席位规模的稳定	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	The current NetBSD Core Group is: Christos Zoulas	none
 V64.3.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 11 节“核心团队的长期演变”；本节题为其下位论题	none
 V64.3.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.3.11.5	核心任期条文的空缺	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Previous NetBSD Core Group members:	none
@@ -618,7 +625,7 @@ V64.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.4.1.5	税法身份的取得过程	https://www.netbsd.org/about/	联网	A	2026-10-30	The NetBSD Foundation is incorporated in the United States as a tax-exempt corporation	none
 V64.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 基金会的成立”；本节题为其下位论题	none
 V64.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.4.2.1	特许设立的年份记载	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	with the task of overseeing core NetBSD project services, promoting the project within industry and the open source community, and holding intellectual property rights on much of the NetBSD code base	none
+V64.4.2.1	特许设立的年份记载	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	The NetBSD Foundation was chartered in 1995, with the task of overseeing core NetBSD project services	none
 V64.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 基金会的成立”；本节题为其下位论题	none
 V64.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.2.2	特拉华州的注册地	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation is incorporated in the State of Delaware, and is governed by a set of bylaws.	none
@@ -628,6 +635,8 @@ V64.4.2.3	非营利的税法身份	https://www.netbsd.org/foundation/	联网	A	2
 V64.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 基金会的成立”；本节题为其下位论题	none
 V64.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.2.4	设立任务的四项内容	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Day-to-day operations of the project are handled by volunteers.	none
+V64.4.2.4	设立任务之二：对外推广	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-31	promoting the project within industry and the open source community	none
+V64.4.2.4	设立任务之三：持有知识产权	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-31	holding intellectual property rights on much of the NetBSD code base	none
 V64.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“NetBSD 基金会的成立”；本节题为其下位论题	none
 V64.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.2.5	日常事务的志愿承担	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation serves as the legal entity which owns several of the NetBSD Project servers, handles donations of money, services, hardware or time to the project, and administers NetBSD copyrights.	none
@@ -697,6 +706,7 @@ V64.4.7.1	法人权与技术权的分置	https://www.netbsd.org/foundation/	联�
 V64.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“Board 与 核心团队 的关系”；本节题为其下位论题	none
 V64.4.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.7.2	席位交叠的人员构成	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Taylor R. Campbell<riastradh@NetBSD.org>	none
+V64.4.7.2	Campbell 在基金会职员页	https://www.netbsd.org/foundation/	联网	A	2026-10-31	Assistant Treasurer: Taylor R. Campbell	none
 V64.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“Board 与 核心团队 的关系”；本节题为其下位论题	none
 V64.4.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.7.3	委员会的中介环节	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Various committees have been set up by the Board	none
@@ -711,16 +721,16 @@ V64.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.4.8.1	职员的法定四职配置	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The office holders of the Foundation are:	none
 V64.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“基金会执行机构”；本节题为其下位论题	none
 V64.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.4.8.2	会长作为法人代表	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The President shall be the chief executive officer of the Corporation and shall have general supervision over the business and operations of the Corporation	none
+V64.4.8.2	会长作为法人代表	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The President shall be the chief executive officer of the Foundation	none
 V64.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“基金会执行机构”；本节题为其下位论题	none
 V64.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.4.8.3	秘书的会议记录职责	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The Secretary shall record all votes of the Board and the minutes of the meetings of the Board	none
+V64.4.8.3	秘书的会议记录职责	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The Secretary shall keep accurate records of the acts and proceedings of all meetings of the Members and Directors.	none
 V64.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“基金会执行机构”；本节题为其下位论题	none
 V64.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.4.8.4	司库的资金保管责任	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The Treasurer shall be responsible for corporate funds and securities	none
+V64.4.8.4	司库的资金保管责任	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The Treasurer shall have custody of all corporate funds and financial records	none
 V64.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“基金会执行机构”；本节题为其下位论题	none
 V64.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.4.8.5	委员会按需设立的弹性	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	The Board may, by resolution adopted by a majority of the Directors, establish one or more committees to consist of one or more Directors of the Corporation.	none
+V64.4.8.5	委员会按需设立的弹性	https://www.netbsd.org/foundation/bylaws.html	联网	A	2026-10-30	the Board of Directors may, by resolution, establish one or more Project Management Committees	none
 V64.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“服务器、基础设施与项目资源”；本节题为其下位论题	none
 V64.4.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.9.1	服务器的法人所有权	https://www.netbsd.org/foundation/	联网	A	2026-10-30	owns several of the NetBSD Project servers	none
@@ -778,6 +788,7 @@ V64.4.12.3	年度财报的公开序列	https://www.netbsd.org/foundation/	联网
 V64.4.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“基金会财务与法人记录”；本节题为其下位论题	none
 V64.4.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.12.4	年度财报的连续发布	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Financial report:  2025	none
+V64.4.12.4	财报序列起点	https://www.netbsd.org/foundation/	联网	A	2026-10-31	Financial report: 2004	none
 V64.4.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“基金会财务与法人记录”；本节题为其下位论题	none
 V64.4.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.12.5	审议与决议的档案	https://www.netbsd.org/foundation/	联网	A	2026-10-30	The NetBSD Foundation has passed the following resolutions:	none
@@ -807,7 +818,8 @@ V64.4.14.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.4.14.3	理事任期的滚动更替	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Member of board: 2023-now;  Term expires: 2027;  Last elected: 2025	none
 V64.4.14.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 14 节“NetBSD 基金会的制度演变”；本节题为其下位论题	none
 V64.4.14.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.4.14.4	委员会的生灭记录	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Formation of administration-exec@NetBSD.org	none
+V64.4.14.4	委员会的生灭记录	https://www.netbsd.org/foundation/	联网	A	2026-10-30	Formation of administration-exec@NetBSD.org (2003/01/14, amended 2003/03/11, dissolved 2008/03, written resolution 2017/02/15)	none
+V64.4.14.4	决议全条含解散标记	https://www.netbsd.org/foundation/	联网	A	2026-10-31	Formation of administration-exec@NetBSD.org (2003/01/14, amended 2003/03/11, dissolved 2008/03, written resolution 2017/02/15)	none
 V64.4.14.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 14 节“NetBSD 基金会的制度演变”；本节题为其下位论题	none
 V64.4.14.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.4.14.5	法人形式二十余年的延续	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	The NetBSD Foundation was chartered in 1995, with the task of overseeing core NetBSD project services	none
@@ -886,6 +898,7 @@ V64.5.5.4	开发者目标的自陈差异	https://www.openbsd.org/goals.html	联�
 V64.5.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“项目领导与子系统责任制”；本节题为其下位论题	none
 V64.5.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.5.5.5	无章程的组织形态	https://www.openbsd.org/index.html	联网	A	2026-10-30	OpenBSD is freely available from our download sites.	none
+V64.5.5.5	协调人领衔	https://en.wikipedia.org/wiki/OpenBSD	联网	B	2026-10-31	with commit rights being awarded on merit and de Raadt acting as coordinator	none
 V64.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“代码审查与技术责任”；本节题为其下位论题	none
 V64.5.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.5.6.1	无集中审查平台的年代	https://www.openbsd.org/anoncvs.html	联网	A	2026-10-30	CVS is the source code control system used to manage the OpenBSD source tree.	none
@@ -918,7 +931,8 @@ V64.5.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.5.7.5	附件类型的白名单	https://www.openbsd.org/mail.html	联网	A	2026-10-30	A small number of attachment types are allowed on the mailing lists to support sending patches	none
 V64.5.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“黑客松与开发组织”；本节题为其下位论题	none
 V64.5.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.5.8.1	首次黑客松的地点	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	In June of 1999, OpenBSD held the first hackathon. ... A bunch of developers from around the world congregated into a house in Calgary	none
+V64.5.8.1	首次黑客松的地点	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	In June of 1999, OpenBSD held the first hackathon.	none
+V64.5.8.1	首届黑客松地点	https://www.openbsd.org/hackathons.html	联网	A	2026-10-31	A bunch of developers from around the world congregated into a house in Calgary	none
 V64.5.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“黑客松与开发组织”；本节题为其下位论题	none
 V64.5.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.5.8.2	名称拟造者的两说	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	either Theo or Niels Provos had coined this new word hackathon	none
@@ -1003,9 +1017,10 @@ V64.6.1.3	媒体归因的粗暴风格	04-现代研究文献/historical_claims.du
 V64.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“Theo de Raadt 在 NetBSD 的角色与去职”；本节题为其下位论题	none
 V64.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.6.1.4	历任名录中的除名	https://www.netbsd.org/people/core.html	联网	A	2026-10-30	Theo de Raadt	none
+V64.6.1.4	历任名录中的 de Raadt	https://www.netbsd.org/people/core.html	联网	A	2026-10-31	Previous NetBSD Core Group members: Allen Barrett Allen Briggs <briggs@NetBSD.org> J.T. Conklin Chris G. Demetriou Theo de Raadt	none
 V64.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“Theo de Raadt 在 NetBSD 的角色与去职”；本节题为其下位论题	none
 V64.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.6.1.5	去职叙述的空白处	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	NetBSD took its roots from the original UCB 4.3BSD via the Net/2 release and 386BSD.	none
+V64.6.1.5	去职叙述的空白处	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding	none
 V64.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“1995 年分叉与个人权威的形成”；本节题为其下位论题	none
 V64.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.6.2.1	分叉发生的组织条件	04-现代研究文献/historical_claims.duckdb｜claim=CL-4-100	史料	A	2026-10-30	1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。	none
@@ -1033,6 +1048,7 @@ V64.6.3.3	领导与项目名义的绑定	https://www.openbsd.org/donations.html	
 V64.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“创始人与长期项目领导”；本节题为其下位论题	none
 V64.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.6.3.4	无继任安排的空白	https://www.openbsdfoundation.org/	联网	A	2026-10-30	The OpenBSD Foundation is a Canadian not-for-profit corporation which exists to support OpenBSD and related projects	none
+V64.6.3.4	领导延续的事实性	https://en.wikipedia.org/wiki/OpenBSD	联网	B	2026-10-31	with commit rights being awarded on merit and de Raadt acting as coordinator	none
 V64.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“创始人与长期项目领导”；本节题为其下位论题	none
 V64.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.6.3.5	创始叙述的自我克制	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Obviously, each developer working on OpenBSD has their own aims and priorities	none
@@ -1194,16 +1210,17 @@ V64.7.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.7.1.2	捐款直寄个人的惯例	https://www.openbsd.org/donations.html	联网	A	2026-10-30	Cheques: Theo de Raadt, 812 23rd Ave SE, Calgary, Alberta, Canada T2G 1N8	none
 V64.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“基金会成立前的项目资源形态（1995–2007）”；本节题为其下位论题	none
 V64.7.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.7.1.3	加拿大税制的抵税限制	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	Canadian tax structure does not consider "software projects" eligible for charitable contribution	none
+V64.7.1.3	加拿大税制的抵税限制	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	We can issue receipts for donations which while not deductible as charitable donations in Canada may be used for accounting and/or tax purposes.	none
 V64.7.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“基金会成立前的项目资源形态（1995–2007）”；本节题为其下位论题	none
 V64.7.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.1.4	实物与机位的捐入	https://www.openbsd.org/donations.html	联网	A	2026-10-30	In addition, contributions of funds or hardware can also be made directly to the OpenBSD Project	none
 V64.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“基金会成立前的项目资源形态（1995–2007）”；本节题为其下位论题	none
 V64.7.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.7.1.5	法人缺位的处置办法	https://lwn.net/Articles/243183/	联网	B	2026-10-30	The OpenBSD Foundation has been formed for the purpose of supporting the OpenBSD project	none
+V64.7.1.5	法人缺位的处置办法	https://lwn.net/Articles/243183/	联网	B	2026-10-30	it will act as a single point of contact for persons and organizations requiring a legal entity to deal with when they wish to support OpenBSD in any way.	none
 V64.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“OpenBSD 基金会的成立（2007）”；本节题为其下位论题	none
 V64.7.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.2.1	公告的日期与署名人	https://lwn.net/Articles/243183/	联网	B	2026-10-30	Date : Wed, 25 Jul 2007 17:44:29 -0600	none
+V64.7.2.1	公告的署名人与发出日	https://lwn.net/Articles/243183/	联网	A	2026-10-30	From : Bob Beck <beck-AT-openbsd.org>	none
 V64.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“OpenBSD 基金会的成立（2007）”；本节题为其下位论题	none
 V64.7.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.2.2	法团组建的完成时点	https://lwn.net/Articles/243183/	联网	B	2026-10-30	The OpenBSD Foundation is pleased to announce today it has completed its organization as a Canadian federal non-profit corporation and is ready for public interaction.	none
@@ -1275,7 +1292,7 @@ V64.7.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.7.6.4	资助与治理的分野	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	The Foundation will work in cooperation with the OpenBSD development team	none
 V64.7.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“OpenSSH、OpenBGPD 与其他相关项目”；本节题为其下位论题	none
 V64.7.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.7.6.5	关联名单的后续增补	https://www.openbsdfoundation.org/	联网	A	2026-10-30	rpki-client	none
+V64.7.6.5	关联名单的后续增补	https://www.openbsdfoundation.org/	联网	A	2026-10-30	related projects such as OpenSSH, OpenBGPD, OpenNTPD, OpenSMTPD, LibreSSL, mandoc and rpki-client	none
 V64.7.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“基础设施支出”；本节题为其下位论题	none
 V64.7.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.7.1	主站硬件的逐年更新	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded hardware upgrades and replacements for the primary site.	none
@@ -1297,6 +1314,8 @@ V64.7.8.1	参会差旅费用的承担	https://www.openbsdfoundation.org/activiti
 V64.7.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“黑客松与开发者活动”；本节题为其下位论题	none
 V64.7.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.8.2	三地连办的会议布局	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded developer expenses for: p2k25: ports hackathon, Sep 12 - Sep 19, 2025, Ottery St. Mary, England	none
+V64.7.8.2	三地连办的会议布局	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	j2k25: japan hackathon, May 18 - 25, 2025, Nara, Japan	none
+V64.7.8.2	三地连办的会议布局	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	h2k25: hackathon, Nov 8 - 14, 2025, Coimbra, Portugal	none
 V64.7.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“黑客松与开发者活动”；本节题为其下位论题	none
 V64.7.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.8.3	差旅与住宿的分担	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	most developers pay for their own travel	none
@@ -1365,7 +1384,7 @@ V64.7.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.7.12.4	董事名册的公开记载	https://lwn.net/Articles/243183/	联网	B	2026-10-30	The foundation directors may be contacted via email at directors@openbsdfoundation.org.	none
 V64.7.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 12 节“基金会与 Theo de Raadt 的关系”；本节题为其下位论题	none
 V64.7.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.7.12.5	经费话语权的分布	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The Foundation will work in cooperation with the OpenBSD development team	none
+V64.7.12.5	经费话语权的分布	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	The Foundation will work in cooperation with the OpenBSD development team to ensure funds are applied to areas of greatest need	none
 V64.7.13.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 13 节“基金会与技术决策的边界”；本节题为其下位论题	none
 V64.7.13.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.7.13.1	宗旨不含技术裁决	https://www.openbsdfoundation.org/	联网	A	2026-10-30	the corporation's objects are to support and further the development, advancement, and maintenance of free software	none
@@ -1395,7 +1414,7 @@ V64.7.14.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.7.14.4	开支压缩的长期原则	https://www.openbsdfoundation.org/donations.html	联网	A	2026-10-30	We endeavour to keep our overhead as small as possible.	none
 V64.7.14.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 14 节“OpenBSD 基金会的长期资源治理”；本节题为其下位论题	none
 V64.7.14.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.7.14.5	多年账目的序列缺失	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation funded developer support.	none
+V64.7.14.5	多年账目的序列缺失	https://www.openbsdfoundation.org/activities.html	联网	A	2026-10-30	The foundation provided funding for developer support.	none
 V64.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“2003 年 DragonFly BSD 的形成”；本节题为其下位论题	none
 V64.8.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.1.1	分叉基准的两个时点	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
@@ -1410,7 +1429,7 @@ V64.8.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.8.1.4	路线分歧的技术动因	04-现代研究文献/historical_claims.duckdb｜claim=CL-RM-000018	史料	A	2026-10-30	DragonFlyBSD 于 2003 年由 Matthew Dillon 从 FreeBSD 4.x fork，因 SMP 路线分歧而创立	none
 V64.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“2003 年 DragonFly BSD 的形成”；本节题为其下位论题	none
 V64.8.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.1.5	原定位口号的失效	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	but this description has since become obsolete	none
+V64.8.1.5	原定位口号的失效	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	but this description has long since become obsolete	none
 V64.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“FreeBSD 分叉后的项目组织”；本节题为其下位论题	none
 V64.8.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.2.1	地理上分散的团队	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	The DragonFly Project, like many open source projects, is a technical project supported by a team of geographically separated people.	none
@@ -1440,7 +1459,7 @@ V64.8.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.8.3.4	议事场所的多元分布	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	discussion of the project is possible on a variety of newsgroups, mailing lists and IRC	none
 V64.8.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“开发共同体的形成”；本节题为其下位论题	none
 V64.8.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.3.5	名册编纂的取舍标准	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	listed here are some of the people who have made this project possible.	none
+V64.8.3.5	名册编纂的取舍标准	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Listed here are some of the people who have made this project possible.	none
 V64.8.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“无正式开发者准入程序”；本节题为其下位论题	none
 V64.8.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.4.1	开发者准入程序的空档	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	There are no restrictions on who can contribute or how you can contribute	none
@@ -1452,16 +1471,18 @@ V64.8.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.8.4.3	提交权的默会授予	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Nuno Antunes <nant@>	none
 V64.8.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“无正式开发者准入程序”；本节题为其下位论题	none
 V64.8.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.4.4	名册滞后的治理含义	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	To send an email to one of the committers append dragonflybsd.org.	none
+V64.8.4.4	名册滞后的治理含义	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Here's the list but it may be incomplete.	none
 V64.8.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“无正式开发者准入程序”；本节题为其下位论题	none
 V64.8.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.4.5	身份与权限的分离	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Additional contributors	none
 V64.8.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“submit 邮件列表”；本节题为其下位论题	none
 V64.8.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.5.1	补丁通道的邮件流转	03-原始史料库/11-邮件列表史料/04-dragonfly/duckdb/dragonfly_mail.duckdb｜messages.id=1393	史料	A	2026-10-30	submit and this site are silently tied together	none
+V64.8.5.1	补丁通道的邮件流转	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	Subscribers to these lists will receive all output, but to post to those lists, you need to have an account.	none
 V64.8.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“submit 邮件列表”；本节题为其下位论题	none
 V64.8.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.5.2	列表与缺陷库的绑定	03-原始史料库/11-邮件列表史料/04-dragonfly/duckdb/dragonfly_mail.duckdb｜messages.id=3919	史料	A	2026-10-30	Issue #2333 has been reported by Justin C. Sherrill.	none
+V64.8.5.2	列表与缺陷库的绑定	03-原始史料库/11-邮件列表史料/04-dragonfly/duckdb/dragonfly_mail.duckdb｜messages.id=1393	史料	A	2026-10-30	Issue #2333 has been reported by Justin C. Sherrill.	none
+V64.8.5.2	列表与缺陷库的绑定	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The bugs@ and submit@ lists are tied into the bug tracker at bugs.dragonflybsd.org .	none
 V64.8.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“submit 邮件列表”；本节题为其下位论题	none
 V64.8.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.5.3	补丁邮件的垃圾过滤	03-原始史料库/11-邮件列表史料/04-dragonfly/duckdb/dragonfly_mail.duckdb｜messages.id=2191	史料	A	2026-10-30	A gross hack would be to filter all inbound submit@ mail through a generic spam processing suite	none
@@ -1515,7 +1536,7 @@ V64.8.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.8.8.4	权限集中的制度描述	旧大纲-20261023/第11卷-dragonflybsd的历史/第240章-dragonfly1x的10发布与lwkt子系统/240.6-dragonfly的治理结构20032010/240.6.1-dillon主导的治理结构特征.md	史料	A	2026-10-30	DragonFly 治理结构高度集中于 Dillon 一人——无 Core Team 选举机制、无 Foundation 治理、无正式投票流程，技术决策由 Dillon 直接定夺，committer 权限由 Dillon 个人授予。	none
 V64.8.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“开发者责任与项目协作”；本节题为其下位论题	none
 V64.8.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.8.5	协作记录的残缺之处	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	We list donors here but we don't link back	none
+V64.8.8.5	协作记录的残缺之处	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	discussion of the project is possible on a variety of newsgroups, mailing lists and IRC	none
 V64.8.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 9 节“技术讨论与项目决策”；本节题为其下位论题	none
 V64.8.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.9.1	议事场所的实际排列	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	discussion of the project is possible on a variety of newsgroups, mailing lists and IRC	none
@@ -1557,10 +1578,10 @@ V64.8.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.8.11.3	社区规模的逐年收缩	旧大纲-20261023/第11卷-dragonflybsd的历史/第246章-dragonfly3x时代的治理与dillon主导/246.1-dragonfly的治理与dillon个人主导20112018/246.1.1-dillon主导的治理结构特征.md	史料	A	2026-10-30	活跃 committer 数从 2012 年 35 人降至 2015 年 28 人	none
 V64.8.11.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 11 节“DragonFly 治理制度的长期变化”；本节题为其下位论题	none
 V64.8.11.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.11.4	制度文本的空白状态	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.1-dillon主导的治理结构特征.md	史料	A	2026-10-30	Dillon 作为创始人对技术路线拥有最终裁定权	none
+V64.8.11.4	制度文本的空白状态	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.1-dillon主导的治理结构特征.md	史料	A	2026-10-30	DragonFly 无 Core Team 选举机制、无 Foundation 法律实体（dragonflybsd.org/foundation/ 页面 404）、无公开 bylaws	none
 V64.8.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 11 节“DragonFly 治理制度的长期变化”；本节题为其下位论题	none
 V64.8.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.11.5	悬赏制度的引入年份	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	Welcome to sponsor the projects there and/or create new code bounties.	none
+V64.8.11.5	悬赏制度的引入年份	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	though these are only preliminary and subject to change	none
 V64.8.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 12 节“尚无独立非营利基金会的制度背景”；本节题为其下位论题	none
 V64.8.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.12.1	未设非营利的自述	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	DragonFly is not yet incorporated as a non-profit, meaning no tax benefit is available for donating time or goods to the project.	none
@@ -1584,13 +1605,13 @@ V64.8.13.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.8.13.2	捐赠名单的逐年公示	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	We list donors here but we don't link back; this is not for advertising.	none
 V64.8.13.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 13 节“无基金会时的替代资源形态：创始人主持与商业赞助”；本节题为其下位论题	none
 V64.8.13.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.13.3	悬赏赞助的替代路径	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	Welcome to sponsor the projects there and/or create new code bounties.	none
+V64.8.13.3	悬赏赞助的替代路径	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	One could for example imagine developers accepting sponsorship on a wholly different basis, or non-financial rewards for completing a bounty project, like free hardware (we love that!).	none
 V64.8.13.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 13 节“无基金会时的替代资源形态：创始人主持与商业赞助”；本节题为其下位论题	none
 V64.8.13.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.8.13.4	硬件捐赠的交易免责	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	The DragonFly BSD Project is not responsible for any transactions.	none
 V64.8.13.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 13 节“无基金会时的替代资源形态：创始人主持与商业赞助”；本节题为其下位论题	none
 V64.8.13.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.8.13.5	创始人主持的收支	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	you can make non-tax-deductible donations through PayPal, or send to paypal@dragonflybsd.org	none
+V64.8.13.5	创始人主持的收支	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	You can use the donate-button to make a non-tax-deductible donation through PayPal, or send to paypal@dragonflybsd.org.	none
 V64.9.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“Matt Dillon 与 FreeBSD 时期”；本节题为其下位论题	none
 V64.9.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.9.1.1	提交权被撤的处分	04-现代研究文献/historical_claims.duckdb｜claim=CL-RM-010090	史料	A	2026-10-30	1999 年 FreeBSD Core 就 Matt Dillon 惩戒声明：处罚源于违背信任而非失去尊重，其违反提交前复审惯例致 commit 权被撤	none
@@ -1621,6 +1642,7 @@ V64.9.2.4	初始团队的核心成员	https://www.dragonflybsd.org/team/	联网	
 V64.9.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 2 节“2003 年分叉与个人领导的形成”；本节题为其下位论题	none
 V64.9.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.9.2.5	领导合法性的根由	04-现代研究文献/historical_claims.duckdb｜claim=CL-RM-000017	史料	A	2026-10-30	主导 HAMMER2 文件系统设计	none
+V64.9.2.5	领导合法性的根由	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
 V64.9.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 3 节“创始人角色与项目连续性”；本节题为其下位论题	none
 V64.9.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.9.3.1	创始人的多重职能	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is also the principal code contributor to DragonFly BSD and supports the website and other online resources for this project.	none
@@ -1710,7 +1732,7 @@ V64.9.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V64.9.8.4	替代解释的优先级	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	Replicability implies forkability, and forkability implies consensus.	none
 V64.9.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“Matt Dillon 与 BDFL 概念”；本节题为其下位论题	none
 V64.9.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.9.8.5	标签使用的审慎态度	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	DragonFly is not yet incorporated as a non-profit	none
+V64.9.8.5	标签使用的审慎态度	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
 V64.9.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 9 节““独裁”概念在 DragonFly 中的适用范围”；本节题为其下位论题	none
 V64.9.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.9.9.1	独裁一词的日常泛用	https://producingoss.com/en/social-infrastructure.html	联网	B	2026-10-30	This may seem like a surprising claim, considering how common it is	none
@@ -1746,7 +1768,7 @@ V64.9.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V64.9.11.1	账户与硬件的经手	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	all money goes to DragonFly hardware or code bounties	none
 V64.9.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 11 节“创始人领导与项目资源管理”；本节题为其下位论题	none
 V64.9.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V64.9.11.2	悬赏资金的调度权限	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	Welcome to sponsor the projects there and/or create new code bounties.	none
+V64.9.11.2	悬赏资金的调度权限	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	Matthew Dillon manages the account separately, and all money goes to DragonFly hardware or code bounties	none
 V64.9.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 11 节“创始人领导与项目资源管理”；本节题为其下位论题	none
 V64.9.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V64.9.11.3	捐赠名册的维护台账	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	We list donors here but we don't link back; this is not for advertising.	none
