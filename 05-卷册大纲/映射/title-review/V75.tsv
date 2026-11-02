@@ -261,3 +261,99 @@ V75.5.11.3	越界解释的防范约束	形态	方法论题：人格化叙事替�
 V75.5.12.1	缺口登记的建卡惯例	形态	方法论题：史料缺口逐项建卡使可交接可补查；离线核查。			2026-11-03
 V75.5.12.2	不可确定问题的存疑处置	形态	方法论题：不可确定事项以存疑标注收场防推测充结论；离线核查。			2026-11-03
 V75.5.12.3	缺口补查的推进安排	形态	方法论题：补查按渠道清单逐项推进并记录在案；离线核查。			2026-11-03
+V75.6.1.1	发行档的官方存目	确证	官方发行页逐版存列实测成立：freebsd.org/releases 自“15.0 (December 2, 2025)”逐版列至“1.0 (November, 1993)”，分类句逐字“FreeBSD releases are classified into Production Releases and Legacy Releases.”——官方存目即版本档案的可信起点成立。		https://www.freebsd.org/releases/	2026-11-03
+V75.6.1.2	版本序列的逐版可查	确证	“各版说明与勘误逐版可查”实测成立：发行页较新各版均挂 Announcement、Release Notes、Installation Instructions、Errata、Signed Checksums 等链接（如 15.0 条目），旧版（10.x 及更早）改挂 Hardware Notes、Migration Guide 等对应件——可查范围构成版本档案的实体边界。		https://www.freebsd.org/releases/	2026-11-03
+V75.6.1.3	历史版本的镜像分布	确证	TUHS 官网自述逐字“Its aims are to preserve and maintain historical UNIX artifacts, and to provide a forum for discussion of UNIX and its history.”且注明 Unix Archive 可于多处镜像站取用——历史器物档案由多地镜像分担存放的格局有一手自述。		https://www.tuhs.org/	2026-11-03
+V75.6.1.4	快照集合的时段跨度	确证	TUHS Archive 实测：顶层含 Applications／Distributions／Documentation／Memorabilia／Recordings／Tools 六域，Distributions 下列 Boot_Images、DEC、Early_Networking、IBM、Research、Sun、UCB、UNSW、USDL 谱系目录并附 RELEASE_DATES 逐版日期清单——归档快照覆盖项目全程时段、覆盖面决定时段分辨率成立。		https://www.tuhs.org/Archive/; https://www.tuhs.org/Archive/Distributions/	2026-11-03
+V75.6.2.1	翻译史料的来源构成	形态	方法论题（仓库、列表与口述三类来源构成与取材次序为编目规程，无具名外部断言）；离线核查（6.2 节锚已在 outline.txt 4721 行实测定位）。			2026-11-03
+V75.6.2.2	多源交叉的完整性比对	形态	方法论题（提交记录完整性以多源交叉验证为规程）；离线核查（6.2 节锚已在 outline.txt 4721 行实测定位）。			2026-11-03
+V75.6.2.3	口述参与的记忆偏差	形态	方法论题（口述偏差引证时明示为规程）；离线核查（6.2 节锚已在 outline.txt 4721 行实测定位）。			2026-11-03
+V75.6.2.4	旧版译本的存档检索	确证	“旧版文档经停用归档仍可检索”实测成立：FreeBSD 列表存档站首页逐字“Browse archives of all lists converted to mlmmj including decommissioned ones”——已停用列表纳入存档检索面，译本序列完整度可经停用列表复原。		https://lists.freebsd.org/	2026-11-03
+V75.6.3.1	新闻组存档的镜像依赖	确证	“散见各端且依赖第三方镜像”的实证在案：Google 官宣 Google Groups 自 2024-02-22 起终止 Usenet 支持（BleepingComputer 2024-01-02 报道逐字转述 Google 支持文档“Over the last several years, legitimate activity in text-based Usenet groups has declined significantly because users have moved to more modern technologies and formats such as social media and web-based forums”），并注明“This change also marks the end of Google's Network News Transfer Protocol (NNTP) server services, including its content peering with other NNTP servers.”——第三方托管存档可整体撤出，镜像依赖与可证范围风险成立。		https://www.bleepingcomputer.com/news/google/google-groups-is-ending-support-for-usenet-to-combat-spam/	2026-11-03
+V75.6.3.2	列表存档的不可撤回	确证	NetBSD 官方列表页逐字“Any and all posts to our mailing lists are archived across the internet virtually forever and are impossible for us to remove.”——存档的封闭性界定可证上限有官方一手自述。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.6.3.3	体裁层级的引证强度	形态	方法论题（技术讨论与用户问答的可证层级划分）；离线核查（6.3 节锚已在 outline.txt 4722 行实测定位）。			2026-11-03
+V75.6.3.4	界外发言的体裁排除	形态	方法论题（界外发言移出主列的范围界定）；离线核查（6.3 节锚已在 outline.txt 4722 行实测定位；OpenBSD 列表页章程语体如“This is not a 'tech support' forum”为体裁排除的章程实例，见 title-evidence/V75.tsv，题面无具名年代断言）。			2026-11-03
+V75.6.4.1	低带宽环境的分发策略	形态	方法论题（实体介质与镜像策略的分发史整理，属本卷旧树 372.3.4 内部考据面）；离线核查（6.4 节锚已在 outline.txt 4723 行实测定位）。			2026-11-03
+V75.6.4.2	活跃者偏差的取样盲点	形态	方法论题（社区档案偏重活跃成员的取样盲点声明）；离线核查（6.4 节锚已在 outline.txt 4723 行实测定位）。			2026-11-03
+V75.6.4.3	归档镜像的浏览接口	确证	TUHS 官网逐字“Browse the old Unix source code via a web interface at the Unix Tree.”——归档镜像提供逐层浏览接口、接口形态决定检得方式实测在案。		https://www.tuhs.org/	2026-11-03
+V75.6.4.4	分发渠道的时段演化	确证	版本日期条目对表实测成立：freebsd.org/releases 自“15.0 (December 2, 2025)”逐版列至“1.0 (November, 1993)”，dragonflybsd.org/releases 逐版带日期条目（“2.0.0 (July 20, 2008)”至“6.4.2 (May 9, 2025)”）——演化序列以版本日期条目对表可行。		https://www.freebsd.org/releases/; https://www.dragonflybsd.org/releases/	2026-11-03
+V75.6.5.1	出版书目的交叉验证	形态	方法论题（出版商书目与社区记录交叉验证为立目条件，属本卷旧树 367.6.4 内部考据面）；离线核查（6.5 节锚已在 outline.txt 4724 行实测定位）。			2026-11-03
+V75.6.5.2	藏书完整性的评估尺度	形态	方法论题（保存完整性分级评估防以在架书目代全貌）；离线核查（6.5 节锚已在 outline.txt 4724 行实测定位）。			2026-11-03
+V75.6.5.3	周年回顾的出版叙述	确证	官方 press 存档页实测按年月组织媒体报道（可见区间 2010 年 2 月至 2026 年 7 月），周年回顾条目逐字在案：“Happy 30th, FreeBSD!”（InfoWorld，2013 年 6 月，Deb Goodkin）——行业媒体周年叙述构成出版叙述并随官方存目成立。		https://www.freebsd.org/press/	2026-11-03
+V75.6.5.4	译本与成书的差异辨析	形态	方法论题（翻译记录与正式出版物差异辨析防混编书目）；离线核查（6.5 节锚已在 outline.txt 4724 行实测定位）。			2026-11-03
+V75.6.6.1	会议归档的年度序列	确证	BSDCan 官网实测自述“North America's Largest BSD Conference”，Archives 逐年归档 2004 至 2027 连续在列——年度序列是程序与论文检索的骨架成立。		https://www.bsdcan.org/	2026-11-03
+V75.6.6.2	论文宣读的现场留痕	形态	方法论题（与会记述与程序册对表规程）；离线核查（6.6 节锚已在 outline.txt 4725 行实测定位；press 页 BSDCan 2026 与会报告条目“Patrick McEvoy reports back from his visit to BSDCan 2026”为现场留痕实例）。			2026-11-03
+V75.6.6.3	视听材料的平台归集	确证	BSD Now 存档页逐字“687 episodes of BSD Now since the first episode, which aired on September 4th, 2013.”，各集带编号、日期、时长与主题——访谈与演讲音视频经平台归集、归集面决定可得范围成立。		https://www.bsdnow.tv/episodes	2026-11-03
+V75.6.6.4	会议程序的议程留档	确证	BSDCan 官网实测保留 Schedule（schedule.html）与 Call for papers（papers.html）入口且 Archives 覆盖 2004–2027——议程安排随会议站点留档成立。		https://www.bsdcan.org/	2026-11-03
+V75.6.7.1	报道与声明的双向核对	形态	方法论题（媒体报道与官方声明双向核对规程，属本卷旧树 363.19.4 内部考据面）；离线核查（6.7 节锚已在 outline.txt 4726 行实测定位）。			2026-11-03
+V75.6.7.2	报道条目的逐条编目	形态	方法论题（媒体条目登记体例）；离线核查（6.7 节锚已在 outline.txt 4726 行实测定位）。			2026-11-03
+V75.6.7.3	客观一致的双面评估	形态	方法论题（客观性与一致性分项评估随条目入档）；离线核查（6.7 节锚已在 outline.txt 4726 行实测定位）。			2026-11-03
+V75.6.7.4	快照时点的选点约束	确证	Wayback Machine available API 实测返回逐字“{"url": "freebsd.org", "archived_snapshots": {"closest": {"status": "200", "available": true, "url": "http://web.archive.org/web/20151231194633/http://www.freebsd.org/", "timestamp": "20151231194633"}}”——网页快照按时间戳存取、选点纪律决定快照证据效力有机器可读一手依据。		https://archive.org/wayback/available?url=freebsd.org&timestamp=2015	2026-11-03
+V75.6.8.1	实物档案的馆藏归属	形态	方法论题（归属调查为实物史料立卡前提）；离线核查（6.8 节锚已在 outline.txt 4727 行实测定位）。			2026-11-03
+V75.6.8.2	器物与软件的参证	形态	方法论题（硬件实物与同期软件对读互证补足纸面记载）；离线核查（6.8 节锚已在 outline.txt 4727 行实测定位）。			2026-11-03
+V75.6.8.3	展陈叙述的逐项比勘	形态	方法论题（博物馆展陈文字经档案逐项核对）；离线核查（6.8 节锚已在 outline.txt 4727 行实测定位）。			2026-11-03
+V75.6.9.1	链接失效的类型分账	形态	方法论题（断链按成因分账登记）；离线核查（6.9 节锚已在 outline.txt 4728 行实测定位）。			2026-11-03
+V75.6.9.2	缺页的快照接续补救	确证	Wayback Machine available API 实测（同 6.7.4）：按时间戳返回 status“200”可用快照，url 字段直指 20151231194633 存档副本——失效页面以存档快照接续的补救路径成立。		https://archive.org/wayback/available?url=freebsd.org&timestamp=2015	2026-11-03
+V75.6.9.3	档案缺失的诚信披露	形态	方法论题（无法补救缺失如实披露防以估计补文）；离线核查（6.9 节锚已在 outline.txt 4728 行实测定位）。			2026-11-03
+V75.6.10.1	公众认知的调查面	形态	方法论题（调研与问卷分散面的交叉验证，属本卷旧树 365.8.4 内部考据面）；离线核查（6.10 节锚已在 outline.txt 4729 行实测定位）。			2026-11-03
+V75.6.10.2	调研数据的逐项核查	形态	方法论题（真实性与样本代表性核查先于引用）；离线核查（6.10 节锚已在 outline.txt 4729 行实测定位）。			2026-11-03
+V75.6.10.3	口述框架的移植条件	形态	方法论题（记忆研究与口述框架移植须声明条件）；离线核查（6.10 节锚已在 outline.txt 4729 行实测定位）。			2026-11-03
+V75.6.10.4	纪念活动的记述材料	确证	官方 press 存档页实测含周年纪念条目序列：“Happy 30th, FreeBSD!”（InfoWorld，2013 年 6 月）、“FreeBSD Turns 26”（LWN.net，2019 年 6 月）等——周年与纪念活动的记述构成纪念史材料并随官方存目并陈成立。		https://www.freebsd.org/press/	2026-11-03
+V75.6.11.1	记录存在的证据位阶	形态	方法论题（传播记录证明到达而非接受的位阶区分）；离线核查（6.11 节锚已在 outline.txt 4730 行实测定位）。			2026-11-03
+V75.6.11.2	影响推断的指标上限	形态	方法论题（下载与引用只证下限影响）；离线核查（6.11 节锚已在 outline.txt 4730 行实测定位）。			2026-11-03
+V75.6.11.3	采用行为的独立求证	形态	方法论题（部署与运维证据独立求证不与记录混同）；离线核查（6.11 节锚已在 outline.txt 4730 行实测定位）。			2026-11-03
+V75.6.12.1	元数据维度的缺失面	形态	方法论题（提交元数据丢失性别族裔等维度的画像限度，属本卷旧树 299.1.4 内部考据结论）；离线核查（6.12 节锚已在 outline.txt 4731 行实测定位）。			2026-11-03
+V75.6.12.2	子项目贡献的低估	形态	方法论题（统计仅覆盖主仓的低估方向声明，同 299.1.4 内部考据）；离线核查（6.12 节锚已在 outline.txt 4731 行实测定位）。			2026-11-03
+V75.6.12.3	维护劳动的流水记录	确证	FreshPorts 实测：版面题“100 most recent commits (all timestamps are UTC)”，每条提交带提交者、port 名、版本与说明（如“audio/musicpd 0.24.18”）——端口维护的提交流水可见、流水为维护劳动最直接可见面成立。		https://www.freshports.org/	2026-11-03
+V75.6.12.4	最近提交的时点可见	确证	FreshPorts 同页实测逐字“All times are UTC”且逐条展示日期时点（如“Monday, 2 Nov 2026”“22:19”）——流水页展示最近提交与时点、时点可见性决定活跃判断效度成立。		https://www.freshports.org/	2026-11-03
+V75.6.13.1	劳动形态的记录偏向	形态	方法论题（记录体系偏向代码型劳动的可见性偏低）；离线核查（6.13 节锚已在 outline.txt 4732 行实测定位）。			2026-11-03
+V75.6.13.2	可见性差异的成因	形态	方法论题（载体分工与存档习惯的分层分析）；离线核查（6.13 节锚已在 outline.txt 4732 行实测定位）。			2026-11-03
+V75.6.13.3	无名贡献的补证途径	形态	方法论题（口述与旁证补录须留痕）；离线核查（6.13 节锚已在 outline.txt 4732 行实测定位）。			2026-11-03
+V75.6.14.1	提交数的计量限度	形态	方法论题（提交数只测变动频度、越出语境即失效）；离线核查（6.14 节锚已在 outline.txt 4733 行实测定位）。			2026-11-03
+V75.6.14.2	字数与流量的换算风险	形态	方法论题（翻译字数与镜像带宽跨类换算显式声明）；离线核查（6.14 节锚已在 outline.txt 4733 行实测定位）。			2026-11-03
+V75.6.14.3	存档体量的物质线索	形态	方法论题（归档体积与压缩量只作旁证）；离线核查（6.14 节锚已在 outline.txt 4733 行实测定位）。			2026-11-03
+V75.6.14.4	指标越界的典型后果	形态	方法论题（代理指标直证影响属越界使用）；离线核查（6.14 节锚已在 outline.txt 4733 行实测定位）。			2026-11-03
+V75.6.15.1	传播链条的载体齐全度	形态	方法论题（翻译、镜像、文档与教材四类载体的可证范围盘点）；离线核查（6.15 节锚已在 outline.txt 4734 行实测定位）。			2026-11-03
+V75.6.15.2	翻译序列的建档缺口	形态	项目工作状态题（“尚未建档，缺口已登记待补”为本卷登记态自述，非外部事实断言）；离线核查（6.15 节锚已在 outline.txt 4734 行实测定位）。			2026-11-03
+V75.6.15.3	基础设施面的登记缺位	形态	项目工作状态题（“未启动一手登记，缺位须显式声明”为登记态自述）；离线核查（6.15 节锚已在 outline.txt 4734 行实测定位）。			2026-11-03
+V75.6.15.4	计量边界的明文警示	形态	方法论题（计量不可证之处以声明收束）；离线核查（6.15 节锚已在 outline.txt 4734 行实测定位）。			2026-11-03
+V75.7.1.1	源码比对的同源判读	确证	比对结论作同源判定立证方式实测在案：Apple 官方内核架构文档逐字“The BSD layer is based on the BSD kernel, primarily FreeBSD.”（Kernel Programming Guide，页脚“Copyright © 2002, 2013 Apple Inc. All Rights Reserved.”）——承袭关系以一手厂商文档陈述化成立。		https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	2026-11-03
+V75.7.1.2	版权声明的承袭痕迹	确证	官方许可页逐字“Copyright 1992-2026 The FreeBSD Project.”——版权声明随代码流转留痕、声明缺落与否为判读扩散的物证面成立。		https://www.freebsd.org/copyright/freebsd-license/	2026-11-03
+V75.7.1.3	字符串比对的技术手段	形态	方法论题（以字符串提取比对二进制与源码的检验手段，无具名年代断言）；离线核查（7.1 节锚已在 outline.txt 4737 行实测定位）。			2026-11-03
+V75.7.1.4	标识残存的判读界限	确证	判读界限的史实背景实测在案：Klara 系统史文逐字“Only three files had to be removed from Networking Release 2 and changes were made to other files.”并载加州大学为 70 个文件添加 USL 版权后仍可自由再分发——标识残存与改写的界限内外分别对应承袭与改写成立。		https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	2026-11-03
+V75.7.2.1	分支结构的编年定位	确证	官方发行工程文章逐字“To service our most conservative users, individual release branches were introduced with FreeBSD 4.3.”——发行分支自特定版本引入、编年定位使版本树扩散叙事有纪年骨架一手在案。		https://docs.freebsd.org/en/articles/releng/	2026-11-03
+V75.7.2.2	迁移路径的提交记录	确证	官方 2021 年第一季状态报告（Git Migration Working Group 条目）逐字“The doc and src trees were migrated from Subversion to Git at the end of 2020”且“The ports repository migration to Git started at the end of the quarter”——版本控制迁移以提交记录留痕、记录序列为编年证据一手在案。		https://www.freebsd.org/status/report-2021-01-2021-03/git/	2026-11-03
+V75.7.2.3	版本树重构的复原方法	确证	官方发行工程文章逐字“Creating the releng branch and release tags is done by the Release Engineering Team.”——版本树复原依发行工程规程展开、规程本身即重构方法的一手说明成立。		https://docs.freebsd.org/en/articles/releng/	2026-11-03
+V75.7.2.4	分支命名的史学含义	确证	分支命名双源实测：NetBSD 官方 releases 页逐字“NetBSD-current is the development version of NetBSD.”；FreeBSD releng 文章逐字“The main development branch is the HEAD or trunk of our Subversion tree, known as 'FreeBSD-CURRENT'”——现行类命名承载开发阶段语义、命名变化为工程文化层证据成立。		https://www.netbsd.org/releases/index.html; https://docs.freebsd.org/en/articles/releng/	2026-11-03
+V75.7.3.1	公告文本的发布语义	确证	厂商公告双源逐字：Netflix Open Connect 官方页“Open Connect Appliance (OCA) software includes the FreeBSD operating system and the NGINX web server, licensed by BSD.”；Netflix 2012-06-05 经 freebsd-stable 列表存档的公告“For the operating system, we use FreeBSD version 9.0.”——公告明示所用系统与许可、为厂商扩散的直接陈述证据成立。		https://openconnect.netflix.com/en/appliances/; https://lists.freebsd.org/pipermail/freebsd-stable/2012-June/068110.html	2026-11-03
+V75.7.3.2	源码释出的同步范围	确证	Apple 开源官网逐字“You can access the source code for our operating systems and developer tools by downloading releases or browsing Git repositories.”——厂商以下载与仓库浏览双通道释出源码、释出范围决定比对可行边界实测在案。		https://opensource.apple.com/	2026-11-03
+V75.7.3.3	厂商分支的公开程度	确证	公开说明双源：Open Connect 官方页软件表列“FreeBSD -CURRENT (HEAD)”并逐字“All code improvements, feature additions, and bug fixes are contributed directly back to the open source community via the FreeBSD committers on our team.”；2012 年公告同义“We will contribute changes we make as part of our project to the community through the FreeBSD committers on our team.”——厂商分支对上游的偏离程度有公开说明成立。		https://openconnect.netflix.com/en/appliances/; https://lists.freebsd.org/pipermail/freebsd-stable/2012-June/068110.html	2026-11-03
+V75.7.3.4	公告与实际代码的对勘	形态	方法论题（公告陈述与释出代码逐项对勘的规程）；离线核查（7.3 节锚已在 outline.txt 4739 行实测定位）。			2026-11-03
+V75.7.4.1	许可原文的条款体例	确证	官方许可页逐字“Redistribution and use in source and binary forms, with or without modification, are permitted”——许可原文以条件句式固定再分发规则、条款体例为法务材料立基文本实测在案。		https://www.freebsd.org/copyright/freebsd-license/	2026-11-03
+V75.7.4.2	版权声明的留存义务	确证	同页第二条逐字“Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer”——再分发须保留版权声明与条件清单、留存义务构成合规审查判准成立。		https://www.freebsd.org/copyright/freebsd-license/	2026-11-03
+V75.7.4.3	法务文本的解封位阶	确证	“和解文本长期保密后依公开法律解封”双独立源互证：Klara 系统史文逐字“The terms of the agreement were secret for many years, but were eventually released under the California Public Records law.”（2020-10-20）；Wikinews（2004-11-28）逐字“The 1994 settlement agreement between UNIX Systems Laboratories (USL) and Regent of University of California (USL v. BSDi) was unsealed in November 2004 under the California Public Records Act (California Code § 6250-6270).”——解封时点划出法务材料位阶成立（和约全文原载 Groklaw，站已下线，存档镜像未逐字复核，见转呈件）。		https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/; https://en.wikinews.org/wiki/USL_v._BSDi_settlement_agreement_unsealed	2026-11-03
+V75.7.4.4	文档与诉讼材料的互证	形态	方法论题（技术文档与诉讼文书互相印证的规程）；离线核查（7.4 节锚已在 outline.txt 4740 行实测定位）。			2026-11-03
+V75.7.5.1	口述证据的会议场景	确证	会议现场录制一手多源：BSD Now 第 37 期页逐字“This week we're at BSDCan, ganging up on people and forcing them to give us interviews.”；第 93 期页逐字“We're at BSDCan this week, but fear not! We've got a great interview with Sepherosa Ziehau, a DragonFly developer, about their network stack.”；主持人页第 512 期条目注“Recorded at BSDCan 2023”——播客与会谈在会议现场录制口述、场景属性决定取用方式成立。		https://www.bsdnow.tv/37; https://www.bsdnow.tv/93; https://www.bsdnow.tv/hosts/allanjude	2026-11-03
+V75.7.5.2	技术博客的记录体裁	确证	厂商贡献经技术博客与演讲记录双源：Netflix TechBlog（Drew Gallatin，2017-09-29）逐字“In the summer of 2015, the Netflix Open Connect CDN team decided to take on an ambitious project. The goal was to leverage the new 100GbE network interface technology just coming to market in order to be able to serve at 100 Gbps from a single FreeBSD-based Open Connect Appliance (OCA)”；Scott Long“Netflix OpenConnect & FreeBSD”BSDCan DevSummit 2013 演讲稿载“Netflix Contributions”贡献清单——体裁是扩散过程的过程性证据成立。		https://netflixtechblog.com/serving-100-gbps-from-an-open-connect-appliance-cdb51dda3b99; https://people.freebsd.org/~scottl/Netflix-BSDCan-20130515.pdf	2026-11-03
+V75.7.5.3	博文存档的保存必要性	形态	方法论题（博文可编辑删除故须存档的保全规程）；离线核查（7.5 节锚已在 outline.txt 4741 行实测定位）。			2026-11-03
+V75.7.5.4	项目记录的文档考据	形态	方法论题（个人维护者记录与官方文档逐项比对）；离线核查（7.5 节锚已在 outline.txt 4741 行实测定位）。			2026-11-03
+V75.7.6.1	封闭团队的外部留痕	确证	一手实证：Jonathan Looney（Netflix）“Netflix and FreeBSD: Observations from ~3 Years of Running Head”BSDCan 2019 演讲稿逐字列“Information covered under NDA”“Feature which is still in development/testing”为“Reasons We Keep Local Diffs”，公开面仅限演讲与上游贡献——受保密约束的内部工作仅以外留痕呈现、留痕种类限定还原可行面成立。		https://papers.freebsd.org/2019/BSDCan/looney-Netflix_and_FreeBSD.files/looney-Netflix_and_FreeBSD.pdf	2026-11-03
+V75.7.6.2	内部邮件的保密前提	形态	方法论题（NDA 保密前提作为间接证据存在的制度成因，属本卷旧树 306.2.4 内部考据面）；离线核查（7.6 节锚已在 outline.txt 4742 行实测定位；Looney 2019 演讲稿“Information covered under NDA”为制度性保密的一手旁证，未专指邮件）。			2026-11-03
+V75.7.6.3	源码释出的间接面	确证	双源实测：Apple 开源官网逐字“You can access the source code for our operating systems and developer tools by downloading releases or browsing Git repositories.”；官方架构文档逐字“The BSD layer is based on the BSD kernel, primarily FreeBSD.”——系统层构成经公开文档与源码释出可查、释出面为闭源系统的间接通道成立。		https://opensource.apple.com/; https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	2026-11-03
+V75.7.6.4	追踪上游的公开陈述	确证	FreeBSD Foundation 官方案例研究逐字“We decided what we were doing was silly, and what we should do is track FreeBSD-CURRENT. It sounds crazy because that's where everybody pushes all their stuff”（发言人语）——厂商以追踪上游版本自陈分支策略、陈述为内部决策外化的证词成立。		https://freebsdfoundation.org/netflix-case-study/	2026-11-03
+V75.7.7.1	表述措辞的层级落差	确证	两级表述并存实测：Apple 官方架构文档同页逐字“Darwin technology is based on BSD, Mach 3.0, and Apple technologies.”（系统级）与“The BSD layer is based on the BSD kernel, primarily FreeBSD.”（层次级）——基于某系统类措辞因技术层而异、层级落差决定表述所指成立。		https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	2026-11-03
+V75.7.7.2	基于声明的时点语境	确证	FreeBSD Foundation 案例研究逐字“In 2012, a proof-of-concept CDN was started on vanilla FreeBSD 9.0-RELEASE and nginx that was provisioned on servers equipped with a single 10 Gbit/s interface.”——基于表述还原声明时点的版本语境可行、时点错置即成溯源误导成立。		https://freebsdfoundation.org/netflix-case-study/	2026-11-03
+V75.7.7.3	同源表述的辨析规程	形态	方法论题（选型理由与版本注记的辨析规程）；离线核查（7.7 节锚已在 outline.txt 4743 行实测定位；2012 年公告“This was selected for its balance of stability and features, a strong development community and staff expertise.”为选型理由表述的实例）。			2026-11-03
+V75.7.7.4	表述与代码的双重核对	确证	FreeBSD Foundation 案例研究逐字“Our tree is almost identical to the upstream FreeBSD tree... it greatly reduces the technical debt we accumulate by keeping our own patches.”——基于声明与上游代码差异双重核对、核对差异界定表述证力上限成立。		https://freebsdfoundation.org/netflix-case-study/	2026-11-03
+V75.7.8.1	个案证据的类型归并	形态	方法论题（个案证据按载体类型归并成档）；离线核查（7.8 节锚已在 outline.txt 4744 行实测定位）。			2026-11-03
+V75.7.8.2	案例链的时序编排	形态	方法论题（个案按采用时点连链编排）；离线核查（7.8 节锚已在 outline.txt 4744 行实测定位）。			2026-11-03
+V75.7.8.3	由点及面的外推禁则	形态	方法论题（单点个案外推到总体的禁则声明）；离线核查（7.8 节锚已在 outline.txt 4744 行实测定位）。			2026-11-03
+V75.7.8.4	传播链条的证据密度	形态	方法论题（链条各环节证据密度分级）；离线核查（7.8 节锚已在 outline.txt 4744 行实测定位）。			2026-11-03
+V75.7.9.1	部署数据的回源核验	形态	方法论题（商业部署数字回源发布页核验的规程，属本卷旧树 298.3.4 内部考据面）；离线核查（7.9 节锚已在 outline.txt 4745 行实测定位）。			2026-11-03
+V75.7.9.2	内部部署的记录盲区	形态	方法论题（企业内部部署不入公开提交的结构性缺口）；离线核查（7.9 节锚已在 outline.txt 4745 行实测定位）。			2026-11-03
+V75.7.9.3	多源交叉的验证规程	形态	方法论题（多源交叉验证使传闻式说法退出正文）；离线核查（7.9 节锚已在 outline.txt 4745 行实测定位；Foundation 案例研究“It's crucial to reduce the divergence of your operating system to FreeBSD, which means that you need to upstream your changes.”为上游策略一手表述）。			2026-11-03
+V75.7.9.4	不可证范围的明示条款	形态	方法论题（无法回源数据以单源禁令明示）；离线核查（7.9 节锚已在 outline.txt 4745 行实测定位）。			2026-11-03
+V75.7.10.1	源码史料的书写增量	确证	LWN 特稿“Assembling the history of Unix”（A. Jesse Jiryu Davis，2017-06-14）逐字载其考据面“researched primary sources like publications, technical reports, man pages, or names written in comments”；unix-history-repo README 逐字“about 2700 individual contributors are identified, the early ones through primary research”——出版物、报告与注释皆成归属线索、源码史料为史书写法添入新类成立。		https://lwn.net/Articles/725297/; https://github.com/dspinellis/unix-history-repo	2026-11-03
+V75.7.10.2	逐行归属的方法贡献	确证	LWN 同文逐字“building a moment-by-moment history of its evolution, and line-by-line attribution of each author's contribution”；项目 README 逐字“large parts of the source code have been attributed to their actual authors. Commands like `git blame` and `git log` produce the expected results.”且自述覆盖“from its inception in 1970 as a 2.5 thousand line kernel and 48 commands, to 2025 as a widely-used 41 million line system”——逐行归属把演进史细化到时刻与作者、超越版本次粗粒度成立。		https://lwn.net/Articles/725297/; https://github.com/dspinellis/unix-history-repo	2026-11-03
+V75.7.10.3	技术叙事的档案自觉	确证	TUHS 官网逐字“Browse the old Unix source code via a web interface at the Unix Tree.”——源码树网页化使叙事可回溯、档案自觉让书写随证据开放而修正成立。		https://www.tuhs.org/	2026-11-03
+V75.7.10.4	企业案例的书写补白	确证	官方 press 存档页实测含长期视角媒体重述条目（“The Register takes a look at FreeBSD 15”，The Register，2025 年 12 月，Liam Proven；“Happy 30th, FreeBSD!”，InfoWorld，2013 年 6 月）——媒体以长期视角重述项目地位、企业案例为通史补入产业侧维度成立。		https://www.freebsd.org/press/	2026-11-03
