@@ -34,7 +34,6 @@ V75.1.8.2	播客访谈的规模积累	确证	BSDNow 第 687 期（2026-10-29 上
 V75.1.8.3	口述项目的学术转录	形态	泛指口述史项目之转录形态，无具名断言；离线核查。		2026-11-03
 V75.1.8.4	论文自述的口述代用	形态	项目体例（代用形态须经字段明示之规约）；离线核查。		2026-11-03
 V75.1.8.5	配套采访录的挂靠方式	形态	项目体例（挂靠方式决定检索入口之设计）；离线核查。		2026-11-03
-
 V75.2.1.1	代码树与版本记录并存	形态	方法论题：可移植范围与版本序列互为表里之史料框架，无具名断言；离线＋目录核查（节锚 outline.txt 2.1 在档）。			2026-11-03
 V75.2.1.2	基金会档案的法人层	确证	基金会页逐字：“The NetBSD Foundation serves as the legal entity which owns several of the NetBSD Project servers”，另“NetBSD® is a registered trademark of The NetBSD Foundation, Inc.”——法人层断言坐实。		https://www.netbsd.org/foundation/	2026-11-03
 V75.2.1.3	公共列表的全程存档	确证	列表页逐字：“The NetBSD Project provides a variety of public mailing lists to facilitate communication between the users and developers of NetBSD.”，且发帖“archived across the internet virtually forever”——持续存档在案。		https://www.netbsd.org/mailinglists/	2026-11-03
@@ -136,3 +135,129 @@ V75.3.16.4	提交流水的分支覆盖	确证	列表总档逐字：dev-commits-s
 V75.3.17.1	播客连载的文化议题	确证	bsdnow.tv 实测最新期“687: Long Term Support”，自述“A weekly podcast”——数百期连载在案。		https://bsdnow.tv/	2026-11-03
 V75.3.17.2	媒体纪年的周年叙述	形态	方法论题：周年叙述与项目节点核对之规则，无具名报道断言；离线核查。			2026-11-03
 V75.3.17.3	问答与争论的列表层	形态	方法论题：列表层作文化叙述底料之设计；离线核查。			2026-11-03
+V75.4.1.1	仓库主次的口径声明	确证	官方口径链条三层在案：①2015-01-04 core 声明（Alan Barrett）逐字：“In the opinion of the core group, the NetBSD project should switch from CVS to a DVCS system as soon as a suitable transition plan is presented and approved.”——迁移以“提出并批准计划”为前提；②2025-01-04 计划帖（riastradh）逐字：“Here is a plan to transition NetBSD from CVS to a hybrid of Mercurial and Git, based on the current CVS -> Mercurial conversion process we have ongoing.”（Phase 1–3 定于 2025 年 2–4 月，属拟议）；③anonhg.netbsd.org（2026-03 仍在更新）各仓自述均为“Automatic conversion of the NetBSD src CVS module, use with care”——主仓至今仍为 CVS，Mercurial 为自动转换仓。“主仓仍以既有系统为准而迁移仅为拟议”成立。		https://mail-index.netbsd.org/tech-repository/2015/01/04/msg000497.html; https://mail-index.netbsd.org/tech-repository/2025/01/04/msg000805.html; https://anonhg.netbsd.org/	2026-11-03
+V75.4.1.2	迁移日期的存疑登记	确证	负向断言经多点核查成立：官方渠道无可查的迁移完成日期——2015 core 声明与 2025-01-04 迁移计划（Phase 1–3：2025 年 2–4 月）均无完成公告；anonhg（最后更新 2026-03）仍自述为 CVS 自动转换仓。须在正文层并记：实态是“迁移尚未完成”，非“已完成而日期缺载”；旧树“2019–2020 年间完成迁移”表述宜修正（转呈主会话）。		https://mail-index.netbsd.org/tech-repository/2025/01/04/msg000805.html; https://anonhg.netbsd.org/	2026-11-03
+V75.4.1.3	提交通知的全量转发	确证	官方列表页对 source-changes 列逐字：“This list is for those who are interested in getting a commit message for every change committed to the NetBSD source tree.”——每笔变更的提交消息转发专列在案（另有 digest 形态）。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.4.1.4	镜像缺载的标签成因	确证	GitHub 镜像（NetBSD/src）实测零标签零发行：tags 页逐字“There aren’t any releases here”，API /repos/NetBSD/src/tags 与 /releases 均返回空数组——主仓发行标签不在镜像上，“镜像缺载”成立。注：起草方证据称缺载的是“Mercurial 主仓”之标签，指称宜随 4.1.1 实态（主仓为 CVS）校正；“缺载成因须先行说明”属论题层。		https://github.com/NetBSD/src/tags	2026-11-03
+V75.4.2.1	索引门户的列表全列	确证	mail-index 实测页题“Index of NetBSD Mailing Lists”，按 General／pkgsrc／Technical／Port／Regional／Retired／Hosted 分目并列各列入口（含 source-changes、tech-*、port-* 全列）——全列索引是讨论史料检索总图成立。		https://mail-index.netbsd.org/	2026-11-03
+V75.4.2.2	历史档的单独入口	确证	mail-index 首页顶部另设“[Index of Mail before 2008]”（oindex.html）链接，早期邮件单独成索引；总索引页（oindex.html）与各列 oindex 分月页（如 current-users 2025–2026 逐月可点）实测在线——早期存档另设入口单独管理成立。		https://mail-index.netbsd.org/; https://mail-index.netbsd.org/oindex.html	2026-11-03
+V75.4.2.3	永久存档的不可撤回	确证	官方列表页逐字：“Any and all posts to our mailing lists are archived across the internet virtually forever and are impossible for us to remove.”——永久存档且无法删除逐字在案。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.4.2.4	列表类目的废止归档	确证	mail-index 首页实测设“Retired lists”类目（atf-devel、tech-smp、netbsd-news、port-pmax、regional-pt 等退役列仍在目可查），官方列表页亦设“Obsolete lists”（archive only）节——已停用列表仅存档不再收帖成立。		https://mail-index.netbsd.org/; https://www.netbsd.org/mailinglists/	2026-11-03
+V75.4.3.1	治理文档的本地归档	形态	方法论题：治理页全量本地归档使引用脱离原站存续之体例；离线核查。			2026-11-03
+V75.4.3.2	域名依赖的复核局限	形态	方法论题：单一域名不可复核之局限与本地归档对策并记；离线核查。			2026-11-03
+V75.4.3.3	公告与文档的门户分栏	确证	netbsd.org 首页实测分层陈列：Latest News（发行公告）、Documentation（FAQ & HOWTOs／The Guide／Manual pages／Wiki）、Get NetBSD 下载表与 Developers（CVSWeb／Cross-reference）检索入口——公告、文档与检索分层成立。		https://www.netbsd.org/	2026-11-03
+V75.4.3.4	正式发行的公告时点	确证	首页 Latest News 以日期锚定发行公告（“NetBSD 11.0 available”30 July 2026；“NetBSD 10.2 available”15 September 2026；“NetBSD 9.5 available and EOL for netbsd-9”31 August 2026）；releases 页逐字“The following releases are currently supported.”——正式发行以公告固定时点成立。		https://www.netbsd.org/; https://www.netbsd.org/releases/index.html	2026-11-03
+V75.4.4.1	采访元数据的缺失登记	形态	方法论题：检索无果之缺失登记作口述史料规范形态；离线核查。			2026-11-03
+V75.4.4.2	可信渠道的入口清单	形态	方法论题：已核实渠道入口逐项列明使补查可循径；离线核查。渠道在案性抽验：BSD Now 存档页实测可达（687 期存目）；BSDCan YouTube 本会话未逐项实测。		https://www.bsdnow.tv/episodes	2026-11-03
+V75.4.4.3	入口可访与页面缺失	形态	方法论题：入口可访与页面缺失两级结论分开陈述之体例；离线核查。			2026-11-03
+V75.4.4.4	播客归档的规模基础	确证	BSD Now 存档页逐字：“687 episodes of BSD Now since the first episode, which aired on September 4th, 2013.”——2013 年起长年连载、687 期规模在案；期目带“interview”标签者实存。		https://www.bsdnow.tv/episodes	2026-11-03
+V75.4.5.1	缺口成因的类型划分	形态	方法论题：缺口成因二分（材料未共享／未保存）决定补全方向；离线核查。			2026-11-03
+V75.4.5.2	渠道入口的存而不废	确证	mail-index 旧档索引实测可达：总索引“Index of NetBSD Mailing Lists”与各列 oindex 分月页在线可点——历史存档入口保留可用、缺口补查仍有起点成立。		https://mail-index.netbsd.org/oindex.html; https://mail-index.netbsd.org/current-users/oindex.html	2026-11-03
+V75.4.5.3	缺口登记的处理先后	形态	方法论题：先登记后补全、逐项征集之次序设计；离线核查。			2026-11-03
+V75.4.6.1	选举结果的公告序列	确证	FreeBSD 官方 newsflash 实测逐年公告链：2018-07-04“tenth”、2020-07-01“eleventh”、2022-06-18“twelfth”、2024-06-12“thirteenth”，逐条逐字“Active committers to the project have elected your … FreeBSD Core Team.”并挂链官方公告帖——选举公告与结果公布构成可对表链条成立。		http://www.freebsd.org/news/newsflash/; https://www.freebsd.org/administration/	2026-11-03
+V75.4.6.2	审议时限与记录落差	形态	方法论题：复核时限与实质审议之落差作存疑来源；离线核查。			2026-11-03
+V75.4.6.3	缺席与撤回的存档盲点	形态	方法论题：存档不可撤回而未发言者无痕之盲点记；离线核查（不可撤回之一手表述已另见 4.2.3）。			2026-11-03
+V75.4.7.1	署名与发言的双线互证	形态	方法论题：提交署名线与列表发言线双线互证为最低要求；离线核查。			2026-11-03
+V75.4.7.2	口述补线的渠道名录	形态	方法论题：口述补线先列渠道清单使检索过程可复核；离线核查。			2026-11-03
+V75.4.7.3	人物条目的多源参证	形态	方法论题：提交流水与讨论存档互证定条目可信度；离线核查。			2026-11-03
+V75.4.7.4	名单收录的权限边界	形态	方法论题：以权限授予记录为收录边界防外围参与者误入；离线核查。			2026-11-03
+V75.4.8.1	发布公告的仪式面向	确证	官方列表页对 announce 列逐字：“This mailing list is for announcements about NetBSD.”；首页 Latest News 逐条刊发发行公告（11.0／10.2／9.5 各带日期）——公告列专司公告、发布经公告呈现成立。注：announce 列范围系“项目公告”整体而非仅发行事项，论题措辞宜按此读。		https://www.netbsd.org/mailinglists/; https://www.netbsd.org/	2026-11-03
+V75.4.8.2	符号物料的门户归集	确证	官方“NetBSD Logos”页实测集中陈列旗帜标志（PNG 不透明／透明两版＋EPS 可下）并汇壁纸等物料——开放门户归集标识与物料成立。		https://www.netbsd.org/gallery/logos.html	2026-11-03
+V75.4.8.3	仪式现场的记述文本	形态	方法论题：与会记述与公告互证之现场文本法；离线核查。			2026-11-03
+V75.4.9.1	仓库群的整体布局	确证	anonhg 实测 src／pkgsrc／xsrc 三仓并列（自述分别为“Automatic conversion of the NetBSD src／pkgsrc／xsrc CVS module”），基础系统、包系统与窗口系统分仓运行成立；官方 developers 页亦列“Top-level modules in the repository”。		https://anonhg.netbsd.org/; https://www.netbsd.org/developers/cvs-repos/	2026-11-03
+V75.4.9.2	匿名取码的史料意义	确证	官方镜像页“AnonCVS mirrors”节实测公开匿名取码命令：“CVSROOT=anoncvs@anoncvs.NetBSD.org:/cvsroot CVS_RSH=ssh cvs co -P src”——匿名检出源码树在案，可得性前提成立。		https://www.netbsd.org/mirrors/	2026-11-03
+V75.4.9.3	变更通知的双向副本	确证	source-changes 列述（“a commit message for every change committed to the NetBSD source tree”）与 mail-index 全列收录 source-changes 存档双向在案——提交与通知双向留痕、可核对单边缺失成立。		https://www.netbsd.org/mailinglists/; https://mail-index.netbsd.org/	2026-11-03
+V75.4.9.4	边缘贡献的记录薄弱	形态	方法论题：边缘贡献者仅存提交日志与列表之薄弱面记；离线核查。			2026-11-03
+V75.4.10.1	批评史料的保存位置	形态	方法论题：批评材料主要存于列表存档之定位；离线核查（存档制度一手表述已另见 4.2.3）。			2026-11-03
+V75.4.10.2	列表存档的分面检索	有误	官方 mail-index 实测分面仅两种：线程（thread1.html，页题逐字“Current-Users by thread”）与日期（date1.html），另有 oindex 平列页；author1.html 与 subject1.html 在 current-users 1995-01／2020-05／2026-09 与 tech-kern 2023-06 各点均 404，列表根目录同缺——“按线程、主题、作者与日期分面”中“主题、作者”两分面于官方存档不存在。题名可维持，论题层改为“线程与日期两分面”（作者／主题面如需须另引第三方归档并注明）。		https://mail-index.netbsd.org/current-users/2026/09/thread1.html	2026-11-03
+V75.4.10.3	发言格式的成文条目	确证	官方列表页逐字：“NetBSD mailing lists only accept plain text email, which many email clients don't send by default.”——纯文本要求成文公示成立，格式规则影响保存形态之论题层可接。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.4.10.4	批评材料的立场剥离	形态	方法论题：客观陈述与阵营立场之分以立场不代事实；离线核查。			2026-11-03
+V75.4.11.1	符号随版本的更替节奏	形态	方法论题：符号物料随发行周期更替作符号断代锚记；离线核查。			2026-11-03
+V75.4.11.2	官方页面的符号陈列	确证	netbsd.org 首页实测页首陈列项目标志（img id=“projectLogo” src=“./images/NetBSD-smaller-tb.png”）——官方页面陈列系统标识成立。		https://www.netbsd.org/	2026-11-03
+V75.4.11.3	谈话记录中的符号自述	形态	方法论题：播客自述与官方页面对读之方法；离线核查。注：起草方证据行引 BSD Now 存档页（“687 episodes…”）与本题“符号自述”错配，建议起草方复核证据挂靠（转呈）。		https://www.bsdnow.tv/episodes	2026-11-03
+V75.4.12.1	公告材料的时点锚定	形态	方法论题：公告以发行时点定位作四类材料公共坐标；离线核查。			2026-11-03
+V75.4.12.2	提交记录的过程刻度	形态	方法论题：提交记录以过程定位补公告时点之单薄；离线核查。			2026-11-03
+V75.4.12.3	列表发言的语境还原	形态	方法论题：列表发言以讨论语境定位为理解决策叙述之前提；离线核查。			2026-11-03
+V75.4.12.4	口述载体的存档责任	形态	方法论题：口述存档责任在项目与访谈方之间分担；离线核查。			2026-11-03
+V75.4.13.1	首发版本的日期对表	形态	方法论题：首发版本以公告日期为基准对表排除追记干扰；离线核查。			2026-11-03
+V75.4.13.2	里程碑版本的序列核对	形态	方法论题：里程碑日期逐条核对以暴露公告与存档差异；离线核查。			2026-11-03
+V75.4.13.3	版本树的镜像差异	形态	方法论题：各镜像版本呈现差异纳入对勘范围；离线核查。			2026-11-03
+V75.4.13.4	三说并陈的对勘纪律	形态	方法论题：版本、日期与首发地点诸说并陈不以单一公告为准；离线核查。			2026-11-03
+V75.4.14.1	设计文本的专题入口	形态	方法论题：设计自述作专题史首选入口且须与实现核对；离线核查。			2026-11-03
+V75.4.14.2	仓库浏览的专题切片	形态	方法论题：仓库按子系统切片浏览对应专题取材面；离线核查。			2026-11-03
+V75.4.14.3	专题议题的渠道对应	形态	方法论题：动议渠道与专题议题对应引导检索词；离线核查。			2026-11-03
+V75.4.15.1	提交署名的汇总基准	形态	方法论题：提交流水按作者汇总之口径影响人物志入选名单；离线核查。			2026-11-03
+V75.4.15.2	发言作者的检索维度	有误	论题称“存档按作者分面检索”，官方 mail-index 实测无作者分面：author1.html 于 current-users 1995-01／2020-05／2026-09、tech-kern 2023-06 及列表根目录均 404，仅有线程（thread1.html）与日期（date1.html）两分面——作者维度检索在官方存档不存在。题名可维持，论题层宜改为“以第三方归档补作者维度检索”或径改提交署名汇总口径。		https://mail-index.netbsd.org/current-users/2026/09/thread1.html	2026-11-03
+V75.4.15.3	人物叙述的自述优先	形态	方法论题：自述优先于转述防二手变形；离线核查。			2026-11-03
+V75.4.16.1	邮件语体的体裁分层	形态	方法论题：列表发言按体裁分层影响引文取舍粒度；离线核查。			2026-11-03
+V75.4.16.2	提交记录的事实基线	形态	方法论题：提交流水作事实基线、其余材料对表；离线核查。			2026-11-03
+V75.4.16.3	设计文档的滞后比对	形态	方法论题：设计文档与源码对读并标注滞后差异；离线核查。			2026-11-03
+V75.4.16.4	口述转写的载体归属	形态	方法论题：口述转写归属播客等载体定引用格式；离线核查。			2026-11-03
+V75.4.17.1	版本与日期的成对核验	形态	方法论题：版本号与日期成对核验、单据不成对入待考；离线核查。			2026-11-03
+V75.4.17.2	引述边界的原文保全	形态	方法论题：引述以原文保线为准、截断转写须标注；离线核查。			2026-11-03
+V75.4.17.3	公告差异的并陈纪律	形态	方法论题：公告差异诸说并陈并附出处；离线核查。			2026-11-03
+V75.4.18.1	四系并读的版本口径	形态	方法论题：四系版本序列并读先统一口径；离线核查。			2026-11-03
+V75.4.18.2	发行节奏的差异标注	形态	方法论题：各系发行节奏差异在对齐表中标注；离线核查。			2026-11-03
+V75.4.18.3	对齐窗口的时点声明	形态	方法论题：对齐以声明时点窗口为准、窗外不混入；离线核查。			2026-11-03
+V75.4.19.1	配套采访录的挂靠体例	形态	体例题：采访录以配套子节挂靠主题章并明示时期人数；离线核查。			2026-11-03
+V75.4.19.2	采访元数据的字段完备	形态	体例题：受访者、时间、形式与来源四段齐备使再运用可核；离线核查。			2026-11-03
+V75.4.19.3	论文代用的明示规则	形态	体例题：以会议论文代口述须明示代用形态防体裁误读；离线核查。			2026-11-03
+V75.4.19.4	采访缺口的核查台账	形态	体例题：检索无果之核查过程逐条留痕可复核；离线核查。			2026-11-03
+V75.4.19.5	再运用的边界提示	形态	体例题：渠道可访而页面缺失时再运用须提示两级结论差别；离线核查。			2026-11-03
+V75.4.20.1	许可文本的原文地位	形态	方法论题：条款原文作第一层、转述降为旁证；离线核查。			2026-11-03
+V75.4.20.2	和解文书的处置面	形态	方法论题：和解后文件处置载于法律文书为法律史料核心；离线核查。			2026-11-03
+V75.4.20.3	法人文件的许可面	形态	方法论题：法人实体管理许可与合同补许可史机构面；离线核查。			2026-11-03
+V75.4.21.1	治理文件的成文层级	形态	方法论题：章程、细则与公告分层定证据权重；离线核查。			2026-11-03
+V75.4.21.2	选举记录的周期性	确证	官方 newsflash 实测选举公告按约两年周期成链：2018-07-04／2020-07-01／2022-06-18／2024-06-12（第十至十三届 FreeBSD Core Team，逐字在案）——选举按周期举行并公告成立。		http://www.freebsd.org/news/newsflash/	2026-11-03
+V75.4.21.3	权限变动的公告面	形态	方法论题：权限授予与撤销之记录面补会议记录不足；离线核查。			2026-11-03
+V75.4.21.4	决议留痕的核验要求	形态	方法论题：决议须留痕并经核验以约束取材；离线核查。			2026-11-03
+V75.4.22.1	缺席记载的举证规则	形态	方法论题：名录缺席不等于不存在、缺席判断另附举证；离线核查。			2026-11-03
+V75.4.22.2	名录版本的时点标注	形态	方法论题：名录随检索时点变动、版本与日期随文标注；离线核查。			2026-11-03
+V75.4.22.3	负面证据的适用限度	形态	方法论题：负面证据只证未见不证没有、边界由命题类型定；离线核查。			2026-11-03
+V75.4.22.4	存疑事项的披露方式	形态	方法论题：检索无果按披露处理、划清与臆断界线；离线核查。			2026-11-03
+V75.5.1.1	章程文件的公开可查	确证	TNF 官方页实测公开挂链治理文书：bylaws（bylaws.html）、Executive Committees、Donation Policy、developer application procedure、Reimbursement Policy 等——治理文档公开可查、章程研究可离内部渠道进行成立。		https://www.netbsd.org/foundation/	2026-11-03
+V75.5.1.2	治理结构的演进文本	形态	方法论题：以机构化定位文本作治理结构演进材料；离线核查（TNF 治理文书公开性已另见 5.1.1）。			2026-11-03
+V75.5.1.3	规程汇编的整编动机	确证	FreeBSD 官方 internal 页逐字：“To avoid chaos with a project this large spread out all over the globe, there have to be some Policies for FreeBSD Committers.”——规程整编以防失序为动因逐字在案。		https://www.freebsd.org/internal/	2026-11-03
+V75.5.1.4	规程文本的读者面向	确证	FreeBSD Committers Guide 摘要逐字：“This document provides information for the FreeBSD committer community.”且“All new committers should read this document before they start”——规程以提交者为读者、语体详略随此定位成立。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V75.5.2.1	法人资格的章程依据	确证	TNF 官方页逐字：“The NetBSD Foundation is a non-profit organisation as per section 501(c)(3) of the Internal Revenue Code.”——免税地位与法人身份之官方自述在案。		https://www.netbsd.org/foundation/	2026-11-03
+V75.5.2.2	规约文本的治理授权	确证	TNF 官方页逐字：“The NetBSD Foundation is incorporated in the State of Delaware”且“is governed by a set of bylaws”（挂链 bylaws.html）——法人注册地与规约授权衔接成立。		https://www.netbsd.org/foundation/	2026-11-03
+V75.5.2.3	注册档案的三方互勘	确证	互勘三方之一手面实测齐备：①注册地——官方页逐字“incorporated in the State of Delaware”；②基金会文书——bylaws 等挂链在案；③商标备案——官方页逐字“NetBSD® is a registered trademark of The NetBSD Foundation, Inc.”——三方互勘之材料面成立，互勘规程属论题层。		https://www.netbsd.org/foundation/	2026-11-03
+V75.5.2.4	法人档案的本地副本	形态	方法论题：治理页全量本地归档之存目功能；离线核查。			2026-11-03
+V75.5.3.1	选举周期的公告节奏	确证	FreeBSD 官方 administration 页逐字：“The Core Team is elected by the active developers in the project.”；newsflash 公告链 2018-07-04／2020-07-01／2022-06-18／2024-06-12 四届在案——核心团队由开发者选出、节奏以公告留痕成立。注：官方措辞为“active developers”，论题“全体开发者”宜按此校正。		https://www.freebsd.org/administration/; http://www.freebsd.org/news/newsflash/	2026-11-03
+V75.5.3.2	任职时间线的拼凑方法	形态	方法论题：名单、日志与演讲归档拼任职时间线之方法；离线核查。			2026-11-03
+V75.5.3.3	董事会选举的同类参照	确证	TNF 官方页逐字：“The Board members were elected by the NetBSD Developer community”，并挂链 Board election procedure——另一基金会（TNF）董事会由开发者社群选出成立。注：FreeBSD Foundation 官方 about 页未载董事会产生方式，本行参照系应读作 TNF，论题指称宜明示。		https://www.netbsd.org/foundation/; https://freebsdfoundation.org/about-us/about-the-foundation/	2026-11-03
+V75.5.3.4	当选公告的存档去向	确证	官方 newsflash 各届当选公告（“Active committers to the project have elected your … FreeBSD Core Team.”）均挂链 freebsd-announce 存档帖；TNF 董事会选举公告亦在基金会页——当选信息经公告列发布并存档成立。		http://www.freebsd.org/news/newsflash/; https://www.netbsd.org/foundation/	2026-11-03
+V75.5.4.1	权限分区的授予底账	确证	FreeBSD Committers Guide 逐字：“When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.”——提交权限按树域分区授予在案；底账登记与注明来源属论题层。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V75.5.4.2	数量峰谷的统计基础	形态	方法论题：提交者数量峰谷读数须先声明统计口径；离线核查。			2026-11-03
+V75.5.4.3	流失规模的量化呈现	形态	方法论题：以连续无提交为判据之量化序列设计；离线核查。			2026-11-03
+V75.5.4.4	变更通知的平行留痕	确证	官方列表页对 source-changes 列逐字：“This list is for those who are interested in getting a commit message for every change committed to the NetBSD source tree.”——源码变更自动投递专列、通知流平行在案。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.5.5.1	关键争论的存档价值	形态	方法论题：重大争论列表存档作治理文化一手史料之定位；离线核查。			2026-11-03
+V75.5.5.2	决策语境的线程复原	确证	mail-index 实测各月设线程索引（thread1.html，页题逐字“Current-Users by thread”，MHonArc 生成）——存档按线程分面复原讨论语境成立。		https://mail-index.netbsd.org/current-users/2026/09/thread1.html	2026-11-03
+V75.5.5.3	技术讨论的列表分列	确证	官方列表页实测分目陈列（General／Port specific／Obsolete），netbsd-users 定位“general help forum”，且逐字“aren't appropriate on this list and are better voiced in a more narrowly-focused technical list”——用户问答与技术讨论分列、分层取材成立。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.5.5.4	礼法条目的发言框定	确证	官方列表页成文礼法实测：纯文本要求（“NetBSD mailing lists only accept plain text email, which many email clients don't send by default.”）、禁 LLM 生成物（“We ask that you avoid posting LLM/AI-generated material to the mailing lists.”）、发言自裁量（“please use your good judgement when posting”）与公开性提示——“礼法框定发言形态”成立。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.5.6.1	财务公开的逐年报表	确证	双会官方页实测：TNF 页列 2005–2025 年度财务报告长表；FreeBSD Foundation“Financials”页列 2024–2026 各年“Budget Summary”与“Profit & Loss Report”——预算与损益报表逐年公开成立。		https://www.netbsd.org/foundation/; https://freebsdfoundation.org/about-us/about-the-foundation/financials/	2026-11-03
+V75.5.6.2	注册数据的口径差异	形态	方法论题：各会注册与运营数据口径不一、比较须统一框架；离线核查。			2026-11-03
+V75.5.6.3	年度报告的机构自述	形态	方法论题：年报自述留白以权限记录补证之方法；离线核查。			2026-11-03
+V75.5.6.4	免税资格的认定文件	确证	TNF 官方页逐字：“The NetBSD Foundation is a non-profit organisation as per section 501(c)(3) of the Internal Revenue Code.”（501(c)(3) 即税法认定条款）；FreeBSD Foundation 亦自述“US-based 501(c)(3) non-profit organization”——免税资格之法定认定在案。		https://www.netbsd.org/foundation/; https://freebsdfoundation.org/about-us/about-the-foundation/	2026-11-03
+V75.5.7.1	口述修正的审慎对待	形态	方法论题：当事人改口与修正本身入档为证之纪律；离线核查。			2026-11-03
+V75.5.7.2	采访渠道的入口清点	形态	方法论题：访谈检索先清点可信渠道入口定补查方向；离线核查。			2026-11-03
+V75.5.7.3	访谈体例的栏目齐备	形态	体例题：受访者、时间、形式与来源分字段记录为再运用条件；离线核查。			2026-11-03
+V75.5.7.4	代用形态的明示义务	形态	体例题：以论文等代口述须明示体裁防访谈面虚增；离线核查。			2026-11-03
+V75.5.8.1	声明与报道的交叉验证	形态	方法论题：机构声明与媒体报道互证防单方转述失真；离线核查。			2026-11-03
+V75.5.8.2	商业领袖的自述偏差	形态	方法论题：自述之悔过与辩护色彩识别作采信前提（无具名断言）；离线核查。			2026-11-03
+V75.5.8.3	引述原文的逐字守恒	形态	方法论题：引述机构声明逐字守恒约束二手转写；离线核查。			2026-11-03
+V75.5.8.4	媒体呈现的认知影响	形态	方法论题：媒体条目 Outlet 与日期逐项登记之体例；离线核查。			2026-11-03
+V75.5.9.1	技术争论的论据面	形态	方法论题：论据与代码可逐条验证之材料面定位；离线核查。			2026-11-03
+V75.5.9.2	制度事实的文书根基	形态	方法论题：制度事实以成文文书为根基、层级定效力；离线核查。			2026-11-03
+V75.5.9.3	社区评价的态度表述	形态	方法论题：态度表述面与事实面分开处理；离线核查。			2026-11-03
+V75.5.9.4	判别线的举证进路	形态	方法论题：先举证后定性防以态度证制度；离线核查。			2026-11-03
+V75.5.10.1	概念用语的语源核查	形态	方法论题：称号类概念先核语源与命名场合；离线核查。			2026-11-03
+V75.5.10.2	称号指称的所指范围	形态	方法论题：称号所指制度位置以机构定位核验；离线核查。			2026-11-03
+V75.5.10.3	决策留痕的形态甄别	形态	方法论题：个人主导与集体决议之留痕形态甄别；离线核查。			2026-11-03
+V75.5.10.4	评价措辞的语境还原	形态	方法论题：褒贬措辞还原语境、语境缺失只记不评；离线核查。			2026-11-03
+V75.5.11.1	个人决断与集体程序的分际	形态	方法论题：个人决断与选举程序分际由文书记载划定；离线核查。			2026-11-03
+V75.5.11.2	制度权力的文书凭据	形态	方法论题：章程与规约作制度权力凭据、凭据链外降格处理；离线核查。			2026-11-03
+V75.5.11.3	越界解释的防范约束	形态	方法论题：人格化叙事替代制度分析属越界之防范；离线核查。			2026-11-03
+V75.5.12.1	缺口登记的建卡惯例	形态	方法论题：史料缺口逐项建卡使可交接可补查；离线核查。			2026-11-03
+V75.5.12.2	不可确定问题的存疑处置	形态	方法论题：不可确定事项以存疑标注收场防推测充结论；离线核查。			2026-11-03
+V75.5.12.3	缺口补查的推进安排	形态	方法论题：补查按渠道清单逐项推进并记录在案；离线核查。			2026-11-03
