@@ -1,11 +1,11 @@
 {
- "vol": "V75",
- "sections": 150,
- "titles": 579,
- "exceptions": 348,
- "ledger_sha256": "495bb33b3f422d5f3a10af0afbb4117c8e32688ba264ab42d850625f88a3daa4",
- "selftest_exit": 0,
- "finished_at": "2026-10-31T07:30:02",
- "session": "zcode-main-V75-finalize-20261031",
- "review_fix": "2026-10-31 逐题复核 579 行：上半（ch1–6，318 行）与下半（ch7–12，261 行）判读表在 work/V75/review_ch1..12.tsv；判读修正由两半在 parts 内先行应用。收口体补正 26 处：webfix 为 2.7／3.2／4.19／5.7 四节补真实联网证据 9 题、降级去联网 7 题（补证源 2026-10-31 WebFetch 实抓：DragonFly 文档页／HAMMER(5)／TUHS／CHM 口述史／OHA 2018）；dropsrc 去除 4 题无史料行的史料源（2.4.4／7.6.3／7.6.4／7.9.3）；gatefix 改题 6 处（B1 动词起首 5、G2 与 1.5.3 重名 1）。终装 lint hard=0 warn=0，全局门禁 40/40 PASS。"
+  "vol": "V75",
+  "sections": 150,
+  "titles": 579,
+  "exceptions": 348,
+  "ledger_sha256": "697c06e1295c4fbb7cc2e5e2efdee1be28c4079af53e4f5e56d9c2717af8ebac",
+  "selftest_exit": 0,
+  "finished_at": "2026-10-31T07:30:02",
+  "session": "zcode-main-V75-finalize-20261031",
+  "review_fix": "2026-10-31 逐题复核 579 行：上半（ch1–6，318 行）与下半（ch7–12，261 行）判读表在 work/V75/review_ch1..12.tsv；判读修正由两半在 parts 内先行应用。收口体补正 26 处：webfix 为 2.7／3.2／4.19／5.7 四节补真实联网证据 9 题、降级去联网 7 题（补证源 2026-10-31 WebFetch 实抓：DragonFly 文档页／HAMMER(5)／TUHS／CHM 口述史／OHA 2018）；dropsrc 去除 4 题无史料行的史料源（2.4.4／7.6.3／7.6.4／7.9.3）；gatefix 改题 6 处（B1 动词起首 5、G2 与 1.5.3 重名 1）。终装 lint hard=0 warn=0，全局门禁 40/40 PASS。"
 }
