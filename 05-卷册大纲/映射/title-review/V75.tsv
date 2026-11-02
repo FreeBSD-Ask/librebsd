@@ -1,0 +1,36 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V75.1.1.1	源代码树的档案属性	形态	方法论题：目录组织、注释与变更痕迹构成一手档案为设计框架，无外涉专名断言；离线核查。		2026-11-03
+V75.1.1.2	源码树的在线复原浏览	确证	TUHS 首页逐字：“Browse the old Unix source code via a web interface at the Unix Tree”，旧源码网页逐层浏览界面在案。		https://tuhs.org/	2026-11-03
+V75.1.1.3	发行带与目录树的对应	形态	方法论题：发行带文件集与目录树层位对应作断代基点，无具体带名/日期断言；离线核查。		2026-11-03
+V75.1.1.4	会议录像的逐年存列	有误	2004 首届官方站仅 Papers（slides.html）／Presentations／文字反馈页，无任何音录像在档；“视频频道自首届起”不可能成立（论文档“自首届起逐年收录”成立，录像不成立）。建议改题将载体从“录像”放宽为“文献”。	会议文献的逐年存列	https://www.bsdcan.org/2004/	2026-11-03
+V75.1.1.5	播客访谈的转录入库	形态	项目自涉工序（03-原始史料库/14-播客史料 十库与待转写清单在盘），离线目录核查过。		2026-11-03
+V75.1.2.1	提交流的完整存留	确证	列表建档逐字：dev-commits-src-all＝“Commit messages for all branches of the src repository”——提交消息专列覆盖全分支并入档。		https://lists.freebsd.org/	2026-11-03
+V75.1.2.2	迁移期间记录的连续	形态	方法论题：迁移时点前后记录衔接之判准，未assert具体迁移日期；离线核查。		2026-11-03
+V75.1.2.3	钩子与自动化痕迹	存疑	“迁移工作组更新提交钩子”未获当场一手：raw git-conv-doc 404、GitHub 页 ECONNRESET、exa CRAWL_NOT_FOUND，三通道均不可达；已查面如实记录，不编造。		2026-11-03
+V75.1.2.4	预检复核的制度要求	确证	Committer’s Guide 逐字：“All non-trivial changes should be reviewed before they are committed to the repository.”＋“Timeouts are not a substitute for review.”——非平凡改动入库前复核成文。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V75.1.2.5	提交数据的计量分寸	形态	方法论题：提交数计量之适用区间与越界风险，无外涉断言；离线核查。		2026-11-03
+V75.1.3.1	发行说明的官方定位	确证	发行页按受支持与否分级编排：“Currently Supported”／“Prior Releases – EOL”／“Production Releases and Legacy Releases”逐字在案。		https://www.freebsd.org/releases/	2026-11-03
+V75.1.3.2	版本序列的链条完整	确证	同页自 1.0（1993-11）至 15.1（2026-06-16）逐版列示，各版附公告/发行说明/勘误链接。		https://www.freebsd.org/releases/	2026-11-03
+V75.1.3.3	发行工程的时点锚定	确证	同页发行条目均系公告与日期（“Release 15.1 (June 16, 2026)”），时点坐标在案。		https://www.freebsd.org/releases/	2026-11-03
+V75.1.3.4	开发分支的记录边界	形态	体例题：开发分支与正式发行记录分列之设计规约（页面 snapshots 与 releases 分列属旁证）；离线核查。		2026-11-03
+V75.1.4.1	手册页的跨版本对读	确证	man 服务器版本选择器自 16.0-CURRENT 回溯 1.0-RELEASE，另含 4.3BSD NET/2、386BSD 0.1、Unix Seventh Edition 等历史层位。		https://man.freebsd.org/cgi/man.cgi	2026-11-03
+V75.1.4.2	历史层位的手册留存	确证	同源：旧版手册按版本单独可查（含 FreeBSD Ports 2.2.8 等独立层位），逐段对读可施。		https://man.freebsd.org/cgi/man.cgi	2026-11-03
+V75.1.4.3	官方文档体裁的组成	形态	体例题：FAQ/手册页/补记之体裁划分与可信度分层为设计框架；离线核查。		2026-11-03
+V75.1.5.1	公共列表的建档全貌	确证	列表总档逐列一句话定位（freebsd-hackers＝“Technical discussions relating to FreeBSD”、freebsd-net＝“Networking and TCP/IP with FreeBSD”等）。		https://lists.freebsd.org/	2026-11-03
+V75.1.5.2	技术讨论的体裁区分	确证	freebsd-hackers（“Technical discussions relating to FreeBSD”）与用户问答列 freebsd-questions（FAQ：“you will probably want to post to freebsd-questions”）分列运转。		https://lists.freebsd.org/; https://docs.freebsd.org/en/articles/mailing-list-faq/	2026-11-03
+V75.1.5.3	变更通知的自动投递	确证	dev-commits-src-all／dev-commits-ports-all／dev-commits-doc-all 等专列“Commit messages for all branches…”逐字在案，通知流与讨论流并存且形态互异。		https://lists.freebsd.org/	2026-11-03
+V75.1.5.4	用户求助与开发分离	确证	FAQ 逐字：“This depends on charter of each individual list. Some lists are more oriented to developers; some are more oriented towards the FreeBSD community as a whole.”，用户求助归 freebsd-questions。		https://docs.freebsd.org/en/articles/mailing-list-faq/	2026-11-03
+V75.1.5.5	发帖规约的成文形态	有误	论题层枚举过强：行宽规约逐字在案（“Please wrap lines at 75 characters, since not everyone uses fancy GUI mail reading programs.”），纯文本仅间接（“Try not to use MIME”、MUA 规约），主题行无规条支撑。题名维持；论题宜删“主题行”枚举并把“纯文本”落为 MIME/MUA 规约（ykla 令采纳管线论题层修正）。		https://docs.freebsd.org/en/articles/mailing-list-faq/	2026-11-03
+V75.1.6.1	TUHS 的保存使命	确证	宗旨逐字：“Its aims are to preserve and maintain historical UNIX artifacts, and to provide a forum for discussion of UNIX and its history.”		https://tuhs.org/	2026-11-03
+V75.1.6.2	存档归置的迁转次序	形态	项目自涉（镜像挖掘规则之候迁归置次序），离线核查。		2026-11-03
+V75.1.6.3	附属清单的增补路径	形态	项目自涉（镜像站批量获取附清单增补入档），离线核查。		2026-11-03
+V75.1.6.4	题赠出版物的收录	形态	馆藏构成之体例侧记，无外涉断言；离线核查。		2026-11-03
+V75.1.7.1	缺失材料的类型清单	形态	项目缺口登记之类型学设计；离线核查。		2026-11-03
+V75.1.7.2	原站失效与镜像接续	形态	方法论题（无具名站点/日期断言）；离线核查。		2026-11-03
+V75.1.7.3	追加校验的晚期补救	有误	两样本反证：archive.freebsd.org 之 2.2.8-RELEASE（1998-11-29/30 档）与 4.0-RELEASE（2000-03-21 档）目录均无任何 CHECKSUM 文件，“早期发行档事后补附校验文件”不成立。建议改题反映代际实态。	发行档校验件的代际差	https://archive.freebsd.org/old-releases/i386/2.2.8-RELEASE/; https://archive.freebsd.org/old-releases/i386/4.0-RELEASE/	2026-11-03
+V75.1.7.4	征集补全的渐进过程	形态	项目征集工序之体例记；离线核查。		2026-11-03
+V75.1.8.1	采访录的体例字段	形态	项目采访录 schema 自涉（受访者/时间/形式/存档分字段）；离线核查。		2026-11-03
+V75.1.8.2	播客访谈的规模积累	确证	BSDNow 第 687 期（2026-10-29 上线，周播）——“技术播客连载至数百期”逐题坐实。		https://bsdnow.tv/	2026-11-03
+V75.1.8.3	口述项目的学术转录	形态	泛指口述史项目之转录形态，无具名断言；离线核查。		2026-11-03
+V75.1.8.4	论文自述的口述代用	形态	项目体例（代用形态须经字段明示之规约）；离线核查。		2026-11-03
+V75.1.8.5	配套采访录的挂靠方式	形态	项目体例（挂靠方式决定检索入口之设计）；离线核查。		2026-11-03
