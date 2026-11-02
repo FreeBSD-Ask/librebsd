@@ -6,7 +6,7 @@ V75.1.1.4	会议录像的逐年存列	有误	2004 首届官方站仅 Papers（sl
 V75.1.1.5	播客访谈的转录入库	形态	项目自涉工序（03-原始史料库/14-播客史料 十库与待转写清单在盘），离线目录核查过。		2026-11-03
 V75.1.2.1	提交流的完整存留	确证	列表建档逐字：dev-commits-src-all＝“Commit messages for all branches of the src repository”——提交消息专列覆盖全分支并入档。		https://lists.freebsd.org/	2026-11-03
 V75.1.2.2	迁移期间记录的连续	形态	方法论题：迁移时点前后记录衔接之判准，未assert具体迁移日期；离线核查。		2026-11-03
-V75.1.2.3	钩子与自动化痕迹	存疑	“迁移工作组更新提交钩子”未获当场一手：raw git-conv-doc 404、GitHub 页 ECONNRESET、exa CRAWL_NOT_FOUND，三通道均不可达；已查面如实记录，不编造。		2026-11-03
+V75.1.2.3	钩子与自动化痕迹	确证	“迁移工作组更新提交钩子”未获当场一手：raw git-conv-doc 404、GitHub 页 ECONNRESET、exa CRAWL_NOT_FOUND，三通道均不可达；已查面如实记录，不编造。〔2026-11-03 切片 2 补证改判：2020Q4 状态报告 Git 工作组节逐字“developed commit hooks for restrictions on commits to various branches, generation of commit mail, and similar needs”——同族断言一手在案〕		https://www.freebsd.org/status/report-2020-10-2020-12.html
 V75.1.2.4	预检复核的制度要求	确证	Committer’s Guide 逐字：“All non-trivial changes should be reviewed before they are committed to the repository.”＋“Timeouts are not a substitute for review.”——非平凡改动入库前复核成文。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
 V75.1.2.5	提交数据的计量分寸	形态	方法论题：提交数计量之适用区间与越界风险，无外涉断言；离线核查。		2026-11-03
 V75.1.3.1	发行说明的官方定位	确证	发行页按受支持与否分级编排：“Currently Supported”／“Prior Releases – EOL”／“Production Releases and Legacy Releases”逐字在案。		https://www.freebsd.org/releases/	2026-11-03
@@ -34,3 +34,105 @@ V75.1.8.2	播客访谈的规模积累	确证	BSDNow 第 687 期（2026-10-29 上
 V75.1.8.3	口述项目的学术转录	形态	泛指口述史项目之转录形态，无具名断言；离线核查。		2026-11-03
 V75.1.8.4	论文自述的口述代用	形态	项目体例（代用形态须经字段明示之规约）；离线核查。		2026-11-03
 V75.1.8.5	配套采访录的挂靠方式	形态	项目体例（挂靠方式决定检索入口之设计）；离线核查。		2026-11-03
+
+V75.2.1.1	代码树与版本记录并存	形态	方法论题：可移植范围与版本序列互为表里之史料框架，无具名断言；离线＋目录核查（节锚 outline.txt 2.1 在档）。			2026-11-03
+V75.2.1.2	基金会档案的法人层	确证	基金会页逐字：“The NetBSD Foundation serves as the legal entity which owns several of the NetBSD Project servers”，另“NetBSD® is a registered trademark of The NetBSD Foundation, Inc.”——法人层断言坐实。		https://www.netbsd.org/foundation/	2026-11-03
+V75.2.1.3	公共列表的全程存档	确证	列表页逐字：“The NetBSD Project provides a variety of public mailing lists to facilitate communication between the users and developers of NetBSD.”，且发帖“archived across the internet virtually forever”——持续存档在案。		https://www.netbsd.org/mailinglists/	2026-11-03
+V75.2.1.4	正式发行的记录节点	确证	发行页逐字：“Formal releases provide a stable, supported platform for use in production systems.”；formal.html 自 0.8（April 20, 1993）至 11.0（July 30, 2026）逐版列日期。		https://www.netbsd.org/releases/index.html; https://www.netbsd.org/releases/formal.html	2026-11-03
+V75.2.2.1	官方页面的自述口径	确证	首页逐字：“The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system.”——自述口径在案。		https://www.openbsd.org/	2026-11-03
+V75.2.2.2	问答集的成文卷帙	确证	官方 FAQ 以“OpenBSD Frequently Asked Questions”成卷，按 faq1、faq4 等编号分部（Introduction to OpenBSD、System Management 等目次在档）。		https://www.openbsd.org/faq/	2026-11-03
+V75.2.2.3	完整系统的一体原则	确证	FAQ 第 1 章逐字：“OpenBSD is a complete system, intended to be kept in sync.”		https://www.openbsd.org/faq/faq1.html	2026-11-03
+V75.2.2.4	仓库构成的自述全表	确证	anoncvs 页逐字：“The OpenBSD Project currently has four active source repositories:”并列 src、ports、www、xenocara 分工。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V75.2.3.1	综合列表的活跃幅度	确证	列表总档 misc 行逐字：“User questions and answers, general questions. This is the most active list.”		https://www.openbsd.org/mail.html	2026-11-03
+V75.2.3.2	提交史与讨论史的对接	确证	同页 source-changes 行逐字：“Automated mail of CVS source tree changes in the src, xenocara and www repositories.”		https://www.openbsd.org/mail.html	2026-11-03
+V75.2.3.3	匿名取码的开放程度	确证	anoncvs 页逐字：“Anonymous CVS is a method of keeping your local copy of the OpenBSD source tree up to date”＋“Read-only access for everyone”，按 OPENBSD_8_0 等标签取任意版次分支。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V75.2.3.4	半年发行的节奏刻度	确证	FAQ 逐字：“The OpenBSD team makes a new release approximately every six months, with the target release dates in May and November.”		https://www.openbsd.org/faq/faq1.html	2026-11-03
+V75.2.3.5	发帖礼法的成文规约	确证	礼法条目逐字：“Plain text, 72 characters per line.”＋“Messages with an empty Subject will get bounced to the list manager”——格式与主题明文在案。		https://www.openbsd.org/mail.html	2026-11-03
+V75.2.4.1	官方页面与自述尺度	确证	首页逐字：“shares ancestor code with other BSD operating systems”＋“in an entirely different direction from the one taken in the FreeBSD, NetBSD, and OpenBSD series”——共同祖先与独立走向并陈。		https://www.dragonflybsd.org/	2026-11-03
+V75.2.4.2	史页自否弃的警示	确证	官方 history 页逐字：“but this description has long since become obsolete”，页脚 Last edited Thu Jan 17 13:32:06 2019——自否弃声明坐实。		https://www.dragonflybsd.org/history/	2026-11-03
+V75.2.4.3	采访原文的快照存续	确证	实测原址 onlamp.com/pub/a/bsd/2004/07/08/dragonfly_bsd_interview.html 现已改出 O'Reilly Radar 无关内容（原址失效）；web.archive.org 快照取回原文“ONLamp.com: Behind DragonFly BSD by Federico Biancuzzi 07/08/2004”——快照续存在案。		http://www.onlamp.com/pub/a/bsd/2004/07/08/dragonfly_bsd_interview.html; https://web.archive.org/web/2004/http://www.onlamp.com/pub/a/bsd/2004/07/08/dragonfly_bsd_interview.html	2026-11-03
+V75.2.4.4	列表存档的起点月份	有误	实测官方 users 存档起点为 2004-09（索引实列 257 个月份），而项目 2003-06 分叉（官方 history 页逐字：“DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.”），kernel／commits／submit／docs 各列均 2003-08 起——“可回溯至项目初年”不成立。题名可维持，论题宜按实态改写（起点月份 2004-09 即用户列讨论史料下限）。		https://lists.dragonflybsd.org/pipermail/users/; https://www.dragonflybsd.org/history/	2026-11-03
+V75.2.4.5	多源三角的验证惯例	形态	方法论题：多类来源互证之考据惯例设计，无具名断言；离线＋目录核查。			2026-11-03
+V75.2.5.1	仓库列表的构成全貌	确证	gitweb 实测并列 dragonfly.git（“DragonFly Project Source”）、docs.dragonflybsd.org.git（“DragonFly BSD Official Documen…”）、dports.git（“DragonFly DPorts Source”）等仓库。		https://gitweb.dragonflybsd.org/	2026-11-03
+V75.2.5.2	提交留言的原文保全	形态	通用版本控制属性＋方法题（原文与列表发言交叉核对之规约），无具名断言；离线核查。			2026-11-03
+V75.2.5.3	决策风格的留言印记	形态	方法论题：提交消息作治理风格间接史料之设计，无具名断言；离线核查。			2026-11-03
+V75.2.5.4	非正式治理的记录载体	形态	否定性设计前提（“未发布系统性治理文档”），无具名文书断言，不作正面取证；离线核查。			2026-11-03
+V75.2.6.1	完整归档的延续时段	有误	三重反证：①官方 users 存档起点 2004-09，晚于分叉（2003-06，官方 history 页逐字在案）；②2004-09–2026-10 跨度内实缺 9 个月份（2023-06、2023-08、2023-09、2024-07、2024-08、2025-09、2025-10、2026-06、2026-07）；③2012-09-22 迁移公告自认旧档 garbled、校验未全。“自分叉起完整延续”不成立，建议去“完整”改题。	列表存档的延续时段	https://lists.dragonflybsd.org/pipermail/users/; https://www.dragonflybsd.org/history/; https://lists.dragonflybsd.org/pipermail/users/2012-September/422327.html	2026-11-03
+V75.2.6.2	论坛存档的界面形态	确证	pipermail 实测按月份列目，每月并设 [ Thread ]／[ Subject ]／[ Author ]／[ Date ] 分面与 Gzip'd Text 全文包——界面形态坐实。		https://lists.dragonflybsd.org/pipermail/users/	2026-11-03
+V75.2.6.3	迁移期的散佚记录	确证	2012-09-22 Justin Sherrill 迁移公告逐字：“I've managed to pull out the old archives of the mailing list and bring them into Mailman”＋“these are emails that were garbled by the old mail archive”＋“I can't check all of them”——迁移期散佚与前置告示在案。		https://lists.dragonflybsd.org/pipermail/users/2012-September/422327.html	2026-11-03
+V75.2.6.4	三方归档的互补勘验	形态	方法论题：官方与第三方归档互证之取用规则，无具名第三方；离线核查（官方档缺口实测另见 2.6.1）。			2026-11-03
+V75.2.6.5	即时讨论的史料残缺	形态	方法论题：聊天频道日志保存形态与结论标注规约，无具名频道断言；离线核查。			2026-11-03
+V75.2.7.1	文件系统设计的文档留存	确证	官方站 /hammer 页实列“HAMMER2 Design v6 (08-Dec-2018)”等设计文本与 hammer.pdf；源码内说明文件以官方 man 页 hammer(5) 在档（“The HAMMER file system provides facilities to store file system data onto disk devices”）——两处留存可互校。		https://www.dragonflybsd.org/hammer; https://man.dragonflybsd.org/?command=hammer&section=5	2026-11-03
+V75.2.7.2	调度器文档与源码对读	形态	方法论题：设计文档与内核源码对读之核验方法，无具名文档；离线核查。			2026-11-03
+V75.2.7.3	文档滞后于实现的处理	形态	方法论题：滞后差异以提交记录为基准之裁定规则；离线核查。			2026-11-03
+V75.2.7.4	源码目录的版本初引	确证	官方 commits 存档实测：2008-02-05 起连月见“cvs commit: src/sys/vfs/hammer hammer.h hammer_btree.c …”主题行，至 2008-09 续存——自研文件系统目录引入期提交轨迹可逐月核对。		https://lists.dragonflybsd.org/pipermail/commits/2008-February/subject.html	2026-11-03
+V75.2.8.1	发行序列的日期链条	确证	发行页逐字：“1.0 (July 12, 2004)”起逐条列示日期至今。		https://www.dragonflybsd.org/releases/	2026-11-03
+V75.2.8.2	版本说明的持续改进	形态	方法论题：发行说明与提交日志并列为核心史料之设计；离线核查。			2026-11-03
+V75.2.8.3	文本缺漏的核验基准	形态	方法论题：完整性核验以提交日志为基准之规则；离线核查。			2026-11-03
+V75.2.8.4	引入时间的交叉考	形态	方法论题：引入时间以发布说明、提交记录与列表讨论交叉确认之规则；离线核查。			2026-11-03
+V75.2.9.1	官方开源门户的陈述	确证	门户页题“Open Source at Apple”，逐字：“Open source software is at the heart of Apple platforms and developer tools.”		https://opensource.apple.com/	2026-11-03
+V75.2.9.2	源码获取的公开渠道	确证	同页逐字：“You can access the source code for our operating systems and developer tools by downloading releases or browsing Git repositories.”		https://opensource.apple.com/	2026-11-03
+V75.2.9.3	架构自述的成分指认	确证	官方 Kernel Programming Guide 逐字：“Darwin technology is based on BSD, Mach 3.0, and Apple technologies.”		https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	2026-11-03
+V75.2.9.4	层位来源的对应说明	确证	同页逐字：“The BSD layer is based on the BSD kernel, primarily FreeBSD.”		https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html	2026-11-03
+V75.2.10.1	渠道口径的涉题界限	确证	首页逐字：“Or bring up your own idea on the appropriate mailing list or IRC!”——列表与聊天双渠道口径在案。		https://www.dragonflybsd.org/	2026-11-03
+V75.2.10.2	软件仓库的边界内件	确证	gitweb 实测 dports.git（“DragonFly DPorts Source”）与 dragonfly.git 分立；首页逐字：“DragonFly leverages the dports system to provide thousands of applications in source and binary forms.”		https://gitweb.dragonflybsd.org/; https://www.dragonflybsd.org/	2026-11-03
+V75.2.10.3	时段下限的更新节点	确证	发行页逐字：“6.4.2 (May 9, 2025)”——近期发行持续标注日期。		https://www.dragonflybsd.org/releases/	2026-11-03
+V75.3.1.1	群体呈现的不可通约	形态	方法论题：并陈原则作群体记录之方法约束，无外涉断言；离线核查。			2026-11-03
+V75.3.1.2	口述转录的方法自觉	形态	方法论题：转录行为之方法定位，无具名项目断言；离线核查。			2026-11-03
+V75.3.1.3	经验优先的取材先后	形态	方法论题：取材次序规则之设计；离线核查。			2026-11-03
+V75.3.1.4	生平存疑的三次复查	形态	方法论题：项目三次复查纪律之体例记；离线核查。			2026-11-03
+V75.3.2.1	五类史料的分层框架	形态	方法论题：史料分层框架设计；离线核查。			2026-11-03
+V75.3.2.2	免检特权的否定原则	形态	方法论题：取用规则底线之设计；离线核查。			2026-11-03
+V75.3.2.3	机构自述的敏感留白	形态	方法论题：机构自述留白以旁证补齐之规则，无具名机构断言；离线核查。			2026-11-03
+V75.3.3.1	伯克利发行带的整链	确证	TUHS UCB 目录实测：1BSD／2BSD／3BSD／4BSD 逐条并列于同一索引。		https://www.tuhs.org/Archive/Distributions/UCB/	2026-11-03
+V75.3.3.2	手册底稿的馆藏构成	确证	Bancroft 馆 OAC 档案指南逐字：“The Berkeley Software Distribution records, 1974-2005, comprise technical manuals, drafts, and notes pertaining to the Berkeley Software Distribution (BSD) operating system”。		https://oac.cdlib.org/findaid/ark:/13030/hb2b69n7b5/	2026-11-03
+V75.3.3.3	档案开放的研究取用	确证	同指南 Restrictions 逐字：“Collection is open for research.”；Terms of access 逐字：“All requests to reproduce, publish, quote from or otherwise use collection materials must be submitted in writing to the Head of Public Services, The Bancroft Library”——开放与复制规程并陈。		https://oac.cdlib.org/findaid/ark:/13030/hb2b69n7b5/	2026-11-03
+V75.3.3.4	共享禁令下的散布	确证	LWN 史文逐字：“AT&T and other corporations allowed individuals to own copies of Unix, but not to share them.”；McKusick 当事人章节逐字：“Up through the release of 4.3BSD-Tahoe, all recipients of BSD had to first get an AT&T source license.”——两独立源在案。		https://lwn.net/Articles/725297/; https://biblioweb.sindominio.net/telematica/open-sources-html/node29.html	2026-11-03
+V75.3.4.1	发行带的版次完备	确证	UCB 顶层列四系，4BSD/ 下实测 4.1BSD-19810901-reconstructed、4.2BSD、4.3BSD、4.3BSD-Reno、4.3BSD-Tahoe、4.3BSD-Quasijarus0、4.4BSD-Alpha 等版次集中列目。		https://www.tuhs.org/Archive/Distributions/UCB/; https://www.tuhs.org/Archive/Distributions/UCB/4BSD/	2026-11-03
+V75.3.4.2	源码树的版次通览	确证	TUHS 首页逐字：“Browse the old Unix source code via a web interface at the Unix Tree.”		https://www.tuhs.org/	2026-11-03
+V75.3.4.3	会议文献的归档链条	确证	USENIX 官方页逐字：“Browse proceedings grouped by year: 2008 | … | 1993 | Others Before 1993”＋“Announcement: All online conference proceedings are now freely available to everyone.”；早期端 1985 年会议论文集全件在 archive.org 在档（1985 Summer Conference Proceedings, June 11–14, 1985 Portland）；当代端 bsdcan.org（“North America's Largest BSD Conference”，BSDCan 2025／2026 档在列）。		https://www.usenix.org/publications/library/proceedings/proceedings1.html; https://archive.org/details/1985-proceedings-summer-portland; https://www.bsdcan.org/	2026-11-03
+V75.3.4.4	新闻组归档的镜像存留	确证	Google Groups 实测 net.unix-wizards 专题组在档（1983–1986 帖目可见，含“4.3BSD Interlan driver implementation”“affordable source for NFS on 4.3BSD?”等主题帖）——第三方存档为主要存取形态坐实。		https://groups.google.com/g/net.unix-wizards	2026-11-03
+V75.3.5.1	馆藏档案的构成范围	确证	OAC 档案指南构成句同 3.3.2（technical manuals, drafts, and notes），另载“a vast quantity of magnetic data reels and CD-ROMs containing complete distributions of the operating system”。		https://oac.cdlib.org/findaid/ark:/13030/hb2b69n7b5/	2026-11-03
+V75.3.5.2	清理工程的文件处置	确证	McKusick 当事人章节逐字：“The result was that three files were removed from the 18,000 that made up Networking Release 2”＋“a number of minor changes were made to other files”；Klara 史文逐字：“Only three files had to be removed from Networking Release 2 and changes were made to other files.”——论题“仅少数文件须移除而其余经改动保留”获双重支撑。		https://biblioweb.sindominio.net/telematica/open-sources-html/node32.html; https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	2026-11-03
+V75.3.5.3	契约约束下的通信面	确证	McKusick 章节逐字：“Up through the release of 4.3BSD-Tahoe, all recipients of BSD had to first get an AT&T source license.”＋重写运动诸人“based solely on their published descriptions”（同章 Net/2 节）；LWN 逐字同 3.3.4——契约环境坐实（两独立源）。		https://biblioweb.sindominio.net/telematica/open-sources-html/node29.html; https://biblioweb.sindominio.net/telematica/open-sources-html/node31.html; https://lwn.net/Articles/725297/	2026-11-03
+V75.3.5.4	发行带续存的整带参照	确证	UCB/Net2/ 目录实测整带在档：net2.tar.gz（20M）＋net2.lst（1.0M 清单）＋README＋Tape_CD_Diffs。		https://www.tuhs.org/Archive/Distributions/UCB/Net2/	2026-11-03
+V75.3.6.1	宣言文本的初始公告	确证	gnu.org 逐字：“This is the original announcement of the GNU Project, posted by Richard Stallman on September 27, 1983.”＋“Starting this Thanksgiving I am going to write a complete Unix-compatible software system called GNU”；另 net.unix-wizards 第三方存档 9/27/83 帖目可见。		https://www.gnu.org/gnu/initial-announcement.html; https://groups.google.com/g/net.unix-wizards	2026-11-03
+V75.3.6.2	原始邮件的保真转录	确证	同页逐字：“For completeness, the original email is reproduced here, in its original form.”		https://www.gnu.org/gnu/initial-announcement.html	2026-11-03
+V75.3.6.3	许可理念的宣言根脚	确证	同页原文节 Why I Must Write GNU 逐字：“I cannot in good conscience sign a nondisclosure agreement or a software license agreement.”		https://www.gnu.org/gnu/initial-announcement.html	2026-11-03
+V75.3.6.4	话语材料的语境辨析	形态	方法论题：组织立场与个人观点之辨析规则；离线核查。			2026-11-03
+V75.3.7.1	初始发行档的持久标识	确证	kernel.org Historic 目录实测：“linux-0.01.tar.gz 30-Oct-1993 00:00 71K”——原始文件名与体量持久存列。		https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/	2026-11-03
+V75.3.7.2	追加校验的存档可信	确证	同目录实测：“linux-0.01.tar.sign 08-Aug-2013 19:15 665”——1991 年发行档于 2013 年补附签名，事后补签在案。		https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/	2026-11-03
+V75.3.7.3	新闻组原帖的存档依托	确证	Google Groups 实测 comp.os.minix 线程在档，1991-08-25 原帖经第三方存档可定位（页内可见逐字引文“Hello everybody out there using minix - I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones”）。		https://groups.google.com/g/comp.os.minix/c/dlNtH7RRrGA/m/SwRavCzVE7gJ	2026-11-03
+V75.3.8.1	许可条款的成文格式	有误	四句本体确证（Bell Labs 幻灯原文“No advertising, no support, no bug fixes, payment in advance”，IEEE Spectrum 逐字在案＋Klara 同记），但论题称“非商业许可”系指称错置：该四句是 AT&T 对 Unix 被许可人的许可姿态（明记 payment in advance，付费许可），并非某“非商业许可”之条款；“当事人叙述中被逐字追记”宜改“后世史家对 Bell Labs 幻灯的逐字转述”（Salus 追记脉络）。题名可维持，论题层修正。		https://spectrum.ieee.org/the-strange-birth-and-long-life-of-unix; https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	2026-11-03
+V75.3.8.2	定价文件的证据地位	确证	McKusick 章节逐字：“BSDI began selling their system including both source and binaries in January 1992 for $995.”；Klara 逐字：“Anyone could get both the source and the binaries for $995”——定价以公开记载留存，双重在案。		https://biblioweb.sindominio.net/telematica/open-sources-html/node32.html; https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	2026-11-03
+V75.3.8.3	行业报刊的期号对表	形态	方法论题：期号作报刊史料编目单位之规则；离线核查。			2026-11-03
+V75.3.8.4	公告与报道的互证	形态	方法论题：公告与报道并读之互证规则；离线核查。			2026-11-03
+V75.3.9.1	连载体例的分期结构	确证	DDJ 1991 年 8 月期原文（第三方镜像逐字）：“In the next article, we will leave the hand-waving descriptions of process switching behind and dig into some actual code.”——接续预告衔接在案；篇名“PORTING UNIX TO THE 386: THE BASIC KERNEL”（William Frederick Jolitz、Lynne Greer Jolitz，AUG91）。		https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9108/9108e/9108e.htm; https://www.386bsd.org/releases	2026-11-03
+V75.3.9.2	技术陈述的正文采样	确证	同篇逐字：“the second major milestone of our UNIX port -- the halcyon point where most of the kernel services and data structures are initialized”；项目自站各则分工在档（The Basic Kernel——Initialization of the 386BSD kernel services and data structures）。		https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9108/9108e/9108e.htm; https://www.386bsd.org/releases	2026-11-03
+V75.3.9.3	期号索引的征集编目	形态	方法论题：逐期征集与编目规则，无具名断言；离线核查（另：节题“18 期”与项目自站 17 则之差见转呈件一）。			2026-11-03
+V75.3.10.1	授权形式的证据分层	形态	方法论题：授权形式并列比较之取材方式；离线核查。			2026-11-03
+V75.3.10.2	发行说明的对读位置	形态	方法论题：发行说明与合同文书对读次序之规则；离线核查。			2026-11-03
+V75.3.10.3	判准适用的边界情形	形态	方法论题：边界个案划定判准之规则；离线核查。			2026-11-03
+V75.3.11.1	提交署名的消息头存查	形态	方法论题：消息头署名之存查设计，无具名项目断言；离线核查。			2026-11-03
+V75.3.11.2	权限授予的记录面	形态	方法论题：授予记录作制度旁证之设计；离线核查。			2026-11-03
+V75.3.11.3	归属考据的征集路径	形态	方法论题：逐项征集补全之可行办法；离线核查。			2026-11-03
+V75.3.11.4	口述补证的先行转写	形态	方法论题：访谈补证先转录固定之规约；离线核查。			2026-11-03
+V75.3.12.1	专题论文的检索门径	确证	USENIX 官方页逐字：“Browse proceedings grouped by year: 2008 | … | 1993 | Others Before 1993”＋“All online conference proceedings are now freely available to everyone.”；篇目级另见 proceedings 页实测逐篇列目——年度与篇目两级组织在档。		https://www.usenix.org/publications/library/proceedings/proceedings1.html; https://www.usenix.org/publications/proceedings	2026-11-03
+V75.3.12.2	手册分节的专题线索	形态	方法论题：手册分节与专题课题对应之线索设计；离线核查。			2026-11-03
+V75.3.12.3	专题史的边界划定	形态	方法论题：源码对读反推专题边界之规则；离线核查。			2026-11-03
+V75.3.13.1	标签命名的会议源头	确证	OSI 官方史页逐字：“The 'open source' label was created at a strategy session held on February 3rd, 1998 in Palo Alto, California”。		https://opensource.org/history	2026-11-03
+V75.3.13.2	组织创立的公告凭据	确证	同页逐字：“OSI was jointly founded by Eric Raymond and Bruce Perens in late February 1998, with Raymond as its first president”。		https://opensource.org/history	2026-11-03
+V75.3.13.3	定义文本的渊源改写	确证	同页逐字：“The Open Source Definition was originally derived from the Debian Free Software Guidelines (DFSG).”		https://opensource.org/history	2026-11-03
+V75.3.14.1	用语替换的胜出过程	确证	同页坐实新标签于 1998-02-03 会议场合确立，并明言与“the philosophically- and politically-focused label 'free software'”相区分——以官方史页为时点锚。		https://opensource.org/history	2026-11-03
+V75.3.14.2	辞令差异的文本对照	形态	方法论题：定义文本与发行指南对照之辨析操作；离线核查。			2026-11-03
+V75.3.14.3	自由理念的原始表述	确证	gnu.org 初始公告原文逐字：“I cannot in good conscience sign a nondisclosure agreement or a software license agreement.”——对保密条款的拒斥之原始表述在档。		https://www.gnu.org/gnu/initial-announcement.html	2026-11-03
+V75.3.15.1	早期发行档的偏在性	确证	kernel.org Historic 实测 linux-0.01.tar.gz 为该档最早存目（“linux-0.01.tar.gz 30-Oct-1993 00:00 71K”）——初始包显著存列坐实；归名印象云云为分析层。		https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/	2026-11-03
+V75.3.15.2	阵营叙述的持续生产	形态	方法论题：阵营内部叙述密度之影响分析，无具名断言；离线核查。			2026-11-03
+V75.3.15.3	保存工程的平衡作用	确证	TUHS 宗旨逐字在档（“to preserve and maintain historical UNIX artifacts, and to provide a forum for discussion of UNIX and its history.”）——平衡作用云云为分析层。		https://www.tuhs.org/	2026-11-03
+V75.3.16.1	三代版本控制的新旧衔接	确证	Committer's Guide 逐字：“The FreeBSD source repository switched from CVS to Subversion on May 31st, 2008.”＋“The source repository switched from Subversion to Git on December 23rd, 2020.”（doc 库：CVS→SVN 2012-05-19、SVN→Git 2020-12-08）；2020Q4 报告逐字：“The Git working group largely completed the migration of the doc and src (base system) trees from Subversion to Git in December 2020.”——三代衔接与断代点在案。		https://docs.freebsd.org/en/articles/committers-guide/; https://www.freebsd.org/status/report-2020-10-2020-12.html	2026-11-03
+V75.3.16.2	迁移决议的执行细目	确证	2020Q4 报告 Git 工作组节逐字：“developed commit hooks for restrictions on commits to various branches, generation of commit mail, and similar needs”；另 Release Engineering 节“the upcoming 13.0 release, which will be the first release from Git”——钩子与构建准备在案。		https://www.freebsd.org/status/report-2020-10-2020-12.html	2026-11-03
+V75.3.16.3	提交权限的分层管理	确证	Committer's Guide 逐字：“When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.”		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V75.3.16.4	提交流水的分支覆盖	确证	列表总档逐字：dev-commits-src-all＝“Commit messages for all branches of the src repository”，另 dev-commits-doc-all／dev-commits-ports-all 同式并列。		https://lists.freebsd.org/	2026-11-03
+V75.3.17.1	播客连载的文化议题	确证	bsdnow.tv 实测最新期“687: Long Term Support”，自述“A weekly podcast”——数百期连载在案。		https://bsdnow.tv/	2026-11-03
+V75.3.17.2	媒体纪年的周年叙述	形态	方法论题：周年叙述与项目节点核对之规则，无具名报道断言；离线核查。			2026-11-03
+V75.3.17.3	问答与争论的列表层	形态	方法论题：列表层作文化叙述底料之设计；离线核查。			2026-11-03
