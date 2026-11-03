@@ -8,3 +8,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T19:50:00	draft	88	418	413	第二轮（ykla 令退回）：418 条联网引文改由 _v41_map.py 逐题指认、_v41_make.py 生成并逐字校验
 2026-10-30T20:15:25	selfcheck	88	418	413	_v41_verify2：联网行 418／未命中 0／复用 0／URL 99／maxPage 25（6.0%）／tier A416 B2／维基 0；audit_title_consistency V41 FAIL 0（他卷 V46 C6 FAIL）
 2026-10-30T20:18:00	done	88	418	413	第二轮收口：题面／thesis／order／status／sources 零改动，ledger_sha256 未变
+2026-11-02T19:56:52	selfcheck	88	418	413	质量批改题 9 条，指纹重算 9bf5f030ca23

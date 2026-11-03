@@ -10,3 +10,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T20:15:20	exception	26	129	42	42 条 corpus_gap 登记为 open：本卷 22 节旧树命中 0 件；另 7 行 mapping 命中为跨卷 DragonFly 料，按 0 信任不充史料（详呈审报告 §四）
 2026-10-30T20:15:50	selfcheck	26	129	42	audit_title_consistency.py --check：合计 40 项，FAIL 0（库内其他卷亦 0）
 2026-10-30T20:16:42	done	26	129	42	台账 129 行、证据 474 行、例外 42 条；ledger_sha256=0168ce8f…；独立 URL 33；维基行 0；引文重复 0；单页上限 19 题（14.7%）
+2026-11-02T16:05:24	selfcheck	26	129	42	质量批改题 1 条，指纹重算 1ef70eafd914

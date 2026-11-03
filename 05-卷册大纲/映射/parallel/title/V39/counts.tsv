@@ -7,3 +7,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T18:16:00	selfcheck	89	442	87	audit_title_consistency --check：V39 40 项全 PASS；全库 FAIL 5 项均为他卷（V64 四项、V12 一项）
 2026-10-30T18:21:00	done	89	442	87	ledger_sha256=539153e1a1241130b683623c8c5b12e12131b13fceb4907b8588fa06d469de78；证据 1681 行；联网 442 行、独立 URL 34、逐字未命中 0
 2026-10-30T18:26:00	selfcheck	89	442	87	末轮复跑：V39 四十项全 PASS；全库仅余 V12 H1（他卷 hash 不符），故 --check 退出码 1
+2026-11-02T15:44:45	selfcheck	89	442	87	质量批改题 7 条，指纹重算 ffd950b8bf93

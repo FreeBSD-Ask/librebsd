@@ -5,3 +5,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T19:06:53	selfcheck	78	468	450	audit_title_consistency.py --check：V40 判据全 PASS，FAIL 0；全库 H1 FAIL 1 处属他卷 V12（只记录不代改）
 2026-10-30T19:06:53	done	78	468	450	done.json 落盘；ledger_sha256=effa4f86；联网 468 行逐字未命中 0；维基行 0；重复引文 0
 2026-10-30T19:09:23	done	78	468	450	指纹更新：台账 thesis 一处直角引号改弯引号（题面零改动），ledger_sha256=5d76bf55c094；supersedes 上行 done 的 effa4f86
+2026-11-02T16:50:51	selfcheck	78	468	450	质量批改题 7 条，指纹重算 e989eef2cf6c

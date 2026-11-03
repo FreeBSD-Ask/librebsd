@@ -11,3 +11,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T21:24:00	exception	44	132	132	132 条 corpus_gap：mapping.tsv 该卷 52 件全属第 11 卷 DragonFly 语料（跨卷错绑），本卷 44 节实无本主题旧料
 2026-10-30T21:25:50	selfcheck	44	132	132	audit_title_consistency --check：本卷 FAIL 0；他卷 V48 B3 命中 2 处（只记录不代改）
 2026-10-30T21:27:10	done	44	132	132	done.json：titles=132、ledger_sha256=f0d281ba…、selftest_exit=0；呈审报告已落盘，待 ykla 卷级批准
+2026-11-02T16:50:51	selfcheck	44	132	132	质量批改题 4 条，指纹重算 b629e5f6d13b

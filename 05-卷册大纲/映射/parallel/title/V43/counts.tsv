@@ -7,3 +7,4 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T20:08:50	exception		220	30	无切题旧料题逐题 corpus_gap（6 节）
 2026-10-30T20:08:50	selfcheck	44	220	30	audit_title_consistency.py --check：本卷全 PASS，合计 40 项（他卷 C6 1 项 FAIL，属 V46）
 2026-10-30T20:08:50	done	44	220	30	证据 850 行（联网 220／史料 190／目录 220／规则 220）；ledger_sha256=8da782519b701f065496a023c48f521f950563fbe456af058a5cc8fea82cedf0
+2026-11-02T16:50:51	selfcheck	44	220	30	质量批改题 4 条，指纹重算 118e97ce2f11

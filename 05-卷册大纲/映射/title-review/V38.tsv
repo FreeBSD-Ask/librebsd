@@ -38,7 +38,7 @@ V38.1.6.6	记录者视角的偏置	形态	体例题：记录者自述带立场�
 V38.1.7.1	AT&T 代码清理的牵头人	确证			https://flylib.com/books/en/2.849.1.20/1/ https://klarasystems.com/articles/history-of-freebsd-net-1-and-net-2-a-path-to-freedom/	2026-11-01
 V38.1.7.2	档案与名录的署名	有误	386BSD 补丁集名录（CONTRIB.TXT）“Unofficial FAQs，Patchkits and Bug Lists”一节仅列 Hubbard、Lambert、Williams 三人，无 Bostic 署名；Bostic 见于 Dr. Dobb’s 文章致谢与 CSRG 档案及 4.4BSD 教材合著，但非补丁集贡献者〔已采纳落账 2026-11-02〕	CSRG 档案与教材的署名	https://github.com/386bsd/386bsd/blob/2.0/CONTRIB.TXT https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9108/9108e/9108e.htm	2026-11-01
 V38.1.7.3	创始期任职的记载缺口	确证			https://docs.freebsd.org/en/articles/contributors/	2026-11-01
-V38.1.7.4	离场时点的文献比对	存疑	Bostic 未见于 FreeBSD 贡献者名录或核心团队名单，“离场”一语前提存疑；已查 FreeBSD contributors 文档与 386BSD CONTRIB.TXT，均无其在 FreeBSD 项目内的任职记录，离场时点无从比对		https://docs.freebsd.org/en/articles/contributors/	2026-11-01
+V38.1.7.4	离场时点的文献比对	形态	Bostic 未见于 FreeBSD 贡献者名录或核心团队名单，“离场”一语前提存疑；已查 FreeBSD contributors 文档与 386BSD CONTRIB.TXT，均无其在 FreeBSD 项目内的任职记录，离场时点无从比对 〔2026-11-03 存疑清零：贡献者名录实载 Keith Bostic 两条（bostic@bostic.com、bostic@toe.CS.Berkeley.EDU），原判“未见于名录”不确，“离场”仍无一手，题论改为行迹时点比对；检索面：离场文书未取〕	行迹时点的名录比对	https://docs.freebsd.org/en/articles/contributors/	2026-11-03
 V38.1.7.5	与前段的衔接分工	形态	体例题：本节只载创始期一段、前段事迹按分工注让与第二十八卷的范围界定			2026-11-01
 V38.1.7.6	名录所见的贡献边界	形态	体例题：名录止于署名与邮箱、贡献内容须由代码史补足的史料评估原则			2026-11-01
 V38.2.1.1	选举前的非正式核心	确证			https://www.freebsd.org/internal/bylaws/ https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
@@ -122,7 +122,7 @@ V38.4.1.6	个人行迹的档案来源	形态				2026-11-01
 V38.4.2.1	志愿董事会的席位分配	确证			https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	2026-11-01
 V38.4.2.2	创立者的三重职务	确证			https://freebsdfoundation.org/about-us/our-team/	2026-11-01
 V38.4.2.3	副主席的机构背景	确证			https://freebsdfoundation.org/about-us/our-team/	2026-11-01
-V38.4.2.4	秘书与编辑委员会	存疑	题中“秘书兼任刊物编委主席”查无一手支撑：基金会秘书为 John Baldwin（或 Kevin Bowling），二者均非 doceng 成员；doceng 团队（Marc Fonvieille、Hiroki Sato、Edson Brandi、Alexander Ziaee）为共识制、无“主席”一职，亦未见秘书身兼刊物编委主席之履历。已查 freebsd.org/internal/doceng/ 宪章与 administration 页。		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.4.2.4	秘书与编辑委员会	确证	题中“秘书兼任刊物编委主席”查无一手支撑：基金会秘书为 John Baldwin（或 Kevin Bowling），二者均非 doceng 成员；doceng 团队（Marc Fonvieille、Hiroki Sato、Edson Brandi、Alexander Ziaee）为共识制、无“主席”一职，亦未见秘书身兼刊物编委主席之履历。已查 freebsd.org/internal/doceng/ 宪章与 administration 页。 〔2026-11-03 存疑清零：基金会团队页一手载“Secretary John Baldwin”与“John currently chairs the editorial board of the FreeBSD Journal”，秘书兼任刊物编委主席成立（编委指 FreeBSD Journal，非 doceng）；检索面：doceng 宪章与本题无关〕		https://www.freebsdfoundation.org/about-us/our-team/	2026-11-03
 V38.4.2.5	执行层的岗位分工	形态				2026-11-01
 V38.4.2.6	治理与运营的分界	形态				2026-11-01
 V38.4.3.1	个人捐赠的分层名录	确证			https://freebsdfoundation.org/our-donors/donors/	2026-11-01
