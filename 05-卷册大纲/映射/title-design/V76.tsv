@@ -42,8 +42,8 @@ V76.2.3.4	76	2	3	兼容顾虑的反方案例	以廉价硬件依赖非调试参�
 V76.2.3.5	76	2	3	probe 时序的技术根由	调试文件须待驱动注册才存在，probe 前生效的时序优势被论证为模块参数不可替代的根由。	5	4	史料;联网;目录;规则	final
 V76.2.3.6	76	2	3	用户态提案的轨道归位	用户态文件系统提案被质询讨论场所，技术议题归位到专门会议还是邮件列表成为程序之争。	6	4	史料;联网;目录;规则	final
 V76.2.4.1	76	2	4	stable 准入的判据清单	回传补丁须修真实缺陷、体量受限且经测试，准入判据以成文清单固化。	1	4	史料;联网;目录;规则	final
-V76.2.4.2	76	2	4	回移时机的三案权衡	提前告知、推迟回传、按 Fixes 延迟回传三种方案被逐案权衡，回移时机成为稳定政策的争点。	2	4	史料;联网;目录;规则	final
-V76.2.4.3	76	2	4	Fixes 标注的语义之争	Fixes 应指向前驱提交还是仅指回归存在分歧，标注语义的裁定直接影响回移依赖链。	3	4	史料;联网;目录;规则	final
+V76.2.4.2	76	2	4	回移时机的三种官方方案	官方规则载向 -stable 提交变更的三个选项（add a ‘stable tag’／ask the stable team to pick up／submit an equivalent patch），并以“Delay pick up of patches: Cc: <stable@vger.kernel.org> # after -rc3”载延迟回移；“三案权衡”论战原帖经 lore 多组检索未获（检索面：stable-kernel-rules、lore 2024 论线），本节按官方口径登记。	2	4	史料;联网;目录;规则	final
+V76.2.4.3	76	2	4	Fixes 标注的官方定义	submitting-patches 逐字“A Fixes: tag indicates that the patch fixes a bug in a previous commit.”；指向前驱提交抑或仅指回归的分歧原帖未获回取（检索面：lore 多组关键词、iwai 名检），官方口径不载分歧。	3	4	史料;联网;目录;规则	final
 V76.2.4.4	76	2	4	评审义务的硬性底线	维护者对本域补丁负逐件评审义务，义务底线与 CI 自动化之间存在张力。	4	4	史料;联网;目录;规则	final
 V76.2.4.5	76	2	4	条目校验的签名门槛	MAINTAINERS 条目按签名数与历史活跃度校验，名单自身的可校验性成为治理议题。	5	4	史料;联网;目录;规则	final
 V76.2.4.6	76	2	4	Link 标签的格式规范	Link 标签承载消息溯源职能，格式规范从口头惯例沉淀为文档口径，并支撑回归追踪的自动化。	6	4	史料;联网;目录;规则	final
@@ -51,7 +51,7 @@ V76.2.5.1	76	2	5	政策文档的渐进路线	内核政策把吸纳维护者设�
 V76.2.5.2	76	2	5	带宽约束的自决空间	子系统可以带宽不足为由暂缓接纳新语言代码，自决空间被写入政策文本。	2	4	史料;联网;目录;规则	final
 V76.2.5.3	76	2	5	行为准则的执行尺度	行为准则的执行尺度在“对人标准一致”与“议题在基础设施伦理”之间拉锯，执行边界未有定论。	3	4	史料;联网;目录;规则	final
 V76.2.5.4	76	2	5	信任体系的人本立场	信任建立在对人的签名与责任认定上，自动化信任与机器署名被明确排除。	4	4	史料;联网;目录;规则	final
-V76.2.5.5	76	2	5	法律风险的容忍判定	生成代码的版权归属未定，维护者无责与项目整体风险被分开评估，容忍度须集体裁量。	5	4	史料;联网;目录;规则	final
+V76.2.5.5	76	2	5	AI 代码的法律风险判定	ksummit 2025-08/09 线（Annotating patches containing AI-assisted code，97 帖）Bottomley 两帖主张纯生成代码不受版权保护、视同公有领域（“pure AI generated code is effectively uncopyrightable and therefore public domain”）；DCO(c) 无责与集体风险容忍度表述未命中（检索面：该线全帖、DCO 文档）。	5	4	史料;联网;目录;规则	final
 V76.2.5.6	76	2	5	界线划分的担责之辩	从 eBPF 到 Rust，边界讨论的共同点是维护者不得为不可控入口被动担责，担责之辩贯穿政策之争。	6	4	史料;联网;目录;规则	final
 V76.2.6.1	76	2	6	regzbot 的追踪串联	回归追踪机器人以邮件标签与 Link 标签接线，把散落的报告串成可追踪闭环。	1	4	史料;联网;目录;规则	final
 V76.2.6.2	76	2	6	Link 标签的自动接线	补丁引用报告的 Link 标签被机器人自动接续追踪，标签由此从引用礼仪升格为追踪基础设施。	2	4	史料;联网;目录;规则	final
@@ -63,7 +63,7 @@ V76.2.7.1	76	2	7	AI 评审的位置之争	大规模自动审查已被既成流�
 V76.2.7.2	76	2	7	文档构建的 Sphinx 管线	内核文档以 Sphinx 从 reStructuredText 生成，构建管线本身成为持续集成的对象。	2	4	史料;联网;目录;规则	final
 V76.2.7.3	76	2	7	逐补丁警告的 CI 闸门	逐补丁统计警告数、增加即失败的 CI 实践被移植到文档构建，闸门前移成为减负共识。	3	4	史料;联网;目录;规则	final
 V76.2.7.4	76	2	7	生成内容的披露标签	工具辅助贡献以 Assisted-by 类标签披露，披露格式从提案进入成文规则。	4	4	史料;联网;目录;规则	final
-V76.2.7.5	76	2	7	人工审查的责任底线	获签 Reviewed-by 不等于理解，审查能力门槛与提交者论证义务构成责任底线。	5	4	史料;联网;目录;规则	final
+V76.2.7.5	76	2	7	提交者论证义务的成文	generated-content 逐字“You are expected to understand and to be able to defend everything you submit.”；Reviewed-by 不等于理解与审查能力门槛统计（1,902 名作者仅 177 人获签）经三组检索未获原帖（检索面：lore Levin 统计组词、LWN 1049830），仅论证义务成分有据。	5	4	史料;联网;目录;规则	final
 V76.2.7.6	76	2	7	构建耗时的性能痛点	Sphinx 构建耗时被披露为贡献痛点，性能因素由此进入文档持续集成的议程。	6	4	史料;联网;目录;规则	final
 V76.2.8.1	76	2	8	版面秩序的运维底线	列表基础设施运营者以过滤屏蔽划出版面底线，秩序维护是运维职权而非舆论议题。	1	4	史料;联网;目录;规则	final
 V76.2.8.2	76	2	8	THE REST 的收件分流	THE REST 兜底改投专用地址的分流方案受到质疑，收件治理从个人过滤转向结构改造。	2	4	史料;联网;目录;规则	final
@@ -76,12 +76,12 @@ V76.3.1.2	76	3	1	触发全景的个案清点	二十余例报料覆盖 workstatio
 V76.3.1.3	76	3	1	定时器接线的 BIOS 缺陷	MP 表谎报定时器中断等主板固件缺陷被源码注释逐一记录，警告的技术根由落在 BIOS 侧。	3	4	史料;联网;目录;规则	final
 V76.3.1.4	76	3	1	中断级联的误报路径	级联 8259A 被固件误报为定时器输入，级联路径的误报机制由源码注释与用户实测相互印证。	4	4	史料;联网;目录;规则	final
 V76.3.1.5	76	3	1	noapic 兜底的治理个案	noapic 启动参数成为平台不适配时的长期兜底处方，实测数据与个案追踪构成治理样本。	5	4	史料;联网;目录;规则	final
-V76.3.1.6	76	3	1	维护者定调的方法记录	从“警告无大碍”到勘误内核优先，维护者定调文字构成警告治理的方法记录。	6	4	史料;联网;目录;规则	final
+V76.3.1.6	76	3	1	警告治理的查证记录	2002-05 与 2002-12 报料帖在档（linux-smp 邮箱指令句见 devik 2002-11-26 帖逐字）；“警告无大碍”与“勘误内核优先”的维护者定调帖经 lkml.iu.edu、marc.info 与本机 LKML 全量档同词检索未命中，按已查面登记、不编造。	6	4	史料;联网;目录;规则	final
 V76.3.2.1	76	3	2	白名单语义的权威定性	警告被定性为“硬件不在已知清单”而非故障提示，语义定性终结了多年的误读。	1	4	史料;联网;目录;规则	final
 V76.3.2.2	76	3	2	版本家族的编目口径	0x14、0x20 等版本号家族在报料中被反复编目，版本清单的编目口径成为兼容判定的依据。	2	4	史料;联网;目录;规则	final
 V76.3.2.3	76	3	2	文档讹误的勘误链条	芯片组手册把 IO-APIC 版本写成 0x2 的讹误被源码注释勘正，文档勘误链进入警告治理。	3	4	史料;联网;目录;规则	final
-V76.3.2.4	76	3	2	SiS 平台的兼容困境	SiS 平台在 APIC 未获支持时的连片报料，显示白名单定型前的平台兼容代价。	4	4	史料;联网;目录;规则	final
-V76.3.2.5	76	3	2	措辞修订的版本分界	2.4.21 起新版措辞要求附完整信息，措辞修订把报告浪潮切成前后两个阶段。	5	4	史料;联网;目录;规则	final
+V76.3.2.4	76	3	2	SiS 平台的兼容困境	Cox 2002-11-26 逐字“SiS IO-APICs are not supported currently. Ollie at SiS kindly provided the relevant information to fix that so I hope to have support included soon.”；2003-01-09 再载“SiS APIC is not supported in 2.4.”——不支持、厂商供料、并入未成三要素齐。	4	4	史料;联网;目录;规则	final
+V76.3.2.5	76	3	2	警告措辞的原始文本	devik 2002-11-26 逐字转述启动警告“kernel complaints that APIC is unknown and that I should write to linux-smp@vger.kernel.org”，原始措辞在案；2.4.21 起新版措辞要求附完整信息未见一手（检索面：ChangeLog-2.4.21、io_apic.c 各版、tglx/history 仓库）。	5	4	史料;联网;目录;规则	final
 V76.3.2.6	76	3	2	警告与回归的同机绑定	个别机器上启用 IO-APIC 即丢中断、禁用即稳定，警告与真实回归在同机绑定成高价值反例。	6	4	史料;联网;目录;规则	final
 V76.3.3.1	76	3	3	DRM 层的统一接口	DRM 以统一接口承担内存管理与 DMA 等事务，成为图形驱动与后续加速器的基础层。	1	4	史料;联网;目录;规则	final
 V76.3.3.2	76	3	3	加速器剥离的动机	为防图形软件栈把加速器当 GPU 使用，新子系统以设备类型隔离为动机从 DRM 生态中剥离。	2	4	史料;联网;目录;规则	final
@@ -153,9 +153,9 @@ V76.5.1.1	76	5	1	系统调用的 BSD 底色	select 一类接口的履历直接�
 V76.5.1.2	76	5	1	路径解析的 Capsicum 渊源	从 O_BENEATH 到 openat2 的补丁脉络被逐环追溯，受限路径解析的源头系于 FreeBSD 的 Capsicum 项目。	2	3	史料;目录;规则	final
 V76.5.1.3	76	5	1	close_range 的双向协同	FreeBSD 主动求同并计划回移实现，close_range 成为跨谱系同步开发的罕见记录。	3	3	史料;目录;规则	final
 V76.5.1.4	76	5	1	进程描述符的功能对照	新系统调用被对照 FreeBSD 的进程描述符特性，兼容层方案被提出以补齐差距。	4	3	史料;目录;规则	final
-V76.5.1.5	76	5	1	信号语义的分歧记录	线程 ID 能否当进程 ID 投递信号，两系行为差异被实测记录成对照样本。	5	3	史料;目录;规则	final
-V76.5.2.1	76	5	2	寄存器布局的 NetBSD 裁决	驱动寄存器偏移的疑误以 NetBSD 实现与数据手册互证定谳，BSD 系实现被用作裁决参照。	1	3	史料;目录;规则	final
-V76.5.2.2	76	5	2	缺文档驱动的 NetBSD 底本	官方文档缺位时以 NetBSD 驱动的文档与源码为底本，移植工程对第三方成果的依赖被记录。	2	3	史料;目录;规则	final
+V76.5.1.5	76	5	1	信号投递语义的两系差异	FreeBSD kill(2) 逐字“No process or process group can be found corresponding to that specified by pid.”（按进程 ID 投递）；Linux kill(2) 正文与 NOTES 未载线程 ID 可否充当 pid，tkill(2) 反称“kill(2) can be used to send a signal only to a process”；两系差异按文档口径并陈，实测记录未取回（检索面：lore）。	5	3	史料;目录;规则	final
+V76.5.2.1	76	5	2	寄存器偏移的勘正依据	提交 96a734b 逐字“Update the values to match those from the STP2002QFP documentation.”，偏移勘正成立；“以 NetBSD 实现为裁决参照”仅见 marc 索引标题（linux-sparc 2017-07-26“sunhme: incorrect global register offsets?”），正文与 NetBSD 源码对照未取回。	1	3	史料;目录;规则	final
+V76.5.2.2	76	5	2	驱动移植的文档缺口	sparclinux 补丁串与 NetBSD 联机手册本轮均未取回（man.netbsd.org 各路径不可达）；官方文档缺位与以 NetBSD 为底本两端待证，按缺口披露。	2	3	史料;目录;规则	final
 V76.5.2.3	76	5	2	netmap 的 FreeBSD 渊源	源自 FreeBSD 的高速收发包框架被移植进 Intel 驱动，网络技术的跨系采纳有了直接证据。	3	4	史料;联网;目录;规则	final
 V76.5.2.4	76	5	2	返回约定的 SunOS 遗产	新系统调用统一接口的讨论揭出旧返回约定源自 SunOS，架构兼容包袱在新接口中被检讨。	4	3	史料;目录;规则	final
 V76.5.2.5	76	5	2	SCSI 工具链的跨系移植	SCSI 工具包声明已移植至多平台，工具链与 CAM 标准的对比呈现两系 SCSI 传统。	5	3	史料;目录;规则	final
@@ -171,9 +171,9 @@ V76.5.4.4	76	5	4	挪用指控的辨析实录	对挪用代码指控的逐条辨�
 V76.5.4.5	76	5	4	兼容基准的定调实践	从套接字选项到行为对齐，BSD 语义被明确定调为不可擅改的兼容基准。	5	3	史料;目录;规则	final
 V76.5.5.1	76	5	5	随机化实现的保守对标	OpenBSD 的 mmap 随机化被引为保守方案对标，碎片化与性能代价的取舍进入 RFC 讨论。	1	4	史料;联网;目录;规则	final
 V76.5.5.2	76	5	5	映射基址的随机化口径	映射基址、栈与 VDSO 页纳入随机化范围的口径，构成地址空间加固的实现细节。	2	4	史料;联网;目录;规则	final
-V76.5.5.3	76	5	5	固定映射的先例援引	目标区间已有映射即失败的语义以 FreeBSD 先例立论，命名争论保存了先例援引的完整过程。	3	3	史料;目录;规则	final
+V76.5.5.3	76	5	5	固定映射的先例援引	Napierala 2017-12-14 在 MAP_FIXED_SAFE 线提议沿用 FreeBSD 名并逐字引 FreeBSD mmap(2)（“if MAP_EXCL is specified, the request will fail if a mapping already exists within the range”）；Hocko 答以语义不同、同名致乱（“reusing a name with a different semantics would be a bad idea”），先例援引全过程在档。	3	3	史料;目录;规则	final
 V76.5.5.4	76	5	5	内存封禁的同类参照	密封类接口把 XNU 与 OpenBSD 的既有实现明文列为参照，跨系先例进入提案正文。	4	3	史料;目录;规则	final
-V76.5.5.5	76	5	5	页回收算法的血统对比	脏页清洗优先级与队列设计的对比，把页回收算法的谱系差异写成一手记录。	5	3	史料;目录;规则	final
+V76.5.5.5	76	5	5	页回收算法的对比缺口	2000 年代初 Linux MM 串的脏页清洗优先级与 FreeBSD 对照未命中（检索面：lore、“on probation”、本机 LKML 档 vm_pageout＋FreeBSD 组词 1999–2005）；FreeBSD vm_pageout 与 Linux 回收器谱系差异无官方文档可比对。	5	3	史料;目录;规则	final
 V76.5.6.1	76	5	6	ZFS 调试的交叉验证	以代码相近的 FreeBSD 服务器作对照排查 ZFS 故障，跨系交叉验证成为调试方法。	1	4	史料;联网;目录;规则	final
 V76.5.6.2	76	5	6	隐藏标志的归属争辩	多个 BSD 派生文件系统皆支持的隐藏标志，构成 Linux VFS 抽象的反例。	2	3	史料;目录;规则	final
 V76.5.6.3	76	5	6	范围同步的 NetBSD 蓝本	范围同步调用以 NetBSD 命名空间为蓝本移植，文件系统接口的移植路径被记录。	3	3	史料;目录;规则	final

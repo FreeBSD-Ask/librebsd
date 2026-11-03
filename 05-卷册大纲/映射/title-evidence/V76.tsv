@@ -55,7 +55,7 @@ V76.1.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V76.1.3.6	Wedson 离场声明	https://lwn.net/Articles/987635/	联网	B	2026-10-31	After almost 4 years, I find myself lacking the energy and enthusiasm I once had to respond to some of the nontechnical nonsense, so it's best to leave it up to those who still have it in them.	none
 V76.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“峰会治理、安全披露与工具链争议”；本节题为其下位论题	none
 V76.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V76.1.4.1	2024 峰会讨论	https://lwn.net/Articles/987635/	联网	B	2026-10-31	he linked to a video from the "Rust for filesystems discussion" held at the 2024 Linux Storage, Filesystem, Memory-Management, and BPF Summit.	none
+V76.1.4.1	2024 峰会讨论	https://lwn.net/Articles/987635/	联网	B	2026-10-31	"he linked to a video from the ""Rust for filesystems discussion"" held at the 2024 Linux Storage, Filesystem, Memory-Management, and BPF Summit."	none
 V76.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“峰会治理、安全披露与工具链争议”；本节题为其下位论题	none
 V76.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.1.4.2	披露渠道分工	https://docs.kernel.org/process/security-bugs.html	联网	A	2026-10-31	Coordination is usually handled by the 'linux-distros' mailing list and disclosure by the public 'oss-security' mailing list	none
@@ -151,10 +151,12 @@ V76.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V76.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.4.2	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.15-WoT过期与folio五缺口/398.15.3-1411stable回退回归防范.md	史料	A	2026-10-31	认同“能提前告知回归就告知”，并逐一回应推迟回传、紧急标记、按 Fixes: 延迟回传三方案的可行性。	none
 V76.2.4.2	回传自动化	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-10-31	Once the patch is mainlined it will be applied to the stable tree without anything else needing to be done by the author or subsystem maintainer.	none
+V76.2.4.2	stable 规则三选项与延迟回移	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-11-03	There are three options to submit a change to -stable trees: Add a ‘stable tag’…Ask the stable team to pick up a patch already mainlined. Submit a patch to the stable team that is equivalent…；Delay pick up of patches: Cc: <stable@vger.kernel.org> # after -rc3	none
 V76.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“stable 回归防范与 MAINTAINERS 治理”；本节题为其下位论题	none
 V76.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.4.3	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.14-embargo小灶与Folios僵局/398.14.28-14026fixes标签语义.md	史料	A	2026-10-31	论证Fixes指向前驱补丁虽“不公平”但利于评审与回移依赖，无回归就不该打Fixes，回应iwai对git前修复标注的疑虑。	none
 V76.2.4.3	Fixes 派生口径	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-10-31	such tagging is unnecessary if the stable team can derive the appropriate versions from Fixes: tags.	none
+V76.2.4.3	Fixes 标注官方定义	https://docs.kernel.org/process/submitting-patches.html	联网	A	2026-11-03	A Fixes: tag indicates that the patch fixes a bug in a previous commit.	none
 V76.2.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“stable 回归防范与 MAINTAINERS 治理”；本节题为其下位论题	none
 V76.2.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.4.4	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.15-WoT过期与folio五缺口/398.15.17-14115维护者倦怠与ci.md	史料	A	2026-10-31	支持自动测试与 CI，但警告要求全部测试通过后人工才看一眼会严重挫伤贡献者积极性。	none
@@ -166,7 +168,7 @@ V76.2.4.5	MAINTAINERS 清单	https://docs.kernel.org/process/howto.html	联网	A
 V76.2.4.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“stable 回归防范与 MAINTAINERS 治理”；本节题为其下位论题	none
 V76.2.4.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.4.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.14-embargo小灶与Folios僵局/398.14.18-14016回归防回退与link标签.md	史料	A	2026-10-31	更正Link标签格式：整个message-id填入patch.msgid.link与lore链接，属流程规范记录。	none
-V76.2.4.6	Link 标签用途	https://docs.kernel.org/admin-guide/reporting-regressions.html	联网	A	2026-10-31	It also watches for "posted or committed patches referencing such reports with 'Link:' tags; replies to such patch postings are tracked as well."	none
+V76.2.4.6	Link 标签用途	https://docs.kernel.org/admin-guide/reporting-regressions.html	联网	A	2026-10-31	"It also watches for ""posted or committed patches referencing such reports with 'Link:' tags; replies to such patch postings are tracked as well."""	none
 V76.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Rust 内核政策与社区争议”；本节题为其下位论题	none
 V76.2.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.5.1	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.16-kallsyms44MiB与565新人/398.16.10-1528内核可持续性.md	史料	A	2026-10-31	论述 GPU merge criteria 以开源用户空间要求为大棒阻断厂商 dump-and-run，属集体性可持续机制。	none
@@ -198,7 +200,7 @@ V76.2.6.1	regzbot 机制	https://docs.kernel.org/admin-guide/reporting-regressio
 V76.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“回归追踪与 linux-next 运维”；本节题为其下位论题	none
 V76.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.6.2	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.20-bcachefs反思与-next运维复盘/398.20.9-1807link标签与lore链接.md	史料	A	2026-10-31	Geert 列举每日点击 lore 链接的场景：报 bug 找线程、查新增 Rb 标签、追溯同补丁早期提交；反对以 patchwork URL 充当 Link:，称多一步跳转且担心 freedesktop 域名消失。	none
-V76.2.6.2	Link 标签用途	https://docs.kernel.org/admin-guide/reporting-regressions.html	联网	A	2026-10-31	It also watches for "posted or committed patches referencing such reports with 'Link:' tags; replies to such patch postings are tracked as well."	none
+V76.2.6.2	Link 标签用途	https://docs.kernel.org/admin-guide/reporting-regressions.html	联网	A	2026-10-31	"It also watches for ""posted or committed patches referencing such reports with 'Link:' tags; replies to such patch postings are tracked as well."""	none
 V76.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“回归追踪与 linux-next 运维”；本节题为其下位论题	none
 V76.2.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.6.3	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.20-bcachefs反思与-next运维复盘/398.20.24-18022稳定版回归修复义务.md	史料	A	2026-10-31	Leemhuis 提议主线新引入回归须随最新 stable 修复；Berg 强烈反对把稳定版责任压给维护者，称用户不能既不逐版测试又要求每版出修复。	none
@@ -235,6 +237,7 @@ V76.2.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V76.2.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.7.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.19-除名机制与C内存安全提案/398.19.26-17524ai贡献门槛.md	史料	A	2026-10-31	Levin 统计 v6.12..v6.18 有 1902 名单提交作者占三分之一、仅 177 人获 Reviewed-by，拟议审查能力门槛将挡 1700 余人；Bottomley 称 Rb 不等于理解，应以 changelog 论证。	none
 V76.2.7.5	提交者义务	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	Taking full responsibility for the contribution	none
+V76.2.7.5	提交者论证义务成文	https://docs.kernel.org/process/generated-content.html	联网	A	2026-11-03	You are expected to understand and to be able to defend everything you submit.	none
 V76.2.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“AI 评审与文档持续集成”；本节题为其下位论题	none
 V76.2.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.2.7.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.22-TAB得票排名与文件系统划分/398.22.13-20212内核文档构建.md	史料	A	2026-10-31	Corbet 披露 Sphinx 2.4 构建耗时约为 5.x 一半，曾魔改 Sphinx 砍掉约20%耗时	none
@@ -303,10 +306,12 @@ V76.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V76.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.3.2.4	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.12-白名单定型与SiS平台困境/403.12.3-232linux社区sis平台困境四连4例.md	史料	A	2026-10-31	Alan Cox裁定2.4尚不支持SiS APIC且已从SiS拿到所需资料但尚未回移2.5的相关改动，处方为编译不启用apic或以noapic启动	none
 V76.3.2.4	apic 参数口径	https://docs.kernel.org/admin-guide/kernel-parameters.html	联网	A	2026-10-31	apic [APIC,X86-64] Use IO-APIC. Default.	none
+V76.3.2.4	Cox 论 SiS IO-APIC 未支持与厂商供料	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/lkml.duckdb（6,437,908 帖）	史料	A	2026-11-03	<1038321607.2594.5.camel@irongate.swansea.linux.org.uk>：SiS IO-APICs are not supported currently. Ollie at SiS kindly provided the relevant information to fix that so I hope to have support included soon.（2002-11-26）；<1042137863.27796.46.camel@…>：SiS APIC is not supported in 2.4.（2003-01-09）	none
 V76.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“警告白名单与平台兼容定调”；本节题为其下位论题	none
 V76.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.3.2.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.11-未知IO-APIC的版本白名单报告浪潮/403.11.4-223linux社区2421新版措辞与0x20白名单外4例.md	史料	A	2026-10-31	Marco Wertejuk记录P4超线程平台上2.4.20-18.9smp出现新版措辞的信息即发现意外IO-APIC且内核发布不足三个月请报告，并称未察觉系统行为变化	none
 V76.3.2.5	apic 调试口径	https://docs.kernel.org/admin-guide/kernel-parameters.html	联网	A	2026-10-31	the amount of debugging information output when initialising the APIC and IO-APIC components.	none
+V76.3.2.5	devik 转述启动警告原始措辞	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/lkml.duckdb（6,437,908 帖）	史料	A	2026-11-03	2002-11-26 帖：When booting kernel complaints that APIC is unknown and that I should write to linux-smp@vger.kernel.org.	none
 V76.3.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“警告白名单与平台兼容定调”；本节题为其下位论题	none
 V76.3.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.3.2.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.11-未知IO-APIC的版本白名单报告浪潮/403.11.6-225linux社区警告与真实中断回归同机绑定2例.md	史料	A	2026-10-31	Greg Norris报告i875P平台2.4.21-rc7启用IO-APIC即在IDE重负载下丢中断而禁用后稳定，把未知IO-APIC警告与真实功能回归绑定在同机	none
@@ -653,6 +658,7 @@ V76.5.5.2	mmap 栈随机化	https://docs.kernel.org/admin-guide/sysctl/kernel.ht
 V76.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
 V76.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.5.5.3	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.14-Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral.md	史料	A	2026-10-31	It was introduced in FreeBSD, and seems to do exactly this.	none
+V76.5.5.3	Napierala 援引 FreeBSD MAP_EXCL 先例	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/lkml.duckdb（6,437,908 帖）	史料	A	2026-11-03	2017-12-14 帖：Regarding the name - how about adopting MAP_EXCL? It was introduced in FreeBSD, and seems to do exactly this; quoting mmap(2)…if MAP_EXCL is specified, the request will fail if a mapping already exists within the range.；Hocko 回帖：reusing a name with a different semantics would be a bad idea	none
 V76.5.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
 V76.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.5.5.4	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.18-Linux社区PedroFalcato在msealRFC讨论中以OpenBSD动.md	史料	A	2026-10-31	Pedro Falcato 在 mseal() RFC 讨论中，以 OpenBSD 动态链接器代码里 mmap() + mimmutable() 与 mprotect() + mimmutable() 属常见组合为例，支持一次性 mmap 即加密封的调用路径。	none
