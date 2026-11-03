@@ -19,11 +19,16 @@
 判据分组
 --------
 A 台账结构（表头、唯一性、层级对位、order 连续、status 枚举）
-B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度、年代括注）
-C 字符 C1–C8（中英空格、直角引号、ASCII 句读、危险字符、空白与不可见字符、术语、
-   禁词：Q2「谱系」＋《释读规则》读者面禁名；理论腔词披露不拦；
-   C8 去 AI 味：空转词硬拦、同卷同尾簇 ≤3、单题「的」≤2、AI 腔词披露不拦）
-D 语义 S1–S4 的可机读下限（题旨非空、层级一致、同节平行、异质登记）
+B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度、
+   年代括注：全角括号＋U+2013，含全角括号内 ASCII 连字符年份区间（2026-11-04 增补，G-19））
+C 字符 C1–C3／C5–C9（中英空格、直角引号、ASCII 句读、空白与不可见字符、术语、
+   禁词：Q2「谱系」＋《释读规则》读者面禁名＋进步叙事与等级修辞（R31）＋劳动禁词（R32）；
+   理论腔词披露不拦；C8 去 AI 味：空转词硬拦、同卷同尾簇 ≤3、单题「的」≤2、AI 腔词披露不拦；
+   C9 禁反斜杠与控制字符——2026-11-04 由原「C4」重编，与规则 C4（官方名斜杠两分，
+   由第四十一件承载）脱钩对齐（G-01），本判据语义不变）
+D 语义 S1–S4 的可机读下限（题旨非空、层级一致、同节平行、异质登记；
+   D3 对 V01–V50 卷段豁免（2026-11-04 入库，G-02）：ykla 2026-11-02 改判字数相似不作
+   要求，命中改标 EXEMPT 不判 FAIL，豁免不外溢其他判据与其他卷段）
 E 证据齐（每条标题有证据行、证据 id 在台账内、层级与日期格式）
 F 四源覆盖（计数与集合一致、≥2 源、专名／标准号／年代题 ≥3 源、单源题为 0）
 G 重复题（同节、同卷）
@@ -82,11 +87,24 @@ VERB_HEAD = ("讨论", "分析", "介绍", "说明", "论述", "研究", "探讨
 TRANSCRIBE = ("宣布", "指出", "表示", "认为", "建议", "询问", "承认", "强调",
               "透露", "提议", "反驳", "呼吁", "质疑", "回复", "答复")
 WORKER_JARGON = ("未判定", "待定", "杂项", "空模板件", "属英文原件", "属引文原件")
-# C7 禁词（2026-10-30 增补，ykla 授权）：Q2「谱系」禁用（2026-10-08 立，125 号文 阶段 F，
-# ykla 硬令「标题＋注文一并清理」）与《释读规则》读者面禁名，小节题名同口径。
+# C7 禁词（2026-10-30 增补，ykla 授权；2026-11-04 扩充，3A6-2 R31／R32 固化）：
+# BANNED_TITLE：Q2「谱系」禁用（2026-10-08 立，125 号文 阶段 F，ykla 硬令「标题＋注文一并
+# 清理」）与《释读规则》读者面禁名，小节题名同口径（原组不变）。
+# BANNED_HIERARCHY：进步叙事与等级修辞禁词（2026-11-04 增补，G-08／R31）：总纲 8 禁
+# 「主流/支流」「成功/失败」等级表述；源头为 18 号文 G3 禁用表与 03／10／13／22 号文
+# 复核账未执行项，整词硬拦。
+# BANNED_INEVITABLE：「必然」两字过宽——「偶然性与必然（性）」类辩证合法用例不作要求，
+# 故不裸拦「必然」，按历史必然义词组级匹配硬拦（2026-11-04 增补，G-08／R31）。
+# BANNED_LABOR：劳动／雇佣／资本（2026-11-04 增补，G-16／R32；77／79 号文三十条映射，
+# 目录层已全库清理，此处防回归），整词硬拦；「劳动关系史」类合法学术题若命中属真发现，
+# 逐条披露不改词表。
 # REVIEW_TERMS 为理论腔披露表（人工复核项，不拦退出码）：对象层研究题（如史学辨析章
 # 以「叙事」为研究对象者）合法，故只披露不硬拦，防误杀。
 BANNED_TITLE = ("谱系", "一刻哲学", "构造哲学")
+BANNED_HIERARCHY = ("黄金时代", "飞跃", "正统", "主流", "支流", "成功", "失败", "成败")
+BANNED_INEVITABLE = ("历史必然", "必然趋势", "必然胜利", "必然失败", "必然成功",
+                     "必然产生", "必然结果", "必然结局", "必然取代", "必然规律", "必然命运")
+BANNED_LABOR = ("劳动", "雇佣", "资本")
 REVIEW_TERMS = ("叙事", "话语", "互构", "建构", "解构", "范式", "语境", "他者", "视域", "主体性")
 # C8 去 AI 味（2026-10-30 ykla 令“标题风格应一致，去 AI 味的同时保持学术性”）：
 # 硬拦 AI 高频空转词、同卷结尾二字簇超限、单题「的」超密；临界词只披露防误杀。
@@ -96,7 +114,15 @@ PATTERN_TECH = re.compile(r"[A-Za-z]{2,}|POSIX|IEEE|ANSI|ISO|RFC|USENIX|ACM")
 STANDARD = re.compile(r"(IEEE\s*Std|POSIX|ISO/IEC|ANSI|RFC\s*\d+|USENIX)")
 YEAR_IN = re.compile(r"\d{4}")
 BAD_PAREN = re.compile(r"\(\s*\d{4}|\d{4}\s*\)")
+# B7 扩展（2026-11-04 增补，G-19／3A6-2 R42）：全角括号内年份区间用 ASCII 连字符
+# （如「（1980-2026）」）判 FAIL，须改 U+2013「–」（T7 正形）；既有 BAD_PAREN 语义不变。
+BAD_PAREN_FW_HYPHEN = re.compile(u"（[^（）]*\\d{4}\\s*-\\s*\\d{4}[^（）]*）")
 CROSS_REF = re.compile(u"（另见[^）]*）")
+# D3 卷段豁免（2026-11-04 入库，G-02／3A6-2 R04）：ykla 2026-11-02 改判——V01–V50 卷段
+# 「同节字数极差 ≤14」不作要求（字数相似豁免）。豁免仅限 D3 本判据与 V01–V50 两界，
+# 不外溢其他判据（同节 B／C／G 组照判），也不外溢 V51–V76（照判 FAIL）。
+D3_EXEMPT_VOLS = frozenset("%02d" % n for n in range(1, 51))
+D3_EXEMPT_BASIS = "ykla 2026-11-02 改判（3A6-2 R04 固化）：V01–V50 字数相似不作要求"
 
 
 def _read(p):
@@ -274,8 +300,9 @@ def run(root):
     f("B6", "B6 长度 8–40 字（去空格）", bad_t6,
       "越界 %d 处：%s" % (len(bad_t6), "、".join(bad_t6[:5]) or "无"))
 
-    bad_t7 = [r["subsection_id"] for _, _, r in all_rows if BAD_PAREN.search(r["title"])]
-    f("B7", "B7 年代括注须全角括号与 U+2013", bad_t7,
+    bad_t7 = [r["subsection_id"] for _, _, r in all_rows
+              if BAD_PAREN.search(r["title"]) or BAD_PAREN_FW_HYPHEN.search(r["title"])]
+    f("B7", "B7 年代括注须全角括号与 U+2013（全角括号内禁 ASCII 连字符年份区间）", bad_t7,
       "命中 %d 处：%s" % (len(bad_t7), "、".join(bad_t7[:5]) or "无"))
 
     # ---------------- C 字符
@@ -296,11 +323,6 @@ def run(root):
               if any(ch in r["title"] for ch in ",;:!?")]
     f("C3", "C3 句读全角；禁 ASCII 逗号分号冒号叹问", bad_c3,
       "命中 %d 处：%s" % (len(bad_c3), "、".join(bad_c3[:5]) or "无"))
-
-    bad_c4 = [r["subsection_id"] for _, _, r in all_rows
-              if "\\" in r["title"] or any(ord(ch) < 32 or ord(ch) == 127 for ch in r["title"])]
-    f("C4", "C4 禁反斜杠与控制字符（路径字符由落盘器全角化）", bad_c4,
-      "命中 %d 处：%s" % (len(bad_c4), "、".join(bad_c4[:5]) or "无"))
 
     bad_c5 = []
     for _, _, r in all_rows:
@@ -323,10 +345,13 @@ def run(root):
     bad_c7 = []
     for _, _, r in all_rows:
         hits = [w for w in BANNED_TITLE if w in r["title"]]
+        hits += [w for w in BANNED_HIERARCHY if w in r["title"]]
+        hits += [w for w in BANNED_INEVITABLE if w in r["title"]]
+        hits += [w for w in BANNED_LABOR if w in r["title"]]
         if hits:
             bad_c7.append("%s（%s）" % (r["subsection_id"], "、".join(hits)))
-    f("C7", "C7 禁词（Q2 谱系；释读规则读者面禁名）", bad_c7,
-      "命中 %d 处：%s" % (len(bad_c7), "、".join(bad_c7[:5]) or "无"))
+    f("C7", "C7 禁词（Q2 谱系；释读规则读者面禁名；进步叙事与等级修辞 R31；劳动禁词 R32）",
+      bad_c7, "命中 %d 处：%s" % (len(bad_c7), "、".join(bad_c7[:5]) or "无"))
     info_c7 = ["%s（%s）" % (r["subsection_id"], "、".join(w for w in REVIEW_TERMS if w in r["title"]))
                for _, _, r in all_rows if any(w in r["title"] for w in REVIEW_TERMS)]
     rows_out.append(("C7i", "C7i 理论腔词披露（人工复核项，不拦退出码）", True,
@@ -363,6 +388,13 @@ def run(root):
     rows_out.append(("C8i", "C8i AI 腔词披露（人工复核项，不拦退出码）", True,
                      "命中 %d 处：%s" % (len(info_c8), "、".join(info_c8[:6]) or "无")))
 
+    # C9 禁反斜杠与控制字符（2026-11-04 由「C4」重编：规则 C4＝官方名斜杠两分，由第四十一件
+    # audit_title_term_forms.py 承载；本判据与规则编号脱钩对齐，G-01／3A6-2 R28。语义不变。）
+    bad_c9 = [r["subsection_id"] for _, _, r in all_rows
+              if "\\" in r["title"] or any(ord(ch) < 32 or ord(ch) == 127 for ch in r["title"])]
+    f("C9", "C9 禁反斜杠与控制字符（路径字符由落盘器全角化）", bad_c9,
+      "命中 %d 处：%s" % (len(bad_c9), "、".join(bad_c9[:5]) or "无"))
+
     # ---------------- D 语义下限
     bad_d1 = ["%s（thesis 空或过短）" % r["subsection_id"] for _, _, r in all_rows
               if len(r["thesis"].strip()) < 8]
@@ -371,13 +403,29 @@ def run(root):
 
     f("D2", "D2 S2 上下位一致（依赖 A2 层级对位）", bad2, "同 A2")
 
-    bad_d3 = []
+    # D3 卷段豁免（G-02／3A6-2 R04）：V01–V50 命中改标 EXEMPT（不拦退出码）并注明豁免
+    # 依据；V51–V76 照判 FAIL。豁免只作用于本判据，同节其他判据不受影响。
+    bad_d3, exempt_d3 = [], []
     for k, rs in by_sec.items():
         lens = [_title_len(x["title"]) for x in rs]
         if lens and (max(lens) - min(lens)) > 14:
-            bad_d3.append("V%s.%s.%s（极差 %d）" % (k[0], k[1], k[2], max(lens) - min(lens)))
-    f("D3", "D3 S3 同节平行：字数极差 ≤14", bad_d3,
-      "越界节 %d 个：%s" % (len(bad_d3), "、".join(bad_d3[:3]) or "无"))
+            item = "V%s.%s.%s（极差 %d）" % (k[0], k[1], k[2], max(lens) - min(lens))
+            if k[0].strip() in D3_EXEMPT_VOLS:
+                exempt_d3.append(item)
+            else:
+                bad_d3.append(item)
+    d3_name = "D3 S3 同节平行：字数极差 ≤14（V01–V50 卷段豁免）"
+    if bad_d3:
+        d3_detail = "越界节 %d 个：%s" % (len(bad_d3), "、".join(bad_d3[:3]) or "无")
+        if exempt_d3:
+            d3_detail += "；另 V01–V50 豁免 %d 节（%s）" % (len(exempt_d3), D3_EXEMPT_BASIS)
+        rows_out.append(("D3", d3_name, False, d3_detail))
+    elif exempt_d3:
+        rows_out.append(("D3", d3_name, "EXEMPT",
+                         "豁免节 %d 个：%s｜依据：%s"
+                         % (len(exempt_d3), "、".join(exempt_d3[:3]) or "无", D3_EXEMPT_BASIS)))
+    else:
+        rows_out.append(("D3", d3_name, True, "越界节 0 个：无"))
 
     n_exc = 0
     exc_rows = []
@@ -536,10 +584,12 @@ def report(rows, title):
     print("=" * 78)
     fails = 0
     for code, name, ok, detail in rows:
-        print("  [%s] %s" % ("PASS" if ok else "FAIL", code))
+        # ok 三态：True＝PASS；"EXEMPT"＝豁免披露（不拦退出码）；False＝FAIL。
+        mark = "FAIL" if ok is False else ("EXEMPT" if ok == "EXEMPT" else "PASS")
+        print("  [%s] %s" % (mark, code))
         print("         %s" % name)
         print("         %s" % detail)
-        if not ok:
+        if mark == "FAIL":
             fails += 1
     print("-" * 78)
     print("  合计 %d 项，FAIL %d 项" % (len(rows), fails))
@@ -547,10 +597,14 @@ def report(rows, title):
 
 
 def cmd_selftest():
-    """正例 1 例＋反例 20 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
+    """正例 3 例＋反例 34 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
 
-    全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／C7／C8a／C8b／
-    C8c／F2／F3／G1／H1／A2／A3／D1／G2／H2／H3 二十类。
+    全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／C7（谱系＋
+    进步叙事与等级修辞＋历史必然词组＋劳动禁词，R31／R32）／C9（原 C4 重编，G-01）／
+    C8a／C8b／C8c／F2／F3／G1／H1／A2／A3／D1／G2／H2／H3，另含 B7 全角括号内
+    ASCII 连字符（G-19）、D3 V01–V50 豁免（EXEMPT 且 B2 照判不外溢，G-02）与
+    D3 V51+ 照判两组豁免用例；正例含「偶然性与必然性」辩证合法用例与 B7 U+2013
+    正形各一（零误报）。
     """
     good = ["自动计算的观念源流", "差分机与通用计算的分离", "形式化纲领的边界"]
     TAB = "\t"
@@ -651,6 +705,66 @@ def cmd_selftest():
            secs=[1, 1, 2])
     expect("反例 H2 有 title.ok 无 approvals 行", "H2", good, ok_mode="noappr")
     expect("反例 H3 已批卷残留 draft", "H3", good, ok_mode="good", status="draft")
+
+    # ---- 2026-11-04 增补（3A6-2 P4 前置批）：D3 豁免／C9 重编／C7 新禁词／B7 连字符
+    long_t = "从早期分时系统到个人工作站的终端设备演进过程及其影响"
+    src3 = "史料;联网;目录"
+
+    # D3 豁免命中：V22（V01–V50 段）极差 18 → 标 EXEMPT 并注明 2026-11-02 改判依据；
+    # 同节 B2 照判 FAIL，证豁免不外溢其他判据。
+    t2 = build("22", ["1975 年 UNIX 的分裂", long_t, good[2]], sources=src3)
+    r2 = run(t2)
+    d3rows = [(ok, det) for c, _, ok, det in r2 if c == "D3"]
+    ok_d3 = (len(d3rows) == 1 and d3rows[0][0] == "EXEMPT"
+             and "2026-11-02" in d3rows[0][1]
+             and any((not ok) and c == "B2" for c, _, ok, _ in r2))
+    cases.append(("D3 豁免命中（V22 极差超限标 EXEMPT，B2 照判不外溢）", ok_d3,
+                  "期望 D3=EXEMPT 且 B2 FAIL"))
+
+    # D3 豁免不命中：V62（V51+ 段）同形极差 → 照判 FAIL。
+    t2 = build("62", [long_t, good[1], good[2]], sources=src3)
+    r2 = run(t2)
+    ok_d3 = any((not ok) and c == "D3" for c, _, ok, _ in r2)
+    cases.append(("D3 豁免不命中（V62 极差超限照判 FAIL）", ok_d3, "期望命中 D3"))
+
+    # C9 重编：反斜杠题命中 C9，且输出中不再存在 C4 判据码。
+    t2 = build("02", ["路径里的 \\ 与转义"] + good[1:])
+    r2 = run(t2)
+    ok_c9 = (any((not ok) and c == "C9" for c, _, ok, _ in r2)
+             and all(c != "C4" for c, _, _, _ in r2))
+    cases.append(("反例 C9 反斜杠（原 C4 重编，C4 码不再存在）", ok_c9,
+                  "期望命中 C9 且无 C4"))
+
+    # C7 新禁词（R31／R32）：逐词命中。
+    for label, t in (("黄金时代", "UNIX 的黄金时代"),
+                     ("飞跃", "性能的飞跃与代价"),
+                     ("正统", "UNIX 的正统之争"),
+                     ("主流＋支流", "主流与支流的分野"),
+                     ("成败", "版本迁移的成败得失"),
+                     ("历史必然（词组）", "开放标准的历史必然"),
+                     ("必然趋势（词组）", "标准化推进的必然趋势"),
+                     ("劳动", "劳动与贡献的区分"),
+                     ("雇佣", "雇佣关系的项目史"),
+                     ("资本", "资本与贡献的区分")):
+        expect("反例 C7 %s" % label, "C7", [t] + good[1:], sources=src3)
+
+    # C7 合法用例不误报：「偶然性与必然性」辩证用法裸「必然」不拦，全卷零 FAIL。
+    tmp = build("03", ["偶然性与必然性：早期分时的两条路线", good[1], good[2]],
+                sources=src3)
+    rows = run(tmp)
+    n_fail = sum(1 for _, _, ok, _ in rows if not ok)
+    cases.append(("C7 正例：偶然性与必然性（辩证合法，零 FAIL）", n_fail == 0,
+                  "FAIL=%d" % n_fail))
+
+    # B7 扩展：全角括号内年份区间用 ASCII 连字符命中。
+    expect("反例 B7 全角括号内 ASCII 连字符", "B7",
+           ["网络栈的重构（1980-2026）", good[1], good[2]], sources=src3)
+
+    # B7 U+2013 正形不误报：零 FAIL。
+    tmp = build("04", ["网络栈的重构（1980–2026）", good[1], good[2]], sources=src3)
+    rows = run(tmp)
+    n_fail = sum(1 for _, _, ok, _ in rows if not ok)
+    cases.append(("B7 正例：U+2013 正形（零 FAIL）", n_fail == 0, "FAIL=%d" % n_fail))
 
     bad = [c for c in cases if not c[1]]
     for label, ok, detail in cases:
