@@ -74,6 +74,7 @@ V52.1.4.6	HAMMER 容量上限	https://www.dragonflybsd.org/hammer/hammer.pdf	联
 V52.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
 V52.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.5.1	HAMMER2 设计简化的理由	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Even though HAMMER2 has a lot more features then HAMMER1 the actual design is simpler than HAMMER1, with virtually no edge cases to worry about	none
+V52.1.5.1	HAMMER2 与 HAMMER1 的设计对比	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/design/DESIGN	史料	A	2026-11-03	HAMMER2 generally implements a copy-on-write block design for the filesystem, which is very different from HAMMER1's B-Tree design.	none
 V52.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
 V52.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.5.2	HAMMER2 超级根与多根	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	Multiple roots (allowing snapshots to be mounted).  This is implemented via the super-root concept.	none
@@ -89,6 +90,7 @@ V52.1.5.5	HAMMER2 压缩配置粒度	https://lists.dragonflybsd.org/pipermail/us
 V52.1.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“HAMMER2 与现代 BSD 存储系统”；本节题为其下位论题	none
 V52.1.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.5.6	HAMMER1 B-Tree 边界案例	https://lists.dragonflybsd.org/pipermail/users/2012-February/374948.html	联网	A	2026-10-30	I spent 12+ months working edge cases out in HAMMER1's B-Tree, for example... that won't be an issue for HAMMER2 development	none
+V52.1.5.6	HAMMER1 专门代码负担	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/design/DESIGN	史料	A	2026-11-03	HAMMER1 had to have specialized code to check for and invalidate buffer cache buffers in the free/reuse case.  HAMMER2 does not need such code.	none
 V52.1.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
 V52.1.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.6.1	软更新机制	http://www.mckusick.com/softdep/index.html	联网	A	2026-10-30	Soft updates, an alternative to these approaches, is an implementation mechanism that tracks and enforces metadata update dependencies to ensure that the disk image is always kept consistent.	none
@@ -104,6 +106,7 @@ V52.1.6.4	NetBSD WAPBL 日志重放	http://net.bsd.my/changes/2008.html	联网	B
 V52.1.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
 V52.1.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.6.5	WAPBL 与 softdep 不兼容	http://net.bsd.my/changes/2008.html	联网	B	2026-10-30	Note that WAPBL is not compatible with soft-dependencies, so please ensure that you first remove the “softdep” option if present.	none
+V52.1.6.5	softdep 不再支持的挂载提示	03-原始史料库/01-代码仓库史料/03-NetBSD/netbsd-src.git	史料	A	2026-11-03	sys/ufs/ffs/ffs_vfsops.c：`-o softdep' is no longer supported, consider `-o log'（挂载时清除 MNT_SOFTDEP）	none
 V52.1.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“文件系统一致性、快照与校验”；本节题为其下位论题	none
 V52.1.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.6.6	ZFS 元数据副本安排	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	All metadata is stored twice by default, with the object containing the pool's state at a given transaction group to which the labels point being written three times.	none
@@ -122,6 +125,7 @@ V52.1.7.4	ZFS 单盘池无自愈	https://www.freebsd.org/handbook/zfs	联网	A	2
 V52.1.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
 V52.1.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.7.5	ZFS ZIL 自校验块	https://openzfs.org/w/index.php?oldid=3787	联网	A	2026-10-30	ZIL records storing changes to be made for synchronous IO are self checksumming blocks that are read only on pool import if the system made changes before the last transaction group commit was made.	none
+V52.1.7.5	ZIL 日志块的校验与链尾判定	03-原始史料库/01-代码仓库史料/06-OpenZFS/openzfs-zfs.git	史料	A	2026-11-03	module/zfs/zil.c：Validate the checksummed log block.；Checksum errors are ok as they indicate the end of the chain.	none
 V52.1.7.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 7 节“写时复制与校验和：四系一致性机制比较”；本节题为其下位论题	none
 V52.1.7.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.1.7.6	ZFS 快照对象单位	https://www.freebsd.org/handbook/zfs	联网	A	2026-10-30	ZFS creates snapshots of a dataset, not a single directory or file.	none
@@ -154,6 +158,7 @@ V52.2.1.3	NetBSD 5.0 线程模型	https://www.netbsd.org/releases/formal-5/NetBS
 V52.2.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
 V52.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.2.1.4	OpenBSD 每处理器运行队列	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	The OpenBSD scheduler is based on the traditional 4.4BSD scheduler, with some enhancements for SMP support. Each processor has its own runqueue.	none
+V52.2.1.4	ULE 的每处理器运行队列结构	03-原始史料库/01-代码仓库史料/02-FreeBSD/freebsd-src.git	史料	A	2026-11-03	sys/kern/sched_ule.c：struct tdq { struct mtx_padalign tdq_lock; /* run queue lock. */ ... u_char tdq_id; /* (c) cpuid. */ struct runq tdq_runq; /* (t) Run queue. */ }	none
 V52.2.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“SMP：从单处理器 BSD 到多处理器系统”；本节题为其下位论题	none
 V52.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.2.1.5	中断线程化的必要性	https://www.usenix.org/legacy/events/bsdcon02/full_papers/baldwin/baldwin_html/node2.html	联网	A	2026-10-30	Interrupt threads are necessary so that an interrupt handler has a context in which to block on a lock without blocking an unrelated top half kernel thread.	none
