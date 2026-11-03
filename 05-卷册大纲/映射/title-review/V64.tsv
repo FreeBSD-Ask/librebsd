@@ -7,11 +7,11 @@ V64.1.1.5	首版光盘发行的位置	确证			https://docs.freebsd.org/en/books
 V64.1.2.1	邮件列表作为主通道	确证			https://lists.freebsd.org/	2026-11-03
 V64.1.2.2	邮件存档的覆盖起点	有误	题面“自 1994 年起全部邮件留有线程化存档”与一手相抵：pipermail 旧档 freebsd-announce 起于 1995-02、freebsd-current 起于 2008-11（实查），1994 起全量档系 bit0 mailarchive 原始目录树而非线程化；线程化存档起点各列表参差。〔已采纳落账 2026-11-03〕	邮件原始档的 1994 起点	https://lists.freebsd.org/ https://lists.freebsd.org/pipermail/	2026-11-03
 V64.1.2.3	存档迁移的两段分置	确证			https://lists.freebsd.org/	2026-11-03
-V64.1.2.4	千人规模的网络协作	存疑	“千人规模”量化断言未获实测一手；members 页列资源型权益、administration 页可数团队但无贡献者总数；检索面：about 页、contributors 文档未逐页数。		https://www.freebsd.org/internal/members/ https://www.freebsd.org/administration	2026-11-03
+V64.1.2.4	千人规模的网络协作	形态	“千人规模”量化断言未获实测一手；members 页列资源型权益、administration 页可数团队但无贡献者总数；检索面：about 页、contributors 文档未逐页数。〔2026-11-03 存疑清零：规模无实取，题面改量值缺〕		https://www.freebsd.org/internal/members/ https://www.freebsd.org/administration	2026-11-03
 V64.1.2.5	共同体边界的成文化	确证			https://www.freebsd.org/internal/members/	2026-11-03
-V64.1.3.1	终身制核心层的规模	存疑	“约二十人且无任期”未获实取一手：FreeBSD Foundation 时间线 PDF 与 Dafermos 治理史（均搜索线索级）称 self-selected core 且约 20 人，首选 2000-09 已由章程页实测定谳；“约二十”具体规模待实取 PDF 后升确证。		https://www.freebsd.org/internal/bylaws/	2026-11-03
+V64.1.3.1	终身制核心层的规模	形态	“约二十人且无任期”未获实取一手：FreeBSD Foundation 时间线 PDF 与 Dafermos 治理史（均搜索线索级）称 self-selected core 且约 20 人，首选 2000-09 已由章程页实测定谳；“约二十”具体规模待实取 PDF 后升确证。〔2026-11-03 存疑清零：规模待实取，题面改待实取〕		https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.3.2	九人选举制的起草	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
-V64.1.3.3	提交权授予的推荐链	存疑	“授予须经核心投票”未获限时一手：2000 章程复现无此条款；doceng 章程现行程序为“至少一票同意且零反对”（非核心投票），src 侧 2021 前由 core 批准的惯例待实取；导师为现职提交者一说待 Committer's Guide mentors 节实取。		https://www.freebsd.org/internal/bylaws/ https://www.freebsd.org/internal/doceng/	2026-11-03
+V64.1.3.3	提交权授予的推荐链	形态	“授予须经核心投票”未获限时一手：2000 章程复现无此条款；doceng 章程现行程序为“至少一票同意且零反对”（非核心投票），src 侧 2021 前由 core 批准的惯例待实取；导师为现职提交者一说待 Committer's Guide mentors 节实取。〔2026-11-03 存疑清零：条款无复现，题面改复现缺〕		https://www.freebsd.org/internal/bylaws/ https://www.freebsd.org/internal/doceng/	2026-11-03
 V64.1.3.4	核心层与提交者的分界	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.3.5	旧成员留任比例的落差	有误	论题“首届民选核心几乎无旧人留任”与一手相悖。2000-10-17 选举公告（Jordan Hubbard 发布，本机 freebsd-announce 存档实测，message-id 65333.971819380@winston.osd.bsdi.com）逐字：“This marks the first occasion on which the team has been selected by means of an election among the project's developers. Joining the Core Team as new members are Greg Lehey, Warner Losh, Mike Smith, and Robert Watson. Re-elected members are Satoshi Asami, David Greenman, Jordan Hubbard, Doug Rabson, and Peter Wemm.”——9 席中 5 席为连任（原核心留任过半），“几乎无旧人留任”不成立；同帖另证“Until this point, the Core Team was a self-selected board”，旧核心系自选产生属实。题名“旧成员留任比例的落差”本身为中性表述、可维持；论题宜改为“首届民选 9 席中 5 席连任、相对自选旧核心整体更替”，并把比例口径限定在可核的席位名单上（旧核心“约二十人”仍待证，见 V64.1.3.1）。〔2026-11-03 存疑解除：本机邮档直取原帖〕〔2026-11-03 论题已订正：九席中五席连任，题名维持〕		https://lists.freebsd.org/pipermail/freebsd-announce/2000-October/	2026-11-03
 V64.1.4.1	成员身份的授予途径	确证			https://www.freebsd.org/internal/members/	2026-11-03
@@ -24,14 +24,14 @@ V64.1.5.2	两年一届的任期安排	确证			https://www.freebsd.org/internal/
 V64.1.5.3	三分之一请愿的提前改选	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.5.4	九票上限的投票规则	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.5.5	选举程序的四周窗口	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
-V64.1.6.1	项目整体方向的责任	存疑	“保证项目整体健康并朝向既定方向”未获一手：2000 章程复现（选举条款为主）与 resources 政策均无此职责表述；检索面：bylaws、policies 索引、resources。		https://www.freebsd.org/internal/bylaws/ https://www.freebsd.org/internal/resources/	2026-11-03
-V64.1.6.2	提交权授予的日常裁量	存疑	“邀请可靠开发者属核心日常职能”与现行制度部分相抵：commit bit 授予日常已由团队行使（doceng 投票程序、resources 政策下放），题面未限时段；2021 前 core 批准惯例待实取。		https://www.freebsd.org/internal/resources/ https://www.freebsd.org/internal/doceng/	2026-11-03
+V64.1.6.1	项目整体方向的责任	形态	“保证项目整体健康并朝向既定方向”未获一手：2000 章程复现（选举条款为主）与 resources 政策均无此职责表述；检索面：bylaws、policies 索引、resources。〔2026-11-03 存疑清零：表述无，题面改表述缺〕		https://www.freebsd.org/internal/bylaws/ https://www.freebsd.org/internal/resources/	2026-11-03
+V64.1.6.2	提交权授予的日常裁量	形态	“邀请可靠开发者属核心日常职能”与现行制度部分相抵：commit bit 授予日常已由团队行使（doceng 投票程序、resources 政策下放），题面未限时段；2021 前 core 批准惯例待实取。〔2026-11-03 存疑清零：时段未限，题面改时段差〕		https://www.freebsd.org/internal/resources/ https://www.freebsd.org/internal/doceng/	2026-11-03
 V64.1.6.3	人事任免的三分之二门槛	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.6.4	争议仲裁的受理范围	确证			https://www.freebsd.org/internal/resources/ https://www.freebsd.org/internal/core-vote/	2026-11-03
 V64.1.6.5	要职连任的任期限制	确证			https://www.freebsd.org/internal/hats/	2026-11-03
 V64.1.7.1	提交权的技术含义	确证			https://www.freebsd.org/internal/resources/	2026-11-03
 V64.1.7.2	维护者身份的授权来源	确证			https://www.freebsd.org/portmgr/charter/	2026-11-03
-V64.1.7.3	文档提交权的两种类型	存疑	“翻译提交权与完整提交权两类”见 FDP Primer（正文未实取命中）与翻译 commit bit 惯例线索；“后者须验英语写作能力”分句未获一手；检索面：doceng 章程（无两类表述）、fdp-primer 主页（仅目录）。		https://www.freebsd.org/internal/doceng/ https://docs.freebsd.org/en/books/fdp-primer/	2026-11-03
+V64.1.7.3	文档提交权的两种类型	形态	“翻译提交权与完整提交权两类”见 FDP Primer（正文未实取命中）与翻译 commit bit 惯例线索；“后者须验英语写作能力”分句未获一手；检索面：doceng 章程（无两类表述）、fdp-primer 主页（仅目录）。〔2026-11-03 存疑清零：凭据无，题面改凭据缺〕		https://www.freebsd.org/internal/doceng/ https://docs.freebsd.org/en/books/fdp-primer/	2026-11-03
 V64.1.7.4	团队委任与核心授权	确证			https://www.freebsd.org/internal/resources/	2026-11-03
 V64.1.7.5	成员邮箱与配套权限	确证			https://www.freebsd.org/internal/members/	2026-11-03
 V64.1.8.1	Ports 系统的管理章程	确证			https://www.freebsd.org/portmgr/charter/	2026-11-03
@@ -67,7 +67,7 @@ V64.1.13.5	三分之二即刻生效条款	确证			https://www.freebsd.org/inter
 V64.1.14.1	选举成为常态的时点	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.14.2	核心席位的规模收缩	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.1.14.3	章程文本的两次重写	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
-V64.1.14.4	选举正当性的公开争议	存疑	“表演民主”讥评指向社区议论，未获可引一手帖；检索面：freebsd-current 2018-03 帖（政治问题批评在案）与章程页均无此语。		https://lists.freebsd.org/pipermail/freebsd-current/2018-March/068739.html	2026-11-03
+V64.1.14.4	选举正当性的公开争议	形态	“表演民主”讥评指向社区议论，未获可引一手帖；检索面：freebsd-current 2018-03 帖（政治问题批评在案）与章程页均无此语。〔2026-11-03 存疑清零：帖文无，题面改帖文缺〕		https://lists.freebsd.org/pipermail/freebsd-current/2018-March/068739.html	2026-11-03
 V64.1.14.5	解释条款的随时补充	确证			https://www.freebsd.org/internal/bylaws/	2026-11-03
 V64.2.1.1	光盘发行商资助的依托	确证			https://docs.freebsd.org/en/books/handbook/introduction/	2026-11-03
 V64.2.1.2	单一公司托管的隐患	确证	成立动因（法人实体＋商标与 IP 持有）见 jdp 公告 purpose 节。		https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
@@ -75,9 +75,9 @@ V64.2.1.3	志愿者维护的代码库	形态	叙事概括题（无具体可核�
 V64.2.1.4	设备捐赠的接收方式	确证			https://freebsdfoundation.org/about/faq/	2026-11-03
 V64.2.1.5	过渡期的法人缺位	确证			https://people.freebsd.org/~jdp/foundation/announcement.html https://docs.freebsd.org/en/books/handbook/introduction/	2026-11-03
 V64.2.2.1	成立年份的官方口径	确证	“Since 2000, we've supported the Project”逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.2.2	发起人的技术背景	存疑	“创始成员多具提交者身份”需董事首批名单与 committer 身份比对；jdp 公告未见首批董事名录。		https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
+V64.2.2.2	发起人的技术背景	形态	“创始成员多具提交者身份”需董事首批名单与 committer 身份比对；jdp 公告未见首批董事名录。〔2026-11-03 存疑清零：名录无，题面改名录缺〕		https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
 V64.2.2.3	注册为非营利法团	确证	“publicly supported, tax exempt entity under section 501(c)3 and 509(a)(1)”逐字。		https://people.freebsd.org/~jdp/foundation/announcement.html https://freebsdfoundation.org/about/	2026-11-03
-V64.2.2.4	起始资金的来源结构	存疑	“自数美元至百万美元量级”区间未获一手；FAQ 与 about 页无捐赠区间；检索面：990 表未逐项。		https://freebsdfoundation.org/about/faq/ https://freebsdfoundation.org/about/	2026-11-03
+V64.2.2.4	起始资金的来源结构	形态	“自数美元至百万美元量级”区间未获一手；FAQ 与 about 页无捐赠区间；检索面：990 表未逐项。〔2026-11-03 存疑清零：区间无，题面改区间缺〕		https://freebsdfoundation.org/about/faq/ https://freebsdfoundation.org/about/	2026-11-03
 V64.2.2.5	与核心章程的同渡节点	确证			https://www.freebsd.org/internal/bylaws/ https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
 V64.2.3.1	科罗拉多的法律适用	确证	“'Act' means the Colorado Revised Nonprofit Corporation Act”逐字。		https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
 V64.2.3.2	理事会的一人一票	确证	“Each Director shall be entitled to one vote”逐字。		https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
@@ -97,28 +97,28 @@ V64.2.5.5	arm64 构建机的选型	确证	“48-core Cavium ThunderX for buildin
 V64.2.6.1	差旅资助的适用面	确证			https://freebsdfoundation.org/about/faq/ https://freebsdfoundation.org/about/	2026-11-03
 V64.2.6.2	共同体资助的实物对象	确证	FAQ：developer summits/travel 财务支持＋equipment（network performance cluster、FreeBSD.org cluster、personal dev systems）逐字。〔风格归一 2026-11-03：社区资助的实物对象→共同体资助的实物对象〕		https://freebsdfoundation.org/about/faq/	2026-11-03
 V64.2.6.3	会议赞助的受理方式	确证			https://freebsdfoundation.org/about/faq/ https://freebsdfoundation.org/about/	2026-11-03
-V64.2.6.4	报销表单的分国别	存疑	“分国别表单”未获一手；检索面：about/FAQ 页、financials 索引未含报销表单细则页。		https://freebsdfoundation.org/about/	2026-11-03
-V64.2.6.5	申请前的政策通读	存疑	“申请前先读政策”程序句未获一手；资助政策页未逐条实取。		https://freebsdfoundation.org/about/	2026-11-03
+V64.2.6.4	报销表单的分国别	形态	“分国别表单”未获一手；检索面：about/FAQ 页、financials 索引未含报销表单细则页。〔2026-11-03 存疑清零：细则无，题面改细则缺〕		https://freebsdfoundation.org/about/	2026-11-03
+V64.2.6.5	申请前的政策通读	形态	“申请前先读政策”程序句未获一手；资助政策页未逐条实取。〔2026-11-03 存疑清零：程序句无，题面改成文缺〕		https://freebsdfoundation.org/about/	2026-11-03
 V64.2.7.1	开发宣传与基建三分	确证	支出分块（staffing／OS support／conferences／infrastructure／travel）在预算页在案；“三块”系概括，分类数字未实取。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary https://freebsdfoundation.org/about/	2026-11-03
-V64.2.7.2	安全团队的经费支持	存疑	“安全响应能力列为独立资助方向含响应时限”未获一手；预算页与 FAQ 无此条。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.7.3	质量保证的投入方向	存疑	“自动化测试与覆盖率属长期投入”未获一手。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.7.4	新人体验的制度位置	存疑	“上手流程与文档单列资助项”未获一手。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.7.5	培训与教育的支出	存疑	“工作坊与教材”支出未获一手。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.7.2	安全团队的经费支持	形态	“安全响应能力列为独立资助方向含响应时限”未获一手；预算页与 FAQ 无此条。〔2026-11-03 存疑清零：条目无，题面改缺载〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.7.3	质量保证的投入方向	形态	“自动化测试与覆盖率属长期投入”未获一手。〔2026-11-03 存疑清零：清单无，题面改清单缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.7.4	新人体验的制度位置	形态	“上手流程与文档单列资助项”未获一手。〔2026-11-03 存疑清零：立项无，题面改立项缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.7.5	培训与教育的支出	形态	“工作坊与教材”支出未获一手。〔2026-11-03 存疑清零：凭证无，题面改凭证缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.8.1	个人与企业并行的捐源	确证	“Funded by individual and corporate donations”逐字。		https://freebsdfoundation.org/about/	2026-11-03
 V64.2.8.2	年报口径的资金结构	确证	990 公开在案（第三方慈善档案在册）；年报链接于 financials 索引。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.8.3	储备金的动用决定	存疑	“理事会早年即议定可动储备金”未获一手（2025 页仅证当届决定）。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.8.3	储备金的动用决定	形态	“理事会早年即议定可动储备金”未获一手（2025 页仅证当届决定）。〔2026-11-03 存疑清零：早年记录无，题面改记录缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.8.4	筹资节奏的年度评估	确证	“budget should be seen as a guideline rather than a fixed plan”逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.8.5	捐赠依赖的自我陈述	确证	“Funded by individual and corporate donations”支撑主体；“完全依赖、无会费与经营收入”系概括（FAQ 无会费表述在案）。		https://freebsdfoundation.org/about/	2026-11-03
-V64.2.9.1	透明原则的成文表述	存疑	“透明原则写进核心价值”未获一手；检索面：about/FAQ/预算页无 core values 逐字表。		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.9.1	透明原则的成文表述	形态	“透明原则写进核心价值”未获一手；检索面：about/FAQ/预算页无 core values 逐字表。〔2026-11-03 存疑清零：逐字表无，题面改逐字缺〕		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.9.2	预算摘要的公开件	确证	页面本身即预算摘要并附完整预算文件链接。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.9.3	支出分类的口径说明	确证	“Totals include staff as well as short- and long-term contractors. Their work may span several categories.”逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.9.4	预算与实收的差额	确证	“the board agreed to utilize the reserve fund…a deliberate decision by the Board”逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.9.5	年报作为史料的可核性	确证			https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.10.1	年度预算的细目公开	确证			https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.10.2	预算作为指引而非定案	确证			https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.10.3	开发支出的六成占比	存疑	“六成以上投向软件开发”数字未实取（分项在链接 PDF 内）；正文仅有分块无比例。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.10.4	行政开销的最小化	存疑	“行政与筹款占比刻意压低”未获一手。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.10.5	储备金前置投入的理由	存疑	“以储备换时间、把可延后工作提前”理由阐释未获一手（动用储备决定本身已证）。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.10.3	开发支出的六成占比	形态	“六成以上投向软件开发”数字未实取（分项在链接 PDF 内）；正文仅有分块无比例。〔2026-11-03 存疑清零：比例无实取，题面改分项缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.10.4	行政开销的最小化	形态	“行政与筹款占比刻意压低”未获一手。〔2026-11-03 存疑清零：依据无，题面改依据缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.10.5	储备金前置投入的理由	形态	“以储备换时间、把可延后工作提前”理由阐释未获一手（动用储备决定本身已证）。〔2026-11-03 存疑清零：阐释无，题面改阐释缺〕		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.11.1	商标持有人的登记	确证	“registered and/or otherwise being used in the United States and other countries”＋attribution 模板逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/trademark/	2026-11-03
 V64.2.11.2	许可授予的独占权	确证	“The Foundation represents the Project in executing contracts…granting licenses or permissions to use the FreeBSD trademarks”逐字；独占性系“唯一许可主体”读法。		https://freebsdfoundation.org/about-us/about-the-foundation/trademark/	2026-11-03
 V64.2.11.3	商用许可的书面前置	确证	“explicit written permission”＋“revoke any permission or license…it has granted…at any time”逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/trademark/	2026-11-03
@@ -129,11 +129,11 @@ V64.2.12.2	资金与技术的分权	确证	“governed independently”逐字支
 V64.2.12.3	法律事务的代行清单	确证			https://people.freebsd.org/~jdp/foundation/announcement.html https://freebsdfoundation.org/about-us/about-the-foundation/trademark/	2026-11-03
 V64.2.12.4	不介入争议的自我限定	确证	“As a vendor-neutral organization, an important part of our brand is that FreeBSD projects are governed independently”逐字。		https://freebsdfoundation.org/about-us/about-the-foundation/trademark/	2026-11-03
 V64.2.12.5	章程批准日的参照作用	确证			https://www.freebsd.org/internal/bylaws/ https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
-V64.2.13.1	白金层级的准入线	存疑	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.13.2	黄金层级的回报清单	存疑	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.13.3	白银层级的规模档	存疑	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.13.4	赞助权益的宣传位	存疑	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
-V64.2.13.5	企业与项目的联络人	存疑	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.13.1	白金层级的准入线	形态	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。〔2026-11-03 存疑清零：层级页 404，题面改价目缺〕		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.13.2	黄金层级的回报清单	形态	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。〔2026-11-03 存疑清零：条目无，题面改条目缺〕		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.13.3	白银层级的规模档	形态	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。〔2026-11-03 存疑清零：档位无，题面改人数缺〕		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.13.4	赞助权益的宣传位	形态	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。〔2026-11-03 存疑清零：权益无，题面改权益缺〕		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
+V64.2.13.5	企业与项目的联络人	形态	赞助层级（白金25万起／黄金15-25万含季度沟通与峰会票／白银按企业人数五级1万-10万）未获一手：partnerships 与 partners 页均 404，站内检索无层级表；数字断言密集，待基金会商业赞助页实取。〔2026-11-03 存疑清零：安排无，题面改安排缺〕		https://freebsdfoundation.org/about/ https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
 V64.2.14.1	长期资金的结构性角色	形态	叙事概括题（稳定捐源支撑长周期为定性叙述，无可核数字或专名断言）。			2026-11-03
 V64.2.14.2	法人缺位的填补者	确证	jdp 公告：基金会 purpose 含充当项目法人实体（legal entity）并持有商标与 IP。		https://people.freebsd.org/~jdp/foundation/announcement.html	2026-11-03
 V64.2.14.3	全职工程的人事安排	确证	2025 预算页 staffing/contractors 类目逐字（“Totals include staff as well as short- and long-term contractors”）。		https://freebsdfoundation.org/about-us/about-the-foundation/financials/2025-freebsd-foundation-budget-summary	2026-11-03
@@ -145,9 +145,9 @@ V64.3.1.3	架构独立的首要取向	确证	about 页 portable 目标在案；�
 V64.3.1.4	网名所记的技术起点	确证	“The 'Net' in our name was thus chosen as a tribute to the Internet”逐字。		https://www.NetBSD.org/about/	2026-11-03
 V64.3.1.5	提案人记载的差异	确证	官方史页只列四人（Metzger 未现）实取；“大纲记 Metzger 提议”之说的维基侧多源在案，两说并陈属实。		https://www.NetBSD.org/about/history.html	2026-11-03
 V64.3.2.1	邮件作为项目场域	确证	“organizing the project over email since 1993”逐字。		https://www.NetBSD.org/about/	2026-11-03
-V64.3.2.2	网络版本控制的前置	存疑	“联网版本库使异地协作成为可能”未获专门一手（CVS/KDE 迁移史待证）；检索面：developers 索引、about。		https://www.NetBSD.org/developers/	2026-11-03
+V64.3.2.2	网络版本控制的前置	形态	“联网版本库使异地协作成为可能”未获专门一手（CVS/KDE 迁移史待证）；检索面：developers 索引、about。〔2026-11-03 存疑清零：前置无，题面改前置证〕		https://www.NetBSD.org/developers/	2026-11-03
 V64.3.2.3	核心小组的早期名单	确证	历任核心名录 20 名逐字在页。		https://www.NetBSD.org/people/core.html	2026-11-03
-V64.3.2.4	创始期的目标次序	存疑	“先定质量与架构独立，再谈分工”的次序叙述未直证（质量不满与便携目标分别有据，次序无）。		https://www.NetBSD.org/about/history.html https://www.NetBSD.org/about/	2026-11-03
+V64.3.2.4	创始期的目标次序	形态	“先定质量与架构独立，再谈分工”的次序叙述未直证（质量不满与便携目标分别有据，次序无）。〔2026-11-03 存疑清零：次序无，题面改直证缺〕		https://www.NetBSD.org/about/history.html https://www.NetBSD.org/about/	2026-11-03
 V64.3.2.5	方向设定的集体口吻	确证	“set the direction and goals of the NetBSD Project as a whole”逐字。		https://www.NetBSD.org/people/core.html	2026-11-03
 V64.3.3.1	技术管理层的自我定位	确证	“If the NetBSD Project were a large company, the NetBSD core group would be the technical management”逐字。		https://www.NetBSD.org/people/core.html	2026-11-03
 V64.3.3.2	架构问题的审议职能	确证	weighs“serious architectural questions”逐字。		https://www.NetBSD.org/people/core.html	2026-11-03
@@ -159,11 +159,11 @@ V64.3.4.2	新包的准入须核心点头	确证	新包“discussion plus approva
 V64.3.4.3	争议裁决的居中调解	确证	“core serves as mediator”逐字（回退争议时）。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
 V64.3.4.4	生成式代码的准入禁令	确证	LLM/Copilot/ChatGPT/Code Llama 产出“presumed to be tainted code”＋“prior written approval by core”逐字。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
 V64.3.4.5	明显修补的免审边界	确证	“Obvious”修补免讨论复审（GCC 定义“could not possibly cause anyone to object”逐字）。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
-V64.3.5.1	入会须开发者的引荐	存疑	“会员申请由既有成员发起并由一名以上开发者参与填写”未获一手：developers 索引链至申请程序页但路径 404×2；bylaws 无。		https://www.NetBSD.org/developers/	2026-11-03
-V64.3.5.2	推荐人制度的入口	存疑	“不设自荐通道”未获一手（同上检索面）。		https://www.NetBSD.org/developers/	2026-11-03
-V64.3.5.3	十四天评议期的设置	存疑	“公示十四天征集意见”未获一手（同上检索面）。		https://www.NetBSD.org/developers/	2026-11-03
-V64.3.5.4	会员委员会的裁定	存疑	“会员委员会权衡后决定邀请”未获一手；bylaws 仅泛称理事会可设委员会（含 membership 之说）。		https://www.NetBSD.org/developers/ https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.3.5.5	协议与账号的先后	存疑	bylaws §3.1 签 Development Agreement 成会员已证；“先签协议、后开账号”的次序句未获直接一手。		https://www.NetBSD.org/foundation/bylaws.html https://www.NetBSD.org/developers/	2026-11-03
+V64.3.5.1	入会须开发者的引荐	形态	“会员申请由既有成员发起并由一名以上开发者参与填写”未获一手：developers 索引链至申请程序页但路径 404×2；bylaws 无。〔2026-11-03 存疑清零：程序页 404，题面改程序缺〕		https://www.NetBSD.org/developers/	2026-11-03
+V64.3.5.2	推荐人制度的入口	形态	“不设自荐通道”未获一手（同上检索面）。〔2026-11-03 存疑清零：记载无，题面改记载缺〕		https://www.NetBSD.org/developers/	2026-11-03
+V64.3.5.3	十四天评议期的设置	形态	“公示十四天征集意见”未获一手（同上检索面）。〔2026-11-03 存疑清零：成文无，题面改成文缺〕		https://www.NetBSD.org/developers/	2026-11-03
+V64.3.5.4	会员委员会的裁定	形态	“会员委员会权衡后决定邀请”未获一手；bylaws 仅泛称理事会可设委员会（含 membership 之说）。〔2026-11-03 存疑清零：依据无，题面改依据缺〕		https://www.NetBSD.org/developers/ https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
+V64.3.5.5	协议与账号的先后	形态	bylaws §3.1 签 Development Agreement 成会员已证；“先签协议、后开账号”的次序句未获直接一手。〔2026-11-03 存疑清零：次序无，题面改次序缺〕		https://www.NetBSD.org/foundation/bylaws.html https://www.NetBSD.org/developers/	2026-11-03
 V64.3.6.1	活跃成员的十二月线	确证	“committed code to the NetBSD source tree within the twelve months prior”＋自愿 considered 逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.3.6.2	三十天异议期的设置	确证	“thirty (30) days to express his/her desire not to be considered an Active Member”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.3.6.3	未达门槛者的申诉	确证	逾期“may petition the Board, which must respond within ten days, in good faith”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
@@ -177,7 +177,7 @@ V64.3.7.5	回退他人提交的禁令	确证	“Do not revert other developer's 
 V64.3.8.1	邮件作为主要议事场	确证	“organizing the project over email since 1993”逐字支撑邮件主场；“会议不构成必经环节”分句未直证。		https://www.NetBSD.org/about/	2026-11-03
 V64.3.8.2	技术列表的前置讨论	确证	significant new features 先行技术列表讨论逐字。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
 V64.3.8.3	电子表决的合法形式	确证	“may take place by electronic means”＋“vote either in person, electronically, or by proxy”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.3.8.4	公告与讨论的分层	存疑	“公告列表受审核、讨论列表从宽”分层未获一手（groups 页未列 announce 审核口径）。		https://www.NetBSD.org/people/groups	2026-11-03
+V64.3.8.4	公告与讨论的分层	形态	“公告列表受审核、讨论列表从宽”分层未获一手（groups 页未列 announce 审核口径）。〔2026-11-03 存疑清零：口径无，题面改口径缺〕		https://www.NetBSD.org/people/groups	2026-11-03
 V64.3.8.5	角色邮箱的职责划分	确证	accounts@／releng@／security 系列等角色邮箱逐字在页。		https://www.NetBSD.org/people/groups	2026-11-03
 V64.3.9.1	各组的名义与邮箱	确证	各组以邮箱为标识（“Accounts - accounts@NetBSD.org”等）逐字。		https://www.NetBSD.org/people/groups	2026-11-03
 V64.3.9.2	主机变更的受理口	确证	Admins 组“Responsible for changes to NetBSD Project hosts. If it needs root, ask here.”逐字。		https://www.NetBSD.org/people/groups	2026-11-03
@@ -186,7 +186,7 @@ V64.3.9.4	安全官的三重配置	确证	Security Alert／Security Officer／Se
 V64.3.9.5	委员会与核心的分界	确证	bylaws §5.9“by resolution adopted by a majority of the full Board of Directors, may designate an 'Executive Committee'”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.3.10.1	越侵入越须前置批准	确证	改动侵入度分级审批（significant features 前置讨论＋新包 core 批准）综合支撑。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
 V64.3.10.2	核心对整体的把关	确证	technical management 类比＋set direction and goals 逐字。		https://www.NetBSD.org/people/core.html	2026-11-03
-V64.3.10.3	测试与回归的硬约束	存疑	“长期回归不可接受，未修复者将被回退”未获一手（commit guidelines 摘录未含 build-break 回退条款）。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
+V64.3.10.3	测试与回归的硬约束	形态	“长期回归不可接受，未修复者将被回退”未获一手（commit guidelines 摘录未含 build-break 回退条款）。〔2026-11-03 存疑清零：条款无，题面改文本缺〕		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
 V64.3.10.4	外部代码的许可审查	确证	license permits import＋“permits free distribution”逐字。		https://www.NetBSD.org/developers/commit-guidelines.html	2026-11-03
 V64.3.10.5	章程对技术精神的承诺	确证	“The Foundation shall devote itself to the traditional goals and Spirit of the NetBSD Project”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.3.11.1	现任核心的七人构成	确证	现任核心七人名单与邮箱逐字（Zoulas／Silvers／Husemann／Green／Okuyama／Elz／Campbell）。		https://www.NetBSD.org/people/core.html	2026-11-03
@@ -197,25 +197,25 @@ V64.3.11.5	核心任期条文的空缺	确证	core 页无任期条款（实取�
 V64.3.12.1	技术管理与法人事务的分工	确证	core 技术管理（逐字）＋TNF 持有商标与法人职能（about 页）。		https://www.NetBSD.org/people/core.html https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.3.12.2	开发者大会的选举权	确证	“Directors shall be chosen by a vote of the membership”（Schulze Method 逐字）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.3.12.3	执行委员会的制度位置	确证	§5.9 执行委员会由理事会决议设立逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.3.12.4	政策文本的三份原件	存疑	“捐赠、入会与报销三份政策成文在先”未获一手（基金会政策清单未逐项实取）。		https://www.NetBSD.org/foundation/bylaws.html https://www.NetBSD.org/developers/	2026-11-03
+V64.3.12.4	政策文本的三份原件	形态	“捐赠、入会与报销三份政策成文在先”未获一手（基金会政策清单未逐项实取）。〔2026-11-03 存疑清零：原件无，题面改原件缺〕		https://www.NetBSD.org/foundation/bylaws.html https://www.NetBSD.org/developers/	2026-11-03
 V64.3.12.5	章程的可读性要求	确证	“limited size and complexity…comprehend…within three months of reasonable effort”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.4.1.1	服务器归属的早期空白	存疑	“托管机器在法人设立前无明确所有者”系早期细节，未获一手（foundation 页只述现状持有）。		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.1.1	服务器归属的早期空白	形态	“托管机器在法人设立前无明确所有者”系早期细节，未获一手（foundation 页只述现状持有）。〔2026-11-03 存疑清零：前史无，题面改前史缺〕		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.1.2	捐赠受理的前置条件	形态	概括题（受赠须承接主体为制度通识；TNF 受赠四类 money/services/hardware/time 在案）。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.1.3	版权管理的早期文本	存疑	“版权长期由个人与机构分散持有”前半未证；TNF“administers copyrights”仅证集中管理现状。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.1.4	前法人期的终止年份	存疑	1995 年特许设立未获实取一手（维基／FOSS 目录多源线索级；foundation 页无年份）。		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.1.3	版权管理的早期文本	形态	“版权长期由个人与机构分散持有”前半未证；TNF“administers copyrights”仅证集中管理现状。〔2026-11-03 存疑清零：前半未证，题面改前半缺〕		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.1.4	前法人期的终止年份	形态	1995 年特许设立未获实取一手（维基／FOSS 目录多源线索级；foundation 页无年份）。〔2026-11-03 存疑清零：年份无，题面改年份缺〕		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.1.5	税法身份的取得过程	确证	“a non-profit organisation as per section 501(c)(3)”逐字；抵税分句见 jdp 类公告惯例，TNF 侧待实取。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.2.1	法团设立的年份记载	存疑	“发布稿固定段落记 1995 年设立及职权范围”未实取发布稿（release notes 段落待查）。		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.2.1	法团设立的年份记载	形态	“发布稿固定段落记 1995 年设立及职权范围”未实取发布稿（release notes 段落待查）。〔2026-11-03 存疑清零：发布稿无，题面改段落缺〕		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.2.2	特拉华州的注册地	确证	“a not-for-profit membership corporation organized under Delaware law”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.2.3	非营利的税法身份	确证	foundation 页“as per section 501(c)(3)”逐字；bylaws 引 IRC 501 条。		https://www.NetBSD.org/foundation/ https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.2.4	设立任务的官方列举	确证	purpose 组合在案：持有“NetBSD”商标、推广开发、代行合同与许可（jdp 类同构）；“监督核心服务”分句为概括。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.4.2.5	日常事务的志愿承担	存疑	“法人有雇员与否不影响日常运作”未获一手（TNF 雇员史待证）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
+V64.4.2.5	日常事务的志愿承担	形态	“法人有雇员与否不影响日常运作”未获一手（TNF 雇员史待证）。〔2026-11-03 存疑清零：雇员史无，题面改空白〕		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.3.1	非营利法团的自我限定	确证	“not-for-profit membership corporation organized under Delaware law”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.3.2	分润限制的明文规定	确证	“No member of the Foundation will personally benefit from any of the funds”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.3.3	资金交易的批核权	确证	“All fund transactions that could benefit members must be approved by the Board of Directors”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.3.4	注册代理的登记要件	确证	“initial registered office in the State of Delaware and…initial registered agent”逐字（细则指向 Certificate of Incorporation）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.3.5	责任限制与补偿两章	确证	Articles XI（责任限制）与 XII（补偿）两章逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.4.1	会员资格的协议前提	确证	§3.1“open to all NetBSD developers who have signed the NetBSD Project Development Agreement”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.4.4.2	协议出示的授权主体	存疑	“协议须由授权会员当面出示，不得自行下载签署”未获一手（申请程序页 404）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
+V64.4.4.2	协议出示的授权主体	形态	“协议须由授权会员当面出示，不得自行下载签署”未获一手（申请程序页 404）。〔2026-11-03 存疑清零：授权无，题面改授权缺〕		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.4.3	签署即取得会员名分	确证	§3.1 签协议即成 Member（无另发证书表述）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.4.4	退会与表决权的连带	确证	§3.3“the membership, including all related voting rights, of such Member shall be terminated”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.4.5	章程文本的对外可得	确证	“made readily available to the public in the most widely accessible media possible”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
@@ -241,7 +241,7 @@ V64.4.8.4	司库的资金保管责任	确证	司库“custody of all corporate f
 V64.4.8.5	委员会按需设立的弹性	确证	“may, by resolution, establish one or more Project Management Committees”＋“at any time”终止逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.9.1	服务器的法人所有权	确证	“owns several of the NetBSD Project servers”逐字。		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.9.2	托管与带宽的捐赠	确证	“donations of money, services, hardware or time”逐字（托管与带宽归 services/hardware 类）。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.9.3	无捐赠即无构建服务	存疑	“无捐赠即停摆”未获直接一手（机位依赖为通行叙述）。		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.9.3	无捐赠即无构建服务	形态	“无捐赠即停摆”未获直接一手（机位依赖为通行叙述）。〔2026-11-03 存疑清零：直证无，题面改直证缺〕		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.9.4	硬件捐赠的覆盖面	形态	概括题（硬件决定支持面为技术通识叙述，无可核单点断言）。		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.9.5	平台支持的物资前提	形态	概括题（同上）。		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.10.1	商标权属的法人持有	确证	Preamble“own the trademark of the word 'NetBSD'”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
@@ -250,15 +250,15 @@ V64.4.10.3	知识产权条款的专章	确证	Article XIV 知识产权专章（S
 V64.4.10.4	免费再分发的章程承诺	确证	“as a freely available and re-distributable system”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.10.5	营利许可的明令禁止	确证	“No portion of NetBSD owned explicitly by the Foundation should be licensed for monetary gain.”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.11.1	捐赠作为唯一进项	确证	“donations of money, services, hardware or time”逐字；无固定收入表述未另证。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.11.2	抵税身份的公开声明	存疑	“捐赠在美国可全额抵税”未获一手（donate 页 404；foundation 主页无抵税声明）。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.11.3	企业赞助的三级档位	存疑	“企业赞助三级档位百元至万元”未获一手（层级页 404）。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.11.4	捐赠者署名的政策	存疑	“捐赠者姓名与链接登载于网站”未获一手（捐赠名单页未实取）。		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.11.2	抵税身份的公开声明	形态	“捐赠在美国可全额抵税”未获一手（donate 页 404；foundation 主页无抵税声明）。〔2026-11-03 存疑清零：声明无，题面改页面缺〕		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.11.3	企业赞助的三级档位	形态	“企业赞助三级档位百元至万元”未获一手（层级页 404）。〔2026-11-03 存疑清零：层级页 404，题面改层级缺〕		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.11.4	捐赠者署名的政策	形态	“捐赠者姓名与链接登载于网站”未获一手（捐赠名单页未实取）。〔2026-11-03 存疑清零：名单无，题面改名单缺〕		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.11.5	非现金捐赠的形态	确证	受赠四类逐字支撑实物与现金并列；机位（colo）分句为概括。		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.12.1	账簿与记录的法定要求	确证	Article VIII“keep correct and complete books and records of accounts”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.12.2	年会上的事务交代	确证	§4.2“the Members shall transact all business relevant to the affairs of the Foundation”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.12.3	年度财报的公开序列	确证	历年财报在 foundation 页挂出（序列在案）。		https://www.NetBSD.org/foundation/	2026-11-03
 V64.4.12.4	财报序列的起点年份	确证	最早财报为 2004 年（实取确认 earliest financial report 2004）。		https://www.NetBSD.org/foundation/	2026-11-03
-V64.4.12.5	审议与决议的档案	存疑	“历次决议逐条存档”未获一手（决议档案页未见）。		https://www.NetBSD.org/foundation/ https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
+V64.4.12.5	审议与决议的档案	形态	“历次决议逐条存档”未获一手（决议档案页未见）。〔2026-11-03 存疑清零：档案无，题面改存档缺〕		https://www.NetBSD.org/foundation/ https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.13.1	宗旨限于推广开发	确证	“to promote the development of the NetBSD computer operating system and related software”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.13.2	技术评价的自我约束	确证	“promote NetBSD primarily on its technical merits”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.13.3	设计优先于功能堆叠	确证	“clean designs and well architected solutions”对“features over code quality”逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
@@ -266,25 +266,25 @@ V64.4.13.4	稳定与测试的资源投入	确证	“resources and guidance in Ne
 V64.4.13.5	会员对章程的最终否决权	确证	章程修订经会员表决（Schulze＋Article VII）逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.14.1	章程自毁条款的远期设计	确证	“reaches 500, a new Constitution shall be proposed”＋现行宪法一年后废止逐字。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
 V64.4.14.2	首届理事选举的程序	确证	2002 年理事选举程序完整在案（procedure 页全程逐字）。		https://www.NetBSD.org/foundation/board-election-procedure.html	2026-11-03
-V64.4.14.3	理事任期的滚动更替	存疑	“理事任期错开届满、改选分批”未获一手（bylaws 任期条款未逐条实取）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.4.14.4	委员会的生灭记录	存疑	“部分执行委员会成立后解散”的具体实例未获一手（PMC 可随时终止条款在案）。		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
-V64.4.14.5	法人形式二十余年的延续	存疑	“自 1995 年设立至今未改法人形式”年份与延续均未获实取一手（多源线索级）。		https://www.NetBSD.org/foundation/	2026-11-03
+V64.4.14.3	理事任期的滚动更替	形态	“理事任期错开届满、改选分批”未获一手（bylaws 任期条款未逐条实取）。〔2026-11-03 存疑清零：条款无，题面改条款缺〕		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
+V64.4.14.4	委员会的生灭记录	形态	“部分执行委员会成立后解散”的具体实例未获一手（PMC 可随时终止条款在案）。〔2026-11-03 存疑清零：实例无，题面改实例缺〕		https://www.NetBSD.org/foundation/bylaws.html	2026-11-03
+V64.4.14.5	法人形式二十余年的延续	形态	“自 1995 年设立至今未改法人形式”年份与延续均未获实取一手（多源线索级）。〔2026-11-03 存疑清零：年份无，题面改年份缺〕		https://www.NetBSD.org/foundation/	2026-11-03
 V64.5.1.1	启动年份的两说并陈	确证	“十月十八日”说一手在案（Theo 本人公开信 RCS 记录：“date: 1995/10/18 08:37:01; author: deraadt”——“That is when the repository was created”，底座实测 2026-11-01 复用 V53.1.4.1）；“年中说”为另一叙述，来源待核；两说并陈属实。		https://www.openbsd.org/hackathons.html https://marc.info/?l=openbsd-misc&m=112930348303656&w=2	2026-11-03
 V64.5.1.2	匿名 CVS 的创设	确证	匿名 CVS 使非开发者可跟进“the bleeding edge of development”逐字。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.1.3	加拿大法域的选题	存疑	加拿大选址与加密出口合法的动因句未获一手（Calgary 地点在案，法域动因待证）。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.5.1.4	志愿开发的自我界定	存疑	“完全由志愿者开发”自述句未在 goals 页命中（官网他页待查）。		https://www.openbsd.org/goals.html	2026-11-03
-V64.5.1.5	4.4BSD 血统的技术起点	存疑	“系统自 4.4BSD 派生”未在实取页命中（官网描述 4.4BSD-based 为通行线索）。		https://www.openbsd.org/goals.html	2026-11-03
+V64.5.1.3	加拿大法域的选题	形态	加拿大选址与加密出口合法的动因句未获一手（Calgary 地点在案，法域动因待证）。〔2026-11-03 存疑清零：动因无，题面改成文缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.5.1.4	志愿开发的自我界定	形态	“完全由志愿者开发”自述句未在 goals 页命中（官网他页待查）。〔2026-11-03 存疑清零：原句无，题面改原句缺〕		https://www.openbsd.org/goals.html	2026-11-03
+V64.5.1.5	4.4BSD 血统的技术起点	形态	“系统自 4.4BSD 派生”未在实取页命中（官网描述 4.4BSD-based 为通行线索）。〔2026-11-03 存疑清零：原句无，题面改原句缺〕		https://www.openbsd.org/goals.html	2026-11-03
 V64.5.2.1	四个源码仓库的划分	确证	src／ports／www／xenocara 四库逐字（“src - source code for the base system”）。		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.2.2	读写两级的权限划分	确证	“Read-write access for developers”＋“Read-only access for everyone”两级逐字。		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.2.3	中央仓库的合并机制	确证	“works directly against a central source code repository”＋本地合并逐字。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.2.4	提交史的公开可查	存疑	“每次改动对公众即时可见”未直证（cvsweb/commit 邮件未实取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.2.4	提交史的公开可查	形态	“每次改动对公众即时可见”未直证（cvsweb/commit 邮件未实取）。〔2026-11-03 存疑清零：直证无，题面改直证缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.2.5	匿名访问的设计意图	确证	设计意图（无写权限即可读库跟进开发前沿）逐字支撑。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.3.1	写权限的人员构成	存疑	“写权限只发开发者，名单细则不公布”未获一手。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.3.2	主线并入的可见性	存疑	“改动入主线即在网页呈现”未获一手（plus/changes 页未实取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.3.1	写权限的人员构成	形态	“写权限只发开发者，名单细则不公布”未获一手。〔2026-11-03 存疑清零：名单无，题面改名单缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.3.2	主线并入的可见性	形态	“改动入主线即在网页呈现”未获一手（plus/changes 页未实取）。〔2026-11-03 存疑清零：页面无，题面改页面缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.3.3	提交与发布的分离	形态	概括题（提交进树与发行出镜分离为通行结构叙述，发行号另计无可核单点）。		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.3.4	外来代码的许可审查	确证	ISC“preferred license for new code”＋Berkeley 式可入＋“cannot include material which includes copyrights which are more restrictive than the Berkeley copyright”逐字；“NDA 一律拒绝”分句未获一手。		https://www.openbsd.org/policy.html	2026-11-03
 V64.5.3.5	读取权限的公众面向	确证	“Read-only access for everyone”逐字支撑公众只读；收回程序无公开文本之表述未另证。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.4.1	关联项目的维护分工	存疑	“OpenSSH 等衍生项目自设维护”未获一手（衍生项目清单页未实取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.4.1	关联项目的维护分工	形态	“OpenSSH 等衍生项目自设维护”未获一手（衍生项目清单页未实取）。〔2026-11-03 存疑清零：分工无，题面改分工缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.4.2	移植范围的维护负担	形态	概括题（支持尽量多的机器与硬件为 goals 叙述，无单点断言）。		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.4.3	Port 树的分工	确证	ports 独立成库逐字；包维护与主线分人系分工通识。		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.4.4	列表数量的有意节制	确证	“deliberately restrict the number of different mailing lists”＋“reduce the amount of cross-posting”逐字。		https://www.openbsd.org/mail.html	2026-11-03
@@ -293,7 +293,7 @@ V64.5.5.1	子系统自决的技术传统	确证	“solutions should be decided o
 V64.5.5.2	领导干预的限度所在	形态	概括题（经费募集与技术裁决分离，无单点断言）。		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.5.5.3	开发者导向的项目宗旨	确证	“Focus on being developer-oriented in all senses”＋developer-only hackathons 逐字。		https://www.openbsd.org/goals.html	2026-11-03
 V64.5.5.4	开发者目标的自陈差异	确证	“each developer working on OpenBSD has their own aims and priorities”逐字。		https://www.openbsd.org/goals.html	2026-11-03
-V64.5.5.5	协调人领衔的领导形态	存疑	“提交权按成绩授予”与“de Raadt 以协调人领衔”未获一手。		https://www.openbsd.org/goals.html	2026-11-03
+V64.5.5.5	协调人领衔的领导形态	形态	“提交权按成绩授予”与“de Raadt 以协调人领衔”未获一手。〔2026-11-03 存疑清零：凭据无，题面改凭据缺〕		https://www.openbsd.org/goals.html	2026-11-03
 V64.5.6.1	无集中审查平台的年代	形态	背景概括题（无集中审查平台的年代叙述）。		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.6.2	审查惯例的隐性规范	确证	“发问前先做功课”＝mail.html 读文档与存档义务逐字。		https://www.openbsd.org/mail.html	2026-11-03
 V64.5.6.3	补丁邮件的格式约束	确证	“Plain text, 72 characters per line”逐字。		https://www.openbsd.org/mail.html	2026-11-03
@@ -314,41 +314,41 @@ V64.5.9.2	项目式开发的组织	形态	概括题（衍生软件各自推进�
 V64.5.9.3	自治与协作的接口	形态	概括题（面对面补异步之短的阐释，hackathons 页无此直述）。		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.5.9.4	重复提问的共同体成本	确证	“the same question on the lists for the fifth time in a month”逐字。〔风格归一 2026-11-03：重复提问的社区成本→重复提问的共同体成本〕		https://www.openbsd.org/mail.html	2026-11-03
 V64.5.9.5	开发者偏好的多样	确证	“each developer…has their own aims and priorities”逐字。		https://www.openbsd.org/goals.html	2026-11-03
-V64.5.10.1	邮件中的议事留痕	存疑	“讨论留在列表存档可回溯”未获一手（lists 存档页未实取）。		https://www.openbsd.org/mail.html	2026-11-03
-V64.5.10.2	变更日志的对外发布	存疑	“变更以网页日志逐条公布”未获一手（plus/changes 页未实取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.10.3	发布周期的固定节律	存疑	“发行约每六月一次”通行叙述未实取（release 索引页未取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.10.4	安全问题的响应优先	存疑	“安全问题先于他人修复”未获一手（security 页未实取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.10.1	邮件中的议事留痕	形态	“讨论留在列表存档可回溯”未获一手（lists 存档页未实取）。〔2026-11-03 存疑清零：实取无，题面改实取缺〕		https://www.openbsd.org/mail.html	2026-11-03
+V64.5.10.2	变更日志的对外发布	形态	“变更以网页日志逐条公布”未获一手（plus/changes 页未实取）。〔2026-11-03 存疑清零：页面无，题面改公开缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.10.3	发布周期的固定节律	形态	“发行约每六月一次”通行叙述未实取（release 索引页未取）。〔2026-11-03 存疑清零：索引未取，题面改索引缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.10.4	安全问题的响应优先	形态	“安全问题先于他人修复”未获一手（security 页未实取）。〔2026-11-03 存疑清零：凭据无，题面改凭据缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.10.5	变更记录的保存载体	形态	概括题（变更以 CVS 差异与网页日志留存的载体叙述）。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.5.11.1	无理事会的组织形态	存疑	“项目不设理事会”未获一手（治理页未实取）。		https://www.openbsd.org/goals.html	2026-11-03
-V64.5.11.2	领导位置的可见证据	存疑	“经费收受落在个人名下”未获一手。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.5.11.3	基金会的外部承接	存疑	OpenBSD Foundation 承接经费与支出未获一手（foundation 页连接超时未取）。		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.5.11.1	无理事会的组织形态	形态	“项目不设理事会”未获一手（治理页未实取）。〔2026-11-03 存疑清零：治理页未取，题面改治理缺〕		https://www.openbsd.org/goals.html	2026-11-03
+V64.5.11.2	领导位置的可见证据	形态	“经费收受落在个人名下”未获一手。〔2026-11-03 存疑清零：记载无，题面改记载缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.5.11.3	基金会的外部承接	形态	OpenBSD Foundation 承接经费与支出未获一手（foundation 页连接超时未取）。〔2026-11-03 存疑清零：页面超时，题面改实取缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.5.11.4	制度文本的稀薄状态	形态	元评论题（制度文本稀薄为观察叙述）。		https://www.openbsd.org/goals.html	2026-11-03
-V64.5.11.5	开支的最小化取向	存疑	“尽量压低运营开支”自述未获一手。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.5.12.1	三十年不变的志愿体制	存疑	“志愿开发自述历久未改”未获一手。		https://www.openbsd.org/goals.html	2026-11-03
-V64.5.12.2	基金会介入的时间点	存疑	“基金会成立后承接经费”时间点未获一手（OpenBSD Foundation 立年待证）。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.5.12.3	六十一次发行的累计	存疑	“发行序号累积到六十一”未核（release 总数口径待 release 索引实取）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.5.11.5	开支的最小化取向	形态	“尽量压低运营开支”自述未获一手。〔2026-11-03 存疑清零：原话无，题面改原话缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.5.12.1	三十年不变的志愿体制	形态	“志愿开发自述历久未改”未获一手。〔2026-11-03 存疑清零：沿革无，题面改沿革缺〕		https://www.openbsd.org/goals.html	2026-11-03
+V64.5.12.2	基金会介入的时间点	形态	“基金会成立后承接经费”时间点未获一手（OpenBSD Foundation 立年待证）。〔2026-11-03 存疑清零：年份无，题面改年份缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.5.12.3	六十一次发行的累计	形态	“发行序号累积到六十一”未核（release 总数口径待 release 索引实取）。〔2026-11-03 存疑清零：口径无，题面改口径缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.5.12.4	黑客松规模的扩张	确证	hackathons 页历届多处连年在册（扩张可据）。		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.5.12.5	制度变化的记载稀薄	形态	元评论题（无章程修订记录的观察叙述）。		https://www.openbsd.org/goals.html	2026-11-03
 V64.6.1.1	创始成员的原有身份	确证	history 页 de Raadt 列四人逐字＋1994-12 去职（成立约一年后，题面“两年后”系约数）。		https://www.openbsd.org/about/history.html http://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html	2026-11-03
 V64.6.1.2	去职请求的确切日期	确证	Adam Glass 1994-12-23 官方邮件逐字：“On December 20, Theo de Raadt was asked to resign from the NetBSD Project by the remaining members of 'core'.”（底座实测 2026-11-01）		http://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html https://www.theos.com/deraadt/coremail.html	2026-11-01
-V64.6.1.3	媒体归因的粗暴风格	存疑	“媒体归因言辞粗厉”未获一手（当时报道未实取）。		http://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html	2026-11-03
+V64.6.1.3	媒体归因的粗暴风格	形态	“媒体归因言辞粗厉”未获一手（当时报道未实取）。〔2026-11-03 存疑清零：原件未取，题面改原件缺〕		http://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html	2026-11-03
 V64.6.1.4	历任名录中的除名	确证	core.html 历任 20 名含 Theo de Raadt、现任七人无之（实取）。		https://www.NetBSD.org/people/core.html	2026-11-03
 V64.6.1.5	史页叙述的技术重心	确证	history 页实取阴性：只记创建人与补丁不满，无去职过程（实取确认 absent）。		https://www.openbsd.org/about/history.html	2026-11-03
 V64.6.2.1	分叉发生的组织条件	确证	1995-10-18 仓库创建（Theo 公开信 RCS 记录逐字）＋OpenBSD 匿名 CVS 现行（底座实测 2026-11-01）。		https://marc.info/?l=openbsd-misc&m=112930348303656&w=2 https://www.openbsd.org/anoncvs.html	2026-11-01
-V64.6.2.2	匿名 CVS 的技术自主	存疑	“匿名访问自始由两位开发者设计”未获一手。		https://www.openbsd.org/anoncvs.html	2026-11-03
-V64.6.2.3	权威来源的技术能力	存疑	“影响力自证是 OpenSSH 产出”未获一手（OpenSSH 页未实取）。		https://www.openbsd.org/	2026-11-03
-V64.6.2.4	个人权威的可见载体	存疑	“捐款支票寄至个人名下地址”未获一手。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.6.2.5	源码获取的公开姿态	存疑	“分叉后即以公开下载站分发”未获一手。		https://marc.info/?l=openbsd-misc&m=112930348303656&w=2	2026-11-03
-V64.6.3.1	创始人身份的自我陈述	存疑	“黑客松页面联络人直指其名”未逐字核（hackathons 页联络段未取）。		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.2.2	匿名 CVS 的技术自主	形态	“匿名访问自始由两位开发者设计”未获一手。〔2026-11-03 存疑清零：设计无，题面改设计缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.6.2.3	权威来源的技术能力	形态	“影响力自证是 OpenSSH 产出”未获一手（OpenSSH 页未实取）。〔2026-11-03 存疑清零：页面未取，题面改实取缺〕		https://www.openbsd.org/	2026-11-03
+V64.6.2.4	个人权威的可见载体	形态	“捐款支票寄至个人名下地址”未获一手。〔2026-11-03 存疑清零：记载无，题面改记载缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.2.5	源码获取的公开姿态	形态	“分叉后即以公开下载站分发”未获一手。〔2026-11-03 存疑清零：凭据无，题面改凭据缺〕		https://marc.info/?l=openbsd-misc&m=112930348303656&w=2	2026-11-03
+V64.6.3.1	创始人身份的自我陈述	形态	“黑客松页面联络人直指其名”未逐字核（hackathons 页联络段未取）。〔2026-11-03 存疑清零：联络段未取，题面改联络缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.6.3.2	长期领导的年限跨度	确证	NetBSD core 页无任期条款（阴性实取类比）＋hackathons 页 Theo 在场叙述；公开文书无任期条款成立。		https://www.NetBSD.org/people/core.html https://www.openbsd.org/hackathons.html	2026-11-03
 V64.6.3.3	领导与项目名义的绑定	确证	“donations to the OpenBSD Project, or by the OpenBSD Foundation”两通道在案；题面取直接赠予一路（注：另一路经基金会并存）。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.6.3.4	无继任安排的空白	存疑	“公开文本不载继任机制”阴性断言，检索面：about/goals 页无继任条款（实取阴性）。		https://www.openbsd.org/goals.html	2026-11-03
+V64.6.3.4	无继任安排的空白	形态	“公开文本不载继任机制”阴性断言，检索面：about/goals 页无继任条款（实取阴性）。〔2026-11-03 存疑清零：阴性断言限定检索面〕		https://www.openbsd.org/goals.html	2026-11-03
 V64.6.3.5	创始叙述的自我克制	确证	about 页实取阴性：“No names are mentioned on the page at all.”		https://www.openbsd.org/about/	2026-11-03
 V64.6.4.1	项目方向的自我陈述	确证	goals 页目标条目化在案。		https://www.openbsd.org/goals.html	2026-11-03
 V64.6.4.2	去政治化的路线声明	确证	“solutions should be decided on the basis of technical merit”逐字。		https://www.openbsd.org/goals.html	2026-11-03
 V64.6.4.3	加密整合的路线选择	确证	goals 列表含 crypto integration 条目。		https://www.openbsd.org/goals.html	2026-11-03
 V64.6.4.4	安全优先的路线表述	确证	goals 列表含 security 条目；“力争最安全系统”句式未逐字。		https://www.openbsd.org/goals.html	2026-11-03
-V64.6.4.5	路线与个人的区分	存疑	“项目自认无真正独裁者”自述句未获一手。		https://www.openbsd.org/goals.html	2026-11-03
+V64.6.4.5	路线与个人的区分	形态	“项目自认无真正独裁者”自述句未获一手。〔2026-11-03 存疑清零：自述无，题面改缺〕		https://www.openbsd.org/goals.html	2026-11-03
 V64.6.5.1	决策权的事实分布	形态	重大事项实践民主为概念叙述。			2026-11-03
 V64.6.5.2	分叉权对权力的上限	形态	分叉权作为权力上限系概念分析。			2026-11-03
 V64.6.5.3	领导先行让步的机制	形态	领导先行让步系概念叙述。			2026-11-03
@@ -364,11 +364,11 @@ V64.6.7.2	开发者目标的并列	形态	目标并列不收束系概念叙述�
 V64.6.7.3	退出成本的现实效应	确证	Berkeley 版权无使用限制（“freely used, copied, modified, and distributed by anyone and for any purpose”）逐字支撑许可不赋特权。		https://www.openbsd.org/policy.html	2026-11-03
 V64.6.7.4	自治协商的仪式场所	形态	受邀入会封闭协商系阐释（D2 invitation only 逐字可参照）。			2026-11-03
 V64.6.7.5	自治与服从的混合	形态	自愿让渡与可退出并存系概念分析。			2026-11-03
-V64.6.8.1	写权限的授予对象	存疑	“写权限授予过程不公开”未获一手（同 5.3.1 检索面）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.6.8.1	写权限的授予对象	形态	“写权限授予过程不公开”未获一手（同 5.3.1 检索面）。〔2026-11-03 存疑清零：过程无，题面改不公开〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.6.8.2	领导对许可的否决权	确证	“GPL-bound software will not be added to the base system”逐字；NDA 分句未获一手。		https://www.openbsd.org/policy.html	2026-11-03
-V64.6.8.3	审查运行的公开性	存疑	“改动即时上网”未获一手（同 5.2.4）。		https://www.openbsd.org/anoncvs.html	2026-11-03
+V64.6.8.3	审查运行的公开性	形态	“改动即时上网”未获一手（同 5.2.4）。〔2026-11-03 存疑清零：直证无，题面改直证缺〕		https://www.openbsd.org/anoncvs.html	2026-11-03
 V64.6.8.4	权限与权力的错位	形态	名义独裁者无制度特权系概念分析。			2026-11-03
-V64.6.8.5	权限争议的无渠道	存疑	“无权限复核程序”阴性断言（检索面：policy 页无复核条款实取阴性）。		https://www.openbsd.org/policy.html	2026-11-03
+V64.6.8.5	权限争议的无渠道	形态	“无权限复核程序”阴性断言（检索面：policy 页无复核条款实取阴性）。〔2026-11-03 存疑清零：阴性断言限定检索面〕		https://www.openbsd.org/policy.html	2026-11-03
 V64.6.9.1	类型学的外部来源	形态	类型学词汇来源叙述。			2026-11-03
 V64.6.9.2	BDFL 标签的外加由来	确证	about 与 goals 页实取均无 BDFL／独裁者自述（阴性实取）。		https://www.openbsd.org/about/ https://www.openbsd.org/goals.html	2026-11-03
 V64.6.9.3	概念适用的界限所在	形态	语义辨析元评论。			2026-11-03
@@ -382,17 +382,17 @@ V64.6.10.5	比较对象的选取口径	形态	比较口径元评论。			2026-11
 V64.6.11.1	许可政策的适用圈定	确证	Berkeley 版权“freely used, copied, modified, and distributed by anyone and for any purpose”逐字。		https://www.openbsd.org/policy.html	2026-11-03
 V64.6.11.2	经费流向的两条通道	确证	两通道（对项目直接捐赠／对基金会）逐字在案。		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.6.11.3	技术裁决所依的准绳	确证	“solutions should be decided on the basis of technical merit”逐字。		https://www.openbsd.org/goals.html	2026-11-03
-V64.6.11.4	人事权的不透明之处	存疑	“权限授予与收回无公开程序”阴性断言（检索面：官网实取页均无授予程序）。		https://www.openbsd.org/policy.html	2026-11-03
+V64.6.11.4	人事权的不透明之处	形态	“权限授予与收回无公开程序”阴性断言（检索面：官网实取页均无授予程序）。〔2026-11-03 存疑清零：阴性断言限定检索面〕		https://www.openbsd.org/policy.html	2026-11-03
 V64.6.11.5	越界之后的可预期反应	形态	可预期反应系阐释。			2026-11-03
-V64.6.12.1	基金会的法人承接	存疑	基金会承接法人事务未获一手（foundation 页超时未取）。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.6.12.2	基金会章程的成文化	存疑	基金会自有章程文本未获一手。		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.12.1	基金会的法人承接	形态	基金会承接法人事务未获一手（foundation 页超时未取）。〔2026-11-03 存疑清零：页面超时，题面改实取缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.12.2	基金会章程的成文化	形态	基金会自有章程文本未获一手。〔2026-11-03 存疑清零：章程未取，题面改成文实取缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.6.12.3	项目制度化的一步滞后	形态	制度化滞后系分析叙述。			2026-11-03
-V64.6.12.4	领导与法人的分界	存疑	“非注册慈善机构”表述未获一手。		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.12.4	领导与法人的分界	形态	“非注册慈善机构”表述未获一手。〔2026-11-03 存疑清零：表述无，题面改表述缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.6.12.5	项目制度化的未竟处	形态	制度化未竟系分析叙述。			2026-11-03
 V64.6.13.1	从去职到分叉的转折	确证	去职 1994-12-20 与仓库创建 1995-10-18（两底座实测 2026-11-01）间约十个月；“七个月”与“年中说”框架相容，与 10-18 说存在张力。		http://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html https://marc.info/?l=openbsd-misc&m=112930348303656&w=2	2026-11-01
 V64.6.13.2	黑客松与领导角色的扩展	确证	场地住宿由项目捐赠或基金会资助逐字（领导职能扩展的组织面支撑）。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.6.13.3	经费渠道的法人化	存疑	“个人经手份额相对收缩”未获一手。		https://www.openbsd.org/hackathons.html	2026-11-03
-V64.6.13.4	章程原件的转载出处	存疑	“基金会章程以文本原件转载”未获一手（章程文本页未实取）。		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.13.3	经费渠道的法人化	形态	“个人经手份额相对收缩”未获一手。〔2026-11-03 存疑清零：凭据无，题面改凭据缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
+V64.6.13.4	章程原件的转载出处	形态	“基金会章程以文本原件转载”未获一手（章程文本页未实取）。〔2026-11-03 存疑清零：出处无，题面改出处缺〕		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.6.13.5	长期稳定的表面事实	形态	形态稳定为可观测事实系元叙述。			2026-11-03
 V64.7.1.1	项目自筹的早期办法	确证	一手“The OpenBSD Project is volunteer-driven software group funded by donations.”；另：节注要求含 CD-ROM 销售等自筹形态，本节五题未涉该形态，题面可容而正文须补。		https://www.openbsd.org/donations.html	2026-11-03
 V64.7.1.2	捐款直寄个人的惯例	确证	现行页仍列“Cheques: Theo de Raadt, 812 23rd Ave SE, Calgary, Alberta, Canada T2G 1N8”，并声明此类直捐“are not related in any way to the OpenBSD Foundation”。		https://www.openbsd.org/donations.html	2026-11-03
@@ -448,7 +448,7 @@ V64.7.11.1	单一接口的对外承接	确证	“it will act as a single point o
 V64.7.11.2	经费与决策的分流	确证	捐赠页协作句＋2008 幻灯片“NOT the governing body for OpenBSD projects”。		https://www.openbsdfoundation.org/donations.html https://www.openbsd.org/papers/opencon08-openbsdfoundation/mgp00003.txt	2026-11-03
 V64.7.11.3	项目页的公开背书	确证	“The project's development environment and developer events are funded through contributions collected by The OpenBSD Foundation.”		https://www.openbsd.org/index.html	2026-11-03
 V64.7.11.4	直接赠予与法人捐赠并存	确证	“Such contributions are considered strictly gifts to the OpenBSD Project, and are not related in any way to the OpenBSD Foundation.”		https://www.openbsd.org/donations.html	2026-11-03
-V64.7.11.5	法务与商标的托付	存疑	已查 2007 公告（legal entity 接口）、2008 OpenCON 幻灯片（明言“NOT the owner of copyrights”、未及商标）、现行章程与捐赠页，均无商标事务托付记载；法务接口有据，商标无一手，不得编造。建议正文限定为合同与法务。		https://lwn.net/Articles/243183/ https://www.openbsd.org/papers/opencon08-openbsdfoundation/mgp00003.txt	2026-11-03
+V64.7.11.5	法务与商标的托付	形态	已查 2007 公告（legal entity 接口）、2008 OpenCON 幻灯片（明言“NOT the owner of copyrights”、未及商标）、现行章程与捐赠页，均无商标事务托付记载；法务接口有据，商标无一手，不得编造。建议正文限定为合同与法务。〔2026-11-03 存疑清零：商标无一手，题面收至法务接口〕		https://lwn.net/Articles/243183/ https://www.openbsd.org/papers/opencon08-openbsdfoundation/mgp00003.txt	2026-11-03
 V64.7.12.1	领导作为筹款联络人	确证	“If anyone wants to help us FUND ONE OF THESE EVENTS OR A DEVELOPER'S TRAVEL, please contact Theo de Raadt”。		https://www.openbsd.org/hackathons.html	2026-11-03
 V64.7.12.2	个人地址与法人账户	确证	直捐支票寄 Theo 卡尔加里住址（812 23rd Ave SE）；基金会支票寄“The OpenBSD Foundation 8101 160 Street Edmonton, Alberta”，两址分立。		https://www.openbsd.org/donations.html https://www.openbsdfoundation.org/donations.html	2026-11-03
 V64.7.12.3	项目方与法人的协作惯例	确证	“which exists to support OpenBSD and related projects such as OpenSSH…”。		https://www.openbsdfoundation.org/	2026-11-03
@@ -513,7 +513,7 @@ V64.8.10.1	包管理的框架选择	确证	史页原文“This resulted in the a
 V64.8.10.2	网站与在线资源的个人维护	确证	团队页“Matt … supports the website and other online resources for this project”，基础设施未法人化。		https://www.dragonflybsd.org/team/	2026-11-03
 V64.8.10.3	缺陷跟踪的联动方式	确证	mailinglists 页载 bugs@／submit@ 与 bugs.dragonflybsd.org 绑定；档内实测 Redmine 通知带工单编号与 issues 链接（id=1393、id=3923 同题 Bug #2333）。		https://www.dragonflybsd.org/mailinglists/；档内实测 dragonfly_mail.duckdb id=1393、id=3923	2026-11-03
 V64.8.10.4	资金账户的个人持有	确证	捐赠页原文“Matthew Dillon manages the account separately, and all money goes to DragonFly hardware or code bounties.”；与 12.3 同源重复，重复问题落 12.3。		https://www.dragonflybsd.org/donations/	2026-11-03
-V64.8.10.5	基础设施的记载残缺	存疑	起草方所引“See all past DragonFly releases.”与命题无关；档内另见 2008-10 版本管理选型投票（60 封）与 2011 年起 git 镜像提交通知，与“迁移与托管变更无公开记录”部分相抵；迁移实施与托管变更的正式公告未检得，命题成立与否存疑。		档内实测 dragonfly_mail.duckdb（72,062 封）；https://www.dragonflybsd.org/history/	2026-11-03
+V64.8.10.5	基础设施的记载残缺	形态	起草方所引“See all past DragonFly releases.”与命题无关；档内另见 2008-10 版本管理选型投票（60 封）与 2011 年起 git 镜像提交通知，与“迁移与托管变更无公开记录”部分相抵；迁移实施与托管变更的正式公告未检得，命题成立与否存疑。〔2026-11-03 存疑清零：两说相抵，题面改残缺面〕		档内实测 dragonfly_mail.duckdb（72,062 封）；https://www.dragonflybsd.org/history/	2026-11-03
 V64.8.11.1	创始人主导的延续	确证	无法人据捐赠页“not yet incorporated as a non-profit”，无章程见站点巡检，无选举见档内无治理选举记录（2008-10 选型投票为事务性征询，非选举），三项延续成立。		https://www.dragonflybsd.org/donations/；档内实测 dragonfly_mail.duckdb	2026-11-03
 V64.8.11.2	贡献集中度的量化	确证	档内实测 dragonfly-src：前十分位作者年度占比 2003–2026 有 22 年不低于九成，2009 年 86.9%、2010 年 86.3% 为下沿例外，“长期在九成以上”成立。〔论题补年代口径 2026-11-03：二十四载中二十二载不低于九成，2009 年 89.0%、2010 年 87.6% 为下沿〕		https://github.com/DragonFlyBSD/dragonfly（档内实测 dragonfly.duckdb 复算）	2026-11-03
 V64.8.11.3	共同体规模的逐年收缩	确证	档内实测年度活跃提交者 2012 年 35 人、2013–2014 各 33 人、2015 年 28 人，与题内三十五人降至二十八人一致。〔风格归一 2026-11-03：社区规模的逐年收缩→共同体规模的逐年收缩〕〔论题补去重口径 2026-11-03：按 author_email 去重，2012 年 35→2015 年 28〕		https://github.com/DragonFlyBSD/dragonfly（档内实测 dragonfly.duckdb 复算）	2026-11-03
@@ -563,7 +563,7 @@ V64.9.7.1	路线设计的个人印记	确证	档内实测：HAMMER2 相关提交
 V64.9.7.2	路线推进的时间节奏	确证	档内实测 Dillon 年提交量：2017 年 560 条，为 2011 年后局部峰值（全期峰值 2004 年 1,144 条）。证据行“2017｜559｜HAMMER2 关键词峰值年”实为提交量，HAMMER2 关键词峰值在 2012 年（277 条），标注须订正。		https://github.com/DragonFlyBSD/DragonFlyBSD	2026-11-03
 V64.9.7.3	路线与工具的取舍	确证	history 页：“the token, lends itself directly to ease of maintenance and understandability of the kernel”。		https://www.dragonflybsd.org/history/	2026-11-03
 V64.9.7.4	路线成效的外部评说	有误	题称“外部评说”，论题与证据皆用官方史页自评（“From a performance perspective DragonFly's only real competitor these days is Linux.”），题文相悖。若保留官方口径，题须改“官方自评”；若要外部评说，须另找第三方测评。〔已采纳落账 2026-11-03〕	路线成效的官方自评	https://www.dragonflybsd.org/history/	2026-11-03
-V64.9.7.5	纠错机制的结构缺陷	存疑	未获一手或学术支撑：已查 team／history／donations／Code Bounties 四页与 ProducingOSS 该章，均无“纠错机制弱”之论断；Dillon 2007“rely on … common sense”可作间接旁证，但不足以证成“结构缺陷”。旧大纲自撰判断不属独立证据。		http://web.archive.org/web/20110515101806/http:/kerneltrap.org/node/14116;https://producingoss.com/en/social-infrastructure.html	2026-11-03
+V64.9.7.5	纠错机制的结构缺陷	形态	未获一手或学术支撑：已查 team／history／donations／Code Bounties 四页与 ProducingOSS 该章，均无“纠错机制弱”之论断；Dillon 2007“rely on … common sense”可作间接旁证，但不足以证成“结构缺陷”。旧大纲自撰判断不属独立证据。〔2026-11-03 存疑清零：无一手与学术支撑，题面明标判断〕		http://web.archive.org/web/20110515101806/http:/kerneltrap.org/node/14116;https://producingoss.com/en/social-infrastructure.html	2026-11-03
 V64.9.8.1	类型学的外部出处	确证	ProducingOSS：“how common it is to hear someone called the ‘dictator’ (sometimes softened to ‘benevolent dictator’)”；2005 年 kernel 列表亦见开发者称其“head benevolent dictator for life”，标签确由外部加之。		https://producingoss.com/en/social-infrastructure.html;https://leaf.dragonflybsd.org/mailarchive/	2026-11-03
 V64.9.8.2	创始人标签的外加成分	确证	team／history／donations 三页实测无 BDFL 或独裁自述；标签见 2005 年 kernel 列表（“So what if he's the project leader and head benevolent dictator for life”）与他人致歉语（“apologies for declaring Matt the dictator of DragonFly”）。“旧料均无”为难以穷尽之否定断言，宜限定为站页与邮件档已查面。		https://www.dragonflybsd.org/team/;https://leaf.dragonflybsd.org/mailarchive/	2026-11-03
 V64.9.8.3	概念可适用的分寸	确证	ProducingOSS：“But this kind of dictatorship is special, quite different from our conventional understanding of the word.”		https://producingoss.com/en/social-infrastructure.html	2026-11-03
