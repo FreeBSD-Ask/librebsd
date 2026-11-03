@@ -173,6 +173,7 @@ V57.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V57.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V57.2.3.2	分叉基线	https://www.midnightbsd.org/about/	联网	A	2026-10-30	MidnightBSD was forked from FreeBSD 6.1 beta. The system was forked to allow us to customize and integrate the environment including the ports and system configuration.	none
 V57.2.3.2	MidnightBSD 的分叉起点	旧大纲-20261023/第13卷-bsd衍生操作系统/第279章-失败衍生版本与开源治理批评/279.1-失败和仍在继续的-BSD-衍生版本与项目/279.1.1-桌面bsd衍生发行版的谱系概览.md	史料	A	2026-10-30	自 2000 年代起，以 FreeBSD/NetBSD/OpenBSD 为底座构建“开箱即用桌面 BSD”的尝试形成一条清晰的衍生发行版谱系	none
+V57.2.3.2	MidnightBSD 分叉起点	https://www.midnightbsd.org/about/	联网	A	2026-11-03	MidnightBSD was forked from FreeBSD 6.1 beta. The system was forked to allow us to customize and integrate the environment including the ports and system configuration.	none
 V57.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例”；本节题为其下位论题	none
 V57.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V57.2.3.3	分叉态度	https://www.midnightbsd.org/about/	联网	A	2026-10-30	We did not fork FreeBSD as a result of a falling out, but rather as an excellent starting point.	none
@@ -212,6 +213,7 @@ V57.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V57.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V57.3.1.4	两线合并完成	https://www.ixsystems.com/history/	联网	A	2026-10-30	The Unification of FreeNAS and TrueNAS is completed at the end of 2021.	none
 V57.3.1.4	ZFS 版本跟随的方针	旧大纲-20261023/第13卷-bsd衍生操作系统/第285章-truenas/285.1-FreeNAS-的-FreeBSD-根基-2005-2011/285.1.1-要点FreeNAS2005以FreeBSD为基底提供基于Web的NAS管理利用F.md	史料	A	2026-10-30	FreeNAS（2005）以 FreeBSD 为基底，提供基于 Web 的 NAS 管理，利用 FreeBSD 的 ZFS（later）、Samba、ZFS 集成能力	none
+V57.3.1.4	XigmaNAS 的 ZFS 版本实态	https://www.xigmanas.com/	联网	A	2026-11-03	It includes ZFS v5000, Software RAID (0,1,5), disk encryption, S.M.A.R.T / email reports etc.	none
 V57.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS”；本节题为其下位论题	none
 V57.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V57.3.1.5	商用盒式设备的替代	https://www.xigmanas.com/	联网	A	2026-10-30	XigmaNAS keeps going where many commercial box solutions stop.	none
@@ -463,10 +465,10 @@ V57.9.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V57.9.1.1	分叉时点与基线	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	none
 V57.9.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
 V57.9.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V57.9.1.2	自我定位的变迁	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement, but this description has long since become obsolete.	none
+V57.9.1.2	自我定位的变迁	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	"The project was originally billed as ""the logical continuation of the FreeBSD 4.x series"", as quoted in the announcement, but this description has long since become obsolete."	none
 V57.9.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
 V57.9.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V57.9.1.3	自我定位的变迁	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement, but this description has long since become obsolete.	none
+V57.9.1.3	自我定位的变迁	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	"The project was originally billed as ""the logical continuation of the FreeBSD 4.x series"", as quoted in the announcement, but this description has long since become obsolete."	none
 V57.9.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“DragonFly 系衍生的生态位分析”；本节题为其下位论题	none
 V57.9.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V57.9.1.4	打包框架的合并	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none

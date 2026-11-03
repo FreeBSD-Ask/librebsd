@@ -15,7 +15,7 @@ V61.1.1.3	setuid 位的提权通道	https://man.freebsd.org/cgi/man.cgi?query=se
 V61.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“UNIX 信任模型与超级用户制度”；本节题为其下位论题	none
 V61.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.1.4	早期信任模型	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
-V61.1.1.4	受信主机特性的滥用	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	Another of the worm's methods was to exploit the "trusted host features" often used in local networks to propagate (using rexec and rsh).	none
+V61.1.1.4	受信主机特性的滥用	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"Another of the worm's methods was to exploit the ""trusted host features"" often used in local networks to propagate (using rexec and rsh)."	none
 V61.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“UNIX 信任模型与超级用户制度”；本节题为其下位论题	none
 V61.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.1.5	口令与身份材料	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
@@ -35,7 +35,7 @@ V61.1.2.3	通过可达服务器获取 root	https://man.freebsd.org/cgi/man.cgi?q
 V61.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“网络化扩大 UNIX 攻击面”；本节题为其下位论题	none
 V61.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.2.4	远程入口的缺陷暴露	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.3-对43bsd的批评morris蠕虫暴露的安全缺陷对43bsd安全缺陷被/039.3.4-要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码.md	史料	A	2026-10-30	039.3.4 要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码	none
-V61.1.2.4	rexec 与 rsh 的传播	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	Another of the worm's methods was to exploit the "trusted host features" often used in local networks to propagate (using rexec and rsh).	none
+V61.1.2.4	rexec 与 rsh 的传播	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"Another of the worm's methods was to exploit the ""trusted host features"" often used in local networks to propagate (using rexec and rsh)."	none
 V61.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“网络化扩大 UNIX 攻击面”；本节题为其下位论题	none
 V61.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.2.5	信任链的传递	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.3-对43bsd的批评morris蠕虫暴露的安全缺陷对43bsd安全缺陷被/039.3.4-要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码.md	史料	A	2026-10-30	039.3.4 要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码	none
@@ -43,7 +43,7 @@ V61.1.2.5	受信名单的逐项感染	https://www.rfc-editor.org/rfc/rfc1135.txt
 V61.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“远程服务漏洞与网络攻击时代”；本节题为其下位论题	none
 V61.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.3.1	调试模式的弃用	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.11-43bsd时期的技术淘汰morris蠕虫后sendmail调试模式后门弃用/039.11.1-sendmaildebug命令调试模式后门弃用与默认禁用198811-1989.md	史料	A	2026-10-30	039.11.1 sendmail DEBUG 命令调试模式后门 → 弃用与默认禁用（1988.11-1989）	none
-V61.1.3.1	sendmail 调试命令	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	The feature in sendmail that was violated was a non-standard "debug" command. The worm propagated itself via the debug command into remote hosts.	none
+V61.1.3.1	sendmail 调试命令	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"The feature in sendmail that was violated was a non-standard ""debug"" command. The worm propagated itself via the debug command into remote hosts."	none
 V61.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“远程服务漏洞与网络攻击时代”；本节题为其下位论题	none
 V61.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.3.2	服务程序的输入缺陷	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.11-43bsd时期的技术淘汰morris蠕虫后sendmail调试模式后门弃用/039.11.1-sendmaildebug命令调试模式后门弃用与默认禁用198811-1989.md	史料	A	2026-10-30	039.11.1 sendmail DEBUG 命令调试模式后门 → 弃用与默认禁用（1988.11-1989）	none
@@ -51,11 +51,11 @@ V61.1.3.2	fingerd 的内存溢出	https://www.rfc-editor.org/rfc/rfc1135.txt	联
 V61.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“远程服务漏洞与网络攻击时代”；本节题为其下位论题	none
 V61.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.3.3	远程执行的信任假设	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.11-43bsd时期的技术淘汰morris蠕虫后sendmail调试模式后门弃用/039.11.1-sendmaildebug命令调试模式后门弃用与默认禁用198811-1989.md	史料	A	2026-10-30	039.11.1 sendmail DEBUG 命令调试模式后门 → 弃用与默认禁用（1988.11-1989）	none
-V61.1.3.3	受信主机特性的利用	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	Another of the worm's methods was to exploit the "trusted host features" often used in local networks to propagate (using rexec and rsh).	none
+V61.1.3.3	受信主机特性的利用	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"Another of the worm's methods was to exploit the ""trusted host features"" often used in local networks to propagate (using rexec and rsh)."	none
 V61.1.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“远程服务漏洞与网络攻击时代”；本节题为其下位论题	none
 V61.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.3.4	自动化传播的后果	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.11-43bsd时期的技术淘汰morris蠕虫后sendmail调试模式后门弃用/039.11.1-sendmaildebug命令调试模式后门弃用与默认禁用198811-1989.md	史料	A	2026-10-30	039.11.1 sendmail DEBUG 命令调试模式后门 → 弃用与默认禁用（1988.11-1989）	none
-V61.1.3.4	自复制程序的定义	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	A "worm" is a program that can run independently, will consume the resources of its host from within in order to maintain itself, and can propagate a complete working version of itself on to other machines.	none
+V61.1.3.4	自复制程序的定义	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"A ""worm"" is a program that can run independently, will consume the resources of its host from within in order to maintain itself, and can propagate a complete working version of itself on to other machines."	none
 V61.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“远程服务漏洞与网络攻击时代”；本节题为其下位论题	none
 V61.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.3.5	补丁分发的时滞	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.11-43bsd时期的技术淘汰morris蠕虫后sendmail调试模式后门弃用/039.11.1-sendmaildebug命令调试模式后门弃用与默认禁用198811-1989.md	史料	A	2026-10-30	039.11.1 sendmail DEBUG 命令调试模式后门 → 弃用与默认禁用（1988.11-1989）	none
@@ -67,7 +67,7 @@ V61.1.4.1	仅命中 Berkeley UNIX 主机	https://www.rfc-editor.org/rfc/rfc1135.
 V61.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Morris 蠕虫与现代计算机安全事件（1988-11）”；本节题为其下位论题	none
 V61.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.4.2	事件的原型意义	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.2-morris蠕虫1988112晚830首个互联网大规模蠕虫由康奈尔大学研究生/039.2.1-morris蠕虫释放的时间线.md	史料	A	2026-10-30	039.2.1 Morris 蠕虫释放的时间线	none
-V61.1.4.2	蠕虫的程序定义	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	A "worm" is a program that can run independently, will consume the resources of its host from within in order to maintain itself, and can propagate a complete working version of itself on to other machines.	none
+V61.1.4.2	蠕虫的程序定义	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"A ""worm"" is a program that can run independently, will consume the resources of its host from within in order to maintain itself, and can propagate a complete working version of itself on to other machines."	none
 V61.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“Morris 蠕虫与现代计算机安全事件（1988-11）”；本节题为其下位论题	none
 V61.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.4.3	处置流程	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.2-morris蠕虫1988112晚830首个互联网大规模蠕虫由康奈尔大学研究生/039.2.1-morris蠕虫释放的时间线.md	史料	A	2026-10-30	039.2.1 Morris 蠕虫释放的时间线	none
@@ -91,7 +91,7 @@ V61.1.5.2	溢出后执行小程序	https://www.rfc-editor.org/rfc/rfc1135.txt	�
 V61.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Morris 蠕虫的技术解剖：传播机制与事后分析”；本节题为其下位论题	none
 V61.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.5.3	调试命令的载荷	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.3-对43bsd的批评morris蠕虫暴露的安全缺陷对43bsd安全缺陷被/039.3.4-要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码.md	史料	A	2026-10-30	039.3.4 要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码	none
-V61.1.5.3	调试命令的传播路径	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	The feature in sendmail that was violated was a non-standard "debug" command. The worm propagated itself via the debug command into remote hosts.	none
+V61.1.5.3	调试命令的传播路径	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"The feature in sendmail that was violated was a non-standard ""debug"" command. The worm propagated itself via the debug command into remote hosts."	none
 V61.1.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“Morris 蠕虫的技术解剖：传播机制与事后分析”；本节题为其下位论题	none
 V61.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.5.4	口令猜测策略	旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.3-对43bsd的批评morris蠕虫暴露的安全缺陷对43bsd安全缺陷被/039.3.4-要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码.md	史料	A	2026-10-30	039.3.4 要点批评的史料辨析需注意Spafford的蠕虫分析是事后重建需核对原始蠕虫源代码	none
@@ -111,7 +111,7 @@ V61.1.6.1	受信文件的逐项感染	https://www.rfc-editor.org/rfc/rfc1135.txt
 V61.1.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“早期网络服务的信任缺陷脉络”；本节题为其下位论题	none
 V61.1.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.6.2	远程执行的口令豁免	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
-V61.1.6.2	rexec 与 rsh 的利用	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	Another of the worm's methods was to exploit the "trusted host features" often used in local networks to propagate (using rexec and rsh).	none
+V61.1.6.2	rexec 与 rsh 的利用	https://www.rfc-editor.org/rfc/rfc1135.txt	联网	A	2026-10-30	"Another of the worm's methods was to exploit the ""trusted host features"" often used in local networks to propagate (using rexec and rsh)."	none
 V61.1.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“早期网络服务的信任缺陷脉络”；本节题为其下位论题	none
 V61.1.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.1.6.3	输入校验的缺位	旧大纲-20261023/第08卷-freebsd的范式转换/第174章-计算机安全史的早期unix安全与morris蠕虫/174.1-Morris-蠕虫之前-1988-年之前的计算机安全-1988-年-11-月-2/174.1.3-unix的setuid与chroot安全模型.md	史料	A	2026-10-30	174.1.3 UNIX 的 setuid 与 chroot 安全模型	none
@@ -318,7 +318,7 @@ V61.2.5.5	对 root 的约束	旧大纲-20261023/第07卷-freebsd的工程体系�
 V61.2.5.5	不得覆盖超级用户检查	https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	联网	A	2026-10-30	due to its nature, MAC security policies may only restrict access relative to one another and the base system policy; they cannot override traditional Unix security provisions such as file permissions and superuser checks.	none
 V61.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“进程资源限制”；本节题为其下位论题	none
 V61.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.2.6.1	登录类过滤式	https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8	联网	A	2026-10-30	A filter that matches all the login classes would be "loginclass:".	none
+V61.2.6.1	登录类过滤式	https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8	联网	A	2026-10-30	"A filter that matches all the login classes would be ""loginclass:""."	none
 V61.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“进程资源限制”；本节题为其下位论题	none
 V61.2.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.2.6.2	规则四段式语法	https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8	联网	A	2026-10-30	Syntax for a rule is subject:subject-id:resource:action=amount/per.	none
@@ -514,7 +514,7 @@ V61.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V61.3.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.5.4	角色模型的普及	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
+V61.3.5.4	角色模型的普及	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	"Role based access control (RBAC) (also called ""role based security""), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost."	none
 V61.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none
 V61.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.5.5	安全管理的复杂度	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	One of the most challenging problems in managing large networks is the complexity of security administration.	none
@@ -541,7 +541,7 @@ V61.3.6.5	面向 CAPP 评估的设计	https://man.freebsd.org/cgi/man.cgi?query=
 V61.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.1	三类模型的授权主体	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
-V61.3.7.1	角色成为主流模型	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
+V61.3.7.1	角色成为主流模型	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	"Role based access control (RBAC) (also called ""role based security""), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost."	none
 V61.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“DAC、MAC 与 RBAC”；本节题为其下位论题	none
 V61.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.7.2	角色层次	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.4-要点MAC框架设计决策的一手史料包括Watson20002003年在freebs.md	史料	A	2026-10-30	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	none
@@ -607,7 +607,7 @@ V61.4.2.2	SMEP 与 SMAP 的支持	https://www.netbsd.org/security/	联网	A	2026
 V61.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“内存安全与执行保护”；本节题为其下位论题	none
 V61.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.2.3	语言层检查	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.3-内存保护机制wxaslr栈保护pie.md	史料	A	2026-10-30	150.1.3 内存保护机制：W^X、ASLR、栈保护、PIE	none
-V61.4.2.3	增强的缓冲边界检查	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	When enabled, "FORTIFY_SOURCE" enables extra bounds checking in various functions that accept buffers to be written into.	none
+V61.4.2.3	增强的缓冲边界检查	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	"When enabled, ""FORTIFY_SOURCE"" enables extra bounds checking in various functions that accept buffers to be written into."	none
 V61.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“内存安全与执行保护”；本节题为其下位论题	none
 V61.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.2.4	利用链条	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.3-内存保护机制wxaslr栈保护pie.md	史料	A	2026-10-30	150.1.3 内存保护机制：W^X、ASLR、栈保护、PIE	none
@@ -757,7 +757,7 @@ V61.4.11.1	默认启用 strong 与 clash 选项	https://man.freebsd.org/cgi/man.
 V61.4.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“编译期缓解：FORTIFY_SOURCE、stack protector 与 PIE 的启用史”；本节题为其下位论题	none
 V61.4.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.11.2	边界检查接入	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.3-内存保护机制wxaslr栈保护pie.md	史料	A	2026-10-30	150.1.3 内存保护机制：W^X、ASLR、栈保护、PIE	none
-V61.4.11.2	以宏定义启用的两级实现	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	In addition to SSP, a "FORTIFY_SOURCE" implementation is supported up to level 2 by defining _FORTIFY_SOURCE to 1 or 2 before including any FreeBSD headers.	none
+V61.4.11.2	以宏定义启用的两级实现	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	"In addition to SSP, a ""FORTIFY_SOURCE"" implementation is supported up to level 2 by defining _FORTIFY_SOURCE to 1 or 2 before including any FreeBSD headers."	none
 V61.4.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“编译期缓解：FORTIFY_SOURCE、stack protector 与 PIE 的启用史”；本节题为其下位论题	none
 V61.4.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.4.11.3	PIE 普及	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.1-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG/150.1.3-内存保护机制wxaslr栈保护pie.md	史料	A	2026-10-30	150.1.3 内存保护机制：W^X、ASLR、栈保护、PIE	none
@@ -1141,7 +1141,7 @@ V61.5.18.3	启动代码须由固件已知密钥签名	https://wiki.freebsd.org/S
 V61.5.18.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.4	权限模型收敛	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
-V61.5.18.4	角色模型成为主流	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	Role based access control (RBAC) (also called "role based security"), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost.	none
+V61.5.18.4	角色模型成为主流	https://csrc.nist.gov/projects/role-based-access-control	联网	B	2026-10-30	"Role based access control (RBAC) (also called ""role based security""), as formalized in 1992 by David Ferraiolo and Rick Kuhn, has become the predominant model for advanced access control because it reduces this cost."	none
 V61.5.18.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 18 节“与 Linux、Windows、Solaris、macOS 安全路线比较”；本节题为其下位论题	none
 V61.5.18.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.5.18.5	对照限度	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.4-外部批评与跨-OS-安全模型比较/150.4.4-macoswindows安全模型与认证澄清.md	史料	A	2026-10-30	150.4.4 macOS/Windows 安全模型与认证澄清	none
@@ -1156,7 +1156,7 @@ V61.6.1.2	root 获取的类别	https://man.freebsd.org/cgi/man.cgi?query=securit
 V61.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“权限提升漏洞”；本节题为其下位论题	none
 V61.6.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.1.3	用户态服务越权	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
-V61.6.1.3	旧漏洞的回归	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	On investigation, we realized that this vulnerability is in fact a regression of CVE-2006-5051 ("Signal handler race condition in OpenSSH before 4.4 allows remote attackers to cause a denial of service (crash), and possibly execute arbitrary code"), which was reported in 2006 by Mark Dowd.	none
+V61.6.1.3	旧漏洞的回归	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	"On investigation, we realized that this vulnerability is in fact a regression of CVE-2006-5051 (""Signal handler race condition in OpenSSH before 4.4 allows remote attackers to cause a denial of service (crash), and possibly execute arbitrary code""), which was reported in 2006 by Mark Dowd."	none
 V61.6.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“权限提升漏洞”；本节题为其下位论题	none
 V61.6.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.1.4	提权后的持久化	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
@@ -1164,6 +1164,7 @@ V61.6.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V61.6.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.1.5	分级判据	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
 V61.6.1.5	远程可利用才计拒绝服务	https://www.freebsd.org/security/	联网	A	2026-10-30	Is it a Denial of Service vulnerability? Only when remotely exploitable	none
+V61.6.1.5	FreeBSD 安全公告的字段构成	https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	联网	A	2026-11-03	Topic: Use-after-free in multi-threaded xz decoder / Category: contrib / Module: xz / Announced: 2025-07-02 / Affects: FreeBSD 13.5 and FreeBSD 14.2 / Corrected: 2025-05-07（全文无 Severity、CVSS 字段）	none
 V61.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“内核内存破坏”；本节题为其下位论题	none
 V61.6.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“内核内存破坏”；本节题为其下位论题	none
@@ -1180,7 +1181,7 @@ V61.6.2.5	实现总体稳健的单次失误	https://www.qualys.com/2024/07/01/cv
 V61.6.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“用户空间漏洞”；本节题为其下位论题	none
 V61.6.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.3.1	溢出形态	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
-V61.6.3.1	边界检查的两级实现	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	In addition to SSP, a "FORTIFY_SOURCE" implementation is supported up to level 2 by defining _FORTIFY_SOURCE to 1 or 2 before including any FreeBSD headers.	none
+V61.6.3.1	边界检查的两级实现	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	"In addition to SSP, a ""FORTIFY_SOURCE"" implementation is supported up to level 2 by defining _FORTIFY_SOURCE to 1 or 2 before including any FreeBSD headers."	none
 V61.6.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“用户空间漏洞”；本节题为其下位论题	none
 V61.6.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.3.2	解析器边界	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
@@ -1188,7 +1189,7 @@ V61.6.3.2	合成复杂文件语义	https://lcamtuf.coredump.cx/afl/	联网	A	202
 V61.6.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“用户空间漏洞”；本节题为其下位论题	none
 V61.6.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.3.3	库函数缺口	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
-V61.6.3.3	为缓冲写入函数加边界检查	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	When enabled, "FORTIFY_SOURCE" enables extra bounds checking in various functions that accept buffers to be written into.	none
+V61.6.3.3	为缓冲写入函数加边界检查	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	联网	A	2026-10-30	"When enabled, ""FORTIFY_SOURCE"" enables extra bounds checking in various functions that accept buffers to be written into."	none
 V61.6.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“用户空间漏洞”；本节题为其下位论题	none
 V61.6.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.3.4	特权程序暴露	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.1-2001-2002年早期远程漏洞与安全流程正规化.md	史料	A	2026-10-30	150.3.1 2001-2002 年：早期远程漏洞与安全流程正规化	none
@@ -1214,7 +1215,7 @@ V61.6.4.5	合并公告的延后理由	https://www.netbsd.org/security/	联网	A	
 V61.6.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“网络协议漏洞”；本节题为其下位论题	none
 V61.6.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.5.1	状态机缺陷	旧大纲-20261023/第07卷-freebsd的工程体系重构/第154章-freebsd网络栈的tcp-sack漏洞与响应/154.1-TCP-SACK-与网络栈安全-TCP-SACK-协议漏洞效应范围涵盖/154.1.1-tcpsack漏洞技术细节与效应范围.md	史料	A	2026-10-30	154.1.1 TCP SACK 漏洞技术细节与效应范围	none
-V61.6.5.1	RACK 依赖时间与序号计数	https://security.freebsd.org/advisories/FreeBSD-SA-19:08.rack.asc	联网	A	2026-10-30	A TCP loss detection algorithm called RACK ("Recent ACKnowledgment") uses the notion of time, in addition to packet or sequence counts, to detect losses for modern TCP implementations that support per-packet timestamps and the selective acknowledgment (SACK) option.	none
+V61.6.5.1	RACK 依赖时间与序号计数	https://security.freebsd.org/advisories/FreeBSD-SA-19:08.rack.asc	联网	A	2026-10-30	"A TCP loss detection algorithm called RACK (""Recent ACKnowledgment"") uses the notion of time, in addition to packet or sequence counts, to detect losses for modern TCP implementations that support per-packet timestamps and the selective acknowledgment (SACK) option."	none
 V61.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“网络协议漏洞”；本节题为其下位论题	none
 V61.6.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.5.2	分片与选项	旧大纲-20261023/第07卷-freebsd的工程体系重构/第154章-freebsd网络栈的tcp-sack漏洞与响应/154.1-TCP-SACK-与网络栈安全-TCP-SACK-协议漏洞效应范围涵盖/154.1.1-tcpsack漏洞技术细节与效应范围.md	史料	A	2026-10-30	154.1.1 TCP SACK 漏洞技术细节与效应范围	none
@@ -1313,7 +1314,7 @@ V61.6.10.4	sshd 拒绝服务与冒充	https://www.openbsd.org/errata76.html	联�
 V61.6.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“认证系统漏洞”；本节题为其下位论题	none
 V61.6.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.10.5	补丁紧迫性	旧大纲-20261023/第07卷-freebsd的工程体系重构/第150章-freebsd安全模型的磁盘加密与内存保护/150.3-典型-FreeBSD-安全事件与响应/150.3.4-2024年regresshioncve-2024-6387.md	史料	A	2026-10-30	150.3.4 2024 年：regreSSHion（CVE-2024-6387）	none
-V61.6.10.5	回归由 2020 年提交引入	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	This regression was introduced in October 2020 (OpenSSH 8.5p1) by commit 752250c ("revised log infrastructure for OpenSSH")	none
+V61.6.10.5	回归由 2020 年提交引入	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	"This regression was introduced in October 2020 (OpenSSH 8.5p1) by commit 752250c (""revised log infrastructure for OpenSSH"")"	none
 V61.6.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 11 节“第三方组件漏洞与供应链事件”；本节题为其下位论题	none
 V61.6.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.6.11.1	上游信任链	旧大纲-20261023/第07卷-freebsd的工程体系重构/第168章-freebsd14x第三方软件与同期os比较/168.3-14-x-周期漏洞与安全响应综览-80-个-SA-背后的工程伦理/168.3.5-xz后门事件cve-2024-3094辨析-供应链安全与freebsd不受影响的.md	史料	A	2026-10-30	168.3.5 xz 后门事件（CVE-2024-3094）辨析——供应链安全与 FreeBSD 不受影响的考据	none
@@ -1427,7 +1428,7 @@ V61.7.2.5	公共库的收录时点	https://nvd.nist.gov/vuln/detail/CVE-2019-559
 V61.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“源代码提交历史”；本节题为其下位论题	none
 V61.7.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.3.1	提交信息粒度	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
-V61.7.3.1	修复提交的说明文本	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	This regression was introduced in October 2020 (OpenSSH 8.5p1) by commit 752250c ("revised log infrastructure for OpenSSH")	none
+V61.7.3.1	修复提交的说明文本	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	"This regression was introduced in October 2020 (OpenSSH 8.5p1) by commit 752250c (""revised log infrastructure for OpenSSH"")"	none
 V61.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“源代码提交历史”；本节题为其下位论题	none
 V61.7.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.3.2	修复提交标记	旧大纲-20261023/第10卷-openbsd的历史/第212章-openbsd-2x的fork与代码审计奠基/212.2-代码审计文化的建立19962000openbsd系统性地对基本系统进行逐行代码审/212.2.4-要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm.md	史料	A	2026-10-30	212.2.4 要点OpenBSD审计记录与漏洞修复commit是研究审计文化的核心史料comm	none
@@ -1573,7 +1574,7 @@ V61.7.10.4	编目仅覆盖公开披露	https://www.cve.org/About/Overview	联网
 V61.7.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 10 节“BSD 安全工程史的证据边界”；本节题为其下位论题	none
 V61.7.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.10.5	结论强度分级	旧大纲-20261023/第07卷-freebsd的工程体系重构/第151章-freebsd安全团队与认证地位/151.3-本章小结-项目统摄史观映射与史观总结/151.3.3-安全史的元史学反思.md	史料	A	2026-10-30	151.3.3 安全史的元史学反思	none
-V61.7.10.5	漏洞与旧编号的对应关系	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	On investigation, we realized that this vulnerability is in fact a regression of CVE-2006-5051 ("Signal handler race condition in OpenSSH before 4.4 allows remote attackers to cause a denial of service (crash), and possibly execute arbitrary code"), which was reported in 2006 by Mark Dowd.	none
+V61.7.10.5	漏洞与旧编号的对应关系	https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt	联网	A	2026-10-30	"On investigation, we realized that this vulnerability is in fact a regression of CVE-2006-5051 (""Signal handler race condition in OpenSSH before 4.4 allows remote attackers to cause a denial of service (crash), and possibly execute arbitrary code""), which was reported in 2006 by Mark Dowd."	none
 V61.7.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 11 节“历史连续性与分化”；本节题为其下位论题	none
 V61.7.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.7.11.1	共同遗产延续	旧大纲-20261023/第24卷-bsd大分裂/第446章-bsd家族的形成路线分化与共同遗产1995-2003/446.3-openbsd安全工程与代码质量路线/446.3.1-路线的兑现轨迹1995-2003.md	史料	A	2026-10-30	446.3.1 路线的兑现轨迹（1995-2003）	none

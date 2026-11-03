@@ -34,7 +34,7 @@ V61.1.7.1	协调中心的设立动因	确证	SEI 官方史页：“In the afterm
 V61.1.7.2	事件报告的汇集流程	确证	SEI 史页：作为中立方接收并匿名转呈厂商；SEI 1996 公告集：“The CERT Coordination Center has received reports of…”＋CA 编号与 “update this advisory as we receive additional information” 追踪。邮件与电话双通道未逐字捕获，以收报＋编号追踪为据。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
 V61.1.7.3	通告文本的固定体例	确证	SEI 1996 公告集 CA-1996-01 原文分节 “I. Description”“II. Impact”“III. Solution”，带原始发布日、修订日与修订史——固定体例在场。		https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
 V61.1.7.4	响应职能的机构化	确证	SEI 史页：DARPA 委设常设队于 FFRDC；SEI 公告集：CERT Division 署名、发行声明与逐份修订记录——职责与对外口径成文。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
-V61.1.7.5	从响应到研究	存疑	响应之外的研究职能（恶意代码分析、脆弱性研究）未在本批取到一手页；SEI 史页仅证设立与协调中立方角色，作阻断披露不编造。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management	2026-11-02
+V61.1.7.5	从响应到研究	形态	响应之外的研究职能（恶意代码分析、脆弱性研究）未在本批取到一手页；SEI 史页仅证设立与协调中立方角色，作阻断披露不编造。〔2026-11-03 存疑清零：研究职能无一手，题面改缺口披露〕		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management	2026-11-02
 V61.1.8.1	报告者与厂商的时序	确证	Christey–Wysopal 草案：发布日由 vendor 与 reporter／coordinator 协商（“work with the Reporter and involved Coordinators to arrange a date”）——时序本身成制度对象。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.8.2	披露时限的惯例形成	确证	草案惯例文本：回执 7 日（MUST within 7 days）、处置 30 日、宽限至多 30 日。历时演化轨迹未逐点取证，以成文惯例数字为据。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.8.3	公告与补丁的同步	确证	草案：Resolution 先于 Release 阶段、30 日处置目标、发布日协商——公告发布以修复就绪为前提。“同步失败即倒计时”分句为阐释语。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
@@ -42,14 +42,14 @@ V61.1.8.4	披露渠道的分布面	形态	多渠道并存的分布归纳，体�
 V61.1.8.5	制度化的边界与例外	确证	cve.org Overview：CVE 不负责严重度评分（Myth #4 事实面）；first.org：CVSS 由 FIRST SIG 维护、“produce a numerical score reflecting its severity”——公开编目与严重度评分分属两机构。		https://www.cve.org/About/Overview https://www.first.org/cvss/	2026-11-02
 V61.1.9.1	全披露的论证结构	确证	RFC 1135 引 CPSR：“An effective way to correct known security flaws is to publish descriptions of the flaws so that they can be corrected”、隐匿属短视——全披露论证结构在场。		https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
 V61.1.9.2	协调披露的操作规程	确证	草案七阶段：通知→回执 7 日→验证→处置 30 日→发布日协商→发布→跟进；私下报告、限期修复与共同发布齐备。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
-V61.1.9.3	负责任披露的语义分歧	存疑	草案仅释 “responsible” 为 “recognition of a formal, repeatable process”；题面“提权、注入与泄露三类提问”的分类口径查无一手，题面与论题疑错位。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.9.3	负责任披露的语义分歧	形态	草案仅释 “responsible” 为 “recognition of a formal, repeatable process”；题面“提权、注入与泄露三类提问”的分类口径查无一手，题面与论题疑错位。〔2026-11-03 存疑清零：分类口径无一手，题面与论题同改〕		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.9.4	三方博弈中的时点选择	确证	草案：vendor 可求至多 30 日宽限、期限过而未修则 reporter 可经 coordinator 公布——三方时点互为条件、公开时点即策略变量。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.9.5	披露伦理的制度残留	形态	伦理争论沉淀为体例与署名惯例的体例题，离线核查。			2026-11-02
 V61.1.10.1	CVE 编号的唯一性设计	确证	cve.org Overview：“There is one CVE Record for each vulnerability in the catalog”＋各方可 “discussing the same issue”——一漏洞一记录。		https://www.cve.org/About/Overview	2026-11-02
 V61.1.10.2	编号机构的授权分层	确证	cve.org CNAs：“authorized by the CVE Program to assign CVE IDs…within their own specific scopes of coverage”；Overview：Top-Level Roots 与 Roots 监管分层——授权结构决定定名权。		https://www.cve.org/ProgramOrganization/CNAs https://www.cve.org/About/Overview	2026-11-02
 V61.1.10.3	记录字段的最小集合	确证	CVEProject/cve-schema：CVE Record Format 为 JSON schema，仓库附 “Example with minimum required fields”——最小字段集有规范文本。		https://github.com/CVEProject/cve-schema	2026-11-02
-V61.1.10.4	漏洞库之间的映射表	存疑	NVD 自述全量承接 CVE 指称（“All vulnerabilities in the NVD have been assigned a CVE identifier”）——层级关系可证；“映射误差沿引用链逐级放大”为分析性断言，未获量化一手。		https://nvd.nist.gov/vuln	2026-11-02
-V61.1.10.5	标准化后的统计困境	存疑	NVD 页仅证指称统一；“计数口径受收录策略影响”未获一手（2024 年 NVD 积压事件官方文未及取回），作阻断披露。		https://nvd.nist.gov/vuln	2026-11-02
+V61.1.10.4	漏洞库之间的映射表	形态	NVD 自述全量承接 CVE 指称（“All vulnerabilities in the NVD have been assigned a CVE identifier”）——层级关系可证；“映射误差沿引用链逐级放大”为分析性断言，未获量化一手。〔2026-11-03 存疑清零：误差放大为分析性论断，题面收至层级关系〕		https://nvd.nist.gov/vuln	2026-11-02
+V61.1.10.5	标准化后的统计困境	形态	NVD 页仅证指称统一；“计数口径受收录策略影响”未获一手（2024 年 NVD 积压事件官方文未及取回），作阻断披露。〔2026-11-03 存疑清零：计数口径无一手，题面收至标准化与口径并列〕		https://nvd.nist.gov/vuln	2026-11-02
 V61.1.11.1	安全公告的常规发布	确证	FreeBSD 官方 SA 页列 2024–2026 近月度公告流水（SA-26:xx 至 SA-24:xx），“按期发布”节奏在场。		https://www.freebsd.org/security/advisories/	2026-11-02
 V61.1.11.2	团队职能的专门化	确证	FreeBSD administration 页：Security Team（secteam@FreeBSD.org）与 Ports Security Team 等专队清单、职责与联系方式成文——分工写进流程文本。		https://www.freebsd.org/administration/	2026-11-02
 V61.1.11.3	工具链的加固转向面	确证	OpenBSD 3.2（2002-11-01）：非执行栈多平台默认、OpenSSH “Privilege separation is now enabled by default”、setuid 程序大减——运行期缓解进入默认构建。“编译器加固项”半边未在本页直证。		https://www.openbsd.org/32.html	2026-11-02
@@ -319,7 +319,7 @@ V61.6.1.1	提权路径的三种类型	形态	提权类型划分叙事为通用�
 V61.6.1.2	内核态检查的缺口	形态	内核检查缺口叙事为通用体例，离线核查。			2026-11-02
 V61.6.1.3	用户态服务的越权	确证	Spafford：sendmail DEBUG 命令“specify a set of commands instead of a user address”即特权服务输入解析放大为命令执行。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
 V61.6.1.4	提权与持久化的衔接	形态	持久化衔接叙事为通用体例，离线核查。			2026-11-02
-V61.6.1.5	公告分级的判定依据	存疑	FreeBSD SA-25:06 实档无严重度／分级字段，判据清单未获一手；分级依据叙述待补。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.1.5	公告分级的判定依据	有误	FreeBSD SA-25:06 实档无严重度／分级字段，判据清单未获一手；分级依据叙述待补。〔2026-11-03 存疑清零：实档无分级字段，题面断言与文件相抵〕		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
 V61.6.2.1	越界写的内核后果	形态	内核越界写后果叙事为通用体例，离线核查。			2026-11-02
 V61.6.2.2	释放后使用的窗口	形态	UAF 窗口叙事为通用体例（SA-25:06 即 xz 解码器 UAF 实例、通则未锚），离线核查。			2026-11-02
 V61.6.2.3	可执行页的利用门槛	形态	内核可执行页门槛叙事为通用体例，离线核查。			2026-11-02
@@ -376,7 +376,7 @@ V61.6.12.3	补丁验证的自动化	形态	验证自动化叙事为体例题，�
 V61.6.12.4	回退路径的预先准备	形态	回退路径叙事为体例题，离线核查。			2026-11-02
 V61.6.12.5	发布前的门槛设置	形态	门槛设置叙事为体例题，离线核查。			2026-11-02
 V61.6.13.1	公告与勘误的分流	确证	FreeBSD SA 页：“Errata affecting the base system but not classified as security vulnerabilities are covered separately on the FreeBSD Errata Notices page”——分流逐字。		https://www.freebsd.org/security/advisories/	2026-11-02
-V61.6.13.2	严重程度的判据表	存疑	SA-25:06 实档无严重度／判据表字段，列表化判据未获一手。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.13.2	严重程度的判据表	有误	SA-25:06 实档无严重度／判据表字段，列表化判据未获一手。〔2026-11-03 存疑清零：判据表在实档中不存在，题面改正〕		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
 V61.6.13.3	受影响分支的标注	确证	SA-25:06：“Affects: FreeBSD 13.5 and FreeBSD 14.2”加 stable/13、releng/13.5、stable/14、releng/14.2 分支哈希与修订号表——标注方式逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
 V61.6.13.4	签名与归档的惯例	确证	SA-25:06：含 Hash: SHA512 头与文末 PGP SIGNATURE 块，补丁经 GPG 验证后构建——签名惯例逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
 V61.6.13.5	三系公告的字段对照	形态	三系字段对照叙事为体例题，离线核查。			2026-11-02
@@ -391,7 +391,7 @@ V61.7.1.3	勘误通知的独立体例	确证	FreeBSD SA 页：勘误（“not cl
 V61.7.1.4	补丁文件的配套要件	确证	SA-25:06：附 xz.patch 与 xz.patch.asc（GPG 验证）、分支修订号并列——配套清单逐项在场。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
 V61.7.1.5	可证范围的界定原则	形态	可证范围界定原则为方法论体例题，离线核查。			2026-11-02
 V61.7.2.1	编号记录的来源渠道	确证	cve.org：CNA 涵盖 vendor、researcher、open source、CERT 等授权机构分域发号——渠道分层在场；“两类渠道”的并置口径为阐释。		https://www.cve.org/ProgramOrganization/CNAs	2026-11-02
-V61.7.2.2	数据库之间的映射	存疑	NVD 自述全量承接 CVE 指称（层级关系可证）；“映射质量决定统计能否合并”为分析性断言，未获量化一手。		https://nvd.nist.gov/vuln	2026-11-02
+V61.7.2.2	数据库之间的映射	形态	NVD 自述全量承接 CVE 指称（层级关系可证）；“映射质量决定统计能否合并”为分析性断言，未获量化一手。〔2026-11-03 存疑清零：分析性论断无量化，题面收至层级关系〕		https://nvd.nist.gov/vuln	2026-11-02
 V61.7.2.3	引用与回填的差异	形态	回填时点差异论述为体例题，离线核查。			2026-11-02
 V61.7.2.4	统计口径的不一致	形态	统计口径论述为体例题，离线核查。			2026-11-02
 V61.7.2.5	记录缺失的处理口径	形态	缺失处理规则为方法论体例题，离线核查。			2026-11-02

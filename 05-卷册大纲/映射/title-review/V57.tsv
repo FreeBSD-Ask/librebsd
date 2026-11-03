@@ -2,21 +2,21 @@ subsection_id	title	verdict	issue	suggested_title	urls	accessed
 V57.3.1.1	FreeNAS 的两代同名异指	确证	iXsystems 官方史页（A 级）：“In December, iXsystems takes over the development of the FreeNAS Project.”（2009）＋“TrueNAS CORE introduced as the continuation of FreeNAS”（2020）＋“The Unification of FreeNAS and TrueNAS is completed at the end of 2021.”——两代同名界定逐字命中		https://www.ixsystems.com/history/	2026-11-01
 V57.3.1.2	TrueNAS 产品线的分层	确证	iXsystems 史页：“TrueNAS SCALE announced and enters ALPHA development phase.”（2020）＋“TrueNAS CORE 12.0 enters RELEASE status”（2021）＋“TrueNAS SCALE Reaches GA on 2.22.22”（2022）——CORE／SCALE 分层与时点逐字命中		https://www.ixsystems.com/history/	2026-11-01
 V57.3.1.3	XigmaNAS 的分支来历	确证			https://www.xigmanas.com/wiki/doku.php	2026-11-02
-V57.3.1.4	ZFS 版本跟随的方针	存疑	官网与 wiki 仅见“includes ZFS v5000”实态；跟随方针句未逐字，发行说明未取		https://www.xigmanas.com/ https://www.xigmanas.com/wiki/doku.php	2026-11-02
+V57.3.1.4	ZFS 版本跟随的方针	形态	官网与 wiki 仅见“includes ZFS v5000”实态；跟随方针句未逐字，发行说明未取〔2026-11-03 存疑清零：跟随方针句无，改落已核版本实态〕		https://www.xigmanas.com/ https://www.xigmanas.com/wiki/doku.php	2026-11-02
 V57.3.1.5	存储衍生的许可取向	确证	XigmaNAS 官网：“based on FreeBSD”＋商业盒式对照句“we see underpowered NAS devices that are modified with hardware/software locks and software updates ends within 2-3 years”——开放取向与商业对照逐字命中		https://www.xigmanas.com/	2026-11-01
 V57.4.1.1	m0n0wall 的终止与迁移提示	确证	Phoronix（2015-02-15，经 exa）引 Kasper 公告：“there are now better solutions available and under active development...Therefore, today I announce that the m0n0wall project has officially ended. No development will be done anymore, and there will be no further releases.”——终止公告逐字命中		https://www.phoronix.com/news/m0n0wall-Game-Over	2026-11-01
 V57.4.1.2	嵌入式镜像的体积约束	确证			https://web.archive.org/web/2011/http://m0n0.ch/wall/	2026-11-02
 V57.4.1.3	分叉后保留的共同成分	确证			https://github.com/pfsense/pfsense https://web.archive.org/web/2011/http://m0n0.ch/wall/	2026-11-02
 V57.4.1.4	社区延续项目的接续	确证	Phoronix：“Kasper recommends anyone currently using m0n0wall to try one of the other derivatives of it like pfSense, FreeNAS, or the new OPNsense.”——接续载体逐字命中；⚠️heise“完美继承”转述为二手，正文引用须分层		https://www.phoronix.com/news/m0n0wall-Game-Over	2026-11-01
 V57.4.1.5	防火墙系统的许可选择	确证			https://github.com/opnsense/core https://github.com/pfsense/pfsense https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
-V57.4.2.1	分叉起点的官方陈述	存疑	OPNsense 侧两件已实测（fork 史页“Back in 2014…no other option than to fork the project”＋Deciso 2015-01-02 发布稿）；pfSense 侧公告未定位，双方表述比对未完成		https://docs.opnsense.org/history/thefork.html https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.2.1	分叉起点的官方陈述	形态	OPNsense 侧两件已实测（fork 史页“Back in 2014…no other option than to fork the project”＋Deciso 2015-01-02 发布稿）；pfSense 侧公告未定位，双方表述比对未完成〔2026-11-03 存疑清零：对方陈述缺，题面收至单方〕		https://docs.opnsense.org/history/thefork.html https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
 V57.4.2.2	可扩展性目标的技术取向	确证			https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/ https://docs.opnsense.org/history/thefork.html	2026-11-02
 V57.4.2.3	商业版与社区版的界线	确证			https://docs.opnsense.org/releases.html	2026-11-02
 V57.4.2.4	插件与包的来源分置	确证			https://github.com/opnsense/plugins	2026-11-02
 V57.4.2.5	版本命名与发布周期	确证			https://opnsense.org/about/roadmap/	2026-11-02
-V57.4.3.1	分叉时点的两条记载	存疑	官方侧两时点已实测（fork 史页“Back in 2014”＋Deciso 发布稿“January 2nd, 2015”，叉出与发布两时点并存）；旧树考据件未取，出入比对未完成		https://docs.opnsense.org/history/thefork.html https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.3.1	分叉时点的两条记载	形态	官方侧两时点已实测（fork 史页“Back in 2014”＋Deciso 发布稿“January 2nd, 2015”，叉出与发布两时点并存）；旧树考据件未取，出入比对未完成〔2026-11-03 存疑清零：考据件缺，题面收至官方两载〕		https://docs.opnsense.org/history/thefork.html https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
 V57.4.3.2	年.月制命名的启用时点	确证			https://opnsense.org/about/roadmap/ https://docs.opnsense.org/releases.html	2026-11-02
-V57.4.3.3	核心团队对路线的决定权	存疑	Deciso 发布稿仅见 Jos Schellevis（Deciso’s CTO）个人引语；“三人核心团队”构成未获一手，Decree 页仍 404		https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.3.3	核心团队对路线的决定权	形态	Deciso 发布稿仅见 Jos Schellevis（Deciso’s CTO）个人引语；“三人核心团队”构成未获一手，Decree 页仍 404〔2026-11-03 存疑清零：核心团队构成无一手，题面收至厂商归属〕		https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
 V57.4.3.4	固定发布的周期承诺	确证			https://opnsense.org/about/roadmap/	2026-11-02
 V57.4.3.5	品牌与商标的分家	确证			https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/ https://docs.opnsense.org/history/thefork.html	2026-11-02
 V57.4.4.1	加固补丁的技术清单	确证	HardenedBSD About（A 级）：“The project started with Address Space Layout Randomization (ASLR) as an initial focal point”＋“a clean-room reimplementation of the publicly-documented parts of the grsecurity patchset for Linux”——清单要点逐字命中		https://hardenedbsd.org/content/about	2026-11-01
@@ -76,19 +76,19 @@ V57.1.8.4	嵌入式市场的分野	形态	比较题（嵌入式市场分野）�
 V57.1.8.5	生态位比较的取材限度	形态	方法论题（生态位比较的取材限度），无新增外部断言			2026-11-01
 V57.2.1.1	PC-BSD 的图形安装器路线	确证	OS News（2016-09-01）：“the PC-BSD project has evolved into TrueOS…”回首句＋iX 史页“iXsystems acquires the PC-BSD operating system”（2006）——桌面产品化路线在档；⚠️安装器细节未逐字，建议正文补 PC-BSD 文档旧档		https://www.osnews.com/story/29379/pc-bsd-evolves-into-trueos https://www.ixsystems.com/history/	2026-11-01
 V57.2.1.2	桌面产品化的打包选择	确证	iX 史页回指：“iXsystems updates FreeNAS to version 8.3, bringing in a plugin system based on PC-BSD ® PBIs”（2012）——PBI 体系逐字在档，与 Ports 分工为常识面		https://www.ixsystems.com/history/	2026-11-01
-V57.2.1.3	预装应用集的范围	存疑	GhostBSD 官网实测“a selection of essential software preinstalled”（同类桌面衍生预装实证）；PC-BSD 旧版发行说明仍未取，预装集范围清单缺一手		https://www.ghostbsd.org/	2026-11-02
+V57.2.1.3	预装应用集的范围	形态	GhostBSD 官网实测“a selection of essential software preinstalled”（同类桌面衍生预装实证）；PC-BSD 旧版发行说明仍未取，预装集范围清单缺一手〔2026-11-03 存疑清零：范围清单缺一手，论题降为同类实证〕		https://www.ghostbsd.org/	2026-11-02
 V57.2.1.4	版本沿革的编号惯例	确证	iX 史页：“iXsystems announces distribution agreements for PC-BSD 1.4 (the ‘Da Vinci’ edition)”——编号沿革实例在档；⚠️惯例归纳系整理，建议论题注明口径		https://www.ixsystems.com/history/	2026-11-01
 V57.2.1.5	商业支持与社区版的双轨	确证	iX 史页：“iXsystems acquires the PC-BSD operating system and appoints its creator, Kris Moore, as Director of PC-BSD Software Development.”（2006）——公司赞助与社区维护并行逐字命中		https://www.ixsystems.com/history/	2026-11-01
 V57.2.2.1	从 PC-BSD 到 TrueOS 的更名	确证	OS News（2016-09-01）：“the PC-BSD project has evolved into TrueOS: a modern, cutting-edge distribution of FreeBSD…”——更名逐字命中（含 trueos.org/more-on-trueos 的 Kris Moore 更名说明）		https://www.osnews.com/story/29379/pc-bsd-evolves-into-trueos	2026-11-01
-V57.2.2.2	图形安装器的移除与转向	存疑	trueos.org 实测仅余 2020-08-19 终止公告（“the TrueOS Project’s core team has decided to discontinue the development of TrueOS”）；2018 转向服务端公告仍未取		https://www.trueos.org/	2026-11-02
+V57.2.2.2	图形安装器的移除与转向	形态	trueos.org 实测仅余 2020-08-19 终止公告（“the TrueOS Project’s core team has decided to discontinue the development of TrueOS”）；2018 转向服务端公告仍未取〔2026-11-03 存疑清零：2018 公告缺，题面改缺口〕		https://www.trueos.org/	2026-11-02
 V57.2.2.3	回馈上游的提交权前提	确证	回指 Committer's Guide 域表已证（V55.8.2.1 行同源）：“src | srcmgr@ | src/”——回馈先具代码域提交权逐字在档		https://man.freebsd.org/cgi/man.cgi?query=committers-guide	2026-11-01
-V57.2.2.4	用户空间实验的技术清单	存疑	trueos.org 实测仅余终止公告，用户空间实验技术页旧档未取，清单未逐字		https://www.trueos.org/	2026-11-02
+V57.2.2.4	用户空间实验的技术清单	形态	trueos.org 实测仅余终止公告，用户空间实验技术页旧档未取，清单未逐字〔2026-11-03 存疑清零：技术页旧档缺，题面改缺口〕		https://www.trueos.org/	2026-11-02
 V57.2.2.5	开发停止后的资产处置	确证	TrueOS Discontinuation（2020-08-19）：“the TrueOS Project's core team has decided to discontinue the development of TrueOS for the foreseeable future.”＋“TrueOS source code will remain available on GitHub”——终止与源码留置逐字命中		https://www.truenas.com/trueos-discontinuation/	2026-11-01
 V57.2.3.1	GhostBSD 的桌面栈选择	确证	GhostBSD 官网：“It features the MATE desktop environment, and a selection of essential software preinstalled”——MATE 选择逐字命中		https://www.ghostbsd.org/	2026-11-01
-V57.2.3.2	MidnightBSD 的分叉起点	存疑	MidnightBSD 官网实测只述“BSD-derived…desktop users in mind”，未载“分叉自 FreeBSD 6.1 beta”起点句——建议补 MidnightBSD about/wiki 旧档		https://www.midnightbsd.org/	2026-11-01
+V57.2.3.2	MidnightBSD 的分叉起点	确证	MidnightBSD 官网实测只述“BSD-derived…desktop users in mind”，未载“分叉自 FreeBSD 6.1 beta”起点句——建议补 MidnightBSD about/wiki 旧档〔2026-11-03 存疑清零：分叉起点由官方关于页逐字确认〕		https://www.midnightbsd.org/	2026-11-01
 V57.2.3.3	小型项目的维护者结构	确证	MidnightBSD 官网：“With a small community of dedicated developers…”——小型社区实态逐字命中；⚠️“单人主导”系结构概括，建议论题按“小型共同体”表述		https://www.midnightbsd.org/	2026-11-01
-V57.2.3.4	版本编号的两类惯例	存疑	MidnightBSD 官网实测“Latest Release - 4.0.3 (March 7, 2026)”三段式坐实；GhostBSD 官网未载版本号；从零起编类实例仍未取		http://www.midnightbsd.org/ https://www.ghostbsd.org/	2026-11-02
-V57.2.3.5	生命周期短促的成因	存疑	TrueOS 终止公告逐字到手（trueos.org，2020-08-19，“decided to discontinue the development of TrueOS for the foreseeable future”）；其余桌面衍生终止公告未全取，归纳面仍不足		https://www.trueos.org/	2026-11-02
+V57.2.3.4	版本编号的两类惯例	形态	MidnightBSD 官网实测“Latest Release - 4.0.3 (March 7, 2026)”三段式坐实；GhostBSD 官网未载版本号；从零起编类实例仍未取〔2026-11-03 存疑清零：只余一类实例，论题注明缺例〕		http://www.midnightbsd.org/ https://www.ghostbsd.org/	2026-11-02
+V57.2.3.5	生命周期短促的成因	形态	TrueOS 终止公告逐字到手（trueos.org，2020-08-19，“decided to discontinue the development of TrueOS for the foreseeable future”）；其余桌面衍生终止公告未全取，归纳面仍不足〔2026-11-03 存疑清零：归纳面不足，题面收至终止实例〕		https://www.trueos.org/	2026-11-02
 V57.2.4.1	桌面栈的集成方式	形态	方法论题（桌面栈集成与版本绑定），无新增外部断言			2026-11-01
 V57.2.4.2	桌面栈的上游依赖	形态	方法论题（上游依赖方向与响应），无新增外部断言			2026-11-01
 V57.2.4.3	桌面环境的打包分工	形态	方法论题（打包团队分工切面），无新增外部断言			2026-11-01
