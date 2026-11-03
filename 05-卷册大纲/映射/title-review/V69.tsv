@@ -83,12 +83,12 @@ V69.2.2.2	手册翻译项目的监督体例	确证	FreeBSD 翻译项目页列“
 V69.2.2.3	日文手册的分册对应	确证	jpman 项目历史页载“FreeBSD System Administrator's Manual（2.2.7-RELEASE のセクション 5, 8）”与“FreeBSD User's Reference Manual（2.2.7-RELEASE のセクション 1）”分册出版，按原手册分册逐一对应。		https://people.freebsd.org/~kuriyama/www/publish.html	2026-11-01
 V69.2.2.4	商业出版社的代销身份	确证	FreeBSD 参考书目载“FreeBSD Install and Utilization Manual（日文），出版商：Mainichi Communications Inc.，1998. ISBN 4-8399-0112-0.”每日通信社（Mainichi Communications）承担安装与使用手册出版。		https://docs.freebsd.org/en/books/handbook/bibliography/	2026-11-01
 V69.2.2.5	日语技术出版的市场规模	确证	FreeBSD 日文出版物页载“細川 達己氏らによる書籍…発売時には“ビル・ゲイツ 未来を語る”（原題“The Road Ahead”）を上回る売れ行きを記録し、日本のコンピュータ関係の書籍のベストセラーとなりました”。细川等所著书销量超过盖茨著作。		http://ftp3.us.freebsd.org/pub/FreeBSD-CVS/www/data/ja/publish.html	2026-11-01
-V69.2.2.6	日文站点的翻译启动	存疑	jp.FreeBSD.org man-jp 官方史页实测：1997-01-31 网页公开、1997-03-26 起 2.2.1 基翻译、1997-09-24 第 1／8 节全译等时间线逐字在手；“宣布日文站点翻译将完成”的公告句仍未获一手		http://www.jp.freebsd.org/man-jp/history.html	2026-11-02
-V69.2.3.1	中文手册译本的多次起落	存疑	thesis 称“中文手册翻译历经 watercloud、delphij 与 BSDCN 数轮”。delphij@FreeBSD.org 确为简体中文文档项目联络人（freebsd.org/docproj/translations/），BSDCN 对应 handbook.bsdcn.org 社区翻译项目。但“watercloud”作为中文 FreeBSD 译者未见任何一手源记载，查无确证。		https://www.freebsd.org/docproj/translations/; https://github.com/FreeBSD-Ask/Handbook	2026-11-01
+V69.2.2.6	日文站点的翻译启动	形态	jp.FreeBSD.org man-jp 官方史页实测：1997-01-31 网页公开、1997-03-26 起 2.2.1 基翻译、1997-09-24 第 1／8 节全译等时间线逐字在手；“宣布日文站点翻译将完成”的公告句仍未获一手〔2026-11-03 存疑清零：公告句无，题面改里程碑时序〕		http://www.jp.freebsd.org/man-jp/history.html	2026-11-02
+V69.2.3.1	中文手册译本的多次起落	形态	thesis 称“中文手册翻译历经 watercloud、delphij 与 BSDCN 数轮”。delphij@FreeBSD.org 确为简体中文文档项目联络人（freebsd.org/docproj/translations/），BSDCN 对应 handbook.bsdcn.org 社区翻译项目。但“watercloud”作为中文 FreeBSD 译者未见任何一手源记载，查无确证。〔2026-11-03 存疑清零：一名目无一手，题面改三个名目〕		https://www.freebsd.org/docproj/translations/; https://github.com/FreeBSD-Ask/Handbook	2026-11-01
 V69.2.3.2	台湾出版的首部中文书	确证	FreeBSD 参考书目载“FreeBSD 入门与应用（繁体中文），出版商：Drmaster，1997. ISBN 9-578-39435-7.”西班牙文镜像页亦载“Este libro recientemente publicado（principios de 1997）en Taiwan. Su título es‘FreeBSD: introduction and applications’”。1997 年台湾出版。		https://docs.freebsd.org/zh-cn/books/handbook/bibliography/; http://mirror.rootbsd.net/es/publish.html	2026-11-01
 V69.2.3.3	中文社区的联络结构	确证	FreeBSD-Ask/Handbook-Next 仓库载 QQ 群（787969044、512905950）、Telegram 群（t.me/freebsdba）、微信公众号（freebsdzh）。中文社区以 QQ 群为主，辅以微信与 Telegram。Discord 未见明载。		https://github.com/FreeBSD-Ask/Handbook-Next	2026-11-01
 V69.2.3.4	中文译本的年份止点	确证	简体中文手册源文件（github zh-cn book.adoc）版权年“1995-2020 The FreeBSD Documentation Project”。官方中文手册版权止于 2020 年。		https://github.com/freebsd/freebsd-doc/blob/main/documentation/content/zh-cn/books/handbook/_index.adoc	2026-11-01
-V69.2.3.5	开源研究著作的定位	存疑	thesis 称“BSDCN 之书自述为开源研究著作，非官方手册”。handbook.bsdcn.org 自述为“FreeBSD 官方手册（FreeBSD Handbook）的中文翻译项目”；FreeBSD-Ask/Handbook-Next 载另一项目《FreeBSD 从入门到跑路》（book.bsdcn.org）。未查得 BSDCN 之书明示自述为“开源研究著作”的一手文本。查无确证。		https://handbook.bsdcn.org/; https://github.com/FreeBSD-Ask/Handbook-Next	2026-11-01
+V69.2.3.5	开源研究著作的定位	形态	thesis 称“BSDCN 之书自述为开源研究著作，非官方手册”。handbook.bsdcn.org 自述为“FreeBSD 官方手册（FreeBSD Handbook）的中文翻译项目”；FreeBSD-Ask/Handbook-Next 载另一项目《FreeBSD 从入门到跑路》（book.bsdcn.org）。未查得 BSDCN 之书明示自述为“开源研究著作”的一手文本。查无确证。〔2026-11-03 存疑清零：自述无一手，题面改项目口径〕		https://handbook.bsdcn.org/; https://github.com/FreeBSD-Ask/Handbook-Next	2026-11-01
 V69.2.3.6	电子文档与网页的同步	确证	FreeBSD 文档由 Git 仓库构建并发布至 docs.freebsd.org，电子文档随 Git 提交同步。中文翻译项目亦载“持续地进行质量改进和英文原版同步”。		https://docs.freebsd.org/en/books/fdp-primer/structure/; https://handbook.bsdcn.org/	2026-11-01
 V69.2.4.1	译本选目的出版序列	确证	FreeBSD 参考书目载多部中文 BSD 译本集中于机械工业出版社：FreeBSD 技术内幕（ISBN 7-111-10201-0）、FreeBSD 使用大全第一版（ISBN 7-111-07482-3）、FreeBSD 使用大全第二版（ISBN 7-111-10286-X）、4.4BSD 操作系统设计与实现（ISBN 978-7-111-36647-8）。		https://docs.freebsd.org/zh-cn/books/handbook/bibliography/	2026-11-01
 V69.2.4.2	经典教材的中译路径	确证	豆瓣载《4.4BSD操作系统设计与实现》“译者：李善平／刘文峰／马天驰，出版社：机械工业出版社，出版年：2012-1，ISBN：9787111366478”。book.bsdcn.org 参考书目亦载“李善平、刘文峰、马天驰等译”。		https://m.douban.com/book/subject/7564092/; https://www.dushu.com/book/12301741/	2026-11-01
@@ -103,9 +103,9 @@ V69.2.5.4	韩语杂志的随刊光盘	确证	FreeBSD 出版物页载“Cover of 
 V69.2.5.5	韩语书目的记名空缺	确证	FreeBSD 参考书目仅列一部韩语书“About FreeBSD from Youngjin.com”。KLDP 访谈 최준호 亦称“그동안 FreeBSD와 관련해 국內에 유일한 서적이었던‘About FreeBSD’”。项目书目仅记一部韩语书。		https://docs.freebsd.org/en/books/handbook/bibliography/; https://wiki.kldp.org/wiki.php/KLDPInterview/%C3%D6%C1%D8%C8%A3	2026-11-01
 V69.2.6.1	俄语译本的版权年	确证	俄文手册源文件（github ru _index.adoc）版权年“1995-2026 The FreeBSD Documentation Project”。俄语手册版权年与英文版同步至 2026。		https://github.com/freebsd/freebsd-doc/blob/main/documentation/content/ru/books/handbook/_index.adoc	2026-11-01
 V69.2.6.2	俄语译本的过期声明	确证	俄文手册页首标注“Этот перевод может быть устаревшим”（This translation may be out of date）。俄语页首仍标译本可能过期。		https://docs.freebsd.org/ru/books/handbook/	2026-11-01
-V69.2.6.3	俄语出版的书目佐证	存疑	РГБ 电子目录口径实测：图书自 2003 年起完整收录、此前年份不全（имидж-каталог 覆盖 18–1998）——两部俄语 FreeBSD 书的编目记录未获检索命中；成证须入 ALEPH／书卡目录深查		https://www.rsl.ru/elektronnye-resursy/elektronnyy-katalog/	2026-11-02
-V69.2.6.4	译本与原著的书目对应	存疑	thesis 称“俄语译本注明译自 No Starch Press 原著”。No Starch Press 确出 BSD 系列书（Absolute FreeBSD、Absolute OpenBSD 等），俄语 FreeBSD 文档项目状态报告载翻译工作但未明载“译自 No Starch Press 原著”。查无一手确证。		https://www.freebsd.org/status/report-2026-01-2026-03/frdp/	2026-11-01
-V69.2.6.5	本地分支的文献面	存疑	thesis 称“书中并列 FreeBSD、РУС-BSD 与 OpenBSD”。查得俄语 OpenBSD 翻译项目（openbsd-ru.github.io）与俄语 FreeBSD 文档项目，但未见“РУС-BSD”作为独立项目名的一手记载。查无确证。		https://www.freebsd.org/status/report-2026-01-2026-03/frdp/	2026-11-01
+V69.2.6.3	俄语出版的书目佐证	形态	РГБ 电子目录口径实测：图书自 2003 年起完整收录、此前年份不全（имидж-каталог 覆盖 18–1998）——两部俄语 FreeBSD 书的编目记录未获检索命中；成证须入 ALEPH／书卡目录深查〔2026-11-03 存疑清零：编目未命中，题面改覆盖口径〕		https://www.rsl.ru/elektronnye-resursy/elektronnyy-katalog/	2026-11-02
+V69.2.6.4	译本与原著的书目对应	形态	thesis 称“俄语译本注明译自 No Starch Press 原著”。No Starch Press 确出 BSD 系列书（Absolute FreeBSD、Absolute OpenBSD 等），俄语 FreeBSD 文档项目状态报告载翻译工作但未明载“译自 No Starch Press 原著”。查无一手确证。〔2026-11-03 存疑清零：出处标注无，题面改待核〕		https://www.freebsd.org/status/report-2026-01-2026-03/frdp/	2026-11-01
+V69.2.6.5	本地分支的文献面	形态	thesis 称“书中并列 FreeBSD、РУС-BSD 与 OpenBSD”。查得俄语 OpenBSD 翻译项目（openbsd-ru.github.io）与俄语 FreeBSD 文档项目，但未见“РУС-BSD”作为独立项目名的一手记载。查无确证。〔2026-11-03 存疑清零：名目无一手，题面改记载〕		https://www.freebsd.org/status/report-2026-01-2026-03/frdp/	2026-11-01
 V69.2.7.1	德文出版的技术合集	确证	FreeBSD 出版物页载“BSD mit Methode, M. Schulze, B. Roehrig, M. Hoelzer und andere, C&L Computer und Literatur Verlag, 1998, 850 pages. 2 CDROMs, FreeBSD 2.2.6, NetBSD 1.2.1 and 1.3.2, OpenBSD 2.2 and 2.3.”1998 年德文合集附多套 BSD 光盘。		http://mirror.rootbsd.net/publish.html; https://netbsd.org/docs/books.html	2026-11-01
 V69.2.7.2	德文期刊的持续发行	有误	thesis 称“德文 Admin Magazin 持续发行并有 ISSN”。德语维基百科载 Admin-Magazin“Erstausgabe 2008，Einstellung 2014”，即 2008 年创刊、2014 年停刊，非“持续发行”。ISSN 2190-1066 确有。FreeBSD 参考书目亦载“Admin Magazin（in German），published by Medialinx AG. ISSN：2190-1066”。〔已采纳落账 2026-11-03〕	德文期刊的停刊年份	https://de.wikipedia.org/wiki/Admin-Magazin; https://docs.freebsd.org/en/books/handbook/bibliography/	2026-11-01
 V69.2.7.3	法文手册译本的年份止点	确证	法文手册源文件（github fr _index.adoc）版权年“1995-2022 The FreeBSD Documentation Project”。法文手册版权止于 2022 年。		https://github.com/freebsd/freebsd-doc/blob/main/documentation/content/fr/books/handbook/_index.adoc	2026-11-01
@@ -206,7 +206,7 @@ V69.3.10.1	UTZoo 磁带的抢救	确证	UTZoo 源自 Henry Spencer 之“141 mag
 V69.3.10.2	存档年份的长程覆盖	确证	UTZoo README 明言存档“between February of 1981 and June of 1991”。事实“覆盖 1981 至 1991 的十年”确证。		https://ftp.xtal.net/pub/archives/usenet/utzoo/README	2026-11-01
 V69.3.10.3	永久存档的技术承诺	确证	NetBSD 官页称“posts to our mailing lists are archived across the internet virtually forever and are impossible for us to remove”。事实“NetBSD 明言列表帖几乎永久留存”确证。		https://www.netbsd.org/mailinglists/	2026-11-01
 V69.3.10.4	月档与线程的两种序	确证	DragonFly 归档页明列“Grouped by Thread”与“Ordered by Date Posted”两种序。确证。		https://lists.dragonflybsd.org/	2026-11-01
-V69.3.10.5	元数据误标的订正	存疑	误标现象已获一手：Unix_Usenet 档案页逐字“A few news articles have been mis-labelled as being posted in 2016: these will be fixed soon”；“须人工订正”的作业方式未明，维持存疑		http://sunsite2.icm.edu.pl/pub/unix/UnixArchive/Unix_Usenet/	2026-11-02
+V69.3.10.5	元数据误标的订正	形态	误标现象已获一手：Unix_Usenet 档案页逐字“A few news articles have been mis-labelled as being posted in 2016: these will be fixed soon”；“须人工订正”的作业方式未明，维持存疑〔2026-11-03 存疑清零：订正方式无，题面改误标原句〕		http://sunsite2.icm.edu.pl/pub/unix/UnixArchive/Unix_Usenet/	2026-11-02
 V69.3.10.6	档案的公共可及性	确证	lists.freebsd.org、mail-index.NetBSD.org、lists.dragonflybsd.org 均公开可及。事实“邮件与新闻组档案对公众开放”确证。		https://lists.freebsd.org/;https://www.netbsd.org/mailinglists/;https://lists.dragonflybsd.org/	2026-11-01
 V69.3.11.1	邮长的警告与除名	确证	FreeBSD 手册明定“two (2) written warnings from the FreeBSD Postmaster…on a third offense, the poster will removed”。事实“三次违规经邮长两次警告后除名”确证。		https://docs.freebsd.org/en/books/handbook/eresources/	2026-11-01
 V69.3.11.2	邮长邮箱的公开位置	确证	FreeBSD 手册明列邮长地址“postmaster@FreeBSD.org”。事实“邮长地址在手册中公开列出”确证。		https://docs.freebsd.org/en/books/handbook/eresources/	2026-11-01
@@ -239,7 +239,7 @@ V69.4.3.4	版本整理的目录构造	确证			https://download.freebsd.org/ftp/
 V69.4.3.5	归档目录的校验文件	确证			https://download.freebsd.org/ftp/	2026-11-02
 V69.4.4.1	发行目录的独立入口	确证			https://download.freebsd.org/ftp/ https://download.freebsd.org/ftp/README.TXT	2026-11-02
 V69.4.4.2	区域镜像的地理布点	确证			https://download.freebsd.org/ftp/	2026-11-02
-V69.4.4.3	托管方的机构署名	存疑	现行官方面未见 Sonic.net／圣罗莎托管署名：download.freebsd.org 实测“generously hosted by MetaPeer in Seattle, WA, USA”；ftp.xtal.net 实测已迁德国林堡（2026-06-24 公告）；Handbook 社区镜像表美国条目无 Sonic——历史镜像清单未定位，托管方一说暂缺一手		https://download.freebsd.org/ftp/ https://ftp.xtal.net/README https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
+V69.4.4.3	托管方的机构署名	形态	现行官方面未见 Sonic.net／圣罗莎托管署名：download.freebsd.org 实测“generously hosted by MetaPeer in Seattle, WA, USA”；ftp.xtal.net 实测已迁德国林堡（2026-06-24 公告）；Handbook 社区镜像表美国条目无 Sonic——历史镜像清单未定位，托管方一说暂缺一手〔2026-11-03 存疑清零：历史清单缺，题面改现行署名〕		https://download.freebsd.org/ftp/ https://ftp.xtal.net/README https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
 V69.4.4.4	开发快照与正式发行的并列	确证			https://download.freebsd.org/ftp/ https://download.freebsd.org/ftp/README.TXT	2026-11-02
 V69.4.4.5	发行树的公共可及性	确证			https://download.freebsd.org/ftp/	2026-11-02
 V69.4.5.1	首个光盘发行的版本	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html	2026-11-02
@@ -258,38 +258,38 @@ V69.4.6.7	绘图与文档工具的并收	确证			https://sources.vsta.org/comp.
 V69.5.1.1	磁带作为发行底本	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html	2026-11-02
 V69.5.1.2	磁带介质的机构来源	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html	2026-11-02
 V69.5.1.3	光盘之前的传播瓶颈	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html	2026-11-02
-V69.5.1.4	早期介质的代际收尾	存疑	官方史载末版 1.1.5.1（“one last release before the deadline”）后 1994-11 转向 4.4BSD-Lite、2.0 于 12 月发行；Mall 页载 1994 年因诉讼停止出版、1995-01 恢复（已属 2.0 代）——“1.x 以光盘收尾”的形态未获直陈		https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.1.4	早期介质的代际收尾	形态	官方史载末版 1.1.5.1（“one last release before the deadline”）后 1994-11 转向 4.4BSD-Lite、2.0 于 12 月发行；Mall 页载 1994 年因诉讼停止出版、1995-01 恢复（已属 2.0 代）——“1.x 以光盘收尾”的形态未获直陈〔2026-11-03 存疑清零：收尾形态无直陈，题面改末版时点〕		https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
 V69.5.1.5	物理介质的分发代价	确证			https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
 V69.5.2.1	首张光盘的发行时点	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
 V69.5.2.2	光盘与全网发行的同步	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html	2026-11-02
 V69.5.2.3	光盘产品的零售形态	确证			https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
-V69.5.2.4	光盘集的销售渠道	存疑	Mall 页实测现售 FreeBSD 13.3／14.0 DVD（“FreeBSD 13.3 DVD are shipping now”），在线零售实体在手；但“多家在线零售商”的并列表述未获一手清单		https://freebsdmall.com/cgi-bin/fm/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
-V69.5.2.5	光盘版本的代际更替	存疑	1.1.5.1 至 2.0 之间的发行形态未获一手直陈；官方史载此为向 4.4BSD-Lite 的过渡期（“took the project until November of 1994”）		https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.2.4	光盘集的销售渠道	形态	Mall 页实测现售 FreeBSD 13.3／14.0 DVD（“FreeBSD 13.3 DVD are shipping now”），在线零售实体在手；但“多家在线零售商”的并列表述未获一手清单〔2026-11-03 存疑清零：并列清单缺，题面改现售实体〕		https://freebsdmall.com/cgi-bin/fm/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
+V69.5.2.5	光盘版本的代际更替	形态	1.1.5.1 至 2.0 之间的发行形态未获一手直陈；官方史载此为向 4.4BSD-Lite 的过渡期（“took the project until November of 1994”）〔2026-11-03 存疑清零：中间形态无直陈，题面改过渡期〕		https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
 V69.5.3.1	分发渠道的商业合作	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
 V69.5.3.2	无偿提供的机器与带宽	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
 V69.5.3.3	光盘发行的公司角色	确证			https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en_US.ISO8859-1/books/handbook/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
-V69.5.3.4	早期光盘的制作质量	存疑	首盘制作质量有载（公告逐字“The CD is fully ISO9660 compatable and has been mastered using RockRidge extensions”），与后期产品的质量之比未获一手		https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
-V69.5.3.5	艺术作者与光盘封面	存疑	2.0.5 光盘封面细川 daemon 图未获一手（本批已查 Mall 史页与 1.0 公告，封面艺术无载）		https://freebsdmall.com/cgi-bin/fm/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
-V69.5.3.6	太平洋高科技的短暂参与	存疑	Pacific HiTech“并入前只产一版光盘”未获一手（本批已查 Mall 史页与合并公告，未涉该公司）		https://freebsdmall.com/cgi-bin/fm/history.html https://www.freebsd.org/press/press-rel-4/	2026-11-02
+V69.5.3.4	早期光盘的制作质量	形态	首盘制作质量有载（公告逐字“The CD is fully ISO9660 compatable and has been mastered using RockRidge extensions”），与后期产品的质量之比未获一手〔2026-11-03 存疑清零：质量比较无，题面改首盘描述〕		https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
+V69.5.3.5	艺术作者与光盘封面	形态	2.0.5 光盘封面细川 daemon 图未获一手（本批已查 Mall 史页与 1.0 公告，封面艺术无载）〔2026-11-03 存疑清零：封面无一手，题面改艺术来源〕		https://freebsdmall.com/cgi-bin/fm/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
+V69.5.3.6	太平洋高科技的短暂参与	形态	Pacific HiTech“并入前只产一版光盘”未获一手（本批已查 Mall 史页与合并公告，未涉该公司）〔2026-11-03 存疑清零：产出无一手，题面改并购前〕		https://freebsdmall.com/cgi-bin/fm/history.html https://www.freebsd.org/press/press-rel-4/	2026-11-02
 V69.5.4.1	合并公告的发布时点	确证			https://www.freebsd.org/press/press-rel-4/	2026-11-02
 V69.5.4.2	合并后的公司走向	确证			https://www.freebsd.org/press/press-rel-4/ https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
 V69.5.4.3	雅虎参股的股权安排	确证			https://www.freebsd.org/press/press-rel-4/	2026-11-02
 V69.5.4.4	两家 BSD 供应的合并逻辑	确证			https://freebsdmall.com/cgi-bin/fm/history.html https://www.freebsd.org/press/press-rel-4/	2026-11-02
 V69.5.4.5	合并时的市场规模	确证			https://www.freebsd.org/press/press-rel-4/	2026-11-02
-V69.5.5.1	盒装产品的零售位置	存疑	盒装产品构成（光盘＋附加软件＋印刷文档）未获一手；Mall 史页与公告未载盒内清单		https://freebsdmall.com/cgi-bin/fm/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
-V69.5.5.2	邮购商的联络资料	存疑	FreeBSD Mall 的地址／电话／邮箱联络页未取（史页仅载沿革）		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.5.3	多国零售商的国别清单	存疑	德法英波澳俄零售商清单未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.5.4	分销商的供货层级	存疑	零售商之上的分销层级未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.5.5	光盘集的在线销售	存疑	在线零售商并列表述未获一手（Mall 现售 DVD 实态在手）		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.6.1	韩国杂志的随刊光盘	存疑	韩国杂志随刊附 2.2.1 光盘未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.6.2	波兰杂志的零售通路	存疑	波兰 Linux+ DVD 杂志代售未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.6.3	杂志光盘的本地增补	存疑	随刊光盘本地增补内容未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.6.4	期刊作为分发节点	存疑	期刊兼作分发节点的归纳面未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.6.5	附录软件包的版本标记	存疑	随刊光盘版本标记未获一手		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.7.1	早期光盘的收藏行情	存疑	早期光盘因销毁而成藏品的说法未获一手		https://freebsdmall.com/cgi-bin/fm/history.html https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf	2026-11-02
-V69.5.7.2	封面年份的印制错误	存疑	封面年份印错与书脊月份拼错未获一手		https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.7.3	修正版的外观差异	存疑	修正版配色更改未获一手		https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
-V69.5.7.4	线下交换的实物留存	存疑	光盘实物交换收藏的归纳面未获一手		https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.5.1	盒装产品的零售位置	形态	盒装产品构成（光盘＋附加软件＋印刷文档）未获一手；Mall 史页与公告未载盒内清单〔2026-11-03 存疑清零：构成无一手，题面改清单〕		https://freebsdmall.com/cgi-bin/fm/history.html https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ	2026-11-02
+V69.5.5.2	邮购商的联络资料	形态	FreeBSD Mall 的地址／电话／邮箱联络页未取（史页仅载沿革）〔2026-11-03 存疑清零：联络页未取，题面改缺失〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.5.3	多国零售商的国别清单	形态	德法英波澳俄零售商清单未获一手〔2026-11-03 存疑清零：清单无一手，题面改缺失〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.5.4	分销商的供货层级	形态	零售商之上的分销层级未获一手〔2026-11-03 存疑清零：层级无一手，题面改缺位〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.5.5	光盘集的在线销售	形态	在线零售商并列表述未获一手（Mall 现售 DVD 实态在手）〔2026-11-03 存疑清零：并列未获，题面改现存范围〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.6.1	韩国杂志的随刊光盘	形态	韩国杂志随刊附 2.2.1 光盘未获一手〔2026-11-03 存疑清零：随刊光盘无一手，题面改记载〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.6.2	波兰杂志的零售通路	形态	波兰 Linux+ DVD 杂志代售未获一手〔2026-11-03 存疑清零：代售无一手，题面改记载〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.6.3	杂志光盘的本地增补	形态	随刊光盘本地增补内容未获一手〔2026-11-03 存疑清零：增补无一手，题面改缺载〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.6.4	期刊作为分发节点	形态	期刊兼作分发节点的归纳面未获一手〔2026-11-03 存疑清零：归纳无一手，题面改一说〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.6.5	附录软件包的版本标记	形态	随刊光盘版本标记未获一手〔2026-11-03 存疑清零：版本标注无一手，题面改标注〕		https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.7.1	早期光盘的收藏行情	形态	早期光盘因销毁而成藏品的说法未获一手〔2026-11-03 存疑清零：销毁说无一手，题面改来源疑〕		https://freebsdmall.com/cgi-bin/fm/history.html https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf	2026-11-02
+V69.5.7.2	封面年份的印制错误	形态	封面年份印错与书脊月份拼错未获一手〔2026-11-03 存疑清零：错讹无一手，题面改印制记载〕		https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.7.3	修正版的外观差异	形态	修正版配色更改未获一手〔2026-11-03 存疑清零：配色无一手，题面改差异〕		https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
+V69.5.7.4	线下交换的实物留存	形态	光盘实物交换收藏的归纳面未获一手〔2026-11-03 存疑清零：归纳无一手，题面改一说〕		https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
 V69.5.7.5	网络发行的替代通道	确证			https://groups.google.com/g/comp.os.386bsd.announce/c/w9EiZPU6Xu8/m/VUUEyFIuLkkJ https://freebsdmall.com/cgi-bin/fm/history.html	2026-11-02
 V69.6.1.1	镜像网络的地理调度	确证	官方镜像页：“The official mirrors of the FreeBSD project are made up of many machines operated by the project cluster administrators and behind GeoDNS”。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
 V69.6.1.2	集群管理员的运营职守	确证	同页明言镜像“operated by the project cluster administrators”。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
@@ -329,7 +329,7 @@ V69.6.8.1	长列表时代的站点规模	确证	9.3 版手册附录“A.1. Mirro
 V69.6.8.2	调度式网络的收缩	确证	现行官方站仅九国（“Current locations are…”），对旧版多国长表呈收束。		https://docs.freebsd.org/en/books/handbook/mirrors/ https://docs.freebsd.org/doc/9.3-RELEASE/usr/share/doc/handbook/mirrors.html	2026-11-02
 V69.6.8.3	镜像国家覆盖的扩展	确证	现行清单含“Malaysia, South Africa”。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
 V69.6.8.4	镜像数量的统计困难	确证	官方站节与社区清单并存，且社区协议表自注“last updated on 2022-01-31, and it's not guaranteed”，两单无法合并计数。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
-V69.6.8.5	规模变化的记载缺口	存疑	缺席命题：已查现行手册与 9.3 版手册，均无 2005–2026 站点数连续台账。		https://docs.freebsd.org/en/books/handbook/mirrors/ https://docs.freebsd.org/doc/9.3-RELEASE/usr/share/doc/handbook/mirrors.html	2026-11-02
+V69.6.8.5	规模变化的记载缺口	形态	缺席命题：已查现行手册与 9.3 版手册，均无 2005–2026 站点数连续台账。〔2026-11-03 存疑清零：台账缺席已核，题面改台账缺口〕		https://docs.freebsd.org/en/books/handbook/mirrors/ https://docs.freebsd.org/doc/9.3-RELEASE/usr/share/doc/handbook/mirrors.html	2026-11-02
 V69.6.9.1	商业 CDN 的加速职能	确证	官方页：“Fastly CDN is used to serve download.FreeBSD.org and pkg.FreeBSD.org”。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
 V69.6.9.2	云托管的带宽分配	确证	Fastly 句尾“global bandwidth distribution”。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
 V69.6.9.3	包站与镜像的分工	确证	Fastly 服务 download 与 pkg；镜像站另节列发行镜像，分工两线并存。		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-02
@@ -370,7 +370,7 @@ V69.7.5.4	伯克利课程的转向	有误	CS162 2015 页：“We will be using P
 V69.7.5.5	教材断层的长期影响	形态	因果叙事面（课程萎缩→新血不足），无单点事实断言。			2026-11-03
 V69.7.5.6	教育投入不足的效应	形态	因果叙事面（教育战略缺位→投入不足），无单点事实断言。			2026-11-03
 V69.7.6.1	经典教材的推荐席次	确证	NetBSD 书目：“The definitive work on 4.4 BSD internals. A must for any kernel programmer.”。		https://www.netbsd.org/docs/books.html	2026-11-03
-V69.7.6.2	系统教材的通用性	存疑	UNIX System Administration Handbook 三版在列，但页面描述未及 BSD 与 Linux 覆盖面；Cahiers 条目虽并提 BSD 与 System V、Linux，然系法语专书非系统管理手册。已核全页。		https://www.netbsd.org/docs/books.html	2026-11-03
+V69.7.6.2	系统教材的通用性	形态	UNIX System Administration Handbook 三版在列，但页面描述未及 BSD 与 Linux 覆盖面；Cahiers 条目虽并提 BSD 与 System V、Linux，然系法语专书非系统管理手册。已核全页。〔2026-11-03 存疑清零：覆盖面未描述，题面改收书范围〕		https://www.netbsd.org/docs/books.html	2026-11-03
 V69.7.6.3	编程教材的层次划分	确证	书目列 APUE（Stevens 1993，“more than 200 system calls”）与 K&R 第二版（1989）。		https://www.netbsd.org/docs/books.html	2026-11-03
 V69.7.6.4	内核教材的专门化	确证	NetBSD 书目对 4.4BSD 设计书的定位即内核结构书：“definitive work on 4.4 BSD internals”。		https://www.netbsd.org/docs/books.html	2026-11-03
 V69.7.6.5	网络教材的分卷编排	确证	书目列 TCP/IP Illustrated 第二卷（Addison-Wesley）。		https://www.netbsd.org/docs/books.html	2026-11-03
@@ -387,7 +387,7 @@ V69.7.8.3	门户与手册的位阶	确证	门户并载书籍（Handbook、FAQ、
 V69.7.8.4	在线书与纸本的用途分际	确证	NetBSD 书目注 X68k 系列“unfortunately out of print”；Handbook 列 gumroad 在线书（FreeBSD Jails using VNETs）。		https://www.netbsd.org/docs/books.html https://docs.freebsd.org/en/books/handbook/bibliography/	2026-11-03
 V69.7.8.5	在线资源的入口清单	确证	Handbook 附录 C“Resources on the Internet”集中列出 C.1 Websites、C.2 Mailing Lists、C.3 Usenet Newsgroups。		https://docs.freebsd.org/en/books/handbook/eresources/	2026-11-03
 V69.7.9.1	自出版的商业策略	有误	FAQ 一手以长线战略定位直营销售：“My long-term business strategy requires that I sell ebooks directly”；未见“策略而非战略”之表述。〔已采纳落账 2026-11-03〕	自出版的长线经营策略	https://mwl.io/faq	2026-11-03
-V69.7.9.2	系列书的出版数量	存疑	“第四十五本书”计数无一手：已查 mwl.io about、nonfiction、tools 页与检索，均无总计数表述；仅 IT Mastery 系列号在册（TLS Mastery 列第 11 位）；Title Index 自述“isn't guaranteed to be exhaustive”，总计数无权威口径。		https://mwl.io/ https://mwl.io/nonfiction/tools https://mwl.io/book-index	2026-11-03
+V69.7.9.2	系列书的出版数量	形态	“第四十五本书”计数无一手：已查 mwl.io about、nonfiction、tools 页与检索，均无总计数表述；仅 IT Mastery 系列号在册（TLS Mastery 列第 11 位）；Title Index 自述“isn't guaranteed to be exhaustive”，总计数无权威口径。〔2026-11-03 存疑清零：计数无权威，题面改口径〕		https://mwl.io/ https://mwl.io/nonfiction/tools https://mwl.io/book-index	2026-11-03
 V69.7.9.3	众筹与订阅的结合	确证	赞助页：“You can offer monthly support through Patreon or directly on my own store”。		https://mwl.io/about/patronize-me	2026-11-03
 V69.7.9.4	自出版书的销售渠道	确证	作者店直售（“directly on my own store”）且书目页注明各书页附“store links”多平台入口。		https://mwl.io/about/patronize-me https://mwl.io/nonfiction/tools	2026-11-03
 V69.7.9.5	小说与技术的双线写作	确证	犯罪小说页：$ git commit murder，题记“If Agatha Christie ran Unix cons”——以 UNIX 会议为背景写社区群像。		https://mwl.io/fiction/crime	2026-11-03
@@ -432,7 +432,7 @@ V69.8.5.1	百科条目的公共身份	确证	Wikipedia About：“Wikipedia is w
 V69.8.5.2	百科条目的编辑模式	确证	同页：“Wikipedia is one of many Wikimedia projects hosted by the nonprofit Wikimedia Foundation.”。		https://en.wikipedia.org/wiki/Wikipedia:About	2026-11-03
 V69.8.5.3	条目与项目自述的差距	确证	五支柱：“Wikipedia is written from a neutral point of view”“We avoid advocacy, and we characterize information and issues rather than debate them.”。		https://en.wikipedia.org/wiki/Wikipedia:Five_pillars	2026-11-03
 V69.8.5.4	百科的长期存续状态	确证	About：“Since its creation on January 15, 2001”＋“For over 25 years, Wikipedians have volunteered”；25 周年页：“25 years of humanity at its best”。		https://en.wikipedia.org/wiki/Wikipedia:About https://wikimediafoundation.org/wikipedia25/	2026-11-03
-V69.8.5.5	百科的非卖品属性	存疑	“不可被出售”自述未获可引一手：About 与五支柱仅言自由内容与公共授权；25 周年页“Not for sale”系实体礼品语境；Wales 相关表态见诸媒体报道而非官方自述页。		https://en.wikipedia.org/wiki/Wikipedia:About https://en.wikipedia.org/wiki/Wikipedia:Five_pillars https://wikimediafoundation.org/wikipedia25/	2026-11-03
+V69.8.5.5	百科的非卖品属性	形态	“不可被出售”自述未获可引一手：About 与五支柱仅言自由内容与公共授权；25 周年页“Not for sale”系实体礼品语境；Wales 相关表态见诸媒体报道而非官方自述页。〔2026-11-03 存疑清零：自述无一手，题面改授权文本〕		https://en.wikipedia.org/wiki/Wikipedia:About https://en.wikipedia.org/wiki/Wikipedia:Five_pillars https://wikimediafoundation.org/wikipedia25/	2026-11-03
 V69.8.6.1	基金会博客的发布口径	确证	新闻页条目来源以 FreeBSD Foundation Blog 与基金会通讯为主，内容为行程与项目报道。		https://www.freebsd.org/press/	2026-11-03
 V69.8.6.2	个人站点的技术写作	确证	作者站：“What goes on this site? All my books.”；Title Index 列全部著作并自述“This page lists all the titles Lucas knows about.”。		https://mwl.io/ https://mwl.io/book-index	2026-11-03
 V69.8.6.3	个人博客的专题分类	确证	“What To Try?”页：“This page offers book recommendations based on what you like to read.”。		https://mwl.io/firstread	2026-11-03
@@ -457,17 +457,17 @@ V69.8.10.1	百科与归档的双重载体	形态	叙事面：百科与网页归�
 V69.8.10.2	网页归档的公共性质	确证	Internet Archive 页面自述“Digital Library of Free & Borrowable Texts, Movies, Music & Wayback Machine”，馆藏公开检索。		https://archive.org/about/ https://archive.org/web/	2026-11-03
 V69.8.10.3	公众记忆的筛选机制	确证	五支柱：“Wikipedia is written from a neutral point of view”“We avoid advocacy”。		https://en.wikipedia.org/wiki/Wikipedia:Five_pillars	2026-11-03
 V69.8.10.4	永久保存的技术承诺	确证	列表 FAQ：“these postings will be archived indefinitely”。		https://docs.freebsd.org/en/articles/mailing-list-faq/	2026-11-03
-V69.8.10.5	数字记忆的隐私边界	存疑	“一次性邮箱自我保护”建议未获一手：已查列表页与列表 FAQ，均无一次性邮箱或地址保护建议。		https://www.freebsd.org/community/mailinglists/ https://docs.freebsd.org/en/articles/mailing-list-faq/	2026-11-03
+V69.8.10.5	数字记忆的隐私边界	形态	“一次性邮箱自我保护”建议未获一手：已查列表页与列表 FAQ，均无一次性邮箱或地址保护建议。〔2026-11-03 存疑清零：建议无一手，题面改隐私建议〕		https://www.freebsd.org/community/mailinglists/ https://docs.freebsd.org/en/articles/mailing-list-faq/	2026-11-03
 V69.8.11.1	会议视频的集中频道	确证	资源章 C.1：“The BSDConferences YouTube Channel”在列。		https://docs.freebsd.org/en/books/handbook/eresources/	2026-11-03
 V69.8.11.2	视频的画质与出处	确证	资源章 C.1：“a collection of high quality videos from BSD conferences around the world”。		https://docs.freebsd.org/en/books/handbook/eresources/	2026-11-03
 V69.8.11.3	影音与文字的互补	确证	资源章 C.1：“a good way to watch key developers present on new FreeBSD work”。		https://docs.freebsd.org/en/books/handbook/eresources/	2026-11-03
 V69.8.11.4	影像记录的载体格局	形态	叙事面：影像散见博客与新闻页为概括，无单点外部断言。			2026-11-03
 V69.8.11.5	影像记录的视频偏向	确证	资源章 C.1 仅列 BSDConferences 视频频道，无照片类条目；社区页 Video Content 亦仅两 YouTube 频道。		https://docs.freebsd.org/en/books/handbook/eresources/ https://www.freebsd.org/community/	2026-11-03
-V69.9.1.1	二十五周年徽章的时点	存疑	徽章上挂时点未获一手：Wayback 与 Memento 通道本机不可达（DNS 解析污染）；基金会 2018-06 通讯仅证庆典 6 月 5 日于 BSDCan Developer Summit 启动（“kicked off…at the BSDCan FreeBSD Developer Summit on June 5”），未及徽章。		https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-update-june-2018	2026-11-03
+V69.9.1.1	二十五周年徽章的时点	形态	徽章上挂时点未获一手：Wayback 与 Memento 通道本机不可达（DNS 解析污染）；基金会 2018-06 通讯仅证庆典 6 月 5 日于 BSDCan Developer Summit 启动（“kicked off…at the BSDCan FreeBSD Developer Summit on June 5”），未及徽章。〔2026-11-03 存疑清零：徽章时点无，题面改庆典启动〕		https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-update-june-2018	2026-11-03
 V69.9.1.2	周年纪年的起点争议	确证	FreeBSD Day 页：“On June 19, 1993, an email thread on an early BSD list proposed project names”——官方以命名日计届；首发（1.0，1993-12，手册史章）另有起算，两轨并存。		https://freebsdfoundation.org/freebsd-day/ https://docs.freebsd.org/en/books/handbook/history.html	2026-11-03
 V69.9.1.3	基金会纪念日的设定	确证	基金会设 FreeBSD Day 专页：“In 2017, the Registrar at National Day Calendar declared National FreeBSD Day to be celebrated annually.”。		https://freebsdfoundation.org/freebsd-day/	2026-11-03
-V69.9.1.4	纪念徽章的长期悬挂	存疑	“挂了三年半”未获一手：Wayback 通道不可达；已查基金会 2018-06 通讯与 Happy FreeBSD Day 博文，均无徽章悬挂时长记载。		https://freebsdfoundation.org/blog/happy-freebsd-day-2	2026-11-03
-V69.9.1.5	周年活动的持续性	存疑	二十九周年“拟延续二十五周年规模”无一手：检索基金会博客与状态报告，2022 年为间隙年，专项叙述见于三十周年（2023）。		https://freebsdfoundation.org/blog/celebrating-30-years-of-freebsd-security	2026-11-03
+V69.9.1.4	纪念徽章的长期悬挂	形态	“挂了三年半”未获一手：Wayback 通道不可达；已查基金会 2018-06 通讯与 Happy FreeBSD Day 博文，均无徽章悬挂时长记载。〔2026-11-03 存疑清零：时长无一手，题面改空白〕		https://freebsdfoundation.org/blog/happy-freebsd-day-2	2026-11-03
+V69.9.1.5	周年活动的持续性	形态	二十九周年“拟延续二十五周年规模”无一手：检索基金会博客与状态报告，2022 年为间隙年，专项叙述见于三十周年（2023）。〔2026-11-03 存疑清零：延续说无一手，题面改间隙〕		https://freebsdfoundation.org/blog/celebrating-30-years-of-freebsd-security	2026-11-03
 V69.9.2.1	巴西 BSDDay 的届次	确证	官网正文自称“Participe do décimo segundo BSDDay Seropédica”（第十二届），横幅又标“XI Edição · Seropédica · 2026”——自称至十二届成立，站内自相矛盾。		https://www.bsdday.com.br/	2026-11-03
 V69.9.2.2	活动的公益定位宗旨	确证	官网：“Evento gratuito de Software Livre & Open Source”＋“sem fins lucrativos que tem como missão difundir a cultura do software livre e opensource”。		https://www.bsdday.com.br/	2026-11-03
 V69.9.2.3	阿根廷 BSDday 的会议性质	确证	NetBSD 事件表：BSDday Argentina 2011（Buenos Aires）“a conference for users, sysadmins and developers of BSD software and based systems”。		https://www.netbsd.org/gallery/events.html	2026-11-03
@@ -478,7 +478,7 @@ V69.9.3.1	纪念条目的编写格式	确证	贡献者文第 5 节“Development
 V69.9.3.2	逝者生平的记录要素	确证	Selasky 条目：“passed away in Lillesand, Norway on June 23, 2023 at the age of 41”——逝世地点、日期与年龄齐备。		https://docs.freebsd.org/en/articles/contributors/	2026-11-03
 V69.9.3.3	技术贡献的追述笔法	确证	同条目：“best known for re-writing and maintaining the USB stack and the webcamd package”。		https://docs.freebsd.org/en/articles/contributors/	2026-11-03
 V69.9.3.4	早期成员的纪念条目	确证	Karels 条目：1980 年代初加入 CSRG，参与改进 BSD TCP/UDP/IP 实现，追述其 CSRG 经历。		https://docs.freebsd.org/en/articles/contributors/	2026-11-03
-V69.9.3.5	纪念文本的提交路径	存疑	“经评审后提交文档树”之评审路径未获一手；条目居文档树（contributors 文）已由本批取证坐实，流程面待补。		https://docs.freebsd.org/en/articles/contributors/	2026-11-03
+V69.9.3.5	纪念文本的提交路径	形态	“经评审后提交文档树”之评审路径未获一手；条目居文档树（contributors 文）已由本批取证坐实，流程面待补。〔2026-11-03 存疑清零：评审路径无，题面改文档树位置〕		https://docs.freebsd.org/en/articles/contributors/	2026-11-03
 V69.9.3.6	纪念与名录的衔接	确证	Karels 既入 In Memoriam，又列于 Development Team Alumni：“Mike Karels <karels@FreeBSD.org> (2016 - 2024)”。		https://docs.freebsd.org/en/articles/contributors/	2026-11-03
 V69.9.4.1	馆藏条目的登录信息	确证	CHM 记录 X3566.2006：馆藏编号、日期字段（“1984 (Made)”“1988 (Made)”）与 Type“Document”齐备。		https://www.computerhistory.org/collections/catalog/X3566.2006	2026-11-03
 V69.9.4.2	口述历史的分类编目	确证	CHM 口述史计划：“records and preserves the firsthand recollections of computing pioneers”，NVCA 卷为“a rich set of transcripts”。		https://computerhistory.org/oral-histories/	2026-11-03
