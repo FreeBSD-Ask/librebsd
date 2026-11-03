@@ -3097,7 +3097,7 @@
 - 7.4 赞助透明度的史学评估@@〔溯源：一手：IRS Form 990 公开披露（IRC §6104；irs.gov/instructions/i990）；ProPublica Nonprofit Explorer（EIN 841545163）；官网另发季度与年度 P&L PDF；体例注：990 与审计报表为公开主证，季报 P&L 属内部账〕
 ## 第 8 章 制度
 - 8.1 行为准则制度研究@@〔溯源：一手：FreeBSD 社区 CoC（freebsd.org/internal/code-of-conduct；标发布日期 2020-06-09，源出 LLVM／Django 文本）；2015 Q3 状态报告记 Core 发布新 CoC（首版）；体例注：“2020-09”版未见，与 2020-06 并陈；NetBSD／OpenBSD 正式 CoC（官方域一手核）：OpenBSD 以官方邮件列表 Netiquette 文本（含反欺凌条款）为行为规范，NetBSD 官方政策清单无 CoC 条目——二者正式 CoC 缺位为实，非行为规范缺位〕〔说明：CoC 文本之后〕
-- 8.2 commit 流程与治理的学术记述@@〔溯源：一手：FreeBSD Committer's Guide（docs.freebsd.org/en/articles/committers-guide）；《A project model for the FreeBSD Project》（docs.freebsd.org/en/books/dev-model）——commit bit 由 core／doceng／portmgr 授；Core 9 人、两年一选〕
+- 8.2 commit 流程与治理的学术记述@@〔溯源：一手：FreeBSD Committer's Guide（docs.freebsd.org/en/articles/committers-guide）；《A project model for the FreeBSD Project》（docs.freebsd.org/en/books/dev-model）——commit bit 由 srcmgr／doceng／portmgr 授（src、doc、ports 各归其组）；Core 9 人、两年一选〕
 - 8.3 安全响应制度的学术研究@@〔溯源：一手：FreeBSD 官方 administration 页（Security Team／Security Officer，secteam@freebsd.org）；dev-model 章程；OpenBSD security 页（openbsd.org/security.html）；体例注：OpenBSD 无正式章程文件，以官方页与公告实务为据〕
 - 8.4 基金会法人制度研究@@〔溯源：一手：FreeBSD Handbook（基金会为美国 501(c)(3) 非营利）；NetBSD 基金会 Bylaws（netbsd.org/foundation/bylaws）；成立年在册：基金会 2000-03（官方 20 周年文，与 2000-12 旧说并陈）〕
 ## 第 9 章 概念与边界

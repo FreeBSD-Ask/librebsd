@@ -177,7 +177,7 @@ V52.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.2.2.5	SMPng 收尾时仍受 giant 保护的子系统	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	While Giant has not been completely eliminated from the kernel and several subsystems are still giant-locked (notably ipv6, tty, and CAM, although work is in progress on all of these fronts)	none
 V52.2.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“SMPng：FreeBSD 内核并发体系的重构”；本节题为其下位论题	none
 V52.2.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.2.2.6	SMPng 收尾后的工作重心	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	The focus of SMP development work has largely changed from "break up Giant everywhere" to "carefully measure the effects of the locking decisions that were made, and optimize for greater performance and scalability".	none
+V52.2.2.6	SMPng 收尾后的工作重心	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	"The focus of SMP development work has largely changed from ""break up Giant everywhere"" to ""carefully measure the effects of the locking decisions that were made, and optimize for greater performance and scalability""."	none
 V52.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“内核线程与 LWKT”；本节题为其下位论题	none
 V52.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.2.3.1	LWKT 与执行上下文解耦	https://www.dragonflybsd.org/presentations/dragonflybsd.asiabsdcon04.pdf	联网	A	2026-10-30	The Lightweight Kernel Threads (LWKT) system decouples the traditional Unix notions of an execution context from a VM address space.	none
@@ -229,7 +229,7 @@ V52.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.2.5.5	OpenBSD rthread 1:1 线程	http://www.jp.openbsd.org/papers/asiabsdcon2010_smp_for_sgi_paper.pdf	联网	A	2026-10-30	An rthread is a 1:1 native kernel thread library, implemented using the rfork system call.	none
 V52.2.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“并发模型比较：SMPng、细粒度锁与 LWKT 的取舍”；本节题为其下位论题	none
 V52.2.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.2.5.6	并发改造的时间跨度	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	According to the SMPng project webpage, "The end goal of the SMPng Project is to decompose the Giant lock into a number of smaller locks, resulting in reduced contention (and improved SMP performance)."	none
+V52.2.5.6	并发改造的时间跨度	https://lists.freebsd.org/pipermail/freebsd-smp/2006-June/001167.html	联网	A	2026-10-30	"According to the SMPng project webpage, ""The end goal of the SMPng Project is to decompose the Giant lock into a number of smaller locks, resulting in reduced contention (and improved SMP performance)."""	none
 V52.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“vkernel：用户空间中的 BSD 内核”；本节题为其下位论题	none
 V52.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.3.1.1	vkernel 定义	https://man.dragonflybsd.org/?command=vkernel&section=7	联网	A	2026-10-30	The vkernel architecture allows for running DragonFly kernels in userland.	none
@@ -259,7 +259,8 @@ V52.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.3.2.3	bhyve 的 CPU 前提	https://www-legacy.freebsd.org/doc/handbook/virtualization-host-bhyve.html	联网	A	2026-10-30	The bhyve design requires a processor that supports Intel® Extended Page Tables (EPT) or AMD® Rapid Virtualization Indexing (RVI) or Nested Page Tables (NPT).	none
 V52.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
 V52.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.3.2.4	bhyve 的半虚拟化驱动	https://docs-archive.freebsd.org/doc/9.3-RELEASE/usr/share/doc/freebsd/en/books/handbook/virtualization-host-bhyve.html	联网	B	2026-10-30	It also avoids emulating compatible hardware for the guest and instead relies on para-virtualization drivers. In FreeBSD, these are provided by the virtio(4) driver.	none
+V52.3.2.4	bhyve 的半虚拟化驱动	https://docs-archive.freebsd.org/doc/9.3-RELEASE/usr/share/doc/freebsd/en/books/handbook/virtualization-host-bhyve.html	联网	B	2026-10-30	It also avoids emulating compatible hardware for the guest and instead relies on para-virtualization drivers. In FreeBSD, these are provided by the virtio(4) driver.	noted
+V52.3.2.4	bhyve 设备清单的官方表述	https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8	联网	A	2026-11-03	ahci-cd AHCI controller attached to an ATAPI CD/DVD. ahci-hd AHCI controller attached to a SATA hard drive. e1000 Intel e82545 network interface. uart PCI 16550 serial device.	none
 V52.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“bhyve：BSD 许可下的虚拟机管理程序”；本节题为其下位论题	none
 V52.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.3.2.5	bhyve 控制台缺省	https://www-legacy.freebsd.org/doc/handbook/virtualization-host-bhyve.html	联网	A	2026-10-30	By default, bhyve provides access to serial console and does not emulate a graphical console.	none
@@ -305,7 +306,7 @@ V52.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.4.1.1	FreeBSD 起于 386BSD 补丁包	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The FreeBSD Project had its genesis in the early part of 1993, partially as the brainchild of the Unofficial 386BSDPatchkit's last 3 coordinators: Nate Williams, Rod Grimes and Jordan Hubbard.	none
 V52.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
 V52.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.4.1.2	FreeBSD 1.0 的代码来源	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993. This was based on the 4.3BSD-Lite ("Net/2") tape from U.C. Berkeley, with many components also provided by 386BSD and the Free Software Foundation.	none
+V52.4.1.2	FreeBSD 1.0 的代码来源	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	"The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993. This was based on the 4.3BSD-Lite (""Net/2"") tape from U.C. Berkeley, with many components also provided by 386BSD and the Free Software Foundation."	none
 V52.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“386BSD、NetBSD 与 FreeBSD 的代码继承”；本节题为其下位论题	none
 V52.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.4.1.3	NetBSD 建项目动因	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993.	none
@@ -357,7 +358,7 @@ V52.4.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.4.3.6	FreeBSD 与 4.4BSD-Lite 的关系	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD is based on the 4.4BSD-Lite release from Computer Systems Research Group (CSRG) at the University of California at Berkeley, and carries on the distinguished tradition of BSD systems development.	none
 V52.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
 V52.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.4.4.1	FreeBSD 的 Ports 与包双轨	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Almost every port is also provided as a pre-compiled "package", which can be installed with a simple command (pkg install) by those who do not wish to compile their own ports from source.	none
+V52.4.4.1	FreeBSD 的 Ports 与包双轨	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	"Almost every port is also provided as a pre-compiled ""package"", which can be installed with a simple command (pkg install) by those who do not wish to compile their own ports from source."	none
 V52.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“Ports、Packages 与第三方软件生态”；本节题为其下位论题	none
 V52.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.4.4.2	FreeBSD Ports 规模	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	There are about 37000 ports; the entire Ports Collection requires approximately 3 GB.	none
@@ -477,7 +478,7 @@ V52.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.5.2.4	提交权限的分区	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	When FreeBSD commit bits are allocated, the areas of the tree where the bit may be used are specified.	none
 V52.5.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
 V52.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.5.2.5	冻结期审批口令	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	To enforce commit approvals by the FreeBSD Release Engineering Team, the Release Engineering Team must approve any changes to the branch, in which case the commit log must include an Approved by: re (login) line, where "login" is the login ID of the approver.	none
+V52.5.2.5	冻结期审批口令	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	"To enforce commit approvals by the FreeBSD Release Engineering Team, the Release Engineering Team must approve any changes to the branch, in which case the commit log must include an Approved by: re (login) line, where ""login"" is the login ID of the approver."	none
 V52.5.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“变更进入主线：邮件评审、commit message 体例与 patchkit 遗产”；本节题为其下位论题	none
 V52.5.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.5.2.6	主线合并稳定线的等待期	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The default minimum timeframe before merging to stable/ branches is three (3) days.	none
@@ -501,7 +502,7 @@ V52.5.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.5.3.6	Kyua 支持多种测试程序	https://www.freebsd.org/cgi/man.cgi?query=kyua&sektion=1	联网	A	2026-10-30	Kyua is able to execute test programs written with a plethora of testing libraries and languages.	none
 V52.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
 V52.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.5.4.1	点发布与零点发布	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	In between releases from the stable/ branches, approximately every two (2) years, a release will be cut directly from main. These releases have been historically referred to as "dot-zero" releases.	none
+V52.5.4.1	点发布与零点发布	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	"In between releases from the stable/ branches, approximately every two (2) years, a release will be cut directly from main. These releases have been historically referred to as ""dot-zero"" releases."	none
 V52.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
 V52.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.5.4.2	发布周期排期	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	Approximately two months before the start of the release cycle, the FreeBSD Release Engineering Team decides on a schedule for the release.	none
@@ -510,7 +511,7 @@ V52.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.5.4.3	代码冻结的定义	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The code freeze marks the point in time where all commits to the branch require explicit approval from the FreeBSD Release Engineering Team.	none
 V52.5.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
 V52.5.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.5.4.4	ALPHA 构建	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	The idea behind "ALPHA" builds is to provide regular FreeBSD-provided builds before the creation of the stable/ branch.	none
+V52.5.4.4	ALPHA 构建	https://docs.freebsd.org/en/articles/freebsd-releng/	联网	A	2026-10-30	"The idea behind ""ALPHA"" builds is to provide regular FreeBSD-provided builds before the creation of the stable/ branch."	none
 V52.5.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“发布工程：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的发布节奏与公告体例”；本节题为其下位论题	none
 V52.5.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.5.4.5	发布公告的校验清单	https://www.freebsd.org/releases/10.0R/announce/	联网	A	2026-10-30	SHA256 and MD5 hashes for the release ISO and memory stick images are included at the bottom of this message.	none
@@ -743,7 +744,7 @@ V52.7.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.7.4.2	季度分支的节奏	https://www.pkgsrc.org/	联网	A	2026-10-30	the pkgsrc developers are proud to announce the pkgsrc-2026Q3 branch, the 92nd pkgsrc release	none
 V52.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
 V52.7.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.7.4.3	预编译包的覆盖	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Almost every port is also provided as a pre-compiled "package", which can be installed with a simple command (pkg install) by those who do not wish to compile their own ports from source.	none
+V52.7.4.3	预编译包的覆盖	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	"Almost every port is also provided as a pre-compiled ""package"", which can be installed with a simple command (pkg install) by those who do not wish to compile their own ports from source."	none
 V52.7.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“构建体系与软件生态比较的结论：发行与移植策略的分野”；本节题为其下位论题	none
 V52.7.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.7.4.4	框架的跨系统覆盖	https://pkgsrc.org/	联网	A	2026-10-30	Code exists in pkgsrc to support 20+ Unix-like operating systems and 15+ CPU architectures.	none

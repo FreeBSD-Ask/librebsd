@@ -316,7 +316,7 @@ V55.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V55.5.3.1	规模增长对维护者的压力	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	As the number of patches and authors significantly increases, maintainers come under considerable pressure, which may hinder the operation and even the sustainability of the community.	none
 V55.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
 V55.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V55.5.3.2	维护者的流程角色	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	In the traditional workflow, maintainers serve as "gatekeepers" for the subsystems that they maintain.	none
+V55.5.3.2	维护者的流程角色	https://dl.acm.org/doi/10.1145/3377811.3380920	联网	A	2026-10-30	"In the traditional workflow, maintainers serve as ""gatekeepers"" for the subsystems that they maintain."	none
 V55.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“研究者社区的代际记述”；本节题为其下位论题	none
 V55.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V55.5.3.3	访谈的代际线索	https://www.bsdnow.tv/278	联网	A	2026-10-30	How the code and community grew	none
@@ -492,10 +492,11 @@ V55.8.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V55.8.1.5	同侪项目的规范文本状况	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	OpenBSD 以官方邮件列表 Netiquette 文本（含反欺凌条款）为行为规范，NetBSD 官方政策清单无 CoC 条目——二者正式 CoC 缺位为实，非行为规范缺位	none
 V55.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
 V55.8.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V55.8.2.1	提交权的授予主体	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	commit bit 由 core／doceng／portmgr 授；Core 9 人、两年一选	none
+V55.8.2.1	提交权的授予主体	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节溯源注“commit bit 由 srcmgr／doceng／portmgr 授（src、doc、ports 各归其组）”；Core 9 人、两年一选	none
+V55.8.2.1	提交权的授予主体（一手）	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-11-03	Committer Type Responsible Tree Components src srcmgr@ src/ doc doceng@ doc/, ports/, src/ documentation ports portmgr@ ports/	none
 V55.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
 V55.8.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V55.8.2.2	核心组的职能与产生方式	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Core Team constitutes the project’s "Board of Directors", responsible for deciding the project’s overall goals and direction as well as managing specific areas of the FreeBSD project landscape. The Core Team is elected by the active developers in the project.	none
+V55.8.2.2	核心组的职能与产生方式	https://www.freebsd.org/administration/	联网	A	2026-10-30	"The FreeBSD Core Team constitutes the project’s ""Board of Directors"", responsible for deciding the project’s overall goals and direction as well as managing specific areas of the FreeBSD project landscape. The Core Team is elected by the active developers in the project."	none
 V55.8.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“commit 流程与治理的学术记述”；本节题为其下位论题	none
 V55.8.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V55.8.2.3	项目模型的材料来源	https://docs.freebsd.org/en/books/dev-model/	联网	A	2026-10-30	It is based on the Niels Jørgensen’s paper, FreeBSD’s official documents, discussions on FreeBSD mailing lists and interviews with developers.	none
@@ -666,7 +667,7 @@ V55.11.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V55.11.1.2	云市场镜像的上架	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The FreeBSD project is now publishing Oracle Cloud Infrastructure images.	none
 V55.11.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
 V55.11.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V55.11.1.3	小型云镜像的构成	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The FreeBSD projects now publishes "small" EC2 images; these are the "base" images minus debug symbols, tests, 32-bit libraries, the LLDB debugger, the Amazon SSM Agent, and the AWS CLI.	none
+V55.11.1.3	小型云镜像的构成	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	"The FreeBSD projects now publishes ""small"" EC2 images; these are the ""base"" images minus debug symbols, tests, 32-bit libraries, the LLDB debugger, the Amazon SSM Agent, and the AWS CLI."	none
 V55.11.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从单一发行到多形态的转型研究”；本节题为其下位论题	none
 V55.11.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V55.11.1.4	云平台网络配置的支持	https://www.freebsd.org/releases/14.2R/relnotes/	联网	A	2026-10-30	The nuageinit startup script now supports OpenStack network config.	none

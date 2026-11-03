@@ -35,7 +35,7 @@ V67.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V67.1.3.1	会议录的优先发表职能	https://www.usenix.org/legacy/publications/library/proceedings/proceedings1.html	联网	A	2026-10-30	All online conference proceedings are now freely available to everyone.	none
 V67.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“早期 USENIX 论文集：CSRG 论文的首次公开发表”；本节题为其下位论题	none
 V67.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V67.1.3.2	4.2BSD 组件论文的会议首发	https://www.usenix.org/legacy/about/history/firsts.html	联网	A	2026-10-30	January 1983 | Eric Allman presents the first paper on Sendmail, "Mail Systems and Addressing in 4.2BSD"	none
+V67.1.3.2	4.2BSD 组件论文的会议首发	https://www.usenix.org/legacy/about/history/firsts.html	联网	A	2026-10-30	"January 1983 | Eric Allman presents the first paper on Sendmail, ""Mail Systems and Addressing in 4.2BSD"""	none
 V67.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“早期 USENIX 论文集：CSRG 论文的首次公开发表”；本节题为其下位论题	none
 V67.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.1.3.3	论文评审的程序委员会机制	https://www.usenix.org/about	联网	A	2026-10-30	teams of volunteers leverage their expertise to curate excellent technical content, recruit top-notch speakers, and review submitted papers to identify the best research for publication	none
@@ -169,6 +169,8 @@ V67.2.5.4	北美会议线向 BSDCan 转移	https://undeadly.org/cgi?action=artic
 V67.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“BSDCon 的终止与北美会议线的转移（2003–2004）”；本节题为其下位论题	none
 V67.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.2.5.5	转移期的议程继承	https://www.bsdcan.org/2004/	联网	A	2026-10-30	BSDCan 2004 was a hugely technical conference for people working on 4.4BSD based operating systems and related projects.	none
+V67.2.5.5	首届议程的一手日程	https://www.bsdcan.org/2004/schedule.html	联网	A	2026-11-03	The FreeBSD GEOM Disk I/O Subsystem (tutorial) 11:00 AM break	none
+V67.2.5.5	教程排期的新闻页自述	https://www.bsdcan.org/2004/news.html	联网	A	2026-11-03	The tutorials will be on either Friday or Saturday.	none
 V67.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“EuroBSDCon 与欧洲 BSD 共同体”；本节题为其下位论题	none
 V67.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.3.1.1	首届会议的名实之变	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	The inaugural conference (EuroBSDCon) was organized in 2001, November 9th till 11th, under the name BSDCon Europe 2001. It was held at the Thistle Hotel in Brighton (UK).	none
@@ -178,7 +180,7 @@ V67.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V67.3.1.2	会议宗旨的欧洲定位	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	The aim of the conference is to provide a focal point for European users and developers of all the BSD derived operating systems.	none
 V67.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“EuroBSDCon 与欧洲 BSD 共同体”；本节题为其下位论题	none
 V67.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V67.3.1.3	巡游制与举办国轮换	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	EuroBSDCon has been organized "yearly" ever since.	none
+V67.3.1.3	巡游制与举办国轮换	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	"EuroBSDCon has been organized ""yearly"" ever since."	none
 V67.3.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“EuroBSDCon 与欧洲 BSD 共同体”；本节题为其下位论题	none
 V67.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.3.1.4	首届场地与后续场馆对照	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	2002, November 15 - 17, Mercure Hotel, Amsterdam (NL)	none
@@ -193,7 +195,7 @@ V67.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V67.3.2.2	演讲与论文的并存形态	https://www.freebsd.org/events/	联网	A	2026-10-30	It focuses on gathering users and developers working on and with 4.4BSD (Berkeley Software Distribution) based operating systems family and related projects.	none
 V67.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“EuroBSDCon 论文与演讲”；本节题为其下位论题	none
 V67.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V67.3.2.3	聚焦小组日的安排	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	The Friday is for "focus group" gatherings, where smaller groups of users and developers can meet to discuss specific aspects of the project	none
+V67.3.2.3	聚焦小组日的安排	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	"The Friday is for ""focus group"" gatherings, where smaller groups of users and developers can meet to discuss specific aspects of the project"	none
 V67.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“EuroBSDCon 论文与演讲”；本节题为其下位论题	none
 V67.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.3.2.4	赞助体系与议程边界	https://eurobsdcon.org/	联网	A	2026-10-30	EuroBSDCon 2026 is organized by the EuroBSDCon Foundation in collaboration with the local organizing committee.	none
@@ -221,7 +223,8 @@ V67.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V67.3.4.1	马耳他届次的会场记录	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	2013, September 28 - 29, Hilton Conference Centre, St. Julian's (MT)	none
 V67.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“参与者的自述：2013 年 EuroBSDCon 的社区记录”；本节题为其下位论题	none
 V67.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V67.3.4.2	参会者笔记的史料位置	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	EuroBSDCon has been organized "yearly" ever since.	none
+V67.3.4.2	参会者笔记的史料位置	https://2023.eurobsdcon.org/history.html	联网	A	2026-10-30	"EuroBSDCon has been organized ""yearly"" ever since."	noted
+V67.3.4.2	届次编序的站点自述	https://2005.eurobsdcon.org/	联网	A	2026-11-03	the fourth EuroBSDCon conference took place in Basel, Switzerland	none
 V67.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“参与者的自述：2013 年 EuroBSDCon 的社区记录”；本节题为其下位论题	none
 V67.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.3.4.3	社区记录与官方议程的落差	https://www.freebsd.org/events/	联网	A	2026-10-30	BSD-NL is all about bringing like-minded people together, whether you’re a hobbyist, enthusiast, expert, developer, network or system administrator.	none
@@ -277,7 +280,8 @@ V67.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V67.4.2.4	论文主题的工程取向	https://2024.asiabsdcon.org/program.html	联网	A	2026-10-30	This conference program is still a tentative version and will be updated when more detailed information is available.	none
 V67.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“AsiaBSDCon 论文与演讲”；本节题为其下位论题	none
 V67.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V67.4.2.5	议程语言的实际选择	https://2019.asiabsdcon.org/	联网	A	2026-10-30	Note: Conference program also has links to PDF for each paper and corresponding DOI.	none
+V67.4.2.5	议程语言的实际选择	https://2019.asiabsdcon.org/	联网	A	2026-10-30	Note: Conference program also has links to PDF for each paper and corresponding DOI.	noted
+V67.4.2.5	日语专场教程的议程行	https://2007.asiabsdcon.org/timetable.html	联网	A	2026-11-03	"Tutorial T3C: ""Development Technique for BSD Embedded Systems"" (in Japanese only) Shozo Takeoka"	none
 V67.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“历年议题对比与参与者分布”；本节题为其下位论题	none
 V67.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.4.3.1	届次与城市的对照表	https://2024.asiabsdcon.org/program.html	联网	A	2026-10-30	March 21-24, 2024, Chientan Youth Activity Center, Taipei, Taiwan	none
@@ -505,6 +509,7 @@ V67.6.5.2	合办与并址的技术衔接	https://www.usenix.org/conferences/all	
 V67.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“会议之间的日程冲突与联合办会”；本节题为其下位论题	none
 V67.6.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.6.5.3	操作系统会议的交替排期	https://www.usenix.org/conferences/all	联网	A	2026-10-30	OSDI '26: 20th USENIX Symposium on Operating Systems Design and Implementation	none
+V67.6.5.3	年度并址的一手页	https://www.usenix.org/conference/osdi24	联网	A	2026-11-03	July 10–12, 2024 Santa Clara, CA, USA Co-located with USENIX ATC '24	none
 V67.6.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“会议之间的日程冲突与联合办会”；本节题为其下位论题	none
 V67.6.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.6.5.4	地区会议与主场的错峰	https://www.freebsd.org/events/	联网	A	2026-10-30	EuroBSDCon is the international annual technical conference held in a different European country each year.	none
@@ -762,7 +767,7 @@ V67.9.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V67.9.4.5	线上与线下的功能划分	https://www.bsdcan.org/2020/	联网	A	2026-10-30	BSDCan 2020 will be an online conference. It will not be in person.	none
 V67.9.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“线上峰会与混合会议的新形态”；本节题为其下位论题	none
 V67.9.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V67.9.5.1	线上办公时间的新形态	https://www.freebsd.org/events/2020/	联网	A	2026-10-30	On December 16th at 21:00 UTC we will hold a "FreeBSD Office Hours", an interactive online event	none
+V67.9.5.1	线上办公时间的新形态	https://www.freebsd.org/events/2020/	联网	A	2026-10-30	"On December 16th at 21:00 UTC we will hold a ""FreeBSD Office Hours"", an interactive online event"	none
 V67.9.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 5 节“线上峰会与混合会议的新形态”；本节题为其下位论题	none
 V67.9.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V67.9.5.2	线上讲座的短格式	https://www.freebsd.org/events/2020/	联网	A	2026-10-30	1 hour live streaming session of the FreeBSD Fridays	none
