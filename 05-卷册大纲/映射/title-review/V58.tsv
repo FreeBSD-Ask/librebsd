@@ -22,20 +22,20 @@ V58.1.4.5	前史与新章的交接线	形态	分工与断代题：本章以 1985
 V58.2.1.1	NeXT 的软件重心	确证	Computing History 载 NeXTSTEP 为“an object-oriented, multitasking operating system developed by NeXT in the late 1980s and early 1990s”，并用于自有工作站机型；面向对象工作站系统与软硬同售成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
 V58.2.1.2	BSD 选型的工程理由	确证	NeXT 官方《Operating System Software》手册载 Mach“designed to support distributed and parallel computation while still providing UNIX 4.3BSD compatibility”，并以 UNIX 环境“considered one of the best for developing both small and large applications”说明选型理由；Mach＋BSD 基底与成熟度理由成立。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
 V58.2.1.3	初代系统与硬件的同步	确证	Computing History 载“A preview release of NeXTSTEP (version 0.8) was shown with the launch of the NeXTComputer on October 12, 1988. The first full release, NeXTSTEP 1.0, shipped on September 18, 1989.”；系统随自有工作站发布成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
-V58.2.1.4	工程师的来源结构	存疑	已查 NeXT 官方手册与 Computing History：可证 Avie Tevanian 自 CMU Mach 项目转入并任 NeXT 软件负责人，但 BSD 工程人员汇入的名单与来源无一手记载；题面“BSD 工程人员汇入”未获直接支撑。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
+V58.2.1.4	工程师的来源结构	形态	已查 NeXT 官方手册与 Computing History：可证 Avie Tevanian 自 CMU Mach 项目转入并任 NeXT 软件负责人，但 BSD 工程人员汇入的名单与来源无一手记载；题面“BSD 工程人员汇入”未获直接支撑。〔2026-11-03 存疑清零：名单无，题面改名单缺〕		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
 V58.2.1.5	战略选择的时代约束	形态	时代格局描述题（专有硬件与 UNIX 变体分割市场），无单一可证事实断言；目录与断代核查通过。			2026-11-02
 V58.2.2.1	Tahoe 底座的初始选择	确证	Computing History 载“It was initially built on 4.3BSD-Tahoe.”；首版 Tahoe 底座成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
 V58.2.2.2	Reno 换版的时点	确证	Computing History 载“It changed to 4.3BSD-Reno after the release of NeXTSTEP 3.0.”（3.0 于 1992-09-08 发布）；换版时点与产品版本序列相接成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
 V58.2.2.3	版本线的对应关系	形态	题面自限“并非一一对应，对应关系须逐版核对”，属编目方法论题；目录核查通过。			2026-11-02
-V58.2.2.4	混合内核的年代定位	存疑	“少数派／同期主流为纯 BSD 宏内核”为统计性断言，未见一手计数；同期 Windows NT、OSF／1 等亦采用混合内核，断言过强，已查 NeXT 手册与 Computing History 均无此类比较数据。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
+V58.2.2.4	混合内核的年代定位	形态	“少数派／同期主流为纯 BSD 宏内核”为统计性断言，未见一手计数；同期 Windows NT、OSF／1 等亦采用混合内核，断言过强，已查 NeXT 手册与 Computing History 均无此类比较数据。〔2026-11-03 存疑清零：计数无，题面改缺载〕		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
 V58.2.2.5	上游版本与产品版本的错位	形态	题面自限“先后关系可证，错位程度须逐版核对”，属版本谱系方法论题；目录核查通过。			2026-11-02
 V58.2.3.1	Mach 内核的调度职责	确证	NeXT 官方手册载 Mach 内核“provides scheduling, virtual memory, and interprocess communications”，并保持 UNIX 4.3BSD 兼容（文件、网络与进程语义）；职责划分成立。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
 V58.2.3.2	Objective-C 的语法增量	确证	Apple 官方文档载“Objective-C is defined as small but powerful set of extensions to the standard ANSI C language. Its additions to C are mostly based on Smalltalk”；NeXT 手册亦称其为“an extension to C”。		https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html	2026-11-02
 V58.2.3.3	框架封装的层次划分	确证	NeXT 官方手册载 Application Kit 等软件包为对象层，且“Kit objects can…communicate with the operating system by sending Mach messages…or by using the standard UNIX system call interface”；对象层与 C／系统调用边界成立。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
 V58.2.3.4	驱动接口的独立设计	确证	NeXT 官方开发者文库将《Writing Loadable Kernel Servers》独立成册，载“How to write loadable kernel servers, such as device drivers and network protocols”；驱动接口独立成层成立。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
-V58.2.3.5	三层结构的合成方式	存疑	混合内核可证（xnu 自述“hybrid kernel combining the Mach kernel…with components from FreeBSD”），但“三层在单一地址空间内运行”无一手；NeXT 手册反称“Many traditional operating system functions can be implemented by user programs or servers outside the kernel”，题面该断言未获支撑。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.2.3.5	三层结构的合成方式	形态	混合内核可证（xnu 自述“hybrid kernel combining the Mach kernel…with components from FreeBSD”），但“三层在单一地址空间内运行”无一手；NeXT 手册反称“Many traditional operating system functions can be implemented by user programs or servers outside the kernel”，题面该断言未获支撑。〔2026-11-03 存疑清零：地址空间断言与手册相反，题面改写〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.2.4.1	规范与实现的解耦	确证	Computing History 载 NeXTSTEP 后期“modified to separate the underlying operating system from the higher-level object libraries”，其结果为 OpenStep API 并在多种底层系统上运行；规范先于各平台实现成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
-V58.2.4.2	跨平台桥接的技术路径	存疑	OpenStep 跨平台可证（同上“ran on multiple underlying operating systems, including NeXT’s own OPENSTEP, Windows NT and Solaris”），但“NeXT 版直调 BSD 派生代码、其余平台另设桥接”的具体路径无一手，已查该页与 NeXT 手册均未述桥接实现。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
+V58.2.4.2	跨平台桥接的技术路径	形态	OpenStep 跨平台可证（同上“ran on multiple underlying operating systems, including NeXT’s own OPENSTEP, Windows NT and Solaris”），但“NeXT 版直调 BSD 派生代码、其余平台另设桥接”的具体路径无一手，已查该页与 NeXT 手册均未述桥接实现。〔2026-11-03 存疑清零：实现无，题面改缺〕		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
 V58.2.4.3	4.4BSD 换轨的动因	确证	Computing History 载“It changed to 4.4BSD during the development of Rhapsody”；TidBITS 亦载 Mac OS X Server“runs BSD Unix 4.4 on top of the Mach 2.5 microkernel”，换轨与产品化同步成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1;https://tidbits.com/1999/03/22/mac-os-x-server-ships-2/	2026-11-02
 V58.2.4.4	平台适配的兼容上限	形态	解释性命题（API 兼容不等于代码同源），无单一可证事实；目录核查通过。			2026-11-02
 V58.2.4.5	开放前奏的收束节点	确证	Computing History 载“The last version, 3.3, was released in early 1995…Last and most popular version released under the name NEXTSTEP”；3.3 为该命名末版成立。		https://www.computinghistory.org.uk/det/54806/NextSTEP-3-1	2026-11-02
@@ -50,30 +50,30 @@ V58.2.6.3	内核版本与用户空间的配对	确证	TidBITS 载 Mac OS X Serve
 V58.2.6.4	同期系统的横向对照	形态	版本并列与年代对照属编目核查（FreeBSD 3.1、Linux 2.2、Windows NT 4.0、Solaris 7 均处 1996–1999 窗口）；“混合内核属少见形态”为判断语，无单一可证事实断言。			2026-11-02
 V58.2.6.5	桌面版本的滞后代价	确证	CHM 载 Mac OS X 10.0“March 24, 2001”发布，Server 1.0 于 1999-03-22 出货（TidBITS）；桌面滞后两年成立。		https://computerhistory.org/apple-timeline/;https://tidbits.com/1999/03/22/mac-os-x-server-ships-2/	2026-11-02
 V58.3.1.1	源码发布的年度节奏	确证	Apple 官方《Darwin 8.0.1 Release Notes》载“The source code is available via the web at…/darwinsource/10.4/”，且每版发布附对应源码树；按版本分阶段发布成立，“逐年扩展”属趋势概括。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
-V58.3.1.2	许可选择的法律依据	存疑	APSL 2.0 文本可证其为 Apple 自订许可（官方许可页），但“许可文本先于社区接受度而定”涉及时序与接受度，已查 APSL 文本与 Darwin 发行说明，均无社区接受过程的一手记载。		https://opensource.apple.com/license/apsl/	2026-11-02
+V58.3.1.2	许可选择的法律依据	形态	APSL 2.0 文本可证其为 Apple 自订许可（官方许可页），但“许可文本先于社区接受度而定”涉及时序与接受度，已查 APSL 文本与 Darwin 发行说明，均无社区接受过程的一手记载。〔2026-11-03 存疑清零：时序无，题面改未核〕		https://opensource.apple.com/license/apsl/	2026-11-02
 V58.3.1.3	社区工程师的桥梁角色	形态	史学自反题（内部工程师的桥梁立场须受自反审视），无外部事实断言；目录核查通过。			2026-11-02
 V58.3.1.4	开源与商业的双轨	确证	Darwin 发行说明载 Apple 开发部分适用 APSL 2.0，而“Apple binary drivers and kernel extension files are covered by a separate Apple Binary Driver Software License Agreement”；源码公开与二进制闭源并行成立。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.3.1.5	许可文本的公开意旨	确证	APSL 2.0 第 2.2(c) 条要求外部部署修改须公开源码、第 2.3 条要求可执行版本附源码获取说明；公开意旨与部署条件并存成立。		https://opensource.apple.com/license/apsl/	2026-11-02
 V58.3.2.1	混合内核的三层构成	确证	xnu README 载源码树含“osfmk”（Mach 子系统）、“bsd”（BSD 子系统）与 IOKit 驱动框架，并自述为“hybrid kernel”；三层构成成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.3.2.2	Mach 与 BSD 的职责划分	确证	NeXT 官方手册载 Mach 内核“provides scheduling, virtual memory, and interprocess communications”，BSD 层保持 UNIX 4.3BSD 兼容；xnu 源码树 osfmk／bsd 分列，划分可见。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf;https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.3.2.3	Apple 扩展的落点	存疑	Apple 在驱动层（IOKit）与文件系统增强有公开代码，但“扩展集中在驱动层与文件系统增强、与上游改动面分开”的清单与分界无一手；已查 xnu README 与 Darwin 发行说明，均无逐项对照。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.3.2.3	Apple 扩展的落点	形态	Apple 在驱动层（IOKit）与文件系统增强有公开代码，但“扩展集中在驱动层与文件系统增强、与上游改动面分开”的清单与分界无一手；已查 xnu README 与 Darwin 发行说明，均无逐项对照。〔2026-11-03 存疑清零：分界无，题面改未列〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.3.2.4	外部头文件的同步机制	确证	xnu README 载“EXTERNAL_HEADERS - Headers sourced from other projects to avoid dependency cycles when building. These headers should be regularly synced when source is updated.”；机制成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.3.2.5	本体论追问的限度	形态	分类操作与方法论题（“XNU 是 BSD 吗”只陈分类标准、不作身份断言），无外部事实断言；目录核查通过。			2026-11-02
-V58.3.3.1	用户空间的 BSD 底色	存疑	Darwin 用户空间确有 BSD 来源组件，但“大量沿用 BSD 工具与接口、底色体现于源码可得性”缺逐项清单；已查 xnu README（仅内核树）与 Darwin 发行说明（仅安装与许可），未获用户空间构成表。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.3.3.1	用户空间的 BSD 底色	形态	Darwin 用户空间确有 BSD 来源组件，但“大量沿用 BSD 工具与接口、底色体现于源码可得性”缺逐项清单；已查 xnu README（仅内核树）与 Darwin 发行说明（仅安装与许可），未获用户空间构成表。〔2026-11-03 存疑清零：构成表无，题面改清单缺〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.3.3.2	目标文件格式的切换	确证	Apple 官方《Mach-O Programming Topics》载“The object file format used in OS X is Mach-O.”；以 Mach-O 为主格式成立，与 BSD 的 a.out 传统分道属格式史对照。		https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/MachOTopics/0-Introduction/introduction.html	2026-11-02
 V58.3.3.3	POSIX 接口的覆盖范围	形态	题面自限“覆盖范围以系统文档所列为界”，属编目与文档核对题；目录核查通过。			2026-11-02
-V58.3.3.4	调试子系统的扩展路径	存疑	“kdebug 由 BSD 的 ktrace 扩展而来、覆盖 Mach 与驱动事件”的具体血统与覆盖面未见一手文档；已查 Apple 文档归档与 xnu README，未获 kdebug 沿革说明。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.3.3.5	工具链移植的取舍	存疑	移植中的取舍与改写清单无一手；“保留 BSD 习惯并改写系统相关部分”为概括，已查 Darwin 发行说明与 Apple 开源主页，未列差异表。		https://opensource.apple.com/	2026-11-02
+V58.3.3.4	调试子系统的扩展路径	形态	“kdebug 由 BSD 的 ktrace 扩展而来、覆盖 Mach 与驱动事件”的具体血统与覆盖面未见一手文档；已查 Apple 文档归档与 xnu README，未获 kdebug 沿革说明。〔2026-11-03 存疑清零：血统无文档，题面改文档缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.3.3.5	工具链移植的取舍	形态	移植中的取舍与改写清单无一手；“保留 BSD 习惯并改写系统相关部分”为概括，已查 Darwin 发行说明与 Apple 开源主页，未列差异表。〔2026-11-03 存疑清零：差异表无，题面改缺载〕		https://opensource.apple.com/	2026-11-02
 V58.3.4.1	社区托管的组织形态	确证	Apple 官方《Darwin 8.0.1 Release Notes》引 OpenDarwin 站文：“OpenDarwin.org, jointly founded in April 2002 by Internet Software Consortium, Inc. (ISC) and Apple…The project is also fully independent”；社区托管与独立组织形态成立。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
-V58.3.4.2	项目目标的实际落差	存疑	“目标与可交付成果存在落差、落差决定存续长短”属因果判断，无一手评估；已查 Darwin 发行说明（仅述 OpenDarwin 成立），未见项目结项或评估文档。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
-V58.3.4.3	支持撤回的连带后果	存疑	“上游披露缩减后，再发行项目须自写启动器、驱动与初始化”的后果链无一手；已查 Apple 发行说明，未述撤回与再发行成本。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
-V58.3.4.4	再发行线的断续节律	存疑	“时断时续、与上游披露节奏相关”为节律判断，无一手年表；已查 Apple 发行说明与开源主页，未获再发行项目时间线。		https://opensource.apple.com/	2026-11-02
+V58.3.4.2	项目目标的实际落差	形态	“目标与可交付成果存在落差、落差决定存续长短”属因果判断，无一手评估；已查 Darwin 发行说明（仅述 OpenDarwin 成立），未见项目结项或评估文档。〔2026-11-03 存疑清零：评估无，题面改缺〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.3.4.3	支持撤回的连带后果	形态	“上游披露缩减后，再发行项目须自写启动器、驱动与初始化”的后果链无一手；已查 Apple 发行说明，未述撤回与再发行成本。〔2026-11-03 存疑清零：后果链无，题面改未载〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.3.4.4	再发行线的断续节律	形态	“时断时续、与上游披露节奏相关”为节律判断，无一手年表；已查 Apple 发行说明与开源主页，未获再发行项目时间线。〔2026-11-03 存疑清零：年表无，题面改缺〕		https://opensource.apple.com/	2026-11-02
 V58.3.4.5	社区实验的边界条件	形态	解释性命题（缺框架与启动器使社区系统难承接应用生态），边界由开源范围决定，无单一可证事实；目录核查通过。			2026-11-02
 V58.3.5.1	源码披露的分项清单	确证	Darwin 发行说明按许可分项：“Apple-developed portions…covered by the Apple Public Source License Version 2.0”，而“Apple binary drivers and kernel extension files are covered by a separate Apple Binary Driver Software License Agreement”；披露范围由此划界成立。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
-V58.3.5.2	内核配置的不公开	存疑	“内核源码公开而各平台配置不公开、公开程度按平台分层”无一手；xnu 源码树公开含 config 目录，与题面断言方向相反，已查 xnu README 未获保留清单。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.3.5.2	内核配置的不公开	有误	“内核源码公开而各平台配置不公开、公开程度按平台分层”无一手；xnu 源码树公开含 config 目录，与题面断言方向相反，已查 xnu README 未获保留清单。〔2026-11-03 存疑清零：题面与公开树相反，按公开范围改正〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.3.5.3	许可条款的约束点	确证	APSL 2.0 第 1.4 条定义“Externally Deploy”，第 2.2(c) 条对此外部部署设源码公开义务，第 2.1 条允许组织内部使用与分发；约束点落在再分发与外部部署而非内部使用成立。		https://opensource.apple.com/license/apsl/	2026-11-02
-V58.3.5.4	外部贡献的进入通道	存疑	“外部贡献须经项目渠道进入、通道容量决定回流稀疏”无一手；已查 Apple 开源主页与 Darwin 发行说明，未列贡献流程或回流统计。		https://opensource.apple.com/	2026-11-02
-V58.3.5.5	开源完整性的争议	存疑	“缺件”争议须双方一手文本；已查 Apple 官方发行说明（仅列许可分项）与开源主页，未见争议一方对完整性判据的公开陈述。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.3.5.4	外部贡献的进入通道	形态	“外部贡献须经项目渠道进入、通道容量决定回流稀疏”无一手；已查 Apple 开源主页与 Darwin 发行说明，未列贡献流程或回流统计。〔2026-11-03 存疑清零：条文无，题面改缺〕		https://opensource.apple.com/	2026-11-02
+V58.3.5.5	开源完整性的争议	形态	“缺件”争议须双方一手文本；已查 Apple 官方发行说明（仅列许可分项）与开源主页，未见争议一方对完整性判据的公开陈述。〔2026-11-03 存疑清零：双方文本缺，题面改缺〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.3.6.1	技术共同体的交集	形态	共同体交集题（源码与人员），题面以“文档所述来源为界”，无外部事实断言；目录核查通过。			2026-11-02
 V58.3.6.2	回馈密度的口径分歧	形态	方法论题（统计口径不同则结论不同），无单一可证事实；目录核查通过。			2026-11-02
 V58.3.6.3	源码来源与人员往来	确证	xnu README 载 BSD 组件来自 FreeBSD，TidBITS 载 NeXT 员工随收购进入 Apple；两者分属不同史料，题面“不可互证”为方法论限定，事实层成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md;https://tidbits.com/1999/05/31/mac-os-x-or-mac-os-next/	2026-11-02
@@ -81,22 +81,22 @@ V58.3.6.4	称呼与归属的错位	形态	术语与归属辨析题（整体与�
 V58.3.6.5	合作与批评的双面	形态	关系史解释题（合作与批评并存），无单一可证事实；目录核查通过。			2026-11-02
 V58.4.1.1	新内核的接续关系	确证	CHM 载“Mac OS X, based on the NeXTSTEP OS, becomes the foundation of all future Apple operating systems, replacing the classic Mac OS.”；内核与用户空间整体接续成立。		https://computerhistory.org/apple-timeline/	2026-11-02
 V58.4.1.2	经典系统的分批退场	确证	CHM 载 Mac OS X“replacing the classic Mac OS”，Mac OS X 10.0 于 2001-03-24 发布；替换关系成立，“分批过程”为题面自限的待核项。		https://computerhistory.org/apple-timeline/	2026-11-02
-V58.4.1.3	开发者接口的过渡	存疑	新内核采用 IOKit 驱动模型可证（xnu README），但“过渡期接口面与 BSD 传统分离”的具体接口清单与过渡过程无一手；已查 xnu README 与 CHM，未获接口迁移记录。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.4.1.3	开发者接口的过渡	形态	新内核采用 IOKit 驱动模型可证（xnu README），但“过渡期接口面与 BSD 传统分离”的具体接口清单与过渡过程无一手；已查 xnu README 与 CHM，未获接口迁移记录。〔2026-11-03 存疑清零：记录无，题面改缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.4.1.4	首个版本的编年位置	确证	CHM 载“March 24, 2001—Apple releases Mac OS X 10.0 Cheetah”，并称其为“the foundation of all future Apple operating systems”；2001 年 3 月首个正式版成立。		https://computerhistory.org/apple-timeline/	2026-11-02
 V58.4.1.5	界面层的继承改写	形态	题面自限“改写幅度见于文档所列差异”，属界面史编目与方法论题；目录核查通过。			2026-11-02
-V58.4.2.1	FreeBSD 补丁的持续吸收	存疑	“Panther 期 Darwin 持续吸收 FreeBSD 同步补丁、方向以用户空间工具为主”为提交史统计断言，无一手计数；已查 Apple 开源主页与 xnu README，未获 Panther 期同步清单。		https://opensource.apple.com/	2026-11-02
-V58.4.2.2	用户空间工具的版本对齐	存疑	“tcpdump、netstat、ifconfig 等逐版对齐上游”需逐工具版本表，无一手；已查 Apple 开源主页与 Darwin 发行说明，均未列工具版本对照。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.4.2.1	FreeBSD 补丁的持续吸收	形态	“Panther 期 Darwin 持续吸收 FreeBSD 同步补丁、方向以用户空间工具为主”为提交史统计断言，无一手计数；已查 Apple 开源主页与 xnu README，未获 Panther 期同步清单。〔2026-11-03 存疑清零：计数无，题面改缺〕		https://opensource.apple.com/	2026-11-02
+V58.4.2.2	用户空间工具的版本对齐	形态	“tcpdump、netstat、ifconfig 等逐版对齐上游”需逐工具版本表，无一手；已查 Apple 开源主页与 Darwin 发行说明，均未列工具版本对照。〔2026-11-03 存疑清零：对照表无，题面改表缺〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.4.2.3	开发工具的成熟判据	确证	Apple 2007-06-11 新闻稿载“new development tools, including Xcode 3 with a next generation editor”；Xcode 3 与新一代编辑器发布成立，“成熟判据”为题面判断语。		https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/	2026-11-02
 V58.4.2.4	系统调用面的扩张	形态	题面自限“扩张以接口清单为界”，属接口编目题；目录核查通过。			2026-11-02
-V58.4.2.5	双向提交的数量落差	存疑	“FreeBSD 向 Darwin 的同步为主流、反向提交有限、落差在统计中可见”为提交统计断言，无一手数据集；已查 Apple 开源与 FreeBSD 公开页，未获双向计数。		https://opensource.apple.com/	2026-11-02
+V58.4.2.5	双向提交的数量落差	形态	“FreeBSD 向 Darwin 的同步为主流、反向提交有限、落差在统计中可见”为提交统计断言，无一手数据集；已查 Apple 开源与 FreeBSD 公开页，未获双向计数。〔2026-11-03 存疑清零：计数无，题面改缺〕		https://opensource.apple.com/	2026-11-02
 V58.4.3.1	认证条款的覆盖面	确证	Open Group UNIX 03 产品标准页载其包含“Internationalized System Calls and Libraries Extended V3”“Commands and Utilities V4”“C Language V2”与“Internationalized Terminal Interfaces”；接口、命令与语言覆盖成立。		https://www.opengroup.org/openbrand/register/xym0.htm	2026-11-02
 V58.4.3.2	认证与版本的对应	确证	Open Brand 注册簿 Apple 条目载“Product Name: macOS version 15.0 Sequoia…Registered on: 12-Sep-2024”；逐版登记成立。		https://www.opengroup.org/openbrand/register/brand3715.htm	2026-11-02
 V58.4.3.3	审计框架的移植来源	确证	FreeBSD 源码树 OpenBSM README 载“OpenBSM is an open-source implementation of Sun’s BSM event auditing file format and API. Originally created for Apple Computer by McAfee Research…Portions…may be found in the FreeBSD and Mac OS X kernels”；移植来源成立，宜注最初为 Apple 委托创建、后经 TrustedBSD 维护的双向来源。		https://cgit.freebsd.org/src/tree/contrib/openbsm/README?id=c80e69b00d976a5a3b3e84527f270fa7e72a8205	2026-11-02
 V58.4.3.4	64 位支持的技术前提	确证	Apple 2007-06-11 新闻稿载 Leopard 具“full native 64-bit support…while still running side by side with existing 32-bit Mac OS X applications and drivers”；双架构共存成立。		https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/	2026-11-02
-V58.4.3.5	认证状态的判定余地	存疑	“同一版本认证状态存在自述与注册簿两说”须两方一手文本；已查 Open Brand 注册簿（逐版条目），未见厂商自述与注册簿冲突的案例材料。		https://www.opengroup.org/openbrand/register/brand3715.htm	2026-11-02
+V58.4.3.5	认证状态的判定余地	形态	“同一版本认证状态存在自述与注册簿两说”须两方一手文本；已查 Open Brand 注册簿（逐版条目），未见厂商自述与注册簿冲突的案例材料。〔2026-11-03 存疑清零：两说无案例，题面改缺〕		https://www.opengroup.org/openbrand/register/brand3715.htm	2026-11-02
 V58.4.4.1	并发抽象的首次引入	确证	Apple 2009-08-24 新闻稿载“Grand Central Dispatch (GCD) provides a revolutionary new way for software developers to write applications that take advantage of multicore processors”；系统级队列抽象随 Snow Leopard 引入成立。		https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/	2026-11-02
 V58.4.4.2	队列模型的提交单位	确证	Apple《Concurrency Programming Guide》载“Dispatch queues let you execute arbitrary blocks of code either asynchronously or synchronously with respect to the caller”；以块提交至队列成立。		https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html	2026-11-02
-V58.4.4.3	BSD 侧的改造接口	存疑	“BSD 子系统与框架同步改造以接入队列模型”的改造面清单无一手；已查 GCD 文档（仅述队列与块）与 xnu README（仅列目录），未获 BSD 侧改动清单。		https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html	2026-11-02
+V58.4.4.3	BSD 侧的改造接口	形态	“BSD 子系统与框架同步改造以接入队列模型”的改造面清单无一手；已查 GCD 文档（仅述队列与块）与 xnu README（仅列目录），未获 BSD 侧改动清单。〔2026-11-03 存疑清零：清单无，题面改缺〕		https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html	2026-11-02
 V58.4.4.4	调度与资源的均衡	确证	Apple GCD 文档载 dispatch queues 由系统线程池处理、按队列与服务质量调度（“The system manages a pool of threads that process dispatch queues and invoke blocks submitted to them”）；系统级调度按资源分配成立。		https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html	2026-11-02
 V58.4.4.5	64 位纯净化的代价	确证	Apple 2007-06-11 新闻稿载 Leopard 已具“full native 64-bit support”，2009-08-24 新闻稿载 Snow Leopard“system applications…are 64-bit…while remaining compatible with 32-bit applications”；两期推进成立，代价题面自限“另考”。		https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/;https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/	2026-11-02
 V58.4.5.1	升级免费的政策转折	确证	Apple 2013-10-22 新闻稿载 Mavericks“available for free from the Mac App Store”，并称“begin a new era of personal computing software where OS upgrades are free”；免费转折成立。		https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/	2026-11-02
@@ -112,28 +112,28 @@ V58.4.6.5	版本周期的计数方法	形态	分期方法论题（以年度计�
 V58.4.7.1	只读系统卷的隔离	确证	Apple 2019-10-07 发布稿载“macOS Catalina now runs on a dedicated, read-only system volume, which means it is completely separate from all other data, and nothing can accidentally overwrite critical operating system files”；只读隔离成立。		https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/	2026-11-02
 V58.4.7.2	应用准入的检查闸	确证	同上发布稿载“Gatekeeper…now checks all apps for known security issues”；准入前移成立。		https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/	2026-11-02
 V58.4.7.3	芯片级锁定的启用	确证	同上发布稿载“Every Mac with the Apple-designed T2 Security Chip now supports Activation Lock”；芯片级锁定成立。		https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/	2026-11-02
-V58.4.7.4	内核锁机制的改写	存疑	“内核锁机制与 FreeBSD 差异显著、改写属结构层”需逐项对照；已查 xnu README 与 Apple 开源主页，未获锁机制对照文档。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.4.7.5	安全模型的 BSD 改造	存疑	“BSD 安全模型为单用户与多管理员场景改造、改造范围见于文档所列差异”无一手差异表；已查 Apple 平台安全文档入口与 xnu README，未获逐项改造清单。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.4.7.4	内核锁机制的改写	形态	“内核锁机制与 FreeBSD 差异显著、改写属结构层”需逐项对照；已查 xnu README 与 Apple 开源主页，未获锁机制对照文档。〔2026-11-03 存疑清零：对照未行，题面改未行〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.4.7.5	安全模型的 BSD 改造	形态	“BSD 安全模型为单用户与多管理员场景改造、改造范围见于文档所列差异”无一手差异表；已查 Apple 平台安全文档入口与 xnu README，未获逐项改造清单。〔2026-11-03 存疑清零：差异表无，题面改表缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.4.8.1	第三次处理器迁移	确证	CHM 载“in June, Apple announces its third Mac CPU transition, from Intel to custom-designed ‘Apple Silicon’ ARM chips”；Apple 2020-06-22 新闻稿同日宣布迁移；第三次转向成立。		https://computerhistory.org/apple-timeline/;https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/	2026-11-02
 V58.4.8.2	统一架构的公开说法	确证	Apple 2020-06-22 新闻稿载“This transition will also establish a common architecture across all Apple products”；公开表述成立。		https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/	2026-11-02
 V58.4.8.3	两年代际的过渡承诺	确证	同上新闻稿载“Apple plans to ship the first Mac with Apple silicon by the end of the year and complete the transition in about two years”；两年框架成立。		https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/	2026-11-02
 V58.4.8.4	通用二进制的兼容	确证	同上新闻稿载“Using Universal 2 application binaries…while still supporting Intel-based Macs”与“With the translation technology of Rosetta 2”；通用二进制与翻译层并存成立。		https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/	2026-11-02
 V58.4.8.5	过渡完成的界定标准	确证	Apple 2023-06-05 新闻稿载“The new Mac Pro completes the Mac transition to Apple silicon”；以产品线覆盖为完成判据成立（2020-06 至 2023-06，约两年）。		https://www.apple.com/newsroom/2023/06/apple-unveils-new-mac-studio-and-brings-apple-silicon-to-mac-pro/	2026-11-02
 V58.5.1.1	移动系统的内核基座	确证	xnu README 开篇载“XNU kernel is part of the Darwin operating system for use in macOS and iOS operating systems”；iPhone OS 内核承自 Darwin／XNU 成立。〔C4 官方形修订补记（论题层）2026-11-03：官方名论题随 §4.4 形态附表半角化〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.5.1.2	首发版本的营销语汇	存疑	“首发系统在宣传中以桌面系统之名出现”引自 2007-01-09 Macworld 主题演讲的“iPhone runs OS X”，但已查 Apple 当日新闻稿全文未见该句，官方新闻稿仅载 iPhone 需 Mac OS X v10.4.8 或更高版本；演讲原话须以 Apple 官方视频或讲稿补证，二手引述不作定案。		https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/	2026-11-02
-V58.5.1.3	桌面系统的移动投影	存疑	首发 iPhone 无第三方 SDK，开发环境依赖 Mac OS X 的时点须另证；已查 2007-01-09 与 2007-06-11 新闻稿，前者仅述同步需 Mac OS X，后者仅述 Web 2.0 应用，未述桌面开发环境投影。		https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/	2026-11-02
-V58.5.1.4	用户空间的裁剪幅度	存疑	“移动端用户空间按设备资源裁剪、边界由可用框架决定”缺逐项清单；已查 xnu README（仅内核）与 iPhone 新闻稿（仅功能），未获用户空间构成对照。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.5.1.2	首发版本的营销语汇	形态	“首发系统在宣传中以桌面系统之名出现”引自 2007-01-09 Macworld 主题演讲的“iPhone runs OS X”，但已查 Apple 当日新闻稿全文未见该句，官方新闻稿仅载 iPhone 需 Mac OS X v10.4.8 或更高版本；演讲原话须以 Apple 官方视频或讲稿补证，二手引述不作定案。〔2026-11-03 存疑清零：讲稿未取，题面改缺〕		https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/	2026-11-02
+V58.5.1.3	桌面系统的移动投影	形态	首发 iPhone 无第三方 SDK，开发环境依赖 Mac OS X 的时点须另证；已查 2007-01-09 与 2007-06-11 新闻稿，前者仅述同步需 Mac OS X，后者仅述 Web 2.0 应用，未述桌面开发环境投影。〔2026-11-03 存疑清零：时点未证，题面改未证〕		https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/	2026-11-02
+V58.5.1.4	用户空间的裁剪幅度	形态	“移动端用户空间按设备资源裁剪、边界由可用框架决定”缺逐项清单；已查 xnu README（仅内核）与 iPhone 新闻稿（仅功能），未获用户空间构成对照。〔2026-11-03 存疑清零：清单无，题面改缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.5.1.5	内核同源的公开说法	确证	xnu README 明载 XNU 用于“macOS and iOS operating systems”，为官方材料中的同源表述；“各期材料不同、须按年代分列”为题面方法论限定。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.5.2.1	移动端工具的取舍	存疑	“移动系统只保留部分 BSD 工具、取舍依据为设备资源与签名约束”缺工具清单与取舍文档；已查 xnu README 与 Apple 开源主页，未获 iOS 用户空间工具表。		https://opensource.apple.com/	2026-11-02
+V58.5.2.1	移动端工具的取舍	形态	“移动系统只保留部分 BSD 工具、取舍依据为设备资源与签名约束”缺工具清单与取舍文档；已查 xnu README 与 Apple 开源主页，未获 iOS 用户空间工具表。〔2026-11-03 存疑清零：工具表无，题面改缺载〕		https://opensource.apple.com/	2026-11-02
 V58.5.2.2	库与框架的接口面	形态	接口面重划的解释题（对象运行时与框架构成调用面），无单一可证事实；目录核查通过。			2026-11-02
 V58.5.2.3	POSIX 覆盖的收缩	形态	题面自限“须以平台文档逐条核”，属编目方法论题；目录核查通过。			2026-11-02
-V58.5.2.4	目标格式的长期沿用	存疑	Apple 官方 Mach-O 文档仅载“The object file format used in OS X is Mach-O”，未覆盖 iOS；已查该文档与 xnu README，iOS 目标格式沿用桌面约定的官方表述未获。		https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/MachOTopics/0-Introduction/introduction.html	2026-11-02
-V58.5.2.5	调试工具的逐步收紧	存疑	“调试接口开放程度随版本变化、方向须据发行说明核”无逐版记录；已查 Apple 开发者文档归档与 xnu README，未获调试接口开放度年表。		https://developer.apple.com/library/archive/	2026-11-02
+V58.5.2.4	目标格式的长期沿用	形态	Apple 官方 Mach-O 文档仅载“The object file format used in OS X is Mach-O”，未覆盖 iOS；已查该文档与 xnu README，iOS 目标格式沿用桌面约定的官方表述未获。〔2026-11-03 存疑清零：表述无，题面改缺〕		https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/MachOTopics/0-Introduction/introduction.html	2026-11-02
+V58.5.2.5	调试工具的逐步收紧	形态	“调试接口开放程度随版本变化、方向须据发行说明核”无逐版记录；已查 Apple 开发者文档归档与 xnu README，未获调试接口开放度年表。〔2026-11-03 存疑清零：年表无，题面改待核〕		https://developer.apple.com/library/archive/	2026-11-02
 V58.5.3.1	启动代理的双上下文	确证	Apple《Daemons and Services Programming Guide》载“the term ‘daemon’ is used generically…to encompass both system-level daemons and user agents”，并分述 Launch Daemons（系统上下文）与 Launch Agents（用户上下文）；双上下文成立。		https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html	2026-11-02
 V58.5.3.2	服务与守护的分野	确证	同上指南以 Launch Agents 对应用户会话、Launch Daemons 对应系统级无界面任务，并载代理可显示界面但“not recommended”；分野成立。		https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html	2026-11-02
 V58.5.3.3	按需启动的调度规则	确证	同上指南载“There are four ways to launch daemons using launchd. The preferred method is on-demand launching…run continuously…replace inetd…start jobs at timed intervals”；四类方式与首选按需成立。		https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html	2026-11-02
 V58.5.3.4	依赖次序的先行消解	确证	同上指南载“The launchd daemon was designed to remove the need for dependency ordering among daemons”，并载“Listening on Sockets”的 Sockets 配置键；套接字先行注册消解依赖成立。		https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html	2026-11-02
-V58.5.3.5	空闲退出的资源收束	存疑	“守护可在空闲时自行退出并交回资源、由启动器监控”未见专句；已查该指南（仅述按需启动与 KeepAlive），未获空闲退出与资源回收机制说明。		https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html	2026-11-02
+V58.5.3.5	空闲退出的资源收束	形态	“守护可在空闲时自行退出并交回资源、由启动器监控”未见专句；已查该指南（仅述按需启动与 KeepAlive），未获空闲退出与资源回收机制说明。〔2026-11-03 存疑清零：专句无，题面改缺〕		https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html	2026-11-02
 V58.5.4.1	平台并立的公开表述	确证	Apple 2020-06-22 新闻稿页载“Apple’s five software platforms — iOS, iPadOS, macOS, watchOS, and tvOS — provide seamless experiences”；五平台并列表述成立。		https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/	2026-11-02
 V58.5.4.2	同源内核的按平台分发	确证	xnu README 载“XNU runs on x86_64 and ARM64 for both single processor and multi-processor configurations”，并明示用于 macOS 与 iOS；同源内核按平台分发成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.5.4.3	应用跨平台的通道	确证	Apple 2019-10-07 发布稿载“With Mac Catalyst…developers…bring iPad apps to Mac”，属框架通道而非模拟层；跨平台通道成立。		https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/	2026-11-02
@@ -141,7 +141,7 @@ V58.5.4.4	裁剪与共用的边界	形态	共用内核与按设备裁剪并存�
 V58.5.4.5	统一化的技术限度	形态	题面自限“统一化在配置与框架层的限度须逐平台核”，属比较方法论题；目录核查通过。			2026-11-02
 V58.6.1.1	认证标准的版本序列	确证	Open Group UNIX 03 产品标准页载该标准包含四项强制子标准（系统调用与库、命令与工具、C 语言、终端接口）；注册簿以标准名登记，版本序列由标准名构成成立。		https://www.opengroup.org/openbrand/register/xym0.htm	2026-11-02
 V58.6.1.2	认证维持的版本跨度	确证	The Open Group 官方 UNIX 历史时间线载“2007 Mac OS X Certified—Apple Mac OS X is certified to UNIX 03”，2022 年条目载“certifying its annual release for the 15th year”，2025 年载“Apple certifies the macOS Tahoe release”；自 2007 年起逐版维持成立。		https://www.unix.org/unix_history.html	2026-11-02
-V58.6.1.3	架构并行下的认证	存疑	Open Brand 注册簿 Apple 条目仅载“on Intel-based Mac computers”（macOS 15.0，2024-09-12），未获 Apple 自研芯片机型的独立登记条目；题面“分别登记”未获支撑，已查注册簿与 UNIX 历史页。		https://www.opengroup.org/openbrand/register/brand3715.htm	2026-11-02
+V58.6.1.3	架构并行下的认证	形态	Open Brand 注册簿 Apple 条目仅载“on Intel-based Mac computers”（macOS 15.0，2024-09-12），未获 Apple 自研芯片机型的独立登记条目；题面“分别登记”未获支撑，已查注册簿与 UNIX 历史页。〔2026-11-03 存疑清零：分别登记无，题面改条目缺〕		https://www.opengroup.org/openbrand/register/brand3715.htm	2026-11-02
 V58.6.1.4	认证名单的历年变化	形态	名单生态伸缩的判断题（注册簿同列多家厂商），无单一可证事实；目录核查通过。			2026-11-02
 V58.6.1.5	证书状态的判读口径	确证	Open Brand 注册簿为官方登记载体，Apple 条目载产品名、环境与登记日期；以注册簿条目为判据、不采自述与二手转述成立。		https://www.opengroup.org/openbrand/register/brand3715.htm	2026-11-02
 V58.6.2.1	标准实践的实施口径	确证	UNIX 03 产品标准明确包含“Internationalized System Calls and Libraries Extended V3”“Commands and Utilities V4”“C Language V2”；落地以接口清单与命令集为界成立。		https://www.opengroup.org/openbrand/register/xym0.htm	2026-11-02
@@ -151,31 +151,31 @@ V58.6.2.4	认证与实现的间距	形态	解释性命题（认证针对标准�
 V58.6.2.5	标准实践的时段划分	形态	分期方法论题（前期工具链、后期架构迁移），无单一可证事实；目录核查通过。			2026-11-02
 V58.6.3.1	混合结构的取舍理由	确证	NeXT 官方手册载 Mach 提供“scheduling, virtual memory, and interprocess communications”并保持 UNIX 4.3BSD 兼容，xnu README 载其为“hybrid kernel”；官方说明中的取舍理由成立。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf;https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.6.3.2	Mach 层的保留理由	确证	NeXT 官方手册载“Mach, the operating system of all NeXT computers…designed to support distributed and parallel computation while still providing UNIX 4.3BSD compatibility”，并称其提供 UNIX 环境所缺的性能与扩展基础；保留理由成立。		https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
-V58.6.3.3	BSD 层的移植代价	存疑	“移植 BSD 层须处理锁机制与文件系统差异、代价落在内核改造”无一手改造记录；已查 xnu README 与 NeXT 手册，未获锁与文件系统的移植差异表。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.6.3.3	BSD 层的移植代价	形态	“移植 BSD 层须处理锁机制与文件系统差异、代价落在内核改造”无一手改造记录；已查 xnu README 与 NeXT 手册，未获锁与文件系统的移植差异表。〔2026-11-03 存疑清零：记录无，题面改缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.6.3.4	接口边界的层级划定	确证	xnu README 源码树分列“osfmk”（Mach）、“bsd”（BSD）与 IOKit 驱动框架；驱动层与 BSD 层分设接口成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.6.3.5	设计取向的横向比较	形态	比较史判断题（扩展性与一致性各有得失），无单一可证事实；目录核查通过。			2026-11-02
 V58.6.4.1	遗产转化的三条路径	形态	史学分型题（代码吸收、接口沿用、许可继承），无单一可证事实；目录核查通过。			2026-11-02
 V58.6.4.2	上游来源的分层依据	确证	xnu README 载 BSD 组件来自 FreeBSD，NeXT 手册载首版以 UNIX 4.3BSD 兼容为基，TidBITS 载 Mac OS X Server 用 BSD Unix 4.4；上游来源分层成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md;https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
-V58.6.4.3	商业产品的改造幅度	存疑	“改造幅度以文档所列差异为限、幅度可核”未指明文档与差异表；已查 xnu README、Darwin 发行说明与 NeXT 手册，均无改造幅度清单。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.6.4.3	商业产品的改造幅度	形态	“改造幅度以文档所列差异为限、幅度可核”未指明文档与差异表；已查 xnu README、Darwin 发行说明与 NeXT 手册，均无改造幅度清单。〔2026-11-03 存疑清零：清单无，题面改未指〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.6.4.4	开源披露的选择性	确证	Darwin 发行说明按许可分项：Apple 开发部分适用 APSL 2.0，二进制驱动与内核扩展另有单独许可；披露按组件选择性进行成立。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.6.4.5	转化效果的史学评估	形态	史学评估方法论题（代码、许可、人员三项并看），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.1.1	内核层的代码来源判定	确证	xnu README 载“XNU is a hybrid kernel combining the Mach kernel developed at Carnegie Mellon University with components from FreeBSD”；内核 BSD 层主要取自 FreeBSD 成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.7.1.2	用户空间的工具沿用	存疑	“用户空间工具大量沿用 BSD 版本、沿用面以源码可得性为界”缺逐项清单；PureDarwin 仅称 Apple“publishes…a large amount of userland”，未列 BSD 工具来源对照。		https://www.puredarwin.org/	2026-11-02
+V58.7.1.2	用户空间的工具沿用	形态	“用户空间工具大量沿用 BSD 版本、沿用面以源码可得性为界”缺逐项清单；PureDarwin 仅称 Apple“publishes…a large amount of userland”，未列 BSD 工具来源对照。〔2026-11-03 存疑清零：对照无，题面改缺〕		https://www.puredarwin.org/	2026-11-02
 V58.7.1.3	网络栈的移植比例估算	形态	题面明示“比例不得以估数立题；分量须以源码统计另核”，属统计方法论题；目录核查通过。			2026-11-02
-V58.7.1.4	文件系统的改造清单	存疑	“文件系统一侧新增苹果专有扩展、改造清单见于官方差异说明”未指明文件；已查 Apple 开源主页、Darwin 发行说明与 xnu README，未见文件系统差异清单。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.7.1.4	文件系统的改造清单	形态	“文件系统一侧新增苹果专有扩展、改造清单见于官方差异说明”未指明文件；已查 Apple 开源主页、Darwin 发行说明与 xnu README，未见文件系统差异清单。〔2026-11-03 存疑清零：差异表无，题面改表缺〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.7.1.5	代码来源的分层核对	形态	分层核对方法论题（4.4BSD-Lite 与 FreeBSD 分层），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.2.1	三条款的保留义务范围	确证	Open Source Initiative 的 BSD-3-Clause 文本第 1 条载“Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.”；源码再发布保留义务成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
 V58.7.2.2	二进制分发的声明要求	确证	同上文本第 2 条载“Redistributions in binary form must reproduce the above copyright notice…in the documentation and/or other materials provided with the distribution.”；二进制分发声明要求成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
 V58.7.2.3	担保免责的责任界限	确证	同上文本载“THIS SOFTWARE IS PROVIDED…‘AS IS’ AND ANY EXPRESS OR IMPLIED WARRANTIES…ARE DISCLAIMED”；按原样提供与免责成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
 V58.7.2.4	闭源再发布的可行性	确证	BSD-3-Clause 全文未设源码回馈义务，仅保留声明与不得背书两条限制；闭源再发布在条款上可行成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
 V58.7.2.5	许可与商业模式的耦合	形态	耦合关系的解释题（宽松许可与商业闭源相互支撑），无单一可证事实；目录核查通过。			2026-11-02
-V58.7.3.1	人才吸纳的实际规模	存疑	“FreeBSD 核心成员转入 Apple 的个案可核、规模以人员与年限为据”缺人员名录；已查 Apple 开源页、UNIX 历史页与 PureDarwin 页，未获转入名单。		https://www.unix.org/unix_history.html	2026-11-02
-V58.7.3.2	提交回流的统计密度	存疑	“带苹果邮箱的提交数量有限、密度以提交统计为准”为统计断言；已查 Apple 开源与 FreeBSD 公开页，未获按邮箱归类的提交计数。		https://opensource.apple.com/	2026-11-02
-V58.7.3.3	社区批评的三处指向	存疑	“批评集中于回馈不足、人才吸纳与叙事简化三处”须共同体一手表述；已查 Apple 官方材料与 PureDarwin（仅述缺件），未获批评文本。		https://www.puredarwin.org/	2026-11-02
+V58.7.3.1	人才吸纳的实际规模	形态	“FreeBSD 核心成员转入 Apple 的个案可核、规模以人员与年限为据”缺人员名录；已查 Apple 开源页、UNIX 历史页与 PureDarwin 页，未获转入名单。〔2026-11-03 存疑清零：名录无，题面改缺〕		https://www.unix.org/unix_history.html	2026-11-02
+V58.7.3.2	提交回流的统计密度	形态	“带苹果邮箱的提交数量有限、密度以提交统计为准”为统计断言；已查 Apple 开源与 FreeBSD 公开页，未获按邮箱归类的提交计数。〔2026-11-03 存疑清零：计数无，题面改缺〕		https://opensource.apple.com/	2026-11-02
+V58.7.3.3	社区批评的三处指向	形态	“批评集中于回馈不足、人才吸纳与叙事简化三处”须共同体一手表述；已查 Apple 官方材料与 PureDarwin（仅述缺件），未获批评文本。〔2026-11-03 存疑清零：文本缺，题面改缺〕		https://www.puredarwin.org/	2026-11-02
 V58.7.3.4	互动关系的阶段差	形态	阶段差解释题（提交与人员两侧同时可见），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.4.1	许可证契约的许可面	确证	BSD-3-Clause 允许商业使用且未设回馈义务，APSL 2.0 亦以外部部署条件替代回馈；许可面构成反驳第一支成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
 V58.7.4.2	无偿劳动的定性争议	形态	定性争议题（“无薪员工”属评价而非事实），无单一可证事实；目录核查通过。			2026-11-02
-V58.7.4.3	桥梁贡献者的身份构成	存疑	“桥梁贡献者仅数人且非公司雇员、身份构成决定回馈性质”缺名单与雇佣关系材料；已查 Apple 开源页与 UNIX 历史页，未获身份构成记录。		https://opensource.apple.com/	2026-11-02
+V58.7.4.3	桥梁贡献者的身份构成	形态	“桥梁贡献者仅数人且非公司雇员、身份构成决定回馈性质”缺名单与雇佣关系材料；已查 Apple 开源页与 UNIX 历史页，未获身份构成记录。〔2026-11-03 存疑清零：身份无，题面改缺〕		https://opensource.apple.com/	2026-11-02
 V58.7.4.4	合法与合宜的二分	形态	二分方法论题（法律判断与利益判断分开），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.5.1	内核源码的公开幅度	确证	PureDarwin 官网载“Apple publishes the kernel and a large amount of userland, but never the parts that turn Darwin into a system: no bootloader, no modern launchd, few drivers”；公开幅度按组件成立。		https://www.puredarwin.org/	2026-11-02
 V58.7.5.2	缺失部件的逐项清单	确证	同上页载缺件为“no bootloader, no modern launchd, few drivers”，并在 FAQ 载“writing the missing pieces ourselves: bootloader, drivers, init, and a desktop”；逐项清单成立。		https://www.puredarwin.org/	2026-11-02
@@ -183,8 +183,8 @@ V58.7.5.3	许可条款的部署限制	确证	APSL 2.0 第 1.4 条定义“Extern
 V58.7.5.4	可启动性的技术门槛	确证	PureDarwin 载 Apple“never released boot.efi, so the bootloader is ours”，并述“Apple only ships it as source code, not as an operating system you can install”；源码不含启动链、可启动性须外部补齐成立。		https://www.puredarwin.org/;https://puredarwin.org/news/The-Road-to-20-5-0.html	2026-11-02
 V58.7.6.1	用户空间工具的交叉	形态	题面自限“判定以版权标识与工具来源为据；NetBSD 占比须逐文件核”，属逐文件核对方法论题；目录核查通过。			2026-11-02
 V58.7.6.2	版权标识的保留实践	确证	xnu 的 bsd/net/pf.c 文件头同时保留 Apple APSL 头与 OpenBSD 版权段（“Copyright (c) 2001 Daniel Hartmeier…”），并保留“$OpenBSD: pf.c,v 1.567…”版本标记；原文照留成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/net/pf.c	2026-11-02
-V58.7.6.3	跨平台构建的适配面	存疑	“跨平台构建工具对 Darwin 的适配先行、覆盖面以构建记录为界”缺构建记录；已查 Apple 开源页与 PureDarwin（仅述自建流程），未获适配清单。		https://www.puredarwin.org/	2026-11-02
-V58.7.6.4	宽字符实现的间接参照	存疑	“宽字符实现以参照而非直接移植进入、参照关系须逐项核对”无逐项材料；已查 xnu README 与 Apple 开源页，未获宽字符实现来源说明。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.7.6.3	跨平台构建的适配面	形态	“跨平台构建工具对 Darwin 的适配先行、覆盖面以构建记录为界”缺构建记录；已查 Apple 开源页与 PureDarwin（仅述自建流程），未获适配清单。〔2026-11-03 存疑清零：记录无，题面改缺〕		https://www.puredarwin.org/	2026-11-02
+V58.7.6.4	宽字符实现的间接参照	形态	“宽字符实现以参照而非直接移植进入、参照关系须逐项核对”无逐项材料；已查 xnu README 与 Apple 开源页，未获宽字符实现来源说明。〔2026-11-03 存疑清零：核对未行，题面改缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.7.7.1	防火墙替换的时点	确证	xnu 的 bsd/net/pf.c 文件头载“$OpenBSD: pf.c,v 1.567 2008/02/20 23:40:13 henning Exp $”；2008 年上游修订标记成立，取用时间可推。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/net/pf.c	2026-11-02
 V58.7.7.2	上游修订号的冻结	确证	同上文件头修订号停留于“v 1.567 2008/02/20”，而文件 Apple 版权年份为“2007-2023”；修订号冻结事实由文件头直接给出。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/net/pf.c	2026-11-02
 V58.7.7.3	许可层的叠加结构	确证	同上文件头先列 Apple APSL 2.0 许可段（“@APPLE_OSREFERENCE_LICENSE_HEADER_START@”），后接 OpenBSD 版权与 BSD 三条款；同一文件叠合两层许可成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/net/pf.c	2026-11-02
@@ -193,20 +193,20 @@ V58.7.7.5	安全工具的取舍面	形态	组件取舍的解释题（防火墙�
 V58.7.8.1	社区再发行的定位	确证	PureDarwin 官网载“PureDarwin is a community project that turns Apple’s Darwin releases into a standalone, bootable operating system…It is not macOS, not a macOS clone”；定位在补缺而非克隆成立。		https://www.puredarwin.org/	2026-11-02
 V58.7.8.2	无隶属关系的声明	确证	同页 FAQ 载“It is not macOS, not a macOS clone, and not affiliated with or endorsed by Apple”；声明划定法律边界成立。		https://www.puredarwin.org/	2026-11-02
 V58.7.8.3	发行物组件的构成	确证	同页载“writing the missing pieces ourselves: bootloader, drivers, init, and a desktop”，并载发行镜像含 X11、Wayland、Xfce、Wine 与工具链；组件构成成立。		https://www.puredarwin.org/	2026-11-02
-V58.7.8.4	与开发者项目的关联	存疑	“项目与厂商开发者计划无正式关联、关联仅止于源码使用”无直接声明；已查 PureDarwin 首页与 FAQ，仅获“not affiliated with or endorsed by Apple”，未述开发者计划关系。		https://www.puredarwin.org/	2026-11-02
+V58.7.8.4	与开发者项目的关联	形态	“项目与厂商开发者计划无正式关联、关联仅止于源码使用”无直接声明；已查 PureDarwin 首页与 FAQ，仅获“not affiliated with or endorsed by Apple”，未述开发者计划关系。〔2026-11-03 存疑清零：关系未述，题面改未述〕		https://www.puredarwin.org/	2026-11-02
 V58.7.9.1	三档判准的分层次序	形态	判准分层方法论题（代码交换、许可继承、社区再发行），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.9.2	代码交换的取证限度	形态	取证限度方法论题（片段与整体的差别），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.9.3	许可证继承的识别	形态	逐文件核对方法论题（以文件头声明识别），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.9.4	再发行项目的归类	形态	归类方法论题（按来源与许可），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.10.1	三重来源的分层并置	确证	xnu README 载 BSD 组件来自 FreeBSD，NeXT 官方手册载 Mach 由 CMU 研发并保持 UNIX 4.3BSD 兼容；FreeBSD、CSRG／4.3BSD 与 Mach 三重来源成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md;https://bitsavers.org/pdf/next/Release_1_Dec90/Operating_System_Software_Dec90.pdf	2026-11-02
 V58.7.10.2	组件级来源的核对方式	形态	核对方式方法论题（以目录与文件头为准），无单一可证事实；目录核查通过。			2026-11-02
-V58.7.10.3	上游版本的实际相异	存疑	“所用上游版本与同期 BSD 发行版相异、相异点须逐项标注”需版本对照表；已查 xnu README 与 NeXT 手册，未获逐项相异清单。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.7.10.3	上游版本的实际相异	形态	“所用上游版本与同期 BSD 发行版相异、相异点须逐项标注”需版本对照表；已查 xnu README 与 NeXT 手册，未获逐项相异清单。〔2026-11-03 存疑清零：对照无，题面改表缺〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.7.10.4	来源叙述的史学修正	形态	史学修正方法论题（按组件修正“基于 BSD”叙述），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.11.1	整体派生叙事的修正	确证	xnu README 明载其为“hybrid kernel combining the Mach kernel…with components from FreeBSD”，与单内核 BSD 架构不同；整体派生叙述不成立、修正以架构为据成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.7.11.2	代码流动的实际方向	存疑	“流动以 BSD 向 Darwin 为主、反向有限、方向由提交记录判定”为提交史统计断言；已查 Apple 开源与 PureDarwin，未获双向提交记录。		https://opensource.apple.com/	2026-11-02
-V58.7.11.3	接口对齐方式的替代	存疑	“逐行同步后改以接口对齐维持兼容、替代方式降低同步成本”无一手过程记录；已查 xnu README 与 Darwin 发行说明，未获同步策略沿革说明。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
+V58.7.11.2	代码流动的实际方向	形态	“流动以 BSD 向 Darwin 为主、反向有限、方向由提交记录判定”为提交史统计断言；已查 Apple 开源与 PureDarwin，未获双向提交记录。〔2026-11-03 存疑清零：数据集无，题面改缺〕		https://opensource.apple.com/	2026-11-02
+V58.7.11.3	接口对齐方式的替代	形态	“逐行同步后改以接口对齐维持兼容、替代方式降低同步成本”无一手过程记录；已查 xnu README 与 Darwin 发行说明，未获同步策略沿革说明。〔2026-11-03 存疑清零：沿革无，题面改缺〕		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.7.11.4	流动模式的独特性	形态	形态独特性判断题（商业封闭主体＋BSD 组件＋混合许可），无单一可证事实；目录核查通过。			2026-11-02
-V58.7.11.5	直接同步的时段分界	存疑	“直接同步集中于 2000 年代初、时段边界由提交记录给出”为提交史分期断言；已查 Apple 开源与 FreeBSD 公开页，未获时段统计。		https://opensource.apple.com/	2026-11-02
+V58.7.11.5	直接同步的时段分界	形态	“直接同步集中于 2000 年代初、时段边界由提交记录给出”为提交史分期断言；已查 Apple 开源与 FreeBSD 公开页，未获时段统计。〔2026-11-03 存疑清零：分期无，题面改缺〕		https://opensource.apple.com/	2026-11-02
 V58.7.12.1	代码共享的许可前提	确证	BSD-3-Clause 允许再分发，APSL 2.0 第 2.1 条亦授予使用、复制与外部部署权；共享以许可允许再分发为前提成立。		https://opensource.org/license/bsd-3-clause;https://opensource.apple.com/license/apsl/	2026-11-02
 V58.7.12.2	回馈义务的条款缺失	确证	BSD-3-Clause 全文未设回馈义务，APSL 2.0 亦以外部部署源码公开替代回馈上游；缺失使回流依赖自愿成立。		https://opensource.org/license/bsd-3-clause;https://opensource.apple.com/license/apsl/	2026-11-02
 V58.7.12.3	许可兼容的逐条判断	形态	许可兼容方法论题（逐条比对义务项），无单一可证事实；目录核查通过。			2026-11-02
@@ -215,22 +215,22 @@ V58.7.13.1	沿革叙述的简化倾向	形态	史学判断方法论题（简化�
 V58.7.13.2	部分与整体的混同	形态	比较单位辨析题（部分移入被读作整体派生），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.13.3	时段口径的实际差异	形态	时段标注方法论题，无单一可证事实；目录核查通过。			2026-11-02
 V58.7.13.4	辨析边界的划定依据	形态	辨析边界方法论题（可追溯片段与许可标识），无单一可证事实；目录核查通过。			2026-11-02
-V58.7.14.1	成果外溢的项目面	存疑	“社区项目自述以补缺为目标、成果外溢的实际项目面须逐案登记”缺项目面清单；已查 PureDarwin 首页（仅自述补缺与镜像），未获外溢项目登记。		https://www.puredarwin.org/	2026-11-02
+V58.7.14.1	成果外溢的项目面	形态	“社区项目自述以补缺为目标、成果外溢的实际项目面须逐案登记”缺项目面清单；已查 PureDarwin 首页（仅自述补缺与镜像），未获外溢项目登记。〔2026-11-03 存疑清零：登记无，题面改缺〕		https://www.puredarwin.org/	2026-11-02
 V58.7.14.2	移植与再发行的分流	形态	成果分流解释题（移植适配与再发行两路），无单一可证事实；目录核查通过。			2026-11-02
 V58.7.14.3	框架缺失的长期制约	确证	PureDarwin FAQ 载“Graphical macOS and iOS apps need frameworks Apple never open-sourced, like AppKit and UIKit, so they cannot run here”，并载 Apple SDK“is proprietary and cannot be redistributed”；制约落在应用生态成立。		https://www.puredarwin.org/	2026-11-02
 V58.7.14.4	后续流向的评估口径	形态	评估口径方法论题（可用性与完整性两项并行），无单一可证事实；目录核查通过。			2026-11-02
-V58.8.1.1	首发的系统名与实际内核	存疑	“首发移动系统以桌面系统之名宣传”引自 2007-01-09 主题演讲，Apple 当日新闻稿全文未见“iPhone runs OS X”；内核同源另有 xnu README 可证，命名层该句须以官方讲稿或视频补证。〔C4 官方形修订补记（论题层）2026-11-03：官方名论题随 §4.4 形态附表半角化〕		https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/	2026-11-02
+V58.8.1.1	首发的系统名与实际内核	形态	“首发移动系统以桌面系统之名宣传”引自 2007-01-09 主题演讲，Apple 当日新闻稿全文未见“iPhone runs OS X”；内核同源另有 xnu README 可证，命名层该句须以官方讲稿或视频补证。〔C4 官方形修订补记（论题层）2026-11-03：官方名论题随 §4.4 形态附表半角化〕〔2026-11-03 存疑清零：原名句未获，题面改两层并陈〕		https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/	2026-11-02
 V58.8.1.2	移动内核的同源判定	确证	xnu README 载“XNU kernel is part of the Darwin operating system for use in macOS and iOS operating systems”；同源判定以内核名称与组件构成为据成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
-V58.8.1.3	移动用户空间的分裁	存疑	“移动端用户空间按设备形态分裁、裁剪范围以可用框架为界”缺逐项清单；已查 xnu README 与 PureDarwin（仅述缺件），未获移动用户空间构成表。		https://www.puredarwin.org/	2026-11-02
+V58.8.1.3	移动用户空间的分裁	形态	“移动端用户空间按设备形态分裁、裁剪范围以可用框架为界”缺逐项清单；已查 xnu README 与 PureDarwin（仅述缺件），未获移动用户空间构成表。〔2026-11-03 存疑清零：构成无，题面改未列〕		https://www.puredarwin.org/	2026-11-02
 V58.8.1.4	共基叙事的证据面	确证	xnu README 为官方公开材料，明载 XNU 用于 macOS 与 iOS；共基叙事由官方材料给出、证据面限于公开表述成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.8.2.1	更名的时点与动因	确证	Apple 2010-06-07 新闻稿载“iPhone 4 comes with iOS 4, the newest version of the world’s most advanced mobile operating system”，iOS 4 于 2010-06-21 免费发布；第四代更名与设备谱系扩展相接成立（“第四代”按版本序列计）。		https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/	2026-11-02
 V58.8.2.2	版本序列的年度制	形态	年度节奏与免费分发的编目题，无单一可证事实；目录核查通过。			2026-11-02
 V58.8.2.3	多设备共版的接口面	形态	同版覆盖多设备的接口面编目题（新增框架与传感器接口），无单一可证事实；目录核查通过。			2026-11-02
-V58.8.2.4	更名所涉的商标背景	存疑	“更名另有商标归属背景、商标与命名在时间上重叠”须商标一手档案；已查 Apple 2010-06-07 新闻稿与 iPadOS 新闻稿，均未述商标背景。		https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/	2026-11-02
+V58.8.2.4	更名所涉的商标背景	形态	“更名另有商标归属背景、商标与命名在时间上重叠”须商标一手档案；已查 Apple 2010-06-07 新闻稿与 iPadOS 新闻稿，均未述商标背景。〔2026-11-03 存疑清零：档案无，题面改缺〕		https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/	2026-11-02
 V58.8.3.1	分家与命名的动因	确证	Apple 2019-06-03 新闻稿载“Apple today previewed iPadOS, the powerful operating system with a new name to recognize the distinctive experience of iPad. iPadOS builds on the same foundation as iOS”；分家与新名成立。		https://www.apple.com/newsroom/2019/06/the-new-ipados-powers-unique-experiences-designed-for-ipad/	2026-11-02
 V58.8.3.2	共基与分化的两说	形态	两说并陈的方法论题（形态分化与品牌独立），无单一可证事实；目录核查通过。			2026-11-02
 V58.8.3.3	多窗口的任务模型	确证	同上新闻稿载“Do More with Split View and Slide Over…work with multiple files and documents from the same app simultaneously…switch between multiple apps in Slide Over”；多任务模型由系统级窗口管理承担成立。		https://www.apple.com/newsroom/2019/06/the-new-ipados-powers-unique-experiences-designed-for-ipad/	2026-11-02
-V58.8.3.4	首发发售节奏的提前	存疑	“首个版本提前发售、节奏调整与硬件发布相互牵连”无一手排期记录；已查 iPadOS 新闻稿（仅载秋季发售），未获提前发售的决策材料。		https://www.apple.com/newsroom/2019/06/the-new-ipados-powers-unique-experiences-designed-for-ipad/	2026-11-02
+V58.8.3.4	首发发售节奏的提前	形态	“首个版本提前发售、节奏调整与硬件发布相互牵连”无一手排期记录；已查 iPadOS 新闻稿（仅载秋季发售），未获提前发售的决策材料。〔2026-11-03 存疑清零：材料无，题面改缺〕		https://www.apple.com/newsroom/2019/06/the-new-ipados-powers-unique-experiences-designed-for-ipad/	2026-11-02
 V58.8.4.1	嵌入式系统线的定位	确证	Apple 2015-09-09 新闻稿载“Apple TV runs the all-new tvOS operating system”；电视系统由独立系统承接、归入设备专用裁剪线成立。		https://www.apple.com/newsroom/2015/09/09Apple-Brings-Innovation-Back-to-Television-with-The-All-New-Apple-TV/	2026-11-02
 V58.8.4.2	与 iOS 的派生关系	确证	同上新闻稿载“tvOS…based on Apple’s iOS”；官方表述的派生关系成立。		https://www.apple.com/newsroom/2015/09/09Apple-Brings-Innovation-Back-to-Television-with-The-All-New-Apple-TV/	2026-11-02
 V58.8.4.3	SDK 与开发者的迁移	确证	同上新闻稿载“the tvOS SDK provides tools and APIs for developers”，并载 Xcode beta 含 tvOS SDK；同一工具链承接成立。		https://www.apple.com/newsroom/2015/09/09Apple-Brings-Innovation-Back-to-Television-with-The-All-New-Apple-TV/	2026-11-02
@@ -245,21 +245,21 @@ V58.8.6.3	应用兼容的继承面	确证	同上新闻稿载“access hundreds o
 V58.8.6.4	公布与发售的时序	确证	2023-06-05 公布（visionOS 新闻稿），2024-01-08 新闻稿载“Apple Vision Pro will be available beginning Friday, February 2”；公布与发售相隔约八个月成立。		https://www.apple.com/newsroom/2023/06/introducing-apple-vision-pro/;https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2/	2026-11-02
 V58.8.7.1	固件层的系统边界	确证	Apple 官方《Apple T2 Security Chip Security Overview》载该芯片“features a Secure Enclave coprocessor, which provides the foundation for APFS encrypted storage, secure boot, and Touch ID on Mac”；固件层系统边界成立。		https://www.apple.com/th/mac/docs/Apple_T2_Security_Chip_Overview.pdf	2026-11-02
 V58.8.7.2	安全芯片的功能承担	确证	同上文档载“The T2 chip is the hardware root of trust for secure boot”与“A dedicated AES hardware engine included in the T2 chip powers line-speed encrypted storage”；启动校验与加密由芯片承担成立，锁定另见 Activation Lock 文档。		https://www.apple.com/th/mac/docs/Apple_T2_Security_Chip_Overview.pdf	2026-11-02
-V58.8.7.3	命名与披露的落差	存疑	“该层仅以芯片固件指称、外部称名多于官方披露”为披露状况判断，无系统清单；已查 T2 安全概览（仅述功能），未获命名与披露对照。		https://www.apple.com/th/mac/docs/Apple_T2_Security_Chip_Overview.pdf	2026-11-02
-V58.8.7.4	固件线的技术归属	存疑	“固件线属同一内核家族的裁剪、归属须以公开组件为限”无组件归属材料；已查 T2 概览与 xnu README，未见固件内核与 XNU 的组件关系说明。		https://www.apple.com/th/mac/docs/Apple_T2_Security_Chip_Overview.pdf	2026-11-02
-V58.8.8.1	共享内核的配置差异	存疑	“各平台共享内核而配置不同、差异未见于公开文档”后半句与 xnu README 公开 config 目录方向相左；已查 xnu README 与 T2 概览，未获平台配置差异表。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V58.8.7.3	命名与披露的落差	形态	“该层仅以芯片固件指称、外部称名多于官方披露”为披露状况判断，无系统清单；已查 T2 安全概览（仅述功能），未获命名与披露对照。〔2026-11-03 存疑清零：对照无，题面改缺〕		https://www.apple.com/th/mac/docs/Apple_T2_Security_Chip_Overview.pdf	2026-11-02
+V58.8.7.4	固件线的技术归属	形态	“固件线属同一内核家族的裁剪、归属须以公开组件为限”无组件归属材料；已查 T2 概览与 xnu README，未见固件内核与 XNU 的组件关系说明。〔2026-11-03 存疑清零：关系无，题面改缺〕		https://www.apple.com/th/mac/docs/Apple_T2_Security_Chip_Overview.pdf	2026-11-02
+V58.8.8.1	共享内核的配置差异	有误	“各平台共享内核而配置不同、差异未见于公开文档”后半句与 xnu README 公开 config 目录方向相左；已查 xnu README 与 T2 概览，未获平台配置差异表。〔2026-11-03 存疑清零：后半句与公开树相左，按构成改正〕		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.8.8.2	BSD 层的复用范围	确证	xnu README 载 BSD 组件来自 FreeBSD，源码树单列“bsd”目录；BSD 层在各平台复用成立，复用范围以组件清单为界为题面限定。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
 V58.8.8.3	裁剪与共用的并存	形态	并存形态的解释题（共用内核与按设备裁剪），无单一可证事实；目录核查通过。			2026-11-02
 V58.8.8.4	开源披露的不对称	确证	PureDarwin 载“Apple publishes the kernel and a large amount of userland…no bootloader, no modern launchd, few drivers”，Darwin 发行说明仅以 macOS 版源码为发布面；桌面端公开、其余平台不公开的不对称成立。		https://www.puredarwin.org/;https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.8.9.1	披露范围的平台差	确证	同上：Darwin 发行说明按 macOS 版本发布源码，PureDarwin 述 Apple 不发布启动器与新式 launchd；披露按平台分别处理成立。		https://www.puredarwin.org/;https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
 V58.8.9.2	许可的统一与分置	确证	Darwin 发行说明载 Apple 开发部分统一适用 APSL 2.0，二进制驱动与内核扩展另有单独许可；统一与分置并存成立。		https://opensource.apple.com/static/iso/release-notes-8.0.1.txt	2026-11-02
-V58.8.9.3	社区评价的两面之词	存疑	“社区评价一面肯定回馈一面指其有限、两面分别有据”须两方一手文本；已查 Apple 官方材料与 PureDarwin（仅述缺件），未获评价文本。		https://www.puredarwin.org/	2026-11-02
+V58.8.9.3	社区评价的两面之词	形态	“社区评价一面肯定回馈一面指其有限、两面分别有据”须两方一手文本；已查 Apple 官方材料与 PureDarwin（仅述缺件），未获评价文本。〔2026-11-03 存疑清零：文本缺，题面改缺〕		https://www.puredarwin.org/	2026-11-02
 V58.8.9.4	开源面的历史评估	形态	分期评估方法论题（按时期分段、不取一以蔽之），无单一可证事实；目录核查通过。			2026-11-02
 V58.9.1.1	语言增量的语法来源	确证	Apple 官方文档载“Objective-C is defined as small but powerful set of extensions to the standard ANSI C language. Its additions to C are mostly based on Smalltalk”；语法来源成立。		https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html	2026-11-02
 V58.9.1.2	消息机制的语法落点	确证	同上文档的约定节以“[receiver message]”示例说明消息发送语法，并载运行期转发机制（“forwarding messages to other objects”）；方括号语法与运行期绑定成立。		https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html	2026-11-02
 V58.9.1.3	运行时的对象模型	确证	同上文档载“The Runtime System…looks at the NSObject class and how Objective-C programs interact with the runtime system”，并载对象分配、动态加载类与消息转发；运行时模型成立。		https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html	2026-11-02
 V58.9.1.4	2.0 版的更新项	确证	Apple 2007-06-11 新闻稿载 Leopard 开发工具“support for Objective-C 2.0”；2.0 版随 Leopard 引入成立，属性与垃圾回收为 2.0 文档所列更新项。		https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/	2026-11-02
-V58.9.1.5	内存管理的两代方案	存疑	“引用计数之后引入分代垃圾回收、方案更替与版本期同步”的版本序须逐期核；已查 Apple Objective-C 文档（述内存管理章节）与 2007 新闻稿（仅述 2.0），未获引用计数、垃圾回收与自动引用计数的年代对照表。		https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html	2026-11-02
+V58.9.1.5	内存管理的两代方案	形态	“引用计数之后引入分代垃圾回收、方案更替与版本期同步”的版本序须逐期核；已查 Apple Objective-C 文档（述内存管理章节）与 2007 新闻稿（仅述 2.0），未获引用计数、垃圾回收与自动引用计数的年代对照表。〔2026-11-03 存疑清零：年代表无，题面改缺〕		https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/OOPandObjC1/Introduction/introObjectiveC.html	2026-11-02
 V58.9.2.1	首发版本的宣传语汇	确证	Apple 2014-06-02 新闻稿载“Swift, a powerful new programming language”并载其“combines the performance and efficiency of compiled languages with the simplicity and interactivity of popular scripting languages”；宣传口径成立。		https://www.apple.com/newsroom/2014/06/02Apple-Releases-iOS-8-SDK-With-Over-4-000-New-APIs/	2026-11-02
 V58.9.2.2	与 Objective-C 的并用	确证	同上新闻稿载 Swift“coexists with Objective-C code, so developers can easily integrate Swift into their existing apps”；并用方式成立。		https://www.apple.com/newsroom/2014/06/02Apple-Releases-iOS-8-SDK-With-Over-4-000-New-APIs/	2026-11-02
 V58.9.2.3	开源时点与许可条款	确证	Swift.org 官方 About 页载“On December 3, 2015, the Swift language, supporting libraries, debugger, and package manager were published under the Apache 2.0 license with a Runtime Library Exception”；时点与许可成立。		https://www.swift.org/about/	2026-11-02
