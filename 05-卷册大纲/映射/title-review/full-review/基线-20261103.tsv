@@ -1,0 +1,22 @@
+metric	value	evidence
+docs_numbered	158	05-卷册大纲/目录/*.md 编号件
+docs_segment_00-51	55	建议书件目录.tsv
+docs_segment_52-97	44	建议书件目录.tsv
+docs_segment_98-128	37	建议书件目录.tsv
+docs_segment_129-161	22	建议书件目录.tsv
+docs_number_gaps	19	12,19,56,58,61,76,95,118,130,131,132,133,134,135,156,157,158,159,160
+title_design_files	76	title-design/V*.tsv
+titles_total	19470	title-design/V*.tsv 数据行
+title_evidence_files	76	title-evidence/V*.tsv
+evidence_rows	60954	title-evidence/V*.tsv 数据行
+title_ok_files	76	title-design/approved/*.title.ok
+title_ok_hash_match	76	title.ok ledger_sha256 与台账实测
+title_ok_hash_bad	0	无
+approvals_rows	251	title-design/approvals.tsv 数据行
+approvals_title_rows	251	kind=title
+approvals_landing_rows	0	kind=landing
+approvals_title_vols	76	kind=title 去重卷
+exception_rows	14872	title-design/exceptions/V*.tsv 数据行
+stats_rows	73	title-review/stats.tsv 数据行
+review_tsv_files	76	title-review/V*.tsv
+review_reports	74	title-review/V*-复核报告.md
