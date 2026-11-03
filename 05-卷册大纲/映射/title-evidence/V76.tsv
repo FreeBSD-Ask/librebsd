@@ -473,7 +473,7 @@ V76.4.7.4	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较
 V76.4.7.4	修复类型清单	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-10-31	It fixes a problem like an oops, a hang, data corruption, a real security issue, a hardware quirk, a build error	none
 V76.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“TAB 选举与署名标签”；本节题为其下位论题	none
 V76.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V76.4.7.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.11-linux-issues列表与reporting转正/405.11.44-8742linux社区转正文15tldr.md	史料	A	2026-10-31	转正评审贴出 reporting-issues.rst 第 1/5 段：TL;DR 含分立报告、bisect 找回归 commit、每个 rc1 回访附状态更新等流程。	none
+V76.4.7.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.11-linux-issues列表与reporting转正/405.11.44-8742linux社区转正文15tldr.md	史料	A	2026-10-31	转正评审贴出 reporting-issues.rst 第 1/5 段：TL;DR 含分立报告、bisect 找回归 commit、每个 rc1 回访附状态更新等流程。	noted
 V76.4.7.5	记录留存条款	https://developercertificate.org/	联网	A	2026-10-31	a record of the contribution (including all personal information I submit with it, including my sign-off) is maintained indefinitely	none
 V76.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“-mm／stable 发布宣告档案”；本节题为其下位论题	none
 V76.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
@@ -498,11 +498,11 @@ V76.4.8.5	集成树机制	https://docs.kernel.org/process/howto.html	联网	A	20
 V76.4.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
 V76.4.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.9.1	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.14-LTP收束与代码弃用议题/405.14.6-954黑名单经济批判.md	史料	A	2026-10-31	Bottomley：自己的 pull request 曾进 Linus 的 Gmail 垃圾箱直至 Linus 加白名单；Novell 曾用的付费反垃圾把 hansenpartnership.com 网段标垃圾且移除流程全无效——“只对收钱感兴趣”；私有黑名单难查难除	none
-V76.4.9.1	Git 创生叙事	https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git	联网	A	2026-10-31	In 2005, the relationship between the community that developed the Linux kernel and the commercial company that developed BitKeeper broke down, and the tool's free-of-charge status was revoked.	none
+V76.4.9.1	Git 创生叙事	https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git	联网	A	2026-10-31	In 2005, the relationship between the community that developed the Linux kernel and the commercial company that developed BitKeeper broke down, and the tool's free-of-charge status was revoked.	noted
 V76.4.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
 V76.4.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.9.2	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.14-LTP收束与代码弃用议题/405.14.5-953testsrepo聚合构想.md	史料	A	2026-10-31	Bottomley：bisect 应支持排除路径（现排除 test 顶层目录繁琐）；须对每个内核（含 stable）跑最新 LTP——或需一个从各分散测试拉取的 tests repo、一处取最新	none
-V76.4.9.2	设计目标清单	https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git	联网	A	2026-10-31	Some of the goals of the new system were as follows: Speed, Simple design, Strong support for non-linear development (thousands of parallel branches), Fully distributed, Able to handle large projects like the Linux kernel efficiently (speed and data size)	none
+V76.4.9.2	设计目标清单	https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git	联网	A	2026-10-31	Some of the goals of the new system were as follows: Speed, Simple design, Strong support for non-linear development (thousands of parallel branches), Fully distributed, Able to handle large projects like the Linux kernel efficiently (speed and data size)	noted
 V76.4.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
 V76.4.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.9.3	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.28-sparse实测与linusnext树争议/405.28.24-16022静态检查工具.md	史料	A	2026-10-31	Torvalds详析自制sparse补丁：追踪曾为有符号值的unsigned负值比较，揪出null_blk将blk_status_t强转int的真bug；但噪音多，仍斥-Wtype-limits。	none
@@ -514,7 +514,7 @@ V76.4.9.4	工具成熟叙事	https://git-scm.com/book/en/v2/Getting-Started-A-Sh
 V76.4.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
 V76.4.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.9.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.14-LTP收束与代码弃用议题/405.14.13-9511弃用adhoc之叹.md	史料	A	2026-10-31	hpa 附议 Konrad 议题：现在弃用全然 ad hoc——“X 版没编译过且无人注意”；受控弃用难做——“third rail 议题但让我们处境艰难”	none
-V76.4.9.5	邮件样本	https://lore.kernel.org/lkml/	联网	A	2026-10-31	[PATCH 0/2] mm/memfd: add F_SEAL_PUNCH_HOLE	none
+V76.4.9.5	邮件样本	https://lore.kernel.org/lkml/	联网	A	2026-10-31	[PATCH 0/2] mm/memfd: add F_SEAL_PUNCH_HOLE	noted
 V76.4.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 10 节“Rust 入核争论档案”；本节题为其下位论题	none
 V76.4.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.10.1	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.28-sparse实测与linusnext树争议/405.28.3-1601rust引入争论.md	史料	A	2026-10-31	Pinchart回应Miguel的C++对比：所有权转移应返回unique_ptr而非裸span，指此类示例属苹果比梨；赞成该线程勿变成C++与Rust之争。	none
@@ -538,7 +538,7 @@ V76.4.10.5	离场事件	https://lwn.net/Articles/987635/	联网	B	2026-10-31	Wed
 V76.4.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“AI 评审与政策史料”；本节题为其下位论题	none
 V76.4.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.11.1	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.27-缺陷跟踪与buffercache力挺/405.27.3-1561ai使用政策.md	史料	A	2026-10-31	Lorenzo支持用AI查找难察觉问题、整理代码并帮非英语母语者润色注释，反对一刀切“禁AI”，主张细粒度披露规则。	none
-V76.4.11.1	工具清单边界	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	Basic development tools (git, gcc, make, editors) should not be listed.	none
+V76.4.11.1	工具清单边界	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	Basic development tools (git, gcc, make, editors) should not be listed.	noted
 V76.4.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“AI 评审与政策史料”；本节题为其下位论题	none
 V76.4.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.11.2	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.24-malloc统一提案与7GB数据/405.24.14-15112议题讨论ai代码审查发现项跟踪.md	史料	A	2026-10-31	主张 AI 审查发现应像 syzkaller 一样进入公共看板持续跟踪，不阻塞提交者，便于委派他人修复。	none
@@ -570,11 +570,11 @@ V76.4.12.3	DRM 层职责	https://docs.kernel.org/gpu/introduction.html	联网	A	
 V76.4.12.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“硬件加速器与 malloc 议题”；本节题为其下位论题	none
 V76.4.12.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.12.4	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.24-malloc统一提案与7GB数据/405.24.12-15110议题讨论c聚合传递与内存模型.md	史料	A	2026-10-31	厘清可观察行为与线程可见性之别，指出 UB 被现代优化器利用的历史及 TS 6010 未入 C23 的原因。	none
-V76.4.12.4	对象缓存建议	https://docs.kernel.org/core-api/memory-allocation.html	联网	A	2026-10-31	If you need to allocate many identical objects you can use the slab cache allocator.	none
+V76.4.12.4	对象缓存建议	https://docs.kernel.org/core-api/memory-allocation.html	联网	A	2026-10-31	If you need to allocate many identical objects you can use the slab cache allocator.	noted
 V76.4.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“硬件加速器与 malloc 议题”；本节题为其下位论题	none
 V76.4.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.4.12.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.24-malloc统一提案与7GB数据/405.24.20-15118议题讨论rust与devres生命周期.md	史料	A	2026-10-31	主张模块生命周期必含设备生命周期，devm 内存可延至模块释放统一回收以消除中断处理器的释放后使用。	none
-V76.4.12.5	回退分配口径	https://docs.kernel.org/core-api/memory-allocation.html	联网	A	2026-10-31	It will try to allocate memory with kmalloc and if the allocation fails it will be retried with vmalloc.	none
+V76.4.12.5	回退分配口径	https://docs.kernel.org/core-api/memory-allocation.html	联网	A	2026-10-31	It will try to allocate memory with kmalloc and if the allocation fails it will be retried with vmalloc.	noted
 V76.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“内核接口与系统调用的 BSD 渊源”；本节题为其下位论题	none
 V76.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V76.5.1.1	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.6-fsd_bsd/395.6.10-Linux社区在storefree路径遍历的性能讨论中ChristophHell.md	史料	A	2026-10-31	许多可移植应用之所以使用 statvfs，是因为它在 XPG 与较新的 Posix 中是标准化的接口，而 statfs 只是 Linux 从 BSD 借来的扩展	none
