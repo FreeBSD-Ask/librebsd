@@ -92,6 +92,7 @@ V60.2.1.1	行编辑器的正则选择	https://man.freebsd.org/cgi/man.cgi?query=
 V60.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“ed、ex 与编辑器历史”；本节题为其下位论题	none
 V60.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.2.1.2	ex 的两种编辑面	https://docs.freebsd.org/44doc/usd/10.exref/paper.html	联网	A	2026-10-30	Ex a line oriented text editor, which supports both command and display oriented editing.	none
+V60.2.1.2	ex 与 vi 的两界面	https://man.freebsd.org/cgi/man.cgi?query=ex&sektion=1&format=ascii	联网	A	2026-11-03	vi is a screen-oriented text editor. ex is a line-oriented text editor. ex and vi are different interfaces to the same program, and it is possible to switch back and forth during an edit session.	none
 V60.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“ed、ex 与编辑器历史”；本节题为其下位论题	none
 V60.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.2.1.3	编辑教程的对象设定	https://docs.freebsd.org/44doc/usd/11.edit/paper.html	联网	A	2026-10-30	This narrative introduction to the use of the text editor edit assumes no prior familiarity with computers or with text editing.	none
@@ -126,6 +127,7 @@ V60.2.3.2	行命令的批处理	https://docs.freebsd.org/44doc/usd/10.exref/pape
 V60.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“模式化编辑思想：从 ed 的正则行编辑到 sed 的脚本化流式处理”；本节题为其下位论题	none
 V60.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.2.3.3	流编辑器的标准地位	https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html	联网	A	2026-10-30	The sed utility is expected to be a superset of the IEEE Std 1003.2 (POSIX.2) specification.	none
+V60.2.3.3	sed 的流编辑器定位	https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=ascii	联网	A	2026-11-03	sed -- stream editor；The sed utility reads the specified files, or the standard input…	none
 V60.2.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“模式化编辑思想：从 ed 的正则行编辑到 sed 的脚本化流式处理”；本节题为其下位论题	none
 V60.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.2.3.4	标准的承接	https://man.freebsd.org/cgi/man.cgi?query=vi&sektion=1&format=html	联网	A	2026-10-30	The POSIX 1003.2 interface for the historic +cmd syntax.	none
@@ -258,6 +260,7 @@ V60.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V60.3.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；甲族；S1	none
 V60.3.5.1	补全的并入	https://man.freebsd.org/cgi/man.cgi?query=tcsh&sektion=1&format=html	联网	A	2026-10-30	The NEW FEATURES section describes major enhancements of tcsh over csh (1) .	none
 V60.3.5.1	tcsh 的作者与时点	旧大纲-20261023/第02卷-伯克利的岁月/第031章-vi与cshell的诞生/031.2-cshell的语法创新为什么csh没有成为默认shell/031.2.4-要点csh的历史替换与作业控制功能影响了后续shell设计tcshKenGree.md	史料	A	2026-10-30	tcsh（Ken Greer 1981 年 12 月 将 TENEX 风格文件名补全合并入 csh）延续 csh 谱系	none
+V60.3.5.1	tcsh 的文件名补全	https://man.freebsd.org/cgi/man.cgi?query=tcsh&sektion=1&format=ascii	联网	A	2026-11-03	tcsh - C shell with file name completion and command line editing	none
 V60.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“tcsh 继承”；本节题为其下位论题	none
 V60.3.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.3.5.2	增强项标记	https://man.freebsd.org/cgi/man.cgi?query=tcsh&sektion=1&format=html	联网	A	2026-10-30	features of tcsh not found in most csh (1) implementations (specifically, the 4.4BSD csh ) are labeled with `(+)', and features which are present in csh (1) but not usu- ally documented are labeled with `(u)'.	none
@@ -425,6 +428,7 @@ V60.4.8.5	终端库衔接	https://man.freebsd.org/cgi/man.cgi?query=curses&sekti
 V60.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD socket API 的形成”；本节题为其下位论题	none
 V60.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.5.1.1	描述符即端点	https://man.freebsd.org/cgi/man.cgi?query=socket&sektion=2&format=html	联网	A	2026-10-30	The socket () system call creates an endpoint for communication and returns a descriptor.	none
+V60.5.1.1	socket 返回描述符	https://man.freebsd.org/cgi/man.cgi?query=socket&sektion=2&format=ascii	联网	A	2026-11-03	The socket() system call creates an endpoint for communication and returns a descriptor.	none
 V60.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD socket API 的形成”；本节题为其下位论题	none
 V60.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.5.1.2	通信域	https://man.freebsd.org/cgi/man.cgi?query=socket&sektion=2&format=html	联网	A	2026-10-30	The domain argument specifies a communications domain within which communi- cation will take place;	none
@@ -440,6 +444,7 @@ V60.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V60.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“socket 与现代网络编程模型”；本节题为其下位论题	none
 V60.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.5.2.1	两种通信语义	https://docs.freebsd.org/44doc/psd/20.ipctut/paper.html	联网	A	2026-10-30	These programs demonstrate in a simple way the use of pipes, socketpairs, sockets and the use of datagram and stream communication.	none
+V60.5.2.1	流式与数据报的类型语义	https://man.freebsd.org/cgi/man.cgi?query=socket&sektion=2&format=ascii	联网	A	2026-11-03	Currently defined types are: SOCK_STREAM Stream socket, SOCK_DGRAM Datagram socket, SOCK_RAW Raw-protocol interface, SOCK_SEQPACKET Sequenced packet stream	none
 V60.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“socket 与现代网络编程模型”；本节题为其下位论题	none
 V60.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.5.2.2	连接状态	https://www.rfc-editor.org/rfc/rfc793.txt	联网	A	2026-10-30	2.7 Connection Establishment and Clearing	none
@@ -472,7 +477,7 @@ V60.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V60.5.4.1	回显请求	https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html	联网	A	2026-10-30	uses the ICMP protocol's mandatory ECHO_REQUEST datagram	none
 V60.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“ping：Mike Muuss 的 ICMP 回显诊断工具（1983 年 12 月）”；本节题为其下位论题	none
 V60.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
-V60.5.4.2	报文构成	https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html	联网	A	2026-10-30	ECHO_REQUEST data- grams ("pings") have an IP and ICMP header, followed by a "struct timeval" and then an arbitrary number of "pad" bytes used to fill out the packet.	none
+V60.5.4.2	报文构成	https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html	联网	A	2026-10-30	"ECHO_REQUEST data- grams (""pings"") have an IP and ICMP header, followed by a ""struct timeval"" and then an arbitrary number of ""pad"" bytes used to fill out the packet."	none
 V60.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“ping：Mike Muuss 的 ICMP 回显诊断工具（1983 年 12 月）”；本节题为其下位论题	none
 V60.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.5.4.3	命名的隐喻	https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html	联网	A	2026-10-30	The ping utility invoked with an IPv4 target	none
@@ -485,6 +490,7 @@ V60.5.4.5	协议依赖	https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&
 V60.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“traceroute：路径探测工具的到达（1987）”；本节题为其下位论题	none
 V60.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.5.5.1	逐跳探测	https://man.freebsd.org/cgi/man.cgi?query=traceroute&sektion=8&format=html	联网	A	2026-10-30	traceroute utilizes the IP protocol `time to live' field and at- tempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to some host.	none
+V60.5.5.1	traceroute 的 TTL 递增	https://man.freebsd.org/cgi/man.cgi?query=traceroute&sektion=8&format=ascii	联网	A	2026-11-03	"launching UDP probe packets with a small TTL (time to live) then listening for an ICMP ""time exceeded"" reply from a gateway. We start our probes with a TTL of one and increase by one…"	none
 V60.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“traceroute：路径探测工具的到达（1987）”；本节题为其下位论题	none
 V60.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.5.5.2	路径追踪的目的	https://man.freebsd.org/cgi/man.cgi?query=traceroute&sektion=8&format=html	联网	A	2026-10-30	Tracking the route one's packets follow (or finding the miscreant gateway that's discarding your packets) can be diffi- cult.	none
@@ -515,9 +521,10 @@ V60.5.6.5	替代路径	https://man.freebsd.org/cgi/man.cgi?query=nc&sektion=1&fo
 V60.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“netstat、ifconfig 与网络管理工具”；本节题为其下位论题	none
 V60.5.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.5.7.1	套接字表的呈现	https://man.freebsd.org/cgi/man.cgi?query=netstat&sektion=1&format=html	联网	A	2026-10-30	The default display for active sockets shows the local and remote addresses, send and receive queue sizes (in bytes), protocol, and the internal state of the protocol.	none
+V60.5.7.1	netstat 的网络状态呈现	https://man.freebsd.org/cgi/man.cgi?query=netstat&sektion=1&format=ascii	联网	A	2026-11-03	netstat -- show network status and statistics	none
 V60.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“netstat、ifconfig 与网络管理工具”；本节题为其下位论题	none
 V60.5.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
-V60.5.7.2	接口配置	https://man.freebsd.org/cgi/man.cgi?query=netstat&sektion=1&format=html	联网	A	2026-10-30	Address formats are of the form "host.port" or "network.port" if a socket's address specifies a network but no specific host address.	none
+V60.5.7.2	接口配置	https://man.freebsd.org/cgi/man.cgi?query=netstat&sektion=1&format=html	联网	A	2026-10-30	"Address formats are of the form ""host.port"" or ""network.port"" if a socket's address specifies a network but no specific host address."	none
 V60.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“netstat、ifconfig 与网络管理工具”；本节题为其下位论题	none
 V60.5.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.5.7.3	观测项	https://man.freebsd.org/cgi/man.cgi?query=netstat&sektion=1&format=html	联网	A	2026-10-30	When known, the host and network addresses are displayed symbolically according to the data- bases hosts (5) and networks (5) , respectively.	none
@@ -584,6 +591,7 @@ V60.6.2.3	角色叠加	https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektio
 V60.6.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“delivermail 的产生”；本节题为其下位论题	none
 V60.6.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.6.2.4	早期配置	https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html	联网	A	2026-10-30	With no flags, sendmail reads its standard input up to an end-of-file or a line consisting only of a single dot and sends a copy of the message found there to all of the addresses listed.	none
+V60.6.2.4	sendmail 无参数投递	https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=ascii	联网	A	2026-11-03	With no flags, sendmail reads its standard input up to an end-of-file or a line consisting only of a single dot and sends a copy of the message found there to all of the addresses listed.	none
 V60.6.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“delivermail 的产生”；本节题为其下位论题	none
 V60.6.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；甲族；S1	none
 V60.6.2.5	命名与断代	https://ftp.sendmail.org/RELEASE_NOTES	联网	A	2026-10-30	This listing shows the version of the sendmail binary, the version of the sendmail configuration files, the date of release, and a summary of the changes in that release.	none
@@ -806,6 +814,7 @@ V60.7.7.5	采用与维护	https://www.isc.org/bind/	联网	A	2026-10-30	there ar
 V60.8.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“cron”；本节题为其下位论题	none
 V60.8.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.8.1.1	调度粒度	https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html	联网	A	2026-10-30	The cron utility then wakes up every minute, examining all stored crontabs, checking each command to see if it should be run in the current minute.	none
+V60.8.1.1	crontab 字段与分钟粒度	https://man.freebsd.org/cgi/man.cgi?query=crontab&sektion=5&format=ascii	联网	A	2026-11-03	Commands are executed by cron(8) when the minute, hour, and month of year fields match the current time…	none
 V60.8.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“cron”；本节题为其下位论题	none
 V60.8.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.8.1.2	两类表	https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html	联网	A	2026-10-30	The cron utility searches /var/cron/tabs for crontab files which are named after accounts in /etc/passwd ;	none
@@ -821,6 +830,7 @@ V60.8.1.5	表的可读	https://man.freebsd.org/cgi/man.cgi?query=crontab&sektion
 V60.8.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“at”；本节题为其下位论题	none
 V60.8.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.8.2.1	入队执行	https://man.freebsd.org/cgi/man.cgi?query=at&sektion=1&format=html	联网	A	2026-10-30	The at and batch utilities read commands from standard input or a specified file which are to be executed at a later time, using sh (1) .	none
+V60.8.2.1	at 的延迟作业入队	https://man.freebsd.org/cgi/man.cgi?query=at&sektion=1&format=ascii	联网	A	2026-11-03	at, batch, atq, atrm -- queue, examine or delete jobs for later execution	none
 V60.8.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“at”；本节题为其下位论题	none
 V60.8.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.8.2.2	作业文件	https://man.freebsd.org/cgi/man.cgi?query=at&sektion=1&format=html	联网	A	2026-10-30	at executes commands at a specified time;	none
@@ -833,9 +843,11 @@ V60.8.2.4	两类分工	https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&
 V60.8.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 2 节“at”；本节题为其下位论题	none
 V60.8.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.8.2.5	提交权限	https://man.freebsd.org/cgi/man.cgi?query=at&sektion=1&format=html	联网	A	2026-10-30	in that case, everybody's jobs are listed;	none
+V60.8.2.5	at 的名单控制	https://man.freebsd.org/cgi/man.cgi?query=at&sektion=1&format=ascii	联网	A	2026-11-03	permission to use at is determined by the files /var/at/at.allow and /var/at/at.deny. If the file /var/at/at.allow exists, only usernames mentioned in it are allowed to use at.	none
 V60.8.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“inetd”；本节题为其下位论题	none
 V60.8.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.8.3.1	按需派生	https://man.freebsd.org/cgi/man.cgi?query=inetd&sektion=8&format=html	联网	A	2026-10-30	Essentially, inetd allows running one daemon to invoke several others, re- ducing load on the system.	none
+V60.8.3.1	inetd 的超级守护者	https://man.freebsd.org/cgi/man.cgi?query=inetd&sektion=8&format=ascii	联网	A	2026-11-03	"inetd -- internet ""super-server"""	none
 V60.8.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 3 节“inetd”；本节题为其下位论题	none
 V60.8.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.8.3.2	服务表	https://man.freebsd.org/cgi/man.cgi?query=inetd&sektion=8&format=html	联网	A	2026-10-30	one entry with the appropriate protocol type for each binding is required for each service in /etc/inetd.conf .	none
@@ -851,12 +863,13 @@ V60.8.3.5	退场的背景	https://man.freebsd.org/cgi/man.cgi?query=inetd&sektio
 V60.8.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“syslog”；本节题为其下位论题	none
 V60.8.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.8.4.1	分类方式	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=html	联网	A	2026-10-30	-4 Force syslogd to use IPv4 addresses only.	none
+V60.8.4.1	syslogd 的地址族选项	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=ascii	联网	A	2026-11-03	-4 Force syslogd to use IPv4 addresses only. -6 Force syslogd to use IPv6 addresses only.	none
 V60.8.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“syslog”；本节题为其下位论题	none
 V60.8.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.8.4.2	远程汇聚	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=html	联网	A	2026-10-30	-6 Force syslogd to use IPv6 addresses only.	none
 V60.8.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“syslog”；本节题为其下位论题	none
 V60.8.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
-V60.8.4.3	格式惯例	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=html	联网	A	2026-10-30	Normally syslogd will replace C1 control characters (ISO 8859 and Unicode characters) with their "M- x " equivalent.	none
+V60.8.4.3	格式惯例	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=html	联网	A	2026-10-30	"Normally syslogd will replace C1 control characters (ISO 8859 and Unicode characters) with their ""M- x "" equivalent."	none
 V60.8.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“syslog”；本节题为其下位论题	none
 V60.8.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.8.4.4	容量与留存	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=html	联网	A	2026-10-30	-8 Tells syslogd not to interfere with 8-bit data.	none
@@ -866,6 +879,7 @@ V60.8.4.5	审计线索	https://www.freebsd.org/security/	联网	A	2026-10-30	Fre
 V60.8.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“su”；本节题为其下位论题	none
 V60.8.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.8.5.1	最小动作	https://man.freebsd.org/cgi/man.cgi?query=su&sektion=1&format=html	联网	A	2026-10-30	TERM Provides terminal type which may be retained for the substituted user ID.	none
+V60.8.5.1	su 的身份替换定位	https://man.freebsd.org/cgi/man.cgi?query=su&sektion=1&format=ascii	联网	A	2026-11-03	su -- substitute user identity	none
 V60.8.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“su”；本节题为其下位论题	none
 V60.8.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.8.5.2	环境保留	https://man.freebsd.org/cgi/man.cgi?query=login&sektion=1&format=html	联网	A	2026-10-30	-p By default, login discards any previous environment.	none
@@ -881,6 +895,7 @@ V60.8.5.5	位置变化	https://www.sudo.ws/about/history/	联网	A	2026-10-30	Mi
 V60.8.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“sudo”；本节题为其下位论题	none
 V60.8.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.8.6.1	授权配置	https://www.sudo.ws/about/history/	联网	A	2026-10-30	In 1991, Dave Hieb and Jeff Nieusma wrote a new version of sudo with an enhanced sudoers format under contract to a consulting firm called The Root Group.	none
+V60.8.6.1	sudoers 的配置驱动	https://man.freebsd.org/cgi/man.cgi?query=sudoers&sektion=5&format=ascii	联网	A	2026-11-03	The policy is driven by the /usr/local/etc/sudoers file.	none
 V60.8.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“sudo”；本节题为其下位论题	none
 V60.8.6.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.8.6.2	集中管理	https://www.sudo.ws/about/history/	联网	A	2026-10-30	In 1995, a new parser for the sudoers file was contributed by Chris Jepeway.	none
@@ -1265,6 +1280,7 @@ V60.13.1.1	诞生与首个版本	旧大纲-20261023/第03卷-伯克利学术文�
 V60.13.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“4.4BSD 与 Berkeley DB”；本节题为其下位论题	none
 V60.13.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.13.1.2	两种访问方法	旧大纲-20261023/第03卷-伯克利学术文化外溢影响/第066章-bsd数据库服务器生态/066.8-berkeleydb/066.8.1-berkeleydb的诞生与44bsd集成.md	史料	A	2026-10-30	Berkeley DB 提供 hash 与 btree 两种访问方法	none
+V60.13.1.2	dbopen 的访问方法两分支	https://man.freebsd.org/cgi/man.cgi?query=dbopen&sektion=3&format=ascii	联网	A	2026-11-03	The supported file formats are btree, hashed and UNIX file oriented. The btree format is a representation of a sorted, balanced tree structure. The hashed format is an extensible, dynamic hashing scheme.	none
 V60.13.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 1 节“4.4BSD 与 Berkeley DB”；本节题为其下位论题	none
 V60.13.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.13.1.3	兼容迁移	旧大纲-20261023/第03卷-伯克利学术文化外溢影响/第066章-bsd数据库服务器生态/066.8-berkeleydb/066.8.1-berkeleydb的诞生与44bsd集成.md	史料	A	2026-10-30	支持 dbm/ndbm 兼容接口（只需更换头文件 #include 即可从 dbm/ndbm 迁移）	none
