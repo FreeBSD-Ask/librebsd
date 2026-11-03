@@ -1,0 +1,231 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V62.1.1.1	许可证文本的人工审读起点	形态	审读起点方法论叙事为体例题，离线核查。			2026-11-02
+V62.1.1.2	合规职能在组织中的独立	形态	职能独立叙事为体例题，离线核查。			2026-11-02
+V62.1.1.3	合规流程的关键位置	形态	流程位置叙事为体例题（OpenChain 规范要点未逐字取证），离线核查。			2026-11-02
+V62.1.1.4	审读范围从源码扩展到二进制	确证	Apache-2.0 §4：再分发“in Source or Object form”——源码与二进制同为义务触发形态逐字。		https://www.apache.org/licenses/LICENSE-2.0.txt	2026-11-02
+V62.1.1.5	合规判断时点的前移	形态	时点前移叙事为体例题，离线核查。			2026-11-02
+V62.1.2.1	SPDX 标识符的语法构成	确证	SPDX License List 页：清单“includes a standardized short identifier, the full name, the license text, and a canonical permanent URL”，用于“in source files or elsewhere”的标识——短标识符体例在场；“固定前缀”字段名未逐字引。		https://spdx.dev/ids/	2026-11-02
+V62.1.2.2	许可证表达式与例外条款	确证	SPDX License List 页：许可与例外（exceptions）分列同清——“例外单列”逐字；连接词组合语法未逐字引。		https://spdx.dev/ids/	2026-11-02
+V62.1.2.3	标识符在源码文件头的落位	确证	SPDX License List 页：标识用于“in an SPDX document, in source files or elsewhere”——源码内标识逐字；“写入首行”细节未逐字引。		https://spdx.dev/ids/	2026-11-02
+V62.1.2.4	标识清单的规范来源	确证	SPDX License List 页：“The SPDX License List is an integral part of the SPDX Specification”，取值出自统一清单而非自拟——逐字。		https://spdx.dev/ids/	2026-11-02
+V62.1.2.5	国际标准化的采纳路径	确证	SPDX 规范页：“The SPDX specification is an international open standard (ISO/IEC 5962:2021)”——ISO 采纳逐字在场。		https://spdx.dev/specifications/	2026-11-02
+V62.1.3.1	依赖图的成分展开	确证	CycloneDX 规范概览：“The dependency graph is capable of representing both direct and transitive relationships”——依赖图成分逐字。		https://cyclonedx.org/specification/overview/	2026-11-02
+V62.1.3.2	片段与许可信息的扫描面	形态	扫描器产出面叙事为通用体例，离线核查。			2026-11-02
+V62.1.3.3	声明式清单与推断式识别	形态	双路径叙事为体例题（CycloneDX Compositions 完备度分级在场、裁决次序未锚），离线核查。			2026-11-02
+V62.1.3.4	传递依赖的识别盲区	确证	CycloneDX 规范概览：Compositions 完备度可标“complete, incomplete, incomplete first-party only, incomplete third-party only, or unknown”——盲区显式分级逐字。		https://cyclonedx.org/specification/overview/	2026-11-02
+V62.1.3.5	识别结果的置信标注	确证	CycloneDX 规范概览：Declarations“attestations, claims, counter-claims, evidence…along with conformance and confidence”——置信标注逐字。		https://cyclonedx.org/specification/overview/	2026-11-02
+V62.1.4.1	SBOM 最小元素的构成	确证	NTIA《SBOM 最低元素》（2021-07-12）：Data Fields 为“Supplier, Component Name, Version of the Component, Other Unique Identifiers, Dependency Relationship, Author of SBOM Data, and Timestamp”——七字段逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf	2026-11-02
+V62.1.4.2	制品标识与供应链层级	确证	NTIA：SBOM 为“a formal record containing the details and supply chain relationships of various components”——供应链关系记录逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf	2026-11-02
+V62.1.4.3	许可证字段的表达边界	形态	许可字段边界论述为体例题（BOM 含 license information 在场、“不构成法律结论”未锚），离线核查。			2026-11-02
+V62.1.4.4	生成时点与消费场景	确证	NTIA：Practices and Processes 列“Frequency, Depth, Known Unknowns, Distribution and Delivery, Access Control, and Accommodation of Mistakes”——环节与时点要素逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf	2026-11-02
+V62.1.4.5	SPDX 与 CycloneDX 的格式分野	确证	NTIA：生成格式“include SPDX, CycloneDX, and SWID tags”；CycloneDX 现行 1.7（2025-10-21）、ECMA-424（2025-12-10 发布）；SPDX 为 ISO/IEC 5962:2021——两格式并立且标准路径不同逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf https://cyclonedx.org/specification/overview/ https://spdx.dev/specifications/	2026-11-02
+V62.1.5.1	扫描器的匹配粒度	形态	匹配粒度叙事为通用体例，离线核查。			2026-11-02
+V62.1.5.2	误报与漏报的判定成本	形态	复核成本叙事为通用体例，离线核查。			2026-11-02
+V62.1.5.3	片段级检测的合规后果	形态	片段检出后果叙事为通用体例，离线核查。			2026-11-02
+V62.1.5.4	扫描结果的重用与归档	形态	扫描归档叙事为体例题，离线核查。			2026-11-02
+V62.1.5.5	工具结论与人工复核的交接	形态	人工复核交接叙事为体例题，离线核查。			2026-11-02
+V62.1.6.1	归属性条款的文本要素	确证	Apache-2.0 §4(a)–(c)：随附许可副本、修改文件带显著声明、保留版权／专利／商标与归属性声明；§7“AS IS”免责——三要素在场。		https://www.apache.org/licenses/LICENSE-2.0.txt	2026-11-02
+V62.1.6.2	NOTICE 文件的汇集责任	确证	Apache-2.0 §4(d)：“If the Work includes a ‘NOTICE’ text file…must include a readable copy of the attribution notices contained within such NOTICE file”，可置于随附 NOTICE、源码或文档、生成显示——汇集责任逐字。		https://www.apache.org/licenses/LICENSE-2.0.txt	2026-11-02
+V62.1.6.3	二进制分发的声明附随	确证	Apache-2.0 §4(a)：“give any other recipients…a copy of this License”，适用于 Source 或 Object form——附随义务逐字。		https://www.apache.org/licenses/LICENSE-2.0.txt	2026-11-02
+V62.1.6.4	逐文件的许可标注惯例	确证	Apache-2.0 §4(b)：“cause any modified files to carry prominent notices stating that You changed the files”；SPDX 标识用于“in source files”——代码近旁标注双源。		https://www.apache.org/licenses/LICENSE-2.0.txt https://spdx.dev/ids/	2026-11-02
+V62.1.6.5	声明缺失的补救路径	形态	补救路径叙事为体例题，离线核查。			2026-11-02
+V62.1.7.1	条款冲突的兼容性判断	形态	兼容性判断叙事为体例题，离线核查。			2026-11-02
+V62.1.7.2	择一适用的表达式写法	形态	择一表达式语法未获逐字（SPDX 表达式规范未取证），离线核查。			2026-11-02
+V62.1.7.3	混合树的分区治理	形态	分区治理叙事为体例题，离线核查。			2026-11-02
+V62.1.7.4	例外条款的叠加效应	形态	叠加效应叙事为体例题，离线核查。			2026-11-02
+V62.1.7.5	冲突无解时的隔离处置	形态	隔离处置叙事为体例题，离线核查。			2026-11-02
+V62.1.8.1	导入代码的许可审查口	形态	审查口叙事为体例题，离线核查。			2026-11-02
+V62.1.8.2	上游版本与源树的对应	形态	版本对应叙事为体例题，离线核查。			2026-11-02
+V62.1.8.3	本地补丁的标注惯例	形态	补丁标注叙事为体例题，离线核查。			2026-11-02
+V62.1.8.4	厂商分支的合并前提	形态	合并前提叙事为体例题，离线核查。			2026-11-02
+V62.1.8.5	移出与替换的退场机制	形态	退场机制叙事为体例题，离线核查。			2026-11-02
+V62.1.9.1	责任链在分发环节的分配	形态	责任链分配叙事为法规体例（CRA 类），无 BSD 专指断言，离线核查。			2026-11-02
+V62.1.9.2	供应商保证条款的边界	形态	核验义务边界叙事为法规体例，离线核查。			2026-11-02
+V62.1.9.3	下游产品的二次分发义务	形态	二次分发义务叙事为法规体例，离线核查。			2026-11-02
+V62.1.9.4	义务在价值链中的传导	形态	价值链传导叙事为法规体例，离线核查。			2026-11-02
+V62.1.9.5	责任真空的填补方式	形态	责任真空补位叙事为法规体例，离线核查。			2026-11-02
+V62.1.10.1	OpenChain 规范的合规要点	确证	OpenChain 官网：“We maintain the ISO/IEC standards for open source license compliance and security assurance”——合规标准主体逐字。		https://openchainproject.org/	2026-11-02
+V62.1.10.2	治理标准的自证与他证	形态	自证他证叙事为体例题，离线核查。			2026-11-02
+V62.1.10.3	OpenSSF 的项目治理结构	形态	治理结构叙事未获直述（官网仅证使命与章程），离线核查。			2026-11-02
+V62.1.10.4	安全基线工作的分工	形态	技术倡议分工叙事为体例题（OpenSSF 使命在场、分工面未锚），离线核查。			2026-11-02
+V62.1.10.5	标准文本与工程接口的位置	形态	标准与接口论述为体例题，离线核查。			2026-11-02
+V62.1.11.1	合规流水线的环节划分	形态	流水线环节叙事为体例题，离线核查。			2026-11-02
+V62.1.11.2	策略即代码的表达限度	形态	表达限度论述为体例题，离线核查。			2026-11-02
+V62.1.11.3	门禁与放行的判定权归属	形态	判定权归属论述为体例题，离线核查。			2026-11-02
+V62.1.11.4	审查记录的可审计性	形态	可审计性论述为体例题，离线核查。			2026-11-02
+V62.1.11.5	自动化结论的人工兜底	形态	人工兜底论述为体例题，离线核查。			2026-11-02
+V62.1.12.1	Ports 树的来源登记	形态	Ports 登记叙事未取一手（Porters Handbook 许可节未及取回），离线核查。			2026-11-02
+V62.1.12.2	打包体系的许可约定	形态	打包许可约定叙事未取一手，离线核查。			2026-11-02
+V62.1.12.3	包管理器承担的合规环节	确证	pkg(8)：“an interface for manipulating packages: registering, adding, removing and upgrading packages”，install 自仓库取包、audit“Audit installed packages against known vulnerabilities”——下载校验安装环节逐字。		https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8	2026-11-02
+V62.1.12.4	预编译包的供给形态	确证	pkg(8)：install“a package from a package repository or a local archive”，fetch 自远程仓库取包——预编译包供给逐字；pkg 首现 FreeBSD 9.1。		https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8	2026-11-02
+V62.1.12.5	跨平台生态的规模差异	形态	生态规模比较叙事为体例题，离线核查。			2026-11-02
+V62.1.13.1	签名在分发链的位置	确证	signify(1)：“creates and verifies cryptographic signatures. A signature verifies the integrity of a message”，-C 校验发布清单与逐文件——制品与来源绑定逐字。		https://man.openbsd.org/signify	2026-11-02
+V62.1.13.2	构建产物的溯源要求	形态	溯源要求叙事为体例题，离线核查。			2026-11-02
+V62.1.13.3	密钥托管的信任集中	形态	密钥托管叙事为体例题，离线核查。			2026-11-02
+V62.1.13.4	签名验证与失效处置	形态	失效处置叙事为体例题，离线核查。			2026-11-02
+V62.1.13.5	供应链攻击的签名教训	形态	签名教训叙事为体例题（历史事件未锚），离线核查。			2026-11-02
+V62.1.14.1	构建平台的隔离要求	形态	构建隔离叙事为体例题，离线核查。			2026-11-02
+V62.1.14.2	托管构建的信誉前提	形态	托管信誉叙事为体例题，离线核查。			2026-11-02
+V62.1.14.3	可复现构建的判定条件	形态	可复现条件叙事为体例题，离线核查。			2026-11-02
+V62.1.14.4	构建脚本的审查范围	形态	脚本审查叙事为体例题，离线核查。			2026-11-02
+V62.1.14.5	环境漂移的风险登记	形态	环境漂移叙事为体例题，离线核查。			2026-11-02
+V62.1.15.1	项目对上游缺陷的响应链	形态	响应链叙事为体例题，离线核查。			2026-11-02
+V62.1.15.2	安全公告的发布体例	确证	FreeBSD SA-25:06：标题、影响分支与修订号表、修正指引、Hash: SHA512 头加 PGP SIGNATURE 块——体例逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V62.1.15.3	补丁回移的适用范围	确证	SA-25:06：Corrected 条目按 stable/13、releng/13.5、stable/14、releng/14.2 逐分支标注——回移范围以受支持分支界定逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V62.1.15.4	下游分发的协同义务	确证	FreeBSD SA 页：“Issues affecting the FreeBSD Ports Collection are covered in the FreeBSD VuXML document”——包集合另设通报渠道逐字。		https://www.freebsd.org/security/advisories/	2026-11-02
+V62.1.15.5	支持周期的公开承诺	形态	支持周期叙事未取证（releng 支持终止页未及取回），离线核查。			2026-11-02
+V62.2.1.1	测试套件与认证路径的绑定	确证	Open Group UNIX 认证页：“Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark”，认证产品有注册登记册——测试认证与商标捆绑逐字。		https://www.opengroup.org/certifications/UNIX/	2026-11-02
+V62.2.1.2	认证费用的门槛效应	存疑	费用与商标政策受社区长期批评之说未获一手文献（批评须引邮件列表或社论原句），作缺口披露。			2026-11-02
+V62.2.1.3	标准接口文档的授权引用	形态	接口文档授权叙事未取一手（认证机构授权条款未及），离线核查。			2026-11-02
+V62.2.1.4	接口落地的时间序列	形态	接口分批落地叙事未取一手（各版 SUS 接口清单未及），离线核查。			2026-11-02
+V62.2.1.5	合规项目与认证申请的落差	确证	Open Group 认证页：认证产品登记册（openbrand/register）为权威清单，FreeBSD 不在册——未申请认证以缺席证据＋无认证主张为据；“符合性计划”侧未逐字取证。		https://www.opengroup.org/certifications/UNIX/	2026-11-02
+V62.2.2.1	非正式委员会的设立	确证	RFC 1160：“in 1979, it was necessary to form an informal committee to guide the technical evolution of the protocol suite. This group was called the Internet Configuration Control Board (ICCB)”，Cerf 设立、Clark 任主席——逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.2.2	任务组化的组织改组	确证	RFC 1160：“the ICCB was reorganized by Dr. Barry Leiner…around a series of task forces considering different technical aspects of internetting. The re-organized group was named the Internet Activities Board”——逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.2.3	工程任务与研究任务的分设	确证	RFC 1160：“The IAB has two principal subsidiary task forces: 1) Internet Engineering Task Force (IETF) 2) Internet Research Task Force (IRTF)”，IESG 管“short- and mid-range protocol”、IRTF“more concerned with understanding than with products”——分设逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.2.4	跨机构资助的协调机构	确证	RFC 1160：DARPA／NSF／DOE／NASA 各方管理者组 FRICC 协调政府支持，1990 年经 FCCSET 改组为 FNC——逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.2.5	组织沿革的文献依据	确证	RFC 1160：“This RFC provides a history and description…for informational use and does not constitute a standard”——沿革以信息类文档留痕、其非标准性质逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.3.1	工作组机制的确立	确证	RFC 1160：“The work of the IETF is performed by subcommittees known as Working Groups. There are currently more than 40 of these”——工作组为执行单位逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.3.2	区域主任与指导组	确证	RFC 1160：IETF“organized around a set of eight technical areas, each managed by a technical area director”，由 IESG 管理；Austin 页同为指导组制——分管与汇总双源。		https://www.rfc-editor.org/rfc/rfc1160.html https://www.opengroup.org/austin/	2026-11-02
+V62.2.3.3	开放参与的门槛设定	形态	无会员制与订阅即参与叙事未逐字取证（RFC 3935 候选底座未及），离线核查。			2026-11-02
+V62.2.3.4	会议制度与工作节奏	形态	会议节奏叙事未逐字取证（IETF 三次年会惯例未锚），离线核查。			2026-11-02
+V62.2.3.5	与 IAB 的职责划界	确证	RFC 1160：IESG“recommending standards”交 IAB 批准；RFC 2026：§6.5 冲突解决与上诉、§6.1.2 IESG 审批——工程下授、上层裁决结构逐字。		https://www.rfc-editor.org/rfc/rfc1160.html https://www.rfc-editor.org/rfc/rfc2026.html	2026-11-02
+V62.2.4.1	草案到标准的层级	确证	RFC 2026 §4.1：Standards Track 成熟度分“Proposed Standard”“Draft Standard”“Internet Standard”三级——逐级提升逐字。		https://www.rfc-editor.org/rfc/rfc2026.html	2026-11-02
+V62.2.4.2	运行代码与共识的组合	形态	运行代码与共识合成叙事未逐字取证（§6.2 实现要求正文未及；Clark 语句未锚），离线核查。			2026-11-02
+V62.2.4.3	实现先行的规范来源	形态	实现回写叙事为体例题，离线核查。			2026-11-02
+V62.2.4.4	互操作经验的组织化	形态	互操作经验组织化叙事为体例题，离线核查。			2026-11-02
+V62.2.4.5	标准设定角色的分工	确证	RFC 1160：IESG 推荐标准交 IAB 批准；RFC 2555：RFC 系列由 Postel “collected, archived, and edited…for 28 years”——设定、审批与出版分属不同主体双源。		https://www.rfc-editor.org/rfc/rfc1160.html https://www.rfc-editor.org/rfc/rfc2555.html	2026-11-02
+V62.2.5.1	RFC 的编号与状态体系	确证	RFC 2119／2026／2555 三档实文均带编号序列与“Status of this Memo”状态段及 Category／BCP 标注——连号与状态段逐字。		https://www.rfc-editor.org/rfc/rfc2119.html https://www.rfc-editor.org/rfc/rfc2026.html	2026-11-02
+V62.2.5.2	规范用语的约束力	确证	RFC 2119：“The key words ‘MUST’…‘SHALL’…‘SHOULD’…‘MAY’, and ‘OPTIONAL’”，MUST 为“absolute requirement”、MAY“truly optional”——大写情态词分级逐字。		https://www.rfc-editor.org/rfc/rfc2119.html	2026-11-02
+V62.2.5.3	文档格式与载体的沿革	确证	RFC 2555：“the first Request for Comments document, RFC 1, was published at UCLA”，RFC 1 于 1969-04-07 发行、Postel 编纂归档 28 年——1969 启始与编辑接续逐字。		https://www.rfc-editor.org/rfc/rfc2555.html	2026-11-02
+V62.2.5.4	文稿存废的周期判定	形态	Internet-Draft 半年存废周期未逐字取证，离线核查。			2026-11-02
+V62.2.5.5	引用惯例的工程后果	形态	引用惯例叙事为体例题，离线核查。			2026-11-02
+V62.2.6.1	资助机构的早期推动	确证	RFC 1160：“In 1968, the U.S. Defense Advanced Research Projects Agency (DARPA) initiated an effort to develop a technology which is now known as packet switching”——立项起点逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.6.2	合同项目的技术导向	确证	RFC 1160：“DARPA initiated a number of programs to explore the use of packet switching methods in alternative media including mobile radio, satellite and cable”——多介质分头推进逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.6.3	成果共享的制度安排	形态	开放分发安排叙事未逐字取证，离线核查。			2026-11-02
+V62.2.6.4	标准化的政府协调	确证	RFC 1160：FRICC 协调多部门支持、1990 年改组为 FNC 并“provides liaison to the Office of Science and Technology Policy”——协调层级逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.6.5	资助退场后的延续	确证	RFC 1160：FNC“included all the former FRICC members”，ICCB 改组为 IAB 后各任务组续作——原框架在新框架下延续逐字。		https://www.rfc-editor.org/rfc/rfc1160.html	2026-11-02
+V62.2.7.1	标准约束的志愿性质	形态	志愿采纳论述为标准理论体例，离线核查。			2026-11-02
+V62.2.7.2	符合性声明的自愿性	形态	自愿声明论述为体例题，离线核查。			2026-11-02
+V62.2.7.3	认证品牌的授权边界	确证	Open Group 认证页：仅经 SUS 认证合格者得用 UNIX 商标，登记册为边界——品牌授权机制逐字；“测试与合同共同限定”分句为阐释。		https://www.opengroup.org/certifications/UNIX/	2026-11-02
+V62.2.7.4	许可条款的私法属性	形态	私法属性论述为法理体例，离线核查。			2026-11-02
+V62.2.7.5	制度混用的判定顺序	形态	判定顺序论述为方法论体例，离线核查。			2026-11-02
+V62.2.8.1	标准文本的版本对应	确证	Austin 组页：同一规范“carry the IEEE POSIX designation, The Open Group's Technical Standard designation, and the ISO/IEC designation”，现行 ISO/IEC/IEEE 9945:2026——多标准号并行逐字。		https://www.opengroup.org/austin/	2026-11-02
+V62.2.8.2	修订草案的评审轮次	确证	Austin 组页：2023 年 7 月“Draft 3 has completed its review and issue resolution”、2024 年 5 月 Draft 4.1 获批——逐轮议题清理与轮次记录逐字。		https://www.opengroup.org/austin/	2026-11-02
+V62.2.8.3	缺陷报告的受理流程	确证	Austin 组页：“To submit a bug report against the specifications please use the Mantis online defect tracker at http://austingroupbugs.net”——单一跟踪系统逐字。		https://www.opengroup.org/austin/	2026-11-02
+V62.2.8.4	采纳决策的机构归属	确证	Austin 组页：为 IEEE 与 Open Group 联合工作组，“write once, adopt everywhere”；Draft 4.1 分别经 Open Group 理事会与 IEEE 批准——两机构分别批准逐字。		https://www.opengroup.org/austin/	2026-11-02
+V62.2.8.5	文本同步的工程代价	形态	同步代价论述为体例题，离线核查。			2026-11-02
+V62.3.1.1	认证对象的范围界定	确证	FIPS 140-3：标准约束“a cryptographic module”，CMVP 验证 cryptographic modules；CC Portal：评估对象为 evaluated product——模块／产品为单位逐字。		https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf https://www.commoncriteriaportal.org/	2026-11-02
+V62.3.1.2	评估证据的类型差异	形态	功能要求与保证要求两分叙事未逐字取证（CC Part 2／Part 3 结构未及），离线核查。			2026-11-02
+V62.3.1.3	认证失效的条件设定	形态	有效期与过渡政策叙事未逐字取证，离线核查。			2026-11-02
+V62.3.1.4	认证责任主体的分配	形态	使用机构责任叙事未逐字取证，离线核查。			2026-11-02
+V62.3.1.5	两类制度的功能互补	形态	许可与认证互补论述为分析性体例，离线核查。			2026-11-02
+V62.3.2.1	评估框架的分部构成	形态	准则分部构成未逐字取证（Part 1–3 与 CEM 结构未及），离线核查。			2026-11-02
+V62.3.2.2	保护轮廓与安全目标的过渡	形态	过渡期受理叙事未逐字取证（CC:2022 过渡日期未及），离线核查。			2026-11-02
+V62.3.2.3	保证级的等价声明	形态	等价声明叙事未逐字取证（CC Portal 载 CCRA 互认在场、跨版本等价条款未及），离线核查。			2026-11-02
+V62.3.2.4	评估活动的强制文档	确证	CC Portal：“Supporting documents, are used within the Common Criteria certification process to define how the criteria and evaluation methods are applied when certifying specific technologies”——强制支撑文档逐字。		https://www.commoncriteriaportal.org/	2026-11-02
+V62.3.2.5	证书效力的延续机制	形态	维持与再评估叙事未逐字取证，离线核查。			2026-11-02
+V62.3.3.1	初版框架的等级设置	确证	FIPS 140-3：“provides four increasing, qualitative levels of security: Level 1, Level 2, Level 3, and Level 4…intended to cover the wide range of potential applications and environments”——四级沿用逐字；140-1 四级未逐字。		https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf	2026-11-02
+V62.3.3.2	第二版的更新节点	确证	FIPS 140-3：“This standard supersedes FIPS PUB 140-2…in its entirety”，140-2 复取代前版——取代链逐字；变更通告次数未及。		https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf	2026-11-02
+V62.3.3.3	第三版与国际标准接轨	确证	FIPS 140-3 关键词列“ISO/IEC 19790; ISO/IEC 24759”——以国际标准为底逐字。		https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf	2026-11-02
+V62.3.3.4	模块边界与接口审查	确证	FIPS 140-3：要求面含“cryptographic module specification; cryptographic module interfaces; roles, services, and authentication…operating environment”——接口、角色与服务逐字。		https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf	2026-11-02
+V62.3.3.5	运行环境的证书附列	形态	运行环境附列方式未逐字取证（CVS 证书条目 OE 字段未及），离线核查。			2026-11-02
+V62.3.4.1	管理体系的文件基线	确证	ISO 27001 页：“ISO/IEC 27001 is the world's best-known standard for information security management systems (ISMS). It defines requirements an ISMS must meet”，要求“establishing, implementing, maintaining and continually improving”——管理体系与持续改进逐字。		https://www.iso.org/standard/27001	2026-11-02
+V62.3.4.2	风险评估的组织方法	确证	ISO 27001 页：“an organization or business has put in place a system to manage risks related to the security of data owned or handled by the company”——以组织为范围的风险管理逐字。		https://www.iso.org/standard/27001	2026-11-02
+V62.3.4.3	认证审核的周期成本	形态	年审维持叙事未逐字取证（监督审核惯例未锚），离线核查。			2026-11-02
+V62.3.4.4	组织认证与产品认证的错位	形态	组织与产品认证错位论述为分析性体例（ISMS 组织面在场），离线核查。			2026-11-02
+V62.3.4.5	审计缺位的替代安排	形态	替代安排论述为体例题，离线核查。			2026-11-02
+V62.3.5.1	评价机构的资质门槛	确证	CC Portal：“Products can be evaluated by competent and independent licensed laboratories”——持照实验室门槛逐字。		https://www.commoncriteriaportal.org/	2026-11-02
+V62.3.5.2	评估测试范围的划定	形态	范围划定叙事未逐字取证，离线核查。			2026-11-02
+V62.3.5.3	评估结论披露的限度	形态	ST 清洗与披露限度叙事未逐字取证，离线核查。			2026-11-02
+V62.3.5.4	影子认证与定期评估	形态	影子认证叙事未获一手，离线核查。			2026-11-02
+V62.3.5.5	授权服务的可比性	形态	云服务授权名录叙事未逐字取证（FedRAMP 类名录未及），离线核查。			2026-11-02
+V62.3.6.1	评级尺度的评估对象	形态	评级衡量过程而非产品的论述为分析性体例（公认批评，未引原文），离线核查。			2026-11-02
+V62.3.6.2	未认证项目的功能实现	形态	无证书同等功能论述为体例题，离线核查。			2026-11-02
+V62.3.6.3	通过评级产品的漏洞实例	存疑	已认证产品现严重漏洞的实例未引具体证书与 CVE，作缺口披露不编造。			2026-11-02
+V62.3.6.4	自证与外部评价的取舍	形态	取舍论述为分析性体例，离线核查。			2026-11-02
+V62.3.6.5	能力可观测的工程指标	确证	FreeBSD SA 页近月度公告流水与固定体例（SA-25:06 实档）——响应时效与公告体例两项可观测指标在场；“弥补不可观测性”为阐释。		https://www.freebsd.org/security/advisories/ https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V62.4.1.1	行政令的合规入口	确证	NTIA《SBOM 最低元素》：“Pursuant to Executive Order 14028…directed the Department of Commerce…to publish the ‘minimum elements’ for a Software Bill of Materials”——法定入口逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf	2026-11-02
+V62.4.1.2	采购规则的传导路径	确证	NTIA：报告后续为“the development of guidance for providing an SBOM to software purchasers, as directed by the Executive Order”——采购端传导在场；产业扩散速度为阐释。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf	2026-11-02
+V62.4.1.3	供应商声明的最低限度	确证	NTIA 最低元素七字段（Supplier、Component Name、Version、Unique Identifiers、Dependency Relationship、Author、Timestamp）——“以最低要素为限”逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf	2026-11-02
+V62.4.1.4	监管与自律的配比	形态	监管与自律配比论述为体例题，离线核查。			2026-11-02
+V62.4.1.5	制度落地的成本分配	形态	成本分配论述为体例题，离线核查。			2026-11-02
+V62.4.2.1	报告义务的触发条件	确证	欧委会 CRA 政策页：“manufacturers are required to report actively exploited vulnerabilities and severe incidents”——已利用触发逐字（“已知”半边未及）。		https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	2026-11-02
+V62.4.2.2	通报处置时限的分级	形态	24 小时／72 小时／最终报告分段时限未逐字取证（CRA 第 14 条正文未及），离线核查。			2026-11-02
+V62.4.2.3	支持期的售前明示	确证	Regulation (EU) 2024/2847 考虑条（2）：“improving transparency with regard to the support period for products with digital elements made available on the market”——支持期透明逐字。		https://eur-lex.europa.eu/eli/reg/2024/2847/oj	2026-11-02
+V62.4.2.4	存量产品的义务覆盖	形态	存量覆盖口径未逐字取证（条例第 2 条适用面正文未及），离线核查。			2026-11-02
+V62.4.2.5	漏洞目录的优先次序	形态	已利用漏洞目录排序叙事未逐字取证（KEV 类目录未及），离线核查。			2026-11-02
+V62.4.3.1	采购场景的交付清单	形态	清单为交付件叙事未逐字取证（CRA 附录 SBOM 项未及），离线核查。			2026-11-02
+V62.4.3.2	申报字段的规范约束	形态	申报字段约束未逐字取证，离线核查。			2026-11-02
+V62.4.3.3	工具输出与申报格式	形态	格式转换叙事未逐字取证，离线核查。			2026-11-02
+V62.4.3.4	清单真实性的核查线索	确证	CycloneDX 规范概览：漏洞与可利用性可随 BOM 通报、“ideal for both vulnerability disclosure and VEX use cases”——可利用性声明作旁证逐字。		https://cyclonedx.org/specification/overview/	2026-11-02
+V62.4.3.5	工程收益与合规负担	形态	收益与负担并陈论述为体例题，离线核查。			2026-11-02
+V62.4.4.1	法规适用范围的定义	确证	Regulation (EU) 2024/2847 标题：“on horizontal cybersecurity requirements for products with digital elements”——带数字要素的产品定义逐字。		https://eur-lex.europa.eu/eli/reg/2024/2847/oj	2026-11-02
+V62.4.4.2	开源例外的适用条件	确证	欧委会 CRA 政策页：“The Cyber Resilience Act has a special approach to free and open-source software”——开源特别处理逐字；“进入市场时受约束”分句未逐字。		https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	2026-11-02
+V62.4.4.3	商业活动与非商业活动的界分	形态	货币化界分叙事未逐字取证，离线核查。			2026-11-02
+V62.4.4.4	贡献者责任的排除范围	形态	贡献者排除范围未逐字取证（steward 定义条款未及），离线核查。			2026-11-02
+V62.4.4.5	嵌入式固件的许可空间	形态	宽松许可与固件源码义务论述为分析性体例，离线核查。			2026-11-02
+V62.4.5.1	提案形成的制度背景	形态	提案背景叙事未逐字取证（提案日期与战略文件未及），离线核查。			2026-11-02
+V62.4.5.2	立法程序的通过节点	确证	EUR-Lex：Regulation (EU) 2024/2847 于 2024-10-23 由议会与理事会通过、OJ L 刊于 2024-11-20——通过与刊布节点逐字。		https://eur-lex.europa.eu/eli/reg/2024/2847/oj	2026-11-02
+V62.4.5.3	适用范围与产品类别	确证	EUR-Lex 考虑条（1）：为“placing products with digital elements on the Union market”设立统一法律框架——适用范围逐字。		https://eur-lex.europa.eu/eli/reg/2024/2847/oj	2026-11-02
+V62.4.5.4	与既有指令的衔接	确证	EUR-Lex 考虑条（3）：既有法（Regulation 2019/881、Directive 2022/2555）“does not directly cover mandatory requirements for the security of products with digital elements”——衔接与互补在场。		https://eur-lex.europa.eu/eli/reg/2024/2847/oj	2026-11-02
+V62.4.5.5	生效与适用的时点	确证	欧委会页：“The CRA entered into force on 10 December 2024”“will apply from 11 December 2027”——生效与适用分设两时点逐字。		https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	2026-11-02
+V62.4.6.1	制造商的责任构造	形态	制造商责任构造未逐字取证（评估与文档义务条款未及），离线核查。			2026-11-02
+V62.4.6.2	管理人的轻量制度	形态	steward 轻量义务未逐字取证（第 24–25 条未及），离线核查。			2026-11-02
+V62.4.6.3	两类主体的判定标准	形态	判定标准未逐字取证，离线核查。			2026-11-02
+V62.4.6.4	两类主体的义务清单	形态	义务清单差异未逐字取证，离线核查。			2026-11-02
+V62.4.6.5	主体定义边界的争议	形态	边界争议叙事为体例题，离线核查。			2026-11-02
+V62.4.7.1	商业分发行为的界定	形态	商业行为界定未逐字取证，离线核查。			2026-11-02
+V62.4.7.2	非货币化开发的定性	形态	非货币化定性未逐字取证，离线核查。			2026-11-02
+V62.4.7.3	项目与厂商的双重身份	形态	双重身份论述为体例题，离线核查。			2026-11-02
+V62.4.7.4	商业支持的义务归属	形态	义务归属未逐字取证，离线核查。			2026-11-02
+V62.4.7.5	区分标准的不确定性	形态	不确定性论述为体例题，离线核查。			2026-11-02
+V62.4.8.1	主动利用漏洞的报告门槛	确证	欧委会页：报告对象为“actively exploited vulnerabilities and severe incidents”——主动利用限定逐字。		https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	2026-11-02
+V62.4.8.2	通报时限的分段设置	形态	预警／通报／最终报告三段计时未逐字取证，离线核查。			2026-11-02
+V62.4.8.3	报告渠道的单一入口	形态	单一平台与 ENISA 分发未逐字取证，离线核查。			2026-11-02
+V62.4.8.4	通报延迟的正当理由	形态	延迟例外条件未逐字取证，离线核查。			2026-11-02
+V62.4.8.5	管理人的通报责任	形态	管理人通报与免罚未逐字取证，离线核查。			2026-11-02
+V62.4.9.1	市场监督机构的权限	形态	监督机构权限未逐字取证，离线核查。			2026-11-02
+V62.4.9.2	技术文档的备查义务	形态	备查义务未逐字取证，离线核查。			2026-11-02
+V62.4.9.3	管理人与监管的协作	形态	协作义务叙事未逐字取证，离线核查。			2026-11-02
+V62.4.9.4	技术措施的入档要求	形态	入档要求未逐字取证，离线核查。			2026-11-02
+V62.4.9.5	处罚与整改的手段	形态	处罚差异未逐字取证，离线核查。			2026-11-02
+V62.4.10.1	过渡期的分段时间表	确证	欧委会页：报告义务“to apply as of 11 September 2026”、主要义务“will apply from 11 December 2027”——分段时间表逐字。		https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	2026-11-02
+V62.4.10.2	报告义务的先行适用	确证	两时点先后（2026-09-11 报告义务早于 2027-12-11 主要义务）——“先行适用”逐字在场。		https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act	2026-11-02
+V62.4.10.3	存量产品的过渡处理	形态	存量过渡处理未逐字取证，离线核查。			2026-11-02
+V62.4.10.4	责任结构的层级分化	形态	层级分化叙事未逐字取证，离线核查。			2026-11-02
+V62.4.10.5	项目应对的准备事项	形态	准备事项叙事为体例题，离线核查。			2026-11-02
+V62.5.1.1	标准文本的获取渠道	确证	ISO 27001 页明码 CHF 155（购买渠道）；Austin 页“The HTML edition is available to read online”（在线阅读渠道）——两渠道双源逐字。		https://www.iso.org/standard/27001 https://www.opengroup.org/austin/	2026-11-02
+V62.5.1.2	准则文本的免费下载	确证	Austin 页：TC2-2008“It is a free download. See the IEEE edition and The Open Group edition”——免费下载逐字。		https://www.opengroup.org/austin/	2026-11-02
+V62.5.1.3	版本与勘误的对应	确证	Austin 页：“TC2-2008 (the 2nd technical corrigendum) has been approved by IEEE and The Open Group”，1003.1-2017 为含两增补的 rollup——正文与勘误对应逐字。		https://www.opengroup.org/austin/	2026-11-02
+V62.5.1.4	规范文件的效力层级	形态	效力层级论述为体例题，离线核查。			2026-11-02
+V62.5.1.5	引用格式的统一体例	形态	引用格式论述为体例题，离线核查。			2026-11-02
+V62.5.2.1	数据集的可再生能力	确证	CycloneDX 规范概览：Formulation 表达“the declared formulation for reproduction along with the observed formula describing the actions which transpired”——可再生产出逐字。		https://cyclonedx.org/specification/overview/	2026-11-02
+V62.5.2.2	许可数据的口径统一	确证	SPDX License List 页：统一清单提供“standardized short identifier, the full name, the license text, and a canonical permanent URL”——归一口径逐字。		https://spdx.dev/ids/	2026-11-02
+V62.5.2.3	工具输出的归档形态	确证	CycloneDX 规范概览：Media Types 为“vnd.cyclonedx+json”“vnd.cyclonedx+xml”“x.vnd.cyclonedx+protobuf”——固定媒体类型逐字。		https://cyclonedx.org/specification/overview/	2026-11-02
+V62.5.2.4	数据比对的共同基准	形态	共同基准论述为方法论体例，离线核查。			2026-11-02
+V62.5.2.5	元数据的缺失登记	确证	NTIA：Practices and Processes 含“Known Unknowns”；CycloneDX Compositions 完备度可标“unknown”——缺项显式登记双源逐字。		https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf https://cyclonedx.org/specification/overview/	2026-11-02
+V62.5.3.1	公告文本的承诺内容	形态	企业承诺公告叙事为体例题（具体公告未取），离线核查。			2026-11-02
+V62.5.3.2	发布记录的版本并列	形态	发布页版本并列叙事为体例题，离线核查。			2026-11-02
+V62.5.3.3	公告要求与实际处置	形态	不一致对照论述为方法论体例，离线核查。			2026-11-02
+V62.5.3.4	归档渠道的可追溯	形态	可追溯性论述为方法论体例，离线核查。			2026-11-02
+V62.5.3.5	企业自述的定位语句	形态	口径转换叙事为体例题，离线核查。			2026-11-02
+V62.5.4.1	评论文献的类型分层	形态	文献分层论述为方法论体例，离线核查。			2026-11-02
+V62.5.4.2	口述史的信度评估	形态	口述信度论述为方法论体例，离线核查。			2026-11-02
+V62.5.4.3	参与者身份的标注	形态	身份标注论述为方法论体例，离线核查。			2026-11-02
+V62.5.4.4	追述与当代文本的对照	形态	对照方法论述为方法论体例，离线核查。			2026-11-02
+V62.5.4.5	转述链条的可核性	形态	转述链条论述为方法论体例，离线核查。			2026-11-02
+V62.5.5.1	文本承诺与执行落差	形态	落差补证论述为方法论体例，离线核查。			2026-11-02
+V62.5.5.2	政策文件的适用射程	形态	射程划定论述为方法论体例，离线核查。			2026-11-02
+V62.5.5.3	行为证据的取得方式	形态	行为证据论述为方法论体例，离线核查。			2026-11-02
+V62.5.5.4	编号分配的实务做法	形态	编号实务叙事未逐字取证（CVE CNA 分配机制在场、提交者自带分句未锚），离线核查。			2026-11-02
+V62.5.5.5	不可证部分的标注	形态	标注原则为方法论体例，离线核查。			2026-11-02
+V62.5.6.1	和解后的文件清单	形态	和解文件清单叙事未取一手（USL 和解文本未及本批取回），离线核查。			2026-11-02
+V62.5.6.2	口头约定的证据缺失	形态	口头许可叙事为方法论体例，离线核查。			2026-11-02
+V62.5.6.3	年代争议的区间处理	形态	区间处理论述为方法论体例，离线核查。			2026-11-02
+V62.5.6.4	和解进程的时序记录	形态	时序记录叙事未取一手，离线核查。			2026-11-02
+V62.5.6.5	不确定性的表述分寸	形态	表述分寸为方法论体例，离线核查。			2026-11-02
+V62.5.7.1	许可模式与产业形态	形态	许可与产业论述为分析性体例，离线核查。			2026-11-02
+V62.5.7.2	商业化路径的许可前提	形态	低价源码发行叙事未取一手（BSDi 定价史料未及本批取回），离线核查。			2026-11-02
+V62.5.7.3	产业分工的许可基础	形态	分工基础论述为分析性体例，离线核查。			2026-11-02
+V62.5.7.4	制度变迁的产业回应	形态	产业回应论述为分析性体例，离线核查。			2026-11-02
+V62.5.7.5	制度源流的机构起点	形态	机构起点叙事未取一手，离线核查。			2026-11-02

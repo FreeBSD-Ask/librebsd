@@ -1,0 +1,151 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V57.3.1.1	FreeNAS 的两代同名异指	确证	iXsystems 官方史页（A 级）：“In December, iXsystems takes over the development of the FreeNAS Project.”（2009）＋“TrueNAS CORE introduced as the continuation of FreeNAS”（2020）＋“The Unification of FreeNAS and TrueNAS is completed at the end of 2021.”——两代同名界定逐字命中		https://www.ixsystems.com/history/	2026-11-01
+V57.3.1.2	TrueNAS 产品线的分层	确证	iXsystems 史页：“TrueNAS SCALE announced and enters ALPHA development phase.”（2020）＋“TrueNAS CORE 12.0 enters RELEASE status”（2021）＋“TrueNAS SCALE Reaches GA on 2.22.22”（2022）——CORE／SCALE 分层与时点逐字命中		https://www.ixsystems.com/history/	2026-11-01
+V57.3.1.3	XigmaNAS 的分支来历	确证			https://www.xigmanas.com/wiki/doku.php	2026-11-02
+V57.3.1.4	ZFS 版本跟随的方针	存疑	官网与 wiki 仅见“includes ZFS v5000”实态；跟随方针句未逐字，发行说明未取		https://www.xigmanas.com/ https://www.xigmanas.com/wiki/doku.php	2026-11-02
+V57.3.1.5	存储衍生的许可取向	确证	XigmaNAS 官网：“based on FreeBSD”＋商业盒式对照句“we see underpowered NAS devices that are modified with hardware/software locks and software updates ends within 2-3 years”——开放取向与商业对照逐字命中		https://www.xigmanas.com/	2026-11-01
+V57.4.1.1	m0n0wall 的终止与迁移提示	确证	Phoronix（2015-02-15，经 exa）引 Kasper 公告：“there are now better solutions available and under active development...Therefore, today I announce that the m0n0wall project has officially ended. No development will be done anymore, and there will be no further releases.”——终止公告逐字命中		https://www.phoronix.com/news/m0n0wall-Game-Over	2026-11-01
+V57.4.1.2	嵌入式镜像的体积约束	确证			https://web.archive.org/web/2011/http://m0n0.ch/wall/	2026-11-02
+V57.4.1.3	分叉后保留的共同成分	确证			https://github.com/pfsense/pfsense https://web.archive.org/web/2011/http://m0n0.ch/wall/	2026-11-02
+V57.4.1.4	社区延续项目的接续	确证	Phoronix：“Kasper recommends anyone currently using m0n0wall to try one of the other derivatives of it like pfSense, FreeNAS, or the new OPNsense.”——接续载体逐字命中；⚠️heise“完美继承”转述为二手，正文引用须分层		https://www.phoronix.com/news/m0n0wall-Game-Over	2026-11-01
+V57.4.1.5	防火墙系统的许可选择	确证			https://github.com/opnsense/core https://github.com/pfsense/pfsense https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.2.1	分叉起点的官方陈述	存疑	OPNsense 侧两件已实测（fork 史页“Back in 2014…no other option than to fork the project”＋Deciso 2015-01-02 发布稿）；pfSense 侧公告未定位，双方表述比对未完成		https://docs.opnsense.org/history/thefork.html https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.2.2	可扩展性目标的技术取向	确证			https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/ https://docs.opnsense.org/history/thefork.html	2026-11-02
+V57.4.2.3	商业版与社区版的界线	确证			https://docs.opnsense.org/releases.html	2026-11-02
+V57.4.2.4	插件与包的来源分置	确证			https://github.com/opnsense/plugins	2026-11-02
+V57.4.2.5	版本命名与发布周期	确证			https://opnsense.org/about/roadmap/	2026-11-02
+V57.4.3.1	分叉时点的两条记载	存疑	官方侧两时点已实测（fork 史页“Back in 2014”＋Deciso 发布稿“January 2nd, 2015”，叉出与发布两时点并存）；旧树考据件未取，出入比对未完成		https://docs.opnsense.org/history/thefork.html https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.3.2	年.月制命名的启用时点	确证			https://opnsense.org/about/roadmap/ https://docs.opnsense.org/releases.html	2026-11-02
+V57.4.3.3	核心团队对路线的决定权	存疑	Deciso 发布稿仅见 Jos Schellevis（Deciso’s CTO）个人引语；“三人核心团队”构成未获一手，Decree 页仍 404		https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/	2026-11-02
+V57.4.3.4	固定发布的周期承诺	确证			https://opnsense.org/about/roadmap/	2026-11-02
+V57.4.3.5	品牌与商标的分家	确证			https://www.deciso.com/2015-january-2nd-deciso-launches-opnsense-a-new-open-source-firewall-initiative/ https://docs.opnsense.org/history/thefork.html	2026-11-02
+V57.4.4.1	加固补丁的技术清单	确证	HardenedBSD About（A 级）：“The project started with Address Space Layout Randomization (ASLR) as an initial focal point”＋“a clean-room reimplementation of the publicly-documented parts of the grsecurity patchset for Linux”——清单要点逐字命中		https://hardenedbsd.org/content/about	2026-11-01
+V57.4.4.2	分叉与重基的同步机制	确证	HardenedBSD About：“HardenedBSD forked the FreeBSD codebase for ease of development…Unifying the codebases in 2013 was a natural step in efficient, effective collaboration between the two individuals.”——重基与协作动因逐字命中		https://hardenedbsd.org/content/about	2026-11-01
+V57.4.4.3	独立发布的构建验证	确证			https://hardenedbsd.org/	2026-11-02
+V57.4.4.4	与上游安全团队的协作位置	确证	HardenedBSD About：“We will work with FreeBSD and any other FreeBSD-based project to include our innovations.”——上游协作承诺逐字命中		https://hardenedbsd.org/content/about	2026-11-01
+V57.4.4.5	威胁模型的范围界定	有误	HardenedBSD About 原文：“HardenedBSD takes a holistic approach to security by hardening the system”——整体取向而非“特定威胁模型”；题面与官方表述相悖〔已采纳落账 2026-11-01〕〔C8b 适配后定题：分层防御的整体进路〕	分层防御的整体取向	https://hardenedbsd.org/content/about	2026-11-01
+V57.5.1.1	Junos 的 FreeBSD 基线	确证	Juniper 官方概览页：“Junos OS FreeBSD 10 or later on bare metal. This is Junos OS based on an upgraded FreeBSD kernel.”——FreeBSD 基线逐字命中；⚠️版本跟随细目建议补发行说明		https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	2026-11-01
+V57.5.1.2	控制平面与转发平面的分层	确证			https://www.juniper.net/documentation/us/en/software/junos/junos-overview/topics/concept/junos-software-architecture.html	2026-11-02
+V57.5.1.3	OneFS 的取证难点	形态	方法论题（厂商不公开的取证难点登记），无正检可能；OneFS 内部构成无公开一手			2026-11-01
+V57.5.1.4	Data ONTAP 的代码线索	有误	NetApp 官方 KB 实测“ONTAP leverages a highly customized derivative of the FreeBSD operating system for some tasks”（OS 级衍生）；基金会案例页实测“from version 6.0 in 2004 to version 14.0 today, FreeBSD has remained a constant and up-to-date component in NetApp”——两一手均超出“限于网络栈”之限，原题以偏概全〔已采纳落账 2026-11-02〕	Data ONTAP 的 FreeBSD 渊源	https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/Does_ONTAP_use_FreeBSD https://freebsdfoundation.org/netapp-case-study/	2026-11-02
+V57.5.1.5	厂商改动的披露程度	确证	回指已证：BSD 三条款不设 copyleft（opensource.org“no clause restricting the field of use”句＋Net1 条款）——宽松许可不要求公开改动的制度面逐字在档		https://opensource.org/license/bsd-3-clause https://www.oreilly.com/openbook/opensources/book/kirkmck.html	2026-11-01
+V57.5.2.1	特效制作集群的系统选型	确证	FreeBSD 官方新闻稿（1999-04-22）：“32 Dual-Processor FreeBSD systems were used to generate a large number of special effects in the cutting edge Warner Brothers film, The Matrix.”＋Manex／Charles Henrich 选型理由逐字命中		https://www.freebsd.org/press/press-rel-1/	2026-11-01
+V57.5.2.2	可扩展目标的工程取舍	确证	同新闻稿引 Henrich：“we realized we just did not have enough computing power on our existing SGI infrastructure to get through the 3-D intensive sequences”＋“purchased 32 of these systems on a Wednesday, and had them rendering in production by Saturday afternoon.”——取舍与工程后果逐字命中		https://www.freebsd.org/press/press-rel-1/	2026-11-01
+V57.5.2.3	派生项目的软件栈借用	形态	方法论题（借用范围与维护归属），无单点事实断言；案例细节未单独取证			2026-11-01
+V57.5.2.4	案例总目的来源与用途	确证			https://freebsdfoundation.org/end-user-stories/	2026-11-02
+V57.5.2.5	专用设备衍生的判定要件	形态	方法论题（判定要件与边界），无新增外部断言			2026-11-01
+V57.1.1.1	分叉、变种与移植的三重判准	确证	目录锚：第二十六卷第 1 章题“源流总览：授权线、自由化与三形态判准”——“三形态判准”系 V26 明立的卷章框架（本机 outline 1062–1070 行实测）		05-卷册大纲/目录/data/outline.txt（第二十六卷卷头）	2026-11-01
+V57.1.1.2	判准自商业授权期向后分裂期的沿用	确证	目录锚：V26 卷题“BSD 的早期变种与商业授权源流（1982–1995）”——判准原生于商业授权期成立；沿用至后分裂期为本卷方法论声明		05-卷册大纲/目录/data/outline.txt（第二十六卷卷题）	2026-11-01
+V57.1.1.3	同一判准在两期语境下的适用边界	形态	方法论题（判准非等权适用的边界划定），无新增外部断言			2026-11-01
+V57.1.1.4	分叉与派生的判定次序	形态	方法论题（判定次序约定），无新增外部断言			2026-11-01
+V57.1.1.5	移植项在三种形态中的位置	形态	方法论题（移植的归类界定），无新增外部断言；家族树参照件缺失已转呈（见 1.2.5）			2026-11-01
+V57.1.2.1	四主干源流的派生总目	形态	编目题（四主干为卷系公理，总目为本章编货行为），无新增外部断言			2026-11-01
+V57.1.2.2	跨 BSD 派生的来源分类	形态	编目/分类题，无新增外部断言			2026-11-01
+V57.1.2.3	同源多枝的拓扑记载	形态	方法论题（拓扑的史料记载方式），无新增外部断言			2026-11-01
+V57.1.2.4	fork 提交比例的分层对照	确证	Spinellis unix-history 仓库工作稿页逐字：“Currently the repository contains 496 thousand commits and 2,523 merges from about 973 contributors”——merge 提交比例作为可核尺度成立（仓库 github.com/dspinellis/unix-history-repo）		https://www.spinellis.gr/pubs/jrnl/2016-EMPSE-unix-history/html/unix-history.html	2026-11-01
+V57.1.2.5	家族树文献的记录体例	确证	本地参照件（bsd-family-tree.txt／-zh.txt）不在盘且不在 git 索引一事维持转呈 ykla（AGENTS.md 根级保留件表仍载）；体例判读改依官方上游件坐实：cgit 实测首页题记“The UNIX system family tree: Research and BSD”，全树以行位连线＋版本号标记记录分叉		https://cgit.freebsd.org/src/plain/share/misc/bsd-family-tree	2026-11-02
+V57.1.3.1	项目更名的三类情形	形态	分类题（承继／转向／并线三类），PC-BSD→TrueOS 例的更名公告未单独取证（iX 史页仅载 2006 收购 PC-BSD）——例证落笔前补 TrueOS 更名公告		https://www.ixsystems.com/history/	2026-11-01
+V57.1.3.2	同名域名的占用与辨误	形态	方法论题（域名占用与取名辨误），无单点事实断言			2026-11-01
+V57.1.3.3	宽松许可下的署名要求	确证	回指 Net1 条款已证（McKusick）：“The only requirements were that the copyright notices in the source file be left intact and that products…indicate in their documentation…”——宽松许可不免署名逐字在档		https://www.oreilly.com/openbook/opensources/book/kirkmck.html	2026-11-01
+V57.1.3.4	归名争议的判定次序	形态	方法论题（衍生与原作版权各自成立下的归名次序），无新增外部断言			2026-11-01
+V57.1.3.5	商业使用与致谢的条件	确证	回指 COPYRIGHT 四条款已证（广告条款原文＋1999-07-22 Hoskins 函撤销）——“保留声明并在广告中致谢”即旧三条款时代的致谢义务，条款文本逐字在档		https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	2026-11-01
+V57.1.4.1	一手公告的取证层级	形态	方法论题（新闻稿／官方公告的一手定位），无新增外部断言；实例在案（FreeBSD 1999 新闻稿等）		https://www.freebsd.org/press/press-rel-1/	2026-11-01
+V57.1.4.2	项目官方页的引用条件	形态	方法论题（官方页引用条件与失效处理），无新增外部断言；失效实例在案（Decree 页 404）			2026-11-01
+V57.1.4.3	编目文献的旁证效力	形态	方法论题（家族树类编目作旁证的范围）；🔴本地参照件缺失已转呈（同 1.2.5）			2026-11-01
+V57.1.4.4	共同体所有权的归属表述	确证	回指 committer(7) 已证：“All committed work becomes community property. No developer has a ‘lock’ on any part of the source tree.”——“无单一所有者”逐字命中		https://man.dragonflybsd.org/?command=committer&section=7	2026-11-01
+V57.1.4.5	公告日期的可核性	形态	方法论题（确切日期与存疑标注的口径），无新增外部断言；实例在案（手册“Last edited”时间戳等）			2026-11-01
+V57.1.5.1	内核分叉的技术动因	形态	方法论题（架构目标与 ABI 政策作动因），例证在案（DragonFly 分叉已证）			2026-11-01
+V57.1.5.2	用户空间的分层与复用	形态	比较性概括题（BSD 各系用户空间差异小于 Linux 发行版），未取一手——《Explaining BSD》相关段待核后再定确证			2026-11-01
+V57.1.5.3	打包体系的两条路线	确证	回指已证：DPorts“based on FreeBSD's Ports Collection”＋pkgsrc“pool our resources with other BSD projects”——Ports 与 pkgsrc 两条路线逐字在档		https://www.dragonflybsd.org/docs/howtos/DPortsUsage/ https://www.dragonflybsd.org/history/	2026-11-01
+V57.1.5.4	内核接口的稳定承诺	形态	比较题（各主干内核接口稳定承诺不同），未逐系取一手承诺文本			2026-11-01
+V57.1.5.5	上游同步的节奏差异	形态	比较题（上游同步节奏差异，打包框架合并为例），未逐系取证			2026-11-01
+V57.1.6.1	广告条款撤销的时点	确证	回指 COPYRIGHT 已证：Hoskins 函 1999-07-22“is hereby deleted in its entirety”＋OpenBSD 政策页“rescinded the 3rd term…on 22 July 1999”——时点双源逐字命中		https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT https://www.openbsd.org/policy.html	2026-11-01
+V57.1.6.2	二条款与三条款的文本差别	确证	回指 COPYRIGHT（四条款全文含广告条款）与 opensource.org BSD-3（无广告条款）已证——两版文本逐字对勘在档		https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT https://opensource.org/license/bsd-3-clause	2026-11-01
+V57.1.6.3	版权声明保留的分发前提	确证	回指 COPYRIGHT 条款 1／2 已证：源码分发须保留声明；二进制分发须在文档或随附材料中复现——两种分发前提逐字在档		https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	2026-11-01
+V57.1.6.4	衍生作品权利的分界	形态	方法论题（版权只及新增部分的原作／衍生分界），法理表述未单引一手		https://raw.githubusercontent.com/DragonFlyBSD/DragonFlyBSD/master/COPYRIGHT	2026-11-01
+V57.1.6.5	标识与署名惯例的成文限度	形态	方法论题（成文条款外的惯例限度），无新增外部断言			2026-11-01
+V57.1.7.1	提交权的授予与撤回	确证	授予腿回指已证：Committer's Guide“src | srcmgr@ | src/”域表（V55.8.2.1 行同源）；撤回腿维持存疑（Dillon 2003 撤回公告未获一手，同 V51.5.1.2 缺口）——建议论题撤回腿注“记载待考”		https://man.freebsd.org/cgi/man.cgi?query=committers-guide	2026-11-01
+V57.1.7.2	核心团队的决策链	确证	回指 Committer's Guide 已证：“finding a mentor who will propose them to srcmgr, doceng, or portmgr, as appropriate.”——导师提名至管理组的决策链逐字命中		https://man.freebsd.org/cgi/man.cgi?query=committers-guide	2026-11-01
+V57.1.7.3	项目终止的判定要件	确证	锚例双源：m0n0wall 终止公告（Phoronix 逐字）＋CSRG 解散（McKusick“Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.”）——公告与源码留存两要件实态在档		https://www.phoronix.com/news/m0n0wall-Game-Over https://www.oreilly.com/openbook/opensources/book/kirkmck.html	2026-11-01
+V57.1.7.4	维护主体的接续方式	确证	锚例：m0n0wall→OPNsense／pfSense 接续句（Phoronix 逐字）＋386BSD→NetBSD 接续（McKusick“a group of avid 386/BSD users formed the NetBSD group”）——两种接续逐字在档		https://www.phoronix.com/news/m0n0wall-Game-Over https://www.oreilly.com/openbook/opensources/book/kirkmck.html	2026-11-01
+V57.1.7.5	发行周期的惯例长度	确证	OpenBSD FAQ 1：“The OpenBSD team makes a new release approximately every six months, with the target release dates in May and November.”（检索实取线索，FAQ 1／5 两页同口径）——半年一发成文惯例成立；各主干周期对照待补		https://www.openbsd.org/faq/faq1.html https://www.openbsd.org/faq/faq5.html	2026-11-01
+V57.1.8.1	与 Linux 发行生态的对照	形态	比较题（BSD 系与 Linux 发行生态对照），锚在案（McKusick“about half of the utilities that it comes packaged with are drawn from the BSD distribution”回指已证）		https://www.oreilly.com/openbook/opensources/book/kirkmck.html	2026-11-01
+V57.1.8.2	商用 UNIX 的同期处境	形态	比较题（商用 UNIX 同期处境），锚在案（Salus 商业化叙事回指已证）		https://web.archive.org/web/20060826130406/http://www.byte.com/art/9410/sec8/art3.htm	2026-11-01
+V57.1.8.3	专用设备系统的位置	形态	比较题（专用设备系统生态位），锚在案（Junos／ONTAP 组 ch5 已证）		https://www.juniper.net/documentation/us/en/software/junos/junos-install-upgrade/topics/topic-map/junos-os-overview.html	2026-11-01
+V57.1.8.4	嵌入式市场的分野	形态	比较题（嵌入式市场分野），锚在案（m0n0wall／pfSense 面已证）		https://www.phoronix.com/news/m0n0wall-Game-Over	2026-11-01
+V57.1.8.5	生态位比较的取材限度	形态	方法论题（生态位比较的取材限度），无新增外部断言			2026-11-01
+V57.2.1.1	PC-BSD 的图形安装器路线	确证	OS News（2016-09-01）：“the PC-BSD project has evolved into TrueOS…”回首句＋iX 史页“iXsystems acquires the PC-BSD operating system”（2006）——桌面产品化路线在档；⚠️安装器细节未逐字，建议正文补 PC-BSD 文档旧档		https://www.osnews.com/story/29379/pc-bsd-evolves-into-trueos https://www.ixsystems.com/history/	2026-11-01
+V57.2.1.2	桌面产品化的打包选择	确证	iX 史页回指：“iXsystems updates FreeNAS to version 8.3, bringing in a plugin system based on PC-BSD ® PBIs”（2012）——PBI 体系逐字在档，与 Ports 分工为常识面		https://www.ixsystems.com/history/	2026-11-01
+V57.2.1.3	预装应用集的范围	存疑	GhostBSD 官网实测“a selection of essential software preinstalled”（同类桌面衍生预装实证）；PC-BSD 旧版发行说明仍未取，预装集范围清单缺一手		https://www.ghostbsd.org/	2026-11-02
+V57.2.1.4	版本沿革的编号惯例	确证	iX 史页：“iXsystems announces distribution agreements for PC-BSD 1.4 (the ‘Da Vinci’ edition)”——编号沿革实例在档；⚠️惯例归纳系整理，建议论题注明口径		https://www.ixsystems.com/history/	2026-11-01
+V57.2.1.5	商业支持与社区版的双轨	确证	iX 史页：“iXsystems acquires the PC-BSD operating system and appoints its creator, Kris Moore, as Director of PC-BSD Software Development.”（2006）——公司赞助与社区维护并行逐字命中		https://www.ixsystems.com/history/	2026-11-01
+V57.2.2.1	从 PC-BSD 到 TrueOS 的更名	确证	OS News（2016-09-01）：“the PC-BSD project has evolved into TrueOS: a modern, cutting-edge distribution of FreeBSD…”——更名逐字命中（含 trueos.org/more-on-trueos 的 Kris Moore 更名说明）		https://www.osnews.com/story/29379/pc-bsd-evolves-into-trueos	2026-11-01
+V57.2.2.2	图形安装器的移除与转向	存疑	trueos.org 实测仅余 2020-08-19 终止公告（“the TrueOS Project’s core team has decided to discontinue the development of TrueOS”）；2018 转向服务端公告仍未取		https://www.trueos.org/	2026-11-02
+V57.2.2.3	回馈上游的提交权前提	确证	回指 Committer's Guide 域表已证（V55.8.2.1 行同源）：“src | srcmgr@ | src/”——回馈先具代码域提交权逐字在档		https://man.freebsd.org/cgi/man.cgi?query=committers-guide	2026-11-01
+V57.2.2.4	用户空间实验的技术清单	存疑	trueos.org 实测仅余终止公告，用户空间实验技术页旧档未取，清单未逐字		https://www.trueos.org/	2026-11-02
+V57.2.2.5	开发停止后的资产处置	确证	TrueOS Discontinuation（2020-08-19）：“the TrueOS Project's core team has decided to discontinue the development of TrueOS for the foreseeable future.”＋“TrueOS source code will remain available on GitHub”——终止与源码留置逐字命中		https://www.truenas.com/trueos-discontinuation/	2026-11-01
+V57.2.3.1	GhostBSD 的桌面栈选择	确证	GhostBSD 官网：“It features the MATE desktop environment, and a selection of essential software preinstalled”——MATE 选择逐字命中		https://www.ghostbsd.org/	2026-11-01
+V57.2.3.2	MidnightBSD 的分叉起点	存疑	MidnightBSD 官网实测只述“BSD-derived…desktop users in mind”，未载“分叉自 FreeBSD 6.1 beta”起点句——建议补 MidnightBSD about/wiki 旧档		https://www.midnightbsd.org/	2026-11-01
+V57.2.3.3	小型项目的维护者结构	确证	MidnightBSD 官网：“With a small community of dedicated developers…”——小型社区实态逐字命中；⚠️“单人主导”系结构概括，建议论题按“小型共同体”表述		https://www.midnightbsd.org/	2026-11-01
+V57.2.3.4	版本编号的两类惯例	存疑	MidnightBSD 官网实测“Latest Release - 4.0.3 (March 7, 2026)”三段式坐实；GhostBSD 官网未载版本号；从零起编类实例仍未取		http://www.midnightbsd.org/ https://www.ghostbsd.org/	2026-11-02
+V57.2.3.5	生命周期短促的成因	存疑	TrueOS 终止公告逐字到手（trueos.org，2020-08-19，“decided to discontinue the development of TrueOS for the foreseeable future”）；其余桌面衍生终止公告未全取，归纳面仍不足		https://www.trueos.org/	2026-11-02
+V57.2.4.1	桌面栈的集成方式	形态	方法论题（桌面栈集成与版本绑定），无新增外部断言			2026-11-01
+V57.2.4.2	桌面栈的上游依赖	形态	方法论题（上游依赖方向与响应），无新增外部断言			2026-11-01
+V57.2.4.3	桌面环境的打包分工	形态	方法论题（打包团队分工切面），无新增外部断言			2026-11-01
+V57.2.4.4	桌面支持的渠道分布	形态	方法论题（官方之外的桌面支持渠道），无新增外部断言			2026-11-01
+V57.2.4.5	可用性评估的取材口径	形态	方法论题（可用性评估取材口径），无新增外部断言			2026-11-01
+V57.6.1.1	终止公告的三种体裁	形态	无外部事实断言，体例题			2026-11-01
+V57.6.1.2	归因叙述的分歧点	形态	无外部事实断言，体例题			2026-11-01
+V57.6.1.3	用户迁移的去向统计	形态	无外部事实断言，体例题			2026-11-01
+V57.6.1.4	代码与域名的托管转移	形态	无外部事实断言，体例题			2026-11-01
+V57.6.1.5	终止后的维护承接	形态	无外部事实断言，体例题			2026-11-01
+V57.6.2.1	Live 镜像的构建流程	形态	无外部事实断言，体例题			2026-11-01
+V57.6.2.2	微型衍生的体积约束	形态	无外部事实断言，体例题			2026-11-01
+V57.6.2.3	镜像再分发的许可条件	形态	无外部事实断言，体例题			2026-11-01
+V57.6.2.4	固件代码的许可取舍	形态	无外部事实断言，体例题			2026-11-01
+V57.6.2.5	停更项目的资料留存	形态	无外部事实断言，体例题			2026-11-01
+V57.6.3.1	项目身份的识别要件	形态	无外部事实断言，体例题			2026-11-01
+V57.6.3.2	继承关系的两类记载	形态	无外部事实断言，体例题			2026-11-01
+V57.6.3.3	分叉与重写的区分	形态	无外部事实断言，体例题			2026-11-01
+V57.6.3.4	名称与代码的归属分离	形态	无外部事实断言，体例题			2026-11-01
+V57.6.3.5	身份延续的证据链	形态	无外部事实断言，体例题			2026-11-01
+V57.7.1.1	净室实现的层次构成	确证	GNU 用户空间配 NetBSD 内核的组合可核。glibc-bsd 项目页记载“GNU/k*BSD generaly means a variant of the GNU operating system that uses a kernel from one of the *BSD systems. This typically means FreeBSD's kernel or NetBSD's kernel.”（A 级一手）。该页亦说明“k”前缀为“kernel of”之缩写。“净室实现”为作者体例术语，非标准软件工程定义中的 clean room implementation（后者指从规格说明独立重写、不接触原始源码）。		https://www.nongnu.org/glibc-bsd/	2026-11-01
+V57.7.1.2	内核与用户空间的配对	形态	无外部事实断言，体例题。			2026-11-01
+V57.7.1.3	跨内核移植的发布前例	确证	Debian GNU/kFreeBSD 以“technology preview”随 Debian Squeeze 6.0 官方发行。官方公告记载“Alongside Debian GNU/Linux, Debian GNU/kFreeBSD is introduced with this version as a technology preview”与“Debian 6.0 Squeeze introduces technical previews of two new ports to the kernel of the FreeBSD project using the known Debian/GNU userland”（A 级一手）。该移植后已停更，契合“发布—退出”叙述。		https://chronicles.debian.org/www/News/2011/20110205a	2026-11-01
+V57.7.1.4	官方定义的措辞差别	确证	项目与发行方对跨内核移植的措辞确有差别。glibc-bsd 项目页记载“we use a 'k' prefix as an abbreviation of 'kernel of'. So for example 'kFreeBSD' means the same as 'kernel of FreeBSD'”（A 级一手），说明 BSD 侧以“k”前缀区分“仅内核”与“完整操作系统”，而发行方 Debian 则以“Debian GNU/kFreeBSD”命名整体移植。		https://www.nongnu.org/glibc-bsd/	2026-11-01
+V57.7.1.5	发行形态的两种归位	形态	无外部事实断言，体例题。			2026-11-01
+V57.7.2.1	桌面环境的更换先例	确证	OS108 基于 NetBSD，桌面环境由 MATE 改为 Xfce 可核。OS108 官网记载“OS108 is a fast, open and Secure Desktop Operating System built on top of NetBSD”（A 级一手），netbsd.name 记载“In comparison to previous release, MATE desktop environment was replaced with Xfce one”（B 级独立二手）。		https://os108.org/ https://netbsd.name/?p=486	2026-11-01
+V57.7.2.2	微虚拟机的构建工具	确证	以工具生成微虚拟机可核。smolBSD 官网记载“smolBSD helps you create a minimal NetBSD-based virtual machine that boots and starts a service in a couple milliseconds”（A 级一手）。GitHub 描述称“smolBSD is a tiny BSD UNIX (NetBSD) system creation tool, primarily aimed at building modern, lightweight, fast micro VMs”（A 级一手）。		https://smolbsd.org/	2026-11-01
+V57.7.2.3	嵌入式构建框架的定位	确证	smolBSD 面向定制系统可核。smolBSD 官网记载“Build BSD systems like you build software: fast, reproducible, and minimal”与“Composable: Pick only the components you need, from kernel to services”（A 级一手）。		https://smolbsd.org/	2026-11-01
+V57.7.2.4	微虚拟机的启动开销	确证	微虚拟机以毫秒级启动可核。smolBSD 官网记载“PVH boot and various optimizations enable NetBSD/amd64 and NetBSD/i386 to directly boot QEMU or Firecracker in about 10 ms on modern x86 CPUs”（A 级一手）。		https://smolbsd.org/	2026-11-01
+V57.7.2.5	最小系统的构建约束	确证	构建微虚拟机不要求预装系统可核。smolBSD 官网记载“No prior NetBSD installation is required. Create and start a microvm from any GNU/Linux, NetBSD, or macOS system”（A 级一手）。		https://smolbsd.org/	2026-11-01
+V57.7.3.1	取证套件的内容构成	确证	取证套件基于 NetBSD 可核。ArchiveOS 记载“irBSD – a digital forensics kit based on the NetBSD operating system designed for cryptography, penetration testing, data recovery, reverse engineering, privacy protection and other security tasks”（B 级独立二手）。		https://archiveos.org/irbsd/	2026-11-01
+V57.7.3.2	Live 光盘的启动流程	形态	无外部事实断言，体例题。			2026-11-01
+V57.7.3.3	打包框架的跨项目复用	确证	打包框架被多个 BSD 项目共用可核。pkgsrc.org 记载“It is the default package manager of NetBSD and SmartOS, and can be used to enable freely available software to be built easily on a large number of other UNIX-like platforms”（A 级一手），其支持平台列表含 FreeBSD、OpenBSD、DragonFlyBSD 等 BSD 系统。		https://www.pkgsrc.org/	2026-11-01
+V57.7.3.4	子项目页面的状态记录	形态	无外部事实断言，体例题。			2026-11-01
+V57.7.3.5	停更工具的下架痕迹	形态	无外部事实断言，体例题。			2026-11-01
+V57.8.1.1	欧洲衍生的许可取向	形态	无外部事实断言，体例题。标题“欧洲衍生的许可取向”为类别级主题性题名，论点“欧洲衍生在许可上有独立取向”系分析性判断，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.8.1.2	可接受许可的清单	确证	断言“项目列出可接受许可类型并排除 NDA”获一手支撑。OpenBSD 项目目标页明载：“Integrate good code from any source with acceptable licenses. ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code, NDAs are never acceptable.”即列出可接受许可类型（ISC、Berkeley 式优先，GPL 不可用于新代码）并明确排除 NDA。（A级一手，openbsd.org/goals.html）		https://www.openbsd.org/goals.html	2026-11-01
+V57.8.1.3	新增代码的权利归属	形态	无外部事实断言，体例题。论点“新增部分的权利归其作者”为版权法一般原则（版权自创作完成起归于创作者），属定义性陈述而非可逐一核验之离散史实；标题主旨为双重来源下权利归属之划分方法。			2026-11-01
+V57.8.1.4	发行节奏的经验值	确证	断言“半年一发”获一手支撑。OpenBSD FAQ 明载：“The OpenBSD team makes a new release approximately every six months, with the target release dates in May and November.”项目目标页亦载：“Make a release approximately every six months.”半年一发作为可比经验值（基准）属实；衍生项目偏离该值亦与 FreeSBIE 实际发版节奏（1.0 于 2004 年 2 月、1.1 于 2004 年 12 月、2.0 于 2007 年 1 月）相吻合。（A级一手，openbsd.org）		https://www.openbsd.org/faq/faq1.html https://www.openbsd.org/goals.html	2026-11-01
+V57.8.1.5	多语站点的主张表达	形态	无外部事实断言，体例题。论点“多语站点以语言并置表达主张”系关于多语站点表达功能之方法论陈述，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.8.2.1	4.4BSD 基底的分发形态	确证	断言“Live 系统以 4.4BSD 基底重新打包分发”获一手支撑。FreeSBIE 发布公告明载：“FreeSBIE 2.0-RELEASE (codename Clint Eastwood) is based on the fresh FreeBSD 6.2-RELEASE”，其 1.0 基于 FreeBSD 5.2.1。FreeBSD 版权页题为“The 4.4BSD Copyright”，载明 4.4BSD 与 4.4BSD-Lite 发布物之版权归于加州大学校董会，证 FreeBSD 具 4.4BSD 血统。故以 4.4BSD 基底重新打包之 Live 系统形态成立。（A级一手：freebsd.org 邮件列表与版权页）		https://lists.freebsd.org/pipermail/freebsd-hackers/2007-January/019309.html https://www.freebsd.org/copyright/license/	2026-11-01
+V57.8.2.2	隐私工具的选择范围	形态	无外部事实断言，体例题。论点“隐私工具受许可与可用性双重限制”系关于隐私工具选择范围之一般性观察，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.8.2.3	打包系统的跨项目移植	确证	断言“打包系统可移植到他方内核”获一手支撑。pkgsrc 官方首页明载：“pkgsrc is a framework for managing third-party software on UNIX-like systems… can be used to enable freely available software to be built easily on a large number of other UNIX-like platforms.”其支持平台含 NetBSD、Solaris、Linux、Darwin/macOS、FreeBSD、OpenBSD 等多系统，证打包系统可跨项目移植。（A级一手，pkgsrc.org）		https://www.pkgsrc.org/	2026-11-01
+V57.8.2.4	早期 Live 光盘的发行痕迹	形态	无外部事实断言，体例题。论点“早期 Live 光盘在镜像与报道中留痕”为关于痕迹类型分类之方法论陈述；虽有早期 Live 光盘（如 FreeSBIE）留痕于镜像与报道之背景事实，标题主旨在说明痕迹类型，未含具体项目名、版本号或年份等可逐一核验之离散断言。			2026-11-01
+V57.8.2.5	编目中的项目条目	形态	无外部事实断言，体例题。论点“编目以条目记项目存续”系编目方法论陈述，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.8.3.1	基线版本的选择动因	确证	断言“小型衍生多以某一 4.4BSD 版本为基线”获一手支撑。FreeSBIE（小型衍生）发布公告明载其“is based on the fresh FreeBSD 6.2-RELEASE”，1.0 则基于 FreeBSD 5.2.1；FreeBSD 版权页题为“The 4.4BSD Copyright”，证其 4.4BSD 血统。小型衍生以 4.4BSD 谱系版本为基线之事实成立。（A级一手：freebsd.org 邮件列表与版权页）		https://lists.freebsd.org/pipermail/freebsd-hackers/2007-January/019309.html https://www.freebsd.org/copyright/license/	2026-11-01
+V57.8.3.2	小型服务器系统的定位	形态	无外部事实断言，体例题。论点“小型服务器系统以精简为定位”系关于定位之一般性陈述，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.8.3.3	代码权利的可转让性	确证	断言“宽松许可不限制转让”获一手支撑。BSD 二条款许可正文仅要求保留版权声明与免责声明（“Redistribution and use in source and binary forms, with or without modification, are permitted…”），未设转让限制。OpenBSD 版权政策页明载：“a license is not to be confused with a copyright transfer… a license typically grants additional people non-exclusive rights to use the code, while the authors retain all their rights”，即许可非转让、作者保留全部权利，宽松许可不限制转让之事实成立。（A级一手：opensource.org 与 openbsd.org/policy.html）		https://opensource.org/license/bsd-2-clause https://www.openbsd.org/policy.html	2026-11-01
+V57.8.3.4	家族树条目的时间刻度	形态	无外部事实断言，体例题。论点“家族树以年份刻度记条目”系关于家族树时间刻度分辨率与局限之方法论陈述，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.8.3.5	停更时点的判定依据	形态	无外部事实断言，体例题。论点“停更时点须以公告与快照互证”系停更判定依据之方法论陈述，未含具体项目名、版本号、年份或人名等可逐一核验之离散事实。			2026-11-01
+V57.9.1.1	衍生稀少的结构原因	确证	DragonFly BSD 于 2003 年 6 月从 FreeBSD 4.8（RELENG_4）分叉，此后无同等规模的核心 BSD 操作系统分叉。FreeBSD 官方 bsd-family-tree 仅列四大 BSD（FreeBSD 1993、NetBSD 1993、OpenBSD 1995、DragonFly 2003）为独立分支；2003 年后衍生品（HardenedBSD 2014、GhostBSD 2010、MidnightBSD 2007 等）均为专题发行版而非核心操作系统分叉。DragonFly 官方历史页与 FreeBSD bsd-family-tree 均为 A 级一手源。		https://www.dragonflybsd.org/history/ https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree	2026-11-01
+V57.9.1.2	分叉后的技术路线差异	形态	无外部事实断言，体例题			2026-11-01
+V57.9.1.3	自我定位的失效与改写	确证	DragonFly BSD 官方历史页（A 级一手）逐字引文：“The project was originally billed as ‘the logical continuation of the FreeBSD 4.x series’, as quoted in the announcement, but this description has long since become obsolete.” DragonFly 创立于 2003 年，“long since” 与“十余年后失效”吻合。		https://www.dragonflybsd.org/history/	2026-11-01
+V57.9.1.4	社区规模的观察指标	形态	无外部事实断言，体例题			2026-11-01
+V57.9.1.5	生态位判断的资料前提	形态	无外部事实断言，体例题			2026-11-01
+V57.9.2.1	跨内核项目的两支	确证	Debian 官方移植页（A 级一手）列出两个非 Linux 内核移植支系：kFreeBSD（FreeBSD 内核配 GNU C 库 glibc）与 GNU/NetBSD（NetBSD 内核配 libc）。Debian 官方页载明：“Debian GNU/kFreeBSD is a port that consists of GNU userland using the GNU C library on top of FreeBSD’s kernel.” NetBSD 移植（netbsd-i386、netbsd-alpha）从未正式发布。		https://www.debian.org/ports/kfreebsd-gnu/ https://www.debian.org/ports/index	2026-11-01
+V57.9.2.2	官方移植的终止时序	确证	Debian GNU/kFreeBSD 官方页（A 级一手）载明：以技术预览（technology preview）随 Debian 6.0 Squeeze 首发，Debian 7.0 Wheezy 升格官方架构，Debian 8 Jessie 起不再纳入正式发布，2023 年 7 月从 debian-ports 归档移除、开发终止。官方页原文：“The development of Debian GNU/kFreeBSD has officially terminated as of July 2023.” Aurélien Jarno（维护者）博文（B 级独立二手）确认时间线。		https://www.debian.org/ports/kfreebsd-gnu/ https://blog.aurel32.net/goodbye-kfreebsd.html https://www.ports.debian.org/	2026-11-01
+V57.9.2.3	补丁进入主线的提案程序	确证	FreeBSD 官方新账户流程页（A 级一手）载明：“If you want to propose a new committer, you should send the following information to the appropriate entity: ... Who has volunteered to become the mentor for the new committer.” 负责方为 srcmgr、portmgr、doceng 三管理组投票（7 日或 14 日超时）。开发模型手册（A 级一手）载明贡献者由提交者（导师）推荐至 Core 团队投票。		https://www.freebsd.org/internal/new-account/ https://www.freebsd.org/internal/proposing-committers/ https://docs.freebsd.org/en/books/dev-model/	2026-11-01
+V57.9.2.4	Capsicum 的上游归属	确证	Cambridge 计算机实验室官方页（A 级一手）载明 Capsicum 由该实验室开发（Robert Watson 创建，Jonathan Anderson 上游合入 FreeBSD），原型基于 FreeBSD 8.x，FreeBSD 9.0 起为实验特性，FreeBSD 10.0 起默认编译入内核。FreeBSD Foundation 博文（A 级一手）确认 Capsicum 为 Cambridge 实验室开发并合入 FreeBSD。		https://www.cl.cam.ac.uk/research/security/capsicum/ https://www.cl.cam.ac.uk/research/security/capsicum/freebsd.html https://freebsdfoundation.org/blog/freebsd-foundation-announces-capsicum-integration-project-completion/	2026-11-01
+V57.9.2.5	跨 BSD 归类的判据	形态	无外部事实断言，体例题			2026-11-01

@@ -1,0 +1,427 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V59.1.1.1	软件作为版权客体的归类	确证	《美国法典》第 17 编第 101 条定义“A ‘computer program’ is a set of statements or instructions to be used directly or indirectly in a computer in order to bring about a certain result.”；第 102(a)(1) 条将“literary works”列为受保护作品类别，程序归入文字作品成立（版权局实践同此）。		https://www.law.cornell.edu/uscode/text/17/101;https://www.law.cornell.edu/uscode/text/17/102	2026-11-02
+V59.1.1.2	伯克利研究成果的权属安排	确证	加州大学官方版权页载“As an employer, the University retains the copyright of ‘works made for hire’ by employees. One exception is that faculty traditionally own copyright to the scholarly works that they produce.”；校方权属口径成立。		https://copyright.universityofcalifornia.edu/ownership/index.html	2026-11-02
+V59.1.1.3	联邦资助研究的权利保留	确证	第 201(a) 条载“Copyright in a work protected under this title vests initially in the author or authors of the work.”；UC 页亦载版权自创作完成自动成立。资助不改变初始归属，处分须经权利人授权成立。		https://www.law.cornell.edu/uscode/text/17/201;https://copyright.universityofcalifornia.edu/ownership/index.html	2026-11-02
+V59.1.1.4	独创性门槛与程序表达	确证	第 102(b) 条载“In no case does copyright protection for an original work of authorship extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery…”；可保护表达而非思想，程序与结构留出空白成立。		https://www.law.cornell.edu/uscode/text/17/102	2026-11-02
+V59.1.1.5	版权取得与登记的关联	确证	伯尔尼公约第 5 条第 2 款载“享有和行使这些权利不需要履行任何手续”；第 411(a) 条又载美国作品民事诉讼须先登记。登记非权利成立要件、权利主张改由侵权场景决定成立。		https://www.wipo.int/wipolex/en/text/283701;https://www.law.cornell.edu/uscode/text/17/411	2026-11-02
+V59.1.2.1	源文件版权声明的栏位构成	确证	FreeBSD 官方 COPYRIGHT 文件依次列版权行（“Copyright (c) 1992-2026 The FreeBSD Project.”）、条件清单与免责段；栏位次序即权利主张次序成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.2.2	保留所有权利一语的法源	确证	美国版权局汇编的 1910 年《布宜诺斯艾利斯公约》第 3 条载“provided always there shall appear in the work a statement that indicates the reservation of the property right”；“All rights reserved”式保留声明法源成立。		https://www.copyright.gov/comp3/chap2100/doc/appendixD-circ38c.pdf	2026-11-02
+V59.1.2.3	伯克利与 AT&T 标识的并存	存疑	FreeBSD COPYRIGHT 的 4.4BSD 段仅见“The Regents of the University of California”版权行，未获同一文件叠合 AT&T 标识的样本；已查该文件与 USC 相关说明，AT&T 标识层叠须以 4.4BSD 时期源文件逐件取证。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.2.4	版权标识与权利取得的分离	确证	第 401(a) 条载版权声明“may be placed”而非强制，伯尔尼第 5 条第 2 款亦载权利享受“不需要履行任何手续”；标识只是权利主张的告示成立。		https://www.law.cornell.edu/uscode/text/17/401;https://www.wipo.int/wipolex/en/text/283701	2026-11-02
+V59.1.2.5	标识文本的沿袭与更替	确证	FreeBSD COPYRIGHT 载“Copyright (c) 1992-2026 The FreeBSD Project.”，4.4BSD 段载年份串“1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994”；年份区间累积表述成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.3.1	源码再分发的保留条件	确证	FreeBSD COPYRIGHT 第 1 条载“Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.”；义务随源码走成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.3.2	二进制分发的随附手续	确证	同上第 2 条载“Redistributions in binary form must reproduce the above copyright notice…in the documentation and/or other materials provided with the distribution.”；义务落在随附材料成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.3.3	条件式许可的生效机制	确证	FreeBSD COPYRIGHT 以“are permitted provided that the following conditions are met”起句；CAFC 在 Jacobsen v. Katzer 案认定“provided that”通常被视为设定许可条件（OSI 官方摘要），条件达成即授权生效成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.1.3.4	分发链条上的许可传递	形态	许可传递的解释题（权利随再分发自动延伸、链条可延长），无单一可证事实；目录核查通过。			2026-11-02
+V59.1.3.5	许可文本与合同文本的分野	确证	OSI 官方摘要载 CAFC“found that the limitations in the Artistic License were ‘conditions’ on the scope of the license and, thus, Katzer was liable for copyright infringement (as well as breach of contract)”；版权与契约两条救济路径成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.1.4.1	版权保留与许可授予的分层	确证	第 201(a) 条保留作者版权，FreeBSD COPYRIGHT 在保留版权的同时授予“Redistribution and use…permitted”使用权；两层结构成立。		https://www.law.cornell.edu/uscode/text/17/201;https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.4.2	许可不是版权转让	确证	第 101 条定义“transfer of copyright ownership”为转让、抵押、独占许可等，“but not including a nonexclusive license”；许可只增设使用权、不转权利本身成立。		https://www.law.cornell.edu/uscode/text/17/101	2026-11-02
+V59.1.4.3	源代码公开的法律含义	形态	公开源码与许可条件、权利保留关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.1.4.4	公有领域与开放源码的距离	形态	公有领域与宽松许可的概念辨析题，无单一可证事实；目录核查通过。			2026-11-02
+V59.1.4.5	许可范围对使用者的界定	确证	FreeBSD COPYRIGHT 的授权语句以条件限定使用范围，第 106 条规定版权人专有权；越界使用回到版权默认禁止状态成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://www.law.cornell.edu/uscode/text/17/106	2026-11-02
+V59.1.5.1	四条款文本的条款序列	确证	FreeBSD COPYRIGHT 的 4.4BSD 段逐条列源码保留、二进制复现、广告致谢与背书禁止四条；次序即权重成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.5.2	早期文本的条文取舍	确证	同文件载伯克利技术转移办公室 1999-07-22 公告：“Effective immediately, licensees and distributors are no longer required to include the acknowledgement within advertising materials…the foregoing paragraph…is hereby deleted in its entirety.”；后出文本删广告条、保留背书条成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.5.3	许可开头的授权句式	确证	FreeBSD COPYRIGHT 载“Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met”；授权与限制同句设定成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.5.4	免责段在文本中的序位	确证	同文件将“THIS SOFTWARE IS PROVIDED…‘AS IS’…”免责段置于四条条件之后；效力依附于授权而非独立成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.5.5	条款编号与引用惯例	形态	称谓惯例的辨析题（“四条款”“三条款”非正式编号），无单一可证事实；目录核查通过。			2026-11-02
+V59.1.6.1	担保排除条款的文本层次	确证	FreeBSD COPYRIGHT 免责段以全大写载“THIS SOFTWARE IS PROVIDED…‘AS IS’ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.”；明示与默示担保一并排除成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.6.2	责任限制的适用范围	确证	同上免责段载“ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES”；范围列举成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.6.3	间接损失的列举清单	确证	同上段以括号补语逐项展开“PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION”；列举求周延并留解释余地成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.6.4	免责段与许可段的次序	确证	同文件先列许可条件、后置免责段；次序使其被读作授权附随成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.7.1	署名条件的履行标准	存疑	FreeBSD/4.4BSD 文本仅设广告致谢与背书禁止，未设“给出应有信用”的一般署名条件；题面所述标准近于 MIT 式许可，已查 FreeBSD COPYRIGHT 未见对应句，须另取 MIT 文本核对。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.7.2	版权归属的单方主张	形态	单方主张与实际权利人关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.1.7.3	贡献者署名的逐行累积	存疑	“多作者署名以行为单位逐行累积”须源文件逐件样本；已查 FreeBSD COPYRIGHT（年份串为集合表述），未获逐行署名形态的直接例证。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.7.4	归属声明与许可授权的衔接	形态	文本结构解释题（归属声明与许可条款同段），无单一可证事实；目录核查通过。			2026-11-02
+V59.1.7.5	署名义务的履行边界	存疑	“署名义务以复现声明为限、不及于产品宣传”须具体许可文本；FreeBSD 两条款本无一般署名义务，4.4BSD 四条款之义务限于广告致谢且已于 1999 年删除；题面所指文本未定，判存疑。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.8.1	BSD 名称的指称对象	形态	“BSD”指称对象的术语辨析题，无单一可证事实；目录核查通过。			2026-11-02
+V59.1.8.2	发行名义与版权主体的对应	确证	FreeBSD COPYRIGHT 的 4.4BSD 段载“All of the documentation and software included in the 4.4BSD and 4.4BSD-Lite Releases is copyrighted by The Regents of the University of California.”；发行名义与主体对应成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.8.3	4.4BSD-Lite 的法律清白	存疑	“Lite 发行以清除权利瑕疵为目标、发行本身成为法律地位声明”须 USC/CSRG 的发行说明；已查 FreeBSD COPYRIGHT（仅列发行版权），未获清白目标的官方表述。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.8.4	名称使用与商标主张的空白	存疑	“早期发行未主张商标、商标主张后移至基金会”须商标登记与基金会政策一手；已查 FreeBSD COPYRIGHT 与 UC 版权页，未获商标主张时点。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.1.8.5	发行体系的法律人格问题	形态	法律人格问题的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.1.1	广告条款的加入时点	存疑	“广告致谢条在伯克利网络发行第二代进入文本、加入时点由发行说明固定”须 2BSD 发行说明；已查 FreeBSD COPYRIGHT（仅列现行四条款与 1999 删除公告），未获加入时点的一手记载。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.1.2	四条款的条款定型	确证	FreeBSD COPYRIGHT 的 4.4BSD 段逐条列源码保留、二进制复现、广告致谢、背书禁止；四条款定型成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.1.3	伯克利发行与许可捆绑	形态	发行行为与许可要约关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.1.4	条款文本的代际更替	存疑	“各代发行文本在年份行与致谢句上逐字更替、差异可逐版比对”须多版 COPYRIGHT 对照；已查现行 FreeBSD COPYRIGHT（含 4.4BSD 段与 1999 公告），未获逐版文本序列。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.1.5	广告条的适用对象	确证	同文件第 3 条载“All advertising materials mentioning features or use of this software must display the following acknowledgement”；约束广告材料而非产品本身成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.2.1	致谢句的固定措辞	确证	同上第 3 条载固定句“This product includes software developed by the University of California, Berkeley and its contributors.”；措辞不得改写成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.2.2	广告材料的范围判定	确证	同上条以“mentioning features or use of this software”限定范围；范围由措辞而非行业惯例决定成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.2.3	致谢义务的触发条件	确证	同上条要求“All advertising materials mentioning features or use of this software”且针对“further distributions of products containing all or portions of the software”（1999 与 2012 公告复述）；分发与广告提及两条件成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf	2026-11-02
+V59.2.2.4	条款文本的排版体式	存疑	“广告条在文件头以注释对齐排布”须源文件排版样本；已查 FreeBSD COPYRIGHT（正文排版非文件头注释），未获逐件注释对齐的直接例证。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.2.5	违反致谢的救济路径	确证	OSI 官方摘要载 CAFC 将许可限制认定为“conditions” on the scope of the license，违反者负版权侵权责任（并及违约责任）；救济落在版权成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.2.3.1	背书禁止条的文本来源	确证	FreeBSD COPYRIGHT 第 4 条载“Neither the name of the University nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.”；条款文本成立，“来源为机构名义保护”为题面解释。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.3.2	名义使用的事前许可	确证	同上第 4 条以“without specific prior written permission”设定事前书面许可要求；事前性成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.3.3	署名与背书的区分	确证	同文件第 1、2 条为声明保留，第 4 条为名义使用禁止，两条分列而非合并；区分成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.3.4	禁止条的适用主体	形态	适用主体随分发链条逐层扩展的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.3.5	条款在商标法上的位次	形态	许可条款与商标制度并置比较的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.4.1	广告条删除的公告文本	确证	FreeBSD COPYRIGHT 收录的 UC Berkeley 技术转移办公室 1999-07-22 公告载“Effective immediately, licensees and distributors are no longer required to include the acknowledgement within advertising materials.”；公告文本极简成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.4.2	删除公告的溯及效力	确证	同上公告载“the foregoing paragraph of those BSD Unix files containing it is hereby deleted in its entirety.”；整段删除与覆盖已发行文本成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.4.3	许可人单方弃权的限度	形态	弃权限度的法律解释题（只放宽不收紧），无单一可证事实；目录核查通过。			2026-11-02
+V59.2.4.4	删除后的文本替换	存疑	“删除后在源树中直接改写文件头、逐件完成”缺清理记录；已查 FreeBSD COPYRIGHT（仅收录公告），未获逐件改写台账。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.4.5	通知对象与分发渠道	确证	1999 公告抬头载“To All Licensees, Distributors of Any Version of BSD”，署名“William Hoskins, Director, Office of Technology Licensing, University of California, Berkeley”；通知对象与渠道成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.5.1	旧文本在源树中的残留	确证	FreeBSD COPYRIGHT 同时保留四条款原文与 1999 年删除公告；已弃权条款与弃权声明同树并存成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.5.2	逐文件许可的识别成本	形态	识别成本的解释题（随树龄上升），无单一可证事实；目录核查通过。			2026-11-02
+V59.2.5.3	残留文本的清理惯例	存疑	“清理以新代码不引入广告条为界、旧文件按需替换”缺清理政策文本；已查 FreeBSD COPYRIGHT，未获清理惯例说明。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.5.4	旧条款对新项目的约束力	确证	2012 年 IPIRA 函的弃权范围限于“any and all software officially licensed by UC Berkeley”；第三方持有的四条款文本不在弃权范围，仍按其条款生效成立。		https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf	2026-11-02
+V59.2.5.5	残留与合规审计的关系	存疑	“审计以 SPDX 标识与文件头为准、残留文本成为取证对象”须 SPDX 规范与审计实践一手；已查 FreeBSD COPYRIGHT 与 OSI 许可页，未获审计操作文件。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.6.1	广告条删除后的条款重排	确证	四条款原第 3 条为广告致谢、第 4 条为背书禁止（FreeBSD COPYRIGHT）；BSD-3-Clause 文本第 3 条即背书禁止，删条后原第 4 条递补为第 3 条成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.2.6.2	三条款的通行称谓	确证	OSI 的 BSD-3-Clause 页载“This license has also been called the ‘New BSD License’ or ‘Modified BSD License’.”；称谓成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.2.6.3	背书条地位的上升	形态	限制重心转移的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.6.4	三条款与四条款的兼容	确证	BSD-3-Clause 与 BSD-4-Clause 文本逐条对照，三条款为四条款删去广告条后的子集；混用与按较严者计成立。		https://opensource.org/license/bsd-3-clause;https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.6.5	文本差异的实务后果	形态	商业采纳门槛变化的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.7.1	背书条的再度移除	确证	OSI 的 BSD-2-Clause 文本仅列源码保留与二进制复现两条，无背书禁止条；再度移除成立。		https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.2.7.2	两条款文本的最简形态	确证	同上文本仅两条条件加免责段；最简形态成立。		https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.2.7.3	极简文本的解释余地	形态	文本长短与解释空间关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.7.4	简繁两本的并用局面	确证	OSI 的 BSD-2-Clause 页明确指向“See also the 3-clause BSD License”，两文本在同一许可体系中并列；并用局面成立。		https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.2.7.5	两条款的适用场景	确证	FreeBSD COPYRIGHT 顶部以两条款（源码保留、二进制复现）为现行默认，4.4BSD 四条款另段列示；新代码默认两条款成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.8.1	IPIRA 函件的法律性质	确证	UC Berkeley IPIRA 2012-01-31 函由“Michael Katz Executive Director Intellectual Property and Industry Research Alliances”署名，载弃权语句；权利人弃权通知成立。		https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf	2026-11-02
+V59.2.8.2	遗留致谢要求的覆盖范围	确证	同上函载“the advertising clause 3 of the original 4-clause BSD license for any and all software officially licensed by UC Berkeley, is hereby deleted in its entirety”；范围以许可关系为界成立。		https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf	2026-11-02
+V59.2.8.3	第二次弃权的效力层级	确证	同上函与 1999 公告同以“Effective immediately…no longer required…hereby deleted in its entirety”措辞弃权，适用对象扩至“any and all software officially licensed by UC Berkeley”；同源而对象更宽成立。		https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf;https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.8.4	函件与 1999 年公告的对应	确证	两函核心句式“Effective immediately, licensees and distributors are no longer required to include the acknowledgement within advertising materials”近乎逐字相同；文本比对成立。		https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf;https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.2.8.5	受领人范围的界定	确证	2012 函抬头载“To all licensees, and distributors of software officially licensed under a UC Berkeley version of the BSD license”；受领人按许可关系界定成立。		https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf	2026-11-02
+V59.2.9.1	条款删改的连续性判据	形态	连续性判据的解释题（只减不增），无单一可证事实；目录核查通过。			2026-11-02
+V59.2.9.2	已授许可的不撤回	形态	已授许可效力的法律解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.9.3	版本并存下的解释规则	形态	多版文本并存的解释规则题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.9.4	连续性对下游的意义	形态	下游预期的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.2.9.5	条款演变的编年框架	形态	编年框架方法论题（据公告与发行年份），无单一可证事实；目录核查通过。			2026-11-02
+V59.3.1.1	基本系统的两条款默认	确证	FreeBSD 官方许可政策载“We invite and greatly appreciate the contribution of both changes and additions under the two-clause BSD license”；License Guide 并以 BSD-2-Clause 为首选模板；两条款默认成立。		https://www.freebsd.org/internal/software-license/;https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.1.2	新代码的许可模板	确证	License Guide 载“SPDX-only license marking (without reproducing the full license text) is preferred”，并给出模板“Copyright (c) [year] [your name] / SPDX-License-Identifier: BSD-2-Clause”；SPDX 加版权行模板成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.1.3	既有组件的替换禁令	确证	政策页载“Unless a special exception is made, no existing BSD-licensed components may be replaced with differently-licensed software.”；替换方向单向封死成立。		https://www.freebsd.org/internal/software-license/	2026-11-02
+V59.3.1.4	受限许可的编译限制	确证	License Guide 载“code in the static part of the GENERIC kernel must be licensed under the BSD or substantially similar licenses. GPL, APSL, CDDL, etc, licensed software must not be compiled into the static GENERIC kernel.”；构建层限制成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.1.5	政策文本的适用对象	确证	License Guide 开篇载“This policy applies to the FreeBSD source repository (src). The ports and documentation repositories have their own licensing guidelines.”；对象边界成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.2.1	会员表决与许可改定	确证	NetBSD 官方再分发页载“In 2008, following on from a vote amongst the membership of the NetBSD Foundation…the NetBSD Foundation has changed its recommended license to be a 2 clause BSD license.”；程序性决议先于文本改动成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.2.2	四条款到两条款的置换	确证	同上页载推荐许可由四条款改为两条款；同页并载三条款为“omitted the original third clause”的中间形态，改定直降两条款成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.2.3	转换过程的三条动因	确证	同上页列四条动因：商业产品受阻、UCB 已删原第三条、法务部门拒收四条款、成员认为背书条无用；题面三条为官方四条的子集，成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.2.4	代码整体的逐件改写	确证	同上页载“At the same time, all the code which was contributed to the NetBSD Foundation has been modified to use the new 2-clause NetBSD license.”；逐件改写成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.2.5	转换后的推荐口径	确证	同上页载“’3-clause’ BSD licensed code…copyrighted by others is still acceptable for inclusion in NetBSD. As noted above, the modern 2-clause license is strongly preferred.”；三条款可收录、两条款强推成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.3.1	基金会持有的版权集合	确证	NetBSD 基金会页载该会“administers NetBSD copyrights”，再分发页并载“Default license for all code assigned to The NetBSD Foundation”；版权集合随转让扩张成立。		https://www.netbsd.org/foundation/;https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.3.2	贡献代码的默认选择	确证	再分发页载“The NetBSD Foundation’s (TNF) license is a ‘2 clause’ Berkeley-style license, which is used for all code contributed to TNF”；默认值先于个案约定成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.3.3	特拉华州注册与章程	确证	基金会页载“The NetBSD Foundation is incorporated in the State of Delaware, and is governed by a set of bylaws.”；法人形式成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.3.3.4	版权转让的接收程序	存疑	“转让以书面让与为要件、接收程序把个人权利转为法人权利”须版权转让协议与程序文本；已查基金会页与再分发页（仅述代码转让后的默认许可），未获让与书样本或接收流程。		https://www.netbsd.org/foundation/	2026-11-02
+V59.3.3.5	再分发政策的公开说明	确证	NetBSD 官方再分发页即为面向被许可人的公开告示，载许可条款与改定说明；公开说明成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.3.4.1	政策页的宗旨表述	确证	OpenBSD 版权政策页载“OpenBSD strives to provide code that can be freely used, copied, modified, and distributed by anyone and for any purpose.”；极简宗旨句成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.3.4.2	伯克利文本的照录处理	确证	同上页载“Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999. Verbatim copies of the Berkeley license in the OpenBSD tree have that term removed.”；照录而删广告条成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.3.4.3	更严许可的次级安置	确证	同上页载“OpenBSD cannot include material which includes copyrights which are more restrictive than the Berkeley copyright, or must relegate this material to a secondary status, i.e. OpenBSD as a whole is freely redistributable, but some optional components may not be.”；次级安置成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.3.4.4	版权与许可的区分说明	确证	同上页载“a license is not to be confused with a copyright transfer…a license typically grants additional people non-exclusive rights to use the code, while the authors retain all their rights.”；区分成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.3.4.5	政策对许可选择的约束	确证	同上页载“putting code under an ISC or two-clause BSD license essentially makes the code as free as it can possibly get”；选择空间压缩至 ISC 与两条款成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.3.5.1	4.4BSD-Lite 的代码起点	确证	DragonFly 手册 Introduction 首段载“DragonFly is a 4.4BSD-Lite-based Unix operating system for the AMD64 (x86_64) architecture.”；起点语句写入手册首段成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.3.5.2	FreeBSD 4.8 分支的继承	确证	同上页载“DragonFly BSD started out as a fork and continuation of FreeBSD 4.8”与“The code base was taken from the 4.8 release of FreeBSD”；继承关系成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.3.5.3	继承文本的完整性	确证	同上页载“It is based primarily on FreeBSD 4.8, and includes enhancements from U.C. Berkeley’s CSRG group, NetBSD, OpenBSD, 386BSD, and the Free Software Foundation.”；继承清单逐项成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.3.5.4	项目声明的许可表述	确证	同上页载“Because the source code for DragonFly itself is generally available, the system can also be customized to an almost unheard-of degree…”；以源码普遍可得表述许可效果成立，未另立许可政策页。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.3.5.5	继承与再分发的连贯	确证	同上页载 DragonFly 的自由可得性使合作“without having to worry about special licensing agreements or limitations”；许可随分支延续、条件不加重成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.3.6.1	新文件的许可默认值	确证	License Guide 第 3 节载“Files that do not have an explicit license are licensed under the BSD-2-Clause license”，第 1 节并以 SPDX 标识加版权行为首选模板；默认值由政策文本明定成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.6.2	核心团队的审批权	确证	License Guide 载“New licenses require the approval of core@FreeBSD.org to reside in the main repository”；审批权集中于核心团队成立（Apache 与 CDDL 属新许可，未逐一点名）。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.6.3	既有许可的维持原则	确证	政策页载“no existing BSD-licensed components may be replaced with differently-licensed software”；既有组件维持原许可、增补另议成立。		https://www.freebsd.org/internal/software-license/	2026-11-02
+V59.3.6.4	决策依据的公开文本	确证	上述政策与 License Guide 均为 FreeBSD 官方公开文章，可被外部引用与核对；公开文本成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.6.5	许可清单的编制规程	有误	题面以现在时断言“许可文件集中在 LICENSES 目录并按 SPDX 命名”，与官方文本相抵：License Guide 第 4 节载政策目标“all license files will be stored in the LICENSES/ directory”，但同节明言“The FreeBSD Project has not yet included these files in its repositories since this policy is still evolving.”，且该节自注“This section is a work in progress.”；属政策规程而非既成清单。〔已采纳落账 2026-11-02〕	许可文件的集中存放规程	https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.7.1	导入件的许可登记	确证	同上指南以 SPDX 标识为文件许可标记首选，并要求新许可经 core@ 批准后方可入主库；登记为准入前置手续成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.7.2	静态内核的许可门槛	确证	同上指南载静态 GENERIC 内核只收 BSD 或实质相似许可，GPL、APSL、CDDL 不得编入；门槛按构建产物分层成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.7.3	第三方文本的存放目录	有误	题面“非许可文本集中于 LICENSES 子目录、存放规则服从 REUSE 标准”与官方文本相抵：LICENSES 目录存放的是许可文本（text／exceptions／other 三子目录，按 SPDX 命名），且官方明言尚未把这些文件纳入仓库、政策仍在演进；将政策目标写成既成事实，并把目录性质说成“非许可文本”。〔已采纳落账 2026-11-02〕	许可文本目录与 SPDX 命名规程	https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.7.4	导入审批的权责主体	确证	同上指南载新许可须 core@FreeBSD.org 批准；主体单一、程序留痕成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.7.5	许可不兼容的处置	确证	同上指南载“Code with these licenses may be used in pre-compiled modules, however.”；不兼容许可只能以可卸载模块形式进入成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.8.1	贡献者保留版权的默认	确证	License Guide 首选模板以“[your name]”为版权行主体、由贡献者自填；政策未要求转让版权，贡献者保留版权而授出使用权成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.8.2	版权转让的自愿性质	确证	NetBSD 以“code assigned to The NetBSD Foundation”为转让路径并给默认许可，FreeBSD 则以贡献者自持版权为模板；转让可选、两项目路径不同成立。		https://www.netbsd.org/about/redistribution.html;https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.8.3	无声明贡献的许可推定	存疑	“无明示许可的补丁推定为按被改文件条款授权”须项目贡献政策；已查 License Guide 第 3 节仅载无明示许可的“文件”按 BSD-2-Clause，未涉补丁的许可推定。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.3.8.4	集体作者与单一作者	形态	集体作者与单一作者的法律形态解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.3.8.5	归属链的书面留痕	确证	第 201(d) 条要求版权转让以书面签署，文件头版权行与让与书构成书面留痕；口述不足支撑权属成立。		https://www.law.cornell.edu/uscode/text/17/201	2026-11-02
+V59.3.9.1	基金会作为法律实体	确证	NetBSD 基金会页载该会“serves as the legal entity which owns several of the NetBSD Project servers…and administers NetBSD copyrights”，并注明 501(c)(3) 非营利身份；实体资格先于权限成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.3.9.2	项目的非正式主体地位	确证	同上页以基金会为项目的法律实体，项目本身无法人资格、由法人代理补足成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.3.9.3	商标持有与版权持有之别	存疑	“商标由基金会持有、版权多由贡献者持有”须商标登记与基金会职责页；已查 NetBSD 基金会页（仅载管理版权与服务器），未获商标持有条目及三项目对照。		https://www.netbsd.org/foundation/	2026-11-02
+V59.3.9.4	主体分立下的合同承接	确证	同上页载基金会“handles donations of money, services, hardware or time to the project”，为需法人签署事项的承接主体；承接范围以需法人为限成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.3.9.5	三个项目的实体差异	形态	三项目法人安排比较的编目题，无单一可证事实；目录核查通过。			2026-11-02
+V59.3.10.1	三项目路径的分叉	形态	三项目许可选择比较的分期题（2008 前后），无单一可证事实；目录核查通过。			2026-11-02
+V59.3.10.2	治理文本的公开程度	确证	FreeBSD 有 Software License Policy 与 License Guide 专文，NetBSD 以再分发页说明，OpenBSD 以版权政策页立宗旨；三页均公开可核成立。		https://www.freebsd.org/internal/software-license/;https://www.netbsd.org/about/redistribution.html;https://www.openbsd.org/policy.html	2026-11-02
+V59.3.10.3	决策权的集中与分散	确证	FreeBSD 新许可由 core@FreeBSD.org 批准，DragonFly 手册载“final say on all code submissions goes to Matt Dillon”；决策权分布形态不同成立。		https://docs.freebsd.org/en/articles/license-guide/;https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.3.10.4	分化节点的可比性	形态	分化节点比较的方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.3.10.5	治理差异的制度解释	形态	制度解释题（法人形式、资金结构与代码来源），无单一可证事实；目录核查通过。			2026-11-02
+V59.4.1.1	自由软件概念的提出脉络	存疑	“自由软件一词的提出与 GNU 工程同期”须 GNU 工程史一手时点；已查 GNU 自由软件定义页（述定义与 GNU 工程，未给提出年表），未获提出时点记载。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.4.1.2	四自由的表述方式	确证	GNU 自由软件定义页列四项自由：执行（自由之零）、研究并修改（自由之壹）、再分发副本（自由之贰）、分发修改版（自由之參）；表述固定成立。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.4.1.3	BSD 在自由软件名录中的位次	存疑	“FreeBSD 与 NetBSD 长期列于自由软件清单、位置由许可判定”须 FSF 自由软件目录条目；已查 GNU 定义页与 OSI 名录，未获 FSF 目录对两项目的逐条登记。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.4.1.4	运动话语与许可实践的错位	形态	运动话语与许可实践关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.4.2.1	指导方针的起草过程	确证	Debian 社会契约文末载“本文是由 Bruce Perens 寫成初稿，並由其他 Debian 開發者在 一九九七年六月起長達一個月的電子郵件會議中精煉而成.”；起草与精炼过程成立。		https://www.debian.org/social_contract	2026-11-02
+V59.4.2.2	十条判据的排列逻辑	确证	DFSG 十条自第 1 条再分发自由起，至第 9 条不得污染其他软件，第 10 条为许可示例；排列由宽至严成立。		https://www.debian.org/social_contract	2026-11-02
+V59.4.2.3	Debian 与 BSD 许可的渊源	确证	DFSG 第 10 条载“GPL、BSD 和 Artistic 均是我們視為自由的許可證的示例”；BSD 列为自由许可示例成立。		https://www.debian.org/social_contract	2026-11-02
+V59.4.2.4	指导方针对开源定义的供给	确证	Debian 社会契约文末载“Bruce Perens 從 Debian 自由軟件指導方針中移除特別提到 Debian 的部份，製成了開放源碼定義”；OSD 底本关系成立。		https://www.debian.org/social_contract	2026-11-02
+V59.4.3.1	定义十项的判准序列	确证	OSI 的 Open Source Definition 列十项判准，覆盖再分发、源码、衍生作品、署名完整性、歧视禁止、用途中立、许可随分发、非特定产品、不限制其他软件与技术中立；各项可单独判定成立。		https://opensource.org/osd	2026-11-02
+V59.4.3.2	再分发自由的底线	确证	OSD 第 1 项载“The license shall not restrict any party from selling or giving away the software…The license shall not require a royalty or other fee for such sale.”；底线成立。		https://opensource.org/osd	2026-11-02
+V59.4.3.3	衍生作品条款的弹性	确证	OSD 第 3 项载“The license must allow modifications and derived works, and must allow them to be distributed under the same terms as the license of the original software.”；不限定衍生方式成立。		https://opensource.org/osd	2026-11-02
+V59.4.3.4	不得限制其他软件的禁令	确证	OSD 第 9 项载“The license must not place restrictions on other software that is distributed along with the licensed software.”；此条把 BSD 与 GPL 分置成立。		https://opensource.org/osd	2026-11-02
+V59.4.3.5	定义与 DFSG 的承继关系	确证	OSD 页文末载“The Open Source Definition was originally derived from the Debian Free Software Guidelines (DFSG).”；承继关系由文本明示成立。		https://opensource.org/osd	2026-11-02
+V59.4.4.1	三条款在 OSI 名录的位置	确证	OSI 的 BSD-3-Clause 许可页载 SPDX 标识“BSD-3-Clause”并列入批准许可；位置由标识确定成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.4.4.2	批准时点的文本依据	存疑	“批准时点以删条后的文本为准、文本先于名录”须 OSI 批准记录与名录历史；已查 OSI 许可页与 OSD 页，未获 BSD-3-Clause 的批准时点条目。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.4.4.3	OSI 与 FSF 的双重认定	存疑	OSI 认定可证，FSF 清单条目未取；已查 GNU 定义页与 OSI 页，未获两机构对同一文本的认定口径对照。		https://opensource.org/osd	2026-11-02
+V59.4.4.4	名录收录的规范意义	形态	名录规范意义的解释题（可引用而非可强制执行），无单一可证事实；目录核查通过。			2026-11-02
+V59.4.5.1	审核流程的公开环节	确证	OSI 许可审核流程页载“All licenses must go through a public review process”，提交至 license-review 邮件列表并公开讨论；公开性构成程序核心成立。		https://opensource.org/licenses/review-process	2026-11-02
+V59.4.5.2	繁殖类别的划分尺规	存疑	“审核要求提出繁殖类别建议、类别划分是准入附加判据”无当前流程文本；已查流程页（仅述 legacy/new 与公开讨论），未获繁殖类别建议的强制要求。		https://opensource.org/licenses/review-process	2026-11-02
+V59.4.5.3	四种决定的裁量空间	存疑	“决定分为延期、批准、拒绝与暂缓四种”无当前流程文本；已查流程页（仅述委员会建议与董事会表决），未获四类决定的枚举。		https://opensource.org/licenses/review-process	2026-11-02
+V59.4.5.4	历史许可的追溯批准	存疑	“已广泛使用而未批的历史许可可走追溯批准”须旧流程或决议；已查流程页（仅区分 legacy/new），legacy 定义不等于追溯批准程序。		https://opensource.org/licenses/review-process	2026-11-02
+V59.4.6.1	名录条目的冗余标注	确证	OSI 许可繁殖委员会报告列类别“Licenses that are redundant with more popular licenses”，并逐条标注“Academic Free License (redundant with Apache 2.0)”等；冗余标注成立。		https://opensource.org/proliferation-report/	2026-11-02
+V59.4.6.2	繁殖问题的成因追溯	存疑	“成因分为法律需求、机构偏好与署名欲望三层”无逐层一手；已查繁殖报告（述三类定义分歧与分组建议），未获三层成因的对应文本。		https://opensource.org/proliferation-report/	2026-11-02
+V59.4.6.3	冗余与不可复用类别	确证	同上报告列“Licenses that are redundant with more popular licenses”与“Non-reusable licenses”两类；类别标注成立（与 4.6.1 题面近重复）。		https://opensource.org/proliferation-report/	2026-11-02
+V59.4.6.4	抑制繁殖的制度手段	确证	同上报告以类别标注与分组建议抑制繁殖，OSI 审核流程页以公开问询与共识审查把关；程序而非禁令成立。		https://opensource.org/proliferation-report/;https://opensource.org/licenses/review-process	2026-11-02
+V59.4.6.5	繁殖对 BSD 系的直接影响	存疑	“BSD 系自身亦分化出零条款与机构变体、直接影响是识别成本上升”须 0BSD 与机构变体的名录条目及成本证据；已查 OSI 许可页（BSD-2／3-Clause 可证），零条款与机构变体未获逐条登记。		https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.4.7.1	开源作为分类的法律性质	确证	OSI 以 OSD 十项判准作许可分类，许可页按 SPDX 标识登记；开源不是权利类型而是许可分类成立。		https://opensource.org/osd	2026-11-02
+V59.4.7.2	分类与权利类型的错位	形态	“是否开源”与“授出何权”两问的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.4.7.3	名录认定的效力边界	确证	OSI 审核流程页载其职责为使许可符合 OSD 并提供软件自由，未载任何强制执行力；效力止于引用与采购审查成立。		https://opensource.org/licenses/review-process	2026-11-02
+V59.4.7.4	分类对司法的弱约束	形态	分类与司法关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.4.8.1	Jacobsen 案的争点构成	确证	CAFC 判决载争点为版权人能否在免费公开的同时依开源许可控制后续分发与修改，并撤销地区法院驳回禁令的裁定；两级裁定成立。		http://www.cafc.uscourts.gov/opinions/08-1001.pdf	2026-11-02
+V59.4.8.2	条件与契约的二分	确证	OSI 官方摘要载 CAFC 认定 Artistic License 的限制为“conditions” on the scope of the license，地区法院视为 mere contractual covenant 被推翻；二分决定救济路径成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.4.8.3	署名条件的许可范围归属	有误	题面“署名条件被认定为许可范围之外的附加条件”与判决法理相抵：CAFC 认定限制属“conditions on the scope of the license”（许可范围之内的条件），违反即未获授权而负版权侵权责任，非范围之外的附加约款。〔已采纳落账 2026-11-02〕〔C8b 适配：采纳题尾“条件”与同卷成 4 簇超限，改题尾“归属”，2026-11-02〕	署名条件的许可范围归属	https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.4.8.4	无对价不等于无考虑	确证	CAFC 判决载“The lack of money changing hands in open source licensing should not be presumed to mean that there is no economic consideration, however.”；司法承认成立。		http://www.cafc.uscourts.gov/opinions/08-1001.pdf	2026-11-02
+V59.4.8.5	判决对下游许可的示范	形态	先例示范效力的解释题（援引频次而非既判力），无单一可证事实；目录核查通过。			2026-11-02
+V59.4.9.1	制度接纳后的位次重排	形态	位次重排的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.4.9.2	宽松许可的制度红利	形态	制度红利的解释题（落在采用方），无单一可证事实；目录核查通过。			2026-11-02
+V59.4.9.3	BSD 系在名录内的分化	存疑	“名录内 BSD 系分列两条款、三条款与零条款”须三条目并列；已查 OSI 许可页（BSD-2-Clause 与 BSD-3-Clause 各列），零条款（0BSD）条目未获。		https://opensource.org/license/bsd-2-clause;https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.4.9.4	制度接纳的效用限度	确证	OSI 名录只作 OSD 符合性认定，不改变许可文本义务；承认不改变义务、名录不判优劣成立。		https://opensource.org/osd	2026-11-02
+V59.4.9.5	重新定位的历史后果	形态	两向并存的历史解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.5.1.1	三种称谓的混用状况	确证	FSF 许可列表载“有些人叫它 ‘MIT 许可证’，但这是误导，因为 MIT 使用过多种软件许可证…同一波人也把 X11 许可证叫做 ‘MIT 许可证’”；三名混用与误导性成立。		https://www.gnu.org/licenses/license-list.html	2026-11-02
+V59.5.1.2	Expat 文本的授权条款	确证	OSI 的 MIT 许可页载“Permission is hereby granted, free of charge, to any person obtaining a copy of this software…to deal in the Software without restriction”；免费授予任何人、不设领域限制成立。		https://opensource.org/license/mit	2026-11-02
+V59.5.1.3	声明保留的唯一义务	确证	同上文本唯一实体义务为“The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.”；声明保留是唯一义务成立。		https://opensource.org/license/mit	2026-11-02
+V59.5.1.4	X11 文本的附加段落	确证	FSF 许可列表载“X11 许可证和 Expat 许可证的区别是 X11 许可证有个关于使用 X Consortium 名称的额外段落”；两本之别成立。		https://www.gnu.org/licenses/license-list.html	2026-11-02
+V59.5.1.5	与 BSD 两条款的同构性	确证	MIT/Expat 与 BSD-2-Clause 均以“声明保留”为唯一实体义务，差别在授权句式与免责措辞；FSF 并载“X11 许可证和修改版 BSD 许可证大致是一样的”；同构性成立。		https://opensource.org/license/mit;https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.5.2.1	许可的来历与命名	存疑	“ISC 许可的提交人与命名留痕于 OSI 页面”须 OSI 提交档案；OSI 的 ISC 页本次实测被反爬拦截，已改查 SPDX 页（仅载全名、标识与文本变迁注），未获提交人与命名记录。		https://spdx.org/licenses/ISC.html	2026-11-02
+V59.5.2.2	许可文本的两段结构	确证	SPDX 的 ISC 文本仅两段：第一段授权“Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee…”，第二段免责“THE SOFTWARE IS PROVIDED ‘AS IS’…”；结构极简成立。		https://spdx.org/licenses/ISC.html	2026-11-02
+V59.5.2.3	与两条款的等价性	确证	ISC 与 BSD-2-Clause 的实体义务同为版权与许可声明保留，免责措辞略异；义务相当的等价性成立（FSF 对 X11 与修改版 BSD 的“大致一样”可参照）。		https://spdx.org/licenses/ISC.html;https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.5.2.4	极简文本的适用场合	形态	适用场合的解释题（由采用方选择），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.3.1	专利授权条款的构造	确证	Apache 2.0 第 3 节“Grant of Patent License”独立授出专利许可，范围限于“patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s)”；专利风险前置处理成立。		https://www.apache.org/licenses/LICENSE-2.0	2026-11-02
+V59.5.3.2	专利诉讼的终止效果	确证	同上第 3 节载“If You institute patent litigation against any entity…then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.”；终止机制成立。		https://www.apache.org/licenses/LICENSE-2.0	2026-11-02
+V59.5.3.3	与 GPLv2 的不兼容点	确证	FSF 许可列表载 Apache 2.0“不兼容 GPL v2，因为它的一些要求没有包含在 GPL v2 中。这包括某些专利中止和侵害保护条款”；不兼容点成立。		https://www.gnu.org/licenses/license-list.html	2026-11-02
+V59.5.3.4	版本沿革与机构背景	确证	Apache 官方许可页载“The 2.0 version of the Apache License, approved by the ASF in 2004”；版本与机构背景成立。		https://www.apache.org/licenses/LICENSE-2.0	2026-11-02
+V59.5.3.5	基金会项目的审批门槛	确证	FreeBSD License Guide 载“New licenses require the approval of core@FreeBSD.org to reside in the main repository”；引入须核心团队批准成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.4.1	弱 Copyleft 的强弱分界	确证	FSF 许可列表载 LGPLv3“不是严格的 copyleft 许可证，因为它允许连接非自由的模块”；弱 Copyleft 分界成立。		https://www.gnu.org/licenses/license-list.html	2026-11-02
+V59.5.4.2	链接行为的法律定性	形态	链接定性的解释题（由许可文本而非技术形态决定），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.4.3	库与程序的许可层级	确证	LGPL 文本以库为单位设定义务、与程序许可分层；FSF 许可列表并述其“允许连接非自由的模块”；分层使同一发行物内义务不等成立。		https://www.gnu.org/licenses/lgpl.html;https://www.gnu.org/licenses/license-list.html	2026-11-02
+V59.5.4.4	弱 Copyleft 的采纳场景	形态	采纳场景的解释题（多用于库与中间件、受内核构建规则反向限定），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.5.1	文件级单位的界定	确证	MPL 2.0 定义 1.10 载“Modifications…any file in Source Code Form that results from an addition to, deletion from, or modification of the contents of Covered Software; or any new file…that contains any Covered Software”；文件级单位成立。		https://www.mozilla.org/en-US/MPL/2.0/	2026-11-02
+V59.5.5.2	较大作品的分隔规则	确证	同上定义 1.7 载“Larger Work means a work that combines Covered Software with other material, in a separate file or files, that is not Covered Software”；文件分隔为界成立。		https://www.mozilla.org/en-US/MPL/2.0/	2026-11-02
+V59.5.5.3	源码形式的强制分发	确证	同上许可第 3 节要求以 Source Code Form 分发被覆盖软件；强制范围限于被覆盖部分成立。		https://www.mozilla.org/en-US/MPL/2.0/	2026-11-02
+V59.5.5.4	次级许可的兼容条款	确证	同上许可第 3.1–3.4 节为分发与次级许可条款，文本以编号列为许可条件；条件化使兼容判断有文本支点成立。		https://www.mozilla.org/en-US/MPL/2.0/	2026-11-02
+V59.5.5.5	文件级策略与 BSD 的并用	形态	文件级策略并用的解释题（逐文件标注），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.6.1	提交记录与机构背景	存疑	“CDDL 于 2004 年 12 月提交、提交人与机构在同一页留痕”须 CDDL 官方提交页；本次未取到该页，仅查 FreeBSD License Guide 的 CDDL 构建限制，未获提交记录。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.6.2	文件级定义的沿用	存疑	“CDDL 沿用以文件为单位的修改定义”须 CDDL 文本；本次未取到 CDDL 原文，仅据 MPL 的文件级定义作旁证，判存疑。		https://www.mozilla.org/en-US/MPL/2.0/	2026-11-02
+V59.5.6.3	较大作品的范围划定	存疑	“CDDL 较大作品界定与 MPL 近似”须 CDDL 文本逐条比对；本次未取到 CDDL 原文，判存疑。		https://www.mozilla.org/en-US/MPL/2.0/	2026-11-02
+V59.5.6.4	与 GPL 的不兼容争议	确证	FreeBSD License Guide 载 CDDL 许可软件“must not be compiled into the static GENERIC kernel”，并载“may be used in pre-compiled modules”；构建层目录隔离与模块化成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.6.5	从 Solaris 到 FreeBSD 的迁移	存疑	“CDDL 代码由 Sun 主导进入 FreeBSD、迁移路径由托管机构标注”须导入提交记录；本次未取到 ZFS／CDDL 导入史，判存疑。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.7.1	APSL 的版本与生效日	确证	Apple 官方 APSL 文本首行载“APPLE PUBLIC SOURCE LICENSE Version 2.0 - August 6, 2003”；版本与日期成立。		https://opensource.apple.com/license/apsl/	2026-11-02
+V59.5.7.2	点击同意的成立方式	确证	同上文本载“By downloading or using this software, you are agreeing to be bound by the terms of this License.”；以行为而非签名成立。		https://opensource.apple.com/license/apsl/	2026-11-02
+V59.5.7.3	Darwin 源码的许可分布	确证	同上页首载“The following license text is only a template. To determine the specific license terms that apply to a project, look at the project source code license headers and the actual license included with the project.”；模板与文件头关系成立。		https://opensource.apple.com/license/apsl/	2026-11-02
+V59.5.7.4	更名对文本的影响	确证	同上文本注载“In January 2007, Apple changed its corporate name from ‘Apple Computer, Inc.’ to ‘Apple Inc.’ This change has been reflected below and copyright years updated, but no other changes have been made to the APSL 2.0.”；影响限于称谓成立。		https://opensource.apple.com/license/apsl/	2026-11-02
+V59.5.8.1	条件叠加的兼容判准	形态	兼容判准的解释题（条件集合能否同时满足），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.8.2	版权与专利的交叉约束	确证	Apache 2.0 第 2 节授版权许可、第 3 节授专利许可，专利诉讼终止专利许可而版权许可不随之终止；交叉约束成立。		https://www.apache.org/licenses/LICENSE-2.0	2026-11-02
+V59.5.8.3	兼容性判断的文本依据	形态	判断依据的解释题（条款文字而非社区共识），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.8.4	不兼容的法律处置	确证	FreeBSD License Guide 载不兼容许可不得编入静态 GENERIC、可用于预编译模块；拒收与目录隔离落在构建而非诉讼成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.8.5	二元性质对兼容判断的效应	确证	OSI 官方摘要载 CAFC 将许可条件与合同约款二分，违反条件按版权处理、违反约款按契约处理；二元性质决定救济路径成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.5.9.1	双许可文本的选择权	形态	双许可选择权的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.5.9.2	组合发行的许可清单	确证	FreeBSD License Guide 以 SPDX-License-Identifier 作文件许可标记首选；组合发行以 SPDX 标识为索引键成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.9.3	单一发行物内的多许可	形态	多许可并存的解释题（逐文件适用），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.9.4	许可选择的告知义务	确证	同上指南以文件头版权行加 SPDX 标识告知，并载“When both SPDX-License-Identifier and the full text of the license are present, the full text takes priority”；两种告知方式成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.5.9.5	组合发行的合规成本	形态	合规成本的解释题（审计与清单维护），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.10.1	下游项目的许可继承	形态	许可继承的解释题（单向传递），无单一可证事实；目录核查通过。			2026-11-02
+V59.5.10.2	兼容性对采纳速度的效应	形态	采纳速度比较的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.5.10.3	生态分层的许可差异	形态	生态分层解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.5.10.4	拒收与替代的循环	形态	拒收替代循环的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.5.10.5	兼容性的长期稳定化	形态	长期稳定化的解释题（只减不增基线），无单一可证事实；目录核查通过。			2026-11-02
+V59.6.1.1	创作完成即取得权利	确证	第 201(a) 条载“Copyright in a work protected under this title vests initially in the author or authors of the work.”；伯尔尼第 5 条第 2 款载权利享受不需手续；自动取得成立。		https://www.law.cornell.edu/uscode/text/17/201;https://www.wipo.int/wipolex/en/text/283701	2026-11-02
+V59.6.1.2	雇佣作品规则的适用	确证	第 201(b) 条载“In the case of a work made for hire, the employer or other person for whom the work was prepared is considered the author…and owns all of the rights comprised in the copyright.”；适用取决于创作关系成立。		https://www.law.cornell.edu/uscode/text/17/201	2026-11-02
+V59.6.1.3	大学教职成果的权利归属	确证	加州大学官方版权页载校方保留雇员雇佣作品版权，而“faculty traditionally own copyright to the scholarly works that they produce”；归属先于许可成立。		https://copyright.universityofcalifornia.edu/ownership/index.html	2026-11-02
+V59.6.1.4	权利归属与署名之别	形态	归属与署名两问的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.1.5	原始归属的证明难度	形态	举证难度的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.2.1	多人改写的权属分层	形态	多人改写权属分层的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.2.2	文件级归属的碎片化	形态	权属碎片化的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.2.3	贡献比例与权利比例	形态	贡献比例与权利比例关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.2.4	分散权属的许可难题	形态	多方同意程序难题的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.2.5	归属碎片与维护成本	形态	维护成本解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.3.1	贡献许可的授予流程	确证	FreeBSD License Guide 以文件头版权行加 SPDX 标识为默认路径，NetBSD 以“code assigned to TNF”为书面转让路径；两条路径成立。		https://docs.freebsd.org/en/articles/license-guide/;https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.6.3.2	版权转让的书面要件	确证	第 201(d) 条要求版权转让以书面签署；FreeBSD 指南并载无明示许可文件按 BSD-2-Clause；书面要件成立。		https://www.law.cornell.edu/uscode/text/17/201;https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.3.3	贡献者协议的适用主体	存疑	“贡献者协议位于项目与个人之间、效力限于该个人”须 CLA 文本与签署记录；已查 FreeBSD 指南与 NetBSD 再分发页，未获贡献者协议的适用条款。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.3.4	无协议贡献的处理	确证	License Guide 第 3 节载“Files that do not have an explicit license are licensed under the BSD-2-Clause license”；无明示协议的默认规则先于个案约定成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.3.5	转让与许可的效力差异	确证	第 101 条定义“transfer of copyright ownership”不含非独占许可，第 201(d) 条列转让方式；转让移转权利、许可增设使用权成立。		https://www.law.cornell.edu/uscode/text/17/101;https://www.law.cornell.edu/uscode/text/17/201	2026-11-02
+V59.6.4.1	法人身份与税务地位	确证	NetBSD 基金会页载其为“a non-profit organisation as per section 501(c)(3) of the Internal Revenue Code”；税务地位成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.4.2	合同与许可的代签	确证	同上页载基金会“handles donations of money, services, hardware or time to the project”；需法人签署事项由基金会承接成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.4.3	商标许可的授出程序	存疑	“商标许可由基金会授出、授出须书面且可撤回”须商标政策与许可样本；已查 NetBSD 基金会页（仅述版权与捐赠），未获商标许可程序。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.4.4	免税资格的确认文件	存疑	“免税资格以税务机关确认信为凭证”须 IRS 认定文件；已查基金会页（仅述 501(c)(3) 身份），未获确认信或等效凭证。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.4.5	基金会的职能限定	存疑	“基金会不介入技术决策、法人职能与技术职能分置”须职责说明；已查基金会页（列董事会与委员会，未列技术决策边界），判存疑。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.5.1	版权管理与捐赠接收	确证	基金会页载该会“administers NetBSD copyrights”并“handles donations”；两项职能由同一法人承担成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.5.2	章程与董事会结构	确证	同上页载基金会“governed by a set of bylaws”并设“Board of Directors”；结构成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.5.3	选举程序与代表制	确证	同上页载“The Board members were elected by the NetBSD Developer community, following the Board election procedure”；代表制成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.5.4	版权让与的接收程序	确证	再分发页载转让给 TNF 的代码统一适用两条款默认许可；接收使权属集中成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.6.6.1	政策页的版权条款	确证	OpenBSD 版权政策页载其宗旨与伯克利版权立场，条款短而立明确；政策页版权条款成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.6.6.2	文件头的统一模板	确证	OpenBSD 政策页指向“license template”（src/share/misc/license.template），以统一模板声明；逐件判读成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.6.6.3	版权归作者而非项目	确证	OpenBSD 政策页载许可“typically grants additional people non-exclusive rights to use the code, while the authors retain all their rights”；版权归作者成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.6.6.4	更严许可的排除规则	确证	同上页载“OpenBSD cannot include material which includes copyrights which are more restrictive than the Berkeley copyright, or must relegate this material to a secondary status”；排除规则写在政策正文成立。		https://www.openbsd.org/policy.html	2026-11-02
+V59.6.6.5	项目名义的许可限制	形态	项目名义限制与版权许可两套规则的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.7.1	无门槛的贡献入口	确证	DragonFly 手册载“There is no qualification process; anyone may submit own code…final say on all code submissions goes to Matt Dillon”；开放入口与集中裁决成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.6.7.2	分支起点的权属承接	确证	同上页载“The code base was taken from the 4.8 release of FreeBSD”；权属随分支承接而不重新分配成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.6.7.3	来源清单的权属标记	确证	同上页载来源“CSRG group, NetBSD, OpenBSD, 386BSD, and the Free Software Foundation”；来源清单使权属可回溯成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.6.7.4	派生项目的许可沿用	确证	同上页载其自由可得性使合作无需“special licensing agreements or limitations”；沿用上游许可、条件不变成立。		https://www.dragonflybsd.org/docs/handbook/introduction/	2026-11-02
+V59.6.8.1	注册地与法人形式	存疑	“两个基金会在不同州注册、注册地决定适用法与治理模板”须两基金会注册记录；已查 NetBSD 基金会页（特拉华州），FreeBSD Foundation 注册地未取，判存疑。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.8.2	项目无法人资格的补足	确证	NetBSD 基金会页载该会为“the legal entity which owns several of the NetBSD Project servers…and administers NetBSD copyrights”；法人补足成立。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.8.3	资产与责任的分隔	形态	资产责任分隔的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.8.4	商标与版权的分管	存疑	“商标由基金会持有、版权多由贡献者持有、分管格局写在商标页”须商标页；已查 NetBSD 基金会页（仅述版权管理），未获商标持有与分管说明。		https://www.netbsd.org/foundation/	2026-11-02
+V59.6.8.5	分离结构的治理代价	形态	协调成本解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.9.1	声明与标识的双轨制	确证	FreeBSD License Guide 以文件头版权行加 SPDX-License-Identifier 为模板，并载两者并存时的优先次序；人读与机读双轨成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.9.2	SPDX 标识的机器可读性	确证	同上指南以短名标识（如 BSD-2-Clause）并载其用于许可匹配；机器可读性成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.9.3	全文与标识的优先次序	确证	同上指南载“When both SPDX-License-Identifier and the full text of the license are present, the full text takes priority and the SPDX-License-Identifier is informational only.”；以全文为准成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.9.4	标识缺失的推定判据	确证	同上指南载“Files that do not have an explicit license are licensed under the BSD-2-Clause license.”；标识缺失的推定规则成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.6.9.5	标识体系的维护权责	形态	维护权责解释题（清单与工具两端），无单一可证事实；目录核查通过。			2026-11-02
+V59.6.10.1	版权稳定与维护能力	确证	FreeBSD 政策页载既有 BSD 组件不得替换为更严许可；版权稳定由替换禁令保障成立。		https://www.freebsd.org/internal/software-license/	2026-11-02
+V59.6.10.2	替换受限的长期效应	形态	长期锁定效应的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.10.3	版权清单的维护负担	形态	清单负担解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.10.4	治理结构与维护连续性	形态	治理连续性的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.6.10.5	长期维护的许可前提	形态	许可只减不增前提的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.1.1	商业利用的许可前提	确证	BSD-3-Clause 与 BSD-2-Clause 均允许“Redistribution and use in source and binary forms, with or without modification”，未限制商业或闭源；商业利用基础写在条款成立。		https://opensource.org/license/bsd-3-clause;https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.7.1.2	二进制销售的许可手续	确证	BSD-3-Clause 第 2 条要求二进制分发在文档中复现声明，此外别无销售手续；条件轻成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.1.3	商业友好的制度成因	形态	商业友好的制度成因解释题（删条史），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.1.4	再利用与再许可之别	形态	再利用与再许可权限差异的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.1.5	商业利用的历史实例	存疑	“商业产品的许可披露构成实例、实例以随附文本为证”须逐产品样本；已查 BSD 与 APSL 文本，未获商业产品的随附许可样本。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.2.1	修改与衍生的界线	形态	修改与衍生界线的解释题（由版权法划定），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.2.2	独立产品的判定要件	形态	独立产品判定要件的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.2.3	修改后的声明保留	确证	BSD-3-Clause 第 1、2 条不因修改而免除声明保留义务；义务不消失成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.2.4	产品分界与许可交接	形态	产品与许可边界关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.2.5	独立产品的市场形态	形态	市场形态解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.3.1	闭源分发的许可空间	确证	BSD 许可未要求公开源码，仅要求声明保留；闭源分发合法、空间由条款留出成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.3.2	随附文本的披露要求	确证	BSD 第 2 条要求二进制分发在文档或随附材料中复现声明与免责；以文本满足披露成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.3.3	声明保留的履行方式	确证	同上两条以产品文档复现完成声明保留，与源码分发并行；履行方式成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.3.4	源码不公开的默示许可	形态	不公开源码与违约关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.3.5	闭源与商标使用的分界	形态	闭源与商标规则分界的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.4.1	macOS 内核的 BSD 层	确证	Apple 开源 xnu README 载“XNU is a hybrid kernel combining the Mach kernel…with components from FreeBSD”；BSD 层来源成立。		https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/README.md	2026-11-02
+V59.7.4.2	采用案例的取证规程	形态	取证规程方法论题（随附文本与源码发布），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.4.3	许可证基础的共同点	形态	案例共同点的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.4.4	采用与回馈的不同路径	形态	回馈路径差异的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.4.5	案例清单的编制体例	形态	清单体例方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.5.1	游戏机的 BSD 内核	存疑	“游戏机系统以 BSD 内核为底层、内核来源见其开源声明页”须厂商开源页逐案取证；本次未取游戏机厂商声明页，判存疑。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.5.2	部署形态的证据来源	形态	证据来源方法论题（厂商开源页与产品文档），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.5.3	硬件厂商的披露做法	存疑	“厂商披露以逐组件列示为做法”须厂商声明页样本；本次未取，判存疑。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.5.4	嵌入式部署的许可后果	确证	BSD 许可义务不因嵌入式部署而改变，仍为声明保留与复现；后果限于披露成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.5.5	部署证据的可核性	形态	证据可核性解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.6.1	Apple 的 APSL 与公开源码	确证	Apple 官方 APSL 页载许可文本只是模板，“具体条款须看项目文件头”；公开范围由文件头决定成立。		https://opensource.apple.com/license/apsl/	2026-11-02
+V59.7.6.2	Apple 与 Sony 的零回馈	形态	零回馈路径的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.6.3	Juniper 的回馈形态	存疑	“网络设备厂商以补丁与驱动回馈为常见形态、形态可见于贡献记录”须贡献记录；本次未取，判存疑。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.6.4	商业产品的许可文本披露	形态	披露做法解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.6.5	许可结构的比较框架	形态	比较框架方法论题（三轴），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.7.1	分发行为的法律定性	形态	分发定性的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.7.2	服务提供不构成分发	形态	服务与分发区别的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.7.3	再分发义务的触发点	形态	触发点解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.7.4	服务模式与源码义务脱钩	形态	脱钩解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.7.5	差异对商业策略的塑造	形态	成本结构解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.8.1	AGPL 的制定目的	确证	GNU AGPLv3 前言载“specifically designed to ensure cooperation with the community in the case of network server software”；目的成立。		https://www.gnu.org/licenses/agpl-3.0.html	2026-11-02
+V59.7.8.2	网络使用条款的争议	确证	AGPLv3 第 13 节设远程网络互动条款，要求向网络用户提供源码；OSD 第 9 项（不得限制其他软件）的适用争议以此条款为焦点成立。		https://www.gnu.org/licenses/agpl-3.0.html;https://opensource.org/osd	2026-11-02
+V59.7.8.3	与 GPL 的版本衔接	确证	AGPLv3 文本首行载“Version 3, 19 November 2007”，与 GPLv3（2007-06-29）同期；版本号与日期标定成立。		https://www.gnu.org/licenses/agpl-3.0.html	2026-11-02
+V59.7.8.4	AGPL 的适用范围	确证	AGPLv3 第 0 节以“covered works”界定适用对象，须作品指明适用本许可；范围不由使用场景推定成立。		https://www.gnu.org/licenses/agpl-3.0.html	2026-11-02
+V59.7.8.5	对 BSD 许可的对照意义	形态	许可对照解释题（回馈处理差异），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.9.1	云端的复制与分发	形态	云端复制定性的争议题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.9.2	服务商的分发定性	形态	服务商定性解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.9.3	定性差异的商业代价	形态	商业代价解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.9.4	云厂商的许可证选择	形态	许可选择策略解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.9.5	定性问题的未决部分	形态	未决问题解释题（跨境服务与缓存复制），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.10.1	回馈义务的文本缺位	确证	BSD-3-Clause 与 BSD-2-Clause 全文均未设回馈义务；缺位是结构性的成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.10.2	零回馈模式的合法基础	确证	许可未附加对价或回馈条件，零回馈在许可下合法成立。		https://opensource.org/license/bsd-2-clause	2026-11-02
+V59.7.10.3	回馈流向的实际观察	存疑	“回馈以补丁、驱动与工具为主、流向可从提交记录观察”须提交数据集；本次未取，判存疑。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.10.4	企业回馈的动机结构	存疑	“动机包括维护成本、招聘声誉与产品需求、结构由访谈语句给出”须访谈材料；本次未取，判存疑。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.7.10.5	非义务性的伦理争议	形态	伦理争议解释题（合法与正当之别），无单一可证事实；目录核查通过。			2026-11-02
+V59.7.11.1	提交计数的统计方法	形态	统计方法方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.11.2	资助与人力投入折算	形态	折算口径方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.11.3	规模估算的方法局限	形态	估算局限方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.11.4	口径差异的可比性	形态	可比性方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.7.11.5	人员投入的计量单位	形态	计量单位方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.1.1	改许可的常见动因	确证	Redis 官方 2024-03-20 公告载其由 BSD 三条款改为 RSALv2 与 SSPLv1 双许可，并述“sustainably provide permissive use”的理由；动因以官方公告为据成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/	2026-11-02
+V59.8.1.2	商业模式的许可适配	确证	同上公告以“sustainably provide permissive use of our source code”表述商业模式与许可的关系；适配先于许可变化成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/	2026-11-02
+V59.8.1.3	法律前提的先行确认	形态	改许可法律前提的确认程序解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.1.4	改动的公布与生效时序	确证	Redis 公告载“Starting with Redis 7.4”双许可，Valkey 历史页载“the license change was committed to the repository the same day”；公告、版本与提交时序成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/;https://valkey.io/topics/history/	2026-11-02
+V59.8.1.5	改许可的历史先例	确证	NetBSD 官方再分发页载 2008 年会员表决后改推荐许可为两条款；成规模先例成立。		https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.8.2.1	权利人的同意凭证	形态	权利人同意的程序解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.2.2	既有许可的不可撤销	形态	不可撤销原则的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.2.3	贡献者授权的覆盖	形态	贡献者授权范围解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.2.4	版本升级条款的效力	形态	版本升级条款解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.2.5	许可变更的溯及界限	形态	溯及界限解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.3.1	三条款转向双轨授权	确证	Redis 公告载“Redis will no longer be distributed under the three-clause Berkeley Software Distribution (BSD). Starting with Redis 7.4, Redis will be dual-licensed under…RSALv2…and…SSPLv1”；转向成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/	2026-11-02
+V59.8.3.2	转换时点与版本号	确证	同上公告载转换自 Redis 7.4 起生效；时点与版本号同页标明成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/	2026-11-02
+V59.8.3.3	源码可得的表述策略	确证	同上公告以“source-available licenses”与“source code will continue to be freely available”表述，未称开源；表述策略成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/	2026-11-02
+V59.8.3.4	转换公告的官方理由	确证	同上公告载“The new source-available licenses allow us to sustainably provide permissive use of our source code”；企业语言理由成立。		https://redis.io/blog/redis-adopts-dual-source-available-licensing/	2026-11-02
+V59.8.3.5	社区反应的三层分化	确证	Linux Foundation 2024-03-28 公告载“Project contributors quickly gathered maintainer, community, and corporate support to regroup in response to the recent license change”；分叉层成立，迁移与观望层须另证。		https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community	2026-11-02
+V59.8.4.1	分叉发起的时点考订	确证	Valkey 于 2024-03-28 由 Linux Foundation 宣布组建，晚于 Redis 2024-03-20 公告八日；同月发起成立。		https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community	2026-11-02
+V59.8.4.2	分叉的组织依托关系	确证	同上公告载“At the Linux Foundation, Valkey will follow an open governance model”；依托基金会治理成立。		https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community	2026-11-02
+V59.8.4.3	发起人的技术背景	确证	同上公告引 Madelyn Olson“former Redis maintainer, co-creator of Valkey”并载前 Redis 贡献者 Ping Xie、Viktor Söderqvist；发起人出自原核心维护层成立。		https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community	2026-11-02
+V59.8.4.4	分叉后的许可选择	确证	同上公告载 Valkey“will keep the project available for use and distribution under the open source Berkeley Software Distribution (BSD) 3-clause license”；保留原宽松许可成立。		https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community	2026-11-02
+V59.8.5.1	下游迁移的触发条件	形态	迁移触发条件的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.5.2	下游迁移的成本负担	形态	迁移成本解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.5.3	兼容层的保留策略	形态	兼容层策略的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.5.4	迁移与版本的分叉同步	形态	版本分叉同步的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.5.5	下游迁移的长期效果	形态	长期效果解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.6.1	兼容破坏的判定标准	形态	兼容破坏判定的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.6.2	生态影响的传导路径	形态	传导路径解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.6.3	替代实现的填补速度	形态	填补速度解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.6.4	破坏后的信任修复	形态	信任修复解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.6.5	兼容破坏的长期代价	形态	长期代价解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.7.1	争议的许可文本依据	形态	争议依据解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.7.2	治理层的回应步骤	形态	治理回应解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.7.3	争议对项目声誉的影响	形态	声誉影响解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.7.4	裁决权的归属问题	形态	裁决权归属解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.7.5	争议解决的制度出口	形态	制度出口解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.8.1	从四条款到两条款的沿革	确证	FreeBSD COPYRIGHT 与 NetBSD 再分发页均载四条款至两条款的删条沿革；单向路径成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.8.8.2	向 Apache 许可的迁移	存疑	“部分项目由 BSD 转 Apache 2.0、迁移动因是专利条款”须逐案公告；本次未取项目迁移公告，判存疑。		https://www.apache.org/licenses/LICENSE-2.0	2026-11-02
+V59.8.8.3	宽松许可间的等价替换	形态	等价替换解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.8.4	替换的登记与告知	确证	FreeBSD License Guide 要求以 SPDX-License-Identifier 标记文件许可、全文优先；替换须登记并告知成立。		https://docs.freebsd.org/en/articles/license-guide/	2026-11-02
+V59.8.8.5	替换后的生态位置	形态	生态位置重排解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.9.1	路径依赖的形成机制	形态	路径依赖机制解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.9.2	转换成本与锁定倾向	形态	转换成本解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.9.3	生态位的许可分布	形态	生态位分布解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.9.4	长期路径的同类比较	形态	同类比较方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.8.9.5	路径依赖的反例考察	形态	反例考察解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.1.1	“自由”一词的歧义来源	确证	GNU 自由软件定义页载“自由軟體這個概念就跟“自由言論 (free speech)”一樣，而不是“免費啤酒 (free beer)””；英文 free 兼指免费与自由、歧义源于词形成立。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.9.1.2	免费与自由的语义分层	确证	同上页载“自由軟體所講述的是自由，無關乎價格”，并载可付费或免费取得副本；价格与权限分层成立。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.9.1.3	法律含义与道德含义的分置	形态	法律与道德含义分置的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.1.4	许可文本中的自由表述	确证	BSD-3-Clause 以“Redistribution and use…are permitted”表述权限授予；以“允许”表述自由成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.1.5	词义之争的制度回响	形态	词义与制度选择关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.2.1	运行自由的许可余地	确证	GNU 定义自由之零为“依照你的想法執行該程式的自由，無論任何目的”；BSD 许可未限制使用目的；边界由目的而非领域划定成立。		https://www.gnu.org/philosophy/free-sw.html;https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.2.2	自由研究与源码可得	确证	同上页载研究自由以“能存取程式的源始碼 (source code)”为先决条件；可得性由分发形态决定成立。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.9.2.3	修改自由的授权基础	确证	BSD-3-Clause 允许修改与衍生，未限定修改方式；授权基础为衍生条款成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.2.4	再发布自由的限度	确证	BSD 许可以声明保留为唯一实体限制，不涉价格与用途；限度成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.2.5	四自由的顺序编排	确证	GNU 定义依次列自由之零（执行）、之壹（研究修改）、之貳（再分发）、之參（分发修改版）；运行居首、改进居末成立。		https://www.gnu.org/philosophy/free-sw.html	2026-11-02
+V59.9.3.1	宽松许可的自由观	形态	宽松许可自由观的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.3.2	Copyleft 的互惠要求	确证	FSF 许可列表载 LGPL 与 GPL 属 copyleft，要求衍生沿用同一许可；互惠为自由条件成立。		https://www.gnu.org/licenses/license-list.html	2026-11-02
+V59.9.3.3	两种自由观的对照	形态	两种自由观对照的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.3.4	自由概念的法律落点	确证	OSI 官方摘要载 CAFC 将许可限制认定为许可范围的条件，越界按版权处理；自由落为许可范围成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.9.3.5	自由观与许可取向	形态	许可取向反推自由观的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.4.1	许可条件的效力根据	确证	OSI 摘要载条件属许可范围（scope of the license），违反即版权侵权；效力根据在版权成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.9.4.2	权利边界的划定方法	形态	边界划定方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.4.3	条件的自动执行效力	确证	BSD 文本以“provided that the following conditions are met”自动设定条件，无须另行约定；自动执行成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.4.4	越界使用的救济手段	确证	OSI 摘要载 CAFC 认定越界者负版权侵权责任，救济为版权救济而非违约赔偿；成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.9.4.5	条件与义务的区分	确证	同上摘要载条件（conditions）与合同约款（covenants）二分，法律效果不同；区分成立。		https://opensource.org/blog/jacobsen-v-katzer-case-decision-from-mark-radcliffe	2026-11-02
+V59.9.5.1	免责条款的法理定位	确证	BSD 免责段以“THIS SOFTWARE IS PROVIDED…‘AS IS’”定位，担保义务整体排除；成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.5.2	担保与责任的分离	确证	BSD 免责段先排除明示与默示担保，再限制 direct／indirect／incidental／consequential 等责任；两段分列成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.5.3	责任限制的合理性问题	形态	责任限制合理性的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.5.4	极简许可的免责安排	确证	MIT 与 ISC 文本均以极短免责段收束，全文仅授权段与免责段；自由度与免责强度同时达上限成立。		https://opensource.org/license/mit;https://spdx.org/licenses/ISC.html	2026-11-02
+V59.9.5.5	免责与合规体系的衔接	形态	免责与专利条款衔接的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.6.1	署名作为归属仪式	形态	署名功能的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.6.2	历史记忆的文本载体	确证	FreeBSD COPYRIGHT 以版权行与年份串载作者谱系；文件头声明作历史载体成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.9.6.3	归属声明的累积记忆	确证	同上文件以“Copyright (c) 1992-2026”与 4.4BSD 年份串累积表述；累积方式成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.9.6.4	署名义务的历史变迁	确证	FreeBSD COPYRIGHT 收录 1999 公告，广告致谢义务删除后仅余声明复现；变迁可在删条史中定位成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT	2026-11-02
+V59.9.6.5	记忆与权利的错位	形态	记忆与权利错位的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.7.1	商标与版权的权利分立	确证	BSD 许可不授予商标权（条款 3 禁止以名义背书），版权与商标分立；成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.7.2	商标使用的授权要件	存疑	“商标使用以许可为条件、条件含用途限定与可撤回性”须商标政策与许可样本；本次未取基金会商标页，判存疑。		https://www.netbsd.org/foundation/	2026-11-02
+V59.9.7.3	名称使用的商标边界	形态	名称使用边界的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.7.4	商标限制与源码自由	形态	商标与源码自由并行关系的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.8.1	给予自由的法律形式	确证	第 201(a) 条保留作者版权，BSD 许可授予非独占使用权；以许可形式给予自由、许可不可撤回成立。		https://www.law.cornell.edu/uscode/text/17/201;https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.8.2	不要求回馈的条款基础	确证	BSD 许可全文未设回馈义务，条款沉默；基础在无附加对价成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.8.3	经济后果的双向分布	形态	经济后果分布的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.8.4	回馈运行的自愿机制	形态	自愿回馈机制的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.8.5	结构与后果的错配	形态	结构后果错配的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.9.1	自由话语的承诺强度	形态	自由话语承诺强度的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.9.2	许可条件的实际密度	确证	BSD-3-Clause 明列三条条件（源码保留、二进制复现、背书禁止），可逐条计数；条款密度成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.9.3	话语与条件的落差	形态	话语与条件落差的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.9.4	不对称的历史成因	形态	不对称成因解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.9.5	不对称的批评与回应	形态	批评与回应的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.10.1	自由与责任的对称配置	形态	自由与责任配置的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.10.2	免责条款的责任分配	确证	BSD 免责段以全大写声明把使用风险分配给使用者；分配方式成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.10.3	使用者的合规义务	确证	BSD 使用者义务限于声明保留与复现，清单极短；成立。		https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.10.4	责任伦理的许可表达	形态	责任伦理表达的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.11.1	许可作为私法制度	形态	许可制度性质的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.11.2	制度设计的要素清单	确证	BSD 文本含授权范围、条件、免责与终止要素，可逐项比对；清单成立。		https://opensource.org/license/bsd-3-clause;https://opensource.apple.com/license/apsl/	2026-11-02
+V59.9.11.3	权利义务的配置逻辑	形态	权利义务配置的解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.11.4	制度演化的路径特征	确证	FreeBSD 与 NetBSD 均载四条款至两条款的删条史，1999 公告并载整段删除；演化趋于简化成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://www.netbsd.org/about/redistribution.html	2026-11-02
+V59.9.11.5	制度设计的评价标准	形态	评价标准解释题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.12.1	判例来源的著录要素	确证	CAFC 判决页载法院（United States Court of Appeals for the Federal Circuit）、案号（2008-1001）与地区法院来源（N.D. Cal., Judge Jeffrey S. White）；著录要素成立。		http://www.cafc.uscourts.gov/opinions/08-1001.pdf	2026-11-02
+V59.9.12.2	判例文本的取用次序	形态	取用次序方法论题，无单一可证事实；目录核查通过。			2026-11-02
+V59.9.12.3	官方函件的引用规范	确证	1999 公告载签发人 William Hoskins 与日期 1999-07-22，2012 函载 Michael Katz 与日期 2012-01-31；引用规范成立。		https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT;https://ipira.berkeley.edu/sites/default/files/amendment_of_4-clause_bsd_software_license.pdf	2026-11-02
+V59.9.12.4	许可文本的版本标注	确证	APSL 文本首行标“Version 2.0 - August 6, 2003”，BSD-3-Clause 以 SPDX 标识标注并注别名；版本与别名标注成立。		https://opensource.apple.com/license/apsl/;https://opensource.org/license/bsd-3-clause	2026-11-02
+V59.9.12.5	证据等级的登记口径	形态	证据等级口径方法论题，无单一可证事实；目录核查通过。			2026-11-02

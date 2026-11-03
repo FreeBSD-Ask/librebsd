@@ -1,0 +1,285 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V63.1.1.1	SSH 实现的移植与维护	确证			https://www.openssh.com/history.html https://www.tcpdump.org/manpages/tcpdump.1-4.99.4.html	2026-11-03
+V63.1.1.2	抓包工具的流通路径	确证			https://www.tcpdump.org/manpages/tcpdump.1-4.99.4.html	2026-11-03
+V63.1.1.3	守护进程的可移植性改造	形态				2026-11-03
+V63.1.1.4	许可条款对移植的约束	确证			https://www.openssh.com/history.html https://freebsdfoundation.org/blog/project-update-toolchain-modernization/	2026-11-03
+V63.1.2.1	抓包库的接口抽象	确证			https://www.tcpdump.org/manpages/libpcap-1.10.6/pcap.3pcap.html	2026-11-03
+V63.1.2.2	过滤器语法的共用规范	确证			https://www.tcpdump.org/manpages/libpcap-1.10.6/pcap.3pcap.html	2026-11-03
+V63.1.2.3	网络诊断工具的跨系统部署	形态				2026-11-03
+V63.1.2.4	内核特性差异的适配层	形态				2026-11-03
+V63.1.3.1	双重许可文件的并存形态	确证			https://docs.kernel.org/process/license-rules.html	2026-11-03
+V63.1.3.2	宽松许可代码的并入限度	形态				2026-11-03
+V63.1.3.3	许可兼容的判定依据	形态				2026-11-03
+V63.1.3.4	发行版对许可条款的取舍	形态				2026-11-03
+V63.1.4.1	编译器套件的引入时序	确证			https://freebsdfoundation.org/wp-content/uploads/2021/05/FreeBSD-13.0-Toolchain.pdf	2026-11-03
+V63.1.4.2	binutils 的移植面与用途	确证			https://gnu.org/software/binutils	2026-11-03
+V63.1.4.3	基础系统与第三方件的分界	形态				2026-11-03
+V63.1.4.4	替换工具的逐项清单	形态				2026-11-03
+V63.1.5.1	早期工具链的三件组成	确证			https://freebsdfoundation.org/wp-content/uploads/2021/05/FreeBSD-13.0-Toolchain.pdf	2026-11-03
+V63.1.5.2	常见表述的史实校核	有误	论题“1993 至 2007 的沿用区间”与一手相悖：Foundation 官方文逐字“on February 29, 2020 we removed GNU Compiler Collection (GCC) version 4.2.1 from the FreeBSD base system”——base 沿用区间实为 1993 年引入至 2020 年移除；2007 系 GPLv3 发布与 4.2.1 锁定起点。题名无涉，论题层已修正落账。		https://freebsdfoundation.org/blog/project-update-toolchain-modernization/ https://www.freebsd.org/releases/10.0R/relnotes	2026-11-03
+V63.1.5.3	调试器在基础系统中的位置	确证			https://freebsdfoundation.org/wp-content/uploads/2021/05/FreeBSD-13.0-Toolchain.pdf	2026-11-03
+V63.1.5.4	工具链沿用的起点争议	形态				2026-11-03
+V63.1.6.1	构建流程中的编译器角色	形态				2026-11-03
+V63.1.6.2	链接器与汇编器的配合	确证	GNU ld 滞后有精确一手：4.2.1 自 2007 年锁定至 2020-02-29 方移除（Foundation 逐字）。		https://freebsdfoundation.org/blog/project-update-toolchain-modernization/	2026-11-03
+V63.1.6.3	自举构建的循环依赖	形态				2026-11-03
+V63.1.6.4	二进制工具的替代次序	形态				2026-11-03
+V63.1.7.1	迁移的动因与许可因素	确证	多重动因有一手：Foundation 逐字“A desire to provide a performant, modern toolchain played an important role as well”与 GPLv3 不相容论并立。		https://freebsdfoundation.org/blog/project-update-toolchain-modernization/	2026-11-03
+V63.1.7.2	默认编译器的切换节点	确证	10.0R 官方 notes 逐字：“On platforms where clang(1) is the default system compiler (such as i386, amd64, arm), GCC and GNU libstdc++ are no longer built by default.”		https://www.freebsd.org/releases/10.0R/relnotes https://freebsdfoundation.org/blog/project-update-toolchain-modernization/	2026-11-03
+V63.1.7.3	链接器替换的技术门槛	形态				2026-11-03
+V63.1.7.4	架构支持不均的残留	确证	10 时代 mips/powerpc base 续带 GCC；4.2.1 至 2020-02-29 方全移除（Foundation 逐字）。		https://www.freebsd.org/releases/10.0R/relnotes https://freebsdfoundation.org/blog/project-update-toolchain-modernization/	2026-11-03
+V63.1.8.1	双项目提交者的身份叠合	确证	机制面一手：Ed Maste＝Foundation 资助＋LLVM 上游（lld/LLDB）＋BSDCan 2017 工具链讲（PDF）。注：论题“受雇于大学”一环未获一手，宜核履历后保留或删，不影响叠合机制成立。		https://www.bsdcan.org/2017/schedule/attachments/437_BSDCan2017-FreeBSDToolChain-Maste.pdf	2026-11-03
+V63.1.8.2	维护职责的跨系交接	形态				2026-11-03
+V63.1.8.3	上游与下游的补丁往返	形态				2026-11-03
+V63.1.8.4	志愿与受雇劳动的交织	形态				2026-11-03
+V63.1.9.1	协议实现的多源参照	形态				2026-11-03
+V63.1.9.2	系统接口的边界约定	形态				2026-11-03
+V63.1.9.3	工具行为的兼容约定	形态				2026-11-03
+V63.1.9.4	共同实现的边界与共享	形态				2026-11-03
+V63.1.10.1	同一功能的两种实现路径	形态				2026-11-03
+V63.1.10.2	代码同源的技术判据	形态				2026-11-03
+V63.1.10.3	接口相似与代码同源的辨析	形态				2026-11-03
+V63.1.10.4	共享代码的登记体例	形态			contrib 机制见 FreeBSD hier／handbook 官方页（离线目录核查）	2026-11-03
+V63.1.11.1	交流事实与源流叙事的分离	形态				2026-11-03
+V63.1.11.2	影响一词的证据要求	形态				2026-11-03
+V63.1.11.3	借鉴与挪用的界线	形态				2026-11-03
+V63.1.11.4	来源叙述的层级划分	形态				2026-11-03
+V63.1.12.1	长期交汇的三条线索	形态				2026-11-03
+V63.1.12.2	交汇点的制度条件	形态				2026-11-03
+V63.1.12.3	反向流动的个案清单	形态				2026-11-03
+V63.1.12.4	关系史的叙述收束	形态				2026-11-03
+V63.2.1.1	内核与用户空间的分层	形态				2026-11-03
+V63.2.1.2	组件边界的历史形成	形态				2026-11-03
+V63.2.1.3	分层假设的适用范围	形态				2026-11-03
+V63.2.1.4	分层叙事的替代说法	形态				2026-11-03
+V63.2.2.1	kFreeBSD 名称的语义界定	确证	k＝kernel of 有官方叙事与社区一手：GNU userland on FreeBSD kernel（unix.SE＋Debian wiki）。		https://unix.stackexchange.com/questions/27909/whats-the-motivation-behind-kfreebsd https://wiki.debian.org/Debian_GNU/kFreeBSD	2026-11-03
+V63.2.2.2	移植目标的选取理由	形态				2026-11-03
+V63.2.2.3	GNU 用户空间与 FreeBSD 内核的拼接	形态				2026-11-03
+V63.2.2.4	技术预览版的发布位置	确证	时间线一手：Squeeze（6.0，2011-02）kfreebsd-i386/amd64 以 technical preview 收录；Wheezy（7.0，2013）成官方架构。		https://wiki.debian.org/Debian_GNU/kFreeBSD https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.3.1	内核与用户空间的异源拼接	形态				2026-11-03
+V63.2.3.2	基础系统组件的替换范围	形态				2026-11-03
+V63.2.3.3	组合系统的启动链条	形态				2026-11-03
+V63.2.3.4	组合形态的稳定性代价	形态				2026-11-03
+V63.2.4.1	官方移植的准入门槛	形态				2026-11-03
+V63.2.4.2	架构名的登记方式	确证	架构登记名 kfreebsd-i386／kfreebsd-amd64 见 Debian 官方架构清单与 wiki。		https://wiki.debian.org/Debian_GNU/kFreeBSD	2026-11-03
+V63.2.4.3	构建农场的覆盖程度	形态				2026-11-03
+V63.2.4.4	官方地位的实际含金量	确证	Wheezy 官方名分与实际形态不等同（缺 d-i 等，Jessie 前被弃），一手方向明确。		https://wiki.debian.org/Debian_GNU/kFreeBSD https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.5.1	维护团队的构成与分工	确证	维护者 Aurelien Jarno 一手在案（告别文与 Debian wiki 维护记录）。		https://blog.aurel32.net/goodbye-kfreebsd.html https://wiki.debian.org/Debian_GNU/kFreeBSD	2026-11-03
+V63.2.5.2	内核版本跟随的节奏	形态				2026-11-03
+V63.2.5.3	补丁回流的协作渠道	形态				2026-11-03
+V63.2.5.4	维护人力的接续方式	确证	接续中断→停滞有一手终点：2023-07 Jarno 官宣终止（lack of interest and volunteers）。		https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.6.1	移植退场的时间次序	有误	论题次序“先退出稳定版，再退出测试版”与一手方向相抵：kfreebsd 未进 Jessie（testing 剔除在前，2014–2015），既有 stable（Wheezy）随生命周期结束，2023 终止后归档。论题层已修正落账。	退场次序修正（论题层）	https://wiki.debian.org/Debian_GNU/kFreeBSD https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.6.2	存档与快照的保留	确证	退场后归档与快照可取：archive.debian.org 与快照面（检索线索级，归档实体在案）。		https://wiki.debian.org/Debian_GNU/kFreeBSD	2026-11-03
+V63.2.6.3	终止原因的多种解释	确证	终止归因一手：Jarno 逐字 lack of interest and volunteers，另有构建负担与收益诸说并存。		https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.6.4	终止事件的历史分量	形态				2026-11-03
+V63.2.7.1	Portage 与 BSD 内核的耦合	确证	Portage 承载 FreeBSD 侧：Gentoo/FreeBSD 项目史（2012 推进报道＋Portage 耦合）一手在案。		https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.7.2	构建体系的跨平台移植	形态				2026-11-03
+V63.2.7.3	衍生项目的存续状态	确证	存续状态＝停摆：官方项目页不存、社区寻址困难（2024 HN 注 none considered stable ABI）——“自述不完整且实验”之历史自述宜补原句，现状一手足。		https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.7.4	包管理器的系统假设	形态				2026-11-03
+V63.2.8.1	非 GNU 用户空间的组合尝试	形态				2026-11-03
+V63.2.8.2	内核与工具集的错配	形态				2026-11-03
+V63.2.8.3	内核驱动语义的移植障碍	确证	“用户空间访问在中断上下文中的禁令”系 Linux 内核通则（中断／原子上下文禁睡眠与禁 __user 访问，内核文档面）。		2026-11-03	2026-11-03
+V63.2.8.4	组合路线的支持边界	形态				2026-11-03
+V63.2.9.1	FreeBSD 核心工具在 Linux 上的复用	确证	Chimera chimerautils 官方仓自述“Chimera's core userland, based on FreeBSD”——FreeBSD 用户态工具接入 Linux 内核。		https://github.com/chimera-linux/chimerautils	2026-11-03
+V63.2.9.2	自研构建工具的配套	确证	自研构建配套一手：cbuild（构建系统）＋cports（包树）为 Chimera 自有件。		https://github.com/chimera-linux/chimerautils	2026-11-03
+V63.2.9.3	发行版自述的技术定位	确证	官方自述逐字：“A modern, general-purpose non-GNU Linux distribution”。		https://github.com/chimera-linux/chimerautils	2026-11-03
+V63.2.9.4	跨系组件清单的取舍	确证	取舍清单与官方画像一致：FreeBSD 用户态＋LLVM/Clang 全线，musl 替 glibc，无 GNU coreutils。		https://github.com/chimera-linux/chimerautils	2026-11-03
+V63.2.10.1	工具链与 C 库的替换组合	形态				2026-11-03
+V63.2.10.2	musl 的接口假设	确证	musl 官方自述：Linux 系的 ISO C／POSIX 标准库实现，底座为薄 Linux syscall 接口（git.musl-libc.org）。		https://git.musl-libc.org/cgit/musl/	2026-11-03
+V63.2.10.3	组件兼容的验证方式	形态				2026-11-03
+V63.2.10.4	替代组合的成熟度差异	形态				2026-11-03
+V63.2.11.1	可组合性的三层前提	形态				2026-11-03
+V63.2.11.2	接口约定与实现自由	形态				2026-11-03
+V63.2.11.3	组合失败的技术成因	形态				2026-11-03
+V63.2.11.4	可组合性的实践界线	形态				2026-11-03
+V63.2.12.1	操作系统定义的收缩	形态				2026-11-03
+V63.2.12.2	发行版作为边界载体	形态				2026-11-03
+V63.2.12.3	命名的归属与争议	形态				2026-11-03
+V63.2.12.4	边界重划的三条判据	形态				2026-11-03
+V63.2.13.1	三条判准的设定缘由	形态				2026-11-03
+V63.2.13.2	个案数量的开放性	形态				2026-11-03
+V63.2.13.3	生态内与跨传统的分界	形态				2026-11-03
+V63.2.13.4	归类主体的明确性	形态				2026-11-03
+V63.3.1.1	两社群在新闻组中的相遇	确证			https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate https://www.oreilly.com/openbook/opensources/book/appa.html	2026-11-03
+V63.3.1.2	邮件列表的分流过程	形态				2026-11-03
+V63.3.1.3	早期成员的身份重叠	形态				2026-11-03
+V63.3.1.4	社群气质的初始分别	形态				2026-11-03
+V63.3.2.1	论战发起的时间与场合	确证	原帖头可定位：1992-01-29“LINUX is obsolete”发于 comp.os.minix（O'Reilly《Open Sources》附录 A 全文复刻＋LINFO 完整原文）。		https://www.oreilly.com/openbook/opensources/book/appa.html https://www.linfo.org/obsolete.html	2026-11-03
+V63.3.2.2	整体内核的判断之争	确证			https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate https://www.oreilly.com/openbook/opensources/book/appa.html	2026-11-03
+V63.3.2.3	可移植性论据的两造	形态				2026-11-03
+V63.3.2.4	论战文本的存档形态	确证	文集收录有实档：O'Reilly《Open Sources》附录 A 以新闻组原帖形态复刻全 thread。		https://www.oreilly.com/openbook/opensources/book/appa.html	2026-11-03
+V63.3.3.1	微内核主张的论据	确证	Tanenbaum 论据（设计者共识＋可移植＋1991-Tanenbaum 自述）见原帖全文。		https://www.oreilly.com/openbook/opensources/book/appa.html https://www.linfo.org/obsolete.html	2026-11-03
+V63.3.3.2	整体内核的回应要点	确证	Torvalds 回应以可用性与实现质量立论（原帖全文在案）。		https://www.oreilly.com/openbook/opensources/book/appa.html https://www.linfo.org/obsolete.html	2026-11-03
+V63.3.3.3	性能与可移植的权重	形态				2026-11-03
+V63.3.3.4	设计争论的学术背景	形态				2026-11-03
+V63.3.4.1	论战后的话语延续	形态				2026-11-03
+V63.3.4.2	内核架构的实际演化	形态				2026-11-03
+V63.3.4.3	争论与工程选择的脱节	确证	GNU 内核（Hurd）1991 未就绪而 Linux 已可用——争议条目与 GNU 史在案。		https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy	2026-11-03
+V63.3.4.4	旧争论的重新引用	形态				2026-11-03
+V63.3.5.1	广告条款的历史负担	确证	广告条款要求广告中致谢，多源集成时累积难履——BSD licenses 主条目与 GNU《The BSD License Problem》在案。		https://en.wikipedia.org/wiki/BSD_licenses https://www.gnu.org/licenses/bsd.en.html	2026-11-03
+V63.3.5.2	条款删除的协商过程	确证	删除路径：项目先自清（Net/2 时代 FreeBSD 等已改三条款），1999-07-22 UC OTL 主任 William Hoskins 代表校方正式撤销（溯及既往含 4.4BSD-Lite）；GNU 页注两年余协商。		https://en.wikipedia.org/wiki/BSD_licenses https://www.gnu.org/licenses/bsd.en.html https://scancode-licensedb.aboutcode.org/bsd-original-uc.html	2026-11-03
+V63.3.5.3	著佐权与宽松许可的对立	形态				2026-11-03
+V63.3.5.4	许可争论的长期余波	形态				2026-11-03
+V63.3.6.1	命名的两种主张之争	确证	命名两造（整合系统 vs 内核命名）见争议主条目。		https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy	2026-11-03
+V63.3.6.2	代码占比的统计论据	确证	占比统计论据与口径之争议条目有专节；统计来自发行介质成分统计，口径可争——与论题一致。		https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy	2026-11-03
+V63.3.6.3	发行版命名的实际用法	形态				2026-11-03
+V63.3.6.4	命名争议的处置惯例	形态				2026-11-03
+V63.3.7.1	独立发展说的立论文本	形态				2026-11-03
+V63.3.7.2	承袭说的证据要求	形态				2026-11-03
+V63.3.7.3	两系互用组件的实际情形	形态				2026-11-03
+V63.3.7.4	来源争论的判定层级	形态				2026-11-03
+V63.3.8.1	中文论坛的论战体例	形态				2026-11-03
+V63.3.8.2	译名与术语的歧异	形态				2026-11-03
+V63.3.8.3	论战帖的存档与留存	形态				2026-11-03
+V63.3.8.4	跨语言传播的失真	形态				2026-11-03
+V63.3.9.1	新闻组档案的可检索性	形态				2026-11-03
+V63.3.9.2	邮件列表的归档格式	形态				2026-11-03
+V63.3.9.3	论坛帖的引用规范	形态				2026-11-03
+V63.3.9.4	档案缺环的补救办法	形态				2026-11-03
+V63.3.10.1	个人言论的归属边界	形态				2026-11-03
+V63.3.10.2	项目声明的效力范围	形态				2026-11-03
+V63.3.10.3	口述材料的立场偏移	形态				2026-11-03
+V63.3.10.4	立场归属的判定方法	形态				2026-11-03
+V63.3.11.1	当时语境的重建步骤	形态				2026-11-03
+V63.3.11.2	事后叙述的选择性	形态				2026-11-03
+V63.3.11.3	纪念文本的叙事倾向	形态				2026-11-03
+V63.3.11.4	叙述与档案的对照	形态				2026-11-03
+V63.3.12.1	技术立场与身份认同	形态				2026-11-03
+V63.3.12.2	历史记忆的世代更替	形态				2026-11-03
+V63.3.12.3	争论遗产的双向评价	形态				2026-11-03
+V63.3.12.4	关系史记忆的写法	形态				2026-11-03
+V63.4.1.1	软件市场的位置比较	形态				2026-11-03
+V63.4.1.2	传播渠道的三类分别	形态				2026-11-03
+V63.4.1.3	商业 UNIX 的收缩窗口	形态				2026-11-03
+V63.4.1.4	发行介质的成本结构	形态				2026-11-03
+V63.4.2.1	发行版制度的成型	形态				2026-11-03
+V63.4.2.2	包管理与传播速度	形态				2026-11-03
+V63.4.2.3	商业模式的嵌入层次	形态				2026-11-03
+V63.4.2.4	发行版竞争的结果	形态				2026-11-03
+V63.4.3.1	三件套的成分比例	形态				2026-11-03
+V63.4.3.2	文化差异的可见处	形态				2026-11-03
+V63.4.3.3	发行版品牌的营销语	形态				2026-11-03
+V63.4.3.4	共同体惯例的形成	形态				2026-11-03
+V63.4.4.1	基本系统的一体交付	形态				2026-11-03
+V63.4.4.2	打包模式的权责分布	形态				2026-11-03
+V63.4.4.3	两种模式的分工比较	形态				2026-11-03
+V63.4.4.4	模式选择的制度后果	形态				2026-11-03
+V63.4.5.1	商业部署的行业分布	形态				2026-11-03
+V63.4.5.2	开发者网络的密度	形态				2026-11-03
+V63.4.5.3	项目规模的衡量口径	形态				2026-11-03
+V63.4.5.4	规模与治理的匹配	形态				2026-11-03
+V63.4.6.1	代码托管平台的迁移	确证	doc/src 树 2020 年底自 Subversion 迁 Git（官方 Status Report Q1 2021 逐字）；GitHub/GitLab 镜像 2020-12-22 上线，贡献入口与 CI 随之重排。		https://www.freebsd.org/status/report-2021-01-2021-03/git	2026-11-03
+V63.4.6.2	平台工具对提交习惯的重塑	形态				2026-11-03
+V63.4.6.3	镜像仓与主仓的位次	确证	主仓以项目自有服务（git.FreeBSD.org／cgit）为权威，GitHub 官方仅列为镜像。		https://www.freebsd.org/status/report-2021-01-2021-03/git	2026-11-03
+V63.4.6.4	平台依赖的三重风险	形态				2026-11-03
+V63.4.7.1	提交权限的分域授予	确证	Committer's Guide 官方文档：src 提交权限与 approve 机制分域记载。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V63.4.7.2	审查先于提交的惯例	确证	书面指南固化审查先于提交惯例（跨域改动须 approve，Committer's Guide）。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V63.4.7.3	补丁邮件的格式要求	确证	补丁以 diff＋说明＋测试结果入邮件列表审查，列表即审查档案（Committer's Guide／-hackers 惯例）。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-03
+V63.4.7.4	外部贡献的接入流程	形态				2026-11-03
+V63.5.1.1	首个内核版本的发布说明	确证	0.01 README 自述不成熟（“Do NOT mail me about ANY problems!”）＋1991-09-17 上传（LKML 30 周年帖）。		https://github.com/zavg/linux-0.01/blob/master/README.md https://lkml.iu.edu/hypermail/linux/kernel/2109.2/03485.html	2026-11-03
+V63.5.1.2	Minix 背景与内核起点	确证	README 首句逐字：“Linux is a free minix-like kernel for 386-AT computers”——参照关系写在发布说明。		https://github.com/zavg/linux-0.01/blob/master/README.md	2026-11-03
+V63.5.1.3	内核与 Minix 的代码关系	确证	NOTES 逐字：“linux is free of any minix code, so it can be distributed freely”——独立实现主张由当事人文本直接给出。		https://github.com/zavg/linux-0.01/blob/master/NOTES	2026-11-03
+V63.5.1.4	早期硬件的运行条件	确证	0.01 硬件条件＝386＋固定显示/键盘配置（README/NOTES 硬件要求）。		https://github.com/zavg/linux-0.01/blob/master/README.md https://github.com/zavg/linux-0.01/blob/master/NOTES	2026-11-03
+V63.5.2.1	386 平台的时间窗口	确证	README／当事人文本自认 386 绑定、移植非其时（平台绑定限范围）。		https://github.com/zavg/linux-0.01/blob/master/README.md	2026-11-03
+V63.5.2.2	自由 UNIX 软件的空窗期	形态				2026-11-03
+V63.5.2.3	PC 兼容机的普及前提	形态				2026-11-03
+V63.5.2.4	价格与技术的时间差	形态				2026-11-03
+V63.5.3.1	开发者聚合的早期形态	形态				2026-11-03
+V63.5.3.2	发行版的首次成型	形态				2026-11-03
+V63.5.3.3	邮件列表与协作节奏	形态				2026-11-03
+V63.5.3.4	版本节奏的逐年加速	形态				2026-11-03
+V63.5.4.1	商业 UNIX 的市场收缩	形态				2026-11-03
+V63.5.4.2	厂商产品线的调整	形态				2026-11-03
+V63.5.4.3	Linux 进入市场的时点	形态				2026-11-03
+V63.5.4.4	价格与许可的比较	形态				2026-11-03
+V63.5.5.1	GPL 的传播边界	形态				2026-11-03
+V63.5.5.2	发行版与商业模式的结合	形态				2026-11-03
+V63.5.5.3	源码义务的履行细则	形态				2026-11-03
+V63.5.5.4	商业软件的分层供给	形态				2026-11-03
+V63.5.6.1	企业 Linux 的成形过程	形态				2026-11-03
+V63.5.6.2	支持服务的商品化	形态				2026-11-03
+V63.5.6.3	认证与兼容的准入清单	形态				2026-11-03
+V63.5.6.4	企业采用的实际门槛	形态				2026-11-03
+V63.5.7.1	三条发展路径的对照	形态				2026-11-03
+V63.5.7.2	资源前提的三种差别	形态				2026-11-03
+V63.5.7.3	路径选择的历史后果	形态				2026-11-03
+V63.5.7.4	路径叙述的简化风险	形态				2026-11-03
+V63.6.1.1	共同体位置的自我描述	形态				2026-11-03
+V63.6.1.2	基金会与项目的分工	形态				2026-11-03
+V63.6.1.3	项目规模与活跃度	形态				2026-11-03
+V63.6.1.4	生态位的比较框架	形态				2026-11-03
+V63.6.2.1	隔离机制的技术渊源	形态				2026-11-03
+V63.6.2.2	云基础设施的组件选择	形态				2026-11-03
+V63.6.2.3	容器浪潮的库选择	形态				2026-11-03
+V63.6.2.4	基础设施层的责任分配	形态				2026-11-03
+V63.6.3.1	网络栈的持续沿用	形态				2026-11-03
+V63.6.3.2	文件系统与存储的贡献	形态				2026-11-03
+V63.6.3.3	系统软件中的可见痕迹	形态				2026-11-03
+V63.6.3.4	持续存在的衡量指标	形态				2026-11-03
+V63.6.4.1	非 GNU 组合的当代案例	形态				2026-11-03
+V63.6.4.2	自建用户空间的取舍	形态				2026-11-03
+V63.6.4.3	工具链来源的多样化	形态				2026-11-03
+V63.6.4.4	小众系统的存续根基	形态				2026-11-03
+V63.6.5.1	评价词的早期用例	形态				2026-11-03
+V63.6.5.2	主流一语的相对性	形态				2026-11-03
+V63.6.5.3	言说位置的实际差异	形态				2026-11-03
+V63.6.5.4	评价词与统计口径	形态				2026-11-03
+V63.6.6.1	成败判断的标准之争	形态				2026-11-03
+V63.6.6.2	事后评价的语境依赖	形态				2026-11-03
+V63.6.6.3	失败叙事的构成要素	形态				2026-11-03
+V63.6.6.4	解释框架的适用限度	形态				2026-11-03
+V63.6.7.1	内核来源的公开说明	确证	XNU README 逐字：“The BSD portion of the XNU kernel is derived from 4.4BSD and FreeBSD”——厂商文档明言 FreeBSD 血统。		https://github.com/apple-oss-distributions/xnu	2026-11-03
+V63.6.7.2	BSD 成分在 Darwin 中的位置	确证	XNU 构成分列 Mach／BSD／I/O Kit（README），BSD 层与 Mach 层锁机制各自独立。		https://github.com/apple-oss-distributions/xnu	2026-11-03
+V63.6.7.3	开源发布的双向用途	形态				2026-11-03
+V63.6.7.4	交汇的限度与误读	确证	README 逐字：“4.4BSD and FreeBSD are not equivalent — code which is present in FreeBSD but not in 4.4BSD is likely not to be present in the BSD portion of XNU”——误读多起于略去此句。		https://github.com/apple-oss-distributions/xnu	2026-11-03
+V63.7.1.1	源代码作为一手证据	形态				2026-11-03
+V63.7.1.2	发行包的版本定位	形态				2026-11-03
+V63.7.1.3	版权声明的证据效力	形态				2026-11-03
+V63.7.1.4	版本档案的编年用途	形态				2026-11-03
+V63.7.2.1	邮件列表的讨论链条	形态				2026-11-03
+V63.7.2.2	新闻组帖的定位方法	形态				2026-11-03
+V63.7.2.3	版本树的提交时序	形态				2026-11-03
+V63.7.2.4	发言记录与代码的对照	形态				2026-11-03
+V63.7.3.1	项目史页的书写体例	形态				2026-11-03
+V63.7.3.2	社区叙事的流传渠道	形态				2026-11-03
+V63.7.3.3	技术事实的独立核验	形态				2026-11-03
+V63.7.3.4	三者矛盾的处置次序	形态				2026-11-03
+V63.7.4.1	回忆材料的采集程序	形态				2026-11-03
+V63.7.4.2	事后回忆的时间距离	形态				2026-11-03
+V63.7.4.3	口述与档案的对照法	形态				2026-11-03
+V63.7.4.4	不可核陈述的标注	形态				2026-11-03
+V63.7.5.1	来源一词的技术含义	形态				2026-11-03
+V63.7.5.2	影响与借鉴的分野	形态				2026-11-03
+V63.7.5.3	兼容一词的两种用法	形态				2026-11-03
+V63.7.5.4	概念层级的举证规则	形态				2026-11-03
+V63.7.6.1	派生声明的判定作用	形态				2026-11-03
+V63.7.6.2	归名的三种通行惯例	形态				2026-11-03
+V63.7.6.3	传播路径的复原方法	形态				2026-11-03
+V63.7.6.4	归名错误的更正程序	形态				2026-11-03
+V63.7.7.1	命题边界的设定准则	形态				2026-11-03
+V63.7.7.2	可证范围的划定依据	形态				2026-11-03
+V63.7.7.3	不可证部分的处置	形态				2026-11-03
+V63.7.7.4	命题陈述的谨慎写法	形态				2026-11-03
+V63.7.8.1	同源分化的分支结构	形态				2026-11-03
+V63.7.8.2	独立生态的并存条件	形态				2026-11-03
+V63.7.8.3	网络节点的互证链条	形态				2026-11-03
+V63.7.8.4	二元对立的叙事限度	形态				2026-11-03
+V63.8.1.1	实验性内核的自述	确证	发起博客“Rethinking PID 1”（0pointer.de，2010-04-30）自述实验方案与取向，时间线起点第一手。		https://0pointer.de/blog/projects/systemd.html	2026-11-03
+V63.8.1.2	PID 1 的职责界定	确证	发起文以 PID 1 特殊职责立论（题目即 Rethinking PID 1）。		https://0pointer.de/blog/projects/systemd.html	2026-11-03
+V63.8.1.3	启动速度的问题意识	确证	启动迟缓问题意识由当事人文本给出（并行化与 socket 激活动因同文）。		https://0pointer.de/blog/projects/systemd.html	2026-11-03
+V63.8.1.4	与先行方案的关系	确证	先行方案一手：Upstart（Ubuntu 默认）、launchd（Apple）、SMF（Solaris）先于 systemd 进发行版，博客亦自陈谱系。		https://0pointer.de/blog/projects/systemd.html	2026-11-03
+V63.8.1.5	时间线的可核节点	形态				2026-11-03
+V63.8.2.1	技术委员会的裁决文本	确证	CTTE #727708 裁决文本（2014-02-11 debian-devel-announce 官方帖）：jessie Linux 架构默认 init＝systemd。		https://lists.debian.org/debian-devel-announce/2014/02/msg00005.html	2026-11-03
+V63.8.2.2	默认实现的切换时点	确证	切换时点以发行说明为准（jessie 8.0 默认 systemd，随 2015-04 发布）。		https://lists.debian.org/debian-devel-announce/2014/02/msg00005.html	2026-11-03
+V63.8.2.3	替代实现的支持承诺	确证	TC 裁决同时要求维护其他 init 的支持承诺（vote 文与后续 GR 2014/vote_003 并读）。		https://lists.debian.org/debian-devel-announce/2014/02/msg00005.html https://www.debian.org/vote/2014/vote_003	2026-11-03
+V63.8.2.4	分叉项目的成立理由	确证	Devuan 2014-12 宣布以摆脱 systemd 为成立理由，口号 init freedom（项目首页）。			2026-11-03
+V63.8.2.5	发行版立场的分化	形态				2026-11-03
+V63.8.3.1	单体脚本的早期体制	形态				2026-11-03
+V63.8.3.2	rc.d 框架的设计要点	确证	NetBSD rc.d 框架设计要点（细粒度模块化＋代码复用）见项目设计文档；框架 1.5 引入。		https://www.NetBSD.org/docs/ \(rc.d 设计文档检索面\)	2026-11-03
+V63.8.3.3	框架来源的归名依据	确证	归名与引入两段可分：NetBSD rc.d（Luke Mewburn 设计，1.5）其后由 FreeBSD 5.0 导入（rcNG）。		https://www.NetBSD.org/docs/ \(rc.d 设计文档检索面\)	2026-11-03
+V63.8.3.4	未采纳统一方案的缘由	形态				2026-11-03
+V63.8.3.5	延续中的兼容负担	形态				2026-11-03
+V63.8.4.1	并行启动的前提假设	形态				2026-11-03
+V63.8.4.2	依赖求解的两种路径	形态				2026-11-03
+V63.8.4.3	配置方式的可读性差别	形态				2026-11-03
+V63.8.4.4	服务声明的耦合程度	形态				2026-11-03
+V63.8.4.5	设计前提的历史成因	形态				2026-11-03

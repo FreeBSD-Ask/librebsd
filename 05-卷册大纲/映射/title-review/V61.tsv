@@ -1,0 +1,442 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V61.1.1.1	超级用户的全能边界	确证	论题前半为史学框架语；取证落在机制层：chmod(2) 明文根用户豁免常规属主校验（“verifies that the process owner (user) either owns the file…, or is the super-user”），是全盘授权的执行位置。		https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2	2026-11-02
+V61.1.1.2	UID 与 GID 的授权粒度	形态	身份模型分层叙事，无具体外部断言；离线核对 man 页 uid_t／gid_t 单位制与凭据传递结构。			2026-11-02
+V61.1.1.3	setuid 位的提权通道	确证	chmod(2) S_ISUID “set user id on execution” 坐实以属主身份执行的通道；OpenBSD 3.2 “A very significant reduction in setuid binaries” 佐证其为固定攻击面。		https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2 https://www.openbsd.org/32.html	2026-11-02
+V61.1.1.4	受信主机免口令的信任假设	确证	Spafford：受信主机／登录对 “never asked for a password”；E&R：本地仅凭网络地址认对方、地址可伪造，信任外包假设成立。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.1.5	口令文件的猜测资源	确证	Spafford：密文口令在 “publicly readable file”，可离线加密候选串比对；E&R：world readable /etc/passwd 便于字典攻击。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.2.1	从分时系统到联网主机	确证	RFC 1135：感染对象为 “4.2 and 4.3 Berkeley UNIX code” 的 VAX 与 SUN-3，代码同源使一次攻击跨站复制成立。		https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.2.2	服务进程的暴露面扩张	确证	RFC 1135：实现错误落在 sendmail 与 fingerd 两个网络程序；Spafford：sendmail 守护进程监听 25 端口、fingerd 服务远程请求——常驻服务即远程入口。		https://www.rfc-editor.org/rfc/rfc1135.html http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.2.3	守护进程的权限档位	形态	权限档位分层叙事；一手仅证守护进程运行形态，未按档位表述，离线核查。			2026-11-02
+V61.1.2.4	远程登录与文件传送的入口	形态	早期固定入口集归纳（rlogin／rsh／ftp 服务面），体例题，离线核查。			2026-11-02
+V61.1.2.5	网络信任链的传递性	确证	Spafford：蠕虫检索 “machines that might trust” 且常见双向互信配置；E&R：信任以机器而非用户属性授出，链条可逐跳继承。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.3.1	邮件服务的调试后门	确证	Spafford：DEBUG 命令 “often left turned on by many vendors and site administrators”；E&R：4.2BSD 期已报告、4.3 与 SunOS 发行时默认仍开——生产环境保留远程执行路径。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.3.2	finger 服务的越界写入	确证	RFC 1135：经 gets 溢出后 “execute a small arbitrary program”；E&R：缓冲在栈上，溢出伪造栈帧、过程返回时执行代码。		https://www.rfc-editor.org/rfc/rfc1135.html https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.3.3	远程执行服务的信任滥用	确证	RFC 1135：滥用 rexec 与 rsh 的受信主机特性；E&R：受信端口机制＋仅凭地址认主机、地址可伪造，凭据可信度无校验面。		https://www.rfc-editor.org/rfc/rfc1135.html https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.3.4	漏洞利用的自动化转向	确证	RFC 1135 蠕虫定义三要素（独立运行、耗宿主资源、向他机投放完整副本）；Spafford：程序自我复制、副本继续感染他机——脱离逐台手工。		https://www.rfc-editor.org/rfc/rfc1135.html http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.3.5	应用层漏洞的利用面	确证	RFC 1135：“accessing known security loopholes in applications closely associated with the operating system”——暴露面在应用层而非内核。		https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.4.1	事件的时点与波及面	确证	RFC 1135：“unleashed the evening of 2 November 1988”；Spafford：仅感染 Sun 3 系统与运行 4BSD 变体的 VAX，范围由代码同源决定。		https://www.rfc-editor.org/rfc/rfc1135.html http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.4.2	蠕虫作为安全事件的原型	确证	RFC 1135 worm／virus 定义段（独立运行＋耗资源＋跨机投放）；E&R §1.2 分类之辨——“原型定义”有据。		https://www.rfc-editor.org/rfc/rfc1135.html https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.4.3	实现错误的两处归并	确证	RFC 1135：“It relied on implementation errors in two network programs: sendmail and fingerd.”——处置对象因此明确。		https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.4.4	漏洞不可避免性的判断	确证	RFC 1135 引 CPSR 事后声明：“Security loopholes are inevitable in any computer network and are prevalent in those that support general-purpose computing”——事件总结层判断在场。		https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.4.5	事件之后的制度需求	确证	SEI 官方史页：“In the aftermath of the Morris Worm attack, DARPA asked the SEI to establish a computer emergency response team”——响应组织落为常设机构。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management	2026-11-02
+V61.1.5.1	三条入站途径的技术构成	确证	E&R §1.4.1 “How it entered” 列 sendmail debug／finger／rexec-rsh 三臂；RFC 1135 另列口令猜测为附加法——题面取三臂口径与 E&R 一致。		https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.5.2	gets 越界与栈上执行	确证	Spafford：gets 无界读入溢出后 “rewrote the stack frame”；E&R：栈上缓冲＋伪造栈帧＋过程返回时执行写入代码。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.5.3	sendmail 调试命令的滥用	确证	Spafford：DEBUG 后 “specify a set of commands instead of a user address”；E&R：收件人位置放命令、报文正文为建链脚本——邮件事务变命令通道。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.5.4	口令猜测的字典策略	确证	RFC 1135：“personalized 432 word dictionary” 加 /usr/dict/words；E&R 同列 432 词内置字典（附录 B）——离线猜测资源成立。		https://www.rfc-editor.org/rfc/rfc1135.html https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.5.5	已知漏洞清单的事后整理	确证	RFC 1135：“relied on the several known access loopholes”“known security loopholes”；Spafford：UNIX 弱点 “long been known”——蠕虫全用既有漏洞。“清单是重建产物”为方法论表述，不碍事实层。		https://www.rfc-editor.org/rfc/rfc1135.html http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.5.6	事后结论的不确定性表述	形态	方法论体例题（事后追述与概率表述的边界），离线核查。			2026-11-02
+V61.1.6.1	受信主机表的默认放行	确证	RFC 1135：感染 /etc/hosts.equiv、/.rhosts 与互信配置机器；Spafford：受信主机／登录对清单机制、互信常见——“名单维护滞后”分句为阐释语，机制层获证。		https://www.rfc-editor.org/rfc/rfc1135.html http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.6.2	rsh 与 rexec 的口令豁免	确证	E&R：rsh 攻击 “without using passwords” 加受信端口机制；Spafford：受信对远程访问 “never asked for a password”——地址可信即身份可信。		https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.6.3	服务程序的输入校验缺失	确证	Spafford：gets “without doing any bounds checking” 且同族例程皆有溢出险；E&R：“a library function which did not do range checking”——缺省即无校验。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.1.6.4	补丁发布的公告依赖	确证	Spafford：对策 “published in mailing lists and on the Usenet”、补丁由 Berkeley 组张贴；RFC 1135：邮件与电话广传补丁消息、隔离致分发受阻——公告即交付说明。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.6.5	缺陷类型的代际延续	确证	E&R：debug 默认开启 4.2BSD 期已报、4.3 与 SunOS 发行时延续；Spafford：“at least two long-standing flaws…new flaws may be introduced with their use”。“信任式鉴别跨代”分句未见专句，以缺陷延续总断言支撑。		https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.1.7.1	协调中心的设立动因	确证	SEI 官方史页：“In the aftermath of the Morris Worm attack, DARPA asked the SEI to establish a computer emergency response team”——事件后补协调缺位。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management	2026-11-02
+V61.1.7.2	事件报告的汇集流程	确证	SEI 史页：作为中立方接收并匿名转呈厂商；SEI 1996 公告集：“The CERT Coordination Center has received reports of…”＋CA 编号与 “update this advisory as we receive additional information” 追踪。邮件与电话双通道未逐字捕获，以收报＋编号追踪为据。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
+V61.1.7.3	通告文本的固定体例	确证	SEI 1996 公告集 CA-1996-01 原文分节 “I. Description”“II. Impact”“III. Solution”，带原始发布日、修订日与修订史——固定体例在场。		https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
+V61.1.7.4	响应职能的机构化	确证	SEI 史页：DARPA 委设常设队于 FFRDC；SEI 公告集：CERT Division 署名、发行声明与逐份修订记录——职责与对外口径成文。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
+V61.1.7.5	从响应到研究	存疑	响应之外的研究职能（恶意代码分析、脆弱性研究）未在本批取到一手页；SEI 史页仅证设立与协调中立方角色，作阻断披露不编造。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management	2026-11-02
+V61.1.8.1	报告者与厂商的时序	确证	Christey–Wysopal 草案：发布日由 vendor 与 reporter／coordinator 协商（“work with the Reporter and involved Coordinators to arrange a date”）——时序本身成制度对象。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.8.2	披露时限的惯例形成	确证	草案惯例文本：回执 7 日（MUST within 7 days）、处置 30 日、宽限至多 30 日。历时演化轨迹未逐点取证，以成文惯例数字为据。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.8.3	公告与补丁的同步	确证	草案：Resolution 先于 Release 阶段、30 日处置目标、发布日协商——公告发布以修复就绪为前提。“同步失败即倒计时”分句为阐释语。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.8.4	披露渠道的分布面	形态	多渠道并存的分布归纳，体例题，离线核查。			2026-11-02
+V61.1.8.5	制度化的边界与例外	确证	cve.org Overview：CVE 不负责严重度评分（Myth #4 事实面）；first.org：CVSS 由 FIRST SIG 维护、“produce a numerical score reflecting its severity”——公开编目与严重度评分分属两机构。		https://www.cve.org/About/Overview https://www.first.org/cvss/	2026-11-02
+V61.1.9.1	全披露的论证结构	确证	RFC 1135 引 CPSR：“An effective way to correct known security flaws is to publish descriptions of the flaws so that they can be corrected”、隐匿属短视——全披露论证结构在场。		https://www.rfc-editor.org/rfc/rfc1135.html	2026-11-02
+V61.1.9.2	协调披露的操作规程	确证	草案七阶段：通知→回执 7 日→验证→处置 30 日→发布日协商→发布→跟进；私下报告、限期修复与共同发布齐备。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.9.3	负责任披露的语义分歧	存疑	草案仅释 “responsible” 为 “recognition of a formal, repeatable process”；题面“提权、注入与泄露三类提问”的分类口径查无一手，题面与论题疑错位。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.9.4	三方博弈中的时点选择	确证	草案：vendor 可求至多 30 日宽限、期限过而未修则 reporter 可经 coordinator 公布——三方时点互为条件、公开时点即策略变量。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.9.5	披露伦理的制度残留	形态	伦理争论沉淀为体例与署名惯例的体例题，离线核查。			2026-11-02
+V61.1.10.1	CVE 编号的唯一性设计	确证	cve.org Overview：“There is one CVE Record for each vulnerability in the catalog”＋各方可 “discussing the same issue”——一漏洞一记录。		https://www.cve.org/About/Overview	2026-11-02
+V61.1.10.2	编号机构的授权分层	确证	cve.org CNAs：“authorized by the CVE Program to assign CVE IDs…within their own specific scopes of coverage”；Overview：Top-Level Roots 与 Roots 监管分层——授权结构决定定名权。		https://www.cve.org/ProgramOrganization/CNAs https://www.cve.org/About/Overview	2026-11-02
+V61.1.10.3	记录字段的最小集合	确证	CVEProject/cve-schema：CVE Record Format 为 JSON schema，仓库附 “Example with minimum required fields”——最小字段集有规范文本。		https://github.com/CVEProject/cve-schema	2026-11-02
+V61.1.10.4	漏洞库之间的映射表	存疑	NVD 自述全量承接 CVE 指称（“All vulnerabilities in the NVD have been assigned a CVE identifier”）——层级关系可证；“映射误差沿引用链逐级放大”为分析性断言，未获量化一手。		https://nvd.nist.gov/vuln	2026-11-02
+V61.1.10.5	标准化后的统计困境	存疑	NVD 页仅证指称统一；“计数口径受收录策略影响”未获一手（2024 年 NVD 积压事件官方文未及取回），作阻断披露。		https://nvd.nist.gov/vuln	2026-11-02
+V61.1.11.1	安全公告的常规发布	确证	FreeBSD 官方 SA 页列 2024–2026 近月度公告流水（SA-26:xx 至 SA-24:xx），“按期发布”节奏在场。		https://www.freebsd.org/security/advisories/	2026-11-02
+V61.1.11.2	团队职能的专门化	确证	FreeBSD administration 页：Security Team（secteam@FreeBSD.org）与 Ports Security Team 等专队清单、职责与联系方式成文——分工写进流程文本。		https://www.freebsd.org/administration/	2026-11-02
+V61.1.11.3	工具链的加固转向面	确证	OpenBSD 3.2（2002-11-01）：非执行栈多平台默认、OpenSSH “Privilege separation is now enabled by default”、setuid 程序大减——运行期缓解进入默认构建。“编译器加固项”半边未在本页直证。		https://www.openbsd.org/32.html	2026-11-02
+V61.1.11.4	与认证体系的接入	确证	TrustedBSD 官方页：审计实现源自 “in support of the Mac OS X CAPP evaluation”——审计子系统以通用准则保护轮廓为目标，安全工程与认证话语接轨。		http://www.trustedbsd.org/audit.html	2026-11-02
+V61.1.11.5	工程惯例的跨分支扩散	形态	“惯例扩散快于机制移植”的比较史命题，体例题，离线核查。			2026-11-02
+V61.2.1.1	九位权限位的语义	确证	chmod(2) 枚举 S_IRWXU／S_IRWXG／S_IRWXO 九位结构；security(7) 载特权二分（super-user 与普通账户）组织检查类别。		https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2 https://man.freebsd.org/cgi/man.cgi?query=securelevel&sektion=7	2026-11-02
+V61.2.1.2	属主与属组的双重判定	确证	chmod(2) 位类按 owner／group／other 三类组织，属主与属组两级判定在位面可见。		https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2	2026-11-02
+V61.2.1.3	超级用户的豁免位置	确证	chmod(2)：进程属主或 super-user 其一即过校验（“either owns the file…, or is the super-user”）；mac(4)：MAC 策略只能在其上收紧、“cannot override traditional Unix security provisions such as file permissions and superuser checks”。		https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2 https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.2.1.4	组权限的集合运算式	形态	多组隶属并集语义属结构叙事；离线核查（setgroups 族语义未单独取证）。			2026-11-02
+V61.2.1.5	权限判定的内核集中	形态	判定集中于内核访问例程的体例题，离线核查。			2026-11-02
+V61.2.2.1	根目录替换的作用界限	确证	NetBSD chroot(2)：chroot 使目录成为“the starting point for path searches of pathnames beginning with /”；工作目录处理 1.4 起改为静默置入新根（扩展），其余系统不改变——题面“不改变描述符与工作目录”为经典口径。		https://man.netbsd.org/chroot.2	2026-11-02
+V61.2.2.2	搜索权限的前置条件	确证	NetBSD chroot(2)：“In order for a directory to become the root directory a process must have execute (search) access for that directory.”		https://man.netbsd.org/chroot.2	2026-11-02
+V61.2.2.3	开放目录描述符的风险	确证	NetBSD chroot(2)：fchroot 对已打开目录描述符生效（1.4 新增）；HISTORY 载明 1.4 改工作目录处理以防经二次 chroot “escape”——描述符越界通道在场。		https://man.netbsd.org/chroot.2	2026-11-02
+V61.2.2.4	特权降级的配套要求	确证	FreeBSD chroot(8) 提供 -u／-g 降权与 -n 关 SUID/SGID 选项；chroot(2) 限 super-user——降权为标配配套。		https://man.freebsd.org/chroot https://man.netbsd.org/chroot.2	2026-11-02
+V61.2.2.5	隔离强度的经验上限	确证	隔离经路径解析起点实现（chroot(2) 语义）；fchroot 存在与 1.4 逃生修补说明特权进程可越出——“经验上限”分句为阐释。		https://man.netbsd.org/chroot.2	2026-11-02
+V61.2.3.1	安全级别的单向提升	确证	secmodel_securelevel(9)：“The super-user can raise the securelevel using sysctl(8), but only init(8) can lower it”；init(8)：“Since the level cannot be reduced”——单向性逐字在场。		https://man.netbsd.org/secmodel_securelevel.9 https://man.freebsd.org/init	2026-11-02
+V61.2.3.2	内核状态的写入限制	确证	secmodel_securelevel(9)：级别 1 起 /dev/mem、/dev/kmem 禁写、已挂载裸盘只读、内核模块禁装卸、RTC 偏移禁改，级别 2 叠加时钟不可回拨、包过滤规则禁改——清单随级别分档。		https://man.netbsd.org/secmodel_securelevel.9	2026-11-02
+V61.2.3.3	单用户模式的门槛线	确证	secmodel_securelevel(9)：“the system runs in securelevel 0 while single-user and in securelevel 1 while multi-user”；init(8)：内核为 jail 设 per-jail security level、可高于宿主——两半皆有原文。		https://man.netbsd.org/secmodel_securelevel.9 https://man.freebsd.org/init	2026-11-02
+V61.2.3.4	级别与越权路径的对应	确证	secmodel_securelevel(9) 以手册逐级列明被关闭的越权路径（mem 设备、裸盘、模块、时钟、pf 规则等）——对应关系写在手册层。		https://man.netbsd.org/secmodel_securelevel.9	2026-11-02
+V61.2.3.5	传递到各分支的条款	确证	NetBSD secmodel_securelevel(9) 与 FreeBSD init(8) 各载同款机制；NetBSD 默认 0／1 且 -1 需 INSECURE 编译项、FreeBSD init 多用户前升 1——默认配置分化。“4.4BSD-Lite 传递”未逐字捕获，以两分支在场为据。		https://man.netbsd.org/secmodel_securelevel.9 https://man.freebsd.org/init	2026-11-02
+V61.2.4.1	条目式授权的基本结构	确证	POSIX.1e 语义标准文档 acl(5)：ACL 为条目集合、每条指定主体与读写执行组合；handbook 示例载 user::／group::／other:: 最小三条目。		https://man7.org/linux/man-pages/man5/acl.5.html https://docs.freebsd.org/en/books/handbook/security/	2026-11-02
+V61.2.4.2	授权条目的叠加顺位	确证	acl(5)：检查按 effective UID 对 ACL_USER／ACL_USER_OBJ、GID 与补充组对 ACL_GROUP 类条目依次测试，ACL_MASK 限定上限——叠加顺位成文。		https://man7.org/linux/man-pages/man5/acl.5.html	2026-11-02
+V61.2.4.3	与传统权限位的映射	确证	acl(5)：“The permissions defined by ACLs are a superset of the permissions specified by the file permission bits”，owner／group／other 位与对应条目互改联动——退化映射逐字在场。		https://man7.org/linux/man-pages/man5/acl.5.html	2026-11-02
+V61.2.4.4	文件系统标志的开关	确证	tunefs(8)：“-a enable | disable: Turn on/off the administrative POSIX.1e ACL enable flag”，NFSv4 ACL 同有 -N 开关。		https://man.freebsd.org/tunefs	2026-11-02
+V61.2.4.5	移植中的兼容取舍面	确证	handbook：setfacl 参数部分仅适用 POSIX.1e、部分仅适用 NFSv4；acl(5) 载 ACL_MASK 上限语义——“取舍体现在默认掩码”为阐释。		https://docs.freebsd.org/en/books/handbook/security/ https://man7.org/linux/man-pages/man5/acl.5.html	2026-11-02
+V61.2.5.1	策略模块的可装载设计	确证	mac(4)：“loadable security policy architecture”；模块表列 mac_biba／mac_mls 等并标注 boot-only 与 any-time 两类装载。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.2.5.2	标签的层级与隔间	确证	mac_mls(4)：标签由 sensitivity level 与零或多个 compartments 构成、“permit all labels to be placed in a partial order…based on a dominance operator”——偏序标签运算逐字在场。		https://man.freebsd.org/mac_mls	2026-11-02
+V61.2.5.3	与自主控制的叠加顺位	确证	mac(4)：MAC 策略“may only restrict access relative to one another and the base system policy”——只能在自主层之上收紧、不能推翻。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.2.5.4	策略组合的冲突裁决	确证	mac(4)：策略间只作收紧式叠加（相对彼此与基系统策略限制访问）——“以最严者为准”的限制语义在场；装载次序条款未见专句。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.2.5.5	框架对超级用户的约束上限	确证	mac(4) BUGS：“not all attack channels are currently protected by entry point checks…should not be relied on, in isolation, to protect against a malicious privileged user”——限度在文档明示。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.2.6.1	登录类的资源上限值	确证	login.conf(5)：login class 决定“session accounting, resource limits and user environment settings”——按类授予阈值。		https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5	2026-11-02
+V61.2.6.2	规则库的主体粒度	确证	rctl(8)：主体“can be either process, user, loginclass, or jail”——四类主体逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8	2026-11-02
+V61.2.6.3	超限动作的分级处置	确证	rctl(8) ACTIONS：deny（拒绝分配）、log（console 警告）、devctl（通知 devd）、sig*（发信号）、throttle（slow down process execution）——拒绝、记录、信号、限流齐全。		https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8	2026-11-02
+V61.2.6.4	内存与进程数的阈值	形态	memoryuse 与 maxproc 在册（rctl(8) RESOURCES），但“最早被设阈”的历时断言未取证；离线核查。			2026-11-02
+V61.2.6.5	限制对拒绝服务的作用	确证	rctl(8) 以 per 字段按 user／loginclass／jail 粒度记账；security(7) 将 DoS 列为独立类别——“全局降为局部失败”为阐释。		https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8 https://man.freebsd.org/cgi/man.cgi?query=securelevel&sektion=7	2026-11-02
+V61.2.7.1	页级读写执行的分割	确证	OpenBSD 3.3：W^X 仅在“capable of pure execute-bit support in the MMU”架构启用（硬件条件逐字）；mitigations(7)：“memory pages may be writable (W) or executable (E), but not both at the same time”。		https://www.openbsd.org/33.html https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.2.7.2	栈帧哨兵的检查时点	确证	OpenBSD 3.3：ProPolice“enabled by default…a random canary is placed before the return address…epilogue then checks if the canary is still intact”；mitigations(7)：WITH_SSP 默认、canary 位于栈帧末尾于损坏时告警。		https://www.openbsd.org/33.html https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.2.7.3	只读重定位的实现手法	确证	mitigations(7)：“RELRO is enabled by default…The entire GOT (.got and .got.plt) are made read-only at program startup, preventing attacks on the relocation table”。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.2.7.4	地址随机化的粒度分档	确证	mitigations(7)：“ASLR can be enabled on both a global and per-process basis”，proccontrol 按进程开停、生效于 execve(2)；NetBSD paxctl(8) 逐程序 +/-a 开关 PaX ASLR——全局、单进程、单执行三档在场。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7 https://man.netbsd.org/paxctl.8	2026-11-02
+V61.2.7.5	保护机制的组合搭配	确证	mitigations(7) SYNOPSIS 并列 ASLR／PIE／W^X／PROT_MAX／RELRO／Bind Now／Stack Overflow Protection 等；RELRO 与 SSP 均为默认——组合为默认取向。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.2.8.1	审计事件的选取标准	确证	audit(4)：“fine-grained, configurable logging of security-relevant events”；auditpipe(4) 提供按用户与事件的预选参数——选取面可配。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
+V61.2.8.2	记录格式的行业来源	确证	audit(4)：“implements the de facto industry standard BSM API, file formats, and command line interface, first found in the Solaris operating system”。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
+V61.2.8.3	守护进程的配置下发	确证	audit(4)：auditd(8) “pushing configuration data from the various audit configuration files into the kernel”——配置与内核状态分离。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
+V61.2.8.4	审计管道的实时跟踪	确证	audit(4)：auditpipe(4) “provide a configurable live tracking mechanism to allow applications to tee the audit trail”——旁路消费事件流。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
+V61.2.8.5	已登记覆盖缺口的分布	确证	audit(4) BUGS：“some system calls do not generate audit records, or generate audit records with incomplete argument information”——缺口在手册列明而非默认完备。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
+V61.2.9.1	指纹数据库的内核驻留	确证	NetBSD 指南：Veriexec“kernel based, hence can provide some protection even in the case of a root compromise”，签名表经 syscall 载入内核。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.2.9.2	执行前的校验时机	确证	指南：严格级 1 起“deny access to files with a fingerprint mismatch”——访问／执行钩子处校验；“时机前移压缩窗口”为阐释。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.2.9.3	严格级别的锁定效力	确证	指南：四级 0–3（learning／IDS／IPS／lockdown）；级别 0 为“the only strict level in which you can load new entries to the kernel”——升档即锁库。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.2.9.4	基线生成的既定流程	确证	指南：cksum 族按算法产出 ASCII 指纹、存 /etc/signatures、rc.conf 启用——流程固定使跨主机有一致起点。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.2.9.5	校验范围的取舍界限	确证	指南：条目可标 DIRECT／INDIRECT／FILE，覆盖可执行、解释器、共享库与配置文件——“界线通常落在可执行文件”为概括。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.2.10.1	块设备层的加密分工	确证	geli(8)：“used to configure encryption on GEOM providers”加“performs simple sector-to-sector encryption”——块层变换，文件系统无需改动。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
+V61.2.10.2	用户密钥的分解方式	确证	geli(8)：“a User Key from up to two, piecewise components: a passphrase…a keyfile”，另可设两把独立 User Key（user key 与 company key）——多持有者在场。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
+V61.2.10.3	主密钥的备份与恢复	确证	geli(8)：“Allows the encrypted Master Key to be backed up and restored…possible to get the data back by restoring keys from backup”，backup／restore 子命令在场。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
+V61.2.10.4	元数据扇区的存放	确证	geli(8)：“The last sector of the providers is used to store metadata”，init 自动写备份至 /var/backups/<prov>.eli、restore 可恢复。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
+V61.2.10.5	一次性密钥的适用场景	确证	geli(8)：“Allows attaching a provider with a random, one-time Master Key, which is useful for swap partitions and temporary filesystems”——onetime 子命令在场。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
+V61.2.11.1	熵源采集的候选清单	确证	random(4)：kern.random.harvest.mask 位掩码选择候选熵源、random_sources 载“Intel Secure Key RNG”等——清单由掩码选择。		https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	2026-11-02
+V61.2.11.2	未播种状态的阻塞行为	确证	random(4)：“will start in an unseeded state, and will block reads until it is seeded for the first time”；bypass_before_seeding 绕过则 unsafe 换可用——可用性代价逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	2026-11-02
+V61.2.11.3	算法代际的更替过程	确证	random(4)：FreeBSD 5.0 改用 Yarrow、11.0 引入 Fortuna 为默认、12.0 完全移除 Yarrow——更替次序逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	2026-11-02
+V61.2.11.4	健康测试的接入接口	确证	random(4)：nist_healthtest_enabled 启用“NIST Special Publication 800-90B”第 4 节熵源健康测试，“If one of the tests fails, the source will be disabled”。		https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	2026-11-02
+V61.2.11.5	启动阶段的播种难题	确证	random(4)：“automatically saves some entropy data in /boot/entropy for the loader(8) to provide to the kernel”，另定期存 /var/db/entropy——持久化缓解而非根治。		https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	2026-11-02
+V61.2.12.1	发布件的签名覆盖面	确证	signify(1)：-C 对发布 SHA256 清单签名并逐文件校验；OpenBSD 6.6 页按 base／fw／pkg／syspatch 分域列公钥——覆盖面与分域在场。		https://man.openbsd.org/signify https://www.openbsd.org/66.html	2026-11-02
+V61.2.12.2	校验和的信任链起点	确证	signify(1)：-t 校验密钥须匹配 /etc/signify/*-keytype.pub——链条起点在随系统分发的公钥而非文件本身。		https://man.openbsd.org/signify	2026-11-02
+V61.2.12.3	包库元数据的签名	确证	pkg-repo(8)：“the repository catalogue may be cryptographically signed”，rsa／ecdsa／eddsa 签仓库哈希、客户端 FINGERPRINTS 验证——镜像替换难以静默生效。		https://man.freebsd.org/pkg-repo	2026-11-02
+V61.2.12.4	密钥轮换的操作程序	确证	OpenBSD 6.6 发布页按版本列新公钥（openbsd-66-*），signify 密钥命名随版本轮换、旧版公钥留验——“同步公告”在场；“历史包无法校验”分句为阐释。		https://www.openbsd.org/66.html https://man.openbsd.org/signify	2026-11-02
+V61.2.12.5	校验失败时的处置	确证	6.6 页 base／fw／pkg／syspatch 四域公钥分立——来源分域校验，发行档与包库分属不同信任域；“区分来源处置”为阐释层。		https://www.openbsd.org/66.html	2026-11-02
+V61.3.1.1	访问矩阵的形式表达	形态	访问矩阵形式化叙事为模型学体例题，离线核查。			2026-11-02
+V61.3.1.2	主体与客体的抽象	确证	mac(4)：“Each system subject (processes, sockets, etc.) and each system object (file system objects, sockets, etc.)”——主客二分与承载问责的定位逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.3.1.3	策略与机制的分离	形态	策略／机制分离属方法论体例题，离线核查。			2026-11-02
+V61.3.1.4	形式模型的经验落差	形态	假设覆盖与实际漏检的边界论述为方法论体例题，离线核查。			2026-11-02
+V61.3.1.5	模型移植的工程代价	形态	移植代价论述为体例题，离线核查。			2026-11-02
+V61.3.2.1	简单安全属性的读限制	确证	mac_mls(4)：“subjects may not observe objects whose classification label dominates its own clearance label”——不读高于自身密级逐字在场。		https://man.freebsd.org/mac_mls	2026-11-02
+V61.3.2.2	星属性约束的写限制	确证	mac_mls(4)：“Subjects may not write to objects with a lower classification level than its own clearance level”——不向低密级写出逐字在场。		https://man.freebsd.org/mac_mls	2026-11-02
+V61.3.2.3	敏感级与隔间的偏序	确证	mac_mls(4)：标签由 sensitivity level 与 compartments 组成、“permit all labels to be placed in a partial order…based on a dominance operator”。		https://man.freebsd.org/mac_mls	2026-11-02
+V61.3.2.4	支配关系的判定规则	确证	mac_mls(4)：dominance 定义为“higher or equal active sensitivity level”且“at least all of the same compartments”。与 3.2.3 题面近重出，呈报告层。		https://man.freebsd.org/mac_mls	2026-11-02
+V61.3.2.5	与完整性模型的镜像关系	确证	mac_biba(4)：“the dominance operator and access rules are reversed…MLS protects the confidentiality, rather than the integrity”——同偏序、读写反向逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
+V61.3.3.1	完整级的三档划分	确证	mac_biba(4)：biba/low／biba/equal／biba/high 三特殊值，等级域 0–65535——三档可比较。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
+V61.3.3.2	读写方向的倒置规则	确证	mac_biba(4)：“A subject at a higher integrity level than an object may write to the object, but not read the object”——高写低、不可读，倒置逐字。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
+V61.3.3.3	低水位标记的变体	确证	mac_biba(4)：“Biba is a fixed label policy…whereas LOMAC is a floating label policy”，LOMAC 允许高完整级读低但降级主体——固定与浮动分道逐字。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4 https://man.freebsd.org/mac_lomac	2026-11-02
+V61.3.3.4	可信代码基的保护对象	确证	mac_biba(4)：“the Biba integrity model is used to protect the Trusted Code Base (TCB)”；mac_lomac(4)：防“corruption of the operating system”。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4 https://man.freebsd.org/mac_lomac	2026-11-02
+V61.3.3.5	与机密性策略的并用	确证	mac_mls(4)：“the MLS confidentiality model is used in concert with the Biba integrity model”——并列部署在场。		https://man.freebsd.org/mac_mls	2026-11-02
+V61.3.4.1	良构事务的认证步骤	形态	Clark-Wilson 良构事务描述无 BSD 部署件，模型体例题，离线核查。			2026-11-02
+V61.3.4.2	进程完整级的继承下限	确证	mac_lomac(4)：读与执行即降级（singlegrade 与 higrade “reduced to the object's grade”），辅助标签使程序“initially executed at a lower effective integrity level”。		https://man.freebsd.org/mac_lomac	2026-11-02
+V61.3.4.3	审计日志的完整性要件	确证	audit(4)：“intended to meet the requirements of the Common Criteria (CC) Common Access Protection Profile (CAPP) evaluation”——外部判据逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
+V61.3.4.4	应用层判定的位置	形态	应用层判定叙事为模型体例题，离线核查。			2026-11-02
+V61.3.4.5	与操作系统机制的接缝	形态	接缝双重判定论述为体例题，离线核查。			2026-11-02
+V61.3.5.1	利益冲突类的划分	形态	Chinese Wall 模型描述无 BSD 部署件，体例题，离线核查。			2026-11-02
+V61.3.5.2	访问历史的约束条件	形态	历史约束为模型定义叙述，体例题，离线核查。			2026-11-02
+V61.3.5.3	单向隔离的推理规则	形态	单向传播推理为模型叙述，体例题，离线核查。			2026-11-02
+V61.3.5.4	与角色模型的组合	形态	组合叙事为体例题，离线核查。			2026-11-02
+V61.3.5.5	实务落地的难点所在	形态	落地维护成本论述为体例题，离线核查。			2026-11-02
+V61.3.6.1	每次访问的拦截点	形态	参考监视器性质叙述为模型学体例题，离线核查。			2026-11-02
+V61.3.6.2	监视器的不可绕过性	形态	不可篡改与总被调用两性质为模型学叙述，体例题，离线核查。			2026-11-02
+V61.3.6.3	可信基的最小化策略	形态	最小化论述为体例题，离线核查。			2026-11-02
+V61.3.6.4	形式证明的适用前提	形态	证明边界论述为方法论体例题，离线核查。			2026-11-02
+V61.3.6.5	评估标准的判据出处	形态	评估标准转译论述为体例题，离线核查。			2026-11-02
+V61.3.7.1	三类模型的授权主体	确证	NIST RBAC 页：“Each user is assigned one or more roles”（岗位授权）；mac(4)：强制层由策略授权；chmod(2)：自主层由属主改位——三类主体可辨。		https://csrc.nist.gov/projects/role-based-access-control https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4 https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2	2026-11-02
+V61.3.7.2	角色继承的层级排布	确证	NIST RBAC 页：“Complexities introduced by mutually exclusive roles or role hierarchies are handled by the RBAC software”——层级与互斥在场。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
+V61.3.7.3	标准化的角色定义	确证	NIST RBAC 页：Ferraiolo–Kuhn 1992 形式化、ANSI／INCITS 359-2004 采纳（2004-02-11）、359-2012 修订——“用户、角色、权限、操作、对象”元素成条款。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
+V61.3.7.4	三类模型的组合序位	形态	组合次序与日志归因论述为体例题，离线核查。			2026-11-02
+V61.3.7.5	管理成本的对照结论	确证	NIST RBAC 页：“it reduces this cost”加 RTI 2010 经济分析（业界节省 $1.1 billion）——“抬高初始建模成本”分句未见直述，以成本对照在场为据。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
+V61.3.8.1	不可伪造凭证的语义	确证	capsicum(4)：“Capabilities are unforgeable tokens of authority that can be delegated and must be presented to perform an action”；Levy 第 1 章：“a token, ticket, or key that gives the possessor permission to access an entity”。		https://man.freebsd.org/capsicum https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf	2026-11-02
+V61.3.8.2	能力的传递与收回	确证	capsicum(4)：“can be delegated”（传递在场）；Levy：能力表随主体持有、凭索引指称对象。“难以集中收回”分句为能力系统通说，本批页面未直述（Levy 第 10 章议题未及取回）。		https://man.freebsd.org/capsicum https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf	2026-11-02
+V61.3.8.3	最小权限的操作化	确证	capsicum(4)：“achieves many of the benefits of least-privilege operation”；cap_rights_limit 将描述符细化到只读写、不可 fchmod——细粒度切分在场。		https://man.freebsd.org/capsicum	2026-11-02
+V61.3.8.4	与访问控制表的对照	确证	Levy：能力表随主体（“Each user, program, or procedure…has access to a list of capabilities”）；acl(5)：ACL 随客体（“Every object can be thought of as having associated with it an ACL”）——两种载体对照可证。		https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf https://man7.org/linux/man-pages/man5/acl.5.html	2026-11-02
+V61.3.8.5	能力系统的历史源流	确证	Levy 第 1 章表 1-1：Dennis–Van Horn 1966、CAL-TSS 1968、Plessey 250 1969、CAP 1970、Hydra 1971、StarOS 1975、System/38 1978、iAPX 432 1981；capsicum(4)：现代重现于沙箱框架（“lightweight OS capability and sandbox framework”）。		https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf https://man.freebsd.org/capsicum	2026-11-02
+V61.4.1.1	进程级隔离的边界	形态	进程隔离边界为通用系统学叙事，离线核查。			2026-11-02
+V61.4.1.2	特权分离的拆分点	确证	OpenBSD 3.2：“Privilege separation is now enabled by default for greater robustness”——单一特权程序拆为监视／执行两进程的实践默认化（OpenSSH）。		https://www.openbsd.org/32.html	2026-11-02
+V61.4.1.3	权限下降的时机窗口	形态	特权窗口时机论述为设计体例，离线核查。			2026-11-02
+V61.4.1.4	沙箱接口的收敛方向	形态	fork+exec 收敛叙事为设计体例，离线核查。			2026-11-02
+V61.4.1.5	隔离失败的模式分类	形态	失败三分类为体例题，离线核查。			2026-11-02
+V61.4.2.1	可写与可执行的分界	确证	OpenBSD 3.3：W^X 为“fine-grained memory permissions layout, ensuring that memory which can be written to by application programs can not be executable at the same time”；mitigations(7)：W^X 经 allow_wx sysctl 落页级。		https://www.openbsd.org/33.html https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.2.2	硬件页表的执行位	确证	OpenBSD 3.3：W^X 仅在“capable of pure execute-bit support in the MMU”架构启用、i386 与 powerpc 3.3 不支持——硬件支持程度决定生效面逐字。		https://www.openbsd.org/33.html	2026-11-02
+V61.4.2.3	编程语言的边界检查	形态	语言层边界检查论述为通用体例，离线核查。			2026-11-02
+V61.4.2.4	内存破坏的利用链条	形态	利用链叙述为通用体例，离线核查。			2026-11-02
+V61.4.2.5	保护与兼容的取舍	确证	mitigations(7)：“Applications that perform Just In Time (JIT) compilation need to be adapted to be compatible with W^X”——例外进入策略逐字。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.3.1	页权限的互斥策略	确证	mitigations(7)：“memory pages may be writable (W) or executable (E), but not both at the same time”，经 allow_wx sysctl 置 0 启用——互斥策略在场。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.3.2	地址空间的随机布局	确证	mitigations(7)：“ASLR can be enabled on both a global and per-process basis”，stack／PIE 等逐项 sysctl——布局打散逐项在场。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.3.3	默认启用的历史节点	确证	OpenBSD 3.3：ProPolice“This protection is enabled by default”；mitigations(7)：RELRO“enabled by default”、WITH_SSP 为默认——默认化节点双源。		https://www.openbsd.org/33.html https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.3.4	随机化强度的度量	形态	熵位宽与度量口径论述为体例题，离线核查。			2026-11-02
+V61.4.3.5	绕过技术的演进阶梯	形态	绕过阶梯叙述为通用体例，离线核查。			2026-11-02
+V61.4.4.1	间接调用的类型校验	确证	Clang CFI 文档：cfi-icall 为“Indirect call of a function with wrong dynamic type”，方案“designed to abort the program upon detecting…undefined behavior that can potentially allow attackers to subvert the program's control flow”。		https://clang.llvm.org/docs/ControlFlowIntegrity.html	2026-11-02
+V61.4.4.2	链接时的可见性门槛	确证	Clang CFI 文档：“The compiler will only produce CFI checks for a class if it can infer hidden LTO visibility for that class”，默认可见性会关掉相应类检查——可见性不足即跳过逐字。		https://clang.llvm.org/docs/ControlFlowIntegrity.html	2026-11-02
+V61.4.4.3	跳转目标的合法性表	确证	Clang CFI 文档：除 kcfi 外所有方案“rely on link-time optimization (LTO)”并须静态链接——合法集合在链接期定；表粒度叙述未直述。		https://clang.llvm.org/docs/ControlFlowIntegrity.html	2026-11-02
+V61.4.4.4	缓解组合的纵深配置	确证	Clang CFI 文档列 vcall／nvcall／cast／icall／mfcall 多方案可并用（“enable all the schemes”）——多路校验组合在场；与数据流保护互补的叙述未直述。		https://clang.llvm.org/docs/ControlFlowIntegrity.html	2026-11-02
+V61.4.4.5	编译器与运行时的分工	确证	Clang CFI 文档：“CFI will abort the program immediately upon detecting a control flow integrity violation”，可选诊断或恢复模式——编译器插检、运行期处置逐字。		https://clang.llvm.org/docs/ControlFlowIntegrity.html	2026-11-02
+V61.4.5.1	输入生成的覆盖导向	形态	模糊测试方法学叙事无 BSD 专指断言，离线核查。			2026-11-02
+V61.4.5.2	崩溃归因的自动化	形态	同上，离线核查。			2026-11-02
+V61.4.5.3	持续集成的接入流程	形态	同上，离线核查。			2026-11-02
+V61.4.5.4	语料库的积累机制	形态	同上，离线核查。			2026-11-02
+V61.4.5.5	发现率与误报的权衡	形态	同上，离线核查。			2026-11-02
+V61.4.6.1	规格与实现的对应	确证	seL4 官网：“the formal mathematical proof that it behaves exactly as specified”——规格与实现对应逐字。		https://sel4.systems/	2026-11-02
+V61.4.6.2	功能正确性的证明广度	确证	seL4 官网：证明覆盖“behaves exactly as specified, enforcing strong security boundaries”——功能正确性即规格层；“范围外靠测试”为阐释。		https://sel4.systems/	2026-11-02
+V61.4.6.3	隔离性质的机器证明	确证	seL4 官网：“enforcing strong isolation and controlled communication”且证明机器化在场；信息流命题（2018 ARM 机密性证明）未在本页直述。		https://sel4.systems/	2026-11-02
+V61.4.6.4	证明所依赖的假设前提	形态	证明假设边界论述为方法论体例题，离线核查。			2026-11-02
+V61.4.6.5	验证成本与长期维护	确证	seL4 官网：“The formal proofs…are constantly maintained, improved, and kept in lock-step with the seL4 code”——长期维护逐字。		https://sel4.systems/	2026-11-02
+V61.4.7.1	固件链的逐级校验	形态	UEFI 安全启动叙事无 BSD 专指断言，离线核查。			2026-11-02
+V61.4.7.2	密钥登记的操作程序	形态	同上，离线核查。			2026-11-02
+V61.4.7.3	信任根的硬件位置	形态	同上，离线核查。			2026-11-02
+V61.4.7.4	启动链的失败处置	形态	同上，离线核查。			2026-11-02
+V61.4.7.5	与开源固件的接缝	形态	同上，离线核查。			2026-11-02
+V61.4.8.1	能力标记的硬件编码	确证	CHERI 页：“capability compression and tagged memory to protect capabilities in memory”——硬件编码与越界拒绝机制在场。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.8.2	指针与能力的合一	确证	CHERI 页：“architectural capabilities, hardware-supported descriptions of permissions that can be used, in place of integer virtual addresses”——合一逐字。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.8.3	细粒度内存保护的界线	确证	CHERI 页：“fine-grained memory protection”加“spatial, referential, and temporal memory safety”——对象级粒度与开销换安全在场。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.8.4	与传统指针的兼容层	确证	CHERI 页：“blend architectural capabilities with conventional MMU-based architectures”加“incremental deployment within existing software ecosystems”——兼容转换在场。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.8.5	混合能力模式的编排	确证	CHERI 页：“CHERI is a hybrid capability architecture”——混合模式逐字。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.9.1	原型处理器的实现阶段	确证	CHERI 页：“extensive hardware and software prototyping”加微架构实现（capability compression／tagged memory），并以 Arm Morello 实验处理器为过渡产物；“FPGA 原型”字样未在本页。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.9.2	资助机构的项目序列	确证	CHERI 页：“supported by the DARPA CRASH, MRC, SSITH, and CPM programs since 2010”——多计划接力资助逐字。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.9.3	开源指令集的发布	确证	CHERI 页：ISA 扩展覆盖“64-bit MIPS…32-bit RISC-V (in collaboration with Microsoft), 64-bit RISC-V (in collaboration with Google), and 64-bit Armv8-A”，并附形式模型——规范与证明公开。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.9.4	学术与产业的交接	确证	CHERI 页：Arm Morello 自 2019 由 UKRI DSbD 支持、“bring CHERI-RISC-V to market”（2024 起 DSIT／UKRI）——学术向产业交接逐字。		https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/	2026-11-02
+V61.4.9.5	试验平台的部署面	形态	部署面论述为体例题，离线核查。			2026-11-02
+V61.4.10.1	模型条款的代码落点	确证	mac(4)：以模块表将各策略落到具体内核模块（mac_biba／mac_mls 等、boot-only 与 any-time 装载标注）——条款到代码落点在场。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.4.10.2	策略模块的装载次序	形态	装载次序论述为体例题（mac(4) 未列优先序），离线核查。			2026-11-02
+V61.4.10.3	默认策略的选择依据	形态	默认策略选择论述为体例题，离线核查。			2026-11-02
+V61.4.10.4	概念到接口的损耗	形态	概念损耗论述为体例题，离线核查。			2026-11-02
+V61.4.10.5	转化路径的分支落差	形态	分支落差论述为比较史体例题，离线核查。			2026-11-02
+V61.4.11.1	哨兵编译选项的默认化	确证	mitigations(7)：“When WITH_SSP is enabled, which is the default, world is built with the -fstack-protector-strong”；OpenBSD 3.3：ProPolice 默认启用——默认化双源。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7 https://www.openbsd.org/33.html	2026-11-02
+V61.4.11.2	边界检查函数的接入	形态	头文件层边界检查接入（FORTIFY 类）未在 FreeBSD 侧取证，体例题，离线核查。			2026-11-02
+V61.4.11.3	位置无关代码的普及	确证	mitigations(7)：PIE 专项开关（kern.elf64.aslr.pie_enable）与 ASLR 联动——位置无关代码使随机化生效的接续在场；工具链同步改造叙述为阐释。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.11.4	构建系统的开关层次	形态	开关层次论述为体例题（src.conf(5) 层在场、其余未取证），离线核查。			2026-11-02
+V61.4.11.5	移植补丁的来源清单	确证	SSP 系 ProPolice（OpenBSD 3.3 集成、作者 Hiroaki Etoh）为 FreeBSD 侧 SSP 同源技术（mitigations(7)）——外部移植在场；“来源清单”叙述为阐释。		https://www.openbsd.org/33.html https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.4.12.1	能力模式的进程切换	确证	capsicum(4)：capability mode“entered by invoking cap_enter(2)…Once set, the flag is inherited by future children processes, and may not be cleared”——切换时点与不可逆逐字。		https://man.freebsd.org/capsicum	2026-11-02
+V61.4.12.2	文件描述符的能力化	确证	capsicum(4)：“Capsicum makes file descriptors into capabilities”；CloudABI README：“capabilities of a process are fully determined by its set of open file descriptors”——双源。		https://man.freebsd.org/capsicum https://github.com/NuxiNL/cloudabi	2026-11-02
+V61.4.12.3	沙箱化的最小改动	确证	capsicum(4)：“lightweight OS capability and sandbox framework…preserving existing UNIX APIs and performance, and presents application authors with an adoption path”——克制目标逐字。		https://man.freebsd.org/capsicum	2026-11-02
+V61.4.12.4	内核与用户态的分工	确证	capsicum(4)：内核两原语（capability mode＋capabilities），用户态 capsicum_helpers(3) 与 libcasper(3) 封装常用服务——分工在场。		https://man.freebsd.org/capsicum	2026-11-02
+V61.4.12.5	实验特性到常规件的过渡	形态	过渡期论述为体例题，离线核查。			2026-11-02
+V61.4.13.1	最小系统调用面的设计	确证	CloudABI README：“a minimal ABI consisting of only 49 syscalls”——数十个逐字。		https://github.com/NuxiNL/cloudabi	2026-11-02
+V61.4.13.2	能力运行时的跨系统实现	确证	CloudABI README：“implemented in existing kernels: FreeBSD has CloudABI support for x86-64 and arm64, and a patch-set for NetBSD and a patch-set for Linux…executed on different operating systems, without any modification”。		https://github.com/NuxiNL/cloudabi	2026-11-02
+V61.4.13.3	无全局状态的进程模型	确证	CloudABI README：“Processes cannot open files by their absolute path, cannot open network connections, and cannot observe global system state such as the process table”。		https://github.com/NuxiNL/cloudabi	2026-11-02
+V61.4.13.4	与 WebAssembly 接口的接续	确证	CloudABI README：“WASI's design has been inspired by CloudABI”；WASI 官网：“WASI applications run in a capability-based sandbox…starts with no ambient authority”——能力化思路延续双源。		https://github.com/NuxiNL/cloudabi https://wasi.dev/	2026-11-02
+V61.4.13.5	扩散路径的成败比较	确证	CloudABI README：“It was an awesome experiment, but it never got enough traction to be sustainable”——生态采纳（非设计）逐字。		https://github.com/NuxiNL/cloudabi	2026-11-02
+V61.4.14.1	标准算法的选定批次	确证	NIST PQC 页：multi-year international competition、2024 年 8 月发布 FIPS 203／204／205、Falcon 与 HQC“selected for ongoing standardization”——分批定标在场。		https://csrc.nist.gov/projects/post-quantum-cryptography	2026-11-02
+V61.4.14.2	迁移清单的优先级	形态	数据寿命排序准则未获直述（页面仅证“find and prioritize vulnerable systems”活动在场），体例题，离线核查。			2026-11-02
+V61.4.14.3	混合密钥交换的过渡	确证	OpenSSH 9.0（2022-04-08）：“use the hybrid Streamlined NTRU Prime + x25519 key exchange method by default”，X25519 为“backstop against any weaknesses in NTRU Prime”、防“capture now, decrypt later”攻击。		https://www.openssh.org/txt/release-9.0	2026-11-02
+V61.4.14.4	库与协议的改造面	确证	NIST PQC 页：FIPS 203（ML-KEM 密钥封装）与 204／205（签名）——密钥交换与签名两处改造锚定；“证书链”分句未直述。		https://csrc.nist.gov/projects/post-quantum-cryptography	2026-11-02
+V61.4.14.5	迁移时程的不确定性	确证	NIST PQC 页：IR 8547 时线“deprecate and ultimately remove quantum-vulnerable algorithms…by 2035, with high-risk systems transitioning much earlier”——区间式时程在场；“硬件加速”分句未直述。		https://csrc.nist.gov/projects/post-quantum-cryptography	2026-11-02
+V61.5.1.1	授权主体的归属分野	确证	mac(4)：强制层授权由策略模块判定；chmod(2)：自主层由属主改位——两类授权主体可辨。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4 https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2	2026-11-02
+V61.5.1.2	策略变更的权限归属	形态	策略变更归属论述为体例题，离线核查。			2026-11-02
+V61.5.1.3	与超级用户的关系	确证	mac(4) BUGS：“the MAC Framework design is intended to support the containment of the root user”——把超级用户纳入判定逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	2026-11-02
+V61.5.1.4	部署成本的对照口径	形态	成本对照论述为体例题，离线核查。			2026-11-02
+V61.5.1.5	强制与自主的组合先后	形态	组合次序与审计归属论述为阐释，离线核查。			2026-11-02
+V61.5.2.1	授权载体的两种类型	确证	Levy：能力表随主体持有；acl(5)：ACL 随客体挂载；capsicum(4)：描述符即能力——载体两型三源。		https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf https://man7.org/linux/man-pages/man5/acl.5.html https://man.freebsd.org/capsicum	2026-11-02
+V61.5.2.2	撤销机制的粒度差别	确证	capsicum(4)：能力经 cap_rights_limit 逐描述符细化；acl(5)：权限位随对象一次生效——载体粒度对照在场；“撤销难易”分句为阐释。		https://man.freebsd.org/capsicum https://man7.org/linux/man-pages/man5/acl.5.html	2026-11-02
+V61.5.2.3	改造工作量的分布	形态	改造工作量论述为体例题，离线核查。			2026-11-02
+V61.5.2.4	与沙箱接口的关系	确证	capsicum(4)：“lightweight OS capability and sandbox framework”，capability mode 与 rights 即沙箱原语。		https://man.freebsd.org/capsicum	2026-11-02
+V61.5.2.5	失效模式的方向分野	形态	失效方向论述为体例题，离线核查。			2026-11-02
+V61.5.3.1	命名空间的划分界限	确证	jail(8)：参数组含根目录（路径视图）、hostname、IP 地址限定（“restricted to using only these addresses”）与跨进程访问警示——文件／进程／网络三面在场。		https://man.freebsd.org/jail	2026-11-02
+V61.5.3.2	隔离强度的层级划分	形态	隔离层级论述为体例题，离线核查。			2026-11-02
+V61.5.3.3	资源边界的设定规程	确证	jail(8)：per-jail kern.securelevel（“A jail never has a lower securelevel than its parent system, but…may have a higher one”）；rctl(8) 以 jail 为主体记账——逐项设定在场。		https://man.freebsd.org/jail https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8	2026-11-02
+V61.5.3.4	与传统 chroot 的接续	确证	jail(8)：“The jail utility appeared in FreeBSD 4.0”，根目录参数即 chroot 面并叠加 IP 与进程维度——“承接”措辞为阐释。		https://man.freebsd.org/jail	2026-11-02
+V61.5.3.5	跨系统移植的落差	形态	移植落差论述为比较史体例，离线核查。			2026-11-02
+V61.5.4.1	规则语言的表达力	确证	OpenBSD 3.3 pf 增强：“Anchors, allowing subrulesets”“Tables, a very efficient way for large address lists”——表与锚逐字在场。		https://www.openbsd.org/33.html	2026-11-02
+V61.5.4.2	状态跟踪的实现代价	形态	状态表代价论述为通用体例，离线核查。			2026-11-02
+V61.5.4.3	默认策略的两种取向	形态	默认取向论述为体例题，离线核查。			2026-11-02
+V61.5.4.4	扩展机制的挂接面	形态	扩展挂接面论述为体例题，离线核查。			2026-11-02
+V61.5.4.5	三系框架的适用面	形态	三系框架适用面论述为比较史体例，离线核查。			2026-11-02
+V61.5.5.1	页权限策略的严格度	确证	OpenBSD 3.3：W^X“enabled by default”逐架构推进；mitigations(7)：JIT“need to be adapted to be compatible with W^X”——默认值与例外审批双面在场。		https://www.openbsd.org/33.html https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.5.5.2	默认启用的时间差	确证	OpenBSD 3.3（2003-05）W^X 默认启用；NetBSD paxctl(8)（工具 4.0 出现）管理 PaX MPROTECT／ASLR 开关——分支默认启用年份差在场。		https://www.openbsd.org/33.html https://man.netbsd.org/paxctl.8	2026-11-02
+V61.5.5.3	兼容例外的处理办法	确证	mitigations(7)：JIT 须适配 W^X，allow_wx sysctl 为策略开关——例外落在策略开关层。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.5.5.4	内核与用户态的一致	形态	一致性论述为体例题，离线核查。			2026-11-02
+V61.5.5.5	与随机化的配合紧密度	形态	配合紧密度论述为体例题，离线核查。			2026-11-02
+V61.5.6.1	校验对象的覆盖界线	确证	Veriexec 指南：条目按文件逐个登记并标 DIRECT／INDIRECT／FILE——覆盖范围自定。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.5.6.2	数据库的内核驻留面	确证	Veriexec 指南：“kernel based, hence can provide some protection even in the case of a root compromise”。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.5.6.3	严格级别的锁定效果	确证	Veriexec 指南：级别 0 为“the only strict level in which you can load new entries to the kernel”——锁定后库不可改。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.5.6.4	与签名校验的衔接点	形态	衔接点论述为体例题，离线核查。			2026-11-02
+V61.5.6.5	度量起点的位置差别	形态	度量起点论述为体例题，离线核查。			2026-11-02
+V61.5.7.1	随机数实现的代际	确证	random(4)：FreeBSD 5.0 Yarrow→11.0 Fortuna→12.0 移除——代际更替逐字。		https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4	2026-11-02
+V61.5.7.2	加密框架的所在层次	形态	三层落位论述为体例题（geli 锚定块层、其余层未取），离线核查。			2026-11-02
+V61.5.7.3	密钥管理的接口种类	形态	接口清单论述为体例题（口令＋密钥文件在场、硬件令牌未取），离线核查。			2026-11-02
+V61.5.7.4	算法选择的开放度	形态	算法开放度论述为体例题，离线核查。			2026-11-02
+V61.5.7.5	与硬件加速的接缝	确证	geli(8)：“Utilizes the crypto(9) framework, so when there is crypto hardware available, geli will make use of it automatically”。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
+V61.5.8.1	包签名的覆盖幅度	确证	pkg-repo(8)：仓库目录档随仓库哈希签名；signify -C 对发布 SHA256 清单逐文件校验——包体与元数据覆盖双面；“或两者”幅度为阐释。		https://man.freebsd.org/pkg-repo https://man.openbsd.org/signify	2026-11-02
+V61.5.8.2	元数据的校验链条	确证	pkg-repo(8)：data.pkg 为主目录档（含包清单与组定义）并随仓库签名——依赖元数据同链验证。		https://man.freebsd.org/pkg-repo	2026-11-02
+V61.5.8.3	第三方库的响应速度	形态	上游响应速度论述为体例题，离线核查。			2026-11-02
+V61.5.8.4	构建可复现的达标线	形态	可复现构建论述为体例题，离线核查。			2026-11-02
+V61.5.8.5	事件之后的流程整改	形态	整改力度论述为阐释（FreeBSD-SA-25:06.xz 在场仅证事件与公告层），离线核查。			2026-11-02
+V61.5.9.1	默认关闭的服务面	形态	默认服务面论述未取一手（安装面文档未及），离线核查。			2026-11-02
+V61.5.9.2	默认启用的加固项	确证	mitigations(7)：RELRO“enabled by default”且“WITHOUT_RELRO may be used to disable it”；OpenBSD 3.2／3.3 privsep 与 ProPolice 默认——默认开启可选关闭双源。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7 https://www.openbsd.org/32.html https://www.openbsd.org/33.html	2026-11-02
+V61.5.9.3	安装介质的暴露权衡	形态	安装介质权衡论述为体例题，离线核查。			2026-11-02
+V61.5.9.4	文档默认值的表述	形态	文档表述论述为体例题，离线核查。			2026-11-02
+V61.5.9.5	用户改动的自由度	确证	secmodel_securelevel(9)：降级需内核编入 INSECURE 选项；mitigations(7)：构建开关可关 RELRO——默认放宽有门槛在场。		https://man.netbsd.org/secmodel_securelevel.9 https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.5.10.1	调用白名单的表达	确证	unveil(2)：权限字符与 pledge promises 对应（rpath／wpath／exec／cpath）——承诺集表达逐字在场。		https://man.openbsd.org/unveil	2026-11-02
+V61.5.10.2	文件系统视图的收缩	确证	unveil(2)：“The first call to unveil() removes visibility of the entire filesystem…except for the specified path and permissions”，双 NULL 调用锁定——首调后收缩逐字。		https://man.openbsd.org/unveil	2026-11-02
+V61.5.10.3	描述符能力的传递规程	确证	capsicum(4)：cap_rights_limit 以描述符传递细化权利；CloudABI README：能力集即打开描述符集——与路径白名单两风格对照。		https://man.freebsd.org/capsicum https://github.com/NuxiNL/cloudabi	2026-11-02
+V61.5.10.4	与项目目标的契合	形态	契合度论述为体例题，离线核查。			2026-11-02
+V61.5.10.5	机制选择的历史因由	形态	历史因由论述为体例题，离线核查。			2026-11-02
+V61.5.11.1	分支目标的初始设定	形态	分叉目标叙事为比较史体例，离线核查。			2026-11-02
+V61.5.11.2	维护者规模的硬约束	形态	规模约束叙事为体例题，离线核查。			2026-11-02
+V61.5.11.3	商业支持的有无之别	形态	商业支持叙事为体例题，离线核查。			2026-11-02
+V61.5.11.4	审计投入的分配比例	形态	分配比例叙事为体例题，离线核查。			2026-11-02
+V61.5.11.5	路线选择的路径依赖	形态	路径依赖叙事为体例题，离线核查。			2026-11-02
+V61.5.12.1	能力框架的工程化	形态	工程化叙事为体例题（Capsicum FreeBSD 9.0 入主线在场、过程论述未取），离线核查。			2026-11-02
+V61.5.12.2	沙箱组件的产品化	形态	产品化叙事为体例题，离线核查。			2026-11-02
+V61.5.12.3	与商业生态的衔接	形态	生态衔接叙事为体例题，离线核查。			2026-11-02
+V61.5.12.4	安全团队的编制规模	形态	编制规模叙事为体例题，离线核查。			2026-11-02
+V61.5.12.5	大体量维护的取舍	形态	体量取舍叙事为体例题，离线核查。			2026-11-02
+V61.5.13.1	跨平台的加固一致	形态	跨平台一致性叙事为体例题，离线核查。			2026-11-02
+V61.5.13.2	自动扫描的常态接入	形态	扫描接入叙事为体例题，离线核查。			2026-11-02
+V61.5.13.3	公告节奏的稳定余地	形态	公告节奏叙事为体例题，离线核查。			2026-11-02
+V61.5.13.4	资源约束下的优先项	形态	优先项叙事为体例题，离线核查。			2026-11-02
+V61.5.13.5	移植优先的长期欠账	形态	移植欠账叙事为体例题，离线核查。			2026-11-02
+V61.5.14.1	逐行审计的组织形式	形态	审计组织叙事未取一手，离线核查。			2026-11-02
+V61.5.14.2	默认加固的彻底性	形态	彻底性论述为体例题，离线核查。			2026-11-02
+V61.5.14.3	权限收缩的落实程度	形态	落实程度论述为体例题，离线核查。			2026-11-02
+V61.5.14.4	发布周期的固定节奏	确证	OpenBSD 发行页日期序列：3.3 于 2003-05-01 发布、6.6 于 2019-10-17 发布——固定半年节奏在场。		https://www.openbsd.org/33.html https://www.openbsd.org/66.html	2026-11-02
+V61.5.14.5	审计文化的外部效应	形态	外溢效应叙事为体例题，离线核查。			2026-11-02
+V61.5.15.1	小规模团队的响应	形态	小团队响应叙事为体例题，离线核查。			2026-11-02
+V61.5.15.2	上游补丁的跟进速度	形态	上游跟进叙事为体例题，离线核查。			2026-11-02
+V61.5.15.3	架构实验的安全代价	形态	架构实验叙事为体例题，离线核查。			2026-11-02
+V61.5.15.4	资源约束下的让步面	形态	让步面叙事为体例题，离线核查。			2026-11-02
+V61.5.15.5	与原项目的代码往来	形态	代码往来叙事为体例题，离线核查。			2026-11-02
+V61.5.16.1	威胁模型的不同预设	形态	威胁模型预设叙事为比较史体例，离线核查。			2026-11-02
+V61.5.16.2	加固手段的优先序	形态	优先序叙事为体例题，离线核查。			2026-11-02
+V61.5.16.3	默认策略的激进程度	形态	激进程度叙事为体例题，离线核查。			2026-11-02
+V61.5.16.4	共同遗产的保留项	形态	遗产保留叙事为体例题，离线核查。			2026-11-02
+V61.5.16.5	思想差异的制度根由	形态	制度根由叙事为体例题，离线核查。			2026-11-02
+V61.5.17.1	响应速度的组织基础	形态	组织基础叙事为体例题，离线核查。			2026-11-02
+V61.5.17.2	披露口径的宽严尺度	形态	披露口径叙事为体例题，离线核查。			2026-11-02
+V61.5.17.3	审计投入的来源构成	形态	来源构成叙事为体例题，离线核查。			2026-11-02
+V61.5.17.4	志愿者规模的效应	形态	志愿者效应叙事为体例题，离线核查。			2026-11-02
+V61.5.17.5	文化对机制的反塑	形态	文化反塑叙事为体例题，离线核查。			2026-11-02
+V61.5.18.1	强制控制的实现层	确证	mac(4)：MAC 为内核装载框架；capsicum(4)：Capsicum 为应用沙箱框架——内核框架与应用沙箱两实现层双源。		https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4 https://man.freebsd.org/capsicum	2026-11-02
+V61.5.18.2	沙箱技术的取舍方向	形态	取舍方向论述为体例题，离线核查。			2026-11-02
+V61.5.18.3	完整性度量的起始点	形态	度量起点论述为体例题，离线核查。			2026-11-02
+V61.5.18.4	权限模型的收敛趋势	形态	收敛趋势论述为体例题，离线核查。			2026-11-02
+V61.5.18.5	跨体系对照的限度	形态	对照限度自反性声明为方法论体例，离线核查。			2026-11-02
+V61.6.1.1	提权路径的三种类型	形态	提权类型划分叙事为通用体例，离线核查。			2026-11-02
+V61.6.1.2	内核态检查的缺口	形态	内核检查缺口叙事为通用体例，离线核查。			2026-11-02
+V61.6.1.3	用户态服务的越权	确证	Spafford：sendmail DEBUG 命令“specify a set of commands instead of a user address”即特权服务输入解析放大为命令执行。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.6.1.4	提权与持久化的衔接	形态	持久化衔接叙事为通用体例，离线核查。			2026-11-02
+V61.6.1.5	公告分级的判定依据	存疑	FreeBSD SA-25:06 实档无严重度／分级字段，判据清单未获一手；分级依据叙述待补。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.2.1	越界写的内核后果	形态	内核越界写后果叙事为通用体例，离线核查。			2026-11-02
+V61.6.2.2	释放后使用的窗口	形态	UAF 窗口叙事为通用体例（SA-25:06 即 xz 解码器 UAF 实例、通则未锚），离线核查。			2026-11-02
+V61.6.2.3	可执行页的利用门槛	形态	内核可执行页门槛叙事为通用体例，离线核查。			2026-11-02
+V61.6.2.4	缓解措施的覆盖盲区	形态	覆盖盲区叙事为体例题，离线核查。			2026-11-02
+V61.6.2.5	利用难度的变化曲线	形态	难度曲线叙事为体例题，离线核查。			2026-11-02
+V61.6.3.1	缓冲区溢出的形态	确证	Spafford：gets “takes input to a buffer without doing any bounds checking”，溢出定长缓冲改写栈帧——经典形态逐字。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.6.3.2	解析器的输入边界	形态	解析器边界叙事为通用体例，离线核查。			2026-11-02
+V61.6.3.3	库函数的检查缺口	确证	Spafford：“The gets routine is not the only routine with this flaw. There is a whole family of routines in the C library that may also overrun buffers…unless the user explicitly specifies limits”。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf	2026-11-02
+V61.6.3.4	特权程序的暴露面	确证	Spafford：sendmail 以守护进程监听 25 端口接受远程输入；E&R：fingerd 服务远程请求——特权服务输入面即攻击面双源。		http://www.cs.cmu.edu/~15712/papers/Spafford89.pdf https://www.d.umn.edu/~pahp/readings/internet-worm-MIT-1989.pdf	2026-11-02
+V61.6.3.5	修补与回归的成本	形态	修补三件套叙事为阐释（SA-25:06 示 patch＋公告＋重建流程，测试面未锚），离线核查。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.4.1	未初始化内存的残留	形态	未初始化残留叙事为通用体例，离线核查。			2026-11-02
+V61.6.4.2	侧信道的观测范围	形态	侧信道叙事为通用体例，离线核查。			2026-11-02
+V61.6.4.3	日志与错误的泄露	形态	日志泄露叙事为通用体例，离线核查。			2026-11-02
+V61.6.4.4	泄露与提权的组合	形态	泄露与写原语组合叙事为通用体例（mitigations(7) 仅证随机化目标），离线核查。		https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7	2026-11-02
+V61.6.4.5	披露口径的宽严尺度差异	形态	披露口径差异叙事为体例题，离线核查。			2026-11-02
+V61.6.5.1	协议实现的状态机缺陷	形态	状态机缺陷叙事为通用体例，离线核查。			2026-11-02
+V61.6.5.2	分片与选项的处理	形态	分片重组叙事为通用体例，离线核查。			2026-11-02
+V61.6.5.3	拥塞控制的数据结构	形态	拥塞控制结构叙事为通用体例，离线核查。			2026-11-02
+V61.6.5.4	远程触发的先决条件	形态	远程触发条件叙事为通用体例，离线核查。			2026-11-02
+V61.6.5.5	协议栈加固的层次	形态	加固层次叙事为体例题，离线核查。			2026-11-02
+V61.6.6.1	选择性确认的链表膨胀	确证	oss-security（2019-06-17）：CVE-2019-11478“crafted sequence of SACKs which will fragment the TCP retransmission queue…cause an expensive linked-list walk”，SACK Panic 可远程触发内核 panic。		https://www.openwall.com/lists/oss-security/2019/06/17/5	2026-11-02
+V61.6.6.2	非默认栈的暴露前提	确证	oss-security：CVE-2019-5599 限定“FreeBSD 12 using the RACK TCP Stack”——非默认栈暴露面逐字在场。		https://www.openwall.com/lists/oss-security/2019/06/17/5	2026-11-02
+V61.6.6.3	协调披露的时点选择	确证	oss-security 单帖（2019-06-17）同日覆盖 Linux 与 FreeBSD 多 CVE——跨项目同日协调披露在场。		https://www.openwall.com/lists/oss-security/2019/06/17/5	2026-11-02
+V61.6.6.4	临时缓解的代价评估	确证	oss-security：rack.split_limit 限 SACK 表、临时停用 RACK 栈，MSS 过滤“may break legitimate connections”——缓解代价逐字。		https://www.openwall.com/lists/oss-security/2019/06/17/5	2026-11-02
+V61.6.6.5	分支响应的同步次序	确证	oss-security：各内核补丁随同日公告附上——同步实践在场；“次序错位”分句为阐释。		https://www.openwall.com/lists/oss-security/2019/06/17/5	2026-11-02
+V61.6.7.1	公告分类下的文件系统漏洞	形态	分类口径叙事未获一手（SA 清单仅示 zfs 公告存在），离线核查。			2026-11-02
+V61.6.7.2	挂载点的输入范围	形态	挂载输入叙事为通用体例，离线核查。			2026-11-02
+V61.6.7.3	快照与回滚的风险	形态	快照回滚叙事为通用体例，离线核查。			2026-11-02
+V61.6.7.4	磁盘格式的解析路径	形态	磁盘格式解析叙事为通用体例，离线核查。			2026-11-02
+V61.6.7.5	修复与数据一致性	形态	修复一致性叙事为体例题，离线核查。			2026-11-02
+V61.6.8.1	命名空间的越界路径	形态	命名空间越界叙事为通用体例，离线核查。			2026-11-02
+V61.6.8.2	能力句柄的泄漏面	形态	能力句柄泄漏叙事为体例题，离线核查。			2026-11-02
+V61.6.8.3	共享内核的攻击面	形态	共享内核攻击面叙事为体例题，离线核查。			2026-11-02
+V61.6.8.4	逃逸路径的构造步骤	形态	逃逸三步叙事为通用体例，离线核查。			2026-11-02
+V61.6.8.5	边界加固的推进阶段	形态	加固次序叙事为体例题，离线核查。			2026-11-02
+V61.6.9.1	设备模型的模拟面	形态	设备模型叙事为通用体例（bhyve 公告多例在 SA 清单在场），离线核查。			2026-11-02
+V61.6.9.2	客户机的越权出口	形态	越权出口叙事为通用体例，离线核查。			2026-11-02
+V61.6.9.3	引导加载的校验空白	形态	引导校验叙事为通用体例，离线核查。			2026-11-02
+V61.6.9.4	宿主与客户的分界	形态	分界叙事为通用体例，离线核查。			2026-11-02
+V61.6.9.5	虚拟化层修补节奏	形态	修补节奏叙事为阐释，离线核查。			2026-11-02
+V61.6.10.1	认证协议的时序缺陷	形态	时序缺陷叙事为通用体例，离线核查。			2026-11-02
+V61.6.10.2	信号处理的竞态窗口	形态	信号竞态叙事为通用体例，离线核查。			2026-11-02
+V61.6.10.3	密钥交换的实现偏差	形态	实现偏差叙事为通用体例，离线核查。			2026-11-02
+V61.6.10.4	默认配置的暴露程度	形态	默认暴露叙事为体例题，离线核查。			2026-11-02
+V61.6.10.5	补丁发布的紧迫性	形态	紧迫性叙事为体例题，离线核查。			2026-11-02
+V61.6.11.1	上游代码的信任链	形态	上游信任链叙事为体例题（xz 后门事件公告未及取回；SA-25:06 系另案 UAF），离线核查。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.11.2	发布档与仓库的差异	形态	发布档差异叙事为体例题，离线核查。			2026-11-02
+V61.6.11.3	打包环节的注入面	形态	注入面叙事为体例题，离线核查。			2026-11-02
+V61.6.11.4	受影响范围的判定	形态	范围判定叙事为体例题，离线核查。			2026-11-02
+V61.6.11.5	事件后的流程改造	形态	流程改造叙事为阐释，离线核查。			2026-11-02
+V61.6.12.1	回归树的组织编排	形态	回归编排叙事为体例题，离线核查。			2026-11-02
+V61.6.12.2	测试框架的接入深度	形态	框架接入叙事为体例题，离线核查。			2026-11-02
+V61.6.12.3	补丁验证的自动化	形态	验证自动化叙事为体例题，离线核查。			2026-11-02
+V61.6.12.4	回退路径的预先准备	形态	回退路径叙事为体例题，离线核查。			2026-11-02
+V61.6.12.5	发布前的门槛设置	形态	门槛设置叙事为体例题，离线核查。			2026-11-02
+V61.6.13.1	公告与勘误的分流	确证	FreeBSD SA 页：“Errata affecting the base system but not classified as security vulnerabilities are covered separately on the FreeBSD Errata Notices page”——分流逐字。		https://www.freebsd.org/security/advisories/	2026-11-02
+V61.6.13.2	严重程度的判据表	存疑	SA-25:06 实档无严重度／判据表字段，列表化判据未获一手。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.13.3	受影响分支的标注	确证	SA-25:06：“Affects: FreeBSD 13.5 and FreeBSD 14.2”加 stable/13、releng/13.5、stable/14、releng/14.2 分支哈希与修订号表——标注方式逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.13.4	签名与归档的惯例	确证	SA-25:06：含 Hash: SHA512 头与文末 PGP SIGNATURE 块，补丁经 GPG 验证后构建——签名惯例逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.6.13.5	三系公告的字段对照	形态	三系字段对照叙事为体例题，离线核查。			2026-11-02
+V61.6.14.1	上游修复的跟进速度	形态	上游跟进叙事为体例题，离线核查。			2026-11-02
+V61.6.14.2	版本捆绑的取舍区间	形态	版本捆绑叙事为体例题，离线核查。			2026-11-02
+V61.6.14.3	兼容性的代价条目	形态	兼容代价叙事为体例题，离线核查。			2026-11-02
+V61.6.14.4	公告与移植的时序	形态	时序错位叙事为体例题，离线核查。			2026-11-02
+V61.6.14.5	长期维护库的替换节奏	形态	替换节奏叙事为体例题，离线核查。			2026-11-02
+V61.7.1.1	公告文本的字段构成	确证	FreeBSD SA-25:06 实档含标题、影响分支、修订号表、修正指引（freebsd-update 与源补丁）与签名——“影响与修正”分段在场；“类别、模块”字段名未逐字引。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.1.2	签署与归档的固定格式	确证	SA-25:06：含 Hash: SHA512 头与文末 PGP SIGNATURE 块，补丁经 GPG 验证后应用——签署与归档逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.1.3	勘误通知的独立体例	确证	FreeBSD SA 页：勘误（“not classified as security vulnerabilities”）另设 Errata Notices 页——两类文本分流逐字。		https://www.freebsd.org/security/advisories/	2026-11-02
+V61.7.1.4	补丁文件的配套要件	确证	SA-25:06：附 xz.patch 与 xz.patch.asc（GPG 验证）、分支修订号并列——配套清单逐项在场。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.1.5	可证范围的界定原则	形态	可证范围界定原则为方法论体例题，离线核查。			2026-11-02
+V61.7.2.1	编号记录的来源渠道	确证	cve.org：CNA 涵盖 vendor、researcher、open source、CERT 等授权机构分域发号——渠道分层在场；“两类渠道”的并置口径为阐释。		https://www.cve.org/ProgramOrganization/CNAs	2026-11-02
+V61.7.2.2	数据库之间的映射	存疑	NVD 自述全量承接 CVE 指称（层级关系可证）；“映射质量决定统计能否合并”为分析性断言，未获量化一手。		https://nvd.nist.gov/vuln	2026-11-02
+V61.7.2.3	引用与回填的差异	形态	回填时点差异论述为体例题，离线核查。			2026-11-02
+V61.7.2.4	统计口径的不一致	形态	统计口径论述为体例题，离线核查。			2026-11-02
+V61.7.2.5	记录缺失的处理口径	形态	缺失处理规则为方法论体例题，离线核查。			2026-11-02
+V61.7.3.1	提交信息的粒度标准	形态	提交信息粒度叙事为通用体例，离线核查。			2026-11-02
+V61.7.3.2	修复提交的识别标记	形态	识别标记叙事为通用体例，离线核查。			2026-11-02
+V61.7.3.3	分支合并的痕迹识别	形态	合并痕迹叙事为通用体例，离线核查。			2026-11-02
+V61.7.3.4	提交者身份的核验	形态	身份核验叙事为通用体例，离线核查。			2026-11-02
+V61.7.3.5	历史重写的干扰范围	形态	历史重写干扰叙事为通用体例，离线核查。			2026-11-02
+V61.7.4.1	补丁文件的文本形态	确证	SA-25:06：补丁以源补丁文件（xz.patch）加 GPG 签名档（xz.patch.asc）发布——统一差异加签名的形态在场。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.4.2	版本分支的对位映射	确证	SA-25:06：补丁对位到 stable/13、releng/13.5、stable/14、releng/14.2 四分支并各附哈希——对位映射逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.4.3	修订号的引用方式	确证	SA-25:06：修订号写作“stable/14-n271423”“releng/14.2-n269529”——分支前缀加序号格式逐字。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.4.4	回溯移植的记录格式	确证	SA-25:06：Corrected 条目按分支逐一标注（各分支修订号）——回溯移植记录在场。		https://www.freebsd.org/security/advisories/FreeBSD-SA-25:06.xz.asc	2026-11-02
+V61.7.4.5	版本树的断点区间	形态	断点区间叙事为体例题（支持终止面未取证），离线核查。			2026-11-02
+V61.7.5.1	安全团队的职责配置	确证	FreeBSD administration 页：Security Team（secteam@FreeBSD.org）、Ports Security Team 等专队清单、职责与联系方式成文。		https://www.freebsd.org/administration/	2026-11-02
+V61.7.5.2	通告签发的流程环节	形态	签发流程叙事为体例题，离线核查。			2026-11-02
+V61.7.5.3	密钥与签署的操作惯例	形态	密钥保管与轮换叙事未取证（SA 签名在场、轮换惯例未锚），离线核查。			2026-11-02
+V61.7.5.4	邮件列表的存档状态	形态	列表存档叙事为体例题，离线核查。			2026-11-02
+V61.7.5.5	团队史料的缺口清单	形态	缺口清单方法论为体例题，离线核查。			2026-11-02
+V61.7.6.1	审计提交的标记惯例	形态	审计标记叙事为体例题，离线核查。			2026-11-02
+V61.7.6.2	审计记录的字段体例	形态	审计字段体例叙事为体例题，离线核查。			2026-11-02
+V61.7.6.3	外部审计的委托渠道	形态	委托渠道叙事为体例题，离线核查。			2026-11-02
+V61.7.6.4	发现项的处置批次	形态	处置批次叙事为体例题，离线核查。			2026-11-02
+V61.7.6.5	审计覆盖的偏差成因	形态	覆盖偏差叙事为体例题，离线核查。			2026-11-02
+V61.7.7.1	计数单位的不统一问题	形态	计数单位论述为方法论体例题，离线核查。			2026-11-02
+V61.7.7.2	披露率对统计的影响	形态	披露率影响论述为方法论体例题，离线核查。			2026-11-02
+V61.7.7.3	受影响版本的口径	形态	版本口径论述为方法论体例题，离线核查。			2026-11-02
+V61.7.7.4	重复与合并的处理	形态	去重规则论述为方法论体例题，离线核查。			2026-11-02
+V61.7.7.5	趋势判断的风险所在	形态	趋势风险论述为方法论体例题，离线核查。			2026-11-02
+V61.7.8.1	安装基数的估算方法	形态	基数估算论述为方法论体例题，离线核查。			2026-11-02
+V61.7.8.2	服务暴露的实际比例	形态	暴露比例论述为方法论体例题，离线核查。			2026-11-02
+V61.7.8.3	攻击者的目标偏好	形态	目标偏好论述为方法论体例题，离线核查。			2026-11-02
+V61.7.8.4	数据可得性的缺口大小	形态	数据缺口论述为方法论体例题，离线核查。			2026-11-02
+V61.7.8.5	相关性的常见误读	形态	相关性误读论述为方法论体例题，离线核查。			2026-11-02
+V61.7.9.1	设计目标的可测性	形态	可测性论述为方法论体例题，离线核查。			2026-11-02
+V61.7.9.2	部署率对效果的影响	形态	部署率论述为方法论体例题，离线核查。			2026-11-02
+V61.7.9.3	绕过案例的权重判断	形态	权重判断论述为方法论体例题，离线核查。			2026-11-02
+V61.7.9.4	评估方法的差异根由	形态	方法差异论述为方法论体例题，离线核查。			2026-11-02
+V61.7.9.5	效果判断的保留意见	形态	保留意见论述为方法论体例题，离线核查。			2026-11-02
+V61.7.10.1	存档的不完整状态	形态	存档盘点论述为方法论体例题，离线核查。			2026-11-02
+V61.7.10.2	一手材料的偏向来源	形态	偏向来源论述为方法论体例题，离线核查。			2026-11-02
+V61.7.10.3	事后叙述的重构性	形态	重构性论述为方法论体例题，离线核查。			2026-11-02
+V61.7.10.4	沉默证据的处理原则	形态	沉默证据原则为方法论体例题，离线核查。			2026-11-02
+V61.7.10.5	结论强度的分级标准	形态	分级标准论述为方法论体例题，离线核查。			2026-11-02
+V61.7.11.1	共同遗产的延续项	形态	遗产延续叙事为比较史体例题，离线核查。			2026-11-02
+V61.7.11.2	分化节点的识别方式	形态	分化节点论述为比较史体例题，离线核查。			2026-11-02
+V61.7.11.3	机制扩散的方向判别	形态	扩散方向论述为比较史体例题，离线核查。			2026-11-02
+V61.7.11.4	周期与偶然的交织	形态	周期与偶然论述为比较史体例题，离线核查。			2026-11-02
+V61.7.11.5	连续性的解释限度	形态	解释限度自反性声明为方法论体例，离线核查。			2026-11-02

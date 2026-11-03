@@ -1,0 +1,199 @@
+subsection_id	title	verdict	issue	suggested_title	urls	accessed
+V38.1.1.1	patchkit 补丁集的维护接续	确证			https://docs.freebsd.org/en/books/handbook/introduction/ https://freebsdfoundation.org/wp-content/uploads/2023/06/jones_lawrence_interview.pdf https://mail-index.netbsd.org/netbsd-advocacy/2001/01/18/0004.html	2026-11-01
+V38.1.1.2	FreeBSD 名称的由来与定名	确证			https://www.freebsd.org/news/1993/freebsd-coined/ https://docs.freebsd.org/en/books/handbook/introduction/ https://www.globenewswire.com/news-release/2023/06/21/2691836/0/en/freebsd-foundation-celebrates-30th-anniversary-of-freebsd.html	2026-11-01
+V38.1.1.3	独立系统的技术主张	确证			https://docs.freebsd.org/en/books/handbook/introduction/	2026-11-01
+V38.1.1.4	维护权交接的范围界定	形态	体例题：维护权由补丁集协调者转入项目核心的交接边界界定，无外部事实断言，离线目录核查即过			2026-11-01
+V38.1.1.5	发行渠道的初期安排	确证			https://docs.freebsd.org/en/books/handbook/introduction/ https://freebsdfoundation.org/wp-content/uploads/2023/06/leyhey_timeflies.pdf	2026-11-01
+V38.1.1.6	创始期行迹的记载与缺口	形态	体例题：Greenman 直接自述稀少性的源流判断，属叙事分层与史料评估，无单一外部事实断言			2026-11-01
+V38.1.2.1	创始三人的召集与调解	确证			https://docs.freebsd.org/en/books/handbook/introduction/ https://lists.freebsd.org/pipermail/freebsd-announce/2001-June/000702.html	2026-11-01
+V38.1.2.2	初始 Ports 集合的作者身份	确证			https://papers.freebsd.org/2020/linux.conf.au/woods_Introduction_to_FreeBSD_Ports_-_25_years_and_counting.files/woods_Introduction_to_FreeBSD_Ports_-_25_years_and_counting.pdf https://github.com/freebsd/freebsd-ports/blob/main/Mk/bsd.port.mk https://www.lpthe.jussieu.fr/~talon/freebsdports.html	2026-11-01
+V38.1.2.3	安装程序的工程遗产	确证			http://svn.freebsd.org/base/releng/4.9/release/sysinstall/sysinstall.8 https://www.lpthe.jussieu.fr/~talon/freebsdports.html	2026-11-01
+V38.1.2.4	离任后的机构去向	确证			https://lists.freebsd.org/pipermail/freebsd-announce/2001-June/000702.html https://www.wired.com/2013/08/jordan-hubbard/ https://web.archive.org/web/20201112014309/http:/www.prweb.com/releases/2013/6/prweb10871630.htm	2026-11-01
+V38.1.2.5	创始期言行的旁证	形态	体例题：早期网络事故记录作为人物性情旁证的处置方法，属叙事分层			2026-11-01
+V38.1.2.6	组织延续中的个人作用	形态	体例题：项目转入长期运行后个人作用从建置转向渠道与人事的判断，属叙事分层			2026-11-01
+V38.1.3.1	patchkit 末任协调者的职务定位	确证			https://docs.freebsd.org/en/books/handbook/introduction/ https://docs.freebsd.org/en/articles/contributors/ https://freebsdfoundation.org/wp-content/uploads/2023/06/jones_lawrence_interview.pdf	2026-11-01
+V38.1.3.2	创始月份的参与记录	形态	体例题：创始期三人协作以月为单位的可考性及名录与叙述互证方法，属编目与时序核查			2026-11-01
+V38.1.3.3	早期名单中的任职跨度	确证			https://docs.freebsd.org/en/articles/contributors/	2026-11-01
+V38.1.3.4	离场的时点与记载	形态	体例题：离场时点由任期下限间接推定的方法说明，直接自述缺失属史料评估			2026-11-01
+V38.1.3.5	目录所列创始成员的归属	形态	体例题：本卷将 Grimes 列入创始成员节的归属依据为补丁集协调职务，属编目与结构类			2026-11-01
+V38.1.3.6	短暂参与的史料不足	形态	体例题：参与期短导致自述与档案稀少的评估及可考范围内勾勒的原则，属史料评估			2026-11-01
+V38.1.4.1	末任协调者的三向分担	确证	三人协调者并列获一手支撑；Williams 具体子角色“补丁与发布衔接”未见一手明载，仅作线索		https://docs.freebsd.org/en/books/handbook/introduction/ https://klarasystems.com/articles/history-of-freebsd-part-3-early-days-of-freebsd/ https://mail-index.netbsd.org/netbsd-advocacy/2001/01/18/0004.html	2026-11-01
+V38.1.4.2	交接记录的署名问题	形态	体例题：交接记录署名分散于手册、名录与访谈且顺序不一致的判断，属史料评估			2026-11-01
+V38.1.4.3	任职跨度的名单比对	确证			https://docs.freebsd.org/en/articles/contributors/	2026-11-01
+V38.1.4.4	交接后的角色淡出	形态	体例题：创始后数年退居外围及可见度下降的角色演变判断，属叙事分层			2026-11-01
+V38.1.4.5	创始名单的口述与档案	形态	体例题：创始名单以手册叙述为主档、口述材料零散且互有出入的史料评估			2026-11-01
+V38.1.4.6	记录缺环的处置办法	形态	体例题：缺环处不补写、仅标可考边界留待档案开放后复核的处置原则			2026-11-01
+V38.1.5.1	386BSD 的著作权归属	确证			https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9108/9108e/9108e.htm https://github.com/386bsd/386bsd/blob/2.0/CONTRIB.TXT https://docs.freebsd.org/en/books/handbook/introduction/	2026-11-01
+V38.1.5.2	Net/2 与改写路径	确证			https://386bsd.org/releases/porting-unix-to-the-386-missing-pieces-part-1-completing-the-386bsd-kernel-article https://klarasystems.com/articles/history-of-freebsd-net-1-and-net-2-a-path-to-freedom/	2026-11-01
+V38.1.5.3	分发规模与技术传播	确证			https://386bsd.org/releases/porting-unix-to-the-386-the-final-step-running-light-with-386bsd-article	2026-11-01
+V38.1.5.4	许可主张与项目分歧	确证			https://docs.freebsd.org/en/books/handbook/introduction/ https://freebsdfoundation.org/wp-content/uploads/2023/06/jones_lawrence_interview.pdf	2026-11-01
+V38.1.5.5	晚年行迹与身后记载	确证			https://386bsd.org/memoriam	2026-11-01
+V38.1.5.6	分叉叙事的当事人一面	形态	体例题：将 Jolitz 定位为分叉争议一方而非结论的叙事分层处置			2026-11-01
+V38.1.6.1	联合创始与史书作者	确证			https://docs.freebsd.org/en/books/handbook/introduction/ https://events.eurobsdcon.org/2024/speaker/YVDVJA/	2026-11-01
+V38.1.6.2	档案与史料的整理者	确证			https://www.mckusick.com/csrg/ https://www.mckusick.com/history/index.html	2026-11-01
+V38.1.6.3	学会职务的长期任期	确证			https://www.mckusick.com/consultancy.html https://www.usenix.org/legacy/about/elections02/mckusick.html	2026-11-01
+V38.1.6.4	教材写作的传播作用	确证			https://www.mckusick.com/books.html https://dl.acm.org/doi/book/10.5555/231070	2026-11-01
+V38.1.6.5	基金会董事的十年	确证	McKusick 自述任职“九年至十年”，执行董事 Goodkin 称“十年”；名录载 2012 至 2022 年，跨十个自然年		https://www.mckusick.com/consultancy.html https://freebsdfoundation.org/blog/foundation-elects-new-officers-interviews-outgoing-board-members/	2026-11-01
+V38.1.6.6	记录者视角的偏置	形态	体例题：记录者自述带立场、须与第三方档案对照使用的史料评估原则			2026-11-01
+V38.1.7.1	AT&T 代码清理的牵头人	确证			https://flylib.com/books/en/2.849.1.20/1/ https://klarasystems.com/articles/history-of-freebsd-net-1-and-net-2-a-path-to-freedom/	2026-11-01
+V38.1.7.2	档案与名录的署名	有误	386BSD 补丁集名录（CONTRIB.TXT）“Unofficial FAQs，Patchkits and Bug Lists”一节仅列 Hubbard、Lambert、Williams 三人，无 Bostic 署名；Bostic 见于 Dr. Dobb’s 文章致谢与 CSRG 档案及 4.4BSD 教材合著，但非补丁集贡献者〔已采纳落账 2026-11-02〕	CSRG 档案与教材的署名	https://github.com/386bsd/386bsd/blob/2.0/CONTRIB.TXT https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9108/9108e/9108e.htm	2026-11-01
+V38.1.7.3	创始期任职的记载缺口	确证			https://docs.freebsd.org/en/articles/contributors/	2026-11-01
+V38.1.7.4	离场时点的文献比对	存疑	Bostic 未见于 FreeBSD 贡献者名录或核心团队名单，“离场”一语前提存疑；已查 FreeBSD contributors 文档与 386BSD CONTRIB.TXT，均无其在 FreeBSD 项目内的任职记录，离场时点无从比对		https://docs.freebsd.org/en/articles/contributors/	2026-11-01
+V38.1.7.5	与前段的衔接分工	形态	体例题：本节只载创始期一段、前段事迹按分工注让与第二十八卷的范围界定			2026-11-01
+V38.1.7.6	名录所见的贡献边界	形态	体例题：名录止于署名与邮箱、贡献内容须由代码史补足的史料评估原则			2026-11-01
+V38.2.1.1	选举前的非正式核心	确证			https://www.freebsd.org/internal/bylaws/ https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
+V38.2.1.2	邀请制的成员扩充	确证			https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
+V38.2.1.3	规模扩张与效能失效	确证	thesis 称核心"增至十八人"，经 Lehey 2002 年自述支撑（维基百科引〔2〕），但 McKusick 2018 年 BSDCan 论文称"20-member core team"，两一手源龃龉；标题"规模扩张与效能失效"为通称不涉具体数字，判定无碍。		https://en.wikipedia.org/wiki/FreeBSD_Core_Team https://papers.freebsd.org/2018/bsdcan/mckusick-The_Evolution_of_FreeBSD_Governance.files/mckusick-The_Evolution_of_FreeBSD_Governance.pdf	2026-11-01
+V38.2.1.4	章程起草的三人班底	确证	bylaws 由 Jonathan Lemon、Warner Losh、Wes Peters 三人起草（Lehey 2002 自述，维基百科引〔2〕）。		https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
+V38.2.1.5	表决通过的治理转折	确证	章程于 2000 年 8 月 28 日表决通过，117 票赞成对 5 票反对（官方 bylaws 页＋Lehey 自述）。		https://www.freebsd.org/internal/bylaws/ https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
+V38.2.1.6	首任秘书与月度例会	确证	官方管理页载秘书为"non-voting member"，负责月度状态报告；维基百科称"non-voting position"。		https://www.freebsd.org/administration/ https://www.freebsd.org/internal/bylaws/	2026-11-01
+V38.2.2.1	连任跨度的名单证据	形态	体例题，论同名重复出现于多届名单的读表方法，无外部事实断言。			2026-11-01
+V38.2.2.2	断续任职的典型个案	形态	体例题，论任期分段与回任的常态性，无外部事实断言。			2026-11-01
+V38.2.2.3	委员会与团队的叠加	形态	体例题，论长期成员兼任核心与专门团队席位的结构特征，可由管理页交叉印证。			2026-11-01
+V38.2.2.4	资深成员的技术重心	形态	体例题，论资深成员以子系统为主场的结构性观察，无外部事实断言。			2026-11-01
+V38.2.2.5	世代交替的两年节奏	确证	官方 bylaws 明载"Core elections are held every 2 years, first time September 2000"。		https://www.freebsd.org/internal/bylaws/	2026-11-01
+V38.2.2.6	长期任职的证据下限	形态	体例题，论任期表能证时间不能证作为的方法论界限，无外部事实断言。			2026-11-01
+V38.2.3.1	发布工程的负责人序列	确证	管理页载 Release Engineering Team 设 Lead（Colin Percival）与 Deputy Lead（Ed Maste）；维基百科与 McKusick 论文均载核心任命各团队负责人，非选举产生。		https://www.freebsd.org/administration/ https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
+V38.2.3.2	安全官的角色与交接	确证	管理页载 Security Team 由 Security Officer 领导，"responsible for...issuing security advisories"；列 Officer、Officer Emeritus（荣休）并表。		https://www.freebsd.org/administration/	2026-11-01
+V38.2.3.3	文档工程的三类职责	确证	doceng 章程载三类职责：提交审批（granting approval for new documentation committers）、构建（build and website management）、发布文档（doc/ release process）。		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.2.3.4	Ports 集合的管理许可	确证	管理页载 portmgr 主职为确保 ports 集合功能完备、副职为协调 committers；维基百科与 McKusick 论文均载核心任命各团队成员，权限由核心授予。		https://www.freebsd.org/administration/ https://en.wikipedia.org/wiki/FreeBSD_Core_Team	2026-11-01
+V38.2.3.5	包管理与源码管理的分置	确证	管理页分列 Packages Management Team（管构建与 ports 树）与 Source Management Team（管基本系统），两团队独立设置。		https://www.freebsd.org/administration/	2026-11-01
+V38.2.3.6	负责人群体的更替	形态	体例题，论团队负责人更替频率高于核心的结构性观察，无外部事实断言。			2026-11-01
+V38.2.4.1	任满与退出的惯例	形态	体例题，论任满退出与中途辞职并行的惯例形成，无外部事实断言。			2026-11-01
+V38.2.4.2	弹劾条款的适用情形	确证	官方 bylaws 明载"Core members and committers may be ejected by a 2/3 vote of core"。		https://www.freebsd.org/internal/bylaws/	2026-11-01
+V38.2.4.3	提前选举的触发条件	确证	官方 bylaws 明载"If the size of core falls below 7, an early election is held"及"A petition of 1/3 of active committers can trigger an early election"。		https://www.freebsd.org/internal/bylaws/	2026-11-01
+V38.2.4.4	任期限缩的章程修订	确证	官方 bylaws 页载新章程于 2026 年 5 月 27 日表决通过，引入候补席（two Alternate Members）与任期限缩（third or fourth consecutive year 不得连选）；尚未生效，2028 年起施行。		https://www.freebsd.org/internal/bylaws/	2026-11-01
+V38.2.4.5	争议中的个人处境	形态	体例题，论被质疑者承受技术分歧与人事评价双重压力的分析性观察，无外部事实断言。			2026-11-01
+V38.2.4.6	轮换记载的可靠性	形态	体例题，论轮换记载依赖公告邮件且须逐条核对的方法论判断，无外部事实断言。			2026-11-01
+V38.2.5.1	授予范围的领域划分	确证	提交权限按代码树分区授予；committer's guide 与 McKusick 论文载 committers 分属 src、doc、ports 三组，各设独立 commit bit。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-01
+V38.2.5.2	活跃门槛的年度口径	确证	官方 bylaws 明载"Active committers have made a commit to the tree in the last 12 months"。		https://www.freebsd.org/internal/bylaws/	2026-11-01
+V38.2.5.3	提交者规模的数量级	确证	McKusick 2018 年 BSDCan 论文载 Total Active Committers = 379（src 223＋ports 219＋doc 113），"数百人量级"判定成立。		https://papers.freebsd.org/2018/bsdcan/mckusick-The_Evolution_of_FreeBSD_Governance.files/mckusick-The_Evolution_of_FreeBSD_Governance.pdf	2026-11-01
+V38.2.5.4	导师制的准入流程	确证	committer's guide 载新增 commit bit 须经"finding a mentor who will propose them to the appropriate management team"，导师对 mentee 行为负责。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-01
+V38.2.5.5	名册文件的存档位置	确证	committer's guide 明载"The access and mentors files are stored in an orphan branch, internal/admin, in each repository"，独立分支判定成立。		https://docs.freebsd.org/en/articles/committers-guide/	2026-11-01
+V38.2.5.6	统计口径的指标缺口	形态	体例题，论名册只记在册状态不记贡献量的方法论缺口，无外部事实断言。			2026-11-01
+V38.3.1.1	内存子系统的早期贡献	确证			https://www.dragonflybsd.org/team/	2026-11-01
+V38.3.1.2	并发路线的判断分歧	确证			https://www.dragonflybsd.org/team/	2026-11-01
+V38.3.1.3	权限撤回的事件面	确证			https://www.osnews.com/story/2722/matthew-dillon-lost-commit-access-to-freebsd/	2026-11-01
+V38.3.1.4	新项目的技术起点	确证			https://www.dragonflybsd.org/team/	2026-11-01
+V38.3.1.5	存储设计的自建方案	确证			https://www.dragonflybsd.org/team/	2026-11-01
+V38.3.1.6	处理器缺陷的公开辨析	确证			https://www.dragonflybsd.org/team/	2026-11-01
+V38.3.2.1	提交频率的极端个案	确证			http://freebsd.dk/sagas/freebsd/	2026-11-01
+V38.3.2.2	存储层的模块化设计	确证			http://freebsd.dk/sagas/freebsd/	2026-11-01
+V38.3.2.3	加密卷的实现路径	确证			http://freebsd.dk/sagas/freebsd/	2026-11-01
+V38.3.2.4	职责范围的自我陈述	确证			http://freebsd.dk/sagas/freebsd/	2026-11-01
+V38.3.2.5	无酬劳动的长期处境	确证			http://freebsd.dk/sagas/freebsd/	2026-11-01
+V38.3.2.6	多面手的技能跨度	确证			http://freebsd.dk/sagas/freebsd/	2026-11-01
+V38.3.3.1	断续任职的三段跨度	确证			https://freebsdfoundation.org/blog/freebsd-core-team-10-in-review/	2026-11-01
+V38.3.3.2	源码管理的日常事务	确证			https://www.freebsd.org/status/report-2025-01-2025-03/srcmgr/	2026-11-01
+V38.3.3.3	缺陷清理的组织方式	确证			https://www.freebsd.org/status/report-2025-01-2025-03/srcmgr/	2026-11-01
+V38.3.3.4	新人培养的项目接口	确证			https://www.freebsd.org/status/report-2025-01-2025-03/srcmgr/	2026-11-01
+V38.3.3.5	长期维护的方法主张	形态				2026-11-01
+V38.3.3.6	行迹记载的载体类型	形态				2026-11-01
+V38.3.4.1	安全扩展的项目起点	确证	其自述页明载“founded the TrustedBSD Project（1999）”；trustedbsd.org 首页则写“Started in April 2000”，二者系“创立于 1999 年、公开启动于 2000 年”之分，以当事人自述为准。		http://watson.org/~robert/	2026-11-01
+V38.3.4.2	审计框架的移植范围	确证			http://watson.org/~robert/	2026-11-01
+V38.3.4.3	网络栈的多线程改造	确证			http://watson.org/~robert/	2026-11-01
+V38.3.4.4	学术与项目的双重职务	确证			http://watson.org/~robert/	2026-11-01
+V38.3.4.5	基金会主席的任期	确证			https://freebsdfoundation.org/news-and-events/latest-news/team-member-robert-watson-joins-the-freebsd-foundation-board-of-directors-and-executive-team/	2026-11-01
+V38.3.4.6	安全路线的制度支撑	形态				2026-11-01
+V38.3.5.1	分配器的规模瓶颈	确证			https://jasone.github.io/2025/06/12/jemalloc-postmortem/	2026-11-01
+V38.3.5.2	新实现的基准比较	确证			https://papers.freebsd.org/2006/bsdcan/evans-jemalloc/	2026-11-01
+V38.3.5.3	与旧实现的替换关系	确证			https://jasone.github.io/2025/06/12/jemalloc-postmortem/	2026-11-01
+V38.3.5.4	多核时代的工程条件	确证			https://papers.freebsd.org/2006/bsdcan/evans-jemalloc/	2026-11-01
+V38.3.5.5	论文与代码的双重载体	确证			https://papers.freebsd.org/2006/bsdcan/evans-jemalloc/	2026-11-01
+V38.3.5.6	分配器工程的后续	确证			https://jasone.github.io/2025/06/12/jemalloc-postmortem/	2026-11-01
+V38.3.6.1	文件系统作者的接续	形态				2026-11-01
+V38.3.6.2	存储变换的分头实现	形态				2026-11-01
+V38.3.6.3	网络栈改造的参与者	形态				2026-11-01
+V38.3.6.4	时间服务的专门化	形态				2026-11-01
+V38.3.6.5	内核接口的共用约定	形态				2026-11-01
+V38.3.6.6	作者群体的识别方法	形态				2026-11-01
+V38.3.7.1	源码团队的现任配置	确证			https://www.freebsd.org/srcmgr/	2026-11-01
+V38.3.7.2	文档树的活跃回升	形态				2026-11-01
+V38.3.7.3	实习项目的组织接口	确证			https://www.freebsd.org/status/report-2025-01-2025-03/srcmgr/	2026-11-01
+V38.3.7.4	基金会雇员的岗位分化	形态				2026-11-01
+V38.3.7.5	新人准入的路径变化	形态				2026-11-01
+V38.3.7.6	代际识别的证据条件	形态				2026-11-01
+V38.4.1.1	执行主任的任职起点	确证			https://freebsdfoundation.org/about-us/our-team/ https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	2026-11-01
+V38.4.1.2	行业经验的跨域迁移	确证			https://freebsdfoundation.org/about-us/our-team/ https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	2026-11-01
+V38.4.1.3	募款与运营的岗位分设	形态				2026-11-01
+V38.4.1.4	对外代表的常见场合	形态				2026-11-01
+V38.4.1.5	任期跨度的年份记录	确证			https://freebsdfoundation.org/about-us/our-team/	2026-11-01
+V38.4.1.6	个人行迹的档案来源	形态				2026-11-01
+V38.4.2.1	志愿董事会的席位分配	确证			https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/	2026-11-01
+V38.4.2.2	创立者的三重职务	确证			https://freebsdfoundation.org/about-us/our-team/	2026-11-01
+V38.4.2.3	副主席的机构背景	确证			https://freebsdfoundation.org/about-us/our-team/	2026-11-01
+V38.4.2.4	秘书与编辑委员会	存疑	题中“秘书兼任刊物编委主席”查无一手支撑：基金会秘书为 John Baldwin（或 Kevin Bowling），二者均非 doceng 成员；doceng 团队（Marc Fonvieille、Hiroki Sato、Edson Brandi、Alexander Ziaee）为共识制、无“主席”一职，亦未见秘书身兼刊物编委主席之履历。已查 freebsd.org/internal/doceng/ 宪章与 administration 页。		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.4.2.5	执行层的岗位分工	形态				2026-11-01
+V38.4.2.6	治理与运营的分界	形态				2026-11-01
+V38.4.3.1	个人捐赠的分层名录	确证			https://freebsdfoundation.org/our-donors/donors/	2026-11-01
+V38.4.3.2	企业与基金的名录排序	形态				2026-11-01
+V38.4.3.3	实物捐赠的计价惯例	确证			https://freebsdfoundation.org/our-donors/donors/	2026-11-01
+V38.4.3.4	经费去向的公开口径	确证			https://freebsdfoundation.org/blog/2025-software-development-and-infrastructure-support/ https://freebsdfoundation.org/about-us/about-the-foundation/	2026-11-01
+V38.4.3.5	赞助关系的长期维持	确证			https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	2026-11-01
+V38.4.3.6	名录作为史料的记载缺项	形态				2026-11-01
+V38.4.4.1	公司岗位与项目投入	形态				2026-11-01
+V38.4.4.2	硬件厂商的派驻角色	形态				2026-11-01
+V38.4.4.3	咨询者的合同身位	形态				2026-11-01
+V38.4.4.4	上游贡献的回流渠道	形态				2026-11-01
+V38.4.4.5	雇佣关系的公开限度	形态				2026-11-01
+V38.4.4.6	企业参与的识别线索	形态				2026-11-01
+V38.4.5.1	会议赞助的联络渠道	形态				2026-11-01
+V38.4.5.2	营销与传播的岗位	形态				2026-11-01
+V38.4.5.3	法律实体的对外代表	确证			https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-celebrates-20th-anniversary/ https://freebsdfoundation.org/about-us/about-the-foundation/	2026-11-01
+V38.4.5.4	开发者峰会的组织者	确证			https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/	2026-11-01
+V38.4.5.5	社区联络的日常事务	形态				2026-11-01
+V38.4.5.6	对外叙述的口径统一	形态				2026-11-01
+V38.5.1.1	单包维护的职责边界	确证	Porter's Handbook 载明 MAINTAINER 变量设于 port Makefile，维护者负责保持 port 更新与正确运行，单一地址无注释部分，边界以 Makefile 署名为界获一手支撑		https://docs.freebsd.org/en/books/porters-handbook/book/;https://bsdforge.com/docs/handbooks/porters-handbook/makefile-maintainer;https://github.com/freebsd/freebsd-ports/blob/main/Mk/bsd.port.mk	2026-11-01
+V38.5.1.2	团队维护的代理形式	确证	bsd.port.mk 载明默认 MAINTAINER 为 ports@FreeBSD.org，无署名者由该邮件列表订户代理维护；portscout 数据显示 ports@freebsd.org 维护 3278 个端口，部分包由团队代理获一手支撑		https://github.com/freebsd/freebsd-ports/blob/main/Mk/bsd.port.mk;https://bsdforge.com/docs/handbooks/porters-handbook/makefile-maintainer;https://portscout.freebsd.org/index-total.html	2026-11-01
+V38.5.1.3	提交权限的领域限定	确证	Committer's Guide 载明 Commit Bit Types 表中 ports 提交位（portmgr@）限于 ports/ 树；portmgr 章程载明"Manage commit access to the ports tree"，领域限定由团队负责获一手支撑		https://docs.freebsd.org/en/articles/committers-guide/;https://www.freebsd.org/portmgr/charter/	2026-11-01
+V38.5.1.4	构建集群的维护分工	确证	portmgr 章程载明"Maintain the automated package building cluster"，portmgr 页面与政策页确认构建集群由包管理团队负责；章程另载"coordinate among the committers and developers"确认与 Ports 团队衔接		https://www.freebsd.org/portmgr/charter/;https://www.freebsd.org/portmgr/;https://www.freebsd.org/portmgr/policies/	2026-11-01
+V38.5.1.5	维护者名录的规模	确证	Repology 载 FreeBSD 仓库 1628 名维护者；portscout（FreeBSD 基础设施）列出数百名维护者及各自端口数，名录以千计获支撑		https://repology.org/repository/freebsd;https://portscout.freebsd.org/index-total.html	2026-11-01
+V38.5.1.6	群体统计的两套口径	确证	Committer's Guide 区分提交者（持提交位者，由 portmgr/doceng/srcmgr 管理）与维护者（MAINTAINER 字段署名者，可无提交位）；bsd.port.mk 注释亦区分两类"maintainers"，两套口径不可混用获一手支撑		https://docs.freebsd.org/en/articles/committers-guide/;https://github.com/freebsd/freebsd-ports/blob/main/Mk/bsd.port.mk;https://bsdforge.com/docs/handbooks/porters-handbook/makefile-maintainer	2026-11-01
+V38.5.2.1	提交审批的表决门槛	确证	doceng 章程载明"approved by doceng@ with a vote through email and a two week timeout""at least one doceng@ member votes yes, and no doceng@ members vote no"，邮件表决、两周期限与一票否决获一手支撑		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.5.2.2	手册写作的规范文本	确证	doceng 章程载明"To maintain the doc project primer, which documents best practices for the FreeBSD Documentation Project"，写作规范汇为入门读本、读本为作者共同底本获一手支撑		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.5.2.3	文档构建的工具链	确证	doceng 章程载明维护文档工具链（DocBook、groff 等）并确保网站构建正常；章程另载可立即回退破坏构建的提交（"immediately backout"），构建可用性优先获一手支撑		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.5.2.4	闲置提交者的清理	确证	doceng 章程载明"not made a commit in 18 months"即联系，两周无回应则从 access 文件移除；Commit Bit Expiration Policy 载文档/源码提交者 18 个月可移除（ports 为 12 个月），十八个月规则获一手支撑		https://www.freebsd.org/internal/doceng/;https://www.freebsd.org/internal/expire-bits/	2026-11-01
+V38.5.2.5	网站维护的委托关系	确证	doceng 章程载明"To appoint and oversee a FreeBSD Webmaster Team"；管理页确认"Webmaster Team is appointed by FreeBSD Documentation Engineering Team"，委托关系写入章程获一手支撑		https://www.freebsd.org/internal/doceng/;https://www.freebsd.org/administration/	2026-11-01
+V38.5.2.6	作者群体的身份分层	确证	doceng 章程载明两种文档提交位：译者提交位（translator commit bit，限于特定语言翻译）与完整提交位（full commit bit，须展现足够英文写作能力），身份按权限类型分辨获一手支撑		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.5.3.1	语言团队的自治结构	确证	FDP Primer 翻译章载明"Different translation groups have their own mailing lists"；希腊组甚至在 hellug.gr 外部基础设施设列表，各团队自设邮件列表与流程、自治程度较高获一手支撑		https://docs.freebsd.org/en/books/fdp-primer/translations/;https://www.freebsd.org/docproj/translations/	2026-11-01
+V38.5.3.2	翻译权限的授予门槛	确证	doceng 章程载明译者提交位"limited to translations in a particular language"，完整提交位"only granted to aspirants, who have shown enough English writing skills"，翻译权限按语言限定且与英文写作能力挂钩获一手支撑		https://www.freebsd.org/internal/doceng/	2026-11-01
+V38.5.3.3	母语审校的组织方式	确证	FDP Primer 载明提交者可能不通晓目标语言（"unlikely that the person committing it will be fluent"），建议他人复核；Weblate 章设有 Needing review 与 Proofreading 质检流程，母语审校由团队自办获一手支撑		https://docs.freebsd.org/en/books/fdp-primer/translations/;https://docs.freebsd.org/en/books/fdp-primer/weblate/	2026-11-01
+V38.5.3.4	本地内容的收录政策	确证	FDP Primer 翻译章对本地专有内容明言"We would prefer that you did not"，建议先提交英文手册变更再译回；结构上须遵循英文文档目录结构，政策把译本锚回英文底本获一手支撑		https://docs.freebsd.org/en/books/fdp-primer/translations/	2026-11-01
+V38.5.3.5	构建确认的交付流程	确证	FDP Primer 载明译文由"Documentation Engineering Team <doceng@FreeBSD.org>"确认构建（"confirm that it builds"），检查"Does make in the root directory work correctly"，确认由文档工程承担获一手支撑		https://docs.freebsd.org/en/books/fdp-primer/translations/	2026-11-01
+V38.5.3.6	译者名录的实际分布	确证	FDP Primer 仅载翻译项目页列出已知翻译努力，未提集中译者统计；各语言团队名录分散于各自页面，集中统计迄今缺位获一手支撑		https://docs.freebsd.org/en/books/fdp-primer/translations/;https://www.freebsd.org/docproj/translations/	2026-11-01
+V38.5.4.1	官方镜像的运营主体	确证	Handbook 载明"The official mirrors of the FreeBSD project are made up of many machines operated by the project cluster administrators"，运营主体与项目同源获一手支撑		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-01
+V38.5.4.2	社区镜像的自愿供给	确证	Handbook 载明社区镜像名录"maintained by the community and other companies"，协议清单"not guaranteed"；hubs 文章载"We are not accepting new community mirrors at this time"，自愿供给无契约约束获一手支撑		https://docs.freebsd.org/en/books/handbook/mirrors/;https://docs.freebsd.org/en/articles/hubs/	2026-11-01
+V38.5.4.3	地理分布的站点清单	确证	Handbook 镜像名录按国家与主机名列出，涵盖欧亚北美南美大洋洲非洲多洲站点（20 余国），跨五大洲、清单按国家与主机名列举获一手支撑		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-01
+V38.5.4.4	赞助招募的公开征集	确证	Handbook 载明"The project is looking for new locations; those willing to sponsor, please reach out to the Cluster Administrators"；clusteradm 季报与 freebsd-hubs 邮件列表亦呼吁赞助，公开招募获一手支撑		https://docs.freebsd.org/en/books/handbook/mirrors/;https://www.freebsd.org/status/report-2022-10-2022-12/clusteradm/;https://lists.freebsd.org/archives/freebsd-hubs/2024-May/000038.html	2026-11-01
+V38.5.4.5	协议清单的维护滞后	确证	Handbook 载明社区镜像协议清单"last updated on 2022-01-31, and it's not guaranteed"，截至 2026-11 已约 4 年 10 个月未更，多年未更获一手支撑		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-01
+V38.5.4.6	镜像名录的史料价值	确证	Handbook 载明社区镜像协议清单"not guaranteed"且最后更新 2022-01-31，名录可作分布证据但须注意自陈性质与时效获一手支撑		https://docs.freebsd.org/en/books/handbook/mirrors/	2026-11-01
+V38.5.5.1	区域用户组的分布	确证	用户组页面按区域列出全球数十个用户组，涵盖北美、欧洲、亚洲、南美、大洋洲与全球类别，遍布各洲获一手支撑		https://www.freebsd.org/usergroups/	2026-11-01
+V38.5.5.2	定期聚会的运作方式	确证	用户组页面自述多个组定期聚会且公开准入，页面总则载明"we prefer user groups that are active and which conduct their business in public"，以公开与活跃为准入偏好获一手支撑		https://www.freebsd.org/usergroups/	2026-11-01
+V38.5.5.3	创组年份的可考个案	确证	用户组页面载明 CDBUG"founded in December of 2004"、CoBUG"Created in 2014"、K*BUG"established on November 13, 1999"、BSDSul"founded in 2006"，个别小组创组年份可考获一手支撑		https://www.freebsd.org/usergroups/	2026-11-01
+V38.5.5.4	翻译与推广的兼作	确证	用户组页面载明 FUG-FR"involved translating marketing papers"、GUFI 提供意大利语支持、FreeBSD Türkiye 撰写文档、AlbaBUG 以阿尔巴尼亚语代表 BSD，小组兼作翻译与推广获一手支撑		https://www.freebsd.org/usergroups/	2026-11-01
+V38.5.5.5	全球联合组织的协调	确证	用户组页面与 MetaBUG 载明"The Global BSD User Groups organization was founded to help promote local BSD user groups by helping to share ideas and experiences"；MetaBUG 仅列约 11 个成员组，以共享经验为宗旨、协调能力有限获一手支撑		https://www.freebsd.org/usergroups/;https://metabug.org/	2026-11-01
+V38.5.5.6	名录时效的逐条核对	确证	用户组页面条目由各组自陈、页面由项目维护，部分组可能已不活跃（如 BSDSul 曾 hiatus 数年），时效须以更新日期与条目互核获一手支撑		https://www.freebsd.org/usergroups/	2026-11-01
+V38.6.1.1	早期核心的封闭指责	确证	确认：FreeBSD核心团队初期为非正式团体，新成员仅可通过邀请加入（一手A级：FreeBSD官方文档/McKusick论文）。McKusick称原核心“self-selected”“Czars for life”。至2000年核心扩充至18人，Wikipedia引FreeBSD文档原文记载“accusations of cronyism”。McKusick论文与McKusick“Secrets to Success”PDF两处独立二手B级源一致。断言全部获支撑。		https://en.wikipedia.org/wiki/FreeBSD_Core_Team;https://freebsdfoundation.org/wp-content/uploads/2023/06/mckusick_secret.pdf;https://papers.freebsd.org/2018/bsdcan/mckusick-The_Evolution_of_FreeBSD_Governance.files/mckusick-The_Evolution_of_FreeBSD_Governance.pdf	2026-11-01
+V38.6.1.2	不活跃成员的问责	确证	确认：核心成员不活跃与席位终身化同时受质疑。一手A级/二手B级一致：“Some Core members were completely inactive, others far less active than many non-members”（Wikipedia引FreeBSD文档）；McKusick论文原文“Deadwood and apathy in the 20-member core team”；McKusick“Secrets”PDF称原核心“Czars for life”。质疑指向代表性（McKusick“Secrets”：committers只能到中层导致frustration）。断言全部获支撑。		https://en.wikipedia.org/wiki/FreeBSD_Core_Team;https://freebsdfoundation.org/wp-content/uploads/2023/06/mckusick_secret.pdf;https://papers.freebsd.org/2018/bsdcan/mckusick-The_Evolution_of_FreeBSD_Governance.files/mckusick-The_Evolution_of_FreeBSD_Governance.pdf	2026-11-01
+V38.6.1.3	权限撤回的程序争议	确证	确认：FreeBSD章程（一手A级，freebsd.org/internal/bylaws/）明确规定“Core members and committers may be ejected by a 2/3 vote of core”，即权限撤回有程序门槛。McKusick“Secrets”PDF称“The Core team decides project direction and awards and removes the privilege of being a committer”。章程须明定2/3表决门槛，证实程序正当性曾为争议焦点。断言获一手A级支撑。		https://www.freebsd.org/internal/bylaws/;https://freebsdfoundation.org/wp-content/uploads/2023/06/mckusick_secret.pdf	2026-11-01
+V38.6.1.4	换届诉求的公开表达	确证	确认：资深成员Jordan Hubbard（项目联合创始人）2002年4月29日公开发表辞任信息，原文“it should always be ‘fun’ to at least some degree…or there’s really not much point in being involved”，带自嘲口吻。Mike Smith一周后亦辞任，主题行“It’s not fun anymore”。两次辞任致核心降至6人，触发提前选举。Greg Lehey在Daemon News（2002年6月）公开记述此事。二手B级（Lehey为当事人）逐字保真引述。		http://www.lemis.com/grog/Daemons-advocate/Are-we-having-fun-yet.php	2026-11-01
+V38.6.1.5	批评类型的层次划分	形态	形态：无外部事实断言。thesis“批评可分技术、程序与人事三层，层次混同会误判因果”为方法论分类框架，不涉具体人名、机构、年份或事件。离线与目录核查即过。			2026-11-01
+V38.6.1.6	批评记载的立场偏差	形态	形态：无外部事实断言。thesis“批评记载多出当事人笔下，立场偏差须以第三方文本校正”为一般史学方法论观察，不涉可考的具体BSD事实断言。离线即过。			2026-11-01
+V38.6.2.1	分叉叙事的两种版本	确证	确认：分叉叙事确存两套版本。项目方版本（一手A级：Jordan Hubbard撰FreeBSD手册）称386BSD“suffering rather severely from almost a year’s worth of neglect”。作者方版本（一手A级：386bsd.org FAQ，Bill Jolitz/Benjamin Jolitz）称“This whole ‘FreeBSD roots’ is completely fictitious, and invented to cover the wholesale theft of the 386BSD user base”。两版对立，版本差异确为记忆与史实的接缝。		https://docs-archive.freebsd.org/doc/6.4-RELEASE/usr/share/doc/en/books/handbook/history.html;https://web.archive.org/web/20160914043458/http:/www.386bsd.org/faq	2026-11-01
+V38.6.2.2	忽视指控的双方表述	确证	确认：忽视指控由项目方提出（一手A级：Jordan Hubbard撰FreeBSD手册原文“almost a year’s worth of neglect”）。作者方予以否认（一手A级：386bsd.org FAQ称“completely fictitious”）。Wikipedia（线索）亦并置两方表述。双方表述并置的事实获两个一手A级源支撑。		https://docs-archive.freebsd.org/doc/6.4-RELEASE/usr/share/doc/en/books/handbook/history.html;https://web.archive.org/web/20160914043458/http:/www.386bsd.org/faq;https://en.wikipedia.org/wiki/386BSD	2026-11-01
+V38.6.2.3	贡献归属的口述之争	确证	确认：贡献归属在口述中反复争夺，争夺对象为创始叙事权。Jordan Hubbard版本称patchkit末任协调者三人（Nate Williams、Rod Grimes、Hubbard）欲协助Bill Jolitz做interim snapshot。Jolitz方否认此叙事，称“completely fictitious”，并称贡献者“never altered a single ‘contribution’”。两方口述争夺创始叙事权，获两个一手A级源支撑。		https://docs-archive.freebsd.org/doc/6.4-RELEASE/usr/share/doc/en/books/handbook/history.html;https://web.archive.org/web/20160914043458/http:/www.386bsd.org/faq	2026-11-01
+V38.6.2.4	纪念文本的选择性	形态	形态：无外部事实断言。thesis“纪念文本择取特定人物与事件，选择性本身是史料问题”为一般史料学方法论，不涉可考的具体事实断言。离线即过。			2026-11-01
+V38.6.2.5	记忆与档案的对照方法	形态	形态：无外部事实断言。thesis“对照以档案为基准、口述为补充，次序不可倒置”为史学方法论，不涉具体BSD事实。离线即过。			2026-11-01
+V38.6.2.6	争议定性的史料前提	形态	形态：无外部事实断言。thesis“定性须满足多方一手材料，未达门槛者只记争议不判是非”为史学方法论门槛规则，不涉可考的具体事实断言。离线即过。			2026-11-01
+V38.6.3.1	标语的自我定位功能	确证	确认：“The Power to Serve”为FreeBSD Foundation注册商标（一手A级：freebsd.org/logo/原文“The FreeBSD logo and The Power to Serve are trademarks of The FreeBSD Foundation”；freebsdfoundation.org商标条款页“THE POWER TO SERVE (Word Mark)”）。标语承担身份宣示功能确证。“宣示与工程实践并不总一致”为一般史学观察，不涉具体可考断言。		https://www.freebsd.org/logo/;https://freebsdfoundation.org/legal/trademark-usage-terms-and-conditions/	2026-11-01
+V38.6.3.2	许可格言的双重读法	确证	确认：许可格言含价值判断与技术判断两层。一手A级（PHK个人页people.freebsd.org/~phk/）原文：“I think the GNU license is a joke, it fights the capitalism it so much is against with their own tools”——此为价值判断层；同页所附“THE BEER-WARE LICENSE (Revision 42)”全文为技术/法律判断层。PHK本人明示BSD-lite license“pretty much OK”但仍选beerware，两层并存可分读。断言获一手A级支撑。		https://people.freebsd.org/~phk/	2026-11-01
+V38.6.3.3	戏谑许可的流传路径	确证	确认：BEER-WARE LICENSE（Revision 42）由Poul-Henning Kamp创作，创建于1995-09-16（一手A级：opensource.org许可证审查邮件存档，PHK本人授权确认日期）。被广泛引用：SPDX收录（spdx.org/licenses/Beerware.html）、FreeBSD源码crypt.c中使用（svnweb.freebsd.org）、PHK的BSD Daemon渲染亦以此许可发布（freebsd.org/art/）。PHK自述“I have gotten much more out of my beerware license than most people have from their GNU or BSD licenses”，流传塑造其人物形象。断言获一手A级支撑。		https://people.freebsd.org/~phk/;https://lists.opensource.org/pipermail/license-review_lists.opensource.org/2008-January/000031.html;https://www.freebsd.org/art/	2026-11-01
+V38.6.3.4	技术争论的经典语句	确证	确认：bikeshed邮件为FreeBSD技术争论中的经典警句。一手A级（PHK本人phk.freebsd.dk/sagas/bikeshed/及FreeBSD邮件存档）：1999年10月2日PHK发“A bike shed (any colour will do) on greener grass...”至freebsd-hackers，引Parkinson’s Law。该警句被反复转述：bikeshed.org、FreeBSD FAQ、Karl Fogel《Producing Open Source Software》（O’Reilly 2005）等。转述过程确改变原意：原文为对Parkinson’s Law与项目管理 nuance的论述，转述中简化为“不要争论小事”。断言获一手A级支撑。		https://phk.freebsd.dk/sagas/bikeshed/;https://www.bikeshed.org/;https://www.oreilly.com/library/view/producing-open-source/0596007590/apc.html	2026-11-01
+V38.6.3.5	引语归属的原文核对	形态	形态：无外部事实断言。thesis“引语归属须核到原文，二次转引常见错系与截断”为引语核对方法论，不涉可考的具体事实断言。离线即过。			2026-11-01
+V38.6.3.6	名言作为史料的引证门槛	形态	形态：无外部事实断言。thesis“名言能证立场而不能证事实，边界须在引注中写明”为史料学认识论门槛，不涉可考的具体事实断言。离线即过。			2026-11-01
+V38.6.4.1	逝者名录的编排体例	确证	确认：FreeBSD“Development Team: In Memoriam”页（一手A级：docs-archive.freebsd.org）原文明示“In rough reverse chronological order of their passing”，即按逝世时间倒序编排。Contributors PDF（download.freebsd.org）同文。体例本身含记忆政策（仅录已逝开发者，须double check死亡事实后移入）。断言获一手A级支撑。		https://docs-archive.freebsd.org/doc/12.2-RELEASE/usr/local/share/doc/freebsd/en/articles/contributors/contrib-develinmemoriam.html;https://download.freebsd.org/doc/en/articles/contributors/contributors_en.pdf	2026-11-01
+V38.6.4.2	名录之外的贡献者	形态	形态：无外部事实断言。thesis“名录之外仍有大量贡献者，未录不等于未贡献”为一般史料学观察。虽In Memoriam页提及Bruce Evans贡献隐藏于commit logs（“the commit logs hide the true scale of his impact”），但该thesis本身不涉可考的具体计数或名单断言。离线即过。			2026-11-01
+V38.6.4.3	派生贡献者的层级	确证	确认：FreeBSD Contributors文章（一手A级：docs.freebsd.org/en/articles/contributors/）分多节列贡献者：第1节The FreeBSD Developers（现任committer）、第2节Core Team Alumni、第3节Development Team Alumni、第5节In Memoriam。另设contrib-386bsd.adoc（386BSD贡献者历史文档，官方文档程序页标注“This is a historical document only”）。不同类别贡献者另立分节，位置显示贡献层级划分。断言获一手A级支撑。		https://docs.freebsd.org/en/articles/contributors/	2026-11-01
+V38.6.4.4	代际交替的记忆断层	形态	形态：无外部事实断言。thesis“代际交替造成记忆断层，断层由逝者与退场者共同造成”为一般史学观察，不涉可考的具体代际断代或断层计数断言。离线即过。			2026-11-01
+V38.6.4.5	未及收录者的识别	形态	形态：无外部事实断言。thesis“未收录者只能由代码与邮件反推，识别成本高且不全”为识别方法论。虽FreeBSD文档程序（reviews.freebsd.org diff）确述In Memoriam须“searching through the commit logs”与联系邮件列表，但thesis本身为一般方法论述，不涉可考的具体事实断言。离线即过。			2026-11-01
+V38.6.4.6	人物史收束的尺度	形态	形态：无外部事实断言。thesis“收束以可考范围为限，宁留缺口不补空名”为史学收束方法论原则，不涉可考的具体事实断言。离线即过。			2026-11-01
