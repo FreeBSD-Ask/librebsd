@@ -1,10 +1,11 @@
 {
-  "vol": "V39",
-  "sections": 89,
-  "titles": 442,
-  "exceptions": 87,
-  "ledger_sha256": "539153e1a1241130b683623c8c5b12e12131b13fceb4907b8588fa06d469de78",
-  "selftest_exit": 0,
-  "finished_at": "2026-10-30T18:21:00",
-  "session": "resume-3a6-20261030-V39"
+ "vol": "V39",
+ "sections": 89,
+ "titles": 442,
+ "exceptions": 87,
+ "ledger_sha256": "b68a409c709f59acf5d4a9f62526d66bfcc9bcad3c2ccd1538ff86c958f58edd",
+ "selftest_exit": 0,
+ "finished_at": "2026-10-30T18:21:00",
+ "session": "resume-3a6-20261030-V39",
+ "review_fix": "2026-11-03 批二：社区按语境分治（V39.3.4.3、V39.4.2.3、V39.4.4.2、V39.5.2.5、V39.6.3.3、V39.8.2.4、V39.8.6.3、V39.9.4.4、V39.12.4.3、V39.12.5.2）"
 }

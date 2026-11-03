@@ -3,9 +3,9 @@
  "sections": 30,
  "titles": 150,
  "exceptions": 80,
- "ledger_sha256": "ca0056f86a31fffc9019a63f59313e1e8864c15973fc579df8f30761059badd2",
+ "ledger_sha256": "cfe2dbdd6032c899bed0c80484da0d2f72097e8522110985da879e82d1adc290",
  "selftest_exit": 0,
  "finished_at": "2026-10-30T16:56:00",
  "session": "claude-subagent-V57-20261030",
- "review_fix": "2026-10-30 逐条判读 150 条：改题 29、补证 6 行；判读表见 work/V57/review_ch1–ch9.tsv，结论见呈审报告 §四、§七"
+ "review_fix": "2026-10-30 逐条判读 150 条：改题 29、补证 6 行；判读表见 work/V57/review_ch1–ch9.tsv，结论见呈审报告 §四、§七｜2026-11-03 批二：社区按语境分治（V57.4.1.4、V57.9.1.4）"
 }
