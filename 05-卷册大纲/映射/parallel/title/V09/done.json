@@ -3,10 +3,11 @@
  "sections": 24,
  "titles": 120,
  "exceptions": 75,
- "ledger_sha256": "3e0cdfef8ca1d1968fb3f53eaa4cfd829009996a42a6af16de81e4e3ef077396",
+ "ledger_sha256": "26509c2bca85f2c1579edc143b30fc273af5374568d6f25ff505daff7684093f",
  "selftest_exit": 0,
  "finished_at": "2026-10-30T08:58:45",
  "session": "zcode-glm53flash-v05-10",
  "amended_at": "2026-10-30T12:40:00",
- "amended_reason": "复核修账：done.json 同步为现行台账指纹"
+ "amended_reason": "复核修账：done.json 同步为现行台账指纹",
+ "note": "短题完整性＋结构批重签 2026-11-04"
 }

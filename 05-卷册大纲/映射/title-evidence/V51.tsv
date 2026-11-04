@@ -241,12 +241,8 @@ V51.2.5.4	HAMMER2 的当前地位	https://www.dragonflybsd.org/hammer/	联网	A	
 V51.2.5.4	校验和的内建层次	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Data and meta-data is CRC-checked for integrity.	none
 V51.2.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“HAMMER／HAMMER2：文件系统实验作为架构延伸”；本节题为其下位论题	none
 V51.2.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V51.2.5.5	从副本提升为主卷	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Backup PFSs (slaves) are functionally identical to the original (master) and can be promoted to a master.	none
-V51.2.5.5	崩溃后的即时可用	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	HAMMER file systems are immediately available after a crash.  There is no fsck.	none
-V51.2.5.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“HAMMER／HAMMER2：文件系统实验作为架构延伸”；本节题为其下位论题	none
-V51.2.5.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V51.2.5.6	HAMMER2 的当前地位	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	HAMMER2, the successor of HAMMER, is under active development since 2012 and now the official default filesystem for DragonFly.	none
-V51.2.5.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.2.5.5	HAMMER2 的当前地位	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	HAMMER2, the successor of HAMMER, is under active development since 2012 and now the official default filesystem for DragonFly.	none
+V51.2.5.5	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“性能观：并行扩展与现实硬件约束”；本节题为其下位论题	none
 V51.2.6.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.2.6.1	锁简化的双重手段	https://www.dragonflybsd.org/	联网	A	2026-10-30	A combination of intentional simplification of certain classes of locks to make more expansive subsystems less prone to deadlocks, and the rewriting of nearly all the original codebase using algorithms designed specifically with SMP in mind	none
@@ -972,13 +968,9 @@ V51.6.3.4	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/revie
 V51.6.3.4	磁盘层的传言分布核对	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	磁盘层传言考据仅第 01／08／09／10／11／17 六卷、无 macOS/Darwin 条目	none
 V51.6.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“macOS／Darwin 传言考据”；本节题为其下位论题	none
 V51.6.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V51.6.3.5	Darwin 的代码来源	https://en.wikipedia.org/wiki/Darwin_(operating_system)	联网	B	2026-10-30	It is composed of code derived from NeXTSTEP, FreeBSD and other BSD operating systems, Mach, and other free software projects' code, as well as code developed by Apple.	none
-V51.6.3.5	同类系统中的位置	https://www.dragonflybsd.org/	联网	A	2026-10-30	DragonFly belongs to the same class of operating systems as other BSD-derived systems and Linux.	none
-V51.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“macOS／Darwin 传言考据”；本节题为其下位论题	none
-V51.6.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V51.6.3.6	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
-V51.6.3.6	分叉后的持续协作	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Despite this, the DragonFly BSD and FreeBSD projects still work together, sharing bug fixes, driver updates, and other improvements.	none
-V51.6.3.6	材料缺口的诚实标注	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	已穷尽检索确认本节目无可考据的一手材料，属诚实标注的材料缺口登记，非空壳占位；不以无材料立论	none
+V51.6.3.5	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
+V51.6.3.5	分叉后的持续协作	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Despite this, the DragonFly BSD and FreeBSD projects still work together, sharing bug fixes, driver updates, and other improvements.	none
+V51.6.3.5	材料缺口的诚实标注	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	已穷尽检索确认本节目无可考据的一手材料，属诚实标注的材料缺口登记，非空壳占位；不以无材料立论	none
 V51.6.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 4 节“名言与典故的考据规则与对勘表”；本节题为其下位论题	none
 V51.6.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.6.4.1	提交信息的格式要求	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	One line summary of your change (less than 50 characters).	none

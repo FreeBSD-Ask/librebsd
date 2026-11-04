@@ -393,7 +393,7 @@ V45.3.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	
 V45.3.12.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族，题名“基础程序的分离扩散”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.3.12.1	基础程序分离句	https://www.openbsd.org/59.html	联网	A	2026-10-30	This resulted in design changes such as: addition of privilege separation to rdate(8) addition of privilege separation to sndiod(8) the introduction of the SOCK_DNS socket(2) flag that makes an SS_DNS tagged socket conceptually different from a plain socket.	none
 V45.3.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“从权限分离到应用程序最小权限”；本条为第 2 条下位论题（去空格 8 字）	none
-V45.3.12.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“通用范式的适用面”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.3.12.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“通用范式的适用实例”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.3.12.2	分离概念扩散条	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	The concept is now used in many OpenBSD programs, for example bgpd(8) , dhclient(8) , dhcpd(8) , dvmrpd(8) , eigrpd(8) , file(1) , httpd(8) , iked(8) , ldapd(8) , ldpd(8) , mountd(8) , npppd(8) , ntpd(8) , ospfd(8) , ospf6d(8) , pflogd(8) , radiusd(8) , relayd(8) , ripd(8) , script(1) , smtpd(8) , syslogd(8) , tcpdump(8) , tmux(1) , xconsole(1) , xdm(1) , Xserver(1) , ypldap(8) , pkg_add(1) , etc.	none
 V45.3.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 12 节“从权限分离到应用程序最小权限”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.3.12.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“承诺串格式的失败返回”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
@@ -543,7 +543,7 @@ V45.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V45.6.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“权限分离的署名归属”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.6.2.1	sshd 作者段	https://man.openbsd.org/sshd	联网	A	2026-10-30	Niels Provos and Markus Friedl contributed support for privilege separation.	none
 V45.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“OpenSSH 3.2（2002）中的 Privilege Separation”；本条为第 2 条下位论题（去空格 9 字）	none
-V45.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“进程继续执行的强制”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
+V45.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“分离与再执行的不可关闭”去空格 11 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.6.2.2	分离不可关闭句	https://www.openssh.com/releasenotes.html	联网	A	2026-10-30	As part of this work, support for disabling privilege separation (which previously required code changes to disable) and disabling re-execution of sshd(8) has been removed.	none
 V45.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“OpenSSH 3.2（2002）中的 Privilege Separation”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.6.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“跨进程状态的编码核对”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none

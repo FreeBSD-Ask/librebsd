@@ -210,8 +210,8 @@ V54.2.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V54.2.6.4	立条门槛	https://en.wikipedia.org/wiki/Wikipedia:No_original_research	联网	A	2026-10-30	If no reliable independent sources can be found on a topic, Wikipedia should not have an article about it.	none
 V54.2.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“维基、问答与百科记录者”；本节题为其下位论题	none
 V54.2.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V54.2.6.5	声望的含义	https://unix.stackexchange.com/help/whats-reputation	联网	A	2026-10-30	Reputation is a rough measurement of how much the community trusts you; it is earned by convincing your peers that you know what you’re talking about.	none
-V54.2.6.5	采纳与投票的权重	https://unix.stackexchange.com/help/whats-reputation	联网	A	2026-10-30	answer is marked “accepted”: +15 (+2 to acceptor)	none
+V54.2.6.5	声望的含义	https://unix.stackexchange.com/help/whats-reputation	联网	A	2026-11-04	Reputation is a rough measurement of how much the community trusts you; it is earned by convincing your peers that you know what you’re talking about.	noted
+V54.2.6.5	采纳与投票的权重	https://unix.stackexchange.com/help/whats-reputation	联网	A	2026-11-04	answer is marked “accepted”: +15 (+2 to acceptor)	noted
 V54.2.6.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“维基、问答与百科记录者”；本节题为其下位论题	none
 V54.2.6.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V54.2.6.6	维基的自定位	https://translate-dev.freebsd.org/translate/documentation/articlescommitters-guide_index/zh_CN?checksum=d8b3e5e5b286f7d1	联网	A	2026-10-30	A wiki account allows sharing projects and ideas.	none
@@ -528,3 +528,4 @@ V54.6.3.5	条目增补的前置条件	https://en.wikipedia.org/wiki/Wikipedia:No
 V54.6.3.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 3 节“全卷收束与互见索引”；本节题为其下位论题	none
 V54.6.3.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V54.6.3.6	卷末与横向比较卷的衔接	https://bnuhh.bnu.edu.cn/sxll/84938.html	联网	A	2026-10-30	比较史学是什么？是通过两种或者两种以上历史现象的比较，来加深、扩大、验证我们对历史认识的一种方法。	none
+V54.5.5.5	地区统计的汇总口径（调查数据页）	https://survey.stackoverflow.co/2026/work/data/country	联网	A	2026-11-04	Asked as: Where do you live? (`Country`, single select, required, v2026.1)	noted

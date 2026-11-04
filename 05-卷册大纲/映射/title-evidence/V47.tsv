@@ -172,7 +172,7 @@ V47.3.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与�
 V47.3.7.3	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Describing problems by saying "it crashes" or "I get strange interrupt issues on this one box that I built" is not helpful.	none
 V47.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“OpenBSD 的外部贡献路径不走平台化机制”；本节题为其下位论题	none
 V47.3.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
-V47.3.8.1	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	New features are accepted, especially with code that implements your suggested new feature.	none
+V47.3.8.1	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-11-04	If possible, use the sendbug(1) command to help generate your bug report. It will automatically include some useful information about your hardware that helps diagnose many issues. This tool requires that your system can properly send email. If you cannot use sendbug on a functional OpenBSD machine, please send your bug report to bugs@openbsd.org .	noted
 V47.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“OpenBSD 的外部贡献路径不走平台化机制”；本节题为其下位论题	none
 V47.3.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.8.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	With significant contributions from Claudio Jeker, Theo Buehler, and Job Snijders.	none

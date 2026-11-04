@@ -1408,7 +1408,7 @@ V68.14.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V68.14.6.3	统计自报的方法限制	https://www.outreachy.org/docs/applicant/	联网	A	2026-10-30	Statistics are based on responses to the 2019 longitudinal study of Outreachy alums, and they're based on self-identification.	none
 V68.14.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 14 章第 6 节“多元化目标的批评与辩护”；本节题为其下位论题	none
 V68.14.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V68.14.6.4	批评的三类论点归纳	https://www.outreachy.org/docs/community/	联网	A	2026-10-30	New communities must meet these rules to be eligible to participate in Outreachy.	none
+V68.14.6.4	批评的三类论点归纳	https://www.outreachy.org/docs/community/	联网	A	2026-11-05	Sponsorship information can be updated at any time until the intern selection deadline. 3.1 Finding sponsors FOSS communities often fund Outreachy interns directly from their own community funds, or by using funds from the foundation or non-profit who is their fiscal sponsor.	noted
 V68.14.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 14 章第 6 节“多元化目标的批评与辩护”；本节题为其下位论题	none
 V68.14.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V68.14.6.5	辩护的实证依据	https://www.outreachy.org/docs/applicant/	联网	A	2026-10-30	Statistics are based on responses to the 2019 longitudinal study of Outreachy alums, and they're based on self-identification.	none
@@ -1733,3 +1733,4 @@ V68.17.5.5	节内溯源注	05-卷册大纲/目录/data/outline.txt	目录	A	2026
 V68.3.1.3	年度成功率数值	https://developers.google.cn/open-source/gsoc/resources/stats?hl=zh-cn	联网	A	2026-11-02	2005 年 80%、2006 年 82%、2007 年 81%、2016 年 85.6%、2020 年 92.32%、2021 年 93.27%	none
 V68.5.5.2	仓库服务终止与许可证	https://lists.freebsd.org/archives/freebsd-hackers/2022-April/000992.html	联网	A	2026-11-02	perforce dropped FreeBSD support years ago and the old binaries have effectively expired, so the project no longer has a license	none
 V68.6.1.1	移植资助主体	https://www.freebsd.org/status/report-2007-10-2007-12.html	联网	A	2026-11-02	Thanks to support from Cisco Systems, Inc, the port of the DTrace dynamic tracing framework from OpenSolaris to FreeBSD is active again.	none
+V68.12.1.4	参与方向（GSoC 年度档案页）	https://www.freebsd.org/projects/summerofcode/	联网	A	2026-11-05	2020 , 2019 , 2018 , 2017 , 2016 , 2015 , 2014 , 2013 , 2012 , 2011 , 2010 , 2009 , 2008 , 2007 , 2006 , 2005 .	noted

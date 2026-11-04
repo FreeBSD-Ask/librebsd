@@ -472,12 +472,8 @@ V61.3.2.3	标签偏序	旧大纲-20261023/第07卷-freebsd的工程体系重构/
 V61.3.2.3	敏感级与隔间	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	In MLS, all system subjects and objects are assigned confidentiality labels, made up of a sensitivity level and zero or more compartments.	none
 V61.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
 V61.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.2.4	支配判定	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
-V61.3.2.4	层级与非层级组件	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	联网	A	2026-10-30	In Biba, all system subjects and objects are assigned integrity labels, made up of hierarchal grades, and non-hierarchal components.	none
-V61.3.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
-V61.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.2.5	与完整性模型的镜像	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
-V61.3.2.5	与 Biba 并用保护 TCB	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	In traditional trusted operating systems, the MLS confidentiality model is used in concert with the Biba integrity model in order to protect the Trusted Code Base (TCB).	none
+V61.3.2.4	与完整性模型的镜像	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
+V61.3.2.4	与 Biba 并用保护 TCB	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	In traditional trusted operating systems, the MLS confidentiality model is used in concert with the Biba integrity model in order to protect the Trusted Code Base (TCB).	none
 V61.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Biba 完整性模型”；本节题为其下位论题	none
 V61.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.3.1	层级等级与非层级组件	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	联网	A	2026-10-30	In Biba, all system subjects and objects are assigned integrity labels, made up of hierarchal grades, and non-hierarchal components.	none

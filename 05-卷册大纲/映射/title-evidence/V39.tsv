@@ -197,7 +197,7 @@ V39.2.2.5	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduc
 V39.2.3.1	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.0-章级综合/171.0.1-要点.md	史料	A	2026-10-30	171.0.1 要点 - FreeBSD 延续了 UNIX 悠久的 ASCII 艺术传统：(1) 启动屏幕的 daemon 图标——系统启动时在控制台显示的 Beastie ASCII art 由 Poul-Hennin	none
 V39.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Manual Pages、Handbook 与知识传承方式”；本节题为其下位论题	none
 V39.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.2.3.1	页面主题支撑	https://cgit.freebsd.org/src/plain/share/man/man9/style.9	联网	A	2026-10-30	.\" XXX the above conflicts with ANSI style where the names are the	none
+V39.2.3.1	页面主题支撑	https://cgit.freebsd.org/src/plain/share/man/man9/style.9	联网	A	2026-10-30	".\"" XXX the above conflicts with ANSI style where the names are the"	none
 V39.2.3.2	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.0-章级综合/171.0.1-要点.md	史料	A	2026-10-30	171.0.1 要点 - FreeBSD 延续了 UNIX 悠久的 ASCII 艺术传统：(1) 启动屏幕的 daemon 图标——系统启动时在控制台显示的 Beastie ASCII art 由 Poul-Hennin	none
 V39.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“Manual Pages、Handbook 与知识传承方式”；本节题为其下位论题	none
 V39.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -469,17 +469,17 @@ V39.4.2.3	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联�
 V39.4.2.4	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.2-Beastie-BSD-Daemon-的视觉史与文化符号学/171.2.3-要点三大开源吉祥物的文化对比经多源验证1BSDDaemonBeastie1976.md	史料	A	2026-10-30	三大开源吉祥物的文化对比经多源验证：(1) BSD Daemon（Beastie, 1976/1988）——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 	none
 V39.4.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“FreeBSD 标识与项目身份”；本节题为其下位论题	none
 V39.4.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.4.2.4	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	"Daemon" is actually a much older form of "demon"; daemons have no particular bias towards good or evil, but rather serve to help define a person’s character or personality.	none
+V39.4.2.4	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	"Daemon is actually a much older form of ""demon""; daemons have no particular bias towards good or evil, but rather serve to help define a person’s character or personality."	none
 V39.4.2.5	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.2-Beastie-BSD-Daemon-的视觉史与文化符号学/171.2.3-要点三大开源吉祥物的文化对比经多源验证1BSDDaemonBeastie1976.md	史料	A	2026-10-30	三大开源吉祥物的文化对比经多源验证：(1) BSD Daemon（Beastie, 1976/1988）——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 	none
 V39.4.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“FreeBSD 标识与项目身份”；本节题为其下位论题	none
 V39.4.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.4.2.5	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	The ancient Greeks' concept of a "personal daemon" was similar to the modern concept of a "guardian angel" - "eudaemonia" is the state of being helped or protected by a kindly spirit.	none
+V39.4.2.5	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	"The ancient Greeks' concept of a ""personal daemon"" was similar to the modern concept of a ""guardian angel"" - ""eudaemonia"" is the state of being helped or protected by a kindly spirit."	none
 V39.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“RELEASE、STABLE、CURRENT：版本语言与开发文化”；本节题为其下位论题	none
 V39.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V39.4.3.1	页面主题支撑	https://docs.freebsd.org/en/books/handbook/cutting-edge/	联网	A	2026-10-30	For instance, FreeBSD 14.2-RELEASE, 13.5-RELEASE, 14.3-RELEASE, 15.0-RELEASE, 14.4-RELEASE, and 15.1-RELEASE were released in that order.	none
 V39.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“RELEASE、STABLE、CURRENT：版本语言与开发文化”；本节题为其下位论题	none
 V39.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.4.3.2	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Instead, when this document refers to "merge commits", it means a commit originally made to main that is replicated or "landed" to a stable branch, or a commit from a stable branch that is replicated to a releng branch with some variation of git cherry-pick .	none
+V39.4.3.2	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	"Instead, when this document refers to ""merge commits"", it means a commit originally made to main that is replicated or ""landed"" to a stable branch, or a commit from a stable branch that is replicated to a releng branch with some variation of git cherry-pick ."	none
 V39.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“RELEASE、STABLE、CURRENT：版本语言与开发文化”；本节题为其下位论题	none
 V39.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V39.4.3.3	页面主题支撑	https://docs.freebsd.org/en/books/handbook/cutting-edge/	联网	A	2026-10-30	This utility also supports operating system upgrades to minor point releases as well as upgrades to another release branch.	none
@@ -512,7 +512,7 @@ V39.4.4.5	页面主题支撑	https://docs.freebsd.org/44doc/	联网	A	2026-10-30
 V39.4.5.1	旧树关联料（块级摘要）	旧大纲-20261023/第17卷-政治制度与社区治理/第354章-bsd俚语考据与通用习俗/354.1-BSD-UNIX-俚语与行话考据-八类社区非正式叙事层的词源-流传与文化意义/354.1.6-要点综合项目史观总纲第78131419212325条审视BSDUNIX俚语与行话.md	史料	A	2026-10-30	综合项目史观总纲第 7、8、13、14、19、21、23、25 条审视，BSD/UNIX 俚语与行话的八类词条（BSD 专属、UNIX 通用、黑客文化通用、BSD/Linux 论战、版本号、工具与命令、文件系统、文化梗）	none
 V39.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“FreeBSD 社区内部术语与技术语言”；本节题为其下位论题	none
 V39.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.4.5.1	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Staying true to Unix philosophy , preferring composability instead of monolithic "all in one" daemons with hardcoded behavior.	none
+V39.4.5.1	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	"Staying true to Unix philosophy , preferring composability instead of monolithic ""all in one"" daemons with hardcoded behavior."	none
 V39.4.5.2	旧树关联料（块级摘要）	旧大纲-20261023/第17卷-政治制度与社区治理/第354章-bsd俚语考据与通用习俗/354.1-BSD-UNIX-俚语与行话考据-八类社区非正式叙事层的词源-流传与文化意义/354.1.6-要点综合项目史观总纲第78131419212325条审视BSDUNIX俚语与行话.md	史料	A	2026-10-30	综合项目史观总纲第 7、8、13、14、19、21、23、25 条审视，BSD/UNIX 俚语与行话的八类词条（BSD 专属、UNIX 通用、黑客文化通用、BSD/Linux 论战、版本号、工具与命令、文件系统、文化梗）	none
 V39.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“FreeBSD 社区内部术语与技术语言”；本节题为其下位论题	none
 V39.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -580,7 +580,7 @@ V39.5.2.2	页面主题支撑	https://docs.freebsd.org/en/articles/committers-gui
 V39.5.2.3	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.4-FreeBSD-习俗特殊文化考据/173.4.1-commitbit与治理习俗提交权限分层coreteam选举与foundatio.md	史料	A	2026-10-30	FreeBSD 自 1993 年项目成立即确立三类 commit bit 分立制度（src、doc、ports 三树分立，对应 srcmgr@、doceng@、portmgr@ 责任团队），由《Committer's G	none
 V39.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“Committer 制度的形成”；本节题为其下位论题	none
 V39.5.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.5.2.3	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	In all cases, a committer whose privileges are suspended or revoked is entitled to a "hearing" by core, the total duration of the suspension being determined at that time.	none
+V39.5.2.3	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	"In all cases, a committer whose privileges are suspended or revoked is entitled to a ""hearing"" by core, the total duration of the suspension being determined at that time."	none
 V39.5.2.4	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.4-FreeBSD-习俗特殊文化考据/173.4.1-commitbit与治理习俗提交权限分层coreteam选举与foundatio.md	史料	A	2026-10-30	FreeBSD 自 1993 年项目成立即确立三类 commit bit 分立制度（src、doc、ports 三树分立，对应 srcmgr@、doceng@、portmgr@ 责任团队），由《Committer's G	none
 V39.5.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“Committer 制度的形成”；本节题为其下位论题	none
 V39.5.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -660,7 +660,7 @@ V39.5.6.2	页面主题支撑	https://docs.freebsd.org/en/articles/contributors/	
 V39.5.6.3	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业/173.1.1-企业工程力量的有组织贡献.md	史料	A	2026-10-30	本时期 FreeBSD 核心仓库的贡献高度依赖受雇于企业的核心开发者——iXsystems、Netflix、Intel、Isilon/EMC 等公司将工程资源投入 FreeBSD 的网络、存储与虚拟化子系统，以换取基础设	none
 V39.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“企业贡献者、个人开发者与项目关系”；本节题为其下位论题	none
 V39.5.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.5.6.3	页面主题支撑	https://www.freebsd.org/administration/	联网	A	2026-10-30	The FreeBSD Core Team constitutes the project’s "Board of Directors", responsible for deciding the project’s overall goals and direction as well as managing specific areas of the FreeBSD project landscape.	none
+V39.5.6.3	页面主题支撑	https://www.freebsd.org/administration/	联网	A	2026-10-30	"The FreeBSD Core Team constitutes the project’s ""Board of Directors"", responsible for deciding the project’s overall goals and direction as well as managing specific areas of the FreeBSD project landscape."	none
 V39.5.6.4	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业/173.1.1-企业工程力量的有组织贡献.md	史料	A	2026-10-30	本时期 FreeBSD 核心仓库的贡献高度依赖受雇于企业的核心开发者——iXsystems、Netflix、Intel、Isilon/EMC 等公司将工程资源投入 FreeBSD 的网络、存储与虚拟化子系统，以换取基础设	none
 V39.5.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“企业贡献者、个人开发者与项目关系”；本节题为其下位论题	none
 V39.5.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -868,7 +868,7 @@ V39.7.1.4	页面主题支撑	https://www.freebsd.org/copyright/license/	联网	A
 V39.7.1.5	旧树关联料（块级摘要）	旧大纲-20261023/第15卷-许可证哲学与法律分析/第311章-bsd许可证文本与法律分析/311.0-章级综合/311.0.1-要点.md	史料	A	2026-10-30	311.0.1 要点 - BSD 4-Clause 原始版含广告条款，1999 年 7 月 22 日 William Hoskins 在 Berkeley 官方公告中宣布弃用广告条款，演进为 3-Clause “New 	none
 V39.7.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“BSD 许可证历史背景”；本节题为其下位论题	none
 V39.7.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.7.1.5	页面主题支撑	https://www.freebsd.org/copyright/license/	联网	A	2026-10-30	NOTE: The copyright of UC Berkeley’s Berkeley Software Distribution ("BSD") source has been updated.	none
+V39.7.1.5	页面主题支撑	https://www.freebsd.org/copyright/license/	联网	A	2026-10-30	"NOTE: The copyright of UC Berkeley’s Berkeley Software Distribution (""BSD"") source has been updated."	none
 V39.7.2.1	旧树关联料（块级摘要）	旧大纲-20261023/第15卷-许可证哲学与法律分析/第311章-bsd许可证文本与法律分析/311.0-章级综合/311.0.1-要点.md	史料	A	2026-10-30	311.0.1 要点 - BSD 4-Clause 原始版含广告条款，1999 年 7 月 22 日 William Hoskins 在 Berkeley 官方公告中宣布弃用广告条款，演进为 3-Clause “New 	none
 V39.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“4-Clause BSD 到 2-Clause BSD 的文化变化”；本节题为其下位论题	none
 V39.7.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1007,7 +1007,7 @@ V39.7.8.5	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduc
 V39.7.9.1	旧树关联料（块级摘要）	旧大纲-20261023/第15卷-许可证哲学与法律分析/第314章-bsdvsgpl哲学辩论与同期os比较/314.0-章级综合/314.0.1-要点.md	史料	A	2026-10-30	314.0.1 要点 - 许可哲学光谱：“义务自由（GPL）←→ 信任自由（BSD/宽松）←→ 闭源保护（Windows）”；BSD vs GPL 辩论的本质是“自由如何保障”的分歧，BSD 以信任、GPL 以约束，二者	none
 V39.7.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“无限制自由与 copyleft：自由概念的分歧与并置”；本节题为其下位论题	none
 V39.7.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.7.9.1	页面主题支撑	https://www.oreilly.com/openbook/opensources/book/appa.html	联网	B	2026-10-30	Getting back to what "free" means, what about free source code? Coherent	none
+V39.7.9.1	页面主题支撑	https://www.oreilly.com/openbook/opensources/book/appa.html	联网	B	2026-10-30	"Getting back to what ""free"" means, what about free source code? Coherent"	none
 V39.7.9.2	旧树关联料（块级摘要）	旧大纲-20261023/第15卷-许可证哲学与法律分析/第314章-bsdvsgpl哲学辩论与同期os比较/314.0-章级综合/314.0.1-要点.md	史料	A	2026-10-30	314.0.1 要点 - 许可哲学光谱：“义务自由（GPL）←→ 信任自由（BSD/宽松）←→ 闭源保护（Windows）”；BSD vs GPL 辩论的本质是“自由如何保障”的分歧，BSD 以信任、GPL 以约束，二者	none
 V39.7.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 9 节“无限制自由与 copyleft：自由概念的分歧与并置”；本节题为其下位论题	none
 V39.7.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1039,7 +1039,7 @@ V39.8.1.3	页面主题支撑	https://www.freebsd.org/releases/4.4R/announce/	联
 V39.8.1.4	旧树关联料（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第102章-freebsd4x末期的dragonfly-fork与史观审视/102.0-章级综合/102.0.1-要点.md	史料	A	2026-10-30	102.0.1 要点 - Linux 2.4(2001.1) 在 SMP、驱动支持、企业特性上迅速成熟，蚕食 FreeBSD 4.x 在 ISP 与企业市场的份额；Red Hat Enterprise Linux(200	none
 V39.8.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD 4.x 时代的成功叙事”；本节题为其下位论题	none
 V39.8.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.8.1.4	页面主题支撑	https://www.freebsd.org/releases/4.4R/announce/	联网	A	2026-10-30	"release engineering team" rather than "a release engineer" and I	none
+V39.8.1.4	页面主题支撑	https://www.freebsd.org/releases/4.4R/announce/	联网	A	2026-10-30	"release engineering team rather than ""a release engineer"" and I"	none
 V39.8.1.5	旧树关联料（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第102章-freebsd4x末期的dragonfly-fork与史观审视/102.0-章级综合/102.0.1-要点.md	史料	A	2026-10-30	102.0.1 要点 - Linux 2.4(2001.1) 在 SMP、驱动支持、企业特性上迅速成熟，蚕食 FreeBSD 4.x 在 ISP 与企业市场的份额；Red Hat Enterprise Linux(200	none
 V39.8.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 1 节“FreeBSD 4.x 时代的成功叙事”；本节题为其下位论题	none
 V39.8.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1312,7 +1312,7 @@ V39.9.7.1	页面主题支撑	https://docs.freebsd.org/en/articles/contributors/	
 V39.9.7.2	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业/173.1.4-要点本时期多元群体贡献的史料存在两块局限1提交元数据以邮箱域分类丢失性别族裔宗教.md	史料	A	2026-10-30	本时期多元群体贡献的史料存在两块局限——（1）提交元数据以邮箱域分类，丢失性别/族裔/宗教等不可考维度；（2）contributors 表仅覆盖主仓库 freebsd-src，ports/doc/www 等子项目贡献者未	none
 V39.9.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“FreeBSD 文化解释的边界”；本节题为其下位论题	none
 V39.9.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.9.7.2	页面主题支撑	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	As Bruce gave more code reviews than anybody else in the history of the FreeBSD project, the commit logs hide the true scale of his impact until you pay attention to "Submitted by", "Reviewed by" and "Pointed out by".	none
+V39.9.7.2	页面主题支撑	https://docs.freebsd.org/en/articles/contributors/	联网	A	2026-10-30	"As Bruce gave more code reviews than anybody else in the history of the FreeBSD project, the commit logs hide the true scale of his impact until you pay attention to ""Submitted by"", ""Reviewed by"" and ""Pointed out by""."	none
 V39.9.7.3	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业/173.1.4-要点本时期多元群体贡献的史料存在两块局限1提交元数据以邮箱域分类丢失性别族裔宗教.md	史料	A	2026-10-30	本时期多元群体贡献的史料存在两块局限——（1）提交元数据以邮箱域分类，丢失性别/族裔/宗教等不可考维度；（2）contributors 表仅覆盖主仓库 freebsd-src，ports/doc/www 等子项目贡献者未	none
 V39.9.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 7 节“FreeBSD 文化解释的边界”；本节题为其下位论题	none
 V39.9.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1336,7 +1336,7 @@ V39.9.8.2	页面主题支撑	https://www.oreilly.com/openbook/opensources/book/k
 V39.9.8.3	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.0-章级综合/173.0.1-要点.md	史料	A	2026-10-30	173.0.1 要点 - 总纲第 13 条明示 “法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”。项目史观总纲第 11 章第 1 节 “法律是形式主义的产物” 进一步阐释 “任何法律	none
 V39.9.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“本卷总评”；本节题为其下位论题	none
 V39.9.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.9.8.3	页面主题支撑	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	B	2026-10-30	To assist in defining the new system, Duane Adams, Berkeley's contract monitor at DARPA, formed a group known as the "steering committee" to help guide the design work and ensure that the research community's needs were addressed.	none
+V39.9.8.3	页面主题支撑	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	B	2026-10-30	"To assist in defining the new system, Duane Adams, Berkeley's contract monitor at DARPA, formed a group known as the ""steering committee"" to help guide the design work and ensure that the research community's needs were addressed."	none
 V39.9.8.4	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第173章-freebsd的社区叙事与未来想象/173.0-章级综合/173.0.1-要点.md	史料	A	2026-10-30	173.0.1 要点 - 总纲第 13 条明示 “法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”。项目史观总纲第 11 章第 1 节 “法律是形式主义的产物” 进一步阐释 “任何法律	none
 V39.9.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 8 节“本卷总评”；本节题为其下位论题	none
 V39.9.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1400,11 +1400,7 @@ V39.10.3.3	页面主题支撑	https://www.freebsd.org/news/status/report-2020-04
 V39.10.3.4	旧树关联料（块级摘要）	旧大纲-20261023/第14卷-商业生态与企业案例/第300章-人类瘟疫流行病对技术社区的影响/300.6-流行病对技术治理的启示-社区韧性与分布式协作/300.6.1-分布式协作的韧性验证.md	史料	A	2026-10-30	SARS、H1N1、COVID-19 三次疫情验证了 BSD 分布式协作模式的韧性，无单一地理中心使项目对区域性中断具有容错能力，但社区凝聚力对线下会议的依赖仍是弱点	none
 V39.10.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“流行病对技术治理的启示：社区韧性与分布式协作”；本节题为其下位论题	none
 V39.10.3.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.10.3.4	页面主题支撑	https://www.freebsd.org/news/status/report-2020-04-2020-06/	联网	A	2026-10-30	Deb requested guidance on how the Foundation can support the community.	none
-V39.10.3.5	旧树关联料（块级摘要）	旧大纲-20261023/第14卷-商业生态与企业案例/第300章-人类瘟疫流行病对技术社区的影响/300.6-流行病对技术治理的启示-社区韧性与分布式协作/300.6.1-分布式协作的韧性验证.md	史料	A	2026-10-30	SARS、H1N1、COVID-19 三次疫情验证了 BSD 分布式协作模式的韧性，无单一地理中心使项目对区域性中断具有容错能力，但社区凝聚力对线下会议的依赖仍是弱点	none
-V39.10.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 3 节“流行病对技术治理的启示：社区韧性与分布式协作”；本节题为其下位论题	none
-V39.10.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.10.3.5	页面主题支撑	https://www.freebsd.org/news/status/report-2020-04-2020-06/	联网	A	2026-10-30	On May 13th the FreeBSD Foundation hosted a session where the community	none
+V39.10.3.4	页面主题支撑	https://www.freebsd.org/news/status/report-2020-04-2020-06/	联网	A	2026-10-30	On May 13th the FreeBSD Foundation hosted a session where the community	none
 V39.10.4.1	旧树关联料（块级摘要）	旧大纲-20261023/第14卷-商业生态与企业案例/第300章-人类瘟疫流行病对技术社区的影响/300.8-对瘟疫效应叙事的批评-Linux-与商业-Unix-竞争者/300.8.3-瘟疫决定论叙事的史观辨析.md	史料	A	2026-10-30	瘟疫决定论叙事将 BSD 社区演变主要归因于流行病冲击，但社区文化与许可证设计同样重要，过度强调瘟疫因素可能忽略其他维度	none
 V39.10.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“疫情效应叙事的外部批评与竞争系统对照”；本节题为其下位论题	none
 V39.10.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1564,7 +1560,7 @@ V39.12.2.4	页面主题支撑	https://cgit.freebsd.org/src/plain/share/man/man9/
 V39.12.2.5	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.0-章级综合/171.0.1-要点.md	史料	A	2026-10-30	171.0.1 要点 - FreeBSD 延续了 UNIX 悠久的 ASCII 艺术传统：(1) 启动屏幕的 daemon 图标——系统启动时在控制台显示的 Beastie ASCII art 由 Poul-Hennin	none
 V39.12.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 2 节“代码美学：style(9) 与简洁、可读、可维护”；本节题为其下位论题	none
 V39.12.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.12.2.5	页面主题支撑	https://www.freebsd.org/news/status/report-2024-07-2024-09/	联网	A	2026-10-30	All the modifications made as part of this sub-project are currently under review, starting with Phabricator’s review D45387 (click on the "Stack" tab to see the full series of reviews).	none
+V39.12.2.5	页面主题支撑	https://www.freebsd.org/news/status/report-2024-07-2024-09/	联网	A	2026-10-30	"All the modifications made as part of this sub-project are currently under review, starting with Phabricator’s review D45387 (click on the ""Stack"" tab to see the full series of reviews)."	none
 V39.12.3.1	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.0-章级综合/171.0.1-要点.md	史料	A	2026-10-30	171.0.1 要点 - FreeBSD 延续了 UNIX 悠久的 ASCII 艺术传统：(1) 启动屏幕的 daemon 图标——系统启动时在控制台显示的 Beastie ASCII art 由 Poul-Hennin	none
 V39.12.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 3 节“文档美学：Handbook、FAQ 与官方文本风格”；本节题为其下位论题	none
 V39.12.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1592,7 +1588,7 @@ V39.12.4.1	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联�
 V39.12.4.2	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.2-Beastie-BSD-Daemon-的视觉史与文化符号学/171.2.3-要点三大开源吉祥物的文化对比经多源验证1BSDDaemonBeastie1976.md	史料	A	2026-10-30	三大开源吉祥物的文化对比经多源验证：(1) BSD Daemon（Beastie, 1976/1988）——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 	none
 V39.12.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“视觉与符号：Beastie 与 daemon”；本节题为其下位论题	none
 V39.12.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.12.4.2	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	"Many people equate the word "daemon" with the word "demon," implying some kind of Satanic connection between UNIX® and the underworld.	none
+V39.12.4.2	页面主题支撑	https://www.freebsd.org/copyright/daemon.html	联网	A	2026-10-30	"Many people equate the word daemon"" with the word ""demon,"" implying some kind of Satanic connection between UNIX® and the underworld."	none
 V39.12.4.3	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.2-Beastie-BSD-Daemon-的视觉史与文化符号学/171.2.3-要点三大开源吉祥物的文化对比经多源验证1BSDDaemonBeastie1976.md	史料	A	2026-10-30	三大开源吉祥物的文化对比经多源验证：(1) BSD Daemon（Beastie, 1976/1988）——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 	none
 V39.12.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“视觉与符号：Beastie 与 daemon”；本节题为其下位论题	none
 V39.12.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
@@ -1604,7 +1600,7 @@ V39.12.4.4	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introdu
 V39.12.4.5	旧树关联料（块级摘要）	旧大纲-20261023/第08卷-freebsd的范式转换/第171章-freebsd的工程美学与设计哲学/171.2-Beastie-BSD-Daemon-的视觉史与文化符号学/171.2.3-要点三大开源吉祥物的文化对比经多源验证1BSDDaemonBeastie1976.md	史料	A	2026-10-30	三大开源吉祥物的文化对比经多源验证：(1) BSD Daemon（Beastie, 1976/1988）——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 	none
 V39.12.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 4 节“视觉与符号：Beastie 与 daemon”；本节题为其下位论题	none
 V39.12.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.12.4.5	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	FreeBSD can even boot "diskless" from a central server, making individual workstations even cheaper and easier to administer.	none
+V39.12.4.5	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	"FreeBSD can even boot ""diskless"" from a central server, making individual workstations even cheaper and easier to administer."	none
 V39.12.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“视觉符号中的性别：Beastie 的男性气质与社区回应”；本节题为其下位论题	none
 V39.12.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V39.12.5.1	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	This project has a public image to uphold and that image is very important to all of us, especially if we are to continue to attract new members.	none
@@ -1616,7 +1612,7 @@ V39.12.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与
 V39.12.5.3	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	commit log message section instead of emulating the brief style used here.	none
 V39.12.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“视觉符号中的性别：Beastie 的男性气质与社区回应”；本节题为其下位论题	none
 V39.12.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.12.5.4	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	This list was created to be a forum for the committers "community" issues.	none
+V39.12.5.4	页面主题支撑	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	"This list was created to be a forum for the committers ""community"" issues."	none
 V39.12.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 5 节“视觉符号中的性别：Beastie 的男性气质与社区回应”；本节题为其下位论题	none
 V39.12.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V39.12.5.5	页面主题支撑	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	Although only three files having to do with System V shared memory and semaphores were removed, many other changes and bug fixes had been made to the BSD distribution, so it was a huge task to merge all the FreeBSD developments into 4.4BSD-Lite.	none
@@ -1643,7 +1639,7 @@ V39.12.6.5	页面主题支撑	https://docs.freebsd.org/en/articles/committers-gu
 V39.12.7.1	旧树关联料（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.1-要点.md	史料	A	2026-10-30	107.0.1 要点 - FreeBSD 5.0 开发时间线：2000.3 启动 5-CURRENT 分支，2002.4 首个 5.0-DP1 开发者预览，2002.10 5.0-DP2，2003.1.16 5.0-RE	none
 V39.12.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 7 节“批评：5.x 转型、ports 框架与美的失效处”；本节题为其下位论题	none
 V39.12.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
-V39.12.7.1	页面主题支撑	https://www.freebsd.org/releases/13.0R/announce/	联网	A	2026-10-30	This contains the base FreeBSD operating system. It also supports booting into a "livefs" based rescue mode. There are no pre-built packages.	none
+V39.12.7.1	页面主题支撑	https://www.freebsd.org/releases/13.0R/announce/	联网	A	2026-10-30	"This contains the base FreeBSD operating system. It also supports booting into a ""livefs"" based rescue mode. There are no pre-built packages."	none
 V39.12.7.2	旧树关联料（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.1-要点.md	史料	A	2026-10-30	107.0.1 要点 - FreeBSD 5.0 开发时间线：2000.3 启动 5-CURRENT 分支，2002.4 首个 5.0-DP1 开发者预览，2002.10 5.0-DP2，2003.1.16 5.0-RE	none
 V39.12.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 7 节“批评：5.x 转型、ports 框架与美的失效处”；本节题为其下位论题	none
 V39.12.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none

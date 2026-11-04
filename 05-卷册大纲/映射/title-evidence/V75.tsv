@@ -11,7 +11,7 @@ V75.1.1.3	源代码树作为历史档案的档案属性	https://www.tuhs.org/Arc
 V75.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“源代码树作为历史档案”；本节题为其下位论题	none
 V75.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.1.1.4	源代码树作为历史档案的档案属性	旧大纲-20261023/第05卷-freebsd的工程化奠基/第118章-卷末书目述评/118.1-卷末书目述评/118.1.7-BSDNow第278期播客访谈BSDCan2018现场录制麦库西克以25year.md	史料	A	2026-10-31	BSDCan 官方会议归档与 YouTube 频道，收录 2004 年首届 BSDCan 至今的历年演讲录像。	noted
-V75.1.1.4	首届在档载体的页面自述	https://www.bsdcan.org/2004/	联网	A	2026-11-03	BSDCan 2004 Conference Home Call for papers Papers Committee Presentations Speakers Registration Tutorials Schedule Sponsors	none
+V75.1.1.4	首届在档载体的页面自述	https://www.bsdcan.org/2004/	联网	A	2026-11-04	BSDCan 2004 Conference Home Call for papers Papers Committee Presentations Speakers Registration Tutorials Schedule Sponsors	noted
 V75.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“源代码树作为历史档案”；本节题为其下位论题	none
 V75.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.1.1.5	源代码树作为历史档案的档案属性	旧大纲-20261023/第05卷-freebsd的工程化奠基/第118章-卷末书目述评/118.1-卷末书目述评/118.1.7-BSDNow第278期播客访谈BSDCan2018现场录制麦库西克以25year.md	史料	A	2026-10-31	BSD Now 播客全部期数公开存档，是 FreeBSD 核心成员在 BSDCan 等会议现场录制的口述访谈主要载体。	none
@@ -239,7 +239,7 @@ V75.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V75.3.1.1	群体记录的方法：署名、档案与史料分层	旧大纲-20261023/第18卷-全球社区地区bsd史/第382章-unix创世一代人物传记/382.1-BSD-谱系核心-Joy-McKusick-Karels-Bostic/382.1.2-本节遵循G3群体传记学与学术谱系缺口约束G3为本书人物志体例规则史观映射总纲第8.md	史料	A	2026-10-31	Joy、McKusick、Karels、Bostic 四人须呈现不可通约性	none
 V75.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“群体记录的方法：署名、档案与史料分层”；本节题为其下位论题	none
 V75.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.3.1.2	群体记录的方法：署名、档案与史料分层	https://dspinellis.github.io/oral-history-of-unix/frs122/unixhist/finalhis.htm	联网	B	2026-10-31	Write programs that do one thing and do it well. Write programs to work together.	noted
+V75.3.1.2	群体记录的方法：署名、档案与史料分层	https://dspinellis.github.io/oral-history-of-unix/	联网	B	2026-11-05	They comprise work he did, until his death in summer 2008, to create a history of Unix based on interviews with the system's developers.	noted
 V75.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“群体记录的方法：署名、档案与史料分层”；本节题为其下位论题	none
 V75.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.3.1.3	群体记录的方法：署名、档案与史料分层	旧大纲-20261023/第18卷-全球社区地区bsd史/第382章-unix创世一代人物传记/382.1-BSD-谱系核心-Joy-McKusick-Karels-Bostic/382.1.2-本节遵循G3群体传记学与学术谱系缺口约束G3为本书人物志体例规则史观映射总纲第8.md	史料	A	2026-10-31	经验优先，以一手史料与具体经验为据	none
@@ -313,7 +313,7 @@ V75.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V75.3.7.2	早期镜像、新闻组原帖与初始源码的持久标识	https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/	联网	A	2026-10-31	linux-0.01.tar.sign 08-Aug-2013 19:15 665	none
 V75.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“史料与方法：早期镜像、comp.os.minix 原帖与 0.01 源码的持久标识”；本节题为其下位论题	none
 V75.3.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.3.7.3	早期镜像、新闻组原帖与初始源码的持久标识	https://lwn.net/Articles/725297/	联网	B	2026-10-31	He recalls spending five or six years repeatedly asking for specific files, until eventually someone would respond	noted
+V75.3.7.3	早期镜像、新闻组原帖与初始源码的持久标识	https://landley.net/history/mirror/linux/linux-history.html	联网	B	2026-11-05	But I did start to wonder, so I started ftp'ing around for archives of the comp.os.minix group (where I announced it), and this is what I came up with (with some editing).	none
 V75.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“史料与方法：授权合同与 OEM 文书、同时代行业报刊”；本节题为其下位论题	none
 V75.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.3.8.1	授权合同与 OEM 文书、同时代行业报刊	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-31	no advertising, no support, no bug fixes, payment in advance	none
@@ -532,7 +532,7 @@ V75.4.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V75.4.11.2	符号物料的史料与方法	https://www.openbsd.org/	联网	A	2026-10-31	The OpenBSD project produces a FREE, multi-platform 4.4BSD-based UNIX-like operating system.	none
 V75.4.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 11 节“史料与方法：符号物料”；本节题为其下位论题	none
 V75.4.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.4.11.3	符号物料的史料与方法	https://www.bsdnow.tv/episodes	联网	B	2026-10-31	687 episodes of BSD Now since the first episode, which aired on September 4th, 2013.	noted
+V75.4.11.3	符号物料的史料与方法	https://www.bsdnow.tv/episodes	联网	B	2026-11-05	LTS for FreeBSD, The August/September FreeBSD Newsletter, All about the Whistle Jet, a bunch of Beastie bits and more.	noted
 V75.4.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“史料类型与定位：发布公告、提交记录、邮件列表与口述”；本节题为其下位论题	none
 V75.4.12.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.4.12.1	史料类型与定位：公告、提交、列表与口述	https://www.freebsd.org/releases/	联网	A	2026-10-31	FreeBSD releases are classified into Production Releases and Legacy Releases. For most users, production releases will be most suitable.	none
@@ -867,7 +867,7 @@ V75.6.6.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V75.6.6.3	会议程序、论文与视听资料	https://www.bsdnow.tv/episodes	联网	B	2026-10-31	687 episodes of BSD Now since the first episode, which aired on September 4th, 2013.	none
 V75.6.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 6 节“会议程序、论文与视听资料”；本节题为其下位论题	none
 V75.6.6.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.6.6.4	会议程序、论文与视听资料	https://lists.freebsd.org/	联网	A	2026-10-31	Project Announcements [moderated]	noted
+V75.6.6.4	会议程序、论文与视听资料	https://www.bsdcan.org/2018/schedule/	联网	A	2026-11-05	BSDCan2018: BSDCan 2018 Index Goat BOF - 5 June - 2018-06-05 Tutorials #1 - 6 June - 2018-06-06	none
 V75.6.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 7 节“新闻媒体与网页快照”；本节题为其下位论题	none
 V75.6.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.6.7.1	新闻媒体与网页快照	旧大纲-20261023/第18卷-全球社区地区bsd史/第363章-美国bsd的发源地/363.19-公众的认识/363.19.4-史料辨析美国媒体报道与声明验证.md	史料	A	2026-10-31	美国媒体报道与声明验证须遵循 0 信任原则，交叉验证媒体报道与官方声明	none
@@ -891,7 +891,7 @@ V75.6.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V75.6.8.3	博物馆、硬件与实物档案	https://www.freebsd.org/press/	联网	A	2026-10-31	Patrick McEvoy reports back from his visit to BSDCan 2026	none
 V75.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“断链、缺页与数字档案缺失”；本节题为其下位论题	none
 V75.6.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.6.9.1	断链、缺页与数字档案缺失	https://lwn.net/Articles/725297/	联网	B	2026-10-31	AT&T and other corporations allowed individuals to own copies of Unix, but not to share them.	noted
+V75.6.9.1	断链、缺页与数字档案缺失	https://www.ideals.illinois.edu/items/91625/bitstreams/238365/data.pdf	联网	B	2026-11-05	In this study we offer a preliminary typology of types of link ephemerality that can occur and affect content of social media data.	none
 V75.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“断链、缺页与数字档案缺失”；本节题为其下位论题	none
 V75.6.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.6.9.2	断链、缺页与数字档案缺失	https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/	联网	A	2026-10-31	linux-0.01.tar.sign 08-Aug-2013 19:15 665	none
@@ -906,7 +906,7 @@ V75.6.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V75.6.10.2	一手传播材料与后来的历史叙述	旧大纲-20261023/第18卷-全球社区地区bsd史/第365章-欧洲法律实体与基金会合作/365.8-公众的认识-欧洲公众对-BSD-FreeBSD-的认知演变从媒体呈现/365.8.4-公众认知调查的史料辨析.md	史料	A	2026-10-31	调研数据的真实性须逐项核查；样本量的代表性需评估	none
 V75.6.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“一手传播材料与后来的历史叙述”；本节题为其下位论题	none
 V75.6.10.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.6.10.3	一手传播材料与后来的历史叙述	https://dspinellis.github.io/oral-history-of-unix/frs122/unixhist/finalhis.htm	联网	B	2026-10-31	Write programs that do one thing and do it well. Write programs to work together.	noted
+V75.6.10.3	一手传播材料与后来的历史叙述	https://www.oralhistory.org/about/principles-and-practices/	联网	B	2026-11-05	A critical approach to the oral testimony and interpretations are necessary in the use of oral history.	noted
 V75.6.10.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 10 节“一手传播材料与后来的历史叙述”；本节题为其下位论题	none
 V75.6.10.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.6.10.4	一手传播材料与后来的历史叙述	https://www.freebsd.org/press/	联网	A	2026-10-31	Patrick McEvoy reports back from his visit to BSDCan 2026	none
@@ -915,7 +915,7 @@ V75.6.11.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与
 V75.6.11.1	传播记录与实际影响的区别	https://www.freshports.org/	联网	B	2026-10-31	100 most recent commits (all timestamps are UTC)	none
 V75.6.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 11 节“传播记录与实际影响的区别”；本节题为其下位论题	none
 V75.6.11.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V75.6.11.2	传播记录与实际影响的区别	https://www.freshports.org/	联网	B	2026-10-31	FreshPorts -- The Place For Ports	noted
+V75.6.11.2	传播记录与实际影响的区别	https://www.leidenmanifesto.org/	联网	B	2026-11-05	Research evaluation has become routine and often relies on metrics. But it is increasingly driven by data and not by expert judgement.	noted
 V75.6.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 11 节“传播记录与实际影响的区别”；本节题为其下位论题	none
 V75.6.11.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.6.11.3	传播记录与实际影响的区别	https://lists.freebsd.org/	联网	A	2026-10-31	Commit messages for all branches of the src repository	none
@@ -1509,7 +1509,7 @@ V75.10.12.1	全球 BSD 史的区域偏差	旧大纲-20261023/第14卷-商业生�
 V75.10.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 12 节“全球 BSD 史的区域偏差”；本节题为其下位论题	none
 V75.10.12.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.10.12.2	全球 BSD 史的区域偏差	旧大纲-20261023/第14卷-商业生态与企业案例/第302章-商业生态时期的旅游与地理/302.14-对-BSD-地理叙事的批评-中心主义与边缘化-后殖民视角对-伯克利-剑桥-东京/302.14.1-后殖民视角的批评.md	史料	A	2026-10-31	BSD 中心叙事被批评为后殖民视角——以西方（伯克利、剑桥）为中心，边缘化发展中国家贡献，需通过后殖民视角批判性审视。	none
-V75.10.12.2	后殖民视角的批评面	https://www.freebsd.org/press/	联网	A	2026-10-31	FreeBSD 15.0-RELEASE arrived this week, the latest release of the Unix world's leading alternative to Linux	noted
+V75.10.12.2	后殖民视角的批评面	https://www.dourish.com/publications/2012/PostcolonialComputingTactical-STHV.pdf	联网	A	2026-11-05	innovative scientific, agricultural, and medical technologies that traveled to Europe and America from the supposed periphery	noted
 V75.10.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 12 节“全球 BSD 史的区域偏差”；本节题为其下位论题	none
 V75.10.12.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V75.10.12.3	全球 BSD 史的区域偏差	旧大纲-20261023/第14卷-商业生态与企业案例/第302章-商业生态时期的旅游与地理/302.14-对-BSD-地理叙事的批评-中心主义与边缘化-后殖民视角对-伯克利-剑桥-东京/302.14.1-后殖民视角的批评.md	史料	A	2026-10-31	作为技术扩散史，镜像、会议与资助的地理集中确有中心—边缘结构；作为个体开发者史，以国别论贡献则易陷入新的本质主义。	none

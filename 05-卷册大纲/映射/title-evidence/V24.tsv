@@ -132,13 +132,13 @@ V24.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与�
 V24.2.2.3	自由版的发布月份	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	“The newly blessed release was called 4.4BSD-Lite and was released in June 1994 under terms identical to those used for the Networking releases.”	noted
 V24.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“4.4BSD-Lite 的发行”；本节题为其下位论题	none
 V24.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
-V24.2.2.4	自由版的发布月份	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	“The newly blessed release was called 4.4BSD-Lite and was released in June 1994 under terms identical to those used for the Networking releases.”	noted
+V24.2.2.4	自由版的发布月份	https://netbsd.org/releases/formal-1.0/	联网	A	2026-11-04	NetBSD 1.0 was released on October 26, 1994, and was the result of over a year of hard work on the system. The NetBSD 1.0 kernel was derived from 4.4BSD-Lite sources, but the user-land utilities were not yet completely merged with those from Lite.	noted
 V24.2.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“4.4BSD-Lite 的发行”；本节题为其下位论题	none
 V24.2.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
-V24.2.2.5	自由版的发布月份	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	“The newly blessed release was called 4.4BSD-Lite and was released in June 1994 under terms identical to those used for the Networking releases.”	noted
+V24.2.2.5	自由版的发布月份	http://www.krsaborio.net/unix-source-code/research/1994/0420.html	联网	A	2026-11-04	The 4.4BSD-Lite software is copyrighted by the University of California and others, but may be freely redistributed without fee. It is available to anyone and requires no previous license from AT&T, Novell/USL, or The Regents of the University of California.	none
 V24.2.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“4.4BSD-Lite 的发行”；本节题为其下位论题	none
 V24.2.2.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
-V24.2.2.6	自由版的发布月份	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	“The newly blessed release was called 4.4BSD-Lite and was released in June 1994 under terms identical to those used for the Networking releases.”	noted
+V24.2.2.6	自由版的发布月份	https://www.krsaborio.net/unix-source-code/research/1994/0420.html	联网	A	2026-11-05	We do not plan on making 4.4BSD-Lite available by anonymous ftp.	noted
 V24.2.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“4.4BSD-Lite 的发行”；本节题为其下位论题	none
 V24.2.2.6	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V24.2.3.1	网络发行的发货时点	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	“Thus, our second greatly expanded freely-redistributable release began shipping in June 1991.”	none

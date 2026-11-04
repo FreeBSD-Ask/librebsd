@@ -34,7 +34,7 @@ const HEADLESS = process.argv.includes('--headless');
    现标签改为 `'注计数' + FX.notes`，形态上不可能再脱节；
    第十三件门禁已扩为同时覆盖「注＋数字」「注计数＋数字」与 `notes:` 常量三种形态。
    真值来源＝内容源 data/outline.txt（卷/章/节数与 @@ 定界数），随目录变动须同步。 */
-const FX = { triple: '76 卷 544 章 3954 节', notes: 1761, secs: 3907 };
+const FX = { triple: '76 卷 544 章 3954 节', notes: 1766, secs: 3907 };
 const browser = await chromium.launch({
   executablePath: __CHROME_EXE,
   headless: HEADLESS, args: ['--no-sandbox']

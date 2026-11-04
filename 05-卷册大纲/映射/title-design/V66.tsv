@@ -225,8 +225,8 @@ V66.7.6.1	66	7	6	新西兰镜像的域名记录	官方镜像清单收录新西�
 V66.7.6.2	66	7	6	新西兰组的查证空档	现行 FreeBSD 用户组名录大洋洲区无新西兰条目，检索亦无 NZ-BUG 站点或活动存档；澳洲侧三组中 HUnBUG 两周一会，BUGS 与 BUGA 不定期，无统一频次可作对照。	2	4	目录;规则;联网;史料	final
 V66.7.6.3	66	7	6	学术网节点的系统失档	REANNZ 官网只述其为新西兰国家研究与教育网、连接大学与皇家研究所并接入 120 余国网络，未见节点操作系统记录；检索亦无 KAREN 节点 BSD 清单。	3	4	目录;规则;联网;史料	final
 V66.7.7.1	66	7	7	南非三类节点的实例	1994-12-26 南非联网调查列 Uninet（“The oldest IP-based network in the country, this reaches almost all South African universities”）、Western Cape Schools Network（设备栏“FreeBSD system”）与 SANGONeT（NGO，Sun Sparcstation 2），大学、学校、NGO 三类有字面依据；ccTLD DNS 与南非以外节点未见记载，样本范围限于南非。	1	4	目录;规则;联网;史料	final
-V66.7.7.2	66	7	7	中东高校课程的失载	Technion 计算机学院与 KAUST 课程目录未见 BSD 课程条目，检索亦无中东高校 BSD 课程大纲或课号；旧树仅列校名，无年份与课程名。	2	4	目录;规则;联网;史料	final
-V66.7.7.3	66	7	7	新西兰高校课程的失载	四校公开课程页未见 BSD 或 Unix 系统课程条目（惠灵顿 CYBR171 实验用 Linux，奥塔哥 COMP162、COSC201 为编程与算法）；惠灵顿 Mark Davies 为 NetBSD、pkgsrc 开发者，可证师资背景，不证课程内容。	3	4	目录;规则;联网;史料	final
+V66.7.7.2	66	7	7	中东高校课程的记录缺失	Technion 计算机学院与 KAUST 课程目录未见 BSD 课程条目，检索亦无中东高校 BSD 课程大纲或课号；旧树仅列校名，无年份与课程名。	2	4	目录;规则;联网;史料	final
+V66.7.7.3	66	7	7	新西兰高校课程的记录缺失	四校公开课程页未见 BSD 或 Unix 系统课程条目（惠灵顿 CYBR171 实验用 Linux，奥塔哥 COMP162、COSC201 为编程与算法）；惠灵顿 Mark Davies 为 NetBSD、pkgsrc 开发者，可证师资背景，不证课程内容。	3	4	目录;规则;联网;史料	final
 V66.7.8.1	66	7	8	非洲组依附说的缺据	现行 FreeBSD 用户组名录无非洲区，欧洲区条目亦未记对非洲组的资助或托管；旧树只作比较判语，组间往来、资助或会议记录未见。	1	4	目录;规则;联网;史料	final
 V66.7.8.2	66	7	8	中东非洲规模的在册对照	现行名录亚洲区有 Saudi Arabia BSD User Group 一条，非洲区无条目，可作“中东有在册组、非洲无”的旁证；“规模与持续性略大于非洲”及差异来源无成员数、活动频次或会议档案支撑。	2	4	目录;规则;联网;史料	final
 V66.7.8.3	66	7	8	线上协作替代线下组织	缺少正式用户组之处以线上协作维系，组织形态让位于协作实践。	3	4	目录;规则;联网;史料	final
