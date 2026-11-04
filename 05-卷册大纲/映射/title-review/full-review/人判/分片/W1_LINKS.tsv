@@ -1,0 +1,184 @@
+queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposition	reviewer
+L-001	V54	url	http://lemis.com/grog/resume.php		H-5	通过		HTTP 200；页题“Greg Lehey: résumé”；最终 URL http://www.lemis.com/grog/resume.php	无需处置	W1-LINK
+L-002	V59	url	http://www.cafc.uscourts.gov/opinions/08-1001.pdf		H-5	通过		WebFetch 实测返回 Jacobsen v. Katzer（2008-1001）判决全文 PDF；最终 URL 同原址	无需处置	W1-LINK
+L-003	V04	url	https://amturing.acm.org/award%5Fwinners/thompson%5F4588371.cfm		H-5	通过		WebFetch 实测返回 Ken Thompson 图灵奖页（1983 年获奖）	无需处置	W1-LINK
+L-004	V35	url	https://bind9.readthedocs.io/en/latest/chapter1.html		H-5	通过		HTTP 200；页题“1. Introduction to DNS and BIND 9 &mdash; ”；最终 URL 同原址	无需处置	W1-LINK
+L-005	V54	url	https://bsdcan.org/2017/schedule/speakers/214.en.html		H-5	通过		HTTP 200；页题“BSDCan2017: Allan Jude”；最终 URL https://www.bsdcan.org/2017/schedule/speakers/214.en.html	无需处置	W1-LINK
+L-006	V55	url	https://bsdtalk.blogspot.com/2006/02/bsdtalk018-interview-with-kirk.html		H-5	通过		HTTP 200；页题“bsdtalk: bsdtalk018 - Interview with Kirk ”；最终 URL 同原址	无需处置	W1-LINK
+L-007	V31	url	https://codex.cs.yale.edu/avi/home-page/publication-dir/Journals/J-12-1985.pdf		H-5	通过		HTTP 200；PDF 可读（835584 字节）；最终 URL 同原址	无需处置	W1-LINK
+L-008	V17	url	https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Operating%20Systems.%20Design%20and%20Implementation.pdf		H-5	有问题	P1	实测 404，GitHub Pages 明示 File not found；最终 URL 同原址	预授权落账	W1-LINK
+L-009	V71	url	https://doc.dl.playstation.net/doc/psvita-oss/		H-5	通过		HTTP 200；页题“Open Source Software Used in PlayStation®V”；最终 URL https://www.playstation.com/en-us/oss/ps-vita/	无需处置	W1-LINK
+L-010	V69	url	https://docs-archive.freebsd.org/doc/7.2-RELEASE/usr/share/doc/en/books/handbook/mirrors.html		H-5	通过		HTTP 200；页题“Obtaining FreeBSD”；最终 URL 同原址	无需处置	W1-LINK
+L-011	V39;V69	url	https://docs.freebsd.org/44doc/		H-5	通过		HTTP 200；页题“4.4BSD Documents”；最终 URL https://docs-archive.freebsd.org/44doc/	无需处置	W1-LINK
+L-012	V12	url	https://docs.freebsd.org/44doc/psd/05.sysman/paper-2.html		H-5	通过		HTTP 200；页题“paper, section 2.”；最终 URL https://docs-archive.freebsd.org/44doc/psd/05.sysman/paper-2.html	无需处置	W1-LINK
+L-013	V60	url	https://docs.freebsd.org/44doc/usd/10.exref/paper.html		H-5	通过		HTTP 200；页题“paper”；最终 URL https://docs-archive.freebsd.org/44doc/usd/10.exref/paper.html	无需处置	W1-LINK
+L-014	V12	url	https://docs.freebsd.org/44doc/usd/contents.html		H-5	通过		HTTP 200；页题“contents”；最终 URL https://docs-archive.freebsd.org/44doc/usd/contents.html	无需处置	W1-LINK
+L-015	V36;V37;V38;V39;V52;V53;V55;V57;V65;V66;V74;V75	url	https://docs.freebsd.org/en/articles/committers-guide/		H-5	通过		HTTP 200；页题“Committer's Guide | FreeBSD Documentation ”；最终 URL 同原址	无需处置	W1-LINK
+L-016	V37;V60;V75	url	https://docs.freebsd.org/en/articles/releng/		H-5	通过		HTTP 200；页题“Legacy FreeBSD Release Engineering | FreeB”；最终 URL 同原址	无需处置	W1-LINK
+L-017	V38;V69	url	https://docs.freebsd.org/en/books/fdp-primer/translations/		H-5	通过		HTTP 200；页题“Chapter 8. Translations | FreeBSD Document”；最终 URL 同原址	无需处置	W1-LINK
+L-018	V69	url	https://docs.freebsd.org/ja/books/handbook/		H-5	通过		HTTP 200；页题“FreeBSD ハンドブック | FreeBSD Documentation Por”；最终 URL 同原址	无需处置	W1-LINK
+L-019	V13	url	https://doi.org/10.5555/324493.325071		H-5	有问题	P1	实测 DOI 解析页明示 This DOI cannot be found in the DOI System，404 且无登记记录	预授权落账	W1-LINK
+L-020	V26	url	https://en.wikipedia.org/wiki/MachTen		H-5	通过		HTTP 200；页题“MachTen - Wikipedia”；最终 URL 同原址	无需处置	W1-LINK
+L-021	V05;V07	url	https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs		H-5	通过		HTTP 200；页题“Plan 9 from Bell Labs - Wikipedia”；最终 URL 同原址	无需处置	W1-LINK
+L-022	V07	url	https://en.wikipedia.org/wiki/Research_Unix		H-5	通过		HTTP 200；页题“Research Unix - Wikipedia”；最终 URL 同原址	无需处置	W1-LINK
+L-023	V20;V26	url	https://en.wikipedia.org/wiki/Ultrix		H-5	通过		HTTP 200；页题“Ultrix - Wikipedia”；最终 URL 同原址	无需处置	W1-LINK
+L-024	V05	url	https://en.wikipedia.org/wiki/Unix		H-5	通过		HTTP 200；页题“Unix - Wikipedia”；最终 URL 同原址	无需处置	W1-LINK
+L-025	V32	url	https://engineering.fb.com/open-source/		H-5	通过		HTTP 200；跳转 2019 年开源年度回顾页；最终 URL …/2019/01/02/open-source/open-source-2018/	无需处置	W1-LINK
+L-026	V67	url	https://eurobsdcon.org/		H-5	通过		HTTP 200；页题“About &bull; CfP &bull;--> Program &bull;-”；最终 URL https://eurobsdcon.org/2027/	无需处置	W1-LINK
+L-027	V67	url	https://eurobsdconfoundation.org/travel-grant.html		H-5	通过		HTTP 200；页题“EuroBSDCon Foundation the foundation behin”；最终 URL 同原址	无需处置	W1-LINK
+L-028	V67	url	https://fosdem.org/2025/about/		H-5	通过		HTTP 200；页题“FOSDEM 2025 - About FOSDEM”；最终 URL https://archive.fosdem.org/2025/about/	无需处置	W1-LINK
+L-029	V68	url	https://freebsd.org/status/report-2016-07-2016-09/		H-5	通过		HTTP 200；页题“FreeBSD Quarterly Status Report”；最终 URL https://www.freebsd.org/status/report-2016-07-2016-09.html	无需处置	W1-LINK
+L-030	V35;V39;V54;V59;V65;V66;V70;V73	url	https://freebsdfoundation.org/about-us/		H-5	通过		HTTP 200；页题“About the Foundation”；最终 URL …/about-us/about-the-foundation/	无需处置	W1-LINK
+L-031	V55;V64	url	https://freebsdfoundation.org/about-us/our-team/		H-5	通过		HTTP 200；页题“Our Team | FreeBSD Foundation”；最终 URL 同原址	无需处置	W1-LINK
+L-032	V55	url	https://freebsdfoundation.org/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/		H-5	通过		HTTP 200；页题“FreeBSD AI-assisted Vulnerability Discover”；最终 URL 同原址	无需处置	W1-LINK
+L-033	V73	url	https://freebsdfoundation.org/blog/sovereign-tech-fund-to-invest-e686400-in-freebsd-infrastructure-modernization/		H-5	通过		HTTP 200；页题“Sovereign Tech Fund to Invest €686,400 in ”；最终 URL 同原址	无需处置	W1-LINK
+L-034	V54;V66	url	https://freebsdfoundation.org/wp-content/uploads/2023/06/sato_japan.pdf		H-5	通过		HTTP 200；PDF 可读（1089240 字节）；最终 URL 同原址	无需处置	W1-LINK
+L-035	V60	url	https://ftp.sendmail.org/RELEASE_NOTES		H-5	通过		HTTP 200；页题“SENDMAIL RELEASE NOTES This listing shows ”；最终 URL 同原址	无需处置	W1-LINK
+L-036	V61	url	https://github.com/NuxiNL/cloudabi		H-5	通过		HTTP 200；页题“GitHub - NuxiNL/cloudabi: Definitions for ”；最终 URL 同原址	无需处置	W1-LINK
+L-037	V21	url	https://groups.google.com/g/comp.unix.bsd/c/zA8Jl89HSRo/m/DqMzaUUZ7wYJ		H-5	通过		WebFetch 实测返回 386BSD Release 0.1 公告正文（1992-07-14）；最终 URL 同原址	无需处置	W1-LINK
+L-038	V62	url	https://in-toto.io/		H-5	通过		HTTP 200；页题“in-toto”；最终 URL 同原址	无需处置	W1-LINK
+L-039	V70	url	https://llvm.org/foundation/relicensing/		H-5	通过		WebFetch 实测返回 LLVM Relicensing Effort 全文；最终 URL https://foundation.llvm.org/relicensing/	无需处置	W1-LINK
+L-040	V76	url	https://lore.kernel.org/lkml/		H-5	待裁		HTTP 200 但为 Anubis 工作量证明反爬占位页（Making sure you’re not a bot），无正文	呈裁	W1-LINK
+L-041	V75	url	https://mail-index.netbsd.org/		H-5	通过		HTTP 200；页题“Index of NetBSD Mailing Lists”；最终 URL 同原址	无需处置	W1-LINK
+L-042	V50;V51	url	https://man.dragonflybsd.org/?command=committer&section=7		H-5	通过		HTTP 200；页题“DragonFly On-Line Manual Pages : committer”；最终 URL 同原址	无需处置	W1-LINK
+L-043	V50	url	https://man.dragonflybsd.org/?command=development&section=7		H-5	通过		HTTP 200；页题“DragonFly On-Line Manual Pages : developme”；最终 URL 同原址	无需处置	W1-LINK
+L-044	V49	url	https://man.dragonflybsd.org/?command=pkg&section=8		H-5	通过		HTTP 200；页题“DragonFly On-Line Manual Pages : pkg(8)”；最终 URL 同原址	无需处置	W1-LINK
+L-045	V60	url	https://man.freebsd.org/cgi/man.cgi?query=at&sektion=1&format=html		H-5	通过		HTTP 200；页题“at(1) - FreeBSD 15.1-RELEASE and Ports.qua”；最终 URL 同原址	无需处置	W1-LINK
+L-046	V37	url	https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html		H-5	通过		HTTP 200；页题“bhyve(8) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-047	V60	url	https://man.freebsd.org/cgi/man.cgi?query=crontab&sektion=5&format=html		H-5	通过		HTTP 200；页题“crontab(5) - FreeBSD 15.1-RELEASE and Port”；最终 URL 同原址	无需处置	W1-LINK
+L-048	V60	url	https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1&format=html		H-5	通过		HTTP 200；页题“csh(1) - FreeBSD 15.1-RELEASE and Ports.qu”；最终 URL 同原址	无需处置	W1-LINK
+L-049	V60	url	https://man.freebsd.org/cgi/man.cgi?query=dbopen&sektion=3&format=ascii		H-5	通过		HTTP 200；页题“DBOPEN(3) Library Functions Manual DBOPEN(”；最终 URL 同原址	无需处置	W1-LINK
+L-050	V37	url	https://man.freebsd.org/cgi/man.cgi?query=ddb&sektion=4&format=html		H-5	通过		HTTP 200；页题“ddb(4) - FreeBSD 15.1-RELEASE and Ports.qu”；最终 URL 同原址	无需处置	W1-LINK
+L-051	V37	url	https://man.freebsd.org/cgi/man.cgi?query=dtrace&sektion=1&format=html		H-5	通过		HTTP 200；页题“dtrace(1) - FreeBSD 15.1-RELEASE and Ports”；最终 URL 同原址	无需处置	W1-LINK
+L-052	V37	url	https://man.freebsd.org/cgi/man.cgi?query=dumpfs&sektion=8&format=html		H-5	通过		HTTP 200；页题“dumpfs(8) - FreeBSD 15.1-RELEASE and Ports”；最终 URL 同原址	无需处置	W1-LINK
+L-053	V60	url	https://man.freebsd.org/cgi/man.cgi?query=ed&sektion=1&format=html		H-5	通过		HTTP 200；页题“ed(1) - FreeBSD 15.1-RELEASE and Ports.qua”；最终 URL 同原址	无需处置	W1-LINK
+L-054	V37	url	https://man.freebsd.org/cgi/man.cgi?query=epoch&sektion=9&format=html		H-5	通过		HTTP 200；页题“epoch(9) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-055	V60	url	https://man.freebsd.org/cgi/man.cgi?query=ex&sektion=1&format=ascii		H-5	通过		HTTP 200；页题“VI(1) General Commands Manual VI(1) NAME e”；最终 URL 同原址	无需处置	W1-LINK
+L-056	V31	url	https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&manpath=FreeBSD+4.9-RELEASE		H-5	通过		HTTP 200；页题“fsck(8) - FreeBSD 4.9-RELEASE Manual Pages”；最终 URL 同原址	无需处置	W1-LINK
+L-057	V37	url	https://man.freebsd.org/cgi/man.cgi?query=gpart&sektion=8&format=html		H-5	通过		HTTP 200；页题“gpart(8) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-058	V52	url	https://man.freebsd.org/cgi/man.cgi?query=if_bridge&sektion=4		H-5	通过		HTTP 200；页题“if_bridge(4) - FreeBSD 15.1-RELEASE and Po”；最终 URL 同原址	无需处置	W1-LINK
+L-059	V52	url	https://man.freebsd.org/cgi/man.cgi?query=iflib&sektion=9		H-5	通过		HTTP 200；页题“iflib(9) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-060	V37	url	https://man.freebsd.org/cgi/man.cgi?query=iflib&sektion=9&format=html		H-5	通过		HTTP 200；页题“iflib(9) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-061	V60	url	https://man.freebsd.org/cgi/man.cgi?query=inetd&sektion=8&format=ascii		H-5	通过		HTTP 200；页题“INETD(8) System Manager's Manual INETD(8) ”；最终 URL 同原址	无需处置	W1-LINK
+L-062	V61	url	https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8		H-5	通过		HTTP 200；页题“ipfw(8) - FreeBSD 15.1-RELEASE and Ports.q”；最终 URL 同原址	无需处置	W1-LINK
+L-063	V37	url	https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=8&format=html		H-5	通过		HTTP 200；正文可读；最终 URL 同原址	无需处置	W1-LINK
+L-064	V61;V76	url	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8		H-5	通过		HTTP 200；页题“jail(8) - FreeBSD 15.1-RELEASE and Ports.q”；最终 URL 同原址	无需处置	W1-LINK
+L-065	V37	url	https://man.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2&format=html		H-5	通过		HTTP 200；页题“kqueue(2) - FreeBSD 15.1-RELEASE and Ports”；最终 URL 同原址	无需处置	W1-LINK
+L-066	V52	url	https://man.freebsd.org/cgi/man.cgi?query=lagg&sektion=4		H-5	通过		HTTP 200；页题“lagg(4) - FreeBSD 15.1-RELEASE and Ports.q”；最终 URL 同原址	无需处置	W1-LINK
+L-067	V60	url	https://man.freebsd.org/cgi/man.cgi?query=login&sektion=1&format=html		H-5	通过		HTTP 200；页题“login(1) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-068	V61	url	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4		H-5	通过		HTTP 200；页题“mac_biba(4) - FreeBSD 15.1-RELEASE and Por”；最终 URL 同原址	无需处置	W1-LINK
+L-069	V61	url	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4		H-5	通过		HTTP 200；页题“mac_mls(4) - FreeBSD 15.1-RELEASE and Port”；最终 URL 同原址	无需处置	W1-LINK
+L-070	V61	url	https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7		H-5	通过		HTTP 200；页题“mitigations(7) - FreeBSD 15.1-RELEASE and ”；最终 URL 同原址	无需处置	W1-LINK
+L-071	V37	url	https://man.freebsd.org/cgi/man.cgi?query=netgraph&sektion=4&format=html		H-5	通过		HTTP 200；页题“netgraph(4) - FreeBSD 15.1-RELEASE and Por”；最终 URL 同原址	无需处置	W1-LINK
+L-072	V60	url	https://man.freebsd.org/cgi/man.cgi?query=netstat&sektion=1&format=ascii		H-5	通过		HTTP 200；页题“NETSTAT(1) General Commands Manual NETSTAT”；最终 URL 同原址	无需处置	W1-LINK
+L-073	V37	url	https://man.freebsd.org/cgi/man.cgi?query=newfs&sektion=8&format=html		H-5	通过		HTTP 200；页题“newfs(8) - FreeBSD 15.1-RELEASE and Ports.”；最终 URL 同原址	无需处置	W1-LINK
+L-074	V60	url	https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html		H-5	通过		HTTP 200；页题“ping(8) - FreeBSD 15.1-RELEASE and Ports.q”；最终 URL 同原址	无需处置	W1-LINK
+L-075	V37	url	https://man.freebsd.org/cgi/man.cgi?query=pmc&sektion=3&format=html		H-5	通过		HTTP 200；页题“pmc(3) - FreeBSD 15.1-RELEASE and Ports.qu”；最终 URL 同原址	无需处置	W1-LINK
+L-076	V37	url	https://man.freebsd.org/cgi/man.cgi?query=sched_ule&sektion=4&format=html		H-5	通过		HTTP 200；页题“sched_ule(4) - FreeBSD 15.1-RELEASE and Po”；最终 URL 同原址	无需处置	W1-LINK
+L-077	V52	url	https://man.freebsd.org/cgi/man.cgi?query=sctp&sektion=4		H-5	通过		HTTP 200；页题“sctp(4) - FreeBSD 15.1-RELEASE and Ports.q”；最终 URL 同原址	无需处置	W1-LINK
+L-078	V61	url	https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7		H-5	通过		HTTP 200；页题“security(7) - FreeBSD 15.1-RELEASE and Por”；最终 URL 同原址	无需处置	W1-LINK
+L-079	V37	url	https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7&format=html		H-5	通过		HTTP 200；页题“security(7) - FreeBSD 15.1-RELEASE and Por”；最终 URL 同原址	无需处置	W1-LINK
+L-080	V60	url	https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=ascii		H-5	通过		HTTP 200；页题“SED(1) General Commands Manual SED(1) NAME”；最终 URL 同原址	无需处置	W1-LINK
+L-081	V60	url	https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html		H-5	通过		HTTP 200；页题“sed(1) - FreeBSD 15.1-RELEASE and Ports.qu”；最终 URL 同原址	无需处置	W1-LINK
+L-082	V37	url	https://man.freebsd.org/cgi/man.cgi?query=sendfile&sektion=2&format=html		H-5	通过		HTTP 200；页题“sendfile(2) - FreeBSD 15.1-RELEASE and Por”；最终 URL 同原址	无需处置	W1-LINK
+L-083	V35;V60	url	https://man.freebsd.org/cgi/man.cgi?query=socket&sektion=2&format=ascii		H-5	通过		HTTP 200；页题“SOCKET(2) System Calls Manual SOCKET(2) NA”；最终 URL 同原址	无需处置	W1-LINK
+L-084	V60	url	https://man.freebsd.org/cgi/man.cgi?query=socket&sektion=2&format=html		H-5	通过		HTTP 200；页题“socket(2) - FreeBSD 15.1-RELEASE and Ports”；最终 URL 同原址	无需处置	W1-LINK
+L-085	V60	url	https://man.freebsd.org/cgi/man.cgi?query=syslogd&sektion=8&format=html		H-5	通过		HTTP 200；页题“syslogd(8) - FreeBSD 15.1-RELEASE and Port”；最终 URL 同原址	无需处置	W1-LINK
+L-086	V35	url	https://man.freebsd.org/cgi/man.cgi?query=termcap&sektion=5&format=ascii		H-5	通过		HTTP 200；页题“TERMCAP(5) File Formats Manual TERMCAP(5) ”；最终 URL 同原址	无需处置	W1-LINK
+L-087	V60	url	https://man.freebsd.org/cgi/man.cgi?query=tmux&sektion=1&format=html		H-5	通过		HTTP 200；页题“tmux(1) - FreeBSD 15.1-RELEASE and Ports.q”；最终 URL 同原址	无需处置	W1-LINK
+L-088	V60	url	https://man.freebsd.org/cgi/man.cgi?query=traceroute&sektion=8&format=ascii		H-5	通过		HTTP 200；页题“TRACEROUTE(8) System Manager's Manual TRAC”；最终 URL 同原址	无需处置	W1-LINK
+L-089	V60	url	https://man.freebsd.org/cgi/man.cgi?query=traceroute&sektion=8&format=html		H-5	通过		HTTP 200；页题“traceroute(8) - FreeBSD 15.1-RELEASE and P”；最终 URL 同原址	无需处置	W1-LINK
+L-090	V60	url	https://man.freebsd.org/cgi/man.cgi?query=vi&sektion=1&format=html		H-5	通过		HTTP 200；页题“vi(1) - FreeBSD 15.1-RELEASE and Ports.qua”；最终 URL 同原址	无需处置	W1-LINK
+L-091	V37	url	https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=8&format=html		H-5	通过		HTTP 200；页题“wg(8) - FreeBSD 15.1-RELEASE and Ports.qua”；最终 URL 同原址	无需处置	W1-LINK
+L-092	V35	url	https://man.netbsd.org/routed.8		H-5	通过		HTTP 200；页题“routed(8) - NetBSD Manual Pages”；最终 URL 同原址	无需处置	W1-LINK
+L-093	V41	url	https://man.netbsd.org/rump_server.1		H-5	通过		HTTP 200；页题“rump_server(1) - NetBSD Manual Pages”；最终 URL 同原址	无需处置	W1-LINK
+L-094	V41	url	https://man.netbsd.org/rump_sp.7		H-5	通过		HTTP 200；页题“rump_sp(7) - NetBSD Manual Pages”；最终 URL 同原址	无需处置	W1-LINK
+L-095	V41	url	https://man.netbsd.org/security.conf.5		H-5	通过		HTTP 200；页题“security.conf(5) - NetBSD Manual Pages”；最终 URL 同原址	无需处置	W1-LINK
+L-096	V37	url	https://marc.info/?l=freebsd-current&m=91719745205414		H-5	通过		HTTP 200；页题“'Re: Heads up! New swapper and VM changes ”；最终 URL 同原址	无需处置	W1-LINK
+L-097	V37	url	https://marc.info/?l=freebsd-current&m=92455870824767		H-5	通过		HTTP 200；页题“'Re: x11amp 0.9beta1.1 for linux' - MARC”；最终 URL 同原址	无需处置	W1-LINK
+L-098	V37	url	https://marc.info/?l=freebsd-hackers&m=94346850727616		H-5	通过		HTTP 200；页题“'Re: Q: How to read hardware port ?' - MAR”；最终 URL 同原址	无需处置	W1-LINK
+L-099	V37	url	https://marc.info/?l=freebsd-hackers&m=94346948128793		H-5	通过		HTTP 200；页题“'Re: Important new CVSup *server* release'”；最终 URL 同原址	无需处置	W1-LINK
+L-100	V37	url	https://marc.info/?l=freebsd-stable&m=96875213027971		H-5	通过		HTTP 200；页题“'/stand/sysinstall can't find 3ware RAID d”；最终 URL 同原址	无需处置	W1-LINK
+L-101	V01;V03;V04	url	https://mcilroy.cs.dartmouth.edu/reader.pdf		H-5	待裁		DNS 可解析但连接失败、抓取返回空正文，未能判定；最终 URL 同原址	呈裁	W1-LINK
+L-102	V55	url	https://nadiaeghbal.com/		H-5	通过		HTTP 200；页题“Nadia Asparouhova”；最终 URL http://nadia.xyz/	无需处置	W1-LINK
+L-103	V53	url	https://netbsd.org/gallery/logos.html		H-5	通过		HTTP 200；页题“NetBSD Logos”；最终 URL 同原址	无需处置	W1-LINK
+L-104	V51	url	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source		H-5	通过		HTTP 200；页题“DragonFly BSD Founder Matthew Dillon on OS”；最终 URL 同原址	无需处置	W1-LINK
+L-105	V65	url	https://openbsdfoundation.org/activities.html		H-5	通过		HTTP 200；页题“Donate to the OpenBSD Foundation”；最终 URL https://www.openbsdfoundation.org/activities.html	无需处置	W1-LINK
+L-106	V62	url	https://openchainproject.org/license-compliance		H-5	通过		HTTP 200；页题“OpenChain ISO/IEC 5230 &#8211; License Com”；最终 URL 同原址	无需处置	W1-LINK
+L-107	V59;V70	url	https://opensource.apple.com/license/apsl/		H-5	通过		WebFetch 实测返回 APSL 2.0 全文（2003-08-06 版）；最终 URL 同原址	无需处置	W1-LINK
+L-108	V32	url	https://opensource.google/about		H-5	通过		HTTP 200；页题“About &nbsp;|&nbsp; Google Open Source”；最终 URL 同原址	无需处置	W1-LINK
+L-109	V67	url	https://papers.freebsd.org/		H-5	通过		WebFetch 实测返回 FreeBSD Presentations and Papers 年份索引（1995–2025）	无需处置	W1-LINK
+L-110	V61	url	https://security.freebsd.org/advisories/FreeBSD-SA-19:08.rack.asc		H-5	通过		HTTP 200；返回 SA-19:08.rack 公告原文（PGP 签名文本）；最终 URL 同原址（已跳 www.freebsd.org）	无需处置	W1-LINK
+L-111	V69	url	https://slashdot.org/story/26/07/15/1727252/freebsd-16-retires-the-last-of-its-gpl-code		H-5	通过		HTTP 200；页题“FreeBSD 16 Retires the Last of Its GPL Cod”；最终 URL 同原址	无需处置	W1-LINK
+L-112	V68	url	https://summerofcode.withgoogle.com/rules		H-5	通过		HTTP 200；页题“Google Summer of Code”；最终 URL 同原址	无需处置	W1-LINK
+L-113	V32	url	https://todogroup.org/about/		H-5	通过		HTTP 200；页题“About us | TODO Group // Talk openly, deve”；最终 URL https://todogroup.org/about/about-us/	无需处置	W1-LINK
+L-114	V54	url	https://translate-dev.freebsd.org/translate/documentation/articlescommitters-guide_index/zh_CN?checksum=d8b3e5e5b286f7d1		H-5	通过		HTTP 200；Weblate 中文翻译页，正文可读；最终 URL 同原址	无需处置	W1-LINK
+L-115	V54	url	https://unix.stackexchange.com/help/whats-reputation		H-5	待裁		HTTP 403，Cloudflare 安全验证页，无法取得正文；最终 URL 同原址	呈裁	W1-LINK
+L-116	V07	url	https://www.bell-labs.com/usr/dmr/www/cacm.html		H-5	通过		WebFetch 实测返回 Ritchie 与 Thompson《The UNIX Time-Sharing System》全文	无需处置	W1-LINK
+L-117	V70	url	https://www.bell-labs.com/usr/dmr/www/hist.html		H-5	通过		WebFetch 实测返回 Ritchie《The Evolution of the Unix Time-sharing System》全文	无需处置	W1-LINK
+L-118	V05	url	https://www.catb.org/jargon/		H-5	通过		HTTP 200；页题“Jargon File Resources”；最终 URL http://www.catb.org/jargon/	无需处置	W1-LINK
+L-119	V32;V73	url	https://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/		H-5	通过		HTTP 200；页题“The Cathedral and the Bazaar”；最终 URL http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/	无需处置	W1-LINK
+L-120	V71	url	https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/Citrix_ADC_ADM_FreeBSD_13.0_Third_Party_Notices.pdf		H-5	通过		HTTP 200；PDF 可读（1338291 字节）；最终 URL 同原址	无需处置	W1-LINK
+L-121	V57	url	https://www.debian.org/ports/kfreebsd-gnu/		H-5	通过		WebFetch 实测返回 Debian GNU/kFreeBSD 页，载明 2023 年 7 月中止开发	无需处置	W1-LINK
+L-122	V67	url	https://www.decus.org/		H-5	通过		HTTP 200；页题“DECUS — Digital Equipment Computer Users S”；最终 URL https://decus.org/	无需处置	W1-LINK
+L-123	V51	url	https://www.dragonflybsd.com/docs/user/Comparison_with_Linux/		H-5	通过		WebFetch 实测返回 DragonFly 与 Linux 对照表全文；最终 URL 同原址	无需处置	W1-LINK
+L-124	V48	url	https://www.dragonflybsd.org/release62/		H-5	通过		HTTP 200；页题“DragonFlyBSD: release62”；最终 URL 同原址	无需处置	W1-LINK
+L-125	V64	url	https://www.freebsd.org/internal/members		H-5	通过		HTTP 200；页题“FreeBSD Project Members | The FreeBSD Proj”；最终 URL https://www.freebsd.org/internal/members/	无需处置	W1-LINK
+L-126	V38	url	https://www.freebsdfoundation.org/about-us/our-team/		H-5	通过		HTTP 200；页题“Our Team | FreeBSD Foundation”；最终 URL https://freebsdfoundation.org/about-us/our-team/	无需处置	W1-LINK
+L-127	V54	url	https://www.freebsdfoundation.org/blog/the-freebsd-journal-is-now-available/		H-5	通过		HTTP 200；页题“The FreeBSD Journal is Now Available!”；最终 URL 同页去 www 前缀	无需处置	W1-LINK
+L-128	V16	url	https://www.gnu.org/copyleft/copyleft.html		H-5	通过		HTTP 200；页题“What is Copyleft? - GNU Project - Free Sof”；最终 URL https://www.gnu.org/licenses/copyleft.html	无需处置	W1-LINK
+L-129	V16;V32;V75	url	https://www.gnu.org/gnu/initial-announcement.html		H-5	通过		HTTP 200；页题“Initial Announcement - GNU Project - Free ”；最终 URL 同原址	无需处置	W1-LINK
+L-130	V34;V35	url	https://www.gnu.org/gnu/linux-and-gnu.en.html		H-5	通过		HTTP 200；页题“Linux and GNU - GNU Project - Free Softwar”；最终 URL 同原址	无需处置	W1-LINK
+L-131	V63	url	https://www.gnu.org/gnu/linux-and-gnu.html		H-5	通过		HTTP 200；页题“Linux and GNU - GNU Project - Free Softwar”；最终 URL 同原址	无需处置	W1-LINK
+L-132	V16;V32;V73	url	https://www.gnu.org/gnu/manifesto.html		H-5	通过		HTTP 200；页题“The GNU Manifesto - GNU Project - Free Sof”；最终 URL 同原址	无需处置	W1-LINK
+L-133	V32	url	https://www.gnu.org/gnu/thegnuproject.html		H-5	通过		HTTP 200；页题“About the GNU Project - GNU Project - Free”；最终 URL 同原址	无需处置	W1-LINK
+L-134	V33	url	https://www.gnu.org/gnu30/gnu30.html		H-5	通过		HTTP 200；页题“GNU 30th anniversary - GNU Project - Free ”；最终 URL 同原址	无需处置	W1-LINK
+L-135	V59	url	https://www.gnu.org/licenses/agpl-3.0.en.html		H-5	通过		HTTP 200；页题“GNU Affero General Public License - GNU Pr”；最终 URL 同原址	无需处置	W1-LINK
+L-136	V63	url	https://www.gnu.org/licenses/bsd.html		H-5	通过		HTTP 200；页题“The BSD License Problem - GNU Project - Fr”；最终 URL 同原址	无需处置	W1-LINK
+L-137	V32	url	https://www.gnu.org/licenses/gpl-3.0.html		H-5	通过		HTTP 200；页题“The GNU General Public License v3.0 - GNU ”；最终 URL 同原址	无需处置	W1-LINK
+L-138	V59;V62	url	https://www.gnu.org/licenses/license-list.en.html		H-5	通过		HTTP 200；页题“Various Licenses and Comments about Them -”；最终 URL 同原址	无需处置	W1-LINK
+L-139	V32	url	https://www.gnu.org/licenses/license-list.html		H-5	通过		HTTP 200；页题“Various Licenses and Comments about Them -”；最终 URL 同原址	无需处置	W1-LINK
+L-140	V32	url	https://www.gnu.org/licenses/license-recommendations.html		H-5	通过		HTTP 200；页题“How to Choose a License for Your Own Work ”；最终 URL 同原址	无需处置	W1-LINK
+L-141	V31;V34;V51;V72	url	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html		H-5	通过		HTTP 200；页题“GNU General Public License v2.0 - GNU Proj”；最终 URL 同原址	无需处置	W1-LINK
+L-142	V32	url	https://www.gnu.org/licenses/quick-guide-gplv3.html		H-5	通过		HTTP 200；页题“A Quick Guide to GPLv3 - GNU Project - Fre”；最终 URL 同原址	无需处置	W1-LINK
+L-143	V32	url	https://www.gnu.org/licenses/rms-why-gplv3.html		H-5	通过		HTTP 200；页题“Why Upgrade to GPLv3 - GNU Project - Free ”；最终 URL 同原址	无需处置	W1-LINK
+L-144	V35	url	https://www.gnu.org/philosophy/bsd.html		H-5	通过		HTTP 200；页题“The BSD License Problem - GNU Project - Fr”；最终 URL https://www.gnu.org/licenses/bsd.html	无需处置	W1-LINK
+L-145	V59	url	https://www.gnu.org/philosophy/free-sw.en.html		H-5	通过		HTTP 200；页题“What is Free Software? - GNU Project - Fre”；最终 URL 同原址	无需处置	W1-LINK
+L-146	V16;V32	url	https://www.gnu.org/philosophy/free-sw.html		H-5	通过		HTTP 200；页题“What is Free Software? - GNU Project - Fre”；最终 URL 同原址	无需处置	W1-LINK
+L-147	V33	url	https://www.gnu.org/philosophy/open-source-misses-the-point.en.html		H-5	通过		HTTP 200；页题“Why Open Source Misses the Point of Free S”；最终 URL 同原址	无需处置	W1-LINK
+L-148	V16;V32	url	https://www.gnu.org/philosophy/open-source-misses-the-point.html		H-5	通过		HTTP 200；页题“Why Open Source Misses the Point of Free S”；最终 URL 同原址	无需处置	W1-LINK
+L-149	V32	url	https://www.gnu.org/philosophy/why-copyleft.html		H-5	通过		HTTP 200；页题“Why Copyleft? - GNU Project - Free Softwar”；最终 URL 同原址	无需处置	W1-LINK
+L-150	V52	url	https://www.gnu.org/prep/standards/standards.html		H-5	通过		HTTP 200；页题“GNU Coding Standards”；最终 URL 同原址	无需处置	W1-LINK
+L-151	V63	url	https://www.gnu.org/software/binutils/		H-5	通过		HTTP 200；页题“Binutils - GNU Project - Free Software Fou”；最终 URL 同原址	无需处置	W1-LINK
+L-152	V35	url	https://www.gnu.org/software/coreutils/		H-5	通过		HTTP 200；页题“Coreutils - GNU core utilities”；最终 URL 同原址	无需处置	W1-LINK
+L-153	V34	url	https://www.gnu.org/software/cssc/		H-5	通过		HTTP 200；页题“CSSC - GNU Project - Free Software Foundat”；最终 URL 同原址	无需处置	W1-LINK
+L-154	V34	url	https://www.gnu.org/software/diffutils/manual/diffutils.html		H-5	通过		HTTP 200；页题“Comparing and Merging Files”；最终 URL 同原址	无需处置	W1-LINK
+L-155	V16	url	https://www.gnu.org/software/libc/		H-5	通过		HTTP 200；页题“and <h2> with the title of the article. 3.”；最终 URL 同原址	无需处置	W1-LINK
+L-156	V34	url	https://www.gnu.org/software/rcs/		H-5	通过		HTTP 200；页题“RCS - GNU Project - Free Software Foundati”；最终 URL 同原址	无需处置	W1-LINK
+L-157	V03	url	https://www.ibm.com/ibm/history/ibm100/us/en/icons/system360/		H-5	通过		WebFetch 实测返回 IBM System/360 百年图标页全文（1964-04-07 发布）	无需处置	W1-LINK
+L-158	V65	url	https://www.ixsystems.com/about-us/		H-5	通过		HTTP 200；页题“About Us: TrueNAS Open Enterprise Storage ”；最终 URL https://www.truenas.com/about-us/	无需处置	W1-LINK
+L-159	V71	url	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf		H-5	有问题	P1	实测 404，跳转 HPE 报 can’t find that page；最终 URL 同原址	预授权落账	W1-LINK
+L-160	V20	url	https://www.justice.gov/atr/media/758921/dl?inline=		H-5	待裁		多次抓取超时且返回空正文，未能判定；最终 URL 同原址	呈裁	W1-LINK
+L-161	V31	url	https://www.learninternetgrow.com/tcp-ip-protocol-wars/		H-5	通过		WebFetch 实测返回 How TCP/IP Won the Protocol Wars 全文	无需处置	W1-LINK
+L-162	V42	url	https://www.netbsd.org/People/core.xml		H-5	通过		HTTP 200；页题“NetBSD People: The NetBSD Core Group”；最终 URL https://www.netbsd.org/people/core.xml	无需处置	W1-LINK
+L-163	V40	url	https://www.netbsd.org/docs/rump/		H-5	通过		HTTP 200；页题“rumpkernel”；最终 URL https://wiki.NetBSD.org/rumpkernel/	无需处置	W1-LINK
+L-164	V40;V42;V64	url	https://www.netbsd.org/donations/		H-5	通过		HTTP 200；页题“Donations to The NetBSD Foundation”；最终 URL 同原址	无需处置	W1-LINK
+L-165	V40;V43;V53;V55;V59;V64;V65;V75	url	https://www.netbsd.org/foundation/		H-5	通过		HTTP 200；页题“The NetBSD Foundation, Inc.”；最终 URL 同原址	无需处置	W1-LINK
+L-166	V64	url	https://www.netbsd.org/foundation/board-election-procedure.html		H-5	通过		HTTP 200；页题“Procedure for the 2002 NetBSD Board Electi”；最终 URL 同原址	无需处置	W1-LINK
+L-167	V42;V43;V64;V65	url	https://www.netbsd.org/foundation/bylaws.html		H-5	通过		HTTP 200；页题“Bylaws of The NetBSD Foundation”；最终 URL 同原址	无需处置	W1-LINK
+L-168	V42;V65	url	https://www.netbsd.org/foundation/executive-committees.html		H-5	通过		HTTP 200；页题“Executive Committees of The NetBSD Foundat”；最终 URL 同原址	无需处置	W1-LINK
+L-169	V42;V64	url	https://www.netbsd.org/foundation/policies/application-procedure.html		H-5	通过		HTTP 200；页题“New NetBSD developer application procedure”；最终 URL 同原址	无需处置	W1-LINK
+L-170	V53	url	https://www.netbsd.org/foundation/reports/2004Q4.html		H-5	通过		HTTP 200；页题“The NetBSD Foundation Quarterly Report: Oc”；最终 URL 同原址	无需处置	W1-LINK
+L-171	V40	url	https://www.netbsd.org/ports/sparc64/		H-5	通过		HTTP 200；页题“NetBSD/sparc64”；最终 URL http://wiki.NetBSD.org/ports/sparc64/	无需处置	W1-LINK
+L-172	V40;V41;V64	url	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html		H-5	通过		HTTP 200；页题“Announcing NetBSD 10.0 (Mar 28, 2024)”；最终 URL 同原址	无需处置	W1-LINK
+L-173	V62	url	https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom		H-5	通过		HTTP 200；页题“The Minimum Elements For a Software Bill o”；最终 URL 同原址	无需处置	W1-LINK
+L-174	V02	url	https://www.nytimes.com/1956/01/25/archives/att-settles-antitrust-case-shares-patents-us-hails-consent-decree.html		H-5	待裁		抓取超时、返回空或错页，付费墙与地区限制未排除；最终 URL 同原址	呈裁	W1-LINK
+L-175	V19	url	https://www.nytimes.com/1988/05/18/business/company-news-coalition-is-set-for-software.html		H-5	待裁		抓取超时、返回空页，付费墙与地区限制未排除；最终 URL 同原址	呈裁	W1-LINK
+L-176	V44;V45	url	https://www.openbsd.org/53.html		H-5	通过		HTTP 200；页题“OpenBSD 5.3”；最终 URL 同原址	无需处置	W1-LINK
+L-177	V45;V46	url	https://www.openbsd.org/63.html		H-5	通过		HTTP 200；页题“OpenBSD 6.3”；最终 URL 同原址	无需处置	W1-LINK
+L-178	V44;V45;V46;V47	url	https://www.openbsd.org/events.html		H-5	通过		HTTP 200；页题“OpenBSD: Events and Papers”；最终 URL 同原址	无需处置	W1-LINK
+L-179	V56	url	https://www.tcpdump.org/		H-5	通过		HTTP 200；页题“Home | TCPDUMP &amp; LIBPCAP”；最终 URL 同原址	无需处置	W1-LINK
+L-180	V34	url	https://www.tuhs.org/pipermail/tuhs/2003-March/003584.html		H-5	通过		HTTP 200；页题“[TUHS] SCO sues IBM?”；最终 URL 同原址	无需处置	W1-LINK
+L-181	V67	url	https://www.usenix.org/conference/osdi24		H-5	通过		HTTP 200；页题“OSDI &#039;24 | USENIX”；最终 URL 同原址	无需处置	W1-LINK
+L-182	V72	url	https://www2.law.umaryland.edu/marshall/crsreports/crsdocuments/RL30273_01112001.pdf		H-5	通过		HTTP 200；PDF 可读（144168 字节）；最终 URL 同原址	无需处置	W1-LINK
+L-183	V66	url	https://www3.cnnic.cn/n4/2022/0401/c87-912.html		H-5	通过		HTTP 200；页题“1994年～1996年互联网大事记--互联网发展研究--人民网”；最终 URL 同原址	无需处置	W1-LINK

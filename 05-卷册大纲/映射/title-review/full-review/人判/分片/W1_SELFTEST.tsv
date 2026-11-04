@@ -1,0 +1,71 @@
+queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposition	reviewer
+S-001	V13	title	V13.1.8.1	N00039 合同的资助窗口	H-4	通过		题名无日期断言（仅“资助窗口”），机器按引文日期缺失误报	无需处置	W1-SELF
+S-002	V13	title	V13.1.8.2	订单 4031 的立项脉络	H-4	通过		题名“订单 4031 的立项脉络”无论题短语，无日期断言，机器误报	无需处置	W1-SELF
+S-003	V13	title	V13.2.1.4	1981–1983 的会期节奏	H-4	通过		维基 4.2BSD 原文：The committee met from April 1981 to June 1983，直证区间	无需处置	W1-SELF
+S-004	V13	title	V13.2.2.1	4.1a 的 1982 年春交付	H-4	通过		证据“4.1a BSD (March ’82)”，1982 年 3 月属春，支持“1982 年春交付”	无需处置	W1-SELF
+S-005	V14	title	V14.1.2.1	2.9BSD 的 1983 年发行	H-4	通过		TUHS 年表“2.9 BSD July, 1983”，直证 1983 年发行	无需处置	W1-SELF
+S-006	V14	title	V14.1.4.1	Seismo 分支的 1985 年公告	H-4	通过		TUHS 年表“2.9 BSD-Seismo August, 1985”，直证 1985 年公告	无需处置	W1-SELF
+S-007	V14	title	V14.1.5.1	2.10BSD 的 1987 年时点	H-4	通过		TUHS 年表原页“2.10 BSD April, 1987”；证据行引文截断，来源直证	无需处置	W1-SELF
+S-008	V14	title	V14.1.6.1	2.10.1BSD 的 1989 年修订	H-4	通过		TUHS 年表“2.10.1BSD January, 1989”，直证 1989 年修订	无需处置	W1-SELF
+S-009	V14	title	V14.1.9.1	2.11BSD 的 1992 年发行	H-4	通过		TUHS 年表“2.11 BSD February, 1992”；B 级 1991 说属误载，A 级覆盖	无需处置	W1-SELF
+S-010	V14	title	V14.3.9.2	断代意义与 1989 年节点	H-4	通过		维基 BSD 条“It was released in June 1989”，直证 1989 节点	无需处置	W1-SELF
+S-011	V16	title	V16.2.1.1	GNU 计划的 1983 年公告	H-4	通过		GNU 初始公告页载“1983 年 9 月 27 日”，邮件头 Date: Tue, 27-Sep-83	无需处置	W1-SELF
+S-012	V16	title	V16.2.5.1	基金会的 1985 年注册	H-4	通过		FSF 历史页载 MAR 1985 月标与“FSF is incorporated”，支持 1985 年注册	无需处置	W1-SELF
+S-013	V16	title	V16.3.4.1	Bash 的 1989 年首发	H-4	通过		维基 Bash 条“created in 1989 by Brian Fox”，支持 1989 年首发	无需处置	W1-SELF
+S-014	V16	title	V16.3.10.1	内核替代工程的 1990 年起跑	H-4	通过		维基 GNU Hurd 条 infobox Initial release 1990，支持 1990 年起跑	无需处置	W1-SELF
+S-015	V16	title	V16.5.1.1	GPL v2 的 1991 年定本	H-4	通过		FSF 历史页“In 1991, a second version of the GNU GPL was published”	无需处置	W1-SELF
+S-016	V16	title	V16.5.2.1	库许可的 1991 年出台	H-4	通过		维基 LGPL 条 infobox Published 1991，支持库许可 1991 年出台	无需处置	W1-SELF
+S-017	V16	title	V16.5.2.4	库许可的 1999 年更名调整	H-4	通过		维基 LGPL 条：2.1 版 1999 年发布并改名 Lesser，直证 1999 调整	无需处置	W1-SELF
+S-018	V16	title	V16.6.1.1	开源话语的 1998 年分出	H-4	通过		GNU 官方页“In 1998, a part … splintered off”，直证 1998 年分出	无需处置	W1-SELF
+S-019	V16	title	V16.6.2.1	法律后援的 2005 年设立	H-4	通过		SFLC 成立公告页载 Published on Feb 12, 2005，支持 2005 年设立	无需处置	W1-SELF
+S-020	V16	title	V16.6.2.2	SFC 的 2006 年分立	H-4	通过		SFC 公告 URL 为 /news/2006/apr/03/launch/，与题名 2006 年相符	无需处置	W1-SELF
+S-021	V17	title	V17.1.1.1	MINIX 的 1987 年问世	H-4	通过		Tanenbaum 教材“released in 1987 with its complete source code”	无需处置	W1-SELF
+S-022	V18	title	V18.1.1.1	Linux 项目的 1991 年产生	H-4	通过		维基“1991: The Linux kernel is publicly announced on 25 August”	无需处置	W1-SELF
+S-023	V18	title	V18.4.1.1	内核改用 GPL v2 的 1992 年决定	H-4	通过		维基“In 1992, he suggested releasing the kernel under the GNU GPL”	无需处置	W1-SELF
+S-024	V18	title	V18.4.2.2	1.0 的 1994 年发布	H-4	通过		kernel.org 档案“linux-1.0.tar.gz 13-Mar-1994”，日级直证	无需处置	W1-SELF
+S-025	V19	title	V19.1.4.1	System III 的 1982 年发行	H-4	通过		年表“1982. AT&T’s UNIX Systems Group releases System III UNIX”	无需处置	W1-SELF
+S-026	V19	title	V19.1.4.2	System V 的 1983 年定本	H-4	通过		年表“1983. AT&T’s … releases System V”，支持 1983 年定本	无需处置	W1-SELF
+S-027	V19	title	V19.2.1.1	OSF 的 1988 年组建	H-4	通过		A 级《纽约时报》1988-05-18 报道（URL 含日期）记 OSF 组建，与题名一致	无需处置	W1-SELF
+S-028	V19	title	V19.2.2.1	UI 组织的 1988 年成立	H-4	通过		维基“UI was an association created in 1988”，直证 1988 年成立	无需处置	W1-SELF
+S-029	V19	title	V19.2.4.1	SVR4 的 1989 年发布	H-4	通过		InfoWorld 年表“1989 Unix System Labs … releases SVR4”，支持 1989	无需处置	W1-SELF
+S-030	V19	title	V19.2.4.3	厂商背书的规模（1988）	H-4	通过		A 级 Usenet 公告 URL 为 1988-October，佐证 1988 年厂商背书名单	无需处置	W1-SELF
+S-031	V19	title	V19.4.2.1	BSD/386 的 1992 年推出	H-4	通过		BSDI 公告存档 URL /1992/0103.html，佐证 1992 年推出	无需处置	W1-SELF
+S-032	V20	title	V20.1.2.1	AIX 的 1986 年入场	H-4	通过		年表“1986. … IBM releases AIX 2 for the RT server”，支持 1986 入场	无需处置	W1-SELF
+S-033	V20	title	V20.1.4.3	4D1-3.0 的 1988 年起点	H-4	通过		sgistuff IRIX 沿革页“The earliest common version is 4D1-3.0 (1988)”	无需处置	W1-SELF
+S-034	V20	title	V20.1.5.1	Ultrix 的 1984 年首发	H-4	通过		维基 Ultrix 条 infobox Initial release 1984，支持 1984 年首发	无需处置	W1-SELF
+S-035	V20	title	V20.1.6.1	Xenix 的 1980 年发行	H-4	通过		年表“1980. Microsoft releases Xenix, a PC-based UNIX”，支持 1980	无需处置	W1-SELF
+S-036	V20	title	V20.1.7.3	系统业务的 1995 年易主	H-4	通过		年表“1995. SCO buys Novell’s UNIX business”，直证 1995 年易主	无需处置	W1-SELF
+S-037	V20	title	V20.2.1.1	POSIX 的 1988 年定本	H-4	通过		维基“In 1988, standardization efforts resulted in IEEE 1003 … POSIX.1-1988”	无需处置	W1-SELF
+S-038	V36	title	V36.3.10.2	Windows 2000 的混合内核	H-4	通过		题名无日期（“Windows 2000”为产品名），机器按年份误报	无需处置	W1-SELF
+S-039	V36	title	V36.4.8.2	Windows 2000 的内核路线	H-4	通过		同上：产品名非日期断言，机器误报	无需处置	W1-SELF
+S-040	V36	title	V36.8.9.2	Windows Server 2008 R2 的虚拟化	H-4	通过		“Windows Server 2008 R2”为产品名，非日期断言，机器误报	无需处置	W1-SELF
+S-041	V37	title	V37.12.13.2	32 位时间与 2038 年问题	H-4	通过		“2038 年问题”为术语名而非事件日期断言，机器误报	无需处置	W1-SELF
+S-042	V41	title	V41.7.4.1	net80211 的框架骨架	H-4	通过		题名“net80211 的框架骨架”无任何日期断言，机器误报	无需处置	W1-SELF
+S-043	V42	title	V42.2.2.4	1990s 世代移植者的构成	H-4	通过		“1990s 世代”为群体分期而非硬日期；证据为逐 port 导入年表	无需处置	W1-SELF
+S-044	V42	title	V42.2.6.1	pc532 的移除记录（2008）	H-4	通过		Ports History 页“1993/09/09 (removed on 2008/01/07)”，直证 2008	无需处置	W1-SELF
+S-045	V42	title	V42.2.6.2	playstation2 的移除记录（2009）	H-4	通过		Ports History 页“playstation2 2001/10/16 (removed 2009/12/05)”，日级直证	无需处置	W1-SELF
+S-046	V49	title	V49.4.1.4	构想在 2003 年的处境	H-4	有问题	P1	题名硬断 2003 年；证据引文只述 64KB I/O，无年份且与题旨不对应	呈裁	W1-SELF
+S-047	V51	title	V51.5.2.4	文件系统基准的分项出入（2011）	H-4	有问题	P1	题名标注（2011）；两条 Phoronix 引文均无年份，该年份无据	呈裁	W1-SELF
+S-048	V52	title	V52.1.1.4	两人小组的 2001 年起步	H-4	通过		openzfs 页“2001 – Development of ZFS started with two engineers at Sun”	无需处置	W1-SELF
+S-049	V52	title	V52.4.5.3	首次导入的 1999 年节点	H-4	通过		OpenSSH 历史页“The initial import was done on Sep 26, 1999”，日级直证	无需处置	W1-SELF
+S-050	V52	title	V52.4.7.2	eBPF 在 Linux 的 2014 年发端	H-4	通过		BSDCan 议题页“appeared in the Linux kernel in 2014 as an extension to BPF”	无需处置	W1-SELF
+S-051	V54	title	V54.4.3.3	SPARC 随 Sun-4 进入产品线（1987）	H-4	通过		Britannica“In 1987 Sun became the first large computer company to use RISC”	无需处置	W1-SELF
+S-052	V55	title	V55.5.1.5	开发者访谈的可回溯起点（2006 年 1 月）	H-4	有问题	P1	题名硬断“2006 年 1 月”；唯一证据为 2006-02 的 McKusick 访谈，月份无据	呈裁	W1-SELF
+S-053	V56	title	V56.3.7.1	分流的两个时点（1993 与 1995）	H-4	有问题	P1	题名硬断 1993 与 1995；证据仅“mid-1990s … OpenBSD spun off”，1993 无据	呈裁	W1-SELF
+S-054	V56	title	V56.3.8.1	收购公告与交割（2001 年 4–5 月）	H-4	有问题	P1	题名断 2001 年 4–5 月的公告与交割；证据仅“2001 年 4 月收购”，交割月份无据	呈裁	W1-SELF
+S-055	V59	title	V59.2.8.4	函件与 1999 年公告的对应	H-4	通过		freebsd.org 版权页载函件日期 July 22, 1999，日级直证 1999 年公告	无需处置	W1-SELF
+S-056	V59	title	V59.3.3.4	让与书样本的未见	H-4	有问题	P1	缺席命题仅在 thesis 内限定两页，题名与证据行均无检索面限定语	呈裁	W1-SELF
+S-057	V59	title	V59.6.4.4	确认信凭证的未见	H-4	有问题	P1	缺席命题无限定；旧大纲 313.2.1 有“确认信文本与法律要点”，与“未见”相抵	呈裁	W1-SELF
+S-058	V64	title	V64.1.2.2	邮件原始档的 1994 起点	H-4	通过		FreeBSD 邮件列表页“The threaded archives with all e-mails since 1994”	无需处置	W1-SELF
+S-059	V66	title	V66.2.5.3	PC-9800 移植的最初动因	H-4	通过		题名“PC-9800 移植的最初动因”无日期断言，机器按 thesis 误报	无需处置	W1-SELF
+S-060	V67	title	V67.5.7.5	开放获取的条文未见	H-4	有问题	P1	缺席命题无检索面限定；唯一证据为 USENIX 开放获取页，不能证“条文未见”	呈裁	W1-SELF
+S-061	V68	title	V68.1.6.5	跨组织流动的实例未见	H-4	有问题	P1	缺席命题无检索面限定；引文为导师配置说明，与“跨组织流动实例未见”不对应	呈裁	W1-SELF
+S-062	V68	title	V68.3.1.3	逐年成功率的高位年份与 2016 年相对低谷	H-4	通过		官方统计引文列 2016 年 85.6%、2020 年 92.32%、2021 年 93.27%，支持低谷说	无需处置	W1-SELF
+S-063	V68	title	V68.8.3.1	NE2000 与 ptnet 的并置	H-4	通过		题名“NE2000 与 ptnet 的并置”无日期断言，机器按 thesis 的 2015 误报	无需处置	W1-SELF
+S-064	V68	title	V68.12.1.1	官方页的年份止于 2012	H-4	通过		DragonFly wiki“pages from 2008, 2009, 2010, 2011, and 2012”，直证止于 2012	无需处置	W1-SELF
+S-065	V70	title	V70.4.1.2	37000 个第三方应用的规模	H-4	通过		题名断言为数量 37000 而非日期；Handbook 原文“over 37000 third-party applications”	无需处置	W1-SELF
+S-066	V71	title	V71.3.3.5	部署年代的上下限（可考始于 1995 年前后）	H-4	通过		题名已限定“可考”“前后”；旧大纲记 1996 年起，与“1995 年前后”相容	无需处置	W1-SELF
+S-067	V72	title	V72.3.1.3	UNIX 商标的另持与 APA 商标例外（1995）	H-4	有问题	P1	题名标注（1995）；两条 A 级证据仅证商标归属，1995 年交割年份无据	呈裁	W1-SELF
+S-068	V72	title	V72.3.4.1	起诉 IBM 的索赔加码（2003–2004）	H-4	有问题	P1	题名断 2003–2004 索赔加码；证据只述 2003 年 50 亿美元，2004 加码无据	呈裁	W1-SELF
+S-069	V72	title	V72.4.5.5	以和解撤诉结案（2018 年 1 月）	H-4	有问题	P1	题名断 2018 年 1 月和解撤诉；thesis 却述判决执行，证据仅被告认违约	呈裁	W1-SELF
+S-070	V75	title	V75.2.6.3	迁移期的散佚记录	H-4	通过		题名“迁移期的散佚记录”为论题而非缺席断言；旧大纲记 2012 年迁移丢失，相符	无需处置	W1-SELF

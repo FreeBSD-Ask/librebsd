@@ -1,0 +1,229 @@
+queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposition	reviewer
+Q03334	V01	title	V01.1.4.2	丘奇与图灵：可计算性的两种刻画	H-4	通过	无	There are various equivalent formulations of the thesis ... every effective computation can be carried out by a Turing machine.	无需处置	W1-S3-1
+Q03339	V01	title	V01.10.3.6	遗产评估的三个层面	H-4	通过	无	遗产评估须区分工具留存、思想传播与机构记忆三个层面。	无需处置	W1-S3-1
+Q03340	V01	title	V01.10.5.4	传统的三种延续模式	H-4	通过	无	研究传统以工具、协议与人员三种方式延续，而非系统本身。	无需处置	W1-S3-1
+Q03335	V01	title	V01.2.2.3	曼彻斯特实验机与首次存储程序运行	H-4	通过	无	1948 年 6 月 21 日曼彻斯特大学 Baby（SSEM）运行首个存储程序，Kilburn 编写	无需处置	W1-S3-1
+Q03336	V01	title	V01.4.3.1	分时的三种技术路线	H-4	通过	无	1960 年代末分时系统路线分化为研究型（UNIX、Multics）、商业型（TSS/8、TOPS-10）、批处理扩展型（OS/360 TSO）	无需处置	W1-S3-1
+Q03337	V01	title	V01.7.4.1	技术遗产的三条线索	H-4	通过	无	技术遗产可分为概念、人员与档案三条线索。	无需处置	W1-S3-1
+Q03338	V01	title	V01.8.4.3	名称在文献中的首次出现	H-4	通过	无	文献中的首次出现是名称史的可核证据，但版本与印次差异须辨。	无需处置	W1-S3-1
+Q03341	V02	title	V02.2.10.4	四条款通告的文本构成	H-4	通过	无	伯克利许可以两条保留声明与两项限制构成四条款文本	无需处置	W1-S3-1
+Q03342	V03	title	V03.2.4.1	指令集哲学的两种取向	H-4	通过	无	复杂指令与精简指令的对立是关于编译器与硬件分工的路线分歧。	无需处置	W1-S3-1
+Q03343	V04	title	V04.1.3.4	一件事做好格言的流传	H-4	通过	无	The system also fostered a distinctive approach to software design -- solving a problem by interconnecting simpler tools	无需处置	W1-S3-1
+Q03344	V04	title	V04.2.3.4	三类岗位的协作惯例	H-4	通过	无	行政、文档与测试共享协作惯例	无需处置	W1-S3-1
+Q03345	V04	title	V04.3.1.4	首次教学使用的场景重建	H-4	有问题	P1	Cy got RK05s for the department, Katz told me, but we didn't have a drive, so I drove down to Murray Hill and Ken cut me a 9-track tape.	呈裁	W1-S3-1
+Q03346	V04	title	V04.6.3.1	形象传播的三类载体	H-4	通过	无	Image caption, Dr Ritchie (middle) and Mr Thompson were awarded the US National Medal of Technology	无需处置	W1-S3-1
+Q03347	V04	title	V04.6.4.5	通向第五卷的衔接	H-4	通过	无	人物行迹引出软件工程与叙事记忆的论题，衔接设计避免卷间断裂。	无需处置	W1-S3-1
+Q03348	V05	title	V05.4.1.1	Plan 9 项目的启动动机	H-4	通过	无	Plan9操作系统项目于1985年前后在BellLabsMurrayHill计算科学研究中心...启动	无需处置	W1-S3-1
+Q03349	V07	title	V07.7.2.4	两种叙述的逐条对勘	H-4	通过	无	两种叙述逐条对勘而后裁断。	无需处置	W1-S3-1
+Q03350	V07	title	V07.7.4.3	补证的两条可能渠道	H-4	通过	无	补证可循口述与关联档案两渠道。	无需处置	W1-S3-1
+Q03351	V07	title	V07.9.4.2	两类史学的证据偏好	H-4	通过	无	两类史学证据偏好不同。	无需处置	W1-S3-1
+Q03352	V08	title	V08.1.2.4	进程创建的唯一通道	H-4	有问题	P1	进程创建收敛于单一原语，通道唯一。	呈裁	W1-S3-1
+Q03355	V08	title	V08.10.5.2	两个发起人的分工叙事	H-4	通过	无	两位发起人各有分工叙事。	无需处置	W1-S3-1
+Q03353	V08	title	V08.3.3.5	两类设备的接口差异	H-4	通过	无	两类设备的接口差异反映访问模式差异。	无需处置	W1-S3-1
+Q03354	V08	title	V08.8.4.1	正则引擎的三种实现	H-4	通过	无	三工具的正则引擎实现各异。	无需处置	W1-S3-1
+Q03356	V09	title	V09.1.1.3	两种音译混同的由来	H-4	通过	无	两种汉译的混同源于译名引入路径。	无需处置	W1-S3-1
+Q03357	V10	title	V10.1.3.2	两次更名的政治语境	H-4	待裁	P1	se renombró a DARPA ... el 23 de marzo de 1972, volvió a cambiarse a ARPA el 22 de febrero de 1993 y otra vez a DARPA el 11 de marzo de 1996（https://es.wikipe…	呈裁	W1-S3-1
+Q03358	V10	title	V10.1.5.4	三类主体的角色比较	H-4	通过	无	三类主体角色可作比较。	无需处置	W1-S3-1
+Q03359	V10	title	V10.3.9.2	两个网络的对照实验	H-4	通过	无	两个网络开展对照实验。	无需处置	W1-S3-1
+Q03360	V11	title	V11.1.4.4	三类机构的分工与互补	H-4	通过	无	the larger innovation system that combined the efforts of government, universities, and industry.	无需处置	W1-S3-1
+Q03361	V11	title	V11.2.6.4	三类记录的互校难点	H-4	通过	无	预算、听证与档案三类记录口径不一，互校难点须逐项交代。	无需处置	W1-S3-1
+Q03362	V11	title	V11.4.5.1	证据链的五个环节	H-4	通过	无	合同、项目经理、课题负责人、机构与成果五环节构成完整证据链	无需处置	W1-S3-1
+Q03363	V11	title	V11.4.8.6	三类材料的证据位阶	H-4	通过	无	项目档案、年度报告与会议记录各有证据位阶	无需处置	W1-S3-1
+Q03364	V12	title	V12.3.6.1	两类解释器的语法分野	H-4	通过	无	csh 与 Bourne Shell（sh，Stephen Bourne 开发）在语法结构（C 风格 vs ALGOL 风格）	无需处置	W1-S3-1
+Q03365	V12	title	V12.3.6.4	两条路线的用户分化	H-4	通过	无	用户群沿两条路线分化，分化与工作性质相关。	无需处置	W1-S3-1
+Q03366	V12	title	V12.4.9.3	两类系统的受众分野	H-4	通过	无	两类系统的受众各有分野，分野的成因在机构性质与支持模式。	无需处置	W1-S3-1
+Q03367	V13	title	V13.1.8.1	N00039 合同的资助窗口	H-4	通过	无	funded from sources including ARPA, Order Number 4031, Contract N00039-82-C-0235	无需处置	W1-S3-1
+Q03368	V13	title	V13.1.8.2	订单 4031 的立项脉络	H-4	通过	无	订单层面的立项脉络补全合同细节	无需处置	W1-S3-1
+Q03369	V13	title	V13.2.1.4	1981–1983 的会期节奏	H-4	通过	无	This committee met twice a year between April 1981 and June 1983.（https://www.krsaborio.net/unix-source-code/research/1999/01.html）	无需处置	W1-S3-1
+Q03370	V13	title	V13.2.2.1	4.1a 的 1982 年春交付	H-4	通过	无	4.1a BSD (March '82). This is essentially 4.1BSD plus Rob Gurwitz' TCP/IP stack	无需处置	W1-S3-1
+Q03371	V13	title	V13.3.1.4	发布前的最后冲刺	H-4	通过	无	The official 4.2BSD release came in August 1983.	无需处置	W1-S3-1
+Q03372	V14	title	V14.1.2.1	2.9BSD 的 1983 年发行	H-4	通过	无	2.9 BSD July, 1983	无需处置	W1-S3-1
+Q03373	V14	title	V14.1.4.1	Seismo 分支的 1985 年公告	H-4	通过	无	2.9 BSD-Seismo August, 1985	无需处置	W1-S3-1
+Q03374	V14	title	V14.1.5.1	2.10BSD 的 1987 年时点	H-4	通过	无	2.10 BSD April, 1987（https://www.tuhs.org/Archive/Distributions/RELEASE_DATES）	无需处置	W1-S3-1
+Q03375	V14	title	V14.1.6.1	2.10.1BSD 的 1989 年修订	H-4	通过	无	2.10.1BSD January, 1989	无需处置	W1-S3-1
+Q03376	V14	title	V14.1.9.1	2.11BSD 的 1992 年发行	H-4	通过	无	2.11 BSD February, 1992	无需处置	W1-S3-1
+Q03377	V14	title	V14.3.3.1	公告存档的 1988 年线索	H-4	通过	无	4.3BSD NET/1 1988-11-xx [QCU] ... 1989-01-01 [DOC]	无需处置	W1-S3-1
+Q03378	V14	title	V14.3.3.2	正式发行的 1989 年口径	H-4	通过	无	4.3BSD NET/1 1988-11-xx [QCU] ... 1989-01-01 [DOC]	无需处置	W1-S3-1
+Q03379	V14	title	V14.3.6.1	网络传播的首次实践	H-4	有问题	P1	网络分发源码在此为首次大规模实践，实践的意义超出发行本身。	呈裁	W1-S3-1
+Q03380	V14	title	V14.3.9.2	断代意义与 1989 年节点	H-4	通过	无	Networking Release 1 (Net/1), which was made available to non-licensees of AT&T code and was freely redistribu	无需处置	W1-S3-1
+Q03381	V14	title	V14.5.2.2	十八个月替换的推进速度	H-4	通过	无	Within eighteen months, all of the AT&T utilities had been replaced	无需处置	W1-S3-1
+Q03382	V14	title	V14.5.5.1	形成宣告的 1991 年 6 月节点	H-4	通过	无	4.3BSD NET/2 1991-06-28 [QCU], [DOC]	无需处置	W1-S3-1
+Q03383	V14	title	V14.5.5.3	最后一环的清除作业	H-4	有问题	P2	最后一环的清除作业收尾，作业的完成宣告独立化达成。	观察	W1-S3-1
+Q03384	V15	title	V15.4.7.5	三种取向的交叠分工	H-4	通过	无	三种取向交叠而有分工，交叠处的辨析防止形象扁平化。	无需处置	W1-S3-1
+Q03385	V16	title	V16.1.6.4	三种线索的历史交叠	H-4	通过	无	共享、自由与公益三者在历史中交叠	无需处置	W1-S3-1
+Q03386	V16	title	V16.1.7.1	两种传统的接触范围	H-4	通过	无	代码传统与观念传统的接触面有限而具体	无需处置	W1-S3-1
+Q03387	V16	title	V16.2.1.1	GNU 计划的 1983 年公告	H-4	通过	无	Starting this Thanksgiving I am going to write a complete Unix-compatible software system called GNU	无需处置	W1-S3-1
+Q03388	V16	title	V16.2.5.1	基金会的 1985 年注册	H-4	通过	无	The Free Software Foundation (FSF) is incorporated with Richard Stallman as president	无需处置	W1-S3-1
+Q03389	V16	title	V16.2.6.1	四项自由的条目化	H-4	通过	无	The four essential freedoms A program is free software if the program's users ... have the four essential freedoms	无需处置	W1-S3-1
+Q03390	V16	title	V16.3.1.1	GCC 的 1987 年首发	H-4	通过	无	GCC was first released March 22, 1987, available by FTP from MIT.	无需处置	W1-S3-1
+Q03393	V16	title	V16.3.10.1	内核替代工程的 1990 年起跑	H-4	有问题	P2	GNU Hurd is a collection of microkernel servers written as part of GNU, for the GNU Mach microkernel.	观察	W1-S3-1
+Q03391	V16	title	V16.3.4.1	Bash 的 1989 年首发	H-4	通过	无	created in 1989 by Brian Fox for the GNU Project	无需处置	W1-S3-1
+Q03392	V16	title	V16.3.5.2	三包合并的 2002 年定型	H-4	通过	无	In September 2002, the GNU coreutils were created by merging the earlier packages textutils, shellutils, and f	无需处置	W1-S3-1
+Q03394	V16	title	V16.4.2.2	四项自由的权利结构	H-4	通过	无	With these freedoms, the users (both individually and collectively) control the program and what it does for t	无需处置	W1-S3-1
+Q03395	V16	title	V16.5.1.1	GPL v2 的 1991 年定本	H-4	通过	无	In 1991, a second version of the GNU GPL was published.	无需处置	W1-S3-1
+Q03396	V16	title	V16.5.2.1	库许可的 1991 年出台	H-4	有问题	P2	The GNU Library General Public License was later renamed the GNU Lesser General Public License	观察	W1-S3-1
+Q03397	V16	title	V16.5.2.4	库许可的 1999 年更名调整	H-4	有问题	P2	The GNU Library General Public License was later renamed the GNU Lesser General Public License	观察	W1-S3-1
+Q03398	V16	title	V16.5.3.1	GPL v3 的 2007 年发布	H-4	通过	无	Friday, June 29, 2007—The Free Software Foundation (FSF) today released version 3 of the GNU General Public Li	无需处置	W1-S3-1
+Q03399	V16	title	V16.5.3.2	十八个月的公开征询	H-4	有问题	P2	Friday, June 29, 2007—The Free Software Foundation (FSF) today released version 3 of the GNU General Public Li	观察	W1-S3-1
+Q03400	V16	title	V16.6.1.1	开源话语的 1998 年分出	H-4	通过	无	In 1998, a part of the free software community splintered off and began campaigning in the name of 'open sourc	无需处置	W1-S3-1
+Q03401	V16	title	V16.6.2.1	法律后援的 2005 年设立	H-4	有问题	P2	Eben Moglen, FSF Director and Legal Counsel, announced the creation of the Software Freedom Law Center (SFLC).	观察	W1-S3-1
+Q03402	V16	title	V16.6.2.2	SFC 的 2006 年分立	H-4	有问题	P2	The Software Freedom Law Center (SFLC), provider of pro-bono legal services ...	观察	W1-S3-1
+Q03403	V16	title	V16.6.3.1	创始会长的 2019 年去职	H-4	通过	无	On September 16, 2019, Richard M. Stallman, founder and president of the Free Software Foundation, resigned as	无需处置	W1-S3-1
+Q03404	V16	title	V16.6.4.1	四十年纪念的 2023 年庆典	H-4	通过	无	On September 27, the Free Software Foundation (FSF) celebrates the 40th anniversary of the GNU operating syste	无需处置	W1-S3-1
+Q03405	V17	title	V17.1.1.1	MINIX 的 1987 年问世	H-4	通过	无	It was called MINIX and was released in 1987 with its complete source code for anyone to study or modify.	无需处置	W1-S3-1
+Q03406	V17	title	V17.3.1.3	二次开发的练习场	H-4	通过	无	it also discusses one particular system—MINIX 3—a UNIX-compatible operating system in detail	无需处置	W1-S3-1
+Q03407	V17	title	V17.4.2.2	入学后的 1988 年专业转向	H-4	有问题	P2	Linus Benedict Torvalds (born 28 December 1969) is a Finnish and American software engineer	观察	W1-S3-1
+Q03408	V17	title	V17.4.2.4	购机节点的 1991 年意义	H-4	有问题	P2	Linus Benedict Torvalds (born 28 December 1969) is a Finnish and American software engineer	观察	W1-S3-1
+Q03409	V18	title	V18.1.1.1	Linux 项目的 1991 年产生	H-4	通过	无	1991: The Linux kernel is publicly announced on 25 August by the 21-year-old Finnish student Linus Benedict To	无需处置	W1-S3-1
+Q03410	V18	title	V18.4.1.1	内核改用 GPL v2 的 1992 年决定	H-4	通过	无	In 1992, he suggested releasing the kernel under the GNU General Public License.	无需处置	W1-S3-1
+Q03411	V18	title	V18.4.2.2	1.0 的 1994 年发布	H-4	通过	无	linux-1.0.tar.gz 13-Mar-1994	无需处置	W1-S3-1
+Q03412	V18	title	V18.4.5.1	Android 的 2008 年登场	H-4	通过	无	First released in 2008, Android is the most popular operating system in the world	无需处置	W1-S3-1
+Q03413	V18	title	V18.6.3.3	两类聚会的议题划界	H-4	通过	无	两类聚会的议题有分工，分工的边界见筹备说明。	无需处置	W1-S3-1
+Q03414	V18	title	V18.6.6.2	类型系统路线的唯一性断言	H-4	通过	无	以 Rice 定理论证类型系统改进是唯一路径	无需处置	W1-S3-1
+Q03415	V18	title	V18.6.7.1	一次选举档案的复原	H-4	通过	无	一次选举的档案可复原，复原的环节见公告链。	无需处置	W1-S3-1
+Q03416	V19	title	V19.1.2.1	分拆执行的 1984 年时点	H-4	通过	无	Divestiture took place, as called for in the MFJ, on January 1, 1984.	无需处置	W1-S3-1
+Q03417	V19	title	V19.1.2.2	母体与七家地区公司的切割	H-4	通过	无	In 1984, AT&T divested itself of its local Bell telephone companies	无需处置	W1-S3-1
+Q03418	V19	title	V19.1.4.1	System III 的 1982 年发行	H-4	通过	无	1982. AT&T's UNIX Systems Group releases System III UNIX.	无需处置	W1-S3-1
+Q03419	V19	title	V19.1.4.2	System V 的 1983 年定本	H-4	通过	无	1983. AT&T's UNIX System Development Labs releas	无需处置	W1-S3-1
+Q03420	V19	title	V19.1.4.3	两条产品线的并立	H-4	通过	无	教育线与商业线并立发行，并立的口径见发行记录。	无需处置	W1-S3-1
+Q03421	V19	title	V19.1.7.1	联盟于 1987 年的公开化	H-4	通过	无	in October 1987, AT&T and the technical workstation leader Sun Microsystems announced their intention to pursu	无需处置	W1-S3-1
+Q03422	V19	title	V19.2.1.1	OSF 的 1988 年组建	H-4	通过	无	The new group consists of I.B.M., Digital Equipment, Hewlett-Packard and Apollo Computer as well as Europe's G	无需处置	W1-S3-1
+Q03423	V19	title	V19.2.1.2	七家创始成员的构成	H-4	有问题	P0	OSF was formed in May of 1988 with eight original sponsors: Apollo Computer Inc., Digital Equipment Corporation, Groupe Bull, Hewlett-Packard, IBM, Nixdorf, P…	呈裁	W1-S3-1
+Q03424	V19	title	V19.2.2.1	UI 组织的 1988 年成立	H-4	通过	无	Unix International (UI) was an association created in 1988 to promote open standards	无需处置	W1-S3-1
+Q03425	V19	title	V19.2.3.4	两案合流的 1993 年妥协	H-4	有问题	P2	两案在九三年经共识合流，妥协的产物见联合声明。	观察	W1-S3-1
+Q03426	V19	title	V19.2.4.1	SVR4 的 1989 年发布	H-4	通过	无	1989 Unix System Labs, an AT&T Bell Labs subsidiary, releases System V Release 4 (SVR4)	无需处置	W1-S3-1
+Q03427	V19	title	V19.2.4.3	厂商背书的规模（1988）	H-4	有问题	P2	1988 年联合公告所列厂商的背书规模，名单以公告原文为据。	观察	W1-S3-1
+Q03428	V19	title	V19.3.1.1	USL 的 1989 年公司化	H-4	待裁	P1	June 25, 1990 -- PRNewswire -- AT&T's (NYSE: T) UNIX Software Operation today was renamed UN...（https://www.krsaborio.net/unix/research/1990/0625.htm）	呈裁	W1-S3-1
+Q03429	V19	title	V19.3.6.1	收购在 1993 年的收官	H-4	通过	无	Nonetheless, the deal was finalized in June 1993.	无需处置	W1-S3-1
+Q03430	V19	title	V19.4.2.1	BSD/386 的 1992 年推出	H-4	通过	无	BSDI's first product is called BSD/386 and includes a kernel and associated utilities.	无需处置	W1-S3-1
+Q03431	V19	title	V19.4.4.3	商标禁令的 1992 年和解	H-4	通过	无	the entry, on April 29, 1992, of a Stipulated Order permanently enjoining BSDI's use of the UNIX(R) mark	无需处置	W1-S3-1
+Q03432	V20	title	V20.1.1.1	SunOS 的 1982 年起点	H-4	有问题	P2	SunOS is a Unix-branded operating system developed by Sun Microsystems	观察	W1-S3-1
+Q03433	V20	title	V20.1.1.3	转向 System V 的 1991 年公开宣告	H-4	通过	无	On September 4, 1991, Sun announced that its next major OS release would switch from its BSD-derived source ba	无需处置	W1-S3-1
+Q03434	V20	title	V20.1.2.1	AIX 的 1986 年入场	H-4	通过	无	1986. ... IBM releases AIX 2 for the RT server.	无需处置	W1-S3-1
+Q03435	V20	title	V20.1.4.3	4D1-3.0 的 1988 年起点	H-4	通过	无	The earliest common version is 4D1-3.0 (1988). IRIX 3.x was based on UNIX System V Release 3 with 4.3BSD enhan	无需处置	W1-S3-1
+Q03436	V20	title	V20.1.5.1	Ultrix 的 1984 年首发	H-4	有问题	P2	The first native VAX UNIX product from DEC was Ultrix-32, based on 4.2BSD	观察	W1-S3-1
+Q03437	V20	title	V20.1.6.1	Xenix 的 1980 年发行	H-4	通过	无	1980. Microsoft releases Xenix, a PC-bas	无需处置	W1-S3-1
+Q03438	V20	title	V20.1.7.3	系统业务的 1995 年易主	H-4	通过	无	1995. SCO buys Novell's UNIX business.	无需处置	W1-S3-1
+Q03439	V20	title	V20.2.1.1	POSIX 的 1988 年定本	H-4	通过	无	In 1988, standardization efforts resulted in IEEE 1003 (also registered as ISO/IEC 9945), or POSIX.1-1988	无需处置	W1-S3-1
+Q03440	V20	title	V20.2.3.1	COSE 的 1993 年联合声明	H-4	通过	无	In May, the Common Open Software Environment (COSE) initiative was announced by the major players in the UNIX	无需处置	W1-S3-1
+Q03441	V20	title	V20.2.4.4	两组织的 1996 年合并	H-4	通过	无	In February 1996 OSF merged with X/Open to become The Open Group.	无需处置	W1-S3-1
+Q03442	V20	title	V20.3.2.1	NT 的 1993 年首发	H-4	通过	无	as Windows NT 3.1 on July 27, 1993	无需处置	W1-S3-1
+Q03443	V21	title	V21.2.5.2	四项革新的内容构成	H-4	通过	无	角色安全、环形缓冲、自序配置与模块化内核构成公认的四项革新。	无需处置	W1-S3-1
+Q03444	V21	title	V21.3.5.5	三条主线的指控结构	H-4	通过	无	其一，386BSD 0.1（1992 年 7 月 14 日）发布后 Bill Jolitz 单人维护补丁长期积压...**不存在 0.2 公开版本**	无需处置	W1-S3-1
+Q03445	V22	title	V22.3.1.2	四项主张的法定依据	H-4	通过	无	This is an action for trademark infringement, false advertising and unfair competition under the federal Lanham Trademark Act	无需处置	W1-S3-1
+Q03446	V22	title	V22.3.3.2	其后三次裁定的序列	H-4	通过	无	3 月、6 月与 9 月裁定构成序列，序列由 Sorenson docket 补全。	无需处置	W1-S3-1
+Q03447	V22	title	V22.3.6.2	七十个文件的注记范围	H-4	有问题	P2	Only three files had to be removed from Networking Release 2 and changes were made to other files.	观察	W1-S3-1
+Q03448	V22	title	V22.4.4.3	商标说的另一种表述	H-4	通过	无	商标说的另一种表述，表述代表另一种判断。	无需处置	W1-S3-1
+Q03449	V23	title	V23.2.1.5	签署前的最后博弈	H-4	通过	无	1994 年 2 月 7 日 BSDI 总裁 Rob Kolstad 在 unix.bsd 宣布诉讼于 2 月 4 日（周五）和解	无需处置	W1-S3-1
+Q03450	V23	title	V23.2.2.4	三个月宽限期的设定	H-4	通过	无	（4）USL 给予争议文件的现有用户三个月宽限期。	无需处置	W1-S3-1
+Q03451	V24	title	V24.2.1.1	转轨成立的两项前提	H-4	通过	无	Although only three files having to do with System V shared memory and semaphores were removed	无需处置	W1-S3-1
+Q03452	V24	title	V24.3.2.1	目录层级的四类构成	H-4	通过	无	内核、库、命令与文档四类分层，分层稳定延续至分支时代。	无需处置	W1-S3-1
+Q03453	V25	title	V25.2.1.2	课题组的最后阶段	H-4	通过	无	In 1995, following the release of 4.4BSD-Lite Release 2, the Computer Systems Research Group was dissolved	无需处置	W1-S3-1
+Q03454	V26	title	V26.1.5.2	三条主干的共同条件	H-4	通过	无	共同条件含源码可得、社区成形与发布机制三项。	无需处置	W1-S3-1
+Q03455	V26	title	V26.2.2.1	版本年表的四个阶段	H-4	有问题	P2	年表可分四段，每段对应一次代码基的更换。	观察	W1-S3-1
+Q03456	V26	title	V26.2.6.4	两条路线的寿命比较	H-4	通过	无	两条路线寿命相差十余年，比较显示商业窗口的决定作用。	无需处置	W1-S3-1
+Q03457	V26	title	V26.4.2.1	授权关系的两个层级	H-4	通过	无	授权分机构级与产品级两层，层级决定代码回流路径。	无需处置	W1-S3-1
+Q03458	V26	title	V26.4.3.3	机构合作的三种形式	H-4	通过	无	合作以合同、访问学者与联合测试三种形式出现。	无需处置	W1-S3-1
+Q03459	V27	title	V27.4.6.1	三次分叉的共同机制	H-4	有问题	P2	同一机制在十余年内重复出现三次。	观察	W1-S3-1
+Q03460	V27	title	V27.4.6.3	与首次分叉的差别	H-4	有问题	P2	后续分叉规模更小，程序更完备。	观察	W1-S3-1
+Q03461	V27	title	V27.5.2.4	四个案例的横向比较	H-4	通过	无	四系比较显示身份形成与目标分化不同步。	无需处置	W1-S3-1
+Q03462	V28	title	V28.6.4.2	两类材料的时间跨度	H-4	通过	无	两类材料时间跨度大，须分开使用。	无需处置	W1-S3-1
+Q03463	V29	title	V29.3.2.1	缩写的首次出现年代	H-4	有问题	P1	首次出现可考于会议文献，年代明确。	呈裁	W1-S3-1
+Q03464	V29	title	V29.5.6.3	倒投的四类常见情形	H-4	有问题	P1	形态含以开源释自由、以社区释共同体。	呈裁	W1-S3-1
+Q03465	V29	title	V29.5.7.5	补证的三条实际渠道	H-4	有问题	P1	路径在档案开放与新口述采集。	呈裁	W1-S3-1
+Q03466	V29	title	V29.6.1.4	定义争议的三个焦点	H-4	有问题	P1	焦点在于是否包含分支与商业变种。	呈裁	W1-S3-1
+Q03467	V29	title	V29.6.2.3	商业吸收的三条途径	H-4	通过	无	方式含授权、雇佣与产品化。	无需处置	W1-S3-1
+Q03468	V29	title	V29.6.5.3	渠道分化的三个阶段	H-4	有问题	P2	渠道从共享镜像转为各自建设。	观察	W1-S3-1
+Q03469	V29	title	V29.7.2.3	变异的三个基本规律	H-4	有问题	P1	规律是细节简化、因果强化。	呈裁	W1-S3-1
+Q03470	V29	title	V29.8.4.1	首次出处的判定标准	H-4	通过	无	标准为同期文本的最早用例。	无需处置	W1-S3-1
+Q03476	V30	title	V30.10.4.1	分歧的三种基本类型	H-4	通过	无	类型含事实、动机与评价三类。	无需处置	W1-S3-1
+Q03471	V30	title	V30.2.3.1	文档集的四类分卷	H-4	通过	无	文档集分四类分卷，分类沿用至今。	无需处置	W1-S3-1
+Q03472	V30	title	V30.5.3.4	痕迹考据的三条取径	H-4	通过	无	方法为合著、致谢与会议记录三源并勘。	无需处置	W1-S3-1
+Q03473	V30	title	V30.9.1.1	分期的两种口径辨	H-4	通过	无	口径以资助起讫与组织解散为界，两说并存。	无需处置	W1-S3-1
+Q03474	V30	title	V30.9.2.1	术语最早用例的考订	H-4	有问题	P1	Berkeley Software Distribution (BSD) began as a UNIX derivative, created by researchers and students at the University of California, Berkeley	呈裁	W1-S3-1
+Q03475	V30	title	V30.9.4.3	定位的两种叙述辨	H-4	通过	无	叙述分技术遗产与制度案例两支。	无需处置	W1-S3-1
+Q03477	V31	title	V31.2.4.2	一致性模型的两种路线	H-4	通过	无	同步写保证与事后检查构成两种一致性路径。	无需处置	W1-S3-1
+Q03478	V31	title	V31.5.1.5	防火墙部署的两类形态	H-4	通过	无	窗口内部署以主机与网关两类形态存在。	无需处置	W1-S3-1
+Q03479	V31	title	V31.8.2.5	RFC 1034／1035 的标准地基	H-4	通过	无	RFC 1034 ... November 1987. RFC 1035 ... November 1987.	无需处置	W1-S3-1
+Q03480	V32	title	V32.3.2.1	四项自由的条款来源	H-4	通过	无	The four essential freedoms ... The freedom to run the program as you wish, for any purpose (freedom 0).	无需处置	W1-S3-1
+Q03481	V32	title	V32.3.4.1	四项自由的价值序列	H-4	通过	无	自由 0–3 以使用、研究、分发、改进为序，构成价值排序。	无需处置	W1-S3-1
+Q03482	V32	title	V32.3.5.4	三种形态的决策链	H-4	通过	无	FSF 的版权执行、Debian 的开发者表决、OSI 的董事会批准构成三种决策链。	无需处置	W1-S3-1
+Q03483	V33	title	V33.1.1.1	遮蔽的操作定义与三类形态	H-4	通过	无	整体栈转喻、称谓替代与贡献隐匿，为全卷测量张本。	无需处置	W1-S3-1
+Q03484	V33	title	V33.3.2.3	七项指控的论据结构	H-4	通过	无	七罪清单从隐私、教育到垄断，论据结构分层可析。	无需处置	W1-S3-1
+Q03485	V34	title	V34.1.1.1	“类 UNIX”称谓的两个所指	H-4	通过	无	术语既指符合接口惯例的系统，也常被误当作 UNIX 的代码后裔，两义须分开。	无需处置	W1-S3-1
+Q03486	V34	title	V34.1.6.5	三类关系的混同与澄清	H-4	通过	无	环境、参照与来源常被混为一谈，澄清须先立定义。	无需处置	W1-S3-1
+Q03487	V34	title	V34.2.3.2	结构同构与表达唯一的区分	H-4	通过	无	结构相似可能源于问题约束，表达一致才更接近复制。	无需处置	W1-S3-1
+Q03488	V34	title	V34.2.4.4	三类关系的判别次序	H-4	通过	无	先排除共同传统，再辨影响，最后才谈直接继承。	无需处置	W1-S3-1
+Q03489	V35	title	V35.1.10.5	两类争议的处置程序差异	H-4	通过	无	对照两类争议的处置程序，列出程序性差异清单。	无需处置	W1-S3-1
+Q03490	V35	title	V35.3.1.1	两类称谓的混用实例取样	H-4	通过	无	取样“Unix 软件”与“BSD 软件”称谓混用的实例并分类。	无需处置	W1-S3-1
+Q03491	V35	title	V35.3.9.3	再解释的两个反差个案	H-4	通过	无	以两个反差个案界定再解释强度的分布区间。	无需处置	W1-S3-1
+Q03497	V36	title	V36.13.6.1	历史架构的最后窗口	H-4	有问题	P1	MIPS 在 13.x 成为最后支持周期，窗口自此关闭。	呈裁	W1-S3-1
+Q03498	V36	title	V36.13.6.2	最后支持的公告措辞	H-4	有问题	P2	最后支持以发行说明公告，公告给出迁移建议。	观察	W1-S3-1
+Q03499	V36	title	V36.16.1.2	组织方式的三项要件	H-4	通过	无	新组织方式须具备仓库、密钥与元数据三项要件。	无需处置	W1-S3-1
+Q03500	V36	title	V36.16.5.1	四条流程的汇合点	H-4	通过	无	安装、更新、构建与封装在包模型下汇合，汇合点为元数据。	无需处置	W1-S3-1
+Q03493	V36	title	V36.3.10.2	Windows 2000 的混合内核	H-4	有问题	P2	Windows 2000 以混合内核与优先级调度进入服务器市场。	观察	W1-S3-1
+Q03492	V36	title	V36.3.7.1	遗产进入现代基线的最后一程	H-4	有问题	P2	3.x 是 BSD 旧遗产进入现代 FreeBSD 的最后一程。	观察	W1-S3-1
+Q03494	V36	title	V36.4.7.1	传统形态的最后完备	H-4	有问题	P1	4.x 被视为 UNIX 血统中最稳定高效的系统之一，形态至此完备。	呈裁	W1-S3-1
+Q03495	V36	title	V36.4.8.2	Windows 2000 的内核路线	H-4	有问题	P2	Windows 2000 起 NT 名称淡出而内核路线延续，产品线整合完成。	观察	W1-S3-1
+Q03496	V36	title	V36.8.9.2	Windows Server 2008 R2 的虚拟化	H-4	有问题	P2	Windows Server 2008 R2 以 Hyper-V 对位，虚拟化成为服务器标配。	观察	W1-S3-1
+Q03501	V37	title	V37.12.13.2	32 位时间与 2038 年问题	H-4	通过	无	Support for executing 32-bit binaries on 64-bit platforms via the COMPAT_FREEBSD32 option will continue	无需处置	W1-S3-1
+Q03502	V38	title	V38.2.3.3	文档工程的三类职责	H-4	通过	无	文档工程兼管提交审批、构建与发布文档，职责横跨三类事务。	无需处置	W1-S3-1
+Q03503	V38	title	V38.6.2.1	分叉叙事的两种版本	H-4	通过	无	分叉叙事存在两套版本，版本差异即记忆与史实的接缝。	无需处置	W1-S3-1
+Q03504	V39	title	V39.1.5.1	4.4BSD 的最后全集	H-4	有问题	P1	4.4BSD 是研究系统形态的最后一次完整交付，全集规模达到历史顶点。	呈裁	W1-S3-1
+Q03505	V39	title	V39.4.1.2	名称使用的最早记录	H-4	通过	无	we ALL had this in mind when the project adopted the "FreeBSD" name on June 19 1993.（https://freebsdfoundation.org/wp-content/uploads/2023/06/jones_lawrence_i…	无需处置	W1-S3-1
+Q03506	V39	title	V39.4.2.3	吉祥物的二次创作	H-4	通过	无	There is a gallery of FreeBSD related publications that use variations of the daemon graphic.	无需处置	W1-S3-1
+Q03507	V39	title	V39.7.9.3	两种自由的概念并置	H-4	通过	无	两种自由可并置比较，并置框架取自思想史的二分。	无需处置	W1-S3-1
+Q03508	V39	title	V39.8.6.3	共同体反应的两种声音	H-4	通过	无	共同体反应分为支持与疑虑两类，声音在邮件中并存。	无需处置	W1-S3-1
+Q03509	V39	title	V39.8.8.3	两类批评的交叠地带	H-4	通过	无	两类批评在代表性与问责制上交叠，交叠使责任归属模糊。	无需处置	W1-S3-1
+Q03510	V40	title	V40.1.7.1	技术方向争论的三个焦点	H-4	通过	无	争论集中于平台取舍、代码整洁与发行节奏三处	无需处置	W1-S3-1
+Q03511	V40	title	V40.7.3.6	虚拟化路线的两种取向	H-4	通过	无	路线比较在宿主型与监控器型之间展开。	无需处置	W1-S3-1
+Q03512	V40	title	V40.8.6.4	用户迁移的唯一通道	H-4	有问题	P1	迁移路径以升级到后继主线为唯一通道。	呈裁	W1-S3-1
+Q03513	V41	title	V41.1.1.3	三条代码承继线的分岔	H-4	通过	无	NetBSD took its roots from the original UCB 4.3BSD via the Net/2 release and 386BSD	无需处置	W1-S3-1
+Q03514	V41	title	V41.1.7.5	两次发行间的驱动归并	H-4	通过	无	The functions were merged to work on generic ``spaces'' early in the NetBSD 1.3 development cycle, and many drivers were converted to use them.	无需处置	W1-S3-1
+Q03517	V41	title	V41.11.3.1	技术贡献的三个门类	H-4	通过	无	贡献可分为抽象层、工具与协议三类。	无需处置	W1-S3-1
+Q03515	V41	title	V41.3.3.5	三类组件的共通底座	H-4	通过	无	文件系统、驱动与协议栈共用同一运行底座。	无需处置	W1-S3-1
+Q03516	V41	title	V41.7.4.1	net80211 的框架骨架	H-4	通过	无	net80211 以框架承载无线协议共性。	无需处置	W1-S3-1
+Q03518	V42	title	V42.1.4.3	去职公告的核心组说明（1994）	H-4	通过	无	On December 20, Theo de Raadt was asked to resign from the NetBSD Project	无需处置	W1-S3-1
+Q03519	V42	title	V42.1.6.1	去职公告的版本并陈（1994）	H-4	通过	无	On December 20, Theo de Raadt was asked to resign from the NetBSD Project by the remaining members of 'core'.	无需处置	W1-S3-1
+Q03520	V42	title	V42.2.1.3	驱动一次编写的工程原则	H-4	通过	无	This means that the code is written once, and used many times in many places.	无需处置	W1-S3-1
+Q03521	V42	title	V42.2.2.4	1990s 世代移植者的构成	H-4	通过	无	The following table shows the date of inclusion of each port matched with NetBSD releases.	无需处置	W1-S3-1
+Q03522	V42	title	V42.2.6.1	pc532 的移除记录（2008）	H-4	通过	无	1993/09/09 (removed on 2008/01/07)	无需处置	W1-S3-1
+Q03523	V42	title	V42.2.6.2	playstation2 的移除记录（2009）	H-4	有问题	P2	1993/09/09 (removed on 2008/01/07)	观察	W1-S3-1
+Q03524	V42	title	V42.4.4.1	去职事件的公告记录（1994）	H-4	通过	无	On December 20, Theo de Raadt was asked to resign from the NetBSD Project by the remaining members of 'core'.	无需处置	W1-S3-1
+Q03525	V43	title	V43.3.1.2	邮件协作的最早起点	H-4	有问题	P2	NetBSD was one of the first major open source projects to be organized collaboratively entirely over the internet ... since 1993.	预授权落账	W1-S3-1
+Q03526	V43	title	V43.5.3.5	三条款代码的兼容保留	H-4	通过	无	“3-clause” BSD licensed code (code carrying the endorsement but not the advertising clause) copyrighted by others is still acceptable for inclusion in NetBSD.	无需处置	W1-S3-1
+Q03527	V43	title	V43.5.4.1	二条款转向的表决年份	H-4	通过	无	In 2008, following on from a vote amongst the membership of the NetBSD Foundation	无需处置	W1-S3-1
+Q03528	V44	title	V44.3.9.3	首次导入的精确时刻	H-4	通过	无	The CVS import of the OpenBSD src tree was done at 08:37:01, Oct 18, 1995 GMT	无需处置	W1-S3-1
+Q03529	V44	title	V44.6.5.4	每次引导的唯一内核	H-4	通过	无	allows the .o files of the kernel to be relinked in a random order	无需处置	W1-S3-1
+Q03530	V44	title	V44.6.8.4	首次调用的行为改写	H-4	通过	无	A few changes to POSIX behaviour come into effect on the first call to pledge ()	无需处置	W1-S3-1
+Q03537	V45	title	V45.11.1.1	官方支持的三项条件	H-4	通过	无	Official support means that the release install media is known to work, that the architecture can self-compile itself, and that most of the basic tools exist …	无需处置	W1-S3-1
+Q03531	V45	title	V45.2.9.2	两架构的首次投放	H-4	通过	无	New RETGUARD security mechanism on amd64 and arm64	无需处置	W1-S3-1
+Q03532	V45	title	V45.3.4.3	首次出现的版本标注	H-4	通过	无	The pledge () system call first appeared in OpenBSD 5.9 .	无需处置	W1-S3-1
+Q03533	V45	title	V45.4.4.1	流量规范化的三项	H-4	通过	无	TRAFFIC NORMALISATION includes scrub, fragment handling, and blocking spoofed traffic.	无需处置	W1-S3-1
+Q03534	V45	title	V45.5.1.2	三类发送主机的判分	H-4	通过	无	spamd considers sending hosts to be of three types: blacklisted hosts are diverted to spamd and tarpitted	无需处置	W1-S3-1
+Q03535	V45	title	V45.8.7.1	补丁工具的四项动作	H-4	通过	无	syspatch is a utility to fetch, verify, install and revert OpenBSD binary patches.	无需处置	W1-S3-1
+Q03536	V45	title	V45.9.3.2	三种用途的固定定位	H-4	通过	无	Its main purposes are to run as a load-balancer, application layer gateway, or transparent proxy.	无需处置	W1-S3-1
+Q03538	V46	title	V46.3.4.2	路由守护进程的首次发布	H-4	通过	无	The bgpd program first appeared in OpenBSD 3.5	无需处置	W1-S3-1
+Q03539	V47	title	V47.2.1.1	信条的三类文本载体	H-4	通过	无	Like many readers of the BUGTRAQ mailing list , we believe in full disclosure of security problems.	无需处置	W1-S3-1
+Q03540	V47	title	V47.3.1.1	分叉时点的两种记载	H-4	通过	无	The CVS import of the OpenBSD src tree was done at 08:37:01, Oct 18, 1995 GMT .	无需处置	W1-S3-1
+Q03541	V47	title	V47.3.8.1	补丁提交的唯一入口	H-4	有问题	P1	New features are accepted, especially with code that implements your suggested new feature.	呈裁	W1-S3-1
+Q03542	V47	title	V47.4.1.1	两条款文本的删减理由	H-4	通过	无	The ISC copyright is functionally equivalent to a two-term BSD copyright with language removed that is made unnecessary by the Berne convention.	无需处置	W1-S3-1
+Q03543	V47	title	V47.4.1.2	许可修改的三种后果	H-4	通过	无	改动措辞只能收窄自由、无实质变化或致条款失效。	无需处置	W1-S3-1
+Q03544	V47	title	V47.4.3.1	成果扩散的三条路径	H-4	通过	无	成果经组件、整机与衍生项目三条路径外流，路径各有证据。	无需处置	W1-S3-1
+Q03545	V47	title	V47.5.2.1	声誉证据的两类来源	H-4	通过	无	声誉证据分自述与他述两类，两类须分开评估不可混计。	无需处置	W1-S3-1
+Q03546	V47	title	V47.5.3.1	两次远程漏洞的公告原文	H-4	通过	无	两次事故均有公告原文，原文给出影响面与补丁路径。	无需处置	W1-S3-1
+Q03547	V47	title	V47.7.1.1	美学证据的四类载体	H-4	通过	无	证据分布于提交记录、邮件、手册页与发行物，四类各有偏向。	无需处置	W1-S3-1
+Q03549	V48	title	V48.1.12.2	并发模型的两条分野	H-4	通过	无	MPSAFE work - Push the BGL deeper into the kernel call stack for many system calls.	无需处置	W1-S3-1
+Q03548	V48	title	V48.1.3.3	并发路线的两种取向	H-4	通过	无	We also made significant progress in pushing the big giant lock inward	无需处置	W1-S3-1
+Q03550	V48	title	V48.5.2.1	NVMe 驱动的首次出现	H-4	通过	无	NVMe support We now have a NVMe driver (PCIe SSDs).	无需处置	W1-S3-1
+Q03551	V48	title	V48.7.11.2	维护模式的两种对照	H-4	通过	无	维护模式与对照分支相异。	无需处置	W1-S3-1
+Q03552	V49	title	V49.4.1.4	构想在 2003 年的处境	H-4	有问题	P2	构想提出于 2003 年前后，语境含硬件价格、集群研究与开源协作条件。	观察	W1-S3-1
+Q03553	V49	title	V49.4.3.4	两条技术线的交叠部分	H-4	通过	无	文件系统线与集群线的交叠范围有限	无需处置	W1-S3-1
+Q03554	V50	title	V50.1.3.2	项目意图的三项声明	H-4	通过	无	It is the intent of this project to take over development of the 4.x tree, to move kernel development along an entirely new path towards SMP, and to completel…	无需处置	W1-S3-1
+Q03555	V50	title	V50.5.2.5	转载与二次叙述的痕迹	H-4	通过	无	wholesale copies of this Digest back in I think 2008	无需处置	W1-S3-1
+Q03556	V51	title	V51.1.1.5	两条可扩展性路线的分歧	H-4	通过	无	This proving work involved implementing much of the earlier UP->SMP converstion work ... under an entirely new mutex-free light weight kernel threading infras…	无需处置	W1-S3-1
+Q03557	V51	title	V51.2.3.4	两种可扩展性判断的口径	H-4	通过	无	I considered starting with a 5.x base but it is simply too heavily mutexed	无需处置	W1-S3-1
+Q03558	V51	title	V51.2.3.6	两条路线的公开表述	H-4	通过	无	Fine-grained locking in the kernel paves the road for much higher efficiency of multi-processor systems.	无需处置	W1-S3-1
+Q03559	V51	title	V51.4.1.1	三条款文本的沿用	H-4	通过	无	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	无需处置	W1-S3-1
+Q03560	V51	title	V51.5.1.1	公告所列的三项工程目标	H-4	通过	无	It is the intent of this project to take over development of the 4.x tree, to move kernel development along an entirely new path towards SMP, and to completel…	无需处置	W1-S3-1
+Q03561	V51	title	V51.5.2.4	文件系统基准的分项出入（2011）	H-4	有问题	P2	Not only is HAMMER generally faster than the common UFS file-system, but it also has a much greater feature-set.	观察	W1-S3-1

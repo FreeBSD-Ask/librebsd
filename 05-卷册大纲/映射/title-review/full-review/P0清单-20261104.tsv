@@ -1,0 +1,7 @@
+序号	vol	对象	指标组	结论	严重度	问题描述	处置	来源分片
+P0-001	V19	V19.2.1.2	H-4	有问题	P0	OSF was formed in May of 1988 with eight original sponsors: Apollo Computer Inc., Digital Equipment Corporation, Groupe Bull, Hewlett-Packard, IBM, Nixdorf, P…	呈裁	W1_S3_1
+P0-002	V64	V64.1.7.3	H-4	有问题	P0	There are two kinds of doc commit bits: translator commit bit｜论题句称“doceng 章程无两类表述”，被自证引文证伪	呈裁	W1_S3_2
+P0-003	V67	V67.9.2.1	H-1	有问题	P0	题名“线下转轨”称转向线下；论题原文“2020 年 BSDCan 改为全线上会议”称改为全线上，方向相悖，题名事实错误。	呈裁	W2_7
+P0-004	V68	V68.3.1.3	H-4	有问题	P0	2005 年 80%、2006 年 82%、2007 年 81%、2016 年 85.6%、2020 年 92.32%、2021 年 93.27%｜2016 非全序列低点	呈裁	W1_S3_2
+P0-005	V68	V68.8.3.1	H-4	有问题	P0	https://www.freebsd.org/status/report-2015-04-2015-06.html :: these four were accepted: NE2000 device emulation｜ptnetmap support in bhyve｜论题作 AHCI／virtio 与一手不符	呈裁	W1_S3_2
+P0-006	V69	V69.2.14.2	H-1	有问题	P0	题名作“十五讲”，论题作“十二讲”，数字相悖；论题原文“McKusick 的十二讲课程以录像流传。”；且 M-J2 命中论题拉丁名，须一并改作既定中译“麦库西克”。	预授权落账	W2_8

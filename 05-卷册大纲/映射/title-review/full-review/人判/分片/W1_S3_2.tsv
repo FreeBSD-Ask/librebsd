@@ -1,0 +1,229 @@
+queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposition	reviewer
+Q03562	V51	title	V51.5.3.1	贡献者规模的两种口径	H-4	有问题	P2	论题列访谈、维基、手册三种口径，题名作“两种”；引文 “one or two dozen” regular contributors	观察	W1-S3-2
+Q03563	V51	title	V51.5.3.5	自述与流程的三类载体	H-4	通过	无	Matthew Dillon, one of the developers for FreeBSD, was growing increasingly frustrated with the FreeBSD Project's direction for release 5.	无需处置	W1-S3-2
+Q03564	V51	title	V51.6.4.1	首次可证出处的判定	H-4	通过	无	One line summary of your change (less than 50 characters).	无需处置	W1-S3-2
+Q03565	V51	title	V51.7.6.4	批评文本的两类载体	H-4	通过	无	就检索所见，外部批评多存于第三方评测与社区摘要，学术文本少见。	无需处置	W1-S3-2
+Q03566	V51	title	V51.7.7.6	参照文献的三件构成	H-4	通过	无	One line summary of your change (less than 50 characters).	无需处置	W1-S3-2
+Q03567	V52	title	V52.1.1.4	两人小组的 2001 年起步	H-4	通过	无	2001 – Development of ZFS started with two engineers at Sun Microsystems.	无需处置	W1-S3-2
+Q03568	V52	title	V52.1.1.5	三项设计目标的并列陈述	H-4	通过	无	Pooled storage: adding physical storage devices to a pool, and allocating storage space from that shared pool. Space is available to all file systems and volume	无需处置	W1-S3-2
+Q03569	V52	title	V52.1.4.1	HAMMER 设计九个月的实施节奏	H-4	通过	无	Hammer is a new BSD file-system written by the author. Design on the file-system began in early 2007 and took approximately 9 months, and the implementation pha	无需处置	W1-S3-2
+Q03570	V52	title	V52.2.1.2	OpenBSD 多处理器支持的 2000 年起点	H-4	通过	无	The OpenBSD project started work on SMP support for various architectures in February 2000.	无需处置	W1-S3-2
+Q03571	V52	title	V52.3.3.6	云平台清单的四家并列	H-4	通过	无	FreeBSD 15.0-RELEASE is also available on these cloud hosting platforms:	无需处置	W1-S3-2
+Q03572	V52	title	V52.4.5.3	首次导入的 1999 年节点	H-4	通过	无	The initial import was done on Sep 26, 1999	无需处置	W1-S3-2
+Q03573	V52	title	V52.4.7.2	eBPF 在 Linux 的 2014 年发端	H-4	通过	无	It was appeared in the Linux kernel in 2014 as an extension to the existing BPF.	无需处置	W1-S3-2
+Q03574	V52	title	V52.5.1.1	基本系统 2008 年 5 月底迁出 CVS	H-4	有问题	P1	In June 2008, development of the base system migrated from CVS to Subversion｜题名作“5 月底”，与证据 6 月不符	呈裁	W1-S3-2
+Q03575	V52	title	V52.5.1.2	文档树 2012 年的迁移	H-4	通过	无	In May 2012, the FreeBSD Documentation Project moved from CVS to Subversion.	无需处置	W1-S3-2
+Q03576	V52	title	V52.5.1.4	Ports 树 2021 年的迁移	H-4	通过	无	In April 2021, the FreeBSD Ports tree has been moved from Subversion to Git.	无需处置	W1-S3-2
+Q03577	V52	title	V52.5.3.1	测试套件的首次出现	H-4	通过	无	The FreeBSD Test Suite first appeared in FreeBSD 10.1 and was installed by default in FreeBSD 11.0.	无需处置	W1-S3-2
+Q03578	V52	title	V52.6.2.1	KAME 六家日本企业的联合出资	H-4	通过	无	The KAME project was a joint effort of six companies in Japan to provide a free stack of IPv6, IPsec, and Mobile IPv6 for BSD variants.	无需处置	W1-S3-2
+Q03579	V52	title	V52.6.3.5	链路聚合六种协议的并存	H-4	通过	无	The driver currently supports the aggregation protocols failover (the default), lacp, loadbalance, roundrobin, broadcast, and none.	无需处置	W1-S3-2
+Q03580	V52	title	V52.6.4.1	netmap 对三项包处理成本的处理	H-4	通过	无	we identified and successfully reduced or removed three main packet processing costs: per-packet dynamic memory allocations, removed by preallocating resources;	无需处置	W1-S3-2
+Q03581	V52	title	V52.7.1.4	三条路径的共同源头	H-4	通过	无	Prior to the SMPng project, SMP support in FreeBSD was limited to the i386 architecture and used one giant spin lock for the entire kernel	无需处置	W1-S3-2
+Q03582	V52	title	V52.7.4.1	Ports 树与 pkgsrc 的两种定位	H-4	通过	无	pkgsrc is a framework for managing third-party software on UNIX-like systems, currently containing over 26,000 packages.	无需处置	W1-S3-2
+Q03583	V52	title	V52.7.4.6	两种框架的体量对照	H-4	通过	无	There are about 37000 ports; the entire Ports Collection requires approximately 3 GB.	无需处置	W1-S3-2
+Q03584	V53	title	V53.1.5.5	另一条道路的公开表述	H-4	通过	无	DragonFly provides an opportunity for the BSD base to grow in an entirely different direction from the one taken in the FreeBSD, NetBSD, and OpenBSD series.	无需处置	W1-S3-2
+Q03585	V53	title	V53.1.6.1	互联网协作的最早实践	H-4	有问题	P2	NetBSD was one of the first major open source projects to be organized collaboratively entirely over the internet｜题名“最早实践”应作“最早之一”	观察	W1-S3-2
+Q03586	V53	title	V53.2.2.3	安全目标在五项中的排序	H-4	通过	无	Our efforts emphasize portability, standardization, correctness, proactive security and integrated cryptography.	无需处置	W1-S3-2
+Q03587	V53	title	V53.2.3.2	开发重心的两条分流	H-4	通过	无	From 2009 onward many developers have focused on SMP scalability while others have put an emphasis on new feature development and driver porting.	无需处置	W1-S3-2
+Q03588	V53	title	V53.3.6.5	内存保护机制的首次落地	H-4	通过	无	First used for sparc, sparc64, alpha, and hppa in OpenBSD 3.3.	无需处置	W1-S3-2
+Q03589	V53	title	V53.3.6.6	CVS 经 SVN 到 Git 的两次迁移	H-4	通过	无	In June 2008, the Project switched to using SVN (Subversion). The switch was deemed necessary, as the technical limitations imposed by CVS were becoming obvious	无需处置	W1-S3-2
+Q03590	V53	title	V53.4.3.3	集会以写代码为唯一议程	H-4	通过	无	In our form, hackathons do not have talks, nor a specific schedule.	无需处置	W1-S3-2
+Q03591	V53	title	V53.4.6.6	两条沟通渠道的并列	H-4	通过	无	For more immediate communication, DragonFly users and developers are often available via IRC on #dragonflybsd, on EFNet.	无需处置	W1-S3-2
+Q03592	V53	title	V53.7.1.6	四款条文的原始句式	H-4	通过	无	"This license was used in the University of California, Berkeley's second Berkeley Networking Release and the 4.4BSD Lite software release, is called the ""4-clau"	无需处置	W1-S3-2
+Q03593	V53	title	V53.7.8.2	自由使用四项动作的界定	H-4	通过	无	Copyright law is complex, OpenBSD policy is simple — OpenBSD strives to provide code that can be freely used, copied, modified, and distributed by anyone and fo	无需处置	W1-S3-2
+Q03594	V53	title	V53.8.2.6	十六种 CPU 类型的覆盖	H-4	通过	无	This table contains the same set of ports as in the above list, but ordered by MACHINE_ARCH CPU architecture value (returned by 'uname -p') and showing a total 	无需处置	W1-S3-2
+Q03595	V53	title	V53.8.5.6	开源发布的两条获取通道	H-4	通过	无	You can access the source code for our operating systems and developer tools by downloading releases or browsing Git repositories.	无需处置	W1-S3-2
+Q03596	V53	title	V53.9.1.1	风格文本作为材料的一类	H-4	通过	无	This manual page was originally based on the src/admin/style/style file from the 4.4BSD-Lite2 release, with frequent updates to reflect the current practice and	无需处置	W1-S3-2
+Q03597	V53	title	V53.9.5.1	两种设计哲学的分野	H-4	通过	无	MIT 风格以“做对的事”自我命名，其优先序与另一风格相对。	无需处置	W1-S3-2
+Q03598	V53	title	V53.9.6.3	四项品质的共识预设	H-4	通过	无	作者预设多数读者会认同四项品质为好的特性。	无需处置	W1-S3-2
+Q03599	V54	title	V54.3.5.1	工作组议题的五项扩展	H-4	通过	无	The working group was focusing on the following extensions to POSIX.1: Access Control Lists (ACL), Audit, Capability, Mandatory Access Control (MAC), and Inform	无需处置	W1-S3-2
+Q03600	V54	title	V54.4.3.3	SPARC 随 Sun-4 进入产品线（1987）	H-4	通过	无	1987 年 Sun 率先在产品线采用 RISC 微处理器。	无需处置	W1-S3-2
+Q03601	V55	title	V55.1.2.6	单一项目的预算披露深度	H-4	通过	无	It has a budget of $750,000, which will be used over one to two years.	无需处置	W1-S3-2
+Q03605	V55	title	V55.10.1.3	不广为人知的三种原因	H-4	通过	无	The BSD developers are often more interested in polishing their code than marketing it.	无需处置	W1-S3-2
+Q03606	V55	title	V55.13.1.5	两类项目的同异比较	H-4	通过	无	Both are UNIX® like operating systems. Both are developed by non-commercial projects (this does not apply to many other Linux distributions, of course).	无需处置	W1-S3-2
+Q03602	V55	title	V55.5.1.5	开发者访谈的可回溯起点（2006 年 1 月）	H-4	有问题	P1	Interview with Marshall Kirk McKusick, Computer Scientist and early BSD developer at UC Berkeley.（bsdtalk 2006/02）｜题名断“2006 年 1 月”无引文	呈裁	W1-S3-2
+Q03603	V55	title	V55.7.4.2	年度收支的三项数字	H-4	通过	无	2024 财年收入一百七十三万余美元、支出二百六十万余美元、净额负八十六万余美元，三项数字构成账目核对的第一层。	无需处置	W1-S3-2
+Q03604	V55	title	V55.9.3.5	两类书写的取材分界	H-4	通过	无	社区史取材于公告、邮件与口述，学术史另须同行评议文献与可复现数据（论题句）	无需处置	W1-S3-2
+Q03607	V56	title	V56.1.6.1	源流辨认的三类痕迹	H-4	通过	无	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by th	无需处置	W1-S3-2
+Q03608	V56	title	V56.3.7.1	分流的两个时点（1993 与 1995）	H-4	有问题	P2	In the mid-1990s, OpenBSD spun off from the NetBSD group.｜题名两时点 1993、1995 无引文到年	观察	W1-S3-2
+Q03609	V56	title	V56.3.8.1	收购公告与交割（2001 年 4–5 月）	H-4	有问题	P2	“2001 年 4 月收购”（证据行原文）｜题名作“2001 年 4–5 月”，5 月无引文	观察	W1-S3-2
+Q03610	V56	title	V56.5.8.1	可证成分的三类划分	H-4	通过	无	Although most of the vendors had started the switch back to System V, large parts of 4.3BSD were carried over into their systems, particularly the networking su	无需处置	W1-S3-2
+Q03611	V57	title	V57.1.1.5	移植项在三种形态中的位置	H-4	通过	无	The UNIX system family tree: Research and BSD	无需处置	W1-S3-2
+Q03612	V57	title	V57.1.3.1	项目更名的三类情形	H-4	通过	无	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily invol	无需处置	W1-S3-2
+Q03613	V57	title	V57.1.5.3	打包体系的两条路线	H-4	通过	无	FreeBSD provides two complementary technologies for installing third-party software: the FreeBSD Ports Collection, for installing from source, and packages, for	无需处置	W1-S3-2
+Q03614	V57	title	V57.1.6.2	二条款与三条款的文本差别	H-4	通过	无	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other	无需处置	W1-S3-2
+Q03615	V57	title	V57.2.3.4	版本编号的两类惯例	H-4	有问题	P1	两类惯例的并列暂缺一例（论题句）｜MidnightBSD 三段式有据，GhostBSD 一侧未获实例	呈裁	W1-S3-2
+Q03616	V57	title	V57.4.3.1	分叉时点的两条官方记载	H-4	通过	无	OPNsense started as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015.	无需处置	W1-S3-2
+Q03617	V57	title	V57.6.1.1	终止公告的三种体裁	H-4	通过	无	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily invol	无需处置	W1-S3-2
+Q03618	V57	title	V57.6.3.2	继承关系的两类记载	H-4	通过	无	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily invol	无需处置	W1-S3-2
+Q03619	V57	title	V57.7.1.5	发行形态的两种归位	H-4	通过	无	No one person or corporation owns BSD. It is created and distributed by a community of highly technical and committed contributors all over the world.	无需处置	W1-S3-2
+Q03620	V58	title	V58.2.6.2	BSD 子系统的首次商用	H-4	通过	无	The BSD portion of the OS X kernel is derived primarily from FreeBSD, a version of 4.4BSD that offers advanced networking, performance, security, and compatibil	无需处置	W1-S3-2
+Q03621	V58	title	V58.4.4.1	并发抽象的首次引入	H-4	有问题	P1	Execute code concurrently on multicore hardware by submitting work to dispatch queues managed by the system.｜引文无“首次”表述，最高级无一手	呈裁	W1-S3-2
+Q03622	V58	title	V58.4.8.1	第三次处理器迁移	H-4	通过	无	The transition to Apple silicon in the Mac will create a common architecture across all Apple products	无需处置	W1-S3-2
+Q03623	V58	title	V58.6.4.1	遗产转化的三条路径	H-4	通过	无	The BSD portion of the OS X kernel is derived primarily from FreeBSD, a version of 4.4BSD that offers advanced networking, performance, security, and compatibil	无需处置	W1-S3-2
+Q03624	V58	title	V58.7.2.1	三条款的保留义务范围	H-4	通过	无	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	无需处置	W1-S3-2
+Q03625	V59	title	V59.1.5.1	四条款文本的条款序列	H-4	通过	无	3. All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by	无需处置	W1-S3-2
+Q03626	V59	title	V59.1.7.1	两条款的信用要件	H-4	通过	无	All it requires is that the author of the work be given due credit for their creation, and that their name not be used to promote products based on their work.	无需处置	W1-S3-2
+Q03627	V59	title	V59.2.1.2	四条款的条款定型	H-4	通过	无	3. All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by	无需处置	W1-S3-2
+Q03628	V59	title	V59.2.6.2	三条款的通行称谓	H-4	通过	无	Note: This license has also been called the “New BSD License” or “Modified BSD License”.	无需处置	W1-S3-2
+Q03629	V59	title	V59.2.6.4	三条款与四条款的兼容	H-4	通过	无	This is the original BSD license, modified by removal of the advertising clause. It is a lax, permissive non-copyleft free software license, compatible with the	无需处置	W1-S3-2
+Q03630	V59	title	V59.2.7.2	两条款文本的最简形态	H-4	通过	无	Note: This license has also been called the “Simplified BSD License” and the “FreeBSD License”.	无需处置	W1-S3-2
+Q03631	V59	title	V59.2.7.5	两条款的适用场景	H-4	通过	无	New contributions to FreeBSD should use the BSD-2-Clause license.	无需处置	W1-S3-2
+Q03632	V59	title	V59.2.8.3	第二次弃权的效力层级	H-4	待裁	无	January 31, 2012｜引文仅日期，“效力层级相同而适用对象更宽”无文本比对支撑	呈裁	W1-S3-2
+Q03633	V59	title	V59.2.8.4	函件与 1999 年公告的对应	H-4	待裁	无	Effective immediately, licensees and distributors are no longer required to include the acknowledgement｜1999 年文本，2012 年函件未取，逐字比对无据	呈裁	W1-S3-2
+Q03634	V59	title	V59.3.1.1	基本系统的两条款默认	H-4	通过	无	New contributions to FreeBSD should use the BSD-2-Clause license.	无需处置	W1-S3-2
+Q03638	V59	title	V59.3.10.1	三项目路径的分叉	H-4	通过	无	In 2008, following on from a vote amongst the membership of the NetBSD Foundation, and in recognition of the changing face of software licensing, the NetBSD Fou	无需处置	W1-S3-2
+Q03635	V59	title	V59.3.2.2	四条款到两条款的置换	H-4	通过	无	we don't think it's right to require people who add to our work and want to distribute the results (for profit or otherwise) to give away the source to their ad	无需处置	W1-S3-2
+Q03636	V59	title	V59.3.2.3	转换过程的三条动因	H-4	通过	无	the 4 clause BSD license has been rejected in some cases	无需处置	W1-S3-2
+Q03637	V59	title	V59.3.9.5	三个项目的实体差异	H-4	通过	无	The NetBSD Foundation serves as the legal entity which owns several of the NetBSD Project servers, handles donations of money, services, hardware or time to the	无需处置	W1-S3-2
+Q03639	V59	title	V59.4.2.2	十条判据的排列逻辑	H-4	通过	无	The license may not require a royalty or other fee for such sale.	无需处置	W1-S3-2
+Q03640	V59	title	V59.4.3.1	定义十项的判准序列	H-4	通过	无	Open source doesn’t just mean access to the source code. The distribution terms of open source software must comply with the following criteria:	无需处置	W1-S3-2
+Q03641	V59	title	V59.4.4.1	三条款在 OSI 名录的位置	H-4	通过	无	Note: This license has also been called the “New BSD License” or “Modified BSD License”.	无需处置	W1-S3-2
+Q03642	V59	title	V59.4.5.3	四类决定的枚举缺证	H-4	通过	无	No later than the next available Board meeting after the Decision Date, the OSI will select one of four possible decisions	无需处置	W1-S3-2
+Q03643	V59	title	V59.5.1.1	三种称谓的混用状况	H-4	通过	无	Some people call this license “the MIT License,” but that term is misleading, since MIT has used many licenses for software.	无需处置	W1-S3-2
+Q03644	V59	title	V59.5.1.3	声明保留的唯一义务	H-4	通过	无	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.	无需处置	W1-S3-2
+Q03645	V59	title	V59.5.1.5	与 BSD 两条款的同构性	H-4	通过	无	This is the original BSD license with the advertising clause and another clause removed. (It is also sometimes called the “2-clause BSD license”.)	无需处置	W1-S3-2
+Q03646	V59	title	V59.5.2.3	与两条款的等价性	H-4	有问题	P2	This license is sometimes also known as the OpenBSD License.｜引文未含“二者近乎一致”表述	观察	W1-S3-2
+Q03647	V59	title	V59.8.3.1	三条款转向双轨授权	H-4	通过	无	Beginning today, all future versions of Redis will be released with source-available licenses. Starting with Redis 7.4, Redis will be dual-licensed under the Re	无需处置	W1-S3-2
+Q03648	V59	title	V59.8.8.1	从四条款到两条款的沿革	H-4	通过	无	"A later form of this license omitted the original third clause (""old clause 3"" or ""the advertising clause""), resulting in a 3-clause version of the license that"	无需处置	W1-S3-2
+Q03649	V59	title	V59.9.3.3	两种自由观的对照	H-4	通过	无	“Open source” is something different: it has a very different philosophy based on different values.	无需处置	W1-S3-2
+Q03650	V60	title	V60.1.5.1	四条条款的原始文本	H-4	通过	无	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	无需处置	W1-S3-2
+Q03655	V60	title	V60.11.2.4	三类用法的列举缺	H-4	通过	无	-V [ -eqz ] [ -p pubkey ] [ -t keytype ] [ -x sigfile ] -m message	无需处置	W1-S3-2
+Q03656	V60	title	V60.13.1.2	访问方法的两个分支	H-4	有问题	P2	The supported file formats are btree, hashed and UNIX file oriented.｜题名“两个分支”与引文三格式不一	观察	W1-S3-2
+Q03657	V60	title	V60.13.2.5	成果公开的两种载体	H-4	通过	无	Joe Hellerstein's paper “ Looking Back at Postgres ” [hell18] .	无需处置	W1-S3-2
+Q03658	V60	title	V60.13.9.3	机构遗产的两种继承	H-4	通过	无	carries on the distinguished tradition of BSD systems development.	无需处置	W1-S3-2
+Q03660	V60	title	V60.14.11.1	两类周期的计时起点	H-4	通过	无	Each FreeBSD Release has an associated Security Branch.	无需处置	W1-S3-2
+Q03661	V60	title	V60.14.13.1	两种史体的并置理由	H-4	通过	无	carries on the distinguished tradition of BSD systems development.	无需处置	W1-S3-2
+Q03659	V60	title	V60.14.9.1	版本库的三次换代	H-4	通过	无	The FreeBSD Project provides Subversion access to the general public so that others can have access to log messages, diffs (patches) between development branche	无需处置	W1-S3-2
+Q03651	V60	title	V60.3.6.3	两条路线的用户分布	H-4	通过	无	交互用户与系统脚本作者分属不同群体，分布差异解释了同一争论为何长期无解。	无需处置	W1-S3-2
+Q03652	V60	title	V60.4.4.2	两种描述的替代关系	H-4	通过	无	part of the logic which reads termcap data for tgetent	无需处置	W1-S3-2
+Q03653	V60	title	V60.8.2.1	一次性任务的排队	H-4	通过	无	The at and batch utilities read commands from standard input or a specified file which are to be executed at a later time, using sh (1) .	无需处置	W1-S3-2
+Q03654	V60	title	V60.8.8.1	工具集的三种来路	H-4	通过	无	管理工具分属校园自造、厂商贡献与标准移植三层（论题句）｜引文仅 cron 一例，未覆盖三层	无需处置	W1-S3-2
+Q03663	V61	title	V61.1.10.1	CVE 编号的唯一性设计	H-4	通过	无	There is one CVE Record for each vulnerability in the catalog.	无需处置	W1-S3-2
+Q03662	V61	title	V61.1.5.1	三条入站途径的技术构成	H-4	通过	无	The Internet worm relied on the several known access loopholes in order to propagate over networks. It relied on implementation errors in two network programs: 	无需处置	W1-S3-2
+Q03664	V61	title	V61.2.10.5	一次性密钥的适用场景	H-4	通过	无	Allows attaching a provider with a random, one-time Master Key, which is useful for swap partitions and temporary filesystems.	无需处置	W1-S3-2
+Q03665	V61	title	V61.3.7.1	三类模型的授权主体	H-4	通过	无	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	无需处置	W1-S3-2
+Q03666	V61	title	V61.3.7.4	三类模型的组合序位	H-4	通过	无	149.3.4 要点MAC框架设计决策的一手史料包括Watson20002003年在freebs	无需处置	W1-S3-2
+Q03667	V61	title	V61.5.2.1	授权载体的两种类型	H-4	通过	无	In a computer system, an unforgeable ticket, which when presented can be taken as incontestable proof that the presenter is authorized to have access to the obj	无需处置	W1-S3-2
+Q03668	V61	title	V61.5.4.3	默认策略的两种取向	H-4	通过	无	Packet Filter (from here on referred to as PF) is OpenBSD's system for filtering TCP/IP traffic and doing Network Address Translation.	无需处置	W1-S3-2
+Q03669	V61	title	V61.6.1.1	提权路径的三种类型	H-4	通过	无	Is it a privilege escalation vulnerability? Is it a code injection vulnerability? Is it a memory disclosure or dataleak vulnerability?	无需处置	W1-S3-2
+Q03670	V62	title	V62.1.9.3	下游产品的二次分发义务	H-4	通过	无	The distributor needs to verify that products with digital elements bear the CE marking and that manufacturers and importers have complied with certain obligati	无需处置	W1-S3-2
+Q03671	V62	title	V62.3.1.5	两类制度的功能互补	H-4	通过	无	Conformity with ISO/IEC 27001 means that an organization or business has put in place a system to manage risks related to the security of data owned or handled 	无需处置	W1-S3-2
+Q03672	V62	title	V62.4.6.3	两类主体的判定标准	H-4	通过	无	Where a legal person does not place them on the market but provides systematic support on a sustained basis for the development of specific products with digita	无需处置	W1-S3-2
+Q03673	V62	title	V62.4.6.4	两类主体的义务清单	H-4	通过	无	Open-source software stewards are subject to the obligations laid down in Article 24, notably putting in place a cybersecurity policy to foster secure developme	无需处置	W1-S3-2
+Q03675	V63	title	V63.1.10.1	同一功能的两种实现路径	H-4	通过	无	同一功能可由共享代码派生，也可由独立重写达成，两条路径在维护成本与许可义务上分道。	无需处置	W1-S3-2
+Q03676	V63	title	V63.1.12.1	长期交汇的三条线索	H-4	通过	无	软件流通、工具共用与开发者重叠构成三条线索，线索并行而不归并为单一路径。	无需处置	W1-S3-2
+Q03674	V63	title	V63.1.5.1	早期工具链的三件组成	H-4	通过	无	From the beginning, FreeBSD relied on the GNU tool chain, including the GCC compiler, Binutils linker and binary utilities, and the GDB debugger.	无需处置	W1-S3-2
+Q03677	V63	title	V63.2.12.4	边界重划的三条判据	H-4	通过	无	边界重划以交付单位、支持主体与许可归属三条判据为准，判据并用方能定界。	无需处置	W1-S3-2
+Q03678	V63	title	V63.2.13.1	三条判准的设定缘由	H-4	通过	无	代码来源可证、发布形态可考、归类主体明确三条判准，分别对应史料、制度与归属三个层面。	无需处置	W1-S3-2
+Q03679	V63	title	V63.3.6.1	命名的两种主张之争	H-4	通过	无	Linux 一般和 GNU 操作系统一起使用：整个系统基本上就是 GNU 加上 Linux，或叫 GNU/Linux。所有被叫做“Linux”的发行版实际上是 GNU/Linux 发行版。	无需处置	W1-S3-2
+Q03680	V63	title	V63.4.1.2	传播渠道的三类分别	H-4	通过	无	两系的传播渠道不同：一系靠商业发行与期刊附盘，一系靠下载站与镜像网，渠道分别决定其扩散半径。	无需处置	W1-S3-2
+Q03681	V63	title	V63.4.3.1	三件套的成分比例	H-4	通过	无	一个 CD-ROM 提供商发现在他们的 “Linux 发行版”中，GNU 软件占单一最大的比重，大约是整个源代码的28%，其中包括一些关键性主要部件，没有它们，就没有整个系统。	无需处置	W1-S3-2
+Q03682	V63	title	V63.4.4.3	两种模式的分工比较	H-4	通过	无	两种模式的分工差异可由更新频率与支持周期对照测得，比较须以版本档案而非印象为据。	无需处置	W1-S3-2
+Q03683	V63	title	V63.5.3.2	发行版的首次成型	H-4	通过	无	Debian 0.01 through 0.90 (August-December 1993)	无需处置	W1-S3-2
+Q03684	V63	title	V63.5.7.1	三条发展路径的对照	H-4	通过	无	BSD、Linux 与商业 UNIX 三条路径在许可、协作与商业接口上分道，对照须同列三项指标。	无需处置	W1-S3-2
+Q03685	V63	title	V63.5.7.2	资源前提的三种差别	H-4	通过	无	三条路径的资源前提不同：商业系有厂商资金，Linux 有网络协作，BSD 有学术与基金会支持。	无需处置	W1-S3-2
+Q03686	V63	title	V63.7.5.3	兼容一词的两种用法	H-4	通过	无	兼容一指接口可替换，一指许可可并入，两义混用会把技术兼容误作法律许可。	无需处置	W1-S3-2
+Q03687	V63	title	V63.7.6.2	归名的三种通行惯例	H-4	通过	无	归名惯例有三种：按原始作者、按维护项目、按发行载体，惯例不同则同一代码得三名。	无需处置	W1-S3-2
+Q03688	V63	title	V63.8.4.2	依赖求解的两种路径	H-4	通过	无	Finally, an important part of the rc.d framework is rcorder(8), which helps /etc/rc to run the small scripts orderly with respect to dependencies between them.	无需处置	W1-S3-2
+Q03692	V64	title	V64.1.10.3	权限中止的三种理由	H-4	通过	无	A commit bit may be suspended or revoked for inactivity, conduct violations or other policy violations	无需处置	W1-S3-2
+Q03693	V64	title	V64.1.14.3	章程文本的两次重写	H-4	有问题	P2	These bylaws were approved by a vote of active committers on May 27, 2026. They have not yet entered into force.｜2000 年版无引文	观察	W1-S3-2
+Q03689	V64	title	V64.1.2.2	邮件原始档的 1994 起点	H-4	通过	无	The threaded archives with all e-mails since 1994 are available at	无需处置	W1-S3-2
+Q03690	V64	title	V64.1.5.1	首次选举的时点争议	H-4	通过	无	2000年10月17日Monterey BSDCon期间Jordan Hubbard宣布经committer选举产生新一届FreeBSD Core Team，为项目首次公开民主选举领导层。	无需处置	W1-S3-2
+Q03691	V64	title	V64.1.7.3	两类提交权的凭据待录	H-4	有问题	P0	There are two kinds of doc commit bits: translator commit bit｜论题句称“doceng 章程无两类表述”，被自证引文证伪	呈裁	W1-S3-2
+Q03695	V64	title	V64.4.11.1	捐赠作为唯一进项	H-4	通过	无	it has no regular source of income, instead it is relying on generous donations from third parties	无需处置	W1-S3-2
+Q03694	V64	title	V64.4.3.5	责任限制与补偿两章	H-4	通过	无	Article XI: Limits on Liability of Directors	无需处置	W1-S3-2
+Q03696	V64	title	V64.5.2.1	四个源码仓库的划分	H-4	通过	无	The OpenBSD Project currently has four active source repositories:	无需处置	W1-S3-2
+Q03697	V64	title	V64.5.7.1	唯一受审核的列表	H-4	通过	无	With the exception of announce, the lists are not moderated	无需处置	W1-S3-2
+Q03698	V64	title	V64.5.8.1	首次黑客松的地点	H-4	通过	无	In June of 1999, OpenBSD held the first hackathon.	无需处置	W1-S3-2
+Q03699	V64	title	V64.6.11.2	经费流向的两条通道	H-4	通过	无	Such contributions are considered strictly gifts to the OpenBSD Project, and are not related in any way to the OpenBSD Foundation.	无需处置	W1-S3-2
+Q03700	V64	title	V64.7.3.5	章程会员的单一类别	H-4	通过	无	there shall be one class of members in the Corporation	无需处置	W1-S3-2
+Q03701	V64	title	V64.7.4.2	七项关联项目的列名	H-4	通过	无	related projects such as OpenSSH, OpenBGPD, OpenNTPD, OpenSMTPD, LibreSSL, mandoc and rpki-client	无需处置	W1-S3-2
+Q03702	V64	title	V64.8.1.1	分叉基准的两个时点	H-4	通过	无	DragonFly BSD was forked from FreeBSD 4.8 in June of 2003, by Matthew Dillon.	无需处置	W1-S3-2
+Q03703	V64	title	V64.8.3.1	贡献名目的四类表述	H-4	通过	无	Many individuals have stepped up to contribute various pieces of code, documentation, ideas, and feedback to The DragonFly Project.	无需处置	W1-S3-2
+Q03704	V64	title	V64.8.6.2	稳定观察的十个工作日	H-4	通过	无	after the DragonFly developers has had ten business days to determine if the code is stable	无需处置	W1-S3-2
+Q03705	V65	title	V65.1.13.4	权限构成的三个变量	H-4	通过	无	An Active Contributor is someone who has an active src, ports, or doc commit bit	无需处置	W1-S3-2
+Q03706	V65	title	V65.2.3.5	两类出资方的并置募集	H-4	通过	无	The Foundation needs contributions from Individuals and Companies to support its efforts.	无需处置	W1-S3-2
+Q03707	V65	title	V65.3.2.4	三种位置的决策权差异	H-4	通过	无	受薪者以票数与声誉参与决策，无偿者亦然但权重随声望。	无需处置	W1-S3-2
+Q03708	V65	title	V65.4.12.1	教堂与市集的两种组织	H-4	通过	无	集中规划与分散试错构成两种组织形态，风格各异。	无需处置	W1-S3-2
+Q03709	V65	title	V65.6.1.3	自治的正式与非正式两种	H-4	通过	无	正式章程与非正式自律可达成同一效果，路径并不唯一。	无需处置	W1-S3-2
+Q03710	V65	title	V65.6.10.5	三类结构的参照系	H-4	通过	无	Under a liberal contribution model, the people who do the most work are recognized as most influential	无需处置	W1-S3-2
+Q03711	V66	title	V66.1.4.1	新闻分发的两条路径	H-4	通过	无	There are popularly two methods of distributing such news: the Internet method of direct mailing, and the USENET news system.	无需处置	W1-S3-2
+Q03712	V66	title	V66.2.1.2	与北美学术网的首次互联	H-4	通过	无	JUNET gained international connectivity for the first time, a connection to the Computer Science Network (CSNET) in the USA	无需处置	W1-S3-2
+Q03713	V66	title	V66.2.5.3	PC-9800 移植的最初动因	H-4	通过	无	So, when 386BSD was released, some people were interested in porting to PC-9800.	无需处置	W1-S3-2
+Q03715	V66	title	V66.7.10.1	史料来源的三类构成	H-4	通过	无	If there is no local group, https://meetup.com/ can be used to locate interested individuals near by.	无需处置	W1-S3-2
+Q03714	V66	title	V66.7.7.1	南非三类节点的实例	H-4	有问题	P2	ccTLD DNS 基础设施（部分 .za 域名）｜论题称“ccTLD DNS 与南非以外节点未见记载”，与旧大纲证据相抵	观察	W1-S3-2
+Q03720	V67	title	V67.11.3.5	四种开放模式的比较	H-4	通过	无	Announcement: All online conference proceedings are now freely available to everyone.	无需处置	W1-S3-2
+Q03716	V67	title	V67.6.3.5	两种模式的互补关系	H-4	通过	无	The FOSDEM team feels it is very important for free and open source software developers around the world to be able to meet in “real life”.	无需处置	W1-S3-2
+Q03717	V67	title	V67.8.5.4	会议录的二次传播	H-4	通过	无	All online conference proceedings are now freely available to everyone.	无需处置	W1-S3-2
+Q03718	V67	title	V67.9.1.2	AsiaBSDCon 2003 取消叙事之误	H-4	待裁	无	https://lists.freebsd.org/pipermail/freebsd-announce/2003-September/000909.html :: the USENIX AsiaBSDCon 2004 will take place at Academia Sinica, Taipei｜未见 2003	呈裁	W1-S3-2
+Q03719	V67	title	V67.9.2.2	EuroBSDCon 2020 的停办	H-4	通过	无	2021, September 17 - 19, Online	无需处置	W1-S3-2
+Q03721	V68	title	V68.1.2.1	首届四十个项目与四百名学生	H-4	通过	无	In GSoC’s first year, 40 projects and 400 students participated.	无需处置	W1-S3-2
+Q03729	V68	title	V68.10.7.1	产出方向的三个面向	H-4	通过	无	产出集中于可移植性、内核子系统与测试框架三面（论题句）	无需处置	W1-S3-2
+Q03730	V68	title	V68.10.8.4	本地档案的两件藏件	H-4	通过	无	本地档案：mat 7625（2005–2009 项目档案，含项目列表与导师分配）、mat 7627（基金会年度报告）	无需处置	W1-S3-2
+Q03731	V68	title	V68.11.5.2	退出声明的两条理由	H-4	通过	无	理由为投入过多与回报不足，两点并列。	无需处置	W1-S3-2
+Q03732	V68	title	V68.12.1.1	官方页的年份止于 2012	H-4	通过	无	Have a look at our SoC pages from 2008, 2009, 2010, 2011, and 2012, to get an overview about prior year's projects.	无需处置	W1-S3-2
+Q03733	V68	title	V68.12.1.3	自称第六次入选的计法	H-4	通过	无	项目方自称 2013 年为第 6 次入选，与页面年份数不符。	无需处置	W1-S3-2
+Q03734	V68	title	V68.12.1.4	参与方向的三个侧重	H-4	待裁	无	Have a look at our SoC pages from 2008, 2009, 2010, 2011, and 2012, to get an overview about prior year's projects.｜“内核、驱动与虚拟化”三方向无引文	呈裁	W1-S3-2
+Q03735	V68	title	V68.12.2.1	第六次表述的原页缺	H-4	通过	无	ikiwiki 版本差异三途均未取到（/history/ 与 history/index.html 返回空正文，无头浏览器报 ERR_CONNECTION_CLOSED，wiki.cgi?do=history 报 unknown do parameter）；现版项目页只作“2008, 2009, 2010, 2011,	无需处置	W1-S3-2
+Q03736	V68	title	V68.13.2.2	失败族的四条编号	H-4	通过	无	ext3、MPLS、NTFS/smbfs 与 ext2fs 四条为该库的失败记录。	无需处置	W1-S3-2
+Q03737	V68	title	V68.14.2.5	两类项目的定位分界	H-4	通过	无	Three types of communities can participate in Outreachy	无需处置	W1-S3-2
+Q03738	V68	title	V68.14.5.1	入口互补的两类通道	H-4	通过	无	We invite anyone from any background who faces under-representation, systemic bias, or discrimination in the technology industry of their country to apply.	无需处置	W1-S3-2
+Q03739	V68	title	V68.14.6.4	批评的三类论点归纳	H-4	待裁	无	New communities must meet these rules to be eligible to participate in Outreachy.｜“名额挤占、标准模糊、效果未证”三类归纳无引文	呈裁	W1-S3-2
+Q03740	V68	title	V68.15.2.5	两类入口的并存格局	H-4	通过	无	Outreachy interns work 30 hours per week. The internship runs from Dec. 7, 2026 to March 8, 2027.	无需处置	W1-S3-2
+Q03741	V68	title	V68.16.1.1	既有文献的两条主线	H-4	通过	无	We combined a survey (students and mentors) and interviews (students) to understand what motivates students to enter GSoC.	无需处置	W1-S3-2
+Q03745	V68	title	V68.16.11.4	补证所需的三类材料	H-4	有问题	P2	补证须以官方档案与社区自述并行，不可单靠库（论题句）｜题名作“三类材料”	观察	W1-S3-2
+Q03742	V68	title	V68.16.2.5	缺口范围的四项界定	H-4	有问题	P2	缺口集中于 BSD 系样本与纵向追踪两块（论题句）｜题名作“四项界定”	观察	W1-S3-2
+Q03743	V68	title	V68.16.3.3	解释框架的两类取向	H-4	通过	无	Our results show that students enter GSoC for an enriching experience, not necessarily to become frequent contributors.	无需处置	W1-S3-2
+Q03744	V68	title	V68.16.9.3	两类材料的互补作用	H-4	通过	无	年报给规模，访谈给过程，两类互补。	无需处置	W1-S3-2
+Q03722	V68	title	V68.3.1.3	逐年成功率的高位年份与 2016 年相对低谷	H-4	有问题	P0	2005 年 80%、2006 年 82%、2007 年 81%、2016 年 85.6%、2020 年 92.32%、2021 年 93.27%｜2016 非全序列低点	呈裁	W1-S3-2
+Q03723	V68	title	V68.4.13.1	官方辩护的三类说辞	H-4	通过	无	The ultimate success of the GSoC program is thus measured by the quality of the student experience.	无需处置	W1-S3-2
+Q03724	V68	title	V68.5.1.2	首届名额的两种记法	H-4	通过	无	2005Q2 报告网站版作“granted 19 funded mentorship spots”、项目页作“19 were selected for funding”；freebsd-announce 邮件版作“funded 18 students”并仅列 18 名学生条目；归档页返回“No results foun	无需处置	W1-S3-2
+Q03725	V68	title	V68.5.5.1	两项失败项目的两种归因	H-4	通过	无	We are sad to report that both GSoc projects failed. Thelibdevq project was abandoned as the student disappeared.	无需处置	W1-S3-2
+Q03726	V68	title	V68.5.7.3	两项变更的共同动因	H-4	通过	无	The world is changing and we need fresh project ideas. We need to start looking for those ideas now.	无需处置	W1-S3-2
+Q03727	V68	title	V68.8.2.3	bhyve 项目的第三个年度节点	H-4	有问题	P2	bhyve 为 2011 年 FreeBSD 高级专题项目（Neel Natu、Peter Grehan）｜论题称 2014 为 GSoC 首年，题名“第三个年度节点”计法不明	观察	W1-S3-2
+Q03728	V68	title	V68.8.3.1	NE2000 与 ptnet 的并置	H-4	有问题	P0	https://www.freebsd.org/status/report-2015-04-2015-06.html :: these four were accepted: NE2000 device emulation｜ptnetmap support in bhyve｜论题作 AHCI／virtio 与一手不符	呈裁	W1-S3-2
+Q03746	V69	title	V69.1.1.5	五类文档的分册编排	H-4	通过	无	[ PAPERS ] [ PSD ] [ SMM ] [ USD ] [ IPv6 ]	无需处置	W1-S3-2
+Q03747	V69	title	V69.1.2.2	九个分册的编号秩序	H-4	通过	无	The sections of the manual are: 1. FreeBSD General Commands Manual 2. FreeBSD System Calls Manual 3. FreeBSD Library Functions Manual	无需处置	W1-S3-2
+Q03748	V69	title	V69.2.3.1	中文译本的三个名目	H-4	有问题	P2	“watercloud”作为中文 FreeBSD 译者查无一手记载，名目待考（论题句）｜三名义中一义无一手	观察	W1-S3-2
+Q03752	V69	title	V69.3.10.4	月档与线程的两种序	H-4	通过	无	available ordered by thread or by date	无需处置	W1-S3-2
+Q03749	V69	title	V69.3.4.1	BSD 专用组的两个分支	H-4	通过	无	comp.unix.bsd.freebsd.announce	无需处置	W1-S3-2
+Q03750	V69	title	V69.3.6.6	三项目公告组的位次	H-4	通过	无	With the exception of announce, the lists are not moderated	无需处置	W1-S3-2
+Q03751	V69	title	V69.3.9.6	历史争论的二次阅读	H-4	通过	无	Here is a collection of Usenet postings from 1981 to 1991	无需处置	W1-S3-2
+Q03753	V69	title	V69.5.4.4	两家 BSD 供应的合并逻辑	H-4	通过	无	unites the leading developers and suppliers of the Berkeley Software Distribution operating system	无需处置	W1-S3-2
+Q03755	V69	title	V69.7.12.1	联合出版的四卷手册	H-4	待裁	无	第 7 章第 12 节“O’Reilly 与 UNIX／BSD 技术出版”（目录行）｜联合出版四卷无引文，待版本页一手	呈裁	W1-S3-2
+Q03754	V69	title	V69.7.2.1	四卷手册的出版主体	H-4	通过	无	You can get them all in the printed version from O'Reilly	无需处置	W1-S3-2
+Q03756	V70	title	V70.1.4.2	PDP-7 上的一次副产物	H-4	通过	无	It did not take long, therefore, for Thompson to find a little-used PDP-7 computer with an excellent display processor	无需处置	W1-S3-2
+Q03757	V70	title	V70.2.3.5	两次分立的性质差别	H-4	通过	无	The FreeBSD group was formed a few months after the NetBSD group with a charter to support just the PC architecture	无需处置	W1-S3-2
+Q03758	V70	title	V70.4.1.2	37000 个第三方应用的规模	H-4	通过	无	over 37000 third-party applications have already been ported to FreeBSD.	无需处置	W1-S3-2
+Q03760	V70	title	V70.5.10.5	自由叙事的两种落点	H-4	通过	无	Bernstein v. US Dept. of Justice（第九巡回 1996 一审、1999 三人合议庭意见后撤回）与 Junger v. Daley（第六巡回 2000）构成“代码即言论”的双判例格局	无需处置	W1-S3-2
+Q03759	V70	title	V70.5.5.2	RISC-V 的 2010 年起点	H-4	通过	无	Prof. Krste Asanović and graduate students Yunsup Lee and Andrew Waterman started the RISC-V instruction set in May 2010 as part of the Parallel Computing Labor	无需处置	W1-S3-2
+Q03761	V71	title	V71.1.7.4	隐形化的三种技术手段	H-4	通过	无	Apart from kernel upgrades, Junos OS is moving towards a more modular architecture via the separation of FreeBSD Kernel code from the Junos OS kernel code, ulti	无需处置	W1-S3-2
+Q03762	V71	title	V71.3.3.5	部署年代的上下限（可考始于 1995 年前后）	H-4	有问题	P2	Yahoo! 是 FreeBSD 早期（1996 年起）最大的商业部署案例之一｜题名作“可考始于 1995 年前后”	观察	W1-S3-2
+Q03763	V71	title	V71.5.1.1	两条款许可证的再分发条件	H-4	通过	无	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.	无需处置	W1-S3-2
+Q03764	V72	title	V72.1.1.2	大学许可的四项附加条件	H-4	通过	无	“不广告、不支持、不修错、预付款”四项条件把缺陷修补转由大学承担，伯克利的改进由此得以积累。	无需处置	W1-S3-2
+Q03765	V72	title	V72.1.3.2	诉前警告的两项要求	H-4	通过	无	起诉前的警告只要求撤下电话号码并在广告中撇清与 UNIX 的关系，警告内容限定了初期争点。	无需处置	W1-S3-2
+Q03766	V72	title	V72.2.1.5	两类权利的并用场合	H-4	通过	无	you don't have rights to the word or phrase in general, only to how that word or phrase is used with your specific goods or services	无需处置	W1-S3-2
+Q03767	V72	title	V72.2.8.5	两条路线的长期并存	H-4	通过	无	Xinuos and SCO have been building operating systems for enterprise environments for more than 40 years	无需处置	W1-S3-2
+Q03768	V72	title	V72.3.1.3	UNIX 商标的另持与 APA 商标例外（1995）	H-4	有问题	P1	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.｜1995 年 APA 商标例外无引文	呈裁	W1-S3-2
+Q03769	V72	title	V72.3.3.1	三类权利的归属分工	H-4	通过	无	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.	无需处置	W1-S3-2
+Q03770	V72	title	V72.3.4.1	起诉 IBM 的索赔加码（2003–2004）	H-4	有问题	P2	2003 年 SCO Group 诉 IBM 案声称 IBM 将 UNIX 源码（含 BSD 衍生代码）移植至 Linux，索赔 50 亿美元｜题名区间至 2004 无引文	观察	W1-S3-2
+Q03771	V72	title	V72.4.5.5	以和解撤诉结案（2018 年 1 月）	H-4	有问题	P1	Defendant concedes that for purposes of this motion that it did in fact breach the GPL.｜2018 年 1 月和解撤诉无引文	呈裁	W1-S3-2
+Q03772	V72	title	V72.5.1.3	同一程序的两类保护	H-4	通过	无	A U.S. patent gives the patent owner the right to exclude others from making, using, offering for sale, selling throughout, or importing an invention into the U	无需处置	W1-S3-2
+Q03774	V72	title	V72.5.10.4	两种自由观的许可分野	H-4	通过	无	The GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users.	无需处置	W1-S3-2
+Q03773	V72	title	V72.5.5.2	三类受控行为的区分	H-4	通过	无	No person shall circumvent a technological measure that effectively controls access to a work protected under this title.	无需处置	W1-S3-2
+Q03775	V72	title	V72.6.4.3	上诉法院的三项理由	H-4	通过	无	We find that the EAR regulations (1) operate as a prepublication licensing scheme that burdens scientific expression, (2) vest boundless discretion in governmen	无需处置	W1-S3-2
+Q03776	V73	title	V73.1.1.4	史学问题的四类分组	H-4	通过	无	史学哲学的问题可按形而上学、解释学、认识论与伦理学四组归类，本节据此布置论题。	无需处置	W1-S3-2
+Q03777	V73	title	V73.3.7.3	两种纪念文化的差异	H-4	通过	无	This is a note from his sister and brothers	无需处置	W1-S3-2
+Q03778	V73	title	V73.4.5.4	三类继承的错位形态	H-4	通过	无	While this reintegration caused a short-term delay in the development of the various BSD systems, it was a blessing in disguise	无需处置	W1-S3-2
+Q03779	V73	title	V73.5.4.5	无唯一答案的史学表述	H-4	通过	无	“BSD 是什么”没有唯一答案，史学表述只能并列诸说而不强行收束。	无需处置	W1-S3-2
+Q03780	V73	title	V73.5.8.1	首次实现的技术判据	H-4	通过	无	OpenBSD was the first free operating system to provide an IPSec stack.	无需处置	W1-S3-2
+Q03781	V73	title	V73.5.8.2	首次普及的传播判据	H-4	通过	无	The concept is now used in many OpenBSD programs	无需处置	W1-S3-2
+Q03782	V73	title	V73.5.8.3	首次商业化的制度判据	H-4	通过	无	The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993.	无需处置	W1-S3-2
+Q03783	V74	title	V74.1.6.1	四类成因的并列框架	H-4	通过	无	Historical outcomes are not determined by a few large scale causes; instead, multiple local, contingent, and conjunctural processes and happenings jointly come 	无需处置	W1-S3-2
+Q03784	V74	title	V74.3.4.5	五种机制的连锁序列	H-4	通过	无	We use it when talking about the causes of ethnic violence and geopolitical miscalculation, political leaders invoke it in times of crisis, and it is behind mas	无需处置	W1-S3-2
+Q03785	V74	title	V74.5.1.6	四类史料的并置使用	H-4	通过	无	提交、邮件、文档与年报各覆盖一面：并置使用方能互证人力图景。	无需处置	W1-S3-2
+Q03786	V75	title	V75.3.1.4	生平存疑的三次复查	H-4	通过	无	存疑点一：Joy 在 Kleiner Perkins 的最新职务。	无需处置	W1-S3-2
+Q03787	V75	title	V75.3.2.1	五类史料的分层框架	H-4	通过	无	Its aims are to preserve and maintain historical UNIX artifacts, and to provide a forum for discussion of UNIX and its history.	无需处置	W1-S3-2
+Q03788	V76	title	V76.1.1.3	190 件补丁的全量回退	H-4	有问题	P2	reverting as many patches from UMN as he could find｜题名“全量回退”过强	观察	W1-S3-2
+Q03789	V76	title	V76.2.4.2	回移时机的三种官方方案	H-4	通过	无	Once the patch is mainlined it will be applied to the stable tree without anything else needing to be done by the author or subsystem maintainer.	无需处置	W1-S3-2
