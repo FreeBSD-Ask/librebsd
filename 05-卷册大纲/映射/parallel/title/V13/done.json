@@ -1,11 +1,12 @@
 {
- "vol": "V13",
- "sections": 43,
- "titles": 258,
- "exceptions": 198,
- "ledger_sha256": "a56524853904705714d79e93c074c529acb4f780afe816fc6c435411d6030e52",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T05:24:14",
- "session": "zcode-glm53flash-b11-20",
- "review_fix": "2026-11-03 批二：改题/论题（V13.4.5.6）｜2026-11-03 批二：4.5.6 改题（跨节重复）"
+  "vol": "V13",
+  "sections": 43,
+  "titles": 258,
+  "exceptions": 198,
+  "ledger_sha256": "9747f9aa6542159079353a59fa9919b03694994691b6f58f02eed6306720cdf7",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-11-03 批二：改题/论题（V13.4.5.6）｜2026-11-03 批二：4.5.6 改题（跨节重复）",
+  "note": "P6 预授权落账：改题名 4 条、论题 0 条、证据行 0 条"
 }

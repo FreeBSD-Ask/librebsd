@@ -1,11 +1,12 @@
 {
- "vol": "V61",
- "sections": 88,
- "titles": 441,
- "exceptions": 85,
- "ledger_sha256": "99487f381d1c29696499e6790cb3995ba4574faf50b524b4629c11e5c991cf43",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T22:26:00",
- "session": "claude-subagent-V61-resume-20261030",
- "review_fix": "2026-11-03 存疑清零 7 条"
+  "vol": "V61",
+  "sections": 88,
+  "titles": 441,
+  "exceptions": 85,
+  "ledger_sha256": "5b7aa2c005f61ea85b61d7c90059b966be61a76f9de20a2df280b6794507453a",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-11-03 存疑清零 7 条",
+  "note": "P6 预授权落账：改题名 5 条、论题 0 条、证据行 0 条"
 }

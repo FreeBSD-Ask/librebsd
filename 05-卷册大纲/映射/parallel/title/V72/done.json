@@ -1,12 +1,13 @@
 {
- "vol": "V72",
- "sections": 54,
- "titles": 262,
- "exceptions": 187,
- "ledger_sha256": "75d50018effa150807a6941a41f974a33cd1498428bf6a8183118db50eab5ea8",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T22:50:31",
- "session": "claude-subagent-V72b-20261030",
- "review_note": "262/262 逐条判读：keep 232／supplement 25／rewrite 5；改题 3、改论题 10、补证 25 行",
- "review_fix": "2026-11-03 尾批：论题随改题订正（V72.1.6.2、V72.1.6.4）｜2026-11-03 批四：建议题采纳与簇内让位 5 处｜2026-11-03 存疑清零 20 条（确证 1／形态 19）"
+  "vol": "V72",
+  "sections": 54,
+  "titles": 262,
+  "exceptions": 187,
+  "ledger_sha256": "efae7646bce4edb08388b732290f2aafdf76ca0573510d2601645ec08eb58545",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_note": "262/262 逐条判读：keep 232／supplement 25／rewrite 5；改题 3、改论题 10、补证 25 行",
+  "review_fix": "2026-11-03 尾批：论题随改题订正（V72.1.6.2、V72.1.6.4）｜2026-11-03 批四：建议题采纳与簇内让位 5 处｜2026-11-03 存疑清零 20 条（确证 1／形态 19）",
+  "note": "P6 预授权落账：改题名 2 条、论题 0 条、证据行 0 条"
 }

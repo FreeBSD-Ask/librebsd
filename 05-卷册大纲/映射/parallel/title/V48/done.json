@@ -1,10 +1,11 @@
 {
- "vol": "V48",
- "sections": 68,
- "titles": 272,
- "exceptions": 270,
- "ledger_sha256": "222812a1b9e25c49aef56dd77b9b51376d7c179e67de6855f1d3de821ecde89d",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T21:39:15",
- "session": "resume-3a6-20261030-V48"
+  "vol": "V48",
+  "sections": 68,
+  "titles": 272,
+  "exceptions": 270,
+  "ledger_sha256": "f345ea02954582982bdc5df7eca22a61a60716c180ac9723061ab95e5f8c7b35",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "note": "P6 预授权落账：改题名 1 条、论题 1 条、证据行 0 条"
 }

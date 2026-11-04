@@ -1,11 +1,12 @@
 {
- "vol": "V52",
- "sections": 44,
- "titles": 262,
- "exceptions": 262,
- "ledger_sha256": "aaf069325fb4da1e5911673a86f46796fcf06864df22d4fae97000bbdc249bc1",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T16:16:23",
- "session": "subagent-v52-20261030",
- "review_fix": "2026-10-30 逐条判读：全卷逐题判证据契合度；补回判读表 rewrite 稿 V52.3.4.6（终稿漏收，台账编号重排为 V52.3.4.5），台账 261→262；lint hard=0；见 title-design 呈审报告与 work 判读表｜2026-11-03 尾批：论题随改题订正（V52.3.2.4）｜2026-11-03 批四：建议题采纳与簇内让位 1 处｜2026-11-03 存疑清零 12 条（确证 3／形态 9）"
+  "vol": "V52",
+  "sections": 44,
+  "titles": 262,
+  "exceptions": 262,
+  "ledger_sha256": "befef9ea0cc1403a9416579cfdd7bf2e5648d77508f5cc5d8c66cbf5a5a8b3de",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-10-30 逐条判读：全卷逐题判证据契合度；补回判读表 rewrite 稿 V52.3.4.6（终稿漏收，台账编号重排为 V52.3.4.5），台账 261→262；lint hard=0；见 title-design 呈审报告与 work 判读表｜2026-11-03 尾批：论题随改题订正（V52.3.2.4）｜2026-11-03 批四：建议题采纳与簇内让位 1 处｜2026-11-03 存疑清零 12 条（确证 3／形态 9）",
+  "note": "P6 预授权落账：改题名 1 条、论题 0 条、证据行 0 条"
 }

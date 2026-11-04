@@ -1,11 +1,12 @@
 {
- "vol": "V60",
- "sections": 106,
- "titles": 529,
- "exceptions": 419,
- "ledger_sha256": "ddcd2471ca17c5f0c5f8de7292d98f7897717c16dfb3a007160b55dde507f2fc",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T18:12:22",
- "session": "claude-subagent-V60-20261030",
- "review_fix": "2026-10-30 逐条判读 529 条，改题 28 条，见呈审报告 §七｜2026-11-03 批二：社区按语境分治（V60.13.3.3、V60.13.10.4）"
+  "vol": "V60",
+  "sections": 106,
+  "titles": 529,
+  "exceptions": 419,
+  "ledger_sha256": "150567d45ed29a4638c4eb5b2a66f697ef65bf53e59497147b914eda7d01972d",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-10-30 逐条判读 529 条，改题 28 条，见呈审报告 §七｜2026-11-03 批二：社区按语境分治（V60.13.3.3、V60.13.10.4）",
+  "note": "P6 预授权落账：改题名 4 条、论题 0 条、证据行 0 条"
 }

@@ -1,12 +1,13 @@
 {
- "vol": "V23",
- "sections": 12,
- "titles": 77,
- "exceptions": 24,
- "ledger_sha256": "7b629b07e1b874dc645a716caa722edcbdaa575a090353051b7d977f8c910920",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T09:44:17",
- "session": "zcode-glm53flash-v21-30-r2",
- "amended_at": "2026-10-30T15:40:00",
- "amended_reason": "结构合并：2.2/2.4 合并，删 2.2.6"
+  "vol": "V23",
+  "sections": 12,
+  "titles": 77,
+  "exceptions": 24,
+  "ledger_sha256": "7b629b07e1b874dc645a716caa722edcbdaa575a090353051b7d977f8c910920",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "amended_at": "2026-10-30T15:40:00",
+  "amended_reason": "结构合并：2.2/2.4 合并，删 2.2.6",
+  "note": "P6 预授权落账：改题名 0 条、论题 0 条、证据行 5 条"
 }

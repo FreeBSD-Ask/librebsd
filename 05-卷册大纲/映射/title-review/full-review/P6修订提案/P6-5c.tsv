@@ -1,0 +1,52 @@
+work_id	cat	vol	subsection_id	field	before	after	rationale	evidence	confidence	action
+P6-5c-0001	H5	V21	V21.2.1.1	evidence:conflict	noted	none	定位 cgit.freebsd.org family-tree 行；本行仅列 386BSD 日期，题名由同小节 A|史料 旧大纲 437.1.1 行覆盖，二者不悖，conflict 改 none。	Net/2 是去除 AT&T 专有代码后的自由基线	A	改
+P6-5c-0002	H5	V21	V21.2.1.2	evidence:conflict	noted	none	定位 family-tree 行；引文不涉扣留代码，题名由 A|史料 437.1.1 行覆盖（不完整发行的由来），冲突不成立，改 none。	许可证负担使部分代码被扣留	A	改
+P6-5c-0003	H5	V21	V21.2.1.3	evidence:conflict	noted	none	定位 family-tree 行；引文不涉 386 移植与大学贡献，题名由 A|史料 070.3.x 行覆盖，改 none。	Jolitz 的 386 移植工作与大学贡献交叠	A	改
+P6-5c-0004	H5	V21	V21.2.1.4	evidence:conflict	noted	none	定位 family-tree 行；引文不涉补篇承接，题名由 A|史料 070.3.x 行覆盖，改 none。	缺失环节以连载补篇形式承接	A	改
+P6-5c-0005	H5	V21	V21.2.1.5	evidence:conflict	noted	none	定位 family-tree 行；引文不涉基线边界与负担，题名由 A|史料 437.1.1 行覆盖，改 none。	基线的可用边界与许可负担并存	A	改
+P6-5c-0006	H5	V21	V21.2.1.6	evidence:conflict	noted	none	定位 family-tree 行；引文不涉多源考订，题名由 A|史料 437.1.1 与 070.3.x 两行覆盖，改 none。	技术来源须由发行物、连载文本与档案互证	A	改
+P6-5c-0007	H5	V23	V23.3.2.1	evidence:conflict	noted	none	定位 FreeBSD Handbook 引言页行；three files 语涉范围与题名两层来源不悖，题名由 A|史料 045.2 行覆盖，改 none。	被指控代码分别源自 32V 遗留与文本相似	A	改
+P6-5c-0008	H5	V23	V23.3.2.2	evidence:conflict	noted	none	定位 O’Reilly《Open Sources》McKusick 章行；six files 语正合题名的圈定过程，题名由 A|史料 045.2 行覆盖，改 none。	争议文件从全量代码收敛为清单	A	改
+P6-5c-0009	H5	V23	V23.3.2.3	evidence:conflict	noted	none	定位 Handbook 引言页行；引文不涉宣誓书环节，题名由 A|史料 045.2 行覆盖，改 none。	从专家比对到宣誓书确认构成证据链	A	改
+P6-5c-0010	H5	V23	V23.3.2.5	evidence:conflict	noted	none	定位 Handbook 引言页行；三文件语与口径差异可并存，题名由 A|史料 045.2 行覆盖，改 none。	原告专家报告与被告宣誓书的技术口径不同	A	改
+P6-5c-0011	H5	V23	V23.3.2.6	evidence:conflict	noted	none	定位 McKusick 章行；引文可作证据强弱之一环，题名由 A|史料 045.2 行覆盖，改 none。	各环节证据强弱不一	A	改
+P6-5c-0012	H5	V27	V27.1.4.1	evidence:conflict	noted	none	定位 Handbook 引言页行；FreeBSD 1.0 于 1993-12 发行直证，技术来源构成由 A|史料 旧大纲 072 行覆盖，改 none。	首版取自网络发行与既有移植件	A	改
+P6-5c-0013	H5	V32	V32.3.1.3	evidence:conflict	noted	none	定位 catb.org 大教堂与集市行；同小节同 URL 已有 tier A、conflict none 的一行，noted 系重复登记，改 none。	1991 年 Linux 由数千开发者经互联网协作成形	A	改
+P6-5c-0014	H5	V54	V54.2.3.1	evidence:conflict	noted	none	定位旧大纲 370.5.1 行；行内〔存疑〕针对作者地域归属而非发行双轨，同小节 mwl.io 两行直证双轨，改 none。	一部分书交商业出版社，一部分自办 Tilted Windmill Press	A	改
+P6-5c-0015	H5	V54	V54.2.3.3	evidence:conflict	noted	none	定位旧大纲 370.5.1 行；本行述版次，mwl.io A 行述劝告，二者互补不悖，改 none。	作者公开劝旧版读者不必重购	A	改
+P6-5c-0016	H5	V54	V54.5.4.3	evidence:conflict	noted	none	定位旧大纲 378.7.3 行；匿名不可考正合题名“不可核处”，与 IRC 昵称页 A 行互补，改 none。	匿名贡献者不入昵称表	A	改
+P6-5c-0017	H5	V54	V54.5.4.5	evidence:conflict	noted	none	定位旧大纲 378.7.3 行；匿名单不可考与“账号姓名成对可核”相容，昵称页在案，改 none。	事后追认须账号与姓名成对可核	A	改
+P6-5c-0018	H5	V54	V54.5.5.3	evidence:conflict	noted	none	定位旧大纲 367.8.2 行；名单须考据、统计待评估，正合题名的史料限度，改 none。	女性贡献者名单多依自陈与社群整理	A	改
+P6-5c-0019	H5	V54	V54.5.5.4	evidence:conflict	noted	none	定位旧大纲 367.8.2 行；已核个案与无可核清单并存，与题名的署名个案相容，改 none。	已核个案（Lavigne 在列、佐藤 2023 译文段）显示文档与翻译工作分散	B	改
+P6-5c-0020	H5	V64	V64.8.9.2	evidence:conflict	noted	none	定位 dragonflybsd.org donations 行；捐款页与决策无涉，同小节 A|史料 dragonfly_mail 行覆盖 2008-10 投票记录，改 none。	2008 年 10 月源码控制系统一题由 Dillon 发起公开投票	A	改
+P6-5c-0021	H5	V64	V64.9.5.3	evidence:conflict	noted	none	定位旧大纲 251.5.1 行；本行仅记 2017 峰值年，提交分布由 dragonfly.duckdb A 行覆盖，改 none。	HAMMER2 主题提交 Dillon 741 条、Tomohiro Kusumi 547 条	A	改
+P6-5c-0022	H5	V75	V75.10.15.1	evidence:conflict	noted	none	定位旧大纲 302.8.2 行；全球化采用与 Watson 2010 确证均与题名相容，冲突不成立，改 none。	跨国采用与框架移植同时发生	A	改
+P6-5c-0023	H5	V07	V07.2.3.5	evidence:tier	A	B	定位 wiki.tuhs.org 书目页；社区众编维基非出版记录，书目事实应引出版社页或 ISBN 页，层级降 B 并另补一手。	Publications on Unix — Books: Life with Unix, A Quarter Century of Unix	A	改
+P6-5c-0024	H5	V20	V20.1.4.1	evidence:tier	A	B	定位 tuhs.org testwiki 页；社区维基页内 Works Cited 指向 sgistuff 等二手，tier A 过高，降 B。	SGI GL2 is an early derivative of System V	A	改
+P6-5c-0025	H5	V20	V20.1.4.2	evidence:tier	A	B	定位 testwiki 页；谱系事实应引 IRIS 发行说明，本页为社区维基，降 B。	SGI GL2 is an early derivative of System V	A	改
+P6-5c-0026	H5	V20	V20.1.4.3	evidence:tier	A	B	定位 testwiki 页；本页只述 eventually replaced by 4D1 而无年份，1988 年起点仅 B 级 sgistuff 支撑，降 B。	SGI GL2 is an early derivative of System V	A	改
+P6-5c-0027	H5	V20	V20.1.4.4	evidence:tier	A	B	定位 testwiki 页；本页未涉该题，A 级不成立，降 B 并须补一手。	SGI GL2 is an early derivative of System V	A	改
+P6-5c-0028	H5	V20	V20.1.4.5	evidence:tier	A	B	定位 testwiki 页；本页未涉实时图形增强，A 级不成立，降 B。	SGI GL2 is an early derivative of System V	A	改
+P6-5c-0029	H5	V20	V20.1.4.6	evidence:tier	A	B	定位 testwiki 页；本页未涉命名起点两段处理，A 级不成立，降 B。	SGI GL2 is an early derivative of System V	A	改
+P6-5c-0030	H5	V24	V24.3.3.1	evidence:url	https://en.wikipedia.org/wiki/4.4BSD		定位 en.wikipedia 4.4BSD 条目；C 级称 1994-03 与 A 级 6 月说相抵，且未涉发行说明文本结构，替代一手 URL 未取，转呈。	4.4BSD-Lite was released that no longer required a USL source license	B	不改-转呈
+P6-5c-0031	H5	V24	V24.3.3.2	evidence:url	https://en.wikipedia.org/wiki/4.4BSD		定位 4.4BSD 条目；C 级且引文未涉勘误发布节奏，替代一手 URL 未取，转呈。	4.4BSD-Lite was released that no longer required a USL source license	B	不改-转呈
+P6-5c-0032	H5	V24	V24.3.3.3	evidence:url	https://en.wikipedia.org/wiki/4.4BSD		定位 4.4BSD 条目；C 级且引文未涉缺陷记录方式，替代一手 URL 未取，转呈。	4.4BSD-Lite was released that no longer required a USL source license	B	不改-转呈
+P6-5c-0033	H5	V24	V24.3.3.4	evidence:url	https://en.wikipedia.org/wiki/4.4BSD		定位 4.4BSD 条目；C 级且引文未涉文本形态与版本对应，替代一手 URL 未取，转呈。	4.4BSD-Lite was released that no longer required a USL source license	B	不改-转呈
+P6-5c-0034	H5	V24	V24.3.3.5	evidence:url	https://en.wikipedia.org/wiki/4.4BSD		定位 4.4BSD 条目；C 级且引文未涉勘误归档路径，替代一手 URL 未取，转呈。	4.4BSD-Lite was released that no longer required a USL source license	B	不改-转呈
+P6-5c-0035	H5	V24	V24.3.3.6	evidence:url	https://en.wikipedia.org/wiki/4.4BSD		定位 4.4BSD 条目；C 级且引文未涉文本证据可用性，替代一手 URL 未取，转呈。	4.4BSD-Lite was released that no longer required a USL source license	B	不改-转呈
+P6-5c-0036	H5	V26	V26.2.2.1	evidence:url	https://en.wikipedia.org/wiki/SunOS		定位 en.wikipedia SunOS 条目；C 级 2.0 单行不足以支撑四阶段分期，替代一手 URL 未取，转呈。	SunOS 2.0 May 1985 Introduced the NFS protocol	B	不改-转呈
+P6-5c-0037	H5	V26	V26.2.2.4	evidence:url	https://en.wikipedia.org/wiki/SunOS		定位 SunOS 条目；引文（NFS／YP／RPC）与“与 System V 混合取向”无关，替代一手 URL 未取，转呈。	SunOS 2.0 May 1985 Introduced the NFS protocol	B	不改-转呈
+P6-5c-0038	H5	V26	V26.2.6.1	evidence:url	https://en.wikipedia.org/wiki/MachTen		定位 en.wikipedia MachTen 条目；C 级语仅述发行年份，未证微内核加伯克利服务层，替代一手 URL 未取，转呈。	Tenon released the original version for Motorola 68000 processors in 1991	B	不改-转呈
+P6-5c-0039	H5	V26	V26.2.6.3	evidence:url	https://en.wikipedia.org/wiki/MachTen		定位 MachTen 条目；PowerPC 1995 仅部分相容，层级过低，替代一手 URL 未取，转呈。	Tenon released the original version for Motorola 68000 processors in 1991	B	不改-转呈
+P6-5c-0040	H5	V26	V26.2.6.5	evidence:url	https://en.wikipedia.org/wiki/MachTen		定位 MachTen 条目；C 级且引文未涉性能与兼容双重代价，替代一手 URL 未取，转呈。	Tenon released the original version for Motorola 68000 processors in 1991	B	不改-转呈
+P6-5c-0041	H5	V28	V28.2.1.3	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 en.wikipedia Bill Joy 条目；C 级且引文（vi 周末写成）与离开伯克利的时间节点无关，替代一手 URL 未取，转呈。	with an oft-told anecdote that he wrote the vi editor in a weekend	B	不改-转呈
+P6-5c-0042	H5	V29	V29.7.1.1	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；引文正是编辑器传说源流，惟 C 级为唯一依据，须补访谈一手，URL 未取，转呈。	Joy denies this assertion.	B	不改-转呈
+P6-5c-0043	H5	V29	V29.7.1.3	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；C 级且引文未涉密码传说原型追溯，替代一手 URL 未取，转呈。	with an oft-told anecdote that he wrote the vi editor in a weekend	B	不改-转呈
+P6-5c-0044	H5	V29	V29.7.1.5	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；C 级且引文未涉考据结论的分寸把握，替代一手 URL 未取，转呈。	Joy denies this assertion.	B	不改-转呈
+P6-5c-0045	H5	V30	V30.10.1.1	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；C 级且引文未涉两说各自文本依据，替代一手 URL 未取，转呈。	with an oft-told anecdote that he wrote the vi editor in a weekend	B	不改-转呈
+P6-5c-0046	H5	V30	V30.10.1.2	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；C 级且引文未涉名称由来异说并列，替代一手 URL 未取，转呈。	with an oft-told anecdote that he wrote the vi editor in a weekend	B	不改-转呈
+P6-5c-0047	H5	V30	V30.10.1.3	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；C 级且引文未涉佐证材料档案面，替代一手 URL 未取，转呈。	Joy denies this assertion.	B	不改-转呈
+P6-5c-0048	H5	V30	V30.10.1.4	evidence:url	https://en.wikipedia.org/wiki/Bill_Joy		定位 Bill Joy 条目；C 级且引文未涉不作裁断原则，替代一手 URL 未取，转呈。	Joy denies this assertion.	B	不改-转呈
+P6-5c-0049	H5	V13	https://doi.org/10.5555/324493.325071	evidence:url	https://doi.org/10.5555/324493.325071		定位 V13 外链行；DOI 解析页明示无登记记录，替代 DOI 或论文页未取，转呈。	This DOI cannot be found in the DOI System	A	不改-转呈
+P6-5c-0050	H5	V17	https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Operating%20Systems.%20Design%20and%20Implementation.pdf	evidence:url	https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Operating%20Systems.%20Design%20and%20Implementation.pdf		定位 V17 外链行；实测 404、GitHub Pages 明示 File not found，替代源未取，转呈。	File not found	A	不改-转呈
+P6-5c-0051	H5	V71	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf	evidence:url	https://www.juniper.net/content/dam/www/assets/white-papers/us/en/preparing-junos-os-for-the-future.pdf		定位 V71 外链行；实测 404、跳转 HPE 报错页，替代源未取，转呈。	can’t find that page	A	不改-转呈

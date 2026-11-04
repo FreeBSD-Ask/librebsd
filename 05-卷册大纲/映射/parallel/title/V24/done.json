@@ -1,12 +1,13 @@
 {
- "vol": "V24",
- "sections": 14,
- "titles": 76,
- "exceptions": 76,
- "ledger_sha256": "ee7a51d2b6c8e6df02d83056cef771920b412552b6a656b6c52ec8c44bf17354",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T09:44:17",
- "session": "zcode-glm53flash-v21-30-r2",
- "amended_at": "2026-10-30T12:40:00",
- "amended_reason": "复核改题：V24.1.2.2/1.3.4 去重叠"
+  "vol": "V24",
+  "sections": 14,
+  "titles": 76,
+  "exceptions": 76,
+  "ledger_sha256": "112c53249f3eeacd718de41ba9957fb455ffa4e80c965c64a3002c709776bb6c",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "amended_at": "2026-10-30T12:40:00",
+  "amended_reason": "复核改题：V24.1.2.2/1.3.4 去重叠",
+  "note": "P6 预授权落账：改题名 1 条、论题 0 条、证据行 0 条"
 }

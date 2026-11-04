@@ -1,11 +1,11 @@
 {
- "vol": "V10",
- "sections": 56,
- "titles": 280,
- "ledger_sha256": "cc46bf27e16c8ef7e822354039b4ce4bf3110667d0e75f50c01c0e132f710a7d",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T11:06:23",
- "session": "ykla-daigaibatch-20261030",
- "note": "代改批后重批；以本 hash 为准",
- "exceptions": 280
+  "vol": "V10",
+  "sections": 56,
+  "titles": 280,
+  "ledger_sha256": "d35dc1bcf8f24fae7b590288bb22c2dddc60be77785877ff9deadb4ce32b5701",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "note": "P6 预授权落账：改题名 5 条、论题 0 条、证据行 0 条",
+  "exceptions": 280
 }

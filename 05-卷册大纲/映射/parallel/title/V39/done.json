@@ -1,11 +1,12 @@
 {
- "vol": "V39",
- "sections": 89,
- "titles": 442,
- "exceptions": 87,
- "ledger_sha256": "bb21c2800caac3a3d9c566721d521eb0bfc4ee5c78e14e559e9324146f1521b4",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T18:21:00",
- "session": "resume-3a6-20261030-V39",
- "review_fix": "2026-11-03 批二：社区按语境分治（V39.3.4.3、V39.4.2.3、V39.4.4.2、V39.5.2.5、V39.6.3.3、V39.8.2.4、V39.8.6.3、V39.9.4.4、V39.12.4.3、V39.12.5.2）"
+  "vol": "V39",
+  "sections": 89,
+  "titles": 442,
+  "exceptions": 87,
+  "ledger_sha256": "481c8ccdb208e4fcfb1b07be52a9b9748483baf60a00e0737bfeaef8c79b4161",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-11-03 批二：社区按语境分治（V39.3.4.3、V39.4.2.3、V39.4.4.2、V39.5.2.5、V39.6.3.3、V39.8.2.4、V39.8.6.3、V39.9.4.4、V39.12.4.3、V39.12.5.2）",
+  "note": "P6 预授权落账：改题名 1 条、论题 0 条、证据行 0 条"
 }

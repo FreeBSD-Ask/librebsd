@@ -55,7 +55,7 @@ V27.1.3.5	名称的提出者	https://docs.freebsd.org/en/books/handbook/introduc
 V27.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“FreeBSD 名称与项目定位”；本节题为其下位论题	none
 V27.1.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V27.1.4.1	旧树同节料件（块级摘要）	旧大纲-20261023/第04卷-大分裂与四大bsd的诞生/第072章-freebsd的创建与patchkit协调人/072.9-freebsd诞生时期的技术淘汰/072.9.1-386bsd单人维护freebsdcoreteam集体治理模式1993-1994.md	史料	A	2026-10-30	386BSD 0.1（1992.7）发布后 Bill Jolitz 单人维护补丁积压，社区成员无法直接合并补丁到主干；	none
-V27.1.4.1	首版发行时点	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	“The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993.”	noted
+V27.1.4.1	首版发行时点	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-30	“The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993.”	none
 V27.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“FreeBSD 1.0 发布”；本节题为其下位论题	none
 V27.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二（C8 去 AI 味同验）	none
 V27.1.4.2	旧树同节料件（块级摘要）	旧大纲-20261023/第04卷-大分裂与四大bsd的诞生/第072章-freebsd的创建与patchkit协调人/072.9-freebsd诞生时期的技术淘汰/072.9.3-补丁包维护cvs版本控制系统1993-1995.md	史料	A	2026-10-30	386BSD 0.1（1992.7）时期补丁通过邮件列表与 FTP 站点分发，社区成员需手动应用补丁到本地源代码，补丁冲突与版本追踪困难，补丁维护成本高；FreeBSD 项目早期采用 CVS（Concurrent Versions System，1986 年 Dick Grune 发布，1990 年代初期普及）作为版本控制系统；	none

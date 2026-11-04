@@ -1,11 +1,12 @@
 {
- "vol": "V58",
- "sections": 58,
- "titles": 270,
- "exceptions": 188,
- "ledger_sha256": "ffe49df4b3bfab0dadfd7db3e9d3e47eb32a7d3ee3699eb33a83add8104098e9",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T17:10:00",
- "session": "claude-subagent-V58-20261030",
- "review_fix": "2026-11-03 尾批：论题随改题订正（V58.1.3.4）｜2026-11-03 批二：社区按语境分治（V58.3.1.3、V58.3.4.5、V58.7.3.3、V58.7.8.1、V58.8.9.3）｜2026-11-03 存疑清零 56 条（有误 2／形态 54）"
+  "vol": "V58",
+  "sections": 58,
+  "titles": 270,
+  "exceptions": 188,
+  "ledger_sha256": "7a7f4aebea847326213a0d995a83c84dfa331ebfc6c820bd8907538105e6c130",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-11-03 尾批：论题随改题订正（V58.1.3.4）｜2026-11-03 批二：社区按语境分治（V58.3.1.3、V58.3.4.5、V58.7.3.3、V58.7.8.1、V58.8.9.3）｜2026-11-03 存疑清零 56 条（有误 2／形态 54）",
+  "note": "P6 预授权落账：改题名 4 条、论题 0 条、证据行 0 条"
 }

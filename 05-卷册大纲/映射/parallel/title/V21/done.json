@@ -1,11 +1,12 @@
 {
- "vol": "V21",
- "sections": 19,
- "titles": 114,
- "exceptions": 54,
- "ledger_sha256": "407005a790133180562da09ebcd998a341223229fd6205d1ff11214d92f63e9d",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T10:18:37",
- "session": "zcode-glm53flash-v21-30-r2",
- "review_fix": "2026-11-03 批二：社区按语境分治（V21.2.6.4、V21.3.2.3、V21.3.3.5）"
+  "vol": "V21",
+  "sections": 19,
+  "titles": 114,
+  "exceptions": 54,
+  "ledger_sha256": "f7d792f041c7a9209423ac1fe80be78e7f062a87a40bb1b8320180403d046dd4",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "review_fix": "2026-11-03 批二：社区按语境分治（V21.2.6.4、V21.3.2.3、V21.3.3.5）",
+  "note": "P6 预授权落账：改题名 1 条、论题 0 条、证据行 0 条"
 }

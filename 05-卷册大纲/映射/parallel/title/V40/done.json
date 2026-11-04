@@ -1,12 +1,12 @@
 {
- "vol": "V40",
- "sections": 78,
- "titles": 468,
- "exceptions": 450,
- "ledger_sha256": "69338736ba755bdbf2bb58812bb1e8b4ad57727c18fb6cbee5534ed92085c78f",
- "selftest_exit": 0,
- "finished_at": "2026-10-30T19:08:55",
- "session": "resume-3a6-20261030-V40",
- "note": "V40 判据全 PASS；全库 H1 FAIL 1 处属他卷 V12，只记录不代改；台账仅改 thesis 内一处直角引号为弯引号（题面零改动），hash 更新",
- "review_fix": "2026-11-03 批二：社区按语境分治（V40.4.6.2、V40.5.6.5、V40.5.7.5）"
+  "vol": "V40",
+  "sections": 78,
+  "titles": 468,
+  "exceptions": 450,
+  "ledger_sha256": "c4af5c04b383dab45de37b7b6d78557b71e2c5c0879553b548a97b33054f15d4",
+  "selftest_exit": 0,
+  "finished_at": "2026-11-04T13:50:00",
+  "session": "p6-preauthorized-20261104",
+  "note": "P6 预授权落账：改题名 1 条、论题 1 条、证据行 0 条",
+  "review_fix": "2026-11-03 批二：社区按语境分治（V40.4.6.2、V40.5.6.5、V40.5.7.5）"
 }
