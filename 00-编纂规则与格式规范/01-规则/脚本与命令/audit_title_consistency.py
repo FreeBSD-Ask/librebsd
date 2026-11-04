@@ -662,6 +662,60 @@ def run(root, collect=None):
     f("I2", "I2 例外 kind／status 枚举", bad_i2,
       "非法 %d 条：%s" % (len(bad_i2), "、".join(bad_i2[:5]) or "无"))
 
+    # ---------------- J 节题层（P7-4；2026-11-05 ykla 定序扩判定面）
+    # 范围注册＝长线登记表 §十九 V68 节题层：判定对象仅卷 68 的上位节题行
+    # （outline.txt 内「第六十八卷」标题块下的 - N.M 行）；其余卷的节题层另行批次。
+    # 判据：J1 长度下限 ≥8（去空白）；J2 同尾簇 ≤4（四章平行开篇「之辨」属有意
+    # 结构，帽定 4；依据＝执行记录 §二）；J3 BANNED_AI 照判（REVIEW_AI 走 J3i
+    # 披露）；J4 outline 节题与台账（chapter.section）族双向对位。
+    outp = os.path.join(root, "05-卷册大纲", "目录", "data", "outline.txt")
+    if not os.path.exists(outp):
+        rec("J0", "J0 节题层判定面（P7-4：V68）", True,
+            "跳过：outline.txt 不在位（夹具或子集环境）")
+    else:
+        j_secs = []
+        in68 = False
+        for s in _read(outp).split("\n"):
+            if s.startswith("# "):
+                in68 = "六十八卷" in s
+                continue
+            m_j = re.match(r"^- (\d+)\.(\d+) (.+?)(?:@@|$)", s)
+            if in68 and m_j:
+                j_secs.append(("%s.%s" % (m_j.group(1), m_j.group(2)),
+                               m_j.group(3).strip()))
+        led68 = {}
+        for _, _, r in all_rows:
+            if r["vol"] == "68":
+                led68["%s.%s" % (r["chapter"], r["section"])] = led68.get(
+                    "%s.%s" % (r["chapter"], r["section"]), 0) + 1
+        bad_j1 = ["%s（%s）" % (sn, t) for sn, t in j_secs
+                  if len("".join(t.split())) < 8]
+        f("J1", "J1 节题长度下限 ≥8（去空白；P7-4 范围＝V68）", bad_j1,
+          "过短 %d 处：%s" % (len(bad_j1), "、".join(bad_j1[:5]) or "无"))
+        j_tails = {}
+        for sn, t in j_secs:
+            tt = "".join(t.split())
+            if len(tt) >= 2:
+                j_tails.setdefault(tt[-2:], []).append(sn)
+        bad_j2 = ["尾“%s”×%d（%s…）" % (tail, len(ids), "、".join(ids[:4]))
+                  for tail, ids in sorted(j_tails.items()) if len(ids) > 4]
+        f("J2", "J2 节题同尾簇 ≤4（P7-4 范围＝V68）", bad_j2,
+          "超限 %d 处：%s" % (len(bad_j2), "；".join(bad_j2[:3]) or "无"))
+        bad_j3 = ["%s（%s）" % (sn, "、".join(w for w in BANNED_AI if w in t))
+                  for sn, t in j_secs if any(w in t for w in BANNED_AI)]
+        f("J3", "J3 节题禁 AI 高频空转词（P7-4 范围＝V68）", bad_j3,
+          "命中 %d 处：%s" % (len(bad_j3), "、".join(bad_j3[:5]) or "无"))
+        info_j3 = ["%s（%s）" % (sn, "、".join(w for w in REVIEW_AI if w in t))
+                   for sn, t in j_secs if any(w in t for w in REVIEW_AI)]
+        rec("J3i", "J3i 节题 AI 腔词披露（人工复核项，不拦退出码）", True,
+            "命中 %d 处：%s" % (len(info_j3), "、".join(info_j3[:6]) or "无"),
+            items=info_j3)
+        out_secs = {sn for sn, _ in j_secs}
+        bad_j4 = (["%s（台账无族）" % sn for sn, _ in j_secs if sn not in led68]
+                  + ["%s（outline 无节）" % sn for sn in led68 if sn not in out_secs])
+        f("J4", "J4 节题与台账族双向对位（P7-4 范围＝V68）", bad_j4,
+          "失衡 %d 处：%s" % (len(bad_j4), "、".join(bad_j4[:5]) or "无"))
+
     return rows_out
 
 
@@ -889,6 +943,56 @@ def cmd_selftest():
         ok_exc = False
     cases.append(("例外台账扩展两列兼容（registered_date／date_src 不判 schema 违约）",
                   ok_exc, "期望 I2 非法 0 且例外行数计入 1"))
+
+    # ---- 2026-11-05 P7-4 自检：J 组节题层判定面（V68 范围，夹具自带 outline.txt）
+    j_titles = ["编程之夏的创立动机与首届组织", "津贴制度与付费开源的起点记述",
+                "选拔机制的多口径对照", "批评诸线的对勘与辩护"]
+    t_j = build("68", j_titles, sources=src3, secs=[1, 2, 3, 4])
+    odir = os.path.join(t_j, "05-卷册大纲", "目录", "data")
+    os.makedirs(odir, exist_ok=True)
+    w(os.path.join(odir, "outline.txt"),
+      "# 第六十八卷 编程之夏（2005–2026）\n"
+      "- 1.1 编程之夏的创立动机与首届组织\n"
+      "- 1.2 津贴制度与付费开源的起点记述\n"
+      "- 1.3 选拔机制的多口径对照\n"
+      "- 1.4 批评诸线的对勘与辩护\n"
+      "- 1.5 短题\n"
+      "- 1.6 赋能闭环的设计\n"
+      "- 1.7 管道机制的形成过程\n"
+      "- 1.8 文件系统的形成过程\n"
+      "- 1.9 命令解释的形成过程\n"
+      "- 1.10 编程风格的形成过程\n"
+      "- 1.11 网络栈的形成过程\n"
+      "- 1.12 孤儿节的样式\n")
+    rj = run(t_j)
+    def _jok(code, want_ok):
+        return all(ok is want_ok for c, _, ok, _ in rj if c == code) and any(
+            c == code for c, _, _, _ in rj)
+    cases.append(("J1 节题长度下限命中（1.5 过短）",
+                  _jok("J1", False) and any("1.5" in det for c, _, ok, det in rj if c == "J1"),
+                  "期望 FAIL 且涉 1.5"))
+    cases.append(("J2 节题同尾簇超限（过程×5）",
+                  _jok("J2", False) and any("×5" in det for c, _, ok, det in rj if c == "J2"),
+                  "期望 FAIL 且计 ×5"))
+    cases.append(("J3 节题禁 AI 词命中（1.6 赋能／闭环）",
+                  _jok("J3", False) and any("赋能" in det for c, _, ok, det in rj if c == "J3"),
+                  "期望 FAIL 且点名赋能"))
+    cases.append(("J4 孤立节（1.5–1.11 台账无族）",
+                  _jok("J4", False) and any("台账无族" in det for c, _, ok, det in rj if c == "J4"),
+                  "期望 FAIL 且台账无族"))
+    # 干净正形：同夹具仅保留对位四行 → J1–J4 全 PASS
+    t_j2 = build("68", j_titles, sources=src3, secs=[1, 2, 3, 4])
+    os.makedirs(os.path.join(t_j2, "05-卷册大纲", "目录", "data"), exist_ok=True)
+    w(os.path.join(t_j2, "05-卷册大纲", "目录", "data", "outline.txt"),
+      "# 第六十八卷 编程之夏（2005–2026）\n"
+      "- 1.1 编程之夏的创立动机与首届组织\n"
+      "- 1.2 津贴制度与付费开源的起点记述\n"
+      "- 1.3 选拔机制的多口径对照\n"
+      "- 1.4 批评诸线的对勘与辩护\n")
+    rj2 = run(t_j2)
+    bad_j = [c for c, _, ok, _ in rj2 if c.startswith("J") and ok is not True]
+    cases.append(("J 组干净正形（对位四行零 FAIL）", not bad_j,
+                  "J1–J4 全过" if not bad_j else "未过：%s" % "、".join(bad_j)))
 
     bad = [c for c in cases if not c[1]]
     for label, ok, detail in cases:
