@@ -1,13 +1,13 @@
 {
-  "vol": "V42",
-  "sections": 25,
-  "titles": 150,
-  "exceptions": 150,
-  "ledger_sha256": "7568d9773bee279c569266591b95f18064a479ca42a84e1782e47fcc7f4e4158",
-  "selftest_exit": 0,
-  "finished_at": "2026-11-04T13:50:00",
-  "session": "p6-preauthorized-20261104",
-  "amended_at": "2026-10-30T12:40:00",
-  "amended_reason": "复核改题：V42.4.2.5 与 1.3.3 统一",
-  "note": "P6 预授权落账：改题名 1 条、论题 1 条、证据行 0 条"
+ "vol": "V42",
+ "sections": 25,
+ "titles": 150,
+ "exceptions": 150,
+ "ledger_sha256": "8debb44f13264f23b19345d331a4ffaf7dd0351b05025c491373fbab7ea92719",
+ "selftest_exit": 0,
+ "finished_at": "2026-11-04T13:50:00",
+ "session": "p6-preauthorized-20261104",
+ "amended_at": "2026-10-30T12:40:00",
+ "amended_reason": "复核改题：V42.4.2.5 与 1.3.3 统一",
+ "note": "待裁落账 2026-11-04：改题名 4、论题 0、证据行 0"
 }
