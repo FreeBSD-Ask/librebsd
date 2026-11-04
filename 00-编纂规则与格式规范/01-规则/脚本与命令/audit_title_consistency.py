@@ -14,7 +14,8 @@
 `<root>/05-卷册大纲/映射/title-evidence/V{NN}.tsv`（证据表）
 `<root>/05-卷册大纲/映射/title-design/approvals.tsv`（批准记录，全局）
 `<root>/05-卷册大纲/映射/title-design/approved/V{NN}.title.ok`（批准标记）
-`<root>/05-卷册大纲/映射/title-design/exceptions/V{NN}.tsv`（例外台账）
+`<root>/05-卷册大纲/映射/title-design/exceptions/V{NN}.tsv`（例外台账；前五列必备，
+尾部可带 registered_date／date_src 两扩展列——2026-11-04 P4 盘库 G-05／R44 增）
 
 判据分组
 --------
@@ -44,6 +45,11 @@ I 例外（id 在台账内、kind 枚举）
 用法
 ----
 `python audit_title_consistency.py [--root PATH] [--selftest] [--check]`
+`python audit_title_consistency.py --json [--json-out PATH]`
+
+`--json` 只输出机读 JSON（不打印人读报告），含每判据的逐题命中 id（title_ids／
+section_ids／vol_ids 三级粒度），供 3A6-2 P4 全量机判消费（2026-11-04 增补，判据零改动）。
+`--json-out` 另把同一 JSON 落盘，人读报告照常打印。
 
 说明
 ----
@@ -67,6 +73,10 @@ EVID_HDR = ["subsection_id", "query", "url", "source_type", "tier", "accessed",
 APPR_HDR = ["kind", "vol", "title_count", "ledger_sha256", "approved_by",
             "approved_at", "note"]
 EXC_HDR = ["subsection_id", "kind", "reason", "proposal", "status"]
+# 例外台账尾部扩展列（2026-11-04 P4 盘库，G-05／R44）：前五列为必备前缀，尾部允许且仅
+# 允许 registered_date（登记日期，git 逐行首现）与 date_src（取值来源 git／file／manual）
+# 两列；行宽放宽为 ≥ 前缀长度，兼容未回填卷与已回填卷并存。
+EXC_HDR_EXT = ("registered_date", "date_src")
 
 STATUS_OK = {"draft", "final", "approved"}
 SRC_OK = {"史料", "联网", "目录", "规则"}
@@ -123,6 +133,12 @@ CROSS_REF = re.compile(u"（另见[^）]*）")
 # 不外溢其他判据（同节 B／C／G 组照判），也不外溢 V51–V76（照判 FAIL）。
 D3_EXEMPT_VOLS = frozenset("%02d" % n for n in range(1, 51))
 D3_EXEMPT_BASIS = "ykla 2026-11-02 改判（3A6-2 R04 固化）：V01–V50 字数相似不作要求"
+
+# 逐题命中还原（2026-11-04 P4 增补）：各判据内部 bad_* 列表以「id（说明）」承载，
+# --json 由此还原 title／section／volume 三级粒度，判据语义不变。
+ID_TITLE = re.compile(r"V\d{2}\.\d+\.\d+\.\d+")
+ID_SECTION = re.compile(r"V\d{2}\.\d+\.\d+(?!\.\d)")
+ID_VOL = re.compile(r"^V\d{2}(?![.\d])")
 
 
 def _read(p):
@@ -197,7 +213,12 @@ def load_evid(evid_dir):
     return out
 
 
-def run(root):
+def run(root, collect=None):
+    """跑全部判据，返回 [(code, name, ok, detail)]；ok 三态 True／"EXEMPT"／False。
+
+    collect 非 None 时按判据码回填机读命中：{code: {name, ok, detail, title_ids,
+    section_ids, vol_ids}}（2026-11-04 P4 增补，供 --json 与机判结果.tsv 消费）。
+    """
     rows_out = []
     design_dir = os.path.join(root, DESIGN_REL)
     evid_dir = os.path.join(root, REL, "title-evidence")
@@ -208,8 +229,42 @@ def run(root):
     design = load_design(design_dir)
     evid = load_evid(evid_dir)
 
+    def _hit_levels(items):
+        """把「id（说明）」列表还原为 title／section／volume 三级命中集合。"""
+        titles, sections, vols = set(), set(), set()
+        for item in items:
+            t = ID_TITLE.findall(item)
+            if t:
+                titles.update(t)
+                continue
+            s = ID_SECTION.findall(item)
+            if s:
+                sections.update(s)
+                continue
+            m = ID_VOL.match(item)
+            if m:
+                vols.add(m.group(0))
+        return titles, sections, vols
+
+    def rec(code, name, ok, detail, title_ids=(), section_ids=(), vol_ids=(), items=()):
+        rows_out.append((code, name, ok, detail))
+        if collect is not None:
+            collect[code] = {"name": name, "ok": ok, "detail": detail,
+                             "title_ids": sorted(set(title_ids)),
+                             "section_ids": sorted(set(section_ids)),
+                             "vol_ids": sorted(set(vol_ids)),
+                             "items": list(items)}
+
+    def f(code, name, bad, detail, ids=None, section_ids=None, vol_ids=None):
+        if ids is not None or section_ids is not None or vol_ids is not None:
+            rec(code, name, not bad, detail, ids or (), section_ids or (), vol_ids or (),
+                items=bad)
+            return
+        titles, sections, vols = _hit_levels(bad)
+        rec(code, name, not bad, detail, titles, sections, vols, items=bad)
+
     if not design:
-        rows_out.append(("A1", "零态：无标题台账（立线未开工，合法状态）", True, "N/A"))
+        rec("A1", "零态：无标题台账（立线未开工，合法状态）", True, "N/A")
         return rows_out
 
     # 汇总
@@ -219,9 +274,6 @@ def run(root):
             if len(c) != len(DESIGN_HDR):
                 raise ValueError("%s 第 %d 行列数 %d ≠ %d" % (p, i, len(c), len(DESIGN_HDR)))
             all_rows.append((vol, i, dict(zip(DESIGN_HDR, c))))
-
-    def f(code, name, bad, detail):
-        rows_out.append((code, name, not bad, detail))
 
     # ---------------- A 台账结构
     bad1 = []
@@ -354,8 +406,11 @@ def run(root):
       bad_c7, "命中 %d 处：%s" % (len(bad_c7), "、".join(bad_c7[:5]) or "无"))
     info_c7 = ["%s（%s）" % (r["subsection_id"], "、".join(w for w in REVIEW_TERMS if w in r["title"]))
                for _, _, r in all_rows if any(w in r["title"] for w in REVIEW_TERMS)]
-    rows_out.append(("C7i", "C7i 理论腔词披露（人工复核项，不拦退出码）", True,
-                     "命中 %d 处：%s" % (len(info_c7), "、".join(info_c7[:6]) or "无")))
+    info_c7_ids = [r["subsection_id"] for _, _, r in all_rows
+                   if any(w in r["title"] for w in REVIEW_TERMS)]
+    rec("C7i", "C7i 理论腔词披露（人工复核项，不拦退出码）", True,
+        "命中 %d 处：%s" % (len(info_c7), "、".join(info_c7[:6]) or "无"), info_c7_ids,
+        items=info_c7)
 
     # C8 去 AI 味与风格一致（2026-10-30 ykla 令：标题风格应一致，去 AI 味的同时保持学术性）
     bad_c8a = []
@@ -366,7 +421,7 @@ def run(root):
     f("C8a", "C8a 禁 AI 高频空转词", bad_c8a,
       "命中 %d 处：%s" % (len(bad_c8a), "、".join(bad_c8a[:5]) or "无"))
 
-    bad_c8b = []
+    bad_c8b, bad_c8b_ids = [], []
     tail_groups = {}
     for vol, ln, r in all_rows:
         t = "".join(r["title"].split())
@@ -375,8 +430,9 @@ def run(root):
     for (vol, tail), ids in sorted(tail_groups.items()):
         if len(ids) > 3:
             bad_c8b.append("V%s 尾“%s”×%d（%s…）" % (vol, tail, len(ids), "、".join(ids[:4])))
+            bad_c8b_ids.extend(ids)
     f("C8b", "C8b 风格一致：同卷同结尾二字簇 ≤3", bad_c8b,
-      "超限簇 %d 处：%s" % (len(bad_c8b), "、".join(bad_c8b[:5]) or "无"))
+      "超限簇 %d 处：%s" % (len(bad_c8b), "、".join(bad_c8b[:5]) or "无"), bad_c8b_ids)
 
     bad_c8c = ["%s（的×%d）" % (r["subsection_id"], r["title"].count("的"))
                for _, _, r in all_rows if r["title"].count("的") > 2]
@@ -385,8 +441,11 @@ def run(root):
 
     info_c8 = ["%s（%s）" % (r["subsection_id"], "、".join(w for w in REVIEW_AI if w in r["title"]))
                for _, _, r in all_rows if any(w in r["title"] for w in REVIEW_AI)]
-    rows_out.append(("C8i", "C8i AI 腔词披露（人工复核项，不拦退出码）", True,
-                     "命中 %d 处：%s" % (len(info_c8), "、".join(info_c8[:6]) or "无")))
+    info_c8_ids = [r["subsection_id"] for _, _, r in all_rows
+                   if any(w in r["title"] for w in REVIEW_AI)]
+    rec("C8i", "C8i AI 腔词披露（人工复核项，不拦退出码）", True,
+        "命中 %d 处：%s" % (len(info_c8), "、".join(info_c8[:6]) or "无"), info_c8_ids,
+        items=info_c8)
 
     # C9 禁反斜杠与控制字符（2026-11-04 由「C4」重编：规则 C4＝官方名斜杠两分，由第四十一件
     # audit_title_term_forms.py 承载；本判据与规则编号脱钩对齐，G-01／3A6-2 R28。语义不变。）
@@ -415,17 +474,20 @@ def run(root):
             else:
                 bad_d3.append(item)
     d3_name = "D3 S3 同节平行：字数极差 ≤14（V01–V50 卷段豁免）"
+    bad_d3_sec = sorted({m for it in bad_d3 for m in ID_SECTION.findall(it)})
+    exempt_d3_sec = sorted({m for it in exempt_d3 for m in ID_SECTION.findall(it)})
     if bad_d3:
         d3_detail = "越界节 %d 个：%s" % (len(bad_d3), "、".join(bad_d3[:3]) or "无")
         if exempt_d3:
             d3_detail += "；另 V01–V50 豁免 %d 节（%s）" % (len(exempt_d3), D3_EXEMPT_BASIS)
-        rows_out.append(("D3", d3_name, False, d3_detail))
+        rec("D3", d3_name, False, d3_detail, section_ids=bad_d3_sec, items=bad_d3)
     elif exempt_d3:
-        rows_out.append(("D3", d3_name, "EXEMPT",
-                         "豁免节 %d 个：%s｜依据：%s"
-                         % (len(exempt_d3), "、".join(exempt_d3[:3]) or "无", D3_EXEMPT_BASIS)))
+        rec("D3", d3_name, "EXEMPT",
+            "豁免节 %d 个：%s｜依据：%s"
+            % (len(exempt_d3), "、".join(exempt_d3[:3]) or "无", D3_EXEMPT_BASIS),
+            section_ids=exempt_d3_sec, items=exempt_d3)
     else:
-        rows_out.append(("D3", d3_name, True, "越界节 0 个：无"))
+        rec("D3", d3_name, True, "越界节 0 个：无")
 
     n_exc = 0
     exc_rows = []
@@ -435,12 +497,16 @@ def run(root):
                 hdr, body = _rows(os.path.join(excdir, name))
                 if hdr is None:
                     continue
-                if hdr != EXC_HDR:
+                # 前五列为必备前缀；尾部只允许 registered_date／date_src 两扩展列（R44）。
+                if hdr[:len(EXC_HDR)] != EXC_HDR:
                     raise ValueError("%s 表头不合 schema" % name)
+                unknown = [h for h in hdr[len(EXC_HDR):] if h not in EXC_HDR_EXT]
+                if unknown:
+                    raise ValueError("%s 表头含未知扩展列：%s" % (name, unknown))
                 exc_rows.extend(body)
     n_exc = len(exc_rows)
     bad_d4 = [c[0] for c in exc_rows
-              if len(c) == len(EXC_HDR) and c[1] == "single_source" and c[0] in seen]
+              if len(c) >= len(EXC_HDR) and c[1] == "single_source" and c[0] in seen]
     f("D4", "D4 S4 单源题进例外后不得成题", bad_d4,
       "违例 %d 条：%s（例外台账共 %d 条）"
       % (len(bad_d4), "、".join(bad_d4[:5]) or "无", n_exc))
@@ -504,28 +570,31 @@ def run(root):
       "单源 %d 条：%s" % (len(bad_f3), "、".join(bad_f3[:5]) or "无"))
 
     # ---------------- G 重复题
-    bad_g1, bad_g2 = [], []
+    bad_g1, bad_g2, bad_g2_ids = [], [], []
     for k, rs in by_sec.items():
         ts = [x["title"] for x in rs]
         dup = sorted({t for t in ts if ts.count(t) > 1})
         if dup:
             bad_g1.append("V%s.%s.%s：%s" % (k[0], k[1], k[2], "／".join(dup[:2])))
     for vol, (p, hdr, body) in design.items():
-        ts = [dict(zip(DESIGN_HDR, c))["title"] for c in body]
-        groups = {}
-        for t in ts:
+        groups, groups_ids = {}, {}
+        for c in body:
+            d = dict(zip(DESIGN_HDR, c))
+            t = d["title"]
             cross = bool(CROSS_REF.search(t))
             base = CROSS_REF.sub("", t).strip()
             groups.setdefault(base, []).append(cross)
+            groups_ids.setdefault(base, []).append(d["subsection_id"])
         for base, flags in groups.items():
             n_cross = sum(1 for x in flags if x)
             n_bare = len(flags) - n_cross
             if n_bare > 1 or n_cross > 1 or (n_cross and n_bare == 0):
                 bad_g2.append("V%s：%s（主 %d／从 %d）" % (vol, base[:26], n_bare, n_cross))
+                bad_g2_ids.extend(groups_ids[base])
     f("G1", "G1 同节内题名不重复", bad_g1,
       "重复 %d 节：%s" % (len(bad_g1), "、".join(bad_g1[:3]) or "无"))
     f("G2", "G2 同卷内题名不重复（每基名主 1 从 ≤1）", bad_g2,
-      "重复 %d 卷：%s" % (len(bad_g2), "、".join(bad_g2[:3]) or "无"))
+      "重复 %d 卷：%s" % (len(bad_g2), "、".join(bad_g2[:3]) or "无"), bad_g2_ids)
 
     # ---------------- H 批准一致
     appr_rows = []
@@ -535,7 +604,7 @@ def run(root):
             raise ValueError("approvals.tsv 表头不合 schema")
         appr_rows = [dict(zip(APPR_HDR, c)) for c in body]
 
-    bad_h1, bad_h2, bad_h3 = [], [], []
+    bad_h1, bad_h2, bad_h3, bad_h3_ids = [], [], [], []
     if os.path.isdir(okdir):
         for name in sorted(os.listdir(okdir)):
             m = re.match(r"V(\d{2})\.title\.ok$", name)
@@ -559,17 +628,18 @@ def run(root):
             drafts = [r for _, _, r in all_rows if r["vol"] == vol and r["status"] == "draft"]
             if drafts:
                 bad_h3.append("V%s（%d 条仍为 draft）" % (vol, len(drafts)))
+                bad_h3_ids.extend(r["subsection_id"] for r in drafts)
     f("H1", "H1 title.ok 的 ledger_sha256 与台账一致", bad_h1,
       "不符 %d 处：%s" % (len(bad_h1), "、".join(bad_h1[:3]) or "无"))
     f("H2", "H2 每份 title.ok 有 approvals 行", bad_h2,
       "缺行 %d 处：%s" % (len(bad_h2), "、".join(bad_h2[:3]) or "无"))
     f("H3", "H3 已批卷无 draft 残留", bad_h3,
-      "残留 %d 卷：%s" % (len(bad_h3), "、".join(bad_h3[:3]) or "无"))
+      "残留 %d 卷：%s" % (len(bad_h3), "、".join(bad_h3[:3]) or "无"), bad_h3_ids)
 
     # ---------------- I 例外
-    bad_i1 = [c[0] for c in exc_rows if len(c) == len(EXC_HDR) and c[0] not in seen]
+    bad_i1 = [c[0] for c in exc_rows if len(c) >= len(EXC_HDR) and c[0] not in seen]
     bad_i2 = [c[0] for c in exc_rows
-              if len(c) == len(EXC_HDR) and (c[1] not in EXC_KIND or c[4] not in EXC_STATUS)]
+              if len(c) >= len(EXC_HDR) and (c[1] not in EXC_KIND or c[4] not in EXC_STATUS)]
     f("I1", "I1 例外 id 落在台账内", bad_i1,
       "悬空 %d 条：%s" % (len(bad_i1), "、".join(bad_i1[:5]) or "无"))
     f("I2", "I2 例外 kind／status 枚举", bad_i2,
@@ -597,7 +667,7 @@ def report(rows, title):
 
 
 def cmd_selftest():
-    """正例 3 例＋反例 34 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
+    """正例 3 例＋反例 34 例＋P4 数据面 2 例，各自独立临时根；断言正例零 FAIL、反例命中指定判据码。
 
     全部在临时目录，不触碰真实工作区；反例覆盖 B2／B3／B4／B5／B6／C2／C7（谱系＋
     进步叙事与等级修辞＋历史必然词组＋劳动禁词，R31／R32）／C9（原 C4 重编，G-01）／
@@ -766,6 +836,29 @@ def cmd_selftest():
     n_fail = sum(1 for _, _, ok, _ in rows if not ok)
     cases.append(("B7 正例：U+2013 正形（零 FAIL）", n_fail == 0, "FAIL=%d" % n_fail))
 
+    # ---- 2026-11-04 P4 增补自检：collect 逐题命中（--json 数据面）＋例外台账扩展列兼容
+    col = {}
+    t2 = build("05", ["Unix 谱系的分岔", good[1], good[2]], sources=src3)
+    run(t2, col)
+    ok_json = ("C7" in col and col["C7"]["ok"] is False
+               and col["C7"]["title_ids"] == ["V05.1.1.1"])
+    cases.append(("collect 逐题命中（C7 title_ids 精确到题）", ok_json, "期望 V05.1.1.1"))
+
+    t3 = build("06", good, sources=src3)
+    exdir = os.path.join(t3, "05-卷册大纲", "映射", "title-design", "exceptions")
+    os.makedirs(exdir, exist_ok=True)
+    w(os.path.join(exdir, "V06.tsv"),
+      TAB.join(EXC_HDR + list(EXC_HDR_EXT)) + "\n" +
+      TAB.join(["V06.1.1.1", "corpus_gap", "无史料", "改题", "open", "2026-10-29", "git"]) + "\n")
+    try:
+        r3 = run(t3, {})
+        ok_exc = (any(c == "I2" and det.startswith("非法 0") for c, _, _, det in r3)
+                  and any(c == "D4" and "例外台账共 1 条" in det for c, _, _, det in r3))
+    except ValueError:
+        ok_exc = False
+    cases.append(("例外台账扩展两列兼容（registered_date／date_src 不判 schema 违约）",
+                  ok_exc, "期望 I2 非法 0 且例外行数计入 1"))
+
     bad = [c for c in cases if not c[1]]
     for label, ok, detail in cases:
         print("  [%s] %s（%s）" % ("PASS" if ok else "FAIL", label, detail))
@@ -789,18 +882,36 @@ def main():
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--check", action="store_true",
                     help="显式校验模式（与缺省等价；供批流程统一写法）")
+    ap.add_argument("--json", action="store_true",
+                    help="只输出机读 JSON（含逐题命中 id），不打印人读报告")
+    ap.add_argument("--json-out", default=None,
+                    help="同一 JSON 落盘路径（人读报告照常打印）")
     a = ap.parse_args()
     if a.selftest:
         return cmd_selftest()
     root = os.path.abspath(a.root) if a.root else find_root()
+    collect = {}
     try:
-        rows = run(root)
+        rows = run(root, collect)
     except ValueError as e:
         print("✗ 输入违约（表头／列数不合 schema）：%s" % e)
         return 2
     except Exception:
         traceback.print_exc()
         return 2
+    fails = sum(1 for _, _, ok, _ in rows if ok is False)
+    if a.json or a.json_out:
+        doc = {"root": root,
+               "indicator_count": len(rows),
+               "fail_count": fails,
+               "indicators": collect}
+        s = json.dumps(doc, ensure_ascii=False, indent=2, sort_keys=True)
+        if a.json_out:
+            with io.open(a.json_out, "w", encoding="utf-8", newline="\n") as fh:
+                fh.write(s + "\n")
+        if a.json:
+            print(s)
+            return 0 if fails == 0 else 1
     mode = "校验（--check）" if a.check else "校验（缺省）"
     fails = report(rows, "小节标题一致性门禁（第三十九件）  %s  root=%s" % (mode, root))
     return 0 if fails == 0 else 1

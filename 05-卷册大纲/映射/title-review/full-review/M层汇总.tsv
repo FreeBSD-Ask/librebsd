@@ -1,0 +1,52 @@
+indicator_id	domain	severity	result	title_hits	disclose_hits	exempt_hits	detail	carrier
+M-A1	台账结构	P0	PASS	0	0	0	重复 0 处：无	第三十九件 audit_title_consistency.py
+M-A2	台账结构	P0	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-A3	台账结构	P0	PASS	0	0	0	异常节 0 个：无	第三十九件 audit_title_consistency.py
+M-A4	台账结构	P1	PASS	0	0	0	非法 0 处：无	第三十九件 audit_title_consistency.py
+M-B1	题名形态	P1	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-B2	题名形态	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-B3	题名形态	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-B4	题名形态	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-B5	题名形态	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-B6	题名形态	P1	PASS	0	0	0	越界 0 处：无	第三十九件 audit_title_consistency.py
+M-B7	题名形态	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-C1	字符标点	P1	PASS	0	0	0	紧邻 0 处：无	第三十九件 audit_title_consistency.py
+M-C2	字符标点	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-C3	字符标点	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-C5	字符标点	P1	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-C6	字符标点	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-C7	字符标点	P1	FAIL	111	0	0	命中 111 处：V01.2.1.4（劳动）、V01.8.7.3（劳动）、V01.8.8.1（劳动）、V01.8.8.4（劳动）、V02.2.6.4（雇佣）	第三十九件 audit_title_consistency.py
+M-C7i	字符标点	P2	DISCLOSED	0	192	0	命中 192 处：V01.5.5.3（语境）、V01.7.3.1（语境）、V01.8.1.6（叙事）、V01.8.4.2（语境）、V01.8.5.4（叙事）、V01.8.5.6（叙事）	第三十九件 audit_title_consistency.py
+M-C8a	字符标点	P1	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-C8b	字符标点	P1	PASS	0	0	0	超限簇 0 处：无	第三十九件 audit_title_consistency.py
+M-C8c	字符标点	P1	PASS	0	0	0	超限 0 处：无	第三十九件 audit_title_consistency.py
+M-C8i	字符标点	P2	DISCLOSED	0	144	0	命中 144 处：V01.2.9.6（生态）、V01.3.4.6（张力）、V01.4.6.4（生态）、V01.5.5.5（张力）、V01.7.7.4（维度）、V01.8.5.5（张力）	第三十九件 audit_title_consistency.py
+M-C9	字符标点	P2	PASS	0	0	0	命中 0 处：无	第三十九件 audit_title_consistency.py
+M-D1	语义下限	P1	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-D2	语义下限	P1	PASS	0	0	0	同 A2	第三十九件 audit_title_consistency.py
+M-D3	语义下限	P2	PASS	0	0	0	越界节 0 个：无	第三十九件 audit_title_consistency.py
+M-D4	语义下限	P0	PASS	0	0	0	违例 0 条：无（例外台账共 14872 条）	第三十九件 audit_title_consistency.py
+M-E1	证据完备	P1	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-E2	证据完备	P1	PASS	0	0	0	缺证 0 条：无	第三十九件 audit_title_consistency.py
+M-E3	证据完备	P0	PASS	0	0	0	悬空 0 条：无	第三十九件 audit_title_consistency.py
+M-F1	四源覆盖	P1	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-F2	四源覆盖	P1	PASS	0	0	0	不足 0 条：无	第三十九件 audit_title_consistency.py
+M-F3	四源覆盖	P0	PASS	0	0	0	单源 0 条：无	第三十九件 audit_title_consistency.py
+M-G1	重复题	P1	PASS	0	0	0	重复 0 节：无	第三十九件 audit_title_consistency.py
+M-G2	重复题	P1	PASS	0	0	0	重复 0 卷：无	第三十九件 audit_title_consistency.py
+M-H1	批准一致	P0	PASS	0	0	0	不符 0 处：无	第三十九件 audit_title_consistency.py
+M-H2	批准一致	P0	PASS	0	0	0	缺行 0 处：无	第三十九件 audit_title_consistency.py
+M-H3	批准一致	P1	PASS	0	0	0	残留 0 卷：无	第三十九件 audit_title_consistency.py
+M-I1	例外	P1	PASS	0	0	0	悬空 0 条：无	第三十九件 audit_title_consistency.py
+M-I2	例外	P1	PASS	0	0	0	非法 0 条：无	第三十九件 audit_title_consistency.py
+M-J1	术语形态	P1	PASS	0	0	0	R29 官方名全角变体：拦截 0 条／披露 0 条	第四十一件 audit_title_term_forms.py
+M-J2	术语形态	P1	FAIL	29	8	0	R35 人物名双层：拦截 32 条／披露 9 条	规则 §4.4
+M-J3	术语形态	P2	PASS	0	4	0	R36 版次称名分流：拦截 0 条／披露 5 条	规则 §4.4
+M-J4	术语形态	P2	DISCLOSED	0	0	0	无常态机判载体，移交 H-6 人判（DECLARED 于指标总表）	规则 §4.4
+M-K1	风格一致	P2	DISCLOSED	0	0	0	跨卷句式与长度分布见 跨卷风格分布.tsv；越界卷呈裁（交 H-7）	风格规范
+M-K2	风格一致	P1	PASS	0	0	0	近似重复 0 对：无	一次性扫描（2026-11-03）
+M-L1	结构闭环	P0	PASS	0	0	0	四点闭环缺口 0 卷：无	第三十九件 audit_title_consistency.py
+M-L2	结构闭环	P1	PASS	0	0	0	复核报告 76／76	title-review/V*-复核报告.md
+M-L3	结构闭环	P2	PASS	0	0	0	stats 行 76，覆盖卷 76／76	title-review/stats.tsv
+M-M1	基线完整	P2	PASS	0	0	0	基线 6 项与磁盘一致	full-review/基线-20261103.tsv
+M-M2	基线完整	P2	PASS	0	0	0	approvals 252 行（title 252／landing 0，覆盖 76 卷）	title-design/approvals.tsv
