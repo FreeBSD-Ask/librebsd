@@ -302,69 +302,139 @@ button.danger {
   flex: 0 0 auto;
 }
 
-/* 章块：整章内容（章卡＋各节）都在同一块里 */
-.chapter-block {
-  margin: 18px 0 6px;
+/* 卷块（全部卷视图）：卷头绿色，字号最大 */
+.vol-block {
+  margin: 10px 0 2px;
 }
 
-.chapter-head {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  padding: 10px 10px 7px;
-  background: var(--surface-2);
-  border-top: 2px solid var(--accent);
-  border-radius: 10px 10px 0 0;
-}
-
-.chapter-head .ch-title {
-  flex: 1;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: 0.02em;
-}
-
-.chapter-head .ch-stat,
-.section-head .sec-stat {
-  font-size: 12px;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* 节块：左侧竖线＋缩进，表明归属本章 */
-.section-block {
-  margin: 4px 0 12px;
-  padding-left: 12px;
-  border-left: 3px solid color-mix(in srgb, var(--accent) 38%, var(--line));
-}
-
-.section-head {
+.vol-block-head {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 10px;
-  margin-bottom: 4px;
+  gap: 6px;
+  width: 100%;
+  min-height: 0;
+  margin: 0 0 4px;
+  padding: 6px 8px;
+  text-align: left;
   background: var(--surface-2);
+  border: 0;
+  border-left: 3px solid var(--accent);
   border-radius: 8px;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.section-head .sec-title {
+.vol-block-title {
   flex: 1;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  opacity: 0.8;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.vol-stat {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* 章块：整章内容（章卡＋各节）都在同一块里 */
+.chapter-block {
+  margin: 8px 0 2px;
+}
+
+.chapter-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 5px 8px 4px;
+  text-align: left;
+  background: var(--surface-2);
+  border: 0;
+  border-top: 2px solid var(--accent);
+  border-radius: 10px 10px 0 0;
+  color: var(--accent);
+}
+
+.chapter-head .ch-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.chapter-head .ch-stat,
+.section-head .sec-stat {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* 节块：左侧竖线＋缩进，表明归属本章 */
+.section-block {
+  margin: 2px 0 6px;
+  padding-left: 8px;
+  border-left: 2px solid color-mix(in srgb, var(--accent) 38%, var(--line));
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin-bottom: 3px;
+}
+
+.section-fold {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 3px 8px;
+  text-align: left;
+  background: var(--surface-2);
+  border: 0;
+  border-radius: 8px;
+  color: var(--accent);
+}
+
+.section-fold .sec-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fold-caret {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.85;
+}
+
 .section-head .sec-pass {
   flex: 0 0 auto;
-  min-height: 36px;
-  padding: 4px 10px;
+  min-height: 32px;
+  padding: 2px 8px;
   font-size: 12px;
   border-color: var(--accent);
   color: var(--accent);
@@ -398,19 +468,19 @@ button.danger {
   position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 12px 12px 12px 18px;
-  margin: 8px 0;
+  border-radius: 12px;
+  padding: 6px 9px 6px 14px;
+  margin: 3px 0;
 }
 
 .card::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px;
-  bottom: 10px;
-  width: 4px;
-  border-radius: 2px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  border-radius: 1px;
   background: var(--pending);
 }
 
@@ -428,7 +498,7 @@ button.danger {
 
 /* 层级：章卡接在章头之下，节卡透明，小节卡再缩进一级；配合 .section-block 竖线区分归属 */
 .card[data-level="chapter"] {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   border-top: 0;
   border-radius: 0 0 10px 10px;
 }
@@ -439,7 +509,7 @@ button.danger {
 
 .card[data-level="section"] {
   background: transparent;
-  margin: 6px 0 8px;
+  margin: 3px 0 4px;
 }
 
 .card[data-level="section"] .card-title {
@@ -447,7 +517,7 @@ button.danger {
 }
 
 .card[data-level="subsection"] {
-  margin: 6px 0 6px 10px;
+  margin: 3px 0 3px 8px;
 }
 
 .card-no {
@@ -466,9 +536,9 @@ button.danger {
 }
 
 .card-title {
-  margin: 0 0 4px;
+  margin: 0 0 2px;
   font-size: var(--title-size);
-  line-height: 1.35;
+  line-height: 1.3;
   font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -478,9 +548,9 @@ button.danger {
 }
 
 .card-thesis {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--muted);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -493,8 +563,8 @@ button.danger {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 10px;
+  gap: 4px;
+  margin-bottom: 6px;
 }
 
 .card-old {
@@ -516,7 +586,7 @@ button.clear-btn {
 .badge {
   font-size: 11px;
   line-height: 1;
-  padding: 4px 7px;
+  padding: 2px 6px;
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--muted);
@@ -547,7 +617,7 @@ button.clear-btn {
 .pills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 6px;
 }
 
 .pill {
@@ -555,18 +625,18 @@ button.clear-btn {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  min-height: var(--tap);
-  padding: 6px 4px;
+  min-height: 44px;
+  padding: 3px 4px;
   font-size: 13px;
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--surface-2);
   border: 1px solid var(--line);
   color: var(--text);
 }
 
 .pill svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   stroke: currentColor;
   fill: none;
   stroke-width: 2;
@@ -1201,12 +1271,12 @@ body {
   }
 
   .pill {
-    min-height: 50px;
+    min-height: 44px;
     font-size: 14px;
   }
 
   .chip {
-    min-height: 46px;
+    min-height: 44px;
     font-size: 16px;
   }
 
@@ -1234,17 +1304,16 @@ body {
   }
 
   .card {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
 
   .card-title {
-    line-height: 1.35;
+    line-height: 1.3;
   }
 
-  .sec-head,
   .chapter-head {
-    padding-top: 10px;
-    padding-bottom: 6px;
+    padding-top: 5px;
+    padding-bottom: 4px;
   }
 
   .sheet {

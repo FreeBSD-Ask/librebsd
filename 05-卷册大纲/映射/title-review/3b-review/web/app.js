@@ -34,13 +34,15 @@
     sessionStart: null,
     sessionCount: 0,
     lastTags: ['content'],
-    quickTags: false
+    quickTags: false,
+    fold: { vols: {}, chapters: {}, sections: {} }
   };
 
   var ui = {
     view: 'group',
     filter: 'all',
     vol: null,
+    all: false,
     singleIdx: 0,
     editing: null,
     tagging: null
@@ -174,6 +176,11 @@
       });
     }
     state.quickTags = !!o.quickTags;
+    if (o.fold && typeof o.fold === 'object') {
+      ['vols', 'chapters', 'sections'].forEach(function (k) {
+        if (o.fold[k] && typeof o.fold[k] === 'object') state.fold[k] = o.fold[k];
+      });
+    }
   }
 
   function saveState() {
@@ -186,7 +193,8 @@
         dailyGoal: state.dailyGoal,
         todayCount: state.todayCount,
         lastTags: state.lastTags,
-        quickTags: state.quickTags
+        quickTags: state.quickTags,
+        fold: state.fold
       }));
     } catch (e) {
       /* 配额或隐私模式：静默失败，仍可在内存中作答 */
@@ -740,6 +748,31 @@
 
   /* ---------------- 分组视图 ---------------- */
 
+  function pctOf(done, total) {
+    return total > 0 ? Math.round(done * 100 / total) : 0;
+  }
+
+  function statText(done, total) {
+    return done + '/' + total + ' · ' + pctOf(done, total) + '%';
+  }
+
+  function foldCaret(open) {
+    return '<svg class="fold-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="' +
+      (open ? 'M6 9l6 6 6-6' : 'M9 6l6 6-6 6') + '"/></svg>';
+  }
+
+  function foldState(kind, key, dflt) {
+    var v = state.fold[kind][key];
+    if (v === 1) return true;
+    if (v === 0) return false;
+    return !!dflt;
+  }
+
+  function setFold(kind, key, val) {
+    state.fold[kind][key] = val ? 1 : 0;
+    saveState();
+  }
+
   function renderGroup() {
     var root = $('#view-group');
     if (!state.manifest) {
@@ -751,28 +784,85 @@
         (state.unitsError ? '载入失败：' + esc(state.unitsError) : '正在载入条目…') + '</p>';
       return;
     }
-    var vol = ui.vol || (ui.vol = pickVol());
+    var volList;
+    if (ui.all) {
+      volList = state.vols.map(function (v) {
+        return v.vol;
+      });
+    } else {
+      if (!ui.vol) ui.vol = pickVol();
+      volList = [ui.vol];
+    }
+
+    var html = [];
+    html.push('<div class="vol-head">');
+    html.push('<select class="vol-select" id="vol-select" aria-label="选择卷">');
+    html.push('<option value="all"' + (ui.all ? ' selected' : '') + '>全部卷</option>');
+    state.vols.forEach(function (v) {
+      html.push('<option value="' + v.vol + '"' + (!ui.all && v.vol === ui.vol ? ' selected' : '') +
+        '>第 ' + v.vol + ' 卷</option>');
+    });
+    html.push('</select>');
+    if (ui.all) {
+      var doneAll = state.units.filter(function (u) {
+        return statusOf(u.key) !== 'pending';
+      }).length;
+      html.push('<span class="vol-name">全部 ' + volList.length + ' 卷</span>');
+      html.push('<span class="spacer"></span><span class="vol-stat">' +
+        statText(doneAll, state.units.length) + '</span>');
+    } else {
+      var volUnits = state.units.filter(function (u) {
+        return u.vol === ui.vol;
+      });
+      var volDone = volUnits.filter(function (u) {
+        return statusOf(u.key) !== 'pending';
+      }).length;
+      html.push('<span class="vol-name">' + esc(volTitle(ui.vol)) + '</span>');
+      html.push('<span class="spacer"></span><span class="vol-stat">' +
+        statText(volDone, volUnits.length) + '</span>');
+    }
+    html.push('</div>');
+
+    var shown = 0;
+    volList.forEach(function (vno) {
+      var res = volBlockHTML(vno);
+      shown += res.shown;
+      if (res.html) html.push(res.html);
+    });
+
+    if (shown === 0 && ui.filter !== 'all') {
+      html.push('<p class="loading">没有符合当前筛选的条目。</p>');
+    }
+    root.innerHTML = html.join('');
+    refreshCounters(root);
+  }
+
+  function volBlockHTML(vol) {
     var all = state.units.filter(function (u) {
       return u.vol === vol;
     });
-    if (!all.length) {
-      root.innerHTML = '<p class="loading">本卷没有条目。</p>';
-      return;
+    if (!all.length) return { html: '', shown: 0 };
+    var volDone = all.filter(function (u) {
+      return statusOf(u.key) !== 'pending';
+    }).length;
+    var open = !foldState('vols', 'v' + vol, ui.all);
+    var parts = [];
+    parts.push('<section class="vol-block" data-vol="' + vol + '">');
+    parts.push('<button type="button" class="vol-block-head" data-act="fold-vol" data-vol="' + vol +
+      '" aria-expanded="' + (open ? 'true' : 'false') + '">' + foldCaret(open) +
+      '<span class="vol-block-title">第 ' + vol + ' 卷 · ' + esc(volTitle(vol)) + '</span>' +
+      '<span class="vol-stat">' + statText(volDone, all.length) + '</span></button>');
+    var shown = 0;
+    if (!open) {
+      shown = all.filter(passFilter).length;
+      parts.push('</section>');
+      return { html: parts.join(''), shown: shown };
     }
 
-    var chapterTitles = {};
-    var sectionTitles = {};
     var subs = [];
     all.forEach(function (u) {
-      if (u.level === 'chapter') {
-        chapterTitles[u.chapter_no] = u.title;
-      } else if (u.level === 'section') {
-        sectionTitles[u.chapter_no + ':' + (u.section_no == null ? 0 : u.section_no)] = u.title;
-      } else if (u.level === 'subsection') {
-        subs.push(u);
-      }
+      if (u.level === 'subsection') subs.push(u);
     });
-
     var chapOrder = [];
     var chapMap = {};
     subs.forEach(function (u) {
@@ -792,30 +882,14 @@
       return a - b;
     });
 
-    var html = [];
-    html.push('<div class="vol-head">');
-    html.push('<select class="vol-select" id="vol-select" aria-label="选择卷">');
-    state.vols.forEach(function (v) {
-      html.push('<option value="' + v.vol + '"' + (v.vol === vol ? ' selected' : '') + '>第 ' +
-        v.vol + ' 卷</option>');
-    });
-    html.push('</select>');
-    html.push('<span class="vol-name">' + esc(volTitle(vol)) + '</span>');
-    var volUnits = state.units.filter(function (u) {
-      return u.vol === vol;
-    });
-    var volDone = volUnits.filter(function (u) {
-      return statusOf(u.key) !== 'pending';
-    }).length;
-    html.push('<span class="spacer"></span><span>' + volDone + ' / ' + volUnits.length + '</span>');
-    html.push('</div>');
-
-    var shown = 0;
     var unitIndex = {};
-    state.units.forEach(function (u) {
-      if (u.vol !== vol || u.level === 'subsection') return;
-      unitIndex[u.level + ':' + u.chapter_no + ':' + (u.section_no || 0)] = u;
+    all.forEach(function (u) {
+      if (u.level !== 'subsection') {
+        unitIndex[u.level + ':' + u.chapter_no + ':' + (u.section_no || 0)] = u;
+      }
     });
+
+    var body = [];
     chapOrder.forEach(function (cn) {
       var chap = chapMap[cn];
       var chapterUnit = unitIndex['chapter:' + cn + ':0'];
@@ -831,51 +905,58 @@
       if (ui.filter !== 'all' && chapFiltered.length === 0) return;
       shown += chapFiltered.length;
 
-      html.push('<div class="chapter-block">');
-      html.push('<div class="chapter-head">');
-      html.push('<span class="status-dot' + (chapDone === chapUnits.length ? ' is-ok' : '') + '"></span>');
-      html.push('<span class="ch-title">第 ' + cn + ' 章</span>');
-      html.push('<span class="ch-stat">' + chapDone + '/' + chapUnits.length + '</span>');
-      html.push('</div>');
-      if (chapterUnit && (ui.filter === 'all' || passFilter(chapterUnit))) {
-        html.push(cardHTML(chapterUnit));
-      }
-
-      chap.order.forEach(function (sn) {
-        var units = chap.sections[sn];
-        var sectionUnit = sn === 0 ? null : unitIndex['section:' + cn + ':' + sn];
-        var list = units.filter(passFilter);
-        if (ui.filter !== 'all' && list.length === 0 && !(sectionUnit && passFilter(sectionUnit))) return;
-        var seqAll = (sectionUnit ? [sectionUnit] : []).concat(units);
-        var done = seqAll.filter(function (u) {
-          return statusOf(u.key) !== 'pending';
-        }).length;
-        var pending = seqAll.length - done;
-        html.push('<div class="section-block">');
-        html.push('<div class="section-head">');
-        html.push('<span class="status-dot' + (done === seqAll.length ? ' is-ok' : done > 0 ? ' is-partial' : '') + '"></span>');
-        html.push('<span class="sec-title">' + (sn === 0 ? '（无节）' : '第 ' + sn + ' 节') + '</span>');
-        html.push('<span class="sec-stat">' + done + '/' + seqAll.length + '</span>');
-        html.push('<button type="button" class="sec-pass" data-act="section" data-vol="' + vol +
-          '" data-chapter="' + cn + '" data-section="' + sn + '"' + (pending ? '' : ' disabled') +
-          '>整节通过</button>');
-        html.push('</div>');
-        if (sectionUnit && (ui.filter === 'all' || passFilter(sectionUnit))) {
-          html.push(cardHTML(sectionUnit));
+      var chapOpen = !foldState('chapters', 'v' + vol + 'c' + cn, false);
+      body.push('<div class="chapter-block">');
+      body.push('<button type="button" class="chapter-head" data-act="fold-chapter" data-vol="' + vol +
+        '" data-chapter="' + cn + '" aria-expanded="' + (chapOpen ? 'true' : 'false') + '">' +
+        foldCaret(chapOpen) +
+        '<span class="status-dot' + (chapDone === chapUnits.length ? ' is-ok' : '') + '"></span>' +
+        '<span class="ch-title">第 ' + cn + ' 章</span>' +
+        '<span class="ch-stat">' + statText(chapDone, chapUnits.length) + '</span></button>');
+      if (chapOpen) {
+        if (chapterUnit && (ui.filter === 'all' || passFilter(chapterUnit))) {
+          body.push(cardHTML(chapterUnit));
         }
-        list.forEach(function (u) {
-          html.push(cardHTML(u));
+        chap.order.forEach(function (sn) {
+          var units = chap.sections[sn];
+          var sectionUnit = sn === 0 ? null : unitIndex['section:' + cn + ':' + sn];
+          var list = units.filter(passFilter);
+          if (ui.filter !== 'all' && list.length === 0 && !(sectionUnit && passFilter(sectionUnit))) return;
+          var seqAll = (sectionUnit ? [sectionUnit] : []).concat(units);
+          var done = seqAll.filter(function (u) {
+            return statusOf(u.key) !== 'pending';
+          }).length;
+          var pending = seqAll.length - done;
+          var secOpen = !foldState('sections', 'v' + vol + 'c' + cn + 's' + sn, false);
+          body.push('<div class="section-block">');
+          body.push('<div class="section-head">');
+          body.push('<button type="button" class="section-fold" data-act="fold-section" data-vol="' +
+            vol + '" data-chapter="' + cn + '" data-section="' + sn + '" aria-expanded="' +
+            (secOpen ? 'true' : 'false') + '">' + foldCaret(secOpen) +
+            '<span class="status-dot' + (done === seqAll.length ? ' is-ok' : done > 0 ? ' is-partial' : '') + '"></span>' +
+            '<span class="sec-title">' + (sn === 0 ? '（无节）' : '第 ' + sn + ' 节') + '</span>' +
+            '<span class="sec-stat">' + statText(done, seqAll.length) + '</span></button>');
+          body.push('<button type="button" class="sec-pass" data-act="section" data-vol="' + vol +
+            '" data-chapter="' + cn + '" data-section="' + sn + '"' + (pending ? '' : ' disabled') +
+            '>整节通过</button>');
+          body.push('</div>');
+          if (secOpen) {
+            if (sectionUnit && (ui.filter === 'all' || passFilter(sectionUnit))) {
+              body.push(cardHTML(sectionUnit));
+            }
+            list.forEach(function (u) {
+              body.push(cardHTML(u));
+            });
+          }
+          body.push('</div>');
         });
-        html.push('</div>');
-      });
-      html.push('</div>');
+      }
+      body.push('</div>');
     });
 
-    if (shown === 0 && ui.filter !== 'all') {
-      html.push('<p class="loading">本卷没有符合当前筛选的条目。</p>');
-    }
-    root.innerHTML = html.join('');
-    refreshCounters(root);
+    parts.push('<div class="vol-block-body">' + body.join('') + '</div>');
+    parts.push('</section>');
+    return { html: parts.join(''), shown: shown };
   }
 
   function refreshCounters(root) {
@@ -1500,6 +1581,7 @@
         var sec = $('#goto-sec', body).value;
         closeSheet();
         ui.vol = vol;
+        ui.all = false;
         if (ui.view !== 'group') setView('group');
         else renderGroup();
         var target = null;
@@ -1565,6 +1647,7 @@
       return;
     }
     ui.vol = state.cursor.vol || pickVol();
+    ui.all = false;
     ui.filter = 'all';
     $('#btn-filter').textContent = '筛选：全部';
     if (ui.view !== 'group') setView('group');
@@ -1601,6 +1684,25 @@
     if (!btn) return;
     var act = btn.dataset.act;
     var key = btn.dataset.key;
+
+    if (act === 'fold-vol') {
+      var fv = 'v' + btn.dataset.vol;
+      setFold('vols', fv, !foldState('vols', fv, ui.all));
+      renderGroup();
+      return;
+    }
+    if (act === 'fold-chapter') {
+      var fc = 'v' + btn.dataset.vol + 'c' + btn.dataset.chapter;
+      setFold('chapters', fc, !foldState('chapters', fc, false));
+      renderGroup();
+      return;
+    }
+    if (act === 'fold-section') {
+      var fs = 'v' + btn.dataset.vol + 'c' + btn.dataset.chapter + 's' + btn.dataset.section;
+      setFold('sections', fs, !foldState('sections', fs, false));
+      renderGroup();
+      return;
+    }
 
     if (act === 'verdict') {
       onVerdict(key, btn.dataset.v);
@@ -1801,7 +1903,12 @@
 
     $('#view-group').addEventListener('change', function (e) {
       if (e.target.id === 'vol-select') {
-        ui.vol = Number(e.target.value);
+        if (e.target.value === 'all') {
+          ui.all = true;
+        } else {
+          ui.all = false;
+          ui.vol = Number(e.target.value);
+        }
         renderGroup();
       }
     });
