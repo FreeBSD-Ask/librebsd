@@ -32,7 +32,9 @@
     fontSize: 2,
     dailyGoal: 500,
     sessionStart: null,
-    sessionCount: 0
+    sessionCount: 0,
+    lastTags: ['content'],
+    quickTags: false
   };
 
   var ui = {
@@ -40,7 +42,8 @@
     filter: 'all',
     vol: null,
     singleIdx: 0,
-    editing: null
+    editing: null,
+    tagging: null
   };
 
   var sync = {
@@ -99,7 +102,40 @@
   }
 
   function cloneAnswer(a) {
-    return { verdict: a.verdict, custom_title: a.custom_title, note: a.note, updated_at: a.updated_at };
+    return {
+      verdict: a.verdict,
+      custom_title: a.custom_title,
+      note: a.note,
+      tags: (a.tags || []).slice(),
+      merge_target: a.merge_target || '',
+      updated_at: a.updated_at
+    };
+  }
+
+  var TAG_DEFS = [
+    { id: 'content', label: '内容' },
+    { id: 'length', label: '字数' },
+    { id: 'merge', label: '合并' },
+    { id: 'split', label: '拆分' },
+    { id: 'format', label: '格式' },
+    { id: 'delete', label: '删除' },
+    { id: 'term', label: '术语' }
+  ];
+
+  function tagLabel(id) {
+    for (var i = 0; i < TAG_DEFS.length; i += 1) {
+      if (TAG_DEFS[i].id === id) return TAG_DEFS[i].label;
+    }
+    return id;
+  }
+
+  function tagLabels(list) {
+    if (!list || !list.length) return '无标签';
+    return list.map(tagLabel).join('+');
+  }
+
+  function mergeLabel(id) {
+    return { prev: '上一条', next: '下一条', parent: '本节题' }[id] || id;
   }
 
   function newerAnswer(a, b) {
@@ -132,6 +168,12 @@
     if (o.todayCount && typeof o.todayCount === 'object') {
       state.todayCount = { date: o.todayCount.date || '', count: Number(o.todayCount.count) || 0 };
     }
+    if (Array.isArray(o.lastTags)) {
+      state.lastTags = o.lastTags.filter(function (t) {
+        return TAG_DEFS.some(function (d) { return d.id === t; });
+      });
+    }
+    state.quickTags = !!o.quickTags;
   }
 
   function saveState() {
@@ -142,7 +184,9 @@
         theme: state.theme,
         fontSize: state.fontSize,
         dailyGoal: state.dailyGoal,
-        todayCount: state.todayCount
+        todayCount: state.todayCount,
+        lastTags: state.lastTags,
+        quickTags: state.quickTags
       }));
     } catch (e) {
       /* 配额或隐私模式：静默失败，仍可在内存中作答 */
@@ -271,16 +315,27 @@
     if (undoStack.length > 30) undoStack.shift();
   }
 
-  function applyAnswer(key, verdict, customTitle, note) {
+  function applyAnswer(key, verdict, customTitle, note, extra) {
     var prev = state.answers[key];
-    state.answers[key] = {
+    var next = {
       verdict: verdict,
       custom_title: verdict === 'custom'
         ? String(customTitle == null ? (prev && prev.custom_title) || '' : customTitle)
         : null,
       note: note != null ? String(note) : (prev && prev.note) || '',
+      tags: [],
+      merge_target: '',
       updated_at: nowISO()
     };
+    if (verdict === 'reroll') {
+      next.tags = (extra && extra.tags) ? extra.tags.slice()
+        : (prev && prev.verdict === 'reroll' ? (prev.tags || []).slice() : []);
+      next.merge_target = (extra && extra.merge_target != null) ? extra.merge_target
+        : (prev && prev.merge_target) || '';
+      if (next.tags.indexOf('merge') < 0) next.merge_target = '';
+      state.lastTags = next.tags.slice();
+    }
+    state.answers[key] = next;
     bumpToday();
     state.sessionCount += 1;
     if (!state.sessionStart) state.sessionStart = Date.now();
@@ -581,6 +636,42 @@
     });
     parts.push('</div>');
 
+    if (st === 'reroll') {
+      var tags0 = (a && a.tags) || [];
+      if (tags0.length || (a && a.merge_target)) {
+        parts.push('<div class="tag-badges">' + tags0.map(function (t) {
+          return '<span class="badge tag">' + esc(tagLabel(t)) + '</span>';
+        }).join('') + (a && a.merge_target
+          ? '<span class="badge tag">合并→' + esc(mergeLabel(a.merge_target)) + '</span>' : '') + '</div>');
+      }
+    }
+    if (ui.tagging === u.key && st === 'reroll') {
+      var selTags = (a && a.tags) || [];
+      parts.push('<div class="tagbar" data-key="' + esc(u.key) + '">');
+      parts.push('<div class="tag-chips">');
+      TAG_DEFS.forEach(function (t) {
+        var on = selTags.indexOf(t.id) >= 0;
+        parts.push('<button type="button" class="chip' + (on ? ' on' : '') + '" data-act="tag" data-tag="' +
+          t.id + '" data-key="' + esc(u.key) + '" aria-pressed="' + on + '">' + t.label + '</button>');
+      });
+      parts.push('</div>');
+      if (selTags.indexOf('merge') >= 0) {
+        parts.push('<div class="tag-merge"><span>合并到</span>');
+        [['prev', '上一条'], ['next', '下一条'], ['parent', '本节题']].forEach(function (m) {
+          var on = a && a.merge_target === m[0];
+          parts.push('<button type="button" class="chip' + (on ? ' on' : '') +
+            '" data-act="merge-target" data-merge="' + m[0] + '" data-key="' + esc(u.key) +
+            '" aria-pressed="' + on + '">' + m[1] + '</button>');
+        });
+        parts.push('</div>');
+      }
+      parts.push('<div class="tag-actions"><label><input type="checkbox" data-act="tag-quick"' +
+        (state.quickTags ? ' checked' : '') + '> 连续沿用</label>');
+      parts.push('<button type="button" class="primary" data-act="tag-save" data-key="' + esc(u.key) +
+        '">完成</button></div>');
+      parts.push('</div>');
+    }
+
     var prefill = st === 'custom' && a.custom_title ? a.custom_title : (u.title || '');
     parts.push('<div class="inline-box" data-box="custom" ' + (ui.editing === u.key ? '' : 'hidden') + '>');
     parts.push('<label>自定义题名（1–120 字）</label>');
@@ -834,6 +925,26 @@
     return ui.view === 'group' ? $('#view-group') : $('#view-single');
   }
 
+  function toggleTag(key, tag) {
+    var a = state.answers[key];
+    if (!a || a.verdict !== 'reroll') return;
+    var tags = (a.tags || []).slice();
+    var idx = tags.indexOf(tag);
+    if (idx >= 0) tags.splice(idx, 1); else tags.push(tag);
+    applyAnswer(key, 'reroll', null, a.note, { tags: tags, merge_target: a.merge_target || '' });
+    saveState();
+    renderActive();
+  }
+
+  function setMergeTarget(key, target) {
+    var a = state.answers[key];
+    if (!a || a.verdict !== 'reroll') return;
+    applyAnswer(key, 'reroll', null, a.note,
+      { tags: (a.tags || []).slice(), merge_target: target });
+    saveState();
+    renderActive();
+  }
+
   function onVerdict(key, v) {
     var u = unitByKey(key);
     if (!u) return;
@@ -854,6 +965,29 @@
           ta.setSelectionRange(ta.value.length, ta.value.length);
         }
       }
+      return;
+    }
+
+    if (v === 'reroll') {
+      var a0 = state.answers[key];
+      var keepTags = (a0 && a0.verdict === 'reroll' && (a0.tags || []).length)
+        ? a0.tags.slice() : state.lastTags.slice();
+      if (state.quickTags && ui.tagging !== key) {
+        var snapQ = snapshot([key]);
+        applyAnswer(key, 'reroll', null, null,
+          { tags: keepTags, merge_target: (a0 && a0.merge_target) || '' });
+        pushUndo('将“' + (u.title || key) + '”改为重拟（沿用标签）', snapQ);
+        renderActive();
+        showToast('已重拟（' + tagLabels(keepTags) + '）', undoLast, true);
+        return;
+      }
+      var snapR = snapshot([key]);
+      ui.editing = null;
+      ui.tagging = key;
+      applyAnswer(key, 'reroll', null, null,
+        { tags: keepTags, merge_target: (a0 && a0.merge_target) || '' });
+      pushUndo('将“' + (u.title || key) + '”改为重拟', snapR);
+      renderActive();
       return;
     }
 
@@ -1442,6 +1576,27 @@
 
     if (act === 'verdict') {
       onVerdict(key, btn.dataset.v);
+      return;
+    }
+    if (act === 'tag') {
+      toggleTag(key, btn.dataset.tag);
+      return;
+    }
+    if (act === 'merge-target') {
+      setMergeTarget(key, btn.dataset.merge);
+      return;
+    }
+    if (act === 'tag-save') {
+      ui.tagging = null;
+      renderActive();
+      return;
+    }
+    if (act === 'tag-quick') {
+      state.quickTags = !!btn.checked;
+      saveState();
+      showToast(state.quickTags
+        ? '已开启连续沿用：之后点“重拟”一键沿用当前标签'
+        : '已关闭连续沿用');
       return;
     }
     if (act === 'clear') {

@@ -703,6 +703,8 @@ EXPORT_HEADER_REWRITE = [
     "old_title",
     "action",
     "new_title",
+    "tags",
+    "merge_target",
     "note",
     "updated_at",
     "source_hash",
@@ -754,7 +756,7 @@ def test_export_json_tsv_rewrite(env):
     assert lines[0].split("\t") == EXPORT_HEADER_REWRITE
     assert len(lines) == 3  # 表头 + custom + reroll，ok 行不导出
     rows = [line.split("\t") for line in lines[1:]]
-    assert all(len(row) == 11 for row in rows)
+    assert all(len(row) == 13 for row in rows)
     by_key = {row[0]: row for row in rows}
     assert ok_key not in by_key
     assert by_key[reroll_key][6] == "重拟待办"
@@ -959,6 +961,53 @@ def test_static_assets_and_error_responses(env):
 
     status, _h, _b = env.call("PUT", "/api/config", {"config": {}})
     assert status == 405
+
+
+# ---------------------------------------------------------------------------
+# 重拟标签（reroll tags）：给 AI 重拟批的指令面
+# ---------------------------------------------------------------------------
+
+
+def _reroll_answer(tags=None, merge_target=None):
+    payload = answer_payload("reroll")
+    payload["tags"] = tags or []
+    payload["merge_target"] = merge_target or ""
+    return payload
+
+
+def test_reroll_tags_valid_and_rewrite_columns(env):
+    keys = expected_model()[2][1]
+    status, _h, _b = env.put_answers({
+        keys[0]: _reroll_answer(["content", "length"]),
+        keys[1]: _reroll_answer(["content", "merge", "format"], "prev"),
+    })
+    assert status == 200
+    answers = env.json("/api/answers")["answers"]
+    assert answers[keys[0]]["tags"] == ["content", "length"]
+    assert answers[keys[1]]["merge_target"] == "prev"
+    status, _h, body = env.call("GET", "/api/export?fmt=rewrite")
+    rows = {line.split("\t")[0]: line.split("\t") for line in body.decode("utf-8").splitlines()[1:]}
+    assert rows[keys[0]][8] == "content+length"
+    assert rows[keys[1]][8] == "content+merge+format"
+    assert rows[keys[1]][9] == "prev"
+
+
+def test_reroll_tags_reject_invalid(env):
+    keys = expected_model()[2][1]
+    status, _h, _b = env.put_answers({keys[0]: _reroll_answer(["nope"])})
+    assert status == 400
+    status, _h, _b = env.put_answers({keys[0]: answer_payload("ok") | {"tags": ["content"]}})
+    assert status == 400
+    status, _h, _b = env.put_answers({keys[0]: _reroll_answer(["content"], "prev")})
+    assert status == 400  # merge_target 需与 merge 标签同现
+    status, _h, _b = env.put_answers({
+        keys[0]: _reroll_answer(["merge"], "V76.1.1.1"),
+    })
+    assert status == 400  # merge_target 不得指向第 76 卷或未知键
+    status, _h, _b = env.put_answers({
+        keys[0]: _reroll_answer(["merge"], "next"),
+    })
+    assert status == 200
 
 
 # ---------------------------------------------------------------------------

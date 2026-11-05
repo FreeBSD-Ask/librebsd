@@ -48,7 +48,9 @@ VOL_MIN = 1
 VOL_MAX = 75
 EXCLUDED_VOL = 76
 VERDICTS = ("ok", "reroll", "custom")
-ANSWER_FIELDS = ("verdict", "custom_title", "note", "updated_at")
+ANSWER_FIELDS = ("verdict", "custom_title", "note", "tags", "merge_target", "updated_at")
+REROLL_TAGS = ("content", "length", "merge", "split", "format", "delete", "term")
+MERGE_TARGETS = ("prev", "next", "parent")
 EXPECTED_TOTALS = {
     "chapters": 539,
     "sections": 3918,
@@ -649,6 +651,8 @@ class App:
                 "verdict": value["verdict"],
                 "custom_title": str(value.get("custom_title") or ""),
                 "note": str(value.get("note") or ""),
+                "tags": [t for t in (value.get("tags") or []) if t in REROLL_TAGS],
+                "merge_target": str(value.get("merge_target") or ""),
                 "updated_at": str(value.get("updated_at") or ""),
             }
         if dropped:
@@ -798,6 +802,31 @@ class App:
             raise ValueError("custom 判定须提供 1–120 字的自定义题名")
         if len(result["note"]) > 500:
             raise ValueError("note 不得超过 500 字")
+        tags = value.get("tags", [])
+        if tags is None:
+            tags = []
+        if not isinstance(tags, list):
+            raise ValueError("tags 须为数组")
+        clean_tags = []
+        for tag in tags:
+            if not isinstance(tag, str) or tag not in REROLL_TAGS:
+                raise ValueError(f"未知重拟标签：{tag}")
+            if tag not in clean_tags:
+                clean_tags.append(tag)
+        if clean_tags and verdict != "reroll":
+            raise ValueError("重拟标签仅用于 reroll 判定")
+        merge_target = value.get("merge_target", "")
+        if merge_target is None:
+            merge_target = ""
+        if not isinstance(merge_target, str):
+            raise ValueError("merge_target 须为字符串")
+        if merge_target:
+            if "merge" not in clean_tags:
+                raise ValueError("merge_target 仅在含 merge 标签时可用")
+            if merge_target not in MERGE_TARGETS and merge_target not in self.key_index:
+                raise ValueError(f"merge_target 非法：{merge_target}")
+        result["tags"] = clean_tags
+        result["merge_target"] = merge_target
         updated_at = value.get("updated_at") or now_iso
         if not isinstance(updated_at, str):
             raise ValueError("updated_at 须为字符串")
@@ -1119,6 +1148,8 @@ class App:
             "old_title",
             "action",
             "new_title",
+            "tags",
+            "merge_target",
             "note",
             "updated_at",
             "source_hash",
@@ -1138,6 +1169,8 @@ class App:
                 unit["title"],
                 action,
                 new_title,
+                "+".join(answer.get("tags") or []),
+                answer.get("merge_target") or "",
                 answer["note"],
                 answer["updated_at"],
                 self.source_hash,
