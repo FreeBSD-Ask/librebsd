@@ -1078,3 +1078,118 @@ button.clear-btn {
   width: 18px;
   height: 18px;
 }
+
+/* ---------- 手机专项：2400×1080 / 6.67 英寸 OLED ---------- */
+/* 物理 2400×1080、20:9、约 395 dpi；浏览器 CSS 视口约 393×873（DPR≈2.75） */
+
+html,
+body {
+  overscroll-behavior-y: none;
+  background: var(--bg);
+}
+
+/* 对勾按钮只有 ✓，放大以保持辨识度 */
+.pill[data-v="ok"] svg {
+  width: 23px;
+  height: 23px;
+  stroke-width: 2.4;
+}
+
+@media (max-width: 440px) {
+  /* 工具栏改为底部固定，拇指可达；OLED 上用近黑半透明，避免大面积亮块烧屏 */
+  .toolbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    margin: 0;
+    padding: 8px 10px calc(8px + var(--safe-bottom));
+    gap: 8px;
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line);
+  }
+
+  .toolbar button {
+    min-height: 44px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  body {
+    padding-bottom: calc(72px + var(--safe-bottom));
+    font-size: 16px;
+  }
+
+  #main {
+    padding: 0 14px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .card-thesis {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .pills {
+    gap: 10px;
+  }
+
+  .pill {
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .chip {
+    min-height: 46px;
+    font-size: 16px;
+  }
+
+  .toast {
+    bottom: calc(84px + var(--safe-bottom));
+  }
+}
+
+/* 20:9 高屏：一屏多看两行，同时保证 6.67 寸上的阅读字号 */
+@media (min-width: 380px) and (max-width: 440px) and (max-aspect-ratio: 1/2) {
+  [data-fs="1"] {
+    --title-size: 19px;
+  }
+
+  [data-fs="2"] {
+    --title-size: 21px;
+  }
+
+  [data-fs="3"] {
+    --title-size: 24px;
+  }
+
+  #topbar {
+    padding: calc(4px + var(--safe-top)) 14px 4px;
+  }
+
+  .card {
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    line-height: 1.35;
+  }
+
+  .sec-head,
+  .chapter-head {
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+
+  .sheet {
+    max-height: 90dvh;
+  }
+}

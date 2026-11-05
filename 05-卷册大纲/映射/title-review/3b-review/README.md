@@ -61,7 +61,8 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\serve_3b_
 ## 界面
 
 - 主题：AMOLED 夜间（纯黑背景、绿色强调、正文浅灰白）与日间浅底绿；绿色只作强调，正文不用绿色。
-- 字号三档（题名 18／20／22px）。
+- 手机适配：针对 2400×1080／6.67 英寸 OLED（CSS 视口约 393×873）优化——工具栏改为底部固定（避开手势条）、对勾与标签按钮 46–50px、题名 21px、20:9 高屏放宽行距与卡片密度；`overscroll-behavior: none` 防过滚白边，横幅不设大面积亮块以降低烧屏风险。
+- 字号三档：小/中/大；6.67 英寸高屏上题名为 19／21／24px，窄屏为 18／20／22px。
 - 字体：霞鹜文楷屏幕阅读版（LXGW WenKai Screen，v1.530，SIL OFL 1.1），本地 woff2 子集（约 550 KB，2,538 码位），见 `web/fonts/README.md` 与 `web/fonts/OFL.txt`；不依赖外网 CDN。
 - PWA：页面外壳、样式、脚本与字体可离线打开（Service Worker 缓存）。
 
