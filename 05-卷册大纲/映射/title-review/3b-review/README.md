@@ -36,15 +36,26 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\serve_3b_
 点“重拟”后在标签条里选好标签，按**获取建议**即把请求入队：
 
 1. 页面每 1.5 秒轮询 `/api/suggest?id=…`，等待期间显示“已提交给 LLM 会话，等待返回建议… 已等 N 秒”，可随时取消（超过 5 分钟自动放弃）。
-2. 会话侧用 `llm_bridge.py` 取件并回填，页面收到后自动展开候选（各附理由，可选“采纳”“改写后采纳”）：
+2. **Python 侧常驻轮询器**负责接件与投递（不依赖页面是否打开）：
    ```text
-   C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\llm_bridge.py" --list
-   C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\llm_bridge.py" --result results.json
+   C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\llm_bridge.py" --watch
    ```
-3. 回填的候选同时写入 `data/candidates/llm-live.json`（`source` 标为 `llm-session`），刷新或重开也会重现；同一单元同一标签组合重复提交会自动去重。
-4. 刷新页面时自动接回未完成的请求（`/api/suggest?pending=1`），不必重新点。
+   每 2 秒轮询一次：发现新请求即写入 `data/suggest/inbox.jsonl` 并打印 `[NEW]`；同时扫描 `data/suggest/outbox/*.json`，发现回执即投递并打印 `[SENT]`，投递后移入 `outbox/sent/`。心跳写 `data/suggest/watch.heartbeat`。
+3. 主代理读收件箱、按标签生成候选，把回执写成 `outbox/<任意名>.json`（格式见下），轮询器在 2 秒内投递，页面随即展开候选（各附理由，可选“采纳”“改写后采纳”）。
+4. 回填的候选同时写入 `data/candidates/llm-live.json`（`source` 标为 `llm-session`），刷新或重开也会重现；同一单元同一标签组合重复提交会自动去重。
+5. 刷新页面时自动接回未完成的请求（`/api/suggest?pending=1`），不必重新点。
 
-**用法**：在会话说一句“处理”，助手即执行 `--list`、按标签生成若干候选并 `--result` 回填，全程不需要页面重开。
+回执格式：
+
+```json
+[{"id": "s17938928582254f5a", "candidates": [
+  {"candidate_id": "c1", "new_title": "……", "rationale": "……"},
+  {"candidate_id": "c2", "new_title": "……", "rationale": "……"}]}]
+```
+
+一次性取件仍可用 `--list`／`--status`／`--result`。
+
+**用法**：轮询器常驻后，您在手机上点“获取建议”，主代理侧读收件箱生成候选并写回执即可；在本会话发任意一句（如“处理”），主代理立即按收件箱回填。
 
 ## 配置上传
 
